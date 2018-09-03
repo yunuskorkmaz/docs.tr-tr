@@ -9,22 +9,22 @@ helpviewer_keywords:
 - types [C#], explicit numeric conversions
 - type conversion [C#], explicit numeric
 ms.assetid: f3bb9e76-6b92-4df7-bc36-f866c24e1dfd
-ms.openlocfilehash: 7363df3e4b2449924222745de409fd68349b93de
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ca052dea4ee4abc866d2b02055188b0707499d4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218390"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43475939"
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a>Açık Sayısal Dönüşümler Tablosu (C# Başvurusu)
-Açık sayısal dönüşüm var olduğu örtük dönüştürme, bir cast ifadesi kullanarak herhangi diğer bir sayısal tür, herhangi bir sayısal tür dönüştürmek için kullanılır. Aşağıdaki tabloda bu dönüşümleri gösterir.  
+Açık sayısal Dönüşüm, var olan herhangi bir örtük dönüştürmeyi atama ifadesini kullanarak diğer sayısal türleri, herhangi bir sayısal tür dönüştürmek için kullanılır. Aşağıdaki tabloda, bu dönüştürmeleri gösterilmektedir.  
   
- Dönüştürme hakkında daha fazla bilgi için bkz: [atama ve tür dönüşümleri](../../../csharp/programming-guide/types/casting-and-type-conversions.md).  
+ Dönüştürmeler hakkında daha fazla bilgi için bkz. [atama ve tür dönüşümleri](../../../csharp/programming-guide/types/casting-and-type-conversions.md).  
   
 |Başlangıç|Bitiş|  
 |----------|--------|  
 |[sbyte](../../../csharp/language-reference/keywords/sbyte.md)|`byte`, `ushort`, `uint`, `ulong`, veya `char`|  
-|[byte](../../../csharp/language-reference/keywords/byte.md)|`Sbyte` Veya `char`|  
+|[byte](../../../csharp/language-reference/keywords/byte.md)|`Sbyte` veya `char`|  
 |[short](../../../csharp/language-reference/keywords/short.md)|`sbyte`, `byte`, `ushort`, `uint`, `ulong`, veya `char`|  
 |[ushort](../../../csharp/language-reference/keywords/ushort.md)|`sbyte`, `byte`, `short`, veya `char`|  
 |[int](../../../csharp/language-reference/keywords/int.md)|`sbyte`, `byte`, `short`, `ushort`, `uint`, `ulong`, veya `char`|  
@@ -38,29 +38,30 @@ Açık sayısal dönüşüm var olduğu örtük dönüştürme, bir cast ifadesi
   
 ## <a name="remarks"></a>Açıklamalar  
   
--   Açık sayısal dönüşüm oluşturma durumlar duyarlık veya sonuç kaybına neden olabilir.  
+-   Açık sayısal Dönüşüm, oluşturma özel durumların sonucu veya duyarlık kaybına neden olabilir.  
   
--   Dönüştürürken bir `decimal` en yakın tam sayı değeri sıfıra doğru tamsayı türü, bu değer değerine yuvarlanır. Sonuçta elde edilen tam sayı değeri hedef türü aralık dışında ise bir <xref:System.OverflowException> oluşturulur.  
+-   Dönüştürürken bir `decimal` bu değer bir tamsayı türüne değeri sıfır en yakın tamsayı değerine yuvarlanır. Sonuçta elde edilen tamsayı değeri hedef türün aralığı dışında ise bir <xref:System.OverflowException> oluşturulur.  
   
--   Gelen dönüştürürken bir `double` veya `float` tamsayı türü, değerin değerine kısaltılır. Sonuç tam sayı değeri hedef değeri aralığın dışında ise, sonuç bağlamını kontrol taşma bağlıdır. Checked bağlamında bir `OverflowException` olduğu sırada denetlenmeyen bir bağlamda, durum, hedef türü belirtilmeyen bir değeri sonucudur.  
+-   Gelen dönüştürürken bir `double` veya `float` değeri bir tamsayı türü için değer kısaltılır. Elde edilen tamsayı değer hedef değer aralığının dışında ise sonucu, içerik denetimi overflow'da bağlıdır. Denetlenen bir bağlamda bir `OverflowException` olduğu sırada işaretlenmemiş bir bağlamda, durum, hedef türünün belirtilmeyen bir değeri sonucudur.  
   
--   Dönüştürürken `double` için `float`, `double` değeri yuvarlanır en yakın `float` değeri. Varsa `double` değeri çok küçük veya sığması için çok büyük hedef türü sonucu sıfır ya da sonsuz olacaktır.  
+-   Dönüştürürken `double` için `float`, `double` değer yuvarlanır en yakın `float` değeri. Varsa `double` değeri çok küçük veya sığdırmak için çok büyük hedef türe sonucu sıfır ya da sonsuz olacaktır.  
   
--   Dönüştürürken `float` veya `double` için `decimal`, kaynak değerin dönüştürülür `decimal` gösterimi ve gerekirse 28 ondalık basamak sonra en yakın sayıya yuvarlanır. Kaynak değerin değerini bağlı olarak, aşağıdaki sonuçları biriyle karşılaşabilirsiniz:  
+-   Dönüştürürken `float` veya `double` için `decimal`, kaynak değeri dönüştürülür `decimal` gösterimi ve gerekirse 28 ondalık basamağın sonra en yakın sayıya yuvarlanır. Değerini kaynak bağlı olarak, aşağıdaki sonuçları biriyle karşılaşabilirsiniz:  
   
-    -   Kaynak değerin olarak gösterilemeyecek kadar küçük olup olmadığını bir `decimal`, sonuç sıfır olur.  
+    -   Kaynak değeri olarak gösterilemeyecek kadar çok küçük ise bir `decimal`, sıfır sonuç olur.  
   
-    -   Kaynak değerin NaN (sayı değil), ise sonsuz, veya olarak gösterilemeyecek kadar çok büyük bir `decimal`, bir `OverflowException` oluşturulur.  
+    -   Kaynak değerin NaN (sayı değil), varsa, sonsuz veya olarak gösterilemeyecek kadar çok büyük bir `decimal`, bir `OverflowException` oluşturulur.  
   
--   Dönüştürürken `decimal` için `float` veya `double`, `decimal` değeri yuvarlanır en yakın `double` veya `float` değeri.  
+-   Dönüştürürken `decimal` için `float` veya `double`, `decimal` değer yuvarlanır en yakın `double` veya `float` değeri.  
   
- Açık dönüştürme hakkında daha fazla bilgi için C# dil belirtimi Explicit bakın. Spec erişim hakkında daha fazla bilgi için bkz: [C# dil belirtimi](../../../csharp/language-reference/language-specification/index.md).  
+ C# dil belirtiminde açık açık dönüştürme hakkında daha fazla bilgi için bkz. Spec erişim hakkında daha fazla bilgi için bkz. [C# dil belirtimi](../../../csharp/language-reference/language-specification/index.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [Tür Değiştirme ve Tür Dönüştürmeler](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
- [() İşleci](../../../csharp/language-reference/operators/invocation-operator.md)  
- [Tam Sayı Türleri Tablosu](../../../csharp/language-reference/keywords/integral-types-table.md)  
- [Yerleşik Türler Tablosu](../../../csharp/language-reference/keywords/built-in-types-table.md)  
- [Örtük Sayısal Dönüştürmeler Tablosu](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# başvurusu](../../../csharp/language-reference/index.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [Tür Değiştirme ve Tür Dönüştürmeler](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
+- [() İşleci](../../../csharp/language-reference/operators/invocation-operator.md)  
+- [Tam Sayı Türleri Tablosu](../../../csharp/language-reference/keywords/integral-types-table.md)  
+- [Yerleşik Türler Tablosu](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+- [Örtük Sayısal Dönüştürmeler Tablosu](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
