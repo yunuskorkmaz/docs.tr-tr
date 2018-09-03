@@ -1,58 +1,58 @@
 ---
 title: Anlam Analizi ile çalışmaya başlama
-description: Bu öğreticide, .NET derleme SDK'sını kullanarak anlamsal Analizi ile çalışma genel bir bakış sağlar.
+description: Bu öğretici, .NET derleyici SDK'sını kullanarak anlam Analizi ile çalışmaya genel bir bakış sağlar.
 ms.date: 02/06/2018
 ms.custom: mvc
 ms.openlocfilehash: 4b021ed2a27da754e2ac5af01716868e41e72738
-ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36270467"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484624"
 ---
 # <a name="get-started-with-semantic-analysis"></a>Anlam Analizi ile çalışmaya başlama
 
-Bu öğretici sözdizimi API ile tanıdık varsayar. [Sözdizimi Analizi ile çalışmaya başlama](syntax-analysis.md) makale yeterli giriş sağlar.
+Bu öğreticide söz dizimi API ile ilgili bilgi sahibi olduğunuz varsayılır. [Söz dizimi Analizi ile çalışmaya başlama](syntax-analysis.md) makale yeterli giriş sağlar.
 
-Bu öğreticide, keşfedin **simgesi** ve **bağlama API'leri**. Bu API'ları hakkında bilgi sağlamak _anlamsal anlamı_ bir programın. İsteyin ve programınızdaki herhangi bir simge ile temsil edilen türleri hakkında sorularını olanak sağlar.
+Bu öğreticide, Keşif **sembol** ve **bağlama API'leri**. Bu API'ler hakkında bilgi sağlar. _anlam_ programının. Soru sormak ve programınızda herhangi bir simge ile temsil edilen türleri hakkında soruları yanıtlamak etkinleştirin.
 
-Yüklemeniz gerekir **.NET derleyici Platform SDK**:
+Yüklemeniz gerekir **.NET derleyici Platformu SDK'sı**:
 
 [!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 
-## <a name="understanding-compilations-and-symbols"></a>Anlama derlemeleri ve simgeler
+## <a name="understanding-compilations-and-symbols"></a>Derlemeleri anlama ve semboller
 
-Daha fazla .NET derleyici SDK ile çalışırken, sözdizimi API ve anlam API arasındaki farklılıklar öğrenmeniz. **Sözdizimi API** bakmak sayesinde _yapısı_ bir programın. Ancak, genellikle daha zengin bilgi semantiğini hakkında istediğiniz veya _anlamı_ bir programın. Gevşek kod dosyası ya da VB veya C# kod parçacığını yalıtım modunda sözdizimsel olarak çözümlenebilir olsa da, "Bu değişken türünü bir boşlukta nedir" gibi sorular sormak için anlamlı değil. Tür adı anlamını derleme başvurularını, ad alanı içe aktarımlarını veya diğer kod dosyaları bağımlı olabilir. Kullanarak bu soruları yanıtlanır **anlamsal API**, özellikle <xref:Microsoft.CodeAnalysis.Compilation?displayProperty=nameWithType> sınıfı.
+Daha fazla .NET derleyici SDK'sı ile çalışırken, söz dizimi API ve anlam API arasındaki farklılıklar hakkında bilgi sahibi olur. **Söz dizimi API** görmenize olanak tanır _yapısı_ programının. Ancak, genellikle daha zengin bilgi semantiği istersiniz veya _anlamı_ programının. Gevşek bir kod dosyası veya VB veya C# kod parçacığını yalıtım modunda sözdizimsel olarak çözümlenebilir olsa, "Bu değişken türünde bir boşlukta nedir" gibi sorular sorun anlamlı değildir. Bir tür adı anlamını derleme başvuruları, ad alanı içeri aktarmaları veya diğer kod dosyaları bağımlı olabilir. Kullanarak bu soruları yanıtlanır **anlam API**, özellikle <xref:Microsoft.CodeAnalysis.Compilation?displayProperty=nameWithType> sınıfı.
 
-Örneği <xref:Microsoft.CodeAnalysis.Compilation> derleyici tarafından görülen tek bir projeye paraleldir ve Visual Basic veya C# programı derlemek için gereken her şeyi temsil eder. **Derleme** derlenecek kaynak dosyaları kümesi, derleme başvurularını ve derleyici seçenekleri içerir. Diğer tüm bilgiler bu bağlamda kullanarak kod anlamı hakkında neden. A <xref:Microsoft.CodeAnalysis.Compilation> bulabilirsiniz **simgeleri** -türleri, ad alanları, üyeleri ve adları ve diğer ifadeleri başvuran değişkenler gibi varlıklar. Adları ve ifadeler ile ilişkilendirme işlemi **simgeleri** çağrılır **bağlama**.
+Örneği <xref:Microsoft.CodeAnalysis.Compilation> derleyici tarafından görülen şekilde tek bir projeye benzer ve Visual Basic veya C# programı derlemek için gereken her şeyi temsil eder. **Derleme** derlenecek kaynak dosyaları, bütünleştirilmiş kod başvuruları ve derleyici seçenekleri içerir. Bu bağlam içinde ve diğer bilgileri kullanarak kodun anlamı hakkında neden. A <xref:Microsoft.CodeAnalysis.Compilation> bulmanıza olanak tanır **sembolleri** -türleri, ad alanları, üyeleri ve adları ve diğer ifadeler başvuran değişkenler gibi varlıklar. Adlar ve ifadeler ile ilişkilendirme işlemi **sembolleri** çağrılır **bağlama**.
 
-Gibi <xref:Microsoft.CodeAnalysis.SyntaxTree?displayProperty=nameWithType>, <xref:Microsoft.CodeAnalysis.Compilation> dile özgü türevleri ile bir Özet sınıf. Derleme örneği oluştururken, üzerinde bir Üreteç yöntemi çağırmanız gerekir <xref:Microsoft.CodeAnalysis.CSharp.CSharpCompilation?displayProperty=nameWithType> (veya <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicCompilation?displayProperty=nameWithType>) sınıfı.
+Gibi <xref:Microsoft.CodeAnalysis.SyntaxTree?displayProperty=nameWithType>, <xref:Microsoft.CodeAnalysis.Compilation> soyut bir sınıf dile bağlı türevleri ile ilgilidir. Derleme örneğini oluştururken, üzerinde bir fabrika yöntemini çağırmanız gerekir <xref:Microsoft.CodeAnalysis.CSharp.CSharpCompilation?displayProperty=nameWithType> (veya <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicCompilation?displayProperty=nameWithType>) sınıfı.
 
-## <a name="querying-symbols"></a>Simgeler sorgulama
+## <a name="querying-symbols"></a>Semboller sorgulama
 
-Bu öğreticide, "Hello World" programı yeniden bakın. Bu süre, programın ne bu simgeleri göstermek türlerini anlamak için sembolleri sorgu. Bir ad alanındaki türler için sorgular ve bir türünde kullanılabilen yöntemler bulmayı öğrenin.
+Bu öğreticide, "Hello World" programı tekrar bakın. Bu kez, programın ne bu sembolleri temsil türlerini anlamak için sembolleri sorgulayın. Bir ad alanı içindeki türleri için sorgulama ve türe göre uygun olan yöntemler bulmayı öğrenin.
 
-Bu örnek için tamamlanmış kod görebilirsiniz [GitHub depomuzda](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/SemanticQuickStart).
+Bu örnek için tamamlanan kodu gördüğünüz [GitHub depomuzda](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/SemanticQuickStart).
 
 > [!NOTE]
-> Sözdizimi ağacı türleri devralma programı farklı konumlarda geçerli farklı söz dizimi öğeleri tanımlamak için kullanın. Genellikle bu API'leri kullanarak atama özellikleri veya belirli türetilmiş türler için koleksiyon üyeleri anlamına gelir. Aşağıdaki örneklerde, atama ve atamalar açıkça yazılan değişkenler kullanılarak ayrı deyim ' dir. Dönüş türleri API ve çalışma zamanı türü, döndürülen nesnelerin görmek için kodu okuyabilir. Uygulamada, incelenmesi nesnelerin türünü tanımlamak için API adları kullanır ve örtük olarak yazılan değişkenler kullanmak için daha yaygın bir durumdur.
+> Sözdizimi ağacı türleri devralma programı farklı konumlarda geçerli olan farklı bir sözdizimi öğeleri tanımlamak için kullanın. Genellikle bu API'leri kullanarak, atama özellikleri veya belirli türetilen türler için koleksiyon üyelerini anlamına gelir. Aşağıdaki örneklerde, atama ve atamaları açıkça yazılmış değişkenler kullanarak ayrı deyim olan. API dönüş türleri ve döndürülen nesnelerin çalışma zamanı türü görmek için kodu okuyabilirsiniz. Uygulamada, türü örtük olarak belirlenmiş değişkenlerin ve incelenmekte olan nesnelerin türünü tanımlamak için API adlara dayalı daha yaygındır.
 
 Yeni C# oluşturma **tek başına kod analizi aracı** proje:
 
-* Visual Studio'da, **dosya** > **yeni** > **proje** yeni proje iletişim kutusu görüntülemek için.
+* Visual Studio'da **dosya** > **yeni** > **proje** yeni proje iletişim kutusu görüntülenecek.
 * Altında **Visual C#** > **genişletilebilirlik**, seçin **tek başına kod analizi aracı**.
-* Projenizin adı "**SemanticQuickStart**" ve Tamam'ı tıklatın.
+* Projenizi adlandırın "**SemanticQuickStart**" ve Tamam'a tıklayın.
 
-Temel "Hello World!" analiz etmeyi deneyeceğimiz daha önce gösterilen programı.
-Bir sabit olarak Hello World program için metni ekleyin, `Program` sınıfı:
+Temel "Hello World!" analiz etmek için gideceğinizi daha önce gösterilen programı.
+İçinde bir sabit olarak Hello World programı için metin ekleyin, `Program` sınıfı:
 
 [!code-csharp[Declare the program test](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#1 "Declare a constant string for the program text to analyze")]
 
-Ardından, kod metinde sözdizimi ağacı oluşturmak için aşağıdaki kodu ekleyin `programText` sabit.  Aşağıdaki satırı ekleyin, `Main` yöntemi:
+Ardından, kod metni için söz dizimi ağacı oluşturmak için aşağıdaki kodu ekleyin `programText` sabit.  Aşağıdaki satırı ekleyin, `Main` yöntemi:
 
 [!code-csharp[Create the tree](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#2 "Create the syntax tree")]
 
-Ardından, yapı bir <xref:Microsoft.CodeAnalysis.CSharp.CSharpCompilation> ağacından zaten oluşturulmuş. "Hello World" örnek dayanan <xref:System.String> ve <xref:System.Console> türleri. Bu iki derlemeniz türlerinde bildirir derleme başvurmanız gerekir. Aşağıdaki satırı ekleyin, `Main` yöntemi uygun derlemesine başvuru dahil olmak üzere, sözdizimi ağacı derlenmesini oluşturmak için:
+Ardından, yapı bir <xref:Microsoft.CodeAnalysis.CSharp.CSharpCompilation> zaten oluşturduğunuz ağaç. "Hello World" örnek dayanan <xref:System.String> ve <xref:System.Console> türleri. Bu iki tür derlemenizdeki bildiren derlemesine başvuru gerekiyor. Aşağıdaki satırı ekleyin, `Main` yöntemi, söz dizimi ağacının uygun derlemesine başvuru dahil olmak üzere bir derleme oluşturmak için:
 
 [!code-csharp[Create the compilation](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#3 "Create the compilation for the semantic model")]
 
@@ -60,23 +60,23 @@ Ardından, yapı bir <xref:Microsoft.CodeAnalysis.CSharp.CSharpCompilation> ağa
 
 ## <a name="querying-the-semantic-model"></a>Anlam modeli sorgulama
 
-Bulduktan sonra bir <xref:Microsoft.CodeAnalysis.Compilation> için sorabileceğiniz bir <xref:Microsoft.CodeAnalysis.SemanticModel> herhangi <xref:Microsoft.CodeAnalysis.SyntaxTree> uygulamasında bulunan <xref:Microsoft.CodeAnalysis.Compilation>. Anlam modeli, normalde IntelliSense elde edebileceğiniz tüm bilgi kaynağı olarak düşünebilirsiniz. A <xref:Microsoft.CodeAnalysis.SemanticModel> gibi soruları yanıtlamanıza "Adları bu konumda kapsamdaki nelerdir?", "hangi üyelerinin bu yönteminden erişilebilir?", "hangi değişkenler bu metin bloğunda kullanılır?" ve "Ne bu ad/ifade başvurmak?" Anlam modeli oluşturmak için bu deyim ekleyin:
+Sonra bir <xref:Microsoft.CodeAnalysis.Compilation> bunları istemeniz bir <xref:Microsoft.CodeAnalysis.SemanticModel> herhangi <xref:Microsoft.CodeAnalysis.SyntaxTree> uygulamasında yer alan <xref:Microsoft.CodeAnalysis.Compilation>. Anlam modeli, normalde IntelliSense'de elde edebileceğiniz bilgi kaynağı olarak düşünebilirsiniz. A <xref:Microsoft.CodeAnalysis.SemanticModel> soruları "Adı bu konumda kapsamda nelerdir?", ister "hangi üyelerinin bu yöntemden erişilebilir?", "Bu metin bloğu içinde hangi değişkenleri kullanılır?" ve "Ne bu adı/ifadesi başvurmak?" Anlam modeli oluşturmak için bu deyimi ekleyin:
 
 [!code-csharp[Create the semantic model](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#4 "Create the semantic model")]
 
 ## <a name="binding-a-name"></a>Bir ad bağlama
 
-<xref:Microsoft.CodeAnalysis.Compilation> Oluşturur <xref:Microsoft.CodeAnalysis.SemanticModel> gelen <xref:Microsoft.CodeAnalysis.SyntaxTree>. Model oluşturduktan sonra ilk bulmak için sorgulayabilirsiniz `using` yönerge ve sembol bilgilerini almak `System` ad alanı. Bu iki satır ekleyin, `Main` anlam modeli oluşturmak ve ilk simgesini almak için yöntemi deyimi kullanarak:
+<xref:Microsoft.CodeAnalysis.Compilation> Oluşturur <xref:Microsoft.CodeAnalysis.SemanticModel> gelen <xref:Microsoft.CodeAnalysis.SyntaxTree>. Model oluşturduktan sonra ilk bulmak için sorgulayabilirsiniz `using` yönergesi için Sembol bilgilerini almanıza ve `System` ad alanı. Bu iki satırları ekleyin, `Main` anlam modeli oluşturma ve ilk simgesini almak için yöntem using deyimi:
 
 [!code-csharp[Find the namespace symbol for the first using](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#5 "Find the namespace symbol for the first using")]
 
-Önceki kod ilk adı bağlanacağı gösterilmektedir `using` yönergesi almak için bir <xref:Microsoft.CodeAnalysis.SymbolInfo?displayProperty=nameWithType> için `System` ad alanı. Önceki kod Ayrıca, kullandığınız gösterilmektedir **sözdizimi modeli** ; kod yapısını bulmak için kullandığınız **anlam modeli** anlamlarını anlamak için. **Sözdizimi modeli** dizeyi bulur `System` kullanarak deyimi. **Anlam modeli** tanımlanan türleri hakkında tüm bilgiler `System` ad alanı.
+Yukarıdaki kod ilk adı bağlama gösterilmektedir `using` alınacak yönergesi bir <xref:Microsoft.CodeAnalysis.SymbolInfo?displayProperty=nameWithType> için `System` ad alanı. Yukarıdaki kod, ayrıca kullanmanızı gösterir **söz dizimi modeli** ; kod yapısını bulmak için kullandığınız **anlam modeli** anlamını anlamak için. **Söz dizimi modeli** bulur `System` kullanarak deyimi. **Anlam modeli** tanımlanan türleri hakkında tüm bilgiler `System` ad alanı.
 
-Gelen <xref:Microsoft.CodeAnalysis.SymbolInfo> edinebilirsiniz nesne <xref:Microsoft.CodeAnalysis.ISymbol?displayProperty=nameWithType> kullanarak <xref:Microsoft.CodeAnalysis.SymbolInfo.Symbol?displayProperty=nameWithType> özelliği. Bu özellik bu ifade başvurduğu simgesini döndürür. Herhangi bir şeye (örneğin, sayısal değişmez değerleri) Bu özellik başvuran yok ifadeleri olduğu `null`. Zaman <xref:Microsoft.CodeAnalysis.SymbolInfo.Symbol?displayProperty=nameWithType> null değil <xref:Microsoft.CodeAnalysis.ISymbol.Kind?displayProperty=nameWithType> simgenin türünü gösterir. Bu örnekte, <xref:Microsoft.CodeAnalysis.ISymbol.Kind?displayProperty=nameWithType> özelliği bir <xref:Microsoft.CodeAnalysis.SymbolKind.Namespace?displayProperty=nameWithType>. Aşağıdaki kodu ekleyin, `Main` yöntemi. Simge için alır `System` ad alanı ve görüntüler tüm alt ad alanlarını içinde bildirilen `System` ad alanı:
+Gelen <xref:Microsoft.CodeAnalysis.SymbolInfo> edinebilirsiniz nesne <xref:Microsoft.CodeAnalysis.ISymbol?displayProperty=nameWithType> kullanarak <xref:Microsoft.CodeAnalysis.SymbolInfo.Symbol?displayProperty=nameWithType> özelliği. Bu özellik, bu ifade için başvuruyor sembol döndürür. Bu özellik başvuran yoksa şeye (örneğin, sayısal değişmez değerler) ifadeler için olan `null`. Zaman <xref:Microsoft.CodeAnalysis.SymbolInfo.Symbol?displayProperty=nameWithType> null değil <xref:Microsoft.CodeAnalysis.ISymbol.Kind?displayProperty=nameWithType> simgenin türünü gösterir. Bu örnekte, <xref:Microsoft.CodeAnalysis.ISymbol.Kind?displayProperty=nameWithType> özelliği bir <xref:Microsoft.CodeAnalysis.SymbolKind.Namespace?displayProperty=nameWithType>. Aşağıdaki kodu ekleyin, `Main` yöntemi. Simgesini alır `System` tüm alt ad alanlarında bildirilen ad alanı ve görüntüler `System` ad alanı:
 
 [!code-csharp[Display all the child namespaces](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#6 "Display all the child namespaces from this compilation")]
 
-Programını çalıştırın ve aşağıdaki çıktı görmeniz gerekir:
+Programı çalıştırın ve aşağıdaki çıktıyı görmeniz gerekir:
 
 ```
 System.Collections
@@ -97,43 +97,43 @@ Press any key to continue . . .
 ```
 
 > [!NOTE]
-> Çıkış alt ad alanı, her ad alanı içermeyen `System` ad alanı. Yalnızca bütünleştirilmiş koduna başvuruyor bu derlemede varsa her ad alanı görüntüler nerede `System.String` bildirilmedi. Bu derleme diğer derlemelerde bildirilen ad bilinmiyor
+> Çıktı bir alt ad alanı, her ad alanı içermeyen `System` ad alanı. Bu derlemede, yalnızca derlemenin başvuran mevcut olan her ad alanı görüntüler burada `System.String` bildirilir. Diğer derlemeler içinde bildirilen tüm ad alanları için bu derleme bilinmiyor
 
 ### <a name="binding-an-expression"></a>Bir ifade bağlama
 
-Önceki kod, bir ad bağlayarak bir sembol bulmak gösterilmiştir. Adları olmayan diğer ifadeler bağlanabilen bir C# programında vardır. Bu özellik göstermek için şimdi basit bir dize sabit değeri bağlamayı erişin.
+Yukarıdaki kod, bir ad bağlayarak bir sembol Bul işlemi gösterilmektedir. Adı olmayan başka ifadelere bağlanabilir bir C# programı vardır. Bu özellik göstermek için şimdi basit dize sabit değeri için bağlama erişin.
 
-"Hello World" programı içeren bir <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LiteralExpressionSyntax?displayProperty=nameWithType>, "Hello, World!" konsolda görüntülenen dize.
+"Hello World" programını içeren bir <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LiteralExpressionSyntax?displayProperty=nameWithType>, "Hello, World!" konsolda görüntülenen dize.
 
-"Hello, World!" Bul tek bir dize programa değişmez değer bulma tarafından dizesi. Ardından, sözdizimi düğümü bulunan sonra tür bilgi bu düğüm için anlam modeli alın. Aşağıdaki kodu ekleyin, `Main` yöntemi:
+"Hello, World!" bulun tek bir dize programda değişmez değer bulma tarafından kullanılan dize. Daha sonra sözdizimi düğümü bulunan sonra anlam modeli Bu düğüm için tür bilgilerini alın. Aşağıdaki kodu ekleyin, `Main` yöntemi:
 
 [!code-csharp[Find the namespace symbol for the only using](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#7 "Find the namespace symbol for the only using")]
 
-<xref:Microsoft.CodeAnalysis.TypeInfo?displayProperty=nameWithType> Yapı içeren bir <xref:Microsoft.CodeAnalysis.TypeInfo.Type?displayProperty=nameWithType> özelliği sabit türü anlamsal bilgilerine erişim sağlar. Bu örnekte, o `string` türü. Bu özellik yerel bir değişkene atar bir bildirimi ekleyin:
+<xref:Microsoft.CodeAnalysis.TypeInfo?displayProperty=nameWithType> Yapı içeren bir <xref:Microsoft.CodeAnalysis.TypeInfo.Type?displayProperty=nameWithType> değişmez değer türü hakkında anlam bilgilerine erişim sağlayan bir özellik. Bu örnekte, o `string` türü. Bu özellik yerel bir değişkene atar bir bildirimi ekleyin:
 
 [!code-csharp[Find the semantic information about the string type](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#8 "Use the string literal to access the semantic information in the string type.")]
 
-Bu öğreticiyi tamamlamak için şimdi tüm genel yöntemler bildirilen bir dizi oluşturan bir LINQ sorgusu yapı `string` , dönüş türü bir `string`. Bu sorgu karmaşık sağlandığından, yapı satır alır, tek bir sorgu yeniden yapılandırma. Bu sorgu için kaynak üzerinde bildirilen tüm üyeleri dizisidir `string` türü:
+Bu öğreticiyi tamamlamak için tüm genel yöntemleri bildirilen üzerinde bir dizi oluşturur bir LINQ Sorgu oluşturalım `string` türü döndüren bir `string`. Bu sorgu karmaşık, bu nedenle şimdi bu yapı satır alır, tek bir sorgu yeniden yapılandırma. Bu sorgu için kaynak üzerinde bildirilen tüm üyelerle dizisidir `string` türü:
 
 [!code-csharp[Access the sequence of members on the string type](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#9 "Access the sequence of members on the string type.")]
 
-Bu kaynak sırası karakterlerine özellikleri ve alanları da dahil olmak üzere tüm üyeleri bu nedenle kullanarak filtre <xref:System.Collections.Immutable.ImmutableArray%601.OfType%2A?displayProperty=nameWithType> yöntemi Bul öğesine <xref:Microsoft.CodeAnalysis.IMethodSymbol?diplayProperty=nameWithType> nesneler:
+Bu kaynak dizisi biçimlendiriciyi özellikleri ve alanları da dahil olmak üzere tüm üyeleri kullanarak süzün <xref:System.Collections.Immutable.ImmutableArray%601.OfType%2A?displayProperty=nameWithType> Bul öğeleri yönteme <xref:Microsoft.CodeAnalysis.IMethodSymbol?diplayProperty=nameWithType> nesneler:
 
 [!code-csharp[Filter the sequence to only methods](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#10 "Find the subset of the collection that is the methods.")]
 
-Ardından, yalnızca genel ve dönüş yöntemlerini döndürmek için başka bir filtre Ekle bir `string`:
+Ardından, genel ve dönüş yöntemleri döndürülecek başka bir filtre Ekle bir `string`:
 
 [!code-csharp[Filter on return type and accessibility](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#11 "Find only the public methods that return a string.")]
 
-Yalnızca ad özelliği ve yalnızca DISTINCT adlarını herhangi aşırı kaldırarak seçin:
+Name özelliği yalnızca ve yalnızca DISTINCT adları tüm aşırı yüklemeler kaldırarak seçin:
 
 [!code-csharp[find the distinct names.](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#12 "Use the string literal to access the semantic information in the string type.")]
 
-Ayrıca LINQ sorgu sözdizimini kullanarak tam sorgusu oluşturun ve sonra konsolda tüm yöntemi adlarını görüntülemek:
+Ayrıca LINQ Sorgu söz dizimi kullanarak tam bir sorgu oluşturun ve sonra konsolda yöntem adları görüntüleyin:
 
 [!code-csharp[build and display the results of this query.](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#13 "Build and display the results of the query.")]
 
-Derleme ve programı çalıştırın. Şu çıktı görmeniz gerekir:
+Derleme ve programı çalıştırın. Aşağıdaki çıktıyı görmeniz gerekir:
 
 ```
 Join
@@ -159,4 +159,4 @@ Intern
 IsInterned
 Press any key to continue . . .
 ```
-Anlam API bulmak ve bu programın parçası olan simgeler hakkında bilgi görüntülemek için kullandığınız.
+Bulmak ve bu programın bir parçası olan simgeler hakkında bilgi görüntülemek için anlamsal API kullandınız.

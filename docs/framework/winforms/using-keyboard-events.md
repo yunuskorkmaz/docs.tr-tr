@@ -9,34 +9,34 @@ helpviewer_keywords:
 - keyboard events
 - events [Windows Forms], keyboard
 ms.assetid: d3f3e14b-a459-4ee6-9875-8957e34f8ee9
-ms.openlocfilehash: 706b4d87ddbb6afadfd90af866520e6feaa58ca7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c6059e5d0957de09dd2c4832573c784935eb510
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542268"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484915"
 ---
 # <a name="using-keyboard-events"></a>Klavye Olaylarını Kullanma
-Windows Forms programlarının çoğu klavye girişi klavye olayları işleme göre işler. Bu konu, her olay ve sağlanan verileri her olay için kullanmak ne zaman ayrıntılar dahil olmak üzere klavye olayları genel bir bakış sağlar.  Ayrıca bkz. [olay işleyicilerine genel bakış (Windows Forms)](http://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\)), [olaylara genel bakış (Windows Forms)](http://msdn.microsoft.com/library/1h12f09z\(v=vs.110\)).  
+Çoğu Windows Forms program klavye girdisi klavye olaylarını işleme göre işleyin. Bu konu, klavye olayları zaman her bir olay ve sağlanan verileri her olay için kullanılacağı hakkında ayrıntılar dahil olmak üzere, genel bir bakış sağlar.  Ayrıca bkz: [olay işleyicilerine genel bakış (Windows Forms)](https://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\)), [olaylara genel bakış (Windows Forms)](https://msdn.microsoft.com/library/1h12f09z\(v=vs.110\)).  
   
 ## <a name="keyboard-events"></a>Klavye olayları  
- Windows Forms kullanıcı klavye tuşuna bastığında oluşan iki olayları ve bir kullanıcı bir klavye tuşu bıraktığında bir olay sağlar:  
+ Windows Forms, bir kullanıcı bir klavye tuşuna bastığında oluşan iki olay ve bir kullanıcı bir klavye anahtar bıraktığında bir olay sağlar:  
   
--   <xref:System.Windows.Forms.Control.KeyDown> Olay oluştuktan sonra  
+-   <xref:System.Windows.Forms.Control.KeyDown> Gerçekleştiğinde bir kez  
   
--   <xref:System.Windows.Forms.Control.KeyPress> Birden çok kez ne zaman bir kullanıcı aynı tuşunu tutan oluşabilir olay.  
+-   <xref:System.Windows.Forms.Control.KeyPress> Olayı, bir kullanıcı aynı tuşunu basılı tutar birden çok kez gerçekleşebilir.  
   
 -   <xref:System.Windows.Forms.Control.KeyUp> Olayı, bir kullanıcı bir anahtar zaman serbest sonra oluşur.  
   
- Bir kullanıcı bir tuşuna bastığında klavye iletiyi karakter anahtar ya da fiziksel bir anahtar belirtir yükseltmek için hangi olay tabanlı Windows Forms belirler. Karakter ve fiziksel anahtarlar hakkında daha fazla bilgi için bkz: [nasıl klavye girişi çalışır](../../../docs/framework/winforms/how-keyboard-input-works.md).  
+ Bir kullanıcı bir tuşuna bastığında, Windows Forms klavye iletisi karakter anahtarı veya fiziksel bir anahtar belirtir yükseltmek için hangi olay tabanlı belirler. Karakter ve fiziksel anahtarlar hakkında daha fazla bilgi için bkz. [nasıl klavye girişi çalışır](../../../docs/framework/winforms/how-keyboard-input-works.md).  
   
  Aşağıdaki tabloda, üç klavye olaylarını açıklar.  
   
 |Klavye olayı|Açıklama|Sonuçları|  
 |--------------------|-----------------|-------------|  
-|<xref:System.Windows.Forms.Control.KeyDown>|Bir kullanıcı bir fiziksel tuşuna bastığında bu olay tetiklenir.|İşleyicisi <xref:System.Windows.Forms.Control.KeyDown> alır:<br /><br /> <ul><li>A <xref:System.Windows.Forms.KeyEventArgs> sağlayan parametresi <xref:System.Windows.Forms.KeyEventArgs.KeyCode%2A> (fiziksel klavye düğmesi belirtir) özelliği.</li><li><xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> Özelliği (SHIFT, CTRL ya da ALT).</li><li><xref:System.Windows.Forms.KeyEventArgs.KeyData%2A> (Anahtar kodu ve değiştirici birleştirir) özelliği. <xref:System.Windows.Forms.KeyEventArgs> Parametresi de sağlar:<br /><br /> <ul><li><xref:System.Windows.Forms.KeyEventArgs.Handled%2A> Temel denetim anahtar almasını önlemek için ayarlanabilir özelliği.</li><li><xref:System.Windows.Forms.KeyEventArgs.SuppressKeyPress%2A> Gizlemek için kullanılan özellik <xref:System.Windows.Forms.Control.KeyPress> ve <xref:System.Windows.Forms.Control.KeyUp> bu tuş vuruşu olayları.</li></ul></li></ul>|  
-|<xref:System.Windows.Forms.Control.KeyPress>|Anahtarı veya anahtarları sonuç bir karakter tuşuna bastığınızda, bu olay tetiklenir. Örneğin, bir kullanıcı kaydırma ve küçük harf bir büyük harf "A" karakter neden "a" tuşuna bastığında.|<xref:System.Windows.Forms.Control.KeyPress> sonra tetiklenir <xref:System.Windows.Forms.Control.KeyDown>.<br /><br /> <ul><li>İşleyicisi <xref:System.Windows.Forms.Control.KeyPress> alır:</li><li>A <xref:System.Windows.Forms.KeyPressEventArgs> basıldı anahtar karakter kodunu içerir parametresi. Bu karakter kodu her bir karakteri anahtarı ve değiştirici tuşa birleşimi için benzersizdir.<br /><br />     Örneğin, "A" anahtar üretir:<br /><br /> <ul><li>SHIFT tuşuyla basıldıysa 65 karakter kodu</li><li>Veya tek başına basıldığında varsa 97 CAPS LOCK tuşunun,</li><li>Ve 1 ile CTRL tuşunu basılı olduğunda.</li></ul></li></ul>|  
-|<xref:System.Windows.Forms.Control.KeyUp>|Bir kullanıcı bir fiziksel anahtar yayımlandığında bu olay tetiklenir.|İşleyicisi <xref:System.Windows.Forms.Control.KeyUp> alır:<br /><br /> <ul><li>A <xref:System.Windows.Forms.KeyEventArgs> parametre:<br /><br /> <ul><li>Sağlayan <xref:System.Windows.Forms.KeyEventArgs.KeyCode%2A> (fiziksel klavye düğmesi belirtir) özelliği.</li><li><xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> Özelliği (SHIFT, CTRL ya da ALT).</li><li><xref:System.Globalization.SortKey.KeyData%2A> (Anahtar kodu ve değiştirici birleştirir) özelliği.</li></ul></li></ul>|  
+|<xref:System.Windows.Forms.Control.KeyDown>|Bir kullanıcı bir fiziksel tuşuna bastığında bu olay tetiklenir.|İşleyici için <xref:System.Windows.Forms.Control.KeyDown> alır:<br /><br /> <ul><li>A <xref:System.Windows.Forms.KeyEventArgs> sağlayan parametresi <xref:System.Windows.Forms.KeyEventArgs.KeyCode%2A> (bir fiziksel klavye düğmeyi belirtir) özelliği.</li><li><xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> Özelliği (SHIFT, CTRL ya da ALT).</li><li><xref:System.Windows.Forms.KeyEventArgs.KeyData%2A> (Değiştiricisi ve anahtar kodu birleştirir) özelliği. <xref:System.Windows.Forms.KeyEventArgs> Parametresi de sağlar:<br /><br /> <ul><li><xref:System.Windows.Forms.KeyEventArgs.Handled%2A> Temel denetim anahtar almasını önlemek için ayarlanabilir özelliği.</li><li><xref:System.Windows.Forms.KeyEventArgs.SuppressKeyPress%2A> Gizlemek için kullanılan özellik <xref:System.Windows.Forms.Control.KeyPress> ve <xref:System.Windows.Forms.Control.KeyUp> bu tuş vuruşu olayları.</li></ul></li></ul>|  
+|<xref:System.Windows.Forms.Control.KeyPress>|Anahtar veya anahtarlarının bir karakter, sonuç basıldığında bu olay tetiklenir. Örneğin, bir kullanıcı kaydırma ve küçük harf bir büyük harf "A" karakteri neden "a" tuşuna bastığında.|<xref:System.Windows.Forms.Control.KeyPress> sonra yükseltilmiş <xref:System.Windows.Forms.Control.KeyDown>.<br /><br /> <ul><li>İşleyici için <xref:System.Windows.Forms.Control.KeyPress> alır:</li><li>A <xref:System.Windows.Forms.KeyPressEventArgs> basıldığını anahtarı karakter kodunu içeren bir parametre. Bu karakter kodunu, her bir karakter anahtar ve değiştiricisi anahtar bileşimi için benzersizdir.<br /><br />     Örneğin, "A" anahtarı oluşturur:<br /><br /> <ul><li>İle SHIFT tuşunu basılı, 65 karakter kodu</li><li>Veya kendi kendine basıldığında, 97 CAPS LOCK tuşunun,</li><li>Ve 1 ile CTRL tuşuna basıldığında.</li></ul></li></ul>|  
+|<xref:System.Windows.Forms.Control.KeyUp>|Bir kullanıcı bir fiziksel anahtar yayımlandığında bu olay tetiklenir.|İşleyici için <xref:System.Windows.Forms.Control.KeyUp> alır:<br /><br /> <ul><li>A <xref:System.Windows.Forms.KeyEventArgs> parametresi:<br /><br /> <ul><li>Sağlayan <xref:System.Windows.Forms.KeyEventArgs.KeyCode%2A> (bir fiziksel klavye düğmeyi belirtir) özelliği.</li><li><xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> Özelliği (SHIFT, CTRL ya da ALT).</li><li><xref:System.Globalization.SortKey.KeyData%2A> (Değiştiricisi ve anahtar kodu birleştirir) özelliği.</li></ul></li></ul>|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Bir Windows Forms Uygulamasında Klavye Girdisi](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)  

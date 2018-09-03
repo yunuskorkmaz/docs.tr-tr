@@ -5,15 +5,15 @@ helpviewer_keywords:
 - <seealso> XML tag
 - seealso XML tag
 ms.assetid: 36050c95-1af2-4284-b9b6-1a70691ed978
-ms.openlocfilehash: 1d45c0c5fa95de9cfa345c0bdbf496aa227b9af5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a792bbea108bcdf33d430c47773466ef3dccdb0c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604685"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484886"
 ---
 # <a name="ltseealsogt-visual-basic"></a>&lt;SeeAlso&gt; (Visual Basic)
-Ayrıca bkz. bölümünde görünen bağlantı belirtir.  
+Ayrıca bkz. bölümünde görünen bağlantıyı belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -23,17 +23,17 @@ Ayrıca bkz. bölümünde görünen bağlantı belirtir.
   
 #### <a name="parameters"></a>Parametreler  
  `member`  
- Bir üye ya da geçerli derleme ortamından çağrılacak kullanılabilir alan başvuru. Verilen code öğesi var ve geçirir derleyici denetler `member` çıktı XML öğesi adı. `member` çift tırnak işaretleri içinde görünmesi gerekir ("").  
+ Bir üye veya geçerli derleme ortamdan çağrılacak kullanılabilir alan başvuru. Derleyici belirli kod öğesi var. başarılı olup olmadığını denetler ve `member` çıktı XML öğesi adı. `member` çift tırnak içinde yer almalıdır ("").  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kullanım `<seealso>` etiketi bir Ayrıca bkz. bölümünde görünmesini istediğiniz metni belirtin. Kullanım [ \<bkz >](../../../visual-basic/language-reference/xmldoc/see.md) metin içindeki bir bağlantıdan belirtmek için.  
+ Kullanım `<seealso>` ayrıca bölümü görünmesini istediğiniz metni belirtmek için etiket. Kullanım [ \<bakın >](../../../visual-basic/language-reference/xmldoc/see.md) bağlantı metninde belirtmek için.  
   
- İle derleme [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) bir dosyaya işlem belgesi açıklamaları için.  
+ Derleme [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) işlem belgeleri açıklamaları için bir dosya için.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte `<seealso>` içinde etiketi `DoesRecordExist` başvurmak için bölüm açıklamalar `UpdateRecord` yöntemi.  
+ Bu örnekte `<seealso>` içindeki `DoesRecordExist` başvurmak için bölüm açıklamalar `UpdateRecord` yöntemi.  
   
  [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/seealso_1.vb)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XML Açıklama Etiketleri](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+ [XML Açıklama Etiketleri](../../../visual-basic/language-reference/xmldoc/index.md)

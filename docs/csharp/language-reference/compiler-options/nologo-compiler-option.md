@@ -9,15 +9,15 @@ helpviewer_keywords:
 - banners, suppressing startup
 - /nologo compiler option [C#]
 ms.assetid: 426afb36-a8fb-469d-9c45-a35d9512557c
-ms.openlocfilehash: cede0d730e0c0bdaaa1b9b39c729b49677b81ed5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8f4582e9c8d5a54d924ff5b456ef8ffd8cc56f3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33213646"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480601"
 ---
 # <a name="-nologo-c-compiler-options"></a>-nologo (C# Derleyici Seçenekleri)
-**- Nologo** seçeneği derleyici başladığında oturum açma başlık görünümünü ve bilgilendirici iletileri görüntüsünü derleme sırasında gizler.  
+**- Nologo** seçeneği derleyici başlatıldığında oturum açma başlığının görüntülenmesini ve derleme sırasında görüntülenen bilgi iletilerini engeller.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -26,10 +26,11 @@ ms.locfileid: "33213646"
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu seçenek geliştirme ortamında kullanılamaz; Yalnızca komut satırından derlerken kullanılabilir.  
+ Bu seçenek geliştirme ortamı içinden erişilebilir değildir; Yalnızca komut satırından derleme yapılırken kullanılabilir.  
   
- Bu derleyici seçeneği Visual Studio'da kullanılamıyor ve programlı olarak değiştirilemez.  
+ Bu derleyici seçeneğini Visual Studio'da kullanılamıyor ve program aracılığıyla değiştirilemez.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)  
- [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)
+
+- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)  
+- [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)

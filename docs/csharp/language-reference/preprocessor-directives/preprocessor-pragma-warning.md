@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - '#pragma warning [C#]'
 ms.assetid: 723493d5-9753-4cec-babb-54e2b8eb36b6
-ms.openlocfilehash: 079045f4eb52f03afa8733620029396d80cb75fe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 89ff8151d55ac58a1b114f7727297704ce26b9a7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273663"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481936"
 ---
 # <a name="pragma-warning-c-reference"></a>#pragma uyarısı (C# Başvurusu)
-`#pragma warning` etkinleştirmek veya belirli uyarıları devre dışı bırakabilirsiniz.  
+`#pragma warning` etkinleştirebilir veya belirli uyarıları devre dışı bırak.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -25,12 +25,12 @@ ms.locfileid: "33273663"
   
 #### <a name="parameters"></a>Parametreler  
  `warning-list`  
- Uyarı numaralarını virgülle ayrılmış listesi. "CS" öneki isteğe bağlıdır.  
+ Uyarı numaralarını virgülle ayrılmış listesi. "CS" ön eki isteğe bağlıdır.  
   
- Hiçbir uyarı numaralarını belirtildiğinde `disable` tüm uyarıları devre dışı bırakır ve `restore` tüm uyarıları sağlar.  
+ Hiçbir uyarı numaralarını belirtildiğinde `disable` tüm uyarıları devre dışı bırakır ve `restore` tüm uyarıları etkinleştirir.  
   
 > [!NOTE]
->  Visual Studio'da uyarı numaralarını bulmak için projeyi oluşturun ve uyarı sayıları arayın **çıkış** penceresi.  
+>  Visual Studio'da uyarı numaralarını bulmak için projenizi derleyin ve uyarısı sayıları bulun **çıkış** penceresi.  
   
 ## <a name="example"></a>Örnek  
   
@@ -58,8 +58,9 @@ public class D
 }  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [C# Ön İşlemci Yönergeleri](../../../csharp/language-reference/preprocessor-directives/index.md)  
- [C# Derleyici Hataları](../../../csharp/language-reference/compiler-messages/index.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# başvurusu](../../../csharp/language-reference/index.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [C# Ön İşlemci Yönergeleri](../../../csharp/language-reference/preprocessor-directives/index.md)  
+- [C# Derleyici Hataları](../../../csharp/language-reference/compiler-messages/index.md)

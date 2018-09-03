@@ -1,32 +1,32 @@
 ---
-title: DataRelation gezinme
+title: DataRelations içinde gezinme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e5e673f4-9b44-45ae-aaea-c504d1cc5d3e
-ms.openlocfilehash: c46007fb86a76405fd99d6e943779238d6885aa8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1819d468d12c03ce0c4faac11f4b20b8fe0f9c33
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32761434"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482012"
 ---
-# <a name="navigating-datarelations"></a>DataRelation gezinme
-Birincil işlevlerinden biri bir <xref:System.Data.DataRelation> Gezinti birinden izin <xref:System.Data.DataTable> içinde başka bir bir <xref:System.Data.DataSet>. Bu sayede tüm almak ilgili <xref:System.Data.DataRow> nesnelerini **DataTable** tek bir verildiğinde **DataRow** ilgili öğesinden **DataTable**. Örneğin, kurduktan sonra bir **DataRelation** Müşteriler tablosu ve Siparişler tablosu arasında kullanarak bir müşterinin satır için tüm sipariş satırları alabilirsiniz **GetChildRows**.  
+# <a name="navigating-datarelations"></a>DataRelations içinde gezinme
+Birincil işlevlerinden biri bir <xref:System.Data.DataRelation> bir gezinti izin vermesidir <xref:System.Data.DataTable> diğerine içinde bir <xref:System.Data.DataSet>. Bu sayede tüm almak ilgili <xref:System.Data.DataRow> birindeki nesnelerin **DataTable** tek bir verildiğinde **DataRow** ilgili gelen **DataTable**. Örneğin, kurduktan sonra bir **DataRelation** tablosu müşteriler ve Siparişler tablosunun arasında kullanarak bir müşterinin satır için tüm sipariş satırları alabilirsiniz **GetChildRows**.  
   
- Aşağıdaki kod örneği oluşturur bir **DataRelation** arasında **müşteriler** tablo ve **siparişleri** tablosunun bir **DataSet** ve döndürür Tüm siparişleri her müşteri için.  
+ Aşağıdaki kod örneği oluşturur bir **DataRelation** arasında **müşteriler** tablo ve **siparişler** tablosunun bir **veri kümesi** ve döndürür Tüm siparişleri her müşteri için.  
   
  [!code-csharp[DataWorks Data.DataTableRelation#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks Data.DataTableRelation/CS/source.cs#1)]
  [!code-vb[DataWorks Data.DataTableRelation#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks Data.DataTableRelation/VB/source.vb#1)]  
   
- Sonraki örnek dört tablonun birlikte ilgili ve bu ilişkilerinde gezinme önceki örnekte üzerinde oluşturur. Önceki örnekte olduğu gibi **CustomerID** ilişkili **müşteriler** tablosu **siparişleri** tablo. Her müşteri için **müşteriler** tablo, tüm alt satırları **siparişleri** tablo belirlenir, belirli bir müşterinin siparişleri sayısını döndürmek için ve bunların **OrderID** değerleri.  
+ Sonraki örnekte, dört tablo birlikte ilgili ve bu ilişkilerinde gezinme önceki örnekte üzerinde oluşturur. Önceki örnekte olduğu gibi **CustomerID** ilişkili **müşteriler** tablo **siparişler** tablo. Her müşteri için **müşteriler** tablo, tüm alt satırları **siparişler** tablo belirlenir, belirli bir müşterinin siparişlerinin sayısını döndürmek için ve bunların **OrderID** değerleri.  
   
- Genişletilmiş örnek değerleri de döndürür **sipariş ayrıntıları** ve **ürünleri** tabloları. **Siparişleri** tablo ile ilgili **sipariş ayrıntıları** kullanarak tablo **OrderID** belirlemek için her biri için müşteri siparişi, hangi ürünler ve miktarları sipariş edilen. Çünkü **sipariş ayrıntıları** tablosu yalnızca içerir **ProductID** sıralı, ürün **sipariş ayrıntıları** ilgili **ürünleri** kullanarak **ProductID** dönebilmek için **ProductName**. Bu ilişkiyi **ürünleri** üst bir tablodur ve **sipariş ayrıntılarını** tablodur alt. Üzerinden yineleme olduğunda sonuç olarak, **sipariş ayrıntıları** tablo **GetParentRow** ilgili almak için çağrılır **ProductName** değeri.  
+ Genişletilmiş örnek değerlerinin de döndürür **OrderDetails** ve **ürünleri** tablolar. **Siparişler** tablo ilgili **OrderDetails** kullanarak tablo **OrderID** belirlemek için her biri için müşteri siparişi hangi ürün ve miktarların düzenlenebiliyordu. Çünkü **OrderDetails** yalnızca tablo içeren **ProductID** sıralı bir ürünün **OrderDetails** ilgili **ürünleri** kullanarak **ProductID** döndürmek için **ProductName**. Bu ilişkiyi **ürünleri** üst tablodur ve **sipariş ayrıntıları** alt bir tablodur. Yineleme sırasında bir sonucu olarak **OrderDetails** tablo **GetParentRow** ilgili almak için çağırılır **ProductName** değeri.  
   
- Fark olduğunda **DataRelation** için oluşturulan **müşteriler** ve **siparişleri** tabloları, herhangi bir değer için belirtilmişse **createConstraints**bayrağını (varsayılan **true**). Bu, tüm varsayar satırları **siparişleri** tablonuz bir **CustomerID** üst var. değer **müşteriler** tablo. Varsa bir **CustomerID** bulunmaktadır **siparişleri** bulunmayan tablo **müşteriler** tablo, bir <xref:System.Data.ForeignKeyConstraint> bir özel durum oluşturulmasına neden olur.  
+ Kullanırken dikkat edin **DataRelation** için oluşturulan **müşteriler** ve **siparişler** tablolar, herhangi bir değer için belirtilmişse **createConstraints**bayrağını (varsayılan değer **true**). Bu, tüm varsayar satırlarda **siparişler** tablonuz bir **CustomerID** üst var. değer **müşteriler** tablo. Varsa bir **CustomerID** var. **siparişler** yok tablo **müşteriler** tablo, bir <xref:System.Data.ForeignKeyConstraint> bir özel durum oluşturulmasına neden olur.  
   
- Alt sütun üst sütun içermiyor değerler içerebilecek ayarlanmadığında **createConstraints** bayrağını **false** eklerken **DataRelation**. Örnekte, **createConstraints** bayrağı ayarlanmış **false** için **DataRelation** arasında **siparişleri** tablo ve  **Sipariş Ayrıntıları** tablo. Bu uygulama tüm kayıtların dönüş sağlar **sipariş ayrıntıları** tablo ve yalnızca bir alt kümesini kayıtlarından **siparişleri** bir çalışma zamanı özel oluşturma olmadan tablo. Genişletilmiş örnek aşağıdaki biçimde bir çıktı üretir.  
+ Alt sütun üst sütun içermediğinden değerler içerdiğinde ayarlamak **createConstraints** bayrak **false** eklerken **DataRelation**. Örnekte, **createConstraints** bayrağı ayarlandığında **false** için **DataRelation** arasında **siparişler** tablo ve  **OrderDetails** tablo. Bu uygulamanın den tüm kayıtları döndüren sağlar **OrderDetails** tablo ve yalnızca bir alt kümesini kayıtlardan **siparişler** tablo olmadan bir çalışma zamanı özel durumu oluşturuluyor. Genişletilmiş örnek çıktısı aşağıdaki biçimde oluşturur.  
   
 ```  
 Customer ID: NORTS  
@@ -44,11 +44,11 @@ Customer ID: NORTS
           Quantity: 3  
 ```  
   
- Aşağıdaki kod örneğinde genişletilmiş bir örnektir burada değerleri **sipariş ayrıntıları** ve **ürünleri** tabloları döndürüldü, yalnızca bir alt kümesini kayıtları ile **siparişleri**döndürülen tablo.  
+ Aşağıdaki kod örneği bir genişletilmiş bir örnektir burada değerlerinden **OrderDetails** ve **ürünleri** tablolar döndürülür, yalnızca bir alt kümesi ile kayıtlara **siparişler**döndürülen tablo.  
   
  [!code-csharp[DataWorks Data.DataTableNavigation#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks Data.DataTableNavigation/CS/source.cs#1)]
  [!code-vb[DataWorks Data.DataTableNavigation#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks Data.DataTableNavigation/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

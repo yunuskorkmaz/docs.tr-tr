@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Next method [WPF]
 ms.assetid: 3698b44d-510e-4d18-b32b-85f17188ee26
-ms.openlocfilehash: 3cf3231bd48290c5b6b0ce8eeb6534de564c0c85
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 329a2cd96346e199ee834856dd6dbfac6175b722
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546412"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481184"
 ---
 # <a name="ienumrawinputdevicnext"></a>IEnumRAWINPUTDEVIC:Next
-Sonraki numaralandırır `celt` [RAWINPUTDEVICE](http://msdn.microsoft.com/library/default.asp?url=/library/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputstructures/rawinputdevice.asp) yapıları Numaralandırıcının listesi içinde `rgelt` numaralandırılmış öğelerin gerçek sayısını birlikte `pceltFetched`.  
+Sonraki numaralandırır `celt` [RAWINPUTDEVICE](https://msdn.microsoft.com/library/default.asp?url=/library/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputstructures/rawinputdevice.asp) numaralandırıcı listesi olarak yapılarda `rgelt` numaralandırılmış öğelerinde gerçek sayısını `pceltFetched`.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -26,7 +26,7 @@ HRESULT Next(
 #### <a name="parameters"></a>Parametreler  
  `celt`  
   
- [in] Sayısı [RAWINPUTDEVICE](http://msdn.microsoft.com/library/default.asp?url=/library/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputstructures/rawinputdevice.asp) döndürülen yapıları `rgelt`.  
+ [in] Sayısı [RAWINPUTDEVICE](https://msdn.microsoft.com/library/default.asp?url=/library/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputstructures/rawinputdevice.asp) iade yapıları `rgelt`.  
   
  `rgelt`  
   
@@ -34,7 +34,7 @@ HRESULT Next(
   
  `pceltFetched`  
   
- [out] İşaretçi gerçekte içinde sağlanan öğe sayısı için `rgelt`. Arayan geçirebilir `NULL` varsa `rgelt` biridir.  
+ [out] Aslında sağlanan öğelerin sayısı işaretçisine `rgelt`. Arayan geçirebilir `NULL` varsa `rgelt` biridir.  
   
 ## <a name="property-valuereturn-value"></a>Özellik Değeri/Dönüş Değeri  
- HRESULT: sağlanan öğe sayısı ise S_OK `celt`; Aksi durumda S_FALSE.
+ HRESULT: sağlanan öğe sayısını ise S_OK `celt`; S_FALSE Aksi takdirde.

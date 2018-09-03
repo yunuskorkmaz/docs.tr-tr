@@ -7,31 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
-ms.openlocfilehash: 754fc6750e63f6d9f39da94041fc452829bca46d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a07955363ea5ca1ca8785c241b0de58149f329ba
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591440"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480899"
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>Bu çağrı beklenmediğinden, çağrı tamamlanmadan geçerli yöntemin çalıştırılması devam eder
-Bu çağrı beklenmediğinden, çağrı tamamlanmadan geçerli yöntemin çalıştırılması devam eder. 'Bekleme' işleci çağrı sonucunu uygulamayı düşünün.  
+Bu çağrı beklenmediğinden, çağrı tamamlanmadan geçerli yöntemin yürütülmesi devam eder. Çağrının sonucuna 'Await' işleci uygulamayı düşünün.  
   
- Geçerli yöntemi döndüren bir zaman uyumsuz yöntem çağırır bir <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601> ve uygulanmaz [bekleme](../../../visual-basic/language-reference/operators/await-operator.md) sonucu işleci. Zaman uyumsuz yöntem çağrısı zaman uyumsuz bir görev başlatır. Ancak, çünkü hiçbir `Await` program görevinin tamamlanmasını beklemeden devam işleci uygulanır. Çoğu durumda, bu davranışı beklenen değil. Genellikle diğer yönlerini arama yöntemi arama sonuçlarına bağlı veya, çağrılan yöntemin çağrı içerir yönteminden döndürmeden önce tamamlamak için en azından beklenir.  
+ Döndüren zaman uyumsuz bir yöntem geçerli yöntemi çağıran bir <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601> ve geçerli değildir [Await](../../../visual-basic/language-reference/operators/await-operator.md) sonuca işleci. Zaman uyumsuz yöntem çağrısı, zaman uyumsuz bir görev başlatır. Ancak, çünkü hiçbir `Await` işleci uygulanır, program görevinin tamamlanmasını beklemenize gerek kalmadan çalışmaya devam eder. Çoğu durumda, bu davranışı beklenen değil. Genellikle diğer yönleri yöntemi çağrılırken arama sonuçlarına bağlıdır veya en azından karşılaştırılabilen çağrılan yöntem çağrı içeren yöntemden döndürmeden önce tamamlanması bekleniyor.  
   
- Eşit oranda önemli bir sorun çağrılan zaman uyumsuz yöntemde oluşan özel durumlara sahip olur. Döndüren bir yöntemde oluşan bir özel durum bir <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601> döndürülen görevde depolanır. Görev await yok veya açıkça özel durumlar için denetleyin, özel durum kaybolur. Görev await, kendi özel durum işlenemezse.  
+ Eşit oranda önemli bir sorun, çağrılan zaman uyumsuz yöntemde özel durumlar ile neler ' dir. Döndüren bir yöntem içinde oluşturulan bir özel durum bir <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601> getirilen görevde depolanır. Görev await görmüyorsanız veya açıkça özel durumlar için denetleyin, özel durum kaybolur. Göreve await, kendi özel durum yeniden oluşur.  
   
- En iyi uygulama, her zaman çağrıyı beklemek.  
+ En iyi uygulama, her zaman çağrıyı await.  
   
- Varsayılan olarak, bu iletiyi bir uyarıdır. Uyarıları gizleme veya uyarıları hata olarak davranma hakkında daha fazla bilgi için bkz: [yapılandırma uyarılarını Visual Basic'te](/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ Varsayılan olarak, bu iletiyi bir uyarıdır. Uyarıları gizleme veya uyarıları hata olarak değerlendirmesini hakkında daha fazla bilgi için bkz. [Visual Basic'teki uyarıları yapılandırma](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
  **Hata Kimliği:** BC42358  
   
 ### <a name="to-address-this-warning"></a>Bu uyarıyı gidermek için  
   
--   Yalnızca zaman uyumsuz çağrının tamamlanmasını beklemek istemiyorsanız ve çağrılan yöntemin özel durumlar Yükselt olmaz eminseniz, uyarı gizleme göz önünde bulundurmalısınız. Bu durumda, bir değişken çağrısı görev sonucu atayarak uyarı gizleyebilirsiniz.  
+-   Zaman uyumsuz çağrının tamamlanmasını beklemek istemiyorsanız ve çağrılan yöntem özel durumların yükseltmek kalmaz, uyarı gizleme dikkate almanız gerekir. Bu durumda, görev sonucu çağrının bir değişkene atayarak uyarı gösterilmemesini sağlayabilirsiniz.  
   
-     Aşağıdaki örnekte nasıl uyarı neden, onu gizlemek nasıl ve çağrı beklemek nasıl gösterir.  
+     Aşağıdaki örnek nasıl uyarı neden ve bunu engellemek nasıl çağrı await nasıl gösterir.  
   
     ```vb  
     Async Function CallingMethodAsync() As Task  
@@ -81,7 +81,7 @@ Bu çağrı beklenmediğinden, çağrı tamamlanmadan geçerli yöntemin çalı�
     End Function  
     ```  
   
-     Örnekte çağrı #1 veya çağrı #2 unawaited async yöntemi seçerseniz, (`CalledMethodAsync`) tamamlandıktan sonra her iki arayan (`CallingMethodAsync`) ve arayanın arayan (`StartButton_Click`) tamamlandığından. Aşağıdaki çıkış son satırında çağrılan Yöntem sonlandığında gösterir. İçin giriş ve çıkış çağırır olay işleyicisinden `CallingMethodAsync` tam örnek çıktıda işaretlenir.  
+     Çağrı #1 veya #2, unawaited zaman uyumsuz yöntem çağrısı seçerseniz örnekte (`CalledMethodAsync`) tamamlandıktan sonra her iki çağıran (`CallingMethodAsync`) ve arayanın arayan (`StartButton_Click`) getirildiğinden. Son satırı aşağıdaki çıktıda çağrılan yöntem tamamlandığında gösterir. Giriş ve çıkış çağıran olay işleyicisinden `CallingMethodAsync` tam örnekte çıktı işaretlenir.  
   
     ```  
     Entering the Click event handler.  
@@ -93,15 +93,15 @@ Bu çağrı beklenmediğinden, çağrı tamamlanmadan geçerli yöntemin çalı�
     ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki Windows Presentation Foundation (WPF) uygulama önceki örnekten yöntemler içerir. Aşağıdaki adımları uygulama ayarlama.  
+ Aşağıdaki Windows Presentation Foundation (WPF) uygulaması, önceki örnekte yöntemleri içerir. Aşağıdaki adımları uygulamasını ayarlama.  
   
-1.  WPF uygulaması oluşturun ve adlandırın `AsyncWarning`.  
+1.  Bir WPF uygulaması oluşturun ve adlandırın `AsyncWarning`.  
   
 2.  Visual Studio Kod Düzenleyicisi'nde seçin **MainWindow.xaml** sekmesi.  
   
-     Sekme görünür değilse, kısayol menüsünde MainWindow.xaml içinde açık **Çözüm Gezgini**ve ardından **görünümü kodu**.  
+     Sekme görünür değilse, nde MainWindow.xaml için kısayol menüsünü açın **Çözüm Gezgini**ve ardından **kodu görüntüle**.  
   
-3.  Kodla **XAML** MainWindow.xaml görünümünü aşağıdaki kod ile.  
+3.  Değiştirin **XAML** MainWindow.xaml görünümünü aşağıdaki kod ile.  
   
     ```vb  
     <Window x:Class="MainWindow"  
@@ -115,9 +115,9 @@ Bu çağrı beklenmediğinden, çağrı tamamlanmadan geçerli yöntemin çalı�
     </Window>  
     ```  
   
-     Bir düğme ve bir metin kutusu içeren basit bir pencere görünür **tasarım** MainWindow.xaml görünümü.  
+     Bir düğme ve metin kutusu içeren basit bir pencere **tasarım** MainWindow.xaml görünümü.  
   
-     XAML Tasarımcısı hakkında daha fazla bilgi için bkz: [XAML Tasarımcısını kullanarak bir kullanıcı Arabirimi oluşturma](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio). Basit kendi kullanıcı Arabirimi oluşturma hakkında daha fazla bilgi için bkz: "WPF uygulaması oluşturmak için" ve "Basit bir WPF MainWindow tasarlamak için" bölümlerini [izlenecek yol: Web kullanarak zaman uyumsuz ve bekleme tarafından erişme](http://msdn.microsoft.com/library/25879a6d-fdee-4a38-bc98-bb8c24d16042).  
+     XAML Tasarımcısı hakkında daha fazla bilgi için bkz. [XAML Tasarımcısını kullanarak kullanıcı Arabirimi oluşturma](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio). Basit, kendi kullanıcı arabirimini oluşturma hakkında daha fazla bilgi için bkz: "WPF uygulaması oluşturmak için" ve "Basit bir WPF MainWindow tasarlamak için" bölümlerini [izlenecek yol: kullanarak Async ve Await ile Web'e erişme](https://msdn.microsoft.com/library/25879a6d-fdee-4a38-bc98-bb8c24d16042).  
   
 4.  MainWindow.xaml.vb kodu aşağıdaki kodla değiştirin.  
   
@@ -199,9 +199,9 @@ Bu çağrı beklenmediğinden, çağrı tamamlanmadan geçerli yöntemin çalı�
     ' Exiting the Click event handler.  
     ```  
   
-5.  Programını çalıştırın ve ardından için F5 tuşuna seçin **Başlat** düğmesi.  
+5.  Programı çalıştırın ve ardından F5 tuşuna basın **Başlat** düğmesi.  
   
-     Beklenen çıkış kodu sonunda görüntülenir.  
+     Beklenen çıkış kodu sonunda görünür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Await İşleci](../../../visual-basic/language-reference/operators/await-operator.md)  

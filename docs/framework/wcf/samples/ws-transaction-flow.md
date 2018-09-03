@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
-ms.openlocfilehash: bf78b679be84efa416d088d5addaaa25a593abf4
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 35af3090c0f898578a5f8dfb81d02d22a0074ad2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807221"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43483888"
 ---
 # <a name="ws-transaction-flow"></a>WS İşlem Akışı
-Bu örnek bir istemci Eşgüdümlü işlem kullanımını gösterir ve işlem için istemci ve sunucu seçenekleri WS-Atomic işlem veya OleTransactions protokolü kullanarak akış. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hesap makinesi hizmetinin uygulayan ancak kullanımını göstermek için işlemleri öznitelikli `TransactionFlowAttribute` ile **TransactionFlowOption** ne derece işlem akışı etkin belirlemek için numaralandırması. Akışlı işlem kapsamı içinde istenen işlem günlüğünü veritabanına yazılır ve Eşgüdümlü istemci işlemi tamamlanana kadar - istemci işlemi tamamlanmazsa devam ederse Web hizmeti işlemi sağlar veritabanı için uygun güncelleştirmeleri iletilmez.  
+Bu örnek, bir istemci Eşgüdümlü işlem kullanımını gösterir ve WS-Atomic işlem ya da OleTransactions protokolünü kullanarak işlem istemci ve sunucu seçeneklerini akış. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hesaplayıcı hizmet uygulayan ancak işlemleri kullanımını göstermek için öznitelikli `TransactionFlowAttribute` ile **TransactionFlowOption** ne derece işlem akışı etkin belirlemek için sabit listesi. Akışlı işlem kapsamında, istenen işlemlerin bir günlük veritabanına yazılır ve istemci işlemi tamamlanmazsa, Eşgüdümlü istemci işlemi tamamlanana kadar - devam ederse Web hizmeti işlemi sağlar ilgili güncelleştirmeleri veritabanına iletilmez.  
   
 > [!NOTE]
->  Kurulum yordamı ve yapı yönergeleri Bu örnek için bu konunun sonunda yer alır.  
+>  Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.  
   
- İstemci, hizmet ve işlem bağlantı başlatıldıktan sonra birkaç hizmet işlemleri erişir. Hizmet sözleşmesini gibi her biri için farklı bir ayar gösteren işlemleri ile tanımlanmış `TransactionFlowOption`.  
+ İstemci bağlantısına hizmet ve işlem başlatıldıktan sonra birkaç hizmet işlemleri erişir. Hizmet sözleşmesi için farklı bir ayar gösteren işlemlerin her biri ile aşağıdaki gibi tanımlıdır `TransactionFlowOption`.  
 
 ```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
@@ -37,17 +37,17 @@ public interface ICalculator
 }  
 ```
 
- Bu, işlenmeyi oldukları sırada operations tanımlar:  
+ Bu, işlenmek üzere oldukları sırayla operations tanımlar:  
   
--   Bir `Add` işlem isteği akışlı bir işlem içermelidir.  
+-   Bir `Add` işlem isteği akışlı bir işlem içermesi gerekir.  
   
 -   A `Subtract` işlem isteği akışlı bir işlem içerebilir.  
   
--   A `Multiply` işlem isteği açık QueuedDeliveryRequirements ayarı ile akışlı bir işlem değil içermelidir.  
+-   A `Multiply` işlem isteği açık noktayla ayarı üzerinden akan bir işlem değil içermesi gerekir.  
   
--   A `Divide` işlem isteği akan işlem Java'daki üzerinden değil içermelidir bir `TransactionFlow` özniteliği.  
+-   A `Divide` işlem isteği Java'daki üzerinden akan bir işlem değil içermelidir bir `TransactionFlow` özniteliği.  
   
- İşlem akışını, bağlamalarla etkinleştirmek için [ \<transactionFlow >](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md) etkin özelliğinin yanı sıra uygun işlemi öznitelikler kullanılmalıdır. Bu örnekte, TCP uç noktası ve bir HTTP uç noktası bir meta veri değişimi uç noktası ek olarak hizmet yapılandırmasını gösterir. Her ikisi de sahip olan aşağıdaki bağlamaları TCP uç noktasını ve HTTP uç noktası kullan [ \<transactionFlow >](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md) etkin özelliği.  
+ İşlem akışını bağlamalarla etkinleştirmek için [ \<transactionFlow >](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md) özelliği etkin uygun işlemi özniteliklerine ek olarak kullanılmalıdır. Bu örnekte, hizmet yapılandırmasının bir TCP uç noktası ve bir meta veri değişimi uç noktası yanı sıra bir HTTP uç noktasını kullanıma sunar. TCP uç noktası ve HTTP uç noktası, hem de aşağıdaki bağlamaları kullanın [ \<transactionFlow >](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md) özelliği etkin.  
   
 ```xml  
 <bindings>  
@@ -64,12 +64,12 @@ public interface ICalculator
 ```  
   
 > [!NOTE]
->  Sistem tarafından sağlanan netTcpBinding transactionProtocol belirtimi sağlarken sistem tarafından sağlanan wsHttpBinding yalnızca daha birlikte çalışabilir WSAtomicTransactionOctober2004 protokolünü kullanır. Protokol yalnızca için kullanılabilir OleTransactions Windows Communication Foundation (WCF) istemcileri tarafından kullanırlar.  
+>  Sistem tarafından sağlanan wsHttpBinding yalnızca daha birlikte çalışabilen WSAtomicTransactionOctober2004 protokolünü kullanır ancak sistem tarafından sağlanan netTcpBinding transactionProtocol belirtilmesine izin verir. Windows Communication Foundation (WCF) istemciler tarafından protokolü yalnızca kullanılabilir OleTransactions kullanın.  
   
- Uygulayan sınıfa için `ICalculator` arabirimi, tüm yöntemleri öznitelikli ile <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> özelliğini `true`. Bu ayar yöntemi içinde yapılan tüm eylemler bir işlem kapsamı içinde ortaya bildirir. Bu durumda, veritabanı günlük kaydı gerçekleştirilen eylemleri içerir. İşlem isteğini akışlı bir işlem içeriyorsa eylemleri gelen işlem kapsamında meydana gelen veya yeni bir işlem kapsamı otomatik olarak oluşturulur.  
+ Uygulayan bir sınıf için `ICalculator` arabirimi, tüm yöntemleri öznitelikler atanmıştır ile <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> özelliğini `true`. Bu ayar, bir işlem kapsamında yöntemi içinde gerçekleştirilen tüm eylemler gerçekleşmesini bildirir. Bu durumda, gerçekleştirilen eylemler için veritabanı günlük kaydı içerir. İşlem isteğini akışlı bir işlem içeriyorsa eylemleri meydana gelen işlem kapsamında veya yeni bir işlem kapsamı otomatik olarak oluşturulur.  
   
 > [!NOTE]
->  <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> Özellik için hizmet yöntemi uygulamaları davranışını yerel tanımlar ve istemcinin yeteneği veya bir işlem akan gereksinim tanımlamıyor.  
+>  <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> Özellik için hizmet yöntem uygulamaları davranışını yerel tanımlar ve istemcinin yeteneği veya gereksinim akışlı bir işlem tanımlamıyor.  
 
 ```csharp
 // Service class that implements the service contract.  
@@ -108,7 +108,7 @@ public class CalculatorService : ICalculator
 }  
 ```
 
- İstemci, hizmet üzerinde `TransactionFlowOption` işlemlerini ayarları, istemcinin oluşturulan tanımında yansıtılır `ICalculator` arabirimi. Ayrıca, hizmetin `transactionFlow` özellik ayarları, istemci uygulama yapılandırmasında yansıtılır. İstemci taşıma ve protokolü uygun seçerek seçebilirsiniz `endpointConfigurationName`.  
+ İstemci, hizmeti üzerinde `TransactionFlowOption` işlemleri ayarları, istemcinin oluşturulan tanımı içinde yansıtılır `ICalculator` arabirimi. Ayrıca, hizmetin `transactionFlow` özellik ayarları, istemci uygulama yapılandırmasında yansıtılır. İstemci taşıma ve protokolü uygun seçerek seçebilirsiniz `endpointConfigurationName`.  
 
 ```csharp
 // Create a client using either wsat or oletx endpoint configurations  
@@ -117,9 +117,9 @@ CalculatorClient client = new CalculatorClient("WSAtomicTransaction_endpoint");
 ```
 
 > [!NOTE]
->  Bu örnekte gözlenen davranışını hangi protokolü veya taşıma seçilir aynıdır.  
+>  Bu örnek gözlemlenen davranışını hangi protokolü veya aktarım seçilir aynıdır.  
   
- Hizmeti bağlantısı başlatılan istemci yeni bir oluşturur `TransactionScope` hizmet işlemleri çağrıları geçici.  
+ İstemci hizmete bağlantı tarafından başlatılan yeni bir oluşturur `TransactionScope` geçici hizmet işlemlerine çağrıları.  
 
 ```csharp
 // Start a transaction scope  
@@ -182,17 +182,17 @@ Console.WriteLine("Transaction committed");
 
  İşlem çağrıları aşağıdaki gibidir:  
   
--   `Add` İstek akışları hizmetine gerekli işlem ve hizmetin Eylemler istemcinin işlem kapsamı içinde gerçekleşir.  
+-   `Add` Gerekli işlem hizmetine istek akışları ve hizmetin Eylemler istemcinin işlem kapsamında gerçekleşir.  
   
--   İlk `Subtract` istek Ayrıca hizmet için izin verilen işlem akışları ve yeniden hizmetin Eylemler istemcinin işlem kapsamı içinde gerçekleşir.  
+-   İlk `Subtract` istek, izin verilen işlem hizmetine de akar ve hizmetin Eylemler istemcinin işlem kapsamında yeniden gerçekleşir.  
   
--   İkinci `Subtract` isteği ile bildirilen yeni bir işlem kapsamı içinde gerçekleştirilir `TransactionScopeOption.Suppress` seçeneği. Bu istemcinin başlangıç dış işlem önler ve isteğin bir işlem hizmetine akış değil. Bu yaklaşım açıkça, çevirin ve gerekli olmadığında bir hizmet için bir işlem akan karşı korumak bir istemci sağlar. Hizmetin Eylemler yeni ve bağlantısız bir işlem kapsamı içinde gerçekleşir.  
+-   İkinci `Subtract` isteği ile bildirilen yeni bir işlem kapsamı içinde gerçekleştirilir `TransactionScopeOption.Suppress` seçeneği. Bu istemcinin başlangıç dış işlem engeller ve isteğin bir işlem hizmetine akmaz. Bu yaklaşım, bir istemcinin açıkça, çevirme ve gerekli olmadığında, bir işlem hizmetine akan karşı koruma sağlar. Hizmetin Eylemler, yeni ve bağlantısız bir işlem kapsamında gerçekleşir.  
   
--   `Multiply` İsteği akan hizmetine bir işlem istemci tanımını oluşturan çünkü `ICalculator` arabirimi içeren bir <xref:System.ServiceModel.TransactionFlowAttribute> kümesine <xref:System.ServiceModel.TransactionFlowOption> `NotAllowed`.  
+-   `Multiply` İsteği akan bir işlem hizmetine istemci tanımını üretilmiş çünkü `ICalculator` arabirimi içeren bir <xref:System.ServiceModel.TransactionFlowAttribute> kümesine <xref:System.ServiceModel.TransactionFlowOption> `NotAllowed`.  
   
--   `Divide` İsteği akan hizmetine bir işlem istemci tanımını yeniden oluşturulmuş için `ICalculator` arabirim içermez bir `TransactionFlowAttribute`. Hizmetin Eylemler yeniden başka bir yeni ve bağlantısız işlem kapsamı içinde gerçekleşir.  
+-   `Divide` İsteği akan bir işlem hizmetine istemci tanımını yeniden üretilmiş çünkü `ICalculator` arabirimi içermez bir `TransactionFlowAttribute`. Hizmetin Eylemler, yeni ve bağlantısız başka bir işlem kapsamında yeniden gerçekleşir.  
   
- Örneği çalıştırdığınızda, işlem isteklerini ve yanıtlarını istemci konsol penceresinde görüntülenir. İstemcisi penceresinde istemciyi aşağı kapatmak için ENTER tuşuna basın.  
+ Örneği çalıştırdığınızda, işlem isteklerini ve yanıtlarını istemci konsol penceresinde görüntülenir. İstemci bilgisayarı için istemci penceresinde ENTER tuşuna basın.  
   
 ```  
 Starting transaction  
@@ -206,7 +206,7 @@ Transaction committed
 Press <ENTER> to terminate client.  
 ```  
   
- Hizmet işlemi isteklerin günlüğe yazılmasını hizmetin konsol penceresinde görüntülenir. İstemcisi penceresinde istemciyi aşağı kapatmak için ENTER tuşuna basın.  
+ Hizmet işlemi isteklerini günlüğe hizmet konsol penceresinde görüntülenir. İstemci bilgisayarı için istemci penceresinde ENTER tuşuna basın.  
   
 ```  
 Press <ENTER> to terminate the service.  
@@ -217,74 +217,74 @@ Press <ENTER> to terminate the service.
   Writing row to database: Dividing 22 by 7  
 ```  
   
- Başarılı bir yürütme sonra istemcinin işlem kapsamı tamamlar ve bu kapsamı içinde yapılan tüm eylemler uygulanır. Özellikle, not ettiğiniz 5 kayıtları hizmetin veritabanında kalıcı niteliktedir. Bu ilk 2 istemcinin işlem kapsamı içinde oluştu.  
+ Başarılı bir yürütme sonra istemcinin işlem kapsamı tamamlar ve bu kapsam içinde gerçekleştirilen tüm eylemler konusunda çok hassasız. Özellikle, not ettiğiniz 5 kaydı hizmetin veritabanında kalır. Bu ilk 2 istemci işlemi kapsamında oluştu.  
   
- Bir özel durum istemcinin içinde herhangi bir yere oluştuysa `TransactionScope` sonra işlem tamamlanamıyor. Bu veritabanına işleminde değil, kapsam içinde kaydedilmiş kayıtları neden olur. Bu etkiyi dış tamamlamak için duyurmak yorum sonra çalıştırmak örnek tekrarlayarak gösterilebilir `TransactionScope`. Bu tür bir çalıştırmada, yalnızca son 3 eylemleri (ikinci `Subtract`, `Multiply` ve `Divide` istekleri) istemci işlemi bu akış değil çünkü kaydedilir.  
+ Herhangi bir istemcinin içinde bir özel durum oluştuysa `TransactionScope` sonra işlem tamamlanamıyor. Bu veritabanına yürütülmesi yok o kapsam içinde kaydedilmiş kayıtları neden olur. Bu etkiyi duyurmak dış tamamlamak için yorum oluşturma sonrasında çalıştırma örneği tekrarlayarak gösterilebilir `TransactionScope`. Böyle bir alıştırmada, yalnızca son 3 eylemleri (ikinci `Subtract`, `Multiply` ve `Divide` istekleri) istemci işlemi bu akışı değil çünkü kaydedilir.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örnek çalıştırın  
+### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)  
+1.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md)  
   
-2.  SQL Server Express Edition veya SQL Server yüklü olduğundan ve bağlantı dizesini hizmetin uygulama yapılandırma dosyasında doğru ayarlandığından emin olun. Örnek bir veritabanı kullanmadan çalışacak şekilde ayarlanmış `usingSql` hizmetin uygulama yapılandırma dosyasında değeri `false`  
+2.  SQL Server Express Edition veya SQL Server yüklü olduğundan ve bağlantı dizesini hizmetin uygulama yapılandırma dosyasında doğru ayarlandığından emin olun. Bir veritabanı kullanmadan örneği çalıştırmak için ayarlanmış `usingSql` hizmetin uygulama yapılandırma dosyasına değeri `false`  
   
-3.  Tek veya çapraz makine yapılandırmada örneği çalıştırmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
     > [!NOTE]
-    >  Çapraz makine yapılandırması için aşağıdaki yönergeleri kullanarak Dağıtılmış İşlem Düzenleyicisi etkinleştirin ve WCF işlemleri ağ desteğini etkinleştirmek için Windows SDK'sı WsatConfig.exe aracını kullanın. Bkz: [WS-Atomic işlem desteğini yapılandırma](http://go.microsoft.com/fwlink/?LinkId=190370) WsatConfig.exe ayarlama hakkında bilgi için.  
+    >  Çapraz makine yapılandırması için aşağıdaki yönergeleri kullanarak Dağıtılmış İşlem Düzenleyicisi'ni etkinleştir ve WCF işlemleri ağ desteğini etkinleştirmek için Windows SDK'sı WsatConfig.exe aracını kullanın. Bkz: [WS-Atomic işlem desteğini yapılandırma](https://go.microsoft.com/fwlink/?LinkId=190370) WsatConfig.exe hakkında bilgi.  
   
- Aynı bilgisayarda veya farklı bilgisayarlarda örneği çalıştırmak isteyip Microsoft Dağıtılmış İşlem Düzenleyicisi (MSDTC) ağ işlem akışını etkinleştirmek ve WCF işlemleri ağ desteğini etkinleştirmek için WsatConfig.exe Aracı'nı kullanmak için yapılandırmanız gerekir.  
+ Örneği aynı bilgisayarda veya farklı bilgisayarlarda çalıştırmak ister, Microsoft Dağıtılmış İşlem Düzenleyicisi (MSDTC) ağ işlem akışını etkinleştirme ve WCF işlemleri ağ desteğini etkinleştirmek için WsatConfig.exe Aracı'nı kullanmak için yapılandırmanız gerekir.  
   
-### <a name="to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-to-support-running-the-sample"></a>Microsoft Dağıtılmış İşlem Düzenleyicisi (MSDTC) örnek çalıştırılmasını desteklemek üzere yapılandırmak için  
+### <a name="to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-to-support-running-the-sample"></a>Microsoft Dağıtılmış İşlem Düzenleyicisi (MSDTC) çalıştıran destekleyecek şekilde yapılandırmak için  
   
-1.  Windows Server 2003 veya Windows XP çalıştıran bir hizmeti makinede MSDTC bu yönergeleri izleyerek gelen ağ işlemlerine izin verecek biçimde yapılandırın.  
+1.  Windows Server 2003 veya Windows XP çalıştıran bir hizmeti makinede MSDTC gelen ağ işlemleri bu yönergeleri izleyerek izin verecek şekilde yapılandırın.  
   
-    1.  Gelen **Başlat** menüsünde gidin **Denetim Masası**, ardından **Yönetimsel Araçlar**ve ardından **Bileşen Hizmetleri**.  
+    1.  Gelen **Başlat** menüsünde gidin **Denetim Masası**, ardından **Yönetimsel Araçlar**, ardından **Bileşen Hizmetleri**.  
   
-    2.  Genişletme **Bileşen Hizmetleri**. Açık **bilgisayarlar** klasör.  
+    2.  Genişletin **Bileşen Hizmetleri**. Açık **bilgisayarlar** klasör.  
   
     3.  Sağ **Bilgisayarım** seçip **özellikleri**.  
   
-    4.  Üzerinde **MSDTC** sekmesini tıklatın, **Güvenlik Yapılandırması**.  
+    4.  Üzerinde **MSDTC** sekmesinde **Güvenlik Yapılandırması**.  
   
     5.  Denetleme **ağ DTC erişimi** ve **izin gelen**.  
   
-    6.  Tıklatın **Tamam**, ardından **Evet** MSDTC hizmeti yeniden başlatmak için.  
+    6.  Tıklayın **Tamam**, ardından **Evet** MSDTC hizmetini yeniden başlatmak için.  
   
     7.  İletişim kutusunu kapatmak için **Tamam** 'ı tıklatın.  
   
-2.  Windows Server 2008 veya Windows Vista çalıştıran bir hizmeti makinede MSDTC bu yönergeleri izleyerek gelen ağ işlemlerine izin verecek biçimde yapılandırın.  
+2.  Windows Server 2008 veya Windows Vista çalıştıran bir hizmeti makinede MSDTC gelen ağ işlemleri bu yönergeleri izleyerek izin verecek şekilde yapılandırın.  
   
-    1.  Gelen **Başlat** menüsünde gidin **Denetim Masası**, ardından **Yönetimsel Araçlar**ve ardından **Bileşen Hizmetleri**.  
+    1.  Gelen **Başlat** menüsünde gidin **Denetim Masası**, ardından **Yönetimsel Araçlar**, ardından **Bileşen Hizmetleri**.  
   
-    2.  Genişletme **Bileşen Hizmetleri**. Açık **bilgisayarlar** klasör. Seçin **Dağıtılmış İşlem Düzenleyicisi**.  
+    2.  Genişletin **Bileşen Hizmetleri**. Açık **bilgisayarlar** klasör. Seçin **Dağıtılmış İşlem Düzenleyicisi**.  
   
     3.  Sağ **DTC Düzenleyicisi** seçip **özellikleri**.  
   
-    4.  Üzerinde **güvenlik** sekmesi, onay **ağ DTC erişimi** ve **gelene izin ver**.  
+    4.  Üzerinde **güvenlik** sekmesinde, onay **ağ DTC erişimi** ve **gelene izin ver**.  
   
-    5.  Tıklatın **Tamam**, ardından **Evet** MSDTC hizmeti yeniden başlatmak için.  
+    5.  Tıklayın **Tamam**, ardından **Evet** MSDTC hizmetini yeniden başlatmak için.  
   
     6.  İletişim kutusunu kapatmak için **Tamam** 'ı tıklatın.  
   
-3.  İstemci makinesinde MSDTC giden ağ işlemlerine izin verecek biçimde yapılandırın:  
+3.  İstemci makinesinde MSDTC giden ağ işlemleri izin verecek şekilde yapılandırın:  
   
-    1.  Gelen **Başlat** menüsünde gidin `Control Panel`, ardından **Yönetimsel Araçlar**ve ardından **Bileşen Hizmetleri**.  
+    1.  Gelen **Başlat** menüsünde gidin `Control Panel`, ardından **Yönetimsel Araçlar**, ardından **Bileşen Hizmetleri**.  
   
     2.  Sağ **Bilgisayarım** seçip **özellikleri**.  
   
-    3.  Üzerinde **MSDTC** sekmesini tıklatın, **Güvenlik Yapılandırması**.  
+    3.  Üzerinde **MSDTC** sekmesinde **Güvenlik Yapılandırması**.  
   
     4.  Denetleme **ağ DTC erişimi** ve **Gidene izin ver**.  
   
-    5.  Tıklatın **Tamam**, ardından **Evet** MSDTC hizmeti yeniden başlatmak için.  
+    5.  Tıklayın **Tamam**, ardından **Evet** MSDTC hizmetini yeniden başlatmak için.  
   
     6.  İletişim kutusunu kapatmak için **Tamam** 'ı tıklatın.  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\TransactionFlow`

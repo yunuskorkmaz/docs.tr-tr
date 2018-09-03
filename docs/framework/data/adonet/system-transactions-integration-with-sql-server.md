@@ -1,66 +1,66 @@
 ---
-title: SQL Server ile System.Transactions tümleştirme
+title: SQL Server ile System.Transactions tümleştirmesi
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-ms.openlocfilehash: 219a806441e0f6ce501dc691f4c965168a250aeb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31edbc8f4cbb09f8720b373780f1b0646a985b20
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365754"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481689"
 ---
-# <a name="systemtransactions-integration-with-sql-server"></a>SQL Server ile System.Transactions tümleştirme
-[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Üzerinden erişilen bir işlem framework sürüm 2.0 sunulan <xref:System.Transactions> ad alanı. Bu çerçeve işlemleri içinde tam olarak tümleşik bir şekilde kullanıma sunan [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]gibi [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
+# <a name="systemtransactions-integration-with-sql-server"></a>SQL Server ile System.Transactions tümleştirmesi
+[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Sürüm 2.0 kullanılmaya aracılığıyla erişilebilen bir işlem framework <xref:System.Transactions> ad alanı. Bu çerçeve işlemleri, tamamen tümleşik bir şekilde kullanıma sunan [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]de dahil olmak üzere [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
   
- Programlanabilirlik geliştirmeleri yanı sıra <xref:System.Transactions> ve [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] işlemleri ile çalışırken en iyi duruma getirme koordine etmek için birlikte çalışabilir. Otomatik olarak bir tam olarak dağıtılmış işlem gerektiği düzenli olarak yükseltilebilmesi için basit bir (yerel) işlem buna yükseltilebilir bir işlemdir.  
+ Programlanabilirlik geliştirmeleri yanı sıra <xref:System.Transactions> ve [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] işlemleri ile çalışırken en iyi duruma getirme koordine etmek için birlikte çalışabilir. Otomatik olarak tam olarak dağıtılmış bir işlem gerekli olarak yükseltilebilir basit bir (yerel) işlem bir promotable işlemdir.  
   
- İle başlayarak [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 <xref:System.Data.SqlClient> SQL Server ile çalışırken yükseltilebilir işlemleri destekler. Yükseltilebilir işlem eklenen çağrılmaz işlemlerinin ek yükü dağıtılmış işlem eklenen ek yükü gerekli olmadığı sürece. Yükseltilebilir işlemleri otomatik olarak yapılır ve geliştiriciden müdahalesi gerektirmez.  
+ İle başlayarak [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 <xref:System.Data.SqlClient> SQL Server ile çalışırken promotable işlemleri destekler. Bir promotable işlem eklenen çağırmadığı işlemlerinin ek yükü dağıtılmış işlem ek yükü gerekli olmadığı sürece. Promotable işlemleri otomatik olarak yapılır ve geliştiriciden herhangi bir müdahalesi gerektirir.  
   
- Yükseltilebilir işlemleri yalnızca kullanılabilir kullandığınızda [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] için SQL Server veri sağlayıcısı (`SqlClient`) SQL Server ile.  
+ Promotable işlemleri bulunan ve yalnızca kullandığınız zaman [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] SQL Server için veri sağlayıcısı (`SqlClient`) SQL Server ile.  
   
-## <a name="creating-promotable-transactions"></a>Yükseltilebilir işlemler oluşturma  
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] SQL Server için sağlayıcısı sınıfları aracılığıyla işlenmesini yükseltilebilir işlemler için destek sağlar [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] <xref:System.Transactions> ad alanı. Yükseltilebilir işlemleri gerektiğinde kadar bir dağıtılmış işlem oluşturma ertelemeyi dağıtılmış işlemler en iyi duruma getirme. Yalnızca bir Kaynak Yöneticisi'ni gereklidir, dağıtılmış bir işlem oluşur.  
+## <a name="creating-promotable-transactions"></a>Promotable işlemleri oluşturma  
+ [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] SQL Server için sağlayıcısı sınıfları aracılığıyla işlenir promotable işlemler için destek sağlar [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] <xref:System.Transactions> ad alanı. Promotable işlemleri, gerekli olana kadar bir dağıtılmış işlem oluşturma erteleyerek dağıtılmış işlemler iyileştirin. Yalnızca biri resource manager gerekliyse, hiçbir dağıtılmış işlem gerçekleşir.  
   
 > [!NOTE]
->  Kısmen güvenilen bir senaryoda <xref:System.Transactions.DistributedTransactionPermission> dağıtılmış işlem için bir işlem yükseltildiğinde gereklidir.  
+>  Kısmen güvenilen bir senaryoda <xref:System.Transactions.DistributedTransactionPermission> dağıtılmış bir işlem için bir işlem yükseltildiğinde gereklidir.  
   
-## <a name="promotable-transaction-scenarios"></a>Yükseltilebilir işlem senaryoları  
- Dağıtılmış işlemler genellikle Microsoft Dağıtılmış işlem, işlem sırasında erişilen tüm kaynak yöneticileri tümleştirir Düzenleyicisi (MS DTC) tarafından yönetilen önemli sistem kaynaklarını tüketebilir. Yükseltilebilir bir işlem özel bir biçimidir bir <xref:System.Transactions> etkili bir şekilde basit bir SQL Server işlem çalışmaya temsilciler işlem. <xref:System.Transactions>, <xref:System.Data.SqlClient>, ve SQL Server, tam bir dağıtılmış işlem için gerektiği şekilde yükseltme işlem işlenmesiyle ilgili iş koordine etmek.  
+## <a name="promotable-transaction-scenarios"></a>Promotable işlem senaryoları  
+ Dağıtılmış işlemler genellikle Microsoft Dağıtılmış işlem işlemde erişilen tüm kaynak yöneticileri tümleşen Düzenleyicisi (MS DTC) tarafından yönetilen önemli sistem kaynaklarını kullanır. Özel bir promotable harekettir bir <xref:System.Transactions> etkili bir şekilde basit bir SQL Server işlem işi temsilciler işlem. <xref:System.Transactions>, <xref:System.Data.SqlClient>, ve SQL Server, tam bir dağıtılmış işlem için gereken şekilde yükseltmek işlem işlenmesiyle ilgili iş koordine etmek.  
   
- Bağlantı etkin bir kullanarak yükseltilebilir işlemleri kullanmanın faydası, açıldığında <xref:System.Transactions.TransactionScope> işlem ve başka bir bağlantı açıldığında, ek yansıtılmasını yerine basit bir işlem olarak işlem yürütme tam bir dağıtılmış işlem yükü.  
+ Bir bağlantı etkin bir kullanarak promotable işlemleri kullanmanın avantajı, açıldığında <xref:System.Transactions.TransactionScope> işlem ve başka bir bağlantı açıldığında, ek sunucular yerine basit bir işlem olarak işlem yürütmeleri tam bir dağıtılmış işlem ek yükü.  
   
-### <a name="connection-string-keywords"></a>Bağlantı dizesi anahtar sözcükler  
- <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> Özelliğini destekleyen bir anahtar sözcük `Enlist`, belirten olup olmadığını <xref:System.Data.SqlClient> işlem bağlamları algılar ve otomatik olarak bir dağıtılmış işlemde bağlantıyı kaydolunamadı. Varsa `Enlist=true`, bağlantı otomatik olarak açılırken iş parçacığının geçerli işlem bağlamda kayıtlıdır. Varsa `Enlist=false`, `SqlClient` bağlantı dağıtılmış bir işlem ile etkileşim değil. İçin varsayılan değer `Enlist` doğrudur. Varsa `Enlist` belirtilmezse bağlantı dizesinde bağlantı açıldığında bir algılanırsa, bağlantı bir dağıtılmış işlemde otomatik olarak kayıtlı.  
+### <a name="connection-string-keywords"></a>Bağlantı dizesi anahtar sözcükleri  
+ <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> Özelliğini destekleyen bir anahtar sözcük `Enlist`, gösteren olmadığını <xref:System.Data.SqlClient> işlem bağlamları algılar ve bir dağıtılmış işlem bağlantı otomatik olarak listeleme. Varsa `Enlist=true`, bağlantı otomatik olarak açılırken iş parçacığının geçerli işlem bağlamında kayıtlıdır. Varsa `Enlist=false`, `SqlClient` bağlantı ile dağıtılmış bir işlem etkileşimli değil. İçin varsayılan değer `Enlist` geçerlidir. Varsa `Enlist` belirtilmezse bağlantı dizesinde bağlantıyı açıldığında bir algılanırsa bağlantı dağıtılmış bir işlem içinde otomatik olarak kayıtlı.  
   
- `Transaction Binding` Anahtar bir <xref:System.Data.SqlClient.SqlConnection> bağlantı dizesini kontrol bir kayıtlı olan bağlantının ilişkilendirmesini `System.Transactions` işlem. Ayrıca aracılığıyla kullanılabilir <xref:System.Data.SqlClient.SqlConnectionStringBuilder.TransactionBinding%2A> özelliği bir <xref:System.Data.SqlClient.SqlConnectionStringBuilder>.  
+ `Transaction Binding` Anahtar bir <xref:System.Data.SqlClient.SqlConnection> bağlantı dizesini kontrol kayıtlı bir bağlantının ilişkilendirmesini `System.Transactions` işlem. Ayrıca aracılığıyla <xref:System.Data.SqlClient.SqlConnectionStringBuilder.TransactionBinding%2A> özelliği bir <xref:System.Data.SqlClient.SqlConnectionStringBuilder>.  
   
- Aşağıdaki tabloda olası değerleri açıklanmaktadır.  
+ Olası değerler aşağıdaki tabloda açıklanmaktadır.  
   
 |Anahtar sözcüğü|Açıklama|  
 |-------------|-----------------|  
-|Örtük bağlantı kesme|Varsayılan. Otomatik kayıt işlemleri moduna geçiriliyor sona erdiğinde bağlantıyı işleminden ayırır.|  
-|Açık bağlantı kesme|İşlem kapatılana kadar bağlantı harekete eklenen kalır. İlişkili işlem etkin değil veya eşleşmiyor bağlantı başarısız olur <xref:System.Transactions.Transaction.Current%2A>.|  
+|Örtük Unbind|Varsayılan. Commıtted moduna geçiş sona erdiğinde bağlantıyı bir işlemden ayırır.|  
+|Açık Unbind|İşlem kapatılana kadar bağlantı harekete iliştirilmiş olarak kalır. Bağlantı başarısız olur, ilişkili işlem etkin değil ya da eşleşmiyor <xref:System.Transactions.Transaction.Current%2A>.|  
   
 ## <a name="using-transactionscope"></a>TransactionScope kullanma  
- <xref:System.Transactions.TransactionScope> Sınıfı yapacağı kod bloğu işlem örtük olarak bir dağıtılmış işlemde bağlantıları kaydetme tarafından. Çağırmalısınız <xref:System.Transactions.TransactionScope.Complete%2A> sonunda yöntemi <xref:System.Transactions.TransactionScope> , çıkmadan önce bloğu. Blok bırakarak çağırır <xref:System.Transactions.TransactionScope.Dispose%2A> yöntemi. Kod kapsamı, işlem bırakın kabul neden iptal edildiğini bir özel durum oluşturuldu  
+ <xref:System.Transactions.TransactionScope> Sınıfı yapacağı bir kod bloğu işlem bir dağıtılmış işlemde bağlantı kaydetme tarafından örtük olarak. Çağırmalısınız <xref:System.Transactions.TransactionScope.Complete%2A> yöntemi sonunda <xref:System.Transactions.TransactionScope> , çıkmadan önce blok. Blok bırakarak çağırır <xref:System.Transactions.TransactionScope.Dispose%2A> yöntemi. Kod kapsamı, işlem bırakmak kabul neden iptal edildiğini bir özel durumun durumunda.  
   
- Kullanmanızı öneririz bir `using` emin olmak için blok <xref:System.Transactions.TransactionScope.Dispose%2A> üzerinde adlı <xref:System.Transactions.TransactionScope> nesnesi kullanarak ne zaman engelleme çıkıldı. Yürütme veya geri işlemler için hata önemli ölçüde zarar performans çünkü için varsayılan zaman aşımı <xref:System.Transactions.TransactionScope> bir dakikadır. Kullanmıyorsanız, bir `using` deyimi, tüm iş gerçekleştirmelisiniz bir `Try` engellemek ve açıkça çağırın <xref:System.Transactions.TransactionScope.Dispose%2A> yönteminde `Finally` bloğu.  
+ Kullanmanızı öneririz bir `using` emin olmak için blok <xref:System.Transactions.TransactionScope.Dispose%2A> üzerinde çağrılır <xref:System.Transactions.TransactionScope> nesnesini kullanarak engelliyken çıkıldı. Hata işleme veya işlemleri geri önemli ölçüde zarar performans çünkü için varsayılan zaman aşımı <xref:System.Transactions.TransactionScope> bir dakikadır. Kullanmıyorsanız, bir `using` deyimi, tüm iş gerçekleştirmelisiniz bir `Try` engelleme ve açıkça çağırmak <xref:System.Transactions.TransactionScope.Dispose%2A> yönteminde `Finally` blok.  
   
- Bir özel durum oluşması halinde <xref:System.Transactions.TransactionScope>, işlem tutarsız olarak işaretlenir ve terk edilir. Bunu alınacak ne zaman geri <xref:System.Transactions.TransactionScope> atıldı. Hiçbir özel durum oluşursa, katılımcı işlemler uygulayın.  
-  
-> [!NOTE]
->  `TransactionScope` Sınıfı oluşturur bir işlemle bir <xref:System.Transactions.Transaction.IsolationLevel%2A> , `Serializable` varsayılan olarak. Uygulamanızın bağlı olarak, uygulamanızda yüksek çekişmesinden kaçınmak için yalıtım düzeyini düşünmek isteyebilirsiniz.  
+ Bir özel durum oluşursa <xref:System.Transactions.TransactionScope>, işlem tutarsız olarak işaretlenir ve terk edilir. Kullanıma sunulacak geri <xref:System.Transactions.TransactionScope> atıldı. Hiçbir özel durum oluşursa, katılımcı işlemleri işleyin.  
   
 > [!NOTE]
->  Yalnızca güncelleştirmeleri ekler, gerçekleştirme ve önemli veritabanı kaynaklarını tükettiği için siler içinde dağıtılmış işlemler öneririz. SELECT deyimi veritabanı kaynakları gereksiz yere Kilitle ve bazı senaryolarda, işlemler için seçer kullanmak zorunda kalabilirsiniz. Diğer işlem temelli kaynak yöneticileri içerir sürece herhangi bir veritabanı olmayan iş hareket kapsamı dışında yapılmalıdır. Kapsamdaki istisna hareketin gerçekleştirmeden, gelen işlem engeller rağmen <xref:System.Transactions.TransactionScope> sınıfı işlem kapsamı dışında herhangi bir değişiklik kodunuzun geri yaptı için hiçbir sağlama sahiptir. İşlem geri alındı, bazı işlemler yapması varsa, kendi uygulamanızı yazma <xref:System.Transactions.IEnlistmentNotification> arabirim ve açıkça işleminde listelenmeyi.  
+>  `TransactionScope` Sınıfı ile bir işlem oluşturur bir <xref:System.Transactions.Transaction.IsolationLevel%2A> , `Serializable` varsayılan olarak. Uygulamanızın bağlı olarak, uygulamanızda yüksek çekişmesinden kaçınmak için yalıtım düzeyini düşünmek isteyebilirsiniz.  
+  
+> [!NOTE]
+>  Yalnızca güncelleştirmeleri ekler, gerçekleştirme ve önemli veritabanı kaynakları kullandıkları çünkü siler içinde dağıtılmış işlemler öneririz. SELECT deyimleri veritabanı kaynaklarının gereksiz yere Kilitle ve bazı senaryolarda, işlemler için seçer kullanmak zorunda kalabilirsiniz. Diğer işlenen kaynak yöneticileri içerdiği sürece işlem kapsamı dışında herhangi bir veritabanı olmayan iş yapılmalıdır. İşlem kapsamı içindeki bir özel durum işleme, gelen işlem engeller ancak <xref:System.Transactions.TransactionScope> değişikliklerin, kodunuzun geri işlem kapsamı dışında hale getirdiği için hiçbir sınıfı vardır. İşlem geri alınır, bazı işlemler yapması gerekiyorsa, kendi uygulamasını yazmanız gereken <xref:System.Transactions.IEnlistmentNotification> arabirim ve açıkça işleme.  
   
 ## <a name="example"></a>Örnek  
- İle çalışma <xref:System.Transactions> System.Transactions.dll başvuru sahip olmasını gerektirir.  
+ Çalışma <xref:System.Transactions> System.Transactions.dll başvurusu olmasını gerektirir.  
   
- Aşağıdaki işlevi nasıl iki tarafından temsil edilen, iki farklı SQL Server örnekleri karşı yükseltilebilir işlem farklı oluşturulduğunu gösteren <xref:System.Data.SqlClient.SqlConnection> kaydırılır nesneleri bir <xref:System.Transactions.TransactionScope> bloğu. Kod oluşturur <xref:System.Transactions.TransactionScope> ile engelleme bir `using` deyimi ve otomatik olarak içinde kaydeder ilk bağlantı açar <xref:System.Transactions.TransactionScope>. İşlem, başlangıçta, tam bir dağıtılmış işlem yok gibi basit bir işlem olarak kayıtlıdır. İkinci bir bağlantı olarak kayıtlıdır <xref:System.Transactions.TransactionScope> varsa yalnızca ilk bağlantı komutta bir özel durum oluşturmaz. İkinci bir bağlantı açıldığında, işlem için tam bir dağıtılmış işlem otomatik olarak yükseltilir. <xref:System.Transactions.TransactionScope.Complete%2A> Yöntemi çağrıldığında, yalnızca hiçbir özel durum, hangi hareketi tamamlar. İçinde herhangi bir noktada bir özel durum oluşturuldu, <xref:System.Transactions.TransactionScope> bloğu `Complete` değil çağrılması olacaktır ve alma dağıtılmış işlem ne zaman geri <xref:System.Transactions.TransactionScope> sonunda atıldı kendi `using` bloğu.  
+ Aşağıdaki işlevi bir promotable işlem iki tarafından temsil edilen iki farklı SQL Server örneği karşı farklı nasıl oluşturulacağını gösterir <xref:System.Data.SqlClient.SqlConnection> sarmalanır nesneleri, bir <xref:System.Transactions.TransactionScope> blok. Kod oluşturur <xref:System.Transactions.TransactionScope> ile engelleyecek bir `using` deyimi içinde otomatik olarak kaydeder ilk bağlantıyı açar <xref:System.Transactions.TransactionScope>. İşlem başlangıçta, tam bir dağıtılmış işlem yok gibi basit bir işlem olarak kayıtlıdır. İkinci bir bağlantı kayıtlı <xref:System.Transactions.TransactionScope> varsa yalnızca ilk bağlantı komut bir özel durum oluşturmaz. İkinci bağlantı açıldığında, işlem bir tam dağıtılmış işlem için otomatik olarak yükseltilir. <xref:System.Transactions.TransactionScope.Complete%2A> Yöntemi çağrılır, eğer yalnızca hiçbir özel durum harekete hangi hareketi tamamlar. Herhangi bir noktada bir özel durum oluştuktan varsa <xref:System.Transactions.TransactionScope> bloğu `Complete` değil çağrılması sağlar ve geri dağıtılmış işlem olacak geri <xref:System.Transactions.TransactionScope> sonunda elden kendi `using` blok.  
   
 ```csharp  
 // This function takes arguments for the 2 connection strings and commands in order  
@@ -230,4 +230,4 @@ End Function
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [İşlemler ve Eşzamanlılık](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
- [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

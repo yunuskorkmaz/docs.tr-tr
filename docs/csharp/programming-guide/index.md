@@ -9,19 +9,19 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: f6500fa5f8f5022c4e910da894f182dcc5525be5
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 04561adb254d001b5e4c7867a4017ede74972011
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207386"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486202"
 ---
 # <a name="c-programming-guide"></a>C# programlama kılavuzu
-Bu bölüm, anahtar C# dili hakkında ayrıntılı bilgi özellikleri ve C# .NET çerçevesi aracılığıyla erişilebilir özellikleri sağlar.  
+Bu bölüm, anahtar C# dili hakkında ayrıntılı bilgi özellikleri ve C# .NET Framework aracılığıyla erişilebilir özellikler sağlar.  
   
- Bu bölümde çoğunu zaten bir şey C# ve genel programlama kavramları hakkında bildiğinizden varsayar. C# ile veya programlama ile tam bir başlangıç varsa, ziyaret etmek isteyebilirsiniz [C# Quickstarts](../quick-starts/index.md) veya [C# ile çalışmaya başlama](https://www.microsoft.com/net/tutorials/csharp/getting-started) etkileşimli öğreticisini, önceki programlama bilgi burada gereklidir.  
+ Çoğu bu bölümde, zaten bir C# ve genel programlama kavramları bildiğiniz varsayılır. Tam bir Acemi programlama veya C# ile ziyaret etmek isteyebilirsiniz [C# hızlı başlangıçları](../quick-starts/index.md) veya [C# ile çalışmaya başlama](https://www.microsoft.com/net/tutorials/csharp/getting-started) etkileşimli öğretici, önceki programlama bilgisi nerede gereklidir.  
   
- Belirli anahtar sözcükler, işleçler ve önişlemci yönergeleri hakkında daha fazla bilgi için bkz: [C# başvurusu](../../csharp/language-reference/index.md). C# dil belirtimi hakkında daha fazla bilgi için bkz: [C# dil belirtimi](../../csharp/language-reference/language-specification/index.md).  
+ Belirli bir anahtar sözcükleri, işleçler ve ön işlemci yönergeleri hakkında daha fazla bilgi için bkz: [C# başvurusu](../../csharp/language-reference/index.md). C# dil belirtimi hakkında daha fazla bilgi için bkz. [C# dil belirtimi](../../csharp/language-reference/language-specification/index.md).  
   
 ## <a name="program-sections"></a>Program bölümleri
 
@@ -69,7 +69,7 @@ Bu bölüm, anahtar C# dili hakkında ayrıntılı bilgi özellikleri ve C# .NET
  [XML Belge Açıklamaları](../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
   
 ## <a name="platform-sections"></a>Platform bölümleri  
- [Uygulama etki alanları (C# ve Visual Basic)](http://msdn.microsoft.com/library/1bc2939a-79db-4a4a-a677-4a2ce6de2b1e)  
+ [Uygulama etki alanları (C# ve Visual Basic)](https://msdn.microsoft.com/library/1bc2939a-79db-4a4a-a677-4a2ce6de2b1e)  
   
  [Derlemeler ve Genel Derleme Önbelleği](../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
   

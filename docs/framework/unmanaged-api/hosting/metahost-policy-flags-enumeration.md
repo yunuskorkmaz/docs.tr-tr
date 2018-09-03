@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f980fb1336adaf43091e41b9e42ea008b00c033f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1a96af0c66d85c7eec9a97be3ba8c756b1e91849
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447291"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486681"
 ---
 # <a name="metahostpolicyflags-enumeration"></a>METAHOST_POLICY_FLAGS Numaralandırması
-Çoğu çalışma zamanı konaklar için ortak olan bağlama ilkeleri sağlar. Bu numaralandırma tarafından kullanılan [Iclrmetahostpolicy::getrequestedruntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) yöntemi.  
+Çoğu çalışma zamanı konaklar için ortak olan bağlama ilkeleri sağlar. Bu sabit listesi tarafından kullanılan [Iclrmetahostpolicy::getrequestedruntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) yöntemi.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -45,14 +45,14 @@ typedef enum {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`METAHOST_POLICY_HIGHCOMPAT`|Geçerli işlemine yüklenen tüm ortak dil çalışma zamanı (CLR) dikkate almaz yüksek uyumluluk İlkesi tanımlar. Bunun yerine, onu yalnızca yüklü CLRs ve bileşen Tercihler derleme dosyası, bildirilen yerleşik karşı sürümü veya yapılandırma dosyasını türetilmiş olarak göz önünde bulundurur.|  
-|`METAHOST_POLICY_APPLY_UPGRADE_POLICY`|Tam bir eşleşme, HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft içeriğine göre bulunmadığında, yükseltme ilkesi sürüm bağlama sonucu geçerlidir\\. NETFramework\Policy\Upgrades. Bu aynı etkiye sahip [RUNTIME_INFO_UPGRADE_VERSION](../../../../docs/framework/unmanaged-api/hosting/runtime-info-flags-enumeration.md).|  
-|`METAHOST_POLICY_EMULATE_EXE_LAUNCH`|Bağlama sonuçları çağrısına sağlanan görüntüsünü yeni bir işlemde başlatılan olarak döndürülür. Şu anda `GetRequestedRuntime` yüklenebilir çalışma zamanları kümesi yoksayar ve yüklü çalışma zamanları kümesi karşı bağlar. Bu bayrak başlatıldığında bir EXE bağlanacağı hangi çalışma zamanı belirlemek bir konak sağlar.|  
-|`METAHOST_POLICY_SHOW_ERROR_DIALOG`|Bir hata iletişim kutusu görüntülenir `GetRequestedRuntime` giriş parametreleri ile uyumlu bir çalışma zamanı bulamıyor. İle başlayarak [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], bu hata iletişim kutusunda kullanıcı uygun özelliğini etkinleştirmek isteyip istemediğinizi soran bir Windows özelliği iletişim kutusu biçiminde.|  
-|`METAHOST_POLICY_USE_PROCESS_IMAGE_PATH`|`GetRequestedRuntime` işlem görüntü (ve karşılık gelen hiçbir yapılandırma dosyası) bağlama işlemi ek giriş olarak kullanır. Varsayılan olarak, `GetRequestedRuntime` işlem görüntü yolu (genellikle, işlemi başlatmak için kullanılan EXE) için geri dönüş değil bağlamak için çalışma zamanı belirlerken.|  
-|`METAHOST_POLICY_ENSURE_SKU_SUPPORTED`|`GetRequestedRuntime` hiçbir bilgi yapılandırma dosyasında kullanılabilir olduğunda uygun SKU yüklü olup olmadığını denetleyin gerekir. Bu yapılandırma dosyalarını .NET Framework'ün varsayılan yükleme değerinden daha küçük SKU üzerinde düzgün biçimde başarısız olmayan uygulamaları sağlar. Varsayılan olarak, `GetRequestedRuntime` SKU özniteliği yapılandırma dosyasında belirtilmediği sürece uygun SKU yüklü olup olmadığını denetlemez `<supportedRuntime />` öğesi.|  
-|`METAHOST_POLICY_ENSURE_SKU_SUPPORTED`|`GetRequestedRuntime` hiçbir bilgi yapılandırma dosyasında kullanılabilir olduğunda uygun SKU yüklü olup olmadığını denetleyin gerekir. Bu yapılandırma dosyalarını .NET Framework'ün varsayılan yükleme değerinden daha küçük SKU üzerinde düzgün biçimde başarısız olmayan uygulamaları sağlar. Varsayılan olarak, `GetRequestedRuntime` SKU özniteliği yapılandırma dosyasında belirtilmediği sürece uygun SKU yüklü olup olmadığını denetlemez `<supportedRuntime />` öğesi.|  
-|`METAHOST_POLICY_IGNORE_ERROR_MODE`|`GetRequestedRuntime` SEM_FAILCRITICALERRORS yok saymanız gerekir (çağırarak ayarlanmış [SetErrorMode](http://go.microsoft.com/fwlink/p/?LinkId=255242) işlevi) ve hata iletişim kutusu gösterir. Varsayılan olarak, hata iletişim kutusu SEM_FAILCRITICALERRORS gizler. Başka bir işlemden devralınmış ve sessiz hatası senaryonuzda istenmeyen olabilir.|  
+|`METAHOST_POLICY_HIGHCOMPAT`|Geçerli işlem içine yüklenmiş tüm ortak dil çalışma zamanının (CLR) göz önünde bulundurmaz yüksek uyumluluk İlkesi tanımlar. Bunun yerine, bunu yalnızca yüklü CLRs ve bileşen tercihleri derleme dosyası, bildirilen yerleşik karşı sürümü veya yapılandırma dosyasını türetildiği haliyle olarak kabul eder.|  
+|`METAHOST_POLICY_APPLY_UPGRADE_POLICY`|Tam bir eşleşme, HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft içeriklerine dayanan bulunmadığında, sürüm bağlama sonucu yükseltme İlkesi uygular\\. NETFramework\Policy\Upgrades. Bu aynı etkiye sahiptir [RUNTIME_INFO_UPGRADE_VERSION](../../../../docs/framework/unmanaged-api/hosting/runtime-info-flags-enumeration.md).|  
+|`METAHOST_POLICY_EMULATE_EXE_LAUNCH`|Yeni bir işleme çağrısına sağlanan görüntü Gezginden gibi bağlama sonuçlar döndürülür. Şu anda `GetRequestedRuntime` yüklenebilir çalışma zamanları kümesini yoksayar ve çalışma zamanı kümesini karşı bağlar. Bu bayrak başlatıldığında bir EXE bağlanacağı hangi çalışma zamanı belirlemek bir konak sağlar.|  
+|`METAHOST_POLICY_SHOW_ERROR_DIALOG`|Bir hata iletişim kutusu görüntülenir `GetRequestedRuntime` giriş parametreleri ile uyumlu olan bir çalışma zamanı bulamıyor. İle başlayarak [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], bu hata iletişim kutusunda kullanıcı uygun özelliğini etkinleştirmek isteyip istemediğinizi soran bir Windows özelliği iletişim kutusu biçiminde.|  
+|`METAHOST_POLICY_USE_PROCESS_IMAGE_PATH`|`GetRequestedRuntime` işlem görüntü (ve karşılık gelen herhangi bir yapılandırma dosyası) bağlama işlemi için ek giriş olarak kullanır. Varsayılan olarak, `GetRequestedRuntime` geri işlem görüntü yolu (genellikle işlemi başlatmak için kullanılan EXE) düşmüyorsa bağlamak için çalışma zamanı belirlerken.|  
+|`METAHOST_POLICY_ENSURE_SKU_SUPPORTED`|`GetRequestedRuntime` yapılandırma dosyasında hiçbir bilgi kullanılabilir olduğunda ve uygun SKU yüklü olup olmadığını denetlemelisiniz. Bu, varsayılan yükleme .NET Framework'ün daha küçük SKU'ları üzerinde düzgün bir şekilde başarısız için yapılandırma dosyalarını olmayan uygulamalar sağlar. Varsayılan olarak, `GetRequestedRuntime` SKU öznitelik yapılandırma dosyasında belirtilmediği sürece ve uygun SKU yüklü olup olmadığını denetlemez `<supportedRuntime />` öğesi.|  
+|`METAHOST_POLICY_ENSURE_SKU_SUPPORTED`|`GetRequestedRuntime` yapılandırma dosyasında hiçbir bilgi kullanılabilir olduğunda ve uygun SKU yüklü olup olmadığını denetlemelisiniz. Bu, varsayılan yükleme .NET Framework'ün daha küçük SKU'ları üzerinde düzgün bir şekilde başarısız için yapılandırma dosyalarını olmayan uygulamalar sağlar. Varsayılan olarak, `GetRequestedRuntime` SKU öznitelik yapılandırma dosyasında belirtilmediği sürece ve uygun SKU yüklü olup olmadığını denetlemez `<supportedRuntime />` öğesi.|  
+|`METAHOST_POLICY_IGNORE_ERROR_MODE`|`GetRequestedRuntime` SEM_FAILCRITICALERRORS sayılmalıdır (çağırarak Hosted [SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkId=255242) işlevi) ve hata iletişim kutusunu görüntüleyin. Varsayılan olarak, hata iletişim kutusu SEM_FAILCRITICALERRORS bastırır. Başka bir işlemden devralınmış ve sessiz hata senaryonuzda istenmeyen olabilir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   

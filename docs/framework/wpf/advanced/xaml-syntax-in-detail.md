@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: f2c3aab20dc5bcf9b0f9f7053323ccd7a04443cc
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: eabb9c84824a4604319a346612e84563abaf2b76
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42755057"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485735"
 ---
 # <a name="xaml-syntax-in-detail"></a>Ayrıntılı XAML Sözdizimi
 Bu konuda, XAML söz dizimi öğeleri tanımlamak için kullanılan terimleri tanımlar. Bu terimler sık kalanında bu belge, WPF belgeler için her ikisi de özellikle ve XAML veya XAML dil desteğini System.Xaml düzeyinde Etkin temel XAML kavramları kullanan diğer çerçeveler için kullanılır. Bu konu başlığı altında bu konu başlığı altında tanıtılan temel terminoloji genişletir. [XAML genel bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  
@@ -45,7 +45,7 @@ Bu konuda, XAML söz dizimi öğeleri tanımlamak için kullanılan terimleri ta
 ## <a name="the-xaml-language-specification"></a>XAML dil belirtimi  
  Burada tanımlanan XAML sözdizimi terminolojisi ayrıca tanımlanan veya başvurulan içinde XAML dil belirtimi. XAML aşağıdaki XML tabanlı bir dildir ve XML yapısal kuralları üzerinde genişletir. Bazı terimler, paylaşılan veya XML dil veya XML belge nesne modeli anlatırken yaygın olarak kullanılan terimler hakkında temel alır.  
   
- XAML dil belirtimi hakkında daha fazla bilgi için indirme [ \[MS-XAML\] ](http://go.microsoft.com/fwlink/?LinkId=114525) Microsoft Download Center öğesinden.  
+ XAML dil belirtimi hakkında daha fazla bilgi için indirme [ \[MS-XAML\] ](https://go.microsoft.com/fwlink/?LinkId=114525) Microsoft Download Center öğesinden.  
   
 <a name="xaml_and_clr"></a>   
 ## <a name="xaml-and-clr"></a>XAML ve CLR  

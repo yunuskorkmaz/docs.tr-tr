@@ -12,21 +12,21 @@ ms.assetid: 84fc31a3-175f-4e93-90a0-dd29d89b77ce
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 4f0af8eac1238c377682bd4880efb89c4d9442db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b20173e0ec814237b45eb8e53135c109c31ddcb6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403207"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486993"
 ---
 # <a name="get-the-toggle-state-of-a-check-box-using-ui-automation"></a>UI Otomasyonunu Kullanarak Onay Kutusunun Değiştir Durumunu Alma
 > [!NOTE]
->  Bu belge yönetilen kullanmak isteyen .NET Framework için tasarlanan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tanımlanan sınıflar <xref:System.Windows.Automation> ad alanı. Hakkında en yeni bilgiler için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], bkz: [Windows Otomasyon API: UI Otomasyonu](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Bu belge yönetilen kullanmak isteyen .NET Framework için tasarlanan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tanımlanan sınıflar <xref:System.Windows.Automation> ad alanı. En son bilgileri [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], bkz: [Windows Automation API: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- Bu konuda nasıl kullanılacağını gösterir [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] denetim Değiştir durumunu alma.  
+ Bu konu nasıl kullanılacağını gösterir [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] bir denetimi Değiştir durumunu alma için.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> yöntemi <xref:System.Windows.Automation.AutomationElement> elde etmek için sınıf bir <xref:System.Windows.Automation.TogglePattern> nesne denetimden ve dönüş kendi <xref:System.Windows.Automation.ToggleState> özelliği.  
+ Bu örnekte <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> yöntemi <xref:System.Windows.Automation.AutomationElement> almak için bir <xref:System.Windows.Automation.TogglePattern> nesne denetimden ve dönüş kendi <xref:System.Windows.Automation.ToggleState> özelliği.  
   
  [!code-csharp[NavigatingWithTreeWalker#1200](../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigatingWithTreeWalker/CSharp/ClientClass.cs#1200)]
  [!code-vb[NavigatingWithTreeWalker#1200](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/NavigatingWithTreeWalker/visualbasic/clientclass.vb#1200)]

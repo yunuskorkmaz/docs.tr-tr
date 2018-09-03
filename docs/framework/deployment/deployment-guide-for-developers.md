@@ -8,35 +8,35 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 869d64902c53e20667907b99276b9f8c6f3a2e20
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 47643dfa6eda67c93c54d19da41d705a78c27d8c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932855"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484759"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Geliştiriciler için .NET framework Dağıtım Kılavuzu
 Bu konu için .NET Framework 4.5 .NET Framework'ün herhangi bir sürümünü yüklemek için isteyen geliştiriciler için bilgi sağlamaktadır [!INCLUDE[net_current](../../../includes/net-current-version.md)] uygulamalarıyla birlikte.
 
 İndirme bağlantıları için konudaki [yeniden dağıtılabilir paketleri](#redistributable-packages). Yeniden dağıtılabilir paketleri ve dil paketlerini bu Microsoft Download Center sayfalarından yükleyebilirsiniz:
 
-- Tüm işletim sistemleri için .NET framework 4.7.2 ([web yükleyicisi](http://go.microsoft.com/fwlink/?LinkId=863262) veya [çevrimdışı yükleyici](http://go.microsoft.com/fwlink/p/?LinkId=863265))
+- Tüm işletim sistemleri için .NET framework 4.7.2 ([web yükleyicisi](https://go.microsoft.com/fwlink/?LinkId=863262) veya [çevrimdışı yükleyici](https://go.microsoft.com/fwlink/p/?LinkId=863265))
 
-- Tüm işletim sistemleri için .NET framework 4.7.1 ([web yükleyicisi](http://go.microsoft.com/fwlink/?LinkId=852095) veya [çevrimdışı yükleyici](http://go.microsoft.com/fwlink/p/?LinkId=852107))
+- Tüm işletim sistemleri için .NET framework 4.7.1 ([web yükleyicisi](https://go.microsoft.com/fwlink/?LinkId=852095) veya [çevrimdışı yükleyici](https://go.microsoft.com/fwlink/p/?LinkId=852107))
 
-- Tüm işletim sistemleri için .NET framework 4.7 ([web yükleyicisi](http://go.microsoft.com/fwlink/?LinkId=825299) veya [çevrimdışı yükleyici](http://go.microsoft.com/fwlink/p/?LinkId=825303))
+- Tüm işletim sistemleri için .NET framework 4.7 ([web yükleyicisi](https://go.microsoft.com/fwlink/?LinkId=825299) veya [çevrimdışı yükleyici](https://go.microsoft.com/fwlink/p/?LinkId=825303))
 
-- [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] tüm işletim sistemlerinde ([web yükleyicisi](http://go.microsoft.com/fwlink/?LinkId=780597) veya [çevrimdışı yükleyici](http://go.microsoft.com/fwlink/p/?LinkId=780601))
+- [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] tüm işletim sistemlerinde ([web yükleyicisi](https://go.microsoft.com/fwlink/?LinkId=780597) veya [çevrimdışı yükleyici](https://go.microsoft.com/fwlink/p/?LinkId=780601))
 
-- [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] tüm işletim sistemlerinde ([web yükleyicisi](http://go.microsoft.com/fwlink/?LinkId=671729) veya [çevrimdışı yükleyici](http://go.microsoft.com/fwlink/p/?LinkId=671744))
+- [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] tüm işletim sistemlerinde ([web yükleyicisi](https://go.microsoft.com/fwlink/?LinkId=671729) veya [çevrimdışı yükleyici](https://go.microsoft.com/fwlink/p/?LinkId=671744))
 
-- [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] tüm işletim sistemlerinde ([web yükleyicisi](http://go.microsoft.com/fwlink/?LinkId=528222) veya [çevrimdışı yükleyici](http://go.microsoft.com/fwlink/p/?LinkId=528232))
+- [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] tüm işletim sistemlerinde ([web yükleyicisi](https://go.microsoft.com/fwlink/?LinkId=528222) veya [çevrimdışı yükleyici](https://go.microsoft.com/fwlink/p/?LinkId=528232))
 
-- Tüm işletim sistemleri için .NET framework 4.5.2 ([web yükleyicisi](http://go.microsoft.com/fwlink/p/?LinkId=397703) veya [çevrimdışı yükleyici](http://go.microsoft.com/fwlink/p/?LinkId=397706))
+- Tüm işletim sistemleri için .NET framework 4.5.2 ([web yükleyicisi](https://go.microsoft.com/fwlink/p/?LinkId=397703) veya [çevrimdışı yükleyici](https://go.microsoft.com/fwlink/p/?LinkId=397706))
 
-- Tüm işletim sistemleri için .NET framework 4.5.1 ([web yükleyicisi](http://go.microsoft.com/fwlink/p/?LinkId=310158) veya [çevrimdışı yükleyici](http://go.microsoft.com/fwlink/p/?LinkId=310159))
+- Tüm işletim sistemleri için .NET framework 4.5.1 ([web yükleyicisi](https://go.microsoft.com/fwlink/p/?LinkId=310158) veya [çevrimdışı yükleyici](https://go.microsoft.com/fwlink/p/?LinkId=310159))
 
-- [.NET framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)
+- [.NET framework 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245484)
 
  Önemli Notlar:
 
@@ -55,9 +55,9 @@ Bu konu için .NET Framework 4.5 .NET Framework'ün herhangi bir sürümünü y�
 
 - İle başlayarak [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], kullanıcılarınızın Kurulum sırasında çalışan .NET Framework uygulamalar listesini görüntüleyebilir ve kolayca kapatabilir. Bu, .NET Framework kurulumlarının neden olduğu sistem yeniden başlatmalarını önlemenize yardımcı olabilir. Bkz: [sistem yeniden başlatmalarını azaltma](../../../docs/framework/deployment/reducing-system-restarts.md).
 
-- Kaldırma [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] veya kendi noktasını birini sürümleri de önceden var olan kaldırır [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] dosyaları. Geri dönmek istiyorsanız [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], onu ve tüm güncellemelerini yeniden yüklemeniz gerekir. (Bkz [.NET Framework 4'ü yükleme](http://msdn.microsoft.com/library/5a4x27ek\(v=vs.100\).aspx).)
+- Kaldırma [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] veya kendi noktasını birini sürümleri de önceden var olan kaldırır [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] dosyaları. Geri dönmek istiyorsanız [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], onu ve tüm güncellemelerini yeniden yüklemeniz gerekir. (Bkz [.NET Framework 4'ü yükleme](https://msdn.microsoft.com/library/5a4x27ek\(v=vs.100\).aspx).)
 
-- .NET Framework 4.5 yeniden dağıtılabilir 2012'de 9 Ekim, dijital imzanın süresinin zamanından önce dolmasına Microsoft tarafından imzalanmış ve üretilen dosyaları neden bir dijital sertifika üzerinde hatalı zaman damgasıyla ilgili sorunu gidermek için güncelleştirildi. Daha önce yeniden dağıtılabilir paket 16 Ağustos 2012 tarihli .NET Framework 4.5 yüklü değilse kopyanızı ile en son yeniden dağıtılabilir Paketle güncelleştirmenizi öneririz [Microsoft Download Center](http://go.microsoft.com/fwlink/p/?LinkId=245484). Bu sorun hakkında daha fazla bilgi için bkz. [Microsoft Security Advisory 2749655](http://technet.microsoft.com/security/advisory/2749655).
+- .NET Framework 4.5 yeniden dağıtılabilir 2012'de 9 Ekim, dijital imzanın süresinin zamanından önce dolmasına Microsoft tarafından imzalanmış ve üretilen dosyaları neden bir dijital sertifika üzerinde hatalı zaman damgasıyla ilgili sorunu gidermek için güncelleştirildi. Daha önce yeniden dağıtılabilir paket 16 Ağustos 2012 tarihli .NET Framework 4.5 yüklü değilse kopyanızı ile en son yeniden dağıtılabilir Paketle güncelleştirmenizi öneririz [Microsoft Download Center](https://go.microsoft.com/fwlink/p/?LinkId=245484). Bu sorun hakkında daha fazla bilgi için bkz. [Microsoft Security Advisory 2749655](https://technet.microsoft.com/security/advisory/2749655).
 
  Nasıl bir Sistem Yöneticisi .NET Framework ve sistem bağımlılıklarını bir ağ üzerinden dağıtabilirsiniz hakkında daha fazla bilgi için bkz: [Yöneticiler için Dağıtım Kılavuzu](../../../docs/framework/deployment/guide-for-administrators.md).
 
@@ -75,12 +75,12 @@ Bu konu için .NET Framework 4.5 .NET Framework'ün herhangi bir sürümünü y�
 
 ||Web yükleyicisi|Çevrimdışı yükleyici|
 |-|-------------------|-----------------------|
-|Dosya yükleme|.NET framework 4.7.2: <br/>[NDP472 KB4054531 Web.exe](http://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>.NET framework 4.7.1: <br/>[NDP471-KB4033344-Web.exe](http://go.microsoft.com/fwlink/?LinkId=852092)<br/><br/>.NET framework 4.7: <br />[NDP47-KB3186500-Web.exe](http://go.microsoft.com/fwlink/?LinkId=825298) <br /><br />[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]: <br />[NDP462-KB3151802-Web.exe](http://go.microsoft.com/fwlink/?LinkId=780596)<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]:<br />[NDP461-KB3102438-Web.exe](http://go.microsoft.com/fwlink/?LinkId=671728)<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]:<br />[NDP46-KB3045560-Web.exe](http://go.microsoft.com/fwlink/?LinkId=528222)<br /><br /> .NET framework 4.5.2: <br />[NDP452-KB2901954-Web.exe](http://go.microsoft.com/fwlink/?LinkId=397707)<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]: <br />[NDP451-KB2859818-Web.exe](http://go.microsoft.com/fwlink/?LinkId=322115)<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]: <br />[dotNetFx45_Full_setup.exe](http://go.microsoft.com/fwlink/?LinkId=225704)|.NET framework 4.7.2: <br/>[NDP472-KB4054530-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=863265)<br/><br/>.NET framework 4.7.1: <br />[NDP471-KB4033342-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=852104) <br /><br />.NET framework 4.7: <br />[NDP47-KB3186497-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=825302) <br /><br />[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]: <br />[NDP462-KB3151800-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=780600)<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]: <br />[NDP461-KB3102436-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=671743)<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]: <br />[NDP46-KB3045557-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=528232)<br /><br /> .NET framework 4.5.2: <br />[NDP452-KB2901907-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=397708)<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]: <br />[NDP451-KB2858728-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=322116)<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]: <br />[dotNetFx45_Full_x86_x64.exe](http://go.microsoft.com/fwlink/?LinkId=225702)|
+|Dosya yükleme|.NET framework 4.7.2: <br/>[NDP472 KB4054531 Web.exe](https://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>.NET framework 4.7.1: <br/>[NDP471-KB4033344-Web.exe](https://go.microsoft.com/fwlink/?LinkId=852092)<br/><br/>.NET framework 4.7: <br />[NDP47-KB3186500-Web.exe](https://go.microsoft.com/fwlink/?LinkId=825298) <br /><br />[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]: <br />[NDP462-KB3151802-Web.exe](https://go.microsoft.com/fwlink/?LinkId=780596)<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]:<br />[NDP461-KB3102438-Web.exe](https://go.microsoft.com/fwlink/?LinkId=671728)<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]:<br />[NDP46-KB3045560-Web.exe](https://go.microsoft.com/fwlink/?LinkId=528222)<br /><br /> .NET framework 4.5.2: <br />[NDP452-KB2901954-Web.exe](https://go.microsoft.com/fwlink/?LinkId=397707)<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]: <br />[NDP451-KB2859818-Web.exe](https://go.microsoft.com/fwlink/?LinkId=322115)<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]: <br />[dotNetFx45_Full_setup.exe](https://go.microsoft.com/fwlink/?LinkId=225704)|.NET framework 4.7.2: <br/>[NDP472-KB4054530-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=863265)<br/><br/>.NET framework 4.7.1: <br />[NDP471-KB4033342-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=852104) <br /><br />.NET framework 4.7: <br />[NDP47-KB3186497-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=825302) <br /><br />[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]: <br />[NDP462-KB3151800-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=780600)<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]: <br />[NDP461-KB3102436-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=671743)<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]: <br />[NDP46-KB3045557-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=528232)<br /><br /> .NET framework 4.5.2: <br />[NDP452-KB2901907-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=397708)<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]: <br />[NDP451-KB2858728-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=322116)<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]: <br />[dotNetFx45_Full_x86_x64.exe](https://go.microsoft.com/fwlink/?LinkId=225702)|
 |Internet bağlantısı gerekiyor?|Evet|Hayır|
 |İndirme boyutu|Küçük (yalnızca hedef Platform içerir) *|Daha büyük *|
 |Dil paketleri|Dahil edilen **|Olmalıdır [ayrı olarak yüklenmiş](#chain_langpack), tüm işletim sistemlerini hedef alan paketi kullanmıyorsanız|
 |Dağıtım yöntemi|Tüm yöntemleri destekler:<br /><br />- [ClickOnce](#clickonce-deployment)<br />- [Installaware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [El ile yükleme](#installing_manually)<br />- [Özel Kurulum (bağlama)](#chaining)|Tüm yöntemleri destekler:<br /><br /> - [ClickOnce](#clickonce-deployment)<br />- [Installaware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [El ile yükleme](#installing_manually)<br />- [Özel Kurulum (bağlama)](#chaining)|
-|ClickOnce dağıtımı için indirme konumu|Microsoft İndirme Merkezi:<br /><br /> - [.NET framework 4.7.2](http://go.microsoft.com/fwlink/?LinkId=863262) <br/> - [.NET framework 4.7.1](http://go.microsoft.com/fwlink/?LinkId=852092) <br/> - [.NET framework 4.7](http://go.microsoft.com/fwlink/?LinkId=825298) <br/> - [.NET framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780596)<br />- [.NET framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671728)<br />- [.NET framework 4.6](http://go.microsoft.com/fwlink/?LinkId=528222)<br />- [.NET framework 4.5.2](http://go.microsoft.com/fwlink/?LinkId=397703)<br />- [.NET framework 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=310158)<br />- [.NET framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)|Kendi sunucunuz veya Microsoft Download Center:<br /><br /> - [.NET framework 4.7.2](http://go.microsoft.com/fwlink/?LinkId=863265)<br /> - [.NET framework 4.7.1](http://go.microsoft.com/fwlink/?LinkId=852104)<br /> - [.NET framework 4.7](http://go.microsoft.com/fwlink/?LinkId=825302)<br /> - [.NET framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780600)<br />- [.NET framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671743)<br />- [.NET framework 4.6](http://go.microsoft.com/fwlink/?LinkId=528232)<br />- [.NET framework 4.5.2](http://go.microsoft.com/fwlink/p/?LinkId=397706)<br />- [.NET framework 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=310159)<br />- [.NET framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)|
+|ClickOnce dağıtımı için indirme konumu|Microsoft İndirme Merkezi:<br /><br /> - [.NET framework 4.7.2](https://go.microsoft.com/fwlink/?LinkId=863262) <br/> - [.NET framework 4.7.1](https://go.microsoft.com/fwlink/?LinkId=852092) <br/> - [.NET framework 4.7](https://go.microsoft.com/fwlink/?LinkId=825298) <br/> - [.NET framework 4.6.2](https://go.microsoft.com/fwlink/?LinkId=780596)<br />- [.NET framework 4.6.1](https://go.microsoft.com/fwlink/?LinkId=671728)<br />- [.NET framework 4.6](https://go.microsoft.com/fwlink/?LinkId=528222)<br />- [.NET framework 4.5.2](https://go.microsoft.com/fwlink/?LinkId=397703)<br />- [.NET framework 4.5.1](https://go.microsoft.com/fwlink/p/?LinkId=310158)<br />- [.NET framework 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245484)|Kendi sunucunuz veya Microsoft Download Center:<br /><br /> - [.NET framework 4.7.2](https://go.microsoft.com/fwlink/?LinkId=863265)<br /> - [.NET framework 4.7.1](https://go.microsoft.com/fwlink/?LinkId=852104)<br /> - [.NET framework 4.7](https://go.microsoft.com/fwlink/?LinkId=825302)<br /> - [.NET framework 4.6.2](https://go.microsoft.com/fwlink/?LinkId=780600)<br />- [.NET framework 4.6.1](https://go.microsoft.com/fwlink/?LinkId=671743)<br />- [.NET framework 4.6](https://go.microsoft.com/fwlink/?LinkId=528232)<br />- [.NET framework 4.5.2](https://go.microsoft.com/fwlink/p/?LinkId=397706)<br />- [.NET framework 4.5.1](https://go.microsoft.com/fwlink/p/?LinkId=310159)<br />- [.NET framework 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245484)|
 
  \* Çevrimdışı yükleyici, tüm hedef platformlar için bileşenleri içerdiğinden daha büyük. Kurulumun çalışması tamamlandığında Windows işletim sistemi yalnızca kullanılan yükleyici önbelleğe alır. Çevrimdışı Yükleyici yükleme işleminden sonra silinirse, kullanılan disk alanı web yükleyicisi tarafından kullanılan aynıdır. Aracı'nı kullanıyorsanız (örneğin, [Installaware](#installaware-deployment) veya [InstallShield](#installshield-deployment)) kurulumundan sonra silinen bir kurulum dosyası klasörü sağlar, uygulamanızın Kurulum programı oluşturun, çevrimdışı yükleyiciyi olabilir Kurulum klasörüne koyarak otomatik olarak silinir.
 
@@ -281,23 +281,23 @@ Type: DWORD
 ### <a name="chaining-the-language-packs-to-your-app-setup"></a>Uygulama kurulumunuzu zincirleme dil paketleri
  .NET Framework özel kültürler için yerelleştirilmiş kaynakları içeren bir paketi yürütülebilir dosyalar tek başına dil kümesini sağlar. Dil paketlerini Microsoft Download Center'dan gelen mevcuttur:
 
-- [.NET framework 4.7.2 dil paketleri](http://go.microsoft.com/fwlink/p/?LinkId=863258)
+- [.NET framework 4.7.2 dil paketleri](https://go.microsoft.com/fwlink/p/?LinkId=863258)
 
-- [.NET framework 4.7.1 dil paketleri](http://go.microsoft.com/fwlink/p/?LinkId=852090)
+- [.NET framework 4.7.1 dil paketleri](https://go.microsoft.com/fwlink/p/?LinkId=852090)
 
-- [.NET framework 4.7 Dil paketleri](http://go.microsoft.com/fwlink/p/?LinkId=825306)
+- [.NET framework 4.7 Dil paketleri](https://go.microsoft.com/fwlink/p/?LinkId=825306)
 
-- [.NET framework 4.6.2 dil paketleri](http://go.microsoft.com/fwlink/p/?LinkId=780604)
+- [.NET framework 4.6.2 dil paketleri](https://go.microsoft.com/fwlink/p/?LinkId=780604)
 
-- [.NET framework 4.6.1 dil paketi](http://go.microsoft.com/fwlink/p/?LinkId=671747)
+- [.NET framework 4.6.1 dil paketi](https://go.microsoft.com/fwlink/p/?LinkId=671747)
 
-- [.NET framework 4.6 dil paketi](http://go.microsoft.com/fwlink/p/?LinkId=528314)
+- [.NET framework 4.6 dil paketi](https://go.microsoft.com/fwlink/p/?LinkId=528314)
 
-- [.NET framework 4.5.2 dil paketleri](http://go.microsoft.com/fwlink/p/?LinkId=397701)
+- [.NET framework 4.5.2 dil paketleri](https://go.microsoft.com/fwlink/p/?LinkId=397701)
 
-- [.NET framework 4.5.1 dil paketleri](http://go.microsoft.com/fwlink/p/?LinkId=322101)
+- [.NET framework 4.5.1 dil paketleri](https://go.microsoft.com/fwlink/p/?LinkId=322101)
 
-- [.NET framework 4.5 dil paketleri](http://go.microsoft.com/fwlink/p/?LinkId=245451)
+- [.NET framework 4.5 dil paketleri](https://go.microsoft.com/fwlink/p/?LinkId=245451)
 
 > [!IMPORTANT]
 > Dil paketleri, bir uygulamayı çalıştırmak için gereken .NET Framework bileşenlerini içermezler; dil paketini yüklemeden önce web veya çevrimdışı yükleyiciyi kullanarak .NET Framework'ü yüklemeniz gerekir.
@@ -331,18 +331,18 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 #### <a name="download-error-codes"></a>İndirme hatası kodları
  Aşağıdaki içeriğe bakın:
 
-- [Arka Plan Akıllı Aktarım Hizmeti (BITS) hata kodları](http://go.microsoft.com/fwlink/?LinkId=180946)
+- [Arka Plan Akıllı Aktarım Hizmeti (BITS) hata kodları](https://go.microsoft.com/fwlink/?LinkId=180946)
 
-- [URL adı hata kodları](http://go.microsoft.com/fwlink/?LinkId=180947)
+- [URL adı hata kodları](https://go.microsoft.com/fwlink/?LinkId=180947)
 
-- [WinHttp hata kodları](http://go.microsoft.com/fwlink/?LinkId=180948)
+- [WinHttp hata kodları](https://go.microsoft.com/fwlink/?LinkId=180948)
 
 #### <a name="other-error-codes"></a>Diğer hata kodları
  Aşağıdaki içeriğe bakın:
 
-- [Windows Installer hata kodları](http://go.microsoft.com/fwlink/?LinkId=180949)
+- [Windows Installer hata kodları](https://go.microsoft.com/fwlink/?LinkId=180949)
 
-- [Windows Update Aracısı sonuç kodları](http://go.microsoft.com/fwlink/?LinkId=180951)
+- [Windows Update Aracısı sonuç kodları](https://go.microsoft.com/fwlink/?LinkId=180951)
 
 ## <a name="uninstalling-the-net-framework"></a>.NET Framework'ün kaldırılması
  İle başlayarak [!INCLUDE[win8](../../../includes/win8-md.md)], kaldırabilirsiniz [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] veya kendi noktasını birini sürümleri kullanılarak **kapatma Windows özelliklerini açma ve kapatma** Denetim Masası'nda. Eski Windows sürümlerinde kaldırabilirsiniz [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] veya kendi noktasını birini sürümleri kullanılarak **Program Ekle veya Kaldır** Denetim Masası'nda.
@@ -358,11 +358,11 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 |Seçenek|Açıklama|
 |------------|-----------------|
 |**/ CEIPConsent**|Varsayılan davranışını tekrardan yazar ve gelecekteki dağıtım deneyimleri geliştirmek üzere Microsoft'a anonim geri bildirim gönderir. Bu seçenek, yalnızca Kurulum programın rıza istemesine sebep olursa ve kullanıcı anonim görüşlerinizi Microsoft'a göndermek için izin verirse kullanılabilir.|
-|**/chainingpackage** `packageName`|Zincirlemeyi yapan yürütülebilir dosya adını belirtir. Gelecekteki dağıtım geliştirmeye yardımcı olmak için anonim görüş deneyimleri olarak bu bilgileri Microsoft'a gönderilmez.<br /><br /> Paket adı boşluk içeriyorsa, sınırlayıcı olarak çift tırnak işareti kullanın. Örneğin: **/chainingpackage "Lucerne Publishing"**. Zincirleme paketi örneği için bkz: [yükleme paketinden ilerleme bilgisi alma](http://go.microsoft.com/fwlink/?LinkId=181926) MSDN Kitaplığı'nda.|
+|**/chainingpackage** `packageName`|Zincirlemeyi yapan yürütülebilir dosya adını belirtir. Gelecekteki dağıtım geliştirmeye yardımcı olmak için anonim görüş deneyimleri olarak bu bilgileri Microsoft'a gönderilmez.<br /><br /> Paket adı boşluk içeriyorsa, sınırlayıcı olarak çift tırnak işareti kullanın. Örneğin: **/chainingpackage "Lucerne Publishing"**. Zincirleme paketi örneği için bkz: [yükleme paketinden ilerleme bilgisi alma](https://go.microsoft.com/fwlink/?LinkId=181926) MSDN Kitaplığı'nda.|
 |**/ LCID**  `LCID`<br /><br /> Burada `LCID` bir yerel ayar tanımlayıcısını belirtir (bkz [desteklenen diller](#supported-languages))|Tarafından belirtilen dil paketini yükler `LCID` ve sessiz mod ayarlanmadığı sürece görüntülenen kullanıcı Arabirimi o dilde gösterilmesini zorlar.<br /><br /> Web Yükleyicisi için bu seçeneği zinciri-web dil paketini yükler. **Not:** bu seçeneği yalnızca web Yükleyicisi ile kullanın.|
 |**/ log** `file`&#124; `folder`|Günlük dosyasının konumunu belirtir. Varsayılan işlem için geçici bir klasördür ve varsayılan dosya adı pakete dayalıdır. Dosya uzantısı .txt ise, bir metin günlüğü oluşturulur. Başka bir uzantı belirtirseniz veya bir uzantı belirtirseniz, bir HTML günlüğü oluşturulur.|
 |**/msioptions**|.Msi ve .msp öğeleri için geçirilecek seçeneklerini belirtir. Örneğin: `/msioptions "PROPERTY1='Value'"`.|
-|**/ norestart**|Kurulum programının otomatik olarak yeniden başlatılmasını önler. Bu seçeneği kullanırsanız, zincirleme uygulama döndürülen kodu yakalamak ve yeniden başlatmayı işlemek vardır (bkz [yükleme paketinden ilerleme bilgisi alma](http://go.microsoft.com/fwlink/?LinkId=179606) MSDN Kitaplığı'nda).|
+|**/ norestart**|Kurulum programının otomatik olarak yeniden başlatılmasını önler. Bu seçeneği kullanırsanız, zincirleme uygulama döndürülen kodu yakalamak ve yeniden başlatmayı işlemek vardır (bkz [yükleme paketinden ilerleme bilgisi alma](https://go.microsoft.com/fwlink/?LinkId=179606) MSDN Kitaplığı'nda).|
 |**/ passive**|Pasif modu ayarlar. Yükleme devam ediyor, ancak hiçbir hızlı cevap yada hata iletilerini kullanıcıya göstermez belirtmek için ilerleme çubuğu görüntüler. Zincirleme paketi bu modda, Kurulum programı tarafından bağlanırsa işlemesi [dönüş kodları](#return-codes).|
 |**/pipe**|İlerleme durumunu elde etmek zincirleme bir paket için bir iletişim kanalı oluşturur.|
 |**promptrestart**|Sadece pasif modda, Kurulum programı bir yeniden başlatma gerekirse kullanıcıya sorar. Bir yeniden başlatma gerekirse bu seçenek kullanıcı etkileşimini gerektirir.|

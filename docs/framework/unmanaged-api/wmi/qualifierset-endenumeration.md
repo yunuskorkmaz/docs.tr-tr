@@ -1,6 +1,6 @@
 ---
 title: QualifierSet_EndEnumeration işlevi (yönetilmeyen API Başvurusu)
-description: QualifierSet_EndEnumeration işlevi numaralandırma sonlandırır.
+description: Bir numaralandırma QualifierSet_EndEnumeration işlevi sonlandırır.
 ms.date: 11/06/2017
 api_name:
 - QualifierSet_EndEnumeration
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e24acdde486f377cc9187aac088ce7a611cd4eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dbf47dbfddac7d48b78c9d52969de1ef03385c15
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460756"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486824"
 ---
 # <a name="qualifiersetendenumeration-function"></a>QualifierSet_EndEnumeration işlevi
-Çağrısıyla başlamış numaralandırması sonlandırır [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) işlevi.  
+Bir çağrı ile başlamış numaralandırma sonlandırır [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) işlevi.  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -40,24 +40,24 @@ HRESULT QualifierSet_EndEnumeration (
 ## <a name="parameters"></a>Parametreler
 
 `vFunc`  
-[in] Bu parametre kullanılmıyor.
+[in] Bu parametre kullanılmaz.
 
 `ptr`   
-[in] Bir işaretçi bir [IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx) örneği.
+[in] Bir işaretçi bir [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) örneği.
 
 ## <a name="return-value"></a>Dönüş değeri
 
-Bu işlev tarafından döndürülen değerin aşağıdaki tanımlanan *WbemCli.h* üstbilgi dosyası, veya tanımlayabilirsiniz, bir sabit değer olarak, kodunuzda:
+Bu işlev tarafından döndürülen aşağıdaki değer *WbemCli.h* üst bilgi dosyası veya tanımlayabilir, bir sabit olarak kodunuzda:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
-|`WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarısız oldu.  |
+|`WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
   
 ## <a name="remarks"></a>Açıklamalar
 
-Bu işlev çağrısı sarmalar [IWbemQualifierSet::EndEnumeration](https://msdn.microsoft.com/library/aa391865(v=vs.85).aspx) yöntemi.
+Bu işlev bir çağrı sarılır [IWbemQualifierSet::EndEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-endenumeration) yöntemi.
 
-Bu çağrı, önerilir ancak gerekli değildir. Hemen numaralandırması ile ilişkili kaynakları serbest bırakır.
+Bu çağrı önerilir, ancak gerekli değildir. Numaralandırma ile ilişkili kaynakları hemen serbest bırakır.
 
 ## <a name="requirements"></a>Gereksinimler  
 

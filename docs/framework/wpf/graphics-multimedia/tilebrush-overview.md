@@ -8,88 +8,88 @@ helpviewer_keywords:
 - TileBrush [WPF]
 - brushes [WPF], TileBrush
 ms.assetid: aa4a7b7e-d09d-44c2-8d61-310c50e08d68
-ms.openlocfilehash: ac247a9caa54c40a31e3c78ba8537d60a333feb5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e590732419396660221aa781e3c333311b6e88b4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566343"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480912"
 ---
 # <a name="tilebrush-overview"></a>TileBrush Genel Bakışı
-<xref:System.Windows.Media.TileBrush> nesneleri sağlar, çok yüksek bir alanı bir görüntü ile nasıl boyanır üzerinden denetiminin <xref:System.Windows.Media.Drawing>, veya <xref:System.Windows.Media.Visual>. Bu konuda nasıl kullanılacağını açıklar <xref:System.Windows.Media.TileBrush> özellikleri nasıl üzerinde daha fazla denetim kazanmak için bir <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, veya <xref:System.Windows.Media.VisualBrush> bir alanı boyar.  
+<xref:System.Windows.Media.TileBrush> nesneleri sağlar, önemli bir görüntü ile bir alanı nasıl boyanacağını denetim <xref:System.Windows.Media.Drawing>, veya <xref:System.Windows.Media.Visual>. Bu konu nasıl kullanılacağını açıklar <xref:System.Windows.Media.TileBrush> özellikleri nasıl üzerinde daha fazla denetim kazanmak için bir <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, veya <xref:System.Windows.Media.VisualBrush> alanı boyar.  
   
   
 <a name="prerequisite"></a>   
 ## <a name="prerequisites"></a>Önkoşullar  
- Bu konuyu anlamak için bu temel özelliklerini kullanmayı öğrenmek yararlıdır <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, veya <xref:System.Windows.Media.VisualBrush> sınıfı. Bu tür giriş için bkz: [görüntüleri, çizimler ve görsellerle boyama](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).  
+ Bu konuda anlamak için ' ın temel özelliklerinin nasıl kullanılacağını anlamak faydalıdır <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, veya <xref:System.Windows.Media.VisualBrush> sınıfı. Bu tür bir giriş için bkz [görüntüler, çizimler ve görsellerle boyama](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).  
   
 <a name="tilebrush"></a>   
-## <a name="painting-an-area-with-tiles"></a>Bir alanı döşeme ile Boyama  
- <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, olan <xref:System.Windows.Media.VisualBrush> türleridir <xref:System.Windows.Media.TileBrush> nesneleri. Döşeme fırçaları, önemli bir alanı bir görüntü, çizim veya visual nasıl boyanır üzerinde denetim sağlar. Örneğin, yalnızca tek bir esnetilen görüntü sahip bir alan boyama yerine, bir dizi deseni oluşturan görüntü döşeme sahip bir alan boyama yapabilirsiniz.  
+## <a name="painting-an-area-with-tiles"></a>Kutucuklar ile bir alanı boyama  
+ <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, olan <xref:System.Windows.Media.VisualBrush> türleridir <xref:System.Windows.Media.TileBrush> nesneleri. Kutucuk Fırçalar, bir görüntü, çizim veya görsel ile bir alanı nasıl boyanacağını denetim harika bir fırsat sağlar. Örneğin, yalnızca tek bir esnetilen görüntü ile bir alanı boyama yerine, bir dizi deseni oluşturan resim kutucukları ile bir alanı boyama.  
   
- Döşeme fırça sahip bir alan boyama üç bileşenleri içerir: içerik, temel döşeme ve çıktı alanı.  
+ Döşeme fırçası ile bir alanı boyama üç bileşeni içerir: içeriği, taban döşemesi ve çıkış alanı.  
   
  ![TileBrush bileşenleri](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-defaultcontentprojection2.png "wcpsdk_mmgraphics_defaultcontentprojection2")  
-Tek bir döşeme TileBrush bileşenleri  
+TileBrush ile tek bir kutucuk bileşenleri  
   
- ![Döşeli TileBrush bileşenleri](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tiledprojection.png "graphicsmm_tiledprojection")  
-Döşemenin TileMode'u TileBrush bileşenleri  
+ ![Döşenmiş TileBrush bileşenlerinin](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tiledprojection.png "graphicsmm_tiledprojection")  
+TileBrush ile döşeme TileMode'u bileşenleri  
   
- Çıkış alanı, gibi boyandığında alandır <xref:System.Windows.Shapes.Shape.Fill%2A> , bir <xref:System.Windows.Shapes.Ellipse> veya <xref:System.Windows.Controls.Control.Background%2A> , bir <xref:System.Windows.Controls.Button>. Diğer iki bileşenden sonraki bölümlerde bir <xref:System.Windows.Media.TileBrush>.  
+ Çıkış alanı, gibi boyanan alandır <xref:System.Windows.Shapes.Shape.Fill%2A> , bir <xref:System.Windows.Shapes.Ellipse> veya <xref:System.Windows.Controls.Control.Background%2A> , bir <xref:System.Windows.Controls.Button>. Diğer iki bileşenden sonraki bölümlerde bir <xref:System.Windows.Media.TileBrush>.  
   
 <a name="brushcontent"></a>   
 ## <a name="brush-content"></a>İçerik fırça  
- Üç farklı türde vardır <xref:System.Windows.Media.TileBrush> ve her farklı bir içerik türüyle boyar.  
+ Üç farklı türde vardır <xref:System.Windows.Media.TileBrush> her farklı bir içerik türüyle boyar.  
   
--   Fırça ise bir <xref:System.Windows.Media.ImageBrush>, bu içerik resimdir <xref:System.Windows.Media.ImageBrush.ImageSource%2A> özellik belirtir içeriğini <xref:System.Windows.Media.ImageBrush>.  
+-   Fırça ise bir <xref:System.Windows.Media.ImageBrush>, bu içeriği bir görüntüsüdür <xref:System.Windows.Media.ImageBrush.ImageSource%2A> özellik belirtir içeriğini <xref:System.Windows.Media.ImageBrush>.  
   
 -   Fırça ise bir <xref:System.Windows.Media.DrawingBrush>, çizim bu içeriktir. <xref:System.Windows.Media.DrawingBrush.Drawing%2A> Özellik belirtir içeriğini <xref:System.Windows.Media.DrawingBrush>.  
   
--   Fırça ise bir <xref:System.Windows.Media.VisualBrush>, bir görsel bu içeriktir. <xref:System.Windows.Media.VisualBrush.Visual%2A> Özellik belirtir içeriğini <xref:System.Windows.Media.VisualBrush>.  
+-   Fırça ise bir <xref:System.Windows.Media.VisualBrush>, bir görseli bu içeriktir. <xref:System.Windows.Media.VisualBrush.Visual%2A> Özellik belirtir içeriğini <xref:System.Windows.Media.VisualBrush>.  
   
- Konum ve boyutlarının belirtebilirsiniz <xref:System.Windows.Media.TileBrush> kullanarak içerik <xref:System.Windows.Media.TileBrush.Viewbox%2A> özelliği, bırakmak yaygın olsa <xref:System.Windows.Media.TileBrush.Viewbox%2A> varsayılan olarak ayarlı. Varsayılan olarak, <xref:System.Windows.Media.TileBrush.Viewbox%2A> tamamen fırça içeriği içerecek şekilde yapılandırılır. Yapılandırma hakkında daha fazla bilgi için <xref:System.Windows.Controls.Viewbox>, bkz: <xref:System.Windows.Controls.Viewbox> özellik sayfası.  
+ Konum ve boyut sayısını belirtebilirsiniz <xref:System.Windows.Media.TileBrush> kullanarak içerik <xref:System.Windows.Media.TileBrush.Viewbox%2A> özelliği bırakmak yaygın olsa <xref:System.Windows.Media.TileBrush.Viewbox%2A> varsayılan değerine ayarlayın. Varsayılan olarak, <xref:System.Windows.Media.TileBrush.Viewbox%2A> fırçanın içeriği tamamen içerecek şekilde yapılandırılmıştır. Yapılandırma hakkında daha fazla bilgi için <xref:System.Windows.Controls.Viewbox>, bkz: <xref:System.Windows.Controls.Viewbox> özellik sayfası.  
   
 <a name="thebasetile"></a>   
-## <a name="the-base-tile"></a>Temel döşeme  
- A <xref:System.Windows.Media.TileBrush> içeriğini temel döşemesi. <xref:System.Windows.Media.TileBrush.Stretch%2A> Özellik denetimleri nasıl <xref:System.Windows.Media.TileBrush> temel döşemeyi doldurmak için içerik uzatılabilir. <xref:System.Windows.Media.TileBrush.Stretch%2A> Özelliği tarafından tanımlanan aşağıdaki değerleri kabul eder <xref:System.Windows.Media.Stretch> numaralandırma:  
+## <a name="the-base-tile"></a>Taban döşemesi  
+ A <xref:System.Windows.Media.TileBrush> taban döşemesi içeriği. <xref:System.Windows.Media.TileBrush.Stretch%2A> Özellik denetimleri nasıl <xref:System.Windows.Media.TileBrush> , içeriği esnetilmiş taban döşemesi doldurmak için. <xref:System.Windows.Media.TileBrush.Stretch%2A> Özelliği tarafından tanımlanan aşağıdaki değerleri kabul eder <xref:System.Windows.Media.Stretch> sabit listesi:  
   
--   <xref:System.Windows.Media.Stretch.None>: Fırça içeriği döşeme dolduracak şekilde genişletilir değil.  
+-   <xref:System.Windows.Media.Stretch.None>: Fırçanın içeriği kutucuğu dolduracak şekilde genişletilir değil.  
   
--   <xref:System.Windows.Media.Stretch.Fill>: Fırça içeriği döşemeye uyacak şekilde ölçeklendirilir. İçeriğin yüksekliğini ve genişliğini bağımsız olarak ölçeklenir olduğundan, içeriği özgün en boy oranı korunmayabilir. Diğer bir deyişle, fırça içeriği çıkış döşemesini tamamen doldurmak için karışmış olabilir.  
+-   <xref:System.Windows.Media.Stretch.Fill>: Fırçanın içeriği kutucuğu sığacak şekilde ölçeklendirilir. İçeriğin yükseklik ve genişlik bağımsız olarak ölçeklendirilir çünkü içerik özgün en boy oranını korunmayabilir. Diğer bir deyişle, fırçanın içeriği tamamen çıkış kutucuk doldurmak için karışmış olabilir.  
   
--   <xref:System.Windows.Media.Stretch.Uniform>: Fırça içeriği döşemenin içinde tamamen sığacak şekilde ölçeklendirilir. İçeriğin en boy oranını korunur.  
+-   <xref:System.Windows.Media.Stretch.Uniform>: Fırçanın içeriği tamamen döşeme sığacak şekilde ölçeklendirilir. İçeriğin en boy oranı korunur.  
   
--   <xref:System.Windows.Media.Stretch.UniformToFill>: Fırça içeriği, içeriğin özgün en boy oranını korurken tamamen çıkış alanı dolduracak şekilde ölçeklendirilir.  
+-   <xref:System.Windows.Media.Stretch.UniformToFill>: Fırçanın içeriği, içeriğin özgün en boy oranını koruyarak tamamen çıkış alanı dolduracak şekilde ölçeklendirilir.  
   
- Aşağıdaki resimde farklı gösterilmektedir <xref:System.Windows.Media.TileBrush.Stretch%2A> ayarlar.  
+ Aşağıdaki görüntüde farklı gösterir <xref:System.Windows.Media.TileBrush.Stretch%2A> ayarları.  
   
- ![Farklı TileBrush Stretch ayarları](../../../../docs/framework/wpf/graphics-multimedia/media/img-mmgraphics-stretchenum.jpg "img_mmgraphics_stretchenum")  
+ ![TileBrush Esnetme ayarları farklı](../../../../docs/framework/wpf/graphics-multimedia/media/img-mmgraphics-stretchenum.jpg "img_mmgraphics_stretchenum")  
   
- Aşağıdaki örnekte, içeriği bir <xref:System.Windows.Media.ImageBrush> çıktı alanını doldurmak için genişlemez şekilde ayarlanır.  
+ Aşağıdaki örnekte, içeriği bir <xref:System.Windows.Media.ImageBrush> çıkış alanı dolduracak şekilde genişlemez şekilde ayarlanır.  
   
  [!code-xaml[BrushOverviewExamples_snip#GraphicsMMNoStretchExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/StretchExample.xaml#graphicsmmnostretchexample)]  
   
  [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMNoStretchExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/StretchExample.cs#graphicsmmnostretchexample)]
  [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMNoStretchExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/stretchexample.vb#graphicsmmnostretchexample)]  
   
- Varsayılan olarak, bir <xref:System.Windows.Media.TileBrush> tek bir döşeme (temel döşeme) oluşturur ve bu döşeme tamamen çıkış alanı dolduracak şekilde uzatılır. Ayarlayarak boyutunu ve konumunu temel döşemenin değiştirebilirsiniz <xref:System.Windows.Media.TileBrush.Viewport%2A> ve <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> özellikleri.  
+ Varsayılan olarak, bir <xref:System.Windows.Media.TileBrush> tek bir kutucuk (taban döşemesi) oluşturur ve bu döşeme tamamen çıkış alanı dolduracak şekilde uzatılır. Taban döşemesi konumunu ve boyutunu ayarlayarak değiştirebilirsiniz <xref:System.Windows.Media.TileBrush.Viewport%2A> ve <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> özellikleri.  
   
 <a name="basetilesize"></a>   
-### <a name="base-tile-size"></a>Temel döşeme boyutu  
- <xref:System.Windows.Media.TileBrush.Viewport%2A> Özelliği, boyut ve temel döşeme konumunu belirler ve <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> özelliği belirler olup olmadığını <xref:System.Windows.Media.TileBrush.Viewport%2A> mutlak veya göreli koordinatları kullanılarak belirtilir. Koordinatlar göreli ise, çıktı alanının boyutunu göreli oldukları. (0,0) noktası temsil üst çıktı alanının sol köşe ve (1,1) temsil alt çıktı alanının sağ alt köşesinde. Belirtmek için <xref:System.Windows.Media.TileBrush.Viewport%2A> özelliği kullanan mutlak koordinatları, Ayarla <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> özelliğine <xref:System.Windows.Media.BrushMappingMode.Absolute>.  
+### <a name="base-tile-size"></a>Taban döşemesi boyutu  
+ <xref:System.Windows.Media.TileBrush.Viewport%2A> Özelliği, taban döşemesi, konumunu ve boyutunu belirler ve <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> özelliği olup olmadığını <xref:System.Windows.Media.TileBrush.Viewport%2A> mutlak veya göreli koordinatları kullanarak belirtilir. Göreli koordinatları, çıkış alanı boyutunu göreli oldukları. Noktası (0,0) temsil sol üst köşesindeki köşe çıktı alanının yanı sıra, (1,1) temsil alt çıktı alanının sağ alt köşesinde. Belirtmek için <xref:System.Windows.Media.TileBrush.Viewport%2A> özelliği mutlak koordinat kullanan, Ayarla <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> özelliğini <xref:System.Windows.Media.BrushMappingMode.Absolute>.  
   
- Aşağıdaki çizimde çıktısı arasındaki farkı gösterilir bir <xref:System.Windows.Media.TileBrush> ile göreli ve mutlak <xref:System.Windows.Media.TileBrush.ViewportUnits%2A>. Her çizimler döşeli düzeni Göster dikkat edin. sonraki bölümde döşeme deseni belirtin açıklar.  
+ Çıkış fark aşağıdaki çizimde bir <xref:System.Windows.Media.TileBrush> ile göreli ve mutlak <xref:System.Windows.Media.TileBrush.ViewportUnits%2A>. Çizimler her döşenmiş bir desen Göster dikkat edin. sonraki bölümde, kutucuk düzenini belirtmek açıklar.  
   
- ![Mutlak ve göreli görünüm penceresinin Birim](../../../../docs/framework/wpf/graphics-multimedia/media/absolute-and-relative-viewports.png "absolute_and_relative_viewports")  
+ ![Mutlak ve göreli Görünüm penceresi birim](../../../../docs/framework/wpf/graphics-multimedia/media/absolute-and-relative-viewports.png "absolute_and_relative_viewports")  
   
- Aşağıdaki örnekte, bir görüntü genişliği ve yüksekliği % 50 sahip bir bölme oluşturmak için kullanılır. Temel döşeme (0,0) bulunduğu çıktı alanının.  
+ Aşağıdaki örnekte, bir görüntü genişliği ve yüksekliği % 50 olan bir kutucuğu oluşturmak için kullanılır. Taban döşemesi (0,0) bulunduğu çıkış alanı.  
   
  [!code-xaml[BrushOverviewExamples_snip#GraphicsMMRelativeViewportUnitsExample1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TileSizeExample.xaml#graphicsmmrelativeviewportunitsexample1)]  
   
  [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMRelativeViewportUnitsExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/TileSizeExample.cs#graphicsmmrelativeviewportunitsexample1)]
  [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMRelativeViewportUnitsExample1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/tilesizeexample.vb#graphicsmmrelativeviewportunitsexample1)]  
   
- Sonraki örnek kutucuklarında ayarlar bir <xref:System.Windows.Media.ImageBrush> 25'e 25 aygıt bağımsız piksel. Çünkü <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> mutlak olduğundan <xref:System.Windows.Media.ImageBrush> döşeme her zaman 25'e 25 piksel cinsinden boyandığında alanının boyutunu ne olursa olsun.  
+ Sonraki örnekte kutucuklarında ayarlar bir <xref:System.Windows.Media.ImageBrush> 25'e 25 cihaz bağımsız piksel. Çünkü <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> mutlaktır <xref:System.Windows.Media.ImageBrush> kutucukları her zaman boyanan alanın boyutu ne olursa olsun, 25'e 25 piksel.  
   
  [!code-xaml[BrushOverviewExamples_snip#GraphicsMMAbsoluteViewportUnitsExample1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TileSizeExample.xaml#graphicsmmabsoluteviewportunitsexample1)]  
   
@@ -98,23 +98,23 @@ Döşemenin TileMode'u TileBrush bileşenleri
   
 <a name="tilingbehavior"></a>   
 ### <a name="tiling-behavior"></a>Döşeme davranışı  
- A <xref:System.Windows.Media.TileBrush> temel döşemesinin tamamen çıkış alanı ve başka bir döşeme modu değil doldurduğunuzda döşeli bir desen oluşturur <xref:System.Windows.Media.TileMode.None> belirtilir. Döşeme fırça döşeme tamamen çıktı alanını doldurduğunuzda değil, kendi <xref:System.Windows.Media.TileBrush.TileMode%2A> özelliği, temel döşeme çıktı alanını doldurmak için çoğaltılacak ve bu durumda, temel döşemenin nasıl çoğaltılacak olup olmadığını belirtir. <xref:System.Windows.Media.TileBrush.TileMode%2A> Özelliği tarafından tanımlanan aşağıdaki değerleri kabul eder <xref:System.Windows.Media.TileMode> numaralandırma:  
+ A <xref:System.Windows.Media.TileBrush> taban döşemesi, çıkış alanı ve başka bir döşeme modu tamamen dolmaması olduğunda döşenmiş bir desen oluşturur <xref:System.Windows.Media.TileMode.None> belirtilir. Bir kutucuğu fırçanın kutucuk çıkış alanı tamamen dolmaması olduğunda kendi <xref:System.Windows.Media.TileBrush.TileMode%2A> özelliği, taban döşemesi çıkış alanı dolduracak şekilde çoğaltılacak ve bu durumda, temel döşemenin nasıl çoğaltılacak olup olmadığını belirtir. <xref:System.Windows.Media.TileBrush.TileMode%2A> Özelliği tarafından tanımlanan aşağıdaki değerleri kabul eder <xref:System.Windows.Media.TileMode> sabit listesi:  
   
 -   <xref:System.Windows.Media.TileMode.None>: Yalnızca temel döşeme çizilir.  
   
--   <xref:System.Windows.Media.TileMode.Tile>: Temel döşeme çizilir ve kalan alan bir kutucuğu sağ kenarı sol ucuna sonraki ve olacak şekilde, temel döşeme benzer şekilde alt ve üst için yinelenmesiyle doldurulur.  
+-   <xref:System.Windows.Media.TileMode.Tile>: Temel döşeme çizilir ve kalan alan bir kutucuğun sağ kenarı sol kenarına sonraki ve bitişik olacak şekilde taban döşemesi benzer şekilde alt ve üst için yinelenen tarafından doldurulur.  
   
 -   <xref:System.Windows.Media.TileMode.FlipX>: Aynı <xref:System.Windows.Media.TileMode.Tile>, ancak diğer sütunların döşemeleri yatay olarak çevrilmiştir.  
   
--   <xref:System.Windows.Media.TileMode.FlipY>: Aynı <xref:System.Windows.Media.TileMode.Tile>, ancak diğer satırların döşemeleri dikey olarak çevrilmiştir.  
+-   <xref:System.Windows.Media.TileMode.FlipY>: Aynı <xref:System.Windows.Media.TileMode.Tile>, ancak diğer satırları kutucuk dikey olarak çevrilmiştir.  
   
 -   <xref:System.Windows.Media.TileMode.FlipXY>: Bir birleşimini <xref:System.Windows.Media.TileMode.FlipX> ve <xref:System.Windows.Media.TileMode.FlipY>.  
   
- Aşağıdaki resim farklı döşeme modlarını gösterir.  
+ Aşağıdaki görüntüde, farklı döşeme modlarını gösterir.  
   
  ![Farklı TileBrush TileMode ayarları](../../../../docs/framework/wpf/graphics-multimedia/media/img-mmgraphics-tilemodes.gif "img_mmgraphics_tilemodes")  
   
- Aşağıdaki örnekte, bir görüntü 100 piksel genişliğinde ve 100 piksel uzunluğunda bir dikdörtgen boyamak için kullanılır. Fırça ayarlayarak <xref:System.Windows.Media.TileBrush.Viewport%2A> ayarlanmış u 0,0,0.25,0.25'a, fırça temel döşeme 1/4 çıktı alanının yapılmıştır. Fırça <xref:System.Windows.Media.TileBrush.TileMode%2A> ayarlanır <xref:System.Windows.Media.TileMode.FlipXY>. Böylece dikdörtgen döşeme satırlarla doldurur.  
+ Aşağıdaki örnekte, bir görüntü 100 piksel genişliğinde ve 100 piksel yüksekliktir bir dikdörtgen boyamak için kullanılır. Fırçanın ayarlayarak <xref:System.Windows.Media.TileBrush.Viewport%2A> ayarlandı u 0,0,0.25,0.25'a, 1/4 çıktı alanının fırçanın taban döşemesi yapılır. Fırçanın <xref:System.Windows.Media.TileBrush.TileMode%2A> ayarlanır <xref:System.Windows.Media.TileMode.FlipXY>. Böylece kutucukları satırlarla dikdörtgen doldurur.  
   
  [!code-xaml[BrushOverviewExamples_snip#GraphicsMMFlipXYExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TilingExample.xaml#graphicsmmflipxyexample)]  
   
@@ -129,5 +129,5 @@ Döşemenin TileMode'u TileBrush bileşenleri
  [Görüntüler, Çizimler ve Görsellerle Boyama](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
  [Freezable Nesnelerine Genel Bakış](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
- [ImageBrush Örneği](http://go.microsoft.com/fwlink/?LinkID=160005)  
- [VisualBrush örneği](http://go.microsoft.com/fwlink/?LinkID=160049)
+ [ImageBrush Örneği](https://go.microsoft.com/fwlink/?LinkID=160005)  
+ [VisualBrush örneği](https://go.microsoft.com/fwlink/?LinkID=160049)

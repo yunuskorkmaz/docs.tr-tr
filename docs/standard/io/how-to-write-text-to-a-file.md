@@ -13,53 +13,53 @@ helpviewer_keywords:
 ms.assetid: 060cbe06-2adf-4337-9e7b-961a5c840208
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 13fa71487f143b1054cd2014fa74a1c7245ab31b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 70b2d04f381fdbc1ae47b1c90649df045e111afa
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577131"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484785"
 ---
 # <a name="how-to-write-text-to-a-file"></a>Nasıl yapılır: Bir Dosyaya Metin Yazma
-.NET Framework uygulamaları için bir dosyaya metin yazabilirler bu konuda gösterir farklı bir şekilde veya [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar. Genellikle aşağıdaki sınıflar ve yöntemler metin bir dosyaya yazmak için kullanılır:  
+.NET Framework uygulamaları için bir dosyaya metin yazabilirsiniz bu konuda gösterildiği farklı bir şekilde veya [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar. Aşağıdaki sınıflar ve yöntemler genellikle bir dosyaya metin yazmak için kullanılır:  
   
--   <xref:System.IO.StreamWriter> -zaman uyumlu bir dosyaya yazmak için yöntemler içerir (<xref:System.IO.StreamWriter.Write%2A> veya <xref:System.IO.TextWriter.WriteLine%2A>) veya zaman uyumsuz olarak (<xref:System.IO.StreamWriter.WriteAsync%2A> ve <xref:System.IO.StreamWriter.WriteLineAsync%2A>).  
+-   <xref:System.IO.StreamWriter> -bir dosyasına eşzamanlı yazma yöntemleri içeren (<xref:System.IO.StreamWriter.Write%2A> veya <xref:System.IO.TextWriter.WriteLine%2A>) veya zaman uyumsuz olarak (<xref:System.IO.StreamWriter.WriteAsync%2A> ve <xref:System.IO.StreamWriter.WriteLineAsync%2A>).  
   
--   <xref:System.IO.File> – .NET Framework uygulamaları ile kullanılacak. Metin gibi bir dosyaya yazmak için statik yöntemler sağlar <xref:System.IO.File.WriteAllLines%2A> ve <xref:System.IO.File.WriteAllText%2A>, veya metin dosyasına Ekle (<xref:System.IO.File.AppendAllLines%2A>, <xref:System.IO.File.AppendAllText%2A> veya <xref:System.IO.File.AppendText%2A>).  
+-   <xref:System.IO.File> – .NET Framework uygulamaları ile kullanılacak. Metin gibi bir dosyaya yazmak için statik yöntemler sağlar <xref:System.IO.File.WriteAllLines%2A> ve <xref:System.IO.File.WriteAllText%2A>, veya bir dosyaya metin eklemek için (<xref:System.IO.File.AppendAllLines%2A>, <xref:System.IO.File.AppendAllText%2A> veya <xref:System.IO.File.AppendText%2A>).  
   
--   [FileIO](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.aspx) - ile kullanılmak üzere [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar. Metin bir dosyaya yazmak için zaman uyumsuz yöntemleri içeren ([WriteLinesAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.writelinesasync.aspx) veya [WriteTextAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.writetextasync.aspx)) veya metin dosyasına Ekle ([AppendLinesAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.appendlinesasync.aspx) veya [ AppendTextAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.appendtextasync.aspx)).  
+-   [FileIO](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.aspx) - ile kullanılmak üzere [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar. Metni bir dosyaya yazmak için zaman uyumsuz yöntemleri içerir ([WriteLinesAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.writelinesasync.aspx) veya [WriteTextAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.writetextasync.aspx)) veya bir dosyaya metin eklemek için ([AppendLinesAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.appendlinesasync.aspx) veya [ AppendTextAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.appendtextasync.aspx)).  
 
-- <xref:System.IO.Path> -Dosya veya dizin yolunu bilgilerini içeren dizeleri kullanılacak. İçerdiği <xref:System.IO.Path.Combine%2A> bir dosya veya dizin yolu oluşturmak için dizeleri birleşimini sağlar yöntemi.
+- <xref:System.IO.Path> -Dosya veya dizin yolu bilgilerini içeren dizeleri kullanılacak. İçerdiği <xref:System.IO.Path.Combine%2A> yöntemi bir dosya veya dizin yolu oluşturmak için dizelerin bir birleşimini sağlar.
 
 
- Örnekler gerçekleştirilen görevde odaklanmak için basit tutulmuştur. Varsa, en az hata denetimi ve özel durum işleme örnekleri bu nedenle, gerçekleştirin. Gerçek dünya uygulama genellikle daha sağlam hata denetimi ve özel durum işleme sağlar.  
+ Örnekler, gerçekleştirilen görevdeki odaklanmak için basit tutulmuştur. Bu nedenle, varsa minimum hata denetimi ve özel durum işleme örnekleri gerçekleştirin. Bir gerçek yaşam uygulaması genellikle daha sağlam hata denetimi ve özel durum işleme sağlar.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, zaman uyumlu olarak kullanarak yeni bir dosya için metin yazmak gösterilmiştir <xref:System.IO.StreamWriter> sınıfı, bir defada bir satır. Yeni metin dosyası kullanıcının Belgelerim klasörüne kaydedilir. Çünkü <xref:System.IO.StreamWriter> nesne bildirilir ve içinde örneği bir `using` deyimi, <xref:System.IO.StreamWriter.Dispose%2A> yöntemi çağrılır, otomatik olarak boşaltır ve akış kapatır.  
+ Aşağıdaki örnek, zaman uyumlu olarak yeni kullanarak bir dosyaya metin yazma işlemi gösterilmektedir <xref:System.IO.StreamWriter> sınıfı, her defasında bir satır. Yeni metin dosyası, kullanıcının Belgelerim klasörüne kaydedilir. Çünkü <xref:System.IO.StreamWriter> nesne bildirildi ve içinde örneklenen bir `using` deyimi <xref:System.IO.StreamWriter.Dispose%2A> metodunu çağırmak otomatik olarak boşaltır ve akışı kapatır.  
   
  [!code-csharp[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source.cs#writeline)] 
  [!code-vb[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source.vb#writeline)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, metin dosyası kullanılarak, mevcut bir için eklenecek gösterilmiştir <xref:System.IO.StreamWriter> sınıfı. Önceki örnekte aynı metin dosyasından kullanır.  
+ Aşağıdaki örnek, var olan bir kullanarak dosyaya metin ekleme işlemi gösterilmektedir <xref:System.IO.StreamWriter> sınıfı. Önceki örnekte aynı metin dosyası kullanır.  
   
  [!code-csharp[Conceptual.BasicIO.TextFiles#AppendText](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source.cs#appendtext)] 
  [!code-vb[Conceptual.BasicIO.TextFiles#AppendText](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source.vb#appendtext)]     
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, metin kullanarak yeni bir dosya için zaman uyumsuz olarak yazmak gösterilmiştir <xref:System.IO.StreamWriter> sınıfı. Çağırmak için <xref:System.IO.StreamWriter.WriteAsync%2A> yöntemi, yöntem çağrısı içinde olması gerekir bir `async` yöntemi. Yeni metin dosyası kullanıcının Belgelerim klasörüne kaydedilir.  
+ Aşağıdaki örnek, zaman uyumsuz olarak yeni kullanarak bir dosyaya metin yazma işlemi gösterilmektedir <xref:System.IO.StreamWriter> sınıfı. Çağırmak için <xref:System.IO.StreamWriter.WriteAsync%2A> yöntem, yöntem çağrısının içinde olması gerekir bir `async` yöntemi. Yeni metin dosyası, kullanıcının Belgelerim klasörüne kaydedilir.  
   
  [!code-csharp[Conceptual.BasicIO.TextFiles#WriteAsync](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source.cs#writeasync)] 
  [!code-vb[Conceptual.BasicIO.TextFiles#WriteAsync](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source.vb#writeasync)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek yeni bir dosyaya metin yazma ve kullanarak aynı dosya için yeni satırlık metin eklenecek gösterilmiştir <xref:System.IO.File> sınıfı. <xref:System.IO.File.WriteAllText%2A> Ve <xref:System.IO.File.AppendAllLines%2A> yöntemleri açın ve dosyanın otomatik olarak kapanır. Sağladığınız yolun varsa <xref:System.IO.File.WriteAllText%2A> yöntemi zaten var, dosyanın üzerine yazılır.  
+ Aşağıdaki örnek, yeni bir dosyaya metin yazma ve kullanarak aynı dosya için yeni satırlık metin ekleme işlemi gösterilmektedir <xref:System.IO.File> sınıfı. <xref:System.IO.File.WriteAllText%2A> Ve <xref:System.IO.File.AppendAllLines%2A> yöntemleri açın ve dosyayı otomatik olarak kapatın. Sağladığınız yolun, <xref:System.IO.File.WriteAllText%2A> yöntemi zaten var, dosyanın üzerine yazılır.  
   
  [!code-csharp[Conceptual.BasicIO.TextFiles#WriteFile](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source.cs#writefile)] 
  [!code-vb[Conceptual.BasicIO.TextFiles#WriteFile](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source.vb#writefile)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir metin dosyasına kullanıcı girişini zaman uyumsuz olarak yazmak gösterilmiştir bir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulama. Güvenlik nedeniyle, bir dosyanın açılması bir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulama genellikle kullanılmasını gerektiren bir [FileOpenPicker](http://msdn.microsoft.com/library/windows/apps/windows.storage.pickers.fileopenpicker.aspx) denetim. Bu örnekte, `FileOpenPicker` metin dosyaları göstermek için filtrelenir.  
+ Aşağıdaki örnek, zaman uyumsuz olarak kullanıcı girişi için bir metin dosyasına yazma işlemi gösterilmektedir bir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulama. Güvenlik konuları nedeniyle bir dosya açma bir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulama genellikle kullanımını gerektirir bir [FileOpenPicker](https://msdn.microsoft.com/library/windows/apps/windows.storage.pickers.fileopenpicker.aspx) denetimi. Bu örnekte, `FileOpenPicker` metin dosyaları gösterecek şekilde filtrelenir.  
   
 ```xaml  
 <Page  

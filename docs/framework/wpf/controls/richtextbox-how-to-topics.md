@@ -7,22 +7,22 @@ helpviewer_keywords:
 - controls [WPF], RichTextBox
 - RichTextBox control [WPF], how-to topics
 ms.assetid: 36e9f98e-f968-42d8-adb6-9e78c814aec0
-ms.openlocfilehash: 412c3af39af33ab52d2a255b03c6452adf7a2637
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8542076ca9552ae0d5ace74f1a287f5cd39aff21
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555057"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481808"
 ---
 # <a name="richtextbox-how-to-topics"></a>RichTextBox Nasıl Yapılır Konuları
-Bu bölümde kullanarak, ortak görevlerin nasıl gerçekleştirileceğini gösterir örnekler <xref:System.Windows.Controls.RichTextBox> denetim.  
+Bu bölümde kullanarak yaygın görevlerin nasıl yerine getirileceğini gösteren örnekler <xref:System.Windows.Controls.RichTextBox> denetimi.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [RichTextBox'dan Metin İçeriği Ayıklama](../../../../docs/framework/wpf/controls/how-to-extract-the-text-content-from-a-richtextbox.md)  
  [RichTextBox İçinde Program Aracılığıyla Seçimi Değiştirme](../../../../docs/framework/wpf/controls/change-selection-in-a-richtextbox-programmatically.md)  
  [RichTextBox İçeriğini Kaydetme, Yükleme ve Yazdırma](../../../../docs/framework/wpf/controls/how-to-save-load-and-print-richtextbox-content.md)  
  [RichTextBox İçinde Özel Açılır Menü Konumlandırma](../../../../docs/framework/wpf/controls/how-to-position-a-custom-context-menu-in-a-richtextbox.md)  
- [Nasıl yapılır: RichTextBox için varsayılan içerik konağını değiştirme](http://msdn.microsoft.com/library/dec1b2ce-9ca5-4bb2-bf54-f8a80a3c8beb)  
+ [Nasıl yapılır: RichTextBox için varsayılan içerik ana değiştirin](https://msdn.microsoft.com/library/dec1b2ce-9ca5-4bb2-bf54-f8a80a3c8beb)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Controls.TextBox>  

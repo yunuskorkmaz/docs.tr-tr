@@ -1,39 +1,39 @@
 ---
-title: Bir DataTable tablosundaki verileri görüntüleme
+title: DataTable'daki verileri görüntüleme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1d26e0fb-f6e0-4afa-9a9c-b8d55b8f20dc
-ms.openlocfilehash: 5d39d2a856a40b5ea20832a544ede360313309d3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: de745633060dd4f7b1610492d0ff57ec7a4f545b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32761252"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43478097"
 ---
-# <a name="viewing-data-in-a-datatable"></a>Bir DataTable tablosundaki verileri görüntüleme
-İçeriğine erişmek için bir <xref:System.Data.DataTable> kullanarak **satırları** ve **sütunları** koleksiyonları **DataTable**. Aynı zamanda <xref:System.Data.DataTable.Select%2A> veri alt kümesi döndürülecek yöntemi bir **DataTable** arama ölçütleri gibi ölçütlere göre sıralama ve satır durumu. Ayrıca, kullanabileceğiniz <xref:System.Data.DataRowCollection.Find%2A> yöntemi **DataRowCollection** bir birincil anahtar değeri kullanarak belirli bir satır için arama yaparken.  
+# <a name="viewing-data-in-a-datatable"></a>DataTable'daki verileri görüntüleme
+İçeriğini erişebileceğiniz bir <xref:System.Data.DataTable> kullanarak **satırları** ve **sütunları** koleksiyonları **DataTable**. Ayrıca <xref:System.Data.DataTable.Select%2A> verilerin alt kümelerine döndürülecek yöntemi bir **DataTable** arama ölçütleri gibi ölçütlere göre sıralama düzeni ve satır durumu. Ayrıca, kullanabileceğiniz <xref:System.Data.DataRowCollection.Find%2A> yöntemi **DataRowCollection** birincil bir anahtar değeri kullanarak belirli bir satır için arama yaparken.  
   
- **Seçin** yöntemi **DataTable** nesnesi döndüren bir dizi <xref:System.Data.DataRow> belirtilen ölçütlerle eşleşen nesneler. **Seçin** bir filtre ifadesi, sıralama ifadesi, isteğe bağlı bağımsız değişkenleri alır ve **DataViewRowState**. Filtre ifadesi temel alınarak döndürülecek hangi satırların tanımlayan **DataColumn** gibi değerler `LastName = 'Smith'`. Sütunları, örneğin sıralama için standart SQL kuralları sıralama ifadesi izler `LastName ASC, FirstName ASC`. İfadeleri yazma hakkında daha fazla kuralları için bkz: <xref:System.Data.DataColumn.Expression%2A> özelliği **DataColumn** sınıfı.  
+ **Seçin** yöntemi **DataTable** nesnesi döndüren bir dizi <xref:System.Data.DataRow> belirtilen ölçütlerle eşleşen nesneleri. **Seçin** sıralama ifadesi bir filtre ifadesi, isteğe bağlı bağımsız değişkeni alır ve **DataViewRowState**. Filtre ifadesi göre döndürülecek hangi satırların tanımlayan **DataColumn** gibi değerleri `LastName = 'Smith'`. Sıralama ifadesi sütunları, örneğin sıralama için standart SQL kurallarına `LastName ASC, FirstName ASC`. İfadeler yazma hakkında daha fazla kuralları için bkz: <xref:System.Data.DataColumn.Expression%2A> özelliği **DataColumn** sınıfı.  
   
 > [!TIP]
->  Çağrı sayısı gerçekleştiriyorsanız **seçin** yöntemi bir **DataTable**, ilk oluşturarak performansı artırabilirsiniz bir <xref:System.Data.DataView> için **DataTable**. Oluşturma **DataView** tablonun satırlarını dizinler. **Seçin** yöntemi sonra dizin, usees sorgu sonucu oluşturmak için gereken süre önemli ölçüde azaltır. Oluşturma hakkında daha fazla bilgi için bir **DataView** için bir **DataTable**, bkz: [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md).  
+>  Çağrı sayısı gerçekleştiriyorsanız **seçin** yöntemi bir **DataTable**, ilk oluşturarak, performansı artırmak bir <xref:System.Data.DataView> için **DataTable**. Oluşturma **DataView** tablonun satırlarını dizinler. **Seçin** yöntemi sonra dizin, usees sorgu sonucu üretmek için gereken süreyi önemli ölçüde azaltır. Oluşturma hakkında daha fazla bilgi için bir **DataView** için bir **DataTable**, bkz: [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md).  
   
- **Seçin** yöntemi belirler satırları görüntülemek veya değiştirmek için hangi sürümünün dayalı bir <xref:System.Data.DataViewRowState>. Aşağıdaki tabloda olası açıklanmaktadır **DataViewRowState** numaralandırma değerleri.  
+ **Seçin** yöntemi belirler satırları görüntülemek veya yönetmek için hangi sürümünün temel bir <xref:System.Data.DataViewRowState>. Aşağıdaki tabloda olası açıklanmaktadır **DataViewRowState** sabit listesi değerleri.  
   
 |DataViewRowState değeri|Açıklama|  
 |----------------------------|-----------------|  
-|**CurrentRows**|Geçerli satır değişmeden, eklenen ve değiştirilen satırları dahil olmak üzere.|  
-|**silindi**|Silinen satır.|  
-|**ModifiedCurrent**|Özgün veriler değiştirilmiş bir sürümünü olan bir geçerli sürümü. (Bkz **ModifiedOriginal**.)|  
-|**ModifiedOriginal**|Tüm değiştirilen satırları özgün sürümü. Geçerli sürümdür kullanılabilir kullanarak **ModifiedCurrent**.|  
-|**Eklenen**|Yeni bir satır.|  
+|**CurrentRows**|Geçerli satır değişmeden, eklenen ve değiştirilmiş satırları dahil etme.|  
+|**silindi**|Silinen bir satır.|  
+|**ModifiedCurrent**|Özgün veri değiştirilmiş bir sürümü olan bir geçerli sürümü. (Bkz **ModifiedOriginal**.)|  
+|**ModifiedOriginal**|Tüm değiştirilmiş satırları orijinal sürümü. Geçerli sürüm kullanılarak kullanılabilir **ModifiedCurrent**.|  
+|**Eklendi**|Yeni bir satır.|  
 |**Yok**|Yok.|  
-|**OriginalRows**|Özgün satırlar dahil olmak üzere, değiştirmeden ve silinen satır.|  
-|**Değişmedi**|Değiştirilmemiş bir satır.|  
+|**OriginalRows**|Özgün satır, değişmez ve silinen satırları dahil etme.|  
+|**değişmedi**|Değişmeyen bir satır.|  
   
- Aşağıdaki örnekte, **DataSet** böylece yalnızca satırlarla özelliği çalıştığınız nesne filtre **DataViewRowState** ayarlanır **CurrentRows**.  
+ Aşağıdaki örnekte, **veri kümesi** böylece yalnızca satır ile ayarlanmış çalıştığınız nesne filtrelenmiş **DataViewRowState** ayarlanır **CurrentRows**.  
   
 ```vb  
 Dim column As DataColumn  
@@ -86,7 +86,7 @@ else
 }  
 ```  
   
- **Seçin** yöntemi, farklı olan satırlar döndürülecek kullanılabilir **RowState** değerleri veya alan değerleri. Aşağıdaki örnek döndüren bir **DataRow** silinmiş ve başka döndüren tüm satırları başvuruda bulunan bir dizi **DataRow** tüm satırları başvuran dizi göre sıralayarak **CustLName**, burada **CustId** sütundur 5'ten büyük. Bilgileri görüntüleme hakkında bilgi için **silinmiş** satır için bkz: [satır durumları ve satır sürümleri](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
+ **Seçin** bakımından farklı olan satırlar döndürülecek yöntemi kullanılabilir **RowState** değerleri veya alan değerleri. Aşağıdaki örnek döndüren bir **DataRow** silinmiş ve başka döndürür tüm satırları başvuran bir dizi **DataRow** sıralı başvuran tüm satırları, dizinin tarafından **CustLName**burada **CustId** sütun, 5'ten büyüktür. Bilgileri görüntüleme hakkında bilgi için **silinmiş** satır bkz [satır durumları ve satır sürümleri](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
   
 ```vb  
 ' Retrieve all deleted rows.  
@@ -113,4 +113,4 @@ DataRow[] custRows = workTable.Select("CustID > 5", "CustLName ASC");
  <xref:System.Data.DataViewRowState>  
  [DataTable Verilerini Düzenleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
  [Satır Durumları ve Satır Sürümleri](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)  
- [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

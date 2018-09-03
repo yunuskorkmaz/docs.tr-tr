@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95fbab459355c237157d43cee0211e42f6d26c62
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8d9e7d593c2a8a9cce798724b2705dee21a740e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432631"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480498"
 ---
 # <a name="iclrstrongnamegethashfromassemblyfile-method"></a>ICLRStrongName::GetHashFromAssemblyFile Metodu
-Belirtilen karma algoritması kullanılarak belirtilen derleme dosyası karmasını alır.  
+Belirtilen karma algoritması kullanılarak, belirtilen derleme dosyasının bir karmasını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,10 +41,10 @@ HRESULT GetHashFromAssemblyFile (
   
 #### <a name="parameters"></a>Parametreler  
  `szFilePath`  
- [in] Karma hale getirilmesi için dosya yolu.  
+ [in] Karma hale getirilecek dosyanın yolu.  
   
  `piHashAlg`  
- [içinde out] Karma algoritmasını belirtir sabiti. Varsayılan karma algoritma için sıfır değerini kullanın.  
+ [out içinde] Sabit karma algoritmasını belirtir. Sıfır varsayılan karma algoritması için kullanın.  
   
  `pbHash`  
  [out] Döndürülen karma arabellek.  
@@ -56,7 +56,7 @@ HRESULT GetHashFromAssemblyFile (
  [out] Bayt cinsinden boyutu döndürülen `pbHash`.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `S_OK` Yöntem başarıyla tamamlandı Aksi takdirde hata belirten bir HRESULT değeri (bkz [ortak HRESULT değerleri](http://go.microsoft.com/fwlink/?LinkId=213878) bir listesi için).  
+ `S_OK` yöntemi başarıyla tamamlandı Aksi takdirde hata olduğunu gösteren HRESULT değerini (bkz [ortak HRESULT değerlerini](https://go.microsoft.com/fwlink/?LinkId=213878) bir listesi için).  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

@@ -12,81 +12,81 @@ helpviewer_keywords:
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 34ed0d4752eb42f0bd3df8167d498b99d7af1080
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 32e06790ffebe49c7917ba4fc7344f86f7a49762
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396925"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43483833"
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Nasıl yapılır: Yansıma Yayma ile Genel Tür Tanımlama
-Bu konuda iki tür parametreleri ile basit bir genel tür oluşturma, tür parametreleri sınıf kısıtlamaları, arabirim kısıtlamaları ve özel kısıtlamalar uygulamak nasıl ve parametre türleri olarak sınıfın türü parametreleri kullanma üyeleri oluşturmak üzere nasıl gösterir ve dönüş türleri.  
+Bu konu iki tür parametreleri ile basit bir genel tür oluşturma için tür parametreleri sınıf kısıtlamaları, arabirim kısıtlamasını ve özel kısıtlamalar uygulamak nasıl ve sınıf türü parametreler parametre türleri olarak kullanan üyeleri oluşturma işlemini gösterir. ve dönüş türleri.  
   
 > [!IMPORTANT]
->  Yalnızca genel bir tür ait ve bu tür tür parametreleri kullanan bir yöntem genel olmadığından. Yalnızca kendi türü parametre listesine varsa genel yöntemidir. Genel türler çoğu yöntemlere genel bu örnekteki değildir. Genel yöntem yayma ilişkin bir örnek için bkz: [nasıl yapılır: yansıma yayma ile genel yöntem tanımlama](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-method-with-reflection-emit.md).  
+>  Bir yöntem genel değil, çünkü yalnızca genel bir türe ait ve bu türdeki tür parametreleri kullanır. Bir yalnızca kendi tür parametresi listesi varsa genel yöntemdir. Genel türlerde çoğu yöntemler, bu örnekte olduğu gibi genel değildir. Genel yöntem yayan bir örnek için bkz: [nasıl yapılır: yansıma yayma ile genel yöntem tanımlama](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-method-with-reflection-emit.md).  
   
 ### <a name="to-define-a-generic-type"></a>Genel bir tür tanımlamak için  
   
-1.  Adlı bir dinamik derleme tanımlamak `GenericEmitExample1`. Bu örnekte, derleme yürütülen ve diske, bunu kaydedilmiş <xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndSave?displayProperty=nameWithType> belirtilir.  
+1.  Adlı bir dinamik derleme tanımlama `GenericEmitExample1`. Bu örnekte, derleme yürütülen ve disk için bunu kaydedilmiş <xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndSave?displayProperty=nameWithType> belirtilir.  
   
      [!code-cpp[EmitGenericType#2](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#2)]
      [!code-csharp[EmitGenericType#2](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#2)]
      [!code-vb[EmitGenericType#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#2)]  
   
-2.  Dinamik bir modül tanımlayın. Bir derlemeyi yürütülebilir modüllerini yapılır. Bir tek modül derlemesi için modül adı derleme adı ile aynıdır ve modül adına artı bir uzantısı dosya adıdır.  
+2.  Dinamik modül tanımlama. Bir derleme yürütülebilir modüllerin oluşur. Bir modül tek derleme için modül adını derleme adı ile aynıdır ve yanı sıra bir uzantı modül adı dosya adıdır.  
   
      [!code-cpp[EmitGenericType#3](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#3)]
      [!code-csharp[EmitGenericType#3](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#3)]
      [!code-vb[EmitGenericType#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#3)]  
   
-3.  Bir sınıf tanımlayın. Bu örnekte adlı sınıfı `Sample`.  
+3.  Bir sınıf tanımlar. Bu örnekte, sınıf adlı `Sample`.  
   
      [!code-cpp[EmitGenericType#4](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#4)]
      [!code-csharp[EmitGenericType#4](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#4)]
      [!code-vb[EmitGenericType#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#4)]  
   
-4.  Genel tür parametreleri tanımla `Sample` parametrelerinin adlarını içeren bir dizeler dizisi geçirerek <xref:System.Reflection.Emit.TypeBuilder.DefineGenericParameters%2A?displayProperty=nameWithType> yöntemi. Bu genel bir tür sınıfı sağlar. Dönüş değeri dizisidir <xref:System.Reflection.Emit.GenericTypeParameterBuilder> verilmiş kodunuzda kullanılabilir tür parametreleri temsil eden nesne.  
+4.  Genel tür parametrelerini tanımlayın `Sample` için parametre adlarını içeren bir dize dizisi geçirerek <xref:System.Reflection.Emit.TypeBuilder.DefineGenericParameters%2A?displayProperty=nameWithType> yöntemi. Bu sınıf bir genel tür sağlar. Dönüş değeri bir dizisidir <xref:System.Reflection.Emit.GenericTypeParameterBuilder> yayılan kodunuzda kullanılabilecek tür parametreleri temsil eden nesneleri.  
   
-     Aşağıdaki kodda, `Sample` tür parametreleri ile genel tür hale `TFirst` ve `TSecond`. Kod okumak her kolaylaştırmak için <xref:System.Reflection.Emit.GenericTypeParameterBuilder> tür parametresi aynı ada sahip bir değişken yerleştirilir.  
+     Aşağıdaki kodda, `Sample` tür parametreleri ile genel tür olur `TFirst` ve `TSecond`. Kod okumak her kolaylaştırmak için <xref:System.Reflection.Emit.GenericTypeParameterBuilder> tür parametresiyle aynı ada sahip bir değişken yerleştirilir.  
   
      [!code-cpp[EmitGenericType#5](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#5)]
      [!code-csharp[EmitGenericType#5](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#5)]
      [!code-vb[EmitGenericType#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#5)]  
   
-5.  Özel kısıtlamalar tür parametreleri ekleyin. Bu örnekte, tür parametresi `TFirst` parametresiz oluşturucular türleri ve başvuru türleri için sınırlı değildir.  
+5.  Özel kısıtlamalar için tür parametreleri ekleyin. Bu örnekte, tür parametresi `TFirst` parametresiz oluşturuculara sahip türleri ve başvuru türleri için sınırlıdır.  
   
      [!code-cpp[EmitGenericType#6](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#6)]
      [!code-csharp[EmitGenericType#6](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#6)]
      [!code-vb[EmitGenericType#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#6)]  
   
-6.  İsteğe bağlı olarak sınıfı ve arabirim kısıtlamaları tür parametreleri ekleyin. Bu örnekte, tür parametresi `TFirst` tarafından temsil edilen temel sınıfından türetilen türler için kısıtlı <xref:System.Type> değişkende nesnelere `baseType`, ve değişkenleri olan türleri bulunur arabirimleri uygulama `interfaceA` ve `interfaceB`. Bu değişkenlerin ataması ve bildirimi kod örneğine bakın.  
+6.  İsteğe bağlı olarak, sınıf ve arabirim kısıtlamaları için tür parametreleri ekleyin. Bu örnekte, tür parametresi `TFirst` tarafından temsil edilen temel sınıftan türetilen türler için kısıtlı <xref:System.Type> değişkeninde bulunan nesne `baseType`, ve değişkenler eşleşen türleri bulunur arabirimler uygulama `interfaceA` ve `interfaceB`. Bu değişken ataması ve bildirimi için kod örneğe bakın.  
   
      [!code-cpp[EmitGenericType#7](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#7)]
      [!code-csharp[EmitGenericType#7](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#7)]
      [!code-vb[EmitGenericType#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#7)]  
   
-7.  Bir alan tanımlayın. Bu örnekte, alan türü tür parametresi tarafından belirtilen `TFirst`. <xref:System.Reflection.Emit.GenericTypeParameterBuilder> türetilen <xref:System.Type>, genel tür parametreleri bir türü kullanılabilir herhangi bir yerde kullanabilirsiniz.  
+7.  Bir alan tanımlayın. Bu örnekte, alan türü tür parametresi tarafından belirtilen `TFirst`. <xref:System.Reflection.Emit.GenericTypeParameterBuilder> öğesinden türetilen <xref:System.Type>, genel tür parametreleri türü kullanılabilir her yerde kullanabilirsiniz.  
   
      [!code-cpp[EmitGenericType#21](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#21)]
      [!code-csharp[EmitGenericType#21](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#21)]
      [!code-vb[EmitGenericType#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#21)]  
   
-8.  Genel tür türü parametreleri kullanan bir yöntem tanımlayın. Kendi türü parametre listeleri sahip oldukları sürece bu tür yöntemleri genel olmadığına dikkat edin. Aşağıdaki kodu tanımlayan bir `static` yöntemi (`Shared` Visual Basic'te) bir dizi alan `TFirst` ve döndürür bir `List<TFirst>` (`List(Of TFirst)` Visual Basic'te) dizinin tüm öğeleri içeren. Bu yöntem tanımlamak için bu türü oluşturmak gerekli olan `List<TFirst>` çağırarak <xref:System.Type.MakeGenericType%2A> genel tür tanımında `List<T>`. ( `T` Kullandığınızda atlanmış `typeof` işleci (`GetType` Visual Basic'te) genel tür tanımı alınamıyor.) Parametre türü kullanılarak oluşturulan <xref:System.Type.MakeArrayType%2A> yöntemi.  
+8.  Genel türün tür parametreleri kullanan bir yöntem tanımlayın. Kendi türü parametre listeleri sahip olmadıkları sürece bu tür yöntemler genel olmadığına dikkat edin. Aşağıdaki kodu tanımlayan bir `static` yöntemi (`Shared` Visual Basic'te) dizisi alır `TFirst` ve döndürür bir `List<TFirst>` (`List(Of TFirst)` Visual Basic'te) dizinin tüm öğeleri içeren. Bu yöntemi tanımlamak için türü oluşturmak için gerekli olduğu `List<TFirst>` çağırarak <xref:System.Type.MakeGenericType%2A> genel tür tanımı `List<T>`. ( `T` Kullandığınızda atlanırsa `typeof` işleci (`GetType` Visual Basic'te) genel tür tanımı alınamıyor.) Parametre türü kullanılarak oluşturulan <xref:System.Type.MakeArrayType%2A> yöntemi.  
   
      [!code-cpp[EmitGenericType#22](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#22)]
      [!code-csharp[EmitGenericType#22](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#22)]
      [!code-vb[EmitGenericType#22](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#22)]  
   
-9. Yöntem gövdesi yayma. Giriş dizisi yığına yük üç işlem kodları yöntem gövdesi oluşur, çağrı `List<TFirst>` alan oluşturucu `IEnumerable<TFirst>` (hangi yaptığı tüm iş girişi öğelerinin listeye yerleştirme) ve döndürme (yeni bırakarak <xref:System.Collections.Generic.List%601> nesnesi Yığında). Bu kod yayma zor bir kısmını Oluşturucusu almaktır.  
+9. Yöntem gövdesini gösterin. Yöntem gövdesini yığına Giriş dizisinin yük üç işlem oluşur, çağrı `List<TFirst>` alan oluşturucu `IEnumerable<TFirst>` (hangi çalışır listeye giriş öğelerini yerleştirme tüm) ve döndürür (yeni bırakarak <xref:System.Collections.Generic.List%601> nesnesi Yığında). Bu kod yayan zor parçası Oluşturucu almaktır.  
   
-     <xref:System.Type.GetConstructor%2A> Yöntemi desteklenmiyor bir <xref:System.Reflection.Emit.GenericTypeParameterBuilder>, oluşturucusunun almak mümkün değildir `List<TFirst>` doğrudan. İlk olarak, genel tür tanımında Oluşturucusu almak gerekli olan `List<T>` ve ardından karşılık gelen oluşturucusuna dönüştüren bir yöntemi çağırmak için `List<TFirst>`.  
+     <xref:System.Type.GetConstructor%2A> Üzerinde yöntemi desteklenmiyor bir <xref:System.Reflection.Emit.GenericTypeParameterBuilder>, oluşturucusunun almak mümkün olmadığından `List<TFirst>` doğrudan. İlk olarak, genel tür tanımı oluşturucusunun almak gerekli olan `List<T>` ve karşılık gelen oluşturucusuna dönüştüren bir yöntemi çağırmak için `List<TFirst>`.  
   
-     Bu kod örneği için kullanılan Oluşturucu geçen bir `IEnumerable<T>`. Ancak, bu genel tür tanımı olmadığını unutmayın <xref:System.Collections.Generic.IEnumerable%601> genel arabirim; bunun yerine, tür parametresi `T` gelen `List<T>` tür parametresi için yerine `T` , `IEnumerable<T>`. (Yalnızca her iki tür adlı türü parametrelerine sahip olduğundan, bu kafa karıştırıcı görünüyor `T`. Bu kod örneği adları kullanır neden that is `TFirst` ve `TSecond`.) Oluşturucu bağımsız değişkeni tür almak için genel tür tanımıyla Başlat `IEnumerable<T>` ve arama <xref:System.Type.MakeGenericType%2A> ilk genel tür parametresi ile `List<T>`. Oluşturucu bağımsız değişken listesi tek bağımsız değişkenli bir dizi olarak bu durumda geçirilmelidir.  
+     Bu kod örneği için kullanılan oluşturucuya alan bir `IEnumerable<T>`. Ancak, bu genel tür tanımı olmadığını unutmayın <xref:System.Collections.Generic.IEnumerable%601> genel arabirim; bunun yerine, tür parametresi `T` gelen `List<T>` tür parametresi yerine `T` , `IEnumerable<T>`. (Yalnızca iki türü de adlı türü parametreleri olduğundan, bu karmaşık görünüyor `T`. Bu kod örneği adları kullanan neden that is `TFirst` ve `TSecond`.) Oluşturucu bağımsız değişken türünü almak için genel tür tanımı ile Başlat `IEnumerable<T>` ve çağrı <xref:System.Type.MakeGenericType%2A> ilk genel tür parametresi ile `List<T>`. Oluşturucu bağımsız değişken listesi ile tek bağımsız değişken bir dizi olarak bu durumda geçirilmelidir.  
   
     > [!NOTE]
     >  Genel tür tanımı olarak ifade edilen `IEnumerable<>` kullandığınızda `typeof` C# ' ta, işleci veya `IEnumerable(Of )` kullandığınızda `GetType` Visual Basic'te işleci.  
   
-     Oluşturucusunun almak mümkün şimdi `List<T>` çağırarak <xref:System.Type.GetConstructor%2A> genel tür tanımında. Bu oluşturucu karşılık gelen oluşturucuya dönüştürmek için `List<TFirst>`, geçirmek `List<TFirst>` ve oluşturucudan `List<T>` statik <xref:System.Reflection.Emit.TypeBuilder.GetConstructor%28System.Type%2CSystem.Reflection.ConstructorInfo%29?displayProperty=nameWithType> yöntemi.  
+     Şimdi oluşturucusu, alma olasılığı `List<T>` çağırarak <xref:System.Type.GetConstructor%2A> genel tür tanımı. Bu oluşturucu karşılık gelen oluşturucuya dönüştürmek için `List<TFirst>`, geçmesi `List<TFirst>` ve oluşturucudan `List<T>` statik <xref:System.Reflection.Emit.TypeBuilder.GetConstructor%28System.Type%2CSystem.Reflection.ConstructorInfo%29?displayProperty=nameWithType> yöntemi.  
   
      [!code-cpp[EmitGenericType#23](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#23)]
      [!code-csharp[EmitGenericType#23](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#23)]
@@ -98,30 +98,30 @@ Bu konuda iki tür parametreleri ile basit bir genel tür oluşturma, tür param
      [!code-csharp[EmitGenericType#8](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#8)]
      [!code-vb[EmitGenericType#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#8)]  
   
-11. Invoke yöntemi. `ExampleMethod` Genel, değil ancak ait olduğu için tür böylece alabilmek için genel bir <xref:System.Reflection.MethodInfo> , çağrılabilir yapılandırılmış bir tür için tür tanımı oluşturmak gerekli olan `Sample`. Yapılandırılmış bir tür kullanıyor `Example` üzerindeki kısıtlamaları karşılayan sınıfı `TFirst` bir başvuru türü olduğundan ve varsayılan parametresiz oluşturucusu olan ve `ExampleDerived` üzerindeki kısıtlamaları karşılayan sınıfı `TSecond`. (Kodunu `ExampleDerived` örnek kod bölümünde bulunabilir.) Bu iki tür geçirilecek <xref:System.Type.MakeGenericType%2A> oluşturulan türü oluşturun. <xref:System.Reflection.MethodInfo> Kullanılarak elde edilir <xref:System.Type.GetMethod%2A> yöntemi.  
+11. Yöntemi çağır. `ExampleMethod` Genel, değil ancak ait olduğu için tür şekilde alabilmek için genel bir <xref:System.Reflection.MethodInfo> , çağrılacak oluşturulan tür için tür tanımı oluşturmak gerekli olan `Sample`. Oluşturulan tür kullanan `Example` üzerindeki kısıtlamalar karşılayan sınıfı `TFirst` bir başvuru türüdür ve varsayılan parametresiz bir oluşturucu olduğundan ve `ExampleDerived` üzerindeki kısıtlamalar karşılayan sınıfı `TSecond`. (Kodu `ExampleDerived` örnek kod bölümünde bulunabilir.) Bu iki tür geçirilen <xref:System.Type.MakeGenericType%2A> oluşturulmuş türü oluşturmak için. <xref:System.Reflection.MethodInfo> Ardından kullanılarak elde edilen <xref:System.Type.GetMethod%2A> yöntemi.  
   
      [!code-cpp[EmitGenericType#9](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#9)]
      [!code-csharp[EmitGenericType#9](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#9)]
      [!code-vb[EmitGenericType#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#9)]  
   
-12. Aşağıdaki kod bir dizi oluşturur `Example` nesneleri, bu dizi türünde bir dizi yerleştirir <xref:System.Object> çağrılacak, yöntemin bağımsız değişkenleri temsil eden ve bunlara geçirir <xref:System.Reflection.MethodBase.Invoke%28System.Object%2CSystem.Object%5B%5D%29> yöntemi. İlk bağımsız değişkeni <xref:System.Reflection.MethodBase.Invoke%2A> yöntemi bir null başvuru yöntemi açık olduğundan `static`.  
+12. Aşağıdaki kod bir dizi oluşturur `Example` nesneleri, bu dizi türünde bir dizi yerleştirir <xref:System.Object> çağrılacak, yöntemin bağımsız değişkenlerini temsil eden ve bunları geçirmeden <xref:System.Reflection.MethodBase.Invoke%28System.Object%2CSystem.Object%5B%5D%29> yöntemi. İlk bağımsız değişkeni <xref:System.Reflection.MethodBase.Invoke%2A> bir null başvuru yöntemdir yöntemi olduğundan `static`.  
   
      [!code-cpp[EmitGenericType#10](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#10)]
      [!code-csharp[EmitGenericType#10](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#10)]
      [!code-vb[EmitGenericType#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#10)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneğinde adlı bir sınıf tanımlar `Sample`, bir taban sınıf ve iki arabirim yanı sıra. Program için iki genel tür parametreleri tanımlar `Sample`, genel bir tür kapatma. Türü, bir tür genel yapar tek şey parametreleridir. Program bu önce ve sonra tür parametreleri tanımını sınama iletisi görüntüleyerek gösterir.  
+ Aşağıdaki kod örneğinde adlı bir sınıf tanımlar `Sample`, yanı sıra bir taban sınıfı ve iki arabirim. Program iki genel tür parametrelerini tanımlar `Sample`, genel bir tür kapatma. Tür, genel bir tür yaptığı tek şey parametrelerdir. Program bu sınama iletisi görüntüleyerek önce ve sonra tür parametreleri tanımını gösterir.  
   
- Tür parametresi `TSecond` temel sınıf ve arabirimler ve tür parametresi kullanılarak, sınıf ve arabirim kısıtlamaları göstermek için kullanılan `TFirst` özel kısıtlamalar göstermek için kullanılır.  
+ Tür parametresi `TSecond` temel sınıf ve arabirimler ve tür parametresi kullanarak, sınıf ve arabirim kısıtlamaları göstermek için kullanılan `TFirst` özel kısıtlamaları göstermek için kullanılır.  
   
- Kod örneği, bir alan ve alan türü ve parametresi için sınıfının tür parametreleri kullanarak yöntemi tanımlar ve yöntem türü döndürür.  
+ Kod örneği, bir alan ve alan türü ve parametre sınıfın tür parametreleri kullanarak yöntemi tanımlar ve dönüş türü yöntemi.  
   
- Sonra `Sample` sınıfı oluşturulamadı, yöntemi çağrılır.  
+ Sonra `Sample` sınıf oluşturuldu, yöntemi çağrılır.  
   
- Program, genel bir tür hakkında bilgileri listeleyen bir yöntem ve bir tür parametresi özel kısıtlamalar listeleyen yöntemi içerir. Bu yöntemler tamamlanmış hakkındaki bilgileri görüntülemek için kullanılan `Sample` sınıfı.  
+ Program, genel bir tür hakkında bilgi listeleyen bir yöntem ve özel bir tür parametresi kısıtlamaları listeleyen bir yöntem içerir. Bu yöntemler tamamlanmış hakkındaki bilgileri görüntülemek için kullanılan `Sample` sınıfı.  
   
- Program tamamlanmış modülü diske kaydeder `GenericEmitExample1.dll`, kendisiyle açabilmesi için [Ildasm.exe (IL ayrıştırıcı)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) ve incelemek için MSIL `Sample` sınıfı.  
+ Program tamamlanmış modülü diske kaydeder. `GenericEmitExample1.dll`, kendisiyle açabilmek [Ildasm.exe (IL ayrıştırıcı)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) ve incelemek için MSIL `Sample` sınıfı.  
   
  [!code-cpp[EmitGenericType#1](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#1)]
  [!code-csharp[EmitGenericType#1](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#1)]
@@ -129,13 +129,13 @@ Bu konuda iki tür parametreleri ile basit bir genel tür oluşturma, tür param
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
   
--   C# kodunu `using` deyimleri (`Imports` Visual Basic'te) derleme için gerekli.  
+-   C# kodu içeren `using` deyimleri (`Imports` Visual Basic'te) derleme için gerekli.  
   
 -   Hiçbir ek derleme başvurularını gereklidir.  
   
--   Csc.exe, vbc.exe veya cl.exe kullanarak komut satırında kodu derleyin. Visual Studio'da Kodu derlemek için bir konsol uygulama projesi şablonunda yerleştirin.  
+-   Csc.exe, vbc.exe veya cl.exe kullanarak komut satırındaki kodu derleyin. Visual Studio'da Kodu derlemek için bir konsol uygulaması projesi şablonu içine koyun.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Reflection.Emit.GenericTypeParameterBuilder>  
- [Yansıma kullanarak yayma](http://msdn.microsoft.com/library/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)  
- [Yansıma yayma dinamik derleme senaryoları](http://msdn.microsoft.com/library/e1cc6750-e20f-473b-bb4e-f43bc66aecce)
+ [Yansıma yaymanın](https://msdn.microsoft.com/library/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)  
+ [Yansıma yayma dinamik derleme senaryoları](https://msdn.microsoft.com/library/e1cc6750-e20f-473b-bb4e-f43bc66aecce)

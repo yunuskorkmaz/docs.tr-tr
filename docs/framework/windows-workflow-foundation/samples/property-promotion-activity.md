@@ -1,16 +1,16 @@
 ---
-title: Özelliği yükseltme etkinliği
+title: Özellik yükseltme etkinliği
 ms.date: 03/30/2017
 ms.assetid: 802196b7-1159-4c05-b41b-d3bfdfcc88d9
-ms.openlocfilehash: 46e74c8c479e545778db92e15de3cb8798dafa11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e059a0d344e6c62833feaa890c459c141a49673
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519931"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481143"
 ---
-# <a name="property-promotion-activity"></a>Özelliği yükseltme etkinliği
-Bu örnek tümleşen bir uçtan uca çözümü sağlar <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> yükseltme özelliğini doğrudan yazma deneyimini iş akışına. Yapılandırma öğeleri, iş akışı etkinlikleri ve yükseltme özelliğini kullanımını kolaylaştırmak iş akışı uzantıları koleksiyonu sağlanır. Ayrıca, bu koleksiyonu kullanımı gösterilmiştir basit bir iş akışı örneği içerir.  
+# <a name="property-promotion-activity"></a>Özellik yükseltme etkinliği
+Bu örnek sağlayan tümleşik bir uçtan uca çözüm <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> doğrudan yazma deneyimini iş akışı içinde yükseltme özelliği. Yapılandırma öğeleri, iş akışı etkinlikleri ve basitleştirin promosyon özelliğinin kullanımına iş akışı uzantıları koleksiyonu sağlanır. Ayrıca, bu koleksiyon kullanmayı gösteren basit bir iş akışı örneği içerir.  
   
 > [!NOTE]
 >  Örnekler yalnızca eğitim amaçlı olarak sağlanır. Bunlar, bir üretim ortamı için tasarlanmamıştır ve bir üretim ortamında test edilmemiştir. Microsoft, bu örnekler için teknik destek sağlamaz.  
@@ -23,53 +23,53 @@ Bu örnek tümleşen bir uçtan uca çözümü sağlar <xref:System.Activities.D
   
 ## <a name="sample-projects"></a>Örnek Proje  
   
--   **PropertyPromotionActivity** proje yükseltme özel yapılandırma öğeleri, iş akışı etkinlikleri ve iş akışı uzantıları ilgili dosyaları içerir.  
+-   **PropertyPromotionActivity** proje yükseltme özgü yapılandırma öğeleri, iş akışı etkinlikleri ve iş akışı uzantıları ilişkin dosyaları içerir.  
   
--   **CounterServiceApplication** projeyi içeren kullanan bir örnek iş akışı **SqlWorkflowInstanceStorePromotion** projesi.  
+-   **CounterServiceApplication** projesini içeren kullanan bir örnek iş akışı **SqlWorkflowInstanceStorePromotion** proje.  
   
--   Karşı çalıştırılmalıdır bir SQL betiği (PropertyPromotionActivitySQLSample.sql) <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> veritabanı.  
+-   Karşı çalıştırılmalıdır SQL betiği (PropertyPromotionActivitySQLSample.sql) <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> veritabanı.  
   
--   İki bağlanan bir çözüm dosyasını [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] projeleri (`PropertyPromotionActivity.sln`)  
+-   İki bağlantı bir çözüm dosyası [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] projeleri (`PropertyPromotionActivity.sln`)  
   
-## <a name="to-set-up-and-run-the-sample"></a>Ayarlamak ve örneği çalıştırmak için  
+## <a name="to-set-up-and-run-the-sample"></a>Ayarlama ve çalıştırma örneği  
   
-1.  Bir iş akışı Kalıcılık veritabanını başlatılamadı.  
+1.  Bir iş akışı Kalıcılık veritabanı başlatın.  
   
     1.  Örnek dizine (\WF\Basic\Persistence\PropertyPromotionActivity) gidin ve CreateInstanceStore.cmd çalıştırın.  
   
-    2.  Yönetici ayrıcalıkları kullanılabilir değilse, bir SQL Server oturumu oluşturun. SQL Server Management Studio'da Git **güvenlik**, **oturumları**. Sağ **oturumları** ve yeni bir oturum oluşturun. ACL kullanıcı açarak SQL role ekleyin **veritabanları**, **InstanceStore**, **güvenlik**. Sağ **kullanıcılar** seçip **yeni kullanıcı**. Ayarlama **oturum açma adı** yukarıda oluşturduğunuz kullanıcı. Veritabanı rolü üyeliği System.Activities.DurableInstancing.InstanceStoreUsers kullanıcıya (ve diğerleri) ekleyin. Kullanıcı zaten (örneğin, dbo kullanıcısı) bulunmayabilir unutmayın.  
+    2.  Yönetici ayrıcalıkları kullanılabilir durumda değilse, bir SQL Server oturumu oluşturun. SQL Server Management Studio'da Git **güvenlik**, **oturumları**. Sağ **oturumları** ve yeni bir oturum oluşturun. Açarak SQL role ACL Kullanıcınızı eklemek **veritabanları**, **InstanceStore**, **güvenlik**. Sağ **kullanıcılar** seçip **yeni kullanıcı**. Ayarlama **oturum açma adı** yukarıda oluşturulan kullanıcı. Kullanıcı için veritabanı rolü üyeliği System.Activities.DurableInstancing.InstanceStoreUsers (ve diğerleri) ekleyin. Kullanıcı zaten (örneğin, dbo kullanıcısı) bulunmayabilir unutmayın.  
   
 2.  PropertyPromotionActivity.sln çözüm dosyasını açın [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
   
-3.  Yerel SQL Server Express yüklemesi dışında bir veritabanında örnek deposuna oluşturduysanız, veritabanı bağlantı dizesi güncelleştirmeniz gerekir. App.config dosyasını alter **CounterServiceApplication** değerini ayarlayarak `connectionString` özniteliği `sqlWorkflowInstanceStorePromotion` düğümü başlatıldı Kalıcılık veritabanına işaret eden, adım 1.  
+3.  Yerel SQL Server Express yüklemesi dışında bir veritabanında örnek deposu oluşturduysanız, veritabanı bağlantı dizesini güncelleştirmeniz gerekir. App.config dosyasını altında alter **CounterServiceApplication** değerini ayarlayarak `connectionString` özniteliği `sqlWorkflowInstanceStorePromotion` düğümü başlatıldı Kalıcılık veritabanına işaret eden, adım 1.  
   
-4.  Derleme ve çözümü çalıştırın. Bu sayaç WF hizmetini başlatın ve bir iş akışı örneği otomatik olarak başlat.  
+4.  Derleme ve çözümü çalıştırın. Bu sayaç WF hizmeti başlatın ve otomatik olarak bir iş akışı örneği başlatın.  
   
-5.  Hızlı bir şekilde tüm satırları [dbo] seçin. (Bu görünüm 1. adımda CreateInstanceStore.cmd çalıştırarak eklendi) [counterService] görünümü Kalıcılık veritabanınızdaki. Bir sonuç kümesi aşağıdakine benzer görürsünüz:  
+5.  Hızlı bir şekilde tüm satırları [dbo] seçin. (Bu görünüm 1. adımda CreateInstanceStore.cmd çalıştırarak eklendi) [counterService] görünümü Kalıcılık veritabanı. Ayarlama aşağıdakine benzer bir sonuç göreceksiniz:  
   
-    |örnek kimliği|CounterValue|CounterValueLastUpdated|  
+    |InstanceId|Ort|CounterValueLastUpdated|  
     |----------------|------------------|-----------------------------|  
     |2FA2C302-929E-4C0D-8C25-768A3DA20CE5|12|2010-02-18 22:48:01.740|  
   
-     Görünümü yenileme tutmak gibi CounterValue ve CounterValueLastUpdated her iki saniye değiştirme fark edeceksiniz. Bu sayaç kendisini güncelleştirir aralığıdır. CounterValue ve CounterValueLastUpdated bu iş akışı için yükseltilen özellikleri temsil eder.  
+     Görünümü yenileniyor tutmak gibi her iki saniye Ort ve CounterValueLastUpdated değiştirme fark edeceksiniz. Bu sayaç kendisini güncelleştirir aralığıdır. Ort ve CounterValueLastUpdated bu iş akışı için yükseltilen özellikleri temsil eder.  
   
 ## <a name="to-remove-the-sample"></a>Örnek kaldırmak için  
   
--   RemoveInstanceStore.cmd örnek dizininde (\WF\Basic\Persistence\PropertyPromotionActivity) çalıştırın.  
+-   RemoveInstanceStore.cmd örnek dizinde (\WF\Basic\Persistence\PropertyPromotionActivity) çalıştırın.  
   
 ## <a name="understanding-this-sample"></a>Bu örnek anlama  
- Örnek bir SQL dosyasını ve iki proje içerir:  
+ Örnek, iki proje dosyası ve SQL içerir:  
   
--   **CounterServiceApplication** basit bir sayaç WF hizmeti barındıran bir konsol uygulamasıdır. Üzerinden tek yönlü bir ileti alır almaz `Start` uç noktası, iş akışı sayısı 0'dan her iki saniyede bir sayaç değişkeni artırma 29 için. Her sayacı artırma sonra iş akışı devam ederse ve yükseltilen özellikleri [dbo] güncelleştirilir. [CounterService] görüntüleyin. Konsol uygulamasını çalıştırdığınızda, WF hizmetini barındıran ve bir ileti gönderir `Start` uç noktası, bir sayaç WF örneği oluşturma.  
+-   **CounterServiceApplication** basit bir sayaç WF hizmetini barındıran bir konsol uygulamasıdır. Bir tek yönlü mesaj aracılığıyla bağlı `Start` uç noktası, iş akışı sayısı 0'dan bir sayaç değişkeni her iki saniye artan 29 için. Her sayacı artırma sonra iş akışı devam ediyorsa ve yükseltilen özellikleri [dbo] güncelleştirilir. [CounterService] görüntüleyin. Konsol uygulamasını çalıştırdığınızda, WF hizmetini barındıran ve bir ileti gönderir `Start` uç noktası, bir sayaç WF örneği oluşturma.  
   
--   **PropertyPromotionActivity** yapılandırma öğeleri, iş akışı etkinlikleri ve iş akışı uzantıları içeren bir sınıf kitaplığı, **CounterServiceApplication** kullanır.  
+-   **PropertyPromotionActivity** yapılandırma öğeleri, iş akışı etkinlikleri ve iş akışı uzantıların bulunduğu bir sınıf kitaplığı, **CounterServiceApplication** kullanır.  
   
--   **PropertyPromotionActivitySQLSample.sql** oluşturur ve görünüm [dbo] ekler. [ Veritabanına counterService].  
+-   **PropertyPromotionActivitySQLSample.sql** oluşturur ve ekler görünümü [dbo]. [ Veritabanına counterService].  
   
 ### <a name="counterserviceapplication"></a>CounterServiceApplication  
   
-#### <a name="using-the-sqlworkflowinstancestorepromotion-configuration-element"></a>SqlWorkflowInstanceStorePromotion yapılandırma öğesi kullanma  
- `SqlWorkflowInstanceStorePromotion` Yapılandırma öğesi devraldığı `SqlWorkflowInstanceStore` yapılandırma öğesi, ancak adlı bir ek yapılandırma öğesi ekler `promotionSets`. `promotionSets` Öğesi yükseltilen özellikleri yapılandırma yoluyla belirtmesini sağlar. Bu örnek tarafından kullanılan yapılandırma dosyası.  
+#### <a name="using-the-sqlworkflowinstancestorepromotion-configuration-element"></a>SqlWorkflowInstanceStorePromotion yapılandırma öğesini kullanarak  
+ `SqlWorkflowInstanceStorePromotion` Yapılandırma öğesi devraldığı `SqlWorkflowInstanceStore` yapılandırma öğesi, ancak adlı bir ek yapılandırma öğesi ekler `promotionSets`. `promotionSets` Öğesi yapılandırması yükseltilen özelliklerinden belirtmesini sağlar. Bu örnek tarafından kullanılan yapılandırma dosyasıdır:  
   
 ```xml  
 <sqlWorkflowInstanceStorePromotion connectionString ="Data Source=.;Initial Catalog=SqlWorkflowInstanceStoreTest;Integrated Security=True;">  
@@ -82,7 +82,7 @@ Bu örnek tümleşen bir uçtan uca çözümü sağlar <xref:System.Activities.D
 </sqlWorkflowInstanceStorePromotion>  
 ```  
   
- [Dbo] tanımı inceleyin. [CounterService] görüntüleyin.  
+ [Dbo] tanımını inceleyin. [CounterService] görüntüleyin.  
   
 ```sql  
 create view [dbo].[CounterService] as  
@@ -94,36 +94,36 @@ create view [dbo].[CounterService] as
 go  
 ```  
   
- Bir iş akışı örneği devam ediyorsa, bir satır eklenir `InstancePromotedProperties` görüntülemek için her `PromotionSet` yapılandırmasında tanımlanmış. Bu satır yükseltilen tüm özelliklerini içerir `PromotionSet` (bir yükseltilmiş özelliği sütun başına). Bu `PromotionSet` tanımlama grubu tarafından Anahtarlanan: `InstanceId, PromotionName`. Bu örnekte, biri sahibiz `PromotionSet` , adı özniteliği yapılandırmasında tanımlı `CounterService`. Not nasıl `PromotionName` sütun değeri için name özniteliği eşittir `PromotionSet` öğesi.  
+ Bir iş akışı örneği devam ederse, bir satır içine eklenir `InstancePromotedProperties` görüntülemek için her `PromotionSet` yapılandırmasında tanımlanmış. Bu satır yükseltilen tüm özelliklerini içerir `PromotionSet` (bir yükseltilen özellik sütun başına). Bu `PromotionSet` tanımlama grubu tarafından Anahtarlanan: `InstanceId, PromotionName`. Bu örnekte, bir sahip olduğumuz `PromotionSet` olan adı özniteliği yapılandırmasında tanımlı `CounterService`. Not nasıl `PromotionName` öğesinin ad özniteliği için sütun değeri eşittir `PromotionSet` öğesi.  
   
- Sırasını `promotedValue` öğeleri karşılık gelen yükseltilen özelliklerinde yerleştirme `InstancePromotedProperties` görünümü. `Count` İlk `promotedValue` öğesi. Sonuç olarak, bu eşlenmiş `Value1` sütununda `InstancePromotedProperties` görünümü. `LastIncrementedAt` İkinci `promotedValue` öğesi. Sonuç olarak, bu eşlenmiş `Value2` sütununda `InstancePromotedProperties` görünümü.  
+ Sırasını `promotedValue` öğeleri karşılık gelen yükseltilen özelliklerinde yerleşimini ile `InstancePromotedProperties` görünümü. `Count` İlk `promotedValue` öğesi. Sonuç olarak, eşlenmiş `Value1` sütununda `InstancePromotedProperties` görünümü. `LastIncrementedAt` İkinci `promotedValue` öğesi. Sonuç olarak, eşlenmiş `Value2` sütununda `InstancePromotedProperties` görünümü.  
   
 #### <a name="using-the-promotevalue-activity"></a>PromoteValue etkinliğini kullanma  
- Windows Workflow Foundation Tasarımcısı'nda CounterService.xamlx dosyasını inceleyin. WF tanımında iki özel etkinlikler olduğuna dikkat edin: `PromoteValue<DateTime>` ve `PromoteValue<Int32>`.  
+ Windows Workflow Foundation Designer CounterService.xamlx dosyasını inceleyin. WF tanımında iki özel etkinliği olduğuna dikkat edin: `PromoteValue<DateTime>` ve `PromoteValue<Int32>`.  
   
- `PromoteValue<Int32>` Etkinlik sahip kendi `Name` üye olarak tanımlanan `Count`. Bu ilk eşleşen `promotedValue` yapılandırma öğesi ve kendi `Value` olarak tanımlanan `Counter` iş akışı değişkeni. İş akışı devam ederse, `Counter` yükseltilen bir özellik olarak iş akışı değişken kalıcı `Value1` sütunu `InstancePromotedProperties` görünümü.  
+ `PromoteValue<Int32>` Etkinliğinde, `Name` üye olarak tanımlanan `Count`. Bu ilk eşleşen `promotedValue` yapılandırma öğesi ve kendi `Value` olarak tanımlanan `Counter` iş akışı değişkeni. İş akışı devam ederse, `Counter` iş akışı değişkeninin yükseltilen bir özellikte olarak kalıcıdır `Value1` sütununun `InstancePromotedProperties` görünümü.  
   
- `PromoteValue<DateTime>` Etkinlik sahip kendi `Name` üye olarak tanımlanan `LastIncrementedAt`. Bu ikinci ile eşleşen `promotedValue` yapılandırma öğesi ve kendi `Value` olarak tanımlanan `TimeLastIncremented` iş akışı değişkeni. İş akışı devam ederse, değeri buna `TimeLastIncremented` iş akışı değişken kalıcı hale yükseltilen bir özellik olarak `Value2` sütunu `InstancePromotedProperties` görünümü.  
+ `PromoteValue<DateTime>` Etkinliğinde, `Name` üye olarak tanımlanan `LastIncrementedAt`. Bu ikinci ile eşleşen `promotedValue` yapılandırma öğesi ve kendi `Value` olarak tanımlanan `TimeLastIncremented` iş akışı değişkeni. Bunun anlamı, değerini iş akışı devam ederse `TimeLastIncremented` iş akışı değişkeni kalıcı olarak yükseltilen bir özellikte `Value2` sütununun `InstancePromotedProperties` görünümü.  
   
- Unutmayın `PromotedValue` etkinlik ayrıca adlı bir Boolean üyeye sahip `ClearExistingPromotedData`. Bu üye ayarlandığında `true`, bu iş akışı bu noktaya kadar tüm yükseltilen özellik değerlerini temizler. Sıralı etkinlik olarak tanımlanır, örneğin, aşağıdaki gibidir:  
+ Unutmayın `PromotedValue` ayrıca etkinliğinde adlı bir Boolean üye `ClearExistingPromotedData`. Bu üye ayarlandığında `true`, bu iş akışında o noktaya kadar tüm yükseltilen özellik değerleri temizler. Örneğin, bir sıralama etkinliği olarak tanımlanması durumunda aşağıdaki gibidir:  
   
 1.  PromoteValue {adı "Count", değer = 3 =}  
   
 2.  PromoteValue {adı "LastIncrementedAt", değer = 1-1-2000 =}  
   
-3.  Sürdür  
+3.  Kalıcı  
   
-4.  PromoteValue {adı "Count", değer = 4, ClearExistingPromotedData = = true}  
+4.  PromoteValue {adı "Count", değer = 4, ClearExistingPromotedData = true =}  
   
-5.  Sürdür  
+5.  Kalıcı  
   
- Yükseltilen değeri ikinci devam ettir üzerinde `Count` 4 olacaktır. Ancak, yükseltilen değeri `LastIncrementedAt` olacaktır `NULL`. Varsa `ClearExistingPromotedData` ayarlanmadı `true` 4. adımda, ardından ikinci devam ettir sonra yükseltilen değeri sayısı için 4 olacaktır. Sonuç olarak, yükseltilen değeri `LastIncrementedAt` 1-1-2000 hala olacaktır.  
+ Yükseltilen değeri ikinci devam ettir üzerinde `Count` 4 olur. Ancak, yükseltilen değeri `LastIncrementedAt` olacaktır `NULL`. Varsa `ClearExistingPromotedData` ayarlanmadı `true` 4. adımda, ardından ikinci devam ettir sonra yükseltilen sayısı değeri 4 olur. Sonuç olarak, yükseltilen değeri `LastIncrementedAt` 1-1-2000 olmaya.  
   
 ### <a name="propertypromotionactivity"></a>PropertyPromotionActivity  
- Bu sınıf kitaplığı kullanımını kolaylaştırmak için şu ortak sınıfları içerir <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> yükseltme özelliği.  
+ Bu sınıf kitaplığı kullanımını kolaylaştırmak için aşağıdaki genel sınıfları içeren <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> yükseltme özelliği.  
   
 #### <a name="promotevalue-class"></a>PromoteValue sınıfı  
- Bu sınıf, bir özellik yükseltir. Yükseltilen özellik adı bir ad özniteliği eşleşmelidir bir `promotedValue` yapılandırma öğesi. Bu etkinliği iş akışı Tasarımcısı'nda kullanılabilir. Kullanım örneği CounterServiceApplication bakın.  
+ Bu sınıf, bir özellik yükseltir. Yükseltilen özellik adını bir ad özniteliği eşleşmelidir bir `promotedValue` yapılandırma öğesi. Bu etkinlik iş akışı Tasarımcısı'nda kullanılabilir. CounterServiceApplication kullanım örneği için bkz.  
   
 ```csharp  
 public class PromoteValue<T> : CodeActivity  
@@ -139,16 +139,16 @@ public class PromoteValue<T> : CodeActivity
 ```  
   
  ClearExistingPromotedData (Boole)  
- Bu etkinlik önce yükseltilmiş tüm değerleri temizler.  
+ Bu etkinlik önce yükseltilen tüm değerleri temizler.  
   
- adı (dize)  
+ Adı (dize)  
  Bu özellik temsil eden adı. Bu ad özniteliği eşleşmelidir bir \<promotedValue > yapılandırma öğesi.  
   
  Değer (InArgument\<T >)  
- Değişken / sütunda depolamak istediğiniz değer.  
+ Değişken / Sütun saklamak istediğiniz değer.  
   
 #### <a name="promotevalues-class"></a>PromoteValues sınıfı  
- Birden çok özelliklerini yükseltir. Yükseltilen özellik adlarını tüm adı öznitelikleri eşleşmelidir `promotedValue` yapılandırma öğeleri. Kullanım benzer `PromoteValue` etkinlik, aynı anda birden çok özellikler yükseltilebilir olgu dışında. Bu etkinliği iş akışı Tasarımcısı'nda kullanılamaz.  
+ Birden çok özellik yükseltir. Yükseltilen özellik adlarının tüm adı öznitelikler eşleşmelidir `promotedValue` yapılandırma öğeleri. Kullanım benzer `PromoteValue` aynı anda birden çok özellik yükseltilebilir olgu dışında bir etkinlik. Bu etkinlik iş akışı Tasarımcısı'nda kullanılamaz.  
   
 ```  
 public class PromoteValues : CodeActivity  
@@ -164,7 +164,7 @@ public class PromoteValues : CodeActivity
 ```  
   
 #### <a name="sqlworkflowinstancestorepromotionbehavior"></a>SqlWorkflowInstanceStorePromotionBehavior  
- Türetilen `SqlWorkflowInstanceStoreBehavior`. Bu türetilmiş sınıf özel Kalıcılık katılımcı (aynı zamanda bu kitaplığı parçası) bir iş akışı uzantısı olarak ekler. Önceki iki iş akışı etkinlikleri uyarlamasını bu özel Kalıcılık katılımcı kullanır.  
+ Öğesinden türetilen `SqlWorkflowInstanceStoreBehavior`. Bu türetilmiş sınıf özel Kalıcılık Katılımcısı (Ayrıca bu kitaplık bir parçası) bir iş akışı uzantısı ekler. Önceki iki iş akışı etkinlikleri uygulanması, bu özel Kalıcılık Katılımcısı kullanır.  
   
 ```  
 public class SqlWorkflowInstanceStorePromotionBehavior :  
@@ -176,19 +176,19 @@ public class SqlWorkflowInstanceStorePromotionBehavior :
 }  
 ```  
   
- Bu sınıf kitaplığı da içeren `ConfigurationElement` uygulanması için `SqlWorkflowInstanceStorePromotionElement` ve önceki yükseltme etkinlikler tarafından kullanılan özel Kalıcılık katılımcı.  
+ Bu sınıf kitaplığını da içeren `ConfigurationElement` logrequest olayını `SqlWorkflowInstanceStorePromotionElement` ve önceki yükseltme etkinlikleri tarafından kullanılan özel Kalıcılık Katılımcısı.  
   
 ### <a name="propertypromotionactivitysqlsample"></a>PropertyPromotionActivitySQLSample  
  Bu SQL dosyası oluşturur bir `[dbo].[CounterService]` ek olarak görüntülemek `[InstancePromotedProperties]` CounterService yükseltme kümesine sahip tüm örneklerini sorgulamak için görünümü.  
   
 > [!IMPORTANT]
->  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce aşağıdaki (varsayılan) dizin denetle:  
+>  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce aşağıdaki (varsayılan) dizin için denetleyin:  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur:  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur:  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\PropertyPromotionActivity`  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [AppFabric barındırma ve kalıcılığı örnekleri](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [AppFabric barındırma ve Kalıcılık örnekleri](https://go.microsoft.com/fwlink/?LinkId=193961)

@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: aeafaa8e618e02cab127593a19dda1d72780e091
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 7e539067b20f0e018496b0076582619cb88072e1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42998690"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480671"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Dağıtılmış veri yönetimi için sorunlar ve çözümler
 
@@ -43,7 +43,7 @@ Ancak, uygulama tasarımınızı sürekli karmaşık sorgular için birden fazla
 
 Daha önce belirtildiği gibi her bir mikro hizmet tarafından sahip olunan veri, mikro hizmet için özeldir ve yalnızca kendi mikro hizmet API'si kullanılarak erişilebilir. Bu nedenle, sunulan birden fazla mikro hizmetler arasında tutarlılık sağlarken uçtan uca iş süreçlerini uygulanması zordur.
 
-Bu sorunu çözümlemek için bir örnekten göz atalım [hizmetine başvuru uygulaması](http://aka.ms/eshoponcontainers). Katalog mikro hizmet stok düzeylerini dahil olmak üzere tüm ürünlerle ilgili bilgileri tutar. Sıralama mikro hizmet, siparişler yönetir ve yeni bir sipariş kullanılabilir Kataloğu ürün stok saklama aşmamasını doğrulamanız gerekir. (Veya senaryo backordered ürünleri işleme mantığı gerektirebilir.) Bir kuramsal tek parça sürümünde bu uygulama, sıralama alt sistemi yalnızca bir ACID işlemi kullanılabilir hisse senedi denetleyin, Siparişler tablosunda sırasını oluşturmak ve kullanılabilir Ürünler tablosu stokta güncelleştirmek için kullanabilirsiniz.
+Bu sorunu çözümlemek için bir örnekten göz atalım [hizmetine başvuru uygulaması](https://aka.ms/eshoponcontainers). Katalog mikro hizmet stok düzeylerini dahil olmak üzere tüm ürünlerle ilgili bilgileri tutar. Sıralama mikro hizmet, siparişler yönetir ve yeni bir sipariş kullanılabilir Kataloğu ürün stok saklama aşmamasını doğrulamanız gerekir. (Veya senaryo backordered ürünleri işleme mantığı gerektirebilir.) Bir kuramsal tek parça sürümünde bu uygulama, sıralama alt sistemi yalnızca bir ACID işlemi kullanılabilir hisse senedi denetleyin, Siparişler tablosunda sırasını oluşturmak ve kullanılabilir Ürünler tablosu stokta güncelleştirmek için kullanabilirsiniz.
 
 Ancak, bir mikro hizmet tabanlı uygulama sipariş ve ürün tablolarını ilgili kendi mikro hizmetin sahibi olur. Şekil 4-9'da gösterildiği gibi hiçbir mikro hizmet kendi işlem ya da sorguları, başka bir mikro hizmet tarafından sahip olunan veritabanları hiç olmadığı kadar içermelidir.
 
@@ -51,7 +51,7 @@ Ancak, bir mikro hizmet tabanlı uygulama sipariş ve ürün tablolarını ilgil
 
 **Şekil 4-9**. Bir mikro hizmet, bir tablodaki başka bir mikro hizmet doğrudan erişemez
 
-Ürünler tablosu Kataloğu mikro hizmet tarafından sahiplenildiğinden sıralama mikro hizmet Ürünler tablosu doğrudan güncelleştirmelidir değil. Katalog mikro hizmet için bir güncelleştirme yapmak için sıralama mikro hizmet yalnızca sürekli tümleştirme olayları (ileti ve olay tabanlı iletişim) gibi zaman uyumsuz iletişim kullanmanız gerekir. Bu, nasıl [hizmetine](http://aka.ms/eshoponcontainers) başvuru uygulaması, bu tür bir güncelleştirme gerçekleştirir.
+Ürünler tablosu Kataloğu mikro hizmet tarafından sahiplenildiğinden sıralama mikro hizmet Ürünler tablosu doğrudan güncelleştirmelidir değil. Katalog mikro hizmet için bir güncelleştirme yapmak için sıralama mikro hizmet yalnızca sürekli tümleştirme olayları (ileti ve olay tabanlı iletişim) gibi zaman uyumsuz iletişim kullanmanız gerekir. Bu, nasıl [hizmetine](https://aka.ms/eshoponcontainers) başvuru uygulaması, bu tür bir güncelleştirme gerçekleştirir.
 
 Tarafından belirtildiği gibi [CAP Teoremi](https://en.wikipedia.org/wiki/CAP_theorem), ACID güçlü tutarlılık ve kullanılabilirlik arasında seçim yapmanız gerekir. Mikro hizmet tabanlı çoğu senaryoda, kullanılabilirlik ve güçlü tutarlılık aksine yüksek ölçeklenebilirlik talep. Görev açısından kritik uygulamalar kalması gereken ve çalışan ve geliştiricilerin güçlü tutarlılık zayıf veya nihai tutarlılık ile çalışmaya yönelik teknikleri kullanarak çalışabilir. Çoğu mikro hizmet tabanlı mimari tarafından uygulanan yaklaşıma budur.
 

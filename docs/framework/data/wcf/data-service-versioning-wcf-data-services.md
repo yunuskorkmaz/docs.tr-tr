@@ -6,12 +6,12 @@ helpviewer_keywords:
 - versioning [WCF Data Services]
 - WCF Data Services, versioning
 ms.assetid: e3e899cc-7f25-4f67-958f-063f01f79766
-ms.openlocfilehash: c71e42d644b03f16cdee944d52ea1a0e3868b9fc
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 9a92346267012d3651d04648b357bbf530097e34
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43255801"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484743"
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>Veri Hizmeti sürümü oluşturma (WCF Data Services)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Veri Hizmetleri oluşturun, böylece istemciler URI'lerini kullanarak kaynakları, bir veri modelini temel olarak veri erişim sağlar. OData hizmet işlemleri tanımı da destekler. İlk dağıtım ve potansiyel olarak kendi ömürlerine sırasında birkaç kez sonra çeşitli iş gereksinimlerini, bilgi teknolojisi gereksinimlerini değiştirme gibi nedenlerle, değiştirilecek veya diğer sorunları gidermek için şu veri hizmetlerini gerekebilir. Mevcut bir veri hizmetine değişiklik yaptığınızda olup verilerinizi yeni bir sürümü tanımlamak dikkate almanız gereken hizmet ve istemci uygulamalarınız üzerindeki etkiyi en aza indirmek en iyi nasıl. Bu konu, ne zaman ve nasıl bir veri hizmeti, yeni bir sürümünü oluşturmak yönergeler sağlar. WCF Veri Hizmetleri bir exchange istemcileri ve farklı sürümlerini OData protokolünü destekleyen veri hizmetleri arasında nasıl işlediğini açıklar.
@@ -53,7 +53,7 @@ ms.locfileid: "43255801"
 ## <a name="odata-protocol-versions"></a>OData protokol sürümleri
  OData yeni sürümlerini yayımlanan gibi istemci uygulamaları aynı veri hizmeti tarafından desteklenen OData protokolü sürümünü kullanmıyor olabilirsiniz. Daha eski bir istemci uygulama, OData daha yeni bir sürümünü destekleyen bir veri hizmeti erişebilir. Bir istemci uygulaması da erişiliyor veri hizmeti daha yeni bir sürümü, OData destekler WCF Veri Hizmetleri İstemci Kitaplığı'nın daha yeni bir sürümü kullanıyor olabilirsiniz.
 
- WCF Veri Hizmetleri OData gibi sürüm oluşturma senaryoları işlemek için sağlanan desteğin yararlanır. Oluşturma ve veri modelinin meta verilerini kullanarak istemci OData veri sürümünden farklı bir sürüm kullandığında, istemci veri hizmeti sınıfları oluşturma desteği de mevcuttur hizmeti kullanır. Daha fazla bilgi için [OData: Protokolü sürüm](http://go.microsoft.com/fwlink/?LinkId=186071).
+ WCF Veri Hizmetleri OData gibi sürüm oluşturma senaryoları işlemek için sağlanan desteğin yararlanır. Oluşturma ve veri modelinin meta verilerini kullanarak istemci OData veri sürümünden farklı bir sürüm kullandığında, istemci veri hizmeti sınıfları oluşturma desteği de mevcuttur hizmeti kullanır. Daha fazla bilgi için [OData: Protokolü sürüm](https://go.microsoft.com/fwlink/?LinkId=186071).
 
 ### <a name="version-negotiation"></a>Sürüm belirleme
  Veri Hizmeti istemci tarafından istenen sürümünden bağımsız olarak hizmeti tarafından kullanılacak olan OData protokolü en yüksek sürümü tanımlamak için yapılandırılabilir. Belirterek bunu yapabilirsiniz bir <xref:System.Data.Services.Common.DataServiceProtocolVersion> değerini <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> özelliği <xref:System.Data.Services.DataServiceBehavior> veri hizmeti tarafından kullanılır. Daha fazla bilgi için [veri hizmeti yapılandırma](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md).
@@ -65,13 +65,13 @@ ms.locfileid: "43255801"
 |OData protokolü sürümü|Sunulan destek...|
 |-----------------------------------------------------------------------------------|----------------------------|
 |Sürüm 1|-   [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Hizmet Paketi 1 (SP1)<br />-   [!INCLUDE[silverlight](../../../../includes/silverlight-md.md)] sürüm 3|
-|Sürüm 2|-   [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]<br />-Bir güncelleştirme [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] SP1. Güncelleştirmeyi yükleyip [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=158125).<br />-   [!INCLUDE[silverlight](../../../../includes/silverlight-md.md)] sürüm 4|
-|sürüm 3|- İndirip destekleyen OData sürümü 3 yayın öncesi bir sürümü yükleyin [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=203885).|
+|Sürüm 2|-   [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]<br />-Bir güncelleştirme [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] SP1. Güncelleştirmeyi yükleyip [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=158125).<br />-   [!INCLUDE[silverlight](../../../../includes/silverlight-md.md)] sürüm 4|
+|sürüm 3|- İndirip destekleyen OData sürümü 3 yayın öncesi bir sürümü yükleyin [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=203885).|
 
 ### <a name="metadata-versions"></a>Meta veri sürümleri
- WCF Veri Hizmetleri, varsayılan olarak, bir veri modeli temsil etmek için CSDL 1.1 sürümünü kullanır. Bu her zaman bir yansıma sağlayıcısı veya özel veri hizmeti sağlayıcısı dayalı veri modelleri için geçerlidir. Ancak, ne zaman veri modeli tanımlanmıştır kullanarak [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], CSDL sürümünü döndürülen tarafından kullanılan sürümü aynı [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]. CSDL sürümü ad alanı tarafından belirlenir [şema öğesi](http://msdn.microsoft.com/library/396074d8-f99c-4f50-a073-68bce848224f). Daha fazla bilgi için bkz: belirtimi [ \[MC CSDL\]: kavramsal şema tanım dosyası biçimi](http://go.microsoft.com/fwlink/?LinkId=159072).
+ WCF Veri Hizmetleri, varsayılan olarak, bir veri modeli temsil etmek için CSDL 1.1 sürümünü kullanır. Bu her zaman bir yansıma sağlayıcısı veya özel veri hizmeti sağlayıcısı dayalı veri modelleri için geçerlidir. Ancak, ne zaman veri modeli tanımlanmıştır kullanarak [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], CSDL sürümünü döndürülen tarafından kullanılan sürümü aynı [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]. CSDL sürümü ad alanı tarafından belirlenir [şema öğesi](https://msdn.microsoft.com/library/396074d8-f99c-4f50-a073-68bce848224f). Daha fazla bilgi için bkz: belirtimi [ \[MC CSDL\]: kavramsal şema tanım dosyası biçimi](https://go.microsoft.com/fwlink/?LinkId=159072).
 
- `DataServices` Döndürülen meta veri öğesi de içeren bir `DataServiceVersion` aynı değer özniteliği olarak `DataServiceVersion` yanıt iletisinde üst bilgi. İstemci uygulamaları gibi **hizmet Başvurusu Ekle** iletişim kutusu Visual Studio'da veri hizmetini barındıran WCF Data Services sürümü ile düzgün çalışmak istemci veri hizmeti sınıfları oluşturmak için bu bilgileri kullanın. Daha fazla bilgi için [OData: Protokolü sürüm](http://go.microsoft.com/fwlink/?LinkId=186071).
+ `DataServices` Döndürülen meta veri öğesi de içeren bir `DataServiceVersion` aynı değer özniteliği olarak `DataServiceVersion` yanıt iletisinde üst bilgi. İstemci uygulamaları gibi **hizmet Başvurusu Ekle** iletişim kutusu Visual Studio'da veri hizmetini barındıran WCF Data Services sürümü ile düzgün çalışmak istemci veri hizmeti sınıfları oluşturmak için bu bilgileri kullanın. Daha fazla bilgi için [OData: Protokolü sürüm](https://go.microsoft.com/fwlink/?LinkId=186071).
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 

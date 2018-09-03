@@ -9,28 +9,28 @@ helpviewer_keywords:
 - size [Windows Forms], controls
 - Windows Forms controls, size
 ms.assetid: d2dba441-a8c0-4705-b8e8-2e5d86d6e7ec
-ms.openlocfilehash: 1f9db293cdfbba0be960513034cfe122d80d66bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dbec87c0746962396a3088751803a6091ecfcb48
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533932"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480097"
 ---
 # <a name="how-to-resize-controls-on-windows-forms"></a>Nasıl yapılır: Windows Formlarında Denetimleri Yeniden Boyutlandırma
-Tek denetimleri yeniden boyutlandırma ve aynı veya farklı türdeki birden çok denetim gibi boyutlandırabilirsiniz <xref:System.Windows.Forms.Button> ve <xref:System.Windows.Forms.GroupBox> kontrol eder.  
+Tek denetimleri yeniden boyutlandırma ve birden çok denetim aynı veya farklı tür gibi boyutlandırabilirsiniz <xref:System.Windows.Forms.Button> ve <xref:System.Windows.Forms.GroupBox> kontrol eder.  
   
-### <a name="to-resize-a-control"></a>Denetim yeniden boyutlandırmak için  
+### <a name="to-resize-a-control"></a>Bir denetimi yeniden boyutlandırmak için  
   
-1.  Yeniden boyutlandırılıp ve sekiz boyutlandırma birini sürükleyin denetimi tıklatın.  
+1.  Denetim yeniden boyutlandırılıp ve sekiz boyutlandırma tutamaçlarından birinin sürükleyin tıklayın.  
   
     > [!NOTE]
-    >  Denetimi seçin ve denetim bir piksel aynı anda yeniden boyutlandırmak için SHIFT tuşunu basılı tutarken ok tuşlarına basın. Büyük artışlarla denetimi yeniden boyutlandırmak için SHIFT ve CTRL tuşlarını basılı tutarak sağa veya aşağı ok tuşlarına basın.  
+    >  Denetimi seçin ve denetim bir piksel aynı anda yeniden boyutlandırmak için SHIFT tuşunu basılı tutarak ok tuşlarına basın. Büyük artışlarla yeniden boyutlandırma SHIFT ve CTRL tuşları basılı tutarak aşağı veya sağ ok tuşlarına basın.  
   
-### <a name="to-resize-multiple-controls-on-a-form"></a>Bir form üzerinde birden çok denetimler yeniden boyutlandırmak için  
+### <a name="to-resize-multiple-controls-on-a-form"></a>Form üzerindeki birden çok denetim yeniden boyutlandırmak için  
   
-1.  CTRL veya SHIFT tuşuna basılı tutun ve yeniden boyutlandırmak için istediğiniz denetimleri seçin. Seçtiğiniz ilk denetim boyutunu diğer denetimler için kullanılır.  
+1.  CTRL veya SHIFT tuşunu basılı tutun ve yeniden boyutlandırmak istediğiniz denetimleri seçin. Seçtiğiniz ilk denetiminin boyutunu, diğer denetimler için kullanılır.  
   
-2.  Üzerinde **biçimi** menüsünde seçin **olun aynı boyutta**ve dört seçenekten birini belirleyin. İlk üç komutları denetimi ilk seçili eşleşecek şekilde denetimleri boyutlarını değiştirin.  
+2.  Üzerinde **biçimi** menüsünde seçin **aynı boyutta yapın**ve dört seçenekten birini seçin. İlk üç komutları boyutları denetimleri denetimi ilk seçili eşleşecek şekilde değiştirin.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/index.md)  
@@ -38,4 +38,4 @@ Tek denetimleri yeniden boyutlandırma ve aynı veya farklı türdeki birden ço
  [Ayrı Windows Forms Denetimlerini Etiketleme ve Kısayollarını Sunma](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
  [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  [İşleve Göre Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)  
- [Nasıl yapılır: Tasarımcı kullanarak Windows Formları yeniden boyutlandırma](http://msdn.microsoft.com/library/3fe57c94-851c-45d7-a6f6-6b85f3c4a104)
+ [Nasıl yapılır: Tasarımcı kullanarak Windows formlarını yeniden boyutlandırma](https://msdn.microsoft.com/library/3fe57c94-851c-45d7-a6f6-6b85f3c4a104)

@@ -1,25 +1,25 @@
 ---
-title: SQL Server (ADO.NET) örneklerini numaralandırma
+title: SQL Server (ADO.NET) numaralandırma örnekleri
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: ddf1c83c-9d40-45e6-b04d-9828c6cbbfdc
-ms.openlocfilehash: d9456926b228fadca940f6c4698829494382e237
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 043f156f96d6ebc9ac5a6487287ad327928d9bf0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355528"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481794"
 ---
-# <a name="enumerating-instances-of-sql-server-adonet"></a>SQL Server (ADO.NET) örneklerini numaralandırma
-SQL Server geçerli ağ içinde SQL Server örneklerini bulmak için uygulama izin verir. <xref:System.Data.Sql.SqlDataSourceEnumerator> Sınıfı sağlayan uygulama geliştiricisi, bu bilgileri sunan bir <xref:System.Data.DataTable> görünür tüm sunucuları hakkında bilgi içeren. Bu tablo bir kullanıcı yeni bir bağlantı oluşturmak çalıştığında sağlanan listesiyle eşleşen ve üzerindeki tüm kullanılabilir sunuculara içeren aşağı açılır liste genişleten ağda kullanılabilir sunucu örneklerinin bir listesini içeren döndürülen **bağlantı Özellikler** iletişim kutusu. Gösterilen sonuçları her zaman eksiksiz değildir.  
+# <a name="enumerating-instances-of-sql-server-adonet"></a>SQL Server (ADO.NET) numaralandırma örnekleri
+SQL Server, geçerli ağ içinde SQL Server örneklerini bulmak için uygulamaların izin verir. <xref:System.Data.Sql.SqlDataSourceEnumerator> Sınıfı sağlayarak uygulama geliştiricisi, bu bilgileri sunan bir <xref:System.Data.DataTable> görünür olan tüm sunucular hakkında bilgiler içeren. Bu tablo, ağ üzerinde yer alan bir kullanıcı yeni bir bağlantı oluşturmak çalıştığında sağlanan listesiyle eşleşen ve üzerinde kullanılabilen tüm sunucuları içeren aşağı açılan liste genişletir kullanılabilir sunucu örneklerinin bir listesini içeren döndürülen **bağlantı Özellikleri** iletişim kutusu. Görüntülenen sonuçlar her zaman eksiksiz değildir.  
   
 > [!NOTE]
->  Olarak çoğu Windows Hizmetleri ile mümkün olan en küçük ayrıcalıklarıyla SQL Browser hizmeti çalıştırmak en iyisidir. SQL Browser hizmeti ve davranışını yönetme hakkında daha fazla bilgi için SQL Server Books Online'a bakın.  
+>  Olarak çoğu Windows hizmetlerle olabildiğince az ayrıcalıklarıyla SQL Browser hizmeti çalıştırmak en iyisidir. SQL Browser hizmeti ve davranışını yönetmek nasıl daha fazla bilgi için SQL Server Books Online'a bakın.  
   
 ## <a name="retrieving-an-enumerator-instance"></a>Numaralandırıcı örnek alıyor  
- Kullanılabilir SQL Server örnekleri hakkında bilgi içeren tablo almak için önce paylaşılan/statik kullanarak bir numaralandırıcı almak gerekir <xref:System.Data.Sql.SqlDataSourceEnumerator.Instance%2A> özelliği:  
+ Kullanılabilir SQL Server örnekleri hakkında bilgi içeren tablo almak için ilk paylaşılan /'using static Numaralandırıcı alınması gerekir <xref:System.Data.Sql.SqlDataSourceEnumerator.Instance%2A> özelliği:  
   
 ```vb  
 Dim instance As System.Data.Sql.SqlDataSourceEnumerator = _  
@@ -31,7 +31,7 @@ System.Data.Sql.SqlDataSourceEnumerator instance =
    System.Data.Sql.SqlDataSourceEnumerator.Instance  
 ```  
   
- Statik örnek aldıktan sonra çağırabilirsiniz <xref:System.Data.Sql.SqlDataSourceEnumerator.GetDataSources%2A> döndürür yöntemi bir <xref:System.Data.DataTable> kullanılabilir sunucuları hakkında bilgi içeren:  
+ Statik örneği aldıktan sonra çağırabilirsiniz <xref:System.Data.Sql.SqlDataSourceEnumerator.GetDataSources%2A> döndüren yöntemi bir <xref:System.Data.DataTable> kullanılabilir sunucular hakkında bilgiler içeren:  
   
 ```vb  
 Dim dataTable As System.Data.DataTable = instance.GetDataSources()  
@@ -41,27 +41,27 @@ Dim dataTable As System.Data.DataTable = instance.GetDataSources()
 System.Data.DataTable dataTable = instance.GetDataSources();  
 ```  
   
- Yöntemi çağrısından döndürülen tablosu da içeren şu sütunları içerir `string` değerler:  
+ Yöntem çağrısından döndürülen tablo tümünü içeren şu sütunları içeren `string` değerleri:  
   
 |Sütun|Açıklama|  
 |------------|-----------------|  
-|**serverName**|Sunucunun adıdır.|  
-|**InstanceName**|Sunucu örneğinin adı. Sunucunun varsayılan örneği olarak çalışıyorsa, boş.|  
-|**IsClustered**|Sunucu bir kümenin parçası olup olmadığını gösterir.|  
+|**SunucuAdı**|Sunucusunun adı.|  
+|**InstanceName**|Sunucu örneğinin adı. Sunucu varsayılan örnek olarak çalışıyorsa boş.|  
+|**IsClustered**|Sunucu bir kümenin parçası olup olmadığını belirtir.|  
 |**Sürüm**|Sunucu sürümü. Örneğin:<br /><br /> -9.00.x ([!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)])<br />-   10.0.xx ([!INCLUDE[ssKatmai](../../../../../includes/sskatmai-md.md)])<br />-10.50.x ([!INCLUDE[ssKilimanjaro](../../../../../includes/sskilimanjaro-md.md)])<br />-11.0.xx (SQL Server 2012)|  
   
-## <a name="enumeration-limitations"></a>Numaralandırma sınırlamaları  
- Tüm kullanılabilir sunuculara olabilir ya da listelenmez. Liste zaman aşımları ve ağ trafiğini gibi etkenlere bağlı olarak değişebilir. Bu listenin iki ardışık çağrılarını farklı olması neden olabilir. Yalnızca aynı ağ üzerinde sunucuları listelenir. Yayın paketleri genellikle yönlendiriciler, listelenen bir sunucu göremeyebilirsiniz neden olduğu çapraz olmaz ancak çağrıları arasında dengeli olur.  
+## <a name="enumeration-limitations"></a>Sabit listesi sınırlamaları  
+ Tüm kullanılabilir sunucular olabilir ya da listelenmez. Liste, zaman aşımları ve ağ trafiği gibi faktörlere bağlı olarak değişebilir. Bu iki ardışık çağrılarda farklı olacak şekilde liste neden olabilir. Yalnızca aynı ağ üzerinde sunucuları listelenir. Yayın paketleri genellikle yönlendiriciler, listelenen bir sunucu göremeyebilirsiniz neden olduğu geçiş olmaz ancak çağrıları arasında tutarlı olur.  
   
- Listelenen sunucuların olabilir veya ek bilgiler gibi olmayabilir `IsClustered` ve sürüm. Bu listeyi nasıl edinilen bağlıdır. SQL Server browser hizmeti aracılığıyla listelenen sunucuları yalnızca adını listeler Windows altyapısı bulunan olandan daha fazla ayrıntı sahip olur.  
+ Listelenen sunucuları gibi ek bilgi olmayabilir veya `IsClustered` ve sürüm. Bu listenin nasıl edinilen bağlıdır. SQL Server browser hizmeti listelenen sunucuları yalnızca adını listeler Windows altyapısı aracılığıyla bulunan olandan daha fazla ayrıntı sahip olur.  
   
 > [!NOTE]
->  Sunucu numaralandırma, yalnızca tam güvende çalıştırılırken kullanılabilir. Kısmen güvenilen bir ortamda çalışan derlemeleri edemeyecek, kullanılacak sahip oldukları olsa bile <xref:System.Data.SqlClient.SqlClientPermission> kod erişim güvenliği (CAS) izni.  
+>  Sunucu sabit listesi, yalnızca tam güvende çalıştırıldığında, kullanılabilir. Sahip oldukları bile kısmen güvenilen bir ortamda çalışan derlemeler, kullanmanız mümkün olmayacak <xref:System.Data.SqlClient.SqlClientPermission> kod erişim güvenliği (CAS) iznini.  
   
- SQL Server için bilgileri sağlar <xref:System.Data.Sql.SqlDataSourceEnumerator> SQL Browser adlı bir dış Windows hizmeti kullanımı ile. Bu hizmet varsayılan olarak etkindir, ancak yöneticilerin kapatın veya, sunucu örneği için bu sınıf görünmez yapma devre dışı bırakın.  
+ SQL Server için bilgileri sağlar <xref:System.Data.Sql.SqlDataSourceEnumerator> SQL Browser adlı bir dış Windows hizmet kullanımı. Bu hizmet, varsayılan olarak etkindir, ancak yöneticilerin kapatmak veya, sunucu örneği için bu sınıf görünmez yapma devre dışı bırakın.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki konsol uygulaması tüm görünür SQL Server örnekleri hakkında bilgiler alır ve konsol penceresinde bilgileri görüntüler.  
+ Aşağıdaki konsol uygulamasında tüm görünür SQL Server örnekleri hakkında bilgi alır ve bilgileri konsol penceresinde görüntüler.  
   
 ```vb  
 Imports System.Data.Sql  
@@ -126,4 +126,4 @@ class Program
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [SQL Server ve ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

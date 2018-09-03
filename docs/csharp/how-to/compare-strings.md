@@ -5,18 +5,19 @@ ms.date: 03/20/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: e9f4216af6073a352bef1efb59eea0ddeda5fc4b
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 3c841a1152613ec877bb6172dc8d053bf060b33b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961312"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484108"
 ---
-# <a name="how-to-compare-strings-in-c"></a>C# dizeleri karşılaştırma #
+# <a name="how-to-compare-strings-in-c"></a>C dizeleri karşılaştırma\#
 
 İki sorulardan birini yanıt için dizeleri karşılaştırmak: "Bu iki dizenin eşit olup?" veya "hangi sırada bu dizeler sıralanırken bunları yerleştirilmesi gerektiğini?"
 
-Bu iki soruları dize karşılaştırmaları etkileyen faktörler tarafından karmaşık: 
+Bu iki soruları dize karşılaştırmaları etkileyen faktörler tarafından karmaşık:
+
 - Bir sıralı veya dilsel karşılaştırma seçebilirsiniz.
 - Servis talebi önemlidir, seçebilirsiniz.
 - Kültüre özel karşılaştırma seçebilirsiniz.
@@ -36,14 +37,15 @@ Dizeleri karşılaştırırken sıralı karşılaştırmalar, dilsel kurallar di
 
 ## <a name="case-insensitive-ordinal-comparisons"></a>Büyük küçük harf duyarsız sıralı karşılaştırmalar
 
-<xref:System.String.Equals%2A?displayProperty=nameWithType> Yöntemi belirtmenizi sağlar bir <xref:System.StringComparison> değerini <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> büyük küçük harf duyarsız bir karşılaştırma belirtmek için. Ayrıca statik olan <xref:System.String.Compare%2A> büyük küçük harf duyarsız karşılaştırmalar belirten bir Boole bağımsız değişkeni içeren bir yöntem. Bu, aşağıdaki kodda gösterilmiştir:
+<xref:System.String.Equals%2A?displayProperty=nameWithType> Yöntemi belirtmenizi sağlar bir <xref:System.StringComparison> değeri <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType>
+büyük küçük harf duyarsız bir karşılaştırma belirtmek için. Ayrıca statik olan <xref:System.String.Compare%2A> büyük küçük harf duyarsız karşılaştırmalar belirten bir Boole bağımsız değişkeni içeren bir yöntem. Bu, aşağıdaki kodda gösterilmiştir:
 
 [!code-csharp-interactive[Comparing strings ignoring case](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#2)]
 
 ## <a name="linguistic-comparisons"></a>Dil karşılaştırmaları
 
 Ayrıca dizeleri dilsel kurallar için geçerli kültürü kullanarak sıralanabilir.
-Bu bazen "sözcük sıralama düzeninde." adlandırılır Dil karşılaştırması gerçekleştirdiğinizde, bazı alfasayısal olmayan Unicode karakterlerine atanan özel ağırlıkların olabilir. Örneğin, kısa çizgi "-" "İleri co-op" ve "coop" birbirinin yanına sıralama düzeninde görüntülenir kendisine atanmış çok küçük ağırlığa sahip olabilir. Ayrıca, bazı Unicode karakterler dizisi alfasayısal characterss ile eşdeğer olabilir. Aşağıdaki örnek "Bunlar içinde Sokak dans." ifadesini kullanır. Almanca 'ß' ve "ss". Dilsel olarak (Windows içinde), "ss" için Almanca Essetz eşittir: "en-US" ve "de-DE" hem kültürler 'ß' karakter. 
+Bu bazen "sözcük sıralama düzeninde." adlandırılır Dil karşılaştırması gerçekleştirdiğinizde, bazı alfasayısal olmayan Unicode karakterlerine atanan özel ağırlıkların olabilir. Örneğin, kısa çizgi "-" "İleri co-op" ve "coop" birbirinin yanına sıralama düzeninde görüntülenir kendisine atanmış çok küçük ağırlığa sahip olabilir. Ayrıca, bazı Unicode karakterler, alfasayısal bir karakter dizisi için eşdeğer olabilir. Aşağıdaki örnek "Bunlar içinde Sokak dans." ifadesini kullanır. Almanca 'ß' ve "ss". Dilsel olarak (Windows içinde), "ss" için Almanca Essetz eşittir: "en-US" ve "de-DE" hem kültürler 'ß' karakter.
 
 [!code-csharp-interactive[Comparing strings using linguistic rules](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#3)]
 
@@ -86,7 +88,7 @@ Dil comparisions geçerli kültürü temel bağımlıdır ve işletim sistemi ba
 
 Aşağıdaki örnekler nasıl sıralanacağını gösterir ve geçerli kültürü temel bağımlı bir dilsel karşılaştırma kullanarak bir diziye dizelerini arayın. Statik kullandığınız <xref:System.Array> ele yöntemleri bir <xref:System.StringComparer?displayProperty=nameWithType> parametresi.
 
-Bu örnek geçerli kültürü kullanarak bir dize dizisi sıralama gösterir: 
+Bu örnek geçerli kültürü kullanarak bir dize dizisi sıralama gösterir:
 
 [!code-csharp-interactive[Sorting an array of strings](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#5)]
 
@@ -104,7 +106,7 @@ Sıralanmış sonra dizeleri listesini ikili arama ile aranabilir. Aşağıdaki 
 
 [!code-csharp-interactive[csProgGuideStrings#11](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#8)]
 
-Her zaman aynı türde karşılaştırma sıralama ve arama için kullandığınızdan emin olun. Farklı karşılaştırma türleri, sıralama ve arama üretir beklenmeyen sonuçlar için kullanma. 
+Her zaman aynı türde karşılaştırma sıralama ve arama için kullandığınızdan emin olun. Farklı karşılaştırma türleri, sıralama ve arama üretir beklenmeyen sonuçlar için kullanma.
 
 Koleksiyon sınıfları gibi <xref:System.Collections.Hashtable?displayProperty=nameWithType>, <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>, ve <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> ele oluşturuculara sahip bir <xref:System.StringComparer?displayProperty=nameWithType> öğeleri veya anahtarlarının türü parametresi `string`. Genel olarak, mümkün olduğunda bu oluşturucular kullanın ve gerekir ya da belirtin <xref:System.StringComparer.Ordinal?displayProperty=nameWithType> veya <xref:System.StringComparer.OrdinalIgnoreCase?displayProperty=nameWithType>.
 
@@ -118,8 +120,9 @@ Koleksiyon sınıfları gibi <xref:System.Collections.Hashtable?displayProperty=
 > Dizeleri eşitlik için test ettiğinizde, ne tür bir karşılaştırma gerçekleştirmek istiyorsanız açıkça belirtmeniz yöntemleri kullanmanız gerekir. Kodunuzu daha sürdürülebilir ve okunabilir. Yöntemlerinin aşırı yüklemelerini kullanın <xref:System.String?displayProperty=nameWithType> ve <xref:System.Array?displayProperty=nameWithType> sınıfları süren bir <xref:System.StringComparison> numaralandırma parametre. Gerçekleştirilecek karşılaştırma türünü belirt Kullanmaktan kaçının `==` ve `!=` eşitlik için test ettiğinizde işleçleri. <xref:System.String.CompareTo%2A?displayProperty=nameWithType> Örnek yöntemleri her zaman sıralı büyük küçük harfe duyarlı karşılaştırma yapar. Bunlar birincil dizeleri alfabetik olarak sıralamak için uygundur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
- <xref:System.Globalization.CultureInfo?displayProperty=nameWithType>  
- <xref:System.StringComparer?displayProperty=nameWithType>  
- [Dizeler](../programming-guide/strings/index.md)  
- [Dizeleri Karşılaştırma](../../standard/base-types/comparing.md)  
- [Uygulamaları Genelleştirme ve Yerelleştirme](/visualstudio/ide/globalizing-and-localizing-applications)
+
+- <xref:System.Globalization.CultureInfo?displayProperty=nameWithType>  
+- <xref:System.StringComparer?displayProperty=nameWithType>  
+- [Dizeler](../programming-guide/strings/index.md)  
+- [Dizeleri Karşılaştırma](../../standard/base-types/comparing.md)  
+- [Uygulamaları Genelleştirme ve Yerelleştirme](/visualstudio/ide/globalizing-and-localizing-applications)

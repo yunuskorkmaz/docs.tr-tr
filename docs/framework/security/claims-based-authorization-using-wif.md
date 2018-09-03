@@ -1,51 +1,51 @@
 ---
-title: Talep tabanlı yetkilendirme WIF kullanma
+title: Yetkilendirme WIF kullanarak talep tabanlı
 ms.date: 03/30/2017
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 1d2972ccef6829a2b7a052ba30258086443bd833
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 430959d50bf66801da2e1203496e77ad0f291a0e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398631"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485888"
 ---
-# <a name="claims-based-authorization-using-wif"></a>Talep tabanlı yetkilendirme WIF kullanma
+# <a name="claims-based-authorization-using-wif"></a>Yetkilendirme WIF kullanarak talep tabanlı
 Bağlı taraf uygulamasında, yetkilendirme kimliği doğrulanmış bir kimliğin hangi kaynaklara erişebileceğini ve bu kaynaklar üzerinde hangi işlemleri gerçekleştirebileceğini belirler. Uygunsuz veya zayıf yetkilendirme, bilgi ifşasına ve verilerin izinsiz kullanımına neden olur. Bu konuda, Windows Identity Foundation (WIF) ve Microsoft Azure Erişim Denetimi Hizmeti (ACS) gibi Güvenlik Belirteci Hizmeti (STS) kullanılarak talep kullanan ASP.NET web uygulamaları ve hizmetleri için yetkilendirme uygulama yaklaşımları açıklanmaktadır.  
   
 ## <a name="overview"></a>Genel Bakış  
- İlk sürümünden bu yana, .NET Framework yetkilendirmenin uygulanması için esnek bir mekanizma sunmuştur. Bu mekanizma iki basit arabirimlere dayalı —**IPrincipal** ve **IIdentity**. Somut uygulamaları **IIdentity** kimliği doğrulanmış bir kullanıcı temsil eder. Örneğin, **WindowsIdentity** uygulamasını temsil eder, Active Directory tarafından kimliği doğrulanmış bir kullanıcı ve **Genericıdentity** özel bir kimliği doğrulanmış bir kullanıcı temsil eder kimlik doğrulama işlemi. Somut uygulamaları **IPrincipal** bağlı olarak rol deposu rollerini kullanarak izinlerini denetlemek için Yardım. Örneğin, **WindowsPrincipal** denetler **WindowsIdentity** Active Directory gruplarının üyeliği için. Bu onay çağırarak gerçekleştirilen **IsInRole** yöntemi **IPrincipal** arabirimi. Rollere göre erişim denetimine Rol Tabanlı Erişim Denetimi (RBAC) adı verilir. Daha fazla bilgi için bkz: [rol tabanlı erişim denetimi](../../../docs/framework/security/claims-based-authorization-using-wif.md#BKMK_1).  Talepler, benzer, rol tabanlı yetkilendirme mekanizmalarını desteklemek amacıyla roller hakkında bilgi taşımak için kullanılabilir.  
+ İlk sürümünden bu yana, .NET Framework yetkilendirmenin uygulanması için esnek bir mekanizma sunmuştur. Bu mekanizma, iki basit arabirimi tabanlı —**IPrincipal** ve **IIdentity**. In somut uygulamaları **IIdentity** kimliği doğrulanmış bir kullanıcıyı temsil eder. Örneğin, **WindowsIdentity** uygulamasını Active Directory tarafından kimliği doğrulanmış bir kullanıcıyı temsil eder ve **Genericıdentity** özel bir kimliğe doğrulanan bir kullanıcıyı temsil eder kimlik doğrulama işlemi. In somut uygulamaları **IPrincipal** rol deposuna göre rolleri kullanarak izinlerin denetlenmesine yardımcı olur. Örneğin, **WindowsPrincipal** denetler **WindowsIdentity** Active Directory gruplarında üyelik için. Bu onay çağrılarak gerçekleştirilir **IPrincipal** metodunda **IPrincipal** arabirimi. Rollere göre erişim denetimine Rol Tabanlı Erişim Denetimi (RBAC) adı verilir. Daha fazla bilgi için [rol tabanlı erişim denetimi](../../../docs/framework/security/claims-based-authorization-using-wif.md#BKMK_1).  Talepler, benzer, rol tabanlı yetkilendirme mekanizmalarını desteklemek amacıyla roller hakkında bilgi taşımak için kullanılabilir.  
   
- Talepler, rollerin ötesinde daha karmaşık yetkilendirme kararlarının verilmesini sağlamak için de kullanılabilir. Talepler kullanıcı - yaşı, posta kodu, ayakkabı boyutu vb. hakkında neredeyse tüm bilgi temel alabilir. Rastgele taleplerine dayalı erişim denetimi mekanizması talep tabanlı yetkilendirme denir. Daha fazla bilgi için bkz: [talep tabanlı yetkilendirme](../../../docs/framework/security/claims-based-authorization-using-wif.md#BKMK_2).  
+ Talepler, rollerin ötesinde daha karmaşık yetkilendirme kararlarının verilmesini sağlamak için de kullanılabilir. Talep kullanıcı - yaş, posta kodu, ayakkabı vb. hakkında neredeyse tüm bilgileri temel alabilir. Rasgele talepleri temel alan erişim denetimi mekanizmasına, beyana dayalı yetkilendirme denir. Daha fazla bilgi için [beyana dayalı yetkilendirme](../../../docs/framework/security/claims-based-authorization-using-wif.md#BKMK_2).  
   
 <a name="BKMK_1"></a>   
 ## <a name="role-based-access-control"></a>Rol Tabanlı Erişim Denetimi  
  RBAC, kullanıcı izinlerinin yönetildiği ve kullanıcı rollerine göre bir uygulama tarafından zorlanan yetkilendirme yaklaşımıdır. Kullanıcının bir eylemi gerçekleştirmesi gereken rolü varsa, erişim verilir; aksi takdirde, erişim engellenir.  
   
 ### <a name="iprincipalisinrole-method"></a>IPrincipal.IsInRole Yöntemi  
- Talep kullanan uygulamalarda RBAC yaklaşımı uygulamak için kullandığınız **IsInRole()** yönteminde **IPrinicpal** talep kullanan olmayan uygulamalarda gibi arabirim. Kullanmanın birkaç yolu vardır **IsInRole()** yöntemi:  
+ Talep kullanan uygulamalarda RBAC yaklaşımı uygulamak için kullanma **Isınrole()** yönteminde **Isınrole()** talep kullanmayan uygulamalarda olduğu gibi arabirim. Kullanmanın birkaç yolu vardır **Isınrole()** yöntemi:  
   
--   Açıkça çağrılması **IPrincipal.IsInRole("Administrator")**. Bu yaklaşımda, sonuç olarak Boole değeri elde edilir. Kendi koşullu deyimlerinizde kullanın. Kodunuzdaki herhangi bir yerde rasgele kullanılabilir.  
+-   Açıkça çağırma **gt;IPrincipal.ısınrole("Administrator")**. Bu yaklaşımda, sonuç olarak Boole değeri elde edilir. Kendi koşullu deyimlerinizde kullanın. Kodunuzdaki herhangi bir yerde rasgele kullanılabilir.  
   
--   Güvenlik talep kullanarak **PrincipalPermission.Demand()**. Bu yaklaşımda, talep karşılanmazsa sonuç olarak bir özel durum elde edilir. Bu, özel durum işleme stratejinizle uyumlu olmalıdır. Özel durumları atma Boole değeri döndürmek için kıyasla performans açısından daha pahalı olması. Bu, kodunuzdaki herhangi bir yerde kullanılabilir.  
+-   Güvenlik talebini kullanma **PrincipalPermission.Demand()**. Bu yaklaşımda, talep karşılanmazsa sonuç olarak bir özel durum elde edilir. Bu, özel durum işleme stratejinizle uyumlu olmalıdır. Özel durumları atma Boolean döndürmekle karşılaştırıldığında performans açısından çok daha pahalı olur. Bu, kodunuzdaki herhangi bir yerde kullanılabilir.  
   
--   Bildirim temelli özniteliklerini kullanarak **[PrincipalPermission (SecurityAction.Demand, Role = "Yönetici")]**. Bu yaklaşıma, yöntemleri donatmak için kullanıldığından bildirim temelli denir. Yöntem uygulamalarının içindeki kod bloklarında kullanılamaz. Talep karşılanmazsa sonuç olarak bir özel durum elde edilir. Özel durum işleme stratejinizle uyumlu olduğundan emin olmanız gerekir.  
+-   Bildirim temelli öznitelikleri kullanma **[PrincipalPermission (SecurityAction.Demand, Role = "Administrator")]**. Bu yaklaşıma, yöntemleri donatmak için kullanıldığından bildirim temelli denir. Yöntem uygulamalarının içindeki kod bloklarında kullanılamaz. Talep karşılanmazsa sonuç olarak bir özel durum elde edilir. Özel durum işleme stratejinizle uyumlu olduğundan emin olmanız gerekir.  
   
--   URL yetkilendirmesi kullanarak, kullanarak  **\<yetkilendirme >** bölümüne **web.config**. Bu yaklaşım, yetkilendirme URL düzeyinde yönetilirken uygundur. Bu, daha önce bahsedilenler arasında en genel düzeydir. Bu yaklaşımın avantajı, değişikliklerin yapılandırma dosyasında yapılması, yani değişiklikten yararlanmak için kodun derlenmesine gerek olmamasıdır.  
+-   URL yetkilendirmesi kullanma  **\<yetkilendirme >** konusundaki **web.config**. Bu yaklaşım, yetkilendirme URL düzeyinde yönetilirken uygundur. Bu, daha önce bahsedilenler arasında en genel düzeydir. Bu yaklaşımın avantajı, değişikliklerin yapılandırma dosyasında yapılması, yani değişiklikten yararlanmak için kodun derlenmesine gerek olmamasıdır.  
   
 ### <a name="expressing-roles-as-claims"></a>Rolleri Talepler Olarak İfade Etme  
- Zaman **IsInRole()** yöntemi çağrıldığında, geçerli kullanıcının bu rolün olup olmadığını görmek için yapılan bir denetim yoktur. Talep kullanan uygulamalarda, rol belirteçte kullanılabilir olması gereken bir rol talep türü olarak ifade edilir. Rol talep türü, aşağıdaki URI kullanılarak ifade edilir:  
+ Zaman **Isınrole()** yöntemi çağrıldığında, geçerli kullanıcının bu role sahip olup olmadığını görmek için yapılan bir denetim yoktur. Talep kullanan uygulamalarda, rol belirteçte kullanılabilir olması gereken bir rol talep türü olarak ifade edilir. Rol talep türü, aşağıdaki URI kullanılarak ifade edilir:  
   
  http://schemas.microsoft.com/ws/2008/06/identity/claims/role  
   
  Bir belirteci rol talep türüyle zenginleştirmenin birkaç yöntemi vardır:  
   
--   **Belirteç verme sırasında**. Bir kullanıcının kimliği doğrulandığında veya Federasyon sağlayıcısı Microsoft Azure erişim denetimi Hizmeti'nden (ACS) gibi kimlik sağlayıcısı STS tarafından rol talep verilebilir.  
+-   **Belirteç verilirken**. Bir kullanıcının kimliği doğrulandığında rol talebi kimlik sağlayıcısı STS veya Windows Azure Access Control Service (ACS) gibi Federasyon sağlayıcısı tarafından verilebilir.  
   
--   **Talep rolü türü ClaimsAuthenticationManager kullanarak rastgele taleplerine dönüştürme**. ClaimsAuthenticationManager, WIF'nin bir parçası olarak sunulan bir bileşendir. Uygulama başlattıklarında isteklerin kesilmesini sağlar, belirteçleri denetler ve talepleri ekleyerek, değiştirerek veya kaldırarak dönüştürür. Talep dönüştürme için ClaimsAuthenticationManager kullanma hakkında daha fazla bilgi için bkz: [nasıl yapılır: uygulama rol tabanlı erişim denetimi (RBAC) talep kullanan ASP.NET uygulaması kullanarak WIF ve ACS](http://go.microsoft.com/fwlink/?LinkID=247445) (http://go.microsoft.com/fwlink/?LinkID=247444).  
+-   **Rasgele talepleri ClaimsAuthenticationManager kullanarak talep rolü türüne dönüştürme**. ClaimsAuthenticationManager, WIF'nin bir parçası olarak sunulan bir bileşendir. Uygulama başlattıklarında isteklerin kesilmesini sağlar, belirteçleri denetler ve talepleri ekleyerek, değiştirerek veya kaldırarak dönüştürür. Talepleri dönüştürme için ClaimsAuthenticationManager'ı kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: uygulama rol tabanlı erişim denetimi (RBAC) talep kullanan ASP.NET Application Using WIF ve ACS](https://go.microsoft.com/fwlink/?LinkID=247445).  
   
--   **SamlSecurityTokenRequirement yapılandırma bölümünü kullanmayı rol türü için rasgele talep eşleme**— talep dönüştürme burada yapılır bildirim temelli bir yaklaşım yalnızca yapılandırmasını ve hiçbir kodlama kullanılarak gereklidir.  
+-   **SamlSecurityTokenRequirement yapılandırma bölümü kullanılarak bir rol türüyle rasgele talep eşleme**— talep dönüştürmenin burada yapılır bildirim temelli bir yaklaşım yalnızca yapılandırmasını ve kodlama kullanarak gereklidir.  
   
 <a name="BKMK_2"></a>   
 ## <a name="claims-based-authorization"></a>Beyana Dayalı Yetkilendirme  
@@ -61,4 +61,4 @@ Bağlı taraf uygulamasında, yetkilendirme kimliği doğrulanmış bir kimliği
   
 5.  Sonuç true ise erişim verilir, false ise engellenir. Örneğin, kural kullanıcının 21 yaşında veya daha yaşlı olmasını ve Washington eyaletinde yaşamasını gerektirebilir.  
   
- <xref:System.Security.Claims.ClaimsAuthorizationManager> Talep tabanlı yetkilendirme uygulamalarınızda karar mantığını harici hale getirerek için yararlıdır. ClaimsAuthorizationManager, .NET 4.5'in bir parçası olarak sunulan bir WIF bileşenidir. ClaimsAuthorizationManager, gelen taleplere göre yetkilendirme kararları vermek için gelen istekleri kesmenize ve istediğiniz mantığı uygulamanıza imkan tanır. Bu, yetkilendirme mantığının değiştirilmesi gerektiğinde önemli hale gelir. Bu durumda, ClaimsAuthorizationManager uygulamanın bütünlüğünü etkilemez ve bu nedenle değişikliğin sonucu olarak uygulama hatası oluşma olasılığını azaltır. Talep tabanlı erişim denetimi için ClaimsAuthorizationManager kullanma hakkında daha fazla bilgi için bkz: [nasıl yapılır: uygulama talep yetkilendirme talep kullanan ASP.NET uygulaması kullanarak WIF ve ACS](http://go.microsoft.com/fwlink/?LinkID=247446).
+ <xref:System.Security.Claims.ClaimsAuthorizationManager> Uygulamalarınızda beyana dayalı yetkilendirme için karar mantığının alınmasında yararlıdır. ClaimsAuthorizationManager, .NET 4.5'in bir parçası olarak sunulan bir WIF bileşenidir. ClaimsAuthorizationManager, gelen taleplere göre yetkilendirme kararları vermek için gelen istekleri kesmenize ve istediğiniz mantığı uygulamanıza imkan tanır. Bu, yetkilendirme mantığının değiştirilmesi gerektiğinde önemli hale gelir. Bu durumda, ClaimsAuthorizationManager uygulamanın bütünlüğünü etkilemez ve bu nedenle değişikliğin sonucu olarak uygulama hatası oluşma olasılığını azaltır. ClaimsAuthorizationManager, talep tabanlı erişim denetimi uygulamak üzere kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: talep yetkilendirmesi talep kullanan ASP.NET Application Using WIF ve ACS](https://go.microsoft.com/fwlink/?LinkID=247446).

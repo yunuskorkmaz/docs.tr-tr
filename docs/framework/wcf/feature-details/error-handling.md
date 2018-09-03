@@ -2,70 +2,70 @@
 title: Hata işleme
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-ms.openlocfilehash: ffcc817eb463a1787972bc9c4ae1434ff74f7bb4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 64b1af4b557d7792c7285866edc9aed08a0ef667
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495674"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486160"
 ---
 # <a name="error-handling"></a>Hata işleme
 ## <a name="error-handling-in-windows-communication-foundation"></a>Windows Communication Foundation işleme hatası  
- Bir hizmeti beklenmeyen bir özel durum ya da hata karşılaştığında, bir özel durum işleme çözüm tasarımı için birden çok yolu vardır. Varken hiçbir tek "doğru" veya "en iyi uygulama" hata işleme çözüm, birden çok geçerli yol bir göz önünde bulundurun. Bir WCF uygulama, türünü ve özel durumları, işlenmiş sıklığını karmaşıklığına bağlı olarak, aşağıdaki listeden birden çok yaklaşımlar işlenmemiş yapısını birleştiren bir karma çözümü uygulamak normalde önerilir özel durumlar ve herhangi bir izleme, günlük veya ilke gereksinimleri ilişkilendirilmiş.  
+ Bir hizmet bir beklenmeyen özel durum veya hata ile karşılaştığında, bir özel durum işleme çözümü tasarlamak için birden çok yolu vardır. Varken hiçbir tek "doğru" veya "en iyi uygulama" hata işleme çözüm, birden fazla geçerli yol için dikkate alınması gereken bir vardır. Normalde bir işlenmemiş yapısını birden çok yaklaşımın WCF uygulaması, tür ve özel durumları, işlenmiş sıklığını karmaşıklığına bağlı olarak, aşağıdaki listeden bir araya getiren karma çözümü uygulamanız önerilir özel durumlar ve tüm izleme, günlüğe kaydetme ve ilke gereksinimlerinizi ilişkili.  
   
- Bu çözümler, bu bölümün geri kalanında daha derine açıklanmıştır.  
+ Bu çözümler, bu bölümün geri kalanında daha derin bir şekilde açıklanmıştır.  
   
-### <a name="the-microsoft-enterprise-library"></a>Microsoft Enterprise kitaplığı  
- Microsoft Enterprise kitaplığı özel durum işleme uygulama bloğu ortak tasarım desenleri uygulamak ve kurumsal uygulama mimari katmanları tüm oluşan özel durum işleme için tutarlı bir strateji oluşturmak yardımcı olur. Uygulama bileşenleri catch deyimleri bulunan tipik kod desteklemek üzere tasarlanmıştır. Bu kod (örneğin, özel durum bilgilerini kaydeder kodu) bir uygulama boyunca aynı catch blokları içinde yinelenen yerine, özel durum işleme uygulama bloğu geliştiricilerin bu mantığı yeniden kullanılabilir özel durum işleyicileri olarak kapsülleyen olanak tanır.  
+### <a name="the-microsoft-enterprise-library"></a>Microsoft Kurumsal kitaplığı  
+ Microsoft Kurumsal kitaplık özel durum işleme uygulama bloğu, sık karşılaşılan tasarım desenleri uygulamak ve kuruluş uygulaması mimari katmanları tüm oluşan özel durumları işlemek için bir tutarlı stratejisi oluşturma yardımcı olur. Uygulama bileşenleri catch deyimlerinde yer alan tipik kod desteklemek için tasarlanmıştır. Bu kod (örneğin, özel durum bilgilerini kaydeden kod) uygulamanın tamamında aynı catch bloğu içinde yinelenen yerine, geliştiricilere yeniden kullanılabilir bir özel durum işleyicileri olarak bu mantığı yalıtılacak özel durum işleme uygulama bloğu sağlar.  
   
- Bu kitaplık out-of--box hataya sözleşme özel durum işleyicisi içerir. Bu özel durum işleyici Windows® Communication Foundation (WCF) hizmetini sınırlarında kullanılmak üzere tasarlanmış ve yeni bir arıza sözleşme özel durumu oluşturur.  
+ Bu kitaplık,-hazır bir hataya sözleşme özel durum işleyicisi içerir. Bu özel durum işleyicisi, Windows® Communication Foundation (WCF) hizmet sınırlarındaki kullanılmak üzere tasarlanmış ve yeni bir hata sözleşme özel durumu oluşturur.  
   
- Yaygın olarak kullanılan en iyi uygulamaları ekleyebilir ve özel durum uygulamanızın genelinde işleme için ortak bir yaklaşım sağlamak için uygulama blokları hedefleyin. Diğer taraftan, özel hata işleyicileri ve hataya sözleşmeleri birinin üzerinde kendi geliştirilen ayrıca çok kullanışlı olabilir. Örneğin, özel hata işleyicileri FaultExceptions tüm özel durumlar otomatik olarak Yükselt ve günlüğe kaydetme özellikleri uygulamanıza eklemek için mükemmel bir fırsat sağlar.  
+ Yaygın olarak kullanılan en iyi uygulamaları ekleyebilir ve özel durum işleme uygulamanız genelinde yaygın bir yaklaşım sağlamak için uygulama blokları hedeflenir. Öte yandan, özel hata işleyicilerini ve hata sözleşmelerine birinin üzerinde kendi geliştirilen ayrıca çok kullanışlı olabilir. Örneğin, özel hata işleyicilerini FaultExceptions için tüm özel durumları otomatik olarak Yükselt ve günlüğe kaydetme özellikleri uygulamanıza eklemek için mükemmel bir fırsat sağlar.  
   
- Daha fazla bilgi için lütfen bkz [Microsoft Enterprise Kitaplığı](http://msdn.microsoft.com/library/ff632023.aspx).  
+ Daha fazla bilgi için lütfen bkz [Microsoft Enterprise Library](https://msdn.microsoft.com/library/ff632023.aspx).  
   
-### <a name="dealing-with-expected-exceptions"></a>Beklenen özel durumlar postalarla  
- Eylem uygun seyri olan her işlem ya da ilgili genişletilebilirlik noktası beklenen özel durumları yakalamak için bunlar veriler kurtarılamaz, uygun özel hataya bir FaultException iade karar verdikten sonra\<T >  
+### <a name="dealing-with-expected-exceptions"></a>Beklenen özel durumlar uğraşmanızı  
+ Eylemin doğru kurs olan her işlem ya da ilgili genişletilebilirlik noktası beklenen özel durumları yakalamak için bunlar gelen kurtarılabilir bir FaultException içinde uygun özel hata dönüş bildirmeyeceğinize karar verdikten sonra\<T >  
   
-### <a name="dealing-with-unexpected-exceptions-using-an-ierrorhandler"></a>Beklenmeyen bir IErrorHandler kullanarak istisnalar ele alma  
- Beklenmeyen durumlarla başa çıkmak için önerilen yol eyleminin "bir IErrorHandler kanca" kullanmamaktır. Hata işleyicileri yalnızca özel durumlarını yakalama WCF çalışma zamanı düzeyinde ("hizmet modeli" katman), kanal katmanında. Çoğu senaryoda önerilmez özel bir kanal oluşturmak için yalnızca bir IErrorHandler kanal düzeyinde kanca şekilde denetleyebilirsiniz.  
+### <a name="dealing-with-unexpected-exceptions-using-an-ierrorhandler"></a>Beklenmeyen bir Ierrorhandler kullanarak özel durumları ile ilgilenme  
+ Beklenmeyen özel durumlar için önerilen eylem çalıştıysa "bir Ierrorhandler kanca" sağlamaktır. Hata işleyicilerini yalnızca özel durumları yakalama WCF çalışma zamanı düzeyinde ("hizmet modeli" katman), kanal katmanda değil. Kanal düzeyinde bir Ierrorhandler yeteneklerinizi tek yolu, çoğu senaryoda önerilmez özel bir kanal oluşturmaktır.  
   
- "Beklenmeyen bir özel durum" genellikle ne kurtarılamaz bir özel durum, ne de bir işlem özel durumu olan; Bu, bunun yerine, beklenmeyen bir kullanıcı özel durumdur. Kurtarılamaz bir özel durum (bir bellek yetersiz özel durum gibi) – bir genellikle işlenen tarafından [hizmet modeli özel durum işleyicisi](http://msdn.microsoft.com/library/system.servicemodel.dispatcher.exceptionhandler.aspx) otomatik olarak – genellikle düzgün işlenemez ve bu tür özel bir durumu işlemek için yalnızca açıklaması Ek günlük hiç olabilir veya standart bir özel durum istemciye döndürülecek. Genellikle çok erken ya da çok geç hata işleyici tarafından müdahale olduğundan bir işlem özel durum iletisi – işlemde oluşur Örneğin, seri hale getirme, kodlayıcı veya biçimlendirici düzeyinde – genellikle bir IErrorHandler işlenemiyor Bu özel durumları ortaya süre. Benzer şekilde, aktarım özel durumlar bir IErrorHandler işlenemiyor.  
+ "Beklenmeyen bir özel durum" genellikle kurtarılamaz bir özel durum ya da bir işlem özel durumu olan; Bu, bunun yerine, beklenmeyen bir kullanıcı özel durumdur. Kurtarılamaz bir özel durum (bir bellek yetersiz özel durum gibi) – bir genel olarak işlenen tarafından [hizmet modeli özel durum işleyicisi](https://msdn.microsoft.com/library/system.servicemodel.dispatcher.exceptionhandler.aspx) otomatik olarak – genellikle düzgün bir şekilde, işlenemez ve yalnızca nedeni böyle bir özel durum işleme Ek günlükler yapmak hiç olabilir veya standart bir özel durum istemciye döndürmek için. Genellikle çok erken ya da çok geç tarafından müdahale hata işleyicisi olduğundan – ileti işlemede işleme özel durum oluşur, serileştirme, kodlayıcı veya biçimlendirici düzeyinde – genellikle bir Ierrorhandler işlenemez Bu özel durumlar meydana süre. Benzer şekilde, bir Ierrorhandler aktarımı özel durumları işlenemez.  
   
- Bir özel durum bir IErrorHandler ile açıkça uygulamanızın davranışını kontrol edebilirsiniz. Görebilirsiniz:  
+ Bir Ierrorhandler ile bir özel durum oluştuğunda uygulamanızın davranışını açıkça denetleyebilirsiniz. Şunları yapabilirsiniz:  
   
-1.  Bir arıza istemciye göndermek isteyip istemediğinizi karar verin  
+1.  İstemciye bir hata göndermek gerekip gerekmediğini karar verin  
   
-2.  Bir özel durum hatası ile değiştir  
+2.  Bir özel durum bir hata ile değiştirin.  
   
-3.  Bir hata ile başka bir hataya değiştirin  
+3.  Bir hata başka bir hata ile değiştirin.  
   
-4.  Günlüğü veya izleme gerçekleştirme  
+4.  Günlüğe kaydetme veya izleme gerçekleştirme  
   
-5.  Diğer özel etkinlikleri gerçekleştirmek  
+5.  Diğer özel etkinlikler gerçekleştirme  
   
- Hizmetiniz için kanal dağıtıcıları ErrorHandlers özelliğine ekleyerek bir özel hata işleyici yükleyebilirsiniz.  Birden fazla hata işleyicisine olması mümkündür ve bu koleksiyona eklendikleri sırayla çağrılır.  
+ Hizmetiniz için kanal dağıtıcıları ErrorHandlers özelliğini ekleyerek bir özel hata işleyicisi yükleyebilirsiniz.  Birden fazla hata işleyicisini olması mümkündür ve bu koleksiyona eklendikleri sırayla çağrılır.  
   
- IErrorHandler.ProvideFault istemciye gönderilen hata iletisi denetler. Bu yöntem, hizmetinizde bir işlem tarafından oluşturulan özel durum türü ne olursa olsun çağrılır. Hiçbir işlem burada gerçekleştirilirse, WCF varsayılan davranışını varsayar ve olmamış gibi hiçbir özel hata işleyicileri yerinde devam eder.  
+ IErrorHandler.ProvideFault istemciye gönderilen hata iletisini kontrol eder. Bu yöntem, bir işlem hizmet tarafından oluşturulan özel durumun türünden bağımsız olarak çağrılır. Hiçbir işlem burada gerçekleştirilirse, WCF varsayılan davranışını varsayar ve yokmuş gibi hiçbir özel hata işleyicilerini yerinde devam eder.  
   
- (Örneği değil atıldı ve kanal Faulted durumuna taşınmaz sağlanarak) istemciye gönderilmeden önce hataları için özel durumları dönüştürme için merkezi bir konum oluşturmak istediğinizde bu yaklaşımı belki de kullanabilirsiniz bir alandır.  
+ Tek bir alanda, belki de bu yaklaşımı kullanabilirsiniz (örnek değil atıldı ve kanal için hatalı durumuna taşınıp taşınmayacağı sağlama) istemciye gönderilmeden önce hataları için özel durumlar dönüştürme için merkezi bir konum oluşturmak istediğiniz durumdur.  
   
- IErrorHandler.HandleError yöntemi genellikle hata ile ilgili davranışları hata günlüğü oluşturmayı, gibi kapatılıyor uygulama, vb. Sistem bildirimleri uygulamak için kullanılır. Hizmetin birden fazla yerde IErrorHandler.HandleError çağrılabilir ve burada hata atılır, bağlı olarak HandleError yöntemi olabilir işlemi olarak iş parçacığı tarafından çağrılan değil; veya Bu konuda, hiçbir garanti hale getirilir.  
+ IErrorHandler.HandleError yöntemi genellikle hata aramayla ilgili davranışlarını gibi hata günlüğü, sistem bildirimleri, uygulama, vb. kapatılıyor uygulamak için kullanılır. Hizmeti içinde birden çok yerlerdeki IErrorHandler.HandleError çağrılabilir ve burada bir hata oluşturulur, bağlı olarak, HandleError yöntemi olabilir veya işlemi ile aynı iş parçacığı tarafından çağrılan değildir; Bu bağlamda yapılan hiçbir şekilde garanti etmez.  
   
-### <a name="dealing-with-exceptions-outside-wcf"></a>Özel durumlar dışında WCF postalarla  
- Genellikle, yapılandırma özel durumları, veritabanı bağlantı dizesi özel durumları ve benzer diğer özel durumlar WCF uygulaması bağlamında oluşabilir, ancak kendileri olmayan nedeni hizmet modeli veya web hizmeti özel durumları. Bu özel durumlar "Normal" özel durumlar web hizmetine dış ve yalnızca ortamında dış diğer özel durumlar işlenecek şekilde yapılması gerekir.  
+### <a name="dealing-with-exceptions-outside-wcf"></a>Özel durumlar dışında WCF uğraşmanızı  
+ Genellikle, yapılandırma özel durumlar, veritabanı bağlantı dizesi özel durumları ve diğer benzer özel durumları WCF uygulaması bağlamında oluşabilir ancak kendileri olmayan özel durumların nedeni hizmet modeli veya web hizmeti. Bu özel durumlar özel durumlar "Normal" dış web hizmetine ve yalnızca dış diğer özel durumlar ortamda işlenecek olduğundan yapılması gerekir.  
   
 ### <a name="tracing-exceptions"></a>Özel durum izleme  
- İzleme, bir olası tüm özel durumları görebileceğiniz yalnızca "catch-tüm" yerdir. İzleme ve kaydetme izleme ve günlük özel durumları hakkında daha fazla bilgi için bkz.  
+ İzleme, bir büyük olasılıkla tüm özel durumları görebileceğiniz yalnızca "catch-all" yerdir. İzleme ve günlüğe kaydetme, izleme ve özel durumları hakkında daha fazla bilgi için bkz.  
   
-### <a name="uri-template-errors-when-using-webgetattribute-and-webinvokeattribute"></a>WebGetAttribute hem de WebInvokeAttribute kullanırken URI şablonunu hataları  
- WebGet ve Webınvoke öznitelikleri işlemi parametreleri için istek adresi bileşenlerinin eşleştiren bir URI şablonunu belirtmenizi sağlar. Örneğin, URI şablonunu "hava durumu / {state} / {Şehir}" istek adresi değişmez değer belirteçleri, durumu adlı bir parametre ve şehir adlı bir parametre eşler. Bu parametreler sonra adıyla bazı işleminin resmi parametrelerin bağlı.  
+### <a name="uri-template-errors-when-using-webgetattribute-and-webinvokeattribute"></a>WebGetAttribute ve WebInvokeAttribute kullanırken URI şablonu hataları  
+ WebGet ve Webınvoke öznitelikleri isteği adresi bileşenlerinin işlem parametrelerini eşleyen bir URI şablonu belirtmenizi sağlar. Örneğin, URI şablonu "hava durumu / {state} / {Şehir}" değişmez değer belirteçleri, durumu adlı bir parametre ve şehir adlı bir parametre istek adresiyle eşleşir. Bu parametreleri ardından adına göre bazı işlemin biçimsel parametrelerin bağlı olması.  
   
- Yazılı sözleşme biçimsel parametresi dize olmayan türlerde olabilir şablon parametreleri dizeler URI içindeki biçiminde görünür. Bu nedenle, bir dönüştürme işlemi çağrılabilir önce gerçekleşmesi gerekir. A [dönüştürme biçimleri tablosunun](http://msdn.microsoft.com/library/bb412172.aspx) kullanılabilir.  
+ Yazılı sözleşme biçimsel parametreler dize olmayan türlerde olabilir şablon parametreleri URI içinde dizeleri biçiminde görünür. Bu nedenle, bir dönüştürme işlemi çağrılmadan önce gerçekleşmesi gerekir. A [dönüştürme biçimleri tablosunun](wcf-web-http-programming-model-overview.md) kullanılabilir.  
   
- Ancak, dönüştürme başarısız olursa, ardından bir şeyler yanlış geçtiğini bilmeniz işlemi olanak yolu yoktur. Tür dönüşümü, bunun yerine bir gönderme hatası biçiminde ortaya çıkarır.  
+ Ancak, dönüştürme başarısız olursa, ardından bir sorun oluştu olduğunu biliyorsanız işlemi izin vermek için hiçbir yolu yoktur. Tür dönüştürme, bunun yerine bir dağıtım hatası biçiminde ortaya çıkarır.  
   
- Tür dönüştürme gönderme hatası olabilir diğer türlerde gönderme hataları gibi aynı hata işleyicisine yükleyerek sahip denetlenir. Hizmet düzeyi özel durumları işleme IErrorHandler genişletilebilirlik noktası çağrıldı. Buradan, geri çağırana – gönderilecek yanıt olarak hem de özel görevler gerçekleştirmek ve raporlama – seçmiş olabilirsiniz.  
+ Tür dönüştürme gönderme hatası olabilir birçok farklı türde gönderme hataları gibi aynı hata işleyicisini yükleyerek inceledi. Ierrorhandler genişletilebilirlik noktası, hizmet düzeyi özel durumları işlemek için çağrılır. Buradan çağırana geri – gönderilecek yanıt olarak da herhangi bir özel görevleri gerçekleştirmek ve raporlama – seçmiş olabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Temel WCF hata işleme](http://msdn.microsoft.com/library/gg281715.aspx)
+ [Temel WCF Programlama](../basic-wcf-programming.md)

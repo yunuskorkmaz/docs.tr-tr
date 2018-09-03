@@ -1,19 +1,19 @@
 ---
-title: .NET Core Windows için Önkoşullar
-description: Windows üzerinde gereken bağımlılıkları geliştirmek ve .NET Core uygulamaları çalıştırmak için makine öğrenin.
-author: JRAlexander
-ms.author: johalex
-ms.date: 05/18/2018
-ms.openlocfilehash: 3d172c83f0a79744afbaeeff52d7fea62d9b98b6
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+title: Windows üzerinde .NET Core önkoşulları
+description: Windows üzerinde gereken bağımlılıklar geliştirin ve .NET Core uygulamaları çalıştırmak için makine öğrenin.
+author: mairaw
+ms.author: mairaw
+ms.date: 08/31/2018
+ms.openlocfilehash: bbf54c8d215783656830f0fa035708be82a7c39c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34311994"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482616"
 ---
-# <a name="prerequisites-for-net-core-on-windows"></a>.NET Core Windows için Önkoşullar
+# <a name="prerequisites-for-net-core-on-windows"></a>Windows üzerinde .NET Core önkoşulları
 
-Bu makalede Windows .NET Core uygulamaları geliştirmek için gerekli bağımlılıkların gösterilmektedir. Desteklenen işletim sistemi sürümleri ve izleyin bağımlılıkları Windows .NET Core uygulamaları geliştirme üç yolu için geçerlidir:
+Bu makalede, Windows üzerinde .NET Core uygulamaları geliştirmek için ihtiyaç duyulan bağımlılıkları gösterir. Windows üzerinde .NET Core uygulamaları geliştirme kullandığı üç yöntem desteklenen işletim sistemi sürümleri ve aşağıdaki bağımlılıkları geçerlidir:
 
 * [Komut satırı](tutorials/using-with-xplat-cli.md)
 * [Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
@@ -25,13 +25,13 @@ Bu makalede Windows .NET Core uygulamaları geliştirmek için gerekli bağıml�
 
 * Windows 7 SP1
 * Windows 8.1
-* Windows 10 Anniversary güncelleştirme (sürüm 1607) veya sonraki sürümler
+* Windows 10 Yıldönümü Güncelleştirmesi (sürüm 1607) veya sonraki sürümler
 * Windows Server 2008 R2 SP1 (tam sunucu veya Sunucu Çekirdeği)
 * Windows Server 2012 SP1 (tam sunucu veya Sunucu Çekirdeği)
 * Windows Server 2012 R2 (tam sunucu veya Sunucu Çekirdeği)
 * Windows Server 2016 veya sonraki sürümleri (tam sunucu, Sunucu Çekirdeği veya Nano Server)
 
-Aşağıdaki makalelerde her sürümü .NET Core desteklenen işletim sistemlerinin tam bir listesi vardır:
+Aşağıdaki makaleler sürüm başına .NET Core desteklenen işletim sistemlerinin tam bir listesi vardır:
 
 * [.NET core 2.1 - desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md)
 * [.NET core 2.0 - desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md)
@@ -39,72 +39,99 @@ Aşağıdaki makalelerde her sürümü .NET Core desteklenen işletim sistemleri
 
 ## <a name="net-core-dependencies"></a>.NET core bağımlılıkları
 
-.NET core 1.1 ve önceki sürümlerinde Visual C++ yeniden dağıtılabilir Windows 10 ve Windows Server 2016'den önceki Windows sürümlerinde çalışan gerektirir. Bu bağımlılık .NET Core yükleyici tarafından otomatik olarak yüklenir.
+.NET core 1.1 ve önceki sürümlerinde Visual C++ yeniden dağıtılabilir Windows 10 ve Windows Server 2016'dan önceki Windows sürümlerinde çalışan gerektirir. Bu bağımlılık, .NET Core yükleyici tarafından otomatik olarak yüklenir.
 
-[Microsoft Visual C++ 2015 Redistributable güncelleştirme 3](https://www.microsoft.com/download/details.aspx?id=52685) zaman el ile yüklenmelidir:
+[Microsoft Visual C++ 2015 yeniden dağıtılabilir güncelleştirme 3](https://www.microsoft.com/download/details.aspx?id=52685) zaman el ile yüklenmelidir:
 
 * .NET Core ile yükleme [yükleyicisi betiği](./tools/dotnet-install-script.md).
-* Bağımsız bir .NET Core uygulamasını dağıtma.
+* Kendi başına bir .NET Core uygulaması dağıtma.
 * Kaynak Ürün oluşturma.
-* .NET Core yoluyla yükleme bir *.zip* dosyası. Bu yapı/CI/CD sunucuları içerebilir.
+* .NET Core ile yükleme bir *.zip* dosya. Bu derleme/CI/CD sunucuları ekleyebilirsiniz.
 
 > [!NOTE]
 > **Windows 8.1 ve önceki sürümleri veya Windows Server 2012 R2 ve önceki sürümleri için:**
 >
-> Windows yüklemenizi güncel olduğundan ve içerir emin olun [KB2999226](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows), yüklenebileceği Windows Update aracılığıyla. Bu güncelleştirmenin yüklü yoksa, .NET Core uygulama başlattığında aşağıdaki gibi bir hata görürsünüz: `The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`
+> Windows yüklemenizin güncel olduğundan ve içerir emin [KB2999226](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows), Windows güncelleştirmesi yüklenebilir. Bu yazılımın yüklü yoksa, .NET Core uygulamasını başlattığında aşağıdaki gibi bir hata görürsünüz: `The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`
 >
 > **Windows 7 veya Windows Server 2008 R2 için:**
 >
-> KB2999226 ek olarak, aynı zamanda sahip olduğunuzdan emin olun [KB2533623](https://support.microsoft.com/en-us/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot) yüklü. Bu güncelleştirmenin yüklü yoksa, bir .NET Core uygulamasını başlattığında aşağıdakine benzer bir hata görürsünüz: `The library hostfxr.dll was found, but loading it from C:\<path_to_app>\hostfxr.dll failed`.
+> KB2999226 yanı sıra, ayrıca olduğundan emin olun [KB2533623](https://support.microsoft.com/en-us/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot) yüklü. Bu yazılımın yüklü yoksa, .NET Core uygulamasını başlattığında aşağıdakine benzer bir hata görürsünüz: `The library hostfxr.dll was found, but loading it from C:\<path_to_app>\hostfxr.dll failed`.
 
-## <a name="prerequisites-with-visual-studio-2017"></a>Visual Studio 2017 önkoşulları
+## <a name="prerequisites-with-visual-studio-2017"></a>Visual Studio 2017 ile önkoşulları
 
-.NET Core SDK'sını kullanarak .NET Core uygulamaları geliştirmek için herhangi bir Düzenleyicisi'ni kullanabilirsiniz. [Visual Studio 2017](#visual-studio-2017) Windows .NET Core uygulamaları için bir tümleşik geliştirme ortamı sağlar.
+.NET Core SDK'sını kullanarak .NET Core uygulamaları geliştirmek için herhangi bir düzenleyici kullanabilirsiniz. [Visual Studio 2017](#visual-studio-2017) Windows üzerinde .NET Core uygulamaları için bir tümleşik geliştirme ortamı sağlar.
 
-Daha fazla bilgiyi Visual Studio 2017'deki değişiklikler hakkında [sürüm notları](/visualstudio/releasenotes/vs2017-relnotes).
+Daha fazla Visual Studio 2017'deki değişiklikler hakkında [sürüm notları](/visualstudio/releasenotes/vs2017-relnotes).
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
+# <a name="net-core-21tabnetcore21"></a>[.NET core 2.1](#tab/netcore21)
 
-Visual Studio 2017 .NET Core 2.x uygulamaları geliştirmek için:
+Visual Studio 2017'de .NET Core 2.1 uygulamaları geliştirmek için:
 
- 1. [Visual Studio 2017 15.3.0 sürümünü karşıdan yükleyip ya da daha yüksek](/visualstudio/install/install-visual-studio) ile **.NET Core platformlar arası geliştirme** iş yükü (içinde **diğer Toolsets** bölüm) seçili.
+ 1. [Visual Studio 2017 sürüm 15.7.0 yükleyip veya üzeri](/visualstudio/install/install-visual-studio) ile **.NET Core çoklu platform geliştirme** iş yükü (içinde **diğer araç takımları** bölümü) seçili.
 
-![Seçili ".NET Core platformlar arası geliştirme" iş yükü ile Visual Studio 2017 ekran yükleme](./media/windows-prerequisites/vs-15-3-workloads.jpg)
+![Seçili ".NET Core çoklu platform geliştirme" iş yüküyle Visual Studio 2017 ekran görüntüsü yükleme](./media/windows-prerequisites/vs-15-8-workloads.jpg)
 
-Sonra **.NET Core platformlar arası geliştirme** araç takımı yüklendiğinde, Visual Studio 2017 kullanan .NET Core 1.x varsayılan olarak. .NET Core yükleme 2.x SDK Visual Studio 2017 .NET Core 2.x destek alma.
+Sonra **.NET Core çoklu platform geliştirme** araç takımı, varsayılan olarak yüklenir, Visual Studio 2017 15.7 kullanan .NET Core 2.0 SDK'sını ve Visual Studio 2017 15,8 2.1 SDK'sını kullanır.
 
- 2. Yükleme [.NET Core 2.x SDK](https://www.microsoft.com/net/download/core).
- 3. .NET Core mevcut veya yeni .NET Core 1.x projelerine yeniden hedefleyin 2.x aşağıdaki yönergeleri kullanarak:
+ 2. Visual Studio 2017 15.7 kullanıyorsanız yükleyin [.NET Core 2.1 SDK](https://www.microsoft.com/net/download/core) veya Visual Studio 2017 15,8 yükseltin.
+
+ 3. Aşağıdaki yönergeleri kullanarak .NET Core 2.1 için mevcut veya yeni .NET Core projeleri yeniden hedefle:
     * Üzerinde **proje** menüsünde Seç **özellikleri**.
-    * İçinde **hedef framework** seçim menüsünü kümesine değeri **.NET Core 2.0**.
+    * İçinde **hedef Framework'ü** seçim menüsünde ayarlayın değeri **.NET Core 2.1**.
 
-![Ekran görüntüsü, Visual Studio 2017 uygulama projesi özelliğiyle öğesinin seçili ".NET Core 2.0" hedef framework menüsü](./media/windows-prerequisites/Targeting-dotnetCore2.png)
+![Ekran görüntüsü, Visual Studio 2017 uygulama projesi özelliğiyle seçili öğe ".NET Core 2.0" hedef framework menüsü](./media/windows-prerequisites/Targeting-dotnetCore2.png)
 
-Bir kez .NET Core 2.x SDK yüklü Visual Studio 2017 kullanan .NET Core SDK 2.x varsayılan ve aşağıdaki eylemleri destekler:
+Visual Studio ile .NET Core 2.1 SDK yapılandırılmış oluşturduktan sonra aşağıdaki işlemleri yapabilirsiniz:
 
-* Açın, yapı ve mevcut .NET Core 1.x projeleri çalıştırın.
-* .NET Core 1.x projeleri .NET Core 2.x, derleme ve çalıştırma yeniden hedefleyin.
-* Yeni .NET Core 2.x projeler oluşturun.
+* Açın, derleme ve mevcut .NET Core 1.x ve 2.x'i projeleri çalıştırın.
+* .NET Core yeniden hedefle 1.x ve .NET Core 2.1 2.0 projeleri derlemek ve çalıştırmak.
+* Yeni .NET Core 2.1 projeleri oluşturun.
+
+# <a name="net-core-20tabnetcore20"></a>[.NET core 2.0](#tab/netcore20)
+
+Visual Studio 2017'de .NET Core 2.0 uygulamaları geliştirmek için:
+
+ 1. [Visual Studio 2017 sürüm 15.3.0 yükleyip veya üzeri](/visualstudio/install/install-visual-studio) ile **.NET Core çoklu platform geliştirme** iş yükü (içinde **diğer araç takımları** bölümü) seçili.
+
+![Seçili ".NET Core çoklu platform geliştirme" iş yüküyle Visual Studio 2017 ekran görüntüsü yükleme](./media/windows-prerequisites/vs-15-3-workloads.jpg)
+
+Sonra **.NET Core çoklu platform geliştirme** araç yüklendiğinde, Visual Studio 2017, .NET Core kullanan 1.x varsayılan olarak. Visual Studio 2017'de .NET Core 2.0 desteği almak için .NET Core 2.0 SDK'sını yükleyin.
+
+ 2. Yükleme [.NET Core 2.0 SDK'sı](https://www.microsoft.com/net/download/dotnet-core/2.0).
+ 3. Aşağıdaki yönergeleri kullanarak .NET Core 2.0 için mevcut veya yeni .NET Core 1.x projeleri yeniden hedefle:
+    * Üzerinde **proje** menüsünde Seç **özellikleri**.
+    * İçinde **hedef Framework'ü** seçim menüsünde ayarlayın değeri **.NET Core 2.0**.
+
+![Ekran görüntüsü, Visual Studio 2017 uygulama projesi özelliğiyle seçili öğe ".NET Core 2.0" hedef framework menüsü](./media/windows-prerequisites/Targeting-dotnetCore2.png)
+
+.NET Core 2.0 SDK'yı yükledikten sonra Visual Studio 2017, .NET Core SDK 2.0 varsayılan olarak kullanır ve aşağıdaki eylemleri destekler:
+
+* Açık, derleme ve mevcut .NET Core 1.x projelerini çalıştırmak.
+* .NET Core 2.0, derleme, .NET Core 1.x projeleri yeniden hedefle ve çalıştırın.
+* Yeni .NET Core 2.0 projeleri oluşturun.
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
 
-Visual Studio'da .NET Core 1.x uygulamaları geliştirmek için [yükleyip Visual Studio 2017 RTM (sürüm 15.0.26228.4) ya da daha yüksek](/visualstudio/install/install-visual-studio) ile **".NET Core platformlar arası geliştirme"** iş yükündeki (  **Diğer Toolsets** bölüm) seçili.
+Visual Studio'da .NET Core 1.x uygulamalar geliştirmek için [Visual Studio 2017'yi indirip](/visualstudio/install/install-visual-studio) ile **".NET Core çoklu platform geliştirme"** iş yükü (içinde **diğer araç takımları**bölümü) seçili.
 
-![Seçili ".NET Core platformlar arası geliştirme" iş yükü ile Visual Studio 2017 ekran yükleme](./media/windows-prerequisites/vs_workloads.jpg)
+![Seçili ".NET Core çoklu platform geliştirme" iş yüküyle Visual Studio 2017 ekran görüntüsü yükleme](./media/windows-prerequisites/vs_workloads.jpg)
 
 > [!IMPORTANT]
-> .NET Core 1.x geliştirme için Visual Studio 2015 kullanmak da mümkündür, ancak aşağıdaki nedenlerden dolayı önerilmez:
-  > * .NET Core araç desteklenmeyen bir önizleme sürümüdür.
+> Visual Studio 2015 için .NET Core 1.x geliştirme kullanmak da mümkündür, ancak aşağıdaki nedenlerle önerilmez:
+  > * .NET Core araçları, desteklenmeyen bir önizleme sürümüdür.
   > * Projeleri project.json tabanlı, kullanım dışı bırakılmıştır.
 >
-> Proje biçimi değişiklikler hakkında daha fazla bilgi için bkz: [değişiklikleri üst düzey genel bakış](./tools/cli-msbuild-architecture.md).
+> Proje biçimi değişiklikler hakkında daha fazla bilgi için bkz. [değişiklikleri üst düzey genel bakış](./tools/cli-msbuild-architecture.md).
 ---
 
+<a name="vs-mapping"></a>
+
 > [!TIP]
-> Visual Studio 2017 sürümünüzü doğrulamak için:
+> Visual Studio 2017 sürüm doğrulamak için:
 >
 > * Üzerinde **yardımcı** menüsünde seçin **Microsoft Visual Studio hakkında**.
 > * İçinde **Microsoft Visual Studio hakkında** iletişim kutusunda, sürüm numarasını doğrulayın.
->   * .NET Core 2.1 RC uygulamalar için Visual Studio 2017 15.7 veya daha yüksek bir sürümü.
->   * .NET Core 2.0 uygulamalar için Visual Studio 2017 15.3 veya daha yüksek bir sürümü.
->   * .NET Core 1.x uygulamalar için Visual Studio 2017 15.0 veya daha yüksek bir sürümü.
+>   * .NET Core 2.2 Önizleme 1 uygulamalar için Visual Studio 2017 sürüm 15.9 (şu anda önizlemede) veya üzeri.
+>   * .NET Core 2.1 uygulamaları için Visual Studio 2017 sürüm 15.7 veya üzeri.
+>   * .NET Core 2.0 uygulamaları için Visual Studio 2017 sürüm 15.3 veya üzeri.
+>   * .NET Core 1.x uygulamaları için Visual Studio 2017 sürüm 15.0 veya üzeri.

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - '#pragma directive [C#]'
 ms.assetid: 5b7944cd-d402-46a1-ad8f-feffb2d83673
-ms.openlocfilehash: a4829d5062474922d45a2f4f8e1cddf9023b6ad8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ae397cc61e0c6b58ed2079369131ebb7e352eae
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33278815"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482941"
 ---
 # <a name="pragma-c-reference"></a>#pragma (C# Başvurusu)
-`#pragma` Derleyici göründüğü dosyası derleme için özel yönergeler sağlar. Yönergeleri derleyici tarafından desteklenmesi gerekir. Diğer bir deyişle, kullanamazsınız `#pragma` özel önişlem yönergelerini oluşturmak için. Aşağıdaki iki Microsoft C# Derleyici destekleyen `#pragma` yönergeler:  
+`#pragma` Derleyici göründüğü dosyanın derleme için özel yönergeler sağlar. Yönergeleri, derleyici tarafından desteklenmesi gerekir. Diğer bir deyişle, kullanamazsınız `#pragma` özel ön işleme yönergeleri oluşturmak için. Aşağıdaki iki Microsoft C# derleyicisi destekleyen `#pragma` yönergeleri:  
   
  [#pragma uyarısı](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md)  
   
@@ -28,14 +28,15 @@ ms.locfileid: "33278815"
   
 #### <a name="parameters"></a>Parametreler  
  `pragma-name`  
- Bir tanınan pragma adı.  
+ Tanınan bir pragma adı.  
   
  `pragma-arguments`  
- Pragma özgü bağımsız değişkenler.  
+ Pragma özel bağımsız değişkenler.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [C# Ön İşlemci Yönergeleri](../../../csharp/language-reference/preprocessor-directives/index.md)  
- [#pragma uyarısı](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md)  
- [#pragma sağlama toplamı](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-checksum.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# başvurusu](../../../csharp/language-reference/index.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [C# Ön İşlemci Yönergeleri](../../../csharp/language-reference/preprocessor-directives/index.md)  
+- [#pragma uyarısı](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md)  
+- [#pragma sağlama toplamı](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-checksum.md)

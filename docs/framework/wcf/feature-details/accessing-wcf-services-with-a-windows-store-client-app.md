@@ -2,27 +2,27 @@
 title: WCF Hizmetlerine Windows Mağazası İstemci Uygulaması ile Erişme
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: aca0c4e4daecc1b7a2474130eb36b9ead1c538bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cfc5dd13c5660ff1604e9de02fdf6755d70a95e9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491965"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485670"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>WCF Hizmetlerine Windows Mağazası İstemci Uygulaması ile Erişme
-Windows 8 uygulamanın Windows mağazası uygulamaları adı verilen yeni bir türü sunar. Bu uygulamalar, dokunmatik ekran arabirimini tasarlanmıştır. .NET framework 4.5, WCF hizmetleri çağırmak Windows mağazası uygulamaları etkinleştirir.  
+Windows 8, Windows Store uygulamaları adı verilen bir uygulama yeni bir tür tanıtır. Bu uygulamaları dokunmatik ekran arabirimi geçici bir çözüm olarak tasarlanmıştır. .NET framework 4.5, WCF hizmetlerini çağırmak Windows Store uygulamaları etkinleştirir.  
   
-## <a name="wcf-support-in-windows-store-applications"></a>Windows mağazası uygulamalarında WCF desteği  
- WCF işlevlerinin bir alt kümesini bir Windows mağazası uygulama içinde kullanılabilir, daha fazla ayrıntı için aşağıdaki bölümlere bakın.  
+## <a name="wcf-support-in-windows-store-applications"></a>Windows Store uygulamalarında WCF desteği  
+ WCF işlevlerinin bir alt kümesini bir Windows Store uygulaması içinde bulunan, daha fazla ayrıntı için aşağıdaki bölümlere bakın.  
   
 > [!IMPORTANT]
->  WCF tarafından kullanıma sunulan yerine WinRT dağıtım API'leri kullanın. Daha fazla bilgi için [WinRT dağıtım API](http://go.microsoft.com/fwlink/?LinkId=236265)  
+>  WCF tarafından kullanıma sunulan yerine WinRT dağıtım API'leri kullanın. Daha fazla bilgi edinmek, [WinRT dağıtım API](https://go.microsoft.com/fwlink/?LinkId=236265)  
   
 > [!WARNING]
->  Windows çalışma zamanı bileşeni bir web hizmeti başvuru eklemek için hizmet Başvurusu Ekle kullanımı desteklenmiyor.  
+>  Bir Windows çalışma zamanı bileşeni için bir web hizmeti başvurusu eklemek için hizmet Başvurusu Ekle kullanımı desteklenmiyor.  
   
 ### <a name="supported-bindings"></a>Desteklenen bağlamaları  
- Aşağıdaki WCF bağlamaları Windows mağazası uygulamalarında desteklenir:  
+ Aşağıdaki WCF bağlamaları, Windows Store uygulamalarında desteklenir:  
   
 1.  <xref:System.ServiceModel.BasicHttpBinding>  
   
@@ -32,7 +32,7 @@ Windows 8 uygulamanın Windows mağazası uygulamaları adı verilen yeni bir t�
   
 4.  <xref:System.ServiceModel.Channels.CustomBinding>
   
- Aşağıdaki bağlama öğeleri Windows mağazası uygulamalarında desteklenir  
+ Aşağıdaki bağlama öğeleri Windows Store uygulamalarında desteklenir.  
   
 1.  <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>  
   
@@ -52,19 +52,19 @@ Windows 8 uygulamanın Windows mağazası uygulamaları adı verilen yeni bir t�
   
 9. <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>  
   
- Metin ve ikili kodlamaları desteklenir. Tüm WCF aktarım modlarını desteklenir. Daha fazla bilgi için [ileti aktarma akışı](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md).  
+ Hem metin ve ikili kodlamaları desteklenmektedir. Tüm WCF aktarma modları desteklenir. Daha fazla bilgi edinmek, [ileti aktarma akışı](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md).  
   
 ### <a name="add-service-reference"></a>Hizmet Başvurusu Ekle  
- Bir Windows mağazası uygulamasından bir WCF hizmetini çağırmak için Visual Studio 2012'in hizmet Başvurusu Ekle özelliğini kullanın. Hizmet bir Windows mağazası uygulama içinde işiniz bittiğinde Başvurusu Ekle işlevselliğini birkaç değişiklik fark edersiniz. Önce herhangi bir yapılandırma dosyası oluşturulur. Kodda yapılandırılmalıdır için Windows mağazası uygulamaları yapılandırma dosyaları kullanmayın. Bu yapılandırma kodunu hizmet Başvurusu Ekle tarafından oluşturulan References.cs dosyasında bulunabilir. Bu dosyayı görmek için Çözüm Gezgini'nde "Tüm dosyaları göster" seçmek emin olun. Dosya hizmeti başvuruları ve sonra projeyi içinde Reference.svcmap düğümleri altında yer alır. Windows mağazası uygulaması içinde WCF hizmetleri için oluşturulan tüm işlemleri görev tabanlı zaman uyumsuz desen kullanarak zaman uyumsuz olacaktır. Daha fazla bilgi için bkz: [görev tabanlı zaman uyumsuz desen](http://msdn.microsoft.com/magazine/ff959203.aspx).  
+ Bir WCF hizmeti bir Windows Store uygulamasından çağırmak için Visual Studio 2012'in hizmet Başvurusu Ekle özelliğini kullanın. Hizmet bir Windows Store uygulaması içinde işiniz bittiğinde Başvurusu Ekle'nın bazı değişiklikler fark edeceksiniz. İlk yapılandırma dosyası yoksa oluşturulur. Kodda yapılandırılmalıdır için yapılandırma dosyaları, Windows Store uygulamaları kullanmayın. Bu yapılandırma kodu hizmet Başvurusu Ekle tarafından oluşturulan References.cs dosyasında bulunabilir. Bu dosyayı görmek için Çözüm Gezgini'nde "Tüm dosyaları göster" seçtiğinizden emin olun. Dosya hizmet başvuruları ve ardından Proje içinde Reference.svcmap düğümleri altında bulunur. WCF hizmetleri Windows Store uygulaması içinde oluşturulan tüm işlemler zaman uyumsuz görev tabanlı zaman uyumsuz desen kullanma olacaktır. Daha fazla bilgi için [görev tabanlı zaman uyumsuz desen](https://msdn.microsoft.com/magazine/ff959203.aspx).  
   
- Yapılandırma şimdi kodda oluşturulduğundan, hizmet başvurusu her güncelleştirildiğinde Reference.cs dosyasında yapılan değişiklikler üzerine. Bu durumu düzeltmek için istemci proxy sınıfınızda uygulayabileceğiniz bir kısmi yöntemi içinde yapılandırma kodu oluşturulur. Kısmi yöntemini aşağıdaki gibi bildirdi:  
+ Yapılandırma artık kod içinde oluşturulmuş olduğu için hizmet başvurusunu her güncelleştirildiğinde Reference.cs dosyasında yapılan değişikliklerin üzerine yazılır. Bu durumu ortadan kaldırmak için istemci proxy sınıfınızda uygulayabileceğiniz kısmi bir yöntemin içinde yapılandırma kod oluşturulur. Kısmi yöntem şu şekilde bildirilir:  
   
 ```csharp  
 static partial void Configure(System.ServiceModel.Description.ServiceEndpoint serviceEndpoint,  
             System.ServiceModel.Description.ClientCredentials clientCredentials);  
 ```  
   
- Ardından, kısmi bu yöntemi uygulaması ve bağlama veya uç nokta istemci proxy sınıfınızda aşağıdaki gibi değiştirin:  
+ Ardından, bu kısmi metodu uygulayın ve bağlama veya uç nokta istemci proxy Sınıfınız içinde aşağıdaki gibi değiştirin:  
   
 ```csharp  
 public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfClient.ServiceRefMultiEndpt.IService1>, MetroWcfClient.ServiceRefMultiEndpt.IService1  
@@ -95,7 +95,7 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
 ```  
   
 ### <a name="serialization"></a>Serileştirme  
- Aşağıdaki serileştiricileri Windows mağazası uygulamalarında desteklenir:  
+ Aşağıdaki seri hale getiricileri genişletme, Windows Store uygulamalarında desteklenir:  
   
 1.  DataContractSerializer  
   
@@ -104,20 +104,20 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
 3.  XmlSerializer  
   
 > [!WARNING]
->  XmlDictionaryWriter.Write(DateTime) şimdi DateTime nesnesi bir dize yazar.  
+>  XmlDictionaryWriter.Write(DateTime) şimdi bir DateTime nesnesini bir dize olarak yazar.  
   
 ### <a name="security"></a>Güvenlik  
- Aşağıdaki güvenlik modu Windows mağazası uygulamalarında desteklenir  
+ Aşağıdaki güvenlik modu Windows Store uygulamalarında desteklenir.  
   
 1.  <xref:System.ServiceModel.SecurityMode.None>  
   
 2.  <xref:System.ServiceModel.SecurityMode.Transport>  
   
-3.  <!--zz <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredentials> --> `System.ServiceModel.SecurityMode.TransportWithMessageCredentials`
+3.  <!--zz <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredentials> -->`System.ServiceModel.SecurityMode.TransportWithMessageCredentials`
   
-4.  <!--zz <xref:System.ServiceModel.SecurityMode.TransportCredentialOnly>  --> `System.ServiceModel.SecurityMode.TransportCredentialOnly`
+4.  <!--zz <xref:System.ServiceModel.SecurityMode.TransportCredentialOnly>  -->`System.ServiceModel.SecurityMode.TransportCredentialOnly`
   
- Aşağıdaki istemci kimlik bilgisi türlerinin Windows mağazası uygulamalarında desteklenir  
+ Aşağıdaki istemci kimlik bilgisi türlerinin Windows Store uygulamalarında desteklenir.  
   
 1.  Yok.  
   
@@ -133,30 +133,30 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
   
 7.  Kullanıcı adı (ileti güvenliği)  
   
-8.  Windows (taşıma güvenliği)  
+8.  Windows (aktarım güvenliği)  
   
- Erişim ve varsayılan Windows kimlik bilgileri göndermek Windows mağazası uygulamaları Package.appmanifest dosyası içinde bu işlevi etkinleştirmeniz gerekir. Bu dosyayı açın ve yetenekleri sekmesini seçin ve "Varsayılan Windows kimlik bilgileri" seçin. Bu etki alanı kimlik bilgileri gerektiren intranet kaynaklarına bağlanmak uygulama sağlar.  
+ Erişim ve varsayılan Windows kimlik bilgilerini göndermek Windows Store uygulamaları için sırada Package.appmanifest dosyası içinde bu işlevi etkinleştirmeniz gerekir. Bu dosyayı açmak, özellikleri sekmesini seçin ve "Varsayılan Windows kimlik bilgileri" seçin. Bu, uygulama etki alanı kimlik bilgileri gerektiren intranet kaynaklarına bağlanmanıza imkan sağlar.  
   
 > [!IMPORTANT]
->  Çapraz makine çağrı yapmak Windows mağazası uygulamaları için sırayla "Ev/iş ağı" adlı başka bir özelliği etkinleştirmeniz gerekir. Bu ayar, Özellikleri sekmesi altında Package.appmanifest dosyasında değildir. Ev/iş ağı onay kutusunu seçin. Bu kullanıcının ağlara gelen ve giden erişim yerler ev ve iş gibi güvenilir uygulamanızı sağlar. Kritik gelen bağlantı noktalarının her zaman engellenir. Internet'te hizmetlerine erişmek için Internet (istemci) özelliği da etkinleştirmeniz gerekir.  
+>  Çapraz makine çağrıları yapmak Windows Store uygulamaları için sırayla "Ev/iş ağı" adlı başka bir özelliği etkinleştirmeniz gerekir. Bu ayar, Özellikler sekmesi altındaki Package.appmanifest dosyasındaki desteklenir. Ev/iş ağı onay kutusunu işaretleyin. Bu, kullanıcının ağlara gelen ve giden erişimi, ev ve iş yerleri gibi güvenilen uygulamanızı sağlar. Önemli gelen bağlantı noktalarının her zaman engellenir. Internet'te hizmetlerine erişmek için aynı zamanda Internet (istemci) özelliği etkinleştirmeniz gerekir.  
   
 ### <a name="misc"></a>Çeşitli  
- Aşağıdaki sınıflar kullanımını Windows mağazası uygulamaları için desteklenir:  
+ Aşağıdaki sınıflar kullanımı, Windows Store uygulamaları için desteklenir:  
   
 1.  <xref:System.ServiceModel.ChannelFactory>  
   
-2.  <!--zz <xref:System.ServiceModel.DuplexChannelFactory> --> `System.ServiceModel.DuplexChannelFactory`
+2.  <!--zz <xref:System.ServiceModel.DuplexChannelFactory> -->`System.ServiceModel.DuplexChannelFactory`
   
 3.  <xref:System.ServiceModel.CallbackBehaviorAttribute>  
   
 ### <a name="defining-service-contracts"></a>Hizmet sözleşmelerini tanımlama  
- Görev tabanlı zaman uyumsuz desen kullanarak zaman uyumsuz hizmet işlemleri yalnızca tanımlama öneririz. Bu, bir hizmet işlemi çağrılırken Windows mağazası uygulamaları yanıt verebilir durumda kalmasını sağlar.  
+ Yalnızca görev tabanlı zaman uyumsuz deseni kullanılarak zaman uyumsuz hizmet işlemleri tanımlama öneririz. Bu, Windows Store uygulamalarını bir hizmet işlemi çağrılırken yanıt verebilir durumda kalmasını sağlar.  
   
 > [!WARNING]
->  Eşzamanlı bir işlem tanımlarsanız, hiçbir özel durum olsa da, yalnızca zaman uyumsuz işlemleri tanımlamak için kesinlikle önerilir.  
+>  Eşzamanlı bir işlem tanımlarsanız, hiçbir özel durum sırasında yalnızca zaman uyumsuz işlemleri tanımlamak için önemle tavsiye edilir.  
   
-### <a name="calling-wcf-services-from-windows-store-applications"></a>WCF hizmetlerine Windows mağazası uygulamasından çağırma  
- Önceden belirtildiği gibi tüm yapılandırma oluşturulan proxy sınıfı GetBindingForEndpoint yönteminde kodda yapılmalıdır. Bir hizmet işlemi çağrılırken, aşağıdaki kod parçacığında gösterildiği gibi tüm görev tabanlı zaman uyumsuz yöntem çağırma aynı yapılır.  
+### <a name="calling-wcf-services-from-windows-store-applications"></a>WCF hizmetleri Windows Store uygulamalarından çağırma  
+ Daha önce belirtildiği gibi tüm yapılandırma oluşturulan proxy sınıfı GetBindingForEndpoint yönteminde kodda yapılmalıdır. Bir hizmet işlemi çağrılırken, aşağıdaki kod parçacığında gösterildiği gibi tüm görev tabanlı zaman uyumsuz yöntem çağırma aynı gerçekleştirilir.  
   
 ```csharp  
 void async SomeMethod()  
@@ -171,12 +171,12 @@ void async SomeMethod()
 }  
 ```  
   
- Async anahtar sözcüğü zaman uyumsuz çağrı ve bekleme anahtar zaman uyumsuz yöntem çağrılırken hale yöntemine kullanımına dikkat edin.  
+ Async anahtar sözcüğü zaman uyumsuz yöntemini çağıran, zaman uyumsuz çağrı ve await anahtar sözcüğü yapmadan yöntemi kullanımına dikkat edin.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows mağazası uygulamaları günlüğündeki WCF](http://blogs.msdn.com/b/piyushjo/archive/2011/09/22/wcf-in-win8-metro-styled-apps-absolutely-supported.aspx)  
- [WCF Windows mağazası istemcileri ve güvenlik](http://blogs.msdn.com/b/piyushjo/archive/2011/10/11/calling-a-wcf-service-from-a-metro-application-adding-security.aspx)  
- [Windows mağazası uygulamaları ve çapraz makine çağrıları](http://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)  
- [Bir Windows mağazası uygulamasından azure'da dağıtılan bir WCF Hizmeti çağırma](http://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)  
+ [WCF'de Windows Store Apps blogu](https://blogs.msdn.com/b/piyushjo/archive/2011/09/22/wcf-in-win8-metro-styled-apps-absolutely-supported.aspx)  
+ [WCF Windows Store istemcileri ve güvenlik](https://blogs.msdn.com/b/piyushjo/archive/2011/10/11/calling-a-wcf-service-from-a-metro-application-adding-security.aspx)  
+ [Windows Store uygulamaları ve çapraz makine çağrıları](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)  
+ [Azure'da Windows Store uygulamasında dağıtılan bir WCF Hizmeti çağırma](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)  
  [WCF Güvenliğini Programlama](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)  
  [Bağlamalar](../../../../docs/framework/wcf/bindings.md)

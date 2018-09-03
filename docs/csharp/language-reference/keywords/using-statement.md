@@ -5,11 +5,11 @@ helpviewer_keywords:
 - using statement [C#]
 ms.assetid: afc355e6-f0b9-4240-94dd-0d93f17d9fc3
 ms.openlocfilehash: ec4849dda0f28ad1f0e0ebb2c493a33005107db4
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43003118"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480713"
 ---
 # <a name="using-statement-c-reference"></a>using Deyimi (C# Başvurusu)
 Doğru kullanımını güvence altına kullanışlı bir söz dizimi sağlar <xref:System.IDisposable> nesneleri.  

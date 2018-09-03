@@ -10,28 +10,28 @@ helpviewer_keywords:
 - states [WPF]
 - templates [WPF]
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
-ms.openlocfilehash: 0fe20ffa19d14dcaecac30198c5c0e2d19fb9fa5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 58d65ee9842270b07a76ff438c975955689197e9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556919"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482982"
 ---
 # <a name="control-styles-and-templates"></a>Denetim Stilleri ve Şablonları
-Windows Presentation Foundation (WPF) denetimleriniz bir <xref:System.Windows.Controls.ControlTemplate> bu denetimin görsel ağaç içerir. Değişiklik yaparak yapısı ve denetiminin görünümünü değiştirebilirsiniz <xref:System.Windows.Controls.ControlTemplate> bu denetimin. Bir denetimin görsel ağaç yalnızca bir bölümünü değiştirmek için bir yolu yoktur; görsel ağaç ayarlamalısınız denetimi değiştirmek için <xref:System.Windows.Controls.Control.Template%2A> yeni ve tam denetim özelliği <xref:System.Windows.Controls.ControlTemplate>.  
+Windows Presentation Foundation (WPF) denetiminiz bir <xref:System.Windows.Controls.ControlTemplate> , denetimin görsel ağacını içerir. Bir denetimin görünümünü ve yapısı değiştirerek değiştirebilirsiniz <xref:System.Windows.Controls.ControlTemplate> denetimin. Bir denetimin görsel ağacın yalnızca bir kısmını değiştirmek için bir yolu yoktur; görsel ağacı ayarlamalısınız bir denetimin değiştirmek için <xref:System.Windows.Controls.Control.Template%2A> yeni ve tam denetim özelliği <xref:System.Windows.Controls.ControlTemplate>.  
   
- Masaüstü temaları hangi kaynak sözlüğü kullanıldığını belirler. Kaynak sözlüklerindeki masaüstü temaları almak için bkz: [varsayılan WPF Temalar](http://go.microsoft.com/fwlink/?LinkID=158252).  
+ Masaüstü temalar, hangi kaynak sözlüğünün kullanılıp kullanılmayacağı belirler. Kaynak sözlükleri masaüstü temaları almak için bkz. [WPF temaları varsayılan](https://go.microsoft.com/fwlink/?LinkID=158252).  
   
- Aşağıdaki tabloda, kaynak sözlük dosya adları ve karşılık gelen masaüstü temalarını açıklar.  
+ Aşağıdaki tabloda, kaynak sözlük dosya adlarını ve karşılık gelen masaüstü temalarını açıklar.  
   
 |Tema dosyası|Masaüstü teması|  
 |----------------|-------------------|  
-|Classic.xaml|Klasik Windows, Windows XP işletim sisteminde (Windows 95, Windows 98 ve Windows 2000 ') Ara...|  
+|Classic.xaml|Klasik Windows, Windows XP işletim sistemi (Windows 95, Windows 98 ve Windows 2000) arayın...|  
 |Luna.NormalColor.xaml|Windows XP varsayılan mavi tema.|  
 |Luna.Homestead.xaml|Windows XP Zeytin teması.|  
-|Luna.Metallic.xaml|Windows XP'de Gümüş tema.|  
-|Royale.NormalColor.xaml|Windows XP Media Center Edition işletim sisteminde varsayılan tema.|  
-|Aero.NormalColor.xaml|Windows Vista işletim sisteminde varsayılan tema.|  
+|Luna.Metallic.xaml|Windows XP Gümüş tema.|  
+|Royale.NormalColor.xaml|Windows XP Media Center Edition işletim sistemindeki varsayılan tema.|  
+|Aero.NormalColor.xaml|Windows Vista işletim sistemindeki varsayılan tema.|  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Düğme Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/button-styles-and-templates.md)  
@@ -60,7 +60,7 @@ Windows Presentation Foundation (WPF) denetimleriniz bir <xref:System.Windows.Co
  [StatusBar Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/statusbar-styles-and-templates.md)  
  [TabControl Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/tabcontrol-styles-and-templates.md)  
  [TextBox Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)  
- [Kaydırma kutusu stilleri ve şablonları](../../../../docs/framework/wpf/controls/thumb-syles-and-templates.md)  
+ [Parmak stilleri ve şablonları](../../../../docs/framework/wpf/controls/thumb-syles-and-templates.md)  
  [ToggleButton stilleri ve şablonları](../../../../docs/framework/wpf/controls/togglebutton-syles-and-templates.md)  
  [ToolBar Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/toolbar-styles-and-templates.md)  
  [ToolTip Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/tooltip-styles-and-templates.md)  

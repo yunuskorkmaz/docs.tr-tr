@@ -1,25 +1,25 @@
 ---
-title: Seçenek &lt;anahtar sözcüğü&gt; deyimi
+title: Seçenek &lt;anahtar sözcüğü&gt; deyimi (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.option
 helpviewer_keywords:
 - Option keyword [Visual Basic]
 ms.assetid: 6b2f41c4-2403-43b6-8a14-94a3775e5b47
-ms.openlocfilehash: c5a53faec01b8c10de5802eccb21d66350193696
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f4996b0c03ee98fef31bc301dc957060afdfdac8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33598236"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484533"
 ---
 # <a name="option-ltkeywordgt-statement"></a>Seçenek &lt;anahtar sözcüğü&gt; deyimi
-Tüm kaynak dosyasının geçerli bir derleme seçeneği belirten bir ifade tanıtır.  
+Kaynak dosyanın tümüne uygulanan derleyici seçeneğini belirten bir deyimi ortaya çıkarır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Derleyici Seçenekleri olup tüm değişkenleri açıkça bildirilmelidir, olup daraltma türü dönüşümleri açık olması gerekir veya dizeler metin veya ikili miktarları olarak mı karşılaştırılmalıdır denetleyebilirsiniz.  
+ Derleyici seçenekleri tüm değişkenleri olup olmadığını açıkça bildirilmelidir, mi tür dönüştürmeleri daraltma açık olmalıdır veya dizeler metin veya ikili miktarlar olarak mı karşılaştırılmalıdır denetleyebilirsiniz.  
   
- `Option` Anahtar sözcüğü bu bağlamlarında kullanılabilir:  
+ `Option` Anahtar sözcüğü bu bağlamda kullanılabilir:  
   
  [Option Compare Deyimi](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
   
