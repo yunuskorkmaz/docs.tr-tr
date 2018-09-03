@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2575d6fbc5e8a26da301826ef8f7b0611a84871e
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: c18659fa3db1f2e7e047f1bbdc4f75ba6e96f0c6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43255567"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464106"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework Sürümleri ve Bağımlılıkları
 Her bir .NET Framework sürümü ortak dil çalışma zamanını (CLR), temel sınıf kitaplıklarını ve diğer yönetilen kitaplıkları içerir. Bu konu, sürüme göre .NET Framework'ün temel özellikleri açıklar, temel CLR sürümleri ve ilişkili geliştirme ortamları hakkında bilgi sağlar ve Windows işletim sistemi tarafından yüklenen sürümleri tanımlar.  
@@ -61,7 +61,7 @@ Her bir .NET Framework sürümü ortak dil çalışma zamanını (CLR), temel s�
   
      [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] Ve [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] kullanılan örnekler olarak yalnızca burada. Bu ilke, sonraki bir sürümse .NET Framework'ün üzerinde çalıştığı için sistemde yüklü bir hedefleyen herhangi bir uygulama için geçerlidir.  
   
- .NET Framework'teki bazı değişiklikler uygulama kodunuzda değişiklikler gerektirebilir; bkz: [uygulama uyumluluğu](../../../docs/framework/migration-guide/application-compatibility.md) mevcut uygulamalarınızı çalıştırmadan önce [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] veya sonraki sürümler. Güncel sürümü yükleme hakkında daha fazla bilgi için bkz. [geliştiriciler için .NET Framework yükleme](../../../docs/framework/install/guide-for-developers.md). .NET Framework desteği hakkında daha fazla bilgi için bkz: [Microsoft .NET Framework desteği yaşam döngüsü ilkesi](http://go.microsoft.com/fwlink/?LinkId=196607) Microsoft Support Web sitesi.  
+ .NET Framework'teki bazı değişiklikler uygulama kodunuzda değişiklikler gerektirebilir; bkz: [uygulama uyumluluğu](../../../docs/framework/migration-guide/application-compatibility.md) mevcut uygulamalarınızı çalıştırmadan önce [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] veya sonraki sürümler. Güncel sürümü yükleme hakkında daha fazla bilgi için bkz. [geliştiriciler için .NET Framework yükleme](../../../docs/framework/install/guide-for-developers.md). .NET Framework desteği hakkında daha fazla bilgi için bkz: [Microsoft .NET Framework desteği yaşam döngüsü ilkesi](https://go.microsoft.com/fwlink/?LinkId=196607) Microsoft Support Web sitesi.  
   
 ## <a name="targeting-and-running-apps-for-older-versions"></a>Daha eski sürümler için uygulamalar hedefleme ve çalıştırma  
  .NET Framework 2.0, 3.0 ve 3.5 sürümleri, aynı CLR sürümü (CLR 2.0) ile oluşturulmuştur. Bu sürümler, tek bir kurulumun ardışık katmanlarını temsil eder. Her sürüm kademeli olarak önceki sürümlerin üzerine yerleştirilir. 2.0, 3.0 ve 3.5 sürümlerini bir bilgisayar üzerinde yan yana çalıştırmak mümkün değildir. Sürüm 3.5'i yüklediğinizde, 2.0 ve 3.0 katmanlarını otomatik olarak alırsınız ve 2.0, 3.0 ve 3.5 sürümleri için oluşturulmuş olan uygulamaların tümü 3.5 sürümü üzerinde çalıştırılabilir. Ancak, .NET Framework 4 bu katmanlama yaklaşımını sona erer ve de ve sonraki sürümleri (.NET Framework 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1 ve 4.7.2) tek bir kurulumun ardışık katmanlarını temsil eder.  CLR'nin birden çok sürümünü tek bir işlemde çalıştırmak için, .NET Framework 4 ile başlayarak işlem içi yan yana barındırma kullanabilirsiniz. Daha fazla bilgi için [derlemeler ve yan yana yürütme](../../../docs/framework/app-domains/assemblies-and-side-by-side-execution.md).  
@@ -81,5 +81,5 @@ Her bir .NET Framework sürümü ortak dil çalışma zamanını (CLR), temel s�
 ## <a name="see-also"></a>Ayrıca bkz.
 
 [Sürüm uyumluluğu](../../../docs/framework/migration-guide/version-compatibility.md)   
-[Microsoft .NET Framework Destek Ömrü İlkesi](http://go.microsoft.com/fwlink/?LinkId=196607)   
+[Microsoft .NET Framework Destek Ömrü İlkesi](https://go.microsoft.com/fwlink/?LinkId=196607)   
 [Engellenen .NET Framework yükleme ve kaldırma sorunlarını giderme](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
