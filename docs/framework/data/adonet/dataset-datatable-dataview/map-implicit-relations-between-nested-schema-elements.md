@@ -2,27 +2,27 @@
 title: İç içe geçmiş şema öğeleri arasında örtük ilişkileri eşleme
 ms.date: 03/30/2017
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
-ms.openlocfilehash: 1bce0c2815ac94787055794942807777232df295
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3c0b5356479d31a3caad8438618e7cf7dc4e10e8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32763634"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485579"
 ---
-# <a name="map-implicit-relations-between-nested-schema-elements"></a><span data-ttu-id="bb2ad-102">İç içe geçmiş şema öğeleri arasında örtük ilişkileri eşleme</span><span class="sxs-lookup"><span data-stu-id="bb2ad-102">Map Implicit Relations Between Nested Schema Elements</span></span>
-<span data-ttu-id="bb2ad-103">Bir XML Şeması Tanım Dili (XSD) şeması, karmaşık türler başka içinde iç içe geçmiş olabilir.</span><span class="sxs-lookup"><span data-stu-id="bb2ad-103">An XML Schema definition language (XSD) schema can have complex types nested inside one another.</span></span> <span data-ttu-id="bb2ad-104">Bu durumda eşleme işlemi varsayılan eşleme uygulanır ve aşağıdakileri oluşturur <xref:System.Data.DataSet>:</span><span class="sxs-lookup"><span data-stu-id="bb2ad-104">In this case, the mapping process applies default mapping and creates the following in the <xref:System.Data.DataSet>:</span></span>  
+# <a name="map-implicit-relations-between-nested-schema-elements"></a><span data-ttu-id="28229-102">İç içe geçmiş şema öğeleri arasında örtük ilişkileri eşleme</span><span class="sxs-lookup"><span data-stu-id="28229-102">Map Implicit Relations Between Nested Schema Elements</span></span>
+<span data-ttu-id="28229-103">Bir XML Şeması Tanım Dili (XSD) şemaya karmaşık türler birbiriyle içinde iç içe olabilir.</span><span class="sxs-lookup"><span data-stu-id="28229-103">An XML Schema definition language (XSD) schema can have complex types nested inside one another.</span></span> <span data-ttu-id="28229-104">Bu durumda, eşleme işlemi varsayılan eşleme uygular ve aşağıdakileri oluşturur <xref:System.Data.DataSet>:</span><span class="sxs-lookup"><span data-stu-id="28229-104">In this case, the mapping process applies default mapping and creates the following in the <xref:System.Data.DataSet>:</span></span>  
   
--   <span data-ttu-id="bb2ad-105">Her bir karmaşık türleri (üst ve alt) için bir tablo.</span><span class="sxs-lookup"><span data-stu-id="bb2ad-105">One table for each of the complex types (parent and child).</span></span>  
+-   <span data-ttu-id="28229-105">(Üst ve alt) karmaşık türlerinin her biri için bir tablo.</span><span class="sxs-lookup"><span data-stu-id="28229-105">One table for each of the complex types (parent and child).</span></span>  
   
--   <span data-ttu-id="bb2ad-106">Hiçbir kısıtlama üst öğede varsa, bir ek birincil anahtar sütununun tablo tanımının başına adlı *TableName*_ıd nerede *TableName* üst tablo adıdır.</span><span class="sxs-lookup"><span data-stu-id="bb2ad-106">If no unique constraint exists on the parent, one additional primary key column per table definition named *TableName*_Id where *TableName* is the name of the parent table.</span></span>  
+-   <span data-ttu-id="28229-106">Üst öğede benzersiz kısıtlama yok varsa ek bir birincil anahtar sütun başına tablo tanımı adlı *TableName*_kimliği burada *TableName* üst tablo adıdır.</span><span class="sxs-lookup"><span data-stu-id="28229-106">If no unique constraint exists on the parent, one additional primary key column per table definition named *TableName*_Id where *TableName* is the name of the parent table.</span></span>  
   
--   <span data-ttu-id="bb2ad-107">Ek sütun birincil anahtar olarak tanımlayan üst tablo bir birincil anahtar kısıtlaması (ayarlayarak **IsPrimaryKey** özelliğine **True**).</span><span class="sxs-lookup"><span data-stu-id="bb2ad-107">A primary key constraint on the parent table identifying the additional column as the primary key (by setting the **IsPrimaryKey** property to **True**).</span></span> <span data-ttu-id="bb2ad-108">Kısıtlama kısıtlaması adlı*#* nerede *#* 1, 2, 3 ve benzeri.</span><span class="sxs-lookup"><span data-stu-id="bb2ad-108">The constraint is named Constraint*#* where *#* is 1, 2, 3, and so on.</span></span> <span data-ttu-id="bb2ad-109">Örneğin, varsayılan ilk kısıtlaması için Constraint1 adıdır.</span><span class="sxs-lookup"><span data-stu-id="bb2ad-109">For example, the default name for the first constraint is Constraint1.</span></span>  
+-   <span data-ttu-id="28229-107">Ek sütun birincil anahtar olarak tanımlayan ana tablosundaki birincil anahtar kısıtlaması (ayarlayarak **IsPrimaryKey** özelliğini **True**).</span><span class="sxs-lookup"><span data-stu-id="28229-107">A primary key constraint on the parent table identifying the additional column as the primary key (by setting the **IsPrimaryKey** property to **True**).</span></span> <span data-ttu-id="28229-108">Kısıtlama kısıtlaması adlı*#* burada *#* 1, 2, 3 ve böyle devam eder.</span><span class="sxs-lookup"><span data-stu-id="28229-108">The constraint is named Constraint*#* where *#* is 1, 2, 3, and so on.</span></span> <span data-ttu-id="28229-109">Örneğin, varsayılan ilk kısıtlamayı Constraint1 adıdır.</span><span class="sxs-lookup"><span data-stu-id="28229-109">For example, the default name for the first constraint is Constraint1.</span></span>  
   
--   <span data-ttu-id="bb2ad-110">Alt tablonun ek sütun üst tablonun birincil anahtarı için başvuran yabancı anahtar olarak tanımlayan bir yabancı anahtar kısıtlaması.</span><span class="sxs-lookup"><span data-stu-id="bb2ad-110">A foreign key constraint on the child table identifying the additional column as the foreign key referring to the primary key of the parent table.</span></span> <span data-ttu-id="bb2ad-111">Kısıtlama adlı *ParentTable_ChildTable* nerede *ParentTable* üst tablo adıdır ve *geldiği* alt tablo adıdır.</span><span class="sxs-lookup"><span data-stu-id="bb2ad-111">The constraint is named *ParentTable_ChildTable* where *ParentTable* is the name of the parent table and *ChildTable* is the name of the child table.</span></span>  
+-   <span data-ttu-id="28229-110">Ek sütun üst tablonun birincil anahtarına başvurarak yabancı anahtar olarak tanımlayan alt tablo bir yabancı anahtar kısıtlaması.</span><span class="sxs-lookup"><span data-stu-id="28229-110">A foreign key constraint on the child table identifying the additional column as the foreign key referring to the primary key of the parent table.</span></span> <span data-ttu-id="28229-111">Kısıtlama adlı *ParentTable_ChildTable* burada *ParentTable* üst tablo adıdır ve *geldiği* alt tablo adıdır.</span><span class="sxs-lookup"><span data-stu-id="28229-111">The constraint is named *ParentTable_ChildTable* where *ParentTable* is the name of the parent table and *ChildTable* is the name of the child table.</span></span>  
   
--   <span data-ttu-id="bb2ad-112">Üst ve alt tablolar arasında veri ilişki.</span><span class="sxs-lookup"><span data-stu-id="bb2ad-112">A data relation between the parent and child tables.</span></span>  
+-   <span data-ttu-id="28229-112">Üst ve alt tablolar arasında veri ilişkisi.</span><span class="sxs-lookup"><span data-stu-id="28229-112">A data relation between the parent and child tables.</span></span>  
   
- <span data-ttu-id="bb2ad-113">Aşağıdaki örnek, bir şema gösterir nerede **OrderDetail** bir alt öğesi olan **sipariş**.</span><span class="sxs-lookup"><span data-stu-id="bb2ad-113">The following example shows a schema where **OrderDetail** is a child element of **Order**.</span></span>  
+ <span data-ttu-id="28229-113">Aşağıdaki örnek, bir şema gösterir. burada **OrderDetail** bir alt öğesidir **sipariş**.</span><span class="sxs-lookup"><span data-stu-id="28229-113">The following example shows a schema where **OrderDetail** is a child element of **Order**.</span></span>  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   
@@ -54,16 +54,16 @@ ms.locfileid: "32763634"
 </xs:schema>  
 ```  
   
- <span data-ttu-id="bb2ad-114">Aşağıda, XML Şeması eşleme işlemi oluşturur **DataSet**:</span><span class="sxs-lookup"><span data-stu-id="bb2ad-114">The XML Schema mapping process creates the following in the **DataSet**:</span></span>  
+ <span data-ttu-id="28229-114">Aşağıdaki XML Şeması eşleme işlemi oluşturur **veri kümesi**:</span><span class="sxs-lookup"><span data-stu-id="28229-114">The XML Schema mapping process creates the following in the **DataSet**:</span></span>  
   
--   <span data-ttu-id="bb2ad-115">Bir **sipariş** ve bir **OrderDetail** tablo.</span><span class="sxs-lookup"><span data-stu-id="bb2ad-115">An **Order** and an **OrderDetail** table.</span></span>  
+-   <span data-ttu-id="28229-115">Bir **sipariş** ve **OrderDetail** tablo.</span><span class="sxs-lookup"><span data-stu-id="28229-115">An **Order** and an **OrderDetail** table.</span></span>  
   
     ```  
     Order(OrderNumber, EmpNumber, Order_Id)  
     OrderDetail(OrderNo, ItemNo, Order_Id)  
     ```  
   
--   <span data-ttu-id="bb2ad-116">Benzersiz bir kısıtlama **sipariş** tablo.</span><span class="sxs-lookup"><span data-stu-id="bb2ad-116">A unique constraint on the **Order** table.</span></span> <span data-ttu-id="bb2ad-117">Unutmayın **IsPrimaryKey** özelliği ayarlanmış **doğru**.</span><span class="sxs-lookup"><span data-stu-id="bb2ad-117">Note that the **IsPrimaryKey** property is set to **True**.</span></span>  
+-   <span data-ttu-id="28229-116">Benzersiz kısıtlama **sipariş** tablo.</span><span class="sxs-lookup"><span data-stu-id="28229-116">A unique constraint on the **Order** table.</span></span> <span data-ttu-id="28229-117">Unutmayın **IsPrimaryKey** özelliği **True**.</span><span class="sxs-lookup"><span data-stu-id="28229-117">Note that the **IsPrimaryKey** property is set to **True**.</span></span>  
   
     ```  
     ConstraintName: Constraint1  
@@ -73,7 +73,7 @@ ms.locfileid: "32763634"
     IsPrimaryKey: True  
     ```  
   
--   <span data-ttu-id="bb2ad-118">Bir yabancı anahtar kısıtlaması **OrderDetail** tablo.</span><span class="sxs-lookup"><span data-stu-id="bb2ad-118">A foreign key constraint on the **OrderDetail** table.</span></span>  
+-   <span data-ttu-id="28229-118">Bir yabancı anahtar kısıtlaması **OrderDetail** tablo.</span><span class="sxs-lookup"><span data-stu-id="28229-118">A foreign key constraint on the **OrderDetail** table.</span></span>  
   
     ```  
     ConstraintName: Order_OrderDetail  
@@ -84,7 +84,7 @@ ms.locfileid: "32763634"
     RelatedColumns: Order_Id   
     ```  
   
--   <span data-ttu-id="bb2ad-119">Arasında bir ilişki **sipariş** ve **OrderDetail** tablo.</span><span class="sxs-lookup"><span data-stu-id="bb2ad-119">A relationship between the **Order** and **OrderDetail** tables.</span></span> <span data-ttu-id="bb2ad-120">**İç içe** özelliği bu ilişki için ayarlanmış **True** çünkü **sipariş** ve **OrderDetail** şemada öğeleri iç içe .</span><span class="sxs-lookup"><span data-stu-id="bb2ad-120">The **Nested** property for this relationship is set to **True** because the **Order** and **OrderDetail** elements are nested in the schema.</span></span>  
+-   <span data-ttu-id="28229-119">Arasında bir ilişki **sipariş** ve **OrderDetail** tablolar.</span><span class="sxs-lookup"><span data-stu-id="28229-119">A relationship between the **Order** and **OrderDetail** tables.</span></span> <span data-ttu-id="28229-120">**İç içe** özelliği bu ilişki için **True** çünkü **sipariş** ve **OrderDetail** şemada öğelerini iç içe .</span><span class="sxs-lookup"><span data-stu-id="28229-120">The **Nested** property for this relationship is set to **True** because the **Order** and **OrderDetail** elements are nested in the schema.</span></span>  
   
     ```  
     ParentTable: Order  
@@ -97,7 +97,7 @@ ms.locfileid: "32763634"
     Nested: True  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="bb2ad-121">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="bb2ad-121">See Also</span></span>  
- [<span data-ttu-id="bb2ad-122">XML Şemasından (XSD) DataSet İlişkileri Oluşturma</span><span class="sxs-lookup"><span data-stu-id="bb2ad-122">Generating DataSet Relations from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
- [<span data-ttu-id="bb2ad-123">XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme</span><span class="sxs-lookup"><span data-stu-id="bb2ad-123">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- [<span data-ttu-id="bb2ad-124">ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi</span><span class="sxs-lookup"><span data-stu-id="bb2ad-124">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="28229-121">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="28229-121">See Also</span></span>  
+ [<span data-ttu-id="28229-122">XML Şemasından (XSD) DataSet İlişkileri Oluşturma</span><span class="sxs-lookup"><span data-stu-id="28229-122">Generating DataSet Relations from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
+ [<span data-ttu-id="28229-123">XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme</span><span class="sxs-lookup"><span data-stu-id="28229-123">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [<span data-ttu-id="28229-124">ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi</span><span class="sxs-lookup"><span data-stu-id="28229-124">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)

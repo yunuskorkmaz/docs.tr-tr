@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d2ac3788b68626eb04a6f2cbac995b8e5b4ebf5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e47c2ac69317b2d2db489dce9a0102b5fe304c05
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442588"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43483061"
 ---
-# <a name="strongnamesignatureverificationex2-method"></a><span data-ttu-id="e5b9e-102">StrongNameSignatureVerificationEx2 Yöntemi</span><span class="sxs-lookup"><span data-stu-id="e5b9e-102">StrongNameSignatureVerificationEx2 Method</span></span>
-<span data-ttu-id="e5b9e-103">Türü kesin adlandırılmış bir derleme imzasını doğrular ve gerçek bir anahtara ECMA anahtarından bir eşleme sağlar.</span><span class="sxs-lookup"><span data-stu-id="e5b9e-103">Verifies the signature of a strongly named assembly, and provides a mapping from the ECMA key to a real key.</span></span>  
+# <a name="strongnamesignatureverificationex2-method"></a><span data-ttu-id="eb07a-102">StrongNameSignatureVerificationEx2 Yöntemi</span><span class="sxs-lookup"><span data-stu-id="eb07a-102">StrongNameSignatureVerificationEx2 Method</span></span>
+<span data-ttu-id="eb07a-103">Kesin adlandırılmış derlemenin imzayı doğrular ve ECMA anahtarından bir eşleme için gerçek bir anahtar sağlar.</span><span class="sxs-lookup"><span data-stu-id="eb07a-103">Verifies the signature of a strongly named assembly, and provides a mapping from the ECMA key to a real key.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e5b9e-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="e5b9e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="eb07a-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="eb07a-104">Syntax</span></span>  
   
 ```  
 HRESULT StrongNameSignatureVerificationEx (  
@@ -38,35 +38,35 @@ HRESULT StrongNameSignatureVerificationEx (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="e5b9e-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="e5b9e-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="eb07a-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="eb07a-105">Parameters</span></span>  
  `wszFilePath`  
- <span data-ttu-id="e5b9e-106">[in] Taşınabilir yürütülebilir (.exe veya .dll) dosyasını doğrulanacak derleme yolu.</span><span class="sxs-lookup"><span data-stu-id="e5b9e-106">[in] The path to the portable executable (.exe or .dll) file for the assembly to be verified.</span></span>  
+ <span data-ttu-id="eb07a-106">[in] Taşınabilir yürütülebilir (.exe veya .dll) dosyası doğrulanması derleme yolu.</span><span class="sxs-lookup"><span data-stu-id="eb07a-106">[in] The path to the portable executable (.exe or .dll) file for the assembly to be verified.</span></span>  
   
  `fForceVerification`  
- <span data-ttu-id="e5b9e-107">[in] `true` , olsa bile gerekli kayıt defteri ayarlarını geçersiz kılmak, aksi takdirde doğrulama gerçekleştirmek için `false`.</span><span class="sxs-lookup"><span data-stu-id="e5b9e-107">[in] `true` to perform verification, even if it is necessary to override registry settings; otherwise, `false`.</span></span>  
+ <span data-ttu-id="eb07a-107">[in] `true` , olsa bile gerekli kayıt defteri ayarlarını geçersiz kılmak; Aksi takdirde, doğrulamanın `false`.</span><span class="sxs-lookup"><span data-stu-id="eb07a-107">[in] `true` to perform verification, even if it is necessary to override registry settings; otherwise, `false`.</span></span>  
   
  `pbEcmaPublicKey`  
- <span data-ttu-id="e5b9e-108">[in] ECMA ortak anahtar gerçek anahtarına eşlemesine işaretçi doğrulama için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="e5b9e-108">[in] A pointer to the mapping from the ECMA public key to the real key used for verification.</span></span>  
+ <span data-ttu-id="eb07a-108">[in] Eşleme için bir işaretçi gerçek anahtarı ECMA ortak anahtarından doğrulama için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="eb07a-108">[in] A pointer to the mapping from the ECMA public key to the real key used for verification.</span></span>  
   
  `cbEcmaPublicKey`  
- <span data-ttu-id="e5b9e-109">[in] Gerçek ECMA ortak anahtar uzunluğu.</span><span class="sxs-lookup"><span data-stu-id="e5b9e-109">[in] The length of the real ECMA public key.</span></span>  
+ <span data-ttu-id="eb07a-109">[in] Gerçek ECMA ortak anahtarın uzunluğu.</span><span class="sxs-lookup"><span data-stu-id="eb07a-109">[in] The length of the real ECMA public key.</span></span>  
   
  `pfWasVerified`  
- <span data-ttu-id="e5b9e-110">[out] `true` sağlam ad imzası, doğrulanmış Aksi takdirde `false`.</span><span class="sxs-lookup"><span data-stu-id="e5b9e-110">[out] `true` if the strong name signature was verified; otherwise, `false`.</span></span> <span data-ttu-id="e5b9e-111">Bu parametre de ayarlamak `false` kayıt defteri ayarları nedeniyle doğrulama başarılı olursa.</span><span class="sxs-lookup"><span data-stu-id="e5b9e-111">This parameter is also set to `false` if the verification was successful due to registry settings.</span></span>  
+ <span data-ttu-id="eb07a-110">[out] `true` tanımlayıcı ad imzası, doğrulanmış; Aksi takdirde `false`.</span><span class="sxs-lookup"><span data-stu-id="eb07a-110">[out] `true` if the strong name signature was verified; otherwise, `false`.</span></span> <span data-ttu-id="eb07a-111">Bu parametre aynı zamanda kümesine `false` kayıt defteri ayarları nedeniyle doğrulama başarılı olursa.</span><span class="sxs-lookup"><span data-stu-id="eb07a-111">This parameter is also set to `false` if the verification was successful due to registry settings.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="e5b9e-112">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="e5b9e-112">Return Value</span></span>  
- <span data-ttu-id="e5b9e-113">`S_OK` doğrulama başarılı olursa; Aksi takdirde hata belirten bir HRESULT değeri (bkz [ortak HRESULT değerleri](http://go.microsoft.com/fwlink/?LinkId=213878) bir listesi için).</span><span class="sxs-lookup"><span data-stu-id="e5b9e-113">`S_OK` if the verification was successful; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](http://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="eb07a-112">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="eb07a-112">Return Value</span></span>  
+ <span data-ttu-id="eb07a-113">`S_OK` doğrulama başarılı olduysa; Aksi takdirde hata olduğunu gösteren HRESULT değerini (bkz [ortak HRESULT değerlerini](https://go.microsoft.com/fwlink/?LinkId=213878) bir listesi için).</span><span class="sxs-lookup"><span data-stu-id="eb07a-113">`S_OK` if the verification was successful; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e5b9e-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="e5b9e-114">Requirements</span></span>  
- <span data-ttu-id="e5b9e-115">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e5b9e-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="eb07a-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="eb07a-114">Requirements</span></span>  
+ <span data-ttu-id="eb07a-115">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="eb07a-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e5b9e-116">**Başlık:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="e5b9e-116">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="eb07a-116">**Başlık:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="eb07a-116">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="e5b9e-117">**Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="e5b9e-117">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="eb07a-117">**Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="eb07a-117">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="e5b9e-118">**.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e5b9e-118">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="eb07a-118">**.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="eb07a-118">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e5b9e-119">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="e5b9e-119">See Also</span></span>  
- [<span data-ttu-id="e5b9e-120">StrongNameSignatureVerification Yöntemi</span><span class="sxs-lookup"><span data-stu-id="e5b9e-120">StrongNameSignatureVerification Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md)  
- [<span data-ttu-id="e5b9e-121">StrongNameSignatureVerificationEx Yöntemi</span><span class="sxs-lookup"><span data-stu-id="e5b9e-121">StrongNameSignatureVerificationEx Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)  
- [<span data-ttu-id="e5b9e-122">ICLRStrongName Arabirimi</span><span class="sxs-lookup"><span data-stu-id="e5b9e-122">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="eb07a-119">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="eb07a-119">See Also</span></span>  
+ [<span data-ttu-id="eb07a-120">StrongNameSignatureVerification Yöntemi</span><span class="sxs-lookup"><span data-stu-id="eb07a-120">StrongNameSignatureVerification Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md)  
+ [<span data-ttu-id="eb07a-121">StrongNameSignatureVerificationEx Yöntemi</span><span class="sxs-lookup"><span data-stu-id="eb07a-121">StrongNameSignatureVerificationEx Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)  
+ [<span data-ttu-id="eb07a-122">ICLRStrongName Arabirimi</span><span class="sxs-lookup"><span data-stu-id="eb07a-122">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

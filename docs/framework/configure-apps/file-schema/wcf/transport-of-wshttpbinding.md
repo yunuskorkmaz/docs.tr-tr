@@ -2,24 +2,24 @@
 title: '&lt;wsHttpBinding&gt; &lt;taşıma&gt;'
 ms.date: 03/30/2017
 ms.assetid: 21e38acf-450a-4bda-82b6-de305e1f7cd8
-ms.openlocfilehash: d6095c2cc9a315855db03f3a3f44547b1f64b9df
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 771866a83d54ca9e4fc7f3ed6d351b4a6c755b4c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767589"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43483859"
 ---
-# <a name="lttransportgt-of-ltwshttpbindinggt"></a><span data-ttu-id="a91cf-102">&lt;wsHttpBinding&gt; &lt;taşıma&gt;</span><span class="sxs-lookup"><span data-stu-id="a91cf-102">&lt;transport&gt; of &lt;wsHttpBinding&gt;</span></span>
-<span data-ttu-id="a91cf-103">HTTP taşıma için kimlik doğrulama ayarlarını tanımlar.</span><span class="sxs-lookup"><span data-stu-id="a91cf-103">Defines authentication settings for the HTTP transport.</span></span>  
+# <a name="lttransportgt-of-ltwshttpbindinggt"></a><span data-ttu-id="3a607-102">&lt;wsHttpBinding&gt; &lt;taşıma&gt;</span><span class="sxs-lookup"><span data-stu-id="3a607-102">&lt;transport&gt; of &lt;wsHttpBinding&gt;</span></span>
+<span data-ttu-id="3a607-103">HTTP taşıma için kimlik doğrulama ayarlarını tanımlar.</span><span class="sxs-lookup"><span data-stu-id="3a607-103">Defines authentication settings for the HTTP transport.</span></span>  
   
- <span data-ttu-id="a91cf-104">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="a91cf-104">\<system.serviceModel></span></span>  
-<span data-ttu-id="a91cf-105">\<bağlamaları ></span><span class="sxs-lookup"><span data-stu-id="a91cf-105">\<bindings></span></span>  
-<span data-ttu-id="a91cf-106">\<wsHttpBinding></span><span class="sxs-lookup"><span data-stu-id="a91cf-106">\<wsHttpBinding></span></span>  
-<span data-ttu-id="a91cf-107">\<bağlama ></span><span class="sxs-lookup"><span data-stu-id="a91cf-107">\<binding></span></span>  
-<span data-ttu-id="a91cf-108">\<Güvenlik ></span><span class="sxs-lookup"><span data-stu-id="a91cf-108">\<security></span></span>  
-<span data-ttu-id="a91cf-109">\<taşıma ></span><span class="sxs-lookup"><span data-stu-id="a91cf-109">\<transport></span></span>  
+ <span data-ttu-id="3a607-104">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="3a607-104">\<system.serviceModel></span></span>  
+<span data-ttu-id="3a607-105">\<bağlamaları ></span><span class="sxs-lookup"><span data-stu-id="3a607-105">\<bindings></span></span>  
+<span data-ttu-id="3a607-106">\<wsHttpBinding></span><span class="sxs-lookup"><span data-stu-id="3a607-106">\<wsHttpBinding></span></span>  
+<span data-ttu-id="3a607-107">\<bağlama ></span><span class="sxs-lookup"><span data-stu-id="3a607-107">\<binding></span></span>  
+<span data-ttu-id="3a607-108">\<Güvenlik ></span><span class="sxs-lookup"><span data-stu-id="3a607-108">\<security></span></span>  
+<span data-ttu-id="3a607-109">\<taşıma ></span><span class="sxs-lookup"><span data-stu-id="3a607-109">\<transport></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a91cf-110">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="a91cf-110">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3a607-110">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="3a607-110">Syntax</span></span>  
   
 ```xml  
 <wsHttpBinding>  
@@ -38,59 +38,59 @@ ms.locfileid: "32767589"
 </wsHttpBinding>  
 ```  
   
-## <a name="type"></a><span data-ttu-id="a91cf-111">Tür</span><span class="sxs-lookup"><span data-stu-id="a91cf-111">Type</span></span>  
+## <a name="type"></a><span data-ttu-id="3a607-111">Tür</span><span class="sxs-lookup"><span data-stu-id="3a607-111">Type</span></span>  
  <xref:System.ServiceModel.HttpTransportSecurity>  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="a91cf-112">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="a91cf-112">Attributes and Elements</span></span>  
- <span data-ttu-id="a91cf-113">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="a91cf-113">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="3a607-112">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="3a607-112">Attributes and Elements</span></span>  
+ <span data-ttu-id="3a607-113">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="3a607-113">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="a91cf-114">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="a91cf-114">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="3a607-114">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="3a607-114">Attributes</span></span>  
   
-|<span data-ttu-id="a91cf-115">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="a91cf-115">Attribute</span></span>|<span data-ttu-id="a91cf-116">Açıklama</span><span class="sxs-lookup"><span data-stu-id="a91cf-116">Description</span></span>|  
+|<span data-ttu-id="3a607-115">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="3a607-115">Attribute</span></span>|<span data-ttu-id="3a607-116">Açıklama</span><span class="sxs-lookup"><span data-stu-id="3a607-116">Description</span></span>|  
 |---------------|-----------------|  
-|`clientCredentialType`|<span data-ttu-id="a91cf-117">Hizmeti için istemci kimlik doğrulaması için kullanılan kimlik bilgilerini belirtir.</span><span class="sxs-lookup"><span data-stu-id="a91cf-117">Specifies the credential used to authenticate the client to the service.</span></span> <span data-ttu-id="a91cf-118">Bu öznitelik türünde <xref:System.ServiceModel.HttpClientCredentialType>.</span><span class="sxs-lookup"><span data-stu-id="a91cf-118">This attribute is of type <xref:System.ServiceModel.HttpClientCredentialType>.</span></span>|  
-|`proxyCredentialType`|<span data-ttu-id="a91cf-119">Bir etki alanı Ara sunucu için istemci kimlik doğrulaması için kullanılan kimlik bilgilerini belirtir.</span><span class="sxs-lookup"><span data-stu-id="a91cf-119">Specifies the credential used to authenticate the client to a domain proxy.</span></span> <span data-ttu-id="a91cf-120">Bu öznitelik türünde <xref:System.ServiceModel.HttpProxyCredentialType>.</span><span class="sxs-lookup"><span data-stu-id="a91cf-120">This attribute is of type <xref:System.ServiceModel.HttpProxyCredentialType>.</span></span>|  
-|`realm`|<span data-ttu-id="a91cf-121">Özet veya temel kimlik doğrulaması için kimlik doğrulaması bölgesi belirten bir dize.</span><span class="sxs-lookup"><span data-stu-id="a91cf-121">A string that specifies the authentication realm for digest or basic authentication.</span></span> <span data-ttu-id="a91cf-122">Varsayılan boş bir dizedir.</span><span class="sxs-lookup"><span data-stu-id="a91cf-122">The default is an empty string.</span></span><br /><br /> <span data-ttu-id="a91cf-123">Bir kimlik doğrulaması bölgesi, en az kimlik doğrulaması yapan ana bilgisayar adını belirtir.</span><span class="sxs-lookup"><span data-stu-id="a91cf-123">An authentication realm specifies at least the name of the host that performs the authentication.</span></span> <span data-ttu-id="a91cf-124">Ayrıca, erişimi olan bir kullanıcı koleksiyonu de belirtebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="a91cf-124">It can also specify a collection of users that has access.</span></span> <span data-ttu-id="a91cf-125">Bir kullanıcı hangisinin birkaç olası kullanıcı adları ve parolalar kullanılabilir olmadığından emin olmak için kimlik doğrulaması bölgesi sorgulayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="a91cf-125">A user can query the authentication realm to ascertain which one of the several possible usernames and passwords can be used.</span></span>|  
-|`policyEnforcement`|<span data-ttu-id="a91cf-126">Bu numaralandırma ne zaman belirtir <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> zorunlu tutulmalıdır.</span><span class="sxs-lookup"><span data-stu-id="a91cf-126">This enumeration specifies when the <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> should be enforced.</span></span><br /><br /> <span data-ttu-id="a91cf-127">1.  Hiçbir zaman – ilke hiçbir zaman zorlanır (genişletilmiş koruma devre dışı).</span><span class="sxs-lookup"><span data-stu-id="a91cf-127">1.  Never – The policy is never enforced (Extended Protection is disabled).</span></span><br /><span data-ttu-id="a91cf-128">2.  Yalnızca istemci genişletilmiş koruma destekliyorsa WhenSupported – ilke uygulanır.</span><span class="sxs-lookup"><span data-stu-id="a91cf-128">2.  WhenSupported – The policy is enforced only if the client supports Extended Protection.</span></span><br /><span data-ttu-id="a91cf-129">3.  Her zaman – ilke her zaman zorlanır.</span><span class="sxs-lookup"><span data-stu-id="a91cf-129">3.  Always – The policy is always enforced.</span></span> <span data-ttu-id="a91cf-130">Genişletilmiş Koruma desteklemeyen istemcilerin kimliğini doğrulamak başarısız olur.</span><span class="sxs-lookup"><span data-stu-id="a91cf-130">Clients which don’t support Extended Protection will fail to authenticate.</span></span>|  
+|`clientCredentialType`|<span data-ttu-id="3a607-117">Bir hizmete istemcinin kimliğini doğrulamak için kullanılan kimlik bilgilerini belirtir.</span><span class="sxs-lookup"><span data-stu-id="3a607-117">Specifies the credential used to authenticate the client to the service.</span></span> <span data-ttu-id="3a607-118">Bu öznitelik türünde <xref:System.ServiceModel.HttpClientCredentialType>.</span><span class="sxs-lookup"><span data-stu-id="3a607-118">This attribute is of type <xref:System.ServiceModel.HttpClientCredentialType>.</span></span>|  
+|`proxyCredentialType`|<span data-ttu-id="3a607-119">Bir etki alanı Ara sunucusu istemcinin kimliğini doğrulamak için kullanılan kimlik bilgilerini belirtir.</span><span class="sxs-lookup"><span data-stu-id="3a607-119">Specifies the credential used to authenticate the client to a domain proxy.</span></span> <span data-ttu-id="3a607-120">Bu öznitelik türünde <xref:System.ServiceModel.HttpProxyCredentialType>.</span><span class="sxs-lookup"><span data-stu-id="3a607-120">This attribute is of type <xref:System.ServiceModel.HttpProxyCredentialType>.</span></span>|  
+|`realm`|<span data-ttu-id="3a607-121">Özet veya temel kimlik doğrulaması için kimlik doğrulaması bölgesi belirten bir dize.</span><span class="sxs-lookup"><span data-stu-id="3a607-121">A string that specifies the authentication realm for digest or basic authentication.</span></span> <span data-ttu-id="3a607-122">Varsayılan değer boş bir dizedir.</span><span class="sxs-lookup"><span data-stu-id="3a607-122">The default is an empty string.</span></span><br /><br /> <span data-ttu-id="3a607-123">Bir kimlik doğrulaması bölgesi, kimlik doğrulaması yapan bir ana bilgisayar adı en az belirtir.</span><span class="sxs-lookup"><span data-stu-id="3a607-123">An authentication realm specifies at least the name of the host that performs the authentication.</span></span> <span data-ttu-id="3a607-124">Ayrıca, erişimi olan bir kullanıcı koleksiyonu da belirtebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="3a607-124">It can also specify a collection of users that has access.</span></span> <span data-ttu-id="3a607-125">Bir kullanıcı kimlik doğrulaması bölgesi, hangisinin birkaç olası kullanıcı adları ve parolalar kullanılabilir olmadığından emin olmak için sorgulayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="3a607-125">A user can query the authentication realm to ascertain which one of the several possible usernames and passwords can be used.</span></span>|  
+|`policyEnforcement`|<span data-ttu-id="3a607-126">Bu sabit listesi ne zaman belirtir <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> zorlanmalıdır.</span><span class="sxs-lookup"><span data-stu-id="3a607-126">This enumeration specifies when the <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> should be enforced.</span></span><br /><br /> <span data-ttu-id="3a607-127">1.  Hiçbir zaman – hiçbir zaman ilkenin uygulanıp (genişletilmiş koruma devre dışı).</span><span class="sxs-lookup"><span data-stu-id="3a607-127">1.  Never – The policy is never enforced (Extended Protection is disabled).</span></span><br /><span data-ttu-id="3a607-128">2.  Yalnızca istemci genişletilmiş koruma destekliyorsa WhenSupported – ilke zorunlu tutulur.</span><span class="sxs-lookup"><span data-stu-id="3a607-128">2.  WhenSupported – The policy is enforced only if the client supports Extended Protection.</span></span><br /><span data-ttu-id="3a607-129">3.  Her zaman – ilke her zaman uygulanmaz.</span><span class="sxs-lookup"><span data-stu-id="3a607-129">3.  Always – The policy is always enforced.</span></span> <span data-ttu-id="3a607-130">Genişletilmiş Koruma desteklemeyen istemciler kimlik doğrulaması başarısız olur.</span><span class="sxs-lookup"><span data-stu-id="3a607-130">Clients which don’t support Extended Protection will fail to authenticate.</span></span>|  
   
-## <a name="clientcredentialtype-attribute"></a><span data-ttu-id="a91cf-131">clientCredentialType özniteliği</span><span class="sxs-lookup"><span data-stu-id="a91cf-131">clientCredentialType Attribute</span></span>  
+## <a name="clientcredentialtype-attribute"></a><span data-ttu-id="3a607-131">clientCredentialType özniteliği</span><span class="sxs-lookup"><span data-stu-id="3a607-131">clientCredentialType Attribute</span></span>  
   
-|<span data-ttu-id="a91cf-132">Değer</span><span class="sxs-lookup"><span data-stu-id="a91cf-132">Value</span></span>|<span data-ttu-id="a91cf-133">Açıklama</span><span class="sxs-lookup"><span data-stu-id="a91cf-133">Description</span></span>|  
+|<span data-ttu-id="3a607-132">Değer</span><span class="sxs-lookup"><span data-stu-id="3a607-132">Value</span></span>|<span data-ttu-id="3a607-133">Açıklama</span><span class="sxs-lookup"><span data-stu-id="3a607-133">Description</span></span>|  
 |-----------|-----------------|  
-|`None`|<span data-ttu-id="a91cf-134">Güvenliği devre dışı bırakıldı.</span><span class="sxs-lookup"><span data-stu-id="a91cf-134">Security is disabled.</span></span>|  
-|`Basic`|<span data-ttu-id="a91cf-135">Temel kimlik doğrulaması kullanır.</span><span class="sxs-lookup"><span data-stu-id="a91cf-135">Uses basic authentication.</span></span>|  
-|`Digest`|<span data-ttu-id="a91cf-136">Özet kimlik doğrulaması kullanır.</span><span class="sxs-lookup"><span data-stu-id="a91cf-136">Uses digest authentication.</span></span>|  
-|`Ntlm`|<span data-ttu-id="a91cf-137">Bir Windows etki alanı ile bir geri dönüş olarak NTLM kimlik doğrulaması kullanır.</span><span class="sxs-lookup"><span data-stu-id="a91cf-137">Uses NTLM authentication as a fallback with a Windows domain.</span></span>|  
-|`Windows`|<span data-ttu-id="a91cf-138">Tümleşik Windows kimlik doğrulaması kullanır.</span><span class="sxs-lookup"><span data-stu-id="a91cf-138">Uses integrated Windows authentication.</span></span>|  
-|`Certificate`|<span data-ttu-id="a91cf-139">İstemci kimlik doğrulaması için X.509 sertifikaları kullanır.</span><span class="sxs-lookup"><span data-stu-id="a91cf-139">Uses X.509 certificates to authenticate the client.</span></span>|  
+|`None`|<span data-ttu-id="3a607-134">Güvenlik devre dışı bırakıldı.</span><span class="sxs-lookup"><span data-stu-id="3a607-134">Security is disabled.</span></span>|  
+|`Basic`|<span data-ttu-id="3a607-135">Temel kimlik doğrulaması kullanır.</span><span class="sxs-lookup"><span data-stu-id="3a607-135">Uses basic authentication.</span></span>|  
+|`Digest`|<span data-ttu-id="3a607-136">Özet kimlik doğrulaması kullanır.</span><span class="sxs-lookup"><span data-stu-id="3a607-136">Uses digest authentication.</span></span>|  
+|`Ntlm`|<span data-ttu-id="3a607-137">Bir Windows etki alanı ile bir geri dönüş olarak NTLM kimlik doğrulaması kullanır.</span><span class="sxs-lookup"><span data-stu-id="3a607-137">Uses NTLM authentication as a fallback with a Windows domain.</span></span>|  
+|`Windows`|<span data-ttu-id="3a607-138">Tümleşik Windows kimlik doğrulaması olarak kullanır.</span><span class="sxs-lookup"><span data-stu-id="3a607-138">Uses integrated Windows authentication.</span></span>|  
+|`Certificate`|<span data-ttu-id="3a607-139">İstemcinin kimliğini doğrulamak için X.509 sertifikaları kullanır.</span><span class="sxs-lookup"><span data-stu-id="3a607-139">Uses X.509 certificates to authenticate the client.</span></span>|  
   
-## <a name="proxycredentialtype-attribute"></a><span data-ttu-id="a91cf-140">proxyCredentialType özniteliği</span><span class="sxs-lookup"><span data-stu-id="a91cf-140">proxyCredentialType Attribute</span></span>  
+## <a name="proxycredentialtype-attribute"></a><span data-ttu-id="3a607-140">proxyCredentialType özniteliği</span><span class="sxs-lookup"><span data-stu-id="3a607-140">proxyCredentialType Attribute</span></span>  
   
-|<span data-ttu-id="a91cf-141">Değer</span><span class="sxs-lookup"><span data-stu-id="a91cf-141">Value</span></span>|<span data-ttu-id="a91cf-142">Açıklama</span><span class="sxs-lookup"><span data-stu-id="a91cf-142">Description</span></span>|  
+|<span data-ttu-id="3a607-141">Değer</span><span class="sxs-lookup"><span data-stu-id="3a607-141">Value</span></span>|<span data-ttu-id="3a607-142">Açıklama</span><span class="sxs-lookup"><span data-stu-id="3a607-142">Description</span></span>|  
 |-----------|-----------------|  
-|`None`|<span data-ttu-id="a91cf-143">Güvenliği devre dışı bırakıldı.</span><span class="sxs-lookup"><span data-stu-id="a91cf-143">Security is disabled.</span></span>|  
-|`Basic`|<span data-ttu-id="a91cf-144">Temel kimlik doğrulaması kullanır.</span><span class="sxs-lookup"><span data-stu-id="a91cf-144">Uses basic authentication.</span></span>|  
-|`Digest`|<span data-ttu-id="a91cf-145">Özet kimlik doğrulaması kullanır.</span><span class="sxs-lookup"><span data-stu-id="a91cf-145">Uses digest authentication.</span></span>|  
-|`Ntlm`|<span data-ttu-id="a91cf-146">Bir Windows etki alanı ile bir geri dönüş olarak NTLM kullanır.</span><span class="sxs-lookup"><span data-stu-id="a91cf-146">Uses NTLM as a fallback with a Windows domain.</span></span>|  
-|`Windows`|<span data-ttu-id="a91cf-147">Tümleşik Windows kimlik doğrulaması kullanır.</span><span class="sxs-lookup"><span data-stu-id="a91cf-147">Uses integrated Windows authentication.</span></span>|  
-|`Certificate`|<span data-ttu-id="a91cf-148">İstemci kimlik doğrulaması için X.509 sertifikaları kullanır.</span><span class="sxs-lookup"><span data-stu-id="a91cf-148">Uses X.509 certificates to authenticate the client.</span></span>|  
+|`None`|<span data-ttu-id="3a607-143">Güvenlik devre dışı bırakıldı.</span><span class="sxs-lookup"><span data-stu-id="3a607-143">Security is disabled.</span></span>|  
+|`Basic`|<span data-ttu-id="3a607-144">Temel kimlik doğrulaması kullanır.</span><span class="sxs-lookup"><span data-stu-id="3a607-144">Uses basic authentication.</span></span>|  
+|`Digest`|<span data-ttu-id="3a607-145">Özet kimlik doğrulaması kullanır.</span><span class="sxs-lookup"><span data-stu-id="3a607-145">Uses digest authentication.</span></span>|  
+|`Ntlm`|<span data-ttu-id="3a607-146">Bir Windows etki alanı ile bir geri dönüş olarak NTLM kullanır.</span><span class="sxs-lookup"><span data-stu-id="3a607-146">Uses NTLM as a fallback with a Windows domain.</span></span>|  
+|`Windows`|<span data-ttu-id="3a607-147">Tümleşik Windows kimlik doğrulaması olarak kullanır.</span><span class="sxs-lookup"><span data-stu-id="3a607-147">Uses integrated Windows authentication.</span></span>|  
+|`Certificate`|<span data-ttu-id="3a607-148">İstemcinin kimliğini doğrulamak için X.509 sertifikaları kullanır.</span><span class="sxs-lookup"><span data-stu-id="3a607-148">Uses X.509 certificates to authenticate the client.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="a91cf-149">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="a91cf-149">Child Elements</span></span>  
- <span data-ttu-id="a91cf-150">Yok.</span><span class="sxs-lookup"><span data-stu-id="a91cf-150">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="3a607-149">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="3a607-149">Child Elements</span></span>  
+ <span data-ttu-id="3a607-150">Yok.</span><span class="sxs-lookup"><span data-stu-id="3a607-150">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="a91cf-151">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="a91cf-151">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="3a607-151">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="3a607-151">Parent Elements</span></span>  
   
-|<span data-ttu-id="a91cf-152">Öğe</span><span class="sxs-lookup"><span data-stu-id="a91cf-152">Element</span></span>|<span data-ttu-id="a91cf-153">Açıklama</span><span class="sxs-lookup"><span data-stu-id="a91cf-153">Description</span></span>|  
+|<span data-ttu-id="3a607-152">Öğe</span><span class="sxs-lookup"><span data-stu-id="3a607-152">Element</span></span>|<span data-ttu-id="3a607-153">Açıklama</span><span class="sxs-lookup"><span data-stu-id="3a607-153">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="a91cf-154">\<Güvenlik ></span><span class="sxs-lookup"><span data-stu-id="a91cf-154">\<security></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)|<span data-ttu-id="a91cf-155">Güvenlik özellikleri temsil eden [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="a91cf-155">Represents the security capabilities of the [\<wsHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).</span></span>|  
+|[<span data-ttu-id="3a607-154">\<Güvenlik ></span><span class="sxs-lookup"><span data-stu-id="3a607-154">\<security></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)|<span data-ttu-id="3a607-155">Güvenlik özelliklerini gösteren [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="3a607-155">Represents the security capabilities of the [\<wsHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="a91cf-156">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="a91cf-156">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="3a607-156">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="3a607-156">See Also</span></span>  
  <xref:System.ServiceModel.HttpTransportSecurity>  
  <xref:System.ServiceModel.WSHttpSecurity.Transport%2A>  
  <xref:System.ServiceModel.Configuration.WSHttpSecurityElement.Transport%2A>  
  <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>  
- [<span data-ttu-id="a91cf-157">Hizmet ve İstemcileri Güvenli Hale Getirme</span><span class="sxs-lookup"><span data-stu-id="a91cf-157">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [<span data-ttu-id="a91cf-158">Bağlamalar</span><span class="sxs-lookup"><span data-stu-id="a91cf-158">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
- [<span data-ttu-id="a91cf-159">Sistem Tarafından Sağlanan Bağlamaları Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="a91cf-159">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [<span data-ttu-id="a91cf-160">Windows Communication Foundation Hizmetleri ve istemcileri yapılandırmak için bağlamaları kullanma</span><span class="sxs-lookup"><span data-stu-id="a91cf-160">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [<span data-ttu-id="a91cf-161">\<bağlama ></span><span class="sxs-lookup"><span data-stu-id="a91cf-161">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)
+ [<span data-ttu-id="3a607-157">Hizmet ve İstemcileri Güvenli Hale Getirme</span><span class="sxs-lookup"><span data-stu-id="3a607-157">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="3a607-158">Bağlamalar</span><span class="sxs-lookup"><span data-stu-id="3a607-158">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="3a607-159">Sistem Tarafından Sağlanan Bağlamaları Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="3a607-159">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="3a607-160">Windows Communication Foundation Hizmetleri ve istemcileri yapılandırmak için bağlamaları kullanma</span><span class="sxs-lookup"><span data-stu-id="3a607-160">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [<span data-ttu-id="3a607-161">\<bağlama ></span><span class="sxs-lookup"><span data-stu-id="3a607-161">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)
