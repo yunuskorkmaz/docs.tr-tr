@@ -12,38 +12,38 @@ helpviewer_keywords:
 - True keyword [Visual Basic]
 - Boolean values [Visual Basic], True keyword
 ms.assetid: 4858e630-4813-4216-a55e-f4d0feb884e4
-ms.openlocfilehash: 00f77fe5e98099868e02d74fe1adc7690cb95cca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bbd914d8b4239bbae1de7031e68b2900cf5ad6a3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590283"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43478058"
 ---
 # <a name="boolean-data-type-visual-basic"></a>Boole Veri Türü (Visual Basic)
-Yalnızca ayrı tutma değerleri `True` veya `False`. Anahtar sözcükler `True` ve `False` için iki durumlarını karşılık `Boolean` değişkenleri.  
+Yalnızca ayrı tutma değerleri `True` veya `False`. Anahtar sözcükler `True` ve `False` iki durum için karşılık gelen `Boolean` değişkenleri.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kullanım [Boole veri türü (Visual Basic)](../../../visual-basic/language-reference/data-types/boolean-data-type.md) true/false gibi iki durumlu değerler içermesini Evet/Hayır, veya açık/kapalı.  
+ Kullanım [Boole veri türü (Visual Basic)](../../../visual-basic/language-reference/data-types/boolean-data-type.md) Evet/Hayır veya açık/kapalı true/false gibi iki durumlu değerler içerecek şekilde.  
   
- Varsayılan değer olan `Boolean` olan `False`.  
+ Varsayılan değer olan `Boolean` olduğu `False`.  
   
- `Boolean` değerleri sayı olarak depolanmaz ve depolanan değerlerin sayıya eşit olması amaçlanmamıştır. Hiçbir zaman eşdeğer sayısal değerler için güvenen kod yazmanız gerekir `True` ve `False`. Mümkün olduğunda, kullanımını kısıtlamalısınız `Boolean` , bunlar tasarlanan mantıksal değerleri değişkenleri.  
+ `Boolean` Değer sayı olarak depolanmaz ve depolanan değerler sayıya eşdeğer olması amaçlanmamıştır. Hiçbir zaman eşdeğer sayısal değerler için dayanan kod yazmanız gerekir `True` ve `False`. Mümkün olduğunda, kullanımını sınırlamanız gerekir `Boolean` kendisi için tasarlanan mantıksal değerleri değişkenlere.  
   
 ## <a name="type-conversions"></a>Tür Dönüştürmeleri  
- Visual Basic sayısal veri türü değerleri için ne zaman dönüştürür `Boolean`, 0 olur `False` ve diğer tüm değerler duruma `True`. Visual Basic zaman dönüştürür `Boolean` sayısal türler değerlere `False` 0 olur ve `True` -1 olur.  
+ Visual Basic sayısal veri türü değerleri için ne zaman dönüştürür `Boolean`, 0 olur `False` ve diğer tüm değerler `True`. Visual Basic zaman dönüştürür `Boolean` değerleri sayısal türlere `False` 0 olur ve `True` -1 olur.  
   
- Arasında dönüştürürken `Boolean` değerleri ve sayısal veri türleri tutmak .NET Framework dönüştürme yöntemleri her zaman aynı sonucu olarak Visual Basic dönüşüm anahtar sözcükleri vermez unutmayın. Visual Basic dönüştürme davranış önceki sürümleriyle uyumlu koruyacağından budur. Daha fazla bilgi için "Boole türü mu değil dönüştürmek için sayısal türü doğru şekilde" bölümüne bakın [veri türleri sorunlarını giderme](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
+ Arasında dönüştürürken `Boolean` değerlerini ve sayısal veri türlerini tutmak .NET Framework dönüştürme yöntemleri Visual Basic dönüştürme anahtar sözcükleri'dekiyle aynı sonucu her zaman oluşturmamasını unutmayın. Visual Basic dönüştürme davranışını önceki sürümleriyle uyumlu korur olmasıdır. Daha fazla bilgi için "Boole türü mu değil dönüştürmek için sayısal türü doğru" bölümüne bakın [veri türleri sorunlarını giderme](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
 ## <a name="programming-tips"></a>Programlama İpuçları  
   
--   **Negatif sayılar.** `Boolean` sayısal bir tür değil ve negatif bir değeri temsil edilemez. Her iki durumda da kullanılamaz `Boolean` sayısal değerleri tutmak için.  
+-   **Negatif sayılar.** `Boolean` bir sayısal tür değil ve negatif bir değeri temsil edemeyen. Her iki durumda da kullanmamalısınız `Boolean` sayısal değerleri tutmak için.  
   
--   **Karakterleri yazın.** `Boolean` değişmez değer türü karakteri ya da tanımlayıcı türü karakteri içeriyor.  
+-   **Tür karakterleri.** `Boolean` değişmez değer türü karakteri ya da tanımlayıcı türü karakteri var.  
   
--   **Framework türü.** .NET Framework'teki karşılık gelen tür <xref:System.Boolean?displayProperty=nameWithType> yapısı.  
+-   **Çerçeve türü.** .NET Framework içinde karşılık gelen türü <xref:System.Boolean?displayProperty=nameWithType> yapısı.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, `runningVB` olan bir `Boolean` Evet/Hayır ayarı basit depolar değişkeni.  
+ Aşağıdaki örnekte, `runningVB` olduğu bir `Boolean` Evet/Hayır basit depolayan değişken.  
   
 ```  
 Dim runningVB As Boolean  
@@ -55,7 +55,7 @@ End If
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Boolean?displayProperty=nameWithType>  
- [Veri Türleri](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Veri Türleri](../../../visual-basic/language-reference/data-types/index.md)  
  [Tür Dönüştürme İşlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [Dönüştürme Özeti](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
  [Veri Türlerinin Etkili Kullanımı](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  

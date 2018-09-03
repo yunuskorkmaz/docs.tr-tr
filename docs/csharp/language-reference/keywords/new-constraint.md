@@ -1,38 +1,43 @@
 ---
-title: new Kısıtlaması (C# Başvurusu)
+title: New kısıtlaması (C# Başvurusu)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - new constraint keyword [C#]
 ms.assetid: 58850b64-cb97-4136-be50-1f3bc7fc1da9
-ms.openlocfilehash: 77c955102ba9cede831c85838a6a7e57025ad35b
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 9948fc65030a4636c5d23db4ef8c3a584018d2f5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39199469"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482157"
 ---
-# <a name="new-constraint-c-reference"></a>new Kısıtlaması (C# Başvurusu)
-`new` Kısıtlaması belirtir bir genel sınıf bildiriminde herhangi bir tür bağımsız değişkeni genel bir parametresiz oluşturucusu olmalıdır. New'kısıtlamasının kullanılabilmesi için türü soyut olamaz.  
-  
-## <a name="example"></a>Örnek  
- Uygulama `new` öğesini aşağıdaki örnekte gösterildiği gibi genel bir sınıf türünün yeni örneğini oluşturduğunda, bir tür parametresi kısıtlaması:  
-  
- [!code-csharp[csrefKeywordsOperator#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-constraint_1.cs)]  
-  
-## <a name="example"></a>Örnek  
- Kullanırken `new()` kısıtlama diğer kısıtlamalarla en son belirtilmelidir:  
-  
- [!code-csharp[csrefKeywordsOperator#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-constraint_2.cs)]  
-  
- Daha fazla bilgi için [tür parametrelerindeki kısıtlamalar](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md).  
-  
-## <a name="c-language-specification"></a>C# Dil Belirtimi  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Collections.Generic>  
- [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
- [İşleç Anahtar Sözcükleri](../../../csharp/language-reference/keywords/operator-keywords.md)  
- [Genel Türler](../../../csharp/programming-guide/generics/index.md)
+# <a name="new-constraint-c-reference"></a>New kısıtlaması (C# Başvurusu)
+
+`new` Kısıtlaması belirtir bir genel sınıf bildiriminde herhangi bir tür bağımsız değişkeni genel bir parametresiz oluşturucusu olmalıdır. New'kısıtlamasının kullanılabilmesi için türü soyut olamaz.
+
+## <a name="example"></a>Örnek
+
+Uygulama `new` öğesini aşağıdaki örnekte gösterildiği gibi genel bir sınıf türünün yeni örneğini oluşturduğunda, bir tür parametresi kısıtlaması:
+
+[!code-csharp[csrefKeywordsOperator#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsOperator/CS/csrefKeywordsOperators.cs#5)]
+
+## <a name="example"></a>Örnek
+
+Kullanırken `new()` kısıtlama diğer kısıtlamalarla en son belirtilmelidir:
+
+[!code-csharp[csrefKeywordsOperator#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsOperator/CS/csrefKeywordsOperators.cs#6)]
+
+Daha fazla bilgi için [tür parametrelerindeki kısıtlamalar](../../programming-guide/generics/constraints-on-type-parameters.md).
+
+## <a name="c-language-specification"></a>C# dili belirtimi
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+- <xref:System.Collections.Generic>
+- [C# başvurusu](../../language-reference/index.md)
+- [C# Programlama Kılavuzu](../../programming-guide/index.md)
+- [C# Anahtar Sözcükleri](index.md)
+- [İşleç Anahtar Sözcükleri](operator-keywords.md)
+- [Genel Türler](../../programming-guide/generics/index.md)

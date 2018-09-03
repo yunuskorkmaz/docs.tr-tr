@@ -4,74 +4,74 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
-ms.openlocfilehash: 85c8cb1fbbda9be14754174c7cb7c76513bd94c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c181a415c8702c3032077728139b23e86d85d1f0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497019"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480410"
 ---
 # <a name="queues-overview"></a>Kuyruklar Genel Bakış
-Bu bölümde genel tanıtır ve temel kavramları kuyruğa alınmış iletişim. Burada açıklanan queuing kavramları Windows Communication Foundation (WCF) nasıl bildirilmiş hakkında ayrıntılar sonraki bölümlerde yerleştirilmesini.  
+Bu bölümde genel tanıtır ve ardındaki temel kavramları, kuyruğa alınmış iletişim. Sonraki bölümlerde, sıraya alma burada açıklanan kavramlar, Windows Communication Foundation (WCF) nasıl bildirilen hakkında ayrıntılara gidin.  
   
-## <a name="basic-queuing-concepts"></a>Sıraya alma ilişkin temel kavramlar  
- Dağıtılmış bir uygulama tasarlarken, hizmetleri ve istemciler arasında iletişim için doğru taşıma önemlidir seçme. Pek çok etken kullanılacak aktarım türünü etkiler. Önemli bir etken — hizmeti, istemci ile taşıma arasında yalıtım — sıraya alınan aktarım veya TCP veya HTTP gibi doğrudan bir aktarım kullanımını belirler. TCP ve HTTP gibi doğrudan taşımaları yapısı nedeniyle, iletişim durdurur tamamen hizmet ya da istemci çalışmayı durdurmasına veya ağ başarısız olur. Hizmet, istemci ve ağ uygulamanın çalışması aynı anda çalıştırması gerekir. Sıraya alınan taşımaları hizmet ya da istemci başarısız olursa veya aralarında iletişim bağlantıları başarısız olursa, istemci ve hizmet çalışmaya devam edebilirsiniz yalıtımı sağlar.  
+## <a name="basic-queuing-concepts"></a>Kuyruğa ilişkin temel kavramlar  
+ Dağıtılmış bir uygulama tasarlarken, hizmetleri ve istemciler arasındaki iletişimi için doğru taşıma önemlidir seçme. Pek çok etken kullanılacak aktarım türünü etkiler. Önemli bir faktördür — hizmet ve istemci taşıma arasında yalıtım — sıraya alınan aktarım veya TCP veya HTTP gibi doğrudan bir aktarım kullanımını belirler. TCP ve HTTP gibi doğrudan taşımalar yapısı nedeniyle, iletişim durdurur tamamen hizmet veya istemcinin çalışmamaya veya ağ başarısız olur. Hizmet, istemci ve ağ uygulamanın çalışması aynı anda çalıştırılması gerekir. Sıraya alınan taşımalar, hizmet veya istemcinin başarısız olursa veya aralarında iletişim bağlantıları başarısız olursa, istemci ve hizmet çalışmaya devam edebilir, yani, yalıtım sağlar.  
   
- Kuyruklar bile iletişim kuran taraflar veya ağ hataları olan güvenilir iletişim sağlar. Kuyruklar, yakalama ve iletişim kuran tarafların arasında alınıp iletileri sunmak. Kuyruklar genellikle volatile veya dayanıklı bir depolama çeşit tarafından desteklenir. Kuyruklar, bir hizmet adına bir istemciden gelen iletileri depolamak ve daha sonra bu iletiler hizmetine iletmek. Kuyruklar sağlamak yöneltme yalıtım hata böylece yüksek kullanılabilirlik sistemleri için tercih edilen iletişim mekanizması yapma, her iki taraf tarafından güvence altına ve Hizmetleri bağlantısı kesildi. Yöneltme sahip olma maliyeti yüksek gecikme süresi ile birlikte gelir. *Gecikme süresi* istemci bir ileti gönderir saati ve hizmet alır saati arasındaki gecikme süresini değil. Bu, bir ileti gönderildikten sonra bu iletiyi zaman işlenebilir bildiğinizden değil anlamına gelir. Sıraya alınan uygulamaları en yüksek gecikme süresiyle başa çıkacak. Aşağıdaki resimde kuyruğa alınan iletişim kavramsal modeli gösterilmektedir.  
+ Kuyruklar bile iletişim kuran taraflar ya da ağ hataları olan iletişiminizin sağlar. Kuyruklar, yakalayın ve iletişim kuran taraflar arasında alışverişi mesaj teslim eder. Kuyruklar, genellikle bir deposu geçici veya kalıcı olabilir bir tür tarafından desteklenir. Kuyruklar, bir hizmet adına istemciden gelen iletileri depolamak ve daha sonra bu hizmet iletileri iletecek. Kuyruklar yöneltme yüksek kullanılabilirlik sistemler için tercih edilen iletişim mekanizması getirerek bu nedenle, her iki taraf tarafından hata Yalıtımı sağlamış ve Hizmetleri bağlantısı kesildi. Yöneltme yüksek gecikme maliyeti ile birlikte gelir. *Gecikme süresi* olduğu zaman istemci bir ileti gönderir ve hizmet aldığı zamana arasındaki gecikme süresini. Bu, bir ileti gönderdikten sonra ne zaman bu iletiyi işlenebilir bildiğinizden yok anlamına gelir. Sıraya alınan uygulamaların en yüksek gecikme süresiyle başa. Kuyruğa alınan iletişim kavramsal modelin aşağıda gösterilmiştir.  
   
  ![Kuyruğa alınan iletişim model](../../../../docs/framework/wcf/feature-details/media/qconceptual-figure1c.gif "QConceptual Figure1c")  
   
  Kuyruğa alınan iletişim kavramsal model  
   
- Gerçekte, sıra dağıtılmış bir kavramdır. Bu nedenle, bunlar için her iki taraf yerel veya uzak hem taraflara olabilir. Genellikle, hizmete yerel sırasıdır. Bu yapılandırmada, istemci bağlantı sürekli olarak kullanılabilir olması için Uzak kuyruğa bağımlı olamaz. Benzer şekilde, sıranın sıradan okuma hizmetin kullanılabilirliğini kullanılabilir bağımsız olması gerekir. Sıra yöneticisini sıra koleksiyonunu yönetir. Diğer sıra yöneticileri kendi sıralara gönderilen iletileri kabul etmek için sorumludur. Bağlantı uzak sıralara yönetmek ve uzak sıraların iletilerini aktarma sorumludur. İstemci veya hizmet uygulaması arızalarına karşı sıraları kullanılabilirliğini sağlamak için sıra yöneticisini genellikle bir dış hizmet olarak çalıştırılır.  
+ Gerçekte, sıra dağıtılmış bir kavramdır. Bu nedenle, bunlar için her iki taraf da yerel veya uzak her iki taraf için olabilir. Genellikle, kuyruk hizmeti için yereldir. Bu yapılandırmada, istemcinin bağlantısı uzak kuyruğa sürekli kullanılabilir olmasını bağımlı olamaz. Benzer şekilde, sıranın kuyruktan okuma hizmet kullanılabilirliği kullanılabilir bağımsız olması gerekir. Bir kuyruk Yöneticisi sıra koleksiyonunu yönetir. Diğer kuyruğu yöneticileri, kuyruğa gönderilen iletileri kabul etmek için sorumludur. Bağlantı uzak kuyruklara yönetmek ve uzak sıraların iletilerini aktarma sorumludur. İstemci veya hizmet uygulama hatalarına rağmen kuyruklar kullanılabilirliğini sağlamak için Kuyruk yöneticisi genellikle bir dış hizmet çalıştırılır.  
   
- Bir istemci bir sıraya bir ileti gönderdiğinde, hizmetin sıra yöneticisi tarafından yönetilen sırası hedef sıra iletiye giderir. Sıra yöneticisini istemcide iletilmesi için iletiyi gönderir (veya giden) sırası. İletim sırası iletilmesi için hedef sıra iletileri depolayan istemci sıra yöneticisi bulunan bir sıra var. Sıra yöneticisini sonra hedef sıranın sahibi ve iletiye aktarımları sıra yöneticisi yola bulur. Güvenilir iletişim sağlamak için veri kaybını önlemek için bir Güvenilir Aktarım Protokolü sıra yöneticilerini kullanır. Hedef sıra yöneticisinin, sahibi ve iletileri depolayan hedef sıralara ele iletileri kabul eder. Aynı zamanda sıra yöneticisini sonra ileti hedef uygulamaya gönderir hedef sıra okuma isteklerine hizmet yapar. Aşağıdaki çizimde, dört taraflar arasındaki iletişimi gösterir.  
+ Bir istemci bir kuyruğa bir ileti gönderdiğinde hizmet Kuyruk yöneticisi tarafından yönetilen sırası hedef kuyruğa ileti yöneliktir. Sıra yöneticisini istemcide iletilmesi için iletiyi gönderir (veya giden) kuyruk. İletim sırası, iletilmesi için hedef kuyruk iletileri depolayan istemci Kuyruk Yöneticisi üzerinde kuyruğudur. Sıra yöneticisini ardından hedef sıranın sahibi ve ileti aktarımları Kuyruk yöneticisi bir yolunu bulur. Güvenilir iletişim sağlamak için veri kaybını önlemek için bir Güvenilir Aktarım Protokolü sıra yöneticileri uygulayın. Hedef sıra yöneticisini sahip olan ve iletileri depolayan hedef sıraya gönderilen iletileri kabul eder. Hizmet aynı zamanda Kuyruk yöneticisi ardından iletiyi hedef uygulamaya teslim hedef kuyruğu'ndan okuma isteklerinin yapar. Aşağıdaki çizimde, dört taraflar arasındaki iletişimi gösterir.  
   
- ![Sıraya alınan uygulama diyagramı](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "dağıtılmış-sıra-Şekil")  
+ ![Uygulama diyagramı kuyruğa](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "dağıtılmış-kuyruk-Şekil")  
   
- Tipik dağıtım senaryosunda kuyruğa alınan iletişim  
+ Bir normal dağıtım senaryosunda kuyruğa alınan iletişim  
   
- Bu nedenle, böylece göndereni ve alıcısı bağımsız olarak gerçek iletişimi etkilemeden yük devredebilir sıra yöneticisini gerekli yalıtımı sağlar. Böylece iş düğümler arasında farming daha yüksek verimlilik elde eder sıraları sağlayan ek yöneltme yararı Ayrıca aynı kuyruktan okunmak üzere birden çok uygulama örnekleri sağlar. Bu nedenle, daha yüksek ölçek ve üretilen iş gereksinimleri elde etmek için kullanılan sıraları görmek için seyrek değil.  
+ Bu nedenle, kuyruk Yöneticisi gerekli yalıtımı sağlar, böylece alıcı ve gönderen bağımsız olarak gerçek iletişim etkilemeden başarısız olabilir. Böylece düğümler arasında iş farming daha yüksek aktarım hızı elde kuyruklar ek yöneltme avantajı da aynı kuyruktan okunmak üzere birden fazla uygulama örneğinin sağlar. Bu nedenle, daha yüksek ölçek ve aktarım hızı gereksinimleri elde etmek için kullanılan kuyrukları görmek için seyrek değil.  
   
 ## <a name="queues-and-transactions"></a>Kuyruklar ve işlemler  
- İşlemler, böylece bir işlem başarısız olursa, tüm işlemler başarısız bir işlemler kümesini gruplamak izin verir. Bir kişinin 1,000 kendi tasarrufları hesabından kendi denetleme hesabına aktarmak için bir ATM kullandığında hareketleri kullanmak nasıl bir örnektir. Bu, aşağıdaki işlemleri kapsar:  
+ İşlemler bir işlem başarısız olursa, tüm işlemler başarısız olacak şekilde bir dizi işlemlerini gruplamanıza izin verin. Bir kişi kendi tasarruf hesabından 1,000 kendi denetleme hesabınıza aktarmak bir ATM kullandığında hareketleri kullanmak nasıl bir örneğidir. Bu, şu işlemleri kapsar:  
   
--   Yoksundur 1,000 tasarrufları hesabından.  
+-   1.000 ABD Doları tasarruf hesaptan geri alınmasının.  
   
--   1,000 denetleme dikkate ürünü.  
+-   1,000 denetleme hesaba ürünü.  
   
- İlk işlemi başarılı olur ve 1,000 tasarrufları hesabından geri alınmış ancak ikinci bir işlem başarısız olursa, onu zaten tasarrufları hesabından iptal olduğundan 1,000 kaybolur. Bir işlem başarısız olursa hesapları geçerli bir durumda tutmak için her iki işlem başarısız olmalıdır.  
+ İlk işlemi başarılı olur ve 1.000 ABD Doları tasarruf hesabından çekildiğinde ancak ikinci işlem başarısız ise, zaten tasarruf hesabından iptal olduğundan 1,000 kaybolur. Bir işlem başarısız olursa hesapları geçerli bir durumda tutmak için iki işlem başarısız olmalıdır.  
   
- İşlem iletileri içinde iletiler kuyruğuna gönderilen ve sıra bir işlem altında aldı. İleti hiçbir zaman sahipmiş gibi bu nedenle, bir işlem içinde bir ileti gönderilir ve işlem geri alındı, ardından sonucu sırasına gönderilir. İleti hiçbir zaman sahipmiş gibi benzer şekilde bir işlem içinde bir ileti aldı ve işlem geri alındı, ardından sonucu aldı. İleti okumak için kuyruğunda kalır.  
+ İleti işlem, iletiler kuyruğuna gönderilen ve bir işlem altında kuyruğa alınır. İleti hiçbir zaman varmış gibi bu nedenle, bir işlemde bir ileti gönderilir ve işlem geri alınır, ardından sonucu kuyruğa gönderilir. İleti hiçbir zaman varmış gibi benzer şekilde bir işlemde bir ileti alındı ve işlem geri alınır, ardından sonuç alınana. İleti okumak için kuyrukta kalır.  
   
- Hedef sıra ulaşmak ya da yapmak için gereken süreyi bilmesinin yolu yoktur bir ileti gönderirken yüksek gecikme nedeniyle hizmetinin iletiyi işlemek için gereken süreyi bildirin. Bu nedenle, tek bir işlem iletiyi göndermek, ileti almak ve iletiyi işlemek için kullanmak istediğiniz değil. Belirsiz bir süre boyunca teslim edilmemiş bir işlem oluşturur. Bir istemci ve hizmet bir işlem kullanarak sıra iletişim kurduğunda, iki işlemleri oynayan: bir istemci hem de bir hizmet. Aşağıdaki çizimde tipik kuyruğa alınan iletişim işlem sınırlarını gösterir.  
+ Hedef kuyruğunu ulaşmak ya da yapmak için ne kadar alan olduğunu bilmesinin imkanı sahip bir ileti gönderirken yüksek gecikme nedeniyle ne hizmetinin ileti işleme için sürdüğünü bildirin. Bu nedenle, tek bir işlem ileti gönder, ileti alabilir ve ardından iletiyi işlemek için kullanmak istediğiniz değil. Bu, belirsiz bir süre boyunca teslim edilmemiş bir işlem oluşturur. Hizmet ve istemci bir işlem kullanarak kuyruk iletişim kurduğunda, iki işlem söz konusu: bir istemci ve hizmet. Aşağıdaki çizim işlem sınırları içinde tipik kuyruğa alınan iletişim gösterir.  
   
- ![Sıra hareketlerle](../../../../docs/framework/wcf/feature-details/media/qwithtransactions-figure3.gif "QWithTransactions Figure3")  
+ ![Kuyruk işlemle](../../../../docs/framework/wcf/feature-details/media/qwithtransactions-figure3.gif "QWithTransactions Figure3")  
   
- Yakalama ve teslimi için ayrı işlemleri gösteren kuyruğa alınan iletişim  
+ Yakalama ve teslimi için ayrı işlem gösteren kuyruğa alınan iletişim  
   
- İstemci işlem işler ve iletiyi gönderir. İşlem tamamlandığında, ileti iletim kuyrukta bulunuyor. Hizmet işlem iletiyi hedef sıradan okur, iletiyi işler ve hareketi tamamlar. İşleme sırasında bir hata meydana gelirse, ileti geri alınamaz ve hedef sırasına yerleştirilecek.  
+ İstemci işlem işler ve ileti gönderir. İşlem tamamlandığında, ileti aktarım kuyruğundadır. Hizmet işlem hedef kuyruktan ileti okuyan, iletiyi işler ve ardından hareketi tamamlar. İşleme sırasında bir hata meydana gelirse, ileti geri ve hedef sırasına yerleştirilecek.  
   
-## <a name="asynchronous-communication-using-queues"></a>Zaman uyumsuz iletişim kullanarak sıraları  
- Kuyruklar, iletişimin zaman uyumsuz bir yöntemdir. Kuyrukları kullanma ileti gönderme uygulamaları alınan ve sıra yöneticisi tarafından sunulan yüksek gecikme nedeniyle alıcı tarafından işlenen ileti Bekleyemez. İletiler kuyrukta hedeflenen uygulaması'ndan ne kadar uzun süre kalır. Bunu önlemek için uygulama ileti üzerinde bir yaşam süresi değeri belirtebilirsiniz. Bu değer, ne kadar ileti iletim sırasındaki kalması gerektiğini belirtir. Bu zaman değerini aştı ve iletinin hedef sıraya hala gönderilmedi, ileti teslim edilemeyen kuyruğuna aktarılabilir.  
+## <a name="asynchronous-communication-using-queues"></a>Zaman uyumsuz iletişim kuyrukları kullanma  
+ Kuyruklar, zaman uyumsuz bir şekilde iletişim sağlar. Kuyrukları kullanarak iletileri gönderen uygulamayı olur ve Kuyruk yöneticisi tarafından sunulan yüksek gecikme nedeniyle alıcı tarafından işlenen ileti için sabırsızlanıyoruz. İletileri hedeflenen uygulamadan daha çok uzun bir süredir kuyrukta kalabilir. Bunu önlemek için uygulama iletide bir yaşam süresi değerini belirtebilirsiniz. Bu değer, ne kadar ileti aktarım kuyrukta kalması gerektiğini belirtir. Bu zaman değeri aştı ve iletinin hedef sıraya hala gönderilmedi, ileti atılacak için aktarılabilir.  
   
- Gönderen bir ileti gönderdiğinde, gönderme işlemi dönüş iletiyi yalnızca gönderen iletimi sırasına yapılan olduğunu gösterir. Bir hata varsa iletinin hedef sıraya alınıyor, bu nedenle, gönderen uygulama hakkında hemen olmadığını bilemezsiniz. Bu tür hataları not almak için başarısız ileti sahipsiz sıraya aktarılır.  
+ Gönderen bir ileti gönderdiğinde ileti yalnızca gönderen iletimi sırasına yapılan, gönderme işlemi dönüş anlamına gelir. Bir hata varsa iletinin hedef sıraya alınırken, bu nedenle, gönderen uygulama bu konuda hemen bilemezsiniz. Bu tür hataları not almak için başarısız iletisi atılacak için aktarılır.  
   
- Hedef sıra ya da yaşam süresi sona ermekte ulaşmak başarısız olan bir ileti gibi herhangi bir hata ayrı olarak işlenmesi gerekir. Seyrek, bu nedenle, sıraya alınan uygulamaları iki mantığı yazmak değil:  
+ Hedef sıra ya da yaşam süresi sona ermekte ulaşmak başarısız olan bir ileti gibi herhangi bir hata ayrı olarak işlenmesi gerekir. Seyrek, bu nedenle, kuyruğa alınmış uygulamaları iki mantığı yazmak değil:  
   
--   Normal istemci ve ileti gönderme ve alma, hizmet mantığı.  
+-   İleti gönderme ve alma, service mantığı ve normal istemci.  
   
--   Başarısız iletim veya teslim gelen iletileri işlemek için maaş mantığı.  
+-   Başarısız iletim veya teslim gelen iletileri işlemek için telafi mantığı.  
   
  Aşağıdaki bölümlerde bu kavramlar açıklanmaktadır.  
   
-## <a name="dead-letter-queue-programming"></a>Sahipsiz Sıra programlama  
- Teslim edilemeyen iletiler sırası hedef sıra çeşitli nedenlerle geçemedi iletiler içerir. Nedenleri süresi dolan iletileri hedef sıraya ileti aktarımını önleme bağlantı sorunları değişebilir.  
+## <a name="dead-letter-queue-programming"></a>Eski ileti sırası programlama  
+ Edilemeyen çeşitli nedenlerden dolayı hedef sıra ulaşılamadı iletileri içerir. Süresi dolan iletileri nedenleri hedef kuyruğa ileti aktarımını engelleyen bağlantı sorunları değişebilir.  
   
- Genellikle, bir uygulama bir sistem genelinde sahipsiz sıraya alınan iletileri nelerin yanlış gittiğini belirlemek ve hatalarını düzeltme ve ileti veya alma Not yeniden göndermeyi gibi uygun eylemi gerçekleştirin okuyabilir.  
+ Genellikle, uygulamaya bir sistem genelinde edilemeyen kuyruktan ileti neyin yanlış gittiğini belirlemek ve hata düzeltme ve ileti veya alma Not yeniden gönderme gibi uygun bir işlemi okuyabilirsiniz.  
   
-## <a name="poison-message-queue-programming"></a>Zehirli ileti sırası programlama  
- İsteğe bağlı olarak bir ileti hedef sıra yaptıktan sonra hizmet iletiyi işlemek sürekli olarak başarısız olabilir. Örneğin, bir uygulama geçici olarak bağlantısı kesilmiş veritabanı sıra bir işlem altında bir ileti okuma ve bir veritabanını güncelleştirme bulabilirsiniz. Bu durumda, işlem geri alındı, yeni bir işlem oluşturulur ve iletiyi sıradan yeniden okuyun. İkinci deneme başarılı veya başarısız. Hatanın nedenini bağlı olarak bazı durumlarda, ileti art arda uygulamaya teslim başarısız olabilir. Bu durumda, ileti "poison" kabul edilir Bu türden iletilere poison işleme uygulama tarafından okunabilir zararlı bir sıra taşınır.  
+## <a name="poison-message-queue-programming"></a>Zehirli ileti kuyruğu programlama  
+ İsteğe bağlı olarak bir ileti hedef sıraya yaptıktan sonra hizmetin sürekli olarak iletiyi işlemek başarısız olabilir. Örneğin, bir uygulama veritabanı geçici olarak bağlı bir işlem altında kuyruğa bir ileti okuma ve bir veritabanını güncelleştirmek bulabilirsiniz. Bu durumda, işlem geri alınır, yeni bir işlem oluşturulur ve kuyruktan ileti yeniden okuyun. İkinci denemesi başarılı veya başarısız. Hatanın nedenini bağlı olarak bazı durumlarda, iletiyi sürekli teslim uygulamaya başarısız olabilir. Bu durumda, ileti "poison" kabul edilir Bu türden iletilere poison işleme uygulama tarafından okunabilir bir zehirli kuyruğa taşınır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [WCF'de Kuyruğa Alma](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
@@ -81,6 +81,6 @@ Bu bölümde genel tanıtır ve temel kavramları kuyruğa alınmış iletişim.
  [Geçici Kuyruğa Alınmış İletişim](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)  
  [Windows Communication Foundation'dan Message Queuing’e](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
  [Message Queuing (MSMQ) Yükleme](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
- [Message Queuing tümleştirme bağlama örnekleri](http://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)  
+ [Message Queuing tümleştirme bağlama örnekleri](https://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)  
  [Message Queuing’den Windows Communication Foundation'a](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  
  [Message Queuing Üzerinden İleti Güvenliği](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)

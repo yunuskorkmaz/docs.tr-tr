@@ -7,58 +7,60 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
-ms.openlocfilehash: b0bde07dbeb70eaafbde4d90627d245554ad7ca6
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 0678300fca4442cf90dd15c5a4e011d80656eac6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33810115"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43478162"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>WCF İstemcisi Kullanarak Hizmetlere Erişme
-Bir hizmeti oluşturduktan sonra sonraki adım bir WCF istemcisi proxy oluşturmaktır. Bir istemci uygulaması WCF istemci proxy hizmeti ile iletişim kurmak için kullanır. İstemci uygulamaları genellikle hizmetini çağırmak için kullanılan WCF istemci kodu oluşturmak üzere bir hizmetin meta veri içeri aktarın.  
-  
- Bir WCF istemcisi oluşturmak için temel adımlar şunlardır:  
-  
-1.  Hizmet koduna derleyin.  
-  
-2.  WCF istemci proxy oluşturur.  
-  
-3.  WCF istemci proxy örneği oluşturur.  
-  
- WCF istemci proxy daha fazla bilgi için bkz: hizmet Model meta veri yardımcı Programracı (SvcUtil.exe) kullanarak el ile oluşturulabilir [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). WCF istemci proxy ayrıca Visual Studio'da hizmet Başvurusu Ekle özelliği kullanılarak oluşturulabilir. Hizmet yöntemlerden birini kullanarak WCF istemci proxy oluşturmak için çalıştırması gerekir. Hizmet kendiliğinden barındırılır varsa, ana bilgisayar çalıştırmanız gerekir. Hizmet IIS'de barındırılıyorsa / olan başka bir şey yapmanız gerekmez.  
-  
-## <a name="servicemodel-metadata-utility-tool"></a>ServiceModel meta veri yardımcı Programracı  
- [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) meta verilerini kodu oluşturmak için bir komut satırı aracıdır. Bir temel Svcutil.exe komutu örneği kullanılmasıdır.  
-  
-```  
-Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>   
-```  
-  
- Alternatif olarak, Web Hizmetleri Açıklama Dili (WSDL) ve XML Şeması Tanım Dili (XSD) dosyaları dosya sisteminde ile Svcutil.exe kullanabilirsiniz.  
-  
-```  
-Svcutil.exe <list of WSDL and XSD files on file system>  
-```  
-  
- Sonuç istemci uygulamanın hizmetini çağırmak için kullanabileceği WCF istemci kodu içeren bir kod dosyasıdır.  
-  
- Aracı, yapılandırma dosyaları oluşturmak için de kullanabilirsiniz.  
-  
-```  
-Svcutil.exe <file1 [,file2]>  
-```  
-  
- Yalnızca bir dosya adı verilen, çıktı dosyası adını olmasıdır. İki dosya adları verilirse, ilk dosya içerikleri oluşturulan yapılandırmayla birleştirilmiş ve ikinci dosyaya yazılan bir giriş yapılandırma dosyası ise. Yapılandırma hakkında daha fazla bilgi için bkz: [hizmetler için bağlamaları yapılandırma](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md).  
-  
+
+Bir hizmet oluşturduktan sonra sonraki adım bir WCF istemci proxy oluşturmaktır. Bir istemci uygulaması, WCF istemci proxy hizmeti ile iletişim kurmak için kullanır. İstemci uygulamaları genellikle hizmetini çağırmak için kullanılan WCF istemci kodu oluşturmak üzere bir hizmet meta verileri içeri aktarın.
+
+ Bir WCF istemcisi oluşturmak için temel adımlar şunlardır:
+
+1.  Hizmet kodu derleyin.
+
+2.  WCF istemci proxy oluşturur.
+
+3.  WCF istemci proxy örneği oluşturur.
+
+WCF istemci proxy daha fazla bilgi için bkz: hizmet Model meta veri yardımcı Programracı (SvcUtil.exe) kullanarak el ile oluşturulabilir [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). WCF istemci proxy, Visual Studio içinden oluşturulabilir kullanarak **hizmet Başvurusu Ekle** özelliği. Hizmet yöntemlerden birini kullanarak WCF istemci proxy oluşturmak için çalıştırılması gerekir. Şirket içinde barındırılan hizmet ise, ana bilgisayar çalıştırmanız gerekir. Hizmet IIS'de barındırılıyorsa / WAS'da başka bir şey yapmanız gerekmez.
+
+## <a name="servicemodel-metadata-utility-tool"></a>ServiceModel meta veri yardımcı Programracı
+ [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) meta verilerinden kod oluşturma için bir komut satırı aracıdır. Aşağıdaki kullanım, temel bir Svcutil.exe komut bir örnektir.
+
+```
+Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>
+```
+
+ Alternatif olarak, Web Hizmetleri Açıklama Dili (WSDL) ve XML Şeması Tanım Dili (XSD) dosyaları dosya sistemindeki ile Svcutil.exe kullanabilirsiniz.
+
+```
+Svcutil.exe <list of WSDL and XSD files on file system>
+```
+
+ İstemci uygulaması hizmetini çağırmak için kullanabileceğiniz WCF istemci kodu içeren bir kod dosyası sonucudur.
+
+ Aracı, yapılandırma dosyalarını oluşturmak için de kullanabilirsiniz.
+
+```
+Svcutil.exe <file1 [,file2]>
+```
+
+ Yalnızca bir dosya adı verilir, çıktı dosyası adını olmasıdır. İki dosya adları verilirse, ardından ilk dosyanın içerikleri ile oluşturulan yapılandırmayı birleştirilmiş ve ikinci dosyaya yazılan bir giriş yapılandırma dosyasıdır. Yapılandırma hakkında daha fazla bilgi için bkz. [hizmetler için bağlamaları yapılandırma](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md).
+
 > [!IMPORTANT]
->  Güvenli olmayan meta veri isteklerine yönelik bazı riskleri herhangi güvenli ağ isteği yapan aynı şekilde:, kurduğunuz endpoint kimin olduğu yazacaktır olduğundan emin değilseniz, aldığınız bilgiler kötü amaçlı bir hizmete meta verileri olabilir.  
-  
-## <a name="add-service-reference-in-visual-studio"></a>Visual Studio'da hizmet Başvurusu Ekle  
- Hizmetin çalışmasını ile WCF istemci proxy içerir ve seçin projeye sağ tıklayın **hizmet Başvurusu Ekle**. İçinde **hizmeti başvuru iletişim kutusu ekleme** çağrısı tıklatıp istediğiniz hizmeti URL'sini yazın **Git** düğmesi. İletişim kutusunda belirttiğiniz adresinde kullanılabilir hizmetlerin listesini görüntüler. Sözleşmeler ve kullanılabilir işlemleri görmek, üretilen kod için bir ad belirtin ve hizmeti çift tıklatın **Tamam** düğmesi.  
-  
-## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği bir hizmet için oluşturulan bir hizmet sözleşmesini gösterir.  
-  
+> Güvenli olmayan meta veri isteği herhangi bir güvenli ağ isteği yapan aynı şekilde belirli riskler neden: sizin kurduğunuz uç noktası olan bu söylüyor olduğundan emin değilseniz, aldığınız bilgiler kötü amaçlı bir hizmet meta verileri olabilir.
+
+## <a name="add-service-reference-in-visual-studio"></a>Visual Studio'da hizmet Başvurusu Ekle
+
+ Hizmet çalıştırarak, seçin ve WCF istemci proxy içeren projeye sağ tıklayın **Ekle** > **hizmet başvurusu**. İçinde **hizmet Başvurusu Ekle iletişim kutusu**, arayın ve istediğiniz hizmeti URL'sini yazın **Git** düğmesi. İletişim kutusu, belirttiğiniz adrese kullanılabilir hizmetlerin listesini görüntüler. Hizmet sözleşmeleri ve kullanılabilen işlemleri görmek için üretilen kod için bir ad belirtin ve tıklayın çift tıklayarak **Tamam** düğmesi.
+
+## <a name="example"></a>Örnek
+ Aşağıdaki kod örneği bir hizmet için oluşturulan bir hizmet sözleşmesini gösterir.
+
 ```csharp
 // Define a service contract.
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]
@@ -69,7 +71,7 @@ public interface ICalculator
     // Other methods are not shown here.
 }
 ```
-  
+
 ```vb
 ' Define a service contract.
 <ServiceContract(Namespace:="http://Microsoft.ServiceModel.Samples")> _
@@ -79,9 +81,9 @@ Public Interface ICalculator
     ' Other methods are not shown here.
 End Interface
 ```
-  
- Visual Studio'da hizmet Başvurusu Ekle ve ServiceModel meta veri yardımcı programı aracı aşağıdaki WCF istemci sınıfı oluşturur. Genel sınıf devralır <xref:System.ServiceModel.ClientBase%601> sınıfı ve uygulayan `ICalculator` arabirimi. Araç ayrıca oluşturur `ICalculator` arabirimi (burada gösterilmiyor).  
-  
+
+ ServiceModel meta veri yardımcı programı Aracı'nı ve **hizmet Başvurusu Ekle** Visual Studio'da aşağıdaki WCF istemci sınıfı oluşturur. Genel sınıfından devralan <xref:System.ServiceModel.ClientBase%601> sınıf ve uyguladığı `ICalculator` arabirimi. Araç ayrıca oluşturur `ICalculator` arabirimi (burada gösterilmiyor).
+
 ```csharp
 public partial class CalculatorClient : System.ServiceModel.ClientBase<ICalculator>, ICalculator
 {
@@ -111,9 +113,9 @@ public partial class CalculatorClient : System.ServiceModel.ClientBase<ICalculat
         return base.Channel.Add(n1, n2);
     }
 }
-```  
-  
-```vb  
+```
+
+```vb
 Partial Public Class CalculatorClient
     Inherits System.ServiceModel.ClientBase(Of ICalculator)
     Implements ICalculator
@@ -146,10 +148,10 @@ Partial Public Class CalculatorClient
     End Function
 End Class
 ```
-  
-## <a name="using-the-wcf-client"></a>WCF istemcisi kullanarak  
- WCF istemcisini kullanmak için bir WCF istemcisi örneği oluşturun ve sonra aşağıdaki kodda gösterildiği gibi kendi yöntemlerini çağırın.  
-  
+
+## <a name="using-the-wcf-client"></a>WCF istemcisi kullanarak
+ WCF istemcisini kullanmak için WCF istemci örneği oluşturun ve ardından aşağıdaki kodda gösterildiği gibi kendi yöntemlerini çağırın.
+
 ```csharp
 // Create a client object with the given client endpoint configuration.
 CalculatorClient calcClient = new CalculatorClient("CalculatorEndpoint"));
@@ -159,7 +161,7 @@ double value2 = 15.99D;
 double result = calcClient.Add(value1, value2);
 Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result);
 ```
-  
+
 ```vb
 ' Create a client object with the given client endpoint configuration.
 Dim calcClient As CalculatorClient = _
@@ -171,25 +173,27 @@ Dim value2 As Double = 15.99D
 Dim result As Double = calcClient.Add(value1, value2)
 Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
 ```
-  
-## <a name="debugging-exceptions-thrown-by-a-client"></a>Bir istemci tarafından oluşturulan özel durumları hata ayıklama  
- Bir WCF istemcisi tarafından oluşturulan birçok özel durumları hizmetteki bir özel durum nedeniyle. Bu, bazı örnekler şunlardır:  
-  
--   <xref:System.Net.Sockets.SocketException>: Varolan bir bağlantıyı zorla uzak ana bilgisayar tarafından kapatıldı.  
-  
--   <xref:System.ServiceModel.CommunicationException>: Arka plandaki bağlantı beklenmedik şekilde kesildi.  
-  
--   <xref:System.ServiceModel.CommunicationObjectAbortedException>: Yuva bağlantısı iptal edildi. Bu uzak ana bilgisayara veya bir arka plandaki ağ kaynağı sorunu aşılması alma zaman aşımı iletinizi işlenirken bir hata kaynaklanabilir.  
-  
- Bu tür özel durumlar ortaya çıktığında, sorunu çözmek için en iyi hizmet tarafı izlemeyi etkinleştirmek ve hangi özel durumu var. oluştu belirlemek için yoludur. İzleme hakkında daha fazla bilgi için bkz: [izleme](../../../docs/framework/wcf/diagnostics/tracing/index.md) ve [uygulamanız sorun giderme kullanarak izlemeyi](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: İstemci Oluşturma](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
- [Nasıl yapılır: Çift Yönlü Sözleşme ile Hizmetlere Erişme](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
- [Nasıl yapılır: Hizmet İşlemlerini Zaman Uyumsuz Olarak Çağırma](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)  
- [Nasıl yapılır: Tek Yönlü ve İstek-Yanıt Sözleşmeleriyle Hizmetlere Erişme](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)  
- [Nasıl yapılır: WSE 3.0 Hizmetine Erişme](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)  
- [Oluşturulmuş İstemci Kodlarını Anlama](../../../docs/framework/wcf/feature-details/understanding-generated-client-code.md)  
- [Nasıl yapılır: XmlSerializer Kullanarak WCF İstemci Uygulamalarının Başlangıç Zamanlarını İyileştirme](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)  
- [İstemci Çalışma Zamanı Davranışını Belirtme](../../../docs/framework/wcf/specifying-client-run-time-behavior.md)  
- [İstemci Davranışlarını Yapılandırma](../../../docs/framework/wcf/configuring-client-behaviors.md)
+
+## <a name="debugging-exceptions-thrown-by-a-client"></a>Bir istemci tarafından oluşturulan özel durumları hata ayıklama
+
+Birçok özel durumlar bir WCF istemcisi tarafından oluşturulan bir özel hizmet tarafından kaynaklanır. Bu bazı örnekleri şunlardır:
+
+-   <xref:System.Net.Sockets.SocketException>: Varolan bir bağlantı uzak konak tarafından zorla kapatıldı.
+
+-   <xref:System.ServiceModel.CommunicationException>: Temel alınan bağlantı beklenmedik biçimde kapatıldı.
+
+-   <xref:System.ServiceModel.CommunicationObjectAbortedException>: Yuva bağlantısı iptal edildi. Bu ileti, uzak ana bilgisayarda veya bir alt ağ kaynağı sorunu aşılması alma zaman aşımı işlenirken bir hata tarafından kaynaklanabilir.
+
+Bu tür özel durumlar oluştuğunda, sorunu çözmek için en iyi hizmet tarafında izlemeyi ve var. hangi özel durum oluştu belirlemek için yoludur. İzleme hakkında daha fazla bilgi için bkz: [izleme](../../../docs/framework/wcf/diagnostics/tracing/index.md) ve [uygulamanız sorun giderme için izleme kullanarak](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).
+
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [Nasıl yapılır: İstemci Oluşturma](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+- [Nasıl yapılır: Çift Yönlü Sözleşme ile Hizmetlere Erişme](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [Nasıl yapılır: Hizmet İşlemlerini Zaman Uyumsuz Olarak Çağırma](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
+- [Nasıl yapılır: Tek Yönlü ve İstek-Yanıt Sözleşmeleriyle Hizmetlere Erişme](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
+- [Nasıl yapılır: WSE 3.0 Hizmetine Erişme](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
+- [Oluşturulmuş İstemci Kodlarını Anlama](../../../docs/framework/wcf/feature-details/understanding-generated-client-code.md)
+- [Nasıl yapılır: XmlSerializer Kullanarak WCF İstemci Uygulamalarının Başlangıç Zamanlarını İyileştirme](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
+- [İstemci Çalışma Zamanı Davranışını Belirtme](../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
+- [İstemci Davranışlarını Yapılandırma](../../../docs/framework/wcf/configuring-client-behaviors.md)

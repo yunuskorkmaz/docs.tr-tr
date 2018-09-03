@@ -9,15 +9,15 @@ helpviewer_keywords:
 - extension indexer [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: a16a4b13-54be-432c-82b3-a87091464ada
-ms.openlocfilehash: a7718a4aa85a000d0c83e8c9556a448ceaf13c82
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ab9eacc3fb3796139d8ed8382146a4a6c2b28a97
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603476"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43483716"
 ---
 # <a name="extension-indexer-property-visual-basic"></a>Extension Indexer Özelliği (Visual Basic)
-Bir koleksiyondaki tek tek öğelere erişim sağlar.  
+Bir koleksiyondaki öğelere erişim sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -29,25 +29,25 @@ object(index)
   
 |Terim|Tanım|  
 |---|---|  
-|`object`|Gerekli. Sorgulanabilir bir koleksiyon. Diğer bir deyişle, uygulayan koleksiyondan <xref:System.Collections.Generic.IEnumerable%601> veya <xref:System.Linq.IQueryable%601>.|  
+|`object`|Gerekli. Sorgulanabilir bir koleksiyonu. Diğer bir deyişle, uygulayan koleksiyondan <xref:System.Collections.Generic.IEnumerable%601> veya <xref:System.Linq.IQueryable%601>.|  
 |(|Gerekli. Dizin Oluşturucu özelliği başlangıcını gösterir.|  
 |`index`|Gerekli. Koleksiyonun bir öğesi sıfır tabanlı konumu belirten bir tamsayı ifade.|  
 |)|Gerekli. Dizin Oluşturucu özelliği sonunu gösterir.|  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Koleksiyonun belirtilen konumda nesnesinden veya `Nothing` dizini aralık dışında olması durumunda.  
+ Belirtilen konumda koleksiyon nesnesinden veya `Nothing` dizini aralık dışında ise.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Extension Indexer özelliği ayrı ayrı öğeler bir koleksiyondaki erişmek için kullanabilirsiniz. Bu dizin oluşturucu özelliği, genellikle XML eksen özellikleri Çıkışta kullanılır. XML descendent axis özellikleri ve XML alt koleksiyonları dönmek <xref:System.Xml.Linq.XElement> nesneleri veya bir öznitelik değeri.  
+ Extension Indexer özelliği, bir koleksiyondaki tek tek öğelere erişmek için kullanabilirsiniz. Bu dizin oluşturucu özelliği, genellikle XML eksen özellikleri üzerinde çıkışını kullanılır. XML descendent axis özellikleri ve XML alt koleksiyonları dönüş <xref:System.Xml.Linq.XElement> nesneler veya bir öznitelik değeri.  
   
- Visual Basic derleyici çağrıları uzantı dizin oluşturucu özellikleri dönüştürür `ElementAtOrDefault` yöntemi. Bir dizi dizin oluşturucu aksine `ElementAtOrDefault` yöntemi döndürür `Nothing` dizini aralık dışında olması durumunda. Bu davranış, bir koleksiyondaki öğe sayısını kolayca belirleyemezsiniz yararlıdır.  
+ Visual Basic derleyici çağrıları uzantı dizin oluşturucu özellikleri dönüştürür `ElementAtOrDefault` yöntemi. Bir dizi dizin oluşturucu aksine `ElementAtOrDefault` yöntemi döndürür `Nothing` dizini aralık dışında ise. Bu davranış, bir koleksiyondaki öğe sayısını kolayca belirlenemiyor yararlıdır.  
   
- Uzantı özelliği uygulamak koleksiyonlar için bu dizin oluşturucu özelliği benzer <xref:System.Collections.Generic.IEnumerable%601> veya <xref:System.Linq.IQueryable%601>: yalnızca koleksiyon bir dizin oluşturucu veya varsayılan bir özellik yoksa kullanılır.  
+ Bu dizin oluşturucu özelliği, bir uzantı özelliği uygulayan koleksiyonlar için benzer <xref:System.Collections.Generic.IEnumerable%601> veya <xref:System.Linq.IQueryable%601>: yalnızca koleksiyon bir dizin oluşturucu veya varsayılan bir özellik yoksa, kullanılır.  
   
- Bir koleksiyonu ilk öğe değerini erişmek için <xref:System.Xml.Linq.XElement> veya <xref:System.Xml.Linq.XAttribute> nesneleri, XML kullanabileceğiniz `Value` özelliği. Daha fazla bilgi için bkz: [XML değeri özelliği](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).  
+ Değerin bir koleksiyondaki ilk öğenin erişmek için <xref:System.Xml.Linq.XElement> veya <xref:System.Xml.Linq.XAttribute> nesneler, XML kullanabileceğiniz `Value` özelliği. Daha fazla bilgi için [XML değeri özelliği](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek uzantı dizin oluşturucu koleksiyonu ikinci alt düğümünde erişmek için nasıl kullanılacağını gösterir <xref:System.Xml.Linq.XElement> nesneleri. Koleksiyon adlı tüm alt öğeleri alır child axis özelliği kullanılarak erişilir `phone` içinde `contact` nesnesi.  
+ Aşağıdaki örnek bir koleksiyonu ikinci alt düğümünde erişmek için uzantı dizin oluşturucu kullanmayı gösterir <xref:System.Xml.Linq.XElement> nesneleri. Koleksiyon adlı tüm alt öğe alır child axis özelliği kullanılarak erişilir `phone` içinde `contact` nesne.  
   
  [!code-vb[VbXMLSamples#24](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/extension-indexer-property_1.vb)]  
   
@@ -57,7 +57,7 @@ object(index)
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Xml.Linq.XElement>  
- [XML Eksen Özellikleri](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
+ [XML Eksen Özellikleri](../../../visual-basic/language-reference/xml-axis/index.md)  
  [XML Değişmez Değerleri](../../../visual-basic/language-reference/xml-literals/index.md)  
  [Visual Basic'de XML oluşturma](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
  [XML Value Özelliği](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)
