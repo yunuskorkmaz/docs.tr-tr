@@ -1,53 +1,53 @@
 ---
-title: Özel maaş örnek
+title: Özel Dengeleme örnek
 ms.date: 03/30/2017
 ms.assetid: 385920da-9284-44bf-9fe9-0d87c7478ec5
-ms.openlocfilehash: 55161a46bebca2cce41803ca405cb2b1df57b3fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ac141a48f87f5b14f6b528f7b3ceb7fdddeaf2d2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514330"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43475874"
 ---
-# <a name="custom-compensation-sample"></a>Özel maaş örnek
-Bu örnek nasıl kullanılacağını göstermektedir <xref:System.Activities.Statements.CompensableActivity> ve özel maaş mantığını tanımlamak üzere kendi maaş işleyicisi. Bu örnekte Modellenen Kamyon kiralama Teşkilatı senaryodur.  
+# <a name="custom-compensation-sample"></a>Özel Dengeleme örnek
+Bu örnek nasıl kullanılacağını gösterir <xref:System.Activities.Statements.CompensableActivity> ve özel telafi mantığı tanımlamak için kendi maaş işleyicisi. Bu örnekte modellenmiş bir Kamyon kiralama kurumu senaryodur.  
   
 ## <a name="sample-details"></a>Örnek Ayrıntıları  
  Benzetimli adımlar şunlardır:  
   
-1.  Kullanıcı isteklerini kiralama teklifleri için belirli bir tarih kamyon.  
+1.  Kullanıcı isteklerinin kiralama teklifleri için belirli bir tarihten kamyon.  
   
-2.  Üç kamyon şirketler kurulur ve üç tırnak sağlanır.  
+2.  Üç kamyon şirketin iletişim kurulur ve üç tırnak sağlanır.  
   
-3.  Kullanıcı bir kamyonu teklif seçer ve sipariş için kredi kartı ile devam eder.  
+3.  Kullanıcı, tek bir kamyon teklif seçer ve sıralamak için kredi kartı ile devam eder.  
   
-4.  Uygulama, diğer iki kamyon tırnak işareti iptal eder.  
+4.  Uygulama, diğer iki kamyon tırnak iptal eder.  
   
-5.  Uygulama iade iptali 10 gün olursa premium olmayan hesaplar için veya rezervasyon tarihi önce daha az bir hizmet ücret ister.  
+5.  Uygulamayı iptal 10 gün olursa premium olmayan hesaplar için iade olmayan veya ayırma tarihten önce hizmet için ücret.  
   
-6.  Uygulama Kamyon kiralama ücreti ister.  
+6.  Uygulama Kamyon kiralama ücret.  
   
-7.  Uygulama rezervasyon tarihi veya müşteri ayırması iptal etmeye karar kadar hangisi önce gelirse bekler.  
+7.  Uygulama, rezervasyon tarihi veya ayırmayı iptal etmek müşteri karar kadar hangisi önce gelirse bekler.  
   
-8.  Müşteri ayırması iptal ederse <xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A> özel maaş mantığı göre aşağıdaki mantık çalışır:  
+8.  Müşteri ayırmayı iptal ederse <xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A> özel telafi mantığının göre aşağıdaki mantık çalıştırır:  
   
-    1.  Müşterinin bir premium olmayan hesabı varsa ve 10 günden kısa bir süre önce rezervasyon tarihi sonra hizmet ücreti ise hala ücretlendirilir; Aksi takdirde, uygulama hizmeti ücret para iadeleri.  
+    1.  Müşteri, bir premium olmayan hesabına sahiptir ve 10 günden önce rezervasyon tarihi ve ardından hizmet ücretinin ise hala ücretlendirilir; Aksi takdirde uygulama, hizmet ücretinin mahsup işlemleri.  
   
-    2.  Compensable etkinlikleri (kamyon sipariş + kamyon sipariş ücreti) kalanı ters sırada yürütülmesi dengelemek için varsayılan maaş mantığı göre çalıştırın.  
+    2.  Rest (kamyon sipariş + kamyon siparişi masrafı) compensable etkinliklerinin ters sırada yürütülmesini dengelemek için varsayılan telafi mantığı göre çalıştırın.  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örnek çalıştırın  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Kullanarak [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], CustomCompensation.sln çözümü açın. \WF\Basic\Compensation\CustomCompensation dizininde bulunur.  
+1.  Kullanarak [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], CustomCompensation.sln çözümü açın. Bunu \WF\Basic\Compensation\CustomCompensation dizininde bulunur.  
   
-2.  Çözümü derlemek için CTRL + SHIFT + B tuşuna basın.  
+2.  Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.  
   
-3.  Uygulamayı çalıştırmak için CTRL + F5 tuşuna basın.  
+3.  Uygulamayı çalıştırmak için CTRL + F5 tuşlarına basın.  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Compensation\CustomCompensation`

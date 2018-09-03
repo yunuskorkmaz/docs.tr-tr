@@ -7,24 +7,24 @@ helpviewer_keywords:
 - controls [WPF], Label
 - Label control [WPF]
 ms.assetid: 241c1ce2-60f8-4613-a0ec-9b9bb25fb6af
-ms.openlocfilehash: 310c9549814a2686fb29e98ea81baa642b6a16bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ec5dda6c2a4690106e47ecb447ea2a409e474856
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553734"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43476072"
 ---
 # <a name="label"></a>Etiketle
-<xref:System.Windows.Controls.Label> denetimleri genellikle sağladığı bilgileri [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  Tarihsel olarak, bir <xref:System.Windows.Controls.Label> yalnızca metin içermiştir ancak çünkü <xref:System.Windows.Controls.Label> ile birlikte [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] olan bir <xref:System.Windows.Controls.ContentControl>, ya da metin içerebilir veya <xref:System.Windows.UIElement>.  
+<xref:System.Windows.Controls.Label> denetimleri genellikle sağladığı bilgileri [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  Tarihsel olarak, bir <xref:System.Windows.Controls.Label> yalnızca metin içermiştir ancak <xref:System.Windows.Controls.Label> ile birlikte [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] olduğu bir <xref:System.Windows.Controls.ContentControl>, ya da metin içerebilir veya <xref:System.Windows.UIElement>.  
   
- A <xref:System.Windows.Controls.Label> erişim tuşları için görsel ve işlevsel destek sağlar. Hızlı Klavye erişimi denetimleri gibi etkinleştirmek için sık kullanılan bir <xref:System.Windows.Controls.TextBox>. Atamak için bir <xref:System.Windows.Controls.Label> için bir <xref:System.Windows.Controls.Control>ayarlayın <xref:System.Windows.Controls.Label.Target%2A?displayProperty=nameWithType> kullanıcı erişim tuşuna bastığında odağı alması gereken denetime özellik.  
+ A <xref:System.Windows.Controls.Label> için erişim anahtarlarını hem işlevsel hem de visual desteği sağlar. Hızlı klavye erişim denetimleri gibi etkinleştirmek için sık kullanılan bir <xref:System.Windows.Controls.TextBox>. Atamak için bir <xref:System.Windows.Controls.Label> için bir <xref:System.Windows.Controls.Control>ayarlayın <xref:System.Windows.Controls.Label.Target%2A?displayProperty=nameWithType> kullanıcı erişim tuşuna bastığında odağı alması gereken denetimi özelliği.  
   
- Aşağıdaki resimde gösterildiği bir <xref:System.Windows.Controls.Label> "hedefler Temalar" bir <xref:System.Windows.Controls.ComboBox>.  Kullanıcı bastığında <xref:System.Windows.Controls.ComboBox> odağı alır.  Daha fazla bilgi için bkz: [nasıl yapılır: bir etiket için Target özelliği ayarlamak](http://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8).  
+ Aşağıdaki görüntüde bir <xref:System.Windows.Controls.Label> "hedefleyen temaları" bir <xref:System.Windows.Controls.ComboBox>.  Kullanıcının bastığında <xref:System.Windows.Controls.ComboBox> odağı alır.  Daha fazla bilgi için [nasıl yapılır: bir etiketin hedef özelliği ayarlanmış](https://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8).  
   
  ![Görüntü özellikleri kullanıma göre etiketlenmiş](../../../../docs/framework/wpf/controls/media/labeledby.JPG "LabeledBy")  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: bir etiket için Target özelliği ayarlama](http://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)  
+ [Nasıl yapılır: bir etiketin hedef özelliğini ayarlayın](https://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Controls.Label>

@@ -2,62 +2,62 @@
 title: AspNetRouteIntegration
 ms.date: 03/30/2017
 ms.assetid: 0638ce0e-d053-47df-a447-688e447a03fb
-ms.openlocfilehash: 671857b0ace2e18f0dac7fd8033a20f3af889c8b
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 8d9a0710e5106cbc3d02a06e81f4f8ed9ae3e03b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804410"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43475887"
 ---
 # <a name="aspnetrouteintegration"></a>AspNetRouteIntegration
-Bu örnek, ASP.NET yollar kullanılarak bir Windows Communication Foundation (WCF) REST hizmeti barındırma gösterilmiştir. [Temel kaynak hizmeti](../../../../docs/framework/wcf/samples/basic-resource-service.md) örnek bu senaryo kendini barındıran bir sürümünü gösterir ve hizmet uygulaması derinlemesine anlatılmaktadır. Bu konu ASP.NET tümleştirme özelliğini odaklanır. ASP.NET yönlendirme hakkında daha fazla bilgi için bkz: <xref:System.Web.Routing>.  
+Bu örnek, ASP.NET yollar kullanarak bir Windows Communication Foundation (WCF) REST hizmeti barındırmak nasıl gösterir. [Temel kaynak hizmeti](../../../../docs/framework/wcf/samples/basic-resource-service.md) örnek bu senaryo, şirket içinde barındırılan bir sürümü göstermektedir ve hizmet uygulaması derinlemesine açıklanır. Bu konu ASP.NET tümleştirme özelliğini odaklanır. ASP.NET yönlendirme hakkında daha fazla bilgi için bkz: <xref:System.Web.Routing>.  
   
 ## <a name="sample-details"></a>Örnek Ayrıntıları  
- WCF hizmeti bir kaynak-yönelimli/REST şekilde müşteriler koleksiyonu kullanıma sunar. Yalnızca bir SOAP tabanlı WCF hizmeti gibi hizmet .svc dosyasını kullanarak ASP.NET barındırılabilir. Hizmeti için URL .svc bulundurmak gerektirdiğinden ancak, bu HTTP senaryoları için tercih edilen çoğunlukla değildir. Ayrıca, hizmet kitaplığı birlikte .svc dosya dağıtılması gerekir. Bu örnekte gösterildiği gibi ASP.NET yolları kullanarak hizmet barındırma tarafından sınırlamalara önlenebilir.  
+ WCF hizmeti, müşteriler topluluğu kaynak odaklı/BEKLEYEN bir biçimde sunar. Yalnızca bir SOAP tabanlı WCF hizmeti gibi hizmet .svc dosyasını kullanarak ASP.NET barındırılabilir. Hizmet URL'sini .svc olması gerektiğinden ancak HTTP senaryoları için tercih edilen budur değildir. Ayrıca, hizmet kitaplığı ile birlikte bir .svc dosyasını dağıtma gerektirir. Bu sınırlamalar, bu örnekte gösterildiği gibi ASP.NET yollar kullanarak hizmeti barındırarak önlenebilir.  
   
- Örnek ASP.NET hizmetinde ekleyerek barındıran bir <xref:System.ServiceModel.Activation.ServiceRoute> Global.asax dosyasındaki. <xref:System.ServiceModel.Activation.ServiceRoute> ('Service' Bu durumda), hizmet türünü belirtir. hizmeti için kullanacağınız hizmet ana bilgisayar üreteci türü (<xref:System.ServiceModel.Activation.WebServiceHostFactory> bu durumda) ve hizmet adresini temel HTTP ('~ / müşterilerin bu durumda).  
+ Örnek ASP.NET hizmetinde ekleyerek barındıran bir <xref:System.ServiceModel.Activation.ServiceRoute> Global.asax dosyasındaki. <xref:System.ServiceModel.Activation.ServiceRoute> ('Hizmet' Bu durumda), hizmet türünü belirten hizmeti için kullanacağınız hizmet ana bilgisayar üreteci türünü (<xref:System.ServiceModel.Activation.WebServiceHostFactory> bu durumda) ve temel adresi hizmeti için HTTP ('~ / müşterilerin bu durumda).  
   
- Buna ek olarak, örnek ekler Web.config içeren <xref:System.Web.Routing.UrlRoutingModule> (ASP.NET yollara açmak için) ve hizmet için yapılandırmayı içerir. Özellikle, yapılandırma WCF Hizmeti ile bir varsayılan yapılandırır <xref:System.ServiceModel.Description.WebHttpEndpoint> olan <xref:System.ServiceModel.Description.WebHttpEndpoint.HelpEnabled%2A> ayarını `true`. Sonuç olarak, otomatik bir HTML tabanlı yardım sayfasına WCF altyapıyı oluşturur `http://localhost/Customers/help` sağlayan HTTP oluşturmak hakkında bilgi, nasıl bir örneği hizmeti ve hizmetin HTTP yanıtı – örneği için erişim istekleri müşteri Ayrıntılar XML ve JSON temsil edilir.  
+ Buna ek olarak, örnek ekleyen bir Web.config içerir <xref:System.Web.Routing.UrlRoutingModule> (ASP.NET yollara açmak için) ve hizmet yapılandırmasını içerir. Özellikle, WCF hizmeti yapılandırma ile bir varsayılan yapılandırır <xref:System.ServiceModel.Description.WebHttpEndpoint> olan <xref:System.ServiceModel.Description.WebHttpEndpoint.HelpEnabled%2A> ayarını `true`. Sonuç olarak, WCF altyapısı bir otomatik dayalı HTML Yardım sayfası oluşturur `http://localhost/Customers/help` sağlayan HTTP oluşturmak hakkında bilgi ilişkin bir örnek hizmeti ve hizmetin HTTP yanıtı – örneği için erişimi nasıl ister müşteri Ayrıntılar, XML ve JSON temsil edilir.  
   
- Müşteri koleksiyonu gösterme (ve daha genel olarak, herhangi bir kaynağa) bu şekilde URI'ler ve HTTP kullanmanın tek bir yolla bir hizmetiyle etkileşim bir istemcinin verir `GET`, `PUT`, `DELETE` ve `POST`.  
+ Müşteri koleksiyonunun gösterme (ve daha genel olarak, herhangi bir kaynak) bu şekilde URI ve HTTP kullanmanın tek bir yolla bir hizmetle etkileşim kurmak bir istemci izin veren `GET`, `PUT`, `DELETE` ve `POST`.  
   
- İstemci projesindeki program.cs gösteren böyle bir istemci nasıl olabilir kullanılarak yazılan <xref:System.Net.HttpWebRequest>. Bu bir WCF Hizmeti erişmenin tek yolu olduğuna dikkat edin. WCF kanal fabrikası gibi diğer .NET Framework sınıfları kullanarak hizmete erişmek mümkündür ve <xref:System.Net.WebClient>. SDK'sındaki diğer örnekleri (gibi [temel HTTP hizmeti](../../../../docs/framework/wcf/samples/basic-http-service.md) örnek ve [Otomatik Biçim Seçimi](../../../../docs/framework/wcf/samples/automatic-format-selection.md) örnek) bu sınıfların bir WCF Hizmeti ile iletişim için nasıl kullanılacağını gösterir.  
+ İstemci projesindeki program.cs gösterir böyle bir istemci nasıl olabileceğini kullanılarak yazılan <xref:System.Net.HttpWebRequest>. Bir WCF Hizmeti erişmek için yalnızca bir yol olduğunu unutmayın. WCF kanal fabrikası gibi diğer .NET Framework sınıflarını kullanarak hizmete erişmek mümkündür ve <xref:System.Net.WebClient>. SDK diğer örnekleri (gibi [temel HTTP hizmeti](../../../../docs/framework/wcf/samples/basic-http-service.md) örnek ve [Otomatik Biçim Seçimi](../../../../docs/framework/wcf/samples/automatic-format-selection.md) örnek) bir WCF Hizmeti ile iletişim kurmak için bu sınıflar kullanma işlemi gösterilmektedir.  
   
- Bu örnek 3 projelerin oluşur:  
+ Bu örnek 3 projelerini oluşur:  
   
  Hizmet  
- ASP.NET barındırılan bir WCF HTTP hizmeti içeren bir Web uygulaması projesi.  
+ ASP.NET'te barındırılan bir WCF HTTP hizmeti içeren bir Web uygulama projesi.  
   
  İstemci  
- Hizmet çağrılar konsol uygulama projesi.  
+ Hizmet çağrıları yapan bir konsol uygulama projesi.  
   
  Ortak  
- İçeren paylaşılan bir kitaplık `Customer` istemci ve hizmet tarafından kullanılan türü. İstemci konsol uygulaması çalışırken, istemci hizmete istek yaptığında ve konsol penceresine yanıtlardan bilgileri yazar.  
+ İçeren bir paylaşılan kitaplık `Customer` istemci ve hizmet tarafından kullanılan tür. İstemci konsol uygulaması çalışırken istemci hizmete isteği yapan ve konsol penceresine yanıtlardan bilgileri yazar.  
   
 #### <a name="to-use-this-sample"></a>Bu örneği kullanmak için  
   
-1.  ASP.NET yollar tümleştirme örnek çözümü açın [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
+1.  ASP.NET yollar tümleştirme örnekte çözümü açın [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
   
-2.  Çözümü derlemek için CTRL + SHIFT + B tuşuna basın.  
+2.  Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.  
   
-3.  Zaten açık değilse, "CTRL + W, S" tuşlarına basın açmak için **Çözüm Gezgini** penceresi.  
+3.  Zaten açık değilse, "CTRL + W, S" tuşuna basın. açmak için **Çözüm Gezgini** penceresi.  
   
-4.  Gelen **Çözüm Gezgini** sağ tıklatın, windows **hizmet** proje ve imleci üzerine getirin **hata ayıklama** bağlam menüsü seçeneğini böylece **Başlat Yeni örnek** bağlam menüsü görüntülenir ve seçin **Başlat yeni örnek**.  Bu hizmeti barındıran ASP.NET geliştirme sunucusu başlatır.  
+4.  Gelen **Çözüm Gezgini** sağ tıklatın, windows **hizmet** üzerine imleci getirin ve proje **hata ayıklama** bağlam menüsü seçeneği böylece **Başlat Yeni örnek** bağlam menüsü görüntülenir ve seçin **yeni örnek Başlat**.  Bu, hizmeti barındıran ASP.NET geliştirme sunucusu başlatır.  
   
-5.  Gelen **Çözüm Gezgini** sağ tıklatın, windows **istemci** proje ve imleci üzerine getirin **hata ayıklama** bağlam menüsü seçeneğini böylece **yeni Başlat Örnek** bağlam menüsü görüntülenir ve seçin **Başlat yeni örnek**.  
+5.  Gelen **Çözüm Gezgini** sağ tıklatın, windows **istemci** üzerine imleci getirin ve proje **hata ayıklama** bağlam menüsü seçeneği böylece **yeni Başlat Örnek** bağlam menüsü görüntülenir ve seçin **yeni örnek Başlat**.  
   
-6.  İstemci konsol penceresi görüntülenir ve çalışan hizmetin URI sağlar ve URI HTML sayfası çalışan hizmetin için yardımcı olur. Herhangi bir noktada, HTML Yardım sayfasına bir tarayıcıda yardım sayfasına URI'sini yazarak görüntüleyebilirsiniz. Örnek çalışırken, istemcinin geçerli etkinlik durumunu yazar.  
+6.  İstemci konsol penceresi görünür ve çalışan hizmetin URI sağlar ve URI HTML Yardım sayfası çalışan hizmeti. Herhangi bir noktada HTML Yardım sayfası URI Yardım sayfasının bir tarayıcıda yazarak görüntüleyebilirsiniz. Örnek çalışırken, istemcinin geçerli etkinlik durumunu yazar.  
   
-7.  İstemci konsol uygulaması sonlandırmak için herhangi bir tuşa basın.  
+7.  İstemci Konsolu uygulamayı sonlandırmak için herhangi bir tuşa basın.  
   
-8.  Hata ayıklama hizmetini durdurmak için Shift + F5'e basın ve Windows bildirim alanında ASP.NET Geliştirme Sunucusu simgesini sağ tıklatın ve seçin **durdurmak** ve bağlam menüsünden.  
+8.  Hizmet hata ayıklamayı durdurmak için Shift + F5 tuşlarına basın ve Windows bildirim alanında ASP.NET Geliştirme Sunucusu simgesine sağ tıklayıp **Durdur** bağlam menüsünden.  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\AspNetRouteIntegration`  
   

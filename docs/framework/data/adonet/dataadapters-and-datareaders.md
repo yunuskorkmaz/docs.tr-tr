@@ -1,52 +1,52 @@
 ---
-title: DataAdapters ve DataReader
+title: DataAdapters ve DataReaders
 ms.date: 03/30/2017
 ms.assetid: cc952ca2-ec19-46ab-9189-15174b52cb74
-ms.openlocfilehash: 7fd7013478bbf30c2a7e915045e3dd192ca92540
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6e711b11ef9a3eca53806b825f1e721169ab662d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758106"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43476228"
 ---
-# <a name="dataadapters-and-datareaders"></a>DataAdapters ve DataReader
-ADO.NET kullanabilirsiniz **DataReader** bir veritabanından veri salt okunur, yalnızca ileri akışı alınamadı. Sonuçları sorgu yürütür ve bunları isteyen kadar istemci üzerinde ağ arabelleği depolanan gibi döndürülür kullanarak **okuma** yöntemi **DataReader**. Kullanarak **DataReader** hem kullanılabilir olduğunda hemen verileri alarak ve (varsayılan) uygulama performansını artırabilirsiniz sistem yükünü azaltma bellekte bir anda yalnızca bir satır depolama.  
+# <a name="dataadapters-and-datareaders"></a>DataAdapters ve DataReaders
+ADO.NET kullanarak **DataReader** bir veritabanından veri salt okunur, salt iletme akışını almak için. Sonuçları döndüren sorguyu yürütür ve bunları isteyen kadar istemci üzerinde ağ arabellekteki depolanır kullanarak **okuma** yöntemi **DataReader**. Kullanarak **DataReader** hem kullanılabilir duruma geldiği veri alarak ve (varsayılan) uygulama performansını artırabilir sistem yükünü azaltarak bellekte bir anda yalnızca bir satır depolama.  
   
- A <xref:System.Data.Common.DataAdapter> bir veri kaynağından veri almak ve tablolarına doldurmak için kullanılan bir <xref:System.Data.DataSet>. `DataAdapter` Yapılan değişiklikleri de çözümler `DataSet` veri kaynağına geri. `DataAdapter` Kullanan `Connection` nesne bir veri kaynağı ve onu bağlanmak için .NET Framework Veri Sağlayıcısı'nın kullandığı `Command` verilerin alınacağı ve veri kaynağına değişiklikler çözümlemek için nesneleri.  
+ A <xref:System.Data.Common.DataAdapter> bir veri kaynağından veri alabilir ve tablolarına doldurmak için kullanılan bir <xref:System.Data.DataSet>. `DataAdapter` Yapılan değişiklikleri de çözümler `DataSet` veri kaynağına geri dönün. `DataAdapter` Kullanan `Connection` nesne veri kaynağı ve bu bağlantı için .NET Framework Veri Sağlayıcısı'nın kullandığı `Command` verileri almak ve değişiklikleri veri kaynağına çözmek için nesneleri.  
   
- .NET Framework ile dahil her .NET Framework veri sağlayıcısı sahip bir <xref:System.Data.Common.DbDataReader> ve <xref:System.Data.Common.DbDataAdapter> nesnesi: OLE DB için .NET Framework veri sağlayıcısı içerir bir <xref:System.Data.OleDb.OleDbDataReader> ve bir <xref:System.Data.OleDb.OleDbDataAdapter> nesnesi, SQL için .NET Framework veri sağlayıcısı Sunucuyu içeren bir <xref:System.Data.SqlClient.SqlDataReader> ve <xref:System.Data.SqlClient.SqlDataAdapter> nesne ODBC için .NET Framework veri sağlayıcısı içerir bir <xref:System.Data.Odbc.OdbcDataReader> ve bir <xref:System.Data.Odbc.OdbcDataAdapter> nesne ve Oracle için .NET Framework veri sağlayıcısı içerir bir <xref:System.Data.OracleClient.OracleDataReader> ve bir <xref:System.Data.OracleClient.OracleDataAdapter> nesnesi.  
+ .NET Framework ile dahil her .NET Framework veri sağlayıcısı sahip bir <xref:System.Data.Common.DbDataReader> ve <xref:System.Data.Common.DbDataAdapter> nesne: OLE DB için .NET Framework veri sağlayıcısı içerir bir <xref:System.Data.OleDb.OleDbDataReader> ve bir <xref:System.Data.OleDb.OleDbDataAdapter> nesne, SQL için .NET Framework veri sağlayıcısı Server içeren bir <xref:System.Data.SqlClient.SqlDataReader> ve <xref:System.Data.SqlClient.SqlDataAdapter> nesnesi, ODBC için .NET Framework veri sağlayıcısı içerir bir <xref:System.Data.Odbc.OdbcDataReader> ve <xref:System.Data.Odbc.OdbcDataAdapter> nesne ve Oracle için .NET Framework veri sağlayıcısı içerir bir <xref:System.Data.OracleClient.OracleDataReader> ve bir <xref:System.Data.OracleClient.OracleDataAdapter> nesne.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [DataReader Kullanarak Veri Alma](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md)  
- ADO.NET açıklar **DataReader** nesne ve nasıl sonuçlarının bir akış veri kaynağından döndürmek için kullanılır.  
+ ADO.NET açıklar **DataReader** nesnesi ve bir veri kaynağından bir akışa sonuçlarının döndürmek için kullanma.  
   
  [DataAdapter’dan bir DataSet Doldurma](../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)  
- Doldurmak nasıl açıklar bir `DataSet` tabloları, sütunları ve satırları kullanarak bir `DataAdapter`.  
+ Nasıl doldurulacağını açıklar bir `DataSet` tabloları, sütunları ve satırları kullanarak ile bir `DataAdapter`.  
   
  [DataAdapter Parametreleri](../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
- Parametreler ile komut özelliklerini kullanmayı açıklar bir `DataAdapter` bir sütunun içeriğine eşleme de dahil olmak üzere bir `DataSet` için bir komut parametresi.  
+ Parametreler ile komut özelliklerini kullanmayı açıklar bir `DataAdapter` bir sütunda içeriğini eşlemeyle ilgili bilgi de dahil olmak üzere bir `DataSet` için komut parametresi.  
   
  [DataSet’e Var Olan Kısıtlamaları Ekleme](../../../../docs/framework/data/adonet/adding-existing-constraints-to-a-dataset.md)  
- Varolan kısıtlamalara eklemeyi açıklar bir `DataSet`.  
+ Mevcut kısıtlamalar eklemeyi açıklar bir `DataSet`.  
   
  [DataAdapter DataTable ve DataColumn Eşlemeleri](../../../../docs/framework/data/adonet/dataadapter-datatable-and-datacolumn-mappings.md)  
  Nasıl ayarlanacağını açıklar `DataTableMappings` ve `ColumnMappings` için bir `DataAdapter`.  
   
  [Sorgu Sonucunu Sayfalama](../../../../docs/framework/data/adonet/paging-through-a-query-result.md)  
- Bir sorgunun sonuçlarını veri sayfaları olarak görüntüleme ilişkin bir örnek verilmektedir.  
+ Bir sorgunun sonuçlarını veri sayfasını görüntüleme bir örnek sağlar.  
   
  [Veri Kaynaklarını DataAdapters ile Güncelleştirme](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
- Nasıl kullanılacağını açıklar bir `DataAdapter` değişiklikleri çözümlemek için bir `DataSet` veritabanına.  
+ Nasıl kullanılacağını açıklayan bir `DataAdapter` değişiklikleri çözmek için bir `DataSet` veritabanına.  
   
  [DataAdapter Olaylarını İşleme](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)  
- Açıklar `DataAdapter` olaylar ve bunları nasıl kullanacağınızı.  
+ Açıklar `DataAdapter` olayları ve bunların nasıl kullanıldığı.  
   
  [DataAdapters Kullanarak Toplu İşlemleri Gerçekleştirme](../../../../docs/framework/data/adonet/performing-batch-operations-using-dataadapters.md)  
- Güncelleştirmeleri uygularken SQL Server'a gidiş dönüş sayısını azaltarak geliştirerek uygulama performansı açıklar `DataSet`.  
+ Güncelleştirmeleri uygularken SQL Server gidiş dönüş sayısını azaltarak geliştirerek uygulama performansını açıklar `DataSet`.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Veri Kaynağına Bağlanma](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
  [Komutlar ve Parametreler](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [İşlemler ve Eşzamanlılık](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
  [DataSets, DataTables ve DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
