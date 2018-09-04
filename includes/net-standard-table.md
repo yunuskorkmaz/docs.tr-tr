@@ -11,7 +11,7 @@
 | Windows Phone              | 8.1   | 8.1    | 8.1   |       |       |            |            |            |
 | Windows Phone Silverlight  | 8.0   |        |       |       |       |            |            |            |
 
-<sup>1 .NET Framework için listelenen sürümleri, .NET Core SDK 2.0 ve Araçları'nın sonraki sürümleri için geçerlidir. Eski sürümleri ve üzeri için .NET standart 1.5 farklı bir eşlemeyle kullanılır. </sup>
+<sup>1 .NET Framework için listelenen sürümleri, .NET Core SDK 2.0 ve Araçları'nın sonraki sürümleri için geçerlidir. Eski sürümleri ve üzeri için .NET standart 1.5 farklı bir eşlemeyle kullanılır. Yapabilecekleriniz [Visual Studio 2015 için .NET Core araçları için araç kullanımı indir](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md) , Visual Studio 2017'ye yükseltemezsiniz.</sup>
 
 - Sütunlar .NET Standard sürümleri temsil eder. Her üst bilgi hücresini hangi API'ler .NET Standard'ın bu sürümünde eklenen gösteren bir belgeye bir bağlantıdır.
 - Satırları, farklı .NET uygulamalarını temsil eder.
