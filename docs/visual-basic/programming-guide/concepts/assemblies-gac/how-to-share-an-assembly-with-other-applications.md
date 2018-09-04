@@ -2,29 +2,29 @@
 title: 'Nasıl yapılır: bir derlemeyi başka uygulamalarla (Visual Basic) paylaşma'
 ms.date: 07/20/2015
 ms.assetid: 5388aedc-cb42-4622-8b70-8e701eee057a
-ms.openlocfilehash: 3a6a04a3aef5430eb65d0c1a7eb37f6afb9e5c86
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: a7f6b49e8389108528c44d7464a2e68149dfa940
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642882"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466482"
 ---
 # <a name="how-to-share-an-assembly-with-other-applications-visual-basic"></a>Nasıl yapılır: bir derlemeyi başka uygulamalarla (Visual Basic) paylaşma
-Derlemeler, özel veya paylaşılan olabilir: varsayılan olarak, diğer uygulamalar tarafından kullanılması amaçlanmıştır değil çünkü basit programlarının çoğu özel bir derlemenin oluşur.  
+Özel veya paylaşılan derlemeler olabilir: varsayılan olarak, diğer uygulamalar tarafından kullanılmak üzere amaçlanmamıştır çünkü basit programlarının çoğu özel bir derleme oluşur.  
   
- Bir derlemeyi başka uygulamalarla paylaşma için onu yerleştirilmelidir [genel derleme önbelleği](../../../../framework/app-domains/gac.md) (GAC).  
+ Bir derlemeyi başka uygulamalarla paylaşma için bunu yerleştirilmelidir [genel derleme önbelleği](../../../../framework/app-domains/gac.md) (GAC).  
   
-### <a name="sharing-an-assembly"></a>Bir derlemeyi paylaşımı  
+### <a name="sharing-an-assembly"></a>Derlemeyi paylaşmanız  
   
-1.  Derlemenizi oluşturun. Daha fazla bilgi için bkz: [derlemeler oluşturma](../../../../framework/app-domains/create-assemblies.md).  
+1.  Derlemenizi oluşturun. Daha fazla bilgi için [derlemeler oluşturma](../../../../framework/app-domains/create-assemblies.md).  
   
-2.  Güçlü bir ad, derlemenizi atayın. Daha fazla bilgi için bkz: [nasıl yapılır: bir derlemeyi tanımlayıcı adla oturum](../../../../framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).  
+2.  Bir derlemeye güçlü bir ad atayın. Daha fazla bilgi için [nasıl yapılır: bir derlemeyi tanımlayıcı bir adla imzalamak](../../../../framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).  
   
-3.  Sürüm bilgileri, derlemenizi atayın. Daha fazla bilgi için bkz: [derleme sürümü oluşturma](../../../../framework/app-domains/assembly-versioning.md).  
+3.  Sürüm bilgileri için bir derleme atayın. Daha fazla bilgi için [derleme sürümlendirme](../../../../framework/app-domains/assembly-versioning.md).  
   
-4.  Derleme genel derleme önbelleğine ekleme. Daha fazla bilgi için bkz: [nasıl yapılır: bir derlemeyi genel derleme önbelleğine yükleme](../../../../framework/app-domains/how-to-install-an-assembly-into-the-gac.md).  
+4.  Derlemenizi, Genel Derleme Önbelleği'ne ekleyin. Daha fazla bilgi için [nasıl yapılır: bir derlemeyi genel bütünleştirilmiş kod önbelleğine yüklemek](../../../../framework/app-domains/how-to-install-an-assembly-into-the-gac.md).  
   
-5.  Diğer uygulamalardan derlemesinde bulunan türleri erişin. Daha fazla bilgi için bkz: [nasıl yapılır: bir Strong-Named derleme başvurusu](http://msdn.microsoft.com/library/4c6a406a-b5eb-44fa-b4ed-4e95bb95a813).  
+5.  Diğer uygulamalardan derlemesinde bulunan türleri erişin. Daha fazla bilgi için [nasıl yapılır: bir Strong-Named derleme başvurusu](https://msdn.microsoft.com/library/4c6a406a-b5eb-44fa-b4ed-4e95bb95a813).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Programlama kavramları](../../../../visual-basic/programming-guide/concepts/index.md) [derlemeler ve Genel Derleme Önbelleği (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  

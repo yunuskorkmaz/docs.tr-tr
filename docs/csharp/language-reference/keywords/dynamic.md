@@ -8,11 +8,11 @@ helpviewer_keywords:
 - dynamic keyword [C#]
 ms.assetid: 9e797102-cc83-4964-bf58-afe4f54d16bc
 ms.openlocfilehash: bddcb8890ef7312047d05794ccef0b638de4ed78
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
-ms.translationtype: MT
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42930257"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484021"
 ---
 # <a name="dynamic-c-reference"></a>dynamic (C# Başvurusu)
 

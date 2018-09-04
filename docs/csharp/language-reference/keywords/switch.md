@@ -1,6 +1,6 @@
 ---
-title: switch anahtar sözcüğü (C# Başvurusu)
-ms.date: 03/07/2017
+title: C# switch deyimi
+ms.date: 08/14/2018
 f1_keywords:
 - switch_CSharpKeyword
 - switch
@@ -12,188 +12,189 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 4e21700b36437bf9bd60bb4f33e2833819333f1e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 08b63d67b6175d18bee1317cc8908d876fbb4039
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33288898"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394823"
 ---
-# <a name="switch-c-reference"></a>switch (C# Başvurusu)
-`switch` tek bir seçtiği seçimi açıklamadır *geçiş bölüm* bir desen eşleştirme ile temel adaylar listesinden yürütmek için *ifade ile eşleşen*. 
-  
- [!code-csharp[switch#1](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch1.cs#1)]  
+# <a name="switch-c-reference"></a>geçiş (C# Başvurusu)
 
-`switch` Deyimi alternatif olarak kullanılan genellikle bir [if-else](if-else.md) tek bir ifade üç veya daha fazla koşul karşı test varsa oluşturun. Örneğin, aşağıdaki `switch` ifadesi bir değişken türü olup olmadığını belirler `Color` üç değerden birini içeriyor: 
+`switch` tek bir seçtiği bir seçim deyimi *geçiş bölümüne* bir desen eşleştirme ile temel adaylar listesinden yürütülecek *eşleşen ifade*.
 
-[!code-csharp[switch#3](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch3.cs#1)] 
+[!code-csharp[switch#1](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch1.cs#1)]
 
-Kullanan aşağıdaki örneğe eşdeğer olan bir `if` - `else` oluşturun. 
+`switch` Deyimi bir alternatifi olarak kullanılan genellikle bir [if-else](if-else.md) tek bir ifade, üç veya daha fazla koşul karşı test edildiyse oluşturun. Örneğin, aşağıdaki `switch` ifadesi bir değişken türü olup olmadığını belirler `Color` üç değerden birine sahiptir:
 
-[!code-csharp[switch#3a](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch3a.cs#1)] 
+[!code-csharp[switch#3](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch3.cs#1)]
 
-## <a name="the-match-expression"></a>Eşleşme ifadesi
+Kullanan aşağıdaki örneğe eşdeğerdir bir `if` - `else` oluşturun.
 
-Eşleşme ifadesi düzenleri eşleştirilecek değer sağlar `case` etiketler. Sözdizimi aşağıdaki gibidir:
+[!code-csharp[switch#3a](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch3a.cs#1)]
+
+## <a name="the-match-expression"></a>Eşleştirme ifadesi
+
+Eşleşme ifade desenlerinde eşleştirilecek değer sağlar `case` etiketler. Kendi sözdizimi aşağıdaki gibidir:
 
 ```csharp
    switch (expr)
 ```
 
-C# 6'da, aşağıdaki türlerde bir değer döndüren bir ifadeye eşleşme ifadesi olması gerekir:
+C# 6'da eşleşme ifadesi değer türlerinden birini döndüren bir ifade olmalıdır:
 
 - bir [char](char.md).
 - bir [dize](string.md).
-- bir [bool](bool.md). 
-- gibi bir integral değeri bir [int](int.md) veya [uzun](long.md).
+- bir [bool](bool.md).
+- bir tamsayı değeri olan gibi bir [int](int.md) veya [uzun](long.md).
 - bir [enum](enum.md) değeri.
 
-C# 7. 0'dan başlayarak, eşleşme ifadesi herhangi bir null olmayan ifade olabilir.
- 
+C# 7.0 ile başlayarak, eşleştirme ifadesi null olmayan herhangi bir ifade olabilir.
+
 ## <a name="the-switch-section"></a>Anahtar bölümü
- 
- A `switch` deyimi bir veya daha fazla anahtar bölümleri içerir. Bir veya daha fazla her anahtar bölüm içerir *durumda etiketler* bir veya daha fazla deyimleri tarafından izlenen. Aşağıdaki örnekte basit bir `switch` üç anahtar bölümleri olan deyimi. Her anahtar bölümü gibi bir durum etiketi, sahip `case 1:`ve iki ifade.
- 
-  A `switch` deyimi herhangi bir sayıda anahtar bölümü içerebilir ve her bölüm aşağıdaki örnekte gösterildiği gibi durum etiketi, bir veya daha fazla olabilir. Ancak, hiçbir iki durum etiketi aynı ifadesi içeriyor olabilir.  
 
- [!code-csharp[switch#2](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]  
+A `switch` deyimi bir veya daha fazla anahtar bölüm içerebilir. Her anahtar bölümü bir veya daha fazla içeren *case etiketleri* (bir case veya default etiketi) ve ardından bir veya daha fazla deyim tarafından. `switch` Deyimi herhangi bir anahtar bölümü yerleştirilen en fazla bir varsayılan etiket içerebilir. Aşağıdaki örnek, basit bir gösterir `switch` üç anahtar bölümü, her iki deyim içeren olan ifade. İkinci bölüm anahtarını içeren `case 2:` ve `case 3:` etiketler.
 
- Switch deyimi yalnızca bir anahtar bölümünde yürütür. C# bir anahtar bölümünden sonraki devam etmek için yürütmeye izin vermez. Bu nedenle, aşağıdaki kod bir Derleyici Hatası CS0163 oluşturur: "Denetim olamaz atlayabilir bir case etiketinden (<case label>) diğerine."  
+A `switch` deyimi anahtar bölümlerinin sayısını içerir ve her bölüm aşağıdaki örnekte gösterildiği gibi bir veya daha fazla durum etiketi olabilir. Ancak, hiçbir iki durum etiketi aynı ifadesi içeriyor olabilir.
 
-```csharp  
-switch (caseSwitch)  
-{  
-    // The following switch section causes an error.  
-    case 1:  
-        Console.WriteLine("Case 1...");  
-        // Add a break or other jump statement here.  
-    case 2:  
-        Console.WriteLine("... and/or Case 2");  
-        break;  
-}  
-```  
-Bu gereksinim, genellikle açıkça kullanarak anahtar bölüm çıkılarak karşılanır bir [sonu](break.md), [goto](goto.md), veya [dönmek](return.md) deyimi. Program denetim için geçemez sağlar ancak, aşağıdaki kodu aynı zamanda, geçersiz çünkü `default` bölümüne geçin.
-  
- [!code-csharp[switch#4](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch4.cs#1)]    
-  
- Eşleşme ifadeyle eşleşen bir servis talebi etiket anahtarı bölümle deyimi listesinde yürütülmesi ilk deyimi ile başlar ve genellikle bir atlama deyimi kadar deyimi eşlemeleri gibi devam eder bir `break`, `goto case`, `goto label`, `return`, veya `throw`, ulaşıldı. Bu noktada, denetimi dışında aktarılır `switch` deyimi veya başka bir durum etiketi. A `goto` deyimi, kullanılırsa, gerekir aktarım denetimi için sabit bir etiket. Bir sabit olmayan etiket denetimi aktarmaya çalışırken istenmeyen yan etkiler, bu tür denetim kodu istenmeyen bir konumda aktarılıyor veya sonsuz bir döngüde oluşturma olabileceği için bu kısıtlama gereklidir.
+[!code-csharp[switch#2](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]
+
+Switch deyimi içinde yalnızca bir anahtar bölümü yürütür. C# bir geçiş bölümünden diğerine devam etmek için yürütmeye izin vermez. Bu nedenle, aşağıdaki kod bir Derleyici Hatası CS0163 oluşturur: "denetimi olamaz atlayabilir bir case etiketinden (<case label>) diğerine."
+
+```csharp
+switch (caseSwitch)
+{
+    // The following switch section causes an error.
+    case 1:
+        Console.WriteLine("Case 1...");
+        // Add a break or other jump statement here.
+    case 2:
+        Console.WriteLine("... and/or Case 2");
+        break;
+}
+```
+
+Bu gereksinim, genellikle açıkça kullanarak switch bölümüne çıkarak karşılanır bir [sonu](break.md), [goto](goto.md), veya [dönüş](return.md) deyimi. Program denetimi için geçemez sağlar ancak, aşağıdaki kod Ayrıca, geçersiz çünkü `default` bölümüne geçin.
+
+[!code-csharp[switch#4](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch4.cs#1)]
+
+Eşleştirme ifadesi ile eşleşen bir durum etiketi ile anahtar bölümdeki ifade listesinin yürütülmesi ilk deyimden başlar ve deyim listesi boyunca genellikle bir atlama deyimine ulaşılıncaya kadar devam eder bir `break`, `goto case`, `goto label`, `return`, veya `throw`, ulaşıldı. Bu noktada, denetimi dışında aktarılan `switch` deyimi veya başka bir case etiketi. A `goto` deyimi kullanılırsa, gerekir aktarım denetimi için sabit bir etiket. Sabit olmayan etiketine denetim aktarmaya çalışırken istenmeyen yan etkileri, bu tür istenmeyen bir kod konumuna denetimi aktarma veya sonsuz bir döngüye oluşturma olabileceği için bu kısıtlama gereklidir.
 
 ## <a name="case-labels"></a>Durum etiketi
 
- Servis talebi her etiket eşleşme ifadesi karşılaştırmak için bir desen belirtir ( `caseSwitch` önceki örneklerde değişken). Eşleşirlerse, denetimi içeren anahtar bölümü aktarılır **ilk** eşleşen durum etiketi. Durum etiketi desen eşleştirme ifadesi eşleşirse, Denetim bölümle aktarılır `default` varsa durum etiketi. Varsa hiçbir `default` durumu, herhangi bir anahtar bölümü hiçbir deyimlerinde yürütülür ve denetim dışında aktarılır `switch` deyimi.
+Her durum etiketi eşleşen ifade karşılaştırmak için bir desen belirtir ( `caseSwitch` önceki örneklerde değişken). Eşleşiyorlarsa denetimi içeren anahtar bölüme aktarılır **ilk** eşleşen case etiketi. Hiçbir durum etiketi desen eşleştirme ifadesi eşleşirse denetimi ile bölümüne aktarılır `default` varsa durum etiketi. Yoksa hiçbir `default` çalışması, her anahtar bölümü yok deyimlerinde yürütülür ve denetimin dışına aktarılır `switch` deyimi.
 
- Hakkında bilgi için `switch` deyimi ve desen eşleştirme, bkz: [ile desen eşleştirme `switch` deyimi](#pattern) bölümü.
+Hakkında bilgi için `switch` deyimi ve desen eşleştirme, [ile desen eşleştirme `switch` deyimi](#pattern) bölümü.
 
- C# 6 yalnızca sabit düzeni destekler ve sabit değerleri yinelenmesinin izin verme olduğundan, birbirini dışlayan değerleri büyük küçük harf etiketleri tanımlamak ve yalnızca bir desen eşleştirme ifadesi eşleştirebilirsiniz. Sonuç olarak, hangi sırayla `case` deyimleri görünür olan önemli.
+C# 6 yalnızca sabit desen destekler ve sabit değerleri tekrarını izin vermez çünkü durum etiketi birbirini dışlayan değerleri tanımlayın ve yalnızca bir desen eşleştirme ifadesi eşleşebilir. Sonuç olarak, bir sırayı `case` deyimlerinizin önemli olduğu.
 
- C# 7.0, ancak diğer desenleri desteklenmediğinden durum etiketi birbirini dışlayan değerleri tanımlayın olmayan ve birden çok desen eşleştirme ifadesi eşleştirebilirsiniz. Yalnızca ilk eşleştirme deseni içeren anahtar bölüm deyimlerinde çalıştırıldığı için hangi sırayla `case` deyimleri görünür önemlidir şimdi. C#, case deyimi deyimleri eşit olan veya önceki deyimleri kümeleridir anahtar bölüm algılarsa, "anahtar durumu önceki bir örneği tarafından zaten işlendi." bir derleyici hatası, CS8120, oluşturur 
+C# 7.0, ancak diğer desenleri desteklendiğinden, case etiketleri birbirini dışlayan değerleri tanımlamanız gerekir değil ve eşleştirme ifadesi birden çok desen eşleştiğinde. Yalnızca ilk eşleşen desen içeren anahtar bölümü deyimlerinde yürütülür çünkü sırayı `case` deyimlerinizin'ın, artık önemlidir. C#, case deyimi veya deyimler eşdeğerdir veya önceki deyimlerin kümeleridir switch bölümüne algılarsa, "anahtar durumu önceki bir case tarafından zaten işlendi." bir derleyici hatası, CS8120, oluşturur.
 
- Aşağıdaki örnek gösterilmektedir bir `switch` olmayan-birbirini dışlayan desenleri çeşitli kullanan deyimi. Taşırsanız `case 0:` böylece artık ilk bölümde değil bölüm geçiş `switch` deyimi, C# Derleyici Hatası değeri sıfır olmayan bir tamsayı tanımlanan örnekle olan bir alt tüm tamsayıların olduğundan oluşturur tarafından `case int val` deyimi.
+Aşağıdaki örnekte bir `switch` olmayan-birbirini dışlayan desenleri çeşitli kullanan deyimi. Taşırsanız `case 0:` artık Birinci bölümde olması bölüm geçiş `switch` deyimi, C#, tanımlanan desenle olan bir alt tüm tamsayıların değeri sıfır olan bir tamsayı olduğu için bir derleyici hatası oluşturur tarafından `case int val` deyimi.
 
- [!code-csharp[switch#5](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch5.cs#1)]    
+[!code-csharp[switch#5](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch5.cs#1)]
 
-Bu sorunu düzeltin ve iki yoldan biriyle derleyici uyarısı kaldırın:
+Bu sorunu gidermek ve iki yoldan biriyle derleyici uyarısı ortadan kaldırır:
 
-- Anahtar bölümlerin sırasını değiştirerek. 
- 
-- Kullanarak bir < /a adı "zaman" = > zaman yan tümcesi</a> içinde `case` etiketi.
- 
-## <a name="the-default-case"></a>`default` Durumu
+- Anahtar bölümlerin sırası değiştirerek.
 
-`default` Durumda eşleşme ifadesi diğer eşleşmiyorsa yürütmek için anahtar bölüm belirtir `case` etiketi. Varsa bir `default` durumda mevcut değil ve eşleşme ifadesi diğer eşleşmiyor `case` program akışı etiketi, geçer `switch` deyimi.
+- Kullanarak bir < /a adı = "zaman" > zaman yan tümcesi</a> içinde `case` etiketi.
 
-`default` Durumda herhangi bir sırada görünebilir `switch` deyimi. Kaynak kodu, sırasıyla bağımsız olarak, her zaman son olarak, tüm değerlendirilir `case` etiketleri değerlendirilir.
+## <a name="the-default-case"></a>`default` Çalışması
 
-## <a name="a-namepattern--pattern-matching-with-the-switch-statement"></a><a name="pattern" /> Deseni ile eşleşen `switch` deyimi
-  
-Her `case` deyimi eşleşme ifadesi eşleşirse, yürütülecek içeren kendi anahtar bölüm neden olan bir desen tanımlar. C# ' in tüm sürümleri sabit düzenini destekler. Kalan desenleri, C# 7. 0'den başlayarak desteklenir. 
-  
-### <a name="constant-pattern"></a>Sabit düzeni 
+`default` Çalışması belirtir eşleştirme ifadesi diğer eşleşmiyorsa yürütmek için anahtar bölümü `case` etiketi. Varsa bir `default` durumu mevcut değil ve diğer eşleştirme ifadesi eşleşmeyen `case` program akışı etiketi geçmez `switch` deyimi.
 
-Sabit desen eşleşmesi ifadesi belirtilen bir sabit eşit olup olmadığını sınar. Sözdizimi aşağıdaki gibidir:
+`default` Çalışması herhangi bir sırada görünebilir `switch` deyimi. Kaynak kodunda kendi sırasını ne olursa olsun, her zaman son olarak, tüm değerlendirilmeden `case` etiketleri değerlendirilir.
+
+## <a name="a-namepattern--pattern-matching-with-the-switch-statement"></a><a name="pattern" /> İle desen eşleştirme `switch` deyimi
+
+Her `case` eşleşme ifadesi eşleşirse, yürütülecek içeren anahtar bölümü neden olan bir desen tanımlar. Sabit desen C# ' in tüm sürümleri destekler. Kalan desenleri, C# 7. 0'den itibaren desteklenir.
+
+### <a name="constant-pattern"></a>Sabit desen
+
+Sabit desen eşleştirme ifadesi belirtilen bir sabit eşit olup olmadığını sınar. Kendi sözdizimi aşağıdaki gibidir:
 
 ```csharp
    case constant:
 ```
 
-Burada *sabit* sınamak için bir değerdir. *Sabit* aşağıdaki sabit ifadelerden herhangi biri olabilir: 
+Burada *sabit* sınamak için değer. *Sabit* aşağıdaki sabit ifadeler biri olabilir:
 
 - A [bool](bool.md) değişmez değer, ya da `true` veya `false`.
-- Tüm integral gibi sabit bir [int](int.md), [uzun](long.md), veya bir [bayt](byte.md). 
-- Bir bildirilen adını `const` değişkeni.
+- Herhangi bir integral sabit gibi bir [int](int.md), [uzun](long.md), veya bir [bayt](byte.md).
+- Bildirilen bir adı `const` değişkeni.
 - Bir numaralandırma sabiti.
 - A [char](char.md) değişmez.
 - A [dize](string.md) değişmez.
 
-Sabit ifade aşağıdaki gibi değerlendirilir:
+Sabit ifade gibi değerlendirilir:
 
-- Varsa *expr* ve *sabit* tam sayı türleri, C# eşitlik işleci ifade döndürüp döndürmediğini belirler `true` (diğer bir deyişle, olup olmadığını `expr == constant`).
+- Varsa *expr* ve *sabit* integral türleri, C# eşitlik işlecini ifade döndürüp döndürmediğini belirler `true` (olup, diğer bir deyişle, `expr == constant`).
 
-- Aksi takdirde, ifadenin değerini statik bir çağrı tarafından belirlenir [Object.Equals (ifade, sabit)](xref:System.Object.Equals(System.Object,System.Object)) yöntemi.  
+- Aksi takdirde, ifadenin değerini statik bir çağrı tarafından belirlenir [Object.Equals (ifade, sabit)](xref:System.Object.Equals(System.Object,System.Object)) yöntemi.
 
-Aşağıdaki örnek, belirli bir tarihin hafta sonu, haftanın, başında veya ortasında haftanın son gününü iş haftanın ilk günü olup olmadığını belirlemek için sabit desen kullanır. Bu hesaplar <xref:System.DateTime.DayOfWeek?displayProperty=nameWithType> özelliği üyeleri için geçerli günün <xref:System.DayOfWeek> numaralandırması. 
+Aşağıdaki örnek, belirli bir tarihin hafta, çalışma haftası ya da ikinci iş haftanın son gününü iş haftanın ilk günü olup olmadığını belirlemek için sabit bir desen kullanır. Bu hesaplar <xref:System.DateTime.DayOfWeek?displayProperty=nameWithType> üyelerinin göre geçerli günün özelliği <xref:System.DayOfWeek> sabit listesi.
 
 [!code-csharp[switch#7](../../../../samples/snippets/csharp/language-reference/keywords/switch/const-pattern.cs#1)]
 
-Aşağıdaki örnek, bir otomatik kahve makine taklit eden bir konsol uygulamasında kullanıcı girişini işlemek için sabit desen kullanır.
-  
- [!code-csharp[switch#6](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch6.cs)]  
+Aşağıdaki örnek, kullanıcı girişini otomatik kahve makine taklit eden bir konsol uygulamasında işlemek için sabit desen kullanır.
+
+[!code-csharp[switch#6](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch6.cs)]
 
 ### <a name="type-pattern"></a>Tür deseni
 
-Tür deseni kısa türü değerlendirme ve dönüştürme sağlar. İle kullanıldığında `switch` desen eşleştirme gerçekleştirmek için deyimi, bir ifade belirtilen türe dönüştürülüp dönüştürülemeyeceğini test eder ve olabiliyorsa, bu tür bir değişkene çevirir. Sözdizimi aşağıdaki gibidir:
+Tür düzeni kısa türü değerlendirme ve dönüştürme sağlar. İle kullanıldığında `switch` desen eşleştirme, gerçekleştirmek için deyimi, bir ifadenin belirtilen bir türe dönüştürülüp dönüştürülemeyeceğini test eder ve olabilir, bu türden bir değişkene çevirir. Kendi sözdizimi aşağıdaki gibidir:
 
 ```csharp
-   case type varname 
+   case type varname
 ```
-Burada *türü* türün adı sonucu *expr* dönüştürülmekte olan ve *varname* hangi nesne sonucu *ifade*eşlemesi başarılı olursa dönüştürülür. 
 
-`case` İfade `true` aşağıdakilerden biri doğruysa:
+Burada *türü* türün adı sonucunu *expr* Boolean'a dönüştürülecek ve *varname* hangi nesne sonucu *expr*eşleşmenin başarılı olursa dönüştürülür.
 
-- *Expr* aynı türde örneği *türü*.
+`case` İfade `true` herhangi biri doğru ise:
 
-- *Expr* türeyen bir tür örneği *türü*. Diğer bir deyişle, sonucunu *expr* örneğine başvurmanıza olabilir *türü*.
+- *Expr* örneği aynı türde olan *türü*.
 
-- *Expr* bir taban sınıf, derleme zamanı türüne sahip *türü*, ve *expr* olan bir çalışma zamanı türü *türü* veya türetilmiş *türü*. *Derleme zamanı tür* bir değişken değişkenin türü bildiriminde tanımlandığı gibi türüdür. *Çalışma zamanı tür* bir değişken bu değişkenine atanan örnek türüdür.
+- *Expr* türetilen türün bir örneği *türü*. Diğer bir deyişle, sonucunu *expr* örneğine başvurmanıza olabilir *türü*.
 
-- *Expr* uygulayan bir tür örneği *türü* arabirimi.
+- *Expr* temel bir sınıfı olan bir derleme zamanı türü sahip *türü*, ve *expr* sahip olan bir çalışma zamanı türü *türü* veya türetilmiş *türü*. *Derleme zamanı tür* değişkeninin değişkenin türü bildiriminde tanımlanan türüdür. *Çalışma zamanı türü* bir değişken, bu değişkene atanan örnek türüdür.
 
-Servis talebi ifade doğruysa *varname* kesinlikle atanır ve yalnızca anahtarı bölüm içinde yerel kapsama sahip.
+- *Expr* uygulayan bir tür örneğidir *türü* arabirimi.
 
-Unutmayın `null` bir türle eşleşmiyor. Eşleştirilecek bir `null`, aşağıdaki `case` etiketi:
+Case ifadesi true ise *varname* kesinlikle atanır ve yalnızca anahtarı bölüm içinde yerel kapsama sahiptir.
+
+Unutmayın `null` bir türle eşleşmiyor. Eşleştirilecek bir `null`, kullanarak aşağıdaki `case` etiketi:
 
 ```csharp
 case null:
 ```
- 
-Aşağıdaki örnek türü desen çeşitli koleksiyon türleri hakkında bilgi sağlamak için kullanır.
+
+Aşağıdaki örnek, çeşitli koleksiyon türleri hakkında bilgi sağlamak için tür deseni kullanır.
 
 [!code-csharp[switch#5](../../../../samples/snippets/csharp/language-reference/keywords/switch/type-pattern.cs#1)]
 
-Desen eşleştirme olmadan, bu kod şu şekilde yazılmış olabilir. Bir dönüştürme sonucu olup olmadığını sınamak için gereksinimini ortadan kaldırarak daha küçük, okunabilir kod türü desen eşleştirme kullanımını üreten bir `null` veya yinelenen atamaları gerçekleştirmek için.  
+Desen eşleştirme olmadan, bu kod şu şekilde yazılmış olabilir. Kullanım türü desen eşleştirme bir dönüştürmenin sonucu olup olmadığını sınamak için gereksinimini ortadan kaldırarak daha kompakt ve okunabilir bir kod oluşturur bir `null` veya yinelenen atamalar gerçekleştirmek için.
 
 [!code-csharp[switch#6](../../../../samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
 
-## <a name="the-case-statement-and-the-when-clause"></a>`case` Deyimi ve `when` yan tümcesi
+## <a name="a-namewhen--the-case-statement-and-the-when-clause"></a><a name="when" /> `case` Deyimi ve `when` yan tümcesi
 
-Case deyimleri birbirini dışlayan olması gerekmez çünkü C# 7.0 ile başlayarak, kullanabilirsiniz eklemek bir `when` ek bir koşul belirtmek için yan tümcesi memnun, doğru olarak değerlendirilecek case deyimi için. `when` Yan tümcesi bir Boole değeri döndürür herhangi bir ifade olabilir. Daha yaygın kullanımları birini `when` yan tümcesi anahtar bölüm bir eşleşme ifadesi değeri olduğunda yürütülmesini engellemek için kullanılan `null`. 
+Ekleyebileceğiniz Case deyimleri birbirini dışlayan olması gerekmez çünkü C# 7.0 ile başlayarak, bir `when` ek bir koşulu belirtmek için yan tümcesi memnun, doğru olarak değerlendirilebilmesi case deyimi için. `when` Yan tümcesi, bir Boole değeri döndüren herhangi bir ifade olabilir.
 
- Aşağıdaki örnek, bir taban tanımlar `Shape` sınıfı, bir `Rectangle` öğesinden türetilen sınıf `Shape`ve bir `Square` öğesinden türetilen sınıf `Rectangle`. Kullandığı `when` emin olmak için yan tümcesi `ShowShapeInfo` değerlendirir bir `Rectangle` eşit uzunlukta ve genişliklerini olarak atanan nesne bir `Square` bile değiştirilmediğinden olarak örneği bir `Square` nesnesi. Yöntem bilgileri görüntülemek denemez herhangi bir nesne hakkında `null` veya bir şekil, alan sıfırsa. 
+Aşağıdaki örnek, bir taban tanımlar `Shape` sınıfı, bir `Rectangle` türetilen sınıf `Shape`ve `Square` türetilen sınıf `Rectangle`. Kullandığı `when` emin olmak için yan tümcesi `ShowShapeInfo` değerlendirir bir `Rectangle` eşit uzunlukta ve genişlikleri olarak atanmış olan bir nesne bir `Square` olarak oluşturulmadı olsa bile bir `Square` nesne. Yöntem bilgileri görüntülemek denemez herhangi bir nesne hakkında `null` veya bir şekil, alan sıfırdır.
 
 [!code-csharp[switch#8](../../../../samples/snippets/csharp/language-reference/keywords/switch/when-clause.cs#1)]
-  
-Unutmayın `when` test girişiminde örnek yan tümcesinde olup bir `Shape` nesne `null` değil çalıştırma. İçin test etmek için doğru türde desen bir `null` olan `case null:`.
 
-## <a name="c-language-specification"></a>C# Dil Belirtimi  
- [!INCLUDE[CSharplangspec](../../../../includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
+Unutmayın `when` yan tümcesinde test dener örnek olup olmadığını bir `Shape` nesnedir `null` yürütme değil. Test etmek için doğru türde deseni bir `null` olduğu `case null:`.
 
- [C# başvurusu](../index.md)  
- [C# Programlama Kılavuzu](../../programming-guide/index.md)  
- [C# Anahtar Sözcükleri](index.md)  
- [if-else](if-else.md)  
- [Desen Eşleştirme](../../pattern-matching.md)  
- 
+## <a name="c-language-specification"></a>C# dili belirtimi
 
- 
+Daha fazla bilgi için [switch deyimi](/dotnet/csharp/language-reference/language-specification/statements#the-switch-statement) içinde [C# dil belirtimi](../language-specification/index.md). Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [C# başvurusu](../index.md)
+- [C# Programlama Kılavuzu](../../programming-guide/index.md)
+- [C# Anahtar Sözcükleri](index.md)
+- [if-else](if-else.md)
+- [Desen Eşleştirme](../../pattern-matching.md)
