@@ -1,39 +1,39 @@
 ---
-title: Kesin türü belirtilmiş veri kümeleri oluşturma
+title: Kesin türü belirtilmiş DataSets oluşturma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 54333cbf-bb43-4314-a7d4-6dc1dd1c44b3
-ms.openlocfilehash: 95bb536416a043fc392d0c4e94378239ae3ee37f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9accfb68c57384e12a59bae40ebe30a2d3e22877
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758035"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43489727"
 ---
-# <a name="generating-strongly-typed-datasets"></a><span data-ttu-id="4c974-102">Kesin türü belirtilmiş veri kümeleri oluşturma</span><span class="sxs-lookup"><span data-stu-id="4c974-102">Generating Strongly Typed DataSets</span></span>
-<span data-ttu-id="4c974-103">XML şeması tanım dili ile (XSD) standart uyumlu bir XML Şeması verildiğinde, kesin türü belirtilmiş oluşturabileceğiniz <xref:System.Data.DataSet> ile sağlanan XSD.exe'nin aracını kullanarak [!INCLUDE[winsdklong](../../../../../includes/winsdklong-md.md)].</span><span class="sxs-lookup"><span data-stu-id="4c974-103">Given an XML Schema that complies with the XML Schema definition language (XSD) standard, you can generate a strongly typed <xref:System.Data.DataSet> using the XSD.exe tool provided with the [!INCLUDE[winsdklong](../../../../../includes/winsdklong-md.md)].</span></span>  
+# <a name="generating-strongly-typed-datasets"></a><span data-ttu-id="cbd38-102">Kesin türü belirtilmiş DataSets oluşturma</span><span class="sxs-lookup"><span data-stu-id="cbd38-102">Generating Strongly Typed DataSets</span></span>
+<span data-ttu-id="cbd38-103">XML şemasından XML şeması tanım dili ile (XSD) standart uyumlu göz önünde bulundurulduğunda, türü kesin belirlenmiş oluşturabileceğiniz <xref:System.Data.DataSet> ile sağlanan XSD.exe'nin aracını kullanarak [!INCLUDE[winsdklong](../../../../../includes/winsdklong-md.md)].</span><span class="sxs-lookup"><span data-stu-id="cbd38-103">Given an XML Schema that complies with the XML Schema definition language (XSD) standard, you can generate a strongly typed <xref:System.Data.DataSet> using the XSD.exe tool provided with the [!INCLUDE[winsdklong](../../../../../includes/winsdklong-md.md)].</span></span>  
   
- <span data-ttu-id="4c974-104">(Bir xsd veritabanı tablolarından oluşturmak için bkz: <xref:System.Data.DataSet.WriteXmlSchema%2A> veya [Visual Studio'da veri kümeleriyle çalışma](http://msdn.microsoft.com/library/8bw9ksd6.aspx)).</span><span class="sxs-lookup"><span data-stu-id="4c974-104">(To create an xsd from database tables, see <xref:System.Data.DataSet.WriteXmlSchema%2A> or [Working with Datasets in Visual Studio](http://msdn.microsoft.com/library/8bw9ksd6.aspx)).</span></span>  
+ <span data-ttu-id="cbd38-104">(Bir xsd veritabanı tabloları oluşturmak için bkz <xref:System.Data.DataSet.WriteXmlSchema%2A> veya [Visual Studio'da veri kümeleriyle çalışma](https://msdn.microsoft.com/library/8bw9ksd6.aspx)).</span><span class="sxs-lookup"><span data-stu-id="cbd38-104">(To create an xsd from database tables, see <xref:System.Data.DataSet.WriteXmlSchema%2A> or [Working with Datasets in Visual Studio](https://msdn.microsoft.com/library/8bw9ksd6.aspx)).</span></span>  
   
- <span data-ttu-id="4c974-105">Aşağıdaki kodu oluşturmak için söz dizimi görülmektedir bir **DataSet** bu aracı kullanarak.</span><span class="sxs-lookup"><span data-stu-id="4c974-105">The following code shows the syntax for generating a **DataSet** using this tool.</span></span>  
+ <span data-ttu-id="cbd38-105">Aşağıdaki kod oluşturma sözdizimi gösterir bir **veri kümesi** bu aracı kullanarak.</span><span class="sxs-lookup"><span data-stu-id="cbd38-105">The following code shows the syntax for generating a **DataSet** using this tool.</span></span>  
   
 ```  
 xsd.exe /d /l:CS XSDSchemaFileName.xsd /eld /n:XSDSchema.Namespace  
 ```  
   
- <span data-ttu-id="4c974-106">Bu sözdiziminde `/d` yönergesi oluşturmak için aracını söyleyen bir **DataSet**ve `/l:` aracına (örneğin, C# veya Visual Basic .NET) kullanmak için hangi dilde söyler.</span><span class="sxs-lookup"><span data-stu-id="4c974-106">In this syntax, the `/d` directive tells the tool to generate a **DataSet**, and the `/l:` tells the tool what language to use (for example, C# or Visual Basic .NET).</span></span> <span data-ttu-id="4c974-107">İsteğe bağlı `/eld` yönergesi belirtir, kullanabileceğiniz [!INCLUDE[linq_dataset](../../../../../includes/linq-dataset-md.md)] oluşturulan sorgusu için **veri kümesi.**</span><span class="sxs-lookup"><span data-stu-id="4c974-107">The optional `/eld` directive specifies that you can use [!INCLUDE[linq_dataset](../../../../../includes/linq-dataset-md.md)] to query against the generated **DataSet.**</span></span> <span data-ttu-id="4c974-108">Bu seçenek kullanılır olduğunda `/d` seçeneği da belirtilmiş.</span><span class="sxs-lookup"><span data-stu-id="4c974-108">This option is used when the `/d` option is also specified.</span></span> <span data-ttu-id="4c974-109">Daha fazla bilgi için bkz: [yazılan veri kümeleri sorgulama](../../../../../docs/framework/data/adonet/querying-typed-datasets.md).</span><span class="sxs-lookup"><span data-stu-id="4c974-109">For more information, see [Querying Typed DataSets](../../../../../docs/framework/data/adonet/querying-typed-datasets.md).</span></span> <span data-ttu-id="4c974-110">İsteğe bağlı `/n:` yönergesi de için bir ad alanı oluşturmak için aracını söyler **DataSet** adlı **XSDSchema.Namespace**.</span><span class="sxs-lookup"><span data-stu-id="4c974-110">The optional `/n:` directive tells the tool to also generate a namespace for the **DataSet** called **XSDSchema.Namespace**.</span></span> <span data-ttu-id="4c974-111">Komutunun çıktısını derlenmiş ve ADO.NET uygulamada kullanılan XSDSchemaFileName.cs ' dir.</span><span class="sxs-lookup"><span data-stu-id="4c974-111">The output of the command is XSDSchemaFileName.cs, which can be compiled and used in an ADO.NET application.</span></span> <span data-ttu-id="4c974-112">Oluşturulan kod, bir kitaplık veya bir modül olarak derlenebilir.</span><span class="sxs-lookup"><span data-stu-id="4c974-112">The generated code can be compiled as a library or a module.</span></span>  
+ <span data-ttu-id="cbd38-106">Bu sözdizimi `/d` yönergesi oluşturmak için aracı söyleyen bir **veri kümesi**ve `/l:` Aracı (örneğin, C# veya Visual Basic .NET) kullanmak için hangi dilde söyler.</span><span class="sxs-lookup"><span data-stu-id="cbd38-106">In this syntax, the `/d` directive tells the tool to generate a **DataSet**, and the `/l:` tells the tool what language to use (for example, C# or Visual Basic .NET).</span></span> <span data-ttu-id="cbd38-107">İsteğe bağlı `/eld` yönergesi belirtir, kullanabileceğiniz [!INCLUDE[linq_dataset](../../../../../includes/linq-dataset-md.md)] sorgulamanın yapılacağı oluşturulan **veri kümesi.**</span><span class="sxs-lookup"><span data-stu-id="cbd38-107">The optional `/eld` directive specifies that you can use [!INCLUDE[linq_dataset](../../../../../includes/linq-dataset-md.md)] to query against the generated **DataSet.**</span></span> <span data-ttu-id="cbd38-108">Bu seçenek kullanılır, `/d` seçeneği de belirtildiğinde.</span><span class="sxs-lookup"><span data-stu-id="cbd38-108">This option is used when the `/d` option is also specified.</span></span> <span data-ttu-id="cbd38-109">Daha fazla bilgi için [yazılan veri kümelerini sorgulama](../../../../../docs/framework/data/adonet/querying-typed-datasets.md).</span><span class="sxs-lookup"><span data-stu-id="cbd38-109">For more information, see [Querying Typed DataSets](../../../../../docs/framework/data/adonet/querying-typed-datasets.md).</span></span> <span data-ttu-id="cbd38-110">İsteğe bağlı `/n:` yönergesi ayrıca bir ad alanı oluşturmak için aracı söyler **veri kümesi** adlı **XSDSchema.Namespace**.</span><span class="sxs-lookup"><span data-stu-id="cbd38-110">The optional `/n:` directive tells the tool to also generate a namespace for the **DataSet** called **XSDSchema.Namespace**.</span></span> <span data-ttu-id="cbd38-111">Komut çıktısı, derlenmiş ve bir ADO.NET uygulamasında kullanılan XSDSchemaFileName.cs ' dir.</span><span class="sxs-lookup"><span data-stu-id="cbd38-111">The output of the command is XSDSchemaFileName.cs, which can be compiled and used in an ADO.NET application.</span></span> <span data-ttu-id="cbd38-112">Oluşturulan kod, bir kitaplık veya bir modül derlenebilir.</span><span class="sxs-lookup"><span data-stu-id="cbd38-112">The generated code can be compiled as a library or a module.</span></span>  
   
- <span data-ttu-id="4c974-113">Aşağıdaki kod, C# Derleyici (csc.exe) kullanarak bir kitaplığı oluşturulan kod derleme sözdizimi gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="4c974-113">The following code shows the syntax for compiling the generated code as a library using the C# compiler (csc.exe).</span></span>  
+ <span data-ttu-id="cbd38-113">Aşağıdaki kodu kullanarak C# Derleyici (csc.exe) kitaplık olarak oluşturulan kodu derlemek için sözdizimi gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="cbd38-113">The following code shows the syntax for compiling the generated code as a library using the C# compiler (csc.exe).</span></span>  
   
 ```  
 csc.exe /t:library XSDSchemaFileName.cs /r:System.dll /r:System.Data.dll  
 ```  
   
- <span data-ttu-id="4c974-114">`/t:` Yönergesi söyleyen bir kitaplığa derlemek için araç ve `/r:` yönergeleri derlemek için gereken bağımlı kitaplığı belirtin.</span><span class="sxs-lookup"><span data-stu-id="4c974-114">The `/t:` directive tells the tool to compile to a library, and the `/r:` directives specify dependent libraries required to compile.</span></span> <span data-ttu-id="4c974-115">Komutunun çıktısını derleyiciye ADO.NET uygulamayla derlerken geçirilen XSDSchemaFileName.dll olan `/r:` yönergesi.</span><span class="sxs-lookup"><span data-stu-id="4c974-115">The output of the command is XSDSchemaFileName.dll, which can be passed to the compiler when compiling an ADO.NET application with the `/r:` directive.</span></span>  
+ <span data-ttu-id="cbd38-114">`/t:` Yönergesi söyleyen bir kitaplığa derlemek için araç ve `/r:` yönergeleri derlemek için rcxdtı.dll bağımlı kitaplıkları belirtin.</span><span class="sxs-lookup"><span data-stu-id="cbd38-114">The `/t:` directive tells the tool to compile to a library, and the `/r:` directives specify dependent libraries required to compile.</span></span> <span data-ttu-id="cbd38-115">Derleyiciye ADO.NET uygulamayla derlenirken geçirilebilir XSDSchemaFileName.dll, komut çıktısı olan `/r:` yönergesi.</span><span class="sxs-lookup"><span data-stu-id="cbd38-115">The output of the command is XSDSchemaFileName.dll, which can be passed to the compiler when compiling an ADO.NET application with the `/r:` directive.</span></span>  
   
- <span data-ttu-id="4c974-116">Aşağıdaki kod XSD.exe'nin için bir ADO.NET uygulamada geçirilen ad alanı erişmek için söz dizimi görülmektedir.</span><span class="sxs-lookup"><span data-stu-id="4c974-116">The following code shows the syntax for accessing the namespace passed to XSD.exe in an ADO.NET application.</span></span>  
+ <span data-ttu-id="cbd38-116">Aşağıdaki kod, xsd.exe'nin için bir ADO.NET uygulamasında geçirilen ad alanı erişmek için söz dizimini gösterir.</span><span class="sxs-lookup"><span data-stu-id="cbd38-116">The following code shows the syntax for accessing the namespace passed to XSD.exe in an ADO.NET application.</span></span>  
   
 ```vb  
 Imports XSDSchema.Namespace  
@@ -43,7 +43,7 @@ Imports XSDSchema.Namespace
 using XSDSchema.Namespace;  
 ```  
   
- <span data-ttu-id="4c974-117">Aşağıdaki kod örneğinde yazılmış kullanan **DataSet** adlı **CustomerDataSet** müşterilerden yüklenmesi **Northwind** veritabanı.</span><span class="sxs-lookup"><span data-stu-id="4c974-117">The following code example uses a typed **DataSet** named **CustomerDataSet** to load a list of customers from the **Northwind** database.</span></span> <span data-ttu-id="4c974-118">Veriler kullanarak yüklendikten sonra **doldurun** yöntemi, örneğin her müşteri döngü **müşteriler** yazılı kullanarak tablo **CustomersRow** ( **DataRow**) nesnesi.</span><span class="sxs-lookup"><span data-stu-id="4c974-118">Once the data is loaded using the **Fill** method, the example loops through each customer in the **Customers** table using the typed **CustomersRow** (**DataRow**) object.</span></span> <span data-ttu-id="4c974-119">Bu doğrudan erişim sağlayan **CustomerID** için ile aygıtlardır sütun **DataColumnCollection**.</span><span class="sxs-lookup"><span data-stu-id="4c974-119">This provides direct access to the **CustomerID** column, as opposed to through the **DataColumnCollection**.</span></span>  
+ <span data-ttu-id="cbd38-117">Aşağıdaki kod örneği bir türü belirtilmiş kullanan **veri kümesi** adlı **CustomerDataSet** müşterilerin listesini yüklemeye **Northwind** veritabanı.</span><span class="sxs-lookup"><span data-stu-id="cbd38-117">The following code example uses a typed **DataSet** named **CustomerDataSet** to load a list of customers from the **Northwind** database.</span></span> <span data-ttu-id="cbd38-118">Kullanarak veriler yüklendikten sonra **dolgu** yöntemi, örneğin her müşteri döngü **müşteriler** belirlenmiş kullanarak tablo **CustomersRow** ( **DataRow**) nesne.</span><span class="sxs-lookup"><span data-stu-id="cbd38-118">Once the data is loaded using the **Fill** method, the example loops through each customer in the **Customers** table using the typed **CustomersRow** (**DataRow**) object.</span></span> <span data-ttu-id="cbd38-119">Bu doğrudan erişim sağlayan **CustomerID** için ile karşılık olarak sütun **DataColumnCollection**.</span><span class="sxs-lookup"><span data-stu-id="cbd38-119">This provides direct access to the **CustomerID** column, as opposed to through the **DataColumnCollection**.</span></span>  
   
 ```vb  
 Dim customers As CustomerDataSet= New CustomerDataSet()  
@@ -73,7 +73,7 @@ foreach(CustomerDataSet.CustomersRow customerRow in customers.Customers)
   Console.WriteLine(customerRow.CustomerID);  
 ```  
   
- <span data-ttu-id="4c974-120">Aşağıdaki örnek için kullanılan XML Şeması ' dir.</span><span class="sxs-lookup"><span data-stu-id="4c974-120">Following is the XML Schema used for the example.</span></span>  
+ <span data-ttu-id="cbd38-120">Aşağıda bir örnek için kullanılan XML şeması vardır.</span><span class="sxs-lookup"><span data-stu-id="cbd38-120">Following is the XML Schema used for the example.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -94,9 +94,9 @@ foreach(CustomerDataSet.CustomersRow customerRow in customers.Customers)
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="4c974-121">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="4c974-121">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="cbd38-121">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="cbd38-121">See Also</span></span>  
  <xref:System.Data.DataColumnCollection>  
  <xref:System.Data.DataSet>  
- [<span data-ttu-id="4c974-122">Türü Belirtilmiş DataSets</span><span class="sxs-lookup"><span data-stu-id="4c974-122">Typed DataSets</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)  
- [<span data-ttu-id="4c974-123">DataSets, DataTables ve DataViews</span><span class="sxs-lookup"><span data-stu-id="4c974-123">DataSets, DataTables, and DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [<span data-ttu-id="4c974-124">ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi</span><span class="sxs-lookup"><span data-stu-id="4c974-124">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [<span data-ttu-id="cbd38-122">Türü Belirtilmiş DataSets</span><span class="sxs-lookup"><span data-stu-id="cbd38-122">Typed DataSets</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)  
+ [<span data-ttu-id="cbd38-123">DataSets, DataTables ve DataViews</span><span class="sxs-lookup"><span data-stu-id="cbd38-123">DataSets, DataTables, and DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [<span data-ttu-id="cbd38-124">ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi</span><span class="sxs-lookup"><span data-stu-id="cbd38-124">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
