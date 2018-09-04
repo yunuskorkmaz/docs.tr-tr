@@ -2,12 +2,12 @@
 title: Bir iş akışından OData tüketen akışları
 ms.date: 03/30/2017
 ms.assetid: 1b26617c-53e9-476a-81af-675c36d95919
-ms.openlocfilehash: 7b9b55d92d81772ed1601ec246cfc2e8aa96c016
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: a7e2a0658294681b154b11f48563ebc562c47210
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42752340"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562486"
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>Bir iş akışından OData tüketen akışları
 
@@ -15,7 +15,7 @@ WCF Veri Hizmetleri'nin bir bileşeni olan [!INCLUDE[dnprdnshort](../../../inclu
 
 ## <a name="using-the-sample-northwind-odata-service"></a>Örnek Northwind OData hizmetini kullanma
 
-Veri hizmeti bulunan Northwind örnek bu konudaki örneklerde [ http://services.odata.org/Northwind/Northwind.svc/ ](http://go.microsoft.com/fwlink/?LinkID=187426). Bu hizmetin bir parçası olarak sağlanan [OData SDK](http://go.microsoft.com/fwlink/?LinkID=185248) ve örnek Northwind veritabanı salt okunur erişim sağlar. Yazma erişimi istenen ya da yerel bir WCF veri hizmeti isteniyorsa adımlarını izleyebilirsiniz [WCF Veri Hizmetleri Hızlı Başlangıç](http://go.microsoft.com/fwlink/?LinkID=131076) Northwind veritabanına erişim sağlayan yerel bir OData hizmeti oluşturmak için. Hızlı başlangıcı takip ediyorsa, bu konudaki örnek kodda sağlanan yerel URI'sini değiştirin.
+Veri hizmeti bulunan Northwind örnek bu konudaki örneklerde [ http://services.odata.org/Northwind/Northwind.svc/ ](https://go.microsoft.com/fwlink/?LinkID=187426). Bu hizmetin bir parçası olarak sağlanan [OData SDK](https://go.microsoft.com/fwlink/?LinkID=185248) ve örnek Northwind veritabanı salt okunur erişim sağlar. Yazma erişimi istenen ya da yerel bir WCF veri hizmeti isteniyorsa adımlarını izleyebilirsiniz [WCF Veri Hizmetleri Hızlı Başlangıç](https://go.microsoft.com/fwlink/?LinkID=131076) Northwind veritabanına erişim sağlayan yerel bir OData hizmeti oluşturmak için. Hızlı başlangıcı takip ediyorsa, bu konudaki örnek kodda sağlanan yerel URI'sini değiştirin.
 
 ## <a name="consuming-an-odata-feed-using-the-client-libraries"></a>İstemci kitaplıkları kullanarak bir OData akışı kullanma
 
@@ -30,14 +30,14 @@ Northwind istemci kitaplıkları oluşturmak için kullanabileceğiniz **hizmet 
 Hizmet tarafından hem de hiçbir hizmet işlemleri olduğunu unutmayın **Hizmetleri** vardır liste öğelerini temsil eden Northwind verileri hizmeti tarafından kullanıma sunulan varlık. Hizmet başvurusunu eklediğinizde sınıfları bu varlıkları için oluşturulur ve istemci kodu kullanılabilir. Bu konudaki örnekleri bu sınıfları kullanın ve `NorthwindEntities` sorguları gerçekleştirmek için sınıf.
 
 > [!NOTE]
-> Daha fazla bilgi için [veri hizmeti istemci Kitaplığı'nı (WCF Data Services) oluşturma](http://go.microsoft.com/fwlink/?LinkID=191611).
+> Daha fazla bilgi için [veri hizmeti istemci Kitaplığı'nı (WCF Data Services) oluşturma](https://go.microsoft.com/fwlink/?LinkID=191611).
 
 ### <a name="using-asynchronous-methods"></a>Zaman uyumsuz metotlar kullanma
 
 WCF Veri Hizmetleri zaman uyumsuz olarak erişen öneririz Web üzerinden kaynaklara erişirken oluşabilecek olası gecikme sorunlarını gidermek için. Zaman uyumsuz yöntemleri çağırma sorgular için WCF Veri Hizmetleri istemci kitaplıkları içerir ve Windows Workflow Foundation (WF) sağlayan <xref:System.Activities.AsyncCodeActivity> sınıfı zaman uyumsuz etkinlikler yazma için. <xref:System.Activities.AsyncCodeActivity> türetilmiş etkinlik yararlanmak için yazılabilir [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] zaman uyumsuz yöntemler veya zaman uyumsuz olarak yürütülecek kodu olan sınıfları bir yönteme yerleştirin ve temsilci kullanılarak çağrılır. Bu bölümde, iki örnek bir <xref:System.Activities.AsyncCodeActivity> türetilmiş etkinlik; bir WCF Veri Hizmetleri istemci kitaplıkları, zaman uyumsuz yöntemleri kullanır ve bir temsilci kullanan bir.
 
 > [!NOTE]
-> Daha fazla bilgi için [zaman uyumsuz işlemler (WCF Data Services)](http://go.microsoft.com/fwlink/?LinkId=193396) ve [zaman uyumsuz etkinlikler oluşturma](../../../docs/framework/windows-workflow-foundation/creating-asynchronous-activities-in-wf.md).
+> Daha fazla bilgi için [zaman uyumsuz işlemler (WCF Data Services)](https://go.microsoft.com/fwlink/?LinkId=193396) ve [zaman uyumsuz etkinlikler oluşturma](../../../docs/framework/windows-workflow-foundation/creating-asynchronous-activities-in-wf.md).
 
 ### <a name="using-client-library-asynchronous-methods"></a>İstemci Kitaplığı zaman uyumsuz metotlar kullanma
 
@@ -77,7 +77,7 @@ Ek olarak, zaman uyumsuz yöntemini çağıran bir [!INCLUDE[dnprdnshort](../../
 Aşağıdaki örnekte, bir `ListCustomers` etkinlik tanımlanır. Bu etkinlik örnek Northwind verileri hizmeti sorgular ve döndüren bir `List<Customer>` Northwind veritabanındaki müşteriler içerir. Zaman uyumsuz işler tarafından gerçekleştirilen `GetCustomers` yöntemi. Bu yöntem, tüm müşteriler için hizmetini sorgular ve içine kopyalar bir `List<Customer>`. Ardından sonuçları disk belleği, görmek için denetler. Bu nedenle, bu hizmet için sonraki sonuç sayfasını sorgular, bunları listeye ekler ve tüm müşteri verileri alınamadı kadar devam eder.
 
 > [!NOTE]
-> Disk belleği WCF veri hizmetleri hakkında daha fazla bilgi için bkz. [Nasıl yapılır: Sayfalanmış sonuçları (WCF Veri Hizmetleri) yükleme](http://go.microsoft.com/fwlink/?LinkId=193452).
+> Disk belleği WCF veri hizmetleri hakkında daha fazla bilgi için bkz. [Nasıl yapılır: Sayfalanmış sonuçları (WCF Veri Hizmetleri) yükleme](https://go.microsoft.com/fwlink/?LinkId=193452).
 
 Tüm müşterileri eklendikten sonra liste döndürülür. `GetCustomers` Yöntemi etkinliğin içinde belirtilen <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> geçersiz kılar. Yöntemin bir dönüş değeri olduğundan bir `Func<string, List<Customer>>` yöntemi belirtmek için oluşturulur.
 
@@ -154,4 +154,4 @@ xmlns="http://www.w3.org/2005/Atom">
 ...
 ```
 
-Bu örnek, iş akışı uygulama yazarları bir OData hizmetten döndürülen ham veri tüketmek için kullanabileceğiniz bir yöntem sağlar. WCF veri URI'ler kullanarak hizmetlere erişme hakkında daha fazla bilgi için bkz. [veri hizmeti kaynaklarına erişme (WCF Data Services)](http://go.microsoft.com/fwlink/?LinkId=193397) ve [OData: URI kurallarına](http://go.microsoft.com/fwlink/?LinkId=185564).
+Bu örnek, iş akışı uygulama yazarları bir OData hizmetten döndürülen ham veri tüketmek için kullanabileceğiniz bir yöntem sağlar. WCF veri URI'ler kullanarak hizmetlere erişme hakkında daha fazla bilgi için bkz. [veri hizmeti kaynaklarına erişme (WCF Data Services)](https://go.microsoft.com/fwlink/?LinkId=193397) ve [OData: URI kurallarına](https://go.microsoft.com/fwlink/?LinkId=185564).

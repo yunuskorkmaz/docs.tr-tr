@@ -4,12 +4,12 @@ description: Bu konuda, bir yeniden kullanılabilir bir kitaplık ve birim testi
 author: guardrex
 ms.author: mairaw
 ms.date: 06/12/2017
-ms.openlocfilehash: f8dfbb712957d22e5b4aa16920e7b003a79c4444
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: 17d7cc5b085b4d47ebf1e5ed9a766be9d5d8b01f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "36314704"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43457049"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Mac için Visual Studio kullanarak macos'ta eksiksiz bir .NET Core çözümü derleme
 
@@ -95,7 +95,7 @@ Birim testleri, geliştirme sırasında test etme ve yayımlama otomatikleştiri
            public void IgnoreCasing()
            {
                var wordCount = WordCount.GetWordCount("Jack", "Jack jack");
-   
+
                Assert.NotEqual(2, wordCount);
            }
        }
@@ -117,7 +117,7 @@ Birim testleri, geliştirme sırasında test etme ve yayımlama otomatikleştiri
    ![Birim testleri paneli sabitlemek simgesi](./media/using-on-mac-vs-full-solution/vsmacfull_UnitTestPanelDockIcon.png)
 
 1. Tıklayın **tümünü Çalıştır** düğmesi.
-   
+
    Doğru sonuç, testi başarısız. Bu iki test yöntemi onaylar örneklerini `inputString`, olmayan "Jack" döndürülen ' % s'dizesinden "Jack jack sağlanan" `GetWordCount` yöntemi. Sözcük büyük/küçük harf out factored bu yana `GetWordCount` yöntemi, iki örneği döndürülür. Onaylama işlemi, 2 *eşit değildir* 2 başarısız olur. Bu doğru sonuç elde edilir ve bizim test mantığı iyidir.
 
    ![Test hatası](./media/using-on-mac-vs-full-solution/vsmacfull09.png)
@@ -135,8 +135,8 @@ Birim testleri, geliştirme sırasında test etme ve yayımlama otomatikleştiri
    [InlineData(0, "Ting", "Does not appear in the string.")]
    [InlineData(1, "Ting", "Ting appears once.")]
    [InlineData(2, "Ting", "Ting appears twice with Ting.")]
-   public void CountInstancesCorrectly(int count, 
-                                       string searchWord, 
+   public void CountInstancesCorrectly(int count,
+                                       string searchWord,
                                        string inputString)
    {
        Assert.NotEqual(count, WordCount.GetWordCount(searchWord,
@@ -145,7 +145,7 @@ Birim testleri, geliştirme sırasında test etme ve yayımlama otomatikleştiri
    ```
 
    `CountInstancesCorrectly` Denetleyen `GetWordCount` yöntemi doğru sayar. `InlineData` Sayısı, bir arama sözcüğünü ve denetlemek için bir Giriş dizesinin sağlar. Test yöntemi, her veri satırı için bir kez çalışır. Bir kez daha, bir hatanın ilk kullanarak sunduğundan olduğunu unutmayın. `Assert.NotEqual`, hatta veri sayılarını doğru olduğunu ve değerleri tarafından döndürülen sayıları eşleştiğini bildiğinizde `GetWordCount` yöntemi. İlk zaman kaybı gibi test amaç başarısız adımı gerçekleştiriliyor görünebilir, ancak mantıksal test başarısız olarak denetleme ilk testlerinizin mantığı üzerinde önemli bir denetleyin. Başarısız beklediğiniz geçirmeden bir test yöntemi arasında geldiğinizde, test mantığı bir hata buldunuz. Bu, bir test yöntemi her oluşturduğunuzda, bu adımı gerçekleştirmek için gereken çabayı olur.
-   
+
 1. Dosyayı kaydedin ve testleri yeniden çalıştırın. Büyük/küçük harf test geçer, ancak üç sayısı testler başarısız. Olmasını beklediğiniz tam olarak budur.
 
    ![Test hatası](./media/using-on-mac-vs-full-solution/vsmacfull11.png)
@@ -192,4 +192,4 @@ Birim testleri, geliştirme sırasında test etme ve yayımlama otomatikleştiri
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Sürüm Notları Mac için Visual Studio 2017](/visualstudio/releasenotes/vs2017-mac-relnotes)
+* [Sürüm Notları Mac için Visual Studio 2017](/visualstudio/releasenotes/vs2017-mac-relnotes)
