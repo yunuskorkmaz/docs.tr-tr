@@ -1,6 +1,6 @@
 ---
 title: SpawnDerivedClass işlevi (yönetilmeyen API Başvurusu)
-description: SpawnDerivedClass işlevi bir nesne türetilen yeni bir nesne oluşturur.
+description: SpawnDerivedClass işlevi, bir nesneden türetilen yeni bir nesne oluşturur.
 ms.date: 11/06/2017
 api_name:
 - SpawnDerivedClass
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe93b7ee28db8151345871b0dd716d41227ed565
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 04df65a29584f7e2de44389d815b915a541e38f0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33462305"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43489805"
 ---
 # <a name="spawnderivedclass-function"></a>SpawnDerivedClass işlevi
 Belirtilen bir nesneden bir yeni türetilmiş bir sınıf oluşturur.    
@@ -41,37 +41,37 @@ HRESULT SpawnDerivedClass (
 ## <a name="parameters"></a>Parametreler
 
 `vFunc`  
-[in] Bu parametre kullanılmıyor.
+[in] Bu parametre kullanılmaz.
 
 `ptr`  
-[in] Bir işaretçi bir [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) örneği.
+[in] Bir işaretçi bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneği.
 
 `lFlags`  
 [in] Ayrılmış. Bu parametre 0 olmalıdır.
 
 `ppNewClass`  
-[out] Yeni sınıf tanımı nesnesi işaretçisine alır. Bir hata oluşursa, yeni bir nesne değil döndürülen ve `ppNewClass` sol değiştirilmemiş. Değeri olamaz `null`.
+[out] Yeni sınıf tanımı nesnesi işaretçisini alır. Bir hata oluşursa, yeni bir nesne değil döndürdü ve `ppNewClass` sol değiştirilmemiş. Değeri olamaz `null`.
 
 ## <a name="return-value"></a>Dönüş değeri
 
-Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üstbilgi dosyası, veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
+Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | Genel bir hata oluştu. |
-| `WBEM_E_INVALID_OPERATION` | 0x80041016 | Bir örnekten bir sınıfı örnekten oluşturmak gibi geçersiz bir işlem istendi. |
-| `WBEM_E_INCOMPLETE_CLASS` | Kaynak sınıf tamamen tanımlanan veya yeni bir türetilmiş sınıf izin şekilde ile Windows Yönetimi, kayıtlı. |
+| `WBEM_E_INVALID_OPERATION` | 0x80041016 | Bir sınıftan bir örnek UNICODE gibi bir geçersiz işlem istendi. |
+| `WBEM_E_INCOMPLETE_CLASS` | Kaynak sınıfı tamamen tanımlanan veya yeni bir türetilmiş sınıf izin verilmeyen biçimde ile Windows Yönetimi, kayıtlı. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | İşlemi tamamlamak yeterli bellek yok. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass` olan `null`. |
-| `WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarısız oldu.  |
+| `WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
   
 ## <a name="remarks"></a>Açıklamalar
 
-Bu işlev çağrısı sarmalar [IWbemClassObject::SpawnDerivedClass](https://msdn.microsoft.com/library/aa391436(v=vs.85).aspx) yöntemi.
+Bu işlev bir çağrı sarılır [IWbemClassObject::SpawnDerivedClass](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-clone) yöntemi.
 
-`ptr` oluşturulan nesnenin üst sınıfı haline gelir bir sınıf tanımı olması gerekir. Döndürülen nesne geçerli nesneye öğesinin bir alt kümesi olur.
+`ptr` üst sınıfın üretilmiş nesne haline gelir. bir sınıf tanımı olmalıdır. Döndürülen nesne geçerli nesneye öğesinin olur.
 
-Döndürülen yeni nesne `ppNewClass` otomatik olarak geçerli nesnenin bir alt sınıfı haline gelir. Bu davranışı geçersiz kılınamaz. Alt sınıfların (türetilmiş sınıflar) oluşturulabilmesi için diğer bir yöntem yoktur.
+Yeni Nesne döndürdü `ppNewClass` otomatik olarak geçerli nesne öğesinin alt sınıfı haline gelir. Bu davranışı geçersiz kılınamaz. Alt sınıflar (türetilmiş sınıflar) oluşturulabilmesi için diğer bir yöntem yoktur.
 
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

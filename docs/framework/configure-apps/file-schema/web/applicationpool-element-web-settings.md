@@ -8,18 +8,18 @@ ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: a2eafc6b5ad1446fd07518f877a8ec001ad8dbd6
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1a129abca5888120d03c42689ac825d768733a9d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757703"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43489948"
 ---
 # <a name="ltapplicationpoolgt-element-web-settings"></a>&lt;applicationPool&gt; öğesi (Web Ayarları)
-Bir ASP.NET uygulaması Tümleşik modunda çalışan işlem genelinde yönetmek için ASP.NET tarafından kullanılan yapılandırma ayarlarını belirtir [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] veya sonraki bir sürümü.  
+Bir ASP.NET uygulaması tümleşik modda çalıştırılan işlem genelinde yönetmesi için ASP.NET tarafından kullanılan yapılandırma ayarlarını belirten [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] veya sonraki bir sürümü.  
   
 > [!IMPORTANT]
->  ASP.NET uygulamanızın üzerinde barındırılıyorsa, bu öğeyi ve bu özellik yalnızca iş desteklediği [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] veya sonraki sürümler.  
+>  ASP.NET uygulamanızı üzerinde barındırılıyorsa bu öğeyi ve bu özellik yalnızca iş desteklediği [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] veya sonraki sürümler.  
   
  \<Yapılandırma >  
 \<System.Web > öğesi (Web Ayarları)  
@@ -41,9 +41,9 @@ Bir ASP.NET uygulaması Tümleşik modunda çalışan işlem genelinde yönetmek
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`maxConcurrentRequestsPerCPU`|Kaç tane eşzamanlı istek CPU ASP.NET verir belirtir.|  
-|`maxConcurrentThreadsPerCPU`|Kaç tane eşzamanlı iş parçacıklarının her CPU için bir uygulama havuzu için çalışabilir belirtir. CPU isteklere hizmet için kullanılabilir yönetilen iş parçacığı sayısını sınırlamak için bu ASP.NET eşzamanlılık denetlemek için alternatif bir yol sağlar. Varsayılan olarak bu ayarı CLR iş parçacığı havuzu da oluşturulabilir iş parçacığı sayısını sınırlar rağmen ASP.NET CPU oluşturulan iş parçacığı sayısını sınırlamaz anlamına gelir 0'dır.|  
-|`requestQueueLimit`|ASP.NET için tek bir işlemde sıraya alınabilecek istekleri en fazla sayısını belirtir. İki veya daha fazla ASP.NET uygulamaları tek bir uygulama havuzunda çalıştırdığınızda, toplu uygulama havuzundaki herhangi bir uygulama için yapılan istekleri bu ayar tabi kümesidir.|  
+|`maxConcurrentRequestsPerCPU`|CPU ASP.NET sağlayan kaç tane eş zamanlı istek belirtir.|  
+|`maxConcurrentThreadsPerCPU`|Kaç tane eşzamanlı iş parçacığı her CPU için bir uygulama havuzu için çalışabilir belirtir. CPU isteklere hizmet için kullanılabilir yönetilen iş parçacığı sayısı sınırı, çünkü bu ASP.NET eşzamanlılık denetimi için alternatif bir yol sağlar. Varsayılan olarak bu ayar, CLR iş parçacığı havuzu da oluşturulabilir iş parçacığı sayısını sınırlar olsa da ASP.NET CPU oluşturulan iş parçacığı sayısını sınırlamaz anlamına gelen 0 ' dır.|  
+|`requestQueueLimit`|ASP.NET için tek bir işlemde sıraya alınabilecek istekleri en yüksek sayısını belirtir. İki veya daha fazla ASP.NET uygulamaları tek bir uygulama havuzunda çalıştırdığınızda, toplu uygulama havuzundaki herhangi bir uygulama için yapılan istekleri bu ayar tabi kümesidir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -52,22 +52,22 @@ Bir ASP.NET uygulaması Tümleşik modunda çalışan işlem genelinde yönetmek
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<System.Web >](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)|ASP.NET ana bilgisayar uygulaması ile nasıl etkileşim kurduğunu hakkında bilgi içerir.|  
+|[\<System.Web >](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)|ASP.NET bir ana bilgisayar uygulaması ile nasıl etkileşim kurduğunu hakkında bilgi içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Çalıştırdığınızda [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] veya sonraki bir sürümünü tümleşik modda bu öğe birleşimi, bir IIS uygulama havuzunda uygulama barındırıldığında ASP.NET iş parçacıkları ve Kuyruklar istekleri nasıl yönettiğini yapılandırmanıza olanak sağlar. IIS 6 çalıştırmak veya çalıştırdığınız [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] bu ayarlar, Klasik modda veya ISAPI modunu göz ardı edilir.  
+ Çalıştırdığınızda [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] veya sonraki bir sürümünü tümleşik modunda bu öğe birleşimi, nasıl ASP.NET iş parçacıkları ve Kuyruklar isteklerini yöneten bir IIS uygulama havuzunda uygulama barındırıldığında yapılandırmanıza olanak sağlar. IIS 6 çalıştırın ya da çalıştırdığınız [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] Klasik modda veya ISAPI modunu, bu ayarları göz ardı edilir.  
   
- `applicationPool` Ayarları belirli bir .NET Framework sürümü üzerinde çalışan tüm uygulama havuzları için geçerlidir. Ayarları bir aspnet.config dosyasında bulunur. Bu dosyayı sürüm 2.0 ve .NET Framework 4.0 sürümü yok. (Sürüm 3.0 ve 3.5, .NET Framework sürüm 2.0 aspnet.config dosya paylaşımı.)  
+ `applicationPool` .NET Framework'ün belirli bir sürümü çalıştıran tüm uygulama havuzları için ayarlar uygulanır. Ayarları bir aspnet.config dosyasında bulunur. Bu dosya sürümleri 2.0 ve .NET Framework 4.0 sürümü yoktur. (Sürüm 3.0 ve 3.5 .NET Framework sürüm 2.0 ile aspnet.config dosyayı paylaşın.)  
   
 > [!IMPORTANT]
->  Çalıştırırsanız [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] üzerinde [!INCLUDE[win7](../../../../../includes/win7-md.md)], her uygulama havuzu için ayrı aspnet.config dosyası yapılandırabilirsiniz. Bu, iş parçacıklarının her uygulama havuzu için performans uyarlamak sağlar.  
+>  Çalıştırırsanız [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] üzerinde [!INCLUDE[win7](../../../../../includes/win7-md.md)], ayrı aspnet.config dosyası her bir uygulama havuzu için yapılandırabilirsiniz. Bu, her bir uygulama havuzu için bir iş parçacığı performansını uyumlu hale getirmenizi sağlar.  
   
- İçin `maxConcurrentRequestsPerCPU` ayarı, varsayılan ayarı "5000" olan [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] CPU başına 5000 veya daha fazla isteği gerçekte yoksa etkili bir şekilde isteği başka bir deyişle azaltma devre dışı bırakır ASP.NET tarafından denetlenir. Varsayılan ayar yerine CLR iş parçacığı başına CPU eşzamanlılık otomatik olarak yönetmek için havuz bağlıdır. Zaman uyumsuz istek işlemeye kapsamlı kullanımını olun veya ağ g/ç üzerinde engellenen pek çok uzun süre çalışan istekleri sahip uygulamalar artan varsayılan sınır gelen yararlanacaktır [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]. Ayarı `maxConcurrentRequestsPerCPU` için ASP.NET isteklerini işlemek için yönetilen iş parçacığı kullanımını sıfır kapatır. Bir uygulama bir IIS uygulama havuzunda çalıştığında, istekleri IIS g/ç iş parçacığı üzerinde kalır ve bu nedenle eşzamanlılık IIS iş parçacığı ayarları tarafından kısıtlanıyor.  
+ İçin `maxConcurrentRequestsPerCPU` ayarı, varsayılan ayar "5000" [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] gerçekten CPU başına 5000 veya daha fazla istek olmadığı sürece etkili bir şekilde başka bir deyişle, istek azaltma devre dışı bırakır ASP.NET tarafından denetlenir. Varsayılan ayar yerine CLR iş parçacığı eşzamanlılık CPU başına otomatik olarak yönetmek için havuzu bağlıdır. Zaman uyumsuz istek işlemeye kapsamlı kullanımını olun veya ağ g/ç üzerinde engellendi çok uzun süre çalışan istekleri olan uygulamaların, artırılmış varsayılan sınırı'ndan yararlanacaktır [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]. Ayar `maxConcurrentRequestsPerCPU` için ASP.NET isteklerini işlemek için yönetilen iş parçacığı kullanımı sıfır kapatır. Bir IIS uygulama havuzunda uygulama çalıştığında, istekleri IIS g/ç iş parçacığı üzerinde kalır ve bu nedenle eşzamanlılık IIS iş parçacığı ayarları tarafından kısıtlanmış.  
   
- `requestQueueLimit` Ayarı aynı şekilde çalışır `requestQueueLimit` özniteliği [processModel](http://msdn.microsoft.com/library/4b8fe20e-74c8-4566-b72c-ce5f83c8e32d) ASP.NET uygulamaları için Web.config dosyalarında ayarlanan öğesi. Ancak, `requestQueueLimit` aspnet.config dosyasındaki ayarı geçersiz kılar `requestQueueLimit` Web.config dosyasındaki ayarlama. Diğer bir deyişle, her iki öznitelik ayarlarsanız (varsayılan olarak, bu doğrudur), `requestQueueLimit` aspnet.config dosyasındaki ayarı önceliklidir.  
+ `requestQueueLimit` Ayarını aynı şekilde çalışır `requestQueueLimit` özniteliği [processModel](https://msdn.microsoft.com/library/4b8fe20e-74c8-4566-b72c-ce5f83c8e32d) ASP.NET uygulamaları için Web.config dosyalarında ayarlanan öğesi. Ancak, `requestQueueLimit` aspnet.config dosyasındaki ayarını geçersiz kılar `requestQueueLimit` Web.config dosyasında ayarı. Diğer bir deyişle, her iki öznitelik ayarlarsanız (varsayılan olarak true budur), `requestQueueLimit` aspnet.config dosyasındaki ayarı öncelik alır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, aşağıdaki durumlarda aspnet.config dosyasındaki ASP.NET işlem genelinde davranışı yapılandırmak gösterilmektedir:  
+ Aşağıdaki örnek, aşağıdaki koşullarda aspnet.config dosyasında ASP.NET işlem geneline yönelik davranışını yapılandırmak gösterilmektedir:  
   
 -   Uygulama içinde barındırılan bir [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] uygulama havuzu.  
   
@@ -75,7 +75,7 @@ Bir ASP.NET uygulaması Tümleşik modunda çalışan işlem genelinde yönetmek
   
 -   Uygulamayı kullanarak [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)] veya sonraki bir sürümü.  
   
- Örnek değerler varsayılan değerlerdir.  
+ Varsayılan değerleri örnekte değerlerdir.  
   
 ```xml  
 <configuration>  
@@ -94,7 +94,7 @@ Bir ASP.NET uygulaması Tümleşik modunda çalışan işlem genelinde yönetmek
 |-|-|  
 |Ad Alanı||  
 |Şema adı||  
-|Dosya doğrulama||  
+|Doğrulama dosyası||  
 |Boş olabilir.||  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  

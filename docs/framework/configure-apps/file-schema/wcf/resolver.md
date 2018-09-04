@@ -2,15 +2,15 @@
 title: '&lt;Çözümleyici&gt;'
 ms.date: 03/30/2017
 ms.assetid: 0c00200c-f135-4e5c-a024-76b72bcbc021
-ms.openlocfilehash: f29c34f53a8bdaee4b30c72bb5d764ae3935fe7a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 48b6b6ca315f7ab63a8f7a64b97167fa04fe1e4e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749029"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43489740"
 ---
 # <a name="ltresolvergt"></a>&lt;Çözümleyici&gt;
-Bir eş çözümlemek için kullanılan bir eş çözümleyici kafes katılmak birkaç düğüm temsil eden bir dizi Eş düğüm adresleri kimliği kafes belirtir.  
+Ağ içinde katılan çeşitli düğümleri temsil eden bir eş düğüm adresleri kümesi bir eş çözümlemek için kullanılan bir eş çözümleyici ağ Kimliğini belirtir.  
   
  \<system.ServiceModel>  
 \<bağlamaları >  
@@ -33,23 +33,23 @@ Bir eş çözümlemek için kullanılan bir eş çözümleyici kafes katılmak b
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`mode`|Bu hizmetle ilişkilendirilen eş Çözümleyicisi örneği ya da PNRP özgü özel bir çözümleyici olup olmadığını belirtir veya otomatik olarak belirlenen bir dize. Bu öznitelik türünde <xref:System.ServiceModel.PeerResolvers.PeerResolverMode>.|  
-|`referralPolicy`|Yol başvuruları eşler arasında paylaşılan belirten bir dize. Bu öznitelik türünde <xref:System.ServiceModel.PeerResolvers.PeerReferralPolicy>.|  
+|`mode`|Bu hizmetle ilişkili eş Çözücü örneğinin ya da PNRP belirli bir özel Çözücü olup olmadığını belirtir ya da otomatik olarak belirlenen bir dize. Bu öznitelik türünde <xref:System.ServiceModel.PeerResolvers.PeerResolverMode>.|  
+|`referralPolicy`|Eşler arasında paylaşılan yol başvurularını belirleyen bir dize. Bu öznitelik türünde <xref:System.ServiceModel.PeerResolvers.PeerReferralPolicy>.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<üstbilgiler >](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|Özel eş Çözümleyici hizmeti ayarlarını belirtir.|  
+|[\<üstbilgiler >](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|Özel eş Çözücü hizmetinin ayarlarını belirtir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<bağlama >](../../../../../docs/framework/misc/binding.md)|Tüm bağlama özelliklerini tanımlayan [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).|  
+|[\<bağlama >](../../../../../docs/framework/misc/binding.md)|Tüm bağlama yeteneklerini tanımlar [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Eş adı çözümleyici eş bir eş kafes katılmak düğümleri bulmak için eş kanalları tarafından kullanılan bir bulma hizmetidir. Ayrıca, "olarak Eş düğüm eş kafes bilinir ve kullanılabilir hale mekanizması bir eş kafes sahip bir düğüm kaydetmek için" kullanılır. Eş çözücüler hakkında daha fazla bilgi için bkz: [eş çözücüler](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md).  
+ Bir eş ad çözümleyici eş bir eş ağ içinde katılan düğümleri bulmak için eş kanallar tarafından kullanılan bir bulma hizmetidir. Ayrıca, "bir düğüm olarak Eş düğüm eş kafes bilinen ve kullanılabilir hale gelir mekanizması bir eş kafes kaydetmek için" kullanılır. Eş çözücüler hakkında daha fazla bilgi için bkz. [eş çözücüler](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.PeerResolver>  
@@ -58,4 +58,4 @@ Bir eş çözümlemek için kullanılan bir eş çözümleyici kafes katılmak b
  <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement.Resolver%2A>  
  <xref:System.ServiceModel.Configuration.PeerResolverElement>  
  [Eş Çözücüler](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)  
- [Özel Çözücü PeerChannel'a uygulamaya ekleme](http://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419)
+ [Bir özel Çözücü PeerChannel'a uygulamaya ekleme](https://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419)
