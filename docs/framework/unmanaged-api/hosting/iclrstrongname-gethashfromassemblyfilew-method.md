@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 36e4f07f04968579be2e42efad666b0453cc4796
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a7686a84759f8ac40a123d2c9a7b8f1b9b8096cb
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434797"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672606"
 ---
 # <a name="iclrstrongnamegethashfromassemblyfilew-method"></a>ICLRStrongName::GetHashFromAssemblyFileW Metodu
-Bir UNICODE dizesi tarafından belirtilen dosyanın içeriğini üzerinden bir karma oluşturur.  
+Unicode dizesi tarafından belirtilen dosyanın içeriğini üzerinden bir karma oluşturur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,10 +41,10 @@ HRESULT GetHashFromAssemblyFileW (
   
 #### <a name="parameters"></a>Parametreler  
  `wszFilePath`  
- [in] Karma hale getirilmesi için dosya yolu. Bu parametre bir UNICODE dizesi olması gerekir.  
+ [in] Karma hale getirilecek dosyanın yolu. Bu parametre, bir Unicode dize olması gerekir.  
   
  `piHashAlg`  
- [içinde out] Karma algoritmasını belirtir sabiti. Varsayılan karma algoritma için sıfır değerini kullanın.  
+ [out içinde] Sabit karma algoritmasını belirtir. Sıfır varsayılan karma algoritması için kullanın.  
   
  `pbHash`  
  [out] Döndürülen karma arabellek.  
@@ -56,7 +56,7 @@ HRESULT GetHashFromAssemblyFileW (
  [out] Bayt cinsinden boyutu döndürülen `pbHash`.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `S_OK` Yöntem başarıyla tamamlandı Aksi takdirde hata belirten bir HRESULT değeri (bkz [ortak HRESULT değerleri](http://go.microsoft.com/fwlink/?LinkId=213878) bir listesi için).  
+ `S_OK` yöntemi başarıyla tamamlandı Aksi takdirde hata olduğunu gösteren HRESULT değerini (bkz [ortak HRESULT değerlerini](https://go.microsoft.com/fwlink/?LinkId=213878) bir listesi için).  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

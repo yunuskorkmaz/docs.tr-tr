@@ -14,19 +14,19 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], lookup tables
 - ListBox control [Windows Forms], creating lookup tables
 ms.assetid: 4ce35f12-1f4e-4317-92d1-af8686a8cfaa
-ms.openlocfilehash: 212cc229d8a496be11c84e30dbf3a0eedb952006
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b719f2112aac1292b668fe199d48de4b0b60ed21
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529385"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43659144"
 ---
 # <a name="how-to-create-a-lookup-table-for-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Nasıl yapılır: Bir Windows Forms ComboBox, ListBox veya CheckedListBox Denetimi için Arama Tablosu Oluşturma
-Bazen kullanımı kolay bir biçimde bir Windows formunda veri görüntüleme, ancak veri programınıza daha anlamlı bir biçimde depolamak kullanışlıdır. Örneğin, bir sipariş formu Yemek için bir liste kutusunda ada göre menü öğelerini görüntüleyebilir. Ancak, sipariş kaydı veri tablosu yemek temsil eden benzersiz kimlik numaraları içerecektir. Aşağıdaki tablolarda, depolamak ve Yemek Sipariş formu verileri görüntülemek nasıl bir örneği gösterilmektedir.  
+Bazen bir Windows Form üzerinde kolay bir biçimde verileri görüntüler ancak programınız için daha anlamlı bir biçimde verileri depolamak kullanışlıdır. Örneğin, bir sipariş formu Gıda için bir liste kutusunda ad olarak menü öğeleri görüntülenebilir. Ancak, siparişin kaydı veri tablosu Gıda temsil eden benzersiz kimlik numaraları içerecektir. Aşağıdaki tablolarda, depolamak ve yemek siparişi biçimli verileri görüntülemek nasıl bir örnek gösterilmektedir.  
   
 ### <a name="orderdetailstable"></a>OrderDetailsTable  
   
-|OrderID|Öğe kimliği|Miktar|  
+|Sipariş Kimliği|öğe kimliği|Miktar|  
 |-------------|------------|--------------|  
 |4085|12|1.|  
 |4086|13|3|  
@@ -38,29 +38,29 @@ Bazen kullanımı kolay bir biçimde bir Windows formunda veri görüntüleme, a
 |12|Patates|  
 |13|Tavuk|  
   
- Bu senaryoda, bir tablo **OrderDetailsTable**, kaydetme ve görüntüleme ile ilgili gerçek bilgileri depolar. Ancak alanı kaydetmek için bunu oldukça şifreli biçimde yapar. Diğer tablo **ItemTable**, hangi kimliği hakkında sayıdır hangi yemek adına ve gerçek yemek siparişler hakkında hiçbir şey eşdeğer yalnızca görünüm ilgili bilgiler içerir.  
+ Bu senaryoda, bir tablo **OrderDetailsTable**, kaydetme ve görüntüleme ile ilgili gerçek bilgileri depolar. Ancak, alandan kazanmak için bunu oldukça şifreli biçimde yapar. Diğer bir tabloda **ItemTable**, hangi kimliği hakkında sayıdır hangi Gıda adına ve gerçek Gıda siparişler hakkında hiçbir şey eşdeğer yalnızca görünüm güvenlikle ilgili bilgiler içerir.  
   
- **ItemTable** bağlı <xref:System.Windows.Forms.ComboBox>, <xref:System.Windows.Forms.ListBox>, veya <xref:System.Windows.Forms.CheckedListBox> denetim üç özellik aracılığıyla. `DataSource` Özelliği, bu tablonun adını içerir. `DisplayMember` Özelliği (yemek adı) denetiminde görüntülemek istediğiniz bu tablonun veri sütunu içerir. `ValueMember` Özelliği (kimlik numarası) depolanmış bilgilerle bu tablonun veri sütunu içerir.  
+ **ItemTable** bağlı <xref:System.Windows.Forms.ComboBox>, <xref:System.Windows.Forms.ListBox>, veya <xref:System.Windows.Forms.CheckedListBox> üç özellikleri aracılığıyla denetimi. `DataSource` Özelliği bu tablonun adını içerir. `DisplayMember` Özelliği, bu tablonun (Gıda adı) denetiminde görüntülemek istediğiniz veri sütunu içerir. `ValueMember` Özelliği, bu tablonun saklı bilgileri (kimlik numarası) ile veri sütunu içerir.  
   
- **OrderDetailsTable** üzerinden erişilen kendi bağlamaları koleksiyonu tarafından denetime bağlı <xref:System.Windows.Forms.Control.DataBindings%2A> özelliği. Koleksiyona bir bağlama nesnesi eklediğinizde, denetim özelliğini bir veri kaynağındaki belirli veri üyesini (kimlik numaraları sütun) bağlandığınız ( **OrderDetailsTable**). Denetimde bir seçim yapıldığında, bu form girişi kaydedildiği tablodur.  
+ **OrderDetailsTable** aracılığıyla erişilen kendi bağlamaları koleksiyona göre denetimine bağlı <xref:System.Windows.Forms.Control.DataBindings%2A> özelliği. Koleksiyona bağlama nesnesi eklediğinizde, bir denetim özelliği bir veri kaynağındaki belirli veri üyesini (kimliği sayı sütununun) bağlandığınız ( **OrderDetailsTable**). Denetimdeki seçim yapıldığında, bu form girişi kaydedildiği tablodur.  
   
-### <a name="to-create-a-lookup-table"></a>Arama tablosu oluşturmak için  
+### <a name="to-create-a-lookup-table"></a>Arama tablosu oluşturma  
   
-1.  Ekleme bir <xref:System.Windows.Forms.ComboBox>, <xref:System.Windows.Forms.ListBox>, veya <xref:System.Windows.Forms.CheckedListBox> forma denetim.  
+1.  Ekleme bir <xref:System.Windows.Forms.ComboBox>, <xref:System.Windows.Forms.ListBox>, veya <xref:System.Windows.Forms.CheckedListBox> forma.  
   
-2.  Veri kaynağına bağlanın.  
+2.  Veri kaynağınıza bağlayın.  
   
-3.  İki tablo arasında veri ilişkisi oluşturun. Bkz: [DataRelation nesnelerine giriş](http://msdn.microsoft.com/library/89d8a881-8265-41f2-a88b-61311ab06192).  
+3.  İki tablo arasında bir veri ilişkisi oluşturur. Bkz: [DataRelation nesnelerine giriş](https://msdn.microsoft.com/library/89d8a881-8265-41f2-a88b-61311ab06192).  
   
 4.  Aşağıdaki özellikleri ayarlayın. Bunlar, kod veya tasarımcı ayarlanabilir.  
   
     |Özellik|Ayar|  
     |--------------|-------------|  
-    |<xref:System.Windows.Forms.ListControl.DataSource%2A>|Hangi kimliği hakkında hangi öğeye eşdeğer sayıdır bilgi içeren tablo. Önceki senaryoda budur `ItemTable`.|  
-    |<xref:System.Windows.Forms.ListControl.DisplayMember%2A>|Denetimde görüntülemek istediğiniz veri kaynağı tablosuna sütun. Önceki senaryoda budur `"Name"` (kodda ayarlamak için tırnak işaretleri kullanın).|  
-    |<xref:System.Windows.Forms.ListControl.ValueMember%2A>|Depolanan bilgiler içeren veri kaynağı tablo sütun. Önceki senaryoda budur `"ID"` (kodda ayarlamak için tırnak işaretleri kullanın).|  
+    |<xref:System.Windows.Forms.ListControl.DataSource%2A>|Hangi kimliği numarasını hangi öğesine eşdeğerdir bilgilerini içeren tablo. Önceki senaryoda budur `ItemTable`.|  
+    |<xref:System.Windows.Forms.ListControl.DisplayMember%2A>|Denetiminde görüntülemek istediğiniz veri kaynağı tablosu içeren sütun. Önceki senaryoda budur `"Name"` (kodda ayarlamak için tırnak işaretleri kullanın).|  
+    |<xref:System.Windows.Forms.ListControl.ValueMember%2A>|Depolanan bilgiler içeren veri kaynağı tablosu içeren sütun. Önceki senaryoda budur `"ID"` (kodda ayarlamak için tırnak işaretleri kullanın).|  
   
-5.  Bir yordamda çağrısı <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> yöntemi <xref:System.Windows.Forms.ControlBindingsCollection> denetimin bağlamak için sınıf <xref:System.Windows.Forms.ListControl.SelectedValue%2A> form girişi kaydı tabloya özelliği. Ayrıca, kodda yerine tasarımcısında denetimin erişerek bunu yapabilirsiniz <xref:System.Windows.Forms.Control.DataBindings%2A> özelliğinde **özellikleri** penceresi. Önceki senaryoda budur `OrderDetailsTable`, ve sütun `"ItemID"`.  
+5.  Bir yordamda çağrı <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> yöntemi <xref:System.Windows.Forms.ControlBindingsCollection> denetimin bağlamak için sınıf <xref:System.Windows.Forms.ListControl.SelectedValue%2A> özelliğini form girişi kayıt tablosu. Ayrıca, kodda yerine tasarımcısında denetimin erişerek bunu yapabilirsiniz <xref:System.Windows.Forms.Control.DataBindings%2A> özelliğinde **özellikleri** penceresi. Önceki senaryoda budur `OrderDetailsTable`, ve sütun `"ItemID"`.  
   
     ```vb  
     ListBox1.DataBindings.Add("SelectedValue", OrderDetailsTable, "ItemID")  

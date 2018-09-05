@@ -1,49 +1,49 @@
 ---
-title: 'Nasıl yapılır: Model tarafından tanımlanan işlevler sorgularda çağırın'
+title: 'Nasıl yapılır: sorgularda Model tanımlı işlevler çağırma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6c804e4d-f348-4afd-9f63-d3f0f24bc6a9
-ms.openlocfilehash: 575c7cff64608257646bde0ef08abe4c0096e477
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2a20a2bb524c1ef9135b8b7187b2519088ddb762
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32761655"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43674143"
 ---
-# <a name="how-to-call-model-defined-functions-in-queries"></a>Nasıl yapılır: Model tarafından tanımlanan işlevler sorgularda çağırın
-Bu konuda içinden kavramsal modelde tanımlanan işlevleri çağırmak nasıl açıklanmaktadır [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgular.  
+# <a name="how-to-call-model-defined-functions-in-queries"></a>Nasıl yapılır: sorgularda Model tanımlı işlevler çağırma
+Bu konu, içinden kavramsal modelde tanımlı işlevleri çağırmak açıklar [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgular.  
   
- Model tanımlı bir işlevin içinden çağırmak için aşağıdaki yordamı İleri düzey bir özeti sağlayan bir [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgu. Aşağıdaki örnek yordamdaki adımları hakkında daha fazla ayrıntı sağlar. Yordam, kavramsal modelde tanımlanan bir işlev varsayar. Daha fazla bilgi için bkz: [nasıl yapılır: özel işlevlerde tanımlamak kavramsal Model](http://msdn.microsoft.com/library/0dad7b8b-58f6-4271-b238-f34810d68e5f).  
+ Aşağıdaki yordam bir model tanımlı işlev içinden çağırmak için İleri düzey bir özeti sağlar. bir [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgu. Aşağıdaki örnek, bu yordamdaki adımları hakkında daha fazla ayrıntı sağlar. Yordam, kavramsal modelde tanımlı bir işlev varsayar. Daha fazla bilgi için [nasıl yapılır: özel işlevleri tanımlamak kavramsal Model](https://msdn.microsoft.com/library/0dad7b8b-58f6-4271-b238-f34810d68e5f).  
   
-### <a name="to-call-a-function-defined-in-the-conceptual-model"></a>Kavramsal modelde tanımlanan bir işlev çağrısı için  
+### <a name="to-call-a-function-defined-in-the-conceptual-model"></a>Kavramsal modelde tanımlı bir işlevi çağırmak için  
   
-1.  Kavramsal modelde tanımlanmış işlevi eşlendiği uygulamanız için bir ortak dil çalışma zamanı (CLR) yöntemi ekleyin. Map yöntemi için uygulamanız gereken bir <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> yöntemi. Unutmayın <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> ve <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> öznitelik parametrelerinin kavramsal model ad alanı adını ve kavramsal modelde işlev adı sırasıyla verilmiştir. İşlevi ad çözümlemesi LINQ için büyük/küçük harfe duyarlıdır.  
+1.  Bir ortak dil çalışma zamanı (CLR) yöntem kavramsal modelde tanımlı işlev eşlendiği uygulamanıza ekleyin. Map yöntemi için uygulamanız gereken bir <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> yöntemi. Unutmayın <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> ve <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> öznitelik parametreleri: kavramsal modelin ad alanı adı ve işlev adı kavramsal modeldeki sırasıyla. LINQ için ad çözümlemesi işlevi büyük/küçük harfe duyarlıdır.  
   
-2.  İşlev çağrısı bir [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgu.  
+2.  İşlev Çağır bir [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgu.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek içinden kavramsal modelde tanımlanan bir işlev nasıl çağırılacağını bir [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgu. Örneğin Okul modelini kullanır. Okul modeli hakkında daha fazla bilgi için bkz: [Okul örnek veritabanı oluşturma](http://msdn.microsoft.com/library/c1bec483-a0ea-4660-aa0b-7b0a8b68fed0) ve [Okul .edmx dosyasının oluşturma](http://msdn.microsoft.com/library/c48b3907-a8be-4fe6-884c-e95af1852758).  
+ Aşağıdaki örnek içinden kavramsal modelde tanımlı bir işlev çağrısı yapmayı gösteren bir [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgu. Örneğin, okul modeli kullanır. Okul modeli hakkında daha fazla bilgi için bkz: [School örnek veritabanını oluşturma](https://msdn.microsoft.com/library/c1bec483-a0ea-4660-aa0b-7b0a8b68fed0) ve [Okul .edmx dosyası oluşturma](https://msdn.microsoft.com/library/c48b3907-a8be-4fe6-884c-e95af1852758).  
   
- Bir eğitmen işe beri aşağıdaki kavramsal model işlevi yıl sayısını döndürür. Kavramsal bir model işlevi ekleme hakkında daha fazla bilgi için bkz: [nasıl yapılır: özel işlevlerde tanımlamak kavramsal Model](http://msdn.microsoft.com/library/0dad7b8b-58f6-4271-b238-f34810d68e5f).)  
+ Bir eğitmen işe alındım olduğundan aşağıdaki kavramsal model işlevi yıl sayısını döndürür. Kavramsal bir modele işlevi ekleme hakkında daha fazla bilgi için bkz. [nasıl yapılır: özel işlevleri tanımlamak kavramsal Model](https://msdn.microsoft.com/library/0dad7b8b-58f6-4271-b238-f34810d68e5f).)  
   
  [!code-xml[DP ConceptualModelFunctions#1](../../../../../../samples/snippets/xml/VS_Snippets_Data/dp conceptualmodelfunctions/xml/school.edmx#1)]
   
 ## <a name="example"></a>Örnek  
- Ardından, uygulama ve kullanmak için aşağıdaki yöntemi ekleyin bir <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> kavramsal model işlevi eşlemek için:  
+ Ardından, uygulamanızı ve kullanmak için aşağıdaki yöntemi ekleyin bir <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> kavramsal model işleve eşlemek için:  
   
  [!code-csharp[DP ConceptualModelFunctions#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp conceptualmodelfunctions/cs/program.cs#2)]
  [!code-vb[DP ConceptualModelFunctions#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp conceptualmodelfunctions/vb/module1.vb#2)]  
   
 ## <a name="example"></a>Örnek  
- Kavramsal model işlevi içinden çağırabilirsiniz artık bir [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgu. Aşağıdaki kod, on yıldan fazla önce işe alınan tüm Eğitmen görüntülenecek yöntemini çağırır:  
+ İçinden kavramsal model işlevi çağırabilir artık bir [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgu. Aşağıdaki kod, on yıldan önce işe alınan tüm Eğitmenler görüntülenecek yöntemini çağırır:  
   
  [!code-csharp[DP ConceptualModelFunctions#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp conceptualmodelfunctions/cs/program.cs#3)]
  [!code-vb[DP ConceptualModelFunctions#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp conceptualmodelfunctions/vb/module1.vb#3)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [.edmx dosyasının genel bakış](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
+ [.edmx dosyasını genel bakış](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
  [LINQ to Entities Sorguları](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)  
  [LINQ to Entities Sorgularında Çağırma İşlevleri](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)  
  [Nasıl Yapılır: Model Tanımlı İşlevleri Nesne Yöntemleri Olarak Çağırma](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-as-object-methods.md)

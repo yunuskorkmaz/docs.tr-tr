@@ -2,12 +2,12 @@
 title: Projeksiyonlar ve Dönüşümler (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: bb0457ab-1823-47e6-9d2d-c93c958cc913
-ms.openlocfilehash: dfd10011646fb758215c8d472dacf7e16296493f
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 835383e472362d38ded3862042609eaaa508efbe
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42929801"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560102"
 ---
 # <a name="projections-and-transformations-linq-to-xml-c"></a>Projeksiyonlar ve Dönüşümler (LINQ to XML) (C#)
 Bu bölümdeki örnekler [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] projeksiyonlar ve dönüşümler.  
@@ -25,5 +25,6 @@ Bu bölümdeki örnekler [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] p
 |[Nasıl yapılır: (C#) XML'den metin dosyaları oluştur](../../../../csharp/programming-guide/concepts/linq/how-to-generate-text-files-from-xml.md)|Bir XML dosyasını bir XML olmayan metin dosyasına dönüştürmek gösterilmektedir.|  
 |[Nasıl yapılır: XML, CSV dosyalarından (C#) oluşturma](../../../../csharp/programming-guide/concepts/linq/how-to-generate-xml-from-csv-files.md)|Nasıl kullanılacağını gösterir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] bir CSV dosyası ayrıştırılamadı ve XML bundan oluşturur.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [XML ağaçlarını sorgulama (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [XML ağaçlarını sorgulama (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)

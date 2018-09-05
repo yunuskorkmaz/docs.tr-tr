@@ -6,49 +6,49 @@ f1_keywords:
 helpviewer_keywords:
 - sounds [Windows Forms], playing
 ms.assetid: f3945af9-045c-4e2d-b251-377c37ca2d77
-ms.openlocfilehash: 39d3c9d54eb61c0220a13870d5bd2ff69f8dfc38
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 57d9affa76a5f24e8a3ab6b3d13516396a82eb92
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538831"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672897"
 ---
 # <a name="soundplayer-class"></a>SoundPlayer Sınıfı
-`SoundPlayer` Sınıfı ses uygulamalarınızda kolayca eklemenizi sağlar.  
+`SoundPlayer` Sınıfı sesleri uygulamalarınıza kolayca dahil etmenize imkan sağlar.  
   
- Aynı zamanda <xref:System.Media.SystemSounds> bip sesi dahil olmak üzere, genel sistem sesleri yürütmek için sınıf.  
+ Ayrıca <xref:System.Media.SystemSounds> bip sesi dahil olmak üzere, genel sistem sesleri oynatmak için sınıf.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [SoundPlayer Sınıfına Genel Bakış](../../../../docs/framework/winforms/controls/soundplayer-class-overview.md)  
- Sınıf ve kendi yaygın olarak kullanılan özellikleri, yöntemleri ve olayları tanıtır.  
+ Sınıfı ve yaygın olarak kullanılan özelliklerini, yöntemlerini ve olaylarını tanıtır.  
   
  [Nasıl yapılır: Bir Windows Formdan Ses Çalma](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)  
- Belirtilen dosya yolu, UNC yolu veya HTTP yolu ses çalınmaya kodu sağlar.  
+ Belirtilen dosya yolu, UNC yolu veya HTTP yolu Çıkart yönelik kod sağlar.  
   
  [Nasıl yapılır: Bir Windows Formdan Bip Sesi Çalma](../../../../docs/framework/winforms/controls/how-to-play-a-beep-from-a-windows-form.md)  
- Bilgisayarın bip ses çalınmaya kodu sağlar.  
+ Bilgisayarın bip sesi ses çal yönelik kod sağlar.  
   
  [Nasıl yapılır: Bir Windows Formundan Kaynağa Yerleştirilmiş Sesi Çalma](../../../../docs/framework/winforms/controls/how-to-play-a-sound-embedded-in-a-resource-from-a-windows-form.md)  
- Bir kaynaktan ses çalınmaya kodu sağlar.  
+ Bir kaynaktan Çıkart yönelik kod sağlar.  
   
  [Nasıl yapılır: Bir Windows Formundan Sistem Sesi Çalma](../../../../docs/framework/winforms/controls/how-to-play-a-system-sound-from-a-windows-form.md)  
- Sistem sesleri birini yürütmek için kodu sağlar.  
+ Bir sistem sesleri oynatmak için kod sağlar.  
   
  [Nasıl yapılır: Bir Windows Form içinde Zaman Uyumsuz Ses Yükleme](../../../../docs/framework/winforms/controls/how-to-load-a-sound-asynchronously-within-a-windows-form.md)  
- Ses zaman uyumsuz olarak bir URL'den yüklemek ve onu yürütmek için kodu sağlar.  
+ Ses URL'den zaman uyumsuz olarak yükleme ve yürütün yönelik kod sağlar.  
   
  [Nasıl yapılır: Bir Windows Formda Sesi Döngü Olarak Çalma](../../../../docs/framework/winforms/controls/how-to-loop-a-sound-playing-on-a-windows-form.md)  
- Ses art arda oynadığı kodu sağlar.  
+ Sürekli bir ses çalar kodu sağlar.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Media.SoundPlayer>  
- Bu sınıf tanımlar ve tüm üyeleri bağlantılar içerir.  
+ Bu sınıf açıklar ve tüm üyeleri için bağlantılar içerir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/index.md)  
- Özellikle Windows Forms ile çalışmak üzere tasarlanmış denetimleriyle ilgili konulara bağlantılar sağlar.  
+ Özellikle Windows Forms ile çalışmak üzere tasarlanmış denetimleri hakkındaki konulara bağlantılar sağlar.  
   
  [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Windows Forms denetimleri, tam bir listesi ile bunların kullanılması hakkında bilgi için bağlantılar sağlar.  
+ Windows Forms denetimlerini, tam bir listesi, kullanımları hakkında bilgi için bağlantılar sağlar.  
   
- Ayrıca bkz. [HYPERLINK "http://msdn.microsoft.com/library/11bxex12(v=vs.110)" My.Computer nesnesi](http://msdn.microsoft.com/library/11bxex12\(v=vs.110\)) veya [My.Computer nesnesi](http://msdn.microsoft.com/library/11bxex12\(v=vs.120\)).
+ Ayrıca bkz: [HYPERLINK "http://msdn.microsoft.com/library/11bxex12(v=vs.110)" My.Computer nesnesi](https://msdn.microsoft.com/library/11bxex12\(v=vs.110\)) veya [My.Computer nesnesi](https://msdn.microsoft.com/library/11bxex12\(v=vs.120\)).

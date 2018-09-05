@@ -3,11 +3,11 @@ title: Güvenlik Overview2
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
 ms.openlocfilehash: 18a7496d39cd08e8b340e23c57fcd10dae5ed281
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481737"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43557098"
 ---
 # <a name="security-overview"></a>Güvenlik Genel Bakış
 Bir uygulamanın güvenliğini sağlama, devam eden bir işlem bulunmaktadır. Hiçbir zaman bir geliştirici gelecekteki saldırıları yeni teknolojileri tür zekadan yararlanabilmesini tahmin etmek mümkün olduğundan, uygulamanın tüm saldırılara karşı güvenli olduğu garanti edebilir bir noktası olacaktır. Buna karşılık, hiç kimse sahip olduğu bir sistemde henüz bulunan (veya yayımlanmış) güvenlik açıkları gelmez hiçbiri mevcut veya var olabilir. Yanı sıra proje tasarım aşaması sırasında güvenlik için planlama, uygulama ömrü boyunca güvenlik nasıl korunur planlamak gerekir.  

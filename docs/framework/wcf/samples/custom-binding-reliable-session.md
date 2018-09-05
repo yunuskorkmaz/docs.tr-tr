@@ -3,11 +3,11 @@ title: Özel Bağlama Güvenilir Oturum
 ms.date: 03/30/2017
 ms.assetid: c5fcd409-246f-4f3e-b3f1-629506ca4c04
 ms.openlocfilehash: 55ffdd741bf26c1a906c7b09dfa05839b25f1645
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43483087"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43557497"
 ---
 # <a name="custom-binding-reliable-session"></a>Özel Bağlama Güvenilir Oturum
 Özel bağlama ayrık bağlama öğelerinin sıralı bir listesi tanımlanır. Bu örnek, çeşitli taşıma ve kodlama öğeleri, özellikle de güvenilir oturumlar etkinleştirme ileti özel bağlama yapılandırma işlemi gösterilmektedir.  

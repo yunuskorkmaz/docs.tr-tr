@@ -3,11 +3,11 @@ title: LINQ ileti kuyruğu bağıntısı
 ms.date: 03/30/2017
 ms.assetid: b746872e-57b1-4514-b337-53398a0e0deb
 ms.openlocfilehash: 7881140f2926bc27073a0be425a63566f313b50c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43393754"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43559085"
 ---
 # <a name="linq-message-query-correlation"></a>LINQ ileti kuyruğu bağıntısı
 Bu örnek özel bir kullanarak içerik temelli bağıntı yapmak nasıl gösterir <xref:System.ServiceModel.Dispatcher.MessageQuery> aksine, sistem tarafından sağlanan uygulama <xref:System.ServiceModel.XPathMessageQuery>.  

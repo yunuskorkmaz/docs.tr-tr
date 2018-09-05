@@ -6,11 +6,11 @@ helpviewer_keywords:
 - COM interop [Visual Basic], about COM interop
 ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
 ms.openlocfilehash: ecd514231c36cf3b65b1f0dd05f26d05f3c9c88d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43389750"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43561483"
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>COM Birlikte Çalışma'ya Giriş (Visual Basic)
 Bileşen Nesne Modeli (COM) diğer bileşenleri ve uygulamaları barındırmak için işlevselliği kullanıma sunma nesneyi sağlar. COM nesneleri Windows yıllardır programlama için temel kullanımda olsa, Ortak Dil Çalışma Zamanı Modülü (CLR) tasarlanmış uygulamalar birçok avantaj sunar.  

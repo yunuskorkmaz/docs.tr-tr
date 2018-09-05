@@ -3,11 +3,11 @@ title: Filtreleme
 ms.date: 03/30/2017
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
 ms.openlocfilehash: 74915a45ed5ca1d13790f64c7921d1f750fa04d3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43409136"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43660176"
 ---
 # <a name="filtering"></a>Filtreleme
 Sistem filtreleme Windows Communication Foundation (WCF), iletileri eşleşmesi ve işletimsel karar vermek için bildirim temelli filtreleri kullanabilirsiniz. Filtreleri içeren bir ileti iletinin bölümünü inceleyerek yapmanız gerekenler belirlemek için kullanabilirsiniz. Sıraya alma işlemi, örneğin, priority öğesi bir ileti kuyruğu öne taşınıp taşınmayacağını belirleme bilinen üstbilgisinin denetlemek için bir XPath 1.0 sorgu kullanabilirsiniz.  

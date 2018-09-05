@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: Namespace değiştirmek için tüm XML ağacı (C#)'
+title: 'Nasıl yapılır: Namespace değiştirmek için tüm XML ağacının (C#)'
 ms.date: 07/20/2015
 ms.assetid: 1584ff3b-c77d-4241-ab62-80adfb7bfc1b
-ms.openlocfilehash: 698d5323d712555cf59714323d2cb13d2ee6a371
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cbb7c3d332eea83d6df71812cc18633df6fbb6d0
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328259"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43559536"
 ---
-# <a name="how-to-change-the-namespace-for-an-entire-xml-tree-c"></a>Nasıl yapılır: Namespace değiştirmek için tüm XML ağacı (C#)
-Bazen bir öğe veya öznitelik için ad alanı programlı olarak değiştirmeniz gerekir. LINQ-XML bu kolaylaştırır. <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType> Özelliği ayarlanabilir. <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType> Özelliği ayarlanamaz, ancak kolayca öznitelikler kopyalayabilirsiniz bir <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>varolan öznitelikleri kaldırın ve ardından yeni istenen ad alanında yeni öznitelikler ekleyin.  
+# <a name="how-to-change-the-namespace-for-an-entire-xml-tree-c"></a>Nasıl yapılır: Namespace değiştirmek için tüm XML ağacının (C#)
+Bazen, program aracılığıyla bir öğe veya öznitelik için ad alanı değiştirmek zorunda. LINQ to XML bu kolaylaştırır. <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType> Özelliğini ayarlayabilirsiniz. <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType> Özelliği ayarlanamaz, ancak öznitelikler kolayca kopyalayabilirsiniz bir <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>mevcut öznitelikleri kaldırın ve ardından yeni istenen ad alanı olan yeni özellikler ekleyin.  
   
- Daha fazla bilgi için bkz: [XML ad alanları (C#) çalışma](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+ Daha fazla bilgi için [(C#) XML ad alanları ile çalışma](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod iki XML ağaçları hiçbir ad alanında oluşturur. Ardından ağaçlarını her ad alanı değiştirir ve tek bir ağacına birleştirir.  
+ Aşağıdaki kod, iki XML ağaçlarını hiçbir ad alanında oluşturur. Ardından her ağaçları ad alanı değiştirir ve bunları tek bir ağacına birleştirir.  
   
 ```csharp  
 XElement tree1 = new XElement("Data",  
@@ -64,7 +64,7 @@ XElement root = new XElement("Root",
 Console.WriteLine(root);  
 ```  
   
- Bu örnek şu çıkışı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```xml  
 <Root>  
@@ -77,5 +77,6 @@ Console.WriteLine(root);
 </Root>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [XML ağaçları (LINQ-XML) değiştirme (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [(LINQ to XML) XML ağaçlarını değiştirme (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

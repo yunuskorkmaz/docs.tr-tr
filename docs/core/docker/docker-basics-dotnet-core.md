@@ -6,23 +6,23 @@ ms.author: johalex
 ms.date: 11/06/2017
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 02b6b3fc9e149f5d1d5d78e310c7df257be983c1
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 543b9454e826022a72752d9a24bc43b77d2501f5
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961553"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43558731"
 ---
 # <a name="learn-docker-basics-with-net-core"></a>.NET Core ile Docker temellerini öğrenme
 
-Bu öğreticide, Docker kapsayıcı derleme ve dağıtım görevleri bir .NET Core uygulaması için size öğretir. Bu öğreticinin Kurs sırasında şunları öğrenirsiniz:
+Bu öğreticide, Docker kapsayıcı derleme ve dağıtım görevleri bir .NET Core uygulaması için size öğretir. [Docker platformu](https://docs.docker.com/engine/docker-overview/#the-docker-platform) kullanan [Docker altyapısı](https://docs.docker.com/engine/docker-overview/#docker-engine) oluşturmayı ve uygulamaları olarak paketini [Docker görüntülerini](https://docs.docker.com/glossary/?term=image). Bu görüntüleri yazılan [Dockerfile](https://docs.docker.com/glossary/?term=Dockerfile) dağıtılabilir ve çalışacak biçimde bir [kapsayıcı katmanlı](https://docs.docker.com/engine/userguide/storagedriver/imagesandcontainers/#container-and-layers).
+
+Bu öğreticinin Kurs sırasında şunları öğrenirsiniz:
 
 > [!div class="checklist"]
 > * Bir Dockerfile'ı oluşturma
 > * .NET Core uygulaması oluşturma
 > * Uygulamanızı bir Docker kapsayıcısına dağıtma
-
-[Docker platformu](https://docs.docker.com/engine/docker-overview/#the-docker-platform) kullanan [Docker altyapısı](https://docs.docker.com/engine/docker-overview/#docker-engine) oluşturmayı ve uygulamaları olarak paketini [Docker görüntülerini](https://docs.docker.com/glossary/?term=image). Bu görüntüleri yazılan [Dockerfile](https://docs.docker.com/glossary/?term=Dockerfile) dağıtılabilir ve çalışacak biçimde bir [kapsayıcı katmanlı](https://docs.docker.com/engine/userguide/storagedriver/imagesandcontainers/#container-and-layers).
 
 ## <a name="net-core-easiest-way-to-get-started"></a>.NET core: başlamanın en kolay yolu
 
@@ -283,7 +283,7 @@ Bu örnekte kullanılan aşağıdaki Docker görüntüleri
 
 ## <a name="related-resources"></a>İlgili Kaynaklar
 
-* [.NET core Docker örnekleri](https://github.com/dotnet/dotnet-docker-samples/README.md)
+* [.NET core Docker örnekleri](https://github.com/dotnet/dotnet-docker/tree/master/samples)
 * [Dockerfile Windows kapsayıcıları hakkında](https://docs.microsoft.com/virtualization/windowscontainers/manage-docker/manage-windows-dockerfile)
 * [.NET framework Docker örnekleri](https://github.com/Microsoft/dotnet-framework-docker-samples)
 * [DockerHub üzerinde ASP.NET Core](https://hub.docker.com/r/microsoft/aspnetcore/)

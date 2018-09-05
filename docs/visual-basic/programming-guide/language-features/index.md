@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Visual Basic code
 ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
 ms.openlocfilehash: a8f6da4dc42244fbadbaf0e96b0dd281a3f7ccb2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43402621"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43659713"
 ---
 # <a name="visual-basic-language-features"></a>Visual Basic Dil Özellikleri
 Aşağıdaki konuları tanıtır ve Visual Basic, nesne yönelimli programlama dilini temel bileşenlerini tartışın. Formlar ve denetimler kullanarak uygulamanız için kullanıcı arabirimi oluşturduktan sonra uygulama davranışını tanımlayan kodu yazmanız gerekir. Tüm modern programlama dili olarak Visual Basic bir dizi ortak programlama yapıları ve Dil öğelerini destekler.  

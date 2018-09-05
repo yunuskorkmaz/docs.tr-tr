@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: ASP.NET AJAX Uç Noktası Eklemek için Yapılandırma
 ms.date: 03/30/2017
 ms.assetid: 7cd0099e-dc3a-47e4-a38c-6e10f997f6ea
 ms.openlocfilehash: 3a3474dc04ce2cda63157e68597d1184e9b2bf15
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934413"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43559957"
 ---
 # <a name="how-to-use-configuration-to-add-an-aspnet-ajax-endpoint"></a>Nasıl yapılır: ASP.NET AJAX Uç Noktası Eklemek için Yapılandırma Kullanma
 Windows Communication Foundation (WCF), bir ASP.NET AJAX etkinleştirilmiş uç nokta, istemci Web sitesinde JavaScript'ten çağrılabilir kullanılabilir bir hizmet oluşturmanıza olanak sağlar. Böyle bir uç nokta oluşturmak için bir yapılandırma dosyası ile tüm diğer Windows Communication Foundation (WCF) uç noktalar olarak kullanabilir veya yapılandırma öğeleri gerektirmeyen bir yöntem kullanın. Bu konuda, yapılandırma yaklaşım gösterilmektedir.  

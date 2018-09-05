@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: aababd75-2335-43e3-ace8-4b7ae84191a8
 ms.openlocfilehash: 7d982b73332a2629ccd32c409e0de6fe1ce6eb98
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43408836"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43556311"
 ---
 # <a name="comparing-guid-and-uniqueidentifier-values"></a>Karşılaştırma GUID ve uniqueidentifier değerlerini
 SQL Server genel benzersiz tanıtıcısı (GUID) veri türü tarafından temsil edilen `uniqueidentifier` veri türü, 16 baytlık bir ikili değeri depolar. Bir ikili sayı bir GUID'dir ve onun ana birçok sitelerde çok sayıda bilgisayar olan bir ağa benzersiz bir tanımlayıcı olarak kullanılır. GUID'ler Transact-SQL NEWID işlevi çağrılarak oluşturulan ve dünya genelinde benzersiz olması garanti edilmez. Daha fazla bilgi için [benzersiz tanımlayıcı (Transact-SQL)](/sql/t-sql/data-types/uniqueidentifier-transact-sql).  

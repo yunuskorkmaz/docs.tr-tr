@@ -3,11 +3,11 @@ title: WCF Geliştirme Araçlarını Kullanma
 ms.date: 03/30/2017
 ms.assetid: 054adb87-c244-4d5a-83d1-0b2b44bd454b
 ms.openlocfilehash: 3eb349fd795b2067d4d75ff138fd9b5922110bd3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43421286"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43674354"
 ---
 # <a name="using-the-wcf-development-tools"></a>WCF Geliştirme Araçlarını Kullanma
 Bu bölümde, WCFservice geliştirmenize yardımcı olabilecek Visual Studio geliştirme araçları açıklanmaktadır.  

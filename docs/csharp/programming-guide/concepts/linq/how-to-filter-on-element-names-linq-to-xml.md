@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: öğe adları (LINQ-XML) filtresini (C#)'
+title: 'Nasıl yapılır: öğe adlarını (LINQ to XML) filtreleme (C#)'
 ms.date: 07/20/2015
 ms.assetid: 1849fb03-f075-421f-863c-e8fb32773cdf
-ms.openlocfilehash: f54b9008ff90922e2c275c51c6965c92cb4e6a36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: df3a2fb7de888dfc2bc93520c16a52b594047fb3
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323267"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43563839"
 ---
-# <a name="how-to-filter-on-element-names-linq-to-xml-c"></a>Nasıl yapılır: öğe adları (LINQ-XML) filtresini (C#)
-Çağırdığınızda dönüş yöntemlerden birini <xref:System.Collections.Generic.IEnumerable%601> , <xref:System.Xml.Linq.XElement>, öğe adı filtreleyebilirsiniz.  
+# <a name="how-to-filter-on-element-names-linq-to-xml-c"></a>Nasıl yapılır: öğe adlarını (LINQ to XML) filtreleme (C#)
+Çağırdığınızda döndüren yöntemler birini <xref:System.Collections.Generic.IEnumerable%601> , <xref:System.Xml.Linq.XElement>, öğeyi adına göre filtre uygulayabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek yalnızca belirtilen ada sahip alt öğeleri içerecek şekilde filtre uygulanan bir alt koleksiyonunu alır.  
+ Bu örnek yalnızca belirtilen ada sahip alt öğeleri içerecek şekilde filtrelenmiş bir alt koleksiyonunu alır.  
   
- Bu örnekte aşağıdaki XML belgesi kullanır: [örnek XML dosyası: tipik satın alma siparişi (LINQ-XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
+ Bu örnekte aşağıdaki XML belgesi: [örnek XML dosyası: tipik satın alma siparişi (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
   
 ```csharp  
 XElement po = XElement.Load("PurchaseOrder.xml");  
@@ -33,7 +33,7 @@ ProductName:Lawnmower
 ProductName:Baby Monitor  
 ```  
   
- Dönüş diğer yöntemleri <xref:System.Collections.Generic.IEnumerable%601> , <xref:System.Xml.Linq.XElement> koleksiyonları aynı düzeni izleyin. Kendi imzaları benzer <xref:System.Xml.Linq.XContainer.Elements%2A> ve <xref:System.Xml.Linq.XContainer.Descendants%2A>. Benzer yöntemi imzalara sahip olduğunu yöntemlerinin tam listesi verilmiştir:  
+ Döndüren yöntemler <xref:System.Collections.Generic.IEnumerable%601> , <xref:System.Xml.Linq.XElement> koleksiyonları aynı deseni takip edin. Bunların imzalarını benzer <xref:System.Xml.Linq.XContainer.Elements%2A> ve <xref:System.Xml.Linq.XContainer.Descendants%2A>. Benzer yöntem imzaları olan yöntemlerinin tam listesi verilmiştir:  
   
 -   <xref:System.Xml.Linq.XNode.Ancestors%2A>  
   
@@ -50,9 +50,9 @@ ProductName:Baby Monitor
 -   <xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A>  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek bir ad alanı XML aynı sorgu gösterir. Daha fazla bilgi için bkz: [XML ad alanları (C#) çalışma](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+ Aşağıdaki örnek, aynı sorgu için bir ad alanındaki XML gösterir. Daha fazla bilgi için [(C#) XML ad alanları ile çalışma](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   
- Bu örnekte aşağıdaki XML belgesi kullanır: [örnek XML dosyası: bir Namespace tipik satınalma siparişi](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).  
+ Bu örnekte aşağıdaki XML belgesi: [örnek XML dosyası: tipik satın alma siparişi bir Namespace,](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).  
   
 ```csharp  
 XNamespace aw = "http://www.adventure-works.com";  
@@ -71,5 +71,6 @@ foreach (XElement prdName in items)
 {http://www.adventure-works.com}ProductName:Baby Monitor  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [LINQ-XML eksenleri (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [LINQ to XML eksenleri (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)

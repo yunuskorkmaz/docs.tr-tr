@@ -3,11 +3,11 @@ title: Özellik yükseltme etkinliği
 ms.date: 03/30/2017
 ms.assetid: 802196b7-1159-4c05-b41b-d3bfdfcc88d9
 ms.openlocfilehash: 6e059a0d344e6c62833feaa890c459c141a49673
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481143"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43559111"
 ---
 # <a name="property-promotion-activity"></a>Özellik yükseltme etkinliği
 Bu örnek sağlayan tümleşik bir uçtan uca çözüm <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> doğrudan yazma deneyimini iş akışı içinde yükseltme özelliği. Yapılandırma öğeleri, iş akışı etkinlikleri ve basitleştirin promosyon özelliğinin kullanımına iş akışı uzantıları koleksiyonu sağlanır. Ayrıca, bu koleksiyon kullanmayı gösteren basit bir iş akışı örneği içerir.  

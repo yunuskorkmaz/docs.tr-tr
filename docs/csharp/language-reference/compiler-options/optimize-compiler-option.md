@@ -13,11 +13,11 @@ helpviewer_keywords:
 - o compiler option [C#]
 ms.assetid: 6dd5b6f2-cd1d-4593-a9f4-1c2ed9404ca0
 ms.openlocfilehash: f8fec2c4da49aa6cac2f8dc1dc9b07c5864b837a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43417174"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562736"
 ---
 # <a name="-optimize-c-compiler-options"></a>-(C# Derleyici Seçenekleri) en iyi duruma getirme
 **-En iyi duruma getirme** seçeneğini etkinleştirir veya çıkış dosyanızı daha küçük, daha hızlı ve daha verimli yapmak için derleyici tarafından gerçekleştirilen iyileştirmeleri devre dışı bırakır.  

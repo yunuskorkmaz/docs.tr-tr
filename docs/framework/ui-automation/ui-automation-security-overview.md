@@ -8,36 +8,36 @@ ms.assetid: 1d853695-973c-48ae-b382-4132ae702805
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 293cee72e80e88215fccb3902eb88963814cb2ce
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f55112c5eead082eae10aa50590b915f5049d5a6
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400204"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43565960"
 ---
 # <a name="ui-automation-security-overview"></a>UI Otomasyon Güvenliğine Genel Bakış
 > [!NOTE]
->  Bu belge yönetilen kullanmak isteyen .NET Framework için tasarlanan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tanımlanan sınıflar <xref:System.Windows.Automation> ad alanı. Hakkında en yeni bilgiler için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], bkz: [Windows Otomasyon API: UI Otomasyonu](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Bu belge yönetilen kullanmak isteyen .NET Framework için tasarlanan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tanımlanan sınıflar <xref:System.Windows.Automation> ad alanı. En son bilgileri [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], bkz: [Windows Automation API: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Bu genel bakış için güvenlik modeli açıklanır [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] içinde [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)].  
   
 <a name="User_Account_Control"></a>   
 ## <a name="user-account-control"></a>Kullanıcı Hesabı Denetimi  
- Güvenliği, bir ana odağını [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] ve yenilik arasında mutlaka, daha yüksek ayrıcalık gerektiren uygulamalar ve hizmetler çalıştırılmasının engellenme olmadan standart (yönetici olmayan) kullanıcı olarak çalıştırmak kullanıcılara.  
+ Security'dir önemli odak noktası, [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] ve yenilikleri arasında olması, daha yüksek ayrıcalıklar gerektiren uygulamalar ve hizmetler çalışmasını engellenme olmadan standart (yönetici olmayan) kullanıcı olarak çalıştırmak kullanıcılar için.  
   
- İçinde [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)], çoğu uygulamalar standart veya bir yönetici belirteci ile sağlanır. Bir uygulama yönetim uygulaması tanımlanamaz, varsayılan olarak standart bir uygulama olarak başlatılır. Bir uygulama gibi yönetici tanımlanan önce başlatılan [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)] yükseltilmiş uygulamanın çalışmasına izin kullanıcıya sorar. Bir uygulama veya yönetici kimlik bilgileri gerektiren sistem bileşeni çalıştırma izni isteklerini kadar Yöneticiler standart kullanıcı olarak çalıştığından kullanıcı yerel Administrators grubunun bir üyesi olsa bile, onay istemi varsayılan olarak görüntülenir.  
+ İçinde [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)], çoğu uygulama standart veya bir yönetim belirteci ile sağlanır. Bir uygulama yönetim uygulaması tanımlanamaz, varsayılan olarak standart bir uygulama olarak başlatılır. Bir uygulama gibi yönetici tanımlanan önce başlatılabilir, [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)] kullanıcıdan Uygulamayı yükseltilmiş çalıştırmak için bir onay ister. Bir uygulama veya yönetici kimlik bilgileri gerektiren sistem bileşeni çalıştırma izni isteklerini kadar Yöneticiler standart kullanıcı olarak çalıştığından, kullanıcı yerel Administrators grubunun üyesi olsa bile varsayılan olarak onay istemi görüntülenir.  
   
 <a name="Tasks_Requiring_Higher_Privileges"></a>   
 ## <a name="tasks-requiring-higher-privileges"></a>Daha yüksek ayrıcalıklar gerektiren görevler  
- Bir kullanıcının yönetici ayrıcalıkları gerektiren bir görevi gerçekleştirmek çalıştığında [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)] kullanıcı devam etmek onay için soran bir iletişim kutusu gösterir. Bu iletişim kutusunu işlem içi iletişimi, korumalı kötü amaçlı yazılımları kullanıcı girişi benzetimi yapamaz için. Benzer şekilde, masaüstü oturum açma ekranı normalde başka işlemler tarafından erişilemez.  
+ Bir kullanıcının yönetici ayrıcalıkları gerektiren bir görevi gerçekleştirmeye çalıştığında [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)] kullanıcı devam etmek onay için soran bir iletişim kutusu sunar. Bu iletişim kutusunu, böylece kötü amaçlı yazılım, kullanıcı girişini benzetimi yapamaz çapraz işlem iletişiminden korunur. Benzer şekilde, masaüstü oturum açma ekranında normalde başka işlemler tarafından erişilemez.  
   
- UI Otomasyon istemcileri diğer işlemler, bazıları daha yüksek bir ayrıcalık düzeyinde belki de çalıştıran ile iletişim kurması gerekir. İstemciler ayrıca diğer işlemler için normal olarak görünmez sistem iletişim kutuları erişimi gerekebilir. Bu nedenle, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] istemciler sistem tarafından güvenilir olması gerekir ve özel ayrıcalıklarıyla çalıştırmanız gerekir.  
+ UI Otomasyon istemcileri diğer işlemler, belki de daha yüksek bir ayrıcalık düzeyinde çalıştırmak bunlardan bazıları ile iletişim kurması gerekir. İstemciler ayrıca diğer işlemler için normal olarak görünür olmayan sistem iletişim kutularına erişim gerekebilir. Bu nedenle, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] istemciler sistem tarafından güvenilir ve özel ayrıcalıklarıyla çalıştırmanız gerekir.  
   
  Daha yüksek bir ayrıcalık düzeyinde çalışan uygulamalarla iletişim kurmak için güvenilecek şekilde uygulamaların yeniden imzalanması gerekir.  
   
 <a name="Manifest_Files"></a>   
-## <a name="manifest-files"></a>Dosyaları bildirimi  
- Korumalı sistem erişmek için [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)], uygulamaları yerleşik, bildirim dosyasında özel bir öznitelik içeren bir bildirim dosyası ile. Bu `uiAccess` özniteliği dahil `requestedExecutionLevel` etiketi, aşağıdaki gibi:  
+## <a name="manifest-files"></a>Bildirim dosyaları  
+ Sonlanmakta erişim kazanmak için [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)], uygulama yerleşik, bildirim dosyasında bir özel özniteliği içeren bir bildirim dosyası ile. Bu `uiAccess` özniteliği dahil `requestedExecutionLevel` , aşağıda gösterildiği gibi etiketleyin:  
   
  `<trustInfo xmlns="urn:0073chemas-microsoft-com:asm.v3">`  
   
@@ -57,8 +57,8 @@ ms.locfileid: "33400204"
   
  `</trustInfo>`  
   
- Değeri `level` özniteliği bu kodda yalnızca bir örnek verilmiştir.  
+ Değerini `level` bu kodu özniteliği, yalnızca bir örnek verilmiştir.  
   
- `UIAccess` Varsayılan olarak; "false" diğer bir deyişle, öznitelik atlanırsa veya derleme için hiçbir bildirim ise, uygulama korumalı erişim kazanmak mümkün olmaz [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)].  
+ `UIAccess` "varsayılan olarak; false" diğer bir deyişle, öznitelik belirtilmezse veya derleme için hiçbir bildirim ise, uygulama koruma için erişim elde etmek mümkün olmayacaktır [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)].  
   
- Daha fazla bilgi için [!INCLUDE[TLA#tla_longhorn2](../../../includes/tlasharptla-longhorn2-md.md)] güvenlik, uygulamaları imzalamak ve derleme bildirimlerinin oluşturma gördüğünüz "Developer en iyi yöntemler ve yönergeleri için uygulama içinde bir en az ayrıcalıklı ortamında" [MSDN](http://msdn.microsoft.com/library/default.asp?url=/library/dnlong/html/AccProtVista.asp).
+ Daha fazla bilgi için [!INCLUDE[TLA#tla_longhorn2](../../../includes/tlasharptla-longhorn2-md.md)] güvenlik, uygulamaları imzalamak ve derleme bildirimleri oluşturma bakın "Geliştirici en iyi yöntemler ve yönergeleri için uygulamalar bir en az ayrıcalıklı ortam" [MSDN](https://msdn.microsoft.com/library/default.asp?url=/library/dnlong/html/AccProtVista.asp).

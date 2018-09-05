@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 1b612c7e-2381-4a7c-b07a-77030415f2a3
 ms.openlocfilehash: a9a83f64b7ea0de275631d7d3b8d2755671223ce
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43418084"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43659781"
 ---
 # <a name="how-to-create-a-custom-tracking-participant"></a>Nasıl yapılır: özel izleme Katılımcısı oluşturma
 İş akışı izleme, iş akışı yürütme durumunu görünürlük sağlar. İş akışı çalışma zamanı iş akışı yaşam döngüsü olayları, etkinlik yaşam döngüsü olayları, yer işareti harcanması ve hataları tanımlayan izleme kayıtları gösterir. Bu izleme kayıtları izleme katılımcıları tarafından tüketilir. Windows Workflow Foundation (WF) izleme kayıtları için olay izleme Windows (ETW) olayları olarak yazan standart izleme katılımcı içerir. Gereksinimlerinizi karşılamıyorsa, özel izleme katılımcı de yazabilirsiniz. Bu öğretici adım özel izleme katılımcı ve çıktısını yakalamak izleme profili oluşturmayı açıklar `WriteLine` etkinlikleri ve böylece kullanıcıya gösterilir.  

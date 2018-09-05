@@ -5,12 +5,12 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: 553b0a5e75364bc5c294867852265575fb9271b6
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: e5e537d239bd69cb7a95ae82edbdb82144c700a1
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935506"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43554154"
 ---
 # <a name="objects-c-programming-guide"></a>Nesneler (C# Programlama Kılavuzu)
 Bir sınıf veya yapı tanımı türü neler yapabileceğinizi belirten gibi plandır. Bir temel olarak ayrılmış ve şema göre yapılandırılmış bir bellek bloğunu nesnedir. Bir program, aynı sınıfın birçok nesne oluşturabilir. Nesne örneği olarak da adlandırılır ve adlandırılmış bir değişkeni veya bir dizi veya koleksiyon depolanabilir. İstemci kodu yöntemleri çağırın ve nesneyi genel özelliklerine erişmek için bu değişkenleri kullanır koda karşılık gelir. Bir nesne yönelimli dil C# gibi bir programın normal dinamik olarak etkileşim sahip birden çok nesne oluşur.  
@@ -60,11 +60,12 @@ Bir sınıf veya yapı tanımı türü neler yapabileceğinizi belirten gibi pla
   
 -   [Olaylar](../../../csharp/programming-guide/events/index.md)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [object](../../../csharp/language-reference/keywords/object.md)  
- [Devralma](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
- [class](../../../csharp/language-reference/keywords/class.md)  
- [struct](../../../csharp/language-reference/keywords/struct.md)  
- [new İşleci](../../../csharp/language-reference/keywords/new-operator.md)  
- [Ortak Tür Sistemi](../../../standard/base-types/common-type-system.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [object](../../../csharp/language-reference/keywords/object.md)  
+- [Devralma](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
+- [class](../../../csharp/language-reference/keywords/class.md)  
+- [struct](../../../csharp/language-reference/keywords/struct.md)  
+- [new İşleci](../../../csharp/language-reference/keywords/new-operator.md)  
+- [Ortak Tür Sistemi](../../../standard/base-types/common-type-system.md)

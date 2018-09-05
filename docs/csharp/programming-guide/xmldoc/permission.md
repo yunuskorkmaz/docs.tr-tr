@@ -1,5 +1,5 @@
 ---
-title: '&lt;izin&gt; (C# programlama Kılavuzu)'
+title: '&lt;izni&gt; (C# programlama Kılavuzu)'
 ms.date: 07/20/2015
 f1_keywords:
 - permission
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <permission> C# XML tag
 - permission C# XML tag
 ms.assetid: 769e93fe-8404-443f-bf99-577aa42b6a49
-ms.openlocfilehash: 815d303c9cfbf01588f5f2877e9f87a7ebbea9a8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1447541f7e093a7cf434702368bdce0d07c4908b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321483"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43558595"
 ---
-# <a name="ltpermissiongt-c-programming-guide"></a>&lt;izin&gt; (C# programlama Kılavuzu)
+# <a name="ltpermissiongt-c-programming-guide"></a>&lt;izni&gt; (C# programlama Kılavuzu)
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
@@ -24,21 +24,22 @@ ms.locfileid: "33321483"
   
 #### <a name="parameters"></a>Parametreler  
  cref = " `member`"  
- Bir üye ya da geçerli derleme ortamından çağrılacak kullanılabilir alan başvuru. Verilen code öğesi var ve çevirir derleyici denetler `member` XML çıktısında kurallı öğesi adı. *üye* çift tırnak işaretleri içinde görünmesi gerekir ("").  
+ Bir üye veya geçerli derleme ortamdan çağrılacak kullanılabilir alan başvuru. Derleyici belirli kod öğesi var. çevirir olup olmadığını denetler ve `member` kurallı öğesi adı ' % s'çıkış XML dosyası. *üye* çift tırnak içinde yer almalıdır ("").  
   
- Genel bir tür cref başvuru oluşturma hakkında daha fazla bilgi için bkz: [ \<bkz >](../../../csharp/programming-guide/xmldoc/see.md).  
+ Genel tür cref başvuru oluşturma hakkında daha fazla bilgi için bkz: [ \<bakın >](../../../csharp/programming-guide/xmldoc/see.md).  
   
  `description`  
  Üye erişimi açıklaması.  
   
 ## <a name="remarks"></a>Açıklamalar  
- \<İzni > etiketi üyesi erişim belge olanak sağlar. <xref:System.Security.PermissionSet> Sınıfı üyesi erişmesine olanak sağlar.  
+ \<İzni > etiketi üyenin erişim belge olanak tanır. <xref:System.Security.PermissionSet> Sınıf üyesi erişimi belirtmenize olanak sağlar.  
   
- İle derleme [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) bir dosyaya işlem belgesi açıklamaları için.  
+ Derleme [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) işlem belgeleri açıklamaları için bir dosya için.  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[csProgGuideDocComments#8](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/permission_1.cs)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [Belge Açıklamaları için Önerilen Etiketler](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [Belge Açıklamaları için Önerilen Etiketler](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

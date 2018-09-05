@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 ms.assetid: 9e369e99-ea4a-49ff-aed2-9fdf61091a48
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 2baa99ddaf5de60407b233b5a6ea013ad87401f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3ff8c5b08bb50b894511d1f9bdd28ddb2683d13b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508067"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672753"
 ---
 # <a name="custom-secure-metadata-endpoint"></a>Özel Güvenli Meta Veri Uç Noktaları
-Bu örnek bir hizmeti meta veri olmayan exchange bağlamaları birini kullanan bir güvenli meta veri uç noktası ile uygulama ve nasıl yapılandırılacağı gösterilmektedir [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) veya fetch istemcileri Bu tür bir meta veri uç noktasından meta veriler. İki sistem tarafından sağlanan bağlamalar meta veri uç noktalarını gösterme için kullanılabilir: mexHttpBinding ve mexHttpsBinding. mexHttpBinding meta veri uç noktasına HTTP üzerinden güvenli olmayan bir biçimde göstermek için kullanılır. mexHttpsBinding meta veri uç noktasına HTTPS üzerinden güvenli bir şekilde kullanıma sunmak için kullanılır. Bu örnek, güvenli meta veri kullanan uç noktasını kullanıma sunmak verilmektedir <xref:System.ServiceModel.WSHttpBinding>. Bağlama üzerinde güvenlik ayarlarını değiştirmek istediğiniz ancak HTTPS kullanmak istemediğiniz durumlarda yapmak istiyor. MexHttpsBinding kullanırsanız, meta veri uç noktası güvenli olacaktır, ancak bağlama ayarlarını değiştirmek için bir yolu yoktur.  
+Bu örnek, bir hizmeti meta veri olmayan exchange bağlamaları birini kullanan bir güvenli meta veri uç noktası ile uygulama ve nasıl yapılandırılacağını gösterir. [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) veya getirilecek istemcileri Böyle bir meta veri uç noktası meta verileri. Meta veri uç noktalarını açığa çıkarmak için kullanılabilen iki sistem tarafından sağlanan bağlamaları vardır: mexHttpBinding ve mexHttpsBinding. mexHttpBinding meta veri uç noktası güvenli olmayan bir yöntemle HTTP üzerinden kullanıma sunmak için kullanılır. mexHttpsBinding meta veri uç noktasına HTTPS üzerinden güvenli bir şekilde kullanıma sunmak için kullanılır. Bu örnek gösterir kullanarak bir güvenli meta veri uç noktası nasıl sunacağınızı öğrenin <xref:System.ServiceModel.WSHttpBinding>. Bu bağlama üzerinde güvenlik ayarlarını değiştirmek istediğiniz, ancak HTTPS kullanmak istemiyorsanız ne yapılacağını istersiniz. MexHttpsBinding kullanırsanız, meta veri uç noktası güvenli olacaktır, ancak bağlama ayarlarını değiştirmek için bir yolu yoktur.  
   
 > [!NOTE]
->  Kurulum yordamı ve yapı yönergeleri Bu örnek için bu konunun sonunda yer alır.  
+>  Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.  
   
 ## <a name="service"></a>Hizmet  
- Bu örnek hizmetinde iki uç nokta vardır. Uygulama uç noktasını hizmet `ICalculator` üzerinde sözleşme bir `WSHttpBinding` ile `ReliableSession` etkin ve `Message` sertifikaları kullanan güvenliği. Meta veri uç noktasının de kullanır `WSHttpBinding`, aynı güvenlik ayarlarına sahip ancak hiçbir `ReliableSession`. İlgili yapılandırma şöyledir:  
+ Bu hizmet, iki uç nokta vardır. Uygulama uç noktasını hizmet `ICalculator` üzerinde sözleşme bir `WSHttpBinding` ile `ReliableSession` etkin ve `Message` sertifikaları kullanan güvenliği. Meta veri uç noktası da kullanan `WSHttpBinding`, aynı güvenlik ayarlarına sahip, ancak olmadan `ReliableSession`. İlgili yapılandırma şu şekildedir:  
   
 ```xml  
 <services>   
@@ -52,20 +52,20 @@ Bu örnek bir hizmeti meta veri olmayan exchange bağlamaları birini kullanan b
  </bindings>  
 ```  
   
- Birçok diğer örnekleri varsayılan meta veri uç noktasının kullanır `mexHttpBinding`, güvenli değil. Meta verileri kullanarak burada güvenliği `WSHttpBinding` ile `Message` güvenlik. Meta veri istemcilerin bu meta verilerini almak sırayla bunlar eşleşen bir bağlama ile yapılandırılmalıdır. Bu örnek iki tür istemcileri gösterir.  
+ Birçok diğer örnekleri varsayılan meta veri uç noktası kullanan `mexHttpBinding`, güvenli değil. Meta veriler kullanılarak burada güvenli `WSHttpBinding` ile `Message` güvenlik. Bu meta verilerini almak meta verileri istemciler için sırada, bunlar ile eşleşen bir bağlama yapılandırılmalıdır. Bu örnek, iki istemci gösterir.  
   
- İlk istemci Svcutil.exe meta veri Getir ve istemci kodu ve tasarım zamanında yapılandırma oluşturmak üzere kullanır. Hizmet için meta veriler varsayılan olmayan bağlama kullandığından, böylece bu bağlama işlemini kullanma hizmetinden meta verileri alabilir Svcutil.exe aracı özellikle yapılandırılması gerekir.  
+ İlk istemci, meta verileri getirmek ve istemci kodu ve tasarım zamanında yapılandırma üretmek için Svcutil.exe kullanır. Hizmet meta verileri için varsayılan olmayan bağlama kullandığından, bu bağlama kullanarak hizmetinden meta verilerini alabilmesi Svcutil.exe aracını özellikle yapılandırılması gerekir.  
   
- İkinci istemcinin kullandığı `MetadataResolver` dinamik olarak bilinen bir sözleşme meta verilerini getirmek ve dinamik olarak üretilen istemci işlemlerini çağırma.  
+ İkinci istemcinin kullandığı `MetadataResolver` dinamik olarak bilinen bir sözleşme için meta verileri getirmek ve ardından dinamik olarak oluşturulan istemci işlemleri çağırmak için.  
   
 ## <a name="svcutil-client"></a>Svcutil istemci  
- Ana bilgisayar için varsayılan bağlama kullanırken, `IMetadataExchange` uç noktası, o uç noktası adresi ile Svcutil.exe çalıştırabilirsiniz:  
+ Ana bilgisayar için varsayılan bağlama kullanırken, `IMetadataExchange` uç nokta, bu uç nokta adresi ile Svcutil.exe çalıştırabilirsiniz:  
   
 ```  
 svcutil http://localhost/servicemodelsamples/service.svc/mex  
 ```  
   
- ve bu çalışır. Ancak bu örnekte, sunucu meta verileri barındırmak için varsayılan olmayan bir uç kullanır. Bu nedenle Svcutil.exe doğru bağlama kullanmak için talimat gerekir. Bu yapılabilir bir Svcutil.exe.config dosyası kullanarak.  
+ ve çalışır. Ancak bu örnekte, sunucu meta verileri barındırmak için varsayılan olmayan bir uç nokta kullanır. Bu nedenle Svcutil.exe doğru bağlama kullanması talimat gerekir. Bu yapılabilir Svcutil.exe.config dosyasını kullanarak.  
   
  Svcutil.exe.config dosya normal istemci yapılandırma dosyası gibi görünüyor. Sözleşme ve istemci uç nokta adı yalnızca olağan dışı yönleri şunlardır:  
   
@@ -77,26 +77,26 @@ svcutil http://localhost/servicemodelsamples/service.svc/mex
           contract="IMetadataExchange" />  
 ```  
   
- Uç nokta adı burada meta verileri barındırılan ve uç nokta sözleşme olmalıdır adres düzeni adı olmalıdır `IMetadataExchange`. Bu nedenle, Svcutil.exe aşağıdaki gibi komut satırı ile çalıştırıldığında:  
+ Uç nokta adı düzeni adresinin nerede meta verileri barındırır ve uç nokta sözleşme olmalıdır olmalıdır `IMetadataExchange`. Bu nedenle, Svcutil.exe aşağıdaki gibi bir komut satırı ile çalıştırıldığında:  
   
 ```  
 svcutil http://localhost/servicemodelsamples/service.svc/mex  
 ```  
   
- "http" ve sözleşme adlı uç noktası için görünüyor `IMetadataExchange` meta veri uç noktası ile bağlama ve iletişim exchange davranışını yapılandırmak için. Örnek Svcutil.exe.config dosyasında kalan bağlama yapılandırması ve meta veri uç noktasının sunucunun yapılandırma ile eşleşmesi için davranış kimlik bilgilerini belirtir.  
+ "http" ve sözleşme adlı uç nokta için görünüyor `IMetadataExchange` bağlama ve iletişim exchange davranışını meta veri uç noktası ile yapılandırılır. Örnek Svcutil.exe.config dosyasında geri kalanını bağlama yapılandırma ve meta veri uç sunucu yapılandırmasıyla eşleşecek şekilde davranış kimlik bilgilerini belirtir.  
   
- Sırayla Svcutil.exe Svcutil.exe.config yapılandırmasında alması için Svcutil.exe yapılandırma dosyası ile aynı dizinde olmalıdır. Sonuç olarak, yükleme konumundan Svcutil.exe Svcutil.exe.config dosyasını içeren dizine kopyalamalısınız. Ardından bu dizininden aşağıdaki komutu çalıştırın:  
+ Sırayla Svcutil.exe Svcutil.exe.config yapılandırmayı alması için Svcutil.exe yapılandırma dosyası ile aynı dizinde olmalıdır. Sonuç olarak, yükleme konumundan Svcutil.exe Svcutil.exe.config dosyasını içeren dizine kopyalamalısınız. Ardından söz konusu dizinde, aşağıdaki komutu çalıştırın:  
   
 ```  
 .\svcutil.exe http://localhost/servicemodelsamples/service.svc/mex  
 ```  
   
- Başında ". \\"Svcutil.exe kopyasını bu dizindeki (bir karşılık gelen Svcutil.exe.config olan) çalıştığını sağlar.  
+ Başında ". \\"Svcutil.exe kopyasını bu dizinde (bir karşılık gelen Svcutil.exe.config olan) çalıştırılmasını sağlar.  
   
 ## <a name="metadataresolver-client"></a>MetadataResolver istemci  
- İstemci sözleşme ve tasarım zamanında meta verilere nasıl biliyorsa, istemci dinamik olarak bağlama ve uygulama uç noktalarını kullanarak adresini bulabilirsiniz `MetadataResolver`. Bu örnek istemcisi bu, bağlama ve tarafından kullanılan kimlik bilgilerini nasıl yapılandırılacağını gösteren gösterir `MetadataResolver` oluşturma ve yapılandırma tarafından bir `MetadataExchangeClient`.  
+ Sözleşme ve tasarım zamanında meta verilere nasıl istemci bildiği istemci dinamik olarak bağlama ve adresini kullanarak bir uygulama uç noktalarını bulabilirsiniz `MetadataResolver`. Bu örnek istemci bu, bağlama ve tarafından kullanılan kimlik bilgileri nasıl yapılandırılacağını gösteren gösterir. `MetadataResolver` oluşturarak ve yapılandırarak bir `MetadataExchangeClient`.  
   
- Svcutil.exe.config içinde görünen aynı bağlama ve sertifika bilgileri imperatively üzerinde belirtilebilir `MetadataExchangeClient`:  
+ Svcutil.exe.config içinde görünen bağlama ve sertifika bilgileri kesin üzerinde belirtilebilir `MetadataExchangeClient`:  
   
 ```  
 // Specify the Metadata Exchange binding and its security mode  
@@ -112,7 +112,7 @@ mexClient.SoapCredentials.ServiceCertificate.SetDefaultCertificate(    StoreLoca
     X509FindType.FindBySubjectName, "localhost");  
 ```  
   
- İle `mexClient` yapılandırılmış, biz biz ilgilendiğiniz ve kullanmak sözleşmeleri numaralandırabilir `MetadataResolver` bu sözleşmelerle bitiş noktaları listesini getirmek için:  
+ İle `mexClient` yapılandırılmış, biz ilgilendiğiniz ve kullanırız anlaşmalar numaralandırabilirsiniz `MetadataResolver` uç noktaları ile bu sözleşme listesini almak için:  
   
 ```  
 // The contract we want to fetch metadata for  
@@ -124,67 +124,67 @@ EndpointAddress mexAddress = new    EndpointAddress(ConfigurationManager.AppSett
 ServiceEndpointCollection endpoints =    MetadataResolver.Resolve(contracts, mexAddress, mexClient);  
 ```  
   
- Biz bağlama ve adresini başlatmak için bu uç bilgilerinden son kullanabilirsiniz bir `ChannelFactory` uygulama uç noktaları ile iletişim kanalı oluşturmak için kullanılır.  
+ Son olarak bu Uç noktalara bilgilerinden bağlamasını ve adresini başlatmak için kullanabilir miyiz bir `ChannelFactory` uygulama uç noktaları ile iletişim kurmak için Kanallar oluşturmak için kullanılır.  
   
 ```  
 ChannelFactory<ICalculator> cf = new    ChannelFactory<ICalculator>(endpoint.Binding, endpoint.Address);  
 ```  
   
- Kullanıyorsanız anahtar Bu örnek istemcisi, göstermek için noktasıdır `MetadataResolver`ve özel bağlamaları veya meta veri exchange iletişimi için davranışlar belirtmelisiniz, kullanabileceğiniz bir `MetadataExchangeClient` bu özel ayarları belirtmek için.  
+ Kullanıyorsanız, göstermek için bu örnek istemci anahtar noktasıdır `MetadataResolver`ve özel bağlamalar veya meta veri değişimi iletişim için davranışlar belirtmelisiniz, kullanabileceğiniz bir `MetadataExchangeClient` bu özel ayarları belirtmek için.  
   
-#### <a name="to-set-up-and-build-the-sample"></a>Ayarlamak ve örneği oluşturmak için  
+#### <a name="to-set-up-and-build-the-sample"></a>Ayarlama ve örneği oluşturmak için  
   
-1.  Gerçekleştirmiş emin olun [kerelik Kurulum prosedürü Windows Communication Foundation örnekleri için](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Çözümü derlemek için'ndaki yönergeleri izleyin [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Çözümü derlemek için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-#### <a name="to-run-the-sample-on-the-same-machine"></a>Aynı makinede örneği çalıştırmak için  
+#### <a name="to-run-the-sample-on-the-same-machine"></a>Örneği aynı makinede çalıştırmak için  
   
-1.  Setup.bat örnek yükleme klasöründen çalıştırın. Bu örneği çalıştırmak için gerekli tüm sertifikalar yükler. Setup.bat gelen setupCertTool.bat çalıştırarak yüklü FindPrivateKey.exe aracı kullandığına dikkat edin [kerelik Kurulum prosedürü Windows Communication Foundation örnekleri için](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Setup.bat örnek yükleme klasöründen çalıştırın. Bu örneği çalıştırmak için gerekli olan tüm sertifikaları yükler. Setup.bat setupCertTool.bat gelen çalıştırarak yüklü FindPrivateKey.exe aracı kullanmaktadır [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  İstemci uygulaması \MetadataResolverClient\bin veya \SvcutilClient\bin çalıştırın. İstemci etkinliği istemci konsol uygulaması görüntülenir.  
+2.  İstemci uygulaması \MetadataResolverClient\bin veya \SvcutilClient\bin çalıştırın. İstemci etkinliği istemci konsol uygulamasında görüntülenir.  
   
-3.  İstemci ve hizmet iletişim kurabildiğinden değilseniz bkz [sorun giderme ipuçları](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+3.  İstemci ve hizmet iletişim kurabildiğini bilmiyorsanız bkz [sorun giderme ipuçları](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
-4.  Sertifikaları örnekle tamamladığınızda Cleanup.bat çalıştırarak kaldırın. Diğer güvenlik örnekleri aynı sertifikaları kullanır.  
+4.  Örnek ile tamamladığınızda Cleanup.bat çalıştırarak sertifikaları kaldırın. Diğer güvenlik örnekleri aynı sertifikalarını kullanın.  
   
-#### <a name="to-run-the-sample-across-machines"></a>Makine genelinde örneği çalıştırmak için  
+#### <a name="to-run-the-sample-across-machines"></a>Makineler arasında örneği çalıştırmak için  
   
-1.  Sunucu üzerinde çalışan `setup.bat service`. Çalışan `setup.bat` ile `service` bağımsız değişkeni makinenin tam etki alanı adı ile bir hizmet sertifikası oluşturur ve hizmet sertifikası Service.cer adlı bir dosyaya aktarır.  
+1.  Sunucu üzerinde çalışan `setup.bat service`. Çalışan `setup.bat` ile `service` bağımsız değişkeni makinenin tam etki alanı adı ile bir hizmet sertifikası oluşturur ve hizmet sertifikası Service.cer adlı bir dosyaya dışarı aktarır.  
   
-2.  Sunucu üzerinde Web.config dosyasını yeni sertifika yansıtacak şekilde düzenleyin. Diğer bir deyişle, değişiklik `findValue` özniteliğini [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md) makinenin tam etki alanı adı öğesi.  
+2.  Sunucu üzerinde Web.config dosyasını yeni sertifika adını yansıtacak şekilde düzenleyin. Diğer bir deyişle, değişiklik `findValue` özniteliğini [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md) öğesi makinenin tam etki alanı adı.  
   
-3.  Service.cer dosya hizmeti dizininden istemci makinesinde istemci dizinine kopyalayın.  
+3.  Service.cer dosya hizmeti dizininden istemci makine üzerinde istemci dizinine kopyalayın.  
   
-4.  İstemci üzerinde çalışan `setup.bat client`. Çalışan `setup.bat` ile `client` bağımsız değişkeni Client.com adlı bir istemci sertifikası oluşturur ve istemci sertifikasını Client.cer adlı bir dosyaya aktarır.  
+4.  Bir istemcide çalışmasına `setup.bat client`. Çalışan `setup.bat` ile `client` bağımsız değişkeni Client.com adlı bir istemci sertifikası oluşturur ve istemci sertifikasını Client.cer adlı bir dosyaya dışarı aktarır.  
   
-5.  App.config dosyasında `MetadataResolverClient` istemci makinede hizmetinizin yeni adresi eşleşecek şekilde mex uç noktası adresi değerini değiştirin. Bunun için localhost sunucunun tam etki alanı adı ile değiştirerek. Ayrıca metadataResolverClient.cs dosyasındaki "localhost" oluşumunun yeni hizmet sertifikası adı (sunucunun tam etki alanı adı) değiştirin. Aynı şey SvcutilClient proje App.config için yapın.  
+5.  App.config dosyasında `MetadataResolverClient` istemci makinede hizmetinizin yeni adresiyle eşleşecek şekilde mex uç nokta adresi değerini değiştirin. Localhost sunucunun tam etki alanı adıyla değiştirerek bunu yapabilirsiniz. Ayrıca metadataResolverClient.cs dosyasındaki "localhost" oluşumunu yeni hizmet sertifika adı (sunucusunun tam etki alanı adı) değiştirin. Aynı şeyi SvcutilClient projenizin App.config için yapın.  
   
-6.  Client.cer dosyasını istemci dizininden sunucusunda hizmet dizinine kopyalayın.  
+6.  Client.cer dosyayı istemci dizin sunucusundaki hizmet dizinine kopyalayın.  
   
-7.  İstemci üzerinde çalışan `ImportServiceCert.bat`. Bu hizmet sertifikası Service.cer dosyadan Currentuser'a - TrustedPeople deposunu alır.  
+7.  Bir istemcide çalışmasına `ImportServiceCert.bat`. Bu hizmet sertifikası Service.cer dosyasından CurrentUser - TrustedPeople deposuna aktarır.  
   
-8.  Sunucu üzerinde çalışan `ImportClientCert.bat`, bu istemci sertifikasını Client.cer dosyasından LocalMachine - TrustedPeople deposunu alır.  
+8.  Sunucu üzerinde çalışan `ImportClientCert.bat`, bu istemci sertifikasını Client.cer dosyasından LocalMachine - TrustedPeople deposu içeri aktarır.  
   
 9. Hizmeti makinede Visual Studio'da hizmet projeyi oluşturun ve çalıştığını doğrulamak için bir web tarayıcısında Yardım sayfasını seçin.  
   
 10. İstemci makinesinde MetadataResolverClient veya SvcutilClient VS'den çalıştırın.  
   
-    1.  İstemci ve hizmet iletişim kurabildiğinden değilseniz bkz [sorun giderme ipuçları](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+    1.  İstemci ve hizmet iletişim kurabildiğini bilmiyorsanız bkz [sorun giderme ipuçları](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
-#### <a name="to-clean-up-after-the-sample"></a>Örnek sonra temizlemek için  
+#### <a name="to-clean-up-after-the-sample"></a>Sonra örnek temizlemek için  
   
--   Örnek çalıştıran tamamladıktan sonra Cleanup.bat samples klasöründen çalıştırın.  
+-   Bu örneği çalıştırmadan tamamladıktan sonra Cleanup.bat samples klasöründe çalıştırın.  
   
     > [!NOTE]
-    >  Bu komut dosyası, bu örnek makine genelinde çalıştırırken bir istemcide hizmet sertifikaları kaldırmaz. Makine genelinde sertifikaları kullanan Windows Communication Foundation (WCF) örnekleri çalıştırırsanız, Currentuser'a - TrustedPeople deposu yüklü hizmet sertifikalarını temizlemek emin olun. Bunu yapmak için aşağıdaki komutu kullanın: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`. Örneğin: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+    >  Bu betik, bu örnek makinelerde çalışan hizmet sertifikaları bir istemci üzerinde kaldırmaz. Makinelerde sertifikaları kullanan bir Windows Communication Foundation (WCF) örnekleri çalıştırırsanız, CurrentUser - TrustedPeople deposu yüklü hizmet sertifikalarını Temizle emin olun. Bunu yapmak için aşağıdaki komutu kullanın: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`. Örneğin: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Metadata\CustomMexEndpoint`  
   

@@ -5,12 +5,12 @@ ms.date: 08/06/2018
 helpviewer_keywords:
 - nullable types [C#], identifying
 ms.assetid: d4b67ee2-66e8-40c1-ae9d-545d32c71387
-ms.openlocfilehash: bb7ab2b8c13c2b8b4b6cd60e7959a391cd7e75c1
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: c65f80974154d81b5ddf239b617eeeda68434e09
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42754962"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43555892"
 ---
 # <a name="how-to-identify-a-nullable-type-c-programming-guide"></a>Nasıl yapılır: boş değer atanabilir bir tür (C# programlama Kılavuzu) belirleme
 
@@ -32,8 +32,8 @@ Aşağıdaki örnekte gösterilen kod örneği boş değer atanabilir bir tür o
 
 [!code-csharp-interactive[whether an instance is of a nullable type](../../../../samples/snippets/csharp/programming-guide/nullable-types/IdentifyNullableType.cs#4)]
   
-## <a name="see-also"></a>Ayrıca bkz.
+## <a name="see-also"></a>Ayrıca Bkz.
 
-[Boş değer atanabilir türler](index.md)  
-[Boş değer atanabilir türleri kullanma](using-nullable-types.md)  
-<xref:System.Nullable.GetUnderlyingType%2A>  
+- [Boş değer atanabilir türler](index.md)  
+- [Boş değer atanabilir türleri kullanma](using-nullable-types.md)  
+- <xref:System.Nullable.GetUnderlyingType%2A>  

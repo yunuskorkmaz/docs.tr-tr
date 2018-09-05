@@ -14,11 +14,11 @@ ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 653a39d1e217d0478ff7c9b01c6ac146fe6b5fac
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43419153"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43561255"
 ---
 # <a name="globalizing-and-localizing-net-applications"></a>.NET uygulamaları Genelleştirme ve yerelleştirme
 Geliştirme bir [dünya çapında kullanılmaya hazır uygulama](https://msdn.microsoft.com/goglobal/bb978433.aspx), bir veya daha fazla dile yerelleştirilebilen bir uygulama da dahil olmak üzere, üç adımdan oluşur: genelleştirme, yerelleştirme gözden geçirme ve Yerelleştirme.  

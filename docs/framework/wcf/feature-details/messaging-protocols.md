@@ -3,11 +3,11 @@ title: Mesajlaşma Protokolleri
 ms.date: 03/30/2017
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
 ms.openlocfilehash: 3e56636e8364eec333f9585a0f62f6510561d1cc
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43405065"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43563284"
 ---
 # <a name="messaging-protocols"></a>Mesajlaşma Protokolleri
 Windows Communication Foundation (WCF) kanal yığın kodlama ve taşıma kanalları, kablo biçimini iç ileti gösterimine dönüştürmek ve belirli bir kullanarak göndermek için kullanır. HTTP Web Hizmetleri birlikte çalışabilirlik için kullanılan en yaygın taşıma olduğunda ve XML tabanlı SOAP 1.1 ve SOAP 1.2 ileti aktarım en iyi duruma getirme mekanizması (MTOM) Web Hizmetleri tarafından kullanılan en yaygın kodlamaları desteklenmektedir.  

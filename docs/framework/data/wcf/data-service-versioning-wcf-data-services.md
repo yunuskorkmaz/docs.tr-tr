@@ -7,11 +7,11 @@ helpviewer_keywords:
 - WCF Data Services, versioning
 ms.assetid: e3e899cc-7f25-4f67-958f-063f01f79766
 ms.openlocfilehash: 9a92346267012d3651d04648b357bbf530097e34
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43484743"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43565645"
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>Veri Hizmeti sürümü oluşturma (WCF Data Services)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Veri Hizmetleri oluşturun, böylece istemciler URI'lerini kullanarak kaynakları, bir veri modelini temel olarak veri erişim sağlar. OData hizmet işlemleri tanımı da destekler. İlk dağıtım ve potansiyel olarak kendi ömürlerine sırasında birkaç kez sonra çeşitli iş gereksinimlerini, bilgi teknolojisi gereksinimlerini değiştirme gibi nedenlerle, değiştirilecek veya diğer sorunları gidermek için şu veri hizmetlerini gerekebilir. Mevcut bir veri hizmetine değişiklik yaptığınızda olup verilerinizi yeni bir sürümü tanımlamak dikkate almanız gereken hizmet ve istemci uygulamalarınız üzerindeki etkiyi en aza indirmek en iyi nasıl. Bu konu, ne zaman ve nasıl bir veri hizmeti, yeni bir sürümünü oluşturmak yönergeler sağlar. WCF Veri Hizmetleri bir exchange istemcileri ve farklı sürümlerini OData protokolünü destekleyen veri hizmetleri arasında nasıl işlediğini açıklar.

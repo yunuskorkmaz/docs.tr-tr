@@ -5,11 +5,11 @@ dev_langs:
 - vb
 ms.assetid: 801dff0f-2508-45aa-9416-f45d6887740c
 ms.openlocfilehash: 3a2c8949537c749ba30b116a0dc8131336de6092
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43399975"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43671588"
 ---
 # <a name="ref-cursor-parameters-in-an-oracledatareader"></a>Oracledatareader'da REF CURSOR parametreleri
 Bu Microsoft Visual Basic örnek REF CURSOR parametresiyle döndürür ve olarak değeri okuyan bir PL/SQL saklı yordamı yürüten bir <xref:System.Data.OracleClient.OracleDataReader>.  

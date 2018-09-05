@@ -3,11 +3,11 @@ title: Simge ve İşleç Başvurusu (F#)
 description: 'Simgeler ve F # programlama dilinin kullanılan işleçler hakkında bilgi edinin.'
 ms.date: 04/04/2018
 ms.openlocfilehash: a52fc7539027f0cf86a82223a5970d86d7ec60c5
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43457206"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43660440"
 ---
 # <a name="symbol-and-operator-reference"></a>Simge ve İşleç Başvurusu
 

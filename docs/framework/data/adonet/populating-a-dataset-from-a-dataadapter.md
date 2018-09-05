@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 3fa0ac7d-e266-4954-bfac-3fbe2f913153
 ms.openlocfilehash: d865f76b1a3e1ef72717fe790d3f1bc8895f8f58
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401139"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43557928"
 ---
 # <a name="populating-a-dataset-from-a-dataadapter"></a>Dataadapter'dan bir DataSet doldurma
 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] <xref:System.Data.DataSet> Sağlayan bir tutarlı ilişkisel programlama modeli bağımsız veri kaynağının veri bellekte gösterimidir. `DataSet` Tablolar, kısıtlamalar ve tablolar arasındaki ilişkileri içeren verileri eksiksiz bir kümesini temsil eder. Çünkü `DataSet` veri kaynağını, bağımsız bir `DataSet` uygulamaya yerel veri ve birden çok veri kaynaklarından alınan verileri içerebilir. Mevcut veri kaynaklarıyla etkileşim aracılığıyla denetlenir `DataAdapter`.  

@@ -3,11 +3,11 @@ title: Özel Bağlama Kesinliği
 ms.date: 03/30/2017
 ms.assetid: 6e13bf96-5de0-4476-b646-5f150774418d
 ms.openlocfilehash: dac98d2c08a207019b9ec5b18340afc02e62f836
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43398286"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560749"
 ---
 # <a name="custom-binding-imperative"></a>Özel Bağlama Kesinliği
 Örnek bir yapılandırma dosyası veya bir Windows Communication Foundation (WCF) oluşturulan istemci kullanmadan özel bağlamalar tanımlanacağını ve kullanılacağını kesinlik temelli kodun nasıl yazılacağını gösterir. Bu örnek HTTP taşıma ve güvenilir bir HTTP tabanlı bağlamayı oluşturmak için güvenilir oturum kanalı tarafından sağlanan özellikleri birleştirir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hesaplayıcı hizmet uygulayan.  

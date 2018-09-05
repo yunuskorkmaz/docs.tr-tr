@@ -2,18 +2,18 @@
 title: 'Nasıl yapılır: bir dize (C#) ayrıştırılamıyor'
 ms.date: 07/20/2015
 ms.assetid: 81e5686c-9658-42d8-a7e3-b11be0a2c98b
-ms.openlocfilehash: fe1ef6d601b97252eb2d146f28003cad352b2d84
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b6b955d2cc9a3ea0c6e17e68639ad7fc677c3fc7
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320150"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562291"
 ---
 # <a name="how-to-parse-a-string-c"></a>Nasıl yapılır: bir dize (C#) ayrıştırılamıyor
-Bu konuda, bir XML ağacı C# ' ta oluşturmak için bir dize ayrıştırma gösterilmektedir.  
+Bu konuda, C# dilinde bir XML ağacı oluşturmak için bir dizeyi ayrıştırmak gösterilmektedir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki C# kod bir dize ayrıştırmayı gösterir.  
+ Aşağıdaki C# kodu, bir dizeyi ayrıştırmak gösterilmektedir.  
   
 ```csharp  
 XElement contacts = XElement.Parse(  
@@ -45,5 +45,6 @@ XElement contacts = XElement.Parse(
 Console.WriteLine(contacts);  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [XML Ayrıştırma (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [XML Ayrıştırma (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)

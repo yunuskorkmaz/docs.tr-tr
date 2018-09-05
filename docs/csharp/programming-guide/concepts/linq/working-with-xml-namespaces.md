@@ -2,12 +2,12 @@
 title: XML ad alanları (C#) ile çalışma
 ms.date: 07/20/2015
 ms.assetid: 05cf4dc7-7b25-40f0-abc9-1bc35de4b48a
-ms.openlocfilehash: e00886281fbccd0e10706575483dd174d7d53052
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 4863794408adbfb8b51c4f125ee340eb718a5abe
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43416247"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43561960"
 ---
 # <a name="working-with-xml-namespaces-c"></a>XML ad alanları (C#) ile çalışma
 Bu bölümdeki konular açıklar nasıl [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ad alanlarını destekler.  
@@ -22,5 +22,6 @@ Bu bölümdeki konular açıklar nasıl [!INCLUDE[sqltecxlinq](~/includes/sqltec
 |[C# Dilinde Varsayılan Ad Alanlarının Kapsamı](../../../../csharp/programming-guide/concepts/linq/scope-of-default-namespaces.md)|Sorguları XML için varsayılan ad alanında yazmak için uygun yolu gösterir.|  
 |[Nasıl yapılır: XML ad alanları (C#) üzerinde sorgu yazma](../../../../csharp/programming-guide/concepts/linq/how-to-write-queries-on-xml-in-namespaces.md)|XML ad alanları XML sorgular için C# üzerinde LINQ belirtmek nasıl gösterir.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Programlama Kılavuzu (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [Programlama Kılavuzu (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

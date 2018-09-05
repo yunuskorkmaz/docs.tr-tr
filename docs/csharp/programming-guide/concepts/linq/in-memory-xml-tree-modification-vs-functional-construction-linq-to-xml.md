@@ -2,12 +2,12 @@
 title: Bellek içi XML ağacı değişikliği ve İşlevsel oluşturma (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: b5afc31d-a325-4ec6-bf17-0ff90a20ffca
-ms.openlocfilehash: 3e6d86ac11f10d7dbb3d270410415fb23acb2e01
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 836141185629683106698cc9b505c063de6c445e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43397805"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43661912"
 ---
 # <a name="in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml-c"></a>Bellek içi XML ağacı değişikliği ve İşlevsel oluşturma (LINQ to XML) (C#)
 Bir XML ağacı yerde değiştirme, bir XML belgesi şeklini değiştirmek için geleneksel bir yaklaşımdır. Tipik bir uygulama bir belge DOM gibi bir veri deposuna yükler ya da [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]; düğümleri eklediğinizde, düğümleri silin veya düğümler; içeriğini değiştirmek için bir programlama arabirimi kullanır ve ardından XML bir dosyaya kaydeder veya bir ağ üzerinden iletir.  
@@ -73,5 +73,6 @@ Console.WriteLine(newTree);
   
  Bu çok basit bir örneği, ancak felsefesi iki yaklaşım arasındaki farkı göstermek için kullanılır. İşlevsel yaklaşım daha büyük XML belgelerini dönüştürmek için büyük üretkenlik artışı sağlar.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [(LINQ to XML) XML ağaçlarını değiştirme (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [(LINQ to XML) XML ağaçlarını değiştirme (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

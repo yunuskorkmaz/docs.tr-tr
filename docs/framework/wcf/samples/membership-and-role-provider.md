@@ -3,11 +3,11 @@ title: Üyelik ve Rol Sağlayıcısı
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
 ms.openlocfilehash: bff100189c904706f3c7c886945383252ce7bfcb
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43405779"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43553155"
 ---
 # <a name="membership-and-role-provider"></a>Üyelik ve Rol Sağlayıcısı
 Üyelik ve rol sağlayıcısı örnek, bir hizmetin nasıl kullanabileceğinizi gösterir. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] kimliğini doğrulama ve yetkilendirme istemciler için üyelik ve rol sağlayıcıları.  

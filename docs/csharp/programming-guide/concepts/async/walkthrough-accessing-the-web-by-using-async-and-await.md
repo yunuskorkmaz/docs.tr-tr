@@ -2,21 +2,21 @@
 title: "İzlenecek yol: async kullanarak Web'e erişme ve await (C#)"
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
-ms.openlocfilehash: 33145f6a7ececd85e6eeaebb80a81f3075878761
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cb628941d53957356cfa49d81fb78f16369af86b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338136"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43558554"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>İzlenecek yol: async kullanarak Web'e erişme ve await (C#)
-Zaman uyumsuz ve bekleme özelliklerini kullanarak zaman uyumsuz programlar daha kolay ve sezgisel yazabilirsiniz. Zaman uyumlu kod gibi görünüyor zaman uyumsuz kod yazın ve daha zor geri arama işlevleri ve zaman uyumsuz kod genellikle kapsar devamlılıklar işlemek derleyici sağlayabilirsiniz.  
+Async ve await özelliklerini kullanarak zaman uyumsuz programları daha kolay ve sezgisel bir şekilde yazabilirsiniz. Zaman uyumlu kod gibi görünen zaman uyumsuz kod yazabilir ve zor geri çağırma işlevleri ve zaman uyumsuz kod genellikle kapsar devamlılıklar derleyici olanak tanır.  
   
- Async özelliği hakkında daha fazla bilgi için bkz: [zaman uyumsuz programlama ile async ve await (C#)](../../../../csharp/programming-guide/concepts/async/index.md).  
+ Async özelliği hakkında daha fazla bilgi için bkz. [Asynchronous Programming with async ve await (C#)](../../../../csharp/programming-guide/concepts/async/index.md).  
   
- Bu kılavuzda Web sitelerinin bir listesiyle bayt sayısını toplar zaman uyumlu bir Windows Presentation Foundation (WPF) uygulama başlar. İzlenecek yol sonra yeni özellikleri kullanarak zaman uyumsuz çözümünü uygulamaya dönüştürür.  
+ Bu izlenecek yol, Web sitelerinin bir listesiyle bayt sayısını toplar. zaman uyumlu bir Windows Presentation Foundation (WPF) uygulaması ile başlar. İzlenecek yol, yeni özellikleri kullanarak zaman uyumsuz bir çözümü uygulamaya ardından dönüştürür.  
   
- Uygulamaları kendiniz yapılandırmak istemiyorsanız, indirebilirsiniz [zaman uyumsuz örnek: Web gözden geçirme (C# ve Visual Basic) erişme](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f).  
+ Uygulamaları kendiniz yapılandırmak istemiyorsanız, indirebileceğiniz [zaman uyumsuz örneği: izlenecek yol (C# ve Visual Basic) erişme](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f).  
   
  Bu kılavuzda, aşağıdaki görevleri tamamlayın:  
   
@@ -30,7 +30,7 @@ Zaman uyumsuz ve bekleme özelliklerini kullanarak zaman uyumsuz programlar daha
   
 -   [Zaman uyumlu bir uygulama oluşturmak için](#synchronous)  
   
--   [Zaman uyumlu çözümü test etmek için](#testSynch)  
+-   [Zaman uyumlu bir çözümü test etmek için](#testSynch)  
   
 -   [Zaman uyumsuz bir yöntem GetURLContents dönüştürmek için](#GetURLContents)  
   
@@ -38,20 +38,20 @@ Zaman uyumsuz ve bekleme özelliklerini kullanarak zaman uyumsuz programlar daha
   
 -   [Zaman uyumsuz bir yöntem startButton_Click dönüştürmek için](#startButton)  
   
--   [Zaman uyumsuz çözümü test etmek için](#testAsynch)  
+-   [Zaman uyumsuz bir çözümü test etmek için](#testAsynch)  
   
--   [.NET Framework yöntemiyle yöntemi GetURLContentsAsync değiştirmek için](#GetURLContentsAsync)  
+-   [Bir .NET Framework yöntemi ile yöntem GetURLContentsAsync değiştirmek için](#GetURLContentsAsync)  
   
 -   [Örnek](#BKMK_CompleteCodeExamples)  
   
 > [!NOTE]
->  Örnekleri çalıştırmak için Visual Studio 2012 veya daha yeni ve .NET Framework 4.5 olmalıdır veya daha yeni bilgisayarınızda yüklü.  
+>  Yeni bilgisayarınızda yüklü veya örnekleri çalıştırmak için Visual Studio 2012 veya daha yeni ve .NET Framework 4.5 yüklü olmalıdır.  
   
 ###  <a name="CreateWPFApp"></a> Bir WPF uygulaması oluşturmak için  
   
 1.  Visual Studio'yu başlatın.  
   
-2.  Menü çubuğunda seçin **dosya**, **yeni**, **proje**.  
+2.  Menü çubuğunda, **dosya**, **yeni**, **proje**.  
   
      **Yeni proje** iletişim kutusu açılır.  
   
@@ -66,53 +66,53 @@ Zaman uyumsuz ve bekleme özelliklerini kullanarak zaman uyumsuz programlar daha
   
 1.  Visual Studio Kod Düzenleyicisi'nde seçin **MainWindow.xaml** sekmesi.  
   
-2.  Varsa **araç** pencere görünür, açık olmayan **Görünüm** menüsünde ve ardından **araç**.  
+2.  Varsa **araç kutusu** penceresi görünür ve açık değilse **görünümü** menüsünde ve ardından **araç kutusu**.  
   
-3.  Ekleme bir **düğmesini** denetim ve **TextBox** denetimini **MainWindow** penceresi.  
+3.  Ekleme bir **düğmesi** denetimi ve bir **TextBox** denetimini **MainWindow** penceresi.  
   
-4.  Vurgula **TextBox** denetim hem de **özellikleri** penceresinde, aşağıdaki değerleri ayarlayın:  
+4.  Vurgulama **TextBox** denetim hem de **özellikleri** penceresinde aşağıdaki değerleri ayarlayın:  
   
-    -   Ayarlama **adı** özelliğine `resultsTextBox`.  
+    -   Ayarlama **adı** özelliğini `resultsTextBox`.  
   
-    -   Ayarlama **yükseklik** 250 özelliğine.  
+    -   Ayarlama **yükseklik** 250 özelliği.  
   
     -   Ayarlama **genişliği** 500 özelliği.  
   
-    -   Üzerinde **metin** sekmesinde, Lucida Console veya genel tek aralıklı gibi aralıklı bir yazı tipi belirtin.  
+    -   Üzerinde **metin** sekmesinde, Lucida konsol veya genel tek aralıklı gibi sabit genişlikli bir yazı tipi belirtin.  
   
-5.  Vurgula **düğmesini** denetim hem de **özellikleri** penceresinde, aşağıdaki değerleri ayarlayın:  
+5.  Vurgulama **düğmesi** denetim hem de **özellikleri** penceresinde aşağıdaki değerleri ayarlayın:  
   
-    -   Ayarlama **adı** özelliğine `startButton`.  
+    -   Ayarlama **adı** özelliğini `startButton`.  
   
-    -   Değerini değiştirme **içerik** özelliğinden **düğmesini** için **Başlat**.  
+    -   Değiştirin **içerik** özelliğinden **düğmesi** için **Başlat**.  
   
-6.  Her ikisi de görünmesini sağlayacak şekilde, metin kutusu ve düğmesi konum **MainWindow** penceresi.  
+6.  Metin kutusu ve düğme hem görünmesini sağlayacak şekilde konumlandırın **MainWindow** penceresi.  
   
-     WPF XAML Tasarımcısı hakkında daha fazla bilgi için bkz: [XAML Tasarımcısını kullanarak bir kullanıcı Arabirimi oluşturma](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio).  
+     WPF XAML Tasarımcısı hakkında daha fazla bilgi için bkz. [XAML Tasarımcısını kullanarak kullanıcı Arabirimi oluşturma](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio).  
   
 ##  <a name="BKMK_AddReference"></a>   
 ###  <a name="AddRef"></a> Bir başvuru eklemek için  
   
 1.  İçinde **Çözüm Gezgini**, projenizin adını vurgulayın.  
   
-2.  Menü çubuğunda seçin **proje**, **Başvuru Ekle**.  
+2.  Menü çubuğunda, **proje**, **Başvuru Ekle**.  
   
      **Başvuru Yöneticisi** iletişim kutusu görüntülenir.  
   
-3.  İletişim kutusunun üstündeki projeniz .NET Framework 4.5 veya üstünü hedefleyen olduğunu doğrulayın.  
+3.  İletişim kutusunun en üstünde, projeniz .NET Framework 4.5 veya üzerini hedeflediğinden doğrulayın.  
   
-4.  İçinde **derlemeleri** alanı seçin **Framework** tercih değil.  
+4.  İçinde **derlemeleri** alanında seçin **Framework** tercih değildir.  
   
-5.  Adları listesinden seçin **System.Net.Http** onay kutusu.  
+5.  Adları listesinde seçin **System.Net.Http** onay kutusu.  
   
-6.  Seçin **Tamam** düğmesi iletişim kutusunu kapatın.  
+6.  Seçin **Tamam** iletişim kutusunu kapatmak için düğme.  
   
 ##  <a name="BKMK_AddStatesandDirs"></a>   
 ###  <a name="usingDir"></a> Eklemek için gerekli yönergeleri kullanma  
   
-1.  İçinde **Çözüm Gezgini**MainWindow.xaml.cs için kısayol menüsünü açın ve ardından **görünümü kodu**.  
+1.  İçinde **Çözüm Gezgini**için MainWindow.xaml.cs kısayol menüsünü açın ve ardından **kodu görüntüle**.  
   
-2.  Aşağıdakileri ekleyin `using` zaten mevcut değillerse kod dosyasının üst yönergeleri.  
+2.  Aşağıdaki `using` zaten mevcut değillerse kod dosyanın üst kısmındaki yönergeleri.  
   
     ```csharp  
     using System.Net.Http;  
@@ -123,7 +123,7 @@ Zaman uyumsuz ve bekleme özelliklerini kullanarak zaman uyumsuz programlar daha
 ##  <a name="BKMK_CreatSynchApp"></a>   
 ###  <a name="synchronous"></a> Zaman uyumlu bir uygulama oluşturmak için  
   
-1.  Tasarım penceresinde MainWindow.xaml, çift **Başlat** oluşturmak için düğmesini `startButton_Click` MainWindow.xaml.cs olay işleyicisi.  
+1.  Tasarım penceresinde, MainWindow.xaml **Başlat** oluşturmak için düğmeyi `startButton_Click` MainWindow.xaml.cs olay işleyicisi.  
   
 2.  MainWindow.xaml.cs içinde gövdesine aşağıdaki kodu kopyalayın `startButton_Click`:  
   
@@ -133,19 +133,19 @@ Zaman uyumsuz ve bekleme özelliklerini kullanarak zaman uyumsuz programlar daha
     resultsTextBox.Text += "\r\nControl returned to startButton_Click.";  
     ```  
   
-     Kod uygulama sürücüleri yöntemini çağırır `SumPageSizes`ve denetim döndüğünde bir ileti görüntüler `startButton_Click`.  
+     Kod uygulama sürücüleri yöntemini çağırır `SumPageSizes`ve denetim döndüğünde, bir ileti görüntüler `startButton_Click`.  
   
-3.  Zaman uyumlu çözüm için kod aşağıdaki dört yöntemi içerir:  
+3.  Aşağıdaki dört yöntemi zaman uyumlu çözüm için kod içerir:  
   
-    -   `SumPageSizes`, Web sayfası URL'lerden listesini alır `SetUpURLList` ve çağırır `GetURLContents` ve `DisplayResults` her URL işleyemedi.  
+    -   `SumPageSizes`, Web sayfasını URL'lerin bir listesini alır `SetUpURLList` ve `GetURLContents` ve `DisplayResults` her URL işlenecek.  
   
-    -   `SetUpURLList`, hangi yapar ve web adresleri listesi döndürür.  
+    -   `SetUpURLList`, yapar ve web adreslerinden oluşan bir liste döndürür.  
   
-    -   `GetURLContents`, her Web sitesi içeriğini indirir ve içeriği bir bayt dizisi olarak döndürür.  
+    -   `GetURLContents`, her bir Web sitesinin içeriklerini karşıdan yükler ve içeriği bir bayt dizisi olarak döndürür.  
   
-    -   `DisplayResults`, görüntüleyen bayt sayısı bayt dizisi, her URL için.  
+    -   `DisplayResults`, görüntüleyen bayt bayt dizisindeki her URL.  
   
-     Aşağıdaki dört yöntemi kopyalayın ve yapıştırın altında `startButton_Click` MainWindow.xaml.cs olay işleyicisi:  
+     Aşağıdaki dört yöntemi kopyalayın ve yapıştırın altında `startButton_Click` MainWindow.xaml.cs olay işleyicisinde:  
   
     ```csharp  
     private void SumPageSizes()  
@@ -226,11 +226,11 @@ Zaman uyumsuz ve bekleme özelliklerini kullanarak zaman uyumsuz programlar daha
     ```  
   
 ##  <a name="BKMK_TestSynchSol"></a>   
-###  <a name="testSynch"></a> Zaman uyumlu çözümü test etmek için  
+###  <a name="testSynch"></a> Zaman uyumlu bir çözümü test etmek için  
   
-1.  Programını çalıştırın ve ardından için F5 tuşuna seçin **Başlat** düğmesi.  
+1.  Programı çalıştırın ve ardından F5 tuşuna basın **Başlat** düğmesi.  
   
-     Aşağıdaki listede benzer bir çıktı görüntülenmesi gerekir.  
+     Aşağıdaki listede benzer bir çıktı görünmelidir.  
   
     ```  
     msdn.microsoft.com/library/windows/apps/br211380.aspx        383832  
@@ -249,56 +249,56 @@ Zaman uyumsuz ve bekleme özelliklerini kullanarak zaman uyumsuz programlar daha
     Control returned to startButton_Click.  
     ```  
   
-     Sayıları görüntülemek için birkaç saniye sürer dikkat edin. İstenen kaynaklar indirmek beklerken bu süre içinde kullanıcı Arabirimi iş parçacığı engellendi. Sonuç olarak, taşıyamazsınız, en üst düzeye çıkarmak, simge durumuna küçült veya seçtiğiniz sonra bile görüntü penceresini kapatın **Başlat** düğmesi. Görüntülenecek bayt sayıları başlatana kadar bu çaba başarısız. Bir Web sitesi yanıt vermiyor gösterge olmadan başarısız hangi sitenin varsa. Hatta bekleme durdurmak ve program kapatmak zordur.  
+     Sayıları görüntülemek için birkaç saniye sürer dikkat edin. İstenen kaynaklara indirmek beklediği sırada bu süre boyunca, kullanıcı Arabirimi iş parçacığı engellenir. Sonuç olarak, taşıyamazsınız, en üst düzeye çıkarmak, en aza indirmek veya seçtiğiniz sonra bile görüntü penceresini kapatın **Başlat** düğmesi. Görüntülenecek bayt sayısını başlatana kadar bu çalışmaların başarısız. Bir Web sitesi yanıt vermediği takdirde başarısız hangi sitenin herhangi bir gösterge sahip olursunuz. Programı kapatmak ve bile beklemek istemiyorsanız zordur.  
   
 ##  <a name="BKMK_ConvertGtBtArr"></a>   
 ###  <a name="GetURLContents"></a> Zaman uyumsuz bir yöntem GetURLContents dönüştürmek için  
   
-1.  Zaman uyumsuz bir çözüme zaman uyumlu çözüm dönüştürmek için başlatmak için en iyi yerdir bulunduğu `GetURLContents` çünkü çağrıları <xref:System.Net.HttpWebRequest> yöntemi <xref:System.Net.HttpWebRequest.GetResponse%2A> ve <xref:System.IO.Stream> yöntemi <xref:System.IO.Stream.CopyTo%2A> burada web uygulama erişen olan . .NET Framework dönüştürme her iki yöntem zaman uyumsuz sürümlerini sağlayarak kolaylaştırır.  
+1.  Zaman uyumlu çözüm için zaman uyumsuz bir çözümün dönüştürmek için başlatmak için en iyi yeri yer `GetURLContents` çünkü çağrıları <xref:System.Net.HttpWebRequest> yöntemi <xref:System.Net.HttpWebRequest.GetResponse%2A> ve <xref:System.IO.Stream> yöntemi <xref:System.IO.Stream.CopyTo%2A> uygulamaya web eriştiği olan . .NET Framework dönüştürme iki yöntem de zaman uyumsuz sürümlerini sağlanarak kolaylaştırır.  
   
      Kullanılan yöntemleri hakkında daha fazla bilgi için `GetURLContents`, bkz: <xref:System.Net.WebRequest>.  
   
     > [!NOTE]
-    >  Bu izlenecek adımları izlediğiniz gibi birkaç derleyici hataları görünür. Bunları yoksay ve kılavuz ile devam edebilirsiniz.  
+    >  Bu izlenecek yolda adımları gibi birkaç derleyici hatalar görüntülenir. Bunların yoksayılması ve adım adım kılavuza devam edebilirsiniz.  
   
-     Üçüncü satırında adlı yöntemini değiştirme `GetURLContents` gelen `GetResponse` için zaman uyumsuz, görev tabanlı <xref:System.Net.WebRequest.GetResponseAsync%2A> yöntemi.  
+     Üçüncü satırında çağrılan yöntem Değiştir `GetURLContents` gelen `GetResponse` için zaman uyumsuz, görev tabanlı <xref:System.Net.WebRequest.GetResponseAsync%2A> yöntemi.  
   
     ```csharp  
     using (WebResponse response = webReq.GetResponseAsync())  
     ```  
   
-2.  `GetResponseAsync` döndüren bir <xref:System.Threading.Tasks.Task%601>. Bu durumda, *görev dönüş değişkeni*, `TResult`, türüne sahip <xref:System.Net.WebResponse>. Gerçek bir üretmek için promise görevdir `WebResponse` istenen veri indirilir ve görevin tamamlanması çalıştıktan sonra nesnesi.  
+2.  `GetResponseAsync` döndürür bir <xref:System.Threading.Tasks.Task%601>. Bu durumda, *görev dönüş değişkeni*, `TResult`, türünde <xref:System.Net.WebResponse>. Görev bir gerçek üretmek için bir vaattir `WebResponse` istenen veri indirildi ve görevin çalıştırılıp tamamlandıktan sonra nesne.  
   
-     Alınacak `WebResponse` görevden değer, geçerli bir [await](../../../../csharp/language-reference/keywords/await.md) çağrısına işleci `GetResponseAsync`, aşağıdaki kodda gösterildiği gibi.  
+     Alınacak `WebResponse` görevden değer, geçerli bir [await](../../../../csharp/language-reference/keywords/await.md) işleci çağrısına `GetResponseAsync`aşağıdaki kodda gösterildiği gibi.  
   
     ```csharp  
     using (WebResponse response = await webReq.GetResponseAsync())  
     ```  
   
-     `await` İşleci geçerli yönteminin yürütülmesi askıya `GetURLContents`, awaited görevi tamamlanana kadar. Bu arada, denetim geçerli yöntemi çağırana döndürür. Bu örnekte, geçerli bir yöntemdir `GetURLContents`, ve çağrıyı yapan `SumPageSizes`. Görev tamamlandığında taahhüt `WebResponse` nesne awaited görev değeri olarak üretilen ve değişkenine atanan `response`.  
+     `await` İşleci geçerli yöntemin yürütülmesini askıya `GetURLContents`, beklenen görev tamamlanana kadar. Bu sırada, denetim geçerli yöntemi çağırana döner. Bu örnekte, geçerli bir yöntemdir `GetURLContents`, ve çağıran `SumPageSizes`. Görev tamamlandığında, taahhüt `WebResponse` nesne imzalamasına değeri olarak üretilen ve değişkenine atanan `response`.  
   
-     Önceki deyimi ne olacağını açıklamak için aşağıdaki iki deyime ayrılabilir.  
+     Önceki deyim ne olduğunu açıklamak için aşağıdaki iki ifadeye ayrılabilir.  
   
     ```csharp  
     //Task<WebResponse> responseTask = webReq.GetResponseAsync();  
     //using (WebResponse response = await responseTask)  
     ```  
   
-     Çağrı `webReq.GetResponseAsync` döndüren bir `Task(Of WebResponse)` veya `Task<WebResponse>`. Görevi almak için bir bekleme işleç uygulanan sonra `WebResponse` değeri.  
+     Çağrı `webReq.GetResponseAsync` döndürür bir `Task(Of WebResponse)` veya `Task<WebResponse>`. Alınacak göreve await işleci uygulanır `WebResponse` değeri.  
   
-     Zaman uyumsuz yöntem görev tamamlanma bağımlı değil yapmak için iş varsa, yöntemi zaman uyumsuz yöntem ve önce çağrısından sonra bu iki ifade arasındaki, iş ile devam edebilirsiniz `await` işleci uygulanır. Örnekler için bkz [nasıl yapılır: zaman uyumsuz kullanarak birden çok Web isteğini paralel hale ve await (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) ve [nasıl yapılır: Task.WhenAll kullanarak (C#) tarafından izlenecek zaman uyumsuz genişletmek](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).  
+     Zaman uyumsuz yöntem görev öğesinin tamamlanmasına bağlı olmayan bağımsız yapılacak çalışmaya sahipse yöntem çağrısından önce zaman uyumsuz yöntem ve sonra bu iki deyimden arasında bu çalışmalar ile devam edebilir `await` işleci uygulanır. Örnekler için bkz [nasıl yapılır: zaman uyumsuz kullanarak birden çok Web isteğini paralel hale getirme ve await (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) ve [nasıl yapılır: zaman uyumsuz izlenecek yolu Task.WhenAll (C#) kullanarak genişletme](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).  
   
-3.  Eklediğiniz çünkü `await` işleci önceki adımda, bir derleyici hatası oluşur. İşleç ile işaretlenmiş yöntemleri kullanılabilir [zaman uyumsuz](../../../../csharp/language-reference/keywords/async.md) değiştiricisi. Çağrı değiştirmek için dönüştürme adımları yineleyin sırada hatayı yok sayıp `CopyTo` çağrısıyla `CopyToAsync`.  
+3.  Eklediğiniz çünkü `await` işleci önceki adımda, bir derleyici hatası oluşur. İşleci ile işaretlenmiş yöntemler kullanılabilir [zaman uyumsuz](../../../../csharp/language-reference/keywords/async.md) değiştiricisi. Çağrısını için dönüştürme adımı yineleyin ancak hatasını görmezden Gel `CopyTo` çağrısıyla `CopyToAsync`.  
   
     -   İçin çağrılan yöntemin adını değiştirmek <xref:System.IO.Stream.CopyToAsync%2A>.  
   
-    -   `CopyTo` Veya `CopyToAsync` yöntemi için bağımsız değişkeni, bayt kopyalar `content`ve anlamlı bir değer döndürmüyor. Zaman uyumlu sürümünde, çağrısı `CopyTo` bir değer döndürmüyor basit bir ifadedir. Zaman uyumsuz sürümü `CopyToAsync`, döndüren bir <xref:System.Threading.Tasks.Task>. Görev "Task(void)" gibi çalışır ve yöntem beklemenin sağlar. Uygulama `Await` veya `await` çağrısına `CopyToAsync`, aşağıdaki kodda gösterildiği gibi.  
+    -   `CopyTo` Veya `CopyToAsync` yöntemi, bağımsız değişkeni için bayt kopyalar `content`ve anlamlı bir değer döndürmüyor. Zaman uyumlu sürümü, çağrı `CopyTo` bir değer döndürmüyor basit bir ifadedir. Zaman uyumsuz sürümü `CopyToAsync`, döndürür bir <xref:System.Threading.Tasks.Task>. Görev "Task(void)" gibi çalışır ve beklenmesini yöntemi sağlar. Uygulama `Await` veya `await` çağrısına `CopyToAsync`aşağıdaki kodda gösterildiği gibi.  
   
         ```csharp  
         await responseStream.CopyToAsync(content);  
         ```  
   
-         Önceki deyimi aşağıdaki iki kod satırı kısaltmasıdır.  
+         Önceki deyim, aşağıdaki iki kod satırlarını kısaltmasıdır.  
   
         ```csharp  
         // CopyToAsync returns a Task, not a Task<T>.  
@@ -309,29 +309,29 @@ Zaman uyumsuz ve bekleme özelliklerini kullanarak zaman uyumsuz programlar daha
         //await copyTask;  
         ```  
   
-4.  Tüm bu tamamlandı olarak kalır `GetURLContents` yöntem imzası ayarlamak için. Kullanabileceğiniz `await` ile işaretlenmiş yöntemleri işlecinde [zaman uyumsuz](../../../../csharp/language-reference/keywords/async.md) değiştiricisi. Yöntemi olarak işaretlemek için değiştiricisi eklemek bir *async yöntemi*, aşağıdaki kodda gösterildiği gibi.  
+4.  Tüm bu yapılması kalır `GetURLContents` yöntem imzası ayarlamak için. Kullanabileceğiniz `await` ile işaretlenmiş yöntemler işlecinde [zaman uyumsuz](../../../../csharp/language-reference/keywords/async.md) değiştiricisi. Yöntemi olarak işaretlemek için değiştiricisi Ekle bir *zaman uyumsuz yöntem*aşağıdaki kodda gösterildiği gibi.  
   
     ```csharp  
     private async byte[] GetURLContents(string url)  
     ```  
   
-5.  Bir zaman uyumsuz yöntemin dönüş türünü yalnızca olabilir <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>, veya `void` C#. Genellikle, dönüş türü `void` yalnızca bir zaman uyumsuz olay işleyicisi, kullanılan nerede `void` gereklidir. Diğer durumlarda, kullandığınız `Task(T)` tamamlanmış yöntemi varsa bir [dönmek](../../../../csharp/language-reference/keywords/return.md) T değeri döndüren ifadesi yazın ve kullandığınız `Task` tamamlanmış yöntemi anlamlı bir değere döndürmezse. Düşünebilirsiniz `Task` dönüş türü olarak "Task(void)." anlamına gelir  
+5.  Zaman uyumsuz bir yöntemin dönüş türü yalnızca olabilir <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>, veya `void` C#. Genellikle, dönüş türü `void` yalnızca zaman uyumsuz olay işleyicisi kullanılan burada `void` gereklidir. Diğer durumlarda, kullandığınız `Task(T)` tamamlanmış yöntemi varsa bir [dönüş](../../../../csharp/language-reference/keywords/return.md) T değeri döndüren bir ifade yazın ve kullandığınız `Task` tamamlanmış yöntemi anlamlı bir değer döndürmezse. Düşünebilirsiniz `Task` dönüş türü olarak "Task(void)." anlamına gelir.  
   
-     Daha fazla bilgi için bkz: [zaman uyumsuz dönüş türleri (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md).  
+     Daha fazla bilgi için [Async Return Types (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md).  
   
-     Yöntem `GetURLContents` bir dönüş ifadesi içeriyor ve deyim bir bayt dizisi döndürür. Bu nedenle, zaman uyumsuz sürümü dönüş türü T bir bayt dizisi olduğu Task(T) ' dir. Yöntem imzası aşağıdaki değişiklikleri yapın:  
+     Yöntemi `GetURLContents` bir dönüş ifadesi ve deyim bir bayt dizisi döndürür. Bu nedenle, zaman uyumsuz sürümü dönüş türünü görev(t), burada T bir bayt dizisi, ' dir. Yöntem imzasında aşağıdaki değişiklikleri yapın:  
   
-    -   Dönüş türünü değiştir `Task<byte[]>`.  
+    -   Geri dönüş için değiştirme `Task<byte[]>`.  
   
-    -   Kurala göre zaman uyumsuz yöntemleri "Zaman uyumsuz," bitiş adlara sahip şekilde yöntemi yeniden adlandırma `GetURLContentsAsync`.  
+    -   Kural gereği, zaman uyumsuz yöntemler "Async," biten sahip. Bu nedenle metodu yeniden adlandırmak `GetURLContentsAsync`.  
   
-     Aşağıdaki kod bu değişiklikleri gösterir.  
+     Aşağıdaki kod, bu değişiklikleri gösterir.  
   
     ```csharp  
     private async Task<byte[]> GetURLContentsAsync(string url)  
     ```  
   
-     Dönüştürme işlemi birkaç bu değişikliklerle `GetURLContents` zaman uyumsuz bir yöntem tamamlandığında.  
+     Bu birkaç değişiklikle dönüştürülmesi `GetURLContents` zaman uyumsuz bir yöntem tamamlandıktan.  
   
 ##  <a name="BKMK_ConvertSumPagSzs"></a>   
 ###  <a name="SumPageSizes"></a> Zaman uyumsuz bir yöntem SumPageSizes dönüştürmek için  
@@ -340,15 +340,15 @@ Zaman uyumsuz ve bekleme özelliklerini kullanarak zaman uyumsuz programlar daha
   
     -   Yönteminden çağrılan yöntemin adını değiştirmek `GetURLContents` için `GetURLContentsAsync`, zaten yapmadıysanız.  
   
-    -   Uygulama `await` göreve, `GetURLContentsAsync` bayt edinme döndürür dizi değeri.  
+    -   Uygulama `await` görev, `GetURLContentsAsync` dizi değeri bayt almak için döndürür.  
   
-     Aşağıdaki kod bu değişiklikleri gösterir.  
+     Aşağıdaki kod, bu değişiklikleri gösterir.  
   
     ```csharp  
     byte[] urlContents = await GetURLContentsAsync(url);  
     ```  
   
-     Önceki atama kod aşağıdaki iki satırı kısaltmasıdır.  
+     Önceki atama aşağıdaki iki kod satırlarını kısaltmasıdır.  
   
     ```csharp  
     // GetURLContentsAsync returns a Task<T>. At completion, the task  
@@ -357,32 +357,32 @@ Zaman uyumsuz ve bekleme özelliklerini kullanarak zaman uyumsuz programlar daha
     //byte[] urlContents = await getContentsTask;  
     ```  
   
-2.  Yöntemin imzada aşağıdaki değişiklikleri yapın:  
+2.  Yöntemin imzası ' aşağıdaki değişiklikleri yapın:  
   
-    -   Yöntemiyle işaretlemek `async` değiştiricisi.  
+    -   Yöntemi işaretlemek `async` değiştiricisi.  
   
-    -   "Zaman uyumsuz" yöntem adını ekleyin.  
+    -   "Async" yöntem adına ekleyin.  
   
-    -   T, hiçbir görev dönüş değişkeni bu süresi yoktur çünkü `SumPageSizesAsync` T. için bir değer döndürmüyor (Yöntem sahip olmayan `return` deyimi.) Ancak, yöntem döndürmelidir bir `Task` bildirdiğimize olmalıdır. Bu nedenle, yöntemden dönüş türünü değiştirme `void` için `Task`.  
+    -   T, hiçbir görev dönüş değişken bu süresi yoktur çünkü `SumPageSizesAsync` t için bir değer döndürmüyor (Yöntemin sahip olmayan `return` deyimi.) Ancak, yöntem döndürmelidir bir `Task` olması beklenebilir. Bu nedenle, metodun dönüş türü değiştirme `void` için `Task`.  
   
-     Aşağıdaki kod bu değişiklikleri gösterir.  
+     Aşağıdaki kod, bu değişiklikleri gösterir.  
   
     ```csharp  
     private async Task SumPageSizesAsync()  
     ```  
   
-     Dönüştürülmesi `SumPageSizes` için `SumPageSizesAsync` tamamlandı.  
+     Dönüştürme `SumPageSizes` için `SumPageSizesAsync` tamamlandı.  
   
 ##  <a name="BKMK_Cnvrtbttn1"></a>   
 ###  <a name="startButton"></a> Zaman uyumsuz bir yöntem startButton_Click dönüştürmek için  
   
-1.  Olay işleyicisinin çağrılan yöntemin adını değiştirmek `SumPageSizes` için `SumPageSizesAsync`, zaten yapmadıysanız.  
+1.  Olay işleyicisi, çağrılan yöntemden adını değiştirmek `SumPageSizes` için `SumPageSizesAsync`, zaten yapmadıysanız.  
   
-2.  Çünkü `SumPageSizesAsync` bir zaman uyumsuz yöntem sonucu beklemek için olay işleyicisini kodda değişiklik.  
+2.  Çünkü `SumPageSizesAsync` bir zaman uyumsuz yöntem sonucu await için olay işleyicisinde kodu değiştirin.  
   
-     Çağrı `SumPageSizesAsync` çağrısı yansıtan `CopyToAsync` içinde `GetURLContentsAsync`. Çağrı döndürür bir `Task`değil bir `Task(T)`.  
+     Çağrı `SumPageSizesAsync` çağrısı yansıtır `CopyToAsync` içinde `GetURLContentsAsync`. Çağrı döndürür bir `Task`değil bir `Task(T)`.  
   
-     Önceki yordamları olduğu gibi bir deyim veya iki deyimleri kullanarak çağrı dönüştürebilirsiniz. Aşağıdaki kod bu değişiklikleri gösterir.  
+     Önceki yordamlardan olduğu gibi bir deyim ya da iki ifadeleri kullanarak arama dönüştürebilirsiniz. Aşağıdaki kod, bu değişiklikleri gösterir.  
   
     ```csharp  
     // One-step async call.  
@@ -393,23 +393,23 @@ Zaman uyumsuz ve bekleme özelliklerini kullanarak zaman uyumsuz programlar daha
     //await sumTask;  
     ```  
   
-3.  Yanlışlıkla işlemi yeniden girme önlemek için aşağıdaki en üstünde deyimine `startButton_Click` devre dışı bırakmak için **Başlat** düğmesi.  
+3.  İşlem yanlışlıkla yeniden girildi önlemek için üstüne aşağıdaki ifadeyi ekleyin `startButton_Click` devre dışı bırakmak için **Başlat** düğmesi.  
   
     ```csharp  
     // Disable the button until the operation is complete.  
     startButton.IsEnabled = false;  
     ```  
   
-     Olay işleyicisinin sonunda düğmesini yeniden etkinleştirebilirsiniz.  
+     Olay işleyicisi sonunda düğmeyi yeniden etkinleştirebilirsiniz.  
   
     ```csharp  
     // Reenable the button in case you want to run the operation again.  
     startButton.IsEnabled = true;  
     ```  
   
-     Yeniden giriş hakkında daha fazla bilgi için bkz: [zaman uyumsuz uygulamalarda (C#) yeniden girişi işleme](../../../../csharp/programming-guide/concepts/async/handling-reentrancy-in-async-apps.md).  
+     Yeniden giriş hakkında daha fazla bilgi için bkz: [(C#) zaman uyumsuz uygulamalarda yeniden girişi işleme](../../../../csharp/programming-guide/concepts/async/handling-reentrancy-in-async-apps.md).  
   
-4.  Son olarak, ekleme `async` bildirimine değiştiricisi böylece olay işleyicisi await `SumPagSizesAsync`.  
+4.  Son olarak, ekleme `async` değiştiricisi bildirimine olay işleyicisi await, böylece `SumPagSizesAsync`.  
   
     ```csharp  
     private async void startButton_Click(object sender, RoutedEventArgs e)  
@@ -417,25 +417,25 @@ Zaman uyumsuz ve bekleme özelliklerini kullanarak zaman uyumsuz programlar daha
   
      Olay işleyicileri adları genellikle değiştirilmez. Dönüş türü için değiştirilmez `Task` olay işleyicileri dönüştürüldüğünden `void`.  
   
-     Proje dönüştürme için zaman uyumsuz zaman uyumlu işleme işlemi tamamlanır.  
+     Proje dönüştürülmesi için zaman uyumsuz zaman uyumlu işlenmesi tamamlanır.  
   
 ##  <a name="BKMK_testAsynchSolution"></a>   
-###  <a name="testAsynch"></a> Zaman uyumsuz çözümü test etmek için  
+###  <a name="testAsynch"></a> Zaman uyumsuz bir çözümü test etmek için  
   
-1.  Programını çalıştırın ve ardından için F5 tuşuna seçin **Başlat** düğmesi.  
+1.  Programı çalıştırın ve ardından F5 tuşuna basın **Başlat** düğmesi.  
   
-2.  Zaman uyumlu çözüm çıktısını benzer bir çıktı görüntülenmesi gerekir. Ancak, aşağıdaki farkları dikkat edin.  
+2.  Zaman uyumlu çözümün çıktıya benzer bir çıktı görünmelidir. Ancak, aşağıdaki farklar dikkat edin.  
   
-    -   Sonuçları tüm işleme işlemi tamamlandıktan sonra aynı anda oluşmaz. Örneğin, her iki programı bir satır içeren `startButton_Click` metin kutusu temizler. Seçerseniz çalıştırmaları arasında metin kutusu temizlemek için amacı olan **Başlat** bir sonuç kümesi göründükten sonra ikinci bir kez düğmesi. Yalnızca sayıları zaman indirmeleri tamamlandı ve diğer iş yapmak kullanıcı Arabirimi iş parçacığı ücretsizdir ikinci kez görünmesi zaman uyumlu bir sürümde metin kutusu işaretli değildir. Seçtiğiniz hemen sonra metin kutusuna zaman uyumsuz bir sürümde temizler **Başlat** düğmesi.  
+    -   Sonuçları işleme tamamlandıktan sonra aynı zamanda, tüm oluşmaz. Örneğin, her iki programın bir satır içeren `startButton_Click` , metin kutusuna temizler. Seçerseniz çalıştırmaları arasında metin kutusunu temizlemek için hedefi olan **Başlat** bir sonuç kümesini göründükten sonra ikinci bir kez, düğme. Yalnızca sayıları ne zaman karşıdan yüklemeler tamamlandı ve diğer işlerini gerçekleştirmek kullanıcı Arabirimi iş parçacığı ücretsizdir ikinci kez görünmesi zaman uyumlu bir sürümde, metin kutusu işaretli değildir. Seçtiğiniz hemen sonra metin kutusuna zaman uyumsuz sürümünde temizler **Başlat** düğmesi.  
   
-    -   En önemlisi, kullanıcı Arabirimi iş parçacığı yüklemeleri sırasında engellenmiş değil. Taşıma veya web kaynakları karşıdan yüklenirken pencereyi yeniden boyutlandırmak sayılan ve görüntülenir. Web sitelerinden birini yavaş veya yanıt vermiyor işlemi seçerek iptal edebilir **Kapat** düğmesi (sağ üst köşesinde kırmızı alanında x).  
+    -   En önemlisi de UI iş parçacığı yüklemeleri sırasında bloke değildir. Geçiş yapabilir veya web kaynakları indirilirken, penceresini yeniden boyutlandırdığınızda sayılan ve görüntülenir. Web sitelerinden birini ise yavaş veya yanıt vermiyor, işlem seçerek iptal edebilirsiniz **Kapat** düğmesine (sağ üst köşesinde kırmızı alanında x).  
   
 ##  <a name="BKMK_ReplaceGetByteArrayAsync"></a>   
-###  <a name="GetURLContentsAsync"></a> .NET Framework yöntemiyle yöntemi GetURLContentsAsync değiştirmek için  
+###  <a name="GetURLContentsAsync"></a> Bir .NET Framework yöntemi ile yöntem GetURLContentsAsync değiştirmek için  
   
-1.  .NET Framework 4.5 kullanabileceğiniz birçok zaman uyumsuz yöntemleri sağlar. Bunlardan biri <xref:System.Net.Http.HttpClient> yöntemi <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29>, bu kılavuz için gerekenler yalnızca yapar. Bunun yerine kullanabileceğiniz `GetURLContentsAsync` bir önceki yordamda oluşturduğunuz yöntemi.  
+1.  .NET Framework 4.5 kullanabileceğiniz pek çok zaman uyumsuz yöntemler sağlar. Bunlardan biri <xref:System.Net.Http.HttpClient> yöntemi <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29>, yalnızca bu kılavuz için ihtiyacınız olanları yapar. Bunu yerine `GetURLContentsAsync` bir önceki yordamda oluşturduğunuz yöntemi.  
   
-     İlk adım oluşturmaktır bir `HttpClient` yöntemi nesnesinde `SumPageSizesAsync`. Aşağıdaki bildirimi yöntemi başlangıcında ekleyin.  
+     İlk adım oluşturmaktır bir `HttpClient` yöntemi nesnesinde `SumPageSizesAsync`. Yönteminin başlangıcında aşağıdaki bildirimi ekleyin.  
   
     ```csharp  
     // Declare an HttpClient object and increase the buffer size. The  
@@ -444,20 +444,20 @@ Zaman uyumsuz ve bekleme özelliklerini kullanarak zaman uyumsuz programlar daha
         new HttpClient() { MaxResponseContentBufferSize = 1000000 };  
     ```  
   
-2.  İçinde `SumPageSizesAsync,` çağrısı değiştirin, `GetURLContentsAsync` çağrısıyla yöntemi `HttpClient` yöntemi.  
+2.  İçinde `SumPageSizesAsync,` çağrısını, `GetURLContentsAsync` yöntemi çağrısıyla `HttpClient` yöntemi.  
   
     ```csharp  
     byte[] urlContents = await client.GetByteArrayAsync(url);  
     ```  
   
-3.  Kaldırın veya çıkışı açıklama `GetURLContentsAsync` yazdığınız yöntemi.  
+3.  Kaldırın veya açıklama `GetURLContentsAsync` yazdığınız yöntemi.  
   
-4.  Programını çalıştırın ve ardından için F5 tuşuna seçin **Başlat** düğmesi.  
+4.  Programı çalıştırın ve ardından F5 tuşuna basın **Başlat** düğmesi.  
   
-     Bu projenin sürümü davranışını "zaman uyumsuz çözümü test etmek için" yordamı açıklanan davranışı eşleşen ancak sizden daha az çaba ile bile gerekir.  
+     Bu sürümü, proje davranışını "zaman uyumsuz bir çözümü test etmek için" yordamı açıklanan davranışı eşleşen ancak sizden daha az çaba ile bile gerekir.  
   
 ##  <a name="BKMK_CompleteCodeExamples"></a> Örnek  
- Aşağıdaki kod dönüştürme eş zamanlı işlemini zaman uyumsuz bir çözüm için tam örnek içeriyor zaman uyumsuz kullanarak `GetURLContentsAsync` yazdığınız yöntemi. Bunu kesinlikle özgün, zaman uyumlu çözüm benzer dikkat edin.  
+ Zaman uyumsuz kullanarak zaman uyumsuz bir çözüm eş zamanlı dönüştürme tam örneği aşağıdaki kodu içeren `GetURLContentsAsync` yazdığınız yöntemi. Bunu kesinlikle özgün, zaman uyumlu bir çözüm benzer olduğuna dikkat edin.  
   
 ```csharp  
 using System;  
@@ -606,7 +606,7 @@ namespace AsyncExampleWPF
 }  
 ```  
   
- Aşağıdaki kodu kullanan çözüm tam örneği içerir `HttpClient` yöntemi, `GetByteArrayAsync`.  
+ Aşağıdaki kod tam örneği kullanan bir çözüm içeren `HttpClient` yöntemi `GetByteArrayAsync`.  
   
 ```csharp  
 using System;  
@@ -723,12 +723,13 @@ namespace AsyncExampleWPF
 }  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Zaman uyumsuz örnek: Web gözden geçirme (C# ve Visual Basic) erişme](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)  
- [async](../../../../csharp/language-reference/keywords/async.md)  
- [await](../../../../csharp/language-reference/keywords/await.md)  
- [Zaman uyumsuz programlama ile async ve await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
- [Zaman uyumsuz dönüş türleri (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)  
- [Görev tabanlı zaman uyumsuz programlama (TAP)](https://www.microsoft.com/en-us/download/details.aspx?id=19957)  
- [Nasıl yapılır: Task.WhenAll (C#) kullanarak tarafından izlenecek zaman uyumsuz genişletme](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)  
- [Nasıl yapılır: birden çok Web isteğini paralel olarak zaman uyumsuz kullanarak ve olun await (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [Zaman uyumsuz örneği: izlenecek yol (C# ve Visual Basic) erişme](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)  
+- [async](../../../../csharp/language-reference/keywords/async.md)  
+- [await](../../../../csharp/language-reference/keywords/await.md)  
+- [Zaman uyumsuz programlama ile async ve await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
+- [Zaman uyumsuz dönüş türleri (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)  
+- [Görev tabanlı zaman uyumsuz desen (TAP)](https://www.microsoft.com/en-us/download/details.aspx?id=19957)  
+- [Nasıl yapılır: zaman uyumsuz izlenecek yolu Task.WhenAll (C#) kullanarak genişletme](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)  
+- [Nasıl yapılır: birden çok Web isteğini paralel olarak zaman uyumsuz kullanarak ve olun await (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)

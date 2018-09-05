@@ -11,11 +11,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 95d383f44d84bb22e6fcc9fca159f8f5efa87434
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43465466"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43673967"
 ---
 # <a name="ui-automation-clients-for-managed-code-how-to-topics"></a>Yönetilen Kod Nasıl Yapılır Konuları İçin UI Otomasyonu İstemcileri
 > [!NOTE]

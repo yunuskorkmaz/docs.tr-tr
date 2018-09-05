@@ -1,18 +1,18 @@
 ---
-title: Örnek Sağlayıcısı'nda SQL oluşturma
+title: Örnek sağlayıcısında SQL oluşturma
 ms.date: 03/30/2017
 ms.assetid: e70f553d-4622-4627-928e-1aa2ee605d8e
-ms.openlocfilehash: 7275a67927d7692dc943e2555d65d1f7d6e4ba5a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: cba1cec6d7ef0fdf8d4d4cf6c8e44fb325cf6447
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762159"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43556211"
 ---
-# <a name="sql-generation-in-the-sample-provider"></a>Örnek Sağlayıcısı'nda SQL oluşturma
-[Entity Framework örnek sağlayıcısı](http://go.microsoft.com/fwlink/?LinkId=180616) destekleyen bir ADO.NET veri sağlayıcıları yeni bileşenlerini gösterir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  SQL Server 2005 veritabanı ile çalışır ve System.Data.SqlClient ADO.NET 2.0 veri sağlayıcısı için bir kapsayıcı olarak uygulanır.  
+# <a name="sql-generation-in-the-sample-provider"></a>Örnek sağlayıcısında SQL oluşturma
+[Entity Framework örnek sağlayıcısı](https://go.microsoft.com/fwlink/?LinkId=180616) destekleyen bir ADO.NET veri sağlayıcıları yeni bileşenlerini gösterir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  SQL Server 2005 veritabanı ile çalışır ve bir sarıcı olarak System.Data.SqlClient ADO.NET 2.0 veri sağlayıcısı için uygulanır.  
   
- Örnek (dosya DmlSqlGenerator.cs dışında SQL üretme klasörü altında bulunur) sağlayıcı'nın SQL üretimi modülü bir giriş DbQueryCommandTree alır ve tek bir SQL SELECT deyimi üretir.  
+ (' % S'dosyası DmlSqlGenerator.cs dışında SQL oluşturma klasörü altında bulunur) örnek sağlayıcısında SQL oluşturma modülün bir giriş DbQueryCommandTree alır ve tek bir SQL SELECT deyimi üretir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  Bu bölüm şu konuları içerir:  

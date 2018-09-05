@@ -1,25 +1,25 @@
 ---
-title: 'Nasıl yapılır: Okuma ve yazma kodlanmış bir belge (C#)'
+title: 'Nasıl yapılır: Okuma ve yazma kodlanmış belge (C#)'
 ms.date: 07/20/2015
 ms.assetid: 84f64e71-39a6-42c6-ad68-f052bb158a03
-ms.openlocfilehash: 9fc6a7beaa4a7b9de21961e1095dd41fe2e407dd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a5e1d6f70d8ad2740e4d7daff8c78b49966bb7ee
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317164"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43661641"
 ---
-# <a name="how-to-read-and-write-an-encoded-document-c"></a>Nasıl yapılır: Okuma ve yazma kodlanmış bir belge (C#)
-Kodlanmış bir XML belgesi oluşturmak için eklediğiniz bir <xref:System.Xml.Linq.XDeclaration> istenen kod sayfası adına kodlama XML ağacına ayarlama.  
+# <a name="how-to-read-and-write-an-encoded-document-c"></a>Nasıl yapılır: Okuma ve yazma kodlanmış belge (C#)
+Kodlanmış bir XML belgesi oluşturmak için eklediğiniz bir <xref:System.Xml.Linq.XDeclaration> için istenen kod sayfası adı kodlama XML ağacına ayarlama.  
   
- Tarafından döndürülen herhangi bir değer <xref:System.Text.Encoding.WebName%2A> geçerli bir değer.  
+ Tarafından döndürülen herhangi bir değer <xref:System.Text.Encoding.WebName%2A> , geçerli bir değer.  
   
- Kodlanmış bir belge okuyorsanız <xref:System.Xml.Linq.XDeclaration.Encoding%2A> özelliği kod sayfası adına ayarlanır.  
+ Kodlanmış belge okuma <xref:System.Xml.Linq.XDeclaration.Encoding%2A> özelliği kod sayfası adına ayarlanır.  
   
- Ayarlarsanız <xref:System.Xml.Linq.XDeclaration.Encoding%2A> geçerli kod sayfası adına [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belirtilen kodlama ile seri hale.  
+ Ayarlarsanız <xref:System.Xml.Linq.XDeclaration.Encoding%2A> geçerli kod sayfasına adına [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belirtilen kodlama ile serileştirme.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, iki belgeleri, utf-8 kodlaması ile diğeri utf-16 kodlamasını ile oluşturur. Belgeleri yükler ve kodlama konsola yazdırır.  
+ Aşağıdaki örnek, iki belge, utf-8 kodlamalı, diğeri utf-16 kodlamalı oluşturur. Belgeleri yükler ve kodlama konsola yazdırır.  
   
 ```csharp  
 Console.WriteLine("Creating a document with utf-8 encoding");  
@@ -54,7 +54,7 @@ Console.WriteLine();
 Console.WriteLine("Encoding of loaded document is:{0}", newDoc16.Declaration.Encoding);  
 ```  
   
- Bu örnek şu çıkışı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```  
 Creating a document with utf-8 encoding  
@@ -76,6 +76,7 @@ Encoded document:
 Encoding of loaded document is:utf-16  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=nameWithType>  
- [Gelişmiş LINQ-XML programlama (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=nameWithType>  
+- [Gelişmiş LINQ to XML programlama (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 02eaaa1c3336b6e99b8c8deabb944e292e35a2a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 78d9e27299c9d7ed7d6cb9b09dd659ba081c5fde
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425190"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43554735"
 ---
 # <a name="isymunmanagedencupdateupdatesymbolstore2-method"></a>ISymUnmanagedENCUpdate::UpdateSymbolStore2 Yöntemi
-Program veritabanı (PDB) akışından değiştirilmiş işlevleri satır bilgilerini gereksinimlerini karşılaması koşuluyla atlamak bir derleyici sağlar. Doğru satır bilgilerini eski PDB satırı bilgileri ve işlev tüm satırlar için bir delta ile belirlenebilir.  
+Satır bilgilerini gereksinimlerini karşılayan program veritabanı (PDB) akışından değiştirilmiş işlevleri atlamak bir derleyici sağlar. Doğru satır bilgilerini eski PDB satır bilgileri ve tüm satırları işlevi için bir delta ile belirlenebilir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,16 +38,16 @@ HRESULT UpdateSymbolStore2(
   
 #### <a name="parameters"></a>Parametreler  
  `pIStream`  
- [in] Bir işaretçi bir [IStream](https://msdn.microsoft.com/library/aa380034.aspx) satır bilgilerini içerir.  
+ [in] Bir işaretçi bir [IStream](/windows/desktop/api/objidl/nn-objidl-istream) , satır bilgileri içerir.  
   
  `pDeltaLines`  
  [in] Bir işaretçi bir [SYMLINEDELTA](../../../../docs/framework/unmanaged-api/diagnostics/symlinedelta-structure.md) değiştirilen satırları içeren yapısı.  
   
  `cDeltaLines`  
- [in] A `ULONG` değişmiş satır sayısını temsil eder.  
+ [in] A `ULONG` değişmiş olan satır sayısını temsil eder.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde E_FAIL veya başka bir hata kodu.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Başlık:** CorSym.idl, CorSym.h  

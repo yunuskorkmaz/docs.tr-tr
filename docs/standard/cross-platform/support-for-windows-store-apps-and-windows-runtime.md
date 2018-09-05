@@ -12,11 +12,11 @@ ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5f587d45f046a3f7b8556052df63220f9f1cac42
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482413"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672727"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Windows Mağazası Uygulamaları ve Windows Çalışma Zamanı için .NET Framework Desteği
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], [!INCLUDE[wrt](../../../includes/wrt-md.md)] ile birlikte çok sayıda yazılım geliştirme senaryosunu destekler. Bu senaryolar üç kategoriye ayrılır:  

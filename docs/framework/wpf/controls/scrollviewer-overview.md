@@ -10,11 +10,11 @@ helpviewer_keywords:
 - ScrollViewer control [WPF], about ScrollViewer control
 ms.assetid: 94a13b94-cfdf-4b12-a1aa-90cb50c6e9b9
 ms.openlocfilehash: 4c9a2e8cf64f18f3e8614912759a4a6eb01d4823
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43463136"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43673262"
 ---
 # <a name="scrollviewer-overview"></a>ScrollViewer Genel Bakışı
 Bir kullanıcı arabiriminde içeriği genellikle bir bilgisayar ekranının ekran alandan daha büyük. <xref:System.Windows.Controls.ScrollViewer> Denetim içeriğinin gezinmeye olanak sağlamak için kolay bir yol sağlar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalar. Bu konu tanıtır <xref:System.Windows.Controls.ScrollViewer> öğesi ve çeşitli kullanım örnekleri sağlar.  

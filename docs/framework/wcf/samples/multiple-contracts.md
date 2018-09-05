@@ -3,11 +3,11 @@ title: Birden Fazla Sözleşme
 ms.date: 03/30/2017
 ms.assetid: 2bef319b-fe9c-4d49-ac6c-dfb23eb35099
 ms.openlocfilehash: 040ab9b80e9567139ca4588e3ddf83b8f43f2d76
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43392458"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43565987"
 ---
 # <a name="multiple-contracts"></a>Birden Fazla Sözleşme
 Birden çok sözleşme örnek nasıl bir hizmet birden fazla sözleşmesini uygulama ve uç noktaları her uygulanan sözleşmelerin ile iletişim kurmak için yapılandırma gösterir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md). Hizmet, iki sözleşmelerini tanımlamak için değiştirilmiş `ICalculator` sözleşme ve `ICalculatorSession` sözleşme.  

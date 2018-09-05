@@ -7,11 +7,11 @@ helpviewer_keywords:
 - lines [WPF], drawing
 ms.assetid: 0513ee01-6b27-4bb3-85f3-3a3e6710d80e
 ms.openlocfilehash: bee343676175098493df347823a3bdbdf17b205f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43398451"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43671192"
 ---
 # <a name="how-to-draw-a-line"></a>Nasıl yapılır: Çizgi Çizme
 Bu örnekte kullanarak çizgi çizmek gösterilmektedir <xref:System.Windows.Shapes.Line> öğesi.  

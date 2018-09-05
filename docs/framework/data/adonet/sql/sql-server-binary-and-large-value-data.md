@@ -3,11 +3,11 @@ title: SQL Server ikili ve büyük değerli veri
 ms.date: 03/30/2017
 ms.assetid: e00827b3-7511-4b2d-91d7-851ca86cc6b5
 ms.openlocfilehash: 9ebbe23dfbcac7825ce449dd40f62b921d13ab4a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43466204"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43564889"
 ---
 # <a name="sql-server-binary-and-large-value-data"></a>SQL Server ikili ve büyük değerli veri
 SQL Server sağlayan `max` depolama kapasitesini genişletir belirticisi `varchar`, `nvarchar`, ve `varbinary` veri türleri. `varchar(max)`, `nvarchar(max)`, ve `varbinary(max)` toplu olarak adlandırılır *büyük değerli veri türleri*. Büyük değerli veri türleri en fazla 2 depolamak için kullanabileceğiniz ^ 31-1 bayt veri.  

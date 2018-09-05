@@ -8,12 +8,12 @@ helpviewer_keywords:
 - events [C#], remove accessor
 - remove accessor [C#]
 ms.assetid: bf903abf-03a4-4f7b-ab6b-b7e59bc2ee1e
-ms.openlocfilehash: 4779c69a0cca9c907bd8277da521a4dc913d2829
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 759a7a4518a371449723a23669816bbc0fbc0dee
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874344"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43674469"
 ---
 # <a name="how-to-implement-custom-event-accessors-c-programming-guide"></a>Nasıl yapılır: Özel Olay Erişimcilerini Uygulama (C# Programlama Kılavuzu)
 Özel bir tür içinde bildirildiği için yalnızca gelen sınıfın içinden çağrılabilen çok noktaya yayın temsilci bir olaydır. İstemci kodu, olay başlatıldığında, çağrılması gereken bir yönteme başvuru sağlayarak olaya abone olur. Bu yöntemler, olay erişimcileri adlı dışında özellik erişimcileri, benzer olay erişimcileri aracılığıyla temsilcinin çağırma listesine eklenir `add` ve `remove`. Çoğu durumda, özel olay erişimcilerini sağlamanız gerekmez. Derleyici, kodunuzda hiçbir özel olay erişimcilerini sağlandığında, bunları otomatik olarak eklenir. Ancak, bazı durumlarda özel davranış sağlamanız gerekebilir. Böyle bir durumda konu başlığında gösterilen [nasıl yapılır: arabirim olaylarını uygulama](../../../csharp/programming-guide/events/how-to-implement-interface-events.md).  
@@ -23,6 +23,7 @@ ms.locfileid: "37874344"
   
 [!code-csharp[IDrawingObject.OnDraw](codesnippet/CSharp/how-to-implement-interface-events_1.cs#IDrawingObjectOnDraw)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Olaylar](../../../csharp/programming-guide/events/index.md)  
- [event](../../../csharp/language-reference/keywords/event.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [Olaylar](../../../csharp/programming-guide/events/index.md)  
+- [event](../../../csharp/language-reference/keywords/event.md)

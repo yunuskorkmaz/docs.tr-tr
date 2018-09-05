@@ -2,12 +2,12 @@
 title: LINQ to XML eksenleri (C#)
 ms.date: 07/20/2015
 ms.assetid: 3f7d54ff-b608-43a1-9e2d-e70668b72df8
-ms.openlocfilehash: d12d35a6f9b02056946ba201a7bd5a961f64ba36
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 6a27adb1c7e1dcfefda13a355700202ccda3ffab
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43408661"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43673281"
 ---
 # <a name="linq-to-xml-axes-c"></a>LINQ to XML eksenleri (C#)
 Bir XML ağacı oluşturduğunuz veya bir XML belgesi bir XML ağacına yüklenen sonra öğeler ve öznitelikler bulun ve bunların değerlerini almak için sorgulayabilirsiniz.  
@@ -29,6 +29,7 @@ Bir XML ağacı oluşturduğunuz veya bir XML belgesi bir XML ağacına yüklene
 |[Nasıl yapılır: bir öznitelik (LINQ to XML) değerini alma (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-attribute-linq-to-xml.md)|Özniteliklerinin değerlerini alma işlemi gösterilmektedir.|  
 |[Nasıl yapılır: (C#) öğenin yüzeysel değerini alma](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-the-shallow-value-of-an-element.md)|Bir öğenin yüzeysel değerini alma işlemi gösterilmektedir.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Genişletme Yöntemleri](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
- [Programlama Kılavuzu (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [Genişletme Yöntemleri](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
+- [Programlama Kılavuzu (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

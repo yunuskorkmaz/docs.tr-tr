@@ -9,11 +9,11 @@ helpviewer_keywords:
 - this keyword [C#]
 ms.assetid: d4f827fe-4710-410b-89b8-867dad44b8a3
 ms.openlocfilehash: df1bf6a3e6d24b231bf5e3c7a960f49084c4e53a
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42930197"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43661868"
 ---
 # <a name="this-c-reference"></a>this (C# Başvurusu)
 `this` Anahtar sözcüğü sınıfın geçerli örneğine başvurur ve genişletme yönteminin ilk parametresinin bir değiştirici da kullanılır.  

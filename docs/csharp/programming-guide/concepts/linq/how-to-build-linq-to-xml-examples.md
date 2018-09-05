@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: derleme LINQ-XML örnekleri (C#)'
+title: 'Nasıl yapılır: derleme LINQ to XML örnekleri (C#)'
 ms.date: 07/20/2015
 ms.assetid: e5d18fa1-2704-48fe-a44b-1564f97c9e9c
-ms.openlocfilehash: e134a93ed05b6ffdc80729a5f737d833cee8a881
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: da0d85db22de6bcb2038cbe0608983d39bd66383
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329566"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43661236"
 ---
-# <a name="how-to-build-linq-to-xml-examples-c"></a>Nasıl yapılır: derleme LINQ-XML örnekleri (C#)
-Çeşitli parçacıkları ve bu belgedeki örneklerde sınıfları ve ad alanları çeşitli türlerini kullanın. C# kodu derlerken sağlamanız uygun gereken `using` yönergeleri.  
+# <a name="how-to-build-linq-to-xml-examples-c"></a>Nasıl yapılır: derleme LINQ to XML örnekleri (C#)
+Çeşitli kod parçacıkları ve bu belgedeki örneklerde, sınıfları ve türleri çeşitli ad alanları kullanın. C# kodu derlerken sağlamak uygun ihtiyacınız `using` yönergeleri.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kodu içeren `using` C# örnekleri oluşturmak ve çalıştırmak için gerekli yönergeleri. Tüm `using` yönergeleri her örneği için gereklidir.  
+ Aşağıdaki kodu içeren `using` C# örnekleri oluşturmak ve çalıştırmak için gerekli yönergeleri. Tüm `using` yönergeleri her örnek için gereklidir.  
   
 ```csharp  
 using System;  
@@ -34,5 +34,6 @@ using System.Reflection;
 using System.IO.Packaging;  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [LINQ-XML programlamaya genel bakış (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [LINQ to XML programlamaya genel bakış (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

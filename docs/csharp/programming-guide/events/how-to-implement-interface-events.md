@@ -5,12 +5,12 @@ helpviewer_keywords:
 - interfaces [C#], event implementation in classes
 - events [C#], in interfaces
 ms.assetid: 63527447-9535-4880-8e95-35e2075827df
-ms.openlocfilehash: 7437868bffa0f317ad29ed6c920ae007c602defa
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 3620a3e11553bdd6878126388b612113b5722e89
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874887"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43553709"
 ---
 # <a name="how-to-implement-interface-events-c-programming-guide"></a>Nasıl yapılır: Arabirim Olaylarını Uygulama (C# Programlama Kılavuzu)
 Bir [arabirimi](../../../csharp/language-reference/keywords/interface.md) bildirebilirsiniz bir [olay](../../../csharp/language-reference/keywords/event.md). Aşağıdaki örnek, bir sınıf içinde arabirim olaylarını uygulama gösterilmiştir. Herhangi bir arabirim yöntemi veya özelliği uygularken temelde aynı kurallardır.  
@@ -57,9 +57,10 @@ Kendi erişimcileri sağlayarak, iki olay sınıfınızın aynı olay tarafında
   
  [!code-csharp[WrapTwoInterfaceEvents](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-implement-interface-events_1.cs#everything)]
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [Olaylar](../../../csharp/programming-guide/events/index.md)  
- [Temsilciler](../../../csharp/programming-guide/delegates/index.md)  
- [Belirtik Arabirim Kullanma](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md)  
- [Nasıl yapılır: Türetilmiş Sınıflarda Temel Sınıf Olayları Oluşturma](../../../csharp/programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [Olaylar](../../../csharp/programming-guide/events/index.md)  
+- [Temsilciler](../../../csharp/programming-guide/delegates/index.md)  
+- [Belirtik Arabirim Kullanma](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md)  
+- [Nasıl yapılır: Türetilmiş Sınıflarda Temel Sınıf Olayları Oluşturma](../../../csharp/programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md)

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - client application services, configuring
 ms.assetid: 34a8688a-a32c-40d3-94be-c8e610c6a4e8
 ms.openlocfilehash: a65c216397f240b77eb81f88d8f2a2da122e1ccf
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43399244"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560684"
 ---
 # <a name="how-to-configure-client-application-services"></a>Nasıl Yapılır: İstemci Uygulama Hizmetlerini Yapılandırma
 Bu konu Visual Studio'nun nasıl kullanılacağını açıklar **Proje Tasarımcısı** etkinleştirmek ve istemci uygulama hizmetleri yapılandırmak için. İstemci uygulama Hizmetleri kullanıcıları doğrulamak ve mevcut bir kullanıcı rolleri ve ayarlarını almak için kullanabileceğiniz [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] uygulama hizmeti. Yapılandırmadan sonra etkin hizmetler uygulama kodunuzda açıklandığı erişebileceğiniz [istemci uygulama servislerine genel bakış](../../../docs/framework/common-client-technologies/client-application-services-overview.md). Hakkında daha fazla bilgi için [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] uygulama hizmetleri [ASP.NET uygulama hizmetlerine genel bakış](https://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  

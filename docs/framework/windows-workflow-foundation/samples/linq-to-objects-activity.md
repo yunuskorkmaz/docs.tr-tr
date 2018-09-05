@@ -1,30 +1,30 @@
 ---
-title: LINQ to nesneleri etkinliği
+title: LINQ to Objects etkinliği
 ms.date: 03/30/2017
 ms.assetid: 403c82e8-7f2b-42f6-93cd-95c35bc76ead
-ms.openlocfilehash: e2c2be52a88d8f9a886f0e59c027e1d6c737497c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fca4a94a951c9713a61914de6ef33e0cbb74f75e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516675"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43552774"
 ---
-# <a name="linq-to-objects-activity"></a>LINQ to nesneleri etkinliği
-Bu örnek, bir koleksiyon sorgu öğelerine nesnelere LINQ kullanmak için bir etkinlik oluşturmak gösterilmiştir.  
+# <a name="linq-to-objects-activity"></a>LINQ to Objects etkinliği
+Bu örnek, bir koleksiyondaki sorgu öğeleri için LINQ to Objects'in kullanılacak bir etkinliği oluşturma işlemini gösterir.  
   
-## <a name="activity-details-for-findincollection"></a>FindInCollection etkinliği ayrıntıları  
- Bu etkinlik kullanıcılar sorgu öğelerine nesnelere LINQ kullanarak bellek koleksiyonlarında izin verir. Sonuçları filtrelemek için bir lambda ifadesi şeklinde LINQ koşulu sağlamanız gerekir. Bu etkinliği ile birlikte kullanılabilir <xref:System.Activities.Statements.AddToCollection%601> etkinlikler.  
+## <a name="activity-details-for-findincollection"></a>FindInCollection için etkinlik ayrıntıları  
+ Bu etkinlik, kullanıcıların koleksiyonlarına kullanarak LINQ to Objects'in bellek içinde sorgu öğeleri sağlar. Sonuçları filtrelemek için bir lambda ifadesinin biçiminde bir LINQ koşul sağlamanız gerekir. Bu etkinlik ile birlikte kullanılabilir <xref:System.Activities.Statements.AddToCollection%601> etkinlikler.  
   
- Aşağıdaki tabloda özellik ve dönüş değerleri etkinliğinin ayrıntılarını verir.  
+ Aşağıdaki tabloda özellik ve dönüş değerleri etkinliğinin ayrıntıları.  
   
-|Özellik veya dönüş değeri|Açıklama|  
+|Özellik ya da dönüş değeri|Açıklama|  
 |------------------------------|-----------------|  
-|`Collection` Özelliği|Kaynak koleksiyonu belirten gerekli bir özellik.|  
-|`Predicate` Özelliği|Filtre koleksiyonu için bir lambda ifadesi biçiminde belirtir gerekli bir özellik.|  
+|`Collection` Özelliği|Kaynak koleksiyonu belirtir. gerekli bir özellik.|  
+|`Predicate` Özelliği|Filtre koleksiyonu için bir lambda ifadesinin biçiminde belirtir. gerekli bir özellik.|  
 |Dönüş Değeri|Filtrelenmiş koleksiyonu.|  
   
-## <a name="code-sample-that-uses-the-custom-activity"></a>Özel Etkinlik kullanan örnek kod  
- Aşağıdaki kod örneğinde `FindInCollection` olan çalışanlar bir koleksiyondaki tüm satırları bulmak için özel etkinlik bir `Role` özelliğini `Manager` ve `Location` özelliğini `Redmond`.  
+## <a name="code-sample-that-uses-the-custom-activity"></a>Özel Etkinlik kullanan kod örneği  
+ Aşağıdaki kod örneğinde `FindInCollection` tüm satırları sahip çalışan bir koleksiyonda bulunacak özel etkinlik bir `Role` özelliğini `Manager` ve `Location` özelliğini `Redmond`.  
   
 ```csharp  
 // Find all program managers in Redmond in the employees collection.  
@@ -36,7 +36,7 @@ Activity wf = new FindInCollection<Employee>
 };  
 ```  
   
- Aşağıdaki kod özel FindInCollection etkinliği kullanan bir iş akışı programı oluşturmak nasıl gösterir <xref:System.Activities.Statements.AddToCollection%601>, ve <xref:System.Activities.Statements.ForEach%601> çalışanlar, koleksiyonuyla doldurmak için etkinlikler Geliştirici rolleri ve bulunan tüm çalışanlar Bul Redmond ve sonuçta elde edilen listede yineleme.  
+ Aşağıdaki kod, özel FindInCollection etkinliğini kullanan bir iş akışı program oluşturma işlemi gösterilmektedir <xref:System.Activities.Statements.AddToCollection%601>, ve <xref:System.Activities.Statements.ForEach%601> çalışanlar ile bir koleksiyon doldurmak için etkinlikleri bulmanıza Geliştirici rolleri ve bulunan tüm çalışanlar Redmond ve sonra elde edilen listede tekrarlayabilirsiniz.  
   
 ```csharp  
 // Create the Linq predicate for the find expression  
@@ -100,19 +100,19 @@ Activity sampleWorkflow = new Sequence
   
 1.  Kullanarak [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], LinqToObjects.sln çözüm dosyasını açın.  
   
-2.  Çözümü derlemek için CTRL + SHIFT + B tuşuna basın.  
+2.  Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.  
   
 3.  Çözümü çalıştırmak için F5 tuşuna basın.  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\Linq\LinqToObjects`  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Lambda ifadeleri (C# programlama Kılavuzu)](http://go.microsoft.com/fwlink/?LinkId=150381)  
- [LINQ to Objects](http://go.microsoft.com/fwlink/?LinkID=150380)
+ [Lambda ifadeleri (C# programlama Kılavuzu)](https://go.microsoft.com/fwlink/?LinkId=150381)  
+ [LINQ to Objects](https://go.microsoft.com/fwlink/?LinkID=150380)

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - data types [Visual Basic], choosing
 ms.assetid: 902479ef-1679-47fc-9911-0c1c5008226c
 ms.openlocfilehash: 3b031c6e3dc04637128f95ca8e922d3298981287
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43462429"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43553578"
 ---
 # <a name="character-data-types-visual-basic"></a>Karakter Veri Türleri (Visual Basic)
 Visual Basic sağlar *karakter veri türleri* yazdırılabilir ve görüntülenebilen karakterler ile dağıtılacak. Her ikisi de Unicode karakterleriyle işlem sırasında `Char` tek bir karakter tutarken `String` sonsuz sayıda karakter içeriyor.  

@@ -19,12 +19,12 @@ helpviewer_keywords:
 - floating-point numbers [Visual Basic], comparison
 - floating-point numbers
 ms.assetid: 90040d67-b630-4125-a6ae-37195b079042
-ms.openlocfilehash: c5ff9d097c0660956a9751a23511d8273766227c
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 9bbc7f51de9899354184d051d8f1a584651dd030
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245680"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43671797"
 ---
 # <a name="troubleshooting-data-types-visual-basic"></a>Veri Türleri Sorunlarını Giderme (Visual Basic)
 Bu sayfada, iç veri türlerinde işlemler gerçekleştirdiğinizde oluşabilecek bazı yaygın sorunlar listelenir.  
@@ -117,6 +117,6 @@ Bu sayfada, iç veri türlerinde işlemler gerçekleştirdiğinizde oluşabilece
  [Tür Karakterleri](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
  [Değer Türleri ve Başvuru Türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
  [Visual Basic'de tür dönüştürmeleri](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [Veri Türleri](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Veri Türleri](../../../../visual-basic/language-reference/data-types/index.md)  
  [Tür Dönüştürme İşlevleri](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [Veri Türlerinin Etkili Kullanımı](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

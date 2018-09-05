@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: bir Namespace (C#) tüm düğümleri Bul'
+title: 'Nasıl yapılır: tüm düğümleri bulmak bir Namespace (C#)'
 ms.date: 07/20/2015
 ms.assetid: 3a38b913-a53e-4d0e-a19d-8782bffd3364
-ms.openlocfilehash: b22acdd7c2d64316e802c4dd01876a61141c8979
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0675795da7c190e6d105ac61027c28f161961099
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317784"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43671575"
 ---
-# <a name="how-to-find-all-nodes-in-a-namespace-c"></a>Nasıl yapılır: bir Namespace (C#) tüm düğümleri Bul
-Her bir öğe veya öznitelik bu belirli ad alanındaki tüm düğümleri bulmak için ad alanı filtreleyebilirsiniz.  
+# <a name="how-to-find-all-nodes-in-a-namespace-c"></a>Nasıl yapılır: tüm düğümleri bulmak bir Namespace (C#)
+Her bir öğe veya öznitelik, belirli bir ad alanındaki tüm düğümleri bulmak için ad alanı filtreleyebilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, iki ad alanı ile bir XML ağaç oluşturur. Ağacı ile yineleme ve tüm öğeleri ve bu ad alanlarından birinde özniteliklerinin adları yazdırır.  
+ Aşağıdaki örnek, bir XML ağacı ile iki ad alanı oluşturur. Ağacı ile yineleme ve tüm öğeleri ve öznitelikleri o ad alanlarından birinde adlarını yazdırır.  
   
 ```csharp  
 string markup = @"<aw:Root xmlns:aw='http://www.adventure-works.com' xmlns:fc='www.fourthcoffee.com'>  
@@ -44,9 +44,9 @@ Nodes in the http://www.adventure-works.com namespace
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki sorgu tarafından erişilen XML dosyası iki farklı ad alanlarında satınalma siparişleri içerir. Sorgu yeni bir ağaç öğeleriyle yalnızca ad alanlarından birinde oluşturur.  
+ Aşağıdaki sorgu tarafından erişilen XML dosyasını iki farklı ad alanlarında, satın alma siparişleri içerir. Sorgu yalnızca öğeleri ad alanlarından birinde yeni bir ağaç oluşturur.  
   
- Bu örnekte aşağıdaki XML belgesi kullanır: [örnek XML dosyası: birleştirilmiş satınalma siparişi](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).  
+ Bu örnekte aşağıdaki XML belgesi: [örnek XML dosyası: birleştirilmiş satın alma siparişleri](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).  
   
 ```csharp  
 XDocument cpo = XDocument.Load("ConsolidatedPurchaseOrders.xml");  
@@ -95,5 +95,6 @@ Console.WriteLine(newTree);
 </Root>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Temel sorgu (LINQ-XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [Temel sorgular (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

@@ -5,11 +5,11 @@ ms.date: 07/28/2018
 author: billwagner
 ms.author: wiwagn
 ms.openlocfilehash: 1806d1af3b10e44ccc2eff788d8958ca976fe85b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43409149"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43557202"
 ---
 # <a name="how-to-remove-the-net-core-runtime-and-sdk"></a>SDK ve .NET Core çalışma zamanı'nı kaldırma
 

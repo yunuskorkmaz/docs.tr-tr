@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - extension methods [C#], implementing and calling
 ms.assetid: 7dab2a56-cf8e-4a47-a444-fe610a02772a
-ms.openlocfilehash: 6b349876a60ad277ca933a4b4fbcbfffed2bd188
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 7a09fa34b88c024bdaa0197bf82471a6bd6c2ae8
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43452683"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672551"
 ---
 # <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>Nasıl yapılır: Özel bir Uzantı Metodu Uygulama ve Arama (C# Programlama Kılavuzu)
 Bu konu, kendi herhangi bir .NET türü için genişletme yöntemlerini gösterilmektedir. İstemci kodu, uzantı yöntemlerinizi kullanabilir, bunları içeren DLL bir başvuru eklemeyi ve ekleyerek bir [kullanarak](../../../csharp/language-reference/keywords/using-directive.md) yönergesi uzantı yöntemlerin tanımlandığı ad alanı belirtir.  
@@ -41,13 +41,14 @@ Bu konu, kendi herhangi bir .NET türü için genişletme yöntemlerini gösteri
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
  Genişletme yöntemleri, belirli güvenlik güvenlik açığı var. Tüm ad çakışmalarını örneği veya türü tarafından tanımlanan statik yöntem ile değiştiriliyor çözümlenir çünkü bir türün varolan yöntemleri kimliğine bürünmek için hiç kullanılabilir. Genişletme yöntemleri, genişletilmiş sınıf özel tüm verileri erişemez.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [Genişletme Yöntemleri](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
- [LINQ (dil ile tümleşik sorgu)](../../../csharp/linq/linq-in-csharp.md)  
- [Statik Sınıflar ve Statik Sınıf Üyeleri](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)  
- [protected](../../../csharp/language-reference/keywords/protected.md)  
- [internal](../../../csharp/language-reference/keywords/internal.md)  
- [public](../../../csharp/language-reference/keywords/public.md)  
- [this](../../../csharp/language-reference/keywords/this.md)  
- [namespace](../../../csharp/language-reference/keywords/namespace.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [Genişletme Yöntemleri](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
+- [LINQ (dil ile tümleşik sorgu)](../../../csharp/linq/linq-in-csharp.md)  
+- [Statik Sınıflar ve Statik Sınıf Üyeleri](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)  
+- [protected](../../../csharp/language-reference/keywords/protected.md)  
+- [internal](../../../csharp/language-reference/keywords/internal.md)  
+- [public](../../../csharp/language-reference/keywords/public.md)  
+- [this](../../../csharp/language-reference/keywords/this.md)  
+- [namespace](../../../csharp/language-reference/keywords/namespace.md)

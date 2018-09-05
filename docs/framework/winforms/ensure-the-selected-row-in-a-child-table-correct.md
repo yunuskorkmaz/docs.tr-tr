@@ -17,11 +17,11 @@ helpviewer_keywords:
 - current child position
 ms.assetid: c5fa2562-43a4-46fa-a604-52d8526a87bd
 ms.openlocfilehash: e1fdb007451c157e60a1ad723b5d2d06bc85ecdf
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43405550"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43659022"
 ---
 # <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>Nasıl yapılır: Bir Alt Tabloda Seçilen Satırın Doğru Konumda Kalmasını Sağlama
 Aktardığınızda genellikle, Windows Forms veri bağlama ile çalışırken, verilerin ne üst/alt adlı veya ana/Ayrıntılar görünümü görüntülenir. Bu iki denetimlerinde aynı kaynaktan verilerin görüntülendiği bir veri bağlama senaryosu ifade eder. Bir denetim seçimini değiştirmeden değiştirmek için ikinci denetimde görüntülenen veri neden olur. Örneğin, ilk denetim müşteriler ve siparişler listesi ilk denetiminde ise seçili müşterilerle ilgili ikinci bir listesini içerebilir.  

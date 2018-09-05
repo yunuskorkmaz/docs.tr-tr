@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d00f0efa-9084-4c17-843f-54904fcb4204
 ms.openlocfilehash: ee753f5101f525fc7d86a91f2aa3545d257a2be5
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43478123"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43671357"
 ---
 # <a name="method-based-query-syntax-examples-join-operators"></a>Metot tabanlı sorgu söz dizimi örnekleri: Birleşim işleçleri
 Bu konudaki örnekler nasıl kullanılacağını gösteren <xref:System.Linq.Enumerable.Join%2A> ve <xref:System.Linq.Enumerable.GroupJoin%2A> sorgulamak için yöntemleri [AdventureWorks satışları modeli](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) metot tabanlı sorgu söz dizimini kullanarak. Bu örneklerde kullanılan AdventureWorks satışları modeli kişi, adres, ürün, SalesOrderHeader ve satış siparişi ayrıntısını tablolarda AdventureWorks örnek veritabanı oluşturulur.  

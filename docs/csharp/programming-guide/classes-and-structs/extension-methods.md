@@ -6,12 +6,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: d478370edcd0ec4772a8ad3706d08a4e85e43f06
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 60ca94cee557bcbb1ad5339ecb3e742bb5f45d9c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43405133"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43558486"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Uzantı Metotları (C# Programlama Kılavuzu)
 Uzantı yöntemleri, yeni türetilmiş bir tür oluşturmadan, yeniden derlemeden ya da özgün türü değiştirmeden yöntemler "eklemenizi" sağlar. Uzantı yöntemleri özel bir statik yöntem türüdür, ancak bunlar genişletilmiş türdeki örnek yöntemler ise çağrılır. C#, F # ve Visual Basic'te yazılmış istemci kodu için bir genişletme yöntemi ve gerçekte bir tür içinde tanımlanan yöntemleri çağırma arasında görünür bir fark yoktur.  
@@ -81,12 +81,13 @@ using System.Linq;
   
  Uygulanan bir sınıf kitaplığı için derleme sürüm numarasının artıyor olmasını önlemek için uzantı yöntemleri kullanmamanız gerekir. Kaynak koduna sahip olduğunuz kitaplığa önemli işlevsellik eklemek isterseniz, derleme sürüm oluşturma için standart .NET Framework yönergelerini izlemeniz gerekir. Daha fazla bilgi için [derleme sürümlendirme](../../../../docs/framework/app-domains/assembly-versioning.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [Paralel Programlama örnekleri (bunlar birçok örnek genişletme yöntemleri içerir)](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)  
- [Lambda İfadeleri](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
- [Standart Sorgu İşleçlerine Genel Bakış](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
- [Parametreler ve bunların etkilerine örneği için dönüştürme kuralları](https://blogs.msdn.microsoft.com/sreekarc/2007/10/11/conversion-rules-for-instance-parameters-and-their-impact)  
- [Uzantı yöntemlerinin diller arasında birlikte çalışabilirlik](https://blogs.msdn.microsoft.com/sreekarc/2007/10/11/extension-methods-interoperability-between-languages)  
- [Uzantı yöntemleri ve Curried temsilciler](https://blogs.msdn.microsoft.com/sreekarc/2007/05/01/extension-methods-and-curried-delegates)  
- [Genişletme yöntemi bağlama ve hata raporlama](https://blogs.msdn.microsoft.com/sreekarc/2007/04/26/extension-method-binding-and-error-reporting)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [Paralel Programlama örnekleri (bunlar birçok örnek genişletme yöntemleri içerir)](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)  
+- [Lambda İfadeleri](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
+- [Standart Sorgu İşleçlerine Genel Bakış](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
+- [Parametreler ve bunların etkilerine örneği için dönüştürme kuralları](https://blogs.msdn.microsoft.com/sreekarc/2007/10/11/conversion-rules-for-instance-parameters-and-their-impact)  
+- [Uzantı yöntemlerinin diller arasında birlikte çalışabilirlik](https://blogs.msdn.microsoft.com/sreekarc/2007/10/11/extension-methods-interoperability-between-languages)  
+- [Uzantı yöntemleri ve Curried temsilciler](https://blogs.msdn.microsoft.com/sreekarc/2007/05/01/extension-methods-and-curried-delegates)  
+- [Genişletme yöntemi bağlama ve hata raporlama](https://blogs.msdn.microsoft.com/sreekarc/2007/04/26/extension-method-binding-and-error-reporting)

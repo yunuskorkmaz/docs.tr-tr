@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: 441fe91c8c884e59c6399d57e7e55bf6591cb1bb
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: 1782748749df171ec8d6e3bc8873b4a42c83c0e6
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42751885"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43556061"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Nesne Ömrü: Nesneleri Oluşturma ve Yok Etme (Visual Basic)
 Bir sınıf, bir nesne örneği kullanılarak oluşturulan `New` anahtar sözcüğü. Bunlar kullanılmadan önce başlatma görevleri genellikle yeni nesneler üzerinde gerçekleştirilmelidir. Genel başlangıç görevleri, veritabanlarına bağlanma ve kayıt defteri anahtarlarının okumanızı dosyalarını açma içerir. Visual Basic denetimleri adı verilen yordamları kullanarak yeni nesnelerin başlatılmasını *oluşturucular* (başlatma denetime izin veren özel yöntemleri).  
@@ -148,7 +148,7 @@ End Sub
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.IDisposable.Dispose%2A>  
- [Başlatma ve sonlandırma bileşenleri](http://msdn.microsoft.com/library/58444076-a9d2-4c91-b3f6-0e180dc0695d)  
+ [Başlatma ve sonlandırma bileşenleri](https://msdn.microsoft.com/library/58444076-a9d2-4c91-b3f6-0e180dc0695d)  
  [New İşleci](../../../../visual-basic/language-reference/operators/new-operator.md)  
  [Yönetilmeyen Kaynakları Temizleme](../../../../standard/garbage-collection/unmanaged.md)  
  [Nothing](../../../../visual-basic/language-reference/nothing.md)

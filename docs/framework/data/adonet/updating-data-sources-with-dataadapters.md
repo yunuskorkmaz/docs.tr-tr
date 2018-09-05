@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d1bd9a8c-0e29-40e3-bda8-d89176b72fb1
 ms.openlocfilehash: c334fb695f80bcac19167e9347d27d40f5139580
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43397355"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43565438"
 ---
 # <a name="updating-data-sources-with-dataadapters"></a>Veri kaynaklarını DataAdapters ile güncelleştirme
 `Update` Yöntemi <xref:System.Data.Common.DataAdapter> değişikliklerden çözümlemek için çağrılan bir <xref:System.Data.DataSet> veri kaynağına geri dönün. `Update` Yöntemi gibi `Fill` yöntemi örneği bağımsız değişken olarak alan bir `DataSet`ve isteğe bağlı <xref:System.Data.DataTable> nesne veya `DataTable` adı. `DataSet` Örneği `DataSet` yapılmış, değişiklikleri içeren ve `DataTable` değişiklikleri alınacak tabloyu tanımlar. Hayır ise `DataTable` belirtilirse, ilk `DataTable` içinde `DataSet` kullanılır.  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - AJAX integration and JSON support [WCF]
 ms.assetid: 3851a8fc-d861-4ac1-873c-96af0343d3a7
 ms.openlocfilehash: bcf1cab9386d9d9503af6258c1bb39f8744c073b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43407910"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43565899"
 ---
 # <a name="ajax-integration-and-json-support"></a>AJAX Tümleştirme ve JSON Desteği
 ASP.NET zaman uyumsuz JavaScript ve XML (AJAX) için Windows Communication Foundation (WCF) desteği ve JavaScript nesne gösterimi (JSON) veri biçimi operations AJAX istemcilerine kullanıma sunmak WCF hizmetleri sağlar. AJAX Web JavaScript kodu çalıştıran ve HTTP isteklerini kullanarak bu WCF hizmetlerine erişme sayfaları istemcileridir. Bu bölümdeki konular, nasıl ve bu destek hakkında bilgi sağlar.  

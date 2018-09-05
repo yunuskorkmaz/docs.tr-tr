@@ -4,12 +4,12 @@ ms.date: 07/05/2018
 helpviewer_keywords:
 - arrays [C#], passing as arguments
 ms.assetid: f3a0971e-c87c-4a1f-8262-bc0a3b712772
-ms.openlocfilehash: 0289297be9d7b4989cc95d2b50b92dae9ee831f7
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: b2e6c0134af3b5814e9c9321e1486820311aa5c6
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42911805"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43556197"
 ---
 # <a name="passing-arrays-as-arguments-c-programming-guide"></a>Dizileri bağımsız değişkenler (C# programlama Kılavuzu) olarak geçirme
 
@@ -57,8 +57,8 @@ Aşağıdaki örnekte, iki boyutlu bir tamsayı dizisi başlatılır ve geçiril
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[C# Programlama Kılavuzu](../index.md)  
-[Diziler](index.md)  
-[Tek Boyutlu Diziler](single-dimensional-arrays.md)  
-[Çok Boyutlu Diziler](multidimensional-arrays.md)  
-[Düzensiz Diziler](jagged-arrays.md)  
+- [C# Programlama Kılavuzu](../index.md)  
+- [Diziler](index.md)  
+- [Tek Boyutlu Diziler](single-dimensional-arrays.md)  
+- [Çok Boyutlu Diziler](multidimensional-arrays.md)  
+- [Düzensiz Diziler](jagged-arrays.md)  

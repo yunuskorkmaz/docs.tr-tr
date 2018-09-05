@@ -3,11 +3,11 @@ title: Windows Communication Foundation Örneklerini Çalıştırma
 ms.date: 03/30/2017
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
 ms.openlocfilehash: d6fc93af217bfc282ce7030973be32baf7d864cd
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43425781"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43658944"
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>Windows Communication Foundation Örneklerini Çalıştırma
 Windows Communication Foundation (WCF) örnekleri, tek bir makine veya çapraz makine yapılandırmada çalıştırabilirsiniz. Sağlanan olarak örnekler tek bir makinede çalıştırmak için hazır olursunuz. Çapraz makine yapılandırması, bir örnek 's yapılandırma dosyası ayarları değiştirmek gereklidir. Aşağıdaki yordamlarda, aynı makineye ve çapraz makine yapılandırmaları bir örnek çalıştırmak açıklanmaktadır. Internet Information Services (IIS) ve şirket içinde barındırılan örnekleri barındırılan hizmetler için adımları farklılığı olduğunu unutmayın. Çoğu örnekleri IIS'de barındırılan; nasıl barındırılan belirlemek için örnek Benioku bilgilere bakın.  

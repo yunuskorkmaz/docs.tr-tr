@@ -3,11 +3,11 @@ title: Eş Çözücüler
 ms.date: 03/30/2017
 ms.assetid: d86d12a1-7358-450f-9727-b6afb95adb9c
 ms.openlocfilehash: 01320d98953c8fdc057aeec840ace4b818fcf115
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385087"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43670603"
 ---
 # <a name="peer-resolvers"></a>Eş Çözücüler
 Bir kafesine bağlanmak için diğer düğümler IP adreslerini Eş düğüm gerektirir. IP adresleri, ağ kimliği alır ve bu belirli kafes kimliğe sahip kayıtlı düğümlere karşılık gelen adreslerinden oluşan bir liste döndürür Çözümleyicisi hizmeti iletişim kurarak elde edilir Çözümleyici ağ hizmetiyle kaydetmek her düğüm sağlayarak oluşturur kayıtlı adreslerinden oluşan bir liste tutar.  

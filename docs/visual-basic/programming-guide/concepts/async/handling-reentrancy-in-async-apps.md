@@ -3,11 +3,11 @@ title: (Visual Basic) zaman uyumsuz uygulamalarda yeniden girişi işleme
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
 ms.openlocfilehash: b633e3cf9a499cd5f364692cd0461aed640fe54d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401896"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43555695"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>(Visual Basic) zaman uyumsuz uygulamalarda yeniden girişi işleme
 Zaman uyumsuz kod uygulamanıza eklediğinizde, göz önünde bulundurun ve tamamlanmadan önce zaman uyumsuz bir işlem engellemelisiniz yeniden giriş muhtemelen önlemek gerekir. Olasılıklarını tanımlamaz ve yönetmezseniz, beklenmedik sonuçlara neden olabilir.  

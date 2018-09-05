@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c0043c89-2192-43c9-986d-3ecec4dd8c9c
 ms.openlocfilehash: 2c3368bc73d54f2848cad3c1086b1d9733205d2b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43425617"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43556645"
 ---
 # <a name="how-to-create-and-run-a-long-running-workflow"></a>Nasıl yapılır: oluşturma ve uzun süre çalışan iş akışı
 Windows Workflow Foundation (WF) merkezi özelliklerinin kalıcı hale getirmek ve boşta iş akışları bir veritabanına kaldırın çalışma zamanının becerisidir. Adımları [nasıl yapılır: bir iş akışı çalıştırma](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md) bir konsol uygulaması kullanarak iş akışı barındırma ilişkin temel bilgileri gösterilmektedir. Örnekler, başlangıç iş akışları, iş akışı yaşam döngüsü işleyicileri ve sürdürme yer işaretleri gösterilen. İş akışı kalıcılığı etkili bir şekilde göstermek için daha karmaşık bir iş akışı ana bilgisayarı gereklidir başlatma ve birden çok iş akışı örnekleri sürdürme destekler. Öğreticide bu adım, bir Windows form konağı başlatılıyor ve sürdürme birden çok iş akışı örnekleri, iş akışı kalıcılığı destekler ve izleme gibi gelişmiş özellikler için temel sağlayan uygulama ve olan sürüm oluşturma işlemi gösterilmektedir sonraki öğretici adımlarda gösterilmiştir.  

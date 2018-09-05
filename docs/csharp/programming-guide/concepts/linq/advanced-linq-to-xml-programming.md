@@ -2,12 +2,12 @@
 title: Gelişmiş LINQ to XML programlama (C#)
 ms.date: 07/20/2015
 ms.assetid: 2e012d40-532b-49ea-b1fc-152e616bdfa3
-ms.openlocfilehash: e455b2b579c56632d5e06b4da5c44a71ea150416
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 684c91724ad8f283dc47f38e31697884f4d216d2
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931843"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43565014"
 ---
 # <a name="advanced-linq-to-xml-programming-c"></a>Gelişmiş LINQ to XML programlama (C#)
 Bu bölümde, yalnızca bazı ileri düzey geliştiriciler için geçerli olacak bilgi [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] senaryoları.  
@@ -28,5 +28,6 @@ Bu bölümde, yalnızca bazı ileri düzey geliştiriciler için geçerli olacak
 |[XElement nesneleri (C#) içeren nesne grafiklerini serileştirme](../../../../csharp/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)|İçeren nesne grafiklerini serileştirme açıklar <xref:System.Xml.Linq.XElement> ve <xref:System.Xml.Linq.XDocument> nesneleri.|  
 |[LINQ to XML ile WPF Verilerini Bağlama](/visualstudio/designers/wpf-data-binding-with-linq-to-xml)|Windows Presentation Foundation uygulamalarında veri bağlama için veri kaynağı olarak LINQ to XML kullanmayı açıklar.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Programlama Kılavuzu (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [Programlama Kılavuzu (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

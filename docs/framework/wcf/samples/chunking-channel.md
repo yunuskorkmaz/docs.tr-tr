@@ -3,11 +3,11 @@ title: Öbekleme Kanalı
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
 ms.openlocfilehash: 9572ad6f88786af34252cea1f3c62d5067257b8b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43470096"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43661197"
 ---
 # <a name="chunking-channel"></a>Öbekleme Kanalı
 Windows Communication Foundation (WCF) kullanarak büyük iletileri gönderirken, genellikle bu iletileri arabelleğe almak için kullanılan bellek miktarını sınırlamak için tercih edilir. Olası bir çözüm (toplu veri gövdesinde olduğunu varsayarak) ileti akışı sağlamaktır. Ancak bazı protokoller, iletinin tamamı arabelleğe alma gerektirir. Güvenilir Mesajlaşma ve güvenlik gibi iki örnek verilebilir. Başka bir olası öbekleri adlı küçük iletilere büyük ileti ayırmak, söz konusu öbekleri bir öbek teker teker gönderilir ve alıcı tarafında büyük ileti yeniden oluşturmak için bir çözümdür. Uygulama bu parçalama yapabilirsiniz ve serbest Öbekleme veya özel bir kanalda yapmak için kullanabilirsiniz. Kümeleme kanal örnek nasıl bir özel protokolü veya katmanlı kanal Öbekleme ve büyük iletilerin XML'deki Öbekleme yapmak için kullanılabileceğini gösterir.  

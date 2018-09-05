@@ -9,17 +9,17 @@ helpviewer_keywords:
 - data entry [Windows Forms], disabling in grids
 - data grids [Windows Forms], disabling data entry
 ms.assetid: ef9539ce-539b-404e-84b6-ac282b64b88c
-ms.openlocfilehash: abf09652d4cbbf9f112192931c72afa0caaf9f97
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6263c92e6a981983c19e9d7f2357c581bee5ec07
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535000"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43660278"
 ---
 # <a name="how-to-prevent-row-addition-and-deletion-in-the-windows-forms-datagridview-control"></a>Nasıl yapılır: Windows Forms DataGridView Denetiminde Satır Ekleme ve Silmeyi Engelleme
-Bazı durumlarda, kullanıcıların yeni veri satırları girmek veya var olan satır silme önlemek isteyebilirsiniz, <xref:System.Windows.Forms.DataGridView> denetim. <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> Özelliği gösterir yeni kayıtlar için satır denetimi altındaki mevcut olup olmadığını while <xref:System.Windows.Forms.DataGridView.AllowUserToDeleteRows%2A> özelliği, satır kaldırılıp kaldırılamayacağını belirtir. Aşağıdaki kod örneğinde bu özellikleri kullanır ve ayrıca ayarlar <xref:System.Windows.Forms.DataGridView.ReadOnly%2A> özelliği salt okunur tamamen denetimi yapın.  
+Bazen kullanıcıların yeni veri satırı girme veya var olan satır silme önlemek istersiniz, <xref:System.Windows.Forms.DataGridView> denetimi. <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> Özelliği gösteren yeni kayıtlar için satır denetimi altındaki mevcut olup olmadığını, while <xref:System.Windows.Forms.DataGridView.AllowUserToDeleteRows%2A> özelliği satırları kaldırılıp kaldırılamayacağını belirtir. Aşağıdaki kod örneği, bu özellikleri kullanan ve ayrıca ayarlar <xref:System.Windows.Forms.DataGridView.ReadOnly%2A> salt okunur tamamen denetimi yapma özelliği.  
   
- Visual Studio'da bu görev için desteği yoktur.  Ayrıca bkz. [nasıl yapılır: satır ekleme önlemek ve Windows Forms DataGridView denetimi kullanarak Tasarımcı silinmesine](http://msdn.microsoft.com/library/k5c88sw3\(v=vs.110\)).  
+ Visual Studio'da bu görevi için desteği yoktur.  Ayrıca bkz: [nasıl yapılır: önlemek satır eklemeyi ve silmeyi Windows Forms DataGridView denetimi kullanarak Tasarımcı](https://msdn.microsoft.com/library/k5c88sw3\(v=vs.110\)).  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#090](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#090)]

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF, username and password
 ms.assetid: 8e08b74b-fa44-4018-b63d-0d0805f85e3f
 ms.openlocfilehash: a7573e14d224e2ec861b301816d6d886fd147180
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401035"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43671246"
 ---
 # <a name="how-to-use-a-custom-user-name-and-password-validator"></a>Nasıl yapılır: Özel Bir Kullanıcı Adı ve Parola Doğrulayıcı Kullanma
 Varsayılan olarak, Windows Communication Foundation (WCF) Windows kullanıcı adı ve parola kullanılabilir olduğunda kimlik doğrulaması için kullanıcı adını ve parolasını doğrulamak için kullanır. Ancak, WCF özel kullanıcı adı ve parola kimlik doğrulaması düzeni için olarak da bilinen tanır *doğrulayıcıları*. Özel kullanıcı adı ve parola Doğrulayıcı eklemek için türetilen bir sınıf oluşturma <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> ve ardından yapılandırın.  

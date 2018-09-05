@@ -1,40 +1,40 @@
 ---
-title: Özellik Kılavuzu Extensibliity
+title: Özellik Kılavuzu genişletilebilirliği
 ms.date: 03/30/2017
 ms.assetid: 3530c3a3-756d-4712-9f10-fb2897414d3a
-ms.openlocfilehash: 50fb2fce2fa8c52942a221401f88523c7b407dab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b7c3e3dbc3ccd95fc12dffd40927b3e2bbbc8226
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519600"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43660262"
 ---
-# <a name="property-grid-extensibliity"></a>Özellik Kılavuzu Extensibliity
-Bir geliştirici, belirli bir etkinlik Tasarımcısı'nda seçildiğinde görüntülenen özellik Kılavuzu özelleştirebilirsiniz. Bu bir zengin düzenleme deneyimi oluşturmak için yapılabilir. Bu örnek, bu nasıl yapılabilir göstermektedir.  
+# <a name="property-grid-extensibliity"></a>Özellik Kılavuzu genişletilebilirliği
+Bir geliştirici, belirli bir etkinlik Tasarımcısı'nda seçildiğinde görüntülenen özellik kılavuzunda özelleştirebilirsiniz. Bir zengin düzenleme deneyimi oluşturmak için bu yapılabilir. Bu örnek, bu nasıl yapılabileceğini gösterir.  
   
 ## <a name="demonstrates"></a>Gösteriler  
- İş Akışı Tasarımcısı özelliği kılavuz genişletilebilirliği.  
+ İş Akışı Tasarımcısı özellik Kılavuzu genişletilebilirliği.  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\PropertyGridExtensibility`  
   
 ## <a name="discussion"></a>Tartışma  
- Özellik Kılavuzu genişletmek için bir geliştirici özellik kılavuz Düzenleyici satır içi görünüşünü özelleştirme veya görünen bir iletişim kutusu için daha gelişmiş bir düzenleme yüzey sağlamak için seçenekleri vardır. Bu örnekte gösterilen iki farklı düzenleyicileri vardır; bir satır içi düzenleyici ve bir iletişim kutusu Düzenleyicisi.  
+ Özellik kılavuzunda genişletmek için bir geliştirici satır içi bir özellik Kılavuzu Düzenleyicisi özelleştirme ya da daha gelişmiş bir düzenleme yüzeyi için görünen bir iletişim sağlamak için seçenekleri vardır. Bu örnekte gösterilen iki farklı düzenleyici vardır; bir satır içi Düzenleyicisi ve bir iletişim kutusu Düzenleyicisi.  
   
 ## <a name="inline-editor"></a>Satır içi Düzenleyicisi  
- Satır içi Düzenleyicisi örnek şunlar gösterilmektedir:  
+ Satır içi Düzenleyici örneği aşağıda gösterilmektedir:  
   
--   Türetilen bir tür oluşturur <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor>.  
+-   Türetilen bir türü oluşturur <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor>.  
   
--   Oluşturucu, <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> değeri, bir Windows Presentation Foundation (WPF) veri şablonuyla ayarlanır. Bu bir XAML şablona bağlı olabilir, ancak bu örnekte, veri bağlama başlatmak için kod kullanılır.  
+-   Oluşturucuya <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> değeri, bir Windows Presentation Foundation (WPF) veri şablonu ile ayarlanır. Bu XAML şablona bağlı olabilir, ancak bu örnekte, ilgili kod ve veri bağlama başlatmak için kullanılır.  
   
--   Bir veri bağlamı veri şablonu bulunan <xref:System.Activities.Presentation.PropertyEditing.PropertyValue> özellik kılavuzunda çizilir öğesi. Bu bağlamda sonra bağlar aşağıdaki kodu (ile CustomInlineEditor.cs) Not `Value` özelliği.  
+-   Bir veri bağlamı veri şablonda <xref:System.Activities.Presentation.PropertyEditing.PropertyValue> öğesinin özellik kılavuzunda çizilir. Bu bağlam için ardından bağlayan aşağıdaki koddan (CustomInlineEditor.cs) Not `Value` özelliği.  
   
     ```csharp  
     FrameworkElementFactory stack = new FrameworkElementFactory(typeof(StackPanel));  
@@ -47,7 +47,7 @@ Bir geliştirici, belirli bir etkinlik Tasarımcısı'nda seçildiğinde görün
     stack.AppendChild(slider);  
     ```  
   
--   Etkinlik ve tasarımcı aynı bütünleştirilmiş kodda olduğundan, etkinlik Tasarımcısı özniteliklerinin kayıt elde etkinlik kendisini statik oluşturucuda SimpleCodeActivity.cs aşağıdaki örnekte gösterildiği gibi.  
+-   Etkinlik ve tasarımcı aynı bütünleştirilmiş kodda olduğundan, etkinlik Tasarımcısı özniteliklerini kayıt elde etkinliği kendisine statik oluşturucuda SimpleCodeActivity.cs aşağıdaki örnekte gösterildiği gibi.  
   
     ```  
     static SimpleCodeActivity()  
@@ -60,13 +60,13 @@ Bir geliştirici, belirli bir etkinlik Tasarımcısı'nda seçildiğinde görün
     ```  
   
 ## <a name="dialog-editor"></a>İletişim Kutusu Düzenleyicisi  
- İletişim kutusu Düzenleyicisi örnek şunlar gösterilmektedir:  
+ İletişim kutusu Düzenleyicisi örneği aşağıda gösterilmektedir:  
   
-1.  Türetilen bir tür oluşturur <xref:System.Activities.Presentation.PropertyEditing.DialogPropertyValueEditor>.  
+1.  Türetilen bir türü oluşturur <xref:System.Activities.Presentation.PropertyEditing.DialogPropertyValueEditor>.  
   
-2.  Ayarlar <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> Oluşturucu değerinde bir [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] veri şablonu yok. Bu XAML içinde oluşturulabilir, ancak bu örnekte, bu kod içinde oluşturulur.  
+2.  Kümeleri <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> oluşturucuyla değerinde bir [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] veri şablonu. Şu XAML içinde oluşturulamıyor, ancak bu örnekte, bu kod oluşturulur.  
   
-3.  Bir veri bağlamı veri şablonu bulunan <xref:System.Activities.Presentation.PropertyEditing.PropertyValue> özellik kılavuzunda çizilir öğesi. Bu daha sonra aşağıdaki kodda bağlar `Value` özelliği. De dahil etmek için kritik bir <xref:System.Activities.Presentation.PropertyEditing.EditModeSwitchButton> FilePickerEditor.cs iletişim başlatır düğmesi sağlayacak şekilde.  
+3.  Bir veri bağlamı veri şablonda <xref:System.Activities.Presentation.PropertyEditing.PropertyValue> öğesinin özellik kılavuzunda çizilir. Aşağıdaki kodda, daha sonra bu bağlar `Value` özelliği. De önemli bir <xref:System.Activities.Presentation.PropertyEditing.EditModeSwitchButton> iletişim kutusunda FilePickerEditor.cs başlatan düğme sağlamak için.  
   
     ```  
     this.InlineEditorTemplate = new DataTemplate();  
@@ -89,7 +89,7 @@ Bir geliştirici, belirli bir etkinlik Tasarımcısı'nda seçildiğinde görün
     this.InlineEditorTemplate.VisualTree = stack;  
     ```  
   
-4.  Geçersiz kılmaları <!--zz <xref:Microsoft.Windows.Design.PropertyEditing.ShowDialog%2A>--> `Microsoft.Windows.Design.PropertyEditing.ShowDialog` iletişim görüntüsünü işlemek için tasarımcı türündeki yöntemi. Bu örnekte, temel bir <xref:System.Windows.Forms.FileDialog> gösterilir.  
+4.  Geçersiz kılmalar <!--zz <xref:Microsoft.Windows.Design.PropertyEditing.ShowDialog%2A>--> `Microsoft.Windows.Design.PropertyEditing.ShowDialog` iletişim görüntüsünü işlemek için tasarımcı türündeki yöntemi. Bu örnekte, temel bir <xref:System.Windows.Forms.FileDialog> gösterilir.  
   
     ```  
     public override void ShowDialog(PropertyValue propertyValue, IInputElement commandSource)  
@@ -102,7 +102,7 @@ Bir geliştirici, belirli bir etkinlik Tasarımcısı'nda seçildiğinde görün
     }  
     ```  
   
-5.  Etkinlik ve tasarımcı aynı bütünleştirilmiş kodda olduğundan, etkinlik Tasarımcısı özniteliklerinin kayıt elde etkinlik kendisini statik oluşturucuda SimpleCodeActivity.cs aşağıdaki örnekte gösterildiği gibi.  
+5.  Etkinlik ve tasarımcı aynı bütünleştirilmiş kodda olduğundan, etkinlik Tasarımcısı özniteliklerini kayıt elde etkinliği kendisine statik oluşturucuda SimpleCodeActivity.cs aşağıdaki örnekte gösterildiği gibi.  
   
     ```  
     static SimpleCodeActivity()  
@@ -114,19 +114,19 @@ Bir geliştirici, belirli bir etkinlik Tasarımcısı'nda seçildiğinde görün
     }  
     ```  
   
-## <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örnek çalıştırın  
+## <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Çözümü derlemek ve Workflow1.xaml açın.  
+1.  Çözümü derleyin ve Workflow1.xaml açın.  
   
-2.  Sürükleme bir **SimpleCodeActivity** Tasarımcı tuvaline Kutusu'ndan.  
+2.  Sürükleme bir **SimpleCodeActivity** Tasarımcı tuvaline araç kutusundan.  
   
-3.  Tıklatın **SimpleCodeActivity** ve özellik ızgarasının kaydırıcı denetimi olduğu ve denetim çekme bir dosya açın.  
+3.  Tıklayın **SimpleCodeActivity** ve özellik kılavuzunu bir kaydırıcı denetimi olduğu ve denetim çekme dosyası açın.  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\PropertyGridExtensibility`

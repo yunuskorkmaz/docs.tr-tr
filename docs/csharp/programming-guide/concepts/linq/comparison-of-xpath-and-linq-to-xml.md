@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 87d361b1-daa9-4fd4-a53a-cbfa40111ad3
-ms.openlocfilehash: f41aa19c89365c9236ca0b8d385ffa6fbaf6be1c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: e27fbe2c45e331a90261da3c0c575f1a472db88f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43391742"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43561201"
 ---
 # <a name="comparison-of-xpath-and-linq-to-xml"></a>XPath ile LINQ to XML karşılaştırması
 XPath ile LINQ to XML benzer bir işlevsellik sağlar. Her ikisi de öğelerinin bir koleksiyonunu, özniteliklerin bir koleksiyonu, düğümlerin koleksiyonunu veya bir öğe veya öznitelik değeri olarak böyle sonuçları döndüren bir XML ağacı sorgulamak için kullanılabilir. Ancak, aynı zamanda bazı farklar vardır.  
@@ -104,5 +104,6 @@ customers.Elements("Customer").Elements("CompanyName")
 |Aşağıdaki|Doğrudan eşdeğeri.|  
 |önceki|Doğrudan eşdeğeri.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [LINQ to XML için XPath kullanıcıları (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [LINQ to XML için XPath kullanıcıları (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
