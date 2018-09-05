@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-ms.openlocfilehash: a04962912e3bc54d600b4514967cbc40a0d4f590
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 79e7ef99d9d21eb161d8981e166963df7dd57be5
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43420882"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43563245"
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>İzlenecek yol: Dinamik Nesneler Oluşturma ve Kullanma (C# and Visual Basic)
 
@@ -157,10 +157,11 @@ Bu anlatımda oluşturduğunuz projenin sonraki IronPython dinamik dilinde yazı
   
 9. Dosyayı kaydedin ve oluşturmak ve uygulamayı çalıştırmak için CTRL + F5 tuşlarına basın.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Dynamic?displayProperty=nameWithType>  
- <xref:System.Dynamic.DynamicObject?displayProperty=nameWithType>  
- [Tür dinamiği kullanma](../../../csharp/programming-guide/types/using-type-dynamic.md)  
- [Erken ve Geç Bağlama](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  
- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
- [Dinamik arabirimleri (Microsoft TechNet indirilebilir PDF) uygulama](https://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/implementing-dynamic-interfaces.pdf)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- <xref:System.Dynamic?displayProperty=nameWithType>  
+- <xref:System.Dynamic.DynamicObject?displayProperty=nameWithType>  
+- [Tür dinamiği kullanma](../../../csharp/programming-guide/types/using-type-dynamic.md)  
+- [Erken ve Geç Bağlama](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  
+- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
+- [Dinamik arabirimleri (Microsoft TechNet indirilebilir PDF) uygulama](https://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/implementing-dynamic-interfaces.pdf)

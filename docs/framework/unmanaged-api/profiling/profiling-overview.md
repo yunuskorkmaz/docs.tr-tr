@@ -30,11 +30,11 @@ ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: dd0fef0e8a2c4b94cd5dd7beb140e669c52a07a8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43416966"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43554034"
 ---
 # <a name="profiling-overview"></a>Profil Oluşturmaya Genel Bakış
 <a name="top"></a> Bir profil oluşturucu başka bir uygulamanın yürütülmesini izleyen bir araçtır. Ortak dil çalışma zamanı (CLR) Profil Oluşturucu, ileti almak ve CLR Profil oluşturma API'ı kullanarak göndermek işlevlerini içeren bir dinamik bağlantı kitaplığı (DLL) ' dir. Profil Oluşturucu DLL çalışma zamanında CLR tarafından yüklenir.  

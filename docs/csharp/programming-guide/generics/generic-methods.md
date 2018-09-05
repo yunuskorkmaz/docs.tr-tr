@@ -4,49 +4,50 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], methods
 ms.assetid: 673eeea2-4b48-4faa-9c4e-2e89449221b9
-ms.openlocfilehash: 04bc59d41eb7883e08138382b396bc737c7f11bb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0fb5267e6324d3dffd1ad5a72ef3718c8cdd08b8
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329874"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43552911"
 ---
 # <a name="generic-methods-c-programming-guide"></a>Genel Yöntemler (C# Programlama Kılavuzu)
-Genel yöntem tür parametreleri ile aşağıdaki gibi bildirilmiş bir yöntemdir:  
+Genel bir yöntem tür parametreleri ile aşağıdaki gibi belirtilen bir yöntemdir:  
   
  [!code-csharp[csProgGuideGenerics#22](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-methods_1.cs)]  
   
- Aşağıdaki kod örneği kullanarak yöntemini çağırmak için bir yolunu gösterir `int` tür bağımsız değişkeni için:  
+ Aşağıdaki kod örneği kullanarak yöntemini çağırma yollarından biri gösterilmektedir `int` tür bağımsız değişkeni için:  
   
  [!code-csharp[csProgGuideGenerics#23](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-methods_2.cs)]  
   
- Tür bağımsız değişkeni de atlayabilirsiniz ve derleyici Infer. Aşağıdaki çağrı `Swap` önceki çağrısına eşdeğerdir:  
+ Tür bağımsız değişkeni de atlayabilirsiniz ve derleyici bunu çıkarımlar. Aşağıdaki çağrı `Swap` önceki çağrısına eşdeğerdir:  
   
  [!code-csharp[csProgGuideGenerics#24](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-methods_3.cs)]  
   
- Tür çıkarımı için aynı kuralları statik yöntemler ve örnek yöntemleri için geçerlidir. Derleyici, geçirdiğiniz yöntem bağımsız değişkenleri temel tür parametreleri çıkarımını; Tür parametreleri yalnızca bir kısıtlama gelen Infer veya dönüş değeri. Bu nedenle tür çıkarımı parametresi olmayan yöntemleriyle çalışmaz. Tür çıkarımı derleyici aşırı yüklenmiş yöntemin imzaları çözümlemeye önce derleme zamanında oluşur. Derleyici aynı adı paylaşan tüm genel yöntemler tür çıkarımı mantığı uygular. Aşırı yükleme çözümü adımda Derleyici yalnızca üzerinde tür çıkarımı başarılı genel yöntemler içerir.  
+ Tür çıkarımı için aynı kurallara statik ve örnek yöntemleri için geçerlidir. Derleyici, geçirdiğiniz yöntem bağımsız değişkenleri temel tür parametreleri çıkarımını; Kısıtlama türü Parametreler yalnızca tanım Çıkarsama veya dönüş değeri. Bu nedenle tür çıkarımı, parametresi olmayan yöntemleri ile çalışmaz. Tür çıkarımı, derleyici aşırı yüklenmiş yöntem imzaları çözmeye çalışmadan önce derleme zamanında gerçekleşir. Derleyicinin tür çıkarımı mantıksal aynı adı paylaşan tüm genel yöntemleri için geçerlidir. Aşırı yükleme çözünürlüğü adımda yalnızca üzerinde tür çıkarımı başarılı genel yöntemler derleyicisini içerir.  
   
- Genel bir sınıf içinde genel olmayan yöntemleri sınıf düzeyi tür parametreleri aşağıdaki gibi erişebilirsiniz:  
+ Genel bir sınıf içinde genel olmayan yöntemler sınıf düzeyinde tür parametreleri gibi erişebilirsiniz:  
   
  [!code-csharp[csProgGuideGenerics#25](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-methods_4.cs)]  
   
- Aynı tür parametreleri içeren sınıf gereken genel bir yöntem tanımlarsanız yöntemi kapsamında bağımsız değişkeni için iç sağladığından derleyici uyarı CS0693 oluşturur `T` dış içinsağlananbağımsızdeğişkengizler`T`. Tür bağımsız değişkenleri sınıfı örneğinin başlatılmasından çalıştırılırken sağlanan dışındaki genel sınıfı yöntemiyle çağırma esnekliğini gerektiriyorsa, başka bir tanımlayıcı yöntemi tür parametresi için sağlamayı gösterildiği gibi düşünün `GenericList2<T>` aşağıdaki örnek.  
+ Kapsayan sınıfı aynı tür parametreleri alan genel yöntem tanımlama, yöntemi kapsam içinde iç için bağımsız değişken sağladığından derleyici uyarı CS0693 oluşturur `T` dış içinsağlananbağımsızdeğişkengizliyor`T`. Tür bağımsız değişkenleri sınıfı oluşturulduğunda sağlanan olanlar dışındaki bir genel sınıfı yöntemini çağırma esneklik gerekiyorsa, başka bir tanımlayıcı yöntem türü parametresi sağlamayı gösterildiği gibi düşünün `GenericList2<T>` aşağıdaki örnek.  
   
  [!code-csharp[csProgGuideGenerics#26](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-methods_5.cs)]  
   
- Tür parametrelerindeki yöntemler daha özelleştirilmiş işlemlerini etkinleştirmek için kısıtlamaları kullanın. Bu sürümü `Swap<T>`, şimdi adlandırılmış `SwapIfGreater<T>`, yalnızca uygulama tür bağımsız değişkenleri ile kullanılabilir <xref:System.IComparable%601>.  
+ Kısıtlama yöntemlerini tür parametrelerindeki daha özel işlemlerini etkinleştirmek için kullanın. Bu sürümü `Swap<T>`, artık adlandırılmış `SwapIfGreater<T>`, uygulama tür bağımsız değişkenleri ile yalnızca kullanılabilir <xref:System.IComparable%601>.  
   
  [!code-csharp[csProgGuideGenerics#27](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-methods_6.cs)]  
   
- Genel yöntemler birkaç türü parametrelerine aşırı yüklenmiş. Örneğin, aşağıdaki yöntemlerden tümü aynı sınıfta bulunabilir:  
+ Birden çok tür parametrelerinde genel yöntemler aşırı yüklenebilir. Örneğin, aşağıdaki yöntemlerden tümü aynı sınıf içinde yer alabilir:  
   
  [!code-csharp[csProgGuideGenerics#28](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-methods_7.cs)]  
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  Daha fazla bilgi edinmek için, bkz. [C# Dil Belirtimi](../../../csharp/language-reference/language-specification/index.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Collections.Generic>  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [Genel Türlere Giriş](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
- [Yöntemler](../../../csharp/programming-guide/classes-and-structs/methods.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- <xref:System.Collections.Generic>  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [Genel Türlere Giriş](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
+- [Yöntemler](../../../csharp/programming-guide/classes-and-structs/methods.md)

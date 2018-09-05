@@ -6,47 +6,47 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], getting started
 - getting started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
-ms.openlocfilehash: 64d9fc09d56c417c2226d030ef6f5ee7204c4eb6
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: e5a07e5264c715f568121403721a3c844b903d99
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806025"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43553083"
 ---
 # <a name="getting-started-tutorial"></a>Başlangıç Öğreticisi
-Bu bölümdeki konular, hızlı Etkilenme programlama deneyimine Windows Communication Foundation (WCF) için vermek üzere tasarlanmıştır. Bu konunun sonundaki listesi sırasına göre tamamlanması için tasarlanmıştır. Bu öğreticide, tanıtım bilinmesini WCF hizmeti ve istemci uygulamaları oluşturmak için gerekli adımları sağlar. Bir hizmet bir veya daha fazla uç noktalar, her biri bir veya daha fazla hizmet işlemini kullanıma sunar, kullanıma sunar. *Endpoint* Hizmetin nerede hizmet bulunabilir, bir adresi nasıl bir istemci hizmeti ve işlevselliği tanımlayan bir sözleşme ile iletişim kurması gereken açıklayan bilgileri içeren bir bağlama belirtir hizmet tarafından istemcilerine sağlanan.  
+Bu bölümdeki konular, hızlı Etkilenme programlama deneyimi Windows Communication Foundation (WCF) için size yöneliktir. Bu konu başlığının altındaki listenin sırasına göre tamamlanması için tasarlanmıştır. Bu öğreticide, WCF hizmeti ve istemci uygulamaları oluşturmak için gerekli adımlar tanıtıcı bir anlayış verir. Her biri bir veya daha fazla hizmet işlemlerini kullanıma sunan bir veya daha fazla uç noktaları, bir hizmet sunar. *Uç nokta* Hizmetin nerede hizmet bulunabilir, adres nasıl bir istemci hizmeti ve işlevselliği tanımlayan bir sözleşme ile iletişim kurması gereken açıklayan bilgileri içeren bir bağlama belirtir hizmet tarafından istemcilerine sağlanan.  
   
- Bu öğreticideki konu başlıklarını sırasıyla çalıştıktan sonra çalışan bir hizmetiniz ve hizmetin çağıran bir istemci sahip olacaktır. İlk üç konularda bir hizmet sözleşmesini tanımlama, hizmet sözleşmesini uygulama ve hizmet barındırmak nasıl açıklanmaktadır. Oluşturulan hizmet bir konsol uygulaması içinde kendiliğinden barındırılır. Hizmetler, aynı zamanda Internet Information Services (IIS) altında barındırılabilir. Bunun nasıl yapılacağı hakkında daha fazla bilgi için bkz: [nasıl yapılır: IIS'de WCF Hizmeti barındırma](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md). Kod içinde hizmet yapılandırılan; Ancak, hizmetleri yapılandırma dosyasının içinde yapılandırılabilir. Bir yapılandırma dosyası kullanma hakkında daha fazla bilgi için bkz: [yapılandırma dosyalarını kullanarak Hizmetleri Yapılandırma](../../../docs/framework/wcf/configuring-services-using-configuration-files.md).  
+ Bu öğreticideki konu başlıklarını sırasıyla anlayıp uyguladıktan sonra çalışan bir hizmete ve hizmetini çağıran bir istemci sahip olacaktır. İlk üç konularda hizmeti barındırmak nasıl bir hizmet sözleşmesini tanımlama ve hizmet sözleşmesini uygulama konusunda açıklanmaktadır. Oluşturulan bir konsol uygulaması içinde şirket içinde barındırılan hizmetidir. Hizmetleri, Internet Information Services (IIS) altında da barındırılabilir. Bunun nasıl yapılacağı hakkında daha fazla bilgi için bkz. [nasıl yapılır: IIS'de WCF Hizmeti barındırma](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md). Hizmet kodu yapılandırılır; Ancak, hizmet yapılandırma dosyasının içinde yapılandırılabilir. Bir yapılandırma dosyası kullanma hakkında daha fazla bilgi için bkz. [yapılandırma dosyalarını kullanarak Hizmetleri Yapılandırma](../../../docs/framework/wcf/configuring-services-using-configuration-files.md).  
   
- Sonraki üç konuları, istemci proxy oluşturma, istemci uygulaması yapılandırın ve hizmeti tarafından sunulan hizmet işlemini çağırmak için istemci proxy kullanma açıklanmaktadır. Hizmetleri hizmeti ile iletişim için bir istemci uygulaması gereken bilgileri tanımlayan meta veri yayımlama. [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] Bu meta verilere erişme işlemini otomatikleştiren ve oluşturmak ve hizmeti için istemci uygulamasını yapılandırmak için kullanır. Kullanmıyorsanız, [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)], kullanabileceğiniz [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) oluşturmak ve hizmeti için istemci uygulaması yapılandırın.  
+ Sonraki üç konular istemci proxy oluşturmak, istemci uygulaması yapılandırma ve hizmet tarafından sunulan hizmet işlemi çağırmak için istemci proxy kullanmak nasıl açıklar. Hizmetleri, bir istemci uygulama hizmeti ile iletişim için gereken bilgileri tanımlayan meta verileri yayımlama. [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] Bu meta verilere erişme işlemini otomatikleştirir ve oluşturmak ve hizmeti için istemci uygulamasını yapılandırmak için kullanır. Kullanmıyorsanız, [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)], kullanabileceğiniz [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) yapılandırmak ve hizmeti için istemci uygulamasını yapılandırmak için.  
   
- Tüm bu bölümdeki konular geliştirme ortamı olarak Visual Studio 2011 kullandığınız varsayılır. Başka bir geliştirme ortamını kullanıyorsanız, Visual Studio özel yönergeler yoksay.  
+ Bu bölümdeki konular, tüm geliştirme ortamı olarak Visual Studio 2011 kullanmakta olduğunuz varsayılır. Başka bir geliştirme ortamı kullanıyorsanız, Visual Studio özel yönergeler yoksayın.  
   
 > [!NOTE]
->  Çalıştırıyorsanız, [!INCLUDE[wv](../../../includes/wv-md.md)] veya Windows işletim sisteminin sonraki sürümlerini, size başlamalı Visual Studio Başlat menüsüne giderek ve Visual Studio 2011 sağ tıklayarak ve seçme **yönetici olarak çalıştır**. Her zaman, bir kısayol oluşturun, kısa kesme sağ tıklayın, seçin özellikleri, bir yönetici olarak Visual Studio 2011 başlatmak için **Uyumluluk** sekmesini tıklatın ve denetleme **yöneticiolarakbuprogramıçalıştır** onay kutusu. Visual Studio 2011 bu kısayol ile başlattığınızda, her zaman yönetici olarak çalıştırılır.  
+>  Çalıştırıyorsanız [!INCLUDE[wv](../../../includes/wv-md.md)] veya sonraki sürümlerinde Windows işletim sisteminin, başlamalıdır Visual Studio Başlat menüsüne giderek ve Visual Studio 2011 sağ tıklayarak ve seçerek **yönetici olarak çalıştır**. Her zaman Visual Studio 2011 sizin bir kısayol oluşturun, kısayol sağ tıklayın, özellikleri seçin, seçin yönetici olarak başlatmak için **Uyumluluk** sekmesini tıklatıp denetleyin **yöneticiolarakbuprogramıçalıştır** onay kutusu. Bu kısayol ile Visual Studio 2011 başlattığınızda, yönetici olarak her zaman çalışır.  
   
- Sabit diskinize indirilebilir ve çalıştırmak, konulara bakın örnek uygulamaları için [Windows Communication Foundation örnekleri](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91). Bu konu, bakın, özellikle için [Başlarken](../../../docs/framework/wcf/samples/getting-started-sample.md).  
+ Sabit diskinize indirilebilir ve çalıştırma, konularına bakın ve örnek uygulamalar için [Windows Communication Foundation örnekleri](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91). Bu konu bakın, özellikle de [Başlarken](../../../docs/framework/wcf/samples/getting-started-sample.md).  
   
  Hizmetler ve istemcileri oluşturma hakkında daha ayrıntılı bilgi için bkz: [temel WCF programlama](../../../docs/framework/wcf/basic-wcf-programming.md).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Nasıl yapılır: Bir Hizmet Anlaşması Tanımlama](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)  
- Kullanıcı tanımlı bir arabirimini kullanarak bir WCF sözleşmesi oluşturmayı açıklar. Sözleşme hizmeti tarafından kullanıma sunulan işlevsellikten tanımlar.  
+ Bir kullanıcı tarafından tanımlanan arabirimi kullanarak bir WCF sözleşmesi oluşturmayı açıklar. Sözleşme hizmet tarafından sunulan işlevselliği tanımlar.  
   
  [Nasıl yapılır: Bir Hizmet Anlaşmasını Uygulama](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)  
- Bir hizmet sözleşmesini uygulama açıklar. Bir sözleşme tanımlama eklendiğinde, bir hizmet sınıfıyla uygulanmalıdır.  
+ Bir hizmet sözleşmesini uygulama açıklar. Bir sözleşme tanımlayan eklendiğinde, bir hizmet sınıfı ile uygulanmalıdır.  
   
  [Nasıl yapılır: Temel Bir Hizmet Barındırma ve Çalıştırma](../../../docs/framework/wcf/how-to-host-and-run-a-basic-wcf-service.md)  
- Kod içinde hizmet için bir uç nokta yapılandırın ve hizmeti bir konsol uygulamasında barındırma açıklar. Etkin hale gelmesi bir hizmet yapılandırılmalı ve çalışma zamanı ortamı içinde barındırılan. Bu ortam hizmeti oluşturur ve yaşam süresi ve bağlam denetler.  
+ Kodda bir uç nokta hizmeti için yapılandırma ve hizmeti bir konsol uygulamasında nasıl açıklar. Etkin duruma gelmesi hizmet yapılandırılmalı ve çalışma zamanı ortamı içinde barındırılan. Bu ortam hizmeti oluşturur ve yaşam süresi ve bağlam denetler.  
   
  [Nasıl yapılır: İstemci Oluşturma](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
- Bir WCF hizmetinden bir WCF istemcisi proxy oluşturmak için kullanılan meta verilerini almak açıklar. Bu işlem, Visual Studio 2011 Hizmet Başvurusu Ekle işlevini kullanır.  
+ Bir WCF hizmetinden bir WCF istemci proxy oluşturmak için kullanılan meta verilerini almak nasıl açıklar. Bu işlem, Visual Studio 2011 Hizmet Başvurusu Ekle işlevini kullanır.  
   
  [Nasıl yapılır: İstemci Yapılandırma](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md)  
- Bir WCF yapılandırmayı açıklar istemcisi istemci yapılandırma gerektirir İstemcinin hizmete erişmek için kullandığı uç noktası belirtme.  
+ Bir WCF yapılandırmayı açıklar istemci istemci yapılandırma gerektirir İstemcinin hizmete erişmek için kullandığı uç noktası belirtme.  
   
  [Nasıl yapılır: İstemci Kullanma](../../../docs/framework/wcf/how-to-use-a-wcf-client.md)  
- WCF istemci proxy hizmet işlemleri çağırmak için nasıl kullanılacağını açıklar.  
+ Hizmet işlemleri çağırmak için WCF istemci proxy kullanmayı açıklar.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.ServiceModel.ServiceContractAttribute>  
@@ -54,7 +54,7 @@ Bu bölümdeki konular, hızlı Etkilenme programlama deneyimine Windows Communi
  <xref:System.ServiceModel.OperationContractAttribute>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Windows Communication Foundation Örnekleri](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
+ [Windows Communication Foundation Örnekleri](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
   
  [Temel Programlama Yaşam Döngüsü](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
   

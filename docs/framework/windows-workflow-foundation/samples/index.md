@@ -2,31 +2,31 @@
 title: Windows Workflow (WF) Örnekleri
 ms.date: 03/30/2017
 ms.assetid: e0aef017-4381-4f2f-a904-6e1ed898687e
-ms.openlocfilehash: 667f19681823c802f3f3e4fc2b7eeed9c6d5e0e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e9b511606c6278e7d2b2fb1bc3cbd9c38b51b000
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517364"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43564507"
 ---
 # <a name="windows-workflow-wf-samples"></a>Windows Workflow (WF) Örnekleri
-Bu örnekler yönerge üzerinde çeşitli yönlerini Windows Workflow Foundation (WF) sağlayın.  
+Bu örnekler üzerinde çeşitli yönlerini Windows Workflow Foundation (WF) yönerge sağlar.  
   
-Örnekler yüklenebilir [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=150780).  
+Örnekleri indirilebileceğini [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=150780).  
   
 > [!NOTE]
->  Bu örnekleri ile oluşturulan [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] ve [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], ancak ile uyumlu [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] ve [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]. Windows Workflow Foundation için ek örnek [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] bulunabilir [kod MSDN](http://aka.ms/WF45Samples).
+>  Bu örnekleri ile oluşturulan [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] ve [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], ancak ile uyumlu [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] ve [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]. Ek örnekler için Windows Workflow Foundation'da [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] bulunabilir [kod MSDN](https://aka.ms/WF45Samples).
   
 ## <a name="in-this-section"></a>Bu bölümde  
  [Uygulama](../../../../docs/framework/windows-workflow-foundation/samples/application.md)  
- İş akışı uygulamaları için ilgili örnekleri sağlar.  
+ İş akışı uygulamalarla ilgili örnekler sunar.  
   
  [Temel](../../../../docs/framework/windows-workflow-foundation/samples/basic.md)  
- Temel Windows Workflow Foundation (WF) işlevselliğini göstermek örnekleri sağlar.  
+ Temel Windows Workflow Foundation (WF) işlevlerini gösteren örnekleri sağlar.  
   
  [Senaryo](../../../../docs/framework/windows-workflow-foundation/samples/scenario.md)  
- Windows Workflow Foundation (WF) senaryoları örnekleri sağlar.  
+ Windows Workflow Foundation (WF) senaryolarına örnekler sağlar.  
   
- Bu bölümde yer alan örnekler olun C# 3.0 yeni özelliklerin kullanın. C# tanınmayan 3.0 bazı yeni özellikler hakkında daha fazla bilgi için lütfen bkz. [C# 3.0 genel bakış](http://go.microsoft.com/fwlink/?LinkId=193972).  
+ Bu bölümde yer alan örnekler olun C# 3.0 içinde yeni özellikleri kullanın. C# tanınmayan 3.0 bazı yeni özellikler hakkında daha fazla bilgi için lütfen bkz [C# 3.0 genel bakış](https://go.microsoft.com/fwlink/?LinkId=193972).  
   
- Örnekler yüklenebilir [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=150780).
+ Örnekleri indirilebileceğini [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=150780).

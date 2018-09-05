@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Multiple EndPoints
 ms.assetid: 8f0c2e1f-9aee-41c2-8301-c72b7f664412
-ms.openlocfilehash: 1658db83c809f875914036e9e10ac86cc6a821c5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a9c395ffe4f715b6d6ea034c848cbb277d60d560
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33501976"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43553648"
 ---
 # <a name="multiple-endpoints"></a>Birden Fazla Uç Noktası
-Birden çok uç nokta örnek bir hizmette birden çok uç nokta yapılandırma ve istemciden gelen her bir uç noktası ile iletişim kurmak nasıl gösterilir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md). Hizmet yapılandırması destekleyen iki uç noktalarını tanımlamak için değiştirilmiş `ICalculator` sözleşme, ancak her biri farklı bir bağlama kullanarak farklı bir adres. İstemci yapılandırma ve kodun hem hizmet uç noktaları ile iletişim kurmak için değiştirilmiş.  
+Birden fazla uç nokta örnek, bir hizmet birden fazla uç nokta yapılandırma ve bir istemciden alınan her bir uç noktasıyla iletişim kurma gösterir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md). Hizmet yapılandırmasını destekleyen iki uç noktaları tanımlamak için değiştirilmiş `ICalculator` sözleşme, ancak her biri farklı bir bağlama kullanarak farklı bir adres. İstemci Yapılandırması ve kodu her iki hizmet uç noktaları ile iletişim kurmak için değiştirildi.  
   
 > [!NOTE]
->  Kurulum yordamı ve yapı yönergeleri Bu örnek için bu konunun sonunda yer alır.  
+>  Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.  
   
- İki uç nokta her aynı destekleme tanımlamak için Hizmet Web.config dosyası değiştirilmiş `ICalculator` sözleşme, ancak farklı bağlamaları farklı adreslerde kullanıyor. Temel adres kullanarak ilk bitiş noktasının tanımlanan bir `basicHttpBinding` etkin güvenliğe sahip olmayan bağlama. İkinci uç nokta {baseaddress} konumunda tanımlanan / kullanarak güvenli bir `wsHttpBinding` varsayılan olarak güvenlidir, WS-güvenlik Windows kimlik doğrulaması ile kullanarak bağlama.  
+ Hizmeti Web.config dosyasını aynı destekleyen her iki uç noktaları tanımlamak için değiştirilmiş `ICalculator` sözleşme, ancak farklı bağlamaları farklı adreslerde kullanma. Taban adresi kullanarak ilk uç noktayı tanımlanan bir `basicHttpBinding` bağlama, güvenliği etkinleştirilmiş sahip değil. İkinci uç nokta, tanımlı {baseaddress} konumunda / kullanarak güvenli bir `wsHttpBinding` varsayılan olarak güvenlidir, WS-güvenlik Windows kimlik doğrulamasını kullanarak bağlama.  
   
 ```xml  
 <service   
@@ -37,7 +37,7 @@ Birden çok uç nokta örnek bir hizmette birden çok uç nokta yapılandırma v
 </service>  
 ```  
   
- Her iki uç noktaları ayrıca istemcide yapılandırılır. Arayan istenen uç nokta adı istemci oluşturucuya geçirebilirsiniz böylece bu uç noktalar verilen adlardır.  
+ Her iki bitiş noktasında istemci üzerinde de yapılandırılabilir. Çağıran istemci oluşturucuya istediğiniz uç nokta adı geçirebilmeniz Bu uç noktaları belirtilen adlardır.  
   
 ```xml  
 <client>  
@@ -50,15 +50,15 @@ Birden çok uç nokta örnek bir hizmette birden çok uç nokta yapılandırma v
   <!-- Passing "secure" into the constructor of the CalculatorClient  
        class selects this endpoint.-->  
   <endpoint name="secure"  
-address="http://localhost/servicemodelsamples/service.svc/secure"   
+            address="http://localhost/servicemodelsamples/service.svc/secure"   
             binding="wsHttpBinding"   
             contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 </client>  
 ```  
   
- Aşağıdaki kodda gösterildiği gibi istemci her iki uç noktaları kullanır.  
+ İstemci, aşağıdaki kodda gösterildiği gibi her iki bitiş noktası kullanır.  
   
-```  
+```csharp  
 static void Main()  
 {  
     // Create a client to the basic endpoint configuration.  
@@ -85,7 +85,7 @@ static void Main()
 }  
 ```  
   
- İstemci çalıştırdığınızda, her iki uç noktaları ile etkileşim görüntülenir.  
+ İstemci çalıştırdığınızda, her iki uç ile etkileşim görüntülenir.  
   
 ```  
 Communicate with basic endpoint.  
@@ -102,20 +102,20 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örnek çalıştırın  
+### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Gerçekleştirmiş emin olun [kerelik Kurulum prosedürü Windows Communication Foundation örnekleri için](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Tek veya çapraz makine yapılandırmada örneği çalıştırmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\MultipleEndpoints`  
   

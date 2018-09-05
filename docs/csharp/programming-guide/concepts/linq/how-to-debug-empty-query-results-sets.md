@@ -1,25 +1,25 @@
 ---
-title: 'Nasıl yapılır: hata ayıklama boş sorgu sonuç kümeleri (C#)'
+title: 'Nasıl yapılır: hata ayıklama boş sorgu sonucu kümelerinin (C#)'
 ms.date: 07/20/2015
 ms.assetid: b569f0dc-425e-45a6-acbf-770fb761c981
-ms.openlocfilehash: a425327c6ba7168f7070d53a39fa64be991d4ddf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4760b1e5274634954bd5fe4b3880fd4415af2510
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329767"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43554444"
 ---
-# <a name="how-to-debug-empty-query-results-sets-c"></a>Nasıl yapılır: hata ayıklama boş sorgu sonuç kümeleri (C#)
-XML ağaçları sorgulanırken en yaygın sorunları XML ağacında bir varsayılan ad alanı varsa, XML değil gibi davranarak bir ad alanındaki Geliştirici bazen sorgu yazdığını biridir.  
+# <a name="how-to-debug-empty-query-results-sets-c"></a>Nasıl yapılır: hata ayıklama boş sorgu sonucu kümelerinin (C#)
+XML ağaçlarını sorgulama sırasında sık karşılaşılan sorunlar XML ağacı varsayılan ad alanı varsa, XML değil gibi davranarak bir ad alanında geliştirici bazen sorgu yazdığını biridir.  
   
- Bu konudaki örnekler ilk kümesi, bir varsayılan ad alanı XML yüklenir ve yanlış sorgulanan tipik bir yolunu gösterir.  
+ Bu konudaki örnekler ilk kümesi, varsayılan ad alanı XML yüklenir ve hatalı sorgulanır normal bir şekilde gösterir.  
   
  XML ad alanında sorgulayabilmesi ikinci örneklerde gerekli düzeltmeleri ayarlayın.  
   
- Daha fazla bilgi için bkz: [XML ad alanları (C#) çalışma](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+ Daha fazla bilgi için [(C#) XML ad alanları ile çalışma](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, bir ad alanındaki XML oluşturulmasını gösterir ve boş bir sonuç döndüren bir sorgu ayarlayın.  
+ Bu örnek, bir ad alanında XML oluşturulmasını gösterir ve boş bir sonuç döndüren bir sorgu ayarlayın.  
   
 ```csharp  
 XElement root = XElement.Parse(  
@@ -40,7 +40,7 @@ foreach (XElement el in c1)
 Console.WriteLine("End of result set");  
 ```  
   
- Bu örnekte aşağıdaki sonucu üretir:  
+ Bu örnek aşağıdaki sonucu üretir:  
   
 ```  
 Result set follows:  
@@ -48,9 +48,9 @@ End of result set
 ```  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, bir ad alanı ve düzgün şekilde kodlanmış bir sorgu XML oluşturulmasını gösterir.  
+ Bu örnek, bir ad alanı ve düzgün şekilde kodlanmış bir sorgu içinde XML oluşturulmasını gösterir.  
   
- Çözümdür bildirme ve başlatmak için bir <xref:System.Xml.Linq.XNamespace> nesnesi ve belirtirken kullanılacak <xref:System.Xml.Linq.XName> nesneleri. Bu durumda, bağımsız değişkeni <xref:System.Xml.Linq.XElement.Elements%2A> yöntemi bir <xref:System.Xml.Linq.XName> nesnesi.  
+ Çözümüdür bildirmek ve başlatmak için bir <xref:System.Xml.Linq.XNamespace> nesnesi ve belirtirken kullanılacak <xref:System.Xml.Linq.XName> nesneleri. Bu durumda, bağımsız değişkeni <xref:System.Xml.Linq.XElement.Elements%2A> yöntemi bir <xref:System.Xml.Linq.XName> nesne.  
   
 ```csharp  
 XElement root = XElement.Parse(  
@@ -72,7 +72,7 @@ foreach (XElement el in c1)
 Console.WriteLine("End of result set");  
 ```  
   
- Bu örnekte aşağıdaki sonucu üretir:  
+ Bu örnek aşağıdaki sonucu üretir:  
   
 ```  
 Result set follows:  
@@ -82,5 +82,6 @@ Result set follows:
 End of result set  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Temel sorgu (LINQ-XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [Temel sorgular (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

@@ -1,39 +1,39 @@
 ---
-title: Kimliği veya sayı değerlerini alma
+title: Kimlik veya otomatik sayı değerlerini alma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d6b7f9cb-81be-44e1-bb94-56137954876d
-ms.openlocfilehash: ce3c888ce9e96d1f5768ce9cf3f3eef8cf8624e0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ca739f703267f27932ec7450a59d7f4afaffd64b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357157"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43670983"
 ---
-# <a name="retrieving-identity-or-autonumber-values"></a>Kimliği veya sayı değerlerini alma
-İlişkisel bir veritabanındaki bir birincil anahtar sütunlarının her zaman benzersiz değerler içeren bir sütun veya ' dir. Birincil anahtar değerine bilerek içerdiği satırı bulun olanak tanır. SQL Server, Oracle ve Microsoft Access/Jet gibi ilişkisel veritabanı motoru birincil anahtarlar olarak belirlenebilir sütunları otomatik olarak artırma oluşturulmasını destekler. Tabloya satır eklendikçe bu değerleri sunucu tarafından üretilir. SQL Server'daki bir sütunun kimliğini özelliğini ayarlayın, Oracle bir dizisi oluşturma ve Microsoft Access içinde bir sayı sütun oluşturun.  
+# <a name="retrieving-identity-or-autonumber-values"></a>Kimlik veya otomatik sayı değerlerini alma
+İlişkisel bir veritabanındaki bir birincil anahtar bir sütun veya her zaman benzersiz değerler içeren sütunlar bileşimidir. Birincil anahtar değeri bilerek, onu içeren satırın bulundurmanıza olanak tanır. SQL Server, Oracle ve Microsoft Access/Jet gibi ilişkisel veritabanı altyapılarından birincil anahtar olarak belirlenebilir sütunları otomatik olarak artırma oluşturmayı destekler. Tabloya satır eklendikçe bu değerler sunucu tarafından oluşturulur. SQL Server, bir sütunun kimlik özelliği ayarlamak, Oracle bir dizi oluşturun ve Microsoft Access içinde oluşturduğunuz bir sayı sütunu.  
   
- A <xref:System.Data.DataColumn> ayarlayarak otomatik olarak artacak değerlerini oluşturmak için de kullanılabilir <xref:System.Data.DataColumn.AutoIncrement%2A> özelliğinin true. Ancak, ayrı ayrı örnekleri yinelenen değerler şunun bir <xref:System.Data.DataTable>, birden çok istemci uygulamaları bağımsız olarak otomatik olarak artacak değerleri oluşturuluyor. Eklenen her satır için oluşturulan değerini almak her bir kullanıcı izin vererek sunucu otomatik olarak artacak değerleri oluştur olması olası çakışmaları ortadan kaldırır.  
+ A <xref:System.Data.DataColumn> ayarlayarak otomatik olarak artan değerleri oluşturmak için de kullanılabilir <xref:System.Data.DataColumn.AutoIncrement%2A> özelliği true. Ancak, ayrı örneklerinde yinelenen değerlere sahip çıkabilir bir <xref:System.Data.DataTable>, birden çok istemci uygulamaları birbirinden bağımsız olarak otomatik artan değerleri oluşturuluyor. Sunucunun otomatik olarak artan değerleri oluşturmak zorunda eklenen her satır için oluşturulan değeri almak her bir kullanıcı sağlayarak olası çakışmaları ortadan kaldırır.  
   
- Çağrı sırasında `Update` yöntemi bir `DataAdapter`, veritabanını geri uygulamanıza ADO.NET çıkış parametreleri veya aynı toplu iş INSERT deyiminin olarak yürütülen bir SELECT deyimi sonuç kümesi ilk döndürülen kaydının olarak veri gönderebilir. ADO.NET bu değerleri almak ve karşılık gelen sütunları güncelleştirme <xref:System.Data.DataRow> güncelleştiriliyor.  
+ Çağrı sırasında `Update` yöntemi bir `DataAdapter`, veritabanı, ADO.NET uygulamaya çıkış parametreleri olarak veya bir SELECT deyimi INSERT deyimi aynı toplu yürütüldü, sonuç kümesinin döndürülen ilk kaydı olarak veri gönderebilir. ADO.NET, bu değerleri almak ve karşılık gelen sütunlarda güncelleştirme <xref:System.Data.DataRow> güncelleştiriliyor.  
   
- Microsoft Access Jet veritabanı altyapısı gibi bazı veritabanı motoru çıkış parametreleri desteklemez ve tek bir toplu iş birden fazla deyime işleyemiyor. Jet veritabanı altyapısı ile çalışırken, bir olay işleyicisi için ayrı bir SELECT komutu yürüterek eklenmiş bir satır için oluşturulan yeni sayı değeri alabilir `RowUpdated` olayı `DataAdapter`.  
+ Microsoft Access Jet veritabanı altyapısı gibi bazı veritabanı altyapıları, çıktı parametreleri desteklemez ve tek bir toplu işlemde birden çok deyime işleyemiyor. Jet veritabanı altyapısı ile çalışırken, bir olay işleyicisi için ayrı bir SELECT komutu yürüterek eklenmiş bir satır için oluşturulan yeni sayı değeri alabilir `RowUpdated` olayı `DataAdapter`.  
   
 > [!NOTE]
->  Bir otomatik artan değeri kullanmaya alternatif kullanmaktır <xref:System.Guid.NewGuid%2A> yöntemi bir <xref:System.Guid> bir GUID veya eklenen her yeni satırın sunucuya kopyalanabilmesi için istemci bilgisayar üzerinde genel benzersiz tanımlayıcısını oluşturulacak nesne. `NewGuid` Yöntemi, hiçbir değer çoğaltılır yüksek olasılık sağlayan bir algoritma kullanarak oluşturduğunuz 16 bayt ikili bir değer oluşturur. Bir SQL Server veritabanında bir GUID depolanan bir `uniqueidentifier` SQL Server Transact-SQL kullanarak otomatik olarak oluşturabilir sütun `NEWID()` işlevi. Birincil anahtarı olarak bir GUID kullanarak performansı olumsuz etkileyebilir. SQL Server için destek sağlar `NEWSEQUENTIALID()` , garanti edilmez genel olarak benzersiz olmalıdır, ancak, dizini daha verimli bir şekilde sıralı bir GUID oluşturur işlevi.  
+>  Artan değerini otomatik kullanmaya alternatif kullanmaktır <xref:System.Guid.NewGuid%2A> yöntemi bir <xref:System.Guid> GUID ya da her yeni satırda eklenmiş gibi sunucuya kopyaladığınız istemci bilgisayarda genel benzersiz tanımlayıcısını oluşturmak için nesne. `NewGuid` Yöntemi hiçbir değer çoğaltılır yüksek olasılık sağlayan bir algoritma kullanarak oluşturulan 16 bayt ikili değer oluşturur. Bir SQL Server veritabanında bir GUID olarak depolanan bir `uniqueidentifier` SQL Server Transact-SQL kullanarak otomatik olarak oluşturmak bir sütun `NEWID()` işlevi. Bir GUID birincil bir anahtar kullanarak performansı olumsuz etkileyebilir. SQL Server için destek sağlar `NEWSEQUENTIALID()` işlevin, garanti edilmez genel olarak benzersiz olmalıdır, ancak bu dizinlenebilir daha verimli bir şekilde sıralı bir GUID oluşturur.  
   
 ## <a name="retrieving-sql-server-identity-column-values"></a>SQL Server kimlik sütunu değerlerini alma  
- Microsoft SQL Server ile çalışırken, eklenen satır kimlik değeri döndürmek için çıktı parametresi ile bir saklı yordam oluşturabilirsiniz. Aşağıdaki tabloda, üç kimlik sütun değerleri almak için kullanılan SQL Server Transact-SQL işlevleri açıklanmaktadır.  
+ Microsoft SQL Server ile çalışırken, eklenen bir satır için kimlik değeri döndürmek için bir output parametresi ile bir saklı yordam oluşturabilirsiniz. Aşağıdaki tabloda, üç kimlik sütunu değerlerini almak için kullanılan SQL Server Transact-SQL işlevleri açıklanmaktadır.  
   
 |İşlev|Açıklama|  
 |--------------|-----------------|  
-|SCOPE_IDENTITY|Geçerli yürütme kapsam içinde son kimlik değeri döndürür. SCOPE_IDENTITY çoğu senaryolar için önerilir.|  
-|@@IDENTITY|Herhangi bir tabloda geçerli oturumda oluşturulan son kimlik değeri içerir. @@IDENTITY tetikleyiciler tarafından etkilenebilir ve beklediğiniz kimlik değeri döndürmeyebilir.|  
-|IDENT_CURRENT|Belirli bir tablo için herhangi bir oturumunda ve herhangi bir kapsamdaki oluşturulan son kimlik değeri döndürür.|  
+|SCOPE_IDENTITY|Geçerli yürütme kapsamı içinde son kimlik değeri döndürür. SCOPE_IDENTITY çoğu senaryo için önerilir.|  
+|@@IDENTITY|Herhangi bir tabloda geçerli oturumda oluşturulan son kimlik değeri içerir. @@IDENTITY tetikleyiciler tarafından etkilenebilir ve beklediğiniz kimlik değerini döndürmeyebilir.|  
+|IDENT_CURRENT|Belirli bir tablo için tüm oturumları ve herhangi bir kapsamı içinde oluşturulan son kimlik değeri döndürür.|  
   
- Aşağıdaki saklı yordamı bir satıra eklemek gösterilmiştir **kategorileri** tablo ve Transact-SQL SCOPE_IDENTITY() işlevi tarafından oluşturulan yeni kimlik değeri döndürmek için bir çıktı parametresi kullanın.  
+ Aşağıdaki saklı yordamı bir satır içine ekleme işlemini gösterir **kategorileri** tablo ve Transact-SQL SCOPE_IDENTITY() işlevi tarafından oluşturulan yeni kimlik değeri döndürmek için bir çıktı parametresi kullanın.  
   
 ```  
 CREATE PROCEDURE dbo.InsertCategory  
@@ -44,37 +44,37 @@ INSERT INTO Categories (CategoryName) VALUES(@CategoryName)
 SET @Identity = SCOPE_IDENTITY()  
 ```  
   
- Saklı yordam sonra kaynağı olarak belirtilebilir <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> , bir <xref:System.Data.SqlClient.SqlDataAdapter> nesnesi. <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> Özelliği <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> ayarlanmalıdır <xref:System.Data.CommandType.StoredProcedure>. Kimlik çıkış oluşturarak alınır bir <xref:System.Data.SqlClient.SqlParameter> olan bir <xref:System.Data.ParameterDirection> , <xref:System.Data.ParameterDirection.Output>. Zaman `InsertCommand` olan işlenen, otomatik artan kimlik değeri döndürdü ve bulundukları **adlı kullanıcı, Categoryıd'si** ayarlarsanız geçerli satır sütunu <xref:System.Data.SqlClient.SqlCommand.UpdatedRowSource%2A> INSERT komutu özelliğinin `UpdateRowSource.OutputParameters` veya `UpdateRowSource.Both`.  
+ Saklı yordam ardından kaynağı olarak belirtilebilir <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> , bir <xref:System.Data.SqlClient.SqlDataAdapter> nesne. <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> Özelliği <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> ayarlanmalıdır <xref:System.Data.CommandType.StoredProcedure>. Kimlik çıkışı oluşturarak alınan bir <xref:System.Data.SqlClient.SqlParameter> olan bir <xref:System.Data.ParameterDirection> , <xref:System.Data.ParameterDirection.Output>. Zaman `InsertCommand` olduğu işlenen, otomatik olarak artan kimlik değeri döndürdü ve bulundukları **CategoryID** ayarlarsanız geçerli satırdaki sütun <xref:System.Data.SqlClient.SqlCommand.UpdatedRowSource%2A> Ekle komutu özelliği `UpdateRowSource.OutputParameters` veya `UpdateRowSource.Both`.  
   
- INSERT komutu, INSERT deyimi ve yeni kimlik değeri döndüren bir SELECT deyimi içeren batch'in sonra ayarlayarak, yeni değer alabilirsiniz `UpdatedRowSource` INSERT komutu özelliğinin `UpdateRowSource.FirstReturnedRecord`.  
+ INSERT deyimi hem yeni kimlik değeri döndüren bir SELECT deyimi içeren bir toplu iş, INSERT komutu yürütür, ardından ayarlayarak yeni değer alabilir, `UpdatedRowSource` Ekle komutu özelliği `UpdateRowSource.FirstReturnedRecord`.  
   
  [!code-csharp[DataWorks SqlClient.RetrieveIdentityStoredProcedure#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.RetrieveIdentityStoredProcedure/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.RetrieveIdentityStoredProcedure#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.RetrieveIdentityStoredProcedure/VB/source.vb#1)]  
   
 ## <a name="merging-new-identity-values"></a>Yeni kimlik değerleri birleştirme  
- Yaygın bir senaryo çağırmaktır `GetChanges` yöntemi bir `DataTable` yalnızca değiştirilen satırları içeren bir kopyasını oluşturun ve yeni bir kopyasını çağrılırken kullanmak için `Update` yöntemi bir `DataAdapter`. Değiştirilen satırları güncelleştirme gerçekleştirir ayrı bir bileşen için sıralama gerektiğinde bu seçenek özellikle yararlıdır. Güncelleştirmenin ardından kopya özgün kopyayla birleştirilmelidir yeni kimlik değerleri içerebilir `DataTable`. Yeni kimlik değerleri özgün değerlerinden farklı olması olası `DataTable`. Birleştirme, özgün değerlerini gerçekleştirmek için **AutoIncrement** kopya sütunlarında gerekir korunur, bulun ve orijinal varolan satırları güncelleştirmek için `DataTable`, yerine içeren yeni satırlar ekleme Yeni kimlik değerleri. Ancak, varsayılan olarak bu özgün değerler için bir çağrı sonra kaybolur `Update` yöntemi bir `DataAdapter`, çünkü `AcceptChanges` her biri için güncelleştirilmiş örtük olarak adlandırılır `DataRow`.  
+ Sık karşılaşılan bir senaryodur çağırmaktır `GetChanges` yöntemi bir `DataTable` yalnızca değiştirilen satırları içeren bir kopyasını oluşturun ve yeni bir kopyasını çağrılırken kullanılacak `Update` yöntemi bir `DataAdapter`. Değiştirilen satırları güncelleştirme gerçekleştirir ayrı bir bileşen için hazırlamak, ihtiyacınız olduğunda bu kullanışlıdır. Güncelleştirmenin ardından özgün tekrar birleştirilmelidir yeni kimlik değerleri kopya içerebilir `DataTable`. Yeni kimlik değerleri özgün değerden farklı olması olası `DataTable`. Öğesinin özgün değerleri birleştirme işlemini gerçekleştirmek için **AutoIncrement** kopyalama sütunlarında gerekir muhafaza edilir, bulun ve orijinal mevcut satırlarını güncelleştirin aktarabilmek için `DataTable`, yerine içeren yeni satır ekleme Yeni kimlik değerleri. Bununla birlikte, varsayılan olarak bu özgün değerleri çağrısı yapıldıktan sonra kaybolur `Update` yöntemi bir `DataAdapter`, çünkü `AcceptChanges` güncelleştirilen her biri için örtük olarak çağırılamaz `DataRow`.  
   
- Özgün değerlerini korumak için iki yolla bir `DataColumn` içinde bir `DataRow` sırasında bir `DataAdapter` güncelleştirin:  
+ Öğesinin özgün değerleri korumak için iki yolla bir `DataColumn` içinde bir `DataRow` sırasında bir `DataAdapter` güncelleştirin:  
   
--   Özgün değerler koruma ilk yöntemi ayarlamaktır `AcceptChangesDuringUpdate` özelliği `DataAdapter` için `false`. Bu etkiler her `DataRow` içinde `DataTable` güncelleştiriliyor. Daha fazla bilgi ve bir kod örneği için bkz: <xref:System.Data.Common.DataAdapter.AcceptChangesDuringUpdate%2A>.  
+-   Orijinal değerleri koruma, ilk yöntem ayarlamaktır `AcceptChangesDuringUpdate` özelliği `DataAdapter` için `false`. Bu etkiler her `DataRow` içinde `DataTable` güncelleştiriliyor. Daha fazla bilgi ve bir kod örneği için bkz: <xref:System.Data.Common.DataAdapter.AcceptChangesDuringUpdate%2A>.  
   
--   Kod yazmak için ikinci yöntemdir `RowUpdated` olay işleyicisi `DataAdapter` ayarlamak için <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> için <xref:System.Data.UpdateStatus.SkipCurrentRow>. `DataRow` Özgün değeri her güncelleştirilmiş `DataColumn` korunur. Bu yöntem, özgün değerleri bazı satırlar için ve başkaları için değil korumak sağlar. İlk denetleyerek kodunuzu eklenen satırların ve düzenlenen veya silinen satır için özgün değerler gibi koruyabilirsiniz <xref:System.Data.Common.RowUpdatedEventArgs.StatementType%2A> ve ardından ayarlar <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> için <xref:System.Data.UpdateStatus.SkipCurrentRow> satırlar için yalnızca bir `StatementType` , `Insert`.  
+-   İkinci yöntem, kod yazmaya olan `RowUpdated` olay işleyicisine `DataAdapter` ayarlanacak <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> için <xref:System.Data.UpdateStatus.SkipCurrentRow>. `DataRow` Her öğenin özgün değerinde güncelleştirilmiş `DataColumn` korunur. Bu yöntem, özgün değerlerine bazı satırlar için ve başkaları için koruma sağlar. İlk kontrol ederek kodunuz düzenlenen ya da silinen satır için değil ve eklenmiş satırlar için orijinal değerleri gibi koruyabilirsiniz <xref:System.Data.Common.RowUpdatedEventArgs.StatementType%2A> ve ardından ayarlar <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> için <xref:System.Data.UpdateStatus.SkipCurrentRow> bulunan satırlar için yalnızca bir `StatementType` , `Insert`.  
   
- Bu yöntemlerin her ikisi kullanıldığında özgün değerleri korumak için bir `DataRow` sırasında bir `DataAdapter` güncelleştirme, ADO.NET geçerli değerlerini ayarlamak için Eylemler dizisi gerçekleştirir `DataRow` çıkış parametreleri veya ilk tarafından döndürülen yeni değerleri hala özgün değeri her korurken bir sonuç kümesi satır döndürülen `DataColumn`. İlk olarak, `AcceptChanges` yöntemi `DataRow` geçerli değerleri özgün değerler olarak korumak için çağrılır ve ardından yeni değerler atanır. Bu Eylemler, aşağıdaki `DataRows` , vardı kendi <xref:System.Data.DataRow.RowState%2A> özelliğini <xref:System.Data.DataRowState.Added> olacaktır kendi `RowState` özelliğini <xref:System.Data.DataRowState.Modified>, hangi olabilir beklenmeyen.  
+ Bu yöntemlerin her ikisi kullanıldığında özgün değerlerini korumak için bir `DataRow` sırasında bir `DataAdapter` güncelleştirme, ADO.NET, geçerli değerlerini ayarlamak için Eylemler dizisi gerçekleştirir `DataRow` çıkış parametreleri veya ilk tarafından döndürülen yeni değerlere bir sonuç kümesi satırının hala özgün değeri her korurken döndürülen `DataColumn`. İlk olarak, `AcceptChanges` yöntemi `DataRow` geçerli değerleri özgün değerleri olarak korumak için çağrılır ve ardından yeni değerler atanır. Bu Eylemler, aşağıdaki `DataRows` vardı, kendi <xref:System.Data.DataRow.RowState%2A> özelliğini <xref:System.Data.DataRowState.Added> olacaktır kendi `RowState` özelliğini <xref:System.Data.DataRowState.Modified>, beklenmeyen gösterebilir.  
   
- Komut sonuçları her birine nasıl uygulandığını <xref:System.Data.DataRow> güncelleştirilmekte tarafından belirlenir <xref:System.Data.Common.DbCommand.UpdatedRowSource%2A> her özellik <xref:System.Data.Common.DbCommand>. Bu özellik değere ayarlandığında `UpdateRowSource` numaralandırması.  
+ Komutu sonuçları her birine nasıl uygulandığını <xref:System.Data.DataRow> güncelleştirilmesini göre belirlenir <xref:System.Data.Common.DbCommand.UpdatedRowSource%2A> her özellik <xref:System.Data.Common.DbCommand>. Bu özellik için bir değer ayarlanır `UpdateRowSource` sabit listesi.  
   
- Aşağıdaki tabloda açıklanmaktadır nasıl `UpdateRowSource` numaralandırma değerlerinin etkileyen <xref:System.Data.DataRow.RowState%2A> güncelleştirilmiş satır özelliği.  
+ Aşağıdaki tabloda açıklanmıştır nasıl `UpdateRowSource` numaralandırma değerlerinin etkileyen <xref:System.Data.DataRow.RowState%2A> güncelleştirilen satırların bulunduğu özelliği.  
   
 |Üye adı|Açıklama|  
 |-----------------|-----------------|  
-|<xref:System.Data.UpdateRowSource.Both>|`AcceptChanges` denir ve her ikisi de parametre değerlerini çıkış ve/veya herhangi bir döndürülen sonuç kümesi ilk satır değerleri yerleştirilir `DataRow` güncelleştiriliyor. Uygulamak için hiçbir değer `RowState` olacaktır <xref:System.Data.DataRowState.Unchanged>.|  
-|<xref:System.Data.UpdateRowSource.FirstReturnedRecord>|Bir satır döndürülürse `AcceptChanges` olarak adlandırılır ve satır değiştirilen satıra eşlendi `DataTable`, ayar `RowState` için `Modified`. Satır, ardından döndürülürse `AcceptChanges` çağrılmaz ve `RowState` kalır `Added`.|  
-|<xref:System.Data.UpdateRowSource.None>|Herhangi bir döndürülen parametreleri veya satırlar yok sayılır. Hiçbir çağrısı yok `AcceptChanges` ve `RowState` kalır `Added`.|  
-|<xref:System.Data.UpdateRowSource.OutputParameters>|`AcceptChanges` olarak adlandırılır ve çıktı parametreleri değiştirilen satıra eşlendi `DataTable`, ayar `RowState` için `Modified`. Hiçbir çıktı parametresi varsa `RowState` olacaktır `Unchanged`.|  
+|<xref:System.Data.UpdateRowSource.Both>|`AcceptChanges` olarak adlandırılır ve hem de çıkış parametresi değerleri ve/veya herhangi bir sonuç kümesi ilk satırındaki değerleri yerleştirilir `DataRow` güncelleştiriliyor. Uygulamak için hiçbir değer `RowState` olacaktır <xref:System.Data.DataRowState.Unchanged>.|  
+|<xref:System.Data.UpdateRowSource.FirstReturnedRecord>|Bir satır döndürülürse `AcceptChanges` çağrılır ve değiştirilmiş satır satır eşlendiği `DataTable`ayarını `RowState` için `Modified`. Hiçbir satır, sonra döndürülürse `AcceptChanges` değil olarak adlandırılır ve `RowState` kalır `Added`.|  
+|<xref:System.Data.UpdateRowSource.None>|Herhangi bir satır veya döndürülen parametreleri göz ardı edilir. Hiçbir çağrı yoktur `AcceptChanges` ve `RowState` kalır `Added`.|  
+|<xref:System.Data.UpdateRowSource.OutputParameters>|`AcceptChanges` denir ve herhangi bir çıktı parametreleri değiştirilen satıra eşlendiğini `DataTable`ayarını `RowState` için `Modified`. Hiçbir çıktı parametresi varsa `RowState` olacaktır `Unchanged`.|  
   
 ### <a name="example"></a>Örnek  
- Bu örnek, değiştirilen satırları ayıklanıyor gösterir bir `DataTable` ve kullanarak bir <xref:System.Data.SqlClient.SqlDataAdapter> veri kaynağını güncelleştirmek ve yeni bir kimlik sütunu değer almak için. <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> İki Transact-SQL deyimi yürütür; ilk INSERT deyiminin ve ikinci bir kimlik değeri almak için SCOPE_IDENTITY işlevi kullanan bir SELECT deyimi.  
+ Bu örnek, ayıklama değiştirilen satırları gösterir. bir `DataTable` ve kullanarak bir <xref:System.Data.SqlClient.SqlDataAdapter> veri kaynağını güncelleştirebilir ve yeni bir kimlik sütunu değerini almak için. <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> İki Transact-SQL deyimleri yürütür; ilk INSERT deyiminin ve ikinci bir kimlik değeri alınacak SCOPE_IDENTITY işlevini kullanan bir SELECT deyimi.  
   
 ```  
 INSERT INTO dbo.Shippers (CompanyName)   
@@ -83,40 +83,40 @@ SELECT ShipperID, CompanyName FROM dbo.Shippers
 WHERE ShipperID = SCOPE_IDENTITY();  
 ```  
   
- `UpdatedRowSource` INSERT komutu özelliği ayarlanmış `UpdateRowSource.FirstReturnedRow` ve <xref:System.Data.MissingSchemaAction> özelliği `DataAdapter` ayarlanır `MissingSchemaAction.AddWithKey`. `DataTable` Girilir ve kod için yeni bir satır ekler `DataTable`. Değiştirilen satırları sonra yeni bir ayıklanır `DataTable`, için geçirilen `DataAdapter`, sunucu, daha sonra güncelleştirir.  
+ `UpdatedRowSource` Özelliği Ekle komutunun `UpdateRowSource.FirstReturnedRow` ve <xref:System.Data.MissingSchemaAction> özelliği `DataAdapter` ayarlanır `MissingSchemaAction.AddWithKey`. `DataTable` Doldurulur ve yeni bir satır için kod ekler `DataTable`. Değiştirilen satırların sonra yeni bir ayıklandıktan `DataTable`, için geçirilen `DataAdapter`, daha sonra sunucu güncelleştirir.  
   
  [!code-csharp[DataWorks SqlClient.MergeIdentity#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.MergeIdentity/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.MergeIdentity#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.MergeIdentity/VB/source.vb#1)]  
   
- `OnRowUpdated` Olay işleyicisi denetimleri <xref:System.Data.Common.RowUpdatedEventArgs.StatementType%2A> , <xref:System.Data.SqlClient.SqlRowUpdatedEventArgs> satır INSERT olup olmadığını belirlemek için. İse, sonra <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> özelliği ayarlanmış <xref:System.Data.UpdateStatus.SkipCurrentRow>. Satır güncelleştirildi, ancak sıradaki özgün değerleri korunur. Yordamı, ana gövdesinde <xref:System.Data.DataSet.Merge%2A> yöntemi yeni kimlik değeri birleştirmek için çağrılır `DataTable`ve son olarak `AcceptChanges` olarak adlandırılır.  
+ `OnRowUpdated` Olay işleyicisine denetimleri <xref:System.Data.Common.RowUpdatedEventArgs.StatementType%2A> , <xref:System.Data.SqlClient.SqlRowUpdatedEventArgs> satır ekleme olup olmadığını belirlemek için. İse, ardından <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> özelliği <xref:System.Data.UpdateStatus.SkipCurrentRow>. Satır güncelleştirildi, ancak satır özgün değerleri korunur. Yordamı, ana gövdesinde <xref:System.Data.DataSet.Merge%2A> yeni kimlik değeri birleştirmek için yöntemi çağrıldığında `DataTable`ve son olarak `AcceptChanges` çağrılır.  
   
  [!code-csharp[DataWorks SqlClient.MergeIdentity#2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.MergeIdentity/CS/source.cs#2)]
  [!code-vb[DataWorks SqlClient.MergeIdentity#2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.MergeIdentity/VB/source.vb#2)]  
   
 ## <a name="retrieving-microsoft-access-autonumber-values"></a>Microsoft Access sayı değerlerini alma  
- Bu bölüm nasıl alınacağını gösteren bir örnek içerir `Autonumber` Jet 4.0 veritabanı değerleri. Yeni döndürmek için aşağıdaki yöntemlerden birini kullanmak mümkün değildir Jet veritabanı altyapısı birden çok deyime yürütülmesini bir toplu işlem veya çıkış parametreleri kullanımını desteklemez `Autonumber` eklenen bir satıra atanan değer. Bununla birlikte, kod ekleyebilirsiniz `RowUpdated` @ ayrı bir SELECT yürütür olay işleyicisi@IDENTITY yeni almak için deyimi `Autonumber` değeri.  
+ Bu bölüm nasıl alınacağını gösteren bir örnek içerir `Autonumber` Jet 4.0 veritabanı değerleri. Bu nedenle yeni döndürmek için aşağıdaki yöntemlerden birini kullanmak mümkün değildir Jet veritabanı altyapısı birden çok deyim yürütülemedi toplu veya çıkış parametreleri kullanımını desteklemiyor `Autonumber` eklenen bir satır için atanan değer. Ancak, kod ekleyebilirsiniz `RowUpdated` @ ayrı bir SELECT yürüten bir olay işleyicisi@IDENTITY yeni almak için deyimi `Autonumber` değeri.  
   
 ### <a name="example"></a>Örnek  
- Şema bilgileri kullanarak eklemek yerine `MissingSchemaAction.AddWithKey`, bu örnek yapılandırır bir `DataTable` çağrılmadan önce doğru şema <xref:System.Data.OleDb.OleDbDataAdapter> doldurmak için `DataTable`. Bu durumda, **adlı kullanıcı, Categoryıd'si** sütun sıfır olarak ayarlayarak başlayarak eklenen her satıra atanan değer düşürmek için yapılandırılmış <xref:System.Data.DataColumn.AutoIncrement%2A> için `true`, <xref:System.Data.DataColumn.AutoIncrementSeed%2A> 0 olarak ve <xref:System.Data.DataColumn.AutoIncrementStep%2A> -1. Kod, ardından iki yeni satır ekler ve kullandığı `GetChanges` değiştirilen satırları yeni bir eklemek için `DataTable` için geçirilen `Update` yöntemi.  
+ Şema bilgileri kullanarak eklemek yerine `MissingSchemaAction.AddWithKey`, bu örneği yapılandırır bir `DataTable` çağrılmadan önce doğru şema ile <xref:System.Data.OleDb.OleDbDataAdapter> doldurmak için `DataTable`. Bu durumda, **CategoryID** ayarlayarak sıfırdan başlayarak eklenen her satırın atanan değer düşürmek için yapılandırılmış sütun <xref:System.Data.DataColumn.AutoIncrement%2A> için `true`, <xref:System.Data.DataColumn.AutoIncrementSeed%2A> 0 ve <xref:System.Data.DataColumn.AutoIncrementStep%2A> -1. Kod, ardından iki yeni satır ekler ve kullandığı `GetChanges` değiştirilen satırların yeni bir eklemek için `DataTable` yapan `Update` yöntemi.  
   
  [!code-csharp[DataWorks OleDb.JetAutonumberMerge#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks OleDb.JetAutonumberMerge/CS/source.cs#1)]
  [!code-vb[DataWorks OleDb.JetAutonumberMerge#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks OleDb.JetAutonumberMerge/VB/source.vb#1)]  
   
- `RowUpdated` Olay işleyicisi kullandığı aynı açık <xref:System.Data.OleDb.OleDbConnection> olarak `Update` deyiminin `OleDbDataAdapter`. Denetlediği `StatementType` , <xref:System.Data.OleDb.OleDbRowUpdatedEventArgs> için eklenen satır. Eklenen her için yeni bir satır <xref:System.Data.OleDb.OleDbCommand> @ Seç yürütmek için oluşturulan@IDENTITY yeni döndürme bağlantıda deyimi `Autonumber` yerleştirilir değeri **adlı kullanıcı, Categoryıd'si** sütunu `DataRow`. `Status` Özelliği ayarlanmış sonra `UpdateStatus.SkipCurrentRow` gizli çağrısı gizlemek için `AcceptChanges`. Yordamı, ana gövdesinde `Merge` yöntemi iki birleştirmek için çağrılır `DataTable` nesneleri ve son olarak `AcceptChanges` olarak adlandırılır.  
+ `RowUpdated` Kullandığı aynı açık olay işleyicisi <xref:System.Data.OleDb.OleDbConnection> olarak `Update` deyiminin `OleDbDataAdapter`. Denetlediği `StatementType` , <xref:System.Data.OleDb.OleDbRowUpdatedEventArgs> için eklenen satır. Eklenen her biri için yeni bir satır <xref:System.Data.OleDb.OleDbCommand> @ Seç yürütmek için oluşturulan@IDENTITY deyimi yeni döndüren bağlantıda `Autonumber` yerleştirilen değeri **CategoryID** sütununun `DataRow`. `Status` Özelliği ayarlanmış ardından `UpdateStatus.SkipCurrentRow` gizli çağrısı bastırmak için `AcceptChanges`. Yordamı, ana gövdesinde `Merge` iki birleştirilecek yöntemi çağrıldığında `DataTable` nesneleri ve son olarak `AcceptChanges` çağrılır.  
   
  [!code-csharp[DataWorks OleDb.JetAutonumberMerge#2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks OleDb.JetAutonumberMerge/CS/source.cs#2)]
  [!code-vb[DataWorks OleDb.JetAutonumberMerge#2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks OleDb.JetAutonumberMerge/VB/source.vb#2)]  
   
 ### <a name="retrieving-identity-values"></a>Kimlik değerlerini alma  
- Genellikle, sütundaki değerlerin benzersiz olması gerektiğinde sütun kimliği olarak ayarlayın. Ve bazen kimliğinizi yeni veri kimlik değeri gerekiyor. Bu örnek, kimlik değerleri almak gösterilmiştir:  
+ Genellikle, sütundaki değerleri benzersiz olmalıdır, sütun kimliği olarak ayarlayın. Ve bazen yeni veri kimlik değeri gerekiyor. Bu örnek, kimlik değerlerin nasıl alınacağını gösterir:  
   
 -   Veri eklemek ve bir kimlik değeri döndürmek için bir saklı yordam oluşturur.  
   
--   Yeni veri eklemek ve sonucu görüntülemek için bir komut yürütür.  
+-   Yeni verileri ekleyin ve sonucu görüntülemek için bir komutu yürütür.  
   
--   Kullanan <xref:System.Data.SqlClient.SqlDataAdapter> yeni veri eklemek ve sonucu görüntülemek için.  
+-   Kullanan <xref:System.Data.SqlClient.SqlDataAdapter> yeni verileri ekleyin ve sonucu görüntülemek için.  
   
- Derleme ve örneği çalıştırmadan önce aşağıdaki komut dosyası kullanarak örnek veritabanı oluşturmanız gerekir:  
+ Derleme ve örneği çalıştırmak için önce aşağıdaki betiği kullanarak örnek veritabanı oluşturmanız gerekir:  
   
 ```  
 USE [master]  
@@ -344,10 +344,10 @@ ALTER TABLE [dbo].[StudentGrade] CHECK CONSTRAINT [FK_StudentGrade_Student]
 GO  
 ```  
   
- Kod listesi aşağıdadır:  
+ Kodu listesi aşağıdadır:  
   
 > [!IMPORTANT]
->  Kod listesi MySchool.mdb adlı bir Access veritabanı dosyasına başvuruyor. MySchool.mdb (tam C# veya Visual Basic örnek proje parçası) herhangi birinden indirebilirsiniz [Visual Studio 2012 örnek](http://code.msdn.microsoft.com/How-to-retrieve-the-95b4ee43) veya [Visual Studio 2013 örnek](http://code.msdn.microsoft.com/How-to-Retrieve-the-511acece).  
+>  Kod listesi MySchool.mdb adlı bir Access veritabanı dosyasına başvuruyor. MySchool.mdb (tam C# veya Visual Basic örnek proje kapsamında)'nden ya da indirebilirsiniz [Visual Studio 2012 örnek](https://code.msdn.microsoft.com/How-to-retrieve-the-95b4ee43) veya [Visual Studio 2013 örnek](https://code.msdn.microsoft.com/How-to-Retrieve-the-511acece).  
   
 ```  
 using System;  
@@ -536,4 +536,4 @@ class Program {
  [AcceptChanges ve RejectChanges](../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)  
  [DataSet İçeriklerini Birleştirme](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md)  
  [Veri Kaynaklarını DataAdapters ile Güncelleştirme](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
- [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
