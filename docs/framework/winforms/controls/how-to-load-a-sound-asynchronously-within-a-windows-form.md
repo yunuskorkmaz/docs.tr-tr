@@ -10,50 +10,50 @@ helpviewer_keywords:
 - threading [Windows Forms], sounds
 ms.assetid: 3b6a9296-1d5e-4d52-a4ba-94366d6fe302
 ms.openlocfilehash: 2de2be478e81183201cc85e1a6dfd6f1a1833af6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481949"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43538616"
 ---
-# <a name="how-to-load-a-sound-asynchronously-within-a-windows-form"></a><span data-ttu-id="72cb7-102">Nasıl yapılır: Bir Windows Form içinde Zaman Uyumsuz Ses Yükleme</span><span class="sxs-lookup"><span data-stu-id="72cb7-102">How to: Load a Sound Asynchronously within a Windows Form</span></span>
-<span data-ttu-id="72cb7-103">Aşağıdaki kod örneği, zaman uyumsuz olarak bir ses bir URL'den yükler ve ardından yeni bir iş parçacığında yürütülür.</span><span class="sxs-lookup"><span data-stu-id="72cb7-103">The following code example asynchronously loads a sound from an URL and then plays it on a new thread.</span></span>  
+# <a name="how-to-load-a-sound-asynchronously-within-a-windows-form"></a><span data-ttu-id="9b625-102">Nasıl yapılır: Bir Windows Form içinde Zaman Uyumsuz Ses Yükleme</span><span class="sxs-lookup"><span data-stu-id="9b625-102">How to: Load a Sound Asynchronously within a Windows Form</span></span>
+<span data-ttu-id="9b625-103">Aşağıdaki kod örneği, zaman uyumsuz olarak bir ses bir URL'den yükler ve ardından yeni bir iş parçacığında yürütülür.</span><span class="sxs-lookup"><span data-stu-id="9b625-103">The following code example asynchronously loads a sound from an URL and then plays it on a new thread.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="72cb7-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="72cb7-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="9b625-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="9b625-104">Example</span></span>  
  [!code-csharp[System.Media.SoundPlayer.LoadAsync#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Media.SoundPlayer.LoadAsync/CS/Form1.cs#1)]
  [!code-vb[System.Media.SoundPlayer.LoadAsync#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Media.SoundPlayer.LoadAsync/VB/Form1.vb#1)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="72cb7-105">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="72cb7-105">Compiling the Code</span></span>  
- <span data-ttu-id="72cb7-106">Bu örnek gerektirir:</span><span class="sxs-lookup"><span data-stu-id="72cb7-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="9b625-105">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="9b625-105">Compiling the Code</span></span>  
+ <span data-ttu-id="9b625-106">Bu örnek gerektirir:</span><span class="sxs-lookup"><span data-stu-id="9b625-106">This example requires:</span></span>  
   
--   <span data-ttu-id="72cb7-107">Sistem ve System.Windows.Forms öğelerini derlemelerine başvurular.</span><span class="sxs-lookup"><span data-stu-id="72cb7-107">References to the System and System.Windows.Forms assemblies.</span></span>  
+-   <span data-ttu-id="9b625-107">Sistem ve System.Windows.Forms öğelerini derlemelerine başvurular.</span><span class="sxs-lookup"><span data-stu-id="9b625-107">References to the System and System.Windows.Forms assemblies.</span></span>  
   
--   <span data-ttu-id="72cb7-108">Dosya adı yerine `"http://www.tailspintoys.com/sounds/stop.wav"` ile geçerli bir dosya adı.</span><span class="sxs-lookup"><span data-stu-id="72cb7-108">That you replace the file name `"http://www.tailspintoys.com/sounds/stop.wav"` with a valid file name.</span></span>  
+-   <span data-ttu-id="9b625-108">Dosya adı yerine `"http://www.tailspintoys.com/sounds/stop.wav"` ile geçerli bir dosya adı.</span><span class="sxs-lookup"><span data-stu-id="9b625-108">That you replace the file name `"http://www.tailspintoys.com/sounds/stop.wav"` with a valid file name.</span></span>  
   
- <span data-ttu-id="72cb7-109">Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="72cb7-109">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="72cb7-110">Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="72cb7-110">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  <span data-ttu-id="72cb7-111">Ayrıca bkz: [nasıl yapılır: derleme ve çalıştırma bir tam Windows Formları kod örneği kullanarak Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="72cb7-111">Also see [How to: Compile and Run a Complete Windows Forms Code Example Using Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span></span>  
+ <span data-ttu-id="9b625-109">Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="9b625-109">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="9b625-110">Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="9b625-110">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  <span data-ttu-id="9b625-111">Ayrıca bkz: [nasıl yapılır: derleme ve çalıştırma bir tam Windows Formları kod örneği kullanarak Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="9b625-111">Also see [How to: Compile and Run a Complete Windows Forms Code Example Using Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span></span>  
   
-## <a name="robust-programming"></a><span data-ttu-id="72cb7-112">Güçlü Programlama</span><span class="sxs-lookup"><span data-stu-id="72cb7-112">Robust Programming</span></span>  
- <span data-ttu-id="72cb7-113">Dosya işlemleri uygun özel durum işleme bloğu alınmalıdır.</span><span class="sxs-lookup"><span data-stu-id="72cb7-113">File operations should be enclosed within appropriate exception-handling blocks.</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="9b625-112">Güçlü Programlama</span><span class="sxs-lookup"><span data-stu-id="9b625-112">Robust Programming</span></span>  
+ <span data-ttu-id="9b625-113">Dosya işlemleri uygun özel durum işleme bloğu alınmalıdır.</span><span class="sxs-lookup"><span data-stu-id="9b625-113">File operations should be enclosed within appropriate exception-handling blocks.</span></span>  
   
- <span data-ttu-id="72cb7-114">Aşağıdaki koşullar özel bir duruma neden olabilir:</span><span class="sxs-lookup"><span data-stu-id="72cb7-114">The following conditions may cause an exception:</span></span>  
+ <span data-ttu-id="9b625-114">Aşağıdaki koşullar özel bir duruma neden olabilir:</span><span class="sxs-lookup"><span data-stu-id="9b625-114">The following conditions may cause an exception:</span></span>  
   
--   <span data-ttu-id="72cb7-115">Yol adı yanlış biçimlendirilmiş.</span><span class="sxs-lookup"><span data-stu-id="72cb7-115">The path name is malformed.</span></span> <span data-ttu-id="72cb7-116">Örneğin, geçerli olmayan karakterler içeriyor veya yalnızca boşluk (<xref:System.ArgumentException> sınıfı).</span><span class="sxs-lookup"><span data-stu-id="72cb7-116">For example, it contains characters that are not valid or is only white space (<xref:System.ArgumentException> class).</span></span>  
+-   <span data-ttu-id="9b625-115">Yol adı yanlış biçimlendirilmiş.</span><span class="sxs-lookup"><span data-stu-id="9b625-115">The path name is malformed.</span></span> <span data-ttu-id="9b625-116">Örneğin, geçerli olmayan karakterler içeriyor veya yalnızca boşluk (<xref:System.ArgumentException> sınıfı).</span><span class="sxs-lookup"><span data-stu-id="9b625-116">For example, it contains characters that are not valid or is only white space (<xref:System.ArgumentException> class).</span></span>  
   
--   <span data-ttu-id="72cb7-117">Salt okunur yoludur (<xref:System.IO.IOException> sınıfı).</span><span class="sxs-lookup"><span data-stu-id="72cb7-117">The path is read-only (<xref:System.IO.IOException> class).</span></span>  
+-   <span data-ttu-id="9b625-117">Salt okunur yoludur (<xref:System.IO.IOException> sınıfı).</span><span class="sxs-lookup"><span data-stu-id="9b625-117">The path is read-only (<xref:System.IO.IOException> class).</span></span>  
   
--   <span data-ttu-id="72cb7-118">Yol adı `Nothing` (<xref:System.ArgumentNullException> sınıfı).</span><span class="sxs-lookup"><span data-stu-id="72cb7-118">The path name is `Nothing` (<xref:System.ArgumentNullException> class).</span></span>  
+-   <span data-ttu-id="9b625-118">Yol adı `Nothing` (<xref:System.ArgumentNullException> sınıfı).</span><span class="sxs-lookup"><span data-stu-id="9b625-118">The path name is `Nothing` (<xref:System.ArgumentNullException> class).</span></span>  
   
--   <span data-ttu-id="72cb7-119">Yol adı çok uzun (<xref:System.IO.PathTooLongException> sınıfı).</span><span class="sxs-lookup"><span data-stu-id="72cb7-119">The path name is too long (<xref:System.IO.PathTooLongException> class).</span></span>  
+-   <span data-ttu-id="9b625-119">Yol adı çok uzun (<xref:System.IO.PathTooLongException> sınıfı).</span><span class="sxs-lookup"><span data-stu-id="9b625-119">The path name is too long (<xref:System.IO.PathTooLongException> class).</span></span>  
   
--   <span data-ttu-id="72cb7-120">Yol geçerli değil (<xref:System.IO.DirectoryNotFoundException> sınıfı).</span><span class="sxs-lookup"><span data-stu-id="72cb7-120">The path is not valid (<xref:System.IO.DirectoryNotFoundException> class).</span></span>  
+-   <span data-ttu-id="9b625-120">Yol geçerli değil (<xref:System.IO.DirectoryNotFoundException> sınıfı).</span><span class="sxs-lookup"><span data-stu-id="9b625-120">The path is not valid (<xref:System.IO.DirectoryNotFoundException> class).</span></span>  
   
--   <span data-ttu-id="72cb7-121">Yalnızca bir iki nokta üst üste yoludur ":" (<xref:System.NotSupportedException> sınıfı).</span><span class="sxs-lookup"><span data-stu-id="72cb7-121">The path is only a colon ":" (<xref:System.NotSupportedException> class).</span></span>  
+-   <span data-ttu-id="9b625-121">Yalnızca bir iki nokta üst üste yoludur ":" (<xref:System.NotSupportedException> sınıfı).</span><span class="sxs-lookup"><span data-stu-id="9b625-121">The path is only a colon ":" (<xref:System.NotSupportedException> class).</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="72cb7-122">.NET Framework Güvenliği</span><span class="sxs-lookup"><span data-stu-id="72cb7-122">.NET Framework Security</span></span>  
- <span data-ttu-id="72cb7-123">Dosya adına dayanarak dosyanın içeriği ile ilgili kararlar vermeyin.</span><span class="sxs-lookup"><span data-stu-id="72cb7-123">Do not make decisions about the contents of the file based on the name of the file.</span></span> <span data-ttu-id="72cb7-124">Örneğin, dosyayı `Form1.vb` Visual Basic kaynak dosyası olmayabilir.</span><span class="sxs-lookup"><span data-stu-id="72cb7-124">For example, the file `Form1.vb` may not be a Visual Basic source file.</span></span> <span data-ttu-id="72cb7-125">Verileri uygulamanızda kullanmadan önce tüm girişleri doğrulayın.</span><span class="sxs-lookup"><span data-stu-id="72cb7-125">Verify all inputs before using the data in your application.</span></span>  
+## <a name="net-framework-security"></a><span data-ttu-id="9b625-122">.NET Framework Güvenliği</span><span class="sxs-lookup"><span data-stu-id="9b625-122">.NET Framework Security</span></span>  
+ <span data-ttu-id="9b625-123">Dosya adına dayanarak dosyanın içeriği ile ilgili kararlar vermeyin.</span><span class="sxs-lookup"><span data-stu-id="9b625-123">Do not make decisions about the contents of the file based on the name of the file.</span></span> <span data-ttu-id="9b625-124">Örneğin, dosyayı `Form1.vb` Visual Basic kaynak dosyası olmayabilir.</span><span class="sxs-lookup"><span data-stu-id="9b625-124">For example, the file `Form1.vb` may not be a Visual Basic source file.</span></span> <span data-ttu-id="9b625-125">Verileri uygulamanızda kullanmadan önce tüm girişleri doğrulayın.</span><span class="sxs-lookup"><span data-stu-id="9b625-125">Verify all inputs before using the data in your application.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="72cb7-126">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="72cb7-126">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="9b625-126">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="9b625-126">See Also</span></span>  
  <xref:System.Media.SoundPlayer.LoadAsync%2A>  
  <xref:System.Media.SoundPlayer.LoadCompleted>  
  <xref:System.Media.SoundPlayer.Play%2A>  
- [<span data-ttu-id="72cb7-127">Nasıl yapılır: Bir Windows Formdan Ses Çalma</span><span class="sxs-lookup"><span data-stu-id="72cb7-127">How to: Play a Sound from a Windows Form</span></span>](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)
+ [<span data-ttu-id="9b625-127">Nasıl yapılır: Bir Windows Formdan Ses Çalma</span><span class="sxs-lookup"><span data-stu-id="9b625-127">How to: Play a Sound from a Windows Form</span></span>](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)

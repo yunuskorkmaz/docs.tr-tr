@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 55b4fbb8785f788c9eb34f32b5078201f8253066
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d925e30786c742708f345fc23f14c79521cbc6f3
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433334"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519958"
 ---
-# <a name="iclrstrongnamestrongnamekeygen-method"></a><span data-ttu-id="dba19-102">ICLRStrongName::StrongNameKeyGen Yöntemi</span><span class="sxs-lookup"><span data-stu-id="dba19-102">ICLRStrongName::StrongNameKeyGen Method</span></span>
-<span data-ttu-id="dba19-103">Güçlü ad kullanmak için yeni bir ortak/özel anahtar çifti oluşturur.</span><span class="sxs-lookup"><span data-stu-id="dba19-103">Creates a new public/private key pair for strong name use.</span></span>  
+# <a name="iclrstrongnamestrongnamekeygen-method"></a><span data-ttu-id="92f4e-102">ICLRStrongName::StrongNameKeyGen Yöntemi</span><span class="sxs-lookup"><span data-stu-id="92f4e-102">ICLRStrongName::StrongNameKeyGen Method</span></span>
+<span data-ttu-id="92f4e-103">Tanımlayıcı ad kullanmak için yeni bir ortak/özel anahtar çifti oluşturur.</span><span class="sxs-lookup"><span data-stu-id="92f4e-103">Creates a new public/private key pair for strong name use.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dba19-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="dba19-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="92f4e-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="92f4e-104">Syntax</span></span>  
   
 ```  
 HRESULT StrongNameKeyGen (  
@@ -38,38 +38,38 @@ HRESULT StrongNameKeyGen (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="dba19-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="dba19-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="92f4e-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="92f4e-105">Parameters</span></span>  
  `wszKeyContainer`  
- <span data-ttu-id="dba19-106">[in] İstenen anahtar kapsayıcısı adı.</span><span class="sxs-lookup"><span data-stu-id="dba19-106">[in] The requested key container name.</span></span> <span data-ttu-id="dba19-107">`wszKeyContainer` ya da boş dize veya geçici bir ad oluşturmak için null olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="dba19-107">`wszKeyContainer` must either be a non-empty string or null to generate a temporary name.</span></span>  
+ <span data-ttu-id="92f4e-106">[in] İstenen anahtar kapsayıcısı adı.</span><span class="sxs-lookup"><span data-stu-id="92f4e-106">[in] The requested key container name.</span></span> <span data-ttu-id="92f4e-107">`wszKeyContainer` ya da boş dize veya geçici bir ad oluşturmak için null olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="92f4e-107">`wszKeyContainer` must either be a non-empty string or null to generate a temporary name.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="dba19-108">[in] Kayıtlı anahtarı bırakın belirtir bir değer.</span><span class="sxs-lookup"><span data-stu-id="dba19-108">[in] A value that specifies whether to leave the key registered.</span></span> <span data-ttu-id="dba19-109">Aşağıdaki değerleri desteklenir:</span><span class="sxs-lookup"><span data-stu-id="dba19-109">The following values are supported:</span></span>  
+ <span data-ttu-id="92f4e-108">[in] Kaydedilen anahtar bırakın belirten bir değer.</span><span class="sxs-lookup"><span data-stu-id="92f4e-108">[in] A value that specifies whether to leave the key registered.</span></span> <span data-ttu-id="92f4e-109">Aşağıdaki değerleri desteklenir:</span><span class="sxs-lookup"><span data-stu-id="92f4e-109">The following values are supported:</span></span>  
   
--   <span data-ttu-id="dba19-110">kullanılan 0x00000000 - `wszKeyContainer` bir geçici anahtar kapsayıcı adı oluşturmak için null.</span><span class="sxs-lookup"><span data-stu-id="dba19-110">0x00000000 - Used when `wszKeyContainer` is null to generate a temporary key container name.</span></span>  
+-   <span data-ttu-id="92f4e-110">kullanılan 0x00000000 - `wszKeyContainer` geçici bir anahtar kapsayıcısı adını oluşturmak için null.</span><span class="sxs-lookup"><span data-stu-id="92f4e-110">0x00000000 - Used when `wszKeyContainer` is null to generate a temporary key container name.</span></span>  
   
--   <span data-ttu-id="dba19-111">0x00000001 (`SN_LEAVE_KEY`)-anahtar sol kaydedilmesi gerektiğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="dba19-111">0x00000001 (`SN_LEAVE_KEY`) - Specifies that the key should be left registered.</span></span>  
+-   <span data-ttu-id="92f4e-111">0x00000001 (`SN_LEAVE_KEY`)-anahtar sol kaydedilmesi gerektiğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="92f4e-111">0x00000001 (`SN_LEAVE_KEY`) - Specifies that the key should be left registered.</span></span>  
   
  `ppbKeyBlob`  
- <span data-ttu-id="dba19-112">[out] Döndürülen ortak/özel anahtar çifti.</span><span class="sxs-lookup"><span data-stu-id="dba19-112">[out] The returned public/private key pair.</span></span>  
+ <span data-ttu-id="92f4e-112">[out] Döndürülen ortak/özel anahtar çifti.</span><span class="sxs-lookup"><span data-stu-id="92f4e-112">[out] The returned public/private key pair.</span></span>  
   
  `pcbKeyBlob`  
- <span data-ttu-id="dba19-113">[out] Bayt olarak boyutu, `ppbKeyBlob`.</span><span class="sxs-lookup"><span data-stu-id="dba19-113">[out] The size, in bytes, of `ppbKeyBlob`.</span></span>  
+ <span data-ttu-id="92f4e-113">[out] Bayt cinsinden boyutu, `ppbKeyBlob`.</span><span class="sxs-lookup"><span data-stu-id="92f4e-113">[out] The size, in bytes, of `ppbKeyBlob`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="dba19-114">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="dba19-114">Return Value</span></span>  
- <span data-ttu-id="dba19-115">`S_OK` Yöntem başarıyla tamamlandı Aksi takdirde hata belirten bir HRESULT değeri (bkz [ortak HRESULT değerleri](http://go.microsoft.com/fwlink/?LinkId=213878) bir listesi için).</span><span class="sxs-lookup"><span data-stu-id="dba19-115">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](http://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="92f4e-114">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="92f4e-114">Return Value</span></span>  
+ <span data-ttu-id="92f4e-115">`S_OK` yöntemi başarıyla tamamlandı Aksi takdirde hata olduğunu gösteren HRESULT değerini (bkz [ortak HRESULT değerlerini](https://go.microsoft.com/fwlink/?LinkId=213878) bir listesi için).</span><span class="sxs-lookup"><span data-stu-id="92f4e-115">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="dba19-116">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="dba19-116">Remarks</span></span>  
- <span data-ttu-id="dba19-117">[Iclrstrongname::strongnamekeygen](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md) yöntemi, 1024 bit anahtar oluşturur.</span><span class="sxs-lookup"><span data-stu-id="dba19-117">The [ICLRStrongName::StrongNameKeyGen](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md) method creates a 1024-bit key.</span></span> <span data-ttu-id="dba19-118">Anahtarı aldıktan sonra çağırmalıdır [Iclrstrongname::strongnamefreebuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) ayrılmış bellek yayımlamayı yöntemi.</span><span class="sxs-lookup"><span data-stu-id="dba19-118">After the key is retrieved, you should call the [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) method to release the allocated memory.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="92f4e-116">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="92f4e-116">Remarks</span></span>  
+ <span data-ttu-id="92f4e-117">[Iclrstrongname::strongnamekeygen](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md) yöntemi 1024 bit anahtar oluşturur.</span><span class="sxs-lookup"><span data-stu-id="92f4e-117">The [ICLRStrongName::StrongNameKeyGen](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md) method creates a 1024-bit key.</span></span> <span data-ttu-id="92f4e-118">Anahtarı aldıktan sonra çağırmalıdır [Iclrstrongname::strongnamefreebuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) ayrılan belleği serbest bırakmak için yöntemi.</span><span class="sxs-lookup"><span data-stu-id="92f4e-118">After the key is retrieved, you should call the [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) method to release the allocated memory.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="dba19-119">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="dba19-119">Requirements</span></span>  
- <span data-ttu-id="dba19-120">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="dba19-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="92f4e-119">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="92f4e-119">Requirements</span></span>  
+ <span data-ttu-id="92f4e-120">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="92f4e-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="dba19-121">**Başlık:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="dba19-121">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="92f4e-121">**Başlık:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="92f4e-121">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="dba19-122">**Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="dba19-122">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="92f4e-122">**Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="92f4e-122">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="dba19-123">**.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dba19-123">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="92f4e-123">**.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="92f4e-123">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dba19-124">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="dba19-124">See Also</span></span>  
- [<span data-ttu-id="dba19-125">StrongNameKeyGenEx Yöntemi</span><span class="sxs-lookup"><span data-stu-id="dba19-125">StrongNameKeyGenEx Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygenex-method.md)  
- [<span data-ttu-id="dba19-126">ICLRStrongName Arabirimi</span><span class="sxs-lookup"><span data-stu-id="dba19-126">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="92f4e-124">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="92f4e-124">See Also</span></span>  
+ [<span data-ttu-id="92f4e-125">StrongNameKeyGenEx Yöntemi</span><span class="sxs-lookup"><span data-stu-id="92f4e-125">StrongNameKeyGenEx Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygenex-method.md)  
+ [<span data-ttu-id="92f4e-126">ICLRStrongName Arabirimi</span><span class="sxs-lookup"><span data-stu-id="92f4e-126">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

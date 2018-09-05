@@ -2,21 +2,21 @@
 title: 'Nasıl yapılır: (LINQ) (C#) iki liste arasında ayarlanmış farkı bulma'
 ms.date: 07/20/2015
 ms.assetid: 8e8945f0-4aba-439d-8d5d-c8d1eeef4e71
-ms.openlocfilehash: 8a0f7a06a226c0fee1f0174e187060e4b25faea2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e416e97b8fe3a1a76a0f04ea46353d9fd8c0ad8c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322945"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527159"
 ---
-# <a name="how-to-find-the-set-difference-between-two-lists-linq-c"></a><span data-ttu-id="fc451-102">Nasıl yapılır: (LINQ) (C#) iki liste arasında ayarlanmış farkı bulma</span><span class="sxs-lookup"><span data-stu-id="fc451-102">How to: Find the Set Difference Between Two Lists (LINQ) (C#)</span></span>
-<span data-ttu-id="fc451-103">Bu örnek LINQ listelerini dizeleri karşılaştırmak ve names1.txt ancak names2.txt olan satırlar çıkış için nasıl kullanılacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="fc451-103">This example shows how to use LINQ to compare two lists of strings and output those lines that are in names1.txt but not in names2.txt.</span></span>  
+# <a name="how-to-find-the-set-difference-between-two-lists-linq-c"></a><span data-ttu-id="d46b9-102">Nasıl yapılır: (LINQ) (C#) iki liste arasında ayarlanmış farkı bulma</span><span class="sxs-lookup"><span data-stu-id="d46b9-102">How to: Find the Set Difference Between Two Lists (LINQ) (C#)</span></span>
+<span data-ttu-id="d46b9-103">Bu örnek, dizeleri iki liste karşılaştırın ve names1.txt ancak names2.txt olan satırlar çıkış için LINQ kullanma işlemini gösterir.</span><span class="sxs-lookup"><span data-stu-id="d46b9-103">This example shows how to use LINQ to compare two lists of strings and output those lines that are in names1.txt but not in names2.txt.</span></span>  
   
-### <a name="to-create-the-data-files"></a><span data-ttu-id="fc451-104">Veri dosyaları oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="fc451-104">To create the data files</span></span>  
+### <a name="to-create-the-data-files"></a><span data-ttu-id="d46b9-104">Veri dosyaları oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="d46b9-104">To create the data files</span></span>  
   
-1.  <span data-ttu-id="fc451-105">Kopyalama names1.txt ve names2.txt Çözüm klasörünüz gösterildiği gibi [nasıl yapılır: birleştirme ve karşılaştırma dizesi koleksiyonları (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).</span><span class="sxs-lookup"><span data-stu-id="fc451-105">Copy names1.txt and names2.txt to your solution folder as shown in [How to: Combine and Compare String Collections (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).</span></span>  
+1.  <span data-ttu-id="d46b9-105">Kopyalama names1.txt ve names2.txt Çözüm klasörünüz olarak gösterildiği gibi [nasıl yapılır: birleştirme ve karşılaştırma dizesi koleksiyonları (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).</span><span class="sxs-lookup"><span data-stu-id="d46b9-105">Copy names1.txt and names2.txt to your solution folder as shown in [How to: Combine and Compare String Collections (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="fc451-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="fc451-106">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="d46b9-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="d46b9-106">Example</span></span>  
   
 ```csharp  
 class CompareLists  
@@ -52,10 +52,11 @@ class CompareLists
      */  
 ```  
   
- <span data-ttu-id="fc451-107">Bazı türleri sorgu C# ' ta, işlemleri gibi <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, ve <xref:System.Linq.Enumerable.Concat%2A>, yalnızca yöntem temelli sözdiziminde ifade edilebilir.</span><span class="sxs-lookup"><span data-stu-id="fc451-107">Some types of query operations in C#, such as <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, and <xref:System.Linq.Enumerable.Concat%2A>, can only be expressed in method-based syntax.</span></span>  
+ <span data-ttu-id="d46b9-107">Sorgu işlemlerinde C# gibi bazı türleri <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, ve <xref:System.Linq.Enumerable.Concat%2A>, yalnızca yöntem tabanlı sözdizimi ifade edilebilir.</span><span class="sxs-lookup"><span data-stu-id="d46b9-107">Some types of query operations in C#, such as <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, and <xref:System.Linq.Enumerable.Concat%2A>, can only be expressed in method-based syntax.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="fc451-108">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="fc451-108">Compiling the Code</span></span>  
- <span data-ttu-id="fc451-109">.NET Framework sürüm 3.5 veya daha yüksek System.Core.dll başvuru hedefleyen bir proje oluşturun ve `using` System.Linq ve System.IO ad alanları için yönergeleri.</span><span class="sxs-lookup"><span data-stu-id="fc451-109">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="d46b9-108">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="d46b9-108">Compiling the Code</span></span>  
+ <span data-ttu-id="d46b9-109">.NET Framework sürüm 3.5 veya üzeri bir System.Core.dll başvurusu ile hedefleyen bir proje oluşturun ve `using` System.Linq ve System.IO ad alanları için yönergeleri.</span><span class="sxs-lookup"><span data-stu-id="d46b9-109">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fc451-110">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="fc451-110">See Also</span></span>  
- [<span data-ttu-id="fc451-111">LINQ ve dizeler (C#)</span><span class="sxs-lookup"><span data-stu-id="fc451-111">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
+## <a name="see-also"></a><span data-ttu-id="d46b9-110">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="d46b9-110">See Also</span></span>
+
+- [<span data-ttu-id="d46b9-111">LINQ ve dizeler (C#)</span><span class="sxs-lookup"><span data-stu-id="d46b9-111">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)

@@ -4,22 +4,22 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - cref [C#]
 ms.assetid: 66a6b0e5-b961-4504-a461-3a4cf481fc8b
-ms.openlocfilehash: a89c7170de956bae65f7018130ba27e61c076376
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e9e14cf4e7051e52df20e899e9070e5b728321e5
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337031"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514609"
 ---
-# <a name="cref-attribute-c-programming-guide"></a><span data-ttu-id="3dc0b-102">cref Özniteliği (C# Programlama Kılavuzu)</span><span class="sxs-lookup"><span data-stu-id="3dc0b-102">cref Attribute (C# Programming Guide)</span></span>
-<span data-ttu-id="3dc0b-103">`cref` Bir XML belgeleri etiketinde öznitelik "kod başvurusu" anlamına gelir</span><span class="sxs-lookup"><span data-stu-id="3dc0b-103">The `cref` attribute in an XML documentation tag means "code reference."</span></span> <span data-ttu-id="3dc0b-104">Bu etiket iç metni türü, yöntemi veya özelliği gibi bir kod öğesi olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="3dc0b-104">It specifies that the inner text of the tag is a code element, such as a type, method, or property.</span></span> <span data-ttu-id="3dc0b-105">Belge Araçlar [Sandcastle](https://github.com/EWSoftware/SHFB) kullanmak `cref` burada tür veya üye belgelenmiştir sayfasına köprüler otomatik olarak oluşturmak için öznitelikleri.</span><span class="sxs-lookup"><span data-stu-id="3dc0b-105">Documentation tools like [Sandcastle](https://github.com/EWSoftware/SHFB) use the `cref` attributes to automatically generate hyperlinks to the page where the type or member is documented.</span></span>  
+# <a name="cref-attribute-c-programming-guide"></a><span data-ttu-id="5dcd0-102">cref Özniteliği (C# Programlama Kılavuzu)</span><span class="sxs-lookup"><span data-stu-id="5dcd0-102">cref Attribute (C# Programming Guide)</span></span>
+<span data-ttu-id="5dcd0-103">`cref` Bir XML belgeleri etiketi özniteliğinde "kod başvurusu" anlamına gelir</span><span class="sxs-lookup"><span data-stu-id="5dcd0-103">The `cref` attribute in an XML documentation tag means "code reference."</span></span> <span data-ttu-id="5dcd0-104">Bu etiket iç metni bir kod öğe türü, yöntemi veya özelliği belirtir.</span><span class="sxs-lookup"><span data-stu-id="5dcd0-104">It specifies that the inner text of the tag is a code element, such as a type, method, or property.</span></span> <span data-ttu-id="5dcd0-105">Gibi belgeleri Araçları [Sandcastle](https://github.com/EWSoftware/SHFB) kullanın `cref` köprüler burada türe veya üyeye belgelenen sayfasına otomatik olarak oluşturmak için öznitelikleri.</span><span class="sxs-lookup"><span data-stu-id="5dcd0-105">Documentation tools like [Sandcastle](https://github.com/EWSoftware/SHFB) use the `cref` attributes to automatically generate hyperlinks to the page where the type or member is documented.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="3dc0b-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="3dc0b-106">Example</span></span>  
- <span data-ttu-id="3dc0b-107">Aşağıdaki örnekte gösterildiği `cref` olarak kullanılan öznitelikler [ \<bkz >](../../../csharp/programming-guide/xmldoc/see.md) etiketler.</span><span class="sxs-lookup"><span data-stu-id="3dc0b-107">The following example shows `cref` attributes used in [\<see>](../../../csharp/programming-guide/xmldoc/see.md) tags.</span></span>  
+## <a name="example"></a><span data-ttu-id="5dcd0-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="5dcd0-106">Example</span></span>  
+ <span data-ttu-id="5dcd0-107">Aşağıdaki örnekte gösterildiği `cref` kullanılan öznitelikler [ \<bakın >](../../../csharp/programming-guide/xmldoc/see.md) etiketler.</span><span class="sxs-lookup"><span data-stu-id="5dcd0-107">The following example shows `cref` attributes used in [\<see>](../../../csharp/programming-guide/xmldoc/see.md) tags.</span></span>  
   
  [!code-csharp[csProgGuideDocComments#3](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/cref-attribute_1.cs)]  
   
- <span data-ttu-id="3dc0b-108">Derlendiğinde program şu XML dosyası oluşturur.</span><span class="sxs-lookup"><span data-stu-id="3dc0b-108">When compiled, the program produces the following XML file.</span></span> <span data-ttu-id="3dc0b-109">Dikkat `cref` için öznitelik `GetZero` yöntemi, örneğin, dönüştürülmüş derleyicisi tarafından `"M:TestNamespace.TestClass.GetZero"`.</span><span class="sxs-lookup"><span data-stu-id="3dc0b-109">Notice that the `cref` attribute for the `GetZero` method, for example, has been transformed by the compiler to `"M:TestNamespace.TestClass.GetZero"`.</span></span> <span data-ttu-id="3dc0b-110">"/ M:" öneki "yöntemi" anlamına gelir ve Sandcastle gibi belgeleri araçları tarafından tanınan bir kuralıdır.</span><span class="sxs-lookup"><span data-stu-id="3dc0b-110">The "M:" prefix means "method" and is a convention that is recognized by documentation tools such as Sandcastle.</span></span> <span data-ttu-id="3dc0b-111">Önekleri tam bir listesi için bkz: [XML dosyasını işleme](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md).</span><span class="sxs-lookup"><span data-stu-id="3dc0b-111">For a complete list of prefixes, see [Processing the XML File](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md).</span></span>  
+ <span data-ttu-id="5dcd0-108">Derlendiğinde, program şu XML dosyası oluşturur.</span><span class="sxs-lookup"><span data-stu-id="5dcd0-108">When compiled, the program produces the following XML file.</span></span> <span data-ttu-id="5dcd0-109">Dikkat `cref` özniteliğini `GetZero` yöntemi, örneğin, dönüştürülmüş derleyicisi tarafından `"M:TestNamespace.TestClass.GetZero"`.</span><span class="sxs-lookup"><span data-stu-id="5dcd0-109">Notice that the `cref` attribute for the `GetZero` method, for example, has been transformed by the compiler to `"M:TestNamespace.TestClass.GetZero"`.</span></span> <span data-ttu-id="5dcd0-110">"/ M:" ön eki "method" anlamına gelir ve Sandcastle gibi belgeleri araçları tarafından tanınan bir kuraldır.</span><span class="sxs-lookup"><span data-stu-id="5dcd0-110">The "M:" prefix means "method" and is a convention that is recognized by documentation tools such as Sandcastle.</span></span> <span data-ttu-id="5dcd0-111">Ön ekleri tam bir listesi için bkz. [XML dosyasını işleme](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md).</span><span class="sxs-lookup"><span data-stu-id="5dcd0-111">For a complete list of prefixes, see [Processing the XML File](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md).</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -118,6 +118,7 @@ ms.locfileid: "33337031"
 </doc>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="3dc0b-112">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="3dc0b-112">See Also</span></span>  
- [<span data-ttu-id="3dc0b-113">XML Belge Açıklamaları</span><span class="sxs-lookup"><span data-stu-id="3dc0b-113">XML Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
- [<span data-ttu-id="3dc0b-114">Belge Açıklamaları için Önerilen Etiketler</span><span class="sxs-lookup"><span data-stu-id="3dc0b-114">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+## <a name="see-also"></a><span data-ttu-id="5dcd0-112">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="5dcd0-112">See Also</span></span>
+
+- [<span data-ttu-id="5dcd0-113">XML Belge Açıklamaları</span><span class="sxs-lookup"><span data-stu-id="5dcd0-113">XML Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
+- [<span data-ttu-id="5dcd0-114">Belge Açıklamaları için Önerilen Etiketler</span><span class="sxs-lookup"><span data-stu-id="5dcd0-114">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

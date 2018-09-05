@@ -6,21 +6,21 @@ helpviewer_keywords:
 - Throttling Sample [Windows Communication Foundation]
 ms.assetid: 40bb3582-8ae9-4410-96f0-6c515bfaf47c
 ms.openlocfilehash: f214e3a5230d6cf16b3bde5d89078160ed95f96f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481598"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519172"
 ---
-# <a name="throttling"></a><span data-ttu-id="0ac22-102">Sınırlama</span><span class="sxs-lookup"><span data-stu-id="0ac22-102">Throttling</span></span>
-<span data-ttu-id="0ac22-103">Azaltma örnek azaltma denetimleri kullanımını gösterir.</span><span class="sxs-lookup"><span data-stu-id="0ac22-103">The Throttling sample demonstrates the use of throttling controls.</span></span> <span data-ttu-id="0ac22-104">Azaltma denetimleri sınırlarını eşzamanlı çağrıları, örnekleri veya oturumları kaynakların aşırı kullanımını önlemek için sayısına yerleştirin.</span><span class="sxs-lookup"><span data-stu-id="0ac22-104">Throttling controls place limits on the number of concurrent calls, instances, or sessions to prevent over-consumption of resources.</span></span> <span data-ttu-id="0ac22-105">Azaltma davranışı, hizmet yapılandırma dosyası ayarlarında belirtilir.</span><span class="sxs-lookup"><span data-stu-id="0ac22-105">Throttling behavior is specified in service configuration file settings.</span></span> <span data-ttu-id="0ac22-106">Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hesaplayıcı hizmet uygulayan.</span><span class="sxs-lookup"><span data-stu-id="0ac22-106">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) that implements a calculator service.</span></span>  
+# <a name="throttling"></a><span data-ttu-id="226d3-102">Sınırlama</span><span class="sxs-lookup"><span data-stu-id="226d3-102">Throttling</span></span>
+<span data-ttu-id="226d3-103">Azaltma örnek azaltma denetimleri kullanımını gösterir.</span><span class="sxs-lookup"><span data-stu-id="226d3-103">The Throttling sample demonstrates the use of throttling controls.</span></span> <span data-ttu-id="226d3-104">Azaltma denetimleri sınırlarını eşzamanlı çağrıları, örnekleri veya oturumları kaynakların aşırı kullanımını önlemek için sayısına yerleştirin.</span><span class="sxs-lookup"><span data-stu-id="226d3-104">Throttling controls place limits on the number of concurrent calls, instances, or sessions to prevent over-consumption of resources.</span></span> <span data-ttu-id="226d3-105">Azaltma davranışı, hizmet yapılandırma dosyası ayarlarında belirtilir.</span><span class="sxs-lookup"><span data-stu-id="226d3-105">Throttling behavior is specified in service configuration file settings.</span></span> <span data-ttu-id="226d3-106">Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hesaplayıcı hizmet uygulayan.</span><span class="sxs-lookup"><span data-stu-id="226d3-106">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) that implements a calculator service.</span></span>  
   
- <span data-ttu-id="0ac22-107">Bu örnekte, istemci bir konsol uygulaması (.exe) ve hizmet Internet Information Services (IIS) tarafından barındırılır.</span><span class="sxs-lookup"><span data-stu-id="0ac22-107">In this sample, the client is a console application (.exe) and the service is hosted by Internet Information Services (IIS).</span></span>  
+ <span data-ttu-id="226d3-107">Bu örnekte, istemci bir konsol uygulaması (.exe) ve hizmet Internet Information Services (IIS) tarafından barındırılır.</span><span class="sxs-lookup"><span data-stu-id="226d3-107">In this sample, the client is a console application (.exe) and the service is hosted by Internet Information Services (IIS).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="0ac22-108">Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.</span><span class="sxs-lookup"><span data-stu-id="0ac22-108">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+>  <span data-ttu-id="226d3-108">Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.</span><span class="sxs-lookup"><span data-stu-id="226d3-108">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- <span data-ttu-id="0ac22-109">Hizmet yapılandırma dosyasının azaltma denetimleri belirtir bir [ \<serviceThrottling >](../../../../docs/framework/configure-apps/file-schema/wcf/servicethrottling.md)aşağıdaki örnek yapılandırmada gösterildiği gibi.</span><span class="sxs-lookup"><span data-stu-id="0ac22-109">The service configuration file specifies throttling controls in a [\<serviceThrottling>](../../../../docs/framework/configure-apps/file-schema/wcf/servicethrottling.md), as shown in the following sample configuration.</span></span>  
+ <span data-ttu-id="226d3-109">Hizmet yapılandırma dosyasının azaltma denetimleri belirtir bir [ \<serviceThrottling >](../../../../docs/framework/configure-apps/file-schema/wcf/servicethrottling.md)aşağıdaki örnek yapılandırmada gösterildiği gibi.</span><span class="sxs-lookup"><span data-stu-id="226d3-109">The service configuration file specifies throttling controls in a [\<serviceThrottling>](../../../../docs/framework/configure-apps/file-schema/wcf/servicethrottling.md), as shown in the following sample configuration.</span></span>  
   
 ```xml  
 <behaviors>  
@@ -36,9 +36,9 @@ ms.locfileid: "43481598"
 </behaviors>  
 ```  
   
- <span data-ttu-id="0ac22-110">Yapılandırılmış gibi hizmet 2 ve en fazla 10 eş zamanlı örnekleri sayısı en fazla eşzamanlı çağrıların sınırlar.</span><span class="sxs-lookup"><span data-stu-id="0ac22-110">As configured, the service limits the maximum concurrent calls to 2, and the maximum number of concurrent instances to 10.</span></span>  
+ <span data-ttu-id="226d3-110">Yapılandırılmış gibi hizmet 2 ve en fazla 10 eş zamanlı örnekleri sayısı en fazla eşzamanlı çağrıların sınırlar.</span><span class="sxs-lookup"><span data-stu-id="226d3-110">As configured, the service limits the maximum concurrent calls to 2, and the maximum number of concurrent instances to 10.</span></span>  
   
- <span data-ttu-id="0ac22-111">Uyku zaman hizmet yöntemleri gibi tanımlarız azaltma göstermek için:</span><span class="sxs-lookup"><span data-stu-id="0ac22-111">In order to demonstrate throttling we define a sleep time on the service methods as follows:</span></span>  
+ <span data-ttu-id="226d3-111">Uyku zaman hizmet yöntemleri gibi tanımlarız azaltma göstermek için:</span><span class="sxs-lookup"><span data-stu-id="226d3-111">In order to demonstrate throttling we define a sleep time on the service methods as follows:</span></span>  
   
 ```  
 public double Add(double n1, double n2)  
@@ -48,7 +48,7 @@ public double Add(double n1, double n2)
 }  
 ```  
   
- <span data-ttu-id="0ac22-112">Örneği çalıştırdığınızda, işlem isteklerini ve yanıtlarını istemci konsol penceresinde görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="0ac22-112">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="0ac22-113">Ekleme ve çıkarma yöntemleri eşzamanlı olarak yürütülen ve aynı anda 2'den fazla yöntemleri aynı anda çalıştırılabilecek kanıtlama Multiply ve bölme yöntemleri yürütülen böylece azaltma gösterimi.</span><span class="sxs-lookup"><span data-stu-id="0ac22-113">The Add and Subtract methods are executed concurrently and the Multiply and Divide methods are executed concurrently proving that not more than 2 methods can be executed concurrently thus demonstrating throttling.</span></span>  
+ <span data-ttu-id="226d3-112">Örneği çalıştırdığınızda, işlem isteklerini ve yanıtlarını istemci konsol penceresinde görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="226d3-112">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="226d3-113">Ekleme ve çıkarma yöntemleri eşzamanlı olarak yürütülen ve aynı anda 2'den fazla yöntemleri aynı anda çalıştırılabilecek kanıtlama Multiply ve bölme yöntemleri yürütülen böylece azaltma gösterimi.</span><span class="sxs-lookup"><span data-stu-id="226d3-113">The Add and Subtract methods are executed concurrently and the Multiply and Divide methods are executed concurrently proving that not more than 2 methods can be executed concurrently thus demonstrating throttling.</span></span>  
   
 ```  
 Press <ENTER> to terminate client.  
@@ -65,21 +65,21 @@ Divide Result: 3.14285714285714
 Press any key to continue . . .  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="0ac22-114">Ayarlamak için derleme ve örneği çalıştırma</span><span class="sxs-lookup"><span data-stu-id="0ac22-114">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="226d3-114">Ayarlamak için derleme ve örneği çalıştırma</span><span class="sxs-lookup"><span data-stu-id="226d3-114">To set up, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="0ac22-115">Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="0ac22-115">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1.  <span data-ttu-id="226d3-115">Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="226d3-115">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  <span data-ttu-id="0ac22-116">Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="0ac22-116">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+2.  <span data-ttu-id="226d3-116">Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="226d3-116">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  <span data-ttu-id="0ac22-117">Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="0ac22-117">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+3.  <span data-ttu-id="226d3-117">Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="226d3-117">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="0ac22-118">Örnekler, makinenizde zaten yüklü.</span><span class="sxs-lookup"><span data-stu-id="0ac22-118">The samples may already be installed on your machine.</span></span> <span data-ttu-id="0ac22-119">Devam etmeden önce şu (varsayılan) dizin denetleyin.</span><span class="sxs-lookup"><span data-stu-id="0ac22-119">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="226d3-118">Örnekler, makinenizde zaten yüklü.</span><span class="sxs-lookup"><span data-stu-id="226d3-118">The samples may already be installed on your machine.</span></span> <span data-ttu-id="226d3-119">Devam etmeden önce şu (varsayılan) dizin denetleyin.</span><span class="sxs-lookup"><span data-stu-id="226d3-119">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="0ac22-120">Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri.</span><span class="sxs-lookup"><span data-stu-id="0ac22-120">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="0ac22-121">Bu örnek, şu dizinde bulunur.</span><span class="sxs-lookup"><span data-stu-id="0ac22-121">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="226d3-120">Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri.</span><span class="sxs-lookup"><span data-stu-id="226d3-120">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="226d3-121">Bu örnek, şu dizinde bulunur.</span><span class="sxs-lookup"><span data-stu-id="226d3-121">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Throttling`  
   
-## <a name="see-also"></a><span data-ttu-id="0ac22-122">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="0ac22-122">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="226d3-122">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="226d3-122">See Also</span></span>
