@@ -6,7 +6,7 @@ ms.author: wiwagn
 ms.date: 07/03/2018
 ms.openlocfilehash: dbb3fdb27175a86291d3a942ff168a5aae787c0c
 ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 09/01/2018
 ms.locfileid: "43453081"
@@ -580,4 +580,4 @@ Araştırma ve aşağıdaki bağlantıları açıklanan bir Ocelot API Gateway k
 
 
 >[!div class="step-by-step"]
-[Önceki] (arka plan-görevler-ile-ihostedservice.md) [İleri] (.. /microservice-ddd-cqrs-Patterns/index.MD)
+[Önceki](background-tasks-with-ihostedservice.md) [İleri] (../microservice-ddd-cqrs-patterns/index.md)

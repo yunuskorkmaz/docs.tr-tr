@@ -4,11 +4,11 @@ description: Türü örtük olarak belirlenmiş bir değişken bildirimi bir lam
 ms.date: 06/20/2016
 ms.assetid: a3851da9-e018-4389-9922-233db7d0f841
 ms.openlocfilehash: 0a6b52ba49ea39c0cb37e72b0ad40e18986c9be0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401506"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517673"
 ---
 # <a name="implicitly-typed-lambda-expressions"></a>Türü örtük olarak belirlenmiş lambda ifadeleri
 
