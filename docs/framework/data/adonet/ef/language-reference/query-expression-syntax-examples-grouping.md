@@ -1,39 +1,39 @@
 ---
-title: 'Sorgu ifade sözdizimi örnekleri: gruplandırma'
+title: 'Sorgu ifadesi söz dizimi örnekleri: gruplandırma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2d83d7c0-b3be-4c92-a630-25cd1285de31
-ms.openlocfilehash: a5222110bc5ac41ecaaa8e5003262360fd4d9ff5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 519f9073954e8f7710c9e73b61f40b4fcfefd25b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32763530"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560238"
 ---
-# <a name="query-expression-syntax-examples-grouping"></a>Sorgu ifade sözdizimi örnekleri: gruplandırma
-Bu konudaki örnekler nasıl kullanılacağını gösteren `GroupBy` sorgu yönteme [AdventureWorks satış modeli](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) sorgu ifade sözdizimi kullanarak. Bu örneklerde kullanılan AdventureWorks satış modeli AdventureWorks örnek veritabanını kişi, adres, ürün, SalesOrderHeader ve satış siparişi ayrıntısını tablolarda oluşturulur.  
+# <a name="query-expression-syntax-examples-grouping"></a>Sorgu ifadesi söz dizimi örnekleri: gruplandırma
+Bu konudaki örnekler nasıl kullanılacağını gösteren `GroupBy` sorgu yöntemine [AdventureWorks satışları modeli](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) sorgu ifadesi söz dizimini kullanarak. Bu örneklerde kullanılan AdventureWorks satışları modeli kişi, adres, ürün, SalesOrderHeader ve satış siparişi ayrıntısını tablolarda AdventureWorks örnek veritabanı oluşturulur.  
   
- Aşağıdaki örneklerde bu konudaki `using` / `Imports` deyimleri:  
+ Aşağıdaki örneklerde bu konudaki `using` / `Imports` ifadeleri:  
   
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek verir `Address` posta koduna göre gruplandırılan nesneleri. Sonuçları anonim bir tür öngörülen.  
+ Aşağıdaki örnek döndürür `Address` posta koduna göre gruplandırılan nesneleri. Anonim bir tür yansıtılan sonuçları.  
   
  [!code-csharp[DP L2E Examples#GroupBySimple3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#groupbysimple3)]
  [!code-vb[DP L2E Examples#GroupBySimple3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#groupbysimple3)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek verir `Contact` kişinin soyadını ilk harfe göre gruplandırılmış nesneleri. Sonuçlar Ayrıca son adının ilk harfi göre sıralanır ve anonim bir tür öngörülen.  
+ Aşağıdaki örnek döndürür `Contact` kişinin soyadı ilk harfe göre gruplanan nesneler. Sonuçları da son adının ilk harfi sıralanır ve anonim bir tür yansıtılır.  
   
  [!code-csharp[DP L2E Examples#GroupBySimple2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#groupbysimple2)]
  [!code-vb[DP L2E Examples#GroupBySimple2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#groupbysimple2)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek verir `SalesOrderHeader` müşteri kimliğine göre gruplandırılmış nesneleri Her müşteri için satış sayısını da döndürülür.  
+ Aşağıdaki örnek döndürür `SalesOrderHeader` müşteri kimliğine göre gruplandırılmış nesneleri Ayrıca, her müşteri için satış sayısı döndürülür.  
   
  [!code-csharp[DP L2E Examples#GroupByCount](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#groupbycount)]
  [!code-vb[DP L2E Examples#GroupByCount](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#groupbycount)]  

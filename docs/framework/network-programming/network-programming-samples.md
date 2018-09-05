@@ -5,55 +5,55 @@ ms.assetid: 8efacc29-7367-47c2-8638-a4f66385ad91
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 85c190756821ee14fffad600ce7b44029c314ec1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9a8230d382cfcf3709a2e4df42758470f3caea4e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397474"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43563904"
 ---
 # <a name="network-programming-samples"></a>Ağ programlama örnekleri
-Bu bölümde açıklamaları ve sınıfları kullanma örnekleri programlama indirilebilir ağ bağlantıları içeren <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.Security>, <xref:System.Net.Sockets> ve ilgili ad alanları. 
+Bu bölüm, açıklamaları ve bağlantıları sınıfları kullanan indirilebilir ağ programlama örnekleri içerir <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.Security>, <xref:System.Net.Sockets> ve ilgili ad alanları. 
   
 > [!NOTE]
-> Tüm örnekleri kullanılabilir [.NET Framework SDK sürüm 2.0 örnekleri indirin](https://www.microsoft.com/en-us/download/confirmation.aspx?id=22181), .NET Framework 2.0 için yayımlanmıştır ve tarihli olabilir.
+> Tüm örnekleri mevcuttur [.NET Framework SDK sürüm 2.0 örnekleri indirin](https://www.microsoft.com/en-us/download/confirmation.aspx?id=22181), .NET Framework 2.0 için yayımlanmıştır ve tarihli olabilir.
 
 ## <a name="in-this-section"></a>Bu Bölümde  
- [İlerleme göstergesi teknolojisi örnek indirme](https://msdn.microsoft.com/en-us/library/t8w6294a(v=vs.85).aspx)  
- Dosya indirme ilerlemesini görüntülemek nasıl gösterir.  
+ [İndirme İlerleme göstergesi teknolojisi örneği](https://msdn.microsoft.com/en-us/library/t8w6294a(v=vs.85).aspx)  
+ Dosya Yükleme ilerlemesini görüntülemek nasıl gösterir.  
   
- [FTP istemcisi teknolojisi örnek](https://msdn.microsoft.com/en-us/library/b7810t5c(v=vs.85).aspx)  
- Karşıya yükleme ve FTP sunucusuna gelen ve giden dosyaları indirme gösterilmektedir.  
+ [FTP istemcisi teknolojisi örneği](https://msdn.microsoft.com/en-us/library/b7810t5c(v=vs.85).aspx)  
+ Karşıya yükleme ve bir FTP sunucusuna gelen ve giden dosyaları indirme işlemi gösterilmektedir.  
   
- [HttpListener teknoloji örnek](https://msdn.microsoft.com/en-us/library/y7cbb2y2(v=vs.85).aspx)  
- Bir uygulamadaki gelen HTTP isteklerini işlemek gösterilmiştir.  
+ [HttpListener teknolojisi örneği](https://msdn.microsoft.com/en-us/library/y7cbb2y2(v=vs.85).aspx)  
+ Bir uygulama içinde gelen HTTP isteklerini işlemek nasıl gösterir.  
  
- [HttpListener ASPX konak uygulama örneği](https://docs.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2008/dd767375(v%3dvs.90))   
- Özelliklerini kullanmayı gösteren <xref:System.Net.HttpListener?displayProperty=nameWithType> çağrıları yönlendiren bir HTTP sunucusu oluşturmak için sınıf barındırılan bir ASP.NET uygulaması için.
+ [HttpListener ASPX konak uygulama örneği](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/dd767375(v%3dvs.90))   
+ Özelliklerini kullanmayı gösteren <xref:System.Net.HttpListener?displayProperty=nameWithType> çağrıları yönlendiren bir HTTP sunucusu oluşturmak için sınıf için barındırılan bir ASP.NET uygulaması.
   
- [Kullanılmasının teknolojisi örnek](https://msdn.microsoft.com/en-us/library/whw7xbk2(v=vs.85).aspx)  
+ [Bir posta göndericisi teknolojisi örneği](https://msdn.microsoft.com/en-us/library/whw7xbk2(v=vs.85).aspx)  
  Bir istemci uygulamasından e-posta iletileri göndermek nasıl gösterir.  
   
- [NetStat araç teknolojisi örneği](https://msdn.microsoft.com/en-us/library/ks32hs88(v=vs.85).aspx)  
- NCLNetStat ağ bilgileri aracı gösterir.  
+ [NetStat aracı teknolojisi örneği](https://msdn.microsoft.com/en-us/library/ks32hs88(v=vs.85).aspx)  
+ NCLNetStat ağ bilgi aracı gösterir.  
   
- [Ağ bilgi teknolojisi örnek](https://msdn.microsoft.com/en-us/library/2xatedhd(v=vs.85).aspx)  
- Ağ bilgilerini görüntülemek ve izlemek nasıl gösterir.  
+ [Ağ bilgi teknolojisi örneği](https://msdn.microsoft.com/en-us/library/2xatedhd(v=vs.85).aspx)  
+ İzleme ve ağ bilgilerini görüntüleme işlemini göstermektedir.  
   
- [Ping istemci teknolojisi örnek](https://msdn.microsoft.com/en-us/library/5253acs7(v=vs.85).aspx)  
- Bir uzak ana bilgisayara ping atabilir bir istemci uygulaması gösterir.  
+ [Ping istemci teknolojisi örneği](https://msdn.microsoft.com/en-us/library/5253acs7(v=vs.85).aspx)  
+ Uzak ana bilgisayara ping bir istemci uygulamasını gösterir.  
   
- [WebClient teknolojisi örnek](https://msdn.microsoft.com/en-us/library/fxk992zc(v=vs.85).aspx)  
- Karşıya yükleme veya dosya ya da veri yükleme gibi sık kullanılan işlemleri gerçekleştirmek gösterilmiştir.  
+ [WebClient teknolojisi örneği](https://msdn.microsoft.com/en-us/library/fxk992zc(v=vs.85).aspx)  
+ Karşıya yükleme veya indirme dosyaları veya verileri gibi yaygın işlemleri gerçekleştirmek nasıl gösterir.  
   
- [Güvenli akışları örnek](https://msdn.microsoft.com/en-us/library/ms180980(v=vs.85).aspx)  
+ [Güvenli bir akış örneği](https://msdn.microsoft.com/en-us/library/ms180980(v=vs.85).aspx)  
  Bir istemci ve sunucu arasında iletişim kurmak için güvenli bir akış kullanmayı gösterir.  
   
  [IPv6 yuva örnek](https://msdn.microsoft.com/en-us/library/ms180981(v=vs.85).aspx)  
- IPv6 etkinleştirildiğinde yuva kullanımı gösterilmiştir.  
+ IPv6 etkinleştirildiğinde yuva nasıl yapılacağı açıklanır.  
   
  [FTP Gezgini teknolojisi örneği](https://msdn.microsoft.com/en-us/library/ms233623(v=vs.85).aspx)  
- FTP sunucusu içeriğini listesinde gösterilmiştir.  
+ Bir FTP sunucusuna içeriğini listelemek nasıl gösterir.  
   
   
 ## <a name="reference"></a>Başvuru  

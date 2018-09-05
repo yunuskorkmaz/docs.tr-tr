@@ -1,13 +1,13 @@
 ---
 title: "F #'ı yükleme"
 description: 'F # ortamınıza bağlı olarak yüklemeyi öğrenin.'
-ms.date: 07/03/2018
-ms.openlocfilehash: 142265a95e1d3ee1603a89f650a24c6a45709181
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.date: 08/28/2018
+ms.openlocfilehash: 6c10b958e35bf7925965d076a48839b0ce19d2c0
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37878772"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515903"
 ---
 # <a name="install-f"></a>F #'ı yükleme #
 
@@ -29,34 +29,34 @@ Yükleme tamamlandıktan sonra "Visual Studio Başlat"'i seçin. Ayrıca bu Bulu
 
 ## <a name="install-f-with-visual-studio-code"></a>F # ile Visual Studio Code'u yükleyin
 
-Olması gerekir [yüklü git](https://git-scm.com/download) ve yapmak için PATH üzerindeki Ionide içinde proje şablonları kullanın. Doğru yazarak yüklendiğinden emin olun `git --version` bir komut istemi ve tuşlarına basarak **Enter**.
+Olması gerekir [yüklü git](https://git-scm.com/download) ve kullanılabilir hale getirmek için yol proje şablonlarını kullanın. Doğru yazarak yüklendiğinden emin olun `git --version` bir komut istemi ve tuşlarına basarak **Enter**.
 
 ### <a name="macostabmacos"></a>[macOS](#tab/macos)
 
-Ionide kullanan [Mono](http://www.mono-project.com). Homebrew Macos'ta Mono yükleme için en kolay yoludur. Yalnızca, terminale aşağıdaki komutu yazın:
+[Mono](http://www.mono-project.com) için kullanılan [F # Etkileşimli](../tutorials/fsharp-interactive/index.md) destekler. Homebrew Macos'ta Mono yükleme için en kolay yoludur. Yalnızca, terminale aşağıdaki komutu yazın:
 
 ```console
 brew install mono
 ```
 
-Ayrıca yüklemelisiniz [.NET Core SDK'sı](https://www.microsoft.com/net/download).
+Ayrıca yükleme [.NET Core SDK'sı](https://www.microsoft.com/net/download).
 
 ### <a name="linuxtablinux"></a>[Linux](#tab/linux)
 
-Linux üzerinde de Ionide kullanır [Mono](https://www.mono-project.com). Debian veya Ubuntu'da üzerinde kullanıyorsanız aşağıdakileri kullanabilirsiniz:
+[Mono](https://www.mono-project.com) için kullanılan [F # Etkileşimli](../tutorials/fsharp-interactive/index.md) destekler. Debian veya Ubuntu'da üzerinde kullanıyorsanız aşağıdakileri kullanabilirsiniz:
 
 ```console
 sudo apt-get update
 sudo apt-get install mono-complete fsharp
 ```
 
-Ayrıca yüklemelisiniz [.NET Core SDK'sı](https://www.microsoft.com/net/download).
+Ayrıca yükleme [.NET Core SDK'sı](https://www.microsoft.com/net/download).
 
 ### <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
-Windows üzerinde kullanıyorsanız yapmanız gerekenler [F # desteği ile Visual Studio yükleme](#install-f-with-visual-studio). Bu, yazma, derleme ve F # kodu yürütmek için gereken tüm bileşenleri yükler.
+Yükleme [F # desteği ile Visual Studio](#install-f-with-visual-studio). Bu, yazma, derleme ve F # kodu yürütmek için gereken tüm bileşenleri yükler.
 
-Ayrıca yüklemelisiniz [.NET Core SDK'sı](https://www.microsoft.com/net/download/).
+Ayrıca yükleme [.NET Core SDK'sı](https://www.microsoft.com/net/download/).
 
 ---
 

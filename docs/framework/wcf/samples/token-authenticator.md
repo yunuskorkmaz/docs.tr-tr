@@ -2,35 +2,35 @@
 title: Belirteç Kimlik Doğrulayıcı
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: 4681dea4fd39b039346d22c02c478323ff53e240
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 5c103f5a5a4f95761a5c19e6a8d6159a7439d05a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808340"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43523226"
 ---
 # <a name="token-authenticator"></a>Belirteç Kimlik Doğrulayıcı
-Bu örnek, özel bir belirteç kimlik doğrulayıcı uygulama gösterilmiştir. Belirteç kimlik doğrulayıcı Windows Communication Foundation (WCF) ileti ile kullanılan belirteci doğrulamak için kendi kendine tutarlı ve kimliğinin doğrulanması belirteçle ilişkili doğrulama kullanılır.  
+Bu örnek nasıl özel bir belirteç kimlik doğrulayıcısı uygulanacağını gösterir. Belirteç kimlik doğrulayıcısı Windows Communication Foundation (WCF) ileti ile kullanılan belirteci doğrulamak için tutarlı ve kimlik doğrulama belirteciyle ilişkili doğrulama kullanılır.  
   
- Özel belirteç kimlik doğrulayan gibi çeşitli durumlarda yararlı olur:  
+ Özel belirteç Doğrulayıcı gibi çeşitli durumlarda kullanışlıdır:  
   
--   Ne zaman bir belirteçle ilişkilendirilen varsayılan kimlik doğrulama mekanizması geçersiz kılmak istiyorsunuz.  
+-   Geçersiz bir belirteç ile ilişkili varsayılan kimlik doğrulama mekanizması istediğinizde.  
   
--   Ne zaman özel belirteç oluşturmakta olduğunuz.  
+-   Ne zaman özel bir simge oluşturuyorsunuz.  
   
- Bu örnek şunlar gösterilmektedir:  
+ Bu örnek aşağıdaki gösterir:  
   
--   Nasıl bir istemci bir kullanıcı adı/parola çifti kullanılarak doğrulanabilir.  
+-   Nasıl bir istemci bir kullanıcı adı/parola çifti kullanarak kimlik doğrulaması yapabilir.  
   
--   Sunucu özel belirteç kimlik doğrulayıcı kullanarak istemci kimlik bilgilerini nasıl doğrulayabilirsiniz.  
+-   Sunucu, özel bir belirteç kimlik doğrulayıcısı kullanarak istemci kimlik bilgileri nasıl doğrulayabilirsiniz.  
   
--   WCF Hizmeti kodunu nasıl oturum özel belirteç kimlik doğrulayıcı bağlar.  
+-   Nasıl özel bir belirteç kimlik doğrulayıcısı oturum WCF hizmet kodunun bağlar.  
   
 -   Sunucu, sunucunun X.509 sertifikası kullanılarak doğrulanabilir nasıl.  
   
- Bu örnek ayrıca nasıl çağıranının kimliğini özel belirteç kimlik doğrulama işleminden sonra WCF erişilebilir gösterilir.  
+ Ayrıca bu örnek nasıl çağıranının kimliğini özel belirteç kimlik doğrulama işleminden sonra WCF erişilebilir gösterir.  
   
- Hizmet App.config yapılandırma dosyası kullanılarak tanımlanmış hizmet ile iletişim için tek bir uç noktasını kullanıma sunar. Uç nokta bir adresi, bağlama ve bir sözleşme oluşur. Bağlama ile standart bir yapılandırılmış `wsHttpBinding`, güvenlik modu iletiye - varsayılan modu ayarlandığında `wsHttpBinding`. Bu örnek standart ayarlar `wsHttpBinding` istemci kullanıcı adı kimlik doğrulaması kullanmak için. Hizmetini kullanarak sertifika hizmetini de yapılandırır `serviceCredentials` davranışı. `securityCredentials` Davranış bir hizmet sertifikası belirtmenize olanak sağlar. Bir hizmet sertifikası, hizmetin kimliğini doğrulamak ve ileti koruma sağlamak için bir istemci tarafından kullanılır. Aşağıdaki yapılandırma aşağıdaki Kurulum yönergelerde açıklandığı gibi örnek Kurulum sırasında yüklenen localhost sertifika başvurur.  
+ Hizmet, App.config yapılandırma dosyası kullanılarak tanımlanmış hizmet ile iletişim kurmak için tek bir uç noktayı kullanıma sunar. Uç nokta, adres, bağlama ve bir sözleşme oluşur. Bir standart yapılandırılmış bağlama `wsHttpBinding`, güvenlik modu iletiye - varsayılan modu ayarlandığında `wsHttpBinding`. Bu örnek, standart ayarlar `wsHttpBinding` istemci kullanıcı adı kimlik doğrulaması kullanmak için. Hizmet Ayrıca hizmet kullanarak sertifikayı yapılandırır `serviceCredentials` davranışı. `securityCredentials` Davranışı, bir hizmet sertifikası belirtmenize olanak sağlar. Bir hizmet sertifikası, hizmet kimlik doğrulaması ve ileti koruma sağlamak için bir istemci tarafından kullanılır. Aşağıdaki yapılandırmayı aşağıdaki Kurulum yönergelerinde açıklandığı gibi örnek Kurulum sırasında yüklenen localhost sertifikasına başvuruda bulunuyor.  
   
 ```xml  
 <system.serviceModel>  
@@ -81,7 +81,7 @@ Bu örnek, özel bir belirteç kimlik doğrulayıcı uygulama gösterilmiştir. 
   </system.serviceModel>  
 ```  
   
- Yapılandırma adı, hizmet uç noktası, bağlama ve sözleşme için mutlak bir adres, istemci uç nokta yapılandırması oluşur. Bağlama istemci uygun ile yapılandırılmış `Mode` ve `clientCredentialType`.  
+ İstemci uç nokta yapılandırması mutlak bir adres için hizmet uç noktası, bağlama ve sözleşmenin bir yapılandırma adı oluşur. Bağlama istemcinin uygun olarak yapılandırıldığı `Mode` ve `clientCredentialType`.  
   
 ```xml  
 <system.serviceModel>  
@@ -106,7 +106,7 @@ Bu örnek, özel bir belirteç kimlik doğrulayıcı uygulama gösterilmiştir. 
   </system.serviceModel>  
 ```  
   
- İstemci uygulama kullanıcı adı ve parola ayarlar.  
+ İstemci uygulaması, kullanıcı adını ve parolayı ayarlar.  
   
 ```  
 static void Main()  
@@ -118,12 +118,12 @@ static void Main()
 }  
 ```  
   
-## <a name="custom-token-authenticator"></a>Özel belirteç kimlik doğrulayıcı  
+## <a name="custom-token-authenticator"></a>Özel belirteç kimlik doğrulayıcısı  
  Özel bir belirteç kimlik doğrulayıcısı oluşturmak için aşağıdaki adımları kullanın:  
   
-1.  Özel belirteç kimlik doğrulayıcı yazma.  
+1.  Özel bir belirteç kimlik doğrulayıcısı yazın.  
   
-     Örnek kullanıcı adı geçerli bir e-posta biçiminde olduğunu doğrulayan bir özel belirteç kimlik doğrulayıcı uygular. Bunu türetilen <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator>. Bu sınıftaki en önemli bir yöntemdir <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator.ValidateUserNamePasswordCore%28System.String%2CSystem.String%29>. Bu yöntemde, Doğrulayıcı biçimini doğrular. kullanıcı adı ve bu da ana bilgisayar adı yanlış etki alanına ait değil. Her iki koşullar sonra salt okunur koleksiyonunu döndürür <xref:System.IdentityModel.Policy.IAuthorizationPolicy> sonra kullanıcı adı belirteci içine depolanan bilgileri temsil eden talepler sağlamak için kullanılan örnekleri.  
+     Örnek, kullanıcı adı geçerli bir e-posta biçiminde olduğunu doğrulama özel bir belirteç Doğrulayıcı uygular. Bunu türetilen <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator>. Bu sınıftaki en önemli yöntemdir <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator.ValidateUserNamePasswordCore%28System.String%2CSystem.String%29>. Bu yöntemde, Doğrulayıcı biçimini doğrular. kullanıcı adı ve bu da konak adı bir dolandırıcı etki alanına ait değil. Her iki koşullar sonra salt okunur bir koleksiyonunu döndürür <xref:System.IdentityModel.Policy.IAuthorizationPolicy> örnekleriyle sonra kullanıcı adı belirteci içinde depolanan bilgileri temsil eden talep sağlamak için kullanılır.  
   
     ```  
     protected override ReadOnlyCollection<IAuthorizationPolicy> ValidateUserNamePasswordCore(string userName, string password)  
@@ -140,9 +140,9 @@ static void Main()
     }  
     ```  
   
-2.  Özel belirteç kimlik doğrulayıcı tarafından döndürülen bir yetkilendirme ilkesi sağlar.  
+2.  Özel belirteç kimlik doğrulayıcısı tarafından döndürülen bir yetkilendirme ilkesi belirtin.  
   
-     Bu örnek, kendi uygulamasını sağlar <xref:System.IdentityModel.Policy.IAuthorizationPolicy> adlı `UnconditionalPolicy` talepler ve kendisine kurucusunda geçirilmiş kimlikleri kümesini döndürür.  
+     Bu örnek, kendi uygulamasını sağlar <xref:System.IdentityModel.Policy.IAuthorizationPolicy> adlı `UnconditionalPolicy` talepler ve oluşturucusunda kendisine iletilmiş kimlikleri kümesi döndürür.  
   
     ```  
     class UnconditionalPolicy : IAuthorizationPolicy  
@@ -210,9 +210,9 @@ static void Main()
     }  
     ```  
   
-3.  Özel bir güvenlik belirteci yöneticisi yazma.  
+3.  Bir özel güvenlik belirteci Yöneticisi'ni yazın.  
   
-     <xref:System.IdentityModel.Selectors.SecurityTokenManager> Oluşturmak için kullanılan bir <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> belirli <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> kendisine geçirilen nesneleri `CreateSecurityTokenAuthenticator` yöntemi. Güvenlik belirteci yöneticisi belirteci sağlayıcıları ve belirteç serileştiricileri oluşturmak için de kullanılır, ancak bunlar Bu örnek tarafından ele alınmamaktadır. Bu örnekte, özel güvenlik belirteci yöneticisi devraldığı <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> sınıfı ve geçersiz kılmalar `CreateSecurityTokenAuthenticator` geçirilen belirteç gereksinimlerini bu kullanıcı adı kimlik doğrulayıcı belirttiğinizde özel kullanıcıadı belirteç kimlik doğrulayıcı döndürülecek yöntemi istendi.  
+     <xref:System.IdentityModel.Selectors.SecurityTokenManager> Oluşturmak için kullanılan bir <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> belirli <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> kendisine geçirilen nesneleri `CreateSecurityTokenAuthenticator` yöntemi. Güvenlik belirteci Yöneticisi ayrıca belirteci sağlayıcıları ve belirteci seri hale getiricileri genişletme oluşturmak için kullanılır, ancak bunlar Bu örnek tarafından kapsanmaz. Bu örnekte, özel güvenlik belirteci yöneticisi devraldığı <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> sınıf ve geçersiz kılmaları `CreateSecurityTokenAuthenticator` geçirilen belirteci gereksinimleri, kullanıcı adı kimlik doğrulayıcı belirttiğinizde, özel kullanıcı adı belirteci kimlik doğrulayıcı döndürülecek yöntemi istendi.  
   
     ```  
     public class MySecurityTokenManager : ServiceCredentialsSecurityTokenManager  
@@ -242,7 +242,7 @@ static void Main()
   
 4.  Bir özel hizmet kimlik bilgilerini yazın.  
   
-     Hizmet kimlik bilgilerini sınıfı hizmet için yapılandırılan kimlik bilgileri temsil etmek için kullanılır ve bir güvenlik belirteci Doğrulayıcı, belirteci sağlayıcıları ve belirteç serileştiricileri elde etmek için kullanılan belirteci yöneticisi oluşturur.  
+     Hizmet kimlik bilgilerini sınıfı, hizmet için yapılandırılmış kimlik bilgilerini temsil etmek için kullanılır ve bir güvenlik belirteci kimlik doğrulayıcılar, belirteç sağlayıcıları ve belirteci seri hale getiricileri genişletme elde etmek için kullanılan belirteci yöneticisi oluşturur.  
   
     ```  
     public class MyUserNameCredential : ServiceCredentials  
@@ -266,9 +266,9 @@ static void Main()
     }  
     ```  
   
-5.  Hizmetini özel hizmet kimlik bilgilerini kullanacak biçimde yapılandırın.  
+5.  Hizmetini özel hizmet kimlik bilgilerini kullanacak şekilde yapılandırın.  
   
-     Özel hizmet kimlik bilgilerini kullanmak hizmet için sırasıyla biz varsayılan hizmet kimlik bilgisi sınıfını zaten varsayılan hizmet kimlik bilgisi önceden yapılandırılmış hizmet sertifikası yakalama sonra silin ve yeni hizmet kimlik bilgilerini yapılandırın önceden yapılandırılmış hizmet sertifikalarını kullanın ve bu yeni hizmet kimlik bilgisi örneği hizmet davranışları eklemek için örneği.  
+     Özel hizmet kimlik bilgisi kullanmak için hizmet için sırasıyla biz varsayılan hizmet kimlik bilgisi sınıfı zaten varsayılan hizmet kimlik bilgisi önceden yapılandırılmış olan hizmet sertifikası yakaladıktan sonra silin ve yeni hizmet kimlik bilgilerini yapılandırma önceden yapılandırılmış hizmet sertifikalarını kullanın ve bu yeni hizmet kimlik bilgisi örneği için hizmet davranışları eklemek için örneği.  
   
     ```  
     ServiceCredentials sc = serviceHost.Credentials;  
@@ -279,7 +279,7 @@ static void Main()
     serviceHost.Description.Behaviors.Add(serviceCredential);  
     ```  
   
- Arayanın bilgileri görüntülemek için kullanabileceğiniz <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> aşağıdaki kodda gösterildiği gibi. <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> Talep geçerli çağıran hakkında bilgi içerir.  
+ Arayanın bilgileri görüntülemek için kullanabileceğiniz <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> aşağıdaki kodda gösterildiği gibi. <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> Talep geçerli arayanı hakkında bilgi içerir.  
   
 ```  
 static void DisplayIdentityInformation()  
@@ -290,16 +290,16 @@ static void DisplayIdentityInformation()
 }  
 ```  
   
- Örneği çalıştırdığınızda, işlem isteklerini ve yanıtlarını istemci konsol penceresinde görüntülenir. İstemcisi penceresinde istemciyi aşağı kapatmak için ENTER tuşuna basın.  
+ Örneği çalıştırdığınızda, işlem isteklerini ve yanıtlarını istemci konsol penceresinde görüntülenir. İstemci bilgisayarı için istemci penceresinde ENTER tuşuna basın.  
   
-## <a name="setup-batch-file"></a>Toplu iş dosyası Kurulumu  
- Bu örnekle dahil Setup.bat toplu iş dosyası ile ilgili sertifika sunucusu gerektirir kendini barındıran bir uygulamayı çalıştırmak için sunucuyu yapılandırmak için sertifika tabanlı güvenlik sağlar. Bu toplu iş dosyası bilgisayarlar arasında iş ya da barındırılan olmayan bir durumda çalışması için değiştirilmesi gerekir.  
+## <a name="setup-batch-file"></a>Kurulum toplu iş dosyası  
+ Bu örnekle dahil Setup.bat toplu iş dosyası, sunucunun server gerektiren şirket içinde barındırılan bir uygulamayı çalıştırmak için ilgili sertifikalarla yapılandırmak için sertifika tabanlı güvenlik sağlar. Bu toplu iş dosyası bilgisayarlarda çalışmaya veya barındırılan olmayan bir durumda çalışması için değiştirilmesi gerekir.  
   
- Aşağıdakiler, böylece uygun yapılandırmada çalışacak biçimde değiştirilebilir toplu iş dosyaları farklı bölümlerini kısa bir genel bakış sağlar.  
+ Aşağıda, böylece uygun yapılandırmasında çalıştırılacak değiştirilebilir toplu iş dosyaları farklı bölümlerini kısa bir genel bakış sağlar.  
   
 -   Sunucu sertifikası oluşturuluyor.  
   
-     Aşağıdaki satırları Setup.bat toplu iş dosyasından kullanılacak sunucu sertifikası oluşturun. `%SERVER_NAME%` Değişkeni, sunucu adını belirtir. Kendi sunucu adını belirtmek için bu değişkeni değiştirin. Bu toplu iş dosyasındaki localhost varsayılandır.  
+     Setup.bat toplu iş dosyasından aşağıdaki satırları kullanılacak sunucu sertifikası oluşturun. `%SERVER_NAME%` Değişkeni, sunucu adını belirtir. Kendi sunucu adını belirtmek için bu değişkeni değiştirin. Bu toplu iş dosyasında localhost varsayılandır.  
   
     ```  
     echo ************  
@@ -311,60 +311,60 @@ static void DisplayIdentityInformation()
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
     ```  
   
--   Sunucu sertifikası istemcinin güvenilen sertifika deposuna yükleme.  
+-   Sunucu sertifikasını istemcinin güvenilen sertifika depolama alanına yükleniyor.  
   
-     İstemci güvenilir kişiler içine Setup.bat toplu dosya kopyalama sunucu sertifikasının aşağıdaki satırları depolar. MakeCert.exe tarafından oluşturulan sertifikaları örtük olarak istemci sistemi tarafından güvenilir değil çünkü bu adım gereklidir. Bir istemci güvenilen kök sertifikasını kökü belirtilmiş bir sertifikanız zaten varsa — örneğin, bir Microsoft verilen sertifika — sunucu sertifikasına sahip istemci sertifika deposunun doldurulması, bu adım gerekli değildir.  
+     İstemci güvenilir kişiler uygulamasına Setup.bat toplu dosya kopyalama sunucu sertifikasının aşağıdaki satırları depolayın. MakeCert.exe tarafından oluşturulan sertifikaları örtük olarak istemci sistemi tarafından güvenilir değildir çünkü bu adım gereklidir. Bir istemci güvenilen kök sertifikayı kök erişim izni verilmiş bir sertifika zaten varsa — örneğin, Microsoft tarafından verilen sertifika — sunucu sertifikasında istemci sertifika deposunun doldurulması, bu adım gerekli değildir.  
   
     ```  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  
   
     > [!NOTE]
-    >  Kurulum toplu iş dosyası, Windows SDK komut isteminden çalıştırılması için tasarlanmıştır. MSSDK ortam değişkeni SDK yüklendiği dizinine işaret gerektiriyor. Bu ortam değişkeni, Windows SDK komut istemi içinde otomatik olarak ayarlanır.  
+    >  Kurulum toplu iş dosyası, bir Windows SDK Komut İstemi'nden çalıştırılmak üzere tasarlanmıştır. MSSDK ortam değişkeni'nın SDK'ın yüklendiği dizini gösterecek gerektiriyor. Bu ortam değişkeni, bir Windows SDK komut istemi içinde otomatik olarak ayarlanır.  
   
-#### <a name="to-set-up-and-build-the-sample"></a>Ayarlamak ve örneği oluşturmak için  
+#### <a name="to-set-up-and-build-the-sample"></a>Ayarlama ve örneği oluşturmak için  
   
-1.  Gerçekleştirmiş emin olun [kerelik Kurulum prosedürü Windows Communication Foundation örnekleri için](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Çözümü derlemek için'ndaki yönergeleri izleyin [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Çözümü derlemek için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-#### <a name="to-run-the-sample-on-the-same-computer"></a>Aynı bilgisayara örneği çalıştırmak için  
+#### <a name="to-run-the-sample-on-the-same-computer"></a>Örneği aynı bilgisayarda çalıştırmak için  
   
-1.  Örnek yükleme klasöründen içinde Setup.bat çalıştırmak bir [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] komut istemini yönetici ayrıcalıklarıyla açılır. Bu örneği çalıştırmak için gerekli tüm sertifikalar yükler.  
+1.  Setup.bat içinde örnek yükleme klasöründen çalıştırın bir [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] komut istemini yönetici ayrıcalıklarıyla açılmış. Bu örneği çalıştırmak için gerekli olan tüm sertifikaları yükler.  
   
     > [!NOTE]
-    >  Setup.bat toplu iş dosyası çalıştırılmak üzere tasarlanmış bir [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] komut istemi. İçinde PATH ortam değişkeni ayarlamak [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] komut istemi Setup.bat komut dosyası için gereken yürütülebilir dosyalar içeren dizine işaret eder.  
+    >  Setup.bat toplu iş dosyası çalıştırılmak üzere tasarlanmış bir [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] komut istemi. İçinde PATH ortam değişkenini ayarlamak [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] komut istemi Setup.bat betiği tarafından gereken yürütülebilir dosyaları içeren dizine işaret eder.  
   
-2.  Service\bin gelen Service.exe başlatın.  
+2.  Service.exe service\bin'nden başlatın.  
   
-3.  \Client\bin gelen Client.exe başlatın. İstemci etkinliği istemci konsol uygulaması görüntülenir.  
+3.  Client.exe \client\bin'nden başlatın. İstemci etkinliği istemci konsol uygulamasında görüntülenir.  
   
-4.  İstemci ve hizmet iletişim kurabildiğinden değilseniz bkz [sorun giderme ipuçları](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  İstemci ve hizmet iletişim kurabildiğini bilmiyorsanız bkz [sorun giderme ipuçları](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-run-the-sample-across-computers"></a>Bilgisayarlar arasında örneği çalıştırmak için  
   
-1.  Hizmet ikili dosyaları hizmet bilgisayarda bir dizin oluşturun.  
+1.  Hizmet ikili dosyaları için hizmet bilgisayarda bir dizin oluşturun.  
   
-2.  Hizmet program dosyalarını hizmeti bilgisayarında hizmet dizinine kopyalayın. Ayrıca Setup.bat ve Cleanup.bat dosyalarını hizmet bilgisayara kopyalayın.  
+2.  Hizmet program dosyaları hizmeti bilgisayarında hizmet dizinine kopyalayın. Ayrıca Setup.bat ve Cleanup.bat dosyaları hizmet bilgisayara kopyalayın.  
   
-3.  Bilgisayarın tam etki alanı adını içeren konu adına sahip bir sunucu sertifikası olmalıdır. Hizmet App.config dosyası bu yeni sertifika adını yansıtacak şekilde güncelleştirmeniz gerekir. Ayarlarsanız Setup.bat kullanarak bir tane oluşturabilirsiniz `%SERVER_NAME%` hizmetin çalışacağı bilgisayarın tam ana bilgisayar adı için değişken. Setup.bat dosyasını yönetici ayrıcalıklarıyla açılmış Visual Studio komut isteminden çalıştırmanız gerektiğini unutmayın.  
+3.  Bilgisayarın tam etki alanı adını içeren konu adına sahip bir sunucu sertifikası olmalıdır. Hizmet App.config dosyası, bu yeni sertifika adı yansıtacak şekilde güncelleştirilmesi gerekir. Ayarlarsanız Setup.bat kullanarak bir tane oluşturabilirsiniz `%SERVER_NAME%` hizmet çalışacağı bilgisayarda tam ana bilgisayar adı için değişken. Setup.bat dosyasının yönetici ayrıcalıklarıyla açılan bir Visual Studio komut isteminden çalıştırmanız gerektiğini unutmayın.  
   
-4.  Sunucu sertifikası istemci Currentuser'a TrustedPeople depolama alanına kopyalayın. Sunucu sertifikası zaman istemcisi güvenilir veren tarafından verilen dışında bunu gerekmez.  
+4.  Sunucu sertifikasını istemcinin CurrentUser TrustedPeople depoya kopyalayın. Sunucu sertifikası olduğunda istemci güvenilen veren tarafından verilen dışında bunu gerekmez.  
   
-5.  Hizmeti bilgisayarında App.config dosyasında localhost yerine bir tam bilgisayar adını belirtmek için taban adresi değerini değiştirin.  
+5.  Hizmet bilgisayarı App.config dosyasında localhost yerine tam bilgisayar adını belirtmek için temel adresini değiştirin.  
   
 6.  Hizmet bilgisayarda service.exe bir komut isteminden çalıştırın.  
   
-7.  İstemci program dosyaları \client\bin\ klasöründen dile özgü klasörü altında istemci bilgisayara kopyalayın.  
+7.  İstemci program dosyaları \client\bin\ klasöründen dile özgü klasörünün altındaki istemci bilgisayara kopyalayın.  
   
-8.  İstemci bilgisayardaki Client.exe.config dosyasında yeni adresi hizmetinizin eşleştirmek için uç nokta adresi değerini değiştirin.  
+8.  İstemci bilgisayarda Client.exe.config dosyasında hizmetinizin yeni adresiyle eşleşecek şekilde uç nokta adresi değiştirin.  
   
-9. İstemci bilgisayarda bir komut isteminden Client.exe başlatın.  
+9. İstemci bilgisayarda bir komut istemi'nden Client.exe başlatın.  
   
-10. İstemci ve hizmet iletişim kurabildiğinden değilseniz bkz [sorun giderme ipuçları](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+10. İstemci ve hizmet iletişim kurabildiğini bilmiyorsanız bkz [sorun giderme ipuçları](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
-#### <a name="to-clean-up-after-the-sample"></a>Örnek sonra temizlemek için  
+#### <a name="to-clean-up-after-the-sample"></a>Sonra örnek temizlemek için  
   
-1.  Örnek çalıştıran tamamladıktan sonra Cleanup.bat samples klasöründen çalıştırın.  
+1.  Bu örneği çalıştırmadan tamamladıktan sonra Cleanup.bat samples klasöründe çalıştırın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.

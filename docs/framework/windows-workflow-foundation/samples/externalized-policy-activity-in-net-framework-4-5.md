@@ -2,16 +2,16 @@
 title: .NET Framework 4.5 te dış ilke etkinliği
 ms.date: 03/30/2017
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
-ms.openlocfilehash: a98dedace72ef9d43d9b65335b462f6ad4f649b0
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 4d107188bbcb46006ba6a6eab491ccb97aa4a83d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43254413"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43503413"
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>.NET Framework 4.5 te dış ilke etkinliği
 
-Bu örnek, varolan yürütme ExternalizedPolicy4 etkinlik nasıl imkan gösterir [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Windows Workflow Foundation (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> nesneler [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Windows Workflow kurallar altyapısı kullanarak doğrudan Foundation (WF 4.5) WF 3. 5 ', birlikte gönderilir. Bu etkinlik kullanarak açın ve tüm mevcut WF 3.5 yürütme <xref:System.Workflow.Activities.Rules.RuleSet>. WF 3.5 kural Windows Workflow Foundation bir parçası olarak dahil edilen altyapısı hakkında daha fazla bilgi için lütfen okuyun [Windows Workflow Foundation kurallar altyapısı giriş](http://go.microsoft.com/fwlink/?LinkId=166079). Geçiş hakkında daha fazla bilgi için kurallar [!INCLUDE[wf1](../../../../includes/wf1-md.md)] içinde [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)], adresindeki geçiş rehberini okuyun [geçiş kılavuzuna](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md).
+Bu örnek, varolan yürütme ExternalizedPolicy4 etkinlik nasıl imkan gösterir [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Windows Workflow Foundation (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> nesneler [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Windows Workflow kurallar altyapısı kullanarak doğrudan Foundation (WF 4.5) WF 3. 5 ', birlikte gönderilir. Bu etkinlik kullanarak açın ve tüm mevcut WF 3.5 yürütme <xref:System.Workflow.Activities.Rules.RuleSet>. WF 3.5 kural Windows Workflow Foundation bir parçası olarak dahil edilen altyapısı hakkında daha fazla bilgi için lütfen okuyun [Windows Workflow Foundation kurallar altyapısı giriş](https://go.microsoft.com/fwlink/?LinkId=166079). Geçiş hakkında daha fazla bilgi için kurallar [!INCLUDE[wf1](../../../../includes/wf1-md.md)] içinde [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)], adresindeki geçiş rehberini okuyun [geçiş kılavuzuna](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md).
 
 ## <a name="projects-in-this-sample"></a>Bu örnekte projeleri
 
@@ -87,7 +87,7 @@ Bu örnek iki istemci uygulamalarını içerir: ImperativeCodeClientSample ve De
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri.
+> Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri.
 >
 > Bu örnek, şu dizinde bulunur:
 >

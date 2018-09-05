@@ -2,23 +2,23 @@
 title: 'Nasıl yapılır: komut satırını (C#) kullanarak derlemeler oluşturma ve kullanma'
 ms.date: 07/20/2015
 ms.assetid: 408ddce3-89e3-4e12-8353-34a49beeb72b
-ms.openlocfilehash: ef872992f17eaaeacf451fa10ef792c47445df80
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0cb964991cdbcdb3fa528ac96a0e883a37439099
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319650"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514561"
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-c"></a>Nasıl yapılır: komut satırını (C#) kullanarak derlemeler oluşturma ve kullanma
-Bir derlemeyi ya da dinamik bağlantı kitaplığı (DLL) programınıza çalışma zamanında bağlanır. Derleme ve DLL kullanarak göstermek için aşağıdaki senaryoyu göz önünde bulundurun:  
+Bir derleme veya dinamik bağlantı kitaplığı (DLL), programınız için çalışma zamanında bağlıdır. Oluşturma ve bir DLL kullanarak göstermek için aşağıdaki senaryoyu göz önünde bulundurun:  
   
--   `MathLibrary.DLL`: Çalışma zamanında çağrılacak yöntem içerir kitaplık dosyası. Bu örnekte, iki yöntem DLL içeren `Add` ve `Multiply`.  
+-   `MathLibrary.DLL`: Çalışma zamanında çağrılacak yöntem içerir kitaplık dosyası. Bu örnekte, iki yöntem, DLL içeren `Add` ve `Multiply`.  
   
--   `Add`: Yöntem içerir kaynak dosya `Add`. Bunu parametrelerinin toplamını döndürür. Sınıf `AddClass` yöntemi içeren `Add` ad üyesi `UtilityMethods`.  
+-   `Add`: Yöntem içerir kaynak dosyası `Add`. Parametrelerini toplamını döndürür. Sınıf `AddClass` yöntemi içeren `Add` ad alanının bir üyesidir `UtilityMethods`.  
   
--   `Mult`: Yöntem içerir kaynak kodu `Multiply`. Bunu parametrelerinin çarpımını döndürür. Sınıf `MultiplyClass` yöntemi içeren `Multiply` de ad alanının bir üyesidir `UtilityMethods`.  
+-   `Mult`: Yöntem içerir kaynak kodu `Multiply`. Parametrelerini çarpımını döndürür. Sınıf `MultiplyClass` yöntemi içeren `Multiply` ayrıca ad alanının bir üyesidir `UtilityMethods`.  
   
--   `TestCode`: İçerir dosya `Main` yöntemi. Yöntemleri, toplam ve çalışma zamanı değişkenleri Ürün hesaplamak için DLL dosyasını kullanır.  
+-   `TestCode`: Dosyayı içeren `Main` yöntemi. Yöntemleri, toplam ve çalışma zamanı bağımsız değişken ürününü hesaplar için DLL dosyası içinde kullanır.  
   
 ## <a name="example"></a>Örnek  
   
@@ -84,45 +84,46 @@ class TestCode
 */  
 ```  
   
- Bu dosya DLL yöntemleri tarafından kullanılan algoritmasını içerir `Add` ve `Multiply`. Komut satırından girilen bağımsız değişkenlerini ayrıştırma ile başlayan `num1` ve `num2`. Kullanarak toplamı hesaplar sonra `Add` yöntemi `AddClass` sınıfını ve ürünü kullanarak `Multiply` yöntemi `MultiplyClass` sınıfı.  
+ Bu dosyayı içeren DLL yöntemleri kullanan algoritma `Add` ve `Multiply`. Girilen komut satırından bağımsız değişkenlerini ayrıştırma ile başlayan `num1` ve `num2`. Kullanarak toplamı hesaplar `Add` metodunda `AddClass` sınıfını ve ürünü kullanarak `Multiply` metodunda `MultiplyClass` sınıfı.  
   
- Dikkat `using` yönergesi dosyasının başında DLL yöntemleri derleme zamanında şu şekilde başvurmak için nitelenmemiş sınıf adları kullanabilmenizi sağlar:  
+ Dikkat `using` dosyasının başında yönergesi DLL yöntemleri gibi derleme zamanında başvurmak için nitelenmemiş sınıf adları kullanmanıza olanak sağlar:  
   
 ```csharp  
 MultiplyClass.Multiply(num1, num2);  
 ```  
   
- Aksi halde, tam olarak nitelenmiş adlar aşağıdaki gibi kullanmak zorunda:  
+ Aksi takdirde, tam olarak nitelenmiş adlar kullanacak şekilde gerekir:  
   
 ```csharp  
 UtilityMethods.MultiplyClass.Multiply(num1, num2);  
 ```  
   
 ## <a name="execution"></a>Yürütme  
- Programı çalıştırmak için iki numaralarına göre aşağıdaki gibi ardından EXE dosyasının adını girin:  
+ Programı çalıştırmak için iki sayı, aşağıdaki gibi yazın, bir EXE dosyasının adını girin:  
   
  `TestCode 1234 5678`  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Dosyasını oluşturmak için `MathLibrary.DLL`, iki dosyalarını derlemek `Add` ve `Mult` aşağıdaki komut satırını kullanarak.  
+ Dosyayı oluşturmak için `MathLibrary.DLL`, iki dosya derleme `Add` ve `Mult` şu komut satırını kullanarak.  
   
 ```csharp  
 csc /target:library /out:MathLibrary.DLL Add.cs Mult.cs  
 ```  
   
- [/Target: library](../../../../csharp/language-reference/compiler-options/target-library-compiler-option.md) derleyici seçeneği bir EXE dosyası yerine bir DLL çıktısını almak için derleyici söyler. [/Out](../../../../csharp/language-reference/compiler-options/out-compiler-option.md) dosya adından derleyici seçeneği DLL dosya adı belirtmek için kullanılır. Aksi durumda, ilk dosya derleyici kullanır (`Add.cs`) DLL adından farklı.  
+ [/Target: library](../../../../csharp/language-reference/compiler-options/target-library-compiler-option.md) derleyici seçeneği, derleyicinin çıktısını bir EXE dosyası yerine bir DLL söyler. [/Out](../../../../csharp/language-reference/compiler-options/out-compiler-option.md) dosya adından önce gelen derleyici seçeneği, DLL dosya adı belirtmek için kullanılır. Aksi halde, derleyici ilk dosyayı kullanır (`Add.cs`) olarak DLL'in adı.  
   
- Yürütülebilir dosyasını oluşturmak için `TestCode.exe`, aşağıdaki komut satırını kullanın:  
+ Yürütülebilir dosyayı oluşturmak için `TestCode.exe`, şu komut satırını kullanın:  
   
 ```csharp  
 csc /out:TestCode.exe /reference:MathLibrary.DLL TestCode.cs  
 ```  
   
- **/Out** derleyici seçeneği çıkış bir EXE dosyası bildirir ve çıktı dosyası adını belirtir (`TestCode.exe`). Bu derleyici seçeneği isteğe bağlıdır. [/Reference](../../../../csharp/language-reference/compiler-options/reference-compiler-option.md) derleyici seçeneği DLL dosyası ya da, bu programın kullandığı dosyalarını belirtir. Daha fazla bilgi için bkz: [/reference](../../../../csharp/language-reference/compiler-options/reference-compiler-option.md).  
+ **/Out** derleyici seçeneği, derleyiciye bir EXE dosyası çıkış ve çıktı dosyası adını belirtir (`TestCode.exe`). Bu derleyici seçeneğini isteğe bağlıdır. [/Reference](../../../../csharp/language-reference/compiler-options/reference-compiler-option.md) derleyici seçeneği, DLL dosyasının veya bu programın kullandığı dosyaları belirtir. Daha fazla bilgi için [/reference](../../../../csharp/language-reference/compiler-options/reference-compiler-option.md).  
   
- Komut satırından oluşturma hakkında daha fazla bilgi için bkz: [komut satırı derleme ile csc.exe](../../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).  
+ Komut satırından oluşturma hakkında daha fazla bilgi için bkz. [oluşturma ile komut satırı csc.exe](../../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# Programlama Kılavuzu](../../../../csharp/programming-guide/index.md)  
- [Derlemeler ve Genel Derleme Önbelleği (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
- [DLL İşlevleri için bir Sınıf Oluşturma](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# Programlama Kılavuzu](../../../../csharp/programming-guide/index.md)  
+- [Derlemeler ve Genel Derleme Önbelleği (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
+- [DLL İşlevleri için bir Sınıf Oluşturma](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)

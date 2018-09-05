@@ -2,30 +2,30 @@
 title: Koleksiyonlar (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-ms.openlocfilehash: 563cef59c0e52d41dcdeaa51b5bc4d7b8f9554f9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 510abe7d818b3a45869824bc52dc4fde38238f7b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644322"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504450"
 ---
 # <a name="collections-visual-basic"></a>Koleksiyonlar (Visual Basic)
-Birçok uygulama için ilgili nesneleri, grupları oluşturmak ve yönetmek istediğiniz. Grup nesnelerine iki yolu vardır: nesne dizileri oluşturarak ve nesne koleksiyonları oluşturma.  
+Birçok uygulama için ilgili nesnelerin gruplarını oluşturmak ve yönetmek istersiniz. Grup nesnelerini iki yolu vardır: nesne dizileri oluşturarak ve veya nesne koleksiyonu oluşturarak.  
   
- Diziler oluşturmak ve sabit bir türü kesin belirlenmiş nesnelerin sayısı ile çalışmak için çok kullanışlıdır. Dizileri hakkında daha fazla bilgi için bkz: [diziler](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+ Dizileri oluşturmak ve nesneleri türü kesin olarak belirtilmiş sabit sayıdaki ile çalışmak için ekseriyetle faydalıdır. Diziler hakkında daha fazla bilgi için bkz: [diziler](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
- Koleksiyonları nesneleri grupları ile çalışmak için daha esnek bir şekilde sağlar. Diziler nesneleri ile çalışma grubu büyür ve dinamik olarak uygulama değişikliği ihtiyaçları geliştikçe daraltma. Bazı koleksiyonlar için nesne anahtarı kullanarak hızlı bir şekilde alabilmeleri koleksiyona koymak nesnesine bir anahtar atayabilirsiniz.  
+ Koleksiyonlar nesne grupları ile çalışmak için daha esnek bir yol sağlar. Dizilerden farklı olarak çalıştığınız nesne büyütme ve uygulamanın ihtiyacına göre dinamik olarak Daralt. Bazı koleksiyonlar için koleksiyona eklediğiniz ve böylece anahtarını kullanarak hızlı bir şekilde nesnesi alabilirsiniz herhangi bir nesneye bir anahtar atayabilirsiniz.  
   
- Bu koleksiyona öğeleri ekleyebilmeniz için önce sınıfın örneğini bildirmeniz gerekir böylece bir sınıf koleksiyonudur.  
+ Bir koleksiyon bir sınıfı olduğundan bu koleksiyona öğeleri eklemeden önce sınıfının bir örneğini bildirmeniz gerekir.  
   
- Koleksiyonunuz yalnızca bir veri türündeki öğeler içeriyorsa, sınıflarda birini kullanabilirsiniz <xref:System.Collections.Generic?displayProperty=nameWithType> ad alanı. Böylece başka bir veri türü eklenebilir bir genel koleksiyon tür güvenliği zorlar. Genel bir koleksiyondaki bir öğe aldığınızda, kendi veri türü belirlenemiyor veya dönüştürmeden gerekmez.  
+ Koleksiyonunuz tek bir veri türünde öğeler içeriyorsa, sınıflarda birini kullanabilirsiniz <xref:System.Collections.Generic?displayProperty=nameWithType> ad alanı. Genel koleksiyon tür güvenliği sağlar, böylece başka bir veri türü eklenebilir. Bir genel koleksiyondan öğe aldığınızda veri türünü belirlemeniz veya dönüştürmeniz gerekmez.  
   
 > [!NOTE]
 >  Bu konudaki örnekler için dahil [içeri aktarmalar](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) deyimleri için `System.Collections.Generic` ve `System.Linq` ad alanları.  
   
  **Bu konudaki**  
   
--   [Basit bir koleksiyonun kullanma](#BKMK_SimpleCollection)  
+-   [Basit bir koleksiyon kullanma](#BKMK_SimpleCollection)  
   
 -   [Koleksiyon türleri](#BKMK_KindsOfCollections)  
   
@@ -35,23 +35,23 @@ Birçok uygulama için ilgili nesneleri, grupları oluşturmak ve yönetmek iste
   
     -   [System.Collections sınıfları](#BKMK_Collections)  
   
-    -   [Visual Basic koleksiyon sınıfı](#BKMK_VisualBasic)  
+    -   [Visual Basic Collection sınıfı](#BKMK_VisualBasic)  
   
--   [Anahtar/değer çiftleri koleksiyonu uygulama](#BKMK_KeyValuePairs)  
+-   [Anahtar/değer çiftleri topluluğu uygulama](#BKMK_KeyValuePairs)  
   
--   [Bir koleksiyon erişmek için LINQ kullanma](#BKMK_LINQ)  
+-   [Koleksiyona erişmek için LINQ kullanma](#BKMK_LINQ)  
   
 -   [Koleksiyonda sıralama](#BKMK_Sorting)  
   
--   [Özel bir koleksiyona tanımlama](#BKMK_CustomCollection)  
+-   [Özel koleksiyonu tanımlama](#BKMK_CustomCollection)  
   
 -   [Yineleyiciler](#BKMK_Iterators)  
   
 <a name="BKMK_SimpleCollection"></a>
-## <a name="using-a-simple-collection"></a>Basit bir koleksiyonun kullanma  
- Bu bölümdeki örnekleri genel kullanmak <xref:System.Collections.Generic.List%601> sınıfı, türü kesin belirlenmiş nesnelerin listesini ile çalışmanıza olanak sağlar.  
+## <a name="using-a-simple-collection"></a>Basit bir koleksiyon kullanma  
+ Bu bölümdeki örneklerde genel kullanın <xref:System.Collections.Generic.List%601> sınıfını, bir türü kesin belirlenmiş nesneler listesiyle çalışmanıza olanak sağlar.  
   
- Aşağıdaki örnek dizelerinin listesini oluşturur ve ardından kullanarak dizeleri tekrarlanan bir [For Each... Sonraki](../../../visual-basic/language-reference/statements/for-each-next-statement.md) deyimi.  
+ Aşağıdaki örnek bir dize listesi oluşturur ve ardından kullanarak dizeler arasında dolaşır bir [her biri için... Sonraki](../../../visual-basic/language-reference/statements/for-each-next-statement.md) deyimi.  
   
 ```vb  
 ' Create a list of strings.  
@@ -68,9 +68,9 @@ Next
 'Output: chinook coho pink sockeye  
 ```  
   
- Bir koleksiyonun içeriğini önceden biliniyorsa, kullanabileceğiniz bir *koleksiyon Başlatıcısı* koleksiyonu başlatılamadı. Daha fazla bilgi için bkz: [koleksiyon başlatıcıları](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).  
+ Bir koleksiyonun içeriği önceden biliniyorsa, kullanabileceğiniz bir *koleksiyon Başlatıcısı* koleksiyonu başlatmak için. Daha fazla bilgi için [koleksiyon başlatıcıları](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).  
   
- Koleksiyon Başlatıcısı öğeleri koleksiyona eklemek için kullanılan dışında aşağıdaki örnek önceki örnekte aynıdır.  
+ Koleksiyona öğeleri eklemek için bir koleksiyon Başlatıcısı kullanılması dışında aşağıdaki örnek önceki örnekle aynıdır.  
   
 ```vb  
 ' Create a list of strings by using a  
@@ -84,9 +84,9 @@ Next
 'Output: chinook coho pink sockeye  
 ```  
   
- Kullanabileceğiniz bir [için... Sonraki](../../../visual-basic/language-reference/statements/for-next-statement.md) deyimi yerine bir `For Each` bir koleksiyonda yinelemek için deyimi. Bunun için dizin konumu tarafından koleksiyon öğeleri erişerek. Öğe dizini 0'da başlar ve öğe sayısı eksi 1'konumundaki sona erer.  
+ Kullanabileceğiniz bir [için... Sonraki](../../../visual-basic/language-reference/statements/for-next-statement.md) deyimi yerine bir `For Each` deyimi bir koleksiyon içinde yineleme için. Bu, bir koleksiyon öğelerine dizin konumundan erişerek gerçekleştirirsiniz. Öğelerin dizini 0'da başlar ve öğe sayısı eksi 1'de sona erer.  
   
- Aşağıdaki örnek bir koleksiyonun öğelerini kullanarak tekrarlanan `For…Next` yerine `For Each`.  
+ Aşağıdaki örneği kullanarak bir koleksiyonun öğeleri yinelenir `For…Next` yerine `For Each`.  
   
 ```vb  
 Dim salmons As New List(Of String) From  
@@ -98,7 +98,7 @@ Next
 'Output: chinook coho pink sockeye  
 ```  
   
- Aşağıdaki örnek kaldırılacak nesne belirterek öğeyi koleksiyondan kaldırır.  
+ Aşağıdaki örnek, bir öğe kaldırmak için nesneyi belirterek koleksiyondan kaldırır.  
   
 ```vb  
 ' Create a list of strings by using a  
@@ -116,7 +116,7 @@ Next
 'Output: chinook pink sockeye  
 ```  
   
- Aşağıdaki örnek öğeleri genel bir listeden kaldırır. Yerine bir `For Each` deyimi, bir [için... Sonraki](../../../visual-basic/language-reference/statements/for-next-statement.md) azalan sırada tekrarlanan deyimi kullanılır. Bunun nedeni, <xref:System.Collections.Generic.List%601.RemoveAt%2A> yöntemi bir alt dizin değerine sahip olacak şekilde kaldırılan bir öğeden sonra öğeleri neden olur.  
+ Aşağıdaki örnek bir genel listeden öğeleri kaldırır. Yerine bir `For Each` deyimi, bir [için... Sonraki](../../../visual-basic/language-reference/statements/for-next-statement.md) azalan sırada yenileyen deyimi kullanılır. Bunun nedeni, <xref:System.Collections.Generic.List%601.RemoveAt%2A> yöntemi bir alt dizin değerine sahip olacak şekilde kaldırılmış bir öğeden sonra öğe neden olur.  
   
 ```vb  
 Dim numbers As New List(Of Integer) From  
@@ -139,7 +139,7 @@ numbers.ForEach(
 ' Output: 0 2 4 6 8  
 ```  
   
- Öğe türü için <xref:System.Collections.Generic.List%601>, ayrıca kendi sınıfı tanımlayabilirsiniz. Aşağıdaki örnekte, `Galaxy` tarafından kullanılan sınıf <xref:System.Collections.Generic.List%601> kodda tanımlanır.  
+ İçindeki öğe türleri için <xref:System.Collections.Generic.List%601>, ayrıca kendi sınıfınızı tanımlayabilirsiniz. Aşağıdaki örnekte, `Galaxy` tarafından kullanılan sınıfı <xref:System.Collections.Generic.List%601> kodda tanımlanır.  
   
 ```vb  
 Private Sub IterateThroughList()  
@@ -172,9 +172,9 @@ End Class
   
 <a name="BKMK_KindsOfCollections"></a>
 ## <a name="kinds-of-collections"></a>Koleksiyon türleri   
- Birçok ortak koleksiyonları, .NET Framework tarafından sağlanır. Her koleksiyon türünün belirli bir amaç için tasarlanmıştır.  
+ Ortak koleksiyonların çoğu .NET Framework tarafından sağlanır. Her koleksiyon türü belirli bir amaç için tasarlanmıştır.  
   
- Genel koleksiyon sınıfları bazıları, bu bölümde açıklanmaktadır:  
+ Bazı ortak koleksiyon sınıfları, bu bölümde açıklanan:  
   
 -   <xref:System.Collections.Generic> Sınıfları  
   
@@ -187,62 +187,62 @@ End Class
 <a name="BKMK_Generic"></a>
 ### <a name="systemcollectionsgeneric-classes"></a>System.Collections.Generic sınıfları  
 
- Sınıflarda birini kullanarak genel bir koleksiyon oluşturabilirsiniz <xref:System.Collections.Generic> ad alanı. Koleksiyondaki her öğe aynı veri türüne sahip bir genel koleksiyon faydalıdır. Bir genel koleksiyon yalnızca istenen verilerin vererek güçlü yazmaya zorlar eklenecek türü.  
+ Genel koleksiyon sınıfları birini kullanarak oluşturabileceğiniz <xref:System.Collections.Generic> ad alanı. Genel koleksiyon, koleksiyondaki her öğe aynı veri türüne sahip olduğunda yararlıdır. Yalnızca istenen veri sağlayarak güçlü yazmayı genel koleksiyon sağlar eklenecek türü.  
   
- Aşağıdaki tabloda bazı sık kullanılan sınıfları listeler <xref:System.Collections.Generic?displayProperty=nameWithType> ad alanı:  
+ Aşağıdaki tabloda sık kullanılan sınıflarından bazılarını listeler <xref:System.Collections.Generic?displayProperty=nameWithType> ad alanı:  
   
 |örneği|Açıklama|  
 |---|---|  
-|<xref:System.Collections.Generic.Dictionary%602>|Anahtarına göre düzenlenir anahtar/değer çiftlerinin koleksiyonunu temsil eder.|  
-|<xref:System.Collections.Generic.List%601>|Dizini tarafından erişilebilecek nesnelerin bir listesini temsil eder. Arama, sıralama ve listelerini değiştirmek için yöntemler sağlar.|  
-|<xref:System.Collections.Generic.Queue%601>|İlk gelen, nesnelerin giren ilk çıkar (FIFO) koleksiyonunu temsil eder.|  
-|<xref:System.Collections.Generic.SortedList%602>|Anahtarıyla ilişkili üzerinde temel sıralı anahtar/değer çiftlerinin koleksiyonunu temsil eder <xref:System.Collections.Generic.IComparer%601> uygulaması.|  
-|<xref:System.Collections.Generic.Stack%601>|Son olarak, nesnelerin ilk çıkar (LIFO) koleksiyonunu temsil eder.|  
+|<xref:System.Collections.Generic.Dictionary%602>|Anahtara göre düzenlenen anahtar/değer çifti koleksiyonunu temsil eder.|  
+|<xref:System.Collections.Generic.List%601>|Dizin tarafından erişilebilecek nesnelerin bir listesini temsil eder. Arama, sıralama ve listelerini değiştirmek için yöntemler sağlar.|  
+|<xref:System.Collections.Generic.Queue%601>|İlk giren ilk çıkar (FIFO) nesne koleksiyonunu temsil eder.|  
+|<xref:System.Collections.Generic.SortedList%602>|Anahtarıyla ilişkili göre sıralanan anahtar/değer çiftlerinin koleksiyonunu temsil eder <xref:System.Collections.Generic.IComparer%601> uygulaması.|  
+|<xref:System.Collections.Generic.Stack%601>|Son giren ilk çıkar (LIFO) nesne koleksiyonunu temsil eder.|  
   
  Ek bilgi için bkz: [yaygın olarak kullanılan koleksiyon türleri](../../../standard/collections/commonly-used-collection-types.md), [koleksiyon sınıfı seçme](../../../standard/collections/selecting-a-collection-class.md), ve <xref:System.Collections.Generic?displayProperty=nameWithType>.  
   
 <a name="BKMK_Concurrent"></a>
 ### <a name="systemcollectionsconcurrent-classes"></a>System.Collections.Concurrent sınıfları   
- .NET Framework 4 veya daha yeni koleksiyonlardaki <xref:System.Collections.Concurrent> ad alanı koleksiyon öğeleri birden çok iş parçacığından erişmek için etkin iş parçacığı açısından güvenli işlemler sağlar.  
+ .NET Framework 4 veya daha yeni sürümü, koleksiyonlar <xref:System.Collections.Concurrent> ad alanı, koleksiyon öğelerine birden fazla iş parçacığından erişmek için verimli bir iş parçacığı açısından güvenli işlemler sağlar.  
   
- Sınıflarda <xref:System.Collections.Concurrent> ad alanı, ilgili türler yerine kullanılmalıdır <xref:System.Collections.Generic?displayProperty=nameWithType> ve <xref:System.Collections?displayProperty=nameWithType> birden çok iş parçacığı aynı anda koleksiyonuna erişme her ad alanları. Daha fazla bilgi için bkz: [iş parçacığı koleksiyonları](../../../standard/collections/thread-safe/index.md) ve <xref:System.Collections.Concurrent>.  
+ Sınıflarda <xref:System.Collections.Concurrent> ad alanı, karşılık gelen türler yerine kullanılmalıdır <xref:System.Collections.Generic?displayProperty=nameWithType> ve <xref:System.Collections?displayProperty=nameWithType> birden çok iş parçacığı koleksiyon eriştiği her seferde ad alanları. Daha fazla bilgi için [iş parçacığı güvenli koleksiyonları](../../../standard/collections/thread-safe/index.md) ve <xref:System.Collections.Concurrent>.  
   
- Dahil bazı sınıfları <xref:System.Collections.Concurrent> ad <xref:System.Collections.Concurrent.BlockingCollection%601>, <xref:System.Collections.Concurrent.ConcurrentDictionary%602>, <xref:System.Collections.Concurrent.ConcurrentQueue%601>, ve <xref:System.Collections.Concurrent.ConcurrentStack%601>.  
+ Eklenen bazı sınıflar <xref:System.Collections.Concurrent> ad <xref:System.Collections.Concurrent.BlockingCollection%601>, <xref:System.Collections.Concurrent.ConcurrentDictionary%602>, <xref:System.Collections.Concurrent.ConcurrentQueue%601>, ve <xref:System.Collections.Concurrent.ConcurrentStack%601>.  
   
 <a name="BKMK_Collections"></a>
 ### <a name="systemcollections-classes"></a>System.Collections sınıfları    
- Sınıflarda <xref:System.Collections?displayProperty=nameWithType> özellikle yazılan nesnelerin, ancak nesne türü ad alanı öğeleri saklamayın `Object`.  
+ Sınıflarda <xref:System.Collections?displayProperty=nameWithType> özellikle yazılmış nesneler, ancak nesne türü ad alanı öğeleri saklamayın `Object`.  
   
- Mümkün olduğunda, genel koleksiyonlarda kullanması gereken <xref:System.Collections.Generic?displayProperty=nameWithType> ad alanı veya <xref:System.Collections.Concurrent> eski türler yerine ad `System.Collections` ad alanı.  
+ Mümkün olduğunda genel koleksiyonları kullanması gereken <xref:System.Collections.Generic?displayProperty=nameWithType> ad alanı veya <xref:System.Collections.Concurrent> ad alanındaki eski türlerde yerine `System.Collections` ad alanı.  
   
- Aşağıdaki tabloda bazı sık kullanılan sınıfları listeler `System.Collections` ad alanı:  
+ Aşağıdaki tabloda sık kullanılan sınıflarından bazılarını listeler `System.Collections` ad alanı:  
   
 |örneği|Açıklama|  
 |---|---|  
-|<xref:System.Collections.ArrayList>|Temsil nesneleri büyüklüğü dinamik olarak artan bir dizi gerekli.|  
-|<xref:System.Collections.Hashtable>|Anahtar karma koduna göre düzenlenir anahtar/değer çiftlerinin koleksiyonunu temsil eder.|  
-|<xref:System.Collections.Queue>|İlk gelen, nesnelerin giren ilk çıkar (FIFO) koleksiyonunu temsil eder.|  
-|<xref:System.Collections.Stack>|Son olarak, nesnelerin ilk çıkar (LIFO) koleksiyonunu temsil eder.|  
+|<xref:System.Collections.ArrayList>|Bir dizi boyutu olarak dinamik olarak artırılan nesne dizilerini temsil gereklidir.|  
+|<xref:System.Collections.Hashtable>|Anahtarın karma koduna göre düzenlenen anahtar/değer çifti koleksiyonunu temsil eder.|  
+|<xref:System.Collections.Queue>|İlk giren ilk çıkar (FIFO) nesne koleksiyonunu temsil eder.|  
+|<xref:System.Collections.Stack>|Son giren ilk çıkar (LIFO) nesne koleksiyonunu temsil eder.|  
   
- <xref:System.Collections.Specialized> Ad alanı, yalnızca dize koleksiyonlar ve bağlı listesi ve karma sözlükler gibi özelleştirilmiş ve kesin türü belirtilmiş koleksiyon sınıfları sağlar.  
+ <xref:System.Collections.Specialized> Ad alanı yalnızca dize koleksiyonları ve bağlantılı liste ve melez sözlükler gibi özelleştirilmiş ve türü kesin belirlenmiş koleksiyon sınıfları sağlar.  
 
 <a name="BKMK_VisualBasic"></a> 
-###  <a name="visual-basic-collection-class"></a>Visual Basic koleksiyon sınıfı  
- Visual Basic kullanabilirsiniz <xref:Microsoft.VisualBasic.Collection> sınıfı bir koleksiyonun öğe sayısal bir dizindir kullanarak veya bir erişmesi `String` anahtarı. Bir koleksiyon nesnesi ile veya bir anahtarı belirtmeden öğeleri ekleyebilirsiniz. Bir anahtarı olmayan bir öğe eklerseniz, erişmek için kendi sayısal dizin kullanmanız gerekir.  
+###  <a name="visual-basic-collection-class"></a>Visual Basic Collection sınıfı  
+ Visual Basic kullanabileceğiniz <xref:Microsoft.VisualBasic.Collection> erişimi öğesi sayısal dizin kullanarak koleksiyon veya bir sınıf `String` anahtarı. Bir koleksiyon nesnesi ile veya bir anahtar belirtmeden öğe ekleyebilirsiniz. Bir anahtar olmadan bir öğe eklerseniz, erişmek için sayısal dizinini kullanmanız gerekir.  
   
- Visual Basic `Collection` sınıf türü olarak tüm öğeleri depolar `Object`, tüm veri türünde bir öğe ekleyebilirsiniz. Eklenmekte olan uygun olmayan veri türleri karşı hiçbir koruma yoktur.  
+ Visual Basic `Collection` sınıf türü olarak tüm öğelerini depolar `Object`, herhangi bir veri türünde bir öğe ekleyebilirsiniz. Eklenen uygunsuz veri türleriyle yoktur.  
   
- Visual Basic kullandığınızda `Collection` sınıfı, bir koleksiyondaki ilk öğe dizini 1 vardır. Bu, başlangıç dizini 0 olduğu .NET Framework koleksiyon sınıflardan farklıdır.  
+ Visual Basic kullandığınızda `Collection` sınıfı, bir koleksiyondaki ilk öğe dizini 1 vardır. Bu, başlangıç dizini 0 olduğu .NET Framework koleksiyon sınıflarından farklıdır.  
   
- Mümkün olduğunda, genel koleksiyonlarda kullanması gereken <xref:System.Collections.Generic?displayProperty=nameWithType> ad alanı veya <xref:System.Collections.Concurrent> ad alanı Visual Basic yerine `Collection` sınıfı.  
+ Mümkün olduğunda genel koleksiyonları kullanması gereken <xref:System.Collections.Generic?displayProperty=nameWithType> ad alanı veya <xref:System.Collections.Concurrent> ad alanı Visual Basic yerine `Collection` sınıfı.  
   
  Daha fazla bilgi için bkz. <xref:Microsoft.VisualBasic.Collection>.  
   
 <a name="BKMK_KeyValuePairs"></a>
-## <a name="implementing-a-collection-of-keyvalue-pairs"></a>Anahtar/değer çiftleri koleksiyonu uygulama   
- <xref:System.Collections.Generic.Dictionary%602> Genel koleksiyon her öğenin anahtarı kullanarak bir koleksiyondaki öğelerin erişmesine olanak sağlar. Her ek sözlük için bir değer ve ilişkili anahtarını oluşur. Kendi anahtarını kullanarak bir değer alma olduğundan hızlı `Dictionary` sınıfı, bir karma tablosu olarak uygulanır.  
+## <a name="implementing-a-collection-of-keyvalue-pairs"></a>Anahtar/değer çiftleri topluluğu uygulama   
+ <xref:System.Collections.Generic.Dictionary%602> Genel koleksiyonu her öğenin anahtarını kullanarak bir koleksiyondaki öğelere erişmenize olanak sağlar. Her ek sözlük için bir değer ve ilişkili anahtarını oluşur. Bir değeri anahtarını kullanarak almak oldukça hızlıdır `Dictionary` sınıfı bir karma tablo olarak uygulanır.  
   
- Aşağıdaki örnekte bir `Dictionary` koleksiyonu ve kullanarak sözlükte yinelenen bir `For Each` deyimi.  
+ Aşağıdaki örnek, oluşturur bir `Dictionary` koleksiyonu ve kullanarak sözlük yinelenir. bir `For Each` deyimi.  
   
 ```vb  
 Private Sub IterateThroughDictionary()  
@@ -288,7 +288,7 @@ Public Class Element
 End Class  
 ```  
   
- Bunun yerine koleksiyon Başlatıcısı oluşturmak için kullanılacak `Dictionary` değiştirebileceğiniz koleksiyonu `BuildDictionary` ve `AddToDictionary` aşağıdaki yöntemi yöntemleriyle.  
+ Bunun yerine bir koleksiyon Başlatıcısı oluşturmak için kullanılacak `Dictionary` koleksiyonu değiştirebilirsiniz `BuildDictionary` ve `AddToDictionary` yöntemlerini aşağıdaki yöntemle.  
   
 ```vb  
 Private Function BuildDictionary2() As Dictionary(Of String, Element)  
@@ -306,7 +306,7 @@ Private Function BuildDictionary2() As Dictionary(Of String, Element)
 End Function  
 ```  
   
- Aşağıdaki örnek kullanır <xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A> yöntemi ve <xref:System.Collections.Generic.Dictionary%602.Item%2A> özelliği `Dictionary` öğe anahtarı tarafından hızla bulmak için. `Item` Özellik bir öğeyi erişmenize olanak tanır `elements` kullanarak koleksiyon `elements(symbol)` Visual Basic kodu.  
+ Aşağıdaki örnekte <xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A> yöntemi ve <xref:System.Collections.Generic.Dictionary%602.Item%2A> özelliği `Dictionary` öğeyi anahtara göre hızlı bir şekilde bulmak için. `Item` Özelliği bir öğeye erişmenize olanak tanır `elements` kullanarak koleksiyon `elements(symbol)` Visual Basic kod.  
   
 ```vb  
 Private Sub FindInDictionary(ByVal symbol As String)  
@@ -321,7 +321,7 @@ Private Sub FindInDictionary(ByVal symbol As String)
 End Sub  
 ```  
   
- Aşağıdaki örnek, bunun yerine kullanır <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> yöntemi anahtarının hızlı bir şekilde bir öğe bulunamıyor.  
+ Aşağıdaki örnek, bunun yerine kullanır <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> yöntemi anahtara göre hızlı bir şekilde öğeyi bulun.  
   
 ```vb  
 Private Sub FindInDictionary2(ByVal symbol As String)  
@@ -337,10 +337,10 @@ End Sub
 ```  
   
 <a name="BKMK_LINQ"></a> 
-##  <a name="using-linq-to-access-a-collection"></a>Bir koleksiyon erişmek için LINQ kullanma  
- LINQ (dil ile tümleşik sorgu) koleksiyonları erişmek için kullanılabilir. LINQ sorgularını filtreleme, sıralama ve yetenekleri gruplandırma sağlar. Daha fazla bilgi için bkz: [Visual Basic'te LINQ ile çalışmaya başlama](../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md).  
+##  <a name="using-linq-to-access-a-collection"></a>Koleksiyona erişmek için LINQ kullanma  
+ LINQ (dil ile tümleşik sorgu) koleksiyonlara erişmek için kullanılabilir. LINQ sorguları filtreleme, sıralama ve Gruplama yetenekler sağlar. Daha fazla bilgi için [Visual Basic'te lınq'e Başlarken](../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md).  
   
- Aşağıdaki örnek, genel karşı LINQ sorgusu çalıştırır `List`. LINQ Sorgu sonuçlarını içeren farklı bir koleksiyon döndürür.  
+ Aşağıdaki örnek, bir genel LINQ sorgusu çalıştırır `List`. LINQ sorgusu sonuçları içeren farklı bir koleksiyon döndürür.  
   
 ```vb  
 Private Sub ShowLINQ()  
@@ -384,11 +384,11 @@ End Class
   
  <a name="BKMK_Sorting"></a> 
 ## <a name="sorting-a-collection"></a>Koleksiyonda sıralama  
- Aşağıdaki örnek, bir koleksiyon sıralamak için bir yordam gösterilmektedir. Örnek örneklerini sıralar `Car` depolanmış sınıfı bir <xref:System.Collections.Generic.List%601>. `Car` Uygulayan sınıf <xref:System.IComparable%601> gerektiren arabirimi <xref:System.IComparable%601.CompareTo%2A> uygulanan yöntemi.  
+ Aşağıdaki örnek bir koleksiyonu sıralamak için bir yordam gösterir. Örnek örneklerini sıralar `Car` depolanan sınıfı bir <xref:System.Collections.Generic.List%601>. `Car` Sınıfının Implements <xref:System.IComparable%601> gerektiren arabirimi <xref:System.IComparable%601.CompareTo%2A> yönteminin uygulanmasını.  
   
- Her çağrı <xref:System.IComparable%601.CompareTo%2A> yöntemi sıralama için kullanılan tek bir karşılaştırma yapar. Kullanıcı tarafından yazılan kodu `CompareTo` yöntemi başka bir nesnenin geçerli nesnenin her karşılaştırma için bir değer döndürür. Döndürülen değer olan geçerli nesne ise sıfırdan az diğerinden daha az nesne, geçerli nesne bir nesneden daha büyükse, sıfır ve sıfırdan büyük eşit olup olmadıkları. Bu, kodda daha fazla değerinden ölçütleri tanımlayın ve eşit olanak sağlar.  
+ Her çağrı <xref:System.IComparable%601.CompareTo%2A> yöntemi sıralama için kullanılan tek bir karşılaştırma yapar. Kullanıcı tarafından yazılan kodu `CompareTo` geçerli nesnenin başka bir nesneyle her karşılaştırılışında bir değer döndürür. Döndürülen değer daha az nesne geçerli nesneye sıfırdan küçük nesnesine, geçerli nesne diğer nesneden büyükse sıfır ve sıfır büyüktür eşit olmaları durumunda. Bu, kodda büyüktür, küçüktür ölçütleri tanımlayın ve eşit sağlar.  
   
- İçinde `ListCars` yöntemi, `cars.Sort()` deyimi listesini sıralar. Bu çağrıyı <xref:System.Collections.Generic.List%601.Sort%2A> yöntemi <xref:System.Collections.Generic.List%601> neden `CompareTo` yöntemi için otomatik olarak adlandırılan `Car` nesnelerini `List`.  
+ İçinde `ListCars` yöntemi `cars.Sort()` deyimi listeyi sıralar. Bu çağrıyı <xref:System.Collections.Generic.List%601.Sort%2A> yöntemi <xref:System.Collections.Generic.List%601> neden `CompareTo` otomatik olarak çağrılmasına yöntemi `Car` nesneler `List`.  
   
 ```vb  
 Public Sub ListCars()  
@@ -461,14 +461,14 @@ End Class
 ```  
   
 <a name="BKMK_CustomCollection"></a> 
-## <a name="defining-a-custom-collection"></a>Özel bir koleksiyona tanımlama  
- Bir koleksiyon uygulayarak tanımlayabilirsiniz <xref:System.Collections.Generic.IEnumerable%601> veya <xref:System.Collections.IEnumerable> arabirimi. Ek bilgi için bkz: [koleksiyonu numaralandırma](http://msdn.microsoft.com/library/71807ea7-9180-48a6-916f-35a5251d477f).  
+## <a name="defining-a-custom-collection"></a>Özel koleksiyonu tanımlama  
+ Uygulayarak bir koleksiyon tanımlayabilirsiniz <xref:System.Collections.Generic.IEnumerable%601> veya <xref:System.Collections.IEnumerable> arabirimi. Ek bilgi için bkz: [koleksiyon numaralandırma](https://msdn.microsoft.com/library/71807ea7-9180-48a6-916f-35a5251d477f).  
   
- Özel bir koleksiyona tanımlayabilirsiniz rağmen şurada açıklanan .NET Framework içinde yer alan koleksiyonlar kullanmanız daha iyi [türleri, koleksiyonları](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b) bu konuda daha önce.  
+ Bir özel koleksiyon tanımlayabilirsiniz, bunun yerine açıklanan .NET Framework içinde yer koleksiyonların kullanılması daha iyi [tür, koleksiyonları](https://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b) bu konuda daha önce.  
   
- Aşağıdaki örnek adlı özel koleksiyon sınıfı tanımlar `AllColors`. Bu sınıf uygulayan <xref:System.Collections.IEnumerable> gerektiren arabirimi <xref:System.Collections.IEnumerable.GetEnumerator%2A> uygulanan yöntemi.  
+ Aşağıdaki örnekte adlı bir özel koleksiyon tanımlar `AllColors`. Bu sınıfın uyguladığı <xref:System.Collections.IEnumerable> gerektiren arabirimi <xref:System.Collections.IEnumerable.GetEnumerator%2A> yönteminin uygulanmasını.  
   
- `GetEnumerator` Yöntem örneği `ColorEnumerator` sınıfı. `ColorEnumerator` uygulayan <xref:System.Collections.IEnumerator> gerektiren arabirimi <xref:System.Collections.IEnumerator.Current%2A> özelliği, <xref:System.Collections.IEnumerator.MoveNext%2A> yöntemi ve <xref:System.Collections.IEnumerator.Reset%2A> uygulanan yöntemi.  
+ `GetEnumerator` Yöntemi kendinin bir örneğini döndürür `ColorEnumerator` sınıfı. `ColorEnumerator` uygulayan <xref:System.Collections.IEnumerator> gerektiren arabirimi <xref:System.Collections.IEnumerator.Current%2A> özelliği <xref:System.Collections.IEnumerator.MoveNext%2A> yöntemi ve <xref:System.Collections.IEnumerator.Reset%2A> yönteminin uygulanmasını.  
   
 ```vb  
 Public Sub ListColors()  
@@ -540,13 +540,13 @@ End Class
   
 <a name="BKMK_Iterators"></a>
 ##  <a name="iterators"></a>Yineleyiciler  
- Bir *yineleyici* içinde bir koleksiyon özel bir yineleme yapmak için kullanılır. Yineleyici bir yöntem olabilir veya bir `get` erişimcisi. Yineleyici kullanan bir [verim](../../../visual-basic/language-reference/statements/yield-statement.md) deyimi her birer birer koleksiyonun bir öğesi döndürür.  
+ Bir *yineleyici* bir koleksiyon üzerinde özel yineleme yapmak için kullanılır. Bir yineleyiciyi bir yöntem olabilir veya bir `get` erişimcisi. Yineleyici bir [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) deyimini her öğesini birer birer koleksiyonunun bir döndürür.  
   
- Yineleyici kullanarak çağırma bir [For Each... Sonraki](../../../visual-basic/language-reference/statements/for-each-next-statement.md) deyimi. Her yinelemesinden `For Each` döngü yineleyici çağırır. Zaman bir `Yield` deyimi yineleyici ulaşıldığında, bir ifade döndürülür ve kod geçerli konumda korunur. Yürütme o konumdan yineleyici adlı bir sonraki başlatılışında yeniden başlatılır.  
+ Kullanarak bir yineleyici çağırabilirsiniz bir [her biri için... Sonraki](../../../visual-basic/language-reference/statements/for-each-next-statement.md) deyimi. Her bir yinelemesini `For Each` döngü yineleyiciyi çağırır. Olduğunda bir `Yield` yineleyicisi deyimine ulaşıldığında, bir ifade döndürülür ve kodun geçerli konumu korunur. Yürütme, yineleyicinin bir sonraki açışınızda bu konumdan başlatılır.  
   
- Daha fazla bilgi için bkz: [yineleyiciler (Visual Basic)](../../../visual-basic/programming-guide/concepts/iterators.md).  
+ Daha fazla bilgi için [yineleyiciler (Visual Basic)](../../../visual-basic/programming-guide/concepts/iterators.md).  
   
- Aşağıdaki örnek, bir yineleyici yöntemi kullanır. İterator yöntemi sahip bir `Yield` içinde deyimi bir [için... Sonraki](../../../visual-basic/language-reference/statements/for-next-statement.md) döngü. İçinde `ListEvenNumbers` yöntemi, her yinelemesinden `For Each` deyimi gövde oluşturur diğerine geçer yineleyici yöntemine bir çağrı `Yield` deyimi.  
+ Aşağıdaki örnek yineleyici yöntemini kullanır. Yineleyici yöntem, bir `Yield` içindeki bir [için... Sonraki](../../../visual-basic/language-reference/statements/for-next-statement.md) döngü. İçinde `ListEvenNumbers` yöntemi, her bir yinelemesini `For Each` diğerine geçer yineleyici yöntem için bir çağrı oluşturur ve deyim gövdesi `Yield` deyimi.  
   
 ```vb  
 Public Sub ListEvenNumbers()  
@@ -574,10 +574,10 @@ End Function
  [Öğe Başlatıcıları](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
  [Programlama Kavramları (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)  
  [Option Strict Deyimi](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
- [LINQ to nesneler (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
+ [LINQ to Objects'in (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
  [Paralel LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)  
  [Koleksiyonlar ve Veri Yapıları](../../../standard/collections/index.md)  
- [Oluşturma ve koleksiyonları düzenleme](http://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)  
+ [Koleksiyon oluşturma ve düzenleme](https://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)  
  [Koleksiyon Sınıfı Seçme](../../../standard/collections/selecting-a-collection-class.md)  
  [Koleksiyonlardaki Karşılaştırmalar ve Sıralamalar](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
  [Genel Koleksiyonlar Ne Zaman Kullanılır?](../../../standard/collections/when-to-use-generic-collections.md)

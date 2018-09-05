@@ -4,12 +4,12 @@ description: Bir .NET Core uygulamasını dağıtma.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/18/2017
-ms.openlocfilehash: 4a39efdd92cf9c3bb6aadf83949e02ce20960481
-ms.sourcegitcommit: 702d5ffc6e733b6c4ded85bf1c92e2293638ee9a
+ms.openlocfilehash: ab65beaa293f7543a8436f913a1e5bf89ca7281b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37792432"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562012"
 ---
 # <a name="net-core-application-deployment"></a>.NET core uygulama dağıtımı
 
@@ -21,7 +21,7 @@ ms.locfileid: "37792432"
 
 ## <a name="framework-dependent-deployments-fdd"></a>Framework bağımlı dağıtımlar (FDD)
 
-Bir FDD için yalnızca uygulamanız ve üçüncü taraf bağımlılıkları dağıtın. .NET Core uygulamanızı hedef sistemde mevcut .NET Core sürümünü kullanır bu yana dağıtmanız gerekmez. .NET Core uygulamaları için varsayılan dağıtım modeli budur.
+Bir FDD için yalnızca uygulama ve üçüncü taraf bağımlılıklarının dağıtın. .NET Core uygulamanızı hedef sistemde mevcut .NET Core sürümünü kullanır bu yana dağıtmanız gerekmez. .NET Core hedefleyen .NET Core ve ASP.NET Core uygulamaları için varsayılan dağıtım modeli budur.
 
 ### <a name="why-create-a-framework-dependent-deployment"></a>Framework bağımlı dağıtım neden oluşturulsun mu?
 
@@ -70,9 +70,9 @@ CLI araçları ile .NET Core uygulamaları dağıtma hakkında adım adım örne
 - Kendi içinde dağıtım
 - Üçüncü taraf bağımlılıkları kendi içinde dağıtım
 
-# <a name="see-also"></a>Ayrıca bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-[CLI araçları ile .NET Core uygulamaları dağıtma](deploy-with-cli.md)   
-[Visual Studio ile .NET Core uygulamaları dağıtma](deploy-with-vs.md)   
-[Paketler, meta paketler ve çerçeveler](../packages.md)   
-[.NET core çalışma zamanı tanımlayıcı (RID) Kataloğu](../rid-catalog.md)
+* [CLI araçları ile .NET Core uygulamaları dağıtma](deploy-with-cli.md)
+* [Visual Studio ile .NET Core uygulamaları dağıtma](deploy-with-vs.md)
+* [Paketler, Meta Paketler ve Çerçeveler](../packages.md)
+* [.NET core çalışma zamanı tanımlayıcı (RID) Kataloğu](../rid-catalog.md)

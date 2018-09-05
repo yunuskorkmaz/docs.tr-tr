@@ -3,11 +3,11 @@ title: Entity SQL Başvurusu
 ms.date: 03/30/2017
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
 ms.openlocfilehash: ae0aec999d30d099467be690b8920d1413b564f0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43487425"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515504"
 ---
 # <a name="entity-sql-reference"></a>Entity SQL Başvurusu
 

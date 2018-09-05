@@ -1,23 +1,23 @@
 ---
-title: Bağlantı bilgileri koruma
+title: Bağlantı bilgilerini koruma
 ms.date: 03/30/2017
 ms.assetid: 1471f580-bcd4-4046-bdaf-d2541ecda2f4
-ms.openlocfilehash: 4cf503af6f57eefb0990a8e7e728ea5c1474bfa7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6cd27f2bce1879301e80c7a8ec689971705a45b0
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363357"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513483"
 ---
-# <a name="protecting-connection-information"></a>Bağlantı bilgileri koruma
-Veri kaynağınıza erişimi korumaya yönelik en önemli hedeflerini uygulama hale getirirken biridir. Güvenli olmayan, bir bağlantı dizesi olası bir güvenlik açığı gösterir. Bağlantı bilgilerini düz metin olarak depolanması veya tüm sisteminizin belleği riskleri kalıcı yapma. Kaynak kodunuz katıştırılmış bağlantı dizeleri kullanılarak okunabilir [Ildasm.exe (IL ayrıştırıcı)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) derlenmiş bir bütünleştirilmiş kodunda Microsoft Ara dili (MSIL) görüntülemek için.  
+# <a name="protecting-connection-information"></a>Bağlantı bilgilerini koruma
+Veri kaynağı erişimi korumaya en önemli hedeflerinden bir uygulamanın güvenliğini sağlama andır. Güvenli olmayan, bir bağlantı dizesi olası bir güvenlik açığı sunar. Bağlantı bilgilerini düz metin halinde depolanmasını veya sisteminizin ödün bellek riskleri kalıcı. Bağlantı dizeleri gömülü kaynak kodunuzu kullanarak okunabilir [Ildasm.exe (IL ayrıştırıcı)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) derlenmiş derlemede Microsoft Ara dilini (MSIL) görüntülemek için.  
   
- Kimlik doğrulama türüne göre içeren bağlantı dizeleri ortaya çıkabilecek güvenlik açıkları bellek ve disk ve çalışma zamanında oluşturmak için kullanılan teknikleri bağlantı dizeleri nasıl kalıcı kullanılır.  
+ Kimlik doğrulama türüne göre güvenlik açıklarını içeren bağlantı dizeleri ortaya çıkabilecek bellek ve disk ve bunları çalışma zamanında oluşturmak için kullanılan teknikleri bağlantı dizeleri nasıl kalıcı kullanılır.  
   
-## <a name="use-windows-authentication"></a>Windows kimlik doğrulamasını kullan  
- Erişim sınırı yardımcı olmak için veri kaynağı bağlantı bilgilerini kullanıcı kimliği, parola ve veri kaynağı adı gibi güvenli hale getirmenize gerekir. Kullanıcı bilgilerinin kullanılmasını önlemek için Windows kimlik doğrulaması kullanmanızı öneririz (bazen denir *tümleşik güvenlik*) mümkün olduğunda. Windows kimlik doğrulaması, bir bağlantı dizesi kullanılarak belirtildiğinden `Integrated Security` veya `Trusted_Connection` anahtar sözcükler, bir kullanıcı kimliği ve parolası kullanacak gereğini ortadan kaldırır. Windows kimlik doğrulaması kullanırken, kullanıcılar Windows tarafından doğrulanır ve sunucu ve veritabanı kaynaklarına erişimi Windows kullanıcıları ve grupları için izin verme tarafından belirlenir.  
+## <a name="use-windows-authentication"></a>Windows kimlik doğrulaması kullan  
+ Erişimi sınırlamaya yardımcı olması için veri kaynağı, bağlantı bilgilerini kullanıcı Kimliğinizi, parolanızı ve veri kaynağı adı gibi güvenlik altına almanız gerekir. Kullanıcı bilgilerinin kullanılmasını önlemek için Windows kimlik doğrulaması kullanmanızı öneririz (bazen denir *tümleşik güvenliği*) mümkün olan her yerde. Windows kimlik doğrulaması kullanarak bir bağlantı dizesinde belirtilir `Integrated Security` veya `Trusted_Connection` anahtar sözcükler, bir kullanıcı kimliği ve parola kullanma gereksinimini ortadan kaldırır. Windows kimlik doğrulaması kullanırken, kullanıcılar tarafından Windows kimlik doğrulaması ve erişim sunucusu ve veritabanı kaynaklarını Windows kullanıcılarına ve gruplarına izinler verme tarafından belirlenir.  
   
- Burada Windows kimlik doğrulaması kullanmak mümkün olmadığı durumlar için kullanıcı kimlik bilgileri bağlantı dizesinde gösterilir çünkü fazladan dikkatli kullanmanız gerekir. Bir ASP.NET uygulamasındaki veritabanları ve diğer ağ kaynaklarına bağlanmak için kullanılan bir sabit kimlik bir Windows hesabı yapılandırabilirsiniz. Kimliğe bürünme kimlik öğesinde etkinleştirmek **web.config** dosyası ve bir kullanıcı adı ve parola belirtin.  
+ Burada Windows kimlik doğrulaması kullanmak mümkün olmadığı durumlar için kullanıcı kimlik bilgileri bağlantı dizesinde açık olduğundan çok dikkatli kullanmanız gerekir. Bir ASP.NET uygulamasında, veritabanları ve diğer ağ kaynaklarına bağlanmak için kullanılan sabit bir kimlik olarak bir Windows hesabı yapılandırabilirsiniz. Kimliğe bürünme kimlik öğesinde, etkinleştirme **web.config** dosyası ve bir kullanıcı adı ve parola belirtin.  
   
 ```xml  
 <identity impersonate="true"   
@@ -25,22 +25,22 @@ Veri kaynağınıza erişimi korumaya yönelik en önemli hedeflerini uygulama h
         password="*****" />  
 ```  
   
- Sabit kimliği hesabı veritabanında yalnızca gerekli izinleri verilmiş olan bir düşük ayrıcalıklı hesap olması gerekir. Ayrıca, yapılandırma dosyasını şifreleyin, böylece kullanıcı adı ve parola düz metin olarak açık değildir.  
+ Sabit kimlik hesap veritabanında yalnızca gerekli izinleri verilmiş olan düşük ayrıcalıklı bir hesap olmalıdır. Ayrıca, yapılandırma dosyası şifreleyin, böylece kullanıcı adı ve parola düz metin olarak açık değildir.  
   
 ## <a name="do-not-use-universal-data-link-udl-files"></a>Değil kullanım evrensel veri bağlantısı (UDL) dosyaları  
- Bağlantı dizeleri için depolama kaçının bir <xref:System.Data.OleDb.OleDbConnection> bir evrensel veri bağlantısı (UDL) dosyasında. UDLs düz metin olarak depolanır ve şifrelenemez. Dış dosya tabanlı kaynak uygulamanıza UDL dosyasıdır ve korunamıyor veya .NET Framework kullanılarak şifrelenir.  
+ İçin bağlantı dizelerini depolanmasını önlemek bir <xref:System.Data.OleDb.OleDbConnection> evrensel veri bağlantısı (UDL) dosyasında. Udl'ler düz metin olarak depolanır ve şifrelenemez. Uygulamanız için bir dış dosya tabanlı kaynak UDL dosyası olduğunu ve korunamıyor veya .NET Framework kullanılarak şifrelenir.  
   
-## <a name="avoid-injection-attacks-with-connection-string-builders"></a>Bağlantı dizesi oluşturucular ile ekleme saldırıları önlemek  
- Dinamik dize birleştirme kullanıcı girişini temel alarak bağlantı dizelerini oluşturmak için kullanılan bağlantı dizesi ekleme saldırı ortaya çıkabilir. Kullanıcı girişi doğrulanmış ve kötü amaçlı metin veya değil kaçış karakterleri değilse, bir saldırganın olası hassas verileri veya sunucudaki diğer kaynakları erişebilirsiniz. Bu sorunu gidermek için bağlantı dizesi söz dizimini doğrulayın ve ek parametreler değil sunulan sağlamak için yeni bağlantı dizesi Oluşturucu sınıflar ADO.NET 2.0 kullanıma sunuldu. Daha fazla bilgi için bkz: [bağlantı dizesi oluşturucular](../../../../docs/framework/data/adonet/connection-string-builders.md).  
+## <a name="avoid-injection-attacks-with-connection-string-builders"></a>Bağlantı dizesi oluşturucular ile ekleme saldırılarını kaçının  
+ Dinamik dize birleştirme kullanıcı girişini temel alarak bağlantı dizeleri oluşturmak için kullanılan bir bağlantı dizesi ekleme saldırısına oluşabilir. Kullanıcı girişini doğrulanmış ve kötü amaçlı bir metin veya kaçış karakteri değil ise, bir saldırganın hassas verileri veya sunucudaki diğer kaynakları içeriklerine erişebilir. Bu sorunu gidermek için bağlantı dizesi söz dizimi doğrulamak ve ek parametreler değil sunulan emin olmak için yeni bağlantı dizesi Oluşturucusu sınıflar ADO.NET 2.0 kullanılmaya başlandı. Daha fazla bilgi için [bağlantı dizesi oluşturucular](../../../../docs/framework/data/adonet/connection-string-builders.md).  
   
-## <a name="use-persist-security-infofalse"></a>Kullanım kalıcı Security Info = False  
- İçin varsayılan değer `Persist Security Info` False; Bu varsayılan tüm bağlantı dizeleri kullanmanızı öneririz. Ayarı `Persist Security Info` için `true` veya `yes` kullanıcı kimliği ve parolası, onu açıldıktan sonra bir bağlantıdan alınabilmesi için gibi güvenlik bakımından hassas bilgiler sağlar. Zaman `Persist Security Info` ayarlanır `false` veya `no`, güvenilmeyen bir kaynağa güvenlik bakımından hassas bilgilere erişimi yok sağlayarak bu bağlantıyı açmak için kullanılan sonra güvenlik bilgileri atılır.  
+## <a name="use-persist-security-infofalse"></a>Kalıcı güvenlik bilgisi kullan = False  
+ İçin varsayılan değer `Persist Security Info` yanlış; bu varsayılan tüm bağlantı dizeleri kullanmanızı öneririz. Ayarı `Persist Security Info` için `true` veya `yes` , açıldıktan sonra bir bağlantıdan alınacağı kullanıcı kimliği ve parola gibi güvenlik bakımından hassas bilgiler sağlar. Zaman `Persist Security Info` ayarlanır `false` veya `no`, güvenilmeyen bir kaynağa güvenlik bakımından hassas bilgilere erişimi yok sağlayarak bu bağlantıyı açmak için kullanılan sonra güvenlik bilgileri atılır.  
   
-## <a name="encrypt-configuration-files"></a>Yapılandırma dosyalarını şifrelemek  
- Aynı zamanda bağlantı dizelerini yapılandırma dosyalarında, uygulamanızın kodda katıştırmak için ortadan kaldırır saklayabilirsiniz. Yapılandırma dosyaları .NET Framework öğeleri ortak bir dizi tanımlanmış standart XML dosyalarıdır. Bağlantı dizelerini yapılandırma dosyalarında içinde saklanır genellikle  **\<connectionStrings >** öğesinde **app.config** bir Windows uygulaması için veya  **Web.config** bir ASP.NET uygulaması için dosya. Bağlantı dizelerini yapılandırma dosyalarını şifrelemek ve alma depolama temel kavramları hakkında daha fazla bilgi için bkz: [bağlantı dizeleri ve yapılandırma dosyalarını](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md).  
+## <a name="encrypt-configuration-files"></a>Yapılandırma dosyaları şifreleyin  
+ Da bağlantı dizelerini yapılandırma dosyalarında, uygulamanızın kodunda eklemek gereğini ortadan kaldırır depolayabilirsiniz. Yapılandırma dosyaları .NET Framework, ortak bir öğe kümesini tanımladığı standart XML dosyalarıdır. Bağlantı dizelerini yapılandırma dosyaları içinde depolanan genellikle  **\<connectionStrings >** öğesinde **app.config** bir Windows uygulaması için veya  **Web.config** ASP.NET uygulaması için dosya. Alma ve yapılandırma dosyaları, bağlantı dizeleri şifreleme depolamak temelleri hakkında daha fazla bilgi için bkz: [bağlantı dizeleri ve yapılandırma dosyalarını](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [Yapılandırma bilgilerini korumalı Yapılandırması'nı kullanarak şifreleme](http://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1)  
- [Yerel Güvenlik ve .NET Framework kodu PAVE](http://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
- [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Şifreleme yapılandırma bilgilerini kullanarak korumalı yapılandırma](https://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1)  
+ [Yerel Güvenlik ve .NET Framework kodu PAVE](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
+ [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -10,54 +10,54 @@ helpviewer_keywords:
 - progress [Windows Forms], reporting [Windows Forms]
 - FlashTrackBar custom control
 ms.assetid: 24c5a2e3-058c-4b8d-a217-c06e6a130c2f
-ms.openlocfilehash: 5773181b8883f0f94ff451808c8c97ce3407970e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bff9bef08cdf7317d4dc8903412e03bfdacb7237
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33531436"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502354"
 ---
 # <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a>Nasıl yapılır: İlerleme Durumunu Gösteren Windows Forms Denetimi Oluşturma
-Aşağıdaki kod örneğinde adlı özel bir denetim gösterilir `FlashTrackBar` kullanıcı düzeyinde veya uygulama ilerlemesini göstermek için kullanılabilir. Gradyan ilerleme görsel olarak sunmak için kullanır.  
+Aşağıdaki kod örneğinde adlı özel bir denetimi gösterir `FlashTrackBar` kullanıcı düzeyi veya bir uygulamanın ilerleme durumunu göstermek için kullanılabilir. Gradyan ilerlemesini görsel olarak göstermek için kullanır.  
   
- `FlashTrackBar` Denetim aşağıdaki kavramlar gösterilmektedir:  
+ `FlashTrackBar` Denetimi aşağıdaki kavramları göstermektedir:  
   
 -   Özel özellikler tanımlama.  
   
 -   Özel olaylar tanımlama. (`FlashTrackBar` tanımlar `ValueChanged` olay.)  
   
--   Geçersiz kılma <xref:System.Windows.Forms.Control.OnPaint%2A> denetimi çizmek için mantığın yöntemi.  
+-   Geçersiz kılma <xref:System.Windows.Forms.Control.OnPaint%2A> denetimi çizmek için mantığını sağlamak için yöntemi.  
   
--   Alan kullanarak denetim çizim için kullanılabilir bilgi işlem kendi <xref:System.Windows.Forms.Control.ClientRectangle%2A> özelliği. `FlashTrackBar` bunu yapar, `OptimizedInvalidate` yöntemi.  
+-   Alan kullanan denetimi çizmek için kullanılabilir bilgi işlem, <xref:System.Windows.Forms.Control.ClientRectangle%2A> özelliği. `FlashTrackBar` bunu yapar, `OptimizedInvalidate` yöntemi.  
   
--   Windows Forms Tasarımcısı'nda değiştirildiğinde serileştirme ya da kalıcılığı bir özellik için uygulama. `FlashTrackBar` tanımlar `ShouldSerializeStartColor` ve `ShouldSerializeEndColor` seri hale getirme yöntemleri kendi `StartColor` ve `EndColor` özellikleri.  
+-   Windows Form Tasarımcısı'nda değiştirildiğinde serileştirme veya Kalıcılık bir özellik için uygulama. `FlashTrackBar` tanımlar `ShouldSerializeStartColor` ve `ShouldSerializeEndColor` serileştirmeye yönelik yöntemleri kendi `StartColor` ve `EndColor` özellikleri.  
   
  Tarafından tanımlanan özel özellikler aşağıdaki tabloda gösterilmektedir `FlashTrackBar`.  
   
 |Özellik|Açıklama|  
 |--------------|-----------------|  
-|`AllowUserEdit`|Kullanıcı tıklatıp sürükleyerek flash izleme çubuğu değerini değiştirebilir olup olmadığını gösterir.|  
+|`AllowUserEdit`|Kullanıcının tıklatarak ve sürükleyerek flash izleme çubuğu değerini değiştirip değiştiremeyeceğini belirtir.|  
 |`EndColor`|İzleme çubuğu Bitiş rengini belirtir.|  
-|`DarkenBy`|Ön plan gradyan göre arka plan koyu için ne kadar belirtir.|  
+|`DarkenBy`|Ne kadar arka planda ön plan gradyan göre koyu belirtir.|  
 |`Max`|İzleme çubuğu en büyük değerini belirtir.|  
 |`Min`|İzleme çubuğu en küçük değerini belirtir.|  
-|`StartColor`|Geçişin başlangıç rengini belirtir.|  
-|`ShowPercentage`|Yüzde geçişin görüntülenip görüntülenmeyeceğini gösterir.|  
-|`ShowValue`|Geçerli değeri geçişin görüntülenip görüntülenmeyeceğini gösterir.|  
-|`ShowGradient`|İzleme çubuğu geçerli değerini gösteren bir renk gradyan görüntüleyip görüntülemeyeceğini gösterir.|  
-|-   `Value`|İzleme çubuğu geçerli değeri belirtir.|  
+|`StartColor`|Gradyan başlangıç rengi belirtir.|  
+|`ShowPercentage`|Gradyan yüzde görüntülenip görüntülenmeyeceğini gösterir.|  
+|`ShowValue`|Geçerli değer geçişin görüntülenip görüntülenmeyeceğini gösterir.|  
+|`ShowGradient`|İzleme çubuğu geçerli değerini gösteren bir renk gradyanı görüntülemesi gerekip gerekmediğini gösterir.|  
+|-   `Value`|İzleme çubuğu geçerli değerini belirtir.|  
   
- Aşağıdaki tabloda ek üyeleri tarafından tanımlanan gösterilmektedir `FlashTrackBar:` özellik değişti olayı ve olayını yöntemi.  
+ Aşağıdaki tablo diğer üyeleri tarafından tanımlanan gösterir `FlashTrackBar:` özellik değişti olayı ve olayı başlatan yöntem.  
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`ValueChanged`|Olan olay zaman yükseltilmiş `Value` çubuğu değişiklikleri izleme özelliği.|  
-|`OnValueChanged`|Başlatır yöntemi `ValueChanged` olay.|  
+|`ValueChanged`|Olay arandığında `Value` çubuğu değişiklikleri izleme özelliği.|  
+|`OnValueChanged`|Başlatan yöntem `ValueChanged` olay.|  
   
 > [!NOTE]
->  `FlashTrackBar` kullanan <xref:System.EventArgs> olay verileri için sınıf ve <xref:System.EventHandler> olay temsilci için.  
+>  `FlashTrackBar` kullanan <xref:System.EventArgs> olay veri sınıfı ve <xref:System.EventHandler> olay temsilci için.  
   
- Karşılık gelen işlemek için *EventName* olayları `FlashTrackBar` öğesinden devralınan aşağıdaki yöntemlerini geçersiz kılar <xref:System.Windows.Forms.Control?displayProperty=nameWithType>:  
+ Buna karşılık gelen işlemek için *EventName* olayları `FlashTrackBar` devraldığı aşağıdaki yöntemleri geçersiz kılan <xref:System.Windows.Forms.Control?displayProperty=nameWithType>:  
   
 -   <xref:System.Windows.Forms.Control.OnPaint%2A>  
   
@@ -69,7 +69,7 @@ Aşağıdaki kod örneğinde adlı özel bir denetim gösterilir `FlashTrackBar`
   
 -   <xref:System.Windows.Forms.Control.OnResize%2A>  
   
- Karşılık gelen özellik değişti olayları işlemek için `FlashTrackBar` öğesinden devralınan aşağıdaki yöntemlerini geçersiz kılar <xref:System.Windows.Forms.Control?displayProperty=nameWithType>:  
+ Karşılık gelen özellik değişti olayları işlemek için `FlashTrackBar` devraldığı aşağıdaki yöntemleri geçersiz kılan <xref:System.Windows.Forms.Control?displayProperty=nameWithType>:  
   
 -   <xref:System.Windows.Forms.Control.OnBackColorChanged%2A>  
   
@@ -78,7 +78,7 @@ Aşağıdaki kod örneğinde adlı özel bir denetim gösterilir `FlashTrackBar`
 -   <xref:System.Windows.Forms.Control.OnTextChanged%2A>  
   
 ## <a name="example"></a>Örnek  
- `FlashTrackBar` Denetim tanımlayan iki UI türü düzenleyici `FlashTrackBarValueEditor` ve `FlashTrackBarDarkenByEditor`, aşağıdaki kod listesinde gösterilir. `HostApp` Sınıfını kullanan `FlashTrackBar` bir Windows formunda denetimi.  
+ `FlashTrackBar` Denetimi tanımlayan iki kullanıcı Arabirimi tür düzenleyicileri `FlashTrackBarValueEditor` ve `FlashTrackBarDarkenByEditor`, aşağıdaki kod listelerinde gösterilir. `HostApp` Sınıfının kullandığı `FlashTrackBar` bir Windows formunda denetimi.  
   
  [!code-csharp[System.Windows.Forms.FlashTrackBar#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#1)]
  [!code-vb[System.Windows.Forms.FlashTrackBar#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#1)]  
@@ -93,5 +93,5 @@ Aşağıdaki kod örneğinde adlı özel bir denetim gösterilir `FlashTrackBar`
  [!code-vb[System.Windows.Forms.FlashTrackBar#30](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/HostApp.vb#30)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Tasarım zamanı desteği genişletme](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
+ [Tasarım zamanı desteği sunma](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
  [Windows Forms Denetimi Geliştirmenin Esasları](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)

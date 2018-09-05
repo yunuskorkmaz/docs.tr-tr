@@ -2,18 +2,18 @@
 title: 'Nasıl yapılır: DataContractSerializer (C#) kullanarak serileştirme'
 ms.date: 07/20/2015
 ms.assetid: 3320ecbf-cdbe-480e-979c-2c14bbef9988
-ms.openlocfilehash: 1b2ec431698f23ea0c3e690cd57261bad8b1e4a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c0324b1eeeab9f6cf9223e2a3e201771b188749
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329290"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510997"
 ---
 # <a name="how-to-serialize-using-datacontractserializer-c"></a>Nasıl yapılır: DataContractSerializer (C#) kullanarak serileştirme
-Bu konuda, serileştirir ve kullanılarak seri durumdan çıkarır bir örnek gösterilmektedir <xref:System.Runtime.Serialization.DataContractSerializer>.  
+Bu konuda serileştirir ve kullanarak çıkarır bir örnek gösterilmektedir <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir dizi içeren nesneleri oluşturur <xref:System.Xml.Linq.XElement> nesneleri. Bunları metin dosyalarına serileştirir ve bunları metin dosyalarından çıkarır.  
+ Aşağıdaki örnek, bir sayı içeren bir nesne oluşturur. <xref:System.Xml.Linq.XElement> nesneleri. Daha sonra bunları metin dosyalarına serileştirir ve bunları metin dosyalarından serisini kaldırır.  
   
 ```csharp  
 using System;  
@@ -80,7 +80,7 @@ public class XElementNullContainer
 }  
 ```  
   
- Bu örnek şu çıkışı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```  
 Testing for type: System.Xml.Linq.XElement  
@@ -91,5 +91,6 @@ Testing for type: XElementNullContainer
   Deserialized type: XElementNullContainer  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [XElement nesneler (C#) içeren nesne grafiklerinin seri hale getirme](../../../../csharp/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [XElement nesneleri (C#) içeren nesne grafiklerini serileştirme](../../../../csharp/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)

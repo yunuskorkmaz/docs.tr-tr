@@ -3,11 +3,11 @@ title: ADO.NET teknoloji seçenekleri ve yönergeleri
 ms.date: 03/30/2017
 ms.assetid: c8577281-38e6-4ce5-b036-572039a4c3d8
 ms.openlocfilehash: 7312b2eae0e307fa50c89d37918403ee33412ec3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43403941"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43507998"
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>ADO.NET teknoloji seçenekleri ve yönergeleri
 ADO.NET veri platformu, kodlama ve kavramsal varlık veri modelleri karşı programlamak için sağlayarak geliştiriciler için gerekli bakım miktarını azaltmak için bir çoklu sürüm stratejisidir. Bu platform, ADO.NET varlık çerçevesi ve ilgili teknolojileri içerir.  

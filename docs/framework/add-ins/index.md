@@ -15,11 +15,11 @@ ms.assetid: 8dd45b02-7218-40f9-857d-40d7b98b850b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: eb2485f2ecf0426360dba80d443500a92b5a7af6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482229"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510060"
 ---
 # <a name="add-ins-and-extensibility"></a>Eklentiler ve Genişletilebilirlik
 <a name="top"></a> Genişletilmiş özellikler veya hizmetler bir Windows uygulaması için eklentiler sağlar. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Geliştiriciler eklentileri geliştirmek ve bunları ana bilgisayar uygulamalarını etkinleştirmek için kullanabileceğiniz bir programlama modeli sağlar. Model bir ana bilgisayar ile eklenti arasındaki iletişim hattının oluşturularak elde eder. Model türleri kullanarak uygulanan <xref:System.AddIn>, <xref:System.AddIn.Hosting>, <xref:System.AddIn.Pipeline>, ve <xref:System.AddIn.Contract> ad alanları.  

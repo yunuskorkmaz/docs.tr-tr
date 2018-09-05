@@ -7,192 +7,192 @@ helpviewer_keywords:
 - controls [Windows Forms], arranging with FlowLayoutPanel
 - layout [Windows Forms], walkthroughs
 ms.assetid: a1744323-0316-49c2-992e-ebfc0a976b85
-ms.openlocfilehash: 573a0b8ee8e3fafea15b1fd111334da773beef11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5c1f4ec53831662bd25f1f15dc1973440067b32c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541774"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43674050"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel"></a>İzlenecek yol: FlowLayoutPanel Kullanarak Windows Forms'ta Denetimleri Düzenleme
-Bazı uygulamalar kendisini formun boyutlandırıldığında veya içeriği boyutunu değiştirmek gibi uygun şekilde düzenler bir düzen formla gerektirir. Ne zaman dinamik düzen gerekir ve işlemek istemediğiniz <xref:System.Windows.Forms.Control.Layout> açıkça kodunuzda olayları, bir düzen panel kullanmayı düşünün.  
+Bazı uygulamalar, kendisini formu yeniden boyutlandırıldığından veya içeriği boyutu değiştikçe uygun şekilde düzenler bir düzene sahip bir form gerektirir. Ne zaman dinamik bir düzen gerekir ve işlemek istemediğiniz <xref:System.Windows.Forms.Control.Layout> açıkça kodunuzda olayları, Düzen panelini kullanma göz önünde bulundurun.  
   
- <xref:System.Windows.Forms.FlowLayoutPanel> Denetim ve <xref:System.Windows.Forms.TableLayoutPanel> denetimi, form üzerinde denetimleri düzenlemek için sezgisel yollar sağlar. Her ikisini birden içerdiği alt denetimleri göreli konumları denetlemek için otomatik, yapılandırılabilir bir beceri sağlar ve yeniden boyutlandırma ve alt denetimleri üst formu boyutları olarak yeniden konumlandırmak için her ikisi de, çalışma zamanında dinamik düzen özelliklerini verin değiştirin. Düzen panelleri gelişmiş kullanıcı arabirimleri gerçekleştirme etkinleştirmek için Düzen panelleri içinde iç içe.  
+ <xref:System.Windows.Forms.FlowLayoutPanel> Denetimi ve <xref:System.Windows.Forms.TableLayoutPanel> denetimi, form üzerinde denetimleri düzenlemek için sezgisel yolu sağlayın. Her ikisini birden içerdiği alt denetimler göreli konumlarını denetlemek için otomatik, yapılandırılabilir bir yeteneği sağlar ve yeniden boyutlandırma ve alt denetimler üst formun boyutları yeniden konumlandırmak için hem de çalışma zamanında dinamik düzen özelliklerini size değiştirin. Düzen bölmeleri, gelişmiş kullanıcı arabirimleri gerçekleştirme etkinleştirmek için Düzen panelleri içinde yuvalanabilir.  
   
- <xref:System.Windows.Forms.TableLayoutPanel> İçeriğini HTML benzer işlevsellik sağlayan bir kılavuz düzenler \<Tablo > öğesi. Satırları ve sütunları hücrelerinden düzenlenir ve bunlar farklı boyutlarda olabilir. Daha fazla bilgi için bkz: [izlenecek yol: Windows Forms kullanarak bir TableLayoutPanel düzenleme denetimleri](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).  
+ <xref:System.Windows.Forms.TableLayoutPanel> İçeriğinin HTML benzer işlevsellik sağlayan bir kılavuzda düzenler \<Tablo > öğesi. Satırları ve sütunları hücrelerinden düzenlenir ve bu farklı boyutlarda olabilir. Daha fazla bilgi için [izlenecek yol: Windows Forms kullanarak TableLayoutPanel düzenleme denetimleri](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).  
   
- <xref:System.Windows.Forms.FlowLayoutPanel> İçeriğini belirli akış yönü düzenler: yatay veya dikey. İçeriği, bir sonraki satıra veya sonraki bir sütuna sarmalamak. Alternatif olarak, içeriği yerine kırpılmış gibi sarılır. Bu örneklerde gösterilen görevler aşağıdakileri içerir:  
+ <xref:System.Windows.Forms.FlowLayoutPanel> İçeriğini belirli bir akış yönünü ayarlar: yatay veya dikey. İçeriği sonraki bir satır veya sonraki bir sütun sarmalanabilir. Alternatif olarak, içeriğinin yerine kırpılmış DC'de sona erdi. Bu kılavuzda gösterilen görevler aşağıdakileri içerir:  
   
--   Windows Forms projesi oluşturma  
+-   Bir Windows Forms projesi oluşturma  
   
--   Yatay ve dikey olarak denetimleri düzenleme  
+-   Denetimleri yatay ve dikey olarak düzenleme  
   
 -   Akış yönü değiştirme  
   
--   Akış sonları ekleme  
+-   Ekleme akış sonu  
   
--   Doldurma ve kenar boşlukları kullanarak denetimleri düzenleme  
+-   Doldurma ve kenar boşluklarını kullanarak denetimleri düzenleme  
   
--   Araç kutusunda çift tıklatarak denetimler ekleme  
+-   Araç kutusunda çift tıklayarak denetimler ekleme  
   
 -   Anahattı çizerek bir denetim ekleme  
   
--   Şapka kullanarak denetimler ekleme  
+-   Şapka karakterini kullanarak denetimleri ekleme  
   
 -   Mevcut denetimleri farklı bir üst öğeye yeniden atama  
   
- İşiniz bittiğinde, bu önemli yerleşim özellikleri tarafından oynadığı rol anlaşılması gerekir.  
+ İşlemi tamamladığınızda, bu önemli bir düzen özellikleri tarafından oynadığı rol, bir anlayışa sahip olacaksınız.  
   
 > [!NOTE]
->  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ## <a name="creating-the-project"></a>Projeyi Oluşturma  
- Projeyi oluşturmak ve formu ayarlamak için ilk adımdır bakın.  
+ İlk adım projeyi oluşturmak ve formu ayarlamaktır.  
   
 #### <a name="to-create-the-project"></a>Proje oluşturmak için  
   
-1.  "FlowLayoutPanelExample" adlı bir Windows tabanlı bir uygulama projesi oluşturun. Daha fazla bilgi için bkz: [nasıl yapılır: bir Windows uygulaması projesi oluşturduğunuzda](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+1.  "FlowLayoutPanelExample" adlı bir Windows tabanlı uygulama projesi oluşturun (**dosya** > **yeni** > **proje**  >  **Visual C#** veya **Visual Basic** > **Klasik Masaüstü** > **Windows Forms uygulamalarındaki**).  
   
-2.  Formda seçin **Forms Tasarımcısı**.  
+2.  Formda seçin **Form Tasarımcısı**.  
   
-## <a name="arranging-controls-horizontally-and-vertically"></a>Yatay ve dikey olarak denetimleri düzenleme  
- <xref:System.Windows.Forms.FlowLayoutPanel> Denetim tam olarak her denetim konumunu belirtmek gerek kalmadan satır veya sütun boyunca denetimleri yerleştirin olanak tanır.  
+## <a name="arranging-controls-horizontally-and-vertically"></a>Denetimleri yatay ve dikey olarak düzenleme  
+ <xref:System.Windows.Forms.FlowLayoutPanel> Denetimi satır veya sütun boyunca denetimleri tam olarak her denetim konumunu belirtmek gerek kalmadan yerleştirmenize olanak sağlar.  
   
- <xref:System.Windows.Forms.FlowLayoutPanel> Denetim yeniden boyutlandırın veya onun alt denetimleri üst form değişiklik boyutları olarak yeniden akışı.  
+ <xref:System.Windows.Forms.FlowLayoutPanel> Denetimi yeniden boyutlandırma veya üst formu değişiklik boyutları, alt denetimlerini yeniden akışı.  
   
-#### <a name="to-arrange-controls-horizontally-and-vertically-using-a-flowlayoutpanel"></a>Yatay ve dikey olarak FlowLayoutPanel kullanarak denetimlerini düzenlemek için  
+#### <a name="to-arrange-controls-horizontally-and-vertically-using-a-flowlayoutpanel"></a>Denetimleri yatay ve dikey olarak FlowLayoutPanel kullanarak düzenlemek için  
   
-1.  Sürükleme bir <xref:System.Windows.Forms.FlowLayoutPanel> gelen denetim **araç** formunuza.  
+1.  Sürükleme bir <xref:System.Windows.Forms.FlowLayoutPanel> denetimi **araç kutusu** formunuza.  
   
-2.  Sürükleme bir <xref:System.Windows.Forms.Button> gelen denetim **araç** içine <xref:System.Windows.Forms.FlowLayoutPanel>. İçin sol üst köşesindeki otomatik olarak taşınır Not <xref:System.Windows.Forms.FlowLayoutPanel> denetim.  
+2.  Sürükleme bir <xref:System.Windows.Forms.Button> denetimi **araç kutusu** içine <xref:System.Windows.Forms.FlowLayoutPanel>. İçin sol üst köşesindeki otomatik olarak taşınır Not <xref:System.Windows.Forms.FlowLayoutPanel> denetimi.  
   
-3.  Başka bir sürükleyin <xref:System.Windows.Forms.Button> gelen denetim **araç** içine <xref:System.Windows.Forms.FlowLayoutPanel>. Unutmayın <xref:System.Windows.Forms.Button> denetim ilk yanında bir konuma taşındı otomatik olarak <xref:System.Windows.Forms.Button> denetim. Varsa, <xref:System.Windows.Forms.FlowLayoutPanel> aynı satırda iki denetimleri sığması için çok dar yeni <xref:System.Windows.Forms.Button> denetim sonraki satıra otomatik olarak taşındı.  
+3.  Başka bir sürükleyin <xref:System.Windows.Forms.Button> denetimi **araç kutusu** içine <xref:System.Windows.Forms.FlowLayoutPanel>. Unutmayın <xref:System.Windows.Forms.Button> denetimi ilk yanında bir konuma otomatik olarak taşınır <xref:System.Windows.Forms.Button> denetimi. Varsa, <xref:System.Windows.Forms.FlowLayoutPanel> iki denetimi aynı satırdaki sığdırmak için çok dar yeni <xref:System.Windows.Forms.Button> denetimi otomatik olarak sonraki satıra taşınır.  
   
-4.  Birkaç daha sürükleyin <xref:System.Windows.Forms.Button> gelen denetimleri **araç** içine <xref:System.Windows.Forms.FlowLayoutPanel>. Yerleştirme devam <xref:System.Windows.Forms.Button> bir sonraki satıra sarmalar kadar denetler.  
+4.  Daha fazlasını sürükleyin <xref:System.Windows.Forms.Button> denetimler **araç kutusu** içine <xref:System.Windows.Forms.FlowLayoutPanel>. Yerleştirmeye devam <xref:System.Windows.Forms.Button> bir sonraki satıra kaydırılacağını kadar denetler.  
   
-5.  Değerini değiştirme <xref:System.Windows.Forms.FlowLayoutPanel> denetimin <xref:System.Windows.Forms.FlowLayoutPanel.WrapContents%2A> özelliğine `false`. Alt artık sonraki satıra akışına denetimleri unutmayın. Bunun yerine, bunlar ilk satırın taşınır ve kırpılır.  
+5.  Değiştirin <xref:System.Windows.Forms.FlowLayoutPanel> denetimin <xref:System.Windows.Forms.FlowLayoutPanel.WrapContents%2A> özelliğini `false`. Alt artık sonraki satırda akışına denetimleri unutmayın. Bunun yerine, bunlar ilk satırın taşınır ve kırpılır.  
   
-6.  Değerini değiştirme <xref:System.Windows.Forms.FlowLayoutPanel> denetimin <xref:System.Windows.Forms.FlowLayoutPanel.WrapContents%2A> özelliğine `true`. Alt yeniden sonraki satıra kaydırılır denetimleri unutmayın.  
+6.  Değiştirin <xref:System.Windows.Forms.FlowLayoutPanel> denetimin <xref:System.Windows.Forms.FlowLayoutPanel.WrapContents%2A> özelliğini `true`. Alt yeniden sonraki satırda kaydırılır denetimleri unutmayın.  
   
-7.  Genişliğini azaltma <xref:System.Windows.Forms.FlowLayoutPanel> tüm kadar denetim <xref:System.Windows.Forms.Button> denetimleri ilk sütuna taşınır.  
+7.  Genişliğini azaltma <xref:System.Windows.Forms.FlowLayoutPanel> kadar tüm denetim <xref:System.Windows.Forms.Button> denetimleri ilk sütuna taşınır.  
   
-8.  Genişliğini artırmak <xref:System.Windows.Forms.FlowLayoutPanel> tüm kadar denetim <xref:System.Windows.Forms.Button> denetimleri, ilk satırın taşınır. Formunuz büyük genişliği uyum sağlayacak şekilde yeniden boyutlandırmak gerekebilir.  
+8.  Genişliğini artırın <xref:System.Windows.Forms.FlowLayoutPanel> kadar tüm denetim <xref:System.Windows.Forms.Button> denetimleri, ilk satırın taşınır. Formunuza büyük genişliğini uyum sağlayacak şekilde yeniden boyutlandırmak gerekebilir.  
   
 ## <a name="changing-flow-direction"></a>Akış yönü değiştirme  
- <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> Özelliği denetimleri düzenlenir yönünü değiştirmek olanak tanır. Alt denetimler soldan sağa sağdan sola, yukarıdan aşağıya veya aşağıdan yukarı gelen düzenleyebilirsiniz.  
+ <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> Özelliği denetimleri düzenlenir yönünü değiştirmenize izin verir. Alt denetimler soldan sağa, sağdan sola, yukarıdan aşağıya veya aşağıdan yukarıya gelen düzenleyebilirsiniz.  
   
 #### <a name="to-change-the-flow-direction-in-a-flowlayoutpanel"></a>FlowLayoutPanel akış yönünü değiştirmek için  
   
-1.  Değerini değiştirme <xref:System.Windows.Forms.FlowLayoutPanel> denetimin <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> özelliğine <xref:System.Windows.Forms.FlowDirection.TopDown>. Alt denetimler denetimin yüksekliğini bağlı olarak, bir veya daha fazla sütunlara düzenlenir unutmayın.  
+1.  Değiştirin <xref:System.Windows.Forms.FlowLayoutPanel> denetimin <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> özelliğini <xref:System.Windows.Forms.FlowDirection.TopDown>. Alt denetimler denetimin yüksekliği bağlı olarak, bir veya daha fazla sütunlara düzenlenir unutmayın.  
   
-2.  Yeniden boyutlandırma <xref:System.Windows.Forms.FlowLayoutPanel> yüksekliğini sütunu kısa olacak şekilde <xref:System.Windows.Forms.Button> kontrol eder. Unutmayın <xref:System.Windows.Forms.FlowLayoutPanel> sonraki sütuna akış için alt denetimleri yeniden düzenler. Yükseklik azalan devam ve alt ardışık sütunlara akışını denetler not edin. Değerini değiştirme <xref:System.Windows.Forms.FlowLayoutPanel> denetimin <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> özelliğine <xref:System.Windows.Forms.FlowDirection.RightToLeft>. Alt denetimler konumlarını ters gerektiğini unutmayın. Değerini değiştirdiğinizde düzeni gözlemlemek <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> özelliğine <xref:System.Windows.Forms.FlowDirection.BottomUp>.  
+2.  Yeniden boyutlandırma <xref:System.Windows.Forms.FlowLayoutPanel> yükseklik sütunu kısa olacak şekilde <xref:System.Windows.Forms.Button> kontrol eder. Unutmayın <xref:System.Windows.Forms.FlowLayoutPanel> sonraki sütuna akışı alt denetimleri yeniden düzenler. Devam yüksekliğini azaltmak ve alt akış ardışık sütunlara denetimleri dikkat edin. Değiştirin <xref:System.Windows.Forms.FlowLayoutPanel> denetimin <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> özelliğini <xref:System.Windows.Forms.FlowDirection.RightToLeft>. Alt denetimler konumlarını ters gerektiğini unutmayın. Değerini değiştirdiğinizde düzenini gözlemleyin <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> özelliğini <xref:System.Windows.Forms.FlowDirection.BottomUp>.  
   
-## <a name="inserting-flow-breaks"></a>Akış sonları ekleme  
- <xref:System.Windows.Forms.FlowLayoutPanel> Denetim alt denetimlerinden FlowBreak özelliğine sağlar. FlowBreak özelliğinin değerini ayarlama `true` neden <xref:System.Windows.Forms.FlowLayoutPanel> denetim geçerli akış yönü ve bir sonraki satır veya sütun kaydırılır denetimlerinde düzenlemeyi durdur.  
+## <a name="inserting-flow-breaks"></a>Ekleme akış sonu  
+ <xref:System.Windows.Forms.FlowLayoutPanel> Denetim, alt denetimlerini FlowBreak özellik sağlar. FlowBreak özelliğin değerini ayarlamak `true` neden <xref:System.Windows.Forms.FlowLayoutPanel> sonraki satır veya sütun kaydırılır ve geçerli akış yönü denetimlerinde düzenlemeyi durdurmak için denetimi.  
   
-#### <a name="to-insert-flow-breaks"></a>Akış sonları eklemek için  
+#### <a name="to-insert-flow-breaks"></a>Akış sonu eklemek için  
   
-1.  Değerini değiştirme <xref:System.Windows.Forms.FlowLayoutPanel> denetimin <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> özelliğine <xref:System.Windows.Forms.FlowDirection.TopDown>.  
+1.  Değiştirin <xref:System.Windows.Forms.FlowLayoutPanel> denetimin <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> özelliğini <xref:System.Windows.Forms.FlowDirection.TopDown>.  
   
-2.  Aşağıdakilerden birini seçin <xref:System.Windows.Forms.Button> en soldaki sütunu ortasında kontrol eder.  
+2.  Birini <xref:System.Windows.Forms.Button> en soldaki sütuna ortasında denetimleri.  
   
-3.  Değerini <xref:System.Windows.Forms.Button> denetimin FlowBreak özelliğine `true`. Sütun bozuk olduğunu unutmayın ve seçili aşağıdaki denetimleri <xref:System.Windows.Forms.Button> sonraki sütununa akışı denetle. Değerini <xref:System.Windows.Forms.Button> denetimin FlowBreak özelliğine `false` özgün davranışa geri dönmek için.  
+3.  Değerini <xref:System.Windows.Forms.Button> denetimin FlowBreak özelliğini `true`. Sütun bozuk olduğunu unutmayın ve seçili aşağıdaki denetimleri <xref:System.Windows.Forms.Button> denetim akışı bir sonraki sütuna. Değerini <xref:System.Windows.Forms.Button> denetimin FlowBreak özelliğini `false` başlangıçtaki davranışı için döndürülecek.  
   
-## <a name="positioning-controls-using-docking-and-anchoring"></a>Denetimleri sabitleme ve yerleştirme kullanarak konumlandırma  
- Yerleşen ve davranışları alt denetimleri sabitleme diğer kapsayıcı denetimleri davranışları farklıdır. Yerleştirme hem de bağlama en büyük denetim akış yönüne göre değişir.  
+## <a name="positioning-controls-using-docking-and-anchoring"></a>Sabitleme ve yerleştirme kullanarak denetimleri konumlandırma  
+ Davranışlar alt denetimleri sabitleme ve yerleştirme diğer kapsayıcı denetimleri davranışları farklıdır. Hem yerleşik hem de bağlama göre akış yönü en büyük denetiminde olan.  
   
 #### <a name="to-position-controls-using-docking-and-anchoring"></a>Denetimleri sabitleme ve yerleştirme kullanarak konumlandırmak için  
   
-1.  Boyutunu artırın <xref:System.Windows.Forms.FlowLayoutPanel> kadar <xref:System.Windows.Forms.Button> denetimleri tüm düzenlenir bir sütun.  
+1.  Boyutu arttırmak <xref:System.Windows.Forms.FlowLayoutPanel> kadar <xref:System.Windows.Forms.Button> denetimleri tüm düzenlenir bir sütun.  
   
-2.  Üst seçin <xref:System.Windows.Forms.Button> denetim. İlgili olmasını sağlamak genişliğini artırmak iki katı kadar geniş halinde diğer <xref:System.Windows.Forms.Button> kontrol eder.  
+2.  Üst <xref:System.Windows.Forms.Button> denetimi. Böylece ilgili olduğunu genişliğini artırmak iki katı kadar geniş diğer <xref:System.Windows.Forms.Button> denetimleri.  
   
-3.  İkinci seçin <xref:System.Windows.Forms.Button> denetim. Değerini değiştirmek kendi <xref:System.Windows.Forms.Control.Anchor%2A> özelliğine <xref:System.Windows.Forms.AnchorStyles.Right>. Sağ kenarlığın hizalanır böylece bu taşınır Not ilk ile <xref:System.Windows.Forms.Button> denetimin sağ kenarlık.  
+3.  İkinci seçin <xref:System.Windows.Forms.Button> denetimi. Değerini değiştirebilir, <xref:System.Windows.Forms.Control.Anchor%2A> özelliğini <xref:System.Windows.Forms.AnchorStyles.Right>. Böylece doğru kenarlığını hizalanmış, taşınır unutmayın ilk <xref:System.Windows.Forms.Button> denetimin sağ kenarlık.  
   
-4.  Değerini değiştirmek kendi <xref:System.Windows.Forms.Control.Anchor%2A> özelliğine <xref:System.Windows.Forms.AnchorStyles.Right> ve <xref:System.Windows.Forms.AnchorStyles.Left>. Bu ilk aynı genişliğe boyutlandırılır Not <xref:System.Windows.Forms.Button> denetim.  
+4.  Değerini değiştirebilir, <xref:System.Windows.Forms.Control.Anchor%2A> özelliğini <xref:System.Windows.Forms.AnchorStyles.Right> ve <xref:System.Windows.Forms.AnchorStyles.Left>. İlk olarak aynı genişliğe boyutlandırılır unutmayın <xref:System.Windows.Forms.Button> denetimi.  
   
-5.  Üçüncü seçin <xref:System.Windows.Forms.Button> denetim. Değerini değiştirmek kendi <xref:System.Windows.Forms.Control.Dock%2A> özelliğine <xref:System.Windows.Forms.DockStyle.Fill>. Bu ilk aynı genişliğe boyutlandırılır Not <xref:System.Windows.Forms.Button> denetim.  
+5.  Üçüncü seçin <xref:System.Windows.Forms.Button> denetimi. Değerini değiştirebilir, <xref:System.Windows.Forms.Control.Dock%2A> özelliğini <xref:System.Windows.Forms.DockStyle.Fill>. İlk olarak aynı genişliğe boyutlandırılır unutmayın <xref:System.Windows.Forms.Button> denetimi.  
   
-## <a name="arranging-controls-using-padding-and-margins"></a>Doldurma ve kenar boşlukları kullanarak denetimleri düzenleme  
- Denetimleri de düzenleyebilirsiniz, <xref:System.Windows.Forms.FlowLayoutPanel> değiştirerek denetim <xref:System.Windows.Forms.Control.Padding%2A> ve <xref:System.Windows.Forms.Control.Margin%2A> özellikleri.  
+## <a name="arranging-controls-using-padding-and-margins"></a>Doldurma ve kenar boşluklarını kullanarak denetimleri düzenleme  
+ Denetimleri de düzenleyebilirsiniz, <xref:System.Windows.Forms.FlowLayoutPanel> değiştirerek denetimi <xref:System.Windows.Forms.Control.Padding%2A> ve <xref:System.Windows.Forms.Control.Margin%2A> özellikleri.  
   
- <xref:System.Windows.Forms.Control.Padding%2A> Özelliği sağlar, denetimleri içinde yerleşimini denetlemek bir <xref:System.Windows.Forms.FlowLayoutPanel> denetimin hücre. Alt denetimler arasındaki boşluğu belirtir ve <xref:System.Windows.Forms.FlowLayoutPanel> denetimin kenarlığının.  
+ <xref:System.Windows.Forms.Control.Padding%2A> Özelliği sayesinde içindeki denetimleri yerleşimini denetlemek bir <xref:System.Windows.Forms.FlowLayoutPanel> denetimin hücre. Alt denetimler arasındaki boşluğu belirtir ve <xref:System.Windows.Forms.FlowLayoutPanel> Denetimin kenarlık.  
   
- <xref:System.Windows.Forms.Control.Margin%2A> Özellik denetimler arasındaki boşlukları denetlemenize olanak tanır.  
+ <xref:System.Windows.Forms.Control.Margin%2A> Özellik denetimler arasındaki aralığı denetlemenize olanak tanır.  
   
-#### <a name="to-arrange-controls-using-the-padding-and-margin-properties"></a>Doldurma ve kenar boşluğu özelliklerini kullanarak denetimlerini düzenlemek için  
+#### <a name="to-arrange-controls-using-the-padding-and-margin-properties"></a>Doldurma ve kenar boşluğu özelliklerini kullanarak denetimleri düzenlemek için  
   
-1.  Değerini değiştirme <xref:System.Windows.Forms.FlowLayoutPanel> denetimin <xref:System.Windows.Forms.Control.Dock%2A> özelliğine <xref:System.Windows.Forms.DockStyle.Fill>. Formunuz yeteri kadar büyük olursa <xref:System.Windows.Forms.Button> denetimleri ilk sütununa taşınmış <xref:System.Windows.Forms.FlowLayoutPanel> denetim.  
+1.  Değiştirin <xref:System.Windows.Forms.FlowLayoutPanel> denetimin <xref:System.Windows.Forms.Control.Dock%2A> özelliğini <xref:System.Windows.Forms.DockStyle.Fill>. Formunuza yeteri kadar büyük olursa <xref:System.Windows.Forms.Button> denetimleri ilk sütuna taşınacak <xref:System.Windows.Forms.FlowLayoutPanel> denetimi.  
   
-2.  Değerini değiştirme <xref:System.Windows.Forms.FlowLayoutPanel> denetimin <xref:System.Windows.Forms.Control.Padding%2A> genişleterek özelliği <xref:System.Windows.Forms.Control.Padding%2A> girişi **özellikleri** penceresi ve ayarı <xref:System.Windows.Forms.Padding.All%2A> özelliğine **20**. Daha fazla bilgi için bkz: [izlenecek yol: yerleştirmede çıkışı Windows Forms denetimleri doldurma, kenar boşlukları ve AutoSize özelliği ile](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md). Alt denetimler merkezine taşınır Not <xref:System.Windows.Forms.FlowLayoutPanel> denetim. Artan değeri <xref:System.Windows.Forms.Control.Padding%2A> özelliği iter merkezden alt denetimleri <xref:System.Windows.Forms.FlowLayoutPanel> denetimin kenarlıklar.  
+2.  Değiştirin <xref:System.Windows.Forms.FlowLayoutPanel> denetimin <xref:System.Windows.Forms.Control.Padding%2A> özelliği genişleterek <xref:System.Windows.Forms.Control.Padding%2A> girişi **özellikleri** penceresi ve ayarı <xref:System.Windows.Forms.Padding.All%2A> özelliğini **20**. Daha fazla bilgi için [izlenecek yol: yerleştirme kullanıma Windows Forms denetimleri doldurma, kenar boşlukları ve AutoSize özelliği ile](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md). Alt denetimler merkezine taşınır Not <xref:System.Windows.Forms.FlowLayoutPanel> denetimi. Daha fazla değer için <xref:System.Windows.Forms.Control.Padding%2A> özelliği liste kutusundan alt denetimler gönderim <xref:System.Windows.Forms.FlowLayoutPanel> Denetimin kenarlık.  
   
-3.  Tümünü seçmek <xref:System.Windows.Forms.Button> denetimlerini <xref:System.Windows.Forms.FlowLayoutPanel> ve değeri ayarlayın <xref:System.Windows.Forms.Control.Margin%2A> özelliğine **20**. Unutmayın arasındaki boşluğu <xref:System.Windows.Forms.Button> daha fazla bunlar parçalayın taşınır şekilde arttıkça denetler. Yeniden boyutlandırma gerekebilir <xref:System.Windows.Forms.FlowLayoutPanel> denetim tüm alt denetimleri görmek için daha büyük olmalıdır.  
+3.  Tümünü seçmek <xref:System.Windows.Forms.Button> denetimlerini <xref:System.Windows.Forms.FlowLayoutPanel> ve değerini ayarlama <xref:System.Windows.Forms.Control.Margin%2A> özelliğini **20**. Unutmayın aralığını <xref:System.Windows.Forms.Button> arttıkça daha sonraya taşındıktan şekilde denetler. Yeniden boyutlandırma gerekebilir <xref:System.Windows.Forms.FlowLayoutPanel> denetimi tüm alt denetimleri görmek için daha büyük olabilir.  
   
-## <a name="inserting-controls-by-double-clicking-them-in-the-toolbox"></a>Araç kutusunda çift tıklatarak denetimler ekleme  
- Doldurmak, <xref:System.Windows.Forms.FlowLayoutPanel> denetimlerinde çift tıklatarak denetim **araç**.  
+## <a name="inserting-controls-by-double-clicking-them-in-the-toolbox"></a>Araç kutusunda çift tıklayarak denetimler ekleme  
+ Doldurabilirsiniz, <xref:System.Windows.Forms.FlowLayoutPanel> denetimlerinde çift tıklayarak denetim **araç kutusu**.  
   
-#### <a name="to-insert-controls-by-double-clicking-in-the-toolbox"></a>Araç kutusunda çift tıklatarak denetim eklemek için  
+#### <a name="to-insert-controls-by-double-clicking-in-the-toolbox"></a>Araç kutusunda çift tıklayarak denetim eklemek için  
   
-1.  Çift <xref:System.Windows.Forms.Button> denetim simgesinde **araç**. Unutmayın yeni <xref:System.Windows.Forms.Button> denetimi görünür <xref:System.Windows.Forms.FlowLayoutPanel> denetim.  
+1.  Çift <xref:System.Windows.Forms.Button> denetim simgesini **araç kutusu**. Unutmayın yeni <xref:System.Windows.Forms.Button> denetimi görünür <xref:System.Windows.Forms.FlowLayoutPanel> denetimi.  
   
-2.  Daha fazla denetimlerinde çift **araç**. Yeni denetimleri sırayla içinde göründüğüne dikkat edin <xref:System.Windows.Forms.FlowLayoutPanel> denetim.  
+2.  Daha fazla denetimlerinde çift **araç kutusu**. Yeni denetimler sırayla da göründüğünü fark <xref:System.Windows.Forms.FlowLayoutPanel> denetimi.  
   
 ## <a name="inserting-a-control-by-drawing-its-outline"></a>Anahattı çizerek bir denetim ekleme  
- Bir denetime ekleyebilirsiniz bir <xref:System.Windows.Forms.FlowLayoutPanel> denetlemek ve bir hücreye anahattı çizerek boyutunu belirtin.  
+ Bir denetime eklemek bir <xref:System.Windows.Forms.FlowLayoutPanel> denetlemek ve bir hücrede anahattı çizerek boyutunu belirtin.  
   
 #### <a name="to-insert-a-control-by-drawing-its-outline"></a>Anahattı çizerek bir denetim eklemek için  
   
-1.  İçinde **araç**, tıklatın <xref:System.Windows.Forms.Button> denetimi simgesi. Bu form üzerine sürükleyin değil.  
+1.  İçinde **araç kutusu**, tıklayın <xref:System.Windows.Forms.Button> denetim simgesi. Form üzerine sürükleyin değil.  
   
-2.  Fare işaretçisini taşıyamazsınız <xref:System.Windows.Forms.FlowLayoutPanel> denetim. Bir artı kıl ile işaretçi Not <xref:System.Windows.Forms.Button> bağlı denetimi simgesi.  
+2.  Fare işaretçisi taşıyabiliyor <xref:System.Windows.Forms.FlowLayoutPanel> denetimi. Bir artı işareti ile işaretçi Not <xref:System.Windows.Forms.Button> bağlı denetim simgesi.  
   
 3.  ' A tıklayın ve fare düğmesini basılı tutun.  
   
-4.  Özetini çizmek için fare işaretçisini sürükleyin <xref:System.Windows.Forms.Button> denetim. Boyutuyla memnun kaldığınızda, fare düğmesini bırakın. Unutmayın <xref:System.Windows.Forms.Button> denetimi sonraki açık konumunda oluşturulur <xref:System.Windows.Forms.FlowLayoutPanel> denetim.  
+4.  Fare işaretçisi ana hat çizmek için sürükleyin <xref:System.Windows.Forms.Button> denetimi. Boyutu ile memnun kaldığınızda, fare düğmesini bırakın. Unutmayın <xref:System.Windows.Forms.Button> denetim sonraki açık konumunda oluşturulur <xref:System.Windows.Forms.FlowLayoutPanel> denetimi.  
   
-## <a name="inserting-controls-using-the-insertion-bar"></a>Ekleme çubuğunu kullanarak denetimler ekleme  
- Belirli bir konumda denetimler ekleme bir <xref:System.Windows.Forms.FlowLayoutPanel> denetim. Bir denetime sürüklediğinizde <xref:System.Windows.Forms.FlowLayoutPanel> denetimin istemci alanı, bir ekleme çubuğunda görünür denetimi ekleneceği belirtmek için.  
+## <a name="inserting-controls-using-the-insertion-bar"></a>Ekleme çubuğunu kullanarak denetimleri ekleme  
+ Belirli bir konumda denetimler ekleyebileceğiniz bir <xref:System.Windows.Forms.FlowLayoutPanel> denetimi. Bir denetime sürüklediğinizde <xref:System.Windows.Forms.FlowLayoutPanel> denetimin istemci alanı, bir ekleme çubuğu görünür denetim ekleneceği belirtmek için.  
   
-#### <a name="to-insert-a-control-using-the-caret"></a>Şapka kullanarak denetim eklemek için  
+#### <a name="to-insert-a-control-using-the-caret"></a>Şapka karakterini kullanarak bir denetim eklemek için  
   
-1.  Sürükleme bir <xref:System.Windows.Forms.Button> gelen denetim **araç** içine <xref:System.Windows.Forms.FlowLayoutPanel> denetlemek ve iki arasındaki boşluğu noktasına <xref:System.Windows.Forms.Button> denetimleri. Bir ekleme çubuğu, where belirten çizileceğini Not <xref:System.Windows.Forms.Button> içine bırakıldığında yerleştirilecek <xref:System.Windows.Forms.FlowLayoutPanel> denetim. Yeni bırakma önce <xref:System.Windows.Forms.Button> içine denetim <xref:System.Windows.Forms.FlowLayoutPanel> denetlemek, yaklaşık nasıl ekleme çubuğu taşır izlemek için fare işaretçisini.  
+1.  Sürükleme bir <xref:System.Windows.Forms.Button> denetimi **araç kutusu** içine <xref:System.Windows.Forms.FlowLayoutPanel> denetlemek ve iki arasındaki boşluk noktasına <xref:System.Windows.Forms.Button> denetimleri. Not ekleme çubuğu, yeri belirten çizileceğini <xref:System.Windows.Forms.Button> içine bırakıldığında yerleştirilecek <xref:System.Windows.Forms.FlowLayoutPanel> denetimi. Yeni atmadan önce <xref:System.Windows.Forms.Button> içine denetim <xref:System.Windows.Forms.FlowLayoutPanel> yaklaşık nasıl ekleme çubuğu taşır gözlemlemek için fare işaretçisini denetim.  
   
-2.  Yeni bırakma <xref:System.Windows.Forms.Button> içine denetim <xref:System.Windows.Forms.FlowLayoutPanel> denetim. Unutmayın yeni <xref:System.Windows.Forms.Button> denetim hizalı değil başkalarıyla, çünkü kendi <xref:System.Windows.Forms.Control.Margin%2A> özelliği farklı bir değere sahip.  
+2.  Yeni açılan <xref:System.Windows.Forms.Button> içine denetim <xref:System.Windows.Forms.FlowLayoutPanel> denetimi. Unutmayın yeni <xref:System.Windows.Forms.Button> denetim hizalı değil başkalarıyla, çünkü kendi <xref:System.Windows.Forms.Control.Margin%2A> özelliği, farklı bir değere sahip.  
   
 ## <a name="reassigning-existing-controls-to-a-different-parent"></a>Mevcut denetimleri farklı bir üst öğeye yeniden atama  
- Yeni bir formunuzda mevcut denetimleri atayabilirsiniz <xref:System.Windows.Forms.FlowLayoutPanel> denetim.  
+ Yeni bir formunuzdaki mevcut denetimleri atayabilirsiniz <xref:System.Windows.Forms.FlowLayoutPanel> denetimi.  
   
-#### <a name="to-reparent-existing-controls"></a>Var olan denetimleri üst öğesini değiştirme için  
+#### <a name="to-reparent-existing-controls"></a>Mevcut denetimleri yeniden üst öğe yap için  
   
-1.  Üç sürükleyin <xref:System.Windows.Forms.Button> gelen denetimleri **araç** forma. Diğer yakınında olmak getirin, ancak bunları hizalanmamış bırakın.  
+1.  Üç sürükleyin <xref:System.Windows.Forms.Button> denetimler **araç kutusu** forma. Birbirine yakın yerleştirin, ancak bunları hizalanmamış bırakın.  
   
-2.  İçinde **araç**, tıklatın <xref:System.Windows.Forms.FlowLayoutPanel> denetimi simgesi. Bu form üzerine sürükleyin değil.  
+2.  İçinde **araç kutusu**, tıklayın <xref:System.Windows.Forms.FlowLayoutPanel> denetim simgesi. Form üzerine sürükleyin değil.  
   
-3.  Fare işaretçisini üç yakın <xref:System.Windows.Forms.Button> kontrol eder. Bir artı kıl ile işaretçi Not <xref:System.Windows.Forms.FlowLayoutPanel> bağlı denetimi simgesi.  
+3.  Fare işaretçisini üç yakın <xref:System.Windows.Forms.Button> kontrol eder. Bir artı işareti ile işaretçi Not <xref:System.Windows.Forms.FlowLayoutPanel> bağlı denetim simgesi.  
   
 4.  ' A tıklayın ve fare düğmesini basılı tutun.  
   
-5.  Özetini çizmek için fare işaretçisini sürükleyin <xref:System.Windows.Forms.FlowLayoutPanel> denetim. Üç çevresinde anahat çizme <xref:System.Windows.Forms.Button> kontrol eder.  
+5.  Fare işaretçisi ana hat çizmek için sürükleyin <xref:System.Windows.Forms.FlowLayoutPanel> denetimi. Üç çevresinde anahat çizmek <xref:System.Windows.Forms.Button> kontrol eder.  
   
-6.  Fare düğmesini bırakın. Unutmayın üç <xref:System.Windows.Forms.Button> denetimleri içine yerleştirildiğinde <xref:System.Windows.Forms.FlowLayoutPanel> denetim.  
+6.  Fare düğmesini bırakın. Unutmayın üç <xref:System.Windows.Forms.Button> denetimleri içine yerleştirildiğinde <xref:System.Windows.Forms.FlowLayoutPanel> denetimi.  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
- Düzen panelleri ve denetimleri birleşimini kullanarak karmaşık bir düzen elde edebilirsiniz. Daha fazla araştırması için öneriler şunlardır:  
+ Düzen bölmeleri ve denetimleri kullanarak karmaşık Düzen elde edebilirsiniz. Daha fazla araştırma için öneriler şunlardır:  
   
--   Aşağıdakilerden birini yeniden boyutlandırın <xref:System.Windows.Forms.Button> denetimleri büyük boyutuna ve Not yerleşim üzerinde etkisi.  
+-   Aşağıdakilerden birini yeniden boyutlandırın <xref:System.Windows.Forms.Button> büyük boyut ve düzenini üzerindeki etkisini Not denetimleri.  
   
--   Düzen panelleri diğer düzen panelleri içerebilir. Deneme bırakma ile bir <xref:System.Windows.Forms.TableLayoutPanel> varolan denetimine denetim.  
+-   Düzen bölmelerini diğer düzen bölmeleri içerebilir. Bırakma ile deneme bir <xref:System.Windows.Forms.TableLayoutPanel> denetime varolan bir denetimi.  
   
--   Yerleştirme <xref:System.Windows.Forms.FlowLayoutPanel> üst form denetimi. Formu yeniden boyutlandırma ve yerleşim üzerinde etkisi not edin.  
+-   Dock <xref:System.Windows.Forms.FlowLayoutPanel> üst form denetimi. Formu yeniden boyutlandırmak ve düzeni üzerindeki etkisini dikkat edin.  
   
--   Ayarlama <xref:System.Windows.Forms.Control.Visible%2A> denetimlere birinin özelliği `false` ve Not nasıl <xref:System.Windows.Forms.FlowLayoutPanel> yanıt olarak yeniden akış.  
+-   Ayarlama <xref:System.Windows.Forms.Control.Visible%2A> özelliği denetimlere birinin `false` ve Not nasıl <xref:System.Windows.Forms.FlowLayoutPanel> yanıt olarak yeniden akış.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.FlowLayoutPanel>  
  <xref:System.Windows.Forms.TableLayoutPanel>  
  [İzlenecek yol: TableLayoutPanel Kullanarak Windows Forms'da Denetimleri Düzenleme](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
  [İzlenecek yol: Dayama Çizgileri Kullanarak Windows Forms'da Denetimleri Düzenleme](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
- [Microsoft Windows kullanıcı deneyimi, kullanıcı arabirimi geliştiricilerin ve tasarımcıların resmi yönergeleri. Redmond, WA: Microsoft Press, 1999. (USBN: 0-7356-0566-1)](http://www.microsoft.com/mspress/southpacific/books/book11588.htm)  
+ [Microsoft Windows kullanıcı deneyimi, kullanıcı arabirimi geliştiricileri ve tasarımcıları için resmi yönergeleri. Redmond, WA: Microsoft Press, 1999. (USBN: 0-7356-0566-1)](https://www.microsoft.com/mspress/southpacific/books/book11588.htm)  
  [AutoSize Özelliğine Genel Bakış](../../../../docs/framework/winforms/controls/autosize-property-overview.md)  
  [Nasıl yapılır: Windows Forms’a Denetimleri Yerleştirme](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)  
  [Nasıl yapılır: Windows Forms’da Denetimleri Bağlama](../../../../docs/framework/winforms/controls/how-to-anchor-controls-on-windows-forms.md)  

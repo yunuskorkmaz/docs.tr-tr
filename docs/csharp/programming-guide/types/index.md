@@ -11,12 +11,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 15f3a774255923aba83f15700540369040c02dcd
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: ba019d4104ec6669ef07b608f40fc1489c994cbf
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961540"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525494"
 ---
 # <a name="types-c-programming-guide"></a>Türler (C# Programlama Kılavuzu)
 ## <a name="types-variables-and-values"></a>Türler, değişkenler ve değerleri  
@@ -99,7 +99,7 @@ int i = 5;
 char c = 'Z';  
 ```  
   
- Değer türleri *korumalı*, yani, örneğin, bir türden türetilemez <xref:System.Int32?displayProperty=nameWithType>, ve bir yapı yalnızca kaynağından devralabileceğinden bir kullanıcı tanımlı sınıf veya yapıdan devralacak bir yapı tanımlayamazsınız <xref:System.ValueType?displayProperty=nameWithType> . Ancak, bir yapının bir veya daha fazla arabirim uygulayabilir. Bir yapı türünü bir arabirim türüne çevirebilirsiniz; Bu neden olan bir *kutulama* yönetilen yığında struct bir başvuru türü nesnesi içine sarmak için işlemi. Kutulama işlemleri, bir değer türü alan bir yönteme geçirdiğinizde meydana bir <xref:System.Object?displayProperty=nameWithType> giriş parametresi olarak. Daha fazla bilgi için [kutulama ve kutudan çıkarma](../../../csharp/programming-guide/types/boxing-and-unboxing.md).  
+ Değer türleri *korumalı*, yani, örneğin, bir türden türetilemez <xref:System.Int32?displayProperty=nameWithType>, ve bir yapı yalnızca kaynağından devralabileceğinden bir kullanıcı tanımlı sınıf veya yapıdan devralacak bir yapı tanımlayamazsınız <xref:System.ValueType?displayProperty=nameWithType> . Ancak, bir yapının bir veya daha fazla arabirim uygulayabilir. Bir yapı türünü uygulayan herhangi bir arabirim türüne çevirebilirsiniz; Bu neden olan bir *kutulama* yönetilen yığında struct bir başvuru türü nesnesi içine sarmak için işlemi. Kutulama işlemleri, bir değer türü alan bir yönteme geçirdiğinizde meydana bir <xref:System.Object?displayProperty=nameWithType> veya herhangi bir arabirim türü giriş parametresi olarak. Daha fazla bilgi için [kutulama ve kutudan çıkarma](../../../csharp/programming-guide/types/boxing-and-unboxing.md).  
   
  Kullandığınız [yapı](../../../csharp/language-reference/keywords/struct.md) kendi özel değer türlerinizi oluşturmak için anahtar sözcüğü. Genellikle, bir yapının bir kapsayıcı gibi küçük bir ilişkili değişken kümesi için aşağıdaki örnekte gösterildiği gibi kullanılır:  
   
@@ -183,8 +183,9 @@ stringList.Add(4);
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [XML Veri Türlerini Dönüştürme](../../../standard/data/xml/conversion-of-xml-data-types.md)  
- [Tam Sayı Türleri Tablosu](../../../csharp/language-reference/keywords/integral-types-table.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# başvurusu](../../../csharp/language-reference/index.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [XML Veri Türlerini Dönüştürme](../../../standard/data/xml/conversion-of-xml-data-types.md)  
+- [Tam Sayı Türleri Tablosu](../../../csharp/language-reference/keywords/integral-types-table.md)

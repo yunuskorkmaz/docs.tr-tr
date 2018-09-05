@@ -7,42 +7,42 @@ dev_langs:
 helpviewer_keywords:
 - data binding [WPF], PriorityBinding class
 ms.assetid: d63b65ab-b3e9-4322-9aa8-1450f8d89532
-ms.openlocfilehash: cf0ed5c2b55358d3a583ac89e307b23b3ab08a9a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a7729ec3d06ec701cf2194bed5d90b5bed76573a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557764"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43671702"
 ---
 # <a name="how-to-implement-prioritybinding"></a>Nasıl yapılır: PriorityBinding Uygulama
-<xref:System.Windows.Data.PriorityBinding> içinde [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bağlamaların listesini belirterek çalışır. Bağlama Listesi en yüksek öncelikli olandan en düşük önceliği sıralanır. Yüksek önceliği olan bağlama bir değer döndürürse başarıyla işlendiğinde yoktur hiçbir zaman listedeki diğer bağlamaları işlem gerekmez. En yüksek öncelik bağlama değerlendirilmesi uzun süren durum olabilir, bir daha yüksek bir öncelik değeri başarıyla döndürünceye kadar başarılı bir şekilde bir değer döndüren bir sonraki en yüksek öncelikli kullanılır.  
+<xref:System.Windows.Data.PriorityBinding> içinde [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bağlamaları listesi belirterek çalışır. Bağlamaları listesi en düşük önceliği en yüksek öncelik aralığı sıralanır. En yüksek öncelikli bağlama bir değer döndürürse başarıyla işlendiğinde yoktur hiçbir zaman listedeki diğer bağlamalar işlem gerekmez. En yüksek öncelikli bağlama uyumluluğunun değerlendirilebilmesi için çok uzun sürüyor durumu olabilir, başarıyla bir değer döndüren bir sonraki en yüksek öncelikli bir daha yüksek bir öncelik değeri başarıyla döndürünceye kadar kullanılır.  
   
 ## <a name="example"></a>Örnek  
- Göstermek için nasıl <xref:System.Windows.Data.PriorityBinding> çalışır, `AsyncDataSource` nesnesi şu üç özellik ile oluşturuldu: `FastDP`, `SlowerDP`, ve `SlowestDP`.  
+ Göstermek için nasıl <xref:System.Windows.Data.PriorityBinding> çalıştığını `AsyncDataSource` nesnesi şu üç özellik ile oluşturuldu: `FastDP`, `SlowerDP`, ve `SlowestDP`.  
   
  Get erişimcisine `FastDP` değerini döndürür `_fastDP` veri üyesi.  
   
- Get erişimcisine `SlowerDP` değerini dönmeden önce 3 saniye bekler `_slowerDP` veri üyesi.  
+ Get erişimcisine `SlowerDP` değerini döndürmeden önce 3 saniye bekler `_slowerDP` veri üyesi.  
   
- Get erişimcisine `SlowestDP` değerini dönmeden önce 5 saniye bekler `_slowestDP` veri üyesi.  
+ Get erişimcisine `SlowestDP` değerini döndürmeden önce 5 saniye bekler `_slowestDP` veri üyesi.  
   
 > [!NOTE]
->  Bu örnek, yalnızca tanıtım amacıyla kullanılır. [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] Yönergeleri büyüklük alan kümesinden daha yavaş olan özellikleri tanımlamaya karşı önerilir. Daha fazla bilgi için bkz: [NIB: seçme arasında özellikleri ve yöntemleri](http://msdn.microsoft.com/library/55825e8f-7e2e-448a-9505-7217cc91b1af).  
+>  Bu örnek yalnızca gösterim amaçlıdır. [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] Kat bir alan kümesi olandan daha yavaş olan özellikleri tanımlamaya karşı önerir. Daha fazla bilgi için [NIB: seçme arasında özellikleri ve yöntemleri](https://msdn.microsoft.com/library/55825e8f-7e2e-448a-9505-7217cc91b1af).  
   
  [!code-csharp[PriorityBinding#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml.cs#1)]
  [!code-vb[PriorityBinding#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PriorityBinding/VisualBasic/AsyncDataSource.vb#1)]  
   
- <xref:System.Windows.Controls.TextBlock.Text%2A> Özelliğini bağlar yukarıdaki `AsyncDS` kullanarak <xref:System.Windows.Data.PriorityBinding>:  
+ <xref:System.Windows.Controls.TextBlock.Text%2A> Özelliğine bağlayan yukarıdaki `AsyncDS` kullanarak <xref:System.Windows.Data.PriorityBinding>:  
   
  [!code-xaml[PriorityBinding#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml#2)]  
   
- Bağlama altyapısı işlediğinde <xref:System.Windows.Data.Binding> nesneleri, ilk başlar <xref:System.Windows.Data.Binding>, bağlı `SlowestDP` özelliği. Zaman bu <xref:System.Windows.Data.Binding> olduğundan, 5 saniye kadar sonraki uyku için işlenen, bir değer başarıyla dönmez <xref:System.Windows.Data.Binding> öğesi işlenir. Sonraki <xref:System.Windows.Data.Binding> 3 saniye için uyuyor için bir değer başarıyla döndürmüyor. Bağlama altyapısı ardından sonraki taşır <xref:System.Windows.Data.Binding> bağlı öğesi `FastDP` özelliği. Bu <xref:System.Windows.Data.Binding> "Fast Value" değeri döndürür. <xref:System.Windows.Controls.TextBlock> Şimdi value "Hızlı" görüntüler.  
+ Bağlama altyapısı işlediğinde <xref:System.Windows.Data.Binding> nesneler, ilk başladıktan <xref:System.Windows.Data.Binding>, bağlı `SlowestDP` özelliği. Olduğunda bu <xref:System.Windows.Data.Binding> olduğundan, 5 saniye için bu nedenle sonraki uyku için işlenen, bir değer başarıyla dönmez <xref:System.Windows.Data.Binding> öğesi işlenir. Sonraki <xref:System.Windows.Data.Binding> 3 saniye için uyku için bir değer başarıyla döndürmez. Bağlama altyapısı ardından sonraki taşır <xref:System.Windows.Data.Binding> bağlı öğe, `FastDP` özelliği. Bu <xref:System.Windows.Data.Binding> "Hızlı Value" değeri döndürür. <xref:System.Windows.Controls.TextBlock> Artık "Hızlı Value" değeri görüntüler.  
   
- 3 saniye geçtikten sonra `SlowerDP` özelliği "Yavaş Value" değeri döndürür. <xref:System.Windows.Controls.TextBlock> "Yavaş value" görüntüler.  
+ 3 saniye geçtikten sonra `SlowerDP` özelliği "Daha yavaş Value" değeri döndürür. <xref:System.Windows.Controls.TextBlock> "Daha yavaş value" değerini görüntüler.  
   
- 5 saniye geçtikten sonra `SlowestDP` özelliği "Yavaş Value" değeri döndürür. İlk listelenmediğinden Bu bağlama en yüksek önceliğe sahiptir. <xref:System.Windows.Controls.TextBlock> Şimdi "yavaş value" değerini görüntüler.  
+ 5 saniye geçtikten sonra `SlowestDP` özelliği, "En yavaş Value" değeri döndürür. Bu bağlama, ilk listelenmediğinden en yüksek önceliğe sahip. <xref:System.Windows.Controls.TextBlock> Artık "yavaş value" görüntüler.  
   
- Bkz: <xref:System.Windows.Data.PriorityBinding> bağlama gelen başarılı bir dönüş değeri olarak kabul hakkında bilgi.  
+ Bkz: <xref:System.Windows.Data.PriorityBinding> bağlamadan başarılı bir dönüş değeri olarak kabul hakkında bilgi.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Data.Binding.IsAsync%2A?displayProperty=nameWithType>  

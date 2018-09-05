@@ -9,11 +9,11 @@ helpviewer_keywords:
 - brushes [WPF], TileBrush
 ms.assetid: aa4a7b7e-d09d-44c2-8d61-310c50e08d68
 ms.openlocfilehash: e590732419396660221aa781e3c333311b6e88b4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480912"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43505145"
 ---
 # <a name="tilebrush-overview"></a>TileBrush Genel Bakışı
 <xref:System.Windows.Media.TileBrush> nesneleri sağlar, önemli bir görüntü ile bir alanı nasıl boyanacağını denetim <xref:System.Windows.Media.Drawing>, veya <xref:System.Windows.Media.Visual>. Bu konu nasıl kullanılacağını açıklar <xref:System.Windows.Media.TileBrush> özellikleri nasıl üzerinde daha fazla denetim kazanmak için bir <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, veya <xref:System.Windows.Media.VisualBrush> alanı boyar.  

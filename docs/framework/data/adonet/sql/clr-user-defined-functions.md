@@ -3,11 +3,11 @@ title: Kullanıcı tanımlı CLR işlevleri
 ms.date: 03/30/2017
 ms.assetid: 1c59d9d3-6ff9-411b-8b29-b1494d80fdf1
 ms.openlocfilehash: 592a8232f30db075add7bd6b1d61a25352309853
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481408"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502988"
 ---
 # <a name="clr-user-defined-functions"></a>Kullanıcı tanımlı CLR işlevleri
 Kullanıcı tanımlı işlevler parametre alır, hesaplamaları veya başka eylemler gerçekleştirmek ve bir sonuç döndürmek yordamlarını içindedir. Programlama dilini Microsoft Visual Basic .NET veya Microsoft Visual C# gibi tüm Microsoft .NET Framework içinde kullanıcı tanımlı işlevler yazabilirsiniz.  

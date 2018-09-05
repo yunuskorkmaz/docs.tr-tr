@@ -2,20 +2,20 @@
 title: WCF Hizmeti ile ASMX İstemcisi
 ms.date: 03/30/2017
 ms.assetid: 3ea381ee-ac7d-4d62-8c6c-12dc3650879f
-ms.openlocfilehash: 93a881e486d82183fc42c524f3d83527c649516d
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 3465954cc937e1611634c8cd13a9264173e71817
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805135"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43507205"
 ---
 # <a name="asmx-client-with-a-wcf-service"></a>WCF Hizmeti ile ASMX İstemcisi
-Bu örnek, Windows Communication Foundation (WCF) kullanarak bir hizmet oluşturmak ve bir ASMX istemcisi gibi bir WCF olmayan istemciden hizmete erişmek gösterilmiştir.  
+Bu örnek, Windows Communication Foundation (WCF) kullanan bir hizmet oluşturmak ve ardından ASMX istemcisi gibi bir WCF olmayan istemciden hizmete erişmek nasıl gösterir.  
   
 > [!NOTE]
->  Kurulum yordamı ve yapı yönergeleri Bu örnek için bu konunun sonunda yer alır.  
+>  Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.  
   
- Bu örnek, bir istemci konsol program (.exe) ve Internet Information Services (IIS) tarafından barındırılan bir hizmet kitaplığı (.dll) oluşur. Hizmet bir istek-yanıt iletişim deseni tanımlayan bir sözleşme uygular. Anlaşma tarafından tanımlanan `ICalculator` matematik işlemleri kullanıma sunan arabirim (`Add`, `Subtract`, `Multiply`, ve `Divide`). ASMX istemcisi matematik işlemi ve hizmet yanıt sonucu ile eşzamanlı isteği yapar.  
+ Bu örnek, bir istemci konsol program (.exe) ve Internet Information Services (IIS) tarafından barındırılan bir hizmet kitaplığı (.dll) oluşur. Hizmet istek-yanıt iletişim deseni tanımlayan bir sözleşme uygular. Anlaşma tarafından tanımlanan `ICalculator` matematik işlemlerinden sunan arabirimi (`Add`, `Subtract`, `Multiply`, ve `Divide`). ASMX istemcisi bir matematik işlemi ve hizmet yanıt sonucu zaman uyumlu istekleri yapar.  
   
  Hizmet uygulayan bir `ICalculator` aşağıdaki kodda tanımlanan sözleşme.  
   
@@ -34,9 +34,9 @@ public interface ICalculator
 }  
 ```  
   
- <xref:System.Runtime.Serialization.DataContractSerializer> Ve <xref:System.Xml.Serialization.XmlSerializer> bir XML temsili CLR Türleri eşleyin. <xref:System.Runtime.Serialization.DataContractSerializer> Bazı XML temsili XmlSerializer farklı yorumlar. XmlSerializer kullanıldığında Wsdl.exe gibi olmayan WCF proxy oluşturucuları daha kullanışlı bir arabirim oluşturur. <xref:System.ServiceModel.XmlSerializerFormatAttribute> Uygulanan `ICalculator` XmlSerializer CLR türlerini XML'e eşlemek için kullanıldığından emin olmak için arabirim. Hizmet uygulaması hesaplar ve uygun sonucunu döndürür.  
+ <xref:System.Runtime.Serialization.DataContractSerializer> Ve <xref:System.Xml.Serialization.XmlSerializer> CLR Türleri eşleştirmek için bir XML gösterimi. <xref:System.Runtime.Serialization.DataContractSerializer> Bazı XML gösterimleri XmlSerializer tarafından farklı olarak yorumlar. XmlSerializer kullanıldığında gibi Wsdl.exe, WCF olmayan proxy'si oluşturucuları daha kullanışlı bir arabirim oluşturur. <xref:System.ServiceModel.XmlSerializerFormatAttribute> Uygulanan `ICalculator` arabirim, XmlSerializer CLR türleri için XML eşleme için kullanıldığından emin olmak için. Hizmet uygulaması, hesaplar ve uygun sonucunu döndürür.  
   
- Hizmet yapılandırma dosyasında (Web.config) kullanılarak tanımlanmış hizmet ile iletişim için tek bir uç noktasını kullanıma sunar. Uç nokta bir adresi, bağlama ve bir sözleşme oluşur. Hizmet Internet Information Services (IIS) ana bilgisayar tarafından sağlanan temel adresindeki uç noktasını kullanıma sunar. `binding` Özniteliği WS ile uyumlu SOAP 1.1 kullanarak HTTP iletişimi sağlayan basicHttpBinding ayarlanmış-ı BasicProfile aşağıdaki örnek yapılandırmada gösterildiği gibi 1.1.  
+ Hizmet yapılandırma dosyasında (Web.config) kullanılarak tanımlanmış hizmet ile iletişim kurmak için tek bir uç noktayı kullanıma sunar. Uç nokta, adres, bağlama ve bir sözleşme oluşur. Hizmet, Internet Information Services (IIS) ana bilgisayar tarafından sağlanan taban adresinde uç noktasını kullanıma sunar. `binding` Özniteliği WS ile uyumlu olan SOAP 1.1 kullanarak HTTP iletişimi sağlayan basicHttpBinding kümesine-ı BasicProfile aşağıdaki örnek yapılandırmada gösterildiği 1.1.  
   
 ```xml  
 <services>  
@@ -50,7 +50,7 @@ public interface ICalculator
 </services>  
 ```  
   
- ASMX istemcisi Web Hizmetleri Açıklama Dili (WSDL) yardımcı programı (Wsdl.exe) tarafından oluşturulan belirtilmiş bir proxy kullanarak WCF Hizmeti ile iletişim kurar. Yazılı proxy dosya generatedClient.cs içinde yer alır. WSDL yardımcı programı, belirtilen hizmet için meta verilerini alır ve iletişim kurmak için bir istemci tarafından kullanılmak üzere yazılmış bir proxy oluşturur. Varsayılan olarak, herhangi bir meta veri framework göstermiyor. Proxy oluşturmak için gereken meta verilerini kullanıma sunmak için eklemelisiniz bir [ \<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md) ve kendi `httpGetEnabled` özniteliğini `True` aşağıdaki yapılandırmada gösterildiği gibi.  
+ Web Hizmetleri Açıklama Dili (WSDL) yardımcı programı (Wsdl.exe) tarafından üretilen türü belirtilmiş bir proxy kullanarak WCF Hizmeti ile ASMX istemcisi iletişim kurar. Türü belirtilmiş bir proxy dosya generatedClient.cs içinde yer alır. WSDL yardımcı programı, belirtilen hizmet için meta verileri alır ve iletişim kurmak için bir istemci tarafından kullanım için türü belirtilmiş bir proxy oluşturur. Varsayılan olarak, framework meta verileri kullanıma sunmuyor. Proxy oluşturmak için gereken meta verileri kullanıma sunmak için eklemelisiniz bir [ \<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md) ve kendi `httpGetEnabled` özniteliğini `True` aşağıdaki yapılandırmayı gösterildiği gibi.  
   
 ```xml  
 <behaviors>  
@@ -66,13 +66,13 @@ public interface ICalculator
 </behaviors>  
 ```  
   
- Yazılı proxy oluşturmak için istemci dizininde bir komut isteminden aşağıdaki komutu çalıştırın.  
+ Türü belirtilmiş bir proxy oluşturmak için istemci dizininde bir komut isteminden aşağıdaki komutu çalıştırın.  
   
 ```console  
 wsdl /n:Microsoft.ServiceModel.Samples /o:generatedClient.cs /urlkey:CalculatorServiceAddress http://localhost/servicemodelsamples/service.svc?wsdl  
 ```  
   
- Oluşturulan yazılan proxy kullanarak, istemci uygun adresi yapılandırarak verilen hizmet uç noktası erişebilir. İstemci bir yapılandırma dosyasına (App.config) ile iletişim kurmak için uç nokta belirlemek için kullanır.  
+ Üretilen türü belirtilmiş bir proxy kullanarak istemci uygun adresi yapılandırarak belirli hizmet uç noktası erişebilirsiniz. İstemci ile iletişim kurmak için uç nokta belirtmek için bir yapılandırma dosyası (App.config) kullanır.  
   
 ```xml  
 <appSettings>  
@@ -81,7 +81,7 @@ wsdl /n:Microsoft.ServiceModel.Samples /o:generatedClient.cs /urlkey:CalculatorS
 </appSettings>  
 ```  
   
- İstemci uygulaması hizmetiyle iletişim kurulurken başlamak için yazılan proxy örneğini oluşturur.  
+ İstemci uygulama hizmeti ile iletişim başlatmak için türü belirtilmiş bir proxy örneği oluşturur.  
   
 ```  
 // Create a client to the CalculatorService.  
@@ -118,7 +118,7 @@ Console.WriteLine("Press <ENTER> to terminate client.");
 Console.ReadLine();  
 ```  
   
- Örneği çalıştırdığınızda, işlem isteklerini ve yanıtlarını istemci konsol penceresinde görüntülenir. İstemcisi penceresinde istemciyi aşağı kapatmak için ENTER tuşuna basın.  
+ Örneği çalıştırdığınızda, işlem isteklerini ve yanıtlarını istemci konsol penceresinde görüntülenir. İstemci bilgisayarı için istemci penceresinde ENTER tuşuna basın.  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -129,23 +129,23 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örnek çalıştırın  
+### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Gerçekleştirmiş emin olun [kerelik Kurulum prosedürü Windows Communication Foundation örnekleri için](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Tek veya çapraz makine yapılandırmada örneği çalıştırmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!NOTE]
->  Türleri ve karmaşık veri döndüren geçirme hakkında daha fazla bilgi için bkz: [bir Windows Forms istemcisinde veri bağlama](../../../../docs/framework/wcf/samples/data-binding-in-a-windows-forms-client.md), [bir Windows Presentation Foundation istemcisinde veri bağlama](../../../../docs/framework/wcf/samples/data-binding-in-a-wpf-client.md), ve [veri Bir ASP.NET istemcisinde bağlama](../../../../docs/framework/wcf/samples/data-binding-in-an-aspnet-client.md)  
+>  Türleri ve karmaşık veri döndüren geçirme hakkında daha fazla bilgi için bkz: [bir Windows Forms istemcisinde veri bağlama](../../../../docs/framework/wcf/samples/data-binding-in-a-windows-forms-client.md), [veri bağlama bir Windows Presentation Foundation istemcisi](../../../../docs/framework/wcf/samples/data-binding-in-a-wpf-client.md), ve [veri Bir ASP.NET istemcisinde bağlama](../../../../docs/framework/wcf/samples/data-binding-in-an-aspnet-client.md)  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Interop\ASMX`  
   

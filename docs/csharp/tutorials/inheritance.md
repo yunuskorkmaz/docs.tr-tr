@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/05/2018
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 646602c4bab311e6d6078378fe423741a1dd38e1
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 15e2ddd7e103857054973d6c4ed7401d6f91af0d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37875230"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502170"
 ---
 # <a name="inheritance-in-c-and-net"></a>C# ve .NET içinde devralma
 
@@ -296,7 +296,7 @@ Aşağıdaki örnek, türetilen nesneler kullanır `Shape`. Bir dizi öğesinden
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#3)]
 
-## <a name="see-also"></a>Ayrıca bkz.
+## <a name="see-also"></a>Ayrıca Bkz.
 
-[Sınıflar ve nesneler](../tour-of-csharp/classes-and-objects.md)   
-[Devralma (C# programlama Kılavuzu)](../programming-guide/classes-and-structs/inheritance.md)
+- [Sınıflar ve nesneler](../tour-of-csharp/classes-and-objects.md)   
+- [Devralma (C# programlama Kılavuzu)](../programming-guide/classes-and-structs/inheritance.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - decimal keyword [C#]
 ms.assetid: b6522132-b5ee-4be3-ad13-3adfdb7de7a1
-ms.openlocfilehash: 18924abefb85012fc6c61073603c594de906b58d
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: c9d40238ca4c34238d5663185f93afbce73195cf
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961202"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506525"
 ---
 # <a name="decimal-c-reference"></a>decimal (C# Başvurusu)
 
@@ -20,7 +20,7 @@ ms.locfileid: "37961202"
 
 |Tür|Yaklaşık Aralık|Duyarlık|.NET türü|
 |----------|-----------------------|---------------|-------------------------|
-|`decimal`|(-7.9 x 10<sup>28</sup> 7,9 x 10<sup>28</sup>) / (10<sup>0</sup> 10<sup>28</sup>)|28-29 önemli basamaklar|<xref:System.Decimal?displayProperty=nameWithType>|
+|`decimal`|±1.0 x 10<sup>-28</sup> ±7.9228 x 10 için<sup>28</sup>|28-29 önemli basamaklar|<xref:System.Decimal?displayProperty=nameWithType>|
 
 Varsayılan değer olan bir `decimal` 0 m.
 
@@ -96,12 +96,12 @@ Bu örnekte, çıktı, para birimi biçim dizesi kullanılarak biçimlendirilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-<xref:System.Decimal>  
-[C# başvurusu](../../../csharp/language-reference/index.md)  
-[C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
-[C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
-[Tam Sayı Türleri Tablosu](../../../csharp/language-reference/keywords/integral-types-table.md)  
-[Yerleşik Türler Tablosu](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-[Örtük Sayısal Dönüştürmeler Tablosu](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
-[Açık Sayısal Dönüştürmeler Tablosu](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
-[Standart Sayısal Biçim Dizeleri](../../../standard/base-types/standard-numeric-format-strings.md)
+- <xref:System.Decimal>  
+- [C# başvurusu](../../../csharp/language-reference/index.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
+- [Tam Sayı Türleri Tablosu](../../../csharp/language-reference/keywords/integral-types-table.md)  
+- [Yerleşik Türler Tablosu](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+- [Örtük Sayısal Dönüştürmeler Tablosu](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+- [Açık Sayısal Dönüştürmeler Tablosu](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
+- [Standart Sayısal Biçim Dizeleri](../../../standard/base-types/standard-numeric-format-strings.md)

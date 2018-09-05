@@ -3,11 +3,11 @@ title: Adres Üstbilgileri
 ms.date: 03/30/2017
 ms.assetid: b0c94d4a-3bde-4b4d-bb6d-9f12bc3a6940
 ms.openlocfilehash: d2e38c674e0a3ea10df2e8363e90f4adf7edc9da
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43420563"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43503082"
 ---
 # <a name="address-headers"></a>Adres Üstbilgileri
 Adres üstbilgileri örnek istemciler Windows Communication Foundation (WCF) kullanarak bir hizmet için başvuru parametreleri nasıl geçirebilirsiniz gösterir.  

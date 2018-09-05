@@ -2,12 +2,12 @@
 title: Visual Studio IDE ve LINQ (C#) için Araçlar desteği
 ms.date: 07/20/2015
 ms.assetid: c1f6cfdf-c96f-417f-acc8-4a049772ead3
-ms.openlocfilehash: 8b13db6eafdc4712f1dd614640d2035703cbdbb8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: fda73a8fce9dcba54e6b69bcae02f7bdb43dfd33
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43396224"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502331"
 ---
 # <a name="visual-studio-ide-and-tools-support-for-linq-c"></a>Visual Studio IDE ve LINQ (C#) için Araçlar desteği
 Visual Studio tümleşik geliştirme ortamı (IDE), uygulama geliştirme LINQ destekleyen aşağıdaki özellikleri sağlar:  
@@ -24,5 +24,6 @@ Visual Studio tümleşik geliştirme ortamı (IDE), uygulama geliştirme LINQ de
 ## <a name="visual-studio-debugger-support"></a>Visual Studio hata ayıklayıcı desteği  
  Visual Studio hata ayıklayıcı, sorgu ifadeleri hata ayıklamayı destekler. Daha fazla bilgi için [LINQ hata ayıklama](/visualstudio/debugger/debugging-linq).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Dil ile tümleşik sorgu (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [Dil ile tümleşik sorgu (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)

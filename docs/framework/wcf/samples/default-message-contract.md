@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Message Contract
 ms.assetid: 5a200b78-1a46-4104-b7fb-da6dbab33893
-ms.openlocfilehash: 29bfb88d638f68b2f9a3ba983a5c38fe49edb9a4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 23ab534ef31773efc69b6a68e73ec30bde4f6e61
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33504191"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502665"
 ---
 # <a name="default-message-contract"></a>Varsayılan İleti Sözleşmesi
-Varsayılan ileti sözleşmesi örnek özel bir kullanıcı tarafından tanımlanan ileti için ve hizmet işlemleri geçirildiği hizmet gösterir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hesaplayıcı arabirimi yazılan hizmet olarak uygular. Ayrıca, çıkarma, çarpma ve bölme kullanılan bireysel hizmet işlemlerinde yerine [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md), bu örnek işlenenler ve işlecini içeriyor ve döndüren özel bir ileti geçirir aritmetik hesaplama sonucu.  
+Varsayılan ileti anlaşması örnek, kullanıcı tarafından tanımlanan özel bir ileti için ve hizmet işlemlerine geçirildiği hizmet gösterir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) belirlenmiş bir hizmet olarak bir hesap makinesi arabirimi uygulayan. Toplama, çıkarma, çarpma ve bölme kullanılan bireysel hizmet işlemlerinde yerine [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md), bu örnek, hem işlenen hem de işleç içeren ve döndüren özel bir ileti geçirir. aritmetik hesaplama sonucu.  
   
- İstemci bir konsol programı (.exe) ve hizmet kitaplığı (.dll) Internet Information Services (IIS) tarafından barındırılır. İstemci etkinliği konsol penceresinde görünür olur.  
+ İstemci bir konsol programı (.exe) ve Internet Information Services (IIS) tarafından barındırılan hizmet kitaplığı (.dll). İstemci etkinliği konsol penceresinde görünür.  
   
 > [!NOTE]
->  Kurulum yordamı ve yapı yönergeleri Bu örnek için bu konunun sonunda yer alır.  
+>  Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.  
   
- Hizmetinde kabul eder ve özel iletileri türü döndüren bir tek hizmet işlemi tanımlanan `MyMessage`. Bu örnekte istek ve yanıt iletileri aynı türde olsa da, bunlar farklı ileti sözleşmeleri Elbette gerekirse olabilir.  
+ Hizmetinde kabul eder ve özel ileti türü döndüren bir tek hizmet işlemi tanımlanan `MyMessage`. Bu örnekte, istek ve yanıt iletilerinin aynı türde olsa da, bunlar farklı ileti sözleşmeleri Elbette gerekirse olabilir.  
   
 ```  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -31,7 +31,7 @@ public interface ICalculator
 }  
 ```  
   
- Özel ileti `MyMessage` ile Açıklama sınıfında tanımlanan <xref:System.ServiceModel.MessageContractAttribute>, <xref:System.ServiceModel.MessageHeaderAttribute> ve <xref:System.ServiceModel.MessageBodyMemberAttribute> öznitelikleri. Bu örnekte yalnızca üçüncü Oluşturucusu kullanılır. İleti sözleşmeleri kullanılıyor SOAP iletisi üzerinde tam denetim sağlar. Bu örnekte <xref:System.ServiceModel.MessageHeaderAttribute> yerleştirmek için kullanılan öznitelik `Operation` SOAP üstbilgisinde. İşlenen `N1`, `N2` ve `Result` sahip oldukları için SOAP gövdesi içinde görünür <xref:System.ServiceModel.MessageBodyMemberAttribute> özniteliği uygulanmıştır.  
+ Özel ileti `MyMessage` ile ek açıklamalı bir sınıfta tanımlanan <xref:System.ServiceModel.MessageContractAttribute>, <xref:System.ServiceModel.MessageHeaderAttribute> ve <xref:System.ServiceModel.MessageBodyMemberAttribute> öznitelikleri. Yalnızca üçüncü Oluşturucu, bu örnekte kullanılır. İleti sözleşmeleri kullanılıyor, SOAP iletisi üzerinde tam denetimle alıştırma sağlar. Bu örnekte <xref:System.ServiceModel.MessageHeaderAttribute> yerleştirmek için kullanılan öznitelik `Operation` bir SOAP üst bilgisindeki. İşlenenler `N1`, `N2` ve `Result` SOAP gövdesi içinde sahip oldukları görünür <xref:System.ServiceModel.MessageBodyMemberAttribute> özniteliği uygulandı.  
   
 ```  
 [MessageContract]  
@@ -97,7 +97,7 @@ public class MyMessage
 }  
 ```  
   
- Uygulama sınıfı için kod içeren `Calculate` hizmet işlemi. `CalculateService` Sınıfı işleci ve işlenen istek iletisinden alır ve aşağıdaki örnek kodda gösterildiği gibi istenen hesaplama sonucunu içeren bir yanıt iletisi oluşturur.  
+ Uygulama sınıfı kodunu içeren `Calculate` hizmet işlemi. `CalculateService` Sınıfı, işleci ve işlenenleri istek iletisi alır ve aşağıdaki örnek kodda gösterildiği gibi istenen hesaplama sonucunu içeren bir yanıt iletisi oluşturur.  
   
 ```  
 // Service class which implements the service contract.  
@@ -131,13 +131,13 @@ public class CalculatorService : ICalculator
 }  
 ```  
   
- İstemci için oluşturulan istemci kodu ile oluşturulduğundan [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) aracı. Araç, ileti sözleşme türleri gerekirse oluşturulan istemci kodu otomatik olarak oluşturur. `/messageContract` Komut seçeneği, ileti sözleşmeleri zorlamanızı belirtilebilir.  
+ İstemcisi için oluşturulan istemci kodu oluşturulurken [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) aracı. Araç, otomatik olarak oluşturulan istemci kodu gerekiyorsa, ileti anlaşması türleri oluşturur. `/messageContract` İleti sözleşmeleri zorlamanızı komut seçeneği belirtilebilir.  
   
 ```  
 svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" /o:client\generatedClient.cs http://localhost/servicemodelsamples/service.svc/mex  
 ```  
   
- Aşağıdaki örnek kod kullanarak istemciyi gösteren `MyMessage` ileti.  
+ Aşağıdaki örnek kodu kullanarak istemciyi gösterir `MyMessage` ileti.  
   
 ```  
 // Create a client with given client endpoint configuration  
@@ -153,7 +153,7 @@ MyMessage response = ((ICalculator)client).Calculate(request);
 Console.WriteLine("Add({0},{1}) = {2}", request.N1, request.N2, response.Result);  
 ```  
   
- Örneği çalıştırdığınızda, hesaplamaları istemci konsol penceresinde görüntülenir. İstemcisi penceresinde istemciyi aşağı kapatmak için ENTER tuşuna basın.  
+ Örneği çalıştırdığında hesaplamalar istemci konsol penceresinde görüntülenir. İstemci bilgisayarı için istemci penceresinde ENTER tuşuna basın.  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -164,22 +164,22 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
- Bu noktada, kullanıcı tanımlı özel iletileri istemci ve hizmet işlemini arasında geçti. İleti sözleşmesi sonuçları ve işlenen ileti gövdesini olduğunu ve işleci bir ileti üstbilgisinde olduğunu tanımlanır. İleti günlüğe kaydetme, bu ileti yapısı izlemek için yapılandırılabilir.  
+ Bu noktada, kullanıcı tanımlı özel iletiler, istemci ve hizmet işlemi arasında geçti. İşlenenler ve sonuçları ileti gövdesinde olduğunu ve işleci bir ileti üstbilgisinde olduğunu tanımlanan ileti sözleşmesi. İleti günlüğe kaydetme, bu ileti yapı gözlemlemek için yapılandırılabilir.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örnek çalıştırın  
+### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Gerçekleştirmiş emin olun [kerelik Kurulum prosedürü Windows Communication Foundation örnekleri için](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Tek veya çapraz makine yapılandırmada örneği çalıştırmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Default`  
   

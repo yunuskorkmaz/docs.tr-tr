@@ -15,40 +15,40 @@ helpviewer_keywords:
 ms.assetid: 4a04863e-2475-46f4-bc3f-3c11510c2a4b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 481360f731297e1c287c969e6524c68e0c9c0b7e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ff2be73b2cea563066f70ea2fe6d53840f718e75
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386476"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43674301"
 ---
 # <a name="debugging-tracing-and-profiling"></a>Hata Ayıklama, İzleme ve Profil Oluşturma
-.NET Framework uygulama hatalarını ayıklamak için derleyici ve çalışma zamanı ortamı uygulamaya eklemek bir hata ayıklayıcısı etkinleştirmek için yapılandırılmış olmalıdır ve hem simge hem de satır üretmek için Mümkünse, uygulama ve onun karşılık gelen Microsoft Ara eşlemeleri dili (MSIL). Yönetilen bir uygulamanın hata ayıklaması sonra performansı artırmak için profili. Profil oluşturma değerlendirir ve en sık yürütülen kod oluşturma kaynak kod satırlarını açıklar ve ne kadar sürer bunları yürütmek için saat.  
+Bir .NET Framework uygulamasında hata ayıklamak için derleyici ve çalışma zamanı ortamı uygulamaya eklemek bir hata ayıklayıcı etkinleştirmek için yapılandırılması gerekir ve hem simge hem de satır üretmek için mümkün olduğunda, uygulama ve onun ilişkili Microsoft Ara eşler Dil (MSIL). Yönetilen bir uygulama hata ayıklama sonra performansını artırmak üzere profili. Profil oluşturma değerlendirir ve en sık yürütülen kodu kaynak kodu satırlarını açıklar ve ne kadar bunları yürütmek için alır.  
   
- .NET framework uygulamaları kolayca birçok yapılandırma ayrıntılarını işler Visual Studio kullanarak ayıklandığını. Visual Studio yüklü değilse, inceleyin ve .NET Framework'te hata ayıklama sınıfları kullanarak .NET Framework uygulamaları performansı <xref:System.Diagnostics> ad alanı. Bu ad alanı içerir <xref:System.Diagnostics.Trace>, <xref:System.Diagnostics.Debug>, ve <xref:System.Diagnostics.TraceSource> yürütme akış, izleme için sınıfları ve <xref:System.Diagnostics.Process>, <xref:System.Diagnostics.EventLog>, ve <xref:System.Diagnostics.PerformanceCounter> kod profili oluşturma için sınıfları.  
+ .NET framework uygulamaları, kolayca configuration ayrıntıların birçoğu işleme Visual Studio kullanarak hata ayıklama. Visual Studio yüklü değilse, inceleyin ve .NET Framework'te hata ayıklama sınıfları kullanarak .NET Framework uygulamalarının performansını <xref:System.Diagnostics> ad alanı. Bu ad alanı içerir <xref:System.Diagnostics.Trace>, <xref:System.Diagnostics.Debug>, ve <xref:System.Diagnostics.TraceSource> yürütme akışı izleme için sınıfları ve <xref:System.Diagnostics.Process>, <xref:System.Diagnostics.EventLog>, ve <xref:System.Diagnostics.PerformanceCounter> kod profil oluşturma için sınıflar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [JIT-Ekleme Hata Ayıklamayı Etkinleştirme](../../../docs/framework/debug-trace-profile/enabling-jit-attach-debugging.md)  
- JIT-ekleme kayıt defterine yapılandırmak .NET Framework uygulamasına hata ayıklama altyapısı gösterilmiştir.  
+ JIT-ekleme için kayıt defterini yapılandırmak bir .NET Framework uygulamasına bir hata ayıklama altyapısı gösterilmektedir.  
   
  [Görüntüde Hata Ayıklamayı Kolaylaştırma](../../../docs/framework/debug-trace-profile/making-an-image-easier-to-debug.md)  
- JIT izlemeyi ve en iyi duruma getirme bir derlemeyi debug kolay hale getirmek için devre dışı bırakmak gösterilmiştir.  
+ Bir derlemeyi hata ayıklama daha kolay hale getirmek üzere üzerinde JIT izleme ve iyileştirme kapatmak gösterilmektedir.  
   
  [İzleme ve İşaretleme Uygulamaları](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
- Çalışırken ve ne kadar iyi görüntülemek için işaretlemesini gittiğini nasıl mı bir şeyler yanlış geçti, uygulamanızın yürütülmesini izlemek açıklar.  
+ Çalışır durumdayken ve ne kadar iyi görüntülemek için araç haline getirmek için onu gerçekleştiriyor nasıl mı bir sorun oluştu, uygulamanın yürütülmesini izlemek açıklar.  
   
  [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- Hangi ortak dil çalışma zamanı (CLR) çalışma zamanı durumu hakkında bilgi sağlamak için birlikte çalışmak yardımları hata ayıklama yönetilen hata ayıklama Yardımcıları (Mda'lar) açıklar.  
+ Ortak dil çalışma zamanı (CLR) çalışma zamanı durum bilgilerini sağlamak için birlikte çalışan yardımlarda hata ayıklar, yönetilen hata ayıklama Yardımcıları (Mda'lar) açıklar.  
   
  [Hata Ayıklayıcı Görüntü Öznitelikleriyle Hata Ayıklamayı Geliştirme](../../../docs/framework/debug-trace-profile/enhancing-debugging-with-the-debugger-display-attributes.md)  
- Geliştirici türü ne nasıl belirteceğinizi açıklar türü, bir hata ayıklayıcıda görüntülendiğinde gibi görünür.  
+ Geliştirici bir türün ne nasıl belirteceğinizi açıklar türü bir hata ayıklayıcıda zaman görüntülendiği gibi görünecektir.  
   
  [Performans Sayaçları](../../../docs/framework/debug-trace-profile/performance-counters.md)  
- Bir uygulamanın performansını izlemek için kullanabileceğiniz sayaçları açıklar.  
+ Uygulama performansını izlemek için kullanabileceğiniz sayaçlar açıklanmaktadır.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [ASP.NET ve AJAX uygulamalarında hata ayıklama](http://msdn.microsoft.com/library/9d531913-541b-47b8-864d-138021fca0c6)  
- Önkoşullar ve geliştirme sırasında veya dağıtımdan sonra bir ASP.NET uygulama hata ayıklama hakkında yönergeler sağlar.  
+ [ASP.NET ve AJAX Uygulamalarında Hata Ayıklama](https://msdn.microsoft.com/library/9d531913-541b-47b8-864d-138021fca0c6)  
+ Önkoşullar ve nasıl bir ASP.NET uygulama geliştirme süresince veya dağıtım sonrasında hata ayıklama için yönergeler sağlar.  
   
  [Geliştirme Kılavuzu](../../../docs/framework/development-guide.md)  
  Dinamik programlama, birlikte çalışabilirlik, genişletilebilirlik, bellek yönetimi ve iş parçacığı oluşturma hakkında uygulama ve bilgilerinizi oluşturma, yapılandırma, hatasını ayıklama, güvenliğini sağlama ve dağıtma gibi, uygulama geliştirmesine yönelik tüm temel teknoloji alanları ve görevleri için kılavuz sağlar.

@@ -8,25 +8,25 @@ helpviewer_keywords:
 - line segments [WPF], creating
 - graphics [WPF], line segments
 ms.assetid: 0155ed47-a20d-49a7-a306-186d8e07fbc4
-ms.openlocfilehash: 1cfa9275a2a4508c153cf6ab7ed1c6126b1ee92c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 61425a68d83c8078b8420be01e0e59d3cba6a4e2
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33559696"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43518979"
 ---
 # <a name="how-to-create-a-linesegment-in-a-pathgeometry"></a>Nasıl yapılır: PathGeometry İçinde LineSegment Oluşturma
-Bu örnek, bir satırı kesiminin nasıl oluşturulacağını gösterir. Bir çizgi kesimi oluşturmak için kullanın <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, ve <xref:System.Windows.Media.LineSegment> sınıfları.  
+Bu örnek, bir çizgi kesimi oluşturma işlemi gösterilmektedir. Bir çizgi kesimi oluşturmak için kullanın <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, ve <xref:System.Windows.Media.LineSegment> sınıfları.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekler çizin bir <xref:System.Windows.Media.LineSegment> gelen (10, 50) için (200, 70). Elde edilen aşağıda gösterilmiştir <xref:System.Windows.Media.LineSegment>; koordinat sistemini göstermek için kılavuz arka planı eklendi.  
+ Aşağıdaki örnekler çizmek bir <xref:System.Windows.Media.LineSegment> gelen (10, 50) için (200, 70). Sonuç, aşağıdaki resimde gösterilmektedir <xref:System.Windows.Media.LineSegment>; kılavuz arka planı koordinat sistemini göstermek için eklenmiştir.  
   
  ![İçinde bir LineSegment LineSegment](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-pathgeometrylinesegment.png "graphicsmm_pathgeometrylinesegment")  
-(10,50)'den (200,70) çizilen bir LineSegment  
+(10,50)'den (200,70) için çizilmiş LineSegment  
   
  [xaml]  
   
- İçinde [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], bir yolu açıklamak için öznitelik sözdizimini kullanabilirsiniz.  
+ İçinde [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], bir yol tanımlamak için öznitelik sözdizimini kullanabilirsiniz.  
   
 ```xaml  
 <Path Stroke="Black" StrokeThickness="1"    
@@ -35,9 +35,9 @@ Bu örnek, bir satırı kesiminin nasıl oluşturulacağını gösterir. Bir çi
   
  [xaml]  
   
- (Bu öznitelik sözdizimi gerçekte oluşturur Not bir <xref:System.Windows.Media.StreamGeometry>, hafifletilmiş sürümü bir <xref:System.Windows.Media.PathGeometry>. Daha fazla bilgi için bkz: [biçimlendirme sözdizimi yolu](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md) sayfası.)  
+ (Aslında bu öznitelik sözdizimi oluşturan Not bir <xref:System.Windows.Media.StreamGeometry>, daha basit sürümü bir <xref:System.Windows.Media.PathGeometry>. Daha fazla bilgi için [yol işaretleme söz dizimi](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md) sayfası.)  
   
- İçinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], nesne öğesi sözdizimini kullanarak bir çizgi kesimi çizebilirsiniz. Aşağıdaki önceki eşdeğerdir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] örnek.  
+ İçinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], nesne öğesi sözdizimi kullanılarak bir doğru parçası çizebilirsiniz. Aşağıdaki önceki eşdeğerdir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] örnek.  
   
 ```xaml  
 <Path Stroke="Black" StrokeThickness="1">  
@@ -99,7 +99,7 @@ Dim myPathFigure As New PathFigure()
             myPath.Data = myPathGeometry  
 ```  
   
- Bu örnek daha büyük bir parçasıdır; tam bir örnek için bkz: [geometri örneği](http://go.microsoft.com/fwlink/?LinkID=159989).  
+ Bu örnek, daha büyük örnek bir parçasıdır; tam bir örnek için bkz. [geometri örneği](https://go.microsoft.com/fwlink/?LinkID=159989).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Media.PathFigure>  

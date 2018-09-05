@@ -2,15 +2,15 @@
 title: '&lt;Connectionpoolsettings&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: 4141b0f6493c51048ad60accdc1d5ee9bac01231
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 92590f556d93859e8681eea8f8f05da4f560e150
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751083"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43563945"
 ---
 # <a name="lttcptransportgt"></a>&lt;Connectionpoolsettings&gt;
-Özel bağlama için bir kanalı aktarımları iletileri tarafından kullanılabilecek bir TCP taşıma tanımlar.  
+Özel bağlama için iletileri için bir kanal tarafından kullanılabilen bir TCP taşıması tanımlar.  
   
  \<system.serviceModel>  
 \<bağlamaları >  
@@ -51,21 +51,21 @@ ms.locfileid: "32751083"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|ChannelInitializationTimeout|Alır veya kabul edilmesi için bir kanal başlatma zaman sınırını ayarlar.  En uzun süreyi saniye cinsinden kesilmeden önce bir kanal başlatma durumda olabilir. Bu kota bir TCP bağlantısı .net kullanarak kendi kimliğini doğrulamak için atabileceğiniz saati içeren ileti çerçeveleme protokolü. Bir istemci, sunucu kimlik doğrulaması gerçekleştirmek için yeterli bilgiye sahip bazı ilk veri göndermeniz gerekir. Varsayılan değer 30 saniyedir.|  
-|ConnectionBufferSize|Alır veya ayarlar istemci veya hizmet hattan serileştirilmiş iletide öbeğini iletmek için kullanılan arabellek boyutu.|  
-|hostNameComparisonMode|Alır veya ana bilgisayar üzerinde URI'yi eşleştirirken hizmete erişmek için kullanılıp kullanılmayacağını belirten bir değer ayarlar.|  
-|listenBacklog|Bekleyen sıraya alınan bağlantı isteği sayısının bir Web hizmeti. `connectionLeaseTimeout` Öznitelik, istemci bağlantı özel durumuyla atmadan önce bağlanması için bekleyeceği süreyi sınırlar. Bu bekleyen sıraya alınan bağlantı isteği sayısının denetleyen bir yuva düzeyi özelliktir Web hizmeti. ListenBacklog çok düşük olduğunda, WCF istekleri kabul etmeyi ve sunucu bazı varolan sıraya alınan bağlantıları kabul edene kadar bu nedenle yeni bağlantıları bırakın. 16 varsayılandır * işlemcilerin sayısı.|  
-|manualAddressing|Alır veya el ile ileti adresleme gerekip gerekmediğini belirten bir değer ayarlar.|  
-|maxBufferPoolSize|Alır veya ayarlar aktarım tarafından kullanılan arabellek havuzlarını en büyük boyutu.|  
-|maxBufferSize|Alır veya ayarlar kullanılacak arabelleğin en büyük boyutu. Akış iletileri için bu değer arabelleğe alınan modunda okuma ileti üstbilgilerini olası en büyük boyutunu en az olmalıdır.|  
-|maxOutputDelay|Alır veya üst aralığı gönderilmeden önce bir ileti veya tam bir ileti öbeğini bellekte arabelleğe alınan kalabileceği süreyi ayarlar.|  
-|maxPendingAccepts|Alır veya ayarlar en fazla bekleyen zaman uyumsuz işleme gelen bağlantılar hizmeti için kullanılabilen işlemleri kabul edin.|  
-|maxPendingConnections|Alır veya gönderme hizmeti üzerinde bekleyen bağlantı sayısının üst sınırını ayarlar.|  
-|maxReceivedMessageSize|Alır ve alınabilmesi için izin verilen maksimum ileti boyutu ayarlar.|  
-|portSharingEnabled|Bu bağlantı için TCP bağlantı noktası paylaşma etkin olup olmadığını belirten bir Boole değeri. Bu ise `false`, her bağlama kendi özel bağlantı noktasını kullanır. Varsayılan, `false` değeridir.<br /><br /> Bu ayar yalnızca Hizmetleri için geçerlidir. İstemcileri etkilenmez.<br /><br /> Bu ayarı kullanarak Windows Communication Foundation (WCF) TCP bağlantı noktası Paylaşımı hizmeti başlangıç türünü el ile veya otomatik olarak değiştirerek etkinleştirme gerektirir|  
-|teredoEnabled|Teredo (güvenlik duvarının arkasındaki adresleme istemciler için bir teknoloji) etkin olup olmadığını belirten bir Boole değeri. Varsayılan, `false` değeridir.<br /><br /> Bu özellik, temel alınan TCP yuva için Teredo etkinleştirir. Daha fazla bilgi için bkz: [Teredo genel bakış](http://go.microsoft.com/fwlink/?LinkId=95339).<br /><br /> Bu özellik yalnızca geçerli [!INCLUDE[wxpsp2](../../../../../includes/wxpsp2-md.md)] ve [!INCLUDE[ws2003](../../../../../includes/ws2003-md.md)]. [!INCLUDE[wv](../../../../../includes/wv-md.md)] Teredo için bir makine genelinde yapılandırma seçeneği vardır şekilde Vista çalıştırırken, bu özellik yoksayılır. Teredo, hizmet ve istemci makineleri yüklenip Teredo kullanımı için yapılandırıldığını Microsoft IPv6 yığını sahip olmasını gerektirir. Teredo yapılandırma hakkında daha fazla bilgi için bkz: [Teredo genel bakış](http://go.microsoft.com/fwlink/?LinkId=95339). Daha fazla bilgi için bkz: [Windows Server 2003 teknolojisi merkezleri](http://go.microsoft.com/fwlink/?LinkId=49888).|  
-|transferMode|Alır veya iletilerin ara belleğe veya ile bağlantı yönelimli aktarma akışı olup olmadığını belirten bir değer ayarlar.|  
-|connectionPoolSettings|Bir adlandırılmış kanal bağlama için ek bağlantı havuzu ayarlarını belirtir.|  
+|ChannelInitializationTimeout|Alır veya ayarlar zaman sınırını kabul edilmesi için bir kanal başlatılıyor.  En uzun süreyi saniye cinsinden kesilmeden önce bir kanal başlatma durumda olabilir. TCP bağlantısı, .net kullanarak kendi kimliğini doğrulamak için gerçekleştirebileceğiniz zaman bu kotayı içeren ileti çerçeveleme protokolü. Sunucu kimlik doğrulaması gerçekleştirmek için yeterli bilgiye sahip önce bazı ilk veri göndermek bir istemci gerekir. Varsayılan değer 30 saniyedir.|  
+|ConnectionBufferSize|Alır veya ayarlar istemci veya hizmet serileştirilmiş ileti öbeğini iletmek için kullanılan arabellek boyutu.|  
+|hostNameComparisonMode|Alır veya ayarlar üzerinde URI'yi eşleştirirken hizmete erişmek için ana bilgisayar adının kullanılıp kullanılmadığını gösteren bir değer.|  
+|listenBacklog|Bekleyen sıraya alınan bağlantı isteklerinin sayısı için bir Web hizmeti. `connectionLeaseTimeout` Öznitelik sınırlar istemci bağlantısı özel durumu atamadan önce bağlanması için bekleyeceği süre. Bu bekleyen sıraya alınan bağlantı isteklerinin sayısı denetleyen bir yuva düzeyi özelliktir bir Web hizmeti için. ListenBacklog çok düşük olduğunda, WCF istekleri kabul etmeyi ve sunucunun mevcut sıraya alınan bağlantıların bazıları kabul edene kadar bu nedenle yeni bağlantıları bırakın. Varsayılan değer 16 * işlemci sayısı.|  
+|manualAddressing|Alır veya iletinin el ile adresleme gerekli olup olmadığını gösteren bir değer ayarlar.|  
+|maxBufferPoolSize|Alır veya taşıma tarafından kullanılan tüm arabellek havuzu en büyük boyutunu ayarlar.|  
+|maxBufferSize|Alır veya kullanılacak arabelleğin en büyük boyutunu ayarlar. Akış iletileri için bu değer, arabelleğe alınmış modda okuma ait ileti üstbilgilerini olası en büyük boyutunu en az olmalıdır.|  
+|MaxOutputDelay|Alır veya gönderilmeden önce ileti veya tam bir ileti bir öbek bellekte arabelleğe alınan kalabileceği süreyi en uzun aralığı ayarlar.|  
+|maxPendingAccepts|Alır veya ayarlar sayısı bekleyen zaman uyumsuz işlem hizmetine gelen bağlantılar için kullanılabilen işlemleri kabul edin.|  
+|maxPendingConnections|Alır veya ayarlar gönderme hizmetinde bekleyen bağlantıları sayısı.|  
+|maxReceivedMessageSize|Alır ve alınabilir izin verilen en büyük ileti boyutunu ayarlar.|  
+|portSharingEnabled|Bu bağlantı için TCP bağlantı noktası paylaşımının etkin olup olmadığını belirten bir Boole değeri. Bu ise `false`, her bir bağlaması, kendi özel bağlantı noktasını kullanır. Varsayılan, `false` değeridir.<br /><br /> Bu ayar yalnızca hizmetler için geçerlidir. İstemciler etkilenmez.<br /><br /> Bu ayar kullanılarak el ile veya otomatik başlangıç türünü değiştirerek Windows Communication Foundation (WCF) TCP bağlantı noktası paylaşım hizmetini etkinleştirme gerektirir|  
+|teredoEnabled|Teredo (güvenlik duvarının arkasındaki istemcilere için bir teknoloji) etkin olup olmadığını belirten bir Boole değeri. Varsayılan, `false` değeridir.<br /><br /> Bu özellik, temel alınan bir TCP yuva için Teredo etkinleştirir. Daha fazla bilgi için [Teredo genel bakış](https://go.microsoft.com/fwlink/?LinkId=95339).<br /><br /> Bu özellik yalnızca geçerli [!INCLUDE[wxpsp2](../../../../../includes/wxpsp2-md.md)] ve [!INCLUDE[ws2003](../../../../../includes/ws2003-md.md)]. [!INCLUDE[wv](../../../../../includes/wv-md.md)] Teredo için bir makine genelindeki yapılandırma seçeneği etkin şekilde Vista çalıştırırken bu özellik yoksayılır. Teredo, hizmet ve istemci makineleri düzgün yüklendiğinden ve Teredo kullanım için yapılandırıldığından Microsoft IPv6 yığın olmasını gerektirir. Teredo yapılandırma hakkında daha fazla bilgi için bkz. [Teredo genel bakış](https://go.microsoft.com/fwlink/?LinkId=95339). Daha fazla bilgi için [Windows Server 2003 teknoloji merkezlerinde](https://go.microsoft.com/fwlink/?LinkId=49888).|  
+|transferMode|Alır veya iletileri ara belleğe veya akışa ile bağlantı sağlamaya yönelik aktarım gösteren bir değer ayarlar.|  
+|connectionPoolSettings|Adlandırılmış kanal bağlama için ek bağlantı havuzu ayarlarını belirtir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -74,12 +74,12 @@ ms.locfileid: "32751083"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<bağlama >](../../../../../docs/framework/misc/binding.md)|Özel bağlama tüm bağlama özelliklerini tanımlar.|  
+|[\<bağlama >](../../../../../docs/framework/misc/binding.md)|Özel bağlama tüm bağlama yeteneklerini tanımlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- URI biçiminde bu aktarım kullanır "net.tcp://hostname: bağlantı noktası/yol". URI bileşenlerle isteğe bağlıdır.  
+ Bu aktarım biçiminde bir URI'leri kullanır "net.tcp://hostname: port/yol". Diğer URI bileşenlerini isteğe bağlıdır.  
   
- `tcpTransport` Öğesidir başlangıç noktası için bir özel, bağlama oluşturma TCP aktarım protokolünü uygular. Bu aktarım WCF WCF iletişimi için optimize edilmiştir.  
+ `tcpTransport` Öğe başlangıç noktası olan TCP Aktarım Protokolü uygulayan özel bağlamayı oluşturmak için. Bu aktarım WCF WCF iletişim için optimize edilmiştir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Configuration.TcpTransportElement>  

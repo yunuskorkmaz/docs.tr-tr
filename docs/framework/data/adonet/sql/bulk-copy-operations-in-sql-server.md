@@ -3,11 +3,11 @@ title: SQL Server'da toplu kopyalama işlemleri
 ms.date: 03/30/2017
 ms.assetid: 83a7a0d2-8018-4354-97b9-0b1d99f8342b
 ms.openlocfilehash: 16709d1bdc03c767d1e3aed808de220bf91e76ee
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43455672"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510746"
 ---
 # <a name="bulk-copy-operations-in-sql-server"></a>SQL Server'da toplu kopyalama işlemleri
 Microsoft SQL Server adlandırılmış bir popüler komut satırı yardımcı programını içeren **bcp** için hızlı bir şekilde toplu tabloları veya görünümleri SQL Server veritabanları ile büyük dosyaları kopyalanıyor. <xref:System.Data.SqlClient.SqlBulkCopy> Sınıfı benzer işlevler sağlayan çözümler yönetilen kod yazmanıza olanak verir. Verileri bir SQL Server tablosunu (örneğin, INSERT deyimleri) yüklemek için farklı yöntemleri vardır ancak <xref:System.Data.SqlClient.SqlBulkCopy> bir önemli performans avantajı onları sunar.  

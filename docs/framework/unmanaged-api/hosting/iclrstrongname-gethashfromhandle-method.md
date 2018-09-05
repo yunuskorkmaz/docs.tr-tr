@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 97d4a6bfd7a8a7aa257ad2f52d005ccc5bcd6fb6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 20c5f6bbb58b85f42ec00e356eccc5fb41ce813c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432043"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560341"
 ---
 # <a name="iclrstrongnamegethashfromhandle-method"></a>ICLRStrongName::GetHashFromHandle Metodu
-Bir karma belirtilen karma algoritması kullanılarak belirtilen dosya tanıtıcısı sahip bir dosya içeriğini oluşturur.  
+Belirtilen karma algoritması kullanılarak belirtilen tanıtıcıya sahip bir dosya içeriğini bir karma oluşturur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,10 +42,10 @@ HRESULT GetHashFromHandle (
   
 #### <a name="parameters"></a>Parametreler  
  `hFile`  
- [in] Karma hale getirilmesi için dosya tanıtıcısı.  
+ [in] Karma hale getirilecek dosya tanıtıcısı.  
   
  `piHashAlg`  
- [içinde out] Karma algoritmasını belirtir sabiti. Varsayılan algoritma için sıfır değerini kullanın.  
+ [out içinde] Sabit karma algoritmasını belirtir. Sıfır varsayılan algoritma için kullanın.  
   
  `pbHash`  
  [out] Döndürülen karma arabellek.  
@@ -54,10 +54,10 @@ HRESULT GetHashFromHandle (
  [in] İstenen en büyük boyutunu `pbHash`.  
   
  `pchHash`  
- [out] Dönen bayt cinsinden boyutu `pbHash`.  
+ [out] Döndürülen bayt cinsinden boyutu `pbHash`.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `S_OK` Yöntem başarıyla tamamlandı Aksi takdirde hata belirten bir HRESULT değeri (bkz [ortak HRESULT değerleri](http://go.microsoft.com/fwlink/?LinkId=213878) bir listesi için).  
+ `S_OK` yöntemi başarıyla tamamlandı Aksi takdirde hata olduğunu gösteren HRESULT değerini (bkz [ortak HRESULT değerlerini](https://go.microsoft.com/fwlink/?LinkId=213878) bir listesi için).  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

@@ -6,17 +6,17 @@ helpviewer_keywords:
 - FactoryMethod directive in XAML [XAML Services]
 - x:FactoryMethod directive [XAML Services]
 ms.assetid: 829bcbdf-5318-4afb-9a03-c310e0d2f23d
-ms.openlocfilehash: 75225e624abdd3dc0862a04fae409da48b3f0d1e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 436caa9b93467dcf2a0763bcc0962a2beb722315
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563421"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560201"
 ---
 # <a name="xfactorymethod-directive"></a>x:FactoryMethod Yönergesi
-XAML işlemci yedekleme türünü düzelttikten sonra bir nesneyi başlatmak için kullanması gereken bir oluşturucu dışında bir yöntem belirtir.  
+XAML işlemci yedekleme türünü çözdükten sonra nesneyi başlatmak için kullanması gereken bir oluşturucu dışında bir yöntem belirtir.  
   
-## <a name="xaml-attribute-usage-no-xarguments"></a>XAML öznitelik kullanımı, hiçbir x: Arguments  
+## <a name="xaml-attribute-usage-no-xarguments"></a>XAML öznitelik kullanımı, x: Arguments  
   
 ```  
 <object x:FactoryMethod="methodname"...>  
@@ -24,7 +24,7 @@ XAML işlemci yedekleme türünü düzelttikten sonra bir nesneyi başlatmak iç
 </object>  
 ```  
   
-## <a name="xaml-attribute-usage-xarguments-as-elements"></a>XAML öznitelik kullanımı, x: Arguments öğe olarak  
+## <a name="xaml-attribute-usage-xarguments-as-elements"></a>XAML öznitelik kullanımı, x: Arguments öğeyi/öğeleri olarak  
   
 ```  
 <object x:FactoryMethod="methodname"...>  
@@ -38,23 +38,23 @@ XAML işlemci yedekleme türünü düzelttikten sonra bir nesneyi başlatmak iç
   
 |||  
 |-|-|  
-|`methodname`|Olarak belirtilen örneği başlatmak için XAML işlemcileri çağıran bir yöntem dize yöntemi adını `object`. Açıklamalar bakın.|  
-|`oneOrMoreObjectElements`|Fabrika yöntemi parametrelerini belirtin nesneleri için bir veya daha fazla nesne öğeleri. Sırası önemlidir; bağımsız değişkenler için Üreteç yöntemi iletilmesi gereken sırayı belirtir.|  
+|`methodname`|Dize olarak belirtilen örneği başlatmak için XAML işlemci çağıran bir yöntem yöntemi adını `object`. Açıklamalara bakın.|  
+|`oneOrMoreObjectElements`|Fabrika yöntem parametreleri belirtin nesneleri için bir veya daha fazla nesne öğeleri. Sırası önemlidir; Bu bağımsız değişkenler için Üreteç yöntemi iletilmesi gereken sırayı belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Varsa `methodname` bir örnek yöntemidir tam olamaz.  
+ Varsa `methodname` bir örnek yöntemi olduğundan koşullu olamaz.  
   
- Statik yöntemler fabrika yöntemi olarak desteklenir. Varsa `methodname` bir statik yöntem `methodname` olarak sağlanan bir *typeName*. *methodName* birleşimi, burada *typeName* statik Üreteç yöntemi tanımlayan sınıf adları. *typeName* öneki nitelenmiş eşlenen xmlns içinde türüne başvuran durumunda olabilir. *typeName* farklı bir type olabilir `typeof(``object``)`.  
+ Statik yöntemler olarak Fabrika yöntemleri desteklenir. Varsa `methodname` statik bir yöntem `methodname` olarak sağlanan bir *typeName*. *methodName* birleşimi, burada *typeName* statik fabrika yöntemi tanımlayan sınıf adları. *typeName* ön ek nitelikli eşlenen xmlns içerisindeki bir türe başvuran durumunda olabilir. *typeName* farklı bir tür olabilir `typeof(object)`.  
   
- Üreteç yöntemi ilgili nesne öğesi yedekler türünde bildirilen bir genel yöntem olması gerekir.  
+ İlgili nesne öğesi yedekler türünde bildirilen genel bir yöntem Üreteç yöntemi olmalıdır.  
   
- Üreteç yöntemi ilgili nesnesine atanamaz örneğini döndürmelidir. Fabrika yöntemleri hiçbir zaman null değerini döndürmelidir.  
+ Üreteç yöntemi ilgili nesneye atanamaz örneği döndürmelidir. Fabrika yöntemleri hiçbir zaman null değeri döndürmelidir.  
   
- `x:Arguments` Fabrika yöntemleri, imzaları için en iyi eşleşmeyi prensibi çalıştırır. Eşleşen parametre sayısı önce değerlendirir. Parametre sayısı için birden fazla olası eşleşme varsa, değerlendirilen ve en iyi eşleşme belirlenir sonra parametre türü değil. XAML işlemci davranış hala belirsizlik varsa bu Değerlendirme Aşaması sonra tanımlanmamıştır.  
+ `x:Arguments` Fabrika yöntemleri imzalarını için en iyi eşleşme İlkesi çalışır. Eşleşen ilk parametre sayısı değerlendirir. Parametre sayısı için birden çok olası eşleşme varsa, değerlendirilen ve en iyi eşleşme belirlenir sonra parametre türüdür. Varsa hala belirsizlik değerlendirme sonra bu aşamayı, XAML işlemci davranış tanımsızdır.  
   
- `x:FactoryMethod` Öğesi kullanımı tipik herkese açık özellik öğesi kullanımı yönerge biçimlendirme içeren nesne öğenin türü başvurmuyor olmadığından değil. Beklenen bu öğe kullanım öznitelik kullanımı daha az yaygındır. `x:Arguments` (öznitelik veya öğe kullanım) ile birlikte kullanılabilir `x:FactoryMethod` öğesi kullanımı, ancak bu özellikle gösterilmez kullanım bölümlerde.  
+ `x:FactoryMethod` Öğesi kullanımı değil özellik öğesi kullanımı tipik anlamında yönerge biçimlendirme içeren nesne öğe türünün başvurmadığından. Bu beklenen bu öğesi kullanımı öznitelik kullanımı daha az yaygındır. `x:Arguments` (özniteliği veya öğenin kullanım) ile birlikte kullanılabilir `x:FactoryMethod` öğesi kullanımı, ancak bu özellikle gösterilmez kullanım bölümlerde.  
   
- `x:FactoryMethod` herhangi bir öğe başka bir özellik öğelerinin gelmelidir gibi gelmelidir `x:Arguments` ayrıca öğeleri olarak sağlanan ve herhangi bir içeriği/iç metin/başlatma metin gelmelidir.  
+ `x:FactoryMethod` herhangi bir öğeyi diğer bir özelliği öğelerden önce gelmelidir gibi gelmelidir `x:Arguments` ayrıca öğeleri olarak sağlanan ve herhangi bir içeriği/iç metin/başlatma metin gelmelidir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [x:Arguments Yönergesi](../../../docs/framework/xaml-services/x-arguments-directive.md)

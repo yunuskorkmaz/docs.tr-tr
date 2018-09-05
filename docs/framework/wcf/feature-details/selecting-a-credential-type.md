@@ -3,11 +3,11 @@ title: Kimlik Bilgisi Türü Seçme
 ms.date: 03/30/2017
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
 ms.openlocfilehash: c2ee1b9062d14eaa44de0651985c2a385fe02f8e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43396618"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43503397"
 ---
 # <a name="selecting-a-credential-type"></a>Kimlik Bilgisi Türü Seçme
 *Kimlik bilgileri* Windows Communication Foundation (WCF) kullanan bir talep kimliği veya özellikleri kurmak için verilerdir. Örneğin, bir passport bir devlet kurumu sorunlarını ülke veya bölgenizde Vatandaşlık kanıtlamak için bir kimlik bilgisi ' dir. WCF'de, kullanıcı adı belirteçleri ve X.509 sertifikaları gibi birçok forms kimlik bilgilerini alabilir. Bu konuda, kimlik bilgileri, WCF'de nasıl kullanılacağını ve nasıl seçileceğini, uygulamanız için doğru kimlik bilgisi anlatılmaktadır.  

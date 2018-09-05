@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generic types [LINQ]
 - generics [LINQ]
 ms.assetid: 660e3799-25ca-462c-8c4a-8bce04fbb031
-ms.openlocfilehash: f9bb4ec21685d21d0975529c7460944b5f0f9fc6
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 45bc5cbbdd1c0721797aed38636892e731c2883f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925778"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513892"
 ---
 # <a name="linq-and-generic-types-c"></a>LINQ ve Genel Türler (C#)
 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Sorgu'nün 2.0 sürümünde tanıtılan genel türler dayanır [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Sorguları yazmaya başlamadan önce bir ayrıntılı bilgilere genel türler gerekmez. Ancak, iki temel kavramları anlamak isteyebilirsiniz:  
@@ -36,6 +36,7 @@ ms.locfileid: "42925778"
   
  `var` Anahtar sözcüğü, ne zaman grubu sorgular tarafından üretilen kullananlar gibi iç içe geçmiş genel türleri açıkça belirtmek bu önemli değildir veya değişken türü belirgin olduğunda yararlıdır. Kullanırsanız, genel olarak, öneririz `var`, kodunuzu daha zor başkaları tarafından okunacak zorlaştırabilir emin farkında olun. Daha fazla bilgi için [örtük olarak yazılan yerel değişkenler](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C#'de LINQ Kullanmaya Başlama](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
- [Genel Türler](../../../../csharp/programming-guide/generics/index.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C#'de LINQ Kullanmaya Başlama](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
+- [Genel Türler](../../../../csharp/programming-guide/generics/index.md)

@@ -11,77 +11,77 @@ helpviewer_keywords:
 - components [Windows Forms], troubleshooting
 - Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
-ms.openlocfilehash: 9100d6dc41f982af340d747ad447009a183b3c7b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: caad6a76b52a970e133425c484602deb8801d252
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540985"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43670671"
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>Denetim ve Bileşen Yazmada Sorun Giderme
-Bu konu, bileşenleri ve denetimleri geliştirirken ortaya aşağıdaki ortak sorunları listeler. Daha fazla bilgi için bkz: [bileşenlerle programlama](http://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3).  
+Bu konu, bileşenlerin ve denetimlerin geliştirme ortaya çıkan aşağıdaki ortak sorunları listeler. Daha fazla bilgi için [bileşenler ile programlama](https://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3).  
   
--   Denetim araç kutusuna eklenemiyor  
+-   Denetimi araç kutusuna eklenemiyor  
   
--   Windows Forms kullanıcı denetimi veya bileşeni hata ayıklaması yapılamıyor  
+-   Windows Forms kullanıcı denetimi veya bileşen hataları ayıklanamıyor  
   
--   İki kez devralınan denetimi veya bileşeni olay tetiklenir  
+-   İki kez devralınan denetim veya bileşen olay tetiklenir  
   
--   Tasarım zamanı hata: "bileşeni oluşturulamadı '*bileşen adı*'"  
+-   Tasarım zamanı hata: "bileşeni oluşturulamadı. '*bileşen adı*'"  
   
 -   STAThreadAttribute  
   
 -   Bileşen simgesi Araç Kutusu'nda görünmez  
   
-## <a name="cannot-add-control-to-toolbox"></a>Denetim araç kutusuna eklenemiyor  
- Başka bir projede oluşturulan özel bir denetim veya bir üçüncü taraf denetimine eklemek isteyip istemediğinizi **araç**, bunu el ile yapmanız gerekir. Geçerli projenin denetimi veya bileşeni içeriyorsa, bu görüntülenmelidir **araç** otomatik olarak. Daha fazla bilgi için bkz: [izlenecek yol: araç kutusunu özel bileşenlerle'otomatik olarak doldurma](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md).  
+## <a name="cannot-add-control-to-toolbox"></a>Denetimi araç kutusuna eklenemiyor  
+ Başka bir proje tarafından oluşturulan özel bir denetim veya üçüncü taraf denetime eklemek isteyip istemediğimi **araç kutusu**, bunu el ile yapmanız gerekir. Geçerli proje denetim veya bileşen içeriyorsa, içinde görünmelidir **araç kutusu** otomatik olarak. Daha fazla bilgi için [izlenecek yol: otomatik olarak, araç kutusunu özel bileşenlerle doldurma](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md).  
   
-#### <a name="to-add-a-control-to-the-toolbox"></a>Araç kutusu denetim eklemek için  
+#### <a name="to-add-a-control-to-the-toolbox"></a>Araç kutusuna denetim ekleme  
   
-1.  Sağ **araç** ve kısayol menüsünden seçin **öğeleri Seç**.  
+1.  Sağ **araç kutusu** ve kısayol menüsünden seçin **öğelerini Seç**.  
   
 2.  İçinde **araç kutusu öğelerini Seç** iletişim kutusunda, bileşen ekleyin:  
   
-    -   Bir .NET Framework bileşenini veya denetim eklemek istiyorsanız, **.NET Framework bileşenlerini** sekmesi.  
+    -   Bir .NET Framework bileşeni veya denetimi eklemek istiyorsanız, tıklayın **.NET Framework bileşenlerini** sekmesi.  
   
          – veya –  
   
-    -   Bir COM bileşeni veya ActiveX denetimi eklemek istiyorsanız, **COM bileşenlerini** sekmesi.  
+    -   Bir COM bileşeni ya da ActiveX denetiminden eklemek istiyorsanız, tıklayın **COM bileşenlerini** sekmesi.  
   
-3.  İletişim kutusunda, Denetim listeleniyorsa, seçilir ve ardından onaylamak **Tamam**.  
+3.  Denetim iletişim kutusunda listede yoksa seçilir ve ardından onaylamak **Tamam**.  
   
-     Denetim eklenir **araç**.  
+     Denetim eklenir **araç kutusu**.  
   
-4.  Denetim iletişim kutusunda listede yoksa, aşağıdakileri yapın:  
+4.  Denetim iletişim kutusunda listede yoksa, şunları yapın:  
   
-    1.  Tıklatın **Gözat** düğmesi.  
+    1.  Tıklayın **Gözat** düğmesi.  
   
     2.  Denetim içeren .dll dosyasını içeren klasöre göz atın.  
   
-    3.  .Dll dosyasını tıklatıp **açık**.  
+    3.  .Dll dosyasını seçin ve tıklayın **açık**.  
   
          Denetim iletişim kutusunda görüntülenir.  
   
-    4.  Denetim seçilir ve ardından onaylamak **Tamam**.  
+    4.  Denetiminiz seçilir ve ardından onaylamak **Tamam**.  
   
-         Denetim eklenen **araç**.  
+         Denetim eklenir **araç kutusu**.  
   
-## <a name="cannot-debug-the-windows-forms-user-control-or-component"></a>Windows Forms kullanıcı denetimi veya bileşeni hata ayıklaması yapılamıyor  
- Denetim türetilen varsa <xref:System.Windows.Forms.UserControl> sınıfı, çalışma zamanı davranışını test kapsayıcısı ile ayıklayabilirsiniz. Daha fazla bilgi için bkz: [nasıl yapılır: bir UserControl denetiminin çalışma zamanı davranışını sınama](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
+## <a name="cannot-debug-the-windows-forms-user-control-or-component"></a>Windows Forms kullanıcı denetimi veya bileşen hataları ayıklanamıyor  
+ Türetilen denetiminiz varsa <xref:System.Windows.Forms.UserControl> sınıfı, çalışma zamanı davranışını test kapsayıcısı ile hata ayıklaması yapabilirsiniz. Daha fazla bilgi için [nasıl yapılır: bir UserControl denetiminin çalışma zamanı davranışını sınama](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
   
- Diğer özel denetimleri ve bileşenleri tek başına projeleri değildir. Bir Windows Forms projesi gibi bir uygulama tarafından barındırılmalıdır. Bir denetimi veya bileşeni hata ayıklamak için bir Windows Forms projesine eklemeniz gerekir.  
+ Diğer özel denetimleri ve bileşenleri tek başına projeleri değildir. Bir Windows Forms projesi gibi bir uygulama tarafından barındırılmalıdır. Bir denetim veya bileşen hatalarını ayıklamak için bir Windows Forms projesine eklemeniz gerekir.  
   
-#### <a name="to-debug-a-control-or-component"></a>Bir denetimi veya bileşeni hata ayıklamak için  
+#### <a name="to-debug-a-control-or-component"></a>Bir denetim veya bileşen hatalarını ayıklamak için  
   
-1.  Gelen **yapı** menüsünde tıklatın **yapı çözümü** çözümünüzü derlemek için.  
+1.  Gelen **derleme** menüsünde tıklatın **Çözümü Derle** çözümünüzü derlemek için.  
   
-2.  Gelen **dosya** menüsünde seçin **Ekle**ve ardından **yeni proje** uygulamanız için bir test projesi eklemek için.  
+2.  Gelen **dosya** menüsünde seçin **Ekle**, ardından **yeni proje** uygulamanız için bir test projesi eklemek için.  
   
-3.  İçinde **Yeni Proje Ekle** Seç iletişim kutusu **Windows uygulaması** proje türü.  
+3.  İçinde **Yeni Proje Ekle** Seç iletişim kutusu **Windows uygulama** proje türü için.  
   
-4.  İçinde **Çözüm Gezgini**, sağ **başvuruları** yeni proje için düğüm. Kısayol menüsünde **Başvuru Ekle** denetimi veya bileşeni içeren projeyi bir başvuru eklemek için.  
+4.  İçinde **Çözüm Gezgini**, sağ **başvuruları** yeni proje için düğüm. Kısayol menüsünde **Başvuru Ekle** denetim veya bileşen içeren projeye bir başvuru eklemek için.  
   
-5.  Test projesinde denetimi veya bileşeni örneği oluşturun. Bileşeniniz ise **araç**Tasarımcı yüzeyine sürükleyin ya da örneği aşağıdaki kod örneğinde gösterildiği gibi program aracılığıyla oluşturabilirsiniz.  
+5.  Test projesinde bir denetim veya bileşen örneği oluşturun. Bileşeniniz ise **araç kutusu**, Tasarımcı yüzeyine sürükleyin veya örneği aşağıdaki kod örneğinde gösterildiği gibi program aracılığıyla oluşturabilirsiniz.  
   
     ```vb  
     Dim Component1 As New MyNeatComponent()  
@@ -91,27 +91,27 @@ Bu konu, bileşenleri ve denetimleri geliştirirken ortaya aşağıdaki ortak so
     MyNeatComponent Component1 = new MyNeatComponent();  
     ```  
   
-     Artık denetimi veya bileşeni zamanki ayıklayabilirsiniz.  
+     Artık denetim veya bileşen zamanki ayıklayabilirsiniz.  
   
- Hata ayıklama hakkında daha fazla bilgi için bkz: [Visual Studio'da hata ayıklamayı](/visualstudio/debugger/debugging-in-visual-studio) ve [izlenecek yol: tasarım zamanında özel Windows Forms denetimleri hata ayıklama](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md).  
+ Hata ayıklama hakkında daha fazla bilgi için bkz. [Visual Studio'da hata ayıklama](/visualstudio/debugger/debugging-in-visual-studio) ve [izlenecek yol: tasarım zamanında özel Windows Forms denetimleri hata ayıklama](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md).  
   
-## <a name="event-is-raised-twice-in-inherited-control-or-component"></a>İki kez devralınan denetimi veya bileşeni olay tetiklenir  
- Bu yinelenen bir nedeniyle olasıdır `Handles` yan tümcesi. Daha fazla bilgi için bkz: [sorun giderme devralınmış olay işleyicileri Visual Basic'te](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md).  
+## <a name="event-is-raised-twice-in-inherited-control-or-component"></a>İki kez devralınan denetim veya bileşen olay tetiklenir  
+ Yinelenen nedeni büyük olasılıkla budur `Handles` yan tümcesi. Daha fazla bilgi için [sorun giderme devralınmış olay işleyicileri Visual Basic'te](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md).  
   
-## <a name="design-time-error-failed-to-create-component-component-name"></a>Tasarım zamanı hata: "başarısız bileşeni 'Bileşen adı' oluşturmak için"  
- Hiçbir parametre varsayılan bir oluşturucu bileşeni veya denetimi sağlamanız gerekir. Tasarım ortamında bileşeni veya denetimi örneğini oluşturduğunda, herhangi bir parametre için parametre almaz Oluşturucusu aşırı sağlamak denemez.  
+## <a name="design-time-error-failed-to-create-component-component-name"></a>Tasarım zamanı hata: "başarısız bileşen 'Bileşeni adı' oluşturmak için"  
+ Varsayılan bir parametresiz oluşturucu bileşeni veya denetimi sağlamanız gerekir. Tasarım ortamı bileşeni veya denetimi örneğini oluşturduğunda, parametre alan bir oluşturucu aşırı yüklemeleri için herhangi bir parametre sağlamak denemez.  
   
 ## <a name="stathreadattribute"></a>STAThreadAttribute  
- <xref:System.STAThreadAttribute> Windows Forms tek iş parçacıklı model kullanan ortak dil çalışma zamanı (CLR) bildirir. Windows Forms uygulamanızın için bu öznitelik uygulamazsanız beklenmedik davranışlara karşılaşabilirsiniz `Main` yöntemi. Gibi denetimlerin için arka plan görüntüleri gibi görünmeyebilir <xref:System.Windows.Forms.ListView>. Bazı denetimler de doğru otomatik tamamlama ve sürükle ve bırak davranışı için bu öznitelik gerektirebilir.  
+ <xref:System.STAThreadAttribute> Windows Forms tek kullanımlık apartman modeli kullanan ortak dil çalışma zamanı (CLR) bildirir. Bu öznitelik Windows Forms uygulamanızın için uygulamazsanız istenmeyen davranışı fark edebilirsiniz `Main` yöntemi. Gibi denetimlerin için arka plan görüntüleri gibi görünmeyebilir <xref:System.Windows.Forms.ListView>. Bazı denetimler de doğru otomatik tamamlama ve sürükle-bırak davranışı için bu öznitelik gerektirebilir.  
   
 ## <a name="component-icon-does-not-appear-in-toolbox"></a>Bileşen simgesi Araç Kutusu'nda görünmez  
- Kullandığınızda <xref:System.Drawing.ToolboxBitmapAttribute> özel bileşeni ile bir simge ilişkilendirmek için bit eşlem araç kutusunu otomatik olarak oluşturulur bileşenleri için görünmez. Bit eşlem görmek için denetimi kullanarak yeniden **araç kutusu öğelerini Seç** iletişim kutusu. Daha fazla bilgi için bkz: [nasıl yapılır: bir denetim için araç kutusu bit eşlemi sağlamak](../../../../docs/framework/winforms/controls/how-to-provide-a-toolbox-bitmap-for-a-control.md).  
+ Kullanırken <xref:System.Drawing.ToolboxBitmapAttribute> özel bileşeniniz ile bir simge ilişkilendirmek için bit eşlem araç kutusunu otomatik olarak oluşturulan bileşenler için görünmez. Bit eşlem görmek için denetimi kullanarak yeniden **araç kutusu öğelerini Seç** iletişim kutusu. Daha fazla bilgi için [nasıl yapılır: bir denetim için araç kutusu bit eşlemi sağlama](../../../../docs/framework/winforms/controls/how-to-provide-a-toolbox-bitmap-for-a-control.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Tasarım Zamanında Windows Forms Denetimleri Geliştirme](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
  [İzlenecek yol: Araç Kutusunu Otomatik Olarak Özel Bileşenlerle Doldurma](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)  
  [Nasıl yapılır: Bir UserControl Denetiminin Çalışma Zamanı Davranışını Sınama](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
  [İzlenecek yol: Tasarım Zamanında Özel Windows Forms Denetimleri Hatalarını Ayıklama](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
- [Bileşen yazma](http://msdn.microsoft.com/library/4a5a5e49-0378-4a31-83bc-24da0f1a727d)  
- [Tasarım zamanı geliştirme sorunlarını giderme](http://msdn.microsoft.com/library/e048d08e-fa7c-4be8-b238-4abaa199a0a6)  
- [Bileşenleri ile programlama](http://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)
+ [Bileşen yazma](https://msdn.microsoft.com/library/4a5a5e49-0378-4a31-83bc-24da0f1a727d)  
+ [Tasarım zamanı geliştirme sorunlarını giderme](https://msdn.microsoft.com/library/e048d08e-fa7c-4be8-b238-4abaa199a0a6)  
+ [Bileşenler ile programlama](https://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)

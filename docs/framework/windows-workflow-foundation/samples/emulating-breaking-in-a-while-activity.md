@@ -1,26 +1,26 @@
 ---
-title: Bir süre sonu öykünen etkinliği
+title: Bir süredir kesme öykünme etkinliği
 ms.date: 03/30/2017
 ms.assetid: ddff715d-d623-4b54-b841-60bacbc3ca21
-ms.openlocfilehash: 37c64c2b8dc03d58f9c2802edef644fe4888e87d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4938e07364609520f6528688877bce112be26d3f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514719"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560431"
 ---
-# <a name="emulating-breaking-in-a-while-activity"></a>Bir süre sonu öykünen etkinliği
-Bu örnek, aşağıdaki etkinliklerin döngü mekanizması ayırmak gösterilmiştir: <xref:System.Activities.Statements.DoWhile>, <xref:System.Activities.Statements.ForEach%601>, <xref:System.Activities.Statements.While>, ve <xref:System.Activities.Statements.ParallelForEach%601>.  
+# <a name="emulating-breaking-in-a-while-activity"></a>Bir süredir kesme öykünme etkinliği
+Bu örnek şu etkinlikler döngü mekanizması bölme gösterir: <xref:System.Activities.Statements.DoWhile>, <xref:System.Activities.Statements.ForEach%601>, <xref:System.Activities.Statements.While>, ve <xref:System.Activities.Statements.ParallelForEach%601>.  
   
- Windows Workflow Foundation (WF) bu döngüler yürütülmesi ayırmak için herhangi bir etkinlik içermediğinden bu yararlı olur.  
+ Windows Workflow Foundation (WF) bu döngüler yürütmeyi kesmek için herhangi bir etkinliği içermediğinden, bu yararlıdır.  
   
 ## <a name="scenario"></a>Senaryo  
- Örnek satıcılarının listesini ilk güvenilir satıcıdan bulur (örneklerini `Vendor` sınıfı). Her satıcının bulunan bir `ID`, `Name` ve nasıl güvenilir satıcı mi belirleyen sayısal güvenilirlik değer. Örnek olarak adlandırılan özel bir etkinlik oluşturur `FindReliableVendor` , iki giriş parametreleri (Satıcılar ve en düşük güvenilirlik değer listesi) alır ve sağlanan ölçütlerle eşleşen listedeki ilk satıcısına döndürür.  
+ Örnek olan satıcıların listesini ilk güvenilir satıcıdan bulur (örneklerini `Vendor` sınıfı). Her satıcının bulunan bir `ID`, `Name` ve satıcı nasıl güvenilir ise belirleyen bir sayısal güvenilirlik değer. Örnek olarak adlandırılan özel bir etkinlik oluşturur `FindReliableVendor` iki giriş parametresi (Satıcılar ve en düşük güvenilirlik değeri bir liste) alan ve sağlanan ölçütlerle eşleşen listedeki ilk satıcısına döndürür.  
   
-## <a name="breaking-a-loop"></a>Döngü kesiliyor  
- Windows Workflow Foundation (WF) bir döngüsünü kesmek için bir etkinlik içermez. Kod örneği kullanarak bir döngü çiğnemekten gerçekleştirir bir <xref:System.Activities.Statements.If> etkinliği ve çeşitli değişkenler. Örnekte, <xref:System.Activities.Statements.While> etkinlik bozulur kez `reliableVendor` değişkeni atanan değer dışında `null`.  
+## <a name="breaking-a-loop"></a>Bir döngü sonu  
+ Windows Workflow Foundation (WF), bir döngüyü kesmek için bir etkinlik içermiyor. Kod örneği kullanarak bir döngü bozucu gerçekleştirir bir <xref:System.Activities.Statements.If> etkinliği ve çeşitli değişkenleri. Örnekte, <xref:System.Activities.Statements.While> etkinlik bozuk bir kez `reliableVendor` değişkenine bir değerin atandığı dışında `null`.  
   
- Aşağıdaki kod örneğinde nasıl örnek biraz keser gösterilmektedir döngü.  
+ Aşağıdaki kod örneğinde nasıl örnek bir süre sonu gösterir döngü.  
   
 ```csharp  
 // Iterates while the "i" variable is lower than the size of the list   
@@ -68,15 +68,15 @@ new While(env => i.Get(env) < this.Vendors.Get(env).Count && reliableVendor.Get(
   
 1.  Kullanarak [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], EmulatingBreakInWhile.sln çözüm dosyasını açın.  
   
-2.  Çözümü derlemek için CTRL + SHIFT + B tuşuna basın.  
+2.  Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.  
   
-3.  Çözümü çalıştırmak için CTRL + F5 tuşuna basın.  
+3.  Çözümü çalıştırmak için CTRL + F5 tuşlarına basın.  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\EmulatingBreakInWhile`

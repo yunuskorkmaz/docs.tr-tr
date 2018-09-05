@@ -4,28 +4,28 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], arithmetic operations
 ms.assetid: d4f0b623-827e-45ce-8649-cfcebc8692aa
-ms.openlocfilehash: c40b125e42649093aa1f1fe860a3e8f5d2690359
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3694699466f7a200eecd5eef85f60fa19f9584a8
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324307"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43542199"
 ---
 # <a name="arithmetic-operations-on-pointers-c-programming-guide"></a>İşaretçilerde Aritmetik İşlemler (C# Programlama Kılavuzu)
-Aritmetik işleçler kullanarak bu konuda ele alınmıştır `+` ve **-** işaretçileri yönlendirebilir.  
+Aritmetik işleçler kullanarak bu konuda ele alınmıştır `+` ve **-** işaretçileri işlemek için.  
   
 > [!NOTE]
->  Void işaretçileri hiçbir aritmetik işlemler gerçekleştirilemiyor.  
+>  Tüm void işaretçilerde aritmetik işlemler gerçekleştirilemiyor.  
   
-## <a name="adding-and-subtracting-numeric-values-to-or-from-pointers"></a>Ekleme ve çıkarma sayısal değerler için veya işaretçileri  
- Bir değer ekleyebilirsiniz `n` türü [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [uzun](../../../csharp/language-reference/keywords/long.md), veya [ulong](../../../csharp/language-reference/keywords/ulong.md) bir işaretçi için `p`, herhangi bir türde `void*`. Sonuç `p+n` eklemelerini kaynaklanan işaretçi `n * sizeof(p) to the address of p`. Benzer şekilde, `p-n` alanından çıkarılmasıyla elde edilen işaretçi `n * sizeof(p)` adresinden gelen `p`.  
+## <a name="adding-and-subtracting-numeric-values-to-or-from-pointers"></a>Ekleme ve çıkarma işaretçileri gelen veya sayısal değerler  
+ Bir değer eklediğiniz `n` türü [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [uzun](../../../csharp/language-reference/keywords/long.md), veya [ulong](../../../csharp/language-reference/keywords/ulong.md) bir işaretçiye `p`, dışında herhangi bir türde `void*`. Sonuç `p+n` eklemesini elde edilen işaretçi `n * sizeof(p) to the address of p`. Benzer şekilde, `p-n` arasındaki çıkarma işleminin sonucu işaretçi `n * sizeof(p)` adresinden `p`.  
   
-## <a name="subtracting-pointers"></a>İşaretçileri çıkarma  
- Aynı türde işaretçileri çıkarın. Sonuç her zaman türüdür `long`. Örneğin, varsa `p1` ve `p2` türü işaretçileridir `pointer-type*`, ardından ifade `p1-p2` sonuçlanır:  
+## <a name="subtracting-pointers"></a>Çıkarma işaretçileri  
+ Ayrıca, aynı türde işaretçileri çıkarabilirsiniz. Sonucu her zaman türüdür `long`. Örneğin, varsa `p1` ve `p2` türünde işaretçiler `pointer-type*`, ifade `p1-p2` sonuçlanır:  
   
  `((long)p1 - (long)p2)/sizeof(pointer_type)`  
   
- Hiçbir özel durum, etki alanı işaretçinin aritmetik işlemin taşar ve sonucu uygulamasına bağlıdır, üretilir.  
+ Hiçbir özel durum, etki alanı işaretçinin aritmetik işlemi taşıyor ve sonuç uygulamasının bağlıdır, üretilir.  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[csProgGuidePointers#14](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/arithmetic-operations-on-pointers_1.cs)]  
@@ -35,14 +35,15 @@ Aritmetik işleçler kullanarak bu konuda ele alınmıştır `+` ve **-** işare
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [Güvenli Olmayan Kod ve İşaretçiler](../../../csharp/programming-guide/unsafe-code-pointers/index.md)  
- [İşaretçi İfadeleri](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
- [C# İşleçleri](../../../csharp/language-reference/operators/index.md)  
- [İşaretçileri İşleme](../../../csharp/programming-guide/unsafe-code-pointers/manipulating-pointers.md)  
- [İşaretçi türleri](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
- [Türler](../../../csharp/language-reference/keywords/types.md)  
- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
- [fixed Deyimi](../../../csharp/language-reference/keywords/fixed-statement.md)  
- [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [Güvenli Olmayan Kod ve İşaretçiler](../../../csharp/programming-guide/unsafe-code-pointers/index.md)  
+- [İşaretçi İfadeleri](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
+- [C# İşleçleri](../../../csharp/language-reference/operators/index.md)  
+- [İşaretçileri İşleme](../../../csharp/programming-guide/unsafe-code-pointers/manipulating-pointers.md)  
+- [İşaretçi türleri](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
+- [Türler](../../../csharp/language-reference/keywords/types.md)  
+- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
+- [fixed Deyimi](../../../csharp/language-reference/keywords/fixed-statement.md)  
+- [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)

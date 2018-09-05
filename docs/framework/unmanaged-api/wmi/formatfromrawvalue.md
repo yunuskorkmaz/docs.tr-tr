@@ -1,6 +1,6 @@
 ---
 title: FormatFromRawValue işlevi (yönetilmeyen API Başvurusu)
-description: FormatFromRawValue işlevi ham performans verilerini belirtilen biçime dönüştürür.
+description: FormatFromRawValue işlevi ham performans verilerini belirtilen bir biçime dönüştürür.
 ms.date: 11/21/2017
 api_name:
 - FormatFromRawValue
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e0710b26237b350f1dfbc7d2464b7a131373604e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 95ef445d41672c5c2895bd7115afb6a73a57e8f9
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460427"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43542173"
 ---
 # <a name="formatfromrawvalue-function"></a>FormatFromRawValue işlevi
-Biçim dönüştürmeyi zamana dayalı ise belirtilen biçime bir ham performans veri değeri veya iki ham performans veri değerleri dönüştürür.   
+Biçim dönüştürme, zamana bağlı ise belirtilen biçimde bir ham performans veri değerine ya da iki ham performans veri değerleri dönüştürür.   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -44,46 +44,46 @@ int FormatFromRawValue (
 ## <a name="parameters"></a>Parametreler
 
 `dwCounterType`  
-[in] Sayaç türü. Sayaç türlerinin listesi için bkz: [WMI performansı sayaç türleri](https://msdn.microsoft.com/library/aa394569(v=vs.85).aspx). `dwCounterType` dışında herhangi bir sayaç türü olabilir `PERF_LARGE_RAW_FRACTION` ve `PERF_LARGE_RAW_BASE`. 
+[in] Sayaç türü. Sayaç türlerinin bir listesi için bkz. [WMI performansı sayaç türleri](/windows/desktop/WmiSdk/wmi-performance-counter-types). `dwCounterType` dışında herhangi bir sayaç türü olabilir `PERF_LARGE_RAW_FRACTION` ve `PERF_LARGE_RAW_BASE`. 
 
 `dwFormat`  
-[in] Ham performans verilerini dönüştürülecek biçimi. Aşağıdaki değerlerden biri olabilir:
+[in] Ham performans dönüştürülecek biçimi. Aşağıdaki değerlerden biri olabilir:
 
 |Sabit  |Değer  |Açıklama |
 |---------|---------|---------|
-| `PDH_FMT_DOUBLE` |0x00000200 | Hesaplanan değer bir çift duyarlıklı kayan noktalı değeri döndürür. | 
+| `PDH_FMT_DOUBLE` |0x00000200 | Hesaplanan değer bir çift duyarlıklı kayan noktalı değer döndürür. | 
 | `PDH_FMT_LARGE` | 0x00000400 | Hesaplanan değeri bir 64-bit tamsayı olarak döndürür. |
-| `PDH_FMT_LONG` | 0x00000100 | Hesaplanan değer 32 bit tamsayı olarak döndürür. |
+| `PDH_FMT_LONG` | 0x00000100 | Hesaplanan değer 32-bit tamsayı olarak döndürür. |
 
-Aşağıdaki ölçeklendirme bayraklardan biri ile bölümleri önceki değerlerden biri olabilir:
+Önceki değerlerinden ORed aşağıdaki ölçeklendirme bayrakları birine sahip olabilir:
 
 |Sabit  |Değer  |Açıklama |
 |---------|---------|---------|
-| `PDH_FMT_NOSCALE` | 0x00001000 | Sayacın ölçeklendirme etkenleri geçerli değildir. |
-| `PDH_FMT_1000` | 0x00002000 | Son değer tarafından 1,000 çarpın. | 
+| `PDH_FMT_NOSCALE` | 0x00001000 | Sayacın ölçekleme faktörü geçerli değildir. |
+| `PDH_FMT_1000` | 0x00002000 | Son değer 1000 ile çarpın. | 
 
 `pTimeBase`  
-[in] Biçim dönüştürme için gerekiyorsa süresi temeli için bir işaretçi. Zamanı temel bilgileri biçimi dönüştürme için gerekli değilse, bu parametrenin değeri göz ardı edilir.
+[in] Süresi Temeli, biçim dönüştürme için gerekirse bir işaretçi. Saat temel bilgileri, biçim dönüştürme için gerekli değildir, bu parametrenin değeri yok sayıldı.
 
-`pRawValue1` [in] Bir işaretçi bir [ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx) yapısı bir ham performans değerini temsil eder.
+`pRawValue1` [in] Bir işaretçi bir [ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx) ham performans değerini temsil eden yapısı.
 
-`pRawValue2` [in] Bir işaretçi bir [ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx) yapısı ikinci bir ham performans değerini temsil eder. İkinci bir ham performans değeri gerekli değilse, bu parametre olmalıdır `null`.
+`pRawValue2` [in] Bir işaretçi bir [ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx) ikinci bir performans değeri temsil eden yapısı. İkinci bir ham performans değeri gerekli değilse bu parametre olmalıdır `null`.
 
-`pFmtValue` [out] Bir işaretçi bir [ `PDH_FMT_COUNTERVALUE` ](https://msdn.microsoft.com/library/windows/desktop/aa373050(v=vs.85).aspx) yapısı biçimlendirilmiş performans değeri alır.
+`pFmtValue` [out] Bir işaretçi bir [ `PDH_FMT_COUNTERVALUE` ](https://msdn.microsoft.com/library/windows/desktop/aa373050(v=vs.85).aspx) biçimlendirilmiş bir performans değeri alan yapısı.
 
 ## <a name="return-value"></a>Dönüş değeri
 
-Aşağıdaki değerleri bu işlev tarafından döndürülen:
+Aşağıdaki değerlerden bu işlev tarafından döndürülen:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
 | `ERROR_SUCCESS` | 0 | İşlev çağrısı başarılı olur. |
-| `PDH_INVALID_ARGUMENT` | 0xC0000BBD | Gerekli bir bağımsız değişken eksik veya yanlış. | 
+| `PDH_INVALID_ARGUMENT` | 0xC0000BBD | Gerekli bir bağımsız değişken eksik ya da yanlış biçimlendirilmiş. | 
 | `PDH_INVALID_HANDLE` | 0xC0000BBC | Tanıtıcı geçerli bir PDH nesnesi değil. |
   
 ## <a name="remarks"></a>Açıklamalar
 
-Bu işlev çağrısı sarmalar [FormatFromRawValue](https://msdn.microsoft.com/library/ms231047(v=vs.85).aspx) işlevi.
+Bu işlev bir çağrı sarılır [FormatFromRawValue](https://msdn.microsoft.com/library/ms231047(v=vs.85).aspx) işlevi.
 
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

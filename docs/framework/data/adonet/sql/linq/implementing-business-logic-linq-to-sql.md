@@ -1,31 +1,31 @@
 ---
-title: İş mantığı (LINQ-SQL) uygulama
+title: Uygulama iş mantığı (LINQ to SQL)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c4577590-7b12-42e1-84a6-95aa2562727e
-ms.openlocfilehash: 6216a3d6dd21f1dcb3348565a9f1870be7c7905a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d739e4bba96873740c53c07eccf687b060d82003
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362057"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43552237"
 ---
-# <a name="implementing-business-logic-linq-to-sql"></a>İş mantığı (LINQ-SQL) uygulama
-Bu konudaki "iş mantığı" terimi herhangi bir özel kurallar veya onu takıldığında, güncelleştirilmiş veya veritabanından silinmiş önce verilere uygulamak doğrulama testleri anlamına gelir. İş mantığı da bazen "iş kurallarını" veya "etki alanı mantığı." adlandırılır Böylece sunu katmanı veya veri erişim katmanı bağımsız olarak değiştirilebilir n katmanlı uygulamalarda, genellikle bir mantıksal katman olarak tasarlanmıştır. İş mantığı, öncesinde veya sonrasında herhangi güncelleştirme, ekleme veya silme veritabanındaki verilerin, veri erişim katmanı tarafından çağrılabilir.  
+# <a name="implementing-business-logic-linq-to-sql"></a>Uygulama iş mantığı (LINQ to SQL)
+Terim "iş mantığı" Bu konu başlığı altındaki herhangi bir özel kural veya onu eklenen, güncelleştirilen veya veritabanından silinmiş önce verileri için geçerli doğrulama testlerini ifade eder. İş mantığı da bazen "iş kurallarını" veya "etki alanı mantığı." adlandırılır Böylece sunu katmanı veya veri erişim katmanı bağımsız olarak değiştirilebilir n katmanlı uygulamalarda, genellikle bir mantıksal katmanı olarak tasarlanmıştır. İş mantığı, öncesinde veya sonrasında herhangi bir güncelleştirme, ekleme veya silme işlemi veritabanındaki verilerin veri erişim katmanı tarafından çağrılabilir.  
   
- İş mantığı alan türü tablo sütun türüyle uyumlu olduğundan emin olmak için bir şema doğrulaması kadar basit olabilir. Veya, rasgele karmaşık yöntemle etkileşim nesneler kümesinden oluşabilir. Kurallar, veritabanı üzerinde saklı yordamları veya bellek içi nesneleri olarak uygulanabilir. Ancak iş mantığı uygulanır, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kısmi sınıflar ve kısmi yöntemler iş mantığı veri erişim kodundan ayırmak için kullandığınız etkinleştirir.  
+ İş mantığı alanının türü tablo sütununun türü ile uyumlu olduğundan emin olmak için bir şema doğrulaması kadar basit olabilir. Veya, rasgele karmaşık şekillerde etkileşim kuran bir nesne oluşabilir. Kurallar, saklı yordamları veritabanında veya bellek içi nesneler olarak uygulanabilir. Ancak, iş mantığı uygulanır, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] etkinleştirir, kısmi sınıflar ve kısmi yöntemler iş mantığı veri erişim kodu ayırmak için virgül kullanın.  
   
-## <a name="how-linq-to-sql-invokes-your-business-logic"></a>LINQ-SQL iş mantığınızı nasıl çağırır  
- Ne zaman oluşturduğunuz bir varlık sınıfı tasarım zamanında el ile veya kullanarak [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] veya SQLMetal, kısmi bir sınıf olarak tanımlanır. Bu ayrı kod dosyasında, başka bir parçası, özel iş mantığı içeren varlık sınıfı tanımlayabilirsiniz, anlamına gelir. Derleme zamanında iki bölümden tek bir sınıf halinde birleştirilir. Ancak, varlık sınıflarını kullanarak yeniden oluşturmak zorunda kalırsanız [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] veya SQLMetal, bunu yapabilirsiniz ve bölümünüzün sınıfının değiştirilmeyecek.  
+## <a name="how-linq-to-sql-invokes-your-business-logic"></a>LINQ to SQL iş mantığınızı nasıl çağırır  
+ Ne zaman oluşturduğunuz varlık sınıfı tasarım zamanında el ile ya da kullanarak [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] veya SQLMetal, kısmi bir sınıf olarak tanımlanır. Bu, ayrı kod dosyasında, başka bir parçası, özel iş mantığı içeren varlık sınıf tanımlayabilirsiniz, anlamına gelir. Derleme zamanında iki bölümü tek bir sınıf halinde birleştirilir. Ancak, varlık sınıfları kullanarak yeniden varsa [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] veya SQLMetal, bunu yapabilirsiniz ve sınıf bölümünüzün değiştirilmeyecek.  
   
- Varlıklarını Tanımlama kısmi sınıflar ve <xref:System.Data.Linq.DataContext> kısmi yöntemler içerir. Bunlar, önce ve sonra tüm güncelleştirme, ekleme veya silme bir varlık veya varlık özelliği için iş mantığını uygulamak için kullanabileceğiniz genişletilebilirlik noktalarıdır. Kısmi yöntemler, derleme zamanı olayları olarak düşünülebilir. Kod Oluşturucu get yöntemleri çağırır ve yöntem imzası tanımlar ve ayarlama özelliği erişimcileri `DataContext` oluşturucusu ve bazı durumlarda arka planda olduğunda <xref:System.Data.Linq.DataContext.SubmitChanges%2A> olarak adlandırılır. Ancak, belirli bir kısmi yöntemi kullanılmaz, onu ve tanımına yapılan tüm başvuruları derleme zamanında kaldırılır.  
+ Varlıklar tanımlayan kısmi sınıflar ve <xref:System.Data.Linq.DataContext> kısmi yöntemler içerir. Önce ve sonra herhangi bir update, INSERT veya delete bir varlık veya varlık özelliği için iş mantığı uygulamak için kullanabileceğiniz genişletilebilirlik noktaları şunlardır. Kısmi yöntemler, derleme zamanı olaylar olarak düşünülebilir. Kod oluşturucunun yöntem imzasını tanımlayan ve içinde get yöntemleri çağırır ve özellik erişimcileri `DataContext` oluşturucusu ve bazı durumlarda arka planda olduğunda <xref:System.Data.Linq.DataContext.SubmitChanges%2A> çağrılır. Ancak, belirli bir kısmi yöntemini uygulayamaz ve tanımı yapılan tüm başvurular derleme zamanında kaldırılır.  
   
- Ayrı kod dosyanızda yazdığınız uygulama tanımında özel mantığı gereklidir gerçekleştirebilirsiniz. Etki alanı katmanı olarak, kısmi sınıfı kullanabilir veya kısmi yöntemi ayrı bir nesne veya nesneler, uygulama tanımından çağırabilirsiniz. Her iki durumda da, iş mantığı düzgün bir şekilde veri erişim kodunuzu hem sunu katmanı kodunuzu ayrılır.  
+ Ayrı bir kod dosyanızda yazdığınız uygulama tanımında özel mantığı gereklidir gerçekleştirebilirsiniz. Etki alanı katmanınızdaki, kısmi sınıf kullanabilir veya kısmi yönteminin uygulama tanımınızı ayrı bir nesne veya nesneler çağırabilirsiniz. Her iki durumda da, veri erişim kodu hem, sunu katmanı kodu iş mantığınızı düzgün bir şekilde ayrılır.  
   
-## <a name="a-closer-look-at-the-extensibility-points"></a>Genişletilebilirlik noktaları yakından inceleyin  
- Tarafından oluşturulan kod parçası, aşağıdaki örnekte [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] için `DataContext` iki tablo olan sınıfı: `Customers` ve `Orders`. INSERT, Update ve Delete yöntemleri unutmayın sınıftaki her tablo için tanımlanır.  
+## <a name="a-closer-look-at-the-extensibility-points"></a>Genişletilebilirlik noktaları daha yakından bakın  
+ Tarafından oluşturulan kodun bir parçası aşağıdaki örnekte [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] için `DataContext` iki tablo sınıf: `Customers` ve `Orders`. INSERT, Update ve Delete yöntemleri unutmayın sınıftaki her tablo için tanımlanır.  
   
 ```vb  
 Partial Public Class Northwnd  
@@ -69,9 +69,9 @@ public partial class MyNorthWindDataContext : System.Data.Linq.DataContext
         #endregion  
 ```  
   
- INSERT uygularsanız, güncelleştirme ve silme yöntemleri kısmi sınıfınızda [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] çalışma zamanı, kendi varsayılan yöntemlerini yerine bunları çağıracaktır zaman <xref:System.Data.Linq.DataContext.SubmitChanges%2A> olarak adlandırılır. Bu, oluşturma için varsayılan davranışı geçersiz kılma / okuma / güncelleştirme / silme işlemlerine olanak sağlar. Daha fazla bilgi için bkz: [izlenecek yol: Ekle özelleştirme, güncelleştirme ve Varlık davranışını silme](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes).  
+ INSERT uygularsanız, güncelleştirme ve silme, kısmi sınıftaki yöntemlerin [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] çalışma zamanı, kendi varsayılan yöntemler yerine bunları çağıracaktır olduğunda <xref:System.Data.Linq.DataContext.SubmitChanges%2A> çağrılır. Bu, oluşturmak varsayılan davranışın üzerine / okuma / güncelleştirme / silme işlemleri sağlar. Daha fazla bilgi için [izlenecek yol: INSERT özelleştirme, güncelleştirme ve silme davranışı varlık sınıflarının](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes).  
   
- `OnCreated` Yöntemi, bir sınıf oluşturucu çağrılır.  
+ `OnCreated` Sınıfı Oluşturucu yöntemi çağrılır.  
   
 ```vb  
 Public Sub New(ByVal connection As String)  
@@ -88,7 +88,7 @@ public MyNorthWindDataContext(string connection) :
         }  
 ```  
   
- Varlık sınıfı tarafından çağrılır üç yöntem sahip [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] varlık oluşturduğunuzda, yüklenen ve doğrulanmış çalışma zamanı (zaman `SubmitChanges` olarak adlandırılır). Varlık sınıflarını sonra çağrılan kısmi için iki yöntem her bir özellik, özelliğini ayarlamadan önce çağrılan, diğeri de. Aşağıdaki kod örneği için oluşturulan yöntemlerin bazıları gösterir `Customer` sınıfı:  
+ Varlık sınıfları tarafından aranır üç yöntem sahip [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] varlık oluşturduğunuzda, yüklenmiş ve doğrulanmış bir çalışma zamanı (zaman `SubmitChanges` olarak adlandırılır). Varlık sınıflarının sonra çağrılan iki kısmi yöntem her bir özellik, özelliğin ayarlanması çağrılan, diğeri için de var. Aşağıdaki kod örneği için oluşturulan yöntemlerden bazıları gösterilmektedir `Customer` sınıfı:  
   
 ```vb  
 #Region "Extensibility Method Definitions"  
@@ -122,7 +122,7 @@ public MyNorthWindDataContext(string connection) :
 // ...additional Changing/Changed methods for each property  
 ```  
   
- Yöntemleri için aşağıdaki örnekte gösterildiği gibi özellik set erişimcisine denir `CustomerID` özelliği:  
+ Yöntemleri özellik kümesi erişimcisi için aşağıdaki örnekte gösterildiği gibi verilir `CustomerID` özelliği:  
   
 ```vb  
 Public Property CustomerID() As String  
@@ -155,7 +155,7 @@ public string CustomerID
 }  
 ```  
   
- Sınıfının, bölümünde yöntemi uygulayan bir tanımını yazın. Visual Studio'da yazdıktan sonra `partial` bir sınıf parçası yöntemi tanımlarında için IntelliSense görürsünüz.  
+ Sınıfı, kısmında yöntemini uygulayan bir tanımını yazın. Visual Studio'da yazdıktan sonra `partial` bir sınıfın parçası yöntemi tanımlar için IntelliSense görürsünüz.  
   
 ```vb  
 Partial Public Class Customer  
@@ -175,16 +175,16 @@ partial class Customer
     }  
 ```  
   
- Kısmi yöntemler kullanarak uygulamanıza iş mantığı ekleme hakkında daha fazla bilgi için aşağıdaki konulara bakın:  
+ Kısmi yöntemler kullanarak iş mantığı uygulamanıza ekleme hakkında daha fazla bilgi için aşağıdaki konulara bakın:  
   
- [Nasıl yapılır: sınıflar için doğrulama ekleme](/visualstudio/data-tools/how-to-add-validation-to-entity-classes)  
+ [Nasıl yapılır: Varlık sınıflarına doğrulama ekleme](/visualstudio/data-tools/how-to-add-validation-to-entity-classes)  
   
- [İzlenecek yol: Ekle özelleştirme, güncelleştirme ve Varlık davranışını silme](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes)  
+ [İzlenecek yol: Varlık sınıflarının ekleme, güncelleştirme ve silme davranışını özelleştirme](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes)  
   
- [İzlenecek yol: Sınıflar için doğrulama ekleme](http://msdn.microsoft.com/library/85b06a02-b2e3-4534-95b8-d077c8d4c1d7)  
+ [İzlenecek yol: Varlık sınıflarına doğrulama ekleme](https://msdn.microsoft.com/library/85b06a02-b2e3-4534-95b8-d077c8d4c1d7)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Parçalı Sınıflar ve Yöntemler](~/docs/csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)  
  [Kısmi Yöntemler](~/docs/visual-basic/programming-guide/language-features/procedures/partial-methods.md)  
- [LINQ-SQL Visual Studio Araçları](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
+ [Visual Studio'daki LINQ to SQL Araçları](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
  [SqlMetal.exe (Kod Üretme Aracı)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)

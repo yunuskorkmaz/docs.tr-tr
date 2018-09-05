@@ -12,37 +12,37 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - bound controls [Windows Forms]
 ms.assetid: 4e96e3d0-b1cc-4de1-8774-bc9970ec4554
-ms.openlocfilehash: 1be8a31957bc439c140c1b6c5fc24e3221860c80
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 409d94e46cae3e4daf7df930097f0a3d46360633
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529515"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43500592"
 ---
 # <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Formları DataGrid Denetimini Veri Kaynağına Bağlama
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView> Denetimi değiştirir ve işlevlerini ekler <xref:System.Windows.Forms.DataGrid> kontrol; ancak, <xref:System.Windows.Forms.DataGrid> denetim tutulur geriye dönük uyumluluk ve gelecekte kullanım için seçerseniz. Daha fazla bilgi için bkz: [farklar arasında Windows Forms DataGridView ve DataGrid denetimleri](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+>  <xref:System.Windows.Forms.DataGridView> Denetimi değiştirir ve işlevsellik ekler <xref:System.Windows.Forms.DataGrid> denetler; ancak, <xref:System.Windows.Forms.DataGrid> denetim korunur geriye dönük uyumluluk ve gelecekte kullanım için seçerseniz. Daha fazla bilgi için [farklar arasında Windows Forms DataGridView ve DataGrid denetimleri](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Windows Forms <xref:System.Windows.Forms.DataGrid> denetimi veri kaynağı bilgilerini görüntülemek için özel olarak tasarlanmıştır. Ayarlayarak tasarım zamanında denetimi bağlamak <xref:System.Windows.Forms.DataGrid.DataSource%2A> ve <xref:System.Windows.Forms.DataGrid.DataMember%2A> özelliklerini veya çağırarak çalışma zamanında <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> yöntemi. Çeşitli veri kaynakları verileri görüntüleyebilse de, en tipik veri kümeleri ve veri görünümleri kaynaklardır.  
+ Windows Forms <xref:System.Windows.Forms.DataGrid> denetim bir veri kaynağından bilgileri görüntülemek için özel olarak tasarlanmıştır. Ayarlayarak tasarım zamanında denetimi bağlama <xref:System.Windows.Forms.DataGrid.DataSource%2A> ve <xref:System.Windows.Forms.DataGrid.DataMember%2A> özellikleri veya çağırarak çalışma zamanında <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> yöntemi. Çeşitli veri kaynaklarından verileri görüntüleyebilse de, en sık karşılaşılan veri kümeleri ve veri görünümleri kaynaklarıdır.  
   
- Tasarım zamanında veri kaynağının kullanılabilir olup olmadığını — Örneğin, form örneği bir veri kümesi veya bir veri görünümü içeriyorsa — kılavuz tasarım zamanında veri kaynağına bağlayabilirsiniz. Sonra veri kılavuzunda nasıl görüneceğini önizlemesini görebilirsiniz.  
+ Tasarım zamanında veri kaynağının kullanılabilir olup olmadığını — Örneğin, bir veri kümesi veya bir veri görünümü örneği formu içeren — veri kaynağına kılavuz tasarım zamanında bağlayabilirsiniz. Sonra veri kılavuzunda nasıl görüneceğini önizlemesini görebilirsiniz.  
   
- Kılavuz ayrıca programlı ve çalışma zamanında bağlayabilirsiniz. Çalışma zamanında alma bilgilere dayalı bir veri kaynağı istediğinizde kullanışlıdır. Örneğin, uygulamayı görüntülemek için bir tablo adını belirtin kullanıcı sağlayabilir. Ayrıca, burada veri kaynağı tasarım zamanında yok durumlarda gerekli değildir. Diziler, koleksiyonlar, yazılmayan veri kümeleri ve veri okuyucuları gibi veri kaynakları içerir.  
+ Bu kılavuz ayrıca programlı olarak ve çalışma zamanında bağlayabilirsiniz. Çalışma zamanında alma bilgilere dayanarak bir veri kaynağı istediğinizde bu kullanışlıdır. Örneğin, uygulamayı görüntülemek için bir tablonun adını belirttiğiniz kullanıcı sağlayabilir. Gerekli durumlarda tasarım zamanında burada veri kaynağı yok. Bu, diziler, koleksiyonlar, yazılmayan veri kümeleri ve veri okuyucu gibi veri kaynakları içerir.  
   
- Aşağıdaki yordam gerektiren bir **Windows uygulaması** içeren bir form ile proje bir <xref:System.Windows.Forms.DataGrid> denetim. Böyle bir proje ayarlama hakkında daha fazla bilgi için bkz: [nasıl yapılır: bir Windows uygulaması projesi oluşturduğunuzda](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) ve [nasıl yapılır: Windows Forms denetimlerine ekleme](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md). İçinde [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], <xref:System.Windows.Forms.DataGrid> denetim içinde değil **araç** varsayılan olarak. Bu ekleme hakkında daha fazla bilgi için bkz: [nasıl yapılır: araç kutusu öğeleri Ekle](http://msdn.microsoft.com/library/458e119e-17fe-450b-b889-e31c128bd7e0). Ayrıca, [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], kullanabileceğiniz **veri kaynakları** tasarım zamanı veri bağlama için penceresi. Daha fazla bilgi için bkz: [Visual Studio'da verilere denetimler bağlama](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio).  
+ Aşağıdaki yordam gerektirir bir **Windows uygulama** proje içeren bir form içeren bir <xref:System.Windows.Forms.DataGrid> denetimi. Bu tür bir proje ayarlama hakkında daha fazla bilgi için bkz: [nasıl yapılır: bir Windows uygulaması projesi oluşturmak](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) ve [nasıl yapılır: Windows Forms denetimlerine ekleme](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md). İçinde [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], <xref:System.Windows.Forms.DataGrid> denetimi içinde değil **araç kutusu** varsayılan olarak. Bu ekleme hakkında daha fazla bilgi için bkz: [nasıl yapılır: araç kutusu öğeleri Ekle](https://msdn.microsoft.com/library/458e119e-17fe-450b-b889-e31c128bd7e0). Ek olarak [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], kullanabileceğiniz **veri kaynakları** penceresi tasarım zamanı veri bağlama için. Daha fazla bilgi için [Visual Studio'da verilere denetimler bağlama](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio).  
   
 > [!NOTE]
->  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
-### <a name="to-data-bind-the-datagrid-control-to-a-single-table-in-the-designer"></a>Veri DataGrid denetimini Tasarımcısı'nda tek bir tabloya bağlamak için  
+### <a name="to-data-bind-the-datagrid-control-to-a-single-table-in-the-designer"></a>Veri DataGrid denetimi Tasarımcısı'nda tek bir tabloya bağlama için  
   
-1.  Denetimin ayarlamak <xref:System.Windows.Forms.DataGrid.DataSource%2A> özelliği bağlamak istediğiniz veri öğeleri içeren nesne.  
+1.  Denetimin ayarlamak <xref:System.Windows.Forms.DataGrid.DataSource%2A> özelliğini bağlamak istediğiniz veri öğelerini içeren nesne.  
   
-2.  Veri kaynağı bir veri kümesi ise <xref:System.Windows.Forms.DataGrid.DataMember%2A> özelliğini bağlamak için tablonun adı.  
+2.  Veri kaynağı bir veri kümesi ise <xref:System.Windows.Forms.DataGrid.DataMember%2A> özelliğini bağlanacak tablonun adı.  
   
-3.  Veri kaynağı bir veri kümesi ya da bir veri kümesi tabloya dayalı bir veri görünümü ise, veri kümesini doldurmak üzere formuna kodu ekleyin.  
+3.  Veri kaynağı bir veri kümesi veya bir veri kümesi tabloyu temel alan bir veri görünümü, forma DataSet'i doldurmak için kod ekleyin.  
   
-     Kullandığınız tam kod burada veri kümesi alma bağlıdır. Veri kümesi bir veritabanından doğrudan doldurulmuş, genellikle çağırmanız `Fill` adlı bir veri kümesi doldurur aşağıdaki kod örneğinde olduğu gibi bir veri bağdaştırıcısı yöntemi `DsCategories1`:  
+     Kullandığınız tam kod burada veri veri kümesi alma bağlıdır. Veri kümesi doğrudan bir veritabanından doldurulmuş, genellikle arama `Fill` adlı bir veri kümesi doldurur aşağıdaki kod örneğinde olduğu gibi bir veri bağdaştırıcısı yöntemi `DsCategories1`:  
   
     ```vb  
     sqlDataAdapter1.Fill(DsCategories1)  
@@ -56,17 +56,17 @@ ms.locfileid: "33529515"
     sqlDataAdapter1->Fill(dsCategories1);  
     ```  
   
-4.  (İsteğe bağlı) Sütun stilleri ve uygun tablo stilleri kılavuzuna ekleyin.  
+4.  (İsteğe bağlı) Sütun stillerini ve uygun tablo stilleri kılavuza ekleyin.  
   
-     Hiçbir tablo stilleri varsa Tablo görürsünüz, ancak en az biçimlendirme ile tüm sütunları görünür.  
+     Hiçbir tablo stilleri varsa, bir tablo görürsünüz ancak en az biçimlendirme ile tüm sütunlar görünür.  
   
-### <a name="to-data-bind-the-datagrid-control-to-multiple-tables-in-a-dataset-in-the-designer"></a>Veri DataGrid denetimini veri kümesi Tasarımcısı'nda birden fazla tabloya bağlamak için  
+### <a name="to-data-bind-the-datagrid-control-to-multiple-tables-in-a-dataset-in-the-designer"></a>Veri DataGrid denetimi için bir veri kümesi Tasarımcısı'nda birden çok tablodan bağlamak için  
   
-1.  Denetimin ayarlamak <xref:System.Windows.Forms.DataGrid.DataSource%2A> özelliği bağlamak istediğiniz veri öğeleri içeren nesne.  
+1.  Denetimin ayarlamak <xref:System.Windows.Forms.DataGrid.DataSource%2A> özelliğini bağlamak istediğiniz veri öğelerini içeren nesne.  
   
-2.  Veri kümesi, ilişkili tabloları içeriyorsa (diğer bir deyişle, bir ilişki nesnesi içeriyorsa) ayarlayın <xref:System.Windows.Forms.DataGrid.DataMember%2A> üst tablo adı özelliği.  
+2.  Veri kümesi, ilişkili tabloları içeriyorsa (diğer bir deyişle, bir ilişki nesnesi içeriyorsa) ayarlayın <xref:System.Windows.Forms.DataGrid.DataMember%2A> özelliğini üst tablonun adı.  
   
-3.  Veri kümesini doldurmak için kod yazma.  
+3.  DataSet'i doldurmak için kod yazın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [DataGrid Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)  

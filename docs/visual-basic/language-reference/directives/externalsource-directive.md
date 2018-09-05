@@ -1,5 +1,5 @@
 ---
-title: '#ExternalSource yönergesi'
+title: '#ExternalSource yönergesi (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - '#Externalsource'
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - ExternalSource directive (#ExternalSource)
 - '#ExternalSource directive'
 ms.assetid: 243bc6a2-34c3-4eeb-a776-9fd2bf988149
-ms.openlocfilehash: 146ab41d74b45acc4063e2463baca26c7caa4652
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dcde8507eb033d0a47d5c5d3fa36176cd63b0856
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586597"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43556324"
 ---
 # <a name="externalsource-directive"></a>#ExternalSource Yönergesi
-Belirli satırları kaynak kodu ve metin kaynağına dış arasında bir eşleme gösterir.  
+Belirli bir kaynak kodu satırlarını ve dış kaynak metin arasındaki eşlemeyi gösterir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,20 +35,20 @@ Belirli satırları kaynak kodu ve metin kaynağına dış arasında bir eşleme
  Dış kaynak yolu.  
   
  `IntLiteral`  
- Dış kaynak ilk satırının satır sayısı.  
+ Dış kaynağı ilk satırının satır sayısı.  
   
  `LogicalLine`  
- Dış kaynak hatanın oluştuğu satır.  
+ Dış kaynağında hatanın oluştuğu satırı.  
   
  `#End ExternalSource`  
- Sonlandırır `#ExternalSource` bloğu.  
+ Sonlandırır `#ExternalSource` blok.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yönerge, yalnızca derleme ve hata ayıklayıcısı tarafından kullanılır.  
+ Bu yönerge, yalnızca derleyici ve hata ayıklayıcı tarafından kullanılır.  
   
- Bir kaynak dosyası belirli satırları kaynak dosyasında kod ve metin kaynağına .aspx dosyası gibi dış arasında bir eşleme belirtmek dış kaynak yönergeleri içerir. Belirtilen kaynak kodunda derleme sırasında bir hatayla karşılaşılmazsa, dış kaynak gelen olarak tanımlanır.  
+ Kaynak dosyada kodun belirli satırlarını ve dış .aspx dosyası gibi bir kaynak metin arasındaki eşlemeyi belirtmek dış kaynak yönergelerini, bir kaynak dosyası içerebilir. Belirtilen kaynak kodunda derleme sırasında bir hatayla karşılaşılmazsa, bir dış kaynaktan gelen olarak tanımlanır.  
   
- Dış kaynak yönergeleri derleme üzerinde hiçbir etkisi yoktur ve iç içe olamaz. Yalnızca uygulama tarafından bunlar iç kullanım için tasarlanmıştır.  
+ Dış kaynak yönergeleri derleme üzerinde hiçbir etkisi yoktur ve iç içe olamaz. Bunlar yalnızca uygulama tarafından iç kullanım için tasarlanmıştır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Koşullu Derleme](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

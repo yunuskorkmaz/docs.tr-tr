@@ -1,39 +1,40 @@
 ---
-title: Projeniz .NET Framework ve .NET Core desteklemek için düzenleme
-description: .NET Framework ve .NET Core yan yana karşı kendi çözümünü derlemek için isteyen proje sahipleri için yardımcı olur.
+title: .NET Framework ve .NET Core desteklemek için proje düzenleme
+description: .NET Framework ve .NET Core yan yana karşı çözüm derlemek istediğiniz proje sahipleri için yardımcı olur.
 author: conniey
 ms.author: mairaw
 ms.date: 04/06/2017
-ms.openlocfilehash: e6cd9c6d66996d9fd24fe71d48091723143e5849
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f8ca0d08c9e3802c71d53c831592ee4388ab5512
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43512272"
 ---
-# <a name="organizing-your-project-to-support-net-framework-and-net-core"></a>Projeniz .NET Framework ve .NET Core desteklemek için düzenleme
+# <a name="organizing-your-project-to-support-net-framework-and-net-core"></a>.NET Framework ve .NET Core desteklemek için proje düzenleme
 
-Bu makalede, .NET Framework ve .NET Core yan yana karşı kendi çözümünü derlemek için isteyen proje sahipleri yardımcı olur. Bu hedefe ulaşmak geliştiricilere yardımcı olmak için projeleri düzenlemek için çeşitli seçenekler sağlar. Aşağıdaki listede, ne zaman, proje düzeni .NET Core ile Kurulum nasıl karar dikkate alınması gereken bazı tipik senaryolar verilmiştir. Listenin istediğiniz her şeyi kapsayan değil; projenizin ihtiyaçlara göre öncelik verin.
+Bu makale, .NET Framework ve .NET Core yan yana karşı çözüm derlemek istediğiniz proje sahiplerine yardımcı olur. Bu, geliştiricilerin bu amaca ulaşmak amacıyla projelerini düzenlemek için çeşitli seçenekler sunar. Aşağıdaki listede, ne zaman .NET Core projesi düzeninizi nasıl karar dikkate alınması gereken bazı tipik senaryolar verilmiştir. Listeden istediğiniz her şeyi kapsamayabilir; projenizin ihtiyaçlarına göre öncelik verin.
 
-* [**Var olan projeleri ve .NET Core projeler tek projelere birleştirin**][option-csproj]
+* [**Var olan projeleri ve .NET Core projeleri tek projelere birleştirin**][option-csproj]
 
-  *Bu için iyi nedir:*
-  * Yapı işleminizin tek bir proje derleme yerine her farklı bir .NET Framework sürümünü veya platformu hedefleme birden çok proje derleme basitleştirir.
-  * Bir tek proje dosyası yönetmeniz gerekir çünkü çoklu hedefleyen projeler için kaynak dosyası yönetimini basitleştirir. Kaynak dosyaları ekleme/kaldırma, alternatifleri diğer projelerinizi bunlarla el ile eşitleme gerektirir.
-  * Kolayca tüketimi için NuGet paketi oluşturuluyor.
-  * Derleyici yönergeleri kullanarak, kitaplıklarınızdaki belirli bir .NET Framework sürümü için kod yazmayı sağlar.
+  *Ne bu için uygundur:*
+  * Yapı işleminizin, tek bir proje derlenirken yerine her platform veya farklı bir .NET Framework sürümünü hedefleyen birden çok proje derleme basitleştirir.
+  * Tek bir proje dosyası yönetmeniz gerektiğinden çoklu hedefleyen projeler için kaynak dosya yönetimi basitleştirir. Kaynak dosyaları ekleme/kaldırma, alternatifleri diğer projeleriniz ile el ile eşitleme yapmanız gerekir.
+  * Kolayca tüketim için bir NuGet paketi oluşturuluyor.
+  * Derleyici yönergeleri kullanarak kitaplıklarınızdaki belirli bir .NET Framework sürümü için kod yazmanıza olanak sağlar.
 
   *Desteklenmeyen senaryolar:*
-  * Geliştiriciler mevcut projeleri açmak için Visual Studio 2017 kullanmayı gerektirir. Visual Studio'nun daha eski sürümleri desteklemek için [proje dosyalarınızı farklı klasörlerde tutma](#support-vs) daha iyi bir seçenektir.
+  * Var olan projeleri açmak için Visual Studio 2017 geliştiriciler gerektirir. Visual Studio'nun eski sürümlerini desteklemek üzere [farklı klasörlerde bulunan proje dosyalarınızı tutma](#support-vs) daha iyi bir seçenektir.
 
-* <a name="support-vs"></a>[**Var olan projeleri ve yeni .NET Core projeler ayrı tut**][option-csproj-folder]
+* <a name="support-vs"></a>[**Var olan projeleri ve yeni .NET Core projeleri ayrı tut**][option-csproj-folder]
 
-  *Bu için iyi nedir:*
-  * Geliştiriciler/Visual Studio 2017 sahip olmaması katkıda bulunanlar için yükseltme yapmak zorunda kalmadan mevcut projelerde geliştirme desteklemeye devam.
-  * Kod karmaşası bu projelerde gerektirdiğinden yeni hatalar mevcut projelerinde oluşturma olasılığını azaltmak.
+  *Ne bu için uygundur:*
+  * Geliştiriciler/Visual Studio 2017 sahip olmayan katkıda bulunanlar için yükseltmek zorunda kalmadan mevcut projelerde geliştirme desteklemeye devam ediliyor.
+  * Bu projelerde hiçbir kod karmaşası olması gerektiğinden yeni hatalar var olan projeleri oluşturma olasılığını kısaltır.
 
 ## <a name="example"></a>Örnek
 
-Depo göz önünde bulundurun:
+Aşağıdaki depoya göz önünde bulundurun:
 
 ![Mevcut proje][example-initial-project]
 
@@ -41,32 +42,34 @@ Depo göz önünde bulundurun:
 
 Aşağıdaki kısıtlamalar ve mevcut projeleri karmaşıklığına bağlı olarak bu depo için .NET Core desteği eklemek için çeşitli yollar açıklar.
 
-## <a name="replace-existing-projects-with-a-multi-targeted-net-core-project"></a>Mevcut projeleri çoklu hedeflenen .NET Core projesi ile değiştir
+## <a name="replace-existing-projects-with-a-multi-targeted-net-core-project"></a>Var olan projeleri birden çok hedefli bir .NET Core projesi ile değiştirin.
 
-Herhangi bir varolan deposu reorganıze  *\*.csproj* dosyaları kaldırılır ve tek  *\*.csproj* dosyası birden çok çerçeveyi hedefleyen oluşturulur. Tek bir proje için farklı çerçeveleri derleme mümkün olduğundan bu harika bir seçenektir. Ayrıca, farklı derleme seçenekleri ve bağımlılıkları hedef çerçeveyi başına işlemek için güç sahiptir.
+Herhangi bir mevcut depoyu reorganıze  *\*.csproj* dosyalar kaldırılır ve tek  *\*.csproj* dosyası birden çok çerçeveyi hedefleyen oluşturulur. Tek bir proje için farklı çerçeveler derleyemezsiniz olduğu için bu harika bir seçenektir. Ayrıca, farklı bir derleme seçenekleri ve bağımlılıkları hedeflenen çerçeve başına işleme gücüne sahiptir.
 
 ![Birden çok çerçeveyi hedefleyen bir csproj oluşturma][example-csproj]
 
 [**Kaynak kodu**][example-csproj-code]
 
-Not değişiklik şunlardır:
-* Değiştirilmesini *packages.config* ve  *\*.csproj* yeni bir [.NET Core  *\*.csproj* ] [ example-csproj-netcore]. NuGet paketleri ile belirtilir `<PackageReference> ItemGroup`.
+Dikkat edilecek değişiklikler şunlardır:
 
-## <a name="keep-existing-projects-and-create-a-net-core-project"></a>Mevcut projeleri tutmak ve .NET Core projesi oluşturma
+* Değiştirme *packages.config* ve  *\*.csproj* yeni bir [.NET Core  *\*.csproj* ] [ example-csproj-netcore]. NuGet paketleri ile belirtilen `<PackageReference> ItemGroup`.
 
-Eski çerçeveleri hedef mevcut projeleri varsa, bu projeler dokunulmadan bırakın ve gelecekteki çerçeveleri hedeflemek için bir .NET Core proje kullanın isteyebilirsiniz.
+## <a name="keep-existing-projects-and-create-a-net-core-project"></a>Var olan projeleri korumak ve bir .NET Core projesi oluşturma
 
-![.NET core projeyle farklı klasörde mevcut proje][example-csproj-different-folder]
+Eski çerçeveleri hedefleyen var olan projeler varsa, bu projelerin dokunmayın ve gelecekteki çerçeveleri hedeflemek için bir .NET Core projesinden kullanmak isteyebilirsiniz.
+
+![Varolan projede, farklı bir klasör ile .NET core projesi][example-csproj-different-folder]
 
 [**Kaynak kodu**][example-csproj-different-code]
 
-Not değişiklik şunlardır:
+Dikkat edilecek değişiklikler şunlardır:
+
 * .NET Core ve mevcut projeleri ayrı klasörlerde tutulur.
-    * Projeleri ayrı klasörlerde tutma Visual Studio 2017 olmasını zorlama önler. Yalnızca eski projeleri açar ayrı bir çözüm oluşturabilirsiniz.
+  * Projeleri ayrı klasörlerde tutmak için Visual Studio 2017 için zorlama önler. Yalnızca eski projelerdeki açılır ayrı bir çözüm oluşturabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 
-Lütfen bakın [.NET Core belgeleri taşıma] [ porting-doc] .NET Core geçirme hakkında daha fazla yönlendirme için.
+* Lütfen [.NET Core belgeleri taşıma] [ porting-doc] .NET Core ile geçirme hakkında daha fazla yardım almak için.
 
 [porting-doc]: index.md
 [example-initial-project]: media/project-structure/project.png "Mevcut proje"
@@ -76,7 +79,7 @@ Lütfen bakın [.NET Core belgeleri taşıma] [ porting-doc] .NET Core geçirme 
 [example-csproj-code]: https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj/
 [example-csproj-netcore]: https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj/src/Car/Car.csproj
 
-[example-csproj-different-folder]: media/project-structure/project.csproj.different.png "Farklı bir klasör içinde varolan PCL .NET core projeyle"
+[example-csproj-different-folder]: media/project-structure/project.csproj.different.png "Var olan farklı bir klasöre PCL'de ile .NET core projesi"
 [example-csproj-different-code]: https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj-keep-existing/
 
 [option-csproj]: #replace-existing-projects-with-a-multi-targeted-net-core-project

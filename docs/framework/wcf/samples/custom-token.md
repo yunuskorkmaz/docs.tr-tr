@@ -2,31 +2,31 @@
 title: Özel Belirteç
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: c7219b94861cd23f27b331d1d3e5509654263430
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 03472f76310fa99568f13f0aa49d9e2a3453ac30
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809855"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43671105"
 ---
 # <a name="custom-token"></a>Özel Belirteç
-Bu örnek bir Windows Communication Foundation (WCF) uygulamaya özel bir belirteç uygulamasını ekleneceği gösterilmektedir. Örnek kullanan bir `CreditCardToken` hizmete istemci kredi kartı bilgilerini güvenli bir şekilde geçirilecek. Belirteç WS güvenliği ileti üstbilgisinde geçirilir ve imzalanır ve ileti gövdesi ve diğer ileti üstbilgilerini yanı sıra simetrik güvenlik bağlama öğesi kullanılarak şifrelenir. Bu, burada yerleşik belirteçleri yetersiz olduğu durumlarda yararlıdır. Bu örnek, bir özel güvenlik belirteci yerleşik belirteçleri birini kullanmak yerine bir hizmet sağlamak üzere gösterilmiştir. Hizmet bir istek-yanıt iletişim deseni tanımlayan bir sözleşme uygular.  
+Bu örnek, bir Windows Communication Foundation (WCF) uygulamasına özel bir belirteç uygulamasını ekleme gösterir. Örnekte bir `CreditCardToken` istemci kredi kartı bilgilerini güvenli bir şekilde hizmetine geçirilecek. Belirteç WS-güvenlik ileti üstbilgisinde imzalanır ve yanı sıra ileti gövdesi ve diğer ileti üstbilgileri simetrik güvenlik bağlama öğesi kullanılarak şifrelenir. Bu, yerleşik belirteçleri yeterli olmadığı durumlarda kullanışlıdır. Bu örnek, bir yerleşik belirteçlerin kullanmak yerine bir hizmete özel güvenlik belirteci gösterilmiştir. Hizmet istek-yanıt iletişim deseni tanımlayan bir sözleşme uygular.  
   
 > [!NOTE]
->  Kurulum yordamı ve yapı yönergeleri Bu örnek için bu konunun sonunda yer alır.  
+>  Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.  
   
- Özetlemek için bu örnek şunlar gösterilmektedir:  
+ Özetlemek gerekirse, bu örnek aşağıdaki gösterir:  
   
--   Nasıl bir istemci bir hizmet için bir özel güvenlik belirteci geçirebilirsiniz.  
+-   Nasıl bir istemci bir hizmete bir özel güvenlik belirteci geçirebilirsiniz.  
   
--   Nasıl hizmeti kullanmak ve bir özel güvenlik belirteci doğrulanamıyor.  
+-   Nasıl hizmet kullanabilir ve bir özel güvenlik belirteci doğrulayın.  
   
--   Nasıl WCF Hizmeti kodu özel güvenlik belirteci dahil olmak üzere alınan güvenlik belirteçleri hakkında bilgi edinebilirsiniz.  
+-   Nasıl WCF hizmet kodunun, özel güvenlik belirteci dahil olmak üzere alınan güvenlik belirteçleri hakkında bilgi edinebilirsiniz.  
   
--   Nasıl sunucu X.509 sertifikasının ileti şifreleme ve imza için kullanılan simetrik anahtarı korumak için kullanılır.  
+-   Sunucu X.509 sertifikasının nasıl ileti şifreleme ve imza için kullanılan simetrik anahtarı korumak için kullanılır.  
   
-## <a name="client-authentication-using-a-custom-security-token"></a>Bir özel güvenlik belirteci kullanarak istemci kimlik doğrulaması  
- Hizmet program aracılığıyla kullanılarak oluşturulan tek bir uç noktasını kullanıma sunar `BindingHelper` ve `EchoServiceHost` sınıfları. Uç nokta bir adresi, bağlama ve bir sözleşme oluşur. Özel bağlama kullanma bağlama yapılandırılmış `SymmetricSecurityBindingElement` ve `HttpTransportBindingElement`. Bu örnek ayarlar `SymmetricSecurityBindingElement` iletim sırasında simetrik anahtar korumak ve özel bir geçirmek için bir hizmetin X.509 sertifikası kullanmak üzere `CreditCardToken` imzalanmış ve şifrelenmiş güvenlik belirteci olarak WS-güvenlik ileti üstbilgisinde. Davranış istemci kimlik doğrulaması ve ayrıca hizmet X.509 sertifikası hakkında bilgi için kullanılacak olan hizmet kimlik bilgilerini belirtir.  
+## <a name="client-authentication-using-a-custom-security-token"></a>Özel güvenlik belirteci kullanılarak istemci kimlik doğrulaması  
+ Hizmeti kullanarak program aracılığıyla oluşturulan tek bir uç noktasını kullanıma sunar `BindingHelper` ve `EchoServiceHost` sınıfları. Uç nokta, adres, bağlama ve bir sözleşme oluşur. Özel bağlama kullanma yapılandırılmış bağlama `SymmetricSecurityBindingElement` ve `HttpTransportBindingElement`. Bu örnek ayarlar `SymmetricSecurityBindingElement` simetrik anahtar aktarım sırasında korumak ve özel bir geçirmek için bir hizmetin X.509 sertifikası kullanılacak `CreditCardToken` WS-güvenlik ileti üstbilgisinde bir imzalanmış ve şifrelenmiş güvenlik belirteci olarak. Davranış, istemci kimlik doğrulaması ve ayrıca hizmet X.509 sertifikası hakkında daha fazla bilgi için kullanılacak hizmet kimlik bilgilerini belirtir.  
   
 ```  
 public static class BindingHelper  
@@ -47,7 +47,7 @@ public static class BindingHelper
 }  
 ```  
   
- Bir kredi kartı kullanmak için iletide belirteci örnek özel hizmeti kimlik bilgileri bu işlevselliği sağlayacak şekilde kullanır. Hizmet kimlik bilgilerini sınıfı bulunan `CreditCardServiceCredentials` sınıfı ve hizmet konağı davranışları koleksiyonlarına eklenen `EchoServiceHost.InitializeRuntime` yöntemi.  
+ Kredi kartı kullanmak için iletide, belirteç örnek özel hizmet kimlik bilgilerini bu işlevselliği sağlayacak şekilde kullanır. Hizmet kimlik bilgilerini sınıfı bulunan `CreditCardServiceCredentials` sınıfı ve davranışları koleksiyonlarına hizmet ana bilgisayar eklenir `EchoServiceHost.InitializeRuntime` yöntemi.  
   
 ```  
 class EchoServiceHost : ServiceHost  
@@ -84,7 +84,7 @@ class EchoServiceHost : ServiceHost
 }  
 ```  
   
- İstemci uç noktası hizmet uç noktası benzer bir şekilde yapılandırılır. İstemci aynı kullanır `BindingHelper` sınıfı bir bağlama oluşturun. Kurulumu geri kalanı bulunan `Client` sınıfı. İstemci ayrıca yer bilgilere ayarlar `CreditCardToken` ve hizmet X.509 sertifikası ekleyerek Kurulum kodu hakkında bilgi bir `CreditCardClientCredentials` uygun verileri istemci uç nokta davranışları koleksiyona örnekle. Örnek X.509 sertifikası konu adı ayarlamak kullanır. `CN=localhost` hizmet sertifikası.  
+ İstemci uç noktası benzer şekilde, hizmet uç noktası olarak yapılandırılır. Aynı istemcinin kullandığı `BindingHelper` bağlama oluşturmak için sınıf. Kurulumu geri kalanını bulunan `Client` sınıfı. İstemci ayrıca içindeki bilgilere ayarlar `CreditCardToken` ve hizmet X.509 sertifikasını ekleyerek Kurulum kodu hakkında bilgi bir `CreditCardClientCredentials` istemci uç nokta davranışları koleksiyona uygun veri örneği. Örnek X.509 sertifikası konu adı ayarlamak kullanır. `CN=localhost` hizmet sertifikası olarak.  
   
 ```  
 Binding creditCardBinding = BindingHelper.CreateCreditCardBinding();  
@@ -115,9 +115,9 @@ channelFactory.Close();
 ```  
   
 ## <a name="custom-security-token-implementation"></a>Özel güvenlik belirteci uygulama  
- WCF'de bir özel güvenlik belirteci etkinleştirmek için özel güvenlik belirteci bir nesne temsili oluşturun. Bu gösterim örnek sahip `CreditCardToken` sınıfı. Nesne temsili tüm ilgili güvenlik belirteci bilgilerini tutan ve güvenlik belirtecinde yer alan güvenlik anahtarları listesini sağlamak üzere sorumludur. Bu durumda, kredi kartı güvenlik belirteci tüm güvenlik anahtarı içermiyor.  
+ Bir özel güvenlik belirteci WCF etkinleştirmek için bir nesne temsili özel güvenlik belirteci oluşturun. Bu gösterim örneği sahip `CreditCardToken` sınıfı. Tüm ilgili güvenlik belirteci bilgilerini tutan ve güvenlik anahtarları güvenlik belirtecinde yer alan bir listesini sağlamak üzere bir nesne temsili sorumludur. Bu durumda, kredi kartı güvenlik belirteci, tüm güvenlik anahtarı içermiyor.  
   
- Sonraki bölümde ne kablo üzerinden iletilmesi özel bir belirteç etkinleştirmek için yapılır ve gerekir WCF Bitiş noktası tarafından tüketilen açıklar.  
+ Sonraki bölümde, ne olmalı kablo üzerinden iletilmesi için özel bir belirteç etkinleştirmek için yapılır ve bir WCF uç noktası tarafından kullanılan açıklar.  
   
 ```  
 class CreditCardToken : SecurityToken  
@@ -154,12 +154,12 @@ class CreditCardToken : SecurityToken
 }  
 ```  
   
-## <a name="getting-the-custom-credit-card-token-to-and-from-the-message"></a>Özel kredi kartı için ve iletisi belirteci alma  
- Wcf'de güvenlik belirteci serileştiricileri iletisi XML'den güvenlik belirteçlerinin bir nesne temsili oluşturma ve güvenlik belirteçlerinin XML form oluşturma sorumludur. Aynı zamanda okuma ve yazma güvenlik belirteçleri işaret eden anahtar tanımlayıcıları gibi diğer işlevleri sorumlu olan, ancak bu örnek yalnızca güvenlik belirteci ile ilgili işlevleri kullanır. Özel bir etkinleştirmek için belirteç, kendi güvenlik belirteci seri hale getirici uygulamalıdır. Bu örnekte `CreditCardSecurityTokenSerializer` bu amaç için sınıf.  
+## <a name="getting-the-custom-credit-card-token-to-and-from-the-message"></a>Özel bir kredi kartı ileti gelen ve giden belirteci alma  
+ Wcf'de güvenlik belirteci serileştiricileri XML iletisi bir nesne temsili güvenlik belirteçleri oluşturma ve güvenlik belirteçlerini XML biçiminin oluşturarak sorumludur. Ayrıca güvenlik belirteçleri işaret eden anahtarı tanımlayıcıları yazma ve okuma gibi diğer işlevleri sorumlu olduğu, ancak bu örnek yalnızca güvenlik belirteci ile ilgili işlevleri kullanır. Özel bir etkinleştirme belirteci kendi güvenlik belirteci serileştiriciye uygulamanız gerekir. Bu örnekte `CreditCardSecurityTokenSerializer` bu amaç için sınıf.  
   
- Hizmet özel seri hale getirici özel belirteç XML formunu okur ve özel belirteç nesne gösterimini oluşturur.  
+ Hizmet özel seri hale getirici XML biçimi özel belirteç okur ve özel belirteç nesne gösterimini oluşturur.  
   
- İstemci üzerindeki `CreditCardSecurityTokenSerializer` sınıfı XML yazıcıyı güvenlik belirteci nesne gösterimine içinde yer alan bilgileri yazar.  
+ İstemci üzerindeki `CreditCardSecurityTokenSerializer` sınıfı XML yazıcısı güvenlik belirteci nesne gösterimine içinde yer alan bilgileri yazar.  
   
 ```  
 public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer  
@@ -242,20 +242,20 @@ public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
 }  
 ```  
   
-## <a name="how-token-provider-and-token-authenticator-classes-are-created"></a>Belirteç sağlayıcısı ve belirteç kimlik doğrulayıcı sınıfları nasıl oluşturulur  
- İstemci ve hizmet kimlik bilgilerini güvenlik belirteci yöneticisi örneği sağlamaktan sorumludur. Güvenlik belirteci yöneticisi örneği belirteci sağlayıcıları, belirteç kimlik doğrulayan ve belirteç serileştiricileri almak için kullanılır.  
+## <a name="how-token-provider-and-token-authenticator-classes-are-created"></a>Belirteç sağlayıcısı ve belirteç kimlik doğrulayıcısı sınıfları nasıl oluşturulur  
+ Hizmet ve istemci kimlik bilgileri güvenlik belirteci yöneticisi örneği sağlamaktan sorumludur. Güvenlik belirteci yöneticisi örneği belirteci sağlayıcıları, belirteç Doğrulayıcı ve belirteci seri hale getiricileri genişletme almak için kullanılır.  
   
- Belirteç sağlayıcı istemci veya hizmet kimlik bilgilerini yer alan bilgileri temel alarak belirteci nesne gösterimini oluşturur. Belirteç nesne gösterimi (önceki bölümde tartışılan) belirteci seri hale getirici kullanarak ileti sonra yazılır.  
+ Belirteç sağlayıcısı, belirteç istemci veya hizmet kimlik bilgilerini yer alan bilgiler temel nesne temsilini oluşturur. Belirteç nesnesi gösterimi ardından iletiyi belirteç serializer özelliği (önceki bölümde anlatılmaktadır) kullanarak yazılır.  
   
- Belirteç kimlik doğrulayıcı iletisi gelmesini belirteçlerini doğrular. Gelen belirteç nesne temsili belirteci seri hale getirici tarafından oluşturulur. Bu nesne temsili, daha sonra belirteç kimlik doğrulayıcı için doğrulama geçirilir. Belirteç başarıyla doğrulandıktan sonra belirteç kimlik doğrulayıcı koleksiyonunu döndürür `IAuthorizationPolicy` belirtecinde yer alan bilgileri temsil eden nesne. Bu bilgiler daha sonra ileti işleme sırasında yetkilendirme kararları gerçekleştirmek ve uygulama için talepler sağlamak için kullanılır. Bu örnekte, kredi kartı belirteç kimlik doğrulayıcı kullanan `CreditCardTokenAuthorizationPolicy` bu amaç için.  
+ Belirteç kimlik doğrulayıcısı iletisinde gelen belirteçlerini doğrular. Gelen belirteci bir nesne temsili belirteci seri hale getirici tarafından oluşturulur. Bu nesne temsili, ardından belirteci kimlik doğrulayıcı için doğrulama için geçirilir. Belirteç başarıyla doğrulandıktan sonra belirteç kimlik doğrulayıcısı koleksiyonunu döndürür. `IAuthorizationPolicy` belirtecinde yer alan bilgileri temsil eden nesneleri. Bu bilgiler daha sonra ileti işleme sırasında yetkilendirme kararları gerçekleştirmek ve uygulama için talep sağlamak için kullanılır. Bu örnekte, kredi kartı belirteci kimlik doğrulayıcı kullanan `CreditCardTokenAuthorizationPolicy` bu amaç için.  
   
- Belirteci seri hale getirici, belirtecin kablo gelen ve giden nesne gösterimini almak için sorumludur. Bu, önceki bölümde ele alınmıştır.  
+ Belirteç serializer özelliği, belirtecin kablo gelen ve giden bir nesne temsili almak için sorumludur. Bu, önceki bölümde ele alınmıştır.  
   
- Bir kredi kartı belirteci yalnızca istemci hizmeti yönde iletmeye istiyoruz çünkü bu örnekte, bir belirteç sağlayıcısı yalnızca istemci ve bir belirteç kimlik doğrulayıcısı yalnızca hizmette üzerinde kullanıyoruz.  
+ Yalnızca istemci hizmeti yönde bir kredi kartı belirteç aktarmaya istediğimizden Bu örnekte, bir belirteç sağlayıcısı istemci ve hizmet üzerinde yalnızca bir belirteç kimlik doğrulayıcısı kullanırız.  
   
- İstemci üzerinde işlevselliği bulunan `CreditCardClientCrendentials`, `CreditCardClientCredentialsSecurityTokenManager` ve `CreditCardTokenProvider` sınıfları.  
+ İstemci işlevselliği bulunan `CreditCardClientCrendentials`, `CreditCardClientCredentialsSecurityTokenManager` ve `CreditCardTokenProvider` sınıfları.  
   
- Hizmette işlevselliği bulunan `CreditCardServiceCredentials`, `CreditCardServiceCredentialsSecurityTokenManager`, `CreditCardTokenAuthenticator` ve `CreditCardTokenAuthorizationPolicy` sınıfları.  
+ İşlevi hizmette yer `CreditCardServiceCredentials`, `CreditCardServiceCredentialsSecurityTokenManager`, `CreditCardTokenAuthenticator` ve `CreditCardTokenAuthorizationPolicy` sınıfları.  
   
 ```  
     public class CreditCardClientCredentials : ClientCredentials  
@@ -499,8 +499,8 @@ public class CreditCardServiceCredentialsSecurityTokenManager : ServiceCredentia
     }  
 ```  
   
-## <a name="displaying-the-callers-information"></a>Arayanlar bilgileri görüntüleme  
- Arayanın bilgileri görüntülemek için kullanın `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` aşağıdaki örnek kodda gösterildiği gibi. `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` Geçerli arayanla ilişkili yetkilendirme talepleri içerir. Talep tarafından sağlanan `CreditCardToken` sınıfını kendi `AuthorizationPolicies` koleksiyonu.  
+## <a name="displaying-the-callers-information"></a>Çağıranlar bilgileri görüntüleme  
+ Arayanın bilgileri görüntülemek için kullanın `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` aşağıdaki örnek kodda gösterildiği gibi. `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` Geçerli arayanla ilişkili yetkilendirme talepleri içerir. Talepleri tarafından sağlanan `CreditCardToken` sınıfını kendi `AuthorizationPolicies` koleksiyonu.  
   
 ```  
 bool TryGetStringClaimValue(ClaimSet claimSet, string claimType, out string claimValue)  
@@ -541,18 +541,18 @@ string GetCallerCreditCardNumber()
 }  
 ```  
   
- Örneği çalıştırdığınızda, işlem isteklerini ve yanıtlarını istemci konsol penceresinde görüntülenir. İstemcisi penceresinde istemciyi aşağı kapatmak için ENTER tuşuna basın.  
+ Örneği çalıştırdığınızda, işlem isteklerini ve yanıtlarını istemci konsol penceresinde görüntülenir. İstemci bilgisayarı için istemci penceresinde ENTER tuşuna basın.  
   
-## <a name="setup-batch-file"></a>Toplu iş dosyası Kurulumu  
- Bu örnekle dahil Setup.bat toplu iş dosyası, sunucu sertifika tabanlı güvenlik gerektiren IIS tarafından barındırılan uygulamayı çalıştırmayı ilgili sertifikalarla sunucu yapılandırmanıza olanak sağlar. Bu toplu iş dosyası bilgisayarlar arasında iş ya da barındırılan olmayan bir durumda çalışması için değiştirilmesi gerekir.  
+## <a name="setup-batch-file"></a>Kurulum toplu iş dosyası  
+ Bu örnekle dahil Setup.bat toplu iş dosyası ile ilgili sertifika sunucusu sertifika tabanlı güvenlik gerektiren IIS tarafından barındırılan uygulamayı çalıştırmak için sunucu yapılandırmanıza olanak sağlar. Bu toplu iş dosyası bilgisayarlarda çalışmaya veya barındırılan olmayan bir durumda çalışması için değiştirilmesi gerekir.  
   
- Aşağıdakiler, böylece uygun yapılandırmada çalışacak biçimde değiştirilebilir toplu iş dosyaları farklı bölümlerini kısa bir genel bakış sağlar.  
+ Aşağıda, böylece uygun yapılandırmasında çalıştırılacak değiştirilebilir toplu iş dosyaları farklı bölümlerini kısa bir genel bakış sağlar.  
   
 -   Sunucu sertifikası oluşturuluyor:  
   
-     Aşağıdaki satırları `Setup.bat` toplu iş dosyası kullanılması için sunucu sertifikası oluşturun. `%SERVER_NAME%` Değişkeni, sunucu adını belirtir. Kendi sunucu adını belirtmek için bu değişkeni değiştirin. Bu toplu iş dosyasındaki localhost varsayılandır. Değiştirirseniz `%SERVER_NAME%` değişken, Client.cs ve adını da dosyalarıyla gidin ve gerekir localhost tüm örneklerini Setup.bat komut dosyasında kullandığınız sunucu adı ile değiştirin.  
+     Aşağıdaki satırları gelen `Setup.bat` toplu iş dosyası kullanılacak sunucu sertifikası oluşturun. `%SERVER_NAME%` Değişkeni, sunucu adını belirtir. Kendi sunucu adını belirtmek için bu değişkeni değiştirin. Bu toplu iş dosyasında localhost varsayılandır. Değiştirirseniz `%SERVER_NAME%` değişken Client.cs ve adını da dosyalara gidin ve gerekir localhost tüm örneklerini Setup.bat betikte kullandığınız sunucu adı ile değiştirin.  
   
-     Sertifika altında (Kişisel) My deposunda saklanır `LocalMachine` depolama konumu. Sertifika saklanır IIS tarafından barındırılan hizmetler için LocalMachine deposundaki. Kendini barındıran Hizmetleri için istemci sertifikası LocalMachine dize Currentuser'a ile değiştirerek Currentuser'a deposu konumda depolamak için toplu iş dosyasını değiştirmeniz gerekir.  
+     Sertifika altında (Kişisel) My deposunda saklanır `LocalMachine` depolama konumu. Depolanmış bir sertifikayla IIS tarafından barındırılan hizmetleri LocalMachine deposunda. Şirket içinde barındırılan hizmetler için istemci sertifikası LocalMachine dize CurrentUser ile değiştirerek CurrentUser deposu konumda depolamak için toplu iş dosyasını değiştirmeniz gerekir.  
   
     ```  
     echo ************  
@@ -564,9 +564,9 @@ string GetCallerCreditCardNumber()
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
     ```  
   
--   Sunucu sertifikası istemcinin güvenilen sertifika deposuna yükleme:  
+-   Sunucu sertifikasını istemcinin güvenilen sertifika depolama alanına yükleniyor:  
   
-     İstemci güvenilir kişiler içine Setup.bat toplu dosya kopyalama sunucu sertifikasının aşağıdaki satırları depolar. MakeCert.exe tarafından oluşturulan sertifikaları örtük olarak istemci sistemi tarafından güvenilir değil çünkü bu adım gereklidir. Bir istemci güvenilen kök sertifikasını kökü belirtilmiş bir sertifikanız zaten varsa — örneğin, bir Microsoft verilen sertifika — sunucu sertifikasına sahip istemci sertifika deposunun doldurulması, bu adım gerekli değildir.  
+     İstemci güvenilir kişiler uygulamasına Setup.bat toplu dosya kopyalama sunucu sertifikasının aşağıdaki satırları depolayın. MakeCert.exe tarafından oluşturulan sertifikaları örtük olarak istemci sistemi tarafından güvenilir değildir çünkü bu adım gereklidir. Bir istemci güvenilen kök sertifikayı kök erişim izni verilmiş bir sertifika zaten varsa — örneğin, Microsoft tarafından verilen sertifika — sunucu sertifikasında istemci sertifika deposunun doldurulması, bu adım gerekli değildir.  
   
     ```  
     echo ************  
@@ -575,7 +575,7 @@ string GetCallerCreditCardNumber()
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  
   
--   IIS barındırılan hizmeti sertifika özel anahtarına erişimi etkinleştirmek için IIS tarafından barındırılan işlemin altında çalıştığı hesabın özel anahtar için uygun izinleri verilmelidir. Bu son adımda Setup.bat komut dosyası tarafından gerçekleştirilir.  
+-   IIS barındırılan hizmeti için sertifika özel anahtar erişimi etkinleştirmek için IIS tarafından barındırılan işlem altında çalıştığı hesabın özel anahtar için uygun izinleri verilmelidir. Bu, son adımda Setup.bat betiği tarafından gerçekleştirilir.  
   
     ```  
     echo ************  
@@ -589,49 +589,49 @@ string GetCallerCreditCardNumber()
     ```  
   
 > [!NOTE]
->  Setup.bat toplu iş dosyası çalıştırılmak üzere tasarlanmış bir [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] komut istemi. İçinde PATH ortam değişkeni ayarlamak [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] komut istemi Setup.bat komut dosyası için gereken yürütülebilir dosyalar içeren dizine işaret eder.  
+>  Setup.bat toplu iş dosyası çalıştırılmak üzere tasarlanmış bir [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] komut istemi. İçinde PATH ortam değişkenini ayarlamak [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] komut istemi Setup.bat betiği tarafından gereken yürütülebilir dosyaları içeren dizine işaret eder.  
   
-#### <a name="to-set-up-and-build-the-sample"></a>Ayarlamak ve örneği oluşturmak için  
+#### <a name="to-set-up-and-build-the-sample"></a>Ayarlama ve örneği oluşturmak için  
   
-1.  Gerçekleştirmiş emin olun [kerelik Kurulum prosedürü Windows Communication Foundation örnekleri için](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Çözümü derlemek için'ndaki yönergeleri izleyin [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Çözümü derlemek için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-#### <a name="to-run-the-sample-on-the-same-computer"></a>Aynı bilgisayara örneği çalıştırmak için  
+#### <a name="to-run-the-sample-on-the-same-computer"></a>Örneği aynı bilgisayarda çalıştırmak için  
   
-1.  Açık bir [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] örnek yükleme klasöründen çalıştırma Setup.bat ve yönetici ayrıcalıkları ile komut istemi penceresi. Bu örneği çalıştırmak için gerekli tüm sertifikalar yükler. Yolun Makecert.exe bulunduğu klasörü içerdiğinden emin olun.  
+1.  Açık bir [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] yönetici ayrıcalıklarına ve örnek yükleme klasöründen çalışma Setup.bat komut istemi penceresi. Bu örneği çalıştırmak için gerekli olan tüm sertifikaları yükler. Yolun Makecert.exe bulunduğu klasörü içerdiğinden emin olun.  
   
 > [!NOTE]
->  Örnekle bittiğinde Cleanup.bat çalıştırarak sertifikaları kaldırdığınızdan emin olun. Diğer güvenlik örnekleri aynı sertifikaları kullanır.  
+>  Sertifikaları örnek ile işiniz bittiğinde Cleanup.bat çalıştırarak kaldırmayı unutmayın. Diğer güvenlik örnekleri aynı sertifikalarını kullanın.  
   
-1.  Client.exe client\bin dizininden başlatın. İstemci etkinliği istemci konsol uygulaması görüntülenir.  
+1.  Client.exe client\bin dizinden başlatın. İstemci etkinliği istemci konsol uygulamasında görüntülenir.  
   
-2.  İstemci ve hizmet iletişim kurabildiğinden değilseniz bkz [sorun giderme ipuçları](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+2.  İstemci ve hizmet iletişim kurabildiğini bilmiyorsanız bkz [sorun giderme ipuçları](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
-#### <a name="to-run-the-sample-across-computer"></a>Bilgisayar örneği çalıştırmak için  
+#### <a name="to-run-the-sample-across-computer"></a>Bilgisayar arasında örneği çalıştırmak için  
   
-1.  Hizmet ikili dosyaları hizmet bilgisayarda bir dizin oluşturun.  
+1.  Hizmet ikili dosyaları için hizmet bilgisayarda bir dizin oluşturun.  
   
-2.  Hizmet dizin hizmeti bilgisayarında hizmet program dosyalarını kopyalayın. CreditCardFile.txt kopyalamak unutmayın; Aksi takdirde kredi kartı Doğrulayıcı istemciden gönderilen kredi kartı bilgileri doğrulanamıyor. Ayrıca Setup.bat ve Cleanup.bat dosyalarını hizmet bilgisayara kopyalayın.  
+2.  Hizmet dizini hizmeti bilgisayarında hizmet program dosyaları kopyalayın. CreditCardFile.txt kopyalamak unutmayın; Aksi takdirde kredi kartı authenticator istemciden gönderilen kredi kartı bilgileri doğrulanamıyor. Ayrıca Setup.bat ve Cleanup.bat dosyaları hizmet bilgisayara kopyalayın.  
   
-3.  Bilgisayarın tam etki alanı adını içeren konu adına sahip bir sunucu sertifikası olmalıdır. Değiştirirseniz Setup.bat kullanarak bir tane oluşturabilirsiniz `%SERVER_NAME%` değişken hizmet barındırıldığı bilgisayarın tam adı. Visual Studio komut istemini yönetici ayrıcalıklarıyla açılmış içinde Setup.bat dosya çalıştırmanız gerektiğini unutmayın.  
+3.  Bilgisayarın tam etki alanı adını içeren konu adına sahip bir sunucu sertifikası olmalıdır. Setup.bat değiştirirseniz kullanarak bir tane oluşturabilirsiniz `%SERVER_NAME%` değişkenini hizmetin barındırıldığı bilgisayarın tam adı. Yönetici ayrıcalıklarıyla açılan bir Visual Studio komut isteminde Setup.bat dosyasının çalıştırılması gerektiğini unutmayın.  
   
-4.  İstemci üzerinde Currentuser'a TrustedPeople deposuna sunucu sertifikasını kopyalayın. Yalnızca sunucu sertifikası güvenilir bir veren tarafından verilmemiş varsa bunu yapmanız gerekir.  
+4.  Sunucu sertifikası istemci CurrentUser TrustedPeople deponuzu kopyalayın. Yalnızca sunucu sertifikası güvenilir bir veren tarafından yazılmazsa bunu yapmanız gerekir.  
   
-5.  EchoServiceHost.cs dosyasında localhost yerine bir tam bilgisayar adını belirtmek için sertifika konu adı değerini değiştirin.  
+5.  EchoServiceHost.cs dosyasında localhost yerine tam bilgisayar adını belirtmek için sertifika konu adı değerini değiştirin.  
   
-6.  İstemci program dosyaları \client\bin\ klasöründen dile özgü klasörü altında istemci bilgisayara kopyalayın.  
+6.  İstemci program dosyaları \client\bin\ klasöründen dile özgü klasörünün altındaki istemci bilgisayara kopyalayın.  
   
-7.  Client.cs dosyasında yeni adresi hizmetinizin eşleştirmek için uç nokta adresi değerini değiştirin.  
+7.  Client.cs dosyasında hizmetinizin yeni adresiyle eşleşecek şekilde uç nokta adresi değiştirin.  
   
-8.  Client.cs dosyasında localhost yerine uzak ana bilgisayarın tam bilgisayar adı ile eşleşmesi için hizmet X.509 sertifikasının konu adını değiştirin.  
+8.  Client.cs dosyasında localhost yerine uzak ana bilgisayar tam olarak nitelenmiş adını eşleştirmek için hizmet X.509 sertifikasının konu adı değiştirin.  
   
 9. İstemci bilgisayarda bir komut istemi penceresinden Client.exe başlatın.  
   
-10. İstemci ve hizmet iletişim kurabildiğinden değilseniz bkz [sorun giderme ipuçları](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+10. İstemci ve hizmet iletişim kurabildiğini bilmiyorsanız bkz [sorun giderme ipuçları](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
-#### <a name="to-clean-up-after-the-sample"></a>Örnek sonra temizlemek için  
+#### <a name="to-clean-up-after-the-sample"></a>Sonra örnek temizlemek için  
   
-1.  Örnek çalıştıran tamamladıktan sonra Cleanup.bat samples klasöründen çalıştırın.  
+1.  Bu örneği çalıştırmadan tamamladıktan sonra Cleanup.bat samples klasöründe çalıştırın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.

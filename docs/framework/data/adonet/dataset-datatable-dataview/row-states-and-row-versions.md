@@ -1,33 +1,33 @@
 ---
 title: Satır durumları ve satır sürümleri
-ms.date: 03/30/2017
+ms.date: 07/19/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2e6642c9-bfc6-425c-b3a7-e4912ffa6c1f
-ms.openlocfilehash: d36556b62a95a7af1097d8fe88597569c81c0111
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 629e8b0bea1cd5c1dd80409acd7c03e0e033b5bc
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759419"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672820"
 ---
 # <a name="row-states-and-row-versions"></a>Satır durumları ve satır sürümleri
-ADO.NET satır durumları ve sürümleri kullanarak tablolardaki satırların yönetir. Bir satır durumu bir satır durumunu gösterir; Satır sürümleri, geçerli, özgün ve varsayılan değerler dahil olmak üzere değişiklik gibi bir satırda depolanan değerleri korur. Örneğin, bir satırda bir sütun yapılan bir değişikliği yaptıktan sonra satır satır durumunu olacaktır `Modified`, ve iki sürümleri satır: `Current`, geçerli satır değerleri içeren ve `Original`, sütun önce satır değerlerini içerir değiştirdi.  
+ADO.NET, tablolardaki satır durumları ve sürümlerini kullanarak satır yönetir. Bir satır durumu, bir satır durumunu gösterir; Satır sürümleri, geçerli ve özgün varsayılan değerleri dahil olmak üzere değişiklik gibi bir satır depolanan değerleri korur. Örneğin, bir satırda bir sütun için bir değişiklik yaptıktan sonra satır satır durumunu olur `Modified`, ve iki satır sürümleri: `Current`, geçerli satır değerleri içeren ve `Original`, sütun öncesinde satır değerleri içerir değiştirilmiş.  
   
- Her <xref:System.Data.DataRow> nesnesi bir <xref:System.Data.DataRow.RowState%2A> satır geçerli durumunu belirlemek için inceleyebilirsiniz özelliği. Aşağıdaki tabloda her kısa bir açıklamasını verir `RowState` numaralandırma değeri.  
+ Her <xref:System.Data.DataRow> nesnesinin bir <xref:System.Data.DataRow.RowState%2A> satırın geçerli durumunu belirlemek için inceleyebilirsiniz özelliği. Aşağıdaki tabloda her kısa bir açıklaması verilmektedir `RowState` numaralandırma değeri.  
   
 |RowState değeri|Açıklama|  
 |--------------------|-----------------|  
-|<xref:System.Data.DataRowState.Unchanged>|Son çağrısından itibaren hiçbir değişiklik yapılmadı `AcceptChanges` veya satır tarafından oluşturulduktan sonra `DataAdapter.Fill`.|  
-|<xref:System.Data.DataRowState.Added>|Tabloya satır eklendi ancak `AcceptChanges` çağrılmadıysa.|  
+|<xref:System.Data.DataRowState.Unchanged>|Son çağrısından sonra herhangi bir değişiklik yapılmıştır `AcceptChanges` veya satır tarafından oluşturulduğundan beri `DataAdapter.Fill`.|  
+|<xref:System.Data.DataRowState.Added>|Satır tabloya eklendi fakat `AcceptChanges` çağrılmadıysa.|  
 |<xref:System.Data.DataRowState.Modified>|Satırın bazı öğesi değiştirildi.|  
 |<xref:System.Data.DataRowState.Deleted>|Bir tablodan satır silindi ve `AcceptChanges` çağrılmadıysa.|  
-|<xref:System.Data.DataRowState.Detached>|Satırın herhangi bir parçası değil `DataRowCollection`. `RowState` Yeni oluşturulan bir satır kümesine `Detached`. Yeni sonra `DataRow` eklenen `DataRowCollection` çağırarak `Add` yöntemi, değeri `RowState` özelliği ayarlanmış `Added`.<br /><br /> `Detached` de kaldırıldığı bir satır için ayarlanmış bir `DataRowCollection` kullanarak `Remove` yöntemi, ya da `Delete` yöntemi arkasından `AcceptChanges` yöntemi.|  
+|<xref:System.Data.DataRowState.Detached>|Satırın herhangi bir parçası değil `DataRowCollection`. `RowState` Yeni oluşturulan bir satır kümesine `Detached`. Sonra yeni `DataRow` eklenir `DataRowCollection` çağırarak `Add` yöntem, değeri `RowState` özelliği `Added`.<br /><br /> `Detached` kaldırılmış bir satır için de ayarlanmış bir `DataRowCollection` kullanarak `Remove` yöntemi veya `Delete` yöntemi arkasından `AcceptChanges` yöntemi.|  
   
- Zaman `AcceptChanges` üzerinde adlı bir <xref:System.Data.DataSet>, <xref:System.Data.DataTable> , veya <xref:System.Data.DataRow>, satır durumuna sahip tüm satırları `Deleted` kaldırılır. Kalan satırlar satır durumunu verilen `Unchanged`ve değerler `Original` satır sürümü ile yazılır `Current` satır sürüm değerleri. Zaman `RejectChanges` çağrılır, satır durumuna sahip tüm satırları `Added` kaldırılır. Kalan satırlar satır durumunu verilen `Unchanged`ve değerler `Current` satır sürümü ile yazılır `Original` satır sürüm değerleri.  
+ Zaman `AcceptChanges` üzerinde çağrılır bir <xref:System.Data.DataSet>, <xref:System.Data.DataTable> , veya <xref:System.Data.DataRow>, satır durumuna sahip tüm satırları `Deleted` kaldırılır. Kalan satırlar satır durumunu verilen `Unchanged`ve değerleri `Original` satır sürümü ile yazılır `Current` satır sürümü değerleri. Zaman `RejectChanges` çağrılır, satır durumuna sahip tüm satırları `Added` kaldırılır. Kalan satırlar satır durumunu verilen `Unchanged`ve değerleri `Current` satır sürümü ile yazılır `Original` satır sürümü değerleri.  
   
- Bir satır farklı satır sürümlerini geçirerek görüntüleyebileceğiniz bir <xref:System.Data.DataRowVersion> aşağıdaki örnekte gösterildiği gibi sütun başvurusu parametresiyle.  
+ Bir satır farklı satır sürümlerini geçirerek görüntüleyebileceğiniz bir <xref:System.Data.DataRowVersion> parametresiyle aşağıdaki örnekte gösterildiği gibi sütun başvurusu.  
   
 ```vb  
 Dim custRow As DataRow = custTable.Rows(0)  
@@ -39,18 +39,18 @@ DataRow custRow = custTable.Rows[0];
 string custID = custRow["CustomerID", DataRowVersion.Original].ToString();  
 ```  
   
- Aşağıdaki tabloda her kısa bir açıklamasını verir `DataRowVersion` numaralandırma değeri.  
+ Aşağıdaki tabloda her kısa bir açıklaması verilmektedir `DataRowVersion` numaralandırma değeri.  
   
 |DataRowVersion değeri|Açıklama|  
 |--------------------------|-----------------|  
-|<xref:System.Data.DataRowVersion.Current>|Satır için geçerli değerler. Bu satır sürümü satırlarla yok bir `RowState` , `Deleted`.|  
-|<xref:System.Data.DataRowVersion.Default>|Belirli bir satır için varsayılan satır sürümü. Varsayılan satır sürümü için bir `Added`, `Modified`, veya `Unchanged` satır `Current`. Varsayılan satır sürümü için bir `Deleted` satır `Original`. Varsayılan satır sürümü için bir `Detached` satır `Proposed`.|  
-|<xref:System.Data.DataRowVersion.Original>|Satırda özgün değerler. Bu satır sürümü satırlarla yok bir `RowState` , `Added`.|  
-|<xref:System.Data.DataRowVersion.Proposed>|Satır için önerilen değerleri. Bir satırda ya da olmayan bir satır için bir düzenleme işlemi sırasında bu satır sürümü var. parçası bir `DataRowCollection`.|  
+|<xref:System.Data.DataRowVersion.Current>|Satır için geçerli değerleri. Bu satır sürümü ile satır için yok. bir `RowState` , `Deleted`.|  
+|<xref:System.Data.DataRowVersion.Default>|Belirli bir satır için varsayılan satır sürümü. Varsayılan satır sürümü için bir `Added`, `Modified`, veya `Deleted` satır `Current`. Varsayılan satır sürümü için bir `Detached` satır `Proposed`.|  
+|<xref:System.Data.DataRowVersion.Original>|Satır için özgün değer. Bu satır sürümü ile satır için yok. bir `RowState` , `Added`.|  
+|<xref:System.Data.DataRowVersion.Proposed>|Satır için önerilen değerleri. Bir satırda veya olmayan bir satır için bir düzenleme işlemi sırasında bu satır sürümü var. parçası olan bir `DataRowCollection`.|  
   
- Test edebilirsiniz olup bir `DataRow` çağırarak belirli bir satır sürümüne sahip <xref:System.Data.DataRow.HasVersion%2A> yöntemi ve geçirerek bir `DataRowVersion` bağımsız değişken olarak. Örneğin, `DataRow.HasVersion(DataRowVersion.Original)` döndürülecek `false` önce yeni eklenen satırların `AcceptChanges` çağrıldı.  
+ Test edebilirsiniz olup olmadığını bir `DataRow` çağırarak belirli bir satır sürümü olan <xref:System.Data.DataRow.HasVersion%2A> yöntemi ve geçirme bir `DataRowVersion` bağımsız değişken olarak. Örneğin, `DataRow.HasVersion(DataRowVersion.Original)` döndüreceği `false` önce yeni eklenen satırlar için `AcceptChanges` çağrıldı.  
   
- Aşağıdaki kod örneğinde, silinen içindeki tüm satırların bir tablonun değerlerini görüntüler. `Deleted` Satır sahip bir `Current` geçmesi gereken şekilde satır sürümü `DataRowVersion.Original` sütun değerlerini erişirken.  
+ Aşağıdaki kod örneği, tüm silinen satırları bir tablonun değerlerini görüntüler. `Deleted` satır yok bir `Current` geçmesi gerekir böylece satır sürümü `DataRowVersion.Original` sütun değerlerini erişirken.  
   
 ```vb  
 Dim catTable As DataTable = catDS.Tables("Categories")  
@@ -98,4 +98,4 @@ foreach (DataRow delRow in delRows)
  [DataTable Verilerini Düzenleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
  [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  [DataAdapters ve DataReaders](../../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

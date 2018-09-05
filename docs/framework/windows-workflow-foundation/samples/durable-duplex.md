@@ -2,22 +2,22 @@
 title: Dayanıklı Çift Yönlü
 ms.date: 03/30/2017
 ms.assetid: 4e76d1a1-f3d8-4a0f-8746-4a322cdff6eb
-ms.openlocfilehash: 3df5ba962ef33594df1eaebc20789fa9e2d35244
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 107c617fa4a8ee0279dcaa07e495587c617b866e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809433"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513359"
 ---
 # <a name="durable-duplex"></a>Dayanıklı Çift Yönlü
-Bu örnek, ayarlama ve mesajlaşma etkinlikleri Windows Workflow Foundation (WF) kullanan dayanıklı çift yönlü ileti alışverişi yapılandırma gösterilmektedir. Dayanıklı çift yönlü ileti değişimi gerçekleşir uzun bir süre boyunca bir iki yönlü ileti değişimi ' dir. İleti değişimi ömrü iletişim kanalını ömrü ve hizmet örnekleri bellek içi ömrü uzun olabilir.  
+Bu örnek, ayarlama ve mesajlaşma etkinlikleri Windows Workflow Foundation (WF) kullanan dayanıklı çift yönlü ileti alışverişi yapılandırma gösterilmektedir. Dayanıklı çift yönlü ileti exchange uzun bir süre gerçekleşen bir iki yönlü ileti değişimi ' dir. İleti alışverişi ömrünü iletişim kanalını ömrünü ve hizmet örnekleri bellek içi ömrünü uzun olabilir.  
   
 ## <a name="sample-details"></a>Örnek Ayrıntıları  
- Bu örnekte, iki Windows Communication Foundation (WCF) hizmetlerini Windows Workflow Foundation kullanılarak uygulanan bir dayanıklı çift yönlü ileti alışverişi olacak şekilde yapılandırılmış. Dayanıklı çift yönlü ileti değişimi MSMQ gönderilir ve kullanılarak bağıntılı iki tek yönlü gelen iletileri oluşan [.NET bağlam değişimi](http://go.microsoft.com/fwlink/?LinkID=166059). İletileri kullanılarak gönderilen <xref:System.ServiceModel.Activities.Send> ve <xref:System.ServiceModel.Activities.Receive> Mesajlaşma etkinlikleri. .NET bağlam değişimi gönderilen iletileri geri çağırma adresini belirtmek için kullanın. Her iki hizmet Windows İşlem Etkinleştirme Hizmetleri (WAS) kullanılarak barındırılır ve Hizmetleri örneklerinin Kalıcılık etkinleştirmek için yapılandırılır.  
+ Bu örnekte, iki Windows Communication Foundation (WCF) Hizmetleri, Windows Workflow Foundation kullanılarak uygulanan bir dayanıklı çift yönlü ileti değişimi için yapılandırılır. Dayanıklı çift yönlü ileti alışverişi MSMQ gönderilen ve kullanarak bağıntılı iki yönlü gelen iletileri oluşur [.NET bağlam değişimi](https://go.microsoft.com/fwlink/?LinkID=166059). İletileri kullanılarak gönderilen <xref:System.ServiceModel.Activities.Send> ve <xref:System.ServiceModel.Activities.Receive> Mesajlaşma etkinlikleri. .NET bağlam değişimi gönderilen iletilerde geri çağırma adresini belirtmek için kullanın. Her iki hizmet de, Windows İşlem Etkinleştirme Hizmetleri (WAS) kullanılarak buluta barındırılır ve Hizmetleri örnekleri kalıcılığını sağlamak için yapılandırılır.  
   
- İlk hizmet (Service1.xamlx) biraz çalışmanız gönderme hizmete (Service2.xamlx) bir isteği gönderir. İş tamamlandığında, Service2.xamlx iş tamamlanıp tamamlanmadığını göstermek için geri için Service1.xamlx bir bildirim gönderir. Bir iş akışı konsol uygulaması hizmetlerin dinlediği sıralarını ayarlar ve Service1.xamlx etkinleştirmek için ilk başlatma iletisi gönderir. İstenen iş tamamlandı Service2.xamlx bildirimden service1.xamlx aldıktan sonra Service1.xamlx sonucu bir XML dosyasına kaydeder. Geri çağırma ileti için beklenirken Service1.xamlx varsayılan kullanılarak örneği durumu devam <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior>. Service2.xamlx örneği durumuna Service1.xamlx tarafından istenen çalışmayı tamamladıktan bir parçası olarak devam ettirir.  
+ İlk hizmeti (Service1.xamlx) bazı iş yapmak için gönderme hizmete (Service2.xamlx) bir isteği gönderir. İş tamamlandıktan sonra Service2.xamlx iş tamamlanmış olduğunu belirtmek için geri için Service1.xamlx bir bildirim gönderir. Bir iş akışı konsol uygulaması hizmetlerin dinlediği sıralarını ayarlar ve Service1.xamlx etkinleştirmek için ilk başlatma iletisi gönderir. İstenen iş tamamlandığını Service2.xamlx bildirimden service1.xamlx aldıktan sonra Service1.xamlx sonucu bir XML dosyasına kaydeder. Geri çağırma ileti için beklenirken Service1.xamlx varsayılan kullanarak örnek durumu kalıcı <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior>. Service2.xamlx Service1.xamlx tarafından istenen işinin tamamlanmasına bir parçası olarak, örnek durumu devam ettirir.  
   
- .NET bağlam değişimi üzerinde MSMQ kullanmak üzere hizmetlerin yapılandırmak için her iki hizmet oluşan özel bağlama kullanmak üzere yapılandırılmış <xref:System.ServiceModel.Channels.ContextBindingElement> ve <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>. Bir geri çağırma adresi ile belirtilen <xref:System.ServiceModel.Channels.ContextBindingElement> ve bir geri çağırma içerik üstbilgisinde özel bağlama kullanılarak gönderilen tüm iletiler eklenir. Aşağıdaki kod örneğinde özel bağlama tanımlar.  
+ MSMQ üzerinde .NET bağlam değişimi Hizmetleri'ni yapılandırmak için her iki hizmet de oluşan özel bir bağlama kullanmak üzere yapılandırılmış <xref:System.ServiceModel.Channels.ContextBindingElement> ve <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>. Bir geri çağırma adresi belirtilmiş <xref:System.ServiceModel.Channels.ContextBindingElement> ve özel bir bağlama kullanılarak gönderilen tüm iletiler ile bir geri çağırma içerik üstbilgisinde dahil edilir. Aşağıdaki kod örneği, özel bir bağlama tanımlar.  
   
 ```xml  
 <configuration>  
@@ -39,12 +39,12 @@ Bu örnek, ayarlama ve mesajlaşma etkinlikleri Windows Workflow Foundation (WF)
 ```  
   
 > [!NOTE]
->  Bu örnek tarafından kullanılan bağlama güvenli değildir. Uygulamanızı dağıtırken, uygulamanızın güvenlik gereksinimlerine bağlı olarak, bağlama yapılandırmanız gerekir.  
+>  Bu örnek tarafından kullanılan bağlama güvenli değildir. Uygulamanızın dağıtım yaparken, bağlama, uygulamanızın güvenlik gereksinimlerine göre yapılandırmanız gerekir.  
   
 > [!NOTE]
->  Bu örnekte kullanılan sıraları işlem değildir. İşlem sıraları kullanarak WCF ileti alışverişleri ayarlamak üzere nasıl oluşturulduğunu gösteren bir örnek için bkz: [MSMQ etkinleştirme](../../../../docs/framework/wcf/samples/msmq-activation.md) örnek.  
+>  Bu örnekte kullanılan kuyrukları işlemsel değildir. İşlem kuyruklarını kullanan WCF ileti alışverişlerinde ayarlama işlemini gösteren bir örnek için bkz: [MSMQ etkinleştirme](../../../../docs/framework/wcf/samples/msmq-activation.md) örnek.  
   
- İçin Service2.xamlx service1.xamlx tarafından gönderilen ileti Service2.xamlx ve özel bağlama adresiyle yapılandırılmış bir istemci uç noktası kullanarak, önceden tanımlanmış gönderilir. Geri Service2.xamlx aramasından Service1.xamlx için adresi Service1.xamlx tarafından gönderilen geri çağırma içeriğinden alınır için açıkça yapılandırılmış hiçbir adresiyle bir istemci uç noktası kullanılarak gönderilir. Aşağıdaki kod örneği, istemci uç noktaları tanımlar.  
+ Özel bağlama Service2.xamlx ve adresi ile yapılandırılmış bir istemci uç noktası kullanarak, önceden tanımlanmış için Service2.xamlx service1.xamlx tarafından gönderilen ileti gönderilir. İstemci uç noktası Service1.xamlx tarafından gönderilen geri çağırma bağlamından alınan adresi ile açıkça yapılandırılmış adres kullanarak Service1.xamlx Service2.xamlx gelen geri gönderilir. Aşağıdaki kod örneği, istemci uç noktalarını tanımlar.  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -60,7 +60,7 @@ Bu örnek, ayarlama ve mesajlaşma etkinlikleri Windows Workflow Foundation (WF)
 </configuration>  
 ```  
   
- Aşağıdaki kod örneği, bu özel bağlama kullanmak için net.msmq temel adres için varsayılan protokolü eşleme değiştirerek bu özel bağlama kullanma uç noktaları kullanıma sunar.  
+ Aşağıdaki kod örneği, bu özel bağlama kullanılacak net.msmq temel adresler için varsayılan protokol eşleşmelerinin değiştirerek bu özel bağlama kullanma uç noktalarını kullanıma sunar.  
   
 ```xml  
 <configuration>  
@@ -73,7 +73,7 @@ Bu örnek, ayarlama ve mesajlaşma etkinlikleri Windows Workflow Foundation (WF)
 </configuration>  
 ```  
   
- Aşağıdaki kod örneğinde ekleyerek her iki hizmet kalıcılığını etkinleştirir <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior> davranışı hem Hizmetleri, hem de Kalıcılık veritabanı için bağlantı dizesini belirleme.  
+ Aşağıdaki kod örneği ekleyerek her iki hizmet kalıcılığını etkinleştirir. <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior> hem Hizmetleri, hem de Kalıcılık veritabanı için bağlantı dizesi belirterek davranışı.  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -94,15 +94,15 @@ Bu örnek, ayarlama ve mesajlaşma etkinlikleri Windows Workflow Foundation (WF)
 ```  
   
 ## <a name="system-requirements"></a>Sistem Gereksinimleri  
- Bu örnek, aşağıdaki bileşenleri gerektirir.  
+ Bu örnek aşağıdaki bileşenleri gerektirir.  
   
 1.  Internet Information Services.  
   
 2.  Internet Information Services IIS 6.0 Yönetim uyumluluğu -> IIS metatabanı ve IIS 6.0 yapılandırma uyumluluğu ->.  
   
-3.  World Wide Web Hizmetleri -> uygulama geliştirme özellikleri -> ASP.NET.  
+3.  World Wide Web Hizmetleri, uygulama geliştirme -> Özellikler -> ASP.NET.  
   
-4.  Microsoft Message sıraları (MSMQ) sunucusu.  
+4.  Microsoft ileti kuyrukları (MSMQ) sunucusu.  
   
 #### <a name="to-use-this-sample"></a>Bu örneği kullanmak için  
   
@@ -110,53 +110,53 @@ Bu örnek, ayarlama ve mesajlaşma etkinlikleri Windows Workflow Foundation (WF)
   
     1.  Açık bir [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] komut istemi.  
   
-    2.  Bu örnek için klasörüne gidin ve Setup.cmd çalıştırın.  
+    2.  Bu örnek klasörüne gidin ve ardından Setup.cmd'yi çalıştırın.  
   
 2.  Sanal uygulama ayarlama.  
   
-    1.  Gelen bir [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] komut isteminde, aşağıdaki komutu çalıştırarak ASP.NET kaydolun.  
+    1.  Gelen bir [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] komut isteminde, aşağıdaki komutu çalıştırarak ASP.NET'i kaydedin.  
   
         ```  
         aspnet_regiis -i  
         ```  
   
-    2.  Çalıştırma [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] sağ tıklanarak yönetici izinlerine sahip [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] ve seçerek **yönetici olarak çalıştır**.  
+    2.  Çalıştırma [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] sağ tıklayarak yönetici izinleriyle [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] seçerek **yönetici olarak çalıştır**.  
   
     3.  Kullanarak [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], DurableDuplex.sln dosyasını açın.  
   
-3.  Hizmet sıralarını ayarlayın.  
+3.  Hizmet sıraları ayarlayabilir.  
   
-    1.  DurableDuplex istemci çalıştırmak için F5 tuşuna basın.  
+    1.  DurableDuplex istemciyi çalıştırmak için F5 tuşuna basın.  
   
     2.  Açık **Bilgisayar Yönetimi** çalıştırarak konsol `Compmgmt.msc` bir komut isteminden.  
   
-    3.  Genişletme **hizmet ve uygulamaları**, **Message Queuing**. **Özel sıralar**.  
+    3.  Genişletin **hizmet ve uygulamaları**, **Message Queuing**. **Özel sıralar**.  
   
-    4.  Durableduplex/service1.xamlx ve durableduplex/service2.xamlx sıralar sağ tıklatıp **özellikleri**.  
+    4.  Kuyrukları durableduplex/service1.xamlx ve durableduplex/service2.xamlx sağ tıklayıp **özellikleri**.  
   
-    5.  Seçin **güvenlik** sekmesinde ve izin **herkes ileti Al**, **iletiye** ve **iletisi gönder** izinleri hem sıralar.  
+    5.  Seçin **güvenlik** sekmesini ve izin **herkesin İleti Al**, **iletiye** ve **iletisi gönder** hem kuyruklar için izinleri.  
   
     6.  İnternet Bilgi Hizmetleri (IIS) Yöneticisini açın.  
   
-    7.  Gözat **Server**, **siteleri**, **varsayılan Web sitesi**, **özel**, **dayanıklı çift yönlü** ve seçin **Gelişmiş Seçenekler**.  
+    7.  Gözat **sunucu**, **siteleri**, **varsayılan Web sitesi**, **özel**, **dayanıklı çift yönlü** seçin **Gelişmiş Seçenekler**.  
   
     8.  Değişiklik **etkin protokoller** için **http,net.msmq**.  
   
-4.  Örnek çalıştırın.  
+4.  Örneği çalıştırın.  
   
-    1.  Gözat http://localhost/private/durableduplex/service1.xamlx ve http://localhost/private/durableduplex/service2.xamlx hem hizmetlerinin çalıştığından emin olmak için.  
+    1.  Gözat http://localhost/private/durableduplex/service1.xamlx ve http://localhost/private/durableduplex/service2.xamlx hem hizmetlerin çalışır durumda olduğundan emin olmak için.  
   
     2.  DurableDuplexClient çalıştırmak için F5 tuşuna basın.  
   
-         Dayanıklı çift yönlü ileti değişimi tamamlandığında result.xml dosya C:\Inbox klasörüne kaydedilir ve ileti değişimi sonucunu içerir.  
+         Dayanıklı çift yönlü ileti alışverişi tamamlandığında result.xml dosya C:\Inbox klasörüne kaydedilir ve ileti alışverişi sonucunu içerir.  
   
-#### <a name="to-cleanup-optional"></a>Temizleme (isteğe bağlı)  
+#### <a name="to-cleanup-optional"></a>(İsteğe bağlı) temizlemek için  
   
 1.  CleanUp.cmd çalıştırın.  
   
     1.  Açık bir [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] komut istemi.  
   
-    2.  Bu örnek için klasörüne gidin ve Cleanup.cmd çalıştırın.  
+    2.  Bu örnek klasörüne gidin ve Cleanup.cmd çalıştırın.  
   
 2.  Sanal uygulama hizmetleri için kaldırın.  
   
@@ -164,21 +164,21 @@ Bu örnek, ayarlama ve mesajlaşma etkinlikleri Windows Workflow Foundation (WF)
   
     2.  Varsayılan Web sitesine gidin ve Kaldır **özel** sanal dizin.  
   
-3.  Bu örnek için ayarlanan sıraları kaldırın.  
+3.  Bu örnek için ayarlanan kuyrukları kaldırın.  
   
-    1.  Bilgisayar Yönetimi konsolunu açın `Compmgmt.msc` bir komut isteminden.  
+    1.  Çalıştırarak Bilgisayar Yönetimi konsolunu açın `Compmgmt.msc` bir komut isteminden.  
   
-    2.  Genişletme **hizmet ve uygulamaları**, **Message Queuing**, **özel sıralar**.  
+    2.  Genişletin **hizmet ve uygulamaları**, **Message Queuing**, **özel sıralar**.  
   
-    3.  Durableduplex/service1.xamlx ve durableduplex/service2.xamlx sıralar silin.  
+    3.  Kuyrukları durableduplex/service1.xamlx ve durableduplex/service2.xamlx silin.  
   
 4.  C:\Inbox dizini kaldırın.  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\DurableDuplex`

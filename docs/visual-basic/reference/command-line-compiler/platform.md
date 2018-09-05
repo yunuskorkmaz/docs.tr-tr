@@ -9,14 +9,14 @@ ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ec3a7e01e62b60688080fee95cf70e0ed38917f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33656184"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43552198"
 ---
 # <a name="-platform-visual-basic"></a>-platform (Visual Basic)
-Ortak dil çalışma zamanı (CLR) hangi platformu sürümü çıktı dosyasını çalıştırıp belirtir.  
+Çıkış dosyası hangi ortak dil çalışma zamanı (CLR) platform sürümünü çalıştırabilirsiniz belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -28,19 +28,19 @@ Ortak dil çalışma zamanı (CLR) hangi platformu sürümü çıktı dosyasın�
   
 |Terim|Tanım|  
 |---|---|  
-|`x86`|32-bit, x86 uyumlu CLR tarafından çalıştırılacak derlemenizi birleştirir.|  
-|`x64`|AMD64 veya EM64T yönerge kümesi destekleyen bir bilgisayarda 64-bit CLR tarafından çalıştırılacak derlemenizi birleştirir.|  
-|`Itanium`|64-bit CLR tarafından Itanium işlemcili bir bilgisayarda çalıştırılması için derlemenizi birleştirir.|  
-|`arm`|ARM (Gelişmiş RISC makinesi) işlemciye sahip bir bilgisayarda çalıştırılacak derlemenizi birleştirir.|  
-|`anycpu`|Herhangi bir platformda çalıştırılacak derlemenizi birleştirir. Uygulama 32 bit uygulama 32 bit Windows sürümleri üzerinde ve Windows 64 bit sürümlerinde 64-bit uygulama olarak çalışır. Bu bayrak varsayılan değerdir.|  
-|`anycpu32bitpreferred`|Herhangi bir platformda çalıştırılacak derlemenizi birleştirir. Uygulama 32 bit uygulama olarak, Windows'un 32 bit ve 64 bit sürümlerinde çalışır. Bu bayrak, yalnızca yürütülebilir dosyalar için geçerlidir (. EXE) ve gerektirir [!INCLUDE[net_v45](~/includes/net-v45-md.md)].|  
+|`x86`|Derlemenizi 32-bit, x86 ile uyumlu bir CLR tarafından çalıştırılacak derler.|  
+|`x64`|Derlemenizi 64 bit CLR tarafından AMD64 veya EM64T yönerge kümesini destekleyen bir bilgisayarda çalıştırılması için derler.|  
+|`Itanium`|Derlemenizi 64 bit CLR tarafından bir Itanium işlemci bir bilgisayarda çalıştırılması için derler.|  
+|`arm`|ARM (Gelişmiş RISC makinesi) işlemciye sahip bir bilgisayarda çalıştırmak için derlemenizi derler.|  
+|`anycpu`|Herhangi bir platform üzerinde çalıştırmasını derlemenizin derler. Uygulamayı Windows 32-bit sürümlerinde 32 bit uygulama olarak ve Windows 64 bit sürümlerinde 64 bit uygulama olarak çalışır. Bu bayrak varsayılan değerdir.|  
+|`anycpu32bitpreferred`|Herhangi bir platform üzerinde çalıştırmasını derlemenizin derler. Uygulama bir 32 bit uygulama olarak, hem 32-bit hem de 64 bit Windows sürümlerinde çalışır. Bu bayrak, yalnızca yürütülebilir dosyalar için geçerlidir (. EXE) ve gerektiren [!INCLUDE[net_v45](~/includes/net-v45-md.md)].|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kullanım `-platform` seçeneği çıktı dosyası tarafından hedeflenen işlemci türünü belirtin.  
+ Kullanım `-platform` çıktı dosyası tarafından hedeflenen işlemci türünü belirtmek için seçeneği.  
   
- Genel olarak, Visual Basic'te yazılmış .NET Framework derlemeleri aynı platformdan bağımsız olarak çalışır. Ancak, farklı platformlarda farklı şekilde davranan bazı durumlar vardır. Bu ortak çalışmalarını şunlardır:  
+ Genel olarak, .NET Framework derlemeleri Visual Basic'te yazılmış aynı platformdan bağımsız olarak çalışır. Ancak, farklı platformlarda farklı şekilde davranan bazı durumlar vardır. Bu yaygın durumlar şunlardır:  
   
--   Herhangi bir işaretçi türü gibi platforma bağlı olarak boyutunu değiştirme üyeleri içeren yapıları.  
+-   Herhangi bir işaretçi türü gibi platforma göre boyutunu değiştiren üyeler içeren yapılar.  
   
 -   Sabit boyutlar içeren işaretçi aritmetiği.  
   
@@ -50,34 +50,34 @@ Ortak dil çalışma zamanı (CLR) hangi platformu sürümü çıktı dosyasın�
   
 -   Platform kullanarak çağırma veya COM birlikte çalışma bileşenlerle tüm platformlarda mevcut değildir.  
   
- **-Platform** kodunuzu çalışacak mimarisi hakkında varsayımlar yapmış biliyorsanız, seçeneği bazı sorunları azaltmaya. Özellikle:  
+ **-Platform** seçeneği kodunuzun çalışacak mimarisi hakkında varsayımlar yapmış biliyorsanız, bazı sorunları azaltmak. Özellikle:  
   
--   Bir 64-bit platformu hedefleyen karar ve uygulama 32-bit bir makineye çalıştırırsanız, hata iletisi çok daha önce gelen ve bu anahtar kullanmadan oluşan hatasından daha soruna daha yöneliktir.  
+-   Bir 64 bit platformları hedefleyen karar ve uygulamanın bir 32-bit makinede çalıştırılması, hata iletisi çok daha önce gelir ve bu anahtarı kullanmadan oluşan bir hata daha sorunu daha yöneliktir.  
   
--   Ayarlarsanız `x86` bayrağı seçeneğinde ve uygulamayı daha sonra bir 64-bit makinede çalıştırın, uygulamayı yerel olarak çalıştırmak yerine WOW Subsystem çalıştıracaktır.  
+-   Ayarlarsanız `x86` seçeneğinde bayrağı ve uygulamayı daha sonra bir 64-bit makinede çalıştırmak, uygulamayı yerel olarak çalıştırmak yerine WOW alt sistemi çalıştırır.  
   
- Bir 64-bit Windows işletim sisteminde:  
+ Bir 64 bit Windows işletim sisteminde:  
   
--   Derlenmiş derlemeler `-platform:x86` WOW64 altında çalışan 32 bit CLR üzerinde yürütülür.  
+-   Derlenmiş derlemelerde `-platform:x86` WOW64 altında çalışan 32 bitlik CLR üzerinde yürütülür.  
   
--   Derlenmiş olan yürütülebilir dosyalar `-platform:anycpu` 64-bit CLR üzerinde yürütülür.  
+-   Yürütülebilir dosyalar ile derlenmiş olan `-platform:anycpu` 64 bitlik CLR yürütülür.  
   
--   DLL ile derlenmiş `-platform:anycpu` içine yüklenen bir işlem olarak aynı CLR üzerinde yürütülür.  
+-   Bir DLL ile derlenmiş `-platform:anycpu` aynı CLR'yi işlem içine yüklenmiş olarak yürütülür.  
   
--   İle derlenmiş yürütülebilir dosyalar `-platform:anycpu32bitpreferred` 32-bit CLR üzerinde yürütülür.  
+-   İle derlenen yürütülebilir dosyaları `-platform:anycpu32bitpreferred` 32 bitlik CLR yürütülür.  
   
- Bir Windows 64-bit sürümü çalıştırmak için uygulama geliştirme hakkında daha fazla bilgi için bkz: [64-bit uygulamalar](../../../framework/64-bit-apps.md).  
+ Bir Windows 64-bit sürümünü çalıştırmak için uygulama geliştirme hakkında daha fazla bilgi için bkz. [64-bit uygulamalar](../../../framework/64-bit-apps.md).  
   
-### <a name="to-set--platform-in-the-visual-studio-ide"></a>Ayarlanacak - Visual Studio IDE içinde platformu  
+### <a name="to-set--platform-in-the-visual-studio-ide"></a>Ayarlanacak - Visual Studio IDE'de platformu  
   
-1.  İçinde **Çözüm Gezgini**, proje seçme açmak **proje** menüsüne ve ardından **özellikleri**.  
+1.  İçinde **Çözüm Gezgini**, projeyi seçin açın **proje** menüsüne ve ardından **özellikleri**.  
   
-2.  Üzerinde **derleme** sekmesini seçin veya temizleyin **tercih 32-bit** onay kutusunu veya **hedef CPU** listesinde, bir değer seçin.  
+2.  Üzerinde **derleme** sekmesinde seçin veya temizleyin **32 bit tercih et** onay kutusunu veya **hedef CPU** listesinde, bir değer seçin.  
   
-     Daha fazla bilgi için bkz: [derleme sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
+     Daha fazla bilgi için [derleme sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte nasıl kullanılacağını anlatan `-platform` derleyici seçeneği.  
+ Aşağıdaki örnekte nasıl kullanılacağı gösterilmektedir `-platform` derleyici seçeneği.  
   
 ```console
 vbc -platform:x86 myFile.vb  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 314ceb86219ce143e84a00392727d610c0779e48
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: bdec49d077a41ea0b578aaff9ce7fcf9e0c7dc8c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43258075"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43505838"
 ---
 # <a name="securing-method-access"></a>Yöntem Erişiminin Güvenliğini Sağlama
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -30,7 +30,7 @@ ms.locfileid: "43258075"
   
 -   Güvenilir olabilir, sınıf, derleme veya türetilmiş sınıflar erişilebilirlik kapsamını sınırlamak. Bu metot erişimini sınırlamak için en basit yoludur. Bazı durumlarda üst sınıfın kimliğini paylaştıkları rağmen genel olarak, türetilmiş sınıflar Not bunlar, türetilen sınıf daha az güvenilir olabilir. Özellikle, güven from anahtar sözcüğü Infer değil **korumalı**, değil gerekmeyen kullanılan güvenlik bağlamı.  
   
--   Belirli bir kimlik--esas olarak, herhangi belirli arayanlar yöntemi erişimi sınırlamak [kanıt](http://msdn.microsoft.com/library/64ceb7c8-a0b4-46c4-97dc-6c22da0539da) (tanımlayıcı ad, yayımcı, bölge vb.) öğesini seçin.  
+-   Belirli bir kimlik--esas olarak, herhangi belirli arayanlar yöntemi erişimi sınırlamak [kanıt](https://msdn.microsoft.com/library/64ceb7c8-a0b4-46c4-97dc-6c22da0539da) (tanımlayıcı ad, yayımcı, bölge vb.) öğesini seçin.  
   
 -   Seçtiğiniz izinlere sahip arayanlara metot erişimini sınırlayın.  
   

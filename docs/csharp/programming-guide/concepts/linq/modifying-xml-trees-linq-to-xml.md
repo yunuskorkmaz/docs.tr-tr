@@ -2,12 +2,12 @@
 title: (LINQ to XML) XML ağaçlarını değiştirme (C#)
 ms.date: 07/20/2015
 ms.assetid: 8ec47e6d-2363-4694-be46-8d5ca4d15fc9
-ms.openlocfilehash: 4afb071b5229b3a585ea032effc2985c9a9f7c3a
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 55e75762772a071b97eecb7d6d78e28c3002a179
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39198542"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43505725"
 ---
 # <a name="modifying-xml-trees-linq-to-xml-c"></a>(LINQ to XML) XML ağaçlarını değiştirme (C#)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] bir bellek içi XML ağacı için deposudur. Yükleme veya ayrıştırma bir kaynaktan bir XML ağacı sonra [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] o ağaç yerinde değiştirebilir ve belki de bir dosyaya kaydetme veya uzak bir sunucuya gönderme ağacı seri hale getirme olanak tanır.  
@@ -27,5 +27,6 @@ ms.locfileid: "39198542"
 |[Ad/değer çiftleri Bakımı (C#)](../../../../csharp/programming-guide/concepts/linq/maintaining-name-value-pairs.md)|En iyi yapılandırma bilgileri veya genel ayarlar gibi bir ad/değer çiftleri olarak tutulur, uygulama bilgilerini korumak nasıl açıklar.|  
 |[Nasıl yapılır: Namespace değiştirmek için tüm XML ağacının (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-change-the-namespace-for-an-entire-xml-tree.md)|Bir XML ağacı bir ad alanından diğerine taşımak gösterilmektedir.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Programlama Kılavuzu (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [Programlama Kılavuzu (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

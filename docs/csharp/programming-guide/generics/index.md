@@ -5,31 +5,31 @@ helpviewer_keywords:
 - C# language, generics
 - generics [C#]
 ms.assetid: 75ea8509-a4ea-4e7a-a2b3-cf72482e9282
-ms.openlocfilehash: 8f412366072c81b8aaca94829e0aa214f356200d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 638612a0ece8e701b088c97e5dfc49362e6d6419
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333820"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506087"
 ---
 # <a name="generics-c-programming-guide"></a>Genel Türler (C# Programlama Kılavuzu)
-Genel türler 2.0 C# dili ve ortak dil çalışma zamanı (CLR) sürümüne eklenmiştir. Genel türler için .NET Framework tasarım sınıflar ve sınıf veya yöntemin bildirilen ve istemci kodu tarafından örneği kadar bir veya daha fazla türü belirtimini erteleneceği yöntemler için olası kolaylaştırır tür parametreleri kavramı tanıtır. Örneğin, bir genel tür parametresi T kullanarak kullanabileceğiniz diğer istemci kodu maliyet ya da çalışma zamanı atamaları veya kutulama işlemleri riskini yansıtılmasını olmadan aşağıda gösterildiği gibi tek bir sınıf yazabilirsiniz:  
+Genel türler, C# dili ve ortak dil çalışma zamanı (CLR) 2.0 sürümüne eklenmiştir. Genel türler için .NET Framework tasarım sınıfları ve sınıf ya da yöntem bildirildi ve istemci kodu sayesinde örneği kadar bir veya daha fazla tür belirtimi erteleme yöntemlere mümkün hale tür parametrelerinin kavramı tanıtır. Örneğin, bir genel tür parametre T kullanarak diğer istemci kodu çalışma zamanı atamaları veya kutulama işlemleri riskini ve maliyet olmaksızın burada gösterildiği gibi kullanabileceğiniz tek bir sınıf yazabilirsiniz:  
   
  [!code-csharp[csProgGuideGenerics#1](../../../csharp/programming-guide/generics/codesnippet/CSharp/index_1.cs)]  
   
-## <a name="generics-overview"></a>Genel türler genel bakış  
+## <a name="generics-overview"></a>Genel türlere genel bakış  
   
--   Kodu yeniden kullanma, tür güvenliği ve performansı en üst düzeye çıkarmak için genel türler kullanın.  
+-   Genel türler, kod yeniden kullanımını, tür güvenliği ve performansı en üst düzeye çıkarmak için kullanın.  
   
--   En yaygın genel türler koleksiyon sınıfları oluşturmak için kullanılır.  
+-   Genel türlerin yararları en yaygın kullanımı, koleksiyon sınıfları oluşturmaktır.  
   
--   .NET Framework sınıf kitaplığı birkaç yeni genel koleksiyon sınıflarda içeren <xref:System.Collections.Generic> ad alanı. Olası yerine gibi sınıflar her durumda bunları kullanılmalıdır <xref:System.Collections.ArrayList> içinde <xref:System.Collections> ad alanı.  
+-   .NET Framework sınıf kitaplığı çeşitli yeni genel koleksiyon sınıflarını içeren <xref:System.Collections.Generic> ad alanı. Olası yerine gibi sınıfların her durumda bu kullanılmalıdır <xref:System.Collections.ArrayList> içinde <xref:System.Collections> ad alanı.  
   
--   Sınıfları, yöntemleri, olaylar ve temsilciler kendi genel arabirimler oluşturabilirsiniz.  
+-   Kendi genel arabirimler, sınıflar, yöntemler, olaylar ve temsilciler oluşturabilirsiniz.  
   
--   Genel sınıflar, belirli veri türlerini yöntemlere erişimi etkinleştirmek için kısıtlanmış.  
+-   Genel sınıflar, yöntemler belirli veri türlerinde erişimi etkinleştirmek için kısıtlı olabilir.  
   
--   Yansıma kullanarak çalışma zamanında bir genel veri türünde kullanılan türleri hakkında bilgi alınabilir.  
+-   Genel veri türü kullanılan türleri hakkında bilgi çalışma zamanında yansıma kullanarak elde edilebilir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  Daha fazla bilgi için:  
@@ -59,10 +59,11 @@ Genel türler 2.0 C# dili ve ortak dil çalışma zamanı (CLR) sürümüne ekle
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  Daha fazla bilgi edinmek için, bkz. [C# Dil Belirtimi](../../../csharp/language-reference/language-specification/index.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Collections.Generic>  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [Türler](../../../csharp/programming-guide/types/index.md)  
- [\<typeparam >](../../../csharp/programming-guide/xmldoc/typeparam.md)  
- [\<typeparamref >](../../../csharp/programming-guide/xmldoc/typeparamref.md)  
- [.NET'nda genel türler](../../../standard/generics/index.md)  
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- <xref:System.Collections.Generic>  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [Türler](../../../csharp/programming-guide/types/index.md)  
+- [\<typeparam >](../../../csharp/programming-guide/xmldoc/typeparam.md)  
+- [\<typeparamref >](../../../csharp/programming-guide/xmldoc/typeparamref.md)  
+- [.NET içindeki genel türler](../../../standard/generics/index.md)  

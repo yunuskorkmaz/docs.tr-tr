@@ -3,11 +3,11 @@ title: WorkflowApplication ReadLine konağı
 ms.date: 03/30/2017
 ms.assetid: f7b362be-cb42-40d7-b9ef-cfc4aed2455b
 ms.openlocfilehash: 4388ff0285de58b0dc6f86af93aad84b2894373f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43470859"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502941"
 ---
 # <a name="workflowapplication-readline-host"></a>WorkflowApplication ReadLine konağı
 Bu örnek, bir genel ReadLine ana bilgisayardır. Yük ve dahil edilen kullanarak herhangi bir iş akışı çalıştırma `ReadLine` etkinlik (veya dizelerle sürdürüldü yer işaretleri veri alma diğer etkinlikler, gibi). Çıktı `WriteLine` etkinlik veya herhangi bir şey yazma <xref:System.Activities.Statements.WriteLine.TextWriter%2A> uzantısı, ana pencereyi yönlendirilir. Örneği boşta olduğunda, bu örnek için mevcut yer işaretlerini bir birleşik giriş kutusunda görünür. Bir yer işaretini seçerek, metin giriş yapma ve sürdürme yer işareti düğmesine basarak iş akışlarının yürütülmesini devam eder. İptal etme, iptal etmek veya seçili bir iş akışı sonlandırılmak. Kalıcılık varsayılan olarak açık – konağı kapatın ve yeniden getirmek ve örnek listesi veritabanında depolanan örnekleri ile doldurulur. Kullanılan izleme çıktısına <xref:System.Activities.WorkflowApplication>-düzeyindeki olayları etkinlik düzeyinde ayrıntılı izleme ekleme seçeneğine sahip bir konağa.  

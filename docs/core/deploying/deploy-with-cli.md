@@ -4,12 +4,12 @@ description: .NET Core uygulama dağıtımı ile komut satırı arabirimi (CLI) 
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/18/2017
-ms.openlocfilehash: 7b009068422686442ebff83b9400c365f34a3154
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: dbef9d91aa4e7af8e6e0ed2d8f361238385d4976
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244757"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43559601"
 ---
 # <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>Komut satırı arabirimi (CLI) araçları ile .NET Core uygulaması dağıtma
 
@@ -26,7 +26,7 @@ Komut satırından çalışırken, bir program düzenleyiciyi kullanabilirsiniz.
 
 ## <a name="framework-dependent-deployment"></a>Framework bağımlı dağıtım
 
-Herhangi bir üçüncü taraf bağımlılıkları olan bir framework bağımlı dağıtımının oluşturmaya, sınamaya ve uygulama yayımlama yalnızca içerir. C# dilinde yazılmış basit bir örnek işlemini gösterir. 
+Herhangi bir üçüncü taraf bağımlılıkları olan bir framework bağımlı dağıtımının oluşturmaya, sınamaya ve uygulama yayımlama yalnızca içerir. C# dilinde yazılmış basit bir örnek işlemini gösterir.
 
 1. Proje dizini oluşturun.
 
@@ -43,7 +43,7 @@ Herhangi bir üçüncü taraf bağımlılıkları olan bir framework bağımlı 
    [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
 
 1. Proje bağımlılıkları ve Araçları'nı güncelleştirin.
- 
+
    Çalıştırma [dotnet restore](../tools/dotnet-restore.md) ([bkz. Not](#dotnet-restore-note)), projede belirtilen bağımlılıkları geri yüklemek için komutu.
 
 1. Uygulamanızı hata ayıklama yapısını oluşturun.
@@ -105,7 +105,7 @@ Bir framework bağımlı dağıtımının bir veya daha fazla üçüncü taraf b
 
 1. Uygulamanızı hedefleyen platformlar tanımlayın.
 
-   Oluşturma bir `<RuntimeIdentifiers>` içindeki `<PropertyGroup>` bölümünü, *csproj* uygulamanız hedefler ve hedeflediğiniz her platform için çalışma zamanı tanımlayıcı (RID) belirtin platformları tanımlayan dosya. Aynı zamanda RID ayırmak için noktalı virgül eklemeniz gerektiğini unutmayın. Bkz: [çalışma zamanı tanımlayıcı Kataloğu](../rid-catalog.md) çalışma zamanı tanımlayıcılarının listesi. 
+   Oluşturma bir `<RuntimeIdentifiers>` içindeki `<PropertyGroup>` bölümünü, *csproj* uygulamanız hedefler ve hedeflediğiniz her platform için çalışma zamanı tanımlayıcı (RID) belirtin platformları tanımlayan dosya. Aynı zamanda RID ayırmak için noktalı virgül eklemeniz gerektiğini unutmayın. Bkz: [çalışma zamanı tanımlayıcı Kataloğu](../rid-catalog.md) çalışma zamanı tanımlayıcılarının listesi.
 
    Örneğin, aşağıdaki `<PropertyGroup>` bölümü gösterir uygulama 64-bit Windows 10 işletim sistemleri ve OS X sürüm 10.11 64-bit işletim sistemi üzerinde çalışır.
 
@@ -188,8 +188,7 @@ Yalnızca bir üçüncü taraf kitaplığı ile kendi içinde bir dağıtım iç
 <a name="dotnet-restore-note"></a>
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-# <a name="see-also"></a>Ayrıca bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-[.NET core uygulama dağıtımı](index.md)   
-[.NET core çalışma zamanı tanımlayıcı (RID) Kataloğu](../rid-catalog.md)   
-
+* [.NET core uygulama dağıtımı](index.md)
+* [.NET core çalışma zamanı tanımlayıcı (RID) Kataloğu](../rid-catalog.md)

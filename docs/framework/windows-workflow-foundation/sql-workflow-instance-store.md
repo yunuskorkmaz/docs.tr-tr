@@ -1,24 +1,24 @@
 ---
-title: SQL iş akışı örneği deposu
+title: SQL iş akışı örneği Store
 ms.date: 03/30/2017
 ms.assetid: 8cd2f8a5-4bf8-46ea-8909-c7fdb314fabc
-ms.openlocfilehash: 81f11b9f88fbe425a07e553e64a08761dca3a2b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 680a233ca721cd8a0c620b797832419f460b13b6
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517325"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43552224"
 ---
-# <a name="sql-workflow-instance-store"></a>SQL iş akışı örneği deposu
-[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] İş akışı örneği bir SQL Server 2005 veya SQL Server 2008 veritabanı ile ilgili durum bilgisini kalıcı hale getirmek için iş akışlarını tanır SQL iş akışı örneği deposu ile birlikte gelir. Bu özellik öncelikle biçiminde uygulanan <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> Özet türeyen sınıf <xref:System.Runtime.DurableInstancing.InstanceStore> Kalıcılık framework'ün sınıfı. SQL iş akışı örneği depolama özelliğini Kalıcılık komutları mağazaya göndermek için bir konak kullanır API Kalıcılık somut bir uygulamasıdır SQL Kalıcılık sağlayıcısı meydana gelir.  
+# <a name="sql-workflow-instance-store"></a>SQL iş akışı örneği Store
+[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] Bir SQL Server 2005 veya SQL Server 2008 veritabanına iş akışı durumlarda hakkındaki durum bilgilerini kalıcı hale getirmek iş akışlarını tanır SQL iş akışı örneği Store ile birlikte gelir. Bu özellik öncelikle biçiminde uygulanan <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> Özet türetilen sınıfı <xref:System.Runtime.DurableInstancing.InstanceStore> Kalıcılık framework'ün sınıfı. SQL iş akışı örneği Store özelliği bir somut sürekliliğin uygulanmasını Kalıcılık komutları depoya göndermek için bir ana bilgisayar kullanan bir SQL Kalıcılık sağlayıcısı oluşturur.  
   
- SQL iş akışı örneği deposuna kendini barındıran iş akışları veya kullanan iş akışı hizmetleri destekleyen <xref:System.Activities.WorkflowApplication> veya <xref:System.ServiceModel.WorkflowServiceHost> barındırılan hizmetleri yanı sıra kullanarak <xref:System.ServiceModel.WorkflowServiceHost>. Özelliği tarafından sunulan nesne modelini kullanarak kendini barındıran Hizmetleri için SQL iş akışı örneği depolama özelliği programlı olarak yapılandırabilirsiniz. Bu özellik tarafından barındırılan hizmetler için yapılandırabileceğiniz <xref:System.ServiceModel.WorkflowServiceHost> nesne modelini kullanarak programlı olarak hem de bir XML yapılandırma dosyası kullanarak.  
+ SQL iş akışı örneği Store hem şirket içinde barındırılan iş akışları veya kullanan iş akışı hizmetleri destekleyen <xref:System.Activities.WorkflowApplication> veya <xref:System.ServiceModel.WorkflowServiceHost> barındırılan hizmetleri yanı sıra kullanarak <xref:System.ServiceModel.WorkflowServiceHost>. Özelliği tarafından sunulan nesne modelini kullanarak, şirket içinde barındırılan hizmetleri için SQL iş akışı örneği Store özelliği programlı bir şekilde yapılandırabilirsiniz. Bu özellik tarafından barındırılan hizmetler için yapılandırabileceğiniz <xref:System.ServiceModel.WorkflowServiceHost> nesne modelini kullanarak program aracılığıyla hem de bir XML yapılandırma dosyasını kullanarak.  
   
- SQL iş akışı örneği depolama özelliğini (**SqlWorkflowInstanceStore** sınıfı) uygulamayan <xref:System.ServiceModel.Persistence.PersistenceProviderFactory> ve bu nedenle dayanıklı iş akışı olmayan WCF hizmetleri için Kalıcılık destek sağlamaz. Bu ayrıca uygulamayan <xref:System.Workflow.Runtime.Hosting.WorkflowPersistenceService> ve bu nedenle 3.x iş akışları için Kalıcılık destek sağlamaz. Özelliği, yalnızca WF 4.0 için (ve daha sonra) Kalıcılık iş akışları ve iş akışı hizmetleri destekler. Özellik SQL Server 2005 ve SQL Server 2008 dışındaki tüm veritabanlarını da desteklemez.  
+ SQL iş akışı örneği Store özelliği (**SqlWorkflowInstanceStore** sınıfı) uygulamıyor <xref:System.ServiceModel.Persistence.PersistenceProviderFactory> ve bu nedenle kalıcı olmayan iş akışı WCF hizmetleri için kalıcılığı desteği sunmamaktadır. Bu ayrıca uygulamıyor <xref:System.Workflow.Runtime.Hosting.WorkflowPersistenceService> ve bu nedenle 3.x iş akışları için Kalıcılık desteği sunmamaktadır. Özelliği, yalnızca WF 4.0 (ve üzeri) Kalıcılık iş akışları ve iş akışı hizmetleri destekler. Bu özellik SQL Server 2005 ve SQL Server 2008 dışındaki herhangi bir veritabanına da desteklemez.  
   
- Bu bölümdeki konularda SQL iş akışı örneği deposunun özellikleri açıklamak ve depolama yapılandırma hakkında ayrıntılar sağlar.  
+ Bu bölümdeki konular, özellikleri ve SQL iş akışı örneği Store özelliklerini açıklar ve mağazası yapılandırma ayrıntıları sağlar.  
   
- Windows Server App Fabric kendi örnek deposuna ve yapılandırmayı ve örnek deposuna kullanımını kolaylaştırmak için araç sağlar. Daha fazla bilgi için bkz: [Windows Server App Fabric örnek deposuna](http://go.microsoft.com/fwlink/?LinkId=201201). Uygulama doku SQL Server Kalıcılık veritabanı bakın hakkında daha fazla bilgi için [uygulama doku SQL Server Kalıcılık veritabanı](http://go.microsoft.com/fwlink/?LinkId=201202)  
+ Windows Server App Fabric kendi örnek deposuna ve yapılandırma ve örnek depolama kullanımını kolaylaştırmak için araçlar sağlar. Daha fazla bilgi için bkz: [Windows Server App Fabric örneği Store](https://go.microsoft.com/fwlink/?LinkId=201201). App Fabric SQL Server Kalıcılık veritabanı bakın hakkında daha fazla bilgi için [App Fabric SQL Server Kalıcılık veritabanı](https://go.microsoft.com/fwlink/?LinkId=201202)  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
@@ -37,4 +37,4 @@ ms.locfileid: "33517325"
 -   [SQL Server Kalıcılık Veritabanı](../../../docs/framework/windows-workflow-foundation/sql-server-persistence-database.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Kalıcılık örnekleri](http://go.microsoft.com/fwlink/?LinkID=177735)
+ [Kalıcılık örnekleri](https://go.microsoft.com/fwlink/?LinkID=177735)

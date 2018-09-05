@@ -8,40 +8,40 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], basic programming
 - Windows Communication Foundation [WCF], programming
 ms.assetid: 3ae3d498-f43c-4ecc-8cc0-6cbe36b62593
-ms.openlocfilehash: cbdc693197344fe570c1462f6ca3115018eb69d6
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 7095784c2c9e2dc3c0ebafe84b89f9657321e1c5
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33803747"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43558897"
 ---
 # <a name="basic-wcf-programming"></a>Temel WCF Programlama
-Bu bölümde Windows Communication Foundation (WCF) uygulamaları oluşturmak için ilgili temel bilgileri gösterir.  
+Bu bölüm, Windows Communication Foundation (WCF) uygulamaları oluşturmaya yönelik temel bilgiler sunar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Temel Programlama Yaşam Döngüsü](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
- Tasarlama, derleme ve WCF hizmeti ve istemci uygulamalarını dağıtma yaşam döngüsü açıklar.  
+ Yaşam döngüsü tasarlama, oluşturma ve WCF hizmeti ve istemci uygulamaları dağıtma açıklanır.  
   
  [Hizmetleri Tasarlama ve Uygulama](../../../docs/framework/wcf/designing-and-implementing-services.md)  
- Tasarım ve bir hizmet sözleşmesini uygulama, bir ileti değişim deseni seçin, hatalı sözleşme ve diğer temel Hizmetleri yönlerini belirtin açıklar.  
+ Tasarım ve bir hizmet sözleşmesini uygulama, bir ileti değişim deseni seçin, hatalı sözleşme ve hizmetler temel diğer yönleri belirtin açıklar.  
   
  [Hizmetleri Yapılandırma](../../../docs/framework/wcf/configuring-services.md)  
- Sözleşme gereksinimlerini destekler, yerel çalışma zamanı davranışını özelleştirmek ve hizmet yayımlama için adresini belirtmek için bir WCF hizmetinin nasıl yapılandırılacağı açıklanmaktadır.  
+ Sözleşme gereksinimlerini desteklemek, yerel çalışma zamanı davranışını özelleştirebilirsiniz ve hizmet yayımlamak için adresini göstermek için bir WCF hizmetini yapılandırma açıklar.  
   
  [Barındırma Hizmetleri](../../../docs/framework/wcf/hosting-services.md)  
  Barındırma hizmetleri uygulamada temellerini açıklar.  
   
  [İstemci Derleme](../../../docs/framework/wcf/building-clients.md)  
- Meta veri Hizmetler'den, WCF istemci koda dönüştürmek, güvenlik sorunlarını gidermek ve yapı, yapılandırmak ve bir WCF istemcisi barındırmak açıklar.  
+ Meta veri Hizmetler'den, WCF istemci koda dönüştürmek, güvenlik sorunlarını işlemek ve yapı, yapılandırma ve bir WCF istemcisi barındırmak nasıl açıklar.  
   
  [Genişletilebilirliğe Genel Bakış](../../../docs/framework/wcf/introduction-to-extensibility.md)  
  Özel çözümler oluşturmak için WCF genişletileceğini açıklar.  
   
  [WCF Sorun Giderme Hızlı Başlangıcı](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md)  
- Gerçekleşen en yaygın sorunları, bunları çözmek için yapabilirsiniz ve sorun hakkında daha fazla bilgi bulmak nereden bazıları açıklanmaktadır.  
+ Oluşan en yaygın sorunlar, bunları çözmek için yapabilecekleriniz ve sorun hakkında daha fazla bilgi bulmak nereye bazılarını açıklar.  
   
  [WCF ve ASP.NET Web API](../../../docs/framework/wcf/wcf-and-aspnet-web-api.md)  
- İki teknoloji, nasıl birbirine ilişkili oldukları ve bunların ne zaman kullanılacağı anlatılmaktadır.  
+ İki teknoloji, birbirine birbirleriyle ve bunların ne zaman kullanılacağı açıklanır.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.ServiceModel>  
@@ -61,7 +61,7 @@ Bu bölümde Windows Communication Foundation (WCF) uygulamaları oluşturmak i�
   
  [Windows Communication Foundation Araçları](../../../docs/framework/wcf/tools.md)  
   
- [Windows Communication Foundation Örnekleri](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
+ [Windows Communication Foundation Örnekleri](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
   
  [Başlarken](../../../docs/framework/wcf/samples/getting-started-sample.md)  
   

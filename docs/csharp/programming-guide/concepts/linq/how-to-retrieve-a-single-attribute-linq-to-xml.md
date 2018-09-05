@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: tek bir öznitelik (LINQ to XML) alma (C#)'
 ms.date: 07/20/2015
 ms.assetid: 1b6b07b9-933f-47e9-874e-e790cab49dc5
-ms.openlocfilehash: 55da36099af72259a4e72205f142ab855f000c4f
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 7e7da2b63b9b46a23fcdbcbea6a0f499de32cf19
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43252791"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43505002"
 ---
 # <a name="how-to-retrieve-a-single-attribute-linq-to-xml-c"></a>Nasıl yapılır: tek bir öznitelik (LINQ to XML) alma (C#)
 Bu konu nasıl tek bir öznitelik, bir öğenin özniteliği adı verilir alınacağını açıklar. Bu, belirli bir özniteliği olan bir öğeyi bulmak istediğiniz sorgu ifadeleri yazmak için yararlıdır.  
@@ -97,5 +97,6 @@ home
 work  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [LINQ to XML eksenleri (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [LINQ to XML eksenleri (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)

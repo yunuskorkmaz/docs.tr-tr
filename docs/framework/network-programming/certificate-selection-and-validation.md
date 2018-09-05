@@ -5,12 +5,12 @@ ms.assetid: c933aca2-4cd0-4ff1-9df9-267143f25a6f
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: bdeb0e92dca723b64ee82b70f58fe910fd0c2edb
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: fe3b10e17c3cdf181f0b33b4305008655047fb0f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931056"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43557536"
 ---
 # <a name="certificate-selection-and-validation"></a>Sertifika seçimi ve doğrulama
 <xref:System.Net> Sınıfları seçin ve doğrulamak için birkaç yol destekler <xref:System.Security.Cryptography.X509Certificates> Güvenli Yuva Katmanı (SSL) bağlantıları için. Bir istemci, kendisi için bir sunucu kimliğini doğrulamak için bir veya daha fazla sertifikaları seçebilirsiniz. Bir istemci sertifikası kimlik doğrulaması için bir veya daha fazla belirli özniteliklere sahip bir sunucu gerektirebilir.  
@@ -41,13 +41,13 @@ ms.locfileid: "42931056"
 ## <a name="tools-for-certificate-configuration"></a>Sertifika yapılandırması için Araçlar  
  Araçlar, istemci ve sunucu sertifika yapılandırması için kullanılabilir.  
   
- *Winhttpcertcfg.exe* aracı, istemci sertifikaları yapılandırmak için kullanılabilir. *Winhttpcertcfg.exe* aracı, Windows Server 2003 Resource Kit'teki araçlarıyla biri olarak sağlanır. Bu araç, Windows Server 2003 Kaynak Seti Araçları ' www.microsoft.com ', bir parçası olarak bir indirme olarak da kullanılabilir.  
+ *Winhttpcertcfg.exe* aracı, istemci sertifikaları yapılandırmak için kullanılabilir. *Winhttpcertcfg.exe* aracı, Windows Server 2003 Resource Kit'teki araçlarıyla biri olarak sağlanır. Bu araç ayrıca Windows Server 2003 Kaynak Seti Araçları bir parçası olarak bir indirme olarak kullanılabilir [www.microsoft.com](https://www.microsoft.com).  
   
 *HttpCfg.exe* aracı için sunucu sertifikaları yapılandırmak için kullanılabilir <xref:System.Net.HttpListener> sınıfı. *HttpCfg.exe* aracı sağlanan destek araçlarından biri olarak Windows Server 2003 ve Windows XP Service Pack 2 '. *HttpCfg.exe* ve diğer destek araçları Windows Server 2003 veya Windows XP üzerinde varsayılan olarak yüklenmez. Windows Server 2003'te. Destek Araçları'nı aşağıdaki klasör ve dosya Windows Server 2003 CD-ROM üzerinde ayrı olarak yüklenir:  
   
  \Support\Tools\Suptools.msi  
   
- Windows XP Service Pack 2 ile kullanım için Windows XP Destek Araçları'nı www.microsoft.com adresinden indirilebilir öğe olarak kullanılabilir.  
+ Windows XP Service Pack 2 ile kullanım için Windows XP Destek Araçları'nı yükleme yoluyla kullanılabilir [www.microsoft.com](https://www.microsoft.com).  
   
  Kaynak kodu bir sürümüne *HttpCfg.exe* aracı Windows Server SDK'sı ile bir örnek olarak da sağlanır. Kaynak koduna *HttpCfg.exe* örnek yüklü ağ örnekleri ile varsayılan olarak şu klasörü altında Windows SDK'ın bir parçası olarak:  
   

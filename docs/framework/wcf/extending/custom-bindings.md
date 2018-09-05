@@ -5,30 +5,30 @@ helpviewer_keywords:
 - Windows Communication Foundation, endpoints
 - Windows Communication Foundation, configuration
 ms.assetid: 58532b6d-4eea-4a4f-854f-a1c8c842564d
-ms.openlocfilehash: 6880b04a3f8a82c1e109c32674804c5241913a8a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 694b4faaafea62799a96aabe8f023a0d495f8d50
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487078"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43540211"
 ---
 # <a name="custom-bindings"></a>Özel Bağlamalar
-Kullanabileceğiniz <xref:System.ServiceModel.Channels.CustomBinding> sistem tarafından sağlanan bağlamalar birini hizmetinizi gereksinimlerini karşılamadığında sınıfı. Tüm bağlamaları bağlama öğelerinin sıralı bir kümesinden oluşturulur. Özel bağlamalar sistem tarafından sağlanan bağlama öğeleri kümesinden oluşturulabilir veya kullanıcı tanımlı özel bağlama öğelerini içerebilir. Özel bağlama öğeleri yeni taşımaları veya bir hizmet uç noktada kodlayıcılar kullanımını etkinleştirmek için kullanabilirsiniz. Çalışma örnekler için bkz: [özel bağlama örnekleri](http://msdn.microsoft.com/library/657e8143-beb0-472d-9cfe-ed1a19c2ab08). Daha fazla bilgi için bkz: [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
+Kullanabileceğiniz <xref:System.ServiceModel.Channels.CustomBinding> sınıfı, sistem tarafından sağlanan bağlamalar birini hizmetinizin gereksinimlerini karşılamıyor. Tüm bağlamalar bağlama öğelerinin sıralı bir kümesinden oluşturulur. Özel bağlamalar, sistem tarafından sağlanan bağlama öğeleri kümesinden oluşturulabilir veya kullanıcı tanımlı özel bağlama öğelerini içerebilir. Özel bağlama öğeleri, örneğin, yeni taşıma veya bir hizmet uç noktasında kodlayıcılar kullanımını etkinleştirmek için kullanabilirsiniz. Çalışan örnekler için bkz [özel bağlama örnekleri](https://msdn.microsoft.com/library/657e8143-beb0-472d-9cfe-ed1a19c2ab08). Daha fazla bilgi için [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
   
 ## <a name="construction-of-a-custom-binding"></a>Özel bağlama oluşturma  
- Özel bağlama kullanılarak oluşturulan <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A> bağlama "belirli bir sırada yığılma" öğelerinin bir koleksiyonu oluşturucudan:  
+ Özel bağlama kullanılarak oluşturulur <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A> bağlama "belirli bir sırayla dizilir" öğelerinin bir koleksiyondan Oluşturucusu:  
   
--   En üstte bir isteğe bağlı olduğu <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> akan sağlayan sınıfı işlemleri.  
+-   En üstünde isteğe bağlı olduğu <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> akmasını sağlar sınıfını işlemler.  
   
--   Sonraki isteğe bağlı olduğu <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> bir oturum ve WS-ReliableMessaging belirtiminde tanımlanan mekanizmaları sipariş sağlayan sınıf. Bir oturum SOAP ve aktarım aracılar arası.  
+-   Sonraki isteğe bağlı olduğu <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> bir oturum ve mekanizmaları WS-ReliableMessaging belirtiminde tanımlanan sıralamasını sağlayan sınıf. Bir oturum SOAP ve aktarım aracılar arası.  
   
--   Sonraki isteğe bağlı olduğu <xref:System.ServiceModel.Channels.SecurityBindingElement> yetkilendirme, kimlik doğrulama, koruma ve gizliliği gibi güvenlik özellikleri sağlayan sınıf.  
+-   Sonraki isteğe bağlı olduğu <xref:System.ServiceModel.Channels.SecurityBindingElement> yetkilendirme, kimlik doğrulaması, koruma ve gizlilik gibi güvenlik özelliklerini sağlayan sınıf.  
   
--   Sonraki isteğe bağlı olduğu <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement> sahip çift yönlü iletişimi HTTP gibi yerel, desteklemeyen bir Aktarım Protokolü ile iki şekilde çift yönlü iletişim olanağı sağlayan sınıf.  
+-   Sonraki isteğe bağlı olduğu <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement> çift yönlü iletişim, gibi HTTP desteği olmayan bir Aktarım Protokolü ile iki şekilde çift yönlü iletişim olanağı sağlayan sınıf.  
   
 -   Sonraki isteğe bağlı olduğu <xref:System.ServiceModel.Channels.OneWayBindingElement>) tek yönlü iletişim sağlayan sınıf.  
   
--   Sonraki aşağıdakilerden biri olabilen bir isteğe bağlı Akış güvenlik bağlama öğedir.  
+-   Sonraki aşağıdakilerden biri olabilecek bir isteğe bağlı Akış güvenlik bağlama öğesi var.  
   
     -   <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
   
@@ -42,7 +42,7 @@ Kullanabileceğiniz <xref:System.ServiceModel.Channels.CustomBinding> sistem tar
   
     -   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>  
   
- Pencerenin alt gerekli aktarım öğedir. Kendi taşıma veya Windows Communication Foundation (WCF) sağlayan aşağıdaki aktarım bağlama öğeleriyle birini kullanabilirsiniz:  
+ Altta bir gerekli aktarım öğesidir. Kendi taşıma veya Windows Communication Foundation (WCF) sağlayan aşağıdaki aktarım bağlama öğeleriyle birini kullanabilirsiniz:  
   
 -   <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
   
@@ -60,17 +60,17 @@ Kullanabileceğiniz <xref:System.ServiceModel.Channels.CustomBinding> sistem tar
   
 -   <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>  
   
- Aşağıdaki tabloda, her katman için seçenekleri özetler.  
+ Aşağıdaki tabloda, her katman için seçenekler özetlenmektedir.  
   
 |Katman|Seçenekler|Gerekli|  
 |-----------|-------------|--------------|  
 |İşlemler|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|Hayır|  
 |Güvenilirlik|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>|Hayır|  
 |Güvenlik|<xref:System.ServiceModel.Channels.SecurityBindingElement>|Hayır|  
-|Kodlama|İkili, ileti iletim en iyi duruma getirme mekanizmasını (MTOM) özel bir metin|Evet|  
-|Taşıma|TCP, HTTP, HTTPS, adlandırılmış kanallar (IPC olarak da bilinir) eşler arası (P2P), Message Queuing (MSMQ olarak da bilinir), özel|Evet|  
+|Kodlama|İkili, ileti aktarım en iyi duruma getirme mekanizması (MTOM) özel bir metin|Evet|  
+|Taşıma|TCP, HTTP, HTTPS, adlandırılmış kanallar (IPC olarak da bilinir), eşler arası (P2P), Message Queuing (MSMQ olarak da bilinir), özel|Evet|  
   
- Ayrıca, kendi bağlama öğeleri tanımlamak ve herhangi bir önceki tanımlı katmanlar arasında ekleyin.  
+ Ayrıca, kendi bağlama öğeleri tanımlayıp bunları herhangi bir önceki tanımlanmış katmanları arasında ekleyebilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Uç Nokta Oluşturmaya Genel Bakış](../../../../docs/framework/wcf/endpoint-creation-overview.md)  

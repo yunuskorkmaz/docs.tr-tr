@@ -3,11 +3,11 @@ title: Kurumsal Hizmetler İşlemsel Bileşenlerini Tümleştirme
 ms.date: 03/30/2017
 ms.assetid: 05dab277-b8b2-48cf-b40c-826be128b175
 ms.openlocfilehash: 1fd338e57dab16a02cd31de6b45d4c5291591043
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481863"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514623"
 ---
 # <a name="integrating-enterprise-services-transactional-components"></a>Kurumsal Hizmetler İşlemsel Bileşenlerini Tümleştirme
 Windows Communication Foundation (WCF) Hizmetleri ile Kurumsal tümleştirme için otomatik bir mekanizma sağlar (bkz [COM + uygulamaları ile tümleştirme](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)). Ancak, dahili olarak Enterprise Hizmetleri içinde bulunan işlem bileşenleri kullanan hizmetleri geliştirmek için esneklik isteyebilirsiniz. WCF işlem özellik oluşturulduğundan <xref:System.Transactions> altyapı, Kurumsal Services'ı WCF ile tümleştirme sürecini arasında birlikte çalışabilirlik belirtmek için aynı <xref:System.Transactions> ve kurumsal açıklandığı gibi hizmetleri [Kurumsal Hizmetler ve COM + işlemleri ile birlikte çalışabilirlik](https://go.microsoft.com/fwlink/?LinkId=94949).  

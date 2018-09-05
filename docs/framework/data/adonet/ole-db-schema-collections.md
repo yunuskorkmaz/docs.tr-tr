@@ -1,21 +1,21 @@
 ---
-title: OLE DB şeması koleksiyonları
+title: OLE DB şema koleksiyonları
 ms.date: 03/30/2017
 ms.assetid: 6380c36b-658e-4d67-91e8-7131ef4a7c2c
-ms.openlocfilehash: f1cb5e1fe967088b44fa4045dfe50c1c57d963eb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1ab6426875b73b400a59b7e4cf155615d7472d05
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766939"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514495"
 ---
-# <a name="ole-db-schema-collections"></a>OLE DB şeması koleksiyonları
-Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet için OLE DB sağlayıcıları şema koleksiyonu desteği açıklanmaktadır.  
+# <a name="ole-db-schema-collections"></a>OLE DB şema koleksiyonları
+Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet OLE DB sağlayıcıları için şema koleksiyonu desteğini açıklar.  
   
-## <a name="microsoft-sql-server-ole-db-provider"></a>Microsoft SQL Server OLE DB sağlayıcısı  
- Microsoft SQL Server OLE DB sürücüsü ortak şeması koleksiyonları ek olarak aşağıdaki belirli şeması koleksiyonları destekler:  
+## <a name="microsoft-sql-server-ole-db-provider"></a>Microsoft SQL Server'ı OLE DB sağlayıcısı  
+ Microsoft SQL Server OLE DB sürücüsü aşağıdaki özel şema koleksiyonları ortak şema koleksiyonları yanı sıra destekler:  
   
--   tabloları  
+-   Tabloları  
   
 -   Sütunlar  
   
@@ -23,27 +23,27 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet için OLE DB sağlay
   
 -   ProcedureParameters  
   
--   Katalog  
+-   Kataloğu  
   
--   Dizinler  
+-   Dizinleri  
   
-### <a name="tables"></a>tabloları  
+### <a name="tables"></a>Tabloları  
   
-|columnName|Veri türü|  
+|ColumnName|Veri türü|  
 |----------------|--------------|  
 |TABLE_CATALOG|Dize|  
 |TABLE_SCHEMA|Dize|  
 |TABLE_NAME|Dize|  
 |TABLE_TYPE|Dize|  
 |TABLE_GUID|Guid|  
-|AÇIKLAMA|Dize|  
+|AÇIKLAMASI|Dize|  
 |TABLE_PROPID|Int64|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
 ### <a name="columns"></a>Sütunlar  
   
-|columnName|Veri türü|  
+|ColumnName|Veri türü|  
 |----------------|--------------|  
 |TABLE_CATALOG|Dize|  
 |TABLE_SCHEMA|Dize|  
@@ -72,34 +72,34 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet için OLE DB sağlay
 |DOMAIN_CATALOG|Dize|  
 |DOMAIN_SCHEMA|Dize|  
 |DOMAIN_NAME|Dize|  
-|AÇIKLAMA|Dize|  
+|AÇIKLAMASI|Dize|  
 |COLUMN_LCID|Int32|  
 |COLUMN_COMPFLAGS|Int32|  
 |COLUMN_SORTID|Int32|  
-|COLUMN_TDSCOLLATION|Byte]|  
+|COLUMN_TDSCOLLATION|Bayt]|  
 |IS_COMPUTED|Boole değeri|  
   
 ### <a name="procedures"></a>Yordamlar  
   
-|columnName|Veri türü|  
+|ColumnName|Veri türü|  
 |----------------|--------------|  
 |PROCEDURE_CATALOG|Dize|  
 |PROCEDURE_SCHEMA|Dize|  
 |PROCEDURE_NAME|Dize|  
 |PROCEDURE_TYPE|Int16|  
 |PROCEDURE_DEFINITION|Dize|  
-|AÇIKLAMA|Dize|  
+|AÇIKLAMASI|Dize|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
 ### <a name="procedureparameters"></a>ProcedureParameters  
   
-|columnName|Veri türü|  
+|ColumnName|Veri türü|  
 |----------------|--------------|  
 |PROCEDURE_CATALOG|Dize|  
 |PROCEDURE_SCHEMA|Dize|  
 |PROCEDURE_NAME|Dize|  
-|PARAMETRE_ADÝ|Dize|  
+|PARAMETER_NAME|Dize|  
 |ORDINAL_POSITION|Int32|  
 |PARAMETER_TYPE|Int32|  
 |PARAMETER_HASDEFAULT|Boole değeri|  
@@ -110,20 +110,20 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet için OLE DB sağlay
 |CHARACTER_OCTET_LENGTH|Int64|  
 |NUMERIC_PRECISION|Int32|  
 |NUMERIC_SCALE|Int16|  
-|AÇIKLAMA|Dize|  
+|AÇIKLAMASI|Dize|  
 |TYPE_NAME|Dize|  
 |LOCAL_TYPE_NAME|Dize|  
   
-### <a name="catalog"></a>Katalog  
+### <a name="catalog"></a>Kataloğu  
   
-|columnName|Veri türü|  
+|ColumnName|Veri türü|  
 |----------------|--------------|  
 |CATALOG_NAME|Dize|  
-|AÇIKLAMA|Dize|  
+|AÇIKLAMASI|Dize|  
   
-### <a name="indexes"></a>Dizinler  
+### <a name="indexes"></a>Dizinleri  
   
-|columnName|Veri türü|  
+|ColumnName|Veri türü|  
 |----------------|--------------|  
 |TABLE_CATALOG|Dize|  
 |TABLE_SCHEMA|Dize|  
@@ -131,7 +131,7 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet için OLE DB sağlay
 |INDEX_CATALOG|Dize|  
 |INDEX_SCHEMA|Dize|  
 |INDEX_NAME|Dize|  
-|PRIMARY_KEY|Boole değeri|  
+|İŞLEM|Boole değeri|  
 |BENZERSİZ|Boole değeri|  
 |CLUSTERED|Boole değeri|  
 |TÜRÜ|Int32|  
@@ -152,9 +152,9 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet için OLE DB sağlay
 |TÜMLEŞİK|Boole değeri|  
   
 ## <a name="microsoft-oracle-ole-db-provider"></a>Microsoft Oracle OLE DB sağlayıcısı  
- Microsoft Oracle OLE DB sürücü ortak şeması koleksiyonları ek olarak aşağıdaki belirli şeması koleksiyonları destekler:  
+ Microsoft Oracle OLE DB sürücüsü aşağıdaki özel şema koleksiyonları ortak şema koleksiyonları yanı sıra destekler:  
   
--   tabloları  
+-   Tabloları  
   
 -   Sütunlar  
   
@@ -166,25 +166,25 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet için OLE DB sağlay
   
 -   Görünümler  
   
--   Dizinler  
+-   Dizinleri  
   
-### <a name="tables"></a>tabloları  
+### <a name="tables"></a>Tabloları  
   
-|columnName|Veri türü|  
+|ColumnName|Veri türü|  
 |----------------|--------------|  
 |TABLE_CATALOG|Dize|  
 |TABLE_SCHEMA|Dize|  
 |TABLE_NAME|Dize|  
 |TABLE_TYPE|Dize|  
 |TABLE_GUID|Guid|  
-|AÇIKLAMA|Dize|  
+|AÇIKLAMASI|Dize|  
 |TABLE_PROPID|Int64|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
 ### <a name="columns"></a>Sütunlar  
   
-|columnName|Veri türü|  
+|ColumnName|Veri türü|  
 |----------------|--------------|  
 |TABLE_CATALOG|Dize|  
 |TABLE_SCHEMA|Dize|  
@@ -213,24 +213,24 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet için OLE DB sağlay
 |DOMAIN_CATALOG|Dize|  
 |DOMAIN_SCHEMA|Dize|  
 |DOMAIN_NAME|Dize|  
-|AÇIKLAMA|Dize|  
+|AÇIKLAMASI|Dize|  
   
 ### <a name="procedures"></a>Yordamlar  
   
-|columnName|Veri türü|  
+|ColumnName|Veri türü|  
 |----------------|--------------|  
 |PROCEDURE_CATALOG|Dize|  
 |PROCEDURE_SCHEMA|Dize|  
 |PROCEDURE_NAME|Dize|  
 |PROCEDURE_TYPE|Int16|  
 |PROCEDURE_DEFINITION|Dize|  
-|AÇIKLAMA|Dize|  
+|AÇIKLAMASI|Dize|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
 ### <a name="procedurecolumns"></a>ProcedureColumns  
   
-|columnName|Veri türü|  
+|ColumnName|Veri türü|  
 |----------------|--------------|  
 |PROCEDURE_CATALOG|Dize|  
 |PROCEDURE_SCHEMA|Dize|  
@@ -247,12 +247,12 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet için OLE DB sağlay
 |CHARACTER_OCTET_LENGTH|Int64|  
 |NUMERIC_PRECISION|Int32|  
 |NUMERIC_SCALE|Int16|  
-|AÇIKLAMA|Dize|  
+|AÇIKLAMASI|Dize|  
 |AŞIRI YÜKLEME|Int16|  
   
 ### <a name="views"></a>Görünümler  
   
-|columnName|Veri türü|  
+|ColumnName|Veri türü|  
 |----------------|--------------|  
 |TABLE_CATALOG|Dize|  
 |TABLE_SCHEMA|Dize|  
@@ -260,13 +260,13 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet için OLE DB sağlay
 |VIEW_DEFINITION|Dize|  
 |CHECK_OPTION|Boole değeri|  
 |IS_UPDATABLE|Boole değeri|  
-|AÇIKLAMA|Dize|  
+|AÇIKLAMASI|Dize|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
-### <a name="indexes"></a>Dizinler  
+### <a name="indexes"></a>Dizinleri  
   
-|columnName|Veri türü|  
+|ColumnName|Veri türü|  
 |----------------|--------------|  
 |TABLE_CATALOG|Dize|  
 |TABLE_SCHEMA|Dize|  
@@ -274,7 +274,7 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet için OLE DB sağlay
 |INDEX_CATALOG|Dize|  
 |INDEX_SCHEMA|Dize|  
 |INDEX_NAME|Dize|  
-|PRIMARY_KEY|Boole değeri|  
+|İŞLEM|Boole değeri|  
 |BENZERSİZ|Boole değeri|  
 |CLUSTERED|Boole değeri|  
 |TÜRÜ|Int32|  
@@ -295,9 +295,9 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet için OLE DB sağlay
 |TÜMLEŞİK|Boole değeri|  
   
 ## <a name="microsoft-jet-ole-db-provider"></a>Microsoft Jet OLE DB sağlayıcısı  
- Microsoft Jet OLE DB sürücü ortak şeması koleksiyonları ek olarak aşağıdaki belirli şeması koleksiyonları destekler:  
+ Microsoft Jet OLE DB sürücüsü aşağıdaki özel şema koleksiyonları ortak şema koleksiyonları yanı sıra destekler:  
   
--   tabloları  
+-   Tabloları  
   
 -   Sütunlar  
   
@@ -305,25 +305,25 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet için OLE DB sağlay
   
 -   Görünümler  
   
--   Dizinler  
+-   Dizinleri  
   
-### <a name="tables"></a>tabloları  
+### <a name="tables"></a>Tabloları  
   
-|columnName|Veri türü|  
+|ColumnName|Veri türü|  
 |----------------|--------------|  
 |TABLE_CATALOG|Dize|  
 |TABLE_SCHEMA|Dize|  
 |TABLE_NAME|Dize|  
 |TABLE_TYPE|Dize|  
 |TABLE_GUID|Guid|  
-|AÇIKLAMA|Dize|  
+|AÇIKLAMASI|Dize|  
 |TABLE_PROPID|Int64|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
 ### <a name="columns"></a>Sütunlar  
   
-|columnName|Veri türü|  
+|ColumnName|Veri türü|  
 |----------------|--------------|  
 |TABLE_CATALOG|Dize|  
 |TABLE_SCHEMA|Dize|  
@@ -352,24 +352,24 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet için OLE DB sağlay
 |DOMAIN_CATALOG|Dize|  
 |DOMAIN_SCHEMA|Dize|  
 |DOMAIN_NAME|Dize|  
-|AÇIKLAMA|Dize|  
+|AÇIKLAMASI|Dize|  
   
 ### <a name="procedures"></a>Yordamlar  
   
-|columnName|Veri türü|  
+|ColumnName|Veri türü|  
 |----------------|--------------|  
 |PROCEDURE_CATALOG|Dize|  
 |PROCEDURE_SCHEMA|Dize|  
 |PROCEDURE_NAME|Dize|  
 |PROCEDURE_TYPE|Int16|  
 |PROCEDURE_DEFINITION|Dize|  
-|AÇIKLAMA|Dize|  
+|AÇIKLAMASI|Dize|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
 ### <a name="views"></a>Görünümler  
   
-|columnName|Veri türü|  
+|ColumnName|Veri türü|  
 |----------------|--------------|  
 |TABLE_CATALOG|Dize|  
 |TABLE_SCHEMA|Dize|  
@@ -377,13 +377,13 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet için OLE DB sağlay
 |VIEW_DEFINITION|Dize|  
 |CHECK_OPTION|Boole değeri|  
 |IS_UPDATABLE|Boole değeri|  
-|AÇIKLAMA|Dize|  
+|AÇIKLAMASI|Dize|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
-### <a name="indexes"></a>Dizinler  
+### <a name="indexes"></a>Dizinleri  
   
-|columnName|Veri türü|  
+|ColumnName|Veri türü|  
 |----------------|--------------|  
 |TABLE_CATALOG|Dize|  
 |TABLE_SCHEMA|Dize|  
@@ -391,7 +391,7 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet için OLE DB sağlay
 |INDEX_CATALOG|Dize|  
 |INDEX_SCHEMA|Dize|  
 |INDEX_NAME|Dize|  
-|PRIMARY_KEY|Boole değeri|  
+|İŞLEM|Boole değeri|  
 |BENZERSİZ|Boole değeri|  
 |CLUSTERED|Boole değeri|  
 |TÜRÜ|Int32|  
@@ -412,4 +412,4 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet için OLE DB sağlay
 |TÜMLEŞİK|Boole değeri|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

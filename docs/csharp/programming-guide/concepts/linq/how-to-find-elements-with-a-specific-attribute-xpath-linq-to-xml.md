@@ -1,23 +1,23 @@
 ---
-title: 'Nasıl yapılır: Bul (XPath-LINQ-XML) belirli bir özniteliği olan öğeleri (C#)'
+title: 'Nasıl yapılır: öğeleri bulma (XPath-LINQ to XML) belirli bir özniteliğe sahip (C#)'
 ms.date: 07/20/2015
 ms.assetid: daed00dd-923a-43be-8a90-eee406f6f574
-ms.openlocfilehash: 18dbd3170b5e3f8f8b3e11c66430d71ba6acd0da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: da7633b34ddd61577bfc62f4f76d8f8929be1cc4
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318094"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43500286"
 ---
-# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-c"></a>Nasıl yapılır: Bul (XPath-LINQ-XML) belirli bir özniteliği olan öğeleri (C#)
-Bazen belirli bir özniteliği olan tüm öğeleri bulmak istediğiniz. Öznitelik içeriği hakkında ilgili değildir. Bunun yerine, seçmek öznitelik varlığını temel istiyor.  
+# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-c"></a>Nasıl yapılır: öğeleri bulma (XPath-LINQ to XML) belirli bir özniteliğe sahip (C#)
+Bazen belirli bir özniteliği olan tüm öğeleri bulmak istediğiniz. Özniteliğin içeriği hakkında endişe değildir. Bunun yerine, seçilecek öznitelik varlığı üzerinde temel istediğiniz.  
   
- XPath ifadesi şöyledir:  
+ XPath ifadesidir:  
   
  `./*[@Select]`  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod olan öğeleri seçer `Select` özniteliği.  
+ Aşağıdaki kodu olan öğeleri seçer `Select` özniteliği.  
   
 ```csharp  
 XElement doc = XElement.Parse(  
@@ -48,7 +48,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- Bu örnek şu çıkışı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```  
 Results are identical  
@@ -56,5 +56,6 @@ Results are identical
 <Child4 Select="true">4</Child4>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [LINQ-XML XPath kullanıcıların (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [LINQ to XML için XPath kullanıcıları (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

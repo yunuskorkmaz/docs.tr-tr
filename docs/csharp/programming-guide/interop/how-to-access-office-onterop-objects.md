@@ -9,12 +9,12 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: 4e2599f34e80f70a36d6f497f908887aa6853121
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 22fe2930123c40bcb2815e38e7e7593ba66a506c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932114"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522920"
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Nasıl yapılır: Visual C# Özelliklerini Kullanarak Office Birlikte Çalışma Nesnelerine Erişim (C# Programlama Kılavuzu)
 Visual C# Office API'si nesnelere erişimi kolaylaştıran bir özelliğe sahiptir. Adlandırılmış ve isteğe bağlı bağımsız değişkenler, yeni özellikler olarak adlandırılan yeni türü `dynamic`ve değer parametreleri değilmiş gibi COM yöntemleri parametrelere başvuru bağımsız değişkenleri geçirmek olanağı.  
@@ -137,7 +137,7 @@ Visual C# Office API'si nesnelere erişimi kolaylaştıran bir özelliğe sahipt
   
 ### <a name="to-set-the-embed-interop-types-property"></a>Birlikte çalışma türlerini katıştır özelliğini ayarlamak için  
   
-1.  Ek geliştirmeler, çalışma zamanında birincil birlikte çalışma derlemesi (PIA) gerektirmeyen bir COM tür çağırdığınızda mümkündür. PIA'ların sonuçları bağımlılığı sürüm bağımsızlığı ve daha kolay dağıtım kaldırılıyor. PIA'ların programlamadan avantajları hakkında daha fazla bilgi için bkz. [izlenecek yol: yönetilen derlemelerden türler katıştırma](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21).  
+1.  Ek geliştirmeler, çalışma zamanında birincil birlikte çalışma derlemesi (PIA) gerektirmeyen bir COM tür çağırdığınızda mümkündür. PIA'ların sonuçları bağımlılığı sürüm bağımsızlığı ve daha kolay dağıtım kaldırılıyor. PIA'ların programlamadan avantajları hakkında daha fazla bilgi için bkz. [izlenecek yol: yönetilen derlemelerden türler katıştırma](https://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21).  
   
      Ayrıca, gerekli ve COM yöntemleri tarafından döndürülen türleri türü kullanarak temsil edilebildiğinden programlama daha kolay `dynamic` yerine `Object`. Türü değişkenler `dynamic` açık atama ihtiyacını ortadan kaldırır çalışma zamanı kadar değerlendirilmez. Daha fazla bilgi için [türünü kullanarak dinamik](../../../csharp/programming-guide/types/using-type-dynamic.md).  
   
@@ -172,9 +172,10 @@ Visual C# Office API'si nesnelere erişimi kolaylaştıran bir özelliğe sahipt
   
  [!code-csharp[csProgGuideOfficeHowTo#18](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_17.cs)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Type.Missing?displayProperty=nameWithType>  
- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
- [Tür dinamiği kullanma](../../../csharp/programming-guide/types/using-type-dynamic.md)  
- [Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenler](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)  
- [Nasıl yapılır: Office Programlamada Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenleri Kullanma](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- <xref:System.Type.Missing?displayProperty=nameWithType>  
+- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
+- [Tür dinamiği kullanma](../../../csharp/programming-guide/types/using-type-dynamic.md)  
+- [Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenler](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)  
+- [Nasıl yapılır: Office Programlamada Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenleri Kullanma](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)

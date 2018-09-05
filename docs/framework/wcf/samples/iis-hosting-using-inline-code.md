@@ -5,29 +5,29 @@ helpviewer_keywords:
 - Web hosted service
 - IIS Hosting Using Inline Code Sample [Windows Communication Foundation]
 ms.assetid: 56fe3687-a34b-4661-8e30-b33770f413fa
-ms.openlocfilehash: 760607bc7ebf2662a7a3a93b2ebf76114580f42b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 30e50d39b0edb34bcda1bec6d1848a09eabd34fa
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33502396"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524943"
 ---
 # <a name="iis-hosting-using-inline-code"></a>Satır İçi Kod Kullanarak IIS Barındırma
-Bu örnek, Internet Information Services (IIS) tarafından barındırılan bir hizmete uygulamak gösterilmiştir servis kodunu bulunduğu satır içi .svc dosyasında ve isteğe bağlı olarak derlenir. Hizmet kod ayrıca uygulamanın \App_Code dizininde bulunan veya \bin içinde dağıtılan bütünleştirilmiş koda derlenmiş doğrudan kaynak kodu dosyaları uygulanabilir. Bu örnek, bu teknikler gösterilmemiştir.  
+Bu örnek, Internet Information Services (IIS) tarafından barındırılan bir hizmet ekleme işlemi gösterilmektedir hizmet kodu bulunduğu satır içi .svc dosyasında ve isteğe bağlı olarak derlenir. Hizmet kodu, uygulamanın \App_Code dizininde veya derlemesini \bin içinde dağıtılan derlenmiş doğrudan kaynak kodu dosyalarında de uygulanabilir. Bu örnek, bu teknikler göstermemiz gerekmez.  
   
 > [!NOTE]
->  Kurulum yordam ve yapılandırma yönergeleri Bu örneği için bu konunun sonunda yer alır.  
+>  Bu örnek için Kurulum yordamı ve derleme yönergeleri Bu konunun sonunda yer alır.  
   
 > [!IMPORTANT]
->  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WebHost\InlineCode`  
   
- Örnek bir istek-yanıt iletişim deseni tanımlayan bir sözleşme uygulayan tipik bir servis gösterir. IIS'de barındırılan hizmetindeki ve hizmet koduna tamamen Service.svc dosyasında yer. Hizmet ana-etkinleştirilir ve isteğe bağlı hizmete gönderilen ilk ileti tarafından derlenir. Hiçbir ön derleme gerekli yoktur. Hizmet uygulayan bir `ICalculator` aşağıdaki kodda tanımlanan Sözleşme:  
+ Örnek, bir istek-yanıt iletişim deseni tanımlayan bir sözleşme uygulayan normal bir hizmette gösterir. IIS'de barındırılan hizmet ve hizmet kod tamamen Service.svc dosyasında yer alır. Hizmet ana bilgisayarı-etkinleştirilir ve isteğe bağlı hizmetine gönderilen ilk ileti tarafından derlenmiş. Hiçbir ön derleme gerekli yoktur. Hizmet uygulayan bir `ICalculator` aşağıdaki kodda tanımlanan Sözleşme:  
   
 ```  
 // Define a service contract.  
@@ -45,7 +45,7 @@ Bu örnek, Internet Information Services (IIS) tarafından barındırılan bir h
 }  
 ```  
   
- Hizmet uygulaması hesaplar ve uygun sonucunu döndürür.  
+ Hizmet uygulaması, hesaplar ve uygun sonucunu döndürür.  
   
 ```  
 <%@ServiceHost language=c# Debug="true" Service="Microsoft.ServiceModel.Samples.CalculatorService" %>   
@@ -72,7 +72,7 @@ public class CalculatorService : ICalculator
 }  
 ```  
   
- Örneği çalıştırdığınızda, işlem isteklerini ve yanıtlarını istemci konsol penceresinde görüntülenir. İstemcisi penceresinde istemciyi aşağı kapatmak için ENTER tuşuna basın.  
+ Örneği çalıştırdığınızda, işlem isteklerini ve yanıtlarını istemci konsol penceresinde görüntülenir. İstemci bilgisayarı için istemci penceresinde ENTER tuşuna basın.  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -83,15 +83,15 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örnek çalıştırın  
+### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Gerçekleştirmiş emin olun [kerelik Kurulum prosedürü Windows Communication Foundation örnekleri için](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Çözüm oluşturulduktan sonra ServiceModelSamples uygulamada ayarlamak için setup.bat çalıştırmak [!INCLUDE[iisver](../../../../includes/iisver-md.md)]. ServiceModelSamples dizin şimdi olarak görünmesi gereken bir [!INCLUDE[iisver](../../../../includes/iisver-md.md)] uygulama.  
+3.  Çözüm oluşturulduktan sonra ServiceModelSamples uygulamada ayarlamak için setup.bat çalıştırma [!INCLUDE[iisver](../../../../includes/iisver-md.md)]. ServiceModelSamples dizin artık olarak görünmesi gereken bir [!INCLUDE[iisver](../../../../includes/iisver-md.md)] uygulama.  
   
-4.  Tek veya çapraz bilgisayar yapılandırmasında örneği çalıştırmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md). Bu hizmet çağırabilirsiniz bir istemci uygulaması oluşturma konusunda bir örnek için bkz: [nasıl yapılır: bir istemci oluşturmak](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
+4.  Tek veya çoklu bilgisayar yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md). Bu hizmeti çağıran bir istemci uygulaması oluşturma hakkında bir örnek için bkz. [nasıl yapılır: istemci oluşturma](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [AppFabric barındırma ve kalıcılığı örnekleri](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [AppFabric barındırma ve Kalıcılık örnekleri](https://go.microsoft.com/fwlink/?LinkId=193961)

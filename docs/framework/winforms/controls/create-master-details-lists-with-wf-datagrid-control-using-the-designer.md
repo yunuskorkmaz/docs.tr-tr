@@ -6,50 +6,50 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], master-details lists
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 19438ba2-f687-4417-a2fb-ab1cd69d4ded
-ms.openlocfilehash: 20a6f059efab5469879d3c3a45f4005020414316
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 44cb9cc77e109acd7dd4b2e02f4c93a4f9a35407
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529983"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501340"
 ---
 # <a name="how-to-create-master-details-lists-with-the-windows-forms-datagrid-control-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Formları DataGrid Denetimi ile Ana-Ayrıntılar Listeleri Oluşturma
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView> Denetimi değiştirir ve işlevlerini ekler <xref:System.Windows.Forms.DataGrid> kontrol; ancak, <xref:System.Windows.Forms.DataGrid> denetim tutulur geriye dönük uyumluluk ve gelecekte kullanım için seçerseniz. Daha fazla bilgi için bkz: [farklar arasında Windows Forms DataGridView ve DataGrid denetimleri](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+>  <xref:System.Windows.Forms.DataGridView> Denetimi değiştirir ve işlevsellik ekler <xref:System.Windows.Forms.DataGrid> denetler; ancak, <xref:System.Windows.Forms.DataGrid> denetim korunur geriye dönük uyumluluk ve gelecekte kullanım için seçerseniz. Daha fazla bilgi için [farklar arasında Windows Forms DataGridView ve DataGrid denetimleri](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Varsa, <xref:System.Data.DataSet> bir dizi içerir ilgili tabloları, iki kullanabilirsiniz <xref:System.Windows.Forms.DataGrid> verileri ana-ayrıntı biçimde görüntülemek için kontrol eder. Bir <xref:System.Windows.Forms.DataGrid> ana kılavuz olarak atanan ve ikinci ayrıntıları kılavuz olarak atanan. Ana listesinde bir girişi seçtiğinizde, tüm ilgili alt girdilerini ayrıntıları listesinde gösterilir. Örneğin, varsa, <xref:System.Data.DataSet> Müşteriler tablosu ile ilgili Siparişler tablosu içeren ana kılavuz olarak Müşteriler tablosu ve ayrıntıları kılavuz olarak Siparişler tablosundaki belirtmeniz gerekir. Bir müşteri Ana kılavuzdan seçildiğinde, o müşteri Siparişler tablosundaki ilişkili siparişleri tümünün Ayrıntılar kılavuzunda görüntülenir.  
+ Varsa, <xref:System.Data.DataSet> içeren bir dizi ilgili tabloları, iki kullanabilirsiniz <xref:System.Windows.Forms.DataGrid> bir ana öğe-ayrıntı biçiminde verileri görüntülemek için denetimler. Bir <xref:System.Windows.Forms.DataGrid> ana kılavuz olarak atanan ve ikinci ayrıntıları kılavuz olarak atanır. Ana listesinde bir girişi seçtiğinizde, tüm ilgili alt girişlerinin Ayrıntılar listesinde gösterilir. Örneğin, varsa, <xref:System.Data.DataSet> Müşteriler tablosu ile ilgili bir sipariş tablonuz içeren ana kılavuz olmasını Customers ve Orders tablosunu ayrıntıları kılavuz olarak belirtmeniz gerekir. Ana grid'den gelen bir müşteri seçildiğinde, Northwind'deki Siparişler tablosunda, müşteriyle ilgili Siparişler tüm ayrıntılar kılavuzunda görüntülenmekteydi.  
   
- Aşağıdaki yordam gerektiren bir **Windows uygulaması** projesi. Bu tür bir proje ayarlama hakkında daha fazla bilgi için bkz: [nasıl yapılır: bir Windows uygulaması projesi oluşturduğunuzda](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+ Aşağıdaki yordamı gerektiren bir **Windows uygulama** proje (**dosya** > **yeni** > **proje**  >  **Visual C#** veya **Visual Basic** > **Klasik Masaüstü** > **Windows Forms Uygulama**).  
   
 > [!NOTE]
->  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
-### <a name="to-create-a-master-details-list-in-the-designer"></a>Tasarımcıda ana Ayrıntılar listesini oluşturmak için  
+### <a name="to-create-a-master-details-list-in-the-designer"></a>Tasarımcıda bir ana-Ayrıntılar listesi oluşturmak için  
   
-1.  İki eklemek <xref:System.Windows.Forms.DataGrid> formu denetimleri. Daha fazla bilgi için bkz: [nasıl yapılır: Windows Forms denetimlerine ekleme](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md). İçinde [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], <xref:System.Windows.Forms.DataGrid> denetim içinde değil **araç** varsayılan olarak. Daha fazla bilgi için bkz: [nasıl yapılır: araç kutusu öğeleri Ekle](http://msdn.microsoft.com/library/458e119e-17fe-450b-b889-e31c128bd7e0).  
+1.  İki ekleme <xref:System.Windows.Forms.DataGrid> formu için denetimler. Daha fazla bilgi için [nasıl yapılır: Windows Forms denetimlerine ekleme](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md). İçinde [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], <xref:System.Windows.Forms.DataGrid> denetimi içinde değil **araç kutusu** varsayılan olarak. Daha fazla bilgi için [nasıl yapılır: araç kutusu öğeleri Ekle](https://msdn.microsoft.com/library/458e119e-17fe-450b-b889-e31c128bd7e0).  
   
     > [!NOTE]
-    >  Aşağıdaki adımlar için geçerli olmayan [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], kullanan **veri kaynakları** tasarım zamanı veri bağlama için penceresi. Daha fazla bilgi için bkz: [Visual Studio'da verilere denetimler bağlama](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio) ve [nasıl yapılır: Windows Forms uygulamasında ilgili verileri görüntüle](http://msdn.microsoft.com/library/60b1f1ec-6257-42ab-83f0-06d54ed364fd).  
+    >  Aşağıdaki adımlar için geçerli olmayan [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], kullanan **veri kaynakları** penceresi tasarım zamanı veri bağlama için. Daha fazla bilgi için [Visual Studio'da verilere denetimler bağlama](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio) ve [nasıl yapılır: Windows Forms uygulamasında görüntü ilgili verileri](https://msdn.microsoft.com/library/60b1f1ec-6257-42ab-83f0-06d54ed364fd).  
   
 2.  İki veya daha fazla tablodan sürükleyin **Sunucu Gezgini** form.  
   
-3.  Gelen **veri** menüsünde, select **Generate DataSet**.  
+3.  Gelen **veri** menüsünde **Generate DataSet**.  
   
-4.  XML Tasarımcısı'nı kullanarak tablolar arasındaki ilişkileri ayarlayın. Ayrıntılar için bkz "nasıl yapılır: bir çok oluşturmak XML şemaları ve veri kümelerini ilişkilerde" MSDN'de.  
+4.  XML Tasarımcısını kullanarak tablolar arasında ilişki ayarlayın. Ayrıntılar için bkz "nasıl yapılır: oluşturma-çok ilişkilerde XML şemaları ve veri kümeleri" MSDN'de.  
   
 5.  İlişkileri seçerek Kaydet **Tümünü Kaydet** gelen **dosya** menüsü.  
   
-6.  Yapılandırma <xref:System.Windows.Forms.DataGrid> ana kılavuz, aşağıdaki gibi atamak istediğiniz denetimi:  
+6.  Yapılandırma <xref:System.Windows.Forms.DataGrid> ana kılavuz, aşağıdaki gibi belirtmek istediğiniz denetimi:  
   
     1.  Seçin <xref:System.Data.DataSet> aşağı açılan listeden <xref:System.Windows.Forms.DataGrid.DataSource%2A> özelliği.  
   
-    2.  Aşağı açılan listeden (örneğin, "müşteriler") ana tablo seçin <xref:System.Windows.Forms.DataGrid.DataMember%2A> özelliği.  
+    2.  Ana Tablo (örneğin, "Müşteri"), aşağı açılan listeden seçin <xref:System.Windows.Forms.DataGrid.DataMember%2A> özelliği.  
   
-7.  Yapılandırma <xref:System.Windows.Forms.DataGrid> ayrıntılar kılavuzu gibi atamak istediğiniz denetimi:  
+7.  Yapılandırma <xref:System.Windows.Forms.DataGrid> ayrıntıları kılavuz, aşağıdaki gibi belirtmek istediğiniz denetimi:  
   
     1.  Seçin <xref:System.Data.DataSet> aşağı açılan listeden <xref:System.Windows.Forms.DataGrid.DataSource%2A> özelliği.  
   
-    2.  Aşağı açılan listeden ana ve ayrıntı tabloları arasındaki ilişkiyi (örneğin, "Customers.CustOrd") seçin <xref:System.Windows.Forms.DataGrid.DataMember%2A> özelliği. İlişkiyi görmek için artı üzerinde tıklayarak düğümünü genişletin (**+**) yanında aşağı açılan listesinde ana tablo işareti.  
+    2.  Aşağı açılan listeden ana ve ayrıntı tablolar arasındaki ilişkiyi (örneğin, "Customers.CustOrd") seçin <xref:System.Windows.Forms.DataGrid.DataMember%2A> özelliği. İlişkiyi görmek için artı tıklayarak düğümü genişletin (**+**) oturum yanındaki aşağı açılan listesinde ana tablo.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [DataGrid Denetimi](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  

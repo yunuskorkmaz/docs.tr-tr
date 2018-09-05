@@ -8,11 +8,11 @@ ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dc3c611cf043538e7f069cc1634bd5be5e70dfab
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43392282"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509268"
 ---
 # <a name="migrating-from-the-net-framework-11"></a>.NET Framework 1.1'den Geçiş
 [!INCLUDE[win7](../../../includes/win7-md.md)] ve Windows işletim sisteminin sonraki sürümlerini desteklemez [!INCLUDE[net_v11_long](../../../includes/net-v11-long-md.md)]. Sonuç olarak, uygulamalar hedef [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] değiştirilmeden çalışmaz [!INCLUDE[win7](../../../includes/win7-md.md)] veya sonraki bir işletim sistemi sürümleri. Bu konuda hedefleyen bir uygulamayı çalıştırmak için gereken adımlar açıklanmaktadır [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] altında [!INCLUDE[win7](../../../includes/win7-md.md)] ve Windows işletim sisteminin sonraki sürümleri. Hakkında daha fazla bilgi için [!INCLUDE[net_v11_long](../../../includes/net-v11-long-md.md)] ve [!INCLUDE[win8](../../../includes/win8-md.md)], bkz: [Windows 8 ve sonraki sürümlerinde .NET Framework 1.1 uygulamalarını çalıştırma](../../../docs/framework/install/run-net-framework-1-1-apps.md).  

@@ -11,40 +11,40 @@ ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 3459ebd2f1df38ac70e9211fd4865e227cd996cb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: aad369b35837089d05f5d7517e023671f0178011
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759276"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43507810"
 ---
 # <a name="redirecting-assembly-versions"></a>Derleme Sürümlerini Yönlendirme
-.NET Framework derlemeleri, üçüncü taraf derlemeleri ya da kendi uygulamanın derlemelerini derleme zamanı bağlama başvuruları yönlendirebilirsiniz. Çeşitli yollarla bütünleştirilmiş farklı bir sürümünü kullanmak için uygulamanızı yeniden yönlendirebilirsiniz: Yayımcı ilkesi, bir uygulama yapılandırma dosyası; aracılığıyla aracılığıyla makine yapılandırma dosyası aracılığıyla veya. Bu makalede, .NET Framework Derleme bağlama nasıl çalıştığını ve nasıl yapılandırılması anlatılmaktadır.  
+Derleme zamanı başvuruları .NET Framework derlemelerini, üçüncü parti derlemelerini veya kendi derlemelerini yönlendirebilirsiniz. Bir derlemenin farklı bir sürümünü çeşitli şekillerde kullanmak için uygulamanızı yönlendirebilirsiniz: yayıncı İlkesi, bir uygulama yapılandırma dosyası; aracılığıyla veya makine yapılandırma dosyası aracılığıyla. Bu makalede, derleme bağlamanın .NET Framework nasıl çalıştığı ve nasıl yapılandırılabileceği açıklanmaktadır.  
   
 <a name="BKMK_Assemblyunificationanddefaultbinding"></a>   
-## <a name="assembly-unification-and-default-binding"></a>Birleştirici derleme ve varsayılan bağlama  
- .NET Framework derlemeleri bağlamalar bazen adlı bir işlem yeniden yönlendirilen *birleştirici derleme*. .NET Framework ortak dil çalışma zamanı ve tür kitaplığı olun yaklaşık iki düzine .NET Framework derlemeleri sürümünü oluşur. Bu .NET Framework derlemeleri çalışma zamanı tarafından tek bir birim olarak kabul edilir. Bir uygulama başlatıldığında, varsayılan olarak, bir işlemde yüklenen çalışma zamanı aynı sürüm numarasına sahip .NET Framework derlemeleri çalışma zamanı tarafından kod türlerinde yapılan tüm başvuruları yönlendirilir. Bu modelde ortaya yeniden yönlendirme çalışma zamanı için varsayılan davranış ' dir.  
+## <a name="assembly-unification-and-default-binding"></a>Derleme birleştirme ve varsayılan bağlama  
+ .NET Framework derlemeleri bağlamalar bazen adlı bir işlem yeniden yönlendirilen *derleme birleştirme*. .NET Framework ortak dil çalışma zamanı ve yaklaşık iki düzine tür kitaplığını oluşturan .NET Framework derlemeleri bir sürümünü içerir. Bu .NET Framework derlemeleri çalışma zamanı tarafından tek bir birim olarak kabul edilir. Uygulama başlatıldığında, varsayılan olarak, bir işlemde yüklü çalışma zamanı ile aynı sürüm numarasına sahip .NET Framework derlemeleri çalışma zamanı tarafından çalıştırılan kod türleri için tüm başvuruları yönlendirilir. Bu modelle ortaya çıkan yönlendirmeler çalışma zamanı için varsayılan davranışı ' dir.  
   
- Örneğin, uygulamanızı başvuruyorsa türleri System.XML ad alanındaki ve kullanılarak oluşturulan [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], çalışma zamanı sürüm 4.5 ile birlikte gelen System.XML derleme statik başvuru içeriyor. .NET Framework 4 ile birlikte System.XML derleme işaret etmek için bağlama başvuru yönlendirmek istiyorsanız, uygulama yapılandırma dosyasında yeniden yönlendirme bilgi koyabilirsiniz. Birleştirilmiş bir .NET Framework derleme için bir yapılandırma dosyasına bağlama yeniden yönlendirme bu derleme Birleştirici iptal eder.  
+ Örneğin, uygulamanızın başvuruyorsa System.XML ad alanındaki türleri ve kullanılarak oluşturulan [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], çalışma zamanı sürüm 4.5 ile birlikte gelen System.XML derlemesine statik başvuruları içerir. Bağlama başvurusunu .NET Framework 4 ile birlikte gelen System.XML derlemesine işaret edecek şekilde yönlendirmek isterseniz, uygulama yapılandırma dosyasına yönlendirme bilgilerini koyabilirsiniz. Birleştirilmiş bir .NET Framework derlemesi için bir yapılandırma dosyası bağlama yeniden yönlendirmesi bu derleme için birleştirmeyi iptal eder.  
   
- Ayrıca, el ile derleme kullanılabilir birden çok sürüm varsa, üçüncü taraf derlemeler için bağlama yeniden yönlendirme isteyebilirsiniz.  
+ Ayrıca, varsa birden çok sürümü kullanılabilir üçüncü taraf derlemeler için derleme bağlamasını el ile yönlendirmek isteyebilirsiniz.  
   
 <a name="BKMK_Redirectingassemblyversionsbyusingpublisherpolicy"></a>   
-## <a name="redirecting-assembly-versions-by-using-publisher-policy"></a>Yayımcı ilkesi kullanarak derleme sürümlerini yönlendirme  
- Derlemeleri satıcıları uygulamaları derleme daha yeni bir sürümü için yeni bir derleme Yayımcı ilkesi dosyasıyla dahil ederek yönlendirebilirsiniz. Genel derleme önbelleğinde bulunan, yayımcı ilkesi dosyası derleme yeniden yönlendirme ayarlarını içerir.  
+## <a name="redirecting-assembly-versions-by-using-publisher-policy"></a>Yayımcı ilkesi kullanarak derleme sürümlerini yeniden yönlendirme  
+ Derleme satıcıları yeni derlemeye bir yayımcı ilkesi dosyası dahil ederek bir derlemenin daha yeni bir sürümüne uygulamaları yönlendirebilir. Genel derleme önbelleğinde bulunan Yayımcı ilkesi dosyası, derleme yeniden yönlendirme ayarlarını içerir.  
   
- Her *ana*. *küçük* bir derlemenin sürüm kendi Yayımcı ilkesi dosyası vardır. Örneğin, sürüm 2.0 ile ilişkili olduğundan yeniden yönlendirme için 2.0.2.222 2.0.3.000 sürümünden ve 2.0.2.321 sürümünden 2.0.3.000 sürümüne her ikisi de aynı dosyaya gidin. Ancak, bir yeniden yönlendirme 3.0.0.999 sürümünden sürüm 4.0.0.000 sürüm 3.0.999 dosyasına gider. .NET Framework'ün her ana sürüm kendi Yayımcı ilkesi dosyası vardır.  
+ Her *ana*. *küçük* bir derlemenin sürümü kendi Yayımcı ilkesi dosyası vardır. Örneğin, sürüm 2.0 ile ilişkili olduğundan 2.0.2.222 için 2.0.3.000 sürümüne ve 2.0.2.321 sürümünden 2.0.3.000 sürümüne yeniden yönlendirmeleri her ikisi de aynı dosyaya gider. Ancak 3.0.0.999 sürümünden 4.0.0.000 sürümüne yeniden yönlendirme, 3.0.999 sürümü için dosyaya gider. .NET Framework'ün her ana sürümünün kendi Yayımcı ilkesi dosyası vardır.  
   
- Bir derleme için bir yayımcı ilkesi dosyası zaten varsa, çalışma zamanı derleme bildirimi ve uygulama yapılandırma dosyası denetledikten sonra bu dosyayı denetler. Yalnızca yeni bir derleme yönlendirilmesini derleme ile geriye dönük olarak uyumlu olduğunda satıcılar yayımcı ilke dosyaları kullanmanız gerekir.  
+ Bir derleme için yayımcı ilkesi dosyası varsa, çalışma zamanı derlemenin bildirimini ve uygulama yapılandırma dosyasını denetledikten sonra bu dosyayı denetler. Satıcılar, yeni bir derleme yönlendirilen derleme ile geriye dönük uyumlu olduğunda Yayımcı ilkesi dosyaları kullanmanız gerekir.  
   
- Yayımcı ilkesi uygulamanız için uygulama yapılandırma dosyasında ayarları belirterek anlatıldığı gibi atlayabilir [Yayımcı ilkesi bölümüne atlayarak](#bypass_PP).  
+ Yayımcı ilkesi uygulamanız için uygulama yapılandırma dosyasında ayarları belirterek bölümünde açıklandığı gibi devre dışı bırakabilir [Yayımcı ilkesi bölümü atlayarak](#bypass_PP).  
   
 <a name="BKMK_Redirectingassemblyversionsattheapplevel"></a>   
-## <a name="redirecting-assembly-versions-at-the-app-level"></a>Uygulama düzeyinde derleme sürümlerini yönlendirme  
- Uygulama yapılandırma dosyası, uygulamanız için bağlama davranışı değiştirmek için birkaç farklı teknikler vardır: otomatik bağlama yönlendirmesini güvenebilirsiniz veya yayımcı ilkesi atlayarak bağlama davranışı belirtebilirsiniz dosyayı el ile düzenleyebilirsiniz.  
+## <a name="redirecting-assembly-versions-at-the-app-level"></a>Uygulama düzeyinde derleme sürümlerini yeniden yönlendirme  
+ Uygulama yapılandırma dosyası aracılığıyla, uygulamanız için bağlama davranışını değiştirmek için birkaç farklı teknik vardır: dosyayı el ile düzenleyebilirsiniz, otomatik bağlama yeniden yönlendirmeye güvenebilirsiniz veya yayımcı ilkesini atlayarak bağlama davranışını belirleyebilirsiniz.  
   
 ### <a name="manually-editing-the-app-config-file"></a>Uygulama yapılandırma dosyasını el ile düzenleme  
- El ile derleme sorunları gidermek için uygulama yapılandırma dosyasını düzenleyebilirsiniz. Örneğin, bir satıcının geriye dönük uyumluluk garanti değil çünkü bir yayımcı ilkesi girmeden uygulamanızı kullanan bir bütünleştirilmiş koda daha yeni bir sürümü kullanıma, derleme koyarak derlemesinin daha yeni sürümü kullanmak için uygulamanızı yönlendirebilirsiniz Uygulamanızın yapılandırma dosyasındaki bilgilere gibi bağlama.  
+ Derleme sorunlarını gidermek için uygulama yapılandırma dosyasını el ile düzenleyebilirsiniz. Örneğin, bir satıcı, geriye dönük uyumluluğu garanti edemediğinden, bir yayımcı ilkesi sağlamadan uygulamanızın kullandığı bir derlemenin daha yeni bir sürümünü yayınlayabilir, derleme koyarak derlemenin daha yeni sürümü kullanmak için uygulamanızı yönlendirebilirsiniz. bağlama bilgilerini uygulamanızın yapılandırma dosyasında aşağıdaki gibi.  
   
 ```xml  
 <dependentAssembly>  
@@ -55,38 +55,38 @@ ms.locfileid: "32759276"
 </dependentAssembly>  
 ```  
   
-### <a name="relying-on-automatic-binding-redirection"></a>Otomatik bağlama yönlendirmesini bağlı  
- İle başlayarak [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)], hedef Yeni Masaüstü uygulamaları [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] otomatik bağlama yönlendirmesini kullanın. Başka bir deyişle, iki bileşenleri aynı tanımlayıcı adlı derlemenin farklı sürümleri başvurursanız, çalışma zamanı bağlama yeniden yönlendirme otomatik olarak derleme çıktı uygulama (app.config) yapılandırma dosyasında daha yeni sürümüne olarak ekler. Bu yeniden yönlendirme, aksi takdirde yer alabilir birleştirici derleme geçersiz kılar. Kaynak app.config dosyası değiştirilmez. Örneğin, uygulamanızın doğrudan bir bant dışı .NET Framework bileşenini başvuruyor ancak aynı bileşenin daha eski bir sürümü hedefleyen bir üçüncü taraf kitaplığını kullanan varsayalım. Uygulamayı derlediğinizde çıktı uygulama yapılandırma dosyası bağlama yeniden yönlendirme bileşeni'nin daha yeni sürümüne içerecek şekilde değiştirilir. Bir web uygulaması oluşturma, gerekli bağlama yeniden yönlendirme kaynak web yapılandırma dosyasına ekleme seçeneğini verir sırayla bağlama çakışması yükseltilmesiyle ilgili bir yapı uyarı alırsınız.  
+### <a name="relying-on-automatic-binding-redirection"></a>Otomatik bağlama yeniden yönlendirmeye güvenmek  
+ İle başlayarak [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)], hedefleyen yeni Masaüstü uygulamaları [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] otomatik bağlama yeniden yönlendirmesini kullanın. Başka bir deyişle, iki bileşen aynı kesin adlandırılmış derlemenin farklı sürümleri başvuruyorsa, çalışma zamanı bağlama yeniden yönlendirme otomatik olarak çıktı uygulama yapılandırma (app.config) dosyasında derlemenin daha yeni sürüme olarak ekler. Bu yeniden yönlendirme, aksi halde yer alabilen Birleştirici derlemesini geçersiz kılar. Kaynak app.config dosyası değiştirilmez. Örneğin, uygulamanızın doğrudan bant dışı bir .NET Framework bileşenini başvuruyor ancak aynı bileşenin eski bir sürümünü hedefleyen bir üçüncü taraf kitaplığı kullandığını varsayalım. Uygulamayı derlediğinizde, çıktı uygulama yapılandırma dosyasına bağlama yeniden yönlendirme bileşenin daha yeni sürümünü içerecek biçimde değiştirilir. Bir web uygulaması oluşturma, buna karşılık, kaynak web yapılandırma dosyasına gerekli bağlama yeniden yönlendirmesini ekleme seçeneği sunar bağlama çakışma ile ilgili bir yapı uyarısı alırsınız.  
   
- Bağlama yeniden yönlendirmelerini kaynak app.config dosyasına derleme zamanında el ile eklerseniz [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)] eklediğiniz bağlama yeniden yönlendirmeleri bağlı derlemeler bütünleştirin dener. Örneğin, bir derleme için aşağıdaki bağlama yeniden yönlendirme Ekle varsayalım:  
+ Bağlama, derleme zamanında kaynak app.config dosyasına yönlendirir el ile eklerseniz [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)] eklediğiniz bağlama yeniden yönlendirmelerini temel alarak derlemeleri birleştirmeyi dener. Örneğin, bir derleme için aşağıdaki bağlama yeniden yönlendirmesini ekleme varsayalım:  
   
  `<bindingRedirect oldVersion="3.0.0.0" newVersion="2.0.0.0" />`  
   
- Uygulamanızda başka bir projeye aynı bütünleştirilmiş kodda 1.0.0.0 sürümünü başvuruyorsa, böylece uygulama bu derleme sürüm 2.0.0.0 birleşik otomatik bağlama yönlendirmesini çıktı app.config dosyasına şu giriş ekler:  
+ Uygulamanız başka bir projede aynı derlemenin 1.0.0.0 sürümüne başvuruyorsa, böylece bu derlemenin 2.0.0.0 sürümünde uygulamanın birleşiktir otomatik bağlama yeniden yönlendirme çıktı app.config dosyasına şu girdiyi ekler:  
   
  `<bindingRedirect oldVersion="1.0.0.0" newVersion="2.0.0.0" />`  
   
- Uygulamanız .NET Framework'ün daha eski sürümleri hedefliyorsa otomatik bağlama yönlendirmesini etkinleştirebilirsiniz [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)]. Herhangi bir derleme için app.config dosyasına bağlama yeniden yönlendirme bilgileri sağlayarak bu varsayılan davranışı geçersiz kılma veya bağlama yeniden yönlendirme özelliğini kapatın. Bu özellik açma veya kapatma hakkında daha fazla bilgi için bkz: [nasıl yapılır: etkinleştirme ve devre dışı bırakmak, bağlama otomatik yeniden yönlendirme](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).  
+ Uygulamanızı .NET Framework'ün eski sürümlerini hedefliyorsa, otomatik bağlama yeniden yönlendirmesini etkinleştirebilirsiniz [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)]. Herhangi bir derleme için app.config dosyasında bağlama yeniden yönlendirme bilgileri sağlayarak bu varsayılan davranışı geçersiz kılmak veya bağlama yeniden yönlendirme özelliğini kapatabilirsiniz. Bu özellik açma veya kapatma hakkında daha fazla bilgi için bkz: [nasıl yapılır: etkinleştirme ve devre dışı otomatik bağlama yeniden yönlendirme](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).  
   
 <a name="bypass_PP"></a>   
-### <a name="bypassing-publisher-policy"></a>Yayımcı ilkesi atlama  
- Yayımcı ilkesi gerekirse, uygulama yapılandırma dosyasında geçersiz kılabilirsiniz. Örneğin, geriye dönük uyumluluk için talep derlemeleri yeni sürümlerini hala bir uygulama bozulabilir. Yayımcı ilkesi atlamak istiyorsanız, eklemeniz bir [ \<publisherPolicy >](../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md) öğesine [ \<dependentAssembly >](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md) uygulama yapılandırma dosyası ve kümesi öğesi**uygulamak** özniteliğini **hiçbir**, tüm önceki etkisiz kılan **Evet** ayarlar.  
+### <a name="bypassing-publisher-policy"></a>Yayımcı ilkesini atlama  
+ Gerekirse, uygulama yapılandırma dosyasında yayımcı ilkesini geçersiz kılabilirsiniz. Örneğin, geriye dönük uyumlu olduğu iddia edilen derlemelerin yeni sürümleri yine de bir uygulamayı kesebilir. Yayımcı ilkesini atlama istiyorsanız ekleme bir [ \<publisherPolicy >](../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md) öğesine [ \<dependentAssembly >](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md) öğe kümesi veuygulamayapılandırmadosyası**uygulamak** özniteliğini **hiçbir**, daha önceki etkisiz kılan **Evet** ayarları.  
   
  `<publisherPolicy apply="no" />`  
   
- Uygulamanızı kullanıcılarınız için tutmak için yayımcı ilkesi atlama ancak derleme satıcıya sorunu bildirmek emin olun. Bir derlemeyi Yayımcı ilkesi dosyası varsa, satıcı derleme geriye dönük olarak uyumlu olduğunu ve istemciler yeni sürüm mümkün olduğunca kullanabilir emin olmanız gerekir.  
+ Uygulamanızı kullanıcılarınızın çalışır durumda tutmak amacıyla yayımcı ilkesini atlayın, ancak sorunu derleme satıcısına bildirdiğinizden emin olun. Bir derlemenin Yayımcı ilkesi dosyası varsa satıcı derlemenin geriye dönük uyumlu olduğundan ve istemcilerin mümkün olduğunca yeni sürümü kullanabilirsiniz emin olmanız gerekir.  
   
 <a name="BKMK_Redirectingassemblyversionsatthemachinelevel"></a>   
-## <a name="redirecting-assembly-versions-at-the-machine-level"></a>Makine düzeyinde derleme sürümlerini yönlendirme  
- Bir Makine Yöneticisi bütünleştirilmiş belirli bir sürümünü kullanmak için bir bilgisayardaki tüm uygulamalar istediğinde nadiren olabilir. Örneğin, yönetici güvenlik delik sürümünün düzeltmeler için belirli derleme sürümü kullanmak için her uygulama isteyebilirsiniz. Makinenin yapılandırma dosyasında bir derlemeyi yönlendirilir, yeni sürümü kullanmak için eski sürümünü kullanan tüm uygulamalar bu makinede yönlendirilir. Makine yapılandırma dosyası uygulama yapılandırma dosyası ve yayımcı ilkesi dosyası geçersiz kılar. Bu dosya % bulunur*çalışma zamanı yükleme yolu*%\Config dizini. Genellikle, .NET Framework %drive%\Windows\Microsoft.NET\Framework dizine yüklenir.  
+## <a name="redirecting-assembly-versions-at-the-machine-level"></a>Makine düzeyinde derleme sürümlerini yeniden yönlendirme  
+ Bir makine yöneticisinin bir bilgisayardaki bir derlemenin belirli bir sürümünü kullanan tüm uygulamalar istediği ender durumlar olabilir. Örneğin, bu sürüm bir güvenlik açığını düzelttiğinden yönetici her uygulamanın belirli bir derleme sürümünü, kullanmasını isteyebilirsiniz. Bir derleme makinenin yapılandırma dosyasında yeniden yönlendirilirse, o makinedeki eski sürümü kullanan tüm uygulamalar yeni sürümü kullanmak için yönlendirilir. Makine yapılandırma dosyası, uygulama yapılandırma dosyası ve yayımcı ilkesi dosyasını geçersiz kılar. Bu dosya % bulunur*çalışma zamanı yükleme yolu*%\Config dizininde. Genellikle, .NET Framework %drive%\Windows\Microsoft.NET\Framework dizinine yüklenir.  
   
 <a name="BKMK_Specifyingassemblybindinginconfigurationfiles"></a>   
-## <a name="specifying-assembly-binding-in-configuration-files"></a>Derleme yapılandırma dosyalarında bağlama belirtme  
- Bağlama yeniden yönlendirmelerini uygulama yapılandırma dosyası, makine yapılandırma dosyası veya yayımcı ilkesi dosyası olup olmadığını belirlemek için aynı XML biçimi kullanır. Başka bir derleme sürümü yönlendirmek için kullandığınız [ \<bindingRedirect >](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md) öğesi. **OldVersion** özniteliği tek derleme sürümü veya sürüm aralığı belirtebilirsiniz. `newVersion` Özniteliği tek sürümü belirtmeniz gerekir.  Örneğin, `<bindingRedirect oldVersion="1.1.0.0-1.2.0.0" newVersion="2.0.0.0"/>` çalışma zamanı sürüm 2.0.0.0 veya derleme sürümlerini yerine 1.1.0.0 1.2.0.0 arasındaki kullanması gerektiğini belirtir.  
+## <a name="specifying-assembly-binding-in-configuration-files"></a>Yapılandırma dosyalarında derleme bağlama belirtme  
+ Uygulama yapılandırma dosyası, makine yapılandırma dosyasında veya yayıncı ilkesi dosyasında olsun, bağlama yönlendirmelerini belirtmek için aynı XML biçimini kullanın. Bir derleme sürümünü diğerine yeniden yönlendirmek için [ \<bindingRedirect >](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md) öğesi. **OldVersion** öznitelik, bir tek bir derleme sürümünü veya bir sürüm aralığı belirtebilirsiniz. `newVersion` Özniteliği, tek bir sürüm belirtmelidir.  Örneğin, `<bindingRedirect oldVersion="1.1.0.0-1.2.0.0" newVersion="2.0.0.0"/>` çalışma zamanı sürüm 2.0.0.0 derleme sürümleri yerine 1.1.0.0 ile 1.2.0.0 arasındaki kullanması gerektiğini belirtir.  
   
- Aşağıdaki kod örneğinde çeşitli bağlama yeniden yönlendirme senaryoları gösterilmektedir. Örnek sürümleri için bir aralığı için bir yeniden yönlendirme belirtir `myAssembly`ve için tek bağlama yeniden yönlendirme `mySecondAssembly`. Örnek, ayrıca bu Yayımcı ilkesi dosyası için bağlama yeniden yönlendirmeleri değil kılar belirtir `myThirdAssembly`.  
+ Aşağıdaki kod örneği, çeşitli bağlama yeniden yönlendirme senaryoları göstermektedir. Örnek bir sürüm aralığı için bir yeniden yönlendirme belirtir `myAssembly`ve bir tek bir bağlama yeniden yönlendirmesi `mySecondAssembly`. Örnekte ayrıca Yayımcı ilkesi dosyasının bağlama yönlendirmelerini geçersiz belirtir `myThirdAssembly`.  
   
- Bir derlemeyi bağlamak için dizeyi belirtin "urn: şemaları-microsoft-com:asm.v1" ile **xmlns** özniteliğini [ \<assemblyBinding >](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) etiketi.  
+ Bir derleme bağlama için bir dize belirtin "urn: schemas-microsoft-com:asm.v1" ile **xmlns** özniteliğini [ \<assemblyBinding >](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) etiketi.  
   
 ```xml  
 <configuration>  
@@ -119,10 +119,10 @@ ms.locfileid: "32759276"
 </configuration>  
 ```  
   
-### <a name="limiting-assembly--bindings-to-a-specific-version"></a>Derleme bağlamaları belirli bir sürüme sınırlama  
- Kullanabileceğiniz **appliesTo** özniteliği [ \<assemblyBinding >](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) derleme bağlama başvuruları .NET belirli bir sürümüne yeniden yönlendirmek için bir uygulama yapılandırma dosyasında öğesi Çerçeve. Bu isteğe bağlı öznitelik uygulandığı hangi sürümünün belirtmek için bir .NET Framework sürüm numarası kullanır. Öyle değilse **appliesTo** özniteliği belirtilirse [ \<assemblyBinding >](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) öğesi tüm .NET Framework sürümleri için geçerlidir.  
+### <a name="limiting-assembly--bindings-to-a-specific-version"></a>Derleme bağlamaları belirli bir sürümle sınırlama  
+ Kullanabileceğiniz **appliesTo** özniteliği [ \<assemblyBinding >](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) derleme bağlama başvurularının nasıl belirli bir .NET sürümünü yeniden yönlendirmek için bir uygulama yapılandırma dosyasında öğesi Çerçeve. İsteğe bağlı bu öznitelik, bir .NET Framework sürüm numarası geçerli hangi sürüm olduğunu belirlemek için kullanır. Hayır ise **appliesTo** özniteliği belirtilirse, [ \<assemblyBinding >](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) öğe tüm .NET Framework sürümleri için geçerlidir.  
   
- Örneğin, derleme için bir .NET Framework 3.5 Derleme bağlaması yeniden yönlendirmek için aşağıdaki XML kodunu uygulama yapılandırma dosyanızda içerir.  
+ Örneğin, derleme için bir .NET Framework 3.5 derleme bağlamasına yönlendirmek için aşağıdaki XML kodunu uygulama yapılandırma dosyanızda verilebilir.  
   
 ```xml  
 <runtime>  
@@ -135,9 +135,9 @@ ms.locfileid: "32759276"
 </runtime>  
 ```  
   
- Sürüm sırayla yeniden yönlendirme bilgileri girmeniz gerekir. Örneğin, .NET Framework 4.5 derlemeleri tarafından izlenen .NET Framework 3.5 derlemeler için derleme bağlaması yeniden yönlendirme bilgilerini girin. Son olarak, Derleme bağlaması yeniden yönlendirme bilgilerini kullanmayan tüm .NET Framework derleme yeniden yönlendirme için girin **appliesTo** özniteliği ve bu nedenle, .NET Framework'ün tüm sürümleri için geçerlidir. Yeniden yönlendirmeyi bir çakışma varsa, ilk eşleşen yeniden yönlendirme deyiminde yapılandırma dosyası kullanılır.  
+ Sürüm sırayla yeniden yönlendirme bilgileri girmeniz gerekir. Örneğin, .NET Framework 4.5 derlemelerinin takip ettiği .NET Framework 3.5 derlemeleri için derleme bağlama yönlendirme bilgisini girin. Son olarak, kullanılmayan tüm .NET Framework derleme yeniden yönlendirmesi için derleme bağlama yönlendirme bilgisini girin **appliesTo** özniteliği ve bu nedenle tüm .NET Framework sürümleri için geçerlidir. Yeniden yönlendirmeyi bir çakışma varsa, yapılandırma dosyasındaki eşleşen ilk yönlendirme cümlesi kullanılır.  
   
- Örneğin, bir .NET Framework 3.5 bütünleştirilmiş koduna bir başvuru ve bir .NET Framework 4 derleme başka bir başvuru yönlendirmek için aşağıdaki yarı kodu gösterilen düzeni kullanın.  
+ Örneğin, bir referansı .NET Framework 3.5 derlemesini ve diğer bir referansı da .NET Framework 4 derlemesine yönlendirmek için gösterilen aşağıdaki sözde kod modelini kullanın.  
   
 ```xml  
 <assemblyBinding xmlns="..." appliesTo="v3.5 ">   
@@ -161,7 +161,7 @@ ms.locfileid: "32759276"
  [Bütünleştirilmiş Kodlarla Programlama](../../../docs/framework/app-domains/programming-with-assemblies.md)  
  [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [Uygulamaları Yapılandırma](../../../docs/framework/configure-apps/index.md)  
- [.NET Framework uygulamaları yapılandırma](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
+ [.NET Framework uygulamalarını yapılandırma](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
  [Çalışma Zamanı Ayarları Şeması](../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Yapılandırma Dosyası Şeması](../../../docs/framework/configure-apps/file-schema/index.md)  
  [Nasıl yapılır: Yayımcı İlkesi Oluşturma](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)

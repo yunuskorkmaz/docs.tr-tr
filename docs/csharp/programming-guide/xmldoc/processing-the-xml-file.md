@@ -5,61 +5,61 @@ helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: 659562864ad323162f15351aa960c2a54164c77d
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 1cc5925f33c2d06054e7a88c6c6f90ef026f4dee
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34458066"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506034"
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>XML Dosyasını İşleme (C# Programlama Kılavuzu)
-Derleyici kodunuzda belgeleri oluşturmak için etiketli her yapı için bir kimlik dizesi oluşturur. (Kodunuzu etiketi hakkında daha fazla bilgi için bkz: [belge açıklamaları için önerilen etiketler](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md).) Kimlik dizesi, yapı benzersiz olarak tanımlar. XML dosyasını işleme programları kimlik dizesi belgelere uygulandığı karşılık gelen .NET Framework meta verileri/yansıma öğe tanımlamak için kullanabilirsiniz.  
+Derleyici, kodunuzda belgeleri oluşturmak için etiketli her yapı için bir kimlik dizesi oluşturur. (Kodunuzu etiketleme hakkında daha fazla bilgi için bkz. [belge açıklamaları için önerilen etiketler](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md).) Kimlik dizesi yapısını benzersiz olarak tanımlar. XML dosyasını işleme programları kimliği dizesi belgeleri uygulandığı karşılık gelen .NET Framework meta verileri/yansıma öğeyi tanımlamak için kullanabilirsiniz.  
   
- XML dosyası kodunuzu hiyerarşik bir gösterimini değil; her öğe için oluşturulan bir kimliği var düz bir listesidir.  
+ XML dosyası kodunuzu hiyerarşik bir gösterimini değil; her öğe için oluşturulan bir Kimliğine sahip bir sabit listesidir.  
   
- Kimlik dizeleri oluşturduğunda derleyici aşağıdaki kurallara uyan:  
+ Kimlik dizeleri oluşturduğunda, derleyici aşağıdaki kurallar gözlemler:  
   
--   Hiçbir boşluk dizesi içinde ' dir.  
+-   Hiçbir boşluk dizesinde ' dir.  
   
--   Kimlik dizesi ilk bölümü, izleyen iki nokta ile tek bir karakter yapmamanız tanımlanmasını üye türünü tanımlar. Aşağıdaki üye türleri kullanılır:  
+-   Kimlik dizesi ilk bölümünü izleyen iki nokta ile tek bir karakter yoluyla tanımlanmakta üye türünü tanımlar. Aşağıdaki üye türleri kullanılır:  
   
     |Karakter|Açıklama|  
     |---------------|-----------------|  
-    |N|ad alanı<br /><br /> Belge açıklamaları için bir ad alanı ekleyemezsiniz, ancak bunları cref başvurular yapabilirsiniz desteklendiği yerlerde.|  
+    |N|ad alanı<br /><br /> Belge açıklamaları için bir ad alanı ekleyemezsiniz, ancak bunları cref başvuruları yapabileceğiniz desteklenen durumlarda.|  
     |T|Tür: sınıf, arabirim, yapı, enum, temsilci|  
     |F|alan|  
-    |P|özellik (dizin oluşturucular veya diğer Dizinli Özellikler dahil)|  
-    |M|(Bu tür özel yöntemleri Oluşturucular, işleçler ve diğerleri dahil) yöntemi|  
+    |P|özellik (dizin oluşturucular veya diğer dizin oluşturulmuş özellikleri dahil)|  
+    |M|(tür özel yöntemler olarak Oluşturucular, işleçler ve diğerleri dahil) yöntemi|  
     |E|olay|  
-    |!|Hata dizesi<br /><br /> Dizenin geri kalanı hata hakkında bilgi sağlar. C# Derleyici çözümlenemiyor bağlantılar için hata bilgilerini oluşturur.|  
+    |!|Hata dizesi<br /><br /> Dizenin geri kalanı, hata hakkında bilgi sağlar. C# derleyicisi, çözümlenemeyen bağlantılar için hata bilgisi oluşturur.|  
   
--   İkinci dize ad alanı kökünde başlayan öğesi, tam adını parçasıdır. Öğe, kapsayan türlerini ve ad alanı adını noktalarla ayrılmış. Öğesinin adı nokta varsa, karma-işareti ('#') yerini alır. Öğe adını doğrudan karma oturum olduğunu varsayılır. Örneğin, dize Oluşturucusu tam adı "System.String.#ctor" olur.  
+-   İkinci dize ad alanı kökünde başlangıç öğesi tam olarak nitelenmiş adını parçasıdır. Öğe, kapsayan türleri ve ad alanı adı noktalarla ayrılmış. Öğenin adını nokta varsa, karma-işaretiyle ('#')'ya değiştirilir. Öğe adını doğrudan karma işareti olduğunu kabul edilir. Örneğin, dize Oluşturucusu tam adı "System.String.#ctor" olacaktır.  
   
--   Yöntemi için bağımsız değişkeni varsa özellikleri ve yöntemleri için ayraç içinde bağımsız değişken listesi aşağıdadır. Bağımsız değişkenler varsa, hiçbir parantez yok. Bağımsız değişkenler virgülle ayrılır. Her bağımsız değişkeni kodlama doğrudan bir .NET Framework imzada nasıl kodlanmış aşağıdaki gibidir:  
+-   Yöntemi için bağımsız değişken varsa özellikleri ve yöntemleri, parantez içindeki bağımsız değişken listesini takip eder. Hiçbir bağımsız değişken varsa, hiçbir parantez yok. Bağımsız değişkenlerin virgülle ayrılır. Her bağımsız değişken kodlama, doğrudan bir .NET Framework imzada nasıl kodlandığını izler:  
   
-    -   Taban türleri. Normal türleri (ELEMENT_TYPE_CLASS veya ELEMENT_TYPE_VALUETYPE) türünün tam adını temsil edilir.  
+    -   Temel türler. Normal türleri (ELEMENT_TYPE_CLASS veya ELEMENT_TYPE_VALUETYPE), türün tam adı temsil edilir.  
   
-    -   İç türleri (örneğin, ELEMENT_TYPE_I4, ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF dizisi. ve ELEMENT_TYPE_VOID) karşılık gelen tam tür tam adı olarak temsil edilir. Örneğin, System.Int32 veya System.TypedReference.  
+    -   İç türleri (örneğin, ELEMENT_TYPE_I4 ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF. ve ELEMENT_TYPE_VOID) karşılık gelen tam tür adı tam olarak temsil edilir. Örneğin, System.Int32 veya System.TypedReference.  
   
-    -   ELEMENT_TYPE_PTR olarak temsil edilir bir '\*' değiştirilmiş türü aşağıdaki.  
+    -   ELEMENT_TYPE_PTR olarak temsil edilir bir '\*' aşağıdaki değiştirilen türü.  
   
-    -   ELEMENT_TYPE_BYREF olarak temsil edilir bir '\@' değiştirilmiş türü aşağıdaki.  
+    -   ELEMENT_TYPE_BYREF olarak temsil edilir bir '\@' aşağıdaki değiştirilen türü.  
   
-    -   ELEMENT_TYPE_PINNED olarak temsil edilir bir ' ^' değiştirilmiş türü aşağıdaki. C# Derleyici hiçbir zaman bu oluşturur.  
+    -   ELEMENT_TYPE_PINNED olarak temsil edilir bir ' ^' aşağıdaki değiştirilen türü. C# derleyicisi, hiçbir zaman bu oluşturur.  
   
-    -   ELEMENT_TYPE_CMOD_REQ olarak temsil edilir bir '&#124;' ve değiştirilen türü aşağıdaki değiştiricisi sınıfın tam adı. C# Derleyici hiçbir zaman bu oluşturur.  
+    -   ELEMENT_TYPE_CMOD_REQ olarak temsil edilir bir '&#124;' ve değiştirilen türü aşağıdaki değiştiricisi sınıfının tam adı. C# derleyicisi, hiçbir zaman bu oluşturur.  
   
-    -   ELEMENT_TYPE_CMOD_OPT olarak temsil edilir bir '!' ve değiştirilen türü aşağıdaki değiştiricisi sınıfın tam adı.  
+    -   ELEMENT_TYPE_CMOD_OPT olarak temsil edilir bir '!' ve değiştirilen türü aşağıdaki değiştiricisi sınıfının tam adı.  
   
-    -   ELEMENT_TYPE_SZARRAY "dizi öğesi türü aşağıdaki []" gösterilir.  
+    -   ELEMENT_TYPE_SZARRAY "dizinin öğe türü aşağıdaki []" temsil edilir.  
   
-    -   ELEMENT_TYPE_GENERICARRAY "[?]" temsil edilir dizi öğesi türü aşağıdaki. C# Derleyici hiçbir zaman bu oluşturur.  
+    -   "[?]" ELEMENT_TYPE_GENERICARRAY temsil edilen aşağıdaki dizinin öğe türü. C# derleyicisi, hiçbir zaman bu oluşturur.  
   
-    -   ELEMENT_TYPE_ARRAY olarak temsil edilir [*lowerbound*:`size`,*lowerbound*:`size`] Burada virgül sayısı ise derecesini - 1 ve alt sınırlarını ve her boyut boyutu bilinen ondalık olarak temsil edilir. Alt sınır veya boyutu belirtilmezse, yalnızca atlanır. Belirli bir boyut için boyut ve alt sınır atlanırsa, ':' de atlanır. Örneğin, 1 belirtilmeyen boyutları ve alt sınırlarını olarak 2 boyutlu bir dizi olduğundan [1:, 1:].  
+    -   ELEMENT_TYPE_ARRAY olarak temsil edilir [*lowerbound*:`size`,*lowerbound*:`size`] Burada virgül sayısını ise boyut - 1 ve alt sınırı boyutunu ve her boyut bilinen ondalık biçimde temsil edilir. Alt sınır veya boyutu belirtilmezse, yalnızca atlanır. Belirli bir boyut için boyut ve alt sınır atlanırsa, ':' de atlanır. Örneğin, belirtilmeyen boyutları ve alt sınırı 1 ile 2 boyutlu bir dizi olan [1:, 1:].  
   
-    -   ELEMENT_TYPE_FNPTR olarak temsil edilir "FUNC =:`type`(*imza*)", burada `type` dönüş türü ve *imza* olan yöntemi değişkendir. Bağımsız değişkenler varsa, parantez göz ardı edilir. C# Derleyici hiçbir zaman bu oluşturur.  
+    -   ELEMENT_TYPE_FNPTR olarak temsil edilir "FUNC =:`type`(*imza*)", burada `type` dönüş türü ve *imza* yöntem bağımsız değişkenleri olan. Hiçbir bağımsız değişken varsa, parantezler göz ardı edilir. C# derleyicisi, hiçbir zaman bu oluşturur.  
   
-     Hiçbir zaman farklılaştırıcı aşırı yüklenmiş yöntemler için kullanılan çünkü aşağıdaki imza bileşenleri temsil edilmez:  
+     Ayırt edici aşırı yüklenmiş yöntemler için hiçbir zaman kullanılmaz, çünkü aşağıdaki imza bileşenleri temsil edilmez:  
   
     -   Çağırma kuralı  
   
@@ -67,20 +67,21 @@ Derleyici kodunuzda belgeleri oluşturmak için etiketli her yapı için bir kim
   
     -   ELEMENT_TYPE_SENTINEL  
   
--   Dönüştürme işleçleri yalnızca (op_Implicit ve op_Explicit), yönteminin dönüş değeri olarak kodlanmış bir ' ~' dönüş türü, yukarıda kodlanmış olarak izlemelidir.  
+-   Dönüştürme işleçleri yalnızca (op_Implicit ve op_Explicit), yöntemin dönüş değeri olarak kodlanmış bir ' ~' dönüş türü tarafından ardından yukarıda kodlanmış gibi.  
   
--   Genel türler için türünün adı bir backtick ve ardından genel tür parametre sayısını belirten bir sayı tarafından izlenir. Örneğin:
+-   Genel türler için tür adını bir vurgulamasını belirtir ve ardından genel tür parametre sayısını belirten bir sayı tarafından izlenir. Örneğin:
   
-     ``<member name="T:SampleClass`2">`` etiket olarak tanımlanan bir tür için `public class SampleClass<T, U>`.  
+     ``<member name="T:SampleClass`2">`` etiketi olarak tanımlanan bir tür için `public class SampleClass<T, U>`.  
   
-     Backticks ile başlayan sayılar olarak belirtilen parametre olarak genel türler alma yöntemlerinin için genel tür parametreleri (örneğin \`0,\`1). Genel tür parametreleri için sıfır tabanlı bir dizi gösterimi gösteren her bir sayı.  
+     As numaralarını tik başında belirtilen genel türleri parametre olarak alan yöntemleri için genel tür parametreleri (örneğin \`0\`1). Her bir sayının temsil eden bir türün genel parametreleri için sıfır tabanlı bir dizi gösterimi.  
   
 ## <a name="examples"></a>Örnekler  
- Aşağıdaki örnekler nasıl kimliği için bir sınıf dizeleri ve üyeleri oluşturulur:  
+ Aşağıdaki örnekler nasıl kimliği için bir sınıf dizeleri ve üyelerini oluşturulacak:  
   
  [!code-csharp[csProgGuidePointers#21](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/processing-the-xml-file_1.cs)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [/ doc (C# Derleyici Seçenekleri)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
- [XML Belge Açıklamaları](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [/ doc (C# Derleyici Seçenekleri)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
+- [XML Belge Açıklamaları](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)

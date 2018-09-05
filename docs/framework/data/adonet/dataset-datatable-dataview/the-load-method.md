@@ -4,27 +4,27 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: e22e5812-89c6-41f0-9302-bb899a46dbff
-ms.openlocfilehash: 04defffc724875e691fd7b87331c28e6b6c0cd28
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 21868f808a6d39c935b612f745d720180df2dd73
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758314"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43507268"
 ---
 # <a name="the-load-method"></a>Load yöntemi
-Kullanabileceğiniz <xref:System.Data.DataTable.Load%2A> yüklemek için yöntemi bir <xref:System.Data.DataTable> bir veri kaynağından satırlarla. Bu, en basit biçimiyle tek bir parametre kabul eder, aşırı yüklenmiş bir yöntemdir bir **DataReader**. Yalnızca bu formda yüklerken **DataTable** satırlarla. İsteğe bağlı olarak, belirtebilirsiniz **LoadOption** veriler nasıl eklenir denetlemek için parametre **DataTable**.  
+Kullanabileceğiniz <xref:System.Data.DataTable.Load%2A> yüklemek için yöntemi bir <xref:System.Data.DataTable> bir veri kaynağından satırlarla. Bu, en basit şekliyle, tek bir parametre kabul eden aşırı yüklenmiş yöntem, bir **DataReader**. Yalnızca bu formda yükler **DataTable** satırlarla. İsteğe bağlı olarak belirleyebileceğiniz **LoadOption** veriler nasıl eklenir denetlemek için parametre **DataTable**.  
   
- **LoadOption** parametredir durumlarda özellikle yararlı nerede **DataTable** zaten veri satırını içeren, veri kaynağından gelen verileri tanımlayan çünkü verilerle birlikte zaten tabloda. Örneğin, **PreserveCurrentValues** (varsayılan) belirleyen burada bir satır olarak işaretli durumlarda **eklenen** içinde **DataTable**, **özgün** değerini veya her bir sütun ayarlanmış eşleşen satır içeriğini veri kaynağından. **Geçerli** değeri satır eklendiğinde atanan değerlerini koruyun ve **RowState** satırının ayarlanacak **değiştirilen**.  
+ **LoadOption** parametredir durumlarda özellikle yararlı burada **DataTable** zaten veri satırını içeren, veri kaynağından gelen verileri açıklayan veri ile birleştirilir zaten tablodaki. Örneğin, **PreserveCurrentValues** belirten (varsayılan) burada bir satır olarak işaretlendiyse durumlarda **eklenen** içinde **DataTable**, **özgün** değerini veya her bir sütun ayarlanmış eşleşen satır içeriğini veri kaynağından. **Geçerli** değeri satır eklendiğinde, atanan değerleri koruyun ve **RowState** satırının ayarlanacak **değiştirilen**.  
   
- Aşağıdaki tabloda kısa bir açıklamasını sağlar <xref:System.Data.LoadOption> numaralandırma değerleri.  
+ Aşağıdaki tabloda, kısa bir açıklaması verilmektedir <xref:System.Data.LoadOption> sabit listesi değerleri.  
   
 |LoadOption değeri|Açıklama|  
 |----------------------|-----------------|  
-|**OverwriteRow**|Gelen satırların aynı varsa **PrimaryKey** değeri zaten içinde satır olarak **DataTable**, **özgün** ve **geçerli** her değerleri Sütun gelen satırda değerlerle değiştirilir ve **RowState** özelliği ayarlanmış **Unchanged**.<br /><br /> Satır içinde zaten yok veri kaynağından **DataTable** ile eklenen bir **RowState** değerini **Unchanged**.<br /><br /> Bu seçeneği etkin içeriğini yeniler **DataTable** böylece veri kaynağı içeriğini eşleşir.|  
-|**PreserveCurrentValues (varsayılan)**|Gelen satırların aynı varsa **PrimaryKey** değeri zaten içinde satır olarak **DataTable**, **özgün** değeri, gelen satır ve içeriğiniayarlanır**Geçerli** değeri değiştirilmedi.<br /><br /> Varsa **RowState** olan **eklenen** veya **değiştirilen**, ayarlanır **değiştirilen**.<br /><br /> Varsa **RowState** olan **silinmiş**, kaldığı **silinmiş**.<br /><br /> Satır içinde zaten yok veri kaynağından **DataTable** eklenen ve **RowState** ayarlanır **Unchanged**.|  
-|**UpdateCurrentValues**|Gelen satırların aynı varsa **PrimaryKey** değeri zaten içinde satır olarak **DataTable**, **geçerli** değeri kopyalanır **özgün**değeri ve **geçerli** değerini ardından gelen satırı içeriğini ayarlayın.<br /><br /> Varsa **RowState** içinde **DataTable** olan **eklenen**, **RowState** kalır **eklenen**. Satır olarak işaretlenmiş için **değiştirilen** veya **silinmiş**, **RowState** olan **değiştirilen**.<br /><br /> Satır içinde zaten yok veri kaynağından **DataTable** eklenen ve **RowState** ayarlanır **eklenen**.|  
+|**OverwriteRow**|Gelen satır aynı varsa **PrimaryKey** değeri içinde satır olarak **DataTable**, **özgün** ve **geçerli** her değerleri Sütun gelen satırın değerleriyle değiştirilir ve **RowState** özelliği **Unchanged**.<br /><br /> Veri kaynağından zaten var olmayan satır **DataTable** ile eklenen bir **RowState** değerini **Unchanged**.<br /><br /> Bu seçenek geçerli içeriğini yeniler **DataTable** böylece veri kaynağının içeriğiyle eşleşir.|  
+|**PreserveCurrentValues (varsayılan)**|Gelen satır aynı varsa **PrimaryKey** değeri içinde satır olarak **DataTable**, **özgün** değeri gelen satırın ve içeriğiniayarı**Geçerli** değeri değiştirilmedi.<br /><br /> Varsa **RowState** olduğu **eklenen** veya **değiştirilen**, ayarlanır **değiştirilen**.<br /><br /> Varsa **RowState** olduğu **silinmiş**, kaldığı **silinmiş**.<br /><br /> Veri kaynağından zaten var olmayan satır **DataTable** eklenen ve **RowState** ayarlanır **Unchanged**.|  
+|**UpdateCurrentValues**|Gelen satır aynı varsa **PrimaryKey** değeri içinde satır olarak **DataTable**, **geçerli** değeri kopyalanır **özgün**değeri ve **geçerli** değeri sonra gelen satırın içeriğini ayarlayın.<br /><br /> Varsa **RowState** içinde **DataTable** olduğu **eklenen**, **RowState** kalır **eklenen**. Satır olarak işaretlenmiş için **değiştirilen** veya **silinmiş**, **RowState** olduğu **değiştirilen**.<br /><br /> Veri kaynağından zaten var olmayan satır **DataTable** eklenen ve **RowState** ayarlanır **eklenen**.|  
   
- Aşağıdaki örnek kullanır **yük** çalışanları için Doğum listesini görüntülemek için yöntemini **Northwind** veritabanı.  
+ Aşağıdaki örnek kullanımları **yük** çalışanlar için Doğum listesini görüntülemek için yöntemi **Northwind** veritabanı.  
   
 ```vb  
 Private Sub LoadBirthdays(ByVal connectionString As String)  
@@ -70,4 +70,4 @@ End Sub
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [DataTable Verilerini Düzenleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
- [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

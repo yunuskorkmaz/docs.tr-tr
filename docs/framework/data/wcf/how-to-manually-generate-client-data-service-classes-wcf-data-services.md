@@ -1,99 +1,100 @@
 ---
-title: 'Nasıl yapılır: istemci verileri hizmet sınıfları (WCF Veri Hizmetleri) el ile oluştur'
+title: 'Nasıl yapılır: el ile istemci veri hizmeti sınıfları (WCF Veri Hizmetleri) oluştur'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, client library
 ms.assetid: b98cb1d6-956a-4e50-add6-67e4f2587346
-ms.openlocfilehash: 24d19f10e025b765cfc7df73ba80d223fbfa8074
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 332c04f50e104a5e1c8bd18c05581b6c0472f82f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359000"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501327"
 ---
-# <a name="how-to-manually-generate-client-data-service-classes-wcf-data-services"></a>Nasıl yapılır: istemci verileri hizmet sınıfları (WCF Veri Hizmetleri) el ile oluştur
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] İstemci veri hizmeti sınıfları kullandığınızda otomatik olarak oluşturmak üzere etkinleştirmek için Visual Studio ile tümleşir **hizmet Başvurusu Ekle** bir başvuru veri hizmeti için bir Visual Studio projesi eklemek için iletişim kutusu. Daha fazla bilgi için bkz: [nasıl yapılır: bir veri hizmet Başvurusu Ekle](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md). Kod oluşturma aracı kullanarak el ile de aynı istemci veri hizmeti sınıfları oluşturabilirsiniz `DataSvcUtil.exe`. Bu araç ile birlikte [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], .NET Framework sınıfları veri hizmeti tanımı oluşturur. Ayrıca, kavramsal model (.csdl) dosyası ve bir Visual Studio projesi Entity Framework modelinde temsil eden .edmx dosyasının'ndan veri hizmeti sınıfları oluşturmak için de kullanılabilir.  
-  
- Bu konudaki örnek Northwind örnek veri hizmetini temel alan istemci veri hizmeti sınıfları oluşturur. Bu hizmeti tamamladığınızda oluşturulan [WCF Veri Hizmetleri quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md). Bu konudaki bazı örnekler Northwind modeli için kavramsal model dosyası gerektirir. Daha fazla bilgi için bkz: [nasıl yapılır: dosya eşleme ve Model oluşturmak için kullanım EdmGen.exe](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md). Bu konudaki bazı örnekler için Northwind modeli .edmx dosyasının gerektirir. Daha fazla bilgi için bkz: [.edmx dosyasının genel bakış](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4).  
-  
-### <a name="to-generate-c-classes-that-support-data-binding"></a>Veri bağlamayı destekleyen C# sınıfları oluşturmak için  
-  
--   Komut isteminde, satır sonları olmadan aşağıdaki komutu yürütün:  
-  
-    ```  
-    "%windir%\Microsoft.NET\Framework\v3.5\DataSvcUtil.exe" /dataservicecollection /version:2.0 /language:CSharp /out:Northwind.cs /uri:http://localhost:12345/Northwind.svc  
-    ```  
-  
+# <a name="how-to-manually-generate-client-data-service-classes-wcf-data-services"></a>Nasıl yapılır: el ile istemci veri hizmeti sınıfları (WCF Veri Hizmetleri) oluştur
+WCF veri hizmetleri sağlamak kullandığınızda istemci veri hizmeti sınıfları otomatik olarak oluşturmak Visual Studio ile tümleştirilir **hizmet Başvurusu Ekle** bir Visual Studio projenize bir veri hizmetine başvuru eklemek için iletişim kutusu. Daha fazla bilgi için [nasıl yapılır: bir veri hizmeti başvurusu ekleme](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md). Kod oluşturma aracı kullanılarak el ile de aynı istemci veri hizmeti sınıfları oluşturabilirsiniz `DataSvcUtil.exe`. WCF Veri Hizmetleri ile birlikte, bu aracı, veri hizmeti tanımından .NET Framework sınıfları oluşturur. Veri Hizmeti sınıfları kavramsal model (.csdl) dosyası ve bir Visual Studio projesinde bir Entity Framework modelini temsil eden .edmx dosyası üretmek için de kullanılabilir.
+
+ Bu konudaki örnek Northwind örnek veri hizmetini temel alan istemci veri hizmeti sınıfları oluşturur. Bu hizmet, tamamladığınızda oluşturulur [WCF Veri Hizmetleri Hızlı Başlangıç](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md). Bu konudaki örnekler için Northwind modeli kavramsal model dosyası gerektirir. Daha fazla bilgi için [nasıl yapılır: kullanımı Model ve eşleme dosyalarını üretmek için Edmgen.exe'yi](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md). Bu konudaki örnekler için Northwind modeli .edmx dosyası gerektirir. Daha fazla bilgi için [.edmx dosyasını genel bakış](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4).
+
+### <a name="to-generate-c-classes-that-support-data-binding"></a>Veri bağlamayı destekleyen C# sınıfları oluşturmak için
+
+-   Komut isteminde satır sonları olmadan aşağıdaki komutu yürütün:
+
+    ```
+    "%windir%\Microsoft.NET\Framework\v3.5\DataSvcUtil.exe" /dataservicecollection /version:2.0 /language:CSharp /out:Northwind.cs /uri:http://localhost:12345/Northwind.svc
+    ```
+
     > [!NOTE]
-    >  İçin sağlanan değer değiştirmelisiniz `/uri:` Northwind örnek veri hizmeti örneğiniz URI'sini parametresiyle.  
-  
-### <a name="to-generate-visual-basic-classes-that-support-data-binding"></a>Veri bağlamayı destekleyen Visual Basic sınıfları oluşturmak için  
-  
--   Komut isteminde, satır sonları olmadan aşağıdaki komutu yürütün:  
-  
-    ```  
-    "%windir%\Microsoft.NET\Framework\v3.5\DataSvcUtil.exe" /dataservicecollection /version:2.0 /language:VB /out:Northwind.vb /uri:http://localhost:12345/Northwind.svc  
-    ```  
-  
+    >  İçin sağlanan değer değiştirmelisiniz `/uri:` Northwind örnek veri hizmeti örneğinizi URI parametresiyle.
+
+### <a name="to-generate-visual-basic-classes-that-support-data-binding"></a>Veri bağlamayı destekleyen Visual Basic sınıfları oluşturmak için
+
+-   Komut isteminde satır sonları olmadan aşağıdaki komutu yürütün:
+
+    ```
+    "%windir%\Microsoft.NET\Framework\v3.5\DataSvcUtil.exe" /dataservicecollection /version:2.0 /language:VB /out:Northwind.vb /uri:http://localhost:12345/Northwind.svc
+    ```
+
     > [!NOTE]
-    >  İçin sağlanan değer değiştirmelisiniz `/uri:` Northwind örnek veri hizmeti örneğiniz URI'sini parametresiyle.  
-  
-### <a name="to-generate-c-classes-based-on-the-service-uri"></a>Hizmet URI'si temel C# sınıfları oluşturmak için  
-  
--   Komut isteminde, satır sonları olmadan aşağıdaki komutu yürütün:  
-  
-    ```  
-    "%windir%\Microsoft.NET\Framework\v3.5\DataSvcUtil.exe" /language:CSharp /out:northwind.cs /uri:http://localhost:12345/Northwind.svc  
-    ```  
-  
+    >  Sağlanan değer değiştirmelisiniz `/uri:` Northwind örnek veri hizmeti örneğinizi URI parametresiyle.
+
+### <a name="to-generate-c-classes-based-on-the-service-uri"></a>Hizmet URI'si temel C# sınıfları oluşturmak için
+
+-   Komut isteminde satır sonları olmadan aşağıdaki komutu yürütün:
+
+    ```
+    "%windir%\Microsoft.NET\Framework\v3.5\DataSvcUtil.exe" /language:CSharp /out:northwind.cs /uri:http://localhost:12345/Northwind.svc
+    ```
+
     > [!NOTE]
-    >  İçin sağlanan değer değiştirmelisiniz `/uri:` Northwind örnek veri hizmeti örneğiniz URI'sini parametresiyle.  
-  
-### <a name="to-generate-visual-basic-classes-based-on-the-service-uri"></a>Visual Basic sınıfları URI hizmetini temel alan oluşturmak için  
-  
--   Komut isteminde, satır sonları olmadan aşağıdaki komutu yürütün:  
-  
-    ```  
-    "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:VB /out:Northwind.vb /uri:http://localhost:12345/Northwind.svc  
-    ```  
-  
+    >  İçin sağlanan değer değiştirmelisiniz `/uri:` Northwind örnek veri hizmeti örneğinizi URI parametresiyle.
+
+### <a name="to-generate-visual-basic-classes-based-on-the-service-uri"></a>Visual Basic sınıf tabanlı hizmet URI'si oluşturmak için
+
+-   Komut isteminde satır sonları olmadan aşağıdaki komutu yürütün:
+
+    ```
+    "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:VB /out:Northwind.vb /uri:http://localhost:12345/Northwind.svc
+    ```
+
     > [!NOTE]
-    >  İçin sağlanan değer değiştirmelisiniz `/uri:` Northwind örnek veri hizmeti örneğiniz URI'sini parametresiyle.  
-  
-### <a name="to-generate-c-classes-based-on-the-conceptual-model-file-csdl"></a>Kavramsal model dosyasını (CSDL) temel alan C# sınıfları oluşturmak için  
-  
--   Komut isteminde, satır sonları olmadan aşağıdaki komutu yürütün:  
-  
-    ```  
-    "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:CSharp /in:Northwind.csdl /out:Northwind.cs  
-    ```  
-  
-### <a name="to-generate-visual-basic-classes-based-on-the-conceptual-model-file-csdl"></a>Visual Basic sınıfları kavramsal model dosyasını (CSDL) temel alan oluşturmak için  
-  
--   Komut isteminde, satır sonları olmadan aşağıdaki komutu yürütün:  
-  
-    ```  
-    "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:VB /in:Northwind.csdl /out:Northwind.vb  
-    ```  
-  
-### <a name="to-generate-c-classes-based-on-the-edmx-file"></a>.Edmx dosyasını temel alarak C# sınıfları oluşturmak için  
-  
--   Komut isteminde, satır sonları olmadan aşağıdaki komutu yürütün:  
-  
-    ```  
-    "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:CSharp /in:Northwind.edmx /out:c:\northwind.cs   
-    ```  
-  
-### <a name="to-generate-visual-basic-classes-based-on-the-edmx-file"></a>Visual Basic sınıfları .edmx dosyasını temel alan oluşturmak için  
-  
--   Komut isteminde, satır sonları olmadan aşağıdaki komutu yürütün:  
-  
-    ```  
-    "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:VB /in:Northwind.edmx /out:c:\northwind.vb   
-    ```  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri Hizmeti İstemci Kitaplığı Oluşturma](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)  
- [Nasıl yapılır: Veri Hizmeti Başvurusu Ekleme](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)  
- [WCF Veri Hizmeti İstemci Yardımcı Programı (DataSvcUtil.exe)](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md)
+    >  Sağlanan değer değiştirmelisiniz `/uri:` Northwind örnek veri hizmeti örneğinizi URI parametresiyle.
+
+### <a name="to-generate-c-classes-based-on-the-conceptual-model-file-csdl"></a>Kavramsal model dosyasını (CSDL) temel alan C# sınıfları oluşturmak için
+
+-   Komut isteminde satır sonları olmadan aşağıdaki komutu yürütün:
+
+    ```
+    "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:CSharp /in:Northwind.csdl /out:Northwind.cs
+    ```
+
+### <a name="to-generate-visual-basic-classes-based-on-the-conceptual-model-file-csdl"></a>Kavramsal model dosyasını (CSDL) temel alan Visual Basic sınıflar oluşturmak için
+
+-   Komut isteminde satır sonları olmadan aşağıdaki komutu yürütün:
+
+    ```
+    "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:VB /in:Northwind.csdl /out:Northwind.vb
+    ```
+
+### <a name="to-generate-c-classes-based-on-the-edmx-file"></a>.Edmx dosyasını temel alan C# sınıfları oluşturmak için
+
+-   Komut isteminde satır sonları olmadan aşağıdaki komutu yürütün:
+
+    ```
+    "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:CSharp /in:Northwind.edmx /out:c:\northwind.cs
+    ```
+
+### <a name="to-generate-visual-basic-classes-based-on-the-edmx-file"></a>.Edmx dosyasını temel alan Visual Basic sınıflar oluşturmak için
+
+-   Komut isteminde satır sonları olmadan aşağıdaki komutu yürütün:
+
+    ```
+    "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:VB /in:Northwind.edmx /out:c:\northwind.vb
+    ```
+
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [Veri Hizmeti İstemci Kitaplığı Oluşturma](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)
+- [Nasıl yapılır: Veri Hizmeti Başvurusu Ekleme](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)
+- [WCF Veri Hizmeti İstemci Yardımcı Programı (DataSvcUtil.exe)](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md)

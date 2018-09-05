@@ -2,12 +2,12 @@
 title: İş parçacığı eşitleme (C#)
 ms.date: 07/20/2015
 ms.assetid: e42b1be6-c93c-479f-a148-be0759f1a4e1
-ms.openlocfilehash: 4ed6cad647c965882a63282ce32c998cec138eec
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 6f0fe42c06b27369612cf586c7a93ce098822162
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43463162"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509392"
 ---
 # <a name="thread-synchronization-c"></a>İş parçacığı eşitleme (C#)
 Aşağıdaki bölümlerde, özellikleri ve kaynakları birden çok iş parçacıklı uygulamalarda erişimi eşitlemek için kullanılan sınıflar açıklanmaktadır.  
@@ -142,26 +142,27 @@ class ThreadingExample
 ## <a name="deadlocks"></a>Kilitlenmeler  
  Çok iş parçacıklı uygulamalarda çok iş parçacığı eşitleme, ancak her zaman oluşturma olma tehlikesi yoktur bir `deadlock`burada diğer için bekleyen birden çok iş parçacığı ve uygulama bir durmasına gelir. Bir dört yönlü durağında otomobiller durdurulur ve her kişinin diğer gitmek bekleyen bir duruma yönelik bir kilitlenme benzerdir. Kilitlenmeler kaçınmak önemlidir; dikkatli planlama anahtardır. Kodlama başlamadan önce çok iş parçacıklı uygulamalar diyagram tarafından kilitlenmesi durumda genellikle tahmin edebilirsiniz.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Threading.Thread>  
- <xref:System.Threading.WaitHandle.WaitOne%2A>  
- <xref:System.Threading.WaitHandle.WaitAny%2A>  
- <xref:System.Threading.WaitHandle.WaitAll%2A>  
- <xref:System.Threading.Thread.Join%2A>  
- <xref:System.Threading.Thread.Start%2A>  
- <xref:System.Threading.Thread.Sleep%2A>  
- <xref:System.Threading.Monitor>  
- <xref:System.Threading.Mutex>  
- <xref:System.Threading.AutoResetEvent>  
- <xref:System.Threading.ManualResetEvent>  
- <xref:System.Threading.Interlocked>  
- <xref:System.Threading.WaitHandle>  
- <xref:System.Threading.EventWaitHandle>  
- <xref:System.Threading>  
- <xref:System.Threading.EventWaitHandle.Set%2A>  
- <xref:System.Threading.Monitor>  
- [lock Deyimi](../../../../csharp/language-reference/keywords/lock-statement.md)  
- [Karşılıklı dışlamalar](../../../../standard/threading/mutexes.md)  
- [Birbirine Kenetlenmiş İşlemler](../../../../standard/threading/interlocked-operations.md)  
- [AutoResetEvent](../../../../standard/threading/autoresetevent.md)  
- [Çoklu İş Parçacığı Kullanımı için Veri Eşitleme](../../../../standard/threading/synchronizing-data-for-multithreading.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- <xref:System.Threading.Thread>  
+- <xref:System.Threading.WaitHandle.WaitOne%2A>  
+- <xref:System.Threading.WaitHandle.WaitAny%2A>  
+- <xref:System.Threading.WaitHandle.WaitAll%2A>  
+- <xref:System.Threading.Thread.Join%2A>  
+- <xref:System.Threading.Thread.Start%2A>  
+- <xref:System.Threading.Thread.Sleep%2A>  
+- <xref:System.Threading.Monitor>  
+- <xref:System.Threading.Mutex>  
+- <xref:System.Threading.AutoResetEvent>  
+- <xref:System.Threading.ManualResetEvent>  
+- <xref:System.Threading.Interlocked>  
+- <xref:System.Threading.WaitHandle>  
+- <xref:System.Threading.EventWaitHandle>  
+- <xref:System.Threading>  
+- <xref:System.Threading.EventWaitHandle.Set%2A>  
+- <xref:System.Threading.Monitor>  
+- [lock Deyimi](../../../../csharp/language-reference/keywords/lock-statement.md)  
+- [Karşılıklı dışlamalar](../../../../standard/threading/mutexes.md)  
+- [Birbirine Kenetlenmiş İşlemler](../../../../standard/threading/interlocked-operations.md)  
+- [AutoResetEvent](../../../../standard/threading/autoresetevent.md)  
+- [Çoklu İş Parçacığı Kullanımı için Veri Eşitleme](../../../../standard/threading/synchronizing-data-for-multithreading.md)

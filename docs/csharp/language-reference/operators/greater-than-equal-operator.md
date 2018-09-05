@@ -8,11 +8,11 @@ helpviewer_keywords:
 - '>= operator [C#]'
 ms.assetid: 0db4dcaf-56a3-4884-a7ad-35f64978a58d
 ms.openlocfilehash: 8749d1dc0670a5a76bda5ee0d69a4a142671c1e6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481768"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43511099"
 ---
 # <a name="gt-operator-c-reference"></a>&gt;= İşleci (C# Başvurusu)
 Bir "büyüktür veya eşittir" ilişkisel işleç, tüm sayısal ve Numaralandırma türleri tanımlamak `>=` döndüren `true` birinci işlenenin değerinden büyük veya eşit, ikinci ise `false` Aksi takdirde.  

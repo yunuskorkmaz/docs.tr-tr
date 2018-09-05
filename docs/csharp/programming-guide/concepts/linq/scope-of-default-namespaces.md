@@ -1,25 +1,25 @@
 ---
-title: C# 1 varsayılan ad alanları kapsamı
+title: C# 1 varsayılan ad alanlarının kapsamı
 ms.date: 07/20/2015
 ms.assetid: fe826236-830f-457a-9027-7ad62c909fae
-ms.openlocfilehash: 37b10c43071d4f6a9fb2a25d68ab2c100c27dde9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bb0e111bfded0769c498b116f828711003036e33
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330102"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510445"
 ---
-# <a name="scope-of-default-namespaces-in-c"></a>C# varsayılan ad alanlarını kapsamı
-XML ağacında belirtildiği şekilde varsayılan ad alanları sorgular için kapsamında değildir. Varsayılan ad alanı içinde XML varsa, yine bildirmelisiniz bir <xref:System.Xml.Linq.XNamespace> , değişken ve Sorguda kullanılacak bir tam ad yapmak için yerel ad ile birleştirerek.  
+# <a name="scope-of-default-namespaces-in-c"></a>C# dilinde varsayılan ad alanlarının kapsamı
+XML ağacı içinde gösterilen varsayılan ad alanı, sorgular için kapsamda değildir. Yine de belirtmesi gerekir, varsayılan bir ad alanı XML varsa, bir <xref:System.Xml.Linq.XNamespace> değişkeni, sorguda kullanılan bir tam adı yerel adı ile birleştirebilirsiniz.  
   
- XML ağaçları sorgulanırken en yaygın sorunları XML ağacında bir varsayılan ad alanı varsa, XML değil gibi davranarak bir ad alanındaki Geliştirici bazen sorgu yazdığını biridir.  
+ XML ağaçlarını sorgulama sırasında sık karşılaşılan sorunlar XML ağacı varsayılan ad alanı varsa, XML değil gibi davranarak bir ad alanında geliştirici bazen sorgu yazdığını biridir.  
   
- Bu konudaki örnekler ilk kümesi, bir varsayılan ad alanı XML yüklenir, ancak yanlış sorgulanan tipik bir yolunu gösterir.  
+ Bu konudaki örnekler ilk kümesi XML varsayılan ad alanı içinde yüklenir, ancak yanlış sorgulanır normal bir şekilde gösterir.  
   
  XML ad alanında sorgulayabilmesi ikinci örneklerde gerekli düzeltmeleri ayarlayın.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, bir ad alanındaki XML oluşturulmasını gösterir ve boş bir sonuç döndüren bir sorgu ayarlayın.  
+ Bu örnek, bir ad alanında XML oluşturulmasını gösterir ve boş bir sonuç döndüren bir sorgu ayarlayın.  
   
 ### <a name="code"></a>Kod  
   
@@ -43,7 +43,7 @@ Console.WriteLine("End of result set");
 ```  
   
 ### <a name="comments"></a>Açıklamalar  
- Bu örnekte aşağıdaki sonucu üretir:  
+ Bu örnek aşağıdaki sonucu üretir:  
   
 ```  
 Result set follows:  
@@ -51,9 +51,9 @@ End of result set
 ```  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, bir ad alanı ve düzgün şekilde kodlanmış bir sorgu XML oluşturulmasını gösterir.  
+ Bu örnek, bir ad alanı ve düzgün şekilde kodlanmış bir sorgu içinde XML oluşturulmasını gösterir.  
   
- Yukarıdaki yanlış kodlanmış örnek aksine, C# kullanırken doğru bildirilip yaklaşımdır bir <xref:System.Xml.Linq.XNamespace> nesnesi ve belirtirken kullanılacak <xref:System.Xml.Linq.XName> nesneleri. Bu durumda, bağımsız değişkeni <xref:System.Xml.Linq.XElement.Elements%2A> yöntemi bir <xref:System.Xml.Linq.XName> nesnesi.  
+ Yukarıdaki yanlış kodlanmış örnek aksine, C# kullanırken doğru bildirmek ve başlatmak için yaklaşımdır bir <xref:System.Xml.Linq.XNamespace> nesnesi ve belirtirken kullanılacak <xref:System.Xml.Linq.XName> nesneleri. Bu durumda, bağımsız değişkeni <xref:System.Xml.Linq.XElement.Elements%2A> yöntemi bir <xref:System.Xml.Linq.XName> nesne.  
   
 ### <a name="code"></a>Kod  
   
@@ -78,7 +78,7 @@ Console.WriteLine("End of result set");
 ```  
   
 ### <a name="comments"></a>Açıklamalar  
- Bu örnekte aşağıdaki sonucu üretir:  
+ Bu örnek aşağıdaki sonucu üretir:  
   
 ```  
 Result set follows:  
@@ -88,5 +88,6 @@ Result set follows:
 End of result set  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [XML ad alanları (C#) ile çalışma](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [XML ad alanları (C#) ile çalışma](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)

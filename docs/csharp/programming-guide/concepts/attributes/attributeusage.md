@@ -1,55 +1,55 @@
 ---
 title: AttributeUsage (C#)
 ms.date: 04/25/2018
-ms.openlocfilehash: 869e6509e55268767915a783a8652f7f950d7137
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 37657a0611180d5b4c48b3e1778d33861afa5a74
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33955934"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43500578"
 ---
 # <a name="attributeusage-c"></a>AttributeUsage (C#)
 
-Özel bir öznitelik sınıfı nasıl kullanılabileceğini belirler. <xref:System.AttributeUsageAttribute> özel öznitelik tanımları için uygulamanıza bir özniteliktir. `AttributeUsage` Özniteliği denetimi sağlar:
+Özel bir öznitelik sınıfı nasıl kullanılabileceğini belirler. <xref:System.AttributeUsageAttribute> özel öznitelik tanımları için geçerli bir özniteliktir. `AttributeUsage` Özniteliği denetimi sağlar:
 
-- Hangi program öğeleri öznitelik için uygulanabilir. Kısıtlama sürece, kullanımdır herhangi bir program öğesi için bir öznitelik uygulanabilir:
+- Hangi program öğeleri özniteliği uygulanabilir. Sürece erişimi, kullanımı olan aşağıdaki program öğelerin herhangi bir öznitelik uygulanabilir:
   - derleme
   - modül
   - alan
   - olay
   - yöntemi
-  - Param
+  - param
   - özellik
   - return
   - türü
-- Olup bir öznitelik birden çok kez tek bir program öğesi için uygulanabilir.
+- Olup öznitelik birden çok kez tek bir program öğesine uygulanabilir.
 - Olup öznitelikleri türetilmiş sınıflar tarafından devralınır.
 
-Varsayılan ayarları açıkça uygulandığında aşağıdaki gibi görünür:
+Varsayılan ayarları açıkça uygulandığında aşağıdaki örnekteki gibi görünür:
 
 [!code-csharp[Define a new attribute](../../../../../samples/snippets/csharp/attributes/NewAttribute.cs#1)]
 
-Bu örnekte, `NewAttribute` sınıfı, tüm desteklenen bir program öğesi için uygulanabilir. Ancak yalnızca bir kez her varlık için uygulanabilir. Öznitelik, bir temel sınıf uygulandığında türetilen sınıflar tarafından devralınır.
+Bu örnekte, `NewAttribute` sınıfı için herhangi bir desteklenen bir program öğesine uygulanabilir. Ancak, her varlık için yalnızca bir kez uygulanabilir. Öznitelik, bir temel sınıfa uygulandığında türetilmiş sınıflar tarafından devralınır.
 
-<xref:System.AttributeUsageAttribute.AllowMultiple> Ve <xref:System.AttributeUsageAttribute.Inherited> değişkenleridir isteğe bağlı, aşağıdaki kodu aynı etkiye sahiptir:
+<xref:System.AttributeUsageAttribute.AllowMultiple> Ve <xref:System.AttributeUsageAttribute.Inherited> aşağıdaki kodu aynı etkiye sahiptir. Bu nedenle bağımsız değişken isteğe bağlıdır:
 
 [!code-csharp[Omit optional attributes](../../../../../samples/snippets/csharp/attributes/NewAttribute.cs#2)]
 
-İlk <xref:System.AttributeUsageAttribute> bağımsız değişkeni, bir veya daha fazla öğesi olmalıdır <xref:System.AttributeTargets> numaralandırması. Birden çok hedef türleri, aşağıdaki örnekte gösterildiği gibi OR işleci birlikte bağlanabilir:
+İlk <xref:System.AttributeUsageAttribute> bağımsız değişkeni olmalıdır bir veya daha fazla öğeleri <xref:System.AttributeTargets> sabit listesi. Birden çok hedef türü OR işlecini aşağıdaki örnekte gösterildiği gibi birlikte bağlanabilir:
 
 [!code-csharp[Create an attribute for fields or properties](../../../../../samples/snippets/csharp/attributes/NewPropertyOrFieldAttribute.cs#1)]
 
-C# 7.3 içinde başlayarak, öznitelikler özelliği veya yedekleme alanını otomatik uygulanan bir özellik için uygulanabilir. Belirtmediğiniz sürece öznitelik özelliğine uygular `field` öznitelikte tanımlayıcısı. Her ikisi de aşağıdaki örnekte gösterilir:
+C# 7.3 başlayarak, özellik ya da yedekleme alanını otomatik olarak uygulanan bir özellik için öznitelikleri uygulanabilir. Siz belirtmediğiniz sürece özniteliği özelliğine uygulanır `field` öznitelikte tanımlayıcısı. Her ikisi de, aşağıdaki örnekte gösterilmiştir:
 
 [!code-csharp[Create an attribute for fields or properties](../../../../../samples/snippets/csharp/attributes/NewPropertyOrFieldAttribute.cs#2)]
 
-Varsa <xref:System.AttributeUsageAttribute.AllowMultiple> bağımsız değişkeni `true`, sonuçta elde edilen özniteliği birden çok kez tek bir varlık için aşağıdaki örnekte gösterildiği gibi uygulanabilir sonra:
+Varsa <xref:System.AttributeUsageAttribute.AllowMultiple> bağımsız değişkeni `true`, sonra elde edilen özniteliği birden çok kez tek bir varlık için aşağıdaki örnekte gösterildiği gibi uygulanabilir:
 
 [!code-csharp[Create and use an attribute that can be applied multiple times](../../../../../samples/snippets/csharp/attributes/MultiUseAttribute.cs#1)]
 
 Bu durumda, `MultiUseAttribute` art arda çünkü uygulanabilir `AllowMultiple` ayarlanır `true`. Birden çok öznitelik uygulamak için gösterilen iki biçimi geçerli değil.
 
-Varsa <xref:System.AttributeUsageAttribute.Inherited> olan `false`, öznitelik öznitelikli sınıfından türetilen sınıflar tarafından devralınır değil sonra. Örneğin:
+Varsa <xref:System.AttributeUsageAttribute.Inherited> olduğu `false`, öznitelik, öznitelik atanmış bir sınıftan türetilmiş sınıflar tarafından devralınan değil sonra. Örneğin:
 
 [!code-csharp[Create and use an attribute that can be applied multiple times](../../../../../samples/snippets/csharp/attributes/NonInheritedAttribute.cs#1)]
 
@@ -57,13 +57,13 @@ Bu durumda `NonInheritedAttribute` için uygulanmaz `DClass` devralma aracılı�
 
 ## <a name="remarks"></a>Açıklamalar
 
-`AttributeUsage` Özniteliktir tek kullanımlık özniteliği--birden çok kez aynı sınıfa uygulanamaz. `AttributeUsage` bir diğer adı için <xref:System.AttributeUsageAttribute>.
+`AttributeUsage` Özniteliği, bir tek kullanımlık özniteliğin birden çok kez aynı sınıfa uygulanamaz. `AttributeUsage` için bir diğer addır <xref:System.AttributeUsageAttribute>.
 
-Daha fazla bilgi için bkz: [yansıma (C#) kullanarak erişme özniteliklerle](accessing-attributes-by-using-reflection.md).
+Daha fazla bilgi için [yansıma (C#) kullanarak erişen özniteliklerle](accessing-attributes-by-using-reflection.md).
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, etkisini gösterir <xref:System.AttributeUsageAttribute.Inherited> ve <xref:System.AttributeUsageAttribute.AllowMultiple> bağımsız değişkenleri <xref:System.AttributeUsageAttribute> özniteliğini ve bir sınıfa uygulanan özel öznitelikler nasıl listelenebilir.
+Aşağıdaki örnek, etkisini gösterir <xref:System.AttributeUsageAttribute.Inherited> ve <xref:System.AttributeUsageAttribute.AllowMultiple> bağımsız değişkenleri <xref:System.AttributeUsageAttribute> özniteliği ve nasıl bir sınıfa uygulanan özel öznitelikler listelenebilir.
 
 [!code-csharp[Applying and querying attributes](../../../../../samples/snippets/csharp/attributes/Program.cs#1)]
 
@@ -80,11 +80,12 @@ SecondAttribute
 ```
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- <xref:System.Attribute>  
- <xref:System.Reflection>  
- [C# Programlama Kılavuzu](../..//index.md)  
- [Öznitelikler](../../../..//standard/attributes/index.md)  
- [Yansıma (C#)](../reflection.md)  
- [Öznitelikler](index.md)  
- [Özel öznitelikler (C#) oluşturma](creating-custom-attributes.md)  
- [Yansıma (C#) kullanarak özniteliklere erişme](accessing-attributes-by-using-reflection.md)
+
+- <xref:System.Attribute>  
+- <xref:System.Reflection>  
+- [C# Programlama Kılavuzu](../..//index.md)  
+- [Öznitelikler](../../../..//standard/attributes/index.md)  
+- [Yansıma (C#)](../reflection.md)  
+- [Öznitelikler](index.md)  
+- [Özel öznitelikler (C#) oluşturma](creating-custom-attributes.md)  
+- [Yansıma (C#) kullanarak özniteliklere erişme](accessing-attributes-by-using-reflection.md)

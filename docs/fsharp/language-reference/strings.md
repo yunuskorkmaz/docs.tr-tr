@@ -2,12 +2,12 @@
 title: Dizeler (F#)
 description: "Nasıl F # 'string' türü sabit metin Unicode karakter dizisi olarak temsil ettiğini öğrenin."
 ms.date: 05/16/2016
-ms.openlocfilehash: d8bfce9ac47cb137456e02b1b213fd2c6a53594d
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 7309e93bf0a6518d03a9f850804a4f580e2c96b1
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404278"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43561297"
 ---
 # <a name="strings"></a>Dizeler
 
@@ -42,7 +42,7 @@ let xmlFragment1 = @"<book author=""Milton, John"" title=""Paradise Lost"">"
 let xmlFragment2 = """<book author="Milton, John" title="Paradise Lost">"""
 ```
 
-Kodda satır sonları olan dizeleri kabul edilir ve son karakter satır sonundan önce bir ters eğik çizgi karakteri olmadığı sürece satır sonları tam anlamıyla yeni satırlardan yorumlanır. Ters eğik çizgi karakteri kullanıldığında, bir sonraki satırda öndeki boşlukları göz ardı edilir. Aşağıdaki kod bir dize üretir `str1` değeri olan `"abc\ndef"` ve bir dize `str2` değeri olan `"abcdef"`.
+Kodda satır sonları olan dizeleri kabul edilir ve son karakter satır sonundan önce bir ters eğik çizgi karakteri olmadığı sürece satır sonları tam anlamıyla yeni satırlardan yorumlanır. Ters eğik çizgi karakteri kullanıldığında sonraki satıra önde gelen boşluk yoksayılır. Aşağıdaki kod bir dize üretir `str1` değeri olan `"abc\ndef"` ve bir dize `str2` değeri olan `"abcdef"`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1001.fs)]
 

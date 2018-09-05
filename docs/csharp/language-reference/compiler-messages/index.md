@@ -6,21 +6,22 @@ helpviewer_keywords:
 - Visual C# compiler, errors
 - errors [C#]
 ms.assetid: 57262ab1-6c50-4f9c-81ad-9fba48477416
-ms.openlocfilehash: e67e568b67400807ba7a1668acb6b3a36b4c7f22
-ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
+ms.openlocfilehash: 2edd47682223dd94fc8dd7448465613236e67e27
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39220795"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43564631"
 ---
 # <a name="c-compiler-errors"></a>C# Derleyici Hataları
+
 Bazı C# derleyici hataları neden bir hata oluşturulur ve bazı durumlarda, açıklayan, ilgili konulara sahip. hatayı düzeltmek nasıl. Yardım belirli bir hata iletisi için kullanılabilir olup olmadığını görmek için aşağıdaki adımlardan birini kullanın.  
   
--   Hata numarasını (örneğin, CS0029) bulmak [çıkış penceresine](/visualstudio/ide/reference/output-window)ve ardından Microsoft Docs üzerinde arama.  
+- Hata numarasını (örneğin, CS0029) bulmak [çıkış penceresine](/visualstudio/ide/reference/output-window)ve ardından Microsoft Docs üzerinde arama.  
   
--   Hata numarasını (örneğin, CS0029) seçin [çıkış penceresine](/visualstudio/ide/reference/output-window)ve F1 tuşuna basın.  
+- Hata numarasını (örneğin, CS0029) seçin [çıkış penceresine](/visualstudio/ide/reference/output-window)ve F1 tuşuna basın.  
   
--   Dizin, hata numarasını **Ara** kutusu.  
+- Dizin, hata numarasını **Ara** kutusu.  
   
  Bu adımlar, hata hakkında bilgi için müşteri adayları, bu sayfanın sonuna gidin ve numarasını veya hata metnini içeren geri bildirim gönderin.  
   
@@ -28,9 +29,10 @@ Bazı C# derleyici hataları neden bir hata oluşturulur ve bazı durumlarda, a�
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)  
- [Ne yazık ki bu C# hatasıyla ilgili ayrıntı yok](../../../csharp/misc/sorry-we-don-t-have-specifics-on-this-csharp-error.md)  
- [Derleme Sayfası, Proje Tasarımcısı (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)  
- [/ warn (C# Derleyici Seçenekleri)](../../../csharp/language-reference/compiler-options/warn-compiler-option.md)  
- [/ nowarn (C# Derleyici Seçenekleri)](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)  
+- [Ne yazık ki bu C# hatasıyla ilgili ayrıntı yok](../../../csharp/misc/sorry-we-don-t-have-specifics-on-this-csharp-error.md)  
+- [Derleme Sayfası, Proje Tasarımcısı (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)  
+- [/ warn (C# Derleyici Seçenekleri)](../../../csharp/language-reference/compiler-options/warn-compiler-option.md)  
+- [/ nowarn (C# Derleyici Seçenekleri)](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md)

@@ -3,11 +3,11 @@ title: Kanalı önbelleğe alma ile Gönder
 ms.date: 03/30/2017
 ms.assetid: e69a2502-25cb-43bf-b8d2-95fbdecb41cb
 ms.openlocfilehash: 619088def1f5e443a31244516655d75d1e25c9cb
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43475861"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43503821"
 ---
 # <a name="channel-caching-with-send"></a>Kanalı önbelleğe alma ile Gönder
 <xref:System.ServiceModel.Activities.SendMessageChannelCache> İle kanalı önbelleğe alma farklı düzeylerine sahip kullanıcıların sağlayan <xref:System.ServiceModel.Activities.Send> ve <xref:System.ServiceModel.Activities.SendParametersContent> etkinlikler. Örnek düzeyi önbelleğe alma varsayılan olarak etkindir ve bu örnek, aşağıdaki özellikleri gösterir:  

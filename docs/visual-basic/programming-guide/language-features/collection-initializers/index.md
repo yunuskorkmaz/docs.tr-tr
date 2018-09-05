@@ -7,11 +7,11 @@ helpviewer_keywords:
 - collection initializers [Visual Basic]
 ms.assetid: a9290329-77b0-4fdf-ae75-8fc17287f469
 ms.openlocfilehash: e844a673f1a60d5a151a6ae612d4af7a6712eef4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43417556"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43508350"
 ---
 # <a name="collection-initializers-visual-basic"></a>Koleksiyon Başlatıcıları (Visual Basic)
 *Koleksiyon başlatıcıları* bir koleksiyon oluşturun ve başlangıç değer kümesi ile doldurmak sağlayan bir kısaltılmış sözdizimi sağlar. Koleksiyon başlatıcıları, bilinen değerler, örneğin, menü seçeneklerini veya kategoriler, başlangıç bir sayısal değer kümesi, bir statik bir gün veya ay adları veya coğrafi konumları gibi gibi dize listesi listesi koleksiyonundan oluştururken kullanışlı bir doğrulama için kullanılan durumların listesi.  

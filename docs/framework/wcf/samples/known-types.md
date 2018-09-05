@@ -2,19 +2,20 @@
 title: Bilinen Türler
 ms.date: 03/30/2017
 ms.assetid: 88d83720-ca38-4b2c-86a6-f149ed1d89ec
-ms.openlocfilehash: 003f2e39804bb393c9d8c54a6fc208fdd1b22e97
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ec1dfa426c19b5471acb1c359f5068854fa8aa71
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43554956"
 ---
 # <a name="known-types"></a>Bilinen Türler
-Bu örnek, bir veri sözleşmesi türetilmiş türler hakkında bilgi belirtmek gösterilmiştir. Veri sözleşmeleri için ve Hizmetleri'nden yapılandırılmış veri iletmek sağlar. Nesne odaklı programlama içinde başka bir türünden devralan bir tür özgün türü yerine kullanılabilir. Hizmet odaklı programlamada türleri yerine şemaları bildirilmesi ve bu nedenle, türleri arasındaki ilişkiyi korunmaz. <xref:System.Runtime.Serialization.KnownTypeAttribute> Özniteliği veri sözleşmede dahil edilecek türetilmiş türler hakkında bilgi sağlar. Bu mekanizma kullanılmazsa, türetilmiş bir tür gönderilen veya değiştirilemez bir taban türü beklenirken aldı.  
+Bu örnek, bir veri sözleşmesi türetilmiş türleri hakkında bilgi belirtmek nasıl gösterir. Veri sözleşmeleri, yapılandırılmış veriler için ve hizmetlerden geçmesine izin verin. Nesne yönelimli programlama, başka bir türünden devralan bir tür, özgün türü yerine kullanılabilir. Hizmet yönelimli programlama, türleri yerine şemaları iletildiği ve bu nedenle, türleri arasındaki ilişkiyi korunmaz. <xref:System.Runtime.Serialization.KnownTypeAttribute> Özniteliği veri sözleşmesi içerisinde bulunan için türetilmiş türleri hakkında bilgi sağlar. Bu mekanizma kullanılmıyorsa, türetilmiş bir tür gönderilen veya olamaz bir taban türü beklenirken aldı.  
   
 > [!NOTE]
->  Kurulum yordamı ve yapı yönergeleri Bu örnek için bu konunun sonunda yer alır.  
+>  Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.  
   
- Hizmeti için hizmet sözleşmesi, aşağıdaki örnek kodda gösterildiği gibi karmaşık numaralar kullanır.  
+ Aşağıdaki örnek kodda gösterildiği gibi hizmeti için hizmet sözleşmesi karmaşık sayılar kullanır.  
   
 ```  
 // Define a service contract.  
@@ -32,7 +33,7 @@ public interface ICalculator
 }  
 ```  
   
- <xref:System.Runtime.Serialization.DataContractAttribute> Ve <xref:System.Runtime.Serialization.DataMemberAttribute> uygulanan `ComplexNumber` sınıfının hangi alanların istemci ile hizmet arasında geçirilen gösteren sınıf. Türetilmiş `ComplexNumberWithMagnitude` sınıfı, yerine kullanılabilir `ComplexNumber`. <xref:System.Runtime.Serialization.KnownTypeAttribute> Özniteliği `ComplexNumber` türü bu gösterir.  
+ <xref:System.Runtime.Serialization.DataContractAttribute> Ve <xref:System.Runtime.Serialization.DataMemberAttribute> uygulanan `ComplexNumber` sınıf hangi alanları istemci ile hizmet arasında geçirilen göstermek için sınıf. Türetilmiş `ComplexNumberWithMagnitude` sınıfı yerine kullanılabilir `ComplexNumber`. <xref:System.Runtime.Serialization.KnownTypeAttribute> Özniteliği `ComplexNumber` türü bu gösterir.  
   
 ```  
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -52,7 +53,7 @@ public class ComplexNumber
 }  
 ```  
   
- `ComplexNumberWithMagnitude` Türü türetilen `ComplexNumber` ancak bir ek veri üyesi ekler `Magnitude`.  
+ `ComplexNumberWithMagnitude` Tür türetilir `ComplexNumber` ancak bir ek veri üyesi ekler `Magnitude`.  
   
 ```  
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -70,7 +71,7 @@ public class ComplexNumberWithMagnitude : ComplexNumber
 }  
 ```  
   
- Bilinen türler özelliği tanıtmak için hizmet gibi içinde uygulanır döndürdüğü şekilde bir `ComplexNumberWithMagnitude` yalnızca toplama ve çıkarma için. (Sözleşme belirtir olsa bile `ComplexNumber`, nedeniyle izin verilen `KnownTypeAttribute` özniteliği). Çarpma ve bölme hala temel dönmek `ComplexNumber` türü.  
+ Bilinen türler özelliği göstermek için hizmet gibi içinde uygulanan döndürdüğü şekilde bir `ComplexNumberWithMagnitude` yalnızca toplama ve çıkarma için. (Sözleşme belirtmesine rağmen `ComplexNumber`, bu nedenle izin `KnownTypeAttribute` özniteliği). Çarpma ve bölme hala temel dönüş `ComplexNumber` türü.  
   
 ```  
 public class DataContractCalculatorService : IDataContractCalculator  
@@ -113,7 +114,7 @@ public class DataContractCalculatorService : IDataContractCalculator
 }  
 ```  
   
- İstemcide, hizmet sözleşmesi ve veri sözleşmesi tarafından oluşturulan kaynak dosya generatedClient.cs tanımlanan [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) hizmeti meta veriler. Çünkü <xref:System.Runtime.Serialization.KnownTypeAttribute> özniteliği belirtilen hizmetin veri sözleşmede istemci hem de alabilir `ComplexNumber` ve `ComplexNumberWithMagnitude` sınıfları hizmetini kullanırken. İstemci var olup olmadığını algılar bir `ComplexNumberWithMagnitude` ve uygun çıkış oluştur:  
+ İstemcide, hem hizmet sözleşmesi hem de veri anlaşması tarafından üretilen kaynak dosyası generatedClient.cs tanımlanan [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) hizmeti meta veriler. Çünkü <xref:System.Runtime.Serialization.KnownTypeAttribute> özniteliği, hizmetin veri sözleşmede, istemci her ikisi de alabilir belirtilirse `ComplexNumber` ve `ComplexNumberWithMagnitude` hizmeti kullanırken sınıfları. İstemci var olup olmadığını algılayan bir `ComplexNumberWithMagnitude` ve uygun çıktıyı oluşturur:  
   
 ```  
 // Create a client  
@@ -138,7 +139,7 @@ else
 }  
 ```  
   
- Örneği çalıştırdığınızda, isteklerin ve yanıtların işleminin istemci konsol penceresinde görüntülenir. Bir büyüklük toplama ve çıkarma yazdırılır ancak değil çarpma ve bölme biçimini nedeniyle için hizmet uygulanmıştır unutmayın. İstemcisi penceresinde istemciyi aşağı kapatmak için ENTER tuşuna basın.  
+ Örneği çalıştırdığında istek ve yanıtların işlemin istemci konsol penceresinde görüntülenir. Bir boyuta, toplama ve çıkarma için yazdırılır ancak değil çarpma ve bölme biçimi nedeniyle için hizmet uygulanmıştır unutmayın. İstemci bilgisayarı için istemci penceresinde ENTER tuşuna basın.  
   
 ```  
 Add(1 + 2i, 3 + 4i) = 4 + 6i  
@@ -153,20 +154,20 @@ No magnitude was sent from the service
     Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örnek çalıştırın  
+### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Gerçekleştirmiş emin olun [kerelik Kurulum prosedürü Windows Communication Foundation örnekleri için](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Tek veya çapraz makine yapılandırmada örneği çalıştırmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\KnownTypes`  
   

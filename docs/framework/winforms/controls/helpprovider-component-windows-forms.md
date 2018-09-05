@@ -6,31 +6,31 @@ helpviewer_keywords:
 - Help [Windows Forms], displaying on Windows Forms
 - HelpProvider component [Windows Forms]
 ms.assetid: a09a6e0b-79d8-457f-bb36-86fad2beeada
-ms.openlocfilehash: 9a88e34de40d04b89b909afeb8a9b273078dd4c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 63574e6a4f7a9c5a1c2bcb267c64baa5c5e392f3
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524163"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43658957"
 ---
 # <a name="helpprovider-component-windows-forms"></a>HelpProvider Bileşeni (Windows Forms)
-Windows Forms `HelpProvider` bileşen bir HTML Yardımı 1.x Yardım dosyası (HTML Yardım Atölyesi ile üretilen bir .chm dosyasını veya bir .htm dosyasının) ilişkilendirmek için kullanılan Windows tabanlı uygulamanızla.  
+Windows Forms `HelpProvider` bileşen bir HTML Yardım 1.x Yardım dosyası (HTML Help Workshop ile üretilen bir .chm dosyası veya bir .htm dosyasının) ilişkilendirmek için kullanılan Windows tabanlı uygulamanızla.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [HelpProvider Bileşenine Genel Bakış](../../../../docs/framework/winforms/controls/helpprovider-component-overview-windows-forms.md)  
- Genel kavramlarını tanıtır `HelpProvider` bileşeni Windows tabanlı bir uygulama ile bir HTML Yardım dosyası ilişkilendirmenizi sağlar.  
+ Genel konseptlerini tanıtan `HelpProvider` bileşenin bir HTML Yardım dosyasını Windows tabanlı bir uygulamayla ilişkilendirmenizi sağlar.  
   
- Bkz: [yardım sistemleri Windows Forms uygulamalarında](../../../../docs/framework/winforms/advanced/help-systems-in-windows-forms-applications.md).  
+ Bkz: [sistemleri Windows Forms uygulamalarındaki Yardım](../../../../docs/framework/winforms/advanced/help-systems-in-windows-forms-applications.md).  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Forms.HelpProvider>  
- Bu sınıf tanımlar ve tüm üyeleri bağlantılar içerir.  
+ Bu sınıf açıklar ve tüm üyeleri için bağlantılar içerir.  
   
  <xref:System.Windows.Forms.Help>  
- Bu sınıf tanımlar ve tüm üyeleri bağlantılar içerir.  
+ Bu sınıf açıklar ve tüm üyeleri için bağlantılar içerir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Windows Forms denetimleri, tam bir listesi ile bunların kullanılması hakkında bilgi için bağlantılar sağlar.  
+ Windows Forms denetimlerini, tam bir listesi, kullanımları hakkında bilgi için bağlantılar sağlar.  
   
- Ayrıca bkz. [Windows Forms uygulamalarındaki yardım sistemleri](http://msdn.microsoft.com/library/55dct0a1\(v=vs.110\)).
+ Ayrıca bkz: [Windows Forms uygulamalarındaki yardım sistemleri](https://msdn.microsoft.com/library/55dct0a1\(v=vs.110\)).

@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: bb3cb022-637e-49fd-92e8-6766038affa7
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 74bf0d14b0acfd8a5382575d2ee1e51174b6b6b8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0e5a22d6e517bc7a05f74089b7c8ece8c8a4bd39
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752799"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43558678"
 ---
 # <a name="ltsecuritygt-of-ltnetnamedpipebindinggt"></a>&lt;netNamedPipeBinding&gt; &lt;güvenliği&gt;
-Bağlama için güvenlik ayarlarını tanımlar.  
+Bir bağlama için güvenlik ayarlarını tanımlar.  
   
  \<system.ServiceModel>  
 \<bağlamaları >  
@@ -39,7 +39,7 @@ Bağlama için güvenlik ayarlarını tanımlar.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|mod|Bu bağlama uygulanan güvenlik türünü belirtir. Geçerli değerler şunlardır:<br /><br /> -Hiçbiri: Bu güvenlik devre dışı bırakır.<br />-Taşıma: Güvenlik temel tabanlı taşıma güvenliği sağlanır. Bu mod koruma düzeyiyle denetlemek mümkündür.<br />-Taşıma varsayılan değerdir. Bu öznitelik türünde <xref:System.ServiceModel.NetNamedPipeSecurityMode>.|  
+|mod|Bu bağlama için uygulanan güvenlik türünü belirtir. Geçerli değerler şunlardır:<br /><br /> -Yok: Bu güvenlik devre dışı bırakır.<br />-Taşıma: Temel alınan temel aktarım güvenliği kullanarak güvenliği sağlanır. Bu mod koruma düzeyiyle denetlemek mümkündür.<br />-Aktarım varsayılan değerdir. Bu öznitelik türünde <xref:System.ServiceModel.NetNamedPipeSecurityMode>.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
@@ -62,5 +62,5 @@ Bağlama için güvenlik ayarlarını tanımlar.
  [Kimlik Bilgisi Türü Seçme](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
  [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)  
  [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Windows Communication Foundation Hizmetleri ve istemcileri yapılandırmak için bağlamaları kullanma](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Windows Communication Foundation Hizmetleri ve istemcileri yapılandırmak için bağlamaları kullanma](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<bağlama >](../../../../../docs/framework/misc/binding.md)

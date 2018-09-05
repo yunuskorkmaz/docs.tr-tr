@@ -9,19 +9,19 @@ helpviewer_keywords:
 - check boxes [Windows Forms], determining checked state
 - CheckedListBox control [Windows Forms], determining checked state
 ms.assetid: 178b477d-27c9-489c-8914-44a9623a4d41
-ms.openlocfilehash: 98b4ef7c4ac73e1560bd5c68f22898e46585d082
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 70884051ba440c5d0f9d282b7edf189c8f52807e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33531020"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43505445"
 ---
 # <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a>Nasıl yapılır: Windows Forms CheckedListBox Denetimindeki İşaretli Öğeleri Belirleme
-Windows Forms'ta veri sunma zaman <xref:System.Windows.Forms.CheckedListBox> denetimi, ya da yinelemek depolanan koleksiyonu aracılığıyla <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> özelliği ya da listesini kullanarak aracılığıyla adım <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> hangi öğelerin denetlenir belirlemek amacıyla yöntemi. <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> Yöntem bağımsız değişkeni olarak bir öğe dizin numarasını alıp döndüren `true` veya `false`. Ne bekleyebilir, aykırı <xref:System.Windows.Forms.ListBox.SelectedItems%2A> ve <xref:System.Windows.Forms.ListBox.SelectedIndices%2A> özellikleri değil belirlemek hangi öğelerin denetlenir; bunlar hangi öğeler vurgulanır belirleyin.  
+Bir Windows Forms veri sunarken <xref:System.Windows.Forms.CheckedListBox> denetimi, ya da yineleme depolanan koleksiyonu aracılığıyla <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> özellik ya da liste aracılığıyla adım <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> hangi öğelerin denetlenir belirlemek için yöntemi. <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> Yöntemi ve bağımsız değişkeni olarak bir öğe dizin numarasını alır ve döndürür `true` veya `false`. Beklediğiniz, aykırı <xref:System.Windows.Forms.ListBox.SelectedItems%2A> ve <xref:System.Windows.Forms.ListBox.SelectedIndices%2A> özelliklerini değil belirleme hangi öğelerin denetlenir; hangi öğelerin vurgulanmış belirlerler.  
   
 ### <a name="to-determine-checked-items-in-a-checkedlistbox-control"></a>CheckedListBox denetimindeki işaretli öğeleri belirleme  
   
-1.  Yinelemek <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> koleksiyonu sıfır tabanlı olduğundan 0'den başlayan koleksiyonu. Bu yöntem maddeye işaretli öğeleri, genel listesinde olmayan listesinde erişmenizi sağlayan olduğunu unutmayın. Listedeki ilk öğe onaylanmamış ve ikinci madde işaretli değilse, aşağıdaki kodu gibi metin görüntülemesi için "Checked öğesi 1 MyListItem2 =".  
+1.  Yinelemek <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> koleksiyon, koleksiyon sıfır tabanlı olduğundan 0'dan başlayan. Alınan öğeleri, genel liste bu yöntem listesinde öğe sayısını verir dikkat edin. Listedeki ilk öğeye işaretli ve ikinci öğenin kullanıma, aşağıdaki kodu gibi bir metnin görüntülenmesi "işaretlenmiş öğe 1 MyListItem2 =".  
   
     ```vb  
     ' Determine if there are any items checked.  
@@ -42,11 +42,11 @@ Windows Forms'ta veri sunma zaman <xref:System.Windows.Forms.CheckedListBox> den
     {  
        // If so, loop through all checked items and print results.  
        string s = "";  
-       for(int x = 0; x <= checkedListBox1.CheckedItems.Count - 1 ; x++)  
+       for(int x = 0; x < checkedListBox1.CheckedItems.Count ; x++)  
        {  
           s = s + "Checked Item " + (x+1).ToString() + " = " + checkedListBox1.CheckedItems[x].ToString() + "\n";  
        }  
-    MessageBox.Show (s);  
+       MessageBox.Show(s);  
     }  
     ```  
   
@@ -56,7 +56,7 @@ Windows Forms'ta veri sunma zaman <xref:System.Windows.Forms.CheckedListBox> den
     {  
        // If so, loop through all checked items and print results.  
        String ^ s = "";  
-       for(int x = 0; x <= checkedListBox1->CheckedItems->Count - 1; x++)  
+       for(int x = 0; x < checkedListBox1->CheckedItems->Count; x++)  
        {  
           s = String::Concat(s, "Checked Item ", (x+1).ToString(),  
              " = ", checkedListBox1->CheckedItems[x]->ToString(),  
@@ -68,7 +68,7 @@ Windows Forms'ta veri sunma zaman <xref:System.Windows.Forms.CheckedListBox> den
   
      - veya -  
   
-2.  Adım adım <xref:System.Windows.Forms.CheckedListBox.Items%2A> koleksiyon, koleksiyon sıfır tabanlı, olduğundan 0'den başlayan ve çağrı <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> her öğe için bir yöntem. Not ilk öğesi, listenin işaretli şekilde bu yöntem, öğe sayısı genel listesinde verir ve ikinci öğe seçildiğinde, aşağıdakine benzer görüntülenir "2 öğesi MyListItem2 =".  
+2.  Adım adım <xref:System.Windows.Forms.CheckedListBox.Items%2A> koleksiyon, koleksiyon sıfır tabanlı, olduğundan 0'dan başlayan ve çağrı <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> her öğe için yöntemi. Not ilk öğesi, liste işaretli için bu yöntem, öğe sayısı genel listesinde, size sunar ve ikinci öğenin seçili olduğunda, aşağıdaki gibi görüntülenir "öğe 2 MyListItem2 =".  
   
     ```vb  
     Dim i As Integer  

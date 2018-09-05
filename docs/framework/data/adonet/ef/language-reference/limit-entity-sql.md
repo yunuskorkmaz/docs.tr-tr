@@ -3,11 +3,11 @@ title: SINIR (varlık SQL)
 ms.date: 03/30/2017
 ms.assetid: c22ffede-0a52-44d1-99b9-4a91e651e1b9
 ms.openlocfilehash: 4534148279ece3b00c45f61c6a35a74a64ca3b6f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43406893"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43505492"
 ---
 # <a name="limit-entity-sql"></a>SINIR (varlık SQL)
 Fiziksel disk belleği, ORDER BY yan tümcesinde LIMIT alt yan tümcesinin kullanılarak gerçekleştirilebilir. From tümcesi ORDER BY sınırı ayrı olarak kullanılamaz.  

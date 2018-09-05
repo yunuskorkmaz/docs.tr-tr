@@ -18,39 +18,39 @@ helpviewer_keywords:
 ms.assetid: 138db892-665d-4ba8-9cae-d8d91c4a8f39
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 520c21d4df5c340b41a8b1e9055b3fadddfdf6e3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 038aad2c41f655d0699dab33df276132a70e3ede
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590374"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43535314"
 ---
 # <a name="ushort-data-type-visual-basic"></a>UShort veri türü (Visual Basic)
 
-Değer 0'dan 65.535 arasında değişen ayrı tutma işaretsiz 16-bit (2-bayt) tamsayı.  
+(Değeri 0 ile 65.535 arasında değişen ayrı tutma imzasız 16-bit 2-bayt) tamsayıları.  
   
 ## <a name="remarks"></a>Açıklamalar
 
- Kullanım `UShort` veri türü için çok büyük ikili verileri içerecek şekilde `Byte`.  
+ Kullanım `UShort` veri türü için çok büyük ikili veri içermesini `Byte`.  
   
  Varsayılan değer olan `UShort` 0'dır.  
 
 # <a name="literal-assignments"></a>Değişmez değer atamaları
 
-Bildirme ve başlatma bir `UShort` değişken bir ondalık değişmez değeri, onaltılık değişmez değeri bir sekizlik değişmez değeri atama veya (Visual Basic 2017 ile ikili bir hazır değer başlayarak). Değişmez değer tamsayı aralığı dışında ise `UShort` (diğer bir deyişle, bu ise değerinden <xref:System.UInt16.MinValue?displayProperty=nameWithType> veya daha büyük <xref:System.UInt16.MaxValue?displayProperty=nameWithType>, derleme hatası oluşur.
+Bildirmek ve başlatmak bir `UShort` değişkenini, bir ondalık sabit değeri, onaltılık bir sabit değer, sekizlik bir sabit değer atama ya da (ikili değişmez değer Visual Basic 2017'den itibaren). Tamsayı sabit değeri aralığının dışında ise `UShort` (diğer bir deyişle, bu ise kısa <xref:System.UInt16.MinValue?displayProperty=nameWithType> veya ondan <xref:System.UInt16.MaxValue?displayProperty=nameWithType>, bir derleme hatası oluşur.
 
-Aşağıdaki örnekte, ondalık sayı olarak, onaltılık temsil 65,034 tamsayılar eşit ve ikili değişmez değerler atanır `UShort` değerleri.
+Aşağıdaki örnekte, tamsayılar ondalık, onaltılık, gösterilen 65,034 eşit ve ikili sabit değerler atanır `UShort` değerleri.
   
 [!code-vb[UShort](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UShort)]
 
 > [!NOTE]
-> Önek kullanması `&h` veya `&H` bir onaltılık değişmez değeri, öneki belirtmek için `&b` veya `&B` ikili bir hazır değer ve öneki belirtmek için `&o` veya `&O` sekizlik değişmez değeri belirtmek için. Ondalık değişmez değerler, önek vardır.
+> Önek kullanın `&h` veya `&H` önek onaltılık bir sabit belirtmek için `&b` veya `&B` ikili sabit ve öneki belirtmek için `&o` veya `&O` sekizlik bir sabit belirtmek için. Ondalık değişmez değerler, önek vardır.
 
-Visual Basic 2017 ile başlayarak, alt çizgi karakteri de kullanabilirsiniz `_`, okunabilirliğini artırmak için bir basamak ayırıcı olarak, aşağıdaki örnekte görüldüğü gibi.
+Visual Basic 2017'den itibaren alt çizgi karakteri de kullanabilirsiniz `_`, okunabilirliği artırmak için bir basamak ayırıcı olarak, aşağıdaki örnekte görüldüğü gibi.
 
 [!code-vb[UShort](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UShortS)]
 
-Visual Basic 15,5 ile başlayarak, alt çizgi karakterini de kullanabilirsiniz (`_`) öneki ve onaltılık, ikili veya sekizli basamak arasında başında ayırıcı olarak. Örneğin:
+Visual Basic 15.5 ile başlayarak, alt çizgi karakteri de kullanabilirsiniz (`_`) öneki ve onaltılık, ikili veya sekizlik basamak arasında önde gelen bir ayırıcı olarak. Örneğin:
 
 ```vb
 Dim number As UShort = &H_FF8C
@@ -66,19 +66,19 @@ Dim number = &H_5826us
 
 ## <a name="programming-tips"></a>Programlama ipuçları
   
--   **Negatif sayılar.** Çünkü `UShort` imzasız bir tür negatif bir sayı temsil edilemez. Tekli eksi kullanıyorsanız (`-`) yazmak için değerlendirilen bir ifade işlecinin `UShort`, Visual Basic ifade dönüştürür `Integer` ilk.  
+-   **Negatif sayılar.** Çünkü `UShort` işaretsiz bir türü, negatif bir sayıyı temsil edemez. Tek işlenenli eksi işareti kullanırsanız (`-`) yazmak için değerlendirilen bir ifade işlecinin `UShort`, Visual Basic ifade dönüştürür `Integer` ilk.  
   
--   **CLS uyumluluğu.** `UShort` Veri türü değil parçası [ortak dil belirtimi](http://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), CLS uyumlu kod kullandığı bir bileşen kullanamayacaklarını şekilde.
+-   **CLS uyumluluğu.** `UShort` Veri türü değil parçası [ortak dil belirtimi](http://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), böylece onu kullanan bileşen CLS uyumlu kod kullanamıyor.
   
--   **Genişletme.** `UShort` Veri türü widens için `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, ve `Double`. Bu dönüştürebilirsiniz anlamına gelir `UShort` karşılaşmadan olmadan bu türdeki herhangi bir <xref:System.OverflowException?displayProperty=nameWithType> hata.  
+-   **Genişletme.** `UShort` Widens veri türü için `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, ve `Double`. Yani dönüştürebilirsiniz `UShort` karşılaşmadan bu türlerden birine bir <xref:System.OverflowException?displayProperty=nameWithType> hata.  
   
--   **Karakterleri yazın.** Değişmez değer türü karakterleri ekleme `US` bir hazır değer zorlar `UShort` veri türü. `UShort` hiçbir tanımlayıcı türü karakteri var.  
+-   **Tür karakterleri.** Değişmez değer türü karakterleri ekleme `US` sabit değerine zorlar `UShort` veri türü. `UShort` hiçbir tanımlayıcı türü karakteri var.  
   
--   **Framework türü.** .NET Framework'teki karşılık gelen tür <xref:System.UInt16?displayProperty=nameWithType> yapısı.  
+-   **Çerçeve türü.** .NET Framework içinde karşılık gelen türü <xref:System.UInt16?displayProperty=nameWithType> yapısı.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.UInt16>  
- [Veri Türleri](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Veri Türleri](../../../visual-basic/language-reference/data-types/index.md)  
  [Tür Dönüştürme İşlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [Dönüştürme Özeti](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
  [Nasıl yapılır: İmzalanmamış Türler İsteyen Bir Windows İşlevi Çağırma](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  

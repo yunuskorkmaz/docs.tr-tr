@@ -5,37 +5,37 @@ helpviewer_keywords:
 - scaling [WPF], elements
 - graphics [WPF], scaling elements
 ms.assetid: 18158d94-bbe7-4f6a-814e-84d27fa748bf
-ms.openlocfilehash: f39bb4408e5b61912da30088de7c9f62587bc278
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 44c638b58d828e5beb0b9de5c7bb0b67c8e82d87
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562173"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43553177"
 ---
 # <a name="how-to-scale-an-element"></a>Nasıl yapılır: Öğe Ölçeklendirme
-Bu örnek nasıl kullanılacağını gösteren bir <xref:System.Windows.Media.ScaleTransform> bir öğeyi ölçeklendirmek için.  
+Bu örnek nasıl kullanılacağını gösterir. bir <xref:System.Windows.Media.ScaleTransform> öğe ölçeklendirme için.  
   
- Kullanım <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> ve <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> Belirttiğiniz faktörle öğeyi yeniden boyutlandırmak için özellikler. Örneğin, bir <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> 1.5 değeri öğenin özgün genişliğinin yüzde 150'si uzatır. A <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> 0,5 değeri öğenin yüksekliğini yüzde 50 küçültür.  
+ Kullanım <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> ve <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> Belirttiğiniz faktörle öğeyi yeniden boyutlandırmak için özellikler. Örneğin, bir <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> özgün genişliğinin yüzde 150 öğesine 1.5 değerini uzatır. A <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> 0,5 değeri öğenin yüksekliğini yüzde 50 küçültür.  
   
- Kullanım <xref:System.Windows.Media.ScaleTransform.CenterX%2A> ve <xref:System.Windows.Media.ScaleTransform.CenterY%2A> ölçeklendirme işlemi merkezi noktası belirtmek için özellikleri. Varsayılan olarak, bir <xref:System.Windows.Media.ScaleTransform> dikdörtgen sol üst köşesindeki karşılık gelir (0,0) noktasında ortalanır. Bu öğe taşıma ve ayrıca uyguladığınızda olduğundan daha büyük görünmesini yapma etkisi bir <xref:System.Windows.Media.Transform>, nesnenin bulunduğu koordinat değiştirin.  
+ Kullanım <xref:System.Windows.Media.ScaleTransform.CenterX%2A> ve <xref:System.Windows.Media.ScaleTransform.CenterY%2A> ölçeklendirme işleminin merkez noktası belirtmek için özellikleri. Varsayılan olarak, bir <xref:System.Windows.Media.ScaleTransform> dikdörtgenin sol üst köşesinin karşılık gelir (0,0) noktasında ortalanır. Bu öğeyi taşımak ve ayrıca uyguladığınızda olduğundan daha büyük görünmesini sağlama etkisi bir <xref:System.Windows.Media.Transform>, nesnenin bulunduğu koordinat değiştirin.  
   
- Aşağıdaki örnek kullanan bir <xref:System.Windows.Media.ScaleTransform> 50-tarafından-50 boyutunu çift <xref:System.Windows.Shapes.Rectangle>. <xref:System.Windows.Media.ScaleTransform> Her ikisi için 0 (varsayılan) değerine sahip <xref:System.Windows.Media.ScaleTransform.CenterX%2A> ve <xref:System.Windows.Media.ScaleTransform.CenterY%2A>.  
+ Aşağıdaki örnekte bir <xref:System.Windows.Media.ScaleTransform> boyutu 50-tarafından-50 çift <xref:System.Windows.Shapes.Rectangle>. <xref:System.Windows.Media.ScaleTransform> Her ikisi için 0 (varsayılan) değerini içeren <xref:System.Windows.Media.ScaleTransform.CenterX%2A> ve <xref:System.Windows.Media.ScaleTransform.CenterY%2A>.  
   
 ## <a name="example"></a>Örnek  
  [!code-xaml[transformsSample#21](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/ScaleTransformExample.xaml#21)]  
   
- Genellikle, ayarladığınız <xref:System.Windows.Media.ScaleTransform.CenterX%2A> ve <xref:System.Windows.Media.ScaleTransform.CenterY%2A> ölçeklendirilir nesne merkezine: (<xref:System.Windows.FrameworkElement.Width%2A>/2,  <xref:System.Windows.FrameworkElement.Height%2A> /2).  
+ Genellikle, ayarladığınız <xref:System.Windows.Media.ScaleTransform.CenterX%2A> ve <xref:System.Windows.Media.ScaleTransform.CenterY%2A> ölçeklendirilir nesnenin Merkezi: (<xref:System.Windows.FrameworkElement.Width%2A>/2,  <xref:System.Windows.FrameworkElement.Height%2A> /2).  
   
- Aşağıdaki örnek başka gösterir <xref:System.Windows.Shapes.Rectangle> boyutunda; çift ancak, bu <xref:System.Windows.Media.ScaleTransform> her ikisi için 25 değerine sahip <xref:System.Windows.Media.ScaleTransform.CenterX%2A> ve <xref:System.Windows.Media.ScaleTransform.CenterY%2A>, dikdörtgenin merkezine karşılık gelir.  
+ Aşağıdaki örnek başka gösterir <xref:System.Windows.Shapes.Rectangle> ; boyutundaki işledi ancak bu <xref:System.Windows.Media.ScaleTransform> her ikisi için 25 değerini içeren <xref:System.Windows.Media.ScaleTransform.CenterX%2A> ve <xref:System.Windows.Media.ScaleTransform.CenterY%2A>, dikdörtgen merkezine karşılık gelir.  
   
  [!code-xaml[transformsSample#22](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/ScaleTransformExample.xaml#22)]  
   
- İkisi arasındaki farkı aşağıda gösterilmiştir <xref:System.Windows.Media.ScaleTransform> işlemleri. Noktalı çizgi ölçeklendirmeden önce boyutunu ve konumunu dikdörtgenin gösterir.  
+ İkisi arasındaki fark aşağıdaki çizimde <xref:System.Windows.Media.ScaleTransform> operations. Noktalı çizgi ölçeklendirmeden önce boyutunu ve konumunu dikdörtgenin gösterir.  
   
- ![farklı merkez nokta 2 x ölçekler](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-scalecenter.gif "wcpsdk_graphicsmm_scalecenter")  
-Aynı ScaleX ve ScaleY değerleri ancak farklı merkezleri ile iki ScaleTransform işlemleri  
+ ![Farklı orta noktaları 2 x ölçekler](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-scalecenter.gif "wcpsdk_graphicsmm_scalecenter")  
+Aynı ScaleX ve ScaleY değerleri ancak farklı olan iki ScaleTransform işlem  
   
- Tam bir örnek için bkz: [2-D dönüşümler örnek](http://go.microsoft.com/fwlink/?LinkID=158252).  
+ Tam bir örnek için bkz. [2B dönüşüm örnek](https://go.microsoft.com/fwlink/?LinkID=158252).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Media.Transform>  

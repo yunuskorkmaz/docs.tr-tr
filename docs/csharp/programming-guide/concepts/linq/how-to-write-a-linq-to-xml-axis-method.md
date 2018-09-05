@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: bir LINQ yazma XML eksen yöntemine (C#)'
+title: 'Nasıl yapılır: LINQ to XML eksen yöntemi (C#) yazma'
 ms.date: 07/20/2015
 ms.assetid: 50aef06b-1d22-4718-a18a-21237e26d7c1
-ms.openlocfilehash: 51adbc9f0771f8925e5e16c61f48bbb5f8bedf05
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 74ed60fa3c78bcbc233e27868b1abe357a85c62a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322789"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510539"
 ---
-# <a name="how-to-write-a-linq-to-xml-axis-method-c"></a>Nasıl yapılır: bir LINQ yazma XML eksen yöntemine (C#)
-Koleksiyonlar bir XML ağacından almak için kendi eksen yöntemleri yazabilirsiniz. Bunu yapmak için en iyi yöntemleri öğelerin veya özniteliklerin bir koleksiyonu döndüren uzantı metodu yazma için biridir. Öğelerin veya özniteliklerin uygulamanızın gereksinimlerine bağlı olarak, belirli alt kümelerini döndürmek için genişletme yöntemi yazabilirsiniz.  
+# <a name="how-to-write-a-linq-to-xml-axis-method-c"></a>Nasıl yapılır: LINQ to XML eksen yöntemi (C#) yazma
+XML ağacından koleksiyonları almak için kendi eksen yöntemler yazabilirsiniz. Bunu yapmak için en iyi yollarından biri öğe ve özniteliklerin koleksiyonunu döndüren bir uzantı metodu yazma sağlamaktır. Öğeler veya öznitelikleri, uygulamanızın gereksinimlerine göre belirli alt kümelerine döndürülecek genişletme yönteminizin yazabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, iki genişletme yöntemleri kullanır. İlk genişletme yöntemi `GetXPath`, üzerinde çalıştığı <xref:System.Xml.Linq.XObject>ve değerlendirildiğinde döndüren bir XPath ifadesi düğüm veya öznitelik döndürür. İkinci genişletme yöntemi `Find`, üzerinde çalıştığı <xref:System.Xml.Linq.XElement>. Bir koleksiyonunu döndürür <xref:System.Xml.Linq.XAttribute> nesneleri ve <xref:System.Xml.Linq.XElement> bazı içeren nesneleri belirtilen metin.  
+ Aşağıdaki örnek, iki uzantı yöntemi kullanır. İlk genişletme yöntemi `GetXPath`, üzerinde çalıştığı <xref:System.Xml.Linq.XObject>ve değerlendirildiğinde döndüren bir XPath ifadesi bir düğüm veya öznitelik döndürür. İkinci bir genişletme yöntemi `Find`, üzerinde çalıştığı <xref:System.Xml.Linq.XElement>. Bir koleksiyonunu döndürür <xref:System.Xml.Linq.XAttribute> nesneleri ve <xref:System.Xml.Linq.XElement> bazı içeren nesneleri belirtilen metin.  
   
- Bu örnekte aşağıdaki XML belgesi kullanır: [örnek XML dosyası: birden çok satınalma siparişi (LINQ-XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ Bu örnekte aşağıdaki XML belgesi: [örnek XML dosyası: birden fazla satın alma siparişi (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```csharp  
 public static class MyExtensions  
@@ -291,5 +291,6 @@ class Program
 1999-10-22  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Gelişmiş sorgu teknikler (LINQ-XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [Gelişmiş sorgu teknikleri (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

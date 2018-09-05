@@ -2,32 +2,32 @@
 title: Visual Studio'da (C#) ifade ağaçlarında hata ayıklama
 ms.date: 07/20/2015
 ms.assetid: 1369fa25-0fbd-4b92-98d0-8df79c49c27a
-ms.openlocfilehash: 0b3017f2800a2eb7332028b9cfe6ed9877222087
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd3008ffd1364eec3938053bd7d37f95b8a1ebc0
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340076"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509629"
 ---
 # <a name="debugging-expression-trees-in-visual-studio-c"></a>Visual Studio'da (C#) ifade ağaçlarında hata ayıklama
-Uygulamalarınızda hata ayıklamak zaman ifade ağaçları içeriği ve yapısı analiz edebilirsiniz. İfade ağaç yapısı hızlı bir genel bakış almak için kullanabileceğiniz `DebugView` özelliği yalnızca hata ayıklama modunda kullanılabilir. Hata ayıklama hakkında daha fazla bilgi için bkz: [Visual Studio'da hata ayıklamayı](/visualstudio/debugger/debugging-in-visual-studio).  
+Uygulamalarınızın hata ayıklaması yaparken, yapısı ve içeriği ifade ağaçları analiz edebilirsiniz. İfade ağaç yapısı hızlı bir genel bakış edinmek için kullanabileceğiniz `DebugView` özelliği yalnızca hata ayıklama modunda kullanılabilir. Hata ayıklama hakkında daha fazla bilgi için bkz. [Visual Studio'da hata ayıklama](/visualstudio/debugger/debugging-in-visual-studio).  
   
- İfade ağaçları içeriğini daha iyi göstermek için `DebugView` özelliği Visual Studio görselleştiriciler kullanır. Daha fazla bilgi için bkz: [oluşturma özel Görselleştiriciler](/visualstudio/debugger/create-custom-visualizers-of-data).  
+ Daha iyi ifade ağaçları içeriğini temsil etmek için `DebugView` özelliği, Visual Studio görselleştiriciler kullanır. Daha fazla bilgi için [oluşturma özel Görselleştiriciler](/visualstudio/debugger/create-custom-visualizers-of-data).  
   
-### <a name="to-open-a-visualizer-for-an-expression-tree"></a>Bir ifade ağacına için Görselleştirici açmak için  
+### <a name="to-open-a-visualizer-for-an-expression-tree"></a>İfade ağacı bir görselleştiriciyi açmak için  
   
-1.  Yanında Büyüteç simgesini tıklatın `DebugView` bir ifade ağacına özelliğinin **DataTips**, **izleme** penceresinde **otomobiller** penceresinde veya **Yereller** penceresi.  
+1.  Yanında görünen Büyüteç simgesine tıklayarak `DebugView` özelliğine bir ifade ağacında **DataTips**, **izleme** penceresinde **Otolar** penceresinde veya **Yereller** penceresi.  
   
      Görselleştiriciler listesi görüntülenir.  
   
-2.  Kullanmak istediğiniz Görselleştirici'ı tıklatın.  
+2.  Kullanmak istediğiniz Görselleştirici'a tıklayın.  
   
- Aşağıdaki bölümlerde açıklandığı gibi her bir ifade türü Görselleştirici görüntülenir.  
+ Aşağıdaki bölümlerde açıklandığı gibi her ifade türü görselleştiricisi içinde görüntülenir.  
   
 ## <a name="parameterexpressions"></a>ParameterExpressions  
- <xref:System.Linq.Expressions.ParameterExpression> değişken adları başında "$" simgesiyle görüntülenir.  
+ <xref:System.Linq.Expressions.ParameterExpression> Değişken adlarının başında bir "$" simgesi ile görüntülenir.  
   
- Bir parametre bir adı yoksa, otomatik olarak oluşturulan bir ad gibi atanmış olduğu `$var1` veya `$var2`.  
+ Parametre bir adı yoksa, otomatik olarak oluşturulmuş bir adı gibi atandıktan `$var1` veya `$var2`.  
   
 ### <a name="examples"></a>Örnekler  
   
@@ -37,9 +37,9 @@ Uygulamalarınızda hata ayıklamak zaman ifade ağaçları içeriği ve yapıs�
 |`ParameterExpression numParam =  Expression.Parameter(typeof(int));`|`$var1`|  
   
 ## <a name="constantexpressions"></a>ConstantExpressions  
- İçin <xref:System.Linq.Expressions.ConstantExpression> dize, tamsayı değerleri temsil eden nesneler ve `null`, sabit değeri görüntülenir.  
+ İçin <xref:System.Linq.Expressions.ConstantExpression> dize, tamsayı değerlerini temsil eden nesneleri ve `null`, sabit değeri görüntülenir.  
   
- C# değişmez değerler olarak standart sonekleri sayısal türleri için sonek değerine eklenir. Aşağıdaki tabloda, çeşitli sayısal türler ile ilişkili soneklerini gösterir.  
+ C# sabit değer olarak standart sonekleri olan sayısal türleri için sonek değerine eklenir. Aşağıdaki tabloda, çeşitli sayısal türler ile ilişkili soneklerini gösterir.  
   
 |Tür|Son eki|  
 |----------|------------|  
@@ -58,7 +58,7 @@ Uygulamalarınızda hata ayıklamak zaman ifade ağaçları içeriği ve yapıs�
 |`double num = 10; ConstantExpression expr = Expression.Constant(num);`|10D|  
   
 ## <a name="blockexpression"></a>BlockExpression  
- Varsa türü bir <xref:System.Linq.Expressions.BlockExpression> bloğundaki son ifade türü farklıdır nesne, türü görüntülenir `DebugInfo` köşeli özelliğinde (\< ve >). Aksi takdirde türünü <xref:System.Linq.Expressions.BlockExpression> nesnesi görüntülenmez.  
+ Varsa türünü bir <xref:System.Linq.Expressions.BlockExpression> bloğundaki son ifadenin türü nesne farklıdır, türü görüntülenen `DebugInfo` açılı ayraçlar özelliğinde (\< ve >). Aksi halde, türünü <xref:System.Linq.Expressions.BlockExpression> nesne görüntülenmez.  
   
 ### <a name="examples"></a>Örnekler  
   
@@ -68,9 +68,9 @@ Uygulamalarınızda hata ayıklamak zaman ifade ağaçları içeriği ve yapıs�
 |`BlockExpression block =  Expression.Block(typeof(Object), Expression.Constant("test"));`|`.Block<System.Object>() {`<br /><br /> `"test"`<br /><br /> `}`|  
   
 ## <a name="lambdaexpression"></a>LambdaExpression  
- <xref:System.Linq.Expressions.LambdaExpression> nesneler kendi temsilci türleri ile birlikte görüntülenir.  
+ <xref:System.Linq.Expressions.LambdaExpression> nesneler, temsilci türleri ile birlikte görüntülenir.  
   
- Lambda ifadesi bir adı yoksa, otomatik olarak oluşturulan bir ad gibi atanmış olduğu `#Lambda1` veya `#Lambda2`.  
+ Bir lambda ifadesi bir adı yoksa, otomatik olarak oluşturulmuş bir adı gibi atandıktan `#Lambda1` veya `#Lambda2`.  
   
 ### <a name="examples"></a>Örnekler  
   
@@ -80,11 +80,11 @@ Uygulamalarınızda hata ayıklamak zaman ifade ağaçları içeriği ve yapıs�
 |`LambdaExpression lambda =  Expression.Lambda<Func<int>>(Expression.Constant(1), "SampleLambda", null);`|`.Lambda SampleLambda<System.Func'1[System.Int32]>() {`<br /><br /> `1`<br /><br /> `}`|  
   
 ## <a name="labelexpression"></a>LabelExpression  
- İçin varsayılan bir değer belirtirseniz, <xref:System.Linq.Expressions.LabelExpression> nesnesi, bu değer, önce görüntülenir <xref:System.Linq.Expressions.LabelTarget> nesnesi.  
+ İçin varsayılan bir değer belirtirseniz <xref:System.Linq.Expressions.LabelExpression> nesnesi, bu değer, önce görüntülenir <xref:System.Linq.Expressions.LabelTarget> nesne.  
   
- `.Label` Belirteci etiketi başlangıcını gösterir. `.LabelTarget` Belirteci atlamak için hedef hedef gösterir.  
+ `.Label` Belirteci etiketi başlangıcını gösterir. `.LabelTarget` Belirteci atlamak için hedef hedefinin gösterir.  
   
- Bir etiket bir adı yoksa, otomatik olarak oluşturulan bir ad gibi atanmış olduğu `#Label1` veya `#Label2`.  
+ Bir etiket bir ad yoksa otomatik olarak oluşturulmuş bir adı gibi atandıktan `#Label1` veya `#Label2`.  
   
 ### <a name="examples"></a>Örnekler  
   
@@ -93,8 +93,8 @@ Uygulamalarınızda hata ayıklamak zaman ifade ağaçları içeriği ve yapıs�
 |`LabelTarget target = Expression.Label(typeof(int), "SampleLabel"); BlockExpression block = Expression.Block( Expression.Goto(target, Expression.Constant(0)), Expression.Label(target, Expression.Constant(-1)));`|`.Block() {`<br /><br /> `.Goto SampleLabel { 0 };`<br /><br /> `.Label`<br /><br /> `-1`<br /><br /> `.LabelTarget SampleLabel:`<br /><br /> `}`|  
 |`LabelTarget target = Expression.Label(); BlockExpression block = Expression.Block( Expression.Goto(target5), Expression.Label(target5));`|`.Block() {`<br /><br /> `.Goto #Label1 { };`<br /><br /> `.Label`<br /><br /> `.LabelTarget #Label1:`<br /><br /> `}`|  
   
-## <a name="checked-operators"></a>Checked işleçleri  
- Checked işleçleri işleci önünde "#" simgesiyle gösterilir. Örneğin, denetlenen Toplama işleci olarak görüntülenir `#+`.  
+## <a name="checked-operators"></a>İşaretli işleçleri  
+ İşaretli işleçler, işlecin önüne "#" sembolü ile görüntülenir. Örneğin, işaretli Toplama işleci olarak görüntülenir `#+`.  
   
 ### <a name="examples"></a>Örnekler  
   
@@ -103,7 +103,8 @@ Uygulamalarınızda hata ayıklamak zaman ifade ağaçları içeriği ve yapıs�
 |`Expression expr = Expression.AddChecked( Expression.Constant(1), Expression.Constant(2));`|`1 #+ 2`|  
 |`Expression expr = Expression.ConvertChecked( Expression.Constant(10.0), typeof(int));`|`#(System.Int32)10D`|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [İfade ağaçları (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)  
- [Visual Studio’da hata ayıklama](/visualstudio/debugger/debugging-in-visual-studio)  
- [Özel Görselleştiriciler oluşturma](/visualstudio/debugger/create-custom-visualizers-of-data)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [İfade ağaçları (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)  
+- [Visual Studio’da hata ayıklama](/visualstudio/debugger/debugging-in-visual-studio)  
+- [Özel Görselleştirici Oluşturma](/visualstudio/debugger/create-custom-visualizers-of-data)

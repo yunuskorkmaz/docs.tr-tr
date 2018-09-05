@@ -18,11 +18,11 @@ helpviewer_keywords:
 - serialization, attributes
 ms.assetid: a416192f-8102-458e-bc0a-0b8f3f784da9
 ms.openlocfilehash: 781c78fde1a8bd9c5c09f64d66f730c28e670aef
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42752143"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528148"
 ---
 # <a name="xml-serialization-with-xml-web-services"></a>XML Web Hizmetleri ile XML serileştirme
 XML serileştirme tarafından gerçekleştirilen XML Web Hizmetleri mimarisi içinde kullanılan temel aktarma mekanizması olduğunu <xref:System.Xml.Serialization.XmlSerializer> sınıfı. Bir XML Web hizmeti tarafından oluşturulan XML denetlemek için her ikisini de listelenen öznitelikleri uygulayabilirsiniz [öznitelikleri emin denetim XML serileştirme](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md) ve [öznitelikleri emin denetim kodlanmış SOAP serileştirme](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md) için sınıflar, dönüş değerleri, parametreleri ve XML Web hizmeti (.asmx) oluşturmak için kullanılan bir dosyanın alanlarını. XML Web hizmeti oluşturma hakkında daha fazla bilgi için bkz. [yapı XML Web Hizmetleri kullanarak ASP.NET](https://msdn.microsoft.com/library/01dfc27c-c68e-4910-a0aa-5e4c2a766b0c).  

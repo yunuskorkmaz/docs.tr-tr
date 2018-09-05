@@ -3,11 +3,11 @@ title: Kısıtlama türleri
 ms.date: 03/30/2017
 ms.assetid: b6b246e6-1130-4698-9625-c5c42abcbfed
 ms.openlocfilehash: 202a2c7b3a3fc400552e42c8606457964af66af2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401538"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506618"
 ---
 # <a name="constraint-types"></a>Kısıtlama türleri
 Bu örnek, bir iş akışı kısıtlamaları uygulamak için iki farklı yol gösterir, bir etkinlik içinde (derleme) arasındadır ve bir gelen dışında (ilke) olur. Bu senaryoda, bir etkinlik yazar (şirketten 3rth taraf yazılım) iki bağımsız değişken arasındaki ilişkiyi doğrulamak istiyor. Bu durumda, maliyet fiyatına eşit veya değerinden küçük olmalıdır. Genel bir doğrulama yapı kısıtlaması budur.  

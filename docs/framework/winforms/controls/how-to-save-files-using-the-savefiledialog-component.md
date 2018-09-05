@@ -11,33 +11,33 @@ helpviewer_keywords:
 - files [Windows Forms], saving
 - OpenFile method [Windows Forms], saving files with SaveFileDialog component
 ms.assetid: 02e8f409-b83f-4707-babb-e71f6b223d90
-ms.openlocfilehash: ca6ca5adbbe20a438ba936778ba71f1a163b40e5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4755d950da6726f007ae3333a558f3cafdcada9b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540536"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43508166"
 ---
 # <a name="how-to-save-files-using-the-savefiledialog-component"></a>Nasıl Yapılır: SaveFileDialog Bileşenini Kullanarak Dosyaları Kaydetme
-<xref:System.Windows.Forms.SaveFileDialog> Bileşeni, dosya sistemi göz atın ve kaydedilecek dosyaları seçmek kullanıcıların sağlar. İletişim kutusu, kullanıcı iletişim kutusundaki seçilmiş dosyanın adını ve yolunu döndürür. Ancak, aslında dosyaları diske yazmak için kod yazmanız gerekir.  
+<xref:System.Windows.Forms.SaveFileDialog> Bileşen, dosya sistemi ve kaydedilecek dosyaları seçmek kullanıcıların sağlar. İletişim kutusu iletişim kutusunda kullanıcının seçtiği dosya adını ve yolunu döndürür. Ancak, gerçekte dosyaları diske yazmak için kod yazmanız gerekir.  
   
 ### <a name="to-save-a-file-using-the-savefiledialog-component"></a>SaveFileDialog bileşenini kullanarak bir dosyayı kaydetmek için  
   
--   Görüntü **dosyayı Kaydet** iletişim kutusu ve kullanıcı tarafından seçilen dosyanın kaydedileceği bir yöntemini çağırın.  
+-   Görüntü **dosyayı Kaydet** iletişim kutusu ve kullanıcının seçtiği dosyayı kaydetmek için bir yöntem çağrısı.  
   
-     Kullanım <xref:System.Windows.Forms.SaveFileDialog> bileşenin <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> yöntemi dosyayı kaydedin. Bu yöntem sağlayan bir <xref:System.IO.Stream> nesnesi için yazma.  
+     Kullanım <xref:System.Windows.Forms.SaveFileDialog> bileşenin <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> dosyayı kaydetmek için yöntemi. Bu yöntem size bir <xref:System.IO.Stream> nesne için yazabilirsiniz.  
   
-     Kullandığı aşağıdaki örnekte <xref:System.Windows.Forms.DialogResult> dosyasının adını almak için özellik ve <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> yöntemi dosyayı kaydedin. <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> Yöntemi veya dosyaya yazmak için bir akış sunar.  
+     Kullanan aşağıdaki örnekte <xref:System.Windows.Forms.DialogResult> dosyasının adını almak için özellik ve <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> dosyayı kaydetmek için yöntemi. <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> Yöntemi dosyaya yazmak için bir akış sunar.  
   
-     Aşağıdaki örnekte, var olan bir <xref:System.Windows.Forms.Button> kendisine atanmış bir görüntüyle denetim. Düğmeye tıkladığınızda bir <xref:System.Windows.Forms.SaveFileDialog> bileşen türü .gif, .jpeg ve .bmp dosyaları tanıyan bir filtre ile örneği. Bu tür bir dosyayı dosya Kaydet iletişim kutusunda seçili ise, düğmenin resim kaydedilir.  
+     Aşağıdaki örnekte bir <xref:System.Windows.Forms.Button> kendisine atanmış bir görüntü içeren denetim. Düğmeye tıkladığınızda bir <xref:System.Windows.Forms.SaveFileDialog> bileşen türü .gif, .jpeg ve .bmp dosyaları izin veren bir filtre ile oluşturulur. Bu tür bir dosyayı dosya Kaydet iletişim kutusunda seçili ise, düğmenin görüntü kaydedilir.  
   
     > [!IMPORTANT]
-    >  Almak veya ayarlamak için <xref:System.Windows.Forms.FileDialog.FileName%2A> özelliği, derlemenizi gerektiren bir ayrıcalık düzeyi verilen tarafından <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> sınıfı. Kısmi güven bağlamda çalıştırıyorsanız, işlem nedeniyle yeterli ayrıcalığa sahip bir özel durum. Daha fazla bilgi için bkz: [kod erişim güvenliği Temelleri](../../../../docs/framework/misc/code-access-security-basics.md).  
+    >  Alınacak veya ayarlanacak <xref:System.Windows.Forms.FileDialog.FileName%2A> özellik, derlemenizin gerektirir ayrıcalık düzeyi verilmiş tarafından <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> sınıfı. Kısmi güven bağlamda çalıştırıyorsanız, işlem yetersiz ayrıcalıklar nedeniyle bir özel durum fırlatabilir. Daha fazla bilgi için [kod erişimi güvenliği Temelleri](../../../../docs/framework/misc/code-access-security-basics.md).  
   
-     Formunuz sahip örnek varsayar bir <xref:System.Windows.Forms.Button> ile denetim kendi <xref:System.Windows.Forms.ButtonBase.Image%2A> özellik türü .gif, .jpeg veya .bmp dosyasına ayarlayın.  
+     Formunuza sahip örnek varsayar bir <xref:System.Windows.Forms.Button> denetimini kendi <xref:System.Windows.Forms.ButtonBase.Image%2A> özellik türü .gif, .jpeg veya .bmp dosyasına ayarlayın.  
   
     > [!NOTE]
-    >  <xref:System.Windows.Forms.FileDialog> Sınıfının <xref:System.Windows.Forms.FileDialog.FilterIndex%2A> özelliği (, devralma nedeniyle olduğu parçası <xref:System.Windows.Forms.SaveFileDialog> sınıfı) tabanlı bir dizin kullanır. Bu verileri (örneğin, kaydetme ikili biçimi yerine düz metin dosyasında) belirli bir biçimde kaydetmek için kod yazıyorsanız önemlidir. Bu özellik, aşağıdaki örnekte öne çıkan.  
+    >  <xref:System.Windows.Forms.FileDialog> Sınıfın <xref:System.Windows.Forms.FileDialog.FilterIndex%2A> özelliği (, devralma nedeniyle parçası olan <xref:System.Windows.Forms.SaveFileDialog> sınıfı) bir tabanlı bir dizin kullanır. (Örneğin, kaydetme ikili biçimi yerine düz metin dosyasında) belirli bir biçimdeki verileri kaydetmek için kod yazıyorsanız, bu önemlidir. Bu özellik, aşağıdaki örnekte'öne çıkan.  
   
     ```vb  
     Private Sub Button2_Click(ByVal sender As System.Object, _  
@@ -172,10 +172,10 @@ ms.locfileid: "33540536"
        System::EventHandler(this, &Form1::button2_Click);  
     ```  
   
-     Dosya akışları yazma hakkında daha fazla bilgi için bkz: <xref:System.IO.FileStream.BeginWrite%2A> ve <xref:System.IO.FileStream.Write%2A>.  
+     Dosya akışları yazma hakkında daha fazla bilgi için bkz. <xref:System.IO.FileStream.BeginWrite%2A> ve <xref:System.IO.FileStream.Write%2A>.  
   
     > [!NOTE]
-    >  Gibi belirli denetimleri <xref:System.Windows.Forms.RichTextBox> denetlemek, dosyaları kaydedebilir seçeneğine sahipsiniz. Daha fazla bilgi için MSDN Çevrimiçi Kitaplığı teknik makalenin "SaveFileDialog bileşeni" bölümüne bakın [Windows için önemli kod Forms iletişim kutuları](http://go.microsoft.com/fwlink/?LinkID=102575).  
+    >  Gibi belirli denetimleri <xref:System.Windows.Forms.RichTextBox> denetlemek, dosyaları Kaydet seçeneğine sahipsiniz. Daha fazla bilgi için MSDN çevrimiçi kitaplığındaki teknik makalenin "SaveFileDialog bileşeni" bölümüne bakın. [Windows için temel kod formları iletişim kutularını](https://go.microsoft.com/fwlink/?LinkID=102575).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.SaveFileDialog>  

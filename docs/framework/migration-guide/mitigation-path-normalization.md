@@ -5,11 +5,11 @@ ms.assetid: 158d47b1-ba6d-4fa6-8963-a012666bdc31
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: aa31641cc325f15b9afe677038deb33c57e77fd1
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43388358"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43508819"
 ---
 # <a name="mitigation-path-normalization"></a>Azaltma: Yol normalleştirme
 Hedef uygulama ile başlangıç [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], .NET Framework'teki yolu normalleştirme değişti.  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 826219b4-3a16-45fc-832d-0cd7cbbd3b84
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 5f1a7d0ed1bffe2ca2da9318eef700b1d4924c22
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 87f8f3cf296aeb30cd19c7579887ef94e0992ba7
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749887"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43541696"
 ---
 # <a name="ltsecuritygt-element-of-ltws2007federationhttpbindinggt"></a>&lt;ws2007FederationHttpBinding&gt; &lt;güvenlik&gt; öğesi
 Güvenlik ayarlarını tanımlar [ \<ws2007FederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md) öğesi.  
@@ -50,21 +50,21 @@ Güvenlik ayarlarını tanımlar [ \<ws2007FederationHttpBinding >](../../../../
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Yok.|SOAP iletisi aktarımı sırasında güvenli değildir.|  
-|İleti|Bütünlük, gizlilik, sunucu kimlik doğrulaması ve istemci kimlik doğrulaması SOAP iletisi güvenlik kullanılarak sağlanır. Varsayılan olarak, gövde imzalı ve şifrelenir. Hizmeti bir sertifikayla yapılandırılmalıdır. İstemci kimlik doğrulaması istemci için bir güvenlik belirteci hizmeti tarafından verilen belirteç temel alır.|  
-|TransportWithMessageCredential|Bütünlük, gizlilik ve sunucu kimlik doğrulaması HTTPS tarafından sağlanır. Hizmeti bir sertifikayla yapılandırılmalıdır. İstemci kimlik doğrulaması SOAP iletisi güvenlik yoluyla sağlanır ve istemci için bir güvenlik belirteci hizmeti tarafından verilen belirteç dayanır.|  
+|Yok.|SOAP ileti aktarım sırasında güvenli değildir.|  
+|İleti|SOAP ileti güveliği kullanarak bütünlüğü, gizlilik, sunucu kimlik doğrulaması ve istemci kimlik doğrulaması sağlanır. Varsayılan olarak, gövde imzalı ve şifrelenir. Hizmeti bir sertifikayla yapılandırılması gerekir. İstemci kimlik doğrulaması güvenlik belirteci hizmeti tarafından istemciye verilen belirtecin temel alır.|  
+|TransportWithMessageCredential|Bütünlüğü, gizliliği ve sunucu kimlik doğrulaması HTTPS tarafından sağlanır. Hizmeti bir sertifikayla yapılandırılması gerekir. İstemci kimlik doğrulaması yoluyla SOAP ileti güvenliği sağlanır ve istemciye bir güvenlik belirteci hizmeti tarafından verilen belirtecin dayanır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<İleti >](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-ws2007httpbinding.md)|İleti düzeyi güvenlik ayarlarını tanımlar. Bu öğe türünde <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement>.|  
+|[\<İleti >](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-ws2007httpbinding.md)|İleti düzeyi güvenlik ayarları tanımlar. Bu öğe türünde <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement>.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<bağlama >](../../../../../docs/framework/misc/binding.md)|Tüm bağlama özelliklerini tanımlayan [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).|  
+|[\<bağlama >](../../../../../docs/framework/misc/binding.md)|Tüm bağlama yeteneklerini tanımlar [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.WSFederationHttpSecurity>  
@@ -76,5 +76,5 @@ Güvenlik ayarlarını tanımlar [ \<ws2007FederationHttpBinding >](../../../../
  [Kimlik Bilgisi Türü Seçme](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
  [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)  
  [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Windows Communication Foundation Hizmetleri ve istemcileri yapılandırmak için bağlamaları kullanma](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Windows Communication Foundation Hizmetleri ve istemcileri yapılandırmak için bağlamaları kullanma](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<bağlama >](../../../../../docs/framework/misc/binding.md)

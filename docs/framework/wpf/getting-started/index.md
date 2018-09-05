@@ -6,15 +6,15 @@ helpviewer_keywords:
 - introduction [WPF]
 - WPF [WPF], getting started
 ms.assetid: 04f91da8-708c-46c7-8172-f1695ec847cd
-ms.openlocfilehash: 0bb339d9343cd7ccca0f1f97d2d15b2afa5fdab0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f4c4c4a19c1919a27c15c623bcb30a119a560c75
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557153"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43561768"
 ---
 # <a name="getting-started-wpf"></a>Başlarken (WPF)
-Windows Presentation Foundation (WPF) uygulamaları masaüstü istemcisi oluşturan bir UI çerçevedir. WPF geliştirme platformu uygulama geliştirme özellikleri, bir uygulama modeli, kaynaklar, denetimleri, grafik, düzeni, veri bağlama, belgeler ve güvenlik dahil olmak üzere, geniş kapsamlı bir kümesini destekler. .NET Framework'ün bir alt kümesidir, daha önce uygulamaları .NET Framework ile ASP.NET veya Windows Forms kullanarak oluşturduysanız, bir programlama deneyimi hakkında bilgi sahibi olması. WPF Genişletilebilir uygulama biçimlendirme dili (XAML) uygulama programlama için bildirim temelli bir model sağlamak için kullanır. Bu bölümde getirir ve WPF ile başlamanıza yardım konuları vardır.  
+Windows Presentation Foundation (WPF) masaüstü istemci uygulamalar oluşturan bir kullanıcı Arabirimi çerçevedir. WPF geliştirme platformu, çok sayıda uygulama modeli, kaynaklar, denetimler, grafik, düzen, veri bağlama, belgeleri ve güvenlik dahil olmak üzere uygulama geliştirme özellikleri destekler. .NET Framework'ün bir alt kümesi olan şekilde, daha önce uygulamaları .NET Framework ile ASP.NET veya Windows Forms kullanarak oluşturduysanız, bir programlama deneyimi hakkında bilgi sahibi olmanız. WPF Extensible Application Markup Language (XAML) uygulama programlama için bildirime dayalı bir modeli sağlamak için kullanır. Bu bölümde tanıtır ve WPF ile çalışmaya başlamanıza yardımcı konuları bulunur.  
   
 ## <a name="where-should-i-start"></a>Nereden başlamalıyım?  
   
@@ -22,7 +22,7 @@ Windows Presentation Foundation (WPF) uygulamaları masaüstü istemcisi oluştu
 |-|-|  
 |Hemen istediğiniz...|[İzlenecek Yol: İlk WPF masaüstü uygulamam](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)|  
 |Uygulama kullanıcı Arabirimi nasıl tasarlayacağınızı?|[Visual Studio'da XAML Tasarlama](/visualstudio/designers/designing-xaml-in-visual-studio)|  
-|.NET yeni misiniz?|[.NET Framework'e Genel Bakış](https://msdn.microsoft.com/library/zw4w595w\(v=vs.140\).aspx)<br /><br /> [.NET framework uygulama temelleri](../../../../docs/standard/application-essentials.md)<br /><br /> [Visual C# ve Visual Basic'e Başlarken](https://msdn.microsoft.com/library/dd492171\(v=vs.140\).aspx)|  
+|.NET yeni misiniz?|[.NET Framework'ün genel bakış](https://msdn.microsoft.com/library/zw4w595w\(v=vs.140\).aspx)<br /><br /> [.NET framework uygulama temelleri](../../../../docs/standard/application-essentials.md)<br /><br /> [Visual C# ve Visual Basic'e Başlarken](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)|  
 |WPF hakkında daha fazla bilgi...|[Visual Studio’da WPF’ye Giriş](../../../../docs/framework/wpf/getting-started/introduction-to-wpf-in-vs.md)<br /><br /> [XAML'ye Genel Bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)<br /><br /> [Denetimler](../../../../docs/framework/wpf/controls/index.md)<br /><br /> [Veri Bağlamaya Genel Bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)|  
 |Windows Forms Geliştirici misiniz?|[Windows Forms Denetimleri ve Eşdeğer WPF Denetimleri](../../../../docs/framework/wpf/advanced/windows-forms-controls-and-equivalent-wpf-controls.md)<br /><br /> [WPF ve Windows Forms Birlikte Çalışması](../../../../docs/framework/wpf/advanced/wpf-and-windows-forms-interoperation.md)|  
   

@@ -2,12 +2,12 @@
 title: SQL Server'da veri şifreleme
 ms.date: 03/30/2017
 ms.assetid: 83b992f7-b351-4678-b4b9-f4ffd58134cc
-ms.openlocfilehash: d662f04cb54e12abfc481487cb5172f63edf0316
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 4d02e93cddef57cc42e03ecc6b094b34c24b3f93
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932750"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509101"
 ---
 # <a name="data-encryption-in-sql-server"></a>SQL Server'da veri şifreleme
 SQL Server şifrelemek ve bir sertifika, asimetrik anahtar veya simetrik anahtar kullanarak verilerin şifresini çözmek için işlevler sağlar. Tüm bunların bir iç sertifika deposunda yönetir. Depolama ve sertifikaları anahtarlar üzerindeki katman hiyerarşideki bir düzeyde bir şifreleme hiyerarşisi kullanır. Bu özellik alanı SQL Server'ın, gizli depolama olarak adlandırılır.  
@@ -36,4 +36,4 @@ SQL Server şifrelemek ve bir sertifika, asimetrik anahtar veya simetrik anahtar
  [SQL Server’da Sunucu ve Veritabanı Rolleri](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)  
  [SQL Server'da Sahiplik ve Kullanıcı Şeması Ayrımı](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)  
  [SQL Server’da Yetkilendirme ve İzinler](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

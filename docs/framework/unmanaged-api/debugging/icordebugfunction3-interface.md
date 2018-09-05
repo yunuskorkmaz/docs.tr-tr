@@ -12,23 +12,23 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c1945e678dd62f81c698807714d0e71053d6b378
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ff49d64b0b58d301d24e39bc626abf6520c031b9
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414791"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514226"
 ---
 # <a name="icordebugfunction3-interface"></a>ICorDebugFunction3 Arabirimi
 [.NET Framework 4.5.2 ve sonraki sürümlerinde desteklenen]  
   
- Mantıksal bir ReJIT isteğinden koduna erişim sağlamak için ICorDebugFunction arabirimi genişletir.  
+ ICorDebugFunction arabirimi ReJIT istekten koda erişim sağlamak için mantıksal olarak genişletir.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetActiveReJitRequestILCode Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction3-getactiverejitrequestilcode-method.md)|Bir arabirim işaretçisi alır bir [Icordebugılcode](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md) etkin bir ReJIT istek IL içerir.|  
+|[GetActiveReJitRequestILCode Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction3-getactiverejitrequestilcode-method.md)|Bir arabirim işaretçisi alır bir [Icordebugılcode](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md) , etkin bir ReJIT istek IL içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -44,4 +44,4 @@ ms.locfileid: "33414791"
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
  [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)  
- [ReJIT: Nasıl yapılır Kılavuzu](http://blogs.msdn.com/b/davbr/archive/2011/10/12/rejit-a-how-to-guide.aspx)
+ [ReJIT: Nasıl yapılır Kılavuzu](https://blogs.msdn.com/b/davbr/archive/2011/10/12/rejit-a-how-to-guide.aspx)

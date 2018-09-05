@@ -1,21 +1,21 @@
 ---
-title: Office Açık XML belge bölümleri (C#) çıkarır örneği
+title: Office Open XML belge kısımları (C#) çıkaran örnek
 ms.date: 07/20/2015
 ms.assetid: 6cd37055-89b4-42e8-bf27-5a29717e35f3
-ms.openlocfilehash: e63f6eafb32a6426d6c3fd7296c0e8fa6595efee
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5dd8e4238ff4015130160b5297f807d79013ce7b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325376"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43505677"
 ---
-# <a name="example-that-outputs-office-open-xml-document-parts-c"></a>Office Açık XML belge bölümleri (C#) çıkarır örneği
-Bu konuda, bir Office Açık XML belgesi Aç ve erişim içindeki bölümleri gösterilmektedir.  
+# <a name="example-that-outputs-office-open-xml-document-parts-c"></a>Office Open XML belge kısımları (C#) çıkaran örnek
+Bu konuda, bir Office Open XML belgesi açın ve erişim bölümleri içindeki gösterilmektedir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir Office Açık XML belge açılır ve belge ve stil bölümlerini konsola yazdırır.  
+ Aşağıdaki örnek, bir Office Open XML belge açılır ve belge ve stil bölümlerini konsola yazdırır.  
   
- Bu örnek WindowsBase derlemeden sınıfları kullanır. Türlerinde kullanan <xref:System.IO.Packaging?displayProperty=nameWithType> ad alanı.  
+ Bu örnek WindowsBase derlemesinden sınıfları kullanır. Türleri kullanan <xref:System.IO.Packaging?displayProperty=nameWithType> ad alanı.  
   
 ```csharp  
 const string fileName = "SampleDoc.docx";  
@@ -66,5 +66,6 @@ using (Package wdPackage = Package.Open(fileName, FileMode.Open, FileAccess.Read
 }  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Ayrıntılar Office Açık XML WordprocessingML belgeleri (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [Ayrıntılar Office Open XML WordprocessingML belgelerinin (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

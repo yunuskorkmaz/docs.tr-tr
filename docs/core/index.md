@@ -1,149 +1,54 @@
 ---
 title: .NET Core Kılavuzu
-description: .NET core bir modüler, yüksek performanslı .NET Windows, Linux ve Mac uygulamaları oluşturmak için uygulamasıdır. Başlamak için .NET Core hakkında bilgi edinin.
+description: .NET core Windows, Linux ve Mac uygulamaları oluşturmak için .NET, modüler, yüksek performanslı bir uygulama olan. Başlamak için .NET Core hakkında bilgi edinin.
 author: richlander
 ms.author: mairaw
-ms.date: 06/20/2016
-ms.openlocfilehash: 1f413e4efa8b33877917330855f4881c3fbf0854
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.date: 08/01/2018
+ms.custom: updateeachrelease
+ms.openlocfilehash: cfa7c27871204b808c9d753a970d5abb907a183e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33956261"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43512847"
 ---
 # <a name="net-core-guide"></a>.NET Core Kılavuzu
 
-> Kullanıma ["Başlarken" öğreticileri](get-started.md) basit bir .NET Core uygulamasının nasıl oluşturulacağını öğrenin. Yalnızca ilk uygulamanızı çalışır almak için birkaç dakika sürer.
+[.NET core](about.md) olduğu bir [açık kaynaklı](https://github.com/dotnet/coreclr/blob/master/LICENSE.TXT) genel amaçlı bir geliştirme platformu üzerinde Microsoft ve .NET topluluk tarafından tutulan [GitHub](https://github.com/dotnet/core). Bu Windows, macOS ve Linux'ta destekleyen platformlar arası ve cihaz, Bulut ve IOT uygulamaları için kullanılabilir.
 
-.NET core, Microsoft ve .NET topluluğu tarafından korunan bir genel amaçlı geliştirme platformdur [GitHub](https://github.com/dotnet/core). Windows, macOS ve Linux destekleyen platformlar arası ve aygıt, Bulut ve katıştırılmış IOT senaryolarını kullanılabilir. 
+Bkz: [.NET Core hakkında](about.md) özellikleri, desteklenen diller ve çerçeveler ve API anahtarını dahil olmak üzere, .NET Core hakkında daha fazla bilgi edinmek için.
 
-En iyi aşağıdaki özelliklere .NET Core tanımlayın:
+Kullanıma [.NET Core öğreticilerini](tutorials/index.md) basit bir .NET Core uygulaması oluşturmayı öğrenin. Yalnızca ilk uygulamanızı çalıştırmaya başlayın birkaç dakika sürer. .NET Core, tarayıcıda denemek istiyorsanız, bakmak [C# dilinde sayılar](https://docs.microsoft.com/dotnet/csharp/quick-starts/hello-world) hızlı başlangıç.
 
-- **Esnek dağıtım:** uygulamanızda dahil edilebilir veya yan yana kullanıcı - veya makineye yüklenmiş.
-- **Platformlar arası:** Windows, macOS ve Linux üzerinde çalışır; diğer işletim sistemleri için bağlantı noktası kurulmuş. [İşletim sistemlerini (OS) desteklenen](https://github.com/dotnet/core/blob/master/roadmap.md), CPU ve uygulama senaryoları büyümesine zaman içinde Microsoft, diğer şirketler ve kişiler tarafından sağlanan.
-- **Komut satırı araçları:** tüm ürün senaryoları komut satırında denenmesi. 
-- **Uyumlu:** .NET Core, .NET Framework, Xamarin ve Mono, uyumlu aracılığıyla [.NET standart](../standard/net-standard.md).
-- **Açık kaynak:** .NET Core platformudur MIT ve Apache 2 lisanslarla açık kaynak. Belge altında lisanslanır [CC tarafından](https://creativecommons.org/licenses/by/4.0/). .NET core olan bir [.NET Foundation](https://dotnetfoundation.org/) projesi.
-- **Microsoft tarafından desteklenen:** .NET Core başına Microsoft tarafından desteklenir [.NET çekirdek desteği](https://www.microsoft.com/net/core/support/)
+## <a name="download-net-core-21"></a>.NET Core 2.1 indirme
 
-## <a name="composition"></a>Birleşim
+İndirme [.NET Core 2.1 SDK](https://www.microsoft.com/net/download) .NET Core Windows, macOS veya Linux makinenizde denemek için. Ziyaret [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) Docker kapsayıcılarını kullanmayı tercih ederseniz.
 
-.NET core aşağıdaki bölümden oluşur:
+Tüm .NET Core sürümleri kullanılabilir [.NET Core indirir](https://www.microsoft.com/net/download/archives) için başka bir .NET Core sürümünün düşürmek istiyorsanız.
 
-- A [.NET çalışma zamanı](https://github.com/dotnet/coreclr), bir tür sistemi, derleme yüklenirken, atık toplayıcı, yerel birlikte çalışabilirliği ve diğer temel hizmetleri sağlar. 
-- Bir dizi [framework kitaplıkları](https://github.com/dotnet/corefx), temel veri türleri, uygulama birleşim türleri ve temel yardımcı programlarını sağlar. 
-- A [SDK Araçları kümesi](https://github.com/dotnet/cli) ve dil derleyicileri ([Roslyn](https://github.com/dotnet/roslyn) ve [F #](https://github.com/microsoft/visualfsharp)) bulunan temel geliştirici deneyimi etkinleştirmek [.NET Core SDK](sdk.md).
-- .NET Core uygulamaları başlatmak için kullanılan 'dotnet' uygulama ana bilgisayarı. Çalışma zamanı seçer çalışma zamanı barındırır, bir derlemeyi yükleme ilke sağlar ve uygulamasını başlatır. Aynı ana kadar aynı şekilde SDK Araçları başlatmak için de kullanılır.
+## <a name="net-core-21"></a>.NET core 2.1
 
-### <a name="languages"></a>Diller
+En son sürüm [.NET Core 2.1](whats-new/dotnet-core-2-1.md). Yeni özellikler içerir: Genel araçları, yüksek performanslı API'leri (gibi <xref:System.Span%601?displayProperty=nameWithType>), katmanlı JIT derlemesi [derleme](https://blogs.msdn.microsoft.com/dotnet/2018/05/30/announcing-net-core-2-1/) ve [çalışma zamanı performans iyileştirmeleri](https://blogs.msdn.microsoft.com/dotnet/2018/04/18/performance-improvements-in-net-core-2-1/), için ve Destek Alpine ve ARM32.
 
-C#, Visual Basic ve F # dilleri, uygulamalar ve kitaplıklar için .NET Core yazmak için kullanılabilir. Derleyicileri .NET Core üzerinde .NET Core için herhangi bir yere geliştirmenizi etkinleştirme onu çalışır çalıştırın. Genel olarak, size derleyicileri doğrudan, dolaylı olarak SDK araçları kullanarak ancak kullanmaz.
+## <a name="create-your-first-application"></a>İlk uygulamanızı oluşturma
 
-C#, Visual Basic ve F # derleyicileri ve .NET Core araçları veya çeşitli metin düzenleyiciler ve IDE, Visual Studio dahil olmak üzere tümleşik [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp), Sublime Text ve bir seçenek olarak .NET Core geliştirme yapma VIM, Sık kullanılan ortam ve işletim sistemi kodlama. Bu tümleştirme, kısmen iyi çok kişi tarafından sağlanan [OmniSharp proje](http://www.omnisharp.net/) ve [Ionide](http://ionide.io).
+.NET Core SDK'yı yükledikten sonra bir komut istemi açın. Aşağıdaki komutu yazın `dotnet` oluşturma ve C# uygulama çalıştırma için komutları.
 
-### <a name="net-apis-and-compatibility"></a>.NET API'ları ve uyumluluk
+```console
+dotnet new console
+dotnet run
+```
 
-.NET core, platformlar arası sürümü, .NET Framework temel sınıf kitaplıkları (BCL) katmanında .NET Framework'ün olarak düşünülebilir. Bunu uygulayan [.NET standart](../standard/net-standard.md) belirtimi. .NET core bir alt kümesini .NET Framework veya Mono/Xamarin kullanılabilir API'ler sağlar. Bazı durumlarda, türleri tam olarak uygulanmamıştır (bazı üyeleri kullanılabilir değil veya taşınmış).
+Aşağıdaki çıktıyı görmeniz gerekir:
 
-Bakmak [.NET Core yol haritası](https://github.com/dotnet/core/blob/master/roadmap.md) .NET Core API yol haritası hakkında daha fazla bilgi edinmek için.
+```console
+Hello World!
+```
 
-### <a name="relationship-to-net-standard"></a>.NET standart ilişkisi
+## <a name="support"></a>Destek
 
-[.NET standart](../standard/net-standard.md) tutarlı geliştiriciler her .NET uygulamasında bekleyebilirsiniz .NET API'lerini açıklar bir API spec. .NET uygulamaları .NET standart uyumlu kabul edilmesi için ve .NET standardını hedefleyen kitaplıklar desteklemek için bu spec uygulamanız gerekir. 
+.NET Core [Microsoft tarafından desteklenen](https://www.microsoft.com/net/support/policy), Windows, macOS ve Linux'ta. Güvenlik ve kalite testinden yılda birkaç kez, genellikle aylık güncelleştirilir.
 
-.NET core .NET standart uygular ve bu nedenle .NET standart kitaplıkları destekler.
+.NET core ikili dağıtımları oluşturulan ve azure'da Microsoft korunan sunucularda test edilmiş ve yalnızca tüm Microsoft Ürün gibi desteklenen.
 
-### <a name="workloads"></a>İş yükleri
-
-Tek başına, .NET Core Araçlar, yerel Hizmetleri ve metin tabanlı oyunlar için yararlı olan tek bir uygulama modeli--konsol uygulamaları--içerir. Ek uygulama modelleri gibi kendi işlevselliğini genişletmek için .NET Core üzerinde oluşturulmuş:
-
-- [ASP.NET Core](/aspnet/core/)
-- [Windows 10 Evrensel Windows Platformu (UWP)](https://developer.microsoft.com/windows)
-- [UWP hedeflerken Xamarin.Forms](https://www.xamarin.com/forms)
-
-### <a name="open-source"></a>Açık kaynak
-
-[.NET core](https://github.com/dotnet/core) (MIT Lisansı), açık kaynaklı ve katkısı [.NET Foundation](https://dotnetfoundation.org) 2014 Microsoft tarafından. Şimdi en etkin .NET Foundation projelerden biri değil. Bu ücretsiz kişiler ve kişisel, akademik veya ticari amaçlarla dahil olmak üzere şirketler tarafından benimsenmesi. Birden çok şirket uygulamaları, araçları, yeni platformlar ve barındırma hizmetleri bir parçası olarak .NET Core kullanın. Bu şirketler bazıları .NET Core github'da önemli yapmak ve bir parçası olarak ürün yönü üzerine kılavuzluk [.NET Foundation teknik Yönetimi grubu](https://dotnetfoundation.org/blog/tsg-welcome).
-
-## <a name="acquisition"></a>Edinme
-
-.NET core iki ana yolla NuGet.org paketleri ve tek başına dağıtımları olarak dağıtılır.
-
-### <a name="distributions"></a>Dağıtımları
-
-.NET Core adresindeki indirebilirsiniz [.NET Core Başlarken](https://www.microsoft.com/net/core) sayfası.
-
-- *Microsoft .NET Core* dağıtım CoreCLR çalışma zamanı, ilişkili kitaplıkları, bir konsol uygulama ana bilgisayarı içerir ve `dotnet` uygulama Başlatıcısı. Tarafından açıklanan [ `Microsoft.NETCore.App` ](https://www.nuget.org/packages/Microsoft.NETCore.App) metapackage.
-- *Microsoft .NET Core SDK* dağıtım .NET Core ve NuGet paketleri geri yükleniyor ve derleme ve uygulamaları oluşturmak için Araçlar içerir. 
-
-Genellikle, .NET Core geliştirmeye başlamak için .NET Core SDK ilk yüklersiniz. Ek .NET Core (belki de yayın öncesi) derlemeleri yüklemek tercih edebilirsiniz.
-
-### <a name="packages"></a>Paketler
-
-- [.NET core paketleri](packages.md) .NET çekirdeği çalışma zamanı ve kitaplıkları (başvuru derlemeleri ve uygulamalar) içerir. Örneğin, [System.Net.Http](https://www.nuget.org/packages/System.Net.Http/).
-- [.NET core Metapackages](packages.md) sürümü tutulan kitaplığı paket uygun kümesini başvurarak çeşitli katmanları ve uygulama modelleri açıklanmaktadır.
-
-## <a name="architecture"></a>Mimari
-
-.NET core bir platformlar arası .NET uygulamasıdır. .NET Core benzersiz birincil mimari endişelere desteklenen platformlar için platforma özel uygulamaları sağlamayı ilişkilidir.
-
-### <a name="environments"></a>Ortamlar
-
-.NET core, Windows, macOS ve Linux Microsoft tarafından desteklenir. Linux üzerinde Microsoft .NET Core Red Hat Enterprise Linux (RHEL) ve Debian dağıtım aileleri çalıştıran birincil olarak destekler.
-
-.NET core şu anda X64 destekler CPU. Windows üzerinde X86 de desteklenir. ARM64 ve ARM32 sürüyor.
-
-[.NET Core yol haritası](https://github.com/dotnet/core/blob/master/roadmap.md) daha ayrıntılı iş yükü ve işletim sistemi ve CPU ortamı destek planları hakkında bilgi sağlar.
-
-Diğer şirketler veya gruplara .NET Core diğer uygulama türleri ve ortam için destekleyebilir.
-
-### <a name="designed-for-adaptability"></a>Uyumluluk için tasarlanmış
-
-.NET core, diğer .NET ürünleri göre çok benzer ancak benzersiz bir ürün olarak oluşturulmuştur. Yeni iş yükleri için ve yeni derleyici toolchains ile yeni platformlar için geniş uyumluluk sağlamak için tasarlanmıştır. Devam eden birkaç işletim sistemi ve CPU bağlantı noktası içeren ve çok daha fazla bilgi için bağlantı noktası kurulmuş. Örnek [LLILC](https://github.com/dotnet/llilc) .NET Core için yerel derleme erken bir prototipini olan proje aracılığıyla [LLVM](http://llvm.org/) derleyici.
-
-Ürün için farklı zamanlamalar yeni platformlarda uyarlanan çeşitli bölümlerini etkinleştirme birkaç parçalara ayrılır. Çalışma zamanı ve platforma özgü temel kitaplıkları bir birim olarak bağlantı noktalı gerekir. Platform belirsiz kitaplıkları olarak çalışmalıdır-yapım tarafından tüm platformlar açıktır. Geliştirici verimliliğini artırmak için bir algoritma veya API uygulanabilir olduğunda platformdan bağımsız C# kodu tercih ederek tam olarak veya bölümü, böylece platform özel uyarlama miktarını azaltarak için bir proje sapması yoktur.
-
-Kişiler genellikle birden çok işletim sistemini desteklemek için .NET Core nasıl uygulandığı isteyin. Genellikle ayrı uygulamaları varsa veya durumunda sorun [koşullu derleme](https://en.wikipedia.org/wiki/Conditional_compilation) kullanılır. Koşullu derleme doğru güçlü sapması ile hem de öyledir.
-
-Büyük çoğunluğu Aşağıda grafikte görebilirsiniz [CoreFX](https://github.com/dotnet/corefx) tüm platformlarda paylaşılan platformdan bağımsız kodudur. Platformdan bağımsız kod tüm platformlarda kullanılan tek bir taşınabilir derleme olarak uygulanabilir.
-
-![CoreFX: Her Platform kodunun satırları](../images/corefx-platforms-loc.png)
-
-Windows ve UNIX benzer boyutta uygulamalarıdır. Windows sahip büyük bir uygulama CoreFX gibi bazı salt Windows özellikleri uygulayan beri [Microsoft.Win32.Registry](https://github.com/dotnet/corefx/tree/master/src/Microsoft.Win32.Registry) ancak henüz yalnızca UNIX kavramları uygulamaz. Ayrıca, Linux ve macOS uygulamaları çoğunluğu paylaşılan UNIX uygulama, Linux ve macOS özel uygulamaları boyutu kabaca benzer durumdayken görürsünüz.
-
-
-.NET Core platforma özgü ve platformdan bağımsız kitaplıklarında bir karışımını vardır. Birkaç örnek modelinde görebilirsiniz:
-
-- [CoreCLR](https://github.com/dotnet/coreclr) platforma özgüdür. C/C++ oluşturulmuştur, bu nedenle platforma özgüdür yapı tarafından.
-- [System.IO](https://github.com/dotnet/corefx/tree/master/src/System.IO) ve [System.Security.Cryptography.Algorithms](https://github.com/dotnet/corefx/tree/master/src/System.Security.Cryptography.Algorithms) depolama ve şifreleme API'leri her işletim sisteminde önemli ölçüde farklı o platforma özgü olan. 
-- [System.Collections](https://github.com/dotnet/corefx/tree/master/src/System.Collections) ve [System.Linq](https://github.com/dotnet/corefx/tree/master/src/System.Linq) oluşturmak ve veri yapıları çalışan o platformdan bağımsız olan.
-
-## <a name="comparisons-to-other-net-implementations"></a>Diğer .NET uygulamaları için karşılaştırmaları
-
-Belki de, varolan .NET uygulamalarının karşılaştırarak boyutunu ve .NET Core şeklini anlamanız en kolayıdır. 
-
-### <a name="comparison-with-net-framework"></a>.NET Framework ile karşılaştırma
-
-.NET 2000'de Microsoft tarafından ilk duyurulan ve buradan gelişen. .NET Framework, 15 + yıl aralığı sırasında Microsoft tarafından üretilen birincil .NET uygulaması olmuştur. 
-
-.NET Core ve .NET Framework arasındaki temel farklar: 
-
-- **Uygulama modelleri** --.NET Core desteklemiyor tüm .NET Framework uygulama-modelleri, kısmen çünkü bunların çoğu, WPF (DirectX üstünde yerleşik) gibi Windows teknolojileri oluşturulur. Konsol ve ASP.NET Core app-modelleri .NET Core ve .NET Framework tarafından desteklenir. 
-- **API** --.NET Core içeriyor aynı birçoğu, ancak daha az API'leri olarak .NET Framework ve farklı bir şekilde düzenlenmesini (derleme adları farklı; türü şekli anahtar durumlarda değişir). Bu farklılıklar, şu anda genelde .NET Core bağlantı noktası kaynağına yapılan değişiklikler gerektirir. .NET core uygulayan [.NET standart](../standard/net-standard.md) .NET Framework BCL API birkaçını zamanla kapsayacak şekilde büyür API.
-- **Alt sistemleri** --.NET Core daha basit uygulama ve programlama modeli amacı ile .NET Framework içinde alt kümesini uygular. Yansıma destekleniyorsa Örneğin, kod erişim güvenliği (CAS), desteklenmiyor.
-- **Platformlar** --.NET Framework, Windows ve Windows Server .NET Core macOS ve Linux da desteklerken destekler.
-- **Açık kaynaklıdır** --.NET Core açık kaynak olduğu sırada bir [salt okunur alt .NET Framework'ün](https://github.com/microsoft/referencesource) açık bir kaynaktır.
-
-.NET Core benzersizdir ve .NET Framework ve diğer .NET uygulamaları için önemli farklılıklar sahip olsa da, kaynak veya ikili paylaşım teknikleri kullanarak kod paylaşmak basittir. 
-
-### <a name="comparison-with-mono"></a>Mono ile karşılaştırma
-
-[Mono](http://www.mono-project.com/) özgün çapraz platform ve [açık kaynak](https://github.com/mono/mono) ilk 2004'te sevkiyat .NET uygulaması. Bu, .NET Framework'ün topluluk kopya olarak düşünülebilir. Mono proje ekibi Aç dayanıyordu [.NET standartları](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) (özellikle ECMA 335) uyumlu bir uygulama sunmak için Microsoft tarafından yayımlanan.
-
-.NET Core ve Mono arasındaki temel farklar:
-
-- **Uygulama modelleri** --Mono .NET Framework uygulama-modelleri (örneğin, Windows Forms) ve bazı ek olanları bir alt kümesini destekler (örneğin, [Xamarin.iOS](https://www.xamarin.com/platform)) Xamarin ürün aracılığıyla. .NET core bunlar desteklemiyor.
-- **API** --Mono destekleyen bir [büyük alt](http://docs.go-mono.com/?link=root%3a%2fclasslib) .NET Framework aynı derleme adları kullanarak ve Finansman API'leri.
-- **Platformlar** --Mono birçok platformları ve CPU destekler.
-- **Açık kaynak** --Mono ile .NET Core MIT lisansı kullanın ve .NET Foundation projeler.
-- **Odak** --.NET Core üzerinde bulut iş yüklerini odaklanırken Mono birincil odağı Son yıllarda mobil platformları değil.
+[Red Hat destekleyen .NET Core](http://redhatloves.net/) Red Hat Enterprise Linux (RHEL) üzerinde. Red Hat kaynaktan .NET Core oluşturur ve kullanılabilir hale getirir [Red Hat yazılımı koleksiyonları](https://developers.redhat.com/products/softwarecollections/overview/). Red Hat ve Microsoft .NET Core iyi RHEL üzerinde çalıştığından emin olmak üzere işbirliği yapıyor.

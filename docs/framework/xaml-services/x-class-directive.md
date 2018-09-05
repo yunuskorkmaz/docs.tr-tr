@@ -10,15 +10,15 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Class attribute
 - x:Class attribute [XAML Services]
 ms.assetid: bc4a3d8e-76e2-423e-a5d1-159a023e82ec
-ms.openlocfilehash: 7e6a2379640d2556b553d14d20398a0a14931393
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a29a645a05f0d3b0e8611dd722c5018f295f3070
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566814"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43565352"
 ---
 # <a name="xclass-directive"></a>x:Class Yönergesi
-XAML biçimlendirme derleme biçimlendirmesi ve arka plan kodu arasında kısmi sınıflar katılmak için yapılandırır. Kod kısmi sınıfı ayrı kod dosyasında tanımlanan bir [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)] dil biçimlendirme parçalı sınıf genellikle XAML derleme sırasında kod oluşturma tarafından oluşturulur ancak.  
+Kısmi sınıflar işaretleme ve arka plan kod arasında katılmak XAML biçimlendirmesi derleme yapılandırır. Kodu kısmi sınıfın içinde ayrı bir kod dosyasında tanımlanan bir [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)] dilin biçimlendirme kısmi sınıf genellikle XAML derleme sırasında kod oluşturma tarafından oluşturulur ancak.  
   
 ## <a name="xaml-attribute-usage"></a>XAML Öznitelik Kullanımı  
   
@@ -32,33 +32,33 @@ XAML biçimlendirme derleme biçimlendirmesi ve arka plan kodu arasında kısmi 
   
 |||  
 |-|-|  
-|`namespace`|İsteğe bağlı. Belirten bir [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] tarafından tanımlanan parçalı sınıf içerir ad alanı `classname`. Varsa `namespace` belirtilirse, nokta (.) ayıran `namespace` ve `classname`. Açıklamalar bakın.|  
-|`classname`|Gerekli. Belirtir [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] yüklenen XAML ve, arka plan kod bu XAML bağlayan parçalı sınıf adı.|  
+|`namespace`|İsteğe bağlı. Belirtir bir [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] tarafından tanımlanan bir parçalı sınıf içeren ad alanı `classname`. Varsa `namespace` belirtilirse, nokta (.) ayıran `namespace` ve `classname`. Açıklamalara bakın.|  
+|`classname`|Gerekli. Belirtir [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] yüklenen XAML ve kod arka plan için bu XAML bağlanan kısmi sınıf adı.|  
   
-## <a name="dependencies"></a>Bağımlılıklar  
- `x:Class` yalnızca bir XAML üretim kök öğesinde belirtilebilir. `x:Class` XAML üretimde üst öğesi olan herhangi bir nesne üzerinde geçerli değil. Daha fazla bilgi için bkz: [ \[MS XAML\] bölüm 4.3.1.6](http://go.microsoft.com/fwlink/?LinkId=114525).  
+## <a name="dependencies"></a>Bağımlılıkları  
+ `x:Class` yalnızca XAML üretim kök öğe üzerinde belirtilebilir. `x:Class` bir üst öğeye sahipse XAML üretimde herhangi bir nesne üzerinde geçerli değil. Daha fazla bilgi için [ \[MS-XAML\] bölümü 4.3.1.6](https://go.microsoft.com/fwlink/?LinkId=114525).  
   
 ## <a name="remarks"></a>Açıklamalar  
- `namespace` Değeri, ilgili ad alanları, bir ortak bir .NET Framework programlama tekniktir adı Hiyerarşiler düzenlemek için ek noktalar içerebilir. Yalnızca son nokta bir dizesinde `x:Class` değerleri ayırmak için yorumlanır `namespace` ve `classname.` olarak kullanılan sınıf `x:Class` iç içe geçmiş sınıf olamaz. İç içe geçmiş sınıflar noktalar için anlamını belirlemek için verilmez `x:Class` dizeleri iç içe geçmiş sınıflar izin veriyorsa belirsiz.  
+ `namespace` Değeri hangi .NET Framework programlamada genel teknik, ilgili ad alanları ad Hiyerarşiler düzenlemek için ek nokta içerebilir. Yalnızca son nokta dizesindeki `x:Class` değerlerini ayırmak için yorumlanır `namespace` ve `classname.` olarak kullanılan sınıf `x:Class` iç içe geçmiş sınıf olamaz. İç içe geçmiş sınıflar için nokta anlamını belirlemek için izin verilmez `x:Class` dizeleri, iç içe geçmiş sınıflar izin veriyorsa belirsiz.  
   
- Varolan programlama kullanmak modeli `x:Class`, `x:Class` hiçbir arka plan kodu içeren bir XAML sayfası sahip tamamen geçerli olduğunu anlamda isteğe bağlıdır. Ancak, bu yetenek XAML kullanan çerçeveleri tarafından uygulandığı gibi yapı eylemleri ile etkileşime girer. `x:Class` Yetenek XAML belirtilen içeriği çeşitli sınıflandırmaları bir uygulama modeli vardır ve ilgili eylemler yapı rolleri tarafından da etkiler. XAML olay işleme öznitelik değerleri veya özel öğeleri tanımlayan sınıflar arka plan kodu sınıfında nerede başlatır bildirirse, sağlamak zorunda `x:Class` yönerge başvurusu (veya [x: Subclass](../../../docs/framework/xaml-services/x-subclass-directive.md)) için arka plan kodu için uygun sınıf.  
+ Programlama modelleri kullanan mevcut `x:Class`, `x:Class` kodu arka plan olan bir XAML sayfası tamamen geçerli olduğunu anlamda isteğe bağlıdır. Ancak, söz konusu özellik XAML kullanan Framework tarafından uygulanmış olarak derleme Eylemler ile etkileşim kurar. `x:Class` özelliği de çeşitli sınıflandırmalar XAML belirtilen içeriğin bir uygulama modeline sahip ve ilgili derleme eylemleri rolleri tarafından etkilenir. Olay işleme öznitelik değerleri ya da özel öğeleri tanımlayan sınıflar, arka plan kod sınıfı nerede başlatır, XAML bildiriyorsa, sağlamanız gereken `x:Class` yönerge başvurusu (veya [x: Subclass](../../../docs/framework/xaml-services/x-subclass-directive.md)) için arka plan kod için uygun sınıf.  
   
- Değeri `x:Class` yönergesi bir sınıfın ancak derleme bilgi olmadan tam adı belirten bir dize olması gerekir (eşdeğer <xref:System.Type.FullName%2A?displayProperty=nameWithType>). Basit uygulamalar için arka plan kodu aynı zamanda (sınıf düzeyinde kodu tanımı başlar) bu şekilde yapılandırılırsa CLR ad alanı bilgilerini atlayabilirsiniz.  
+ Değerini `x:Class` yönergesi, bir sınıfın ancak hiçbir derleme bilgisi olmadan tam olarak nitelenmiş adını belirten bir dize olmalıdır (eşdeğer <xref:System.Type.FullName%2A?displayProperty=nameWithType>). Basit uygulamalar için arka plan kod de (sınıf düzeyinde kod tanımı başlar) bu şekilde yapılandırılırsa CLR ad alanı bilgilerini atlayabilirsiniz.  
   
- Bir sayfa veya uygulama tanımı için arka plan kod dosyası, derlenen bir uygulama oluşturur ve biçimlendirme derleme ilgilidir projenin bir parçası olarak dahil olan bir kod dosya içinde olmalıdır. CLR sınıflarını adı kuralları izlemeniz gerekir. Daha fazla bilgi için bkz: [Framework tasarım yönergeleri](../../../docs/standard/design-guidelines/index.md). Varsayılan olarak, arka plandaki kod sınıfı olmalıdır `public`; ancak, kullanarak onu farklı bir erişim düzeyinde tanımlayabilirsiniz [x: ClassModifier yönergesi](../../../docs/framework/xaml-services/x-classmodifier-directive.md).  
+ Sayfa veya uygulama tanımı için arka plan kod dosyası, derlenen bir uygulamayı oluşturan ve biçimlendirme derleme içeren projenin bir parçası olarak dahil olan bir kod dosyası içinde olması gerekir. CLR sınıflarını için adı kurallara uymalıdır. Daha fazla bilgi için [çerçeve tasarım yönergeleri](../../../docs/standard/design-guidelines/index.md). Varsayılan olarak, arka plan kod sınıfı olarak `public`; ancak kullanarak, farklı erişim düzeyinde tanımlayabilirsiniz [x: ClassModifier yönergesi](../../../docs/framework/xaml-services/x-classmodifier-directive.md).  
   
- Bu yorumu `x:Class` özniteliğini uygular. yalnızca bir CLR tabanlı XAML uygulama, özellikle de .NET Framework XAML Hizmetleri için. CLR üzerinde dayalı olmayan ve .NET Framework XAML hizmetlerinde kullanmayan diğer XAML uygulamaları XAML işaretleme birbirine bağlamak ve çalışma zamanı koduyla yedekleme için farklı bir çözünürlük formülü kullanabilirsiniz. Daha fazla genel yorumlarınızı hakkında daha fazla bilgi için `x:Class`, bkz: [ \[MS XAML\]](http://go.microsoft.com/fwlink/?LinkId=114525).  
+ Bu yorumu `x:Class` özniteliğini uygular. yalnızca bir CLR tabanlı XAML uygulaması için özellikle .NET Framework XAML hizmetlerinde için. XAML işaretleme bağlama ve çalışma zamanı koduyla yedeklemeye farklı çözüm formül CLR'de dayalı olmayan ve .NET Framework XAML hizmetlerinde kullanmayan diğer XAML uygulamaları kullanabilir. Daha fazla genel yorumlar hakkında daha fazla bilgi için `x:Class`, bkz: [ \[MS-XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525).  
   
- Belirli bir mimari, anlamını düzeyinde `x:Class` .NET Framework XAML hizmetlerinde tanımlanmamış. .NET Framework XAML Hizmetleri tarafından hangi XAML biçimlendirme ve kodun yedekleme bağlı programlama modeli belirtmediğinden budur. Ek kullanımlarını `x:Class` yönergesi programlama modelleri veya uygulama modelleri XAML biçimlendirme ve CLR tabanlı gerideki koddan nasıl bağlayacağınızı tanımlamak için kullanmak belirli çerçeveleri tarafından uygulanan. Her framework bazı davranışı veya yapı ortamında eklenmelidir belirli bileşenleri etkinleştirmek kendi yapı eylemleri olabilir. Bir çerçeve içinde yapı eylemleri de arka plan kod için kullanılan belirli CLR dil bağlı olarak değişebilir.  
+ Belirli bir düzeyde mimarisinin anlamını `x:Class` .NET Framework XAML hizmetlerinde içinde tanımlanmamış. .NET Framework XAML hizmetlerinde tarafından hangi XAML işaretleme ve kod yedekleme bağlı bir programlama modeli belirtmiyor olmasıdır. Ek kullanımlarını `x:Class` yönergesi XAML işaretleme ve kod arka plan CLR tabanlı bağlanma tanımlamak için programlama modelleri veya uygulama modellerini kullanan belirli çerçevelerine uygulanmış. Her bir çerçeve davranışı ya da yapı ortamına dahil belirli bileşenlerin bazılarını etkinleştirmek, kendi derleme eylemler olabilir. Bir çerçeve içinde yapı eylemleri de arka plan kod için kullanılan belirli CLR dile bağlı olarak değişebilir.  
   
 ## <a name="xclass-in-the-wpf-programming-model"></a>x: Class WPF programlama modeli  
- WPF uygulamaları ve WPF uygulama modeli `x:Class` XAML dosyasının kök ve derleniyor herhangi bir öğe için bir özniteliği olarak bildirilebilir (burada XAML dahil bir WPF uygulaması projesi ile `Page` derleme eylemi), veya < C4 > <xref:System.Windows.Application>  uygulama tanımında derlenmiş WPF uygulaması, kök. Bildirme `x:Class` sayfa kök veya uygulama kökü dışında bir öğe üzerinde veya değil derlenmiş bir WPF XAML dosyası, altında bir derleme zamanı hatasına neden oluyor [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] ve [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] WPF XAML derleyici. Diğer yönleri hakkında bilgi için `x:Class` WPF'de işleme, bkz: [arka plan kod ve WPF XAML](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md).  
+ WPF uygulamaları ve WPF uygulama modeli `x:Class` XAML dosyasının kök ve derleniyor herhangi bir öğe için bir özniteliği olarak bildirilebilir (burada XAML dahil bir WPF uygulaması projesi ile `Page` derleme eylemi), veya < C4 > <xref:System.Windows.Application>  derlenmiş bir WPF uygulamasını Uygulama tanımındaki kök. Bildirme `x:Class` sayfa kök veya uygulama kökü dışında bir öğe üzerinde veya yapılmayan bir WPF XAML dosyası, altında bir derleme zamanı hatasına neden olur. [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] ve [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] WPF XAML derleyicisi. Diğer yönleri hakkında bilgi için `x:Class` WPF'de işleme bkz [arka plan kod ve WPF XAML](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md).  
   
 ## <a name="xclass-for-windows-workflow-foundation"></a>x: Class Windows Workflow Foundation için  
- Windows Workflow Foundation için `x:Class` tamamen XAML'de oluşan özel bir etkinlik sınıf adları veya arka plan kodu ile bir etkinlik Tasarımcısı için XAML sayfası kısmi sınıfı adları.  
+ Windows Workflow Foundation için `x:Class` tamamen XAML içinde oluşan özel bir etkinlik sınıfı adları veya arka plan kod ile bir etkinlik Tasarımcısı için XAML sayfanın kısmi sınıf adları.  
   
 ## <a name="silverlight-usage-notes"></a>Silverlight kullanım notları  
- `x:Class` Silverlight için ayrı olarak belgelenmiştir. Daha fazla bilgi için bkz: [XAML Namespace (x:) Dil özellikleri (Silverlight)](http://go.microsoft.com/fwlink/?LinkId=199081).  
+ `x:Class` Silverlight için ayrı olarak belgelenmiştir. Daha fazla bilgi için [XAML Namespace (x:) Dil özellikleri (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [x:Subclass Yönergesi](../../../docs/framework/xaml-services/x-subclass-directive.md)  

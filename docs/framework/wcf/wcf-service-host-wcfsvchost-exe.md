@@ -2,113 +2,113 @@
 title: WCF Hizmet Konağı (WcfSvcHost.exe)
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-ms.openlocfilehash: e1e258015adc34edd4a109f3bc5a32b4bf6f0296
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 6f719756688af066a42c3f73a860038dad1e5a53
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807040"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43565314"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>WCF Hizmet Konağı (WcfSvcHost.exe)
-Windows Communication Foundation (WCF) Hizmet Konağı (WcfSvcHost.exe), Visual Studio hata ayıklayıcısı (F5) otomatik olarak ana bilgisayar ve uygulamış olan bir hizmeti test başlatma olanak sağlar. Ardından hizmetini bulun ve olası hataları düzeltmek için WCF Test İstemcisi (WcfTestClient.exe) veya kendi istemci kullanarak test edebilirsiniz.  
+Windows Communication Foundation (WCF) hizmet ana bilgisayarı (WcfSvcHost.exe), Visual Studio hata ayıklayıcıyı otomatik olarak ana bilgisayar ve uyguladıysanız bir hizmeti test etmek için (F5) başlatmak sağlar. Sonra hizmeti bulun ve olası hataları düzeltmek için WCF Test İstemcisi (WcfTestClient.exe) veya kendi istemci kullanarak test edebilirsiniz.  
   
 ## <a name="wcf-service-host"></a>WCF hizmet konağı  
- WCF hizmet konağı bir WCF Hizmeti projesini Hizmetleri'nde numaralandırır, projenin yapılandırmayı yükler ve bulduğu her hizmet için bir konak başlatır. Araç Visual Studio'ya WCF Hizmeti şablonu aracılığıyla tümleşiktir ve projenizin hatalarını ayıklama başladığında çağrılır.  
+ WCF hizmet konağı bir WCF Hizmeti projesini Hizmetleri'nde numaralandırır, projenin yapılandırması yükler ve bulduğu her hizmet için bir ana bilgisayar örneği oluşturur. Araç, WCF hizmet şablonu aracılığıyla Visual Studio'da tümleşiktir ve projenizin hatalarını ayıklama başlatıldığında çağrılır.  
   
- WCF hizmet ana bilgisayarı kullanarak ek kod yazma veya belirli bir ana bilgisayara geliştirme sırasında gerçekleştirmeden olmadan bir WCF Hizmeti (bir WCF Hizmeti kitaplığı projesi) barındırabilir.  
+ WCF hizmet konağı kullanarak ek kod yazmadan veya belirli bir ana bilgisayara geliştirme sırasında yürüten olmadan bir WCF Hizmeti (WCF hizmet kitaplığı projesi) barındırabilir.  
   
 > [!NOTE]
->  WCF hizmet ana bilgisayarı, kısmi güven desteklemez. Kısmi güven bir WCF hizmetini kullanmak istiyorsanız, WCF Hizmeti kitaplığı proje şablonu Visual Studio'da hizmet oluşturmak için kullanmayın. Bunun yerine, WCF kısmi güven desteklenen bir Web hizmeti barındırabilir WCF Hizmeti Web sitesi şablonu seçerek Visual Studio'da yeni Web sitesi oluşturun.  
+>  WCF hizmet konağı, kısmi güven desteklemez. Bir WCF hizmetini kısmi güven kullanmak istiyorsanız, WCF hizmet kitaplığı proje şablonu Visual Studio'da hizmetinizi oluşturmak için kullanmayın. Bunun yerine, WCF kısmi güven, desteklenen bir Web sunucusu hizmeti barındıran WCF Hizmeti Web sitesi şablonunu seçerek Visual Studio'da yeni bir Web sitesi oluşturun.  
   
-## <a name="project-types-hosted-by-wcf-service-host"></a>WCF hizmet ana bilgisayar tarafından barındırılan proje türleri  
- WCF hizmet ana bilgisayarı, aşağıdaki WCF Hizmeti kitaplığı proje türleri barındırabilir: WCF Hizmeti kitaplığı, sıralı iş akışı hizmeti kitaplığı, Durum makinesi iş akışı hizmeti kitaplığı ve dağıtım hizmeti kitaplığı. WCF hizmet ana bilgisayarı ayrıca bir hizmet kitaplığını kullanarak proje eklenebilir bu hizmetlerin konak **Öğe Ekle** işlevselliği. Bu, WCF hizmeti, WF Durum makinesi hizmeti, WF sıralı hizmetini, XAML WF Durum makinesi hizmeti ve XAML WF sıralı hizmetini kapsar.  
+## <a name="project-types-hosted-by-wcf-service-host"></a>WCF hizmet konağı tarafından barındırılan proje türleri  
+ WCF hizmet konağı, WCF hizmet kitaplığı projesi türleri barındırabilir: WCF hizmet kitaplığı, sıralı iş akışı hizmet kitaplığı, Durum makinesi iş akışı hizmet kitaplığı ve dağıtım hizmeti kitaplığı. WCF hizmet konağı bir hizmet kitaplığı kullanarak proje eklenebilmesi için bu hizmetleri de barındırabilir **Öğe Ekle** işlevselliği. Bu, WCF hizmeti, WF Durum makinesi hizmeti, WF sıralı hizmeti, XAML WF Durum makinesi hizmeti ve XAML WF sıralı hizmeti içerir.  
   
- Size, ancak, aracı bir ana bilgisayar yapılandırma yardımcı olacak değil, unutmamalısınız. Bu görev için App.config dosyasını el ile düzenlemeniz gerekir. Araç ayrıca kullanıcı tanımlı yapılandırma dosyalarını doğrulamaz.  
+ Size, ancak araç, bir konak yapılandırmanıza yardımcı olmayacağı dikkat etmelisiniz. Bu görev için App.config dosyasına el ile düzenlemeniz gerekir. Araç ayrıca kullanıcı tanımlı yapılandırma dosyalarını doğrulamaz.  
   
 > [!CAUTION]
->  Bu amaçla mühendislik değil olarak WCF hizmet konağı hizmetlerini barındırmak için bir üretim ortamında kullanmamalısınız.  WCF hizmet ana bilgisayarı, güvenilirlik, güvenlik ve yönetilebilirlik gereksinimleri böyle bir ortamın desteklemez. Bunun yerine, üstün güvenilirliğe ve İzleme özelliklerini sağlar ve barındırma hizmetleri için tercih edilen çözüm beri IIS kullanın. Geliştirme, hizmetlerin tamamlandıktan sonra IIS WCF hizmet ana bilgisayardan Hizmetleri geçirmeniz gerekir.  
+>  Bu amaçla mühendislik değil olarak WCF hizmet konağı hizmetlerini barındırmak için bir üretim ortamında kullanmamalısınız.  WCF hizmet konağı, güvenilirlik, güvenlik ve yönetilebilirlik gereksinimleri bu tür bir ortamın desteklemez. Üstün güvenilirlik ve izleme özellikleri sağlar ve barındırma hizmetleri için tercih edilen çözüm olduğundan, bunun yerine, IIS kullanın. Hizmetlerinizi geliştirme tamamlandıktan sonra IIS WCF hizmet ana bilgisayarından Hizmetleri geçirmeniz gerekir.  
   
-## <a name="scenarios-for-using-wcf-service-host-inside-visual-studio"></a>WCF hizmet konağı Visual Studio içinde kullanma senaryoları  
- Aşağıdaki tabloda, tüm parametreleri listeler **komut satırı bağımsız değişkenleri** projenize sağ tıklayarak bulunabilir iletişim kutusu, **Çözüm Gezgini** seçerekVisualStudio**Özellikleri**, ardından seçerek **hata ayıklama** sekmesi ve tıklayarak **başlangıç projesi**. Bu parametreler, WCF hizmet ana bilgisayarı yapılandırmada faydalıdır.  
+## <a name="scenarios-for-using-wcf-service-host-inside-visual-studio"></a>Visual Studio'da WCF hizmet konağı kullanmaya yönelik senaryolar  
+ Tüm parametreleri aşağıdaki tabloda **komut satırı bağımsız değişkenleri** iletişim kutusunda, projenize sağ tıklayarak bulunabilir **Çözüm Gezgini** seçerekVisualStudio'da**Özellikleri**, ardından seçerek **hata ayıklama** sekmesi ve tıklayarak **başlangıç projesi**. Bu parametreleri, WCF hizmet konağı yapılandırma yararlıdır.  
   
 |Parametre|Açıklama|  
 |---------------|-------------|  
-|`/client`|Barındırılan hizmetlere sonra çalışacak bir yürütülebilir dosya yolunu belirtir. isteğe bağlı bir parametre. Bu WCF Test İstemcisi başlatır aşağıdaki barındırma.|  
+|`/client`|Bir isteğe bağlı parametresi hizmetlerinin barındırıldığı sonra çalıştırılacak bir yürütülebilir dosya yolunu belirtir. Bu WCF Test İstemcisi başlar takip barındırma.|  
 |`/clientArg`|Özel istemci uygulamaya geçirilen bağımsız değişken olarak bir dize belirtin.|  
 |`/?`|Yardım metni görüntüler.|  
   
-#### <a name="using-wcf-test-client"></a>WCF Test İstemcisi kullanma  
- Yeni bir WCF Hizmeti projesi oluşturun ve hata ayıklayıcısı başlatmak için F5 tuşuna basarak sonra barındırma projenizde bulduğu tüm hizmetleri WCF hizmet ana bilgisayarı başlatır. WCF Test istemcisi otomatik olarak açar ve yapılandırma dosyasında tanımlanmış hizmet uç noktaları listesini görüntüler. Ana penceresinden parametreleri test edin ve hizmetinizi çağırma.  
+#### <a name="using-wcf-test-client"></a>WCF Test İstemcisi'ni kullanma  
+ Yeni bir WCF Hizmeti projesi oluşturun ve hata ayıklayıcıyı başlatmak için F5 tuşuna basarak sonra WCF hizmet konağı projenizde bulduğu tüm hizmetleri barındırma başlatır. WCF Test istemcisi otomatik olarak açılır ve hizmet uç noktaları yapılandırma dosyasında tanımlanan bir listesini görüntüler. Ana penceredeki parametreleri test edebilir ve hizmetinizi çağırır.  
   
- WCF Test İstemcisi kullanıldığından emin olmak için projenize sağ **Çözüm Gezgini** Visual Studio'da seçin **özellikleri**seçeneğini belirleyip **hata ayıklama** sekmesi. Tıklatın **başlangıç projesi** ve aşağıdaki olarak göründüğünden emin olun **komut satırı bağımsız değişkenleri** iletişim kutusu.  
+ WCF Test İstemcisi kullanıldığından emin olmak için projenize sağ tıklayın **Çözüm Gezgini** Visual Studio'da **özellikleri**, ardından **hata ayıklama** sekmesi. Tıklayın **başlangıç projesi** ve aşağıdaki göründüğünden emin olun **komut satırı bağımsız değişkenleri** iletişim kutusu.  
   
  `/client:WcfTestClient.exe`  
   
-#### <a name="using-a-custom-client"></a>Özel bir istemci kullanma  
- Özel bir istemci kullanmak için projenize sağ **Çözüm Gezgini** Visual Studio'da seçin **özellikleri**seçeneğini belirleyip **hata ayıklama** sekmesi. Tıklatın **başlangıç projesi** ve düzenleme `/client` parametresinde **komut satırı bağımsız değişkenleri** aşağıdaki örnekte gösterildiği gibi özel istemciniz işaret edecek şekilde iletişim kutusu.  
+#### <a name="using-a-custom-client"></a>Özel bir istemci kullanarak  
+ Özel bir istemci kullanmak için projenize sağ tıklayın **Çözüm Gezgini** Visual Studio'da **özellikleri**, ardından **hata ayıklama** sekmesi. Tıklayın **başlangıç projesi** ve düzenleme `/client` parametresinde **komut satırı bağımsız değişkenleri** iletişim kutusunda, aşağıdaki örnekte gösterildiği gibi özel istemcinizi işaret edecek şekilde.  
   
  `/client:"path/CustomClient.exe"`  
   
- Hizmeti yeniden başlatmak için F5 tuşuna bastığınızda, hata ayıklayıcı başlattığında WCF hizmet ana bilgisayarı özel istemci otomatik olarak başlar.  
+ Hizmeti yeniden başlatmak için F5 tuşuna bastığınızda, hata ayıklayıcıyı başlattığınızda WCF hizmet konağının otomatik olarak özel istemci başlatır.  
   
- Aynı zamanda `/clientArg:` parametresini kullanarak aşağıdaki örnekte gösterildiği gibi özel istemci uygulamaya geçirilen bağımsız değişken olarak bir dize belirtin.  
+ Ayrıca `/clientArg:` parametresini kullanarak aşağıdaki örnekte gösterildiği gibi özel istemci uygulamaya geçirilen bağımsız değişken olarak bir dize belirtin.  
   
  `/client:"path/CustomClient.exe" /clientArg:"arguments that are passed to Client"`  
   
- Örneğin, dağıtım hizmeti kitaplığı şablon kullanıyorsanız, aşağıdaki komut satırı bağımsız değişkenleri kullanabilirsiniz,  
+ Örneğin, dağıtım hizmet kitaplığı şablonu kullanıyorsanız, aşağıdaki komut satırı bağımsız değişkenleri kullanabilirsiniz,  
   
  `/client:iexplore.exe /clientArgs:http://localhost:8731/Design_Time_Addresses/Feed1/`  
   
 #### <a name="specifying-no-client"></a>Hiçbir istemci belirtme  
- Hiçbir istemci WCF Hizmeti barındırma sonra kullanılacak belirtmek için projenize sağ **Çözüm Gezgini** Visual Studio'da seçin **özellikleri**seçeneğini belirleyip **hataayıklama** sekmesi. Tıklatın **başlangıç projesi** bırakıp **komut satırı bağımsız değişkenleri** iletişim kutusu boş.  
+ Hiçbir istemci WCF Hizmeti barındırma sonra kullanılacak belirtmek için projenize sağ tıklayın **Çözüm Gezgini** Visual Studio'da **özellikleri**, ardından **hataayıklama** sekmesi. Tıklayın **başlangıç projesi** bırakıp **komut satırı bağımsız değişkenleri** iletişim kutusu boş.  
   
-#### <a name="using-a-custom-host"></a>Özel bir ana bilgisayar kullanarak  
- Özel bir ana bilgisayar kullanmak için projenize sağ **Çözüm Gezgini** Visual Studio'da seçin **özellikleri**seçeneğini belirleyip **hata ayıklama** sekmesi. Tıklatın **Başlat Dış Program** ve özel ana bilgisayar için tam yolunu girin. Aynı zamanda **komut satırı bağımsız değişkenleri** ana bilgisayara geçirilecek bağımsız değişkenler belirtmek için iletişim kutusu.  
+#### <a name="using-a-custom-host"></a>Özel bir ana bilgisayar kullanma  
+ Özel bir ana bilgisayar'ı kullanmak için projenize sağ tıklayın **Çözüm Gezgini** Visual Studio'da **özellikleri**, ardından **hata ayıklama** sekmesi. Tıklayın **harici Program Başlat** ve özel ana bilgisayarı için tam yolunu girin. Ayrıca **komut satırı bağımsız değişkenleri** iletişim kutusunun ana bilgisayara geçirilecek bağımsız değişkenleri belirtin.  
   
-## <a name="wcf-service-host-user-interface"></a>WCF hizmet ana kullanıcı arabirimi  
- Ne zaman, başlangıçta çağırma WCF hizmet Konağı (Visual Studio içinde F5'e basarak), **WCF hizmet konağı** penceresi otomatik olarak açılır. WCF hizmet konağı çalışırken programın simgesi bildirim alanında görüntülenir. Açmak için simgesini çift **WCF hizmet konağı** penceresi  
+## <a name="wcf-service-host-user-interface"></a>WCF hizmet konağı kullanıcı arabirimi  
+ Başlangıçta çağırdığınızda WCF hizmet Konağı (Visual Studio'da F5 tuşuna basarak), **WCF hizmet konağı** penceresi otomatik olarak açılır. WCF hizmet konağı çalışırken, bildirim alanında program simgesi görünür. Açmak için simgesini çift tıklatın **WCF hizmet konağı** penceresi  
   
  Barındırma hizmeti sırasında hatalar oluştuğunda, ilgili bilgileri görüntülemek için WCF hizmet konağı iletişim kutusu açılır.  
   
  **WCF hizmet konağı** ana penceresi iki menüleri içerir:  
   
--   **Dosya**: içeren **Kapat** ve **çıkış** komutları. Tıkladığınızda **Kapat**, **WCF hizmet konağı** iletişim kutusu kapanır ancak Hizmetleri barındırılması devam eder. Tıkladığınızda **çıkış**, WCF hizmet ana bilgisayarı ayrıca kapatıldı. Bu aynı zamanda barındırılan tüm hizmetleri durdurur.  
+-   **Dosya**: içeren **Kapat** ve **çıkış** komutları. Tıkladığınızda **Kapat**, **WCF hizmet konağı** iletişim kutusu kapanır, ancak barındırılan hizmetler devam. Tıkladığınızda **çıkış**, WCF hizmet konağı aynı zamanda kapatılır. Bu, tüm barındırılan hizmetlerin de durdurulur.  
   
--   **Yardım**: içeren **hakkında** sürüm bilgilerini içeren komutu. Ayrıca içerdiği **yardımcı** Yardım dosyasını açabilirsiniz komutu.  
+-   **Yardım**: içeren **hakkında** sürüm bilgisi içeren komutu. Ayrıca içerdiği **yardımcı** Yardım dosyasını açabilirsiniz komutu.  
   
  Ana **WCF hizmet konağı** penceresi iki alanları içerir:  
   
 -   İlk alan **hizmet**. Tüm hizmetlerin temel bilgileri görüntüleyen bir listesini içerir. Bilgileri içerir:  
   
-    -   **Hizmet**: tüm hizmetleri listeler.  
+    -   **Hizmet**: tüm hizmetler listelenir.  
   
-    -   **Durum**: Hizmet durumunu listeler. Geçerli değerler "Başlatıldı", "Durduruldu" ve "Error" dir.  
+    -   **Durum**: Hizmet durumunu listeler. Geçerli değerler şunlardır: "Başlatıldı", "Stopped" ve "Error".  
   
-    -   **Meta veri adresi**: meta veri adresi hizmetleri görüntüler.  
+    -   **Meta veri adresi**: Hizmetleri meta veri adresini görüntüler.  
   
--   İkinci alanı **ek bilgi**. Belirli bir hizmet satırı seçildiğinde hizmet durumunun ayrıntılı bir açıklama görüntüler **hizmet** alan. Hata durumundaysa, tam hata iletisi ekranda görüntüleyebilirsiniz.  
+-   İkinci alanı **ek bilgi**. Belirli bir hizmet satırı seçildiğinde hizmet durumunu ayrıntılı bir açıklama görüntüler **hizmet** alan. Durum hatası ise, ekrandaki tüm hata iletilerini görüntüleyebilirsiniz.  
   
-## <a name="stopping-wcf-service-host"></a>WCF hizmet ana bilgisayarı durduruluyor  
- WCF hizmet konağı aşağıdaki dört yollarla kapatabilirsiniz:  
+## <a name="stopping-wcf-service-host"></a>WCF hizmet konağı durduruluyor  
+ WCF hizmet konağı dört aşağıdaki şekilde kapatabilirsiniz:  
   
--   Visual Studio'da hata ayıklama oturumu durdurun.  
+-   Visual Studio'da hata ayıklama oturumunu durdurun.  
   
 -   Seçin **çıkış** gelen **dosya** menüde **WCF hizmet konağı** penceresi.  
   
--   Seçin **çıkış** WCF hizmet konağı Tepsi simgesi sistem bildirim alanında bağlam menüsünden.  
+-   Seçin **çıkış** bağlam menüsünden sistem bildirim alanında WCF hizmet konağı Tepsi simgesi.  
   
--   Kullanılmakta ise, WCF Test İstemcisi çıkın.  
+-   WCF Test istemcisi, kullanılıyorsa çıkın.  
   
 ## <a name="using-service-host-without-administrator-privilege"></a>Hizmet ana bilgisayarı yönetici ayrıcalığı kullanma  
- WCF hizmetlerini geliştirmek yönetici ayrıcalığı olmayan kullanıcıların etkinleştirmek için bir ACL (erişim denetim listesi) ad alanı için oluşturulan "http://+:8731/Design_Time_Addresses" Visual Studio yüklemesi sırasında. ACL hangi makineye oturum açmış etkileşimli kullanıcıların tümünü içerir (UI) ayarlanır. Yöneticiler eklemek veya bu ACL'den kaldırmasına veya ek bağlantı noktalarını açın. Bu ACL kullanıcıların yönetici ayrıcalıklarını verme olmadan WCF hizmeti otomatik ana bilgisayarı (wcfSvcHost.exe) kullanmasını sağlar.  
+ WCF hizmetleri geliştirmek yönetici ayrıcalığı olmayan kullanıcıların etkinleştirmek için bir ACL (erişim denetim listesi) için ad alanı oluşturulan "http://+:8731/Design_Time_Addresses" Visual Studio yüklemesi sırasında. ACL makinede oturum açan tüm etkileşimli kullanıcılar içerir (UI) için ayarlanır. Yöneticiler ekleyin veya bu ACL'SİNDEN kaldırmasına veya ek bağlantı noktalarını açın. Bu ACL kullanıcıların yönetici ayrıcalıkları vermeden WCF hizmet otomatik ana bilgisayarı (wcfSvcHost.exe) kullanmasını sağlar.  
   
- Erişim netsh.exe aracını kullanarak değiştirebilirsiniz [!INCLUDE[wv](../../../includes/wv-md.md)] yükseltilmiş yönetici hesabı altında. Netsh.exe kullanmaya ilişkin bir örnek verilmiştir.  
+ İçinde netsh.exe aracını kullanarak erişimi değiştirebilirsiniz [!INCLUDE[wv](../../../includes/wv-md.md)] yükseltilmiş yönetici hesabı altında. Netsh.exe kullanmaya bir örnek verilmiştir.  
   
 ```  
 netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>  
 ```  
   
- Netsh.exe hakkında daha fazla bilgi için bkz: "[Netsh.exe aracı ve komut satırı anahtarları nasıl kullanılacağını](http://go.microsoft.com/fwlink/?LinkId=97877)".  
+ Netsh.exe hakkında daha fazla bilgi için bkz. "[Netsh.exe aracı ve komut satırı anahtarları nasıl kullanılacağını](https://go.microsoft.com/fwlink/?LinkId=97877)".  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [WCF Test İstemcisi (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

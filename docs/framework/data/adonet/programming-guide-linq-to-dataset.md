@@ -1,15 +1,15 @@
 ---
-title: Programlama Kılavuzu (LINQ-DataSet)
+title: Programlama Kılavuzu (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: 977aedd7-0084-46a0-b56f-345787a55da1
-ms.openlocfilehash: 70fb2d38a055a6b376a711aae28ba69e6c2dd771
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0c6b026d86a898aa52d93833ac3e447d6f6cba11
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353292"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513376"
 ---
-# <a name="programming-guide-linq-to-dataset"></a>Programlama Kılavuzu (LINQ-DataSet)
+# <a name="programming-guide-linq-to-dataset"></a>Programlama Kılavuzu (LINQ to DataSet)
 Bu bölüm ile programlama için kavramsal bilgiler ve örnekler sağlar [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
@@ -17,22 +17,22 @@ Bu bölüm ile programlama için kavramsal bilgiler ve örnekler sağlar [!INCLU
  Yazma hakkında bilgi sağlar [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sorgular.  
   
  [DataSet’leri Sorgulama](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)  
- Açıklar sorgu nasıl <xref:System.Data.DataSet> nesneleri.  
+ Açıklayan nasıl sorgu <xref:System.Data.DataSet> nesneleri.  
   
  [DataRow Karşılaştırma](../../../../docs/framework/data/adonet/comparing-datarows-linq-to-dataset.md)  
- Nasıl kullanılacağını açıklar <xref:System.Data.DataRowComparer> veri satırına Karşılaştırılacak nesne.  
+ Nasıl kullanılacağını açıklar <xref:System.Data.DataRowComparer> veri satırları Karşılaştırılacak nesne.  
   
  [Sorgudan DataTable Oluşturma](../../../../docs/framework/data/adonet/creating-a-datatable-from-a-query-linq-to-dataset.md)  
  Oluşturma hakkında bilgi sağlayan bir <xref:System.Data.DataTable> gelen bir [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] kullanarak sorgu <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> yöntemi.  
   
- [Nasıl yapılır: uygulama CopyToDataTable\<T > genel tür T olduğu bir DataRow satırının](../../../../docs/framework/data/adonet/implement-copytodatatable-where-type-not-a-datarow.md)  
- Özel bir uygulama açıklar `CopyToDataTable<T>` genel parametresini T olduğu türünü yöntemi <xref:System.Data.DataRow>.  
+ [Nasıl yapılır: uygulama CopyToDataTable\<T > Burada T genel türünün DataRow olmadığı](../../../../docs/framework/data/adonet/implement-copytodatatable-where-type-not-a-datarow.md)  
+ Özel bir uygulamayı açıklar `CopyToDataTable<T>` yöntemi burada genel parametre T türünde değil <xref:System.Data.DataRow>.  
   
  [Genel Alan ve SetField Yöntemleri](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)  
  Genel hakkında bilgi sağlar <xref:System.Data.DataRowExtensions.Field%2A> ve <xref:System.Data.DataRowExtensions.SetField%2A> yöntemleri.  
   
  [Veri Bağlama ve LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)  
- Veri bağlamasını kullanma açıklanır <xref:System.Data.DataView> nesnesi.  
+ Veri bağlamasını kullanma açıklanmaktadır <xref:System.Data.DataView> nesne.  
   
  [LINQ to DataSet Sorgularında Hata Ayıklama](../../../../docs/framework/data/adonet/debugging-linq-to-dataset-queries.md)  
  Hata ayıklama ve sorun giderme hakkında bilgi sağlar [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sorgular.  
@@ -41,7 +41,7 @@ Bu bölüm ile programlama için kavramsal bilgiler ve örnekler sağlar [!INCLU
  Güvenlik sorunları açıklar [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].  
   
  [LINQ to DataSet Örnekleri](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)  
- Kullanın sorgu örnekler verilmektedir [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] işleçler.  
+ Kullanan bir sorgu örnekleri sağlar [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] işleçleri.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Data.DataRowComparer>  
@@ -52,7 +52,7 @@ Bu bölüm ile programlama için kavramsal bilgiler ve örnekler sağlar [!INCLU
   
  <xref:System.Data.DataView>  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ADO.NET'e LINQ](http://msdn.microsoft.com/library/be3297b9-1b54-4d4c-82a8-add0d79c2006)  
- [IN derleme değil: LINQ genel programlama kılavuzu](http://msdn.microsoft.com/library/609c7a6b-cbdd-429d-99f3-78d13d3bc049)  
- [LINQ Framework](http://msdn.microsoft.com/library/897ea0fc-40db-4694-bbe5-7dd339d5bf94)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [LINQ ve ADO.NET](linq-and-ado-net.md)  
+- [Dil ile Tümleşik Sorgu (LINQ)](../../../csharp/programming-guide/concepts/linq/index.md)

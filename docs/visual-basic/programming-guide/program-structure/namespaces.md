@@ -17,11 +17,11 @@ helpviewer_keywords:
 - namespaces
 ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
 ms.openlocfilehash: 11fe6956ae2e61d6d715f1d5814e20c4a4d00292
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43402987"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509320"
 ---
 # <a name="namespaces-in-visual-basic"></a>Visual Basic'de Ad Alanları
 Ad alanları, bir derlemede tanımlanan nesneler düzenleyin. Derlemeleri diğer ad alanlarında sırayla içerebilen birden çok ad alanları içerebilir. Ad alanları belirsizlik önlemek ve büyük nesne grupları gibi sınıf kitaplıkları kullanırken başvuruları basitleştirin.  

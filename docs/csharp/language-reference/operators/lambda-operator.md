@@ -7,26 +7,26 @@ helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-ms.openlocfilehash: d1565e262fbd3ebcee2d1576a2a0c8ed3ba8ce38
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b9216cf61b6b9368112f769d952457df4aab4297
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33288232"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43670775"
 ---
 # <a name="gt-operator-c-reference"></a>=&gt; İşleci (C# Başvurusu)
 
-`=>` İşleci, C# iki yolla kullanılabilir:
+`=>` İşleci, C# dilinde iki şekilde kullanılabilir:
 
-- Olarak [lambda işleci](#lamba-operator) içinde bir [lambda ifadesi](../../lambda-expressions.md), girdi değişkenleri lambda gövdesinden ayırır.
+- Olarak [lambda işleci](#lamba-operator) içinde bir [lambda ifadesi](../../lambda-expressions.md), lambda gövdesinden girdi değişkenleri ayırır.
  
-- İçinde bir [ifade gövdesi tanımı](#expression-body-definition), üye uygulamasından bir üye adı ayırır. 
+- İçinde bir [ifade gövdesi tanımına](#expression-body-definition), üye uygulamasından bir üye adı ayıran. 
 
 ## <a name="lambda-operator"></a>Lambda işleci
 
-`=>` Belirteci lambda işleci çağrılır. İçinde kullanılan *lambda ifadeleri* girdi değişkenleri sol taraftaki sağ tarafında lambda gövde ayırmak için. Lambda ifadeleri satır içi ifadeler daha esnek ancak anonim yöntemler benzer; yine de uygun istiyor musunuz? yöntem sözdiziminde ifade LINQ sorgularında yaygın olarak kullanılır. Daha fazla bilgi için bkz: [Lambda ifadeleri](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
+`=>` Belirteci lambda işlecini çağrılır. İçinde kullanılan *lambda ifadeleri* işlecin sağ tarafındaki lambda gövdesinden sol tarafında giriş değişkenleri ayırmak için. Lambda ifadeleri, satır içi ifadeler anonim yöntemler daha esnek ancak benzer olan; yöntem sözdizimi ifade LINQ sorgularında yaygın olarak kullanılır. Daha fazla bilgi için [Lambda ifadeleri](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
   
- Aşağıdaki örnek bulmak ve bir dizeler dizisi kısa dize uzunluğu görüntülemek için iki yolunu gösterir. Lambda ifadesi örnek ilk bölümünü uygular (`w => w.Length`) her öğesine `words` dizi ve kullandığı <xref:System.Linq.Enumerable.Min%2A> en küçük uzunluk bulmak için yöntem. Karşılaştırma için ikinci bölümü örneğin aynı şeyi yapmak için sorgu sözdizimini kullanır daha uzun bir çözüm gösterilmektedir.  
+ Aşağıdaki örnek, bulmak ve dizelerden oluşan bir dizi kısa dize uzunluğunu görüntülemek için iki yolunu gösterir. Bir lambda ifadesi örneği ilk bölümünü uygular (`w => w.Length`) her öğesine `words` dizisi ve kullandığı <xref:System.Linq.Enumerable.Min%2A> en küçük uzunluğunu bulmak için yöntemi. Karşılaştırma için ikinci bölümü örneğin aynı şeyi yapmak için sorgu söz dizimi kullanan daha uzun bir çözüm gösterilmektedir.  
   
 ```csharp  
 string[] words = { "cherry", "apple", "blueberry" };  
@@ -50,16 +50,16 @@ Console.WriteLine(shortestWordLength2);
 ```  
   
 ### <a name="remarks"></a>Açıklamalar  
- `=>` Atama işleci olarak aynı önceliğe sahip (`=`) ve sağa ilişkilendirilebilir.  
+ `=>` İşleci atama işleci aynı önceliğe sahiptir (`=`) ve sağa ilişkilendirilmiştir.  
   
- Giriş değişkeninin türü açıkça belirtin veya bunu Infer derleyici sağlar; Her iki durumda da değişkeni kesinlikle derleme zamanında tür belirtilmiş. Bir türü belirttiğinizde, parantez içine tür adı ve değişken adı aşağıdaki örnekte gösterildiği gibi almalısınız.  
+ Giriş değişkeninin türünü açıkça belirtmeniz veya, derleyicinin sağlar; Her iki durumda da, değişken derleme zamanında kesin olarak. Bir türü belirttiğinizde, parantez içinde tür adı ve değişken adı aşağıdaki örnekte gösterildiği gibi almalısınız.  
   
 ```csharp  
 int shortestWordLength = words.Min((string w) => w.Length);  
 ```  
   
 ### <a name="example"></a>Örnek  
- Aşağıdaki örnekte bir lambda ifadesi standart sorgu işleci aşırı için yazma gösterilmektedir <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType> iki bağımsız değişkeni alır. Lambda ifadesi birden fazla parametre içerdiğinden parametreleri parantez içine alınmalıdır. İkinci parametre `index`, koleksiyondaki geçerli öğenin dizinini temsil eder. `Where` İfade olan uzunlukta olan dizin konumlarına dizideki değerinden tüm dizeleri döndürür.  
+ Aşağıdaki örnek, standart sorgu işleci aşırı yüklemesi için bir lambda ifadesinin nasıl yazılacağını gösterir <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType> , iki bağımsız değişkeni alır. Lambda ifadesi birden fazla parametre olduğundan, parametreleri, parantez içine alınmalıdır. İkinci parametre `index`, koleksiyondaki geçerli öğenin dizinini temsil eder. `Where` İfade, uzunlukları Dizin konumlarını dizideki değerinden küçük olan tüm dizeleri döndürür.  
   
 ```csharp  
 static void Main(string[] args)  
@@ -85,22 +85,22 @@ static void Main(string[] args)
 ```  
 ## <a name="expression-body-definition"></a>İfade gövdesi tanımı
 
-Bir ifade gövdesi tanımı yüksek oranda sıkıştırılmış, okunabilir bir biçimde bir üyenin uygulamasını sağlar. Genel sözdizimi aşağıdaki gibidir:
+Bir ifade gövdesi tanımına, yüksek oranda sıkıştırılmış, okunabilir formda bir üyenin uygulamasını sağlar. Bu genel sözdizimi aşağıdaki gibidir:
 
 ```csharp
 member => expression;
 ```
-Burada *ifade* geçerli bir ifade değil. Unutmayın *ifade* olabilir bir *deyimi ifade* üyenin dönüş türü ise yalnızca `void`, veya bir oluşturucu veya bir sonlandırıcı üyesiyse.
+Burada *ifade* geçerli bir ifadedir. Unutmayın *ifade* olabilir bir *deyim ifadesi* üyenin dönüş türü ise yalnızca `void`, veya üye bir oluşturucu ya da bir sonlandırıcı ise.
 
-İfade gövdesi tanımları yöntem ve özellik get deyimleri için C# 6 ile başlayarak desteklenir. Dizin oluşturucular C# 7 ile başlayan desteklenir ve ifade gövdesi Oluşturucular, sonlandırıcılar, tanımlarında deyimleri özelliğini ayarlayın.
+Yöntem ve özellik get deyimleri için ifade gövdesi tanımları, C# 6 ile başlayarak desteklenir. Sonlandırıcılar, Oluşturucular için ifade gövdesi tanımları deyimleri özelliğini ayarlayın ve dizin oluşturucular, C# 7 ile başlayan desteklenir.
 
-İçin bir ifade gövdesi tanımı aşağıda verilmiştir bir `Person.ToString` yöntemi:
+Bir ifade gövdesi tanımı verilmiştir bir `Person.ToString` yöntemi:
 
 ```csharp
 public override string ToString() => $"{fname} {lname}".Trim();
 ```
 
-Aşağıdaki yöntem tanımını kestirme sürümü şöyledir:
+Aşağıdaki yöntem tanımının bir toplu sürümdür:
 
 ```csharp
 public override string ToString()
@@ -108,10 +108,11 @@ public override string ToString()
    return $"{fname} {lname}".Trim();
 }
 ```
-İfade gövdesi tanımları hakkında daha ayrıntılı bilgi için bkz: [ifade bodied üyeleri](../../programming-guide/statements-expressions-operators/expression-bodied-members.md).
+İfade gövdesi tanımları hakkında daha ayrıntılı bilgi için bkz: [ifade gövdeli üyeler](../../programming-guide/statements-expressions-operators/expression-bodied-members.md).
 
-## <a name="see-also"></a>Ayrıca Bkz.  
-[C# başvurusu](../../../csharp/language-reference/index.md)   
-[C# programlama kılavuzu](../../../csharp/programming-guide/index.md)   
-[Lambda ifadeleri](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)   
-[İfade bodied üyeleri](../../programming-guide/statements-expressions-operators/expression-bodied-members.md).
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# başvurusu](../../../csharp/language-reference/index.md)   
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)   
+- [Lambda İfadeleri](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)   
+- [İfade gövdeli üyeler](../../programming-guide/statements-expressions-operators/expression-bodied-members.md).

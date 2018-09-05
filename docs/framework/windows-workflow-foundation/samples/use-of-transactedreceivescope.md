@@ -3,11 +3,11 @@ title: TransactedReceiveScope kullanımı
 ms.date: 03/30/2017
 ms.assetid: d455f1dc-bfc5-43d6-8ae9-bc3b3a3ea08a
 ms.openlocfilehash: bc1c418f3fa116f5e1c1647af3543a38122842f5
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481477"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501648"
 ---
 # <a name="use-of-transactedreceivescope"></a>TransactedReceiveScope kullanımı
 Bu örnek, kullanarak bir sunucu için bir istemciden bir işlem akışı gösterilmektedir <xref:System.Activities.Statements.TransactionScope> istemcide yeni bir işlem oluşturmak için ve bir <xref:System.ServiceModel.Activities.TransactedReceiveScope> akışlı bir işlem içeren bir ileti alma ve sunucu üzerinde işlem ömrü kapsam. Örnek, istemci ve sunucu rollerini dolduran iki projeden oluşan.  

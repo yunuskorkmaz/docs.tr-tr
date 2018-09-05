@@ -6,11 +6,11 @@ helpviewer_keywords:
 - NT Service Host Sample [Windows Communication Foundation]
 ms.assetid: 1b2f45c5-2bed-4979-b0ee-8f9efcfec028
 ms.openlocfilehash: 0283fd8b3fd275be9787bb75763e9395091426a3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43406268"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513677"
 ---
 # <a name="windows-service-host"></a>Windows Hizmet Konağı
 Bu örnek, yönetilen bir Windows hizmetinde barındırılan Windows Communication Foundation (WCF) hizmet gösterir. Windows Hizmetleri içindeki Hizmetler uygulamasını kullanarak denetlenir **Denetim Masası** ve sonra sistemi yeniden başlatma otomatik olarak başlatılmasını yapılandırılabilir. Örnek, bir istemci programı ve bir Windows hizmet programı oluşur. Hizmet bir .exe programı olarak uygulanır ve kendi barındırma kodunu içerir. Windows İşlem Etkinleştirme Hizmetleri (WAS) veya Internet Information Services (IIS) gibi diğer barındırma ortamlarında yazmak için gerekli değildir kod barındırma.  

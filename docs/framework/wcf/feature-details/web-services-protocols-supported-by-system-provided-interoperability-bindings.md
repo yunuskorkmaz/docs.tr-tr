@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Communication Foundation, Web service protocols
 ms.assetid: 1f7fc4ff-30fe-4e46-adda-91caad3b06c6
 ms.openlocfilehash: f4967a29b28f1862f5799f6935083ed12cb81ead
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43399056"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504344"
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>Sistem Tarafından Sağlanan Birlikte Kullanılabilirlik Bağlamaları ile Desteklenen Web Hizmeti Protokolleri
 Windows Communication Foundation (WCF) Web hizmetleri belirtimleri bilinen özellikleri kümesi destekleyen Web Hizmetleri ile çalışmak için yerleşik olarak bulunur. Birlikte çalışabilirlik en iyi uygulamalar için hizmet yapılandırması basitleştirmek için birlikte üç sistem tarafından sağlanan bağlamalar WCF sunar: <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>, <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType>, ve <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>. İlerletme, yapılandırılmış bilgi standartları (OASIS) standartları için kuruluş birlikte çalışabilirlik için birlikte çalışabilen bir sistem tarafından sağlanan bağlama WCF içerir: <xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>. Meta veri yayımlama için WCF iki birlikte çalışabilen sistem tarafından sağlanan bağlamalar içerir: [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) ve [ \<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md). Bu konu, sistem tarafından sağlanan birlikte çalışabilen bağlama desteği özellikleri listeler.  

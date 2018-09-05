@@ -3,11 +3,11 @@ title: İş Akışı Hizmetlerini Barındırma
 ms.date: 03/30/2017
 ms.assetid: 2d55217e-8697-4113-94ce-10b60863342e
 ms.openlocfilehash: f75b8cc4cde0372b995c39a5da3ae4b71590743e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43416371"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43505552"
 ---
 # <a name="hosting-workflow-services"></a>İş Akışı Hizmetlerini Barındırma
 Bir iş akışı hizmeti, gelen iletilere yanıt vermesi için barındırılması gerekir. İş akışı hizmetleri WCF Mesajlaşma altyapısını kullanır ve bu nedenle benzer şekillerde barındırılır. WCF hizmetlerinde olduğu gibi iş akışı Hizmetleri, yönetilen bir uygulamada, Internet Information Services (IIS) altında veya Windows İşlem Etkinleştirme Hizmetleri (WAS) altında barındırılabilir. Ayrıca, iş akışı Hizmetleri Windows Server App Fabric altında barındırılabilir. Windows Server App Fabric hakkında daha fazla bilgi için bkz. [Windows Server App Fabric belgeleri](https://go.microsoft.com/fwlink/?LinkId=193037), [AppFabric barındırma özellikleri](https://go.microsoft.com/fwlink/?LinkId=196494), ve [AppFabric barındırma kavramları](https://go.microsoft.com/fwlink/?LinkId=196495). Bkz: ana bilgisayar WCF için çeşitli yollar hakkında daha fazla bilgi hizmetleri için [barındırma hizmetleri](../../../../docs/framework/wcf/hosting-services.md).

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - brushes [WPF], painting with visuals
 ms.assetid: 35f92996-1d03-4542-acc4-3469dcf09492
 ms.openlocfilehash: 05014042c9e46232d02114f22ee8798d895e8559
-ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43331830"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43523932"
 ---
 # <a name="how-to-paint-an-area-with-a-visual"></a>Nasıl yapılır: Görsel ile bir Alanı Boyama
 Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.Media.VisualBrush> sınıfı ile bir alanı boyama bir <xref:System.Windows.Media.Visual>.  

@@ -5,11 +5,11 @@ ms.assetid: 5a9f5771-f5f6-4100-8501-406aa20d731a
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: dd5adf39c37fce92d4caf1d85e2a6a12e9e6b59b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486522"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504359"
 ---
 # <a name="how-to-enable-token-replay-detection"></a>Nasıl yapılır: Belirteç yeniden yürütme algılamayı etkinleştirme
 ## <a name="applies-to"></a>Uygulandığı öğe:  

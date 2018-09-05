@@ -5,16 +5,16 @@ helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: 310c5eed5507f75239efc78b6132fbc91211d29e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0691c33b551e39b2384950cfcd0be6e8a3a29cee
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339598"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506907"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>Sabit Boyutlu Arabellekler (C# Programlama Kılavuzu)
 
-C# ' ta kullanabileceğiniz [sabit](../../language-reference/keywords/fixed-statement.md) ifadesi bir veri yapısında bir sabit boyutlu bir diziye sahip bir arabellek oluşturun. Bu veri kaynakları birlikte çalışma yöntemlerini diğer diller veya platformları yazdığınızda, sabit boyutlu arabellekler yararlı olur. Sabit dizi öznitelik ya da normal Yapı üyeleri için izin verilen değiştiricileri alabilir. Yalnızca dizi türü olmalıdır kısıtlamadır `bool`, `byte`, `char`, `short`, `int`, `long`, `sbyte`, `ushort`, `uint`, `ulong`, `float`, veya `double`.
+C# ' ta kullanabileceğiniz [sabit](../../language-reference/keywords/fixed-statement.md) deyimini bir sabit boyutlu diziye bir veri yapısına sahip bir arabellek oluşturun. Sabit boyutlu arabellekler, yöntemler diğer dillerde veya platformlarda veri kaynaklarıyla bu birlikte çalışma yazmak olduğunda yararlıdır. Sabit dizi herhangi bir öznitelik veya normal Yapı üyeleri için izin verilen değiştiriciler alabilir. Yalnızca dizi türü olmalıdır kısıtlamadır `bool`, `byte`, `char`, `short`, `int`, `long`, `sbyte`, `ushort`, `uint`, `ulong`, `float`, veya `double`.
 
 ```csharp
 private fixed char name[30];
@@ -22,35 +22,35 @@ private fixed char name[30];
 
 ## <a name="remarks"></a>Açıklamalar
 
-Güvenli kodda bir dizi içeren bir C# yapı dizi öğeleri içermiyor. Bunun yerine, yapı öğeleri bir başvuru içeriyor. İçinde sabit boyutlu bir dizi eklenebilir bir [yapısı](../../language-reference/keywords/struct.md) içinde kullanıldığında bir [güvensiz](../../language-reference/keywords/unsafe.md) kod bloğu.
+Güvenli kod içinde bir dizi içeren bir C# yapı dizi öğeleri içermiyor. Bunun yerine, yapı öğeleri bir başvuru içeriyor. İçinde sabit boyutlu bir dizi katıştırabilirsiniz bir [yapı](../../language-reference/keywords/struct.md) içinde kullanıldığında bir [güvenli](../../language-reference/keywords/unsafe.md) kod bloğu.
 
-Aşağıdaki `struct` boyutu 8 bayt'tır. `pathName` Dizidir başvuru:
+Aşağıdaki `struct` 8 bayt cinsinden boyutu. `pathName` Başvuru dizisidir:
 
 [!code-csharp[Struct with embedded array](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#6)]
 
-A `struct` güvenli olmayan kod katıştırılmış bir dizide içerebilir. Aşağıdaki örnekte, `fixedBuffer` dizi sabit bir boyuta sahiptir. Kullandığınız bir `fixed` deyimi ilk öğe için bir işaretçi oluşturun. Dizideki öğeler bu işaretçinin erişebilirsiniz. `fixed` Deyimi PIN'ler `fixedBuffer` bellekte belirli bir konuma örnek alanı.
+A `struct` güvenli olmayan kod içinde gömülü bir dizi içerebilir. Aşağıdaki örnekte, `fixedBuffer` dizi sabit bir boyuta sahiptir. Kullandığınız bir `fixed` ilk öğeye bir işaretçi kurmak için deyimi. Bu işaretçiyle dizinin öğeleri eriştiğinize. `fixed` Deyimi PIN'ler `fixedBuffer` bellekte belirli bir konuma örnek alanı.
 
 [!code-csharp[Struct with embedded inline array](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#7)]
 
-128 öğe boyutunu `char` 256 baytı dizisidir. Boyutu sabit [char](../../language-reference/keywords/char.md) arabellekleri her zaman karakter kodlama bağımsız olarak, her iki byte uygulamanız. Bu bile zaman char arabellekleri API yöntemlerini veya yapılar ile sıralanmış geçerlidir `CharSet = CharSet.Auto` veya `CharSet = CharSet.Ansi`. Daha fazla bilgi için bkz. <xref:System.Runtime.InteropServices.CharSet>.
+128 öğe `char` 256 bayt dizisidir. Boyutu sabit [char](../../language-reference/keywords/char.md) arabellekler her zaman, bağımsız olarak kodlama karakter başına iki bayttan yönlendirir. Bu da zaman char arabellekler API yöntemleri veya yapılar ile sıralanmış geçerlidir `CharSet = CharSet.Auto` veya `CharSet = CharSet.Ansi`. Daha fazla bilgi için bkz. <xref:System.Runtime.InteropServices.CharSet>.
 
-Önceki örnekte erişme gösterir `fixed` C# ile 7.3 itibaren kullanılabilir sabitleme, olmadan alanları...
+Yukarıdaki örnekte erişme gösterir `fixed` ile C# 7.3'den itibaren kullanılabilmektedir sabitleme, olmadan alanları...
 
-Başka bir ortak sabit boyutlu dizi [bool](../../language-reference/keywords/bool.md) dizi. Öğeleri bir `bool` dizi her zaman bir bayt boyutunda. `bool` diziler bit dizileri veya arabelleklerinin oluşturmak için uygun değildir.
+Başka bir ortak sabit boyutlu dizi [bool](../../language-reference/keywords/bool.md) dizisi. Öğeleri bir `bool` dizi her zaman tek bir bayt boyutunda. `bool` diziler bit diziler veya arabellekler oluşturmak için uygun değildir.
 
 > [!NOTE]
-> Kullanılarak oluşturulan bellek dışında [stackalloc](../../language-reference/keywords/stackalloc.md), C# Derleyici ve ortak dil çalışma zamanı (CLR) tüm güvenlik arabellek taşması denetimlerini gerçekleştirmeyin. Tüm güvenli olmayan kod ile dikkatli olarak.
+> Kullanılarak oluşturulan bellek dışında [stackalloc](../../language-reference/keywords/stackalloc.md), C# Derleyici ve ortak dil çalışma zamanı (CLR) herhangi bir güvenlik arabellek taşma denetimi gerçekleştirmeyin. Tüm güvenli olmayan kod gibi dikkatli kullanın.
 
-Güvenli olmayan arabellekler normal diziler de aşağıdaki yollarla farklılık gösterir:
+Güvenli olmayan arabellekler normal dizilerden şu bakımlardan ayrılır:
 
-- Bu gibi durumlarda, güvenli olmayan arabellekler yalnızca güvensiz bir bağlamda kullanabilirsiniz.
-- Güvenli olmayan arabellekler her zaman vektörlerinin ya da tek boyutlu diziler olur.
-- Dizi bildirimi gibi bir sayı bulunması `char id[8]`. Kullanamazsınız `char id[]`.
-- Güvenli olmayan arabellekler yalnızca güvenli olmayan bir bağlamda yapılar örneği alanları olabilir.
+- Bu gibi durumlarda, güvenli olmayan arabellekler yalnızca güvenli olmayan bir bağlamda kullanabilirsiniz.
+- Güvenli olmayan arabellekler, vektör veya tek boyutlu diziler her zaman olur.
+- Dizi bildirimi bir sayı gibi bulunması `char id[8]`. Kullanamazsınız `char id[]`.
+- Güvenli olmayan arabellekler yalnızca güvenli olmayan bir bağlamda yapılar örnek alanları olabilir.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 
-[C# Programlama Kılavuzu](../index.md)  
-[Güvenli Olmayan Kod ve İşaretçiler](index.md)  
-[fixed Deyimi](../../language-reference/keywords/fixed-statement.md)  
-[Birlikte çalışabilirlik](../interop/index.md)
+- [C# Programlama Kılavuzu](../index.md)  
+- [Güvenli Olmayan Kod ve İşaretçiler](index.md)  
+- [fixed Deyimi](../../language-reference/keywords/fixed-statement.md)  
+- [Birlikte çalışabilirlik](../interop/index.md)
