@@ -1,236 +1,236 @@
 ---
-title: SQL Server şeması koleksiyonları
+title: SQL Server şema koleksiyonları
 ms.date: 03/30/2017
 ms.assetid: c6403cc3-d78b-4f85-bab1-ada7a3446ec5
-ms.openlocfilehash: 248e5f4caf47f09742358240fa43f46169f0b1e5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7020c74d41ce1feef38c4dfc66117a7b8c8eff4e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361061"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43508496"
 ---
-# <a name="sql-server-schema-collections"></a>SQL Server şeması koleksiyonları
-SQL Server için Microsoft .NET Framework veri sağlayıcısı ortak şeması koleksiyonları yanı sıra ek şeması koleksiyonları destekler. Şema koleksiyonları, kullanmakta olduğunuz SQL Server sürümü tarafından biraz farklılık gösterir. Desteklenen şeması koleksiyonları listesini belirlemek için çağrı **GetSchema** yöntemi bağımsız değişken içermeyen veya şema koleksiyonu adı "MetaDataCollections". Bu döndürülecek bir <xref:System.Data.DataTable> desteklenen şeması koleksiyonları, her destekledikleri kısıtlama sayısı ve kullandıkları tanımlayıcı bölümlerinin sayısını listesini içeren.  
+# <a name="sql-server-schema-collections"></a>SQL Server şema koleksiyonları
+SQL Server için Microsoft .NET Framework veri sağlayıcısı, ortak şema koleksiyonları yanı sıra ek şema koleksiyonları destekler. Şema koleksiyonları kullanmakta olduğunuz SQL Server sürümüne göre biraz farklılık gösterir. Desteklenen şema koleksiyonları listesi belirlemek için çağrı **GetSchema** yöntemi bağımsız değişken olmadan veya şema koleksiyonu adı "MetaDataCollections". Bu döndürür bir <xref:System.Data.DataTable> listesiyle desteklenen şema koleksiyonları, desteklediği her kısıtlama sayısı ve kullandıkları tanımlayıcısı parçaların sayısı.  
   
 ## <a name="databases"></a>Veritabanları  
   
-|columnName|Veri türü|Açıklama|  
+|ColumnName|Veri türü|Açıklama|  
 |----------------|--------------|-----------------|  
 |database_name|Dize|Veritabanının adı.|  
-|DBID|Int16|Veritabanı kimliği.|  
+|DBID|Int16|Veritabanı kimliği|  
 |create_date|DateTime|Veritabanı oluşturma tarihi.|  
   
 ## <a name="foreign-keys"></a>Yabancı anahtarlar  
   
-|columnName|Veri türü|Açıklama|  
+|ColumnName|Veri türü|Açıklama|  
 |----------------|--------------|-----------------|  
-|CONSTRAINT_CATALOG|Dize|Katalog kısıtlaması ait.|  
-|CONSTRAINT_SCHEMA|Dize|Şema kısıtlaması içeriyor.|  
+|CONSTRAINT_CATALOG|Dize|Kısıtlama Kataloğu aittir.|  
+|CONSTRAINT_SCHEMA|Dize|Kısıtlama içeren şema.|  
 |CONSTRAINT_NAME|Dize|Adı.|  
 |TABLE_CATALOG|Dize|Tablo adı kısıtlaması, bir parçasıdır.|  
-|TABLE_SCHEMA|Dize|Şema, tablo içeriyor.|  
+|TABLE_SCHEMA|Dize|Tablo içeren şema.|  
 |TABLE_NAME|Dize|Tablo adı|  
-|CONSTRAINT_TYPE|Dize|Kısıtlama türü. Yalnızca "yabancı anahtarı" izin verilmiyor.|  
-|IS_DEFERRABLE|Dize|Kısıtlama deferrable olup olmadığını belirtir. Hayır döndürür.|  
-|INITIALLY_DEFERRED|Dize|Kısıtlama başlangıçta deferrable olup olmadığını belirtir. Hayır döndürür.|  
+|CONSTRAINT_TYPE|Dize|Kısıtlama türü. Yalnızca "yabancı anahtarı" izin verilir.|  
+|IS_DEFERRABLE|Dize|Kısıtlama deferrable olup olmadığını belirtir. Hayır döndürür|  
+|INITIALLY_DEFERRED|Dize|Kısıtlama başlangıçta deferrable olup olmadığını belirtir. Hayır döndürür|  
   
-## <a name="indexes"></a>Dizinler  
+## <a name="indexes"></a>Dizinleri  
   
-|columnName|Veri türü|Açıklama|  
+|ColumnName|Veri türü|Açıklama|  
 |----------------|--------------|-----------------|  
-|constraint_catalog|Dize|Katalog dizin ait.|  
-|constraint_schema|Dize|Şema dizini içerir.|  
+|constraint_catalog|Dize|Katalog, dizine ait.|  
+|constraint_schema|Dize|Dizin içeren şema.|  
 |constraint_name|Dize|Dizinin adı.|  
-|TABLE_CATALOG|Dize|Tablo adı dizin ile ilişkilendirilir.|  
-|TABLE_SCHEMA|Dize|Tabloyu içeren şeması dizini ile ilişkili.|  
+|TABLE_CATALOG|Dize|Dizin tablo adı ile ilişkilidir.|  
+|TABLE_SCHEMA|Dize|Dizin tablosu içeren şema ilişkilidir.|  
 |TABLE_NAME|Dize|Tablo adı.|  
 |index_name|Dize|Dizin adı.|  
   
-### <a name="indexes-sql-server-2008"></a>Dizinleri (SQL Server 2008)  
- SQL Server 2008 ve .NET Framework sürüm 3.5 SP1 ile başlayarak, aşağıdaki sütunları yeni uzamsal türler, FILESTREAM ve seyrek sütun desteklemek için dizinler şema koleksiyonu eklenmiştir. Bu sütun, önceki .NET Framework ve SQL Server sürümlerinde desteklenmez.  
+### <a name="indexes-sql-server-2008"></a>Dizinler (SQL Server 2008)  
+ SQL Server 2008 ve .NET Framework sürüm 3.5 SP1 ile başlayarak, aşağıdaki sütunlar yeni uzamsal türler, FILESTREAM ve seyrek sütun desteklemek için dizinleri şema koleksiyonu eklendi. Bu sütunlar, .NET Framework ve SQL Server'ın önceki sürümlerinde desteklenmez.  
   
-|columnName|Veri türü|Açıklama|  
+|ColumnName|Veri türü|Açıklama|  
 |----------------|--------------|-----------------|  
-|type_desc|Dize|Dizin türünü aşağıdakilerden biri olacaktır:<br /><br /> -HEAP<br />-KÜMELENMİŞ<br />-KÜMELENMEMİŞ<br />-   XML<br />-UZAMSAL|  
+|type_desc|Dize|Dizin türü, aşağıdakilerden birini olacaktır:<br /><br /> -HEAP<br />-KÜMELENMİŞ<br />-KÜMELENMEMİŞ<br />-   XML<br />-UZAMSAL|  
   
 ## <a name="indexcolumns"></a>IndexColumns  
   
-|columnName|Veri türü|Açıklama|  
+|ColumnName|Veri türü|Açıklama|  
 |----------------|--------------|-----------------|  
-|constraint_catalog|Dize|Katalog dizin ait.|  
-|constraint_schema|Dize|Şema dizini içerir.|  
+|constraint_catalog|Dize|Katalog, dizine ait.|  
+|constraint_schema|Dize|Dizin içeren şema.|  
 |constraint_name|Dize|Dizinin adı.|  
-|TABLE_CATALOG|Dize|Tablo adı dizin ile ilişkilendirilir.|  
-|TABLE_SCHEMA|Dize|Tabloyu içeren şeması dizini ile ilişkili.|  
+|TABLE_CATALOG|Dize|Dizin tablo adı ile ilişkilidir.|  
+|TABLE_SCHEMA|Dize|Dizin tablosu içeren şema ilişkilidir.|  
 |TABLE_NAME|Dize|Tablo adı.|  
-|COLUMN_NAME|Dize|Sütun adı dizin ile ilişkilendirilir.|  
+|COLUMN_NAME|Dize|Sütun adı dizin ile ilişkilidir.|  
 |ORDINAL_POSITION|Int32|Sütun sıralı konumu.|  
-|keyType|Bayt|Nesnenin türü.|  
+|KeyType|Bayt|Nesnenin türü.|  
 |index_name|Dize|Dizin adı.|  
   
 ## <a name="procedures"></a>Yordamlar  
   
-|columnName|Veri türü|Açıklama|  
+|ColumnName|Veri türü|Açıklama|  
 |----------------|--------------|-----------------|  
 |SPECIFIC_CATALOG|Dize|Katalog için belirli ad.|  
-|SPECIFIC_SCHEMA|Dize|Şema belirli adıdır.|  
-|SPECIFIC_NAME|Dize|Kataloğun belirli adı.|  
-|ROUTINE_CATALOG|Dize|Katalog saklı yordamı ait.|  
+|SPECIFIC_SCHEMA|Dize|Belirli şemasının adı.|  
+|SPECIFIC_NAME|Dize|Belirli bir katalog adı.|  
+|ROUTINE_CATALOG|Dize|Katalog saklı yordamı aittir.|  
 |ROUTINE_SCHEMA|Dize|Saklı yordam içeren şema.|  
-|ROUTINE_NAME|Dize|Saklı yordam adı.|  
-|ROUTINE_TYPE|Dize|YORDAM işlevleri için saklı yordamları ve işlevi döndürür.|  
-|OLUŞTURULAN|DateTime|Yordam oluşturulduğu zaman.|  
-|LAST_ALTERED|DateTime|En son ne zaman yordamı değiştirildi.|  
+|ROUTINE_NAME|Dize|Saklı yordamın adı.|  
+|ROUTINE_TYPE|Dize|YORDAMI, İşlevler için saklı yordamlar ve işlev döndürür.|  
+|OLUŞTURULAN|DateTime|Yordamı oluşturulduğu zaman.|  
+|LAST_ALTERED|DateTime|Son yordamı değiştirildi.|  
   
 ## <a name="procedure-parameters"></a>Yordam parametreleri  
   
-|columnName|Veri türü|Açıklama|  
+|ColumnName|Veri türü|Açıklama|  
 |----------------|--------------|-----------------|  
-|SPECIFIC_CATALOG|Dize|Katalog bir parametre olan bu yordamın adı.|  
-|SPECIFIC_SCHEMA|Dize|Bu parametre bir parçası olduğu yordamı içeren şema.|  
+|SPECIFIC_CATALOG|Dize|Bu parametre olduğu yordamın adını katalog.|  
+|SPECIFIC_SCHEMA|Dize|Bu parametre bir parçası olduğu yordam içeren şema.|  
 |SPECIFIC_NAME|Dize|Bu parametre bir parçası olduğu yordamın adı.|  
-|ORDINAL_POSITION|Int32|Parametre 1'den başlayarak sıralı konumunu. Bir yordam dönüş değeri için bir 0'dır.|  
-|PARAMETER_MODE|Dize|IF IF bir giriş parametresi bir output parametresi ve INOUT bir giriş/çıkış parametresi varsa döndürür.|  
-|IS_RESULT|Dize|Evet döndüren bir işlev yordamı sonucunu gösterir. Aksi takdirde, döndürür No|  
-|AS_LOCATOR|Dize|Evet Bulucu bildirilen varsa döndürür. Aksi takdirde, döndürür No|  
-|PARAMETRE_ADÝ|Dize|Parametrenin adı. Bu işlevin dönüş değerine karşılık gelen yoksa NULL.|  
+|ORDINAL_POSITION|Int32|Parametre 1'den başlayarak sıralı konumu. Bir yordam için dönüş değeri bir 0'dır.|  
+|PARAMETER_MODE|Dize|Sahipse IF bir giriş parametresi bir output parametresi ve giriş/çıkış parametresi varsa INOUT döndürür.|  
+|IS_RESULT|Dize|Evet döndüren bir işlev, yordamın sonucunu gösterir. Aksi halde döndürür No|  
+|AS_LOCATOR|Dize|Evet Bulucu bildirilmişlerse döndürür. Aksi halde döndürür No|  
+|PARAMETER_NAME|Dize|Parametrenin adı. Bu işlevin dönüş değerine karşılık gelen yoksa NULL.|  
 |DATA_TYPE|Dize|Sistem tarafından sağlanan veri türü.|  
-|CHARACTER_MAXIMUM_LENGTH|Int32|İkili veya karakter veri türleri için karakter cinsinden en büyük uzunluğu. Aksi takdirde NULL döndürür.|  
-|CHARACTER_OCTET_LENGTH|Int32|İkili veya karakter veri türleri için bayt cinsinden en büyük uzunluğu. Aksi takdirde NULL döndürür.|  
-|COLLATION_CATALOG|Dize|Parametrenin harmanlaması katalog adı. Aksi halde NULL karakter türlerinden birini döndürür.|  
+|CHARACTER_MAXIMUM_LENGTH|Int32|İkili veya karakter veri türleri için karakter cinsinden en büyük uzunluğu. Aksi takdirde, NULL döndürür.|  
+|CHARACTER_OCTET_LENGTH|Int32|İkili veya karakter veri türleri için bayt cinsinden en büyük uzunluğu. Aksi takdirde, NULL döndürür.|  
+|COLLATION_CATALOG|Dize|Katalog harmanlama parametrenin adıdır. Aksi durumda NULL karakter türlerinden birini döndürür.|  
 |COLLATION_SCHEMA|Dize|Her zaman NULL döndürür.|  
-|COLLATION_NAME|Dize|Harmanlama parametresinin adı. Aksi halde NULL karakter türlerinden birini döndürür.|  
-|CHARACTER_SET_CATALOG|Dize|Katalog parametresinin karakter kümesinin adı. Aksi halde NULL karakter türlerinden birini döndürür.|  
+|COLLATION_NAME|Dize|Harmanlama parametrenin adı. Aksi durumda NULL karakter türlerinden birini döndürür.|  
+|CHARACTER_SET_CATALOG|Dize|Katalog adı karakter parametresini ayarlayın. Aksi durumda NULL karakter türlerinden birini döndürür.|  
 |CHARACTER_SET_SCHEMA|Dize|Her zaman NULL döndürür.|  
-|CHARACTER_SET_NAME|Dize|Karakter kümesi parametresinin adı. Aksi halde NULL karakter türlerinden birini döndürür.|  
-|NUMERIC_PRECISION|Bayt|Yaklaşık sayısal veriler, tam sayısal veriler, tamsayı veri veya para veri duyarlığını. Aksi takdirde NULL döndürür.|  
-|NUMERIC_PRECISION_RADIX|Int16|Precision taban yaklaşık sayısal veriler, tam sayısal veriler, tamsayı veri veya para veri. Aksi takdirde NULL döndürür.|  
-|NUMERIC_SCALE|Int32|Yaklaşık sayısal veriler, tam sayısal veriler, tamsayı veri veya para veri ölçeğini. Aksi takdirde NULL döndürür.|  
-|DATETIME_PRECISION|Int16|Duyarlık parametre türü datetime veya smalldatetime'a ise Kesirli saniye cinsinden. Aksi takdirde NULL döndürür.|  
+|CHARACTER_SET_NAME|Dize|Karakter kümesi parametresinin adı. Aksi durumda NULL karakter türlerinden birini döndürür.|  
+|NUMERIC_PRECISION|Bayt|Duyarlık yaklaşık sayısal veriler, sayısal verileri tam, tamsayı veri ya da parasal veri. Aksi takdirde, NULL döndürür.|  
+|NUMERIC_PRECISION_RADIX|Int16|Duyarlık taban yaklaşık sayısal veriler, sayısal verileri tam, tamsayı veri ya da parasal veri. Aksi takdirde, NULL döndürür.|  
+|NUMERIC_SCALE|Int32|Ölçek yaklaşık sayısal veriler, sayısal verileri tam, tamsayı veri ya da parasal veri. Aksi takdirde, NULL döndürür.|  
+|DATETIME_PRECISION|Int16|Parametre türü, TarihSaat ya da smalldatetime ise Kesirli saniye duyarlık. Aksi takdirde, NULL döndürür.|  
 |INTERVAL_TYPE|Dize|NULL. SQL Server tarafından gelecekte kullanım için ayrılmıştır.|  
 |INTERVAL_PRECISION|Int16|NULL. SQL Server tarafından gelecekte kullanım için ayrılmıştır.|  
   
-## <a name="tables"></a>tabloları  
+## <a name="tables"></a>Tabloları  
   
-|columnName|Veri türü|Açıklama|  
+|ColumnName|Veri türü|Açıklama|  
 |----------------|--------------|-----------------|  
 |TABLE_CATALOG|Dize|Tablo Kataloğu.|  
-|TABLE_SCHEMA|Dize|Tabloyu içeren şema.|  
+|TABLE_SCHEMA|Dize|Tablo içeren şema.|  
 |TABLE_NAME|Dize|Tablo adı.|  
 |TABLE_TYPE|Dize|Tablo türü. Görünüm veya temel tablo olabilir.|  
   
 ## <a name="columns"></a>Sütunlar  
   
-|columnName|Veri türü|Açıklama|  
+|ColumnName|Veri türü|Açıklama|  
 |----------------|--------------|-----------------|  
 |TABLE_CATALOG|Dize|Tablo Kataloğu.|  
-|TABLE_SCHEMA|Dize|Tabloyu içeren şema.|  
+|TABLE_SCHEMA|Dize|Tablo içeren şema.|  
 |TABLE_NAME|Dize|Tablo adı.|  
 |COLUMN_NAME|Dize|Sütun adı.|  
 |ORDINAL_POSITION|Int32|Sütun kimlik numarası.|  
 |COLUMN_DEFAULT|Dize|Sütununun varsayılan değeri|  
-|IS_NULLABLE|Dize|Sütun null atanabilirlik. Bu sütun NULL izin veriyorsa, bu sütunda Evet döndürür. Aksi takdirde, Hayır döndürülür.|  
+|IS_NULLABLE|Dize|Sütununun null atanabilirliği. Bu sütun NULL izin veriyorsa, bu sütunda Evet döndürür. Aksi takdirde Hayır döndürülür.|  
 |DATA_TYPE|Dize|Sistem tarafından sağlanan veri türü.|  
-|CHARACTER_MAXIMUM_LENGTH|Int32 – Sql8, Int16 – Sql7|İkili veriler, karakter verilerinin ya da metin ve resim veri için karakter cinsinden en büyük uzunluğu. Aksi takdirde null değeri döndürülür.|  
-|CHARACTER_OCTET_LENGTH|Int32 – SQL8, Int16 – Sql7|İkili veriler, karakter verilerinin ya da metin ve resim veri için bayt cinsinden en büyük uzunluğu. Aksi takdirde null değeri döndürülür.|  
-|NUMERIC_PRECISION|İmzasız bayt|Yaklaşık sayısal veriler, tam sayısal veriler, tamsayı veri veya para veri duyarlığını. Aksi takdirde null değeri döndürülür.|  
-|NUMERIC_PRECISION_RADIX|Int16|Precision taban yaklaşık sayısal veriler, tam sayısal veriler, tamsayı veri veya para veri. Aksi takdirde null değeri döndürülür.|  
-|NUMERIC_SCALE|Int32|Yaklaşık sayısal veriler, tam sayısal veriler, tamsayı veri veya para veri ölçeğini. Aksi takdirde null değeri döndürülür.|  
-|DATETIME_PRECISION|Int16|Datetime ve SQL-92 aralığı veri türleri için kod alt tür. Diğer veri türleri için null değeri döndürülür.|  
-|CHARACTER_SET_CATALOG|Dize|Karakter kümesi bulunduğu, veritabanı sütun karakter veri veya metin veri ise belirten döndürür ana türü. Aksi takdirde null değeri döndürülür.|  
+|CHARACTER_MAXIMUM_LENGTH|Int32 – Sql8, Int16 – Sql7|İkili verileri, karakter verileri veya metin ve resim veri için karakter cinsinden en büyük uzunluğu. Aksi takdirde, NULL döndürülür.|  
+|CHARACTER_OCTET_LENGTH|Int32 – SQL8, Int16 – Sql7|İkili verileri, karakter verileri veya metin ve resim veri için bayt cinsinden en büyük uzunluğu. Aksi takdirde, NULL döndürülür.|  
+|NUMERIC_PRECISION|İmzasız bayt|Duyarlık yaklaşık sayısal veriler, sayısal verileri tam, tamsayı veri ya da parasal veri. Aksi takdirde, NULL döndürülür.|  
+|NUMERIC_PRECISION_RADIX|Int16|Duyarlık taban yaklaşık sayısal veriler, sayısal verileri tam, tamsayı veri ya da parasal veri. Aksi takdirde, NULL döndürülür.|  
+|NUMERIC_SCALE|Int32|Ölçek yaklaşık sayısal veriler, sayısal verileri tam, tamsayı veri ya da parasal veri. Aksi takdirde, NULL döndürülür.|  
+|DATETIME_PRECISION|Int16|Alt tür kodu datetime ve SQL 92 aralığı veri türleri için'nı tıklatın. Diğer veri türleri için null değeri döndürülür.|  
+|CHARACTER_SET_CATALOG|Dize|Karakter kümesi bulunduğu, veritabanı sütun metin verilerini veya karakter verileri ise belirten döndürür asıl türü. Aksi takdirde, NULL döndürülür.|  
 |CHARACTER_SET_SCHEMA|Dize|Her zaman NULL döndürür.|  
-|CHARACTER_SET_NAME|Dize|Bu sütunu karakter veya metin verilerini ise benzersiz bir ad karakter kümesi getirir yazın. Aksi takdirde null değeri döndürülür.|  
-|COLLATION_CATALOG|Dize|Sütun karakter veri veya metin veri ise harmanlama tanımlanmış veritabanı belirten döndürür ana türü. Aksi takdirde, bu sütun NULL olur.|  
+|CHARACTER_SET_NAME|Dize|Bu sütun metin verilerini veya karakter verileri ise karakter için benzersiz bir ad ayarlayın döndürür yazın. Aksi takdirde, NULL döndürülür.|  
+|COLLATION_CATALOG|Dize|Sütun metin verilerini veya karakter verileri ise harmanlama tanımlanmış veritabanı belirten döndürür asıl türü. Aksi takdirde, bu sütun NULL olur.|  
   
 ### <a name="columns-sql-server-2008"></a>Sütunlar (SQL Server 2008)  
- SQL Server 2008 ve .NET Framework sürüm 3.5 SP1 ile başlayarak, aşağıdaki sütunları yeni uzamsal türler, FILESTREAM ve seyrek sütun desteklemek için sütunları şema koleksiyonu eklenmiştir. Bu sütun, önceki .NET Framework ve SQL Server sürümlerinde desteklenmez.  
+ SQL Server 2008 ve .NET Framework sürüm 3.5 SP1 ile başlayarak, aşağıdaki sütunları sütunlar şema koleksiyonuna yeni uzamsal türler, FILESTREAM ve seyrek sütun desteklemek için eklendi. Bu sütunlar, .NET Framework ve SQL Server'ın önceki sürümlerinde desteklenmez.  
   
-|columnName|Veri türü|Açıklama|  
+|ColumnName|Veri türü|Açıklama|  
 |----------------|--------------|-----------------|  
 |IS_FILESTREAM|Dize|Sütun FILESTREAM özniteliğine sahipse, Evet.<br /><br /> Sütun FILESTREAM özniteliğine sahip değilse yok.|  
-|IS_SPARSE|Dize|Sütunu bir seyrek sütun ise Evet.<br /><br /> Sütunu bir seyrek sütun değilse yok.|  
-|IS_COLUMN_SET|Dize|Sütunu bir sütun kümesi sütunu ise Evet.<br /><br /> Hayır sütunu bir sütun kümesi sütunu değilse.|  
+|IS_SPARSE|Dize|Sütunu bir seyrek sütun ise, Evet.<br /><br /> Hayır sütunu bir seyrek sütun değil.|  
+|IS_COLUMN_SET|Dize|Evet, bir sütun kümesi sütunu sütun ise.<br /><br /> Hayır sütunu bir sütun kümesi sütunu değil ise.|  
   
 ### <a name="allcolumns-sql-server-2008"></a>AllColumns (SQL Server 2008)  
- SQL Server 2008 ve .NET Framework sürüm 3.5 SP1 ile başlayarak, seyrek sütun desteklemek için AllColumns şema koleksiyonu eklendi. AllColumns önceki .NET Framework ve SQL Server sürümlerinde desteklenmiyor.  
+ SQL Server 2008 ve .NET Framework sürüm 3.5 SP1 ile başlayarak, seyrek sütun desteklemek için AllColumns şema koleksiyonu eklendi. .NET Framework ve SQL Server'ın önceki sürümlerinde AllColumns desteklenmiyor.  
   
- AllColumns aynı kısıtlamalara ve sonuçta elde edilen DataTable şema sütunları şema koleksiyonu vardır. Tek fark AllColumns sütunları şema koleksiyonunda bulunmayan sütun kümesi sütunlarından dahildir. Aşağıdaki tabloda bu sütunlar açıklanmaktadır.  
+ AllColumns sütunları şema koleksiyonu elde edilen DataTable şema ve aynı kısıtlamalara sahiptir. Tek fark, AllColumns sütunları şema koleksiyonunda bulunmayan sütun kümesi sütunları içerir. Aşağıdaki tabloda, bu sütunların açıklanmaktadır.  
   
-|columnName|Veri türü|Açıklama|  
+|ColumnName|Veri türü|Açıklama|  
 |----------------|--------------|-----------------|  
 |TABLE_CATALOG|Dize|Tablo Kataloğu.|  
-|TABLE_SCHEMA|Dize|Tabloyu içeren şema.|  
+|TABLE_SCHEMA|Dize|Tablo içeren şema.|  
 |TABLE_NAME|Dize|Tablo adı.|  
 |COLUMN_NAME|Dize|Sütun adı.|  
 |ORDINAL_POSITION|Int32|Sütun kimlik numarası.|  
 |COLUMN_DEFAULT|Dize|Sütununun varsayılan değeri|  
-|IS_NULLABLE|Dize|Sütun null atanabilirlik. Bu sütun NULL izin veriyorsa, bu sütunda Evet döndürür. Aksi takdirde, Hayır döndürülür.|  
+|IS_NULLABLE|Dize|Sütununun null atanabilirliği. Bu sütun NULL izin veriyorsa, bu sütunda Evet döndürür. Aksi takdirde Hayır döndürülür.|  
 |DATA_TYPE|Dize|Sistem tarafından sağlanan veri türü.|  
-|CHARACTER_MAXIMUM_LENGTH|Int32|İkili veriler, karakter verilerinin ya da metin ve resim veri için karakter cinsinden en büyük uzunluğu. Aksi takdirde null değeri döndürülür.|  
-|CHARACTER_OCTET_LENGTH|Int32|İkili veriler, karakter verilerinin ya da metin ve resim veri için bayt cinsinden en büyük uzunluğu. Aksi takdirde null değeri döndürülür.|  
-|NUMERIC_PRECISION|İmzasız bayt|Yaklaşık sayısal veriler, tam sayısal veriler, tamsayı veri veya para veri duyarlığını. Aksi takdirde null değeri döndürülür.|  
-|NUMERIC_PRECISION_RADIX|Int16|Precision taban yaklaşık sayısal veriler, tam sayısal veriler, tamsayı veri veya para veri. Aksi takdirde null değeri döndürülür.|  
-|NUMERIC_SCALE|Int32|Yaklaşık sayısal veriler, tam sayısal veriler, tamsayı veri veya para veri ölçeğini. Aksi takdirde null değeri döndürülür.|  
-|DATETIME_PRECISION|Int16|Datetime ve SQL-92 aralığı veri türleri için kod alt tür. Diğer veri türleri için null değeri döndürülür.|  
-|CHARACTER_SET_CATALOG|Dize|Karakter kümesi bulunduğu, veritabanı sütun karakter veri veya metin veri ise belirten döndürür ana türü. Aksi takdirde null değeri döndürülür.|  
+|CHARACTER_MAXIMUM_LENGTH|Int32|İkili verileri, karakter verileri veya metin ve resim veri için karakter cinsinden en büyük uzunluğu. Aksi takdirde, NULL döndürülür.|  
+|CHARACTER_OCTET_LENGTH|Int32|İkili verileri, karakter verileri veya metin ve resim veri için bayt cinsinden en büyük uzunluğu. Aksi takdirde, NULL döndürülür.|  
+|NUMERIC_PRECISION|İmzasız bayt|Duyarlık yaklaşık sayısal veriler, sayısal verileri tam, tamsayı veri ya da parasal veri. Aksi takdirde, NULL döndürülür.|  
+|NUMERIC_PRECISION_RADIX|Int16|Duyarlık taban yaklaşık sayısal veriler, sayısal verileri tam, tamsayı veri ya da parasal veri. Aksi takdirde, NULL döndürülür.|  
+|NUMERIC_SCALE|Int32|Ölçek yaklaşık sayısal veriler, sayısal verileri tam, tamsayı veri ya da parasal veri. Aksi takdirde, NULL döndürülür.|  
+|DATETIME_PRECISION|Int16|Alt tür kodu datetime ve SQL 92 aralığı veri türleri için'nı tıklatın. Diğer veri türleri için null değeri döndürülür.|  
+|CHARACTER_SET_CATALOG|Dize|Karakter kümesi bulunduğu, veritabanı sütun metin verilerini veya karakter verileri ise belirten döndürür asıl türü. Aksi takdirde, NULL döndürülür.|  
 |CHARACTER_SET_SCHEMA|Dize|Her zaman NULL döndürür.|  
-|CHARACTER_SET_NAME|Dize|Bu sütunu karakter veya metin verilerini ise benzersiz bir ad karakter kümesi getirir yazın. Aksi takdirde null değeri döndürülür.|  
-|COLLATION_CATALOG|Dize|Sütun karakter veri veya metin veri ise harmanlama tanımlanmış veritabanı belirten döndürür ana türü. Aksi takdirde, bu sütun NULL olur.|  
+|CHARACTER_SET_NAME|Dize|Bu sütun metin verilerini veya karakter verileri ise karakter için benzersiz bir ad ayarlayın döndürür yazın. Aksi takdirde, NULL döndürülür.|  
+|COLLATION_CATALOG|Dize|Sütun metin verilerini veya karakter verileri ise harmanlama tanımlanmış veritabanı belirten döndürür asıl türü. Aksi takdirde, bu sütun NULL olur.|  
 |IS_FILESTREAM|Dize|Sütun FILESTREAM özniteliğine sahipse, Evet.<br /><br /> Sütun FILESTREAM özniteliğine sahip değilse yok.|  
-|IS_SPARSE|Dize|Sütunu bir seyrek sütun ise Evet.<br /><br /> Sütunu bir seyrek sütun değilse yok.|  
-|IS_COLUMN_SET|Dize|Sütunu bir sütun kümesi sütunu ise Evet.<br /><br /> Hayır sütunu bir sütun kümesi sütunu değilse.|  
+|IS_SPARSE|Dize|Sütunu bir seyrek sütun ise, Evet.<br /><br /> Hayır sütunu bir seyrek sütun değil.|  
+|IS_COLUMN_SET|Dize|Evet, bir sütun kümesi sütunu sütun ise.<br /><br /> Hayır sütunu bir sütun kümesi sütunu değil ise.|  
   
 ### <a name="columnsetcolumns-sql-server-2008"></a>ColumnSetColumns (SQL Server 2008)  
- SQL Server 2008 ve .NET Framework sürüm 3.5 SP1 ile başlayarak, seyrek sütun desteklemek için ColumnSetColumns şema koleksiyonu eklendi. ColumnSetColumns önceki .NET Framework ve SQL Server sürümlerinde desteklenmiyor. ColumnSetColumns şema koleksiyonu tüm sütunlar için şema sütun kümesinde döndürür. Aşağıdaki tabloda bu sütunlar açıklanmaktadır.  
+ SQL Server 2008 ve .NET Framework sürüm 3.5 SP1 ile başlayarak, seyrek sütun desteklemek için ColumnSetColumns şema koleksiyonu eklendi. .NET Framework ve SQL Server'ın önceki sürümlerinde ColumnSetColumns desteklenmiyor. ColumnSetColumns şema koleksiyonu, bir sütun kümesinde tüm sütunlar için şemayı döndürür. Aşağıdaki tabloda, bu sütunların açıklanmaktadır.  
   
-|columnName|Veri türü|Açıklama|  
+|ColumnName|Veri türü|Açıklama|  
 |----------------|--------------|-----------------|  
 |TABLE_CATALOG|Dize|Tablo Kataloğu.|  
-|TABLE_SCHEMA|Dize|Tabloyu içeren şema.|  
+|TABLE_SCHEMA|Dize|Tablo içeren şema.|  
 |TABLE_NAME|Dize|Tablo adı.|  
 |COLUMN_NAME|Dize|Sütun adı.|  
 |ORDINAL_POSITION|Int32|Sütun kimlik numarası.|  
 |COLUMN_DEFAULT|Dize|Sütununun varsayılan değeri|  
-|IS_NULLABLE|Dize|Sütun null atanabilirlik. Bu sütun NULL izin veriyorsa, bu sütunda Evet döndürür. Aksi takdirde, Hayır döndürülür.|  
+|IS_NULLABLE|Dize|Sütununun null atanabilirliği. Bu sütun NULL izin veriyorsa, bu sütunda Evet döndürür. Aksi takdirde Hayır döndürülür.|  
 |DATA_TYPE|Dize|Sistem tarafından sağlanan veri türü.|  
-|CHARACTER_MAXIMUM_LENGTH|Int32|İkili veriler, karakter verilerinin ya da metin ve resim veri için karakter cinsinden en büyük uzunluğu. Aksi takdirde null değeri döndürülür.|  
-|CHARACTER_OCTET_LENGTH|Int32|İkili veriler, karakter verilerinin ya da metin ve resim veri için bayt cinsinden en büyük uzunluğu. Aksi takdirde null değeri döndürülür.|  
-|NUMERIC_PRECISION|İmzasız bayt|Yaklaşık sayısal veriler, tam sayısal veriler, tamsayı veri veya para veri duyarlığını. Aksi takdirde null değeri döndürülür.|  
-|NUMERIC_PRECISION_RADIX|Int16|Precision taban yaklaşık sayısal veriler, tam sayısal veriler, tamsayı veri veya para veri. Aksi takdirde null değeri döndürülür.|  
-|NUMERIC_SCALE|Int32|Yaklaşık sayısal veriler, tam sayısal veriler, tamsayı veri veya para veri ölçeğini. Aksi takdirde null değeri döndürülür.|  
-|DATETIME_PRECISION|Int16|Datetime ve SQL-92 aralığı veri türleri için kod alt tür. Diğer veri türleri için null değeri döndürülür.|  
-|CHARACTER_SET_CATALOG|Dize|Karakter kümesi bulunduğu, veritabanı sütun karakter veri veya metin veri ise belirten döndürür ana türü. Aksi takdirde null değeri döndürülür.|  
+|CHARACTER_MAXIMUM_LENGTH|Int32|İkili verileri, karakter verileri veya metin ve resim veri için karakter cinsinden en büyük uzunluğu. Aksi takdirde, NULL döndürülür.|  
+|CHARACTER_OCTET_LENGTH|Int32|İkili verileri, karakter verileri veya metin ve resim veri için bayt cinsinden en büyük uzunluğu. Aksi takdirde, NULL döndürülür.|  
+|NUMERIC_PRECISION|İmzasız bayt|Duyarlık yaklaşık sayısal veriler, sayısal verileri tam, tamsayı veri ya da parasal veri. Aksi takdirde, NULL döndürülür.|  
+|NUMERIC_PRECISION_RADIX|Int16|Duyarlık taban yaklaşık sayısal veriler, sayısal verileri tam, tamsayı veri ya da parasal veri. Aksi takdirde, NULL döndürülür.|  
+|NUMERIC_SCALE|Int32|Ölçek yaklaşık sayısal veriler, sayısal verileri tam, tamsayı veri ya da parasal veri. Aksi takdirde, NULL döndürülür.|  
+|DATETIME_PRECISION|Int16|Alt tür kodu datetime ve SQL 92 aralığı veri türleri için'nı tıklatın. Diğer veri türleri için null değeri döndürülür.|  
+|CHARACTER_SET_CATALOG|Dize|Karakter kümesi bulunduğu, veritabanı sütun metin verilerini veya karakter verileri ise belirten döndürür asıl türü. Aksi takdirde, NULL döndürülür.|  
 |CHARACTER_SET_SCHEMA|Dize|Her zaman NULL döndürür.|  
-|CHARACTER_SET_NAME|Dize|Bu sütunu karakter veya metin verilerini ise benzersiz bir ad karakter kümesi getirir yazın. Aksi takdirde null değeri döndürülür.|  
-|COLLATION_CATALOG|Dize|Sütun karakter veri veya metin veri ise harmanlama tanımlanmış veritabanı belirten döndürür ana türü. Aksi takdirde, bu sütun NULL olur.|  
+|CHARACTER_SET_NAME|Dize|Bu sütun metin verilerini veya karakter verileri ise karakter için benzersiz bir ad ayarlayın döndürür yazın. Aksi takdirde, NULL döndürülür.|  
+|COLLATION_CATALOG|Dize|Sütun metin verilerini veya karakter verileri ise harmanlama tanımlanmış veritabanı belirten döndürür asıl türü. Aksi takdirde, bu sütun NULL olur.|  
 |IS_FILESTREAM|Dize|Sütun FILESTREAM özniteliğine sahipse, Evet.<br /><br /> Sütun FILESTREAM özniteliğine sahip değilse yok.|  
-|IS_SPARSE|Dize|Sütunu bir seyrek sütun ise Evet.<br /><br /> Sütunu bir seyrek sütun değilse yok.|  
-|IS_COLUMN_SET|Dize|Sütunu bir sütun kümesi sütunu ise Evet.<br /><br /> Hayır sütunu bir sütun kümesi sütunu değilse.|  
+|IS_SPARSE|Dize|Sütunu bir seyrek sütun ise, Evet.<br /><br /> Hayır sütunu bir seyrek sütun değil.|  
+|IS_COLUMN_SET|Dize|Evet, bir sütun kümesi sütunu sütun ise.<br /><br /> Hayır sütunu bir sütun kümesi sütunu değil ise.|  
   
 ## <a name="users"></a>Kullanıcılar  
   
-|columnName|Veri türü|Açıklama|  
+|ColumnName|Veri türü|Açıklama|  
 |----------------|--------------|-----------------|  
-|Kullanıcı Kimliği|Int16|Kullanıcı kimliği, bu veritabanında benzersiz. 1 veritabanı sahibi olur.|  
+|Kullanıcı Kimliği|Int16|Kullanıcı kimliği, bu veritabanında benzersiz. 1 veritabanı sahibi değil.|  
 |User_name|Dize|Kullanıcı adı veya grup adı, bu veritabanında benzersiz.|  
-|CREATEDATE|DateTime|Hesap eklendi tarih.|  
-|updatedate|DateTime|Hesap en son değiştirildiği tarihi.|  
+|CREATEDATE|DateTime|Tarih hesap eklendi.|  
+|updatedate|DateTime|Hesap en son değiştirildiği tarih.|  
   
 ## <a name="views"></a>Görünümler  
   
-|columnName|Veri türü|Açıklama|  
+|ColumnName|Veri türü|Açıklama|  
 |----------------|--------------|-----------------|  
-|TABLE_CATALOG|Dize|Katalog görünümünün.|  
+|TABLE_CATALOG|Dize|Katalog görünümün.|  
 |TABLE_SCHEMA|Dize|Şema görünümü içerir.|  
 |TABLE_NAME|Dize|Görünüm adı.|  
-|CHECK_OPTION|Dize|ONAY SEÇENEĞİYLE türü. CASCADE özgün görünüm WITH CHECK OPTION kullanılarak oluşturulmuş olur. Aksi takdirde, hiçbiri döndürülür.|  
+|CHECK_OPTION|Dize|ONAY SEÇENEĞİYLE türü. Orijinal görünümde WITH CHECK OPTION'ı kullanarak oluşturduysanız CASCADE ' dir. Aksi takdirde, hiçbir döndürülür.|  
 |IS_UPDATABLE|Dize|Görünüm güncelleştirilebilir olup olmadığını belirtir. Her zaman döndürür No|  
   
 ## <a name="viewcolumns"></a>ViewColumns  
   
-|columnName|Veri türü|Açıklama|  
+|ColumnName|Veri türü|Açıklama|  
 |----------------|--------------|-----------------|  
-|VIEW_CATALOG|Dize|Katalog görünümünün.|  
+|VIEW_CATALOG|Dize|Katalog görünümün.|  
 |VIEW_SCHEMA|Dize|Şema görünümü içerir.|  
 |VIEW_NAME|Dize|Görünüm adı.|  
 |TABLE_CATALOG|Dize|Bu görünümle ilişkili olan tablo Kataloğu.|  
@@ -240,21 +240,21 @@ SQL Server için Microsoft .NET Framework veri sağlayıcısı ortak şeması ko
   
 ## <a name="userdefinedtypes"></a>UserDefinedTypes  
   
-|columnName|Veri türü|Açıklama|  
+|ColumnName|Veri türü|Açıklama|  
 |----------------|--------------|-----------------|  
-|assembly_name|Dize|Derlemenin dosya adı.|  
-|udt_name|Dize|Derleme için sınıfı adı.|  
+|assembly_name|Dize|Derleme için dosya adı.|  
+|udt_name|Dize|Derleme için sınıf adı.|  
 |version_major|Nesne|Ana sürüm numarası.|  
 |version_minor|Nesne|İkincil sürüm numarası.|  
 |version_build|Nesne|Yapı numarası.|  
 |version_revision|Nesne|Düzeltme numarası.|  
-|culture_info|Nesne|Bu UDT ile ilişkili kültür bilgileri.|  
-|public_key|Nesne|Bu derleme tarafından kullanılan ortak anahtarı.|  
-|is_fixed_length|Boole değeri|Türün her zaman max_length aynı olup olmadığını belirtir.|  
-|max_length|Int16|Tür bayt cinsinden en büyük uzunluğu.|  
+|culture_info|Nesne|Kültür bilgilerini bu UDT ile ilişkili.|  
+|publıc_key|Nesne|Bu derleme tarafından kullanılan ortak anahtar.|  
+|is_fixed_length|Boole değeri|Tür uzunluğunu her zaman max_length aynı olup olmadığını belirtir.|  
+|max_length|Int16|Türü bayt cinsinden en büyük uzunluğu.|  
 |Create_Date|DateTime|Oluşturulan ve kayıtlı derleme tarihi.|  
-|Permission_set_desc|Dize|İzni-kümesi /-için güvenlik düzeyini derleme için kolay ad.|  
+|Permission_set_desc|Dize|İzni-Ayarla/güvenlik düzeyi derleme için bir kolay ad.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Veritabanı Şema Bilgilerini Alma](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
- [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

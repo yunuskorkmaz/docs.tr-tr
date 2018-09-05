@@ -2,12 +2,12 @@
 title: Kısıtlamalar (F#)
 description: 'Bir genel tür veya işlev içinde bir tür bağımsız değişkeni için gereksinimleri belirtmek için genel tür parametreleri için geçerli olan F # kısıtlamaları hakkında bilgi edinin.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 7af064159d2722256f0db8286a99fc02435a99cd
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 0e79cf5b1a25ada49bf30416f85c1d59f8f2fd23
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37936871"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525611"
 ---
 # <a name="constraints"></a>Kısıtlamalar
 
@@ -35,7 +35,7 @@ Genel tür içinde kullanılabilir türleri sınırlamak uygulayabileceğiniz ç
 |Temsilci kısıtlaması|: temsilci&lt;*demet parametre türü*, *dönüş türü*&gt;|Sağlanan türü belirtilen bağımsız değişkenler olan bir temsilci türü ve dönüş değeri; Genel kullanım için tasarlanmamıştır.|
 |Karşılaştırma kısıtlaması|: karşılaştırma|Sağlanan türü karşılaştırma desteklemesi gerekir.|
 |Eşitliği kısıtlaması|: Eşitlik|Sağlanan türü eşitlik desteklemesi gerekir.|
-|Yönetilmeyen kısıtlaması|: Yönetilmeyen|Sağlanan türü, yönetilmeyen bir türü olmalıdır. Yönetilmeyen türler belirli temel türleri (`sbyte`, `byte`, `char`, `nativeint`, `unativeint`, `float32`, `float`, `int16`, `uint16`, `int32`, `uint32`, `int64`, `uint64`, veya `decimal`), numaralandırma türleri `nativeptr&lt;_&gt;`, veya alanları olmak üzere tüm yönetilmeyen tür genel olmayan yapısı.|
+|Yönetilmeyen kısıtlaması|: Yönetilmeyen|Sağlanan türü, yönetilmeyen bir türü olmalıdır. Yönetilmeyen türler belirli temel türleri (`sbyte`, `byte`, `char`, `nativeint`, `unativeint`, `float32`, `float`, `int16`, `uint16`, `int32`, `uint32`, `int64`, `uint64`, veya `decimal`), numaralandırma türleri `nativeptr<_>`, veya alanları olmak üzere tüm yönetilmeyen tür genel olmayan yapısı.|
 Genel kısıtlama türü ancak çalıştırılmadı türleri üzerinde kullanılabilir olan bir özelliği kullanmak kodunuzu sahip olduğunda bir kısıtlama eklemeniz gerekir. Örneğin, bir sınıf türünü belirtmek için tür kısıtlaması kullanırsanız, bu sınıfın genel işlev veya tür yöntemlerden birini kullanabilirsiniz.
 
 Bir kısıtlama derleyici, kullandığınız özellikleri türü için çalışma zamanında sağlanan herhangi bir türü üzerinde kullanılabilir olacağını doğrulama yolu yoktur çünkü kısıtlamaları belirtme bazen açıkça tür parametreleri yazarken gereklidir parametre.
