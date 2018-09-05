@@ -4,45 +4,45 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-ms.openlocfilehash: 5fe6f10e3842c0c0aac4b2669f8ca367fa8c3be2
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: b19676b2549bbb54af7fb1d72ff0e98352c61383
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172340"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43529026"
 ---
 # <a name="using-constructors-c-programming-guide"></a>Oluşturucular Kullanma (C# Programlama Kılavuzu)
-Zaman bir [sınıfı](../../../csharp/language-reference/keywords/class.md) veya [yapısı](../../../csharp/language-reference/keywords/struct.md) olan oluşturulan kurucusu çağrılır. Oluşturucular sınıfta veya yapı aynı ada sahip ve bunlar genellikle yeni nesnenin veri üyeleri başlatma.  
+Olduğunda bir [sınıfı](../../../csharp/language-reference/keywords/class.md) veya [yapı](../../../csharp/language-reference/keywords/struct.md) olan oluşturulan, kendi Oluşturucu çağrılır. Oluşturucular sınıf veya yapının aynı ada sahip ve bunlar genellikle yeni nesnenin veri üyeleri başlatılamıyor.  
   
- Aşağıdaki örnekte, adlı bir sınıf `Taxi` basit bir oluşturucu kullanılarak tanımlanır. Bu sınıf sonra ile örneği [yeni](../../../csharp/language-reference/keywords/new.md) işleci. `Taxi` Oluşturucusu tarafından çağrıldığında `new` işleci bellek hemen sonra yeni nesne için ayrılır.  
+ Aşağıdaki örnekte, bir sınıf adlı `Taxi` basit bir oluşturucu kullanılarak tanımlanır. Bu sınıf ile Örneklendirilmiş [yeni](../../../csharp/language-reference/keywords/new.md) işleci. `Taxi` Oluşturucusu tarafından çağrıldığında `new` işleci bellek hemen sonra yeni nesne için ayrılır.  
   
  [!code-csharp[csProgGuideObjects#53](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_1.cs)]  
   
- Parametre almayan bir oluşturucu adlı bir *varsayılan oluşturucu*. Varsayılan Oluşturucu kullanarak bir nesne örneği olduğunda çağrılır `new` işleci ve bağımsız değişkenler için sağlanan `new`. Daha fazla bilgi için bkz: [örnek oluşturucuları](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).  
+ Herhangi bir parametre alan bir oluşturucu olarak adlandırılan bir *varsayılan oluşturucu*. Varsayılan Oluşturucu çağrılır kullanarak bir nesne örneği her `new` işleci ve herhangi bir bağımsız değişken için sağlanan `new`. Daha fazla bilgi için [örnek oluşturucuları](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).  
   
- Bir sınıf olmadığı sürece [statik](../../../csharp/language-reference/keywords/static.md), Oluşturucular, sınıf örneklemesi etkinleştirmek için C# Derleyici tarafından ortak varsayılan bir oluşturucu verilir olmadan sınıfları. Daha fazla bilgi için bkz: [statik sınıflar ve statik sınıf üyeleri](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
+ Bir sınıf olmadığı sürece [statik](../../../csharp/language-reference/keywords/static.md), Oluşturucular, sınıf örnekleme etkinleştirmek için C# derleyicisi tarafından genel bir varsayılan oluşturucu verilen olmayan sınıflar. Daha fazla bilgi için [statik sınıflar ve statik sınıf üyeleri](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
   
- Bir sınıf oluşturucu özel, aşağıdaki gibi yaparak oluşturulmasını engelleyebilirsiniz:  
+ Bir sınıf oluşturucu özel gibi yaparak oluşturulmasını engelleyebilir:  
   
  [!code-csharp[csProgGuideObjects#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_2.cs)]  
   
- Daha fazla bilgi için bkz: [özel oluşturucular](../../../csharp/programming-guide/classes-and-structs/private-constructors.md).  
+ Daha fazla bilgi için [özel oluşturucular](../../../csharp/programming-guide/classes-and-structs/private-constructors.md).  
   
- Oluşturucuları için [yapısı](../../../csharp/language-reference/keywords/struct.md) türleri sınıf Oluşturucular, benzer ancak `structs` bir derleyici tarafından otomatik olarak sağlandığından açık varsayılan bir oluşturucu içeremez. Bu oluşturucu, her bir alan başlatır `struct` varsayılan değerlere. Daha fazla bilgi için bkz: [varsayılan değerler tablosu](../../../csharp/language-reference/keywords/default-values-table.md). Ancak, bu varsayılan kurucu yalnızca, çağrılan `struct` ile örneği `new`. Örneğin, bu kod için varsayılan oluşturucu kullanır <xref:System.Int32>, böylece tamsayı başlatıldığını garanti:  
+ Oluşturucular için [yapı](../../../csharp/language-reference/keywords/struct.md) türleri sınıf oluşturucuları, benzer ancak `structs` bir derleyici tarafından otomatik olarak sağlandığından, açık bir varsayılan oluşturucu içeremez. Bu oluşturucu her alanda başlatır `struct` için varsayılan değerleri. Daha fazla bilgi için [varsayılan değerler tablosu](../../../csharp/language-reference/keywords/default-values-table.md). Ancak, bu varsayılan oluşturucu yalnızca, çağrılan `struct` ile örneği `new`. Örneğin, bu kod için varsayılan oluşturucu kullanan <xref:System.Int32>, böylece tamsayı başlatıldığından emin olabilirsiniz:  
   
 ```csharp  
 int i = new int();  
 Console.WriteLine(i);  
 ```  
   
- Kullanmaz aşağıdaki kod, ancak bir derleyici hatasına neden olur `new`, ve başlatılmamış bir nesne kullanmayı dener:  
+ Kullanmaz çünkü aşağıdaki kod, ancak bir derleyici hatasına neden `new`, ve onu başlatılmamış bir nesne kullanmayı dener:  
   
 ```  
 int i;  
 Console.WriteLine(i);  
 ```  
   
- Alternatif olarak, nesneleri temel alarak `structs` (tüm yerleşik sayısal türler dahil) başlatıldı veya atanabilir ve aşağıdaki örnekte olduğu gibi kullanılır:  
+ Alternatif olarak, nesneler temel `structs` (tüm yerleşik sayısal türler dahil) başlatıldı veya atanabilir ve sonra aşağıdaki örnekte olduğu gibi kullanılır:  
   
 ```  
 int a = 44;  // Initialize the value type...  
@@ -51,47 +51,48 @@ b = 33;      // Or assign it before using it.
 Console.WriteLine("{0}, {1}", a, b);  
 ```  
   
- Bu nedenle bir değer türü için varsayılan oluşturucu çağırma gerekli değildir.  
+ Varsayılan Oluşturucu için bir değer türü yöntemini çağırır; dolayısıyla, gerekli değildir.  
   
- Her iki sınıfları ve `structs` parametre almaz oluşturucular tanımlayabilirsiniz. Parametre almaz oluşturucular çağrılır, üzerinden bir `new` deyimi veya [temel](../../../csharp/language-reference/keywords/base.md) deyimi. Sınıfları ve `structs` hiçbiri varsayılan bir oluşturucu tanımlamak için gereklidir ve birden çok oluşturucular de tanımlayabilirsiniz. Örneğin:  
+ Her iki sınıfları ve `structs` parametre oluşturucular tanımlayabilirsiniz. Parametre oluşturucular çağırılır, aracılığıyla bir `new` deyimi veya bir [temel](../../../csharp/language-reference/keywords/base.md) deyimi. Sınıfları ve `structs` birden çok oluşturucular da tanımlayabilirsiniz ve bunların hiçbiri varsayılan oluşturucuyu tanımlamak için gereklidir. Örneğin:  
   
  [!code-csharp[csProgGuideObjects#54](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_3.cs)]  
   
- Bu sınıf, aşağıdaki deyimleri birini kullanarak oluşturulabilir:  
+ Bu sınıf aşağıdaki deyimleri kullanarak oluşturulabilir:  
   
  [!code-csharp[csProgGuideObjects#55](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_4.cs)]  
   
- Bir oluşturucu kullanın `base` bir temel sınıf aranacak anahtar. Örneğin:  
+ Bir oluşturucu kullanabilirsiniz `base` bir taban sınıfın oluşturucuyu çağırmak için anahtar sözcüğü. Örneğin:  
   
  [!code-csharp[csProgGuideObjects#56](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_5.cs)]  
   
- Blok Oluşturucu için yürütülmeden önce bu örnekte, temel sınıfın Oluşturucusu çağrılır. `base` Anahtar sözcüğü ile veya olmadan kullanılabilir. Oluşturucuya herhangi bir parametre için parametre olarak kullanılan `base`, veya bir ifadenin bir parçası olarak. Daha fazla bilgi için bkz: [temel](../../../csharp/language-reference/keywords/base.md).  
+ Blok Oluşturucu için yürütülmeden önce bu örnekte, temel sınıf için oluşturucu çağrılır. `base` Parametrelerle veya parametresiz anahtar sözcüğü kullanılabilir. Oluşturucu herhangi bir parametre için parametre olarak kullanılan `base`, veya bir ifade parçası olarak. Daha fazla bilgi için [temel](../../../csharp/language-reference/keywords/base.md).  
   
- Bir temel sınıf oluşturucu açıkça kullanarak çağrılmazsa türetilmiş bir sınıf içinde `base` anahtar sözcüğü, varsayılan oluşturucu varsa, adlandırılan örtük olarak. Bu aşağıdaki Oluşturucusu bildirimlerini etkili bir şekilde aynı anlamına gelir:  
+ Bir temel sınıf oluşturucusu kullanarak açıkça çağrılmaz, türetilmiş bir sınıf içinde `base` anahtar sözcüğü, varsayılan oluşturucusu varsa, çağrıldığında örtük olarak. Bu aşağıdaki Oluşturucusu bildirimleri etkili bir şekilde aynı anlamına gelir:  
   
  [!code-csharp[csProgGuideObjects#58](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_6.cs)]  
   
  [!code-csharp[csProgGuideObjects#57](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_7.cs)]  
   
- Bir temel sınıf varsayılan bir oluşturucu vermiyorsa türetilmiş sınıf temel oluşturucu için açık bir çağrı kullanılarak olmalısınız `base`.  
+ Bir temel sınıf varsayılan bir oluşturucu sağlamaz, türetilen sınıfın temel oluşturucu için açık çağrı kullanarak yapmalısınız `base`.  
   
- Bir Oluşturucu kullanarak aynı nesnede başka bir oluşturucuyu çağırabileceği [bu](../../../csharp/language-reference/keywords/this.md) anahtar sözcüğü. Gibi `base`, `this` ile veya parametresiz kullanılabilir ve oluşturucuda herhangi bir parametre için parametre olarak kullanılabilir `this`, veya bir ifadenin bir parçası olarak. Örneğin, önceki örnekte ikinci oluşturucu kullanılarak yazılabilir `this`:  
+ Bir kurucu kullanarak aynı nesnede başka bir oluşturucu çağırabilirsiniz [bu](../../../csharp/language-reference/keywords/this.md) anahtar sözcüğü. Gibi `base`, `this` parametrelerle veya parametresiz kullanılabilir ve oluşturucu içinde herhangi bir parametre için parametre olarak kullanılabilir `this`, veya bir ifade parçası olarak. Örneğin, önceki örnekte ikinci oluşturucu kullanılarak yazılabilir `this`:  
   
  [!code-csharp[csProgGuideObjects#59](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_8.cs)]  
   
- Kullanımını `this` anahtar sözcüğü önceki örnekte çağrılacak bu oluşturucuyu neden olur:  
+ Kullanımını `this` önceki örnekte anahtar sözcüğü bu oluşturucunun çağrılması neden olur:  
   
  [!code-csharp[csProgGuideObjects#60](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_9.cs)]  
   
- Oluşturucular işaretlenir olarak [ortak](../../../csharp/language-reference/keywords/public.md), [özel](../../../csharp/language-reference/keywords/private.md), [korumalı](../../../csharp/language-reference/keywords/protected.md), [iç](../../../csharp/language-reference/keywords/internal.md), [içkorumalı](../../../csharp/language-reference/keywords/protected-internal.md)veya [korumalı özel](../../../csharp/language-reference/keywords/private-protected.md). Bu erişim değiştiricileri sınıfı kullanıcılarının sınıfı nasıl oluşturabileceğiniz tanımlayın. Daha fazla bilgi için bkz: [erişim değiştiricileri](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
+ Oluşturucular olarak işaretlenebilir [genel](../../../csharp/language-reference/keywords/public.md), [özel](../../../csharp/language-reference/keywords/private.md), [korumalı](../../../csharp/language-reference/keywords/protected.md), [iç](../../../csharp/language-reference/keywords/internal.md), [içkorumalı](../../../csharp/language-reference/keywords/protected-internal.md)veya [korunan özel](../../../csharp/language-reference/keywords/private-protected.md). Bu erişim değiştiricileri kullanıcılar sınıfın sınıf nasıl oluşturabilir tanımlayın. Daha fazla bilgi için [erişim değiştiricileri](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   
- Bir Oluşturucu kullanarak statik bildirilebilir [statik](../../../csharp/language-reference/keywords/static.md) anahtar sözcüğü. Statik oluşturucular hemen statik alanları erişilen ve statik sınıf üyeleri başlatmak için genellikle kullanılan önce otomatik olarak adlandırılır. Daha fazla bilgi için bkz: [statik oluşturucular](../../../csharp/programming-guide/classes-and-structs/static-constructors.md).  
+ Bir kurucu kullanarak statik bildirilebilir [statik](../../../csharp/language-reference/keywords/static.md) anahtar sözcüğü. Statik oluşturucular hemen tüm statik alanları erişilir ve statik sınıf üyeleri başlatmak için genellikle kullanılan önce otomatik olarak çağrılır. Daha fazla bilgi için [statik oluşturucular](../../../csharp/programming-guide/classes-and-structs/static-constructors.md).  
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [Sınıflar ve Yapılar](../../../csharp/programming-guide/classes-and-structs/index.md)  
- [Oluşturucular](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
- [Sonlandırıcılar](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [Sınıflar ve Yapılar](../../../csharp/programming-guide/classes-and-structs/index.md)  
+- [Oluşturucular](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+- [Sonlandırıcılar](../../../csharp/programming-guide/classes-and-structs/destructors.md)

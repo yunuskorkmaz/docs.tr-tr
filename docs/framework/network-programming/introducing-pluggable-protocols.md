@@ -1,5 +1,5 @@
 ---
-title: Takılabilir Protokol Tanıtımı
+title: Takılabilir protokollere giriş
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data requests, pluggable protocols
@@ -25,52 +25,52 @@ ms.assetid: 4b48e22d-e4e5-48f0-be80-d549bda97415
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: ef674855d1b9d6538e08ea2bb95f1f63e602d61d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aad12f48409216e8833b9cb6bffbd35b84f40091
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396396"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513778"
 ---
-# <a name="introducing-pluggable-protocols"></a>Takılabilir Protokol Tanıtımı
-Microsoft .NET Framework uygulamalarınıza hızla ve kolayca tümleştirilebilir Internet Hizmetleri katmanlı, genişletilebilir ve yönetilen bir uygulamasını sağlar. Internet erişimi sınıfları <xref:System.Net> ve <xref:System.Net.Sockets> ad alanları, hem Web hem de Internet tabanlı uygulamalarını uygulamak için kullanılabilir.  
+# <a name="introducing-pluggable-protocols"></a>Takılabilir protokollere giriş
+Microsoft .NET Framework, uygulamalarınızla hızlı ve kolay bir şekilde tümleştirilebilir Internet Services katmanlı, genişletilebilir ve yönetilen bir uygulamasını sağlar. Internet erişimi yer alan sınıfları <xref:System.Net> ve <xref:System.Net.Sockets> ad alanları, hem Web hem de Internet tabanlı uygulamalarını uygulamak için kullanılabilir.  
   
 ## <a name="internet-applications"></a>Internet uygulamaları  
- Internet uygulamaları sınıflandırılmış kapsamlı iki tür: istemcilerden bilgi isteklerine yanıt bilgileri ve sunucu uygulamaları istek istemci uygulamaları. Klasik Internet istemci-sunucu burada kişiler tarayıcılar erişim belgelere ve Web sunucularında dünya çapında depolanan diğer verileri kullanır. World Wide Web uygulamasıdır.  
+ Internet uygulamaları sınıflandırıldığı problem iki tür: istemcilerden bilgi isteklerine yanıt bilgileri ve sunucu uygulamaları istek istemci uygulamaları. Klasik Internet istemci-sunucu erişim belgelere ve diğer verileri dünya çapında Web sunucularına depolanmış tarayıcılar burada kullandığını World Wide Web uygulamasıdır.  
   
- Uygulamalar, bu rolleri yalnızca biri için sınırlı değildir; Örneğin, istekte bulunan verileri başka bir sunucudan tarafından istemcilerden tanıdık orta katman uygulama sunucusu isteklerine yanıt bu durumda, hem sunucu hem de bir istemci olarak davranıyor.  
+ Uygulamalar bu rollerden yalnızca birine sınırlı değildir; Örneğin, istekte bulunan verileri başka bir sunucudan tarafından istemcilerden tanıdık orta katman uygulama sunucusu isteklerine yanıt bu durumda, bir sunucu ve bir istemci davranır.  
   
- İstemci uygulama, istenen Internet kaynağının ve istek ve yanıt için kullanılacak iletişim protokolü belirleyerek isteğinde bulunur. Gerekirse, istemci proxy konumu veya kimlik bilgilerini (kullanıcı adı, parola ve benzeri) gibi bir isteği tamamlamak için gereken herhangi bir ek veriyi de sağlar. İstek biçimlendirilmiş sonra istek sunucuya gönderilebilir.  
+ İstemci uygulaması, istenen Internet kaynağının ve kullanıcının iletişim protokolü istek ve yanıt için kullanılacak tanımlayarak bir istek gönderir. Gerekirse, istemci proxy konumu veya kimlik bilgilerini (kullanıcı adı, parola vb.) gibi isteğini tamamlamak için gereken herhangi bir ek veriyi de sağlar. İstek oluşturulduğunda, istek sunucuya gönderilebilir.  
   
 ## <a name="identifying-resources"></a>Kaynakları tanımlama  
- .NET Framework Tekdüzen Kaynak Tanımlayıcısı (URI) istenen Internet kaynak ve iletişim kurallarını tanımlamak için kullanır. En az üç ve muhtemelen dört, parçalarını URI oluşur: istek ve yanıt; için iletişim protokolü tanımlayan düzen tanımlayıcısı bir etki alanı adı sistemi (DNS) ana bilgisayar adı veya sunucunun Internet üzerindeki benzersiz olarak tanıtan bir TCP adresi oluşan sunucu tanımlayıcısı; sunucuda istenen bilgileri bulur yolu tanımlayıcısı; ve bilgileri istemciden sunucuya geçirir bir isteğe bağlı sorgu dizesi. Örneğin, URI "http://www.contoso.com/whatsnew.aspx?date=today" oluşur düzeni tanımlayıcı "http", "www.contoso.com" Sunucu tanımlayıcısı, yol "/ whatsnew.aspx" ve sorgu dizesi "? tarihi bugün =".  
+ .NET Framework, kaynak ve iletişimi istenen Internet Protokolü tanımlamak için bir Tekdüzen Kaynak Tanımlayıcısı (URI) kullanır. URI en az üç ve dört, parçalarını oluşur: iletişim protokolü için istek ve yanıt; tanımlayan düzen tanımlayıcısı Sunucu tanımlayıcısı bir etki alanı adı sistemi (DNS) konak adı veya sunucunun Internet'teki benzersiz olarak tanımlayan bir TCP adresi oluşur; Sunucu üzerinde istenen bilgileri bulur yolu tanımlayıcısı; ve bilgi istemciden sunucuya aktarır. bir isteğe bağlı bir sorgu dizesi. Örneğin, URI "http://www.contoso.com/whatsnew.aspx?date=today" oluşur düzen tanımlayıcısı "http", "www.contoso.com" Sunucu tanımlayıcısı, yol "/ whatsnew.aspx" ve sorgu dizesi "? tarihi bugün =".  
   
- Sunucu isteği aldı ve yanıt işlenen sonra istemci uygulaması yanıtı döndürür. Yanıt (ham metni veya örnek için XML verileri) içerik türü gibi ek bilgileri içerir.  
+ Sunucu isteği aldı ve yanıt işlenen sonra yanıtı istemci uygulamasına döndürür. Yanıt (ham metin veya XML verileri, örneğin) bir içerik türü gibi ek bilgileri içerir.  
   
-## <a name="requests-and-responses-in-the-net-framework"></a>İsteklerin ve yanıtların .NET Framework'teki  
- .NET Framework üç parça istek/yanıt modeli aracılığıyla Internet kaynaklarına erişmek için gerekli bilgiler sağlamak için belirli sınıfları kullanır: <xref:System.Uri> aramayı Internet kaynağının URI'sini içeren sınıf; <xref:System.Net.WebRequest>; kaynağı için bir istek içeren sınıfı ve <xref:System.Net.WebResponse> gelen yanıt için bir kapsayıcı sağlayan sınıf.  
+## <a name="requests-and-responses-in-the-net-framework"></a>İsteklerin ve yanıtların .NET Framework  
+ .NET Framework, üç parça istek/yanıt modeli aracılığıyla Internet kaynaklarına erişebilmesi için gerekli bilgileri sağlamak için belirli sınıfları kullanır: <xref:System.Uri> dağıtımınızla Internet kaynağın URI'sini içeren sınıf; <xref:System.Net.WebRequest>; kaynak talebi içeren sınıfı ve <xref:System.Net.WebResponse> gelen yanıtları için bir kapsayıcı sağlar sınıfını.  
   
- İstemci uygulamaları oluşturmak `WebRequest` ağ kaynağına URI'sini geçirerek örnekleri <xref:System.Net.WebRequest.Create%2A> yöntemi. Bu statik yöntem oluşturur bir `WebRequest` HTTP gibi belirli bir protokol için. `WebRequest` Hem sunucuya istek ve istek yapıldığında, gönderilen veri akışı erişimi denetleyen özellikler erişim sağlar döndürülür. <xref:System.Net.WebRequest.GetResponse%2A> Yöntemi `WebRequest` URI'de tanımlanan sunucuya istemci uygulamasından isteği gönderir. Zaman uyumsuz olarak kullanılarak istek, yanıt ertelenmesini durumlarda yapılabilir <xref:System.Net.WebRequest.BeginGetResponse%2A> yöntemi **WebRequest**, ve daha sonraki bir kullanarak zaman yanıt döndürülebilecek <xref:System.Net.WebRequest.EndGetResponse%2A> yöntemi.  
+ İstemci uygulamaları oluşturmayı `WebRequest` ağ kaynağına URI'sini geçirerek örnekleri <xref:System.Net.WebRequest.Create%2A> yöntemi. Bu statik bir yöntem oluşturur bir `WebRequest` HTTP gibi belirli bir protokol için. `WebRequest` , Döndürülen her iki sunucuya gönderilen istek ve istek yapıldığında, gönderilen veri akışına erişim denetimi özellikleri erişim sağlar. <xref:System.Net.WebRequest.GetResponse%2A> Metodunda `WebRequest` URI'de belirtilen sunucuya istemci uygulamadan alınan isteği gönderir. Zaman uyumsuz olarak kullanarak istek, yanıt ertelenebilir durumlarda yapılabilir <xref:System.Net.WebRequest.BeginGetResponse%2A> metodunda **WebRequest**, ve bir sonraki kullanarak sırasında yanıt döndürülebilir <xref:System.Net.WebRequest.EndGetResponse%2A> yöntemi.  
   
- **GetResponse** ve **EndGetResponse** yöntemleri döndürür bir **WebResponse** sunucu tarafından döndürülen veri erişim sağlar. Bu verileri isteyen uygulamaya göre bir akış olarak sağlandığından <xref:System.Net.WebResponse.GetResponseStream%2A> yöntemi, bir uygulamada veri akışlarını kullanılan herhangi bir yerde kullanılabilir.  
+ **GetResponse yanıtına** ve **EndGetResponse** yöntemleri döndürür bir **WebResponse** sunucu tarafından döndürülen verilere erişim sağlar. Bu verileri isteyen uygulamaya göre bir akış olarak sağlandığından <xref:System.Net.WebResponse.GetResponseStream%2A> yöntemi, bir uygulamaya veri akışlarını kullanıldığı her yerde kullanılabilir.  
   
- **WebRequest** ve **WebResponse** sınıflardır Takılabilir Protokol temelini — Internet kaynakların olmadan kullanan uygulamalar geliştirmenize olanak tanıyan ağ hizmetleri uygulaması Her kaynak kullandığı protokol belirli ayrıntılar konusunda kaygı. Alt sınıfları **WebRequest** ile kayıtlı **WebRequest** Internet kaynaklarına gerçek bağlantı ayrıntılarını yönetmek için sınıf.  
+ **WebRequest** ve **WebResponse** sınıflardır takılabilir protokollerin temelini — olmadan Internet kaynakları kullanan uygulamalar geliştirmenize imkan sağlayan ağ hizmetleri uygulaması Her kaynak kullanan Protokolü belirli ayrıntılar hakkında endişelenmeden. Alt sınıfları **WebRequest** kayıtlı **WebRequest** Internet kaynaklarına gerçek bağlantı ayrıntılarını yönetmek için sınıf.  
   
- Örneğin, <xref:System.Net.HttpWebRequest> sınıfı HTTP kullanarak bir Internet kaynağına bağlanma ayrıntılarını yönetir. Varsayılan olarak, zaman **WebRequest.Create** yöntemi ile başlayan bir URI karşılaştığında "http:" veya "https:" (HTTP ve güvenli HTTP protokolü tanımlayıcılar), **WebRequest** olarak kullanılabilir döndürülür olan veya için typecast **HttpWebRequest** protokole özgü özelliklere erişmek için. Çoğu durumda, **WebRequest** bir isteği yapmak için gerekli tüm bilgileri sağlar.  
+ Örneğin, <xref:System.Net.HttpWebRequest> sınıfı HTTP kullanarak bir Internet kaynağına bağlanmayı ayrıntılarını yönetir. Varsayılan olarak, zaman **WebRequest.Create** yöntemi ile başlayan URI karşılaştığında "http:" veya "https:" (HTTP ve güvenli HTTP protokolü tanımlayıcılar), **WebRequest** olarak kullanılabilir döndürülür ise veya bu için türü atayarak **HttpWebRequest** protokole özgü özelliklere erişmek için. Çoğu durumda **WebRequest** isteği yapmak için gerekli tüm bilgileri sağlar.  
   
- Bir istek/yanıt işlem kullanılabilir olarak temsil edilebilir protokolü bir **WebRequest**. Protokole özgü sınıflardan türetilemeyeceğini **WebRequest** ve **WebResponse** ve sonra bunları kullanmak için statik uygulamayla tarafından kaydettirmeniz <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=nameWithType> yöntemi.  
+ İstek/yanıt işlem kullanılabilir olarak temsil edilebilir protokolü bir **WebRequest**. Protokole özgü sınıfları türetebilirsiniz **WebRequest** ve **WebResponse** ve sonra bunları kullanmak için statik uygulamayla kaydetmeniz <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=nameWithType> yöntemi.  
   
- İstemci yetkilendirme Internet istekleri için gerektiğinde <xref:System.Net.WebRequest.Credentials%2A> özelliği **WebRequest** gerekli kimlik bilgilerini sağlar. Bu kimlik bilgileri temel HTTP veya Özet kimlik doğrulaması için bir basit adı/parola çifti olabilir veya NTLM veya Kerberos kimlik doğrulaması için bir ad/parola/etki alanı ayarlayın. Bir kimlik bilgileri kümesi depolanabilir bir <xref:System.Net.NetworkCredential> örneği veya birden çok kümeleri aynı anda depolanabilir bir <xref:System.Net.CredentialCache> örneği. **CredentialCache** istek ve sunucuya göndermek için hangi kimlik bilgilerinin belirlemek için sunucunun desteklediği kimlik doğrulama şeması URI'si kullanır.  
+ Internet istekleri için istemci kimlik doğrulaması gerekli olduğunda <xref:System.Net.WebRequest.Credentials%2A> özelliği **WebRequest** gerekli kimlik bilgilerini sağlar. Bu kimlik bilgilerini temel HTTP veya Özet kimlik doğrulaması için bir basit adı/parola çifti olabilir veya bir adı/parola/etki alanı için NTLM veya Kerberos kimlik doğrulamasını ayarlayın. Bir dizi kimlik bilgisi depolanabilir bir <xref:System.Net.NetworkCredential> örneği veya birden fazla de aynı anda depolanabilir bir <xref:System.Net.CredentialCache> örneği. **CredentialCache** URI'si istek ve sunucuya göndermek için hangi kimlik bilgilerini belirlemek için sunucu destekleyen kimlik doğrulama şeması kullanır.  
   
-## <a name="simple-requests-with-webclient"></a>WebClient ile basit istekleri  
- Internet kaynaklarına yönelik basit isteği yapmak için gereken uygulamalar için <xref:System.Net.WebClient> sınıfı verileri yüklemeyi veya bir Internet sunucusundan veri indirme için sık kullanılan yöntemler sağlar. **WebClient** dayanan **WebRequest** sınıfı Internet kaynakların; erişmesini sağlamak için bu nedenle, **WebClient** sınıfı, herhangi bir kayıtlı takılabilir protokolünü kullanabilirsiniz.  
+## <a name="simple-requests-with-webclient"></a>WebClient ile basit istekler  
+ Internet kaynaklarına yönelik basit isteğinde bulunmak için gereken uygulamalar <xref:System.Net.WebClient> sınıf verileri karşıya yükleme veya bir Internet sunucusundan verileri indirmek için ortak yöntemleri sağlar. **WebClient** dayanan **WebRequest** sınıfı; Internet kaynaklarına erişim sağlamak için bu nedenle, **WebClient** sınıfı, tüm kayıtlı takılabilir protokolleri kullanabilir.  
   
- İstek/yanıt modeli kullanamazsınız uygulamalar için veya yanı sıra ağ üzerinde dinleme istekleri göndermek için gereken uygulamalar için **System.Net.Sockets** ad alanı sağlar <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener>ve <xref:System.Net.Sockets.UdpClient> sınıfları. Bu sınıfların farklı aktarım protokolünü kullanarak bağlantı ayrıntılarını işler ve ağ bağlantısı uygulamasına bir akış olarak kullanıma sunar.  
+ İstek/yanıt modeli kullanamayan uygulamalar için veya yanı sıra ağda dinleme istekleri göndermek için gereken uygulamalar **System.Net.Sockets** ad alanı sağlar <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener>ve <xref:System.Net.Sockets.UdpClient> sınıfları. Bu sınıflar farklı aktarım protokolünü kullanarak bağlantı ayrıntılarını işlemek ve uygulamaya bir akış olarak ağ bağlantısı üzerinden kullanıma sunacaksınız.  
   
- Geliştiriciler Windows Sockets arabirimi ya da programlama yuva düzeyinde tarafından sağlanan denetime ihtiyaç duyan bilmiyorsanız, bulacaksınız **System.Net.Sockets** sınıfları ihtiyaçlarını karşılamak. **System.Net.Sockets** sınıfları içindeki yerel kod için yönetilen bir geçiş noktasından olan **System.Net** sınıfları. Çoğu durumda, **System.Net.Sockets** sınıfları sıralama veri Windows 32-bit dekiler yanı sıra tüm gerekli güvenlik denetimlerini işleme.  
+ Tanıdık Windows Sockets arabirimini veya programlama yuva düzeyinde tarafından sağlanan denetime ihtiyacınız olanlar ile geliştiriciler, bulacaksınız **System.Net.Sockets** sınıfları ihtiyaçlarını karşılamak. **System.Net.Sockets** sınıflar içindeki yerel kod için yönetilen bir geçiş noktasından olan **System.Net** sınıfları. Çoğu durumda **System.Net.Sockets** sınıfları Windows 32-bit karşılıkları yanı sıra tüm gerekli güvenlik denetimleri işleme veri hazırlama.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Takılabilir Protokoller Programlama](../../../docs/framework/network-programming/programming-pluggable-protocols.md)  
  [.NET Framework'te Ağ Programlaması](../../../docs/framework/network-programming/index.md)  
  [Ağ Programlama Örnekleri](../../../docs/framework/network-programming/network-programming-samples.md)  
- [MSDN kod Galerisi'nden .NET ağ örnekleri](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
+ [MSDN Kod Galerisi'nde .NET için ağ örnekleri](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

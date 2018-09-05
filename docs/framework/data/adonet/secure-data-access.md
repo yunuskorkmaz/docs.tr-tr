@@ -2,98 +2,98 @@
 title: Güvenli veri erişimi
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: 85f40000ed1c4901342c697c97069a7ba55ed7f9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7083f68457aa8f87b01f523abc5742d24bafcbfd
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362717"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513793"
 ---
 # <a name="secure-data-access"></a>Güvenli veri erişimi
-Güvenli ADO.NET kod yazmak için temel alınan veri deposunda veya veritabanı güvenlik mekanizmaları anlamak zorunda. Diğer özellikler veya uygulamanızın içerebilir bileşenleri güvenlik etkilerini göz önünde bulundurmanız gerekir.  
+Güvenli ADO.NET kod yazmak için alttaki veri deposuna veya veritabanı güvenlik mekanizmalarını anlamaları gerekir. Ayrıca, diğer özellikler veya uygulamanızı içerebilir bileşenleri güvenlik etkilerini göz önünde bulundurmanız gerekir.  
   
-## <a name="authentication-authorization-and-permissions"></a>Kimlik doğrulama, yetkilendirme ve izinleri  
- Microsoft SQL Server veritabanına bağlanırken Windows kimlik doğrulaması, güvenlik olarak da bilinen tümleşik bir kullanıcı kimliği ve parolası geçirme yerine geçerli etkin Windows kullanıcı kimliğini kullanan, kullanabilirsiniz. Kullanıcı kimlik bilgileri bağlantı dizesinde açık değildir çünkü Windows kimlik doğrulaması kullanarak kullanmamanız önerilir. SQL Server'a bağlanmak için Windows kimlik doğrulaması kullanamıyorsanız, bağlantı dizeleri çalışma zamanında kullanarak oluşturmayı göz önünde bulundurun <xref:System.Data.SqlClient.SqlConnectionStringBuilder>.  
+## <a name="authentication-authorization-and-permissions"></a>Kimlik doğrulama, yetkilendirme ve izinler  
+ Microsoft SQL Server veritabanına bağlanırken Windows kimlik doğrulama, güvenlik olarak da bilinen tümleşik bir kullanıcı kimliği ve parola yerine geçerli etkin Windows kullanıcı kimliğini kullanan, kullanabilirsiniz. Kullanıcı kimlik bilgileri bağlantı dizesinde açık değildir çünkü Windows kimlik doğrulaması kullanarak önemle tavsiye edilir. SQL Server'a bağlanmak için Windows kimlik doğrulaması kullanamıyorsanız, bağlantı dizeleri çalışma zamanında kullanarak oluşturmayı göz önünde bulundurun <xref:System.Data.SqlClient.SqlConnectionStringBuilder>.  
   
- Farklı uygulama türüne göre işlenecek kimlik doğrulaması için kullanılan kimlik bilgileri gerekir. Örneğin, bir Windows Forms uygulamasında kullanıcı kimlik bilgilerini sağlamanız istenecek veya kullanıcının Windows kimlik bilgileri kullanılabilir. Ancak, bir Web uygulaması genellikle uygulama yerine kullanıcı tarafından sağlanan kimlik bilgilerini kullanarak veri erişir.  
+ Farklı uygulama türüne göre işlenmek üzere kimlik doğrulaması için kullanılan kimlik bilgileri gerekir. Örneğin, bir Windows Forms uygulamasında kullanıcı kimlik bilgileri sağlamanız istenir veya kullanıcının Windows kimlik bilgileri kullanılabilir. Ancak, genellikle bir Web uygulaması, uygulamanın kendisi yerine kullanıcı tarafından sağlanan kimlik bilgilerini kullanarak veri erişir.  
   
- Kullanıcıların kimlik doğrulamasının sonra eylemlerini kapsamını verilmiş izinleri bunları bağlıdır. Her zaman en az ayrıcalık ilkesini izleyin ve yalnızca kesinlikle gerekli izinleri verebilirsiniz.  
+ Kullanıcıların kimlik doğrulaması yapıldıktan sonra eylemlerini kapsamını verilmiş izinler bağlıdır. Her zaman en az ayrıcalık ilkesini uygulayın ve yalnızca kesinlikle gerekli izinleri verin.  
   
  Daha fazla bilgi için aşağıdaki kaynaklara bakın.  
   
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
-|[Bağlantı Bilgilerini Koruma](../../../../docs/framework/data/adonet/protecting-connection-information.md)|En iyi güvenlik uygulamaları ve bağlantı dizeleri şifrelemek için korumalı yapılandırmayı kullanarak gibi bağlantı bilgileri, koruma teknikleri açıklar.|  
-|[Veri erişim stratejileri için öneriler](http://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)|Verilere erişme ve veritabanı işlemleri için öneriler sağlar.|  
-|[Bağlantı Dizesi Oluşturucular](../../../../docs/framework/data/adonet/connection-string-builders.md)|Kullanıcı girişi bağlantı dizeleri çalışma zamanında nasıl oluşturulacağını açıklar.|  
+|[Bağlantı Bilgilerini Koruma](../../../../docs/framework/data/adonet/protecting-connection-information.md)|En iyi güvenlik uygulamaları ve bağlantı dizeleri şifrelemek için korumalı yapılandırma kullanma gibi bağlantı bilgileriyle korumaya yönelik teknikleri açıklar.|  
+|[Veri erişim stratejileri için öneriler](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)|Veri erişimi ve veritabanı işlemleri gerçekleştirmek için öneriler sağlar.|  
+|[Bağlantı Dizesi Oluşturucular](../../../../docs/framework/data/adonet/connection-string-builders.md)|Çalışma zamanında kullanıcı girdisi bağlantı dizeleri nasıl oluşturulduğu açıklanır.|  
 |[SQL Server Güvenliğine Genel Bakış](../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)|SQL Server güvenlik mimarisini açıklar.|  
   
-## <a name="parameterized-commands-and-sql-injection"></a>Parametreli Komutlar ve SQL ekleme  
- Parametreli komutlarını kullanarak, bir saldırganın "bir komut bir SQL deyimi yerleştirir" SQL ekleme saldırılarına karşı sunucusunda o güvenlik ihlalleri güvenliği korunmasına yardımcı olur. Parametreli Komutlar, dış bir kaynaktan alınan değerler yalnızca değerler ve Transact-SQL deyimini parçası geçirilir sağlayarak SQL ekleme saldırısına karşı koruma. Sonuç olarak, bir değer olarak eklenen Transact-SQL komutlarını veri kaynağında yürütülmedi. Bunun yerine, bunlar yalnızca bir parametre değeri olarak değerlendirilir. Güvenlik açısından faydalı yanı sıra parametreli komutlar bir Transact-SQL deyimi veya saklı yordam için geçirilen değerlerini düzenlemek için kullanışlı bir yöntem sağlar.  
+## <a name="parameterized-commands-and-sql-injection"></a>Parametreli komutların ve SQL ekleme  
+ Parametreli komutların kullanılmasına, bir saldırganın "komutu bir SQL deyimi ekler", SQL enjeksiyon saldırılarına karşı sunucuda ödün güvenliği korunmasına yardımcı olur. Parametreli Komutlar, yalnızca değerleri ve Transact-SQL deyimini parçası bir dış kaynaktan alınan değerleri geçirilir sağlayarak SQL ekleme saldırısına karşı koruma sağlayın. Sonuç olarak, veri kaynağında bir değerde takılı Transact-SQL komutlarını yürütülmez. Bunun yerine, bunlar yalnızca bir parametre değeri olarak değerlendirilir. Güvenlik avantajlarına ek olarak, parametreli komutların bir Transact-SQL deyimi veya saklı yordam için geçirilen değerlerini düzenlemek için kullanışlı bir yöntem sağlar.  
   
- Parametreli Komutlar kullanma hakkında daha fazla bilgi için aşağıdaki kaynaklara bakın.  
+ Parametreli komutların kullanılmasına ilişkin daha fazla bilgi için aşağıdaki kaynaklara bakın.  
   
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
 |[DataAdapter Parametreleri](../../../../docs/framework/data/adonet/dataadapter-parameters.md)|Parametrelerle kullanmayı açıklar bir `DataAdapter`.|  
-|[Saklı Yordamlarla Verileri Değiştirme](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)|Parametrelerini belirtin ve bir dönüş değeri elde açıklar.|  
-|[SQL Server'da Saklı Yordam İzinlerini Yönetme](../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)|SQL Server saklı yordamları veri erişimi kapsüllemek için nasıl kullanılacağını açıklar.|  
+|[Saklı Yordamlarla Verileri Değiştirme](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)|Parametreleri belirtin ve bir dönüş değeri elde açıklar.|  
+|[SQL Server'da Saklı Yordam İzinlerini Yönetme](../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)|Veri erişimi kapsüllemek için SQL Server saklı yordamları kullanmayı açıklar.|  
   
-## <a name="script-exploits"></a>Komut dosyası açıklarından yararlanılmasını  
- Bir komut dosyası yararlanma kullanan bir Web sayfasına eklenen kötü amaçlı karakterlerin ekleme işlemi başka bir biçimidir. Tarayıcı eklenen karakterleri doğrulamaz ve sayfanın parçası olarak işleyecek.  
-  
- Daha fazla bilgi için aşağıdaki kaynaklara bakın.  
-  
-|Kaynak|Açıklama|  
-|--------------|-----------------|  
-|[Komut dosyası açıkları genel bakış](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07)|Komut dosyası ve SQL deyimini karşı açıkları koruma açıklar.|  
-  
-## <a name="probing-attacks"></a>Saldırıları yoklama  
- Saldırganlar, sunucu, veritabanı veya tablo adı gibi bir özel durum bilgileri genellikle sisteminizdeki bir saldırı bağlamak için kullanın. Özel durumlar uygulama veya veri kaynağı hakkında belirli bilgiler içerdiğinden daha iyi istemciye önemli bilgiler yalnızca göstererek uygulamasını ve veri kaynağı korumalı korunmasına yardımcı olabilirsiniz.  
+## <a name="script-exploits"></a>Komut dosyası açıklarından  
+ Bir betik yararlanma amaçlı karakter bir Web sayfasına eklenen kullanan ekleme başka bir biçimidir. Tarayıcı eklenen karakter doğrulamaz ve sayfanın parçası olarak bunları işler.  
   
  Daha fazla bilgi için aşağıdaki kaynaklara bakın.  
   
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
-|[Özel durum işleme temelleri](../../../../docs/standard/exceptions/exception-handling-fundamentals.md)|Try/catch/finally yapılandırılmış özel durum işleme temel formlarını açıklar.|  
-|[Özel Durumlar için En İyi Yöntemler](../../../../docs/standard/exceptions/best-practices-for-exceptions.md)|Özel durumları işlemek için en iyi uygulamaları açıklar.|  
+|[Betik açıklara genel bakış](https://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07)|Açıklara komut dosyası ve SQL deyimi karşı koruma sağlamak açıklar.|  
   
-## <a name="protecting-microsoft-access-and-excel-data-sources"></a>Microsoft Access ve Excel veri kaynaklarını koruma  
- Güvenlik gereksinimleri en düşük veya var olmayan olduğunda Microsoft Access ve Microsoft Excel ADO.NET uygulama için bir veri deposu olarak çalışabilir. Güvenlik özelliklerine deterrence için etkili olur, ancak bağlı birden fazla uninformed kullanıcılar tarafından meddling önlemek için kullanılmamalıdır. Erişim ve Excel için fiziksel veri dosyaları dosya sisteminde var ve tüm kullanıcılara erişilebilir olması gerekir. Bu dosyaları kolayca kopyaladığınız veya değiştirilebilir beri hırsızlığı veya veri kaybına sebep saldırılara karşı savunmasız sağlar. Güçlü güvenlik gerekli olduğunda, SQL Server veya başka bir sunucu tabanlı veritabanı burada fiziksel veri dosyaları dosya sisteminden okunabilir değil kullanın.  
+## <a name="probing-attacks"></a>Saldırıları araştırma  
+ Saldırganlar genellikle saldırının sisteminize bağlamak için sunucu, veritabanı veya tablo adı gibi bir özel durum bilgilerini kullanın. Özel durumlar uygulamanızın veya veri kaynağı hakkında belirli bilgiler içerdiğinden daha iyi istemci için gerekli bilgileri yalnızca göstererek, uygulama ve veri kaynağı korumalı olmasını sağlayabilirsiniz.  
+  
+ Daha fazla bilgi için aşağıdaki kaynaklara bakın.  
+  
+|Kaynak|Açıklama|  
+|--------------|-----------------|  
+|[Özel durum işleme temelleri](../../../../docs/standard/exceptions/exception-handling-fundamentals.md)|Try/catch/finally yapılandırılmış özel durum işleme temel forms açıklar.|  
+|[Özel Durumlar için En İyi Yöntemler](../../../../docs/standard/exceptions/best-practices-for-exceptions.md)|Özel durum işleme için en iyi uygulamaları açıklar.|  
+  
+## <a name="protecting-microsoft-access-and-excel-data-sources"></a>Microsoft Access ve Excel veri kaynakları koruma  
+ Güvenlik gereksinimlerini en aza ya da var olmayan olduğunda Microsoft Access ve Microsoft Excel ADO.NET uygulama için bir veri deposu olarak davranamaz. Güvenlik özelliklerine deterrence için etkili olur, ancak bağlı birden fazla uninformed kullanıcılar tarafından meddling önlemek için kullanılmamalıdır. Erişim ve Excel için fiziksel veri dosyaları dosya sisteminde var ve tüm kullanıcılar için erişilebilir olmalıdır. Bu bunları dosyaları kolayca kopyaladığınız veya değiştirilebilir bu yana, hırsızlık veya veri kaybına yol açabilir saldırılara açık hale getirir. Sağlam güvenlik, gerekli olduğunda burada fiziksel veri dosyaları dosya sisteminden okunabilir olmayan SQL Server veya başka bir sunucu tabanlı veritabanı kullanın.  
   
  Erişim ve Excel veri koruma ile ilgili daha fazla bilgi için aşağıdaki kaynaklara bakın.  
   
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
-|[Access 2007 yönelik Rehber ve güvenlik konuları](http://go.microsoft.com/fwlink/?LinkId=98354)|Bu tür dosyaları şifreleme, parolaları yönetme, veritabanlarını yeni olmayan ACCDB ve ACCDE biçimlerine dönüştürme ve diğer güvenlik seçeneklerini kullanarak Access 2007 için güvenlik teknikleri açıklar.|  
-|[Bir Access veritabanı kullanıcı düzeyi güvenlik (MDB) ile korunmasına yardımcı olma](http://go.microsoft.com/fwlink/?LinkId=47697)|Erişim 2003 için geçerlidir. Access 2003 verileri korumak için kullanıcı düzeyinde güvenlik uygulamak için yönergeler sağlar.|  
-|[Çalışma grubu bilgi dosyalarını rol erişim güvenliğini anlama](http://support.microsoft.com/kb/305542)|Rol ve çalışma grubu bilgi dosyasının ilişki Access 2003 güvenlik açıklanmaktadır.|  
-|[Sık sorulan sorular Microsoft erişim güvenlik hakkında Microsoft Access sürümleri 2000 aracılığıyla 2.0](http://go.microsoft.com/fwlink/?LinkId=47698)|Microsoft Access güvenlik ile ilgili SSS indirilebilir sürümü.|  
-|[Güvenlik ve koruma sorunlarını giderme](http://go.microsoft.com/fwlink/?LinkId=47703)|Excel 2003'te güvenlik ile ilgili genel sorunların çözümleri sunar.|  
+|[Güvenlik hususlarının yanı sıra Access 2007 Kılavuzu](https://go.microsoft.com/fwlink/?LinkId=98354)|Bu tür dosyalar şifreleniyor, parolaları yönetme, veritabanlarını yeni olmayan ACCDB ve ACCDE biçimlerine dönüştürme ve diğer güvenlik seçeneklerini kullanarak Access 2007 için güvenlik teknikleri açıklar.|  
+|[Bir Access veritabanı ile kullanıcı düzeyi güvenlik (MDB) korunmasına yardımcı olma](https://go.microsoft.com/fwlink/?LinkId=47697)|Erişim 2003 için geçerlidir. Erişim 2003 verileri korumak için kullanıcı düzeyi güvenlik uygulanması için yönergeler sağlar.|  
+|[Erişimi güvenliği, çalışma grubu bilgi dosyalarını rolünü anlamak](https://support.microsoft.com/kb/305542)|Erişim 2003 güvenlik rolü ve çalışma grubu bilgi dosyası arasındaki ilişkiyi açıklar.|  
+|[Sık sorulan sorular hakkında Microsoft erişim için güvenlik Microsoft Access sürümleri 2.0 ile 2000 yılları arasında](https://go.microsoft.com/fwlink/?LinkId=47698)|Microsoft Access güvenlik ile ilgili SSS indirilebilir sürümü.|  
+|[Güvenlik ve koruma sorunlarını giderme](https://go.microsoft.com/fwlink/?LinkId=47703)|Excel 2003'te güvenlik ile sık karşılaşılan sorunlara çözümler sunar.|  
   
 ## <a name="enterprise-services"></a>Kurumsal Hizmetler  
- COM + Windows NT hesapları ve işlem/iş parçacığı kimliğe bürünme dayanır, kendi güvenlik modeli içerir. <xref:System.EnterpriseServices> Ad alanı sağlayan COM + Güvenlik Hizmetleri aracılığıyla yönetilen kod bütünleştirmek için .NET uygulamalarını izin sarmalayıcıları <xref:System.EnterpriseServices.ServicedComponent> sınıfı.  
+ COM + Windows NT hesapları ve işlem/iş parçacığı kimliğe bürünme kullanır, kendi güvenlik modelini içerir. <xref:System.EnterpriseServices> Ad alanı güvenlik hizmetleriyle COM + yönetilen kodu tümleştirmek için .NET uygulamalarını izin sarmalayıcıları sağlar <xref:System.EnterpriseServices.ServicedComponent> sınıfı.  
   
  Daha fazla bilgi için aşağıdaki kaynağa bakın.  
   
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
-|[COM + rol tabanlı güvenlik ve .NET Framework](http://msdn.microsoft.com/library/02ab22ef-e5e2-4d29-b33a-6e03d94c4981)|Yönetilen kod COM + Güvenlik Hizmetleri ile tümleştirmek nasıl ele alınmaktadır.|  
+|[COM + rol tabanlı güvenlik ve .NET Framework](https://msdn.microsoft.com/library/02ab22ef-e5e2-4d29-b33a-6e03d94c4981)|Yönetilen kodda COM + security Hizmetleri ile tümleştirme nasıl ele alınmaktadır.|  
   
 ## <a name="interoperating-with-unmanaged-code"></a>Yönetilmeyen Kod ile Birlikte Çalışma  
- COM bileşenleri, COM + Hizmetleri, dış tür kitaplıklarını ve birçok işletim sistemi Hizmetleri dahil olmak üzere, yönetilmeyen kod ile etkileşim için .NET Framework sağlar. Yönetilmeyen kod ile çalışmayı yönetilen kod için güvenlik çevre dışına gitmesini gerektirir. Hem kodunuz hem de çağırır herhangi bir kod kod izni yönetilmeyen gerekir (<xref:System.Security.Permissions.SecurityPermission> ile <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> bayrağı belirtilmiş). Yönetilmeyen kod uygulamanıza istenmeyen güvenlik açıklarını ortaya çıkarabilir. Bu nedenle, kesinlikle gerekli olmadığı sürece yönetilmeyen kod ile birlikte çalışma kaçınmalısınız.  
+ .NET Framework için COM bileşenlerini, COM + Hizmetleri, dış tür kitaplıkları ve birçok işletim sistemi Hizmetleri dahil olmak üzere, yönetilmeyen kod ile etkileşim sağlar. Yönetilmeyen kod ile çalışma, yönetilen kod için güvenlik çevresi dışına gitmesini içerir. Hem kodunuz hem de onu çağıran herhangi bir kod kod iznini yönetilmeyen gerekir (<xref:System.Security.Permissions.SecurityPermission> ile <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> belirtilmiş işareti). Yönetilmeyen kod uygulamanıza istenmeyen güvenlik açıklarını ortaya çıkarabilir. Bu nedenle, kesinlikle gerekli olmadığı sürece, yönetilmeyen kod ile birlikte çalışma kaçınmanız gerekir.  
   
  Daha fazla bilgi için aşağıdaki kaynaklara bakın.  
   
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
-|[Yönetilmeyen Kod ile Birlikte Çalışma](../../../../docs/framework/interop/index.md)|COM bileşenlerini .NET Framework'te kullanıma etme ve .NET Framework bileşenlerini com kullanıma açıklayan konuları içerir|  
-|[Gelişmiş COM birlikte çalışabilirliği](http://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb)|Birincil birlikte çalışma derlemeleri, iş parçacığı oluşturma ve özel hazırlama gibi gelişmiş konular içerir.|  
+|[Yönetilmeyen Kod ile Birlikte Çalışma](../../../../docs/framework/interop/index.md)|COM bileşenlerini .NET Framework'te nasıl sunacağınızı öğrenin ve .NET Framework bileşenlerini vystavit kullanıma sunmak nasıl eklendiğini açıklayan konulara içerir|  
+|[Gelişmiş COM birlikte çalışabilirliği](https://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb)|Birincil birlikte çalışma derlemelerini, iş parçacığı oluşturma ve özel sıralama gibi gelişmiş konular içerir.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server Güvenliği](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
- [Veri erişim stratejileri için öneriler](http://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)  
+ [Veri erişim stratejileri için öneriler](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)  
  [Bağlantı Bilgilerini Koruma](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
  [Bağlantı Dizesi Oluşturucular](../../../../docs/framework/data/adonet/connection-string-builders.md)  
- [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
