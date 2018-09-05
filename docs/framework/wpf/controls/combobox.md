@@ -8,22 +8,22 @@ helpviewer_keywords:
 - ComboBox control [WPF]
 ms.assetid: fe0c2f62-fec2-4c41-a37e-5773d284170c
 ms.openlocfilehash: 40dc767d830b3834eedf3581d544aa53d40fae50
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43466362"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43554909"
 ---
-# <a name="combobox"></a><span data-ttu-id="32a8b-102">ComboBox</span><span class="sxs-lookup"><span data-stu-id="32a8b-102">ComboBox</span></span>
-<span data-ttu-id="32a8b-103"><xref:System.Windows.Controls.ComboBox> Denetim seçeneklerin bir listesi kullanıcıların sayısını gösterir.</span><span class="sxs-lookup"><span data-stu-id="32a8b-103">The <xref:System.Windows.Controls.ComboBox> control presents users with a list of options.</span></span> <span data-ttu-id="32a8b-104">Listede gösterilen ve denetim genişletir ve daraltır gizli.</span><span class="sxs-lookup"><span data-stu-id="32a8b-104">The list is shown and hidden as the control expands and collapses.</span></span> <span data-ttu-id="32a8b-105">Varsayılan durumuna görüntüleme tek bir seçim listesi daraltılmıştır.</span><span class="sxs-lookup"><span data-stu-id="32a8b-105">In its default state, the list is collapsed, displaying only one choice.</span></span> <span data-ttu-id="32a8b-106">Kullanıcı seçeneklerinin tam listesi görmek için bir düğmesine tıklar.</span><span class="sxs-lookup"><span data-stu-id="32a8b-106">The user clicks a button to see the complete list of options.</span></span>  
+# <a name="combobox"></a><span data-ttu-id="e321d-102">ComboBox</span><span class="sxs-lookup"><span data-stu-id="e321d-102">ComboBox</span></span>
+<span data-ttu-id="e321d-103"><xref:System.Windows.Controls.ComboBox> Denetim seçeneklerin bir listesi kullanıcıların sayısını gösterir.</span><span class="sxs-lookup"><span data-stu-id="e321d-103">The <xref:System.Windows.Controls.ComboBox> control presents users with a list of options.</span></span> <span data-ttu-id="e321d-104">Listede gösterilen ve denetim genişletir ve daraltır gizli.</span><span class="sxs-lookup"><span data-stu-id="e321d-104">The list is shown and hidden as the control expands and collapses.</span></span> <span data-ttu-id="e321d-105">Varsayılan durumuna görüntüleme tek bir seçim listesi daraltılmıştır.</span><span class="sxs-lookup"><span data-stu-id="e321d-105">In its default state, the list is collapsed, displaying only one choice.</span></span> <span data-ttu-id="e321d-106">Kullanıcı seçeneklerinin tam listesi görmek için bir düğmesine tıklar.</span><span class="sxs-lookup"><span data-stu-id="e321d-106">The user clicks a button to see the complete list of options.</span></span>  
   
- <span data-ttu-id="32a8b-107">Aşağıdaki çizimde gösterildiği bir <xref:System.Windows.Controls.ComboBox> farklı durumlarda.</span><span class="sxs-lookup"><span data-stu-id="32a8b-107">The following illustration shows a <xref:System.Windows.Controls.ComboBox> in different states.</span></span>  
+ <span data-ttu-id="e321d-107">Aşağıdaki çizimde gösterildiği bir <xref:System.Windows.Controls.ComboBox> farklı durumlarda.</span><span class="sxs-lookup"><span data-stu-id="e321d-107">The following illustration shows a <xref:System.Windows.Controls.ComboBox> in different states.</span></span>  
   
- <span data-ttu-id="32a8b-108">![Birleşik giriş kutuları varsayılan ve basılı durumları](../../../../docs/framework/wpf/controls/media/ss-ctl-combobox.gif "SS_CTL_combobox")</span><span class="sxs-lookup"><span data-stu-id="32a8b-108">![Combo boxes in default and pressed states](../../../../docs/framework/wpf/controls/media/ss-ctl-combobox.gif "SS_CTL_combobox")</span></span>  
-<span data-ttu-id="32a8b-109">Daraltılabilir ve Genişletilebilir</span><span class="sxs-lookup"><span data-stu-id="32a8b-109">Collapsed and expanded</span></span>  
+ <span data-ttu-id="e321d-108">![Birleşik giriş kutuları varsayılan ve basılı durumları](../../../../docs/framework/wpf/controls/media/ss-ctl-combobox.gif "SS_CTL_combobox")</span><span class="sxs-lookup"><span data-stu-id="e321d-108">![Combo boxes in default and pressed states](../../../../docs/framework/wpf/controls/media/ss-ctl-combobox.gif "SS_CTL_combobox")</span></span>  
+<span data-ttu-id="e321d-109">Daraltılabilir ve Genişletilebilir</span><span class="sxs-lookup"><span data-stu-id="e321d-109">Collapsed and expanded</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="32a8b-110">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="32a8b-110">In This Section</span></span>  
- [<span data-ttu-id="32a8b-111">Nasıl yapılır: ComboBoxItem alma</span><span class="sxs-lookup"><span data-stu-id="32a8b-111">How to: Get a ComboBoxItem</span></span>](https://msdn.microsoft.com/library/8a0d2622-64b6-41fc-bf80-9669a1eacb53)  
+## <a name="in-this-section"></a><span data-ttu-id="e321d-110">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="e321d-110">In This Section</span></span>  
+ [<span data-ttu-id="e321d-111">Nasıl yapılır: ComboBoxItem alma</span><span class="sxs-lookup"><span data-stu-id="e321d-111">How to: Get a ComboBoxItem</span></span>](https://msdn.microsoft.com/library/8a0d2622-64b6-41fc-bf80-9669a1eacb53)  
   
-## <a name="reference"></a><span data-ttu-id="32a8b-112">Başvuru</span><span class="sxs-lookup"><span data-stu-id="32a8b-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="e321d-112">Başvuru</span><span class="sxs-lookup"><span data-stu-id="e321d-112">Reference</span></span>  
  <xref:System.Windows.Controls.ComboBox>

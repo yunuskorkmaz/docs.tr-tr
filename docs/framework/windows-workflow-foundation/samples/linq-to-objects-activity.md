@@ -1,30 +1,30 @@
 ---
-title: LINQ to nesneleri etkinliği
+title: LINQ to Objects etkinliği
 ms.date: 03/30/2017
 ms.assetid: 403c82e8-7f2b-42f6-93cd-95c35bc76ead
-ms.openlocfilehash: e2c2be52a88d8f9a886f0e59c027e1d6c737497c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fca4a94a951c9713a61914de6ef33e0cbb74f75e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516675"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43552774"
 ---
-# <a name="linq-to-objects-activity"></a><span data-ttu-id="c28b7-102">LINQ to nesneleri etkinliği</span><span class="sxs-lookup"><span data-stu-id="c28b7-102">LINQ to Objects Activity</span></span>
-<span data-ttu-id="c28b7-103">Bu örnek, bir koleksiyon sorgu öğelerine nesnelere LINQ kullanmak için bir etkinlik oluşturmak gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="c28b7-103">This sample demonstrates how to create an activity to use LINQ to Objects to query elements in a collection.</span></span>  
+# <a name="linq-to-objects-activity"></a><span data-ttu-id="23c4d-102">LINQ to Objects etkinliği</span><span class="sxs-lookup"><span data-stu-id="23c4d-102">LINQ to Objects Activity</span></span>
+<span data-ttu-id="23c4d-103">Bu örnek, bir koleksiyondaki sorgu öğeleri için LINQ to Objects'in kullanılacak bir etkinliği oluşturma işlemini gösterir.</span><span class="sxs-lookup"><span data-stu-id="23c4d-103">This sample demonstrates how to create an activity to use LINQ to Objects to query elements in a collection.</span></span>  
   
-## <a name="activity-details-for-findincollection"></a><span data-ttu-id="c28b7-104">FindInCollection etkinliği ayrıntıları</span><span class="sxs-lookup"><span data-stu-id="c28b7-104">Activity Details for FindInCollection</span></span>  
- <span data-ttu-id="c28b7-105">Bu etkinlik kullanıcılar sorgu öğelerine nesnelere LINQ kullanarak bellek koleksiyonlarında izin verir.</span><span class="sxs-lookup"><span data-stu-id="c28b7-105">This activity allows users to query elements from collections in memory using LINQ to Objects.</span></span> <span data-ttu-id="c28b7-106">Sonuçları filtrelemek için bir lambda ifadesi şeklinde LINQ koşulu sağlamanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="c28b7-106">You must provide a LINQ predicate in the form of a lambda expression to filter the results.</span></span> <span data-ttu-id="c28b7-107">Bu etkinliği ile birlikte kullanılabilir <xref:System.Activities.Statements.AddToCollection%601> etkinlikler.</span><span class="sxs-lookup"><span data-stu-id="c28b7-107">This activity can be used in conjunction with <xref:System.Activities.Statements.AddToCollection%601> activities.</span></span>  
+## <a name="activity-details-for-findincollection"></a><span data-ttu-id="23c4d-104">FindInCollection için etkinlik ayrıntıları</span><span class="sxs-lookup"><span data-stu-id="23c4d-104">Activity Details for FindInCollection</span></span>  
+ <span data-ttu-id="23c4d-105">Bu etkinlik, kullanıcıların koleksiyonlarına kullanarak LINQ to Objects'in bellek içinde sorgu öğeleri sağlar.</span><span class="sxs-lookup"><span data-stu-id="23c4d-105">This activity allows users to query elements from collections in memory using LINQ to Objects.</span></span> <span data-ttu-id="23c4d-106">Sonuçları filtrelemek için bir lambda ifadesinin biçiminde bir LINQ koşul sağlamanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="23c4d-106">You must provide a LINQ predicate in the form of a lambda expression to filter the results.</span></span> <span data-ttu-id="23c4d-107">Bu etkinlik ile birlikte kullanılabilir <xref:System.Activities.Statements.AddToCollection%601> etkinlikler.</span><span class="sxs-lookup"><span data-stu-id="23c4d-107">This activity can be used in conjunction with <xref:System.Activities.Statements.AddToCollection%601> activities.</span></span>  
   
- <span data-ttu-id="c28b7-108">Aşağıdaki tabloda özellik ve dönüş değerleri etkinliğinin ayrıntılarını verir.</span><span class="sxs-lookup"><span data-stu-id="c28b7-108">The following table details the property and return values for the activity.</span></span>  
+ <span data-ttu-id="23c4d-108">Aşağıdaki tabloda özellik ve dönüş değerleri etkinliğinin ayrıntıları.</span><span class="sxs-lookup"><span data-stu-id="23c4d-108">The following table details the property and return values for the activity.</span></span>  
   
-|<span data-ttu-id="c28b7-109">Özellik veya dönüş değeri</span><span class="sxs-lookup"><span data-stu-id="c28b7-109">Property or Return Value</span></span>|<span data-ttu-id="c28b7-110">Açıklama</span><span class="sxs-lookup"><span data-stu-id="c28b7-110">Description</span></span>|  
+|<span data-ttu-id="23c4d-109">Özellik ya da dönüş değeri</span><span class="sxs-lookup"><span data-stu-id="23c4d-109">Property or Return Value</span></span>|<span data-ttu-id="23c4d-110">Açıklama</span><span class="sxs-lookup"><span data-stu-id="23c4d-110">Description</span></span>|  
 |------------------------------|-----------------|  
-|<span data-ttu-id="c28b7-111">`Collection` Özelliği</span><span class="sxs-lookup"><span data-stu-id="c28b7-111">`Collection` property</span></span>|<span data-ttu-id="c28b7-112">Kaynak koleksiyonu belirten gerekli bir özellik.</span><span class="sxs-lookup"><span data-stu-id="c28b7-112">A required property that specifies the source collection.</span></span>|  
-|<span data-ttu-id="c28b7-113">`Predicate` Özelliği</span><span class="sxs-lookup"><span data-stu-id="c28b7-113">`Predicate` property</span></span>|<span data-ttu-id="c28b7-114">Filtre koleksiyonu için bir lambda ifadesi biçiminde belirtir gerekli bir özellik.</span><span class="sxs-lookup"><span data-stu-id="c28b7-114">A required property that specifies the filter for the collection in the form of a lambda expression.</span></span>|  
-|<span data-ttu-id="c28b7-115">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="c28b7-115">Return Value</span></span>|<span data-ttu-id="c28b7-116">Filtrelenmiş koleksiyonu.</span><span class="sxs-lookup"><span data-stu-id="c28b7-116">The filtered collection.</span></span>|  
+|<span data-ttu-id="23c4d-111">`Collection` Özelliği</span><span class="sxs-lookup"><span data-stu-id="23c4d-111">`Collection` property</span></span>|<span data-ttu-id="23c4d-112">Kaynak koleksiyonu belirtir. gerekli bir özellik.</span><span class="sxs-lookup"><span data-stu-id="23c4d-112">A required property that specifies the source collection.</span></span>|  
+|<span data-ttu-id="23c4d-113">`Predicate` Özelliği</span><span class="sxs-lookup"><span data-stu-id="23c4d-113">`Predicate` property</span></span>|<span data-ttu-id="23c4d-114">Filtre koleksiyonu için bir lambda ifadesinin biçiminde belirtir. gerekli bir özellik.</span><span class="sxs-lookup"><span data-stu-id="23c4d-114">A required property that specifies the filter for the collection in the form of a lambda expression.</span></span>|  
+|<span data-ttu-id="23c4d-115">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="23c4d-115">Return Value</span></span>|<span data-ttu-id="23c4d-116">Filtrelenmiş koleksiyonu.</span><span class="sxs-lookup"><span data-stu-id="23c4d-116">The filtered collection.</span></span>|  
   
-## <a name="code-sample-that-uses-the-custom-activity"></a><span data-ttu-id="c28b7-117">Özel Etkinlik kullanan örnek kod</span><span class="sxs-lookup"><span data-stu-id="c28b7-117">Code Sample that uses the Custom Activity</span></span>  
- <span data-ttu-id="c28b7-118">Aşağıdaki kod örneğinde `FindInCollection` olan çalışanlar bir koleksiyondaki tüm satırları bulmak için özel etkinlik bir `Role` özelliğini `Manager` ve `Location` özelliğini `Redmond`.</span><span class="sxs-lookup"><span data-stu-id="c28b7-118">The following code example uses the `FindInCollection` custom activity to find all rows in a collection of employees that have a `Role` property set to `Manager` and the `Location` property set to `Redmond`.</span></span>  
+## <a name="code-sample-that-uses-the-custom-activity"></a><span data-ttu-id="23c4d-117">Özel Etkinlik kullanan kod örneği</span><span class="sxs-lookup"><span data-stu-id="23c4d-117">Code Sample that uses the Custom Activity</span></span>  
+ <span data-ttu-id="23c4d-118">Aşağıdaki kod örneğinde `FindInCollection` tüm satırları sahip çalışan bir koleksiyonda bulunacak özel etkinlik bir `Role` özelliğini `Manager` ve `Location` özelliğini `Redmond`.</span><span class="sxs-lookup"><span data-stu-id="23c4d-118">The following code example uses the `FindInCollection` custom activity to find all rows in a collection of employees that have a `Role` property set to `Manager` and the `Location` property set to `Redmond`.</span></span>  
   
 ```csharp  
 // Find all program managers in Redmond in the employees collection.  
@@ -36,7 +36,7 @@ Activity wf = new FindInCollection<Employee>
 };  
 ```  
   
- <span data-ttu-id="c28b7-119">Aşağıdaki kod özel FindInCollection etkinliği kullanan bir iş akışı programı oluşturmak nasıl gösterir <xref:System.Activities.Statements.AddToCollection%601>, ve <xref:System.Activities.Statements.ForEach%601> çalışanlar, koleksiyonuyla doldurmak için etkinlikler Geliştirici rolleri ve bulunan tüm çalışanlar Bul Redmond ve sonuçta elde edilen listede yineleme.</span><span class="sxs-lookup"><span data-stu-id="c28b7-119">The following code shows how to create a workflow program that uses the custom FindInCollection activity, <xref:System.Activities.Statements.AddToCollection%601>, and <xref:System.Activities.Statements.ForEach%601> activities to populate a collection with employees, find all the employees that have developer roles and are located in Redmond, and then iterate through the resulting list.</span></span>  
+ <span data-ttu-id="23c4d-119">Aşağıdaki kod, özel FindInCollection etkinliğini kullanan bir iş akışı program oluşturma işlemi gösterilmektedir <xref:System.Activities.Statements.AddToCollection%601>, ve <xref:System.Activities.Statements.ForEach%601> çalışanlar ile bir koleksiyon doldurmak için etkinlikleri bulmanıza Geliştirici rolleri ve bulunan tüm çalışanlar Redmond ve sonra elde edilen listede tekrarlayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="23c4d-119">The following code shows how to create a workflow program that uses the custom FindInCollection activity, <xref:System.Activities.Statements.AddToCollection%601>, and <xref:System.Activities.Statements.ForEach%601> activities to populate a collection with employees, find all the employees that have developer roles and are located in Redmond, and then iterate through the resulting list.</span></span>  
   
 ```csharp  
 // Create the Linq predicate for the find expression  
@@ -96,23 +96,23 @@ Activity sampleWorkflow = new Sequence
 };  
 ```  
   
-#### <a name="to-use-this-sample"></a><span data-ttu-id="c28b7-120">Bu örneği kullanmak için</span><span class="sxs-lookup"><span data-stu-id="c28b7-120">To use this sample</span></span>  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="23c4d-120">Bu örneği kullanmak için</span><span class="sxs-lookup"><span data-stu-id="23c4d-120">To use this sample</span></span>  
   
-1.  <span data-ttu-id="c28b7-121">Kullanarak [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], LinqToObjects.sln çözüm dosyasını açın.</span><span class="sxs-lookup"><span data-stu-id="c28b7-121">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the LinqToObjects.sln solution file.</span></span>  
+1.  <span data-ttu-id="23c4d-121">Kullanarak [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], LinqToObjects.sln çözüm dosyasını açın.</span><span class="sxs-lookup"><span data-stu-id="23c4d-121">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the LinqToObjects.sln solution file.</span></span>  
   
-2.  <span data-ttu-id="c28b7-122">Çözümü derlemek için CTRL + SHIFT + B tuşuna basın.</span><span class="sxs-lookup"><span data-stu-id="c28b7-122">To build the solution, press CTRL+SHIFT+B.</span></span>  
+2.  <span data-ttu-id="23c4d-122">Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.</span><span class="sxs-lookup"><span data-stu-id="23c4d-122">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  <span data-ttu-id="c28b7-123">Çözümü çalıştırmak için F5 tuşuna basın.</span><span class="sxs-lookup"><span data-stu-id="c28b7-123">To run the solution, press F5.</span></span>  
+3.  <span data-ttu-id="23c4d-123">Çözümü çalıştırmak için F5 tuşuna basın.</span><span class="sxs-lookup"><span data-stu-id="23c4d-123">To run the solution, press F5.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="c28b7-124">Örnekler, makinenizde zaten yüklü olabilir.</span><span class="sxs-lookup"><span data-stu-id="c28b7-124">The samples may already be installed on your machine.</span></span> <span data-ttu-id="c28b7-125">Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.</span><span class="sxs-lookup"><span data-stu-id="c28b7-125">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="23c4d-124">Örnekler, makinenizde zaten yüklü.</span><span class="sxs-lookup"><span data-stu-id="23c4d-124">The samples may already be installed on your machine.</span></span> <span data-ttu-id="23c4d-125">Devam etmeden önce şu (varsayılan) dizin denetleyin.</span><span class="sxs-lookup"><span data-stu-id="23c4d-125">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="c28b7-126">Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri.</span><span class="sxs-lookup"><span data-stu-id="c28b7-126">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="c28b7-127">Bu örnek aşağıdaki dizinde bulunur.</span><span class="sxs-lookup"><span data-stu-id="c28b7-127">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="23c4d-126">Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri.</span><span class="sxs-lookup"><span data-stu-id="23c4d-126">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="23c4d-127">Bu örnek, şu dizinde bulunur.</span><span class="sxs-lookup"><span data-stu-id="23c4d-127">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\Linq\LinqToObjects`  
   
-## <a name="see-also"></a><span data-ttu-id="c28b7-128">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="c28b7-128">See Also</span></span>  
- [<span data-ttu-id="c28b7-129">Lambda ifadeleri (C# programlama Kılavuzu)</span><span class="sxs-lookup"><span data-stu-id="c28b7-129">Lambda Expressions (C# Programming Guide)</span></span>](http://go.microsoft.com/fwlink/?LinkId=150381)  
- [<span data-ttu-id="c28b7-130">LINQ to Objects</span><span class="sxs-lookup"><span data-stu-id="c28b7-130">LINQ to Objects</span></span>](http://go.microsoft.com/fwlink/?LinkID=150380)
+## <a name="see-also"></a><span data-ttu-id="23c4d-128">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="23c4d-128">See Also</span></span>  
+ [<span data-ttu-id="23c4d-129">Lambda ifadeleri (C# programlama Kılavuzu)</span><span class="sxs-lookup"><span data-stu-id="23c4d-129">Lambda Expressions (C# Programming Guide)</span></span>](https://go.microsoft.com/fwlink/?LinkId=150381)  
+ [<span data-ttu-id="23c4d-130">LINQ to Objects</span><span class="sxs-lookup"><span data-stu-id="23c4d-130">LINQ to Objects</span></span>](https://go.microsoft.com/fwlink/?LinkID=150380)
