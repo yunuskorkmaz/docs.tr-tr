@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 5da300e2-74c0-4d13-9202-fc20ed8212d8
 ms.openlocfilehash: daa8097bc5dfee203f988915b1e4a8bdcd2c50e0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43408090"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515418"
 ---
 # <a name="finding-rows"></a>Satırları bulma
 Satırları sıralama anahtar değerlerine göre kullanarak arayabilirsiniz <xref:System.Data.DataView.Find%2A> ve <xref:System.Data.DataView.FindRows%2A> yöntemlerinin <xref:System.Data.DataView>. Arama büyük/küçük harfe duyarlılık değeri **Bul** ve **FindRows** yöntemleri tarafından belirlenir **CaseSensitive** özelliği temel <xref:System.Data.DataTable>. Arama değerleri bir sonuç döndürmek için mevcut anahtar değerlerini sıralama tamamen eşleşmelidir.  

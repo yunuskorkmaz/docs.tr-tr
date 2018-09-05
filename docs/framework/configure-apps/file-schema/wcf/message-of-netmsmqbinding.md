@@ -3,11 +3,11 @@ title: '&lt;netMsmqBinding&gt; &lt;iletisi&gt;'
 ms.date: 03/30/2017
 ms.assetid: 6ebf0240-d7be-4493-b0fe-f00fd5989d77
 ms.openlocfilehash: 65a8b0fa120d23931ad218ac67846c066b050af8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43402250"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515820"
 ---
 # <a name="ltmessagegt-of-ltnetmsmqbindinggt"></a>&lt;netMsmqBinding&gt; &lt;iletisi&gt;
 SOAP ileti güvenlik ayarları bu tanımlar `netMsmqBinding` bağlama.  

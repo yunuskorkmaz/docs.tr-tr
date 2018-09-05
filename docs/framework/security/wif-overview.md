@@ -5,11 +5,11 @@ ms.assetid: 5f723345-7270-49e2-b638-b3a34bd40517
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 6cfe09e7df28d6f36f6e606802597449dab38212
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43399990"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43532542"
 ---
 # <a name="windows-identity-foundation-45-overview"></a>Windows Identity Foundation 4.5 genel bakış
 Windows Identity Foundation 4.5, uygulamalarınızda beyana dayalı kimlik uygulamak için kullanılan bir .NET Framework sınıf kümesidir. Bunu kullanarak, talep kullanan uygulama ve hizmetlerin avantajlarından daha kolay bir şekilde yararlanabilirsiniz. WIF 4.5, .NET Framework 4.5 veya sonraki sürümlerini kullanan herhangi bir Web uygulamasında veya Web hizmetinde kullanılabilir. WIF, Microsoft'un açık standartları temel alan ortak sektör vizyonunu uygulayan Federal Kimlik yazılım ailesinin bir parçasıdır. Federal Kimlik üç bileşenden oluşur: [Active Directory® Federasyon Hizmetleri](https://go.microsoft.com/fwlink/?LinkID=247516) (AD FS) 2.0 [Windows Azure erişim denetimi Hizmetleri](https://go.microsoft.com/fwlink/?LinkID=247517) (ACS) ve WIF. Bu üç bileşen birlikte Microsoft'un yeni beyana dayalı bulut kimliği ve erişim platformunun merkezini oluşturur.  

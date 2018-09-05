@@ -12,11 +12,11 @@ ms.assetid: 1aa0239e-511a-4c29-957d-fd72877b350a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e83a85e29eb4447f8d3b9dddc4f6ccdbc771b23c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43483781"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515622"
 ---
 # <a name="-vbruntime"></a>-vbruntime
 Derleyici, Visual Basic çalışma zamanı kitaplığı veya bir belirli çalışma zamanı kitaplık başvurusu olan bir başvuru olmadan derlemesi gerektiğini belirtir.  

@@ -2,12 +2,12 @@
 title: XAttribute sınıfına genel bakış (C#)
 ms.date: 07/20/2015
 ms.assetid: 5a630f24-f9ad-400e-831e-c14ebfc9e142
-ms.openlocfilehash: e0020a8cd8841ef9a35781b534c82db5e15c257f
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 5619a8442fde9f4e8f612f213bde16c86ba00115
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934819"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43529080"
 ---
 # <a name="xattribute-class-overview-c"></a>XAttribute sınıfına genel bakış (C#)
 Öznitelikleri bir öğe ile ilişkili ad/değer çiftleridir. <xref:System.Xml.Linq.XAttribute> Sınıfı için XML özniteliklerini temsil eder.  
@@ -79,5 +79,6 @@ Console.WriteLine(c);
   
  Bu ayrım, yalnızca XML ağaçları düğüm düzeyinde çalışan kod yazma geliştiriciler öncelikle önemlidir. Bu ayrım ile ilgili birçok geliştiricinin olmayacaktır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [LINQ to XML programlamaya genel bakış (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [LINQ to XML programlamaya genel bakış (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

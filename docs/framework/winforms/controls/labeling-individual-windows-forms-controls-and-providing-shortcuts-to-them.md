@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Forms controls, labels
 ms.assetid: 6eaf868c-819f-4131-8f59-048e20c286f7
 ms.openlocfilehash: a5504095814cdfc04699bf24b9b96191e94b22c3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43409026"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521010"
 ---
 # <a name="labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them"></a>Ayrı Windows Forms Denetimlerini Etiketleme ve Kısayollarını Sunma
 Windows Forms için eklenen denetimler özelliklere sahip ve daha fazla kullanıcı özelleştirmek üzere kullanılan yöntemleri karşılaşırsınız. Kullanıcı gereksinimlerine uyacak şekilde, kullanıcı arabirimini özelleştirme, iyi tasarlanmış Windows uygulamaları için son derece önemlidir.  

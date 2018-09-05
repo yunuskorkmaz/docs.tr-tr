@@ -6,11 +6,11 @@ helpviewer_keywords:
 - COM interop [Visual Basic], in Visual Basic
 ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
 ms.openlocfilehash: b6da65a0c94875f73c8e1094448d76a72823404d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43405956"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43534597"
 ---
 # <a name="com-interop-visual-basic"></a>COM Birlikte Çalışma (Visual Basic)
 Bileşen Nesne Modeli (COM) diğer bileşenleri ve uygulamaları barındırmak için işlevselliği göstermek bir nesne sağlar. Günümüzün yazılımlarının çoğunu, COM nesnelerini içerir. .NET derlemeleri yeni uygulamalar için en iyi seçenek olsa da, bazen COM nesnelerini kullanmak istemiyorsunuz gerekebilir. Bu bölümde bazı oluşturma ve Visual Basic ile COM nesneleri kullanma ile ilgili sorunlar ele alınmaktadır.  

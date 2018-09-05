@@ -8,11 +8,11 @@ helpviewer_keywords:
 - volatile keyword [C#]
 ms.assetid: 78089bc7-7b38-4cfd-9e49-87ac036af009
 ms.openlocfilehash: be7e081b18702710c00b5b86a9bc152800f0cf3d
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43253173"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526225"
 ---
 # <a name="volatile-c-reference"></a>volatile (C# Başvurusu)
 `volatile` Anahtar sözcüğü gösteren bir alan, aynı anda yürütülen birden çok iş parçacığı tarafından değiştirilebilir. Bildirilen alanları `volatile` olan tek bir iş parçacığı tarafından erişim varsayar derleyici iyileştirmeleri değil tabidir. Bu kısıtlamalar, tüm iş parçacıkları tarafından gerçekleştirilen sırada başka bir iş parçacığı tarafından gerçekleştirilen geçici yazma dikkate aldığınızdan emin olun. Bir tek toplam geçici yazma olarak görülen yürütme tüm iş parçacıklarından sıralama garantisi yoktur.  

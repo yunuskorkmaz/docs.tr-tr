@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b1cc02d1-23b1-4439-a998-0da1899f3442
-ms.openlocfilehash: d118f97e425782dbdf89c7e5d1eccd4d371b419c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b88df66ef2e065d1db8d4033eb1fb0e47ebdd189
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759120"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43536462"
 ---
 # <a name="creating-a-dataview"></a>DataView oluşturma
-Oluşturmanın iki yolu vardır bir <xref:System.Data.DataView>. Kullanabileceğiniz **DataView** Oluşturucusu veya bir başvuru oluşturabilirsiniz <xref:System.Data.DataTable.DefaultView%2A> özelliği <xref:System.Data.DataTable>. **DataView** Oluşturucusu boş olabilir veya ya da alabilir bir **DataTable** tek bir bağımsız değişken olarak veya bir **DataTable** filtre ölçütü, sıralama ölçütü ve bir satır ile birlikte Durum Filtresi. İle kullanılmak üzere kullanılabilir ek değişkenleri hakkında daha fazla bilgi için **DataView**, bkz: [sıralama ve filtreleme verilerini](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md).  
+Oluşturmanın iki yolu vardır. bir <xref:System.Data.DataView>. Kullanabileceğiniz **DataView** oluşturucu veya bir başvuru oluşturabilirsiniz <xref:System.Data.DataTable.DefaultView%2A> özelliği <xref:System.Data.DataTable>. **DataView** Oluşturucu boş olabilir veya ya da sürebilir bir **DataTable** tek bir bağımsız değişken olarak veya bir **DataTable** filtre ölçütlerini ve sıralama ölçütü bir satır ile birlikte Durum Filtresi. Ek bağımsız değişkenleri kullanılabilir ile kullanma hakkında daha fazla bilgi için **DataView**, bkz: [sıralama ve filtreleme veri](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md).  
   
- Çünkü dizini bir **DataView** hem olduğunda yerleşik **DataView** oluşturulduğu ve herhangi biri seçildiğinde **sıralama**, **RowFilter**, veya  **RowStateFilter** özellikleri değiştirildiğinde, tüm başlangıç sıralama düzeni sağlayan veya oluşturduğunuzda filtreleme ölçütleri oluşturucu bağımsız değişken olarak en iyi performans elde **DataView**. Oluşturma bir **DataView** sıralama veya filtre ölçütünü belirterek ve ardından ayarlar olmadan **sıralama**, **RowFilter**, veya **RowStateFilter** özellikleri daha sonra en az iki kez oluşturulacak dizin neden olur: sonra zaman **DataView** oluşturulduğu ve yeniden sıralama veya filtre özelliklerden herhangi biri değiştirildiği.  
+ Çünkü dizin için bir **DataView** hem zaman yerleşik **DataView** oluşturulur ve herhangi biri **sıralama**, **RowFilter**, veya  **RowStateFilter** özellikleri değiştirildiğinde, tüm ilk sıralama düzeni sağlayan veya oluşturduğunuzda filtreleme ölçütlerini oluşturucu bağımsız en iyi performans elde **DataView**. Oluşturma bir **DataView** sıralama veya filtre ölçütlerini belirtme ve ardından ayarlar olmadan **sıralama**, **RowFilter**, veya **RowStateFilter** özellikleri daha sonra en az iki kere derlenmesi için dizini neden olur: bir kez zaman **DataView** oluşturulur, ve yeniden sıralama veya filtreleme özelliklerinden herhangi birini değiştirildiği.  
   
- Oluşturduğunuz gerçekleştiriyorsanız bir **DataView** herhangi bir bağımsız değişken almaz Oluşturucusu kullanarak, kullanmanız mümkün olmayacaktır **DataView** ayarladığınız kadar **tablo** özelliği .  
+ Oluşturduğunuz gerçekleştiriyorsanız bir **DataView** herhangi bir bağımsız değişken almaz Oluşturucusu kullanarak, kullanılacak mümkün olmayacaktır **DataView** ayarladığınız kadar **tablo** özelliği .  
   
- Aşağıdaki kod örneğinde nasıl oluşturulduğunu gösteren bir **DataView** kullanarak **DataView** Oluşturucusu. A **RowFilter**, **sıralama** sütun ve **DataViewRowState** ile birlikte sağlanan **DataTable**.  
+ Aşağıdaki kod örneğinde nasıl oluşturulacağını gösterir. bir **DataView** kullanarak **DataView** Oluşturucusu. A **RowFilter**, **sıralama** sütun ve **DataViewRowState** ile birlikte sağlanan **DataTable**.  
   
 ```vb  
 Dim custDV As DataView = New DataView(custDS.Tables("Customers"), _  
@@ -51,4 +51,4 @@ DataView custDV = custDS.Tables["Customers"].DefaultView;
  [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
  [Verileri Sıralama ve Filtreleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)  
  [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
- [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

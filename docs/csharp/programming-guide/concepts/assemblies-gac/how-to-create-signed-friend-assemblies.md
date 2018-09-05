@@ -2,37 +2,37 @@
 title: 'Nasıl yapılır: imzalı arkadaş derlemeleri (C#) oluşturma'
 ms.date: 07/20/2015
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
-ms.openlocfilehash: 34243a65f57f41c358439baac82a1ce169233259
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 63d4c5d8d71f401214389629ca7e586665c32c6b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340664"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521483"
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a>Nasıl yapılır: imzalı arkadaş derlemeleri (C#) oluşturma
-Bu örnek güçlü adlara sahip Derlemelerle arkadaş derlemeleri kullanmayı gösterir. Her iki derlemeleri strong adlandırılmalıdır. Bu örnekte her iki derlemeleri aynı anahtarlar kullansa da, anahtarları farklı iki derlemeler için kullanabilirsiniz.  
+Bu örnek, arkadaş derlemeleri tanımlayıcı adlara sahip derlemeler ile kullanma işlemini gösterir. İki derleme tanımlayıcı ada gerekir. Bu örnekte iki derleme, aynı anahtarları kullanmak olsa da, anahtarları farklı iki derlemeler için kullanabilirsiniz.  
   
-### <a name="to-create-a-signed-assembly-and-a-friend-assembly"></a>İmzalı bir derleme ve bir derlemeyi oluşturmak için  
+### <a name="to-create-a-signed-assembly-and-a-friend-assembly"></a>İmzalı bir derleme ve arkadaş derleme oluşturmak için  
   
 1.  Bir komut istemi açın.  
   
-2.  Aşağıdaki komut dizisi tanımlayıcı ad aracı ile bir keyfile oluşturmak ve ortak anahtar görüntülemek için kullanın. Daha fazla bilgi için bkz: [Sn.exe (tanımlayıcı ad aracı)](https://msdn.microsoft.com/library/k5b5tt23).  
+2.  Aşağıdaki komut dizisi, tanımlayıcı ad aracı ile bir keyfile oluşturur ve ortak anahtarını görüntülemek için kullanın. Daha fazla bilgi için [Sn.exe (tanımlayıcı ad aracı)](https://msdn.microsoft.com/library/k5b5tt23).  
   
-    1.  Bu örnek için bir tanımlayıcı ad anahtar oluştur ve FriendAssemblies.snk dosyada saklayabilir:  
+    1.  Bu örnek için bir tanımlayıcı ad anahtar oluşturun ve FriendAssemblies.snk dosyasında depolar:  
   
          `sn -k FriendAssemblies.snk`  
   
-    2.  Ortak anahtar FriendAssemblies.snk ayıklayın ve FriendAssemblies.publickey koyun:  
+    2.  FriendAssemblies.snk ortak anahtarı ayıklar ve FriendAssemblies.publickey yerleştirin:  
   
          `sn -p FriendAssemblies.snk FriendAssemblies.publickey`  
   
-    3.  FriendAssemblies.publickey dosyasında depolanan genel anahtarını görüntüleyin:  
+    3.  FriendAssemblies.publickey dosyasında depolanan ortak anahtarı görüntüler:  
   
          `sn -tp FriendAssemblies.publickey`  
   
-3.  Adlı bir C# dosyası oluşturun `friend_signed_A` aşağıdaki kodu içerir. Kod kullanan <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> friend_signed_B Arkadaş derlemesi olarak bildirmek için öznitelik.  
+3.  Adlı bir C# dosyası oluşturma `friend_signed_A` , aşağıdaki kodu içerir. Kod <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> friend_signed_B arkadaş derleme olarak bildirmek için özniteliği.  
   
-     Tanımlayıcı ad aracı her çalıştığında yeni bir ortak anahtar oluşturur. Bu nedenle, aşağıdaki örnekte gösterildiği gibi az önce oluşturulan, ortak anahtar ile aşağıdaki kodu ortak anahtar değiştirmelisiniz.  
+     Tanımlayıcı ad aracı, her çalıştığında yeni bir ortak anahtar oluşturur. Bu nedenle, aşağıdaki örnekte gösterildiği gibi ürettiğiniz, ortak anahtar ile ortak anahtar aşağıdaki kodu değiştirmelisiniz.  
   
     ```csharp  
     // friend_signed_A.cs  
@@ -51,13 +51,13 @@ Bu örnek güçlü adlara sahip Derlemelerle arkadaş derlemeleri kullanmayı g�
     }  
     ```  
   
-4.  Derleme ve friend_signed_A aşağıdaki komutu kullanarak oturum açın.  
+4.  Derleme ve aşağıdaki komutu kullanarak friend_signed_A imzalayın.  
   
     ```csharp  
     csc /target:library /keyfile:FriendAssemblies.snk friend_signed_A.cs  
     ```  
   
-5.  Adlı bir C# dosyası oluşturma `friend_signed_B` ve aşağıdaki kodu içerir. Friend_signed_A friend_signed_B arkadaş derleme olarak belirttiğinden friend_signed_B kodda erişebilirsiniz `internal` türleri ve friend_signed_A üyelerinden. Dosya şu kodu içerir.  
+5.  Adlı bir C# dosyası oluşturma `friend_signed_B` ve aşağıdaki kodu içerir. Friend_signed_A friend_signed_B arkadaş derleme olarak belirttiğinden friend_signed_B kodda erişip `internal` türleri ve üyeleri friend_signed_A. Dosya, aşağıdaki kodu içerir.  
   
     ```csharp  
     // friend_signed_B.cs  
@@ -73,27 +73,28 @@ Bu örnek güçlü adlara sahip Derlemelerle arkadaş derlemeleri kullanmayı g�
     }  
     ```  
   
-6.  Derleme ve friend_signed_B aşağıdaki komutu kullanarak oturum açın.  
+6.  Derleme ve aşağıdaki komutu kullanarak friend_signed_B imzalayın.  
   
     ```csharp  
     csc /keyfile:FriendAssemblies.snk /r:friend_signed_A.dll /out:friend_signed_B.exe friend_signed_B.cs  
     ```  
   
-     Derleyici tarafından üretilen derlemenin adını geçirilen arkadaş derleme adı eşleşmelidir <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliği. Çıkış derlemesi (.exe veya .dll) adını kullanarak açıkça belirtmeniz gerekir `/out` derleyici seçeneği.  Daha fazla bilgi için bkz: [/out (C# Derleyici Seçenekleri)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md).  
+     Geçirilen friend derleme adı derleyici tarafından oluşturulan bütünleştirilmiş kodun adı eşleşmelidir <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliği. Çıktı derlemesine (.exe veya .dll) adını kullanarak açıkça belirtmeniz gerekir `/out` derleyici seçeneği.  Daha fazla bilgi için [/out (C# Derleyici Seçenekleri)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md).  
   
 7.  Friend_signed_B.exe dosyasını çalıştırın.  
   
-     Program "Class1.Test" dizesi yazdırır.  
+     Program "Class1.Test" dize yazdırır.  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
- Arasındaki benzerlikler vardır <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliği ve <xref:System.Security.Permissions.StrongNameIdentityPermission> sınıfı. Ana fark <xref:System.Security.Permissions.StrongNameIdentityPermission> kodu, belirli bir bölüme çalıştırmak için güvenlik izinleri ancak talep <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliği denetler görünürlüğünü `internal` türleri ve üyeleri.  
+ Arasındaki benzerlikler vardır <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliği ve <xref:System.Security.Permissions.StrongNameIdentityPermission> sınıfı. Ana fark <xref:System.Security.Permissions.StrongNameIdentityPermission> ise kod, belirli bir bölümünü çalıştırmak için güvenlik izinleri talep <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliği denetimleri görünürlüğünü `internal` türler ve üyeler.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
- [Derlemeler ve Genel Derleme Önbelleği (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
- [Arkadaş derlemeler (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
- [Nasıl yapılır: İmzasız arkadaş derlemeleri (C#) oluşturma](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
- [/keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)  
- [Sn.exe (Tanımlayıcı Ad Aracı)](https://msdn.microsoft.com/library/k5b5tt23)  
- [Kesin Adlandırılmış Bütünleştirilmiş Kodlar Oluşturma ve Kullanma](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
- [C# Programlama Kılavuzu](../../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
+- [Derlemeler ve Genel Derleme Önbelleği (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
+- [Arkadaş derlemeler (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
+- [Nasıl yapılır: İmzasız arkadaş derlemeleri (C#) oluşturma](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
+- [/keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)  
+- [Sn.exe (Tanımlayıcı Ad Aracı)](https://msdn.microsoft.com/library/k5b5tt23)  
+- [Kesin Adlandırılmış Bütünleştirilmiş Kodlar Oluşturma ve Kullanma](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
+- [C# Programlama Kılavuzu](../../../../csharp/programming-guide/index.md)

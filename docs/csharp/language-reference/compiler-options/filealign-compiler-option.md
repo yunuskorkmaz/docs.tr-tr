@@ -16,15 +16,15 @@ helpviewer_keywords:
 - -alignment compiler option [C#]
 - section alignment [C#]
 ms.assetid: 15cf1c98-3798-4ced-9f08-60619308a073
-ms.openlocfilehash: d51dd0d63bec251d879ffb5e59ce5f7edaf136b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 39b5aeecba39c0e5377fd4f76902dae4b678c324
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218377"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43530408"
 ---
 # <a name="-filealign-c-compiler-options"></a>-filealign (C# Derleyici Seçenekleri)
-**- Filealign** seçeneği, çıktı dosyanızdaki bölümlerin boyutunu belirtmenize olanak sağlar.  
+**- Filealign** seçeneği, çıkış dosyasında bölümlerin boyutunu belirtmenize olanak sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,27 +34,28 @@ ms.locfileid: "33218377"
   
 ## <a name="arguments"></a>Arguments  
  `number`  
- Çıktı dosyasında bölümlerin boyutunu belirten bir değer. Geçerli değerler 512, 1024, 2048, 4096 ve 8192 ' dir. Bu değerler bayt cinsinden.  
+ Çıkış dosyasına bölümlerin boyutunu belirten bir değeri. Geçerli değerler, 512, 1024, 2048, 4096 ve 8192:. Bu değerler bayt.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Her bölümü olan bir sınır ile hizalanır **- filealign** değeri. Sabit varsayılan yok. Varsa **- filealign** belirtilmezse, ortak dil çalışma zamanı derleme zamanında varsayılan seçer.  
+ Her bölümde katları olan bir sınır üzerinde hizalanır **- filealign** değeri. Sabit varsayılan yok. Varsa **- filealign** belirtilmezse, ortak dil çalışma zamanı varsayılan derleme zamanında seçer.  
   
- Bölüm boyutunu belirterek, çıkış dosyasının boyutunu etkiler. Bölüm boyutunu değiştirme küçük cihazlarda çalışan programlar için yararlı olabilir.  
+ Bölüm boyutu belirterek, çıkış dosyasının boyutu etkiler. Bölüm boyutu değiştirme daha küçük cihazlarda çalıştırılacak programları için yararlı olabilir.  
   
- Kullanım [DUMPBIN](/cpp/build/reference/dumpbin-options) çıkış dosyanızdaki bölümler hakkındaki bilgileri görmek için.  
+ Kullanım [DUMPBIN](/cpp/build/reference/dumpbin-options) , çıkış dosyası bölümleri hakkında bilgi için.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için  
   
-1.  Projenin açmak **özellikleri** sayfası.  
+1.  Projenin açın **özellikleri** sayfası.  
   
-2.  Tıklatın **yapı** özellik sayfası.  
+2.  Tıklayın **derleme** özellik sayfası.  
   
-3.  Tıklatın **Gelişmiş** düğmesi.  
+3.  Tıklayın **Gelişmiş** düğmesi.  
   
 4.  Değiştirme **dosya hizalama** özelliği.  
   
- Bu derleyici seçeneği programlı olarak nasıl ayarlanacağı hakkında daha fazla bilgi için bkz: <xref:VSLangProj80.CSharpProjectConfigurationProperties3.FileAlignment%2A>.  
+ Bu derleyici seçeneğini program üzerinden ayarlamak konusunda daha fazla bilgi için bkz: <xref:VSLangProj80.CSharpProjectConfigurationProperties3.FileAlignment%2A>.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)  
- [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)
+
+- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)  
+- [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)

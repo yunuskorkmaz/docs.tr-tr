@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 3ec60e8f-fad4-493e-a426-e7962d7aee8c
 ms.openlocfilehash: 8098ab4b056ad6375c248e803134c35d67e3f27b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43397719"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519827"
 ---
 # <a name="how-to-create-a-state-machine-workflow"></a>Nasıl yapılır: Durum makinesi iş akışı oluşturma
 İş akışları yerleşik etkinliklerden yanı sıra özel etkinliklerden oluşturulabilir. Bu konu başlığı altında adımlar hem yerleşik etkinlikler gibi kullanan bir iş akışı oluşturma işleminde <xref:System.Activities.Statements.StateMachine> etkinliği ve özel etkinlikler önceki [nasıl yapılır: bir etkinliği oluşturma](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) konu. İş akışı sayısını tahmin eden oyun modelleri.  

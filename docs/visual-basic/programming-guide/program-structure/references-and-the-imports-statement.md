@@ -10,11 +10,11 @@ helpviewer_keywords:
 - assemblies [Visual Basic], references
 ms.assetid: 38149bd4-0a6f-4b31-b5f8-94a8c33f1600
 ms.openlocfilehash: 9e31d22cd7502ffd405af23bd1fabe8685190221
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43424021"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43518132"
 ---
 # <a name="references-and-the-imports-statement-visual-basic"></a>References ve Imports Deyimi (Visual Basic)
 Dış nesneler kullanılabilir projenize seçerek yapabileceğiniz **Başvuru Ekle** komutunu **proje** menüsü. Başvuruları Visual Basic'te tür kitaplıkları, ancak daha fazla bilgi içeren gibi olan derlemeler için işaret edebilir.  

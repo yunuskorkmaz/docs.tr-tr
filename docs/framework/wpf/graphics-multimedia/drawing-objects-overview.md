@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DrawingGroup objects [WPF]
 ms.assetid: 9b5ce5c0-e204-4320-a7a8-0b2210d62f88
 ms.openlocfilehash: 92cf4e7099c7880eb9bde9af765970abac698310
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43397950"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525582"
 ---
 # <a name="drawing-objects-overview"></a>Çizim Nesnelerine Genel Bakış
 Bu konu tanıtır <xref:System.Windows.Media.Drawing> nesneleri ve bunları şekiller, bit eşlemler, metin ve medya verimli bir şekilde çizmek için kullanmayı açıklar. Kullanma <xref:System.Windows.Media.Drawing> küçük resim, oluşturduğunuz nesneleri boyama ile bir <xref:System.Windows.Media.DrawingBrush>, veya <xref:System.Windows.Media.Visual> nesneleri.  

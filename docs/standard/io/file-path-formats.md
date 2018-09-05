@@ -12,12 +12,12 @@ ms.author: ronpet
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8342f1389718eb41d1138e0bdd166530c1f2a10e
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 0efef54abd1da9631b5a560b49c6587d726e9193
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42933611"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43535458"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows sistemlerde dosya yolu biçimleri
 
@@ -117,7 +117,7 @@ Neredeyse tüm yolları Windows API'lerine geçirilen normalleştirilir. Normall
 - Göreli dizini bileşenlerini değerlendirir (`.` geçerli dizin için ve `..` üst dizini için).
 - Belirli karakterlerin kırpar.
 
-Bu normalleştirme örtük olarak gerçekleşir, ancak bunu açıkça çağırarak yapabilirsiniz <xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType> yöntemine bir çağrı sarılır [GetFullPathName() işlevi](https://msdn.microsoft.com/library/windows/desktop/aa364963(v=vs.85).aspx). Windows de çağırabilirsiniz [GetFullPathName() işlevi](https://msdn.microsoft.com/library/windows/desktop/aa364963(v=vs.85).aspx) P/Invoke kullanarak doğrudan. Ayrıca, çağırabilirsiniz 
+Bu normalleştirme örtük olarak gerçekleşir, ancak bunu açıkça çağırarak yapabilirsiniz <xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType> yöntemine bir çağrı sarılır [GetFullPathName() işlevi](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea).aspx). Windows de çağırabilirsiniz [GetFullPathName() işlevi](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea).aspx) kullanarak doğrudan P/Invoke. Ayrıca, çağırabilirsiniz 
 
 ### <a name="identifying-the-path"></a>Yolun tanımlama
 

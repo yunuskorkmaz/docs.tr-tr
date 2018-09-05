@@ -1,44 +1,45 @@
 ---
-title: Temsilciler adlandırılmış vs ile. Anonim Yöntemler (C# Programlama Kılavuzu)
+title: Temsilcilerin adlandırılmış ve. Anonim Yöntemler (C# Programlama Kılavuzu)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], with named vs. anonymous methods
 - methods [C#], in delegates
 ms.assetid: 98fa8c61-66b6-4146-986c-3236c4045733
-ms.openlocfilehash: 93e140859e44aab860577feede40df6eab4c8e00
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6d7dcb3c7c6fa8f1d55237504c23cf468aa0e79d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330771"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43540799"
 ---
-# <a name="delegates-with-named-vs-anonymous-methods-c-programming-guide"></a>Temsilciler adlandırılmış vs ile. Anonim Yöntemler (C# Programlama Kılavuzu)
-A [temsilci](../../../csharp/language-reference/keywords/delegate.md) adlandırılmış bir yöntem ile ilişkili olabilir. Adlandırılmış bir yöntemi kullanarak bir temsilci örneği, yöntemi bir parametre örneğin geçirilir:  
+# <a name="delegates-with-named-vs-anonymous-methods-c-programming-guide"></a>Temsilcilerin adlandırılmış ve. Anonim Yöntemler (C# Programlama Kılavuzu)
+A [temsilci](../../../csharp/language-reference/keywords/delegate.md) adlandırılmış bir yöntemle ilişkili olabilir. Adlandırılmış bir yöntemi kullanarak bir temsilci örneğini oluştururken yöntemi örneğin bir parametre olarak geçirilir:  
   
  [!code-csharp[csProgGuideDelegates#1](../../../csharp/programming-guide/delegates/codesnippet/CSharp/delegates-with-named-vs-anonymous-methods_1.cs)]  
   
- Bu, adlandırılmış bir yöntem kullanılarak çağrılır. Adlandırılmış bir yöntemle oluşturulan temsilcileri ya da kapsülleyen bir [statik](../../../csharp/language-reference/keywords/static.md) yöntemi veya örnek yöntemi. Adlandırılmış yöntemleri bir temsilci önceki sürümlerinde, C# örneği oluşturmak için tek yoludur. Ancak, yeni bir yöntem oluşturma ek yükü istenmeyen olduğu bir durumda, C#, bir temsilci örneği ve onu çağrıldığında, temsilci işleyecek kod bloğu hemen belirtmenize olanak sağlar. Blok lambda ifadesi ya da anonim yöntemi içerebilir. Daha fazla bilgi için bkz: [anonim işlevler](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md).  
+ Bu işlem, adlandırılmış bir yöntemi kullanılarak çağrılır. Temsilcilerin adlandırılmış bir yöntem ile oluşturulmuş ya da kapsüllemek bir [statik](../../../csharp/language-reference/keywords/static.md) yöntem veya oluşum yöntemi. Adlandırılmış yöntemler, C# ' ın önceki sürümlerinde bir temsilci tek yoludur. Ancak, yeni bir yöntem oluşturma ek yükü istenmeyen olduğu bir durumda C#, bir temsilci ve hemen çağrıldığında, bu temsilci işleyecek bir kod bloğu belirtmenize olanak sağlar. Bir lambda ifadesi veya anonim yöntemi blok içerebilir. Daha fazla bilgi için [anonim işlevler](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md).  
   
 ## <a name="remarks"></a>Açıklamalar  
- Temsilci parametre olarak geçirmek yöntemi temsilci bildirimi olarak aynı imzaya sahip olmalıdır.  
+ Temsilcinin parametre olarak geçen yöntemi temsilci bildirimi aynı imzaya sahip olmalıdır.  
   
- Bir temsilci örneği ya da statik kapsülleyen veya yöntemi örneği olabilir.  
+ Bir temsilci örneği kapsülleyen ya da statik veya örnek yöntemi olabilir.  
   
- Temsilci kullanabilirsiniz ancak bir [çıkışı](../../../csharp/language-reference/keywords/out-parameter-modifier.md) parametresi önerilmez kullanımı ile çok noktaya yayın olay temsilcileri hangi temsilcinin çağrılacağı bilemezsiniz olduğundan.  
+ Temsilci kullanmanız mümkün olmakla birlikte bir [kullanıma](../../../csharp/language-reference/keywords/out-parameter-modifier.md) parametresi değil öneririz kullanımı ile çok noktaya yayın olay temsilcileri çünkü hangi temsilcinin çağrılacağı bilemezsiniz.  
   
 ## <a name="example-1"></a>Örnek 1  
- Bildirme ve bir temsilci kullanarak basit bir örnek verilmiştir. Dikkat hem temsilci `Del`ve ilişkili yöntemi `MultiplyNumbers`, aynı imzaya sahip  
+ Bildirme ve bir temsilci kullanarak basit bir örnek verilmiştir. Dikkat her iki temsilci `Del`ve ilişkili yöntem `MultiplyNumbers`, aynı imzaya sahip  
   
  [!code-csharp[csProgGuideDelegates#2](../../../csharp/programming-guide/delegates/codesnippet/CSharp/delegates-with-named-vs-anonymous-methods_2.cs)]  
   
 ## <a name="example-2"></a>Örnek 2  
- Aşağıdaki örnekte, bir temsilci hem de statik olarak eşlenmiş ve örneği her belirli bilgiler yöntemleri ve döndürür.  
+ Aşağıdaki örnekte, bir temsilci hem statik olarak eşleştirilir ve örneği her belirli bilgiler yöntemleri ve döndürür.  
   
  [!code-csharp[csProgGuideDelegates#3](../../../csharp/programming-guide/delegates/codesnippet/CSharp/delegates-with-named-vs-anonymous-methods_3.cs)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [Temsilciler](../../../csharp/programming-guide/delegates/index.md)  
- [Anonim Metotlar](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
- [Nasıl yapılır: temsilcileri (çok noktaya yayın temsilcileri) birleştirme](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)  
- [Olaylar](../../../csharp/programming-guide/events/index.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [Temsilciler](../../../csharp/programming-guide/delegates/index.md)  
+- [Anonim Metotlar](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
+- [Nasıl yapılır: temsilcileri (çok noktaya yayın temsilcileri) birleştirme](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)  
+- [Olaylar](../../../csharp/programming-guide/events/index.md)

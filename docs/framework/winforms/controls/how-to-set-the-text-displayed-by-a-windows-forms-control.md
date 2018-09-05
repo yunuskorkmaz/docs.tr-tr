@@ -22,11 +22,11 @@ helpviewer_keywords:
 - forms [Windows Forms], captions
 ms.assetid: 36b95bff-8780-479d-b86a-f1a0673653aa
 ms.openlocfilehash: d9c9bea26cfc3d5b2cfc4484173a7680ff2fc34d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43399332"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525041"
 ---
 # <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>Nasıl yapılır: Windows Formları Denetimi Tarafından Görüntülenen Metni Ayarlama
 Windows Forms denetimleri, genellikle denetimin birincil işleve ilgili bazı metin görüntüler. Örneğin, bir <xref:System.Windows.Forms.Button> denetimi genellikle düğmesine tıklandığında hangi eylemin gerçekleştirileceğini belirten bir başlık görüntüler. Tüm denetimler için ayarlayabilir veya dönüş metni kullanarak <xref:System.Windows.Forms.Control.Text%2A> özelliği. Yazı tipi kullanarak değiştirebileceğiniz <xref:System.Windows.Forms.Control.Font%2A> özelliği. Tasarımcı kullanarak metin de ayarlayabilirsiniz.  Ayrıca bkz: [nasıl yapılır: erişim anahtarları için Windows Forms denetimleri kullanarak Tasarımcı](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md), [nasıl yapılır: Tasarımcı bir Windows Forms denetimini kullanarak tarafından görüntülenen metni ayarlama](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md), [nasıl yapılır: resmi ayarlama Tarafından görüntülenen bir Windows Forms Tasarımcısı'nı kullanarak denetimi](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md).  

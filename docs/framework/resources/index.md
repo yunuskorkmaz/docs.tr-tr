@@ -14,11 +14,11 @@ ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4bc91f5f3872ee5f4a55f3e3cd9e0e9de9bcc422
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43408291"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524735"
 ---
 # <a name="resources-in-net-apps"></a>.NET uygulamalarında kaynakları
 Üretim kalitesindeki neredeyse tüm uygulamaların kaynakları kullanması gerekir. Bir kaynak, mantıksal olarak bir uygulamayla dağıtılan yürütülemez herhangi bir veridir. Bir kaynak, bir uygulamada hata iletileri veya kullanıcı arabiriminin bir parçası olarak görüntülenebilir. Kaynaklar ve kalıcı nesneler formlar, dizeler, görüntüler dahil olmak üzere çeşitli verileri içerebilir. (Kalıcı nesneleri bir kaynak dosyasına yazmak için, nesnelerin seri hale getirilebilir olması gerekir.) Verilerinizi bir kaynak dosyasında depolamak bütün uygulamanızı yeniden derlemeden bu verileri değiştirmenize olanak tanır. Ayrıca verileri tek bir konumda depolamanızı sağlar ve çoklu konumlarda depolanan sabit kodlanmış verilerin kullanılması gereğini ortadan kaldırır.  

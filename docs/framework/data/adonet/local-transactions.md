@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
 ms.openlocfilehash: 17bf06864016ece571b21bee2c180b5781a62959
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480743"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528265"
 ---
 # <a name="local-transactions"></a>Yerel işlemler
 İşlemlerde [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] , böylece bunlar iş tek bir birim olarak yürütmek için birden çok görevleri birbirine bağlayın istediğinizde kullanılır. Örneğin, bir uygulama iki görevleri gerçekleştirir düşünün. İlk olarak bir tablo ile sipariş bilgilerini güncelleştirir. İkinci olarak, Envanter bilgilerini içeren bir tablo güncelleştirir, öğeleri borçlandırarak sıralı. Her iki görev başarısız olursa, her iki güncelleştirmeleri geri alınır.  

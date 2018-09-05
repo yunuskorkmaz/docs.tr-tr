@@ -3,11 +3,11 @@ title: Mimari ve tasarım
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
 ms.openlocfilehash: 5a0d8aac401a3485bc5f158bcda893ad9ab424e8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43419610"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43530476"
 ---
 # <a name="architecture-and-design"></a>Mimari ve tasarım
 SQL üretimi modülünde [örnek sağlayıcısı](https://go.microsoft.com/fwlink/?LinkId=180616) komut ağacı temsil eden ifade ağacında bir ziyaretçi olarak uygulanır. Oluşturma, tek bir geçişinde ifade ağacı gerçekleştirilir.  

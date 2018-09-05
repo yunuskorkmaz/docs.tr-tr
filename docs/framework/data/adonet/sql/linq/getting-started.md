@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: db8a557a-fef8-4f4f-bb91-8cff7250ee25
 ms.openlocfilehash: 17b014a5a56a2c60359f6fb0b60df29feb97f2a7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43419031"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43529417"
 ---
 # <a name="getting-started"></a>Başlarken
 Kullanarak [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], kullanabileceğiniz [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] SQL'e erişmek için teknoloji veritabanları bir bellek içi koleksiyonu erişim.  

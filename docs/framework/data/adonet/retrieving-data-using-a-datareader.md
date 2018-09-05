@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
 ms.openlocfilehash: 4370a7a700a01943548bf067827e6640245caf4e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482170"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516797"
 ---
 # <a name="retrieving-data-using-a-datareader"></a>DataReader kullanarak veri alma
 Kullanarak verileri alınırken bir **DataReader** örneği oluşturmayı içerir **komut** nesnesi ve ardından oluşturarak bir **DataReader** çağırarak  **Command.ExecuteReader** satırları bir veri kaynağından almak için. Kullanarak aşağıdaki örnekte gösterildiği bir **DataReader** burada `reader` geçerli DataReader temsil eder ve `command` geçerli olan komut nesnesini temsil eder.  

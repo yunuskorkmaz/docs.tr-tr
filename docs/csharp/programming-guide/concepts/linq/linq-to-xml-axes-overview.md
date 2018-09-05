@@ -2,12 +2,12 @@
 title: LINQ to XML eksenlerine genel bakış (C#)
 ms.date: 07/20/2015
 ms.assetid: 516792fb-461d-40a8-8a50-9993a51258fc
-ms.openlocfilehash: 9b771e0157d1fcfbbb4643d24ccdbf096787f08b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: b3bc828e5163b048b3d5ccb513d985bd3c0ca36d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486863"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43537129"
 ---
 # <a name="linq-to-xml-axes-overview-c"></a>LINQ to XML eksenlerine genel bakış (C#)
 Bir XML ağacı oluşturduğunuz veya bir XML belgesi bir XML ağacına yüklenen sonra öğeler ve öznitelikler bulun ve bunların değerlerini almak için sorgulayabilirsiniz. Koleksiyonlarına almak *eksen yöntemleri*ayrıca adlı *eksenleri*. Bazı eksenleri yöntemlerdir <xref:System.Xml.Linq.XElement> ve <xref:System.Xml.Linq.XDocument> sınıfları döndüren <xref:System.Collections.Generic.IEnumerable%601> koleksiyonları. Eksenlere başlık alanında uzantı yöntemlerini bazıları <xref:System.Xml.Linq.Extensions> sınıfı. Genişletme yöntemleri uygulanan eksenleri koleksiyonlarda çalışır ve koleksiyonları döndürür.  
@@ -54,5 +54,6 @@ Bir XML ağacı oluşturduğunuz veya bir XML belgesi bir XML ağacına yüklene
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>|Döndürür <xref:System.Xml.Linq.XAttribute> belirtilen olan <xref:System.Xml.Linq.XName>.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [LINQ to XML eksenleri (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [LINQ to XML eksenleri (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)

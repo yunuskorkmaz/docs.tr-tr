@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
 ms.openlocfilehash: ab96e8f3395a78c88184872a2c78b71fb2bf7b9e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43403467"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522117"
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>Bir XML Web hizmetinden DataSet kullanma
 <xref:System.Data.DataSet> Kısmen Internet üzerinden veri uygun taşıma kolaylaştırmak için bağlantısı kesik bir tasarım ile için tasarlanmıştır. **Veri kümesi** girdi olarak belirlenebilir veya ek kodlamaya gerek kalmadan, XML Web Hizmetleri çıktısını gerekli içeriğini akışını sağlamak için "seri hale getirilebilir" olan **veri kümesi** bir XML Web hizmeti bir istemci ve arka. **Veri kümesi** örtük olarak biçimini kullanarak bir XML akışı dönüştürülür, ağ üzerinden gönderilen ve ardından XML Akışı'ndan reconstructed bir **veri kümesi** alan uçta. Bu, basit ve esnek bir yöntem iletme ve XML Web Hizmetleri kullanarak ilişkisel verileri döndürmek için sağlar. Biçimini hakkında daha fazla bilgi için bkz: [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).  

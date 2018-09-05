@@ -2,21 +2,21 @@
 title: 'Nasıl yapılır: ifade ağaçlarını (C#) değiştirme'
 ms.date: 07/20/2015
 ms.assetid: 9b0cd8c2-457e-4833-9e36-31e79545f442
-ms.openlocfilehash: 3a43e2365475644d5081ced7bfec11e1a2b5121e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 97a8ea0d66edf5d084c442deae32e04bdeb63c32
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329848"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528757"
 ---
 # <a name="how-to-modify-expression-trees-c"></a>Nasıl yapılır: ifade ağaçlarını (C#) değiştirme
-Bu konu bir ifade ağacına değiştirme gösterir. İfade ağaçları değişmez, bunlar doğrudan değiştirilemiyor anlamına gelir. Bir ifade ağacına değiştirmek için varolan bir ifade ağacına bir kopyasını oluşturun ve bir kopya oluşturduğunuzda gerekli değişiklikleri yapın. Kullanabileceğiniz <xref:System.Linq.Expressions.ExpressionVisitor> sınıfı var olan bir ifade ağacına gezme ve onu ziyaret her bir düğüm kopyalamak için.  
+Bu konu nasıl bir ifade ağacı değiştirileceğini gösterir. İfade ağaçları değişmezse, yani bunlar doğrudan değiştirilemez. İfade ağacı değiştirmek için var olan bir ifade ağacı bir kopyasını oluşturun ve bir kopya oluşturduğunuzda gerekli değişiklikleri yapın. Kullanabileceğiniz <xref:System.Linq.Expressions.ExpressionVisitor> var olan bir ifade ağacı gezme ve onu ziyaret her düğüm kopyalamak için bir sınıf.  
   
-### <a name="to-modify-an-expression-tree"></a>Bir ifade ağacına değiştirmek için  
+### <a name="to-modify-an-expression-tree"></a>İfade ağacı değiştirmek için  
   
-1.  Yeni bir **konsol uygulaması** projesi.  
+1.  Yeni bir **konsol uygulaması** proje.  
   
-2.  Ekleme bir `using` dosya için yönerge `System.Linq.Expressions` ad alanı.  
+2.  Ekleme bir `using` dosyası yönerge `System.Linq.Expressions` ad alanı.  
   
 3.  Ekleme `AndAlsoModifier` projenize sınıfı.  
   
@@ -44,11 +44,11 @@ Bu konu bir ifade ağacına değiştirme gösterir. İfade ağaçları değişme
     }  
     ```  
   
-     Bu sınıf devralır <xref:System.Linq.Expressions.ExpressionVisitor> sınıfı ve koşullu temsil eden ifadeleri değiştirmek için özelleştirilmiş `AND` işlemleri. Bu işlemler erişim ilkesinden değiştirir `AND` koşullu için `OR`. Bu sınıfı geçersiz kılma işlemleri yapmak için <xref:System.Linq.Expressions.ExpressionVisitor.VisitBinary%2A> temel türü yöntemi için koşullu `AND` ifadeleri ikili ifadeler olarak temsil. İçinde `VisitBinary` kendisine geçirilen ifade koşullu temsil ediyorsa yöntemi `AND` , işlem kodu oluşturan koşullu içeren yeni bir ifade `OR` işleci koşul yerine `AND` işleç. Varsa geçirilir ifade `VisitBinary` koşullu göstermiyor `AND` işlemi, yöntemi için temel sınıf uygulamasını erteler. İletilen ifade ağaçları gibi yapı düğümlerini ancak düğümleri olan ifade ağaçları yerine kendi alt ağaçları olan taban sınıf yöntemlerini yinelemeli olarak ziyaretçi tarafından üretilen.  
+     Bu sınıf devralır <xref:System.Linq.Expressions.ExpressionVisitor> temsil eden koşullu ifadeleri değiştirmek için özelleştirilmiş ve sınıf `AND` operations. Erişim ilkesinden işlemlerini değişiklikleri `AND` koşullu için `OR`. Bu sınıf geçersiz kılmalarını yapmak için <xref:System.Linq.Expressions.ExpressionVisitor.VisitBinary%2A> temel türün yöntemi olduğundan koşullu `AND` ifadeleri, ikili ifadelere temsil edilir. İçinde `VisitBinary` koşullu kendisine geçirilen ifade temsil ediyorsa yöntemi `AND` işlemi, kod yapıları koşullu içeren yeni bir ifade `OR` koşul yerine işleci `AND` işleci. Geçirilen ifade `VisitBinary` koşullu göstermiyor `AND` işlem, yöntem, temel sınıf uygulamasına erteler. İletilen ifade ağaçları gibi yapı düğümleri ancak düğümleri olan ifade ağaçları yerine kendi alt ağaçları sahip taban sınıf yöntemlerini yinelemeli olarak ziyaretçi tarafından üretilen.  
   
-4.  Ekleme bir `using` dosya için yönerge `System.Linq.Expressions` ad alanı.  
+4.  Ekleme bir `using` dosyası yönerge `System.Linq.Expressions` ad alanı.  
   
-5.  Kodu ekleyin `Main` yöntemi Program.cs dosyasında bir ifade ağacına oluşturun ve bu yönteme geçirin onu değiştirir.  
+5.  Kodu `Main` yöntemi Program.cs dosyasındaki bir ifade ağacı oluşturmak ve bu yönteme geçirmek için onu değiştirir.  
   
     ```csharp  
     Expression<Func<string, bool>> expr = name => name.Length > 10 && name.StartsWith("G");  
@@ -66,10 +66,11 @@ Bu konu bir ifade ağacına değiştirme gösterir. İfade ağaçları değişme
     */  
     ```  
   
-     Koşullu içeren bir ifade kod oluşturur `AND` işlemi. Ardından bir örneğini oluşturur `AndAlsoModifier` sınıfı ve ifade geçirir `Modify` bu sınıfın yöntemi. Değişikliği göstermek için özgün ve değiştirilen ifade ağaçları yüzdelik.  
+     Kod içeren bir koşullu ifade oluşturur `AND` işlemi. Ardından bir örneğini oluşturur `AndAlsoModifier` sınıfı ve ifade geçirir `Modify` bu sınıfın yöntemi. Hem özgün hem de değiştirilmiş ifade ağaçlarını değiştirme gösterilecek yüzdelik.  
   
 6.  Derleme ve uygulamayı çalıştırın.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: ifade ağaçlarını (C#) yürütme](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)  
- [İfade ağaçları (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [Nasıl yapılır: ifade ağaçlarını (C#) yürütme](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)  
+- [İfade ağaçları (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)

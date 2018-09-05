@@ -3,11 +3,11 @@ title: Bir Entity Framework veri sağlayıcısı yazma
 ms.date: 03/30/2017
 ms.assetid: 092e88c4-a301-453a-b5c3-5740c6575a9f
 ms.openlocfilehash: 50c0555d84c5b5f180c8c49a8419e8a414a4befe
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401467"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43540839"
 ---
 # <a name="writing-an-entity-framework-data-provider"></a>Bir Entity Framework veri sağlayıcısı yazma
 Bu bölümde nasıl yazılacağını açıklar bir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] SQL Server dışındaki bir veri kaynağını desteklemek için sağlayıcı. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] SQL Server'ı destekleyen bir sağlayıcı içerir.  

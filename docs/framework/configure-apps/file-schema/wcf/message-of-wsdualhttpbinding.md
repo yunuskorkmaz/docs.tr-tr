@@ -3,11 +3,11 @@ title: '&lt;wsDualHttpBinding&gt; &lt;iletisi&gt;'
 ms.date: 03/30/2017
 ms.assetid: 75101744-eed8-4d61-91f4-5fc4473a21f2
 ms.openlocfilehash: ed91a7a84a1e529e88fa05af1013e0151b527e39
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43417957"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521718"
 ---
 # <a name="ltmessagegt-of-ltwsdualhttpbindinggt"></a>&lt;wsDualHttpBinding&gt; &lt;iletisi&gt;
 İçin ileti düzeyi güvenliği tanımlar [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).  

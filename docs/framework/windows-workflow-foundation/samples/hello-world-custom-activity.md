@@ -3,11 +3,11 @@ title: Merhaba Dünya özel etkinliği
 ms.date: 03/30/2017
 ms.assetid: 72b1dd0a-9aad-47d5-95a9-a1024ee1d0a1
 ms.openlocfilehash: fde745fae7470ec763b6b5030a60436a6525e3c0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43470781"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43533502"
 ---
 # <a name="hello-world-custom-activity"></a>Merhaba Dünya özel etkinliği
 Bu örnek, Windows Workflow Foundation (basit bir özel etkinlik oluşturma da dahil olmak üzere WF), birkaç temel özellikleri gösterir. Bu örnekte gösterilen özelliklerin bazıları C# ve kullanarak özel bir etkinlik oluşturmakta olduğunuz `in` ve `out` bağımsız değişkenleri (<xref:System.Activities.InArgument> ve <xref:System.Activities.OutArgument>).  

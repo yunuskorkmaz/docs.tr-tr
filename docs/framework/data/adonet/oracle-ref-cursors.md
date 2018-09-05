@@ -1,47 +1,47 @@
 ---
-title: Oracle REF imleçler
+title: Oracle REF CURSOR
 ms.date: 03/30/2017
 ms.assetid: c6b25b8b-0bdd-41b2-9c7c-661f070c2247
-ms.openlocfilehash: 7aae9b2e4b39cf164a93ba82212b5705f583d761
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5443c409bd3c73e91969db6424a4f86f1a16ed72
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758730"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516320"
 ---
-# <a name="oracle-ref-cursors"></a>Oracle REF imleçler
-.NET Framework veri sağlayıcısı Oracle için Oracle destekleyen **REF İMLEÇ** veri türü. Oracle REF imleçlerle çalışmak için veri sağlayıcısı kullanarak, aşağıdaki davranışları dikkate almanız.  
+# <a name="oracle-ref-cursors"></a>Oracle REF CURSOR
+Oracle, Oracle için .NET Framework veri sağlayıcısı sunuyor **REF CURSOR** veri türü. Oracle REF CURSOR ile çalışmak için veri sağlayıcısı'nı kullanarak, aşağıdaki davranışları düşünmelisiniz.  
   
 > [!NOTE]
 >  Bazı davranışları Microsoft OLE DB Sağlayıcısı'nın Oracle (MSDAORA) farklı.  
   
--   Performansı artırmak için Oracle veri sağlayıcısı otomatik olarak bağlanmaz **REF İMLEÇ** veri türleri, MSDAORA yaptığı gibi bunları açıkça belirtmediğiniz sürece.  
+-   Performansla ilgili nedenlerle, Oracle için veri sağlayıcısı otomatik olarak bağlama **REF CURSOR** veri türleri, MSDAORA gibi bunları açıkça belirtmediğiniz sürece.  
   
--   Veri sağlayıcısı REF İMLEÇ parametrelerini belirtmek için kullanılan {sonuç} kaçış dahil olmak üzere tüm ODBC kaçış sıraları desteklemez.  
+-   Veri sağlayıcısı REF CURSOR parametreleri belirtmek için kullanılan {sonuç} kaçış dahil olmak üzere tüm ODBC kaçış dizileri desteklemez.  
   
--   REF imleçler döndüren bir saklı yordamı yürütme için parametre tanımlayın <xref:System.Data.OracleClient.OracleParameterCollection> ile bir <xref:System.Data.OracleClient.OracleType> , **imleç** ve <xref:System.Data.OracleClient.OracleParameter.Direction%2A> , **çıkış**. Veri sağlayıcısı yalnızca çıkış parametreleri REF imleçler bağlamayı destekler. Sağlayıcı REF imleçler giriş parametreleri olarak desteklemez.  
+-   REF CURSOR döndüren bir saklı yordamı yürütmek için parametreleri tanımlayın <xref:System.Data.OracleClient.OracleParameterCollection> ile bir <xref:System.Data.OracleClient.OracleType> , **imleç** ve <xref:System.Data.OracleClient.OracleParameter.Direction%2A> , **çıkış**. Veri sağlayıcısı, yalnızca çıkış parametreleri REF CURSOR bağlamayı destekler. Sağlayıcı REF CURSOR giriş parametreleri desteklemez.  
   
--   Alma bir <xref:System.Data.OracleClient.OracleDataReader> parametresi değeri desteklenmiyor. Tür değerler <xref:System.DBNull> komut yürütme sonra.  
+-   Alma bir <xref:System.Data.OracleClient.OracleDataReader> parametresinden değeri desteklenmiyor. Türünde değerleri olan <xref:System.DBNull> komut yürütmenin sonrasına.  
   
--   Yalnızca **CommandBehavior** REF imleçlerle çalışır numaralandırma değeri (örneğin, çağrılırken <xref:System.Data.OracleClient.OracleCommand.ExecuteReader%2A>) olan **CloseConnection**; diğerleri yoksayılır.  
+-   Yalnızca **CommandBehavior** REF CURSOR ile çalışan numaralandırma değeri (örneğin, çağrılırken <xref:System.Data.OracleClient.OracleCommand.ExecuteReader%2A>) olan **CloseConnection**; diğerleri yoksayılır.  
   
--   REF imleçler sırasını **OracleDataReader** parametrelerinde terabayt bağlıdır **OracleParameterCollection**. <xref:System.Data.OracleClient.OracleParameter.ParameterName%2A> Özelliği yoksayılır.  
+-   REF CURSOR içinde sırasını **OracleDataReader** parametrelerinde bazında bağlıdır **OracleParameterCollection**. <xref:System.Data.OracleClient.OracleParameter.ParameterName%2A> Özelliği yok sayılır.  
   
--   PL/SQL **tablo** veri türü desteklenmiyor. Ancak, REF imleçler daha verimlidir. Kullanmanız gerekiyorsa bir **tablo** veri türü, OLE DB .NET veri sağlayıcısı MSDAORA ile kullanın.  
+-   PL/SQL **tablo** veri türü desteklenmiyor. Ancak, REF CURSOR daha verimlidir. Kullanmanız gerekiyorsa bir **tablo** veri türü, OLE DB .NET veri sağlayıcısı MSDAORA ile kullanın.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [REF CURSOR Örnekleri](../../../../docs/framework/data/adonet/ref-cursor-examples.md)  
- REF imleçler kullanarak gösteren üç örnekleri içerir.  
+ REF CURSOR kullanarak gösteren üç örnekler içerir.  
   
  [OracleDataReader’da REF CURSOR Parametreleri](../../../../docs/framework/data/adonet/ref-cursor-parameters-in-an-oracledatareader.md)  
- Değeri olarak okur ve REF CURSOR parametresiyle döndüren bir PL/SQL saklı yordamı yürütme yapmayı gösteren bir **OracleDataReader**.  
+ Bir REF CURSOR parametresiyle döndürür ve olarak değeri okuyan bir PL/SQL saklı yordamı yürütme yapmayı gösteren bir **OracleDataReader**.  
   
  [OracleDataReader Kullanarak Birden Çok REF CURSOR’dan Veri Alma](../../../../docs/framework/data/adonet/retrieving-data-from-multiple-ref-cursors.md)  
- Kullanarak değerlerini okur ve iki REF İMLEÇ parametreleri döndüren bir PL/SQL saklı yordamı yürütme yapmayı gösteren bir **OracleDataReader**.  
+ İki REF CURSOR parametreleri döndürür ve kullanarak değerlerini okur PL/SQL saklı yordamı yürütmek anlatan bir **OracleDataReader**.  
   
  [Bir veya daha fazla REF CURSOR Kullanarak DataSet Doldurma](../../../../docs/framework/data/adonet/filling-a-dataset-using-one-or-more-ref-cursors.md)  
- Doldurur ve iki REF İMLEÇ parametreleri döndüren bir PL/SQL saklı yordamı yürütme yapmayı gösteren bir <xref:System.Data.DataSet> satırlarla döndürülür.  
+ İki REF CURSOR parametreleri döndürür ve dolduran bir PL/SQL saklı yordamı yürütme yapmayı gösteren bir <xref:System.Data.DataSet> satırlarla döndürülür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Oracle ve ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
- [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

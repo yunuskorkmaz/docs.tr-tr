@@ -3,11 +3,11 @@ title: Teslim Edilemeyen İletiler Sırası
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
 ms.openlocfilehash: 4f30e9486c8798e3610e13e6abe1c2612c70b69f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43417139"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43536059"
 ---
 # <a name="dead-letter-queues"></a>Teslim Edilemeyen İletiler Sırası
 Bu örnek ve teslim başarısız olmuş bir iletiyi işlemek nasıl gösterir. Dayanır [işlem temelli MSMQ bağlama](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) örnek. Bu örnekte `netMsmqBinding` bağlama. Hizmeti, sıraya alınan iletileri alma hizmeti gözlemleyin sağlamak için bir şirket içinde barındırılan bir konsol uygulamasıdır.  

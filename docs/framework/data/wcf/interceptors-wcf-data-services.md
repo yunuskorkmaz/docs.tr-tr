@@ -9,11 +9,11 @@ helpviewer_keywords:
 - query interceptors [WCF Data Services]
 ms.assetid: e33ae8dc-8069-41d0-99a0-75ff28db7050
 ms.openlocfilehash: c2086d451af72157785796052af123cd210ee036
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43400306"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43542676"
 ---
 # <a name="interceptors-wcf-data-services"></a>Dinleyiciler (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bir uygulamanın işlem için özel mantığı ekleyebilirsiniz, böylece istek iletileri izlemesine olanak sağlar. Gelen iletiler verileri doğrulamak için bu özel mantığı kullanabilirsiniz. Bir sorgu isteğinin kapsamı gibi istek başına bir özel yetkilendirme ilkesi eklemek için kısıtlamanız için de kullanabilirsiniz.  

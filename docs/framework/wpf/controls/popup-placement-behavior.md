@@ -8,11 +8,11 @@ helpviewer_keywords:
 - positioning popups [WPF]
 ms.assetid: fbf642e9-f670-4efd-a7af-a67468a1c8e1
 ms.openlocfilehash: 6f1fb6fa7702d36aa7ddf4c12fe4a370f4e66e23
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486785"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528798"
 ---
 # <a name="popup-placement-behavior"></a>Açılan Pencere Yerleştirme Davranışı
 A <xref:System.Windows.Controls.Primitives.Popup> denetimi, bir uygulamanın yükünü gezinen ayrı bir pencerede içeriğini görüntüler. Konumu belirleyebileceğiniz bir <xref:System.Windows.Controls.Primitives.Popup> göre bir denetim, fare ve kullanarak ekrandaki <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>, <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>, <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, ve <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> özellikleri.  Bu özellikler konumunu belirten esneklik sunmak için birlikte çalışır. <xref:System.Windows.Controls.Primitives.Popup>.  

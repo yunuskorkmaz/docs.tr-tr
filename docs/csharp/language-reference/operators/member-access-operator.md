@@ -9,11 +9,11 @@ helpviewer_keywords:
 - dot operator (.) [C#]
 ms.assetid: a1f54b52-b686-4ae5-a48e-a2a9ebd0eb7b
 ms.openlocfilehash: a092c1a916e3dc4bf6d96660c532540945e57554
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43408013"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43520714"
 ---
 # <a name="-operator-c-reference"></a>biçimindeki telefon numarasıdır. İşleci (C# Başvurusu)
 Nokta işleci (`.`) üye erişimi için kullanılır. Dot işleci, bir tür veya ad alanı üyesi belirtir. Örneğin, nokta işleci, .NET Framework sınıf kitaplıkları belirli yöntemlerinde erişmek için kullanılır:  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 236cebc0-bd71-4f18-9fd6-5d0e592375df
 ms.openlocfilehash: 6ab459f37e825d71163e375e10f30fbe3e23911a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43397609"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525542"
 ---
 # <a name="developing-custom-windows-forms-controls-with-the-net-framework"></a>.NET Framework ile Özel Windows Forms Denetimleri Geliştirme
 Windows Forms denetimleri, kullanıcı arabiriminin işlevselliğini kapsülleyen ve istemci tarafı Windows tabanlı uygulamalarda kullanılır, yeniden kullanılabilir bileşenleridir. Yalnızca Windows Forms pek çok kullanıma hazır denetimi sağlar, ayrıca kendi denetimleri geliştirmek için altyapı sağlar. Mevcut denetimleri birleştirmek, mevcut denetimleri genişletmek veya kendi özel denetimler yazar. Bu bölümde, arka plan bilgileri ve Windows Forms denetimleri geliştirmenize yardımcı olacak örnekler sağlar.  

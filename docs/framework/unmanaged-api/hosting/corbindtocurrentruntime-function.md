@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 021f2b7a720c2190d56bdb2b35214c581a7b5f56
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43456941"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43541569"
 ---
 # <a name="corbindtocurrentruntime-function"></a>CorBindToCurrentRuntime İşlevi
 Ortak dil çalışma zamanı (CLR), bir XML dosyasında depolanan sürüm bilgilerini kullanarak bir işlem içine yükler. XML dosyasının biçimi sonra standart uygulama yapılandırma dosyasına modellenir. Yapılandırma dosyaları hakkında daha fazla bilgi için bkz. [yapılandırma dosyası şeması](../../../../docs/framework/configure-apps/file-schema/index.md).  

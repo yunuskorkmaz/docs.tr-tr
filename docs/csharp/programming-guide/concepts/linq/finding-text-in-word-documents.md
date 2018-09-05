@@ -1,23 +1,23 @@
 ---
-title: Metin bulma Word belgelerinde (C#)
+title: (C#) Word belgelerinde metin bulma
 ms.date: 07/20/2015
 ms.assetid: 82f86677-560b-49dc-a089-610409939b2a
-ms.openlocfilehash: bd9f128fd50587b88fd899d0180e3d2ca8a8df6d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 56a99dd548eb149f6fa85370cef6a114103ce91e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333934"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43540198"
 ---
-# <a name="finding-text-in-word-documents-c"></a>Metin bulma Word belgelerinde (C#)
-Bu konu yararlı bir şeyler için önceki sorgular genişletir: bir dizenin tüm oluşumlarını belgesinde bulunamadı.  
+# <a name="finding-text-in-word-documents-c"></a>(C#) Word belgelerinde metin bulma
+Bu konu faydalı bir şey için önceki sorguları genişletir: bir dizenin tüm örnekleri belgede bulun.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, belirli bir metin parçası olan tüm oluşum belgede bulmak için bir WordprocessingML belge işler. Bunu yapmak için "Hello" dizesini bulan bir sorgu kullanırız. Bu örnek önceki örnekler üzerinde Bu öğreticide oluşturur. Yeni sorgu aşağıdaki kodu açıklamalarda belirtilmiştir.  
+ Bu örnek, belgede belirli bir metin parçası tüm tekrarlarını bulmak için bir WordprocessingML belgesinin işler. Bunu yapmak için "Hello" dizesi bulan bir sorgu kullanırız. Bu örnek, önceki örneklerde üzerinde Bu öğreticide oluşturur. Yeni sorgu aşağıdaki kod açıklamalarda çağrılır.  
   
- Bu örnek için kaynak belge oluşturma yönergeleri için bkz: [kaynak Office Açık XML belgesi (C#) oluşturulmasını](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Bu örneğin kaynak belge oluşturma yönergeleri için bkz. [kaynak Office Open XML belgesi (C#) oluşturma](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
- Bu örnek WindowsBase derlemesinde sınıfları kullanır. Türlerinde kullanan <xref:System.IO.Packaging?displayProperty=nameWithType> ad alanı.  
+ Bu örnekte WindowsBase derlemede bulunan sınıfları kullanır. Türleri kullanan <xref:System.IO.Packaging?displayProperty=nameWithType> ad alanı.  
   
 ```csharp  
 public static class LocalExtensions  
@@ -165,7 +165,7 @@ class Program
 }  
 ```  
   
- Bu örnek şu çıkışı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```  
 StyleName:Code >        Console.WriteLine("Hello World");<  
@@ -312,22 +312,23 @@ class Program
 }  
 ```  
   
- Bu örnek şu çıkışı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```  
 StyleName:Code ><  
 ```  
   
- Elbette, bu örnek, çeşitli yollarla iyileştirilebilir. Örneğin, normal ifadeler metni aramak için kullanırız, biz belirli dizin ve benzeri tüm Word dosyaları yinelemek.  
+ Elbette, bu örnek, çeşitli yollarla iyileştirilebilir. Örneğin, metni aramak için normal ifadeler kullanabiliriz, size belirli bir dizin ve benzeri tüm Word dosyaları yinelemek.  
   
- Tek bir sorgu yazılmış gibi bu örnek yaklaşık de gerçekleştirmediğini unutmayın. Her sorgu yavaş, ertelenmiş biçimde uygulandığı için sorgu yinelendiğinde kadar her sorgu sonuçlarını vermez. Yürütme ve geç değerlendirme hakkında daha fazla bilgi için bkz: [ertelenmiş yürütme ve LINQ-XML (C#) geç değerlendirme](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).  
+ Tek bir sorgu yazılmışlar gibi bu örnek yaklaşık de unutmayın. Her sorgu yavaş, ertelenmiş bir şekilde uygulandığından, sorgu yinelendiğinde kadar her sorgu sonuçlarını vermez. Yürütme ve geç değerlendirme hakkında daha fazla bilgi için bkz. [ertelenmiş yürütme ve geç değerlendirme LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
- Sonraki bölümde WordprocessingML belgeler hakkında daha fazla bilgi verilmektedir:  
+ Sonraki bölümde WordprocessingML belgelerinin hakkında daha fazla bilgi verilmektedir:  
   
--   [Ayrıntılar Office Açık XML WordprocessingML belgeleri (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)  
+-   [Ayrıntılar Office Open XML WordprocessingML belgelerinin (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Öğretici: Düzenleme içeriği WordprocessingML belgesinde (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
- [Saf işlevi (C#) kullanarak yeniden düzenleme](../../../../csharp/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
- [Ertelenmiş yürütme ve geç değerlendirme LINQ-XML (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [Öğretici: WordprocessingML belgesindeki (C#) içerik düzenleme](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
+- [Saf işlev (C#) kullanarak yeniden düzenleme](../../../../csharp/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
+- [Ertelenmiş yürütme ve geç değerlendirme LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

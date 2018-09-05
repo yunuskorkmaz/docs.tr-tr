@@ -3,11 +3,11 @@ title: Bağıntılı hesaplayıcı
 ms.date: 03/30/2017
 ms.assetid: c365166e-6552-49a4-bf17-9f4e597d4d41
 ms.openlocfilehash: 71cfdd0906ef20ec36b76ef5e508a4551b9fe3fe
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43384677"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517319"
 ---
 # <a name="correlated-calculator"></a>Bağıntılı hesaplayıcı
 Bu örnek ileti etkinlikleri kullanma işlemini gösterir (<xref:System.ServiceModel.Activities.Receive> ve <xref:System.ServiceModel.Activities.SendReply>) iletiyi bir parametre temel içerik temelli bağıntı ile Tasarımcısı'nda. Bu senaryoda paralel bir konvoy hesaplayıcı işlemlerdir. Hem bir örneği hem de bir bağıntı (temel `CalculatorId`) iş akışı ve daha sonraki iletileri aynı ilk ileti gönderildiğinde oluşturulan `CalculatorId` sıfırlama işlemi çağrılana kadar bu örneğe gönderilir. İstemci hizmetiyle iletişim kurmak için bir kod tabanlı istemci proxy kullanan bir WPF uygulaması olarak uygulanır.  

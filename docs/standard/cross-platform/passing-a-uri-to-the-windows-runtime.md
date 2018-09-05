@@ -12,11 +12,11 @@ ms.assetid: 3eb5ce6f-f304-4f87-8e81-0f25092f5ad4
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5805c2c16cd23a18a0fe5bb587a3c106b307092f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43423364"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43540728"
 ---
 # <a name="passing-a-uri-to-the-windows-runtime"></a>URI'yı Windows Çalışma Zamanı'na Geçirme
 Windows çalışma zamanı yöntemleri, yalnızca mutlak URI kabul eder. Göreli bir URI geçirirseniz bir [!INCLUDE[wrt](../../../includes/wrt-md.md)] yöntemi, bir <xref:System.ArgumentException> özel durumu oluşturulur. İşte nedenleri: kullandığınızda [!INCLUDE[wrt](../../../includes/wrt-md.md)] .NET Framework kodunda <xref:Windows.Foundation.Uri?displayProperty=nameWithType> sınıfı olarak görünür <xref:System.Uri?displayProperty=nameWithType> IntelliSense içinde. <xref:System.Uri?displayProperty=nameWithType> Sınıfı göreli URI'ler sağlar ancak <xref:Windows.Foundation.Uri?displayProperty=nameWithType> sınıfı yok. Bu da içinde ortaya çıkarttığınız yöntemler için doğru [!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşenleri. Bileşeniniz URI alan bir yöntem sunarsa, kodunuzdaki imzası içerir <xref:System.Uri?displayProperty=nameWithType>. Ancak bileşeninizin kullanıcıları için imza içerir <xref:Windows.Foundation.Uri?displayProperty=nameWithType>. Bileşeninize iletilen bir URI mutlak URI olmalıdır.  

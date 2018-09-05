@@ -1,29 +1,29 @@
 ---
-title: Zincirleme standart sorgu işleçleri birlikte (C#)
+title: Zincirleme standart sorgu işleçleri (C#)
 ms.date: 07/20/2015
 ms.assetid: 66f2b0a9-2c23-4735-988e-bbc9dfb55c7b
-ms.openlocfilehash: 9e59c12873b8e8afeaad43b8ffbe400b43b55747
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 07cc6769646f8f3f924b488e30ce2415c587ebe0
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326156"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43520874"
 ---
-# <a name="chaining-standard-query-operators-together-c"></a>Zincirleme standart sorgu işleçleri birlikte (C#)
-Son konusunda budur [Öğreticisi: zincirleme sorguları birlikte (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md) Öğreticisi.  
+# <a name="chaining-standard-query-operators-together-c"></a>Zincirleme standart sorgu işleçleri (C#)
+Bu, son konu başlığında [Öğreticisi: zincirleme sorguları birlikte (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md) öğretici.  
   
- Standart sorgu işleçleri de birbirine zincirlenebilir. Örneğin, interject <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType> işleci ve bu da yavaş bir şekilde çalışır. Ara sonuç tarafından gerçekleştirilip.  
+ Ayrıca standart sorgu işleçlerini birbirine zincirlenebilir. Örneğin, interject <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType> işleci ve ayrıca yavaş bir şekilde çalışır. Hiçbir Ara sonuçlarını tarafından gerçekleştirilmiş.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte, <xref:System.Linq.Enumerable.Where%2A> yöntemi çağırmadan önce çağrılır `ConvertCollectionToUpperCase`. <xref:System.Linq.Enumerable.Where%2A> Yöntemi çalışır neredeyse tam olarak aynı şekilde Bu öğreticide, önceki örneklerde kullanılan yavaş yöntemleri `ConvertCollectionToUpperCase` ve `AppendString`.  
+ Bu örnekte, <xref:System.Linq.Enumerable.Where%2A> yöntemi çağırmadan önce çağrılır `ConvertCollectionToUpperCase`. <xref:System.Linq.Enumerable.Where%2A> Yöntemi çalışır hemen hemen aynı şekilde Bu öğreticide, önceki örneklerde kullanılan yavaş yöntemler olarak `ConvertCollectionToUpperCase` ve `AppendString`.  
   
- Bir fark vardır, bu durumda, <xref:System.Linq.Enumerable.Where%2A> yöntemi kendi kaynak toplulukta tekrarlanan ilk öğe koşulu iletmez ve geçirmek sonraki öğeyi alır belirler. Ardından, ikinci öğesi üretir.  
+ Tek fark, bu durumda, <xref:System.Linq.Enumerable.Where%2A> yöntemi, kaynak, tekrarlanan ilk öğeyi koşul geçmez ve ardından geçirmek sonraki öğeyi alır belirler. Ardından, ikinci öğesi verir.  
   
- Ancak, temel aynı fikirdir: olmasını sahip oldukları sürece, Ara koleksiyonları gerçekleştirilip değil.  
+ Ancak, temel aynı olur: olmasını sahip olmadıkları sürece, Ara koleksiyonları gerçekleştirilmiş değil.  
   
- Sorgu ifadeleri kullanıldığında, standart sorgu işleçleri çağrıları dönüştürülür ve aynı ilkeler uygulanır.  
+ Sorgu ifadeleri kullanıldığında, standart sorgu işleçleri çağrıları dönüştürülür ve aynı ilkeler geçerlidir.  
   
- Bu bölümdeki Office Açık XML belgeleri sorgulama örnekleri tümünün aynı ilkesini kullanın. Ertelenmiş yürütme ve geç değerlendirme LINQ (ve LINQ-XML) etkili bir şekilde kullanmak için anlamanız gereken temel kavramlar bazılarıdır.  
+ Tüm Office Open XML belgelerin sorgulanmasını bu bölümdeki örneklerde, aynı ilkesini kullanın. Ertelenmiş yürütme ve geç değerlendirme LINQ (ve LINQ to XML) etkili bir şekilde kullanmak için anlamanız gereken temel kavramlar bazılarıdır.  
   
 ```csharp  
 public static class LocalExtensions  
@@ -73,7 +73,7 @@ class Program
 }  
 ```  
   
- Bu örnek şu çıkışı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```  
 ToUpper: source >abc<  
@@ -86,5 +86,6 @@ AppendString: source >GHI<
 Main: str >GHI!!!<  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Öğretici: Sorguları birlikte (C#) zincirleme](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [Öğretici: Sorguları birbirine (C#) zincirleme](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)

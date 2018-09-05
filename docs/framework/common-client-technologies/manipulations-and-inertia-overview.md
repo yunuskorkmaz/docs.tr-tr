@@ -3,11 +3,11 @@ title: Düzenlemelere ve Eylemsizliğe Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: dd31b89b-eab6-45a1-8d0b-11e0eb84b234
 ms.openlocfilehash: 41c22dc305f8ef653705436544ab2342e55ed02a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401231"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521245"
 ---
 # <a name="manipulations-and-inertia-overview"></a>Düzenlemelere ve Eylemsizliğe Genel Bakış
 *İşlemeleri* taşımak, döndürmek ve kullanarak kullanıcı arabirimi (UI) öğeleri yeniden boyutlandırma kullanıcılara etkinleştirme *manipülatörleri*. Fare bir işleyiciyi temsil eder (bir senaryoda Dokunmatik özellikli) veya bir ekran kalemi veya bir parmağınızı.  

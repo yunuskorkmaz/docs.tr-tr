@@ -2,12 +2,12 @@
 title: LINQ to XML için XPath kullanıcıları (C#)
 ms.date: 07/20/2015
 ms.assetid: 91774511-1dca-4f06-ac0b-913746f104fe
-ms.openlocfilehash: e55e763db2169b704b0b1fcc72e21d9e339b01f6
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: c5c3d94c218f712a127ad313d3b000174644f9dd
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39199127"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516412"
 ---
 # <a name="linq-to-xml-for-xpath-users-c"></a>LINQ to XML için XPath kullanıcıları (C#)
 Bu konu başlıkları birkaç XPath ifadeleri gösterir ve bunların [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] eşdeğerleri.  
@@ -36,7 +36,8 @@ Bu konu başlıkları birkaç XPath ifadeleri gösterir ve bunların [!INCLUDE[s
 |[Nasıl yapılır: alt öğeleri bulma (XPath-LINQ to XML) konuma göre (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-child-elements-based-on-position-xpath-linq-to-xml.md)|XPath kullanarak kendi göreli konumlarına göre bir öğeyi bulmak nasıl karşılaştırır ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> İlgili XPath ifadesidir:`"Test[position() >= 2 and position() <= 4]"`|  
 |[Nasıl yapılır: Bul önceki eşdüzeyi (XPath-LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml.md)|XPath kullanarak bir düğümün önceki eşdüzeyi bulma karşılaştırır ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> İlgili XPath ifadesidir:`"preceding-sibling::*[1]"`|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Xml.XPath?displayProperty=nameWithType>  
- [XML ağaçlarını sorgulama (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)  
- [XPath Veri Modelini Kullanarak XML Verilerini İşleme](../../../../standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- <xref:System.Xml.XPath?displayProperty=nameWithType>  
+- [XML ağaçlarını sorgulama (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)  
+- [XPath Veri Modelini Kullanarak XML Verilerini İşleme](../../../../standard/data/xml/process-xml-data-using-the-xpath-data-model.md)

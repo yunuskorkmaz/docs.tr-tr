@@ -3,11 +3,11 @@ title: Temel AJAX Hizmeti
 ms.date: 03/30/2017
 ms.assetid: d66d0c91-0109-45a0-a901-f3e4667c2465
 ms.openlocfilehash: d8da6469101511b6b5a9ce19a11f1e5e3fe9d83e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43402722"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524889"
 ---
 # <a name="basic-ajax-service"></a>Temel AJAX Hizmeti
 Bu örnek, Windows Communication Foundation (WCF) temel bir ASP.NET zaman uyumsuz JavaScript ve XML (AJAX) hizmeti (bir Web tarayıcısı istemciden JavaScript kodu kullanarak erişebileceğiniz bir hizmeti) oluşturmak için nasıl kullanılacağını gösterir. Hizmeti kullandığı <xref:System.ServiceModel.Web.WebGetAttribute> hizmet HTTP GET isteklerine yanıt verir ve yanıtları için JavaScript nesne gösterimi (JSON) veri biçimini kullanacak şekilde yapılandırılmış emin olmak için özniteliği.  

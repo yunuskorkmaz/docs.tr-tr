@@ -2,12 +2,12 @@
 title: LINQ to XML Annotations3
 ms.date: 07/20/2015
 ms.assetid: 54e7b9d0-07f5-488f-9065-b6e6b870f810
-ms.openlocfilehash: 8b8e03b0174ad2bf044c21eb9a9d3391da37fb7f
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 13dd72a9016dea8c5b4389580f912625028e51ae
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960705"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43530370"
 ---
 # <a name="linq-to-xml-annotations"></a>LINQ to XML ek açıklamaları
 Ek açıklamalarda [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] rasgele türden herhangi bir rastgele nesne XML ağacındaki herhangi bir XML bileşeni ile ilişkilendirilecek olanak sağlar.  
@@ -26,5 +26,6 @@ Ek açıklamalarda [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] rasgele
 |<xref:System.Xml.Linq.XObject.Annotations%2A>|Ek açıklamalar için belirtilen türün bir koleksiyonunu alır bir <xref:System.Xml.Linq.XObject>.|  
 |<xref:System.Xml.Linq.XObject.RemoveAnnotations%2A>|Ek açıklamalar, belirtilen türden kaldırır bir <xref:System.Xml.Linq.XObject>.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Gelişmiş LINQ to XML programlama (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [Gelişmiş LINQ to XML programlama (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

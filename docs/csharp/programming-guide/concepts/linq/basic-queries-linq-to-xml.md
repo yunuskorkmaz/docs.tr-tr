@@ -2,12 +2,12 @@
 title: Temel sorgular (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: d333bb7d-20c1-448a-95b7-e5ba07915744
-ms.openlocfilehash: b96fc6f2af7754d2403c2ccdf862e976463838a3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 77ff053e3cf8589cbc44caf66a4e5b532bc54b26
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43392591"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43518499"
 ---
 # <a name="basic-queries-linq-to-xml-c"></a>Temel sorgular (LINQ to XML) (C#)
 Bu bölümdeki örnekler temel [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorgular.  
@@ -30,5 +30,6 @@ Bu bölümdeki örnekler temel [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.
 |[Nasıl yapılır: bağlama (C#) göre öğeleri bulan bir sorgu yazma](../../../../csharp/programming-guide/concepts/linq/how-to-write-a-query-that-finds-elements-based-on-context.md)|Diğer öğeleri ağacında temel öğeleri seçmek gösterilmektedir.|  
 |[Nasıl yapılır: hata ayıklama boş sorgu sonucu kümelerinin (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-debug-empty-query-results-sets.md)|Bir varsayılan ad alanı XML sorguları hata ayıklama sırasında uygun düzeltme gösterir.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [XML ağaçlarını sorgulama (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [XML ağaçlarını sorgulama (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)

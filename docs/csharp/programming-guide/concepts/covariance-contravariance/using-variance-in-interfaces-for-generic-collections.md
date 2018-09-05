@@ -2,22 +2,22 @@
 title: Genel koleksiyonlar için (C#) arabirimlerde varyans kullanma
 ms.date: 07/20/2015
 ms.assetid: a44f0708-10fa-4c76-82cd-daa6e6b31e8e
-ms.openlocfilehash: 7f1c44ecc831a7eb35541a432bc776c512bd10a3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 66a1eac33d5f715f52bd83c43bac4452df41aabd
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340469"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43535944"
 ---
 # <a name="using-variance-in-interfaces-for-generic-collections-c"></a>Genel koleksiyonlar için (C#) arabirimlerde varyans kullanma
-Eşdeğişken arabirimi arabiriminde belirtilenlerden daha türetilmiş türler döndürülecek yöntemlerini sağlar. Karşıtı arabirimi belirtilenlerden daha az türetilmiş türler arabiriminde parametrelerinin kabul etmek yöntemlerini sağlar.  
+Birlikte değişen bir arabirimin yöntemlerinin dönüş arabiriminde belirtilenlerden daha türetilmiş türleri sağlar. Bir değişken karşıtı arabirimi belirtilenlerden daha az türetilmiş türler arabiriminde parametrelerini kabul edecek şekilde yöntemlerini sağlar.  
   
- .NET Framework 4'te birkaç varolan arabirimleri eşdeğişken hale geldi ve karşıtı. Bunlar <xref:System.Collections.Generic.IEnumerable%601> ve <xref:System.IComparable%601>. Genel koleksiyonlar türetilen türler için temel türleri çalışır yöntemleri yeniden kullanmanıza olanak sağlar.  
+ .NET Framework 4'te çeşitli mevcut arabirimlerin birlikte değişen hale geldi ve değişken karşıtı. Bunlar <xref:System.Collections.Generic.IEnumerable%601> ve <xref:System.IComparable%601>. Bu, türetilmiş türler için temel türleri genel koleksiyonlar ile çalışan yöntemlerini kullanmayı sağlar.  
   
- .NET Framework'teki değişken arabirimler listesi için bkz: [genel arabirimler (C#) varyans](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).  
+ .NET Framework'teki değişken arabirimler listesi için bkz. [Variance in Generic Interfaces (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).  
   
 ## <a name="converting-generic-collections"></a>Genel koleksiyonlar dönüştürme  
- Aşağıdaki örnek Kovaryans desteği yararları gösterilmektedir <xref:System.Collections.Generic.IEnumerable%601> arabirimi. `PrintFullName` Yöntemi kabul koleksiyonu `IEnumerable<Person>` türünü bir parametre olarak. Ancak, onu bir koleksiyonu için tekrar kullanabilirsiniz `IEnumerable<Employee>` yazın, çünkü `Employee` devralır `Person`.  
+ Kovaryans destek avantajları aşağıdaki örnekte <xref:System.Collections.Generic.IEnumerable%601> arabirimi. `PrintFullName` Yöntemi koleksiyonunu kabul `IEnumerable<Person>` türü bir parametre olarak. Ancak, bir koleksiyonu için kullanabilirsiniz `IEnumerable<Employee>` türü için `Employee` devralan `Person`.  
   
 ```csharp  
 // Simple hierarchy of classes.  
@@ -55,7 +55,7 @@ class Program
 ```  
   
 ## <a name="comparing-generic-collections"></a>Genel koleksiyonları karşılaştırma  
- Aşağıdaki örnekte, değişken karşıtı desteği yararları gösterilmektedir <xref:System.Collections.Generic.IComparer%601> arabirimi. `PersonComparer` Uygulayan sınıf `IComparer<Person>` arabirimi. Ancak, bir dizi nesnelerin karşılaştırmak için bu sınıfı yeniden kullanabilirsiniz `Employee` yazın, çünkü `Employee` devralır `Person`.  
+ Aşağıdaki örnekte kontravaryans destek avantajlarını <xref:System.Collections.Generic.IComparer%601> arabirimi. `PersonComparer` Sınıfının Implements `IComparer<Person>` arabirimi. Ancak, bir dizi nesnelerini karşılaştırmak için bu sınıfı yeniden kullanabilirsiniz `Employee` türü için `Employee` devralan `Person`.  
   
 ```csharp  
 // Simple hierarchy of classes.  
@@ -113,5 +113,6 @@ class Program
 }  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Genel arabirimler (C#) varyans](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [Variance in Generic Interfaces (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)

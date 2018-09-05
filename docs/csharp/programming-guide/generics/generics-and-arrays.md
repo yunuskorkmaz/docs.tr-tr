@@ -5,23 +5,24 @@ helpviewer_keywords:
 - generics [C#], arrays
 - arrays [C#], generics
 ms.assetid: 7d956536-3851-41b5-94ad-3e7c0a5fe485
-ms.openlocfilehash: 2e7ab9ff0dc4a73500c1a452df16af17c720d528
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6cb205d90d4b6de329a179c5969e2d3b543bfb35
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320670"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528506"
 ---
 # <a name="generics-and-arrays-c-programming-guide"></a>Genel Türler ve Diziler (C# Programlama Kılavuzu)
-C# 2.0 ve daha sonra otomatik olarak sıfır alt sınır olan tek boyutlu diziler uygulamak <xref:System.Collections.Generic.IList%601>. Bu, aynı kod diziler ve diğer koleksiyon türleri yinelemek için kullanabileceğiniz genel yöntemler oluşturmanıza olanak sağlar. Koleksiyonlarda verileri okumak için öncelikle bu teknik yararlıdır. <xref:System.Collections.Generic.IList%601> Arabirimi eklemek veya dizisinden öğeleri kaldırmak için kullanılamaz. Çağrı çalışırsanız, bir özel durum bir <xref:System.Collections.Generic.IList%601> yöntemi gibi <xref:System.Collections.Generic.IList%601.RemoveAt%2A> bu bağlamda bir dizi.  
+C# 2.0 ve sonraki sürümlerinde, otomatik olarak bir alt sınırı sıfır olan tek boyutlu diziler uygulamak <xref:System.Collections.Generic.IList%601>. Bu, aynı kodu, diziler ve diğer koleksiyon türlerine yineleme yapmak için kullanabileceğiniz genel yöntemler oluşturmanıza olanak sağlar. Bu teknik koleksiyonlarda verileri okumak için özellikle yararlıdır. <xref:System.Collections.Generic.IList%601> Arabirimi eklemek veya bir diziden öğeleri kaldırmak için kullanılamaz. Çağrılacak denerseniz bir özel durum bir <xref:System.Collections.Generic.IList%601> yöntemi gibi <xref:System.Collections.Generic.IList%601.RemoveAt%2A> bu bağlamda bir dizi.  
   
- Aşağıdaki kod örneğinde alan tek bir genel yöntem nasıl gösterilmektedir bir <xref:System.Collections.Generic.IList%601> giriş parametresi bir listesi ve bir dizi yineleyebilirsiniz bu dizisi durumda.  
+ Aşağıdaki kod örneği, alan tek bir genel yöntem nasıl gösterir bir <xref:System.Collections.Generic.IList%601> giriş parametresi bir listesi ve bir dizi yinelenir bu tamsayı dizisi durumda.  
   
  [!code-csharp[csProgGuideGenerics#35](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-and-arrays_1.cs)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Collections.Generic>  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [Genel Türler](../../../csharp/programming-guide/generics/index.md)  
- [Diziler](../../../csharp/programming-guide/arrays/index.md)  
- [Genel Türler](~/docs/standard/generics/index.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- <xref:System.Collections.Generic>  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [Genel Türler](../../../csharp/programming-guide/generics/index.md)  
+- [Diziler](../../../csharp/programming-guide/arrays/index.md)  
+- [Genel Türler](~/docs/standard/generics/index.md)

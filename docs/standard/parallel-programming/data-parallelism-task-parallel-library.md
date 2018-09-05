@@ -11,11 +11,11 @@ ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f414e5b0463e28427c8c60e2f8b8774ad6973da2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43464143"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43661145"
 ---
 # <a name="data-parallelism-task-parallel-library"></a>Veri Paralelliği (Görev Paralel Kitaplığı)
 *Veri paralelliği* senaryoları için aynı işlem gerçekleştirilir eşzamanlı olarak başvurur (diğer bir deyişle, içinde paralel) öğelerinde bir kaynak koleksiyonu veya dizi. Birden çok iş parçacığı üzerinde farklı segmentlere eşzamanlı olarak çalışabilir, böylece veri paralel işlemleri, kaynak koleksiyonu bölümlenir.  

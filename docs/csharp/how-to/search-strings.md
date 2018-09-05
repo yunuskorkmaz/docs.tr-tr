@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [C#], searching with String methods
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
-ms.openlocfilehash: d1e132093cc59c7b41a3f7d5b522fca2e224f779
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: b6d5ab1c4588e72bf49c5ca2f859b9996c0d3834
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961225"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43539190"
 ---
 # <a name="how-to-search-strings"></a>Nasıl yapılır: dizeleri arama
 
@@ -68,7 +68,6 @@ Aşağıdaki kod, bir dizideki her bir dizenin biçimi doğrulamak için normal 
 | \d{4}    | tam olarak 4 basamaklı karakter ile eşleşir  |
 | $        | Dize sonu ile eşleşir       |
 
-
 [!code-csharp-interactive[csProgGuideStrings#4](../../../samples/snippets/csharp/how-to/strings/SearchStrings.cs#4)]
 
 Bu tek arama deseni ile eşleşir birçok geçerli dizesi. Normal ifadeler için arama yapın ya da tek bir metin dizesi yerine desen karşı doğrulamak daha uygundur.
@@ -77,10 +76,10 @@ Bu örnekler kodda bakarak deneyebilirsiniz bizim [GitHub deposu](https://github
 
 ## <a name="see-also"></a>Ayrıca Bkz.  
 
- [C# Programlama Kılavuzu](../programming-guide/index.md)  
- [Dizeler](../programming-guide/strings/index.md)  
- [LINQ ve dizeler](../programming-guide/concepts/linq/linq-and-strings.md)   
- <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>     
- [.NET framework normal ifadeleri](../../standard/base-types/regular-expressions.md)   
- [Normal ifade dili - hızlı başvuru](../../standard/base-types/regular-expression-language-quick-reference.md)   
- [. NET'te dizeleri kullanmak için en iyi uygulamalar](../../standard/base-types/best-practices-strings.md)  
+- [C# Programlama Kılavuzu](../programming-guide/index.md)  
+- [Dizeler](../programming-guide/strings/index.md)  
+- [LINQ ve Dizeler](../programming-guide/concepts/linq/linq-and-strings.md)
+- <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>
+- [.NET framework normal ifadeleri](../../standard/base-types/regular-expressions.md)
+- [Normal İfade Dili - Hızlı Başvuru](../../standard/base-types/regular-expression-language-quick-reference.md)
+- [. NET'te dizeleri kullanmak için en iyi uygulamalar](../../standard/base-types/best-practices-strings.md)  

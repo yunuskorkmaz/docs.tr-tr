@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 0ce3793d-54b2-47e4-8cf7-b0591cc4dd21
 ms.openlocfilehash: 54991234d4eaa9edab218d3b0d221a6e477d2be5
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43420109"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43530092"
 ---
 # <a name="dataset-and-xmldatadocument-synchronization"></a>DataSet ve XmlDataDocument eşitlemesi
 ADO.NET <xref:System.Data.DataSet> verilerin ilişkisel bir gösterimini sağlar. Hiyerarşik veri erişimi için .NET Framework XML sınıfları kullanabilirsiniz. Tarihsel olarak, bu iki verilerini sunumu ayrı olarak kullanılmış. Ancak, .NET Framework verilerine ilişkisel ve hiyerarşik temsillerini gerçek zamanlı, zaman uyumlu erişiminizi sağlar **veri kümesi** nesne ve <xref:System.Xml.XmlDataDocument> nesne, sırasıyla.  

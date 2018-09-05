@@ -5,11 +5,11 @@ ms.assetid: 271b6889-3454-46ff-96ab-9feb15e742ee
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 17650e06cb505dd778a9c0980c2a32fda8099cb4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43407579"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43661133"
 ---
 # <a name="how-to-enable-wif-tracing"></a>Nasıl yapılır: WIF izlemeyi etkinleştirme
 ## <a name="applies-to"></a>Uygulandığı öğe:  

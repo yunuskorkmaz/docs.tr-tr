@@ -18,11 +18,11 @@ helpviewer_keywords:
 - client application services, about client application services
 ms.assetid: 1487d8df-089e-4f21-abfb-a791a652b58e
 ms.openlocfilehash: d58510240593f73ff761aa669035f28598006c10
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401589"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522006"
 ---
 # <a name="client-application-services"></a>İstemci Uygulama Hizmetleri
 İstemci uygulama hizmetleri kullanan Windows tabanlı uygulamalar oluşturmanızı kolaylaştırır [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] oturum açma, roller ve profil uygulaması hizmetlerini Microsoft ASP.NET 2.0 AJAX uzantıları dahil. Bu hizmetler, birden çok Web ve Windows tabanlı uygulamaların kullanıcı bilgileri ve kullanıcı yönetimi işlevleri tek bir sunucudan paylaşmasını sağlar. Örneğin, aşağıdaki görevleri gerçekleştirmek için bu hizmetlerin kullanabilirsiniz:  

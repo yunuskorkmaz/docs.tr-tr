@@ -9,11 +9,11 @@ helpviewer_keywords:
 - controls [Windows Forms], aligning
 ms.assetid: bb54bce5-880f-4a36-af68-8cf92058dc1c
 ms.openlocfilehash: bbe6ae2adfe364e41f6627e6b067aa8e18e6e079
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43488087"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517283"
 ---
 # <a name="how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms"></a>Nasıl yapılır: Windows Formlarında Dayama Çizgileri ve Kılavuz ile Denetimleri Düzenleme
 Visual Studio düzen özelliklerini kullanarak, bir form üzerinde denetimleri yerleştirildiği tam olarak yönlendirebilirsiniz. Bir forma eklendiğinde veya taşınan bir form üzerinde denetimleri otomatik olarak satır ve sütunları Windows Forms Tasarımcısı kılavuzunun hizalanabilir ya da dayama çizgileri özelliğini kullanarak denetimleri hizalayabilirsiniz.  

@@ -2,18 +2,18 @@
 title: Ertelenmiş yürütme örneği (C#)
 ms.date: 07/20/2015
 ms.assetid: 50f4fbac-81fe-4f26-aedf-506e21419b19
-ms.openlocfilehash: 8613f2335e5b3cb2a012f5309307e081b9400709
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0ad1ed2998cfbd612f7f2b60a0d15c7ffcef0daf
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33335932"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43518481"
 ---
 # <a name="deferred-execution-example-c"></a>Ertelenmiş yürütme örneği (C#)
-Geç değerlendirme, LINQ to XML sorgularını yürütme etkiler ve bu konuda nasıl ertelenmiş yürütme gösterir.  
+Bu konu nasıl ertelenmiş yürütme gösterir ve geç değerlendirme, LINQ to XML sorgularında yürütme etkiler.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, ertelenmiş yürütme kullanan bir genişletme yöntemi kullanırken yürütme sırasını gösterir. Örnek üç bir dizeler dizisi bildirir. Ardından tarafından döndürülen koleksiyon üzerinden yineleme `ConvertCollectionToUpperCase`.  
+ Aşağıdaki örnek, ertelenmiş yürütme kullanan bir genişletme yöntemi kullanırken, yürütme sırasını gösterir. Örneğin, üç dize dizisi bildirir. Bunun ardından tarafından döndürülen bir koleksiyonda gezinir `ConvertCollectionToUpperCase`.  
   
 ```csharp  
 public static class LocalExtensions  
@@ -44,7 +44,7 @@ class Program
 }  
 ```  
   
- Bu örnek şu çıkışı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```  
 ToUpper: source abc  
@@ -55,13 +55,14 @@ ToUpper: source ghi
 Main: str GHI  
 ```  
   
- Tarafından döndürülen koleksiyon üzerinden yineleme zaman fark `ConvertCollectionToUpperCase`, her öğe kaynak dize diziden alınır ve sonraki önce büyük harfe dönüştürülmüş öğesi, kaynak dize diziden alınır.  
+ Tarafından döndürülen koleksiyon üzerinden yineleme sırasında dikkat `ConvertCollectionToUpperCase`, her öğe kaynak string dizisinden alınır ve sonraki önce büyük harfe dönüştürülmüş öğesi, kaynak string dizisinden alınır.  
   
- Döndürülen koleksiyondaki her öğe içinde işlenmeden önce tüm dizisini büyük harfe dönüştürülmez olduğunu görebilirsiniz `foreach` içinde döngü `Main`.  
+ Döndürülen koleksiyondaki her öğe içinde işlenmeden önce tüm dizi dizeleri büyük harfe dönüştürülmesi değil gördüğünüz `foreach` içinde döngü `Main`.  
   
- Bu öğreticide sonraki konu zincirleme sorguları birlikte gösterilmektedir:  
+ Bu öğreticide bir sonraki konu birbirine zincirleme sorgular gösterilmektedir:  
   
--   [Zincirleme sorguları örnek (C#)](../../../../csharp/programming-guide/concepts/linq/chaining-queries-example.md)  
+-   [Zincirleme örneği sorgular (C#)](../../../../csharp/programming-guide/concepts/linq/chaining-queries-example.md)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Öğretici: Sorguları birlikte (C#) zincirleme](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [Öğretici: Sorguları birbirine (C#) zincirleme](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)

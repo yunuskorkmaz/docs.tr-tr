@@ -9,11 +9,11 @@ helpviewer_keywords:
 - '!= operator [C#]'
 ms.assetid: eeff7a4e-ad6f-462d-9f8d-49e9b91c6c97
 ms.openlocfilehash: e974ffb1b25944e24fca23864dc7e932ec1876d5
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43415387"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43537767"
 ---
 # <a name="-operator-c-reference"></a>!= İşleci (C# Başvurusu)
 Eşitsizlik işleci (`!=`), işlenenlerinin true, eşitse false değerini döndürür. Eşitsizlik işleçleri, string ve object dahil olmak üzere tüm türleri için önceden tanımlanmıştır. Kullanıcı tanımlı türler aşırı yükleme `!=` işleci.  

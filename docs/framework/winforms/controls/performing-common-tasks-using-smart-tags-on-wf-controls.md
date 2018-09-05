@@ -7,11 +7,11 @@ helpviewer_keywords:
 - designer actions
 ms.assetid: cac337e6-00f6-4584-80f4-75728f5ea113
 ms.openlocfilehash: d1c69d2e9e89e0a4fed767216e8743a0ac9ac81d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43407826"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43537040"
 ---
 # <a name="walkthrough-performing-common-tasks-using-smart-tags-on-windows-forms-controls"></a>İzlenecek yol: Windows Forms Denetimlerindeki Akıllı Etiketleri Kullanarak Ortak Görevleri Gerçekleştirme
 Windows Forms uygulamanız için formlar ve denetimler oluşturmak gibi art arda gerçekleştirir çok sayıda görev vardır. Karşınıza çıkacak sık gerçekleştirilen görevlerin bazıları şunlardır:  

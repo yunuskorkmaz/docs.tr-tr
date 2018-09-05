@@ -5,12 +5,12 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: 3c6315daf08ce9931263aa5fb27c80a0bf41ef79
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 33e735f892994f05575c41a5208d51045bdbfd2a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43473992"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43534729"
 ---
 # <a name="methods-c-programming-guide"></a>Yöntemler (C# Programlama Kılavuzu)
 Bir dizi deyim içeren kod bloğu bir yöntemdir. Bir program yöntemini çağırarak ve tüm gerekli metot bağımsız değişkenleri belirtme yürütülecek deyimler neden olur. C# içinde yürütülen her yönerge bir yöntem bağlamında gerçekleştirilir. Main yöntemi her C# uygulaması için giriş noktasıdır ve programı başlatıldığında ortak dil çalışma zamanı tarafından (CLR) çağrılır.  
@@ -155,15 +155,16 @@ public Customer this[long id] => store.LookupCustomer(id);
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [Sınıflar ve Yapılar](index.md)  
- [Erişim Değiştiricileri](access-modifiers.md)  
- [Statik Sınıflar ve Statik Sınıf Üyeleri](static-classes-and-static-class-members.md)  
- [Devralma](inheritance.md)  
- [Soyut ve Korumalı Sınıflar ve Sınıf Üyeleri](abstract-and-sealed-classes-and-class-members.md)  
- [params](../../../csharp/language-reference/keywords/params.md)  
- [return](../../../csharp/language-reference/keywords/return.md)  
- [out](../../../csharp/language-reference/keywords/out.md)  
- [ref](../../../csharp/language-reference/keywords/ref.md)  
- [Parametreleri Geçirme](passing-parameters.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [Sınıflar ve Yapılar](index.md)  
+- [Erişim Değiştiricileri](access-modifiers.md)  
+- [Statik Sınıflar ve Statik Sınıf Üyeleri](static-classes-and-static-class-members.md)  
+- [Devralma](inheritance.md)  
+- [Soyut ve Korumalı Sınıflar ve Sınıf Üyeleri](abstract-and-sealed-classes-and-class-members.md)  
+- [params](../../../csharp/language-reference/keywords/params.md)  
+- [return](../../../csharp/language-reference/keywords/return.md)  
+- [out](../../../csharp/language-reference/keywords/out.md)  
+- [ref](../../../csharp/language-reference/keywords/ref.md)  
+- [Parametreleri Geçirme](passing-parameters.md)

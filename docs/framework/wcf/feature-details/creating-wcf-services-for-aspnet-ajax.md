@@ -3,11 +3,11 @@ title: ASP.NET AJAX için WCF Hizmetleri Oluşturma
 ms.date: 03/30/2017
 ms.assetid: 04c0402c-e617-4ba5-aedf-d17692234776
 ms.openlocfilehash: 4d3953046a796686a465cd8096b8f2ba930aa9fd
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43463266"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43536657"
 ---
 # <a name="creating-wcf-services-for-aspnet-ajax"></a>ASP.NET AJAX için WCF Hizmetleri Oluşturma
 Microsoft ASP.NET AJAX zengin bir kullanıcı deneyimi ile esnek ve tanıdık bir kullanıcı arabirimi öğeleri içeren Web sayfaları hızlıca oluşturmanıza olanak sağlar. ASP.NET AJAX tarayıcılar arası ECMAScript (JavaScript) ve dinamik HTML (DHTML) teknolojiler bir araya getiren betiği istemci kitaplıkları sağlar ve bunları ASP.NET 2.0 sunucu tabanlı geliştirme platformu ile tümleştirilir. ASP.NET AJAX'ı kullanarak, kullanıcı deneyimini ve Web uygulamalarınızı verimliliğini artırabilir.  

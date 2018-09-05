@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/27/2018
 ms.openlocfilehash: 45be99a86a52ed450b795ca5f91c01ab82c7da47
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43388634"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43539705"
 ---
 # <a name="deploying-single-container-based-net-core-web-applications-on-linux-or-windows-nano-server-hosts"></a>Linux veya Windows Nano sunucu konaklarına tek kapsayıcı tabanlı .NET Core Web uygulamaları dağıtma
 

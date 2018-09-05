@@ -2,17 +2,17 @@
 title: Temsilcilerde varyans (C#)
 ms.date: 07/20/2015
 ms.assetid: 19de89d2-8224-4406-8964-2965b732b890
-ms.openlocfilehash: 8b74c29d8d94a31d30408131009d92e2b2a4281c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3dabac4e532198871cf05d639aa692751ab17ae1
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326234"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43534909"
 ---
 # <a name="variance-in-delegates-c"></a>Temsilcilerde varyans (C#)
-.NET framework 3.5 yöntem imzaları bulunan tüm temsilcileri C# temsilci türleriyle eşleşen farkı desteği sunmuştur. Yalnızca imzalar eşleşen yöntemleri, aynı zamanda daha fazla türetilmiş tür (kovaryans) veya temsilci türü tarafından belirtilenden daha az türetilmiş türler (kontravaryans) sahip parametreleri kabul döndüren yöntemler için atayabilirsiniz Bunun anlamı temsilciler . Bu, hem genel hem de genel olmayan temsilciler içerir.  
+.NET framework 3.5, tüm temsilciler C# içindeki temsilci türleriyle yöntem imzalarının eşleştirilmesi için varyans desteği sunmuştur. Yalnızca imzalarının eşleştirilmesi içeren yöntemlerin yanı sıra temsilci türü tarafından belirtilenden daha az türetilmiş türler (kontravaryans) sahip bir parametre kabul eden ya da daha fazla türetilmiş türler (kovaryans) döndüren yöntemler için atayabileceğiniz anlamına gelir temsilciler . Bu, hem genel hem de genel olmayan temsilcileri içerir.  
   
- Örneğin, iki sınıf ve iki temsilciler aşağıdaki kodu göz önünde bulundurun: Genel ve genel olmayan.  
+ Örneğin, iki sınıf ve iki temsilci olduğunda sahip aşağıdaki kodu düşünün: Genel ve genel olmayan.  
   
 ```csharp  
 public class First { }  
@@ -21,7 +21,7 @@ public delegate First SampleDelegate(Second a);
 public delegate R SampleGenericDelegate<A, R>(A a);  
 ```  
   
- Temsilciler, oluşturduğunuzda `SampleDelegate` veya `SampleGenericDelegate<A, R>` türleri, aşağıdaki yöntemlerden birini bu temsilcileri atayabilirsiniz.  
+ Temsilciler, oluşturduğunuzda `SampleDelegate` veya `SampleGenericDelegate<A, R>` türleri, bu temsilcileri için aşağıdaki yöntemlerden herhangi birini atayabilirsiniz.  
   
 ```csharp  
 // Matching signature.  
@@ -42,7 +42,7 @@ public static Second AFirstRSecond(First first)
 { return new Second(); }  
 ```  
   
- Aşağıdaki kod örneğinde yöntem imzası ve temsilci türü arasında örtük dönüşüm gösterilmektedir.  
+ Aşağıdaki kod örneği, yöntem imzası ve temsilci türü arasında örtülü dönüştürme gösterilmektedir.  
   
 ```csharp  
 // Assigning a method with a matching signature   
@@ -62,14 +62,14 @@ SampleGenericDelegate<Second, First> dGeneric = ASecondRFirst;
 SampleGenericDelegate<Second, First> dGenericConversion = AFirstRSecond;  
 ```  
   
- Daha fazla örnek için bkz: [Temsilcilerde varyans (C#) kullanarak](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md) ve [işlev ve eylem genel temsilciler (C#) kullanarak varyansını](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).  
+ Daha fazla örnek için bkz. [Temsilcilerde varyans (C#) kullanarak](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md) ve [işlev ve eylem genel temsilcileri (C#) kullanarak varyansını](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).  
   
 ## <a name="variance-in-generic-type-parameters"></a>Genel tür parametreleri varyans  
- Böylece türlerini birbirinden gerektirdiği şekilde devralınırsa, genel tür parametresi tarafından belirtilen farklı türlerine sahip genel temsilciler birbirine atanabilir .NET Framework 4 veya üstü temsilciler arasında örtük dönüştürmeye etkinleştirebilirsiniz sapması.  
+ Böylece türlerini birbirinden gerektirdiği devralınırsa, genel tür parametrelerle belirtilen farklı türlere sahip genel temsilciler birbiriyle atanabilir .NET Framework 4 veya üzeri temsilciler arasında örtük dönüştürme etkinleştirebilirsiniz farkı.  
   
- Örtük dönüştürme etkinleştirmek için açıkça bir temsilci eşdeğişken olarak genel parametreleri bildirmeniz gerekir veya kullanarak karşıtı `in` veya `out` anahtar sözcüğü.  
+ Örtük dönüştürme etkinleştirmek için açıkça genel parametreler birlikte değişken olarak bir temsilci bildirmeniz gerekir veya kullanarak, değişken karşıtı `in` veya `out` anahtar sözcüğü.  
   
- Aşağıdaki kod örneğinde eşdeğişken genel tür parametresi var. bir temsilci nasıl oluşturabileceğinizi gösterir.  
+ Aşağıdaki kod örneği, bir genel birlikte değişen türde parametresi olan bir temsilci nasıl oluşturabileceğinizi gösterir.  
   
 ```csharp  
 // Type T is declared covariant by using the out keyword.  
@@ -85,9 +85,9 @@ public static void Test()
 }  
 ```  
   
- Eşleştirilecek tek farkı destek kullanırsanız, yöntemi imzalarla temsilci türleri'yı ve kullanmayın `in` ve `out` anahtar sözcüklerini bulduğunuz bazen aynı lambda ifadeleri veya yöntemleri ile temsilciler örneğini oluşturabilirsiniz, ancak yapamazsınız bir temsilci diğerine atayın.  
+ Tek farkı destek eşleştirilecek kullanırsanız birlikte yöntem imzaları temsilci türleri ve kullanmaz `in` ve `out` anahtar bulduğunuz bazen aynı lambda ifadeleri veya yöntemler ile temsilciler örneği oluşturabilir, ancak bunu yapamazsınız bir temsilci diğerine atayın.  
   
- Aşağıdaki kod örneğinde, `SampleGenericDelegate<String>` açıkça dönüştürülemiyor `SampleGenericDelegate<Object>`, ancak `String` devralır `Object`. Genel parametresini işaretleyerek bu sorunu düzeltebilirsiniz `T` ile `out` anahtar sözcüğü.  
+ Aşağıdaki kod örneğinde, `SampleGenericDelegate<String>` açıkça dönüştürülemez `SampleGenericDelegate<Object>`, ancak `String` devralan `Object`. Genel parametre olarak işaretleyerek bu sorunu düzeltebilirsiniz `T` ile `out` anahtar sözcüğü.  
   
 ```csharp  
 public delegate T SampleGenericDelegate<T>();  
@@ -109,12 +109,12 @@ public static void Test()
 }  
 ```  
   
-### <a name="generic-delegates-that-have-variant-type-parameters-in-the-net-framework"></a>.NET Framework değişken sahip genel temsilciler tür parametreleri  
- .NET framework 4 birkaç mevcut genel temsilciler genel tür parametreleri sapma desteği sunulur:  
+### <a name="generic-delegates-that-have-variant-type-parameters-in-the-net-framework"></a>.NET Framework tür parametreleri varyant sahip genel temsilciler  
+ .NET framework 4, varolan birçok genel temsilciler genel tür parametrelerinde varyansı başlanmıştır:  
   
--   `Action` gelen Temsilciler <xref:System> ad alanı, örneğin, <xref:System.Action%601> ve <xref:System.Action%602>  
+-   `Action` gelen temsilci <xref:System> ad alanı, örneğin, <xref:System.Action%601> ve <xref:System.Action%602>  
   
--   `Func` gelen Temsilciler <xref:System> ad alanı, örneğin, <xref:System.Func%601> ve <xref:System.Func%602>  
+-   `Func` gelen temsilci <xref:System> ad alanı, örneğin, <xref:System.Func%601> ve <xref:System.Func%602>  
   
 -   <xref:System.Predicate%601> Temsilci seçme  
   
@@ -122,34 +122,34 @@ public static void Test()
   
 -   <xref:System.Converter%602> Temsilci seçme  
   
- Daha fazla bilgi ve örnekler için bkz: [işlev ve eylem genel temsilciler (C#) kullanarak varyansını](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).  
+ Daha fazla bilgi ve örnekler için bkz. [işlev ve eylem genel temsilcileri (C#) kullanarak varyansını](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).  
   
-### <a name="declaring-variant-type-parameters-in-generic-delegates"></a>Genel temsilciler değişken türü parametrelerinde bildirme  
- Genel temsilci eşdeğişken varsa veya karşıtı genel tür parametreleri, onu başvurulabilir için farklı bir *değişken Genel temsilci*.  
+### <a name="declaring-variant-type-parameters-in-generic-delegates"></a>Değişken türünde parametreler genel temsilciler bildirme  
+ Genel temsilci birlikte değişken veya değişken karşıtı genel tür parametreleri, başvurulabilir olarak varsa bir *değişken Genel temsilci*.  
   
- Genel tür parametresi bir genel temsilci eşdeğişken kullanarak bildirebilirsiniz `out` anahtar sözcüğü. Eşdeğişken türü yöntem bağımsız değişkenleri bir tür değil de, yalnızca bir yöntemin dönüş türü olarak kullanılabilir. Aşağıdaki kod örneğinde eşdeğişken Genel temsilci bildirme gösterilmektedir.  
+ Genel tür parametresi birlikte değişken Genel temsilci kullanarak bildirebilirsiniz `out` anahtar sözcüğü. Birlikte değişken türünde yöntem bağımsız bir tür değil de, yalnızca bir yöntem dönüş türü olarak kullanılabilir. Aşağıdaki kod örneği, birlikte değişken genel bir temsilcinin nasıl belirtileceğini gösterir.  
   
 ```csharp  
 public delegate R DCovariant<out R>();  
 ```  
   
- Kullanarak bir genel tür parametresi karşıtı genel temsilcisi de bildirebilirsiniz `in` anahtar sözcüğü. Karşıtı türü yönteminin dönüş türü olarak değil de yalnızca yöntem bağımsız değişkenleri bir tür olarak kullanılabilir. Aşağıdaki kod örneğinde karşıtı Genel temsilci bildirme gösterilmektedir.  
+ Genel tür parametresi değişken karşıtı Genel temsilci kullanarak bildirebilirsiniz `in` anahtar sözcüğü. Değişken karşıtı türü, yöntemin dönüş türü değil de, yalnızca bir tür yöntem bağımsız olarak kullanılabilir. Aşağıdaki kod örneği, bir değişken karşıtı genel temsilcinin nasıl belirtileceğini gösterir.  
   
 ```csharp  
 public delegate void DContravariant<in A>(A a);  
 ```  
   
 > [!IMPORTANT]
->  `ref`, `in`, ve `out` parametreleri C# değişken işaretlenmiş olamaz.  
+>  `ref`, `in`, ve `out` C# parametreleri varyant olarak işaretlenemez.  
   
- Aynı temsilci, ancak farklı tür parametreleri için sapması ve Kovaryans desteklemek mümkündür. Bu, aşağıdaki örnekte gösterilir.  
+ Farkı hem Kovaryans aynı temsilci, ancak farklı tür parametreleri için destek de mümkündür. Bu, aşağıdaki örnekte gösterilir.  
   
 ```csharp  
 public delegate R DVariant<in A, out R>(A a);  
 ```  
   
-### <a name="instantiating-and-invoking-variant-generic-delegates"></a>Örnek oluşturma ve değişken genel temsilciler çağırma  
- Örneği ve yalnızca örneği ve sabit temsilciler çağırma değişken temsilciler çağırma. Aşağıdaki örnekte, temsilci bir lambda ifadesi tarafından başlatılmış.  
+### <a name="instantiating-and-invoking-variant-generic-delegates"></a>Örnekleme ve bunları çağırırken değişken genel temsilciler  
+ Örneği oluşturun ve yalnızca örneklemek ve sabit temsilciler çağırmak değişken temsilciler çağır. Aşağıdaki örnekte, temsilci bir lambda ifadesiyle başlatılır.  
   
 ```csharp  
 DVariant<String, String> dvariant = (String str) => str + " ";  
@@ -157,7 +157,7 @@ dvariant("test");
 ```  
   
 ### <a name="combining-variant-generic-delegates"></a>Değişken genel temsilciler birleştirme  
- Değişken temsilciler birleştirmelisiniz değil. <xref:System.Delegate.Combine%2A> Yöntemi değişken temsilci dönüşümü desteklemez ve temsilciler tam olarak aynı türünde olmasını bekler. Ya da kullanarak temsilcileri birleştirme olduğunda bu bir çalışma zamanı özel yol açabilir <xref:System.Delegate.Combine%2A> yöntemi kullanarak veya `+` aşağıdaki kod örneğinde gösterildiği gibi işleci.  
+ Değişken temsilciler birleştirmemelisiniz değil. <xref:System.Delegate.Combine%2A> Yöntemi değişken temsilci dönüştürmeyi desteklemez ve temsilciler tam olarak aynı veri türünde olmasını bekliyor. Temsilcileri kullanarak ya da birleştirdiğinizde bu için bir çalışma zamanı özel durumuna neden olabilir <xref:System.Delegate.Combine%2A> yöntemi kullanarak veya `+` aşağıdaki kod örneğinde gösterildiği gibi işleci.  
   
 ```csharp  
 Action<object> actObj = x => Console.WriteLine("object: {0}", x);  
@@ -168,10 +168,10 @@ Action<string> actStr = x => Console.WriteLine("string: {0}", x);
 // Delegate.Combine(actStr, actObj);  
 ```  
   
-## <a name="variance-in-generic-type-parameters-for-value-and-reference-types"></a>Genel tür parametreleri varyans değer ve başvuru türleri  
- Genel tür parametreleri için varyansı yalnızca başvuru türleri için desteklenir. Örneğin, `DVariant<int>` örtük olarak dönüştürülemiyor `DVariant<Object>` veya `DVariant<long>`, çünkü tamsayı değer türü.  
+## <a name="variance-in-generic-type-parameters-for-value-and-reference-types"></a>Değer ve başvuru türleri için genel tür parametrelerindeki varyansı  
+ Varyans genel tür parametreleri için yalnızca başvuru türleri için desteklenir. Örneğin, `DVariant<int>` için örtük olarak dönüştürülemez `DVariant<Object>` veya `DVariant<long>`tamsayı değer türü olduğundan.  
   
- Aşağıdaki örnek, bu farkı gösterir genel tür parametreleri değer türleri için desteklenmiyor.  
+ Aşağıdaki örnek, bu farkı göstermektedir genel tür parametreleri değer türleri için desteklenmiyor.  
   
 ```csharp  
 // The type T is covariant.  
@@ -196,7 +196,8 @@ public static void Test()
 }  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Genel Türler](~/docs/standard/generics/index.md)  
- [İşlev ve eylem genel temsilciler (C#) için varyans kullanma](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)  
- [Nasıl yapılır: temsilcileri (çok noktaya yayın temsilcileri) birleştirme](../../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [Genel Türler](~/docs/standard/generics/index.md)  
+- [İşlev ve eylem genel temsilcileri (C#) için varyans kullanma](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)  
+- [Nasıl yapılır: temsilcileri (çok noktaya yayın temsilcileri) birleştirme](../../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)

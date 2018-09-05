@@ -2,17 +2,17 @@
 title: Yansıma (C#) kullanarak özniteliklere erişme
 ms.date: 07/20/2015
 ms.assetid: dce3a696-4ceb-489a-b5e4-322a83052f18
-ms.openlocfilehash: 05c051490dab5265309fd067dfb67f0ef7822541
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aa8bf447fe0df81821a34b5a6d898980749921e1
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318496"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43536448"
 ---
 # <a name="accessing-attributes-by-using-reflection-c"></a>Yansıma (C#) kullanarak özniteliklere erişme
-Özel öznitelikler tanımlayın ve bunları kaynak kodunda yerleştirmek olgu ve bu bilgileri alma üzerinde çalışan herhangi bir şekilde olmadan az değerinin olacaktır. Yansıma kullanarak özel öznitelikler içeren tanımlandı bilgi alabilirsiniz. Anahtar yöntemi `GetCustomAttributes`, kaynak kodu özniteliklerinin çalışma zamanı eşdeğerleri olan nesneler dizisi döndürür. Bu yöntem, birden fazla aşırı yüklenmiş sürümlerini içerir. Daha fazla bilgi için bkz. <xref:System.Attribute>.  
+Özel öznitelikler tanımlamak ve bunları kaynak kodunuzu getirin olgu üzerinde çalışan ve bu bilgileri alınırken bir şekilde olmadan küçük değer olacaktır. Yansıma kullanarak özel öznitelik tanımlandı bilgi alabilirsiniz. Anahtar yöntemi `GetCustomAttributes`, kaynak kod özniteliklerini çalışma zamanı eşdeğerleri olan nesneler dizisi döndürür. Bu yöntem, birden fazla aşırı yüklenmiş sürümleri vardır. Daha fazla bilgi için bkz. <xref:System.Attribute>.  
   
- Öznitelik belirtimi gibi:  
+ Bir öznitelik belirtimi gibi:  
   
 ```csharp  
 [Author("P. Ackerman", version = 1.1)]  
@@ -26,10 +26,10 @@ Author anonymousAuthorObject = new Author("P. Ackerman");
 anonymousAuthorObject.version = 1.1;  
 ```  
   
- Bununla birlikte, kod kadar yürütülmez `SampleClass` öznitelikler için sorgulanır. Çağırma `GetCustomAttributes` üzerinde `SampleClass` neden olan bir `Author` nesnesi oluşturulur ve yukarıdaki olarak başlatıldı. Sınıfın diğer öznitelikleri varsa, diğer öznitelik nesneleri benzer şekilde oluşturulur. `GetCustomAttributes` ardından döndürür `Author` nesne ve bir dizi diğer öznitelik nesneleri. Bu dizi yineleme öznitelikleri her dizi öğesi türüne bağlı olarak uygulanan belirlemek ve öznitelik nesnelerden bilgi ayıklamak.  
+ Ancak, kod kadar yürütülmez `SampleClass` öznitelikleri için sorgulanır. Çağırma `GetCustomAttributes` üzerinde `SampleClass` neden olan bir `Author` nesne oluşturulur ve yukarıdaki gibi başlatıldı. Sınıfın diğer öznitelikleri varsa, diğer öznitelik nesneleri benzer şekilde oluşturulur. `GetCustomAttributes` ardından döndürür `Author` ve diğer öznitelik nesneleri bir dizideki nesne. Bu dizi yineleme hangi özniteliklerin her dizi öğesi türüne bağlı olarak uygulanan belirlemek ve öznitelik nesnelerden bilgiler ayıklayın.  
   
 ## <a name="example"></a>Örnek  
- Burada, tam bir örnek verilmiştir. Özel bir öznitelik tanımlı, birkaç varlıklara uygulanan ve yansıma alınır.  
+ Tam bir örnek aşağıda verilmiştir. Özel bir öznitelik tanımlı, birden fazla varlıklarına uygulanan ve yansıma alınır.  
   
 ```csharp  
 // Multiuse attribute.  
@@ -113,11 +113,12 @@ class TestAuthorAttribute
 */  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Reflection>  
- <xref:System.Attribute>  
- [C# Programlama Kılavuzu](../../../../csharp/programming-guide/index.md)  
- [Özniteliklerde Depolanan Bilgileri Alma](../../../../standard/attributes/retrieving-information-stored-in-attributes.md)  
- [Yansıma (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
- [Öznitelikler (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)  
- [Özel öznitelikler (C#) oluşturma](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- <xref:System.Reflection>  
+- <xref:System.Attribute>  
+- [C# Programlama Kılavuzu](../../../../csharp/programming-guide/index.md)  
+- [Özniteliklerde Depolanan Bilgileri Alma](../../../../standard/attributes/retrieving-information-stored-in-attributes.md)  
+- [Yansıma (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
+- [Öznitelikler (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)  
+- [Özel öznitelikler (C#) oluşturma](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)

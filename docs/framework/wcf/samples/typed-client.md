@@ -3,11 +3,11 @@ title: Türü Belirlenmiş İstemci
 ms.date: 03/30/2017
 ms.assetid: 62c40e8f-e9b4-4b1a-939a-93c37393d343
 ms.openlocfilehash: 0e4b52b81d30f61e30116dc1480e6c4e7f271a93
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43463773"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43540782"
 ---
 # <a name="typed-client"></a>Türü Belirlenmiş İstemci
 Örnek tarafından oluşturulan bir türü belirlenmiş istemci bilgilerini almak nasıl gösterir [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hesaplayıcı hizmet uygulayan. Bu örnekte, istemci bir konsol uygulaması (.exe) ve hizmet Internet Information Services (IIS) tarafından barındırılır.  

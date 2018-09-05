@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
 ms.openlocfilehash: 0e91bf597e344dd09e80bee5787e92383065b654
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43393191"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43520204"
 ---
 # <a name="data-contract-versioning"></a>Veri Sözleşmesi Sürümü Oluşturma
 Uygulamaları değiştikçe, ayrıca değiştirmek zorunda kalabilirsiniz veri sözleşmeleri Hizmetleri kullanın. Bu konu açıklar nasıl sürüm veri anlaşmaları. Bu konuda, veri sözleşmesi sürümü oluşturma mekanizmaları açıklanmaktadır. Eksiksiz bir genel bakış ve öngörücü sürüm oluşturma yönergeleri için bkz: [en iyi uygulamalar: veri sözleşmesi sürümü oluşturma](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  

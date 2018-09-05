@@ -9,11 +9,11 @@ helpviewer_keywords:
 - /nowin32manifest compiler option [C#]
 ms.assetid: 6f06365b-b87b-46a2-b187-b3bfeaf4862d
 ms.openlocfilehash: 3ab52d541c169850f6ae7ba7e7cfded290f890e7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43420625"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43530515"
 ---
 # <a name="-nowin32manifest-c-compiler-options"></a>-nowin32manifest (C# Derleyici Seçenekleri)
 Kullanım **-nowin32manifest** herhangi bir uygulama bildirimi yürütülebilir dosyasına katıştırma değil derleyicisinin seçeneği.  

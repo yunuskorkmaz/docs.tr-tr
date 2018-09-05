@@ -2,22 +2,22 @@
 title: '&lt;hizmetlerin&gt; &lt;eklenmesi&gt;'
 ms.date: 03/30/2017
 ms.assetid: 6bdc4590-aa9c-4ec8-9345-879d780cd141
-ms.openlocfilehash: 709636f0b9667a431838b463c05cfd00f6521f6b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6aa903d4188d108940c76ac50eb0a706fbea8f8b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754073"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43530256"
 ---
 # <a name="ltaddgt-of-ltservicesgt"></a>&lt;hizmetlerin&gt; &lt;eklenmesi&gt;
-Öğesinin bir örneği için ayarları belirtir <xref:System.Workflow.Runtime.WorkflowRuntime> iş akışı tabanlı Windows Communication Foundation (WCF) hizmetlerini barındıran için. Bu öğe türünde <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>.  
+Örneği için ayarları belirtir <xref:System.Workflow.Runtime.WorkflowRuntime> iş akışı tabanlı Windows Communication Foundation (WCF) hizmetlerini barındıran için. Bu öğe türünde <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>.  
   
  \<system.ServiceModel>  
-\<davranışları >  
+\<davranışlar >  
 \<serviceBehaviors>  
 \<davranışı >  
 \<Hizmetleri >  
-\<ekleme >  
+\<Ekle >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,7 +36,7 @@ ms.locfileid: "32754073"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|türü|Hizmetin başlatılması için derleme nitelenmiş tür adını belirten dize. Belirtilen hizmet kendi oluşturucular imzalarını hakkında belirli kurallara uymalıdır. Daha fazla bilgi edinmek için bkz. <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>.|  
+|türü|Hizmetin başlatılması için derleme nitelikli tür adını belirten dize. Belirtilen hizmet oluşturucuları imzalarını hakkında belirli kurallara uymanız gerekir. Daha fazla bilgi edinmek için bkz. <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -45,10 +45,10 @@ ms.locfileid: "32754073"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Hizmetleri >](../../../../../docs/framework/configure-apps/file-schema/wcf/services-of-workflowruntime.md)|Eklenecek hizmetler koleksiyonu <xref:System.Workflow.Runtime.WorkflowRuntime> altyapısı. Tür öğeleridir <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>.  Koleksiyonda belirtilen hizmetler iş akışı çalışma zamanı altyapısı tarafından başlatılan ve hizmetlerinin için eklenen zaman uygun <xref:System.Workflow.Runtime.WorkflowRuntime> Oluşturucusu çağrılır. Bu nedenle, koleksiyonda belirtilen hizmetlerden kendi oluşturucular imzalarını hakkında belirli kurallara uymalıdır. Daha fazla bilgi edinmek için bkz. <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>.|  
+|[\<Hizmetleri >](../../../../../docs/framework/configure-apps/file-schema/wcf/services-of-workflowruntime.md)|Eklenecek hizmetler koleksiyonu <xref:System.Workflow.Runtime.WorkflowRuntime> altyapısı. Öğeleri türlerinin <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>.  Koleksiyonda belirtilen Hizmetleri iş akışı çalışma zamanı altyapısı tarafından başlatılan ve hizmetlerinin için eklenen zaman uygun <xref:System.Workflow.Runtime.WorkflowRuntime> Oluşturucu çağrılır. Bu nedenle, koleksiyonda belirtilen hizmetlerden, oluşturucuları imzalarını hakkında belirli kurallara uymanız gerekir. Daha fazla bilgi edinmek için bkz. <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu öğe belirtilen hizmeti iş akışı çalışma zamanı altyapısı tarafından başlatılan ve hizmetlerinin için eklenen zaman uygun <xref:System.Workflow.Runtime.WorkflowRuntime> Oluşturucusu çağrılır. Bu nedenle, belirtilen hizmet kendi oluşturucular imzalarını hakkında belirli kurallara uymalıdır. Daha fazla bilgi edinmek için bkz. <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>.  
+ Bu öğede belirtilen hizmeti iş akışı çalışma zamanı altyapısı tarafından başlatılan ve hizmetlerinin için eklenen zaman uygun <xref:System.Workflow.Runtime.WorkflowRuntime> Oluşturucu çağrılır. Bu nedenle, belirtilen hizmet, oluşturucuları imzalarını hakkında belirli kurallara uymanız gerekir. Daha fazla bilgi edinmek için bkz. <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>.  
   
 ## <a name="example"></a>Örnek  
   
@@ -70,4 +70,4 @@ ms.locfileid: "32754073"
  <xref:System.ServiceModel.Configuration.WorkflowRuntimeElement>  
  <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>  
  <xref:System.Workflow.Runtime.WorkflowRuntime>  
- [İş akışı yapılandırma dosyaları](http://msdn.microsoft.com/library/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909)
+ [İş akışı yapılandırma dosyaları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))

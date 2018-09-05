@@ -8,11 +8,11 @@ helpviewer_keywords:
 - when keyword [C#]
 ms.assetid: dd543335-ae37-48ac-9560-bd5f047b9aea
 ms.openlocfilehash: a71cbdce256b1c1bd5d101d66f216fb229d70adf
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43404003"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43539171"
 ---
  # <a name="when-c-reference"></a>zaman (C# Başvurusu)
 

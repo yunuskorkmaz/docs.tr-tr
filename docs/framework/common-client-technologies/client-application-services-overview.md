@@ -6,11 +6,11 @@ helpviewer_keywords:
 - client application services, about client application services
 ms.assetid: f0a2da13-e282-4fd7-88a1-f9102c9aeab1
 ms.openlocfilehash: 55d96039f430bece3cda6136d63dbf287e8fc744
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43408567"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515388"
 ---
 # <a name="client-application-services-overview"></a>İstemci Uygulama Hizmetlerine Genel Bakış
 İstemci uygulama hizmetleri için Basitleştirilmiş erişim sağlayan [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] oturum açma, roller ve profil hizmetlerinden Windows Forms ve Windows Presentation Foundation (WPF) uygulamaları. [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] Uygulama Hizmetleri, Microsoft ASP.NET 2.0 AJAX dahil olan uzantıları bulunmaktadır [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)] ve [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]. Bu hizmetler, birden çok Web ve Windows tabanlı uygulamaların kullanıcı bilgileri ve kullanıcı yönetimi işlevleri tek bir sunucudan paylaşmasını sağlar.  

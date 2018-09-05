@@ -2,12 +2,12 @@
 title: LINQ to XML programlamaya genel bakış (C#)
 ms.date: 07/20/2015
 ms.assetid: 2dfa9b6f-5890-461d-b81c-316853c7f320
-ms.openlocfilehash: c461d4b4082293d91d18538596cfa03d9445c224
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 9eb86e0c9c5dada36e09c78e7070d32afa9824c1
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39198893"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522718"
 ---
 # <a name="linq-to-xml-programming-overview-c"></a>LINQ to XML programlamaya genel bakış (C#)
 Bu konular hakkında üst düzey genel bakış bilgileri sağlar. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sınıfları, hem de ayrıntılı bilgileri yaklaşık üç en önemli sınıfları.  
@@ -23,5 +23,6 @@ Bu konular hakkında üst düzey genel bakış bilgileri sağlar. [!INCLUDE[sqlt
 |[XDocument sınıfına genel bakış (C#)](../../../../csharp/programming-guide/concepts/linq/xdocument-class-overview.md)|Tanıtır <xref:System.Xml.Linq.XDocument> XML belgeleri temsil eden sınıf.|  
 |[Nasıl yapılır: derleme LINQ to XML örnekleri (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-build-linq-to-xml-examples.md)|İçeren `Using` LINQ to XML örnekleri oluşturmak için gerekli yönergeleri.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Programlama Kılavuzu (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [Programlama Kılavuzu (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

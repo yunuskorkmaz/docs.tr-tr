@@ -2,35 +2,35 @@
 title: Keşif Bağlama Öğesi Örneği
 ms.date: 03/30/2017
 ms.assetid: af513015-85bf-417b-8729-1bdff77ff6d6
-ms.openlocfilehash: 853f5cebfd745b3413d605dcfbf0e395e103b4f1
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: d906d9a389c50095f2af5d52e3874c3e43199e68
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805674"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43535783"
 ---
 # <a name="discovery-binding-element-sample"></a>Keşif Bağlama Öğesi Örneği
-Bu örnek, bir hizmet bulmak için bulma istemci bağlama öğesi kullanılacak gösterilmiştir. Bu özellik, bir keşif istemcisi kanalını programlama modeli çok sezgisel hale getirme, mevcut istemci kanal yığınına eklemek için geliştiricilere sağlar. İlişkili kanalı açıldığında hizmetinin adresini bulma kullanılarak çözümlenir. Bu örnek aşağıdaki projeleri oluşur:  
+Bu örnek, bir hizmet bulmak için bulma istemci bağlama öğesi kullanmayı gösterir. Bu özellik, geliştiricilerin çok sezgisel programlama modeli yaparak kendi mevcut istemci kanal yığınına bir keşif istemcisi kanalını eklemelerini sağlar. İlişkili kanalı açıldığında hizmetinin adresini bulma kullanılarak çözümlenir. Bu örnek aşağıdaki projeleri oluşur:  
   
--   **CalculatorService**: bulunabilirlik bir WCF hizmeti.  
+-   **CalculatorService**: WCF kayıtlı bir bulunabilir hizmet.  
   
--   **CalculatorClient**: bir WCF istemcisi keşif istemcisi kanalını aramak ve CalculatorService çağırmak için kullanan bir uygulama.  
+-   **CalculatorClient**: bir WCF istemcisi için arama yapın ve CalculatorService çağırmak için keşif istemcisi kanalını kullanan bir uygulama.  
   
--   **DynamicCalculatorClient**: bir WCF istemcisi aramak ve CalculatorService çağırmak için dinamik bir uç noktası kullanan bir uygulama.  
+-   **DynamicCalculatorClient**: bir WCF istemcisi için arama yapın ve CalculatorService çağırmak için dinamik bir uç nokta kullanan bir uygulama.  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryBindingElement`  
   
 ## <a name="calculatorservice"></a>CalculatorService  
- Bu proje uygulayan bir basit hesap makinesi hizmetinin içeriyor `ICalculatorService` sözleşme.  
+ Bu proje uygulayan basit hesap makinesi hizmette içeren `ICalculatorService` sözleşme.  
   
- Aşağıdaki App.config dosyası eklemek için kullanılan bir `<serviceDiscovery>` hizmet davranışları ve bunun yanı sıra bulma uç noktası davranışı.  
+ Aşağıdaki App.config dosyasına eklemek için kullanılan bir `<serviceDiscovery>` hizmet davranışları ve bunun yanı sıra bulma uç noktası davranışı.  
   
 ```xml  
 <system.serviceModel>  
@@ -51,7 +51,7 @@ Bu örnek, bir hizmet bulmak için bulma istemci bağlama öğesi kullanılacak 
   </system.serviceModel>  
 ```  
   
- Bu, hizmet ve bitiş noktaları bulunabilirlik kolaylaştırır. CalculatorService NetTcpBinding bağlama kullanarak bir uç nokta ekler kendini barındıran bir hizmettir. Ayrıca ekler bir `EndpointDiscoveryBehavior` uç noktasına ve aşağıdaki kodda gösterildiği gibi bir kapsam belirtir.  
+ Bu, hizmet ve kendi uç bulunabilmesini sağlar. CalculatorService ekleyen bir uç nokta NetTcpBinding bağlama kullanılarak şirket içinde barındırılan bir hizmettir. Ayrıca ekler bir `EndpointDiscoveryBehavior` uç noktasına ve aşağıdaki kodda gösterildiği gibi bir kapsam belirtiyor.  
   
 ```  
 // Add a NET.TCP endpoint and add a scope to that endpoint.  
@@ -63,7 +63,7 @@ serviceHost.Open();
 ```  
   
 ## <a name="calculatorclient"></a>CalculatorClient  
- Bu proje için CalculatorService iletileri gönderen bir istemci uygulaması içerir. Bu programın kullandığı `CreateCustomBindingWithDiscoveryElement()` yöntemi bir özel, bağlama oluşturmak için keşif istemcisi kanalını kullanır.  
+ Bu proje için CalculatorService iletiler gönderen bir istemci uygulaması içerir. Bu programın kullandığı `CreateCustomBindingWithDiscoveryElement()` keşif istemcisi kanalını özel bağlamayı oluşturmak için gereken yöntemini kullanır.  
   
 ```  
 static CustomBinding CreateCustomBindingWithDiscoveryElement()  
@@ -82,7 +82,7 @@ static CustomBinding CreateCustomBindingWithDiscoveryElement()
             return customBinding; }  
 ```  
   
- Sonra <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> olan örneği, geliştirici için bir hizmet ararken kullanılacak ölçütleri belirtir. Bu durumda, bulma bulma ölçüttür `ICalculatorService` türü. Ayrıca, geliştirici belirten bir <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> döndüren bir <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> nerede Hizmetleri araması belirtir. <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> Yeni döndürür <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> örneği. Daha fazla bilgi için bkz: [keşif istemci kanalıyla özel bağlama kullanma](../../../../docs/framework/wcf/feature-details/using-a-custom-binding-with-the-discovery-client-channel.md).  
+ Sonra <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> olan örneği, geliştirici hizmeti için aramak için kullanılan ölçütü belirtir. Bu durumda, bulma bulma ölçüttür `ICalculatorService` türü. Ayrıca, geliştirici belirtir bir <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> döndüren bir <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> Hizmetleri aranacağı belirtir. <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> Yeni döndürür <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> örneği. Daha fazla bilgi için [keşif istemci kanalıyla özel bağlama kullanma](../../../../docs/framework/wcf/feature-details/using-a-custom-binding-with-the-discovery-client-channel.md).  
   
 ```  
 // Extend DiscoveryEndpointProvider class to change the default DiscoveryEndpoint  
@@ -97,10 +97,10 @@ static CustomBinding CreateCustomBindingWithDiscoveryElement()
     }  
 ```  
   
- Bu durumda, istemci UDP kullanan Hizmetleri yerel alt ağda aramak için keşif protokolü tarafından tanımlanan çok noktaya yayın mekanizması. Yöntem kalanı özel bağlama oluşturur ve yığının en üstte keşif bağlama öğesi ekler.  
+ Bu durumda, istemci UDP kullanan yerel alt ağdaki hizmetleri Bulma Protokolü tarafından tanımlanan çok noktaya yayın mekanizması. Yöntemin geri kalanı, özel bir bağlama oluşturur ve yığın üstüne bulma bağlama öğesi ekler.  
   
 > [!NOTE]
->  <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> Bağlama yığının üst kısmında yer almalıdır. Tüm <xref:System.ServiceModel.Channels.BindingElement> üstünde <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> kanal fabrikası veya oluşturduğu kanal kullanmayan emin olmanız gerekir `EndpointAddress` veya `Via` özellikler, gerçek adresini yalnızca keşif istemcisi kanalını bulunamadığı için.  
+>  <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> Bağlama yığınının üzerinde yerleştirilmelidir. Tüm <xref:System.ServiceModel.Channels.BindingElement> üst kısmındaki <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> kanalı oluşturur ve kanal fabrikası kullanmaz emin olmanız gerekir `EndpointAddress` veya `Via` özellikleri, gerçek adresi yalnızca keşif istemcisi kanalını bulunamadığından.  
   
  Ardından, `CalculatorClient` bir uç nokta adresi yanı sıra, bu özel bağlama geçirerek oluşturulabilir.  
   
@@ -108,16 +108,16 @@ static CustomBinding CreateCustomBindingWithDiscoveryElement()
 CalculatorServiceClient client = new CalculatorServiceClient(CreateCustomBindingWithDiscoveryElement(), DiscoveryClientBindingElement.DiscoveryEndpointAddress);  
 ```  
   
- Keşif istemcisi kanalını kullanırken, belirtilen sabit uç noktası adresi daha önce geçirilen. Artık çalışma zamanında keşif istemcisi kanalını bulma ölçütleri tarafından belirtilen hizmetini bulur ve kendisine bağlar. Hizmet ve bağlantı kurmak için istemci için de aynı temel bağlama yığınına olmalıdır.  
+ Keşif istemcisi kanalını kullanırken, belirtilen sabit bir uç nokta adresini daha önce geçirilen. Artık çalışma zamanında, Keşif istemcisi kanalını bulma ölçütleri tarafından belirtilen hizmetini bulur ve kendisine bağlar. Hizmet ve istemci bağlantı kurmak için Ayrıca aynı temel alınan bağlama yığına sahip olmalıdır.  
   
 #### <a name="to-use-this-sample"></a>Bu örneği kullanmak için  
   
-1.  Çözümde açmak [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
+1.  Bir çözüm açın [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
   
 2.  Çözümü oluşturun.  
   
 3.  Hizmet uygulaması ve her bir istemci uygulamaları çalıştırın.  
   
-4.  İstemci hizmet adresini bilmeden bulamıyor gözlemleyin.  
+4.  İstemci hizmet adresini bilmeden bulamadı gözlemleyin.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.

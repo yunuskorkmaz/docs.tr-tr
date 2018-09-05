@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: cef2a907a8d7e6158239b88d5c8551c2c734faa0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: c9b2620ab72648ba57fe9d0eceece07ebcd17280
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43386304"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43538964"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>İzlenecek yol: Office Programlama (C# ve Visual Basic)
 Visual Studio, C# ve Visual Basic, Microsoft Office programlama artıran özellikleri sunar. Yararlı C# özellikleri adlandırılmış ve isteğe bağlı bağımsız değişkenler içerir ve dönüş türü değerlerinin `dynamic`. COM programlama, atlayabilirsiniz `ref` Dizinli Özellikler anahtar sözcüğü ve kazanç erişim. Visual Basic'de özellikler, lambda ifadeleri ve koleksiyon başlatıcıları deyimlerinde otomatik uygulanan özellikler içerir.
@@ -190,22 +190,23 @@ Bu izlenecek yolu tamamlamak için Microsoft Office Excel ve Microsoft Office Wo
   
 8.  Visual Studio'da **çözümü Temizle** üzerinde **derleme** tamamlanmış projeyi temizlemek için menü.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Otomatik uygulanan özellikler (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)  
- [Otomatik uygulanan özellikler (C#)](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
- [Öğe Başlatıcıları](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
- [Nesne ve Koleksiyon Başlatıcıları](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
- [İsteğe Bağlı Parametreler](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)  
- [Bağımsız Değişkenleri Konuma ve Ada Göre Geçirme](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)  
- [Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenler](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)  
- [Erken ve Geç Bağlama](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  
- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
- [Tür dinamiği kullanma](../../../csharp/programming-guide/types/using-type-dynamic.md)  
- [Lambda ifadeleri (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
- [Lambda ifadeleri (C#)](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
- [Nasıl yapılır: COM Birlikte Çalışma Programlamada Dizin Oluşturulmuş Özellikleri Kullanma](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)  
- [İzlenecek yol: Microsoft Office Bütünleştirilmiş Kodlarından Tür Bilgilerini Katıştırma](https://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3(v=vs.100))  
- [İzlenecek yol: Yönetilen Bütünleştirilmiş Kodlardan Türler Katıştırma](https://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
- [İnceleme: Excel için İlk VSTO Eklentinizi Oluşturma](https://msdn.microsoft.com/library/a855e2be-3ecf-4112-a7f5-ec0f7fad3b5f)  
- [COM Birlikte Çalışma](../../../visual-basic/programming-guide/com-interop/index.md)  
- [Birlikte çalışabilirlik](../../../csharp/programming-guide/interop/index.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [Otomatik uygulanan özellikler (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)  
+- [Otomatik uygulanan özellikler (C#)](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
+- [Öğe Başlatıcıları](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
+- [Nesne ve Koleksiyon Başlatıcıları](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
+- [İsteğe Bağlı Parametreler](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)  
+- [Bağımsız Değişkenleri Konuma ve Ada Göre Geçirme](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)  
+- [Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenler](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)  
+- [Erken ve Geç Bağlama](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  
+- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
+- [Tür dinamiği kullanma](../../../csharp/programming-guide/types/using-type-dynamic.md)  
+- [Lambda ifadeleri (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
+- [Lambda ifadeleri (C#)](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
+- [Nasıl yapılır: COM Birlikte Çalışma Programlamada Dizin Oluşturulmuş Özellikleri Kullanma](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)  
+- [İzlenecek yol: Microsoft Office Bütünleştirilmiş Kodlarından Tür Bilgilerini Katıştırma](https://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3(v=vs.100))  
+- [İzlenecek yol: Yönetilen Bütünleştirilmiş Kodlardan Türler Katıştırma](https://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
+- [İnceleme: Excel için İlk VSTO Eklentinizi Oluşturma](https://msdn.microsoft.com/library/a855e2be-3ecf-4112-a7f5-ec0f7fad3b5f)  
+- [COM Birlikte Çalışma](../../../visual-basic/programming-guide/com-interop/index.md)  
+- [Birlikte çalışabilirlik](../../../csharp/programming-guide/interop/index.md)

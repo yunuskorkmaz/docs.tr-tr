@@ -5,11 +5,11 @@ helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
 ms.openlocfilehash: 0fe38b690d093e5a0bbe90d2b62e56b5d0cb4816
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43417405"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43534715"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Windows İşlem Etkinleştirme Hizmetinde Barındırma
 Windows İşlem Etkinleştirme Hizmeti (WAS) etkinleştirme ve uygulamaları Windows Communication Foundation (WCF) hizmetlerini barındırmak içeren çalışan işlemleri yaşam süresini yönetir. WAS işlem modelini genelleştirir [!INCLUDE[iis601](../../../../includes/iis601-md.md)] HTTP sunucusu, HTTP bağımlılığını kaldırarak işlem modeli. Bu, hem HTTP hem de ileti tabanlı etkinleştirme destekleyen ve çok sayıda belirli bir makinede uygulamaları barındırmak için eklenebilir bir barındırma ortamında Net.TCP gibi HTTP olmayan protokolleri kullanmak WCF hizmetleri sağlar.  

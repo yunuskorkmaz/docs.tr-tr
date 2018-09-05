@@ -2,12 +2,12 @@
 title: ADO.NET'e LINQ (Portal Sayfası)
 ms.date: 07/20/2015
 ms.assetid: 6bd269b4-3509-4688-b672-836008704182
-ms.openlocfilehash: 0d8fd3834f4d44e266f7925dcf02a6fee9d05f3b
-ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.openlocfilehash: aa8a5922ab33bf571f96d7b2dc3ea7d5877464cb
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43331990"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526238"
 ---
 # <a name="linq-to-adonet-portal-page"></a>ADO.NET'e LINQ (Portal Sayfası)
 [!INCLUDE[linq_adonet](~/includes/linq-adonet-md.md)] içinde herhangi bir numaralandırma nesnesi üzerinde sorgulama sayesinde [!INCLUDE[vstecado](~/includes/vstecado-md.md)] kullanarak [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] programlama modeli.  
@@ -34,6 +34,7 @@ ms.locfileid: "43331990"
 ## <a name="linq-to-entities"></a>LINQ - Varlıklar  
  Aracılığıyla [!INCLUDE[adonet_edm](~/includes/adonet-edm-md.md)], ilişkisel veri, .NET ortamını nesneler olarak gösterilir. Bu nesne için ideal bir hedef katman sağlar [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] geliştiriciler, iş mantığı oluşturmak için kullanılan dil veritabanından karşı sorgular formüle etmek destek. Bu özellik olarak da bilinen [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)]. Bkz: [LINQ to Entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md) daha fazla bilgi için.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [LINQ ve ADO.NET](https://msdn.microsoft.com/library/bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec)  
- [Dil ile tümleşik sorgu (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [LINQ ve ADO.NET](https://msdn.microsoft.com/library/bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec)  
+- [Dil ile tümleşik sorgu (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)

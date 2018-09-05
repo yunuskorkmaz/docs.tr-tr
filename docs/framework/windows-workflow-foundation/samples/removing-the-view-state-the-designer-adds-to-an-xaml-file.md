@@ -3,11 +3,11 @@ title: Tasarımcı görünüm durumunu kaldırma bir XAML dosyasına eklediği
 ms.date: 03/30/2017
 ms.assetid: a801ce22-8699-483c-a392-7bb3834aae4f
 ms.openlocfilehash: ed2fda0bb66b2c8fe58c60acc6f80b9e9c8e984e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43386939"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524958"
 ---
 # <a name="removing-the-view-state-the-designer-adds-to-an-xaml-file"></a>Tasarımcı görünüm durumunu kaldırma bir XAML dosyasına eklediği
 Bu örnek, türetilen bir sınıf oluşturmak nasıl gösterir <xref:System.Windows.Markup.XamlWriter> ve kaldırır bir XAML dosyası durumunu görüntüleyin. [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] Görünüm durumu bilinen XAML belgesine bilgilerini yazar. Görünüm durumu çalışma zamanında gerekli değildir yerleşim konumlandırma gibi tasarım zamanında gerekli olan bilgileri ifade eder. [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] Bu bilgiler düzenlemiş XAML belgeye ekler. [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] Görünüm durumu ile XAML dosyasına yazar `mc:Ignorable` özniteliği için çalışma zamanı XAML dosya yüklendiğinde bu bilgileri yüklü değil. Bu örnek, Görünüm durumu bilgilerinin XAML düğümleri işlenirken kaldıran bir sınıf oluşturmak nasıl gösterir.  

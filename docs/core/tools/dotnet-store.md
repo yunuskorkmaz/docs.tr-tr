@@ -1,15 +1,15 @@
 ---
 title: DotNet depolama komutu
-description: "'Dotnet depo' komutu çalışma zamanı paketi deposunda belirtilen derlemelerini depolar."
+description: "'Dotnet deposu' komutunu belirtilen derlemeleri çalışma zamanı Paket Deposu."
 author: bleroy
 ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 54654522207157f7d49bb86223b7986acccf51ee
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: a12738d0cc8edcbb65d5b6fab6e7c8b209b0f4b5
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696331"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43535982"
 ---
 # <a name="dotnet-store"></a>DotNet deposu
 
@@ -17,35 +17,35 @@ ms.locfileid: "34696331"
 
 ## <a name="name"></a>Ad
 
-`dotnet store` -Belirtilen derlemelerde depolar [çalışma zamanı Paket Deposu](../deploying/runtime-store.md).
+`dotnet store` -Belirli derlemelerde depolar [çalışma zamanı Paket Deposu](../deploying/runtime-store.md).
 
-## <a name="synopsis"></a>Özet
+## <a name="synopsis"></a>Özeti
 
 `dotnet store -m|--manifest -f|--framework -r|--runtime  [--framework-version] [-h|--help] [--output] [--skip-optimization] [--skip-symbols] [-v|--verbosity] [--working-dir]`
 
 ## <a name="description"></a>Açıklama
 
-`dotnet store` Belirtilen derlemelerde depolar [çalışma zamanı Paket Deposu](../deploying/runtime-store.md). Varsayılan olarak, derlemeleri hedef çalışma zamanı ve framework için getirilmiştir. Daha fazla bilgi için bkz: [çalışma zamanı Paket Deposu](../deploying/runtime-store.md) konu.
+`dotnet store` Belirtilen derlemede depolar [çalışma zamanı Paket Deposu](../deploying/runtime-store.md). Varsayılan olarak, derlemeleri çerçevesi ve hedef çalışma zamanı için iyileştirilmiştir. Daha fazla bilgi için [çalışma zamanı Paket Deposu](../deploying/runtime-store.md) konu.
 
-## <a name="required-options"></a>Gerekli seçenekler
+## <a name="required-options"></a>Gerekli seçenekleri
 
 `-f|--framework <FRAMEWORK>`
 
-Belirtir [hedef framework](../../standard/frameworks.md).
+Belirtir [hedef Framework'ü](../../standard/frameworks.md).
 
 `-m|--manifest <PATH_TO_MANIFEST_FILE>`
 
-*Paket Deposu bildirim dosyası* depolamak için paketlerin listesini içeren bir XML dosyasıdır. Bildirim dosyasının biçimi SDK stili project biçimiyle uyumlu. Bu nedenle, istediğiniz paketleri başvuruda bulunan bir proje dosyası ile birlikte kullanılabilir `-m|--manifest` derlemeleri çalışma zamanı paketi deposunda depolamak için seçeneği. Birden çok bildirim dosyası belirtmek için yolu ve seçeneği her dosya için yineleyin. Örneğin: `--manifest packages1.csproj --manifest packages2.csproj`.
+*Paket Deposu bildirim dosyası* depolamak için paketler listesini içeren bir XML dosyasıdır. Bildirim dosyasının biçimi SDK stilinde proje biçimi ile uyumludur. Bu nedenle, istediğiniz paketleri başvuran bir proje dosyası ile birlikte kullanılabilir `-m|--manifest` derlemeler çalışma zamanı paketi deposuna seçeneği. Birden çok bildirim dosyaları belirtmek için her dosya için yolu ve seçeneği yineleyin. Örneğin: `--manifest packages1.csproj --manifest packages2.csproj`.
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-[Çalışma zamanı tanımlayıcı](../rid-catalog.md) hedef.
+[Çalışma zamanı tanımlayıcısı](../rid-catalog.md) hedef.
 
-## <a name="optional-options"></a>İsteğe bağlı seçenekleri
+## <a name="optional-options"></a>İsteğe bağlı Seçenekler
 
 `--framework-version <FRAMEWORK_VERSION>`
 
-.NET Core SDK sürümünü belirtir. Bu seçeneği tarafından belirtilen framework ötesinde belirli framework sürümünü seçmenize olanak sağlar `-f|--framework` seçeneği.
+.NET Core SDK'sı sürümünü belirtir. Bu seçeneği tarafından belirtilen framework ötesinde bir özel framework sürümünü seçmenize olanak sağlayan `-f|--framework` seçeneği.
 
 `-h|--help`
 
@@ -53,7 +53,7 @@ Yardım bilgisi gösterir.
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
-Çalışma zamanı paketi deposunun yolunu belirtir. Belirtilmezse, varsayılan olarak *depolamak* kullanıcı profili .NET Core yükleme dizininin alt.
+Çalışma zamanı Paket Deposu yolunu belirtir. Belirtilmezse, varsayılan *depolamak* kullanıcı profili .NET Core yükleme dizininin alt.
 
 `--skip-optimization`
 
@@ -61,26 +61,26 @@ Yardım bilgisi gösterir.
 
 `--skip-symbols`
 
-Atlar nesil simge. Şu anda yalnızca Windows ve Linux üzerindeki simgelerin oluşturabilir.
+Atlamalar nesil simge. Şu anda yalnızca Windows ve Linux üzerinde sembolleri oluşturabilirsiniz.
 
 `-v|--verbosity <LEVEL>`
 
-Komutun ayrıntı düzeyi ayarlar. İzin verilen değerler `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, ve `diag[nostic]`.
+Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, ve `diag[nostic]`.
 
 `-w|--working-dir <INTERMEDIATE_WORKING_DIRECTORY>`
 
-Komutu tarafından kullanılan çalışma dizini. Belirtilmezse, kullanan *obj* geçerli dizinin alt dizini.
+Komut tarafından kullanılan çalışma dizini. Belirtilmezse, kullandığı *obj* geçerli dizininin alt.
 
 ## <a name="examples"></a>Örnekler
 
-Belirtilen paketleri depolamak *packages.csproj* .NET Core 2.0.0 için proje dosyası:
+Belirtilen paket Store *packages.csproj* .NET Core 2.0.0 için proje dosyası:
 
 `dotnet store --manifest packages.csproj --framework-version 2.0.0`
 
-Belirtilen paketleri depolamak *packages.csproj* en iyi duruma getirme olmadan:
+Belirtilen paket Store *packages.csproj* iyileştirme olmadan:
 
 `dotnet store --manifest packages.csproj --skip-optimization`
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Çalışma zamanı paket deposu](../deploying/runtime-store.md)
+* [Çalışma zamanı paket deposu](../deploying/runtime-store.md)

@@ -7,50 +7,51 @@ helpviewer_keywords:
 - C# language, abstract classes
 - C# language, sealed
 ms.assetid: 99aa52f7-b435-43f9-936e-2470af734c4e
-ms.openlocfilehash: aa7c951acadd2e7b60f6da17cd7bf357fbd02d95
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0e80357a51bde270d5ed012f16f7b2e821f084c8
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33313920"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517348"
 ---
 # <a name="abstract-and-sealed-classes-and-class-members-c-programming-guide"></a>Soyut ve Korumalı Sınıflar ve Sınıf Üyeleri (C# Programlama Kılavuzu)
-[Soyut](../../../csharp/language-reference/keywords/abstract.md) anahtar sözcüğü sınıfları oluşturmanıza olanak sağlar ve [sınıfı](../../../csharp/language-reference/keywords/class.md) tamamlanmamış ve türetilen bir sınıfta uygulanmalı üyeleri.  
+[Soyut](../../../csharp/language-reference/keywords/abstract.md) anahtar sözcüğü sınıflar oluşturmanıza olanak sağlar ve [sınıfı](../../../csharp/language-reference/keywords/class.md) , eksik olan ve türetilen bir sınıfta uygulanması gereken üyeleri.  
   
- [Korumalı](../../../csharp/language-reference/keywords/sealed.md) anahtar sözcüğü bir sınıf ya da daha önce işaretlenen belirli sınıfı üyeleri devralma önlemek etkinleştirir [sanal](../../../csharp/language-reference/keywords/virtual.md).  
+ [Korumalı](../../../csharp/language-reference/keywords/sealed.md) anahtar sözcüğü bir sınıf ya da önceden işaretlenmiş belirli sınıf üyelerinin devralınmasını önlemenizi sağlar sağlayan [sanal](../../../csharp/language-reference/keywords/virtual.md).  
   
 ## <a name="abstract-classes-and-class-members"></a>Soyut sınıflar ve sınıf üyeleri  
- Sınıfları bildirilebilir soyut olarak anahtar sözcüğü koyarak `abstract` sınıf tanımını önce. Örneğin:  
+ Sınıfları bildirilebilir soyut olarak anahtar sözcüğü yerleştirilerek `abstract` sınıf tanımından önce. Örneğin:  
   
  [!code-csharp[csProgGuideInheritance#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/abstract-and-sealed-classes-and-class-members_1.cs)]  
   
- Bir Özet sınıfın örneği oluşturulamıyor. Bir Özet sınıf amacı bir taban sınıfın birden çok türetilen sınıflar paylaşabilirsiniz ortak bir tanımı sağlamaktır. Örneğin, bir sınıf kitaplığı birçok işlevlerini parametre olarak kullanılan soyut bir sınıf tanımlama ve türetilmiş bir sınıf oluşturarak, kendi uygulama sınıfının sağlamak için bu kitaplığı kullanarak programcıları gerektirir.  
+ Bir soyut sınıfı oluşturulamıyor. Amacı bir soyut sınıfı, birden çok türetilmiş sınıflar paylaşabileceğiniz bir taban sınıfın ortak bir tanımını sağlamaktır. Örneğin, bir sınıf kitaplığı işlevlerinden birçoğuna bir parametre olarak kullanılan bir soyut sınıfını tanımlayabilir ve programcıların bir türetilmiş sınıf oluşturarak sınıf kendi uygulamasını sağlamak üzere bu kitaplığı kullanarak gerektirir.  
   
- Soyut sınıfların soyut yöntemler de tanımlayabilir. Bu anahtar sözcüğü ekleyerek gerçekleştirilir `abstract` önce yönteminin dönüş türü. Örneğin:  
+ Soyut sınıfları ayrıca soyut yöntemlerini de tanımlayabilir. Bu anahtar sözcüğü eklenerek elde edilir `abstract` yöntemin dönüş türünden önce. Örneğin:  
   
  [!code-csharp[csProgGuideInheritance#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/abstract-and-sealed-classes-and-class-members_2.cs)]  
   
- Soyut yöntemler hiçbir uygulama sahip, bu nedenle yöntem tanımı normal yöntem bloğu yerine noktalı izlenir. Soyut sınıftan türetilen sınıflar tüm soyut yöntemler uygulamalıdır. Soyut bir sınıf sanal bir yöntem bir taban sınıftan, soyut sınıf ile soyut bir yöntem sanal yöntemi geçersiz kılabilirsiniz. Örneğin:  
+ Yöntem tanımını ve ardından normal yöntem bloğu yerine bir noktalı virgül şekilde soyut yöntemler, uygulaması bulunmuyor. Soyut sınıfının türetilmiş sınıfları tüm soyut yöntemlerini uygulamalıdır. Bir Özet sınıf bir taban sınıftan sanal bir yöntemi devraldığında, soyut sınıf sanal yöntemi soyut bir yöntemle geçersiz kılabilirsiniz. Örneğin:  
   
  [!code-csharp[csProgGuideInheritance#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/abstract-and-sealed-classes-and-class-members_3.cs)]  
   
- Varsa bir `virtual` yöntemi bildirilen `abstract`, soyut sınıfından devralan herhangi bir sınıf için hala sanal. Soyut bir yöntem devralan bir sınıf yöntemi'nın özgün uygulaması erişemiyor — önceki örnekte, `DoWork` F çağıramaz sınıfındaki `DoWork` sınıfı D. üzerinde Bu şekilde, bir Özet sınıf sanal yöntemler için yeni yöntemi uygulamaları sağlamak için türetilen sınıflar zorlayabilirsiniz.  
+ Varsa bir `virtual` yöntemi bildirilmiş `abstract`, hala soyut sınıfından devralan herhangi bir sınıf için sanal. Bir soyut yönteminden devralan bir sınıf, yöntemin asıl uygulamasına erişemez; önceki örnekte, `DoWork` F çağıramaz sınıfında `DoWork` sınıfı d Bu yolla bir soyut sınıfı türetilen sınıfları sanal yöntemler için yeni yöntem uygulamaları sağlamak için zorlayabilirsiniz.  
   
 ## <a name="sealed-classes-and-class-members"></a>Korumalı sınıflar ve sınıf üyeleri  
- Sınıflar olarak bildirilebilir [korumalı](../../../csharp/language-reference/keywords/sealed.md) anahtar sözcüğü koyarak `sealed` sınıf tanımını önce. Örneğin:  
+ Sınıflar olarak bildirilebilir [korumalı](../../../csharp/language-reference/keywords/sealed.md) anahtar sözcüğü yerleştirilerek `sealed` sınıf tanımından önce. Örneğin:  
   
  [!code-csharp[csProgGuideInheritance#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/abstract-and-sealed-classes-and-class-members_4.cs)]  
   
- Korumalı bir sınıfın temel sınıf olarak kullanılamaz. Bu nedenle, bu da bir Özet sınıf olamaz. Sealed sınıfları türetme engeller. Bir temel sınıf olarak hiçbir zaman kullanılabilir olduğundan, bazı çalışma zamanı iyileştirmeleri biraz daha hızlı arama korumalı sınıf üyeleri yapabilirsiniz.  
+ Korumalı sınıf bir taban sınıfı olarak kullanılamaz. Bu nedenle, bir soyut sınıfı da olamaz. Korumalı sınıflar türetmeyi önler. Temel sınıf olarak hiçbir zaman kullanılabilir olduğundan, bazı çalışma zamanı iyileştirmeleri korumalı sınıf üyelerinin biraz daha hızlı arama yapabilirsiniz.  
   
- Yöntemi, dizin oluşturucu, özelliği veya olayda sanal temel sınıf üyesi geçersiz kılma türetilmiş bir sınıf, üye korumalı olarak bildirebilirsiniz. Bu üye için daha fazla türetilmiş bir sınıf sanal yönünü üzerindeki geçersiz kılar. Bu koyarak gerçekleştirilir `sealed` önce anahtar sözcüğü [geçersiz kılma](../../../csharp/language-reference/keywords/override.md) sınıf üyesi bildirim anahtar sözcük. Örneğin:  
+ Yöntemi, dizin oluşturucu, özellik veya olay, temel sınıf sanal bir üyesinin geçersiz kılan türetilmiş bir sınıfta o üyeyi korumalı olarak bildirebilir. Bu daha fazla türetilmiş herhangi bir sınıf üyesinin sanal yönünü olumsuz duruma getirir. Konarak elde edilir `sealed` anahtar sözcüğünün önüne [geçersiz kılma](../../../csharp/language-reference/keywords/override.md) sınıf üyesi bildiriminde anahtar sözcüğü. Örneğin:  
   
  [!code-csharp[csProgGuideInheritance#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/abstract-and-sealed-classes-and-class-members_5.cs)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [Sınıflar ve Yapılar](../../../csharp/programming-guide/classes-and-structs/index.md)  
- [Devralma](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
- [Yöntemler](../../../csharp/programming-guide/classes-and-structs/methods.md)  
- [Alanlar](../../../csharp/programming-guide/classes-and-structs/fields.md)  
- [Nasıl yapılır: Soyut Özellikleri Tanımlama](../../../csharp/programming-guide/classes-and-structs/how-to-define-abstract-properties.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [Sınıflar ve Yapılar](../../../csharp/programming-guide/classes-and-structs/index.md)  
+- [Devralma](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
+- [Yöntemler](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+- [Alanlar](../../../csharp/programming-guide/classes-and-structs/fields.md)  
+- [Nasıl yapılır: Soyut Özellikleri Tanımlama](../../../csharp/programming-guide/classes-and-structs/how-to-define-abstract-properties.md)

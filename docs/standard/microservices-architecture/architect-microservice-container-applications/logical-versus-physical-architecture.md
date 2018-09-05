@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: ebbae336761c6fa7954862cd41052e8832bf8e77
-ms.sourcegitcommit: 875ecc3ab2437e299b1d50076bd9b878fa8c64de
+ms.openlocfilehash: bb5f0daf0bcf824d72bb104914de03532bd3f9f7
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43238422"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43534800"
 ---
 # <a name="logical-architecture-versus-physical-architecture"></a>Mantıksal mimari ile fiziksel mimari karşılaştırması
 
@@ -17,7 +17,7 @@ Bu noktada durdurmak ve mantıksal mimari ile fiziksel mimari ve nasıl Bu mikro
 
 Başlamak için mikro hizmetler oluşturma herhangi belirli bir teknoloji kullanımı gerektirmez. Örneğin, Docker kapsayıcıları, mikro hizmet tabanlı bir mimari oluşturmak için zorunlu değildir. Bu mikro hizmetler ayrıca düz işlemleri olarak çalıştırabilir. Mikro hizmetler mantıksal bir mimaridir.
 
-Ayrıca, bile bir mikro hizmet, fiziksel bir tek hizmet, işlem veya kapsayıcı uygulanabilir (Basitlik'ın çok için olan ilk sürümünde uygulanan yaklaşıma [hizmetine](http://aka.ms/MicroservicesArchitecture)), bu arasındaki eşlik birçok düzinelerce veya hatta yüzlerce hizmeti oluşan büyük ve karmaşık bir uygulama oluşturduğunuzda iş mikro hizmet ve fiziksel hizmet veya kapsayıcı mutlaka her durumda gerekli değildir.
+Ayrıca, bile bir mikro hizmet, fiziksel bir tek hizmet, işlem veya kapsayıcı uygulanabilir (Basitlik'ın çok için olan ilk sürümünde uygulanan yaklaşıma [hizmetine](https://aka.ms/MicroservicesArchitecture)), bu arasındaki eşlik birçok düzinelerce veya hatta yüzlerce hizmeti oluşan büyük ve karmaşık bir uygulama oluşturduğunuzda iş mikro hizmet ve fiziksel hizmet veya kapsayıcı mutlaka her durumda gerekli değildir.
 
 Burada bir uygulamanın mantıksal mimari ile fiziksel mimari arasında bir fark yoktur. Bir sistemin mantıksal sınırları ve mantıksal mimariyi mutlaka bire bir fiziksel veya dağıtım mimarisinin eşlemeyin. Olabilir, ancak genellikle yok.
 

@@ -5,27 +5,28 @@ helpviewer_keywords:
 - C# language, constants
 - constants [C#]
 ms.assetid: 43f511be-346c-4b8a-995e-aded94542ece
-ms.openlocfilehash: 03912a71aba883ec9127d265e6f1a2b05e1e60fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 09d19f708570b55509a3ec2a41e439cb9c9de973
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33313228"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43540238"
 ---
 # <a name="how-to-define-constants-in-c"></a>Nasıl yapılır: C# İçinde Sabitleri Tanımlama
-Sabit değerleri belirlenmiş alanları derleme zamanı ve hiçbir zaman değiştirilemez vardır. Sabitler sayısal değişmez değerleri ("Sihirli sayı") yerine anlamlı bir ad için özel değerler sağlamak için kullanın.  
+Alanlar, değerleri kümesine derleme zamanı ve hiçbir zaman değiştirilebilir sabittir. Özel değerler için sayısal değişmez değerleri ("Sihirli sayı") yerine anlamlı adlar sağlamak için sabitleri kullanın.  
   
 > [!NOTE]
->  C# [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) önişlemci yönergesi, genellikle C ve C++ kullanılan şekilde sabitleri tanımlamak için kullanılamaz.  
+>  C# [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) önişlemci yönergesi, genellikle C ve C++ içinde kullanılan bir şekilde sabitleri tanımlamak için kullanılamaz.  
   
- Tam sayı türleri sabit değerleri tanımlamak için (`int`, `byte`, vb.) bir numaralandırılmış türünü kullanın. Daha fazla bilgi için bkz: [enum](../../../csharp/language-reference/keywords/enum.md).  
+ İntegral türündeki sabit değerler tanımlamak için (`int`, `byte`, vb.) bir listeden seçimli türü kullanın. Daha fazla bilgi için [enum](../../../csharp/language-reference/keywords/enum.md).  
   
- İntegral olmayan sabitleri tanımlamak için adlı tek bir statik sınıf grup için bir yaklaşım ise `Constants`. Bu sınıf adıyla sabitlere yapılan tüm başvurular başında aşağıdaki örnekte gösterildiği gibi gerektirir.  
+ Tamsayı olmayan sabitleri tanımlamak için adlı tek bir statik sınıf içinde gruplamak için bir yaklaşım ise `Constants`. Bu sınıfı adıyla sabitlere yapılan tüm başvurular başında, aşağıdaki örnekte gösterildiği gibi gerektirir.  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[csProgGuideObjects#89](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-constants_1.cs)]  
   
- Sınıf adı niteleyici kullanımını sizin ve başkalarının sabiti kullanan sabittir ve değiştirilemez anladığınızdan emin olun yardımcı olur.  
+ Sınıf adı niteleyici kullanımını yardımcı olur ve sabit diğer sabittir ve değiştirilemez anladığınızdan emin olun.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Sınıflar ve Yapılar](../../../csharp/programming-guide/classes-and-structs/index.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [Sınıflar ve Yapılar](../../../csharp/programming-guide/classes-and-structs/index.md)

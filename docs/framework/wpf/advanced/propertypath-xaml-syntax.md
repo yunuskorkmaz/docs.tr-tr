@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
 ms.openlocfilehash: 24dd4ca5663f2e6d98ed3888f07329724fdc353d
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934119"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43535480"
 ---
 # <a name="propertypath-xaml-syntax"></a>PropertyPath XAML Sözdizimi
 <xref:System.Windows.PropertyPath> Nesne destekleyen karmaşık bir satır içi [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ele çeşitli özelliklerini ayarlamak için söz dizimi <xref:System.Windows.PropertyPath> değerlerine türü. Bu konu belgeleri <xref:System.Windows.PropertyPath> bağlama ve animasyon sözdizimleri için uygulanan sözdizimi.  

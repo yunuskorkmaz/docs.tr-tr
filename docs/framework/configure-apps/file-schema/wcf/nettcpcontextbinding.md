@@ -3,11 +3,11 @@ title: '&lt;netTcpContextBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1d4715e1-5fff-4c3d-a226-18f21d0b30c4
 ms.openlocfilehash: 6cb29638e6a8c71371ce230ec3e08f2daedaaa44
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43406519"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516362"
 ---
 # <a name="ltnettcpcontextbindinggt"></a>&lt;netTcpContextBinding&gt;
 İçin bir bağlam belirtir <xref:System.ServiceModel.NetTcpBinding> koruma düzeyi imzalanması gerektiren. ContextExchangeMechanism NetTcpContextBinding için SOAPHeader ' dir.  

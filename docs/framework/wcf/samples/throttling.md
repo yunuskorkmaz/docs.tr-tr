@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Throttling Sample [Windows Communication Foundation]
 ms.assetid: 40bb3582-8ae9-4410-96f0-6c515bfaf47c
 ms.openlocfilehash: f214e3a5230d6cf16b3bde5d89078160ed95f96f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481598"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519172"
 ---
 # <a name="throttling"></a>Sınırlama
 Azaltma örnek azaltma denetimleri kullanımını gösterir. Azaltma denetimleri sınırlarını eşzamanlı çağrıları, örnekleri veya oturumları kaynakların aşırı kullanımını önlemek için sayısına yerleştirin. Azaltma davranışı, hizmet yapılandırma dosyası ayarlarında belirtilir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hesaplayıcı hizmet uygulayan.  

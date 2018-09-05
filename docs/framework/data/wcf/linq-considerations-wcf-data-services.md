@@ -10,11 +10,11 @@ helpviewer_keywords:
 - WCF Data Services, querying
 ms.assetid: cc4ec9e9-348f-42a6-a78e-1cd40e370656
 ms.openlocfilehash: 92b3444f81f00ee709c22836126073d342c6fa05
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43394646"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526823"
 ---
 # <a name="linq-considerations-wcf-data-services"></a>LINQ konuları (WCF Data Services)
 Bu konu içinde hangi LINQ sorguları oluşan ve kullanırken yürütülen yolu hakkında bilgi sağlar [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] istemci ve uygulayan bir veri hizmeti sorgulamak için LINQ kullanma sınırlamaları [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. Oluşturma ve sorgu yürütme hakkında daha fazla bilgi için bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-veri hizmetine bağlı bkz [veri hizmetini sorgulama](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  

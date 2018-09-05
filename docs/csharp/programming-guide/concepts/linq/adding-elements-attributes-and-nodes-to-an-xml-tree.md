@@ -1,26 +1,26 @@
 ---
-title: Bir XML ağacına (C#) öğeleri, öznitelikleri ve düğümler ekleme
+title: (C#) XML ağacına öğe, öznitelik ve düğümleri ekleme
 ms.date: 07/20/2015
 ms.assetid: db911e4f-40aa-499a-9500-a9763bb6df56
-ms.openlocfilehash: 2996b4f24b421e7a818381817e598804f9199d38
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1ebc300d74f8dbf0ec746a14f19b5cf0c7ffa51b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316328"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517065"
 ---
-# <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-c"></a>Bir XML ağacına (C#) öğeleri, öznitelikleri ve düğümler ekleme
-Varolan bir XML ağacına içerik (öğeleri, öznitelikleri, yorumlar, işleme yönergeleri, metin ve CDATA) ekleyebilirsiniz.  
+# <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-c"></a>(C#) XML ağacına öğe, öznitelik ve düğümleri ekleme
+Varolan bir XML ağacına içeriği (öğe, öznitelik, yorumlar, işleme yönergeleri, metin ve CDATA) ekleyebilirsiniz.  
   
 ## <a name="methods-for-adding-content"></a>İçerik ekleme yöntemleri  
- Alt içerik için aşağıdaki yöntemleri ekleyin bir <xref:System.Xml.Linq.XElement> veya bir <xref:System.Xml.Linq.XDocument>:  
+ Aşağıdaki yöntemler alt içeriğin bir <xref:System.Xml.Linq.XElement> veya <xref:System.Xml.Linq.XDocument>:  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XContainer.Add%2A>|İçeriği, içerik alt sonuna ekler <xref:System.Xml.Linq.XContainer>.|  
-|<xref:System.Xml.Linq.XContainer.AddFirst%2A>|Alt öğe içeriğini başında içeriği ekler <xref:System.Xml.Linq.XContainer>.|  
+|<xref:System.Xml.Linq.XContainer.Add%2A>|İçeriği, içerik alt sonunda ekler <xref:System.Xml.Linq.XContainer>.|  
+|<xref:System.Xml.Linq.XContainer.AddFirst%2A>|İçeriği, içerik alt başında ekler <xref:System.Xml.Linq.XContainer>.|  
   
- Aşağıdaki yöntemlerden içeriği eş düğümleri olarak eklemek bir <xref:System.Xml.Linq.XNode>. Eşdüzey içeriğin için eklediğiniz en yaygın düğüm <xref:System.Xml.Linq.XElement>, geçerli eşdüzey içeriği gibi diğer tür düğüm ekleyebilirsiniz, ancak <xref:System.Xml.Linq.XText> veya <xref:System.Xml.Linq.XComment>.  
+ Aşağıdaki yöntemlerden içerik eşdüzey düğümleri olarak eklemek bir <xref:System.Xml.Linq.XNode>. Eşdüzey içeriği için eklediğiniz en yaygın düğüm <xref:System.Xml.Linq.XElement>, geçerli eşdüzey içeriği gibi diğer düğümleri türlerine ekleyebilirsiniz ancak <xref:System.Xml.Linq.XText> veya <xref:System.Xml.Linq.XComment>.  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
@@ -30,7 +30,7 @@ Varolan bir XML ağacına içerik (öğeleri, öznitelikleri, yorumlar, işleme 
 ## <a name="example"></a>Örnek  
   
 ### <a name="description"></a>Açıklama  
- Aşağıdaki örnekte, iki XML ağaçları oluşturur ve ağaçları birini değiştirir.  
+ Aşağıdaki örnek, iki XML ağaçlarını oluşturur ve bir ağaçları değiştirir.  
   
 ### <a name="code"></a>Kod  
   
@@ -77,5 +77,6 @@ Console.WriteLine(xmlTree);
 </Root>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [XML ağaçları (LINQ-XML) değiştirme (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [(LINQ to XML) XML ağaçlarını değiştirme (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

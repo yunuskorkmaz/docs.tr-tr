@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, operator overloading
 - operator overloading [C#]
 ms.assetid: 390d9d01-79fc-40ab-9ed3-0bf448da1b6a
-ms.openlocfilehash: 96a23e71b6b7dbfd9c7ccf99bc58366e7f99f59b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: f819e94fd532c10478ac39da9485126aa4380dd5
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43451681"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43540748"
 ---
 # <a name="overloadable-operators-c-programming-guide"></a>Fazla yüklenebilir işleçler (C# programlama Kılavuzu)
 
@@ -32,7 +32,7 @@ C# işleçleri kullanarak statik üye işlevleri tanımlayarak aşırı yükleme
 
 Bir işleç aşırı yüklemesi hakkında daha fazla bilgi için bkz: [işleci](../../language-reference/keywords/operator.md) anahtar sözcüğü makalesi.
 
-## <a name="see-also"></a>Ayrıca bkz.
+## <a name="see-also"></a>Ayrıca Bkz.
 
 - [C# Programlama Kılavuzu](../index.md)
 - [Deyimler, İfadeler ve İşleçler](index.md)

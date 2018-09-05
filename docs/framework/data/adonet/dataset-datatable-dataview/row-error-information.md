@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 8b1f9070-d032-48c7-b030-bd8fbb2ca59a
 ms.openlocfilehash: cf798ac88ba83e890086cec7424c8c363980718f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43399043"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43530551"
 ---
 # <a name="row-error-information"></a>Satır hatası bilgileri
 Değerleri düzenleme sırasında satır hatalar için yanıt zorunda kalmamak için bir <xref:System.Data.DataTable>, hata bilgilerini daha sonra kullanmak için bir satır ekleyebilirsiniz. <xref:System.Data.DataRow> Nesnesi sağlayan bir <xref:System.Data.DataRow.RowError%2A> bu amaçla her satırında özelliği. Veri ekleme **RowError** özelliği bir **DataRow** ayarlar <xref:System.Data.DataRow.HasErrors%2A> özelliği **DataRow** için **true**. Varsa **DataRow** parçası olan bir **DataTable**, ve **DataRow.HasErrors** olduğu **true**, **DataTable.HasErrors** özelliği de **true**. Bunun için de geçerlidir **veri kümesi** hangi **DataTable** ait. Hataları için test yapma, denetleyebilirsiniz **HasErrors** hata bilgisi için herhangi bir satır eklenip eklenmediğini belirlemek için özellik. Varsa **HasErrors** olduğu **true**, kullanabileceğiniz <xref:System.Data.DataTable.GetErrors%2A> yöntemi **DataTable** dönün ve aşağıdaki örnekte gösterildiği gibi yalnızca hataları olan satırlar inceleyin.  

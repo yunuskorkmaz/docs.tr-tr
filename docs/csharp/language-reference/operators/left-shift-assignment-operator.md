@@ -8,11 +8,11 @@ helpviewer_keywords:
 - left shift assignment operator (<<=) [C#]
 ms.assetid: 3bc99c78-1edb-4827-86fc-bce6c3048871
 ms.openlocfilehash: c689aeccdf3ad6cc6c672cc101a4f0aa92f19791
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43406980"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517210"
 ---
 # <a name="ltlt-operator-c-reference"></a>&lt;&lt;= İşleci (C# Başvurusu)
 Sola kaydırma atama işleci.  

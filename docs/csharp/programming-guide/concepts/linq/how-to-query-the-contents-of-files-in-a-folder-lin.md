@@ -1,16 +1,16 @@
 ---
-title: 'Nasıl yapılır: bir klasördeki (LINQ) (C#) metin dosyaların içeriğini sorgulama'
+title: 'Nasıl yapılır: metin dosyaları (LINQ) (C#) bir klasörde içeriğini sorgulama'
 ms.date: 07/20/2015
 ms.assetid: f5b4dce7-1a34-4eb4-9bf1-60d5bdda264c
-ms.openlocfilehash: 4e421e1bdb5008816989c26b725faaf2b4ae8caf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dedb3b742805daa23151c61e89dd0835f730dd9c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319530"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43537590"
 ---
-# <a name="how-to-query-the-contents-of-text-files-in-a-folder-linq-c"></a>Nasıl yapılır: bir klasördeki (LINQ) (C#) metin dosyaların içeriğini sorgulama
-Bu örnek, belirtilen dizin ağacındaki tüm dosyalar üzerinde sorgu, her dosyayı açın ve içeriğini inceleyin gösterilmektedir. Bu tür bir teknik dizinler oluşturmak veya bir dizin ağacında içeriğini dizinlerini tersine çevirmek için kullanılabilir. Bu örnekte, bir basit bir dize araması gerçekleştirilir. Ancak, daha karmaşık tür desen eşleştirme bir normal ifade ile gerçekleştirilebilir. Daha fazla bilgi için bkz: [nasıl yapılır: normal ifadeler (C#) ile LINQ sorgularını birleştirme](../../../../csharp/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md).  
+# <a name="how-to-query-the-contents-of-text-files-in-a-folder-linq-c"></a>Nasıl yapılır: metin dosyaları (LINQ) (C#) bir klasörde içeriğini sorgulama
+Bu örnek, belirtilen dizin ağacındaki tüm dosyalar üzerinde sorgulama, her dosyasını açın ve içeriğini inceleyin gösterilmektedir. Bu tür bir teknik dizinler oluşturmak veya bir dizin ağacında içeriği dizinlerini tersine çevirecek şekilde kullanılabilir. Bu örnekte basit dize arama gerçekleştirilir. Ancak, daha karmaşık tür deseniyle eşleşen normal bir ifade ile gerçekleştirilebilir. Daha fazla bilgi için [nasıl yapılır: normal ifadeler (C#) ile LINQ sorgularını birleştirme](../../../../csharp/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md).  
   
 ## <a name="example"></a>Örnek  
   
@@ -71,8 +71,9 @@ class QueryContents
 ```  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- .NET Framework sürüm 3.5 veya daha yüksek System.Core.dll başvuru hedefleyen bir proje oluşturun ve `using` System.Linq ve System.IO ad alanları için yönergeleri.  
+ .NET Framework sürüm 3.5 veya üzeri bir System.Core.dll başvurusu ile hedefleyen bir proje oluşturun ve `using` System.Linq ve System.IO ad alanları için yönergeleri.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [LINQ ve dosya dizinleri (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)  
- [LINQ to nesneler (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [LINQ ve dosya dizinleri (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)  
+- [LINQ to Objects'in (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: fdd9c753-39df-48cd-9822-2781afe76200
 ms.openlocfilehash: ade08deca909b32090b7d2d7cf8c6ba9ce9e7679
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480580"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43538689"
 ---
 # <a name="sorting-and-filtering-data"></a>Verileri sıralama ve filtreleme
 <xref:System.Data.DataView> İçindeki verileri sıralama ve filtreleme çeşitli yollarını sağlar bir <xref:System.Data.DataTable>:  

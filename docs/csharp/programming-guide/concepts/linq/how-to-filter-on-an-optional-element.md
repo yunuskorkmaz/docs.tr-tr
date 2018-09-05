@@ -1,16 +1,16 @@
 ---
-title: 'Nasıl yapılır: Filtre isteğe bağlı bir öğede (C#)'
+title: 'Nasıl yapılır: Filtre isteğe bağlı öğeyi (C#)'
 ms.date: 07/20/2015
 ms.assetid: f99e2f93-fca5-403f-8a0c-770761d4905a
-ms.openlocfilehash: aa6eb5c9f661a27729c409edcc44b75377498925
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c781db261dbf673af7a11150971956b4c07da774
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320176"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43537074"
 ---
-# <a name="how-to-filter-on-an-optional-element-c"></a>Nasıl yapılır: Filtre isteğe bağlı bir öğede (C#)
-Bazen, XML belgesinde var olmadığından emin değilseniz olsa bile bir öğe için filtre uygulamak istediğiniz. Böylece belirli öğesinin alt öğesi sahip değilse, bir null başvuru özel durumu için filtre uygulayarak tetiklemez arama yürütülmelidir. Aşağıdaki örnekte, `Child5` öğesi yok bir `Type` alt öğesi, ancak sorgu hala yürütür doğru.  
+# <a name="how-to-filter-on-an-optional-element-c"></a>Nasıl yapılır: Filtre isteğe bağlı öğeyi (C#)
+Bazen, XML belgesinde varolduğundan emin olmadığınız halde bir öğe için filtrelemek istersiniz. Arama, böylece belirli bir öğenin alt öğesi yoksa, bir null başvurusu özel durumu için filtreleyerek tetiklemez yürütülmelidir. Aşağıdaki örnekte, `Child5` öğesi yok bir `Type` alt öğesi, ancak sorgu hala yürütür doğru.  
   
 ## <a name="example"></a>Örnek  
  Bu örnekte <xref:System.Xml.Linq.Extensions.Elements%2A> genişletme yöntemi.  
@@ -54,7 +54,7 @@ Child Four Text
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek bir ad alanı XML aynı sorgu gösterir. Daha fazla bilgi için bkz: [XML ad alanları (C#) çalışma](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+ Aşağıdaki örnek, aynı sorgu için bir ad alanındaki XML gösterir. Daha fazla bilgi için [(C#) XML ad alanları ile çalışma](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   
 ```csharp  
 XElement root = XElement.Parse(@"<Root xmlns='http://www.adatum.com'>  
@@ -95,10 +95,11 @@ Child Two Text
 Child Four Text  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>  
- <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>  
- <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType>  
- [Temel sorgu (LINQ-XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)  
- [Standart sorgu işleçlerine genel bakış (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Projeksiyon işlemleri (C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- <xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType>  
+- [Temel sorgular (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)  
+- [Standart sorgu işleçlerine genel bakış (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+- [Projeksiyon işlemleri (C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)

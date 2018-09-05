@@ -8,12 +8,12 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 74809167-bf8e-48b7-a2e7-b4ea08bc7d8c
-ms.openlocfilehash: 77027d771cf471e563e24c46d7794a18ad223541
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 4841ce260adfb5d0c0d4b0f359ac9998521d584b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43258524"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43529653"
 ---
 # <a name="walkthrough-mapping-properties-using-the-windowsformshost-element"></a>İzlenecek yol: WindowsFormsHost Öğesi Kullanarak Özellikleri Eşleme
 
@@ -33,7 +33,7 @@ Bu kılavuzda gösterilen görevler aşağıdakileri içerir:
 
 -   Varsayılan özellik eşlemesi genişletme.
 
-Bu izlenecek yolda gösterilen görevler tam kod listesi için bkz. [WindowsFormsHost öğesi örneği kullanarak eşleme özelliklerini](http://go.microsoft.com/fwlink/?LinkID=160019).
+Bu izlenecek yolda gösterilen görevler tam kod listesi için bkz. [WindowsFormsHost öğesi örneği kullanarak eşleme özelliklerini](https://go.microsoft.com/fwlink/?LinkID=160019).
 
 Bitirdiğiniz zaman, eşlemek mümkün olmayacak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] barındırılan karşılık gelen özelliklere özellikleri [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimi.
 

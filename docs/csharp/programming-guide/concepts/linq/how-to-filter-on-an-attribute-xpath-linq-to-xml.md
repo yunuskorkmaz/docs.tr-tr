@@ -1,25 +1,25 @@
 ---
-title: 'Nasıl yapılır: bir öznitelik (XPath-LINQ-XML) üzerinde filtre (C#)'
+title: 'Nasıl yapılır: bir öznitelik (XPath-LINQ to XML) üzerinde filtreleme (C#)'
 ms.date: 07/20/2015
 ms.assetid: 208d6256-1bd7-4237-b2c9-909f26dfd0e2
-ms.openlocfilehash: 12ecf4c2c4b74cd58c4df0c355351232d09a84ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9d99387be6683dcc46d36b5fdefbcd09f998eab1
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326124"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516243"
 ---
-# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-c"></a>Nasıl yapılır: bir öznitelik (XPath-LINQ-XML) üzerinde filtre (C#)
-Bu konu, alt öğelerini belirtilen ada sahip ve belirtilen değerli özniteliği ile alma gösterilmektedir.  
+# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-c"></a>Nasıl yapılır: bir öznitelik (XPath-LINQ to XML) üzerinde filtreleme (C#)
+Bu konu, belirtilen ada sahip ve belirtilen değere sahip bir öznitelik ile alt öğeleri almak nasıl gösterir.  
   
- XPath ifadesi şöyledir:  
+ XPath ifadesidir:  
   
  `.//Address[@Type='Shipping']`  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte tüm alt öğeleri adıyla bulur `Address`ile bir `Type` özniteliği "Gönderme" değerine sahip.  
+ Bu örnek, tüm alt öğeleri adıyla öğeleri bulur. `Address`ile bir `Type` "Gönderim" değerine sahip öznitelik.  
   
- Bu örnekte aşağıdaki XML belgesi kullanır: [örnek XML dosyası: birden çok satınalma siparişi (LINQ-XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ Bu örnekte aşağıdaki XML belgesi: [örnek XML dosyası: birden fazla satın alma siparişi (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```csharp  
 XDocument po = XDocument.Load("PurchaseOrders.xml");  
@@ -42,7 +42,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- Bu örnek şu çıkışı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```  
 Results are identical  
@@ -72,5 +72,6 @@ Results are identical
 </Address>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [LINQ-XML XPath kullanıcıların (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [LINQ to XML için XPath kullanıcıları (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

@@ -3,11 +3,11 @@ title: Destek Belirteçleri
 ms.date: 03/30/2017
 ms.assetid: 65a8905d-92cc-4ab0-b6ed-1f710e40784e
 ms.openlocfilehash: 14f1cbf628e0666f0a8e96123cafe29ba300ea78
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43470872"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524821"
 ---
 # <a name="supporting-tokens"></a>Destek Belirteçleri
 WS-güvenlik kullanan bir iletiye ek belirteçler ekleme belirteçleri destekleyen örnek gösterir. Örneğin, bir kullanıcı adı güvenlik belirteci yanı sıra bir X.509 ikili güvenlik belirteci ekler. Belirteci bir WS-güvenlik uyarısı istemciden hizmete geçirilir ve iletisinin parçası X.509 sertifikası elinde alıcısına kanıtlamak için X.509 güvenlik belirteciyle ilişkili özel anahtarla imzalanır. Birden fazla talep kimlik doğrulaması veya yetkilendirme gönderen bir ileti ile ilişkili olan bir gereksinimi olduğunda bu durumda kullanışlıdır. Hizmet istek-yanıt iletişim deseni tanımlayan bir sözleşme uygular.  

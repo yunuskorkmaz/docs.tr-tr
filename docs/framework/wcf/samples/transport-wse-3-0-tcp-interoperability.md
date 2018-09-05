@@ -3,11 +3,11 @@ title: 'Taşıma: WSE 3.0 TCP Birlikte Çalışabilirlik'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
 ms.openlocfilehash: b727da998736944afd23f7dcfbf45a1f6049d1d0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43461702"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43533021"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>Taşıma: WSE 3.0 TCP Birlikte Çalışabilirlik
 WSE 3.0 TCP birlikte çalışabilirlik aktarım örnek bir TCP çift yönlü oturumu özel bir Windows Communication Foundation (WCF) aktarım olarak uygulamak nasıl gösterir. Kanal katmanını genişletilmesinde arabirimine dağıtılan var olan sistemlerle kablo üzerinden nasıl kullanabileceğinizi gösterir. Aşağıdaki adımlar bu özel WCF taşıma yapı işlemini gösterir:  

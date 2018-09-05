@@ -3,11 +3,11 @@ title: 'Bağlam Değişimi Bağıntısı '
 ms.date: 03/30/2017
 ms.assetid: 1e2852be-3601-45ae-b507-ccc465d45c60
 ms.openlocfilehash: d9de111fa08b4a398bba52bc903ea1fec8c7f298
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43483703"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519738"
 ---
 # <a name="context-exchange-correlation"></a>Bağlam Değişimi Bağıntısı 
 Bağlam bağıntı açıklanan bağlam değişimi mekanizması temel [.NET bağlam değişimi protokolü belirtimi](https://go.microsoft.com/fwlink/?LinkId=166059). Bağlam bağıntı iletileri doğru örneğini ilişkilendirmek için iyi bilinen bağlam üst bilgi veya tanımlama bilgisi kullanır. Bir bağlam tabanlı gibi bağlama, bağlam bağıntı kullanılacak <xref:System.ServiceModel.BasicHttpContextBinding>, <xref:System.ServiceModel.WSHttpContextBinding>, veya <xref:System.ServiceModel.NetTcpContextBinding> sağlanan uç nokta üzerinde kullanılmalıdır <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Bu konuda, Mesajlaşma etkinlikleriyle iş akışı hizmeti içinde bağlam bağıntı kullanmayı açıklar.  

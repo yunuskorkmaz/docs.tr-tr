@@ -2,18 +2,18 @@
 title: 'Nasıl yapılır: dosyaları uzantıya (LINQ) (C#) göre gruplama'
 ms.date: 07/20/2015
 ms.assetid: 21a98320-a5a1-4981-82d8-6a637e7d9018
-ms.openlocfilehash: 4b2200799a7623bf9d47540f922798f5161be1bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 320d89c78a317f49d98d4dc139aaa3df05fcd6f3
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319299"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43538105"
 ---
 # <a name="how-to-group-files-by-extension-linq-c"></a>Nasıl yapılır: dosyaları uzantıya (LINQ) (C#) göre gruplama
-Bu örnek, Gelişmiş gruplandırma ve sıralama dosya veya klasörleri listelerde işlemleri gerçekleştirmek için LINQ'ın nasıl kullanılabileceğini gösterir. Ayrıca çıkış konsol penceresinde kullanarak sayfa nasıl gösterir <xref:System.Linq.Enumerable.Skip%2A> ve <xref:System.Linq.Enumerable.Take%2A> yöntemleri.  
+Bu örnek, LINQ Gelişmiş gruplandırma ve sıralama dosya veya klasörleri listelerde işlemleri gerçekleştirmek için nasıl kullanılabileceğini gösterir. Ayrıca bir konsol penceresinde çıktıyı kullanarak sayfa nasıl gösterir <xref:System.Linq.Enumerable.Skip%2A> ve <xref:System.Linq.Enumerable.Take%2A> yöntemleri.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki sorgu, dosya adı uzantısı tarafından belirtilen dizin ağacı içeriğini Grup gösterilmektedir.  
+ Aşağıdaki sorgu, belirtilen dizin ağacı içeriğini dosya adı uzantısına göre gruplandırmak gösterilmektedir.  
   
 ```csharp  
 class GroupByExtension  
@@ -102,11 +102,12 @@ class GroupByExtension
 }  
 ```  
   
- Bu program çıktısı, yerel dosya sistemi ve ne ayrıntılarını bağlı olarak uzun olabilir `startFolder` ayarlanır. Tüm sonuçlarını görüntülemeyi etkinleştirmek için bu örnek sonuçları sayfası gösterilmektedir. Windows ve Web uygulamaları için aynı teknikleri uygulanabilir. Bir iç içe bir grup içindeki öğeler kod sayfaları çünkü dikkat `foreach` döngü gereklidir. İşlem listesinde geçerli konumu ve disk belleği durdurmak ve programdan çıkmak kullanıcı etkinleştirmek için bazı ek mantık yoktur. Bu örnekte, disk belleği sorgu özgün sorgudan karşı önbelleğe alınan sonuçları çalıştırılır. LINQ-SQL, gibi diğer bağlamlarda böyle önbelleğe alma gerekli değildir.  
+ Bu program çıktısı, yerel dosya sistemi ve hangi ayrıntılarını bağlı olarak uzun `startFolder` ayarlanır. Tüm sonuçları izlenmesini etkinleştirmek için bu örnekte sonuç gösterilmiştir. Aynı teknikleri, Windows ve Web uygulamaları için uygulanabilir. Bir iç içe bir grup içindeki öğeler kod sayfaları çünkü dikkat `foreach` döngü gereklidir. Bazı ilave bir mantık geçerli konumu listesinde işlem ve disk belleği durdurmak ve programdan çıkmak kullanıcının etkinleştirmek için de mevcuttur. Bu durumda, disk belleği sorgu özgün sorgunun önbelleğe alınan sonuçları karşı çalıştırılır. LINQ to SQL gibi diğer bağlamlarda bu önbelleğe alma gerekli değildir.  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- .NET Framework sürüm 3.5 veya daha yüksek System.Core.dll başvuru hedefleyen bir proje oluşturun ve `using` System.Linq ve System.IO ad alanları için yönergeleri.  
+ .NET Framework sürüm 3.5 veya üzeri bir System.Core.dll başvurusu ile hedefleyen bir proje oluşturun ve `using` System.Linq ve System.IO ad alanları için yönergeleri.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [LINQ to nesneler (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
- [LINQ ve dosya dizinleri (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [LINQ to Objects'in (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
+- [LINQ ve dosya dizinleri (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

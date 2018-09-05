@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], documentation
 ms.assetid: 2aa18c85-a4fd-4bb9-986a-a8249e4f8e0e
 ms.openlocfilehash: f77864d827ce12d40971dd7f7159e985ab4096ae
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43417910"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43520980"
 ---
 # <a name="guide-to-the-documentation"></a>Belgeler için Kılavuz
 Sağlanan Windows Communication Foundation (WCF) belgeler hakkında yönergeler aşağıda verilmiştir. Bağlantılı belgeleri başlangıç noktaları belirli ilgi alanlarına ve uzmanlık düzeylerine göre gruplandırılmış önerilir.  

@@ -3,11 +3,11 @@ title: İşlemi yapılmış kuyruklar
 ms.date: 03/30/2017
 ms.assetid: b1b011dd-5e0b-482c-9bb0-9d8727038f14
 ms.openlocfilehash: db6a9686334eefb02b9360827a23ca8363127eb5
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43408821"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43535510"
 ---
 # <a name="transacted-queues"></a>İşlemi yapılmış kuyruklar
 Bu örnek, kuyrukları ve işlem içinde Windows Workflow Foundation (güvenilir ve ölçeklenebilir hizmetler oluşturmak için WF) tümleştirme gösterilmektedir. A <!--zz <xref:System.Activities.TransactionScope>--> `System.Activities.TransactionScope` kullanarak bir işlem altında bir kuyruğa ileti göndermek için kullanılan istemci iş akışında <xref:System.ServiceModel.NetMsmqBinding>. A <xref:System.ServiceModel.Activities.TransactedReceiveScope> sunucuda kuyruktan ileti alma ve aynı işlem altında bir iş akışı durumunu güncelleştirmek için kullanılır.  

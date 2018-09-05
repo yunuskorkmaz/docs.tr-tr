@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: f6f0cbc9-f7bf-4d6e-875f-ad1ba0b4aa62
 ms.openlocfilehash: 24657f541daf5bb098f8db3b59a3241ecf832d39
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43398871"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515085"
 ---
 # <a name="transaction-and-bulk-copy-operations"></a>İşlem ve toplu kopyalama işlemleri
 Toplu kopyalama işlemleri birden çok adım işlemlerinin bir parçası olarak veya yalıtılmış işlemleri gerçekleştirilebilir. Bu ikinci seçeneği yanı sıra aynı işlem içinde birden fazla toplu kopyalama işlemini gerçekleştirmek hala işleme ya da işlemin tümü geri olmanın yanı sıra (örneğin, ekleme, güncelleştirme ve silme) diğer veritabanı işlemlerini gerçekleştirmek sağlar.  

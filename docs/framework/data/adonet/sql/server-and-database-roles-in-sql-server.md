@@ -3,11 +3,11 @@ title: Sunucu ve SQL Server veritabanı rolleri
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
 ms.openlocfilehash: 5fd706d886ea050eb578d5f889d55055665c3a44
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43403150"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517911"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>Sunucu ve SQL Server veritabanı rolleri
 Tüm SQL Server sürümleri için bireysel kullanıcılar yerine bir rol veya kullanıcı grubu için izinler atamak izin veren rol tabanlı güvenliği kullanın. Sabit sunucu ve sabit veritabanı rollerine atanmış izinler sabit kümesine sahiptir.  

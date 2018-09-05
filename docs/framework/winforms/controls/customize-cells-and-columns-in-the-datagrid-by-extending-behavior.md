@@ -10,11 +10,11 @@ helpviewer_keywords:
 - cells [Windows Forms], customizing in DataGridView control
 ms.assetid: 9b7dc7b6-5ce6-4566-9949-902f74f17a81
 ms.openlocfilehash: c183cb03535832dce9b2c3ed97eb4d68fab19796
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385770"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527908"
 ---
 # <a name="how-to-customize-cells-and-columns-in-the-windows-forms-datagridview-control-by-extending-their-behavior-and-appearance"></a>Nasıl yapılır: Windows Forms DataGridView Denetiminde Davranış ve Görünümünü Genişleterek Hücre ve Sütunları Özelleştirme
 <xref:System.Windows.Forms.DataGridView> Denetimi, çeşitli yollarla görünümünü ve davranışını özellikleri, olayları kullanarak özelleştirip Yahoo! companion sınıfları sağlar. Bazen, bu özellikleri sağlamak ötesine gidin, hücre için gereksinimlerine sahip olabilir. Kendi özel oluşturabilirsiniz <xref:System.Windows.Forms.DataGridViewCell> genişletilmiş işlevselliği sağlamak için sınıf.  

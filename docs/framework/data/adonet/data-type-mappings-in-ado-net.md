@@ -3,11 +3,11 @@ title: ADO.NET'te veri türü eşlemeleri
 ms.date: 03/30/2017
 ms.assetid: d4afab94-ada6-4c77-a73c-41f17bae6b5a
 ms.openlocfilehash: aba1eb4fdaaf43d66337ca764fe01b7d3f4624bd
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43423669"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516933"
 ---
 # <a name="data-type-mappings-in-adonet"></a>ADO.NET'te veri türü eşlemeleri
 .NET Framework nasıl türleri bildirilen kullanılan ve çalışma zamanı'nda yönetilen tanımlar ortak tür sisteminin temel alır. Hem değer türleri ve türetilen tüm, başvuru türleri oluşur <xref:System.Object> temel türü. Bir veri kaynağı ile çalışırken, veri türü, açıkça belirtilmezse, veri sağlayıcısı'ndan algılanır. Örneğin, bir <xref:System.Data.DataSet> nesnedir herhangi belirli bir veri kaynağından bağımsız. Verileri bir `DataSet` bir veri kaynağından alınan ve değişiklikleri veri kaynağına geri kullanarak kaldı bir `DataAdapter`. Yani bir `DataAdapter` dolduran bir <xref:System.Data.DataTable> içinde bir `DataSet` sütunların sonuçta elde edilen veri türleri gibi veri kaynağından alınan değerlerle `DataTable` olan [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] türleri, özel türler yerine [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] veri veri kaynağına bağlanmak için kullanılan sağlayıcı.  

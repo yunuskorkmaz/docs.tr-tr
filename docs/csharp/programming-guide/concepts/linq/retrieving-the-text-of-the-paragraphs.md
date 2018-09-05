@@ -1,31 +1,31 @@
 ---
-title: Paragrafları (C#) metin alma
+title: (C#) paragrafların metnini alma
 ms.date: 07/20/2015
 ms.assetid: 127d635e-e559-408f-90c8-2bb621ca50ac
-ms.openlocfilehash: 07a289ec8c3f0c783a9c85cb1d25d17164008e06
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d23addb4c4c1ea17343585392fbe08fef08568a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327164"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43539774"
 ---
-# <a name="retrieving-the-text-of-the-paragraphs-c"></a>Paragrafları (C#) metin alma
-Bu örnek önceki örnekte olduğu derlemeler [Their stilleri (C#) ve paragrafları alma](../../../../csharp/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md). Bu yeni örnek her paragraf metnini dize olarak alır.  
+# <a name="retrieving-the-text-of-the-paragraphs-c"></a>(C#) paragrafların metnini alma
+Bu örnek önceki örneğe, yapılar [Their stilleri (C#) ve paragrafları alma](../../../../csharp/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md). Bu yeni örnek, her bir paragraf metni bir dize olarak alır.  
   
- Metni almak için bu örnek anonim türler toplulukta tekrarlanan ve yeni bir üye eklenmesi, yeni bir anonim bir tür koleksiyonunu projeleri ek bir sorgu, `Text`. Kullandığı <xref:System.Linq.Enumerable.Aggregate%2A> bir dizeye birden çok dizeyi birleştirme için standart sorgu işleci.  
+ Bu örnek metni almak için anonim türlerin koleksiyonunu yinelenir ve yeni bir üye özelliğinin eklenmesiyle birlikte yeni bir koleksiyon anonim bir türün projeleri ek bir sorgu ekler `Text`. Kullandığı <xref:System.Linq.Enumerable.Aggregate%2A> birden çok dizeyi bir dizede birleştirmek için standart sorgu işleci.  
   
- Bu teknik (diğer bir deyişle, ilk anonim bir türün bir koleksiyona yansıtma, sonra bu koleksiyona yeni bir koleksiyon anonim bir türün projeye kullanarak), ortak ve kullanışlı bir deyim olur. Bu sorgu için ilk anonim tür yansıtma olmadan yazılmış. Ancak, geç değerlendirme nedeniyle bunun nedenle kadar ek işleme gücünü kullanmaz. Deyim öbek üzerinde daha kısa süreli nesneleri oluşturur, ancak bu önemli ölçüde performans düşebilir değil.  
+ Bu teknik (diğer bir deyişle, ilk anonim bir türün bir koleksiyona yansıtma ve ardından bu anonim bir türün yeni bir koleksiyon için proje koleksiyonuna kullanarak), ortak ve kullanışlı bir deyim olur. Bu sorgu için ilk anonim tür yansıtma olmadan yazılmış. Ancak, geç değerlendirme nedeniyle Bunun yapılması bu nedenle kadar ek işlem gücü kullanmaz. Deyim, yığında daha kısa süreli nesneleri oluşturur, ancak bu önemli ölçüde performansı düşmez.  
   
- Elbette, paragraflar, her paragraf stili ve her paragraf metni almak için kullanılan işlevler içeren tek bir sorgu yazmak mümkün olacaktır. Ancak, genellikle birden çok sorgu içine daha karmaşık bir sorgu sonuç kodu daha modüler ve sürdürmek daha kolay olduğundan bölmeniz yararlı olur. Sorgu bir kısmı kullanmanız gerekiyorsa, sorguları bu şekilde yazılır, ayrıca, bu düzenleme için kolaydır.  
+ Elbette, paragraflar, her bir paragraf stilini ve her paragraf metnini almak için işlevini içeren tek bir sorgu yazmayı mümkün olacaktır. Ancak, genellikle birden çok sorgulara daha karmaşık bir sorgu sonuç kodunu daha modüler ve bakımı kolay olduğundan bölmeniz yararlı olur. Sorgu bölümünü yeniden gerekiyorsa, bu şekilde sorguları yazılır, ayrıca, bunu yeniden düzenlenmesi kolaydır.  
   
- Konusunda ayrıntılı incelenir işleme model birlikte Zincirli olan, bu sorguları kullanmak [Öğreticisi: zincirleme sorguları birlikte (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md).  
+ Birbirine zincirlenmiş, bu sorguları konusunda ayrıntılı incelenen işlem model kullanmak [Öğreticisi: zincirleme sorguları birlikte (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md).  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, öğe düğümü, stil adı ve her paragraf metnini belirleme WordprocessingML belgeye işler. Bu örnek önceki örnekler üzerinde Bu öğreticide oluşturur. Yeni sorgu aşağıdaki kodu açıklamalarda belirtilmiştir.  
+ Bu örnekte, öğe düğümü, stil adı ve her bir paragraf metni belirleme WordprocessingML belgesinin işler. Bu örnek, önceki örneklerde üzerinde Bu öğreticide oluşturur. Yeni sorgu aşağıdaki kod açıklamalarda çağrılır.  
   
- Bu örnek için kaynak belge oluşturma yönergeleri için bkz: [kaynak Office Açık XML belgesi (C#) oluşturulmasını](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Bu örneğin kaynak belge oluşturma yönergeleri için bkz. [kaynak Office Open XML belgesi (C#) oluşturma](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
- Bu örnek WindowsBase derlemeden sınıfları kullanır. Türlerinde kullanan <xref:System.IO.Packaging?displayProperty=nameWithType> ad alanı.  
+ Bu örnek WindowsBase derlemesinden sınıfları kullanır. Türleri kullanan <xref:System.IO.Packaging?displayProperty=nameWithType> ad alanı.  
   
 ```csharp  
 const string fileName = "SampleDoc.docx";  
@@ -117,7 +117,7 @@ foreach (var p in paraWithText)
     Console.WriteLine("StyleName:{0} >{1}<", p.StyleName, p.Text);  
 ```  
   
- Bu örnek aşağıdaki açıklandığı belgeye uygulandığında çıktı üretir [kaynak Office Açık XML belgesi (C#) oluşturulmasını](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Bu örnek aşağıdaki belgede açıklanan uygulandığında çıktıyı üretir [kaynak Office Open XML belgesi (C#) oluşturma](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
 ```  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -138,10 +138,11 @@ StyleName:Code >Hello World<
 ```  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
- Sonraki örnek yerine bir genişletme yöntemi kullanmayı gösterir <xref:System.Linq.Enumerable.Aggregate%2A>, tek bir dize halinde birden çok dizeyi birleştirme için.  
+ Sonraki örnekte yerine bir uzantı yöntemini kullanmayı gösterir <xref:System.Linq.Enumerable.Aggregate%2A>, tek bir dize olarak birden çok dizeyi birleştirme.  
   
 -   [Bir genişletme yöntemi (C#) kullanarak yeniden düzenleme](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Öğretici: Düzenleme içeriği WordprocessingML belgesinde (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
- [Ertelenmiş yürütme ve geç değerlendirme LINQ-XML (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [Öğretici: WordprocessingML belgesindeki (C#) içerik düzenleme](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
+- [Ertelenmiş yürütme ve geç değerlendirme LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

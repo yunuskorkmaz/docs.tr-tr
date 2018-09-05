@@ -5,12 +5,12 @@ helpviewer_keywords:
 - statements [C#], about statements
 - C# language, statements
 ms.assetid: 901bcde7-87de-4e15-833c-f9cfd40c8ce3
-ms.openlocfilehash: 4dc2507e37793fb154b932062854b3f590e362e8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 826fea55d1e85e2ec44ec1e752f809ec3cc08433
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43420435"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43660206"
 ---
 # <a name="statements-c-programming-guide"></a>Deyimler (C# Programlama Kılavuzu)
 Bir programı alan eylemleri deyimlerinde ifade edilir. Ortak Eylemler değişkenleri bildirme, değerler atama, koleksiyonlar üzerinden döngü oluşturma ve bir ya da başka bir verili bir koşula bağlı kod bloğu için dallanma metotları çağırma içerir. Deyimleri bir programda yürütüldüğü sırada, denetim akışı veya, yürütmenin akışını çağrılır. Denetim akışı nasıl program çalışma zamanında aldığı giriş tepki verdiğini bağlı olarak bir program çalıştırıldığında her zaman değişiklik gösterebilir.  
@@ -91,5 +91,6 @@ Aşağıdaki örnekler, iki kullanım için boş bir deyimi göstermektedir:
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)

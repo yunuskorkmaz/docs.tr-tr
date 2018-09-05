@@ -1,31 +1,31 @@
 ---
-title: Örnek depolar
+title: Örnek depoları
 ms.date: 03/30/2017
 ms.assetid: f2629668-0923-4987-b943-67477131c1e0
-ms.openlocfilehash: 0d59daeee318aaf82897517a23343065dc97d69f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7ea29c3604042d773590448e31ce4ea95125ca1f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518782"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519584"
 ---
-# <a name="instance-stores"></a>Örnek depolar
-Bir örnek deposuna örneklerinin mantıksal bir kapsayıcısıdır. Örnek veri ve meta veri depolandığı yerdir. Bir örnek deposuna ayrılmış bir fiziksel depolama göstermez. Bir örnek deposuna dayanıklı bir SQL Server veritabanında veya dayanıklı olmayan durum bilgileri bellek içerebilir. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] Örnek verileri ve meta verileri bir SQL Server 2005 veya SQL Server 2008 veritabanına kalıcı hale getirmek iş akışları sağlayan bir örnek deposuna somut bir uygulamasıdır SQL iş akışı örneği deposuna birlikte verilir. Ayrıca Windows Server App Fabric ayrıca bir örnek deposuna somut bir uygulamasını sağlar. Daha fazla bilgi için bkz: [Windows Server App Fabric örnek deposu, sorgu ve denetim sağlayıcıları](http://go.microsoft.com/fwlink/?LinkID=201201&clcid=0x409).  
+# <a name="instance-stores"></a>Örnek depoları
+Bir örnek deposuna örnek bir mantıksal kapsayıcıdır. Örnek verileri ve meta verileri depolandığı yerdir. Bir örnek deposuna ayrılmış fiziksel depolama göstermez. Bir örnek depolama, SQL Server veritabanında kalıcı bilgi veya bellek dayanıklı olmayan durum bilgilerini içerebilir. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] Somut bir iş akışı örneği verileri ve meta verileri bir SQL Server 2005 veya SQL Server 2008 veritabanına kalıcı hale getirmek sağlayan bir örnek deposuna uygulamasıdır SQL iş akışı örneği Store birlikte verilir. Buna ek olarak Windows Server App Fabric Ayrıca örnek deposunun somut bir uygulama sağlar. Daha fazla bilgi için [Windows Server App Fabric örneği Store, sorgu ve denetim sağlayıcıları](https://go.microsoft.com/fwlink/?LinkID=201201&clcid=0x409).  
   
- API kalıcı bir ana bilgisayar ve komut istekleri göndermek ana bilgisayar tanır bir örnek deposuna arasındaki arabirimdir (örneğin, <xref:System.Activities.DurableInstancing.LoadWorkflowCommand> ve <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>) örnek deposuna. Bu API somut uyarlamasını kalıcı bir sağlayıcı adı verilir. Kalıcılık sağlayıcı bir ana bilgisayardan isteklerini alır ve örnek deposuna değiştirir.  
+ API Kalıcılık bir konak ve konak komut istekleri göndermek izin veren bir örnek deposuna arasındaki arabirimdir (örneğin, <xref:System.Activities.DurableInstancing.LoadWorkflowCommand> ve <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>) örnek deposuna. Bu API'nin somut uygulama kalıcı bir sağlayıcı adı verilir. Kalıcı bir sağlayıcı konaktan isteklerini alır ve örnek deposuna değiştirir.  
   
- Konaklar ve örnek depolar; böylece bir ana bilgisayar birçok örnek depoları ile kullanılabilir ve bir örnek deposuna birçok konaklarla kullanılabilir eklenebilir. Örnek deposuna ve ana bilgisayar üzerinde bağımsız yaşam döngüsü gelişmesi ancak bir örnek deposuna genellikle belirli bir konağa kullanım desenlerini için optimize edilmiştir. Örneğin, **WorkflowServiceHost** ve **SqlWorkflowInstanceStore** birlikte çalışmak üzere tasarlanmıştır. Veri ve meta veri akışı hizmet örnekleri devam etmek ve bu örnek deposuna ile kullanmak için kendi örnek deposuna oluşturabilirsiniz **WorkflowServiceHost**. Örneğin, bir SQL Server veritabanına kaydetme yerine bir Oracle veritabanına bilgilerinin sürdürülmesi iş akışları sağlayan bir OracleWorkflowInstanceStore oluşturabilirsiniz.  
+ Konakları ve örnek depoları bir ana bilgisayar birçok örnek deposu ile kullanılabilir ve bir örnek deposuna ile birçok ana bilgisayarda kullanılabilir olacak şekilde eklenebilir. Bağımsız yaşam döngüsü üzerinde evrim geçirebileceğinden, ana bilgisayar ve örnek deposuna rağmen bir örnek deposuna genellikle belirli bir konağa kullanım düzenlerini için optimize edilmiştir. Örneğin, **WorkflowServiceHost** ve **SqlWorkflowInstanceStore** birlikte düzgün çalışacak şekilde tasarlanmıştır. Verileri ve iş akışı hizmet örneklerine meta verileri kalıcı hale getirmek ve bu örnek depoyu ile kullanmak için kendi örnek deposuna oluşturabilirsiniz **WorkflowServiceHost**. Örneğin, bir SQL Server veritabanına kaydetmeden yerine bir Oracle veritabanına bilgilerini kalıcı hale iş akışları sağlayan bir OracleWorkflowInstanceStore oluşturabilirsiniz.  
   
- Kalıcı nesneler değiştirir ek işlevsellik ile genişletilmesi konaklar için yaygın bir durumdur. Örneğin, bir örnek Kalıcılık sistemi bir iş akışı ana bilgisayar "Askıda" işlem ve bir SQL örneği deposu destekleyen uzantı olabilir.  İş akışı ana standart bir komut gönderebilir gibi kaydetmek veya bir iş akışı örneği deposundan yüklemek veya kaydetmek veya bir iş akışı bir örnek deposuna kaydetmek için yükleyin. Askıya alma uzantısı kaydetme ve askıya alınmış iş akışı örneği yüklenemiyor böylece iş akışı örnekleri yükleme komutları ek semantiği eklemek. SQL örneği depolama için Kalıcılık sağlayıcısı kaydetme ve iş akışı örnekleri yükleme komutları bilir ve bir SQL Server veritabanında kalıcı nesne tablolarını değiştirme yordamları Implements uygun çağırarak komutları depolanır.  
+ Kalıcı nesneler değiştiren ek işlevlere sahip genişletilmesi konakları yaygındır. Örneğin, bir örnek Kalıcılık sistemi bir iş akışı ana bilgisayarı "Askıya Al" işlemini ve bir SQL örneği deposu destekleyen bir uzantı olabilir.  İş akışı ana bilgisayarı, standart bir komut gönderebilir gibi kaydedin veya bir iş akışı bir örneği Mağazası'ndan yüklemek veya kaydetmek veya bir iş akışı bir örnek deposuna kaydetmek için yükleme. Askıya alma uzantısı ek semantik kaydetme ve askıya alınan iş akışı örneği yüklenemiyor, iş akışı örnekleri yükleme komutları ekleyebilir. SQL örneği depolama için kalıcı bir sağlayıcı kaydetme ve iş akışı örnekleri yükleme komutları anlayan ve uygular uygun çağırarak komutları saklı kalıcı nesneleri bir SQL Server veritabanındaki tabloları değiştirme yordamları.  
   
- Bir ana bilgisayar örneği deposundaki örneği sahibi olarak görev yapar. Bir ana bilgisayar aynı anda birden fazla örnek deposuna sahip birden fazla örneği sahibi olarak çalışabilir. Ana bilgisayar GUID'ler örneği için örnekleriyle ilişkili tuşlarını sağlar. Bir örneği anahtarı örneğini tanımlayan benzersiz bir diğer ad değil. Kalıcılık sistem oluşturur, güncelleştirir ve ana bilgisayarı tarafından istenen komutları yürütür gibi örneği sahibi bilgileri siler.  
+ Bir konak, bir örnek deposunda bir örnek sahip olarak görev yapar. Bir konak aynı anda birden fazla örnek deposuna birden fazla örneğine sahip olarak çalışabilir. Ana bilgisayar örneği için örnekleriyle ilişkili anahtarları GUID'leri sağlar. Örneğini tanımlayan benzersiz bir diğer bir örnek anahtardır. Kalıcılık sistem oluşturur, güncelleştirir ve ana bilgisayar tarafından talep edilen komutları yürütür örneği sahibi bilgileri siler.  
   
- Aşağıdaki listede örnek deposuna ana bilgisayarın etkileşim dahil edilen önemli adımları içerir:  
+ Aşağıdaki liste, konağın etkileşim Örnek Depolama ile ilgili önemli adımları içerir:  
   
-1.  Elde bir **InstanceStore** Kalıcılık sağlayıcısından.  
+1.  Elde bir **InstanceStore** bir Kalıcılık sağlayıcısı.  
 
-2.  Bir örneği için tanıtıcı çağırarak elde <xref:System.Runtime.DurableInstancing.InstanceStore.CreateInstanceHandle%2A> yöntemi **InstanceStore**.  
+2.  Çağırarak bir örneği için bir tanıtıcı elde <xref:System.Runtime.DurableInstancing.InstanceStore.CreateInstanceHandle%2A> metodunda **InstanceStore**.  
   
-3.  Örnek tanıtıcı karşı komutları çağırarak çağırma <xref:System.Runtime.DurableInstancing.InstanceStore.Execute%2A> yöntemi **InstanceStore**.  
+3.  Örnek tanıtıcısını komutları çağırarak çağırma <xref:System.Runtime.DurableInstancing.InstanceStore.Execute%2A> metodunda **InstanceStore**.  
   
-4.  İncelemek <xref:System.Runtime.DurableInstancing.InstanceView> tarafından döndürülen **InstanceStore.Execute** komutları sonuçlarını belirlemek için.
+4.  İnceleme <xref:System.Runtime.DurableInstancing.InstanceView> tarafından döndürülen **InstanceStore.Execute** komutlarının sonuçlarını belirlemek için.

@@ -2,80 +2,80 @@
 title: Kalıcılık veritabanı şeması
 ms.date: 03/30/2017
 ms.assetid: 34f69f4c-df81-4da7-b281-a525a9397a5c
-ms.openlocfilehash: 4dd49d08e522c842d0f21f176b4d77ac0adb4b47
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c8d74413be64cdf88f7f1821c3678b2bcd2e2b1
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519456"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515264"
 ---
 # <a name="persistence-database-schema"></a>Kalıcılık veritabanı şeması
-Bu konuda SQL iş akışı örneği mağaza tarafından desteklenen ortak görünümler açıklanmaktadır.  
+Bu konuda, SQL iş akışı örneği Store tarafından desteklenen ortak görünümler açıklanmaktadır.  
   
-## <a name="instances-view"></a>Örnekleri görüntüleyin  
+## <a name="instances-view"></a>Örnekleri görüntüle  
  **Örnekleri** görünümü veritabanındaki tüm iş akışı örnekleri hakkında genel bilgiler içerir.  
   
 |Sütun adı|Sütun türü|Açıklama|  
 |-----------------|-----------------|-----------------|  
-|örnek kimliği|Benzersiz tanımlayıcı|Bir iş akışı örneği kimliği.|  
-|PendingTimer|DateTime|İş akışı bir gecikme faaliyete engellenir ve Zamanlayıcı dolduktan sonra sürdürülecek gösterir. Bu değer iş akışı süresi dolacak şekilde bir süreölçer bekleyen engellenmeyen null olabilir.|  
+|InstanceId|Benzersiz tanımlayıcı|Bir iş akışı örneği kimliği.|  
+|PendingTimer|DateTime|İş akışı bir gecikme faaliyete engellenir ve Zamanlayıcı dolduktan sonra devam edecek gösterir. Bu değer, bekleme süresi dolacak şekilde bir zamanlayıcıyı temel iş akışı engellenip engellenmediğini null olabilir.|  
 |CreationTime|DateTime|İş akışının ne zaman oluşturulduğunu gösterir.|  
-|LastUpdatedTime|DateTime|İş akışı veritabanına kalıcı son zamanı gösterir.|  
-|ServiceDeploymentId|BigInt|[ServiceDeployments] görüntülemek için yabancı anahtar olarak görev yapar. Geçerli iş akışı örneği web barındırılan bir hizmet örneği varsa, bu sütun NULL olarak ayarlanmış bir değer, aksi takdirde vardır.|  
-|SuspensionExceptionName|Nvarchar(450)|İş akışını askıya almak neden (örneğin InvalidOperationException) özel durum türünü belirtir.|  
-|SuspensionReason|nvarchar(max)|İş akışı örneği neden askıya alındı gösterir. Askıya almak örnek bir özel durum neden olursa, bu sütun özel durumla ilgili ileti içerir.<br /><br /> Örnek el ile askıya alınırsa, bu sütun örneği askıya almak için kullanıcı tarafından belirtilen neden içerir.|  
-|ActiveBookmarks|nvarchar(max)|İş akışı örneği boş ise, bu özellik örneği üzerinde engellendi hangi yer işaretleri gösterir. Örnek boş değilse, bu sütun NULL olur.|  
-|CurrentMachine|Nvarchar(128)|Bilgisayarın adını şu anda iş akışı örneği bellekte yüklü olduğunu gösterir.|  
-|LastMachine|Nvarchar(450)|İş akışı örneği yüklenen son bilgisayarı gösterir.|  
-|ExecutionStatus|Nvarchar(450)|Geçerli iş akışı yürütme durumunu gösterir. Olası durumlar şunlardır **Executing**, **boşta**, **kapalı**.|  
-|Isınitialized|bit|İş akışı örneği başlatılmış olup olmadığını gösterir. Başlatılan iş akışı örneği en az bir kez kalıcı bir iş akışı örneği ' dir.|  
-|IsSuspended|bit|İş akışı örneği askıya olup olmadığını gösterir.|  
-|IsCompleted|bit|İş akışı örneği yürütülmesi tamamlandı olup olmadığını gösterir. **Not:** IIf **InstanceCompletionAction** özelliği ayarlanmış **DeleteAll**, örnekleri tamamlanmasından sonra görünümünden kaldırılır.|  
+|LastUpdatedTime|DateTime|İş akışı veritabanına yazılan son zamanı gösterir.|  
+|ServiceDeploymentId|BigInt|[ServiceDeployments] görünümü için yabancı anahtar görevi görür. Geçerli iş akışı örneği web barındırılan hizmetinin bir örneği ise, bu sütun NULL olarak ayarlanmış bir değer, aksi takdirde sahiptir.|  
+|SuspensionExceptionName|Nvarchar(450)|Neden iş akışını askıya almak (örneğin InvalidOperationException) özel durumun türünü gösterir.|  
+|SuspensionReason|nvarchar(max)|Neden iş akışı örneği askıya alındı gösterir. Askıya almak örnek bir özel durum neden olursa, bu sütun özel durumla ilişkili ileti içerir.<br /><br /> Örnek el ile askıya alınırsa, bu sütun kullanıcı tarafından belirtilen nedenini örneği askıya alma içerir.|  
+|ActiveBookmarks|nvarchar(max)|İş akışı örneği boş ise, bu özellik örneği üzerinde engellenir hangi yer işaretlerini gösterir. Örneği boş değilse, bu sütun NULL olur.|  
+|CurrentMachine|nvarchar(128)|Bilgisayar adı şu anda iş akışı örneği belleğe sahip gösterir.|  
+|LastMachine|Nvarchar(450)|İş akışı örneği yüklendi son bilgisayarı gösterir.|  
+|ExecutionStatus|Nvarchar(450)|İş akışının geçerli yürütme durumunu gösterir. Olası durumlar şunlardır **Executing**, **boşta**, **kapalı**.|  
+|Isınitialized|Bit|İş akışı örneği başlatılmış olup olmadığını gösterir. Başlatılan iş akışı örneği en az bir kez kalıcı bir iş akışı örneği ' dir.|  
+|IsSuspended|Bit|İş akışı örneği askıya olup olmadığını gösterir.|  
+|IsCompleted|Bit|İş akışı örneği yürütmesini bitirene olup olmadığını gösterir. **Not:** IIf **InstanceCompletionAction** özelliği **DeleteAll**, örnekleri tamamlandıktan sonra görünümünden kaldırılır.|  
 |EncodingOption|Mini tamsayı|Veri özellikleri serileştirmek için kullanılan kodlama açıklar.<br /><br /> -0 – hiçbir kodlama<br />-1 – GzipStream|  
-|ReadWritePrimitiveDataProperties|varbinary(max)|Örnek yüklendiğinde, geri iş akışı çalışma zamanı sağlanan serileştirilmiş örnek veri özelliklerini içerir.<br /><br /> Her bir ilkel özellik hiçbir özel derlemeler blob serisini kaldırmak için gerekli olduğu anlamına gelir yerel bir CLR türü ' dir.|  
-|WriteOnlyPrimitiveDataProperties|varbinary(max)|Örnek yüklendiğinde, geri iş akışı çalışma zamanı sağlanmayan serileştirilmiş örnek veri özellikleri içerir.<br /><br /> Her bir ilkel özellik hiçbir özel derlemeler blob serisini kaldırmak için gerekli olduğu anlamına gelir yerel bir CLR türü ' dir.|  
-|ReadWriteComplexDataProperties|varbinary(max)|Örnek yüklendiğinde, geri iş akışı çalışma zamanı için sağlanan serileştirilmiş örnek veri özelliklerini içerir.<br /><br /> Seri kaldırıcı bu blob depolanan tüm nesne türlerinin bilgi gerektirir.|  
-|WriteOnlyComplexDataProperties|varbinary(max)|Örnek yüklendiğinde, geri iş akışı çalışma zamanı sağlanmayan serileştirilmiş örnek veri özellikleri içerir.<br /><br /> Seri kaldırıcı bu blob depolanan tüm nesne türlerinin bilgi gerektirir.|  
-|IdentityName|nvarchar(max)|İş akışı tanımı adı.|  
+|ReadWritePrimitiveDataProperties|VARBINARY(max)|Örnek yüklendiğinde, geri iş akışı çalışma zamanı sağlanan serileştirilmiş bir örnek veri özelliklerini içerir.<br /><br /> Özel bütünleştirilmiş kod yok blob serisini kaldırmak için gerekli olup olmadığını anlamına gelir. yerel bir CLR türü her temel özelliğidir.|  
+|WriteOnlyPrimitiveDataProperties|VARBINARY(max)|Örnek yüklendiğinde, geri iş akışı çalışma zamanı için sağlanan değil serileştirilmiş bir örnek veri özelliklerini içerir.<br /><br /> Özel bütünleştirilmiş kod yok blob serisini kaldırmak için gerekli olup olmadığını anlamına gelir. yerel bir CLR türü her temel özelliğidir.|  
+|ReadWriteComplexDataProperties|VARBINARY(max)|Örnek yüklendiğinde, geri iş akışı çalışma zamanı için sağlanan serileştirilmiş bir örnek veri özelliklerini içerir.<br /><br /> Bir seri durumdan çıkarıcı bu blobu'nda depolanan tüm nesne türlerinin bilgi gerektirir.|  
+|WriteOnlyComplexDataProperties|VARBINARY(max)|Örnek yüklendiğinde, geri iş akışı çalışma zamanı için sağlanan değil serileştirilmiş bir örnek veri özelliklerini içerir.<br /><br /> Bir seri durumdan çıkarıcı bu blobu'nda depolanan tüm nesne türlerinin bilgi gerektirir.|  
+|IdentityName|nvarchar(max)|İş akışı tanımının adı.|  
 |IdentityPackage|nvarchar(max)|İş akışı (derleme adı gibi) oluşturulduğunda verilen paket bilgileri.|  
-|Derleme|BigInt|İş akışı sürümünün yapı numarası.|  
-|Ana|BigInt|İş akışı sürümü ana sayısı.|  
+|Derleme|BigInt|İş akışı sürümünün derleme numarası.|  
+|Büyük|BigInt|İş akışı sürümü ana sayısı.|  
 |Küçük|BigInt|İş akışı sürümü küçük sayısı.|  
-|Gözden geçirme|BigInt|İş akışı sürümü düzeltme sayısı.|  
+|Gözden geçirme|BigInt|İş akışı sürümünün düzeltme numarası.|  
   
 > [!CAUTION]
->  **Örnekleri** görünümü silme tetikleyicisi de içerir. Uygun izinlere sahip kullanıcılar, iş akışı örnekleri veritabanından zorla kaldıracak bu görünüm delete deyimini yürütebilir. İş akışı çalışma zamanı altında bir örnekten silme istenmeyen sonuçlara neden olabilir çünkü son çare olarak doğrudan görünümünden silme öneririz. Bunun yerine, iş akışı örneği yönetim uç noktası örneği sonlandırılacak iş akışı çalışma zamanı için kullanın. Çok sayıda örneği görünümden silmek istiyorsanız, bu örnekleri üzerinde çalışan hiçbir etkin çalışma zamanları vardır emin olun.  
+>  **Örnekleri** görünümü de Delete tetikleyicisi içeriyor. Uygun izne sahip kullanıcılar zorla iş akışı örnekleri veritabanından kaldırır bu görünüm delete deyimini yürütebilir. İş akışı çalışma zamanı altında örneğini silmek, istenmeyen sonuçlara neden olabilir çünkü yalnızca son çare olarak doğrudan görünümden silme öneririz. İş akışı çalışma zamanı örneği sonlandırmak için bunun yerine, iş akışı örneği yönetim uç noktasını kullanın. Çok sayıda örneği görünümden silmek istiyorsanız, bu örnekler üzerinde çalışıyor olabilir hiçbir etkin çalışma zamanları olmadığından emin olun.  
   
-## <a name="servicedeployments-view"></a>ServiceDeployments görünümü  
- **ServiceDeployments** görünümü tüm Web dağıtım bilgilerini içerir (IIS / edildi) iş akışı hizmetleri barındırılan. Web barındırılan her iş akışı örneği içerecek bir **ServiceDeploymentId** bu görünümde bir satır için başvuruyor.  
+## <a name="servicedeployments-view"></a>ServiceDeployments görüntüle  
+ **ServiceDeployments** görünümü, tüm Web dağıtım bilgilerini içerir (IIS / WAS'da) barındırılan iş akışı hizmetleri. Web barındırılan her iş akışı örneği içerecek bir **ServiceDeploymentId** bu görünümde bir satıra başvuruyor.  
   
 |Sütun adı|Sütun türü|Açıklama|  
 |-----------------|-----------------|-----------------|  
 |ServiceDeploymentId|BigInt|Bu görünüm için birincil anahtar.|  
-|SiteName|nvarchar(max)|İş akışı hizmeti içeren sitenin adını temsil eder (örneğin **varsayılan Web sitesi**).|  
-|RelativeServicePath|nvarchar(max)|İş akışı hizmeti noktaları site göre sanal yolu temsil eder. (örn.  **/app1/PurchaseOrderService.svc**).|  
-|RelativeApplicationPath|nvarchar(max)|İş akışı hizmeti içeren bir uygulama için işaret site göre sanal yolu temsil eder. (örneğin **sitesinde/App1 adlı**).|  
+|Site adı|nvarchar(max)|İş akışı hizmeti içeren sitenin adını temsil eder (örneğin **varsayılan Web sitesi**).|  
+|RelativeServicePath|nvarchar(max)|İş akışı hizmetine işaret eden site göreli sanal yolu temsil eder. (örn.)  **/app1/PurchaseOrderService.svc**).|  
+|RelativeApplicationPath|nvarchar(max)|İş akışı hizmeti içeren bir uygulamaya işaret eden site göreli sanal yolu temsil eder. (örneğin **/app1**).|  
 |ServiceName|nvarchar(max)|İş akışı hizmeti adını temsil eder. (örneğin **PurchaseOrderService**).|  
-|ServiceNamespace|nvarchar(max)|İş akışı hizmeti ad alanı temsil eder. (örneğin **Şirketim**).|  
+|ServiceNamespace|nvarchar(max)|İş akışı hizmet ad alanını temsil eder. (örneğin **Şirketim**).|  
   
- ServiceDeployments görünüm da Delete tetikleyicisi içeriyor. Uygun izinlere sahip kullanıcılar ServiceDeployment girişler veritabanından kaldırmak için bu görünümü delete deyimini yürütebilir. Aşağıdakilere dikkat edin:  
+ ServiceDeployments görünüm de Delete tetikleyicisi içeriyor. Uygun izinlere sahip kullanıcılar delete deyimleri ServiceDeployment girişler veritabanından kaldırmak için bu görünümü karşı çalıştırabilirsiniz. Aşağıdakilere dikkat edin:  
   
-1.  Bu işlemi gerçekleştirmeden önce tüm veritabanını kilitlenip gerekir beri bu görünümden girdileri silme maliyetlidir. Bu iş akışı örneği mevcut olmayan ServiceDeployment girişe burada başvurabileceğiniz senaryo önlemek gereklidir. Kapalı kaldıkları yalnızca sırasında bu görünümden silme / bakım pencereleri.  
+1.  Tüm veritabanını, bu işlemi gerçekleştirmeden önce kilitlenmelidir olduğundan, bu görünümden girdileri silme maliyetlidir. Bu, bir iş akışı örneği var olmayan ServiceDeployment girişe burada başvurabileceğiniz senaryo önlemek gereklidir. Kapalı kaldıkları süreleri sırasında yalnızca bu görünümden silme / bakım pencereleri.  
   
-2.  Tüm girişleri tarafından başvuruluyor ServiceDeployment satır silme dener **örnekleri** görünüm yok op neden olur. Yalnızca sıfır başvuruları ServiceDeployment satırlarla silebilirsiniz.  
+2.  Tüm girdiler tarafından başvuruluyor bir ServiceDeployment satır silme girişiminde **örnekleri** görünüm yok op neden olur. Yalnızca sıfır başvuruları ServiceDeployment satırlarla silebilirsiniz.  
   
-## <a name="instancepromotedproperties-view"></a>InstancePromotedProperties görünümü  
- **InstancePromotedProperties** görünümü kullanıcı tarafından belirtilen tüm yükseltilen özellikleri için bilgiler içerir. Yükseltilen bir özellik olan bir kullanıcı örneği almak için sorguları kullanabilirsiniz birinci sınıf bir özellik olarak çalışır.  Örneğin, bir kullanıcı her zaman bir sırada maliyetini depolayan bir PurchaseOrder yükseltmenin ekleyebilirsiniz **Value1** sütun. Bu kullanıcı sorgulamak için belirli bir değere maliyeti aşıyor tüm satın alma siparişleri etkinleştirir.  
+## <a name="instancepromotedproperties-view"></a>InstancePromotedProperties görüntüle  
+ **InstancePromotedProperties** görünümü kullanıcı tarafından belirtilen yükseltilen özellikleri için bilgiler içerir. Yükseltilen özellik sorgularda örnekleri almak için kullanabileceğiniz bir kullanıcı bir birinci sınıf özellik olarak işlev görür.  Örneğin, bir kullanıcı her zaman sırayla maliyetini depolayan bir PurchaseOrder promosyon ekleyebilirsiniz **Value1** sütun. Bu kullanıcı için tüm satın alma siparişleri maliyeti belirli bir değere aştığı için sorgu etkinleştirir.  
   
 |Sütun türü|Sütun türü|Açıklama|  
 |-|-|-|  
-|örnek kimliği|Benzersiz tanımlayıcı|İş akışı örneği kimliği|  
+|InstanceId|Benzersiz tanımlayıcı|İş akışı örneği kimliği|  
 |EncodingOption|Mini tamsayı|Yükseltilen ikili özellikleri serileştirmek için kullanılan kodlama açıklar.<br /><br /> -0 – hiçbir kodlama<br />-1 – GZipStream|  
-|PromotionName|nvarchar(400)|Bu örnekle ilişkili yükseltme adı. PromotionName genel sütunları bu satırda içerik eklemek için gereklidir.<br /><br /> Örneğin, bir PromotionName PurchaseOrder Value1 sırasını maliyetini içerir, Value2 siparişin müşterinin adını içerir, müşteri vb. adresini değeri 3 içerir gösterebilir.|  
-|Değer [1-32]|SqlVariant|Değer [1-32] SqlVariant sütununda depolanan değerleri içerir. Tek bir yükseltme 32'den fazla SqlVariants içeremez.|  
-|Değer [33-64]|varbinary(max)|Değer [33-64] serileştirilmiş değerlerini içerir. Örneğin, Value33 bir JPEG, satın alınan bir maddenin içerebilir. Tek bir yükseltme 32'den fazla ikili özelliklerini içeremez.|  
+|PromotionName|Nvarchar(400)|Bu örnekle ilişkili yükseltme adı. PromotionName genel sütunları bu satırda bağlam eklemek için gereklidir.<br /><br /> Örneğin, bir PromotionName PurchaseOrder Value1 sırasını maliyetini içerir, değer2 siparişi veren müşteri adını içeren, müşteri ve benzeri adresini değeri 3'ü içerip gösterebilir.|  
+|Değeri [1-32]|SqlVariant|Değeri [1-32] SqlVariant sütunda depolanabilen değerlerini içerir. Tek bir yükseltme 32'den fazla SqlVariants içeremez.|  
+|Değer [33-64]|VARBINARY(max)|Değer 33-64 seri değerlerini içerir. Örneğin, Value33 bir JPEG, satın alınan bir maddenin içerebilir. Tek bir yükseltme 32'den fazla ikili özellikleri içeremez|  
   
- Şemaya bağlı, kullanıcıların bu görünüm sorguları en iyi duruma getirmek için bir veya daha fazla sütun dizinleri ekleyebileceğiniz anlamına gelir InstancePromotedProperties görünümdür.  
+ Şemaya bağlı, kullanıcıları bu görünüm sorguları iyileştirmek için bir veya daha fazla sütuna dizinleri ekleyebilirsiniz anlamına gelir InstancePromotedProperties görünümdür.  
   
 > [!NOTE]
->  Bir dizini oluşturulmuş görünüm daha fazla depolama alanı gerektirir ve ek işlem yükü ekler. Lütfen [SQL Server 2008 dizin oluşturulmuş görünümler ile performans geliştirme](http://go.microsoft.com/fwlink/?LinkId=179529) daha fazla bilgi için.
+>  Dizinli bir görünüm, daha fazla depolama alanı gerektirir ve ek işlem yükü ekler. Lütfen [SQL Server 2008 dizin oluşturulmuş görünümler ile performansı iyileştirme](https://go.microsoft.com/fwlink/?LinkId=179529) daha fazla bilgi için.

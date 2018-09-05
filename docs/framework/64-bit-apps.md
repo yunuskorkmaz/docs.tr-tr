@@ -8,17 +8,17 @@ helpviewer_keywords:
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2fe12f67814b2fc049ec26c745b43aa85627d555
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8cfe1f76cfe489095dfa996bce8005d2777966b7
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744281"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43537987"
 ---
 # <a name="64-bit-applications"></a>64 bitlik Uygulamalar
 Bir uygulamayı derlediğinizde, 64 bitlik bir Windows işletim sisteminde yerel uygulama olarak ya da WOW64 (Windows 64-bit üzerinde Windows-32-bit) altında çalışmasını belirtebilirsiniz. WOW64, 32 bitlik bir uygulamanın 64 bitlik bir sistemde çalışmasını sağlayan bir uyumluluk ortamıdır. WOW64, Windows işletim sisteminin tüm 64 bitlik sürümlerinde bulunur.  
   
-## <a name="running-32-bit-vs-64-bit-applications-on-windows"></a>32-bit vs çalışıyor. Windows 64-bit uygulamalar  
+## <a name="running-32-bit-vs-64-bit-applications-on-windows"></a>Çalışan 32-bit vs. Windows 64-bit uygulamaları  
  .NET Framework 1.0 veya 1.1 üzerinde oluşturulan tüm uygulamalar, 64 bitlik bir işletim sisteminde 32 bitlik uygulamalar olarak kabul edilir ve her zaman WOW64 ve 32 bitlik ortak dil çalışma zamanı (CLR) altında yürütülür. [!INCLUDE[net_v40_long](../../includes/net-v40-long-md.md)] veya daha sonraki sürümlerinde oluşturulan 32 bitlik uygulamalar da 64 bitlik sistemlerde WOW64 altında çalışır.  
   
  Visual Studio, bir x86 bilgisayara CLR'nin 32 bitlik sürümünü, ve 64 bitlik bir Windows bilgisayara hem CLR'nin hem 32 bitlik hem de uygun 64 bitlik sürümünü yükler. (Visual Studio 32 bitlik bir uygulama olduğu için, 64 bitlik bir sisteme yüklendiğinde WOW64 altında çalışır.)  
@@ -26,7 +26,7 @@ Bir uygulamayı derlediğinizde, 64 bitlik bir Windows işletim sisteminde yerel
 > [!NOTE]
 >  Itanium işlemci ailesine ait x86 öykünmesinin ve WOW64 alt sisteminin tasarımı nedeniyle uygulamalar tek işlemcide yürütülmeye sınırlıdır. Bu etkenler, Itanium tabanlı sistemlerde çalışan 32 bitlik .NET Framework uygulamalarının performansını ve ölçeklenebilirliğini azaltır. Daha yüksek performans ve ölçeklenebilirlik amacıyla, Itanium tabanlı sistemler için yerel 64 bitlik destek içeren [!INCLUDE[net_v40_long](../../includes/net-v40-long-md.md)]'i kullanmanızı öneririz.  
   
- Varsayılan olarak, 64 bitlik bir Windows işletim sisteminde 64 bitlik yönetilen bir uygulama çalıştırdığınızda, 2 gigabayttan (GB) daha büyük bir nesne oluşturamazsınız. Ancak [!INCLUDE[net_v45](../../includes/net-v45-md.md)] içinde, bu sınırı artırabilirsiniz.  Daha fazla bilgi için bkz: [ \<gcAllowVeryLargeObjects > öğesi](../../docs/framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md).  
+ Varsayılan olarak, 64 bitlik bir Windows işletim sisteminde 64 bitlik yönetilen bir uygulama çalıştırdığınızda, 2 gigabayttan (GB) daha büyük bir nesne oluşturamazsınız. Ancak [!INCLUDE[net_v45](../../includes/net-v45-md.md)] içinde, bu sınırı artırabilirsiniz.  Daha fazla bilgi için [ \<gcAllowVeryLargeObjects > öğesi](../../docs/framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md).  
   
  Çoğu derleme, 32 bitlik CLR ve 64 bitlik CLR'de aynı şekilde çalışır. Ancak bazı programlar, eğer aşağıdakilerden bir veya daha fazlasını içeriyorlarsa CLR'ye bağlı olarak farklı şekilde davranabilir:  
   
@@ -38,18 +38,18 @@ Bir uygulamayı derlediğinizde, 64 bitlik bir Windows işletim sisteminde yerel
   
 -   `IntPtr` öğesini `Int32`'e yayınlayan kod.  
   
- 64-bit CLR üzerinde çalıştırmak için bir 32 bit uygulama bağlantı noktası hakkında daha fazla bilgi için bkz: [yönetilen geçirme 32 bit kodu 64-bit](https://msdn.microsoft.com/library/ms973190.aspx).  
+ 64 bit CLR'de çalıştırmak için bir 32 bit uygulama bağlantı noktası hakkında daha fazla bilgi için bkz. [geçirme 32 bitlik yönetilen kodu 64-bit](https://msdn.microsoft.com/library/ms973190.aspx).  
   
 ## <a name="general-64-bit-programming-information"></a>Genel 64-Bit Programlama Bilgileri  
  64 bit programlama hakkında genel bilgi için, aşağıdaki belgelere bakın:  
   
--   Bir 64-bit Windows bilgisayarda CLR 64-bit sürümü hakkında daha fazla bilgi için bkz: [.NET Framework Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=37079) MSDN Web sitesinde.  
+-   Bir 64 bit Windows bilgisayarda CLR'nin 64 bitlik sürümü hakkında daha fazla bilgi için bkz. [.NET Framework Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=37079) MSDN Web sitesinde.  
   
--   İçinde [!INCLUDE[winsdkshort](../../includes/winsdkshort-md.md)] belgelerine bakın [64-bit Windows için Programlama Kılavuzu](http://go.microsoft.com/fwlink/p/?LinkId=253512).  
+-   İçinde [!INCLUDE[winsdkshort](../../includes/winsdkshort-md.md)] belgelerine bakın [64 bit Windows için Programlama Kılavuzu](https://go.microsoft.com/fwlink/p/?LinkId=253512).  
   
--   CLR 64-bit sürümünü karşıdan yükleme hakkında daha fazla bilgi için bkz: [.NET Framework Geliştirici Merkezi indirmeleri](http://go.microsoft.com/fwlink/?LinkId=50953) MSDN Web sitesinde.  
+-   CLR'nin 64-bit sürümü indirme hakkında daha fazla bilgi için bkz: [.NET Framework Geliştirici Merkezi indirmeleri](https://go.microsoft.com/fwlink/?LinkId=50953) MSDN Web sitesinde.  
   
--   64-bit uygulamaları oluşturmak için Visual Studio desteği hakkında daha fazla bilgi için bkz: [Visual Studio IDE 64-Bit desteği](http://msdn.microsoft.com/library/b08ff3ad-c6fd-468f-94d5-01a61aab6833).  
+-   64-bit uygulamalar oluşturmak için Visual Studio desteği hakkında daha fazla bilgi için bkz. [Visual Studio IDE 64 Bit desteği](https://msdn.microsoft.com/library/b08ff3ad-c6fd-468f-94d5-01a61aab6833).  
   
 ## <a name="compiler-support-for-creating-64-bit-applications"></a>64-Bit Uygulamalar Oluşturmak için Derleme Desteği  
  Varsayılan olarak, 32 bitlik veya 64 bitlik bir bilgisayarda uygulama oluşturmak için .NET Framework'ü kullandığınızda, uygulama 64 bitlik bir bilgisayarda yerel uygulama olarak (yani WOW64 altında olmadan) çalışır. Aşağıdaki tablo, yerel olarak, WOW64 altında veya her iki şekilde de çalışacak olan 64 bitlik uygulamalar oluşturmak için Visual Studio'nun nasıl kullanıldığını açıklayan belgeleri listeler.  
@@ -58,9 +58,9 @@ Bir uygulamayı derlediğinizde, 64 bitlik bir Windows işletim sisteminde yerel
 |--------------|---------------------|  
 |Visual Basic|[/ Platform (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/platform.md)|  
 |Visual C#|[/ Platform (C# Derleyici Seçenekleri)](~/docs/csharp/language-reference/compiler-options/platform-compiler-option.md)|  
-|Visual C++|Platform belirsiz, Microsoft Ara dili (MSIL) uygulamaları kullanarak oluşturabileceğiniz **/CLR: safe**. Daha fazla bilgi için bkz: [/CLR (ortak dil çalışma zamanı derlemesi)](/cpp/build/reference/clr-common-language-runtime-compilation).<br /><br /> Visual C++, 64 bitlik her bir işletim sistemi için ayrı bir derleyici içerir. Visual C++ 64-bit Windows işletim sisteminde çalışacak yerel uygulamalar oluşturmak için nasıl kullanılacağı hakkında daha fazla bilgi için bkz: [64-bit programlama](http://msdn.microsoft.com/library/h2k70f3s\(v=vs.80\)).|  
+|Visual C++|Platformdan bağımsız, Microsoft Ara dili (MSIL) uygulamaları kullanarak oluşturabileceğiniz **/CLR: safe**. Daha fazla bilgi için [/CLR (ortak dil çalışma zamanı derlemesi)](/cpp/build/reference/clr-common-language-runtime-compilation).<br /><br /> Visual C++, 64 bitlik her bir işletim sistemi için ayrı bir derleyici içerir. Bir 64 bit Windows işletim sisteminde çalışan yerel uygulamalar oluşturmak için Visual C++'ı kullanma hakkında daha fazla bilgi için bkz. [64 bit programlama](https://msdn.microsoft.com/library/h2k70f3s\(v=vs.80\)).|  
   
 ## <a name="determining-the-status-of-an-exe-file-or-dll-file"></a>Bir .exe Dosyası veya .dll Dosyasının Durumunu Belirleme  
- Bir .exe veya .dll dosyası yalnızca belirli bir platformda veya WOW64 altında çalışmak üzere tasarlanmıştır olup olmadığını belirlemek için [CorFlags.exe (CorFlags dönüştürme aracı)](../../docs/framework/tools/corflags-exe-corflags-conversion-tool.md) hiçbir seçenek. Bir .exe dosyasının veya .dll dosyasının platform durumunu değiştirmek için aynı zamanda CorFlags.exe'yi de kullanabilirsiniz. Bir Visual Studio derlemesinin CLR başlığının ana çalışma zamanı sürümü numarası 2 olarak, alt çalışma zamanı sürümü numarası ise 5 olarak ayarlanır. Alt çalışma zamanı sürümü 0 olarak ayarlanan uygulamalar eski uygulamalar olarak işlenir ve her zaman WOW64 altında yürütülür.  
+ Bir .exe dosyasının veya .dll dosyasının yalnızca belirli bir platformda veya WOW64 altında çalışacak şekilde ayarlandığını olup olmadığını belirlemek için [CorFlags.exe (CorFlags dönüştürme aracı)](../../docs/framework/tools/corflags-exe-corflags-conversion-tool.md) hiçbir seçenek olmadan. Bir .exe dosyasının veya .dll dosyasının platform durumunu değiştirmek için aynı zamanda CorFlags.exe'yi de kullanabilirsiniz. Bir Visual Studio derlemesinin CLR başlığının ana çalışma zamanı sürümü numarası 2 olarak, alt çalışma zamanı sürümü numarası ise 5 olarak ayarlanır. Alt çalışma zamanı sürümü 0 olarak ayarlanan uygulamalar eski uygulamalar olarak işlenir ve her zaman WOW64 altında yürütülür.  
   
  Bir .exe veya .dll dosyasını, belirli bir platformda mı yoksa WOW4 altında mı çalışmak için tasarlandığını görmek üzere program aracılığıyla sorgulamak amacıyla <xref:System.Reflection.Module.GetPEKind%2A?displayProperty=nameWithType> yöntemini kullanın.

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
 ms.openlocfilehash: 898e5688ae08a59415c8b3116665eec6cb4cf904
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43393286"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43533697"
 ---
 # <a name="using-sessions"></a>Oturumları Kullanma
 Windows Communication Foundation (WCF) uygulamaları bir *oturumu* iletiler grubunu bir konuşma ile ilişkilendirir. WCF oturumları bulunan oturum nesnesi değerinden farklı [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] uygulamaları, farklı davranışları desteklemek ve farklı yollarla denetlenir. Bu konuda WCF'de oturumları sağlayan özellikleri açıklar uygulamaları ve bunların nasıl kullanıldığı.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - keyboards [Windows Forms], keyboard input
 ms.assetid: 1486075f-1e06-4c9e-82c6-f948331db6d6
 ms.openlocfilehash: fef51f57dd3c14c91572041a72c805823d6019a3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43456671"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43658866"
 ---
 # <a name="user-input-in-windows-forms"></a>Windows Forms'ta Kullanıcı Girdisi
 Windows Forms ilgili Windows iletilerini işleme sırasında başlatılan olaylara dayalı bir kullanıcı giriş modeli içerir. Bu bölümdeki konular, belirli görevlerin nasıl gerçekleştirileceğini gösteren kod örnekleri dahil olmak üzere, fare ve klavye kullanıcı girişi hakkında bilgi sağlar.  

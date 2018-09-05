@@ -2,18 +2,18 @@
 title: 'Nasıl yapılır: XmlSerializer (C#) kullanarak serileştirme'
 ms.date: 07/20/2015
 ms.assetid: 2e0a0bbc-c548-4fe2-8741-be5a9ccd0cbb
-ms.openlocfilehash: 2f68253f2ce1efaaabb971350496898ab012706b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 32a23792947639c2c0eb1dc14b640c3786bdfd4c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319903"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43535769"
 ---
 # <a name="how-to-serialize-using-xmlserializer-c"></a>Nasıl yapılır: XmlSerializer (C#) kullanarak serileştirme
-Bu konuda, serileştirir ve kullanılarak seri durumdan çıkarır bir örnek gösterilmektedir <xref:System.Xml.Serialization.XmlSerializer>.  
+Bu konuda serileştirir ve kullanarak çıkarır bir örnek gösterilmektedir <xref:System.Xml.Serialization.XmlSerializer>.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir dizi içeren nesneleri oluşturur <xref:System.Xml.Linq.XElement> nesneleri. Bunları bir bellek akışa serileştirir ve bunları bellek akıştan çıkarır.  
+ Aşağıdaki örnek, bir sayı içeren bir nesne oluşturur. <xref:System.Xml.Linq.XElement> nesneleri. Ardından bunları bir bellek akışa serileştirir ve bunları bellek akıştan serisini kaldırır.  
   
 ```csharp  
 using System;  
@@ -78,7 +78,7 @@ class XLinqTest
 }  
 ```  
   
- Bu örnek şu çıkışı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```  
 Testing for type: XElementNullContainer  
@@ -89,5 +89,6 @@ Testing for type: XElementContainer
   Deserialized type: XElementContainer  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [XElement nesneler (C#) içeren nesne grafiklerinin seri hale getirme](../../../../csharp/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [XElement nesneleri (C#) içeren nesne grafiklerini serileştirme](../../../../csharp/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)

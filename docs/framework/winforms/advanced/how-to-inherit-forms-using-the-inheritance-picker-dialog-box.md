@@ -7,11 +7,11 @@ helpviewer_keywords:
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
 ms.openlocfilehash: 5bcd29531858f9cf014042db7ee447cecfdd89b1
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43399796"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525750"
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Nasıl yapılır: Devralma Seçici İletişim Kutusunu Kullanarak Form Devralma
 Bir form veya diğer nesne devral en kolay yolu kullanmaktır **devralma Seçici** iletişim kutusu. Bununla, diğer çözümlere önceden oluşturduğunuz kodu veya kullanıcı arabirimi (UI) avantajlarından yararlanabilirsiniz.  

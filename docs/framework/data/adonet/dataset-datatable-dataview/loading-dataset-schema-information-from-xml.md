@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 43dfb23b-5cef-46f2-8d87-78f0fba1eb8c
 ms.openlocfilehash: a076dcbbe79a7ec0dfbd727e0d0c752bd4675eef
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43398612"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515988"
 ---
 # <a name="loading-dataset-schema-information-from-xml"></a>XML'den DataSet Schema bilgilerini yükleme
 Şemasını bir <xref:System.Data.DataSet> (kendi tablolar, sütunlar, ilişkiler ve kısıtlamalar) programlı olarak tarafından oluşturulan tanımlanabilir **dolgu** veya **FillSchema** yöntemlerinin bir <xref:System.Data.Common.DataAdapter>, veya gelen yüklenen bir XML belgesi. Yüklenecek **veri kümesi** şema bilgileri bir XML belgesinden ya da kullanabilirsiniz **ReadXmlSchema** veya **InferXmlSchema** yöntemi **verikümesi**. **ReadXmlSchema** yüklemek veya tanım Çıkarsama sağlar **veri kümesi** belgesinden XML Şeması Tanım Dili (XSD) şemaya veya satır içi XML şeması bir XML belgesi içeren şema bilgileri. **InferXmlSchema** belirttiğiniz belirli XML ad alanları yoksayılıyor çalışırken XML belgesi şemanın çıkarsandığı olanak tanır.  

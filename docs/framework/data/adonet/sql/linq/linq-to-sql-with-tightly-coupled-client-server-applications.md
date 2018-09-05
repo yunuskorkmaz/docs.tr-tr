@@ -3,11 +3,11 @@ title: Sıkıca bağlı istemci-sunucu uygulamaları ile LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: e083d805-dcf6-459d-b9af-9ef0563f2dd7
 ms.openlocfilehash: 9c36fc1f402d3791611af47a3a6d997db4f31167
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43408966"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521886"
 ---
 # <a name="linq-to-sql-with-tightly-coupled-client-server-applications"></a>Sıkıca bağlı istemci-sunucu uygulamaları ile LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sunu katmanı akıllı istemcilerde sıkı şekilde bağlı Orta katmanda kullanılabilir. Salt okunur veri erişimi yok iyimser eşzamanlılık denetimlerinin veya zaman damgası ile iyimser eşzamanlılık senaryolarda değil uzaktan olmayan senaryolar ile daha fazlasını karmaşıklığı yoktur. Ancak, bir veritabanı gerektirdiğinde iyimser eşzamanlılık denetler özgün değerleriyle [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] veri kümelerinde bulma veri gidiş dönüşü için destek düzeyini sağlamaz. Ancak, bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] orta katman herhangi bir platform üzerindeki istemcileri ile veri alışverişi.  

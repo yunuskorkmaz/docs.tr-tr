@@ -7,24 +7,24 @@ helpviewer_keywords:
 - Await operator [Visual Basic]
 - Await [Visual Basic]
 ms.assetid: 6b1ce283-e92b-4ba7-b081-7be7b3d37af9
-ms.openlocfilehash: 8e1462c7e0097bb2f04c6833a1bb279611b24133
-ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
+ms.openlocfilehash: 2094ba308ba384feb8542e896cb1eafcf645947c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34805516"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524472"
 ---
 # <a name="await-operator-visual-basic"></a>Await İşleci (Visual Basic)
-`Await` operatörünü awaited görevi tamamlanıncaya kadar, metodun yürütülmesini askıya almak için bir zaman uyumsuz metod veya lambda ifadesinde bir işlenene uygularsınız. Görev devam eden iş temsil eder.  
+`Await` operatörünü awaited görevi tamamlanıncaya kadar, metodun yürütülmesini askıya almak için bir zaman uyumsuz metod veya lambda ifadesinde bir işlenene uygularsınız. Görev, devam eden çalışmayı temsil eder.  
   
- Yönteminde `Await` kullanılan olmalıdır bir [zaman uyumsuz](../../../visual-basic/language-reference/modifiers/async.md) değiştiricisi. Kullanılarak tanımlanmış böyle bir yöntemi, `Async` değiştiricisi ve genellikle içeren bir veya daha fazla `Await` ifadeleri olarak adlandırılır bir *async yöntemi*.  
+ Yöntem `Await` kullanılan olmalıdır bir [zaman uyumsuz](../../../visual-basic/language-reference/modifiers/async.md) değiştiricisi. Tarafından tanımlanan tür bir yöntem, `Async` değiştiricisi ve genellikle içeren bir veya daha fazla `Await` ifadeleri olarak adlandırılır bir *zaman uyumsuz yöntem*.  
   
 > [!NOTE]
->  `Async` Ve `Await` anahtar sözcükler, Visual Studio 2012'de sunulmuştur. Zaman uyumsuz programlamaya giriş için bkz: [uyumsuz ve bekleme ile zaman uyumsuz programlama](../../../visual-basic/programming-guide/concepts/async/index.md).  
+>  `Async` Ve `Await` anahtar sözcükleri Visual Studio 2012'de kullanıma sunulmuştur. Zaman uyumsuz programlamaya giriş için bkz [Async ve Await ile zaman uyumsuz programlama](../../../visual-basic/programming-guide/concepts/async/index.md).  
   
- Genellikle, uygulama, görev `Await` işlecidir uygulayan bir yöntem çağrısından dönüş değeri [görev tabanlı zaman uyumsuz desen](http://go.microsoft.com/fwlink/?LinkId=204847), diğer bir deyişle, bir <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601>.  
+ Genellikle, uyguladığınız görev `Await` işleci uygulayan bir Metoda bir çağrıdan dönüş değeridir [görev tabanlı zaman uyumsuz desen](https://go.microsoft.com/fwlink/?LinkId=204847), diğer bir deyişle, bir <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601>.  
   
- Aşağıdaki kodda, <xref:System.Net.Http.HttpClient> yöntemi <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A>, `getContentsTask`, bir `Task(Of Byte())` döndürür. Görev, işlem tamamlandığında gerçek bayt dizisini üretmek için bir vaattir. `Await` İşleci uygulanan `getContentsTask` yürütme askıya almak için `SumPageSizesAsync` kadar `getContentsTask` tamamlandı. Bu arada, Denetim çağırana döndürülen `SumPageSizesAsync`. Zaman `getContentsTask` tamamlandı, `Await` ifadeyi hesaplar bir bayt dizisi.  
+ Aşağıdaki kodda, <xref:System.Net.Http.HttpClient> yöntemi <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A>, `getContentsTask`, bir `Task(Of Byte())` döndürür. Görev, işlem tamamlandığında gerçek bayt dizisini üretmek için bir vaattir. `Await` İşleci uygulanır `getContentsTask` içindeki yürütmeyi askıya almak için `SumPageSizesAsync` kadar `getContentsTask` tamamlandı. Bu sırada, Denetim çağırana döndürülmeden `SumPageSizesAsync`. Zaman `getContentsTask` bittiğinde `Await` ifadesi bir bayt dizisine değerlendirir.  
   
 ```vb  
 Private Async Function SumPageSizesAsync() As Task  
@@ -43,9 +43,9 @@ End Function
 ```  
   
 > [!IMPORTANT]
->  Tam bir örnek için bkz: [izlenecek yol: Web kullanarak zaman uyumsuz ve bekleme tarafından erişme](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Örnekten indirebilirsiniz [Geliştirici kod örnekleri](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) Microsoft Web sitesinde. AsyncWalkthrough_HttpClient projesinde örnektir.  
+>  Tam bir örnek için bkz. [izlenecek yol: Web kullanarak Async ve Await tarafından erişim](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). İçinden örneği karşıdan yükleyebilirsiniz [geliştirici kodu örnekleri](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) Microsoft Web sitesinde. Örnek AsyncWalkthrough_HttpClient projesindedir.  
   
- `Await` getiren bir metot çağrısının sonucuna `Task(Of TResult)` uygulanırsa, `Await` ifadesinin türü TResult olur. `Await`, bir `Task` getiren bir metot çağrısının sonucuna uygulanırsa, `Await` ifadesi bir değer getirmez. Aşağıdaki örnek fark gösterilmektedir.  
+ `Await` getiren bir metot çağrısının sonucuna `Task(Of TResult)` uygulanırsa, `Await` ifadesinin türü TResult olur. `Await`, bir `Task` getiren bir metot çağrısının sonucuna uygulanırsa, `Await` ifadesi bir değer getirmez. Fark aşağıdaki örnekte gösterilmiştir.  
   
 ```vb  
 ' Await used with a method that returns a Task(Of TResult).  
@@ -55,23 +55,23 @@ Dim result As TResult = Await AsyncMethodThatReturnsTaskTResult()
 Await AsyncMethodThatReturnsTask()  
 ```  
   
- Bir `Await` ifadesi veya açıklaması, üzerinde yürütme yaptığı iş parçacığını engellemez. Bunun yerine, `Await` ifadesinden sonra, bekleyen görevlerin bir devamı olarak, derleyicinin zaman uyumsuz yöntemin geri kalanını imzalamasına yol açar. Denetim ardından async yöntemi çağırana döndürür. Görev tamamlandığında, devamlılık ve kaldığı yerden zaman uyumsuz yöntem sürdürür yürütülmesi çağırır.  
+ Bir `Await` ifadesi veya açıklaması, üzerinde yürütme yaptığı iş parçacığını engellemez. Bunun yerine, `Await` ifadesinden sonra, bekleyen görevlerin bir devamı olarak, derleyicinin zaman uyumsuz yöntemin geri kalanını imzalamasına yol açar. Denetim, ardından zaman uyumsuz yöntemini çağırana döner. Görev tamamlandığında, devamlılık ve yürütülmesi kaldığı zaman uyumsuz yöntem sürdürür çağırır.  
   
- Bir `Await` ifadesi yalnızca bir `Async` değiştiricisiyle işaretlenmiş bir anında kapatma metodunun veya lambda ifadesinin gövdesinde gerçekleşebilir. Terim *bekleme* bu bağlamda yalnızca bir anahtar sözcük görevi görür. Başka bir yerde bir tanımlayıcı olarak yorumlanır. Zaman uyumsuz yöntem veya lambda ifadesinde bulunan bir `Await` ifadesi bir sorgu ifadesinde gerçekleşemez `catch` veya `finally` , engelleme bir [deneyin... Catch... Son olarak](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md) ifadesinde döngüsü denetim değişkeni deyimi bir `For` veya `For Each` döngüsü veya gövdesinde bir [SyncLock](../../../visual-basic/language-reference/statements/synclock-statement.md) deyimi.  
+ Bir `Await` ifadesi yalnızca bir `Async` değiştiricisiyle işaretlenmiş bir anında kapatma metodunun veya lambda ifadesinin gövdesinde gerçekleşebilir. Terim *Await* yalnızca bu bağlamda bir anahtar sözcük görevi görür. Başka bir yerde, tanımlayıcı olarak yorumlanır. Zaman uyumsuz yöntem veya lambda ifadesinde bulunan bir `Await` ifade içinde bir sorgu ifadesinde gerçekleşemez `catch` veya `finally` bloğu bir [deneyin... Catch... Son olarak](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md) deyiminde döngü denetimi değişkeni ifadesinde bir `For` veya `For Each` döngü gövdesinde veya bir [SyncLock](../../../visual-basic/language-reference/statements/synclock-statement.md) deyimi.  
   
 ## <a name="exceptions"></a>Özel Durumlar  
- Çoğu zaman uyumsuz yöntemleri döndürür bir <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601>. Döndürülen görev özelliklerini durumunu ve görevin tam olup, async yöntemi bir özel durum nedeniyle veya iptal edildi ve son sonucu gibi geçmişi hakkında bilgi taşır. `Await` İşleci bu özellikleri erişir.  
+ Çoğu zaman uyumsuz yöntemlerin dönüş bir <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601>. Döndürülen görevin özelliklerini, durumunu ve geçmişini, görevin tam olup olmadığı, zaman uyumsuz yöntemin bir özel duruma neden oldu veya iptal edildi ve nihai sonucun ne olduğu gibi hakkında bilgi getirir. `Await` İşleci, özelliklere erişir.  
   
- Bir özel duruma neden olan görev döndüren bir zaman uyumsuz yöntem bekleme durumunda `Await` işleci özel durumu yeniden oluşturur.  
+ Bir özel durum neden olan bir görev döndüren zaman uyumsuz yöntem, `Await` işleci özel durumu yeniden oluşturur.  
   
  İptal edilen bir görev döndüren zaman uyumsuz yöntemi beklerseniz, `Await` operatörü yeniden bir <xref:System.OperationCanceledException> oluşturur.  
   
- Hatalı durumda tek bir görevi birden fazla özel yansıtabilirsiniz.  Örneğin, görev için bir çağrı sonucunu olabilir <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. Bu tür bir görev bekleme zaman bekleme işlemi yalnızca bir özel durum yeniden oluşturur. Ancak, özel durumlar hangisinin işlenemezse tahmin edilemez.  
+ Hatalı bir durumda olan tek bir görev birden çok özel durumu yansıtabilir.  Örneğin, görev yapılan bir çağrının sonucu olabilir <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. Böyle bir görevi beklerken, bekleme işlemi özel durumlardan yalnızca birini yeniden oluşturur. Ancak, özel durumların fırlatılan tahmin edemezsiniz.  
   
- Zaman uyumsuz yöntemleri işleme hatası örnekleri için bkz: [deneyin... Catch... Finally ifadesi](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
+ Zaman uyumsuz yöntemlerdeki hata işleme örnekleri için bkz: [deneyin... Catch... Finally deyimini](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki Windows Forms örnek kullanımını göstermektedir `Await` bir zaman uyumsuz yöntem `WaitAsynchronouslyAsync`. Bu yöntem davranışını davranışını ile karşılaştırın `WaitSynchronously`. Bir `Await` operatörü olmadan, `WaitSynchronously` zaman uyumlu olarak çalışır, tanımında `Async` değiştiricisinin ve gövdesinde bir <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> çağrısı kullanılmasına rağmen.  
+ Aşağıdaki Windows Forms örnek kullanımını gösterir `Await` bir zaman uyumsuz yönteminde `WaitAsynchronouslyAsync`. Davranışı ile yöntemin davranışını karşılaştırın `WaitSynchronously`. Bir `Await` operatörü olmadan, `WaitSynchronously` zaman uyumlu olarak çalışır, tanımında `Async` değiştiricisinin ve gövdesinde bir <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> çağrısı kullanılmasına rağmen.  
   
 ```vb  
 Private Async Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click  

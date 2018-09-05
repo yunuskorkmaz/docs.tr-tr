@@ -3,11 +3,11 @@ title: İşe alma işlemi
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
 ms.openlocfilehash: 41f5508ea5805581282389e0731a00dde7796bc0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43396326"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43520644"
 ---
 # <a name="hiring-process"></a>İşe alma işlemi
 Bu örnek nasıl uygulanacağını Mesajlaşma etkinlikleri ve iş akışı hizmetlerinde barındırılan iki iş akışlarını kullanarak bir iş sürecini gösterir. Bu iş akışları Contoso, Inc. adlı kurgusal bir şirkette BT altyapısını bir parçasıdır  

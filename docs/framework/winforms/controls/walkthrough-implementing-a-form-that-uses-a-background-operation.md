@@ -16,11 +16,11 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
 ms.openlocfilehash: 435bc1c04bfd2f9b8a94ff8151369b5ef2fae6f8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385878"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43534316"
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>İzlenecek yol: Arka Plan İşlemi Kullanan Bir Form Uygulama
 Sahip olduğunuz işleminin tamamlanması uzun sürer ve yanıt vermemesine, kullanıcı arabirimi (UI) istemediğiniz veya kullanabileceğiniz "askıda," <xref:System.ComponentModel.BackgroundWorker> başka bir iş parçacığı üzerindeki işlemi yürütmek için sınıf.  

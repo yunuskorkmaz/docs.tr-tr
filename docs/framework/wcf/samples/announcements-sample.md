@@ -3,11 +3,11 @@ title: Duyuru Örnekleri
 ms.date: 03/30/2017
 ms.assetid: 954a75e4-9a97-41d6-94fc-43765d4205a9
 ms.openlocfilehash: a82056844c9ec8f77bce4b0adec481a025894d1f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43425408"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43534265"
 ---
 # <a name="announcements-sample"></a>Duyuru Örnekleri
 Bu örnek bulma özelliğinin duyuru işlevini nasıl kullanacağınızı gösterir. Duyurular hizmeti hakkında meta veriler içeren bir Duyurunun ileti göndermek için izin verin. Varsayılan olarak, hizmet başlatıldığı ve hizmet kapatıldığında bye duyuru gönderilir hello duyuru gönderilir. Bu duyurular çok noktaya yayın veya noktadan noktaya gönderilebilir. Bu örnek, iki proje hizmeti ve istemci oluşur.  

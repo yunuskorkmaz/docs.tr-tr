@@ -6,11 +6,11 @@ helpviewer_keywords:
 - OpenFileDialog component
 ms.assetid: d2efa832-a272-42ff-aa26-c4ac13ff59ba
 ms.openlocfilehash: 108411269067dc4b19b585b991dffbd78f2bb23f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43405105"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43565039"
 ---
 # <a name="openfiledialog-component-windows-forms"></a>OpenFileDialog Bileşeni (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.OpenFileDialog> bir önceden yapılandırılmış bir iletişim kutusu bir bileşendir. Aynı olan **açık dosya** Windows işletim sistemi tarafından kullanıma sunulan iletişim kutusu. Devraldığı <xref:System.Windows.Forms.CommonDialog> sınıfı.  

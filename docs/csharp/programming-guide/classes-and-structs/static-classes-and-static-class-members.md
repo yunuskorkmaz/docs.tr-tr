@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: f3e64d975d2845d8317b37f43c3811af6be03b55
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 60a75946d30b1555aea01507d846e790dd00f767
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43468703"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43541496"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Statik Sınıflar ve Statik Sınıf Üyeleri (C# Programlama Kılavuzu)
 A [statik](../../../csharp/language-reference/keywords/static.md) sınıfı, temel bir statik olmayan sınıf ile aynı, ancak bir fark vardır: bir statik sınıfın örneği oluşturulamıyor. Diğer bir deyişle, kullanamazsınız [yeni](../../../csharp/language-reference/keywords/new.md) sınıf türünde bir değişken oluşturmak için anahtar sözcüğü. Hiçbir örnek değişken olduğundan, bir statik sınıf üyeleri sınıf adı'ı kullanarak erişir. Örneğin, bir statik sınıflar varsa adlı `UtilityClass` adlı bir genel yöntem olan `MethodA`, aşağıdaki örnekte gösterildiği gibi yöntemi çağırın:  
@@ -86,10 +86,11 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [static](../../../csharp/language-reference/keywords/static.md)  
- [Sınıflar](../../../csharp/programming-guide/classes-and-structs/classes.md)  
- [class](../../../csharp/language-reference/keywords/class.md)  
- [Statik Oluşturucular](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)  
- [Örnek Oluşturucuları](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [static](../../../csharp/language-reference/keywords/static.md)  
+- [Sınıflar](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+- [class](../../../csharp/language-reference/keywords/class.md)  
+- [Statik Oluşturucular](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)  
+- [Örnek Oluşturucuları](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)

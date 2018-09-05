@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: b7b64874-c3c8-4bdb-862c-89a168d07827
 ms.openlocfilehash: 6a1f4d13a75f787730d6155161296c3307b845f6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43395359"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528364"
 ---
 # <a name="method-based-query-syntax-examples-partitioning"></a>Metot tabanlı sorgu söz dizimi örnekleri: bölümleme
 Bu konudaki örnekler nasıl kullanılacağını gösteren <xref:System.Linq.Enumerable.Skip%2A>, ve <xref:System.Linq.Enumerable.Take%2A> sorgulamak için yöntemleri [AdventureWorks satışları modeli](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) sorgu ifadesi söz dizimini kullanarak. Bu örneklerde kullanılan AdventureWorks satışları modeli kişi, adres, ürün, SalesOrderHeader ve satış siparişi ayrıntısını tablolarda AdventureWorks örnek veritabanı oluşturulur.  

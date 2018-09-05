@@ -1,63 +1,63 @@
 ---
-title: SQL Server'daki uygulama güvenlik senaryoları
+title: SQL Server'da uygulama güvenliği senaryoları
 ms.date: 03/30/2017
 ms.assetid: 0164f3a4-406e-4693-bec3-03c8e18b46d7
-ms.openlocfilehash: 1239715678bda648bc962f9b23667b954b540e3f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf4f4adfd5f49bd210026e40bd5fa4e67da10d75
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363331"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43535995"
 ---
-# <a name="application-security-scenarios-in-sql-server"></a>SQL Server'daki uygulama güvenlik senaryoları
-Güvenli bir SQL Server istemci uygulaması oluşturmak için tek doğru yolu yoktur. Her uygulama gereksinimleri, dağıtım ortamı ve kullanıcı nüfusu içinde benzersizdir. Başlangıçta dağıtıldığında makul güvenli bir uygulama zaman içinde daha az güvenli hale gelebilir. Hangi tehditleri gelecekte ortaya çıkan herhangi doğruluk ile tahmin etmek mümkün değildir.  
+# <a name="application-security-scenarios-in-sql-server"></a>SQL Server'da uygulama güvenliği senaryoları
+Güvenli bir SQL Server istemci uygulaması oluşturmak için tek bir doğru yolu yoktur. Her uygulamanın kendi gereksinimler, dağıtım ortamı ve kullanıcı kitlesiyle benzersizdir. Başlangıçta dağıtıldığında, makul güvenli bir uygulama, zaman içinde daha az güvenli hale gelebilir. Hangi tehditleri gelecekte ortaya çıkan herhangi doğrulukla tahmin etmek mümkün değildir.  
   
- SQL Server, bir ürün olarak çok sayıda sürümleri güvenli veritabanı uygulamaları oluşturmak, geliştiricilerin en son güvenlik özellikleri içerecek şekilde gelişmiştir. Ancak, güvenlik kutusuna gelmez; sürekli izleme ve güncelleştirme gerektirir.  
+ SQL Server, geliştiricilerin güvenli veritabanı uygulamaları oluşturmak en son güvenlik güncelleştirmelerini dahil etmek için birçok sürümlere göre bir ürün olarak geliştirilmiştir. Ancak, güvenlik kutuya gelmez; sürekli izleme ve güncelleştirme gerektirir.  
   
-## <a name="common-threats"></a>Ortak tehditleri  
- Geliştiriciler, güvenlik tehditlerine karşı bunları ve kendi kendine inflicted güvenlik açıklarını önlemenin sayaç için sağlanan araçları anlamanız gerekir. Güvenlik en iyi, zinciri olarak burada herhangi bir bağlantı aranın tüm gücünü etkilediğinde değerlendirilebilir. Aşağıdaki listede, bu bölümdeki konularda daha ayrıntılı ele alınan bazı genel güvenlik tehditlerini içerir.  
+## <a name="common-threats"></a>Sık karşılaşılan tehditler  
+ Geliştiriciler, güvenlik tehditlerine karşı bunları ve kendi kendine oluşan hatalardan güvenlik açıkları önlemek nasıl sayaç için sağlanan araçları anlamak gerekir. Güvenlik en iyi bir zinciri olarak burada herhangi bir bağlantı içinde bir kesme tüm gücünü etkilediğinde zorlayıcı olabilir. Aşağıdaki listede, bu bölümdeki konularda daha ayrıntılı ele alınmıştır bazı yaygın güvenlik tehditleri içerir.  
   
 ### <a name="sql-injection"></a>SQL ekleme  
- SQL ekleme olarak Transact-SQL deyimi geçerli giriş yerine kötü niyetli bir kullanıcının girdiği işlemidir. Giriş doğrulamasından geçmeden doğrudan sunucuya geçirilir ve uygulama yanlışlıkla eklenen kod yürütülürse, saldırı zarar veya verilere zarar olanağına sahiptir. SQL ekleme saklı yordamları kullanarak saldırılarına ve Parametreli Komutlar dinamik SQL önleme ve tüm kullanıcıların izinlerini kısıtlayarak Server korunmanıza.  
+ SQL ekleme, kötü niyetli bir kullanıcının geçerli giriş yerine Transact-SQL deyimleriyle girer işlemidir. Girişi doğrulanması gereken olmadan doğrudan sunucuya iletilmezse ve uygulama yanlışlıkla eklenen kodu yürütür, saldırı zarar verecek veya veri yok etme olanağına sahiptir. SQL ekleme saldırıları saklı yordamları kullanarak ve Parametreli Komutlar dinamik SQL önleme ve tüm kullanıcıların izinlerini kısıtlayarak Server ihlalini savuşturmanın.  
   
 ### <a name="elevation-of-privilege"></a>Ayrıcalık Yükseltme  
- Ayrıcalıkların yükseltilmesi saldırılarını kullanıcı ayrıcalıklarına sahip veya yönetici gibi bir güvenilen hesabı varsayın mümkün olduğunda oluşur. Her zaman en az ayrıcalıklı kullanıcı hesapları altında çalıştırmak ve yalnızca gerekli izinleri atayın. Kaçının yönetim kullanarak veya sahibi hesapları kod yürütmek için. Bu saldırının başarılı olursa, ortaya hasar miktarını sınırlar. Ek izinleri gerektiren görevler gerçekleştirirken, yalnızca görev süresince yordamı imzalama veya kimliğe bürünme kullanın. Saklı yordamlar sertifikalarla oturum ya da geçici olarak izinler atamak için kimliğe bürünme özelliğini kullanın.  
+ Ayrıcalıkların yükseltilmesi saldırılarını kullanıcı ayrıcalıkları sahibi ya da yönetici gibi bir güvenilen hesap varsayar mümkün olduğunda oluşur. Her zaman en az ayrıcalıklı kullanıcı hesapları altında çalışan ve yalnızca gerekli izinleri atayın. Önlemek yönetim kullanarak veya sahibi hesapları kod yürütmek için. Bu saldırının başarılı olursa oluşabilecek zarar miktarını sınırlar. Ek izinler gerektiren görevler gerçekleştirirken, kimliğe bürünme yordam imzalama veya yalnızca görev sürekliliği için kullanın. Saklı yordamlar sertifika ile oturum açın veya geçici olarak izinler atamak için kimliğe bürünme özelliğini kullanın.  
   
 ### <a name="probing-and-intelligent-observation"></a>Araştırma ve akıllı gözlem  
- Bir araştırma saldırısı güvenlik açıklarını aramak için bir uygulama tarafından oluşturulan hata iletileri kullanabilirsiniz. Son kullanıcı için verilen SQL Server hata bilgilerinin önlemek için tüm yordam kodu işleme hatası uygulayın.  
+ Bir araştırma saldırı bir uygulama tarafından oluşturulan hata iletileri, güvenlik açıklarını aramak için kullanabilirsiniz. Hata son kullanıcıya verilen SQL Server hata bilgilerinin önlemek için tüm yordam kodu işleme uygular.  
   
 ### <a name="authentication"></a>Kimlik doğrulaması  
- Bir bağlantı dizesi kullanıcı girdisi dayalı olarak, SQL Server oturumları kullanarak çalıştırma zamanında oluşturulan bir bağlantı dizesi ekleme saldırı ortaya çıkabilir. Bağlantı dizesi için geçerli anahtar çiftleri işaretli değilse, bir saldırganın olası hassas verileri veya sunucudaki diğer kaynaklara erişme fazladan karakterler ekleyebilirsiniz. Windows kimlik doğrulaması, mümkün olduğunda kullanın. SQL Server oturumları kullanmanız gerekiyorsa kullanın <xref:System.Data.SqlClient.SqlConnectionStringBuilder> oluşturmak ve bağlantı dizeleri çalışma zamanında doğrulamak için.  
+ Bir bağlantı dizesi kullanıcı girişini temel alarak SQL Server oturumları kullanarak çalışma zamanında oluşturulduğunda bir bağlantı dizesi ekleme saldırısına ortaya çıkabilir. Bağlantı dizesi geçerli bir anahtar çifti işaretli değilse, bir saldırganın potansiyel olarak hassas verileri veya sunucudaki diğer kaynaklara erişme ek karakterler ekleyebilirsiniz. Windows kimlik doğrulaması, mümkün olduğunda kullanın. SQL Server oturumları kullanmanız gerekirse kullanmak <xref:System.Data.SqlClient.SqlConnectionStringBuilder> oluşturma ve bağlantı dizeleri çalışma zamanında doğrulama.  
   
-### <a name="passwords"></a>Parolaları  
- Bir saldırgan tarafından elde etmek veya ayrıcalıklı bir kullanıcı için bir parola tahmin etmek mümkün olduğundan çoğu saldırı başarılı. Parolaları, ilk karşı savunma hattı saldırganların, olduğundan, güçlü parolalar ayarlamak, sistem güvenliği için önemlidir. Oluşturun ve karma mod kimlik doğrulaması için parola ilkelerini zorlamak.  
+### <a name="passwords"></a>Parolalar  
+ Bir saldırgan edinmek ya da ayrıcalıklı bir kullanıcısı için bir parola tahmin sayıda saldırı başarılı. Parolalar, saldırganlara karşı savunma kodunuzun ilk satırını olduğundan güçlü parolalar ayarlamak sisteminizin güvenliği için önemlidir. Oluşturup karma mod kimlik doğrulaması için parola ilkelerini uygulayabilir.  
   
- Her zaman güçlü bir parola atayın `sa` , Windows kimlik doğrulaması kullanırken bile hesabı.  
+ Her zaman için güçlü bir parola atayın `sa` Windows kimlik doğrulaması kullanırken bile, hesap.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [SQL Server'da Saklı Yordam İzinlerini Yönetme](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
- Saklı yordamlar izinleri yönetmek ve veri erişimi denetlemek için nasıl kullanılacağını açıklar. Saklı yordamları kullanarak, birçok güvenlik tehditlerine karşı yanıt için etkili bir yoldur.  
+ Saklı yordamlar izinleri yönetmek ve veri erişimi denetlemek için nasıl kullanılacağını açıklar. Saklı yordamları kullanarak, çok sayıda güvenlik tehditleri için etkili bir yoludur.  
   
  [SQL Server’da Secure Dynamic SQL Yazma](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
- Güvenli dinamik SQL saklı yordamları Kullanma yazma teknikleri açıklar.  
+ Saklı yordamları kullanarak güvenli dinamik SQL yazma teknikleri açıklar.  
   
  [SQL Server'da Saklı Yordam İmzalama](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
- Saklı yordam, doğrudan erişim olmadığı verilerle çalışmak için kullanıcıları etkinleştirmek üzere bir sertifika ile oturum açıklar. Bu çağrıyı doğrudan gerçekleştirmek için izinlere sahip değil işlemlerini gerçekleştirmek saklı yordamlar sağlar.  
+ Bir saklı yordam, doğrudan erişim olmadığı verilerle çalışmak kullanıcıları etkinleştirmek için bir sertifika ile imzalamak açıklar. Bu, çağırana doğrudan gerçekleştirmek için gerekli izinlere sahip olmayan işlemler gerçekleştirmek için saklı yordamlar sağlar.  
   
  [SQL Server'da Kimliğe Bürünme İzinlerini Özelleştirme](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
- EXECUTE AS kullanmayı açıklar başka bir kullanıcının kimliğine bürünmesine yan tümcesi. Kimliğe bürünme çağrıyı yapandan yürütme bağlamı belirtilen kullanıcıya geçer.  
+ Açıklar EXECUTE AS yan tümcesi başka bir kullanıcının kimliğine bürünmek için. Kimliğe bürünme arayandan yürütme bağlamı belirtilen kullanıcıya geçer.  
   
  [SQL Server’da Satır Düzeyinde İzinler Verme](../../../../../docs/framework/data/adonet/sql/granting-row-level-permissions-in-sql-server.md)  
- Veri erişimi kısıtlamak için satır düzeyi izinleri uygulamak açıklar.  
+ Veri erişimini kısıtlamak için satır düzeyinde izinler uygulamak açıklar.  
   
  [SQL Server’da Uygulama Rolleri Oluşturma](../../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md)  
  Özellikleri ve uygulama rolleri işlevselliğini açıklar.  
   
  [SQL Server'da Veritabanları Arası Erişimi Etkinleştirme](../../../../../docs/framework/data/adonet/sql/enabling-cross-database-access-in-sql-server.md)  
- Veritabanları arası erişim güvenliği tehlikeye atmadan etkinleştirmeyi açıklar.  
+ Güvenliği tehlikeye atmadan veritabanları arası erişimi etkinleştirmeyi açıklar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [SQL Server Güvenliği](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
  [SQL Server Güvenliğine Genel Bakış](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
  [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

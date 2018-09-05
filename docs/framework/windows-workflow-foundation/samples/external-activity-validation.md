@@ -3,11 +3,11 @@ title: Dış etkinlik doğrulama
 ms.date: 03/30/2017
 ms.assetid: 49619f59-9819-484a-bcd8-5596308e8551
 ms.openlocfilehash: 4805bec3deed0779b02687b11dd487e673802925
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43423900"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527813"
 ---
 # <a name="external-activity-validation"></a>Dış etkinlik doğrulama
 Bu örnek, yazarı olmayan yerleşik bir etkinlik için doğrulama mantığı eklemenize gösterilmektedir. Doğrulama mantığını gerektirme oluşur tüm <xref:System.Activities.Statements.If> etkinlikleri sunmak ya da sahip iş akışında kendi <xref:System.Activities.Statements.If.Then%2A> özellik kümesi veya kendi <xref:System.Activities.Statements.If.Else%2A> özellik kümesi. Ayrıca, denetleme Doğrulama mantığı içerir. tüm <xref:System.Activities.Statements.Pick> etkinlikler iş akışında mevcut olan birden fazla dal ve durum bu değilse, bir uyarı oluşturulur.  

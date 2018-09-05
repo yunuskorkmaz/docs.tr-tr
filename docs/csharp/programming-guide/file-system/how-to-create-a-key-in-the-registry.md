@@ -6,12 +6,12 @@ helpviewer_keywords:
 - registry keys, creating [C#]
 - keys, creating in registry
 ms.assetid: 8fa475b0-e01f-483a-9327-fd03488fdf5d
-ms.openlocfilehash: f2b2cfcb09dc0c8c4d65b64f5de55c0b72746457
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 383d47413078359d7491bf5f7f61dc5e70d842a7
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480614"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526744"
 ---
 # <a name="how-to-create-a-key-in-the-registry-visual-c"></a>Nasıl yapılır: Kayıt Defterinde Anahtar Oluşturma (Visual C#)
 Bu örnek "Name" ve "Isabella" değer çiftini geçerli kullanıcının kayıt defterine "Names" anahtarı altına ekler.  
@@ -55,8 +55,9 @@ key.Close();
   
  Kayıt defteri anahtarı erişim denetim listeleri (ACL) korunuyor olsa bile kayıt defterinde düz metin parolalar gibi gizli dizileri depolamak için güvenli değildir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.IO?displayProperty=nameWithType>  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [Dosya sistemi ve kayıt defteri (C# programlama Kılavuzu)](../../../csharp/programming-guide/file-system/index.md)  
- [Okuma, yazma ve C# ile kayıt silme](http://www.codeproject.com/Articles/3389/Read-write-and-delete-from-registry-with-C)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- <xref:System.IO?displayProperty=nameWithType>  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [Dosya sistemi ve kayıt defteri (C# programlama Kılavuzu)](../../../csharp/programming-guide/file-system/index.md)  
+- [Okuma, yazma ve C# ile kayıt silme](http://www.codeproject.com/Articles/3389/Read-write-and-delete-from-registry-with-C)

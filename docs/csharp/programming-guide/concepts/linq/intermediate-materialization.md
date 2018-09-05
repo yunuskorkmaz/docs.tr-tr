@@ -1,19 +1,19 @@
 ---
-title: Ara Materialization (C#)
+title: Ara gerçekleştirme (C#)
 ms.date: 07/20/2015
 ms.assetid: 7922d38f-5044-41cf-8e17-7173d6553a5e
-ms.openlocfilehash: b98f9765f5c54a49f26a9d1a3ac351f3eebcf9c2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 56c4bb57a931362b3e14f6a8da917ae6907565d6
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320644"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516549"
 ---
-# <a name="intermediate-materialization-c"></a>Ara Materialization (C#)
-Dikkatli değilse, bazı durumlarda, büyük ölçüde, uygulamanızın bellek ve performans profili sorgularınızda koleksiyonların erken materialization neden olarak değiştirebilirsiniz. Bazı standart sorgu işleçleri, tek bir öğe oluşturan önce kendi kaynak koleksiyonu materialization neden. Örneğin, <xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType> önce tüm kaynak toplulukta tekrarlanan sonra tüm öğeleri sıralar ve son olarak ilk öğe verir. Bu, sıralı bir koleksiyonu ilk öğesini almak pahalı olduğunu gösterir; her öğe bundan sonra pahalı değil. Bu mantıklı: Bu sorgu işleci aksini yapmasını olanaksız olacaktır.  
+# <a name="intermediate-materialization-c"></a>Ara gerçekleştirme (C#)
+Dikkatli emin değilseniz, bazı durumlarda, önemli ölçüde, uygulamanızın bellek ve performans profili sorgularınızdaki koleksiyonların erken materialization neden olarak değiştirebilirsiniz. Bazı standart sorgu işleçleri, tek bir öğe oluşturan önce kaynak koleksiyonu materialization neden. Örneğin, <xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType> önce tüm kaynak toplulukta tekrarlanan sonra tüm öğeleri sıralar ve son olarak ilk öğeyi verir. Bu, ilk öğesinde, sıralı bir koleksiyonu almak pahalı olduğunu gösterir; her öğe bundan sonra pahalı değil. Bu mantıklı: yapmak bu sorgu işleci için mümkün olacaktır.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, önceki örnekte değiştirir. `AppendString` Yöntem çağrılarını <xref:System.Linq.Enumerable.ToList%2A> kaynak yineleme önce. Bu materialization neden olur.  
+ Bu örnek önceki örnekle değiştirir. `AppendString` Yöntem çağrılarını <xref:System.Linq.Enumerable.ToList%2A> kaynağı aracılığıyla yineleme önce. Bu, materialization yol açar.  
   
 ```csharp  
 public static class LocalExtensions  
@@ -64,7 +64,7 @@ class Program
 }  
 ```  
   
- Bu örnek şu çıkışı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```  
 ToUpper: source >abc<  
@@ -80,11 +80,12 @@ AppendString: source >GHI<
 Main: str >GHI!!!<  
 ```  
   
- Bu örnekte, gördüğünüz çağrısı <xref:System.Linq.Enumerable.ToList%2A> neden `AppendString` ilk öğe sağlayan önce tüm kaynak numaralandırılamadı. Kaynak uzun bir diziye olsaydı, bu uygulamanın bellek profili önemli ölçüde alter.  
+ Bu örnekte, gördüğünüz gibi çağrısı <xref:System.Linq.Enumerable.ToList%2A> neden `AppendString` ilk öğeyi oluşturan önce tüm kaynak numaralandırılamadı. Kaynak uzun bir diziye varsa, bu uygulamanın bellek profili önemli ölçüde alter.  
   
- Standart sorgu işleçleri de birbirine zincirlenebilir. Bu öğreticinin son konusunda bu gösterilmektedir.  
+ Ayrıca standart sorgu işleçlerini birbirine zincirlenebilir. Bu öğreticideki son konu bunu göstermektedir.  
   
--   [Zincirleme standart sorgu işleçleri birlikte (C#)](../../../../csharp/programming-guide/concepts/linq/chaining-standard-query-operators-together.md)  
+-   [Zincirleme standart sorgu işleçleri (C#)](../../../../csharp/programming-guide/concepts/linq/chaining-standard-query-operators-together.md)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Öğretici: Sorguları birlikte (C#) zincirleme](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [Öğretici: Sorguları birbirine (C#) zincirleme](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)

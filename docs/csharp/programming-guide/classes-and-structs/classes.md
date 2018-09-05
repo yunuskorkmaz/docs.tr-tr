@@ -6,12 +6,12 @@ helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: 5f4bcf9957f91fe3ee8a62a8dc68448188df4188
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 070288d40501dbaebd5e5fbc27ea53fa1a03df30
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43467048"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43523166"
 ---
 # <a name="classes-c-programming-guide"></a>Sınıflar (C# Programlama Kılavuzu)
 A *sınıfı* diğer türleri, yöntemleri ve olayları değişkenleri birlikte gruplandırarak kendi özel türlerinizde oluşturmanızı sağlayan bir yapıdır. Gibi bir sınıf plandır. Bu, veri ve türü davranışını tanımlar. Sınıfın statik olarak bildirilmedi, istemci kodu oluşturabilirsiniz *örnekleri* bunu. Bu örnekleri *nesneleri* bir değişkene atanır. Bir sınıf örneği, tüm başvuruları kapsam dışına çıkmadan kadar bellekte kalır. Bu sırada, CLR, çöp toplama işlemi için uygun olarak işaretler. Sınıf olarak bildirilirse [statik](../../../csharp/language-reference/keywords/static.md)örnekleri oluşturulamaz ve istemci kodu yalnızca erişebilirsiniz sınıfı aracılığıyla. Daha fazla bilgi için [statik sınıflar ve statik sınıf üyeleri](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
@@ -96,12 +96,13 @@ Nesne oluşturulduğunda, yeterli bellek, belirli bir nesnesi için yönetilen y
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [Nesne Odaklı Programlama](../concepts/object-oriented-programming.md)  
- [Çok biçimlilik](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)  
- [Üyeler](../../../csharp/programming-guide/classes-and-structs/members.md)  
- [Yöntemler](../../../csharp/programming-guide/classes-and-structs/methods.md)  
- [Oluşturucular](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
- [Sonlandırıcılar](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
- [Nesneler](../../../csharp/programming-guide/classes-and-structs/objects.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [Nesne Odaklı Programlama](../concepts/object-oriented-programming.md)  
+- [Çok biçimlilik](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)  
+- [Üyeler](../../../csharp/programming-guide/classes-and-structs/members.md)  
+- [Yöntemler](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+- [Oluşturucular](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+- [Sonlandırıcılar](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+- [Nesneler](../../../csharp/programming-guide/classes-and-structs/objects.md)

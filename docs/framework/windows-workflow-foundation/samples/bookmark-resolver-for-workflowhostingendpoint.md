@@ -3,11 +3,11 @@ title: WorkflowHostingEndpoint için yer işareti çözümleyici
 ms.date: 03/30/2017
 ms.assetid: 97fd5816-935e-4625-ad04-e6f6befa07de
 ms.openlocfilehash: 48053ec7882b2e742b61fdc293b6bc5f8a129ca5
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43400482"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43558218"
 ---
 # <a name="bookmark-resolver-for-workflowhostingendpoint"></a>WorkflowHostingEndpoint için yer işareti çözümleyici
 Bu örnek gösterir nasıl <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> kullanılabilir <xref:System.ServiceModel.Activities.WorkflowServiceHost> iş akışı örnekleri oluşturmak için.  

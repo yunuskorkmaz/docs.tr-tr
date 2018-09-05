@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 ms.assetid: c832fa5b-cf86-4690-be5a-a226c0e49530
 ms.openlocfilehash: 5fc37ed215ada6aa35ac8801ef33e5787ba77584
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43468903"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43523697"
 ---
 # <a name="getting-started-with-wcf-data-services"></a>WCF Veri Hizmetleri ile çalışmaya başlama
 Bu bölümdeki konular, kısa süre içinde anlamanıza yardımcı [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] ve nasıl kullanılacağını [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] kullanıma tüketileceğini [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akışları temel teknolojiyi açıklayarak. Bu bölüm hem kavramsal içeriğe içerir ve bir [hızlı](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) öğretici.  

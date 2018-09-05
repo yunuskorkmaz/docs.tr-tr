@@ -3,11 +3,11 @@ title: WCF Web HTTP Programlama Modeli Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
 ms.openlocfilehash: f1185e7f8d455a59edf2b11e4e77ac6470d768fc
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43417344"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517081"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>WCF Web HTTP Programlama Modeli Genel Bakış
 Windows Communication Foundation (WCF) WEB HTTP programlama modeli ile WCF WEB HTTP Hizmetleri oluşturmak için gereken temel öğeleri sağlar. WCF WEB HTTP Hizmetleri yelpazedeki Web tarayıcıları dahil olmak üzere, olası istemcileri tarafından erişilecek şekilde tasarlanmıştır ve aşağıdaki benzersiz gereksinimleri vardır:  

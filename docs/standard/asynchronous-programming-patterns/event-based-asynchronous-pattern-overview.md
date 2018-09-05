@@ -17,11 +17,11 @@ helpviewer_keywords:
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
 ms.openlocfilehash: 28f04e12d17d65788b0f894d3bd777a700b712f9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43456796"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43533597"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>Olay Tabanlı Zaman Uyumsuz Desene Genel Bakış
 Aynı anda birçok görevi gerçekleştiren henüz kullanıcı etkileşimine yanıt verebilir durumda kalması uygulamalar genellikle birden çok iş parçacığı kullanan bir tasarım gerektirir. <xref:System.Threading> Ad alanı, çok iş parçacıklı yüksek performanslı uygulamalar oluşturmak için gerekli olan tüm araçları sağlar, ancak etkili bir şekilde bu araçları kullanarak, birden çok iş parçacıklı yazılım Mühendisliği önemli deneyimiyle gerektirir. Görece basit birden çok iş parçacıklı uygulamalar için <xref:System.ComponentModel.BackgroundWorker> bileşeni, basit bir çözüm sağlar. Zaman uyumsuz daha gelişmiş uygulamalar için olay tabanlı zaman uyumsuz desene uyar bir class uygulamayı düşünün.  

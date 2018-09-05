@@ -3,11 +3,11 @@ title: Tanılama için Windows Yönetim İzlemesini Kullanma
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
 ms.openlocfilehash: b7c898f1af91f639939e5480687b5967bf57d246
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43406926"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43534654"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Tanılama için Windows Yönetim İzlemesini Kullanma
 Windows Communication Foundation (WCF) hizmetinin çalışma zamanında bir WCF Windows Yönetim Araçları (WMI) sağlayıcısı aracılığıyla denetleme verileri kullanıma sunar.  

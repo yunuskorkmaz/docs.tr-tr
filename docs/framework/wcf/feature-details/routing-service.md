@@ -2,17 +2,17 @@
 title: Yönlendirme Hizmeti
 ms.date: 03/30/2017
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
-ms.openlocfilehash: e3170108ae190c08a42cc7d80d66576a7b4f8a8e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 139607614934aedbad9f76172b8e31fb02394d80
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496233"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522176"
 ---
 # <a name="routing-service"></a>Yönlendirme Hizmeti
-Yönlendirme iletisi yönlendirici olarak davranan genel bir SOAP aracı hizmetidir. Yönlendirme hizmeti çekirdek işlevselliğini iletisini üstbilgisinde veya ileti gövdesi içinde bir değere göre bir istemci uç noktası iletilmesi için bir ileti verir ileti içeriği göre iletileri yönlendirmek için yeteneğidir.  
+Yönlendirme hizmeti bir ileti yönlendirici işlevi gören genel bir SOAP aracıdır. Yönlendirme hizmeti temel işlevlerini iletisini üst bilgi veya ileti gövdesi içindeki bir değere göre bir istemci uç noktası iletilmesi bir ileti veren ileti içeriği temel iletileri yönlendirmek yeteneğidir.  
   
- <xref:System.ServiceModel.Routing.RoutingService> Bir Windows Communication Foundation (WCF) hizmet olarak uygulanan <xref:System.ServiceModel.Routing> ad alanı. Yönlendirme hizmeti iletilerini bir veya daha fazla hizmet uç noktaları kullanıma sunar ve ardından yollar her ileti bir veya daha fazla istemci uç noktaları için ileti içeriğine göre. Hizmet aşağıdaki özellikleri sağlar:  
+ <xref:System.ServiceModel.Routing.RoutingService> Windows Communication Foundation (WCF) hizmet olarak uygulanan <xref:System.ServiceModel.Routing> ad alanı. İleti içeriği'da bir veya daha fazla istemci uç noktalarına her ileti yol tabanlı ve yönlendirme hizmeti iletilerini bir veya daha fazla hizmet uç noktalarını kullanıma sunar. Hizmet aşağıdaki özellikleri sağlar:  
   
 -   İçerik tabanlı yönlendirme  
   
@@ -20,11 +20,11 @@ Yönlendirme iletisi yönlendirici olarak davranan genel bir SOAP aracı hizmeti
   
     -   Hizmet sürümü oluşturma  
   
-    -   Öncelik yönlendirme  
+    -   Öncelikli yönlendirme  
   
     -   Dinamik yapılandırma  
   
--   Protokol köprü oluşturma  
+-   Bağlantı protokolü  
   
 -   SOAP işleme  
   
@@ -32,76 +32,76 @@ Yönlendirme iletisi yönlendirici olarak davranan genel bir SOAP aracı hizmeti
   
 -   Yedekleme uç noktaları  
   
- Bir veya daha fazla bu hedefleri gerçekleştirir bir aracı hizmeti oluşturmak mümkün olsa da, genellikle gibi bir uygulama belirli bir senaryoyu ya da çözüm bağlıdır ve kolayca yeni uygulamalara uygulanamaz.  
+ Bir veya daha fazla bu hedeflere gerçekleştirir aracı bir hizmet oluşturmak mümkün olsa da, genellikle gibi bir uygulama belirli bir senaryoyu ya da çözüm bağlıdır ve kolayca yeni uygulamalar için uygulanamaz.  
   
- Yönlendirme hizmeti ile WCF hizmeti ve kanal modelleri uyumlu olan ve SOAP tabanlı iletilerin içerik tabanlı yönlendirme gerçekleştirmenize olanak tanıyan bir genel, dinamik olarak yapılandırılabilir, takılabilir SOAP aracı sağlar.  
+ Yönlendirme hizmeti, WCF hizmeti ve kanal modelleri ile uyumlu olan ve iletilerin SOAP tabanlı içerik tabanlı yönlendirme gerçekleştirmenize olanak tanıyan bir genel, dinamik olarak yapılandırılabilir, takılabilir SOAP aracı sağlar.  
   
 > [!NOTE]
->  Yönlendirme hizmeti, WCF REST Hizmetleri yönlendirmeyi şu anda desteklemiyor.  REST çağrılarını yönlendirmek için kullanmayı <xref:System.Web.Routing> veya [uygulama isteği yönlendirme](http://go.microsoft.com/fwlink/?LinkId=164589) (http://go.microsoft.com/fwlink/?LinkId=164589).  
+>  Yönlendirme hizmeti, yönlendirme WCF REST Hizmetleri şu anda desteklemiyor.  REST çağrılarını yönlendirmek için kullanmayı <xref:System.Web.Routing> veya [uygulama isteği yönlendirme](https://go.microsoft.com/fwlink/?LinkId=164589).  
   
 ## <a name="content-based-routing"></a>İçerik tabanlı yönlendirme  
- İçerik tabanlı yönlendirme iletisi içinde yer alan bir veya daha fazla değerlere göre bir ileti yönlendirmek için yeteneğidir. Yönlendirme hizmeti her ileti ve hedef uç nokta için ileti içeriği ve oluşturduğunuz yönlendirme mantığı göre yolları olup olmadığını denetler. İçerik tabanlı yönlendirme temel hizmet toplama, hizmet sürümü oluşturma ve öncelik yönlendirme sağlar.  
+ İçerik tabanlı yönlendirme iletisi içinde yer alan bir veya daha fazla değerlere göre bir ileti yolu yeteneğidir. Yönlendirme hizmeti, her bir ileti ve hedef uç nokta için ileti içeriği ve oluşturduğunuz yönlendirme mantığı göre yollar inceler. İçerik tabanlı yönlendirme, hizmet toplama, hizmet sürümü oluşturma ve öncelik yönlendirme için temel sağlar.  
   
- İçerik tabanlı yönlendirme uygulamak için yönlendirme hizmeti dayanan <xref:System.ServiceModel.Dispatcher.MessageFilter> yönlendirilmesi için iletilerini içindeki belirli değerleri eşleştirmek için kullanılan uygulamaları. Varsa bir **MessageFilter** bir ileti, ileti ile ilişkili hedef uç noktasına yönlendirilir eşleşmeleri **MessageFilter**.  İleti filtreleri birlikte filtre tablolara gruplandırılmış (<xref:System.ServiceModel.Routing.Configuration.FilterTableCollection>) karmaşık yönlendirme mantığı oluşturulamadı. Örneğin, bir filtre tablo beş hedef uç noktaları yalnızca biri yönlendirilecek iletileri neden beş birbirini dışlayan ileti filtreleri içerebilir.  
+ İçerik tabanlı yönlendirme uygulamak için yönlendirme hizmeti dayanan <xref:System.ServiceModel.Dispatcher.MessageFilter> yönlendirilmesini iletileri içindeki belirli değerleri eşleştirmek için kullanılan uygulamaları. Varsa bir **MessageFilter** eşleşen bir ileti, ileti ile ilişkili hedef uç noktaya yönlendirilir **MessageFilter**.  İleti filtreleri filtre tablolarla birlikte gruplanır (<xref:System.ServiceModel.Routing.Configuration.FilterTableCollection>) karmaşık yönlendirme mantığı oluşturmak için. Örneğin, bir filtre tablo beş hedef uç noktaları yalnızca biri yönlendirilmesini iletileri neden beş birbirini dışlayan ileti filtreleri içerebilir.  
   
- Yönlendirme hizmeti yanı sıra içerik tabanlı yönlendirme gerçekleştirmek yönlendirme mantığı çalışma zamanında dinamik olarak güncelleştirmek için kullanılan mantığı yapılandırmanıza olanak sağlar.  
+ Yönlendirme hizmeti yanı sıra içerik tabanlı yönlendirme gerçekleştirmek yönlendirme mantığı çalışma zamanında dinamik olarak güncelleştirmek için kullanılan mantıksal yapılandırmanıza olanak sağlar.  
   
- Gruplandırması ileti filtreleri aracılığıyla filtre tablolara, birden çok yönlendirme senaryoları gibi işlemeye izin veren yönlendirme mantığı oluşturulabilir:  
+ Aracılığıyla filtre tablolar halinde gruplandırmayı ileti filtreleri yönlendirme mantığı birden çok yönlendirme senaryoları gibi işlemeye izin veren oluşturulabilir:  
   
 -   Hizmet toplama  
   
 -   Hizmet sürümü oluşturma  
   
--   Öncelik yönlendirme  
+-   Öncelikli yönlendirme  
   
 -   Dinamik yapılandırma  
   
- İleti filtreleri ve filtre tabloları hakkında daha fazla bilgi için bkz: [yönlendirme giriş](../../../../docs/framework/wcf/feature-details/routing-introduction.md) ve [ileti filtreleri](../../../../docs/framework/wcf/feature-details/message-filters.md).  
+ İleti filtreleri ve filtre tabloları hakkında daha fazla bilgi için bkz. [yönlendirme giriş](../../../../docs/framework/wcf/feature-details/routing-introduction.md) ve [ileti filtreleri](../../../../docs/framework/wcf/feature-details/message-filters.md).  
   
 ### <a name="service-aggregation"></a>Hizmet toplama  
- İçerik tabanlı yönlendirme kullanarak dış istemci uygulamalarından iletilerini alan ve her ileti, ileti içinde bir değere göre uygun dahili uç noktayı yönlendirir bir uç nokta getirebilir. Bu, belirli bir uç arka uç uygulamaları çeşitli sunmak için ve ayrıca çeşitli hizmetlere uygulamanıza Finansman sırasında bir uygulama uç nokta müşterilere sunmak için kullanışlıdır.  
+ İçerik tabanlı yönlendirme kullanarak dış istemci uygulamalarından iletileri alır ve ardından her ileti iletideki bir değere göre uygun iç uç nokta yönlendirir bir uç nokta üzerinden kullanıma sunabilirsiniz. Bu, çeşitli arka uç uygulamaları için belirli bir uç nokta sunmak ve çeşitli hizmetler uygulamanıza hesaba katacak şekilde sırasında bir uygulama uç noktası müşterilerinize sunmak için kullanışlıdır.  
   
 ### <a name="service-versioning"></a>Hizmet Sürümü Oluşturma  
- Çözümünüzü yeni bir sürüme geçirirken, eski sürüm varolan müşteriye hizmet vermek için paralel korumak olabilir. Genellikle bu sürüme bağlanan istemciler farklı bir adres çözümü ile iletişim kurarken kullanmalısınız gerektirir. Yönlendirme hizmeti Yönlendirme ileti iletideki sürüme özgü bilgileri temel alarak uygun çözüm için çözümünüzün her iki sürümü hizmet veren bir hizmet uç noktası kullanıma izin verir. Bu tür bir uygulama örneği için bkz: [nasıl yapılır: Hizmet sürümü oluşturma](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).  
+ Çözümünüze yeni bir sürümüne geçirirken eski sürümü mevcut müşterilere paralel korumak zorunda kalabilirsiniz. Genellikle bu en yeni sürüme bağlanan istemciler farklı bir adres çözümü ile iletişim kurarken kullanmalıdır gerektirir. Yönlendirme hizmeti, çözümünüzün her iki sürümü de iletisinde bulunan sürüme özgü bilgileri temel alarak uygun çözüm yönlendirme iletileri tarafından hizmet veren bir hizmet uç noktası kullanıma sunmanıza olanak sağlar. Bu tür uygulaması örneği için bkz. [nasıl yapılır: Hizmet sürümü oluşturma](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).  
   
-### <a name="priority-routing"></a>Öncelik yönlendirme  
- Bir hizmet birden çok istemci sağlarken, diğer istemciler ayrı olarak işlenmek üzere bu iş ortaklarının tüm veriler gerektiren bazı iş ortakları ile hizmet düzeyi sözleşmesi (SLA) olabilir. İletideki müşteriye özgü bilgileri arar bir filtre kullanarak belirli iş ortakları iletilerden SLA gereksinimleri karşılamak için oluşturulan bir uç nokta için kolayca yönlendirebilirsiniz.  
+### <a name="priority-routing"></a>Öncelikli yönlendirme  
+ Bir hizmet birden çok istemci için sağlarken, diğer istemciler ayrı olarak işlenmek üzere bu iş ortaklarının sunduğu tüm verileri gerektiren bazı iş ortaklarıyla bir hizmet düzeyi sözleşmesi (SLA) olabilir. İletinin müşteriye özgü bilgileri bakan bir filtre kullanarak belirli iş ortaklarından iletileri kendi SLA gereksinimlerini karşılamak için oluşturulan bir uç noktaya kolayca yönlendirebilirsiniz.  
   
 ## <a name="dynamic-configuration"></a>Dinamik yapılandırma  
- Burada iletileri tüm hizmet kesinti olmadan işlenmesi gereken, kritik sistemler desteklemek için sistemi içinde bileşenleri yapılandırmasını çalışma zamanında değiştirebilmek için önemlidir. Bu gereksinimi desteklemek için yönlendirme hizmeti sağlayan bir <xref:System.ServiceModel.IExtension%601> uygulaması, <xref:System.ServiceModel.Routing.RoutingExtension>, çalışma zamanında yönlendirme hizmeti yapılandırmasının dinamik güncelleştirme izin verir.  
+ Burada iletileri herhangi bir hizmet kesinti işlenmesi gereken, görev açısından kritik sistemlerinin desteklemek için çalışma zamanında bileşenler içerisinden sistem yapılandırmasını değiştirmek için önemlidir. Bu gereksinimi desteklemek için yönlendirme hizmeti sağlar. bir <xref:System.ServiceModel.IExtension%601> uygulaması <xref:System.ServiceModel.Routing.RoutingExtension>, çalışma zamanında yönlendirme hizmeti yapılandırmasının dinamik güncelleştirme izin verir.  
   
- Dinamik yönlendirme hizmeti yapılandırması hakkında daha fazla bilgi için bkz: [yönlendirme giriş](../../../../docs/framework/wcf/feature-details/routing-introduction.md).  
+ Dinamik yönlendirme hizmeti yapılandırması hakkında daha fazla bilgi için bkz. [yönlendirme giriş](../../../../docs/framework/wcf/feature-details/routing-introduction.md).  
   
-## <a name="protocol-bridging"></a>Protokol köprü oluşturma  
- Ara senaryolarda zorluklar iç uç farklı taşıma veya SOAP sürüm gereksinimlerini ileti üzerinde alındığında uç nokta değerinden olabilir biridir. Bu senaryoyu desteklemek için yönlendirme hizmeti SOAP iletisi işleme dahil protokoller arasında köprü olabilir <xref:System.ServiceModel.Channels.MessageVersion> hedef uç tarafından gerekli. Başka bir dış iletişimi için kullanılabilmesine karşın bu şekilde, bir protokol iç iletişim için kullanılır.  
+## <a name="protocol-bridging"></a>Bağlantı protokolü  
+ Aracı senaryolarda zorlukların iç Uç noktalara farklı taşıma veya SOAP sürümü gereksinimlerine iletilerin alınıp alınmadığını uç nokta olabilir biridir. Bu senaryoyu desteklemek için yönlendirme hizmeti için SOAP ileti işleme gibi protokolleri arasında köprü olabilir <xref:System.ServiceModel.Channels.MessageVersion> hedef uç nokta tarafından gerekli. Başka bir dış iletişimi için kullanılabilse de bu şekilde, bir protokol dahili iletişim için kullanılabilir.  
   
- İletileri farklı taşımalar ile uç noktalar arasında yönlendirme desteklemek için farklı protokoller birleştirmesi hizmetini etkinleştirme sistem tarafından sağlanan bağlamalar yönlendirme hizmeti kullanır. Yönlendirme hizmeti tarafından sunulan hizmet uç noktası iletileri yönlendirilir istemci uç noktaları daha farklı bir protokol kullandığında otomatik olarak gerçekleşir.  
+ Farklı aktarımları ile uç noktalar arasında iletileri yönlendirme desteklemek için benzer olmayan protokolleri arasında köprü kuracak şekilde hizmet sağlayan sistem tarafından sağlanan bağlamalar yönlendirme hizmeti kullanır. Yönlendirme hizmeti tarafından kullanıma sunulan hizmet uç noktası iletileri yönlendirilir istemci uç noktalarını değerinden farklı bir protokol kullandığında otomatik olarak gerçekleşir.  
   
 ## <a name="soap-processing"></a>SOAP işleme  
- Ortak bir yönlendirme gereksinim farklı SOAP gereksinimleriyle uç noktalar arasında iletileri yönlendirmek için özelliğidir. Bu gereksinimi desteklemek için yönlendirme hizmeti sağlayan bir <xref:System.ServiceModel.Routing.SoapProcessingBehavior> otomatik olarak yeni bir oluşturan **MessageVersion** karşılayan hedef uç nokta gereksinimlerini ileti yönlendirilmeden önce. Bu davranış da yeni bir oluşturur **MessageVersion** emin olmak için istekte bulunan istemci uygulamaya dönmeden önce herhangi bir yanıt iletisi için **MessageVersion** yanıtını sürümüyle eşleşen özgün istek.  
+ Ortak bir yönlendirme gereksinim farklı SOAP gereksinimlerine sahip uç noktaları arasında iletileri yönlendirmek yeteneğidir. Bu gereksinimi desteklemek için yönlendirme hizmeti sağlar. bir <xref:System.ServiceModel.Routing.SoapProcessingBehavior> otomatik olarak yeni bir oluşturan **MessageVersion** karşılayan gereksinimleri hedef uç nokta ileti yönlendirilmeden önce. Bu davranış da yeni bir oluşturur **MessageVersion** emin olmak için istekte bulunan istemci uygulamaya döndürmeden önce herhangi bir yanıt iletisi için **MessageVersion** yanıtı ile eşleşir özgün istek.  
   
- SOAP işleme hakkında daha fazla bilgi için bkz: [yönlendirme giriş](../../../../docs/framework/wcf/feature-details/routing-introduction.md).  
+ SOAP işleme hakkında daha fazla bilgi için bkz. [yönlendirme giriş](../../../../docs/framework/wcf/feature-details/routing-introduction.md).  
   
 ## <a name="error-handling"></a>Hata İşleme  
- Ağ iletişimini kullanan dağıtılmış hizmet oluşan bir sistemde, bu iletişimler sisteminiz olan geçici ağ hatalarını dirençli içinde sağlamak önemlidir.  Yönlendirme hizmeti, aksi takdirde bir hizmet kesintisine neden olabilir birçok iletişim hatası senaryoları işlemeye izin veren hata işleme uygular.  
+ Ağ iletişimini kullanan dağıtılmış hizmetlerin oluşan bir sistemde, bu iletişim geçici ağ hatalarını ertelerler sisteminiz içinde sağlamak önemlidir.  Yönlendirme hizmeti, aksi takdirde bir hizmet kesintisine neden olabilir birçok iletişim hatası senaryolarında işlemeye izin veren hata işleme uygular.  
   
- Yönlendirme hizmeti karşılaşırsa bir <xref:System.ServiceModel.CommunicationException> bir ileti göndermeye çalışırken hata işleme gerçekleşir.  Bu özel durumlar gibi tanımlanmış istemci uç noktası ile iletişim kurmaya çalışırken bir sorunla karşılaşıldı genellikle belirtmek bir <xref:System.ServiceModel.EndpointNotFoundException>, <xref:System.ServiceModel.ServerTooBusyException>, veya <xref:System.ServiceModel.CommunicationObjectFaultedException>.  Hata işleme kodu da yakalamak ve ne zaman göndermeyi yeniden deneme girişimi bir **TimeoutException** oluşur, türetilmedi başka bir ortak özel durumu olan **CommunicationException**.  
+ Yönlendirme hizmeti ile karşılaşırsa, bir <xref:System.ServiceModel.CommunicationException> bir ileti gönderilmeye çalışılırken hata işleme gerçekleşir.  Bu özel durumlar genellikle gibi tanımlı istemci uç noktası ile iletişim kurmaya çalışılırken bir sorunla karşılaşıldı gösterir bir <xref:System.ServiceModel.EndpointNotFoundException>, <xref:System.ServiceModel.ServerTooBusyException>, veya <xref:System.ServiceModel.CommunicationObjectFaultedException>.  Hata işleme kodu ayrıca catch ve ne zaman göndermeyi yeniden deneme girişimi bir **TimeoutException** gerçekleşir, türünden türetilmediğinden başka bir genel özel durum olduğu **CommunicationException**.  
   
  Hata işleme hakkında daha fazla bilgi için bkz: [yönlendirme giriş](../../../../docs/framework/wcf/feature-details/routing-introduction.md).  
   
 ## <a name="backup-endpoints"></a>Yedekleme uç noktaları  
- Her filtre tanımını filtre tablosundaki ile ilişkili hedef istemci uç noktaları ek olarak, ileti için bir iletim hatası durumunda yönlendirilir yedekleme uç noktaları listesi oluşturabilirsiniz. Bir hata oluşur ve yedekleme listesini filtre girişi için tanımlanan, yönlendirme hizmeti listesinde tanımlı Birinci uç nokta ileti göndermeye çalışacak. Bu iletim girişimi başarısız oldu, hizmet sonraki endpoint deneyin ve bu işlem iletim denemesi başarılı olana kadar devam, iletim olmayan ilgili hata veya yedekleme listesindeki tüm uç noktaları bir iletim hatası döndürmüş döndürür.  
+ Hedef istemci uç noktaları filtre tablodaki her filtre tanımıyla ilişkili ek olarak, ileti için bir iletim hatası durumunda yönlendirilecek yedekleme uç noktaları listesi oluşturabilirsiniz. Bir hata oluşur ve yedekleme listesini filtre girişini tanımlanır, yönlendirme hizmeti listesinde tanımlanan ilk uç nokta ileti göndermek dener. Bu hizmet iletim girişimi başarısız sonraki uç nokta deneyin ve bu işlem iletim denemesi başarılı olana kadar devam iletim olmayan ilgili bir hata veya yedekleme listesindeki tüm uç noktaları bir iletim hatası döndürmüş döndürür.  
   
- Yedekleme uç noktaları hakkında daha fazla bilgi için bkz: [yönlendirme giriş](../../../../docs/framework/wcf/feature-details/routing-introduction.md) ve [ileti filtreleri](../../../../docs/framework/wcf/feature-details/message-filters.md).  
+ Yedekleme uç noktaları hakkında daha fazla bilgi için bkz. [yönlendirme giriş](../../../../docs/framework/wcf/feature-details/routing-introduction.md) ve [ileti filtreleri](../../../../docs/framework/wcf/feature-details/message-filters.md).  
   
 ## <a name="streaming"></a>Akış  
- Akış desteklemek için bağlama ayarlarsanız, yönlendirme hizmeti başarıyla iletileri akışını sağlayabilirsiniz.  Ancak, bazı koşullar altında iletilerini arabelleğe gerekebilir vardır:  
+ Akış desteklemek için bağlama ayarlarsanız, yönlendirme hizmeti başarıyla iletileri akışını yapabilirsiniz.  Ancak, bazı koşullar altında iletileri arabelleğe gerekebilir vardır:  
   
 -   Çok noktaya yayın (ek ileti kopya oluşturmak için arabellek)  
   
--   Yük devretme (arabellek durumda bir yedekleme gönderilecek ileti gerekiyor)  
+-   Yük devretme (arabellek yedek gönderilecek iletinin gerekiyor durumunda)  
   
--   System.ServiceModel.Routing.RoutingConfiguration.RouteOnHeadersOnly değer false (filtreleri gövdesi inceleyebilirsiniz böylece bir MessageBuffer ile MessageFilterTable sunmak için arabellek)  
+-   System.ServiceModel.Routing.RoutingConfiguration.RouteOnHeadersOnly false (filtreler gövdesi inceleyebilmeniz adına bir MessageBuffer ile MessageFilterTable sunmak için arabellek)  
   
 -   Dinamik yapılandırma  
   

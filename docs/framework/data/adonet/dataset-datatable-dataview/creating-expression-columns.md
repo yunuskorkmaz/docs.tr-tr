@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 0af3bd64-92a2-4b47-ae62-f5df35f131a6
 ms.openlocfilehash: 9c7a656e82198568c39b9bb58f8708f563d6caa2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482321"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43520833"
 ---
 # <a name="creating-expression-columns"></a>İfade sütunları oluşturma
 Bir ifadenin bir sütun için tanımlayabileceğiniz, bir değer içermesi için etkinleştirme ile aynı satırdaki diğer sütun değerleri veya birden çok satır'tablosundaki sütun değerlerini hesaplanır. Değerlendirilecek ifade tanımlamak için <xref:System.Data.DataColumn.Expression%2A> ve hedef sütun kullanımı özelliği <xref:System.Data.DataColumn.ColumnName%2A> ifade diğer sütunlara başvurmak için özellik. <xref:System.Data.DataColumn.DataType%2A> Sütun ifade için ifadenin döndürdüğü değeri uygun olmalıdır.  

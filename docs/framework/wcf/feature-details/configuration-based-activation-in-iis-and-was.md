@@ -3,11 +3,11 @@ title: IIS ve WAS'ta Yapılandırma Temelli Etkinleştirme
 ms.date: 03/30/2017
 ms.assetid: 6a927e1f-b905-4ee5-ad0f-78265da38238
 ms.openlocfilehash: d15202a7d34f3246cd7679687b6a510252fe3541
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43384801"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43541350"
 ---
 # <a name="configuration-based-activation-in-iis-and-was"></a>IIS ve WAS'ta Yapılandırma Temelli Etkinleştirme
 Normalde Internet Information Services (IIS) veya Windows İşlem Etkinleştirme Hizmeti (WAS) altında bir Windows Communication Foundation (WCF) hizmeti barındırırken .svc dosyası sağlamanız gerekir. .Svc dosyası, hizmet ve bir isteğe bağlı bir özel hizmet barındırma ortamı fabrikası adını içerir. Bu ek dosya yönetilebilirlik yükü ekler. Yapılandırma temelli etkinleştirme özelliği .svc dosya ve bu nedenle ilişkili gereksinimini ortadan kaldırır yükü.  

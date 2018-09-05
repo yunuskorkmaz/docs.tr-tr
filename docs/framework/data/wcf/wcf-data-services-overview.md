@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF Data Services, about
 ms.assetid: 7924cf94-c9a6-4015-afc9-f5d22b1743bb
 ms.openlocfilehash: 0cbb3b3906ad83349f02cf6a345f2e3d5336a2e6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385960"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43523143"
 ---
 # <a name="wcf-data-services-overview"></a>WCF veri hizmetleri genel bakış
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] kullanarak oluşturma ve veri hizmetlerinin Web veya intranet tüketim sağlayan [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Verilerinizi tarafından bir URI'leri adreslenebilir kaynakları olarak kullanıma sunmanıza olanak sağlar. Bu, erişmenize olanak tanır ve özellikle standart HTTP fiilleri, temsili durum aktarımı (REST) semantiği kullanarak, değişiklik verilerini al koy, Gönder ve Sil. Bu konu desenler ve uygulamalar tarafından tanımlanan genel bir bakış sağlar [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] ve ayrıca tarafından sağlanan özellikleri [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] yararlanmak için [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] .NET Framework tabanlı uygulamalarda.  

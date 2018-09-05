@@ -7,11 +7,11 @@ helpviewer_keywords:
 - '#else directive [C#]'
 ms.assetid: 6a347322-cfa2-4a86-98f8-ddfa2cb7d4db
 ms.openlocfilehash: 000cbaac4458a104214e3197442a21dcb4740a37
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43406160"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43530230"
 ---
 # <a name="else-c-reference"></a>#else (C# Başvurusu)
 `#else` bir bileşik koşullu yönergesi oluşturmanıza olanak tanır şekilde, önceki ifadeler hiçbiri [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) veya (isteğe bağlı) [#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md) yönergeleri değerlendirmek için `true`, derleyicinin tüm değerlendirecek arasında kod `#else` ve sonraki `#endif`.  

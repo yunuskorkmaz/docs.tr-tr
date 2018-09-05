@@ -3,11 +3,11 @@ title: Özel türler ile Switch etkinliği kullanımı
 ms.date: 03/30/2017
 ms.assetid: 482a48c4-eb83-40c3-a4e2-2f9a8af88b75
 ms.openlocfilehash: b24a03573b31f3fb1c34d4aa6e03bc11f5b25455
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43423571"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43535445"
 ---
 # <a name="usage-of-the-switch-activity-with-custom-types"></a>Özel türler ile Switch etkinliği kullanımı
 Bu örnek nasıl etkinleştireceğiniz anlatılmaktadır bir <xref:System.Activities.Statements.Switch%601> çalışma zamanında kullanıcı tarafından tanımlanan karmaşık tür değerlendirmek için etkinlik. Çoğu geleneksel yordamsal programlama dillerinde, bir [geçiş](https://go.microsoft.com/fwlink/?LinkId=180521) deyimi bir yürütme mantığı bir değişkenin koşullu değerlendirmeye göre seçer. Geleneksel olarak, bir `switch` deyimi, statik olarak değerlendirilen bir ifade üzerinde çalışır. Örneğin, C# ' de, yalnızca temel türler, gibi başka bir deyişle <xref:System.Boolean>, <xref:System.Int32>, <xref:System.String>, ve sabit listesi türleri desteklenir.  

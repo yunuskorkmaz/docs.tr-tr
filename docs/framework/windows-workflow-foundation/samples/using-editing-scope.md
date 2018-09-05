@@ -3,11 +3,11 @@ title: Düzenleme kapsamını kullanma
 ms.date: 03/30/2017
 ms.assetid: 79306f9e-318b-4687-9863-8b93d1841716
 ms.openlocfilehash: 268849c584c235a21a0818baa60f119cf8e49305
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43419990"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43538088"
 ---
 # <a name="using-editing-scope"></a>Düzenleme kapsamını kullanma
 Bu örnek, tek bir atomik birim alınabilir olacak şekilde bir değişiklik kümesini toplu gösterilmiştir. Varsayılan olarak, bir etkinlik Tasarımcısı yazarı tarafından gerçekleştirilen eylemler otomatik olarak geri al/Yinele sisteme tümleşiktir.  

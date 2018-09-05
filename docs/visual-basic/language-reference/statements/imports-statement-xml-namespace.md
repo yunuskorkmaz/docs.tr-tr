@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Imports statement [Visual Basic]
 - namespaces [Visual Basic], importing
 ms.assetid: 1f4d50a6-08c7-4c2e-8206-ccae35fcd1b4
-ms.openlocfilehash: 51b63a11fd2987d82f9a7599b39d15856a0abb1d
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 1100afd89b27e789c0db713291ed3656092fb0c7
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39243834"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43533648"
 ---
 # <a name="imports-statement-xml-namespace"></a>Imports Deyimi (XML Ad Alanı)
 XML değişmez değerleri ve XML eksen özellikleri kullanılmak üzere XML ad alanı öneklerini alır.  
@@ -35,7 +35,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
 ## <a name="remarks"></a>Açıklamalar  
  Kullanabileceğiniz `Imports` XML sabit değerleri ve XML eksen özellikleri ile ya da geçirilen parametre olarak kullanabileceğiniz genel XML ad alanları tanımlamak için deyimi `GetXmlNamespace` işleci. (Kullanma hakkında bilgi için `Imports` tür adları, kodunuzda kullanıldığı kullanılabilecek diğer ad içeri aktarmak için bildirimini [Imports deyimi (.NET Namespace ve türü)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).) Kullanarak bir XML ad alanı bildirmek için söz dizimi `Imports` ifade ile kullanılan XML sözdizimi aynıdır. Bu nedenle, bir ad alanı bildirimi bir XML dosyasından kopyalayın ve bunu kullanmak bir `Imports` deyimi.  
   
- XML ad alanı öneklerini tekrar tekrar aynı ad alanındandır XML öğelerini oluşturmak istediğinizde kullanışlıdır. XML ad alanı öneki ile bildirilen `Imports` deyimi, genel anlamda dosyadaki tüm kod için kullanılabilir olduğunu. XML öğesi değişmez değerleri ve XML eksen özellikleri eriştiğinizde oluştururken kullanabilirsiniz. Daha fazla bilgi için [XML öğesi değişmez değeri](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md) ve [XML eksen özellikleri](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md).  
+ XML ad alanı öneklerini tekrar tekrar aynı ad alanındandır XML öğelerini oluşturmak istediğinizde kullanışlıdır. XML ad alanı öneki ile bildirilen `Imports` deyimi, genel anlamda dosyadaki tüm kod için kullanılabilir olduğunu. XML öğesi değişmez değerleri ve XML eksen özellikleri eriştiğinizde oluştururken kullanabilirsiniz. Daha fazla bilgi için [XML öğesi değişmez değeri](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md) ve [XML eksen özellikleri](../../../visual-basic/language-reference/xml-axis/index.md).  
   
  Bir ad alanı öneki olmadan genel bir XML ad alanı tanımlarsanız, (örneğin, `Imports <xmlns="http://SomeNameSpace>"`), bu ad alanı varsayılan XML ad alanı olarak kabul edilir. Varsayılan XML ad alanı, herhangi bir XML öğesi değişmez değerler veya bir ad alanını açıkça belirtmeyen XML öznitelik eksen özellikleri için kullanılır. Belirtilen ad alanı boş ad alanı varsayılan ad alanı ayrıca kullanılır (yani `xmlns=""`). Varsayılan XML ad alanı XML değişmez değerlerinde XML öznitelikleri veya bir ad alanı olmayan XML öznitelik eksen özellikleri için geçerli değildir.  
   
@@ -90,6 +90,6 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [XML Öğesi Değişmez Değeri](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)  
- [XML Eksen Özellikleri](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
+ [XML Eksen Özellikleri](../../../visual-basic/language-reference/xml-axis/index.md)  
  [Bildirilmiş XML Öğeleri ve Özniteliklerinin Adları](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)  
  [GetXmlNamespace İşleci](../../../visual-basic/language-reference/operators/getxmlnamespace-operator.md)

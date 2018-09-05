@@ -1,16 +1,16 @@
 ---
-title: SQL iş akışı örneği deposu özellikleri
+title: SQL iş akışı örneği Store özellikleri
 ms.date: 03/30/2017
 ms.assetid: 5bf75f3c-8f33-450d-967f-6ee862c14c67
-ms.openlocfilehash: 575a46a6f261a7666263fb8bdc67fd94a56c50ed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3707e4912628380e5e06eeae1a6d608a4b0d5555
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514443"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43539256"
 ---
-# <a name="properties-of-sql-workflow-instance-store"></a>SQL iş akışı örneği deposu özellikleri
-Bu bölümdeki konularda SQL iş akışı örneği deposunun özellikleri hakkında ayrıntılı bilgi sağlar.  
+# <a name="properties-of-sql-workflow-instance-store"></a>SQL iş akışı örneği Store özellikleri
+Bu bölümdeki konularda SQL iş akışı örneği Store özellikleri hakkında ayrıntılar verilmektedir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
@@ -27,5 +27,5 @@ Bu bölümdeki konularda SQL iş akışı örneği deposunun özellikleri hakkı
 -   [Bağlantı Dizesi ve Bağlantı Dizesi Adı](../../../docs/framework/windows-workflow-foundation/connection-string-and-connection-string-name.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Server App Fabric örneği deposu](http://go.microsoft.com/fwlink/?LinkId=201201)  
- [Uygulama doku SQL Server Kalıcılık veritabanı](http://go.microsoft.com/fwlink/?LinkId=201202)
+ [Windows Server App Fabric örneği Store](https://go.microsoft.com/fwlink/?LinkId=201201)  
+ [App Fabric SQL Server Kalıcılık veritabanı](https://go.microsoft.com/fwlink/?LinkId=201202)

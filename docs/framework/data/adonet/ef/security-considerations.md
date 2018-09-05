@@ -3,11 +3,11 @@ title: Güvenlik konuları (varlık çerçevesi)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
 ms.openlocfilehash: 25d313f9c6f71d946ed8d9cc5db2e99dc84983b3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43456850"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43534090"
 ---
 # <a name="security-considerations-entity-framework"></a>Güvenlik konuları (varlık çerçevesi)
 Bu konuda, geliştirme, dağıtma ve çalıştırma için belirli güvenlik konuları açıklanmaktadır. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] uygulamalar. Güvenli oluşturmaya yönelik önerileri de izlemelidir [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] uygulamalar. Daha fazla bilgi için [güvenliğine genel bakış](../../../../../docs/framework/data/adonet/security-overview.md).  

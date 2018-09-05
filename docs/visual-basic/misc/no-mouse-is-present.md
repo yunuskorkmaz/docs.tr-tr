@@ -4,19 +4,19 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrMouse_NoMouseIsPresent
 ms.assetid: 4472fd57-4217-4463-9d3c-dc4a8fe88f1b
-ms.openlocfilehash: ceb999ea920e55bb50c71399dc595adb3d108411
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee04ed880f8aa24bbd155c5658ad6de856e2c388
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33637875"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43541325"
 ---
 # <a name="no-mouse-is-present"></a>Fare yok
 Özelliklerinden birini `My.Computer.Mouse` nesne çağrıldı, ancak hiçbir fare veya fare bağlantı noktası yüklü bilgisayar sahiptir.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Ekleme bir `Try...Catch` özelliği çağrısı geçici blok `My.Computer.Mouse` nesnesi.  
+-   Ekleme bir `Try...Catch` bloğu içine arama özelliğine `My.Computer.Mouse` nesne.  
   
      — veya —  
   
@@ -24,5 +24,5 @@ ms.locfileid: "33637875"
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [My.Computer.Mouse](xref:Microsoft.VisualBasic.Devices.Mouse)  
- [Özel durum ve hata Visual Basic'te işleme](http://msdn.microsoft.com/library/3e351e73-cf23-40ab-8b60-05794160529e)  
+ [Özel durum ve Visual Basic'te işleme hatası](https://msdn.microsoft.com/library/3e351e73-cf23-40ab-8b60-05794160529e)  
  [Try...Catch...Finally Deyimi](../../visual-basic/language-reference/statements/try-catch-finally-statement.md)

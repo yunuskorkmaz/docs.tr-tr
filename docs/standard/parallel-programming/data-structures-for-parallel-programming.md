@@ -8,11 +8,11 @@ ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f0b18f33c0cbc83f955c32477a21f77b09c7546c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43396480"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43541113"
 ---
 # <a name="data-structures-for-parallel-programming"></a>Paralel Programlama için Veri Yapıları
 .NET Framework sürüm 4 paralel programlama eşzamanlı koleksiyon sınıfları, hafif eşitleme temellerine ve yavaş başlatma türlerine yönelik birtakım dahil olmak üzere, kullanışlı olan birkaç yeni türlerini tanıtır. Bu tür görev paralel kitaplığı ve PLINQ'da dahil olmak üzere birden çok iş parçacıklı uygulamanın kodlar ile kullanabilirsiniz.  

@@ -1,23 +1,23 @@
 ---
-title: 'Nasıl yapılır: Bul (XPath-LINQ-XML) alt öğenin alt öğeleri (C#)'
+title: 'Nasıl yapılır: bir alt öğenin (XPath-LINQ to XML) alt öğeleri bulma (C#)'
 ms.date: 07/20/2015
 ms.assetid: 505b7512-bb8b-4f85-abbf-491f039c961e
-ms.openlocfilehash: 548ec3f76a17ef8575e7e5e90ef4cbf8d2666a64
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2fbb5111cdabac5ecbdc1db43e2ce2f41ebb7303
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324999"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43523210"
 ---
-# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-c"></a>Nasıl yapılır: Bul (XPath-LINQ-XML) alt öğenin alt öğeleri (C#)
-Bu konuda, belirli bir ada sahip bir alt öğenin alt öğelerini alma gösterilmektedir.  
+# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-c"></a>Nasıl yapılır: bir alt öğenin (XPath-LINQ to XML) alt öğeleri bulma (C#)
+Bu konuda, belirli bir ada sahip bir alt öğenin alt öğeleri almak gösterilmektedir.  
   
- XPath ifadesi şöyledir:  
+ XPath ifadesidir:  
   
  `./Paragraph//Text/text()`  
   
 ## <a name="example"></a>Örnek  
- Bu örnek bir sözcük işleme belgesini XML gösteriminden metin ayıklama sorunları benzetimini yapar. Bu ilk tüm seçer `Paragraph` öğeleri ve ardından seçer tüm `Text` her alt öğeleri `Paragraph` öğesi. Bu alt öğesi seçin değil `Text` öğeleri `Comment` öğesi.  
+ Bu örnek, bir sözcük işleme belgesi bir XML gösteriminden metin ayıklama sorunları benzetimini yapar. Bu ilk tüm seçer `Paragraph` öğeleri ve ardından tüm seçer `Text` her alt öğeleri `Paragraph` öğesi. Bu alt seçemiyorum `Text` öğelerini `Comment` öğesi.  
   
 ```csharp  
 XElement root = XElement.Parse(  
@@ -68,12 +68,13 @@ else
 Console.WriteLine(str2);  
 ```  
   
- Bu örnek şu çıkışı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```  
 Results are identical  
 This is the start of a sentence.  This is a second sentence.  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [LINQ-XML XPath kullanıcıların (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [LINQ to XML için XPath kullanıcıları (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
