@@ -2,12 +2,12 @@
 title: SQL-CLR tür eşlemesi
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-ms.openlocfilehash: 5437529d9293951ad34abda435b538b4f404c600
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: ac00d78fff65f5d44a52f92509db3aa493952949
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33365533"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43735442"
 ---
 # <a name="sql-clr-type-mapping"></a>SQL-CLR tür eşlemesi
 LINQ to SQL'de, ilişkisel veritabanı veri modeli, kendi seçtiğiniz programlama dilinde ifade nesne modeli eşlenir. Uygulama çalışırken, LINQ to SQL nesne modeli dil ile tümleşik sorgu SQL'e çevirir ve bunları yürütme için veritabanı gönderir. Veritabanı sonuçları döndürdüğünde, LINQ to SQL geri kendi programlama dilinde çalışabileceğiniz nesneleri sonuçları çevirir.  
@@ -60,7 +60,7 @@ LINQ to SQL'de, ilişkisel veritabanı veri modeli, kendi seçtiğiniz programla
   
 -   Bazı veri türleri, SQL Server CLR içinde veri eşdeğer türü farklı sıralar. Örneğin, SQL Server veri türü `UNIQUEIDENTIFIER` CLR veri türünde farklı sıralı <xref:System.Guid?displayProperty=nameWithType>.  
   
--   SQL Server CLR farklı bazı dize karşılaştırma işlemleri gerçekleştirir. SQL Server harmanlama ayarları sunucuda dizesi karşılaştırma davranışı bağlıdır. Daha fazla bilgi için [harmanlamaları ile çalışma](http://go.microsoft.com/fwlink/?LinkId=115330) Microsoft SQL Server Books Online.  
+-   SQL Server CLR farklı bazı dize karşılaştırma işlemleri gerçekleştirir. SQL Server harmanlama ayarları sunucuda dizesi karşılaştırma davranışı bağlıdır. Daha fazla bilgi için [harmanlamaları ile çalışma](https://go.microsoft.com/fwlink/?LinkId=115330) Microsoft SQL Server Books Online.  
   
 -   SQL Server CLR daha eşlenen bazı işlevler için farklı değerler döndürebilecek. Örneğin, SQL Server yalnızca sondaki boşluk farklıysa eşit olacak şekilde iki dizeyi varsaydığı eşitlik işlevleri değişir; CLR bunları eşit olmaması göz önünde bulundurur ise.  
   
@@ -232,11 +232,11 @@ LINQ to SQL'de, ilişkisel veritabanı veri modeli, kendi seçtiğiniz programla
 ### <a name="sql-server-filestream"></a>SQL Server FILESTREAM  
  `FILESTREAM` Özniteliğini `VARBINARY(MAX)` sütunları Microsoft SQL Server 2008 ile başlayan kullanılabilir; için LINQ to SQL .NET Framework sürüm 3.5 SP1 ile başlayarak ile eşleyebilirsiniz.  
   
- Olsa da `VARBINARY(MAX)` sütunlarla `FILESTREAM` özniteliğini <xref:System.Data.Linq.Binary> nesneleri <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> yöntemi, sütunları otomatik olarak oluşturamıyor `FILESTREAM` özniteliği. Hakkında daha fazla bilgi için `FILESTREAM`, bkz: [FILESTREAM genel bakış](http://go.microsoft.com/fwlink/?LinkId=115291) üzerinde Microsoft SQL Server Books Online.  
+ Olsa da `VARBINARY(MAX)` sütunlarla `FILESTREAM` özniteliğini <xref:System.Data.Linq.Binary> nesneleri <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> yöntemi, sütunları otomatik olarak oluşturamıyor `FILESTREAM` özniteliği. Hakkında daha fazla bilgi için `FILESTREAM`, bkz: [FILESTREAM genel bakış](https://go.microsoft.com/fwlink/?LinkId=115291) üzerinde Microsoft SQL Server Books Online.  
   
 <a name="BinarySerialization"></a>   
 ### <a name="binary-serialization"></a>İkili seri hale getirme  
- Bir sınıf uyguluyorsa <xref:System.Runtime.Serialization.ISerializable> arabirimi, herhangi bir SQL ikili alan bir nesneyi serileştirip serileştiremeyeceğini (`BINARY`, `VARBINARY`, `IMAGE`). Nesne serileştirilmiş ve seri durumdan göre nasıl <xref:System.Runtime.Serialization.ISerializable> arabirimi uygulanır. Daha fazla bilgi için [ikili serileştirme](http://go.microsoft.com/fwlink/?LinkId=115581).  
+ Bir sınıf uyguluyorsa <xref:System.Runtime.Serialization.ISerializable> arabirimi, herhangi bir SQL ikili alan bir nesneyi serileştirip serileştiremeyeceğini (`BINARY`, `VARBINARY`, `IMAGE`). Nesne serileştirilmiş ve seri durumdan göre nasıl <xref:System.Runtime.Serialization.ISerializable> arabirimi uygulanır. Daha fazla bilgi için [ikili serileştirme](https://go.microsoft.com/fwlink/?LinkId=115581).  
   
 <a name="MiscMapping"></a>   
 ## <a name="miscellaneous-mapping"></a>Çeşitli eşleme  
