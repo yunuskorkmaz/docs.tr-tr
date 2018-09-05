@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Reliable session
 ms.assetid: 86e914f2-060b-432b-bd17-333695317745
 ms.openlocfilehash: ec9163eded7f77053b94b7cb0ff0995dca575612
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43407813"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526421"
 ---
 # <a name="ws-reliable-session"></a>WS Güvenilir Oturum
 Bu örnek, güvenilir oturumlar kullanımını gösterir. Güvenilir oturumlar, güvenilir Mesajlaşma ve oturumlar için destek sağlıyor. Güvenilir Mesajlaşma iletişimi hatasında yeniden deneme sayısı ve teslim Güvenceleri gibi iletilerin sıralı varış belirtilmesini sağlar. Oturumlarının çağrıları arasında istemcilerin zachovat stav relace Örnek oturumları, istemci durum koruma için uygular ve sıralı teslim Güvenceleri belirtir.  

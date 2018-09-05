@@ -3,11 +3,11 @@ title: Bir etkinlik örnek AsyncOperationContext kullanma
 ms.date: 03/30/2017
 ms.assetid: 0888a0bd-d227-4c00-ad6a-b654a01740e8
 ms.openlocfilehash: 4358a364a3f7ec69b7c1c548fcf82fe494f37505
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43464330"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43534576"
 ---
 # <a name="using-asyncoperationcontext-in-an-activity-sample"></a>Bir etkinlik örnek AsyncOperationContext kullanma
 Bu örnek bir özel nasıl geliştirilebileceğini gösterir <xref:System.Activities.CodeActivity> kullanan <xref:System.Activities.AsyncCodeActivityContext> iş akışı dışında zaman uyumsuz olarak gerçekleştirilecek.  

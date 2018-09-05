@@ -3,11 +3,11 @@ title: Bookmarks2
 ms.date: 03/30/2017
 ms.assetid: 035fadb2-49fa-4ac7-b398-daf138f66e87
 ms.openlocfilehash: 6bcc4e27566b9c8553e0792558c281a6b1f1caf4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43387395"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528996"
 ---
 # <a name="bookmarks"></a>Yer işaretleri
 Bu örnek, dış girdi almak için bir yer işareti oluşturur ve özel bir etkinlik yazma gösterilmiştir. Örnek ayrıca özel etkinlik bir iş akışında kullanır ve bulma ve çalışan bir iş akışı örneğiyle ilişkili yer işaretleri sürdürme gösterir bir temel bir konsol uygulaması içerir. Yer işaretleri hakkında daha fazla bilgi için bkz. [yer işaretleri](../../../../docs/framework/windows-workflow-foundation/bookmarks.md).  

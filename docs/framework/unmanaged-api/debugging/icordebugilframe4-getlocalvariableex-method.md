@@ -14,17 +14,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a82f092a0f10fd621ac4facdee201fa239e1c1b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a1de5287331e196355932d20daabe103914cd564
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414535"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43520018"
 ---
 # <a name="icordebugilframe4getlocalvariableex-method"></a>ICorDebugILFrame4::GetLocalVariableEx Metodu
 [.NET Framework 4.5.2 ve sonraki sürümlerinde desteklenen]  
   
- Bu Ara dile (IL) yığın çerçevesinde belirtilen yerel değişkenin değerini alır ve isteğe bağlı olarak profiler ReJIT araçları eklenen bir değişken erişir.  
+ Bu Ara dil (IL) yığın çerçevesi içinde belirtilen yerel değişkenin değerini alır ve isteğe bağlı olarak ReJIT izleme profil oluşturucu, eklenen bir değişken erişir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,16 +38,16 @@ HRESULT GetLocalVariableEx(
   
 #### <a name="parameters"></a>Parametreler  
  `flags`  
- [in] Bir [Ilcodekind](../../../../docs/framework/unmanaged-api/debugging/ilcodekind-enumeration.md) profiler ReJIT araçları eklenen bir değişken çerçevede dahil edilip edilmediğini belirten numaralandırma üyesi.  
+ [in] Bir [Ilcodekind](../../../../docs/framework/unmanaged-api/debugging/ilcodekind-enumeration.md) ReJIT izleme profil oluşturucu, eklenen bir değişken çerçevede dahil edilip edilmediğini belirten sabit listesi üyesi.  
   
  `dwIndex`  
- [in] IL yığın çerçevesi yerel değişkende dizini.  
+ [in] IL yığın çerçevesinde yerel değişken dizini.  
   
  `ppValue`  
- [out] Alınan değerin temsil eden bir "ICorDebugValue" nesnesinin adresi için bir işaretçi.  
+ [out] Alınan değeri temsil eden bir "ICorDebugValue" nesnenin adresi için bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem benzer [GetLocalVariable](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getlocalvariable-method.md) olan isteğe bağlı olarak profiler ReJIT araçları eklenen bir değişken erişen dışında yöntemi. Bu yöntemle çağırma bir `flags` değerini `ILCODE_ORIGINAL_IL` arama için eşdeğer bir gruba [GetLocalVariable](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getlocalvariable-method.md); yöntemi ek yerel değişkenleriyle izlenmiş olan değişkenlere erişilemiyor. `ILCODE_REJIT_IL` Profil Oluşturucusu ReJIT Araçları'nda eklenen yerel değişkenler erişmek hata ayıklayıcı sağlar. IL izlenmemektedir ise, yöntem `E_INVALIDARG`.  
+ Bu yöntem benzer [GetLocalVariable](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getlocalvariable-method.md) olan isteğe bağlı olarak ReJIT izleme profil oluşturucu, eklenen bir değişken erişen dışında yöntemi. Bu yöntem çağırma bir `flags` değerini `ILCODE_ORIGINAL_IL` çağırmakla eşdeğerdir [GetLocalVariable](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getlocalvariable-method.md); yöntemin ek yerel değişkenlerle izleme eklenmiş olan değişkenlere erişilemez. `ILCODE_REJIT_IL` eklenen ReJIT izleme profil oluşturucu, yerel değişkenlere erişmek hata ayıklayıcı sağlar. IL varsa izlenmiyor, yöntem döndürür `E_INVALIDARG`.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
@@ -61,4 +61,4 @@ HRESULT GetLocalVariableEx(
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ICorDebugILFrame4 Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-interface.md)  
  [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [ReJIT: Nasıl yapılır Kılavuzu](http://blogs.msdn.com/b/davbr/archive/2011/10/12/rejit-a-how-to-guide.aspx)
+ [ReJIT: Nasıl yapılır Kılavuzu](https://blogs.msdn.com/b/davbr/archive/2011/10/12/rejit-a-how-to-guide.aspx)

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - data [Windows Forms], displaying
 ms.assetid: 02373442-bf94-4470-9f8a-e44c4a9d5b88
 ms.openlocfilehash: 5807df6d11580c22f2b754faf44fb3aa63dee14e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43468689"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43538860"
 ---
 # <a name="how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Formları DataGridView Denetimi İçin Alternatif Satır Stillerini Ayarlama
 Tablosal veri sık sık değişen satırları farklı arka plan renkleri sahip olduğu bir defter benzeri biçiminde sunulur. Bu biçim, özellikle fazla sayıda sütun sahip geniş tabloların ile her bir satırdaki hücreleri olduğunu bildirir kullanıcıların kolaylaştırır.  

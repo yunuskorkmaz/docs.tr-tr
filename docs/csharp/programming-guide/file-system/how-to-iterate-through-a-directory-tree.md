@@ -5,12 +5,12 @@ helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: 8222985e803972fb8d19159cfeaad93c9b08954d
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 1aac40793fabe152e18a1bf1b634058e85b31481
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244820"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515767"
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Nasıl yapılır: Dizin Ağacı ile Yineleme (C# Programlama Kılavuzu)
 Her iç içe geçmiş alt dizinde bir belirtilen kök klasöre herhangi derinliği her dosyaya erişmek deyimi "dizin ağacı yineleme" anlamına gelir. Mutlaka her dosyayı açmak gerekmez. Yalnızca dosya veya alt dizini olarak adını alabilirsiniz bir `string`, veya biçiminde ek bilgi almak bir <xref:System.IO.FileInfo?displayProperty=nameWithType> veya <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> nesne.  
@@ -56,7 +56,8 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
 ## <a name="robust-programming"></a>Güçlü Programlama  
  Sağlam bir dosya yineleme kod dosya sistemi birçok karmaşıklığını dikkate almanız gerekir. Windows dosya sistemi hakkında daha fazla bilgi için bkz. [NTFS teknik başvuru](https://technet.microsoft.com/library/81cc8a8a-bd32-4786-a849-03245d68d8e4).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.IO>  
- [LINQ ve Dosya Dizinleri](../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)  
- [Dosya sistemi ve kayıt defteri (C# programlama Kılavuzu)](../../../csharp/programming-guide/file-system/index.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- <xref:System.IO>  
+- [LINQ ve Dosya Dizinleri](../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)  
+- [Dosya sistemi ve kayıt defteri (C# programlama Kılavuzu)](../../../csharp/programming-guide/file-system/index.md)

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
 ms.openlocfilehash: 3bbaea9247d975c27ed6f49dedb749312f675296
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43487071"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526469"
 ---
 # <a name="value-types-c-reference"></a>Değer Türleri (C# Başvurusu)
 Değer türleri iki ana kategoride oluşur:  

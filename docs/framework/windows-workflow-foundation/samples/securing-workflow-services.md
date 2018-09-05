@@ -1,32 +1,32 @@
 ---
-title: İş akışı hizmetleri güvenli hale getirme
+title: İş akışı hizmetlerinin güvenliğini sağlama
 ms.date: 03/30/2017
 ms.assetid: 53f84ad5-1ed1-4114-8d0d-b12e8a021c6e
-ms.openlocfilehash: 5dbd724f3a2f8febfc74719584f4d69cbf75b567
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 28c34ecf7d6d781bfa461b2737cb9325a657f47e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806675"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524341"
 ---
-# <a name="securing-workflow-services"></a>İş akışı hizmetleri güvenli hale getirme
-İş akışı hizmeti güvenli hale getirilmiş örnek aşağıdaki yordamları gösterir:  
+# <a name="securing-workflow-services"></a>İş akışı hizmetlerinin güvenliğini sağlama
+Aşağıdaki yordamlar güvenli iş akışı hizmeti örnek gösterilmektedir:  
   
--   Kullanarak bir temel iş akışı hizmeti oluşturma <xref:System.ServiceModel.Activities.Receive> ve <xref:System.ServiceModel.Activities.SendReply> etkinlikler.  
+-   Temel iş akışı kullanarak hizmet oluşturma <xref:System.ServiceModel.Activities.Receive> ve <xref:System.ServiceModel.Activities.SendReply> etkinlikler.  
   
--   Windows Communication Foundation (WCF) yapılandırma iş akışı hizmeti tarafından kullanım için güvenli uç noktalarını tanımlamak için kullanma.  
+-   Windows Communication Foundation (WCF) yapılandırması iş akışı hizmeti tarafından kullanım için güvenli uç noktaları tanımlamak için kullanıyor.  
   
 -   Özel bir ilke içinde talep oluşturma ve kullanma <xref:System.ServiceModel.ServiceAuthorizationManager> doğrulamak için.  
   
 ## <a name="demonstrates"></a>Gösteriler  
- İş akışı hizmeti ile istemci arasındaki iletişimin güvenliğini sağlamak için WCF güvenlik kullanarak, talep tabanlı yetkilendirme  
+ WCF güvenliğinde, iş akışı hizmeti ile istemci arasındaki iletişimin güvenliğini sağlamak için kullanarak, talep tabanlı yetkilendirme  
   
 ## <a name="discussion"></a>Tartışma  
- Bu örnek ile normal bir WCF hizmeti gibi bir iş akışı hizmeti güvenli hale getirmek için WCF güvenlik altyapısı kullanımını göstermektedir. Özellikle, bir özel talep yetkilendirme için kullanır. Bu durumda, kullanan <xref:System.ServiceModel.WSHttpBinding> ve ileti mod güvenliği Windows kimlik bilgilerine sahip.  
+ Bu örnek, normal bir WCF Hizmeti ile olduğu gibi bir iş akışı hizmeti güvenli hale getirmek için WCF güvenlik altyapısı kullanımını gösterir. Özellikle, bir özel talep yetkilendirme için kullanır. Bu durumda, kullandığı <xref:System.ServiceModel.WSHttpBinding> iletisi mod güvenliği Windows kimlik bilgilerine sahip.  
   
- Özel <xref:System.IdentityModel.Policy.IAuthorizationPolicy> (`CustomNameCheckerPolicy`) istemcinin Windows kullanıcı adı denetler ve özel karakter. Bu karakteri varsa, oluşturur ve talep ekler <xref:System.IdentityModel.Policy.EvaluationContext>. Bunu yaparak, özel ilke deyimi, yapıyor istemci, kullanıcı bu karakter içeriyor. Bu talep çağrı ömrü sorgulanabilir. Bu karakteri bulabilirsiniz `Constants.cs`.  
+ Özel <xref:System.IdentityModel.Policy.IAuthorizationPolicy> (`CustomNameCheckerPolicy`) istemcinin Windows kullanıcı adı denetler ve belirli bir karakter. Bu karakteri mevcutsa oluşturur ve talep ekler <xref:System.IdentityModel.Policy.EvaluationContext>. Bunu yaparak, özel bir ilke ifadesi, yapıyor istemcinin kullanıcı adını bu karakteri sahip. Bu talep çağrısı kullanım ömrü boyunca sorgulanabilir. Bu karakterin bulabilirsiniz `Constants.cs`.  
   
- İçinde talep yetkilendirme ilkesi arar `SecureWorkFlowAuthZManager`. Bulduğu varsa, döndürür `true` ve devam etmek iş akışı izin verin. Aksi takdirde, döndürür `false`, istemciye döndürülecek bir 'Erişim engellendi' iletisi neden olur. Diğer talepleri bağlamda mevcut olduğundan ve de içinde incelenebilir `SecureWorkFlowAuthZManager`.  
+ İçinde talep yetkilendirme ilkesi arar `SecureWorkFlowAuthZManager`. Bunu bulursa, onu döndürür `true` ve devam etmek iş akışı sağlar. Aksi halde `false`, istemciye döndürülecek 'Erişim engellendi' iletisi neden olur. Diğer talepler bağlamında mevcut olduğundan ve de içinde incelenebilir `SecureWorkFlowAuthZManager`.  
   
 #### <a name="to-run-this-sample"></a>Bu örneği çalıştırmak için  
   
@@ -34,21 +34,21 @@ ms.locfileid: "33806675"
   
 2.  İçinde SecuringWorkflowServices.sln yük [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
   
-3.  Çözümü derlemek için CTRL + SHIFT + B tuşuna basın.  
+3.  Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.  
   
-4.  Hizmet projesinin çözüm başlangıç projesi olarak ayarlayın.  
+4.  Hizmet projesinin çözümün başlangıç projesi olarak ayarlayın.  
   
-5.  Hata ayıklama olmadan hizmetini başlatmak için CTRL + F5 tuşuna basın.  
+5.  Hata ayıklama olmadan hizmeti başlatmak için CTRL + F5 tuşlarına basın.  
   
-6.  İstemci projesi çözüm başlangıç projesi olarak ayarlayın.  
+6.  İstemci projesinin çözümün başlangıç projesi olarak ayarlayın.  
   
-7.  İstemci hata ayıklama olmadan başlatmak için CTRL + F5 tuşuna basın.  
+7.  Hata ayıklama olmadan istemcisini başlatmak için CTRL + F5 tuşlarına basın.  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Services\SecuringWorkflowServices`

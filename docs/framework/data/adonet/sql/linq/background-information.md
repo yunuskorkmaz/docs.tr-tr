@@ -2,39 +2,39 @@
 title: Arka plan bilgileri
 ms.date: 03/30/2017
 ms.assetid: 724888f2-d3f1-4bea-b9a1-a0adb8a00f3b
-ms.openlocfilehash: 66d2047a064663cfe93823d92d30f682d557c493
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cd2531dd141cfc6f0b67d1f58766327c218610f5
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363223"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515638"
 ---
 # <a name="background-information"></a>Arka plan bilgileri
-Bu bölümdeki konular, kavramlar ve kullanma hakkında temel bilgileri ötesine genişletmek yordamlar ilgilidir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+Kavramlar ve yordamlar kullanma hakkında temel kavramların ötesine genişletmek için bu bölümdeki konular, ilgilidir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- Ek örneklerini bulmak için aşağıdaki adımları izleyin [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kod ve uygulamalar:  
+ Ek örneklerini bulmak için bu adımları [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kodlarınızı ve uygulamalarınızı:  
   
--   Microsoft Docs belirli sorunları için arama yapın.  
+-   Microsoft Docs için belirli sorunları arayın.  
   
--   Katılan [LINQ Forumu](http://go.microsoft.com/fwlink/?LinkId=76488), uzmanlarıyla ayrıntılı daha karmaşık konular burada ele.  
+-   Katılmak [LINQ Forumu](https://go.microsoft.com/fwlink/?LinkId=76488), uzmanlarıyla ayrıntılı daha karmaşık konuları burada tartışabilir miyiz.  
   
--   Ayrıntılı teknik incelemesine araştırmak [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] teknolojisi, Visual Basic ve C# kod örnekleri ile tamamlandı. Daha fazla bilgi için bkz: [LINQ-SQL: ilişkisel veri .NET Language-Integrated sorgusu](http://go.microsoft.com/fwlink/?LinkId=93205).  
+-   Ayrıntılı Teknik İnceleme [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] teknolojisi, Visual Basic ve C# kod örnekleri ile tamamlandı. Daha fazla bilgi için [LINQ to SQL: ilişkisel verileri için sorgu .NET Language-Integrated](https://go.microsoft.com/fwlink/?LinkId=93205).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [ADO.NET ve LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/ado-net-and-linq-to-sql.md)  
- Arasındaki ilişkiyi açıklar [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] ve [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+ İlişkiyi açıklar [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] ve [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
  [LINQ to SQL Kaynak Kodunu Analiz Etme](../../../../../../docs/framework/data/adonet/sql/linq/analyzing-linq-to-sql-source-code.md)  
- Analiz edilmesi anlatılmaktadır [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] oluşturma ve kaynak kodu Northwind örnek veritabanında görüntüleyerek eşleme.  
+ Nasıl analiz edileceğini açıklar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] oluşturma ve kaynak kodu Northwind örnek veritabanından görüntüleyerek eşleme.  
   
  [Insert, Update ve Delete İşlemlerini Özelleştirme](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)  
- Doğrulama kodu ve diğer özelleştirmelerin nasıl ekleneceğini açıklar.  
+ Doğrulama kodu ve diğer özelleştirmeleri nasıl ekleneceğini açıklar.  
   
  [Veri Bağlama](../../../../../../docs/framework/data/adonet/sql/linq/data-binding.md)  
- Açıklar nasıl [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kullanan <xref:System.ComponentModel.IListSource> veri bağlamasını desteklemek için.  
+ Açıklayan nasıl [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kullanan <xref:System.ComponentModel.IListSource> veri bağlamayı desteklemek için.  
   
  [Devralma Desteği](../../../../../../docs/framework/data/adonet/sql/linq/inheritance-support.md)  
- Devralma rolü açıklanmaktadır [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nesne modeli ve ilgili işleçleri sorgularınızda kullanma.  
+ Devralmada rolünü açıklar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nesne modeli ve sorgularınızdaki ilgili işleçleri kullanma.  
   
  [Yerel Yöntem Çağrıları](../../../../../../docs/framework/data/adonet/sql/linq/local-method-calls.md)  
  Açıklar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] yerel yöntem çağrıları için destek.  
@@ -43,43 +43,43 @@ Bu bölümdeki konular, kavramlar ve kullanma hakkında temel bilgileri ötesine
  Kullanan çok katmanlı uygulamalar için ayrıntılı bilgiler sağlar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
  [Nesne Kimliği](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)  
- Nesne Kimliği açıklanmaktadır [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nesne modeli ve bu özellik bir veritabanında nesne kimliği nasıl farklıdır açıklar.  
+ Nesne kimliğinde açıklar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nesne modeli ve bu özellik bir veritabanında nesne kimliği nasıl farklıdır açıklanmaktadır.  
   
  [LINQ to SQL Nesne Modeli](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)  
- Nesne modeli ve ilişkisel veri modeli ilişkisini açıklanır.  
+ Nesne modeli ve ilişkisel veri modeline ilişkisini açıklar.  
   
  [Nesne Durumları ve Değişiklik İzleme](../../../../../../docs/framework/data/adonet/sql/linq/object-states-and-change-tracking.md)  
- Hakkında ayrıntılı bilgi sağlar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] değişiklikleri izler.  
+ Hakkında ayrıntılı bilgi sağlayan [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] değişiklikleri izler.  
   
  [İyimser Eşzamanlılık: Genel Bakış](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)  
- İyimser eşzamanlılık açıklar ve terimleri tanımlar.  
+ İyimser eşzamanlılık açıklar ve terimlerini tanımlar.  
   
  [Sorgu Kavramları](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
- Sorgularda yönlerini açıklar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] farklı sorgularından [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
+ Sorgularda yönlerini açıklar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] farklı sorgularda gelen [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
   
  [Kimlik Önbelleğinden Nesne Alma](../../../../../../docs/framework/data/adonet/sql/linq/retrieving-objects-from-the-identity-cache.md)  
- Nesne Kimliği önbellekten sorgu türleri açıklanmaktadır.  
+ Kimlik önbelleğinden nesne almak sorgu türleri açıklanmaktadır.  
   
  [LINQ to SQL’de Güvenlik](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)  
- Veritabanı Bağlantıları'deki güvenlik doğru yaklaşımı açıklanmaktadır.  
+ Veritabanı bağlantılarını güvenlik için doğru yaklaşımı açıklanmaktadır.  
   
  [Serileştirme](../../../../../../docs/framework/data/adonet/sql/linq/serialization.md)  
  Seri hale getirme işlemini açıklar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uygulamalar.  
   
  [Saklı Yordamlar](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)  
- Saklı yordamlar, tasarım zamanında harita ve uygulamanızdan çağırmak açıklar.  
+ Saklı yordamlar, tasarım zamanında eşlemeyle ilgili bilgi ve nasıl uygulamanızdan çağrılacağını açıklar.  
   
  [İşlem Desteği](../../../../../../docs/framework/data/adonet/sql/linq/transaction-support.md)  
- İşlem üç modellerinin özetlenmektedir, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] destekler.  
+ İşlem üç model açıklanmaktadır, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] destekler.  
   
  [SQL-CLR Tür Uyumsuzlukları](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)  
- Farklı türde sistemleri karıştırma sorunları açıklar.  
+ Farklı tür sistemleri karıştırma sorunlarından açıklar.  
   
  [SQL-CLR Özel Tür Eşlemeleri](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-custom-type-mappings.md)  
  Türü eşlemelerini özelleştirme hakkında rehberlik sağlar.  
   
  [Kullanıcı Tanımlı İşlevler](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)  
- Tasarım zamanında kullanıcı tanımlı işlevler harita ve uygulamanızdan çağırmak açıklar.  
+ Tasarım zamanında kullanıcı tanımlı işlevleri eşlemeyle ilgili bilgi ve nasıl uygulamanızdan çağrılacağını açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Programlama Kılavuzu](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)  

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: ccfac6bd2688a2e02a1b3fcc14748d357acb1aa2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 2720ea223005227c2d6156ed77f517b698ca9004
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43464343"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515671"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Komut Satırı Bağımsız Değişkenleri (C# Programlama Kılavuzu)
 Bağımsız değişken gönderebilirsiniz `Main` yöntemi aşağıdaki yöntemlerden biriyle tanımlayarak yöntemi:  
@@ -73,11 +73,12 @@ long num = Convert.ToInt64(s);
   
  Komut satırı bağımsız değişkenlerinin nasıl kullanılacağı hakkında daha fazla örnek için bkz. [nasıl yapılır: komut satırı kullanan derlemeler kullanma ve oluşturma](https://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Environment?displayProperty=nameWithType>  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [Ana() ve Komut Satırı Bağımsız Değişkenleri](../../../csharp/programming-guide/main-and-command-args/index.md)  
- [Nasıl yapılır: Komut Satırı Bağımsız Değişkenlerini Görüntüleme](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
- [Nasıl yapılır: foreach Kullanarak Komut Satırı Bağımsız Değişkenlerine Erişme](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
- [Ana() Dönüş Değerleri](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)  
- [Sınıflar](../../../csharp/programming-guide/classes-and-structs/classes.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- <xref:System.Environment?displayProperty=nameWithType>  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [Ana() ve Komut Satırı Bağımsız Değişkenleri](../../../csharp/programming-guide/main-and-command-args/index.md)  
+- [Nasıl yapılır: Komut Satırı Bağımsız Değişkenlerini Görüntüleme](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
+- [Nasıl yapılır: foreach Kullanarak Komut Satırı Bağımsız Değişkenlerine Erişme](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
+- [Ana() Dönüş Değerleri](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)  
+- [Sınıflar](../../../csharp/programming-guide/classes-and-structs/classes.md)

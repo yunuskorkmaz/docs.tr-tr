@@ -9,11 +9,11 @@ helpviewer_keywords:
 - rendering per frame using CompositionTarget objects [WPF]
 ms.assetid: 701246cd-66b7-4d69-ada9-17b3b433d95d
 ms.openlocfilehash: cc043e6d225ad3dbe57a0924593fac0f68af7eb1
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43473924"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526447"
 ---
 # <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>Nasıl yapılır: CompositionTarget Kullanarak Çerçeve Aralığı Başına İşleme
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Animasyon altyapısı tabanlı çerçeve animasyon oluşturmak için birçok özellik sağlar. Ancak, uygulama senaryoları daha ayrıntılı işleme çerçeve başına temelinde denetime ihtiyacınız vardır. <xref:System.Windows.Media.CompositionTarget> Nesne üzerinde bir çerçeve başına geri alarak özel animasyon oluşturma olanağı sağlar.  

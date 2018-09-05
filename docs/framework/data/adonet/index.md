@@ -3,11 +3,11 @@ title: ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
 ms.openlocfilehash: 59828e988659b9fc5644ff801f77171103630660
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43388228"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519922"
 ---
 # <a name="adonet"></a>ADO.NET
 ADO.NET, .NET Framework programcılarına veri erişim Hizmetleri açığa çıkaran bir sınıflar kümesidir. ADO.NET, veri paylaşımı, dağıtılmış uygulamalar oluşturmak için zengin bir bileşenler kümesi sağlar. İlişkisel erişimi, XML ve uygulama verileri sağlayan .NET Framework'ün önemli bir parçasıdır. ADO.NET, geliştirme ihtiyaçlarınıza göre ön uç bir veritabanı istemciler ve uygulamalar, Araçlar, dilleri veya Internet tarayıcıları tarafından kullanılan orta katman iş nesneleri oluşturma da dahil olmak üzere çeşitli destekler.  
