@@ -8,36 +8,36 @@ helpviewer_keywords:
 - line segments [WPF], creating
 - graphics [WPF], line segments
 ms.assetid: 0155ed47-a20d-49a7-a306-186d8e07fbc4
-ms.openlocfilehash: 1cfa9275a2a4508c153cf6ab7ed1c6126b1ee92c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 61425a68d83c8078b8420be01e0e59d3cba6a4e2
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33559696"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43518979"
 ---
-# <a name="how-to-create-a-linesegment-in-a-pathgeometry"></a><span data-ttu-id="49514-102">Nasıl yapılır: PathGeometry İçinde LineSegment Oluşturma</span><span class="sxs-lookup"><span data-stu-id="49514-102">How to: Create a LineSegment in a PathGeometry</span></span>
-<span data-ttu-id="49514-103">Bu örnek, bir satırı kesiminin nasıl oluşturulacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="49514-103">This example shows how to create a line segment.</span></span> <span data-ttu-id="49514-104">Bir çizgi kesimi oluşturmak için kullanın <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, ve <xref:System.Windows.Media.LineSegment> sınıfları.</span><span class="sxs-lookup"><span data-stu-id="49514-104">To create a line segment, use the <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, and <xref:System.Windows.Media.LineSegment> classes.</span></span>  
+# <a name="how-to-create-a-linesegment-in-a-pathgeometry"></a><span data-ttu-id="f6891-102">Nasıl yapılır: PathGeometry İçinde LineSegment Oluşturma</span><span class="sxs-lookup"><span data-stu-id="f6891-102">How to: Create a LineSegment in a PathGeometry</span></span>
+<span data-ttu-id="f6891-103">Bu örnek, bir çizgi kesimi oluşturma işlemi gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="f6891-103">This example shows how to create a line segment.</span></span> <span data-ttu-id="f6891-104">Bir çizgi kesimi oluşturmak için kullanın <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, ve <xref:System.Windows.Media.LineSegment> sınıfları.</span><span class="sxs-lookup"><span data-stu-id="f6891-104">To create a line segment, use the <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, and <xref:System.Windows.Media.LineSegment> classes.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="49514-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="49514-105">Example</span></span>  
- <span data-ttu-id="49514-106">Aşağıdaki örnekler çizin bir <xref:System.Windows.Media.LineSegment> gelen (10, 50) için (200, 70).</span><span class="sxs-lookup"><span data-stu-id="49514-106">The following examples draw a <xref:System.Windows.Media.LineSegment> from (10, 50) to (200, 70).</span></span> <span data-ttu-id="49514-107">Elde edilen aşağıda gösterilmiştir <xref:System.Windows.Media.LineSegment>; koordinat sistemini göstermek için kılavuz arka planı eklendi.</span><span class="sxs-lookup"><span data-stu-id="49514-107">The following illustration shows the resulting <xref:System.Windows.Media.LineSegment>; a grid background was added to show the coordinate system.</span></span>  
+## <a name="example"></a><span data-ttu-id="f6891-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="f6891-105">Example</span></span>  
+ <span data-ttu-id="f6891-106">Aşağıdaki örnekler çizmek bir <xref:System.Windows.Media.LineSegment> gelen (10, 50) için (200, 70).</span><span class="sxs-lookup"><span data-stu-id="f6891-106">The following examples draw a <xref:System.Windows.Media.LineSegment> from (10, 50) to (200, 70).</span></span> <span data-ttu-id="f6891-107">Sonuç, aşağıdaki resimde gösterilmektedir <xref:System.Windows.Media.LineSegment>; kılavuz arka planı koordinat sistemini göstermek için eklenmiştir.</span><span class="sxs-lookup"><span data-stu-id="f6891-107">The following illustration shows the resulting <xref:System.Windows.Media.LineSegment>; a grid background was added to show the coordinate system.</span></span>  
   
- <span data-ttu-id="49514-108">![İçinde bir LineSegment LineSegment](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-pathgeometrylinesegment.png "graphicsmm_pathgeometrylinesegment")</span><span class="sxs-lookup"><span data-stu-id="49514-108">![A LineSegment in a PathFigure](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-pathgeometrylinesegment.png "graphicsmm_pathgeometrylinesegment")</span></span>  
-<span data-ttu-id="49514-109">(10,50)'den (200,70) çizilen bir LineSegment</span><span class="sxs-lookup"><span data-stu-id="49514-109">A LineSegment drawn from (10,50) to (200,70)</span></span>  
+ <span data-ttu-id="f6891-108">![İçinde bir LineSegment LineSegment](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-pathgeometrylinesegment.png "graphicsmm_pathgeometrylinesegment")</span><span class="sxs-lookup"><span data-stu-id="f6891-108">![A LineSegment in a PathFigure](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-pathgeometrylinesegment.png "graphicsmm_pathgeometrylinesegment")</span></span>  
+<span data-ttu-id="f6891-109">(10,50)'den (200,70) için çizilmiş LineSegment</span><span class="sxs-lookup"><span data-stu-id="f6891-109">A LineSegment drawn from (10,50) to (200,70)</span></span>  
   
- <span data-ttu-id="49514-110">[xaml]</span><span class="sxs-lookup"><span data-stu-id="49514-110">[xaml]</span></span>  
+ <span data-ttu-id="f6891-110">[xaml]</span><span class="sxs-lookup"><span data-stu-id="f6891-110">[xaml]</span></span>  
   
- <span data-ttu-id="49514-111">İçinde [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], bir yolu açıklamak için öznitelik sözdizimini kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="49514-111">In [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], you may use attribute syntax to describe a path.</span></span>  
+ <span data-ttu-id="f6891-111">İçinde [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], bir yol tanımlamak için öznitelik sözdizimini kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="f6891-111">In [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], you may use attribute syntax to describe a path.</span></span>  
   
 ```xaml  
 <Path Stroke="Black" StrokeThickness="1"    
   Data="M 10,50 L 200,70" />  
 ```  
   
- <span data-ttu-id="49514-112">[xaml]</span><span class="sxs-lookup"><span data-stu-id="49514-112">[xaml]</span></span>  
+ <span data-ttu-id="f6891-112">[xaml]</span><span class="sxs-lookup"><span data-stu-id="f6891-112">[xaml]</span></span>  
   
- <span data-ttu-id="49514-113">(Bu öznitelik sözdizimi gerçekte oluşturur Not bir <xref:System.Windows.Media.StreamGeometry>, hafifletilmiş sürümü bir <xref:System.Windows.Media.PathGeometry>.</span><span class="sxs-lookup"><span data-stu-id="49514-113">(Note that this attribute syntax actually creates a <xref:System.Windows.Media.StreamGeometry>, a lighter-weight version of a <xref:System.Windows.Media.PathGeometry>.</span></span> <span data-ttu-id="49514-114">Daha fazla bilgi için bkz: [biçimlendirme sözdizimi yolu](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md) sayfası.)</span><span class="sxs-lookup"><span data-stu-id="49514-114">For more information, see the [Path Markup Syntax](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md) page.)</span></span>  
+ <span data-ttu-id="f6891-113">(Aslında bu öznitelik sözdizimi oluşturan Not bir <xref:System.Windows.Media.StreamGeometry>, daha basit sürümü bir <xref:System.Windows.Media.PathGeometry>.</span><span class="sxs-lookup"><span data-stu-id="f6891-113">(Note that this attribute syntax actually creates a <xref:System.Windows.Media.StreamGeometry>, a lighter-weight version of a <xref:System.Windows.Media.PathGeometry>.</span></span> <span data-ttu-id="f6891-114">Daha fazla bilgi için [yol işaretleme söz dizimi](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md) sayfası.)</span><span class="sxs-lookup"><span data-stu-id="f6891-114">For more information, see the [Path Markup Syntax](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md) page.)</span></span>  
   
- <span data-ttu-id="49514-115">İçinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], nesne öğesi sözdizimini kullanarak bir çizgi kesimi çizebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="49514-115">In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], you may also draw a line segment by using object element syntax.</span></span> <span data-ttu-id="49514-116">Aşağıdaki önceki eşdeğerdir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] örnek.</span><span class="sxs-lookup"><span data-stu-id="49514-116">The following is equivalent to the previous [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] example.</span></span>  
+ <span data-ttu-id="f6891-115">İçinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], nesne öğesi sözdizimi kullanılarak bir doğru parçası çizebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="f6891-115">In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], you may also draw a line segment by using object element syntax.</span></span> <span data-ttu-id="f6891-116">Aşağıdaki önceki eşdeğerdir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] örnek.</span><span class="sxs-lookup"><span data-stu-id="f6891-116">The following is equivalent to the previous [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] example.</span></span>  
   
 ```xaml  
 <Path Stroke="Black" StrokeThickness="1">  
@@ -99,11 +99,11 @@ Dim myPathFigure As New PathFigure()
             myPath.Data = myPathGeometry  
 ```  
   
- <span data-ttu-id="49514-117">Bu örnek daha büyük bir parçasıdır; tam bir örnek için bkz: [geometri örneği](http://go.microsoft.com/fwlink/?LinkID=159989).</span><span class="sxs-lookup"><span data-stu-id="49514-117">This example is part of larger sample; for the complete sample, see the [Geometries Sample](http://go.microsoft.com/fwlink/?LinkID=159989).</span></span>  
+ <span data-ttu-id="f6891-117">Bu örnek, daha büyük örnek bir parçasıdır; tam bir örnek için bkz. [geometri örneği](https://go.microsoft.com/fwlink/?LinkID=159989).</span><span class="sxs-lookup"><span data-stu-id="f6891-117">This example is part of larger sample; for the complete sample, see the [Geometries Sample](https://go.microsoft.com/fwlink/?LinkID=159989).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="49514-118">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="49514-118">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="f6891-118">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="f6891-118">See Also</span></span>  
  <xref:System.Windows.Media.PathFigure>  
  <xref:System.Windows.Media.PathGeometry>  
  <xref:System.Windows.Media.GeometryDrawing>  
  <xref:System.Windows.Shapes.Path>  
- [<span data-ttu-id="49514-119">Geometriye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="49514-119">Geometry Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)
+ [<span data-ttu-id="f6891-119">Geometriye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="f6891-119">Geometry Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)

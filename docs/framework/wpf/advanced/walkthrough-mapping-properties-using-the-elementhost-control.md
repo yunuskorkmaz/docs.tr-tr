@@ -9,142 +9,142 @@ helpviewer_keywords:
 - ElementHost control [WPF], mapping properties
 ms.assetid: bccd6e0d-2272-4924-9107-ff8ed58b88aa
 ms.openlocfilehash: 34119d889c8d6600fdda12cac33192c32d8e0fa6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43467130"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510017"
 ---
-# <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a><span data-ttu-id="84feb-102">İzlenecek yol: ElementHost Denetimini Kullanarak Özellikleri Eşleme</span><span class="sxs-lookup"><span data-stu-id="84feb-102">Walkthrough: Mapping Properties Using the ElementHost Control</span></span>
+# <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a><span data-ttu-id="a5ba9-102">İzlenecek yol: ElementHost Denetimini Kullanarak Özellikleri Eşleme</span><span class="sxs-lookup"><span data-stu-id="a5ba9-102">Walkthrough: Mapping Properties Using the ElementHost Control</span></span>
 
-<span data-ttu-id="84feb-103">Bu izlenecek yol size nasıl kullanılacağını gösterir <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A> eşlemek için özellik [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] barındırılan karşılık gelen özelliklere özellikleri [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] öğesi.</span><span class="sxs-lookup"><span data-stu-id="84feb-103">This walkthrough shows you how to use the <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A> property to map [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] properties to corresponding properties on a hosted [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] element.</span></span>
+<span data-ttu-id="a5ba9-103">Bu izlenecek yol size nasıl kullanılacağını gösterir <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A> eşlemek için özellik [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] barındırılan karşılık gelen özelliklere özellikleri [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] öğesi.</span><span class="sxs-lookup"><span data-stu-id="a5ba9-103">This walkthrough shows you how to use the <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A> property to map [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] properties to corresponding properties on a hosted [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] element.</span></span>
 
-<span data-ttu-id="84feb-104">Bu kılavuzda gösterilen görevler aşağıdakileri içerir:</span><span class="sxs-lookup"><span data-stu-id="84feb-104">Tasks illustrated in this walkthrough include:</span></span>
+<span data-ttu-id="a5ba9-104">Bu kılavuzda gösterilen görevler aşağıdakileri içerir:</span><span class="sxs-lookup"><span data-stu-id="a5ba9-104">Tasks illustrated in this walkthrough include:</span></span>
 
--   <span data-ttu-id="84feb-105">Proje oluşturuluyor.</span><span class="sxs-lookup"><span data-stu-id="84feb-105">Creating the project.</span></span>
+-   <span data-ttu-id="a5ba9-105">Proje oluşturuluyor.</span><span class="sxs-lookup"><span data-stu-id="a5ba9-105">Creating the project.</span></span>
 
--   <span data-ttu-id="84feb-106">Yeni bir özellik eşlemesi tanımlama.</span><span class="sxs-lookup"><span data-stu-id="84feb-106">Defining a new property mapping.</span></span>
+-   <span data-ttu-id="a5ba9-106">Yeni bir özellik eşlemesi tanımlama.</span><span class="sxs-lookup"><span data-stu-id="a5ba9-106">Defining a new property mapping.</span></span>
 
--   <span data-ttu-id="84feb-107">Varsayılan özellik eşlemesi kaldırılıyor.</span><span class="sxs-lookup"><span data-stu-id="84feb-107">Removing a default property mapping.</span></span>
+-   <span data-ttu-id="a5ba9-107">Varsayılan özellik eşlemesi kaldırılıyor.</span><span class="sxs-lookup"><span data-stu-id="a5ba9-107">Removing a default property mapping.</span></span>
 
--   <span data-ttu-id="84feb-108">Varsayılan özellik eşlemesi genişletme.</span><span class="sxs-lookup"><span data-stu-id="84feb-108">Extending a default property mapping.</span></span>
+-   <span data-ttu-id="a5ba9-108">Varsayılan özellik eşlemesi genişletme.</span><span class="sxs-lookup"><span data-stu-id="a5ba9-108">Extending a default property mapping.</span></span>
 
-<span data-ttu-id="84feb-109">Bu izlenecek yolda gösterilen görevler tam kod listesi için bkz. [ElementHost denetimi örneğini kullanarak eşleme özelliklerini](https://go.microsoft.com/fwlink/?LinkID=160018).</span><span class="sxs-lookup"><span data-stu-id="84feb-109">For a complete code listing of the tasks illustrated in this walkthrough, see [Mapping Properties Using the ElementHost Control Sample](https://go.microsoft.com/fwlink/?LinkID=160018).</span></span>
+<span data-ttu-id="a5ba9-109">Bu izlenecek yolda gösterilen görevler tam kod listesi için bkz. [ElementHost denetimi örneğini kullanarak eşleme özelliklerini](https://go.microsoft.com/fwlink/?LinkID=160018).</span><span class="sxs-lookup"><span data-stu-id="a5ba9-109">For a complete code listing of the tasks illustrated in this walkthrough, see [Mapping Properties Using the ElementHost Control Sample](https://go.microsoft.com/fwlink/?LinkID=160018).</span></span>
 
-<span data-ttu-id="84feb-110">Bitirdiğiniz zaman, eşlemek mümkün olmayacak [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] karşılık gelen özellikleri [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] barındırılan bir öğedeki özellikleri.</span><span class="sxs-lookup"><span data-stu-id="84feb-110">When you are finished, you will be able to map [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] properties to corresponding [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] properties on a hosted element.</span></span>
+<span data-ttu-id="a5ba9-110">Bitirdiğiniz zaman, eşlemek mümkün olmayacak [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] karşılık gelen özellikleri [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] barındırılan bir öğedeki özellikleri.</span><span class="sxs-lookup"><span data-stu-id="a5ba9-110">When you are finished, you will be able to map [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] properties to corresponding [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] properties on a hosted element.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="84feb-111">Önkoşullar</span><span class="sxs-lookup"><span data-stu-id="84feb-111">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="a5ba9-111">Önkoşullar</span><span class="sxs-lookup"><span data-stu-id="a5ba9-111">Prerequisites</span></span>
 
-<span data-ttu-id="84feb-112">Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:</span><span class="sxs-lookup"><span data-stu-id="84feb-112">You need the following components to complete this walkthrough:</span></span>
+<span data-ttu-id="a5ba9-112">Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:</span><span class="sxs-lookup"><span data-stu-id="a5ba9-112">You need the following components to complete this walkthrough:</span></span>
 
--   <span data-ttu-id="84feb-113">Visual Studio 2017</span><span class="sxs-lookup"><span data-stu-id="84feb-113">Visual Studio 2017</span></span>
+-   <span data-ttu-id="a5ba9-113">Visual Studio 2017</span><span class="sxs-lookup"><span data-stu-id="a5ba9-113">Visual Studio 2017</span></span>
 
-## <a name="creating-the-project"></a><span data-ttu-id="84feb-114">Projeyi Oluşturma</span><span class="sxs-lookup"><span data-stu-id="84feb-114">Creating the Project</span></span>
+## <a name="creating-the-project"></a><span data-ttu-id="a5ba9-114">Projeyi Oluşturma</span><span class="sxs-lookup"><span data-stu-id="a5ba9-114">Creating the Project</span></span>
 
-### <a name="to-create-the-project"></a><span data-ttu-id="84feb-115">Proje oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="84feb-115">To create the project</span></span>
+### <a name="to-create-the-project"></a><span data-ttu-id="a5ba9-115">Proje oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="a5ba9-115">To create the project</span></span>
 
-1.  <span data-ttu-id="84feb-116">Oluşturma bir **Windows Forms uygulaması** adlı proje `PropertyMappingWithElementHost`.</span><span class="sxs-lookup"><span data-stu-id="84feb-116">Create a **Windows Forms App** project named `PropertyMappingWithElementHost`.</span></span>
+1.  <span data-ttu-id="a5ba9-116">Oluşturma bir **Windows Forms uygulaması** adlı proje `PropertyMappingWithElementHost`.</span><span class="sxs-lookup"><span data-stu-id="a5ba9-116">Create a **Windows Forms App** project named `PropertyMappingWithElementHost`.</span></span>
 
-2.  <span data-ttu-id="84feb-117">İçinde **Çözüm Gezgini**, aşağıdaki başvuruları ekleyin [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] derlemeler.</span><span class="sxs-lookup"><span data-stu-id="84feb-117">In **Solution Explorer**, add references to the following [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] assemblies.</span></span>
+2.  <span data-ttu-id="a5ba9-117">İçinde **Çözüm Gezgini**, aşağıdaki başvuruları ekleyin [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] derlemeler.</span><span class="sxs-lookup"><span data-stu-id="a5ba9-117">In **Solution Explorer**, add references to the following [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] assemblies.</span></span>
 
-    -   <span data-ttu-id="84feb-118">PresentationCore</span><span class="sxs-lookup"><span data-stu-id="84feb-118">PresentationCore</span></span>
+    -   <span data-ttu-id="a5ba9-118">PresentationCore</span><span class="sxs-lookup"><span data-stu-id="a5ba9-118">PresentationCore</span></span>
 
-    -   <span data-ttu-id="84feb-119">PresentationFramework</span><span class="sxs-lookup"><span data-stu-id="84feb-119">PresentationFramework</span></span>
+    -   <span data-ttu-id="a5ba9-119">PresentationFramework</span><span class="sxs-lookup"><span data-stu-id="a5ba9-119">PresentationFramework</span></span>
 
-    -   <span data-ttu-id="84feb-120">WindowsBase</span><span class="sxs-lookup"><span data-stu-id="84feb-120">WindowsBase</span></span>
+    -   <span data-ttu-id="a5ba9-120">WindowsBase</span><span class="sxs-lookup"><span data-stu-id="a5ba9-120">WindowsBase</span></span>
 
-    -   <span data-ttu-id="84feb-121">WindowsFormsIntegration</span><span class="sxs-lookup"><span data-stu-id="84feb-121">WindowsFormsIntegration</span></span>
+    -   <span data-ttu-id="a5ba9-121">WindowsFormsIntegration</span><span class="sxs-lookup"><span data-stu-id="a5ba9-121">WindowsFormsIntegration</span></span>
 
-3.  <span data-ttu-id="84feb-122">Üstüne aşağıdaki kodu kopyalayın `Form1` kod dosyası.</span><span class="sxs-lookup"><span data-stu-id="84feb-122">Copy the following code into the top of the `Form1` code file.</span></span>
+3.  <span data-ttu-id="a5ba9-122">Üstüne aşağıdaki kodu kopyalayın `Form1` kod dosyası.</span><span class="sxs-lookup"><span data-stu-id="a5ba9-122">Copy the following code into the top of the `Form1` code file.</span></span>
 
      [!code-csharp[PropertyMappingWithElementHost#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#10)]
      [!code-vb[PropertyMappingWithElementHost#10](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#10)]
 
-4.  <span data-ttu-id="84feb-123">Açık `Form1` Windows Forms Tasarımcısı'nda.</span><span class="sxs-lookup"><span data-stu-id="84feb-123">Open `Form1` in the Windows Forms Designer.</span></span> <span data-ttu-id="84feb-124">Bir olay işleyicisi eklemek için formu <xref:System.Windows.Forms.Form.Load> olay.</span><span class="sxs-lookup"><span data-stu-id="84feb-124">Double-click the form to add an event handler for the <xref:System.Windows.Forms.Form.Load> event.</span></span>
+4.  <span data-ttu-id="a5ba9-123">Açık `Form1` Windows Forms Tasarımcısı'nda.</span><span class="sxs-lookup"><span data-stu-id="a5ba9-123">Open `Form1` in the Windows Forms Designer.</span></span> <span data-ttu-id="a5ba9-124">Bir olay işleyicisi eklemek için formu <xref:System.Windows.Forms.Form.Load> olay.</span><span class="sxs-lookup"><span data-stu-id="a5ba9-124">Double-click the form to add an event handler for the <xref:System.Windows.Forms.Form.Load> event.</span></span>
 
-5.  <span data-ttu-id="84feb-125">Windows Forms Tasarımcısı'na dönün ve form için bir olay işleyicisi ekleme <xref:System.Windows.Forms.Control.Resize> olay.</span><span class="sxs-lookup"><span data-stu-id="84feb-125">Return to the Windows Forms Designer and add an event handler for the form's <xref:System.Windows.Forms.Control.Resize> event.</span></span> <span data-ttu-id="84feb-126">Daha fazla bilgi için [nasıl yapılır: olay işleyicileri kullanarak Tasarımcı](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).</span><span class="sxs-lookup"><span data-stu-id="84feb-126">For more information, see [How to: Create Event Handlers Using the Designer](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).</span></span>
+5.  <span data-ttu-id="a5ba9-125">Windows Forms Tasarımcısı'na dönün ve form için bir olay işleyicisi ekleme <xref:System.Windows.Forms.Control.Resize> olay.</span><span class="sxs-lookup"><span data-stu-id="a5ba9-125">Return to the Windows Forms Designer and add an event handler for the form's <xref:System.Windows.Forms.Control.Resize> event.</span></span> <span data-ttu-id="a5ba9-126">Daha fazla bilgi için [nasıl yapılır: olay işleyicileri kullanarak Tasarımcı](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).</span><span class="sxs-lookup"><span data-stu-id="a5ba9-126">For more information, see [How to: Create Event Handlers Using the Designer](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).</span></span>
 
-6.  <span data-ttu-id="84feb-127">Bildirme bir <xref:System.Windows.Forms.Integration.ElementHost> alanındaki `Form1` sınıfı.</span><span class="sxs-lookup"><span data-stu-id="84feb-127">Declare an <xref:System.Windows.Forms.Integration.ElementHost> field in the `Form1` class.</span></span>
+6.  <span data-ttu-id="a5ba9-127">Bildirme bir <xref:System.Windows.Forms.Integration.ElementHost> alanındaki `Form1` sınıfı.</span><span class="sxs-lookup"><span data-stu-id="a5ba9-127">Declare an <xref:System.Windows.Forms.Integration.ElementHost> field in the `Form1` class.</span></span>
 
      [!code-csharp[PropertyMappingWithElementHost#16](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#16)]
      [!code-vb[PropertyMappingWithElementHost#16](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#16)]
 
-## <a name="defining-new-property-mappings"></a><span data-ttu-id="84feb-128">Yeni Özellik eşlemeleri tanımlama</span><span class="sxs-lookup"><span data-stu-id="84feb-128">Defining New Property Mappings</span></span>
+## <a name="defining-new-property-mappings"></a><span data-ttu-id="a5ba9-128">Yeni Özellik eşlemeleri tanımlama</span><span class="sxs-lookup"><span data-stu-id="a5ba9-128">Defining New Property Mappings</span></span>
 
-<span data-ttu-id="84feb-129"><xref:System.Windows.Forms.Integration.ElementHost> Denetim birkaç varsayılan özellik eşlemeleri sağlar.</span><span class="sxs-lookup"><span data-stu-id="84feb-129">The <xref:System.Windows.Forms.Integration.ElementHost> control provides several default property mappings.</span></span> <span data-ttu-id="84feb-130">Çağırarak yeni bir özellik eşlemesi Ekle <xref:System.Windows.Forms.Integration.PropertyMap.Add%2A> metodunda <xref:System.Windows.Forms.Integration.ElementHost> denetimin <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A>.</span><span class="sxs-lookup"><span data-stu-id="84feb-130">You add a new property mapping by calling the <xref:System.Windows.Forms.Integration.PropertyMap.Add%2A> method on the <xref:System.Windows.Forms.Integration.ElementHost> control's <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A>.</span></span>
+<span data-ttu-id="a5ba9-129"><xref:System.Windows.Forms.Integration.ElementHost> Denetim birkaç varsayılan özellik eşlemeleri sağlar.</span><span class="sxs-lookup"><span data-stu-id="a5ba9-129">The <xref:System.Windows.Forms.Integration.ElementHost> control provides several default property mappings.</span></span> <span data-ttu-id="a5ba9-130">Çağırarak yeni bir özellik eşlemesi Ekle <xref:System.Windows.Forms.Integration.PropertyMap.Add%2A> metodunda <xref:System.Windows.Forms.Integration.ElementHost> denetimin <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A>.</span><span class="sxs-lookup"><span data-stu-id="a5ba9-130">You add a new property mapping by calling the <xref:System.Windows.Forms.Integration.PropertyMap.Add%2A> method on the <xref:System.Windows.Forms.Integration.ElementHost> control's <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A>.</span></span>
 
-### <a name="to-define-new-property-mappings"></a><span data-ttu-id="84feb-131">Yeni Özellik eşlemeleri tanımlamak için</span><span class="sxs-lookup"><span data-stu-id="84feb-131">To define new property mappings</span></span>
+### <a name="to-define-new-property-mappings"></a><span data-ttu-id="a5ba9-131">Yeni Özellik eşlemeleri tanımlamak için</span><span class="sxs-lookup"><span data-stu-id="a5ba9-131">To define new property mappings</span></span>
 
-1.  <span data-ttu-id="84feb-132">Tanımı aşağıdaki kodu kopyalayarak `Form1` sınıfı.</span><span class="sxs-lookup"><span data-stu-id="84feb-132">Copy the following code into the definition for the `Form1` class.</span></span>
+1.  <span data-ttu-id="a5ba9-132">Tanımı aşağıdaki kodu kopyalayarak `Form1` sınıfı.</span><span class="sxs-lookup"><span data-stu-id="a5ba9-132">Copy the following code into the definition for the `Form1` class.</span></span>
 
      [!code-csharp[PropertyMappingWithElementHost#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#12)]
      [!code-vb[PropertyMappingWithElementHost#12](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#12)]
 
-     <span data-ttu-id="84feb-133">`AddMarginMapping` Yöntemi ekler için yeni bir eşleme <xref:System.Windows.Forms.Control.Margin%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="84feb-133">The `AddMarginMapping` method adds a new mapping for the <xref:System.Windows.Forms.Control.Margin%2A> property.</span></span>
+     <span data-ttu-id="a5ba9-133">`AddMarginMapping` Yöntemi ekler için yeni bir eşleme <xref:System.Windows.Forms.Control.Margin%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="a5ba9-133">The `AddMarginMapping` method adds a new mapping for the <xref:System.Windows.Forms.Control.Margin%2A> property.</span></span>
 
-     <span data-ttu-id="84feb-134">`OnMarginChange` Yöntemi çevirir <xref:System.Windows.Forms.Control.Margin%2A> özelliğini [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.FrameworkElement.Margin%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="84feb-134">The `OnMarginChange` method translates the <xref:System.Windows.Forms.Control.Margin%2A> property to the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.FrameworkElement.Margin%2A> property.</span></span>
+     <span data-ttu-id="a5ba9-134">`OnMarginChange` Yöntemi çevirir <xref:System.Windows.Forms.Control.Margin%2A> özelliğini [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.FrameworkElement.Margin%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="a5ba9-134">The `OnMarginChange` method translates the <xref:System.Windows.Forms.Control.Margin%2A> property to the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.FrameworkElement.Margin%2A> property.</span></span>
 
-2.  <span data-ttu-id="84feb-135">Tanımı aşağıdaki kodu kopyalayarak `Form1` sınıfı.</span><span class="sxs-lookup"><span data-stu-id="84feb-135">Copy the following code into the definition for the `Form1` class.</span></span>
+2.  <span data-ttu-id="a5ba9-135">Tanımı aşağıdaki kodu kopyalayarak `Form1` sınıfı.</span><span class="sxs-lookup"><span data-stu-id="a5ba9-135">Copy the following code into the definition for the `Form1` class.</span></span>
 
      [!code-csharp[PropertyMappingWithElementHost#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#14)]
      [!code-vb[PropertyMappingWithElementHost#14](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#14)]
 
-     <span data-ttu-id="84feb-136">`AddRegionMapping` Yöntemi ekler için yeni bir eşleme <xref:System.Windows.Forms.Control.Region%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="84feb-136">The `AddRegionMapping` method adds a new mapping for the <xref:System.Windows.Forms.Control.Region%2A> property.</span></span>
+     <span data-ttu-id="a5ba9-136">`AddRegionMapping` Yöntemi ekler için yeni bir eşleme <xref:System.Windows.Forms.Control.Region%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="a5ba9-136">The `AddRegionMapping` method adds a new mapping for the <xref:System.Windows.Forms.Control.Region%2A> property.</span></span>
 
-     <span data-ttu-id="84feb-137">`OnRegionChange` Yöntemi çevirir <xref:System.Windows.Forms.Control.Region%2A> özelliğini [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.UIElement.Clip%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="84feb-137">The `OnRegionChange` method translates the <xref:System.Windows.Forms.Control.Region%2A> property to the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.UIElement.Clip%2A> property.</span></span>
+     <span data-ttu-id="a5ba9-137">`OnRegionChange` Yöntemi çevirir <xref:System.Windows.Forms.Control.Region%2A> özelliğini [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.UIElement.Clip%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="a5ba9-137">The `OnRegionChange` method translates the <xref:System.Windows.Forms.Control.Region%2A> property to the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.UIElement.Clip%2A> property.</span></span>
 
-     <span data-ttu-id="84feb-138">`Form1_Resize` Yöntemi işler formun <xref:System.Windows.Forms.Control.Resize> olay ve kırpma bölgesinin barındırılan uyacak şekilde boyutları.</span><span class="sxs-lookup"><span data-stu-id="84feb-138">The `Form1_Resize` method handles the form's <xref:System.Windows.Forms.Control.Resize> event and sizes the clipping region to fit the hosted element.</span></span>
+     <span data-ttu-id="a5ba9-138">`Form1_Resize` Yöntemi işler formun <xref:System.Windows.Forms.Control.Resize> olay ve kırpma bölgesinin barındırılan uyacak şekilde boyutları.</span><span class="sxs-lookup"><span data-stu-id="a5ba9-138">The `Form1_Resize` method handles the form's <xref:System.Windows.Forms.Control.Resize> event and sizes the clipping region to fit the hosted element.</span></span>
 
-## <a name="removing-a-default-property-mapping"></a><span data-ttu-id="84feb-139">Varsayılan özellik eşlemesi kaldırılıyor</span><span class="sxs-lookup"><span data-stu-id="84feb-139">Removing a Default Property Mapping</span></span>
+## <a name="removing-a-default-property-mapping"></a><span data-ttu-id="a5ba9-139">Varsayılan özellik eşlemesi kaldırılıyor</span><span class="sxs-lookup"><span data-stu-id="a5ba9-139">Removing a Default Property Mapping</span></span>
 
-<span data-ttu-id="84feb-140">Çağırarak varsayılan özellik eşlemesini kaldırma <xref:System.Windows.Forms.Integration.PropertyMap.Remove%2A> metodunda <xref:System.Windows.Forms.Integration.ElementHost> denetimin <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A>.</span><span class="sxs-lookup"><span data-stu-id="84feb-140">Remove a default property mapping by calling the <xref:System.Windows.Forms.Integration.PropertyMap.Remove%2A> method on the <xref:System.Windows.Forms.Integration.ElementHost> control's <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A>.</span></span>
+<span data-ttu-id="a5ba9-140">Çağırarak varsayılan özellik eşlemesini kaldırma <xref:System.Windows.Forms.Integration.PropertyMap.Remove%2A> metodunda <xref:System.Windows.Forms.Integration.ElementHost> denetimin <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A>.</span><span class="sxs-lookup"><span data-stu-id="a5ba9-140">Remove a default property mapping by calling the <xref:System.Windows.Forms.Integration.PropertyMap.Remove%2A> method on the <xref:System.Windows.Forms.Integration.ElementHost> control's <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A>.</span></span>
 
-### <a name="to-remove-a-default-property-mapping"></a><span data-ttu-id="84feb-141">Varsayılan özellik eşlemesini kaldırmak için</span><span class="sxs-lookup"><span data-stu-id="84feb-141">To remove a default property mapping</span></span>
+### <a name="to-remove-a-default-property-mapping"></a><span data-ttu-id="a5ba9-141">Varsayılan özellik eşlemesini kaldırmak için</span><span class="sxs-lookup"><span data-stu-id="a5ba9-141">To remove a default property mapping</span></span>
 
--   <span data-ttu-id="84feb-142">Tanımı aşağıdaki kodu kopyalayarak `Form1` sınıfı.</span><span class="sxs-lookup"><span data-stu-id="84feb-142">Copy the following code into the definition for the `Form1` class.</span></span>
+-   <span data-ttu-id="a5ba9-142">Tanımı aşağıdaki kodu kopyalayarak `Form1` sınıfı.</span><span class="sxs-lookup"><span data-stu-id="a5ba9-142">Copy the following code into the definition for the `Form1` class.</span></span>
 
      [!code-csharp[PropertyMappingWithElementHost#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#13)]
      [!code-vb[PropertyMappingWithElementHost#13](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#13)]
 
-     <span data-ttu-id="84feb-143">`RemoveCursorMapping` Yöntemi için varsayılan eşlemeyi siler <xref:System.Windows.Forms.Control.Cursor%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="84feb-143">The `RemoveCursorMapping` method deletes the default mapping for the <xref:System.Windows.Forms.Control.Cursor%2A> property.</span></span>
+     <span data-ttu-id="a5ba9-143">`RemoveCursorMapping` Yöntemi için varsayılan eşlemeyi siler <xref:System.Windows.Forms.Control.Cursor%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="a5ba9-143">The `RemoveCursorMapping` method deletes the default mapping for the <xref:System.Windows.Forms.Control.Cursor%2A> property.</span></span>
 
-## <a name="extending-a-default-property-mapping"></a><span data-ttu-id="84feb-144">Varsayılan özellik eşlemesi genişletme</span><span class="sxs-lookup"><span data-stu-id="84feb-144">Extending a Default Property Mapping</span></span>
+## <a name="extending-a-default-property-mapping"></a><span data-ttu-id="a5ba9-144">Varsayılan özellik eşlemesi genişletme</span><span class="sxs-lookup"><span data-stu-id="a5ba9-144">Extending a Default Property Mapping</span></span>
 
-<span data-ttu-id="84feb-145">Varsayılan özellik eşlemesini ve ayrıca kendi eşleme ile genişletmek kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="84feb-145">You can use a default property mapping and also extend it with your own mapping.</span></span>
+<span data-ttu-id="a5ba9-145">Varsayılan özellik eşlemesini ve ayrıca kendi eşleme ile genişletmek kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="a5ba9-145">You can use a default property mapping and also extend it with your own mapping.</span></span>
 
-### <a name="to-extend-a-default-property-mapping"></a><span data-ttu-id="84feb-146">Varsayılan özellik eşlemesi genişletmek için</span><span class="sxs-lookup"><span data-stu-id="84feb-146">To extend a default property mapping</span></span>
+### <a name="to-extend-a-default-property-mapping"></a><span data-ttu-id="a5ba9-146">Varsayılan özellik eşlemesi genişletmek için</span><span class="sxs-lookup"><span data-stu-id="a5ba9-146">To extend a default property mapping</span></span>
 
--   <span data-ttu-id="84feb-147">Tanımı aşağıdaki kodu kopyalayarak `Form1` sınıfı.</span><span class="sxs-lookup"><span data-stu-id="84feb-147">Copy the following code into the definition for the `Form1` class.</span></span>
+-   <span data-ttu-id="a5ba9-147">Tanımı aşağıdaki kodu kopyalayarak `Form1` sınıfı.</span><span class="sxs-lookup"><span data-stu-id="a5ba9-147">Copy the following code into the definition for the `Form1` class.</span></span>
 
      [!code-csharp[PropertyMappingWithElementHost#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#15)]
      [!code-vb[PropertyMappingWithElementHost#15](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#15)]
 
-     <span data-ttu-id="84feb-148">`ExtendBackColorMapping` Yöntemi, varolan bir özel özellik translator ekler <xref:System.Windows.Forms.Control.BackColor%2A> özellik eşlemesi.</span><span class="sxs-lookup"><span data-stu-id="84feb-148">The `ExtendBackColorMapping` method adds a custom property translator to the existing <xref:System.Windows.Forms.Control.BackColor%2A> property mapping.</span></span>
+     <span data-ttu-id="a5ba9-148">`ExtendBackColorMapping` Yöntemi, varolan bir özel özellik translator ekler <xref:System.Windows.Forms.Control.BackColor%2A> özellik eşlemesi.</span><span class="sxs-lookup"><span data-stu-id="a5ba9-148">The `ExtendBackColorMapping` method adds a custom property translator to the existing <xref:System.Windows.Forms.Control.BackColor%2A> property mapping.</span></span>
 
-     <span data-ttu-id="84feb-149">`OnBackColorChange` Yöntemi barındırılan denetim için belirli bir görüntünün atar <xref:System.Windows.Controls.Control.Background%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="84feb-149">The `OnBackColorChange` method assigns a specific image to the hosted control's <xref:System.Windows.Controls.Control.Background%2A> property.</span></span> <span data-ttu-id="84feb-150">`OnBackColorChange` Yöntemi, varsayılan özellik eşlemesi uygulandıktan sonra çağrılır.</span><span class="sxs-lookup"><span data-stu-id="84feb-150">The `OnBackColorChange` method is called after the default property mapping is applied.</span></span>
+     <span data-ttu-id="a5ba9-149">`OnBackColorChange` Yöntemi barındırılan denetim için belirli bir görüntünün atar <xref:System.Windows.Controls.Control.Background%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="a5ba9-149">The `OnBackColorChange` method assigns a specific image to the hosted control's <xref:System.Windows.Controls.Control.Background%2A> property.</span></span> <span data-ttu-id="a5ba9-150">`OnBackColorChange` Yöntemi, varsayılan özellik eşlemesi uygulandıktan sonra çağrılır.</span><span class="sxs-lookup"><span data-stu-id="a5ba9-150">The `OnBackColorChange` method is called after the default property mapping is applied.</span></span>
 
-## <a name="initialize-your-property-mappings"></a><span data-ttu-id="84feb-151">Özellik eşlemelerinizin Başlat</span><span class="sxs-lookup"><span data-stu-id="84feb-151">Initialize your property mappings</span></span>
+## <a name="initialize-your-property-mappings"></a><span data-ttu-id="a5ba9-151">Özellik eşlemelerinizin Başlat</span><span class="sxs-lookup"><span data-stu-id="a5ba9-151">Initialize your property mappings</span></span>
 
-1.  <span data-ttu-id="84feb-152">Tanımı aşağıdaki kodu kopyalayarak `Form1` sınıfı.</span><span class="sxs-lookup"><span data-stu-id="84feb-152">Copy the following code into the definition for the `Form1` class.</span></span>
+1.  <span data-ttu-id="a5ba9-152">Tanımı aşağıdaki kodu kopyalayarak `Form1` sınıfı.</span><span class="sxs-lookup"><span data-stu-id="a5ba9-152">Copy the following code into the definition for the `Form1` class.</span></span>
 
      [!code-csharp[PropertyMappingWithElementHost#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#11)]
      [!code-vb[PropertyMappingWithElementHost#11](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#11)]
 
-     <span data-ttu-id="84feb-153">`Form1_Load` Yöntemi tanıtıcıları <xref:System.Windows.Forms.Form.Load> olay ve aşağıdaki başlatmaya gerçekleştirir.</span><span class="sxs-lookup"><span data-stu-id="84feb-153">The `Form1_Load` method handles the <xref:System.Windows.Forms.Form.Load> event and performs the following initialization.</span></span>
+     <span data-ttu-id="a5ba9-153">`Form1_Load` Yöntemi tanıtıcıları <xref:System.Windows.Forms.Form.Load> olay ve aşağıdaki başlatmaya gerçekleştirir.</span><span class="sxs-lookup"><span data-stu-id="a5ba9-153">The `Form1_Load` method handles the <xref:System.Windows.Forms.Form.Load> event and performs the following initialization.</span></span>
 
-    -   <span data-ttu-id="84feb-154">Oluşturur bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Button> öğesi.</span><span class="sxs-lookup"><span data-stu-id="84feb-154">Creates a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Button> element.</span></span>
+    -   <span data-ttu-id="a5ba9-154">Oluşturur bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Button> öğesi.</span><span class="sxs-lookup"><span data-stu-id="a5ba9-154">Creates a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Button> element.</span></span>
 
-    -   <span data-ttu-id="84feb-155">Özellik eşlemelerini ayarlamak için daha önce izlenecek içinde tanımlanan yöntemleri çağırır.</span><span class="sxs-lookup"><span data-stu-id="84feb-155">Calls the methods you defined earlier in the walkthrough to set up the property mappings.</span></span>
+    -   <span data-ttu-id="a5ba9-155">Özellik eşlemelerini ayarlamak için daha önce izlenecek içinde tanımlanan yöntemleri çağırır.</span><span class="sxs-lookup"><span data-stu-id="a5ba9-155">Calls the methods you defined earlier in the walkthrough to set up the property mappings.</span></span>
 
-    -   <span data-ttu-id="84feb-156">Eşlenen özelliklere başlangıç değerleri atar.</span><span class="sxs-lookup"><span data-stu-id="84feb-156">Assigns initial values to the mapped properties.</span></span>
+    -   <span data-ttu-id="a5ba9-156">Eşlenen özelliklere başlangıç değerleri atar.</span><span class="sxs-lookup"><span data-stu-id="a5ba9-156">Assigns initial values to the mapped properties.</span></span>
 
-2.  <span data-ttu-id="84feb-157">Derleme ve uygulamayı çalıştırmak için F5 tuşuna basın.</span><span class="sxs-lookup"><span data-stu-id="84feb-157">Press F5 to build and run the application.</span></span>
+2.  <span data-ttu-id="a5ba9-157">Derleme ve uygulamayı çalıştırmak için F5 tuşuna basın.</span><span class="sxs-lookup"><span data-stu-id="a5ba9-157">Press F5 to build and run the application.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="84feb-158">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="84feb-158">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a5ba9-158">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="a5ba9-158">See Also</span></span>
 
 - <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [<span data-ttu-id="84feb-159">Windows Forms ve WPF Özelliğini Eşleme</span><span class="sxs-lookup"><span data-stu-id="84feb-159">Windows Forms and WPF Property Mapping</span></span>](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)
-- [<span data-ttu-id="84feb-160">Visual Studio’da XAML tasarlama</span><span class="sxs-lookup"><span data-stu-id="84feb-160">Design XAML in Visual Studio</span></span>](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [<span data-ttu-id="84feb-161">İzlenecek yol: WPF Bileşik Denetimini Windows Forms İçinde Barındırma</span><span class="sxs-lookup"><span data-stu-id="84feb-161">Walkthrough: Hosting a WPF Composite Control in Windows Forms</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [<span data-ttu-id="a5ba9-159">Windows Forms ve WPF Özelliğini Eşleme</span><span class="sxs-lookup"><span data-stu-id="a5ba9-159">Windows Forms and WPF Property Mapping</span></span>](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)
+- [<span data-ttu-id="a5ba9-160">Visual Studio’da XAML tasarlama</span><span class="sxs-lookup"><span data-stu-id="a5ba9-160">Design XAML in Visual Studio</span></span>](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [<span data-ttu-id="a5ba9-161">İzlenecek yol: WPF Bileşik Denetimini Windows Forms İçinde Barındırma</span><span class="sxs-lookup"><span data-stu-id="a5ba9-161">Walkthrough: Hosting a WPF Composite Control in Windows Forms</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

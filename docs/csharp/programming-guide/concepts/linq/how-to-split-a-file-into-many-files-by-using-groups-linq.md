@@ -1,20 +1,20 @@
 ---
-title: 'Nasıl yapılır: bir dosya grupları (LINQ) (C#) kullanarak birden çok dosyaya bölme'
+title: 'Nasıl yapılır: gruplar (LINQ) (C#) kullanarak bir dosyayı birden çok dosyaya bölme'
 ms.date: 07/20/2015
 ms.assetid: 8179b91c-d778-4e57-884f-77fe5a8e4e40
-ms.openlocfilehash: 8cce9176c303efe0da4b546afabe2bf6d491e167
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d0dd742f599a6acee4928239aab79cc7b1b66d4b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326979"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43512259"
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a><span data-ttu-id="b025a-102">Nasıl yapılır: bir dosya grupları (LINQ) (C#) kullanarak birden çok dosyaya bölme</span><span class="sxs-lookup"><span data-stu-id="b025a-102">How to: Split a File Into Many Files by Using Groups (LINQ) (C#)</span></span>
-<span data-ttu-id="b025a-103">Bu örnek iki dosyaların içeriğini birleştirir ve verileri yeni bir biçimde düzenlemek yeni dosyaları kümesini oluşturmak için bir yol gösterir.</span><span class="sxs-lookup"><span data-stu-id="b025a-103">This example shows one way to merge the contents of two files and then create a set of new files that organize the data in a new way.</span></span>  
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a><span data-ttu-id="0a926-102">Nasıl yapılır: gruplar (LINQ) (C#) kullanarak bir dosyayı birden çok dosyaya bölme</span><span class="sxs-lookup"><span data-stu-id="0a926-102">How to: Split a File Into Many Files by Using Groups (LINQ) (C#)</span></span>
+<span data-ttu-id="0a926-103">Bu örnekte, iki dosya içeriklerini birleştirme ve ardından yeni bir şekilde verileri düzenleme yeni dosyaları bir dizi oluşturmak için yollarından biri gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="0a926-103">This example shows one way to merge the contents of two files and then create a set of new files that organize the data in a new way.</span></span>  
   
-### <a name="to-create-the-data-files"></a><span data-ttu-id="b025a-104">Veri dosyaları oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="b025a-104">To create the data files</span></span>  
+### <a name="to-create-the-data-files"></a><span data-ttu-id="0a926-104">Veri dosyaları oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="0a926-104">To create the data files</span></span>  
   
-1.  <span data-ttu-id="b025a-105">Bu adları names1.txt adlı bir metin dosyasına kopyalayın ve proje klasöründe kaydedin:</span><span class="sxs-lookup"><span data-stu-id="b025a-105">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>  
+1.  <span data-ttu-id="0a926-105">Bu adlar names1.txt adlı bir metin dosyasına kopyalayabilir ve proje klasörünüze kaydedin:</span><span class="sxs-lookup"><span data-stu-id="0a926-105">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>  
   
     ```  
     Bankov, Peter  
@@ -29,7 +29,7 @@ ms.locfileid: "33326979"
     Garcia, Debra  
     ```  
   
-2.  <span data-ttu-id="b025a-106">Bu adları names2.txt adlı bir metin dosyasına ve kaydedin proje klasörünüze kopyalayın: iki dosya bazı sahip unutmayın ortak adları.</span><span class="sxs-lookup"><span data-stu-id="b025a-106">Copy these names into a text file that is named names2.txt and save it in your project folder: Note that the two files have some names in common.</span></span>  
+2.  <span data-ttu-id="0a926-106">Bu adlar names2.txt adlı bir metin dosyasına ve kaydedin, proje klasörünüze kopyalayın: ortak adları bazı sahip iki dosya gerektiğini unutmayın.</span><span class="sxs-lookup"><span data-stu-id="0a926-106">Copy these names into a text file that is named names2.txt and save it in your project folder: Note that the two files have some names in common.</span></span>  
   
     ```  
     Liu, Jinghao  
@@ -44,7 +44,7 @@ ms.locfileid: "33326979"
     El Yassir, Mehdi  
     ```  
   
-## <a name="example"></a><span data-ttu-id="b025a-107">Örnek</span><span class="sxs-lookup"><span data-stu-id="b025a-107">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="0a926-107">Örnek</span><span class="sxs-lookup"><span data-stu-id="0a926-107">Example</span></span>  
   
 ```csharp  
 class SplitWithGroups  
@@ -122,11 +122,13 @@ class SplitWithGroups
  */  
 ```  
   
- <span data-ttu-id="b025a-108">Program, veri dosyaları aynı klasörde her grup için ayrı bir dosyaya yazar.</span><span class="sxs-lookup"><span data-stu-id="b025a-108">The program writes a separate file for each group in the same folder as the data files.</span></span>  
+ <span data-ttu-id="0a926-108">Program, veri dosyaları aynı klasörde her grup için ayrı bir dosyaya yazar.</span><span class="sxs-lookup"><span data-stu-id="0a926-108">The program writes a separate file for each group in the same folder as the data files.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="b025a-109">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="b025a-109">Compiling the Code</span></span>  
- <span data-ttu-id="b025a-110">.NET Framework sürüm 3.5 veya daha yüksek System.Core.dll başvuru hedefleyen bir proje oluşturun ve `using` System.Linq ve System.IO ad alanları için yönergeleri.</span><span class="sxs-lookup"><span data-stu-id="b025a-110">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="0a926-109">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="0a926-109">Compiling the Code</span></span>
+
+ <span data-ttu-id="0a926-110">.NET Framework sürüm 3.5 veya üzeri bir System.Core.dll başvurusu ile hedefleyen bir proje oluşturun ve `using` System.Linq ve System.IO ad alanları için yönergeleri.</span><span class="sxs-lookup"><span data-stu-id="0a926-110">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b025a-111">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="b025a-111">See Also</span></span>  
- [<span data-ttu-id="b025a-112">LINQ ve dizeler (C#)</span><span class="sxs-lookup"><span data-stu-id="b025a-112">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
- [<span data-ttu-id="b025a-113">LINQ ve dosya dizinleri (C#)</span><span class="sxs-lookup"><span data-stu-id="b025a-113">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="0a926-111">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="0a926-111">See Also</span></span>
+
+- [<span data-ttu-id="0a926-112">LINQ ve dizeler (C#)</span><span class="sxs-lookup"><span data-stu-id="0a926-112">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
+- [<span data-ttu-id="0a926-113">LINQ ve dosya dizinleri (C#)</span><span class="sxs-lookup"><span data-stu-id="0a926-113">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

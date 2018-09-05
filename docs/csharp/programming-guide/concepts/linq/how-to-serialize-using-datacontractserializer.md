@@ -2,18 +2,18 @@
 title: 'Nasıl yapılır: DataContractSerializer (C#) kullanarak serileştirme'
 ms.date: 07/20/2015
 ms.assetid: 3320ecbf-cdbe-480e-979c-2c14bbef9988
-ms.openlocfilehash: 1b2ec431698f23ea0c3e690cd57261bad8b1e4a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c0324b1eeeab9f6cf9223e2a3e201771b188749
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329290"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510997"
 ---
-# <a name="how-to-serialize-using-datacontractserializer-c"></a><span data-ttu-id="09697-102">Nasıl yapılır: DataContractSerializer (C#) kullanarak serileştirme</span><span class="sxs-lookup"><span data-stu-id="09697-102">How to: Serialize Using DataContractSerializer (C#)</span></span>
-<span data-ttu-id="09697-103">Bu konuda, serileştirir ve kullanılarak seri durumdan çıkarır bir örnek gösterilmektedir <xref:System.Runtime.Serialization.DataContractSerializer>.</span><span class="sxs-lookup"><span data-stu-id="09697-103">This topic shows an example that serializes and deserializes using <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  
+# <a name="how-to-serialize-using-datacontractserializer-c"></a><span data-ttu-id="92682-102">Nasıl yapılır: DataContractSerializer (C#) kullanarak serileştirme</span><span class="sxs-lookup"><span data-stu-id="92682-102">How to: Serialize Using DataContractSerializer (C#)</span></span>
+<span data-ttu-id="92682-103">Bu konuda serileştirir ve kullanarak çıkarır bir örnek gösterilmektedir <xref:System.Runtime.Serialization.DataContractSerializer>.</span><span class="sxs-lookup"><span data-stu-id="92682-103">This topic shows an example that serializes and deserializes using <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="09697-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="09697-104">Example</span></span>  
- <span data-ttu-id="09697-105">Aşağıdaki örnek, bir dizi içeren nesneleri oluşturur <xref:System.Xml.Linq.XElement> nesneleri.</span><span class="sxs-lookup"><span data-stu-id="09697-105">The following example creates a number of objects that contain <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="09697-106">Bunları metin dosyalarına serileştirir ve bunları metin dosyalarından çıkarır.</span><span class="sxs-lookup"><span data-stu-id="09697-106">It then serializes them to text files, and then deserializes them from the text files.</span></span>  
+## <a name="example"></a><span data-ttu-id="92682-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="92682-104">Example</span></span>  
+ <span data-ttu-id="92682-105">Aşağıdaki örnek, bir sayı içeren bir nesne oluşturur. <xref:System.Xml.Linq.XElement> nesneleri.</span><span class="sxs-lookup"><span data-stu-id="92682-105">The following example creates a number of objects that contain <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="92682-106">Daha sonra bunları metin dosyalarına serileştirir ve bunları metin dosyalarından serisini kaldırır.</span><span class="sxs-lookup"><span data-stu-id="92682-106">It then serializes them to text files, and then deserializes them from the text files.</span></span>  
   
 ```csharp  
 using System;  
@@ -80,7 +80,7 @@ public class XElementNullContainer
 }  
 ```  
   
- <span data-ttu-id="09697-107">Bu örnek şu çıkışı üretir:</span><span class="sxs-lookup"><span data-stu-id="09697-107">This example produces the following output:</span></span>  
+ <span data-ttu-id="92682-107">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="92682-107">This example produces the following output:</span></span>  
   
 ```  
 Testing for type: System.Xml.Linq.XElement  
@@ -91,5 +91,6 @@ Testing for type: XElementNullContainer
   Deserialized type: XElementNullContainer  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="09697-108">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="09697-108">See Also</span></span>  
- [<span data-ttu-id="09697-109">XElement nesneler (C#) içeren nesne grafiklerinin seri hale getirme</span><span class="sxs-lookup"><span data-stu-id="09697-109">Serializing Object Graphs that Contain XElement Objects (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
+## <a name="see-also"></a><span data-ttu-id="92682-108">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="92682-108">See Also</span></span>
+
+- [<span data-ttu-id="92682-109">XElement nesneleri (C#) içeren nesne grafiklerini serileştirme</span><span class="sxs-lookup"><span data-stu-id="92682-109">Serializing Object Graphs that Contain XElement Objects (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
