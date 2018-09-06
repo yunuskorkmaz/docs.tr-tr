@@ -13,11 +13,11 @@ helpviewer_keywords:
 - Boolean values [Visual Basic], True keyword
 ms.assetid: 4858e630-4813-4216-a55e-f4d0feb884e4
 ms.openlocfilehash: bbd914d8b4239bbae1de7031e68b2900cf5ad6a3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43478058"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43862389"
 ---
 # <a name="boolean-data-type-visual-basic"></a>Boole Veri Türü (Visual Basic)
 Yalnızca ayrı tutma değerleri `True` veya `False`. Anahtar sözcükler `True` ve `False` iki durum için karşılık gelen `Boolean` değişkenleri.  

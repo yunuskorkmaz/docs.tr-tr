@@ -3,11 +3,11 @@ title: Toplu sorgular
 ms.date: 03/30/2017
 ms.assetid: 13ec5580-05ce-4a1f-9d3d-8660be7891a2
 ms.openlocfilehash: 1c8f6191cfb832a71bd32c60db492eafb8ca22ca
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43464159"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43858698"
 ---
 # <a name="aggregate-queries"></a>Toplu sorgular
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] destekleyen `Average`, `Count`, `Max`, `Min`, ve `Sum` toplama işleçleri. Toplama işleçleri aşağıdaki özellikleri Not [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]:  

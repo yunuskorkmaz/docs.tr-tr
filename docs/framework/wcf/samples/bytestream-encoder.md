@@ -3,11 +3,11 @@ title: ByteStream Kodlayıcı
 ms.date: 03/30/2017
 ms.assetid: e674a8ab-f79a-4a93-b984-54b34392dafc
 ms.openlocfilehash: cbd4110ecc04923b79d6b910fcf7ab4ca2012680
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480698"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855458"
 ---
 # <a name="bytestream-encoder"></a>ByteStream Kodlayıcı
 Bu örnek nasıl oluşturulacağını gösterir. bir `ByteStreamHttpBinding`, <xref:System.ServiceModel.Channels.Binding> , bayt akışı Kodlayıcı işlevselliğini gösterir.  

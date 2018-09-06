@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Visual C#, keywords
 - '@ keyword'
 ms.assetid: e929b0f2-4b92-4d37-8060-23d323b098ad
-ms.openlocfilehash: 5926da78a470911af3d8b068107f637406cb0eb9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 4e4cc7b3a0249836e6c0960208c0158962088c11
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43391158"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861939"
 ---
 # <a name="c-keywords"></a>C# Anahtar Sözcükleri
 Anahtar sözcükler, derleyiciye özel anlamları olan önceden tanımlanmış, ayrılmış tanıtıcılardır. Bunların içerdiği sürece bunlar programlarınızda tanımlayıcı olarak kullanılamaz `@` öneki olarak. Örneğin, `@if` geçerli bir tanıtıcı ancak `if` değil çünkü `if` bir anahtar sözcüktür.  
@@ -49,15 +49,16 @@ Anahtar sözcükler, derleyiciye özel anlamları olan önceden tanımlanmış, 
   
 ||||  
 |---|---|---|  
-|[add](../../../csharp/language-reference/keywords/add.md)|[Diğer ad](../../../csharp/language-reference/keywords/extern-alias.md)|[ascending](../../../csharp/language-reference/keywords/ascending.md)|  
-|[async](../../../csharp/language-reference/keywords/async.md)|[await](../../../csharp/language-reference/keywords/await.md)|[descending](../../../csharp/language-reference/keywords/descending.md)|  
-|[dynamic](../../../csharp/language-reference/keywords/dynamic.md)|[Kaynak](../../../csharp/language-reference/keywords/from-clause.md)|[get](../../../csharp/language-reference/keywords/get.md)|  
-|[global](../../../csharp/language-reference/keywords/global.md)|[Grup](../../../csharp/language-reference/keywords/group-clause.md)|[into](../../../csharp/language-reference/keywords/into.md)|  
-|[Katılın](../../../csharp/language-reference/keywords/join-clause.md)|[let](../../../csharp/language-reference/keywords/let-clause.md)|[nameof](nameof.md)|   
-|[OrderBy](../../../csharp/language-reference/keywords/orderby-clause.md)|[partial (tür)](../../../csharp/language-reference/keywords/partial-type.md)|[partial (yöntem)](../../../csharp/language-reference/keywords/partial-method.md)|   
-|[remove](../../../csharp/language-reference/keywords/remove.md)|[Seçin](../../../csharp/language-reference/keywords/select-clause.md)|[set](../../../csharp/language-reference/keywords/set.md)|   
-|[value](../../../csharp/language-reference/keywords/value.md)|[var](../../../csharp/language-reference/keywords/var.md)|[when (filtre koşulu)](when.md)|   
-|[where (genel tür kısıtlaması)](../../../csharp/language-reference/keywords/where-generic-type-constraint.md)|[Burada (sorgu yan tümcesi)](../../../csharp/language-reference/keywords/where-clause.md)|[yield](../../../csharp/language-reference/keywords/yield.md)|  
+|[add](add.md)|[Diğer ad](extern-alias.md)|[ascending](ascending.md)|
+|[async](async.md)|[await](await.md)|[by](by.md)|
+|[descending](descending.md)|[dynamic](dynamic.md)|[equals](equals.md)|
+|[Kaynak](from-clause.md)|[get](get.md)|[global](global.md)|
+|[Grup](group-clause.md)|[into](into.md)|[Katılın](join-clause.md)|
+|[let](let-clause.md)|[nameof](nameof.md)|[on](on.md)|
+|[OrderBy](orderby-clause.md)|[partial (tür)](partial-type.md)|[partial (yöntem)](partial-method.md)|
+|[remove](remove.md)|[Seçin](select-clause.md)|[set](set.md)|
+|[value](value.md)|[var](var.md)|[when (filtre koşulu)](when.md)|
+|[where (genel tür kısıtlaması)](where-generic-type-constraint.md)|[Burada (sorgu yan tümcesi)](where-clause.md)|[yield](yield.md)|
   
 ## <a name="see-also"></a>Ayrıca Bkz.
 

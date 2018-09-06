@@ -3,11 +3,11 @@ title: Koşullu etkinlik grubu
 ms.date: 03/30/2017
 ms.assetid: f76ef924-34ce-48ae-8c8d-48faf9697754
 ms.openlocfilehash: 144a6c76ea6314c553e201fe4e2364890d869f34
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43418175"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861211"
 ---
 # <a name="conditioned-activity-group"></a>Koşullu etkinlik grubu
 Örnek, bir seyahat kayıt uygulamasını gösterir. <xref:System.Workflow.Activities.ConditionedActivityGroup> (CAG) sahip iki kod etkinliği: bir araba etkinliği ve bir uçak etkinliği. İçinde `SimpleCAGWorkflow` Oluşturucu, bir "travelNeedType" ArrayList'i gerekli olan seyahat rezervasyonlarının türleri ile doldurulur. Birini veya her ikisini yorum tarafından `travelNeeds.Add` deyimleri CAG davranışı uygun şekilde değiştirin. Hem araç hem de Havayolu etkinliklerin kendi <xref:System.Workflow.Activities.ConditionedActivityGroup.WhenConditionProperty> koşul ile doldurulur bir <xref:System.Workflow.Activities.CodeCondition>. Yalnızca bir araba etkinliği yürütür `travelNeeds` gruplandırmasında bir `TravelNeeds.Car` girişi ve yalnızca bir etkinliği yürütür Havayolu `travelNeeds` gruplandırmasında bir `TravelNeeds.Airline` girişi.  

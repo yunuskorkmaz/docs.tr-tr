@@ -10,11 +10,11 @@ ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e6835d159c9c30d09892bad8cc1d20753fe6f21c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43553142"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855341"
 ---
 # <a name="what39s-obsolete-in-the-net-framework-class-library"></a>Hangi&#39;s eski .NET Framework sınıf kitaplığı
 .NET Framework, zaman içinde değişir. Her yeni sürümü, yeni türler ve yeni işlevleri sağlayan bir tür üyeleri ekler. Ayrıca varolan türleri ve üyeleri zamanla değişir. Örneğin, bazı türleri destekledikleri teknoloji tarafından yeni bir teknoloji değiştirilir daha az önemli hale gelir ve bazı yöntemler daha kullanışlı ya da daha tam özellikli olan yeni yöntemlerle olandır.  

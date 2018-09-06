@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ddf0f01db73a873d2dd823e1f754b970ae8aa056
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5b712c6ae5978e83dab085f48dd1fd572757384a
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430479"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43870539"
 ---
 # <a name="asmcacheflags-enumeration"></a>ASM_CACHE_FLAGS Numaralandırması
 Tarafından temsil edilen bir derleme kaynağını gösterir [Iassemblycacheıtem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md) genel derleme önbelleğinde.  
@@ -33,7 +33,7 @@ typedef enum {
     ASM_CACHE_ZAP       = 0x01,  
     ASM_CACHE_GAC       = 0x02,  
     ASM_CACHE_DOWNLOAD  = 0x04,  
-    ASM_CACHE_ROOT      = 0x08  
+    ASM_CACHE_ROOT      = 0x08,  
     ASM_CACHE_ROOT_EX   = 0x80  
 } ASM_CACHE_FLAGS;  
 ```  
@@ -42,11 +42,11 @@ typedef enum {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`ASM_CACHE_ZAP`|Önceden derlenmiş derlemeleri önbelleğini Ngen.exe kullanarak sıralar.|  
+|`ASM_CACHE_ZAP`|Önceden derlenmiş bütünleştirilmiş kodlarda önbelleğini, Ngen.exe kullanarak sıralar.|  
 |`ASM_CACHE_GAC`|Genel Derleme Önbelleği numaralandırır.|  
-|`ASM_CACHE_DOWNLOAD`|İsteğe bağlı olarak indirilebilir veya gölge kopyalar silinmiş derlemeleri numaralandırır.|  
-|`ASM_CACHE_ROOT`|Belirten [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md) işlevi, ortak dil çalışma zamanı (CLR) sürüm 2.0 için genel derleme önbelleğine yolu döndürmelidir. Yalnızca bir çağrı bağlamında anlamlı [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md).|  
-|`ASM_CACHE_ROOT_EX`|Belirten [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md) işlevi döndürmelidir yolu genel derleme önbelleğine CLR sürüm 4. Yalnızca bir çağrı bağlamında anlamlı [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md).|  
+|`ASM_CACHE_DOWNLOAD`|Gölge kopyalar silinmiş ya da isteğe bağlı olarak yüklenen derlemeleri listeler.|  
+|`ASM_CACHE_ROOT`|Bildiren [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md) işlevi, ortak dil çalışma zamanı (CLR) sürüm 2.0 için genel bütünleştirilmiş kod önbelleğine yolu döndürmelidir. Yalnızca bir çağrı bağlamında anlamlı [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md).|  
+|`ASM_CACHE_ROOT_EX`|Bildiren [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md) işlevi döndürmelidir yolu için genel derleme önbelleği için CLR sürüm 4. Yalnızca bir çağrı bağlamında anlamlı [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md).|  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
