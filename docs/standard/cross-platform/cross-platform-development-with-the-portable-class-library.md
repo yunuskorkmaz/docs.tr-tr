@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 628c571ce645710482a29c813adb4fe1a59fd349
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: bd5ad69cc661005d20db4c4bcdda762c6432f416
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745414"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43886064"
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>Taşınabilir Sınıf Kitaplığı ile Platformlar Arası Geliştirme
 .NET Framework taşınabilir sınıf kitaplığı proje türü Visual Studio'da platformlar arası uygulamalar ve kitaplıklar Microsoft platformları için hızlı ve kolay bir şekilde oluşturmanıza yardımcı olur.  
@@ -221,9 +221,10 @@ Sürüm bilgileri örneği
 </div>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [MVVM ile Taşınabilir Sınıf Kitaplığı Kullanma](../../../docs/standard/cross-platform/using-portable-class-library-with-model-view-view-model.md)  
- [Çoklu Platformları Hedefleyen Kitaplıklar için Uygulama Kaynakları](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md)  
- [.NET taşınabilirlik Çözümleyicisi](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)  
- [Windows Mağazası Uygulamaları ve Windows Çalışma Zamanı için .NET Framework Desteği](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)  
- [Dağıtım](../../../docs/framework/deployment/net-framework-applications.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [MVVM ile Taşınabilir Sınıf Kitaplığı Kullanma](../../../docs/standard/cross-platform/using-portable-class-library-with-model-view-view-model.md)  
+- [Çoklu Platformları Hedefleyen Kitaplıklar için Uygulama Kaynakları](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md)  
+- [.NET taşınabilirlik Çözümleyicisi](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)  
+- [Windows Mağazası Uygulamaları ve Windows Çalışma Zamanı için .NET Framework Desteği](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)  
+- [Dağıtım](../../../docs/framework/deployment/net-framework-applications.md)

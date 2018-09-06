@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 52b32222-e185-4f42-91a7-eaca65c0ab6d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb5d8456885b4fe805ca1bb80f0065b88a09dbb4
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 028f8b978a7809fa9ae4710ab85d7dc84e7b04fc
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42912032"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43878629"
 ---
 # <a name="creating-threads-and-passing-data-at-start-time"></a>İş parçacığı oluşturma ve başlatma zamanında veri geçirme
 
@@ -61,9 +61,9 @@ Ne <xref:System.Threading.ThreadStart> ya da <xref:System.Threading.Parameterize
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
- <xref:System.Threading.Thread>  
- <xref:System.Threading.ThreadStart>  
- <xref:System.Threading.ParameterizedThreadStart>  
- <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType>  
- [İş parçacığı oluşturma](index.md)  
- [İş Parçacıkları ve İş Parçacığı Oluşturmayı Kullanma](using-threads-and-threading.md)
+- <xref:System.Threading.Thread>  
+- <xref:System.Threading.ThreadStart>  
+- <xref:System.Threading.ParameterizedThreadStart>  
+- <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType>  
+- [İş parçacığı oluşturma](index.md)  
+- [İş Parçacıkları ve İş Parçacığı Oluşturmayı Kullanma](using-threads-and-threading.md)
