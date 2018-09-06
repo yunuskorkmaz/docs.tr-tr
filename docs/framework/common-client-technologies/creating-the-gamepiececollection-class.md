@@ -3,11 +3,11 @@ title: GamePieceCollection Sınıfı Oluşturma
 ms.date: 03/30/2017
 ms.assetid: e4b037ee-1201-4a55-b198-0d6532ed6f35
 ms.openlocfilehash: 6323122735273f77bfe9d61bf2df84cabe3e5d6c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43532025"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43740068"
 ---
 # <a name="creating-the-gamepiececollection-class"></a>GamePieceCollection Sınıfı Oluşturma
 **GamePieceCollection** sınıfı genel bir liste sınıftan türetilen ve çok daha kolay yönetmek için yöntemleri tanıtır **GamePiece** nesneleri.  
