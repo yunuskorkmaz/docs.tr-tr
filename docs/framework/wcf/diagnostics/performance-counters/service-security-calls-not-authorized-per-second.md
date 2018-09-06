@@ -5,20 +5,20 @@ ms.assetid: 1eeade5a-ea62-4757-b1f9-1b1b1746abd1
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: f2c921991f059d7dfe5661dfe688ec9675d0d5fe
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43801748"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43870103"
 ---
-# <a name="service-security-calls-not-authorized-per-second"></a><span data-ttu-id="890e0-102">Hizmet: Saniyede Yetkisiz Güvenlik Çağrısı</span><span class="sxs-lookup"><span data-stu-id="890e0-102">Service: Security Calls Not Authorized Per Second</span></span>
-<span data-ttu-id="890e0-103">Sayaç adı: güvenlik çağrıları değil yetkili / saniye</span><span class="sxs-lookup"><span data-stu-id="890e0-103">Counter name: Security Calls Not Authorized Per Second</span></span>  
+# <a name="service-security-calls-not-authorized-per-second"></a><span data-ttu-id="c238f-102">Hizmet: Saniyede Yetkisiz Güvenlik Çağrısı</span><span class="sxs-lookup"><span data-stu-id="c238f-102">Service: Security Calls Not Authorized Per Second</span></span>
+<span data-ttu-id="c238f-103">Sayaç adı: güvenlik çağrıları değil yetkili / saniye</span><span class="sxs-lookup"><span data-stu-id="c238f-103">Counter name: Security Calls Not Authorized Per Second</span></span>  
   
-## <a name="description"></a><span data-ttu-id="890e0-104">Açıklama</span><span class="sxs-lookup"><span data-stu-id="890e0-104">Description</span></span>  
- <span data-ttu-id="890e0-105">Geçerli bir kullanıcıdan ve düzgün şekilde korumalı, bir saniye, ancak kullanıcı gelen ileti sayısı, belirli görevler gerçekleştirmek için yetkili değil.</span><span class="sxs-lookup"><span data-stu-id="890e0-105">Number of incoming messages in one second, which are from a valid user and protected properly, but the user is not authorized to do specific tasks.</span></span>  
+## <a name="description"></a><span data-ttu-id="c238f-104">Açıklama</span><span class="sxs-lookup"><span data-stu-id="c238f-104">Description</span></span>  
+ <span data-ttu-id="c238f-105">Geçerli bir kullanıcıdan ve düzgün şekilde korumalı, bir saniye, ancak kullanıcı gelen ileti sayısı, belirli görevler gerçekleştirmek için yetkili değil.</span><span class="sxs-lookup"><span data-stu-id="c238f-105">Number of incoming messages in one second, which are from a valid user and protected properly, but the user is not authorized to do specific tasks.</span></span>  
   
- <span data-ttu-id="890e0-106">Bu sayaç artırılır, <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccess%2A> yöntemi döndürür `false`.</span><span class="sxs-lookup"><span data-stu-id="890e0-106">This counter is incremented when the <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccess%2A> method returns `false`.</span></span>  
+ <span data-ttu-id="c238f-106">Bu sayaç artırılır, <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccess%2A> yöntemi döndürür `false`.</span><span class="sxs-lookup"><span data-stu-id="c238f-106">This counter is incremented when the <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccess%2A> method returns `false`.</span></span>  
   
- <span data-ttu-id="890e0-107">Bu sayaç performans sayacı türüdür [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkId=94649), değeri aşağıdaki formül kullanılarak hesaplanır.</span><span class="sxs-lookup"><span data-stu-id="890e0-107">This counter is of performance counter type [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkId=94649), whose value is calculated using the following formula.</span></span>  
+ <span data-ttu-id="c238f-107">Bu sayaç performans sayacı türüdür [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkId=94649), değeri aşağıdaki formül kullanılarak hesaplanır.</span><span class="sxs-lookup"><span data-stu-id="c238f-107">This counter is of performance counter type [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkId=94649), whose value is calculated using the following formula.</span></span>  
   
- <span data-ttu-id="890e0-108">(1 - N 0 N) / ((D 1 - D 0) / F)</span><span class="sxs-lookup"><span data-stu-id="890e0-108">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>
+ <span data-ttu-id="c238f-108">(1 - N 0 N) / ((D 1 - D 0) / F)</span><span class="sxs-lookup"><span data-stu-id="c238f-108">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>

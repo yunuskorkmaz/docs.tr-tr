@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: seri hale getirilmiş veriler öbek'
+title: 'Nasıl yapılır: seri hale getirilmiş verileri öbek'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,39 +13,39 @@ helpviewer_keywords:
 - serialization, examples
 - binary serialization, examples
 ms.assetid: 22f1b818-7e0d-428a-8680-f17d6ebdd185
-ms.openlocfilehash: ce3d60e6d74594f93be44ae46d36b8ea2212d4bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4b83e841db1afc898c5c3c99ed4186fd264ed2ef
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582707"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43866507"
 ---
-# <a name="how-to-chunk-serialized-data"></a><span data-ttu-id="ec6ba-102">Nasıl yapılır: seri hale getirilmiş veriler öbek</span><span class="sxs-lookup"><span data-stu-id="ec6ba-102">How to: chunk serialized data</span></span>
+# <a name="how-to-chunk-serialized-data"></a><span data-ttu-id="64be5-102">Nasıl yapılır: seri hale getirilmiş verileri öbek</span><span class="sxs-lookup"><span data-stu-id="64be5-102">How to: chunk serialized data</span></span>
 
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
 
-<span data-ttu-id="ec6ba-103">Büyük veri kümeleri, Web hizmeti iletilerinde gönderirken oluşan iki sorunlar şunlardır:</span><span class="sxs-lookup"><span data-stu-id="ec6ba-103">Two issues that occur when sending large data sets in Web service messages are:</span></span>  
+<span data-ttu-id="64be5-103">Büyük veri kümeleri, Web hizmeti iletilerinde gönderirken oluşan iki sorunlar şunlardır:</span><span class="sxs-lookup"><span data-stu-id="64be5-103">Two issues that occur when sending large data sets in Web service messages are:</span></span>  
   
-1.  <span data-ttu-id="ec6ba-104">Serileştirme motoruna tarafından arabelleğe alma nedeni büyük çalışma kümesi (bellek).</span><span class="sxs-lookup"><span data-stu-id="ec6ba-104">A large working set (memory) due to buffering by the serialization engine.</span></span>  
+1.  <span data-ttu-id="64be5-104">Serileştirme motoruna tarafından arabelleğe alma nedeni büyük çalışma kümesi (bellek).</span><span class="sxs-lookup"><span data-stu-id="64be5-104">A large working set (memory) due to buffering by the serialization engine.</span></span>  
   
-2.  <span data-ttu-id="ec6ba-105">İnordinate bant genişliği kullanımını Base64 kodlama sonra 33 yüzde Enflasyon nedeniyle.</span><span class="sxs-lookup"><span data-stu-id="ec6ba-105">Inordinate bandwidth consumption due to 33 percent inflation after Base64 encoding.</span></span>  
+2.  <span data-ttu-id="64be5-105">İnordinate bant genişliği kullanımını Base64 kodlama sonra 33 yüzde Enflasyon nedeniyle.</span><span class="sxs-lookup"><span data-stu-id="64be5-105">Inordinate bandwidth consumption due to 33 percent inflation after Base64 encoding.</span></span>  
   
- <span data-ttu-id="ec6ba-106">Bu sorunları çözmek için uygulama <xref:System.Xml.Serialization.IXmlSerializable> seri hale getirme ve seri durumdan çıkarma denetlemek için arabirim.</span><span class="sxs-lookup"><span data-stu-id="ec6ba-106">To solve these problems, implement the <xref:System.Xml.Serialization.IXmlSerializable> interface to control the serialization and deserialization.</span></span> <span data-ttu-id="ec6ba-107">Özellikle, uygulayan <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> ve <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> verileri öbek için yöntemleri.</span><span class="sxs-lookup"><span data-stu-id="ec6ba-107">Specifically, implement the <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> and <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> methods to chunk the data.</span></span>  
+ <span data-ttu-id="64be5-106">Bu sorunları çözmek için uygulayan <xref:System.Xml.Serialization.IXmlSerializable> serileştirme ve seri durumundan çıkarma denetlemek için arabirim.</span><span class="sxs-lookup"><span data-stu-id="64be5-106">To solve these problems, implement the <xref:System.Xml.Serialization.IXmlSerializable> interface to control the serialization and deserialization.</span></span> <span data-ttu-id="64be5-107">Özellikle, uygulayan <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> ve <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> verileri öbek için yöntemleri.</span><span class="sxs-lookup"><span data-stu-id="64be5-107">Specifically, implement the <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> and <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> methods to chunk the data.</span></span>  
   
-### <a name="to-implement-server-side-chunking"></a><span data-ttu-id="ec6ba-108">Sunucu tarafı parçalama uygulamak için</span><span class="sxs-lookup"><span data-stu-id="ec6ba-108">To implement server-side chunking</span></span>  
+### <a name="to-implement-server-side-chunking"></a><span data-ttu-id="64be5-108">Sunucu tarafı parçalama uygulamak için</span><span class="sxs-lookup"><span data-stu-id="64be5-108">To implement server-side chunking</span></span>  
   
-1.  <span data-ttu-id="ec6ba-109">Sunucu makinede, Web yöntemi gerekir ASP.NET arabelleğe almayı devre dışı kapatmak ve gerçekleştiren bir tür dönmek <xref:System.Xml.Serialization.IXmlSerializable>.</span><span class="sxs-lookup"><span data-stu-id="ec6ba-109">On the server machine, the Web method must turn off ASP.NET buffering and return a type that implements <xref:System.Xml.Serialization.IXmlSerializable>.</span></span>  
+1.  <span data-ttu-id="64be5-109">Sunucu makinede, Web yöntemi gerekir ASP.NET arabelleğe almayı devre dışı kapatmak ve gerçekleştiren bir tür dönmek <xref:System.Xml.Serialization.IXmlSerializable>.</span><span class="sxs-lookup"><span data-stu-id="64be5-109">On the server machine, the Web method must turn off ASP.NET buffering and return a type that implements <xref:System.Xml.Serialization.IXmlSerializable>.</span></span>  
   
-2.  <span data-ttu-id="ec6ba-110">Uygulayan türü <xref:System.Xml.Serialization.IXmlSerializable> verileri chunks <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="ec6ba-110">The type that implements <xref:System.Xml.Serialization.IXmlSerializable> chunks the data in the <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> method.</span></span>  
+2.  <span data-ttu-id="64be5-110">Uygulayan türü <xref:System.Xml.Serialization.IXmlSerializable> verileri chunks <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="64be5-110">The type that implements <xref:System.Xml.Serialization.IXmlSerializable> chunks the data in the <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> method.</span></span>  
   
-### <a name="to-implement-client-side-processing"></a><span data-ttu-id="ec6ba-111">İstemci tarafında işleme uygulamak için</span><span class="sxs-lookup"><span data-stu-id="ec6ba-111">To implement client-side processing</span></span>  
+### <a name="to-implement-client-side-processing"></a><span data-ttu-id="64be5-111">İstemci tarafında işleme uygulamak için</span><span class="sxs-lookup"><span data-stu-id="64be5-111">To implement client-side processing</span></span>  
   
-1.  <span data-ttu-id="ec6ba-112">Web yöntemi uygulayan türü döndürmek için istemci proxy'de alter <xref:System.Xml.Serialization.IXmlSerializable>.</span><span class="sxs-lookup"><span data-stu-id="ec6ba-112">Alter the Web method on the client proxy to return the type that implements <xref:System.Xml.Serialization.IXmlSerializable>.</span></span> <span data-ttu-id="ec6ba-113">Kullanabileceğiniz bir <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension> için otomatik olarak bunu, ancak bu burada gösterilen değil.</span><span class="sxs-lookup"><span data-stu-id="ec6ba-113">You can use a <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension> to do this automatically, but this isn't shown here.</span></span>  
+1.  <span data-ttu-id="64be5-112">Web yöntemi uygulayan türü döndürmek için istemci proxy'de alter <xref:System.Xml.Serialization.IXmlSerializable>.</span><span class="sxs-lookup"><span data-stu-id="64be5-112">Alter the Web method on the client proxy to return the type that implements <xref:System.Xml.Serialization.IXmlSerializable>.</span></span> <span data-ttu-id="64be5-113">Kullanabileceğiniz bir <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension> için otomatik olarak bunu, ancak bu burada gösterilmiyor.</span><span class="sxs-lookup"><span data-stu-id="64be5-113">You can use a <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension> to do this automatically, but this isn't shown here.</span></span>  
   
-2.  <span data-ttu-id="ec6ba-114">Uygulama <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> öbekli veri akışı ve bayt diske yazma okumak için yöntem.</span><span class="sxs-lookup"><span data-stu-id="ec6ba-114">Implement the <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> method to read the chunked data stream and write the bytes to disk.</span></span> <span data-ttu-id="ec6ba-115">Bu uygulama aynı zamanda bir ilerleme çubuğu gibi bir grafik denetimi tarafından kullanılan ilerleme olayları başlatır.</span><span class="sxs-lookup"><span data-stu-id="ec6ba-115">This implementation also raises progress events that can be used by a graphic control, such as a progress bar.</span></span>  
+2.  <span data-ttu-id="64be5-114">Uygulama <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> yığın halinde veri akışı ve bayt diske yazma okumak için yöntem.</span><span class="sxs-lookup"><span data-stu-id="64be5-114">Implement the <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> method to read the chunked data stream and write the bytes to disk.</span></span> <span data-ttu-id="64be5-115">Bu uygulama bir ilerleme çubuğu gibi bir grafik denetimi tarafından kullanılan ilerleme olayları da başlatır.</span><span class="sxs-lookup"><span data-stu-id="64be5-115">This implementation also raises progress events that can be used by a graphic control, such as a progress bar.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ec6ba-116">Örnek</span><span class="sxs-lookup"><span data-stu-id="ec6ba-116">Example</span></span>  
-<span data-ttu-id="ec6ba-117">Aşağıdaki kod örneği, ASP.NET arabelleğe almayı devre dışı etkinleştiren istemcideki Web yöntemini gösterir.</span><span class="sxs-lookup"><span data-stu-id="ec6ba-117">The following code example shows the Web method on the client that turns off ASP.NET buffering.</span></span> <span data-ttu-id="ec6ba-118">Ayrıca istemci-tarafı uygulaması gösterir <xref:System.Xml.Serialization.IXmlSerializable> verileri chunks arabirimi <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="ec6ba-118">It also shows the client-side implementation of the <xref:System.Xml.Serialization.IXmlSerializable> interface that chunks the data in the <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> method.</span></span>  
+## <a name="example"></a><span data-ttu-id="64be5-116">Örnek</span><span class="sxs-lookup"><span data-stu-id="64be5-116">Example</span></span>  
+<span data-ttu-id="64be5-117">Aşağıdaki kod örneği, ASP.NET arabelleğe almayı devre dışı etkinleştiren istemcideki Web yöntemini gösterir.</span><span class="sxs-lookup"><span data-stu-id="64be5-117">The following code example shows the Web method on the client that turns off ASP.NET buffering.</span></span> <span data-ttu-id="64be5-118">Ayrıca istemci-tarafı uygulaması gösterir <xref:System.Xml.Serialization.IXmlSerializable> verileri chunks arabirimi <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="64be5-118">It also shows the client-side implementation of the <xref:System.Xml.Serialization.IXmlSerializable> interface that chunks the data in the <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> method.</span></span>  
   
 [!code-csharp[HowToChunkSerializedData#1](../../../samples/snippets/csharp/VS_Snippets_Remoting/HowToChunkSerializedData/CS/SerializationChunk.cs#1)]
 [!code-vb[HowToChunkSerializedData#1](../../../samples/snippets/visualbasic/VS_Snippets_Remoting/HowToChunkSerializedData/VB/SerializationChunk.vb#1)]  
@@ -54,9 +54,10 @@ ms.locfileid: "33582707"
 [!code-csharp[HowToChunkSerializedData#3](../../../samples/snippets/csharp/VS_Snippets_Remoting/HowToChunkSerializedData/CS/SerializationChunk.cs#3)]
 [!code-vb[HowToChunkSerializedData#3](../../../samples/snippets/visualbasic/VS_Snippets_Remoting/HowToChunkSerializedData/VB/SerializationChunk.vb#3)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="ec6ba-119">Kod derleme</span><span class="sxs-lookup"><span data-stu-id="ec6ba-119">Compiling the code</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="64be5-119">Kod derleme</span><span class="sxs-lookup"><span data-stu-id="64be5-119">Compiling the code</span></span>  
   
--   <span data-ttu-id="ec6ba-120">Aşağıdaki ad kodunu kullanır: <xref:System>, <xref:System.Runtime.Serialization>, <xref:System.Web.Services>, <xref:System.Web.Services.Protocols>, <xref:System.Xml>, <xref:System.Xml.Serialization>, ve <xref:System.Xml.Schema>.</span><span class="sxs-lookup"><span data-stu-id="ec6ba-120">The code uses the following namespaces: <xref:System>, <xref:System.Runtime.Serialization>, <xref:System.Web.Services>, <xref:System.Web.Services.Protocols>, <xref:System.Xml>, <xref:System.Xml.Serialization>, and <xref:System.Xml.Schema>.</span></span>  
+-   <span data-ttu-id="64be5-120">Aşağıdaki ad kodunu kullanır: <xref:System>, <xref:System.Runtime.Serialization>, <xref:System.Web.Services>, <xref:System.Web.Services.Protocols>, <xref:System.Xml>, <xref:System.Xml.Serialization>, ve <xref:System.Xml.Schema>.</span><span class="sxs-lookup"><span data-stu-id="64be5-120">The code uses the following namespaces: <xref:System>, <xref:System.Runtime.Serialization>, <xref:System.Web.Services>, <xref:System.Web.Services.Protocols>, <xref:System.Xml>, <xref:System.Xml.Serialization>, and <xref:System.Xml.Schema>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ec6ba-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ec6ba-121">See also</span></span>  
- [<span data-ttu-id="ec6ba-122">Özel Serileştirme</span><span class="sxs-lookup"><span data-stu-id="ec6ba-122">Custom Serialization</span></span>](custom-serialization.md)
+## <a name="see-also"></a><span data-ttu-id="64be5-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="64be5-121">See also</span></span>
+
+- [<span data-ttu-id="64be5-122">Özel Serileştirme</span><span class="sxs-lookup"><span data-stu-id="64be5-122">Custom Serialization</span></span>](custom-serialization.md)

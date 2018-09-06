@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: bir sözcüğün bir dizede (LINQ) (C#) yinelemeleri Say'
+title: 'Nasıl yapılır: bir sözcüğün bir dizede (LINQ) (C#) sayma'
 ms.date: 07/20/2015
 ms.assetid: f8e6f546-7c14-4aa1-8a75-e8d09f3b8ccd
-ms.openlocfilehash: b7003ff015669626c9d037549b36c440e3cc1301
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 48eda99970744a659a803f52bb3a3c499390f5c8
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318841"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43872367"
 ---
-# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-c"></a><span data-ttu-id="ba4a5-102">Nasıl yapılır: bir sözcüğün bir dizede (LINQ) (C#) yinelemeleri Say</span><span class="sxs-lookup"><span data-stu-id="ba4a5-102">How to: Count Occurrences of a Word in a String (LINQ) (C#)</span></span>
-<span data-ttu-id="ba4a5-103">Bu örnek bir LINQ Sorgu belirtilen bir sözcüğün bir dizede yinelemelerini saymak için nasıl kullanılacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="ba4a5-103">This example shows how to use a LINQ query to count the occurrences of a specified word in a string.</span></span> <span data-ttu-id="ba4a5-104">Count ilk kez gerçekleştirmek için unutmayın <xref:System.String.Split%2A> yöntemi sözcükler dizisi oluşturmak için çağrılır.</span><span class="sxs-lookup"><span data-stu-id="ba4a5-104">Note that to perform the count, first the <xref:System.String.Split%2A> method is called to create an array of words.</span></span> <span data-ttu-id="ba4a5-105">Bir performans maliyeti yoktur <xref:System.String.Split%2A> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="ba4a5-105">There is a performance cost to the <xref:System.String.Split%2A> method.</span></span> <span data-ttu-id="ba4a5-106">Dize yalnızca işlemi sözcükleri saymak için ise, kullanmayı düşünmelisiniz <xref:System.Text.RegularExpressions.Regex.Matches%2A> veya <xref:System.String.IndexOf%2A> yöntemleri yerine.</span><span class="sxs-lookup"><span data-stu-id="ba4a5-106">If the only operation on the string is to count the words, you should consider using the <xref:System.Text.RegularExpressions.Regex.Matches%2A> or <xref:System.String.IndexOf%2A> methods instead.</span></span> <span data-ttu-id="ba4a5-107">Ancak, performans kritik bir sorun değildir veya diğer sorgu türleri üzerinde gerçekleştirmek için cümle zaten ayırdıktan sonra kelimeler ve ifadeler de saymak için LINQ kullanılacak mantıklıdır.</span><span class="sxs-lookup"><span data-stu-id="ba4a5-107">However, if performance is not a critical issue, or you have already split the sentence in order to perform other types of queries over it, then it makes sense to use LINQ to count the words or phrases as well.</span></span>  
+# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-c"></a><span data-ttu-id="18646-102">Nasıl yapılır: bir sözcüğün bir dizede (LINQ) (C#) sayma</span><span class="sxs-lookup"><span data-stu-id="18646-102">How to: Count Occurrences of a Word in a String (LINQ) (C#)</span></span>
+<span data-ttu-id="18646-103">Bu örnek belirtilen bir sözcüğün bir dizede oluşumları saymak için LINQ sorgusu kullanmayı gösterir.</span><span class="sxs-lookup"><span data-stu-id="18646-103">This example shows how to use a LINQ query to count the occurrences of a specified word in a string.</span></span> <span data-ttu-id="18646-104">Sayım gerçekleştirmeye unutmayın <xref:System.String.Split%2A> yöntemi bir kelimelerin dizi oluşturmak için çağrılır.</span><span class="sxs-lookup"><span data-stu-id="18646-104">Note that to perform the count, first the <xref:System.String.Split%2A> method is called to create an array of words.</span></span> <span data-ttu-id="18646-105">Bir performans maliyetine yoktur <xref:System.String.Split%2A> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="18646-105">There is a performance cost to the <xref:System.String.Split%2A> method.</span></span> <span data-ttu-id="18646-106">Sözcükleri saymak için dize yalnızca işlemi ise kullanmayı düşünmelisiniz <xref:System.Text.RegularExpressions.Regex.Matches%2A> veya <xref:System.String.IndexOf%2A> yöntemleri yerine.</span><span class="sxs-lookup"><span data-stu-id="18646-106">If the only operation on the string is to count the words, you should consider using the <xref:System.Text.RegularExpressions.Regex.Matches%2A> or <xref:System.String.IndexOf%2A> methods instead.</span></span> <span data-ttu-id="18646-107">Ancak, performans kritik bir sorunu değil ya da diğer sorgu türleri üzerinde gerçekleştirmek için önceden cümle ayırdıktan sonra sözcükler veya tümcecikler de saymak için LINQ kullanma mantıklıdır.</span><span class="sxs-lookup"><span data-stu-id="18646-107">However, if performance is not a critical issue, or you have already split the sentence in order to perform other types of queries over it, then it makes sense to use LINQ to count the words or phrases as well.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ba4a5-108">Örnek</span><span class="sxs-lookup"><span data-stu-id="ba4a5-108">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="18646-108">Örnek</span><span class="sxs-lookup"><span data-stu-id="18646-108">Example</span></span>  
   
 ```csharp  
 class CountWords  
@@ -54,8 +54,9 @@ class CountWords
 */  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="ba4a5-109">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="ba4a5-109">Compiling the Code</span></span>  
- <span data-ttu-id="ba4a5-110">.NET Framework sürüm 3.5 veya daha yüksek System.Core.dll başvuru hedefleyen bir proje oluşturun ve `using` System.Linq ve System.IO ad alanları için yönergeleri.</span><span class="sxs-lookup"><span data-stu-id="ba4a5-110">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="18646-109">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="18646-109">Compiling the Code</span></span>  
+ <span data-ttu-id="18646-110">.NET Framework sürüm 3.5 veya üzeri bir System.Core.dll başvurusu ile hedefleyen bir proje oluşturun ve `using` System.Linq ve System.IO ad alanları için yönergeleri.</span><span class="sxs-lookup"><span data-stu-id="18646-110">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ba4a5-111">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="ba4a5-111">See Also</span></span>  
- [<span data-ttu-id="ba4a5-112">LINQ ve dizeler (C#)</span><span class="sxs-lookup"><span data-stu-id="ba4a5-112">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
+## <a name="see-also"></a><span data-ttu-id="18646-111">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="18646-111">See Also</span></span>
+
+- [<span data-ttu-id="18646-112">LINQ ve dizeler (C#)</span><span class="sxs-lookup"><span data-stu-id="18646-112">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)

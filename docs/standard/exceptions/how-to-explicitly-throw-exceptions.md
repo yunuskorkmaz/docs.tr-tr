@@ -14,21 +14,22 @@ helpviewer_keywords:
 ms.assetid: 72bdd157-caa9-4478-9ee3-cb4500b84528
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4eeb70c10d71a7c96136039342bcdcc7bc8ece20
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a1a8658999f08d295e76afc9df6ec8acd146abe2
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570358"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43863232"
 ---
-# <a name="how-to-explicitly-throw-exceptions"></a><span data-ttu-id="ce1dd-102">Nasıl açıkça özel durumlar oluşturma</span><span class="sxs-lookup"><span data-stu-id="ce1dd-102">How to explicitly throw exceptions</span></span>
+# <a name="how-to-explicitly-throw-exceptions"></a><span data-ttu-id="da2ae-102">Nasıl açıkça özel durumlar oluşturma</span><span class="sxs-lookup"><span data-stu-id="da2ae-102">How to explicitly throw exceptions</span></span>
 
-<span data-ttu-id="ce1dd-103">Kullanarak bir özel durum açıkça atabilirsiniz `throw` deyimi.</span><span class="sxs-lookup"><span data-stu-id="ce1dd-103">You can explicitly throw an exception using the `throw` statement.</span></span> <span data-ttu-id="ce1dd-104">Kullanarak yeniden yakalanan bir özel durum da atabilirsiniz `throw` deyimi.</span><span class="sxs-lookup"><span data-stu-id="ce1dd-104">You can also throw a caught exception again using the `throw` statement.</span></span> <span data-ttu-id="ce1dd-105">Hata ayıklama sırasında daha fazla bilgi sağlamak üzere yeniden atılmış bir özel durum bilgileri eklemek için uygulama kodlama iyi olur.</span><span class="sxs-lookup"><span data-stu-id="ce1dd-105">It is good coding practice to add information to an exception that is re-thrown to provide more information when debugging.</span></span>
+<span data-ttu-id="da2ae-103">Açıkça kullanarak bir özel durum oluşturabilecek `throw` deyimi.</span><span class="sxs-lookup"><span data-stu-id="da2ae-103">You can explicitly throw an exception using the `throw` statement.</span></span> <span data-ttu-id="da2ae-104">Ayrıca kullanarak yeniden yakalanan bir özel durumu oluşturabilecek `throw` deyimi.</span><span class="sxs-lookup"><span data-stu-id="da2ae-104">You can also throw a caught exception again using the `throw` statement.</span></span> <span data-ttu-id="da2ae-105">Kodlama yöntemi hata ayıklama sırasında daha fazla bilgi sağlamak için durum yeniden bir özel durum bilgileri eklemek için uygundur.</span><span class="sxs-lookup"><span data-stu-id="da2ae-105">It is good coding practice to add information to an exception that is re-thrown to provide more information when debugging.</span></span>
 
-<span data-ttu-id="ce1dd-106">Aşağıdaki kod örneğinde bir `try` / `catch` olası catch bloğu <xref:System.IO.FileNotFoundException>.</span><span class="sxs-lookup"><span data-stu-id="ce1dd-106">The following code example uses a `try`/`catch` block to catch a possible <xref:System.IO.FileNotFoundException>.</span></span> <span data-ttu-id="ce1dd-107">Aşağıdaki `try` bloğu bir `catch` yakalar blok <xref:System.IO.FileNotFoundException> ve veri dosyası bulunamazsa, bir ileti konsola yazar.</span><span class="sxs-lookup"><span data-stu-id="ce1dd-107">Following the `try` block is a `catch` block that catches the <xref:System.IO.FileNotFoundException> and writes a message to the console if the data file is not found.</span></span> <span data-ttu-id="ce1dd-108">Sonraki deyim `throw` yeni bir oluşturur deyimi <xref:System.IO.FileNotFoundException> ve metin bilgileri özel durumu ekler.</span><span class="sxs-lookup"><span data-stu-id="ce1dd-108">The next statement is the `throw` statement that throws a new <xref:System.IO.FileNotFoundException> and adds text information to the exception.</span></span>
+<span data-ttu-id="da2ae-106">Aşağıdaki kod örneğinde bir `try` / `catch` olası bir catch bloğu <xref:System.IO.FileNotFoundException>.</span><span class="sxs-lookup"><span data-stu-id="da2ae-106">The following code example uses a `try`/`catch` block to catch a possible <xref:System.IO.FileNotFoundException>.</span></span> <span data-ttu-id="da2ae-107">Aşağıdaki `try` bloğu bir `catch` yakalayan blok <xref:System.IO.FileNotFoundException> ve veri dosyası bulunamazsa iletiyi konsola yazar.</span><span class="sxs-lookup"><span data-stu-id="da2ae-107">Following the `try` block is a `catch` block that catches the <xref:System.IO.FileNotFoundException> and writes a message to the console if the data file is not found.</span></span> <span data-ttu-id="da2ae-108">Sonraki deyim `throw` yeni oluşturduğu deyimi <xref:System.IO.FileNotFoundException> ve özel durum için metin bilgi ekler.</span><span class="sxs-lookup"><span data-stu-id="da2ae-108">The next statement is the `throw` statement that throws a new <xref:System.IO.FileNotFoundException> and adds text information to the exception.</span></span>
 
 [!code-csharp[Exception.Throwing#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Exception.Throwing/CS/throw.cs#1)]
 [!code-vb[Exception.Throwing#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Exception.Throwing/VB/throw.vb#1)]  
 
-## <a name="see-also"></a><span data-ttu-id="ce1dd-109">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="ce1dd-109">See Also</span></span>  
-[<span data-ttu-id="ce1dd-110">Özel Durumlar</span><span class="sxs-lookup"><span data-stu-id="ce1dd-110">Exceptions</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="da2ae-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="da2ae-109">See also</span></span>
+
+- [<span data-ttu-id="da2ae-110">Özel Durumlar</span><span class="sxs-lookup"><span data-stu-id="da2ae-110">Exceptions</span></span>](index.md)
