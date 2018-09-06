@@ -2,37 +2,37 @@
 title: Normal ifade etkinlikleri
 ms.date: 03/30/2017
 ms.assetid: b8f24694-49db-4339-92ec-014e3d4ae63b
-ms.openlocfilehash: 34b1f18f26f0b79c4b8711d65da5707a85cf3bf0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 50daa5b6d7baab37f372de4c30c2e0d12b4fa943
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519840"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43743170"
 ---
 # <a name="regular-expression-activities"></a>Normal ifade etkinlikleri
-Bu örnek, normal ifade işlevselliğini kullanıma sunabilir etkinlikleri kümesi oluşturmak gösterilmiştir <xref:System.Text.RegularExpressions> ad alanı. Bu özel etkinlikler bir iş akışı uygulama içinde kullanılabilir. Normal ifadeler hakkında daha fazla bilgi için bkz: [t:System.Text.RegularExpressions.Regex](http://go.microsoft.com/fwlink/?LinkId=150434) Namespace.  
+Bu örnek normal ifade işlevselliğini kullanıma sunan bir etkinlik kümesini oluşturmak nasıl gösterir <xref:System.Text.RegularExpressions> ad alanı. Bu özel etkinlikler, bir iş akışı uygulama içinde kullanılabilir. Normal ifadeler hakkında daha fazla bilgi için bkz. [t:System.Text.RegularExpressions.Regex](https://go.microsoft.com/fwlink/?LinkId=150434) Namespace.  
   
- Aşağıdaki tabloda, bu örnekteki özel etkinlikler ayrıntıları verilmektedir.  
+ Aşağıdaki tabloda, bu örnekte özel etkinlikler ayrıntıları.  
   
 |Etkinlik|Açıklama|  
 |--------------|-----------------|  
-|IsMatch|Normal ifade bir girdi dizesindeki eşleşme olup olmadığını belirtir.|  
-|Eşleşmeler|Normal bir ifade tüm oluşumları için giriş dizesi arar ve tüm başarılı eşleşenleri döndürür.|  
-|Değiştir|Belirtilen giriş dizesi içinde belirtilen değiştirme dizesi ile bir normal ifade ile eşleşen dizelerini değiştirir.|  
+|IsMatch|Normal ifade giriş dizesinde bir eşleşme bulundu olup olmadığını belirtir.|  
+|Eşleşmeler|Bir Giriş dizesinin normal bir ifadenin tüm örnekleri için arar ve başarılı tüm eşleşmelerin döndürür.|  
+|Değiştir|Belirtilen bir Giriş dizesinin içinde belirtilen değiştirme dizesi bir normal ifade deseniyle eşleşen dizeleri değiştirir.|  
   
 ## <a name="ismatch"></a>IsMatch  
- `IsMatch` Özel etkinlik döndürür `true` varsa `Input` dize özelliği, belirtilen normal ifadede bir eşleşme bulur `Pattern` özelliği. Etkinlik türetilen <xref:System.Activities.CodeActivity%601> ve içinde <xref:System.Activities.CodeActivity%601.Execute%2A> yöntem çağrılarını <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> yöntemi.  
+ `IsMatch` Özel etkinlik döndürür `true` varsa `Input` dize özelliği içinde belirtilen normal ifade bir eşleşme bulur `Pattern` özelliği. Etkinlik türetildiği <xref:System.Activities.CodeActivity%601> ve içinde <xref:System.Activities.CodeActivity%601.Execute%2A> yöntem çağrılarını <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> yöntemi.  
   
- Aşağıdaki tabloda özellikleri ve dönüş değeri açıklanmaktadır `IsMatch` özel etkinlik.  
+ Aşağıdaki tablo, özellikler ve dönüş değeri açıklar `IsMatch` özel etkinlik.  
   
-|Özellik veya dönüş değeri|Açıklama|  
+|Özellik ya da dönüş değeri|Açıklama|  
 |------------------------------|-----------------|  
-|Desen (gerekli)|İle aramak için normal ifade.|  
-|Giriş (gerekli)|Aramak için giriş dizesi.|  
-|RegexOptions|Bit düzeyinde OR birleşimi [RegexOptions](http://go.microsoft.com/fwlink/?LinkId=150446) numaralandırma değerleri.|  
-|Dönüş değeri|`true` Giriş sağlanan desende bir eşleşme bulursa; Aksi takdirde `false`.|  
+|Deseni (gerekli)|İle aramak için normal ifade.|  
+|Giriş (gerekli)|Arama giriş dizesi.|  
+|RegexOptions|Bit düzeyindeki OR kombinasyonudur [RegexOptions](https://go.microsoft.com/fwlink/?LinkId=150446) sabit listesi değerleri.|  
+|Dönüş değeri|`true` Giriş sağlanan desende bir eşleşme bulduğunda; Aksi takdirde `false`.|  
   
- Aşağıdaki kod örneğinde nasıl kullanılacağı ortaya `IsMatch` özel etkinlik.  
+ Aşağıdaki kod örneğinde nasıl kullanılacağını gösterir `IsMatch` özel etkinlik.  
   
 ```  
 new IsMatch  
@@ -43,18 +43,18 @@ new IsMatch
 ```  
   
 ## <a name="matches"></a>Eşleşmeler  
- `Matches` Özel etkinlik normal bir ifade tüm oluşumları için giriş dizesi arar ve tüm başarılı eşleşenleri döndürür. Etkinlik türetilen <xref:System.Activities.CodeActivity%601> ve içinde <xref:System.Activities.CodeActivity%601.Execute%2A> yöntem çağrılarını <xref:System.Text.RegularExpressions.Regex.Matches%2A> yöntemi.  
+ `Matches` Özel etkinlik bir Giriş dizesinin normal bir ifadenin tüm örnekleri için arar ve başarılı tüm eşleşmelerin döndürür. Etkinlik türetildiği <xref:System.Activities.CodeActivity%601> ve içinde <xref:System.Activities.CodeActivity%601.Execute%2A> yöntem çağrılarını <xref:System.Text.RegularExpressions.Regex.Matches%2A> yöntemi.  
   
- Aşağıdaki tabloda özellikleri ve dönüş değeri açıklanmaktadır `IsMatch` özel etkinlik.  
+ Aşağıdaki tablo, özellikler ve dönüş değeri açıklar `IsMatch` özel etkinlik.  
   
-|Özellik veya dönüş değeri|Açıklama|  
+|Özellik ya da dönüş değeri|Açıklama|  
 |------------------------------|-----------------|  
-|Desen (gerekli)|İle aramak için normal ifade.|  
-|Giriş (gerekli)|Aramak için giriş dizesi.|  
-|RegexOptions|Bit düzeyinde OR birleşimi [RegexOptions](http://go.microsoft.com/fwlink/?LinkId=150446) numaralandırma değerleri.|  
-|Dönüş Değeri|A <xref:System.Text.RegularExpressions.MatchCollection> başarılı eşleşmeleri koleksiyonunu içerir.|  
+|Deseni (gerekli)|İle aramak için normal ifade.|  
+|Giriş (gerekli)|Arama giriş dizesi.|  
+|RegexOptions|Bit düzeyindeki OR kombinasyonudur [RegexOptions](https://go.microsoft.com/fwlink/?LinkId=150446) sabit listesi değerleri.|  
+|Dönüş Değeri|A <xref:System.Text.RegularExpressions.MatchCollection> , başarılı bir eşleşme koleksiyonunu içerir.|  
   
- Aşağıdaki kod örneğinde nasıl kullanılacağı ortaya `Matches` özel etkinlik.  
+ Aşağıdaki kod örneğinde nasıl kullanılacağını gösterir `Matches` özel etkinlik.  
   
 ```  
 new Matches  
@@ -65,20 +65,20 @@ new Matches
 ```  
   
 ## <a name="replace"></a>Değiştir  
- `Replace` Özel etkinlik giriş dizesi arar ve bir dizeyle belirtilen normal ifadeyle eşleşen tüm dizelerini değiştirir. Etkinlik türetilen <xref:System.Activities.CodeActivity%601> ve içinde <xref:System.Activities.CodeActivity%601.Execute%2A> yöntem çağrılarını <xref:System.Text.RegularExpressions.Regex.Replace%2A> yöntemi.  
+ `Replace` Özel etkinlik bir Giriş dizesinin arar ve bir dize ile belirtilen normal ifadeyle eşleşen tüm dizeleri değiştirir. Etkinlik türetildiği <xref:System.Activities.CodeActivity%601> ve içinde <xref:System.Activities.CodeActivity%601.Execute%2A> yöntem çağrılarını <xref:System.Text.RegularExpressions.Regex.Replace%2A> yöntemi.  
   
- Aşağıdaki tabloda özellikleri ve dönüş değeri açıklanmaktadır `Replace` özel etkinlik.  
+ Aşağıdaki tablo, özellikler ve dönüş değeri açıklar `Replace` özel etkinlik.  
   
-|Özellik veya dönüş değeri|Açıklama|  
+|Özellik ya da dönüş değeri|Açıklama|  
 |------------------------------|-----------------|  
-|Desen (gerekli)|İle aramak için normal ifade.|  
-|Giriş (gerekli)|Aramak için giriş dizesi.|  
-|Değiştirme|Değişim dizesi.<br /><br /> Varsa bir `Replacement` belirtilirse, sonra `MatchEvaluator` özelliği yoksayılır. Ya da `Replacement` veya `MatchEvaluator` özelliği ayarlanmalıdır.|  
-|MatchEvaluator|Her eşleşme inceler ve özgün eşleşen dize veya bir değiştirme dizesi döndürür özel bir yöntem.<br /><br /> Varsa bir `Replacement` belirtilirse, sonra `MatchEvaluator` özelliği yoksayılır. Ya da `Replacement` veya `MatchEvaluator` özelliği ayarlanmalıdır.|  
-|RegexOptions|Bit düzeyinde OR birleşimi [RegexOptions](http://go.microsoft.com/fwlink/?LinkId=150446) numaralandırma değerleri.|  
-|Dönüş Değeri|A <xref:System.Text.RegularExpressions.MatchCollection> başarılı eşleşmeleri koleksiyonunu içerir.|  
+|Deseni (gerekli)|İle aramak için normal ifade.|  
+|Giriş (gerekli)|Arama giriş dizesi.|  
+|Değiştirme|Değişim dizesi.<br /><br /> Varsa bir `Replacement` belirtilirse, ardından `MatchEvaluator` özelliği yok sayılır. Ya da `Replacement` veya `MatchEvaluator` özelliği ayarlanmalıdır.|  
+|MatchEvaluator|Her bir eşleştirmeyi inceler ve özgün eşleşen dizeyi veya bir değiştirme dizesi döndüren özel bir yöntem.<br /><br /> Varsa bir `Replacement` belirtilirse, ardından `MatchEvaluator` özelliği yok sayılır. Ya da `Replacement` veya `MatchEvaluator` özelliği ayarlanmalıdır.|  
+|RegexOptions|Bit düzeyindeki OR kombinasyonudur [RegexOptions](https://go.microsoft.com/fwlink/?LinkId=150446) sabit listesi değerleri.|  
+|Dönüş Değeri|A <xref:System.Text.RegularExpressions.MatchCollection> , başarılı bir eşleşme koleksiyonunu içerir.|  
   
- Aşağıdaki kod örneğinde nasıl kullanılacağı ortaya `Replace` özel etkinlik.  
+ Aşağıdaki kod örneğinde nasıl kullanılacağını gösterir `Replace` özel etkinlik.  
   
 ```  
 // Using the replacement string.  
@@ -102,15 +102,15 @@ new Replace
   
 1.  Kullanarak [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], RegexActivities.sln çözüm dosyasını açın.  
   
-2.  Çözümü derlemek için CTRL + SHIFT + B tuşuna basın.  
+2.  Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.  
   
-3.  Çözümü çalıştırmak için CTRL + F5 tuşuna basın.  
+3.  Çözümü çalıştırmak için CTRL + F5 tuşlarına basın.  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\Regex`

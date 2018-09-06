@@ -10,11 +10,11 @@ ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1be82fd9f26e382f20913551f67e8303cf20e03b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43390619"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43731712"
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Windows'da Yönetilen ve Yönetilmeyen İş Parçacığı Oluşturma
 Tüm iş parçacıklarının Yönetim aracılığıyla gerçekleştirilir <xref:System.Threading.Thread> sınıfı, ortak dil çalışma zamanı tarafından oluşturulan iş parçacığı ve kodu yürütmek için yönetilen ortamı girin çalışma zamanı dışında oluşturulanlar gibi. Çalışma zamanı, yönetilen yürütme ortamında kod yürütülen hiç olmadığı kadar tüm iş parçacıkları, işlemindeki izler. Diğer iş parçacıklarını izlemez. İş parçacıkları, COM birlikte çalışma aracılığıyla yönetilen yürütme ortamında girebilirsiniz, (çalışma zamanı yönetilen nesneleri yönetilmeyen dünya çapında COM nesneleri olarak kullanıma sunduğundan), COM [DllGetClassObject](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject) işlevi ve platform çağırma.  

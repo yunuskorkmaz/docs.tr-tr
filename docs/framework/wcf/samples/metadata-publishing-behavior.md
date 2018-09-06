@@ -5,24 +5,25 @@ helpviewer_keywords:
 - service behaviors, metadata publishing sample
 - Metadata Publishing Behaviors Sample [Windows Communication Foundation]
 ms.assetid: 78c13633-d026-4814-910e-1c801cffdac7
-ms.openlocfilehash: 547ff9fcaca8b9af7a7559a11ef4c4a8b5996174
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: c3e26454cc9b29620d80a86df7d7aee131e18200
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43734125"
 ---
 # <a name="metadata-publishing-behavior"></a>Meta Veri Yayımlama Davranışı
-Meta veri yayımlama davranışı örneği, bir hizmetin meta veri yayımlama özelliklerini denetlemek gösterilmiştir. Olası hassas hizmeti meta verilerin yanlışlıkla açığa çıkmasını önlemek için meta veri yayımlama Windows Communication Foundation (WCF) hizmetlerini için varsayılan yapılandırmayı devre dışı bırakır. Bu davranışı varsayılan olarak güvenlidir, ancak ayrıca bir meta veri kullanamayacağı anlamına gelir (örneğin, Svcutil.exe) aracı hizmetin meta veri yayımlama davranışı açıkça yapılandırmasında etkinleştirilmediği sürece hizmetini çağırmak için gerekli istemci kodu oluşturmak üzere, içe.  
+Meta veri yayımlama davranışı örneği bir hizmet meta verileri yayımlama özelliklerini denetlemek nasıl gösterir. Olası hassas hizmet meta verilerinin yanlışlıkla açığa çıkmasını önlemek için Windows Communication Foundation (WCF) Hizmetleri için varsayılan yapılandırma meta veri yayımlamayı devre dışı bırakır. Bu varsayılan olarak güvenli, davranıştır ancak ayrıca Aracı (Svcutil.exe gibi) yapılandırmasında hizmetin meta veri yayımlama davranışı açıkça etkinleştirilmediği hizmeti çağırmak için gereken istemci kodu oluşturmak için içeri bir meta veri kullanamayacağı anlamına gelir.  
   
 > [!IMPORTANT]
->  Daha anlaşılır olması için bu örnek nasıl güvenli meta veri yayımlama uç noktası oluşturulacağını gösterir. Bu tür uç noktaları anonim kimlik doğrulamasız tüketicilere potansiyel olarak kullanılabilir ve bakım gibi uç noktaları dağıtmadan önce genel olarak disclosing bir hizmetin meta veri uygun olduğundan emin olmak için izlenmelidir. Bkz: [özel güvenli meta veri uç noktasının](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) bir meta veri uç noktası güvenli hale getiren bir örnek için örnek.  
+>  Daha anlaşılır olması için bu örnek bir güvenli olmayan meta veri yayımlama uç noktası oluşturma işlemini gösterir. Bu uç noktaları için anonim kimlik doğrulamasız tüketiciler potansiyel olarak kullanılabilir ve bu uç noktaları dağıtmadan önce herkese açık şekilde öğrendiği bir hizmet meta verileri uygun olmasına özen gerekir. Bkz: [özel güvenli meta veri uç noktası](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) meta veri uç noktası güvenliğini sağlar. bir örnek için örnek.  
   
- Örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md), hangi uygulayan `ICalculator` hizmet sözleşme. Bu örnekte, istemci bir konsol uygulaması (.exe) ve Internet Information Services (IIS) tarafından barındırılan hizmetindeki.  
+ Örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md), uygulayan `ICalculator` hizmet sözleşmesi. Bu örnekte, istemci bir konsol uygulaması (.exe) ve hizmet Internet Information Services (IIS) tarafından barındırılır.  
   
 > [!NOTE]
->  Kurulum yordamı ve yapı yönergeleri Bu örnek için bu konunun sonunda yer alır.  
+>  Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.  
   
- Meta veri, kullanıma sunmak bir hizmet için <xref:System.ServiceModel.Description.ServiceMetadataBehavior> hizmette yapılandırılması gerekir. Bu davranış bulunduğunda kullanıma sunmak için bir uç nokta yapılandırarak meta verileri yayımlayabilirsiniz <xref:System.ServiceModel.Description.IMetadataExchange> WS-MetadataExchange (MEX) Protokolü uygulaması olarak sözleşme. Kolaylık, bu sözleşme "IMetadataExchange" kısaltılmış yapılandırma adı verilmedi. Bu örnekte `mexHttpBinding`, kolaylık sağlamak amacıyla bağlaması standart olduğu eşdeğerdir `wsHttpBinding` kümesine güvenlik moduyla `None`. "Mex" göreli adresidir kullanılan uç, hangi olduğunda çözülmüş temel Hizmetleri karşı adresi sonuçları bir uç nokta adresi http://localhost/servicemodelsamples/service.svc/mex. Aşağıdaki davranış yapılandırmasını gösterir:  
+ Hizmet meta verileri kullanıma sunmak için <xref:System.ServiceModel.Description.ServiceMetadataBehavior> hizmette yapılandırılması gerekir. Bu davranış, mevcut olduğunda, meta verileri kullanıma sunmak için bir uç nokta yapılandırarak yayımlayabilirsiniz <xref:System.ServiceModel.Description.IMetadataExchange> WS-MetadataExchange (MEX) Protokolü uygulaması olarak sözleşme. Kolaylık, bu sözleşmenin "IMetadataExchange" kısaltılmış yapılandırma adı verilmedi. Bu örnekte `mexHttpBinding`, bağlama standart bir kullanışlı olduğu eşdeğer olan `wsHttpBinding` kümesine güvenlik moduyla `None`. Bir "mex" göreli adresini kullanılan uç noktasında olan çözümlenen temel hizmetlerimizi adresi sonuçları bir uç nokta adresi http://localhost/servicemodelsamples/service.svc/mex. Aşağıdaki davranış yapılandırmasını gösterir:  
   
 ```xml  
 <behaviors>  
@@ -41,7 +42,7 @@ Meta veri yayımlama davranışı örneği, bir hizmetin meta veri yayımlama ö
 </behaviors>  
 ```  
   
- Aşağıdaki MEX bitiş noktası gösterir.  
+ MEX uç nokta gösterir.  
   
 ```xml  
 <!-- the MEX endpoint is exposed at   
@@ -54,34 +55,34 @@ Meta veri yayımlama davranışı örneği, bir hizmetin meta veri yayımlama ö
           contract="IMetadataExchange" />  
 ```  
   
- Bu örnek ayarlar <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> özelliğine `true`, hangi ayrıca sunan HTTP GET kullanarak hizmetin meta verileri. Bir HTTP GET meta veri uç noktasının etkinleştirmek için hizmeti bir HTTP temel adresi olması gerekir. Sorgu dizesi `?wsdl` hizmetinin temel adresini meta verilerine erişmek için kullanılır. Örneğin, bir Web tarayıcısı hizmetinde WSDL görmek için adresi kullanırsınız http://localhost/servicemodelsamples/service.svc?wsdl. Alternatif olarak, meta veri ayarlayarak HTTPS üzerinden kullanıma sunmak için bu davranış kullanabilirsiniz <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> için `true`. Bu bir HTTPS temel adresi gerektirir.  
+ Bu örnek ayarlar <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> özelliğini `true`, hangi de sunan HTTP GET kullanarak hizmet meta verileri. Bir HTTP GET meta veri uç noktası etkinleştirmek için hizmeti bir HTTP temel adresi olmalıdır. Sorgu dizesi `?wsdl` hizmetin taban adresi üzerinde meta verilerine erişmek için kullanılır. Örneğin, bir Web tarayıcısında hizmeti için WSDL görmek için adres kullanırsınız http://localhost/servicemodelsamples/service.svc?wsdl. Alternatif olarak, meta verileri ayarlayarak, HTTPS üzerinden kullanıma sunmak için bu davranışı kullanabilirsiniz <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> için `true`. Bu, temel bir HTTPS adresi gerektirir.  
   
- Hizmetin MEX uç noktası kullan erişmek için [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
+ Hizmetin MEX uç noktası kullan erişmeye [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
  `svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost/servicemodelsamples/service.svc/mex /out:generatedClient.cs`  
   
- Bu hizmetin meta verileri temel alarak istemci oluşturur.  
+ Bu, bir istemci hizmet meta verileri temel alarak oluşturur.  
   
- HTTP GET kullanarak hizmetin meta verilerine erişmek için tarayıcınızı noktası http://localhost/servicemodelsamples/service.svc?wsdl.  
+ HTTP GET kullanarak hizmet meta verilerine erişmek için tarayıcınıza noktası http://localhost/servicemodelsamples/service.svc?wsdl.  
   
- Bu davranış kaldırırsanız ve hizmet açmaya çalıştığınızda bir özel durum alın. Davranış uç nokta ile yapılandırılmış. Bu hata oluşur `IMetadataExchange` sözleşme hiçbir uygulama vardır.  
+ Bu davranış kaldırın ve hizmeti ayarlamaya çalıştığınızda bir özel durum alırsınız. Uç nokta davranışı yapılandırılmış olduğundan, bu hata oluştuğunda `IMetadataExchange` sözleşme uygulaması vardır.  
   
- Ayarlarsanız `HttpGetEnabled` için `false`, hizmetin meta verileri görmesini yerine CalculatorService yardım sayfasına bakın.  
+ Ayarlarsanız `HttpGetEnabled` için `false`, hizmetin meta verileri görme yerine CalculatorService yardım sayfasına bakın.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örnek çalıştırın  
+### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Gerçekleştirmiş emin olun [kerelik Kurulum prosedürü Windows Communication Foundation örnekleri için](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Tek veya çapraz makine yapılandırmada örneği çalıştırmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Metadata`  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 3b6cdffdaab508d898e7caa8c93ac0f7b1365d01
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
-ms.translationtype: MT
+ms.openlocfilehash: fdbb220cd856fd7309d54c41a39f91a9316fe434
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43408886"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43736574"
 ---
 # <a name="interfaces-c-programming-guide"></a>Arabirimler (C# Programlama Kılavuzu)
 Bir arabirim ilgili işlevler bir grup için tanımları içeren, bir [sınıfı](../../../csharp/language-reference/keywords/class.md) veya [yapı](../../../csharp/language-reference/keywords/struct.md) uygulayabilirsiniz.  
@@ -93,6 +93,7 @@ Bir arabirim ilgili işlevler bir grup için tanımları içeren, bir [sınıfı
 ## <a name="featured-book-chapter"></a>Özel Kitap Bölümü  
  [Arabirimleri](https://msdn.microsoft.com/library/orm-9780596521066-01-13.aspx) içinde [öğrenme: C# 3.0: Master the Fundamentals of C# 3.0](https://msdn.microsoft.com/library/orm-9780596521066-01.aspx)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [Devralma](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [Devralma](../../../csharp/programming-guide/classes-and-structs/inheritance.md)

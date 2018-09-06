@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: a279a42a-c415-4e79-88cf-64244ebda613
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4cac4ebb46fabad49e2e4e6a7d566522ca027094
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: MT
+ms.openlocfilehash: c05e27226a58086c806e8977ba50a55873d1167e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745480"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43735894"
 ---
 # <a name="ltprefercominsteadofmanagedremotinggt-element"></a>&lt;Prefercomınsteadofmanagedremoting&gt; öğesi
 Çalışma zamanı COM birlikte çalışma remoting yerine tüm çağrıları için uygulama etki alanı sınırlarında kullanıp kullanmayacağını belirtir.  
@@ -40,8 +40,8 @@ ms.locfileid: "32745480"
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|`false`|Çalışma zamanı remoting uygulama etki alanı sınırlarında kullanır. Bu varsayılandır.|  
-|`true`|Çalışma zamanı COM birlikte çalışma uygulama etki alanı sınırlarında kullanır.|  
+|`false`|Çalışma zamanı, uygulama etki alanı sınırları uzaktan iletişim kullanır. Bu varsayılandır.|  
+|`true`|Çalışma zamanı, uygulama etki alanı sınırlarında COM birlikte çalışma kullanır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -56,14 +56,14 @@ ms.locfileid: "32745480"
 ## <a name="remarks"></a>Açıklamalar  
  Ayarladığınızda `enabled` özniteliğini `true`, çalışma zamanı gibi davranır:  
   
--   Çalışma zamanı arama [IUnknown::QueryInterface](http://go.microsoft.com/fwlink/?LinkID=144867) için bir [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) arabirimini şu durumlarda bir [IUnknown](http://go.microsoft.com/fwlink/?LinkId=148003) arabirimi COM arabirimi üzerinden etki alanına girer. Bunun yerine, oluşturan bir [çalışma zamanı aranabilir sarmalayıcısı](../../../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) nesnenin çevresinde.  
+-   Çalışma zamanı arama [IUnknown::QueryInterface](https://go.microsoft.com/fwlink/?LinkID=144867) için bir [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) arabirimini şu durumlarda bir [IUnknown](https://go.microsoft.com/fwlink/?LinkId=148003) arabirim bir COM arabirimi üzerinden etki alanına girer. Bunun yerine, oluşturur bir [çalışma zamanı çağrılabilir sarmalayıcı](../../../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) nesne çevresinde.  
   
--   Çalışma zamanı tarafından alındığında E_NOINTERFACE döndürür bir `QueryInterface` çağrısı bir [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) arabirimi herhangi [COM aranabilir sarmalayıcısı](../../../../../docs/framework/interop/com-callable-wrapper.md) (saat) bu etki alanında oluşturuldu.  
+-   Aldığında, çalışma zamanı e_noınterface döndürür bir `QueryInterface` çağrısı bir [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) herhangi bir arabirimdeki [COM çağrılabilir sarmalayıcısı](../../../../../docs/framework/interop/com-callable-wrapper.md) (CCW) bu etki alanında oluşturuldu.  
   
- Bu iki davranışları uygulama etki alanı sınırları kullanımı COM üzerinden yönetilen nesneleri ve COM birlikte çalışma remoting yerine arasındaki tüm çağrıları üzerinden COM arabirimleri emin olun.  
+ Bu iki davranışları uygulama etki alanı sınırları kullanımı COM üzerinden yönetilen nesneleri ve COM birlikte çalışma remoting yerine arasındaki tüm çağrıları üzerinden COM arabirimleri sağlar.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek çalışma zamanı COM kullanması gerektiğini belirtmek yalıtım sınırlarında birlikte çalışma gösterilmektedir:  
+ Aşağıdaki örnek çalışma zamanı COM kullanması gerektiğini belirtmek yalıtım sınırları arasında birlikte çalışma gösterilmektedir:  
   
 ```xml  
 <configuration>  

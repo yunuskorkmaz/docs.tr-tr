@@ -7,12 +7,12 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: 47f8e978d81b4aec94482f0a295691b830c3698c
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 74020696a9d2370de2976671a9f1ed944aba8fb9
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39199166"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43734974"
 ---
 # <a name="properties-c-programming-guide"></a>Özellikler (C# Programlama Kılavuzu)
 
@@ -72,9 +72,10 @@ Bir özellik hem de varsa bir `get` ve `set` erişimci gerekir hem de otomatik o
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Ayrıca bkz.
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [Özellikleri Kullanma](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
- [Dizin Oluşturucular](../../../csharp/programming-guide/indexers/index.md)  
- [get anahtar sözcüğü](../../../csharp/language-reference/keywords/get.md)    
- [Set anahtar sözcüğü](../../../csharp/language-reference/keywords/set.md)    
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [Özellikleri Kullanma](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
+- [Dizin Oluşturucular](../../../csharp/programming-guide/indexers/index.md)  
+- [get anahtar sözcüğü](../../../csharp/language-reference/keywords/get.md)    
+- [Set anahtar sözcüğü](../../../csharp/language-reference/keywords/set.md)    

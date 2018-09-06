@@ -9,21 +9,21 @@ helpviewer_keywords:
 - custom controls [Windows Forms], Toolbox bitmaps
 - bitmaps [Windows Forms], custom controls
 ms.assetid: 0ed0840a-616d-41ba-a27d-3573241932ad
-ms.openlocfilehash: 3698d2fdbd0375d0a154d6ecea3a248b31da2aeb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aa32850b9bcd1a15a93bd6c80b2278278d12c417
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537527"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43746551"
 ---
 # <a name="how-to-provide-a-toolbox-bitmap-for-a-control"></a>Nasıl yapılır: Bir Denetim için Araç Kutusu Bit Eşlemi Sağlama
-Sahip olmak istiyorsanız denetlemek için özel bir simgesi görünür **araç**, kullanarak belirli bir görüntü belirtebilirsiniz <xref:System.Drawing.ToolboxBitmapAttribute>. Bu sınıf, bir *özniteliği*, özel türde bir sınıfı diğer sınıfların iliştirebilirsiniz. Öznitelikler hakkında daha fazla bilgi için bkz: [NOT ın yapı: Visual Basic'te öznitelikler genel bakış](http://msdn.microsoft.com/library/0d0cff64-892d-4f57-83bd-bef388553d4f) Visual Basic ve [öznitelikleri](http://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205) Visual C# için.  
+Denetiminiz için özel bir simge görünür olmasını istiyorsanız **araç kutusu**, belirli bir görüntü kullanarak belirtebilirsiniz <xref:System.Drawing.ToolboxBitmapAttribute>. Bu sınıf, bir *özniteliği*, diğer sınıflara iliştirebilirsiniz sınıfı özel bir tür. Öznitelikler hakkında daha fazla bilgi için bkz. [öznitelikler genel bakış (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/index.md) Visual Basic veya [öznitelikler (C#)](../../../csharp/programming-guide/concepts/attributes/index.md) C# için.  
   
- Kullanarak <xref:System.Drawing.ToolboxBitmapAttribute>, 16 x 16 piksel bit eşlem için yolu ve dosya adını belirten bir dize belirtin. Bu bit eşlemi eklendiğinde, Denetim yanındaki sonra görünür **araç**. Ayrıca belirtebilirsiniz bir <xref:System.Type>, o türü ile ilişkili bit eşlem; bu durumda yüklenir. Her ikisini de belirtirseniz bir <xref:System.Type> ve tarafından belirtilen türünü içeren bütünleştirilmiş dizesi parametresi tarafından belirtilen ada sahip bir görüntü kaynağı için bir dize denetimi arar <xref:System.Type> parametresi.  
+ Kullanarak <xref:System.Drawing.ToolboxBitmapAttribute>, 16 x 16 piksel bit eşlem yolunu ve dosya adını belirten bir dize belirtebilirsiniz. Bu bit eşlem eklendiğinde denetim ardından yanında **araç kutusu**. Ayrıca belirtebileceğiniz bir <xref:System.Type>, bu durumda, türü ile ilişkili bit eşlem yüklenir. Her ikisini de belirtirseniz bir <xref:System.Type> ve bir dize denetim tarafından belirtilen tür içeren derlemenin dize parametresi tarafından belirtilen ada sahip bir görüntü kaynağı için arar <xref:System.Type> parametresi.  
   
-### <a name="to-specify-a-toolbox-bitmap-for-your-control"></a>Denetim için araç kutusu bit eşlemi belirtmek için  
+### <a name="to-specify-a-toolbox-bitmap-for-your-control"></a>Denetiminiz için bir araç kutusu bit eşlemi belirtmek için  
   
-1.  Ekleme <xref:System.Drawing.ToolboxBitmapAttribute> önce denetiminizin sınıfı bildirimine `Class` visual Basic ve Visual C# için sınıf bildiriminin üstüne anahtar sözcüğü.  
+1.  Ekleme <xref:System.Drawing.ToolboxBitmapAttribute> denetiminizin önce sınıf bildirimine `Class` visual Basic ve Visual C# sınıf bildiriminin üstüne anahtar sözcüğü.  
   
     ```vb  
     ' Specifies the bitmap associated with the Button type.  
@@ -58,14 +58,15 @@ Sahip olmak istiyorsanız denetlemek için özel bir simgesi görünür **araç*
     }  
     ```  
   
-2.  Projeyi yeniden oluşturun.  
+2.  Projeyi yeniden derleyin.  
   
     > [!NOTE]
-    >  Bit eşlem otomatik olarak oluşturulur denetimleri ve bileşenleri için Araç Kutusu'nda görünmez. Bit eşlem görmek için denetimi kullanarak yeniden **araç kutusu öğelerini Seç** iletişim kutusu. Daha fazla bilgi için bkz: [izlenecek yol: araç kutusunu özel bileşenlerle'otomatik olarak doldurma](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md).  
+    >  Bit eşlem otomatik olarak oluşturulan denetimleri ve bileşenleri için Araç Kutusu'nda görünmez. Bit eşlem görmek için denetimi kullanarak yeniden **araç kutusu öğelerini Seç** iletişim kutusu. Daha fazla bilgi için [izlenecek yol: otomatik olarak, araç kutusunu özel bileşenlerle doldurma](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Drawing.ToolboxBitmapAttribute>  
- [İzlenecek yol: Araç Kutusunu Otomatik Olarak Özel Bileşenlerle Doldurma](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)  
- [Tasarım Zamanında Windows Forms Denetimleri Geliştirme](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
- [Öznitelikler (Visual Basic)](~/docs/visual-basic/language-reference/attributes.md)  
- [Öznitelikler](http://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- <xref:System.Drawing.ToolboxBitmapAttribute>
+- [İzlenecek yol: Araç Kutusunu Otomatik Olarak Özel Bileşenlerle Doldurma](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
+- [Tasarım Zamanında Windows Forms Denetimleri Geliştirme](developing-windows-forms-controls-at-design-time.md)
+- [Öznitelikler genel bakış (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [Öznitelikler (C#)](../../../csharp/programming-guide/concepts/attributes/index.md)
