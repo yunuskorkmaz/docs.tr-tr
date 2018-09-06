@@ -9,11 +9,11 @@ helpviewer_keywords:
 - timing key-fram animation
 ms.assetid: b059216f-7d4b-4ca8-a019-bc287ee7bf16
 ms.openlocfilehash: d65bf6f7643adf1d98d468853ae8017a4a6554ac
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43787928"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43892684"
 ---
 # <a name="how-to-control-key-frame-animation-timing"></a>Nasıl yapılır: Anahtar Çerçeve Animasyonu Zamanlamasını Denetleme
 Bu örnekte anahtar çerçeveler içinde bir anahtar çerçeve animasyonu zamanlamasını denetlemek nasıl gösterir. Diğer animasyonlar gibi anahtar-çerçeve animasyonlara sahip bir <xref:System.Windows.Media.Animation.Timeline.Duration%2A> özelliği. Bir animasyonun süresini belirtmeye ek olarak, hangi parçası bir bu süre her anahtar çerçeveler için ayrılan belirtmeniz gerekir. Zamanı paylaştırmak için belirttiğiniz bir <xref:System.Windows.Media.Animation.KeyTime> her anahtar kare animasyon için.  

@@ -3,11 +3,11 @@ title: Veri türlerini dönüştürme (C#)
 ms.date: 07/20/2015
 ms.assetid: 46e5682f-77a1-4302-8f93-a2b53c408808
 ms.openlocfilehash: 54ef612ad4e92058d9af4d96b7b3cde9732b2f9c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43724948"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44032351"
 ---
 # <a name="converting-data-types-c"></a>Veri türlerini dönüştürme (C#)
 Dönüştürme yöntemleri giriş nesnelerin türünü değiştirin.  

@@ -1,45 +1,44 @@
 ---
 title: Tür Sağlayıcıları
-description: 'Nasıl bir F # tür sağlayıcısı türleri, özellikleri ve yöntemleri programlarınızı kullanmak için sağlayan bir bileşendir öğrenin.'
+description: 'Bir F # tür sağlayıcısı türleri, özellikleri ve yöntemleri programlarınızda kullanmak için sağlayan bir bileşeni nasıl olduğunu öğrenin.'
 ms.date: 04/02/2018
-ms.openlocfilehash: 82d9afed7d77eae5f8b96854d40e96a32c4fae9e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5fa9de229caa2ec3ba4a248ca5cd1c8aa5adb230
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562277"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43891674"
 ---
 # <a name="type-providers"></a>Tür Sağlayıcıları
 
-Bir F# tür sağlayıcısı programınız içinde kullanmanız için türler, özellikler ve yöntemler sağlayan bir bileşendir. Tür sağlayıcıları oluşturmak ne olarak da bilinir **sağlanan türleri**, F # derleyici tarafından oluşturulan ve bir dış veri kaynağına göre.
+Bir F# tür sağlayıcısı programınız içinde kullanmanız için türler, özellikler ve yöntemler sağlayan bir bileşendir. Tür sağlayıcıları oluşturma olarak bilinir ne **sağlanan türleri**, F # derleyici tarafından oluşturulan ve bir dış veri kaynağına bağlıdır.
 
-Örneğin, bir SQL için F # tür sağlayıcısı tablolar ve sütunlar ilişkisel bir veritabanındaki temsil eden türleri oluşturabilir. Aslında, bu nedir [SQLProvider](https://fsprojects.github.io/SQLProvider/) türü sağlayıcısı.
+Örneğin, bir F # tür sağlayıcısı SQL tabloları ve sütunları ilişkisel bir veritabanındaki temsil eden türleri oluşturabilirsiniz. Aslında, bunun ne olduğunu [SQLProvider](https://fsprojects.github.io/SQLProvider/) tür sağlayıcısı yok.
 
-Sağlanan tür sağlayıcısı giriş parametreleri türlerine bağlıdır. Bu tür giriş (örneğin, JSON şema dosyası gibi) bir örnek veri kaynağı olabilir doğrudan bir dış hizmet ya da bir veri kaynağı için bir bağlantı dizesi işaret eden bir URL. Tür sağlayıcısı türlerinin grupları isteğe bağlı olarak yalnızca genişletilir de sağlayabilirsiniz; türleri gerçekte programınız tarafından başvurulduğundan, diğer bir deyişle, bunlar genişletilir. Bu çevrimiçi veri marketleri gibi büyük ölçekli bilgi uzaylarının doğrudan, istek anında bütünleştirmesini türü kesin belirlenmiş olarak sağlar.
+Sağlanan giriş parametreleri için bir tür sağlayıcısı türleri bağlıdır. Bir örnek veri kaynağını (örneğin, JSON şema dosyası gibi) bu tür girişi olabilir doğrudan bir dış hizmete veya bir veri kaynağı bağlantı dizesine işaret eden bir URL. Bir tür sağlayıcısı ayrıca tür gruplarının yalnızca istek üzerine genişletilir sağlayabilirsiniz; diğer bir deyişle, türler gerçekten programınız tarafından başvurulduğunda, bunlar genişletilir. Bu çevrimiçi veri marketleri gibi büyük ölçekli bilgi uzaylarının doğrudan, istek anında bütünleştirmesini türü kesin belirlenmiş olarak sağlar.
 
-## <a name="generative-and-erased-type-providers"></a>Generative ve Silinen tür sağlayıcıları
+## <a name="generative-and-erased-type-providers"></a>Games'in ve Silinen tür sağlayıcıları
 
-Tür sağlayıcıları gelen iki biçimde: Generative ve silinebilir.
+Tür sağlayıcıları gelen iki biçimde: Games'in ve silinebilir.
 
-Generative tür sağlayıcıları .NET türleri olarak üretilen derlemeye yazılabilir türleri oluşturur. Bu diğer derlemelerden koddan tüketilmesi sağlar. Bu veri kaynağı türü belirtilmiş gösterimini genellikle .NET türleri ile temsil etmek için uygun olan bir olması gerektiği anlamına gelir.
+Games'in tür sağlayıcılarını .NET türleri olarak üretilmiş bütünleştirilmiş kod içine yazılabilir türleri üretir. Bu diğer bütünleştirilmiş koddan Tüketilecek sağlar. Bu veri kaynağı türü belirtilmiş gösterimini genellikle .NET türleriyle temsil etmek için uygun olan birini olması gerektiğini anlamına gelir.
 
-Silme tür sağlayıcıları yalnızca derleme ya da bunlar oluşturulan proje tüketilebilir türleri oluşturur. Kısa ömürlü türleridir; diğer bir deyişle, bir derlemeye yazılmaz ve diğer derlemelerde kod tarafından kullanılamaz. İçerebilirler *Gecikmeli* üyeleri, büyük olasılıkla sonsuz bilgi alanından kullanım sağlanan türleri için izin verme. Bunlar, küçük bir alt büyük ve birbirine bağlı veri kaynağı kullanmak için kullanışlıdır.
+Tür sağlayıcıları silme yalnızca derleme veya öğesinden oluşturulan proje kullanılabilecek türleri üretir. Kısa ömürlü türleridir; diğer bir deyişle, bir derlemeye yazılmaz ve diğer bütünleştirilmiş kodla tüketilemiyor. İçerebilirler *Gecikmeli* üyeleri, olası sonsuz bilgi alanından sağlanan kullanım türlerine izin verme. Bunlar, küçük bir alt birbirine ve büyük ölçekli veri kaynağını kullanmak için kullanışlıdır.
 
 ## <a name="commonly-used-type-providers"></a>Tür sağlayıcıları yaygın olarak kullanılan
 
-Aşağıdaki yaygın kullanılan kitaplıklar farklı amaçlarla tür sağlayıcıları içerir:
+Aşağıdaki yaygın olarak kullanılan kitaplıklar farklı kullanımları tür sağlayıcıları içerir:
 
-- [FSharp.Data](https://fsharp.github.io/FSharp.Data/) JSON, XML, CSV ve HTML Belge biçimleri ve kaynaklar için tür sağlayıcıları içerir.
-- [SQLProvider](https://fsprojects.github.io/SQLProvider/) bu veri kaynaklarının sorguları nesne eşleme ve F # LINQ üzerinden ilişkisi veritabanlarını kesin türü belirtilmiş erişmenizi sağlar.
-- [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/) sahip bir derleme zamanı tür sağlayıcıları işaretli T-SQL F # katıştırma.
-- [Azure depolama türü sağlayıcısı](https://fsprojects.github.io/AzureStorageTypeProvider/) Azure BLOB'ları, tabloları ve Kuyruklar, programınızı boyunca dizeleri olarak kaynak adları belirtmek zorunda kalmadan bu kaynaklara erişmeyi sağlayan türler sağlar.
-- [FSharp.Data.GraphQL](https://fsprojects.github.io/FSharp.Data.GraphQL/index.html) içeren **GraphQLProvider**, URL tarafından belirtilen bir GraphQL sunucusu temel türü sunar.
+- [FSharp.Data](https://fsharp.github.io/FSharp.Data/) JSON, XML, CSV ve HTML biçimleri ve kaynak belge için tür sağlayıcıları içerir.
+- [SQLProvider](https://fsprojects.github.io/SQLProvider/) nesne eşleme ve F # LINQ ile ilişkisi veritabanlarına erişim türü kesin belirlenmiş bu veri kaynaklarına karşı sorgular sağlar.
+- [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/) sahip bir derleme zamanı için tür sağlayıcıları kümesini iade F # T-SQL ekleme.
+- [Azure depolama tür sağlayıcısı](https://fsprojects.github.io/AzureStorageTypeProvider/) Azure Blobları, tablolar ve Kuyruklar, programınız üzerinden dize olarak kaynak adları belirtilmesine gerek olmadan bu kaynakları erişmenize olanak tanıyan için türler sağlar.
+- [FSharp.Data.GraphQL](https://fsprojects.github.io/FSharp.Data.GraphQL/index.html) içeren **GraphQLProvider**, URL ile belirtilen bir GraphQL sunucuda temel türleri sağlar.
 
-Gerektiğinde yapabilecekleriniz [kendi özel tür sağlayıcıları oluşturmak](creating-a-type-provider.md), veya başkaları tarafından oluşturulan tür sağlayıcıları başvuru. Örneğin, kuruluşunuz her biri kendi kararlı veri şemasına sahip çok ve artan sayıda adlandırılmış veri kümeleri sağlayan bir veri hizmetine sahip olduğunu varsayın. Şemaları okuyan ve en son kullanılabilir veri kümelerini programcıya türü kesin belirlenmiş bir biçimde sunan bir tür sağlayıcısı oluşturmayı seçebilirsiniz.
+Gerekten yerlerde, aşağıdakileri yapabilirsiniz [kendi özel tür sağlayıcılarınızı oluşturabilir](creating-a-type-provider.md), veya başkaları tarafından oluşturulan tür sağlayıcılarına başvurabilirsiniz. Örneğin, kuruluşunuz her biri kendi kararlı veri şemasına sahip çok ve artan sayıda adlandırılmış veri kümeleri sağlayan bir veri hizmetine sahip olduğunu varsayın. Şemaları okuyan ve en son kullanılabilir veri kümelerini programcıya türü kesin belirlenmiş bir biçimde sunan bir tür sağlayıcısı oluşturmayı seçebilirsiniz.
 
-## <a name="see-also"></a>Ayrıca Bkz.
-[Eğitmen: tür sağlayıcısı oluşturma](creating-a-type-provider.md)
+## <a name="see-also"></a>Ayrıca bkz.
 
-[F# Dili Başvurusu](../../language-reference/index.md)
-
-[Visual F#](../../index.md)
+- [Öğretici: bir tür sağlayıcısı oluşturma](creating-a-type-provider.md)
+- [F# Dili Başvurusu](../../language-reference/index.md)
+- [Visual F#](../../index.md)

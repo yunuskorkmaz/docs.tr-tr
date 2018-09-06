@@ -7,23 +7,24 @@ helpviewer_keywords:
 ms.assetid: f9af93bb-7a0d-4ba5-afe8-74f48b6b6958
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f7d1d95030d2bc9f9288ae134471c150a37291b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5bd2468c7b68a9c79e7418a32294676fb468e1a9
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582265"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042640"
 ---
 # <a name="spinlock"></a>SpinLock
-<xref:System.Threading.SpinLock> Bir kilidi beklerken dönerek bir alt düzey, karşılıklı dışlama eşitleme ilkel yapısıdır. Bekleme süresini kısa ve çakışma en az olduğunda olması beklenen zaman çok çekirdekli bilgisayarlarda <xref:System.Threading.SpinLock> kilitleri diğer tür daha iyi gerçekleştirebilirsiniz. Ancak, kullanmanızı öneririz <xref:System.Threading.SpinLock> yalnızca zaman, profil oluşturma saptamanıza <xref:System.Threading.Monitor?displayProperty=nameWithType> yöntemi veya <xref:System.Threading.Interlocked> yöntemleri önemli ölçüde performans programınızın yavaşlamasının.  
+<xref:System.Threading.SpinLock> Kilit beklerken dönerek bir alt düzey, karşılıklı dışlama eşitleme temel öğesi yapısıdır. Bekleme süresini kısa ve Çekişme en az olduğunda olması bekleniyor, çok çekirdekli bilgisayarlarda <xref:System.Threading.SpinLock> kilitleri diğer tür daha iyi gerçekleştirebilirsiniz. Ancak, kullanmanızı öneririz <xref:System.Threading.SpinLock> yalnızca zaman, profil oluşturma belirlediğiniz <xref:System.Threading.Monitor?displayProperty=nameWithType> yöntemi veya <xref:System.Threading.Interlocked> yöntemleri önemli ölçüde performans programınızın yavaşlatmasını.  
   
- <xref:System.Threading.SpinLock> Bunu henüz kilidi ele geçirmiş değil olsa bile iş parçacığının zaman dilimi verim. İş parçacığı önceliği ters çevirmeyi önlemek için ve ilerleme atık toplayıcı etkinleştirmek için bunu yapar. Kullandığınızda, bir <xref:System.Threading.SpinLock>, birden çok çok kısa bir süre için hiçbir iş parçacığı kilidi tutabilir ve kilidi tutan sırada hiçbir iş parçacığı engelleyebilirsiniz emin olun.  
+ <xref:System.Threading.SpinLock> iş parçacığının zaman dilimi getirilmesine neden bile, henüz bir kilit alınmadığı değil. İş parçacığı önceliği tersine çevirme önlemek ve ilerleme çöp toplayıcı etkinleştirmek için bunu yapar. Kullandığınızda, bir <xref:System.Threading.SpinLock>, birden çok çok kısa bir süre için hiçbir iş parçacığı kilit barındırabilir ve kilidini tutan sırada hiçbir iş parçacığını engelleyebildiğinden emin olun.  
   
- SpinLock bir değer türü olduğundan, aynı kilit başvurmak için iki kopya düşünüyorsanız açıkça başvuruya göre geçirdiğiniz gerekir.  
+ SpinLock bir değer türü olduğundan, aynı kilidi için başvuruda bulunmak için iki kopya düşünüyorsanız, açıkça, başvuruya göre geçmesi gerekir.  
   
- Bu tür kullanma hakkında daha fazla bilgi için bkz: <xref:System.Threading.SpinLock?displayProperty=nameWithType>. Bir örnek için bkz: [nasıl yapılır: alt düzey eşitleme için SpinLock kullanma](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md).  
+ Bu tür kullanma hakkında daha fazla bilgi için bkz. <xref:System.Threading.SpinLock?displayProperty=nameWithType>. Bir örnek için bkz. [nasıl yapılır: alt düzey eşitleme için SpinLock kullanma](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md).  
   
- <xref:System.Threading.SpinLock> destekleyen bir *iş parçacığı*-*izleme* geliştirme aşaması boyunca belirli bir zamanda kilit iş parçacığı izlemenize yardımcı olması için kullanabileceğiniz modu. İş parçacığı izleme modunu hata ayıklama için faydalıdır, ancak performans azaltabileceğinden, programınızın yayın sürümünü kapatmak olmasını öneririz. Daha fazla bilgi için bkz: [nasıl yapılır: spinlock'ta etkinleştirmek iş parçacığı izleme modunu](../../../docs/standard/threading/how-to-enable-thread-tracking-mode-in-spinlock.md).  
+ <xref:System.Threading.SpinLock> destekleyen bir *iş parçacığı*-*izleme* geliştirme aşamasında belirli bir zamanda bir kilit iş parçacığı izlenmesine yardımcı olması için kullanabileceğiniz modu. İş parçacığı izleme modunu hata ayıklama için çok kullanışlıdır ancak performansı azaltabileceğinden, programınızı yayın sürümünde kapatmak olmasını öneririz. Daha fazla bilgi için [nasıl yapılır: spinlock'ta etkinleştirme iş parçacığı izleme modunu](../../../docs/standard/threading/how-to-enable-thread-tracking-mode-in-spinlock.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [İş Parçacığı Nesneleri ve Özellikleri](../../../docs/standard/threading/threading-objects-and-features.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [İş Parçacığı Nesneleri ve Özellikleri](../../../docs/standard/threading/threading-objects-and-features.md)

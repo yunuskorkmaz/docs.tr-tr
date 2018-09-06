@@ -3,11 +3,11 @@ title: '&lt;ws2007HttpBinding&gt; &lt;iletisi&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9ffd8db6-84a8-4b38-a9fe-2cb1a87a1c97
 ms.openlocfilehash: a8f448f40dbbf5fabbbd833cb9366c3911045f95
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: HT
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855132"
+ms.locfileid: "44042510"
 ---
 # <a name="ltmessagegt-of-ltws2007httpbindinggt"></a>&lt;ws2007HttpBinding&gt; &lt;iletisi&gt;
 İleti düzeyi güvenliği ayarlarını tanımlar [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) öğesi.  

@@ -8,29 +8,30 @@ helpviewer_keywords:
 ms.assetid: d40c509f-5a5e-46cc-94cb-a951e9ab6843
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b1635276465dd58028c8a5e4b7e69a307664a4c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2db6d4229ac777801aff792c86fe0e5e9a1b4994
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580763"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44031701"
 ---
 # <a name="creating-a-cryptographic-scheme"></a>Şifreleme Düzeni Oluşturma
-.NET Framework şifreleme bileşenlerinin şifrelemek ve verilerin şifresini çözmek için farklı düzenleri oluşturmak için birleştirilebilir.  
+.NET Framework şifreleme bileşenlerini şifrelemek ve verilerin şifresini çözmek için farklı düzenleri oluşturmak için birleştirilebilir.  
   
- Şifreleme ve verilerin şifresini çözmek için basit bir şifreleme şeması aşağıdakileri belirtebilir:  
+ Şifreleme ve verilerin şifresini çözmek için basit bir şifreleme düzeni aşağıdakileri belirtebilirsiniz:  
   
-1.  Her taraf ortak/özel anahtar çifti oluşturur.  
+1.  Her iki taraf bir ortak/özel anahtar çifti oluşturur.  
   
-2.  Tarafların sitelerin genel anahtarlarını exchange.  
+2.  Taraflar, ortak anahtar değişimi.  
   
-3.  Her taraf TripleDES şifreleme için gizli bir anahtar oluşturur örneğin ve diğer kişilerin ortak anahtar kullanarak yeni oluşturulan anahtarı şifreler.  
+3.  Her iki taraf TripleDES şifreleme için gizli bir anahtar oluşturur ve diğer kişinin ortak anahtar kullanarak yeni oluşturulan anahtarı şifreler.  
   
-4.  Her taraf diğer verileri gönderir ve diğer kişilerin gizli anahtarı yeni gizli bir anahtar oluşturmak için kendi belirli bir sıra ile birleştirir.  
+4.  Her bir taraf, diğer veri gönderir ve yeni bir gizli anahtar oluşturmak için kendi belirli bir siparişi ile diğer tarafın gizli anahtar birleştirir.  
   
-5.  Taraflar ardından simetrik şifreleme kullanarak bir konuşma başlatın.  
+5.  Taraflar ardından simetrik şifreleme kullanarak bir konuşma başlatır.  
   
- Şifreleme düzeni oluşturma, karmaşık bir görev değil. Şifreleme kullanma hakkında daha fazla bilgi için Platform SDK belgelerine şifreleme konusuna bakın http://msdn.microsoft.com/library.  
+ Şifreleme düzeni oluşturma, basit bir görev değildir. Şifreleme kullanarak daha fazla bilgi için Platform SDK belgelerine şifreleme bölümüne bakın. http://msdn.microsoft.com/library.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Şifreleme Hizmetleri](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Şifreleme Hizmetleri](../../../docs/standard/security/cryptographic-services.md)

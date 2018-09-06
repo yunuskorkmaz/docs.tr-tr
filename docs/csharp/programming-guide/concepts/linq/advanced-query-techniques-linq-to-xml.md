@@ -3,11 +3,11 @@ title: Gelişmiş sorgu teknikleri (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 028d978e-215b-4d50-ba70-adce0659386d
 ms.openlocfilehash: d33677be318275eb9c9cc427129caec6edddb2d9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43531777"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44036083"
 ---
 # <a name="advanced-query-techniques-linq-to-xml-c"></a>Gelişmiş sorgu teknikleri (LINQ to XML) (C#)
 Bu bölümdeki örnekler, daha gelişmiş [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorgu teknikleri.  

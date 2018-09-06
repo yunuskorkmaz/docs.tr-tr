@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
 ms.openlocfilehash: 333154f26a575886f19a914ce2f91beebd6be49e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43742529"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042588"
 ---
 # <a name="table-valued-parameters"></a>Tablo değerli Parametreler
 Tablo değerli parametreler birden çok gidiş dönüş veya özel sunucu tarafı mantık verilerin işlenmesi için gerek kalmadan birden çok SQL Server için bir istemci uygulamasından veri satırı sıralama için kolay bir yol sağlar. Bir istemci uygulamasında veri satırı kapsüllemek ve tek bir Parametreli komutu sunucuda veri göndermek için tablo değerli parametreleri kullanabilirsiniz. Gelen veri satırları sonra üzerinde kullanarak işletilebilir bir tablo değişkeninde depolanan [!INCLUDE[tsql](../../../../../includes/tsql-md.md)].  

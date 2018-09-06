@@ -25,11 +25,11 @@ helpviewer_keywords:
 - modifier keys
 ms.assetid: 1e184048-0ae3-4067-a200-d4ba31dbc2cb
 ms.openlocfilehash: f73dea640bc2059353b2a250188b901f360ea750
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43736237"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44037275"
 ---
 # <a name="how-to-determine-which-modifier-key-was-pressed"></a>Nasıl yapılır: Hangi Değiştirici Tuşa Basıldığını Belirleme
 Kullanıcının tuş vuruşları kabul eden bir uygulama oluşturduğunuzda, anahtarları SHIFT, ALT ve CTRL gibi değiştirici tuşları izlemek isteyebilirsiniz. Fare tıklamasına veya diğer anahtarlar ile birlikte bir değiştirici tuşa basıldığında, uygulamanızı uygun şekilde yanıt verebilir. Örneğin, S harfi basıldığında, bu yalnızca "ekranında görünmesini s" neden olabilir, ancak CTRL + S tuşlarını basılı, geçerli belgede kaydedilmemiş olabilir. İşliyorsanız <xref:System.Windows.Forms.Control.KeyDown> olay <xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> özelliği <xref:System.Windows.Forms.KeyEventArgs> alınan olayı tarafından hangi değiştirici tuşları basılı işleyici belirtir. Alternatif olarak, <xref:System.Windows.Forms.KeyEventArgs.KeyData%2A> özelliği <xref:System.Windows.Forms.KeyEventArgs> da bir bit düzeyinde OR ile birleştirilmiş olarak tüm değiştirici tuşları basılan tuşun karakter belirtir. Ancak, işleniyorsa <xref:System.Windows.Forms.Control.KeyPress> veya bir fare olayın olay işleyicisi, bu bilgileri almaz. Bu durumda, kullanmalısınız <xref:System.Windows.Forms.Control.ModifierKeys%2A> özelliği <xref:System.Windows.Forms.Control> sınıfı. Her iki durumda da, uygun bir bit düzeyinde AND gerçekleştirmelidir <xref:System.Windows.Forms.Keys> ve test ettiğiniz değerleri. <xref:System.Windows.Forms.Keys> Numaralandırma çeşitlemeleri bit gerçekleştirmek önemlidir her değiştirici tuşa ve doğru değerle sunar. Örneğin, SHIFT tuşunu tarafından temsil edilen <xref:System.Windows.Forms.Keys.Shift>, <xref:System.Windows.Forms.Keys.ShiftKey>, <xref:System.Windows.Forms.Keys.RShiftKey> ve <xref:System.Windows.Forms.Keys.LShiftKey> SHIFT değiştirici tuşa olarak test etmek için doğru değeri <xref:System.Windows.Forms.Keys.Shift>. Benzer şekilde, DNTL ve ALT için değiştiriciler test etmek için kullanması gereken <xref:System.Windows.Forms.Keys.Control> ve <xref:System.Windows.Forms.Keys.Alt> değerler, sırasıyla.  

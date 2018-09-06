@@ -3,11 +3,11 @@ title: İşlem temelleri
 ms.date: 03/30/2017
 ms.assetid: 353f4ee2-e6bf-4b1c-b1c8-385fc8a486c0
 ms.openlocfilehash: 20bce37bb5d5aa1460570b1d39b54c2cb8a3362f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43555976"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44036658"
 ---
 # <a name="transaction-fundamentals"></a>İşlem temelleri
 İşlemler birden çok görevleri birbirine bağlayın. Örneğin, bir uygulama iki görevleri gerçekleştirir düşünün. İlk olarak, bir veritabanında yeni bir tablo oluşturur. Ardından, Topla, biçimlendirme ve yeni tabloya veri eklemek için özel bir nesne çağırır. Yeni bir tablo ile veri doldurun sürece oluşturmamaya özen gösterin istediğiniz şekilde bu iki görevleri ilgili ve hatta bağımlı. Her iki görevlerini tek bir işlem kapsamında yürütüyor onların arasındaki bağlantıyı zorlar. İkinci görev başarısız olursa, yeni bir tablo oluşturulmadan önce ilk görev bir noktaya geri alınır.  

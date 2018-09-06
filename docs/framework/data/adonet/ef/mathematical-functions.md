@@ -3,11 +3,11 @@ title: Matematik işlevleri
 ms.date: 03/30/2017
 ms.assetid: b040c7cb-156d-40f2-9152-61065b18148c
 ms.openlocfilehash: e6c58d781d7138f8295f2d0a2f0db110ad4b1dd6
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43801391"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44036603"
 ---
 # <a name="mathematical-functions"></a>Matematik işlevleri
 

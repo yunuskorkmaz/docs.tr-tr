@@ -5,11 +5,11 @@ helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
 ms.openlocfilehash: 07bc0e38455335e068719137c349daf65f8fab6b
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: HT
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 09/06/2018
-ms.locfileid: "43860291"
+ms.locfileid: "44042211"
 ---
 # <a name="using-delegates-c-programming-guide"></a>Temsilcileri Kullanma (C# Programlama Kılavuzu)
 A [temsilci](../../../csharp/language-reference/keywords/delegate.md) güvenli bir şekilde C ve C++ içindeki işlev işaretçisine benzer bir yöntem kapsülleyen bir türdür. C işlev işaretçilerinden farklı nesne yönelimli Temsilciler, korunmasına ve güvende yazın. Bir temsilci türü, temsilcinin adına göre tanımlanır. Aşağıdaki örnek bildirir adlandırılmış bir temsilci `Del` alan bir metodu kapsüllemek bir [dize](../../../csharp/language-reference/keywords/string.md) bağımsız değişken ve döndürür olarak [void](../../../csharp/language-reference/keywords/void.md):  

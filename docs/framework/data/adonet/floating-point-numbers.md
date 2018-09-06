@@ -3,11 +3,11 @@ title: Kayan nokta sayıları
 ms.date: 03/30/2017
 ms.assetid: 73c218c6-1c44-4402-a167-4f6262629a91
 ms.openlocfilehash: 2ab583a07c78cfa06ac597c369486f89e19ca66e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43466097"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042379"
 ---
 # <a name="floating-point-numbers"></a>Kayan nokta sayıları
 Bu konuda kayan nokta sayıları ile çalışırken, geliştiricilerin sık karşılaştığınız sorunları bazıları açıklanmaktadır [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. Bu sorunları şekilde bilgisayarları kayan nokta sayıları depolamak ve gibi belirli bir sağlayıcıya özgü olmayan neden olduğu <xref:System.Data.SqlClient> veya <xref:System.Data.OracleClient>.  

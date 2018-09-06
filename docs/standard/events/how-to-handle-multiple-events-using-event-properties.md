@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 30047cba-e2fd-41c6-b9ca-2ad7a49003db
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5a2dbde5df0f475b0bd7da4b022f11b82b257f40
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e16270fd900c1c786cfd74f484455481d91e5b52
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572872"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44039218"
 ---
 # <a name="how-to-handle-multiple-events-using-event-properties"></a>Nasıl yapılır: Olay Özelliklerini Kullanarak Birden Çok Olayı İşleme
 Olay özelliklerini kullanmak için olayları oluşturan sınıftaki olay özelliklerini tanımlayın ve ardından olayları işleyen sınıflardaki olay özellikleri için temsilcileri ayarlayın. Bir sınıfta birden çok olay özelliğini uygulamak amacıyla sınıfın, her bir olay için tanımlanan temsilciyi dahili olarak depolaması ve koruması gerekir. Bir olay anahtarı tarafından dizinlenen bir temsilci koleksiyonunun uygulanması tipik bir yaklaşımdır.  
@@ -50,8 +50,9 @@ Olay özelliklerini kullanmak için olayları oluşturan sınıftaki olay özell
  [!code-csharp[Conceptual.Events.Other#31](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.events.other/cs/example3.cs#31)]
  [!code-vb[Conceptual.Events.Other#31](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.events.other/vb/example3.vb#31)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ComponentModel.EventHandlerList?displayProperty=nameWithType>  
- [Olaylar](../../../docs/standard/events/index.md)  
- <xref:System.Web.UI.Control.Events%2A>  
- [Nasıl yapılır: Bellekten Kazanacak Şekilde Özel Olayları Bildirme](~/docs/visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- <xref:System.ComponentModel.EventHandlerList?displayProperty=nameWithType>  
+- [Olaylar](../../../docs/standard/events/index.md)  
+- <xref:System.Web.UI.Control.Events%2A>  
+- [Nasıl yapılır: Bellekten Kazanacak Şekilde Özel Olayları Bildirme](~/docs/visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)

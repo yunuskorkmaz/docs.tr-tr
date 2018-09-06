@@ -11,11 +11,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Key attribute
 ms.assetid: 1985cd45-f197-42d5-b75e-886add64b248
 ms.openlocfilehash: f77f0a952224f79ee95a755cb848a4f8b68c9602
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43723519"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44036502"
 ---
 # <a name="xkey-directive"></a>x:Key Yönergesi
 Oluşturulan ve XAML tanımlı bir sözlükte başvurulan öğeleri benzersiz olarak tanımlar. Ekleme bir `x:Key` değerdir XAML nesnesi öğesine örneğin WPF içindeki bir kaynak sözlüğünde bir kaynağı tanımlamak için en yaygın yolu <xref:System.Windows.ResourceDictionary>.  

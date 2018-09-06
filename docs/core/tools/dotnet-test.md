@@ -4,12 +4,12 @@ description: Dotnet testi komut, belirli bir projede birim testleri yürütmek i
 author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 2bee78ca44026f28c51fac3bcf87d976b53e48a7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7946196b27489870da1c16b15cbf5f078ae89c61
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529725"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44038169"
 ---
 # <a name="dotnet-test"></a>DotNet testi
 
@@ -251,6 +251,10 @@ Geçerli dizindeki projedeki Testleri Çalıştır:
 Testleri çalıştırmak `test1` proje:
 
 `dotnet test ~/projects/test1/test1.csproj`
+
+Geçerli dizindeki projedeki testleri çalıştırmak ve trx biçiminde bir test sonuçları dosyası oluşturun:
+
+`dotnet test --logger:trx`
 
 ## <a name="filter-option-details"></a>Filtre seçeneği ayrıntıları
 

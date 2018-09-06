@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 5a70dd49-ab2a-4798-b551-196ee7042b1a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a7aa2a8e5d9695c08d1c98e05cdd1eaa4d9a5318
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 82e4ed0f93d7c41bc36427159442cc88b0a7867d
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580916"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44038841"
 ---
 # <a name="how-to-write-a-custom-plinq-aggregate-function"></a>Nasıl Yapılır: Özel Bir PLINQ Toplama İşlevi Yazma
-Bu örnek nasıl kullanılacağını gösterir <xref:System.Linq.ParallelEnumerable.Aggregate%2A> yöntemi bir özel toplama işlevi için kaynak sıradaki uygular.  
+Bu örnek nasıl kullanılacağını gösterir <xref:System.Linq.ParallelEnumerable.Aggregate%2A> yöntemi bir kaynak dizisi için bir özel toplama işlevi uygular.  
   
 > [!WARNING]
->  Bu örnek kullanım göstermeye yöneliktir ve eşdeğer sıralı LINQ daha hızlı nesneleri sorguya çalışmayabilir. Speedup hakkında daha fazla bilgi için bkz: [Plınq'te hızlandırmayı anlama](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
+>  Bu örnek, kullanımını göstermek için tasarlanmıştır ve nesneleri sorgu için eşdeğer sıralı LINQ daha hızlı çalışmayabilir. Hızlandırmayı hakkında daha fazla bilgi için bkz: [plınq'te hızlandırmayı anlama](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, tamsayı bir dizi standart sapmayı hesaplar.  
@@ -29,10 +29,11 @@ Bu örnek nasıl kullanılacağını gösterir <xref:System.Linq.ParallelEnumera
  [!code-csharp[PLINQ#31](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#31)]
  [!code-vb[PLINQ#31](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#31)]  
   
- Bu örnek bir aşırı yüklemesini PLINQ için benzersizdir toplama standart sorgu işleci kullanır. Bu aşırı fazladan alır <xref:System.Func%603?displayProperty=nameWithType> üçüncü giriş parametresi olarak. Toplanan sonuçlarına son hesaplama gerçekleştirmeden önce bu temsilci tüm iş parçacıklarının gelen sonuçları birleştirir. Bu örnekte, biz birlikte tüm iş parçacıklarının SUM'ları ekleyin.  
+ Bu örnekte, bir PLINQ için benzersiz olan toplama standart sorgu işleci aşırı yüklemesi kullanılır. Bu aşırı ek alan <xref:System.Func%603?displayProperty=nameWithType> üçüncü giriş parametresi olarak. Toplu sonuçları son hesaplama gerçekleştirmeden önce bu temsilci tüm iş parçacıklarının sonuçları birleştirir. Bu örnekte biz birlikte tüm iş parçacıklarından SUM'ları ekleyin.  
   
- Lambda ifadesi gövdesi tek bir ifade, dönüş değerini oluşuyorsa unutmayın <xref:System.Func%602?displayProperty=nameWithType> temsilci ifade değerdir.  
+ Bir lambda ifadesi gövdesi, dönüş değeri gibi tek bir ifade oluşuyorsa unutmayın <xref:System.Func%602?displayProperty=nameWithType> ifadenin değerini temsilcisidir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Linq.ParallelEnumerable>  
- [Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- <xref:System.Linq.ParallelEnumerable>  
+- [Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

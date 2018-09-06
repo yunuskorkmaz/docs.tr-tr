@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 40494916-c25a-4cb8-8f7c-fcb8d378464e
 ms.openlocfilehash: ed5ae1cbab40b57676219ffbe7d1d5696ac3bec4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43733189"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44037444"
 ---
 # <a name="executing-a-command"></a>Komut yürütme
 Devralınan kendi komut nesnesi .NET Framework ile birlikte dahil edilen her .NET Framework veri sağlayıcısı olan <xref:System.Data.Common.DbCommand>. OLE DB için .NET Framework Veri Sağlayıcısı'nı içeren bir <xref:System.Data.OleDb.OleDbCommand> nesnesi, SQL Server için .NET Framework veri sağlayıcısı içerir bir <xref:System.Data.SqlClient.SqlCommand> nesnesi, ODBC için .NET Framework veri sağlayıcısı içerir bir <xref:System.Data.Odbc.OdbcCommand> nesne ve .NET Framework Oracle için veri sağlayıcısı'nı içeren bir <xref:System.Data.OracleClient.OracleCommand> nesne. Komutları yürütmek bu nesneleri kullanıma sunan yöntemlerin her biri, komut türüne göre ve dönüş değeri, aşağıdaki tabloda açıklandığı gibi gerekli.  

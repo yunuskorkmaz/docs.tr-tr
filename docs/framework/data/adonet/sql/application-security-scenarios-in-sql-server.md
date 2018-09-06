@@ -3,11 +3,11 @@ title: SQL Server'da uygulama güvenliği senaryoları
 ms.date: 03/30/2017
 ms.assetid: 0164f3a4-406e-4693-bec3-03c8e18b46d7
 ms.openlocfilehash: bf4f4adfd5f49bd210026e40bd5fa4e67da10d75
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43777814"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43892288"
 ---
 # <a name="application-security-scenarios-in-sql-server"></a>SQL Server'da uygulama güvenliği senaryoları
 Güvenli bir SQL Server istemci uygulaması oluşturmak için tek bir doğru yolu yoktur. Her uygulamanın kendi gereksinimler, dağıtım ortamı ve kullanıcı kitlesiyle benzersizdir. Başlangıçta dağıtıldığında, makul güvenli bir uygulama, zaman içinde daha az güvenli hale gelebilir. Hangi tehditleri gelecekte ortaya çıkan herhangi doğrulukla tahmin etmek mümkün değildir.  

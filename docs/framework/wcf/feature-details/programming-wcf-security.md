@@ -10,11 +10,11 @@ ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 1a58260ecf5a4126554c23f1a5f8d7b3ba43f215
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43553053"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43891629"
 ---
 # <a name="programming-wcf-security"></a>WCF Güvenliğini Programlama
 Bu konu, güvenli bir Windows Communication Foundation (WCF) uygulaması oluşturmak için kullanılan temel programlama görevlerini açıklar. Bu konu, yalnızca kimlik doğrulaması, gizliliği ve bütünlük, toplu olarak bilinen içermektedir *aktarım güvenliği*. Bu konuda, yetkilendirme (kaynaklarına veya hizmetlerine erişim denetimi); içermez Yetkilendirme hakkında daha fazla bilgi için bkz: [yetkilendirme](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
 ms.openlocfilehash: c617b2d7b56618867fe92cbe1d9ee04aa4c3ab64
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43661288"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44035937"
 ---
 # <a name="c-features-that-support-linq"></a>LINQ'i Destekleyen C# Özellikleri
 Aşağıdaki bölümde, C# 3.0 sürümünde sunulan yeni dil yapıları sunar. Bu yeni özelliklerin tümünü bir dereceye kullanılsa [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgular olmadıkları için sınırlı [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] ve burada, bunları kullanışlı her bağlamda kullanılabilir.  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 3d4d0cd3-bde4-490b-99e7-f4e41be96455
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 326fce55b13217bd08e58bf13a423fc9b6ffcbff
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1fe7edffd53023cba6dac1454e620d6e0d7e9513
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514508"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43891739"
 ---
 # <a name="parallel-linq-plinq"></a>Paralel LINQ (PLINQ)
 Paralel LINQ (PLINQ) bir paralel LINQ to Objects'in uygulamasıdır. PLINQ için genişletme yöntemleri olarak LINQ standart sorgu işleçlerinin tam kümesini uygular <xref:System.Linq> ad alanı ve paralel işlemler için ek işleçler. PLINQ'nun paralel programlama gücüyle basitliği ve LINQ söz dizimi okunabilirliğini birleştirir. Kod gibi ana bilgisayar becerilerine dayalı eşzamanlılık derecesini, PLINQ sorguları hedefleyen görev paralel kitaplığı ölçeklendirin.  
@@ -50,7 +50,8 @@ Paralel LINQ (PLINQ) bir paralel LINQ to Objects'in uygulamasıdır. PLINQ için
   
  [PLINQ Veri Örneği](../../../docs/standard/parallel-programming/plinq-data-sample.md)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Linq.ParallelEnumerable>  
- [Paralel Programlama](../../../docs/standard/parallel-programming/index.md)  
- [LINQ (dil ile tümleşik sorgu)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- <xref:System.Linq.ParallelEnumerable>  
+- [Paralel Programlama](../../../docs/standard/parallel-programming/index.md)  
+- [LINQ (dil ile tümleşik sorgu)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)

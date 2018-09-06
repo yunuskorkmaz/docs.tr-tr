@@ -1,5 +1,5 @@
 ---
-title: 'Komut dosyası stil XSLT kullanarak &lt;msxsl: Script&gt;'
+title: 'XSLT stil sayfası komut dosyalarını kullanarak &lt;msxsl: Script&gt;'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,20 +8,20 @@ dev_langs:
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5b1fb13e33f759c44e090a9294548c224e10344e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 68c98b3b4effbe7cea1a3c4443d2222e6bbcd43c
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577182"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44036138"
 ---
-# <a name="xslt-stylesheet-scripting-using-ltmsxslscriptgt"></a>Komut dosyası stil XSLT kullanarak &lt;msxsl: Script&gt;
-<xref:System.Xml.Xsl.XslTransform> Sınıfı destekler kullanarak katıştırılmış komut dosyası `script` öğesi.  
+# <a name="xslt-stylesheet-scripting-using-ltmsxslscriptgt"></a>XSLT stil sayfası komut dosyalarını kullanarak &lt;msxsl: Script&gt;
+<xref:System.Xml.Xsl.XslTransform> Sınıfı destekler kullanarak katıştırılmış betik `script` öğesi.  
   
 > [!NOTE]
->  <xref:System.Xml.Xsl.XslTransform> Sınıftır'te eski [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. Genişletilebilir Stil sayfası dili kullanarak Dönüşümleri (XSLT) dönüştürmeleri için gerçekleştirebilirsiniz <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı. Bkz: [XslCompiledTransform sınıfını kullanarak](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) ve [çok sınıfı geçirme](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) daha fazla bilgi için.  
+>  <xref:System.Xml.Xsl.XslTransform> Sınıftır eski [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. Genişletilebilir Stil Sayfası Dil Dönüşümleri (XSLT) dönüştürmeleri için kullanarak gerçekleştirebileceğiniz <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı. Bkz: [XslCompiledTransform sınıfını kullanma](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) ve [geçirme gelen XslTransform sınıfı](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) daha fazla bilgi için.  
   
- <xref:System.Xml.Xsl.XslTransform> Sınıfı destekler kullanarak katıştırılmış komut dosyası `script` öğesi. Stil sayfası yüklendiğinde, tanımlı hiçbir işlev Microsoft Ara dili (MSIL) bir sınıf tanımı Sarmalanan tarafından derlenir ve performans kaybı sonuç olarak sahip.  
+ <xref:System.Xml.Xsl.XslTransform> Sınıfı destekler kullanarak katıştırılmış betik `script` öğesi. Stil sayfası yüklendiğinde, herhangi bir tanımlı işlevlere Microsoft Ara dili (MSIL) bir sınıf tanımı içinde sarmalanmış tarafından derlenir ve sonuç olarak performans kaybı olmadan sahip.  
   
  `<msxsl:script>` Öğesi aşağıda tanımlanmıştır:  
   
@@ -31,23 +31,23 @@ ms.locfileid: "33577182"
   
  Burada `msxsl` bir önek ad alanına bağlı `urn:schemas-microsoft-com:xslt`.  
   
- `language` Özniteliği zorunlu değildir, ancak belirtildiyse, değeri şunlardan biri olmalıdır: C#, VB, JScript, JavaScript, Visualbasic'tir veya CSharp. Belirtilmezse, dil için JScript varsayılan olur. `language-name` 'JavaScript' ve 'javascript' eşdeğer; bu nedenle, küçük harf duyarlıdır değil.  
+ `language` Özniteliği zorunlu değildir, ancak belirtilirse, değeri aşağıdakilerden biri olmalıdır: C#, VB, JScript, JavaScript, VisualBasic veya CSharp. Belirtilmezse, dil için JScript Varsayılanları. `language-name` 'JavaScript' ve 'javascript' eşdeğer olacak şekilde duyarlı değildir.  
   
- `implements-prefix` Özniteliği zorunludur. Bu öznitelik, bir ad alanı bildirimini ve betik bloğu ile ilişkilendirmek için kullanılır. Bu özniteliğin değeri ad alanını temsil eden önekidir. Bu ad, herhangi bir yerde bir stil sayfanızda tanımlanabilir.  
+ `implements-prefix` Özniteliği zorunludur. Bu öznitelik, bir ad alanı bildirin ve komut dosyası bloğu ile ilişkilendirmek için kullanılır. Bu özniteliğin değeri ad alanını temsil eden önekidir. Bu ad herhangi bir yerde bir stil sayfası içinde tanımlanabilir.  
   
- Çünkü `msxsl:script` öğenin ait olduğu ad alanına `urn:schemas-microsoft-com:xslt`, stil sayfası ad alanı bildirimi içermelidir `xmlns:msxsl=urn:schemas-microsoft-com:xslt`.  
+ Çünkü `msxsl:script` öğenin ait olduğu ad alanına `urn:schemas-microsoft-com:xslt`, stil sayfası, ad alanı bildirimi içermelidir `xmlns:msxsl=urn:schemas-microsoft-com:xslt`.  
   
- Komut dosyasını çağıran yoksa <xref:System.Security.Permissions.SecurityPermissionFlag> erişim izni, stil sayfasında komut dosyası hiçbir zaman derleme sonra ve çağrısı <xref:System.Xml.Xsl.XslTransform.Load%2A> başarısız olur.  
+ Komut dosyasını çağıran yoksa <xref:System.Security.Permissions.SecurityPermissionFlag> bir stil sayfası betik hiçbir zaman derleyeceği sonra erişim izni ve çağrısı <xref:System.Xml.Xsl.XslTransform.Load%2A> başarısız olur.  
   
- Arayan varsa `UnmanagedCode` izni, komut dosyasını derler, ancak izin verilen işlemler, yükleme zamanında sağlanan kanıt bağlıdır.  
+ Çağıranın varsa `UnmanagedCode` izni, kod derlenir, ancak izin verilen işlemler yükleme zamanında sağlanan kanıt bağlıdır.  
   
- Aşağıdakilerden birini kullanıyorsanız, <xref:System.Xml.Xsl.XslTransform.Load%2A> ele yöntemleri bir <xref:System.Xml.XmlReader> veya <xref:System.Xml.XPath.XPathNavigator> stil sayfası yüklemek için kullanmanız gerekir <xref:System.Xml.Xsl.XslTransform.Load%2A> alan aşırı bir <xref:System.Security.Policy.Evidence> parametre bağımsız değişkenlerinden biri olarak. Kanıt için arayan olmalıdır <xref:System.Security.Permissions.SecurityPermissionFlag> tedarik izni `Evidence` komut dosyası derleme için. Çağıranın bu izne sahip değil sonra ayarlayabilirsiniz `Evidence` parametresi `null`. Bu neden <xref:System.Xml.Xsl.XslTransform.Load%2A> komut dosyası bulursa, başarısız işlev. `ControlEvidence` İzni yalnızca yüksek oranda güvenilir kodu verilmelidir çok güçlü bir izin olarak kabul edilir.  
+ Aşağıdakilerden birini kullanıyorsanız <xref:System.Xml.Xsl.XslTransform.Load%2A> ele yöntemleri bir <xref:System.Xml.XmlReader> veya <xref:System.Xml.XPath.XPathNavigator> stil sayfası yüklemek için kullanmanız gerekir <xref:System.Xml.Xsl.XslTransform.Load%2A> alan aşırı yüklemesini bir <xref:System.Security.Policy.Evidence> parametre bağımsız değişkenlerinden biri olarak. Kanıt sağlamak için çağıranın olmalıdır <xref:System.Security.Permissions.SecurityPermissionFlag> izin vermesini `Evidence` betik derleme için. Çağıranın bu izni yok. ardından ayarlayabilirler `Evidence` parametresi `null`. Bu neden <xref:System.Xml.Xsl.XslTransform.Load%2A> betik bulursa başarısız işlev. `ControlEvidence` İzni yüksek derecede güvenilen koda verilen yalnızca çok güçlü bir izin olarak kabul edilir.  
   
- Kanıt, derlemesinden almak için `this.GetType().Assembly.Evidence`. Bir Tekdüzen Kaynak Tanımlayıcısı (URI) gelen kanıt almak için `Evidence e = XmlSecureResolver.CreateEvidenceForUrl(stylesheetURI)`.  
+ Kanıt derlemenizden almak için kullanın `this.GetType().Assembly.Evidence`. Bir Tekdüzen Kaynak Tanımlayıcısı (URI) öğesinden kanıt sağlamak için kullanın `Evidence e = XmlSecureResolver.CreateEvidenceForUrl(stylesheetURI)`.  
   
- Kullanırsanız <xref:System.Xml.Xsl.XslTransform.Load%2A> ele yöntemleri bir <xref:System.Xml.XmlResolver> ancak hiçbir `Evidence`, güvenlik bölgesi derleme için varsayılan olarak tam güven. Daha fazla bilgi için bkz: <xref:System.Security.SecurityZone> ve [adlandırılmış izin kümeleri](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).  
+ Kullanırsanız <xref:System.Xml.Xsl.XslTransform.Load%2A> ele yöntemleri bir <xref:System.Xml.XmlResolver> ancak hiçbir `Evidence`, derleme için güvenlik bölgesi varsayılan olarak tam güven için. Daha fazla bilgi için <xref:System.Security.SecurityZone> ve [adlandırılmış izin kümeleri](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).  
   
- İşlevler içinde bildirilebilir `msxsl:script` öğesi. Aşağıdaki tabloda, varsayılan olarak desteklenen ad alanlarını gösterir. Listelenen ad alanlarını dışında sınıflarını kullanabilirsiniz. Ancak, bu sınıfların tam olarak nitelenmiş olmalıdır.  
+ İşlevler içinde bildirilebilir `msxsl:script` öğesi. Aşağıdaki tabloda, varsayılan olarak desteklenen ad alanlarını gösterir. Listelenen ad alanlarını dışında sınıfları kullanabilirsiniz. Ancak, bu sınıflar, tam olarak nitelenmiş olmalıdır.  
   
 |Varsayılan ad alanları|Açıklama|  
 |------------------------|-----------------|  
@@ -57,14 +57,14 @@ ms.locfileid: "33577182"
 |System.Text.RegularExpressions|Normal ifade sınıfları.|  
 |System.Xml|Çekirdek XML sınıfları.|  
 |System.Xml.Xsl|XSLT sınıflar.|  
-|System.Xml.XPath|XML Path dili (XPath) sınıfları.|  
-|Microsoft.VisualBasic|Microsoft Visual Basic komut dosyası için sınıflar.|  
+|System.Xml.XPath|XML Path Language (XPath) sınıflar.|  
+|Microsoft.VisualBasic|Microsoft Visual Basic komut dosyası için sınıflar sağlar.|  
   
- Bir işlev bildirirken bir betik bloğu içinde yer alır. Stil sayfaları, birden çok komut dosyası blokları, diğerinden bağımsız çalışan her içerebilir. Bir komut dosyası bloğunun içine çalıştırıldığında, aynı ad ve aynı komut dosyası dili bildirilir sürece, başka bir betik bloğu içinde tanımlanan bir işlev çağıramazsınız anlamına gelir. Her komut dosyası bloğunun kendi dilde olabilir ve bu dil Ayrıştırıcıyı dilbilgisi kurallarına göre blok ayrıştırılır olduğundan, kullanılan dil için doğru sözdizimini kullanmanız gerekir. C# betik bloğunda varsa, örneğin, ardından bir XML açıklama düğümü kullanılacak hatadır `<!-- an XML comment -->` bloğundaki.  
+ Bildirilen bir işlev, bir komut dosyası bloğu içinde yer alır. Stil sayfaları, birden çok komut dosyası blokları, diğerinden bağımsız çalışan her içerebilir. Bir betik bloğu içinde yürütülen, aynı ad ve aynı komut dosyası dili bildirildiği sürece başka bir betik bloğu içinde tanımlanan bir işlev çağrısı yapamazsınız anlamına gelir. Çünkü her betik bloğu kendi dilinde olabilir ve blok o dil ayrıştırıcı dilbilgisi kurallara göre ayrıştırılır kullanılan dilin doğru sözdizimini kullanmanız gerekir. Bir C# betik bloğu içinde varsa, örneğin, bir XML açıklama düğümü kullanmak için bir hata ise `<!-- an XML comment -->` bloğundaki.  
   
- Sağlanan bağımsız değişkenler ve dönüş değerleri komut dosyası işlevleri tarafından tanımlanan World Wide Web Konsorsiyumu (W3C) XPath veya XSLT türlerinden biri olması gerekir. Aşağıdaki tabloda W3C türleri karşılık gelen gösterir (tür) eşdeğer .NET Framework sınıfları ve W3C türü olup olmadığını bir XPath türü veya XSLT türü.  
+ Sağlanan bağımsız değişkenler ve dönüş değerleri betik işlevleri tarafından tanımlanan World Wide Web Consortium (W3C) XPath veya XSLT türlerinden biri olması gerekir. Aşağıdaki tablo W3C türleri karşılık gelen gösterir (tür) eşdeğeri .NET Framework sınıfları ve W3C türü olup olmadığını bir XPath türü veya XSLT türü.  
   
-|Tür|Eşdeğer .NET Framework sınıf (tür)|XPath türü veya XSLT türü|  
+|Tür|Eşdeğeri .NET Framework sınıfı (tür)|XPath türü veya XSLT türü|  
 |----------|----------------------------------------------|-----------------------------|  
 |Dize|System.String|XPath|  
 |Boole değeri|System.Boolean|XPath|  
@@ -72,11 +72,11 @@ ms.locfileid: "33577182"
 |Sonuç ağacı parçası|System.Xml.XPath.XPathNavigator|XSLT|  
 |Düğüm kümesi|System.Xml.XPath.XPathNodeIterator|XPath|  
   
- Betik işlevi aşağıdaki sayısal türlerinden birini kullanır,: Int16, UInt16, Int32, UInt32, Int64, UInt64, tek veya ondalık, bunlar zorunlu için çift, hangi W3C XPath türü sayıya eşler. Tüm diğer türleri çağırarak bir dizeye zorlanır `ToString` yöntemi.  
+ Betik işlevi aşağıdaki sayısal türlerinden birini kullanır,: Int16, Uınt16, Int32, Uınt32, Int64, UInt64, tek veya ondalık, bunlar zorunlu için çift, hangi W3C XPath türü sayıya eşler. Diğer tüm türlerin bir dizeye çağırarak zorlanır `ToString` yöntemi.  
   
- Yukarıda belirtilen dışındaki bir türü betik işlevi kullanır veya işlev derlenmez varsa ne zaman stil sayfası yüklendiği içine <xref:System.Xml.Xsl.XslTransform> nesnesi, bir özel durum oluşur.  
+ Betik işlevi kullanır yukarıda belirtenlere dışında bir tür veya işlev derlenemiyor varsa, stil sayfası yüklenir içine <xref:System.Xml.Xsl.XslTransform> nesnesi, bir özel durum harekete geçirilir.  
   
- Kullanırken `msxsl:script` öğesi, kesinlikle önerilir dil, bağımsız olarak komut içinde CDATA bölümü yerleştirilmesi. Örneğin, aşağıdaki XML kodunuzu nereye yerleştirileceğini CDATA bölümünün şablonu gösterir.  
+ Kullanırken `msxsl:script` öğesi kesinlikle önerilir dili ne olursa olsun kodun içindeki CDATA bölümüne yerleştirilmesi. Örneğin, aşağıdaki XML kodunuzu nereye yerleştirileceğini CDATA bölümü şablonunu gösterir.  
   
 ```xml  
 <msxsl:script implements-prefix='yourprefix' language='CSharp'>  
@@ -86,7 +86,7 @@ ms.locfileid: "33577182"
 </msxsl:script>  
 ```  
   
- Operatörler, tanımlayıcılar ya da belirli bir dil için sınırlayıcılar XML olarak yanlış yorumlayan olası olduğundan tüm betik içeriği CDATA bölümünde yerleştirilmesi önerilir. Aşağıdaki örnek komut dosyasında mantıksal ve işlecini kullanımını göstermektedir.  
+ Operatörler, tanımlayıcılar ya da belirli bir dil için sınırlayıcılar XML olarak yanlış olası olduğundan tüm betik içeriği bir CDATA bölümde yerleştirilmesi önerilir. Aşağıdaki örnek komut dosyasında mantıksal AND işlecinin kullanımını gösterir.  
   
 ```xml  
 <msxsl:script implements-prefix='yourprefix' language='CSharp>  
@@ -97,10 +97,10 @@ ms.locfileid: "33577182"
 </msxsl:script>  
 ```  
   
- Ve işaretlerini kaçışlı değil çünkü bu bir özel durum oluşturur. Belge XML olarak yüklenir ve özel bir işlemden arasındaki metni uygulanan `msxsl:script` öğe etiketleri.  
+ Bu, kodlarına kaçış için özel durum oluşturur. Belge XML olarak yüklenir ve hiçbir özel olarak değerlendirilmesi arasındaki metni uygulanan `msxsl:script` öğesi etiketleri.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek komut dosyası katıştırılmış kendi RADIUS verilen dairenin çevresi hesaplamak için kullanır.  
+ Aşağıdaki örnek bir katıştırılmış betik, RADIUS verilmiş bir daire çevresi hesaplamak için kullanır.  
   
 ```vb  
 Imports System  
@@ -229,5 +229,6 @@ public class Sample
 </circles>    
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [XslTransform Sınıfı XSLT İşlemcisini Uygular](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [XslTransform Sınıfı XSLT İşlemcisini Uygular](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

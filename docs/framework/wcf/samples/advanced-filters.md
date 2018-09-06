@@ -3,11 +3,11 @@ title: Gelişmiş Filtreler
 ms.date: 03/30/2017
 ms.assetid: 8d81590f-e036-4f96-824a-4a187f462764
 ms.openlocfilehash: 7022384e8abe93f4276eec48785b3243ed926438
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: HT
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43805448"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042601"
 ---
 # <a name="advanced-filters"></a>Gelişmiş Filtreler
 Bu örnek, bir Windows Communication Foundation (WCF) yönlendirme hizmeti gösterir. Yönlendirme hizmeti, içerik tabanlı bir yönlendirici uygulamanıza dahil etmek kolay bir WCF bileşenidir. Bu örnek, yönlendirme hizmeti kullanarak iletişim kurmak için standart WCF hesaplayıcı örnek uyum sağlar. Bu örnek, içerik tabanlı yönlendirme mantığı kullanarak ileti filtreleri ve İleti Filtresi tabloları tanımlama gösterir.  

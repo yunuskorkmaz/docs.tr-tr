@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: öğeleri (C#) sıralama'
 ms.date: 07/20/2015
 ms.assetid: aee6fbbc-81fd-4b3e-b40f-6ed7b3bd3fee
 ms.openlocfilehash: 7548f183736ac9ed0ed09d3be775b3ffde6cb255
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43801118"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042614"
 ---
 # <a name="how-to-sort-elements-c"></a>Nasıl yapılır: öğeleri (C#) sıralama
 Bu örnek, sonuçları sıralayan sorgu yazma işlemi gösterilmektedir.  

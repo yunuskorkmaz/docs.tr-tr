@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f414e5b0463e28427c8c60e2f8b8774ad6973da2
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 2933d574b387ec0f444883bbafb41f602bc5dcc0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43773676"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44036307"
 ---
 # <a name="data-parallelism-task-parallel-library"></a>Veri Paralelliği (Görev Paralel Kitaplığı)
 *Veri paralelliği* senaryoları için aynı işlem gerçekleştirilir eşzamanlı olarak başvurur (diğer bir deyişle, içinde paralel) öğelerinde bir kaynak koleksiyonu veya dizi. Birden çok iş parçacığı üzerinde farklı segmentlere eşzamanlı olarak çalışabilir, böylece veri paralel işlemleri, kaynak koleksiyonu bölümlenir.  
@@ -53,5 +53,6 @@ ms.locfileid: "43773676"
 |[Görev Paralel Kitaplığı (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|Görev paralel kitaplığı genel bir bakış sağlar.|  
 |[Paralel Programlama](../../../docs/standard/parallel-programming/index.md)|.NET Framework'te paralel programlama tanıtır.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Paralel Programlama](../../../docs/standard/parallel-programming/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Paralel Programlama](../../../docs/standard/parallel-programming/index.md)

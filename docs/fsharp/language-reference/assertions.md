@@ -1,17 +1,17 @@
 ---
 title: Onaylamalar (F#)
-description: "'Onay' ifadesi ifadeleri F # programlama dili test etmek için hata ayıklama bir özellik olarak kullanmayı öğrenin."
+description: "'Onay' ifadesi, ifadeler F # programlama dilinin test etmek için bir hata ayıklama özelliği olarak kullanmayı öğrenin."
 ms.date: 05/16/2016
-ms.openlocfilehash: 83e6cd77bbbb2c32e9b778e5bf6dd9d2e9c8fe32
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 85b1e839bfd19bada48b7f1821d15ddd8fa77754
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563152"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44032133"
 ---
 # <a name="assertions"></a>Onaylamalar
 
-`assert` İfadesidir bir ifade test etmek için kullanabileceğiniz bir hata ayıklama özelliği. Hata ayıklama modunda başarısızlık durumunda, bir onaylama sistem hata iletişim kutusu oluşturur.
+`assert` Bir ifade test etmek için kullanabileceğiniz bir hata ayıklama özelliği ifadesidir. Hata ayıklama modunda başarısızlık durumunda, bir sistem hatası iletişim kutusu bir onay oluşturur.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -23,21 +23,21 @@ assert condition
 
 `assert` İfade türüne sahip `bool -> unit`.
 
-Önceki sözdiziminde *koşulu* test edilmesi için bir Boole ifadesini temsil eder. İfade değerlendirilirse `true`, yürütülmeye etkilenmez. Değerlendirilirse `false`, bir sistem hatası iletişim kutusu oluşturulur. Hata iletişim kutusu dizeyi içeren bir resim yazısını **onaylama başarısız**. İletişim kutusu onaylama hatası nerede oluştuğunu gösteren bir yığın izlemeyi içerir.
+Önceki sözdiziminde, *koşul* test edilecek bir Boole ifadesi temsil eder. İfade değerlendirme sonucu `true`, yürütme devam eder etkilenmez. Değerlendirilirse `false`, sistem hatası iletişim kutusu oluşturulur. Hata iletişim kutusu dize içeren bir başlığa sahip **onaylama işlemi başarısız oldu**. İletişim kutusu, onaylama işlemi hatası nerede oluştuğunu gösteren bir yığın izlemesi içerir.
 
-Yalnızca hata ayıklama modunda derlediğinizde, onaylama işlemi denetimi etkinleştirilir; diğer bir deyişle, sabit `DEBUG` tanımlanır. Varsayılan olarak, proje sisteminde `DEBUG` sabiti hata ayıklama yapılandırmasını ancak sürüm yapılandırmasında tanımlanır.
+Yalnızca, hata ayıklama modunda derleme yaptığınızda, onaylama işlemi denetimi etkinleştirilir; diğer bir deyişle, sabiti `DEBUG` tanımlanır. Varsayılan olarak, proje sistemi içindeki `DEBUG` sabiti, hata ayıklama yapılandırmasında ancak sürüm yapılandırmasını içinde tanımlanır.
 
-F # özel durum işleme kullanarak onaylama hata yakalandı olamaz.
+F # özel durum işlemeyi kullanarak, onaylama işlemi hatası yakalanamıyor.
 
 >[!NOTE]
 `assert` İşlevi çözümler için <xref:System.Diagnostics.Debug.Assert*?displayProperty=nameWithType>.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki kod örneğinde kullanımını göstermektedir `assert` ifade.
+Aşağıdaki kod örneği kullanışını `assert` ifade.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5401.fs)]
-    
-## <a name="see-also"></a>Ayrıca Bkz.
 
-[F# Dili Başvurusu](index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [F# Dili Başvurusu](index.md)

@@ -15,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: 5fcc75a5-09d7-45ae-a4c0-9ad6085ac83d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8d2d5bf67368e445123fce43afe07065a31b1f30
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e8c26608115a22a5402d671c5f5e51c75442a0a5
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568075"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44039640"
 ---
 # <a name="regular-expression-example-changing-date-formats"></a>Normal İfade Örneği: Tarih Biçimlerini Değiştirme
-Aşağıdaki kod örneğinde <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> formu tarihleri değiştirmek için yöntemi *mm*/*GG*/*yy* ile tarihleri Formun *GG*-*mm*-*yy*.  
+Aşağıdaki kod örneğinde <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> formu tarihleri yönteminin *mm*/*GG*/*yy* ile tarihleri Formun *GG*-*mm*-*yy*.  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[RegularExpressions.Examples.ChangeDateFormats#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.ChangeDateFormats/cs/Example_ChangeDateFormats1.cs#1)]
  [!code-vb[RegularExpressions.Examples.ChangeDateFormats#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.ChangeDateFormats/vb/Example_ChangeDateFormats1.vb#1)]  
   
- Aşağıdaki kodda gösterildiği nasıl `MDYToDMY` bir uygulamada yöntemi çağrılabilir.  
+ Aşağıdaki kodda gösterildiği nasıl `MDYToDMY` yöntemi, uygulamada çağrılabilir.  
   
  [!code-csharp[RegularExpressions.Examples.ChangeDateFormats#2](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.ChangeDateFormats/cs/Example_ChangeDateFormats1.cs#2)]
  [!code-vb[RegularExpressions.Examples.ChangeDateFormats#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.ChangeDateFormats/vb/Example_ChangeDateFormats1.vb#2)]  
@@ -40,22 +40,23 @@ Aşağıdaki kod örneğinde <xref:System.Text.RegularExpressions.Regex.Replace%
 |Desen|Açıklama|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında eşleşmeye başla.|  
-|`(?<month>\d{1,2})`|Bir veya iki ondalık basamak eşleşir. Bu `month` yakalanan grubu.|  
-|`/`|Eğik çizgi işareti eşleşir.|  
-|`(?<day>\d{1,2})`|Bir veya iki ondalık basamak eşleşir. Bu `day` yakalanan grubu.|  
-|`/`|Eğik çizgi işareti eşleşir.|  
-|`(?<year>\d{2,4})`|İki dört ondalık basamak eşleşir. Bu `year` yakalanan grubu.|  
+|`(?<month>\d{1,2})`|Bir veya iki ondalık basamağı eşleştirin. Bu `month` yakalanan grubu.|  
+|`/`|Eğik çizgi işareti eşleştirin.|  
+|`(?<day>\d{1,2})`|Bir veya iki ondalık basamağı eşleştirin. Bu `day` yakalanan grubu.|  
+|`/`|Eğik çizgi işareti eşleştirin.|  
+|`(?<year>\d{2,4})`|Dört ondalık basamak için ikisinden eşleştirin. Bu `year` yakalanan grubu.|  
 |`\b`|Eşlemeyi bir sözcük sınırında sonlandır.|  
   
- Desen `${day}-${month}-${year}` aşağıdaki tabloda gösterildiği gibi değiştirme dizesini tanımlar.  
+ Desen `${day}-${month}-${year}` değiştirme dizesi aşağıdaki tabloda gösterildiği gibi tanımlar.  
   
 |Desen|Açıklama|  
 |-------------|-----------------|  
-|`$(day)`|Tarafından yakalanan dizesi eklemek `day` Grup yakalama.|  
-|`-`|Bir tire ekleyin.|  
-|`$(month)`|Tarafından yakalanan dizesi eklemek `month` Grup yakalama.|  
-|`-`|Bir tire ekleyin.|  
-|`$(year)`|Tarafından yakalanan dizesi eklemek `year` Grup yakalama.|  
+|`$(day)`|Tarafından yakalanan dizesi eklemek `day` yakalama grubu.|  
+|`-`|Bir kısa çizgi ekleyin.|  
+|`$(month)`|Tarafından yakalanan dizesi eklemek `month` yakalama grubu.|  
+|`-`|Bir kısa çizgi ekleyin.|  
+|`$(year)`|Tarafından yakalanan dizesi eklemek `year` yakalama grubu.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [.NET normal ifadeler](../../../docs/standard/base-types/regular-expressions.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [.NET normal ifadeler](../../../docs/standard/base-types/regular-expressions.md)

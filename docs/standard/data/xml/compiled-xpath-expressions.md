@@ -8,22 +8,22 @@ dev_langs:
 ms.assetid: e25dd95f-b64c-4d8b-a3a4-379e1aa0ad55
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 80bee210b12c588163a3e11dfdab4dadda9ec0c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d7bb158331c1e03b18601dc553ed8ac0e8fa7930
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573808"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44041401"
 ---
 # <a name="compiled-xpath-expressions"></a>Derlenmiş XPath ifadeleri
-Bir <xref:System.Xml.XPath.XPathExpression> nesneyi temsil ediyor herhangi birinden statik döndürülen derlenmiş bir XPath sorgusu <xref:System.Xml.XPath.XPathExpression.Compile%2A> yöntemi <xref:System.Xml.XPath.XPathExpression> sınıfı veya <xref:System.Xml.XPath.XPathNavigator.Compile%2A> yöntemi <xref:System.Xml.XPath.XPathNavigator> sınıfı.  
+Bir <xref:System.Xml.XPath.XPathExpression> nesneyi temsil ediyor öğesinden döndürülen statik olarak derlenmiş bir XPath sorgusu <xref:System.Xml.XPath.XPathExpression.Compile%2A> yöntemi <xref:System.Xml.XPath.XPathExpression> sınıfı veya <xref:System.Xml.XPath.XPathNavigator.Compile%2A> yöntemi <xref:System.Xml.XPath.XPathNavigator> sınıfı.  
   
 ## <a name="the-xpathexpression-class"></a>XPathExpression sınıfı  
- Bir XPath sorgusu tarafından temsil edilen derlenmiş bir <xref:System.Xml.XPath.XPathExpression> nesnesidir aynı XPath sorgusu birden çok kez kullanılıyorsa yararlı.  
+ Bir XPath sorgusu tarafından temsil edilen derlenmiş bir <xref:System.Xml.XPath.XPathExpression> nesne, aynı XPath sorgusu birden çok kez kullanılıyorsa kullanışlıdır.  
   
- Örneğin, çağrılırken <xref:System.Xml.XPath.XPathNavigator.Select%2A> XPath sorgusu her zaman temsil eden bir dize kullanmak yerine, birden çok kez yöntemi kullanın <xref:System.Xml.XPath.XPathExpression.Compile%2A> yöntemi <xref:System.Xml.XPath.XPathExpression> sınıfı veya <xref:System.Xml.XPath.XPathNavigator.Compile%2A> yöntemi <xref:System.Xml.XPath.XPathNavigator> derlemek için sınıf ve XPath sorgusunda önbelleğe bir <xref:System.Xml.XPath.XPathExpression> yeniden ve performansı nesnesi.  
+ Örneğin, çağrılırken <xref:System.Xml.XPath.XPathNavigator.Select%2A> XPath sorgusu her zaman temsil eden bir dize kullanmak yerine, birden çok kez yöntemini kullanın <xref:System.Xml.XPath.XPathExpression.Compile%2A> yöntemi <xref:System.Xml.XPath.XPathExpression> sınıfı veya <xref:System.Xml.XPath.XPathNavigator.Compile%2A> yöntemi <xref:System.Xml.XPath.XPathNavigator> derlemek için sınıf ve XPath sorgusundaki önbelleğe bir <xref:System.Xml.XPath.XPathExpression> yeniden kullanımı ve performansı nesnesi.  
   
- Bir kez derlenmiş <xref:System.Xml.XPath.XPathExpression> nesnesi, aşağıdaki girdi olarak kullanılabilecek <xref:System.Xml.XPath.XPathNavigator> türüne bağlı olarak sınıfı yöntemleri XPath sorgudan döndürülen.  
+ Bir kez derlenmesinin sonra <xref:System.Xml.XPath.XPathExpression> nesne, aşağıdaki giriş olarak kullanılabilir <xref:System.Xml.XPath.XPathNavigator> türüne bağlı olarak sınıfı yöntemleri XPath sorgusundan döndürülen.  
   
 -   <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A?displayProperty=nameWithType>  
   
@@ -35,20 +35,20 @@ Bir <xref:System.Xml.XPath.XPathExpression> nesneyi temsil ediyor herhangi birin
   
 -   <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
   
- Aşağıdaki tabloda her W3C XPath dönüş türleri, kendi Microsoft .NET Framework Eşitlikleri ve ne açıklanmaktadır yöntemleri <xref:System.Xml.XPath.XPathExpression> nesnesi kullanılabilir ile dönüş türüne göre.  
+ Aşağıdaki tablo W3C XPath dönüş türleri, kendi Microsoft .NET Framework Eşitlikleri ve hangi açıklar yöntemleri <xref:System.Xml.XPath.XPathExpression> nesne kullanılabilir olan kendi dönüş türüne göre.  
   
 |W3C XPath dönüş türü|.NET framework eşdeğeri türü|Açıklama|Yöntemler|  
 |---------------------------|------------------------------------|-----------------|-------------|  
-|`Node set`|<xref:System.Xml.XPath.XPathNodeIterator>|Belge sırada oluşturulan çoğaltmaları olmadan düğümler sırasız bir koleksiyonu.|<xref:System.Xml.XPath.XPathNavigator.Select%2A> Veya <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
-|`Boolean`|<xref:System.Boolean>|A `true` veya `false` değeri.|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> Veya<br /><br /> <xref:System.Xml.XPath.XPathNavigator.Matches%2A>|  
+|`Node set`|<xref:System.Xml.XPath.XPathNodeIterator>|Belge sırada oluşturulan çoğaltmaları olmadan düğümler sırasız bir koleksiyonu.|<xref:System.Xml.XPath.XPathNavigator.Select%2A> veya <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
+|`Boolean`|<xref:System.Boolean>|A `true` veya `false` değeri.|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> veya<br /><br /> <xref:System.Xml.XPath.XPathNavigator.Matches%2A>|  
 |`Number`|<xref:System.Double>|Bir kayan noktalı sayı.|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
-|`String`|<xref:System.String>|UCS bir karakter dizisi.|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
+|`String`|<xref:System.String>|UCS karakter dizisi.|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
   
 > [!NOTE]
->  <xref:System.Xml.XPath.XPathNavigator.Matches%2A> Yöntemi bir XPath ifadesi, parametre olarak kabul eder. <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A> Yöntemi döndürür bir <xref:System.Xml.XPath.XPathNavigator> nesnesi, W3C XPath dönüş türleri birini değil.  
+>  <xref:System.Xml.XPath.XPathNavigator.Matches%2A> Yöntemi bir XPath ifadesi, parametre olarak kabul eder. <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A> Yöntemi döndürür bir <xref:System.Xml.XPath.XPathNavigator> nesnesi, W3C XPath dönüş türlerinden birine değil.  
   
 ### <a name="the-returntype-property"></a>ReturnType özelliği  
- İçine sorgu derlendikten sonra XPath bir <xref:System.Xml.XPath.XPathExpression> nesne kullanabileceğiniz <xref:System.Xml.XPath.XPathExpression.ReturnType%2A> özelliği <xref:System.Xml.XPath.XPathExpression> ne XPath sorgusu döndürür belirlemek için nesne.  
+ İçinde sorgu derlendikten sonra bir XPath bir <xref:System.Xml.XPath.XPathExpression> nesne kullanabileceğiniz <xref:System.Xml.XPath.XPathExpression.ReturnType%2A> özelliği <xref:System.Xml.XPath.XPathExpression> ne XPath sorgusu döndürür belirlemek için nesne.  
   
  <xref:System.Xml.XPath.XPathExpression.ReturnType%2A> Özelliği aşağıdakilerden birini döndürür <xref:System.Xml.XPath.XPathResultType> W3C XPath temsil eden numaralandırma değerlerinden dönüş türü.  
   
@@ -66,7 +66,7 @@ Bir <xref:System.Xml.XPath.XPathExpression> nesneyi temsil ediyor herhangi birin
   
 -   <xref:System.Xml.XPath.XPathResultType.String>  
   
- Aşağıdaki örnek kullanır <xref:System.Xml.XPath.XPathExpression> bir sayı ve kümeden bir düğümü döndürmek için nesne `books.xml` dosya. <xref:System.Xml.XPath.XPathExpression.ReturnType%2A> Her özellik <xref:System.Xml.XPath.XPathExpression> nesne sonuçlarından yanı sıra <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> ve <xref:System.Xml.XPath.XPathNavigator.Select%2A> yöntemleri konsoluna yazılır.  
+ Aşağıdaki örnekte <xref:System.Xml.XPath.XPathExpression> bir sayı ve bir düğümün kümeden döndürülecek nesne `books.xml` dosya. <xref:System.Xml.XPath.XPathExpression.ReturnType%2A> Her özellik <xref:System.Xml.XPath.XPathExpression> nesne sonuçlardan yanı sıra <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> ve <xref:System.Xml.XPath.XPathNavigator.Select%2A> yöntemleri konsoluna yazılır.  
   
 ```vb  
 Dim document As XPathDocument = New XPathDocument("books.xml")  
@@ -108,24 +108,25 @@ nodes.MoveNext();
 Console.WriteLine(nodes.Current.Value);  
 ```  
   
- Örnek alır `books.xml` dosya giriş olarak.  
+ Örnek alan `books.xml` dosya giriş olarak.  
   
  [!code-xml[XPathXMLExamples#1](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/books.xml#1)]  
   
 ### <a name="higher-performance-xpath-expressions"></a>Daha yüksek performans XPath ifadeleri  
- Daha iyi performans için sorgularınızda olası en belirgin XPath ifadesi kullanın. Örneğin, varsa `book` düğümdür alt düğümü `bookstore` düğümü ve `bookstore` düğümdür XPath ifadesini kullanarak bir XML belgesi en üstteki öğe `/bookstore/book` kullanmaktan daha hızlıdır `//book`. `//book` XPath ifadesi eşleşen düğümleri tanımlamak için XML ağaç kümedeki her düğüm tarama.  
+ Daha iyi performans için sorgularınızdaki olası en belirgin XPath ifadesi kullanın. Örneğin, varsa `book` düğümü olan bir alt düğüm `bookstore` düğüm ve `bookstore` düğümü olan XPath ifadesi kullanarak bir XML belgesi en üst öğesi `/bookstore/book` kullanmaktan daha hızlıdır `//book`. `//book` XPath ifadesi eşleşen düğümleri tanımlamak için XML ağacı kümedeki her düğüm tarayacaktır.  
   
- Ayrıca, düğüm tarafından sağlanan gezinti yöntemlerini kümelerini kullanma <xref:System.Xml.XPath.XPathNavigator> sınıfı tarafından sağlanan seçim yöntemlerini üzerinden geliştirilmiş performans sonuçlanabilir <xref:System.Xml.XPath.XPathNavigator> seçim kriterleri nerede basit durumlarda sınıfı. Geçerli düğüm ilk alt öğesini seçmeniz gerekir, örneğin, kullanılacak hızlıdır <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A> kullanımı çok yöntemi `child::*[1]` XPath ifadesi ve <xref:System.Xml.XPath.XPathNavigator.Select%2A> yöntemi.  
+ Ayrıca, düğüm tarafından sağlanan gezinme yöntemlerinden kümelerini kullanma <xref:System.Xml.XPath.XPathNavigator> sınıfı tarafından sağlanan seçim yöntemini üzerinden geliştirilmiş performans sonuçlanabilir <xref:System.Xml.XPath.XPathNavigator> sınıfı durumlarda, seçim ölçütü burada basittir. Geçerli düğümünün ilk alt seçmeniz gerekiyorsa, örneğin, kullanılacak daha hızlıdır <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A> kullanımı çok yöntemi `child::*[1]` XPath ifadesi ve <xref:System.Xml.XPath.XPathNavigator.Select%2A> yöntemi.  
   
- Düğüm hakkında daha fazla bilgi için gezinti yöntemlerini ayarlayın <xref:System.Xml.XPath.XPathNavigator> sınıfı için bkz: [düğüm kümesi Gezinti kullanarak XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md).  
+ Düğüm hakkında daha fazla bilgi için Gezinti yöntemleri Ayarla <xref:System.Xml.XPath.XPathNavigator> sınıfı [kullanarak düğüm kümesi Gezinti XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Xml.XmlDocument>  
- <xref:System.Xml.XPath.XPathDocument>  
- <xref:System.Xml.XPath.XPathNavigator>  
- [XPath Veri Modelini Kullanarak XML Verilerini İşleme](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
- [XPathNavigator Kullanarak XML Verileri Seçme](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)  
- [XPathNavigator Kullanarak XPath İfadelerini Değerlendirme](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)  
- [XPathNavigator Kullanarak Düğümleri Eşleştirme](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)  
- [XPath Sorguları ile Tanınan Düğüm Türleri](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)  
- [XPath Sorguları ve Ad Alanları](../../../../docs/standard/data/xml/xpath-queries-and-namespaces.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- <xref:System.Xml.XmlDocument>  
+- <xref:System.Xml.XPath.XPathDocument>  
+- <xref:System.Xml.XPath.XPathNavigator>  
+- [XPath Veri Modelini Kullanarak XML Verilerini İşleme](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
+- [XPathNavigator Kullanarak XML Verileri Seçme](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)  
+- [XPathNavigator Kullanarak XPath İfadelerini Değerlendirme](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)  
+- [XPathNavigator Kullanarak Düğümleri Eşleştirme](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)  
+- [XPath Sorguları ile Tanınan Düğüm Türleri](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)  
+- [XPath Sorguları ve Ad Alanları](../../../../docs/standard/data/xml/xpath-queries-and-namespaces.md)

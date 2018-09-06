@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: d2758ea1-03f6-47bd-88d2-0fb7ccdb2fab
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dd84702ea761f58fca88a8a72f6706f6cd439b7b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1e8bd2eaa977c9e3546758e9fd0e9fa3b4527634
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43541245"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44039841"
 ---
 # <a name="implementation-of-discretionary-behaviors-in-the-xsltransform-class"></a>XslTransform sınıfında isteğe bağlı davranışların
 
@@ -79,13 +79,13 @@ Bir XSLT işlemci uygulamak isteğe bağlıdır ve uygulanan özellikler aşağ�
 |-------------|------------------------|-----------|
 |`disable-output-escaping` özniteliği `<xsl:text...>` ve `<xsl:value-of...>` etiketler.|W3C XSLT 1.0 öneri,<br /><br /> Bölüm 16.4|`disable-output-escaping` Özniteliği göz ardı edilir olduğunda `xsl:text` veya `xsl:value-of` öğeleri kullanıldığı bir `xsl:comment`, `xsl:processing-instruction`, veya `xsl:attribute` öğesi.<br /><br /> Metin ve kaçış metin çıktısı içeren sonucu ağacı parçalarını desteklenmez.<br /><br /> İçin dönüştürme yaparken disable-çıkış kaçış özniteliği yoksayılıyor bir <xref:System.Xml.XmlReader> veya <xref:System.Xml.XmlWriter> nesne.|
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-<xref:System.Xml.Xsl.XslTransform>
-[XslTransform sınıfı XSLT işlemcisini uygular](xsltransform-class-implements-the-xslt-processor.md)  
-[XslTransform Sınıfı ile XSLT Dönüşümleri](xslt-transformations-with-the-xsltransform-class.md)  
-[Dönüşümlerde XPathNavigator](xpathnavigator-in-transformations.md)  
-[Dönüşümlerde XPathNodeIterator](xpathnodeiterator-in-transformations.md)  
-[XslTransform’a XPathDocument Girişi](xpathdocument-input-to-xsltransform.md)  
-[XslTransform’a XmlDataDocument Girişi](xmldatadocument-input-to-xsltransform.md)  
-[XslTransform’a XmlDocument Girişi](xmldocument-input-to-xsltransform.md)  
+- <xref:System.Xml.Xsl.XslTransform>
+- [XslTransform Sınıfı XSLT İşlemcisini Uygular](xsltransform-class-implements-the-xslt-processor.md)  
+- [XslTransform Sınıfı ile XSLT Dönüşümleri](xslt-transformations-with-the-xsltransform-class.md)  
+- [Dönüşümlerde XPathNavigator](xpathnavigator-in-transformations.md)  
+- [Dönüşümlerde XPathNodeIterator](xpathnodeiterator-in-transformations.md)  
+- [XslTransform’a XPathDocument Girişi](xpathdocument-input-to-xsltransform.md)  
+- [XslTransform’a XmlDataDocument Girişi](xmldatadocument-input-to-xsltransform.md)  
+- [XslTransform’a XmlDocument Girişi](xmldocument-input-to-xsltransform.md)  

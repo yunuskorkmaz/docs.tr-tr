@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 36e7e096-4e6c-4cf2-9ab6-68073026ea0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d789101231a37bb9a2b6b3c7830f6b679fd364d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a1d9f62055b497aa7522d589610c12badb2361d5
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567851"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44037301"
 ---
 # <a name="performing-formatting-operations"></a>Biçimlendirme İşlemlerini Gerçekleştirme
-Aşağıdaki konular, belirli biçimlendirme işlemlerini gerçekleştirmek için adım adım yönergeler sağlar.  
+Aşağıdaki konular, özel biçimlendirme işlemlerini gerçekleştirmek için adım adım yönergeler sağlar.  
   
 -   [Nasıl yapılır: Bir Sayıyı Baştaki Sıfırlarla Doldurma](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
   
@@ -28,7 +28,7 @@ Aşağıdaki konular, belirli biçimlendirme işlemlerini gerçekleştirmek içi
   
 -   [Nasıl yapılır: Web Denetimlerindeki Sayısal Kullanıcı Girişlerini Sayıya Dönüştürme](../../../docs/standard/base-types/how-to-convert-numeric-user-input-in-web-controls-to-numbers.md)  
   
--   [Nasıl yapılır: belirli bir tarihten itibaren haftanın gününü ayıklama](../../../docs/standard/base-types/how-to-extract-the-day-of-the-week-from-a-specific-date.md).  
+-   [Nasıl yapılır: belirli bir tarihten haftanın gününü çıkarma](../../../docs/standard/base-types/how-to-extract-the-day-of-the-week-from-a-specific-date.md).  
   
 -   [Nasıl yapılır: Gidiş Dönüş Tarih ve Saat Değerleri](../../../docs/standard/base-types/how-to-round-trip-date-and-time-values.md)  
   
@@ -38,5 +38,6 @@ Aşağıdaki konular, belirli biçimlendirme işlemlerini gerçekleştirmek içi
   
 -   [Nasıl yapılır: Miladi Olmayan Takvimlerde Tarihleri Görüntüleme](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Biçimlendirme Türleri](../../../docs/standard/base-types/formatting-types.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Biçimlendirme Türleri](../../../docs/standard/base-types/formatting-types.md)

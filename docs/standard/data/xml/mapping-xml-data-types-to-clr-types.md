@@ -1,21 +1,21 @@
 ---
-title: CLR türlerine XML veri türleri eşleme
+title: XML veri türlerini CLR türleriyle eşleme
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: cabdfcad-f359-479b-b71c-8b2fad42ca49
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d06876b91c72b939768d480e40631a8e85170bc9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9cff30147da82896fb3a757ba2fed16d794ec3c9
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568556"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44037928"
 ---
-# <a name="mapping-xml-data-types-to-clr-types"></a>CLR türlerine XML veri türleri eşleme
-Aşağıdaki tabloda, varsayılan eşleme XML veri türleri ve ortak dil çalışma zamanı (CLR) türleri arasında açıklanmaktadır.  
+# <a name="mapping-xml-data-types-to-clr-types"></a>XML veri türlerini CLR türleriyle eşleme
+Aşağıdaki tablo, XML veri türleri ve ortak dil çalışma zamanı (CLR) türleri arasında Varsayılan eşleme açıklar.  
   
-## <a name="the-following-table-describes-the-default-mappings-of-an-xml-data-type-to-a-clr-type"></a>Aşağıdaki tabloda bir XML veri türü bir CLR türü için varsayılan eşlemelerini açıklanmaktadır.  
+## <a name="the-following-table-describes-the-default-mappings-of-an-xml-data-type-to-a-clr-type"></a>Aşağıdaki tabloda bir XML veri türü bir CLR türü için varsayılan eşlemeleri açıklanmaktadır.  
   
 > [!NOTE]
 >  `xs` Ve `xdt` önekleri eşleştirilmiş http://www.w3.org/2001/XMLSchema ve http://www.w3.org/2003/05/xpath-datatypes ad alanı URI sırasıyla.  
@@ -77,7 +77,8 @@ Aşağıdaki tabloda, varsayılan eşleme XML veri türleri ve ortak dil çalı�
 |Namespace düğümü|<xref:System.Xml.XPath.XPathNavigator>|  
 |Metin düğümü|<xref:System.Xml.XPath.XPathNavigator>|  
 |Açıklama düğümü|<xref:System.Xml.XPath.XPathNavigator>|  
-|İşleme yönergesi düğümü|<xref:System.Xml.XPath.XPathNavigator>|  
+|İşlem yönergesi düğümü|<xref:System.Xml.XPath.XPathNavigator>|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [System.Xml Sınıflarında Tür Desteği](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [System.Xml Sınıflarında Tür Desteği](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)

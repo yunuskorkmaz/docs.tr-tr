@@ -2,17 +2,16 @@
 title: Numaralandırmalar (F#)
 description: 'F # değişmez değerler yerine numaralandırmalar kodunuzu daha okunabilir ve sürdürülebilir hale getirmek için kullanmayı öğrenin.'
 ms.date: 05/16/2016
-ms.openlocfilehash: b51df53caf2e193496cb3694c913cbae08f7eaf5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 47fb353c2698f8b1474834ebbd1b0eff2c7f76e7
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518843"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43891648"
 ---
 # <a name="enumerations"></a>Numaralandırmalar
 
 *Numaralandırmalar*olarak da bilinen *numaralandırmalar*,, etiketleri değerlerin bir alt kümesine atanmış burada integral türleridir. Kod daha okunabilir ve sürdürülebilir hale getirmek için değişmez değerler yerine bunları kullanabilirsiniz.
-
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -24,6 +23,7 @@ type enum-name =
 ```
 
 ## <a name="remarks"></a>Açıklamalar
+
 Değerleri belirtilen hariç, bir numaralandırma gibi basit değerler, ayrılmış bir birleşim arar. Genellikle 0 veya 1 başlayan tamsayılar ya da bit konumlarını temsil eden tamsayı değerler. Bit konumlarını temsil eden bir numaralandırma hedeflediyseniz de kullanmalısınız [bayrakları](xref:System.FlagsAttribute) özniteliği.
 
 Örneğin, bir son eki ile sabit değerleri gibi kullanabilirsiniz, böylece sabit listesinin temel alınan türü kullanılan değişmez değer belirlenir `1u`, `2u`ve benzeri işaretsiz tamsayı (`uint32`) türü.
@@ -49,8 +49,8 @@ Varsayılan `enum` işlev türüyle çalışır `int32`. Bu nedenle, temel alın
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2104.fs)]
 
 Ayrıca, her zaman sabit listeleri olarak gönderilir için durumlarda `public`. Bu, böylelikle C# ve .NET platformu geri kalanı ile hizalanır.
-    
-## <a name="see-also"></a>Ayrıca Bkz.
-[F# Dili Başvurusu](index.md)
 
-[Tür Değiştirme ve Dönüştürmeler](casting-and-conversions.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [F# Dili Başvurusu](index.md)
+- [Tür Değiştirme ve Dönüştürmeler](casting-and-conversions.md)
