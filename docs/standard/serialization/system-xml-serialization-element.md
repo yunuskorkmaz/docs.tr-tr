@@ -6,47 +6,47 @@ helpviewer_keywords:
 - XML serialization, configuration
 - <system.xml.serialization> element
 ms.assetid: 3ce45919-388a-418c-8968-6df0372c73ec
-ms.openlocfilehash: bf84c412c2d5e3c75cfdc752eeb70239f23d9245
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b67c1ec1ec737976e4e50b80b42f34e508dc0224
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43748151"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43879370"
 ---
-# <a name="ltsystemxmlserializationgt-element"></a><span data-ttu-id="dd148-102">&lt;System.xml.Serialization&gt; öğesi</span><span class="sxs-lookup"><span data-stu-id="dd148-102">&lt;system.xml.serialization&gt; Element</span></span>
-<span data-ttu-id="dd148-103">XML serileştirme denetlemek için üst düzey öğe.</span><span class="sxs-lookup"><span data-stu-id="dd148-103">The top-level element for controlling XML serialization.</span></span> <span data-ttu-id="dd148-104">Yapılandırma dosyaları hakkında daha fazla bilgi için bkz. [yapılandırma dosyası şeması](../../../docs/framework/configure-apps/file-schema/index.md).</span><span class="sxs-lookup"><span data-stu-id="dd148-104">For more information about configuration files, see [Configuration File Schema](../../../docs/framework/configure-apps/file-schema/index.md).</span></span>  
+# <a name="ltsystemxmlserializationgt-element"></a><span data-ttu-id="17245-102">&lt;System.xml.Serialization&gt; öğesi</span><span class="sxs-lookup"><span data-stu-id="17245-102">&lt;system.xml.serialization&gt; Element</span></span>
+<span data-ttu-id="17245-103">XML serileştirme denetlemek için üst düzey öğe.</span><span class="sxs-lookup"><span data-stu-id="17245-103">The top-level element for controlling XML serialization.</span></span> <span data-ttu-id="17245-104">Yapılandırma dosyaları hakkında daha fazla bilgi için bkz. [yapılandırma dosyası şeması](../../../docs/framework/configure-apps/file-schema/index.md).</span><span class="sxs-lookup"><span data-stu-id="17245-104">For more information about configuration files, see [Configuration File Schema](../../../docs/framework/configure-apps/file-schema/index.md).</span></span>  
   
- <span data-ttu-id="dd148-105">\<Yapılandırma ></span><span class="sxs-lookup"><span data-stu-id="dd148-105">\<configuration></span></span>  
-<span data-ttu-id="dd148-106">\<System.xml.Serialization ></span><span class="sxs-lookup"><span data-stu-id="dd148-106">\<system.xml.serialization></span></span>  
+ <span data-ttu-id="17245-105">\<Yapılandırma ></span><span class="sxs-lookup"><span data-stu-id="17245-105">\<configuration></span></span>  
+<span data-ttu-id="17245-106">\<System.xml.Serialization ></span><span class="sxs-lookup"><span data-stu-id="17245-106">\<system.xml.serialization></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dd148-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="dd148-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="17245-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="17245-107">Syntax</span></span>  
   
 ```xml  
 <system.xml.serialization>  
 </system.xml.serialization>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="dd148-108">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="dd148-108">Attributes and Elements</span></span>  
- <span data-ttu-id="dd148-109">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="dd148-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="17245-108">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="17245-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="17245-109">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="17245-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="dd148-110">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="dd148-110">Attributes</span></span>  
- <span data-ttu-id="dd148-111">Yok.</span><span class="sxs-lookup"><span data-stu-id="dd148-111">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="17245-110">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="17245-110">Attributes</span></span>  
+ <span data-ttu-id="17245-111">Yok.</span><span class="sxs-lookup"><span data-stu-id="17245-111">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="dd148-112">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="dd148-112">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="17245-112">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="17245-112">Child Elements</span></span>  
   
-|<span data-ttu-id="dd148-113">Öğe</span><span class="sxs-lookup"><span data-stu-id="dd148-113">Element</span></span>|<span data-ttu-id="dd148-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="dd148-114">Description</span></span>|  
+|<span data-ttu-id="17245-113">Öğe</span><span class="sxs-lookup"><span data-stu-id="17245-113">Element</span></span>|<span data-ttu-id="17245-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="17245-114">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="dd148-115">\<dateTimeSerialization > öğesi</span><span class="sxs-lookup"><span data-stu-id="dd148-115">\<dateTimeSerialization> Element</span></span>](../../../docs/standard/serialization/datetimeserialization-element.md)|<span data-ttu-id="dd148-116">Serileştirme modu belirler <xref:System.DateTime> nesneleri.</span><span class="sxs-lookup"><span data-stu-id="dd148-116">Determines the serialization mode of <xref:System.DateTime> objects.</span></span>|  
-|[<span data-ttu-id="dd148-117">\<schemaImporterExtensions > öğesi</span><span class="sxs-lookup"><span data-stu-id="dd148-117">\<schemaImporterExtensions> Element</span></span>](../../../docs/standard/serialization/schemaimporterextensions-element.md)|<span data-ttu-id="dd148-118">Tarafından kullanılan türler içerir <xref:System.Xml.Serialization.XmlSchemaImporter> için .NET Framework türleri için XSD türü eşleme.</span><span class="sxs-lookup"><span data-stu-id="dd148-118">Contains types that are used by the <xref:System.Xml.Serialization.XmlSchemaImporter> for mapping of XSD types to .NET Framework types.</span></span>|  
+|[<span data-ttu-id="17245-115">\<dateTimeSerialization > öğesi</span><span class="sxs-lookup"><span data-stu-id="17245-115">\<dateTimeSerialization> Element</span></span>](../../../docs/standard/serialization/datetimeserialization-element.md)|<span data-ttu-id="17245-116">Serileştirme modu belirler <xref:System.DateTime> nesneleri.</span><span class="sxs-lookup"><span data-stu-id="17245-116">Determines the serialization mode of <xref:System.DateTime> objects.</span></span>|  
+|[<span data-ttu-id="17245-117">\<schemaImporterExtensions > öğesi</span><span class="sxs-lookup"><span data-stu-id="17245-117">\<schemaImporterExtensions> Element</span></span>](../../../docs/standard/serialization/schemaimporterextensions-element.md)|<span data-ttu-id="17245-118">Tarafından kullanılan türler içerir <xref:System.Xml.Serialization.XmlSchemaImporter> için .NET Framework türleri için XSD türü eşleme.</span><span class="sxs-lookup"><span data-stu-id="17245-118">Contains types that are used by the <xref:System.Xml.Serialization.XmlSchemaImporter> for mapping of XSD types to .NET Framework types.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="dd148-119">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="dd148-119">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="17245-119">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="17245-119">Parent Elements</span></span>  
   
-|<span data-ttu-id="dd148-120">Öğe</span><span class="sxs-lookup"><span data-stu-id="dd148-120">Element</span></span>|<span data-ttu-id="dd148-121">Açıklama</span><span class="sxs-lookup"><span data-stu-id="dd148-121">Description</span></span>|  
+|<span data-ttu-id="17245-120">Öğe</span><span class="sxs-lookup"><span data-stu-id="17245-120">Element</span></span>|<span data-ttu-id="17245-121">Açıklama</span><span class="sxs-lookup"><span data-stu-id="17245-121">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="dd148-122">\<Yapılandırma > öğesi</span><span class="sxs-lookup"><span data-stu-id="dd148-122">\<configuration> Element</span></span>](../../../docs/framework/configure-apps/file-schema/configuration-element.md)|<span data-ttu-id="dd148-123">Her yapılandırma dosyasında ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.</span><span class="sxs-lookup"><span data-stu-id="dd148-123">The root element in every configuration file that is used by the common language runtime and .NET Framework applications.</span></span>|  
+|[<span data-ttu-id="17245-122">\<Yapılandırma > öğesi</span><span class="sxs-lookup"><span data-stu-id="17245-122">\<configuration> Element</span></span>](../../../docs/framework/configure-apps/file-schema/configuration-element.md)|<span data-ttu-id="17245-123">Her yapılandırma dosyasında ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.</span><span class="sxs-lookup"><span data-stu-id="17245-123">The root element in every configuration file that is used by the common language runtime and .NET Framework applications.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="dd148-124">Örnek</span><span class="sxs-lookup"><span data-stu-id="dd148-124">Example</span></span>  
- <span data-ttu-id="dd148-125">Aşağıdaki kod örneğinde serileştirme modunu belirtmek verilmektedir bir <xref:System.DateTime> nesnesi ve tarafından kullanılan türlerinin eklenmesi <xref:System.Xml.Serialization.XmlSchemaImporter> XSD türleri için .NET Framework türleri eşlerken.</span><span class="sxs-lookup"><span data-stu-id="dd148-125">The following code example illustrates how to specify the serialization mode of a <xref:System.DateTime> object, and the addition of types used by the <xref:System.Xml.Serialization.XmlSchemaImporter> when mapping XSD types to .NET Framework types.</span></span>  
+## <a name="example"></a><span data-ttu-id="17245-124">Örnek</span><span class="sxs-lookup"><span data-stu-id="17245-124">Example</span></span>  
+ <span data-ttu-id="17245-125">Aşağıdaki kod örneğinde serileştirme modunu belirtmek verilmektedir bir <xref:System.DateTime> nesnesi ve tarafından kullanılan türlerinin eklenmesi <xref:System.Xml.Serialization.XmlSchemaImporter> XSD türleri için .NET Framework türleri eşlerken.</span><span class="sxs-lookup"><span data-stu-id="17245-125">The following code example illustrates how to specify the serialization mode of a <xref:System.DateTime> object, and the addition of types used by the <xref:System.Xml.Serialization.XmlSchemaImporter> when mapping XSD types to .NET Framework types.</span></span>  
   
 ```xml  
 <system.xml.serialization>  
@@ -62,10 +62,11 @@ ms.locfileid: "43748151"
 </system.sxml.serialization>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="dd148-126">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="dd148-126">See Also</span></span>  
- <xref:System.Xml.Serialization.XmlSchemaImporter>  
- <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>  
- [<span data-ttu-id="dd148-127">Yapılandırma Dosyası Şeması</span><span class="sxs-lookup"><span data-stu-id="dd148-127">Configuration File Schema</span></span>](../../../docs/framework/configure-apps/file-schema/index.md)  
- [<span data-ttu-id="dd148-128">\<dateTimeSerialization > öğesi</span><span class="sxs-lookup"><span data-stu-id="dd148-128">\<dateTimeSerialization> Element</span></span>](../../../docs/standard/serialization/datetimeserialization-element.md)  
- [<span data-ttu-id="dd148-129">\<schemaImporterExtensions > öğesi</span><span class="sxs-lookup"><span data-stu-id="dd148-129">\<schemaImporterExtensions> Element</span></span>](../../../docs/standard/serialization/schemaimporterextensions-element.md)  
- [<span data-ttu-id="dd148-130">\<Ekle > öğesi için \<schemaImporterExtensions ></span><span class="sxs-lookup"><span data-stu-id="dd148-130">\<add> Element for \<schemaImporterExtensions></span></span>](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)
+## <a name="see-also"></a><span data-ttu-id="17245-126">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="17245-126">See also</span></span>
+
+- <xref:System.Xml.Serialization.XmlSchemaImporter>  
+- <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>  
+- [<span data-ttu-id="17245-127">Yapılandırma Dosyası Şeması</span><span class="sxs-lookup"><span data-stu-id="17245-127">Configuration File Schema</span></span>](../../../docs/framework/configure-apps/file-schema/index.md)  
+- [<span data-ttu-id="17245-128">\<dateTimeSerialization > öğesi</span><span class="sxs-lookup"><span data-stu-id="17245-128">\<dateTimeSerialization> Element</span></span>](../../../docs/standard/serialization/datetimeserialization-element.md)  
+- [<span data-ttu-id="17245-129">\<schemaImporterExtensions > öğesi</span><span class="sxs-lookup"><span data-stu-id="17245-129">\<schemaImporterExtensions> Element</span></span>](../../../docs/standard/serialization/schemaimporterextensions-element.md)  
+- [<span data-ttu-id="17245-130">\<Ekle > öğesi için \<schemaImporterExtensions ></span><span class="sxs-lookup"><span data-stu-id="17245-130">\<add> Element for \<schemaImporterExtensions></span></span>](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)

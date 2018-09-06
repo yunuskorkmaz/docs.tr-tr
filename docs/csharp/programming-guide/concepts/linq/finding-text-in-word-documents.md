@@ -3,21 +3,21 @@ title: (C#) Word belgelerinde metin bulma
 ms.date: 07/20/2015
 ms.assetid: 82f86677-560b-49dc-a089-610409939b2a
 ms.openlocfilehash: 56a99dd548eb149f6fa85370cef6a114103ce91e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43741860"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43883849"
 ---
-# <a name="finding-text-in-word-documents-c"></a><span data-ttu-id="bf455-102">(C#) Word belgelerinde metin bulma</span><span class="sxs-lookup"><span data-stu-id="bf455-102">Finding Text in Word Documents (C#)</span></span>
-<span data-ttu-id="bf455-103">Bu konu faydalı bir şey için önceki sorguları genişletir: bir dizenin tüm örnekleri belgede bulun.</span><span class="sxs-lookup"><span data-stu-id="bf455-103">This topic extends the previous queries to do something useful: find all occurrences of a string in the document.</span></span>  
+# <a name="finding-text-in-word-documents-c"></a><span data-ttu-id="d8254-102">(C#) Word belgelerinde metin bulma</span><span class="sxs-lookup"><span data-stu-id="d8254-102">Finding Text in Word Documents (C#)</span></span>
+<span data-ttu-id="d8254-103">Bu konu faydalı bir şey için önceki sorguları genişletir: bir dizenin tüm örnekleri belgede bulun.</span><span class="sxs-lookup"><span data-stu-id="d8254-103">This topic extends the previous queries to do something useful: find all occurrences of a string in the document.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="bf455-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="bf455-104">Example</span></span>  
- <span data-ttu-id="bf455-105">Bu örnek, belgede belirli bir metin parçası tüm tekrarlarını bulmak için bir WordprocessingML belgesinin işler.</span><span class="sxs-lookup"><span data-stu-id="bf455-105">This example processes a WordprocessingML document, to find all the occurences of a specific piece of text in the document.</span></span> <span data-ttu-id="bf455-106">Bunu yapmak için "Hello" dizesi bulan bir sorgu kullanırız.</span><span class="sxs-lookup"><span data-stu-id="bf455-106">To do this, we use a query that finds the string "Hello".</span></span> <span data-ttu-id="bf455-107">Bu örnek, önceki örneklerde üzerinde Bu öğreticide oluşturur.</span><span class="sxs-lookup"><span data-stu-id="bf455-107">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="bf455-108">Yeni sorgu aşağıdaki kod açıklamalarda çağrılır.</span><span class="sxs-lookup"><span data-stu-id="bf455-108">The new query is called out in comments in the code below.</span></span>  
+## <a name="example"></a><span data-ttu-id="d8254-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="d8254-104">Example</span></span>  
+ <span data-ttu-id="d8254-105">Bu örnek, belgede belirli bir metin parçası tüm tekrarlarını bulmak için bir WordprocessingML belgesinin işler.</span><span class="sxs-lookup"><span data-stu-id="d8254-105">This example processes a WordprocessingML document, to find all the occurences of a specific piece of text in the document.</span></span> <span data-ttu-id="d8254-106">Bunu yapmak için "Hello" dizesi bulan bir sorgu kullanırız.</span><span class="sxs-lookup"><span data-stu-id="d8254-106">To do this, we use a query that finds the string "Hello".</span></span> <span data-ttu-id="d8254-107">Bu örnek, önceki örneklerde üzerinde Bu öğreticide oluşturur.</span><span class="sxs-lookup"><span data-stu-id="d8254-107">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="d8254-108">Yeni sorgu aşağıdaki kod açıklamalarda çağrılır.</span><span class="sxs-lookup"><span data-stu-id="d8254-108">The new query is called out in comments in the code below.</span></span>  
   
- <span data-ttu-id="bf455-109">Bu örneğin kaynak belge oluşturma yönergeleri için bkz. [kaynak Office Open XML belgesi (C#) oluşturma](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span><span class="sxs-lookup"><span data-stu-id="bf455-109">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
+ <span data-ttu-id="d8254-109">Bu örneğin kaynak belge oluşturma yönergeleri için bkz. [kaynak Office Open XML belgesi (C#) oluşturma](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span><span class="sxs-lookup"><span data-stu-id="d8254-109">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
   
- <span data-ttu-id="bf455-110">Bu örnekte WindowsBase derlemede bulunan sınıfları kullanır.</span><span class="sxs-lookup"><span data-stu-id="bf455-110">This example uses classes found in the WindowsBase assembly.</span></span> <span data-ttu-id="bf455-111">Türleri kullanan <xref:System.IO.Packaging?displayProperty=nameWithType> ad alanı.</span><span class="sxs-lookup"><span data-stu-id="bf455-111">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="d8254-110">Bu örnekte WindowsBase derlemede bulunan sınıfları kullanır.</span><span class="sxs-lookup"><span data-stu-id="d8254-110">This example uses classes found in the WindowsBase assembly.</span></span> <span data-ttu-id="d8254-111">Türleri kullanan <xref:System.IO.Packaging?displayProperty=nameWithType> ad alanı.</span><span class="sxs-lookup"><span data-stu-id="d8254-111">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```csharp  
 public static class LocalExtensions  
@@ -165,14 +165,14 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="bf455-112">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="bf455-112">This example produces the following output:</span></span>  
+ <span data-ttu-id="d8254-112">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="d8254-112">This example produces the following output:</span></span>  
   
 ```  
 StyleName:Code >        Console.WriteLine("Hello World");<  
 StyleName:Code >Hello World<  
 ```  
   
- <span data-ttu-id="bf455-113">Elbette, böylece belirli bir stil satırıyla arar arama değiştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="bf455-113">You can, of course, modify the search so that it searches for lines with a specific style.</span></span> <span data-ttu-id="bf455-114">Aşağıdaki sorgu, kod stili sahip tüm boş satırları bulur:</span><span class="sxs-lookup"><span data-stu-id="bf455-114">The following query finds all blank lines that have the Code style:</span></span>  
+ <span data-ttu-id="d8254-113">Elbette, böylece belirli bir stil satırıyla arar arama değiştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="d8254-113">You can, of course, modify the search so that it searches for lines with a specific style.</span></span> <span data-ttu-id="d8254-114">Aşağıdaki sorgu, kod stili sahip tüm boş satırları bulur:</span><span class="sxs-lookup"><span data-stu-id="d8254-114">The following query finds all blank lines that have the Code style:</span></span>  
   
 ```csharp  
 public static class LocalExtensions  
@@ -312,23 +312,23 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="bf455-115">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="bf455-115">This example produces the following output:</span></span>  
+ <span data-ttu-id="d8254-115">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="d8254-115">This example produces the following output:</span></span>  
   
 ```  
 StyleName:Code ><  
 ```  
   
- <span data-ttu-id="bf455-116">Elbette, bu örnek, çeşitli yollarla iyileştirilebilir.</span><span class="sxs-lookup"><span data-stu-id="bf455-116">Of course, this example could be enhanced in a number of ways.</span></span> <span data-ttu-id="bf455-117">Örneğin, metni aramak için normal ifadeler kullanabiliriz, size belirli bir dizin ve benzeri tüm Word dosyaları yinelemek.</span><span class="sxs-lookup"><span data-stu-id="bf455-117">For example, we could use regular expressions to search for text, we could iterate through all the Word files in a particular directory, and so on.</span></span>  
+ <span data-ttu-id="d8254-116">Elbette, bu örnek, çeşitli yollarla iyileştirilebilir.</span><span class="sxs-lookup"><span data-stu-id="d8254-116">Of course, this example could be enhanced in a number of ways.</span></span> <span data-ttu-id="d8254-117">Örneğin, metni aramak için normal ifadeler kullanabiliriz, size belirli bir dizin ve benzeri tüm Word dosyaları yinelemek.</span><span class="sxs-lookup"><span data-stu-id="d8254-117">For example, we could use regular expressions to search for text, we could iterate through all the Word files in a particular directory, and so on.</span></span>  
   
- <span data-ttu-id="bf455-118">Tek bir sorgu yazılmışlar gibi bu örnek yaklaşık de unutmayın.</span><span class="sxs-lookup"><span data-stu-id="bf455-118">Note that this example performs approximately as well as if it were written as a single query.</span></span> <span data-ttu-id="bf455-119">Her sorgu yavaş, ertelenmiş bir şekilde uygulandığından, sorgu yinelendiğinde kadar her sorgu sonuçlarını vermez.</span><span class="sxs-lookup"><span data-stu-id="bf455-119">Because each query is implemented in a lazy, deferred fashion, each query does not yield its results until the query is iterated.</span></span> <span data-ttu-id="bf455-120">Yürütme ve geç değerlendirme hakkında daha fazla bilgi için bkz. [ertelenmiş yürütme ve geç değerlendirme LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="bf455-120">For more information about execution and lazy evaluation, see [Deferred Execution and Lazy Evaluation in LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="d8254-118">Tek bir sorgu yazılmışlar gibi bu örnek yaklaşık de unutmayın.</span><span class="sxs-lookup"><span data-stu-id="d8254-118">Note that this example performs approximately as well as if it were written as a single query.</span></span> <span data-ttu-id="d8254-119">Her sorgu yavaş, ertelenmiş bir şekilde uygulandığından, sorgu yinelendiğinde kadar her sorgu sonuçlarını vermez.</span><span class="sxs-lookup"><span data-stu-id="d8254-119">Because each query is implemented in a lazy, deferred fashion, each query does not yield its results until the query is iterated.</span></span> <span data-ttu-id="d8254-120">Yürütme ve geç değerlendirme hakkında daha fazla bilgi için bkz. [ertelenmiş yürütme ve geç değerlendirme LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="d8254-120">For more information about execution and lazy evaluation, see [Deferred Execution and Lazy Evaluation in LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).</span></span>  
   
-## <a name="next-steps"></a><span data-ttu-id="bf455-121">Sonraki Adımlar</span><span class="sxs-lookup"><span data-stu-id="bf455-121">Next Steps</span></span>  
- <span data-ttu-id="bf455-122">Sonraki bölümde WordprocessingML belgelerinin hakkında daha fazla bilgi verilmektedir:</span><span class="sxs-lookup"><span data-stu-id="bf455-122">The next section provides more information about WordprocessingML documents:</span></span>  
+## <a name="next-steps"></a><span data-ttu-id="d8254-121">Sonraki Adımlar</span><span class="sxs-lookup"><span data-stu-id="d8254-121">Next Steps</span></span>  
+ <span data-ttu-id="d8254-122">Sonraki bölümde WordprocessingML belgelerinin hakkında daha fazla bilgi verilmektedir:</span><span class="sxs-lookup"><span data-stu-id="d8254-122">The next section provides more information about WordprocessingML documents:</span></span>  
   
--   [<span data-ttu-id="bf455-123">Ayrıntılar Office Open XML WordprocessingML belgelerinin (C#)</span><span class="sxs-lookup"><span data-stu-id="bf455-123">Details of Office Open XML WordprocessingML Documents (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)  
+-   [<span data-ttu-id="d8254-123">Ayrıntılar Office Open XML WordprocessingML belgelerinin (C#)</span><span class="sxs-lookup"><span data-stu-id="d8254-123">Details of Office Open XML WordprocessingML Documents (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)  
   
-## <a name="see-also"></a><span data-ttu-id="bf455-124">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="bf455-124">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d8254-124">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="d8254-124">See Also</span></span>
 
-- [<span data-ttu-id="bf455-125">Öğretici: WordprocessingML belgesindeki (C#) içerik düzenleme</span><span class="sxs-lookup"><span data-stu-id="bf455-125">Tutorial: Manipulating Content in a WordprocessingML Document (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
-- [<span data-ttu-id="bf455-126">Saf işlev (C#) kullanarak yeniden düzenleme</span><span class="sxs-lookup"><span data-stu-id="bf455-126">Refactoring Using a Pure Function (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
-- [<span data-ttu-id="bf455-127">Ertelenmiş yürütme ve geç değerlendirme LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="bf455-127">Deferred Execution and Lazy Evaluation in LINQ to XML (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [<span data-ttu-id="d8254-125">Öğretici: WordprocessingML belgesindeki (C#) içerik düzenleme</span><span class="sxs-lookup"><span data-stu-id="d8254-125">Tutorial: Manipulating Content in a WordprocessingML Document (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
+- [<span data-ttu-id="d8254-126">Saf işlev (C#) kullanarak yeniden düzenleme</span><span class="sxs-lookup"><span data-stu-id="d8254-126">Refactoring Using a Pure Function (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
+- [<span data-ttu-id="d8254-127">Ertelenmiş yürütme ve geç değerlendirme LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="d8254-127">Deferred Execution and Lazy Evaluation in LINQ to XML (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

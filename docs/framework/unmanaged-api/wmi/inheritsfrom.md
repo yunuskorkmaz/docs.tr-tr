@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4784e22d5a3eec031fbee00441958a62d66b52df
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43542660"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43877783"
 ---
-# <a name="inheritsfrom-function"></a><span data-ttu-id="5e19e-103">InheritsFrom işlevi</span><span class="sxs-lookup"><span data-stu-id="5e19e-103">InheritsFrom function</span></span>
-<span data-ttu-id="5e19e-104">Geçerli sınıf veya örnek belirtilen üst sınıftan türetilen olup olmadığını belirler.</span><span class="sxs-lookup"><span data-stu-id="5e19e-104">Determines whether the current class or instance derives from a specified parent class.</span></span>
+# <a name="inheritsfrom-function"></a><span data-ttu-id="d8e58-103">InheritsFrom işlevi</span><span class="sxs-lookup"><span data-stu-id="d8e58-103">InheritsFrom function</span></span>
+<span data-ttu-id="d8e58-104">Geçerli sınıf veya örnek belirtilen üst sınıftan türetilen olup olmadığını belirler.</span><span class="sxs-lookup"><span data-stu-id="d8e58-104">Determines whether the current class or instance derives from a specified parent class.</span></span>
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
-## <a name="syntax"></a><span data-ttu-id="5e19e-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="5e19e-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d8e58-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="d8e58-105">Syntax</span></span>  
   
 ```
 HRESULT InheritsFrom (
@@ -38,37 +38,37 @@ HRESULT InheritsFrom (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="5e19e-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="5e19e-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="d8e58-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="d8e58-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="5e19e-107">[in] Bu parametre kullanılmaz.</span><span class="sxs-lookup"><span data-stu-id="5e19e-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="d8e58-107">[in] Bu parametre kullanılmaz.</span><span class="sxs-lookup"><span data-stu-id="d8e58-107">[in] This parameter is unused.</span></span>
 
 `ptr`  
-<span data-ttu-id="5e19e-108">[in] Bir işaretçi bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneği.</span><span class="sxs-lookup"><span data-stu-id="5e19e-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
+<span data-ttu-id="d8e58-108">[in] Bir işaretçi bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneği.</span><span class="sxs-lookup"><span data-stu-id="d8e58-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
 
 `wszAncestor`  
-<span data-ttu-id="5e19e-109">[in] Sınıf adı.</span><span class="sxs-lookup"><span data-stu-id="5e19e-109">[in] The name of the class.</span></span> <span data-ttu-id="5e19e-110">`wszAncestor` Geçerli bir işaret etmelidir `LPCWSTR`.</span><span class="sxs-lookup"><span data-stu-id="5e19e-110">`wszAncestor` must point to a valid `LPCWSTR`.</span></span>
+<span data-ttu-id="d8e58-109">[in] Sınıf adı.</span><span class="sxs-lookup"><span data-stu-id="d8e58-109">[in] The name of the class.</span></span> <span data-ttu-id="d8e58-110">`wszAncestor` Geçerli bir işaret etmelidir `LPCWSTR`.</span><span class="sxs-lookup"><span data-stu-id="d8e58-110">`wszAncestor` must point to a valid `LPCWSTR`.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="5e19e-111">Dönüş değeri</span><span class="sxs-lookup"><span data-stu-id="5e19e-111">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="d8e58-111">Dönüş değeri</span><span class="sxs-lookup"><span data-stu-id="d8e58-111">Return value</span></span>
 
-<span data-ttu-id="5e19e-112">Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda:</span><span class="sxs-lookup"><span data-stu-id="5e19e-112">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="d8e58-112">Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda:</span><span class="sxs-lookup"><span data-stu-id="d8e58-112">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="5e19e-113">Sabit</span><span class="sxs-lookup"><span data-stu-id="5e19e-113">Constant</span></span>  |<span data-ttu-id="5e19e-114">Değer</span><span class="sxs-lookup"><span data-stu-id="5e19e-114">Value</span></span>  |<span data-ttu-id="5e19e-115">Açıklama</span><span class="sxs-lookup"><span data-stu-id="5e19e-115">Description</span></span>  |
+|<span data-ttu-id="d8e58-113">Sabit</span><span class="sxs-lookup"><span data-stu-id="d8e58-113">Constant</span></span>  |<span data-ttu-id="d8e58-114">Değer</span><span class="sxs-lookup"><span data-stu-id="d8e58-114">Value</span></span>  |<span data-ttu-id="d8e58-115">Açıklama</span><span class="sxs-lookup"><span data-stu-id="d8e58-115">Description</span></span>  |
 |---------|---------|---------|
-| `WBEM_S_NO_ERROR` | <span data-ttu-id="5e19e-116">0</span><span class="sxs-lookup"><span data-stu-id="5e19e-116">0</span></span> | <span data-ttu-id="5e19e-117">Geçerli nesnenin miras `wszAncestor`.</span><span class="sxs-lookup"><span data-stu-id="5e19e-117">The current object inherits from `wszAncestor`.</span></span>  |
-| `WBEM_S_FALSE` | <span data-ttu-id="5e19e-118">1.</span><span class="sxs-lookup"><span data-stu-id="5e19e-118">1</span></span> | <span data-ttu-id="5e19e-119">Geçerli nesne öğesinden devralmayan `wszAncestor`.</span><span class="sxs-lookup"><span data-stu-id="5e19e-119">The current object does not inherit from `wszAncestor`.</span></span> |
-|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="5e19e-120">0x80041008</span><span class="sxs-lookup"><span data-stu-id="5e19e-120">0x80041008</span></span> | <span data-ttu-id="5e19e-121">`wszAncestor` olan `null`.</span><span class="sxs-lookup"><span data-stu-id="5e19e-121">`wszAncestor` is `null`.</span></span> |
+| `WBEM_S_NO_ERROR` | <span data-ttu-id="d8e58-116">0</span><span class="sxs-lookup"><span data-stu-id="d8e58-116">0</span></span> | <span data-ttu-id="d8e58-117">Geçerli nesnenin miras `wszAncestor`.</span><span class="sxs-lookup"><span data-stu-id="d8e58-117">The current object inherits from `wszAncestor`.</span></span>  |
+| `WBEM_S_FALSE` | <span data-ttu-id="d8e58-118">1.</span><span class="sxs-lookup"><span data-stu-id="d8e58-118">1</span></span> | <span data-ttu-id="d8e58-119">Geçerli nesne öğesinden devralmayan `wszAncestor`.</span><span class="sxs-lookup"><span data-stu-id="d8e58-119">The current object does not inherit from `wszAncestor`.</span></span> |
+|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="d8e58-120">0x80041008</span><span class="sxs-lookup"><span data-stu-id="d8e58-120">0x80041008</span></span> | <span data-ttu-id="d8e58-121">`wszAncestor` olan `null`.</span><span class="sxs-lookup"><span data-stu-id="d8e58-121">`wszAncestor` is `null`.</span></span> |
   
-## <a name="remarks"></a><span data-ttu-id="5e19e-122">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="5e19e-122">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="d8e58-122">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="d8e58-122">Remarks</span></span>
 
-<span data-ttu-id="5e19e-123">Bu işlev bir çağrı sarılır [IWbemClassObject::InheritsFrom](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-inheritsfrom) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="5e19e-123">This function wraps a call to the [IWbemClassObject::InheritsFrom](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-inheritsfrom) method.</span></span>
+<span data-ttu-id="d8e58-123">Bu işlev bir çağrı sarılır [IWbemClassObject::InheritsFrom](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-inheritsfrom) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="d8e58-123">This function wraps a call to the [IWbemClassObject::InheritsFrom](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-inheritsfrom) method.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="5e19e-124">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="5e19e-124">Requirements</span></span>  
- <span data-ttu-id="5e19e-125">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5e19e-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d8e58-124">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="d8e58-124">Requirements</span></span>  
+ <span data-ttu-id="d8e58-125">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d8e58-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5e19e-126">**Başlık:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="5e19e-126">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="d8e58-126">**Başlık:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="d8e58-126">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="5e19e-127">**.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="5e19e-127">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="d8e58-127">**.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="d8e58-127">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5e19e-128">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="5e19e-128">See also</span></span>  
-[<span data-ttu-id="5e19e-129">WMI ve performans sayaçları (yönetilmeyen API Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="5e19e-129">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="d8e58-128">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d8e58-128">See also</span></span>  
+[<span data-ttu-id="d8e58-129">WMI ve performans sayaçları (yönetilmeyen API Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="d8e58-129">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
