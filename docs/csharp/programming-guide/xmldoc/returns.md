@@ -9,32 +9,32 @@ helpviewer_keywords:
 - returns C# XML tag
 ms.assetid: bb2d9958-62fc-47c7-9511-6311171f119f
 ms.openlocfilehash: fc3254062e4412c2a0640e27ce4d188b83507eea
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43540183"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43742130"
 ---
-# <a name="ltreturnsgt-c-programming-guide"></a><span data-ttu-id="cee12-102">&lt;döndürür&gt; (C# programlama Kılavuzu)</span><span class="sxs-lookup"><span data-stu-id="cee12-102">&lt;returns&gt; (C# Programming Guide)</span></span>
-## <a name="syntax"></a><span data-ttu-id="cee12-103">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="cee12-103">Syntax</span></span>  
+# <a name="ltreturnsgt-c-programming-guide"></a><span data-ttu-id="2688e-102">&lt;döndürür&gt; (C# programlama Kılavuzu)</span><span class="sxs-lookup"><span data-stu-id="2688e-102">&lt;returns&gt; (C# Programming Guide)</span></span>
+## <a name="syntax"></a><span data-ttu-id="2688e-103">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="2688e-103">Syntax</span></span>  
   
 ```xml  
 <returns>description</returns>  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="cee12-104">Parametreler</span><span class="sxs-lookup"><span data-stu-id="cee12-104">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="2688e-104">Parametreler</span><span class="sxs-lookup"><span data-stu-id="2688e-104">Parameters</span></span>  
  `description`  
- <span data-ttu-id="cee12-105">Dönüş değeri bir açıklaması.</span><span class="sxs-lookup"><span data-stu-id="cee12-105">A description of the return value.</span></span>  
+ <span data-ttu-id="2688e-105">Dönüş değeri bir açıklaması.</span><span class="sxs-lookup"><span data-stu-id="2688e-105">A description of the return value.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="cee12-106">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="cee12-106">Remarks</span></span>  
- <span data-ttu-id="cee12-107">\<Döndürür > etiketi yöntemi bildirimi için açıklama dönüş değeri tanımlamak için kullanılmalıdır.</span><span class="sxs-lookup"><span data-stu-id="cee12-107">The \<returns> tag should be used in the comment for a method declaration to describe the return value.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2688e-106">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="2688e-106">Remarks</span></span>  
+ <span data-ttu-id="2688e-107">\<Döndürür > etiketi yöntemi bildirimi için açıklama dönüş değeri tanımlamak için kullanılmalıdır.</span><span class="sxs-lookup"><span data-stu-id="2688e-107">The \<returns> tag should be used in the comment for a method declaration to describe the return value.</span></span>  
   
- <span data-ttu-id="cee12-108">Derleme [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) işlem belgeleri açıklamaları için bir dosya için.</span><span class="sxs-lookup"><span data-stu-id="cee12-108">Compile with [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>  
+ <span data-ttu-id="2688e-108">Derleme [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) işlem belgeleri açıklamaları için bir dosya için.</span><span class="sxs-lookup"><span data-stu-id="2688e-108">Compile with [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="cee12-109">Örnek</span><span class="sxs-lookup"><span data-stu-id="cee12-109">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="2688e-109">Örnek</span><span class="sxs-lookup"><span data-stu-id="2688e-109">Example</span></span>  
  [!code-csharp[csProgGuideDocComments#10](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/returns_1.cs)]  
   
-## <a name="see-also"></a><span data-ttu-id="cee12-110">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="cee12-110">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2688e-110">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="2688e-110">See Also</span></span>
 
-- [<span data-ttu-id="cee12-111">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="cee12-111">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="cee12-112">Belge Açıklamaları için Önerilen Etiketler</span><span class="sxs-lookup"><span data-stu-id="cee12-112">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [<span data-ttu-id="2688e-111">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="2688e-111">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="2688e-112">Belge Açıklamaları için Önerilen Etiketler</span><span class="sxs-lookup"><span data-stu-id="2688e-112">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

@@ -8,28 +8,28 @@ helpviewer_keywords:
 - WPF application [WPF], deploying
 ms.assetid: 88952ad2-5b74-48ca-a4c5-3f4fbb53ce12
 ms.openlocfilehash: bed7484f7ff487d1ff34ef1ff1e86bc8689a2cfc
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43558024"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43777422"
 ---
-# <a name="build-and-deploy-how-to-topics"></a><span data-ttu-id="dfc8f-102">Oluşturma ve Dağıtma ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="dfc8f-102">Build and Deploy How-to Topics</span></span>
-<span data-ttu-id="dfc8f-103">Aşağıdaki konular, proje dosyaları için çeşitli oluşturma işlemi gösterilmektedir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama türleri.</span><span class="sxs-lookup"><span data-stu-id="dfc8f-103">The following topics show how to create project files for the various [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application types.</span></span>  
+# <a name="build-and-deploy-how-to-topics"></a><span data-ttu-id="29b24-102">Oluşturma ve Dağıtma ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="29b24-102">Build and Deploy How-to Topics</span></span>
+<span data-ttu-id="29b24-103">Aşağıdaki konular, proje dosyaları için çeşitli oluşturma işlemi gösterilmektedir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama türleri.</span><span class="sxs-lookup"><span data-stu-id="29b24-103">The following topics show how to create project files for the various [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application types.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="dfc8f-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="dfc8f-104">In This Section</span></span>  
- [<span data-ttu-id="dfc8f-105">WPF Uygulamalarını Dağıtmak için IIS 5.0 ve IIS 6.0'ı Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="dfc8f-105">Configure IIS 5.0 and IIS 6.0 to Deploy WPF Applications</span></span>](../../../../docs/framework/wpf/app-development/how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)  
- [<span data-ttu-id="dfc8f-106">Web Hizmeti Çağırmak Amacıyla XAML Tarayıcı Uygulamasında Hata Ayıklamak için Visual Studio'yu Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="dfc8f-106">Configure Visual Studio to Debug a XAML Browser Application to Call a Web Service</span></span>](../../../../docs/framework/wpf/app-development/configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)  
- [<span data-ttu-id="dfc8f-107">Yüklü WPF Sürümünü Belirleme</span><span class="sxs-lookup"><span data-stu-id="dfc8f-107">Determine the Installed Version of WPF</span></span>](../../../../docs/framework/wpf/app-development/how-to-determine-the-installed-version-of-wpf.md)  
- [<span data-ttu-id="dfc8f-108">.NET Framework 3.0'ın Yüklü Olup Olmadığını Algılama</span><span class="sxs-lookup"><span data-stu-id="dfc8f-108">Detect Whether the .NET Framework 3.0 Is Installed</span></span>](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md)  
- [<span data-ttu-id="dfc8f-109">.NET Framework 3.5'in Yüklü Olup Olmadığını Algılama</span><span class="sxs-lookup"><span data-stu-id="dfc8f-109">Detect Whether the .NET Framework 3.5 Is Installed</span></span>](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-5-is-installed.md)  
- [<span data-ttu-id="dfc8f-110">Firefox WPF Eklentisinin Yüklü Olup Olmadığını Algılama</span><span class="sxs-lookup"><span data-stu-id="dfc8f-110">Detect Whether the WPF Plug-In for Firefox Is Installed</span></span>](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed.md)  
+## <a name="in-this-section"></a><span data-ttu-id="29b24-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="29b24-104">In This Section</span></span>  
+ [<span data-ttu-id="29b24-105">WPF Uygulamalarını Dağıtmak için IIS 5.0 ve IIS 6.0'ı Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="29b24-105">Configure IIS 5.0 and IIS 6.0 to Deploy WPF Applications</span></span>](../../../../docs/framework/wpf/app-development/how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)  
+ [<span data-ttu-id="29b24-106">Web Hizmeti Çağırmak Amacıyla XAML Tarayıcı Uygulamasında Hata Ayıklamak için Visual Studio'yu Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="29b24-106">Configure Visual Studio to Debug a XAML Browser Application to Call a Web Service</span></span>](../../../../docs/framework/wpf/app-development/configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)  
+ [<span data-ttu-id="29b24-107">Yüklü WPF Sürümünü Belirleme</span><span class="sxs-lookup"><span data-stu-id="29b24-107">Determine the Installed Version of WPF</span></span>](../../../../docs/framework/wpf/app-development/how-to-determine-the-installed-version-of-wpf.md)  
+ [<span data-ttu-id="29b24-108">.NET Framework 3.0'ın Yüklü Olup Olmadığını Algılama</span><span class="sxs-lookup"><span data-stu-id="29b24-108">Detect Whether the .NET Framework 3.0 Is Installed</span></span>](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md)  
+ [<span data-ttu-id="29b24-109">.NET Framework 3.5'in Yüklü Olup Olmadığını Algılama</span><span class="sxs-lookup"><span data-stu-id="29b24-109">Detect Whether the .NET Framework 3.5 Is Installed</span></span>](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-5-is-installed.md)  
+ [<span data-ttu-id="29b24-110">Firefox WPF Eklentisinin Yüklü Olup Olmadığını Algılama</span><span class="sxs-lookup"><span data-stu-id="29b24-110">Detect Whether the WPF Plug-In for Firefox Is Installed</span></span>](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="dfc8f-111">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="dfc8f-111">Related Sections</span></span>  
- [<span data-ttu-id="dfc8f-112">WPF Uygulaması Derleme</span><span class="sxs-lookup"><span data-stu-id="dfc8f-112">Building a WPF Application</span></span>](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)  
+## <a name="related-sections"></a><span data-ttu-id="29b24-111">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="29b24-111">Related Sections</span></span>  
+ [<span data-ttu-id="29b24-112">WPF Uygulaması Derleme</span><span class="sxs-lookup"><span data-stu-id="29b24-112">Building a WPF Application</span></span>](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)  
   
- [<span data-ttu-id="dfc8f-113">WPF Uygulaması Dağıtma</span><span class="sxs-lookup"><span data-stu-id="dfc8f-113">Deploying a WPF Application</span></span>](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)  
+ [<span data-ttu-id="29b24-113">WPF Uygulaması Dağıtma</span><span class="sxs-lookup"><span data-stu-id="29b24-113">Deploying a WPF Application</span></span>](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)  
   
- [<span data-ttu-id="dfc8f-114">Nasıl yapılır: yeni bir WPF uygulaması projesi oluşturma</span><span class="sxs-lookup"><span data-stu-id="dfc8f-114">How to: Create a New WPF Application Project</span></span>](https://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82)  
+ [<span data-ttu-id="29b24-114">Nasıl yapılır: yeni bir WPF uygulaması projesi oluşturma</span><span class="sxs-lookup"><span data-stu-id="29b24-114">How to: Create a New WPF Application Project</span></span>](https://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82)  
   
- [<span data-ttu-id="dfc8f-115">Nasıl yapılır: yeni bir WPF tarayıcı uygulaması projesi oluşturma</span><span class="sxs-lookup"><span data-stu-id="dfc8f-115">How to: Create a New WPF Browser Application Project</span></span>](https://msdn.microsoft.com/library/72ef4d90-e163-42a1-8df0-ea7ccfd1901f)
+ [<span data-ttu-id="29b24-115">Nasıl yapılır: yeni bir WPF tarayıcı uygulaması projesi oluşturma</span><span class="sxs-lookup"><span data-stu-id="29b24-115">How to: Create a New WPF Browser Application Project</span></span>](https://msdn.microsoft.com/library/72ef4d90-e163-42a1-8df0-ea7ccfd1901f)

@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: bağlama göre (C#) öğeleri bulur bir sorgu yazın'
+title: 'Nasıl yapılır: bağlama (C#) göre öğeleri bulan bir sorgu yazma'
 ms.date: 07/20/2015
 ms.assetid: 3ff79ef0-fc8b-42fe-8cc0-10dc32b06b4e
-ms.openlocfilehash: 3b09be121c3e1da12614d1c09a806b09386732df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c1c43bc47df1612be26c78351a9d30272a020160
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322019"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43723668"
 ---
-# <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a><span data-ttu-id="1fc2a-102">Nasıl yapılır: bağlama göre (C#) öğeleri bulur bir sorgu yazın</span><span class="sxs-lookup"><span data-stu-id="1fc2a-102">How to: Write a Query that Finds Elements Based on Context (C#)</span></span>
-<span data-ttu-id="1fc2a-103">Bazen kendi bağlamına dayalı öğeleri seçer bir sorgu yazmak zorunda kalabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="1fc2a-103">Sometimes you might have to write a query that selects elements based on their context.</span></span> <span data-ttu-id="1fc2a-104">Temel alınarak önceki veya Eşdüzey öğeleri aşağıdaki filtre uygulamak isteyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="1fc2a-104">You might want to filter based on preceding or following sibling elements.</span></span> <span data-ttu-id="1fc2a-105">Temel alınarak alt veya üst öğeleri Filtrele isteyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="1fc2a-105">You might want to filter based on child or ancestor elements.</span></span>  
+# <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a><span data-ttu-id="ae7d5-102">Nasıl yapılır: bağlama (C#) göre öğeleri bulan bir sorgu yazma</span><span class="sxs-lookup"><span data-stu-id="ae7d5-102">How to: Write a Query that Finds Elements Based on Context (C#)</span></span>
+<span data-ttu-id="ae7d5-103">Bazen, bağlama göre öğeleri seçen bir sorgu yazmak zorunda kalabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="ae7d5-103">Sometimes you might have to write a query that selects elements based on their context.</span></span> <span data-ttu-id="ae7d5-104">Bağlı olarak önceki veya Eşdüzey öğeleri aşağıdaki filtreleme isteyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="ae7d5-104">You might want to filter based on preceding or following sibling elements.</span></span> <span data-ttu-id="ae7d5-105">Temel alınarak alt veya üst öğeleri filtrelemek isteyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="ae7d5-105">You might want to filter based on child or ancestor elements.</span></span>  
   
- <span data-ttu-id="1fc2a-106">Sorgu yazma ve sorgunun sonuçlarını kullanarak bunu yapabilirsiniz `where` yan tümcesi.</span><span class="sxs-lookup"><span data-stu-id="1fc2a-106">You can do this by writing a query and using the results of the query in the `where` clause.</span></span> <span data-ttu-id="1fc2a-107">İlk null karşı test etmek ve değeri test etmek varsa, sorgu yapmak daha kullanışlı bir `let` yan tümcesi ve ardından sonuçları `where` yan tümcesi.</span><span class="sxs-lookup"><span data-stu-id="1fc2a-107">If you have to first test against null, and then test the value, it is more convenient to do the query in a `let` clause, and then use the results in the `where` clause.</span></span>  
+ <span data-ttu-id="ae7d5-106">Bir sorgu yazma ve sorgu sonuçlarının kullanarak bunu yapabilirsiniz `where` yan tümcesi.</span><span class="sxs-lookup"><span data-stu-id="ae7d5-106">You can do this by writing a query and using the results of the query in the `where` clause.</span></span> <span data-ttu-id="ae7d5-107">İlk null karşı test etmeyi ve ardından değeri test varsa, sorgu yapılacağı daha kullanışlı bir `let` yan tümcesi ve ardından sonuçları `where` yan tümcesi.</span><span class="sxs-lookup"><span data-stu-id="ae7d5-107">If you have to first test against null, and then test the value, it is more convenient to do the query in a `let` clause, and then use the results in the `where` clause.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1fc2a-108">Örnek</span><span class="sxs-lookup"><span data-stu-id="1fc2a-108">Example</span></span>  
- <span data-ttu-id="1fc2a-109">Aşağıdaki örnekte tüm seçer `p` tarafından hemen ardından öğeleri bir `ul` öğesi.</span><span class="sxs-lookup"><span data-stu-id="1fc2a-109">The following example selects all `p` elements that are immediately followed by a `ul` element.</span></span>  
+## <a name="example"></a><span data-ttu-id="ae7d5-108">Örnek</span><span class="sxs-lookup"><span data-stu-id="ae7d5-108">Example</span></span>  
+ <span data-ttu-id="ae7d5-109">Aşağıdaki örnekte tüm seçer `p` tarafından hemen ardından öğeleri bir `ul` öğesi.</span><span class="sxs-lookup"><span data-stu-id="ae7d5-109">The following example selects all `p` elements that are immediately followed by a `ul` element.</span></span>  
   
 ```csharp  
 XElement doc = XElement.Parse(@"<Root>  
@@ -47,7 +47,7 @@ foreach (XElement e in items)
     Console.WriteLine("id = {0}", (string)e.Attribute("id"));  
 ```  
   
- <span data-ttu-id="1fc2a-110">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="1fc2a-110">This code produces the following output:</span></span>  
+ <span data-ttu-id="ae7d5-110">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="ae7d5-110">This code produces the following output:</span></span>  
   
 ```  
 id = 1  
@@ -55,8 +55,8 @@ id = 3
 id = 6  
 ```  
   
-## <a name="example"></a><span data-ttu-id="1fc2a-111">Örnek</span><span class="sxs-lookup"><span data-stu-id="1fc2a-111">Example</span></span>  
- <span data-ttu-id="1fc2a-112">Aşağıdaki örnek bir ad alanı XML aynı sorgu gösterir.</span><span class="sxs-lookup"><span data-stu-id="1fc2a-112">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="1fc2a-113">Daha fazla bilgi için bkz: [XML ad alanları (C#) çalışma](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span><span class="sxs-lookup"><span data-stu-id="1fc2a-113">For more information, see [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="ae7d5-111">Örnek</span><span class="sxs-lookup"><span data-stu-id="ae7d5-111">Example</span></span>  
+ <span data-ttu-id="ae7d5-112">Aşağıdaki örnek, aynı sorgu için bir ad alanındaki XML gösterir.</span><span class="sxs-lookup"><span data-stu-id="ae7d5-112">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="ae7d5-113">Daha fazla bilgi için [(C#) XML ad alanları ile çalışma](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span><span class="sxs-lookup"><span data-stu-id="ae7d5-113">For more information, see [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
   
 ```csharp  
 XElement doc = XElement.Parse(@"<Root xmlns='http://www.adatum.com'>  
@@ -90,7 +90,7 @@ foreach (XElement e in items)
     Console.WriteLine("id = {0}", (string)e.Attribute("id"));  
 ```  
   
- <span data-ttu-id="1fc2a-114">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="1fc2a-114">This code produces the following output:</span></span>  
+ <span data-ttu-id="ae7d5-114">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="ae7d5-114">This code produces the following output:</span></span>  
   
 ```  
 id = 1  
@@ -98,9 +98,10 @@ id = 3
 id = 6  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="1fc2a-115">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="1fc2a-115">See Also</span></span>  
- <xref:System.Xml.Linq.XElement.Parse%2A>  
- <xref:System.Xml.Linq.XContainer.Descendants%2A>  
- <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>  
- <xref:System.Linq.Enumerable.FirstOrDefault%2A>  
- [<span data-ttu-id="1fc2a-116">Temel sorgu (LINQ-XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="1fc2a-116">Basic Queries (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="ae7d5-115">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="ae7d5-115">See Also</span></span>
+
+- <xref:System.Xml.Linq.XElement.Parse%2A>  
+- <xref:System.Xml.Linq.XContainer.Descendants%2A>  
+- <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>  
+- <xref:System.Linq.Enumerable.FirstOrDefault%2A>  
+- [<span data-ttu-id="ae7d5-116">Temel sorgular (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="ae7d5-116">Basic Queries (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
