@@ -1,28 +1,29 @@
 ---
-title: LINQ-XML (C#)
+title: LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 26c907b1-bc58-465f-bcdc-adbe89df6e55
-ms.openlocfilehash: 6f7b33ce6b120dce224e8775cee8b5c11d6361a6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 5b0eb7537a3f91093502e4c4efc3589838fa5d88
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328561"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43735854"
 ---
-# <a name="linq-to-xml-c"></a><span data-ttu-id="1aba6-102">LINQ-XML (C#)</span><span class="sxs-lookup"><span data-stu-id="1aba6-102">LINQ to XML (C#)</span></span>
-<span data-ttu-id="1aba6-103">LINQ-XML .NET Language-Integrated sorgu (LINQ) Framework yararlanır bir bellek içi XML programlama arabirimi sağlar.</span><span class="sxs-lookup"><span data-stu-id="1aba6-103">LINQ to XML provides an in-memory XML programming interface that leverages the .NET Language-Integrated Query (LINQ) Framework.</span></span> <span data-ttu-id="1aba6-104">LINQ-XML en son .NET Framework dil yeteneklerini kullanır ve bir güncelleştirilmiş, yeniden tasarlanan belge nesne modeli (DOM) XML programlama arabirimine karşılaştırılabilir.</span><span class="sxs-lookup"><span data-stu-id="1aba6-104">LINQ to XML uses the latest .NET Framework language capabilities and is comparable to an updated, redesigned Document Object Model (DOM) XML programming interface.</span></span>  
+# <a name="linq-to-xml-c"></a><span data-ttu-id="97439-102">LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="97439-102">LINQ to XML (C#)</span></span>
+<span data-ttu-id="97439-103">LINQ to XML .NET Language-Integrated sorgu (LINQ) Framework yararlanan bir bellek içi XML programlama arabirimi sağlar.</span><span class="sxs-lookup"><span data-stu-id="97439-103">LINQ to XML provides an in-memory XML programming interface that leverages the .NET Language-Integrated Query (LINQ) Framework.</span></span> <span data-ttu-id="97439-104">LINQ to XML en son .NET Framework dil özelliklerini kullanır ve bir güncelleştirilmiş, yeniden tasarlanan belge nesne modeli (DOM) XML programlama arabirimi için karşılaştırılabilir.</span><span class="sxs-lookup"><span data-stu-id="97439-104">LINQ to XML uses the latest .NET Framework language capabilities and is comparable to an updated, redesigned Document Object Model (DOM) XML programming interface.</span></span>  
   
- <span data-ttu-id="1aba6-105">Teknolojileri LINQ ailesi nesneleri (LINQ nesnelere), ilişkisel veritabanları (LINQ-SQL) ve XML (LINQ-XML) için bir tutarlı sorgu deneyimi sağlar.</span><span class="sxs-lookup"><span data-stu-id="1aba6-105">The LINQ family of technologies provides a consistent query experience for objects (LINQ to Objects), relational databases (LINQ to SQL), and XML (LINQ to XML).</span></span>  
+ <span data-ttu-id="97439-105">Teknolojileri LINQ ailesi, nesneleri (LINQ to Objects'in), ilişkisel veritabanları (LINQ to SQL) ve XML (LINQ to XML) için bir tutarlı sorgu deneyimi sağlar.</span><span class="sxs-lookup"><span data-stu-id="97439-105">The LINQ family of technologies provides a consistent query experience for objects (LINQ to Objects), relational databases (LINQ to SQL), and XML (LINQ to XML).</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="1aba6-106">Bu Bölümdekiler</span><span class="sxs-lookup"><span data-stu-id="1aba6-106">In this Section</span></span>  
- [<span data-ttu-id="1aba6-107">Başlarken (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="1aba6-107">Getting Started (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)  
- <span data-ttu-id="1aba6-108">Kavramsal genel bakış ve genel bir bakış da dahil olmak üzere XML için LINQ ile ilgili giriş bilgileri sağlanmaktadır <xref:System.Xml.Linq?displayProperty=nameWithType> sınıfları.</span><span class="sxs-lookup"><span data-stu-id="1aba6-108">Provides introductory information about LINQ to XML, including a conceptual overview and an overview of the <xref:System.Xml.Linq?displayProperty=nameWithType> classes.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="97439-106">Bu Bölümdekiler</span><span class="sxs-lookup"><span data-stu-id="97439-106">In this Section</span></span>  
+ [<span data-ttu-id="97439-107">Başlarken (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="97439-107">Getting Started (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)  
+ <span data-ttu-id="97439-108">Kavramsal bir genel bakış ve genel bir bakış da dahil olmak üzere XML için LINQ hakkında giriş bilgileri sağlanmaktadır <xref:System.Xml.Linq?displayProperty=nameWithType> sınıfları.</span><span class="sxs-lookup"><span data-stu-id="97439-108">Provides introductory information about LINQ to XML, including a conceptual overview and an overview of the <xref:System.Xml.Linq?displayProperty=nameWithType> classes.</span></span>  
   
- [<span data-ttu-id="1aba6-109">Programlama Kılavuzu (LINQ-XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="1aba6-109">Programming Guide (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)  
- <span data-ttu-id="1aba6-110">LINQ ile programlama hakkında kavramsal bilgiler ve nasıl yapılır bilgisi XML sağlar.</span><span class="sxs-lookup"><span data-stu-id="1aba6-110">Provides conceptual and how-to information about programming with LINQ to XML.</span></span>  
+ [<span data-ttu-id="97439-109">Programlama Kılavuzu (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="97439-109">Programming Guide (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)  
+ <span data-ttu-id="97439-110">LINQ ile programlama hakkında kavramsal bilgiler ve nasıl yapılır bilgileri, XML sağlar.</span><span class="sxs-lookup"><span data-stu-id="97439-110">Provides conceptual and how-to information about programming with LINQ to XML.</span></span>  
   
- [<span data-ttu-id="1aba6-111">Başvuru (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="1aba6-111">Reference (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/reference-linq-to-xml.md)  
- <span data-ttu-id="1aba6-112">LINQ-XML işaretçiler başvuru belgeleri yönetilen sağlar.</span><span class="sxs-lookup"><span data-stu-id="1aba6-112">Provides pointers to the LINQ to XML managed reference documentation.</span></span>  
+ [<span data-ttu-id="97439-111">Başvuru (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="97439-111">Reference (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/reference-linq-to-xml.md)  
+ <span data-ttu-id="97439-112">LINQ to XML işaretçileri başvuru belgeleri yönetilen sağlar.</span><span class="sxs-lookup"><span data-stu-id="97439-112">Provides pointers to the LINQ to XML managed reference documentation.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1aba6-113">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="1aba6-113">See Also</span></span>  
- [<span data-ttu-id="1aba6-114">Dil ile tümleşik sorgu (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="1aba6-114">Language-Integrated Query (LINQ) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/index.md)
+## <a name="see-also"></a><span data-ttu-id="97439-113">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="97439-113">See Also</span></span>
+
+- [<span data-ttu-id="97439-114">Dil ile tümleşik sorgu (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="97439-114">Language-Integrated Query (LINQ) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/index.md)

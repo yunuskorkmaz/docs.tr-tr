@@ -7,74 +7,74 @@ helpviewer_keywords:
 - control library [WPF]
 - libraries [WPF], controls
 ms.assetid: c1b33289-c389-4ac2-b153-3cbb0d8324ad
-ms.openlocfilehash: f0b5a8873455fff979abd57af3927346cea03d83
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 26f81a2bfeb5ef4e448ddcbc9b8bac521624a629
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555876"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43746129"
 ---
-# <a name="control-library"></a><span data-ttu-id="800a8-102">Denetim Kitaplığı</span><span class="sxs-lookup"><span data-stu-id="800a8-102">Control Library</span></span>
-<span data-ttu-id="800a8-103">Windows Presentation Foundation (WPF) denetim kitaplığı Windows Presentation Foundation (alfabetik olarak listelenen WPF tarafından), sağlanan denetimler hakkında bilgi içerir.</span><span class="sxs-lookup"><span data-stu-id="800a8-103">The Windows Presentation Foundation (WPF) control library contains information on the controls provided by Windows Presentation Foundation (WPF), listed alphabetically.</span></span>  
+# <a name="control-library"></a><span data-ttu-id="e6d77-102">Denetim Kitaplığı</span><span class="sxs-lookup"><span data-stu-id="e6d77-102">Control Library</span></span>
+<span data-ttu-id="e6d77-103">Windows Presentation Foundation (WPF) denetim kitaplığı, Windows Presentation Foundation (alfabetik olarak listelenen WPF tarafından), sağlanan denetimleri hakkında bilgi içerir.</span><span class="sxs-lookup"><span data-stu-id="e6d77-103">The Windows Presentation Foundation (WPF) control library contains information on the controls provided by Windows Presentation Foundation (WPF), listed alphabetically.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="800a8-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="800a8-104">In This Section</span></span>  
- [<span data-ttu-id="800a8-105">Kenarlık</span><span class="sxs-lookup"><span data-stu-id="800a8-105">Border</span></span>](../../../../docs/framework/wpf/controls/border.md)  
- [<span data-ttu-id="800a8-106">BulletDecorator</span><span class="sxs-lookup"><span data-stu-id="800a8-106">BulletDecorator</span></span>](../../../../docs/framework/wpf/controls/bulletdecorator.md)  
- [<span data-ttu-id="800a8-107">Düğme</span><span class="sxs-lookup"><span data-stu-id="800a8-107">Button</span></span>](../../../../docs/framework/wpf/controls/button.md)  
- [<span data-ttu-id="800a8-108">Takvim</span><span class="sxs-lookup"><span data-stu-id="800a8-108">Calendar</span></span>](../../../../docs/framework/wpf/controls/calendar.md)  
- [<span data-ttu-id="800a8-109">Tuval</span><span class="sxs-lookup"><span data-stu-id="800a8-109">Canvas</span></span>](../../../../docs/framework/wpf/controls/canvas.md)  
- [<span data-ttu-id="800a8-110">CheckBox</span><span class="sxs-lookup"><span data-stu-id="800a8-110">CheckBox</span></span>](../../../../docs/framework/wpf/controls/checkbox.md)  
- [<span data-ttu-id="800a8-111">ComboBox</span><span class="sxs-lookup"><span data-stu-id="800a8-111">ComboBox</span></span>](../../../../docs/framework/wpf/controls/combobox.md)  
- [<span data-ttu-id="800a8-112">ContextMenu</span><span class="sxs-lookup"><span data-stu-id="800a8-112">ContextMenu</span></span>](../../../../docs/framework/wpf/controls/contextmenu.md)  
- [<span data-ttu-id="800a8-113">DataGrid</span><span class="sxs-lookup"><span data-stu-id="800a8-113">DataGrid</span></span>](../../../../docs/framework/wpf/controls/datagrid.md)  
- [<span data-ttu-id="800a8-114">DatePicker</span><span class="sxs-lookup"><span data-stu-id="800a8-114">DatePicker</span></span>](../../../../docs/framework/wpf/controls/datepicker.md)  
- [<span data-ttu-id="800a8-115">DockPanel</span><span class="sxs-lookup"><span data-stu-id="800a8-115">DockPanel</span></span>](../../../../docs/framework/wpf/controls/dockpanel.md)  
- [<span data-ttu-id="800a8-116">DocumentViewer</span><span class="sxs-lookup"><span data-stu-id="800a8-116">DocumentViewer</span></span>](../../../../docs/framework/wpf/controls/documentviewer.md)  
- [<span data-ttu-id="800a8-117">Genişletici</span><span class="sxs-lookup"><span data-stu-id="800a8-117">Expander</span></span>](../../../../docs/framework/wpf/controls/expander.md)  
- [<span data-ttu-id="800a8-118">FlowDocumentPageViewer</span><span class="sxs-lookup"><span data-stu-id="800a8-118">FlowDocumentPageViewer</span></span>](../../../../docs/framework/wpf/controls/flowdocumentpageviewer.md)  
- [<span data-ttu-id="800a8-119">FlowDocumentReader</span><span class="sxs-lookup"><span data-stu-id="800a8-119">FlowDocumentReader</span></span>](../../../../docs/framework/wpf/controls/flowdocumentreader.md)  
- [<span data-ttu-id="800a8-120">FlowDocumentScrollViewer</span><span class="sxs-lookup"><span data-stu-id="800a8-120">FlowDocumentScrollViewer</span></span>](../../../../docs/framework/wpf/controls/flowdocumentscrollviewer.md)  
- [<span data-ttu-id="800a8-121">Çerçeve</span><span class="sxs-lookup"><span data-stu-id="800a8-121">Frame</span></span>](../../../../docs/framework/wpf/controls/frame.md)  
- [<span data-ttu-id="800a8-122">Kılavuz</span><span class="sxs-lookup"><span data-stu-id="800a8-122">Grid</span></span>](../../../../docs/framework/wpf/controls/grid.md)  
- [<span data-ttu-id="800a8-123">GridSplitter</span><span class="sxs-lookup"><span data-stu-id="800a8-123">GridSplitter</span></span>](../../../../docs/framework/wpf/controls/gridsplitter.md)  
- [<span data-ttu-id="800a8-124">GroupBox</span><span class="sxs-lookup"><span data-stu-id="800a8-124">GroupBox</span></span>](../../../../docs/framework/wpf/controls/groupbox.md)  
- [<span data-ttu-id="800a8-125">Görüntü</span><span class="sxs-lookup"><span data-stu-id="800a8-125">Image</span></span>](../../../../docs/framework/wpf/controls/image.md)  
- [<span data-ttu-id="800a8-126">Etiket</span><span class="sxs-lookup"><span data-stu-id="800a8-126">Label</span></span>](../../../../docs/framework/wpf/controls/label.md)  
- [<span data-ttu-id="800a8-127">ListBox</span><span class="sxs-lookup"><span data-stu-id="800a8-127">ListBox</span></span>](../../../../docs/framework/wpf/controls/listbox.md)  
- [<span data-ttu-id="800a8-128">ListView</span><span class="sxs-lookup"><span data-stu-id="800a8-128">ListView</span></span>](../../../../docs/framework/wpf/controls/listview.md)  
- [<span data-ttu-id="800a8-129">Menü</span><span class="sxs-lookup"><span data-stu-id="800a8-129">Menu</span></span>](../../../../docs/framework/wpf/controls/menu.md)  
- [<span data-ttu-id="800a8-130">Panel</span><span class="sxs-lookup"><span data-stu-id="800a8-130">Panel</span></span>](../../../../docs/framework/wpf/controls/panel.md)  
- [<span data-ttu-id="800a8-131">PasswordBox</span><span class="sxs-lookup"><span data-stu-id="800a8-131">PasswordBox</span></span>](../../../../docs/framework/wpf/controls/passwordbox.md)  
- [<span data-ttu-id="800a8-132">Açılan Pencere</span><span class="sxs-lookup"><span data-stu-id="800a8-132">Popup</span></span>](../../../../docs/framework/wpf/controls/popup.md)  
- [<span data-ttu-id="800a8-133">ProgressBar</span><span class="sxs-lookup"><span data-stu-id="800a8-133">ProgressBar</span></span>](../../../../docs/framework/wpf/controls/progressbar.md)  
- [<span data-ttu-id="800a8-134">PrintDialog</span><span class="sxs-lookup"><span data-stu-id="800a8-134">PrintDialog</span></span>](../../../../docs/framework/wpf/controls/printdialog.md)  
- [<span data-ttu-id="800a8-135">RadioButton</span><span class="sxs-lookup"><span data-stu-id="800a8-135">RadioButton</span></span>](../../../../docs/framework/wpf/controls/radiobutton.md)  
- [<span data-ttu-id="800a8-136">RepeatButton</span><span class="sxs-lookup"><span data-stu-id="800a8-136">RepeatButton</span></span>](../../../../docs/framework/wpf/controls/repeatbutton.md)  
- [<span data-ttu-id="800a8-137">Şerit (WPF)</span><span class="sxs-lookup"><span data-stu-id="800a8-137">Ribbon (WPF)</span></span>](http://msdn.microsoft.com/library/d2b5749c-43ec-4e1f-9017-8f1d0bbd5d3f)  
- [<span data-ttu-id="800a8-138">RichTextBox</span><span class="sxs-lookup"><span data-stu-id="800a8-138">RichTextBox</span></span>](../../../../docs/framework/wpf/controls/richtextbox.md)  
- [<span data-ttu-id="800a8-139">ScrollBar</span><span class="sxs-lookup"><span data-stu-id="800a8-139">ScrollBar</span></span>](../../../../docs/framework/wpf/controls/scrollbar.md)  
- [<span data-ttu-id="800a8-140">ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="800a8-140">ScrollViewer</span></span>](../../../../docs/framework/wpf/controls/scrollviewer.md)  
- [<span data-ttu-id="800a8-141">Ayıraç</span><span class="sxs-lookup"><span data-stu-id="800a8-141">Separator</span></span>](../../../../docs/framework/wpf/controls/separator.md)  
- [<span data-ttu-id="800a8-142">Kaydırıcı</span><span class="sxs-lookup"><span data-stu-id="800a8-142">Slider</span></span>](../../../../docs/framework/wpf/controls/slider.md)  
- [<span data-ttu-id="800a8-143">StackPanel</span><span class="sxs-lookup"><span data-stu-id="800a8-143">StackPanel</span></span>](../../../../docs/framework/wpf/controls/stackpanel.md)  
- [<span data-ttu-id="800a8-144">StatusBar</span><span class="sxs-lookup"><span data-stu-id="800a8-144">StatusBar</span></span>](../../../../docs/framework/wpf/controls/statusbar.md)  
- [<span data-ttu-id="800a8-145">TabControl</span><span class="sxs-lookup"><span data-stu-id="800a8-145">TabControl</span></span>](../../../../docs/framework/wpf/controls/tabcontrol.md)  
- [<span data-ttu-id="800a8-146">TextBlock</span><span class="sxs-lookup"><span data-stu-id="800a8-146">TextBlock</span></span>](../../../../docs/framework/wpf/controls/textblock.md)  
- [<span data-ttu-id="800a8-147">TextBox</span><span class="sxs-lookup"><span data-stu-id="800a8-147">TextBox</span></span>](../../../../docs/framework/wpf/controls/textbox.md)  
- [<span data-ttu-id="800a8-148">Araç Çubuğu</span><span class="sxs-lookup"><span data-stu-id="800a8-148">ToolBar</span></span>](../../../../docs/framework/wpf/controls/toolbar.md)  
- [<span data-ttu-id="800a8-149">Araç İpucu</span><span class="sxs-lookup"><span data-stu-id="800a8-149">ToolTip</span></span>](../../../../docs/framework/wpf/controls/tooltip.md)  
- [<span data-ttu-id="800a8-150">TreeView</span><span class="sxs-lookup"><span data-stu-id="800a8-150">TreeView</span></span>](../../../../docs/framework/wpf/controls/treeview.md)  
- [<span data-ttu-id="800a8-151">WrapPanel</span><span class="sxs-lookup"><span data-stu-id="800a8-151">WrapPanel</span></span>](../../../../docs/framework/wpf/controls/wrappanel.md)  
- [<span data-ttu-id="800a8-152">Viewbox</span><span class="sxs-lookup"><span data-stu-id="800a8-152">Viewbox</span></span>](../../../../docs/framework/wpf/controls/viewbox.md)  
+## <a name="in-this-section"></a><span data-ttu-id="e6d77-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="e6d77-104">In This Section</span></span>  
+ [<span data-ttu-id="e6d77-105">Kenarlık</span><span class="sxs-lookup"><span data-stu-id="e6d77-105">Border</span></span>](../../../../docs/framework/wpf/controls/border.md)  
+ [<span data-ttu-id="e6d77-106">BulletDecorator</span><span class="sxs-lookup"><span data-stu-id="e6d77-106">BulletDecorator</span></span>](../../../../docs/framework/wpf/controls/bulletdecorator.md)  
+ [<span data-ttu-id="e6d77-107">Düğme</span><span class="sxs-lookup"><span data-stu-id="e6d77-107">Button</span></span>](../../../../docs/framework/wpf/controls/button.md)  
+ [<span data-ttu-id="e6d77-108">Takvim</span><span class="sxs-lookup"><span data-stu-id="e6d77-108">Calendar</span></span>](../../../../docs/framework/wpf/controls/calendar.md)  
+ [<span data-ttu-id="e6d77-109">Tuval</span><span class="sxs-lookup"><span data-stu-id="e6d77-109">Canvas</span></span>](../../../../docs/framework/wpf/controls/canvas.md)  
+ [<span data-ttu-id="e6d77-110">CheckBox</span><span class="sxs-lookup"><span data-stu-id="e6d77-110">CheckBox</span></span>](../../../../docs/framework/wpf/controls/checkbox.md)  
+ [<span data-ttu-id="e6d77-111">ComboBox</span><span class="sxs-lookup"><span data-stu-id="e6d77-111">ComboBox</span></span>](../../../../docs/framework/wpf/controls/combobox.md)  
+ [<span data-ttu-id="e6d77-112">ContextMenu</span><span class="sxs-lookup"><span data-stu-id="e6d77-112">ContextMenu</span></span>](../../../../docs/framework/wpf/controls/contextmenu.md)  
+ [<span data-ttu-id="e6d77-113">DataGrid</span><span class="sxs-lookup"><span data-stu-id="e6d77-113">DataGrid</span></span>](../../../../docs/framework/wpf/controls/datagrid.md)  
+ [<span data-ttu-id="e6d77-114">DatePicker</span><span class="sxs-lookup"><span data-stu-id="e6d77-114">DatePicker</span></span>](../../../../docs/framework/wpf/controls/datepicker.md)  
+ [<span data-ttu-id="e6d77-115">DockPanel</span><span class="sxs-lookup"><span data-stu-id="e6d77-115">DockPanel</span></span>](../../../../docs/framework/wpf/controls/dockpanel.md)  
+ [<span data-ttu-id="e6d77-116">DocumentViewer</span><span class="sxs-lookup"><span data-stu-id="e6d77-116">DocumentViewer</span></span>](../../../../docs/framework/wpf/controls/documentviewer.md)  
+ [<span data-ttu-id="e6d77-117">Genişletici</span><span class="sxs-lookup"><span data-stu-id="e6d77-117">Expander</span></span>](../../../../docs/framework/wpf/controls/expander.md)  
+ [<span data-ttu-id="e6d77-118">FlowDocumentPageViewer</span><span class="sxs-lookup"><span data-stu-id="e6d77-118">FlowDocumentPageViewer</span></span>](../../../../docs/framework/wpf/controls/flowdocumentpageviewer.md)  
+ [<span data-ttu-id="e6d77-119">FlowDocumentReader</span><span class="sxs-lookup"><span data-stu-id="e6d77-119">FlowDocumentReader</span></span>](../../../../docs/framework/wpf/controls/flowdocumentreader.md)  
+ [<span data-ttu-id="e6d77-120">FlowDocumentScrollViewer</span><span class="sxs-lookup"><span data-stu-id="e6d77-120">FlowDocumentScrollViewer</span></span>](../../../../docs/framework/wpf/controls/flowdocumentscrollviewer.md)  
+ [<span data-ttu-id="e6d77-121">Çerçeve</span><span class="sxs-lookup"><span data-stu-id="e6d77-121">Frame</span></span>](../../../../docs/framework/wpf/controls/frame.md)  
+ [<span data-ttu-id="e6d77-122">Kılavuz</span><span class="sxs-lookup"><span data-stu-id="e6d77-122">Grid</span></span>](../../../../docs/framework/wpf/controls/grid.md)  
+ [<span data-ttu-id="e6d77-123">GridSplitter</span><span class="sxs-lookup"><span data-stu-id="e6d77-123">GridSplitter</span></span>](../../../../docs/framework/wpf/controls/gridsplitter.md)  
+ [<span data-ttu-id="e6d77-124">GroupBox</span><span class="sxs-lookup"><span data-stu-id="e6d77-124">GroupBox</span></span>](../../../../docs/framework/wpf/controls/groupbox.md)  
+ [<span data-ttu-id="e6d77-125">Görüntü</span><span class="sxs-lookup"><span data-stu-id="e6d77-125">Image</span></span>](../../../../docs/framework/wpf/controls/image.md)  
+ [<span data-ttu-id="e6d77-126">Etiket</span><span class="sxs-lookup"><span data-stu-id="e6d77-126">Label</span></span>](../../../../docs/framework/wpf/controls/label.md)  
+ [<span data-ttu-id="e6d77-127">ListBox</span><span class="sxs-lookup"><span data-stu-id="e6d77-127">ListBox</span></span>](../../../../docs/framework/wpf/controls/listbox.md)  
+ [<span data-ttu-id="e6d77-128">ListView</span><span class="sxs-lookup"><span data-stu-id="e6d77-128">ListView</span></span>](../../../../docs/framework/wpf/controls/listview.md)  
+ [<span data-ttu-id="e6d77-129">Menü</span><span class="sxs-lookup"><span data-stu-id="e6d77-129">Menu</span></span>](../../../../docs/framework/wpf/controls/menu.md)  
+ [<span data-ttu-id="e6d77-130">Panel</span><span class="sxs-lookup"><span data-stu-id="e6d77-130">Panel</span></span>](../../../../docs/framework/wpf/controls/panel.md)  
+ [<span data-ttu-id="e6d77-131">PasswordBox</span><span class="sxs-lookup"><span data-stu-id="e6d77-131">PasswordBox</span></span>](../../../../docs/framework/wpf/controls/passwordbox.md)  
+ [<span data-ttu-id="e6d77-132">Açılan Pencere</span><span class="sxs-lookup"><span data-stu-id="e6d77-132">Popup</span></span>](../../../../docs/framework/wpf/controls/popup.md)  
+ [<span data-ttu-id="e6d77-133">ProgressBar</span><span class="sxs-lookup"><span data-stu-id="e6d77-133">ProgressBar</span></span>](../../../../docs/framework/wpf/controls/progressbar.md)  
+ [<span data-ttu-id="e6d77-134">PrintDialog</span><span class="sxs-lookup"><span data-stu-id="e6d77-134">PrintDialog</span></span>](../../../../docs/framework/wpf/controls/printdialog.md)  
+ [<span data-ttu-id="e6d77-135">RadioButton</span><span class="sxs-lookup"><span data-stu-id="e6d77-135">RadioButton</span></span>](../../../../docs/framework/wpf/controls/radiobutton.md)  
+ [<span data-ttu-id="e6d77-136">RepeatButton</span><span class="sxs-lookup"><span data-stu-id="e6d77-136">RepeatButton</span></span>](../../../../docs/framework/wpf/controls/repeatbutton.md)  
+ [<span data-ttu-id="e6d77-137">Şerit (WPF)</span><span class="sxs-lookup"><span data-stu-id="e6d77-137">Ribbon (WPF)</span></span>](https://msdn.microsoft.com/library/d2b5749c-43ec-4e1f-9017-8f1d0bbd5d3f)  
+ [<span data-ttu-id="e6d77-138">RichTextBox</span><span class="sxs-lookup"><span data-stu-id="e6d77-138">RichTextBox</span></span>](../../../../docs/framework/wpf/controls/richtextbox.md)  
+ [<span data-ttu-id="e6d77-139">ScrollBar</span><span class="sxs-lookup"><span data-stu-id="e6d77-139">ScrollBar</span></span>](../../../../docs/framework/wpf/controls/scrollbar.md)  
+ [<span data-ttu-id="e6d77-140">ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="e6d77-140">ScrollViewer</span></span>](../../../../docs/framework/wpf/controls/scrollviewer.md)  
+ [<span data-ttu-id="e6d77-141">Ayıraç</span><span class="sxs-lookup"><span data-stu-id="e6d77-141">Separator</span></span>](../../../../docs/framework/wpf/controls/separator.md)  
+ [<span data-ttu-id="e6d77-142">Kaydırıcı</span><span class="sxs-lookup"><span data-stu-id="e6d77-142">Slider</span></span>](../../../../docs/framework/wpf/controls/slider.md)  
+ [<span data-ttu-id="e6d77-143">StackPanel</span><span class="sxs-lookup"><span data-stu-id="e6d77-143">StackPanel</span></span>](../../../../docs/framework/wpf/controls/stackpanel.md)  
+ [<span data-ttu-id="e6d77-144">StatusBar</span><span class="sxs-lookup"><span data-stu-id="e6d77-144">StatusBar</span></span>](../../../../docs/framework/wpf/controls/statusbar.md)  
+ [<span data-ttu-id="e6d77-145">TabControl</span><span class="sxs-lookup"><span data-stu-id="e6d77-145">TabControl</span></span>](../../../../docs/framework/wpf/controls/tabcontrol.md)  
+ [<span data-ttu-id="e6d77-146">TextBlock</span><span class="sxs-lookup"><span data-stu-id="e6d77-146">TextBlock</span></span>](../../../../docs/framework/wpf/controls/textblock.md)  
+ [<span data-ttu-id="e6d77-147">TextBox</span><span class="sxs-lookup"><span data-stu-id="e6d77-147">TextBox</span></span>](../../../../docs/framework/wpf/controls/textbox.md)  
+ [<span data-ttu-id="e6d77-148">Araç Çubuğu</span><span class="sxs-lookup"><span data-stu-id="e6d77-148">ToolBar</span></span>](../../../../docs/framework/wpf/controls/toolbar.md)  
+ [<span data-ttu-id="e6d77-149">Araç İpucu</span><span class="sxs-lookup"><span data-stu-id="e6d77-149">ToolTip</span></span>](../../../../docs/framework/wpf/controls/tooltip.md)  
+ [<span data-ttu-id="e6d77-150">TreeView</span><span class="sxs-lookup"><span data-stu-id="e6d77-150">TreeView</span></span>](../../../../docs/framework/wpf/controls/treeview.md)  
+ [<span data-ttu-id="e6d77-151">WrapPanel</span><span class="sxs-lookup"><span data-stu-id="e6d77-151">WrapPanel</span></span>](../../../../docs/framework/wpf/controls/wrappanel.md)  
+ [<span data-ttu-id="e6d77-152">Viewbox</span><span class="sxs-lookup"><span data-stu-id="e6d77-152">Viewbox</span></span>](../../../../docs/framework/wpf/controls/viewbox.md)  
   
-## <a name="reference"></a><span data-ttu-id="800a8-153">Başvuru</span><span class="sxs-lookup"><span data-stu-id="800a8-153">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="e6d77-153">Başvuru</span><span class="sxs-lookup"><span data-stu-id="e6d77-153">Reference</span></span>  
  <xref:System.Windows.Controls>  
   
  <xref:System.Windows.Controls.Primitives>  
   
-## <a name="related-sections"></a><span data-ttu-id="800a8-154">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="800a8-154">Related Sections</span></span>  
- [<span data-ttu-id="800a8-155">Denetim Özelleştirme</span><span class="sxs-lookup"><span data-stu-id="800a8-155">Control Customization</span></span>](../../../../docs/framework/wpf/controls/control-customization.md)  
+## <a name="related-sections"></a><span data-ttu-id="e6d77-154">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="e6d77-154">Related Sections</span></span>  
+ [<span data-ttu-id="e6d77-155">Denetim Özelleştirme</span><span class="sxs-lookup"><span data-stu-id="e6d77-155">Control Customization</span></span>](../../../../docs/framework/wpf/controls/control-customization.md)  
   
- [<span data-ttu-id="800a8-156">Kategoriye Göre Denetimler</span><span class="sxs-lookup"><span data-stu-id="800a8-156">Controls by Category</span></span>](../../../../docs/framework/wpf/controls/controls-by-category.md)  
+ [<span data-ttu-id="e6d77-156">Kategoriye Göre Denetimler</span><span class="sxs-lookup"><span data-stu-id="e6d77-156">Controls by Category</span></span>](../../../../docs/framework/wpf/controls/controls-by-category.md)  
   
- [<span data-ttu-id="800a8-157">WPF İçerik Modeli</span><span class="sxs-lookup"><span data-stu-id="800a8-157">WPF Content Model</span></span>](../../../../docs/framework/wpf/controls/wpf-content-model.md)
+ [<span data-ttu-id="e6d77-157">WPF İçerik Modeli</span><span class="sxs-lookup"><span data-stu-id="e6d77-157">WPF Content Model</span></span>](../../../../docs/framework/wpf/controls/wpf-content-model.md)

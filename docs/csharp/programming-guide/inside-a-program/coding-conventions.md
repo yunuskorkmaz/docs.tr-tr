@@ -6,195 +6,196 @@ helpviewer_keywords:
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-ms.openlocfilehash: c639c5481e3ee02eaacbe33e5d118a73db3f9051
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 430cf3f1bc5e0b5ebe1a05530059516f36a473a1
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336943"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43733557"
 ---
-# <a name="c-coding-conventions-c-programming-guide"></a><span data-ttu-id="28953-102">C# Kodlama Kuralları (C# Programlama Kılavuzu)</span><span class="sxs-lookup"><span data-stu-id="28953-102">C# Coding Conventions (C# Programming Guide)</span></span>
- <span data-ttu-id="28953-103">Kodlama kuralları aşağıdaki amaca hizmet eder:</span><span class="sxs-lookup"><span data-stu-id="28953-103">Coding conventions serve the following purposes:</span></span>  
+# <a name="c-coding-conventions-c-programming-guide"></a><span data-ttu-id="8aa46-102">C# Kodlama Kuralları (C# Programlama Kılavuzu)</span><span class="sxs-lookup"><span data-stu-id="8aa46-102">C# Coding Conventions (C# Programming Guide)</span></span>
+ <span data-ttu-id="8aa46-103">Kodlama kuralları aşağıdaki amaçlara hizmet eder:</span><span class="sxs-lookup"><span data-stu-id="8aa46-103">Coding conventions serve the following purposes:</span></span>  
   
--   <span data-ttu-id="28953-104">Okuyucular içeriğine değil düzeni odaklanabilmeniz bunlar kodu tutarlı bir görünüm oluşturur.</span><span class="sxs-lookup"><span data-stu-id="28953-104">They create a consistent look to the code, so that readers can focus on content, not layout.</span></span>  
+-   <span data-ttu-id="8aa46-104">Böylece okuyucular düzene değil içeriğe göre koda tutarlı bir görünüm oluştururlar.</span><span class="sxs-lookup"><span data-stu-id="8aa46-104">They create a consistent look to the code, so that readers can focus on content, not layout.</span></span>  
   
--   <span data-ttu-id="28953-105">Bunlar, önceki deneyimleri temel varsayımları yaparak kodu daha hızlı bir şekilde anlaşılması okuyucular etkinleştirin.</span><span class="sxs-lookup"><span data-stu-id="28953-105">They enable readers to understand the code more quickly by making assumptions based on previous experience.</span></span>  
+-   <span data-ttu-id="8aa46-105">Bunlar, okuyucular kodunuzu daha hızlı bir şekilde önceki deneyime dayanan varsayımlar yaparak anlamanız etkinleştirin.</span><span class="sxs-lookup"><span data-stu-id="8aa46-105">They enable readers to understand the code more quickly by making assumptions based on previous experience.</span></span>  
   
--   <span data-ttu-id="28953-106">Bunlar, kopyalama, değiştirme ve kod bakımı kolaylaştırır.</span><span class="sxs-lookup"><span data-stu-id="28953-106">They facilitate copying, changing, and maintaining the code.</span></span>  
+-   <span data-ttu-id="8aa46-106">Bunlar, kopyalama, değiştirme ve kodun bakımını kolaylaştırır.</span><span class="sxs-lookup"><span data-stu-id="8aa46-106">They facilitate copying, changing, and maintaining the code.</span></span>  
   
--   <span data-ttu-id="28953-107">Bunlar, C# en iyi uygulamaları gösterir.</span><span class="sxs-lookup"><span data-stu-id="28953-107">They demonstrate C# best practices.</span></span>  
+-   <span data-ttu-id="8aa46-107">Bunlar, C# en iyi uygulamaları gösterir.</span><span class="sxs-lookup"><span data-stu-id="8aa46-107">They demonstrate C# best practices.</span></span>  
 
- <span data-ttu-id="28953-108">Bu konudaki yönergeleri, örnekler ve belgeler geliştirmek için Microsoft tarafından kullanılır.</span><span class="sxs-lookup"><span data-stu-id="28953-108">The guidelines in this topic are used by Microsoft to develop samples and documentation.</span></span>  
+ <span data-ttu-id="8aa46-108">Bu konudaki yönergeleri, örnekler ve belgeler geliştirmek için Microsoft tarafından kullanılır.</span><span class="sxs-lookup"><span data-stu-id="8aa46-108">The guidelines in this topic are used by Microsoft to develop samples and documentation.</span></span>  
   
-## <a name="naming-conventions"></a><span data-ttu-id="28953-109">Adlandırma kuralları</span><span class="sxs-lookup"><span data-stu-id="28953-109">Naming Conventions</span></span>  
+## <a name="naming-conventions"></a><span data-ttu-id="8aa46-109">Adlandırma kuralları</span><span class="sxs-lookup"><span data-stu-id="8aa46-109">Naming Conventions</span></span>  
   
--   <span data-ttu-id="28953-110">İçermeyen kısa örneklerde [yönergeleri kullanarak](../../../csharp/language-reference/keywords/using-directive.md), ad alanı nitelikleri kullanın.</span><span class="sxs-lookup"><span data-stu-id="28953-110">In short examples that do not include [using directives](../../../csharp/language-reference/keywords/using-directive.md), use namespace qualifications.</span></span> <span data-ttu-id="28953-111">Bir ad alanı varsayılan projede alınır biliyorsanız, bu ad alanı adlarından tam olarak nitelemek gerekmez.</span><span class="sxs-lookup"><span data-stu-id="28953-111">If you know that a namespace is imported by default in a project, you do not have to fully qualify the names from that namespace.</span></span> <span data-ttu-id="28953-112">Aşağıdaki örnekte gösterildiği gibi tek bir satır için çok uzun olmaları durumunda nitelenmiş adlar bir nokta (.) sonra bozuk olabilir.</span><span class="sxs-lookup"><span data-stu-id="28953-112">Qualified names can be broken after a dot (.) if they are too long for a single line, as shown in the following example.</span></span>  
+-   <span data-ttu-id="8aa46-110">Dahil etmezseniz kısa örneklerde [yönergeleri kullanarak](../../../csharp/language-reference/keywords/using-directive.md), ad alanı nitelikleri kullanın.</span><span class="sxs-lookup"><span data-stu-id="8aa46-110">In short examples that do not include [using directives](../../../csharp/language-reference/keywords/using-directive.md), use namespace qualifications.</span></span> <span data-ttu-id="8aa46-111">Bir ad alanı, bir projedeki varsayılan olarak içeri aktarılır biliyorsanız, bu ad alanı adlarından tam olarak nitelemek gerekmez.</span><span class="sxs-lookup"><span data-stu-id="8aa46-111">If you know that a namespace is imported by default in a project, you do not have to fully qualify the names from that namespace.</span></span> <span data-ttu-id="8aa46-112">Aşağıdaki örnekte gösterildiği gibi tek bir satır için çok uzun olmaları durumunda tam adları nokta (.) sonra bozuk olabilir.</span><span class="sxs-lookup"><span data-stu-id="8aa46-112">Qualified names can be broken after a dot (.) if they are too long for a single line, as shown in the following example.</span></span>  
   
      [!code-csharp[csProgGuideCodingConventions#1](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#1)]  
   
--   <span data-ttu-id="28953-113">Bunları diğer yönergelerine uygun hale getirmek için Visual Studio Tasarımcı araçları kullanılarak oluşturulan nesnelerin adlarını değiştirmek zorunda değildir.</span><span class="sxs-lookup"><span data-stu-id="28953-113">You do not have to change the names of objects that were created by using the Visual Studio designer tools to make them fit other guidelines.</span></span>  
+-   <span data-ttu-id="8aa46-113">Diğer yönergelerine uygun olacak şekilde Visual Studio Tasarımcı araçları kullanılarak oluşturulan nesnelerin adlarını değiştirmeniz gerekmez.</span><span class="sxs-lookup"><span data-stu-id="8aa46-113">You do not have to change the names of objects that were created by using the Visual Studio designer tools to make them fit other guidelines.</span></span>  
   
-## <a name="layout-conventions"></a><span data-ttu-id="28953-114">Düzeni Kuralları</span><span class="sxs-lookup"><span data-stu-id="28953-114">Layout Conventions</span></span>  
- <span data-ttu-id="28953-115">Kodunuzu yapısını vurgulamak ve kod okunmasını kolaylaştırmak için iyi düzenini biçimlendirme kullanır.</span><span class="sxs-lookup"><span data-stu-id="28953-115">Good layout uses formatting to emphasize the structure of your code and to make the code easier to read.</span></span> <span data-ttu-id="28953-116">Microsoft örnekleri ve örnekler için aşağıdaki kurallara uygun:</span><span class="sxs-lookup"><span data-stu-id="28953-116">Microsoft examples and samples conform to the following conventions:</span></span>  
+## <a name="layout-conventions"></a><span data-ttu-id="8aa46-114">Düzeni Kuralları</span><span class="sxs-lookup"><span data-stu-id="8aa46-114">Layout Conventions</span></span>  
+ <span data-ttu-id="8aa46-115">İyi Düzen biçimlendirme, kod yapısını vurgulamak ve kodun okunmasını kolaylaştırmak için kullanır.</span><span class="sxs-lookup"><span data-stu-id="8aa46-115">Good layout uses formatting to emphasize the structure of your code and to make the code easier to read.</span></span> <span data-ttu-id="8aa46-116">Microsoft örnekleri ve örnek için aşağıdaki kurallara uygun:</span><span class="sxs-lookup"><span data-stu-id="8aa46-116">Microsoft examples and samples conform to the following conventions:</span></span>  
   
--   <span data-ttu-id="28953-117">Varsayılan kod düzenleyicisinde ayarları (Akıllı Girintileme, dört karakter girintileri, alanları olarak kaydedilen sekmeleri) kullanın.</span><span class="sxs-lookup"><span data-stu-id="28953-117">Use the default Code Editor settings (smart indenting, four-character indents, tabs saved as spaces).</span></span> <span data-ttu-id="28953-118">Daha fazla bilgi için bkz: [seçenekler, metin düzenleyici, C++, biçimlendirme](/visualstudio/ide/reference/options-text-editor-csharp-formatting).</span><span class="sxs-lookup"><span data-stu-id="28953-118">For more information, see [Options, Text Editor, C#, Formatting](/visualstudio/ide/reference/options-text-editor-csharp-formatting).</span></span>  
+-   <span data-ttu-id="8aa46-117">Varsayılan Kod Düzenleyicisi ayarları (Akıllı girintileme dört karakterlik girintileri, sekmeleri boşluk olarak kaydedilen) kullanın.</span><span class="sxs-lookup"><span data-stu-id="8aa46-117">Use the default Code Editor settings (smart indenting, four-character indents, tabs saved as spaces).</span></span> <span data-ttu-id="8aa46-118">Daha fazla bilgi için [seçenekler, metin düzenleyici, C++, biçimlendirme](/visualstudio/ide/reference/options-text-editor-csharp-formatting).</span><span class="sxs-lookup"><span data-stu-id="8aa46-118">For more information, see [Options, Text Editor, C#, Formatting](/visualstudio/ide/reference/options-text-editor-csharp-formatting).</span></span>  
   
--   <span data-ttu-id="28953-119">Satır başına yalnızca bir deyim yazma.</span><span class="sxs-lookup"><span data-stu-id="28953-119">Write only one statement per line.</span></span>  
+-   <span data-ttu-id="8aa46-119">Her satırda yalnızca bir deyim yazın.</span><span class="sxs-lookup"><span data-stu-id="8aa46-119">Write only one statement per line.</span></span>  
   
--   <span data-ttu-id="28953-120">Satır başına yalnızca bir bildirimini yazma.</span><span class="sxs-lookup"><span data-stu-id="28953-120">Write only one declaration per line.</span></span>  
+-   <span data-ttu-id="8aa46-120">Her satırda yalnızca bir bildirim yazın.</span><span class="sxs-lookup"><span data-stu-id="8aa46-120">Write only one declaration per line.</span></span>  
   
--   <span data-ttu-id="28953-121">Devamlılık satırlarının otomatik olarak girinti değil, bunları bir sekme durağı (dört alanları) girinti.</span><span class="sxs-lookup"><span data-stu-id="28953-121">If continuation lines are not indented automatically, indent them one tab stop (four spaces).</span></span>  
+-   <span data-ttu-id="8aa46-121">Bir sekme durağı (dört alanları), devamlılık satırlarını otomatik olarak girinti değil, bunları girinti.</span><span class="sxs-lookup"><span data-stu-id="8aa46-121">If continuation lines are not indented automatically, indent them one tab stop (four spaces).</span></span>  
   
--   <span data-ttu-id="28953-122">Yöntem tanımlarını ve özellik tanımları arasında en az bir boş satır ekleyin.</span><span class="sxs-lookup"><span data-stu-id="28953-122">Add at least one blank line between method definitions and property definitions.</span></span>  
+-   <span data-ttu-id="8aa46-122">Yöntem tanımlarını ve özellik tanımları arasına en az bir boş satır ekleyin.</span><span class="sxs-lookup"><span data-stu-id="8aa46-122">Add at least one blank line between method definitions and property definitions.</span></span>  
   
--   <span data-ttu-id="28953-123">Yan tümceleri bir ifadede görünür, aşağıdaki kodda gösterildiği gibi yapma ayraç kullanın.</span><span class="sxs-lookup"><span data-stu-id="28953-123">Use parentheses to make clauses in an expression apparent, as shown in the following code.</span></span>  
+-   <span data-ttu-id="8aa46-123">Yan tümceleri bir ifadede görünür, aşağıdaki kodda gösterildiği gibi hale getirmek için ayraç kullanın.</span><span class="sxs-lookup"><span data-stu-id="8aa46-123">Use parentheses to make clauses in an expression apparent, as shown in the following code.</span></span>  
   
      [!code-csharp[csProgGuideCodingConventions#2](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#2)]  
   
-## <a name="commenting-conventions"></a><span data-ttu-id="28953-124">Yorum Oluşturma Kuralları</span><span class="sxs-lookup"><span data-stu-id="28953-124">Commenting Conventions</span></span>  
+## <a name="commenting-conventions"></a><span data-ttu-id="8aa46-124">Yorum Oluşturma Kuralları</span><span class="sxs-lookup"><span data-stu-id="8aa46-124">Commenting Conventions</span></span>  
   
--   <span data-ttu-id="28953-125">Kod satırının sonunda değil ayrı bir satırda açıklama yerleştirin.</span><span class="sxs-lookup"><span data-stu-id="28953-125">Place the comment on a separate line, not at the end of a line of code.</span></span>  
+-   <span data-ttu-id="8aa46-125">Bir kod satırının sonunda değil ayrı bir satırda açıklama yerleştirin.</span><span class="sxs-lookup"><span data-stu-id="8aa46-125">Place the comment on a separate line, not at the end of a line of code.</span></span>  
   
--   <span data-ttu-id="28953-126">Açıklama metni büyük harfe ile başlar.</span><span class="sxs-lookup"><span data-stu-id="28953-126">Begin comment text with an uppercase letter.</span></span>  
+-   <span data-ttu-id="8aa46-126">Büyük harfle yorum metni başlatın.</span><span class="sxs-lookup"><span data-stu-id="8aa46-126">Begin comment text with an uppercase letter.</span></span>  
   
--   <span data-ttu-id="28953-127">Açıklama metni noktayla bitmelidir.</span><span class="sxs-lookup"><span data-stu-id="28953-127">End comment text with a period.</span></span>  
+-   <span data-ttu-id="8aa46-127">Yorum metnini noktayla sonlandırın.</span><span class="sxs-lookup"><span data-stu-id="8aa46-127">End comment text with a period.</span></span>  
   
--   <span data-ttu-id="28953-128">Açıklama sınırlayıcısı arasında bir boşluk (/ /) ve aşağıdaki örnekte gösterildiği gibi açıklama metni.</span><span class="sxs-lookup"><span data-stu-id="28953-128">Insert one space between the comment delimiter (//) and the comment text, as shown in the following example.</span></span>  
+-   <span data-ttu-id="8aa46-128">Açıklama sınırlayıcısı arasında bir boşluk (/ /) ve aşağıdaki örnekte gösterildiği gibi açıklama metni.</span><span class="sxs-lookup"><span data-stu-id="8aa46-128">Insert one space between the comment delimiter (//) and the comment text, as shown in the following example.</span></span>  
   
      [!code-csharp[csProgGuideCodingConventions#3](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#3)]  
   
--   <span data-ttu-id="28953-129">Yorumlar geçici yıldızlar biçimlendirilmiş bloklarını oluşturmayın.</span><span class="sxs-lookup"><span data-stu-id="28953-129">Do not create formatted blocks of asterisks around comments.</span></span>  
+-   <span data-ttu-id="8aa46-129">Biçimlendirilmiş yıldız açıklamaları etrafında bloklarını oluşturmayın.</span><span class="sxs-lookup"><span data-stu-id="8aa46-129">Do not create formatted blocks of asterisks around comments.</span></span>  
   
-## <a name="language-guidelines"></a><span data-ttu-id="28953-130">Dil Kuralları</span><span class="sxs-lookup"><span data-stu-id="28953-130">Language Guidelines</span></span>  
- <span data-ttu-id="28953-131">Aşağıdaki bölümlerde C# takım kod örnekleri ve örnekleri hazırlamak için aşağıdaki yöntemleri açıklar.</span><span class="sxs-lookup"><span data-stu-id="28953-131">The following sections describe practices that the C# team follows to prepare code examples and samples.</span></span>  
+## <a name="language-guidelines"></a><span data-ttu-id="8aa46-130">Dil Kuralları</span><span class="sxs-lookup"><span data-stu-id="8aa46-130">Language Guidelines</span></span>  
+ <span data-ttu-id="8aa46-131">Aşağıdaki bölümlerde, C# ekip kod örnekleri ve örnek hazırlamak için aşağıdaki yöntemleri açıklar.</span><span class="sxs-lookup"><span data-stu-id="8aa46-131">The following sections describe practices that the C# team follows to prepare code examples and samples.</span></span>  
   
-### <a name="string-data-type"></a><span data-ttu-id="28953-132">Dize Veri Türü</span><span class="sxs-lookup"><span data-stu-id="28953-132">String Data Type</span></span>  
+### <a name="string-data-type"></a><span data-ttu-id="8aa46-132">Dize Veri Türü</span><span class="sxs-lookup"><span data-stu-id="8aa46-132">String Data Type</span></span>  
   
--   <span data-ttu-id="28953-133">Kullanım [dize ilişkilendirme](../../language-reference/tokens/interpolated.md) aşağıdaki kodda gösterildiği gibi kısa dizeyi birleştirmek için.</span><span class="sxs-lookup"><span data-stu-id="28953-133">Use [string interpolation](../../language-reference/tokens/interpolated.md) to concatenate short strings, as shown in the following code.</span></span>  
+-   <span data-ttu-id="8aa46-133">Kullanım [dize ilişkilendirme](../../language-reference/tokens/interpolated.md) kısa dizeler, aşağıdaki kodda gösterildiği gibi birleştirmek için.</span><span class="sxs-lookup"><span data-stu-id="8aa46-133">Use [string interpolation](../../language-reference/tokens/interpolated.md) to concatenate short strings, as shown in the following code.</span></span>  
   
      [!code-csharp[csProgGuideCodingConventions#6](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#6)]  
   
--   <span data-ttu-id="28953-134">Özellikle büyük miktarlarda metin ile çalışırken döngüler, dizelerde eklemek için kullanın bir <xref:System.Text.StringBuilder> nesnesi.</span><span class="sxs-lookup"><span data-stu-id="28953-134">To append strings in loops, especially when you are working with large amounts of text, use a <xref:System.Text.StringBuilder> object.</span></span>  
+-   <span data-ttu-id="8aa46-134">Döngülere diziler, özellikle büyük miktarlarda metini çalışırken eklemek için kullanmak bir <xref:System.Text.StringBuilder> nesne.</span><span class="sxs-lookup"><span data-stu-id="8aa46-134">To append strings in loops, especially when you are working with large amounts of text, use a <xref:System.Text.StringBuilder> object.</span></span>  
   
      [!code-csharp[csProgGuideCodingConventions#7](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#7)]  
   
-### <a name="implicitly-typed-local-variables"></a><span data-ttu-id="28953-135">Örtülü Olarak Yazılan Yerel Değişkenler</span><span class="sxs-lookup"><span data-stu-id="28953-135">Implicitly Typed Local Variables</span></span>  
+### <a name="implicitly-typed-local-variables"></a><span data-ttu-id="8aa46-135">Örtülü Olarak Yazılan Yerel Değişkenler</span><span class="sxs-lookup"><span data-stu-id="8aa46-135">Implicitly Typed Local Variables</span></span>  
   
--   <span data-ttu-id="28953-136">Kullanım [örtülü yazma](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md) değişkeninin türü sağından atama veya kesin türü önemli olmadığında açık olduğunda, yerel değişkenleri.</span><span class="sxs-lookup"><span data-stu-id="28953-136">Use [implicit typing](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md) for local variables when the type of the variable is obvious from the right side of the assignment, or when the precise type is not important.</span></span>  
+-   <span data-ttu-id="8aa46-136">Kullanım [örtülü yazma](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md) değişkeninin türünü atama veya kesin türü önemli olmadığı durumlarda sağından belirgin olduğunda yerel değişkenleri.</span><span class="sxs-lookup"><span data-stu-id="8aa46-136">Use [implicit typing](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md) for local variables when the type of the variable is obvious from the right side of the assignment, or when the precise type is not important.</span></span>  
   
      [!code-csharp[csProgGuideCodingConventions#8](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#8)]  
   
--   <span data-ttu-id="28953-137">Kullanmayın [var](../../../csharp/language-reference/keywords/var.md) türü olmadığında atama sağ tarafında görünür.</span><span class="sxs-lookup"><span data-stu-id="28953-137">Do not use [var](../../../csharp/language-reference/keywords/var.md) when the type is not apparent from the right side of the assignment.</span></span>  
+-   <span data-ttu-id="8aa46-137">Kullanmayın [var](../../../csharp/language-reference/keywords/var.md) türü olmadığında ataması sağ taraftan görünür.</span><span class="sxs-lookup"><span data-stu-id="8aa46-137">Do not use [var](../../../csharp/language-reference/keywords/var.md) when the type is not apparent from the right side of the assignment.</span></span>  
   
      [!code-csharp[csProgGuideCodingConventions#9](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#9)]  
   
--   <span data-ttu-id="28953-138">Değişken türünü belirtmek için değişken adını kullanmayın.</span><span class="sxs-lookup"><span data-stu-id="28953-138">Do not rely on the variable name to specify the type of the variable.</span></span> <span data-ttu-id="28953-139">Doğru olmayabilir.</span><span class="sxs-lookup"><span data-stu-id="28953-139">It might not be correct.</span></span>  
+-   <span data-ttu-id="8aa46-138">Değişken türünü belirtmek için değişken adını kullanmayın.</span><span class="sxs-lookup"><span data-stu-id="8aa46-138">Do not rely on the variable name to specify the type of the variable.</span></span> <span data-ttu-id="8aa46-139">Doğru olmayabilir.</span><span class="sxs-lookup"><span data-stu-id="8aa46-139">It might not be correct.</span></span>  
   
      [!code-csharp[csProgGuideCodingConventions#10](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#10)]  
   
--   <span data-ttu-id="28953-140">Kullanmaktan kaçının `var` yerine [dinamik](../../../csharp/language-reference/keywords/dynamic.md).</span><span class="sxs-lookup"><span data-stu-id="28953-140">Avoid the use of `var` in place of [dynamic](../../../csharp/language-reference/keywords/dynamic.md).</span></span>  
+-   <span data-ttu-id="8aa46-140">Kullanmaktan kaçının `var` yerine [dinamik](../../../csharp/language-reference/keywords/dynamic.md).</span><span class="sxs-lookup"><span data-stu-id="8aa46-140">Avoid the use of `var` in place of [dynamic](../../../csharp/language-reference/keywords/dynamic.md).</span></span>  
   
--   <span data-ttu-id="28953-141">Örtük yazarak döngü değişken türünü belirlemek için kullanın [için](../../../csharp/language-reference/keywords/for.md) ve [foreach](../../../csharp/language-reference/keywords/foreach-in.md) döngüler.</span><span class="sxs-lookup"><span data-stu-id="28953-141">Use implicit typing to determine the type of the loop variable in [for](../../../csharp/language-reference/keywords/for.md) and [foreach](../../../csharp/language-reference/keywords/foreach-in.md) loops.</span></span>  
+-   <span data-ttu-id="8aa46-141">Örtülü yazma Döngü değişkeninin içinde türünü belirlemek için kullanın [için](../../../csharp/language-reference/keywords/for.md) ve [foreach](../../../csharp/language-reference/keywords/foreach-in.md) döngüleri.</span><span class="sxs-lookup"><span data-stu-id="8aa46-141">Use implicit typing to determine the type of the loop variable in [for](../../../csharp/language-reference/keywords/for.md) and [foreach](../../../csharp/language-reference/keywords/foreach-in.md) loops.</span></span>  
   
-     <span data-ttu-id="28953-142">Aşağıdaki örnek, örtük yazarak kullanır bir `for` deyimi.</span><span class="sxs-lookup"><span data-stu-id="28953-142">The following example uses implicit typing in a `for` statement.</span></span>  
+     <span data-ttu-id="8aa46-142">Aşağıdaki örnek örtük yazarak kullanan bir `for` deyimi.</span><span class="sxs-lookup"><span data-stu-id="8aa46-142">The following example uses implicit typing in a `for` statement.</span></span>  
   
      [!code-csharp[csProgGuideCodingConventions#11](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#11)]  
   
-     <span data-ttu-id="28953-143">Aşağıdaki örnek, örtük yazarak kullanır bir `foreach` deyimi.</span><span class="sxs-lookup"><span data-stu-id="28953-143">The following example uses implicit typing in a `foreach` statement.</span></span>  
+     <span data-ttu-id="8aa46-143">Aşağıdaki örnek örtük yazarak kullanan bir `foreach` deyimi.</span><span class="sxs-lookup"><span data-stu-id="8aa46-143">The following example uses implicit typing in a `foreach` statement.</span></span>  
   
      [!code-csharp[csProgGuideCodingConventions#12](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#12)]  
   
-### <a name="unsigned-data-type"></a><span data-ttu-id="28953-144">İmzasız Veri Türü</span><span class="sxs-lookup"><span data-stu-id="28953-144">Unsigned Data Type</span></span>  
+### <a name="unsigned-data-type"></a><span data-ttu-id="8aa46-144">İmzasız Veri Türü</span><span class="sxs-lookup"><span data-stu-id="8aa46-144">Unsigned Data Type</span></span>  
   
--   <span data-ttu-id="28953-145">Genel olarak, kullanın `int` imzasız türler yerine.</span><span class="sxs-lookup"><span data-stu-id="28953-145">In general, use `int` rather than unsigned types.</span></span> <span data-ttu-id="28953-146">Kullanımını `int` C# yaygın bir durumdur ve diğer kitaplıklarla birlikte kullandığınızda etkileşim daha kolaydır `int`.</span><span class="sxs-lookup"><span data-stu-id="28953-146">The use of `int` is common throughout C#, and it is easier to interact with other libraries when you use `int`.</span></span>  
+-   <span data-ttu-id="8aa46-145">Genel olarak, kullanın `int` imzasız türler yerine.</span><span class="sxs-lookup"><span data-stu-id="8aa46-145">In general, use `int` rather than unsigned types.</span></span> <span data-ttu-id="8aa46-146">Kullanımını `int` C# yaygın bir durumdur ve diğer kitaplıklarla birlikte kullandığınızda etkileşim kolaydır `int`.</span><span class="sxs-lookup"><span data-stu-id="8aa46-146">The use of `int` is common throughout C#, and it is easier to interact with other libraries when you use `int`.</span></span>  
   
-### <a name="arrays"></a><span data-ttu-id="28953-147">Diziler</span><span class="sxs-lookup"><span data-stu-id="28953-147">Arrays</span></span>  
+### <a name="arrays"></a><span data-ttu-id="8aa46-147">Diziler</span><span class="sxs-lookup"><span data-stu-id="8aa46-147">Arrays</span></span>  
   
--   <span data-ttu-id="28953-148">Diziler bildirimi satırındaki başlattığınızda kısa sözdizimini kullanın.</span><span class="sxs-lookup"><span data-stu-id="28953-148">Use the concise syntax when you initialize arrays on the declaration line.</span></span>  
+-   <span data-ttu-id="8aa46-148">Bildirim satırında dizileri başlattığınızda kısa sözdizimini kullanın.</span><span class="sxs-lookup"><span data-stu-id="8aa46-148">Use the concise syntax when you initialize arrays on the declaration line.</span></span>  
   
      [!code-csharp[csProgGuideCodingConventions#13](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#13)]  
   
-### <a name="delegates"></a><span data-ttu-id="28953-149">Temsilciler</span><span class="sxs-lookup"><span data-stu-id="28953-149">Delegates</span></span>  
+### <a name="delegates"></a><span data-ttu-id="8aa46-149">Temsilciler</span><span class="sxs-lookup"><span data-stu-id="8aa46-149">Delegates</span></span>  
   
--   <span data-ttu-id="28953-150">Bir temsilci türü örnekleri oluşturmak için kısa sözdizimini kullanın.</span><span class="sxs-lookup"><span data-stu-id="28953-150">Use the concise syntax to create instances of a delegate type.</span></span>  
+-   <span data-ttu-id="8aa46-150">Bir temsilci türünün örneğini oluşturmak için kısa sözdizimi kullanın.</span><span class="sxs-lookup"><span data-stu-id="8aa46-150">Use the concise syntax to create instances of a delegate type.</span></span>  
   
      [!code-csharp[csProgGuideCodingConventions#14](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#14)]  
   
      [!code-csharp[csProgGuideCodingConventions#15](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#15)]  
   
-### <a name="try-catch-and-using-statements-in-exception-handling"></a><span data-ttu-id="28953-151">try-catch ve Özel Durum İşleme bölümünde Deyimleri kullanma</span><span class="sxs-lookup"><span data-stu-id="28953-151">try-catch and using Statements in Exception Handling</span></span>  
+### <a name="try-catch-and-using-statements-in-exception-handling"></a><span data-ttu-id="8aa46-151">try-catch ve Özel Durum İşleme bölümünde Deyimleri kullanma</span><span class="sxs-lookup"><span data-stu-id="8aa46-151">try-catch and using Statements in Exception Handling</span></span>  
   
--   <span data-ttu-id="28953-152">Kullanım bir [try-catch](../../../csharp/language-reference/keywords/try-catch.md) çoğu özel durum işleme için bildirimi.</span><span class="sxs-lookup"><span data-stu-id="28953-152">Use a [try-catch](../../../csharp/language-reference/keywords/try-catch.md) statement for most exception handling.</span></span>  
+-   <span data-ttu-id="8aa46-152">Kullanım bir [try-catch](../../../csharp/language-reference/keywords/try-catch.md) çoğu özel durum işleme için bildirimi.</span><span class="sxs-lookup"><span data-stu-id="8aa46-152">Use a [try-catch](../../../csharp/language-reference/keywords/try-catch.md) statement for most exception handling.</span></span>  
   
      [!code-csharp[csProgGuideCodingConventions#16](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#16)]  
   
--   <span data-ttu-id="28953-153">C# kullanarak kodunuzu basitleştiren [deyimiyle](../../../csharp/language-reference/keywords/using-statement.md).</span><span class="sxs-lookup"><span data-stu-id="28953-153">Simplify your code by using the C# [using statement](../../../csharp/language-reference/keywords/using-statement.md).</span></span> <span data-ttu-id="28953-154">Varsa bir [try-finally](../../../csharp/language-reference/keywords/try-finally.md) hangi deyiminde yalnızca kodda `finally` blok çağrıdır <xref:System.IDisposable.Dispose%2A> yöntemi, kullanım bir `using` deyimi yerine.</span><span class="sxs-lookup"><span data-stu-id="28953-154">If you have a [try-finally](../../../csharp/language-reference/keywords/try-finally.md) statement in which the only code in the `finally` block is a call to the <xref:System.IDisposable.Dispose%2A> method, use a `using` statement instead.</span></span>  
+-   <span data-ttu-id="8aa46-153">C# kullanarak kodunuzu basitleştirerek [using deyimi](../../../csharp/language-reference/keywords/using-statement.md).</span><span class="sxs-lookup"><span data-stu-id="8aa46-153">Simplify your code by using the C# [using statement](../../../csharp/language-reference/keywords/using-statement.md).</span></span> <span data-ttu-id="8aa46-154">Varsa bir [try-finally](../../../csharp/language-reference/keywords/try-finally.md) deyimi, yalnızca kod `finally` blok çağrısı ise <xref:System.IDisposable.Dispose%2A> yöntemini kullanmak bir `using` deyimi yerine.</span><span class="sxs-lookup"><span data-stu-id="8aa46-154">If you have a [try-finally](../../../csharp/language-reference/keywords/try-finally.md) statement in which the only code in the `finally` block is a call to the <xref:System.IDisposable.Dispose%2A> method, use a `using` statement instead.</span></span>  
   
      [!code-csharp[csProgGuideCodingConventions#17](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#17)]  
   
-### <a name="-and-124124-operators"></a><span data-ttu-id="28953-155">& & ve &#124; &#124; işleçleri</span><span class="sxs-lookup"><span data-stu-id="28953-155">&& and &#124;&#124; Operators</span></span>  
+### <a name="-and-124124-operators"></a><span data-ttu-id="8aa46-155">& & ve &#124; &#124; işleçleri</span><span class="sxs-lookup"><span data-stu-id="8aa46-155">&& and &#124;&#124; Operators</span></span>  
   
--   <span data-ttu-id="28953-156">Özel durumlar önlemek ve gereksiz karşılaştırmaları atlayarak performansı artırmak için kullanmak [ && ](../../../csharp/language-reference/operators/conditional-and-operator.md) yerine [ & ](../../../csharp/language-reference/operators/and-operator.md) ve [ &#124; &#124; ](../../../csharp/language-reference/operators/conditional-or-operator.md)yerine [ &#124; ](../../../csharp/language-reference/operators/or-operator.md) gerçekleştirdiğinizde karşılaştırmaları, aşağıdaki örnekte gösterildiği gibi.</span><span class="sxs-lookup"><span data-stu-id="28953-156">To avoid exceptions and increase performance by skipping unnecessary comparisons, use [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) instead of [&](../../../csharp/language-reference/operators/and-operator.md) and [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) instead of [&#124;](../../../csharp/language-reference/operators/or-operator.md) when you perform comparisons, as shown in the following example.</span></span>  
+-   <span data-ttu-id="8aa46-156">Özel durumlar önlemek ve gereksiz karşılaştırmalar atlayarak performansı artırmak için kullandığınız [ && ](../../../csharp/language-reference/operators/conditional-and-operator.md) yerine [ & ](../../../csharp/language-reference/operators/and-operator.md) ve [ &#124; &#124; ](../../../csharp/language-reference/operators/conditional-or-operator.md)yerine [ &#124; ](../../../csharp/language-reference/operators/or-operator.md) gerçekleştirirken karşılaştırmalar, aşağıdaki örnekte gösterildiği gibi.</span><span class="sxs-lookup"><span data-stu-id="8aa46-156">To avoid exceptions and increase performance by skipping unnecessary comparisons, use [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) instead of [&](../../../csharp/language-reference/operators/and-operator.md) and [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) instead of [&#124;](../../../csharp/language-reference/operators/or-operator.md) when you perform comparisons, as shown in the following example.</span></span>  
   
      [!code-csharp[csProgGuideCodingConventions#18](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#18)]  
   
-### <a name="new-operator"></a><span data-ttu-id="28953-157">Yeni İşleç</span><span class="sxs-lookup"><span data-stu-id="28953-157">New Operator</span></span>  
+### <a name="new-operator"></a><span data-ttu-id="8aa46-157">Yeni İşleç</span><span class="sxs-lookup"><span data-stu-id="8aa46-157">New Operator</span></span>  
   
--   <span data-ttu-id="28953-158">Nesne oluşturmada kısa biçiminde örtülü yazma ile aşağıdaki bildiriminde gösterildiği gibi kullanın.</span><span class="sxs-lookup"><span data-stu-id="28953-158">Use the concise form of object instantiation, with implicit typing, as shown in the following declaration.</span></span>  
+-   <span data-ttu-id="8aa46-158">Nesne örneklemesini kısa biçiminde örtülü yazma için aşağıdaki bildirimde gösterildiği gibi kullanın.</span><span class="sxs-lookup"><span data-stu-id="8aa46-158">Use the concise form of object instantiation, with implicit typing, as shown in the following declaration.</span></span>  
   
      [!code-csharp[csProgGuideCodingConventions#19](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#19)]  
   
-     <span data-ttu-id="28953-159">Önceki satıra aşağıdaki bildirimine eşdeğerdir.</span><span class="sxs-lookup"><span data-stu-id="28953-159">The previous line is equivalent to the following declaration.</span></span>  
+     <span data-ttu-id="8aa46-159">Önceki satıra aşağıdaki bildirime eşdeğerdir.</span><span class="sxs-lookup"><span data-stu-id="8aa46-159">The previous line is equivalent to the following declaration.</span></span>  
   
      [!code-csharp[csProgGuideCodingConventions#20](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#20)]  
   
--   <span data-ttu-id="28953-160">Nesne başlatıcıları nesne oluşturma işlemini basitleştirmek için kullanın.</span><span class="sxs-lookup"><span data-stu-id="28953-160">Use object initializers to simplify object creation.</span></span>  
+-   <span data-ttu-id="8aa46-160">Nesne oluşturma işlemini basitleştirmek için nesne başlatıcıları kullanın.</span><span class="sxs-lookup"><span data-stu-id="8aa46-160">Use object initializers to simplify object creation.</span></span>  
   
      [!code-csharp[csProgGuideCodingConventions#21](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#21)]  
   
-### <a name="event-handling"></a><span data-ttu-id="28953-161">Olay İşleme</span><span class="sxs-lookup"><span data-stu-id="28953-161">Event Handling</span></span>  
+### <a name="event-handling"></a><span data-ttu-id="8aa46-161">Olay İşleme</span><span class="sxs-lookup"><span data-stu-id="8aa46-161">Event Handling</span></span>  
   
--   <span data-ttu-id="28953-162">Daha sonra kaldırmanız gerekmez bir olay işleyicisi tanımlıyorsanız, lambda ifadesi kullanın.</span><span class="sxs-lookup"><span data-stu-id="28953-162">If you are defining an event handler that you do not need to remove later, use a lambda expression.</span></span>  
+-   <span data-ttu-id="8aa46-162">Daha sonra kaldırmanız gerekmez bir olay işleyicisi tanımlıyorsanız, bir lambda ifadesini kullanın.</span><span class="sxs-lookup"><span data-stu-id="8aa46-162">If you are defining an event handler that you do not need to remove later, use a lambda expression.</span></span>  
   
      [!code-csharp[csProgGuideCodingConventions#22](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#22)]  
   
      [!code-csharp[csProgGuideCodingConventions#23](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#23)]  
   
-### <a name="static-members"></a><span data-ttu-id="28953-163">Statik Üyeler</span><span class="sxs-lookup"><span data-stu-id="28953-163">Static Members</span></span>  
+### <a name="static-members"></a><span data-ttu-id="8aa46-163">Statik Üyeler</span><span class="sxs-lookup"><span data-stu-id="8aa46-163">Static Members</span></span>  
   
--   <span data-ttu-id="28953-164">Çağrı [statik](../../../csharp/language-reference/keywords/static.md) sınıf adını kullanarak üyeleri: *ClassName.StaticMember*.</span><span class="sxs-lookup"><span data-stu-id="28953-164">Call [static](../../../csharp/language-reference/keywords/static.md) members by using the class name: *ClassName.StaticMember*.</span></span> <span data-ttu-id="28953-165">Bu yöntem, temizleyin statik erişim sağlayarak kodunu daha okunabilir yapar.</span><span class="sxs-lookup"><span data-stu-id="28953-165">This practice makes code more readable by making static access clear.</span></span>  <span data-ttu-id="28953-166">Türetilmiş bir sınıf adı ile temel bir sınıf içinde tanımlanan statik bir üyenin uygun değil.</span><span class="sxs-lookup"><span data-stu-id="28953-166">Do not qualify a static member defined in a base class with the name of a derived class.</span></span>  <span data-ttu-id="28953-167">Bu kodu derlenir kodun okunabilirliğini yanıltıcı ve türetilmiş sınıf aynı ada sahip statik bir üyenin eklerseniz, kodu gelecekte kesilebilir.</span><span class="sxs-lookup"><span data-stu-id="28953-167">While that code compiles, the code readability is misleading, and the code may break in the future if you add a static member with the same name to the derived class.</span></span>  
+-   <span data-ttu-id="8aa46-164">Çağrı [statik](../../../csharp/language-reference/keywords/static.md) üyeleri sınıf adı kullanılarak: *ClassName.StaticMember*.</span><span class="sxs-lookup"><span data-stu-id="8aa46-164">Call [static](../../../csharp/language-reference/keywords/static.md) members by using the class name: *ClassName.StaticMember*.</span></span> <span data-ttu-id="8aa46-165">Bu yöntem kod daha okunabilir Temizle statik erişim sağlayarak yapar.</span><span class="sxs-lookup"><span data-stu-id="8aa46-165">This practice makes code more readable by making static access clear.</span></span>  <span data-ttu-id="8aa46-166">Bir temel sınıfta türetilmiş bir sınıfın adıyla tanımlanan statik bir üye için uygun değildir.</span><span class="sxs-lookup"><span data-stu-id="8aa46-166">Do not qualify a static member defined in a base class with the name of a derived class.</span></span>  <span data-ttu-id="8aa46-167">Bu kod derlenir, kodun okunabilirliğini yanıltıcı ve türetilmiş sınıf için aynı ada sahip bir statik üye ekleme kodu gelecekte bozabilir.</span><span class="sxs-lookup"><span data-stu-id="8aa46-167">While that code compiles, the code readability is misleading, and the code may break in the future if you add a static member with the same name to the derived class.</span></span>  
   
-### <a name="linq-queries"></a><span data-ttu-id="28953-168">LINQ Sorguları</span><span class="sxs-lookup"><span data-stu-id="28953-168">LINQ Queries</span></span>  
+### <a name="linq-queries"></a><span data-ttu-id="8aa46-168">LINQ Sorguları</span><span class="sxs-lookup"><span data-stu-id="8aa46-168">LINQ Queries</span></span>  
   
--   <span data-ttu-id="28953-169">Sorgu değişkenleri için anlamlı adlarını kullanın.</span><span class="sxs-lookup"><span data-stu-id="28953-169">Use meaningful names for query variables.</span></span> <span data-ttu-id="28953-170">Aşağıdaki örnek kullanır `seattleCustomers` Seattle'da bulunan müşteriler için.</span><span class="sxs-lookup"><span data-stu-id="28953-170">The following example uses `seattleCustomers` for customers who are located in Seattle.</span></span>  
+-   <span data-ttu-id="8aa46-169">Sorgu değişkenleri için anlamlı adlar kullanın.</span><span class="sxs-lookup"><span data-stu-id="8aa46-169">Use meaningful names for query variables.</span></span> <span data-ttu-id="8aa46-170">Aşağıdaki örnekte `seattleCustomers` müşteriler Seattle'dadır.</span><span class="sxs-lookup"><span data-stu-id="8aa46-170">The following example uses `seattleCustomers` for customers who are located in Seattle.</span></span>  
   
      [!code-csharp[csProgGuideCodingConventions#25](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#25)]  
   
--   <span data-ttu-id="28953-171">Anonim türdeki özellik adları düzgün, Pascal kullanarak olduğundan emin emin olmak için diğer adlar kullanın büyük/küçük harf.</span><span class="sxs-lookup"><span data-stu-id="28953-171">Use aliases to make sure that property names of anonymous types are correctly capitalized, using Pascal casing.</span></span>  
+-   <span data-ttu-id="8aa46-171">Anonim türlerinin özellik adlarının doğru Pascal kullanarak emin olmak için diğer adları kullanın. büyük/küçük harf.</span><span class="sxs-lookup"><span data-stu-id="8aa46-171">Use aliases to make sure that property names of anonymous types are correctly capitalized, using Pascal casing.</span></span>  
   
      [!code-csharp[csProgGuideCodingConventions#26](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#26)]  
   
--   <span data-ttu-id="28953-172">Özellik adlarının sonuç belirsiz kullanırken özellikleri yeniden adlandırın.</span><span class="sxs-lookup"><span data-stu-id="28953-172">Rename properties when the property names in the result would be ambiguous.</span></span> <span data-ttu-id="28953-173">Sorgunuz bir müşteri adı ve bunları olarak bırakarak yerine bir dağıtıcı kimliği döndürürse, örneğin, `Name` ve `ID` sonucunda açıklamak için yeniden adlandırma `Name` bir müşteri adıdır ve `ID` dağıtıcı kimliğidir.</span><span class="sxs-lookup"><span data-stu-id="28953-173">For example, if your query returns a customer name and a distributor ID, instead of leaving them as `Name` and `ID` in the result, rename them to clarify that `Name` is the name of a customer, and `ID` is the ID of a distributor.</span></span>  
+-   <span data-ttu-id="8aa46-172">Sonuçtaki özellik adları belirsiz olduğunda özellikleri yeniden adlandırın.</span><span class="sxs-lookup"><span data-stu-id="8aa46-172">Rename properties when the property names in the result would be ambiguous.</span></span> <span data-ttu-id="8aa46-173">Örneğin, sorgunuz bir müşteri adı ve olarak bırakmak yerine bir dağıtıcı kimliği döndürür `Name` ve `ID` sonucunda açıklamak için yeniden adlandırma `Name` bir müşteri adı ve `ID` bir dağıtıcıyı kimliğidir.</span><span class="sxs-lookup"><span data-stu-id="8aa46-173">For example, if your query returns a customer name and a distributor ID, instead of leaving them as `Name` and `ID` in the result, rename them to clarify that `Name` is the name of a customer, and `ID` is the ID of a distributor.</span></span>  
   
      [!code-csharp[csProgGuideCodingConventions#27](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#27)]  
   
--   <span data-ttu-id="28953-174">Örtük sorgu değişkenleri ve aralık değişkeni bildiriminde yazarak kullanın.</span><span class="sxs-lookup"><span data-stu-id="28953-174">Use implicit typing in the declaration of query variables and range variables.</span></span>  
+-   <span data-ttu-id="8aa46-174">Sorgu değişkenleri ve aralık değişkenleri bildiriminde örtülü yazma kullanın.</span><span class="sxs-lookup"><span data-stu-id="8aa46-174">Use implicit typing in the declaration of query variables and range variables.</span></span>  
   
      [!code-csharp[csProgGuideCodingConventions#25](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#25)]  
   
--   <span data-ttu-id="28953-175">Sorgu yan tümceleri altında Hizala [gelen](../../../csharp/language-reference/keywords/from-clause.md) önceki örneklerde gösterildiği gibi yan tümcesi.</span><span class="sxs-lookup"><span data-stu-id="28953-175">Align query clauses under the [from](../../../csharp/language-reference/keywords/from-clause.md) clause, as shown in the previous examples.</span></span>  
+-   <span data-ttu-id="8aa46-175">Altında sorgu yan tümcelerini hizalayın [gelen](../../../csharp/language-reference/keywords/from-clause.md) yan tümcesi, önceki örneklerde gösterildiği gibi.</span><span class="sxs-lookup"><span data-stu-id="8aa46-175">Align query clauses under the [from](../../../csharp/language-reference/keywords/from-clause.md) clause, as shown in the previous examples.</span></span>  
   
--   <span data-ttu-id="28953-176">Kullanım [burada](../../../csharp/language-reference/keywords/where-clause.md) yan tümceleri sonraki sorgu yan tümceleri azaltılmış üzerinde çalışmasını sağlamak için diğer sorgu yan tümceleri önce filtrelenmiş veri kümesi.</span><span class="sxs-lookup"><span data-stu-id="28953-176">Use [where](../../../csharp/language-reference/keywords/where-clause.md) clauses before other query clauses to ensure that later query clauses operate on the reduced, filtered set of data.</span></span>  
+-   <span data-ttu-id="8aa46-176">Kullanım [burada](../../../csharp/language-reference/keywords/where-clause.md) yan tümceleri önce sonraki sorgu yan tümcelerinin azaltılmış üzerinde çalışmasını sağlamak için diğer sorgu yan tümcelerinin filtrelenmiş veri kümesi.</span><span class="sxs-lookup"><span data-stu-id="8aa46-176">Use [where](../../../csharp/language-reference/keywords/where-clause.md) clauses before other query clauses to ensure that later query clauses operate on the reduced, filtered set of data.</span></span>  
   
      [!code-csharp[csProgGuideCodingConventions#29](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#29)]  
   
--   <span data-ttu-id="28953-177">Birden çok kullanın `from` yan tümceleri yerine bir [birleştirme](../../../csharp/language-reference/keywords/join-clause.md) iç koleksiyonları erişmek için yan tümcesi.</span><span class="sxs-lookup"><span data-stu-id="28953-177">Use multiple `from` clauses instead of a [join](../../../csharp/language-reference/keywords/join-clause.md) clause to access inner collections.</span></span> <span data-ttu-id="28953-178">Örneğin, bir koleksiyonu `Student` nesneleri her içerebilir test puanları koleksiyonu.</span><span class="sxs-lookup"><span data-stu-id="28953-178">For example, a collection of `Student` objects might each contain a collection of test scores.</span></span> <span data-ttu-id="28953-179">Aşağıdaki sorgu çalıştırıldığında, Soyadı puanı alınan Öğrenci birlikte üzerinde 90 her puan döndürür.</span><span class="sxs-lookup"><span data-stu-id="28953-179">When the following query is executed, it returns each score that is over 90, along with the last name of the student who received the score.</span></span>  
+-   <span data-ttu-id="8aa46-177">Birden çok kullanın `from` yan tümceleri yerine bir [birleştirme](../../../csharp/language-reference/keywords/join-clause.md) yan tümcesi iç koleksiyonlara erişmek için.</span><span class="sxs-lookup"><span data-stu-id="8aa46-177">Use multiple `from` clauses instead of a [join](../../../csharp/language-reference/keywords/join-clause.md) clause to access inner collections.</span></span> <span data-ttu-id="8aa46-178">Örneğin, bir koleksiyonunu `Student` nesneleri her içerebilir test puanlarını koleksiyonu.</span><span class="sxs-lookup"><span data-stu-id="8aa46-178">For example, a collection of `Student` objects might each contain a collection of test scores.</span></span> <span data-ttu-id="8aa46-179">Aşağıdaki sorgu yürütüldüğünde, üzerinde birlikte puana Öğrenci Soyadı 90 her bir puan döndürür.</span><span class="sxs-lookup"><span data-stu-id="8aa46-179">When the following query is executed, it returns each score that is over 90, along with the last name of the student who received the score.</span></span>  
   
      [!code-csharp[csProgGuideCodingConventions#30](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#30)]  
   
-## <a name="security"></a><span data-ttu-id="28953-180">Güvenlik</span><span class="sxs-lookup"><span data-stu-id="28953-180">Security</span></span>  
- <span data-ttu-id="28953-181">Alan yönergeleri izleyin [güvenli kodlama yönergeleri](../../../standard/security/secure-coding-guidelines.md).</span><span class="sxs-lookup"><span data-stu-id="28953-181">Follow the guidelines in [Secure Coding Guidelines](../../../standard/security/secure-coding-guidelines.md).</span></span>  
+## <a name="security"></a><span data-ttu-id="8aa46-180">Güvenlik</span><span class="sxs-lookup"><span data-stu-id="8aa46-180">Security</span></span>  
+ <span data-ttu-id="8aa46-181">Bölümündeki yönergeleri uygulayın [güvenli kodlama kılavuzları](../../../standard/security/secure-coding-guidelines.md).</span><span class="sxs-lookup"><span data-stu-id="8aa46-181">Follow the guidelines in [Secure Coding Guidelines](../../../standard/security/secure-coding-guidelines.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="28953-182">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="28953-182">See Also</span></span>  
- [<span data-ttu-id="28953-183">Visual Basic kodlama kuralları</span><span class="sxs-lookup"><span data-stu-id="28953-183">Visual Basic Coding Conventions</span></span>](../../../visual-basic/programming-guide/program-structure/coding-conventions.md)  
- [<span data-ttu-id="28953-184">Güvenli Kodlama Yönergeleri</span><span class="sxs-lookup"><span data-stu-id="28953-184">Secure Coding Guidelines</span></span>](../../../standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a><span data-ttu-id="8aa46-182">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="8aa46-182">See Also</span></span>
+
+- [<span data-ttu-id="8aa46-183">Visual Basic kodlama kuralları</span><span class="sxs-lookup"><span data-stu-id="8aa46-183">Visual Basic Coding Conventions</span></span>](../../../visual-basic/programming-guide/program-structure/coding-conventions.md)  
+- [<span data-ttu-id="8aa46-184">Güvenli Kodlama Yönergeleri</span><span class="sxs-lookup"><span data-stu-id="8aa46-184">Secure Coding Guidelines</span></span>](../../../standard/security/secure-coding-guidelines.md)
