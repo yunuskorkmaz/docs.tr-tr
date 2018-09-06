@@ -2,17 +2,17 @@
 title: 'Nasıl yapılır: sorgu (LINQ) (C#) bir dizin ağacında yineleyen dosyalar için'
 ms.date: 07/20/2015
 ms.assetid: 1ff5562b-0d30-46d1-b426-a04e8f78c840
-ms.openlocfilehash: 618f1942133401718dcc71d54476043d27e0c036
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 09ce574c68cbf11c0ee50df663692fd207038758
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321307"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43734242"
 ---
-# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a><span data-ttu-id="c7087-102">Nasıl yapılır: sorgu (LINQ) (C#) bir dizin ağacında yineleyen dosyalar için</span><span class="sxs-lookup"><span data-stu-id="c7087-102">How to: Query for Duplicate Files in a Directory Tree (LINQ) (C#)</span></span>
-<span data-ttu-id="c7087-103">Bazen aynı ada sahip dosya birden fazla klasöründe bulunabilir.</span><span class="sxs-lookup"><span data-stu-id="c7087-103">Sometimes files that have the same name may be located in more than one folder.</span></span> <span data-ttu-id="c7087-104">Örneğin, Visual Studio yükleme klasörü altında çeşitli klasörler Benioku.htm dosyasına sahip.</span><span class="sxs-lookup"><span data-stu-id="c7087-104">For example, under the Visual Studio installation folder, several folders have a readme.htm file.</span></span> <span data-ttu-id="c7087-105">Bu örnek belirtilen kök klasörü altında böyle yinelenen dosya adları için sorgulama gösterir.</span><span class="sxs-lookup"><span data-stu-id="c7087-105">This example shows how to query for such duplicate file names under a specified root folder.</span></span> <span data-ttu-id="c7087-106">Oluşturma süreleri de eşleşen ve ikinci örnek büyüklüğü dosyaları sorgulama gösterir.</span><span class="sxs-lookup"><span data-stu-id="c7087-106">The second example shows how to query for files whose size and creation times also match.</span></span>  
+# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a><span data-ttu-id="03783-102">Nasıl yapılır: sorgu (LINQ) (C#) bir dizin ağacında yineleyen dosyalar için</span><span class="sxs-lookup"><span data-stu-id="03783-102">How to: Query for Duplicate Files in a Directory Tree (LINQ) (C#)</span></span>
+<span data-ttu-id="03783-103">Bazen aynı ada sahip dosyaları birden fazla klasöründe bulunabilir.</span><span class="sxs-lookup"><span data-stu-id="03783-103">Sometimes files that have the same name may be located in more than one folder.</span></span> <span data-ttu-id="03783-104">Örneğin, Visual Studio yükleme klasörü altında çeşitli klasörleri readme.htm dosyasına sahip.</span><span class="sxs-lookup"><span data-stu-id="03783-104">For example, under the Visual Studio installation folder, several folders have a readme.htm file.</span></span> <span data-ttu-id="03783-105">Bu örnekte, böyle yinelenen dosya adları belirtilen kök klasörü altında sorgulamak gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="03783-105">This example shows how to query for such duplicate file names under a specified root folder.</span></span> <span data-ttu-id="03783-106">İkinci örnek boyutu için dosyaları sorgulama işlemini gösterir ve ayrıca oluşturma kez Eşleştir.</span><span class="sxs-lookup"><span data-stu-id="03783-106">The second example shows how to query for files whose size and creation times also match.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c7087-107">Örnek</span><span class="sxs-lookup"><span data-stu-id="c7087-107">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="03783-107">Örnek</span><span class="sxs-lookup"><span data-stu-id="03783-107">Example</span></span>  
   
 ```csharp  
 class QueryDuplicateFileNames  
@@ -167,11 +167,12 @@ class QueryDuplicateFileNames
 }  
 ```  
   
- <span data-ttu-id="c7087-108">İlk sorguyu basit bir anahtarı bir eşleşme belirlemek için kullanır; Bu, aynı ada sahip ancak içerikleri farklı olabilir dosyaları bulur.</span><span class="sxs-lookup"><span data-stu-id="c7087-108">The first query uses a simple key to determine a match; this finds files that have the same name but whose contents might be different.</span></span> <span data-ttu-id="c7087-109">İkinci sorguyu karşı üç özelliklerini eşleştirmek için bileşik bir anahtar kullanır <xref:System.IO.FileInfo> nesnesi.</span><span class="sxs-lookup"><span data-stu-id="c7087-109">The second query uses a compound key to match against three properties of the <xref:System.IO.FileInfo> object.</span></span> <span data-ttu-id="c7087-110">Bu sorgu aynı veya benzer içerik ve aynı ada sahip dosyaları bulmak çok daha yüksektir.</span><span class="sxs-lookup"><span data-stu-id="c7087-110">This query is much more likely to find files that have the same name and similar or identical content.</span></span>  
+ <span data-ttu-id="03783-108">İlk sorgu, bir eşleşme belirlemek için basit bir anahtarı kullanır; Bu, aynı ada sahip olan ancak içerikleri farklı olabilir. dosyaları bulur.</span><span class="sxs-lookup"><span data-stu-id="03783-108">The first query uses a simple key to determine a match; this finds files that have the same name but whose contents might be different.</span></span> <span data-ttu-id="03783-109">İkinci sorgu, üç özelliklerini karşı eşleşecek şekilde bir bileşik anahtarı kullanır. <xref:System.IO.FileInfo> nesne.</span><span class="sxs-lookup"><span data-stu-id="03783-109">The second query uses a compound key to match against three properties of the <xref:System.IO.FileInfo> object.</span></span> <span data-ttu-id="03783-110">Bu sorgu ortamınızdakilerle benzer veya aynı içerik ve aynı ada sahip dosyaları bulmak çok daha yüksektir.</span><span class="sxs-lookup"><span data-stu-id="03783-110">This query is much more likely to find files that have the same name and similar or identical content.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="c7087-111">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="c7087-111">Compiling the Code</span></span>  
- <span data-ttu-id="c7087-112">.NET Framework sürüm 3.5 veya daha yüksek System.Core.dll başvuru hedefleyen bir proje oluşturun ve `using` System.Linq ve System.IO ad alanları için yönergeleri.</span><span class="sxs-lookup"><span data-stu-id="c7087-112">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="03783-111">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="03783-111">Compiling the Code</span></span>  
+ <span data-ttu-id="03783-112">.NET Framework sürüm 3.5 veya üzeri bir System.Core.dll başvurusu ile hedefleyen bir proje oluşturun ve `using` System.Linq ve System.IO ad alanları için yönergeleri.</span><span class="sxs-lookup"><span data-stu-id="03783-112">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c7087-113">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="c7087-113">See Also</span></span>  
- [<span data-ttu-id="c7087-114">LINQ to nesneler (C#)</span><span class="sxs-lookup"><span data-stu-id="c7087-114">LINQ to Objects (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
- [<span data-ttu-id="c7087-115">LINQ ve dosya dizinleri (C#)</span><span class="sxs-lookup"><span data-stu-id="c7087-115">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="03783-113">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="03783-113">See Also</span></span>
+
+- [<span data-ttu-id="03783-114">LINQ to Objects'in (C#)</span><span class="sxs-lookup"><span data-stu-id="03783-114">LINQ to Objects (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
+- [<span data-ttu-id="03783-115">LINQ ve dosya dizinleri (C#)</span><span class="sxs-lookup"><span data-stu-id="03783-115">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

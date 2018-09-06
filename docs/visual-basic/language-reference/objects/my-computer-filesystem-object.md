@@ -13,30 +13,30 @@ helpviewer_keywords:
 - FileOpen function
 ms.assetid: 4c145456-5453-4bda-aab5-578dc8bee59a
 ms.openlocfilehash: 05d849afb50a3b1c4eeecc3db26170bacc3517df
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43390934"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43733797"
 ---
-# <a name="mycomputerfilesystem-object"></a><span data-ttu-id="77665-102">My.Computer.FileSystem Nesnesi</span><span class="sxs-lookup"><span data-stu-id="77665-102">My.Computer.FileSystem Object</span></span>
-<span data-ttu-id="77665-103">Özellikler ve sürücüleri, dosyalar ve dizinler ile çalışmak için yöntemler sağlar.</span><span class="sxs-lookup"><span data-stu-id="77665-103">Provides properties and methods for working with drives, files, and directories.</span></span>  
+# <a name="mycomputerfilesystem-object"></a><span data-ttu-id="18baa-102">My.Computer.FileSystem Nesnesi</span><span class="sxs-lookup"><span data-stu-id="18baa-102">My.Computer.FileSystem Object</span></span>
+<span data-ttu-id="18baa-103">Özellikler ve sürücüleri, dosyalar ve dizinler ile çalışmak için yöntemler sağlar.</span><span class="sxs-lookup"><span data-stu-id="18baa-103">Provides properties and methods for working with drives, files, and directories.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="77665-104">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="77665-104">Remarks</span></span>  
- <span data-ttu-id="77665-105">Yöntemleri ve özellikleri hakkında bilgi için `My.Computer.FileSystem` nesne, bkz: <xref:Microsoft.VisualBasic.FileIO.FileSystem>.</span><span class="sxs-lookup"><span data-stu-id="77665-105">For information about the methods and properties of the `My.Computer.FileSystem` object, see <xref:Microsoft.VisualBasic.FileIO.FileSystem>.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="18baa-104">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="18baa-104">Remarks</span></span>  
+ <span data-ttu-id="18baa-105">Yöntemleri ve özellikleri hakkında bilgi için `My.Computer.FileSystem` nesne, bkz: <xref:Microsoft.VisualBasic.FileIO.FileSystem>.</span><span class="sxs-lookup"><span data-stu-id="18baa-105">For information about the methods and properties of the `My.Computer.FileSystem` object, see <xref:Microsoft.VisualBasic.FileIO.FileSystem>.</span></span>  
   
- <span data-ttu-id="77665-106">Daha fazla bilgi için [Visual Basic ile dosya erişimi](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md).</span><span class="sxs-lookup"><span data-stu-id="77665-106">For more information, see [File Access with Visual Basic](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md).</span></span>  
+ <span data-ttu-id="18baa-106">Daha fazla bilgi için [Visual Basic ile dosya erişimi](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md).</span><span class="sxs-lookup"><span data-stu-id="18baa-106">For more information, see [File Access with Visual Basic](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="77665-107">Sınıflarda kullanabilirsiniz <xref:System.IO?displayProperty=nameWithType> sürücüsü, dosyalar ve dizinler ile çalışmak için ad alanı.</span><span class="sxs-lookup"><span data-stu-id="77665-107">You can also use classes in the <xref:System.IO?displayProperty=nameWithType> namespace to work with drives, files, and directories.</span></span>  
+>  <span data-ttu-id="18baa-107">Sınıflarda kullanabilirsiniz <xref:System.IO?displayProperty=nameWithType> sürücüsü, dosyalar ve dizinler ile çalışmak için ad alanı.</span><span class="sxs-lookup"><span data-stu-id="18baa-107">You can also use classes in the <xref:System.IO?displayProperty=nameWithType> namespace to work with drives, files, and directories.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="77665-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="77665-108">Requirements</span></span>  
- <span data-ttu-id="77665-109">**Namespace:** <xref:Microsoft.VisualBasic.MyServices></span><span class="sxs-lookup"><span data-stu-id="77665-109">**Namespace:** <xref:Microsoft.VisualBasic.MyServices></span></span>  
+## <a name="requirements"></a><span data-ttu-id="18baa-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="18baa-108">Requirements</span></span>  
+ <span data-ttu-id="18baa-109">**Namespace:** <xref:Microsoft.VisualBasic.MyServices></span><span class="sxs-lookup"><span data-stu-id="18baa-109">**Namespace:** <xref:Microsoft.VisualBasic.MyServices></span></span>  
   
- <span data-ttu-id="77665-110">**Sınıf:** <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> (erişim sağlayan <xref:Microsoft.VisualBasic.FileIO.FileSystem>)</span><span class="sxs-lookup"><span data-stu-id="77665-110">**Class:** <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> (provides access to <xref:Microsoft.VisualBasic.FileIO.FileSystem>)</span></span>  
+ <span data-ttu-id="18baa-110">**Sınıf:** <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> (erişim sağlayan <xref:Microsoft.VisualBasic.FileIO.FileSystem>)</span><span class="sxs-lookup"><span data-stu-id="18baa-110">**Class:** <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> (provides access to <xref:Microsoft.VisualBasic.FileIO.FileSystem>)</span></span>  
   
- <span data-ttu-id="77665-111">**Bütünleştirilmiş kod:** Visual Basic çalışma zamanı kitaplığı (Microsoft.VisualBasic.dll içinde)</span><span class="sxs-lookup"><span data-stu-id="77665-111">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
+ <span data-ttu-id="18baa-111">**Bütünleştirilmiş kod:** Visual Basic çalışma zamanı kitaplığı (Microsoft.VisualBasic.dll içinde)</span><span class="sxs-lookup"><span data-stu-id="18baa-111">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="77665-112">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="77665-112">See Also</span></span>  
- [<span data-ttu-id="77665-113">My.Computer.FileSystem.SpecialDirectories Nesnesi</span><span class="sxs-lookup"><span data-stu-id="77665-113">My.Computer.FileSystem.SpecialDirectories Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-filesystem-specialdirectories-object.md)  
- [<span data-ttu-id="77665-114">My.Computer Nesnesi</span><span class="sxs-lookup"><span data-stu-id="77665-114">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)
+## <a name="see-also"></a><span data-ttu-id="18baa-112">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="18baa-112">See Also</span></span>  
+ [<span data-ttu-id="18baa-113">My.Computer.FileSystem.SpecialDirectories Nesnesi</span><span class="sxs-lookup"><span data-stu-id="18baa-113">My.Computer.FileSystem.SpecialDirectories Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-filesystem-specialdirectories-object.md)  
+ [<span data-ttu-id="18baa-114">My.Computer Nesnesi</span><span class="sxs-lookup"><span data-stu-id="18baa-114">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)

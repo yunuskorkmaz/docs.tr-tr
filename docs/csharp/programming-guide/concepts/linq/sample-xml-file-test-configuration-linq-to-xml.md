@@ -3,16 +3,16 @@ title: 'Örnek XML dosyası: Test yapılandırması (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 45bfb509-c1d4-4b4f-9690-1cb0c9816516
 ms.openlocfilehash: 2d1a5b18f9e660959a8c9656cc82ac0686c7d7ca
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43531725"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43741993"
 ---
-# <a name="sample-xml-file-test-configuration-linq-to-xml"></a><span data-ttu-id="cdf85-102">Örnek XML dosyası: Test yapılandırması (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="cdf85-102">Sample XML File: Test Configuration (LINQ to XML)</span></span>
-<span data-ttu-id="cdf85-103">Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri.</span><span class="sxs-lookup"><span data-stu-id="cdf85-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="cdf85-104">Bu bir test yapılandırma dosyasıdır.</span><span class="sxs-lookup"><span data-stu-id="cdf85-104">This is a test configuration file.</span></span>  
+# <a name="sample-xml-file-test-configuration-linq-to-xml"></a><span data-ttu-id="faacc-102">Örnek XML dosyası: Test yapılandırması (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="faacc-102">Sample XML File: Test Configuration (LINQ to XML)</span></span>
+<span data-ttu-id="faacc-103">Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri.</span><span class="sxs-lookup"><span data-stu-id="faacc-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="faacc-104">Bu bir test yapılandırma dosyasıdır.</span><span class="sxs-lookup"><span data-stu-id="faacc-104">This is a test configuration file.</span></span>  
   
-## <a name="testconfigxml"></a><span data-ttu-id="cdf85-105">TestConfig.xml</span><span class="sxs-lookup"><span data-stu-id="cdf85-105">TestConfig.xml</span></span>  
+## <a name="testconfigxml"></a><span data-ttu-id="faacc-105">TestConfig.xml</span><span class="sxs-lookup"><span data-stu-id="faacc-105">TestConfig.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -56,6 +56,6 @@ ms.locfileid: "43531725"
 </Tests>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="cdf85-106">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="cdf85-106">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="faacc-106">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="faacc-106">See Also</span></span>
 
-- [<span data-ttu-id="cdf85-107">Örnek XML Belgeleri (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="cdf85-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+- [<span data-ttu-id="faacc-107">Örnek XML Belgeleri (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="faacc-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

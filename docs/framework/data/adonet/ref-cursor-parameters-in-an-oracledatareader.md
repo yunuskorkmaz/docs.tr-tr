@@ -5,14 +5,14 @@ dev_langs:
 - vb
 ms.assetid: 801dff0f-2508-45aa-9416-f45d6887740c
 ms.openlocfilehash: 3a2c8949537c749ba30b116a0dc8131336de6092
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43671588"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43742287"
 ---
-# <a name="ref-cursor-parameters-in-an-oracledatareader"></a><span data-ttu-id="8a751-102">Oracledatareader'da REF CURSOR parametreleri</span><span class="sxs-lookup"><span data-stu-id="8a751-102">REF CURSOR Parameters in an OracleDataReader</span></span>
-<span data-ttu-id="8a751-103">Bu Microsoft Visual Basic örnek REF CURSOR parametresiyle döndürür ve olarak değeri okuyan bir PL/SQL saklı yordamı yürüten bir <xref:System.Data.OracleClient.OracleDataReader>.</span><span class="sxs-lookup"><span data-stu-id="8a751-103">This Microsoft Visual Basic example executes a PL/SQL stored procedure that returns a REF CURSOR parameter, and reads the value as an <xref:System.Data.OracleClient.OracleDataReader>.</span></span>  
+# <a name="ref-cursor-parameters-in-an-oracledatareader"></a><span data-ttu-id="3d969-102">Oracledatareader'da REF CURSOR parametreleri</span><span class="sxs-lookup"><span data-stu-id="3d969-102">REF CURSOR Parameters in an OracleDataReader</span></span>
+<span data-ttu-id="3d969-103">Bu Microsoft Visual Basic örnek REF CURSOR parametresiyle döndürür ve olarak değeri okuyan bir PL/SQL saklı yordamı yürüten bir <xref:System.Data.OracleClient.OracleDataReader>.</span><span class="sxs-lookup"><span data-stu-id="3d969-103">This Microsoft Visual Basic example executes a PL/SQL stored procedure that returns a REF CURSOR parameter, and reads the value as an <xref:System.Data.OracleClient.OracleDataReader>.</span></span>  
   
 ```vb  
 Private Sub Button1_Click(ByVal sender As Object, _  
@@ -43,6 +43,6 @@ Private Sub Button1_Click(ByVal sender As Object, _
 End Sub  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="8a751-104">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="8a751-104">See Also</span></span>  
- [<span data-ttu-id="8a751-105">Oracle REF CURSOR</span><span class="sxs-lookup"><span data-stu-id="8a751-105">Oracle REF CURSORs</span></span>](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
- [<span data-ttu-id="8a751-106">ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi</span><span class="sxs-lookup"><span data-stu-id="8a751-106">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="3d969-104">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="3d969-104">See Also</span></span>  
+ [<span data-ttu-id="3d969-105">Oracle REF CURSOR</span><span class="sxs-lookup"><span data-stu-id="3d969-105">Oracle REF CURSORs</span></span>](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
+ [<span data-ttu-id="3d969-106">ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi</span><span class="sxs-lookup"><span data-stu-id="3d969-106">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)

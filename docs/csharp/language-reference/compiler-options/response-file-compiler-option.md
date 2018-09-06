@@ -8,52 +8,52 @@ helpviewer_keywords:
 - '@ compiler option'
 ms.assetid: dda4fa9f-a02c-400f-8b6a-d58834e13d7f
 ms.openlocfilehash: f342f26ee8abe29e6c5a1477469c8b7292cd702e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43672020"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43789061"
 ---
-# <a name="-c-compiler-options"></a><span data-ttu-id="92bc6-102">@ (C# Derleyici Seçenekleri)</span><span class="sxs-lookup"><span data-stu-id="92bc6-102">@ (C# Compiler Options)</span></span>
-<span data-ttu-id="92bc6-103">@ Derleyici seçenekleri içeren bir dosyayı ve kaynak kodu dosyalarını derlemek için belirttiğiniz seçenek sağlar.</span><span class="sxs-lookup"><span data-stu-id="92bc6-103">The @ option lets you specify a file that contains compiler options and source code files to compile.</span></span>  
+# <a name="-c-compiler-options"></a><span data-ttu-id="2e567-102">@ (C# Derleyici Seçenekleri)</span><span class="sxs-lookup"><span data-stu-id="2e567-102">@ (C# Compiler Options)</span></span>
+<span data-ttu-id="2e567-103">@ Derleyici seçenekleri içeren bir dosyayı ve kaynak kodu dosyalarını derlemek için belirttiğiniz seçenek sağlar.</span><span class="sxs-lookup"><span data-stu-id="2e567-103">The @ option lets you specify a file that contains compiler options and source code files to compile.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="92bc6-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="92bc6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2e567-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="2e567-104">Syntax</span></span>  
   
 ```  
 @response_file  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="92bc6-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="92bc6-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="2e567-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="2e567-105">Arguments</span></span>  
  `response_file`  
- <span data-ttu-id="92bc6-106">Derleyici Seçenekleri veya kaynak kodu dosyalarını derlemek için listeleyen bir dosya.</span><span class="sxs-lookup"><span data-stu-id="92bc6-106">A file that lists compiler options or source code files to compile.</span></span>  
+ <span data-ttu-id="2e567-106">Derleyici Seçenekleri veya kaynak kodu dosyalarını derlemek için listeleyen bir dosya.</span><span class="sxs-lookup"><span data-stu-id="2e567-106">A file that lists compiler options or source code files to compile.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="92bc6-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="92bc6-107">Remarks</span></span>  
- <span data-ttu-id="92bc6-108">Kaynak kodu dosyaları ve derleyici seçenekleri derleyici tarafından yalnızca komut satırında, belirtilmiş gibi işlenir.</span><span class="sxs-lookup"><span data-stu-id="92bc6-108">The compiler options and source code files will be processed by the compiler just as if they had been specified on the command line.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2e567-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="2e567-107">Remarks</span></span>  
+ <span data-ttu-id="2e567-108">Kaynak kodu dosyaları ve derleyici seçenekleri derleyici tarafından yalnızca komut satırında, belirtilmiş gibi işlenir.</span><span class="sxs-lookup"><span data-stu-id="2e567-108">The compiler options and source code files will be processed by the compiler just as if they had been specified on the command line.</span></span>  
   
- <span data-ttu-id="92bc6-109">Bir derlemede birden fazla yanıt dosyası belirtmek için birden çok yanıt dosyası seçeneği belirtin.</span><span class="sxs-lookup"><span data-stu-id="92bc6-109">To specify more than one response file in a compilation, specify multiple response file options.</span></span> <span data-ttu-id="92bc6-110">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="92bc6-110">For example:</span></span>  
+ <span data-ttu-id="2e567-109">Bir derlemede birden fazla yanıt dosyası belirtmek için birden çok yanıt dosyası seçeneği belirtin.</span><span class="sxs-lookup"><span data-stu-id="2e567-109">To specify more than one response file in a compilation, specify multiple response file options.</span></span> <span data-ttu-id="2e567-110">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="2e567-110">For example:</span></span>  
   
 ```  
 @file1.rsp @file2.rsp  
 ```  
   
- <span data-ttu-id="92bc6-111">Bir yanıt dosyası, birden çok derleme seçenekleri ve kaynak kodu dosyaları tek bir satırda görünebilir.</span><span class="sxs-lookup"><span data-stu-id="92bc6-111">In a response file, multiple compiler options and source code files can appear on one line.</span></span> <span data-ttu-id="92bc6-112">Bir tek derleyici seçeneği belirtimi (çok satırlı yayılamaz) tek bir satırda yer almalıdır.</span><span class="sxs-lookup"><span data-stu-id="92bc6-112">A single compiler option specification must appear on one line (cannot span multiple lines).</span></span> <span data-ttu-id="92bc6-113">Yanıt dosyaları # sembolü ile başlayan açıklamaları olabilir.</span><span class="sxs-lookup"><span data-stu-id="92bc6-113">Response files can have comments that begin with the # symbol.</span></span>  
+ <span data-ttu-id="2e567-111">Bir yanıt dosyası, birden çok derleme seçenekleri ve kaynak kodu dosyaları tek bir satırda görünebilir.</span><span class="sxs-lookup"><span data-stu-id="2e567-111">In a response file, multiple compiler options and source code files can appear on one line.</span></span> <span data-ttu-id="2e567-112">Bir tek derleyici seçeneği belirtimi (çok satırlı yayılamaz) tek bir satırda yer almalıdır.</span><span class="sxs-lookup"><span data-stu-id="2e567-112">A single compiler option specification must appear on one line (cannot span multiple lines).</span></span> <span data-ttu-id="2e567-113">Yanıt dosyaları # sembolü ile başlayan açıklamaları olabilir.</span><span class="sxs-lookup"><span data-stu-id="2e567-113">Response files can have comments that begin with the # symbol.</span></span>  
   
- <span data-ttu-id="92bc6-114">Bir yanıt dosyası derleyici seçeneklerini belirterek bu komutlar komut satırında verilmesine benzer olur.</span><span class="sxs-lookup"><span data-stu-id="92bc6-114">Specifying compiler options from within a response file is just like issuing those commands on the command line.</span></span> <span data-ttu-id="92bc6-115">Bkz: [komut satırından derleme](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md) daha fazla bilgi için.</span><span class="sxs-lookup"><span data-stu-id="92bc6-115">See [Building from the Command Line](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md) for more information.</span></span>  
+ <span data-ttu-id="2e567-114">Bir yanıt dosyası derleyici seçeneklerini belirterek bu komutlar komut satırında verilmesine benzer olur.</span><span class="sxs-lookup"><span data-stu-id="2e567-114">Specifying compiler options from within a response file is just like issuing those commands on the command line.</span></span> <span data-ttu-id="2e567-115">Bkz: [komut satırından derleme](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md) daha fazla bilgi için.</span><span class="sxs-lookup"><span data-stu-id="2e567-115">See [Building from the Command Line](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md) for more information.</span></span>  
   
- <span data-ttu-id="92bc6-116">Karşılaşılan derleyici komut seçenekleri işler.</span><span class="sxs-lookup"><span data-stu-id="92bc6-116">The compiler processes the command options as they are encountered.</span></span> <span data-ttu-id="92bc6-117">Bu nedenle, komut satırı bağımsız değişkenleri, yanıt dosyaları daha önce listelenen seçeneklerini geçersiz kılabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="92bc6-117">Therefore, command line arguments can override previously listed options in response files.</span></span> <span data-ttu-id="92bc6-118">Buna karşılık, bir yanıt dosyasında seçenekleri komut satırında veya diğer yanıt dosyaları daha önce listelenen seçenekleri geçersiz kılar.</span><span class="sxs-lookup"><span data-stu-id="92bc6-118">Conversely, options in a response file will override options listed previously on the command line or in other response files.</span></span>  
+ <span data-ttu-id="2e567-116">Karşılaşılan derleyici komut seçenekleri işler.</span><span class="sxs-lookup"><span data-stu-id="2e567-116">The compiler processes the command options as they are encountered.</span></span> <span data-ttu-id="2e567-117">Bu nedenle, komut satırı bağımsız değişkenleri, yanıt dosyaları daha önce listelenen seçeneklerini geçersiz kılabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="2e567-117">Therefore, command line arguments can override previously listed options in response files.</span></span> <span data-ttu-id="2e567-118">Buna karşılık, bir yanıt dosyasında seçenekleri komut satırında veya diğer yanıt dosyaları daha önce listelenen seçenekleri geçersiz kılar.</span><span class="sxs-lookup"><span data-stu-id="2e567-118">Conversely, options in a response file will override options listed previously on the command line or in other response files.</span></span>  
   
- <span data-ttu-id="92bc6-119">C# csc.exe dosyasıyla aynı dizinde bulunan csc.rsp dosyasını sağlar.</span><span class="sxs-lookup"><span data-stu-id="92bc6-119">C# provides the csc.rsp file, which is located in the same directory as the csc.exe file.</span></span> <span data-ttu-id="92bc6-120">Bkz: [- noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) csc.rsp hakkında daha fazla bilgi için.</span><span class="sxs-lookup"><span data-stu-id="92bc6-120">See [-noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) for more information on csc.rsp.</span></span>  
+ <span data-ttu-id="2e567-119">C# csc.exe dosyasıyla aynı dizinde bulunan csc.rsp dosyasını sağlar.</span><span class="sxs-lookup"><span data-stu-id="2e567-119">C# provides the csc.rsp file, which is located in the same directory as the csc.exe file.</span></span> <span data-ttu-id="2e567-120">Bkz: [- noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) csc.rsp hakkında daha fazla bilgi için.</span><span class="sxs-lookup"><span data-stu-id="2e567-120">See [-noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) for more information on csc.rsp.</span></span>  
   
- <span data-ttu-id="92bc6-121">Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlanamaz ya da programlı olarak değiştirilebilir.</span><span class="sxs-lookup"><span data-stu-id="92bc6-121">This compiler option cannot be set in the Visual Studio development environment, nor can it be changed programmatically.</span></span>  
+ <span data-ttu-id="2e567-121">Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlanamaz ya da programlı olarak değiştirilebilir.</span><span class="sxs-lookup"><span data-stu-id="2e567-121">This compiler option cannot be set in the Visual Studio development environment, nor can it be changed programmatically.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="92bc6-122">Örnek</span><span class="sxs-lookup"><span data-stu-id="92bc6-122">Example</span></span>  
- <span data-ttu-id="92bc6-123">Birkaç örnek yanıt dosyasından şunlardır:</span><span class="sxs-lookup"><span data-stu-id="92bc6-123">The following are a few lines from a sample response file:</span></span>  
+## <a name="example"></a><span data-ttu-id="2e567-122">Örnek</span><span class="sxs-lookup"><span data-stu-id="2e567-122">Example</span></span>  
+ <span data-ttu-id="2e567-123">Birkaç örnek yanıt dosyasından şunlardır:</span><span class="sxs-lookup"><span data-stu-id="2e567-123">The following are a few lines from a sample response file:</span></span>  
   
 ```console  
 # build the first output file  
 -target:exe -out:MyExe.exe source1.cs source2.cs  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="92bc6-124">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="92bc6-124">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="2e567-124">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="2e567-124">See Also</span></span>  
 
-- [<span data-ttu-id="92bc6-125">C# Derleyici Seçenekleri</span><span class="sxs-lookup"><span data-stu-id="92bc6-125">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)
+- [<span data-ttu-id="2e567-125">C# Derleyici Seçenekleri</span><span class="sxs-lookup"><span data-stu-id="2e567-125">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)

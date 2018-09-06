@@ -7,21 +7,21 @@ helpviewer_keywords:
 - detecting WPF presence [WPF]
 ms.assetid: 7f71d652-1749-4379-945a-aa2e3994cb43
 ms.openlocfilehash: 27f856b895f48dc2365a1721dbc90294269899c7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43562861"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43746386"
 ---
-# <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a><span data-ttu-id="6bcd4-102">Nasıl yapılır .NET Framework 3.0'ın Yüklü Olup Olmadığını Algılama</span><span class="sxs-lookup"><span data-stu-id="6bcd4-102">How to: Detect Whether the .NET Framework 3.0 Is Installed</span></span>
-<span data-ttu-id="6bcd4-103">Yöneticiler bir sistemde Microsoft .NET Framework uygulamaları dağıtmadan önce ilk olarak, .NET Framework çalışma zamanı mevcut olduğunu onaylamanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="6bcd4-103">Before administrators can deploy Microsoft .NET Framework applications on a system, they must first confirm that the .NET Framework runtime is present.</span></span> <span data-ttu-id="6bcd4-104">Bu konu, HTML/JavaScript dilinde yazılmış bir komut dosyası sağlar. Yöneticiler, .NET Framework bir sistemde mevcut olup olmadığını belirlemek için kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="6bcd4-104">This topic provides a script written in HTML/JavaScript that administrators can use to determine whether the .NET Framework is present on a system.</span></span>  
+# <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a><span data-ttu-id="26c12-102">Nasıl yapılır .NET Framework 3.0'ın Yüklü Olup Olmadığını Algılama</span><span class="sxs-lookup"><span data-stu-id="26c12-102">How to: Detect Whether the .NET Framework 3.0 Is Installed</span></span>
+<span data-ttu-id="26c12-103">Yöneticiler bir sistemde Microsoft .NET Framework uygulamaları dağıtmadan önce ilk olarak, .NET Framework çalışma zamanı mevcut olduğunu onaylamanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="26c12-103">Before administrators can deploy Microsoft .NET Framework applications on a system, they must first confirm that the .NET Framework runtime is present.</span></span> <span data-ttu-id="26c12-104">Bu konu, HTML/JavaScript dilinde yazılmış bir komut dosyası sağlar. Yöneticiler, .NET Framework bir sistemde mevcut olup olmadığını belirlemek için kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="26c12-104">This topic provides a script written in HTML/JavaScript that administrators can use to determine whether the .NET Framework is present on a system.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="6bcd4-105">Yükleme hakkında daha ayrıntılı bilgi için dağıtma ve Microsoft .NET Framework algılama içindeki tartışmalara bakın [dağıtma Microsoft .NET Framework sürüm 3.0](https://go.microsoft.com/fwlink/?LinkId=96739).</span><span class="sxs-lookup"><span data-stu-id="6bcd4-105">For more detailed information on installing, deploying, and detecting the Microsoft .NET Framework, see the discussion in [Deploying Microsoft .NET Framework Version 3.0](https://go.microsoft.com/fwlink/?LinkId=96739).</span></span>  
+>  <span data-ttu-id="26c12-105">Yükleme hakkında daha ayrıntılı bilgi için dağıtma ve Microsoft .NET Framework algılama içindeki tartışmalara bakın [dağıtma Microsoft .NET Framework sürüm 3.0](https://go.microsoft.com/fwlink/?LinkId=96739).</span><span class="sxs-lookup"><span data-stu-id="26c12-105">For more detailed information on installing, deploying, and detecting the Microsoft .NET Framework, see the discussion in [Deploying Microsoft .NET Framework Version 3.0](https://go.microsoft.com/fwlink/?LinkId=96739).</span></span>  
   
 <a name="content_expiration"></a>   
-## <a name="detect-the-net-clr-user-agent-string"></a><span data-ttu-id="6bcd4-106">".NET CLR" kullanıcı aracısı dizesi algılama</span><span class="sxs-lookup"><span data-stu-id="6bcd4-106">Detect the ".NET CLR" User-Agent String</span></span>  
- <span data-ttu-id="6bcd4-107">.NET Framework yüklendiğinde, MSI ".NET CLR" ve sürüm numarasını UserAgent dizesi olarak ekler.</span><span class="sxs-lookup"><span data-stu-id="6bcd4-107">When .NET Framework is installed, the MSI adds ".NET CLR" and the version number to the UserAgent string.</span></span> <span data-ttu-id="6bcd4-108">Aşağıdaki örnek, basit bir HTML sayfasında yerleşik bir komut dosyası gösterir.</span><span class="sxs-lookup"><span data-stu-id="6bcd4-108">The following example shows a script embedded in a simple HTML page.</span></span> <span data-ttu-id="6bcd4-109">Komut dosyası, .NET Framework yüklü ve arama sonuçlarını temel durum iletisini görüntüler olup olmadığını belirlemek için UserAgent dizesi arar.</span><span class="sxs-lookup"><span data-stu-id="6bcd4-109">The script searches the UserAgent string to determine whether .NET Framework is installed, and displays a status message on the results of the search.</span></span>  
+## <a name="detect-the-net-clr-user-agent-string"></a><span data-ttu-id="26c12-106">".NET CLR" kullanıcı aracısı dizesi algılama</span><span class="sxs-lookup"><span data-stu-id="26c12-106">Detect the ".NET CLR" User-Agent String</span></span>  
+ <span data-ttu-id="26c12-107">.NET Framework yüklendiğinde, MSI ".NET CLR" ve sürüm numarasını UserAgent dizesi olarak ekler.</span><span class="sxs-lookup"><span data-stu-id="26c12-107">When .NET Framework is installed, the MSI adds ".NET CLR" and the version number to the UserAgent string.</span></span> <span data-ttu-id="26c12-108">Aşağıdaki örnek, basit bir HTML sayfasında yerleşik bir komut dosyası gösterir.</span><span class="sxs-lookup"><span data-stu-id="26c12-108">The following example shows a script embedded in a simple HTML page.</span></span> <span data-ttu-id="26c12-109">Komut dosyası, .NET Framework yüklü ve arama sonuçlarını temel durum iletisini görüntüler olup olmadığını belirlemek için UserAgent dizesi arar.</span><span class="sxs-lookup"><span data-stu-id="26c12-109">The script searches the UserAgent string to determine whether .NET Framework is installed, and displays a status message on the results of the search.</span></span>  
   
 ```  
 <HTML>  
@@ -113,13 +113,13 @@ ms.locfileid: "43562861"
 </HTML>  
 ```  
   
- <span data-ttu-id="6bcd4-110">".NET CLR" sürümü için arama başarılı olursa, aşağıdaki türde durum iletisi görüntülenir:</span><span class="sxs-lookup"><span data-stu-id="6bcd4-110">If the search for the ".NET CLR " version is successful, the following type of status message appears:</span></span>  
+ <span data-ttu-id="26c12-110">".NET CLR" sürümü için arama başarılı olursa, aşağıdaki türde durum iletisi görüntülenir:</span><span class="sxs-lookup"><span data-stu-id="26c12-110">If the search for the ".NET CLR " version is successful, the following type of status message appears:</span></span>  
   
  `This machine has the correct version of the .NET Framework 3.0: 3.0.04425.00`  
   
  `This machine's userAgent string is: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; .NET CLR 1.1.4322; InfoPath.1; .NET CLR 2.0.50727; .NET CLR 3.0.04425.00).`  
   
- <span data-ttu-id="6bcd4-111">Aksi takdirde, aşağıdaki türde durum iletisi görüntülenir:</span><span class="sxs-lookup"><span data-stu-id="6bcd4-111">Otherwise, the following type of status message appears:</span></span>  
+ <span data-ttu-id="26c12-111">Aksi takdirde, aşağıdaki türde durum iletisi görüntülenir:</span><span class="sxs-lookup"><span data-stu-id="26c12-111">Otherwise, the following type of status message appears:</span></span>  
   
  `This machine does not have correct version of the .NET Framework 3.0.`  
   
