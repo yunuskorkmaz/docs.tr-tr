@@ -5,11 +5,11 @@ helpviewer_keywords:
 - choosing transports [WCF]
 ms.assetid: b169462b-f7b6-4cf4-9fca-d306909ee8bf
 ms.openlocfilehash: c98fd4bb76074c2d96b702a37bf1964600d365e3
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43738852"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864634"
 ---
 # <a name="choosing-a-transport"></a>Taşıma Seçme
 Windows Communication Foundation (WCF) içerdiği üç ana taşımalar arasından seçim ölçütleri bu konuda ele alınmıştır: HTTP, TCP ve adlandırılmış kanallar. WCF de içeren bir message queuing (MSMQ olarak da bilinir) taşıma, ancak message queuing bu belgede ele alınmamaktadır.  

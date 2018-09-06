@@ -6,12 +6,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: 4b5c246bee21697590130225679a250b43e86b8d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a2efaae7cd861842f92ba3cdedc5ae77beec9f6f
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43564825"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855053"
 ---
 # <a name="c-walkthroughs"></a>C# İzlenecek Yolları
 İzlenecek yollar, bunları ürün veya belirli bir özellik alanı hakkında öğrenmeye başlayın için iyi bir yer sağlar ortak senaryolar için adım adım yönergeler sağlar.  
@@ -50,16 +50,16 @@ ms.locfileid: "43564825"
  [C# (LINQ) sorgu yazma](../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
  Yazmak için kullanılan C# dili özelliklerini gösterir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu ifadelerinde.  
   
- [Verileri (C#) (LINQ to SQL) düzenleme](https://msdn.microsoft.com/library/bb386927.aspx)  
+ [Verileri (C#) (LINQ to SQL) düzenleme](../framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)  
  Açıklayan bir [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] senaryo ekleme, değiştirme ve bir veritabanındaki verileri siliniyor.  
   
- [Basit Nesne modeli ve sorgu (C#) (LINQ to SQL)](https://msdn.microsoft.com/library/bb386940.aspx)  
+ [Basit Nesne modeli ve sorgu (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)  
  Bir varlık sınıfı ve varlık sınıfı için basit bir sorgu oluşturma işlemini gösterir.  
   
- [Yalnızca saklı yordamları (C#) (LINQ to SQL) kullanma](https://msdn.microsoft.com/library/bb399407.aspx)  
+ [Yalnızca saklı yordamları (C#) (LINQ to SQL) kullanma](../framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)  
  Saklı yordamlar yalnızca yürüterek verilere erişmek için LINQ to SQL kullanma işlemini gösterir.  
   
- [İlişkileri (C#) (LINQ to SQL) üzerinden sorgulama](https://msdn.microsoft.com/library/bb386951.aspx)  
+ [İlişkileri (C#) (LINQ to SQL) üzerinden sorgulama](../framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)  
  Kullanımını gösteren [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] ilişkilendirmeleri bir veritabanındaki yabancı anahtar ilişkileri göstermek için.  
 
  [C# ile Görselleştirici yazma](/visualstudio/debugger/walkthrough-writing-a-visualizer-in-csharp)  

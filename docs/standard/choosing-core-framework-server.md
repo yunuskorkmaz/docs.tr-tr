@@ -4,12 +4,12 @@ description: Hangi .NET uygulamasının üzerinde. NET'te bir sunucu uygulaması
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 541bcdf69d658fd37271169c028fb64611a35655
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: dbb5bd21d2fa43167a9624be2baec3f591d10920
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43552315"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864968"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Sunucu uygulamaları için .NET Core ve .NET Framework arasında seçim
 
@@ -103,8 +103,10 @@ Resmi yol haritası yanı sıra .NET Core için unity'nin için diğer çerçeve
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
- [ASP.NET Core ile ASP.NET arasında seçim](/aspnet/core/choose-aspnet-framework) [hedef çerçeveyi](frameworks.md) [.NET Core Kılavuzu](../core/index.md)  
- [.NET Core ile .NET Framework'ten taşıma](../core/porting/index.md)  
- [Docker Üzerinde .NET Framework Kılavuzu](../framework/docker/index.md)  
- [.NET bileşenleri'ne genel bakış](components.md)  
- [.NET mikro Hizmetleri. Kapsayıcılı .NET uygulamaları mimarisi](microservices-architecture/index.md)
+* [ASP.NET ve ASP.NET Core arasında seçim yapma](/aspnet/core/choose-aspnet-framework)
+* [Hedef çerçeveler](frameworks.md)
+* [.NET Core Kılavuzu](../core/index.md)  
+* [.NET Core ile .NET Framework'ten taşıma](../core/porting/index.md)  
+* [Docker Üzerinde .NET Framework Kılavuzu](../framework/docker/index.md)  
+* [.NET bileşenleri'ne genel bakış](components.md)  
+* [.NET mikro Hizmetleri. Kapsayıcılı .NET uygulamaları mimarisi](microservices-architecture/index.md)

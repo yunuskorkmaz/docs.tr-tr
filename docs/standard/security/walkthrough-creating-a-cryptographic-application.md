@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a01da268a8347e93982604520f9dcb1d4e91327d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 873b6120929c8c7cf67d53d8f793964361ae88b8
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501621"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43873779"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>İzlenecek Yol: Şifreleme Uygulaması Oluşturma
 Bu izlenecek yol, şifrelemek ve içeriğin şifresini gösterilmektedir. Kod örnekleri, bir Windows Forms uygulaması için tasarlanmıştır. Bu uygulama, akıllı kart kullanma gibi gerçek dünya senaryolarını göstermemiz gerekmez. Bunun yerine, şifreleme ve şifre çözme temellerini gösterir.  
@@ -210,5 +210,6 @@ Bu izlenecek yol, şifrelemek ve içeriğin şifresini gösterilmektedir. Kod ö
   
 2.  Tıklayın `Decrypt File` düğmesine tıklayın ve yalnızca şifrelenmiş dosya belirleyin. Tam anahtar çifti şifresini çözmek için sahip olduğunuz için bu başarılı olacaktır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Şifreleme Hizmetleri](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Şifreleme Hizmetleri](../../../docs/standard/security/cryptographic-services.md)

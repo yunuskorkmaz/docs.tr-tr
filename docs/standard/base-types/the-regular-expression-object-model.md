@@ -37,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 773c3ee1a82e8307d32750c7d055201c466707bc
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 856b7c8a842b173fbf3e31323ce7224fc05a4f12
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43561003"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43868082"
 ---
 # <a name="the-regular-expression-object-model"></a>Normal İfade Nesnesi Modeli
 <a name="introduction"></a> Bu konuda, .NET normal ifadeleriyle çalışan kullanılan nesne modelini açıklar. Aşağıdaki bölümleri içerir:  
@@ -351,7 +351,8 @@ ms.locfileid: "43561003"
 |`;`|Bir noktalı virgülü eşleştirin.|  
 |`((\w+(\s\w+)*),(\d+);)+`|Herhangi bir ek sözcük bir veya daha fazla kez ardından virgül, bir veya daha fazla basamak ve bir noktalı virgül tarafından izlenen bir sözcük desenini eşleştirin. Bu ilk yakalama grubudur.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Text.RegularExpressions>  
- [.NET normal ifadeler](../../../docs/standard/base-types/regular-expressions.md)  
- [Normal İfade Dili - Hızlı Başvuru](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- <xref:System.Text.RegularExpressions>  
+- [.NET normal ifadeler](../../../docs/standard/base-types/regular-expressions.md)  
+- [Normal İfade Dili - Hızlı Başvuru](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

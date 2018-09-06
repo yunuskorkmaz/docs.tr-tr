@@ -2,12 +2,12 @@
 title: Performans zincirleme sorgu (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: b2f1d715-8946-4dc0-8d56-fb3d1bba54a6
-ms.openlocfilehash: 6f127f14a488158d219f37ccd467543be1c86bde
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9377c4e57eb19f133a1f973ea7f86c3bf72e4cf8
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43530295"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43854586"
 ---
 # <a name="performance-of-chained-queries-linq-to-xml-c"></a>Performans zincirleme sorgu (LINQ to XML) (C#)
 LINQ (ve LINQ to XML) en önemli avantajlarından biri, zincir sorguları yanı sıra tek bir büyük, daha karmaşık sorgu gerçekleştirilebiliyor olmasıdır.  
@@ -54,7 +54,7 @@ foreach (var i in query2)
   
  Yineleyiciler hakkında daha fazla bilgi için bkz. [yield](../../../../csharp/language-reference/keywords/yield.md).  
   
- Daha ayrıntılı bir eğitim sorguları birbirine zincirleme hakkında bilgi için bkz [öğretici: sorguları birbirine zincirleme](https://msdn.microsoft.com/library/c08d228a-f07a-4c98-810f-1bf0e8f2257c).  
+ Daha ayrıntılı bir eğitim sorguları birbirine zincirleme hakkında bilgi için bkz [öğretici: sorguları birbirine zincirleme](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.
 

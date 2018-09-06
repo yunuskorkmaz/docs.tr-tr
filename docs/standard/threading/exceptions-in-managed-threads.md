@@ -10,73 +10,74 @@ helpviewer_keywords:
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99b3c36f040b506c23315d40d76642b09c0f362b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 63931f4498f4c1f313e7980b91ef712d4a46a837
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591579"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865185"
 ---
 # <a name="exceptions-in-managed-threads"></a>Yönetilen İş Parçacıklarında Özel Durumlar
-.NET Framework sürüm 2.0 ile başlayarak, ortak dil çalışma zamanı en işlenmeyen özel durumlar doğal olarak devam etmek için iş parçacığı sağlar. Çoğu durumda bu işlenmeyen bir özel durum için uygulamanın neden olduğunu anlamına gelir.  
+.NET Framework sürüm 2.0 ile başlayarak, ortak dil çalışma zamanı doğal olarak devam etmek için iş parçacıklarının en işlenmeyen özel durumları tanır. Çoğu durumda bu işlenmeyen özel durumu uygulamanın sonlandırılmasına neden anlamına gelir.  
   
 > [!NOTE]
->  Bu önemli bir backstop sağlamak için birçok işlenmeyen özel durumlar 1.0 ve 1.1, .NET Framework sürümleri farklıdır — Örneğin, iş parçacığı havuzu iş parçacıklarında özel durumlar işlenmemiş. Bkz: [değiştirmek önceki sürümlerden](#ChangeFromPreviousVersions) bu konuda daha sonra.  
+>  Bu önemli bir backstop sağlamak için birçok işlenmeyen özel durumları 1.0 ve 1.1 .NET Framework sürümlerini farklıdır — Örneğin, iş parçacığı havuzu iş parçacıklarında özel durumlar işlenmemiş. Bkz: [değiştirme önceki sürümlerden](#ChangeFromPreviousVersions) bu konunun devamındaki.  
   
- Ortak dil çalışma zamanı program akışı denetimi için kullanılan bir backstop belirli işlenmeyen özel durumlar sağlar:  
+ Ortak dil çalışma zamanı program akışı denetimi için kullanılan bir backstop belirli işlenmeyen özel durumları sağlar:  
   
--   A <xref:System.Threading.ThreadAbortException> bir iş parçacığı, çünkü atılır <xref:System.Threading.Thread.Abort%2A> çağrıldı.  
+-   A <xref:System.Threading.ThreadAbortException> çünkü bir iş parçacığında oluşturulan <xref:System.Threading.Thread.Abort%2A> çağrıldı.  
   
--   Bir <xref:System.AppDomainUnloadedException> iş parçacığı Yürütülüyor uygulama etki alanı bellekten çünkü bir iş parçacığında oluşturulur.  
+-   Bir <xref:System.AppDomainUnloadedException> iş parçacığı yürütüyordur uygulama etki alanı kaldırıldı çünkü bir dizi oluşturulur.  
   
--   Ortak dil çalışma zamanı ya da bir ana bilgisayar işlemi iş parçacığı bir iç özel durum atma tarafından sonlandırır.  
+-   Ortak dil çalışma zamanı ya da bir ana bilgisayar işlemi bir iç özel durum tarafından iş parçacığı sonlanır.  
   
- Bu özel durumlar hiçbirini ortak dil çalışma zamanı tarafından oluşturulan iş parçacıklarında işlenmemiş, özel iş parçacığı sonlanır, ancak ortak dil çalışma zamanı devam etmek özel durum izin vermiyor.  
+ Herhangi birini bu özel durumları iş parçacıklarında ortak dil çalışma zamanı tarafından oluşturulan işlenmemiş özel durum iş parçacığı sonlanır, ancak ortak dil çalışma zamanı özel durumu, devam etmek izin vermez.  
   
- Bu özel durumlar ana iş parçacığı veya yönetilmeyen koddan çalışma zamanı girilen iş parçacığı işlenmeyen varsa, bunlar normalde, uygulamanın sonlandırılmasıyla kaynaklanan devam edin.  
+ Bu özel durumlar ana iş parçacığı veya bir çalışma zamanı yönetilmeyen koddan girilen iş parçacığı işlenmeyen varsa, bunlar normal olarak, uygulamanın sonlandırılmasıyla kaynaklanan devam edin.  
   
 > [!NOTE]
->  Yönetilen kod bir özel durum işleyici yüklemek için bir fırsat dolmadığı önce işlenmeyen bir özel durum atmak için çalışma zamanı için mümkündür. Yönetilen kod gibi özel bir durumu işlemek için hiçbir şansınız olsa bile, özel durum doğal olarak devam etmesine izin verilir.  
+>  Önce herhangi bir yönetilen kod bir özel durum işleyicisi yüklemek için bir fırsat işlenmeyen bir özel durum oluşturmak için çalışma zamanı için mümkündür. Yönetilen kod gibi bir özel durumu işlemek için hiçbir şansınız olsa da, özel durum doğal olarak devam etmesine izin verilir.  
   
-## <a name="exposing-threading-problems-during-development"></a>Geliştirme sırasında sorunları iş parçacığı oluşturma gösterme  
- İş parçacığı uygulama sonlandırma olmadan sessizce başarısız olmasına izin verildiğinde programlama ciddi sorunlar algılanmayabilir. Bu, hizmetler ve uzun süre çalışan diğer uygulamalar için belirli bir sorundur. Başarısız iş parçacıkları gibi program durumu kademeli olarak bozulur. Uygulama performansı düşebilir veya uygulama askıda.  
+## <a name="exposing-threading-problems-during-development"></a>Sorunları, geliştirme sırasında iş parçacığı gösterme  
+ İş parçacıkları sessiz bir şekilde, uygulamayı sonlandırmadan başarısız olmasına izin verildiğinde programlama ciddi sorunlar algılanmayabilir. Bu, hizmetlerin ve uzun süre çalışan diğer uygulamaların belirli bir sorundur. Başarısız iş parçacıkları gibi program durumunu kademeli olarak bozulur. Uygulama performansı düşebilir veya uygulama askıda.  
   
- İşletim sistemi program sonlanana kadar doğal olarak, devam etmek için iş parçacığı işlenmeyen özel durumlar izin vererek bu tür sorunları geliştirme ve sınama sırasında kullanıma sunar. Program sonlandırmalar hata ayıklama desteği üzerinde hata bildirir.  
+ Doğal olarak, işletim sistemi program sonlanana kadar devam etmek için iş parçacığı işlenmeyen özel durumlara izin sorunları, geliştirme ve test sırasında sunar. Program sonlandırmalar hata ayıklama desteği üzerinde hata bildirir.  
   
 <a name="ChangeFromPreviousVersions"></a>   
 ## <a name="change-from-previous-versions"></a>Önceki sürümlerden değiştirme  
- Yönetilen iş parçacığı için en önemli değişiklik ilgilidir. .NET Framework sürüm 1.0 ve 1.1, ortak dil çalışma zamanı aşağıdaki durumlarda işlenmeyen özel durumlar için bir backstop sağlar:  
+ Yönetilen iş parçacıkları için en önemli değişiklik ilgilidir. .NET Framework sürüm 1.0 ve 1.1, ortak dil çalışma zamanı aşağıdaki durumlarda işlenmeyen özel durumlara ilişkin bir backstop sağlar:  
   
--   Bir iş parçacığı havuzu iş parçacığı işlenmeyen bir özel olarak bu tür bir şey yoktur. Bir görev, işlemiyor bir özel durum oluşturduğunda, çalışma zamanı özel durum yığın izlemesi konsola yazdırır ve iş parçacığı iş parçacığı havuzuna döndürür.  
+-   Bir iş parçacığı havuzu iş parçacığı üzerinde işlenmeyen bir özel durum de yoktur. Bir görev değil işleyen bir özel durum oluşturduğunda, çalışma zamanı özel durum yığın izlemesi konsola yazdırır ve iş parçacığının iş parçacığı havuzuna döndürür.  
   
--   Bir iş parçacığı işlenmeyen özel durum ile oluşturulmuş böyle bir şey olduğunu <xref:System.Threading.Thread.Start%2A> yöntemi <xref:System.Threading.Thread> sınıfı. Böyle bir iş parçacığı üzerinde çalışan kodu değil işleyecek bir özel durum oluşturduğunda, çalışma zamanı özel durum yığın izlemesi konsola yazdırır ve iş parçacığı düzgün biçimde sonlanır.  
+-   Bir iş parçacığında işlenmeyen bir özel durum ile oluşturulmuş gibi bir şey olduğunu <xref:System.Threading.Thread.Start%2A> yöntemi <xref:System.Threading.Thread> sınıfı. Böyle bir iş parçacığı üzerinde çalışan kodu değil işleyen bir özel durum oluşturduğunda, çalışma zamanı özel durum yığın izlemesi konsola yazdırır ve düzgün bir şekilde iş parçacığı sonlanır.  
   
--   Sonlandırıcı iş parçacığı işlenmeyen özel durum olarak böyle bir şey yoktur. Bir sonlandırıcı olmayan işleyecek bir özel durum oluşturduğunda, çalışma zamanı özel durum yığın izlemesi konsola yazdırır ve sonlandırıcılar çalışmasını devam ettirmek sonlandırıcıyı iş parçacığı sağlar.  
+-   Sonlandırıcı iş parçacığı işlenmeyen bir özel olarak böyle bir şey yoktur. Bir sonlandırıcı olmayan işleyen bir özel durum oluşturduğunda, çalışma zamanı özel durum yığın izlemesi konsola yazdırır ve ardından sonlandırıcılar çalıştırmayı sürdürmek herhangi bir sonlandırıcı sağlar.  
   
- Yönetilen iş parçacığı ön plan veya arka plan durumunu bu davranışını etkilemez.  
+ Yönetilen iş parçacığı ön plan veya arka plan durum, bu davranışı etkilemez.  
   
- İş parçacıklarını yönetilmeyen kodunda kaynaklanan işlenmeyen özel durumlar için daha hafif farktır. Çalışma zamanı JIT-ekleme iletişim yönetilen özel durumlar veya aracılığıyla yerel koda geçtiğinde iş parçacığı yerel özel durumlar için işletim sistemi iletişim etkisiz hale getiren. Tüm durumlarda işlemi sonlandırır.  
+ Yönetilmeyen kodda kaynaklanan iş parçacığı işlenmeyen özel durumlar için fark daha inceliklidir. Çalışma zamanı JIT-ekleme iletişim kutusu, yönetilen özel durumlar veya yerel kod arasında geçen iş parçacığı yerel özel durumları için işletim sistemi iletişim preempts. Her durumda işlemi sonlandırır.  
   
-### <a name="migrating-code"></a>Geçirme kodu  
- Genel olarak, böylece bunlar sabit değişikliği önceden tanınmayan programlama sorunlarını açığa çıkarır. Bazı durumlarda, ancak programcıları örneğin iş parçacıklarını sonlandırma çalışma zamanı backstop avantajlarından gerçekleştirmişsiniz. Durum bağlı olarak, aşağıdaki geçiş stratejiler birini dikkate alın:  
+### <a name="migrating-code"></a>Kod geçirme  
+ Genel olarak, değişiklik düzeltilebilir böylece daha önce tanınmayan programlama sorunları açığa çıkarır. Bazı durumlarda, ancak programcılar örneğin iş parçacıklarını sonlandırma çalışma zamanı backstop avantajlarından almış. Duruma bağlı olarak, aşağıdaki geçiş stratejileri birini düşünmelisiniz:  
   
--   Sinyal alındığında iş parçacığı düzgün biçimde çıkar şekilde kodu yeniden yapılandırabilirsiniz.  
+-   Kod, sinyal alındığında düzgün bir şekilde iş parçacığından çıkar şekilde yeniden yapılandırabilirsiniz.  
   
--   Kullanım <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> iş parçacığı iptal etmek için yöntem.  
+-   Kullanım <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> iş parçacığını durdurmak için yöntemi.  
   
--   İşlem sonlandırma devam edebilirsiniz böylece bir iş parçacığı durdurulması gerekir, böylece işlem Çıkışta otomatik olarak sona erdi iş parçacığı bir arka plan iş parçacığı olun.  
+-   İşlem sonlandırma devam edebilmeniz adına bir iş parçacığı durdurulması gerekir, böylece otomatik olarak işlem çıkış sonlandırılır iş parçacığı bir arka plan iş parçacığı sağlayın.  
   
- Tüm durumlarda stratejisi özel durumlar için tasarım yönergeleri izlemelidir. Bkz: [tasarım yönergeleri için özel durumları](../../../docs/standard/design-guidelines/exceptions.md).  
+ Her durumda, strateji özel durumlar için tasarım yönergeleri izlemelidir. Bkz: [özel durumlar için tasarım yönergeleri](../../../docs/standard/design-guidelines/exceptions.md).  
   
 ### <a name="application-compatibility-flag"></a>Uygulama uyumluluk bayrağı  
- Geçici uyumluluk ölçü olarak bir uyumluluk bayrağı Yöneticiler yerleştirebilirsiniz `<runtime>` uygulama yapılandırma dosyasının. Bu, 1.0 ve 1.1 sürümleri davranışa geri dönmek ortak dil çalışma zamanı neden olur.  
+ Geçici uyumluluk önlemi olarak, Yöneticiler bir uyumluluk bayrağı yerleştirebilirsiniz `<runtime>` uygulama yapılandırma dosyası bölümünü. Bu, 1.0 ve 1.1 sürümlerinde, davranıştır dönmek ortak dil çalışma zamanı neden olur.  
   
 ```xml  
 <legacyUnhandledExceptionPolicy enabled="1"/>  
 ```  
   
 ## <a name="host-override"></a>Ana bilgisayar geçersiz kılma  
- .NET Framework sürüm 2. 0'da, yönetilmeyen bir ana bilgisayar kullanabilirsiniz [Iclrpolicymanager](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) varsayılan geçersiz kılmak için barındırma API arabiriminde işlenmeyen özel durum ilkesi ortak dil çalışma zamanı. [Iclrpolicymanager::setunhandledexceptionpolicy](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md) işlevi işlenmeyen özel durumlar için ilkesini ayarlamak için kullanılır.  
+ .NET Framework sürüm 2. 0'da, yönetilmeyen bir konak kullanabilirsiniz [Iclrpolicymanager](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) varsayılan geçersiz kılmak için barındırma API Arabirimi işlenmeyen özel durum ilkesi ortak dil çalışma zamanı. [Iclrpolicymanager::setunhandledexceptionpolicy](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md) işlevi, işlenmemiş özel durumlar için ilke ayarlamak için kullanılır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Yönetilen İş Parçacığı Oluşturma Temelleri](../../../docs/standard/threading/managed-threading-basics.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Yönetilen İş Parçacığı Oluşturma Temelleri](../../../docs/standard/threading/managed-threading-basics.md)

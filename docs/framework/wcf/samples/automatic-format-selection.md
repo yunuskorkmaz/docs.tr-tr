@@ -3,11 +3,11 @@ title: Otomatik Biçim Seçimi
 ms.date: 03/30/2017
 ms.assetid: dab51e56-8517-4a6a-bb54-b55b15ab37bb
 ms.openlocfilehash: 4fd695195f5c7c13bc088248a6b3c12388328d37
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43784764"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43873055"
 ---
 # <a name="automatic-format-selection"></a>Otomatik Biçim Seçimi
 Bu örnek, biçimini işlemi kodda açıkça ayarlamak nasıl yanı sıra model programlama Windows Communication Foundation (WCF) REST ile otomatik biçim seçimi (XML veya JSON) etkinleştirme gösterir.  

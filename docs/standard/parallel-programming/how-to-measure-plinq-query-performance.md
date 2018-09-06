@@ -10,23 +10,24 @@ helpviewer_keywords:
 ms.assetid: 491ba43b-2c10-473d-9aab-e2cb96446711
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c662c442f7f2cea23e1afe131704585e7a9bca7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd9e3a0ead62450e87225212f4fc6ecec6ec9489
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584611"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43867235"
 ---
 # <a name="how-to-measure-plinq-query-performance"></a>Nasıl yapılır: PLINQ Sorgu Performansını Ölçme
-Bu örnek nasıl kullanıldığını gösterir <xref:System.Diagnostics.Stopwatch> bir PLINQ sorgusu çalıştırmak geçen süreyi ölçmek için sınıf.  
+Bu örnek nasıl kullanıldığını gösterir <xref:System.Diagnostics.Stopwatch> bir PLINQ sorgusu yürütmek gereken süreyi ölçmek için sınıf.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte boş bir `foreach` döngü (`For Each` Visual Basic'te) sorguyu yürütmek gereken süreyi ölçmek için. Gerçek kodda döngü genellikle toplam sorgu yürütme zamana ekle ek işleme adımları içerir. Kronometre değil dikkat edin, yalnızca kadar döngü önce ne zaman olduğundan başlatılan sorgu yürütme başlar. Daha fazla hassas ölçüm gerektiriyorsa, kullanabileceğiniz `ElapsedTicks` özelliği yerine `ElapsedMilliseconds`.  
+ Bu örnekte boş `foreach` döngü (`For Each` Visual Basic'te) sorgu yürütmek gereken süreyi ölçmek için. Gerçek kod içinde döngü genellikle toplam sorgu yürütme süresini ekleme ek işleme adımları içerir. Kronometre değil dikkat edin, yalnızca kadar döngü önce olduğundan, ne zaman başladı sorgu yürütmeyi başlatır. Daha fazla hassas ölçüm gerektiriyorsa, kullanabileceğiniz `ElapsedTicks` özelliği yerine `ElapsedMilliseconds`.  
   
  [!code-csharp[PLINQ#19](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/measure2.cs#19)]
  [!code-vb[PLINQ#19](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/measure2.vb#19)]  
   
- Toplam yürütme süresi bir yararlı sorgu uygulamaları ile denemeler ancak Yazının tamamını her zaman söylemez ölçümüdür. Birbirleriyle ve diğer çalışan işlemleri ile etkileşim sorgu iş parçacığı daha derin ve daha zengin bir görünümünü almak için eşzamanlılık görselleştiricisi kullanın. Daha fazla bilgi için bkz: [eşzamanlılık görselleştiricisi](/visualstudio/profiling/concurrency-visualizer).  
+ Sorgu uygulamasıyla deneylerini ancak hikayenin tamamını her zaman söylemez yararlı bir ölçüm toplam yürütme süresi olur. Etkileşim sorgu iş parçacığı birbirleriyle ve diğer işlemleri çalıştırırken daha ayrıntılı ve daha zengin bir görünümünü elde etmek için Concurrency Visualizer'ı kullanın. Daha fazla bilgi için [eşzamanlılık görselleştiricisi](/visualstudio/profiling/concurrency-visualizer).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

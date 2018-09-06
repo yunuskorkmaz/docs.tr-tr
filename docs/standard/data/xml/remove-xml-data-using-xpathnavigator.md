@@ -1,5 +1,5 @@
 ---
-title: XML XPathNavigator kullanarak verileri Kaldır
+title: XPathNavigator kullanarak XML verilerini kaldırma
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,34 +8,34 @@ dev_langs:
 ms.assetid: 9f436bca-1b96-494b-a6d2-e102c7551752
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 87dc7d83692f081f2c48a34cef8a33564f0e3089
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1827e40256bc4307006ce081cbb6cbc44a89a0bc
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577039"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43871091"
 ---
-# <a name="remove-xml-data-using-xpathnavigator"></a>XML XPathNavigator kullanarak verileri Kaldır
-<xref:System.Xml.XPath.XPathNavigator> Sınıfı düğümleri ve değerleri bir XML belgesinden kaldırmak için kullanılan yöntemler kümesi sağlar. Bu yöntemleri kullanmak için <xref:System.Xml.XPath.XPathNavigator> nesnesi olmalıdır düzenlenebilir, diğer bir deyişle, kendi <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> olmalıdır `true`.  
+# <a name="remove-xml-data-using-xpathnavigator"></a>XPathNavigator kullanarak XML verilerini kaldırma
+<xref:System.Xml.XPath.XPathNavigator> Sınıf bir XML belgesinden düğümleri ve değerleri kaldırmak için kullanılan yöntemler kümesi sağlar. Bu yöntemleri kullanmak için <xref:System.Xml.XPath.XPathNavigator> nesne olmalıdır düzenlenemez, diğer bir deyişle, kendi <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> özelliği olmalıdır `true`.  
   
- <xref:System.Xml.XPath.XPathNavigator> tarafından oluşturulan bir XML belgesi düzenleyebilirsiniz nesneleri <xref:System.Xml.XmlDocument.CreateNavigator%2A> yöntemi <xref:System.Xml.XmlDocument> sınıfı. <xref:System.Xml.XPath.XPathNavigator> tarafından oluşturulan nesneler <xref:System.Xml.XPath.XPathDocument> sınıfı salt okunur ve herhangi bir düzenleme yöntemlerini kullanmayı dener bir <xref:System.Xml.XPath.XPathNavigator> tarafından oluşturulan nesne bir <xref:System.Xml.XPath.XPathDocument> nesne sonuçlanıyor bir <xref:System.NotSupportedException>.  
+ <xref:System.Xml.XPath.XPathNavigator> bir XML belgesi düzenleyebilirsiniz nesneleri <xref:System.Xml.XmlDocument.CreateNavigator%2A> yöntemi <xref:System.Xml.XmlDocument> sınıfı. <xref:System.Xml.XPath.XPathNavigator> tarafından oluşturulan nesnelerin <xref:System.Xml.XPath.XPathDocument> sınıfı salt okunurdur ve tüm düzenleme yöntemlerini kullanmayı dener bir <xref:System.Xml.XPath.XPathNavigator> nesnesi tarafından oluşturulan bir <xref:System.Xml.XPath.XPathDocument> nesne sonuçlanıyor bir <xref:System.NotSupportedException>.  
   
- Düzenlenebilir oluşturma hakkında daha fazla bilgi için <xref:System.Xml.XPath.XPathNavigator> nesneleri bkz [XPathDocument ve XmlDocument kullanarak XML veri okunurken](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md).  
+ Düzenlenebilir oluşturma hakkında daha fazla bilgi için <xref:System.Xml.XPath.XPathNavigator> nesneleri bkz [XPathDocument ve XmlDocument kullanarak XML verileri okuma](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md).  
   
 ## <a name="removing-nodes"></a>Düğümleri kaldırma  
- <xref:System.Xml.XPath.XPathNavigator> SAX <xref:System.Xml.XPath.XPathNavigator.DeleteSelf%2A> bir XML belgesinden düğümler çıkarmak için yöntem.  
+ <xref:System.Xml.XPath.XPathNavigator> Sağlar sınıfını <xref:System.Xml.XPath.XPathNavigator.DeleteSelf%2A> yöntemi bir XML belgesinden düğümleri kaldırma.  
   
 ### <a name="removing-a-node"></a>Düğüm kaldırma  
- <xref:System.Xml.XPath.XPathNavigator> SAX <xref:System.Xml.XPath.XPathNavigator.DeleteSelf%2A> yöntemi geçerli düğüm silmek için bir <xref:System.Xml.XPath.XPathNavigator> nesne şu anda konumlandırılır üzerinde bir XML belgesinden.  
+ <xref:System.Xml.XPath.XPathNavigator> Sağlar sınıfını <xref:System.Xml.XPath.XPathNavigator.DeleteSelf%2A> geçerli düğüm silmek için yöntemi bir <xref:System.Xml.XPath.XPathNavigator> nesne şu anda yerde konumlandırılır üzerinde bir XML belgesinden.  
   
- Kullanarak bir düğümü silindikten sonra <xref:System.Xml.XPath.XPathNavigator.DeleteSelf%2A> yöntemi, onu artık kökünden ulaşılabilir <xref:System.Xml.XmlDocument> nesnesi. Bir düğüm silindikten sonra <xref:System.Xml.XPath.XPathNavigator> Silinen düğümün üst düğümde konumlandırıldı.  
+ Kullanarak bir düğümü silindikten sonra <xref:System.Xml.XPath.XPathNavigator.DeleteSelf%2A> yöntemi, artık kökünden erişilebilir <xref:System.Xml.XmlDocument> nesne. Bir düğüm silindikten sonra <xref:System.Xml.XPath.XPathNavigator> Silinen düğümün üst düğümde konumlandırılır.  
   
- Bir silme işlemi herhangi konumunu etkilemez <xref:System.Xml.XPath.XPathNavigator> silinen düğümde konumlandırılmış nesnesi. Bunlar <xref:System.Xml.XPath.XPathNavigator> nesneler, silinen ağaçtaki taşıyabilir ancak ana düğüm kullanarak ağaç normal düğüm kümesi Gezinti yöntemlerinin taşınamaz anlamda geçerli <xref:System.Xml.XPath.XPathNavigator> sınıfı.  
+ Bir silme işlemi herhangi bir konumunu etkilemez <xref:System.Xml.XPath.XPathNavigator> silinen düğüm üzerinde konumlandırılmış bir nesne. Bunlar <xref:System.Xml.XPath.XPathNavigator> nesnelerdir silinmiş alt ağacı içinde geçebilirsiniz ancak ana düğüm ağacı kullanarak normal bir düğüm kümesi gezinme yöntemlerinden biri taşınamaz anlamda geçerli <xref:System.Xml.XPath.XPathNavigator> sınıfı.  
   
 > [!NOTE]
->  <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A> Yöntemi <xref:System.Xml.XPath.XPathNavigator> sınıfı, bunlar taşımak için kullanılabilir <xref:System.Xml.XPath.XPathNavigator> nesneleri, silinen alt ağacı için ana düğüm ağaca ya da ana düğüm ağacından yedekleyin.  
+>  <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A> Yöntemi <xref:System.Xml.XPath.XPathNavigator> sınıfı, bunları taşımak için kullanılabilir <xref:System.Xml.XPath.XPathNavigator> nesneler, silinen alt ağacı için ana düğüm ağaca veya ana düğüm ağacı geri.  
   
- Aşağıdaki örnekte, `price` ilk öğesinin `book` öğesinin `contosoBooks.xml` dosyası kullanarak silinir <xref:System.Xml.XPath.XPathNavigator.DeleteSelf%2A> yöntemi. Konumunu <xref:System.Xml.XPath.XPathNavigator> sonra nesne `price` öğesi silinir üzerinde üst `book` öğesi.  
+ Aşağıdaki örnekte, `price` ilk öğenin `book` öğesinin `contosoBooks.xml` dosyası kullanarak silinir <xref:System.Xml.XPath.XPathNavigator.DeleteSelf%2A> yöntemi. Konumunu <xref:System.Xml.XPath.XPathNavigator> sonra nesne `price` silinir üzerinde üst `book` öğesi.  
   
 ```vb  
 Dim document As XmlDocument = New XmlDocument()  
@@ -67,25 +67,25 @@ Console.WriteLine("Position after delete: {0}", navigator.Name);
 Console.WriteLine(navigator.OuterXml);  
 ```  
   
- Örnek alır `contosoBooks.xml` dosyayı bir girdi olarak.  
+ Örnek alan `contosoBooks.xml` girdi olarak dosya.  
   
  [!code-xml[XPathXMLExamples#2](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/contosoBooks.xml#2)]  
   
-### <a name="removing-an-attribute-node"></a>Öznitelik düğümü kaldırma  
+### <a name="removing-an-attribute-node"></a>Bir öznitelik düğümü kaldırma  
  Öznitelik düğümleri kullanarak bir XML belgesi kaldırılır <xref:System.Xml.XPath.XPathNavigator.DeleteSelf%2A> yöntemi.  
   
- Öznitelik düğümü silindikten sonra artık kök düğümden erişilebilir bir <xref:System.Xml.XmlDocument> nesne ve <xref:System.Xml.XPath.XPathNavigator> nesne üst öğede konumlandırılır.  
+ Bir öznitelik düğümü silindikten sonra artık ' kök düğümünden erişilebilir değil bir <xref:System.Xml.XmlDocument> nesne ve <xref:System.Xml.XPath.XPathNavigator> nesnenin üst öğede konumlanan.  
   
-#### <a name="default-attributes"></a>Varsayılan öznitelikleri  
- Öznitelikleri kaldırmak için kullanılan yöntemin bağımsız olarak DTD ya da XML Şeması XML belgesi için varsayılan öznitelikler olarak tanımlanan öznitelikleri kaldırma özel sınırlamalar vardır. Ait oldukları öğesi de kaldırılmadığı sürece varsayılan öznitelikleri kaldırılamaz. Varsayılan öznitelikler, her zaman bildirilen, sonuç olarak, varsayılan özniteliği sonuçları öğesine eklenen bir değiştirme özniteliğinde silme ve varsayılan değerin bildirildi başlatıldı varsayılan özniteliklere sahip öğe yok.  
+#### <a name="default-attributes"></a>Varsayılan öznitelikler  
+ Öznitelikleri kaldırmak için kullanılan yöntem ne olursa olsun DTD'nin veya XML Şeması XML belgesi için varsayılan öznitelikler olarak tanımlanan öznitelikleri kaldırma hakkında özel sınırlamalar vardır. Ayrıca ait oldukları öğesi kaldırılmadığı sürece, varsayılan öznitelikler kaldırılamaz. Varsayılan öznitelikleri her zaman bildirilen, sonuç olarak, varsayılan öznitelik sonuçları öğesine eklenen bir değiştirme özniteliğinde silme ve bildirilen varsayılan değeri olarak başlatılan varsayılan öznitelikleri olan öğeler için yok.  
   
 ## <a name="removing-values"></a>Değerleri kaldırılıyor  
- <xref:System.Xml.XPath.XPathNavigator> SAX <xref:System.Xml.XPath.XPathNavigator.SetValue%2A> ve <xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A> kaldırmak için yöntemleri türsüz ve yazılan bir XML belgesi değerleri.  
+ <xref:System.Xml.XPath.XPathNavigator> Sağlar sınıfını <xref:System.Xml.XPath.XPathNavigator.SetValue%2A> ve <xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A> kaldırmak için yöntemleri türsüz ve yazılan değerleri bir XML belgesi.  
   
-### <a name="removing-untyped-values"></a>Türsüz değerleri kaldırılıyor  
- <xref:System.Xml.XPath.XPathNavigator.SetValue%2A> Yöntemi yalnızca ekler türsüz `string` değeri düğümün değeri olarak bir parametre olarak geçirilen <xref:System.Xml.XPath.XPathNavigator> nesnesi üzerinde şu anda konumlandırılır. Boş bir dize olarak geçirme <xref:System.Xml.XPath.XPathNavigator.SetValue%2A> yöntemi geçerli düğüm değerini kaldırır.  
+### <a name="removing-untyped-values"></a>Yazılmamış değerleri kaldırılıyor  
+ <xref:System.Xml.XPath.XPathNavigator.SetValue%2A> Yöntemi yalnızca ekler yazılmamış `string` düğümün değeri olarak bir parametre olarak geçirilen değer <xref:System.Xml.XPath.XPathNavigator> nesne üzerinde konumlandırılmış şu anda. Boş dize olarak geçirerek <xref:System.Xml.XPath.XPathNavigator.SetValue%2A> yöntemi değeri geçerli düğümün kaldırır.  
   
- Aşağıdaki örnek değeri kaldırır `price` ilk öğesinin `book` öğesinde `contosoBooks.xml` kullanarak dosya <xref:System.Xml.XPath.XPathNavigator.SetValue%2A> yöntemi.  
+ Aşağıdaki örnek, değeri kaldırır `price` ilk öğenin `book` öğesinde `contosoBooks.xml` kullanarak dosya <xref:System.Xml.XPath.XPathNavigator.SetValue%2A> yöntemi.  
   
 ```vb  
 Dim document As XmlDocument = New XmlDocument()  
@@ -117,14 +117,14 @@ navigator.MoveToRoot();
 Console.WriteLine(navigator.OuterXml);  
 ```  
   
- Örnek alır `contosoBooks.xml` dosyayı bir girdi olarak.  
+ Örnek alan `contosoBooks.xml` girdi olarak dosya.  
   
  [!code-xml[XPathXMLExamples#2](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/contosoBooks.xml#2)]  
   
 ### <a name="removing-typed-values"></a>Yazılan değerleri kaldırılıyor  
- Bir düğüm türü bir basit W3C XML Şeması olduğunda türü, tarafından eklenen yeni değer <xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A> değer ayarlamadan önce yöntemi basit türe ilişkin modelleri karşı denetlenir. Yeni değer düğüm türüne göre geçerli değilse (örneğin, bir değeri ayarlamak `-1` türü olan bir öğe üzerinde `xs:positiveInteger`), bir özel durum oluşur. <xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A> Yöntemi de yapamazsınız bayraklarıdır `null` bir parametre olarak. Sonuç olarak yazılan düğüm değerinin kaldırma düğümünün şema türü ile uyumlu olmalıdır.  
+ Bir düğüm türü basit bir W3C XML Şeması olduğunda tür, tarafından eklenen yeni değer <xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A> yöntemi değeri ayarlanmadan önce basit türe ilişkin modelleri karşı denetlenir. Yeni değer düğüm türüne göre geçerli değilse (örneğin, bir değeri ayarlamak `-1` türü olan bir öğede `xs:positiveInteger`), bir özel durum oluşur. <xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A> Yöntemi de geçirilemez `null` bir parametre olarak. Sonuç olarak belirlenmiş bir düğümün değerini kaldırma, düğüm şema türü ile uyumlu olmalıdır.  
   
- Aşağıdaki örnek değeri kaldırır `price` ilk öğesinin `book` öğesinde `contosoBooks.xml` kullanarak dosya <xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A> değeri ayarlayarak yöntemi `0`. Düğümün değerini kaldırılmaz, ancak kitap fiyat veri türüne göre kaldırıldı `xs:decimal`.  
+ Aşağıdaki örnek, değeri kaldırır `price` ilk öğenin `book` öğesinde `contosoBooks.xml` kullanarak dosya <xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A> değeri ayarlanarak yöntemi `0`. Bir düğümün değerini kaldırılmaz, ancak kendi veri türüne göre fiyat kitabın kaldırıldı `xs:decimal`.  
   
 ```vb  
 Dim settings As XmlReaderSettings = New XmlReaderSettings()  
@@ -168,23 +168,24 @@ navigator.MoveToRoot();
 Console.WriteLine(navigator.OuterXml);  
 ```  
   
-## <a name="namespace-nodes"></a>Namespace düğümler  
- Namespace düğümleri, gelen silinemez bir <xref:System.Xml.XmlDocument> nesnesi. Ad alanı düğümleri kullanarak silme girişiminde <xref:System.Xml.XPath.XPathNavigator.DeleteSelf%2A> yöntemi bir özel durum oluşur.  
+## <a name="namespace-nodes"></a>Namespace düğümleri  
+ Namespace düğümleri, gelen silinemiyor bir <xref:System.Xml.XmlDocument> nesne. Ad alanı düğümleri kullanarak silmeyi dener <xref:System.Xml.XPath.XPathNavigator.DeleteSelf%2A> yöntemi bir özel durum oluşur.  
   
-## <a name="the-innerxml-and-outerxml-properties"></a>InnerXml ve OuterXml özellikleri  
- <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> Ve <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> özelliklerini <xref:System.Xml.XPath.XPathNavigator> sınıfı düğümlerin XML biçimlendirmesini değiştirme bir <xref:System.Xml.XPath.XPathNavigator> nesnesi üzerinde şu anda konumlandırılır.  
+## <a name="the-innerxml-and-outerxml-properties"></a>Sınıfının InnerXml ve OuterXml özellikleri  
+ <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> Ve <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> özelliklerini <xref:System.Xml.XPath.XPathNavigator> sınıfını değiştirin XML işaretlemesini düğümlerin bir <xref:System.Xml.XPath.XPathNavigator> nesne üzerinde konumlandırılmış şu anda.  
   
- <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> Özellik alt düğümlerin XML biçimlendirme değişiklikleri bir <xref:System.Xml.XPath.XPathNavigator> nesne şu anda konumlandırılır üzerinde verilen XML ayrıştırılmış içeriğini `string`. Benzer şekilde, <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> özellik alt düğümlerin XML biçimlendirme değişiklikleri bir <xref:System.Xml.XPath.XPathNavigator> nesne şu anda konumlandırılır üzerinde geçerli düğüm yanı sıra.  
+ <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> Özelliğini değiştirir XML işaretlemesini alt düğümlerin bir <xref:System.Xml.XPath.XPathNavigator> nesne şu anda yerde konumlandırılır üzerinde belirli XML ayrıştırılmış içeriğiyle `string`. Benzer şekilde, <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> özelliğini değiştirir XML işaretlemesini alt düğümlerin bir <xref:System.Xml.XPath.XPathNavigator> nesne şu anda yerde konumlandırılır üzerinde geçerli düğüm yanı sıra kendisini.  
   
- Bu konuda, açıklanan yöntemlerden yanı sıra <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> ve <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> özellikleri, düğümleri ve değerleri bir XML belgesinden kaldırmak için kullanılabilir. Kullanma hakkında daha fazla bilgi için <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> ve <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> düğümleri değiştirmek için özellikler bkz [XML XPathNavigator kullanarak verileri değiştirme](../../../../docs/standard/data/xml/modify-xml-data-using-xpathnavigator.md) konu.  
+ Bu konuda, açıklanan yöntemlerin yanı sıra <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> ve <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> özellikleri, bir XML belgesinden düğümleri ve değerleri kaldırmak için kullanılabilir. Kullanma hakkında daha fazla bilgi için <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> ve <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> düğümleri değiştirilecek özellikleri görmek [değiştirme XPathNavigator kullanarak XML verilerini](../../../../docs/standard/data/xml/modify-xml-data-using-xpathnavigator.md) konu.  
   
-## <a name="saving-an-xml-document"></a>Bir XML belgesi kaydetme  
- Yapılan değişiklikler kaydedilirken bir <xref:System.Xml.XmlDocument> nesne bu konuda açıklanan yöntemlerden sonucunu yöntemleri kullanılarak gerçekleştirilir gibi <xref:System.Xml.XmlDocument> sınıfı. Yapılan değişiklikleri kaydetme hakkında daha fazla bilgi için bir <xref:System.Xml.XmlDocument> nesne için bkz: [kaydetme ve bir belgeyi yazma](../../../../docs/standard/data/xml/saving-and-writing-a-document.md).  
+## <a name="saving-an-xml-document"></a>Bir XML belgesi kaydediliyor  
+ Yapılan değişiklikler kaydedilirken bir <xref:System.Xml.XmlDocument> nesne bu konuda açıklanan yöntemlerden sonucunu yöntemleri kullanılarak gerçekleştirilir gibi <xref:System.Xml.XmlDocument> sınıfı. Yapılan değişiklikleri kaydetme hakkında daha fazla bilgi için bir <xref:System.Xml.XmlDocument> nesne, bkz: [kaydetme ve belge yazma](../../../../docs/standard/data/xml/saving-and-writing-a-document.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Xml.XmlDocument>  
- <xref:System.Xml.XPath.XPathDocument>  
- <xref:System.Xml.XPath.XPathNavigator>  
- [XPath Veri Modelini Kullanarak XML Verilerini İşleme](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
- [XPathNavigator Kullanarak XML Verileri Ekleme](../../../../docs/standard/data/xml/insert-xml-data-using-xpathnavigator.md)  
- [XPathNavigator Kullanarak XML Verilerini Değiştirme](../../../../docs/standard/data/xml/modify-xml-data-using-xpathnavigator.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- <xref:System.Xml.XmlDocument>  
+- <xref:System.Xml.XPath.XPathDocument>  
+- <xref:System.Xml.XPath.XPathNavigator>  
+- [XPath Veri Modelini Kullanarak XML Verilerini İşleme](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
+- [XPathNavigator Kullanarak XML Verileri Ekleme](../../../../docs/standard/data/xml/insert-xml-data-using-xpathnavigator.md)  
+- [XPathNavigator Kullanarak XML Verilerini Değiştirme](../../../../docs/standard/data/xml/modify-xml-data-using-xpathnavigator.md)

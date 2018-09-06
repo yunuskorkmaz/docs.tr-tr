@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: ad alanları (C#) (LINQ to XML) ile belge oluşturma'
 ms.date: 07/20/2015
 ms.assetid: 37e63c57-f86d-47ac-88a7-2c2d107def30
 ms.openlocfilehash: 0fa19af47847b0d6b804528af3f766c9775e74f3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43673795"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43863693"
 ---
 # <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>Nasıl yapılır: ad alanları (C#) (LINQ to XML) ile belge oluşturma
 Bu konuda, ad alanları ile belge oluşturma işlemini gösterir.  

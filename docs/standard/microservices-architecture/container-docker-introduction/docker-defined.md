@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
 ms.openlocfilehash: 36a153ca636adbfe7a335d71cc1baef4e213f4c9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43534695"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43867812"
 ---
 # <a name="what-is-docker"></a>Docker nedir?
 
@@ -38,7 +38,7 @@ Bu kapsayıcı görüntülerinin oluşturulur ve aynı şekilde işlev. Bunlar, 
 Şekil 2-3 gösterir bir karşılaştırmasını VM'ler ve Docker kapsayıcıları.
 
   ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **Sanal makineler****Docker kapsayıcıları** 
+  **Sanal makineler****Docker kapsayıcıları**
                                                                                                                                                                                         
   ![](./media/image3.png)                                                                                                                                ![](./media/image4.png)
                                                                                                                                                                                         

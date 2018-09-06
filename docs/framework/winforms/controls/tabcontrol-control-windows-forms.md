@@ -11,11 +11,11 @@ helpviewer_keywords:
 - tab dialog boxes
 ms.assetid: 915091af-93ac-4d3d-8283-738dd2d21ea7
 ms.openlocfilehash: 75f0fc416ad29137c119b571acd658a7e56fc009
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43534853"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43867624"
 ---
 # <a name="tabcontrol-control-windows-forms"></a>TabControl Denetimi (Windows Forms)
 Windows Forms `TabControl` etiketler, bir dosya dolabı klasörlerinde kümesi ya da bir not defterinde Bölücü gibi birden fazla sekme görüntüler. Sekmeler, resim ve diğer denetimleri içerebilir. Kullanım `TabControl` özellik sayfaları oluşturmak için.  

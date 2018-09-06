@@ -3,11 +3,11 @@ title: Otomatik onaylama deseni
 ms.date: 03/30/2017
 ms.assetid: 668aec65-78d3-4636-9c7b-deed643a18f9
 ms.openlocfilehash: a032c05743b64fe58b0b187328b5216080ba6e19
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43552276"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864061"
 ---
 # <a name="auto-confirm-pattern"></a>Otomatik onaylama deseni
 Bu örnek bir özel gösteren çalıştıran üç senaryoları oluşur `AutoConfirmScope` etkinlik. İlk örnek, bir dizi burada ikinci ve üçüncü iç içe içinde dört compensable etkinliği başarılı yürütme gösterir bir `AutoConfirmScope`. İkinci örnek, dördüncü yürütülmesini sonra oluşan bir özel durum ile aynı dizi gösterir. <xref:System.Activities.Statements.CompensableActivity>. Üçüncü senaryo gerçekleşen bir özel durum ile aynı dizi gösterir `AutoConfirmScope` saniye sonra <xref:System.Activities.Statements.CompensableActivity> tamamlar.  

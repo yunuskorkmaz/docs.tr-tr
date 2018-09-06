@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1be82fd9f26e382f20913551f67e8303cf20e03b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7834df6c987e94e59357c7c60db2627d107bffc3
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43731712"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864556"
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Windows'da Yönetilen ve Yönetilmeyen İş Parçacığı Oluşturma
 Tüm iş parçacıklarının Yönetim aracılığıyla gerçekleştirilir <xref:System.Threading.Thread> sınıfı, ortak dil çalışma zamanı tarafından oluşturulan iş parçacığı ve kodu yürütmek için yönetilen ortamı girin çalışma zamanı dışında oluşturulanlar gibi. Çalışma zamanı, yönetilen yürütme ortamında kod yürütülen hiç olmadığı kadar tüm iş parçacıkları, işlemindeki izler. Diğer iş parçacıklarını izlemez. İş parçacıkları, COM birlikte çalışma aracılığıyla yönetilen yürütme ortamında girebilirsiniz, (çalışma zamanı yönetilen nesneleri yönetilmeyen dünya çapında COM nesneleri olarak kullanıma sunduğundan), COM [DllGetClassObject](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject) işlevi ve platform çağırma.  
@@ -63,9 +63,10 @@ Tüm iş parçacıklarının Yönetim aracılığıyla gerçekleştirilir <xref:
 ## <a name="blocking-issues"></a>Engelleme sorunları  
  Bir iş parçacığı işletim sisteminin, yönetilmeyen kod parçacığında engelledi yönetilmeyen bir çağrı yaparsa, çalışma zamanı için denetimini olmayacak <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> veya <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. Durumunda, <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>, çalışma zamanı iş parçacığı işaretler **iptal** ve yönetilen kod yeniden girdiğinde denetimini alır. Bu, yönetilmeyen engelleme yerine yönetilen engelleme kullanabilmeniz için tercih edilir. <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType>,<xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType>, <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType>, <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>, <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType>, <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>, <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType>ve benzeri için tüm hızlı yanıt veriyorlar <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> ve <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. Bir tek iş parçacıklı apartmanda, iş parçacığı ise, iş parçacığı engellenir sırasında Ayrıca, bu yönetilen tüm engelleme işlemleri doğru iletileri, grupta pompa.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>  
- <xref:System.Threading.ThreadState>  
- <xref:System.EnterpriseServices.ServicedComponent>  
- <xref:System.Threading.Thread>  
- <xref:System.Threading.Monitor>
+## <a name="see-also"></a>Ayrıca bkz.
+
+- <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>  
+- <xref:System.Threading.ThreadState>  
+- <xref:System.EnterpriseServices.ServicedComponent>  
+- <xref:System.Threading.Thread>  
+- <xref:System.Threading.Monitor>

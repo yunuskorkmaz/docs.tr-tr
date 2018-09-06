@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 96cec467-e963-4132-b18b-7d0b3a2e979f
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 78bf58b6d1b9059d2513b9f81eb382487bb4004b
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 7dfe18a55d8c7f56db1906cb2aa982ab043841c7
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42998472"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43875593"
 ---
 # <a name="wstrustchannelfactory-and-wstrustchannel"></a>WSTrustChannelFactory ve WSTrustChannel
 Windows Communication Foundation (WCF) bilginiz varsa, bir WCF istemcisi Federasyon uyumlu olduğunu bilirsiniz. Bir WCF istemcisi ile yapılandırarak bir <xref:System.ServiceModel.WSFederationHttpBinding> ya da benzer özel bağlama, bir hizmet için Federasyon kimlik doğrulamasını etkinleştirebilirsiniz.  
@@ -24,7 +24,7 @@ Windows Communication Foundation (WCF) bilginiz varsa, bir WCF istemcisi Federas
   
 -   Bir WCF istemcisi sts'ye lk ActAs veya OnBehalfOf bir öğe eklemek için WIF etkinleştirme  
   
--   WIF kullanarak tek başına STS'den bir belirteç almak ve daha sonra bu belirteci ile kimlik doğrulaması bir WCF istemcisi etkinleştirin. Daha fazla bilgi için [ClaimsAwareWebService](http://go.microsoft.com/fwlink/?LinkID=248406) örnek.  
+-   WIF kullanarak tek başına STS'den bir belirteç almak ve daha sonra bu belirteci ile kimlik doğrulaması bir WCF istemcisi etkinleştirin. Daha fazla bilgi için [ClaimsAwareWebService](https://go.microsoft.com/fwlink/?LinkID=248406) örnek.  
   
  İlk senaryoda açıklayıcıdır: var olan WCF istemcileri WIF bağlı olan taraflar ve Sts'ler çalışmaya devam edecek. Bu konuda, kalan iki kullanıldığı senaryoları tartışır.  
   

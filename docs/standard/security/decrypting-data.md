@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 9b266b6c-a9b2-4d20-afd8-b3a0d8fd48a0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d0aefcc61a9ce283f1230cd44ffae549725bb15f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b3e48d5a088fc6cff3dbdaaa77e6fa561c33f400
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589103"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865527"
 ---
 # <a name="decrypting-data"></a>Verilerin Şifresini Çözme
-Şifre çözme şifreleme ters işlemdir. Gizli anahtar şifreleme için anahtar ve verileri şifrelemek için kullanılan IV bilmeniz gerekir. Ortak anahtar şifrelemesi için ortak anahtarı (verileri özel anahtar kullanılarak şifrelenmiş varsa) veya özel anahtar (verileri ortak anahtar kullanılarak şifrelenmiş varsa) bilmeniz gerekir.  
+Şifre çözme, şifreleme ters işlemidir. Gizli anahtar şifreleme için anahtar ve IV verileri şifrelemek için kullanılan bilmeniz gerekir. Ortak anahtar şifrelemesi için ortak anahtarı (verileri özel anahtarla şifrelenmiş olan ise) ya da özel anahtarı (veri ortak anahtarı kullanarak şifrelenmişse) bilmeniz gerekir.  
   
 ## <a name="symmetric-decryption"></a>Simetrik şifre çözme  
- Simetrik algoritmaları ile şifrelenmiş verilerin şifresinin simetrik algoritmaları ile verileri şifrelemek için kullanılan işlem aynıdır. <xref:System.Security.Cryptography.CryptoStream> Sınıfı simetrik şifreleme sınıflarıyla .NET Framework tarafından sağlanan herhangi bir yönetilen akış nesneden okunan verilerin şifresini çözmek için kullanılır.  
+ Simetrik algoritmaları ile şifrelenmiş verilerin şifrelerinin simetrik algoritmaları ile verileri şifrelemek için kullanılan işlem aynıdır. <xref:System.Security.Cryptography.CryptoStream> Sınıfı .NET Framework tarafından sağlanan simetrik şifreleme sınıfları ile herhangi bir yönetilen bir akışı nesneden okunan verilerin şifresini çözmek için kullanılır.  
   
- Aşağıdaki örnek yeni bir örneğini oluşturmak nasıl gösterilmektedir <xref:System.Security.Cryptography.RijndaelManaged> sınıfı ve şifre çözme gerçekleştirileceği kullanan bir <xref:System.Security.Cryptography.CryptoStream> nesnesi. Bu örnek önce yeni bir örneğini oluşturur **RijndaelManaged** sınıfı. Sonraki oluşturduğu bir **CryptoStream** nesne ve yönetilen bir akış değerine adlı başlatır `MyStream`. Ardından, **CreateDecryptor** yönteminden **RijndaelManaged** sınıfı, aynı anahtar ve şifreleme için kullanılan ve ardından geçirilen IV geçirilir **CryptoStream** Oluşturucu. Son olarak, **CryptoStreamMode.Read** numaralandırma iletilir **CryptoStream** Oluşturucusu akış okuma erişimi belirtin.  
+ Aşağıdaki örnek yeni bir örneğini oluşturma işlemini gösterir <xref:System.Security.Cryptography.RijndaelManaged> sınıfı ve şifre çözme işlemleri gerçekleştirmek için kullanmak bir <xref:System.Security.Cryptography.CryptoStream> nesne. Bu örnekte, önce yeni bir örneğini oluşturur **RijndaelManaged** sınıfı. Sonraki oluşturur bir **CryptoStream** nesne ve yönetilen bir akışa değerine adlı başlatır `MyStream`. Ardından, **CreateDecryptor** yönteminden **RijndaelManaged** sınıfı, aynı anahtar ve şifreleme için kullanılan ve geçirilerek IV geçirilir **CryptoStream** Oluşturucu. Son olarak, **CryptoStreamMode.Read** numaralandırma geçirilen **CryptoStream** okuma erişimi stream belirtmek için oluşturucu.  
   
 ```vb  
 Dim RMCrypto As New RijndaelManaged()  
@@ -38,7 +38,7 @@ RijndaelManaged RMCrypto = new RijndaelManaged();
 CryptoStream CryptStream = new CryptoStream(MyStream, RMCrypto.CreateDecryptor(Key, IV), CryptoStreamMode.Read);  
 ```  
   
- Aşağıdaki örnekte bir akış oluşturma, akış şifre çözme, akışından okuma ve akışlar kapatma tüm işlemi gösterilmektedir. A <xref:System.Net.Sockets.TcpListener> nesne dinleme nesnesi için bir bağlantı yapıldığında, bir ağ akış başlatır oluşturulur. Kullanarak ağ akışı çözülür **CryptoStream** sınıfı ve **RijndaelManaged** sınıfı. Bu örnek anahtar ve IV değerleri ya da başarıyla aktarıldı veya silinmiş önceden üzerinde anlaşmaya varılan olduğunu varsayar. Şifrelemek ve bu değerleri aktarmak için gereken kod göstermez.  
+ Aşağıdaki örnek, bir akış oluşturma, akış çözme, akıştan okumak ve akışları kapatma işlemin tümünü gösterir. A <xref:System.Net.Sockets.TcpListener> nesnesi dinleme nesnesi için bir bağlantı yapıldığında, ağ akışı başlatır oluşturulur. Kullanarak ağ akışı çözülür **CryptoStream** sınıfı ve **RijndaelManaged** sınıfı. Bu örnek, anahtar ve IV değerleri başarıyla aktarılan veya önceden varılmış olduğunu varsayar. Şifrelemek ve bu değerleri aktarmak için gereken kodu göstermez.  
   
 ```vb  
 Imports System  
@@ -169,14 +169,14 @@ class Class1
 }  
 ```  
   
- Önceki örnek çalışmaya şifreli bir bağlantı için dinleyici yapılması gerekir. Bağlantı anahtarı, IV ve dinleyicisinde kullanılan algoritmasını kullanmanız gerekir. Böyle bir bağlantı yapıldığında, iletinin şifresi ve konsolda görüntülenir.  
+ Önceki örnek çalışmaya dinleyiciye şifreli bir bağlantı yapılmalıdır. Bağlantı anahtarı, IV ve dinleyicisi kullanılan algoritmasını kullanmanız gerekir. Bu tür bir bağlantı kurulur, şifresi ve konsolda görüntülenen.  
   
 ## <a name="asymmetric-decryption"></a>Asimetrik şifre çözme  
- Genellikle, bir taraf (taraf A) hem bir ortak ve özel anahtarı oluşturur ve bellekte veya şifreleme anahtar kapsayıcısı anahtarı depolar.  Taraflı bir daha sonra başka bir tarafa (taraf B) ortak anahtar gönderir.  Ortak anahtar kullanarak, B tarafı verileri şifreler ve verileri taraf A'ya gönderir.  Verileri aldıktan sonra taraf A karşılık gelen özel anahtarı kullanarak şifresini çözer.  Şifre çözme yalnızca taraf bir taraf B verileri şifrelemek için kullanılan ortak anahtara karşılık gelen özel anahtarı kullanıyorsa başarılı olur.  
+ Genellikle, bir taraf (bir taraf) hem bir genel ve özel anahtarı oluşturur ve bellekte veya şifreleme anahtar kapsayıcısını, anahtarın depolandığı.  Toplu bir ardından ortak anahtarı başka bir tarafa (taraf B) gönderir.  Ortak anahtar kullanarak, B taraf verileri şifreler ve taraf A'ya verileri gönderir  Verileri aldıktan sonra diğer bir karşılık gelen özel anahtar kullanarak şifresini çözer.  Şifre çözme taraf bir taraf B verileri şifrelemek için kullanılan ortak anahtara karşılık gelen özel anahtar kullanıyorsa başarılı olur.  
   
- Güvenli şifreleme anahtar kapsayıcı ve daha sonra asimetrik anahtar almak nasıl bir asimetrik anahtar depolama hakkında bilgi için bkz: [nasıl yapılır: bir anahtar kapsayıcısında asimetrik anahtarlar depolama](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md).  
+ Depolama hakkında bilgi için bkz: güvenli şifreleme anahtar kapsayıcısı ve daha sonra asimetrik anahtar almak nasıl bir asimetrik anahtar [nasıl yapılır: bir anahtar kapsayıcısında asimetrik anahtarlar Store](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md).  
   
- Aşağıdaki örnek, bir simetrik anahtar ve IV sunan bayt dizilerinin şifrelerinin gösterilmektedir.  Asimetrik ortak anahtarı ile ayıklamak hakkında bilgi için <xref:System.Security.Cryptography.RSACryptoServiceProvider> nesne kolayca gönderebilirsiniz bkz bir üçüncü taraf bir biçimde [veri şifreleme](../../../docs/standard/security/encrypting-data.md).  
+ Aşağıdaki örnek, bir simetrik anahtar ve IV temsil eden bayt dizilerinin şifrelerinin gösterir.  Asimetrik ortak anahtardan çıkarmayı hakkında bilgi için <xref:System.Security.Cryptography.RSACryptoServiceProvider> kolayca gönderebileceğiniz bir üçüncü taraf görmek için bir biçimde nesne [veri şifreleme](../../../docs/standard/security/encrypting-data.md).  
   
 ```vb  
 'Create a new instance of the RSACryptoServiceProvider class.  
@@ -202,7 +202,8 @@ SymmetricKey = RSA.Decrypt( EncryptedSymmetricKey, false);
 SymmetricIV = RSA.Decrypt( EncryptedSymmetricIV , false);  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Şifreleme ve Şifre Çözme için Anahtarlar Oluşturma](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
- [Veri Şifreleme](../../../docs/standard/security/encrypting-data.md)  
- [Şifreleme Hizmetleri](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Şifreleme ve Şifre Çözme için Anahtarlar Oluşturma](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
+- [Veri Şifreleme](../../../docs/standard/security/encrypting-data.md)  
+- [Şifreleme Hizmetleri](../../../docs/standard/security/cryptographic-services.md)

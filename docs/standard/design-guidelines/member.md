@@ -1,5 +1,5 @@
 ---
-title: Üye tasarım yönergeleri
+title: Üye tasarımı yönergeleri
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: 0ce93180-1d7b-4f8c-9306-f828b2d66b8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c04b431224a1d4f03e85397b854a52856e114e6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d1598ac63af38f1ca3e11104bc8e1cd6323d35ed
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571403"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43871025"
 ---
-# <a name="member-design-guidelines"></a>Üye tasarım yönergeleri
-Yöntemler, özellikler, olaylar, Oluşturucular ve alanları topluca için üye olarak adlandırılır. Sonuçta framework işlevselliği bir çerçeve son kullanıcılara sunulur anlamına gelir üyeleridir.  
+# <a name="member-design-guidelines"></a>Üye tasarımı yönergeleri
+Yöntemler, özellikler, olaylar, Oluşturucular ve alanları topluca için üyeleri olarak adlandırılır. Üyeleri, sonuçta bir framework'ün son kullanıcılara gösterilen framework işlevleri tarafından araçlarıdır.  
   
- Üyeleri sanal veya sanal olmayan, somut veya soyut, statik veya örnek olabilir ve erişilebilirlik birkaç farklı kapsamlar olabilir. Bu çeşitli inanılmaz anlamlılık sağlar ancak aynı anda framework Tasarımcısı bölümüne dikkat gerektirir.  
+ Üyeleri sanal veya sanal olmayan, somut veya abstract, statik veya örnek olabilir ve erişilebilirlik birkaç farklı kapsamlar olabilir. Bu çeşitli inanılmaz anlamlılık sağlar ancak aynı anda framework Tasarımcısı yoluna bakım gerektirir.  
   
- Bu bölüm üyeleri herhangi bir türde tasarlarken izlenmesi gereken temel yönergeler sunmaktadır.  
+ Bu bölüm, herhangi bir türün üyeleri tasarlarken izlenmesi gereken temel yönergeler sunar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Üye Aşırı Yüklemesi](../../../docs/standard/design-guidelines/member-overloading.md)  
@@ -33,9 +33,10 @@ Yöntemler, özellikler, olaylar, Oluşturucular ve alanları topluca için üye
  [Genişletme Yöntemleri](../../../docs/standard/design-guidelines/extension-methods.md)  
  [İşleç Aşırı Yüklemeleri](../../../docs/standard/design-guidelines/operator-overloads.md)  
  [Parametre Tasarımı](../../../docs/standard/design-guidelines/parameter-design.md)  
- *Bölümleri © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
+ *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*  
+ *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)

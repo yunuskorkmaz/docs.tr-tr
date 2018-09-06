@@ -12,29 +12,30 @@ helpviewer_keywords:
 ms.assetid: 645b2c17-29d0-4ffa-8684-430743cc2f2d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bf211a35cb8864e0271032d63b5b4e9e25697e96
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 36a003c96e81996e304fc4347ed05bf7a255c224
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581186"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43870985"
 ---
 # <a name="lambda-expressions-in-plinq-and-tpl"></a>PLINQ ve TPL'deki Lambda İfadeleri
-Görev paralel kitaplığı (TPL) birini birçok yöntem içerir <xref:System.Func%601?displayProperty=nameWithType> veya <xref:System.Action?displayProperty=nameWithType> giriş parametresi olarak temsilciler ailesi. Bu temsilci paralel döngü, görev veya sorgu için özel bir program mantığınızı geçirmek için kullanın. Kod örnekleri PLINQ yanı sıra TPL için lambda ifadeleri Bu temsilci satır içi kod blokları olarak örneklerini oluşturmak için kullanın. Bu konu, işlev ve eylem kısa bir giriş sağlar ve görev paralel kitaplığı ve PLINQ'da lambda ifadeleri kullanmayı gösterir.  
+Görev paralel kitaplığı (TPL) birini birçok yöntem içerir <xref:System.Func%601?displayProperty=nameWithType> veya <xref:System.Action?displayProperty=nameWithType> giriş parametresi olarak temsilci ailesinden olan. Bu temsilciler paralel döngü, görev veya sorgu için özel bir program mantığınızda geçirmek için kullanın. TPL ve bunun yanı sıra PLINQ için kod örnekleri, bu temsilci olarak satır içi kod blokları bir örneğini oluşturmak için lambda ifadeleri kullanma. Bu konu, işlev ve eylem kısa bir giriş sağlar ve görev paralel kitaplığı ve PLINQ'da lambda ifadeleri kullanma işlemi gösterilmektedir.  
   
- **Not** genel olarak, temsilciler hakkında daha fazla bilgi için bkz [Temsilciler](../../csharp/programming-guide/delegates/index.md) ve [Temsilciler](../../visual-basic/programming-guide/language-features/delegates/index.md). C# ve Visual Basic lambda ifadeleri hakkında daha fazla bilgi için bkz: [Lambda ifadeleri](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) ve [Lambda ifadeleri](~/docs/visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
+ **Not** genel temsilciler hakkında daha fazla bilgi için bkz [Temsilciler](../../csharp/programming-guide/delegates/index.md) ve [Temsilciler](../../visual-basic/programming-guide/language-features/delegates/index.md). C# ve Visual Basic'te lambda ifadeleri hakkında daha fazla bilgi için bkz. [Lambda ifadeleri](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) ve [Lambda ifadeleri](~/docs/visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
 ## <a name="func-delegate"></a>İşlev temsilcisi  
- A `Func` temsilci bir değer döndüren bir yöntem yalıtır. Bir işlev imzası son veya en sağdaki tür parametresi her zaman dönüş türünü belirtir. Bir genel derleyici hataları nedenidir iki giriş parametreleri geçirin girişimi için bir <xref:System.Func%602?displayProperty=nameWithType>; aslında bu tür, yalnızca bir giriş parametresi alır. 17 sürümleri Framework sınıf kitaplığı tanımlar `Func`: <xref:System.Func%601?displayProperty=nameWithType>, <xref:System.Func%602?displayProperty=nameWithType>, <xref:System.Func%603?displayProperty=nameWithType>, vb. Yukarı aracılığıyla <xref:System.Func%6017?displayProperty=nameWithType>.  
+ A `Func` temsilci bir değer döndüren bir yöntem kapsüller. Bir işlev imzasında son veya sağdaki tür parametresi her zaman dönüş türünü belirtir. Derleyici hataları yaygın nedenlerinden biri olan iki giriş parametreleri geçirin denemek için bir <xref:System.Func%602?displayProperty=nameWithType>; aslında bu tür, yalnızca bir giriş parametresi alır. Framework sınıf kitaplığı 17 sürümlerini tanımlar `Func`: <xref:System.Func%601?displayProperty=nameWithType>, <xref:System.Func%602?displayProperty=nameWithType>, <xref:System.Func%603?displayProperty=nameWithType>, vb. Yukarı aracılığıyla <xref:System.Func%6017?displayProperty=nameWithType>.  
   
 ## <a name="action-delegate"></a>Eylem temsilcisi  
- A <xref:System.Action?displayProperty=nameWithType> temsilci yalıtan bir değer döndürmez veya döndüren bir yöntem (Visual Basic'te alt) [void](~/docs/csharp/language-reference/keywords/void.md). Bir eylem türü imzası tür parametreleri yalnızca giriş parametreleri temsil eder. FUNC gibi eylem, 17 sürümleri olan hiçbir tür parametreleri 16 türü parametrelerine sahip bir sürüm sürümünden Framework sınıf kitaplığı tanımlar.  
+ A <xref:System.Action?displayProperty=nameWithType> temsilci kapsülleyen bir değer döndürmez veya döndüren bir yöntemi (Visual Basic'te Sub) [void](~/docs/csharp/language-reference/keywords/void.md). Bir eylem türü imzada tür parametreleri yalnızca giriş parametrelerini temsil eder. FUNC gibi Framework sınıf kitaplığı 17 eylem sürümlerinden 16 tür parametreleri olan bir sürümü hiçbir tür parametresi yok bir sürümünü tanımlar.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek için <xref:System.Threading.Tasks.Parallel.ForEach%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%601%7D%2CSystem.Func%7B%60%600%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%601%2C%60%601%7D%2CSystem.Action%7B%60%601%7D%29?displayProperty=nameWithType> yöntemi lambda ifadeleri kullanarak işlev ve eylem temsilciler express nasıl gösterir.  
+ Aşağıdaki örneğin <xref:System.Threading.Tasks.Parallel.ForEach%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%601%7D%2CSystem.Func%7B%60%600%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%601%2C%60%601%7D%2CSystem.Action%7B%60%601%7D%29?displayProperty=nameWithType> yöntemi hem işlev ve eylem Temsilciler, lambda ifadeleri kullanarak express nasıl gösterir.  
   
  [!code-csharp[System.Threading.Tasks.Parallel#02](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.tasks.parallel/cs/parallelforeach.cs#02)]
  [!code-vb[System.Threading.Tasks.Parallel#02](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.parallel/vb/parallelforeach.vb#02)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Paralel Programlama](../../../docs/standard/parallel-programming/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Paralel Programlama](../../../docs/standard/parallel-programming/index.md)

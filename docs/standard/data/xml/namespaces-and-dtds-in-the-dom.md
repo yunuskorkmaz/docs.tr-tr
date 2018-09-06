@@ -1,37 +1,38 @@
 ---
-title: Ad alanları ve DOM DTD'leri
+title: Ad alanları ve DTD'ler DOM
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 1e9b55c4-76ad-4f54-8d96-7ce4b4cf1e05
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 92d7a50d2db25f5e4d32734d550ce2d55a02e3c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bc8a1de8ab10eff88757720a35aa9668125cfbfa
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568686"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43875917"
 ---
-# <a name="namespaces-and-dtds-in-the-dom"></a>Ad alanları ve DOM DTD'leri
-Belge türü tanımları (DTD) complicate ad alanı desteği. Örneğin, aşağıdaki XML adlarında iki nokta üst üste içeren varsayılan öznitelikleri içerir.  
+# <a name="namespaces-and-dtds-in-the-dom"></a>Ad alanları ve DTD'ler DOM
+Belge türü tanımları (DTD'ler) complicate ad alanı desteği. Örneğin, aşağıdaki XML, iki nokta üst üste adlarında içeren varsayılan öznitelikler içeriyor.  
   
 ```xml  
 <!ATTLIST item x:id CDATA #IMPLIED>  
 ```  
   
- Bu yapıyı izin verilip verilmediğini olası çözümlemeler aşağıda belirtilmiştir:  
+ Tento konstruktor je izin verilip verilmediğini olası çözümlemeler aşağıda belirtilmiştir:  
   
--   `x:` Çözümlenebilir kullanarak bir ad alanı öneki, ancak bu öneki olmalıdır olarak kabul edilir bir `xmlns:x` ayrıca DTD içinde herhangi bir yerde bulunmalıdır ad alanı bildirimi. Bu örnek belgeye farklı bir şey bu öneki eşlemek için bir hatadır.  
+-   `x:` Çözümlenebilir kullanarak bir ad alanı öneki, ancak bu öneki olmalıdır olarak kabul edilir bir `xmlns:x` ad alanı bildirimi, ayrıca DTD'nin yere bulunmalıdır. Bu örnek belgeye farklı bir şey bu ön ek eşlemek için bir hatadır.  
   
--   `x:` Bir ad alanı öneki kabul edilir, ancak bu öneki örneği öğeleri bağlamında her zaman çözümlenir. Bu öneki gerçekte ad alanı kapsamında bağlı olarak farklı ad Tekdüzen Kaynak Tanımlayıcıları (URI'ler) için eşleme anlamına gelir `item` öğesi görünür. Bu davranış önceki maddede verilen çözümleme'den daha tahmin edilebilir, ancak varsayılan öznitelikler gerçekleştirilip gerektirdiğinden diğer karmaşık ayrımlar sahiptir.  
+-   `x:` Bir ad alanı öneki kabul edilir, ancak bu ön eki her zaman örneği öğeleri bağlamında çözümlenir. Önek gerçekten eşleme farklı bir ad alanı Tekdüzen Kaynak Tanımlayıcıları (URI'lar) ad alanı kapsamında bağlı olarak başka bir deyişle `item` öğe görüntülenir. Bu davranış önceki maddede verilen çözümleme daha öngörülebilir olmakla birlikte, varsayılan öznitelikler gerçekleştirilmiş gerektirdiğinden, diğer karmaşık ayrımlar sahip.  
   
--   İki nokta üst üste DTD içinde olduğundan ve öznitelik adı yoksayıldı `x:y`, önek ve hiçbir ad alanı URI'si.  
+-   İki nokta üst üste bir DTD'nin içinde olduğundan ve öznitelik adı olduğundan göz ardı edilir `x:y`, önek ve ad alanı URI.  
   
--   İki nokta üst üste varsayılan özniteliğinde DTD içinde adlarında iki nokta üst üste desteklenmez söyleyen bir özel durum oluşturur. Bu tahmin edilebilir bir davranış olur, ancak birçok World Wide Web Konsorsiyumu (W3C) yüklenemiyor anlamına gelir DTD'leri yayımlanan.  
+-   İki nokta üst üste varsayılan özniteliğinde, iki nokta üst üste bir DTD'nin içinde adlarının desteklenmediğine belirten, özel durum oluşturur. Bu tahmin edilebilir bir davranışa neden olur, ancak DTD'ler çok World Wide Web Consortium (W3C) yüklenemiyor anlamına gelir yayımlanmış.  
   
--   Kullanıcı DTD doğrulama istediğinde, tüm belgeyi ad alanı desteğini devre dışı bırakılır. W3C DTD'leri ve tahmin edilebilir bir davranış sonuçlarında yüklemek mümkün kılar.  
+-   Kullanıcı DTD'nin doğrulama istediğinde, ad alanı desteği için belgenin tamamını kapalıdır. W3C DTD'ler ve sonuçları tahmin edilebilir davranış yüklemek mümkün kılar.  
   
- Microsoft .NET Framework XML'de maksimum W3C uyumluluk için ikinci seçeneği uygular.  
+ Microsoft .NET Framework XML W3C en büyük uyumluluk için ikinci seçeneği uygular.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [XML Belge Nesne Modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [XML Belge Nesne Modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

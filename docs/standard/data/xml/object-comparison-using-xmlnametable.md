@@ -1,5 +1,5 @@
 ---
-title: Nesne karşılaştırma kullanarak XmlNameTable
+title: XmlNameTable kullanarak nesne karşılaştırma
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,15 +8,15 @@ dev_langs:
 ms.assetid: 8d94e041-d340-4ddf-9a2c-d7319e3f4f86
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 09f717cb4c09c1e35b9472b7b549f1d3edf0dd15
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 814f5434dd0473b3b1dd613a2eba14a828c464d9
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569284"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43862788"
 ---
-# <a name="object-comparison-using-xmlnametable"></a>Nesne karşılaştırma kullanarak XmlNameTable
-**XML belgelerine uymasıdır**, oluşturduğunuzda, bu belge için özel olarak oluşturulan bir ad tablo sahip. XML belgeye yüklenen ya da yeni öğe veya öznitelik oluşturulur özniteliği ve öğesi adları içine konur **XmlNameTable**. Ayrıca bir **XmlDocument** varolan kullanarak **ad tablosu** başka bir belgeden. Zaman **XML belgelerine uymasıdır** alan Oluşturucu ile oluşturulmuş bir **XmlNameTable** parametresi, belge sahip düğüm adları, ad alanlarını ve önekleri zaten depolanmış erişim  **XmlNameTable**. Adları tabloda depolandıktan sonra ne olursa olsun ad tablosunu nasıl yüklenir, adlara sahip adları nesne karşılaştırma dize karşılaştırma yerine hızlı bir şekilde kullanarak karşılaştırılabilir. Dizeleri de eklenebilir adını kullanarak tablo <xref:System.Xml.NameTable.Add%2A>. Aşağıdaki kod örneği oluşturulan bir ad tablosunu ve dize gösterir **MyString** tabloya eklenen. Bundan sonra bir **XmlDocument** bu tabloyu ve öğe ve öznitelik adları kullanılarak oluşturulan **Myfile.xml** var olan ad tabloya eklenir.  
+# <a name="object-comparison-using-xmlnametable"></a>XmlNameTable kullanarak nesne karşılaştırma
+**XML belgelerine uymasıdır**, oluşturulduktan sonra bu belge için özel olarak oluşturulan bir ad tablosu sahip. XML belgeye yüklendi veya yeni öğeler veya öznitelikleri oluşturulur, öğeyi ve öznitelik adları içine yerleştirilir **XmlNameTable**. Ayrıca oluşturabileceğiniz bir **XmlDocument** var olan bir **ad tablosu** başka bir belgeden. Zaman **XML belgelerine uymasıdır** alan Oluşturucu ile oluşturulan bir **XmlNameTable** parametresi, belge sahip düğüm adları, ad alanlarını ve önekleri zaten depolanmış erişim  **XmlNameTable**. Adları tabloda depolandıktan sonra ad tablosu nasıl yüklenir bakılmaksızın adları ile adlarının nesne karşılaştırma yerine dize karşılaştırma kullanarak hızlı bir şekilde karşılaştırılabilir. Dizeleri eklenebilir adı kullanarak tablo <xref:System.Xml.NameTable.Add%2A>. Aşağıdaki kod örneği oluşturulan bir ad tablosu ve dize gösterir **MyString** tabloya eklenmekte. Bundan sonra bir **XmlDocument** bu tabloyu ve içindeki öğe ve öznitelik adları kullanılarak oluşturulan **Myfile.xml** var olan ad tablosuna eklenir.  
   
 ```vb  
 Dim nt As New NameTable()  
@@ -32,7 +32,7 @@ XmlDocument doc = new XmlDocument(nt);
 doc.Load("Myfile.xml");  
 ```  
   
- Aşağıdaki kod örneği bir belge oluşturulmasını Ayrıca belge adı tablosu ve nesne karşılaştırma adları ekler belgeye eklenmekte olan iki yeni öğeler gösterilir.  
+ Aşağıdaki kod örneği, iki yeni öğe Ayrıca belge ad tablosu ve adları nesne karşılaştırma ekler belgeye eklenen bir belge oluşturulmasını gösterir.  
   
 ```vb  
 Dim doc1 As XmlDocument = imp.CreateDocument()  
@@ -51,7 +51,8 @@ if (((object)node1.Name) == ((object)node2.Name))
 { ...  
 ```  
   
- Belge aynı türde sürekli olarak, bir XML Şeması Tanım Dili (XSD) şema veya belge türü için uygun bir e-ticaret sitesinde sipariş belgeler gibi işlenirken Yukarıdaki iki belgeler arasında geçirilen ad tablonun tipik bir senaryodur tanımı (DTD) ve aynı dizeleri yinelenir. Birden çok belgelerde aynı öğe adı gerçekleştiği sırada aynı adı tablosunu kullanarak performans geliştirmesi sağlar.  
+ Belge aynı türde tekrar tekrar gibi bir XML Şeması Tanım Dili (XSD) şeması veya belge türü için uygun sipariş belgeleriyle bir e-ticaret sitesinde işlenirken iki belgeler arasında geçirilen bir ad tablosu, yukarıdaki senaryo tipik tanımı (DTD'nin) ve aynı dizeler yinelenir. Aynı öğe adı içinde birden çok belge oluştuğu sırada aynı ad tablosu kullanarak bir performans geliştirmesi sunar.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [XML Belge Nesne Modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [XML Belge Nesne Modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - <= operator [C#]
 ms.assetid: bb0caec9-d253-4105-b8bc-5252233251e4
 ms.openlocfilehash: afbb932c1be010790236bec73a36acf0f01b97f4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43553874"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43805032"
 ---
 # <a name="lt-operator-c-reference"></a>&lt;= İşleci (C# Başvurusu)
 Tüm sayısal ve Numaralandırma türleri bir "küçüktür veya eşittir" ilişkisel işleci tanımlama (`<=`) döndüren `true` ilk işlenen ikinci küçük veya ona eşit olup olmadığını `false` Aksi takdirde.  

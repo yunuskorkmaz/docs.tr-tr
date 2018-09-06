@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 871a0a06c9f1cc09fb86f20c85163fb8fcdf4100
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f4fd57de4c6e65c3c82d0dc71bcaf84d668f28bf
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526294"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864235"
 ---
 # <a name="using-threads-and-threading"></a>İş parçacığı kullanma ve iş parçacığı oluşturma
 
@@ -54,6 +54,6 @@ Aşağıdaki tabloda bazı sunulmaktadır <xref:System.Threading.Thread> özelli
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
- <xref:System.Threading.Thread?displayProperty=nameWithType>  
- [İş Parçacıkları ve İş Parçacığı Oluşturma](threads-and-threading.md)  
- [Paralel Programlama](../parallel-programming/index.md)  
+- <xref:System.Threading.Thread?displayProperty=nameWithType>  
+- [İş Parçacıkları ve İş Parçacığı Oluşturma](threads-and-threading.md)  
+- [Paralel Programlama](../parallel-programming/index.md)  

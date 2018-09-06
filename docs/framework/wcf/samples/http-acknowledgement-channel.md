@@ -3,11 +3,11 @@ title: HTTP Doğrulama Kanalı
 ms.date: 03/30/2017
 ms.assetid: 469f3056-5ef2-4753-8acf-b574d23d83cf
 ms.openlocfilehash: d83f3aa590471aa3d83b8f7bd1464ec1e6e106fc
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43559549"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856245"
 ---
 # <a name="http-acknowledgement-channel"></a>HTTP Doğrulama Kanalı
 HTTP doğrulama kanalı, tek yönlü Mesajlaşma modeli, Onayla veya Reddet gelen iletiler için bir hizmet verme otomatik olarak bir bildirim alındığında göndermek yerine değişen katmanlı bir kanal örneğidir. İletinin işlenmesi iş düzeyinde garantisi yapabilirsiniz kadar HTTP doğrulama kanalı gecikme bildirim hizmetine de sağlar.  

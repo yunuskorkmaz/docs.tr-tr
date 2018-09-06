@@ -2,22 +2,20 @@
 title: F# Dili Başvurusu
 description: 'F # dil özelliği bilgilerinden bu başvuruyu dili belirteçleri, kavramları, türleri, ifadeler ve derleyici tarafından desteklenen yapı konuları bulun.'
 ms.date: 05/16/2016
-ms.openlocfilehash: e0f0b54ab95e634538fc8511a18aac9d8ee00f26
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: adce37ee393673b7611ad24f385c8b8106f6ce86
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37937091"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43873256"
 ---
 # <a name="f-language-reference"></a>F# Dili Başvurusu
 
 Bu bölüm, F # dili, bir çoklu paradigma programlama dili .NET desteği için bir başvurudur. F # dili, işlev, nesne yönelimli ve buyurgan programlama modelini destekler.
 
-
 ## <a name="f-tokens"></a>F # belirteçleri
+
 Tablolarda anahtar sözcükler, simgeler ve F # belirteçleri olarak kullanılan sabit değerleri sağlayan başvuru konuları aşağıdaki tabloda gösterilmektedir.
-
-
 
 |Başlık|Açıklama|
 |-----|-----------|
@@ -26,9 +24,8 @@ Tablolarda anahtar sözcükler, simgeler ve F # belirteçleri olarak kullanılan
 |[Değişmez Değerler](literals.md)|F # ve F # değişmez değerleri için tür bilgilerini belirleme konusunda değişmez değerler sözdizimi açıklar.|
 
 ## <a name="f-language-concepts"></a>F # dil kavramları
+
 Dil kavramları açıklayan kullanılabilir başvuru konuları aşağıdaki tabloda gösterilmektedir.
-
-
 
 |Başlık|Açıklama|
 |-----|-----------|
@@ -38,7 +35,7 @@ Dil kavramları açıklayan kullanılabilir başvuru konuları aşağıdaki tabl
 |[Otomatik Genelleştirme](generics/automatic-generalization.md)|F # genel yapıları açıklar.|
 |[Devralma](inheritance.md)|Nesne yönelimli programlama subtyping ya da "olan bir" ilişkileri modellemek için kullanılan bir devralma açıklar.|
 |[Üyeler](members/index.md)|F # nesne türlerinin üyelerini açıklar.|
-|[Parametreler ve bağımsız değişkenler ](Parameters-and-Arguments.md)|Parametreleri tanımlama ve bağımsız değişkenleri işlevleri, yöntemlere ve özelliklere geçirme için dil desteğini açıklar. Bu başvuruya göre geçirme hakkında bilgi içerir.|
+|[Parametreler ve Bağımsız Değişkenler](Parameters-and-Arguments.md)|Parametreleri tanımlama ve bağımsız değişkenleri işlevleri, yöntemlere ve özelliklere geçirme için dil desteğini açıklar. Bu başvuruya göre geçirme hakkında bilgi içerir.|
 |[İşleç Aşırı Yüklemesi](operator-overloading.md)|Aritmetik işleçler bir sınıf ya da kayıt türü ve genel düzeyde aşırı açıklar.|
 |[Tür Değiştirme ve Dönüştürmeler](casting-and-conversions.md)|F # tür dönüştürmeleri desteğini açıklar.|
 |[Erişim Denetimi](access-control.md)|F #'deki erişim denetimi açıklanmaktadır. Erişim denetimi, hangi istemcilerin vb. türleri, yöntemleri, İşlevler gibi belirli program öğelerini kullanabilir bildirme anlamına gelir.|
@@ -56,9 +53,8 @@ Dil kavramları açıklayan kullanılabilir başvuru konuları aşağıdaki tabl
 |[Ayrıntılı Söz Dizimi](verbose-syntax.md)|Basit sözdizimi etkinleştirilmediğinde F # yapılarını sözdizimi açıklar. Ayrıntılı sözdizimi tarafından belirtilen `#light "off"` kod dosyasının üst yönergesi.|
 
 ## <a name="f-types"></a>F# Türleri
+
 Aşağıdaki tabloda F # dili tarafından desteklenen türleri açıklayan başvuru konuları kullanılabilir gösterilmektedir.
-
-
 
 |Başlık|Açıklama|
 |-----|-----------|
@@ -88,6 +84,7 @@ Aşağıdaki tabloda F # dili tarafından desteklenen türleri açıklayan başv
 |[Tür Sağlayıcıları](../tutorials/type-providers/index.md)|Açıklayan tür sağlar ve yerleşik tür sağlayıcılarını kullanarak veritabanları ve web hizmetleri için izlenecek yollar için bağlantılar sağlar.|
 
 ## <a name="f-expressions"></a>F # ifadeleri
+
 Aşağıdaki tabloda, F # ifadelerini açıklayan konuları listeler.
 
 |Başlık|Açıklama|
@@ -105,6 +102,7 @@ Aşağıdaki tabloda, F # ifadelerini açıklayan konuları listeler.
 |[Sorgu İfadeleri](query-expressions.md)|Sorgu ifadeleri LINQ F # için uygular ve bir veri kaynağı veya bir sıralanabilir koleksiyonun karşı sorgular yazmanızı sağlar bir dil özelliği açıklar.|
 
 ## <a name="compiler-supported-constructs"></a>Derleyici tarafından desteklenen yapılar
+
 Aşağıdaki tabloda, derleyici tarafından desteklenen özel yapıları açıklayan konulara listeler.
 
 |Konu|Açıklama|
@@ -113,5 +111,6 @@ Aşağıdaki tabloda, derleyici tarafından desteklenen özel yapıları açıkl
 |[Derleyici Yönergeleri](compiler-directives.md)|İşlemci yönergeleri ve derleyici yönergeleri açıklar.|
 |[Kaynak Satırı, Dosya ve Yol Tanımlayıcıları](source-line-file-path-identifiers.md)|Tanımlayıcılar açıklanmaktadır `__LINE__`, `__SOURCE_DIRECTORY__` ve `__SOURCE_FILE__`, kodunuzda kaynak satırı numarasını, dizin ve dosya adına erişmenize olanak tanıyan yerleşik değerleri şunlardır.|
 
-## <a name="see-also"></a>Ayrıca Bkz.
-[Visual F#](../index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Visual F#](../index.md)

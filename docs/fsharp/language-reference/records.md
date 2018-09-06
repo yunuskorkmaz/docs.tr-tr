@@ -1,17 +1,17 @@
 ---
 title: Kayıtlar (F#)
-description: 'F # kayıtları üyeleri isteğe bağlı olarak adlandırılmış değerler basit toplamalar nasıl temsil öğrenin.'
+description: 'F # kayıt üyeleri ile isteğe bağlı olarak adlandırılmış değerler basit toplamalarla nasıl temsil öğrenin.'
 ms.date: 05/16/2016
-ms.openlocfilehash: ffb853ee11ff8cacb45dadf6ef14a4f29400aad4
-ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
+ms.openlocfilehash: 6103d96b6b80a9e2ed168755958dbe800f7fa862
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34549613"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43882369"
 ---
 # <a name="records"></a>Kayıtlar
 
-Kayıtları üyeleri isteğe bağlı olarak adlandırılmış değerler basit toplamalar temsil eder.  F # 4.1 ile başlayarak, bunlar yapılar veya reference türü ya da olabilir.  Başvuru türleri varsayılan olarak oldukları.
+Kayıtları basit toplamalarla üyeleri ile isteğe bağlı olarak adlandırılan değerleri temsil eder.  F # 4.1 ile başlayarak, bunlar yapılar veya başvuru türleri ya da olabilir.  Bunlar, başvuru türleri varsayılan olarak.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -26,55 +26,55 @@ type [accessibility-modifier] typename =
 
 ## <a name="remarks"></a>Açıklamalar
 
-Önceki sözdiziminde *typename* kayıt türünün adı *label1* ve *label2* adları olarak adlandırılan değerlerin *etiketleri*, ve *type1* ve *type2* bu değerleri türleridir. *üye listesi* üye türü için isteğe bağlı bir listedir.  Kullanabileceğiniz `[<Struct>]` bir başvuru türü olan bir kaydı yerine bir yapı kaydı oluşturmak için öznitelik.
+Önceki sözdiziminde, *typename* adı kayıt türü *label1* ve *etiket 2* adları olarak adlandırılan değerleri *etiketleri*, ve *type1* ve *type2* bu değerleri türleridir. *üye listesi* üye türü için isteğe bağlı bir listedir.  Kullanabileceğiniz `[<Struct>]` olan bir başvuru türüdür a kaydı yerine bir yapı kaydı oluşturmak için öznitelik.
 
-Bazı örnekler verilmiştir.
+Bazı örnekler aşağıda verilmiştir.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1901.fs)]
 
-Her etiket ayrı bir satırda, noktalı virgülü isteğe bağlı olur.
+Her etiket ayrı bir satırda, noktalı virgül isteğe bağlıdır.
 
-Değerleri olarak bilinen ifadelerde belirleyebileceğiniz *kayıt ifadeleri*. Derleyici (etiketleri yeterince farklı diğer kayıt türleri olanlardan varsa) kullanılan etiketler türünden oluşturur. Kaşlı ayraçlar kayıt deyimi alın. Aşağıdaki kod etiketlerle üç float öğeleri içeren bir kayıt başlatır kayıt ifade gösterir `x`, `y` ve `z`.
+Bilinen ifadelerde değerlerini ayarlayabilirsiniz *kayıt ifadeleri*. Derleyici (etiketler yeterince diğer kayıt türleri olanlardan farklıdır) kullanılıyorsa etiketleri türünden çıkarır. Küme ayraçları ({}) kaydı ifadesi içine alın. Aşağıdaki kod etiketlerle üç float öğeleri içeren bir kayıt başlatan bir kayıt ifadesi gösterir `x`, `y` ve `z`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1907.fs)]
 
-Olabilir, ayrıca aynı etikete sahip başka bir tür kısaltılmış şekilde kullanmayın.
+Ayrıca aynı etikete sahip başka bir tür olabilir, kısaltılmış kullanmayın.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1903.fs)]
 
-En son bildirilen etiketleri olanlar daha önce bildirilen bir türe önceliklidir önceki örnekte, bunu `mypoint3D` olmasını olayla `Point3D`. Aşağıdaki kod olduğu gibi kayıt türü açık olarak belirtebilirsiniz.
+Etiketler en kısa süre önce bildirilen türü, bunlar daha önce bildirilen tür önceliklidir önceki örnekte, bu nedenle `mypoint3D` olmasını çıkarılan `Point3D`. Kayıt türü, aşağıdaki kodda gösterildiği gibi açıkça belirtebilirsiniz.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1908.fs)]
 
-Yöntemleri, yalnızca sınıf türleri için kayıt türleri için tanımlanabilir.
+Yöntem, sınıf türleri olduğu gibi kayıt türleri için tanımlanabilir.
 
-## <a name="creating-records-by-using-record-expressions"></a>Kayıt ifadeler kullanarak kayıtları oluşturma
+## <a name="creating-records-by-using-record-expressions"></a>Kayıt ifadelerini kullanarak kayıtları oluşturma
 
-Kayıtları kayıtta tanımlı etiketleri kullanarak başlatabilirsiniz. Bu bir ifade olarak adlandırılır bir *kayıt ifade*. Kayıt deyimi alın ve noktalı virgül ayırıcı olarak kullanmak için ayraç kullanın.
+Kayıt içinde tanımlanan etiketleri kullanarak kayıtları başlatabilirsiniz. Bunu yapan bir ifade olarak belirtilen bir *kayıt ifade*. Kayıt ifadesi içine alın ve noktalı virgül sınırlayıcı olarak kullanmak için ayraç kullanın.
 
-Aşağıdaki örnek, bir kayıt oluşturmak gösterilmiştir.
+Aşağıdaki örnek, bir kayıt oluşturma işlemi gösterilmektedir.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1904.fs)]
 
-Kayıt ifadesinde ve tür tanımı son alanından sonra noktalı alanların tümünü tek bir satırı içinde olup bağımsız olarak isteğe bağlıdır.
+Noktalı virgüller sonra kaydı ifadesinde ve tür tanımında son alan, alanların tümünü tek bir satırda olduğundan bağımsız olarak, isteğe bağlıdır.
 
-Bir kayıt oluşturduğunuzda, her bir alan için değer sağlamanız gerekir. Herhangi bir alan için başlatma ifadedeki diğer alanların değerlerini başvuramaz.
+Bir kayıt oluşturduğunuzda, her bir alan için değer sağlamanız gerekir. Herhangi bir alan için başlatma ifadesini diğer alanların değerlerine başvuruda bulunamaz.
 
-Aşağıdaki kodda, türü `myRecord2` alanları adlarından algılanır. İsteğe bağlı olarak, tür adı açıkça belirtebilirsiniz.
+Aşağıdaki kodda, türü `myRecord2` alanlarının adları algılanır. İsteğe bağlı olarak, tür adı açıkça belirtebilirsiniz.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1905.fs)]
 
-Varolan bir kaydı kopyalayın ve büyük olasılıkla bazı alan değerleri değiştirmek zorunda kayıt yapım başka bir formu kullanışlı olabilir. Aşağıdaki kod satırını bunu göstermektedir.
+Kayıtlardan kopyalayabilir ve büyük olasılıkla bazı alan değerleri değiştirmek olduğunda, başka bir form kayıt oluşturma yararlı olabilir. Aşağıdaki kod satırını bunu göstermektedir.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1906.fs)]
 
-Bu form kayıt ifadesinin adlı *kopyalama ve güncelleştirme kayıt ifade*.
+Bu formu kayıt ifadenin adlı *kopyalama ve güncelleştirme kayıt ifade*.
 
-Varsayılan olarak değişmez kayıtlarıdır; Ancak, kopyalama ve güncelleştirme ifade kullanarak değiştirilen kayıtları kolayca oluşturabilirsiniz. Aynı zamanda açıkça değişebilir bir alan belirtebilirsiniz.
+Varsayılan olarak kayıtları sabittir; Ancak, kopyalama ve güncelleştirme ifade kullanarak değiştirilmiş kayıtlar kolayca oluşturabilirsiniz. Değişebilir bir alan da açıkça belirtebilirsiniz.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1909.fs)]
 
-DefaultValue özniteliği kaydı alanlarla kullanmayın. Daha iyi bir kayıt başlatılmış alanları ile varsayılan örnekleri için varsayılan değerleri tanımlayın ve ardından bir kopyasını kullanın ve varsayılan değerlerinden farklı alanları ayarlamak için kayıt ifade güncelleştirmek için yaklaşımdır.
+DefaultValue özniteliği kayıt alanlarla kullanmayın. Daha iyi bir yaklaşım, kayıt başlatılır alanları ile varsayılan örnekleri için varsayılan değerleri tanımlama ve ardından bir kopyayı kullanın ve varsayılan değerlerden farklı herhangi bir alan ayarlamak için kayıt ifadeyi güncelleştirin sağlamaktır.
 
 ```fsharp
 // Rather than use [<DefaultValue>], define a default record.
@@ -90,13 +90,13 @@ let defaultRecord2 = { Field1 = 1; Field2 = 25 }
 let rr3 = { defaultRecord1 with Field2 = 42 }
 ```
 
-## <a name="pattern-matching-with-records"></a>Desen eşleştirme kayıtlarıyla
+## <a name="pattern-matching-with-records"></a>Desen eşleştirme ile kayıtları
 
-Kayıtları desen eşleştirme ile kullanılabilir. Bazı alanlar açıkça belirtmek ve bir eşleşme oluştuğunda atanacak diğer alanlar için değişkenleri sağlayın. Aşağıdaki kod örneği bunu gösterir.
+Kayıtları desen eşleştirme ile kullanılabilir. Bazı alanlar açıkça belirtin ve bir eşleşme olduğunda, atanacak diğer alanlar için değişkenleri belirtin. Aşağıdaki kod örneği bunu gösterir.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1910.fs)]
 
-Bu kod çıkışı aşağıdaki gibidir.
+Bu kodun çıktısı aşağıdaki gibidir.
 
 ```
 Point is at the origin.
@@ -104,32 +104,28 @@ Point is on the x-axis. Value is 100.000000.
 Point is at (10.000000, 0.000000, -1.000000).
 ```
 
-## <a name="differences-between-records-and-classes"></a>Kayıtlar ve sınıflar arasındaki farklar
+## <a name="differences-between-records-and-classes"></a>Kayıt ve sınıfları arasındaki farklar
 
-Kayıt alanları otomatik olarak bir özellik olarak sunulan ve oluşturmada kullanılan ve kayıtların kopyalama sınıflardan farklılık gösterir. Kayıt oluşturma da sınıfı yapım farklıdır. Bir kayıt türü bir oluşturucu tanımlanamıyor. Bunun yerine, bu konuda açıklanan yapım sözdizimi geçerlidir. Sınıfları Oluşturucusu parametreleri, alanları ve özellikleri arasında doğrudan hiçbir ilişki sahiptir.
+Kayıt alanları otomatik olarak bir özellik olarak kullanıma ve kullanılan oluşturma ve kopyalama kayıtların sınıflardan farklılık gösterir. Kayıt oluşturma da sınıfı oluşturma farklıdır. Bir kayıt türü bir oluşturucu tanımlanamıyor. Bunun yerine, bu konuda açıklanan yapım söz dizimi geçerlidir. Oluşturucu parametresi, alanlar ve özellikler arasında hiçbir doğrudan ilişki sınıfları içerir.
 
-Birleşim ve yapı türleri gibi kayıtları yapısal eşitlik semantiklerine sahip. Sınıfları sahip referans eşitlik semantiği. Aşağıdaki kod örneğinde bu gösterir.
+Birleşim ve yapı türleri gibi kayıtları yapısal eşitlik semantiklere sahip. Başvuru sınıfları sahip eşitlik semantiği. Aşağıdaki kod örneği bunu gösterir.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1911.fs)]
 
-Bu kod çıkışı aşağıdaki gibidir:
+Bu kodun çıktısı aşağıdaki gibidir:
 
 ```
 The records are equal.
 ```
 
-Sınıfları içeren aynı kodu yazarsanız, iki sınıf nesnelerine çünkü iki değer yığında iki nesneleri temsil eder ve yalnızca adresleri karşılaştırıldığında eşit olacaktır (sınıf türü geçersiz kılmadıkça `System.Object.Equals` yöntemi).
+Sınıflarla aynı kod yazın, iki sınıf nesnelerine çünkü iki değer iki nesne yığını üzerindeki temsil eder ve yalnızca adreslerine kıyasla eşit olacaktır (sınıf türü geçersiz kılmadıkça `System.Object.Equals` yöntemi).
 
-Eşitlik kayıtları için referans olursa öznitelik Ekle `[<ReferenceEquality>]` kaydı üstünde.
+Kayıtlar için eşitlik başvuruyorsa öznitelik Ekle `[<ReferenceEquality>]` yukarıda kaydı.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-[F# Türleri](fsharp-types.md)
-
-[Sınıflar](classes.md)
-
-[F# Dili Başvurusu](index.md)
-
-[Başvuru eşitliği](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.referenceequalityattribute-class-%5bfsharp%5d)
-
-[Desen Eşleştirme](pattern-matching.md)
+- [F# Türleri](fsharp-types.md)
+- [Sınıflar](classes.md)
+- [F# Dili Başvurusu](index.md)
+- [Başvuru eşitliği](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.referenceequalityattribute-class-%5bfsharp%5d)
+- [Desen Eşleştirme](pattern-matching.md)

@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: a6147146-0a6a-4d9b-ab0f-237b3c1ac691
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7fbc81729e8280f3a062cfa8290b102349e80e7b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7f07f1a2a7c393d70befc42a2c5b090c2c27320c
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592157"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43868623"
 ---
 # <a name="walkthrough-creating-a-custom-dataflow-block-type"></a>İzlenecek Yol: Özel bir Veri Akışı Blok Türü Oluşturma
-TPL veri akışı kitaplığı işlevleri, çeşitli etkinleştirmek birkaç veri akışı blok türü sağlasa da, özel blok türleri de oluşturabilirsiniz. Bu belge, özel davranışı uygulayan bir veri akışı blok türü oluşturmayı açıklar.  
+TPL veri akışı kitaplığı işlevleri çeşitli sağlayan birkaç veri akışı bloğu türleri sağlasa da, özel blok türleri oluşturabilirsiniz. Bu belge, özel davranış uygulayan bir veri akışı bloğu türünü oluşturmanın açıklar.  
   
 ## <a name="prerequisites"></a>Önkoşullar  
  Okuma [veri akışı](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) önce bu belgeyi okuyun.  
@@ -28,32 +28,32 @@ TPL veri akışı kitaplığı işlevleri, çeşitli etkinleştirmek birkaç ver
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
   
 ## <a name="defining-the-sliding-window-dataflow-block"></a>Kayan pencere veri akışı bloğu tanımlama  
- Giriş değerleri arabelleğe alınmış ve kayan bir pencere biçimde çıktı gerektiren bir veri akışı uygulaması göz önünde bulundurun. Örneğin, üç pencere boyutunu ve giriş değerler {0, 1, 2, 3, 4, 5} {0, 1, 2} çıkış dizileri kayan pencere veri akışı bloğu üretir {1, 2, 3}, {2, 3, 4} ve {3, 4, 5}. Aşağıdaki bölümlerde bu özel davranış uygulayan bir veri akışı blok türü oluşturmanın iki yolu açıklanmaktadır. İlk tekniği kullanan <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Encapsulate%2A> işlevselliğini birleştirmek için yöntemi bir <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> nesne ve bir <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> bir yayılması bloğuna nesnesi. İkinci tekniği türeyen bir sınıf tanımlar <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602> ve özel davranış gerçekleştirmek için varolan birleştirir.  
+ Giriş değerleri arabelleğe alınmış ve ardından bir kayan pencere şekilde çıkış gerektiren bir veri akışı uygulamayı göz önünde bulundurun. Örneğin, giriş değeri {0, 1, 2, 3, 4, 5} ve bir pencere boyutu üç için {0, 1, 2}, çıkış dizileri kayan pencere veri akışı bloğu üretir {1, 2, 3}, {2, 3, 4} ve {3, 4, 5}. Aşağıdaki bölümlerde, bu özel davranış uygulayan bir veri akışı bloğu türünü oluşturmanın iki yolu açıklanmaktadır. İlk tekniği kullanan <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Encapsulate%2A> işlevselliğini birleştirmek için yöntemi bir <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> nesnesi ve bir <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> nesnesine bir Yayıcı blok. İkinci yöntem, türetilen bir sınıf tanımlar <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602> ve özel davranış gerçekleştirmek için mevcut işlevselliğini bir araya getirir.  
   
-## <a name="using-the-encapsulate-method-to-define-the-sliding-window-dataflow-block"></a>Kullanarak kayan pencere veri akışı bloğu tanımlamak için yöntemi yalıtma  
- Aşağıdaki örnek kullanır <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Encapsulate%2A> yöntemi bir hedef ve kaynak yayılması bloğu oluşturun. Bir kaynak bloğu ve bir alıcı ve veri göndereni görev yapması için hedef blok yayılması blok sağlar.  
+## <a name="using-the-encapsulate-method-to-define-the-sliding-window-dataflow-block"></a>Kullanarak kayan pencere veri akışı bloğu tanımlamak için bir metodu kapsüllemek  
+ Aşağıdaki örnekte <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Encapsulate%2A> bir Yayıcı blok bir hedef ve bir kaynak oluşturmak için yöntemi. Bir Yayıcı blok, bir kaynak blok ve bir alıcı ve gönderen veri görev yapacak bir hedef bloğu sağlar.  
   
- Özel veri akışı işlevselliği gerektiren ancak ek yöntemler, özellikler veya alanlar sağlayan bir türü gerektirmeyen Bu teknik yararlıdır.  
+ Özel veri akışı işlevselliğini gerektirir, ancak ek yöntemler, özellikler veya alanları sağlayan bir tür gerektirmeyen bu yöntem yararlı olur.  
   
  [!code-csharp[TPLDataflow_SlidingWindowBlock#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_slidingwindowblock/cs/slidingwindowblock.cs#1)]
  [!code-vb[TPLDataflow_SlidingWindowBlock#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_slidingwindowblock/vb/slidingwindowblock.vb#1)]  
   
 ## <a name="deriving-from-ipropagatorblock-to-define-the-sliding-window-dataflow-block"></a>Kayan pencere veri akışı bloğu tanımlamak için IPropagatorBlock türetme  
- Aşağıdaki örnekte gösterildiği `SlidingWindowBlock` sınıfı. Bu sınıfın türetildiği <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602> böylece hem kaynak hem de veri hedefi olarak davranamaz. Önceki örnekte olduğu gibi `SlidingWindowBlock` sınıfı, var olan veri akışı bloğu türlerinde oluşturulur. Ancak, `SlidingWindowBlock` sınıfı ayrıca gerekli olan yöntemleri uygulayan <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601>, <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601>, ve <xref:System.Threading.Tasks.Dataflow.IDataflowBlock> arabirimleri. Bu yöntemler tüm İleri önceden tanımlanmış veri akışı blok türü üyelerine çalışır. Örneğin, `Post` yöntemi erteler iş `m_target` de veri üyesi bir <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> nesnesi.  
+ Aşağıdaki örnekte gösterildiği `SlidingWindowBlock` sınıfı. Bu sınıfın türetildiği <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602> böylece hem kaynak hem de veri hedefi olarak görev yapabilir. Önceki örnekte olduğu gibi `SlidingWindowBlock` sınıfı, mevcut veri akışı bloğu türleri üzerinde oluşturulur. Ancak, `SlidingWindowBlock` sınıfı da tarafından gerekli yöntemleri uygular <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601>, <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601>, ve <xref:System.Threading.Tasks.Dataflow.IDataflowBlock> arabirimleri. Bu yöntemler tüm İleri, önceden tanımlı veri akışı bloğu türü üyeleri çalışır. Örneğin, `Post` yöntemi erteler çalışmaya `m_target` ayrıca veri üyesi, bir <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> nesne.  
   
- Özel veri akışı işlevselliği gerektirir ve ayrıca ek yöntemler, özellikler veya alanlar sağlayan bir türü gerektiren bu teknik yararlıdır. Örneğin, `SlidingWindowBlock` sınıfı ayrıca türetilen <xref:System.Threading.Tasks.Dataflow.IReceivableSourceBlock%601> böylece bunu sağlayabilir <xref:System.Threading.Tasks.Dataflow.IReceivableSourceBlock%601.TryReceive%2A> ve <xref:System.Threading.Tasks.Dataflow.IReceivableSourceBlock%601.TryReceiveAll%2A> yöntemleri. `SlidingWindowBlock` Sınıfı ayrıca sağlayarak genişletilebilirlik gösterir `WindowSize` özelliği kayan pencere öğelerinde sayısını alır.  
+ Özel veri akışı işlevselliği gerektirdiği ve ayrıca ek yöntemler, özellikler veya alanları sağlayan bir tür gerektiren bu yararlı bir tekniktir. Örneğin, `SlidingWindowBlock` sınıf ayrıca türetilir <xref:System.Threading.Tasks.Dataflow.IReceivableSourceBlock%601> sağlar, böylece <xref:System.Threading.Tasks.Dataflow.IReceivableSourceBlock%601.TryReceive%2A> ve <xref:System.Threading.Tasks.Dataflow.IReceivableSourceBlock%601.TryReceiveAll%2A> yöntemleri. `SlidingWindowBlock` Sınıfı ayrıca sağlayarak genişletilebilirlik gösterir `WindowSize` özelliği kayan pencere içindeki öğelerin sayısını alır.  
   
  [!code-csharp[TPLDataflow_SlidingWindowBlock#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_slidingwindowblock/cs/slidingwindowblock.cs#2)]
  [!code-vb[TPLDataflow_SlidingWindowBlock#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_slidingwindowblock/vb/slidingwindowblock.vb#2)]  
   
 ## <a name="the-complete-example"></a>Tam Örnek  
- Aşağıdaki örnek, bu kılavuz tam kod gösterilir. Ayrıca, her iki kayan pencere blokları bloğuna yazar, ondan okuyan ve sonuçlarını konsola yazdırır bir yöntem kullanmak nasıl gösterir.  
+ Aşağıdaki örnek, bu izlenecek yol için tam kod gösterilmektedir. Ayrıca, her iki kayan pencere blokları blokla yazar, buradan okur ve sonuçlarını konsola yazdırır bir yöntem kullanmak nasıl gösterir.  
   
  [!code-csharp[TPLDataflow_SlidingWindowBlock#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_slidingwindowblock/cs/slidingwindowblock.cs#100)]
  [!code-vb[TPLDataflow_SlidingWindowBlock#100](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_slidingwindowblock/vb/slidingwindowblock.vb#100)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Örnek kodu kopyalayın ve bir Visual Studio projesi yapıştırın veya adlı bir dosyaya yapıştırın `SlidingWindowBlock.cs` (`SlidingWindowBlock.vb` Visual Basic) ve Visual Studio komut istemi penceresinde aşağıdaki komutu çalıştırın.  
+ Örnek kodu kopyalayın ve bir Visual Studio projesine yapıştırın veya adlı bir dosyaya yapıştırın `SlidingWindowBlock.cs` (`SlidingWindowBlock.vb` Visual Basic için) ve Visual Studio komut istemi penceresinde aşağıdaki komutu çalıştırın.  
   
  Visual C#  
   
@@ -63,5 +63,6 @@ TPL veri akışı kitaplığı işlevleri, çeşitli etkinleştirmek birkaç ver
   
  **Vbc.exe /r:System.Threading.Tasks.Dataflow.dll SlidingWindowBlock.vb**  
 
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri akışı](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Veri akışı](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

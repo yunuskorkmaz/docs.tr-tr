@@ -3,11 +3,11 @@ title: 3.5 kural kümesi ile birlikte çalışma
 ms.date: 03/30/2017
 ms.assetid: 969f3295-d874-428c-a9c6-623e3d578e51
 ms.openlocfilehash: 5ea5454ef80bfd83611ed20392782d99cd8c0c25
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43777099"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43872637"
 ---
 # <a name="interop-with-35-rule-set"></a>3.5 kural kümesi ile birlikte çalışma
 Bu örnek, kullanımını gösterir. <xref:System.Activities.Statements.Interop> özel etkinliği ile tümleştirmek için etkinlik [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] kullanarak <!--zz <xref:System.Workflow.Activities.Policy> --> `System.Workflow.Activities.Policy` ve kuralları. Bağlayarak verileri için özel etkinlik geçirmeden [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] özel etkinlik tarafından kullanıma sunulan bağımlılık özellikleri için değişkenleri.  

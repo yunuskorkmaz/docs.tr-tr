@@ -10,11 +10,11 @@ helpviewer_keywords:
 - /nologo compiler option [C#]
 ms.assetid: 426afb36-a8fb-469d-9c45-a35d9512557c
 ms.openlocfilehash: a8f4582e9c8d5a54d924ff5b456ef8ffd8cc56f3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43673455"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43872328"
 ---
 # <a name="-nologo-c-compiler-options"></a>-nologo (C# Derleyici Seçenekleri)
 **- Nologo** seçeneği derleyici başlatıldığında oturum açma başlığının görüntülenmesini ve derleme sırasında görüntülenen bilgi iletilerini engeller.  

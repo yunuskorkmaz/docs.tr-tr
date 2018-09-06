@@ -7,11 +7,11 @@ helpviewer_keywords:
 - XML [Visual Basic], manipulating
 ms.assetid: da32cffb-198d-41b1-9af3-260fe32e3b7d
 ms.openlocfilehash: 7fd111f5e885de3389b8f93002db22b48c4edd45
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43417454"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43805435"
 ---
 # <a name="manipulating-xml-in-visual-basic"></a>Visual Basic'de XML'i Düzenleme
 Kullanabileceğiniz *XML sabit değerleri* XML dizesi, dosya veya akışı gibi harici bir kaynaktan yüklenemedi. Ardından [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] XML işlemek ve kullanmak için [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] XML sorgulanamıyor.  

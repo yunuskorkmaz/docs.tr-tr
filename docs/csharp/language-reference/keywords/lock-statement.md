@@ -1,77 +1,68 @@
 ---
 title: lock deyimi (C# Başvurusu)
-description: 'Lock anahtar sözcüğü iş parçacığı içinde kullanılır. '
-ms.date: 07/20/2015
+description: C# lock deyiminin paylaşılan kaynak iş parçacığı erişimi eşitlemek için kullanın
+ms.date: 08/28/2018
 f1_keywords:
 - lock_CSharpKeyword
 - lock
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: 6ed46837482642dfd7e1a96cd120fc18023c5e9f
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 2b6fbfb2f81d7745c4effb9ea0087f34cc872a6c
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931199"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43858362"
 ---
 # <a name="lock-statement-c-reference"></a>lock deyimi (C# Başvurusu)
 
-`lock` Anahtar sözcük belirli bir nesne için karşılıklı dışlama kilidini alma, deyimi yürütüp ve sonra kilidi bırakarak bu bir deyim bloğunu kritik bir bölüm olarak işaretler. Aşağıdaki örnek içeren bir `lock` deyimi.
+`lock` Deyimi belirli bir nesne için karşılıklı dışlama kilidini alır, bir deyim bloğunu yürütür ve ardından kilidi serbest bırakır. Kilidi açık tutulduğu sürece kilidi tutan iş parçacığı yeniden alabilir ve kilidi serbest bırakır. Başka bir iş parçacığı kilidi elde edilen engellenir ve kilidi serbest bırakılıncaya kadar bekler.
+
+`lock` Deyimdir biçimi
 
 ```csharp
-class Account
+lock (x)
 {
-    decimal balance;
-    private Object thisLock = new Object();
-
-    public void Withdraw(decimal amount)
-    {
-        lock (thisLock)
-        {
-            if (amount > balance)
-            {
-                throw new Exception("Insufficient funds");
-            }
-            balance -= amount;
-        }
-    }
+    // Your code...
 }
 ```
 
-Daha fazla bilgi için [iş parçacığı eşitleme](../../programming-guide/concepts/threading/thread-synchronization.md).
+Burada `x` bir ifade olan bir [başvuru türüne](reference-types.md). Tam olarak eşdeğerdir
 
-## <a name="remarks"></a>Açıklamalar
+```csharp
+object __lockObj = x;
+bool __lockWasTaken = false;
+try
+{
+    System.Threading.Monitor.Enter(__lockObj, ref __lockWasTaken);
+    // Your code...
+}
+finally
+{
+    if (__lockWasTaken) System.Threading.Monitor.Exit(__lockObj);
+}
+```
 
-`lock` Anahtar sözcüğü, başka bir iş parçacığı kritik bölümünde olsa da bir iş parçacığı kodun önemli bir bölümünü geçmiyor sağlar. Kilitli bir kodu girmek başka bir iş parçacığı çalışırsa, bekler, nesne yayımlanana kadar engelleyin.
-
-Bölüm [parçacıkları](../../programming-guide/concepts/threading/index.md) iş parçacığı oluşturma açıklanır.
-
-`lock` Anahtar sözcüğü çağrıları <xref:System.Threading.Monitor.Enter%2A> bloğun başlangıcında ve <xref:System.Threading.Monitor.Exit%2A> bloğunun sonunda. A <xref:System.Threading.ThreadInterruptedException> oluşturulur <xref:System.Threading.Thread.Interrupt%2A> girmek için bekleyen bir iş parçacığı kesmeleri bir `lock` deyimi.
-
-Genel olarak, üzerinde kilitleme kaçının bir `public` türü veya kodunuzun kontrolü örnekleri. Ortak Yapılar `lock (this)`, `lock (typeof (MyType))`, ve `lock ("myLock")` bu anlayışın ihlal:
-
-- `lock (this)` Örneğin genel olarak erişilebilen bir sorun ise.
-
-- `lock (typeof (MyType))` bir sorun ise `MyType` genel olarak erişilebilir.
-
-- `lock("myLock")` aynı dize kullanarak işlemindeki herhangi bir kod paylaştığından aynı kilit bir sorundur.
-
-En iyi uygulamadır tanımlamak için bir `private` , kilitlemek için nesne veya `private static` için tüm örnekleri ortak verileri korumak için nesne değişkeni.
+Kod kullandığından bir [try... finally](try-finally.md) bloğu kilidi serbest gövdesi içinde bir özel durum olsa bile bir `lock` deyimi.
 
 Kullanamazsınız [await](await.md) gövdesinde anahtar sözcüğü bir `lock` deyimi.
 
-## <a name="example---threads-without-locking"></a>Örnek - kilitlemeden iş parçacıkları
+## <a name="remarks"></a>Açıklamalar
 
-Aşağıdaki örnek, C# dilinde kilitlemeden basit bir iş parçacığı kullanımı gösterilmektedir:
+İş parçacığı paylaşılan kaynağa erişimi eşitlediğinizde, adanmış Pro instanci objektu kilitleme (örneğin, `private readonly object balanceLock = new object();`) ya da bir kilit nesnesi olarak kodun ilgisiz parçaları tarafından kullanılmak üzere düşüktür, başka bir örneği. Kilitlenme veya kilit Çekişme neden olabilir, farklı paylaşılan kaynaklar için aynı kilit nesne örneğini kullanarak kaçının. Özellikle, kullanmaktan kaçının.
 
-[!code-csharp[csrefKeywordsFixedLock#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsFixedLock/CS/csrefKeywordsFixedLock.cs#5)]
+- `this` (arayanlar tarafından bir kilit olarak kullanılabilir),
+- <xref:System.Type> örnekler (tarafından alınabilir [typeof](typeof.md) işleci veya yansıma),
+- dize değişmez değerleri dahil olmak üzere, dize örnekleri,
 
-## <a name="example---threads-using-locking"></a>Örnek - iş parçacıklarını kilitleme kullanma
+nesneleri kilitle.
 
-Aşağıdaki örnek iş parçacığı kullanır ve `lock`. Sürece `lock` deyimi, deyim bloğunu kritik bir bölümdür ve `balance` hiçbir zaman negatif bir sayı olur:
+## <a name="example"></a>Örnek
 
-[!code-csharp[csrefKeywordsFixedLock#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsFixedLock/CS/csrefKeywordsFixedLock.cs#6)]
+Aşağıdaki örnekte tanımlayan bir `Account` özel erişimi eşitler sınıfı `balance` üzerinde adanmış bir kilitleme alanı `balanceLock` örneği. Kilitleme sağlar için aynı örneği kullanarak `balance` alanı güncelleştirilemiyor aynı anda arama girişimi iki iş parçacığı tarafından `Debit` veya `Credit` yöntemleri aynı anda.
+
+[!code-csharp[lock-statement-example](~/samples/snippets/csharp/keywords/LockStatementExample.cs)]
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
@@ -79,14 +70,11 @@ Aşağıdaki örnek iş parçacığı kullanır ve `lock`. Sürece `lock` deyimi
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Reflection.MethodImplAttributes>
-- <xref:System.Threading.Mutex>
-- <xref:System.Threading.Monitor>
-- [C# başvurusu](../../language-reference/index.md)
-- [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [İş parçacığı oluşturma](../../programming-guide/concepts/threading/index.md)
+- <xref:System.Threading.Monitor?displayProperty=nameWithType>
+- <xref:System.Threading.SpinLock?displayProperty=nameWithType>
+- <xref:System.Threading.Interlocked?displayProperty=nameWithType>
+- [C# başvurusu](../index.md)
 - [C# Anahtar Sözcükleri](index.md)
 - [Deyim Anahtar Sözcükleri](statement-keywords.md)
-- [Birbirine Kenetlenmiş İşlemler](../../../standard/threading/interlocked-operations.md)
-- [AutoResetEvent](../../../standard/threading/autoresetevent.md)
-- [İş Parçacığı Eşitleme](../../programming-guide/concepts/threading/thread-synchronization.md)
+- [Birbirine kenetlenmiş işlemler](../../../standard/threading/interlocked-operations.md)
+- [Eşitleme temellerine genel bakış](../../../standard/threading/overview-of-synchronization-primitives.md)

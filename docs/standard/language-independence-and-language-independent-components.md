@@ -15,32 +15,32 @@ helpviewer_keywords:
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bf18fb7238eb35b5ceb1624c14b83486485ddc1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 90b3e7246046a979f3ee02e332fbb6a843ea9e8c
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579632"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864793"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Dil Bağımsızlığı ve Dilden Bağımsız Bileşenler
-.NET Framework bağımsız dilidir. Bir geliştirici olarak size .NET Framework, C#, C + gibi hedef birçok dilde birinde geliştirebilirsiniz, yani +/ CLI, Eiffel, F #, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL ve Windows PowerShell. Türleri ve sınıf kitaplıkları için .NET Framework, bunlar ilk olarak yazılmış içinde dili bilmenize gerek kalmadan ve özgün dil kuralları birini izleyin gerek kalmadan geliştirilen üyeleri erişebilir. Bileşen geliştiriciyseniz bileşeniniz dili bağımsız olarak herhangi bir .NET Framework uygulama tarafından erişilebilir.  
+.NET Framework dilden bağımsızdır ' dir. Bu bir geliştirici olarak, bir C#, C + gibi .NET Framework'ü hedefleyen birçok dilde geliştirebileceğiniz anlamına gelir +/ CLI, Eiffel, F #, IronPython, Ironruby, PowerBuilder, Visual Basic, Visual COBOL ve Windows PowerShell. Türler ve üyeler sınıf kitaplıkları, bunlar ilk olarak yazılmış içinde dili bilmek zorunda kalmadan ve herhangi bir özgün dil kuralları izlemeye gerek kalmadan olmadan .NET Framework için geliştirilen erişebilirsiniz. Bileşen geliştiricisiyseniz, diline bakılmaksızın herhangi bir .NET Framework uygulama tarafından bileşeniniz erişilebilir.  
   
 > [!NOTE]
->  Dilden bağımsız bileşenler oluşturma bu ilk bölümü, bu makalenin ele — diğer bir deyişle, herhangi bir dilde yazılan uygulamaları tarafından kullanılabilecek bileşenler. Çeşitli dillerde yazılmış kaynak koddan tek bir bileşen ya uygulaması oluşturabilirsiniz; bkz: [diller arası birlikte çalışabilirlik](#CrossLang) ikinci bölümü, bu makalenin.  
+>  Bu ilk kısmı bu makalede, dilden bağımsız bileşenlerin oluşturulması açıklanmaktadır — diğer bir deyişle, herhangi bir dilde yazılmış uygulamalar tarafından tüketilebilecek bileşenlerin. Birden çok dilde yazılmış kaynak kodundan tek bileşen veya uygulama da oluşturabilirsiniz; bkz: [diller arası birlikte çalışabilirlik](#CrossLang) ikinci bölümündeki bu makalede.  
   
- Tam olarak herhangi bir dilde yazılmış diğer nesnelerle etkileşim kurmak için nesneleri, tüm diller için ortak olan özellikleri arayanlara kullanıma gerekir. Bu ortak bir özellikler kümesi ortak dil belirtimi (CLS tarafından), hangi oluşturulmuş derlemeler için geçerli bir kurallar kümesidir tanımlanır. Ortak dil belirtimi bölüm ı yan tümceleri 7 11 /'ile tanımlanan [ECMA-335 standart: ortak dil altyapısı](https://www.ecma-international.org/publications/standards/Ecma-335.htm).  
+ Herhangi bir dilde yazılmış diğer nesnelerle tam olarak etkileşim kurmayı nesneleri arayanlara tüm diller için ortak olan özellikleri göstermesi gerekir. Bu ortak özellikler kümesi, oluşturulmuş derlemeler için uygulanan bir kurallar kümesi olan ortak dil belirtimi (CLS ile), tanımlanır. Ortak dil belirtimi bölüm ı, yan tümceler 7 ila 11'de tanımlanan [ECMA-335 standardı: ortak dil altyapısı](https://www.ecma-international.org/publications/standards/Ecma-335.htm).  
   
- Bileşeniniz ortak dil belirtimi uyuyorsa, CLS uyumlu olması garanti ve CLS destekleyen tüm programlama dilinde yazılmıştır derlemelerde koddan erişilebilir. Bileşeniniz ortak dil belirtimi derleme zamanında uygulayarak uyup uymadığını belirleyebilirsiniz <xref:System.CLSCompliantAttribute> özniteliği için kaynak kodu. Daha fazla bilgi için bkz: [CLSCompliantAttribute özniteliği](#CLSAttribute).  
+ Bileşeniniz ortak dil belirtimi için uyuyorsa, CLS uyumlu olması sağlanır ve CLS destekleyen programlama diliyle yazılmış derlemedeki koddan erişilebilir. Bileşeniniz ortak dil belirtimi için derleme zamanında uygulayarak uyup uymadığını belirleyebilirsiniz <xref:System.CLSCompliantAttribute> özniteliğini kaynak kodunuza. Daha fazla bilgi için [CLSCompliantAttribute özniteliği](#CLSAttribute).  
   
  Bu makalede:  
   
--   [CLS uyumluluk kuralları](#Rules)  
+-   [CLS uyumluluğu kuralları](#Rules)  
   
-    -   [Türleri ve türü üye imzaları](#Types)  
+    -   [Türler ve tür üyesi imzaları](#Types)  
   
     -   [Adlandırma kuralları](#naming)  
   
-    -   [Tür dönüştürmeleri](#conversion)  
+    -   [Tür dönüştürme](#conversion)  
   
     -   [Diziler](#arrays)  
   
@@ -48,11 +48,11 @@ ms.locfileid: "33579632"
   
     -   [Sabit Listeleri](#enums)  
   
-    -   [Genel üyeleri yazın](#members)  
+    -   [Genel olarak tür üyeleri](#members)  
   
-    -   [Üye erişilebilirlik](#MemberAccess)  
+    -   [Üye erişilebilirliği](#MemberAccess)  
   
-    -   [Genel türler ve üyeleri](#Generics)  
+    -   [Genel türler ve Üyeler](#Generics)  
   
     -   [Oluşturucular](#ctors)  
   
@@ -71,399 +71,399 @@ ms.locfileid: "33579632"
 -   [Diller arası birlikte çalışabilirlik](#CrossLang)  
   
 <a name="Rules"></a>   
-## <a name="cls-compliance-rules"></a>CLS uyumluluk kuralları  
- Bu bölümde, CLS uyumlu bir bileşen oluşturmak için kurallar açıklanmaktadır. Bölüm ı yan tümcesi 11 / kuralları tam bir listesi için bkz [ECMA-335 standart: ortak dil altyapısı](https://www.ecma-international.org/publications/standards/Ecma-335.htm).  
+## <a name="cls-compliance-rules"></a>CLS uyumluluğu kuralları  
+ Bu bölüm, CLS uyumlu bileşen oluşturma kurallarını anlatır. Kuralları tam listesi için bölüm ı, madde 11'ine bakın [ECMA-335 standardı: ortak dil altyapısı](https://www.ecma-international.org/publications/standards/Ecma-335.htm).  
   
 > [!NOTE]
->  Çerçeveler (dil derleyici oluşturmak için kullandığınız geliştiriciler tüketicilere CLS uyumlu bir bileşen program aracılığıyla erişme (geliştiriciler) uygularken ortak dil belirtimi CLS uyumluluğu için her bir kural açıklanır. CLS-compliant kitaplıklar) ve Extender'larının (dil derleyici veya CLS uyumlu bileşenleri oluşturan bir kod ayrıştırıcı gibi bir araç oluşturan geliştiriciler). Çerçeveler için uygularken bu makalede kurallarında odaklanır. Ancak, bazı Extender'larının için geçerli olan kurallar da Reflection.Emit kullanılarak oluşturulan derlemeleri uygulayabilir unutmayın.  
+>  Çerçeveler (oluşturmak için bir dil derleyicisi kullanan geliştiriciler tüketiciler (CLS uyumlu bir bileşen programlı olarak erişen geliştiriciler), geçerli olduğundan ortak dil belirtimi CLS uyumuyla ilgili her kuralı açıklanır. CLS-compliant kitaplıkları) ve Genişleticileri (bir dil derleyicisi veya CLS uyumlu bileşenler oluşturan kod ayrıştırıcısı gibi bir araç oluşturan geliştiriciler). Bu makale, çerçeveler için geçerli olarak kurallarında odaklanır. Ancak, Genişleticiler için geçerli kurallar bazıları da Reflection.Emit kullanılarak oluşturulan derlemeler için uygulanabilir unutmayın.  
   
- Dilden bağımsızdır bir bileşen tasarlamak için yalnızca, bileşenin ortak arabirim CLS uyumluluğu için kurallar uygulama gerekir. Özel uygulamanızı belirtimine uygun olarak yok.  
+ Dilden bağımsız bir bileşen tasarlamak için yalnızca CLS kurallarını bileşeninizin genel arabirimine uygulamanız gerekir. Özel uygulamanızın belirtime uygun gerekmez.  
   
 > [!IMPORTANT]
->  CLS uyumluluğu için kurallar, yalnızca kendi özel uygulama için bir bileşenin ortak arabirimi uygulanır.  
+>  CLS uyumluluğu kuralları yalnızca bileşenin özel uygulaması için bir bileşenin genel arabirimi uygulanır.  
   
- Örneğin, tamsayılar dışında imzasız <xref:System.Byte> CLS uyumlu değildir. Çünkü `Person` sınıfı aşağıdaki örnekte sunar bir `Age` türünde özellik <xref:System.UInt16>, aşağıdaki kod derleyici uyarısı görüntüler.  
+ Örneğin, dışındaki imzalanmamış tamsayılar <xref:System.Byte> CLS uyumlu değildir. Çünkü `Person` sınıfı aşağıdaki örnekte gösterir bir `Age` türünün özelliği <xref:System.UInt16>, aşağıdaki kod bir derleyici uyarısı görüntüler.  
   
  [!code-csharp[Conceptual.CLSCompliant#1](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/public1.cs#1)]
  [!code-vb[Conceptual.CLSCompliant#1](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/public1.vb#1)]  
   
- Yapabileceğiniz `Person` sınıf CLS uyumlu türünü değiştirerek `Age` özelliğinden <xref:System.UInt16> için <xref:System.Int16>, CLS uyumlu, 16 bit işaretli tamsayıyı olduğu. Özel türünü değiştirmek zorunda değilsiniz `personAge` alan.  
+ Yapabileceğiniz `Person` CLS uyumlu sınıf türünü değiştirerek `Age` özelliğinden <xref:System.UInt16> için <xref:System.Int16>, CLS uyumlu, 16 bit işaretli bir tamsayı olduğu. Özel türünü değiştirmek zorunda değilsiniz `personAge` alan.  
   
  [!code-csharp[Conceptual.CLSCompliant#2](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/public2.cs#2)]
  [!code-vb[Conceptual.CLSCompliant#2](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/public2.vb#2)]  
   
- Kitaplığın ortak arabirimi aşağıdakilerden oluşur:  
+ Kitaplığın Genel arabirimi aşağıdakilerden oluşur:  
   
--   Ortak sınıfları tanımlar.  
+-   Ortak sınıfların tanımları.  
   
--   Ortak sınıflar ortak üyeleri ve türetilen sınıflar (diğer bir deyişle, korumalı üyeleri) erişilebilir üyelerinin tanımları tanımları.  
+-   Ortak sınıfların ortak üyelerinin ve üyelerin erişilebilir türetilmiş sınıflar (yani, korumalı üyeler) tanımları tanımları.  
   
--   Parametreler ve genel yöntemlerin ortak sınıflar, parametreler ve dönüş türleri ve yöntemleri türetilmiş sınıflara erişilebilir dönüş türü.  
+-   Parametreleri ve ortak sınıfların ve parametreleri genel yöntemlerin dönüş türleri ve türetilen sınıflar için erişilebilir yöntemlerin dönüş türleri.  
   
- CLS uyumluluğu için kuralları aşağıdaki tabloda listelenmiştir. Kurallar metin alanından verbatim alınır [ECMA-335 standart: ortak dil altyapısı](https://www.ecma-international.org/publications/standards/Ecma-335.htm), telif hakkı 2012 Ecma uluslararası tarafından olduğu. Aşağıdaki bölümlerde bu kuralları hakkında daha ayrıntılı bilgi bulunamadı.  
+ CLS uyumluluğu kuralları, aşağıdaki tabloda listelenmiştir. Metin kuralları ndan alınmıştır [ECMA-335 standardı: ortak dil altyapısı](https://www.ecma-international.org/publications/standards/Ecma-335.htm), Ecma International telif hakkı 2012 olduğu. Aşağıdaki bölümlerde bu kurallar hakkında daha ayrıntılı bilgi bulunur.  
   
 |Kategori|Bkz. |Kural|Kural numarası|  
 |--------------|---------|----------|-----------------|  
-|Erişilebilirlik|[Üye erişilebilirlik](#MemberAccess)|Erişilebilirlik değil değiştirilmesi geçersiz kılma ne zaman bir yöntemini geçersiz kılma farklı bir derlemeden erişilebilirliği devralınan dışında yöntemleri, devralınan zaman `family-or-assembly`. Bu durumda, geçersiz kılma erişilebilirlik sahip `family`.|10|  
-|Erişilebilirlik|[Üye erişilebilirlik](#MemberAccess)|Üye görünür ve erişilebilir olduğunda imza türlerinde herhangi bir üyenin görünür ve erişilebilir olacaktır, görünürlük ve erişilebilirlik türleri ve üyeleri olacaktır. Örneğin, kendi derlemenin dışından görülebilir genel bir yöntem türü yalnızca derlemede görünür olan bir bağımsız değişken sahip. Üye görünür ve erişilebilir olduğunda görünürlük ve herhangi bir üyenin imzada kullanılan bir oluşturulmuş genel tür oluşturma türlerinin erişilebilirlik görünür ve erişilebilir olacaktır. Örneğin, bir oluşturulmuş genel tür imzada mevcut kendi derlemenin dışından görünür bir üyenin türü yalnızca derlemede görünür olan genel bir bağımsız değişken sahip.|12|  
-|Diziler|[Diziler](#arrays)|Diziler CLS uyumlu bir türü olan öğeleri sahip ve tüm boyutlar dizinin alt sınırlarını sıfır sahip. Yalnızca bir dizi ve dizi öğesi türü bir öğedir olgu aşırı arasında ayrım yapmak için gerekli. Ne zaman aşırı yüklemesi iki dayalı olan veya daha fazla dizi öğesi türleri türleri adlı.|16|  
-|Öznitelikler|[Öznitelikler](#attributes)|Öznitelik türü olacaktır <xref:System.Attribute?displayProperty=nameWithType>, veya ondan devralan bir tür.|41|  
-|Öznitelikler|[Öznitelikler](#attributes)|CLS yalnızca bir alt kümesini özel özniteliklerin Kodlamalar izin verir. (Bölüm IV bakın) bu Kodlamalar görünür yalnızca türleri şunlardır: <xref:System.Type?displayProperty=nameWithType>, <xref:System.String?displayProperty=nameWithType>, <xref:System.Char?displayProperty=nameWithType>, <xref:System.Boolean?displayProperty=nameWithType>, <xref:System.Byte?displayProperty=nameWithType>, <xref:System.Int16?displayProperty=nameWithType>, <xref:System.Int32?displayProperty=nameWithType>, <xref:System.Int64?displayProperty=nameWithType>, <xref:System.Single?displayProperty=nameWithType>, <xref:System.Double?displayProperty=nameWithType> , ve herhangi bir numaralandırma türü CLS uyumlu bir temel tamsayı türünde dayanır.|34|  
-|Öznitelikler|[Öznitelikler](#attributes)|CLS herkese görünür gerekli değiştiricileri izin verme (`modreq`, Bölüm II bakın), isteğe bağlı değiştiricileri izin vermez ancak (`modopt`, Bölüm II bakın) anlamadığı.|35|  
-|Oluşturucular|[Oluşturucular](#ctors)|Devralınan örnek veriler için herhangi bir erişim oluşmadan önce bir nesne oluşturucusu bazı örnek oluşturucusu olduğu temel sınıfın çağrısı. (Bu oluşturucular olmak zorunda değildir değer türleri için geçerli değildir.)|21|  
-|Oluşturucular|[Oluşturucular](#ctors)|Bir nesne Oluşturucusu dışındaki bir nesnenin oluşturmanın bir parçası çağrılması değil ve bir nesne iki kez başlatılmamış.|22|  
-|Numaralandırmalar|[Sabit Listeleri](#enums)|Enum temel türü bir yerleşik CLS tamsayı türü olacaktır, alanın adını "value__" olacaktır ve bu alan işaretli `RTSpecialName`.|7|  
-|Numaralandırmalar|[Sabit Listeleri](#enums)|Varlığı veya yokluğuna göre tarafından gösterilen Numaralandırmaların iki farklı tür vardır <xref:System.FlagsAttribute?displayProperty=nameWithType> (bkz. Bölüm IV kitaplık) özel bir öznitelik. Bir adlandırılmış tamsayı değerlerini temsil eder; diğer temsil adsız bir değer üretmek için birleştirilmiş bir bit bayrakları adlı. Değeri bir `enum` belirtilen değerlere sınırlı değildir.|8|  
-|Numaralandırmalar|[Sabit Listeleri](#enums)|Bir numaralandırma sabit değeri statik alanları ve enum türüne sahip.|9|  
-|Olaylar|[Olaylar](#events)|Bir olay uygulamak yöntemleri olarak işaretlenmiş `SpecialName` themetadata içinde.|29|  
-|Olaylar|[Olaylar](#events)|Bir olay ve onun erişimciler erişilebilirlik aynı olacaktır.|30|  
-|Olaylar|[Olaylar](#events)|`add` Ve `remove` yöntemleri bir olay ya da her ikisini de gelecektir için mevcut olmalı veya belirtilmemelidir.|31|  
-|Olaylar|[Olaylar](#events)|`add` Ve `remove` yöntemleri bir olay her bir parametre türü alan için olay türünü tanımlar ve bu türetilen <xref:System.Delegate?displayProperty=nameWithType>.|32|  
-|Olaylar|[Olaylar](#events)|Olaylar, belirli bir adlandırma deseni uyması. `SpecialName` CLS kural 29 başvuruda bulunulan öznitelik uygun adı karşılaştırmaları göz ardı ve tanımlayıcı kurallarına.|33|  
-|Özel Durumlar|[Özel Durumlar](#exceptions)|Oluşturulan nesnelerin türü olacaktır <xref:System.Exception?displayProperty=nameWithType> veya ondan devralan bir tür. Öte yandan, CLS uyumlu yöntemlerini diğer tür özel durumlar yayılmasını engellemek için gerekli değildir.|40|  
-|Genel|[CLS uyumluluğu: kuralları](#Rules)|CLS kuralları erişilebilir veya görünür outsideof tanımlama derleme olan yalnızca parçaları türü için geçerlidir.|1.|  
-|Genel|[CLS uyumluluğu: kuralları](#Rules)|CLS dışı uyumlu türleri üyeleri CLS uyumlu olarak işaretlenmemiş.|2|  
-|Genel Türler|[Genel türler ve üyeleri](#Generics)|İç içe geçmiş türler en az sayıda genel parametreler kendilerini kapsayan türle sahip. Genel bir iç içe geçmiş tür parametrelerinde kapsayan türü genel parametreler konuma göre karşılık gelir.|42|  
-|Genel Türler|[Genel türler ve üyeleri](#Generics)|Genel bir tür adı olmayan iç içe geçmiş türünde bildirilen ya da yeni yukarıda tanımlanan kurallarına göre iç içe yoksa türe giriş türü parametre sayısı kodlayın.|43|  
-|Genel Türler|[Genel türler ve üyeleri](#Generics)|Genel bir tür kısıtlamalar temel türü veya arabirimleri tarafından genel tür kısıtlamaları getirilmez güvence altına almak için yeterli kısıtlamaları redeclare.|4444|  
-|Genel Türler|[Genel türler ve üyeleri](#Generics)|Genel parametreler üzerinde kısıtlamalar olarak kullanılan türleri kendilerini CLS uyumlu olacaktır.|45|  
-|Genel Türler|[Genel türler ve üyeleri](#Generics)|Görünürlük ve bir oluşturulmuş genel tür üyeleri (iç içe geçmiş türler dahil) erişilebilirliğini bir bütün olarak genel tür bildirimi yerine belirli örneklemesi Kapsamınızın dikkate. Bu varsayıldığında, CLS kuralının 12 görünürlük ve erişilebilirlik kuralları hala geçerlidir.|46|  
-|Genel Türler|[Genel türler ve üyeleri](#Generics)|Her soyut veya sanal genel yöntemi için bir varsayılan somut (soyut) uygulaması olacaktır.|47|  
-|Arabirimler|[Arabirimler](#Interfaces)|Bunları uygulamak için CLS uyumlu arabirimleri CLS olmayan compliantmethods tanımını gerektirmeyecek.|18|  
-|Arabirimler|[Arabirimler](#Interfaces)|CLS uyumlu arabirimlerde statik yöntemler tanımlamak değil ya da alanları tanımla.|19|  
-|Üyeler|[Genel üyeleri yazın](#members)|Genel statik alanları ve yöntemleri CLS uyumlu değildir.|36|  
-|Üyeler|--|Değişmez değer statik değerini alan başlatma meta veri kullanımı ile belirtilir. CLS uyumlu bir sabit değişmez değeri olarak tam olarak aynı türde alan başlatma meta verilerinde belirtilmiş bir değere sahip olmalıdır (veya bu değişmez değeri ise, temel türde bir `enum`).|13|  
-|Üyeler|[Genel üyeleri yazın](#members)|Vararg kısıtlaması CLS parçası değildir ve yalnızca çağırma kuralı CLS tarafından desteklenen standart çağırma yönetiliyor.|15|  
-|Adlandırma kuralları|[Adlandırma kuralları](#naming)|Derlemeleri eki 7, teknik rapor 15 başlatmak ve tanımlayıcıları, kullanılabilir onlineat dahil edilmesi için izin verilen karakter kümesini yöneten Unicode Standard3.0 izleyin http://www.unicode.org/unicode/reports/tr15/tr15-18.html. Tanımlayıcıları Unicode normalleştirme Form c tarafından tanımlanan thecanonical biçiminde olacaktır CLS amacıyla iki tanımlayıcılara aynı küçük eşlemelerini (Unicode yerel ayar-küçük harfe duyarlı bir toonelowercase eşlemeleri tarafından belirtildiği şekilde) aynı olması durumunda. Diğer bir deyişle, differentunder CLS ele alınması için iki tanımlayıcı bunların birden fazla yalnızca kendi durumda farklı. Ancak, aninherited tanımı geçersiz kılmak için CLI özgün bildirimi kesin kodlama kullanılabilir gerektirir.|4|  
-|Aşırı Yükleme|[Adlandırma kuralları](#naming)|Tüm adları CLS uyumlu bir kapsamda tanıtılan aynı ve aşırı yükleme aracılığıyla çözülmüş olduğu dışında ayrı bağımsız ofkind olacaktır. Diğer bir deyişle, bir yöntem ve bir alan için aynı adı kullanmak için tek bir türü CTSallows sırasında CLS desteklemez.|5|  
-|Aşırı Yükleme|[Adlandırma kuralları](#naming)|Alanlar ve iç içe geçmiş türler tarafından tanımlayıcı karşılaştırma tek başına farklı olacaktır, ayırt edici olarak ayrı imzaları eventhough CTS sağlar. Yöntemler, özellikler ve olayları sahip aynı adda (tanımlayıcı karşılaştırma) dönüş türüne göre çok daha fazlası farklı dışındaki CLS kural 39 belirtildiği gibi.|6|  
-|Aşırı Yükleme|[Overloads](#overloads)|Yalnızca özelliklerini ve yöntemlerini aşırı yüklenmiş.|37|  
-|Aşırı Yükleme|[Overloads](#overloads)|Özellikleri ve yöntemleri aşırı yüklenebilir yalnızca sayısı ve türleri adlı dönüşüm işleçleri dışında kendi parametreleri temel `op_Implicit` ve `op_Explicit`, kendi dönüş türüne bağlı olarak, aynı zamanda aşırı yüklenebilir.|38|  
-|Aşırı Yükleme|--|Tür tarafından bildirilen iki veya daha fazla CLS uyumlu yöntemler türü örneklemesi, belirli bir dizi için aynı sistemine varsa aynı parametre ve dönüş türleri, thenall bu yöntemler bu tür örneklemesi anlam olarak eşdeğer olacaktır.|48|  
-|Türler|[Ve üye imzaları yazın.](#Types)|<xref:System.Object?displayProperty=nameWithType> CLS uyumlu değil. CLS uyumlu herhangi bir sınıf CLS uyumlu bir sınıftan devralınan.|23|  
-|Özellikler|[Özellikler](#properties)|Bir özellik shallbe'Set ' yordamı yöntemleri uygulamak yöntemleri işaretlenmiş `SpecialName` meta veriler.|24|  
-|Özellikler|[Özellikler](#properties)|Bir özelliğin erişimciler tüm statik olacaktır, tüm sanal veya tüm örneği olmalıdır.|26|  
-|Özellikler|[Özellikler](#properties)|Bir özelliğin türünü alıcı dönüş türü ve kurucu son bağımsız değişkeni tür olacaktır. Özelliğin parametre türlerini alıcı ve tüm türleri parametreleri ancak kurucu son parametre türleri olacaktır. Tüm bu tür CLS uyumlu olacaktır ve yönetilen işaretçileri tutulamaz (yani, başvuruya göre geçirilmesi değil).|27|  
-|Özellikler|[Özellikler](#properties)|Özellikler, belirli bir adlandırma deseni uyması. `SpecialName` CLS kural 24 başvuruda bulunulan öznitelik uygun adı karşılaştırmaları göz ardı ve tanımlayıcı kurallarına. Özellik alıcısı yöntemi, ayarlayıcı yöntemi veya ikisine birden sahip.|28|  
-|Tür dönüştürmeleri|[Tür dönüştürmeleri](#conversion)|Her iki `op_Implicit` veya `op_Explicit` zorlama sağlama alternatif bir yol sağlanan sağlanır.|39|  
-|Türler|[Ve üye imzaları yazın.](#Types)|Paketlenmiş değer türleri CLS uyumlu değildir.|3|  
-|Türler|[Ve üye imzaları yazın.](#Types)|İmza görünen tüm türleri CLS uyumlu olacaktır. Bir oluşturulmuş genel tür oluşturma tüm türleri CLS uyumlu olacaktır.|11|  
-|Türler|[Ve üye imzaları yazın.](#Types)|Belirlenmiş başvurular CLS uyumlu değildir.|14|  
-|Türler|[Ve üye imzaları yazın.](#Types)|Yönetilmeyen işaretçi türleri CLS uyumlu değildir.|17|  
-|Türler|[Ve üye imzaları yazın.](#Types)|CLS uyumlu sınıfları, değer türleri ve arabirimleri CLS uyumlu olmayan üyeler uyarlamasını gerektirmeyecek.|20|  
+|Erişilebilirlik|[Üye erişilebilirliği](#MemberAccess)|Devralınan dışında olduğunda bir yöntemini geçersiz kılma farklı bir derlemeden devralınan yöntemi geçersiz kılma erişilebilirlik değiştirilmemelidir `family-or-assembly`. Bu durumda geçersiz kılma erişilebilirlik olmalıdır `family`.|10|  
+|Erişilebilirlik|[Üye erişilebilirliği](#MemberAccess)|Görünürlük ve erişilebilirliği türleri ve üyeleri üye bizzat görünür ve erişilebilir olduğunda herhangi bir üyenin İmzasındaki türler görünür ve erişilebilir olmasını olacaktır. Örneğin, kendi derlemesi dışında görülebilir bir genel yöntem türü yalnızca derleme içinde görünür olan bir bağımsız değişkene sahip olamaz. Üye bizzat görünür ve erişilebilir olduğunda görünürlük ve erişilebilirliği herhangi bir üyenin imzasında kullanılan örneklenmiş bir genel tür oluşturan türlerin görünür ve erişilebilir olmalıdır. Örneğin, örneklenmiş bir genel tür imzasında bulunan kendi derlemesi dışında görülebilir bir üyenin, türü yalnızca derleme içinde görünür olan bir genel bağımsız değişkene sahip olamaz.|12|  
+|Diziler|[Diziler](#arrays)|Diziler CLS uyumlu türü olan öğeleri olmalıdır ve tüm boyutlar dizinin alt sınırı sıfır olmalıdır. Yalnızca bir dizi ve dizinin öğe türü bir öğedir olgu aşırı yükler arasında ayrım yapmak için gerekli. Ne zaman aşırı yükleme iki alan ya da daha fazla dizi öğesi türleri türleri adlı.|16|  
+|Öznitelikler|[Öznitelikler](#attributes)|Öznitelikleri türü olacaktır <xref:System.Attribute?displayProperty=nameWithType>, ya da bundan devralan bir tür.|41|  
+|Öznitelikler|[Öznitelikler](#attributes)|CLS yalnızca bir özel özniteliklerin kodlamalarının alt kümesine izin verir. (Bkz. Bölüm IV) bu kodlamalarda görünmesi gereken türleri yalnızca şunlardır: <xref:System.Type?displayProperty=nameWithType>, <xref:System.String?displayProperty=nameWithType>, <xref:System.Char?displayProperty=nameWithType>, <xref:System.Boolean?displayProperty=nameWithType>, <xref:System.Byte?displayProperty=nameWithType>, <xref:System.Int16?displayProperty=nameWithType>, <xref:System.Int32?displayProperty=nameWithType>, <xref:System.Int64?displayProperty=nameWithType>, <xref:System.Single?displayProperty=nameWithType>, <xref:System.Double?displayProperty=nameWithType> , ve herhangi bir numaralandırma türü CLS uyumlu temel tamsayı türüne dayalı.|34|  
+|Öznitelikler|[Öznitelikler](#attributes)|CLS ortak olarak görünür gerekli değiştiricilere izin vermiyor (`modreq`, bkz. Bölüm II), isteğe bağlı değiştiricilere izin vermez ancak (`modopt`, bkz. Bölüm II) anlamadığı.|35|  
+|Oluşturucular|[Oluşturucular](#ctors)|Devralınan örnek verilerine herhangi bir erişim oluşmadan önce nesne Oluşturucu, temel sınıfının bazı örnek oluşturucusu oluşturucularını çağırmalıdır (Bu oluşturuculara sahip olmak zorunda olmayan değer türleri için geçerli değildir.)|21|  
+|Oluşturucular|[Oluşturucular](#ctors)|Nesne Oluşturucu dışında bir nesnenin oluşturmanın bir parçası çağrılmamalıdır ve nesne iki kez başlatılmamış.|22|  
+|Numaralandırmalar|[Sabit Listeleri](#enums)|Temel bir enum türü yerleşik bir CLS tamsayı türü olacaktır, alanın adı "value__" olacaktır ve bu alanın işaretlenmesi `RTSpecialName`.|7|  
+|Numaralandırmalar|[Sabit Listeleri](#enums)|Bir varlığı veya yokluğu ile gösterilen iki ayrı türü vardır <xref:System.FlagsAttribute?displayProperty=nameWithType> (bkz: bölüm IV kitaplığı) özel öznitelik. Biri, adlandırılmış tamsayı değerlerini temsil eder; diğer temsil eder, adlandırılmamış değer üretmek için birleştirilebilen bit bayrakları adı. Değerini bir `enum` belirtilen değerlerle sınırlı değildir.|8|  
+|Numaralandırmalar|[Sabit Listeleri](#enums)|Bir enumun değişmez statik alanları numaralandırma türüne sahip olamaz.|9|  
+|Olaylar|[Olaylar](#events)|Bir olay uygulayan yöntemler olarak işaretlenmeyecektir `SpecialName` themetadata içinde.|29|  
+|Olaylar|[Olaylar](#events)|Bir olay ve onun erişimcilerinin erişilebilirliği aynı olacaktır.|30|  
+|Olaylar|[Olaylar](#events)|`add` Ve `remove` yöntemleri için bir olay ya da her ikisini de gelecektir mevcut olmalı veya olmamalıdır.|31|  
+|Olaylar|[Olaylar](#events)|`add` Ve `remove` yöntemleri bir olay her bir parametre türü almalı olay türünü tanımlar ve öğesinden türetilmelidir <xref:System.Delegate?displayProperty=nameWithType>.|32|  
+|Olaylar|[Olaylar](#events)|Olaylar, belirli bir adlandırma desenine uymalıdır. `SpecialName` CLS kural 29 başvurulan özniteliği uygun ad karşılaştırmalarında yoksayılmalı ve tanımlayıcı kurallarına uymalıdır.|33|  
+|Özel Durumlar|[Özel Durumlar](#exceptions)|Oluşan nesneler, türü olacaktır <xref:System.Exception?displayProperty=nameWithType> veya ondan devralınan bir türde. Öte yandan, CLS uyumlu yöntemler diğer tür özel durumların yayılmasını engellemek için gerekli değildir.|40|  
+|Genel|[CLS uyumluluğu: kurallar](#Rules)|CLS kuralları erişilebilir veya görünebilir tanımlanan derlemenin yalnızca bu bölümleri türü için geçerlidir.|1.|  
+|Genel|[CLS uyumluluğu: kurallar](#Rules)|CLS olmayan uyumlu türlerin üyeleri CLS uyumlu olarak işaretlenmeyecektir.|2|  
+|Genel Türler|[Genel türler ve Üyeler](#Generics)|İç içe geçmiş türler en az kadar genel parametresi kapsayan tür olmalıdır. İç içe bir türde genel parametreler kapsayan türdeki genel parametrelere konuma göre karşılık gelir.|42|  
+|Genel Türler|[Genel türler ve Üyeler](#Generics)|Genel bir tür adını iç içe olmayan türde bildirilen veya yukarıda tanımlanan kurallara göre iç içe türü için yeni sunulan tür parametrelerinin sayısı kodlayın.|43|  
+|Genel Türler|[Genel türler ve Üyeler](#Generics)|Genel tür, genel tür kısıtlamaları tarafından temel türü veya arabirim kısıtlama getirilmez garanti edecek yeterli kısıtlamaları yeniden bildirmek.|4444|  
+|Genel Türler|[Genel türler ve Üyeler](#Generics)|Genel parametreler üzerinde kısıtlama olarak kullanılan türler kendilerini CLS uyumlu olmalıdır.|45|  
+|Genel Türler|[Genel türler ve Üyeler](#Generics)|Görünürlük ve erişilebilirliği (iç içe türler dahil) oluşturulmuş bir genel türde üyelerin bir bütün olarak genel tür bildirimi yerine belirli bir örnek Kapsamınızın göz önünde bulundurulmalıdır. Bu varsayılırsa, CLS kuralı 12 görünürlük ve erişilebilirlik kuralları hala geçerlidir.|46|  
+|Genel Türler|[Genel türler ve Üyeler](#Generics)|Her Özet veya sanal genel yöntem için varsayılan bir somut (soyut olmayan) uygulama olacaktır.|47|  
+|Arabirimler|[Arabirimler](#Interfaces)|CLS uyumlu arabirimler CLS olmayan duyar tanımına uygulamak için gerektirmez.|18|  
+|Arabirimler|[Arabirimler](#Interfaces)|CLS uyumlu arabirimler statik yöntemleri tanımlamak değil ya da alanlarını tanımlarlar.|19|  
+|Üyeler|[Genel olarak tür üyeleri](#members)|Genel statik alanlar ve yöntemler CLS uyumlu değildir.|36|  
+|Üyeler|--|Bir değişmez statik değeri, alan başlatma meta verileri kullanılarak belirtilir. CLS uyumlu bir hazır değer değişmez değer olarak tam olarak aynı türde olan alan başlatma meta verilerinde belirtilen bir değeri olmalıdır (veya hazır bilgi ise temel türdeki bir `enum`).|13|  
+|Üyeler|[Genel olarak tür üyeleri](#members)|Vararg kısıtlaması CLS'nin parçası değildir ve CSL tarafından desteklenen tek çağırma kuralı, standart yönetimli çağırma kuralıdır olduğu.|15|  
+|Adlandırma kuralları|[Adlandırma kuralları](#naming)|Derlemeleri Annex 7, teknik rapor 15, başlatmak ve tanımlayıcıları, kullanılabilir http://www.Unicode.org/Unicode/Reports/tr15/tr15-18.HTML dahil edilmesi için izin verilen karakter kümesini yöneten Unicode Standard3.0 izleyin http://www.unicode.org/unicode/reports/tr15/tr15-18.html. Tanımlayıcıları Unicode normalleştirme Form c tarafından tanımlanan kurallı biçimde olmalıdır CLS amacıyla, iki tanımlayıcı aynı harfli eşlemeler (Unicode yerel ayara duyarlı, bir toonelowercase eşlemeler tarafından belirtildiği şekilde) aynı olması durumunda. Diğer bir deyişle, iki tanımlayıcı CLS edileceğinden göz önünde bulundurulması, daha çok, farklı olacaktır. Ancak, kodlamasının tanımı geçersiz kılmak için CLI'yı özgün bildirimin kesin kodlama kullanılmasını gerektirir.|4|  
+|Aşırı Yükleme|[Adlandırma kuralları](#naming)|CLS uyumlu kapsamda sunulan tüm adlar, adları aynı ve aşırı yükleme olduğu dışında ayrı bağımsız ofkind olacaktır. Diğer bir deyişle, CTSallows tek bir türün bir yöntem ve bir alan için aynı adı kullanın, buna izin vermez.|5|  
+|Aşırı Yükleme|[Adlandırma kuralları](#naming)|Alanlar ve iç içe geçmiş türler yalnızca tanımlayıcı karşılaştırması ile edilmesine, verse CTS, ayrı imzaların ayırt edici olmasını sağlar. Yöntemler, özellikler ve başka unsurlara göre de sahip aynı adı (tanımlayıcı karşılaştırmasına göre), yalnızca dönüş türüne göre farklı olmalıdır da CLS kuralı 39'da belirtilen hariç.|6|  
+|Aşırı Yükleme|[Overloads](#overloads)|Özellikler ve yöntemler aşırı yüklenebilir.|37|  
+|Aşırı Yükleme|[Overloads](#overloads)|Özellikler ve yöntemler aşırı yüklenebilir yalnızca sayı ve dönüştürme işleçleri dışında parametre türleri temel `op_Implicit` ve `op_Explicit`, kendi dönüş türüne bağlı olarak, aynı zamanda aşırı yüklenebilir.|38|  
+|Aşırı Yükleme|--|Bir türde bildirilen iki veya daha fazla CLS uyumlu yöntem aynı ada, belirli bir tür örneklemeleri kümesi varsa aynı parametre ve dönüş türleri, örneklemelerinde bu yöntemleri bu tür anlamsal olarak eşdeğer olacaktır.|48|  
+|Türler|[Tür ve tür üyesi imzaları](#Types)|<xref:System.Object?displayProperty=nameWithType> CLS uyumludur. CLS uyumlu herhangi bir sınıf, CLS uyumlu bir sınıftan devralmalıdır.|23|  
+|Özellikler|[Özellikler](#properties)|Alıcı ve ayarlayıcı yöntemleri bir özelliğin yöntemini uygulayan yöntemler işaretlenmiş `SpecialName` meta verilerinde.|24|  
+|Özellikler|[Özellikler](#properties)|Özelliğin erişimcileri tüm statik olmalıdır, tüm sanal ya da tamamen örnek olmalıdır.|26|  
+|Özellikler|[Özellikler](#properties)|Özellik türü alıcının dönüş türü ve ayarlayıcının son bağımsız değişken türü olmalıdır. Özelliğin parametrelerinin türleri türler alıcı ve tüm tür parametreleri ancak ayarlayıcının son parametre olmalıdır. Tüm bu türler CLS uyumlu olmalıdır ve işaretçileri yönetemezler tutulamaz (yani, başvuruyla geçirilmemelidir).|27|  
+|Özellikler|[Özellikler](#properties)|Özellikler, belirli bir adlandırma desenine uymalıdır. `SpecialName` CLS kural 24 başvurulan özniteliği uygun ad karşılaştırmalarında yoksayılmalı ve tanımlayıcı kurallarına uymalıdır. Bir özelliğin bir alıcı yöntemi, ayarlayıcı yöntemi veya her ikisi de olmalıdır.|28|  
+|Tür dönüştürme|[Tür dönüştürme](#conversion)|Ya da `op_Implicit` veya `op_Explicit` zorlama sağlama aracı alternatif bir yol sağlanacaktır sağlanır.|39|  
+|Türler|[Tür ve tür üyesi imzaları](#Types)|Paketlenmiş değer türleri CLS uyumlu değildir.|3|  
+|Türler|[Tür ve tür üyesi imzaları](#Types)|Bir imzada görünen tüm türler CLS uyumlu olmalıdır. Örneklenen bir genel türü oluşturan tüm türler CLS uyumlu olmalıdır.|11|  
+|Türler|[Tür ve tür üyesi imzaları](#Types)|Türü belirlenmiş başvurular, CLS uyumlu değildir.|14|  
+|Türler|[Tür ve tür üyesi imzaları](#Types)|Yönetilmeyen işaretçi türleri CLS uyumlu değildir.|17|  
+|Türler|[Tür ve tür üyesi imzaları](#Types)|CLS uyumlu sınıflar, değer türleri ve arabirimler, CLS uyumlu olmayan üyelerinin uygulamasını gerektirmez.|20|  
   
 <a name="Types"></a>   
-### <a name="types-and-type-member-signatures"></a>Türleri ve türü üye imzaları  
- <xref:System.Object?displayProperty=nameWithType> Türü CLS uyumlu olduğundan ve .NET Framework türü sistemindeki tüm nesne türlerini taban türü değil. .NET Framework'teki devralma olduğu ya da örtük (örneğin, <xref:System.String> örtük olarak sınıfının devraldığı <xref:System.Object> sınıfı) veya açık (örneğin, <xref:System.Globalization.CultureNotFoundException> açıkça sınıfının devraldığı <xref:System.ArgumentException> sınıfı, hangi açıkça devraldığı <xref:System.SystemException> açıkça devraldığı sınıfı <xref:System.Exception> sınıfı). CLS uyumlu olacak şekilde türetilen tür için temel türü de CLS uyumlu olmalıdır.  
+### <a name="types-and-type-member-signatures"></a>Türler ve tür üyesi imzaları  
+ <xref:System.Object?displayProperty=nameWithType> Türü CLS uyumlu ve .NET Framework tür sistemindeki tüm nesne türlerinin temel türü değil. .NET Framework'te devralma ya da olan örtülü (örneğin, <xref:System.String> sınıfı örtük olarak devraldığı <xref:System.Object> sınıfı) veya açık (örneğin, <xref:System.Globalization.CultureNotFoundException> sınıfı açık olarak devralınılır <xref:System.ArgumentException> sınıfı, hangi Açık <xref:System.SystemException> açıkça öğesinden devralan sınıf <xref:System.Exception> sınıfı). Türetilmiş bir tür CLS uyumlu olacak şekilde bilgi için kendi temel türü de CLS uyumlu olmalıdır.  
   
- Aşağıdaki örnek, temel türü CLS uyumlu olmayan türetilmiş bir tür gösterir. Bir taban tanımlar `Counter` işaretsiz bir 32 bit tamsayı sayacı olarak kullanan sınıfı. Sınıfı, bir işaretsiz tamsayı kaydırma tarafından sayaç işlevselliği sağladığından, sınıf-CLS uyumlu olmayan olarak işaretlenir. Sonuç olarak, türetilmiş bir sınıf `NonZeroCounter`, ayrıca CLS uyumlu değil.  
+ Aşağıdaki örnek, temel türü CLS uyumlu değil, türetilmiş bir tür gösterir. Temel tanımlar `Counter` sayaç olarak imzalanmamış bir 32 bitlik tamsayı kullanan sınıf. Sınıfı, bir işaretsiz tamsayıyı kaydırarak sayaç işlevi sağladığından, sınıf CLS uyumlu olmayan olarak işaretlenir. Sonuç olarak, türetilmiş bir sınıf `NonZeroCounter`, ayrıca CLS uyumlu değil.  
   
  [!code-csharp[Conceptual.CLSCompliant#12](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/type3.cs#12)]
  [!code-vb[Conceptual.CLSCompliant#12](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/type3.vb#12)]  
   
- Bir yöntemin dönüş türü veya bir özellik türü de dahil olmak üzere üye imzalarında görünür tüm türleri CLS ile uyumlu olması gerekir. Ayrıca, genel türleri için:  
+ Bir yöntemin dönüş türü veya özellik türü dahil olmak üzere, üye imzalarında görüntülenen tüm türler CLS uyumlu olmalıdır. Ayrıca, genel türler için:  
   
--   Oluşturulan genel bir tür oluşturan tüm türleri CLS ile uyumlu olması gerekir.  
+-   Örneklenen bir genel türü oluşturan tüm türler CLS uyumlu olmalıdır.  
   
--   Genel parametreler üzerinde kısıtlamalar olarak kullanılan tüm türleri CLS ile uyumlu olması gerekir.  
+-   Genel parametreler üzerinde kısıtlama olarak kullanılan tüm türler CLS uyumlu olmalıdır.  
   
- .NET Framework [ortak tür sistemi](../../docs/standard/base-types/common-type-system.md) bir derlemenin meta verilerde doğrudan ortak dil çalışma zamanı tarafından desteklenir ve özel olarak kodlanmış yerleşik türler içerir. İç bu tür, aşağıdaki tabloda listelenen CLS uyumlu türleridir.  
+ .NET Framework [ortak tür sistemi](../../docs/standard/base-types/common-type-system.md) bir derlemenin meta verilerde özel olarak kodlanmış, doğrudan ortak dil çalışma zamanı tarafından desteklenen yerleşik türler içerir. Bu gerçek türlerden, aşağıdaki tabloda listelenen türler CLS uyumludur.  
   
 |CLS uyumlu türü|Açıklama|  
 |-------------------------|-----------------|  
-|<xref:System.Byte>|8 bit işaretsiz tamsayıyı|  
-|<xref:System.Int16>|16 bit işaretli tamsayıyı|  
-|<xref:System.Int32>|32 bit işaretli tamsayıyı|  
-|<xref:System.Int64>|64 bit işaretli tamsayıyı|  
-|<xref:System.Single>|Tek duyarlıklı kayan noktalı değeri|  
-|<xref:System.Double>|Çift duyarlıklı kayan noktalı değeri|  
+|<xref:System.Byte>|8 bitlik işaretsiz tamsayı|  
+|<xref:System.Int16>|16 bit işaretli tamsayı|  
+|<xref:System.Int32>|32 bitlik işaretli tamsayı|  
+|<xref:System.Int64>|64-bit işaretli tamsayı|  
+|<xref:System.Single>|Tek duyarlıklı kayan nokta değeri|  
+|<xref:System.Double>|Çift duyarlıklı kayan nokta değeri|  
 |<xref:System.Boolean>|`true` veya `false` değer türü|  
 |<xref:System.Char>|UTF-16 kodlu kod birimi|  
-|<xref:System.Decimal>|Olmayan kayan noktalı ondalık sayı|  
-|<xref:System.IntPtr>|İşaretçi veya platform tarafından tanımlanan bir boyut tanıtıcısı|  
-|<xref:System.String>|Sıfır, bir veya daha fazla koleksiyon <xref:System.Char> nesneleri|  
+|<xref:System.Decimal>|Ondalık sayı olmayan kayan nokta|  
+|<xref:System.IntPtr>|İşaretçisi veya tutamacı bir platform tanımlı boyutun|  
+|<xref:System.String>|Sıfır, bir veya daha fazla koleksiyonu <xref:System.Char> nesneleri|  
   
- Aşağıdaki tabloda listelenen iç türleri CLS uyumlu değil.  
+ Aşağıdaki tabloda listelenen gerçek türler CLS uyumlu değildir.  
   
-|Uyumlu türü|Açıklama|CLS uyumlu alternatifi|  
+|Uyumsuz tür|Açıklama|CLS uyumlu alternatif|  
 |-------------------------|-----------------|--------------------------------|  
-|<xref:System.SByte>|8 bit işaretli tamsayıyı veri türü|<xref:System.Int16>|  
-|<xref:System.TypedReference>|Bir nesne ve çalışma zamanı türü işaretçi|Yok.|  
-|<xref:System.UInt16>|16 bit işaretsiz tamsayıyı|<xref:System.Int32>|  
-|<xref:System.UInt32>|32 bit işaretsiz tamsayıyı|<xref:System.Int64>|  
-|<xref:System.UInt64>|64 bit işaretsiz tamsayıyı|<xref:System.Int64> (taşma), <xref:System.Numerics.BigInteger>, veya <xref:System.Double>|  
-|<xref:System.UIntPtr>|İmzasız işaretçi veya tanıtıcısı|<xref:System.IntPtr>|  
+|<xref:System.SByte>|8 bitlik işaretli tamsayı veri türü|<xref:System.Int16>|  
+|<xref:System.TypedReference>|Bir nesne ve onun çalışma zamanı türü işaretçisi|Yok.|  
+|<xref:System.UInt16>|16-bit işaretsiz tamsayı|<xref:System.Int32>|  
+|<xref:System.UInt32>|32-bit işaretsiz tamsayı|<xref:System.Int64>|  
+|<xref:System.UInt64>|64-bit işaretsiz tamsayı|<xref:System.Int64> (taşabilir), <xref:System.Numerics.BigInteger>, veya <xref:System.Double>|  
+|<xref:System.UIntPtr>|İmzalanmamış işaretçi veya işleç|<xref:System.IntPtr>|  
   
- .NET Framework sınıf kitaplığı veya başka bir sınıf kitaplığı CLS ile uyumlu olmayan diğer türleri içerebilir; Örneğin:  
+ .NET Framework sınıf kitaplığı veya başka bir sınıf kitaplığı, CLS uyumlu olmayan diğer türleri içerebilir. Örneğin:  
   
--   Paketlenmiş değer türleri. Aşağıdaki C# örnek türünde ortak bir özelliği olan bir sınıfı oluşturur `int*` adlı `Value`. Çünkü bir `int*` paketlenmiş değer türü derleyici-CLS uyumlu olmayan olarak işaretler.  
+-   Paketlenmiş değer türleri. Aşağıdaki C# örneği bir ortak özellik türü olan bir sınıf oluşturur `int*` adlı `Value`. Çünkü bir `int*` bir kutulanmış değer türü olduğundan Derleyici bunu CLS-uyumlu değil olarak işaretler.  
   
      [!code-csharp[Conceptual.CLSCompliant#26](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/box2.cs#26)]  
   
--   Bir nesneye başvuru ve türüne bir başvuru içeren özel yapılar belirlenmiş başvurular. Belirlenmiş başvurular tarafından .NET Framework'teki temsil <xref:System.TypedReference> sınıfı.  
+-   Yazılı başvurular, bir nesneye başvuru ve bir türe başvuru içeren özel bir yapıdır. Yazılan başvurular .NET Framework tarafından temsil edilir <xref:System.TypedReference> sınıfı.  
   
- Bir tür CLS ile uyumlu değilse, uygulamalıdır <xref:System.CLSCompliantAttribute> ile öznitelik bir `isCompliant` değerini `false` ona. Daha fazla bilgi için bkz: [CLSCompliantAttribute özniteliği](#CLSAttribute) bölümü.  
+ Bir tür CLS uyumlu değilse, uygulamalıdır <xref:System.CLSCompliantAttribute> özniteliğini bir `isCompliant` değerini `false` ona. Daha fazla bilgi için [CLSCompliantAttribute özniteliği](#CLSAttribute) bölümü.  
   
- Aşağıdaki örnek, CLS uyumluluğu yöntem imzası ve genel tür oluşturmada sorun gösterilmektedir. Bunu tanımlayan bir `InvoiceItem` türünde bir özellik sınıfıyla <xref:System.UInt32>, türünde bir özellik `Nullable(Of UInt32)`ve türünde parametrelere sahip bir oluşturucu <xref:System.UInt32> ve `Nullable(Of UInt32)`. Bu örneği derlemek çalıştığınızda dört derleyici uyarıları alın.  
+ Aşağıdaki örnek, bir yöntem imzası ve genel tür örneği oluşturmada CLS uyumluluğu sorununu göstermektedir. Tanımladığı bir `InvoiceItem` sınıf türünde bir özellik ile <xref:System.UInt32>, türünde bir özellik `Nullable(Of UInt32)`ve tür parametreleri olan bir oluşturucusu <xref:System.UInt32> ve `Nullable(Of UInt32)`. Bu örneği derlemeye çalıştığınızda, dört derleyici uyarısı alırsınız.  
   
  [!code-csharp[Conceptual.CLSCompliant#3](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/type1.cs#3)]
  [!code-vb[Conceptual.CLSCompliant#3](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/type1.vb#3)]  
   
- Derleyici uyarılarını kaldırmak için CLS uyumlu olmayan türler yerini `InvoiceItem` uyumlu türleri olan ortak arabirim:  
+ Derleyici uyarılarını ortadan kaldırmak için CLS uyumlu olmayan türleri yerine `InvoiceItem` genel arabiriminde:  
   
  [!code-csharp[Conceptual.CLSCompliant#4](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/type2.cs#4)]
  [!code-vb[Conceptual.CLSCompliant#4](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/type2.vb#4)]  
   
- Listelenen belirli türlerine ek olarak bazı kategorileri türlerinin CLS uyumlu değildir. Bu, yönetilmeyen işaretçi türleri ve işlev işaretçisi türleri içerir. Aşağıdaki örnek, dizisi oluşturmak için bir işaretçi bir tamsayıya kullandığından derleyici uyarısı oluşturur.  
+ Listelenen belirli türlere ek olarak, bazı türden kategoriler CLS uyumlu değildir. Bunlar, yönetilmeyen işaretçi türleri ve işlev işaretçi türlerini içerir. Aşağıdaki örnek, tamsayı dizisi oluşturmak için bir tamsayı işaretçisi kullandığından bir derleyici uyarısı oluşturur.  
   
  [!code-csharp[Conceptual.CLSCompliant#5](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/unmanagedptr1.cs#5)]  
   
- CLS uyumlu için soyut sınıflar (diğer bir deyişle, sınıflar olarak işaretlenmiş `abstract` C# veya olarak `MustInherit` Visual Basic'te), sınıfın tüm üyelerini de CLS ile uyumlu olması gerekir.  
+ CLS uyumlu soyut sınıflar (olarak işaretlenen sınıflar `abstract` C# veya olarak `MustInherit` Visual Basic'te), sınıfın tüm üyeleri de CLS uyumlu olmalıdır.  
   
 <a name="naming"></a>   
 ### <a name="naming-conventions"></a>Adlandırma kuralları  
- Bazı programlama dilleri büyük/küçük harfe duyarsızdır olduğundan (örneğin, ad alanlarını, türleri ve üyeleri adları) tanımlayıcılar örnekten daha fazla farklı olmalıdır. İki tanımlayıcı küçük eşlemelerini aynıysa eşdeğer olarak değerlendiriliyor. Aşağıdaki C# örnek iki ortak sınıf tanımlar `Person` ve `person`. Yalnızca örneğe göre farklılık gösterdiğinden, C# Derleyici bunları değil CLS uyumlu işaretler.  
+ Bazı programlama dilleri büyük/küçük harfe duyarsızdır çünkü tanımlayıcılarını (örneğin, ad alanları, türler ve üyeler adları) daha fazla farklı olmalıdır. İki tanımlayıcı küçük eşlemeleri aynı ise eşdeğer olarak kabul edilir. Aşağıdaki C# örneği iki genel sınıfı tanımlar `Person` ve `person`. Bunlar yalnızca büyük küçük harfle farklı olduğundan, C# derleyicisi bunları CLS uyumlu değil işaretler.  
   
  [!code-csharp[Conceptual.CLSCompliant#16](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/naming1.cs#16)]  
   
- Ad alanlarını, türleri ve üyeleri, adları gibi Dil tanımlayıcıları programlama gerekir uygun [Unicode standart 3.0, teknik rapor 15, eki 7](https://www.unicode.org/reports/tr15/tr15-18.html). Bunun anlamı:  
+ Ad alanları, türler ve üyeler, adları gibi Dil tanımlayıcıları programlama uygun olması gerekir [Unicode standartı 3.0, teknik rapor 15, ek 7](https://www.unicode.org/reports/tr15/tr15-18.html). Bunun anlamı:  
   
--   İlk karakteri bir tanımlayıcı olarak herhangi bir Unicode büyük harf, küçük harf, büyük/küçük harf başlık, değiştiricisi, diğer mektup olması veya numarası harf. Unicode karakter kategorileri hakkında daha fazla bilgi için bkz: <xref:System.Globalization.UnicodeCategory?displayProperty=nameWithType> numaralandırması.  
+-   Bir tanımlayıcının ilk karakteri olması herhangi bir Unicode büyük harf, küçük harf, başlık biçimindeki harf, değiştirici harf, başka bir harf veya harf numarası. Unicode karakter kategorileri hakkında daha fazla bilgi için bkz: <xref:System.Globalization.UnicodeCategory?displayProperty=nameWithType> sabit listesi.  
   
--   Sonraki karakterler kategorileri hiçbirini ilk karakter olarak olabilir ve aralık birleştirme işaretleri, ondalık sayılar, bağlayıcı noktalama işaretleri ve biçimlendirme kodları aralıksız işaretlerini de içerir.  
+-   İzleyen karakterler, ilk karakter olarak kategorilerden birini olabilir ve aralıksız işaretler, aralık birleştirme işaretleri, ondalık sayılar, bağlayıcı noktalamalar ve biçimlendirme kodları da içerebilir.  
   
- Tanımlayıcıları karşılaştırmak önce biçimlendirme veya kodları filtre ve tek bir karakter birden çok UTF-16 kodlu kod birimler tarafından temsil edilebilir bulunduğundan Unicode normalleştirme Form C tanımlayıcıları dönüştürülemiyor. Unicode normalleştirme Form C aynı kodu birimlerinde üretmek karakter sıralarının CLS uyumlu değildir. Aşağıdaki örnek adlı bir özelliğini tanımlar `Å`ANGSTROM işareti (U + 212B) karakterinin oluşur ve ikinci bir özelliğe adlı `Å`, LATIN büyük harf A ile HALKASI YUKARIDA (U + 00 C 5) karakterinin oluşur. C# ve Visual Basic derleyicileri CLS uyumlu olmayan olarak kaynak koduna bayrak.  
+ Tanımlayıcıları karşılaştırmadan önce biçimlendirme kodlarını filtrelemeniz ve tek bir karakter birden çok UTF-16 kodlu kod birimi tarafından temsil edilebildiğinden tanımlayıcıları Unicode normalleştirme formu C'ye dönüştürmeniz gerekir. Unicode normalleştirme formu C'de aynı kod birimlerini üreten karakter sıraları CLS uyumlu değildir. Aşağıdaki örnek adlı bir özellik tanımlar `Å`ANGSTROM SIGN (U + 212B) karakterinden oluşan oluşur ve adlı ikinci `Å`, LATIN CAPITAL LETTER A WITH RING ABOVE (U + 00 C 5) karakterinden oluşan oluşur. C# ve Visual Basic derleyicileri, kaynak kodunu CLS uyumlu olmayan olarak bayrak.  
   
  [!code-csharp[Conceptual.CLSCompliant#17](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/naming1.cs#17)]
  [!code-vb[Conceptual.CLSCompliant#17](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/naming1.vb#17)]  
   
- Üye adlarının (örneğin, ad alanları bir ad alanı içindeki tür veya üye türünde bir derleme içinde) belirli bir kapsam içinde dışında aşırı yükleme aracılığıyla çözülür adları benzersiz olmalıdır. Bu gereksinim, farklı türde üye olduğu sürece, aynı adlara sahip bir kapsamı içinde birden çok üye sağlar ortak tür sistemi daha daha sıkı (örneğin, bir yöntem biridir ve bir alan biridir). Tür üyeleri için özel olarak:  
+ (Örneğin, bir ad alanı içindeki türleri ya da bir tür içindeki üyelerden bir derleme içinde ad uzayları) belirli bir kapsam içindeki üye adları, aşırı yükleme yoluyla çözülmüş adlar dışında benzersiz olmalıdır. Bu gereksinim kapsamı içinde farklı türde üye oldukları sürece aynı adlara sahip birden çok üye veren ortak tür sistemi, daha fazla katı (örneğin, bir yöntem biridir ve bir alan biridir). Özellikle, tür üyeleri için:  
   
--   Alanlar ve iç içe geçmiş türler adıyla ayırt edilir.  
+-   Alanlar ve iç içe geçmiş türler yalnızca ad ile ayırt edilir.  
   
--   Yöntemler, özellikler ve aynı ada sahip olayları birden fazla yalnızca dönüş türüne göre farklı olmalıdır.  
+-   Yöntemler, özellikler ve aynı ada sahip olaylar birden fazla sadece dönüş türüne göre farklı olmalıdır.  
   
- Aşağıdaki örnek üye adlarını kendi kapsamı içinde benzersiz olmalıdır gereksinim gösterilmektedir. Adlı bir sınıf tanımlar `Converter` adlı dört üyeleri içeren `Conversion`. Üç yöntemlerdir ve bir özelliktir. İçeren yöntemi bir <xref:System.Int64> parametresi benzersiz olarak adlandırılır, ancak iki yöntemle bir <xref:System.Int32> parametresi değildir, çünkü dönüş değeri bir üyenin imza bir parçası olarak kabul edilmez. `Conversion` Özelliği özelliklerin aşırı yüklenmiş yöntemler adıyla aynı olduğundan bu gereksinim ayrıca ihlal.  
+ Aşağıdaki örnek üye adlarının kendi kapsamı içinde benzersiz olması şartını göstermektedir. Adlı bir sınıf tanımlar `Converter` adlı dört üye içeren `Conversion`. Üçü yöntemdir ve birisi bir özelliktir. İçeren yöntemi bir <xref:System.Int64> parametresi benzersiz olarak adlandırılır, ancak iki yöntemle bir <xref:System.Int32> parametresi değildir, çünkü dönüş değeri bir üyenin imzasının bir parçası olarak kabul edilmez. `Conversion` Özelliği Özellikler aşırı yüklenmiş yöntemlerle aynı ada sahip olamaz çünkü bu gereksinim, ayrıca ihlal.  
   
  [!code-csharp[Conceptual.CLSCompliant#19](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/naming3.cs#19)]
  [!code-vb[Conceptual.CLSCompliant#19](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/naming3.vb#19)]  
   
- Dilleri hedefleyen ortak dil çalışma zamanı da anahtar sözcükler ile çakıştığı tanımlayıcıları (gibi tür adları) başvuran için bazı mekanizma sağlamanız gerekir benzersiz anahtar sözcükler, tek tek dilleri içerir. Örneğin, `case` hem C# ve Visual Basic bir anahtar sözcüktür. Ancak, aşağıdaki Visual Basic örnek adlı bir sınıf belirsizliğini ortadan kaldırmak mümkün `case` gelen `case` açma ve küme ayraçları kapatma kullanarak anahtar sözcüğü. Aksi takdirde, örnek "Anahtar sözcüğü bir tanımlayıcı olarak geçerli değil" hata iletisi oluşturmak ve bu derlemek başarısız.  
+ Diller ortak dil çalışma zamanını hedefleyen de anahtar sözcükleri ile Birleşen tanımlayıcıları (Tür adları gibi) başvuran bazı mekanizma sağlamanız gerekir tek tek dillerde benzersiz anahtar sözcükler içerir. Örneğin, `case` hem C# ve Visual Basic'te bir anahtar sözcüktür. Ancak, aşağıdaki Visual Basic örnek adlı bir sınıfın belirsizliğini ortadan kaldırabilir, `case` gelen `case` açma ve kapatma küme ayraçlarını kullanarak anahtar sözcüğü. Aksi takdirde, örnek "Anahtar sözcüğü, bir tanımlayıcı olarak geçerli değil" hata iletisini oluşturur ve bu derleme başarısız.  
   
  [!code-vb[Conceptual.CLSCompliant#22](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/keyword1.vb#22)]  
   
- Aşağıdaki C# örnek örneği yapabiliyor `case` kullanarak sınıfı `@` dil anahtar sözcüğünü tanımlayıcıdan belirsizliğini ortadan kaldırmak için simge. Bu olmadan, C# Derleyici iki hata iletileri, "Tür bekleniyor" ve "geçersiz ifade terimi 'case'." görüntüler  
+ Aşağıdaki C# örnek örneğini oluşturabilir, `case` sınıfı kullanarak `@` dil anahtar kelimesi tanımlayıcıdan ayırt etmek için simge. Bu olmadan, C# derleyicisi iki hata iletisi, "Tür bekleniyor" ve "geçersiz ifade terimi 'case'." görüntülenir  
   
  [!code-csharp[Conceptual.CLSCompliant#23](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/keyword2.cs#23)]  
   
 <a name="conversion"></a>   
-### <a name="type-conversion"></a>Tür dönüştürmeleri  
- Ortak dil belirtimi iki dönüşüm işleçleri tanımlar:  
+### <a name="type-conversion"></a>Tür dönüştürme  
+ Ortak dil belirtimi iki dönüştürme işleci tanımlar:  
   
--   `op_Implicit`, hangi veri veya duyarlık kaybına neden değil dönüşümleri için kullanılır. Örneğin, <xref:System.Decimal> yapısı içeren bir aşırı yüklenmiş `op_Implicit` tam sayı türleri değerini dönüştürmek için işleci ve <xref:System.Char> değerler <xref:System.Decimal> değerleri.  
+-   `op_Implicit`, veri veya duyarlık kaybına neden olmayan dönüştürmesi için kullanılır. Örneğin, <xref:System.Decimal> yapısı içeren aşırı yüklenmiş bir `op_Implicit` tam sayı türlerinin değerlerini dönüştürmek için işleci ve <xref:System.Char> değerler <xref:System.Decimal> değerleri.  
   
--   `op_Explicit`, hangi daraltma (daha küçük bir aralık sahip bir değer için bir değer dönüştürülen) büyüklük veya duyarlık kaybına yol açabilir dönüşümleri için kullanılır. Örneğin, <xref:System.Decimal> yapısı içeren bir aşırı yüklenmiş `op_Explicit` dönüştürmek için işleci <xref:System.Double> ve <xref:System.Single> değerler <xref:System.Decimal> ve dönüştürmek için <xref:System.Decimal> değerlere tam sayı değerleri <xref:System.Double>, <xref:System.Single>, ve <xref:System.Char>.  
+-   `op_Explicit`, büyüklük (bir değer daha küçük bir aralığı olan bir değere dönüştürülür) veya duyarlık kaybına neden dönüştürmeleri daraltma için kullanılır. Örneğin, <xref:System.Decimal> yapısı içeren aşırı yüklenmiş bir `op_Explicit` dönüştürme işleci <xref:System.Double> ve <xref:System.Single> değerler <xref:System.Decimal> ve dönüştürmek için <xref:System.Decimal> değerlerini tam sayı değerlerine <xref:System.Double>, <xref:System.Single>, ve <xref:System.Char>.  
   
- Ancak, tüm diller İşleç aşırı yüklemesi ya da özel işleçleri tanımını desteklemez. Bu dönüşüm işleçleri uygulamak isterseniz dönüştürme gerçekleştirmek için alternatif bir yöntem sağlaması gerekir. Sağlamanızı öneririz `From` *Xxx* ve `To` *Xxx* yöntemleri.  
+ Ancak, tüm diller, İşleç aşırı yüklemesi veya özel işleçlerin tanımını desteklemez. Bu dönüştürme işleçlerini uygulamayı seçerseniz dönüştürmeyi gerçekleştirmenin alternatif bir yolu da sağlamanız gerekir. Sağlamanızı öneririz `From` *Xxx* ve `To` *Xxx* yöntemleri.  
   
- Aşağıdaki örnek, CLS uyumlu örtük ve açık dönüştürmeler tanımlar. Oluşturduğu bir `UDouble` imzalı çift duyarlıklı, kayan noktalı sayıyı temsil eden sınıf. Örtük dönüşümler sağlayan `UDouble` için <xref:System.Double> ve açık dönüştürmeler `UDouble` için <xref:System.Single>, <xref:System.Double> için `UDouble`, ve <xref:System.Single> için `UDouble`. Ayrıca tanımlayan bir `ToDouble` örtük dönüşüm işleci alternatif olarak yöntemi ve `ToSingle`, `FromDouble`, ve `FromSingle` açık dönüşüm işleçleri alternatifleri olarak yöntemler.  
+ Aşağıdaki örnek, CLS uyumlu örtülü ve açık dönüştürmeleri tanımlar. Oluşturur bir `UDouble` imzalı çift duyarlıklı, kayan noktalı sayıyı temsil eden sınıf. Örtük dönüştürmelerine sağlayan `UDouble` için <xref:System.Double> ve açık dönüşümlerse `UDouble` için <xref:System.Single>, <xref:System.Double> için `UDouble`, ve <xref:System.Single> için `UDouble`. Ayrıca tanımlar bir `ToDouble` yöntemi örtülü dönüştürme işlecine bir alternatif olarak ve `ToSingle`, `FromDouble`, ve `FromSingle` açık dönüştürme işleçleri için alternatif yöntemler.  
   
  [!code-csharp[Conceptual.CLSCompliant#15](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/convert1.cs#15)]
  [!code-vb[Conceptual.CLSCompliant#15](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/convert1.vb#15)]  
   
 <a name="arrays"></a>   
 ### <a name="arrays"></a>Diziler  
- CLS uyumlu diziler aşağıdaki kurallara uygun:  
+ CLS uyumlu diziler şu kurallara uyar:  
   
--   Bir dizinin tüm boyutları alt sınırı sıfır olmalıdır. Aşağıdaki örnek, CLS uyumlu olmayan bir dizi alt sınır bir oluşturur. Unutmayın, varlığını rağmen <xref:System.CLSCompliantAttribute> özniteliği derleyici algılamazsa tarafından döndürülen dizi `Numbers.GetTenPrimes` yöntem CLS uyumlu değildir.  
+-   Tüm boyutlar bir dizinin alt sınırı sıfır olmalıdır. Aşağıdaki örnek, bir alt sınırı bir olan CLS uyumlu olmayan bir dizi oluşturur. Unutmayın varlığına rağmen <xref:System.CLSCompliantAttribute> özniteliği, derleyici tarafından saptanmayan tarafından döndürülen dizinin `Numbers.GetTenPrimes` yöntemi CLS uyumlu değil.  
   
      [!code-csharp[Conceptual.CLSCompliant#8](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/array1.cs#8)]
      [!code-vb[Conceptual.CLSCompliant#8](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/array1.vb#8)]  
   
--   Tüm dizi öğeleri CLS uyumlu türleri oluşmalıdır. Aşağıdaki örnek, CLS uyumlu olmayan dizileri döndürür iki yöntemleri tanımlar. İlk bir dizi döndürür <xref:System.UInt32> değerleri. İkinci döndürür bir <xref:System.Object> içeren bir dizi <xref:System.Int32> ve <xref:System.UInt32> değerleri. İlk dizi uyumsuz olarak nedeniyle derleyici tanımlasa da, <xref:System.UInt32> türü, başarısız ikinci dizi CLS uyumlu olmayan öğeler içeriyor tanımadığı.  
+-   Tüm dizi öğeleri, CLS uyumlu türlerden oluşmalıdır. Aşağıdaki örnek, CLS uyumlu olmayan bir dizi döndüren iki yöntemi tanımlar. İlk bir dizi döndürür <xref:System.UInt32> değerleri. İkinci döndürür bir <xref:System.Object> içeren bir dizi <xref:System.Int32> ve <xref:System.UInt32> değerleri. Derleyici ilk diziyi uyumlu nedeniyle tanımlasa da, <xref:System.UInt32> türü başarısız ikinci dizinin CLS uyumlu olmayan öğeler içerdiğini anlayamaz.  
   
      [!code-csharp[Conceptual.CLSCompliant#9](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/array2.cs#9)]
      [!code-vb[Conceptual.CLSCompliant#9](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/array2.vb#9)]  
   
--   Dizi parametrelerine sahip yöntemleri için aşırı yükleme çözünürlüğü diziler oldukları dayanarak açık nedeni olduğunu ve bunların öğe türü bilinmiyor. Bu nedenle, aşırı yüklenmiş bir aşağıdaki tanımını `GetSquares` yöntem CLS uyumlu değil.  
+-   Dizi parametreleri olan yöntemler için aşırı yükleme çözünürlüğü olduklarından dayanarak gerçeğine ve kendi öğe türünde ' dir. Bu nedenle, aşırı yüklenmiş bir aşağıdaki tanımını `GetSquares` yöntemi CLS uyumludur.  
   
      [!code-csharp[Conceptual.CLSCompliant#10](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/array3.cs#10)]
      [!code-vb[Conceptual.CLSCompliant#10](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/array3.vb#10)]  
   
 <a name="Interfaces"></a>   
 ### <a name="interfaces"></a>Arabirimler  
- CLS uyumlu arabirimleri özellikleri, olayları ve sanal yöntemler (uygulaması yöntemleriyle) tanımlayabilirsiniz. CLS uyumlu bir arabirim aşağıdakilerden herhangi birini içeremez:  
+ CLS uyumlu arabirimler, özellikleri, olayları ve sanal yöntemleri (uygulama içermeyen yöntemleri) tanımlayabilir. CLS uyumlu bir arabirim şunlardan herhangi birini içeremez:  
   
--   Statik yöntemler veya statik alanları. Bir arabirim, statik bir üyenin tanımlarsanız, C# ve Visual Basic derleyicileri derleyici hataları oluşturur.  
+-   Statik yöntemler veya static alanlar. C# ve Visual Basic derleyicileri, bir arabirimde statik bir üye tanımlarsanız derleyici hataları oluşturur.  
   
--   Alanlar. Bir alan bir arabirim tanımlarsanız, C# ve Visual Basic derleyicileri derleyici hataları oluşturur.  
+-   Alanları. C# ve Visual Basic derleyicileri, bir arabirimde bir alan tanımlarsanız derleyici hataları oluşturur.  
   
--   CLS uyumlu olmayan yöntemleri. Örneğin, aşağıdaki arabirim tanımı bir yöntem içerir `INumber.GetUnsigned`, yani olarak-CLS uyumlu olmayan olarak işaretlenmiş. Bu örnek derleyici uyarısı oluşturur.  
+-   CLS uyumlu olmayan yöntemleri. Örneğin, aşağıdaki arabirim tanımı bir yöntem içerir `INumber.GetUnsigned`, yani olarak CLS uyumlu olmayan olarak işaretlenmiş. Bu örnek, bir derleyici uyarısı oluşturur.  
   
      [!code-csharp[Conceptual.CLSCompliant#6](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/interface2.cs#6)]
      [!code-vb[Conceptual.CLSCompliant#6](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/interface2.vb#6)]  
   
-     Bu kural nedeniyle CLS uyumlu türleri CLS uyumlu olmayan üyeler uygulamak için gerekli değildir. CLS dışı uyumlu arabirimini uygulayan bir sınıf CLS uyumlu bir çerçeve kullanıma, CLS uyumlu olmayan tüm üyelerin somut uygulamaları da sağlamalıdır.  
+     Bu kural nedeniyle, CLS uyumlu türler CLS uyumlu olmayan üyeleri uygulamak için gerekli değildir. CLS uyumlu bir çerçeve, CLS olmayan uyumlu arabirimi uygulayan bir sınıfı gösterirse, CLS uyumlu olmayan tüm üyelerinin somut uygulamalarını da sağlamanız gerekir.  
   
- CLS uyumlu dil derleyicileri aynı ad ve imza birden çok arabirimlerde sahip üyeler ayrı uygulamalarını için bir sınıf de izin vermeniz gerekir.  Hem C# ve Visual Basic Destek [açık arabirim uygulamaları](~/docs/csharp/programming-guide/interfaces/explicit-interface-implementation.md) aynı adlı yöntemlerin farklı uygulamaları sağlamak için. Visual Basic de destekler `Implements` belirli bir üye hangi arabirimi ve üye açıkça tanımlamanızı sağlayan anahtar sözcüğü uygular. Aşağıdaki örnekte, tanımlayarak bu senaryo gösterilmektedir bir `Temperature` uygulayan sınıf `ICelsius` ve `IFahrenheit` arabirimleri açık arabirim uygulamaları olarak.  
+ CLS uyumlu dil derleyicileri de birden fazla arabirimde aynı ada ve imzaya sahip üyelerin ayrı uygulamalarını sağlamak bir sınıf izin vermeniz gerekir.  Hem C# ve Visual Basic desteği [açık arabirim uygulamalarını](~/docs/csharp/programming-guide/interfaces/explicit-interface-implementation.md) , aynı adlı yöntemlerin farklı uygulamalarını sağlamak için. Visual Basic de destekler `Implements` belirli bir üyenin hangi arabirimi ve açıkça atamak sağlayan anahtar sözcüğü uygular. Aşağıdaki örnek, tanımlayarak bu senaryoyu gösteren bir `Temperature` uygulayan sınıf `ICelsius` ve `IFahrenheit` arabirimlerini açık arabirim uygulamalarını olarak.  
   
  [!code-csharp[Conceptual.CLSCompliant#24](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/eii1.cs#24)]
  [!code-vb[Conceptual.CLSCompliant#24](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/eii1.vb#24)]  
   
 <a name="enums"></a>   
 ### <a name="enumerations"></a>Numaralandırmalar  
- CLS uyumlu numaralandırmalar bu kurallara uymalıdır:  
+ CLS uyumlu numaralandırmalar şu kurallara uymalıdır:  
   
--   Temel alınan numaralandırması iç CLS uyumlu Tamsayı türünde olmalıdır (<xref:System.Byte>, <xref:System.Int16>, <xref:System.Int32>, veya <xref:System.Int64>). Örneğin, temel alınan türü olan bir numaralandırma tanımlamak aşağıdaki kodu çalışır <xref:System.UInt32> ve derleyici uyarısı oluşturur.  
+-   Sabit listesinin temel alınan türü bir iç CLS uyumlu tamsayı olmalıdır (<xref:System.Byte>, <xref:System.Int16>, <xref:System.Int32>, veya <xref:System.Int64>). Aşağıdaki kod gibi temel alınan türü olan bir numaralandırma tanımlamayı dener <xref:System.UInt32> ve bir derleyici uyarısı oluşturur.  
   
      [!code-csharp[Conceptual.CLSCompliant#7](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/enum3.cs#7)]
      [!code-vb[Conceptual.CLSCompliant#7](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/enum3.vb#7)]  
   
--   Bir numaralandırma türü adlı tek örnek alanı olmalıdır `Value__` ile işaretlenmiş <xref:System.Reflection.FieldAttributes.RTSpecialName?displayProperty=nameWithType> özniteliği. Bu alan değeri örtük olarak başvuru sağlar.  
+-   Bir numaralandırma türü adlı tek bir örnek alanına sahip olmalıdır `Value__` ile işaretlenmiş <xref:System.Reflection.FieldAttributes.RTSpecialName?displayProperty=nameWithType> özniteliği. Bu, alan değerine dolaylı başvuru sağlar.  
   
--   Numaralandırma, türü numaralandırma türüyle eşleşen değişmez değer statik alanları içerir. Örneğin, tanımladığınız bir `State` değerlerle numaralandırma `State.On` ve `State.Off`, `State.On` ve `State.Off` türü olan iki değişmez değer statik alanları `State`.  
+-   Bir numaralandırma eşleşen türleri numaralandırma türüyle eşleşen değişmez statik alanları içerir. Örneğin, tanımladığınız bir `State` sabit listesi değerleri ile `State.On` ve `State.Off`, `State.On` ve `State.Off` türü olan sabit statik alanlarsa olan `State`.  
   
--   Numaralandırmalar iki tür vardır:  
+-   Numaralandırmanın iki türü vardır:  
   
-    -   Birbirini dışlayan kümesini temsil eden numaralandırma adlı tamsayı değerleri. Bu numaralandırma türü yokluğu tarafından gösterilen <xref:System.FlagsAttribute?displayProperty=nameWithType> özel öznitelik.  
+    -   Birbirini dışlayan bir dizi adlandırılmış tamsayı değerlerini temsil eden bir sabit listesi. Bu numaralandırma türü yokluğuyla <xref:System.FlagsAttribute?displayProperty=nameWithType> özel öznitelik.  
   
-    -   Adsız bir değer üretmek için birleştirebilirsiniz bit bayrakları kümesini temsil eden bir numaralandırması. Bu numaralandırma türü varlığını tarafından gösterilen <xref:System.FlagsAttribute?displayProperty=nameWithType> özel öznitelik.  
+    -   Adlandırılmamış değer üretmek için birleştirilebilen bit bayrakları kümesini temsil eden bir sabit listesi. Bu numaralandırma türü varlığını tarafından belirtilen <xref:System.FlagsAttribute?displayProperty=nameWithType> özel öznitelik.  
   
      Daha fazla bilgi için belgelerine bakın <xref:System.Enum> yapısı.  
   
--   Numaralandırma değeri, belirtilen değer aralığı için sınırlı değildir. Diğer bir deyişle, numaralandırma değerlerinin aralığını temel değerini aralığıdır. Kullanabileceğiniz <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType> belirtilen bir değeri bir numaralandırma üyesi olup olmadığının yöntemi.  
+-   Bir numaralandırma değeri, belirtilen değerler aralığıyla sınırlı değildir. Diğer bir deyişle, bir numaralandırmada değerler aralığı kendi temel değer aralığıdır. Kullanabileceğiniz <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType> bir belirtilen değerin bir numaralandırma üyesi olup olmadığını belirlemek için yöntemi.  
   
 <a name="members"></a>   
-### <a name="type-members-in-general"></a>Genel üyeleri yazın  
- Ortak dil belirtimi, tüm alanları ve belirli bir sınıfın bir üyesi olarak erişilecek yöntemleri gerektirir. Bu nedenle, genel statik alanları ve yöntemleri (diğer bir deyişle, statik alanları veya dışında bir türü tanımlanmadı yöntemleri) CLS uyumlu değildir. Genel alan veya yöntem kaynak kodunuzda eklemeye çalışırsanız, C# ve Visual Basic derleyicileri derleyici hatası oluşturur.  
+### <a name="type-members-in-general"></a>Genel olarak tür üyeleri  
+ Ortak dil belirtimi, tüm alanlar ve yöntemler, belirli bir sınıfın üyesi olarak erişilmesini gerektirir. Bu nedenle, genel statik alanlar ve yöntemler (diğer bir deyişle, statik alanlar veya bir türden ayrı tanımlanan yöntemler) CLS uyumlu değildir. Genel alan veya yöntem kaynak kodunuzu eklemeye çalışırsanız, C# ve Visual Basic derleyicileri bir derleyici hatası oluşturur.  
   
- Yalnızca standart çağırma yönetilen ortak dil belirtimi destekler. Yönetilmeyen çağırma kurallarını desteklemez ve değişken bağımsız değişken listeleri yöntemleriyle işaretlenmiş `varargs` anahtar sözcüğü. Standart yönetilen çağırma kuralı ile uyumlu olan değişken bağımsız değişken listeleri için kullanmak <xref:System.ParamArrayAttribute> özniteliği ya da tek tek dil uygulaması gibi `params` C# anahtar sözcüğü ve `ParamArray` Visual Basic anahtar sözcüğü.  
+ Ortak dil belirtimi yalnızca standart yönetilen çağırma kuralı destekler. Yönetilmeyen çağırma kurallarını desteklemeyen ve yöntemleri değişken bağımsız değişken listesiyle işaretlenmiş `varargs` anahtar sözcüğü. Standart yönetilen çağırma kuralı ile uyumlu olan değişken bağımsız değişken listeleri için <xref:System.ParamArrayAttribute> özniteliği veya tek tek dilin uygulamasını gibi `params` C# anahtar sözcüğü ve `ParamArray` Visual Basic'teki.  
   
 <a name="MemberAccess"></a>   
-### <a name="member-accessibility"></a>Üye erişilebilirlik  
- Devralınmış bir üyeyi geçersiz kılma bu üyede erişilebilirliğini değiştiremezsiniz. Örneğin, bir taban sınıf ortak yönteminde, türetilmiş bir sınıf içinde özel bir yöntem tarafından değiştirilemiyor. Bir istisna vardır: bir `protected internal` (C# ' ta) veya `Protected Friend` (Visual Basic'te) farklı bir derlemedeki bir türe göre geçersiz bir derleme üyesi. Bu durumda, geçersiz kılma erişilebilirliğini olduğu `Protected`.  
+### <a name="member-accessibility"></a>Üye erişilebilirliği  
+ Devralınmış bir üyeyi geçersiz kılmak o üyenin erişilebilirliğini değiştiremezsiniz. Örneğin, genel bir temel sınıf yöntemi özel bir yöntem türetilmiş bir sınıf tarafından geçersiz kılınamaz. Bir istisna vardır: bir `protected internal` (C# ' de) veya `Protected Friend` (Visual Basic'te) üyesi farklı bir derlemedeki bir türe tarafından geçersiz kılınan bir derlemedeki. Bu durumda geçersiz kılma erişimi olan `Protected`.  
   
- Aşağıdaki örnek hata gösterilmektedir oluşturulan <xref:System.CLSCompliantAttribute> özniteliği `true`, ve `Person`, hangi bir sınıfın türetildiği `Animal`, erişilebilirliğini değiştirmeye çalışırsa `Species` özelliğinden Genel özel. Kendi erişilebilirlik ortak olarak değiştirilirse örnek başarıyla derler.  
+ Oluşan hata aşağıdaki örnekte oluşturulan <xref:System.CLSCompliantAttribute> özniteliği `true`, ve `Person`, bir sınıf, türetilir `Animal`, erişilebilirliğini özele değiştirmeye `Species` özelliği Genel özel. Erişilebilirlik genel olarak değişirse örnek başarıyla derler.  
   
  [!code-csharp[Conceptual.CLSCompliant#28](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/accessibility1.cs#28)]
  [!code-vb[Conceptual.CLSCompliant#28](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/accessibility1.vb#28)]  
   
- Bu üye erişilebilir olduğunda imza türlerinde üyenin erişilebilir olması gerekir. Örneğin, bu ortak üyesi özel, korumalı veya dahili türü olan bir parametre içeremez anlamına gelir. Aşağıdaki örnek sonuçları derleyici hatası gösterilmektedir, bir `StringWrapper` sınıfı oluşturucusu kullanıma sunan bir iç `StringOperationType` bir dize değeri nasıl alınmalı belirler numaralandırma değeri.  
+ Bir üyenin İmzasındaki türler, üye erişilebilir olduğunda erişilebilir olması gerekir. Örneğin, bu genel bir üyenin, türü özel, korumalı veya iç olan bir parametre içeremez anlamına gelir. Sonuçları derleyici hatası aşağıdaki örnekte, bir `StringWrapper` sınıf oluşturucusu bir iç sunan `StringOperationType` bir dize değerinin nasıl sarılacağını belirleyen sabit listesi değeri.  
   
  [!code-csharp[Conceptual.CLSCompliant#27](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/accessibility3.cs#27)]
  [!code-vb[Conceptual.CLSCompliant#27](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/accessibility3.vb#27)]  
   
 <a name="Generics"></a>   
-### <a name="generic-types-and-members"></a>Genel türler ve üyeleri  
- İç içe geçmiş türler, kendilerini kapsayan türle her zaman en az sayıda genel parametrelere sahip. Bunlar, kendilerini kapsayan türle genel parametreler konuma göre karşılık gelir. Genel tür yeni genel parametreler de içerir.  
+### <a name="generic-types-and-members"></a>Genel türler ve Üyeler  
+ İç içe geçmiş türler, her zaman kapsayan türü en az sayıda genel parametrelere sahip. Bunlar, kapsayan türdeki genel parametrelere konuma göre karşılık gelir. Genel tür de yeni genel parametreler ekleyebilirsiniz.  
   
- Genel tür parametreleri içeren bir türde ve iç içe geçmiş türler arasındaki ilişki tek tek dilleri sözdizimi tarafından gizlenmiş olabilir. Aşağıdaki örnekte, genel bir tür `Outer<T>` iki iç içe geçmiş sınıflar içeren `Inner1A` ve `Inner1B<U>`. Çağrıları `ToString` her sınıfının devraldığı yöntemi <xref:System.Object.ToString%2A?displayProperty=nameWithType>, her iç içe geçmiş sınıf kapsayan sınıfı tür parametrelerini içerdiğini gösterir.  
+ Genel tür parametreleri bir kapsayan tür ile onun iç içe geçmiş türler arasındaki ilişki, tek tek dillerin sözdizimi tarafından gizlenmiş olabilir. Aşağıdaki örnekte, genel tür `Outer<T>` içeren iki iç içe geçmiş sınıflar `Inner1A` ve `Inner1B<U>`. Çağrıları `ToString` her sınıf öğesinden devralan yöntemi <xref:System.Object.ToString%2A?displayProperty=nameWithType>, iç içe geçmiş sınıf her sınıfın kapsayan sınıf türü parametreleri içerdiğini gösterir.  
   
  [!code-csharp[Conceptual.CLSCompliant#29](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/nestedgenerics2.cs#29)]
  [!code-vb[Conceptual.CLSCompliant#29](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/nestedgenerics2.vb#29)]  
   
- Genel tür adları biçiminde kodlanmış *adı\`n*, burada *adı* tür adı \` bir karakter değişmez değeri olduğu ve *n* sayısı Tür parametreleri türü veya, iç içe geçmiş genel türler, sayısı için yeni olarak bildirilen parametreleri sunmuştur. Bu genel tür adları CLS uyumlu bir Kitaplığı'nda genel türler erişmek için yansıma kullanan geliştiriciler öncelikle ilgisini kodlamadır.  
+ Genel tür adları biçiminde kodlanır *adı\`n*burada *adı* tür adıdır \` bir karakter değişmez değeridir ve *n* sayısı Tür parametreleri türü veya iç içe geçmiş genel türler, sayısı için yeni olarak bildirilen parametreleri sunmuştur. Bu genel tür adları kodlaması öncelikle bir kitaplıktaki CLS uyumlu genel türlere erişmek için yansımayı kullanan geliştiricileri ilgilendirir.  
   
- Bir genel kısıtlamalar uyguladıysanız kısıtlamaları da CLS ile uyumlu olması gerektiği kullanılan türleri yazın. Aşağıdaki örnek adlı bir sınıf tanımlar `BaseClass` yani değil CLS ile uyumlu ve adlı genel bir sınıf `BaseCollection` , tür parametresi öğesinden türetilmelidir `BaseClass`. Ancak çünkü `BaseClass` CLS uyumlu olmayan bir uyarı derleyicisi yayar.  
+ Bir genel kısıtlamalar uygulanırsa kısıtlamaları de CLS uyumlu olmalıdır olarak kullanılan türler yazın. Aşağıdaki örnek adlı bir sınıf tanımlar `BaseClass` yani değil CLS uyumlu ve adlı bir genel sınıf `BaseCollection` tür parametresi türetilmesi gereken `BaseClass`. Ancak `BaseClass` CLS uyumlu değilse derleyici bir uyarı gösterir.  
   
  [!code-csharp[Conceptual.CLSCompliant#34](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/generics5.cs#34)]
  [!code-vb[Conceptual.CLSCompliant#34](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/generics5.vb#34)]  
   
- Genel bir tür genel bir temel türden türetilmiş, böylece temel türü kısıtlamaları da karşılanır garanti edebilir kısıtlamalar redeclare gerekir. Aşağıdaki örnek tanımlayan bir `Number<T>` herhangi bir sayısal tür temsil edebilir. Ayrıca tanımlayan bir `FloatingPoint<T>` kayan temsil eden sınıf noktası değeri. Bu kısıtlama geçerli değildir çünkü ancak, Kaynak Kodu derlemek başarısız `Number<T>` (T değeri türü olması gerekir) için `FloatingPoint<T>`.  
+ Genel bir tür genel bir temel türden türetilirse, temel tür kısıtlamaları da karşılanır karşılanmasını garantileyebilmesi için kısıtlamaları gerekir. Aşağıdaki örnekte tanımlayan bir `Number<T>` herhangi bir sayısal türü temsil edebilir. Ayrıca tanımlar bir `FloatingPoint<T>` sınıfı temsil eder bir kayan nokta değeri. Bu kısıtlama geçerli değildir çünkü Bununla birlikte, Kaynak Kodu derlemek, başarısız `Number<T>` (T bir değer türü olması gerekir) için `FloatingPoint<T>`.  
   
  [!code-csharp[Conceptual.CLSCompliant#30](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/generics2a.cs#30)]
  [!code-vb[Conceptual.CLSCompliant#30](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/generics2a.vb#30)]  
   
- Kısıtlama eklenirse, örnek başarıyla derlenen `FloatingPoint<T>` sınıfı.  
+ Kısıtlama eklenirse örnek başarıyla derler `FloatingPoint<T>` sınıfı.  
   
  [!code-csharp[Conceptual.CLSCompliant#31](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/generics2.cs#31)]
  [!code-vb[Conceptual.CLSCompliant#31](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/generics2.vb#31)]  
   
- Ortak dil belirtimi, iç içe geçmiş türler için koruyucu örneklemesi başına modeli uygular ve korumalı üyeler. Açık genel türler alanları veya iç içe geçmiş, korumalı bir genel türü belirli bir örnek oluşturma içeren imzaları üyeleriyle gösteremez. Belirli bir örnek oluşturma genel temel sınıf veya arabirim genişletmek olmayan genel türleri, alanlar veya iç içe geçmiş, korumalı bir genel türü farklı bir örnek oluşturma içeren imzaları üyeleriyle gösteremez.  
+ Ortak dil belirtimi, bir iç içe geçmiş türler için her örnekleme başına koruyucu modeli uygular ve korumalı üyeler. Açık genel türler, belirli bir örneğini oluşturmada iç içe, korunan bir genel tür içeren imzaları olan alanları veya üyeleri gösteremez. Genel temel sınıfı veya arabiriminin belirli bir örneğini genişleten genel olmayan türler, farklı bir örneğini oluşturmada iç içe, korunan bir genel tür içeren imzaları olan alanları veya üyeleri gösteremez.  
   
- Aşağıdaki örnek, genel bir tür tanımlar `C1<T>` (veya `C1(Of T)` Visual Basic'te) ve korumalı bir sınıf `C1<T>.N` (veya `C1(Of T).N` Visual Basic'te). `C1<T>` iki yöntemi vardır `M1` ve `M2`. Ancak, `M1` döndürmeye çalışır CLS uyumlu olmadığından bir `C1<int>.N` (veya `C1(Of Integer).N`) C1 nesnesinden\<T > (veya `C1(Of T)`). İkinci sınıfı `C2`, türetildiği `C1<long>` (veya `C1(Of Long)`). İki yöntemi vardır `M3` ve `M4`. `M3` döndürmeye çalışır CLS uyumlu olmadığından bir `C1<int>.N` (veya `C1(Of Integer).N`) öğesinin bir alt nesne `C1<long>`. Dil derleyicileri daha kısıtlayıcı olabileceğini unutmayın. Derlemeye çalıştığında bu örnekte, Visual Basic hata görüntüler. `M4`.  
+ Aşağıdaki örnek bir genel tür tanımlar `C1<T>` (veya `C1(Of T)` Visual Basic'te) ve korumalı bir sınıf `C1<T>.N` (veya `C1(Of T).N` Visual Basic'te). `C1<T>` iki yönteme sahiptir `M1` ve `M2`. Ancak, `M1` getirmeyi denediğinden CLS uyumlu değil bir `C1<int>.N` (veya `C1(Of Integer).N`) C1 nesneden\<T > (veya `C1(Of T)`). İkinci bir sınıf `C2`, türetilen `C1<long>` (veya `C1(Of Long)`). İki yönteme sahiptir `M3` ve `M4`. `M3` getirmeyi denediğinden CLS uyumlu değil bir `C1<int>.N` (veya `C1(Of Integer).N`) öğesinin nesneden `C1<long>`. Dil derleyicileri daha kısıtlayıcı olabileceğine dikkat edin. Derlemeye çalıştığında bu örnekte, Visual Basic bir hata gösterir. `M4`.  
   
  [!code-csharp[Conceptual.CLSCompliant#32](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/generics4.cs#32)]
  [!code-vb[Conceptual.CLSCompliant#32](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/generics4.vb#32)]  
   
 <a name="ctors"></a>   
 ### <a name="constructors"></a>Oluşturucular  
- CLS uyumlu sınıfları ve yapıları oluşturucular bu kurallara uymalıdır:  
+ CLS uyumlu sınıf ve yapılardaki oluşturucular bu kuralları izlemelidir:  
   
--   Devralınan örnek veri erişim izni vermeden önce türetilmiş bir sınıf oluşturucusunun olduğu temel sınıfın örneği oluşturucusu çağırmanız gerekir. Taban sınıf oluşturucular kendi türetilmiş sınıflar tarafından devralınır değil due için bu gereksinim olabilir. Bu kural doğrudan devralma desteklemeyen yapıları için geçerli değildir.  
+-   Devralınan örnek verilerine erişmeden önce bir oluşturucu türetilmiş bir sınıfın temel sınıfının örnek oluşturucusunu çağırmalıdır. Temel sınıf Kurucularını kendi türetilmiş sınıfları tarafından miras alınmamasından ötürü olabilir, bu gereksinim olmasıdır. Bu kural doğrudan devralmayı desteklemeyen yapılar için geçerli değildir.  
   
-     Genellikle, bu kural aşağıdaki örnekte gösterildiği gibi CLS uyumluluğu bağımsız olarak derleyicileri uygulayın. Oluşturduğu bir `Doctor` türetilmiş sınıf bir `Person` sınıfı, ancak `Doctor` sınıfı başarısız çağırmak `Person` devralınan örneği alanları başlatmak için sınıf oluşturucu.  
+     Genellikle, derleyiciler bu kuralı aşağıdaki örnekte gösterildiği gibi CLS uyumluluğundan bağımsız olarak uygular. Oluşturur bir `Doctor` türetilen sınıf bir `Person` sınıfı, ancak `Doctor` sınıfı başarısız olursa çağrılacak `Person` devralınan örnek alanları başlatmak için sınıfın Oluşturucusu.  
   
      [!code-csharp[Conceptual.CLSCompliant#11](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/ctor1.cs#11)]
      [!code-vb[Conceptual.CLSCompliant#11](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/ctor1.vb#11)]  
   
--   Bir nesne oluşturucusu, nesneyi oluşturmak için dışında çağrılamaz. Ayrıca, bir nesne iki kez başlatılamaz. Örneğin, bunun anlamı <xref:System.Object.MemberwiseClone%2A?displayProperty=nameWithType> ve yöntemleri gibi seri durumundan çıkarma <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A?displayProperty=nameWithType> oluşturucular çağırmalısınız değil.  
+-   Nesne Oluşturucu, nesne oluşturma dışında çağrılamaz. Ayrıca, bir nesne iki kez başlatılamaz. Örneğin, yani <xref:System.Object.MemberwiseClone%2A?displayProperty=nameWithType> ve yöntemler gibi seri durumdan çıkarma <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A?displayProperty=nameWithType> oluşturucular çağırmamalıdır.  
   
 <a name="properties"></a>   
 ### <a name="properties"></a>Özellikler  
- CLS uyumlu türleri özelliklerinde bu kurallara uymalıdır:  
+ CLS uyumlu türlerdeki özellikler şu kurallara uymalıdır:  
   
--   Özellik ayarlayıcı, bir alıcı ya da her ikisini de olması gerekir. Derlemede, bu özel yöntemleri, ayrı yöntemleri olarak görünürler yani uygulanır (alıcı adlı `get_` *propertyname* ve kurucu `set_` *propertyname*) olarak işaretlenmiş `SpecialName` derlemenin meta verileri. C# ve Visual Basic derleyicileri uygulamak için otomatik olarak gerek kalmadan bu kural zorlama <xref:System.CLSCompliantAttribute> özniteliği.  
+-   Bir özelliğin bir Ayarlayıcısı, alıcısı veya her ikisi de olmalıdır. Bir derlemede, bunlar özel yöntemler olarak deyişle ayrı yöntemler olarak görünür uygulanır (alıcı adlı `get_` *propertyname* ayarlayıcı `set_` *propertyname*) olarak işaretlenmiş `SpecialName` derlemenin meta verilerinde. C# ve Visual Basic derleyicileri otomatik olarak uygulamak için gerek kalmadan bu kuralı zorunlu <xref:System.CLSCompliantAttribute> özniteliği.  
   
--   Bir özelliğin özellik alıcısı dönüş türü ve kurucu son bağımsız değişkeni türüdür. Bu tür CLS uyumlu olması gerekir ve bağımsız değişkenler atanamaz özelliğine başvuruya göre (diğer bir deyişle, bunlar yönetilen işaretçileri olamaz).  
+-   Bir özelliğin özellik alıcının dönüş türü ve ayarlayıcının son bağımsız değişkeninin türüdür. Bu türler CLS uyumlu olmalıdır ve bağımsız değişkenler atanamaz özelliği başvuruya göre (diğer bir deyişle, bunlar yönetilen işaretçiler olamaz).  
   
--   Bir özelliği hem alıcı hem de ayarlayıcı varsa, bunlar hem de sanal olmalıdır hem statik ya da her iki örneği. C# ve Visual Basic derleyicileri otomatik olarak bu kural aracılığıyla kendi özellik tanımı sözdizimi uygulayın.  
+-   Bir özellik hem alıcı hem de ayarlayıcı varsa, bunlar hem de sanal olmalıdır hem statik veya her ikisi de örnek. C# ve Visual Basic derleyicileri otomatik olarak kendi özellik tanımı sözdizimleri aracılığıyla bu kuralı uygular.  
   
 <a name="events"></a>   
 ### <a name="events"></a>Olaylar  
- Bir olay adını ve türünü tarafından tanımlanır. Olay türü olay göstermek için kullanılan bir temsilcisidir. Örneğin, <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> olay türüdür <xref:System.ResolveEventHandler>. Olayın kendisi, ek olarak, üç yöntem olay adına göre adlarıyla olayın uygulamasını sağlamak ve olarak işaretlenmiş `SpecialName` derlemenin meta verilerini de:  
+ Bir olay adı ve türüne göre tanımlanır. Olay türü olayı göstermek için kullanılan bir temsilcidir. Örneğin, <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> olay türüdür <xref:System.ResolveEventHandler>. Olayın kendisinin yanı sıra, olay adına dayandırılan adlara sahip üç yöntem olayın uygulanmasını sağlar ve olarak işaretlenmiş `SpecialName` derlemenin meta verilerinde:  
   
--   Adlı bir olay işleyicisi eklemek için bir yöntem `add_` *EventName*. Örneğin, abonelik için olay yöntemi <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> olay adlandırılan `add_AssemblyResolve`.  
+-   Adlı bir olay işleyicisi eklemek için bir yöntem `add_` *EventName*. Örneğin, olay aboneliği yöntemi için <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> olay adlı `add_AssemblyResolve`.  
   
--   Adlı bir olay işleyicisi kaldırmak için bir yöntem `remove_` *EventName*. Örneğin, temizleme yöntemi için <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> olay adlandırılan `remove_AssemblyResolve`.  
+-   Adlı bir olay işleyicisini kaldırma yöntemi `remove_` *EventName*. Örneğin, kaldırma yöntemi <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> olay adlı `remove_AssemblyResolve`.  
   
--   Olay oluştu, belirten yöntemi adlı `raise_` *EventName*.  
+-   Adlı olayın oluştuğunu belirten bir yöntem `raise_` *EventName*.  
   
 > [!NOTE]
->  Ortak dil belirtimi'nın kuralları olayları ile ilgili çoğu dil derleyicileri tarafından uygulanan ve Bileşen geliştiriciler için saydamdır.  
+>  Olaylara ilişkin ortak dil belirtimi kurallarının çoğu, dil derleyiciler tarafından uygulanır ve Bileşen geliştiriciler için saydamdır.  
   
- Eklemek için yöntemleri, kaldırma ve olayı tetiklenmeden aynı erişilebilirlik olması gerekir. Bunlar ayrıca tüm statik olmalıdır örneği veya sanal. İçin yöntemler ekleme ve kaldırma bir olay türü olay temsilci türü olan bir parametre vardır. Add ve remove yöntemlerini hem de mevcut olmalıdır veya her ikisi de yok.  
+ Ekleme yöntemleri, kaldırma ve olayı tetiklenmeden aynı erişilebilirliği olmalıdır. Bunlar ayrıca tümü statik olmalıdır örneği veya sanal. Yöntem ekleme ve kaldırma olay türü olay temsilci türü olan bir parametreye sahip. Ekleme ve kaldırma yöntemlerinin her ikisi de bulunmalıdır veya ikisi de olmamalıdır.  
   
- Aşağıdaki örnek adlı CLS uyumlu bir sınıfı tanımlar `Temperature` olayını bir `TemperatureChanged` iki okumalar arasında sıcaklık değişikliği değerine eşit veya eşik değeri, olay. `Temperature` Sınıfı açıkça tanımlayan bir `raise_TemperatureChanged` yöntemi olan olay işleyicileri seçmeli olarak çalıştırabilirsiniz.  
+ Aşağıdaki örnekte adlı, CLS uyumlu bir sınıf tanımlar `Temperature` oluşturan bir `TemperatureChanged` iki okuma arasındaki sıcaklık değişikliği değerine eşit veya eşik değeri, olay. `Temperature` Sınıfı açıkça tanımlayan bir `raise_TemperatureChanged` yöntemi olan olay işleyicileri seçmeli olarak çalıştırabilirsiniz.  
   
  [!code-csharp[Conceptual.CLSCompliant#20](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/event1.cs#20)]
  [!code-vb[Conceptual.CLSCompliant#20](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/event1.vb#20)]  
   
 <a name="overloads"></a>   
 ### <a name="overloads"></a>Aşırı Yüklemeler  
- Ortak dil belirtimi aşırı yüklenmiş üyeler aşağıdaki gereksinimleri getirir:  
+ Ortak dil belirtimi, aşırı yüklenmiş üyelerde aşağıdaki gereksinimleri karşılamalıdır:  
   
--   Üyeleri parametrelerin sayısı ve herhangi bir parametre türünü temel alan aşırı yüklenmiş. Çağırma kuralı, dönüş türü, özel değiştiricileri yöntemi veya onun parametresi uygulanır ve parametreleri değere veya başvuruya göre geçirilir dikkate alınmaz zaman overloads arasında ayrım yapma. Adları gereksinim bir kapsam içinde benzersiz olmalıdır, bir örnek için kodu görmek [adlandırma kuralları](#naming) bölümü.  
+-   Parametre sayısı ve herhangi bir parametre türüne göre üyeler aşırı yüklenebilir. Çağırma kuralı, dönüş türü özel değiştiriciler yönteme veya parametresine uygulanan ve parametrelerin değere veya başvuruya göre iletilir dikkate alınmaz aşırı yükler arasında ayrım yapılırken. Adları gereksinim bir kapsam içinde benzersiz olmalıdır. Örneğin, kodu görmek [adlandırma kuralları](#naming) bölümü.  
   
--   Yalnızca özelliklerini ve yöntemlerini aşırı yüklenmiş. Alanlar ve olayları aşırı yüklenemez.  
+-   Özellikler ve yöntemler aşırı yüklenebilir. Alanlar ve olaylar aşırı yüklenemez.  
   
--   Genel yöntemler genel parametrelerini sayısına göre aşırı yüklenmiş.  
+-   Genel yöntemler, genel parametrelerinin sayısına göre aşırı yüklenebilir.  
   
 > [!NOTE]
->  `op_Explicit` Ve `op_Implicit` işleçleri aşırı yükleme çözünürlüğü için bir yöntem imzası parçası değeri dikkate alınmaz döndüren kural istisnalar mevcuttur. Bu iki işleç parametrelerini ve dönüş değerlerine göre aşırı yüklenmiş.  
+>  `op_Explicit` Ve `op_Implicit` işleçler şunlardır: değer olarak kabul edilmez aşırı yükleme çözümlemesi için bir yöntem imzasının parçası döndüren kuralının istisnalarıdır. Bu iki işleç hem parametreleri hem de dönüş değerlerine bağlı olarak aşırı yüklenebilir.  
   
 <a name="exceptions"></a>   
 ### <a name="exceptions"></a>Özel Durumlar  
- Özel durum nesneleri öğesinden türetilmelidir <xref:System.Exception?displayProperty=nameWithType> veya başka bir türden türetilmiş <xref:System.Exception?displayProperty=nameWithType>. Aşağıdaki örnek adlı özel bir sınıf sonuçlara derleyici hatası gösterilmektedir `ErrorClass` özel durum işleme için kullanılır.  
+ Özel durum nesneleri türetilmesi gereken <xref:System.Exception?displayProperty=nameWithType> veya başka bir türden türetilmiş <xref:System.Exception?displayProperty=nameWithType>. Aşağıdaki örnekte adlı özel bir sınıf olmadığında ortaya çıkar.%nÇözüm derleyici hatası `ErrorClass` özel durum işleme için kullanılır.  
   
  [!code-csharp[Conceptual.CLSCompliant#13](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/exceptions1.cs#13)]
  [!code-vb[Conceptual.CLSCompliant#13](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/exceptions1.vb#13)]  
   
- Bu hatayı düzeltmek için `ErrorClass` sınıfı öğesinden devralmalıdır <xref:System.Exception?displayProperty=nameWithType>. Ayrıca, `Message` özelliği geçersiz. Aşağıdaki örnek tanımlamak için bu hataları düzeltir bir `ErrorClass` CLS uyumlu sınıfı.  
+ Bu hatayı düzeltmek için `ErrorClass` sınıfı devralmalıdır <xref:System.Exception?displayProperty=nameWithType>. Ayrıca, `Message` özelliği geçersiz kılınmalıdır. Aşağıdaki örnek tanımlamak için bu hataları düzeltir bir `ErrorClass` CLS uyumlu sınıf.  
   
  [!code-csharp[Conceptual.CLSCompliant#14](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/exceptions2.cs#14)]
  [!code-vb[Conceptual.CLSCompliant#14](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/exceptions2.vb#14)]  
   
 <a name="attributes"></a>   
 ### <a name="attributes"></a>Öznitelikler  
- In.NET Framework derlemeleri özel öznitelikler özel öznitelikleri depolamak ve derlemeler, türleri, üyeleri ve yöntem parametreleri gibi nesneler programlama hakkındaki meta verilerini alma için genişletilebilir bir mekanizma sağlar. Özel öznitelikler öğesinden türetilmelidir <xref:System.Attribute?displayProperty=nameWithType> veya türetilmiş bir türden <xref:System.Attribute?displayProperty=nameWithType>.  
+ .NET Framework derlemelerindeki özel öznitelikler özel öznitelikleri depolamak ve programlama derlemeler, türler, üye ve yöntem parametreleri gibi nesneler hakkındaki meta verileri almak için genişletilebilir bir mekanizma sağlar. Özel öznitelikler türetilmesi gereken <xref:System.Attribute?displayProperty=nameWithType> veya türetilmiş bir türden <xref:System.Attribute?displayProperty=nameWithType>.  
   
- Aşağıdaki örnek, bu kural ihlal ediyor. Bunu tanımlayan bir `NumericAttribute` türünden türemez sınıfı <xref:System.Attribute?displayProperty=nameWithType>. Derleyici Hatası sınıfı tanımlanmadığında yalnızca zaman CLS uyumlu olmayan özniteliği, uygulanan sonuçları unutmayın.  
+ Aşağıdaki örnek bu kuralı ihlal ediyor. Tanımladığı bir `NumericAttribute` türünden türemez sınıfı <xref:System.Attribute?displayProperty=nameWithType>. Derleyici Hatası sınıfın tanımlı değil, yalnızca CLS uyumlu olmayan öznitelik, uygulandığında sonuçları verdiğine dikkat edin.  
   
  [!code-csharp[Conceptual.CLSCompliant#18](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/attribute1.cs#18)]
  [!code-vb[Conceptual.CLSCompliant#18](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/attribute1.vb#18)]  
   
- Oluşturucunun ya da CLS uyumlu bir özniteliğin özelliklerini yalnızca şu türleri getirebilir:  
+ Oluşturucu veya CLS uyumlu bir özniteliğin özellikleri sadece aşağıdaki türleri getirebilir:  
   
 -   <xref:System.Boolean>  
   
@@ -487,58 +487,58 @@ ms.locfileid: "33579632"
   
 -   Temel alınan türü olan herhangi bir numaralandırma türü <xref:System.Byte>, <xref:System.Int16>, <xref:System.Int32>, veya <xref:System.Int64>.  
   
- Aşağıdaki örnek tanımlayan bir `DescriptionAttribute` öğesinden türetilen sınıf <xref:System.Attribute>. Türünde bir parametre sınıfı kurucusunun `Descriptor`, bu sınıf CLS uyumlu değil. Visual Basic derleyici türünün bir uyarı veya hata yayar ancak C# Derleyici bir uyarı gösterir ancak başarıyla derlenen unutmayın.  
+ Aşağıdaki örnekte tanımlayan bir `DescriptionAttribute` türetilen sınıf <xref:System.Attribute>. Sınıf oluşturucu türünde bir parametreye sahip `Descriptor`, bu nedenle sınıf CLS uyumlu değildir. Visual Basic derleyicinin ne bir uyarı ne de hata yayar ise C# derleyicisinin bir uyarı yaydığına ancak başarıyla derler unutmayın.  
   
  [!code-csharp[Conceptual.CLSCompliant#33](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/attribute2.cs#33)]
  [!code-vb[Conceptual.CLSCompliant#33](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/attribute2.vb#33)]  
   
 <a name="CLSAttribute"></a>   
 ## <a name="the-clscompliantattribute-attribute"></a>CLSCompliantAttribute özniteliği  
- <xref:System.CLSCompliantAttribute> Öznitelik, bir program öğesi ortak dil belirtimi ile uyumlu olup olmadığını belirtmek için kullanılır. <xref:System.CLSCompliantAttribute.%23ctor%28System.Boolean%29?displayProperty=nameWithType> Oluşturucusu içeren tek bir gerekli parametre `isCompliant`, bir program öğesi CLS ile uyumlu olup olmadığını gösterir.  
+ <xref:System.CLSCompliantAttribute> Özniteliği bir program öğesinin ortak dil belirtimi ile uyumlu olup olmadığını belirtmek için kullanılır. <xref:System.CLSCompliantAttribute.%23ctor%28System.Boolean%29?displayProperty=nameWithType> Oluşturucu içeren bir tek gerekli parametresi `isCompliant`, program öğesinin CLS uyumlu olup olmadığını gösterir.  
   
- Derleme zamanında derleyici CLS ile uyumlu olması için varsayılan ve bir uyarı yayar uyumlu olmayan öğeler algılar. Derleyici uyarıları türler veya uyumlu olması için açıkça bildirilen üyeler için yayma değil.  
+ Derleme zamanında derleyici, CLS uyumlu olduğu varsayılan uyum olmayan ve bir uyarı verir uyumlu olmayan öğeleri algılar. Derleyici, tür veya uyumlu olması için açıkça bildirilen üyeler için uyarı yayımlamaz.  
   
- Bileşen geliştiricileri kullanabilir <xref:System.CLSCompliantAttribute> öznitelik iki yolla:  
+ Bileşen geliştiriciler <xref:System.CLSCompliantAttribute> özniteliğini iki şekilde:  
   
--   CLS uyumlu bir bileşen tarafından kullanıma sunulan ortak arabirimi bölümlerini ve CLS uyumlu olmayan bölümleri tanımlamak için. Kullanımı öznitelik belirli programın öğeleri CLS ile uyumlu işaretlemek için kullanıldığında, bu öğeleri tüm diller ve .NET Framework hedefleyen Araçlar menüsünden erişilebilir olduğunu güvence altına alır.  
+-   Bir bileşen tarafından açıklanan genel arabirimin CLS uyumlu parçalarını ve CLS uyumlu olmayan parçalarını tanımlamak için. Öznitelik belirli program öğelerini CLS uyumlu olarak işaretlemek için kullanıldığında, kullanımı bu öğelerin tüm diller ve .NET Framework'ü hedefleyen Araçlar erişilebilir olmasını garanti eder.  
   
--   Bileşen kitaplığın ortak arabirim, CLS uyumlu program öğelerini oluşturduğuna emin olmak için. Öğeleri CLS ile uyumlu değilse, derleyicileri genellikle bir uyarı verecek.  
+-   Bileşen kitaplığının ortak arabiriminin yalnızca CLS uyumlu program öğelerini göstermesini sağlamak için. Öğeler CLS uyumlu değilse, derleyiciler genellikle bir uyarı verir.  
   
 > [!WARNING]
->  Bazı durumlarda, dil derleyicileri mi bakılmaksızın CLS uyumlu kuralları zorla <xref:System.CLSCompliantAttribute> özniteliği kullanılır. Örneğin, bir arabirim, statik bir üyenin tanımlama CLS kuralını ihlal ediyor. Tanımlarsanız bu şekilde, bir `static` (C# ' ta) veya `Shared` (Visual Basic'te) bir arabirim üye, hem C# ve Visual Basic derleyicileri bir hata iletisi görüntülenir ve uygulama derlemek başarısız olur.  
+>  Bazı durumlarda, dil derleyicileri, bağımsız olarak CLS uyumlu kuralları zorunlu <xref:System.CLSCompliantAttribute> özniteliği kullanılır. Örneğin, bir arabirimde bir statik üye tanımlama, CLS kuralını ihlal ediyor. Bu şekilde tanımlarsanız, bir `static` (C# ' de) veya `Shared` (Visual Basic'te) üyesi bir arabirim içinde hem C# ve Visual Basic derleyicileri bir hata iletisi görüntüler ve uygulamayı derleyemez.  
   
- <xref:System.CLSCompliantAttribute> Özniteliği ile işaretlenmiş bir <xref:System.AttributeUsageAttribute> değerine sahip öznitelik <xref:System.AttributeTargets.All?displayProperty=nameWithType>. Bu değer uygulamanıza imkan sağlayan <xref:System.CLSCompliantAttribute> özniteliği derlemeler, modüller de dahil olmak üzere herhangi bir program öğesi için türleri (sınıflar, yapılar, numaralandırmalar, arabirimler ve temsilciler), üyeleri (Oluşturucular, yöntemler, özellikler, alanları ve olaylar), yazın Parametreler, genel parametreler ve dönüş değerleri. Bununla birlikte, pratikte, öznitelik yalnızca derlemeler, türleri ve tür üyeleri uygulamalıdır. Aksi takdirde derleyicileri öznitelik yoksay ve her genel parametresi, uyumlu olmayan bir parametre karşılaştığınız veya dönüş değeri kitaplığınızın ortak arabiriminde derleyici uyarıları oluşturmaya devam.  
+ <xref:System.CLSCompliantAttribute> Özniteliği ile işaretlenmiş bir <xref:System.AttributeUsageAttribute> değerine sahip öznitelik <xref:System.AttributeTargets.All?displayProperty=nameWithType>. Bu değer, uygulamanıza olanak sağlar. <xref:System.CLSCompliantAttribute> özniteliği derlemeler, modüller, dahil olmak üzere tüm program öğesi için türler (sınıflar, yapılar, numaralandırmalar, arabirimler ve temsilciler), üyeleri (Oluşturucular, yöntemler, özellikler, alanlar ve olaylar), yazın. Parametreler, genel parametreler ve dönüş değerleri. Ancak, uygulamada, özniteliği yalnızca derlemeler, türler ve tür üyeleri uygulamanız gerekir. Aksi takdirde, derleyiciler yoksayar ve karşılaştığınız uyumlu olmayan bir parametre, genel parametre veya dönüş değeri kitaplığınızın ortak arabiriminde her derleyici uyarıları oluşturmaya devam edin.  
   
- Değeri <xref:System.CLSCompliantAttribute> özniteliği kapsanan program öğeleri tarafından devralınır. Bir derlemeyi CLS ile uyumlu işaretlenmişse, örneğin, türlerinden ayrıca CLS uyumlu değildir. Bir tür CLS ile uyumlu işaretlenmişse, kendi iç içe geçmiş türler ve üyeleri ayrıca CLS uyumlu değildir.  
+ Değerini <xref:System.CLSCompliantAttribute> özniteliği içerdiği program ögeleri tarafından devralınır. Bir derleme CLS uyumlu olarak işaretlenmişse, örneğin, türlerinden de CLS uyumludur. Bir tür CLS uyumlu olarak işaretlenmişse, iç içe geçmiş türleri ve üyeleri de CLS uyumludur.  
   
- Devralınan uyumluluk uygulayarak açıkça geçersiz kılabilirsiniz <xref:System.CLSCompliantAttribute> özniteliği kapsanan bir program öğesi için. Örneğin, kullanabileceğiniz <xref:System.CLSCompliantAttribute> ile öznitelik bir `isCompliant` değerini `false` uyumlu bir derleme ve, uyumlu olmayan bir tür tanımlamak için öznitelik kullanabilirsiniz bir `isCompliant` değerini `true` uyumlu bir türü tanımlamak için bir uyumlu olmayan derleme. Ayrıca, uyumlu bir türü uyumlu olmayan üyeler tanımlayabilirsiniz. Ancak, dolayısıyla özniteliğiyle kullanamaz uyumlu üyeler uyumlu olmayan bir türü olamaz bir `isCompliant` değerini `true` uyumlu olmayan türünden devralma geçersiz kılmak için.  
+ Uygulayarak devralınan uyumluluğu açıkça kılabilirsiniz <xref:System.CLSCompliantAttribute> özniteliği içerdiği program öğesine. Örneğin, kullanabilirsiniz <xref:System.CLSCompliantAttribute> özniteliğini bir `isCompliant` değerini `false` özniteliği ile uyumlu bir derlemeyi ve, uyumlu olmayan bir tür tanımlamak için kullanabilirsiniz bir `isCompliant` değerini `true` uyumlu tür tanımlamak için bir uyumlu olmayan derleme. Uyumlu bir türde uyumlu olmayan üyeler de tanımlayabilirsiniz. Ancak, ile özniteliği kullanamazsınız. Bu nedenle uyumlu olmayan bir türün uyumlu üyeleri olamaz bir `isCompliant` değerini `true` uyumlu olmayan bir türden devralmayı geçersiz kılmak için.  
   
- Bileşenleri geliştirirken, her zaman kullanmalısınız <xref:System.CLSCompliantAttribute> derlemenizi, kendi türleri ve üyeleri CLS ile uyumlu olup olmadığını belirtmek için öznitelik.  
+ Bileşenleri geliştirirken her zaman kullanmalısınız <xref:System.CLSCompliantAttribute> derlemenizin, türlerinin ve üyelerinin CLS uyumlu olup olmadığını belirtmek için özniteliği.  
   
- CLS uyumlu bileşenleri oluşturmak için:  
+ CLS uyumlu bileşenler oluşturmak için:  
   
 1.  Kullanım <xref:System.CLSCompliantAttribute> Derleme CLS uyumlu olarak işaretlemek için.  
   
-2.  CLS uyumlu olarak uyumlu olmayan derlemesindeki genel olarak sunulan türler işaretleyin.  
+2.  CLS uyumlu değil olarak uyumlu olmayan derlemedeki genel olarak sunulan türlerini işaretleyin.  
   
-3.  CLS uyumlu türleri uyumsuz olarak genel kullanıma sunulan tüm üyelerinde işaretleyin.  
+3.  Herhangi bir genel olarak sunulan üye CLS uyumlu türlerde uyumlu olmayan olarak işaretleyin.  
   
-4.  CLS uyumlu alternatifi CLS uyumlu olmayan üyeler için sağlar.  
+4.  CLS uyumlu olmayan üyeler için CLS uyumlu bir alternatif sağlar.  
   
- Tüm uyumlu olmayan türleri ve üyeleri başarıyla işaretlediyseniz, derleyici hiçbir uyumsuzluk uyarıları yayma değil. Ancak, hangi üyeleri CLS uyumlu değildir ve bunların CLS uyumlu alternatifleri, ürün belgelerinde listesinde belirtmeniz gerekir.  
+ Tüm uyumlu olmayan türleri ve üyeleri başarılı bir şekilde işaretlediyseniz, derleyici tüm uyumsuz uyarılarını yayınlamaz. Ancak hangi üyelerin CLS uyumlu değildir ve ürün belgelerinizde bunların CLS uyumlu alternatifler listesinde gösterilmelidir.  
   
- Aşağıdaki örnek kullanır <xref:System.CLSCompliantAttribute> CLS uyumlu bir derleme ve bir tür tanımlamak için öznitelik `CharacterUtilities`, iki CLS uyumlu olmayan üyeler içeriyor. Her iki üyeleri ile etiketlenir çünkü `CLSCompliant(false)` özniteliği, derleyici hiçbir uyarılar üretir. Sınıf, CLS uyumlu alternatifi için iki yöntem de sağlar. Normalde, biz yalnızca iki aşırı eklediğiniz `ToUTF16` yöntem CLS uyumlu alternatifleri sağlayın. Ancak, dönüş değerini temel yöntemlerini aşırı yüklenemez olduğundan, uyumlu olmayan yöntemleri adlarından adları CLS uyumlu yöntemlerin farklıdır.  
+ Aşağıdaki örnekte <xref:System.CLSCompliantAttribute> CLS uyumlu bir derlemeyi ve bir tür tanımlamak için öznitelik `CharacterUtilities`, CLS uyumlu olmayan iki üyesi olan. Her iki üyeleri ile etiketlendiğinden `CLSCompliant(false)` özniteliği, derleyici uyarı üretmez. Sınıfı, her iki yöntem için CLS uyumlu bir alternatif de sağlar. Normalde, iki aşırı yüklemesi için yalnızca ekleriz `ToUTF16` yöntemi CLS uyumlu alternatifler sağlamak için. Ancak, dönüş değerini temel alarak yöntemler aşırı yüklenemez olduğundan, CLS uyumlu yöntemlerin adları uyumlu olmayan yöntemlerin adlarından farklı.  
   
  [!code-csharp[Conceptual.CLSCompliant#35](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/indicator3.cs#35)]
  [!code-vb[Conceptual.CLSCompliant#35](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/indicator3.vb#35)]  
   
- Varsa (diğer bir deyişle, türler veya diğer uygulama geliştiriciler tarafından kullanılan üyeler gösterme değil ise) bir kitaplık yerine bir uygulama geliştirdiğiniz, uygulamanızı tüketen program öğelerin CLS uyumluluğu ilgi yalnızca dilinizi bunları desteklemiyorsa . Bu durumda, CLS uyumlu olmayan bir öğe kullanmaya çalıştığınızda, dil derleyici bir hata oluşturur.  
+ Varsa (diğer bir deyişle, türleri ve diğer uygulama geliştiricileri tarafından tüketilebilecek üyeleri göstermiyorsanız) kitaplık yerine bir uygulama geliştiriyorsanız, uygulamanızın kullandığı program öğelerinin CLS uyumluluğu yalnızca diliniz onları desteklemiyorsa ilgi olan . Bu durumda, CLS uyumlu olmayan bir öğe kullanmaya çalıştığınızda dil derleyici bir hata oluşturur.  
   
 <a name="CrossLang"></a>   
 ## <a name="cross-language-interoperability"></a>Diller Arası Birlikte Çalışabilirlik  
- Dil bağımsızlığının birkaç olası anlamı vardır. Makalede açıklanan bir anlamı [dil bağımsızlığı ve dilden bağımsız bileşenler](../../docs/standard/language-independence-and-language-independent-components.md), sorunsuz bir şekilde başka bir dilde bir uygulamadan bir dilinde yazılmış türleri tüketen içerir. Bu makalenin konusu olan ikinci anlamı ise, birden çok dilde yazılmış kodu tek bir .NET Framework derlemesi olarak birleştirmeyi içerir.  
+ Dil bağımsızlığının birkaç olası anlamı vardır. Makalede açıklanan bir anlamı [dil bağımsızlığı ve dilden bağımsız bileşenler](../../docs/standard/language-independence-and-language-independent-components.md), tek bir dilde başka bir dilde yazılmış bir uygulamadan gelen türleri sorunsuzca kullanmayı içerir. Bu makalenin konusu olan ikinci anlamı ise, birden çok dilde yazılmış kodu tek bir .NET Framework derlemesi olarak birleştirmeyi içerir.  
   
- Aşağıdaki örnekte, iki sınıf içerir Utilities.dll adlı bir sınıf kitaplığı oluşturarak diller arası birlikte çalışabilirlik gösterilmektedir `NumericLib` ve `StringLib`. `NumericLib` Sınıfı yazılır C# ' ta ve `StringLib` sınıfı, Visual Basic'te yazılır. Aşağıda `ToTitleCase` sınıfında tek bir üye, `StringLib`, içeren StringUtil.vb için kaynak kodu verilmiştir.  
+ Aşağıdaki örnekte, iki sınıf içerir Utilities.dll adlı bir sınıf kitaplığı oluşturarak diller arası birlikte çalışabilirlik gösterilmektedir `NumericLib` ve `StringLib`. `NumericLib` Sınıfı C# ile yazılan ve `StringLib` sınıfı, Visual Basic'te yazılır. Aşağıda `ToTitleCase` sınıfında tek bir üye, `StringLib`, içeren StringUtil.vb için kaynak kodu verilmiştir.  
   
  [!code-vb[Conceptual.CrossLanguage#1](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.crosslanguage/vb/stringutil.vb#1)]  
   
@@ -546,13 +546,13 @@ ms.locfileid: "33579632"
   
  [!code-csharp[Conceptual.CrossLanguage#2](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.crosslanguage/cs/numberutil.cs#2)]  
   
- Tek bir derleme iki sınıflarda paketlemek için modüllerine derlemesi gerekir. Visual Basic kaynak kodunu bir modül olarak derlemek için bu komutu kullanın:  
+ Tek bir derleme için iki sınıf paketlemek için modülleri derlemeniz gerekir. Visual Basic kaynak kodunu bir modül olarak derlemek için bu komutu kullanın:  
   
 ```  
 vbc /t:module StringUtil.vb   
 ```  
   
- Visual Basic derleyici komut satırı sözdizimi hakkında daha fazla bilgi için bkz: [komut satırından derleme](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md).  
+ Visual Basic derleyici komut satırı sözdizimi hakkında daha fazla bilgi için bkz. [komut satırından derleme](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md).  
   
  C# kaynak kodunu bir modül olarak derlemek için bu komutu kullanın:  
   
@@ -560,15 +560,15 @@ vbc /t:module StringUtil.vb
 csc /t:module NumberUtil.cs  
 ```  
   
- C# derleyici komut satırı sözdizimi hakkında daha fazla bilgi için bkz: [komut satırı yapı ile csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).  
+ C# derleyici komut satırı sözdizimi hakkında daha fazla bilgi için bkz. [yapı komut satırı ile csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).  
   
- Daha sonra [bağlantı aracını (Link.exe)](https://msdn.microsoft.com/library/c1d51b8a-bd23-416d-81e4-900e02b2c129) iki modülleri derlemeye derlemek için:  
+ Daha sonra [bağlantı aracını (Link.exe)](https://msdn.microsoft.com/library/c1d51b8a-bd23-416d-81e4-900e02b2c129) iki modül bir birleştirme dosyasına derlemek için:  
   
 ```  
 link numberutil.netmodule stringutil.netmodule /out:UtilityLib.dll /dll   
 ```  
   
- Aşağıdaki örnek daha sonra çağırır `NumericLib.NearZero` ve `StringLib.ToTitleCase` yöntemleri. Visual Basic kodu ve C# kodu her iki sınıfları yöntemleri erişebilir olduğuna dikkat edin.  
+ Aşağıdaki örnek daha sonra çağırır `NumericLib.NearZero` ve `StringLib.ToTitleCase` yöntemleri. Hem Visual Basic kodunu hem de C# kod hem sınıflarını yöntemlerdeki erişmesi mümkün olduğunu unutmayın.  
   
  [!code-csharp[Conceptual.CrossLanguage#3](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.crosslanguage/cs/useutilities1.cs#3)]
  [!code-vb[Conceptual.CrossLanguage#3](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.crosslanguage/vb/useutilities1.vb#3)]  
@@ -579,11 +579,12 @@ link numberutil.netmodule stringutil.netmodule /out:UtilityLib.dll /dll
 vbc example.vb /r:UtilityLib.dll  
 ```  
   
- C# ile derlemek için derleyiciden adını değiştirmek **vbc** için **csc**ve dosya uzantısı için .cs .vb değiştirin:  
+ C# ile derlemek için derleyicinin adını değiştirmek **vbc** için **csc**ve dosya uzantısını .vb yerine .cs olarak değiştirin:  
   
 ```  
 csc example.cs /r:UtilityLib.dll  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.CLSCompliantAttribute>
+## <a name="see-also"></a>Ayrıca bkz.
+
+- <xref:System.CLSCompliantAttribute>

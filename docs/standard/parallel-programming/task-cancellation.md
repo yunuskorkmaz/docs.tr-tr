@@ -11,35 +11,36 @@ helpviewer_keywords:
 ms.assetid: 3ecf1ea9-e399-4a6a-a0d6-8475f48dcb28
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b9a9331f62ba9655c20a2e27b3a94dac1903472
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 79350178300dde2896f6b22c68d6062bbb57f700
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582694"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865637"
 ---
 # <a name="task-cancellation"></a>Görev iptali
-<xref:System.Threading.Tasks.Task?displayProperty=nameWithType> Ve <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> sınıfları, .NET Framework'teki iptal belirteçlerini kullanımı ile iptal destekler. Daha fazla bilgi için bkz: [yönetilen iş parçacıklarında iptal](../../../docs/standard/threading/cancellation-in-managed-threads.md). Görev sınıflarında iptal etme, iptal edilebilir bir işlemi temsil eden kullanıcı temsilcisiyle iptal etmeyi isteyen kod arasında yapılan bir işbirliğini içerir.  İstekte bulunan kod arama başarılı iptal içerir <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> yöntemi ve kullanıcı temsilci zamanında işlemi sonlandırılıyor. Aşağıdaki seçeneklerden birini kullanarak işlemi sonlandırabilirsiniz:  
+<xref:System.Threading.Tasks.Task?displayProperty=nameWithType> Ve <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> sınıfları, .NET Framework iptal belirteçlerini kullanımıyla iptal etmeyi destekler. Daha fazla bilgi için [yönetilen iş parçacıklarında iptal](../../../docs/standard/threading/cancellation-in-managed-threads.md). Görev sınıflarında iptal etme, iptal edilebilir bir işlemi temsil eden kullanıcı temsilcisiyle iptal etmeyi isteyen kod arasında yapılan bir işbirliğini içerir.  Başarılı bir iptal etme isteyen kod arama içerir <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> yöntemi ve işlem zamanında sonlandıran bir kullanıcı temsilcisini. Aşağıdaki seçeneklerden birini kullanarak işlemi sonlandırabilirsiniz:  
   
--   Yalnızca temsilciden döndürerek. Birçok senaryoda bu yeterlidir; Ancak, bu şekilde iptal bir görev örneği için geçiş <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType> durum değil <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> durumu.  
+-   Yalnızca temsilciden döndürerek. Birçok senaryoda bu yeterlidir; Bu şekilde iptal edilen bir görev örneği geçer ancak <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType> durumuna değil <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> durumu.  
   
--   Atma tarafından bir <xref:System.OperationCanceledException> ve onu belirtecin iptal istendi. Bunu yapmak için tercih edilen yol <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A> yöntemi. Bu şekilde iptal edilen bir görev, çağıran kodun iptal isteğine yanıt olarak verilen görevi doğrulamak için kullanabileceği İptal Edildi durumuna geçer.  
+-   Özel durum atma tarafından bir <xref:System.OperationCanceledException> ve iptal istendi belirtece geçirerek. Bunu yapmak için tercih edilen yol kullanmaktır <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A> yöntemi. Bu şekilde iptal edilen bir görev, çağıran kodun iptal isteğine yanıt olarak verilen görevi doğrulamak için kullanabileceği İptal Edildi durumuna geçer.  
   
  Aşağıdaki örnekte, özel durum oluşturan görev iptal işlemi için temel düzen gösterilmektedir. Belirtecin kullanıcı temsilcisine ve görev örneğine geçirildiğini unutmayın.  
   
  [!code-csharp[TPL_Cancellation#02](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_cancellation/cs/snippet02.cs#02)]
  [!code-vb[TPL_Cancellation#02](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_cancellation/vb/module1.vb#02)]  
   
- Daha eksiksiz bir örnek için bkz: [nasıl yapılır: bir görevi ve ait alt öğelerini iptal etme](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md).  
+ Daha eksiksiz bir örnek için bkz: [nasıl yapılır: bir görevi ve kendi alt öğelerini iptal etme](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md).  
   
- Ne zaman bir görev örneği uyan bir <xref:System.OperationCanceledException> kullanıcı kodu tarafından oluşturulan, özel durumun belirteci kendi ilişkili belirtecine (görev oluşturulan API için geçirilen bir) karşılaştırır. Aynı ve belirtecin olmaları durumunda <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> özelliği true döndürür, görev bunu iptal aktarımının olarak yorumlar ve iptal edildi durumuna geçiş yapar. Kullanmıyorsanız, bir <xref:System.Threading.Tasks.Task.Wait%2A> veya <xref:System.Threading.Tasks.Task.WaitAll%2A> görevi yalnızca durumunu ayarlar sonra görevin tamamlanmasını bekle yöntemi <xref:System.Threading.Tasks.TaskStatus.Canceled>.  
+ Olduğunda bir görev örneği uyan bir <xref:System.OperationCanceledException> kullanıcı kodu tarafından oluşturulan, özel durumun belirtecini ilişkili kendi belirteci (görevi oluşturan API'ye geçirilen bir) karşılaştırır. Aynı ve belirtecin olmaları durumunda <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> özelliği true döndürürse, görev bunu İptal işlemi Onaylandı olarak yorumlar ve iptal edildi durumuna geçer. Kullanmıyorsanız, bir <xref:System.Threading.Tasks.Task.Wait%2A> veya <xref:System.Threading.Tasks.Task.WaitAll%2A> görev yalnızca durumunu ayarlar görevi beklemek için yöntemi <xref:System.Threading.Tasks.TaskStatus.Canceled>.  
   
- İptal edildi durumuna geçiş bir görevde bekliyorsa bir <xref:System.Threading.Tasks.TaskCanceledException?displayProperty=nameWithType> özel durumu (sarmalanmış bir <xref:System.AggregateException> özel durum) oluşturulur. Bu özel durumun, hatalı bir durum yerine başarılı bir iptal işlemini gösterdiğine dikkat edin. Bu nedenle, görevin <xref:System.Threading.Tasks.Task.Exception%2A> özelliği döndürür `null`.  
+ Bir görevde iptal edildi durumuna bekliyorsanız bir <xref:System.Threading.Tasks.TaskCanceledException?displayProperty=nameWithType> özel durum (içinde sarmalanmış bir <xref:System.AggregateException> özel durum) oluşturulur. Bu özel durumun, hatalı bir durum yerine başarılı bir iptal işlemini gösterdiğine dikkat edin. Bu nedenle, görevin <xref:System.Threading.Tasks.Task.Exception%2A> özelliği döndürür `null`.  
   
- Belirtecin <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> özelliği false döndürür veya özel durumun belirteci eşleşmiyorsa görev belirteç, <xref:System.OperationCanceledException> Faulted durumuna geçiş görevi neden normal bir özel durum gibi işlem görür. Ayrıca, başka özel durumların da Görevin Hatalı durumuna geçmesine neden olacağını unutmayın. Tamamlanan görevin durumunu alma <xref:System.Threading.Tasks.Task.Status%2A> özelliği.  
+ Belirtecin <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> özelliği false döndürürse veya özel durumun belirtecini eşleşmiyorsa belirteci görevin <xref:System.OperationCanceledException> görev hatalı durumuna geçişe neden olan normal bir özel durum gibi değerlendirilir. Ayrıca, başka özel durumların da Görevin Hatalı durumuna geçmesine neden olacağını unutmayın. Tamamlanmış bir görevin durumunu alabilirsiniz <xref:System.Threading.Tasks.Task.Status%2A> özelliği.  
   
  İptal işlemi istendikten sonra görev bazı öğeleri işlemeye devam edebilir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Yönetilen İş Parçacıklarında İptal](../../../docs/standard/threading/cancellation-in-managed-threads.md)  
- [Nasıl yapılır: Bir Görevi ve Alt Öğelerini İptal Etme](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Yönetilen İş Parçacıklarında İptal](../../../docs/standard/threading/cancellation-in-managed-threads.md)  
+- [Nasıl yapılır: Bir Görevi ve Alt Öğelerini İptal Etme](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)

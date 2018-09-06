@@ -18,31 +18,31 @@ helpviewer_keywords:
 ms.assetid: 3aee2fbb-de47-4e37-8fe4-ddebb9719247
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1907841694cde82cebada4a9e73b8ce703208611
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b19bc78f44781923df6873ccc9720f4605731976
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576135"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43876066"
 ---
 # <a name="localizability-review"></a>Yerelleştirilebilirlik Gözden Geçirmesi
-Yerelleştirilebilirlik gözden geçirme, dünya çapında kullanılmaya hazır uygulama geliştirmede Ara bir adımdır. Globalized uygulama yerelleştirme için hazır ve herhangi bir kod veya özel işlem gerektiren tüm yönlerini kullanıcı arabirimini tanımlar doğrular. Bu adım ayrıca yerelleştirme işlemi işlev bozuklukları uygulamanıza tanıtılacaktır değil, sağlamaya yardımcı olur. Yerelleştirilebilirlik gözden geçirmesi tarafından gerçekleştirilen tüm sorunlar ele uygulamanızı yerelleştirme için hazır olur. Yerelleştirilebilirlik gözden geçirmesi kapsamlı ise, herhangi bir kaynak kod yerelleştirme işlemi sırasında değiştirmek olmamalıdır.  
+Yerelleştirilebilirlik gözden geçirmesi dünya çapında kullanılmaya hazır uygulama geliştirmeyi Ara bir adımdır. Genelleştirilmiş bir uygulamayı yerelleştirme için hazırdır ve herhangi bir kod veya özel işlem gerektiren kullanıcı arabirimi yönleri tanımlar doğrular. Bu adım ayrıca yerelleştirme işlemi herhangi bir işlev hatasıyla uygulamanıza neden olmaz emin olun yardımcı olur. Yerelleştirilebilirlik gözden geçirmesi tarafından oluşturulan tüm sorunları ele, uygulamanızın yerelleştirme için hazırdır. Yerelleştirilebilirlik gözden geçirmesi kapsamlı ise, yerelleştirme işlemi sırasında herhangi bir kaynak kodu değiştirmek olmamalıdır.  
   
- Yerelleştirilebilirlik gözden geçirmesi aşağıdaki üç çekler oluşur:  
+ Yerelleştirilebilirlik gözden geçirmesi aşağıdaki üç denetimleri oluşur:  
   
 -   [Genelleştirme önerileri uygulanır?](#global)  
   
--   [Kültüre duyarlı özellikleri doğru şekilde işlenir?](#culture)  
+-   [Kültüre duyarlı özellikleri doğru bir şekilde ele alınır?](#culture)  
   
--   [Uygulamanızı uluslararası verilerle sınanmıştır?](#test)  
+-   [Uygulamanızın uluslararası verilerle sınanmıştır?](#test)  
   
 <a name="global"></a>   
 ## <a name="implementing-globalization-recommendations"></a>Uygulama genelleştirme önerileri  
- Tasarlanmış ve yerelleştirme aklınızda uygulamanızla geliştirilmiştir ve öneriler, izlediyseniz ele [Genelleştirme](../../../docs/standard/globalization-localization/globalization.md) makalenin yerelleştirilebilirlik gözden geçirmesi büyük ölçüde kalite güvence geçişi olacaktır . Aksi takdirde, bu aşamada gözden geçirmeli ve uygulamak için öneriler [Genelleştirme](../../../docs/standard/globalization-localization/globalization.md)ve kaynak kodunda yerelleştirme önlemek hataları düzeltin.  
+ Tasarlanmış ve geliştirilmiş yerelleştirme aklınızda uygulamanızla ve öneriler, izlediyseniz ele [Genelleştirme](../../../docs/standard/globalization-localization/globalization.md) makalenin yerelleştirilebilirlik gözden geçirmesi kalite güvencesi geçişi büyük ölçüde olacaktır . Aksi takdirde, bu aşamada gözden geçirmeli ve uygulamak için öneriler [Genelleştirme](../../../docs/standard/globalization-localization/globalization.md)ve yerelleştirme engelleyen kaynak kodundaki hataları düzeltin.  
   
 <a name="culture"></a>   
 ## <a name="handling-culture-sensitive-features"></a>Kültüre duyarlı özellikleri işleme  
- .NET Framework tarafından kültür büyük ölçüde farklılık alanları çeşitli programlama desteği sağlamaz. Çoğu durumda, aşağıdaki gibi özellik alanları işlemek için özel kod yazmanıza vardır:  
+ .NET Framework, kültüre göre büyük ölçüde farklılık alanları çeşitli programlama desteği sağlamaz. Çoğu durumda, aşağıdaki gibi özellik alanları işlemek için özel kod yazmanız gerekir:  
   
 -   Adresleri.  
   
@@ -50,31 +50,32 @@ Yerelleştirilebilirlik gözden geçirme, dünya çapında kullanılmaya hazır 
   
 -   Kağıt boyutları.  
   
--   Ölçü birimi uzunlukları, ağırlıkları, alan, birim ve etme için kullanılır. .NET Framework ölçü arasında dönüştürme için yerleşik destek sağlamaz, ancak kullanabilirsiniz <xref:System.Globalization.RegionInfo.IsMetric%2A?displayProperty=nameWithType> özelliği aşağıdaki örnekte gösterildiği gibi belirli bir ülke veya bölge Metrik sistem kullanıp kullanmadığını belirleyin.  
+-   Ölçü birimi uzunlukları, ağırlıkları, alan, birim ve sıcaklıklar için kullanılır. .NET Framework ölçü arasında dönüştürmek için yerleşik destek sunmaz olsa da, kullanabileceğiniz <xref:System.Globalization.RegionInfo.IsMetric%2A?displayProperty=nameWithType> özelliği aşağıdaki örnekte gösterildiği gibi belirli bir ülke veya bölge Ölçüm sistemi kullanıp kullanmadığını belirlemek için.  
   
      [!code-csharp[Conceptual.Localizability#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.localizability/cs/ismetric1.cs#1)]
      [!code-vb[Conceptual.Localizability#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.localizability/vb/ismetric1.vb#1)]  
   
 <a name="test"></a>   
 ## <a name="testing-your-application"></a>Uygulamanızı sınama  
- Uygulamanızı yerelleştirme önce uluslararası işletim sistemi sürümlerinde uluslararası verileri kullanarak test etmeniz gerekir. Çoğu kullanıcı arabirimi, bu noktada yerelleştirilmiş olabilir değil de, aşağıdaki gibi sorunlar algılayabilir olacaktır:  
+ Uygulamanızı yerelleştirmek önce uluslararası işletim sistemi sürümlerinde uluslararası veriler kullanarak test etmeniz gerekir. Çoğu kullanıcı arabiriminin bu noktada yerelleştirilmez olsa da, aşağıdaki gibi sorunları algılamak mümkün olacaktır:  
   
--   Doğru işletim sistemi sürümleri arasında serisini değil serileştirilmiş veriler.  
+-   Doğru işletim sistemi sürümleri arasında serisini değil, serileştirilmiş veriler.  
   
--   Geçerli kültür kuralları yansıtmaz sayısal veriler. Örneğin, numaraları yanlış Grup ayırıcılar, ondalık ayırıcı veya para birimi simgeleri görüntülenebilir.  
+-   Geçerli kültürün kuralları yansıtmaz sayısal veriler. Örneğin, sayılar, yanlış Grup ayırıcıları, ondalık ayırıcı veya para birimi simgeleri görüntülenebilir.  
   
--   Geçerli kültür kuralları yansıtmaz tarih ve saat verileri. Örneğin, ayı ve günü temsil eden sayı yanlış sırayla görünebilir, tarih ayırıcıları yanlış olabilir veya saat dilimi bilgileri hatalı olabilir.  
+-   Geçerli kültürün kuralları yansıtmaz tarih ve saat verileri. Örneğin, ayı ve günü temsil eden sayı yanlış sırada görünebilir, tarih ayırıcı yanlış olabilir veya saat dilimi bilgilerini yanlış olabilir.  
   
--   Varsayılan kültürü uygulamanız için tanımladığınız değil çünkü bulunamayan kaynaklar.  
+-   Bir varsayılan kültür, uygulamanız için belirlediğiniz değil çünkü bulunamayan kaynaklar.  
   
--   Olağan dışı bir sırada belirli kültür için görüntülenen dizeleri.  
+-   Olağan dışı bir sırada belirli bir kültür için görüntülenen dize.  
   
--   Karşılaştırmaları veya beklenmeyen sonuçlar döndürebilir karşılaştırmaları eşitlik için dize.  
+-   Dize karşılaştırmaları veya beklenmeyen sonuçlar döndüren eşitlik karşılaştırmaları.  
   
- Artık Uygulamanızı geliştirirken Genelleştirme önerileri ve ardından, kültüre duyarlı özellikleri, doğru ele ve tanımlanan ve test sırasında çıkan yerelleştirme sorunlar ele, sonraki adıma geçebilirsiniz [Yerelleştirme](../../../docs/standard/globalization-localization/localization.md).  
+ Sizin Uygulamanızı geliştirirken Genelleştirme önerileri takip, kültüre duyarlı özellikleri doğru işlendiğini ve ve test sırasında çıkan Yerelleştirme sorunları ele, sonraki adıma geçebilirsiniz [Yerelleştirme](../../../docs/standard/globalization-localization/localization.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Genelleştirme ve Yerelleştirme](../../../docs/standard/globalization-localization/index.md)  
- [Yerelleştirme](../../../docs/standard/globalization-localization/localization.md)  
- [Genelleştirme](../../../docs/standard/globalization-localization/globalization.md)  
- [Masaüstü Uygulamalarındaki Kaynaklar](../../../docs/framework/resources/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Genelleştirme ve Yerelleştirme](../../../docs/standard/globalization-localization/index.md)  
+- [Yerelleştirme](../../../docs/standard/globalization-localization/localization.md)  
+- [Genelleştirme](../../../docs/standard/globalization-localization/globalization.md)  
+- [Masaüstü Uygulamalarındaki Kaynaklar](../../../docs/framework/resources/index.md)

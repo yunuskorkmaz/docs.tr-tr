@@ -1,5 +1,5 @@
 ---
-title: Sınıf ve yapı arasında seçim yapma
+title: Sınıf ile yapı arasında seçim yapma
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -14,27 +14,27 @@ helpviewer_keywords:
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8bb05b825113c025781a790dc206d500633a3b08
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 06661cb2c34d1da9085fa2129cb0c3307b99097e
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573587"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865559"
 ---
-# <a name="choosing-between-class-and-struct"></a>Sınıf ve yapı arasında seçim yapma
-Her framework Tasarımcısı bakarken temel tasarım kararlarından biri bir türü (bir başvuru türü) bir sınıf veya yapı (bir değer türü) olarak tasarlamanız verilip biridir. Başvuru türleri ve değer türlerini davranış farklılıkları iyi anlaşılmasını, bu seçenek yaparken önemlidir.  
+# <a name="choosing-between-class-and-struct"></a>Sınıf ile yapı arasında seçim yapma
+Her framework Tasarımcısı yüz temel tasarım kararlarından biri mi (bir başvuru türü) bir sınıf veya yapı (bir değer türü) olarak bir tür tasarlamak biridir. Başvuru türleri ve değer türlerinin davranış farklılıkları iyi anlaşılmasını, bu seçim yaparken önemlidir.  
   
- İlk yığın biz başvuru türleri değer türleri ya yığında ayrılan veya içeren içinde satır içi türleri ve ne zaman serbest ancak yığında ayrılmış ve atık toplanan olmasıdır değerlendirir değer türleri ve başvuru türleri arasında fark unwinds veya ne zaman, içeren türde serbest. Bu nedenle, genel ayırma ve başvuru türleri ayırma kaldırma işlemleri ucuz ayırma ve değer türlerini ayırma kaldırma işlemleri altındadır.  
+ İlk yığın başvuru türleri ve değer türleri biz başvuru türleri ise, değer türleri yığın üzerinde ayrılan veya içeren satır içi türleri ve ne zaman serbest ve atık toplanan yığında ayrılmış olmasıdır dikkate alacaktır fark geriye doğru alır veya ne zaman, içeren türlerine serbest bırakıldı. Bu nedenle, genel ayırma ve başvuru türleri deallocations ucuz ayırmaları ve değer türlerinin deallocations altındadır.  
   
- Ardından, başvuru türleri bir dizi genişletme öğeleri olan bir dizi anlamı satır sonu, öbek üzerinde bulunan başvuru türündeki örneklerin yalnızca başvurular tahsis edilir. Değer türü diziler satır içi dizi öğeleri değer türü gerçek örneklerini olduğu anlamına gelir, ayrılır. Bu nedenle, ayırma ve ayırma kaldırma işlemleri değer türü dizi ayırma ve başvuru türü dizi ayırma kaldırma işlemleri ucuz. Ayrıca, çoğu durumda değer türü diziler kadar daha iyi yere göre başvuru sergiler.  
+ Ardından, diziler başvuru türleridir çıkış dizi anlamı satır dışı, yalnızca başvuru yığında bulunan başvuru türünün örneğini tahsis edilir. Değer türü diziler, dizi öğelerinin değer türü gerçek örneklerini olduğu anlamına satır içi, ayrılır. Bu nedenle, ayırma ve değer türü diziler deallocations ayırmaları ve başvuru türü diziler deallocations ucuz. Ayrıca, çoğu durumda, değer türü diziler çok daha iyi bir yerleşim yeri başvuru sergiler.  
   
- Sonraki fark bellek kullanımı ilişkilidir. Değer türleri, ne zaman bir başvuru türü veya uyguladıkları arabirimlerinden biri, cast Kutulu. Sarmalanmamış Al ne zaman değer türüne dönüştürün. Kutuları yığında ayrılmış ve atık olarak toplanmış, çok fazla kutulama ve kutudan çıkarma nesneler olduğundan öbek, atık toplayıcı ve sonuçta uygulamanın performansını olumsuz etkileyebilir olabilir.  Başvuru türleri cast olarak buna karşılık, böyle bir kutulama oluşur.  
+ Sonraki farka bellek kullanımı ile ilgilidir. Değer türleri, bir başvuru türü veya uyguladıkları arabirimlerinden birini olduğunda cast Kutulu. Kutulanmamış aldıkları ne zaman değer türüne dönüştürme. Kutuları yığında ayrılır ve atık olarak toplanmış, çok fazla kutulama ve kutudan çıkarma nesneler olduğundan, yığın, atık toplayıcı ve nihai olarak uygulamanın performansı üzerinde olumsuz bir etkiye sahip olabilir.  Buna karşılık, başvuru türleri dönüştürme gibi böyle bir kutulama gerçekleşir.  
   
- Ardından, tüm değer değer türü atamaları kopyalama ancak başvuru türü atamalarıyla başvuru kopyalayın. Bu nedenle, büyük referans tür atamaları büyük değer türleri atamaları ucuz.  
+ Ardından, değer türü atamaları tüm değeri kopyalayın ise başvuru türü atamaları başvuru kopyalayın. Bu nedenle, büyük referans tür atamaları büyük değer türlerinin atamaları ucuz.  
   
- Son olarak, değer türleri değeriyle geçirilir ancak başvuru türleri başvuruya göre geçirilir. Bir başvuru türünde bir örnek yapılan değişiklikler tüm başvuruları örneğini işaret etkiler. Değer türü örnekleri değeriyle geçirildiğinde kopyalanır. Bir değer türü örneği değiştirildiğinde, Elbette kendi kopyaları hiçbirini etkilemez. Kopya açıkça kullanıcı tarafından oluşturulmaz, ancak bağımsız değişkenler geçirilir ya da değerleri döndürülen dönüş örtük olarak oluşturulmuş olduğundan değiştirilebilir değer türleri birçok kullanıcılar için kafa karıştırıcı olabilir. Bu nedenle, değer türleri sabit olmalı.  
+ Son olarak, değer türleri değere göre geçirilir ancak başvuru türleri başvuruya göre iletilir. Bir başvuru türünün örneğini yapılan değişiklikler tüm başvuruları örneğine işaret etkiler. Değer türü örnekleri değere göre geçirildiğinde kopyalanır. Bir değer türü örneği değiştirildiğinde, Elbette herhangi birini kendi kopya etkilemez. Kopya açıkça kullanıcı tarafından oluşturulmaz, ancak bağımsız değişkenler geçirilir veya dönüş değerleri döndürülür, örtük olarak oluşturulur, değiştirilebilir bir değer türleri birçok kullanıcılar için kafa karıştırıcı olabilir. Bu nedenle, değer türleri sabit olmalıdır.  
   
- Altın kural, bir çerçeve türlerinde çoğunluğu sınıfları olmalıdır. Bununla birlikte, içinde bir değer türü özelliklerini yapılar kullanmak daha uygun kolaylaştırır bazı durumlar vardır.  
+ Bir kural karşısında, bir Framework türlerinin çoğu sınıflar olmalıdır. Ancak, bir değer türü özelliklerini yapıları kullanmak daha uygun hale bazı durumlar vardır.  
   
  **✓ CONSIDER** türünün örnekleri küçük ve yaygın olarak kısa süreli veya diğer nesneleri genellikle katıştırılmış yapı yerine bir sınıf tanımlama.  
   
@@ -42,18 +42,19 @@ Her framework Tasarımcısı bakarken temel tasarım kararlarından biri bir tü
   
 -   Mantıksal olarak, ilkel türler için benzer tek bir değeri temsil eder (`int`, `double`vb..).  
   
--   Bir örnek boyutu altında 16 bayt vardır.  
+-   Bir örnek boyutu altında 16 bayt var.  
   
--   Değişmez.  
+-   Sabittir.  
   
--   Bunu sık Kutulu gerekmez.  
+-   Bu sık Kutulu gerekmez.  
   
- Diğer durumlarda, sınıflar türlerinizi tanımlamanız gerekir.  
+ Diğer tüm durumlarda, türlerinizi sınıfları olarak tanımlamanız gerekir.  
   
- *Bölümleri © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
+ *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*  
+ *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Tür Tasarımı Yönergeleri](../../../docs/standard/design-guidelines/type.md)  
- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Tür Tasarımı Yönergeleri](../../../docs/standard/design-guidelines/type.md)  
+- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)

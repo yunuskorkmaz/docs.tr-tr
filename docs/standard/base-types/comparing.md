@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38d6e979cd00bd113339a69b3ea6646c98f379d6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b1fa907be4571e0a5f95ab798210bedb154e9170
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43735169"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43872842"
 ---
 # <a name="comparing-strings-in-net"></a>. NET'te dizeleri karşılaştırma
 .NET, dizeleri karşılaştırmak için çeşitli yöntemler sunar. Aşağıdaki tabloda, listeler ve değer karşılaştırma yöntemleri açıklar.  
@@ -150,7 +150,7 @@ ms.locfileid: "43735169"
   
  Her iki yöntem birlikte kullanıldığında faydalı **String.Remove** yöntemi. Kullanabilirsiniz **IndexOf** veya **lastIndexOf** bir karakterin konumu almak ve sonra o konuma sağlamak için yöntemleri **Kaldır** kaldırmak için yöntemi bir karakter veya söz konusu karakteri ile başlayan bir sözcük.  
   
-## <a name="see-also"></a>Ayrıca bkz.  
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Temel Dize İşlemleri](../../../docs/standard/base-types/basic-string-operations.md)  
 - [Kültüre Duyarsız Dize İşlemlerini Gerçekleştirme](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)

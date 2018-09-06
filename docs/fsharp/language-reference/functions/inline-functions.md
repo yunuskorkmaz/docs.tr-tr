@@ -1,47 +1,46 @@
 ---
 title: Satır İçi İşlevler (F#)
-description: 'Doğrudan çağırma koda tümleşik F # satır içi işlevler kullanmayı öğrenin.'
+description: 'Doğrudan çağıran koda tümleşik olan F # satır içi işlevleri hakkında bilgi edinin.'
 ms.date: 05/16/2016
-ms.openlocfilehash: d265f9b4e828946c510bd8e84b14d5236ab511fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 47fca0fe34630792aeb0908b0cee02a927e2567d
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563514"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43875063"
 ---
 # <a name="inline-functions"></a>Satır İçi İşlevler
 
-*Satır içi işlevler* doğrudan çağıran koda tümleşik işlevlerdir.
+*Satır içi işlevleri* doğrudan çağıran kodun içine tümleştirilmiştir işlevlerdir.
 
+## <a name="using-inline-functions"></a>Satır içi işlevleri kullanma
 
-## <a name="using-inline-functions"></a>Satır içi işlevler kullanma
-Statik tür parametreleri kullandığınızda, türü parametrelere göre parametreli hiçbir işlev satır içi olması gerekir. Bu, bu tür parametreleri derleyici çözebilirsiniz garanti eder. Sıradan genel tür parametreleri kullandığınızda, bu tür bir kısıtlama yoktur.
+Statik tür parametreleri kullandığınızda, tür parametreleri tarafından parametre haline getirilen tüm İşlevler, satır içi olması gerekir. Bu, derleyici bu tür parametreleri çözümleyebileceğinden garanti eder. Normal genel tür parametrelerini kullandığınızda, bu tür bir kısıtlama yoktur.
 
-Üye kısıtlamaları kullanımını etkinleştirmenin dışında satır içi işlevler kodu en iyi duruma getirme yararlı olabilir. Ancak, satır içi işlevlerin aşırı kullanımı kodunuzu derleyici en iyi duruma getirme ve kitaplık işlevleri uyarlamasını değişiklikler daha az dayanıklı olması neden olabilir. Bu nedenle, diğer tüm iyileştirme tekniklerini denediyseniz sürece satır içi işlevler için en iyi duruma getirme yapmaktan kaçınmalısınız. Bir işlev veya yöntem satır içi yapma performansı artırır ancak, her zaman geçerli değildir. Bu nedenle, tüm verilen işlev satır içi yapmadan aslında pozitif bir etkiye sahip olup olmadığını doğrulamak için performans ölçümleri kullanmalısınız.
+Üye kısıtlamaları kullanımını etkinleştirme dışında satır içi işlevler kodu en iyi duruma getirme yararlı olabilir. Ancak, satır içi işlevlerin aşırı kodunuzu daha az derleyici iyileştirmeleri ve kitaplık işlevleri uygulaması değişikliklere dayanıklı olmasını neden olabilir. Bu nedenle, tüm iyileştirme teknikleri denediniz mi sürece iyileştirme için satır içi işlevleri kullanarak kaçınmanız gerekir. Satır içi işlev veya metot yapmak bazen performansı geliştirebilir, ancak bu her zaman böyle değildir. Bu nedenle, herhangi belirli bir işlevi satır içi yapmadan aslında olumlu bir etkiye sahip olduğunu doğrulamak için performans ölçümleri kullanmalısınız.
 
-`inline` Değiştiricisi işlevler en üst düzeyinde, modülü düzeyinde ya da bir sınıf yöntemi düzeyinde uygulanabilir.
+`inline` Değiştiricisi işlevleri en üst düzeyinde, Modül düzeyinde veya bir sınıftaki yöntemi düzeyinde uygulanabilir.
 
-Aşağıdaki kod örneği, en üst düzeyinde, satır içi örnek yöntemi ve satır içi statik yöntemi satır içi işlev gösterir.
+Aşağıdaki kod örneği bir satır içi işlevi en üst düzey, bir satır içi örnek yöntemi ve bir satır içi statik bir yöntemi gösterir.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-3/snippet201.fs)]
-    
-## <a name="inline-functions-and-type-inference"></a>Satır içi işlevler ve tür çıkarımı
-Varlığını `inline` etkiler çıkarım yazın. Satır içi işlevler statik olarak çözümlenmiş tür parametreleri, çünkü olmayan satır içi işlevler edilemez ise. Aşağıdaki kod örneğinde bir durumu gösterir nerede `inline` statik olarak çözümlenmiş tür parametresi olan bir işlev kullandığından yararlıdır `float` dönüşüm işleci.
+
+## <a name="inline-functions-and-type-inference"></a>Satır içi işlevleri ve tür çıkarımı
+
+Varlığını `inline` tür çıkarımı etkiler. Satır içi işlevler statik olarak çözümlenmiş tür parametreleri, ancak satır içi işlevleri kullanılamaz olmasıdır. Aşağıdaki kod örneği bir durumu gösterir. burada `inline` bir statik olarak çözümlenen tür parametresi olan bir işlev kullandığından yararlıdır `float` dönüştürme işleci.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-3/snippet202.fs)]
 
-Olmadan `inline` değiştiricisi, tür çıkarımı zorlar belirli bir türdeki bu durumda yapılacak işlevi `int`. Ancak `inline` değiştiricisi, işlevi bir statik olarak çözümlenmiş tür parametreye sahip olayla de. İle `inline` değiştiricisi, türü olayla aşağıdaki olmalıdır:
+Olmadan `inline` değiştiricisi, tür çıkarımı zorlar bu durumda, belirli bir türdeki yararlanmak için işlev `int`. Ancak `inline` statik olarak çözümlenmiş tür parametresi için de değiştiricisi, işlevin çıkarılan. İle `inline` aşağıdaki olmasını çıkarılan değiştiricisi, türü:
 
 ```fsharp
 ^a -> unit when ^a : (static member op_Explicit : ^a -> float)
 ```
 
-Bu işlev bir dönüştürme destekleyen herhangi bir türü kabul eden anlamına gelir **float**.
+Bu işlev dönüştürmeyi destekleyen herhangi bir türü kabul eden anlamına gelir **float**.
 
+## <a name="see-also"></a>Ayrıca bkz.
 
-## <a name="see-also"></a>Ayrıca Bkz.
-[İşlevler](index.md)
-
-[Kısıtlamalar](../generics/constraints.md)
-
-[Statik Olarak Çözümlenmiş Tür Parametreleri](../generics/statically-resolved-type-parameters.md)
+- [İşlevler](index.md)
+- [Kısıtlamalar](../generics/constraints.md)
+- [Statik Olarak Çözümlenmiş Tür Parametreleri](../generics/statically-resolved-type-parameters.md)

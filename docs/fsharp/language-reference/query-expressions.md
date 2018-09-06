@@ -1,19 +1,20 @@
 ---
 title: Sorgu İfadeleri (F#)
-description: 'Sorgu ifadesi LINQ F # programlama dili desteği hakkında bilgi edinin.'
+description: 'F # programlama dilinin LINQ için sorgu ifade desteği hakkında bilgi edinin.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 367b362f9f5bd8cbac5fbadd16145bf8047a801d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6586d991dde550380d04c4d9831bb954eb94a715
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43867952"
 ---
 # <a name="query-expressions"></a>Sorgu İfadeleri
 
 > [!NOTE]
-Bu makalede API başvuru bağlantılar için MSDN götürür.  Docs.microsoft.com API Başvurusu tamamlanmadı.
+Bu makaledeki API başvuru bağlantıları için MSDN sürer.  Docs.microsoft.com API başvuru tamamlanmadı.
 
-Sorgu ifadeleri, bir veri kaynağı sorgulamak ve verileri istediğiniz biçimde yerleştirmek etkinleştirin. Sorgu ifadeleri F # üzerinde LINQ için destek sağlar.
+Sorgu ifadeleri, bir veri kaynağı sorgulayan ve istenen biçimde verilerinizden sağlar. Sorgu ifadeleri, F # üzerinde LINQ için destek sağlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -22,7 +23,8 @@ query { expression }
 ```
 
 ## <a name="remarks"></a>Açıklamalar
-Sorgu ifadeleri, hesaplama ifadesi sequence ifadeleri benzer türüdür. Yalnızca bir sıra ifadesi kodda sağlayarak bir sıra belirtmek gibi bir sorgu ifadesinde kod sağlayarak bir veri kümesi belirtin. Bir sıra ifadesinde `yield` anahtar sözcüğü elde edilen dizisinin bir parçası döndürülecek veri tanımlar. Sorgu ifadelerinde `select` anahtar sözcüğü aynı işlevi gerçekleştirir. Ek olarak `select` anahtar sözcüğü, F # de destekler SQL SELECT deyimine bölümlerini benzer sorgu işleçleri sayısı. Basit sorgu ifadesi, Northwind OData kaynağına bağlar kod ile birlikte bir örneği burada verilmiştir.
+
+Sorgu ifadeleri, hesaplama ifadesi dizi ifadeleri benzer türüdür. Yalnızca bir sıralama ifadesi kodda sağlayarak bir sıra belirtmek gibi bir sorgu ifadesinde kod sağlayarak bir veri kümesini belirtin. Sırası ifadesindeki `yield` anahtar sözcüğü, sonuçta elde edilen dizisinin bir parçası döndürülecek veri tanımlar. Sorgu ifadelerinde `select` anahtar sözcüğü, aynı işlevi gerçekleştirir. Ek olarak `select` anahtar sözcüğü, F # ayrıca destekler çok benzer bir SQL SELECT deyimi bölümleri olan sorgu işleçlerini sayısı. Burada, basit bir sorgu ifadesinin, Northwind OData kaynağına bağlar koduyla birlikte bir örnek verilmiştir.
 
 ```fsharp
 // Use the OData type provider to create types that can be used to access the Northwind database.
@@ -44,23 +46,23 @@ query1
 |> Seq.iter (fun customer -> printfn "Company: %s Contact: %s" customer.CompanyName customer.ContactName)
 ```
 
-Önceki kod örneğinde sorgu ifadesi süslü ayraçlar içinde kullanılabilir. İfade kod anlamı, sorgu sonuçlarında veritabanındaki Müşteriler tablosunda her müşteri döndürür. Sorgu ifadeleri dönüş uygulayan bir tür <xref:System.Linq.IQueryable%601> ve <xref:System.Collections.Generic.IEnumerable%601>, ve bunlar kullanarak yinelendiğinde [Seq Modülü](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) örnek olarak gösterir.
+Önceki kod örneğinde, küme ayraçları içine sorgu ifadesidir. İfade kodun anlamı, her müşteri sorgu sonuçlarında veritabanındaki Müşteriler tablosunu döndürür. Sorgu ifadeleri uygulayan türü döndürmek <xref:System.Linq.IQueryable%601> ve <xref:System.Collections.Generic.IEnumerable%601>, ve bunlar kullanılarak yinelenir [Seq Modülü](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) örnek olarak gösterilmektedir.
 
-Her hesaplama ifadesi türü bir oluşturucu sınıftan yerleşik olarak bulunur. Sorgu hesaplama ifadesi Oluşturucu sınıfı olan `QueryBuilder`. Daha fazla bilgi için bkz: [hesaplama ifadeleri](computation-expressions.md) ve [Linq.QueryBuilder sınıfı](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d).
-
+Her hesaplama ifadesi türü bir oluşturucu sınıftan yerleşik olarak bulunur. Sorgu hesaplama ifadesi Oluşturucu sınıfı olan `QueryBuilder`. Daha fazla bilgi için [hesaplama ifadeleri](computation-expressions.md) ve [Linq.QueryBuilder sınıfı](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d).
 
 ## <a name="query-operators"></a>Sorgu işleçleri
-Sorgu işleçleri, döndürülen kayıt ölçütleri yerleştirilecek gibi sorgu ayrıntılarını belirtmenize olanak verir veya sonuçlarını sıralama düzenini belirtin. Sorgu kaynağı sorgu işleci desteklemesi gerekir. Desteklenmeyen sorgu işleci kullanmayı denerseniz, `System.NotSupportedException` oluşturulur.
 
-SQL çevrilebilecek ifadeleri sorgu ifadelerinde izin verilir. Kullandığınızda Örneğin, hiçbir işlev çağrılarına ifadelerde izin `where` sorgu işleci.
+Sorgu işleçleri döndürülecek kayıtları ölçütleri koymak gibi farklı olarak sorgunun ayrıntıları belirtmenize olanak verir veya sonuçlarını sıralama düzenini belirtin. Sorgu kaynağı sorgu işleci desteklemesi gerekir. Desteklenmeyen sorgu operatörün kullanmayı denerseniz `System.NotSupportedException` oluşturulur.
 
-Tablo 1 kullanılabilir sorgu işleçleri gösterir. Ayrıca, SQL sorguları ve eşdeğer F # sorgu ifadeleri bu konunun ilerleyen bölümlerinde karşılaştırır tablo2 bakın. Bazı sorgu işleçleri bazı türü sağlayıcıları tarafından desteklenmez. Özellikle, OData türü sağlayıcısı OData sınırlamaları nedeniyle destekliyorsa sorgu işleçleri sınırlıdır. Daha fazla bilgi için bkz: [ODataService türü sağlayıcısı (F #)](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e).
+Sorgu ifadelerinde yalnızca SQL çevrilebilir ifadelere izin veriliyor. Kullandığınızda, hiçbir işlev çağrılarına ifadelerinde izin `where` sorgu işleci.
+
+Tablo 1 kullanılabilir sorgu işleçlerine gösterir. Ayrıca, SQL sorguları ve eşdeğer F # sorgu ifadeleri bu konunun ilerleyen bölümlerinde karşılaştıran Table2 bakın. Bazı sorgu işleçleri, bazı tür sağlayıcıları tarafından desteklenmez. Özellikle, OData tür sağlayıcısını odata'da sınırlamaları nedeniyle desteklediği sorgu işleçleri sınırlıdır. Daha fazla bilgi için [ODataService tür sağlayıcısı (F #)](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e).
 
 Bu tablo aşağıdaki biçimde bir veritabanı varsayılır:
 
 ![Örnek veritabanı diyagramı](../media/StudentCourseDB.png)
 
-Kod izleyin tablolarda ayrıca aşağıdaki veritabanı bağlantı kodu varsayar. Projeleri System.Data, System.Data.Linq ve FSharp.Data.TypeProviders derlemelerine başvurular eklemeniz gerekir. Bu veritabanı oluşturan kodu, bu konunun sonunda dahil edilir.
+Aşağıdaki tablolarda kod ayrıca aşağıdaki veritabanı bağlantı kodu varsayar. Projeleri System.Data System.Data.Linq ve FSharp.Data.TypeProviders derlemesine ilişkin başvurular eklemeniz gerekir. Bu veritabanı oluşturan kodu, bu konunun sonunda dahildir.
 
 ```fsharp
 open System
@@ -86,7 +88,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
   </tr>
   <tr>
   <td><code>contains</code></td>
-<td>Seçilen öğeleri belirtilen bir öğe içerip içermediğini belirler.<br/><br/>
+<td>Seçilen öğeleri belirtilen öğeyi içerip içermediğini belirler.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -98,7 +100,6 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </td>
 </tr>
 
-
 <tr>
   <td><code>count</code></td><td>Seçilen öğelerin sayısını döndürür.<br/><br/>
 
@@ -109,8 +110,9 @@ let data = [ 1; 5; 7; 11; 18; 21]
 }
 </code></pre>
 
-</td></tr><tr>
-<td><code>last</code></td><td>Şu ana kadar seçili olanlar son öğesinden seçer.<br/><br/>
+</td></tr>
+<tr>
+<td><code>last</code></td><td>Şu ana kadar seçilenlerle son öğesi seçer.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for number in data do
@@ -118,18 +120,19 @@ let data = [ 1; 5; 7; 11; 18; 21]
 }
 </code></pre>
 
-</td></tr><tr>
-<td><code>lastOrDefault</code></td><td>Hiçbir öğe bulunursa, o ana kadarki Seçili olanlar veya varsayılan değeri, son öğe seçer.<br/><br/>
+</td></tr>
+<tr>
+<td><code>lastOrDefault</code></td><td>Şu ana kadar seçilenlerle veya varsayılan değeri son öğesi herhangi bir öğe bulunursa seçer.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for number in data do
-    where (number < 0)
+    where (number &lt; 0)
     lastOrDefault
 }
 </code></pre>
 
 </td></tr><tr>
-<td><code>exactlyOne</code></td><td>Şu ana kadar seçili tek, belirli öğesini seçer. Birden çok öğe varsa, özel durum oluşur.<br/><br/>
+<td><code>exactlyOne</code></td><td>Şu ana kadar seçilen tek, belirli öğe seçer. Birden çok öğe varsa, bir özel durum oluşturulur.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -140,7 +143,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>exactlyOneOrDefault</code></td><td>Bu öğenin bulunamaması durumunda kadarki Seçili olanlar veya varsayılan bir değer tek, belirli öğesinin seçer.<br/><br/>
+<td><code>exactlyOneOrDefault</code></td><td>Bu öğenin bulunamaması durumunda tek, belirli öğesine kadar seçilenlerle veya varsayılan bir değer seçer.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -151,7 +154,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>headOrDefault</code></td><td>Öğe sırası içeriyorsa, o ana kadarki Seçili olanlar veya varsayılan değeri ilk öğesi seçer.<br/><br/>
+<td><code>headOrDefault</code></td><td>Sıra hiçbir öğe içeriyorsa şimdiye seçilenlerle veya varsayılan değeri ilk öğesi seçer.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -161,7 +164,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>select</code></td><td>Şu ana kadar Seçili öğelerin her birini projeleri.<br/><br/>
+<td><code>select</code></td><td>Şu ana kadar Seçili öğelerin her biri yansıtıyor.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -170,7 +173,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>where</code></td><td>Belirtilen bir koşul temel öğeleri seçer.<br/><br/>
+<td><code>where</code></td><td>Belirtilen bir koşulu temel öğeleri seçer.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -180,7 +183,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>minBy</code></td><td>Şu ana kadar seçili her öğe için bir değer seçer ve sonuçta elde edilen en küçük değer döndürür.<br/><br/>
+<td><code>minBy</code></td><td>Şu ana kadar seçilen her öğe için bir değer seçer ve en düşük sonuç değerini döndürür.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -189,7 +192,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>maxBy</code></td><td>Şu ana kadar seçili her öğe için bir değer seçer ve en çok sonuç değeri döndürür.<br/><br/>
+<td><code>maxBy</code></td><td>Şu ana kadar seçilen her öğe için bir değer seçer ve en fazla sonuç değerini döndürür.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -198,7 +201,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>groupBy</code></td><td>Belirtilen bir anahtar Seçici göre kadarki seçili öğeleri gruplandırır.<br/><br/>
+<td><code>groupBy</code></td><td>Şu ana kadar göre belirtilen bir anahtar Seçici seçili öğeleri gruplandırır.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -208,7 +211,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>sortBy</code></td><td>Şu ana kadar artan sırada belirtilen sıralama anahtarı tarafından seçilen öğeleri sıralar.<br/><br/>
+<td><code>sortBy</code></td><td>Belirtilen bir sıralama anahtarı artan düzende şimdiye seçili öğeleri sıralar.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -218,7 +221,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>sortByDescending</code></td><td>Şu ana kadar azalan sırada belirtilen sıralama anahtarı tarafından seçilen öğeleri sıralar.<br/><br/>
+<td><code>sortByDescending</code></td><td>Şu ana kadar azalan sırada belirli bir sıralama anahtarı seçili öğeleri sıralar.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -228,7 +231,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenBy</code></td><td>Bir sonraki azalan sırada belirtilen sıralama anahtarı tarafından o ana kadarki seçili öğeleri sıralamasını gerçekleştirir. Bu işleç yalnızca sonra kullanılabilir bir <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, veya <code>thenByDescending</code>.<br/><br/>
+<td><code>thenBy</code></td><td>Bir sonraki şimdiye artan sırada belirli bir sıralama anahtarı tarafından seçilen öğelerin sıralama gerçekleştirir. Bu işleç sadece sonra kullanılabilir bir <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, veya <code>thenByDescending</code>.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -240,7 +243,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenByDescending</code></td><td>Bir sonraki azalan sırada belirtilen sıralama anahtarı tarafından kadarki seçili öğeleri sıralama gerçekleştirir. Bu işleç yalnızca sonra kullanılabilir bir <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, veya <code>thenByDescending</code>.<br/><br/>
+<td><code>thenByDescending</code></td><td>Bir sonraki azalan sırada belirtilen sıralama anahtarı tarafından şimdiye Seçili öğelerin sıralama gerçekleştirir. Bu işleç sadece sonra kullanılabilir bir <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, veya <code>thenByDescending</code>.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -252,7 +255,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>groupValBy</code></td><td>Şu ana kadar seçili her öğe için bir değer seçer ve öğeleri tarafından verilen anahtar gruplandırır.<br/><br/>
+<td><code>groupValBy</code></td><td>Şu ana kadar seçilen her öğe için bir değer seçer ve öğeleri verilen anahtara göre gruplandırır.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -262,7 +265,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>join</code></td><td>İki anahtarları eşleşmesini temel alan seçili değer kümesine hatalarla ilintilidir. Anahtarları = geçici sırasını oturum bir birleşim ifadesinde Not önemlidir. Birleşimlerde sonra satır bölerseniz tüm, <code>-&gt;</code> sembolü girinti olmalıdır girintili en az durum anahtar sözcüğü <code>for</code>.<br/><br/>
+<td><code>join</code></td><td>İki anahtarların eşleşmesi temeline göre seçilen değerlerin kümesini ilişkilendirir. Bir birleştirme ifadesinde = geçici anahtarlar sırasını oturum Not büyük/küçük harf önemlidir. Birleştirmelerdeki sonra satır bölmeniz tüm, <code>-&gt;</code> sembolü girinti olmalıdır girintili en az anahtar sözcüğü sunulan ürünün kendinde <code>for</code>.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -273,7 +276,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>groupJoin</code></td><td>İki anahtarları eşleşmesini temel alan seçili değer kümesine karşılık gelen ve sonuçları gruplandırır. Anahtarları = geçici sırasını oturum bir birleşim ifadesinde Not önemlidir.<br/><br/>
+<td><code>groupJoin</code></td><td>İki anahtarların eşleşmesi temeline göre seçilen değerlerin kümesini ilişkilendirir ve sonuçları gruplandırır. Bir birleştirme ifadesinde = geçici anahtarlar sırasını oturum Not büyük/küçük harf önemlidir.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -287,7 +290,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>leftOuterJoin</code></td><td>İki anahtarları eşleşmesini temel alan seçili değer kümesine karşılık gelen ve sonuçları gruplandırır. Bir grubu tek varsayılan bir değerle, herhangi bir grup boşsa, bunun yerine kullanılır. Anahtarları = geçici sırasını oturum bir birleşim ifadesinde Not önemlidir.<br/><br/>
+<td><code>leftOuterJoin</code></td><td>İki anahtarların eşleşmesi temeline göre seçilen değerlerin kümesini ilişkilendirir ve sonuçları gruplandırır. Herhangi bir grup boşsa, tek bir varsayılan değeri olan bir grubu yerine kullanılır. Bir birleştirme ifadesinde = geçici anahtarlar sırasını oturum Not büyük/küçük harf önemlidir.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -299,7 +302,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>sumByNullable</code></td><td>Şu ana kadar seçili her öğe için boş değer atanabilir bir değer seçer ve bu değerlerin toplamını döndürür. Varsa boş değer atanabilir bir değeri yok sayılır.<br/><br/>
+<td><code>sumByNullable</code></td><td>Şu ana kadar seçilen her öğe için boş değer atanabilir bir değer seçer ve bu değerlerin toplamını döndürür. Varsa boş değer atanabilir bir değer yok, göz ardı edilir.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -308,7 +311,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>minByNullable</code></td><td>Şu ana kadar seçili her öğe için boş değer atanabilir bir değer seçer ve bu değerleri en az döndürür. Varsa boş değer atanabilir bir değeri yok sayılır.<br/><br/>
+<td><code>minByNullable</code></td><td>Şu ana kadar seçilen her öğe için boş değer atanabilir bir değer seçer ve bu değerleri en az döndürür. Varsa boş değer atanabilir bir değer yok, göz ardı edilir.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -317,7 +320,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>maxByNullable</code></td><td>Şu ana kadar seçili her öğe için boş değer atanabilir bir değer seçer ve maksimum bu değerini döndürür. Varsa boş değer atanabilir bir değeri yok sayılır.<br/><br/>
+<td><code>maxByNullable</code></td><td>Şu ana kadar seçilen her öğe için boş değer atanabilir bir değer seçer ve bu değerleri sayısı üst sınırını döndürür. Varsa boş değer atanabilir bir değer yok, göz ardı edilir.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -326,7 +329,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>averageByNullable</code></td><td>Şu ana kadar seçili her öğe için boş değer atanabilir bir değer seçer ve bu değerlerin ortalamasını döndürür. Varsa boş değer atanabilir bir değeri yok sayılır.<br/><br/>
+<td><code>averageByNullable</code></td><td>Şu ana kadar seçilen her öğe için boş değer atanabilir bir değer seçer ve bu değerlerin ortalamasını döndürür. Varsa boş değer atanabilir bir değer yok, göz ardı edilir.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -335,7 +338,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>averageBy</code></td><td>Şu ana kadar seçili her öğe için bir değer seçer ve bu değerlerin ortalamasını döndürür.<br/><br/>
+<td><code>averageBy</code></td><td>Şu ana kadar seçilen her öğe için bir değer seçer ve bu değerlerin ortalamasını döndürür.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -344,7 +347,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>distinct</code></td><td>Farklı öğelere kadarki seçili öğeleri seçer.<br/><br/>
+<td><code>distinct</code></td><td>Şu ana kadar seçili öğelerden ayrı öğeleri seçer.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -355,7 +358,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>exists</code></td><td>Şu ana kadar seçili herhangi bir öğe koşulu karşılayıp karşılamadığını belirler.<br/><br/>
+<td><code>exists</code></td><td>Şu ana kadar seçili herhangi bir öğenin bir koşulu karşılayıp karşılamadığını belirler.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -368,7 +371,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>find</code></td><td>Belirtilen bir koşulu karşılayan ilk öğe kadarki seçili seçer.<br/><br/>
+<td><code>find</code></td><td>Belirtilen bir koşulu karşılayan şimdiye seçilen birinci öğe seçer.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -377,7 +380,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>all</code></td><td>Şu ana kadar seçili tüm öğeleri bir koşulu karşılıyor olup olmadığını belirler.<br/><br/>
+<td><code>all</code></td><td>Şu ana kadar seçili tüm öğeleri bir koşulu karşılayan olup olmadığını belirler.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -386,7 +389,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>head</code></td><td>İlk öğe kadarki seçili olanlardan seçer.<br/><br/>
+<td><code>head</code></td><td>Şu ana kadar seçili olanlardan ilk öğeyi seçer.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -395,7 +398,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>nth</code></td><td>Seçili olanlar arasında belirtilen dizinindeki öğeyi kadarki seçer.<br/><br/>
+<td><code>nth</code></td><td>Şu ana kadar seçili olanlar arasında bir belirtilen dizinindeki öğeyi seçer.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for numbers in data do
@@ -404,7 +407,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>skip</code></td><td>Şu ana kadar seçilen öğeleri belirtilen sayıda atlar ve kalan öğeleri seçer.<br/><br/>
+<td><code>skip</code></td><td>Şu ana kadar seçilen öğeleri belirtilen sayıda atlar ve ardından kalan öğeleri seçer.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -413,17 +416,17 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>skipWhile</code></td><td>Belirtilen bir koşul true olarak ayarlandığında ve kalan öğeleri seçer sürece bir sırada öğeleri atlar.<br/><br/>
+<td><code>skipWhile</code></td><td>Belirtilen bir koşul true ise ve ardından kalan öğeleri seçer sürece dizideki öğeleri atlar.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for number in data do
-    skipWhile (number < 3)
+    skipWhile (number &lt; 3)
     select student
 }
 </code></pre>
 
 </td></tr><tr>
-<td><code>sumBy</code></td><td>Şu ana kadar seçili her öğe için bir değer seçer ve bu değerlerin toplamını döndürür.<br/><br/>
+<td><code>sumBy</code></td><td>Şu ana kadar seçilen her öğe için bir değer seçer ve bu değerlerin toplamını döndürür.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -432,7 +435,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>take</code></td><td>Belirtilen sayıda bitişik öğeyi bu seçili kadarki seçer.<br/><br/>
+<td><code>take</code></td><td>Belirtilen bir bitişik öğelerin sayısını seçili bu kadar seçer.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -442,16 +445,16 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>takeWhile</code></td><td>Belirtilen bir koşul true olarak ayarlandığında ve kalan öğeleri atlar sürece bir dizisinden öğeleri seçer.<br/><br/>
+<td><code>takeWhile</code></td><td>Belirtilen bir koşul true ise ve ardından kalan öğeleri atlar sürece öğeleri bir dizisinden seçer.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for number in data do
-    takeWhile (number < 10)
+    takeWhile (number &lt; 10)
 }
 </code></pre>
 
 </td></tr><tr>
-<td><code>sortByNullable</code></td><td>Şu ana kadar artan düzende verilen boş değer atanabilir sıralama anahtarı tarafından seçilen öğeleri sıralar.<br/><br/>
+<td><code>sortByNullable</code></td><td>Şu ana kadar verilen boş değer atanabilir sıralama anahtarı artan sırada seçili öğeleri sıralar.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -461,7 +464,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>sortByNullableDescending</code></td><td>Şu ana kadar azalan sırada verilen boş değer atanabilir sıralama anahtarı tarafından seçilen öğeleri sıralar.<br/><br/>
+<td><code>sortByNullableDescending</code></td><td>Şu ana kadar verilen boş değer atanabilir sıralama anahtarı azalan sırada seçili öğeleri sıralar.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -471,7 +474,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenByNullable</code></td><td>Bir sonraki kadarki artan düzende verilen boş değer atanabilir sıralama anahtarı tarafından seçilen öğelerin sıralama gerçekleştirir. Bu işleç yalnızca hemen sonra kullanılabilir bir <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, veya <code>thenByDescending</code>, ya da boş değer atanabilir bunların türevleri.<br/><br/>
+<td><code>thenByNullable</code></td><td>Bir sonraki şu ana kadar verilen boş değer atanabilir sıralama anahtarı artan sırada seçili öğelerin sıralama gerçekleştirir. Bu işleç yalnızca hemen sonra kullanılabilir bir <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, veya <code>thenByDescending</code>, veya türevlerini boş değer atanabilir.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -482,7 +485,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenByNullableDescending</code></td><td>Bir sonraki azalan sırada belirtilen boş değer atanabilir sıralama anahtarı kadarki seçili öğeleri sıralama gerçekleştirir. Bu işleç yalnızca hemen sonra kullanılabilir bir <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, veya <code>thenByDescending</code>, ya da boş değer atanabilir bunların türevleri.<br/><br/>
+<td><code>thenByNullableDescending</code></td><td>Bir sonraki şu ana kadar verilen boş değer atanabilir sıralama anahtarı azalan sırada seçili öğelerin sıralama gerçekleştirir. Bu işleç yalnızca hemen sonra kullanılabilir bir <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, veya <code>thenByDescending</code>, veya türevlerini boş değer atanabilir.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -496,7 +499,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </table>
 
 ## <a name="comparison-of-transact-sql-and-f-query-expressions"></a>Transact-SQL ve F# Sorgu İfadelerini Karşılaştırma
-Aşağıdaki tabloda bazı yaygın Transact-SQL sorguları ve eşdeğerleri F #'de gösterir. Kodu bu tabloda ayrıca önceki tabloda ve türü Sağlayıcısı'nı ayarlama aynı ilk kodu aynı veritabanında varsayar.
+Aşağıdaki tabloda bazı sık kullanılan Transact-SQL sorguları ve bunların eşdeğerlerini F #'de gösterir. Kodu bu tabloda, önceki tabloda ve tür sağlayıcısını ayarlama için aynı başlangıç kodu aynı veritabanında da varsayılır.
 
 
 ### <a name="table-2-transact-sql-and-f-query-expressions"></a>Tablo 2. Transact-SQL ve F# Sorgu İfadeleri
@@ -504,11 +507,11 @@ Aşağıdaki tabloda bazı yaygın Transact-SQL sorguları ve eşdeğerleri F #'
 
 <table style="width:100%">
   <tr>
-    <th>Transact-SQL (büyük/küçük harfe duyarlı değildir)</th>
-    <th>F # sorgu ifadesi (büyük küçük harf duyarlı)</th>
+    <th>Transact-SQL (büyük/küçük harfe duyarlı değil)</th>
+    <th>F # sorgu ifadesi (büyük/küçük harfe duyarlı)</th>
   </tr>
 <tr><td>
-Tüm alanlar tablosundan seçin.</br>
+Tüm alanları tablosundan seçin.</br>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 </code></pre>
@@ -523,7 +526,7 @@ query {
 
 </td></tr>
 <tr><td>
-Bir tablodaki kayıtların sayısı.<br/>
+Bir tablo kayıtlarını sayar.<br/>
 
 <pre><code class="lang-sql">SELECT COUNT( * ) FROM Student
 </code></pre>
@@ -539,7 +542,7 @@ query {
 
 </td></tr><tr>
 <td><code>EXISTS</code>
-</br>
+<br />
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE EXISTS
@@ -584,7 +587,7 @@ query {
 }
 </code></pre>
 </td></tr><tr><td>
-Koşulla birlikte gruplandırma.<br/>
+Gruplandırma koşulu.<br/>
 
 <pre><code class="lang-sql">SELECT Student.Age, COUNT( * )
 FROM Student
@@ -625,7 +628,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-Gruplandırma, sayım ve toplama.<br/>
+Gruplandırma, sayım ve birleşimi.<br/>
 
 <pre><code class="lang-sql">SELECT Student.Age, COUNT( * ), SUM(Student.Age) as total
 FROM Student
@@ -648,7 +651,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-Gruplandırma, sayım ve sayısına göre sıralama.<br/>
+Gruplandırma, sayım ve sayısına göre sıralaması.<br/>
 
 <pre><code class="lang-sql">SELECT Student.Age, COUNT( * ) as myCount
 FROM Student
@@ -713,7 +716,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code> desenle kümesi ile eşleşmesi.<br/>
+<code>LIKE</code> desenle eşleşecek.<br/>
 
 <pre><code class="lang-sql">-- '[abc]%' matches strings where the first character is
 -- 'a', 'b', 'c', 'A', 'B', or 'C'
@@ -730,7 +733,7 @@ WHERE Student.Name LIKE '[abc]%'
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code> set dışlama deseni.<br/>
+<code>LIKE</code> Küme dışlama deseni.<br/>
 
 <pre><code class="lang-sql">-- '[^abc]%' matches strings where the first character is
 -- not 'a', 'b', 'c', 'A', 'B', or 'C'
@@ -764,7 +767,7 @@ WHERE Student.Name LIKE '[^abc]%'
 }
 </code></pre>
 
-</td></tr><tr><td><code>LIKE</code>, substring arama ile.<br/>
+</td></tr><tr><td><code>LIKE</code>, alt dize aramayı ile.<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Name like '%A%'
@@ -781,7 +784,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-Basit <code>JOIN</code> iki tablo ile.<br/>
+Basit <code>JOIN</code> iki tabloya.<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 JOIN CourseSelection
@@ -818,7 +821,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>JOIN</code> İle <code>COUNT</code><br/>
+</td></tr><tr><td><code>JOIN</code> ile <code>COUNT</code><br/>
 
 <pre><code class="lang-sql">SELECT COUNT( * ) FROM Student
 JOIN CourseSelection
@@ -880,7 +883,7 @@ WHERE Student.Age BETWEEN 10 AND 15
 <pre><code class="lang-fsharp">// Selecting students with ages between 10 and 15.
 query {
     for student in db.Student do
-    where (student.Age ?>= 10 && student.Age ?< 15)
+    where (student.Age ?>= 10 && student.Age ?&lt; 15)
     select student
 }
 </code></pre>
@@ -966,7 +969,7 @@ let query2 =
 query2.Union (query1)
 </code></pre>
 
-</td></tr><tr><td>İki sorguları kesişimi.<br/>
+</td></tr><tr><td>İki sorgunun kesişimidir.<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 INTERSECT
@@ -1012,7 +1015,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>Birden çok durumda.<br/>
+</td></tr><tr><td>Birden çok durum.<br/>
 
 <pre><code class="lang-sql">SELECT Student.StudentID,
 CASE Student.Age
@@ -1076,7 +1079,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>Birden çok sol dış birleştirme.<br/>
+</td></tr><tr><td>Birden çok sol dış birleştirmeler.<br/>
 
 <pre><code class="lang-sql">SELECT Student.Name, Course.CourseName
 FROM Student
@@ -1103,7 +1106,7 @@ query {
 
 </td></tr></table>
 
-Aşağıdaki kod, bu örnekler örnek veritabanı oluşturmak için kullanılabilir.
+Aşağıdaki kod, bu örnekler için örnek veritabanı oluşturmak için kullanılabilir.
 
 <pre><code class="lang-sql">SET ANSI_NULLS ON
 GO
@@ -1225,7 +1228,7 @@ INSERT INTO CourseSelection (ID, StudentID, CourseID)
 VALUES(15, 7, 3);
 </code></pre>
 
-Aşağıdaki kod, bu konudaki görünür örnek kodunu içerir.
+Aşağıdaki kod, bu konudaki görünen örnek kodunu içerir.
 
 ```fsharp
 #if INTERACTIVE
@@ -1861,7 +1864,7 @@ query {
 |> Seq.iter (fun (studentName, courseName) -> printfn "%s %s" studentName courseName)
 ```
 
-Burada da tam çıkış bu kodu F # Etkileşimli'de çalıştırıldığında.
+Ve işte tam çıktıyı bu kod, F # Interactive içinde çalıştırıldığında.
 
 ```
 --> Referenced 'C:\Program Files (x86)\Reference Assemblies\Microsoft\FSharp\3.0\Runtime\v4.0\Type Providers\FSharp.Data.TypeProviders.dll'
@@ -2425,9 +2428,8 @@ module Queries2 = begin
 end
 ```
 
-## <a name="see-also"></a>Ayrıca Bkz.
-[F# Dili Başvurusu](index.md)
+## <a name="see-also"></a>Ayrıca bkz.
 
-[Linq.QueryBuilder sınıfı](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)
-
-[Hesaplama İfadeleri](Computation-Expressions.md)
+- [F# Dili Başvurusu](index.md)
+- [Linq.QueryBuilder sınıfı](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)
+- [Hesaplama İfadeleri](Computation-Expressions.md)

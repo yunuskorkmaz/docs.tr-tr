@@ -1,18 +1,17 @@
 ---
 title: 'Döngüler: for...in İfadesi (F#)'
-description: 'Bkz. nasıl F # for... ifadesinde yapı döngü numaralandırılabilir bir koleksiyon içindeki bir desenle eşleşen üzerinden yinelemek için kullanılır.'
+description: 'Bkz. nasıl F # for... ifadesinde döngü yapısı bir sıralanabilir koleksiyonun içindeki bir desenle eşleşmeleri üzerinden yinelemek için kullanılır.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 926f0a9940021b3dc0deefc12ea158c35975e949
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c4fba1f1dea3993cafa2e37ad0f32d9fb2eed85a
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33564080"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43869133"
 ---
 # <a name="loops-forin-expression"></a>Döngüler: for...in İfadesi
 
-Bu döngü yapısı aralık ifade, sırası, liste, dizi veya numaralandırma destekleyen diğer yapı gibi numaralandırılabilir bir koleksiyon içindeki bir desenle eşleşen üzerinden yinelemek için kullanılır.
-
+Bu uvozuje konstruktor aralık ifadesi, sıra, liste, dizi veya numaralandırma destekleyen diğer yapı gibi bir sıralanabilir koleksiyonun içindeki bir desenle eşleşmeleri üzerinden yinelemek için kullanılır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -22,23 +21,24 @@ for pattern in enumerable-expression do
 ```
 
 ## <a name="remarks"></a>Açıklamalar
-`for...in` İfade için karşılaştırılabilir `for each` diğer .NET dilleri deyiminde numaralandırılabilir koleksiyonundaki değerleri üzerinde döngü için kullanıldığından. Ancak, `for...in` desen eşleştirme içinde tüm koleksiyon yerine yalnızca yineleme koleksiyon üzerinden de destekler.
 
-Numaralandırılabilir ifade numaralandırılabilir bir koleksiyon olarak veya kullanarak belirtilen `..` olarak bir tamsayı türünde bir aralık işleci. Numaralandırılabilir koleksiyonları listeler, dizileri, dizileri, kümeleri, eşlemeleri vb. içerir. Uygulayan herhangi bir türü `System.Collections.IEnumerable` kullanılabilir.
+`for...in` İfade için karşılaştırılabilir `for each` diğer .NET dilleri deyiminde bir sıralanabilir koleksiyonun değerleri üzerinde döngü için kullanıldığından. Ancak, `for...in` koleksiyon yerine yalnızca yineleme üzerinden tüm koleksiyon üzerinde desen de destekler.
 
-Ne zaman, hızlı bir aralık kullanarak `..` işleci, aşağıdaki söz dizimini kullanabilirsiniz.
+Numaralandırılabilir ifade bir sıralanabilir koleksiyonun olarak veya kullanılarak belirtilebilir `..` olarak bir tamsayı türü üzerinde bir aralık işleci. Numaralandırılabilir koleksiyonları listeler, dizileri, diziler, kümeleri, haritalar ve benzeri içerir. Uygulayan herhangi bir tür `System.Collections.IEnumerable` kullanılabilir.
 
-*Başlat* ... *Son*
+Ne zaman, express aralığı kullanarak `..` işleci, aşağıdaki söz dizimini kullanabilirsiniz.
 
-Adlı bir artış içeren bir sürümünü de kullanabilirsiniz *atla*, aşağıdaki kod gibi.
+*Başlangıç* ... *Son*
 
-*Başlat* ... *atla* ... *Son*
+Adlı bir artışı içeren bir sürümünü de kullanabilirsiniz *atla*, aşağıdaki kodda gibi.
 
-Tam sayı aralıkları ve basit bir sayaç değişken kalıp olarak kullandığınızda, tipik davranışı her bir yineleme 1 sayaç değişkeni artırılacak olmakla birlikte, aralık bir atlama değeri içeriyorsa, bu sayaç tarafından atlama değeri yerine artırılır.
+*Başlangıç* ... *atla* ... *Son*
 
-Düzende eşleşen değerleri de gövde ifadesinde kullanılabilir.
+İntegral aralığı ve basit bir sayaç değişkeni bir desen kullandığınızda, her yinelemede 1 sayaç değişkeni artırılacak normal davranış olduğu halde aralık bir atlama değeri içeriyorsa, bu sayaç tarafından atlama değeri bunun yerine artırılır.
 
-Aşağıdaki kod örnekleri kullanımını göstermek `for...in` ifade.
+Düzende eşleşen değerleri de gövdesi ifadesinde kullanılabilir.
+
+Aşağıdaki kod örnekleri kullanımını gösteren `for...in` ifade.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5201.fs)]
 
@@ -52,7 +52,7 @@ Aşağıdaki kod örnekleri kullanımını göstermek `for...in` ifade.
 788
 ```
 
-Aşağıdaki örnekte nasıl sırası döngü ve yerine basit bir değişkene bir demet deseni kullanmayı gösterir.
+Aşağıdaki örnek nasıl bir dizisi üzerinde döngü gerçekleştirmek ve yerine basit bir değişken olarak bir tanımlama grubu düzeni kullanmayı gösterir.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5202.fs)]
 
@@ -75,53 +75,53 @@ Aşağıdaki örnek, bir basit tamsayı aralığında döngü gösterilmektedir.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5203.fs)]
 
-Function1 çıktı aşağıdaki gibidir.
+İşlev1 çıktısı aşağıdaki gibidir.
 
 ```
 1 2 3 4 5 6 7 8 9 10
 ```
 
-Aşağıdaki örnek, bir aralığı her bir öğe içeren bir Atla 2 ' olan bir aralığı üzerinden döngü gösterilmektedir.
+Aşağıdaki örnek, her bir öğe aralığı içeren bir atlama 2 ' nin bir aralık boyunca döngüye gösterilmektedir.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5204.fs)]
 
-Çıktısını `function2` aşağıdaki gibidir.
+Çıkışı `function2` gibidir.
 
 ```
 1 3 5 7 9
 ```
 
-Aşağıdaki örnek, bir karakter aralığı kullanmayı gösterir.
+Aşağıdaki örnek, bir karakter aralığı kullanma işlemini gösterir.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5205.fs)]
 
-Çıktısını `function3` aşağıdaki gibidir.
+Çıkışı `function3` gibidir.
 
 ```
 a b c d e f g h i j k l m n o p q r s t u v w x y z
 ```
 
-Aşağıdaki örnek, geriye doğru yineleme için negatif atlama değeri kullanmayı gösterir.
+Aşağıdaki örnek, bir geriye doğru yineleme için negatif atlama değeri kullanmayı gösterir.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5208.fs)]
 
-Çıktısını `function4` aşağıdaki gibidir.
+Çıkışı `function4` gibidir.
 
 ```
 10 9 8 7 6 5 4 3 2 1 ... Lift off!
 ```
 
-Başlangıç ve bitiş aralığının İşlevler, aşağıdaki kod olduğu gibi ifadeler de olabilir.
+Başlangıç ve bitiş aralığı gibi işlevler, aşağıdaki kodda gösterildiği gibi ifadeler de olabilir.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5206.fs)]
 
-Çıktısını `function5` bu girişle aşağıdaki gibidir.
+Çıkışı `function5` bu girişle aşağıdaki gibidir.
 
 ```
 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
 ```
 
-Öğe bir döngüde gerekli olmadığında sonraki örnek bir joker karakteri (_) kullanımını göstermektedir.
+Sonraki örnek, bir joker karakter kullanımını gösterir (\_) ne zaman öğesi gerekli değildir döngüde.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5207.fs)]
 
@@ -131,12 +131,10 @@ Başlangıç ve bitiş aralığının İşlevler, aşağıdaki kod olduğu gibi 
 Number of elements in list1: 5
 ```
 
-`Note` Kullanabileceğiniz `for...in` sequence ifadeleri ve diğer hesaplama ifadeleri özelleştirilmiş bir sürümünü durumda içinde `for...in` ifade kullanılır. Daha fazla bilgi için bkz: [sıraları](sequences.md), [zaman uyumsuz iş akışları](asynchronous-workflows.md), ve [hesaplama ifadeleri](computation-expressions.md).
+`Note` Kullanabileceğiniz `for...in` sequence ifadeleri ve diğer hesaplama ifadeleri, özelleştirilmiş bir sürümünü durumda `for...in` ifade kullanılır. Daha fazla bilgi için [dizileri](sequences.md), [zaman uyumsuz iş akışları](asynchronous-workflows.md), ve [hesaplama ifadeleri](computation-expressions.md).
 
+## <a name="see-also"></a>Ayrıca bkz.
 
-## <a name="see-also"></a>Ayrıca Bkz.
-[F# Dili Başvurusu](index.md)
-
-[Döngüler: `for...to` ifade](loops-for-to-expression.md)
-
-[Döngüler: `while...do` ifade](loops-while-do-expression.md)
+- [F# Dili Başvurusu](index.md)
+- [Döngüler: `for...to` ifadesi](loops-for-to-expression.md)
+- [Döngüler: `while...do` ifadesi](loops-while-do-expression.md)

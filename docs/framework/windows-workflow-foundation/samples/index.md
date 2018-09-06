@@ -3,11 +3,11 @@ title: Windows Workflow (WF) Örnekleri
 ms.date: 03/30/2017
 ms.assetid: e0aef017-4381-4f2f-a904-6e1ed898687e
 ms.openlocfilehash: e9b511606c6278e7d2b2fb1bc3cbd9c38b51b000
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43802995"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43875787"
 ---
 # <a name="windows-workflow-wf-samples"></a>Windows Workflow (WF) Örnekleri
 Bu örnekler üzerinde çeşitli yönlerini Windows Workflow Foundation (WF) yönerge sağlar.  

@@ -3,11 +3,11 @@ title: GamePiece Sınıfı Oluşturma
 ms.date: 03/30/2017
 ms.assetid: 37a27a86-ac1c-47be-b477-cb4b819459d3
 ms.openlocfilehash: eb73918cc03e2621d39a98158d40a839dbc69d80
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43395401"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857907"
 ---
 # <a name="creating-the-gamepiece-class"></a>GamePiece Sınıfı Oluşturma
 **GamePiece** sınıfı Microsoft XNA oyun parça resim yüklenemiyor, oyun parça ile ilgili olarak fare durumunu izleyin, fare yakalama, işleme ve eylemsizliğe işleme sağlamak için gerekli tüm işlevi kapsülleyen ve Oyun parça görünüm sınırlarına ulaştığında Sıçrama yeteneği sağlar.  

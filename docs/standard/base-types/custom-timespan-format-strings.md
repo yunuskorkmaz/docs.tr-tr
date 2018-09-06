@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0cf81b5a86d55cf3d7872e0e5281c35f41ad1c31
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9a22f462bc425a9c9e8f1be700474e7326193674
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43563999"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43868212"
 ---
 # <a name="custom-timespan-format-strings"></a>Özel TimeSpan Biçim Dizeleri
 
@@ -418,7 +418,7 @@ Aşağıdaki örnek çıktı dizesinde "dakika" sözcüğünü içeren bir özel
 
 [Tabloya dön](#table)
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-[Biçimlendirme Türleri](formatting-types.md)  
-[Standart TimeSpan Biçim Dizeleri](standard-timespan-format-strings.md)  
+- [Biçimlendirme Türleri](formatting-types.md)  
+- [Standart TimeSpan Biçim Dizeleri](standard-timespan-format-strings.md)  

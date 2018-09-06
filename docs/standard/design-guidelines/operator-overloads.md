@@ -10,41 +10,41 @@ helpviewer_keywords:
 ms.assetid: 37585bf2-4c27-4dee-849a-af70e3338cc1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 747fc21aceae60e362c72391ae265e45d6f8445f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4ca42d25a5f3456c6a10eff76d7015656322abae
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579320"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43874062"
 ---
 # <a name="operator-overloads"></a>İşleç aşırı yüklemeleri
-İşleç aşırı yüklemeleri yerleşik dil temelleri oldukları gibi görünmesi framework türü izin verir.  
+İşleç aşırı yüklemeleri framework türleri yerleşik dil temelleri oldukları gibi görünmesine izin verin.  
   
- İzin verilen ve bazı durumlarda yararlı olsa da, işlecin dikkatli kullanılmalıdır. Hangi İşleç aşırı yüklemesi, framework tasarımcıları işleçleri basit yöntemleri olmalıdır işlemleri için kullanılacak başladığında gibi kötüye birçok durumlar vardır. Aşağıdaki yönergeler ne zaman ve nasıl İşleç aşırı yüklemesi kullanma karar vermenize yardımcı olmalıdır.  
+ İzin verilen ve bazı durumlarda yararlı olsa da, İşleç aşırı yüklemeleri dikkatli kullanılmalıdır. Hangi işlecinde aşırı yükleme, framework tasarımcıları işleçleri basit yöntemleri olmalıdır işlemlerinde kullanılacak başlatıldığında gibi kötüye birçok durumlar vardır. Aşağıdaki yönergeleri İşleç aşırı yüklemesi kullanma nasıl ve ne zaman karar vermenize yardımcı olmalıdır.  
   
  **X AVOID** gibi (yerleşik) ilkel türlerinde geliyor olmalıdır türlerinde dışında işleci aşırı tanımlama.  
   
  **✓ CONSIDER** gibi basit tür geliyor olmalıdır bir türdeki işlecin tanımlama.  
   
- Örneğin, <xref:System.String?displayProperty=nameWithType> sahip `operator==` ve `operator!=` tanımlanmış.  
+ Örneğin, <xref:System.String?displayProperty=nameWithType> sahip `operator==` ve `operator!=` tanımlı.  
   
  **✓ DO** numaralarını temsil eden yapılar için işleç aşırı yüklemeleri tanımlayın (gibi <xref:System.Decimal?displayProperty=nameWithType>).  
   
  **X DO NOT** işlecin tanımlarken şirin olabilir.  
   
- İşleç aşırı yüklemesi işlemin sonucunu ne olacağını hemen göze olduğu durumlarda faydalıdır. Örneğin, bir çıkarma yapabilmek için mantıklıdır <xref:System.DateTime> başka bir `DateTime` ve bir <xref:System.TimeSpan>. Ancak, mantıksal birleşim işlecini bileşim iki veritabanı sorgularını kullanın ya da bir akışa yazmak üzere kaydırma işleci kullanmak için uygun değil.  
+ İşleç aşırı yüklemesi, işlemin sonucunu ne olacağını hemen açık olduğu durumlarda kullanışlıdır. Örneğin, bir çıkarma için mantıklıdır <xref:System.DateTime> başka bir `DateTime` ve bir <xref:System.TimeSpan>. Ancak, UNION iki veritabanı sorguları için mantıksal birleşim işleci kullanmayı veya bir akışa yazmak için kaydırma işleci kullanmak için uygun değildir.  
   
  **X DO NOT** işleci aşırı yüklemeler işlenen en az biri aşırı tanımlama türü olmadıkça sağlayın.  
   
  **✓ DO** bir simetrik şekilde işleçleri aşırı yükleme.  
   
- Örneğin, aşırı yükleme `operator==`, ayrıca aşırı `operator!=`. Benzer şekilde, aşırı yükleme varsa `operator<`, ayrıca aşırı `operator>`ve benzeri.  
+ Örneğin, aşırı yükleme `operator==`, siz de aşırı `operator!=`. Benzer şekilde, işlecini aşırı yüklediyseniz `operator<`, siz de aşırı `operator>`ve benzeri.  
   
  **✓ CONSIDER** yöntemleri karşılık gelen kolay adlarla her aşırı yüklenmiş işleç sağlama.  
   
- İşleç aşırı yüklemesi birçok dil desteklemez. Bu nedenle, işleçleri aşırı yükleme türleri ikincil bir yöntem uygun bir etki alanına özgü adıyla eşdeğer işlevsellik sağlayan olmaması önerilir.  
+ Birçok diller, İşleç aşırı yüklemesi desteklemez. Bu nedenle, aşırı yükleme işleçleri türleri eşdeğer bir işlevselliği sağlayan uygun bir etki alanına özgü ad ile ikincil bir yöntem içerdiğini önerilir.  
   
- Aşağıdaki tabloda işleçler ve karşılık gelen kolay yöntem adlarının bir listesini içerir.  
+ Aşağıdaki tabloda, işleçler ve karşılık gelen kolay bir yöntem adları listesini içerir.  
   
 |C# işleç simgesi|Meta veri adı|Kolay ad|  
 |-------------------------|-------------------|-------------------|  
@@ -88,31 +88,32 @@ ms.locfileid: "33579320"
 |`~`|`op_OnesComplement`|`OnesComplement`|  
   
 ### <a name="overloading-operator-"></a>İşleç aşırı yüklemesi ==  
- Aşırı yükleme `operator ==` oldukça karmaşıktır. İşleci semantiği gibi birkaç diğer üyeleriyle uyumlu olması gereken <xref:System.Object.Equals%2A?displayProperty=nameWithType>.  
+ Aşırı yükleme `operator ==` oldukça karmaşıktır. İşleci semantiği gibi çeşitli diğer üyeleriyle uyumlu olmasına gerek <xref:System.Object.Equals%2A?displayProperty=nameWithType>.  
   
 ### <a name="conversion-operators"></a>Dönüşüm İşleçleri  
- Dönüştürme işleçleri bir türden diğerine dönüştürme izin birli işleçler şunlardır. İşleçler statik üyeler işlenen ya da dönüş türü olarak tanımlanmış olması gerekir. Dönüştürme işleçleri iki tür vardır: örtük ve açık.  
+ Dönüştürme işleçleri, bir türden diğerine dönüştürme izin birli işleçler şunlardır. İşleçler, statik üye işlenen ya da dönüş türü olarak tanımlanmalıdır. Dönüştürme işleçleri iki tür vardır: örtük ve açık.  
   
  **X DO NOT** tür dönüştürme son kullanıcılar tarafından açıkça görülmüyorsa bir dönüşüm işleci sağlayın.  
   
  **X DO NOT** dönüşüm işleçleri dışında bir tür etki alanını tanımlayın.  
   
- Örneğin, <xref:System.Int32>, <xref:System.Double>, ve <xref:System.Decimal> tüm sayısal ancak türleridir <xref:System.DateTime> değil. Bu nedenle, olmamalıdır dönüştürmek için hiçbir dönüştürme işleci bir `Double(long)` için bir `DateTime`. Bir oluşturucu, böyle bir durumda tercih edilir.  
+ Örneğin, <xref:System.Int32>, <xref:System.Double>, ve <xref:System.Decimal> ise tüm sayısal türlerin olan <xref:System.DateTime> değil. Bu nedenle, bulunmamalıdır dönüştürmek için hiçbir dönüştürme işleci bir `Double(long)` için bir `DateTime`. Böyle bir durumda bir oluşturucu tercih edilir.  
   
  **X DO NOT** dönüştürme olası kayıplı ise bir örtük dönüşüm işleci sağlayın.  
   
- Örneğin, olmamalıdır örtük bir dönüştürme `Double` için `Int32` çünkü `Double` daha geniş bir sahip `Int32`. Dönüştürme olası kayıplı olsa bile bir açık dönüşüm işleci sağlanabilir.  
+ Örneğin, olmamalıdır örtük bir dönüştürme `Double` için `Int32` çünkü `Double` daha geniş bir sahip `Int32`. Dönüştürme, olası kayıplı olsa bile, açık bir dönüştürme operatörü sağlanabilir.  
   
  **X DO NOT** örtük atamaları özel durumlar atar.  
   
- Neler olduğunu, bunların dönüştürme yer aldığı kullanan olmayabileceğinden anlamak son kullanıcılar için çok zor olabilir.  
+ Son kullanıcılar için neler olduğunu, bunlar bir dönüştürme yer aldığını haberdar olmayabilir çünkü anlamak çok zordur.  
   
  **✓ DO** throw <xref:System.InvalidCastException?displayProperty=nameWithType> atama işleci için bir çağrı sonuçları kayıplı dönüştürmede ve sözleşmenin işlecinin kayıplı dönüşümleri izin vermez.  
   
- *Bölümleri © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
+ *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*  
+ *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Üye Tasarımı Yönergeleri](../../../docs/standard/design-guidelines/member.md)  
- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Üye Tasarımı Yönergeleri](../../../docs/standard/design-guidelines/member.md)  
+- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)

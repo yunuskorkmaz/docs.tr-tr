@@ -1,5 +1,5 @@
 ---
-title: Arabirimi
+title: Arabirim tasarımı
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: a016bd18-6710-4358-9438-9f190a295392
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dea5877f952869d5c84d6019617fcdc52d8ee0a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c687d7622e82ee206b2201760818827398f8543b
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573045"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43863728"
 ---
-# <a name="interface-design"></a>Arabirimi
-Çoğu API'leri sınıfları ve yapıları kullanarak en iyi Modellenen rağmen arabirimler daha uygun olan veya tek seçenektir durumlar vardır.  
+# <a name="interface-design"></a>Arabirim tasarımı
+Çoğu API'ler, en iyi sınıfları ve yapıları kullanarak modellenir olsa da, arabirimler daha uygun olan veya tek seçenektir durumlar vardır.  
   
- CLR birden çok devralma desteklemez (yani, CLR sınıflarına birden çok taban sınıftan devralın olamaz), ancak bir taban sınıftan devralmayı yanı sıra bir veya daha fazla arabirimlerini türleri izin vermiyor. Bu nedenle, arabirimler, genellikle birden çok devralma etkisini elde etmek için kullanılır. Örneğin, <xref:System.IDisposable> disposability içinde istedikleri katılmak diğer tüm Devralma Hiyerarşisi bağımsız desteklemek için türleri sağlayan bir arabirimdir.  
+ CLR'nin birden çok devralmayı desteklemez (yani, CLR sınıflarını birden fazla temel sınıfından devralamaz), ancak bir taban sınıftan devralmayı ek olarak, bir veya daha fazla arabirimi uygulayan türleri sağlar. Bu nedenle, arabirimler, genellikle birden çok devralma etkiyi elde etmek için kullanılır. Örneğin, <xref:System.IDisposable> disposability, istedikleri katılmak diğer tüm Devralma Hiyerarşisi bağımsız desteklemek için türleri izin veren bir arabirimdir.  
   
- Hangi tanımlama arabirim uygun olan diğer bazı değer türleri dahil olmak üzere çeşitli türleri tarafından desteklenen ortak bir arabirim oluşturmada durumdur. Değer türleri olamaz devral türlerinden dışında <xref:System.ValueType>, ancak arabirimleri uygulayabilir, bunu bir arabirimi kullanarak ortak bir taban türü sunmak için tek seçenek.  
+ Hangi tanımlama arabirimin uygun olan diğer bazı değer türleri dahil olmak üzere çeşitli türleri tarafından desteklenen ortak bir arabirim oluştururken bir durumdur. Değer türleri devralamaz türlerinden dışında <xref:System.ValueType>, ancak arabirimleri uygulayabilir, bunu bir arabirimi kullanarak ortak bir taban türü sağlamak için tek seçenek.  
   
  **✓ DO** değer türleri içeren bir dizi türleri tarafından desteklenen bazı ortak API gerekiyorsa bir arabirim tanımlayın.  
   
@@ -29,26 +29,27 @@ ms.locfileid: "33573045"
   
  **X AVOID** işaret arabirimleri (hiçbir üye arabirimleriyle) kullanarak.  
   
- Genel olarak, bir sınıfın belirli bir karakteristik (işaret) sahip olarak işaretlemek gerekiyorsa, bir arabirim yerine özel bir öznitelik kullanın.  
+ Genel olarak, belirli bir karakteristik (işaretçi) sahip bir sınıfı işaretlemek gerekiyorsa, bir arabirim yerine özel bir öznitelik kullanın.  
   
  **✓ DO** bir arabirim uygulaması en az bir türü sağlar.  
   
- Yaptıktan arabirimi tasarımını doğrulamak için bu yardımcı olur. Örneğin, <xref:System.Collections.Generic.List%601> uygulamasıdır <xref:System.Collections.Generic.IList%601> arabirimi.  
+ Arabirim tasarımı doğrulamak için bu yardımcı yapılıyor. Örneğin, <xref:System.Collections.Generic.List%601> uygulamasıdır <xref:System.Collections.Generic.IList%601> arabirimi.  
   
  **✓ DO** tanımladığınız her bir arabirime tüketir en az bir API sağlar (bir parametre veya bir özellik arabirimi alma yöntemi yazılan arabirimi olarak).  
   
- Yaptıktan arabirimi tasarımı doğrulamak için bu yardımcı olur. Örneğin, <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> tüketir <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> arabirimi.  
+ Arabirim tasarımı doğrulamak için bu yardımcı yapılıyor. Örneğin, <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> tüketir <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> arabirimi.  
   
  **X DO NOT** önceden sevk edilmiş bir arabirim üye ekleyin.  
   
- Bunun yapılması arabirimin uygulamaları çalışmamasına neden. Sürüm oluşturma sorunları önlemek için yeni bir arabirimi oluşturmanız gerekir.  
+ Bunun yapılması uygulamaları arabiriminin bölün. Sürüm oluşturma sorunları önlemek için yeni bir arabirim oluşturmanız gerekir.  
   
- Bu yönergeleri bölümünde açıklanan durumlar dışında genel olarak, arabirimleri yerine sınıfları yönetilen kodu yeniden kullanılabilir kitaplıkları tasarlarken seçtiğiniz gerekir.  
+ Bu yönergelere uymanız açıklanan durumlar hariç, genel olarak, arabirimler yerine sınıfları yönetilen kod yeniden kullanılabilir kitaplıklar tasarlama seçtiğiniz gerekir.  
   
- *Bölümleri © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
+ *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*  
+ *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Tür Tasarımı Yönergeleri](../../../docs/standard/design-guidelines/type.md)  
- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Tür Tasarımı Yönergeleri](../../../docs/standard/design-guidelines/type.md)  
+- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)

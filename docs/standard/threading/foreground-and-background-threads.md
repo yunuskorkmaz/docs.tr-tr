@@ -10,29 +10,30 @@ helpviewer_keywords:
 ms.assetid: cfe0d632-dd35-47e0-91ad-f742a444005e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 476dc75a569224db405eb7498ecb35eb6bda24d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fcedd478ee1eb89c11dc9535b1d2ffe843d0f658
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583086"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43868543"
 ---
 # <a name="foreground-and-background-threads"></a>Ön Plan ve Arka Plan İş Parçacıklarını Seçme
-Yönetilen iş parçacığı, arka plan iş parçacığı ya da bir ön plan iş parçacığı değil. Arka plan iş parçacıkları bir özel durumla ön plan iş parçacıkları aynı: arka plan iş parçacığı çalıştıran yönetilen yürütme ortamını korumaz. Tüm ön plan iş parçacıkları (.exe dosyası bir yönetilen derlemesi olduğu) yönetilen bir işlemde durdurulan sonra sistem tüm arka plan iş parçacıkları durdurur ve kapanır.  
+Yönetilen iş parçacığı veya bir arka plan iş parçacığı, hem de ön plan iş parçacığı değil. Arka plan iş parçacığı bir özel durumla aynı ön plan iş parçacığı: arka plan iş parçacığı çalıştıran yönetilen yürütme ortamında korumaz. (Burada .exe dosyasını, yönetilen bir derleme adıdır) yönetilen bir işlemde tüm ön plan iş parçacığı üzere durdurduktan sonra sistem tüm arka plan iş parçacığı durdurur ve kapanır.  
   
 > [!NOTE]
->  Çalışma zamanı işlem kapanmakta olduğundan bir arka plan iş parçacığı durduğunda, iş parçacığı hiçbir özel durum atılır. Ancak, ne zaman iş parçacığı durdurulur çünkü <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> yöntemi bellekten uygulama etki alanı bir <xref:System.Threading.ThreadAbortException> ön ve arka plan iş parçacığı oluşturulur.  
+>  İşlem kapatıldığından, çalışma zamanı arka plan iş parçacığı sona erdiğinde, iş parçacığında hiçbir özel durum oluşturulur. Ancak, iş parçacığı durduruldu çünkü <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> yöntemi kaldırır uygulama etki alanının bir <xref:System.Threading.ThreadAbortException> ön ve arka plan iş parçacığı oluşturulur.  
   
- Kullanım <xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType> özelliğini bir iş parçacığı bir arka plan ya da bir ön plan iş parçacığı olup olmadığını belirlemek veya durumunu değiştirin. Bir iş parçacığı bir arka plan iş parçacığı için herhangi bir zamanda ayarlayarak değiştirilebilir kendi <xref:System.Threading.Thread.IsBackground%2A> özelliğine `true`.  
+ Kullanım <xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType> özelliği bir iş parçacığı bir arka plan ya da bir ön plan iş parçacığı olup olmadığını belirlemek için ya da kendi durumunu değiştirmek için. Bir iş parçacığı bir arka plan iş parçacığı herhangi bir zamanda ayarlayarak değiştirilebilir, <xref:System.Threading.Thread.IsBackground%2A> özelliğini `true`.  
   
 > [!IMPORTANT]
->  Bir iş parçacığı ön plan veya arka plan durumunu bir iş parçacığı işlenmeyen bir özel durum sonucunu etkilemez. .NET Framework sürüm 2. 0'da, uygulamanın sonlandırılmasıyla ön plan veya arka plan iş parçacığı işlenmeyen bir özel durum oluşur. Bkz: [yönetilen iş parçacıklarında özel durumlar](../../../docs/standard/threading/exceptions-in-managed-threads.md).  
+>  Bir iş parçacığı durumunu ön plan veya arka plan iş parçacığı işlenmeyen bir özel durum sonucunu etkilemez. .NET Framework sürüm 2. 0'da, uygulamanın sonlandırılmasıyla ön plan veya arka plan iş parçacığı işlenmeyen bir özel durum oluşur. Bkz: [yönetilen iş parçacıklarında özel durumlar](../../../docs/standard/threading/exceptions-in-managed-threads.md).  
   
- Yönetilen iş parçacığı havuzuna ait iş parçacıkları (diğer bir deyişle, iş parçacıkları <xref:System.Threading.Thread.IsThreadPoolThread%2A> özelliği `true`) arka plan iş parçacıkları şunlardır. Yönetilmeyen koddan yönetilen yürütme ortamını girin tüm iş parçacıklarının arka plan iş parçacığı olarak işaretlenir. Oluşturma ve yeni bir başlangıç tarafından oluşturulan tüm iş parçacıklarının <xref:System.Threading.Thread> nesne olan varsayılan ön plan iş parçacıkları tarafından.  
+ Yönetilen iş parçacığı havuzuna ait iş parçacıkları (diğer bir deyişle, ayarlanmış iş parçacıkları <xref:System.Threading.Thread.IsThreadPoolThread%2A> özelliği `true`) arka plan iş parçacıklarının. Tüm iş parçacıklarını yönetilmeyen koddan yönetilen yürütme ortamında girdiğiniz arka plan iş parçacığı işaretlenir. Tüm iş parçacıkları oluşturma ve yeni bir başlangıç tarafından oluşturulan <xref:System.Threading.Thread> nesne olan varsayılan ön plan iş parçacıkları tarafından.  
   
- Bir yuva bağlantısı gibi bir etkinliğini izlemek için bir iş parçacığı kullanırsanız ayarlamanız kendi <xref:System.Threading.Thread.IsBackground%2A> özelliğine `true` böylece iş parçacığı işleminizin sonlandırılıyor gelen engellemez.  
+ Bir yuva bağlantısı gibi bir etkinliği izlemek için bir iş parçacığı kullanırsanız ayarlayın, <xref:System.Threading.Thread.IsBackground%2A> özelliğini `true` böylece iş parçacığı, işlem sonlandırılıyor gelen engellemez.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType>  
- <xref:System.Threading.Thread>  
- <xref:System.Threading.ThreadAbortException>
+## <a name="see-also"></a>Ayrıca bkz.
+
+- <xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType>  
+- <xref:System.Threading.Thread>  
+- <xref:System.Threading.ThreadAbortException>

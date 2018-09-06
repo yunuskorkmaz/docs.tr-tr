@@ -2,12 +2,12 @@
 title: Klavye Başvurusu (F#)
 description: 'Tüm F # dil anahtar sözcükleri hakkında daha fazla bilgi için bağlantılar bulun.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 18bf5f00cdd5250c0fbd503d096e5415a8b9feea
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0016f68b2872183a2b4dd865ce229b6a76250b78
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526195"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856030"
 ---
 # <a name="keyword-reference"></a>Klavye Başvurusu
 
@@ -131,9 +131,8 @@ Aşağıdaki belirteçler, F # dilinin gelecekteki genişleme için anahtar söz
 * `virtual`
 * `volatile`
 
-## <a name="see-also"></a>Ayrıca Bkz.
-[F# Dili Başvurusu](index.md)
+## <a name="see-also"></a>Ayrıca bkz.
 
-[Simge ve İşleç Başvurusu](symbol-and-operator-reference/index.md)
-
-[Derleyici Seçenekleri](compiler-options.md)
+- [F# Dili Başvurusu](index.md)
+- [Simge ve İşleç Başvurusu](symbol-and-operator-reference/index.md)
+- [Derleyici Seçenekleri](compiler-options.md)

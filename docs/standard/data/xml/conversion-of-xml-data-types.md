@@ -8,20 +8,20 @@ dev_langs:
 ms.assetid: a2aa99ba-8239-4818-9281-f1d72ee40bde
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c22ebed1127be6a32a09b428b977b1ba9ca0a7eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cec2b85c55871c8a21a74e79cfcdd041fa063bec
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569373"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43866630"
 ---
 # <a name="conversion-of-xml-data-types"></a>XML veri türlerini dönüştürme
-Yöntemleri çoğunluğu bulunan bir **XmlConvert** sınıfı, dizeleri ve kesin türü belirtilmiş biçimleri arasında veri dönüştürmek için kullanılır. Yerel ayar bağımsız yöntemleridir. Bu, bunlar herhangi bir yerel ayarı dönüştürme yapılırken dikkate değil, anlamına gelir.  
+Yöntemlerin çoğunun bulunan bir **XmlConvert** sınıfı veri dizeler ve kesin tür belirtilmiş biçimleri arasında dönüştürmek için kullanılır. Yerel ayar bağımsız yöntemlerdir. Bu, tüm yerel ayarlar dönüştürme yaparken dikkate değil, anlamına gelir.  
   
 ## <a name="reading-string-as-types"></a>Okuma dize türleri olarak  
- Aşağıdaki örnek bir dize okur ve ona dönüştüren bir **DateTime** türü.  
+ Aşağıdaki örnek bir dize olarak okur ve ona dönüştürür bir **DateTime** türü.  
   
- Aşağıdaki XML giriş verilen:  
+ Aşağıdaki XML geçirmesini:  
   
  **Giriş**  
   
@@ -46,7 +46,7 @@ Console.WriteLine(vDateTime);
 ## <a name="writing-strings-as-types"></a>Yazma dize türleri olarak  
  Aşağıdaki örnek okuma bir **Int32** ve bir dizeye dönüştürür.  
   
- Aşağıdaki XML giriş verilen:  
+ Aşağıdaki XML geçirmesini:  
   
  **Giriş**  
   
@@ -66,6 +66,7 @@ Int32 vInt32=-2147483648;
 writer.WriteElementString("TestInt32",XmlConvert.ToString(vInt32));  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [.NET Framework Veri Türleri için Dizeleri Dönüştürme](../../../../docs/standard/data/xml/converting-strings-to-dotnet-data-types.md)  
- [.NET Framework Türlerini Dizelere Dönüştürme](../../../../docs/standard/data/xml/converting-dotnet-types-to-strings.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [.NET Framework Veri Türleri için Dizeleri Dönüştürme](../../../../docs/standard/data/xml/converting-strings-to-dotnet-data-types.md)  
+- [.NET Framework Türlerini Dizelere Dönüştürme](../../../../docs/standard/data/xml/converting-dotnet-types-to-strings.md)
