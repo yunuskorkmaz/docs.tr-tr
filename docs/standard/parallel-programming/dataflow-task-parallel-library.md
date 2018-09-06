@@ -12,11 +12,11 @@ ms.assetid: 643575d0-d26d-4c35-8de7-a9c403e97dd6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d44ec0e0601383133e6c59e44cd81031918d4b6d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385864"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43802696"
 ---
 # <a name="dataflow-task-parallel-library"></a>Veri Akışı (Görev Paralel Kitaplığı)
 <a name="top"></a> Görev paralel kitaplığı (TPL) eşzamanlılık kullanan uygulamaların sağlamlığını artırmak için veri akışı bileşenleri sağlar. Bu veri kışı bileşenlerine toplu olarak ifade edilir *TPL veri akışı Kitaplığı*. Bu veri akışı modeli, büyük parçalı veri akışı ve ardışık düzen oluşturma görevleri için işlem içi ileti geçirme sağlayarak aktör temelli programlamayı teşvik eder. Veri akışı bileşenleri, türleri ve TPL zamanlama altyapısı oluşturmak ve zaman uyumsuz programlama için C#, Visual Basic ve F # dil desteği tümleştirin. Bu veri akışı bileşenleri, birbirleriyle zaman uyumsuz olarak iletişim kurması gereken birden fazla işleminiz varsa veya verileri elde ettikçe işlemek istiyorsanız kullanışlıdır. Örneğin, web kamerasından gelen görüntü verilerini işleyen bir uygulamayı düşünün. Veri akışı modelini kullanarak, uygulama görüntü karelerini kullanılabilir oldukça işleyebilir. Uygulama görüntü karelerini geliştirir, örneğin ışık düzeltme veya kırmızı göz azaltma gerçekleştirerek oluşturabileceğiniz bir *işlem hattı* veri akışı bileşenleri. Ardışık düzenin her aşaması, görüntüyü dönüştürmek için TPL tarafından sağlanan işlevsellik gibi daha büyük parçalı paralellik işlevlerini kullanabilir.  

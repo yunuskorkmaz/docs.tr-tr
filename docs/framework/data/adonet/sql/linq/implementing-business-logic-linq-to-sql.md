@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c4577590-7b12-42e1-84a6-95aa2562727e
 ms.openlocfilehash: d739e4bba96873740c53c07eccf687b060d82003
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43552237"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43798878"
 ---
 # <a name="implementing-business-logic-linq-to-sql"></a>Uygulama iş mantığı (LINQ to SQL)
 Terim "iş mantığı" Bu konu başlığı altındaki herhangi bir özel kural veya onu eklenen, güncelleştirilen veya veritabanından silinmiş önce verileri için geçerli doğrulama testlerini ifade eder. İş mantığı da bazen "iş kurallarını" veya "etki alanı mantığı." adlandırılır Böylece sunu katmanı veya veri erişim katmanı bağımsız olarak değiştirilebilir n katmanlı uygulamalarda, genellikle bir mantıksal katmanı olarak tasarlanmıştır. İş mantığı, öncesinde veya sonrasında herhangi bir güncelleştirme, ekleme veya silme işlemi veritabanındaki verilerin veri erişim katmanı tarafından çağrılabilir.  

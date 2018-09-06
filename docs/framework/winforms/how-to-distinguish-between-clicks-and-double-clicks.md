@@ -11,11 +11,11 @@ helpviewer_keywords:
 - mouse clicks [Windows Forms], single versus double
 ms.assetid: d836ac8c-85bc-4f3a-a761-8aee03dc682c
 ms.openlocfilehash: 84d085700091c4e7b8658e8eac4cf86fbd7730d5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43555449"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43802492"
 ---
 # <a name="how-to-distinguish-between-clicks-and-double-clicks"></a>Nasıl yapılır: Tıklamalar ve Çift Tıklamaları Birbirinden Ayırma
 Genellikle, tek bir *tıklayın* bir kullanıcı arabirimi (UI) eylemi başlatır ve *çift* eylemi genişletir. Örneğin, tek bir tıklamayla, genellikle bir öğe seçer ve bir öğeye çift düzenler. Ancak, Windows Forms tıklama olayları bağlı bir eylem olduğundan kolayca burada bir tıklayın ve bir çift gerçekleştirmek uyumsuz eylemleri bir senaryo karşılayacak değil <xref:System.Windows.Forms.Control.Click> veya <xref:System.Windows.Forms.Control.MouseClick> olay için bağlıeylemindenöncegerçekleştirilir<xref:System.Windows.Forms.Control.DoubleClick>veya <xref:System.Windows.Forms.Control.MouseDoubleClick> olay. Bu konuda, bu sorunun iki çözümü gösterilir. Tek bir çözüm, çift tıklama olayı işlemek ve eylemleri click olay işlemede geri alma oluşturmaktır. Nadir durumlarda, tıklayın benzetimini gerçekleştirmek ve davranışı işleyerek çift gerekebilir <xref:System.Windows.Forms.Control.MouseDown> olay ve kullanarak <xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A> ve <xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A> özelliklerini <xref:System.Windows.Forms.SystemInformation> sınıfı. Tıklama ve ikinci tıklama önce değerini oluşursa arasındaki süreyi ölçmek <xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A> ulaşıldığında ve tıklayarak tarafından tanımlanan dikdörtgen içindeki <xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A>, çift tıklatma eylemi gerçekleştirir; Aksi takdirde, tıklatma eylemi gerçekleştirin.  

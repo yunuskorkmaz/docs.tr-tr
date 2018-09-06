@@ -3,11 +3,11 @@ title: ML.NET kaynakları
 description: Özel yapay ZEKA çözümleri oluşturma ve .NET uygulamalarınızı tümleştirmeye yardımcı olmak üzere bu ML.NET kaynakları keşfedin.
 ms.date: 07/27/2018
 ms.openlocfilehash: cea0f8fe30e01340c5eb671f39f28a6cbf33884c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485012"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43798042"
 ---
 # <a name="mlnet-resources"></a>ML.NET kaynakları
 

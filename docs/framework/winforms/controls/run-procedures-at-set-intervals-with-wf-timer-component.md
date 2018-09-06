@@ -14,11 +14,11 @@ helpviewer_keywords:
 - procedures [Windows Forms], specific time intervals
 ms.assetid: 8025247a-2de4-4d86-b8ab-a8cb8aeab2ea
 ms.openlocfilehash: bf0e22eab3b6517521dbe06a73f63af232746df1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43540555"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43801709"
 ---
 # <a name="how-to-run-procedures-at-set-intervals-with-the-windows-forms-timer-component"></a>Nasıl yapılır: Windows Forms Süreölçer Bileşeni ile Belirlenen Aralıklarda Yordamları Çalıştırma
 Bazen bir döngü sona veya bir kümesi zaman aralığı süresi sona erdiğinde çalıştırılan kadar belirli aralıklarla çalışan bir yordam oluşturmak isteyebilirsiniz. <xref:System.Windows.Forms.Timer> Bileşeni gibi bir yordam mümkün kılar.  

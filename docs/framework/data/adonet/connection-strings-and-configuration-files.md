@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
 ms.openlocfilehash: 8030c0323a2f742de19a4761e24c66294c6dd5d4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43405981"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43800936"
 ---
 # <a name="connection-strings-and-configuration-files"></a>Bağlantı dizeleri ve yapılandırma dosyaları
 Bağlantı dizelerini uygulamanızın kodunda ekleme güvenlik açıklarına ve Bakım sorunlarına yol açabilir. Bir uygulamanın kaynak kodunda JIT şifrelenmemiş bir bağlantı dizeleri kullanarak görüntülenebilir [Ildasm.exe (IL ayrıştırıcı)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) aracı. Ayrıca, bağlantı dizesini hiç olmadığı kadar değişirse, uygulamanızı derlenmelidir. Bu nedenle, bir uygulama yapılandırma dosyasında bağlantı dizelerini depolamanızı öneririz.  

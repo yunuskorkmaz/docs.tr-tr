@@ -1,21 +1,21 @@
 ---
-title: İşlev ve eylem genel temsilciler (C#) için varyans kullanma
+title: İşlev ve eylem genel temsilcileri (C#) için varyans kullanma
 ms.date: 07/20/2015
 ms.assetid: 1826774f-2b7a-470f-b110-17cfdd6abdae
-ms.openlocfilehash: 297d61d698d9713a8335ffd0aa1d898c950c3e87
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 903926bc86b1b96cea25b91314e35ed4771bbcb9
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333446"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43797640"
 ---
-# <a name="using-variance-for-func-and-action-generic-delegates-c"></a>İşlev ve eylem genel temsilciler (C#) için varyans kullanma
-Bu örnekler Kovaryans ve kontravaryans nasıl kullanılacağını göstermektedir `Func` ve `Action` yöntemleri kullanılmasını etkinleştirmek ve kodunuzu daha fazla esneklik sağlamak için genel temsilciler.  
+# <a name="using-variance-for-func-and-action-generic-delegates-c"></a>İşlev ve eylem genel temsilcileri (C#) için varyans kullanma
+Bu örnekler Kovaryans ve kontravaryans nasıl kazandırabileceğinizi `Func` ve `Action` yöntemleri kullanılmasını etkinleştirin ve kodunuzu daha fazla esneklik sağlamak için genel temsilciler.  
   
  Kovaryans ve kontravaryans hakkında daha fazla bilgi için bkz: [Temsilcilerde varyans (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).  
   
-## <a name="using-delegates-with-covariant-type-parameters"></a>Eşdeğişken tür parametreleri ile kullanma  
- Aşağıdaki örnek genel türlerde Kovaryans desteği yararları gösterilmektedir `Func` temsilciler. `FindByTitle` Yöntemi alır, bir parametre `String` yazın ve bir nesne döndürür `Employee` türü. Ancak, bu yönteme atayabilirsiniz `Func<String, Person>` çünkü temsilci `Employee` devralır `Person`.  
+## <a name="using-delegates-with-covariant-type-parameters"></a>Birlikte değişken tür parametreleri ile kullanma  
+ Kovaryans genel destek avantajları aşağıdaki örnekte `Func` temsilciler. `FindByTitle` Yöntemi, bir parametre alır `String` yazın ve bir nesne döndürür `Employee` türü. Ancak, bu yönteme atayabilirsiniz `Func<String, Person>` çünkü temsilci `Employee` devralan `Person`.  
   
 ```csharp  
 // Simple hierarchy of classes.  
@@ -48,8 +48,8 @@ class Program
 }  
 ```  
   
-## <a name="using-delegates-with-contravariant-type-parameters"></a>Temsilcileri karşıtı tür parametreleri ile kullanma  
- Aşağıdaki örnek genel değişken karşıtı desteği yararları gösterilmektedir `Action` temsilciler. `AddToContacts` Yöntemi alır, bir parametre `Person` türü. Ancak, bu yönteme atayabilirsiniz `Action<Employee>` çünkü temsilci `Employee` devralır `Person`.  
+## <a name="using-delegates-with-contravariant-type-parameters"></a>Değişken karşıtı tür parametreleri ile kullanma  
+ Aşağıdaki örnekte genel kontravaryans destek avantajlarını `Action` temsilciler. `AddToContacts` Yöntemi, bir parametre alır `Person` türü. Ancak, bu yönteme atayabilirsiniz `Action<Employee>` çünkü temsilci `Employee` devralan `Person`.  
   
 ```csharp  
 public class Person { }  
@@ -81,6 +81,7 @@ class Program
 }  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Kovaryans ve kontravaryans (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/index.md)  
- [Genel Türler](~/docs/standard/generics/index.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [Kovaryans ve kontravaryans (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/index.md)  
+- [Genel Türler](~/docs/standard/generics/index.md)

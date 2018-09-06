@@ -3,11 +3,11 @@ title: Hata gönderme ve işleme
 ms.date: 03/30/2017
 ms.assetid: 98e8e04d-2ac9-4a33-ae08-462f757a7a14
 ms.openlocfilehash: 896f209e7daeeab2bb33c1fde15298aae96c8776
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 09/05/2018
-ms.locfileid: "43733371"
+ms.locfileid: "43801001"
 ---
 # <a name="sending-and-handling-faults"></a>Hata gönderme ve işleme
 Bu örnek nasıl kullanılacağını gösterir <xref:System.ServiceModel.Activities.SendReply> ve <xref:System.ServiceModel.Activities.ReceiveReply> beklenen ve beklenmedik hataları gönderip etkinlikler ileti. Bu senaryoda, ilk istemci isteği içinde bulunan bir beklenen hata sonuçlarında kendi <xref:System.ServiceModel.Activities.Send.KnownTypes%2A> koleksiyonu. Sonraki birkaç istemci istekleri son istek başarılı olmadan önce beklenmeyen hataları alma neden olur.  

@@ -3,11 +3,11 @@ title: Yerleşik yapılandırma
 ms.date: 03/30/2017
 ms.assetid: 34e85c9b-088d-4347-816c-0f77cb73ef2f
 ms.openlocfilehash: e76c019d9fc1b416e6fa8175a70b5fd01d9ff53e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43661171"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43801261"
 ---
 # <a name="built-in-configuration"></a>Yerleşik yapılandırma
 Bu örnek, kullanılması ve yapılandırılması SQL iş akışı örnek deposunun gösterir. SQL iş akışı örnek deposu örnek deposunun SQL tabanlı bir uygulamasıdır. Durum kaydetme ve yükleme durumu için ve SQL Server veya SQL Server Express veritabanı örneği sağlar.  

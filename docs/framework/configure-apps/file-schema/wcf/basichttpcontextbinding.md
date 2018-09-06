@@ -3,11 +3,11 @@ title: '&lt;BasicHttpContextBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 39b16b82-4ec6-4eff-8031-67e026870961
 ms.openlocfilehash: 6a53251f9c5bc828fde1e2cc21cc9d06c477f1d6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43419354"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43803450"
 ---
 # <a name="ltbasichttpcontextbindinggt"></a>&lt;BasicHttpContextBinding&gt;
 Bağlam için sağlayan bir bağlama tanımlanıyor <xref:System.ServiceModel.BasicHttpBinding> değişim mekanizması olarak HTTP tanımlama bilgileri etkinleştirerek değiştirilmek üzere.  

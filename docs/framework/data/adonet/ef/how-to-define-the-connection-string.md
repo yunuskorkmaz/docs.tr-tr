@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: bağlantı dizesi tanımlama'
 ms.date: 03/30/2017
 ms.assetid: 6027335d-4e26-420d-9151-6523289b1989
 ms.openlocfilehash: f40b8bc68eda1cb4b64b34d12b2922da69929203
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43387760"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43802167"
 ---
 # <a name="how-to-define-the-connection-string"></a>Nasıl yapılır: bağlantı dizesi tanımlama
 Bu konuda, kavramsal bir modele bağlanırken kullanılan bağlantı dizesi tanımlama gösterilmektedir. Bu konuda dayanır [AdventureWorks satış](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) kavramsal model. AdventureWorks satışları modeli içinde görevle ilgili konuları genelinde kullanılan [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] belgeleri. Bu konuda, zaten yapılandırmış olduğunuz varsayılır, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ve AdventureWorks satış Model tanımlı. Daha fazla bilgi için [nasıl yapılır: Model ve eşleme dosyalarını el ile tanımlamak](https://msdn.microsoft.com/library/d4fd6864-f2a1-48f0-aa32-1e318775a99a). Bu konudaki yordamlar da yer [nasıl yapılır: el ile bir Entity Framework projesinin yapılandırma](https://msdn.microsoft.com/library/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e).  

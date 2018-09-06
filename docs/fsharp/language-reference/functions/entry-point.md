@@ -1,18 +1,17 @@
 ---
 title: Girdi Noktası (F#)
-description: 'Giriş noktası yürütme resmi olarak başladığı bir yürütülebilir dosyası olarak derlenmiş bir F # programına öğrenin.'
+description: 'Yürütme resmi olarak başladığı bir yürütülebilir dosyası olarak derlenmiş bir F # programına giriş noktası kurmayı öğrenin.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 3d6cab755dd89f2d3d669a8763aa08660432a0ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 298500931d49c891a7a243295333df3a9f5d413e
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563626"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43798719"
 ---
 # <a name="entry-point"></a>Girdi Noktası
 
-Bu konuda bir F # programı için giriş noktası ayarlamak için kullandığınız yöntem açıklanmaktadır.
-
+Bu konuda, bir F # programına giriş noktası ayarlamak için kullandığınız yöntemin açıklanmaktadır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -22,27 +21,28 @@ let-function-binding
 ```
 
 ## <a name="remarks"></a>Açıklamalar
-Önceki sözdiziminde *olanak sağlayan işlev bağlama* bir işlev tanımı bir `let` bağlama.
 
-Yürütülebilir bir dosyanın yürütme resmi olarak başladığı olarak derlenmiş bir program için giriş noktası. Uygulayarak bir F # uygulama giriş noktasını belirtmek `EntryPoint` özniteliği programın `main` işlevi. Bu işlev (kullanılarak oluşturulan bir `let` bağlama) son derlenmiş dosyasındaki son işlevi olması gerekir. Son derlenmiş projesinde son dosya veya komut satırı geçirilen son dosya dosyasıdır.
+Önceki sözdiziminde, *let işlevi bağlaması* içinde bir işlev tanımı bir `let` bağlama.
 
-Giriş noktası işlevi türüne sahip `string array -> int`. Komut satırında sağlanan bağımsız değişkenler geçirilecek `main` işlevinde bir dizeler dizisi. Dizinin ilk öğesi ilk bağımsız değişkeni olan; diğer bazı dillerde olduğu gibi yürütülebilir dosyanın adını dizisinde dahil edilmez. Dönüş değeri çıkış kodu işlemi için kullanılır. Sıfır genellikle başarılı olduğunu gösterir; sıfır olmayan değerler bir hata gösterir. Belirli bir anlamı, sıfır olmayan dönüş kodları için hiçbir kuralı yoktur; dönüş kodları anlamları uygulamaya özgü.
+Yürütme resmi olarak başladığı bir yürütülebilir dosya olduğu gibi derlenmiş bir programın giriş noktası. Uygulayarak bir F # uygulaması giriş noktası belirtme `EntryPoint` özniteliği programın `main` işlevi. Bu işlev (kullanılarak oluşturulan bir `let` bağlama) son derlenen dosyayı son işlev olmalıdır. Son derlenen son proje dosyasına veya komut satırına geçirilen dosyanın son dosyasıdır.
 
-Aşağıdaki örnekte basit bir gösterilmektedir `main` işlevi.
+Giriş noktası işlevini türünde `string array -> int`. Komut satırında sağlanan bağımsız değişkenler geçirilen `main` işlevi bir dize dizisi. Dizinin ilk öğesi olmayan ilk bağımsız değişken; diğer dillerde olduğu gibi yürütülebilir dosyanın adını dizide dahil edilmez. Dönüş değeri çıkış kodu işlemi için kullanılır. Sıfır, genellikle başarılı gösterir; sıfır olmayan değerler, bir hata gösterir. Özel bir anlamı sıfır dönüş kodları için hiçbir kural yoktur; dönüş kodları anlamı, uygulamaya özgü olur.
+
+Aşağıdaki örnekte basit bir `main` işlevi.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/entry-point/snippet501.fs)]
 
-Ne zaman bu kodu yürütüldüğünde komut satırıyla `EntryPoint.exe 1 2 3`, çıktı aşağıdaki gibidir.
+Ne zaman bu kod yürütüldüğünde komut satırından `EntryPoint.exe 1 2 3`, çıktı aşağıdaki gibidir.
 
 ```console
 Arguments passed to function : [|"1"; "2"; "3"|]
 ```
 
 ## <a name="implicit-entry-point"></a>Örtük giriş noktası
-Bir program yok olduğunda **EntryPoint** derlenecek son dosyanın üst düzey bağlamaları giriş noktası açıkça belirten özniteliği giriş noktası olarak kullanılır.
 
+Bir program, Hayır olduğunda **EntryPoint** giriş noktası, derlenecek dosyanın son en üst düzey bağlamaları açıkça belirten bir özniteliği, giriş noktası olarak kullanılır.
 
-## <a name="see-also"></a>Ayrıca Bkz.
-[İşlevler](index.md)
+## <a name="see-also"></a>Ayrıca bkz.
 
-[let Bağlamaları](let-bindings.md)
+- [İşlevler](index.md)
+- [let Bağlamaları](let-bindings.md)

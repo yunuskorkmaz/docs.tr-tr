@@ -1,0 +1,2 @@
+> [!IMPORTANT]
+> Taşınabilir sınıf kitaplığı projeleri yalnızca belirli bir alt .NET uygulamalarının hedeflemek için biz kesinlikle yeni uygulama geliştirme kullanımları önerilmemektedir. Önerilen değişiklik .NET Standard özel sürümünü destekleyen tüm .NET uygulamaları hedefleyen .NET standart bir kitaplıktır. Daha fazla bilgi için [.NET Standard](~/docs/standard/net-standard.md).

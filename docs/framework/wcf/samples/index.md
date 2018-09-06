@@ -3,11 +3,11 @@ title: Windows Communication Foundation (WCF) Örnekleri
 ms.date: 03/30/2017
 ms.assetid: 89d4efce-7832-4dd5-82a8-0e574b3302f9
 ms.openlocfilehash: a8ac756a5c52093015f32942de3791853bdd17c4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43536542"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43803274"
 ---
 # <a name="windows-communication-foundation-wcf-samples"></a>Windows Communication Foundation (WCF) Örnekleri
 Bu örnekler üzerinde çeşitli yönlerini Windows Communication Foundation (WCF) yönerge sağlar.  

@@ -3,12 +3,12 @@ title: .NET Core kullanarak bir REST istemcisi oluşturma
 description: Bu öğretici, .NET Core ve C# dili özellikleri sayısı öğretir.
 ms.date: 03/06/2017
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: bc3c23b277b233efba9f32cc49b29ac905f3abc8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 13466b717d0676c2db5edf4c98a4ead3e673b96c
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480162"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43801038"
 ---
 # <a name="rest-client"></a>REST istemcisi
 
@@ -37,7 +37,7 @@ Bir değişiklik yapmadan başlamadan önce basit bir Hello World uygulamasını
 Paketleri geri yükledikten sonra çalıştırmanız `dotnet build`. Bu yapı altyapısının yürütür ve uygulamanızı oluşturur. Son olarak, yürüttüğünüz `dotnet run` uygulamanızı çalıştırmak için.
 
 ## <a name="adding-new-dependencies"></a>Yeni bağımlılıkları ekleme
-.NET Core için önemli tasarım amaçlarından .NET framework yükleme boyutu en aza indirmektir. .NET Core uygulama çerçevesi, yalnızca tam .NET framework'ün en yaygın öğeleri içerir. Bir uygulamanın bazı özelliklerin ek kitaplıklar gerekiyorsa bu bağımlılıkların C# projenize ekleyin (\*.csproj) dosyası. Bizim örneğimizde, eklemeniz gerekecektir `System.Runtime.Serialization.Json` uygulamanızın JSON yanıtları işleyebilmek için paket.
+.NET Core için önemli tasarım amaçlarından .NET yükleme boyutu en aza indirmektir. Bir uygulamanın bazı özelliklerin ek kitaplıklar gerekiyorsa bu bağımlılıkların C# projenize ekleyin (\*.csproj) dosyası. Bizim örneğimizde, eklemeniz gerekecektir `System.Runtime.Serialization.Json` uygulamanızın JSON yanıtları işleyebilmek için paket.
 
 Açık, `csproj` proje dosyası. Dosyanın ilk satırı olarak görünmesi gerekir:
 

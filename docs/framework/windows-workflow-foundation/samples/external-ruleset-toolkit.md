@@ -3,11 +3,11 @@ title: Dış kural kümesi Araç Seti
 ms.date: 03/30/2017
 ms.assetid: a306d283-a031-475e-aa01-9ae86e7adcb0
 ms.openlocfilehash: f418c71b39611e64afea168ed40418dbe981521a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43538676"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43803362"
 ---
 # <a name="external-ruleset-toolkit"></a>Dış kural kümesi Araç Seti
 Bir iş akışı uygulama içinde kuralları kullanıldığında, normal derlemenin parçası kurallardır. Bazı senaryolarda, yeniden oluşturma ve iş akışı derleme dağıtılmadan güncelleştirilebilir ayrı olarak derlemesinden RuleSets sağlamak isteyebilirsiniz. Bu örnek ve bir veritabanında RuleSets düzenleyin ve çalışma zamanında bir iş akışından bu RuleSets erişimi yönetmesine olanak tanır. Bu kural kümesi değişiklikleri otomatik olarak birleştirmek çalışan iş akışı örnekleri sağlar.  

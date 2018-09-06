@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF Data Services, scenarios
 ms.assetid: 7c82658f-e7c0-46b6-834d-6592f67ab5ea
 ms.openlocfilehash: 5446ab5fe65bd6e2b5244e135c0723f3cb28e81a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 09/05/2018
-ms.locfileid: "43735533"
+ms.locfileid: "43803336"
 ---
 # <a name="application-scenarios-wcf-data-services"></a>Uygulama senaryoları (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] gösterme ve veri olarak kullanmak için bir dizi temel senaryoları destekler [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akışları. Bu konuda, bu senaryolar için ilgili konuları işaret eder.  

@@ -14,11 +14,11 @@ ms.assetid: 694a33c5-a040-450d-aed5-ac49fc88ce61
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5d2aaeaffaf3abbe1e8efcdb57d40e6ae60f89b5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43552341"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43801839"
 ---
 # <a name="walkthrough-creating-an-extensible-application"></a>İzlenecek Yol: Genişletilebilir Uygulama Oluşturma
 Bu izlenecek yol basit hesap makinesi işlevlerini gerçekleştiren bir eklenti için bir işlem hattı oluşturmayı açıklar. Gerçek dünya senaryoları göstermemiz gerekmez; Bunun yerine, bir işlem hattı ve nasıl bir eklenti için bir ana bilgisayar hizmetleri sağlayabilir temel işlevlerini gösterir.  

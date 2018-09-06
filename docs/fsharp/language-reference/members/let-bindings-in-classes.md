@@ -1,18 +1,17 @@
 ---
 title: Sınıflardaki let Bağlamaları (F#)
-description: "Sınıf tanımı'nda 'let' bağlamaları kullanarak özel alanlar ve F # sınıfları için özel işlevler tanımlamak öğrenin."
+description: "Özel alanlar ve F # sınıfları için özel işlevler sınıf tanımında 'let' bağlamaları kullanarak tanımlamayı öğrenin."
 ms.date: 05/16/2016
-ms.openlocfilehash: 1c17fe0edec14c28c9bdde86d0a2acb7c886cdf7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 237eb98a57571a21c9187abf31f05160374cf4fc
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33564553"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43797699"
 ---
 # <a name="let-bindings-in-classes"></a>Sınıflardaki let Bağlamaları
 
-Kullanarak özel alanlar ve F # sınıfları için özel işlevler tanımlayabilirsiniz `let` sınıf tanımında bağlar.
-
+Özel alanlar ve özel işlevler için F # sınıfları kullanarak tanımlayabilirsiniz `let` sınıf tanımında bağlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -25,15 +24,16 @@ Kullanarak özel alanlar ve F # sınıfları için özel işlevler tanımlayabil
 ```
 
 ## <a name="remarks"></a>Açıklamalar
-Önceki sözdizimi sınıf başlık ve devralma bildirimleri sonra ancak herhangi bir üye tanımları önce görünür. Söz dizimi, gibi `let` sınıfları, ancak bir sınıf içinde tanımlanan adlar dışında bağlamaları sınıfa sınırlı bir kapsam vardır. A `let` özel alan veya verileri açığa işlevi; bağlama oluşturur veya işlevleri genel olarak, bildirme bir özellik ya da bir üye yöntemi.
 
-A `let` bağlaması değil örneği statik olarak adlandırılan `let` bağlama. Örnek `let` bağlamaları nesneler oluşturulduğunda yürütün. Statik `let` bağlamaları statik Başlatıcı türü ilk kullanılmadan önce yürütülecek garanti sınıf için bir parçasıdır.
+Önceki sözdizimini, başlık ve devralma sınıf bildirimleri sonra ancak herhangi bir üye tanımı önce görünür. Söz dizimi şu şekildedir gibi `let` bağlamaları sınıfları, ancak bir sınıfta tanımlanan adlar dışında sınıfa sınırlı kapsamı vardır. A `let` bağlama, bir özel alan veya verileri ortaya çıkarmak için işlev; oluşturur veya işlevleri genel olarak, bir özellik veya bir üye yöntem bildirin.
 
-Örnek içindeki kod `let` bağlamaları birincil Oluşturucusu 's parametrelerini kullanabilirsiniz.
+A `let` bağlama değil örneği statik olarak adlandırılan `let` bağlama. Örnek `let` bağlamaları yürütmek nesneler oluşturulduğunda. Statik `let` bağlamaları türü ilk kez kullanılmadan önce yürütülecek garanti sınıfı için statik Başlatıcı bir parçasıdır.
+
+Kod örneği içinde `let` bağlamaları birincil oluşturucunun parametreleri kullanabilirsiniz.
 
 Öznitelikler ve erişilebilirlik değiştiricileri verilmez üzerinde `let` sınıflardaki bağlar.
 
-Aşağıdaki kod örneğinde çeşitli türlerde göstermeye `let` sınıflardaki bağlar.
+Aşağıdaki kod örnekleri birkaç türde göstermek `let` sınıflardaki bağlar.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3001.fs)]
 
@@ -43,14 +43,14 @@ Aşağıdaki kod örneğinde çeşitli türlerde göstermeye `let` sınıflardak
 10 52 1 204
 ```
 
-## <a name="alternative-ways-to-create-fields"></a>Alanları oluşturmak için alternatif yöntemler
-Aynı zamanda `val` özel alanı oluşturmak için anahtar sözcüğü. Kullanırken `val` anahtar sözcüğü, alanın değil verilen bir değer nesnesi oluşturulur, ancak bunun yerine varsayılan bir değerle başlatılır. Daha fazla bilgi için bkz: [açık alanlar: val anahtar sözcüğü](explicit-fields-the-val-keyword.md).
+## <a name="alternative-ways-to-create-fields"></a>Alanları oluşturmak için alternatif yollar
 
-Ayrıca özel alanlar bir sınıfta bir üye tanımı kullanılarak ve anahtar sözcüğü ekleyerek tanımlayabilirsiniz `private` tanımı. Bu üye erişilebilirliğini kodunuzu yeniden yazma işlemi değiştirmek bekliyorsanız yararlı olabilir. Daha fazla bilgi için bkz: [erişim denetimi](../access-control.md).
+Ayrıca `val` özel bir alan oluşturmak için anahtar sözcüğü. Kullanırken `val` anahtar sözcüğü, alan verilmemiş bir değer nesnesi oluşturulur, ancak bunun yerine varsayılan bir değerle başlatılır. Daha fazla bilgi için [açık alanlar: val anahtar sözcüğü](explicit-fields-the-val-keyword.md).
 
-## <a name="see-also"></a>Ayrıca Bkz.
-[Üyeler](index.md)
+Ayrıca özel alanlar bir sınıfta bir üye tanımı kullanarak ve anahtar sözcüğü ekleyerek tanımlayabilirsiniz `private` tanımına. Bu, kodunuzu yeniden yazma olmadan bir üyenin erişilebilirliğini değiştirmek bekliyorsanız yararlı olabilir. Daha fazla bilgi için [erişim denetimi](../access-control.md).
 
-[`do` Sınıflardaki bağlamaları](do-bindings-in-classes.md)
+## <a name="see-also"></a>Ayrıca bkz.
 
-[`let` Bağlamaları](../functions/let-bindings.md)
+- [Üyeler](index.md)
+- [`do` Sınıflardaki bağlamaları](do-bindings-in-classes.md)
+- [`let` Bağlamaları](../functions/let-bindings.md)

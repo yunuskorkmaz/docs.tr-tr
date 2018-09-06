@@ -2,12 +2,12 @@
 title: Hesaplama İfadeleri (F#)
 description: 'Hesaplamaları sıralı ve denetim akışı yapılarını ve bağlamalar kullanılarak birleştirilen içinde F # yazmak için kullanışlı bir söz dizimi oluşturmayı öğrenin.'
 ms.date: 07/27/2018
-ms.openlocfilehash: 4995efc757d99a575ee9fad3abf0465a32398c44
-ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
+ms.openlocfilehash: ce81af7966a436b3973de277fb2a78ec06f4c471
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "36207439"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43800923"
 ---
 # <a name="computation-expressions"></a>Hesaplama İfadeleri
 
@@ -229,8 +229,6 @@ builder.Run(builder.Delay(fun () -> {| cexpr |}))
 
 Yukarıdaki kodda, çağrıları `Run` ve `Delay` hesaplama ifadesi Oluşturucu sınıfta tanımlı değil göz ardı edilir. Olarak burada belirtilen hesaplama ifadesi gövdesinin `{| cexpr |}`, aşağıdaki tabloda açıklanan çevirileri tarafından Oluşturucu sınıfının yöntemlerini içeren çağırıyor çevrilir. Hesaplama ifadesi `{| cexpr |}` tanımlı yinelemeli olarak bu çevirileri göre olduğundan burada `expr` bir F # ifadesi ve `cexpr` hesaplama ifadesi.
 
-
-
 |İfade|Çeviri|
 |----------|-----------|
 |<code>{&#124; let binding in cexpr &#124;}</code>|<code>let binding in {&#124; cexpr &#124;}</code>|
@@ -361,7 +359,7 @@ let comp = eventually {
         printfn " x = %d" x
     return 3 + 4 }
 
-// Try the remaining lines in F# interactive to see how this 
+// Try the remaining lines in F# interactive to see how this
 // computation expression works in practice.
 let step x = Eventually.step x
 
@@ -386,9 +384,11 @@ comp |> step |> step |> step |> step |> step |> step |> step |> step
 Hesaplama ifadesi ifade döndürür bir temel türü vardır. Temel alınan türü, hesaplanan bir sonuç ya da gerçekleştirilebilir Gecikmeli bir hesaplama gösterebilir veya bazı koleksiyon türü yineleme yapmak için bir yol sağlayabilir. Önceki örnekte, temel türde **sonunda**. Bir sıralama ifadesi için temel türdür <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. Bir sorgu ifadesi için temel türdür <xref:System.Linq.IQueryable?displayProperty=nameWithType>. Zaman uyumsuz bir iş akışı için temel türdür [ `Async` ](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7). `Async` Nesne sonucu hesaplamak için gerçekleştirilecek işin temsil eder. Örneğin, çağrı [ `Async.RunSynchronously` ](https://msdn.microsoft.com/library/0a6663a9-50f2-4d38-8bf3-cefd1a51fd6b) hesaplama çalıştırmak ve sonucu döndürür.
 
 ## <a name="custom-operations"></a>Özel işlemler
+
 Hesaplama ifadesi üzerinde özel bir işlemi tanımlar ve bir işleç bir hesaplama ifadesi olarak özel bir işlemi kullanın. Örneğin, bir sorgu ifadesinde bir sorgu işleci içerebilir. Özel bir işlemi tanımlarken Yield tanımlamanız gerekir ve hesaplama ifadesi yöntemleri. Özel bir işlemi tanımlamak için hesaplama ifadesi için bir oluşturucu sınıf koyun ve ardından uygulama [ `CustomOperationAttribute` ](https://msdn.microsoft.com/library/199f3927-79df-484b-ba66-85f58cc49b19). Bu öznitelik, bir özel işleminde kullanılacak adı olan bir bağımsız değişkeni olarak bir dize alır. Bu ad, açılış kaşlı ayracından hesaplama deyimine başlangıcında kapsama gelir. Bu nedenle, bu bloğunda bir özel işlem olarak aynı ada sahip tanımlayıcılar kullanmamalısınız. Örneğin, tanımlayıcıların gibi kullanmaktan kaçının `all` veya `last` sorgu ifadelerinde.
 
 ### <a name="extending-existing-builders-with-new-custom-operations"></a>Mevcut oluşturucular yeni özel işlemleri ile genişletme
+
 Bir oluşturucu sınıf zaten varsa, kendi özel işlemler öğesinden Bu oluşturucu sınıf dışında genişletilebilir. Uzantılar, modüller bildirilmelidir. Ad alanları, aynı dosya ve tür tanımlandığı ad alanı bildirimi grubu dışında uzantı üyeleri içeremez.
 
 Aşağıdaki örnek, varolan uzantısı gösterir `Microsoft.FSharp.Linq.QueryBuilder` sınıfı.
@@ -401,11 +401,9 @@ type Microsoft.FSharp.Linq.QueryBuilder with
         Enumerable.Any (source.Source, Func<_,_>(predicate)) |> not
 ```
 
-## <a name="see-also"></a>Ayrıca Bkz.
-[F# Dili Başvurusu](index.md)
+## <a name="see-also"></a>Ayrıca bkz.
 
-[Zaman Uyumsuz İş Akışları](asynchronous-workflows.md)
-
-[Diziler](https://msdn.microsoft.com/library/6b773b6b-9c9a-4af8-bd9e-d96585c166db)
-
-[Sorgu İfadeleri](query-expressions.md)
+- [F# Dili Başvurusu](index.md)
+- [Zaman Uyumsuz İş Akışları](asynchronous-workflows.md)
+- [Diziler](https://msdn.microsoft.com/library/6b773b6b-9c9a-4af8-bd9e-d96585c166db)
+- [Sorgu İfadeleri](query-expressions.md)

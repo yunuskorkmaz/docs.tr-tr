@@ -11,11 +11,11 @@ helpviewer_keywords:
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
 ms.openlocfilehash: 71573de48cc51c48291fc4b82a0628d2d0f96caa
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43556815"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43801787"
 ---
 # <a name="from-clause-visual-basic"></a>From Tümcesi (Visual Basic)
 Bir veya daha fazla aralık değişkenleri ve bir sorgu koleksiyonu belirtir.  
