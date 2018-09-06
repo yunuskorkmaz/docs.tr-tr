@@ -3,24 +3,24 @@ title: 'Değer seçenekleri (F #)'
 description: 'Seçenek türü bir yapı sürümü F # değer seçeneği türü hakkında bilgi edinin.'
 ms.date: 06/16/2018
 ms.openlocfilehash: 5647ef61725401b10a6045b14eef11f5b041e3e9
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43747507"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44041216"
 ---
-# <a name="value-options"></a><span data-ttu-id="665c8-103">Değer seçenekleri</span><span class="sxs-lookup"><span data-stu-id="665c8-103">Value Options</span></span>
+# <a name="value-options"></a><span data-ttu-id="18a3a-103">Değer seçenekleri</span><span class="sxs-lookup"><span data-stu-id="18a3a-103">Value Options</span></span>
 
-<span data-ttu-id="665c8-104">Aşağıdaki iki koşul tuttuğunuzda değeri seçenek türünün F # kullanılır:</span><span class="sxs-lookup"><span data-stu-id="665c8-104">The Value Option type in F# is used when the following two circumstances hold:</span></span>
+<span data-ttu-id="18a3a-104">Aşağıdaki iki koşul tuttuğunuzda değeri seçenek türünün F # kullanılır:</span><span class="sxs-lookup"><span data-stu-id="18a3a-104">The Value Option type in F# is used when the following two circumstances hold:</span></span>
 
-1. <span data-ttu-id="665c8-105">Bir senaryo için uygun olan bir [F # seçeneği](options.md).</span><span class="sxs-lookup"><span data-stu-id="665c8-105">A scenario is appropriate for an [F# Option](options.md).</span></span>
-2. <span data-ttu-id="665c8-106">Bir yapı kullanarak sizin senaryonuzda bu performans artar.</span><span class="sxs-lookup"><span data-stu-id="665c8-106">Using a struct provides a performance benefit in your scenario.</span></span>
+1. <span data-ttu-id="18a3a-105">Bir senaryo için uygun olan bir [F # seçeneği](options.md).</span><span class="sxs-lookup"><span data-stu-id="18a3a-105">A scenario is appropriate for an [F# Option](options.md).</span></span>
+2. <span data-ttu-id="18a3a-106">Bir yapı kullanarak sizin senaryonuzda bu performans artar.</span><span class="sxs-lookup"><span data-stu-id="18a3a-106">Using a struct provides a performance benefit in your scenario.</span></span>
 
-<span data-ttu-id="665c8-107">Tüm performans açısından duyarlı senaryoları "yapılar kullanarak çözülen".</span><span class="sxs-lookup"><span data-stu-id="665c8-107">Not all performance-sensitive scenarios are "solved" by using structs.</span></span> <span data-ttu-id="665c8-108">Bunları başvuru türleri yerine kullanırken kopyalama ek maliyeti dikkate almanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="665c8-108">You must consider the additional cost of copying when using them instead of reference types.</span></span> <span data-ttu-id="665c8-109">Ancak, çünkü yapılar bazen daha iyi bir program ömrü boyunca genel performansı sağlayabilir büyük F # programları genellikle etkin yolları akış birçok isteğe bağlı tür örneği.</span><span class="sxs-lookup"><span data-stu-id="665c8-109">However, large F# programs commonly instantiate many optional types that flow through hot paths, because structs can sometimes yield better overall performance over the lifetime of a program.</span></span>
+<span data-ttu-id="18a3a-107">Tüm performans açısından duyarlı senaryoları "yapılar kullanarak çözülen".</span><span class="sxs-lookup"><span data-stu-id="18a3a-107">Not all performance-sensitive scenarios are "solved" by using structs.</span></span> <span data-ttu-id="18a3a-108">Bunları başvuru türleri yerine kullanırken kopyalama ek maliyeti dikkate almanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="18a3a-108">You must consider the additional cost of copying when using them instead of reference types.</span></span> <span data-ttu-id="18a3a-109">Ancak, çünkü yapılar bazen daha iyi bir program ömrü boyunca genel performansı sağlayabilir büyük F # programları genellikle etkin yolları akış birçok isteğe bağlı tür örneği.</span><span class="sxs-lookup"><span data-stu-id="18a3a-109">However, large F# programs commonly instantiate many optional types that flow through hot paths, because structs can sometimes yield better overall performance over the lifetime of a program.</span></span>
 
-## <a name="definition"></a><span data-ttu-id="665c8-110">Tanım</span><span class="sxs-lookup"><span data-stu-id="665c8-110">Definition</span></span>
+## <a name="definition"></a><span data-ttu-id="18a3a-110">Tanım</span><span class="sxs-lookup"><span data-stu-id="18a3a-110">Definition</span></span>
 
-<span data-ttu-id="665c8-111">Değer seçeneği olarak tanımlanmış olan bir [ayırt edici birleşim](discriminated-unions.md#struct-discriminated-unions) olan başvuru seçeneği türüne benzerdir:</span><span class="sxs-lookup"><span data-stu-id="665c8-111">Value Option is defined as a [struct discriminated union](discriminated-unions.md#struct-discriminated-unions) that is similar to the reference option type:</span></span>
+<span data-ttu-id="18a3a-111">Değer seçeneği olarak tanımlanmış olan bir [ayırt edici birleşim](discriminated-unions.md#struct-discriminated-unions) olan başvuru seçeneği türüne benzerdir:</span><span class="sxs-lookup"><span data-stu-id="18a3a-111">Value Option is defined as a [struct discriminated union](discriminated-unions.md#struct-discriminated-unions) that is similar to the reference option type:</span></span>
 
 ```fsharp
 [<StructuralEquality; StructuralComparison>]
@@ -35,11 +35,11 @@ type ValueOption<'T> =
 and 'T voption = ValueOption<'T>
 ```
 
-<span data-ttu-id="665c8-112">Değer seçeneği yapısal eşitlik ve karşılaştırma için uygundur.</span><span class="sxs-lookup"><span data-stu-id="665c8-112">Value Option conforms to structural equality and comparison.</span></span> <span data-ttu-id="665c8-113">İkisi arasındaki temel fark, derlenmiş ad, tür adı ve büyük/küçük harf adları, bir değer türü olduğunu belirtmek ' dir.</span><span class="sxs-lookup"><span data-stu-id="665c8-113">The main difference is that the compiled name, type name, and case names all indicate that it is a value type.</span></span>
+<span data-ttu-id="18a3a-112">Değer seçeneği yapısal eşitlik ve karşılaştırma için uygundur.</span><span class="sxs-lookup"><span data-stu-id="18a3a-112">Value Option conforms to structural equality and comparison.</span></span> <span data-ttu-id="18a3a-113">İkisi arasındaki temel fark, derlenmiş ad, tür adı ve büyük/küçük harf adları, bir değer türü olduğunu belirtmek ' dir.</span><span class="sxs-lookup"><span data-stu-id="18a3a-113">The main difference is that the compiled name, type name, and case names all indicate that it is a value type.</span></span>
 
-## <a name="using-value-options"></a><span data-ttu-id="665c8-114">Değer seçeneklerini kullanma</span><span class="sxs-lookup"><span data-stu-id="665c8-114">Using Value Options</span></span>
+## <a name="using-value-options"></a><span data-ttu-id="18a3a-114">Değer seçeneklerini kullanma</span><span class="sxs-lookup"><span data-stu-id="18a3a-114">Using Value Options</span></span>
 
-<span data-ttu-id="665c8-115">Değer seçenekleri gibi kullanılır [seçenekleri](options.md).</span><span class="sxs-lookup"><span data-stu-id="665c8-115">Value Options are used just like [Options](options.md).</span></span> <span data-ttu-id="665c8-116">`ValueSome` bir değerin mevcut olduğunu belirtmek için kullanılır ve `ValueNone` bir değer mevcut olmadığında kullanılır:</span><span class="sxs-lookup"><span data-stu-id="665c8-116">`ValueSome` is used to indicate that a value is present, and `ValueNone` is used when a value is not present:</span></span>
+<span data-ttu-id="18a3a-115">Değer seçenekleri gibi kullanılır [seçenekleri](options.md).</span><span class="sxs-lookup"><span data-stu-id="18a3a-115">Value Options are used just like [Options](options.md).</span></span> <span data-ttu-id="18a3a-116">`ValueSome` bir değerin mevcut olduğunu belirtmek için kullanılır ve `ValueNone` bir değer mevcut olmadığında kullanılır:</span><span class="sxs-lookup"><span data-stu-id="18a3a-116">`ValueSome` is used to indicate that a value is present, and `ValueNone` is used when a value is not present:</span></span>
 
 ```fsharp
 let tryParseDateTime (s: string) =
@@ -60,24 +60,24 @@ match (result1, result2) with
 | ValueNone, ValueNone -> printfn "None of them are dates!"
 ```
 
-<span data-ttu-id="665c8-117">Olduğu gibi [seçenekleri](options.md), döndüren bir işlev için adlandırma kuralı `ValueOption` ile ön ek için `try`.</span><span class="sxs-lookup"><span data-stu-id="665c8-117">As with [Options](options.md), the naming convention for a function that returns `ValueOption` is to prefix it with `try`.</span></span>
+<span data-ttu-id="18a3a-117">Olduğu gibi [seçenekleri](options.md), döndüren bir işlev için adlandırma kuralı `ValueOption` ile ön ek için `try`.</span><span class="sxs-lookup"><span data-stu-id="18a3a-117">As with [Options](options.md), the naming convention for a function that returns `ValueOption` is to prefix it with `try`.</span></span>
 
-## <a name="value-option-properties-and-methods"></a><span data-ttu-id="665c8-118">Değer seçeneği özellikleri ve yöntemleri</span><span class="sxs-lookup"><span data-stu-id="665c8-118">Value Option properties and methods</span></span>
+## <a name="value-option-properties-and-methods"></a><span data-ttu-id="18a3a-118">Değer seçeneği özellikleri ve yöntemleri</span><span class="sxs-lookup"><span data-stu-id="18a3a-118">Value Option properties and methods</span></span>
 
-<span data-ttu-id="665c8-119">Şu anda bir özellik için değer seçenekleri mevcuttur: `Value`.</span><span class="sxs-lookup"><span data-stu-id="665c8-119">There is one property for Value Options at this time: `Value`.</span></span> <span data-ttu-id="665c8-120">Bir <xref:System.InvalidOperationException> hiçbir değer yoksa, bu özelliğin çağırılır olması durumunda tetiklenir.</span><span class="sxs-lookup"><span data-stu-id="665c8-120">An <xref:System.InvalidOperationException> is raised if no value is present when this property is invoked.</span></span>
+<span data-ttu-id="18a3a-119">Şu anda bir özellik için değer seçenekleri mevcuttur: `Value`.</span><span class="sxs-lookup"><span data-stu-id="18a3a-119">There is one property for Value Options at this time: `Value`.</span></span> <span data-ttu-id="18a3a-120">Bir <xref:System.InvalidOperationException> hiçbir değer yoksa, bu özelliğin çağırılır olması durumunda tetiklenir.</span><span class="sxs-lookup"><span data-stu-id="18a3a-120">An <xref:System.InvalidOperationException> is raised if no value is present when this property is invoked.</span></span>
 
-## <a name="value-option-functions"></a><span data-ttu-id="665c8-121">Değer seçeneği işlevleri</span><span class="sxs-lookup"><span data-stu-id="665c8-121">Value Option functions</span></span>
+## <a name="value-option-functions"></a><span data-ttu-id="18a3a-121">Değer seçeneği işlevleri</span><span class="sxs-lookup"><span data-stu-id="18a3a-121">Value Option functions</span></span>
 
-<span data-ttu-id="665c8-122">Şu anda bir modül bağlı işlev değer seçenekleri için olan `defaultValueArg`:</span><span class="sxs-lookup"><span data-stu-id="665c8-122">There is currently one module-bound function for Value Options, `defaultValueArg`:</span></span>
+<span data-ttu-id="18a3a-122">Şu anda bir modül bağlı işlev değer seçenekleri için olan `defaultValueArg`:</span><span class="sxs-lookup"><span data-stu-id="18a3a-122">There is currently one module-bound function for Value Options, `defaultValueArg`:</span></span>
 
 ```fsharp
 val defaultValueArg : arg:'T voption -> defaultValue:'T -> 'T 
 ```
 
-<span data-ttu-id="665c8-123">Olduğu gibi `defaultArg` işlevi `defaultValueArg` belirli değer seçeneği temel değerini döndürür var; Aksi takdirde, varsayılan değeri döndürür.</span><span class="sxs-lookup"><span data-stu-id="665c8-123">As with the `defaultArg` function, `defaultValueArg` returns the underlying value of the given Value Option if it exists; otherwise, it returns the specified default value.</span></span>
+<span data-ttu-id="18a3a-123">Olduğu gibi `defaultArg` işlevi `defaultValueArg` belirli değer seçeneği temel değerini döndürür var; Aksi takdirde, varsayılan değeri döndürür.</span><span class="sxs-lookup"><span data-stu-id="18a3a-123">As with the `defaultArg` function, `defaultValueArg` returns the underlying value of the given Value Option if it exists; otherwise, it returns the specified default value.</span></span>
 
-<span data-ttu-id="665c8-124">Şu anda hiç bir modül bağlı işlevi değer seçenekleri için vardır.</span><span class="sxs-lookup"><span data-stu-id="665c8-124">At this time, there are no other module-bound functions for Value Options.</span></span>
+<span data-ttu-id="18a3a-124">Şu anda hiç bir modül bağlı işlevi değer seçenekleri için vardır.</span><span class="sxs-lookup"><span data-stu-id="18a3a-124">At this time, there are no other module-bound functions for Value Options.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="665c8-125">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="665c8-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="18a3a-125">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="18a3a-125">See also</span></span>
 
-- [<span data-ttu-id="665c8-126">Seçenekler</span><span class="sxs-lookup"><span data-stu-id="665c8-126">Options</span></span>](options.md)
+- [<span data-ttu-id="18a3a-126">Seçenekler</span><span class="sxs-lookup"><span data-stu-id="18a3a-126">Options</span></span>](options.md)

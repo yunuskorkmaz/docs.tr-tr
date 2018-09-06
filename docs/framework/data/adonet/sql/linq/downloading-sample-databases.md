@@ -3,54 +3,54 @@ title: Örnek veritabanları indirme
 ms.date: 03/30/2017
 ms.assetid: ef9d69a1-9461-43fe-94bb-7c836754bcb5
 ms.openlocfilehash: e0b842385762a486ffcc775974e15334c77b589b
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43741708"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44039140"
 ---
-# <a name="downloading-sample-databases"></a><span data-ttu-id="f1d78-102">Örnek veritabanları indirme</span><span class="sxs-lookup"><span data-stu-id="f1d78-102">Downloading Sample Databases</span></span>
-<span data-ttu-id="f1d78-103">Örnekler ve izlenecek yollar, bir dizi [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Northwind örnek veritabanı ve SQL Server Express Edition belgeleri kullanın.</span><span class="sxs-lookup"><span data-stu-id="f1d78-103">A number of samples and walkthroughs in the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentation use the Northwind sample database and SQL Server Express Edition.</span></span> <span data-ttu-id="f1d78-104">Bu ürünleri ücretsiz olarak Microsoft Yükleme sitesinden indirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="f1d78-104">You can download these products free of charge from the Microsoft download site.</span></span>  
+# <a name="downloading-sample-databases"></a><span data-ttu-id="02a93-102">Örnek veritabanları indirme</span><span class="sxs-lookup"><span data-stu-id="02a93-102">Downloading Sample Databases</span></span>
+<span data-ttu-id="02a93-103">Örnekler ve izlenecek yollar, bir dizi [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Northwind örnek veritabanı ve SQL Server Express Edition belgeleri kullanın.</span><span class="sxs-lookup"><span data-stu-id="02a93-103">A number of samples and walkthroughs in the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentation use the Northwind sample database and SQL Server Express Edition.</span></span> <span data-ttu-id="02a93-104">Bu ürünleri ücretsiz olarak Microsoft Yükleme sitesinden indirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="02a93-104">You can download these products free of charge from the Microsoft download site.</span></span>  
   
-## <a name="downloading-the-northwind-database"></a><span data-ttu-id="f1d78-105">Northwind veritabanı indiriliyor</span><span class="sxs-lookup"><span data-stu-id="f1d78-105">Downloading the Northwind Database</span></span>  
+## <a name="downloading-the-northwind-database"></a><span data-ttu-id="02a93-105">Northwind veritabanı indiriliyor</span><span class="sxs-lookup"><span data-stu-id="02a93-105">Downloading the Northwind Database</span></span>  
   
-#### <a name="to-download-and-install-the-northwind-sample-database-for-sql-server"></a><span data-ttu-id="f1d78-106">İndirmek ve SQL Server için Northwind örnek veritabanını yüklemek için</span><span class="sxs-lookup"><span data-stu-id="f1d78-106">To download and install the Northwind sample database for SQL Server</span></span>  
+#### <a name="to-download-and-install-the-northwind-sample-database-for-sql-server"></a><span data-ttu-id="02a93-106">İndirmek ve SQL Server için Northwind örnek veritabanını yüklemek için</span><span class="sxs-lookup"><span data-stu-id="02a93-106">To download and install the Northwind sample database for SQL Server</span></span>  
   
-1.  <span data-ttu-id="f1d78-107">Internet Explorer'ı başlatın.</span><span class="sxs-lookup"><span data-stu-id="f1d78-107">Start Internet Explorer.</span></span>  
+1.  <span data-ttu-id="02a93-107">Internet Explorer'ı başlatın.</span><span class="sxs-lookup"><span data-stu-id="02a93-107">Start Internet Explorer.</span></span>  
   
-2.  <span data-ttu-id="f1d78-108">Git [Northwind ve Pubs örnek veritabanları](https://go.microsoft.com/fwlink?linkid=64296) Web sitesi.</span><span class="sxs-lookup"><span data-stu-id="f1d78-108">Go to the [Northwind and Pubs Sample Databases](https://go.microsoft.com/fwlink?linkid=64296) Web site.</span></span>  
+2.  <span data-ttu-id="02a93-108">Git [Northwind ve Pubs örnek veritabanları](https://go.microsoft.com/fwlink?linkid=64296) Web sitesi.</span><span class="sxs-lookup"><span data-stu-id="02a93-108">Go to the [Northwind and Pubs Sample Databases](https://go.microsoft.com/fwlink?linkid=64296) Web site.</span></span>  
   
-3.  <span data-ttu-id="f1d78-109">**İndir**'e tıklayın.</span><span class="sxs-lookup"><span data-stu-id="f1d78-109">Click **Download**.</span></span>  
+3.  <span data-ttu-id="02a93-109">**İndir**'e tıklayın.</span><span class="sxs-lookup"><span data-stu-id="02a93-109">Click **Download**.</span></span>  
   
-4.  <span data-ttu-id="f1d78-110">İçinde **dosya indirme** iletişim kutusunda **Kaydet**.</span><span class="sxs-lookup"><span data-stu-id="f1d78-110">In the **File Download** dialog box, select **Save**.</span></span>  
+4.  <span data-ttu-id="02a93-110">İçinde **dosya indirme** iletişim kutusunda **Kaydet**.</span><span class="sxs-lookup"><span data-stu-id="02a93-110">In the **File Download** dialog box, select **Save**.</span></span>  
   
-5.  <span data-ttu-id="f1d78-111">Dosya indirdi sonra çift **Nwind.exe** veritabanını yüklemek için dosya.</span><span class="sxs-lookup"><span data-stu-id="f1d78-111">After the file has downloaded, double-click the **Nwind.exe** file to install the database.</span></span>  
+5.  <span data-ttu-id="02a93-111">Dosya indirdi sonra çift **Nwind.exe** veritabanını yüklemek için dosya.</span><span class="sxs-lookup"><span data-stu-id="02a93-111">After the file has downloaded, double-click the **Nwind.exe** file to install the database.</span></span>  
   
-     <span data-ttu-id="f1d78-112">Varsayılan olarak, veritabanının yüklü olduğu *sürücü*: \SQL Server 2000 örnek veritabanları.</span><span class="sxs-lookup"><span data-stu-id="f1d78-112">By default, the database is installed at *drive*:\SQL Server 2000 Sample Databases.</span></span>  
+     <span data-ttu-id="02a93-112">Varsayılan olarak, veritabanının yüklü olduğu *sürücü*: \SQL Server 2000 örnek veritabanları.</span><span class="sxs-lookup"><span data-stu-id="02a93-112">By default, the database is installed at *drive*:\SQL Server 2000 Sample Databases.</span></span>  
   
-## <a name="downloading-sql-server-express-edition"></a><span data-ttu-id="f1d78-113">SQL Server Express sürümü indiriliyor</span><span class="sxs-lookup"><span data-stu-id="f1d78-113">Downloading SQL Server Express Edition</span></span>  
- <span data-ttu-id="f1d78-114">SQL Server Express Edition ücretsiz kullanılabilir ve uygulamaları yeniden dağıtabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="f1d78-114">SQL Server Express Edition is available without charge, and you can redistribute it with applications.</span></span> <span data-ttu-id="f1d78-115">Visual Studio kullanıyorsanız, SQL Server Express Edition Pro ve üzeri sürümlerinde bulunur.</span><span class="sxs-lookup"><span data-stu-id="f1d78-115">If you are using Visual Studio, SQL Server Express Edition is included in the Pro and greater editions.</span></span>  
+## <a name="downloading-sql-server-express-edition"></a><span data-ttu-id="02a93-113">SQL Server Express sürümü indiriliyor</span><span class="sxs-lookup"><span data-stu-id="02a93-113">Downloading SQL Server Express Edition</span></span>  
+ <span data-ttu-id="02a93-114">SQL Server Express Edition ücretsiz kullanılabilir ve uygulamaları yeniden dağıtabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="02a93-114">SQL Server Express Edition is available without charge, and you can redistribute it with applications.</span></span> <span data-ttu-id="02a93-115">Visual Studio kullanıyorsanız, SQL Server Express Edition Pro ve üzeri sürümlerinde bulunur.</span><span class="sxs-lookup"><span data-stu-id="02a93-115">If you are using Visual Studio, SQL Server Express Edition is included in the Pro and greater editions.</span></span>  
   
-#### <a name="to-download-and-install-sql-server-express-edition"></a><span data-ttu-id="f1d78-116">SQL Server Express Edition'ı indirip</span><span class="sxs-lookup"><span data-stu-id="f1d78-116">To download and install SQL Server Express Edition</span></span>  
+#### <a name="to-download-and-install-sql-server-express-edition"></a><span data-ttu-id="02a93-116">SQL Server Express Edition'ı indirip</span><span class="sxs-lookup"><span data-stu-id="02a93-116">To download and install SQL Server Express Edition</span></span>  
   
-1.  <span data-ttu-id="f1d78-117">Internet Explorer'ı başlatın.</span><span class="sxs-lookup"><span data-stu-id="f1d78-117">Start Internet Explorer.</span></span>  
+1.  <span data-ttu-id="02a93-117">Internet Explorer'ı başlatın.</span><span class="sxs-lookup"><span data-stu-id="02a93-117">Start Internet Explorer.</span></span>  
   
-2.  <span data-ttu-id="f1d78-118">Git [Microsoft Download Center](https://go.microsoft.com/fwlink?linkid=74602) Web sitesi.</span><span class="sxs-lookup"><span data-stu-id="f1d78-118">Go to the [Microsoft Download Center](https://go.microsoft.com/fwlink?linkid=74602) Web site.</span></span>  
+2.  <span data-ttu-id="02a93-118">Git [Microsoft Download Center](https://go.microsoft.com/fwlink?linkid=74602) Web sitesi.</span><span class="sxs-lookup"><span data-stu-id="02a93-118">Go to the [Microsoft Download Center](https://go.microsoft.com/fwlink?linkid=74602) Web site.</span></span>  
   
-3.  <span data-ttu-id="f1d78-119">Anahtar sözcükler kutusuna **SQL Server Express**.</span><span class="sxs-lookup"><span data-stu-id="f1d78-119">In the keywords box, type **SQL Server Express**.</span></span>  
+3.  <span data-ttu-id="02a93-119">Anahtar sözcükler kutusuna **SQL Server Express**.</span><span class="sxs-lookup"><span data-stu-id="02a93-119">In the keywords box, type **SQL Server Express**.</span></span>  
   
-4.  <span data-ttu-id="f1d78-120">Tıklayın **Git**.</span><span class="sxs-lookup"><span data-stu-id="f1d78-120">Click **Go**.</span></span>  
+4.  <span data-ttu-id="02a93-120">Tıklayın **Git**.</span><span class="sxs-lookup"><span data-stu-id="02a93-120">Click **Go**.</span></span>  
   
-5.  <span data-ttu-id="f1d78-121">Sonuçları sayfasında bağlantısını tıklatın **Microsoft SQL Server 2005 Express Edition** indirme sayfası.</span><span class="sxs-lookup"><span data-stu-id="f1d78-121">On the results page, click the link to the **Microsoft SQL Server 2005 Express Edition** download page.</span></span>  
+5.  <span data-ttu-id="02a93-121">Sonuçları sayfasında bağlantısını tıklatın **Microsoft SQL Server 2005 Express Edition** indirme sayfası.</span><span class="sxs-lookup"><span data-stu-id="02a93-121">On the results page, click the link to the **Microsoft SQL Server 2005 Express Edition** download page.</span></span>  
   
-6.  <span data-ttu-id="f1d78-122">Web sitesi yükleme yönergelerini izleyin.</span><span class="sxs-lookup"><span data-stu-id="f1d78-122">Follow the installation instructions on the Web site.</span></span>  
+6.  <span data-ttu-id="02a93-122">Web sitesi yükleme yönergelerini izleyin.</span><span class="sxs-lookup"><span data-stu-id="02a93-122">Follow the installation instructions on the Web site.</span></span>  
   
-## <a name="downloading-management-studio-express"></a><span data-ttu-id="f1d78-123">Management Studio Express'i karşıdan yükleme</span><span class="sxs-lookup"><span data-stu-id="f1d78-123">Downloading Management Studio Express</span></span>  
- <span data-ttu-id="f1d78-124">Yüklediğiniz bir veritabanını değiştirmek istiyorsanız, veritabanından erişebileceğiniz **Sunucu Gezgini** Visual Studio tümleşik geliştirme ortamı (IDE) veya Microsoft SQL Server Management Studio Express'i (SSMSE) kullanın .</span><span class="sxs-lookup"><span data-stu-id="f1d78-124">If you want to modify a database that you have downloaded, you can access the database from **Server Explorer** in the Visual Studio integrated development environment (IDE), or use Microsoft SQL Server Management Studio Express (SSMSE).</span></span>  
+## <a name="downloading-management-studio-express"></a><span data-ttu-id="02a93-123">Management Studio Express'i karşıdan yükleme</span><span class="sxs-lookup"><span data-stu-id="02a93-123">Downloading Management Studio Express</span></span>  
+ <span data-ttu-id="02a93-124">Yüklediğiniz bir veritabanını değiştirmek istiyorsanız, veritabanından erişebileceğiniz **Sunucu Gezgini** Visual Studio tümleşik geliştirme ortamı (IDE) veya Microsoft SQL Server Management Studio Express'i (SSMSE) kullanın .</span><span class="sxs-lookup"><span data-stu-id="02a93-124">If you want to modify a database that you have downloaded, you can access the database from **Server Explorer** in the Visual Studio integrated development environment (IDE), or use Microsoft SQL Server Management Studio Express (SSMSE).</span></span>  
   
-#### <a name="to-download-management-studio-express"></a><span data-ttu-id="f1d78-125">Management Studio Express'i karşıdan yüklemek için</span><span class="sxs-lookup"><span data-stu-id="f1d78-125">To download Management Studio Express</span></span>  
+#### <a name="to-download-management-studio-express"></a><span data-ttu-id="02a93-125">Management Studio Express'i karşıdan yüklemek için</span><span class="sxs-lookup"><span data-stu-id="02a93-125">To download Management Studio Express</span></span>  
   
--   <span data-ttu-id="f1d78-126">Konumundaki yönergeleri [SSMSE site](https://go.microsoft.com/fwlink/?LinkId=95933).</span><span class="sxs-lookup"><span data-stu-id="f1d78-126">Follow the instructions at the [SSMSE site](https://go.microsoft.com/fwlink/?LinkId=95933).</span></span>  
+-   <span data-ttu-id="02a93-126">Konumundaki yönergeleri [SSMSE site](https://go.microsoft.com/fwlink/?LinkId=95933).</span><span class="sxs-lookup"><span data-stu-id="02a93-126">Follow the instructions at the [SSMSE site](https://go.microsoft.com/fwlink/?LinkId=95933).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f1d78-127">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="f1d78-127">See Also</span></span>  
- [<span data-ttu-id="f1d78-128">Başlarken</span><span class="sxs-lookup"><span data-stu-id="f1d78-128">Getting Started</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)
+## <a name="see-also"></a><span data-ttu-id="02a93-127">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="02a93-127">See Also</span></span>  
+ [<span data-ttu-id="02a93-128">Başlarken</span><span class="sxs-lookup"><span data-stu-id="02a93-128">Getting Started</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)
