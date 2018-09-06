@@ -3,11 +3,11 @@ title: Ertelenmiş yürütme ve geç değerlendirme LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 8683d1b4-b7ec-407b-be12-906ebe958a09
 ms.openlocfilehash: baf6a26b1579c17adfc60b27b485ba3af66c67d7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43661827"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43787866"
 ---
 # <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-c"></a>Ertelenmiş yürütme ve geç değerlendirme LINQ to XML (C#)
 Sorgu ve eksen işlemleri genellikle ertelenmiş yürütme kullanmak için uygulanır. Bu konuda, ertelenmiş yürütme ve bazı uygulama konuları avantajları ve gereksinimleri açıklanmaktadır.  

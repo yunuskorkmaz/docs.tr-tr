@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf91aa52b03f5b843a11147d8f5c28ce6f7a2e83
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: ab14be82f3dedeab0a1e1e574ce5622d067f72ae
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43255590"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43789023"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Özel Tarih ve Saat Biçim Dizeleri
 
@@ -47,7 +47,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
  Aşağıdaki tabloda özel tarih ve saat biçimi belirteçleri açıklanır ve her biçim belirticisi tarafından üretilen bir sonuç dizesini görüntülenir. Varsayılan olarak, sonuç dizeleri en-US kültürünün, biçimlendirme kurallarını yansıtır. Belirli bir biçim belirticisi yerelleştirilmiş bir sonuç dizesi üretirse örnek aynı zamanda sonuç dizesinin uygulanacağı kültürü de not alır. Özel tarih ve saat biçimi dizelerini kullanma hakkında ek bilgi için Notlar bölümüne bakın.
 
 | Biçim belirteci | Açıklama | Örnekler |
-|----------------------|-----------------|--------------|
+| ---------------------- | ----------------- | -------------- |
 |"d"|1 İle 31 arasında ayın günü.<br /><br /> Daha fazla bilgi: ["D" özel Biçim belirleyicisi](#dSpecifier).|2009-06-01T13:45:30 -> 1<br /><br /> 2009-06-15T13:45:30 -> 15|
 |"dd"|01 İle 31 arasında ayın günü.<br /><br /> Daha fazla bilgi: ["Dd" özel Biçim belirleyicisi](#ddSpecifier).|2009-06-01T13:45:30 -> 01<br /><br /> 2009-06-15T13:45:30 -> 15|
 |"ddd"|Haftanın günü, kısaltılmış adı.<br /><br /> Daha fazla bilgi: ["Ddd" özel Biçim belirleyicisi](#dddSpecifier).|2009-06-15T13:45:30 -> Pzt (en-US)<br /><br /> 2009-06-15T13:45:30 Пн (ru-RU) -><br /><br /> 2009-06-15T13:45:30 lun ->. (fr-FR)|
@@ -100,6 +100,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
  Aşağıdaki bölümlerde, her özel tarih ve saat biçim belirticisi hakkında ek bilgi sağlanır. Aksi belirtilmediği sürece her belirleyici kullanılmış bakılmaksızın aynı dize temsilini oluşturur. bir <xref:System.DateTime> değeri veya <xref:System.DateTimeOffset> değeri.
 
 <a name="dSpecifier"></a> 
+
 ## <a name="the-d-custom-format-specifier"></a>"D" özel biçim Belirleyicisi
  "d" özel biçim belirticisi, 1 ile 31 arasında bir sayı olarak ayın gününü temsil eder. Tek basamaklı gün önünde sıfır olmadan biçimlendirilir.
 
@@ -113,6 +114,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
  [Tabloya dön](#table)
 
 <a name="ddSpecifier"></a> 
+
 ## <a name="the-dd-custom-format-specifier"></a>"Dd" özel biçim Belirleyicisi
  "dd" özel biçim dizesi, 01 ile 31 arasında bir sayı olarak ayın gününü temsil eder. Tek basamaklı gün önünde sıfır ile biçimlendirilir.
 
@@ -124,6 +126,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
  [Tabloya dön](#table)
 
 <a name="dddSpecifier"></a> 
+
 ## <a name="the-ddd-custom-format-specifier"></a>"Ddd" özel biçim Belirleyicisi
  "ddd" özel biçim belirticisi haftanın gününün kısaltılmış adını temsil eder. Haftanın gününün yerelleştirilmiş kısaltılmış adı alınır <xref:System.Globalization.DateTimeFormatInfo.AbbreviatedDayNames%2A?displayProperty=nameWithType> geçerli ya da belirtilen kültürün özelliği.
 
@@ -135,6 +138,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
  [Tabloya dön](#table)
 
 <a name="ddddSpecifier"></a> 
+
 ## <a name="the-dddd-custom-format-specifier"></a>"Dddd" özel biçim Belirleyicisi
  "dddd" özel biçim belirticisi (artı herhangi bir sayıda ek "d" tanımlayıcısı) haftanın gününün tam adını temsil eder. Haftanın gününün yerelleştirilmiş adı alınır <xref:System.Globalization.DateTimeFormatInfo.DayNames%2A?displayProperty=nameWithType> geçerli ya da belirtilen kültürün özelliği.
 
@@ -146,6 +150,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
  [Tabloya dön](#table)
 
 <a name="fSpecifier"></a> 
+
 ## <a name="the-f-custom-format-specifier"></a>"F" özel biçim Belirleyicisi
  "f" özel biçim belirticisi saniye bölümünün en önemli basamağını temsil eder; diğer bir deyişle, tarih ve saat değerinde saniyenin onda birini temsil eder.
 
@@ -161,6 +166,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
  [Tabloya dön](#table)
 
 <a name="ffSpecifier"></a> 
+
 ## <a name="the-ff-custom-format-specifier"></a>"Ff" özel biçim Belirleyicisi
  "ff" özel biçim belirticisi saniye bölümünün en önemli iki basamağını temsil eder; diğer bir deyişle, tarih ve saat değerinde saniyenin yüzde birini temsil eder.
 
@@ -172,6 +178,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
  [Tabloya dön](#table)
 
 <a name="fffSpecifier"></a> 
+
 ## <a name="the-fff-custom-format-specifier"></a>"Fff" özel biçim Belirleyicisi
  "fff" özel biçim belirticisi saniye bölümünün en önemli üç basamağını temsil eder; diğer bir deyişle, tarih ve saat değerinde saniyenin binde birini temsil eder.
 
@@ -183,6 +190,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
  [Tabloya dön](#table)
 
 <a name="ffffSpecifier"></a> 
+
 ## <a name="the-ffff-custom-format-specifier"></a>"Ffff" özel biçim Belirleyicisi
  "ffff" özel biçim belirticisi saniye bölümünün en önemli dört basamağını temsil eder; diğer bir deyişle, tarih ve saat değerinde saniyenin on binde birini temsil eder.
 
@@ -191,6 +199,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
  [Tabloya dön](#table)
 
 <a name="fffffSpecifier"></a> 
+
 ## <a name="the-fffff-custom-format-specifier"></a>"Fffff" özel biçim Belirleyicisi
  "fffff" özel biçim belirticisi saniye bölümünün en önemli beş basamağını temsil eder; diğer bir deyişle, tarih ve saat değerinde saniyenin yüz binde birini temsil eder.
 
@@ -199,6 +208,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
  [Tabloya dön](#table)
 
 <a name="ffffffSpecifier"></a> 
+
 ## <a name="the-ffffff-custom-format-specifier"></a>"Ffffff" özel biçim Belirleyicisi
  "ffffff" özel biçim belirticisi saniye bölümünün en önemli altı basamağını temsil eder; diğer bir deyişle, tarih ve saat değerinde saniyenin milyonda birini temsil eder.
 
@@ -207,6 +217,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
  [Tabloya dön](#table)
 
 <a name="fffffffSpecifier"></a> 
+
 ## <a name="the-fffffff-custom-format-specifier"></a>"Fffffff" özel biçim Belirleyicisi
  "fffffff" özel biçim belirticisi saniye bölümünün en önemli yedi basamağını temsil eder; diğer bir deyişle, tarih ve saat değerinde saniyenin on milyonda birini temsil eder.
 
@@ -215,6 +226,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
  [Tabloya dön](#table)
 
 <a name="F_Specifier"></a> 
+
 ## <a name="the-f-custom-format-specifier"></a>"F" özel biçim Belirleyicisi
  "F" özel biçim belirticisi saniye bölümünün en önemli basamağını temsil eder; diğer bir deyişle, tarih ve saat değerinde saniyenin onda birini temsil eder. Basamak sıfırsa hiçbir şey görüntülenmez.
 
@@ -230,6 +242,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
  [Tabloya dön](#table)
 
 <a name="FF_Specifier"></a> 
+
 ## <a name="the-ff-custom-format-specifier"></a>"FF" özel biçim Belirleyicisi
  "FF" özel biçim belirticisi saniye bölümünün en önemli iki basamağını temsil eder; diğer bir deyişle, tarih ve saat değerinde saniyenin yüzde birini temsil eder. Ancak öndeki sıfırlar veya iki sıfır basamak görüntülenmez.
 
@@ -241,6 +254,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
  [Tabloya dön](#table)
 
 <a name="FFF_Specifier"></a> 
+
 ## <a name="the-fff-custom-format-specifier"></a>"FFF" özel biçim Belirleyicisi
  "FFF" özel biçim belirticisi saniye bölümünün en önemli üç basamağını temsil eder; diğer bir deyişle, tarih ve saat değerinde saniyenin binde birini temsil eder. Ancak öndeki sıfırlar veya üç sıfır basamak görüntülenmez.
 
@@ -252,6 +266,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
  [Tabloya dön](#table)
 
 <a name="FFFF_Specifier"></a> 
+
 ## <a name="the-ffff-custom-format-specifier"></a>"FFFF" özel biçim Belirleyicisi
  "FFFF" özel biçim belirticisi saniye bölümünün en önemli dört basamağını temsil eder; diğer bir deyişle, tarih ve saat değerinde saniyenin on binde birini temsil eder. Ancak öndeki sıfırlar veya dört sıfır basamak görüntülenmez.
 
@@ -260,6 +275,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
  [Tabloya dön](#table)
 
 <a name="FFFFF_Specifier"></a> 
+
 ## <a name="the-fffff-custom-format-specifier"></a>"FFFFF" özel biçim Belirleyicisi
  "FFFFF" özel biçim belirticisi saniye bölümünün en önemli beş basamağını temsil eder; diğer bir deyişle, tarih ve saat değerinde saniyenin yüz binde birini temsil eder. Ancak öndeki sıfırlar veya beş sıfır basamak görüntülenmez.
 
@@ -268,6 +284,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
  [Tabloya dön](#table)
 
 <a name="FFFFFF_Specifier"></a> 
+
 ## <a name="the-ffffff-custom-format-specifier"></a>"FFFFFF" özel biçim Belirleyicisi
  "FFFFFF" özel biçim belirticisi saniye bölümünün en önemli altı basamağını temsil eder; diğer bir deyişle, tarih ve saat değerinde saniyenin milyonda birini temsil eder. Ancak öndeki sıfırlar veya altı sıfır basamak görüntülenmez.
 
@@ -276,6 +293,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
  [Tabloya dön](#table)
 
 <a name="FFFFFFF_Specifier"></a> 
+
 ## <a name="the-fffffff-custom-format-specifier"></a>"FFFFFFF" özel biçim Belirleyicisi
  "FFFFFFF" özel biçim belirticisi saniye bölümünün en önemli yedi basamağını temsil eder; diğer bir deyişle, tarih ve saat değerinde saniyenin on milyonda birini temsil eder. Ancak öndeki sıfırlar veya yedi sıfır basamak görüntülenmez.
 
@@ -284,6 +302,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
  [Tabloya dön](#table)
 
 <a name="gSpecifier"></a> 
+
 ## <a name="the-g-or-gg-custom-format-specifier"></a>"G" veya "gg" özel biçim Belirleyicisi
  "g" veya "gg" özel biçim belirticileri (artı herhangi bir sayıda ek "g" belirticisi) M.S. gibi bir dönem veya çağı temsil eder Biçimlendirilecek tarih ilişkili bir dönem veya çağ dizesine sahip değilse, biçimlendirme işlemi bu belirticiyi yok sayar.
 
@@ -296,7 +315,8 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
 
  [Tabloya dön](#table)
 
-<a name="hSpecifier"></a>
+<a name="hSpecifier"></a> 
+
 ## <a name="the-h-custom-format-specifier"></a>"H" özel biçim Belirleyicisi
  "h" özel biçim belirticisi 1 ile 12 arasında bir sayı olarak saati temsil eder; diğer bir deyişle, saat, saatleri gece yarısından veya öğleden itibaren tam saatleri sayan 12 saatlik zaman biçimi ile temsil edilir. Gece yarısından sonraki bir saat, öğleden sonraki aynı saatle ayırt edilemez. Saat yuvarlanmaz ve önünde sıfır olmadan tek basamaklı bir saat biçimlendirilir. Örneğin, sabah veya öğleden sonra 5:43 saati verildiğinde bu özel biçim belirtici "5" görüntüler.
 
@@ -310,6 +330,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
  [Tabloya dön](#table)
 
 <a name="hhSpecifier"></a> 
+
 ## <a name="the-hh-custom-format-specifier"></a>"Hh" özel biçim Belirleyicisi
  "hh" özel biçim belirticisi (artı herhangi bir sayıda ek "h" belirticisi) 01 ile 12 arasında bir sayı olarak saati temsil eder; diğer bir deyişle, saat, tam saatleri gece yarısından veya öğleden itibaren sayan 12 saatlik zaman biçimi ile temsil edilir. Gece yarısından sonraki bir saat, öğleden sonraki aynı saatle ayırt edilemez. Saat yuvarlanmaz ve önünde sıfır ile birlikte tek basamaklı bir saat biçimlendirilir. Örneğin, sabah veya öğleden sonra 5:43 saati verildiğinde bu biçim belirtici "05" görüntüler.
 
@@ -321,6 +342,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
  [Tabloya dön](#table)
 
 <a name="H_Specifier"></a> 
+
 ## <a name="the-h-custom-format-specifier"></a>"H" özel biçim Belirleyicisi
  "H" özel biçim belirticisi 0 ile 23 arasında bir sayı olarak saati temsil eder; diğer bir deyişle, saat, saatleri gece yarısından itibaren sayan sıfır tabanlı bir 24 saatlik zaman biçimi ile temsil edilir. Tek basamaklı saat önünde sıfır olmadan biçimlendirilir.
 
@@ -334,6 +356,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
  [Tabloya dön](#table)
 
 <a name="HH_Specifier"></a> 
+
 ## <a name="the-hh-custom-format-specifier"></a>"HH" özel biçim Belirleyicisi
  "HH" özel biçim belirticisi (artı herhangi bir sayıda ek "H" belirticisi) 00 ile 23 arasında bir sayı olarak saati temsil eder; diğer bir deyişle, saat, saatleri gece yarısından itibaren sayan sıfır tabanlı bir 24 saatlik zaman biçimi ile temsil edilir. Tek basamaklı saat önünde sıfır ile biçimlendirilir.
 
@@ -345,6 +368,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
  [Tabloya dön](#table)
 
 <a name="KSpecifier"></a> 
+
 ## <a name="the-k-custom-format-specifier"></a>"K" özel biçim Belirleyicisi
  "K" özel biçim belirticisi bir tarih ve saat değerinin saat dilimi bilgisini temsil eder. Bu biçim tanımlayıcısı kullanıldığında <xref:System.DateTime> değerleri, sonuç dizesi değeri tarafından tanımlanan <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> özelliği:
 
@@ -366,6 +390,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
  [Tabloya dön](#table)
 
 <a name="mSpecifier"></a> 
+
 ## <a name="the-m-custom-format-specifier"></a>"M" özel biçim Belirleyicisi
  "m" özel biçim belirticisi, 0 ile 59 arasında bir sayı olarak dakikayı temsil eder. Dakika, son saatten beri geçen tam dakikaları temsil eder. Tek basamaklı dakika önünde sıfır olmadan biçimlendirilir.
 
@@ -379,6 +404,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
  [Tabloya dön](#table)
 
 <a name="mmSpecifier"></a> 
+
 ## <a name="the-mm-custom-format-specifier"></a>"Mm" özel biçim belirticisi
  "m" özel biçim belirticisi (artı herhangi bir sayıda ek "m" belirticisi) 00 ile 59 arasında bir sayı olarak dakikayı temsil eder. Dakika, son saatten beri geçen tam dakikaları temsil eder. Tek basamaklı dakika önünde sıfır ile biçimlendirilir.
 
@@ -390,6 +416,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
  [Tabloya dön](#table)
 
 <a name="M_Specifier"></a> 
+
 ## <a name="the-m-custom-format-specifier"></a>"M" özel biçim Belirleyicisi
  "M" özel biçim belirticisi, 1 ile 12 arasında (veya 13 ay içeren takvimler için 1 ile 13 arasında) bir sayı olarak ayı temsil eder. Tek basamaklı ay önünde sıfır olmadan biçimlendirilir.
 
@@ -403,6 +430,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
  [Tabloya dön](#table)
 
 <a name="MM_Specifier"></a> 
+
 ## <a name="the-mm-custom-format-specifier"></a>"MM" özel biçim Belirleyicisi
  "MM" özel biçim belirticisi, 01 ile 12 arasında (veya 13 ay içeren takvimler için 1 ile 13 arasında) bir sayı olarak ayı temsil eder. Tek basamaklı ay önünde sıfır ile biçimlendirilir.
 
@@ -414,6 +442,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
  [Tabloya dön](#table)
 
 <a name="MMM_Specifier"></a> 
+
 ## <a name="the-mmm-custom-format-specifier"></a>"MMM" özel biçim Belirleyicisi
  "MMM" özel biçim belirticisi ayın gününün kısaltılmış adını temsil eder. Ayın yerelleştirilmiş kısaltılmış adı alınır <xref:System.Globalization.DateTimeFormatInfo.AbbreviatedMonthNames%2A?displayProperty=nameWithType> geçerli ya da belirtilen kültürün özelliği.
 
@@ -425,6 +454,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
  [Tabloya dön](#table)
 
 <a name="MMMM_Specifier"></a> 
+
 ## <a name="the-mmmm-custom-format-specifier"></a>"MMMM" özel biçim Belirleyicisi
  "MMMM" özel biçim belirticisi ayın gününün tam adını temsil eder. Ayın yerelleştirilmiş adı alınır <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A?displayProperty=nameWithType> geçerli ya da belirtilen kültürün özelliği.
 
@@ -436,6 +466,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
  [Tabloya dön](#table)
 
 <a name="sSpecifier"></a> 
+
 ## <a name="the-s-custom-format-specifier"></a>"S" özel biçim Belirleyicisi
  "s" özel biçim belirticisi, 0 ile 59 arasında bir sayı olarak saniyeyi temsil eder. Sonuç, son dakikadan beri geçen tam saniyeleri temsil eder. Tek basamaklı saniye önünde sıfır olmadan biçimlendirilir.
 
@@ -449,6 +480,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
  [Tabloya dön](#table)
 
 <a name="ssSpecifier"></a> 
+
 ## <a name="the-ss-custom-format-specifier"></a>"Ss" özel biçim Belirleyicisi
  "ss" özel biçim belirticisi (artı herhangi bir sayıda ek "s" belirticisi) 00 ile 59 arasında bir sayı olarak saniyeyi temsil eder. Sonuç, son dakikadan beri geçen tam saniyeleri temsil eder. Tek basamaklı saniye önünde sıfır ile biçimlendirilir.
 
@@ -460,6 +492,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
  [Tabloya dön](#table)
 
 <a name="tSpecifier"></a> 
+
 ## <a name="the-t-custom-format-specifier"></a>"T" özel biçim Belirleyicisi
  "t" özel biçim belirticisi AM/PM göstergelerinin ilk karakterini temsil eder. Yerelleştirilmiş uygun gösterge alınır <xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A?displayProperty=nameWithType> veya <xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A?displayProperty=nameWithType> özelliği geçerli ya da belirli bir kültürün. AM göstergesi, 0:00:00 (gece yarısı) ile 11:59:59.999 arasındaki tüm zamanlar için kullanılır. PM göstergesi, 12:00:00 (öğlen) ile 23:59:59.999 arasındaki tüm zamanlar için kullanılır.
 
@@ -473,6 +506,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
  [Tabloya dön](#table)
 
 <a name="ttSpecifier"></a> 
+
 ## <a name="the-tt-custom-format-specifier"></a>"Tt" özel biçim Belirleyicisi
  "tt" özel biçim belirticisi (artı herhangi bir sayıda ek "t" belirticisi) tüm AM/PM göstergelerini temsil eder. Yerelleştirilmiş uygun gösterge alınır <xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A?displayProperty=nameWithType> veya <xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A?displayProperty=nameWithType> özelliği geçerli ya da belirli bir kültürün. AM göstergesi, 0:00:00 (gece yarısı) ile 11:59:59.999 arasındaki tüm zamanlar için kullanılır. PM göstergesi, 12:00:00 (öğlen) ile 23:59:59.999 arasındaki tüm zamanlar için kullanılır.
 
@@ -486,6 +520,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
  [Tabloya dön](#table)
 
 <a name="ySpecifier"></a> 
+
 ## <a name="the-y-custom-format-specifier"></a>"Y" özel biçim Belirleyicisi
  "y" özel biçim belirticisi tek basamaklı veya iki basamaklı bir sayı olarak yılı temsil eder. Yılda ikiden fazla basamak varsa, yalnızca son kısımdaki iki basamak sonuçta görünür. İki basamaklı yılın ilk basamağı sıfır ise (örneğin, 2008), sayı önünde sıfır olmadan biçimlendirilir.
 
@@ -499,6 +534,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
  [Tabloya dön](#table)
 
 <a name="yySpecifier"></a> 
+
 ## <a name="the-yy-custom-format-specifier"></a>"Yy" özel biçim Belirleyicisi
  "yy" özel biçim belirticisi iki basamaklı bir sayı olarak yılı temsil eder. Yılda ikiden fazla basamak varsa, yalnızca son kısımdaki iki basamak sonuçta görünür. İki basamaklı yılda ikiden az belirtici basamak varsa, iki basamak oluşturulabilmesi için sayının önüne sıfır eklenir.
 
@@ -515,6 +551,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
  [Tabloya dön](#table)
 
 <a name="yyySpecifier"></a> 
+
 ## <a name="the-yyy-custom-format-specifier"></a>"Yyy" özel biçim Belirleyicisi
  "yyy" özel biçim belirticisi en az üç basamakla yılı temsil eder. Yılda üçten fazla belirtici basamak varsa, bunlar sonuç dizesine eklenir. Yıl üçten az basamaktan oluşuyorsa, üç basamak oluşturulabilmesi için sayının önüne sıfır eklenir.
 
@@ -529,6 +566,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
  [Tabloya dön](#table)
 
 <a name="yyyySpecifier"></a> 
+
 ## <a name="the-yyyy-custom-format-specifier"></a>"Yyyy" özel biçim Belirleyicisi
  "yyyy" özel biçim belirticisi en az dört basamakla yılı temsil eder. Yılda dörtten fazla belirtici basamak varsa, bunlar sonuç dizesine eklenir. Yıl dörtten az basamaktan oluşuyorsa, dört basamak oluşturulabilmesi için sayının önüne sıfır eklenir.
 
@@ -543,6 +581,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
  [Tabloya dön](#table)
 
 <a name="yyyyySpecifier"></a> 
+
 ## <a name="the-yyyyy-custom-format-specifier"></a>"Yyyyy" özel biçim Belirleyicisi
  "yyyyy" özel biçim belirticisi (artı herhangi bir sayıda ek "y" belirticisi) en az beş basamakla yılı temsil eder. Yılda beşten fazla belirtici basamak varsa, bunlar sonuç dizesine eklenir. Yıl beşten az basamaktan oluşuyorsa, beş basamak oluşturulabilmesi için sayının önüne sıfır eklenir.
 
@@ -556,6 +595,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
  [Tabloya dön](#table)
 
 <a name="zSpecifier"></a> 
+
 ## <a name="the-z-custom-format-specifier"></a>"Z" özel biçim Belirleyicisi
  İle <xref:System.DateTime> değerleri, "z" özel biçim belirticisi temsil eden imzalı uzaklığı yerel işletim sisteminin saat dilimi ile eşgüdümlü evrensel saat (saat cinsinden UTC). Bir örneğin değerini yansıtmaz <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> özelliği. Bu nedenle "z" biçim belirticisi ile kullanım için önerilmez <xref:System.DateTime> değerleri.
 
@@ -573,6 +613,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
  [Tabloya dön](#table)
 
 <a name="zzSpecifier"></a> 
+
 ## <a name="the-zz-custom-format-specifier"></a>"Zz" özel biçim Belirleyicisi
  İle <xref:System.DateTime> değerleriyle "zz" özel biçim belirticisi temsil eder yerel işletim sisteminin saat dilimi imzalı uzaklığı saat cinsinden UTC. Bir örneğin değerini yansıtmaz <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> özelliği. Bu nedenle "zz" biçim belirticisi ile kullanım için önerilmez <xref:System.DateTime> değerleri.
 
@@ -588,6 +629,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
  [Tabloya dön](#table)
 
 <a name="zzzSpecifier"></a> 
+
 ## <a name="the-zzz-custom-format-specifier"></a>"Zzz" özel biçim Belirleyicisi
  İle <xref:System.DateTime> değerleriyle "zzz" özel biçim belirticisi temsil eder yerel işletim sisteminin saat dilimi imzalı uzaklığı saat ve dakika cinsinden UTC. Bir örneğin değerini yansıtmaz <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> özelliği. Bu nedenle "zzz" biçim belirticisi ile kullanım için önerilmez <xref:System.DateTime> değerleri.
 
@@ -603,6 +645,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
  [Tabloya dön](#table)
 
 <a name="timeSeparator"></a> 
+
 ## <a name="the--custom-format-specifier"></a>":" Özel biçim Belirleyicisi
  ":" özel biçim belirticisi, saat, dakika ve saniyeyi ayırt etmek için kullanılan zaman ayırıcıyı temsil eder. Yerelleştirilmiş uygun zaman ayırıcı alınır <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=nameWithType> geçerli ya da belirtilen kültürün özelliği.
 
@@ -614,6 +657,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
  [Tabloya dön](#table)
 
 <a name="dateSeparator"></a> 
+
 ## <a name="the--custom-format-specifier"></a>"/" Özel biçim Belirleyicisi
  "/" özel biçim belirticisi, yıl, ay ve günü ayırt etmek için kullanılan tarih ayırıcıyı temsil eder. Yerelleştirilmiş uygun tarih ayırıcı alınır <xref:System.Globalization.DateTimeFormatInfo.DateSeparator%2A?displayProperty=nameWithType> geçerli ya da belirtilen kültürün özelliği.
 
@@ -625,6 +669,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
  [Tabloya dön](#table)
 
 <a name="Literals"></a> 
+
 ## <a name="character-literals"></a>Karakter değişmez değerleri
  Aşağıdaki karakteri özel bir tarih ve saat biçim dizesi ayrılmıştır ve her zaman yorumlanır gibi biçimlendirme karakterleri veya durumunda, ", ', /, ve \\, özel karakterler olarak.
 
@@ -644,22 +689,24 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
 
  Sonuç dizesinde veya bir giriş dizesinde başarıyla ayrıştırıldı ayrılmış karakterler olarak değil de değişmez karakter olarak yorumlanması için karakter olduğunu belirtmek için iki yolu vardır:
 
--   Her ayrılmış bir karakter kaçış tarafından. Daha fazla bilgi için [çıkış karakterini kullanma](#escape).
+- Her ayrılmış bir karakter kaçış tarafından. Daha fazla bilgi için [çıkış karakterini kullanma](#escape).
+  
+  Aşağıdaki örnek "pst" sabit karakterleriyle biçim dizesindeki yerel saat dilimini temsil etmek için (Pasifik Standart Saati) içerir. Hem "s" ve "t" özel biçim dizeleri olduğundan, her iki karakterleri karakter değişmez değerleri yorumlanması için kaçış karakterleri eklenmelidir.
+  
+  [!code-csharp-interactive[Formatting.DateAndTime.Custom#21](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx2.cs#21)]
+  [!code-vb[Formatting.DateAndTime.Custom#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx2.vb#21)]
 
-     Aşağıdaki örnek "pst" sabit karakterleriyle biçim dizesindeki yerel saat dilimini temsil etmek için (Pasifik Standart Saati) içerir. Hem "s" ve "t" özel biçim dizeleri olduğundan, her iki karakterleri karakter değişmez değerleri yorumlanması için kaçış karakterleri eklenmelidir.
-
-     [!code-csharp-interactive[Formatting.DateAndTime.Custom#21](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx2.cs#21)]
-     [!code-vb[Formatting.DateAndTime.Custom#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx2.vb#21)]
-
--   Tüm sabit dizesini tırnak işareti veya kesme kapsayan tarafından. Aşağıdaki örnek Öncekine, "pst" tüm ayrılmış dizesini karakter değişmez değerleri yorumlanması gerektiğini belirtmek için tırnak işaretleri içine dışında aynıdır.
-
-     [!code-csharp-interactive[Formatting.DateAndTime.Custom#22](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx3.cs#22)]
-     [!code-vb[Formatting.DateAndTime.Custom#22](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx3.vb#22)]
+- Tüm sabit dizesini tırnak işareti veya kesme kapsayan tarafından. Aşağıdaki örnek Öncekine, "pst" tüm ayrılmış dizesini karakter değişmez değerleri yorumlanması gerektiğini belirtmek için tırnak işaretleri içine dışında aynıdır.
+  
+  [!code-csharp-interactive[Formatting.DateAndTime.Custom#22](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx3.cs#22)]
+  [!code-vb[Formatting.DateAndTime.Custom#22](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx3.vb#22)]
 
 <a name="Notes"></a> 
+
 ## <a name="notes"></a>Notlar
 
 <a name="UsingSingleSpecifiers"></a> 
+
 ### <a name="using-single-custom-format-specifiers"></a>Tek özel biçim belirticileri kullanma
  Özel tarih ve saat biçimi dizesi iki veya daha fazla karakterden oluşur. Tarih ve saat biçimlendirme yöntemleri, herhangi tek karakterli dizeyi standart tarih ve saat biçim dizesi olarak yorumlar. Geçerli bir biçim belirtici karakter tanımıyorsanız, oluştururlar bir <xref:System.FormatException>. Örneğin, yalnızca belirleyici "h" içeren bir biçim dizesi standart tarih ve saat biçimi dizesi olarak yorumlanır. Ancak, bu durumda herhangi bir "h" standart tarih ve timeformat belirticisi olmadığından bir özel durum oluşturulur.
 
@@ -671,6 +718,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
  [!code-vb[Formatting.DateAndTime.Custom#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/literal1.vb#16)]
 
 <a name="escape"></a> 
+
 ### <a name="using-the-escape-character"></a>Çıkış Karakterini Kullanma
  Bir biçim dizesindeki "d", "f", "F", "g", "h", "H", "K", "m", "M", "s", "t", "y", "z", ":" veya "/" karakterleri, değişmez karakterler olarak değil özel biçim belirticileri olarak yorumlanır. Bir karakterin Biçim belirleyicisi olarak yorumlanmasını önlemek için bu ters eğik çizgi koyabilirsiniz (\\), kaçış karakteri olan. Çıkış karakteri, aşağıdaki karakterin değiştirilmeden sonuç dizesini dahil edilmesi gereken bir karakter sabiti olduğunu belirtir.
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
 ms.openlocfilehash: d0e54aeda1ee51fe7ba87c3ac69c556ea25e320f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43659009"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43745073"
 ---
 # <a name="working-with-certificates"></a>Sertifikalarla Çalışma
 Windows Communication Foundation (WCF) güvenlik programlamak için X.509 dijital sertifikalar sık iletileri dijital olarak imzala istemcilere ve sunuculara kimlik doğrulaması ve şifreleme için kullanılır. Bu konuda kısaca X.509 dijital sertifika özellikleri ve bunların WCF'de nasıl kullanılacağını açıklar ve WCF ve sertifikaları kullanarak yaygın görevlerin nasıl yerine getirileceğini gösteren ya da, bu kavramları daha açıklayan konulara bağlantılar içerir.  

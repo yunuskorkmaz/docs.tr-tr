@@ -9,16 +9,16 @@ helpviewer_keywords:
 - /deterministic compiler option [C#]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a2cb45ea6ed5c5795c910b2f6c3575b12f8189cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f9aca20a3ff65d061c04a21e31db3fb5eab62ba
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33213918"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43732455"
 ---
 # <a name="-deterministic"></a>-belirleyici
 
-Bayt için bayt çıktısı, aynı girişleri için derlemeleri arasında aynı olan bir derleme üretmek derleyici neden olur. 
+Bayt için çıktısı, aynı girişleri için derlemeler arasında özdeş bir derleme oluşturmak derleyicinin neden olur. 
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -28,32 +28,33 @@ Bayt için bayt çıktısı, aynı girişleri için derlemeleri arasında aynı 
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bir zaman damgası ve rastgele sayı oluşturulmuş bir GUID derleyici ekler beri varsayılan olarak, belirli bir giriş kümesini Derleyici çıktısı benzersizdir. Kullandığınız `-deterministic` üretmek için seçeneği bir *belirleyici derleme*, bir giriş aynı kaldığı sürece ikili içerikleri derlemeleri arasında aynı olan.
+Derleyici bir zaman damgası ve rastgele sayı oluşturulan bir GUID ekler olduğundan varsayılan olarak, belirli bir giriş kümesini derleyici çıktısını benzersizdir. Kullandığınız `-deterministic` üretmek için seçeneği bir *belirlenimci derlemeyi*, bir giriş aynı kaldığı sürece ikili içeriğe sahip derlemeler arasında aynı.
 
-Derleyici determinism amacıyla aşağıdaki girişleri göz önünde bulundurur:
+Derleyici, aşağıdaki girişleri gerekircilik amacıyla göz önünde bulundurur:
 
 - Komut satırı parametreleri dizisi.
 - Derleyicinin .rsp yanıt dosyasının içeriği.
-- Kullanılan derleyici'nın tam sürümünü ve başvurulan derlemeler.
+- Kullanılan derleme kesin sürümünü ve onun başvurulmuş derlemeler.
 - Geçerli dizin yolu.
-- Tüm dosyalar ikili içeriğini açıkça derleyiciye doğrudan veya dolaylı olarak dahil olmak üzere geçirildi:
+- Tüm dosyaları ikili içeriğini açıkça derleyici doğrudan veya dolaylı olarak dahil olmak üzere geçirilen:
     - Kaynak dosyaları
     - Başvurulan derlemeler
     - Başvurulan modül
     - Kaynaklar
-    - Güçlü ad anahtar dosyası
+    - Tanımlayıcı ad anahtar dosyası
     - @ yanıt dosyaları
     - Çözümleyiciler
     - Rulesets
-    - Çözümleyicileri tarafından kullanılan ek dosyalar
-- Geçerli kültür (hangi tanılama ve özel durum iletileri üretilen dilin).
-- Varsayılan kodlama (veya geçerli kod sayfası) kodlama belirtilmediği takdirde.
-- Varlığı, varlığı olmayan ve derleyicinin arama yolları dosyaların içeriğini (örneğin, tarafından belirtilen `/lib` veya `/recurse`).
-- CLR platform derleyici çalıştırılır.
-- Değeri `%LIBPATH%`, Çözümleyicisi bağımlılık yükleniyor etkileyebilir.
+    - Çözümleyiciler tarafından kullanılan ek dosyalar
+- Geçerli kültür (hangi tanılama ve özel durum iletileri üretilir dilin).
+- Varsayılan kodlama (veya mevcut kod sayfasında) kodlama belirtilmezse.
+- Varlığı, var olmayan ve derleyicinin arama yolları dosya içeriklerini (örneğin, tarafından belirtilen `/lib` veya `/recurse`).
+- Derleyici çalıştığı CLR platform.
+- Değerini `%LIBPATH%`, çözümleyici bağımlılık yükleniyor etkileyebilir.
 
-Kaynakları genel kullanıma açık olduğunda belirleyici derleme güvenilir bir kaynaktan bir ikili derlenmiş olup olmadığını kurmak için kullanılabilir. Ayrıca bir sürekli yapı sistemindeki bir ikili değişiklikler bağımlı derleme adımları yürütülebilir gerekip gerekmediğini belirlemek için yararlı olabilir. 
+Kaynakları genel kullanıma açık olduğunda, belirlenimci derlemeyi güvenilir bir kaynaktan bir ikili derlenmiş olup olmadığını kurmak için kullanılabilir. Ayrıca bir ikili değişiklikleri bağımlı derleme adımları yürütülecek gerekip gerekmediğini belirlemek için bir sürekli derleme sistemi de yararlı olabilir. 
 
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)  
- [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)
+
+- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)  
+- [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)

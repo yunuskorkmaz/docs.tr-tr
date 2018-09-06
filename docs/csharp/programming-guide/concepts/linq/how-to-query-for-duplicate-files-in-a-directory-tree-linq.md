@@ -2,15 +2,15 @@
 title: 'Nasıl yapılır: sorgu (LINQ) (C#) bir dizin ağacında yineleyen dosyalar için'
 ms.date: 07/20/2015
 ms.assetid: 1ff5562b-0d30-46d1-b426-a04e8f78c840
-ms.openlocfilehash: 618f1942133401718dcc71d54476043d27e0c036
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 09ce574c68cbf11c0ee50df663692fd207038758
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321307"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43734242"
 ---
 # <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a>Nasıl yapılır: sorgu (LINQ) (C#) bir dizin ağacında yineleyen dosyalar için
-Bazen aynı ada sahip dosya birden fazla klasöründe bulunabilir. Örneğin, Visual Studio yükleme klasörü altında çeşitli klasörler Benioku.htm dosyasına sahip. Bu örnek belirtilen kök klasörü altında böyle yinelenen dosya adları için sorgulama gösterir. Oluşturma süreleri de eşleşen ve ikinci örnek büyüklüğü dosyaları sorgulama gösterir.  
+Bazen aynı ada sahip dosyaları birden fazla klasöründe bulunabilir. Örneğin, Visual Studio yükleme klasörü altında çeşitli klasörleri readme.htm dosyasına sahip. Bu örnekte, böyle yinelenen dosya adları belirtilen kök klasörü altında sorgulamak gösterilmektedir. İkinci örnek boyutu için dosyaları sorgulama işlemini gösterir ve ayrıca oluşturma kez Eşleştir.  
   
 ## <a name="example"></a>Örnek  
   
@@ -167,11 +167,12 @@ class QueryDuplicateFileNames
 }  
 ```  
   
- İlk sorguyu basit bir anahtarı bir eşleşme belirlemek için kullanır; Bu, aynı ada sahip ancak içerikleri farklı olabilir dosyaları bulur. İkinci sorguyu karşı üç özelliklerini eşleştirmek için bileşik bir anahtar kullanır <xref:System.IO.FileInfo> nesnesi. Bu sorgu aynı veya benzer içerik ve aynı ada sahip dosyaları bulmak çok daha yüksektir.  
+ İlk sorgu, bir eşleşme belirlemek için basit bir anahtarı kullanır; Bu, aynı ada sahip olan ancak içerikleri farklı olabilir. dosyaları bulur. İkinci sorgu, üç özelliklerini karşı eşleşecek şekilde bir bileşik anahtarı kullanır. <xref:System.IO.FileInfo> nesne. Bu sorgu ortamınızdakilerle benzer veya aynı içerik ve aynı ada sahip dosyaları bulmak çok daha yüksektir.  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- .NET Framework sürüm 3.5 veya daha yüksek System.Core.dll başvuru hedefleyen bir proje oluşturun ve `using` System.Linq ve System.IO ad alanları için yönergeleri.  
+ .NET Framework sürüm 3.5 veya üzeri bir System.Core.dll başvurusu ile hedefleyen bir proje oluşturun ve `using` System.Linq ve System.IO ad alanları için yönergeleri.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [LINQ to nesneler (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
- [LINQ ve dosya dizinleri (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [LINQ to Objects'in (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
+- [LINQ ve dosya dizinleri (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

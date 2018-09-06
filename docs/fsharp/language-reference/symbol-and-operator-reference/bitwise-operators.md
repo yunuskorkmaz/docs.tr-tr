@@ -2,18 +2,19 @@
 title: Bitwise İşleçleri (F#)
 description: 'F # programlama dilinde kullanılabilen bit düzeyinde işleçler hakkında bilgi edinin.'
 ms.date: 07/20/2018
-ms.openlocfilehash: abd2778eba422b3ce2a3472efd458446854b3d2f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ed76fcf5f9c569a2f288cf260e99dc29fd65ef3b
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43559562"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43784374"
 ---
 # <a name="bitwise-operators"></a>Bitwise İşleçleri
 
 Bu konu F # dilinde kullanılabilen bit düzeyinde işleçler açıklar.
 
 ## <a name="summary-of-bitwise-operators"></a>Bit düzeyinde işleçler özeti
+
 Aşağıdaki tabloda, F # dilinde kutulanmamış tam sayı türleri için desteklenen bir bit düzeyinde işleçler açıklanmaktadır.
 
 |İşleç|Notlar|
@@ -27,10 +28,8 @@ Aşağıdaki tabloda, F # dilinde kutulanmamış tam sayı türleri için destek
 
 Bitwise işleçleri ile aşağıdaki türleri kullanılabilir: `byte`, `sbyte`, `int16`, `uint16`, `int32 (int)`, `uint32`, `int64`, `uint64`, `nativeint`, ve `unativeint`.
 
-## <a name="see-also"></a>Ayrıca Bkz.
-[Simge ve İşleç Başvurusu](index.md)
+## <a name="see-also"></a>Ayrıca bkz.
 
-[Aritmetik İşleçler](arithmetic-operators.md)
-
-[Boole İşleçleri](boolean-operators.md)
-
+- [Simge ve İşleç Başvurusu](index.md)
+- [Aritmetik İşleçler](arithmetic-operators.md)
+- [Boole İşleçleri](boolean-operators.md)

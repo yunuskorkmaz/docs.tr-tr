@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: ae2ea457-0764-4b06-8977-713c77e85bd2
 ms.openlocfilehash: 9f1e3fe6d53266a4e1366c1a3d5396688a25df0f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43565138"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43785332"
 ---
 # <a name="windows-applications-using-callbacks"></a>Geri çağırmaları kullanarak Windows uygulamaları
 Çoğu zaman uyumsuz işleme senaryoda, bir veritabanı işlemi başlatmak ve veritabanı işlemin tamamlanmasını beklemenize gerek kalmadan çalışan diğer işlemlerin devam etmek istersiniz. Ancak, veritabanı işlemi sona erdikten sonra şeyi yapmanın birçok senaryo gerektirir. Örneğin, bir Windows uygulamasında kullanıcı arabirimi iş parçacığı yanıt verebilir durumda kalmasını sağlarken uzun süre çalışan işlemi bir arka plan iş parçacığı için temsilci seçmek isteyebilirsiniz. Ancak, veritabanı işlemi tamamlandığında, sonuçları formun doldurulması için kullanmak istediğiniz. Bu tür bir senaryo, bir geri çağırma ile en iyi şekilde uygulanır.  

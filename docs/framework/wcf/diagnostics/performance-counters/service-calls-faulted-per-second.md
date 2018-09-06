@@ -2,24 +2,24 @@
 title: 'Hizmet: Saniyede Hatalı Çağrı'
 ms.date: 03/30/2017
 ms.assetid: 94247356-2b29-4b50-b639-91ca8c1cf3a9
-ms.openlocfilehash: 86eddc62fb9aec8eced49ae70865583f3a50eb85
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b4a8a1eeec13195e4f8fe088da14dff7c06ecdb3
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474106"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43785121"
 ---
 # <a name="service-calls-faulted-per-second"></a>Hizmet: Saniyede Hatalı Çağrı
 Sayaç adı: Saniyede hatalı çağrı.  
   
 ## <a name="description"></a>Açıklama  
- Bir saniyede döndürmüş hataları bu hizmete çağrı sayısı.  
+ Hataları bir saniye içinde bu hizmete iade çağrı sayısı.  
   
- Bu sayaç, performans sayacı türü [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), değeri, aşağıdaki formül kullanılarak hesaplanır.  
+ Bu sayaç performans sayacı türüdür [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), değeri aşağıdaki formül kullanılarak hesaplanır.  
   
  (1 - N 0 N) / ((D 1 - D 0) / F)  
   
- Windows Communication Foundation (WCF) uygulamalarında hizmet yöntemleri işleme hata bilgileri SOAP hata iletileri kullanarak iletişim kurar. SOAP, bir hizmet işlemi için meta verileri içinde yer alan ve bu nedenle istemcilerin kendi yürütme daha sağlam veya etkileşimli yapmak için kullanabileceği bir hataya sözleşmesi oluşturma ileti türlerini hatalarıdır. XML formundaki istemcilere SOAP hataları ifade olduğundan, yüksek oranda birlikte çalışabilir.  
+ Windows Communication Foundation (WCF) uygulamaları, hizmet yöntemleri işleme hata bilgilerini SOAP hata iletileri kullanarak iletişim kurar. SOAP hatalarının bir hizmet işlemi için meta veriler bulunur ve bu nedenle istemcilerin yürütülmesi daha sağlam ve etkileşimli hale getirmek için kullanabileceği bir hataya sözleşmesi oluşturma iletisi türleridir. SOAP hataları XML formundaki istemcilere ifade olduğundan, yüksek düzeyde birlikte çalışabilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Sözleşme ve Hizmetlerde Hataları Belirtme ve İşleme](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

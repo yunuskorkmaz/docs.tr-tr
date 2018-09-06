@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: f21e6aba-b76d-46ad-a83e-2ad8e0af1e12
 ms.openlocfilehash: 41a7b5061a4a90f0b67658440e737c40295d5d5f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43532850"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43739297"
 ---
 # <a name="dataadapter-parameters"></a>DataAdapter parametreleri
 <xref:System.Data.Common.DbDataAdapter> Verileri almak ve verileri için veri kaynağını güncelleştirmek için kullanılan dört özelliklere sahiptir: <xref:System.Data.Common.DbDataAdapter.SelectCommand%2A> özelliği veri kaynağından; veri döndürür ve <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A> , <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A>, ve <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> özellikleri yönetmek için kullanılır veri kaynağındaki değişiklikleri. `SelectCommand` Özelliği çağırmadan önce ayarlanmalıdır `Fill` yöntemi `DataAdapter`. `InsertCommand`, `UpdateCommand`, Veya `DeleteCommand` özelliklerini ayarlamak, önce `Update` yöntemi `DataAdapter` , hangi değişiklikleri verilerde yapılan bağlı olarak adlandırılır <xref:System.Data.DataTable>. Satırlar eklenir, örneğin, `InsertCommand` çağırmadan önce ayarlanmalıdır `Update`. Zaman `Update` eklenen, güncelleştirilen veya silinen satır işleme `DataAdapter` ilgili kullanan `Command` eylemi işlemek için özellik. Değiştirilen satır hakkında güncel bilgiler geçirildiğinde `Command` nesnesi aracılığıyla `Parameters` koleksiyonu.  

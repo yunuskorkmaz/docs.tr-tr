@@ -1,27 +1,27 @@
 ---
-title: SQL Server'da satır düzeyi izinleri verme
+title: SQL Server'da satır düzeyinde izinler verme
 ms.date: 03/30/2017
 ms.assetid: a55aaa12-34ab-41cd-9dec-fd255b29258c
-ms.openlocfilehash: 5f777b47c9b2f92c40fec01b4ff0c35fc28dbd89
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4a4b45e13a16b357be28a1383648e98890567ea9
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361312"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43749161"
 ---
-# <a name="granting-row-level-permissions-in-sql-server"></a>SQL Server'da satır düzeyi izinleri verme
-Bazı senaryolarda, hangi yalnızca verme, iptal etme veya reddetme izinleri sağlayan daha daha ayrıntılı bir düzeyde veri erişimi denetlemek için bir gereksinim yoktur. Örneğin, hastaneler veritabanı uygulaması yalnızca kendi hastalar ilgili bilgilerine erişmek için kısıtlı olacak şekilde tek tek Doktorlar gerektirebilir. Benzer gereksinim Finans, yasalar, kamu ve Askeri uygulamalar dahil olmak üzere birçok ortamlarda yoktur. Bu senaryoyu ele yardımcı olmak için SQL Server 2016 sağlayan bir [satır düzeyi güvenlik](https://msdn.microsoft.com/library/dn765131.aspx) basitleştirir ve güvenlik ilkesinde satır düzeyi erişim mantığı merkezi hale getirir özelliği. SQL Server'ın önceki sürümleri için benzer işlevselliği satır düzeyi filtreleme yürürlüğe için görünümleri kullanarak elde edilebilir.  
+# <a name="granting-row-level-permissions-in-sql-server"></a>SQL Server'da satır düzeyinde izinler verme
+Bazı senaryolarda, hangi yalnızca verme, iptal etme veya reddetme izinleri sağlar. daha fazla ayrıntılı bir düzeyde verilere erişimi denetlemek için bir gereksinim yoktur. Örneğin, bir hastane veritabanı uygulaması tek Doktorlar hastaların için yalnızca ilgili bilgiler erişimle sınırlı olmasını gerektirebilir. Benzer gereksinimleri, Finans, yasa, resmi ve Askeri uygulamalar dahil, birçok ortamlarında mevcut. Bu senaryolara yardımcı olmak için SQL Server 2016 sağlar. bir [satır düzeyi güvenlik](https://msdn.microsoft.com/library/dn765131.aspx) basitleştirir ve satır düzeyinde erişim mantığı güvenlik ilkesinde otomatik özelliği. Satır düzeyinde filtreleme geçireceğini görünümlerini kullanarak SQL Server'ın önceki sürümleri için benzer bir işlevsellik gerçekleştirilebilir.  
   
 ## <a name="implementing-row-level-filtering"></a>Satır düzeyi filtre uygulama  
- Satır düzeyi filtreleme uygulamalar gibi tek bir tabloda yukarıdaki Hastanenin örnekte bilgilerini depolamak için kullanılır. Satır düzeyi her satır filtresi uygulamak için bir kullanıcı adı, etiket veya başka bir tanımlayıcı gibi farklılaştırıcı bir parametreyi tanımlayan bir sütun vardır. Bir güvenlik ilkesi veya kullanıcının erişebildiği satırları filtreler tabloda bir görünüm oluşturun. Kullanıcı çalıştırabileceğiniz sorgu türlerini denetlemek için parametreli saklı yordamlar, oluşturursunuz.  
+ Satır düzeyinde filtreleme uygulamaları gibi tek bir tabloda yukarıdaki hastane örnekte bilgilerini depolamak için kullanılır. Satır düzeyi her bir satır filtresi uygulamak için bir kullanıcı adı, etiket veya başka bir tanımlayıcı gibi ayırt edici bir parametre tanımlayan bir sütun vardır. Bir güvenlik ilkesini veya kullanıcının erişebildiği satırları filtreler tablosunda bir görünüm oluşturun. Daha sonra kullanıcı yürütebilir sorguları türlerini denetlemek için parametreli saklı yordamlar, oluşturursunuz.  
   
- Aşağıdaki örnekte, bir kullanıcı veya oturum açma adını temel alarak satır düzeyi filtrelemenin nasıl yapılandırılacağı açıklanmaktadır:  
+ Aşağıdaki örnek, satır düzeyinde bir kullanıcı veya oturum açma adına göre filtrelemeyi yapılandırma açıklar:  
   
--   Adı depolamak için bir sütun ekleme tablo oluşturun.  
+-   Adı depolamak için bir sütun ekleme, tablo oluşturun.  
   
--   Satır düzeyi filtreleme etkinleştirin:  
+-   Satır düzeyinde filtreleme etkinleştir:  
   
-    -   SQL Server 2016 veya sonraki bir sürümü kullanıyorsanız veya [Azure SQL veritabanı](https://docs.microsoft.com/azure/sql-database/), satırları kısıtlama tablosunda bir koşul döndürülen ya da eşleşen olanlar (CURRENT_USER() kullanarak geçerli veritabanı kullanıcısı ekler bir güvenlik ilkesi oluşturma Yerleşik işlevi) veya (SUSER_SNAME() yerleşik işlevi kullanılarak) geçerli oturum açma adı:  
+    -   SQL Server 2016 veya sonraki bir sürümünü kullanıyorsanız veya [Azure SQL veritabanı](https://docs.microsoft.com/azure/sql-database/), satırları kısıtlama tablosunda bir koşul döndürülen ya da eşleşen olanlar (CURRENT_USER() kullanarak geçerli bir veritabanı kullanıcısı ekleyen bir güvenlik ilkesi oluşturma Yerleşik işlev) veya (SUSER_SNAME() yerleşik işlevi kullanılarak), geçerli oturum açma adı:  
   
         ```tsql  
         CREATE SCHEMA Security  
@@ -41,7 +41,7 @@ Bazı senaryolarda, hangi yalnızca verme, iptal etme veya reddetme izinleri sa�
         GO  
         ```  
   
-    -   2016 önce SQL Server'ın bir sürümünü kullanıyorsanız, bir görünümü kullanarak benzer işlevselliği elde edebilirsiniz:  
+    -   SQL Server 2016'dan önce bir sürümü kullanıyorsanız benzer işlevselliği bir görüntü kullanarak elde edebilirsiniz:  
   
         ```tsql  
         CREATE VIEW vw_MyTable  
@@ -51,20 +51,20 @@ Bazı senaryolarda, hangi yalnızca verme, iptal etme veya reddetme izinleri sa�
         GO  
         ```  
   
--   Seçin, Ekle, Güncelleştir ve verileri silmek için saklı yordamlar oluşturun. Saklı yordamlar filtreleme bir güvenlik ilkesi tarafından geçirilmeden, temel tablo bu işlemleri doğrudan gerçekleştirmeniz gerekir; Aksi takdirde, filtreleme görünüm tarafından geçirilmeden, saklı yordamları yerine karşı görünüm çalışacağı. Güvenlik İlkesi veya Görünüm döndürülen veya kullanıcı sorgular tarafından değiştirilen satırları otomatik olarak filtre uygular ve saklı yordam doğrudan sorgu erişimi olan kullanıcılar çıkarımını sorguları başarılı bir şekilde çalışmasını engellemek için daha zor bir güvenlik sınırı sağlar filtrelenmiş veri varlığını.  
+-   Seçin, ekleme, güncelleştirme ve verileri silmek için saklı yordamlar oluşturun. Güvenlik İlkesi tarafından filtreleme geçirilmeden, saklı yordamları doğrudan temel tablo bu işlemleri gerçekleştirmeniz gerekir; Aksi takdirde, filtre tarafından bir görünümü geçirilmeden, saklı yordamları yerine karşı görünümü çalışması. Güvenlik İlkesi veya Görünüm otomatik olarak döndürülen veya kullanıcı sorgular tarafından değiştirilen satırları filtreleyen ve saklı yordam doğrudan sorgu erişimi olan kullanıcılar başarıyla çıkarımını sorgular çalıştırılmasını engellemek için daha zor bir güvenlik sınırı sağlar filtrelenmiş veri varlığını.  
   
--   Saklı yordamlar için veri eklemek, yakalama güvenlik ilkesi veya görünümde belirtilen aynı işlevini kullanarak kullanıcı adı ve bu değer kullanıcı adı sütuna ekleyin.  
+-   Veri ekleme, saklı yordamlar, yakalama aynı güvenlik ilkesi veya görünümü'nde belirtilen işlevi kullanarak kullanıcı adı ve değeri kullanıcıadı sütuna ekleyin.  
   
--   Tabloları (ve görünümler, eğer varsa) tüm izinleri reddetmek için `public` rol. Kullanıcılar, filtre koşulu kullanıcı veya rol değil, oturum açma adları bağlı olduğu diğer veritabanı rollerden devralmak mümkün olmayacaktır.  
+-   Tüm tablolar (ve görünümler, eğer varsa) izinlerini reddetmek için `public` rol. Kullanıcılar, filtre koşulu kullanıcı veya rol değil, oturum açma adları bağlı olduğu diğer veritabanı rollerden devralmak mümkün olmayacaktır.  
   
--   Veritabanı rolleri için saklı yordamları hakkında GRANT YÜRÜTÜN. Kullanıcıların sağlanan saklı yordamları yalnızca verilere erişebilir.  
+-   GRANT veritabanı rollerine saklı yordamlar YÜRÜTÜN. Kullanıcılar sağlanan saklı yordamları yalnızca verilere erişebilir.  
   
 ## <a name="external-resources"></a>Dış Kaynaklar  
  Daha fazla bilgi için aşağıdaki kaynağa bakın.  
   
 |||  
 |-|-|  
-|[Satır ve hücre düzeyi güvenlik sınıflandırılmış veritabanları kullanarak SQL Server 2005'te uygulama](http://go.microsoft.com/fwlink/?LinkId=98227) üzerinde SQL Server TechCenter sitesi.|Satır ve hücre düzeyi güvenlik sınıflandırılmış veritabanı güvenlik gereksinimlerini karşılamak için nasıl kullanılacağını açıklar.|  
+|[Satır ve hücre düzeyi güvenlik sınıflandırılmış veritabanlarını kullanarak SQL Server 2005'te uygulama](https://go.microsoft.com/fwlink/?LinkId=98227) üzerinde SQL Server TechCenter sitesi.|Satır ve hücre düzeyi güvenlik sınıflandırılmış veritabanı güvenliği gereksinimlerinizi karşılamak için nasıl kullanılacağını açıklar.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Satır düzeyi güvenlik](https://msdn.microsoft.com/library/dn765131.aspx)  
@@ -73,4 +73,4 @@ Bazı senaryolarda, hangi yalnızca verme, iptal etme veya reddetme izinleri sa�
  [SQL Server'da Uygulama Güvenliği Senaryoları](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
  [SQL Server'da Saklı Yordam İzinlerini Yönetme](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
  [SQL Server’da Secure Dynamic SQL Yazma](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
- [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

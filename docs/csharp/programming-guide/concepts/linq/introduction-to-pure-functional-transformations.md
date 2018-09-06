@@ -1,26 +1,27 @@
 ---
-title: Giriş saf işlevsel Dönüşümleri (C#)
+title: Giriş saf işlevsel dönüşümlere (C#)
 ms.date: 07/20/2015
 ms.assetid: 8495c9d9-2d02-4aa0-8a10-9e8794b985fe
-ms.openlocfilehash: 278b3afc66e4c4f222e27e648274cb8cea814d50
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f04189c5ae6fc8f6c827f983357ab0126b2c086d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329107"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43724988"
 ---
-# <a name="introduction-to-pure-functional-transformations-c"></a>Giriş saf işlevsel Dönüşümleri (C#)
-Bu bölümde işlevsel dönüştürmeleri, temel kavramları dahil olmak üzere tanıtır ve destekleyici dil oluşturur. İkincisi için geçiş hakkında öneriler dahil olmak üzere programlama, nesne yönelimli ve işlev dönüştürme yaklaşımları karşılaştırır. İşlev dönüştürmeleri pek çok programlama senaryolarda kullanılabilir ancak XML dönüşümü kullanılır burada somut bir örnek olarak.  
+# <a name="introduction-to-pure-functional-transformations-c"></a>Giriş saf işlevsel dönüşümlere (C#)
+Bu bölümde temel kavramları dahil olmak üzere işlevsel dönüşümlere tanıtır ve destekleyici dil oluşturur. Bunu programlama için ikinci geçiş hakkında öneriler de dahil olmak üzere, nesne yönelimli ve işlevsel dönüşümü yaklaşımları karşılaştırır. XML dönüştürme işlevsel dönüşümlere birçok programlama senaryolarda kullanılabilir olsa da, kullanılan somut bir örnek burada.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
 |Konu|Açıklama|  
 |-----------|-----------------|  
-|[Kavramları ve terminolojiyi (işlev dönüştürme) (C#)](../../../../csharp/programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md)|Kavramları ve terminolojiyi saf işlevsel Dönüşümlerin tanıtır.|  
-|[İşlevsel Programlama ve Kesinlik temelli programlama (C#)](../../../../csharp/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)|Karşılaştırır ve daha geleneksel kesinlik temelli (yordamsal) programlamaya işlevsel programlama karşılaştırır.|  
-|[Saf işlevlerini (C#) yeniden düzenleme](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)|Saf işlevleri tanıtır ve saf ve Hanuka işlevleri ve örnekleri gösterir.|  
-|[Uygulanabilirlik işlev dönüştürme (C#)](../../../../csharp/programming-guide/concepts/linq/applicability-of-functional-transformation.md)|İşlev dönüştürmeleri için tipik senaryolar açıklanmaktadır.|  
-|[İşlev dönüştürme XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-transformation-of-xml.md)|XML ağaçları dönüştürme işlevsel dönüşümleri bağlamında açıklar.|  
+|[Kavramlar ve terimler (işlevsel dönüşüm) (C#)](../../../../csharp/programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md)|Saf işlevsel dönüşümlere terimleri ve kavramları tanıtır.|  
+|[İşlevsel Programlama ve Kesin programlama karşılaştırması (C#)](../../../../csharp/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)|Karşılaştırır ve işlevsel programlama daha geleneksel buyurgan (yordamsal) programlamaya karşılaştırır.|  
+|[Saf işlevler halinde (C#) yeniden düzenleme](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)|Saf işlevler tanıtır ve örnekleri ve saf ve Hanuka işlevlerini göstermektedir.|  
+|[(C#) işlev dönüşümün uygulanabilirliği](../../../../csharp/programming-guide/concepts/linq/applicability-of-functional-transformation.md)|İşlevsel dönüşümlere tipik senaryolar açıklanmaktadır.|  
+|[(Visual Basic) XML işlevsel dönüşümü](../../../../visual-basic/programming-guide/concepts/linq/functional-transformation-of-xml.md)|XML ağaçlarını dönüştürmek işlevsel dönüşümlere bağlamında açıklar.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Saf işlevsel dönüşümleri XML (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [Saf işlevsel dönüşümlere XML (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)

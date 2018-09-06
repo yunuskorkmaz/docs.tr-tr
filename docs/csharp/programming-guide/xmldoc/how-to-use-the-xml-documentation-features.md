@@ -5,16 +5,16 @@ helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: b82f92cc034a13e8867cfb56866200101ab77b9b
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 48654968e5099164874bae8a00767d12c8fe4582
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728738"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43742079"
 ---
 # <a name="how-to-use-the-xml-documentation-features"></a>Nasıl yapılır: XML belgeleri özelliklerini kullanma
 
-Aşağıdaki örnek belgelenmiştir bir tür temel bir bakış sağlar.
+Aşağıdaki örnek, belgelenmiş bir türü temel bir bakış sağlar.
 
 ## <a name="example"></a>Örnek
 
@@ -108,31 +108,31 @@ Aşağıdaki örnek belgelenmiştir bir tür temel bir bakış sağlar.
 
 ## <a name="compiling-the-code"></a>Kod derleme
 
-Örnek derlemek için aşağıdaki komutu yazın:
+Örneği derlemek için aşağıdaki komutu yazın:
 
 `csc XMLsample.cs /doc:XMLsample.xml`
 
-Bu komut XML dosyasını oluşturur *XMLsample.xml*, hangi tarayıcınızda veya türü komutunu kullanarak görüntüleyebilirsiniz.
+Bu komut XML dosyasını oluşturur *XMLsample.xml*, tarayıcınızda veya türü komutunu kullanarak görüntüleyebileceğiniz.
 
 ## <a name="robust-programming"></a>Güçlü programlama
 
-XML belgeleri başlatır: / / / ile. Yeni bir proje oluşturduğunuzda, sihirbazda bazı starter / / / satırları yerleştirin. Bu açıklamalar işlenmesini bazı kısıtlamaları vardır:
+XML belgeleri başlar: / / / ile. Yeni bir proje oluşturduğunuzda, sihirbaz sizin için bazı başlangıç / / / satırları yerleştirin. Bu açıklamalar işlenmesini bazı kısıtlamalar mevcuttur:
 
-- Belge doğru biçimlendirilmiş XML. Doğru biçimlendirilmiş XML değil, bir uyarı oluşturulur ve belge dosyası bir hatayla karşılaşıldı belirten bir açıklama içerir.
+- Belgeler doğru biçimlendirilmiş XML. Doğru biçimlendirilmiş XML değil, bir uyarı oluşturulur ve soubor dokumentace bir hatayla karşılaşıldı bildiren bir açıklama içerir.
 
-- Geliştiriciler kendi etiketleri kümesi oluşturmak boş. Önerilen etiketler birtakım yoktur (bkz [etiketleri belge açıklamaları için önerilen](recommended-tags-for-documentation-comments.md)). Önerilen etiketler bazıları özel anlamlara sahiptir:
+- Geliştiriciler kendi kümesi etiketleri oluşturmak ücretsizdir. Önerilen bir dizi etiketi yoktur (bkz [etiketleri belge açıklamaları için önerilen](recommended-tags-for-documentation-comments.md)). Önerilen etiketler bazıları, özel anlamları vardır:
 
-  - \<Param > etiketi parametrelerini tanımlamak için kullanılır. Kullandıysanız, derleyici parametresi var olduğundan ve tüm parametreleri belgelerinde açıklanan doğrular. Doğrulama başarısız olursa derleyici bir uyarı verir.
+  - \<Param > etiketi, parametreler tanımlamak için kullanılır. Kullandıysanız, derleyici parametresi var olduğundan ve tüm parametreleri belgelerinde açıklanan doğrular. Doğrulama başarısızsa, derleyici bir uyarı verir.
 
-  - `cref` Öznitelik, bir başvuru code öğesi sağlamak için herhangi bir etiket için eklenebilir. Derleyici, bu kod öğesi var olduğunu doğrular. Doğrulama başarısız olursa derleyici bir uyarı verir. Derleyici herhangi uyar `using` açıklandığı bir tür için göründüğünde deyimleri `cref` özniteliği.
+  - `cref` Öznitelik, bir kod öğesi başvuru sağlamak için herhangi bir etiket eklenebilir. Derleyici, bu kod öğesi var olduğunu doğrular. Doğrulama başarısızsa, derleyici bir uyarı verir. Tüm derleyici uyar `using` içinde tanımlanan bir tür için göründüğünde deyimleri `cref` özniteliği.
 
-  - \<Özet > etiketi IntelliSense Visual Studio içinde bir tür veya üye hakkındaki ek bilgileri görüntülemek için kullanılır.
+  - \<Özet > etiketi IntelliSense Visual Studio içindeki bir tür veya üyeyle ilgili ek bilgileri görüntülemek için kullanılır.
 
     > [!NOTE]
-    > XML dosyası türü ve üyeleri hakkında tam bilgi sağlamaz (örneğin, bunu herhangi bir tür bilgi içermiyor). Bir tür veya üye hakkında tam bilgi almak için belge dosyası gerçek tür veya üye yansıma ile birlikte kullanılmalıdır.
+    > XML dosyası, tür ve üyeler hakkında tam bilgi sağlamaz (örneğin, bunu herhangi bir tür bilgilerini içermiyor). Bir tür veya üyeyle ilgili eksiksiz bilgi almak için soubor dokumentace gerçek türe veya üyeye yansıma ile birlikte kullanılmalıdır.
 
-## <a name="see-also"></a>Ayrıca bkz.
+## <a name="see-also"></a>Ayrıca Bkz.
 
-[C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
-[/ doc (C# Derleyici Seçenekleri)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
-[XML Belge Açıklamaları](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [/ doc (C# Derleyici Seçenekleri)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
+- [XML Belge Açıklamaları](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  

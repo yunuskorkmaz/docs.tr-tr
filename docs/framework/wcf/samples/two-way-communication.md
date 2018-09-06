@@ -3,11 +3,11 @@ title: Çift Yönlü İletişim
 ms.date: 03/30/2017
 ms.assetid: fb64192d-b3ea-4e02-9fb3-46a508d26c60
 ms.openlocfilehash: 319b63ff1eefdab4c23932294c3f1970f204601e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43539426"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43786160"
 ---
 # <a name="two-way-communication"></a>Çift Yönlü İletişim
 Bu örnek, MSMQ kuyruğa alınan hizmetteki iki yönlü iletişim gerçekleştirme gösterir. Bu örnekte `netMsmqBinding` bağlama. Bu durumda, kuyruğa alınmış iletiler alma hizmeti gözlemleyin olanak tanıyan bir şirket içinde barındırılan bir konsol uygulaması hizmetidir.  

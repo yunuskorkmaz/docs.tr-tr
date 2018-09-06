@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, nullable types
 - types [C#], nullable
 ms.assetid: e473cb01-28ca-42be-9cea-f717055d72c6
-ms.openlocfilehash: 64b326b82cd022ed6590a232546690e2ec2a5c78
-ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
-ms.translationtype: MT
+ms.openlocfilehash: 2af0704abcad00c75a5d40bfe2d0523d07ee6a3f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39245602"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43736211"
 ---
 # <a name="nullable-types-c-programming-guide"></a>Boş değer atanabilir türler (C# programlama Kılavuzu)
 
@@ -38,7 +38,7 @@ Boş değer atanabilir türler aşağıdaki özelliklere sahiptir:
   
 - Ayrıca `==` ve `!=` işleçleri aşağıdaki örnekte gösterildiği gibi boş değer atanabilir bir tür ile: `if (x != null) y = x.Value;`. Varsa `a` ve `b` her ikisi de null olan `a == b` değerlendiren `true`.  
 
-- C# 7.0 ile başlayarak, desen eşleştirme hem incelemek ve boş değer atanabilir bir tür değerini almak için kullanabilirsiniz: `if (x is int xValue) y = xValue;`.
+- Kullanabileceğiniz C# 7.0 ile başlayarak, [desen eşleştirme](../../pattern-matching.md#the-is-type-pattern-expression) hem incelemek ve boş değer atanabilir bir tür değerini almak için: `if (x is int valueOfX) y = valueOfX;`.
   
 - Varsayılan değer olan `T?` bir örneği olan <xref:System.Nullable%601.HasValue%2A> özelliği döndürür `false`.  
 
@@ -54,12 +54,12 @@ Boş değer atanabilir türler aşağıdaki özelliklere sahiptir:
 
 Daha fazla bilgi için [boş değer atanabilir türleri kullanma](using-nullable-types.md) ve [nasıl yapılır: boş değer atanabilir bir tür belirleme](how-to-identify-a-nullable-type.md) konuları.
   
-## <a name="see-also"></a>Ayrıca bkz.
+## <a name="see-also"></a>Ayrıca Bkz.
 
- <xref:System.Nullable%601?displayProperty=nameWithType>  
- <xref:System.Nullable?displayProperty=nameWithType>  
- [?? İşleç](../../language-reference/operators/null-coalescing-operator.md)  
- [C# Programlama Kılavuzu](../index.md)  
- [C# Kılavuzu](../../index.md)  
- [C# başvurusu](../../language-reference/index.md)  
- [Boş değer atanabilen değer türleri (Visual Basic)](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
+- <xref:System.Nullable%601?displayProperty=nameWithType>  
+- <xref:System.Nullable?displayProperty=nameWithType>  
+- [?? İşleç](../../language-reference/operators/null-coalescing-operator.md)  
+- [C# Programlama Kılavuzu](../index.md)  
+- [C# Kılavuzu](../../index.md)  
+- [C# başvurusu](../../language-reference/index.md)  
+- [Boş değer atanabilen değer türleri (Visual Basic)](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  

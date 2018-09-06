@@ -3,11 +3,11 @@ title: Desteklenen Dağıtım Senaryoları
 ms.date: 03/30/2017
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
 ms.openlocfilehash: a86fd9d50b2bdfa2daafa3bec98802d10a1efef5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43672624"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43787941"
 ---
 # <a name="supported-deployment-scenarios"></a>Desteklenen Dağıtım Senaryoları
 Kısmen güvenilir uygulamaların kullanım için desteklenen Windows Communication Foundation (WCF) özellikleri alt kümesi için WCF kullanan bazı, tümü değil, senaryolar gereksinimlerini karşılamak üzere tasarlanmıştır. Sunucuda, WCF karşıladığını Internet ölçeğinde gereksinimlerini paylaşılan üçüncü taraf uygulamaları barındırma sağlayıcıları, [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] Medium Trust izni güvenlik nedenleriyle ayarlayın. İstemcide, WCF kısmi güven desteği gibi dağıtım teknolojileri gereksinimlerini karşılamak için tasarlanan [ClickOnce dağıtımı](https://go.microsoft.com/fwlink/?LinkId=83712) veya [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]'s XAML tarayıcı uygulaması teknolojisi, sorunsuz ve güvenli izin ver güvenilmeyen siteleri'ndan Masaüstü uygulamaların dağıtımı.  

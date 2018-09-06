@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 0fc2c8f0-1967-4f30-8b20-39b8dccfb82f
 ms.openlocfilehash: 8d18ed04ad33fe88fb14fd7436ddfd7a164c4303
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43554283"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43745004"
 ---
 # <a name="method-based-query-syntax-examples-projection-linq-to-dataset"></a>Metot tabanlı sorgu söz dizimi örnekleri: Projeksiyon (LINQ to DataSet)
 Bu konudaki örnekler nasıl kullanılacağını gösteren <xref:System.Linq.Enumerable.Select%2A> ve <xref:System.Linq.Enumerable.SelectMany%2A> sorgulamak için yöntemleri bir <xref:System.Data.DataSet> metot tabanlı sorgu söz dizimini kullanarak.  

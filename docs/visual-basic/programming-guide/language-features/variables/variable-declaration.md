@@ -17,12 +17,12 @@ helpviewer_keywords:
 - local variables [Visual Basic], declarations
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
-ms.openlocfilehash: 6890ddfd8b463cd731ab3d8f39565b50a31a1192
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 92a20e5fbe60c71ec3375ed35c919e1f88cf0a9c
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332739"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43737561"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Visual Basic'de Değişken Bildirimi
 Adı ve Özellikler belirtmek için bir değişken bildirir. Değişkenler için bildirimi deyim [Dim deyimi](../../../../visual-basic/language-reference/statements/dim-statement.md). Konumuna ve içeriği değişkenin özelliklerini belirler.  
@@ -61,7 +61,7 @@ Dim l, m As Long, x, y As Single
 ' In the preceding statement, l and m are Long, x and y are Single.  
 ```  
   
- Veri türleri hakkında daha fazla bilgi için bkz. [veri türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md). Nesneleri hakkında daha fazla bilgi için bkz. [nesneler ve sınıflar](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md) ve [bileşenler ile programlama](http://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3).  
+ Veri türleri hakkında daha fazla bilgi için bkz. [veri türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md). Nesneleri hakkında daha fazla bilgi için bkz. [nesneler ve sınıflar](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md) ve [bileşenler ile programlama](https://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3).  
   
 ## <a name="local-type-inference"></a>Yerel Tür Arabirimi  
  *Anlam çıkarma* olmadan bildirilen yerel değişkenlerin veri türlerini belirlemek için kullanılan bir `As` yan tümcesi. Derleyici, başlatma ifadesinin türünden değişkeninin türü çıkarır. Bu, açıkça bir türü bildirmeden değişkenler bildirmek sağlar. Aşağıdaki örnekte, her ikisi de `num1` ve `num2` tamsayı olarak kesin olarak belirlenmiştir.  
@@ -80,7 +80,7 @@ Dim l, m As Long, x, y As Single
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Nasıl yapılır: Yeni Değişken Oluşturma](../../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)  
  [Nasıl yapılır: Bir Değişkende Veri Ekleme Çıkarma](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)  
- [Veri Türleri](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Veri Türleri](../../../../visual-basic/language-reference/data-types/index.md)  
  [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)  
  [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)  
  [Static](../../../../visual-basic/language-reference/modifiers/static.md)  

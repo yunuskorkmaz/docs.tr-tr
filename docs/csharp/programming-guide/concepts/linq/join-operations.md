@@ -2,12 +2,12 @@
 title: Birleştirme işlemleri (C#)
 ms.date: 07/20/2015
 ms.assetid: 5105e0da-1267-4c00-837a-f0e9602279b8
-ms.openlocfilehash: 23d1432d32b22964c333640ccd3ac8dc7a2394d4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: f03d5cf14525a6d23240747c2f377348bf608782
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480315"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43750002"
 ---
 # <a name="join-operations-c"></a>Birleştirme işlemleri (C#)
 A *birleştirme* iki veri kaynaklarının bir veri kaynağı nesneleri başka bir veri kaynağındaki ortak bir özniteliği paylaşan nesnelerle işbirliğidir.  
@@ -27,17 +27,18 @@ A *birleştirme* iki veri kaynaklarının bir veri kaynağı nesneleri başka bi
 |Birleştirme|Anahtar Seçici işlevlerine göre iki diziyi birleştirir ve değer çiftlerini ayıklar.|`join … in … on … equals …`|<xref:System.Linq.Enumerable.Join%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Join%2A?displayProperty=nameWithType>|  
 |GroupJoin|İki sıranın anahtar Seçici işlevleri ve grupları her öğe için sonuçlar temelinde birleştirir.|`join … in … on … equals … into …`|<xref:System.Linq.Enumerable.GroupJoin%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupJoin%2A?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Linq>  
- [Standart sorgu işleçlerine genel bakış (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Anonim Tipler](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
- [Birleşimler ve Çapraz Ürün Sorguları Düzenleme](https://msdn.microsoft.com/library/d8072ede-0521-4670-9bec-1778ceeb875b)  
- [join yan tümcesi](../../../../csharp/language-reference/keywords/join-clause.md)  
- [Nasıl yapılır: bileşik anahtarlar kullanarak birleştirme](../../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md)  
- [Nasıl yapılır: birleştirme dosyalardan içerik (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)  
- [Nasıl yapılır: Join tümcesinin sonuçlarını sıralama](../../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)  
- [Nasıl yapılır: özel birleştirme işlemleri gerçekleştirme](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-custom-join-operations.md)  
- [Nasıl yapılır: gruplandırılmış birleştirmeler gerçekleştirme](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md)  
- [Nasıl yapılır: iç birleştirmeler gerçekleştirme](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md)  
- [Nasıl yapılır: sol dış birleştirmeler gerçekleştirme](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md)  
- [Nasıl yapılır: (LINQ) (C#) birden fazla kaynaktan nesne koleksiyonları doldurma](../../../../csharp/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- <xref:System.Linq>  
+- [Standart sorgu işleçlerine genel bakış (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+- [Anonim Tipler](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
+- [Birleşimler ve Çapraz Ürün Sorguları Düzenleme](../../../../framework/data/adonet/sql/linq/formulate-joins-and-cross-product-queries.md)  
+- [join yan tümcesi](../../../../csharp/language-reference/keywords/join-clause.md)  
+- [Nasıl yapılır: bileşik anahtarlar kullanarak birleştirme](../../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md)  
+- [Nasıl yapılır: birleştirme dosyalardan içerik (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)  
+- [Nasıl yapılır: Join tümcesinin sonuçlarını sıralama](../../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)  
+- [Nasıl yapılır: özel birleştirme işlemleri gerçekleştirme](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-custom-join-operations.md)  
+- [Nasıl yapılır: gruplandırılmış birleştirmeler gerçekleştirme](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md)  
+- [Nasıl yapılır: iç birleştirmeler gerçekleştirme](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md)  
+- [Nasıl yapılır: sol dış birleştirmeler gerçekleştirme](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md)  
+- [Nasıl yapılır: (LINQ) (C#) birden fazla kaynaktan nesne koleksiyonları doldurma](../../../../csharp/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)

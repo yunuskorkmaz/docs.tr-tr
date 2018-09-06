@@ -3,11 +3,11 @@ title: Genişletilmiş Koruma İlkesi
 ms.date: 03/30/2017
 ms.assetid: e2616a10-317e-4c34-8023-0c015a80a82f
 ms.openlocfilehash: 59a377a94978741f3f116bab819dff77d8b0fee4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43532351"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43785459"
 ---
 # <a name="extended-protection-policy"></a>Genişletilmiş Koruma İlkesi
 Genişletilmiş koruma, ADAM-de-adam (MITM) saldırılarına karşı korumaya yönelik bir güvenlik girişimidir. MITM saldırı bir güvenlik tehdididir bir MITM istemci kimlik bilgilerini alır ve bir sunucuya iletir.  

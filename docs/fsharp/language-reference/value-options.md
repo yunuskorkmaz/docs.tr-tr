@@ -2,12 +2,12 @@
 title: 'Değer seçenekleri (F #)'
 description: 'Seçenek türü bir yapı sürümü F # değer seçeneği türü hakkında bilgi edinin.'
 ms.date: 06/16/2018
-ms.openlocfilehash: 4c255cbbcfd9cb480230de09cd370a401c87343a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5647ef61725401b10a6045b14eef11f5b041e3e9
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43527589"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43747507"
 ---
 # <a name="value-options"></a>Değer seçenekleri
 
@@ -80,4 +80,4 @@ Olduğu gibi `defaultArg` işlevi `defaultValueArg` belirli değer seçeneği te
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Seçenekler](options.md)
+- [Seçenekler](options.md)

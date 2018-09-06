@@ -16,11 +16,11 @@ helpviewer_keywords:
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
 ms.openlocfilehash: 6f457756d2266a84c4f241a1cea167af194d8b81
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43537165"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43785901"
 ---
 # <a name="mouse-events-in-windows-forms"></a>Windows Forms'ta Fare Olayları
 Fare girişi işlediğinizde, genellikle işaretçi ve farenin düğme durumunu fare konumunu bilmek ister. Bu konu, fare olayları bu bilgiler edinme hakkında ayrıntılı bilgi sağlar ve Windows Forms denetimlerinde tetiklenen hangi fare tıklatın olayları siparişi açıklar. Bir listesi ve açıklamaları tüm fare olayları için bkz. [nasıl Windows Forms'ta fare girdisi çalışır](../../../docs/framework/winforms/how-mouse-input-works-in-windows-forms.md).  Ayrıca bkz: [olay işleyicilerine genel bakış (Windows Forms)](https://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\)), [olaylara genel bakış (Windows Forms)](https://msdn.microsoft.com/library/1h12f09z\(v=vs.110\))  

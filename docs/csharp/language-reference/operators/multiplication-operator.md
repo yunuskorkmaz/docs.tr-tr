@@ -7,31 +7,32 @@ helpviewer_keywords:
 - multiplication operator (*) [C#]
 - '* operator [C#]'
 ms.assetid: abd9a5f0-9b24-431e-971a-09ee1c45c50e
-ms.openlocfilehash: 6c5d4de587b67e5ade158c163a87e8dea6bece5a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 873cc1dc0d81425117f1784353acf08b35158133
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275847"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43734375"
 ---
 # <a name="-operator-c-reference"></a>* İşleci (C# Başvurusu)
-Çarpma işleci (`*`) işlenenleri çarpımını hesaplar. Tüm sayısal türler çarpma işleçleri önceden.  
+Çarpma işleci (`*`), işlenenlerinin çarpımını hesaplar. Tüm sayısal türler, çarpma işleçleri önceden tanımlanmış.  
 
-`*` Okuma ve yazma için bir işaretçi verir başvuru işleci de görür.
+`*` Okuma ve yazma için bir işaretçi sağlar başvuru işleci de görür.
   
 ## <a name="remarks"></a>Açıklamalar  
- `*` İşleci işaretçi türleri bildirme ve işaretçileri başvuru için de kullanılır. Bu işleç yalnızca tarafından kullanımını gösterilen güvensiz bağlamlarında kullanılabilir [güvensiz](../../../csharp/language-reference/keywords/unsafe.md) anahtar sözcüğü ve gerektiren [/ unsafe](../../../csharp/language-reference/compiler-options/unsafe-compiler-option.md) derleyici seçeneği.  Başvuru işleci indirection işleci de denir.  
+ `*` İşleci işaretçi türleri bildirme ve işaretçi başvuru kaldırma için de kullanılır. Bu işleci yalnızca güvenli bağlamlarda kullanımı tarafından gösterilen kullanılabilir [güvenli olmayan](../../../csharp/language-reference/keywords/unsafe.md) anahtar sözcüğü ve gerektiren [/ unsafe](../../../csharp/language-reference/compiler-options/unsafe-compiler-option.md) derleyici seçeneği.  Başvuru işleci yöneltme işleci de denir.  
   
- Kullanıcı tanımlı türler ikili aşırı yükleme `*` işleci (bkz [işleci](../../../csharp/language-reference/keywords/operator.md)). İkili İşleç aşırı, karşılık gelen atama işleci varsa, aynı zamanda örtük olarak aşırı yüklü değildir.  
+ Kullanıcı tanımlı türler ikili aşırı yükleme `*` işleci (bkz [işleci](../../../csharp/language-reference/keywords/operator.md)). İkili İşleç aşırı karşılık gelen atama işleci, varsa, aynı zamanda örtük olarak aşırı yüklenmiş olur.  
   
 ## <a name="example"></a>Örnek  
- [!code-csharp[csRefOperators#50](../../../csharp/language-reference/operators/codesnippet/CSharp/multiplication-operator_1.cs)]  
+ [!code-csharp-interactive[csRefOperators#50](../../../csharp/language-reference/operators/codesnippet/CSharp/multiplication-operator_1.cs)]  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[csRefOperators#51](../../../csharp/language-reference/operators/codesnippet/CSharp/multiplication-operator_2.cs)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [Güvenli Olmayan Kod ve İşaretçiler](../../../csharp/programming-guide/unsafe-code-pointers/index.md)  
- [C# İşleçleri](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# başvurusu](../../../csharp/language-reference/index.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [Güvenli Olmayan Kod ve İşaretçiler](../../../csharp/programming-guide/unsafe-code-pointers/index.md)  
+- [C# İşleçleri](../../../csharp/language-reference/operators/index.md)

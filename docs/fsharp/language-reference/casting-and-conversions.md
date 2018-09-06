@@ -1,100 +1,105 @@
 ---
 title: Atama ve Dönüştürmeler (F#)
-description: 'Nasıl F # programlama dili dönüşüm işleçleri çeşitli ilkel türler arasında aritmetik dönüşümler için sağladığını öğrenin.'
+description: 'Nasıl F # programlama dilinin dönüştürme işleçleri çeşitli ilkel türler arasında aritmetik dönüştürmeler için sağladığını öğrenin.'
 ms.date: 05/16/2016
-ms.openlocfilehash: ba3cbed91bf6510a34bcb7ba89d34b0ea6b82711
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aca1a2523130ee485a7e7c9a6a45a410904cb246
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33564501"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43784549"
 ---
 # <a name="casting-and-conversions-f"></a>Atama ve Dönüştürmeler (F#)
 
-Bu konu, F # tür dönüştürmeleri için destek açıklanır.
+Bu konu, F # tür dönüştürmeleri desteğini açıklar.
 
-## <a name="arithmetic-types"></a>Aritmetik türleri
-F # dönüşüm işleçleri için çeşitli ilkel türler arasında aritmetik dönüşümler gibi tamsayı ve kayan nokta türleri arasında sağlar. İntegral ve karakter dönüştürme işleçleri denetlediyseniz ve Denetlenmeyen forms; kayan nokta işleçler ve `enum` dönüşüm işleci yapın. Unchecked forms tanımlanan `Microsoft.FSharp.Core.Operators` ve denetlenen forms tanımlanan `Microsoft.FSharp.Core.Operators.Checked`. Checked forms taşma durumunu denetleyin ve hedef türü sınırları sonuç değeri aşarsa, bir çalışma zamanı özel durumu oluşturur.
+## <a name="arithmetic-types"></a>Aritmetik tür
 
-Her bu işleçlerinin hedef türünün adı ile aynı ada sahip. Hangi türleri açıkça açıklama, örneğin, aşağıdaki kodda, `byte` ile iki farklı anlamları görüntülenir. Birinci türü ve ikinci dönüştürme işleci.
+F # dönüştürme işleçleri için çeşitli ilkel türler arasında aritmetik dönüştürmeler gibi tamsayı ve kayan nokta türleri arasında sağlar. İntegral ve karakter dönüştürme işleçleri iade etmiş ve Denetlenmeyen forms; kayan nokta işleçler ve `enum` dönüştürme işleci yapın. Denetlenmeyen forms tanımlanan `Microsoft.FSharp.Core.Operators` ve işaretli forms tanımlanan `Microsoft.FSharp.Core.Operators.Checked`. İşaretli formları için taşmayı denetle ve sonuç değerini hedef türünün limitlerini aşarsam bir çalışma zamanı özel durumu oluşturur.
+
+Bu işleçlerden her biri, hedef türünün adı ile aynı ada sahiptir. Hangi türleri açıkça ek açıklama, örneğin, aşağıdaki kodda, `byte` ile iki farklı anlamları görünür. İlk yinelenme türüdür ve ikincisi dönüştürme işleci.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4401.fs)]
 
-Aşağıdaki tabloda, F #'de tanımlanan dönüştürme işleçleri gösterir.
+Aşağıdaki tabloda, F #'de tanımlanan dönüştürme işleçlerini gösterir.
 
 |İşleç|Açıklama|
 |--------|-----------|
-|`byte`|Bir 8 bit işaretsiz tür bayta dönüştürün.|
-|`sbyte`|İmzalı bayta dönüştürün.|
-|`int16`|Bir 16 bit işaretli tamsayıyı dönüştürün.|
-|`uint16`|Bir 16 bit işaretsiz tamsayıya dönüştürür.|
-|`int32, int`|Bir 32 bit işaretli tamsayıyı dönüştürün.|
-|`uint32`|32-bit işaretsiz tamsayıya dönüştürür.|
-|`int64`|Bir 64-bit işaretli tamsayıyı dönüştürün.|
-|`uint64`|Bir 64-bit işaretsiz tamsayıya dönüştürür.|
-|`nativeint`|Yerel bir tamsayıya dönüştürür.|
-|`unativeint`|İmzasız yerel tamsayıya dönüştürür.|
-|`float, double`|Bir 64-bit çift duyarlıklı IEEE kayan noktalı sayıyı dönüştürün.|
-|`float32, single`|Bir 32-bit tek duyarlıklı IEEE kayan noktalı sayıyı dönüştürün.|
-|`decimal`|Dönüştür `System.Decimal`.|
-|`char`|Dönüştür `System.Char`, Unicode karakter.|
-|`enum`|Bir numaralandırılmış türüne dönüştürün.|
-Ek olarak yerleşik ilkel türler, uygulama türleri ile bu işleçleri kullanabilirsiniz `op_Explicit` veya `op_Implicit` uygun imzaları yöntemleriyle. Örneğin, `int` dönüştürme işleci çalışır bir statik yöntem sağlar herhangi bir türü `op_Explicit` , türünü bir parametre olarak alıp döndüren `int`. Yöntemleri tarafından dönüş türü aşırı genel kural için bir özel durum bunu yapabilmeniz `op_Explicit` ve `op_Implicit`.
+|`byte`|Bir 8 bit işaretsiz türe bayta dönüştürün.|
+|`sbyte`|İmzalanan byte'a Dönüştür.|
+|`int16`|16 bit işaretli bir tamsayıya dönüştürün.|
+|`uint16`|Bir 16 bitlik işaretsiz tamsayı dönüştürün.|
+|`int32, int`|32-bit işaretli bir tamsayıya dönüştürün.|
+|`uint32`|Bir 32-bit işaretsiz tamsayıyı dönüştürün.|
+|`int64`|Bir 64-bit işaretli bir tamsayıya dönüştürün.|
+|`uint64`|Bir 64-bit işaretsiz tamsayıyı dönüştürün.|
+|`nativeint`|Yerel bir tamsayıya dönüştürün.|
+|`unativeint`|Yerel bir işaretsiz tamsayı dönüştürün.|
+|`float, double`|Bir 64-bit çift duyarlıklı IEEE kayan noktalı sayı dönüştürün.|
+|`float32, single`|Bir 32-bit tek duyarlıklı IEEE kayan noktalı sayı dönüştürün.|
+|`decimal`|Dönüştürme `System.Decimal`.|
+|`char`|Dönüştürme `System.Char`, bir Unicode karakter.|
+|`enum`|Numaralandırılmış bir türe dönüştürün.|
+Ek olarak yerleşik temel türler, bu işleçler uygulayan türler ile kullanabilirsiniz `op_Explicit` veya `op_Implicit` uygun imzalara sahip yöntemleri. Örneğin, `int` çalışır bir statik yöntem sağlar herhangi bir tür dönüştürme işleci `op_Explicit` türü bir parametre olarak alır ve döndürür `int`. Yöntem dönüş türüne göre aşırı yüklenemez genel kural için bir özel durum bunu yapabilmeniz `op_Explicit` ve `op_Implicit`.
 
 ## <a name="enumerated-types"></a>Numaralandırılmış türler
-`enum` İşlecidir türünü temsil eden bir tür parametre alan genel bir işleç `enum` dönüştürmek için. Numaralandırılmış bir türe dönüştürür, çıkarım türünü belirleme girişimleri yazın `enum` dönüştürmek istediğiniz. Aşağıdaki örnekte, değişken `col1` açıkça açıklama değil, ancak türü sonraki eşitlik testten algılanır. Bu nedenle, derleyici için dönüştürüyorsunuz türetme bir `Color` numaralandırması. Alternatif olarak, bir tür ek açıklama sağlayabilir olduğu gibi `col2` aşağıdaki örnekte.
+
+`enum` İşlecidir türünü temsil eden bir tür parametre alan bir genel işleç `enum` dönüştürmek için. Numaralandırılmış bir türe dönüştürürken türünü belirlemek için çıkarım denemeleri yazın `enum` dönüştürmek istediğiniz. Aşağıdaki örnekte, değişken `col1` açıkça açıklama değil, ancak sonraki eşitlik testi türünü algılanır. Bu nedenle, derleyici için dönüştürdüğünüz çıkarabilir bir `Color` sabit listesi. Alternatif olarak, bir tür ek açıklamasına sağlayabilirsiniz olduğu gibi `col2` aşağıdaki örnekte.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4402.fs)]
-    
-Ayrıca hedef numaralandırma türü açıkça aşağıdaki kodu olduğu gibi bir tür parametresi olarak belirtebilirsiniz:
+
+Hedef numaralandırma türüne açıkça aşağıdaki kodda gösterildiği gibi bir tür parametresi olarak belirtebilirsiniz:
 
 ```fsharp
 let col3 = enum<Color> 3
 ```
 
-Yalnızca sabit temel alınan türü dönüştürülmekte olan türü ile uyumlu ise numaralandırması iş çevirir unutmayın. Aşağıdaki kodda arasındaki uyumsuzluk nedeniyle derlemek dönüştürme başarısız `int32` ve `uint32`.
+Sabit listesi türünü temel dönüştürülen türü ile uyumlu ise sabit iş bıraktığı unutmayın. Aşağıdaki kodda, dönüştürme başarısız arasındaki uyumsuzluk nedeniyle derleme `int32` ve `uint32`.
 
 ```fsharp
 // Error: types are incompatible
 let col4 : Color = enum 2u
 ```
 
-Daha fazla bilgi için bkz: [numaralandırmalar](enumerations.md).
+Daha fazla bilgi için [numaralandırmalar](enumerations.md).
 
-## <a name="casting-object-types"></a>Nesne türlerini dönüştürmeyi
-Bir nesne hiyerarşideki türleri arasında dönüştürme nesne odaklı programlama için temel önemdedir. İki temel tür dönüşümleri vardır: (üst türe çevirme) atama ve (alt türe çevirme) atama. Bir hiyerarşi atama temel nesne başvurusu için bir türetilen nesne başvurusundan atama anlamına gelir. Bu tür bir cast türetilmiş sınıf devralma hiyerarşisini temel sınıftır sürece çalışmak için sağlanır. Yalnızca nesne örneği (türetilmiş) doğru hedef türü veya hedef türden türetilmiş bir tür gerçekte ise bir hiyerarşiden bir türetilen nesne başvurusu bir temel nesne başvurusu aşağı atama başarılı olur.
+## <a name="casting-object-types"></a>Nesne türlerini atama
 
-F # işleçleri bu tür dönüştürmeleri için sağlar. `:>` İşleci çevirir hiyerarşisinde yukarı ve `:?>` işleci hiyerarşide aşağıda çevirir.
+Bir nesne sıradüzeni türleri arasında dönüştürme, nesne yönelimli programlama için temeldir. İki temel tür dönüştürmeleri vardır: (yukarı çevrim) atama ve atama (Alta). Bir hiyerarşi atama temel nesne başvurusu için türetilmiş nesneden başvurudan atama anlamına gelir. Böyle bir dönüştürme, temel sınıfın türetilmiş sınıf devralma hiyerarşisinde olduğu sürece çalışmak için sağlanır. Yalnızca nesne (türetilmiş) doğru hedef türüne veya hedef türünden türetilmiş bir tür örneği gerçekten ise bir hiyerarşiden bir türetilmiş nesne başvurusu bir temel nesne başvurusu aşağı atama başarılı olur.
 
-### <a name="upcasting"></a>Üst türe çevirme
-Birçok nesne yönelimli dilde üst türe çevirme örtük; F #'ta kuralları biraz farklılık gösterir. Bir nesne türü yöntemleri için bağımsız değişken geçirdiğinizde üst türe çevirme otomatik olarak uygulanır. Parametre türü esnek bir türü olarak bildirilmiş sürece ancak, bir modüldeki let bağlı işlevleri için üst türe çevirme otomatik, değildir. Daha fazla bilgi için bkz: [esnek türler](flexible-Types.md).
+F # bu türde dönüştürme işleçleri sağlar. `:>` İşleci hiyerarşisinde yukarı çevirir ve `:?>` işleci hiyerarşinin çevirir.
 
-`:>` İşleci cast, cast başarısını derleme zamanında belirlenir başka bir deyişle, statik gerçekleştirir. Kullanan bir cast varsa `:>` başarıyla derlenen geçerli bir cast olduğundan ve hiçbir sıkıştırılabilmesi çalışma zamanında hata.
+### <a name="upcasting"></a>Yukarı çevrim
 
-Aynı zamanda `upcast` böyle bir dönüştürme gerçekleştirmek için işleci. Aşağıdaki ifade, hiyerarşi içinde yukarı doğru bir dönüştürme belirtir:
+Birçok nesne odaklı dildeki içinde yukarı çevrim örtük olarak; F #'ta kuralları biraz farklıdır. Bir nesne türü yöntemi için değişken geçtiğinizde yukarı çevrim otomatik olarak uygulanır. Parametre türü esnek bir türü olarak bildirilmiş sürece ancak, Modül içindeki let bağlı işlevler için yukarı çevrim otomatik, değildir. Daha fazla bilgi için [esnek türler](flexible-Types.md).
+
+`:>` İşleç gerçekleştirir statik atama, atama başarılı derleme zamanında belirlenir anlamına gelir. Kullanan bir tür dönüştürme, `:>` başarıyla derlenir, geçerli bir yayın olduğunu ve hiçbir şansı çalışma zamanında hata.
+
+Ayrıca `upcast` böyle bir dönüştürme gerçekleştirmek için işleci. Aşağıdaki ifade, hiyerarşi bir dönüştürme belirtir:
 
 ```fsharp
 upcast expression
 ```
 
-Upcast işleci kullandığınızda, derleyici bağlamdan dönüştürüyorsunuz türü Infer dener. Derleyici hedef türü belirlenemiyor ise derleyici bir hata bildirir.
+Upcast işleci kullandığınızda derleyici bağlamdan dönüştürüyorsanız türünün çıkarsanması çalışır. Derleyicinin hedef türü belirlenemiyor ise, derleyici bir hata bildirir.
 
-### <a name="downcasting"></a>Alt türe çevirme
-`:?>` İşleci cast, cast başarısını çalışma zamanında belirlenir yani dinamik gerçekleştirir. Kullanan bir cast `:?>` işleci derleme zamanında; işaretlenmediği ancak çalışma zamanında denemesi belirtilen türe için yapılır. Nesne hedef türü ile uyumlu ise, cast başarılı olur. Nesne hedef türü ile uyumlu değilse, çalışma zamanı başlatır bir `InvalidCastException`.
+### <a name="downcasting"></a>Alta dönüştürme işlemi
 
-Aynı zamanda `downcast` dinamik tür dönüştürme gerçekleştirmek için işleci. Aşağıdaki ifade program bağlamından çıkarımı yapılan tür hiyerarşide aşağı bir dönüştürme belirtir:
+`:?>` İşleci gerçekleştiren bir dinamik atama, atama başarılı çalışma zamanında belirlenir anlamına gelir. Kullanan bir yayın `:?>` işleci, derleme zamanında; işaretlenmediği ancak çalışma zamanında girişimini belirtilen türe için yapılır. Nesne hedef türüyle uyumlu ise, atama başarılı olur. Nesne hedef türüyle uyumlu değil, çalışma zamanı başlatır. bir `InvalidCastException`.
+
+Ayrıca `downcast` dinamik tür dönüştürmesi gerçekleştirmek için işleci. Aşağıdaki ifade, hiyerarşide aşağı doğru programı bağlamından çıkarılan bir türe dönüştürmeyi belirtir:
 
 ```fsharp
 downcast expression
 ```
 
-Olarak `upcast` işleci, derleyici bağlamı belirli hedef türünden gösterilemez, rapor hata.
+Olarak `upcast` işleci, derleyici bağlamından belirli hedef türü çıkarımı yapılamıyor, rapor bir hata oluştu.
 
-Aşağıdaki kod kullanımını göstermektedir `:>` ve `:?>` işleçler. Kod gösterir `:?>` işleci oluşturur, çünkü dönüştürme başarılı olur olduğunu bildiğiniz durumlarda en iyi şekilde kullanılan `InvalidCastException` dönüştürme başarısız olursa. Dönüştürme başarılı olur, kullanan bir tür testini bilmiyorsanız bir `match` ifade olduğundan daha iyi bir özel durum oluşturma yükünü ortadan kaldırır.
+Aşağıdaki kod kullanışını `:>` ve `:?>` işleçleri. Kod gösterir `:?>` işleci oluşturur, çünkü dönüştürme başarılı olur olduğunu bildiğiniz durumlarda en iyi şekilde kullanılan `InvalidCastException` dönüştürme başarısız olursa. Dönüştürme başarılı olur, kullanan bir tür testi bilmiyorsanız bir `match` ifadesi, bir özel durum oluşturma ek yükü önlediği için iyidir.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4403.fs)]
 
-Çünkü genel işleçler `downcast` ve `upcast` tür çıkarımı bağımsız değişkeni ve dönüş türü Yukarıdaki kod belirlemek için kullanır, değiştirebilirsiniz
+Çünkü genel işleçler `downcast` ve `upcast` Yukarıdaki koddaki bağımsız değişkenin ve dönüş türünü belirlemek için tür çıkarımı dayanır, değiştirebilirsiniz
 
 ```fsharp
 let base1 = d1 :> Base1
@@ -106,9 +111,10 @@ let base1 = d1 :> Base1
 let base1 = upcast d1
 ```
 
-Önceki kod içinde bağımsız değişken türü ve dönüş türleri olan `Derived1` ve `Base1`sırasıyla.
+Önceki kodda, bağımsız değişken türü ve dönüş türleri olan `Derived1` ve `Base1`sırasıyla.
 
 Türü testleri hakkında daha fazla bilgi için bkz: [eşleşme ifadeleri](match-Expressions.md).
 
-## <a name="see-also"></a>Ayrıca Bkz.
-[F# Dili Başvurusu](index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [F# Dili Başvurusu](index.md)

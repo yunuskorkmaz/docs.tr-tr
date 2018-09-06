@@ -4,18 +4,18 @@ description: .NET Core tarafından sağlanan C# dil düzeyi zaman uyumsuz progra
 author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: ae1c9b1569b5fb6784f50ec9d78a44380242fcd8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 971295b85e5f2763eef87bfe9109524db2630120
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518254"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43741376"
 ---
 # <a name="asynchronous-programming"></a>Zaman uyumsuz programlama
 
 (Örneğin, bir ağ üzerinden veri isteme veya bir veritabanına erişirken) tüm miyim/O-bağlı gereksinimleriniz varsa, zaman uyumsuz programlama kullanmak isteyebilirsiniz.  Ayrıca, zaman uyumsuz kod yazmak için iyi bir senaryodur pahalı bir hesaplama gerçekleştirmek gibi CPU bağımlı kod da olabilir.
 
-C# kolayca geri çağırmaları juggle veya faaliyetler destekleyen bir kitaplığa uymak zorunda kalmadan zaman uyumsuz kod yazmak için izin veren bir dil düzeyinde zaman uyumsuz programlama modeli vardır. Olarak bilinen takip eden [görev tabanlı zaman uyumsuz desen (TAP)](https://msdn.microsoft.com/library/hh873175.aspx).
+C# kolayca geri çağırmaları juggle veya faaliyetler destekleyen bir kitaplığa uymak zorunda kalmadan zaman uyumsuz kod yazmak için izin veren bir dil düzeyinde zaman uyumsuz programlama modeli vardır. Olarak bilinen takip eden [görev tabanlı zaman uyumsuz desen (TAP)](../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md).
 
 ## <a name="basic-overview-of-the-asynchronous-model"></a>Zaman uyumsuz Model temel genel bakış
 

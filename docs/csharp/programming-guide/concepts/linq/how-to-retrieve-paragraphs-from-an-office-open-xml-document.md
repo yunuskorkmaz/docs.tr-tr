@@ -1,27 +1,27 @@
 ---
-title: 'Nasıl yapılır: almak paragrafları Office Açık XML belgesinden (C#)'
+title: 'Nasıl yapılır: (C#) bir Office Open XML belgesinden paragrafları alma'
 ms.date: 07/20/2015
 ms.assetid: cc2687cf-d648-451e-88ac-3847c6c967c8
-ms.openlocfilehash: 2dd836e58c4ec4829f1dfdeb637cff290c82ae57
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e4234c3b35ca20fc06946947f9bacb10d656bc16
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322188"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43787915"
 ---
-# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-c"></a>Nasıl yapılır: almak paragrafları Office Açık XML belgesinden (C#)
-Bu konuda, bir Office Açık XML belge açılır ve belgedeki paragrafları bir koleksiyonunu alır bir örnek sunulmaktadır.  
+# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-c"></a>Nasıl yapılır: (C#) bir Office Open XML belgesinden paragrafları alma
+Bu konuda, bir Office Open XML belge açılır ve belge paragraflarda bir koleksiyonunu alır. bir örnek sunulmaktadır.  
   
- Office Açık XML hakkında daha fazla bilgi için bkz: [açık XML SDK](https://github.com/OfficeDev/Open-XML-SDK) ve [www.ericwhite.com](http://ericwhite.com/).  
+ Office Open XML hakkında daha fazla bilgi için bkz. [açık XML SDK](https://github.com/OfficeDev/Open-XML-SDK) ve [www.ericwhite.com](http://ericwhite.com/).  
   
 ## <a name="example"></a>Örnek  
- Bu örnek bir Office Açık XML paketi açıldığında, Open XML paketin içinde ilişkileri belge ve stil bölümleri bulmak için kullanır. Ardından paragraf içeren anonim bir tür topluluğu yansıtma belgenin sorgular <xref:System.Xml.Linq.XElement> düğümü, her paragraf stili adını ve her paragraf metni.  
+ Bu örnek, bir Office Open XML paket açtığında, belge ve stil bölümleri bulmak için Open XML paket içindeki ilişkileri kullanır. Ardından belge koleksiyonu paragraf içeren bir anonim tür yansıtma sorgular <xref:System.Xml.Linq.XElement> düğümü, her bir paragrafına stil adı ve her bir paragraf metni.  
   
- Örnek adlı bir genişletme yöntemi kullanır `StringConcatenate`, hangi sağlanır örnekte.  
+ Örnek adlı bir genişletme yöntemi kullanan `StringConcatenate`, hangi sağlanır örnekte.  
   
- Bu örnek nasıl çalıştığını açıklayan ayrıntılı bir öğretici için bkz: [saf işlevsel dönüşümleri XML (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).  
+ Bu örneğin nasıl çalıştığını açıklayan ayrıntılı bir öğretici için bkz [saf işlevsel dönüşümleri XML (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).  
   
- Bu örnek WindowsBase derlemesinde sınıfları kullanır. Türlerinde kullanan <xref:System.IO.Packaging?displayProperty=nameWithType> ad alanı.  
+ Bu örnekte WindowsBase derlemede bulunan sınıfları kullanır. Türleri kullanan <xref:System.IO.Packaging?displayProperty=nameWithType> ad alanı.  
   
 ```csharp  
 public static class LocalExtensions  
@@ -163,7 +163,7 @@ class Program
 }  
 ```  
   
- Bölümünde açıklanan örnek Open XML belgesiyle çalıştırdığınızda [kaynak Office Açık XML belgesi (C#) oluşturulmasını](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), bu örnek şu çıkışı üretir:  
+ Açıklanan örnek Open XML belge çalıştırdığınızda [kaynak Office Open XML belgesi (C#) oluşturma](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), bu örnek aşağıdaki çıktıyı üretir:  
   
 ```  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -183,5 +183,6 @@ StyleName:Normal ><
 StyleName:Code >Hello World<  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Gelişmiş sorgu teknikler (LINQ-XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [Gelişmiş sorgu teknikleri (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

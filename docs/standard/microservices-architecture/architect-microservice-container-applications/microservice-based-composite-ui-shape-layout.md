@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
 ms.openlocfilehash: 79b63c376d25725b2bcb6c16cdb4d06e107d5c07
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43536491"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43749794"
 ---
 # <a name="creating-composite-ui-based-on-microservices-including-visual-ui-shape-and-layout-generated-by-multiple-microservices"></a>Mikro hizmetler, görsel kullanıcı Arabirimi şekli ve düzeni birden fazla mikro hizmetin oluşturduğu dahil olmak üzere temel bileşik kullanıcı Arabirimi oluşturma
 

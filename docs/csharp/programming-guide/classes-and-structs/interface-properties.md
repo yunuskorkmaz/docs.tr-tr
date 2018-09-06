@@ -5,12 +5,12 @@ helpviewer_keywords:
 - properties [C#], on interfaces
 - interfaces [C#], properties
 ms.assetid: 6503e9ed-33d7-44ec-b4c1-cc16c084b795
-ms.openlocfilehash: eea2bb524496a3db22146586df323437d9f84242
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 619b9167b9b96be2908d833403379e4c2fe78ba5
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43396737"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43746924"
 ---
 # <a name="interface-properties-c-programming-guide"></a>Arabirim Özellikleri (C# Programlama Kılavuzu)
 Özellikleri bildirilebilir bir [arabirimi](../../../csharp/language-reference/keywords/interface.md). Bir arabirim özellik erişimcisi örneği verilmiştir:  
@@ -50,10 +50,11 @@ ms.locfileid: "43396737"
   
  `Employee name: Hazem Abolrous`  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [Özellikler](../../../csharp/programming-guide/classes-and-structs/properties.md)  
- [Özellikleri Kullanma](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
- [Özellikler ve Dizin Oluşturucular Arasında Karşılaştırma](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
- [Dizin Oluşturucular](../../../csharp/programming-guide/indexers/index.md)  
- [Arabirimler](../../../csharp/programming-guide/interfaces/index.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [Özellikler](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [Özellikleri Kullanma](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
+- [Özellikler ve Dizin Oluşturucular Arasında Karşılaştırma](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
+- [Dizin Oluşturucular](../../../csharp/programming-guide/indexers/index.md)  
+- [Arabirimler](../../../csharp/programming-guide/interfaces/index.md)

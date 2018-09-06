@@ -5,11 +5,11 @@ helpviewer_keywords:
 - programming [WF], tracking and tracing
 ms.assetid: b965ded6-370a-483d-8790-f794f65b137e
 ms.openlocfilehash: 8490299e995a469860f660a50a69915d5ddc4940
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43403753"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43731621"
 ---
 # <a name="workflow-tracking-and-tracing"></a>İzleme ve izleme iş akışı
 Windows iş akışı izleme bir [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] özelliği iş akışının yürütülmesini görünürlük sağlayacak şekilde tasarlanmıştır. Bu, bir iş akışı örneği yürütülmesini izlemek için izleme altyapısı sağlar. İzleme WF altyapısının şeffaf bir şekilde yürütme sırasında anahtar olayları yansıtan kayıtları yaymak için bir iş akışı Instruments. Bu işlev varsayılan olarak tüm kullanılabilir [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] iş akışı. Herhangi bir değişiklik için yapılması gereken bir [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] gerçekleşmesi izleme iş akışını. Bu, almak istediğiniz izleme veri miktarını karar adımlarından oluşur. Bir iş akışı örneği başlatıldığında veya izleme işleme tamamlandıktan kayıtları yayılan. İzleme, iş akışı değişkenleri ile ilişkili iş ilgili verileri de ayıklayabilirsiniz. İş akışı sistem işleme bir sırayı temsil ediyorsa, örneğin, sipariş kimliği ile birlikte ayıklanabileceği <xref:System.Activities.Tracking.TrackingRecord> nesne. Genel olarak, izleme WF etkinleştirme Tanılama veya İş analizi verilerini bir iş akışı yürütülmesini erişilecek kolaylaştırır.  

@@ -1,17 +1,17 @@
 ---
 title: 'Sonuçlar (F #)'
-description: "F # 'Neden' türü, hataya dayanıklı kod yazmanıza yardımcı olmak için nasıl kullanılacağını öğrenin."
+description: "Hataya dayanıklı kod yazmanıza yardımcı olmak üzere F # 'Sonuç' türünü kullanmayı öğrenin."
 ms.date: 04/24/2017
-ms.openlocfilehash: 432e420ba7c2005caa46250dde82c2c67c9d3ae3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a7ce2e1f6b8c6a32d99a2feaf9547c4b67b152b8
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563014"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43749255"
 ---
 # <a name="results"></a>Sonuçları
 
-F # 4.1 ile başlayarak, var olan bir `Result<'T,'TFailure>` birleştirilebilen hataya dayanıklı kod yazmak için kullanabileceğiniz türü.
+F # 4.1 ile başlayarak, bir `Result<'T,'TFailure>` kullanılıp kullanılamayacağı hataya dayanıklı kod yazmak için kullanabileceğiniz türü.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -27,9 +27,9 @@ type Result<'T,'TError> =
 
 ## <a name="remarks"></a>Açıklamalar
 
-Sonuç türü olduğuna dikkat edin bir [yapısı ayrılmış birleşim](discriminated-unions.md#struct-discriminated-unions), F # 4.1 içinde sunulan başka bir özellik değil.  Yapısal eşitlik semantiği burada geçerli olur.
+Sonuç türü olduğuna dikkat edin bir [ayırt edici birleşim](discriminated-unions.md#struct-discriminated-unions), F # 4.1 içinde sunulan başka bir özellik olan.  Yapısal eşitlik semantiği burada geçerli olur.
 
-`Result` Türü genellikle kullanılıyor birli hata hangi sıklıkta olarak adlandırılır işleme, [tren odaklı programlama](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) F # topluluk içinde.  Bu yaklaşım aşağıdaki Önemsiz örnek gösterilmektedir.
+`Result` Türü genellikle birli hata genellikle olarak adlandırılan işleme, kullanılan [demiryolu yönelimli programlama](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) içinde F # topluluğu.  Aşağıdaki basit örnekte, bu yaklaşım gösterilmektedir.
 
 ```fsharp
 // Define a simple type which has fields that can be validated
@@ -80,10 +80,9 @@ let test() =
 test()
 ```
 
-Gördüğünüz gibi çeşitli doğrulama işlevleri tümünü döndürülecek zorlarsanız zincir oldukça kolay hale gelir bir `Result`.  Böyle bir işlevsellik olması gerektiği gibi birleştirilebilir küçük parçalara bölmeniz bu sağlar.  Bu aynı zamanda eklenen değerine sahip *zorlamayı* kullanımını [desen eşleştirme](pattern-matching.md) hepsini doğrulama sonunda tasarrufludur zorlar daha yüksek bir program doğruluk derecesi.
+Gördüğünüz gibi çeşitli doğrulama işlevleri tümünü döndürülecek zorlarsanız zincir oldukça kolay bir `Result`.  Böyle bir işlevsellik olması gerektiği gibi birleştirilebilir küçük parçalara bölmeniz olanak sağlar.  Bu da eklenen değerine sahip *zorlamayı* kullanımını [desen eşleştirme](pattern-matching.md) doğrulama turu sonunda, hangi sırayla zorlar daha yüksek bir program doğruluk derecesi.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-[Ayrılmış Birleşimler](discriminated-unions.md)
-
-[Desen Eşleştirme](pattern-matching.md)
+- [Ayrılmış Birleşimler](discriminated-unions.md)
+- [Desen Eşleştirme](pattern-matching.md)

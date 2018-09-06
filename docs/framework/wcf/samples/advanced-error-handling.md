@@ -3,11 +3,11 @@ title: Gelişmiş Hata İşleme
 ms.date: 03/30/2017
 ms.assetid: ed54b687-78af-4eda-8507-9fd081bdea1a
 ms.openlocfilehash: 72fb9885408759f5781501b548f81625d258d13c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43423438"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43745264"
 ---
 # <a name="advanced-error-handling"></a>Gelişmiş Hata İşleme
 Bu örnek, Windows Communication Foundation (WCF) yönlendirme hizmeti gösterir. Yönlendirme hizmeti, içerik tabanlı bir yönlendirici uygulamanıza dahil etmek kolay bir WCF bileşenidir. Bu örnek nasıl yönlendirme hizmeti akıllı bir şekilde işlemleri ve çok noktaya yayın gibi daha karmaşık diğer ileti kavramları kullanarak hataları, kurtarır gösterir.  

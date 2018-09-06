@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: zaman uyumsuz izlenecek yolu Task.WhenAll (C#) kullanarak genişletme'
 ms.date: 07/20/2015
 ms.assetid: f6927ef2-dc6c-43f8-bc82-bbeac42de423
-ms.openlocfilehash: ed83241b31e6e8187d26b8d071f924278f6715e5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 241bd6baf0c1133ba7603da433a7cdf8d36748c0
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505824"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43787564"
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>Nasıl yapılır: zaman uyumsuz izlenecek yolu Task.WhenAll (C#) kullanarak genişletme
 İçinde zaman uyumsuz çözümün performansını artırabilirsiniz [izlenecek yol: async kullanarak Web'e erişme ve await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) kullanarak <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> yöntemi. Bu yöntem, zaman uyumsuz olarak görevleri topluluğu temsil edilen birden çok zaman uyumsuz işlemler bekler.  
@@ -61,7 +61,7 @@ ms.locfileid: "43505824"
     //}  
     ```  
   
-3.  Bir görev koleksiyonu oluşturun. Aşağıdaki kodu tanımlayan bir [sorgu](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d) , tarafından yürütüldüğünde <xref:System.Linq.Enumerable.ToArray%2A> yöntemi, her bir Web sitesinin içeriklerini indiren bir görev koleksiyonunu oluşturur. Sorgu çalışırken görevler başlatılır.  
+3.  Bir görev koleksiyonu oluşturun. Aşağıdaki kodu tanımlayan bir [sorgu](../../../../csharp/programming-guide/concepts/linq/index.md) , tarafından yürütüldüğünde <xref:System.Linq.Enumerable.ToArray%2A> yöntemi, her bir Web sitesinin içeriklerini indiren bir görev koleksiyonunu oluşturur. Sorgu çalışırken görevler başlatılır.  
   
      Yöntemine aşağıdaki kodu ekleyin `SumPageSizesAsync` bildiriminin `urlList`.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "43505824"
     //}  
     ```  
   
-3.  Tanımlayan bir [sorgu](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d) , tarafından yürütüldüğünde <xref:System.Linq.Enumerable.ToArray%2A> yöntemi, her bir Web sitesinin içeriklerini indiren bir görev koleksiyonunu oluşturur. Sorgu çalışırken görevler başlatılır.  
+3.  Tanımlayan bir [sorgu](../../../../csharp/programming-guide/concepts/linq/index.md) , tarafından yürütüldüğünde <xref:System.Linq.Enumerable.ToArray%2A> yöntemi, her bir Web sitesinin içeriklerini indiren bir görev koleksiyonunu oluşturur. Sorgu çalışırken görevler başlatılır.  
   
      Yöntemine aşağıdaki kodu ekleyin `SumPageSizesAsync` bildiriminin `client` ve `urlList`.  
   

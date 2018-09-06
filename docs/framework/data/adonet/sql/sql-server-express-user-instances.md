@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
 ms.openlocfilehash: 31c0efbe953b56304c264444082185b9a9227d60
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43658983"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43745104"
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express kullanıcı örnekleri
 Microsoft SQL Server Express Edition (SQL Server Express) .NET Framework veri sağlayıcısı için SQL Server kullanırken yalnızca kullanılabilir kullanıcı örneği özelliğini destekler (`SqlClient`). Bir kullanıcı örneği, SQL Server Express Veritabanı Altyapısı'nın üst örneği tarafından oluşturulan ayrı bir örneğidir. Kullanıcı örnekleri eklemek ve SQL Server Express veritabanlarına bağlanmak için kendi yerel bilgisayarlarında yönetici olmayan kullanıcılar izin verin. Her örneği, tek kullanıcı, kullanıcı başına tek örnek güvenlik bağlamı altında çalışır.  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - accessibility levels
 ms.assetid: dc083921-0073-413e-8936-a613e8bb7df4
 ms.openlocfilehash: 4679fd2564454e7f1ade5cb4813729b65f433012
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43484557"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43787551"
 ---
 # <a name="accessibility-levels-c-reference"></a>Erişilebilirlik Düzeyleri (C# Başvurusu)
 

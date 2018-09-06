@@ -4,11 +4,11 @@ description: Adım adım örnek bir çözüm oluşturmak bir etkileşimli deneyi
 author: rprouse
 ms.date: 08/31/2018
 ms.openlocfilehash: 253e07c16740a39566cf37ee5742a32342c78c49
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43534536"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43787733"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>Birim testi NUnit ve .NET Core ile C#
 

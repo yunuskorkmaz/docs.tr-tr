@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: cc17dd47-b9ad-451c-a362-e36e0aac7ba0
 ms.openlocfilehash: a45ba48408fd98c89db8664aec679a437ce8af24
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43559927"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43749138"
 ---
 # <a name="how-to-call-operations-asynchronously-using-a-channel-factory"></a>Nasıl yapılır: Kanal Fabrikası Kullanarak İşlemlere Zaman Uyumsuz Olarak Çağrı Yapma
 Bu konu nasıl bir istemci bir hizmet işlemi zaman uyumsuz olarak kullanılırken erişebilir kapsayan bir <xref:System.ServiceModel.ChannelFactory%601>-tabanlı istemci uygulaması. (Kullanırken bir <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> olay tabanlı zaman uyumsuz çağırma modeli kullandığınız bir hizmeti çağırmak için nesne. Daha fazla bilgi için [nasıl yapılır: hizmet işlemlerini zaman uyumsuz çağrı](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). Olay tabanlı zaman uyumsuz çağırma modeli hakkında daha fazla bilgi için bkz. [olay tabanlı zaman uyumsuz desen (EAP)](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).)  

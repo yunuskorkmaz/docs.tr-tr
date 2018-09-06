@@ -2,12 +2,12 @@
 title: LINQ to DataSet genel bakış
 ms.date: 03/30/2017
 ms.assetid: dc20a8fb-03f6-4b68-9c2b-7f7299e3070b
-ms.openlocfilehash: 1de5a7490ac39406fc76f37cc059916231108a0a
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 43c3aa081bd934202bd3a7831741054115d7a6d5
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43258787"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43739356"
 ---
 # <a name="linq-to-dataset-overview"></a>LINQ to DataSet genel bakış
 <xref:System.Data.DataSet> Daha yaygın olarak kullanılan bileşenlerden biri [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. Anahtar öğesi bağlantısı kesilmiş olan programlama modeli [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] , temel alır ve onu açıkça bu verileri önbelleğe almak için farklı veri kaynaklarından sağlar. Sunu katmanı için <xref:System.Data.DataSet> GUI denetimleri için veri bağlama ile tümleşiktir. Orta katman için ilişkisel veri şeklini korur ve hızlı Basit Sorgu ve hiyerarşi Gezinti hizmetleri içeren bir önbellek sağlar. Bir veritabanı isteklerinde sayısını azaltmak için kullanılan genel bir tekniktir kullanmaktır <xref:System.Data.DataSet> Orta katmanda önbelleğe alma. Örneğin, veri odaklı düşünün [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web uygulaması. Genellikle, uygulama verilerinin büyük bir kısmı sık değişmeyen ve oturumlar veya kullanıcılar arasında yaygındır. Bu verileri, veritabanında istek sayısını azaltan ve kullanıcının etkileşim hızlandırır Web sunucusu üzerindeki bellekte tutulabilir. Başka bir kullanışlı yönüyle <xref:System.Data.DataSet> veri kümelerine bir veya daha fazla veri kaynağından uygulama alanına taşıyacak şekilde olanak tanımasıdır. Uygulama, ilişkisel şeklini korurken verileri bellek içinde daha sonra değiştirebilirsiniz.  
@@ -30,5 +30,5 @@ ms.locfileid: "43258787"
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [DataSet’leri Sorgulama](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)  
- [LINQ (dil ile tümleşik sorgu)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
+ [LINQ (dil ile tümleşik sorgu)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
  [LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md)

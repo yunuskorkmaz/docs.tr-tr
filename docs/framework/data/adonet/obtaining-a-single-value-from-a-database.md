@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: b38526cd-a62a-48cb-822a-e91dfa68e02d
 ms.openlocfilehash: 1a0d92c7acad58d3618c3f50b7463022352cf542
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43560863"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43741967"
 ---
 # <a name="obtaining-a-single-value-from-a-database"></a>Bir veritabanından tek değer alma
 Yalnızca tek bir değer dönüş veritabanı bilgileri yerine bir tablo veya veri akışını biçiminde gerekebilir. Örneğin, sonuç sayısı gibi bir toplama işlevinin isteyebilirsiniz (\*), SUM(Price) veya AVG(Quantity). **Komut** nesnesi kullanarak tek değerler döndürülecek yeteneği sağlar **ExecuteScalar** yöntemi. **ExecuteScalar** yöntemi döndürür, skaler değer olarak, sonuç kümesi ilk satırının ilk sütununu değeri.  

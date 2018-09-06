@@ -1,46 +1,46 @@
 ---
-title: Bir komutu yürütme
+title: Komut yürütme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 40494916-c25a-4cb8-8f7c-fcb8d378464e
-ms.openlocfilehash: 5ffa32b13330d61e450a42e35b933ce05d69b041
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ed5ae1cbab40b57676219ffbe7d1d5696ac3bec4
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765184"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43733189"
 ---
-# <a name="executing-a-command"></a>Bir komutu yürütme
-.NET Framework ile dahil her .NET Framework veri sağlayıcısı devraldığı kendi komut nesnesi sahip <xref:System.Data.Common.DbCommand>. OLE DB için .NET Framework veri sağlayıcısı içerir bir <xref:System.Data.OleDb.OleDbCommand> nesnesi, SQL Server için .NET Framework veri sağlayıcısı içerir bir <xref:System.Data.SqlClient.SqlCommand> nesne ODBC için .NET Framework veri sağlayıcısı içeren bir <xref:System.Data.Odbc.OdbcCommand> nesne ve .NET Framework Oracle için veri sağlayıcı içeren bir <xref:System.Data.OracleClient.OracleCommand> nesnesi. Komutlar yürütülürken bu nesneleri çıkarır yöntemlerin her biri komut türüne göre ve dönüş değeri, aşağıdaki tabloda açıklandığı gibi istenen.  
+# <a name="executing-a-command"></a>Komut yürütme
+Devralınan kendi komut nesnesi .NET Framework ile birlikte dahil edilen her .NET Framework veri sağlayıcısı olan <xref:System.Data.Common.DbCommand>. OLE DB için .NET Framework Veri Sağlayıcısı'nı içeren bir <xref:System.Data.OleDb.OleDbCommand> nesnesi, SQL Server için .NET Framework veri sağlayıcısı içerir bir <xref:System.Data.SqlClient.SqlCommand> nesnesi, ODBC için .NET Framework veri sağlayıcısı içerir bir <xref:System.Data.Odbc.OdbcCommand> nesne ve .NET Framework Oracle için veri sağlayıcısı'nı içeren bir <xref:System.Data.OracleClient.OracleCommand> nesne. Komutları yürütmek bu nesneleri kullanıma sunan yöntemlerin her biri, komut türüne göre ve dönüş değeri, aşağıdaki tabloda açıklandığı gibi gerekli.  
   
 |Komut|Dönüş Değeri|  
 |-------------|------------------|  
 |`ExecuteReader`|Döndürür bir `DataReader` nesne.|  
 |`ExecuteScalar`|Tek bir sayı değerini döndürür.|  
-|`ExecuteNonQuery`|Herhangi bir satır döndürmeyen bir komut yürütür.|  
-|`ExecuteXMLReader`|Döndürür bir <xref:System.Xml.XmlReader>. İçin kullanılabilir bir `SqlCommand` yalnızca nesne.|  
+|`ExecuteNonQuery`|Herhangi bir satır döndürmeyen bir komutu yürütür.|  
+|`ExecuteXMLReader`|Döndürür bir <xref:System.Xml.XmlReader>. Kullanılabilir bir `SqlCommand` yalnızca nesne.|  
   
- Her kesin türü belirtilmiş komut nesnesi de destekleyen bir <xref:System.Data.CommandType> belirten bir komut dizesi nasıl yorumlanacağını, aşağıdaki tabloda açıklandığı gibi numaralandırması.  
+ Her bir türü kesin belirlenmiş komut nesnesi de destekleyen bir <xref:System.Data.CommandType> komut dizesi nasıl yorumlanacağını, aşağıdaki tabloda açıklandığı gibi belirten sabit listesi.  
   
 |CommandType|Açıklama|  
 |-----------------|-----------------|  
-|`Text`|Veri kaynağında yürütülecek deyimleri tanımlayan bir SQL komutu.|  
-|`StoredProcedure`|Saklı yordam adı. Kullanabileceğiniz `Parameters` giriş ve çıkış parametreleri erişme ve dönüş değerleri, bağımsız olarak bir komut özelliğinin `Execute` yöntemi çağrılır. Kullanırken `ExecuteReader`, dönüş değerleri ve çıktı parametreleri kadar erişilemeyecek `DataReader` kapalı.|  
+|`Text`|Veri kaynağında çalıştırılacak deyimleri tanımlayan bir SQL komutu.|  
+|`StoredProcedure`|Saklı yordamın adı. Kullanabileceğiniz `Parameters` giriş ve çıkış parametrelerini erişme ve dönüş değerleri, bağımsız olarak bir komut özelliğini `Execute` yöntemi çağrılır. Kullanırken `ExecuteReader`çıkış parametresi ve dönüş değerleri kadar erişilemez `DataReader` kapatılır.|  
 |`TableDirect`|Bir tablonun adı.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneğinde nasıl oluşturulduğunu gösteren bir <xref:System.Data.SqlClient.SqlCommand> özelliklerini ayarlayarak bir saklı yordamı yürütmek için nesne. A <xref:System.Data.SqlClient.SqlParameter> nesne saklı yordamı için giriş parametresi belirtmek için kullanılır. Komutu kullanılarak yürütülür <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> yöntemi ve çıktısını <xref:System.Data.SqlClient.SqlDataReader> konsol penceresinde görüntülenir.  
+ Aşağıdaki kod örneğinde nasıl oluşturulacağını gösterir. bir <xref:System.Data.SqlClient.SqlCommand> özelliklerini ayarlayarak bir saklı yordamı yürütmek için nesne. A <xref:System.Data.SqlClient.SqlParameter> nesne saklı yordam için giriş parametresi belirtmek için kullanılır. Kullanarak komutu yürütülmeden <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> yöntemi ve çıktısını <xref:System.Data.SqlClient.SqlDataReader> konsol penceresinde görüntülenir.  
   
  [!code-csharp[DataWorks SqlClient.StoredProcedure#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.StoredProcedure/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.StoredProcedure#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.StoredProcedure/VB/source.vb#1)]  
   
 ### <a name="troubleshooting-commands"></a>Sorun giderme komutları  
- SQL Server için .NET Framework veri sağlayıcısı başarısız komutu yürütmeleri için zaman zaman ortaya çıkan sorunları algılamak etkinleştirmek için performans sayaçlarını ekler. Daha fazla bilgi için bkz: [performans sayaçları](../../../../docs/framework/data/adonet/performance-counters.md).  
+ SQL Server için .NET Framework veri sağlayıcısı sağlamak başarısız komut yürütmeleriyle ilişkili aralıklı olarak ortaya çıkan sorunları algılamak performans sayaçları ekler. Daha fazla bilgi için [performans sayaçları](../../../../docs/framework/data/adonet/performance-counters.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Komutlar ve Parametreler](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [DataAdapters ve DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [DataReader ile çalışma](http://msdn.microsoft.com/library/126a966a-d08d-4d22-a19f-f432908b2b54)  
- [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [DataReader ile çalışma](https://msdn.microsoft.com/library/126a966a-d08d-4d22-a19f-f432908b2b54)  
+ [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

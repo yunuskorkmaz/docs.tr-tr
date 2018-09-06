@@ -10,11 +10,11 @@ helpviewer_keywords:
 - sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
 ms.openlocfilehash: 690ec5f2bca7c10aba291cdde6e8bc455e7fd43a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43463973"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43731634"
 ---
 # <a name="annotations-overview"></a>Ek açıklamalara Genel Bakış
 Not yazma veya kağıt belge açıklamalarını biz neredeyse sorgulamadan kabul ederiz, bir tür bir sıradan etkinlik olduğundan. Bu Notlar ya da yorumlarınız "ek açıklamalar", bir belgeye bilgi bayrağı veya daha sonra başvurmak için ilgi öğelerini vurgulamak için ekleriz. Kolay ve sıradan Yazdırılan belgeleri Not yazma olmasına karşın, elektronik belgeleri kişisel açıklamalar ekleme yeteneği genellikle kullanılabilir olsa çok sınırlıdır.  

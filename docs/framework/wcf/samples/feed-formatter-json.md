@@ -3,11 +3,11 @@ title: Akış Biçimlendirici (JSON)
 ms.date: 03/30/2017
 ms.assetid: f9c0b295-55e7-48ea-b308-ba51c7d31143
 ms.openlocfilehash: bc73ae11f66d2c325fab274f8deec11355ce8b99
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43407288"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43724340"
 ---
 # <a name="feed-formatter-json"></a>Akış Biçimlendirici (JSON)
 Bu örnek, örneğini serileştirmek nasıl gösterir. bir <xref:System.ServiceModel.Syndication.SyndicationFeed> sınıfı özel kullanarak JavaScript nesne gösterimi (JSON) biçiminde <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> ve <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
 ms.openlocfilehash: 2f641d04b53d2e80985defcd6bd9a4882004fd97
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43533228"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43739639"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>İzlenecek Yol: Visual Basic'de Sorgu Yazma
 Bu izlenecek yol yazmak için Visual Basic dil özellikleri nasıl kullanabileceğinizi gösterir [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] sorgu ifadelerinde. İzlenecek yol, sorgu Öğrenci nesnelerin listesini oluşturma, sorgularının nasıl çalıştırılacağını ve bunları değiştirmek nasıl gösterir. Sorguları nesne başlatıcıları, yerel tür çıkarımı ve anonim türler dahil olmak üzere çeşitli özelliklerini bir araya getirin.  

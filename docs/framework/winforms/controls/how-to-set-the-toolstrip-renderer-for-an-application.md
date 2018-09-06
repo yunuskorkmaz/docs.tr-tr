@@ -12,11 +12,11 @@ helpviewer_keywords:
 - toolbars [Windows Forms], customizing
 ms.assetid: 46acef3e-9844-4ae8-9a2e-3006fe99cadf
 ms.openlocfilehash: b86724bda83c701ad5c5872ae8d97bb490158e76
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43672537"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43773033"
 ---
 # <a name="how-to-set-the-toolstrip-renderer-for-an-application"></a>Nasıl Yapılır: Bir Uygulama için ToolStrip Oluşturucusunu Ayarlama
 Görünümünü özelleştirebilirsiniz, <xref:System.Windows.Forms.ToolStrip> denetimleri tek tek veya tüm <xref:System.Windows.Forms.ToolStrip> denetimleri, uygulamanızda.  

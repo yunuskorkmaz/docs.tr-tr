@@ -11,11 +11,11 @@ ms.assetid: 9dd06e25-12c0-4a9e-855a-452dc83803e2
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 488bccea7d0a8870891859482bece018bf4bda0e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43556700"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43744708"
 ---
 # <a name="mutexes"></a>Zaman Uyumu Sağlayıcılar
 Kullanabileceğiniz bir <xref:System.Threading.Mutex> özel bir kaynağa erişim sağlamak için nesne. <xref:System.Threading.Mutex> Sınıfın kullandığı değerinden daha fazla sistem kaynakları <xref:System.Threading.Monitor> sınıfı, ancak uygulama etki alanı sınırları ötesinde sıralanır, birden çok bekler ile kullanılabilir ve farklı işlemlerdeki iş parçacığı eşitleme için kullanılabilir. Yönetilen eşitleme mekanizmaları bir karşılaştırması için bkz: [eşitleme temellerine genel bakış](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  

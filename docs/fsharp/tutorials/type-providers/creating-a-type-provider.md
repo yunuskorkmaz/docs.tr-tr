@@ -2,12 +2,12 @@
 title: 'Öğretici: bir tür sağlayıcısı (F #) oluşturma'
 description: 'Temel kavramları göstermek üzere birkaç basit tür sağlayıcısı inceleyerek kendi F # tür sağlayıcıları F # 3.0 içinde oluşturmayı öğrenin.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 25b11a0c6328fc74832e13b6380c983fb14a74a0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 3c998377b2c3a408d536ef416f3799bf7f04b6bd
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43499334"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43745732"
 ---
 # <a name="tutorial-create-a-type-provider"></a>Öğretici: bir tür sağlayıcısı oluşturma
 
@@ -24,7 +24,6 @@ Bir dizi için yaygın olarak kullanılan Internet ve kurumsal veri hizmetlerind
 - [FSharp.Data.TypeProviders](https://fsprojects.github.io/FSharp.Data.TypeProviders/) kullanmak için tür sağlayıcıları SQL, Entity Framework, OData ve WSDL veri hizmetlerine erişmek için yalnızca .NET Framework programlama ile daha eski bir kümesidir.
 
 Gerektiğinde, özel tür sağlayıcılarınızı oluşturabilir veya başkalarının oluşturulan tür sağlayıcılarına başvurabilirsiniz. Örneğin, kuruluşunuz bir büyük ve artan sayıda adlandırılmış veri kümeleri, her biri kendi kararlı veri şemasına sahip sağlayan bir veri hizmeti olabilir. Şemaları okuyan ve geçerli veri kümelerini programcıya türü kesin belirlenmiş şekilde sunan bir tür sağlayıcısı oluşturabilirsiniz.
-
 
 ## <a name="before-you-start"></a>Başlamadan önce
 
@@ -51,7 +50,6 @@ Başlamadan önce aşağıdaki soruları sormaya:
 - Bu program yürütme sırasında değişecek mi?
 
 Tür sağlayıcıları şema zamanında ve derlenmiş kod kullanım ömrü süresince kararlı olduğu durumlar için uygundur.
-
 
 ## <a name="a-simple-type-provider"></a>Bir basit tür sağlayıcısı
 
@@ -93,8 +91,7 @@ type Type100 =
 
 Dizi türleri ve üyeleri sağlanan statik olarak bilinen unutmayın. Bu örnek, bir şemaya bağlı türleri sağlama yeteneği sağlayıcılarının yararlanarak değil. Tür sağlayıcısı uygulaması aşağıdaki kodda gösterilmiştir ve Ayrıntılar, bu konunun sonraki bölümlerinde ele alınmaktadır.
 
-
->[!WARNING] 
+>[!WARNING]
 Bu kod ve çevrimiçi örnekleri arasındaki farklar olabilir.
 
 ```fsharp
@@ -168,7 +165,6 @@ devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 Alternatif olarak, Visual Studio'yu açın, hata ayıklama menüsünü açın, `Debug/Attach to process…`ve başka bir ekleme `devenv` burada düzenlediğiniz komut dosyanızı işlem. Bu yöntemi kullanarak, ikinci örneği (tam IntelliSense ve diğer özellikleri) içine etkileşimli olarak ifadeleri yazarak belirli bir tür sağlayıcısı mantığında daha kolay hedef alabilirsiniz.
 
 Oluşturulan kod hataları daha iyi tanımlamak için hata ayıklama Just My Code'u devre dışı bırakabilirsiniz. Etkinleştirme veya bu özelliği devre dışı bırakma hakkında daha fazla bilgi için bkz. [hata ayıklayıcısı ile kodlarda gezinme](/visualstudio/debugger/navigating-through-code-with-the-debugger). Ayrıca, ayrıca ilk fırsat özel durum yakalama açarak ayarlayabilirsiniz `Debug` menüsüne ve ardından `Exceptions` açmak için Ctrl + Alt + E tuşlarını seçerek veya `Exceptions` iletişim kutusu. Bu iletişim kutusunda, altında `Common Language Runtime Exceptions`seçin `Thrown` onay kutusu.
-
 
 ### <a name="implementation-of-the-type-provider"></a>Tür sağlayıcısı uygulaması
 
@@ -376,7 +372,6 @@ Bu bölümdeki örnek yalnızca sağlar *sağlananlardan silinmesi*, aşağıdak
 
 Bu örnekte, her tür türüne silinir sağlanan `obj`, ve tüm kullanımları türü tür olarak görünür `obj` derlenmiş kodu. Aslında, bu örneklerde temel nesneler dizelerdir, ancak türü olarak görünür `System.Object` derlenmiş .NET kodu. Tür silme işlemini ile tüm kullanımları için açık kutulama kullanabileceğiniz gibi kutudan çıkarma ve atama bozmaya için türleri silinir. Bu durumda, nesne kullanıldığında geçerli olmayan bir yayın özel durumu neden olabilir. Bir sağlayıcı çalışma zamanı false ifadeleri karşı korumaya yardımcı olmak için kendi özel gösterimi türü tanımlayabilirsiniz. F # dilinde kendisi silinmiş türleri tanımlayamazsınız. Yalnızca sağlanan türler silinebilir. Sonuçları, hem pratik anlamanız gerekir ve anlam kullanarak, silinen türleri, tür sağlayıcısı veya sağlayan bir sağlayıcı için türleri silinir. Silinen bir türü gerçek .NET tür yok. Bu nedenle, türü üzerinden çevrenin yansımasını yapamayacağı ve çalışma zamanı yayınları ve çalışma zamanı türü semantiği kullanan diğer teknikleri kullanırsanız silinen türleri bozmaya. Silinen türlerinin subversion çalışma zamanında tür özel durumlar sık sonuçlanır.
 
-
 ### <a name="choosing-representations-for-erased-provided-types"></a>Türleri sağlanan gösterimleri silinmesi için seçme
 
 Bazı silinen sağlananlardan kullanımlar için hiçbir gösterimi gereklidir. Örneğin, silinen tür yalnızca statik özellikleri ve üyeleri ve Oluşturucusu içerebilir ve yöntem ya da özellikleri türün bir örneğini döndürür sağlanır. Silinen bir örneğini türü sağlanan erişebiliyorsa, aşağıdaki soruları göz önünde bulundurmalısınız:
@@ -435,11 +430,9 @@ ProvidedConstructor(…, InvokeCode = (fun args -> <@@ new DataObject() @@>), �
 
 Önceki bölümde çeşitli türler, özellikler ve yöntemler sağlayan basit bir silme tür sağlayıcısı oluşturma açıklanmaktadır. Bu bölümde açıklanan bazı avantajları ve dezavantajları silinen türleri bir türü sağlayıcısından sağlayan dahil olmak üzere tür silme işlemini kavramını ve Silinen türleri temsillerini ele alınan.
 
-
 ## <a name="a-type-provider-that-uses-static-parameters"></a>Statik parametreler kullanan bir tür sağlayıcısı
 
 Tür sağlayıcıları tarafından statik veri Parametreleştirme olanağı bile sağlayıcısı herhangi bir yerel veya uzak veri erişimi gerekmez, durumlarda çok ilginç senaryolarını etkinleştirir. Bu bölümde, böyle bir sağlayıcı bir araya getirilmesi için bazı temel tekniklerini öğreneceksiniz.
-
 
 ### <a name="type-checked-regex-provider"></a>Regex sağlayıcısı türü işaretli
 
@@ -737,16 +730,13 @@ do ()
 
 Bu bölümde, kendi statik parametrelerine göre işleyen bir tür sağlayıcısı oluşturma açıklanmıştır. Sağlayıcı statik parametresinin denetler ve, değerini temel alarak işlemler sağlar.
 
-
 ## <a name="a-type-provider-that-is-backed-by-local-data"></a>Yerel veri tarafından desteklenen bir tür sağlayıcısı
 
 Genellikle, yalnızca statik parametreler aynı zamanda bilgi yerel veya uzak sistemlerden dayalı API'leri sunmak için tür sağlayıcıları isteyebilirsiniz. Bu bölümde, yerel veri dosyaları gibi yerel verileri temel alan bir tür sağlayıcıları ele alınmaktadır.
 
-
 ### <a name="simple-csv-file-provider"></a>Basit bir CSV dosya sağlayıcısı
 
 Basit bir örnek olarak, bir tür sağlayıcısı virgülle ayrılmış değer (CSV) biçimini bilimsel veri erişimi için göz önünde bulundurun. Bu bölümde aşağıdaki tabloda gösterildiği gibi kayan nokta verisi tarafından izlenen bir üst bilgi satırı CSV dosyaları içerdiğini varsayar:
-
 
 |Uzaklık (ölçer)|Süresi (saniye)|
 |----------------|-------------|
@@ -893,11 +883,9 @@ Uygulama hakkında aşağıdaki noktalara dikkat edin:
 
 Bu bölümde, veri kaynağında kendisini içeren basit bir şemaya sahip bir yerel veri kaynağı için bir tür sağlayıcısı oluşturma açıklanmıştır.
 
-
 ## <a name="going-further"></a>Daha fazla devam
 
 Aşağıdaki bölümlerde daha fazla araştırma için öneriler içerir.
-
 
 ### <a name="a-look-at-the-compiled-code-for-erased-types"></a>Silinen türleri için derlenmiş kod bakma
 
@@ -939,8 +927,8 @@ IL_0017:  ret
 
 Tüm bahsetmeleri türü örnekte gösterildiği gibi `Type1` ve `InstanceProperty` özelliği silinmesi, yalnızca çalışma zamanı türleri üzerinde işlemler dahil çıkılıyor.
 
-
 ### <a name="design-and-naming-conventions-for-type-providers"></a>Tasarım ve adlandırma kuralları için tür sağlayıcıları
+
 Tür sağlayıcıları yazarken aşağıdaki kurallar gözlemleyin.
 
 **Bağlantı protokoller için sağlayıcıları** genel olarak, veri ve hizmet bağlantısı gibi protokolleri OData veya SQL bağlantıları için çoğu sağlayıcısı DLL'leri adlarını bitmelidir `TypeProvider` veya `TypeProviders`. Örneğin, aşağıdaki dize şuna benzer bir DLL adı kullanın:
@@ -980,13 +968,12 @@ let data = Fabrikam.Data.Freebase.Astronomy.Asteroids
 
 Daha fazla bilgi için `GetConnection` tasarım bu konunun ilerleyen bölümlerinde açıklanan kuralı.
 
-
 ### <a name="design-patterns-for-type-providers"></a>Tür sağlayıcıları için Tasarım desenleri
 
 Aşağıdaki bölümlerde tasarım desenleri tür sağlayıcıları yazarken kullanabileceğiniz açıklanmaktadır.
 
-
 #### <a name="the-getconnection-design-pattern"></a>GetConnection tasarım deseni
+
 Çoğu tür sağlayıcıları kullanan yazılması gerektiğini `GetConnection` aşağıdaki örnekte gösterildiği gibi FSharp.Data.typeproviders.dll tür sağlayıcıları tarafından kullanılan Desen:
 
 ```fsharp
@@ -1147,10 +1134,7 @@ Tür sağlayıcıları test betiği (örneğin, script.fsx) üzerinde fsc.exe ku
 
   Yazdırma için stdout'u günlüğe kaydetme kullanabilirsiniz.
 
+## <a name="see-also"></a>Ayrıca bkz.
 
-## <a name="see-also"></a>Ayrıca Bkz.
-
-* [Tür Sağlayıcıları](index.md)
-
-* [Tür sağlayıcısını SDK'sı](https://github.com/fsprojects/FSharp.TypeProviders.SDK)
-
+- [Tür Sağlayıcıları](index.md)
+- [Tür sağlayıcısını SDK'sı](https://github.com/fsprojects/FSharp.TypeProviders.SDK)

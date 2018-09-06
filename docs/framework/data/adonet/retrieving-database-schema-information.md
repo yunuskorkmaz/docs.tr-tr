@@ -3,11 +3,11 @@ title: Veritabanı şema bilgilerini alma
 ms.date: 03/30/2017
 ms.assetid: 79038d52-f122-4fd4-9bfb-aaa22d6a114b
 ms.openlocfilehash: 00cf0e36dd7886897c26adf50102f32892ebb18e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43562710"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43772847"
 ---
 # <a name="retrieving-database-schema-information"></a>Veritabanı şema bilgilerini alma
 Veritabanı şema bilgilerini alma şema bulma işlemi ile gerçekleştirilir. Şema bulma sağlayan yönetilen sağlayıcıları bulun ve veritabanı şeması hakkında bilgi döndürür olarak da bilinen istemek uygulamaları *meta verileri*, belirli bir veritabanı. Tablolar, sütunlar ve saklı yordamlar gibi farklı veritabanı şeması öğeleri şema koleksiyonları sunulur. Şema bilgileri kullanılan sağlayıcıya özgü çeşitli her şema koleksiyonu içerir.  

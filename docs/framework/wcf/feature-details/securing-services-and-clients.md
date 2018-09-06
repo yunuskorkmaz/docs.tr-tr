@@ -7,11 +7,11 @@ ms.assetid: e681f3bd-0c09-4a58-b0e4-0ecbdf1aa6c7
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 60aa4da95666de01daa087c4c8e826c8cf72ba85
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 09/05/2018
-ms.locfileid: "43734935"
+ms.locfileid: "43788655"
 ---
 # <a name="securing-services-and-clients"></a>Hizmet ve İstemcileri Güvenli Hale Getirme
 Bu bölümdeki bilgiler, Windows Communication Foundation (WCF) güvenlik programlama üzerinde odaklanır. Genellikle, bu uygun bir sistem tarafından sağlanan bağlaması, güvenlik öğesinin özelliklerini ayarlama ve sonra nasıl kimlik bilgilerini kullanmak için hizmet veya istemci tarafından alınan yöneten hizmet davranışları özelliklerini ayarlayarak seçerek içerir. Gösterildiği gibi güvenlik kullanıcıların çoğunun gereksinimlerine yönelik çoğu senaryo için bu tekniklerin ele [ortak güvenlik senaryoları](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md). Daha fazla özellik senaryonuz gerektiriyorsa, öncelikle görmek [özel bağlamalarla güvenlik özellikleri](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md); bir çözümün görünür, değilse bkz [genişletme güvenlik](../../../../docs/framework/wcf/extending/extending-security.md). Oluşturuyorsanız (veya ile birlikte varsa) zengin talep kullanan bir sistemi Bkz konularındaki [yetkilendirme](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - programming [WF], persistence
 ms.assetid: 39e69d1f-b771-4c16-9e18-696fa43b65b2
 ms.openlocfilehash: 0a938f2f4d4cc790fe03db1e2b57862e54af48a7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43661015"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43748573"
 ---
 # <a name="workflow-persistence"></a>İş akışı kalıcılığı
 İş akışı kalıcılığı dayanıklı yakalama bir iş akışı örneği durumu, işlem veya bilgisayar bilgilerinin bağımsız olur. Bu sistem hatası durumunda iş akışı örneği için bilinen bir kurtarma noktası sağlamak veya etkin bir şekilde iş yapmamanın kaldırma iş akışı örnekleri tarafından bellek korumak için veya iş akışı örneği durumu bir düğümden diğerine taşımak için gerçekleştirilir bir sunucu grubundaki düğümü.  

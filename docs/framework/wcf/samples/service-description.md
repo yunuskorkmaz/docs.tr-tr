@@ -2,22 +2,22 @@
 title: Hizmet Açıklaması
 ms.date: 03/30/2017
 ms.assetid: 7034b5d6-d608-45f3-b57d-ec135f83ff24
-ms.openlocfilehash: d86a6a78995042f0c6a45cf6e40e31c3e515e8eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1acd82fddd378a379023c7aa46ead2ce36c5b243
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33504217"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43734336"
 ---
 # <a name="service-description"></a>Hizmet Açıklaması
-Hizmet açıklaması örnek, bir hizmet çalışma zamanında hizmet açıklaması bilgilerini nasıl alabileceğiniz gösterilir. Örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md), hizmeti hakkında tanımlayıcı bilgileri döndürmek için tanımlanmış bir ek hizmet işlemi. Döndürülen bilgi hizmeti için uç noktalar ve temel adresler listeler. Bu bilgileri kullanarak hizmeti sağlayan <xref:System.ServiceModel.OperationContext>, <xref:System.ServiceModel.ServiceHost>, ve <xref:System.ServiceModel.Description.ServiceDescription> sınıfları.  
+Hizmet açıklaması örnek, bir hizmet, hizmet açıklaması bilgilerini, çalışma zamanında nasıl alabilirsiniz gösterir. Örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md), hizmeti hakkında açıklayıcı bilgileri döndürmek için tanımlanmış bir ek hizmet işlemi. Döndürülen bilgi tabanı ve hizmet uç noktaları listeler. Bu bilgileri kullanarak hizmeti sağlayan <xref:System.ServiceModel.OperationContext>, <xref:System.ServiceModel.ServiceHost>, ve <xref:System.ServiceModel.Description.ServiceDescription> sınıfları.  
   
- Bu örnekte, istemci bir konsol uygulaması (.exe) ve Internet Information Services (IIS) tarafından barındırılan hizmetindeki.  
+ Bu örnekte, istemci bir konsol uygulaması (.exe) ve hizmet Internet Information Services (IIS) tarafından barındırılır.  
   
 > [!NOTE]
->  Kurulum yordamı ve yapı yönergeleri Bu örnek için bu konunun sonunda yer alır.  
+>  Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.  
   
- Bu örnek hesaplayıcı sözleşmenin adlı değiştirilmiş bir sürümünü sahip `IServiceDescriptionCalculator`. Adlı bir ek hizmet işlemi sözleşmesini tanımlayan `GetServiceDescriptionInfo` taban adresi veya adresleri ve hizmet uç noktası veya hizmeti için uç nokta tanımlayan istemciye çok satırlı dize getirir.  
+ Bu örnek adlı hesaplayıcısı sözleşme değiştirilmiş bir sürümünü sahiptir `IServiceDescriptionCalculator`. Sözleşme adında bir ek hizmet işlemi tanımlar `GetServiceDescriptionInfo` taban adresi veya adresleri ve hizmet uç noktası veya hizmet için uç noktaları açıklayan istemciye çok satırlı dize döndürür.  
   
 ```  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -36,7 +36,7 @@ public interface IServiceDescriptionCalculator
 }  
 ```  
   
- Uygulama kodunu `GetServiceDescriptionInfo` kullanan <xref:System.ServiceModel.Description.ServiceDescription> hizmet uç noktalarına listelemek için. Hizmet uç noktaları göreli adresleri olabileceği için önce hizmeti için temel adreslerini listeler. Tüm bu bilgileri almak için işlem bağlamını kullanarak kod edinir <xref:System.ServiceModel.OperationContext.Current%2A>. <xref:System.ServiceModel.ServiceHost> Ve kendi <xref:System.ServiceModel.Description.ServiceDescription> nesne işlemi bağlamdan alınır. Hizmet için taban uç noktaları listelemek için hizmet konağın kodu tekrarlanan <xref:System.ServiceModel.ServiceHostBase.BaseAddresses%2A> koleksiyonu. Hizmeti için hizmet uç noktalarına listelemek için kod hizmet açıklaması 's uç noktaları toplulukta tekrarlanan.  
+ Uygulama kodunu `GetServiceDescriptionInfo` kullanan <xref:System.ServiceModel.Description.ServiceDescription> hizmet uç noktalarını listelemek için. Hizmet uç noktaları göreli adreslerine sahip olabileceğinden, ilk hizmeti için temel adresler listeler. Tüm bu bilgileri almak için işlem bağlamını kullanarak kod alır <xref:System.ServiceModel.OperationContext.Current%2A>. <xref:System.ServiceModel.ServiceHost> Ve kendi <xref:System.ServiceModel.Description.ServiceDescription> nesne işlemi bağlamdan alınır. Temel hizmet uç noktaları listesi için kod hizmeti konağın yinelenir <xref:System.ServiceModel.ServiceHostBase.BaseAddresses%2A> koleksiyonu. Hizmeti için hizmet uç noktalarını listelemek için kod hizmet açıklaması'nın uç noktaları koleksiyonu yinelenir.  
   
 ```  
 public string GetServiceDescriptionInfo()  
@@ -63,7 +63,7 @@ public string GetServiceDescriptionInfo()
 }  
 ```  
   
- Hesaplayıcı işlemler'i ve ardından tarafından döndürülen hizmet bilgileri örneği çalıştırdığınızda, gördüğünüz `GetServiceDescriptionInfo` işlemi. İstemcisi penceresinde istemciyi aşağı kapatmak için ENTER tuşuna basın.  
+ Örneği çalıştırdığınızda, hesap makinesi işlemleri ve hizmet tarafından döndürülen bilgileri görmeniz `GetServiceDescriptionInfo` işlemi. İstemci bilgisayarı için istemci penceresinde ENTER tuşuna basın.  
   
 ```  
 Add(15,3) = 18  
@@ -85,20 +85,20 @@ Service endpoints:
 Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örnek çalıştırın  
+### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Gerçekleştirmiş emin olun [kerelik Kurulum prosedürü Windows Communication Foundation örnekleri için](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Tek veya çapraz makine yapılandırmada örneği çalıştırmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ServiceDescription`  
   

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Distinct statement [Visual Basic]
 - queries [Visual Basic], Distinct
 ms.assetid: 86f42614-0d8f-4ffc-b888-ce8a37a8d36a
-ms.openlocfilehash: 4b0ce12f6361d3dc6e5cc3601e96fc3a9bcf3841
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 18d09d8018303aab6a69801c84c7ec9c6ea19ca9
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603983"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43788629"
 ---
 # <a name="distinct-clause-visual-basic"></a>Distinct Tümcesi (Visual Basic)
-Yinelenen değerler sonraki sorgu yan tümcelerinde ortadan kaldırmak için geçerli aralık değişkeni değerlerini kısıtlar.  
+Sonraki sorgu yan tümceleri içinde yinelenen değerleri ortadan kaldırmak için geçerli aralık değişkeni değerlerini sınırlandırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -25,16 +25,16 @@ Distinct
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kullanabileceğiniz `Distinct` benzersiz öğeleri listesini döndürmek için yan tümcesi. `Distinct` Yan tümcesi yinelenen sorgu sonuçları yoksaymak sorgu neden olur. `Distinct` Yan tümcesi tüm tarafından belirtilen alanları dönmek için yinelenen değerler geçerlidir `Select` yan tümcesi. Öyle değilse `Select` yan tümcesi belirtilirse, `Distinct` yan tümcesinin aralık değişkeni tanımlanan sorgu için uygulanan `From` yan tümcesi. Aralık değişkeni bir sabit türü değilse türdeki tüm üyelerin varolan bir sorgu sonuç eşleşiyorsa sorgu yalnızca bir sorgu sonucu göz ardı eder.  
+ Kullanabileceğiniz `Distinct` yan benzersiz öğelerin listesini döndürür. `Distinct` Yan tümcesi yinelenen sorgu sonuçlarını yok saymak sorgu neden olur. `Distinct` Yan tümcesi tüm alanlar tarafından belirtilen döndürmek için yinelenen değerlere uygulanan `Select` yan tümcesi. Hayır ise `Select` yan tümcesi belirtildiğinde, `Distinct` yan tümcesinin aralık değişkeni içinde belirtilen sorgu için uygulanan `From` yan tümcesi. Aralık değişkeni bir sabit türü değilse, türün tüm üyeleri varolan bir sorgu sonucu eşleşiyorsa sorgu yalnızca bir sorgu sonucunu yoksayar.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki sorgu ifadesi müşterilerin listesini ve müşteri siparişleri listesini birleştirir. `Distinct` Benzersiz Müşteri adlarının bir listesini döndürür ve tarihleri sipariş yan tümcesi eklenmiştir.  
+ Aşağıdaki sorgu ifadesi, müşterilerin listesini ve müşteri siparişlerinin listesi birleştirir. `Distinct` Benzersiz Müşteri adlarının bir listesini döndürür ve sipariş tarihlerini yan tümcesi dahildir.  
   
  [!code-vb[VbSimpleQuerySamples#20](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/distinct-clause_1.vb)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Visual Basic'de LINQ'e giriş](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Sorgular](../../../visual-basic/language-reference/queries/queries.md)  
+ [Sorgular](../../../visual-basic/language-reference/queries/index.md)  
  [From Yan Tümcesi](../../../visual-basic/language-reference/queries/from-clause.md)  
  [Select Yan Tümcesi](../../../visual-basic/language-reference/queries/select-clause.md)  
  [Where Yan Tümcesi](../../../visual-basic/language-reference/queries/where-clause.md)

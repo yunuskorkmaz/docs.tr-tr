@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: bir dize (C#) ayrıştırılamıyor'
 ms.date: 07/20/2015
 ms.assetid: 81e5686c-9658-42d8-a7e3-b11be0a2c98b
 ms.openlocfilehash: b6b955d2cc9a3ea0c6e17e68639ad7fc677c3fc7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43562291"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43744806"
 ---
 # <a name="how-to-parse-a-string-c"></a>Nasıl yapılır: bir dize (C#) ayrıştırılamıyor
 Bu konuda, C# dilinde bir XML ağacı oluşturmak için bir dizeyi ayrıştırmak gösterilmektedir.  

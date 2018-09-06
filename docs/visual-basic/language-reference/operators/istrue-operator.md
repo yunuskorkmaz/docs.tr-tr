@@ -8,11 +8,11 @@ helpviewer_keywords:
 - OrElse operator [Visual Basic]
 ms.assetid: b6cec0f2-61b1-4331-a7f0-4d07ee3179d6
 ms.openlocfilehash: bf81384b0cecfd1ee3d438e4463949381279a181
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 09/05/2018
-ms.locfileid: "43724285"
+ms.locfileid: "43785198"
 ---
 # <a name="istrue-operator-visual-basic"></a>IsTrue İşleci (Visual Basic)
 Bir ifade olup olmadığını belirler `True`.  

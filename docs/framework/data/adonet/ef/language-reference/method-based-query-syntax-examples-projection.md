@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 505491fa-5920-43ce-8a96-c25389e125d8
 ms.openlocfilehash: 81484f729b2282678b3fa1a92b5050cf7a502db5
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43469901"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43739162"
 ---
 # <a name="method-based-query-syntax-examples-projection"></a>Metot tabanlı sorgu söz dizimi örnekleri: projeksiyon
 Bu konudaki örnekler nasıl kullanılacağını gösteren <xref:System.Linq.Enumerable.Select%2A> ve <xref:System.Linq.Enumerable.SelectMany%2A> methodsto sorgu [AdventureWorks satışları modeli](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) metot tabanlı sorgu söz dizimini kullanarak. Bu örneklerde kullanılan AdventureWorks satışları modeli kişi, adres, ürün, SalesOrderHeader ve satış siparişi ayrıntısını tablolarda AdventureWorks örnek veritabanı oluşturulur.  

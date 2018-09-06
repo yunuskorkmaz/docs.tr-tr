@@ -3,11 +3,11 @@ title: Form Gönderme
 ms.date: 03/30/2017
 ms.assetid: fa6f84f9-2e07-4e3c-92d0-a245308b7dff
 ms.openlocfilehash: 9115b9abfa7039bf409bb9bbce54e5012d05a074
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43672143"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43745469"
 ---
 # <a name="form-post"></a>Form Gönderme
 Bu örnek nasıl yeni gelen istek biçimlerinin desteklemek için WCF programlama modeli REST genişletileceğini gösterir. Örnek bir HTML form gönderiyi gelen isteği seri durumdan bir biçimlendirici uygulaması da içerir. bir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] türü. Ayrıca, örnek, kullanıcıların WCF REST hizmetine gönderebilir HTML form sağlayan bir HTML sayfasına dönmek için T4 şablonu kullanır.  

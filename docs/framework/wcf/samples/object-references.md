@@ -3,11 +3,11 @@ title: Nesne Başvuruları
 ms.date: 03/30/2017
 ms.assetid: 7a93d260-91c3-4448-8f7a-a66fb562fc23
 ms.openlocfilehash: 1aa8b1c9d135186dba9e4da75f0c7cb9297d8e5c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43462291"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43787226"
 ---
 # <a name="object-references"></a>Nesne Başvuruları
 Bu örnek nesnesinin başvuruları göre sunucu ile istemci arasında nasıl geçirileceğini gösterir. Benzetimli örnek kullandığı *sosyal ağlar*. Bir sosyal ağ oluşan bir `Person` her arkadaş örneği olduğu arkadaş listesi içeren sınıf `Person` sınıfıyla kendi arkadaş listesi. Bu nesne bir grafik oluşturur. Hizmet, bu sosyal ağlarda işlemini kullanıma sunar.  

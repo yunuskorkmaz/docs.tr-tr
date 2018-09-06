@@ -2,18 +2,18 @@
 title: ADO.NET'e LINQ (Portal Sayfası)
 ms.date: 07/20/2015
 ms.assetid: 6bd269b4-3509-4688-b672-836008704182
-ms.openlocfilehash: aa8a5922ab33bf571f96d7b2dc3ea7d5877464cb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d65f041751a9418d0eebd3f92fd33a414cbed699
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526238"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43788996"
 ---
 # <a name="linq-to-adonet-portal-page"></a>ADO.NET'e LINQ (Portal Sayfası)
 [!INCLUDE[linq_adonet](~/includes/linq-adonet-md.md)] içinde herhangi bir numaralandırma nesnesi üzerinde sorgulama sayesinde [!INCLUDE[vstecado](~/includes/vstecado-md.md)] kullanarak [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] programlama modeli.  
   
 > [!NOTE]
->  [!INCLUDE[linq_adonet](~/includes/linq-adonet-md.md)] Belgeleri, ADO.NET .NET Framework SDK bölümünde bulunur: [LINQ ve ADO.NET](https://msdn.microsoft.com/library/bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec).  
+>  [!INCLUDE[linq_adonet](~/includes/linq-adonet-md.md)] Belgeleri, ADO.NET .NET Framework SDK bölümünde bulunur: [LINQ ve ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md).  
   
  Üç ayrı ADO.NET vardır [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] teknolojileri: [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)], [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], ve [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)]. [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)] daha zengin, en iyi duruma getirilmiş üzerinde sorgulama sağlar <xref:System.Data.DataSet>, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] veritabanı şemalarını SQL Server, doğrudan sorgu sağlar ve [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)] sorgu sağlar bir [!INCLUDE[adonet_edm](~/includes/adonet-edm-md.md)].  
   
@@ -36,5 +36,5 @@ ms.locfileid: "43526238"
   
 ## <a name="see-also"></a>Ayrıca Bkz.
 
-- [LINQ ve ADO.NET](https://msdn.microsoft.com/library/bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec)  
+- [LINQ ve ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md)  
 - [Dil ile tümleşik sorgu (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)

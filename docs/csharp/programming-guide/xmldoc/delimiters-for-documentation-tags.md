@@ -6,36 +6,36 @@ helpviewer_keywords:
 - /** */ delimiters for C# documentation tags
 - /// delimiter for C# documentation
 ms.assetid: 9b2bdd18-4f5c-4c0b-988e-fb992e0d233e
-ms.openlocfilehash: 8c5e7b0e921c7720524b9fa398f2c5d451747e3d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 06bd997e6862bc1f86ad2e3b2afbbb5afac78d9c
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325688"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43737574"
 ---
 # <a name="delimiters-for-documentation-tags-c-programming-guide"></a>Belge Etiketleri için Sınırlayıcılar (C# Programlama Kılavuzu)
-XML belge açıklamaları kullanılmasını burada belgelerine yorum başlar ve biter derleyici belirtmek sınırlayıcıları gerektirir. XML belgeleri etiketlerle sınırlayıcıları şu tür kullanabilirsiniz:  
+XML belge açıklamaları belge açıklaması burada başlar ve biter derleyici gösteren sınırlayıcılar gerektirir. Aşağıdaki türde sınırlayıcıları ile XML belge etiketleri kullanabilirsiniz:  
   
  `///`  
- Tek satırlı sınırlayıcısı. Bu belge örneklerde gösterilen ve Visual C# proje şablonları tarafından kullanılan formdur. Sınırlayıcı izleyen bir boşluk karakteri varsa, bu karakterin XML çıktısında dahil edilmez.  
+ Tek satır sınırlayıcısı. Bu belge örneklerde gösterildiği ve Visual C# proje şablonlarında tarafından kullanılan biçimidir. Sınırlayıcının bir boşluk karakteri varsa, o karakteri XML çıktısında dahil edilmez.  
   
 > [!NOTE]
->  Visual Studio IDE akıllı açıklama otomatik olarak ekleyen düzenleme adlı bir özelliği olan \<Özet > ve \</Özet > etiketleri ve yazdıktan sonra imleci bu etiketlerde taşır `///` sınırlayıcı Kod Düzenleyicisi'nde . Bu özellik üzerinde veya kapatabilirsiniz [Seçenekler iletişim kutusu](/visualstudio/ide/reference/options-text-editor-csharp-advanced).  
+>  Visual Studio IDE akıllı açıklama otomatik olarak ekleyen düzenlemeyi denilen bir özelliği olan \<Özet > ve \</summary > etiketleri ve yazdıktan sonra bu etiketleri içinde imlecinizi hareket `///` sınırlayıcı Kod Düzenleyicisi'nde . Bu özellik açıp kapatabilirsiniz [Seçenekler iletişim kutusu](/visualstudio/ide/reference/options-text-editor-csharp-advanced).  
   
  `/** */`  
- Çok satırlı sınırlayıcısı.  
+ Çok satırlı sınırlayıcı.  
   
- Kullandığınızda izlemek için biçimlendirme bazı kurallar vardır `/** */` sınırlayıcısı.  
+ Kullandığınız izlenmesi gereken bazı biçimlendirme kuralları `/** */` sınırlayıcı.  
   
--   İçeren satırı üzerinde `/**` kalan satırının satır boşluk ise sınırlayıcı açıklamaları için işlenmedi. Varsa sonra ilk karakter `/**` sınırlayıcısı olan beyaz boşluk karakteri göz ardı edilir ve satır kalan işlenen alan. Aksi takdirde satırından sonra tüm metnin `/**` sınırlayıcı yorum bir parçası olarak işlenir.  
+-   İçeren satırda `/**` ayırıcı, boşluk, satır satır geri kalanında ise açıklamalarına işlenmedi. İlk karakterden sonra `/**` sınırlayıcı olduğu beyaz boşluk, boşluk karakteri göz ardı edilir ve satırın geri kalanını işlenir. Aksi takdirde, tüm metin satırının sonra `/**` sınırlayıcı açıklamayı bir parçası olarak işlenir.  
   
--   İçeren satırı üzerinde `*/` varsa yalnızca boşluk kadar sınırlayıcı `*/` sınırlayıcısı, o satırdaki göz ardı edilir. Aksi takdirde kadar satırındaki metin `*/` sınırlayıcı aşağıdaki maddede açıklandığı desen eşleştirme kuralları tabi yorum bir parçası olarak işlenir.  
+-   İçeren satırda `*/` varsa yalnızca boşluk kadar sınırlayıcı `*/` sınırlayıcı, o satırdaki göz ardı edilir. Aksi takdirde, en fazla bir satırındaki metin `*/` sınırlayıcı desen eşleştirme kuralları aşağıdaki maddede açıklandığı tabi açıklamayı bir parçası olarak işlenir.  
   
--   İle başlayan bir sonraki satırların için `/**` sınırlayıcısı, derleyicinin her satırın başındaki genel bir desen arar. Desen isteğe bağlı boşluk ve bir yıldız işareti içerebilir (`*`), ardından daha fazla isteğe bağlı boşluk. Derleyici ile başlamayan her satırın başındaki ortak bir deseni bulursa `/**` sınırlayıcı veya `*/` sınırlayıcısı, her satır için bu deseni yok sayar.  
+-   İle başlayan bir sonraki satırların için `/**` sınırlayıcı, derleyici her satırın başında yaygın bir düzen arar. Desen, isteğe bağlı beyaz boşluk ve yıldız oluşabilir (`*`) ve ardından daha fazla isteğe bağlı beyaz boşluk. Derleyici, ile başlamaz her satırın başında yaygın bir düzen bulursa `/**` sınırlayıcı veya `*/` sınırlayıcı, her satır için bu deseni yoksayar.  
   
  Aşağıdaki örnekler, bu kuralları gösterir.  
   
--   Yalnızca nasıl işleneceğini aşağıdaki açıklama ile başlayan satırı parçasıdır `<summary>`. Üç etiket biçimlerini aynı açıklamaları üretir.  
+-   Yalnızca işlenecek şu açıklama ile başlayan satırı parçasıdır `<summary>`. Üç etiket biçimlerini aynı açıklamaları üretir.  
   
     ```  
     /** <summary>text</summary> */   
@@ -49,7 +49,7 @@ XML belge açıklamaları kullanılmasını burada belgelerine yorum başlar ve 
     */  
     ```  
   
--   Derleyici, genel bir desen tanımlar "*" ikinci ve üçüncü satır başında. Desen çıktıda dahil edilmez.  
+-   Derleyici ortak deseni tanımlayan "*" ikinci ve üçüncü satır başında. Desen çıktısında dahil edilmez.  
   
     ```  
     /**   
@@ -57,7 +57,7 @@ XML belge açıklamaları kullanılmasını burada belgelerine yorum başlar ve 
      * text </summary>*/   
     ```  
   
--   Üçüncü satır ikinci karakteri bir yıldız işareti olmadığından derleyici hiçbir ortak desen aşağıdaki açıklamada bulur. Bu nedenle, ikinci ve üçüncü satırlarındaki tüm metni yorum bir parçası olarak işlenir.  
+-   Üçüncü satır ikinci karakteri yıldız olmadığı için derleyici aşağıdaki açıklamada hiçbir ortak desenini bulur. Bu nedenle, tüm metin ikinci ve üçüncü satırlardaki açıklamayı bir parçası olarak işlenir.  
   
     ```  
     /**   
@@ -66,7 +66,7 @@ XML belge açıklamaları kullanılmasını burada belgelerine yorum başlar ve 
     */   
     ```  
   
--   Derleyici hiçbir desen aşağıdaki açıklamada iki nedenden dolayı bulur. İlk olarak, yıldız işareti önce boşluk sayısını tutarlı değil. İkinci olarak, beşinci satır alanları eşleşmiyor bir sekme ile başlar. Bu nedenle, tüm metinden satırları iki beş aracılığıyla açıklama bir parçası olarak işlenir.  
+-   Derleyici, aşağıdaki açıklamada iki nedenden dolayı hiçbir desenini bulur. İlk olarak, yıldız işareti önce boşluk sayısını tutarlı değil. İkinci olarak, beşinci satır alanları eşleşmiyor bir sekme ile başlar. Bu nedenle, tüm beş aracılığıyla satırlarını iki metinden açıklamayı bir parçası olarak işlenir.  
   
     ```  
     /**   
@@ -77,8 +77,9 @@ XML belge açıklamaları kullanılmasını burada belgelerine yorum başlar ve 
     */   
     ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [XML Belge Açıklamaları](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
- [/ doc (C# Derleyici Seçenekleri)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
- [XML Belge Açıklamaları](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [XML Belge Açıklamaları](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
+- [/ doc (C# Derleyici Seçenekleri)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
+- [XML Belge Açıklamaları](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)

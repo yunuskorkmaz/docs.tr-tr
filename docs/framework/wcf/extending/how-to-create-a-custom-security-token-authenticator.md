@@ -10,11 +10,11 @@ ms.assetid: 10e245f7-d31e-42e7-82a2-d5780325d372
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: cbd45580e84a0723d28bab538bc0ffe388899d61
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43462415"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43724428"
 ---
 # <a name="how-to-create-a-custom-security-token-authenticator"></a>Nasıl yapılır: Özel Güvenlik Belirteci Kimlik Doğrulayıcı Oluşturma
 Bu konu, bir özel güvenlik belirteci kimlik doğrulayıcı oluşturma ve bir özel güvenlik belirteci yöneticisi ile tümleştirmek nasıl gösterir. Bir güvenlik belirteci kimlik doğrulayıcı içeriği gelen bir ileti ile sağlanan bir güvenlik belirteci doğrular. Doğrulama başarılı olursa, kimlik doğrulayıcı koleksiyonunu döndürür. <xref:System.IdentityModel.Policy.IAuthorizationPolicy> değerlendirildiğinde, örnekler, talepler kümesi döndürür.  

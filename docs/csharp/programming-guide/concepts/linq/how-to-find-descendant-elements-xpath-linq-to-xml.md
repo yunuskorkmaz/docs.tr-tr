@@ -1,23 +1,23 @@
 ---
-title: 'Nasıl yapılır: Bul alt öğeleri (XPath-LINQ-XML) (C#)'
+title: 'Nasıl yapılır: alt öğeleri bulma (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: b318da39-bb8b-4c56-a019-e13b12b01831
-ms.openlocfilehash: c75b797f876df7696a26bb39792fa7cc7566e6f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: df1b151948b7b11757f2f8f312fa1f0bba00673a
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320995"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43746486"
 ---
-# <a name="how-to-find-descendant-elements-xpath-linq-to-xml-c"></a>Nasıl yapılır: Bul alt öğeleri (XPath-LINQ-XML) (C#)
-Bu konuda, belirli bir ada sahip alt öğelerini alma gösterilmektedir.  
+# <a name="how-to-find-descendant-elements-xpath-linq-to-xml-c"></a>Nasıl yapılır: alt öğeleri bulma (XPath-LINQ to XML) (C#)
+Bu konuda, belirli bir ada sahip alt öğeleri almak gösterilmektedir.  
   
  XPath ifadesi `//Name`.  
   
 ## <a name="example"></a>Örnek  
- Tüm bağımlı öğelerini adlı bu örnek bulur `Name`.  
+ Bu örnek adlı tüm alt öğeleri bulan `Name`.  
   
- Bu örnekte aşağıdaki XML belgesi kullanır: [örnek XML dosyası: birden çok satınalma siparişi (LINQ-XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ Bu örnekte aşağıdaki XML belgesi: [örnek XML dosyası: birden fazla satın alma siparişi (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```csharp  
 XDocument po = XDocument.Load("PurchaseOrders.xml");  
@@ -37,7 +37,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- Bu örnek şu çıkışı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```  
 Results are identical  
@@ -49,5 +49,6 @@ Results are identical
 <Name>Jessica Arnold</Name>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [LINQ-XML XPath kullanıcıların (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [LINQ to XML için XPath kullanıcıları (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

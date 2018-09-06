@@ -10,11 +10,11 @@ helpviewer_keywords:
 - typography [WPF], text formatting
 ms.assetid: f0a7986e-f5b2-485c-a27d-f8e922022212
 ms.openlocfilehash: e8347f1a82c70f1ce8aa7cc05841bc869abbcc33
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43462512"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43787680"
 ---
 # <a name="advanced-text-formatting"></a>Gelişmiş Metin Biçimlendirme
 Windows Presentation Foundation (WPF) sağlayan bir dizi güçlü [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] uygulamanızda metin dahil etmek için. Düzen ve [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], gibi <xref:System.Windows.Controls.TextBlock>, en yaygın sağlar ve genel metin sunu öğelerini kullanın. Çizim [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], gibi <xref:System.Windows.Media.GlyphRunDrawing> ve <xref:System.Windows.Media.FormattedText>, biçimlendirilmiş metin çizimlerini dahil etmek için bir yol sağlar. En gelişmiş düzeyde [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] bir Genişletilebilir metin biçimlendirme metin sunum, metin Depolama Yönetimi, çalıştırma metin biçimlendirme yönetim ve katıştırılmış nesne yönetimi gibi her yönüyle denetlemek için altyapı sağlar.  

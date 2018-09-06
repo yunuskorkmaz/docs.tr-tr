@@ -3,11 +3,11 @@ title: Projeksiyonlar ve Dönüşümler (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: bb0457ab-1823-47e6-9d2d-c93c958cc913
 ms.openlocfilehash: 835383e472362d38ded3862042609eaaa508efbe
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43560102"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43747840"
 ---
 # <a name="projections-and-transformations-linq-to-xml-c"></a>Projeksiyonlar ve Dönüşümler (LINQ to XML) (C#)
 Bu bölümdeki örnekler [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] projeksiyonlar ve dönüşümler.  

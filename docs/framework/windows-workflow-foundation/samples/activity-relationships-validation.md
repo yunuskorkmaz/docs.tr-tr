@@ -3,11 +3,11 @@ title: Etkinlik ilişkilerini doğrulama
 ms.date: 03/30/2017
 ms.assetid: 6f11a34e-ed67-4bce-88ce-7e96bbb4d052
 ms.openlocfilehash: 50f08118fb5ad4d9b8fe809e7ab3cc5d57f28149
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43556170"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43784818"
 ---
 # <a name="activity-relationships-validation"></a>Etkinlik ilişkilerini doğrulama
 Bu örnek üç etkinliklerden, oluşur `CreateCity`, `CreateState`, ve `CreateCountry`. `CreateCity` içinde olmalıdır bir `CreateState` etkinliği ve `CreateState` içinde olmalıdır bir `CreateCountry` etkinlik. Bu örnek amacıyla kod için doğrulama mantığını bulunduğu `CreateState` etkinliği ve XAML için `CreateCity` etkinlik. Her iki kısıtlamaları aynı davranışa sahip.  

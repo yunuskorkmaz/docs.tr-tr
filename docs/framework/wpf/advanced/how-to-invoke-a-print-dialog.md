@@ -9,11 +9,11 @@ helpviewer_keywords:
 - print dialogs [WPF], invoking
 ms.assetid: e3a2c84c-74fe-45a4-8501-5813f9dbfed2
 ms.openlocfilehash: 271652fe9e98f9a381da5655bd313e12f8ee917d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43465674"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43741052"
 ---
 # <a name="how-to-invoke-a-print-dialog"></a>Nasıl yapılır: Yazdır İletişim Kutusu Çağırma
 Uygulamanızdan yazdırma olanağı sağlamak için basitçe oluşturabilir açın ve bir <xref:System.Windows.Controls.PrintDialog> nesne.  

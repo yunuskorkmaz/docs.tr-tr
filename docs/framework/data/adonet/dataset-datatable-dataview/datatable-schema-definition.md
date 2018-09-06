@@ -3,11 +3,11 @@ title: DataTable şema tanımı
 ms.date: 03/30/2017
 ms.assetid: efbcdda4-f5a9-421d-8be2-4c194c74552f
 ms.openlocfilehash: 60e7f6a13bd7fd10398d300690bd73c3abc0d700
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43552159"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43748865"
 ---
 # <a name="datatable-schema-definition"></a>DataTable şema tanımı
 Şema veya bir tablonun yapısını, sütunları ve kısıtlamaları tarafından temsil edilir. Şemasını tanımlayan bir <xref:System.Data.DataTable> kullanarak <xref:System.Data.DataColumn> nesneleri olarak <xref:System.Data.ForeignKeyConstraint> ve <xref:System.Data.UniqueConstraint> nesneleri. Bir tablodaki sütunları bir veri kaynağındaki sütun eşleme, ifadeleri hesaplanan değerleri içeren, otomatik olarak değerlerini artırın veya birincil anahtar değerlerini içerir.  

@@ -6,11 +6,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: a78507226b87f005798d0c4824a827a72f1d657a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43542771"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43742808"
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a>Genişletilmiş koruma ile tümleşik Windows kimlik doğrulaması
 Geliştirmeler, tümleşik Windows kimlik doğrulaması tarafından işlenir etkileyen yapıldı <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Mail.SmtpClient>, <xref:System.Net.Security.SslStream>, <xref:System.Net.Security.NegotiateStream>, ve ilgili sınıflar <xref:System.Net> ve ilgili ad alanları. Güvenliği geliştirmek genişletilmiş koruma için destek eklendi.  

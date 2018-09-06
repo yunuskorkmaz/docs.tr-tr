@@ -7,26 +7,26 @@ helpviewer_keywords:
 - operators [C#], conversion
 - user-defined conversions [C#]
 ms.assetid: c5ad73a3-d57b-4d2b-b4c9-24e3c2856efc
-ms.openlocfilehash: 97e93230658b5d1da676b029169b63bc9006ddb1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cbf6a83d43a1b3a69e82a35d5d0875f62422cd3f
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334720"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43787833"
 ---
 # <a name="conversion-operators-c-programming-guide"></a>Dönüşüm İşleçleri (C# Programlama Kılavuzu)
-C# programcıları sınıfları veya yapılar ve/veya diğer sınıflar yapılar veya temel türleri dönüştürülebilir böylece dönüşümleri sınıfları veya yapılar bildirmek etkinleştirir. Dönüşümler like işleçleri tanımlanır ve bunlar dönüştürme türü için adlı. Dönüştürülecek bağımsız değişken türü veya dönüştürme, ancak ikisini birlikte, sonucu türünü içeren türde olması gerekir.  
+C# programcıları, böylece sınıflar veya yapılar için ve/veya diğer sınıflar veya yapılar veya temel türleri dönüştürülebilir sınıflar veya yapılar üzerinde dönüştürmeler bildirmek etkinleştirir. Dönüştürme işleçleri gibi tanımlanır ve dönüştürme, türü adlandırılmış. Dönüştürülecek bağımsız değişken türünü veya dönüştürme, ancak iki değil, sonuç türü kapsayan tür olmalıdır.  
   
  [!code-csharp[csProgGuideStatements#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/conversion-operators_1.cs)]  
   
 ## <a name="conversion-operators-overview"></a>Dönüştürme İşleçlerine Genel Bakış  
  Dönüştürme işleçleri aşağıdaki özelliklere sahiptir:  
   
--   Dönüşümler bildirilen `implicit` gerekli olduğunda otomatik olarak gerçekleşir.  
+-   Olarak bildirilen dönüştürmeler `implicit` gerekli olduğunda otomatik olarak gerçekleşir.  
   
--   Dönüşümler bildirilen `explicit` çağrılacak bir cast gerektirir.  
+-   Olarak bildirilen dönüştürmeler `explicit` çağrılacak bir yayın gerektirir.  
   
--   Tüm dönüşümler olarak bildirilmelidir `static`.  
+-   Tüm dönüştürmeler olarak bildirilmelidir `static`.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  Daha fazla bilgi için:  
@@ -43,7 +43,8 @@ C# programcıları sınıfları veya yapılar ve/veya diğer sınıflar yapılar
   
 -   [static](../../../csharp/language-reference/keywords/static.md)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Convert>  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [Kullanıcı tanımlı zincirleme açık dönüşümler C#](https://blogs.msdn.microsoft.com/ericlippert/2007/04/16/chained-user-defined-explicit-conversions-in-c/)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- <xref:System.Convert>  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [Kullanıcı tanımlı C# ' de açık dönüştürmeler zincirleme](https://blogs.msdn.microsoft.com/ericlippert/2007/04/16/chained-user-defined-explicit-conversions-in-c/)

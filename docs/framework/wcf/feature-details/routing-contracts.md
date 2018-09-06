@@ -3,11 +3,11 @@ title: Sözleşmeleri Yönlendirme
 ms.date: 03/30/2017
 ms.assetid: 9ceea7ae-ea19-4cf9-ba4f-d071e236546d
 ms.openlocfilehash: 73d303c95a636f5e90f256272726c08c581d6fdf
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43396981"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43785998"
 ---
 # <a name="routing-contracts"></a>Sözleşmeleri Yönlendirme
 Yönlendirme sözleşmeleri yönlendirme hizmeti işleyebileceği ileti desenlerini tanımlayın.  Her sözleşme türsüz ve ileti Şeması veya eylem bilgisi olmadan bir ileti almak hizmet verir. Bu, genel temel alınan iletileri yönlendirilmek özellikleri için ek yapılandırma olmadan iletileri yönlendirmek yönlendirme hizmeti sağlar.  

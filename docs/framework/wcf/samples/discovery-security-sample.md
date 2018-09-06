@@ -5,11 +5,11 @@ ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 7a8dcd0a835bb669b669d5a510e01142c85ea07a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43421230"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43786550"
 ---
 # <a name="discovery-security-sample"></a>Keşif Güvenliği Örneği
 Bulma belirtimi olmasını bulma işlemine katılmasını uç noktalarını güvenli gerektirmez. Bulma iletileri ile güvenlik geliştirme azaltır çeşitli türdeki saldırıları (ileti değişikliğinin, hizmet reddi, yeniden yürütme, kimlik sahtekarlığı). Bu örnek, işlem ve (WS-bulma belirtiminin bölüm 8.2 içinde açıklanmıştır) compact imza biçimini kullanarak ileti imzaları doğrulamak özel kanallar uygular. Örnek her ikisini de destekler [2005 bulma belirtimi](https://go.microsoft.com/fwlink/?LinkId=177912) ve [1.1 sürümü](https://go.microsoft.com/fwlink/?LinkId=179677).  

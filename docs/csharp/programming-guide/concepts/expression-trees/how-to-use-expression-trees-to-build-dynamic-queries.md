@@ -2,26 +2,26 @@
 title: 'Nasıl yapılır: dinamik sorgular (C#) derlemek için ifade ağaçları kullanma'
 ms.date: 07/20/2015
 ms.assetid: 52cd44dd-a3ec-441e-b93a-4eca388119c7
-ms.openlocfilehash: 3ae21422576abccde51d7708007132a87bedbad6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e3afbea647bb429d25f41f37fde268565bc5bf8a
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327714"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43786563"
 ---
 # <a name="how-to-use-expression-trees-to-build-dynamic-queries-c"></a>Nasıl yapılır: dinamik sorgular (C#) derlemek için ifade ağaçları kullanma
-LINQ, uygulama veri kaynaklarını hedef yapılandırılmış sorguların temsil etmek için ifade ağaçları kullanılan <xref:System.Linq.IQueryable%601>. Örneğin, LINQ sağlayıcısını uygular <xref:System.Linq.IQueryable%601> ilişkisel veri depoları sorgulamak için arabirim. C# Derleyici çalışma zamanında bir ifade ağacına derlemeler koda gibi veri kaynakları hedef sorguları derler. Sorgu sağlayıcısı ifade ağaç veri yapısı çapraz geçiş ve veri kaynağı için uygun bir sorgu dili içine çevir.  
+LINQ içinde uygulama veri kaynaklarını hedefleyen yapılandırılmış sorguların temsil etmek için ifade ağaçları kullanılan <xref:System.Linq.IQueryable%601>. Örneğin, LINQ sağlayıcı uygulayan <xref:System.Linq.IQueryable%601> ilişkisel veri deposu sorgulamak için arabirim. C# derleyicisi gibi veri kaynakları, çalışma zamanında bir ifade ağacı oluşturan koda hedef sorguları derler. Sorgu sağlayıcısına geçiş ifadesi ağaç veri yapısı ve veri kaynağı için uygun bir sorgu dili küçültmesini.  
   
- İfade ağaçları için de kullanılır LINQ türü değişkenlere atanan lambda ifadeleri temsil <xref:System.Linq.Expressions.Expression%601>.  
+ İfade ağaçları için de kullanılır LINQ türündeki değişkenler için atanmış olan lambda ifadeleri temsil <xref:System.Linq.Expressions.Expression%601>.  
   
- Bu konu, dinamik LINQ sorguları oluşturmak için ifade ağaçları kullanmayı açıklar. Dinamik sorgular derleme zamanında bir sorgu ayrıntılarını bilinmiyor olduğunda yararlıdır. Örneğin, bir uygulama verilerini filtrelemek için bir veya daha fazla koşulları belirtmek son kullanıcının sağlayan bir kullanıcı arabirimi sağlayabilir. LINQ sorgulaması için kullanmak için bu tür bir uygulama ifade ağaçları çalışma zamanında LINQ sorgusu oluşturmak için kullanmanız gerekir.  
+ Bu konuda, dinamik LINQ sorguları oluşturmak için ifade ağaçları kullanmayı açıklar. Dinamik sorgular, bir sorgu ayrıntılarını derleme zamanında bilinen olduğunda yararlıdır. Örneğin, bir uygulama verilerini filtrelemek için bir veya daha fazla koşulları belirtmek son kullanıcının sağlayan bir kullanıcı arabirimi sağlayabilir. Sorgulamak için LINQ kullanmak için bu tür bir uygulama ifade ağaçları çalışma zamanında LINQ sorgusu oluşturmak için kullanmanız gerekir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir sorgu oluşturmak için ifade ağaçları kullanma gösterilmektedir bir `IQueryable` veri kaynağı ve sonra yürütün. Kod aşağıdaki sorguyu temsil etmek için bir ifade ağacına oluşturur:  
+ Aşağıdaki örnek bir sorgu oluşturmak için ifade ağaçları kullanma işlemi gösterilmektedir bir `IQueryable` veri kaynağını seçin ve sonra yürütün. Kod, aşağıdaki sorguyu temsil etmek için bir ifade ağacı oluşturur:  
   
  `companies.Where(company => (company.ToLower() == "coho winery" || company.Length > 16)).OrderBy(company => company)`  
   
- Fabrika yöntemlere <xref:System.Linq.Expressions> ad alanı, genel sorgulamasını olun ifadeleri temsil ifade ağaçları oluşturmak için kullanılır. Standart sorgu işleci yöntem çağrıları temsil eden ifadeleri başvurmak <xref:System.Linq.Queryable> bu yöntemlerin uygulamaları. Son ifade ağacına geçirilir <xref:System.Linq.IQueryProvider.CreateQuery%60%601%28System.Linq.Expressions.Expression%29> sağlayıcısı uyarlamasını `IQueryable` türü yürütülebilir bir sorgu oluşturmak için veri kaynağı `IQueryable`. Bu sorgu değişkeni numaralandırarak sonuçları elde edilir.  
+ Fabrika yöntemleri <xref:System.Linq.Expressions> ad alanı, genel sorgu yapmak ifadeleri temsil eden bir ifade ağacı oluşturmak için kullanılır. Standart sorgu işleci yöntemlerinin çağrıları temsil eden ifadeleri başvurmak <xref:System.Linq.Queryable> bu yöntemlerin uygulamaları. Son bir ifade ağacı geçirilir <xref:System.Linq.IQueryProvider.CreateQuery%60%601%28System.Linq.Expressions.Expression%29> sağlayıcısı uygulaması `IQueryable` yürütülebilir bir sorgu türü oluşturmak için veri kaynağı `IQueryable`. Bu sorgu değişkeni numaralandırarak sonuçlar elde edilir.  
   
 ```csharp  
 // Add a using directive for System.Linq.Expressions.  
@@ -96,19 +96,20 @@ foreach (string company in results)
 */  
 ```  
   
- Bu kodu geçirilir karşılaştırma ifadeleri sabit sayıda kullanır `Queryable.Where` yöntemi. Ancak, kullanıcı girişi bağlıdır değişken karşılaştırma ifadeleri sayıda birleştiren bir uygulama yazabilirsiniz. Kullanıcı girişi bağlı olarak sorguyu adlı standart sorgu işleçleri de değişebilir.  
+ Bu kodu ifadeler sabit sayıda geçirilir koşulu kullanır `Queryable.Where` yöntemi. Ancak, kullanıcı girişi bağlıdır değişken koşul ifadeleri sayısı birleştiren bir uygulama yazabilirsiniz. Kullanıcı girişini bağlı olarak sorguyu adlı standart sorgu işleçleri de değişebilir.  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
   
--   Yeni bir **konsol uygulaması** projesi.  
+-   Yeni bir **konsol uygulaması** proje.  
   
--   Zaten başvurulmayan System.Core.dll bir başvuru ekleyin.  
+-   Zaten başvurulmayan System.Core.dll öğesine başvuru ekleyin.  
   
 -   System.Linq.Expressions ad alanı içerir.  
   
--   Örnekten kodu kopyalayın ve yapıştırın `Main` yöntemi.  
+-   Örnek kodu kopyalayın ve yapıştırın `Main` yöntemi.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [İfade ağaçları (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)  
- [Nasıl yapılır: ifade ağaçlarını (C#) yürütme](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)  
- [Nasıl yapılır: çalışma zamanında koşul filtrelerini dinamik olarak belirtme](../../../../csharp/programming-guide/linq-query-expressions/how-to-dynamically-specify-predicate-filters-at-runtime.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [İfade ağaçları (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)  
+- [Nasıl yapılır: ifade ağaçlarını (C#) yürütme](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)  
+- [Nasıl yapılır: çalışma zamanında koşul filtrelerini dinamik olarak belirtme](../../../../csharp/programming-guide/linq-query-expressions/how-to-dynamically-specify-predicate-filters-at-runtime.md)

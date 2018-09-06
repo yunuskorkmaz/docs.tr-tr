@@ -11,36 +11,36 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - Help [Windows Forms], adding to dialog boxes
 ms.assetid: 218aa81e-e87e-4d67-af05-11627bbdce3b
-ms.openlocfilehash: 5751bcdb9fe7a16138680f34a4fcc1760f85a1d6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 47833e734c09e402ab1824b9c629b2ba39acfb9f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33523880"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43725013"
 ---
 # <a name="how-to-display-pop-up-help"></a>Nasıl yapılır: Açılır Yardımı Görüntüleme
-Windows Forms'ta Yardım görüntülemek için bir yol olduğu aracılığıyla **yardımcı** üzerinden erişilebilir başlık çubuğunu sağ tarafında bulunan düğmesini <xref:System.Windows.Forms.Form.HelpButton%2A> özelliği. Bu Yardım görüntüleme iletişim kutuları ile kullanmak için oldukça uygun türüdür. Kalıcı olarak gösterilen iletişim kutuları (ile <xref:System.Windows.Forms.Form.ShowDialog%2A> yöntemi) kalıcı iletişim kutuları için başka bir pencere odak kaydırabilirsiniz önce kapatılması gerektiğinden dış yardım sistemleri hale getirme konusunda sorun yaşıyor. Ayrıca, kullanarak **yardımcı** düğmesi gerektiren olduğunu hiçbir **simge durumuna küçült** düğmesini veya **Ekranı Kapla** başlık çubuğunda gösterilen düğmesi. Formlar genellikle sahip bir standart iletişim kutusu kuralı ise **simge durumuna küçült** ve **Ekranı Kapla** düğmeler.  
+Windows Forms'ta Yardımı görüntülemek için yöntemlerden biri **yardımcı** erişilebilir başlık çubuğunun sağ tarafında bulunan düğmesini <xref:System.Windows.Forms.Form.HelpButton%2A> özelliği. Bu tür bir Yardım görünen iletişim kutuları ile kullanım için uygundur. Kalıcı olarak gösterilen iletişim kutuları (ile <xref:System.Windows.Forms.Form.ShowDialog%2A> yöntemi) kalıcı iletişim kutuları için başka bir pencere odağı kaydırabilirsiniz önce kapatılması gerektiğinden dış yardım sistemleri, getirme konusunda sorun vardır. Ayrıca, kullanarak **yardımcı** düğme gerektirir olduğunu hiçbir **simge durumuna küçült** düğmesini veya **Ekranı Kapla** başlık çubuğunda gösterilen düğmesi. Forms genellikle sahip bir standart iletişim kutusu kuralı ise **simge durumuna küçült** ve **Ekranı Kapla** düğmeleri.  
   
- Ayrıca kullanabileceğinizi unutmayın <xref:System.Windows.Forms.HelpProvider> denetimleri açılır Yardım uyguladık olsa bile bir Yardım sisteminde dosyalara bağlamak için bileşen. Daha fazla bilgi için bkz: [bir Windows uygulamasında Yardım sağlama](../../../../docs/framework/winforms/advanced/how-to-provide-help-in-a-windows-application.md).  
+ Dikkat edin, ayrıca kullanabileceğiniz <xref:System.Windows.Forms.HelpProvider> denetimler açılır Yardımı uyguladıysanız olsa bile bir Yardım sisteminde dosyalarına Bağlama bileşeni. Daha fazla bilgi için [bir Windows uygulamasında Yardım sağlama](../../../../docs/framework/winforms/advanced/how-to-provide-help-in-a-windows-application.md).  
   
 > [!NOTE]
->  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-display-pop-up-help"></a>Açılır Yardım görüntülemek için  
   
-1.  Sürükleme bir [HelpProvider](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md) formunuza araç bileşen.  
+1.  Sürükleme bir [HelpProvider](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md) formunuza bileşen araç kutusundan.  
   
-     Windows Forms Tasarımcısı'nın altındaki tepsisinde sit.  
+     Windows Form Tasarımcısı'nın altındaki tepsisinde şaşıracaksınız.  
   
-2.  Özellikler penceresinde ayarlayın <xref:System.Windows.Forms.Form.HelpButton%2A> özelliğine `true`. Bu düğme bir soru işaretiyle içinde formun başlık çubuğunu sağ tarafta görüntüler.  
+2.  Özellikler penceresinde ayarlayın <xref:System.Windows.Forms.Form.HelpButton%2A> özelliğini `true`. Bu düğmeye sahip bir soru işareti içinde formun başlık çubuğunun sağ tarafında görüntülenir.  
   
-3.  Sırayla <xref:System.Windows.Forms.Form.HelpButton%2A> görüntülemek için formun <xref:System.Windows.Forms.Form.MinimizeBox%2A> ve <xref:System.Windows.Forms.Form.MaximizeBox%2A> özellikleri ayarlanmalıdır `false`, <xref:System.Windows.Forms.Form.ControlBox%2A> özelliğini `true`ve <xref:System.Windows.Forms.Form.FormBorderStyle%2A> özelliğini aşağıdaki değerlerden birine: <xref:System.Windows.Forms.FormBorderStyle.FixedSingle> , <xref:System.Windows.Forms.FormBorderStyle.Fixed3D>, <xref:System.Windows.Forms.FormBorderStyle.FixedDialog> veya <xref:System.Windows.Forms.FormBorderStyle.Sizable>.  
+3.  Sırayla <xref:System.Windows.Forms.Form.HelpButton%2A> görüntülemek için formun <xref:System.Windows.Forms.Form.MinimizeBox%2A> ve <xref:System.Windows.Forms.Form.MaximizeBox%2A> özellikler ayarlanmalıdır `false`, <xref:System.Windows.Forms.Form.ControlBox%2A> özelliğini `true`ve <xref:System.Windows.Forms.Form.FormBorderStyle%2A> özelliğini şu değerlerden biri: <xref:System.Windows.Forms.FormBorderStyle.FixedSingle> , <xref:System.Windows.Forms.FormBorderStyle.Fixed3D>, <xref:System.Windows.Forms.FormBorderStyle.FixedDialog> veya <xref:System.Windows.Forms.FormBorderStyle.Sizable>.  
   
-4.  Yardım'ı formunuzda göstermek ve Özellikler penceresinde Yardım dizesi ayarlamak istediğiniz denetimi seçin. Benzer şekilde bir penceresinde görüntülenen metin dizesidir bir [araç ipucu](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md).  
+4.  Formunuzda yardımını göster ve Özellikler penceresinde Yardım dizesi ayarlamak istediğiniz denetimi seçin. Benzer şekilde bir pencerede görüntülenen metin dizesidir bir [araç ipucu](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md).  
   
 5.  Tuşuna **F5**.  
   
-6.  Tuşuna **yardımcı** düğmesini başlık çubuğunda ve Yardım dizesi ayarladığınız denetim'ı tıklatın.  
+6.  Tuşuna **yardımcı** başlık çubuğunda düğme ve Yardım dizesi ayarladığınız denetimi tıklatın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ToolTips Kullanarak Denetim Yardımı](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md)  

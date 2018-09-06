@@ -1,18 +1,17 @@
 ---
 title: Özellikler (F#)
-description: 'Bir nesneyle ilişkilendirilmiş değerlerini temsil eden üyeleri olan F # özellikleri hakkında bilgi edinin.'
+description: 'Bir nesneyle ilişkili değerlerini temsil eden üyeleri olan F # özellikleri hakkında bilgi edinin.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 7aa71b1801b44fedcb420b824078004c6c240dc2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 75d21415b44ccc1c26ef5f478d5f5de20c3412e8
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566169"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43784900"
 ---
 # <a name="properties"></a>Özellikler
 
-*Özellikler* bir nesneyle ilişkilendirilmiş değerlerini temsil eden üyeleridir.
-
+*Özellikleri* bir nesneyle ilişkili değerlerini temsil eden üyeleridir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -57,17 +56,18 @@ with set parameter =
 ```
 
 ## <a name="remarks"></a>Açıklamalar
-Özelliklerini temsil eder "sahip bir" nesne örnekleri ile veya türüyle statik özellikler için ilişkili verileri temsil eden nesne odaklı programlama ilişkisinde.
 
-Özellikler (yedekleme deposu olarak da adlandırılır) temel alınan değer özelliği için açıkça belirtmek istediğiniz veya yedekleme deposu sizin için otomatik olarak oluşturmak derleyici izin vermek istediğiniz bağlı olarak iki yolla bildirebilirsiniz. Genellikle, özelliği yalnızca bir değer veya değişken için basit bir sarmalayıcı olduğunda daha açık şekilde Önemsiz olmayan bir uygulama özelliğine sahipse ve otomatik şekilde kullanması gerekir. Bir özellik açıkça bildirmek için kullanın `member` anahtar sözcüğü. Bu tanımlayıcı sözdizimi belirten sözdizimi tarafından izlenir `get` ve `set` olarak da adlandırılan yöntemleri *erişimciler*. Çeşitli tür sözdizimi bölümünde gösterilen açık sözdizimi okuma/yazma, salt okunur ve salt yazılır özellikler için kullanılır. Salt okunur özellikler yalnızca tanımladığınız bir `get` yöntemi; salt yazılır özellikler yalnızca tanımlayan bir `set` yöntemi. Hem bir özelliğe sahip olduğunda unutmayın `get` ve `set` erişimciler, alternatif bir sözdizimi öznitelikleri ve aşağıdaki kodda gösterildiği gibi her erişimci için farklı erişilebilirlik değiştiricileri belirtmenize olanak sağlar.
+Özellikleri temsil eder "olan bir" nesne örnekleri ile veya türü ile statik özellikler ilişkili verileri temsil eden nesne yönelimli programlama, ilişkide.
+
+Özellikleri veya (yedekleme deposu olarak da bilinir) temel alan değeri özellik için açıkça belirtmek istediğiniz yedekleme deposu sizin için otomatik olarak oluşturmak derleyicinin izin vermek isteyip istemediğinizi bağlı olarak iki yolla bildirebilirsiniz. Genellikle, özelliği bir değer ya da değişken için yalnızca basit bir sarmalayıcı olduğunda Önemsiz olmayan bir uygulama özelliği varsa, daha açık şekilde ve otomatik bir yolu kullanması gerekir. Bir özelliği açıkça bildirmek için kullanın `member` anahtar sözcüğü. Bu bildirim temelli söz dizimi belirten sözdizimi tarafından izlenir `get` ve `set` yöntemleri olarak da adlandırılan, *erişimcileri*. Çeşitli türleri söz dizimi bölümünde açık sözdizimini, okuma/yazma, salt okunur ve salt yazılır özellikler için kullanılır. Salt okunur özellikler, yalnızca, tanımladığınız bir `get` yöntemi; salt yazılır özellikler yalnızca tanımlamak bir `set` yöntemi. Her ikisi de bir özelliğe sahip olduğunda dikkat `get` ve `set` erişimcileri, farklı bir sözdizimi öznitelikleri ve aşağıdaki kodda gösterildiği gibi her bir erişimci farklı erişilebilirlik değiştiricileri belirtmenize imkan tanır.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3201.fs)]
 
-Hem de okuma/yazma özellikleri için bir `get` ve `set` yöntemi, sırasını `get` ve `set` ters çevrilebilir. Alternatif olarak, gösterilen sözdizimi sağlayabilir `get` yalnızca ve için sözdizimini `set` birleşik sözdizimi yerine yalnızca. Bunun yapılması kolaylaştırır açıklamaya tek tek çıkışı `get` veya `set` yöntemi ise, bir şey yapmanız gerekebilir. Bu alternatif birleşik sözdizimini kullanarak aşağıdaki kodda gösterilir.
+Her ikisi de okuma/yazma özellikleri için bir `get` ve `set` yöntemi, sırası `get` ve `set` ters çevrilebilir. Alternatif olarak, için sözdizimini sağlayabilir `get` yalnızca ve için sözdizimini `set` birleştirilmiş sözdizimi yerine yalnızca. Bunu kolaylaştırır, tek tek yorum `get` veya `set` yöntemi ise, bir şey yapmanız gerekebilir. Birleşik söz dizimini kullanarak bu alternatif aşağıdaki kodda gösterilmiştir.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3203.fs)]
 
-Özel özellikler için verileri çağrılır ayrı tutmayı değerleri *depolarını yedekleme*. Derleyicinin yedekleme deposu otomatik olarak oluşturmak için anahtar sözcüklerini kullanın `member val`, kendi kendine tanımlayıcı çıkarın ve ardından özelliği başlatmak için bir ifade girin. Özelliği değişebilir olması gerekiyorsa dahil `with get, set`. Örneğin, aşağıdaki sınıf türü iki otomatik olarak uygulanan özellikler içerir. `Property1` salt okunur ve birincil oluşturucuya sağlanan değişkeni başlatılır ve `Property2` boş bir dize olarak başlatılan bir özelliğidir ayarlanabilir:
+Özel özellikler için verileri çağrılır, tutulan değerler *depolarını yedekleme*. Derleyicinin yedekleme deposu otomatik olarak oluşturmak için anahtar sözcükleri kullanın `member val`, kendi kendine tanımlayıcısı çıkarın ve ardından özelliğini başlatmak için bir ifade girin. Özelliği değişebilir olmasını içermesi `with get, set`. Örneğin, aşağıdaki sınıf türü iki otomatik olarak uygulanan özellikler içerir. `Property1` salt okunur ve birincil oluşturucuya, sağlanan bağımsız değişken olarak başlatılır ve `Property2` boş dize olarak başlatılmış bir ayarlanabilir özelliği:
 
 ```fsharp
 type MyClass(property1 : int) =
@@ -75,7 +75,7 @@ member val Property1 = property1
 member val Property2 = "" with get, set
 ```
 
-Otomatik uygulanan özellikler bunlar diğer üye tanımları önce tıpkı dahil edilmesi için bir tür başlatma parçası olan `let` bağlamalar ve `do` tür tanımında bağlar. Otomatik olarak uygulanan bir özellik başlatır ifade başlatma sırasında ve değil özelliği her erişildiğinde yalnızca değerlendirilir unutmayın. Açıkça gerçekleştirilen özellik aksine bu davranış davranıştır. Ne bu etkili bir şekilde, bu özellikleri başlatmak için kod olduğu anlamına gelir, bir sınıfın oluşturucuya eklenir. Bu farklılık gösteren aşağıdaki kodu göz önünde bulundurun:
+Otomatik olarak uygulanan özellikler, bunlar diğer üye tanımları önce tıpkı dahil edilmesi için başlatma türünün bir parçası olan `let` bağlamaları ve `do` bağlamaları bir tür tanımı. Otomatik olarak uygulanan bir özellik başlatan ifade yalnızca ve başlatma sonrasında özelliği erişilmeyen her zaman değerlendirilir unutmayın. Açıkça uygulanan bir özellik aksine bu davranışı davranıştır. Ne bu etkili bir şekilde, bu özellikleri başlatmaya yarayacak koda anlamına gelir, bir sınıf oluşturucusuna eklenir. Bu fark gösteren aşağıdaki kodu göz önünde bulundurun:
 
 ```fsharp
 type MyClass() =
@@ -100,50 +100,50 @@ class1.ExplicitProperty = 978922705
 class1.ExplicitProperty = 1131210765
 ```
 
-Önceki kod çıkışı ExplicitProperty her çağrıldığında değişir ancak AutoProperty değerini tekrar tekrar çağrıldığında değiştirilmemiş olduğunu gösterir. Açık özellik alıcısı yöntemi olarak ifade otomatik olarak uygulanan bir özellik için her zaman değerlendirilmez gösterir.
-
+Önceki kodun çıktısı her çağrıldığında ExplicitProperty değiştirir ancak AutoProperty değerini tekrar tekrar çağrıldığında değiştirilmemiş olduğunu gösterir. Açık özelliği için alıcı yöntemi olduğundan her zaman otomatik olarak uygulanan bir özellik için ifade değerlendirilmez gösterir.
 
 >[!WARNING]
-Entity Framework gibi bazı kitaplığı (`System.Data.Entity`), özel işlemi gerçekleştirir temel sınıf Yapıcılardaki de otomatik olarak uygulanan özellikler başlatma ile çalışmaz. Bu durumlarda, açık özelliklerini kullanmayı deneyin.
+Entity Framework gibi bazı kitaplıklar vardır (`System.Data.Entity`) otomatik olarak uygulanan özellikler başlatma ile düzgün çalışmayan bir temel sınıf oluşturucuları, özel işlemler gerçekleştiren. Bu gibi durumlarda, açık özelliklerini kullanmayı deneyin.
 
-Özellikler, sınıflar, yapılar, ayrılmış birleşimler, kayıtları, arabirimler ve tür uzantıları üyesi olabilir ve nesne ifadelerde de tanımlanabilir.
+Özellikler, sınıflar, yapılar, ayrılmış birleşimler, kayıtları, arabirimleri ve tür uzantıları üyesi olabilir ve nesne ifadelerinde da tanımlanabilir.
 
-Öznitelikleri özelliklerine uygulanabilir. Öznitelik bir özelliğe uygulamak için ayrı bir satırda özelliği önce öznitelik yazma. Daha fazla bilgi için bkz: [öznitelikleri](../attributes.md).
+Öznitelikleri özelliklerine uygulanabilir. Bir özellik için bir öznitelik uygulamak için önce özelliği ayrı bir satırda öznitelik yazın. Daha fazla bilgi için [öznitelikleri](../attributes.md).
 
-Varsayılan olarak, ortak özelliklerdir. Erişilebilirlik değiştiricileri özelliklerine de uygulanabilir. Her ikisini de uygulamak için istediyseniz erişim değiştiricisi uygulamak için bu özelliğin adı hemen önce ekleyin `get` ve `set` yöntemleri; önce eklemek `get` ve `set` farklı erişilebilirlik ise anahtar sözcükler her erişimci için gereklidir. *Erişim değiştiricisi* şunlardan biri olabilir: `public`, `private`, `internal`. Daha fazla bilgi için bkz: [erişim denetimi](../access-control.md).
+Varsayılan olarak, özellikleri ortaktır. Erişilebilirlik değiştiricileri özellikleri için de uygulanabilir. Her ikisini de uygulamak için kullanılacaksa bir erişilebilirlik değiştiricisine uygulamak için özelliğin adı hemen önce ekleme `get` ve `set` yöntemleri; önce ekleme `get` ve `set` farklı erişilebilirlik ise anahtar sözcükleri Her erişimcisi için gereklidir. *Erişilebilirlik değiştiricisi* aşağıdakilerden biri olabilir: `public`, `private`, `internal`. Daha fazla bilgi için [erişim denetimi](../access-control.md).
 
-Özellik uygulamaları bir özelliği her erişildiğinde yürütülür.
-
+Özellik uygulamaları bir özelliğine erişinceye her zaman yürütülür.
 
 ## <a name="static-and-instance-properties"></a>Statik ve örnek özellikleri
-Özellikler, statik ya da Özellikler örneği. Statik özellikler örneği çağrılabilir ve türü değil ayrı ayrı nesneleri ile ilişkili değerleri için kullanılır. Statik özellikler için kendi kendine tanımlayıcısı yok sayın. Kendi kendine tanımlayıcısı örneği özellikleri için gereklidir.
 
-Aşağıdaki statik özellik tanımını statik bir alana sahip bir senaryo tabanlı `myStaticValue` özelliği için diğer bir deyişle yedekleme deposu.
+Özellikler, statik veya örnek özellikleri. Statik özellikler örneği olmadan çağrılabilir ve ayrı ayrı nesneleri ile değil, türü ile ilişkili değerler için kullanılır. Statik özellikler için kendi kendine tanımlayıcısı yok sayın. Kendi kendine tanımlayıcı, örnek özellikleri için gereklidir.
+
+Aşağıdaki statik özellik tanımı, statik bir alana sahip bir senaryoya bağlıdır `myStaticValue` özelliği için diğer bir deyişle yedekleme deposu.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3204.fs)]
 
-Özellikler de olabilir dizi benzeri; bu durumda adlı *özellikleri dizine*. Daha fazla bilgi için bkz: [Dizinli Özellikler](indexed-properties.md).
+Özellikleri de olabilir dizi benzeri, bu durumda adlı *özellikleri dizine*. Daha fazla bilgi için [dizini oluşturulmamış Özellikler](indexed-properties.md).
 
+## <a name="type-annotation-for-properties"></a>Özelliklerin tür ek açıklaması
 
-## <a name="type-annotation-for-properties"></a>Özellikleri için tür ek açıklaması
-Çoğu durumda, derleyici tür yedekleme deposu özelliğinden türünü anlamak için yeterli bilgiye sahip, ancak türü ek açıklama ekleyerek türü açıkça ayarlayabilirsiniz.
+Çoğu durumda, derleyici yedekleme deposu türünden bir özelliğinin türünü çıkarsamak için yeterli bilgiye sahip, ancak bir tür ek açıklamasına ekleyerek türü açıkça ayarlayabilirsiniz.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3205.fs)]
 
-## <a name="using-property-set-accessors"></a>Özelliğini kullanarak set erişimcileri
-Sağlayan özellikleri ayarlayabilirsiniz `set` kullanarak erişimciler `<-` işleci.
+## <a name="using-property-set-accessors"></a>Set erişimcilerine özelliğini kullanma
+
+Sağlayan özellikleri ayarlayabilirsiniz `set` kullanarak erişimcileri `<-` işleci.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3206.fs)]
 
 Çıktı **20**.
 
-
 ## <a name="abstract-properties"></a>Soyut Özellikler
-Özellikler soyut olabilir. Yöntemleriyle olduğu gibi `abstract` yeni özellik ile ilişkilendirilmiş sanal bir gönderme olduğu anlamına gelir. Diğer bir deyişle, soyut özellikleri aynı sınıf tanımında olmadan gerçekten soyut olabilir. Böyle bir özellik içeren bu nedenle bir Özet sınıf sınıftır. Alternatif olarak, Özet yalnızca bir sanal bir özelliktir ve bu durumda, bir tanım aynı sınıfta bulunmalıdır anlamına gelebilir. Soyut özellikler özel olmamalı ve bir erişimci soyut ise, diğer ayrıca soyut olmalıdır unutmayın. Soyut sınıflar hakkında daha fazla bilgi için bkz: [soyut sınıflar](../abstract-classes.md).
+
+Özellikler, soyut olabilir. Yöntemleriyle yönteminde olduğu gibi `abstract` yalnızca özellikle ilişkili bir sanal dağıtım olduğunu gösterir. Diğer bir deyişle, soyut özellikler aynı sınıftaki bir tanımı olmadan tamamen soyut olabilir. Böyle bir özellik içeren sınıf bu nedenle bir soyut sınıftır. Alternatif olarak, Özet, yalnızca bir sanal bir özelliktir ve bu durumda, bir tanımı aynı sınıf içinde bulunmalıdır gelebilir. Soyut özellikler özel olmamalıdır ve bir erişimci soyut ise, diğeri de soyut olmalıdır unutmayın. Soyut sınıflar hakkında daha fazla bilgi için bkz: [soyut sınıflar](../abstract-classes.md).
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3207.fs)]
 
-## <a name="see-also"></a>Ayrıca Bkz.
-[Üyeler](index.md)
+## <a name="see-also"></a>Ayrıca bkz.
 
-[Yöntemler](methods.md)
+- [Üyeler](index.md)
+- [Yöntemler](methods.md)

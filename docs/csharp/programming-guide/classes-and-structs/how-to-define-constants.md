@@ -6,11 +6,11 @@ helpviewer_keywords:
 - constants [C#]
 ms.assetid: 43f511be-346c-4b8a-995e-aded94542ece
 ms.openlocfilehash: 09d19f708570b55509a3ec2a41e439cb9c9de973
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43540238"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43739701"
 ---
 # <a name="how-to-define-constants-in-c"></a>Nasıl yapılır: C# İçinde Sabitleri Tanımlama
 Alanlar, değerleri kümesine derleme zamanı ve hiçbir zaman değiştirilebilir sabittir. Özel değerler için sayısal değişmez değerleri ("Sihirli sayı") yerine anlamlı adlar sağlamak için sabitleri kullanın.  

@@ -2,12 +2,12 @@
 title: "Mac için Visual Studio'da F # ile başlama"
 description: 'F # Mac için Visual Studio ile kullanmayı öğrenin'
 ms.date: 07/03/2018
-ms.openlocfilehash: 200c3a8fee072797a54d15d8989937f4cadb33e2
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 6aceec299c29e04aecd7999cd1dda6a56dd2779a
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874659"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43785537"
 ---
 # <a name="get-started-with-f-in-visual-studio-for-mac"></a>Mac için Visual Studio'da F # ile başlama
 
@@ -114,8 +114,9 @@ F # Etkileşimli ile neler yapabileceğinizi içine yalnızca bir bakışta budu
 Henüz yapmadıysanız, kullanıma [turu, F #](../tour.md), F # dilinin temel özelliklerinden bazıları kapsayan.  Bazı F # özelliklerine genel bir bakış sağlar ve Mac için Visual Studio'ya kopyalayıp çalıştırabilirsiniz bol miktarda kod örnekleri sağlamak.  Ayrıca kullanabileceğiniz bazı harika dış kaynaklar verilmiştir büyütmüş içinde [F # Kılavuzu](../index.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
- [Visual F#](../index.md)  
- [F# Turu](../tour.md)  
- [F # dili başvurusu](../language-reference/index.md)  
- [Tür çıkarımı](../language-reference/type-inference.md)  
- [Simge ve işleç başvurusu](../language-reference/symbol-and-operator-reference/index.md)  
+
+- [Visual F#](../index.md)  
+- [F# Turu](../tour.md)  
+- [F # dili başvurusu](../language-reference/index.md)  
+- [Tür çıkarımı](../language-reference/type-inference.md)  
+- [Simge ve işleç başvurusu](../language-reference/symbol-and-operator-reference/index.md)  

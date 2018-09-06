@@ -3,11 +3,11 @@ title: Hosting2
 ms.date: 03/30/2017
 ms.assetid: 0820c7e5-0b50-4cde-80e7-74e346513002
 ms.openlocfilehash: 9237518f5bfa48401e60e47ccc40e4ee303dec35
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43557068"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43788879"
 ---
 # <a name="hosting"></a>Barındırma
 Bu bölümdeki konularda, barındırma hizmeti açıklar. Bir hizmeti Internet Information Services (IIS), Windows İşlem Etkinleştirme Hizmeti (WAS), Windows Server AppFabric, bir Windows hizmeti veya yönetilen bir uygulama tarafından barındırılabilir — bu seçenek, genellikle olarak adlandırılır *kendi kendine barındırma*.  

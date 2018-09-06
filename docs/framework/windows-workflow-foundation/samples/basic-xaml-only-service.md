@@ -3,11 +3,11 @@ title: Temel XAML tek hizmet
 ms.date: 03/30/2017
 ms.assetid: c106feb0-0245-43b5-aefe-93ce0e4d38eb
 ms.openlocfilehash: f4f296a97b9c3093874c5ec8e05023e84b0af44a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43556475"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43783952"
 ---
 # <a name="basic-xaml-only-service"></a>Temel XAML tek hizmet
 Bu örnek bir XAML yalnızca hizmetin nasıl oluşturulacağını gösterir. Senaryo, araba ilgili sorunlar için bir tanılama hizmetidir. Hizmet, bir dizi soru sorunu tanılamak için istemci isteyen iş akışı olarak uygulanır. İki tür hizmet tanılama sorunları vardır (araba başlatamaz veya çalışmıyor koşullandırma hava). İş Akışı Tasarımcısı istek/yanıt şablondan üç Basit Hizmet işlemleri kullanıma sunmak için kullanır. IIS sanal dizini oluşturarak IIS'de barındırılan hizmet ve Web.config dosyaları ve service1.xamlx sanal dizine kopyalamak, derlenmiş kod gereklidir. Varsayılan olarak bu örnek otomatik olarak gerekli dosyaların WCF ve WF örnekleri için kurulum yönergeleri izlediğinde oluşturulan sanal dizine kopyalar: [kerelik Kurulum yordamı için Windows Communication Foundation örnekleri](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) Visual Studio 2010'da yapılandırıldığında.  

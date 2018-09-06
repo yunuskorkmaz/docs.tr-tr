@@ -2,19 +2,19 @@
 title: 'Nasıl yapılır: dize koleksiyonlarını (LINQ) (C#) birleştirme ve karşılaştırma'
 ms.date: 07/20/2015
 ms.assetid: 25926e5b-fde2-4dc1-86a0-16ead7aa13d2
-ms.openlocfilehash: c052302439407cecd7ce2924cc6cf5ffeefd1239
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 679dde2d2d1607c2703468f64903f3cd9e59bcb8
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328019"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43749684"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-c"></a>Nasıl yapılır: dize koleksiyonlarını (LINQ) (C#) birleştirme ve karşılaştırma
-Bu örnekte, sonuçları sıralamak ve satırlık metin içeren dosyaları birleştirme gösterilmektedir. Özellikle, basit bir birleştirme, bir birleşim ve kesişim metin satırlarını iki kümelerinde gerçekleştirme gösterir.  
+Bu örnekte, satırlık metin içeren ve ardından sonuçları sıralamak dosyaları birleştirme gösterilmektedir. Özellikle, basit bir birleştirme, bir birleşim ve kesişim metin satırlarını iki kümelerinde gerçekleştirme gösterir.  
   
 ### <a name="to-set-up-the-project-and-the-text-files"></a>Proje ve metin dosyaları ayarlamak için  
   
-1.  Bu adları names1.txt adlı bir metin dosyasına kopyalayın ve proje klasöründe kaydedin:  
+1.  Bu adlar names1.txt adlı bir metin dosyasına kopyalayabilir ve proje klasörünüze kaydedin:  
   
     ```  
     Bankov, Peter  
@@ -29,7 +29,7 @@ Bu örnekte, sonuçları sıralamak ve satırlık metin içeren dosyaları birle
     Garcia, Debra  
     ```  
   
-2.  Bu adları names2.txt adlı bir metin dosyasına kopyalayın ve proje klasöründe kaydedin. İki dosya bazı adlar ortak gerektiğini unutmayın.  
+2.  Bu adlar names2.txt adlı bir metin dosyasına kopyalayabilir ve proje klasörünüze kaydedin. İki dosyayı bazı adları ortak gerektiğini unutmayın.  
   
     ```  
     Liu, Jinghao  
@@ -169,8 +169,9 @@ class MergeStrings
 ```  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- .NET Framework sürüm 3.5 veya daha yüksek System.Core.dll başvuru hedefleyen bir proje oluşturun ve `using` System.Linq ve System.IO ad alanları için yönergeleri.  
+ .NET Framework sürüm 3.5 veya üzeri bir System.Core.dll başvurusu ile hedefleyen bir proje oluşturun ve `using` System.Linq ve System.IO ad alanları için yönergeleri.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [LINQ ve dizeler (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
- [LINQ ve dosya dizinleri (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [LINQ ve dizeler (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
+- [LINQ ve dosya dizinleri (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

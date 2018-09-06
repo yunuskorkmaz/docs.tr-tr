@@ -3,11 +3,11 @@ title: '&lt;messageSenderAuthentication&gt; öğesi'
 ms.date: 03/30/2017
 ms.assetid: 8d979dfc-a6f9-42ec-96d5-7fbc13a48118
 ms.openlocfilehash: cb727df7b8d7605cbe984a8f6737c89bf1bfb2be
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43532210"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43788970"
 ---
 # <a name="ltmessagesenderauthenticationgt-element"></a>&lt;messageSenderAuthentication&gt; öğesi
 Eşler arası ileti gönderenler için kimlik doğrulama seçeneklerini belirtir.  

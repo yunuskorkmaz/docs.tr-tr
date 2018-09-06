@@ -10,11 +10,11 @@ helpviewer_keywords:
 - statements [C#], checked and unchecked
 ms.assetid: a84bc877-2c7f-4396-8735-1ce97c42f35e
 ms.openlocfilehash: 04f603905690497bcd4249f73c7296be2c269a60
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43671220"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43741938"
 ---
 # <a name="checked-and-unchecked-c-reference"></a>Checked ve Unchecked (C# Başvurusu)
 C# ifadeleri işaretli veya işaretsiz bağlam içinde çalıştırabilirsiniz. Denetlenen bir bağlamda aritmetik taşma bir özel durum oluşturur. İşaretlenmemiş bir bağlamda aritmetik taşma göz ardı edilir ve hedef türüne uygun olmayan herhangi bir yüksek düzeyli BITS atarak sonuç kesilmiş.  

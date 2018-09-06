@@ -5,11 +5,11 @@ helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
 ms.openlocfilehash: 07607f96acb2ca44142bd6a8b4fdd84ea0d1b532
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 09/05/2018
-ms.locfileid: "43735156"
+ms.locfileid: "43788642"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>Eşitlik Karşılaştırmaları (C# Programlama Kılavuzu)
 Bazen, eşitlik için iki değeri karşılaştırmak gereklidir. Bazı durumlarda, için test ettiğiniz *değer eşitliği*olarak da bilinen *denklik*, iki değişkenin içerdiği değerlerin eşit olduğu anlamına gelir. Diğer durumlarda iki değişkenin bellekte aynı alt nesneye başvurmadığını belirlemeniz gerekir. Bu yeni eşitlik türüne adlı *eşitlik*, veya *kimlik*. Bu konu, bu iki eşitlik türünü açıklar ve daha fazla bilgi için diğer konulara bağlantılar sağlar.  

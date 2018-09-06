@@ -7,11 +7,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating
 ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
 ms.openlocfilehash: 844e38fc62fc9fb04a723c1a4a8ad834e957c8ce
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43417705"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43744481"
 ---
 # <a name="how-to-author-controls-for-windows-forms"></a>Nasıl yapılır: Windows Formları için Denetimler Yazma
 Bir denetimin kullanıcı ve program arasındaki grafik bağlantısını temsil eder. Bir denetim sağlamak veya verileri işlemek, kullanıcı girişi kabul edebilir, olaylara yanıt vermesi veya herhangi bir sayıda kullanıcı ve uygulama bağlanma diğer işlevlerini gerçekleştirmek. Bir denetimi bir bileşen aslında bir grafik arabirimine sahip olduğundan, bir bileşen mu, yanı sıra kullanıcı etkileşimi sağlamak herhangi bir işlevini hizmet verebilir. Denetimler belirli bir amaca hizmet eder oluşturulur ve denetimleri yazma başka bir programlama görevdir. Aklınızda yazma işleminin hızlandırılmasının denetimine genel bakış aşağıdaki adımları temsil eder. Bağlantılar tek tek adımlara ek bilgi sağlar.  

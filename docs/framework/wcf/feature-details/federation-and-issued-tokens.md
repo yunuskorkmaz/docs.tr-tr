@@ -7,11 +7,11 @@ helpviewer_keywords:
 - federation [WCF], issued tokens
 ms.assetid: 4c31ee7d-a820-4067-8b84-a83049021bb6
 ms.openlocfilehash: bdbd5c49197b65816da9b0f2c87d97afb893d79f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43420216"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43788110"
 ---
 # <a name="federation-and-issued-tokens"></a>Federasyon ve Verilen Belirteçler
 Windows Communication Foundation (WCF) ile WS-Federation ve WS-Trust belirtimleri uygulama hizmetleri ile güvenli bir şekilde iletişim kuran istemcileri oluşturabilirsiniz. Belirtimleri, farklı güven bölgelerinde etkinleştirmek, kimlik doğrulama ve yetkilendirme mekanizmaları sağlamak için XML SOAP ve Web Hizmetleri Açıklama Dili (WSDL) kullanın.  

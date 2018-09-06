@@ -3,11 +3,11 @@ title: İşlevsel programlama ve Kesin programlama karşılaştırması (C#)
 ms.date: 07/20/2015
 ms.assetid: 5e35c5a0-c949-422a-873b-fca6b2254f57
 ms.openlocfilehash: 01be2758147b84af3410709aab62a0ca89b0c9cf
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43671533"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43738742"
 ---
 # <a name="functional-programming-vs-imperative-programming-c"></a>İşlevsel programlama ve Kesin programlama karşılaştırması (C#)
 Bu konuda karşılaştırır ve işlevsel programlama daha geleneksel buyurgan (yordamsal) programlamaya ile karşılaştırır.  

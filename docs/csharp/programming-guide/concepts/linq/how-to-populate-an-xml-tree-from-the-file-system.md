@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: dosya sistemi (C#) XML ağacından doldurma'
+title: 'Nasıl yapılır: dosya sisteminden (C#) bir XML ağacı doldurma'
 ms.date: 07/20/2015
 ms.assetid: 2aa2ccac-4a22-47ae-9107-3bb8df232576
-ms.openlocfilehash: fdbab0fbda3bbfe3ab91e674bb66694f71121962
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7bddab1942c5a673969e271338f17705914f81a4
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328181"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43732650"
 ---
-# <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a>Nasıl yapılır: dosya sistemi (C#) XML ağacından doldurma
-Bir ortak ve kullanışlı XML ağaçları hiyerarşik ad/değer veri deposu olarak uygulamasıdır. Bir XML ağacı hiyerarşik verilerle doldurmak ve ardından onu sorgulama yapabilir, dönüştürmek ve gerekirse, seri. Bu kullanım senaryosunda ad alanları ve boşluk davranışı gibi XML belirli semantiğini çoğunu önemli değildir. Bunun yerine, bellek, tek bir kullanıcı hiyerarşik veritabanı küçük bir olarak XML ağaç kullanıyor.  
+# <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a>Nasıl yapılır: dosya sisteminden (C#) bir XML ağacı doldurma
+Bir ortak ve kullanışlı XML ağaçlarını hiyerarşik ad/değer veri deposu olarak uygulamasıdır. Hiyerarşik veriler ile XML ağacı doldurma ve ardından, sorgulama yapabilir, dönüştürmek ve gerekirse, seri hale. Bu kullanım senaryosunda, ad alanları ve boşluk davranışını gibi XML belirli semantikler birçok önemli değildir. Bunun yerine, bellek, hiyerarşik veritabanı tek kullanıcı küçük bir olarak XML ağacı kullanıyor.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, yerel dosya sistemi özyineleme kullanılarak XML ağacından doldurur. Ardından, ağacında tüm dosyaların boyutunu toplam hesaplama ağacında sorgular.  
+ Aşağıdaki örnek, özyineleme kullanarak yerel dosya sisteminden bir XML ağacı doldurur. Ardından, toplam ağacındaki tüm dosyaların boyutunu hesaplama ağaç sorgular.  
   
 ```csharp  
 class Program  
@@ -46,7 +46,7 @@ class Program
 }  
 ```  
   
- Bu örnek, aşağıdakine benzer bir çıktı üretir:  
+ Bu örnekte aşağıdakine benzer bir çıktı oluşturulur:  
   
 ```xml  
 <Dir Name="Tmp">  
@@ -116,5 +116,6 @@ class Program
 Total File Size:59089  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Gelişmiş sorgu teknikler (LINQ-XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [Gelişmiş sorgu teknikleri (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

@@ -3,11 +3,11 @@ title: "Nasıl yapılır: WAS'ta WCF Hizmeti Barındırma"
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
 ms.openlocfilehash: fd48957f7f8410b4b0df39fe125c35e4fc98cb8e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43560301"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43746839"
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>Nasıl yapılır: WAS'ta WCF Hizmeti Barındırma
 Bu konuda anahatları Windows İşlem Etkinleştirme Hizmetleri (WAS olarak da bilinir) oluşturmak için gereken temel adımlarda barındırılan Windows Communication Foundation (WCF) hizmet. OLAN HTTP olmayan aktarım kurallarıyla çalışma Internet Information Services (IIS) özellikleri genelleştirilmiş olduğundan yeni işlem Etkinleştirme hizmeti. WCF dinleyici bağdaştırıcı arabirimi gibi TCP ve adlandırılmış kanallar ve Message Queuing, WCF tarafından desteklenen HTTP olmayan protokolleri üzerinden alınan etkinleştirme isteklerini iletişim kurmak için kullanır.  

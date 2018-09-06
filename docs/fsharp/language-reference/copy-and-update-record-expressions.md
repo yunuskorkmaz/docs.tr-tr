@@ -1,19 +1,18 @@
 ---
 title: 'Kopyalama ve güncelleştirme kayıt ifadeleri (F #)'
-description: "'Varolan bir kaydı, güncelleştirmelerinin kopyalayan bir kopyalama ve güncelleştirme kayıt ifadesi' alanları belirtilen ve güncelleştirilmiş kaydı döndürür yazma öğrenin."
+description: "'Var olan bir kaydı, güncelleştirmeleri kopyalayan bir kopyalama ve güncelleştirme kayıt expression' alanları belirtilen ve güncelleştirilen bir kaydı döndürür yazmayı öğrenin."
 author: ChrSteinert
 ms.date: 06/04/2016
-ms.openlocfilehash: 000746b6e76349ae6d8f338519a58034f4e29020
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d2b089e8a7fc5c7ee26139003e23d2eaa8a3174e
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563065"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43745911"
 ---
 # <a name="copy-and-update-record-expressions"></a>Kopyalama ve güncelleştirme kayıt ifadeleri
 
-A *kopyalama ve güncelleştirme kayıt ifade* varolan bir kaydı kopyalar, belirtilen alanları güncelleştirir ve güncelleştirilmiş kayıt döndüren bir ifadedir.
-
+A *kopyalama ve güncelleştirme kayıt ifade* varolan bir kaydı kopyalar, belirtilen alanlarını güncelleştirir ve güncelleştirilen kaydı döndüren bir ifadedir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -23,18 +22,19 @@ A *kopyalama ve güncelleştirme kayıt ifade* varolan bir kaydı kopyalar, beli
 ```
 
 ## <a name="remarks"></a>Açıklamalar
-Yani hiçbir varolan bir kaydı güncelleştirmeye olası kayıtları varsayılan olarak, değişmez. Güncelleştirilmiş bir kaydı bir kaydın tüm alanları oluşturmak için yeniden belirtilmesi gerekir. Bu görev basitleştirmek için bir *kopyalama ve güncelleştirme kayıt ifade* kullanılabilir. Bu ifade varolan bir kaydı alır, ifade belirtilen alanları ve belirtilen ifade tarafından eksik alan kullanarak aynı türde yeni bir tane oluşturur.
-Varolan bir kaydı kopyalayın ve büyük olasılıkla bazı alan değerlerini değiştirmek varsa, bu yararlı olabilir.
 
-Örneği için yeni oluşturulan bir kayıt alın.
+Böylece için varolan bir kaydı güncelleştirme olası varsayılan olarak, kayıt sabittir. Bir kaydın tüm alanlarını güncelleştirilen bir kaydı oluşturmak için yeniden belirtilmesi gerekir. Bu görevi kolaylaştırmak amacıyla bir *kopyalama ve güncelleştirme kayıt ifade* kullanılabilir. Bu ifade, varolan bir kaydı alır, ifade belirtilen alanları ve ifade tarafından belirtilen eksik alan kullanarak aynı türde yeni bir tane oluşturur.
+Kayıtlardan kopyalayabilir ve büyük olasılıkla bazı alan değerleri değiştirmek varsa, bu yararlı olabilir.
+
+Örneği için yeni oluşturulan bir kaydı alır.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1905.fs)]
 
-Yalnızca o kaydın kullanabileceğiniz alanında bulunan güncelleştirmek için olsaydı *kopyalama ve güncelleştirme kayıt ifade* aşağıdaki gibi:
+Yalnızca kullanabilirsiniz, kayıt alanı üzerinde güncelleştirmek için olsaydı *kopyalama ve güncelleştirme kayıt ifade* aşağıdaki gibidir:
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1906.fs)]
 
-## <a name="see-also"></a>Ayrıca Bkz.
-[Kayıtlar](records.md)
+## <a name="see-also"></a>Ayrıca bkz.
 
-[F# Dili Başvurusu](index.md)
+- [Kayıtlar](records.md)
+- [F# Dili Başvurusu](index.md)

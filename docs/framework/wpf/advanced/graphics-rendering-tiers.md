@@ -9,11 +9,11 @@ helpviewer_keywords:
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
 ms.openlocfilehash: 9fb24e13ab684170baf5ac3001d3a2d4bcd6df7e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43563270"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43746833"
 ---
 # <a name="graphics-rendering-tiers"></a>Grafik İşleme Katmanları
 İşleme katmanı bir grafik donanım özelliği ve çalıştıran bir cihaz için performans düzeyi tanımlayan bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama.  

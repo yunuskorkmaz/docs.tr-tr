@@ -6,11 +6,11 @@ helpviewer_keywords:
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
 ms.openlocfilehash: 6be0ae4f6497dfb2db9607f61c4ede5083d57dc7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43560315"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43784958"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>Erişim Değiştiricileri (C# Programlama Kılavuzu)
 Tüm türler ve tür üyeleri, derlemenizin veya diğer derlemelere başka koddan kullanılıp kullanılamayacağını denetleyen bir erişilebilirlik düzeyi vardır. Aşağıdaki erişim değiştiriciler, tür veya üyenin erişilebilirliğini bildirirken zaman belirtmek için kullanabilirsiniz:  
