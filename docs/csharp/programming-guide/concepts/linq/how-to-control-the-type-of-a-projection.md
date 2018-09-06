@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: (C#) projeksiyon türünü denetleme'
 ms.date: 07/20/2015
 ms.assetid: e4db6b7e-4cc9-4c8f-af85-94acf32aa348
 ms.openlocfilehash: 8296420a89753771b97c9ca7a489cb686d2df8b5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43537828"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43778872"
 ---
 # <a name="how-to-control-the-type-of-a-projection-c"></a>Nasıl yapılır: (C#) projeksiyon türünü denetleme
 Yansıtma, bir veri kümesi alma, filtrelemesini, şeklini değiştirmek ve hatta da türünü değiştirmeyi işlemidir. Çoğu sorgu ifadeleri tahminler gerçekleştirin. Bu bölümde gösterilen sorgu ifadeleri çoğunu değerlendirmek için <xref:System.Collections.Generic.IEnumerable%601> , <xref:System.Xml.Linq.XElement>, ancak diğer türler oluşturmak için projeksiyon türü denetleyebilirsiniz. Bu konuda, bunun nasıl yapılacağı gösterilmektedir.  

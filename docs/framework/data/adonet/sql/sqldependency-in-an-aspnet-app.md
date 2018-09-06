@@ -5,30 +5,30 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ff226ce3-f6b5-47a1-8d22-dc78b67e07f5
-ms.openlocfilehash: 51df8ad695b3e59b368499d35ac76cc7ac0cd6e1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 5465238e4b9deaa13c76cb35122fcaded7acd7f7
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363370"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43736665"
 ---
 # <a name="sqldependency-in-an-aspnet-application"></a>Bir ASP.NET uygulamasında SqlDependency
-Bu bölümdeki örnek nasıl kullanılacağını gösterir <xref:System.Data.SqlClient.SqlDependency> ASP.NET yararlanarak dolaylı olarak <xref:System.Web.Caching.SqlCacheDependency> nesnesi. <xref:System.Web.Caching.SqlCacheDependency> Nesne kullanan bir <xref:System.Data.SqlClient.SqlDependency> bildirimleri için dinleme ve doğru önbelleğini güncelleştirin.  
+Bu bölümdeki örnek nasıl kullanılacağını gösterir <xref:System.Data.SqlClient.SqlDependency> ASP.NET yararlanarak dolaylı olarak <xref:System.Web.Caching.SqlCacheDependency> nesne. <xref:System.Web.Caching.SqlCacheDependency> Nesnesini kullanan bir <xref:System.Data.SqlClient.SqlDependency> bildirimlerini dinlemek ve doğru şekilde önbelleği güncelleştirmek için.  
   
 > [!NOTE]
->  Örnek kod sorgu bildirimleri komut yürüterek etkinleştirdiğiniz varsayar [etkinleştirme sorgu bildirimleri](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md).  
+>  Örnek kod, sorgu bildirimleri betiklerde çalıştırarak etkinleştirdiyseniz varsayar [sorgu bildirimleri etkinleştirme](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md).  
   
 ## <a name="about-the-sample-application"></a>Örnek uygulama hakkında  
- Örnek uygulama, ürün bilgilerini görüntülemek için tek bir ASP.NET Web sayfası kullanır **AdventureWorks** SQL Server veritabanında bir <xref:System.Web.UI.WebControls.GridView> denetim. Sayfa yüklendiğinde, geçerli tarihe kadar kod yazar bir <xref:System.Web.UI.WebControls.Label> denetim. Ardından tanımlayan bir <xref:System.Web.Caching.SqlCacheDependency> nesne ve özellikleri ayarlar <xref:System.Web.Caching.Cache> üç dakikaya kadar önbellek verilerini depolamak için nesne. Kod veritabanına bağlanır ve verileri alır. Ne zaman sayfa yüklendikten ve ASP.NET uygulamasını çalıştıran sayfasında süre değişmez belirtmeye doğrulayabilirsiniz önbellekten verileri alır. İzlenmekte olan verileri ASP.NET değişip değişmediğini önbelleği geçersiz kılar ve yeniden `GridView` görüntülenen saati güncelleştiriliyor yeni verilerle denetim `Label` denetim.  
+ Örnek uygulama, ürün bilgilerini görüntülemek için tek bir ASP.NET Web sayfası kullanır. **AdventureWorks** SQL Server veritabanında bir <xref:System.Web.UI.WebControls.GridView> denetimi. Sayfa yüklendiğinde geçerli saate kod yazan bir <xref:System.Web.UI.WebControls.Label> denetimi. Ardından tanımlayan bir <xref:System.Web.Caching.SqlCacheDependency> nesne ve özellikleri ayarlar <xref:System.Web.Caching.Cache> üç dakikaya kadar verileri önbelleğe depolamak için nesne. Kod veritabanına bağlanır ve verileri alır. Ne zaman sayfa yüklenen ve ASP.NET uygulamasını çalıştıran sayfasında süresi değişmez'hatalarının ayıklanabileceğini doğrulayabilirsiniz önbellekten veri alır. İzlenen verileri ASP.NET değişip değişmediğini önbellek geçersiz kılar ve derlenmeye `GridView` yeni verilerle görüntülenen saat güncelleştirme denetimi `Label` denetimi.  
   
-## <a name="creating-the-sample-application"></a>Örnek uygulaması oluşturma  
+## <a name="creating-the-sample-application"></a>Örnek uygulamayı oluşturma  
  Oluşturun ve örnek uygulamayı çalıştırmak için aşağıdaki adımları izleyin:  
   
 1.  Yeni bir ASP.NET Web sitesi oluşturun.  
   
-2.  Ekleme bir <xref:System.Web.UI.WebControls.Label> ve <xref:System.Web.UI.WebControls.GridView> Default.aspx sayfasında denetimine.  
+2.  Ekleme bir <xref:System.Web.UI.WebControls.Label> ve <xref:System.Web.UI.WebControls.GridView> Default.aspx sayfasında denetimi.  
   
-3.  Sayfanın sınıf modülü açın ve aşağıdaki yönergeleri ekleyin:  
+3.  Sayfanın sınıf modülü açın ve aşağıdaki yönergelerini ekleyin:  
   
     ```vb  
     Option Strict On  
@@ -47,16 +47,16 @@ Bu bölümdeki örnek nasıl kullanılacağını gösterir <xref:System.Data.Sql
      [!code-csharp[DataWorks SqlDependency.AspNet#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/CS/Default.aspx.cs#1)]
      [!code-vb[DataWorks SqlDependency.AspNet#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/VB/Default.aspx.vb#1)]  
   
-5.  İki yardımcı yöntem ekler `GetConnectionString` ve `GetSQL`. Tanımlanan bağlantı dizesi tümleşik güvenliği kullanır. Kullandığınız hesabın gerekli veritabanı izinleri olduğunu doğrulamanız gerekir örnek veritabanı **AdventureWorks**, etkin bildirimleri sahiptir. Daha fazla bilgi için bkz: [özel dikkat edilecek noktalar kullanarak sorgu bildirimleri](http://msdn.microsoft.com/library/a83c8dc8-4fb9-4ffd-a2a5-c07cf4a203c7).  
+5.  İki yardımcı yöntemler ekler `GetConnectionString` ve `GetSQL`. Tanımlanan bağlantı dizesi tümleşik güvenliği kullanır. Kullandığınız hesabın gerekli veritabanı izinleri olduğunu doğrulamak ihtiyacınız olacak örnek veritabanını **AdventureWorks**, etkin bildirim yok. Daha fazla bilgi için [özel dikkat edilecek noktalar kullanarak sorgu bildirimleri](https://msdn.microsoft.com/library/a83c8dc8-4fb9-4ffd-a2a5-c07cf4a203c7).  
   
      [!code-csharp[DataWorks SqlDependency.AspNet#2](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/CS/Default.aspx.cs#2)]
      [!code-vb[DataWorks SqlDependency.AspNet#2](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/VB/Default.aspx.vb#2)]  
   
 ### <a name="testing-the-application"></a>Uygulamayı Test Etme  
- Uygulama, Web formunda görüntülenen verileri önbelleğe alır ve etkinlik yoksa üç dakikada bir yenilenir. Veritabanına bir değişiklik meydana gelirse, önbellek hemen yenilenir. Visual Studio'dan sayfa tarayıcısına yükleyen, uygulamayı çalıştırın. Görüntülenen önbellek yenileme zamanı önbellek son ne zaman yenilendiğini gösterir. Üç dakika bekleyin ve sonra gerçekleşmesi bir geri gönderme olayı neden sayfayı yenileyin. Sayfada görüntülenen zaman değiştiğini unutmayın. Üç dakikadan daha kısa bir süre içinde sayfayı yenileyin, sayfada görüntülenen zaman aynı kalır.  
+ Uygulama Web formunda görüntülenen verileri önbelleğe alır ve hiçbir etkinlik yoksa, üç dakikada bir yenilenir. Önbellek veritabanına bir değişiklik meydana gelirse, hemen yenilenir. Sayfa tarayıcıya yükleyen Visual Studio'da uygulamayı çalıştırın. Ne zaman önbelleğe son yenilenme görüntülenen önbellek yenileme zamanı gösterir. Üç dakika bekleyin ve ardından geri gönderme bir olayın meydana gelmesine neden bu sayfayı yenileyin. Sayfada görüntülenen zaman değiştirildiğine dikkat edin. Üç dakikadan daha kısa bir süre içinde sayfayı yenileyin, sayfada görüntülenen zaman aynı kalır.  
   
- Şimdi bir Transact-SQL güncelleştirme komut kullanarak veritabanındaki verileri güncelleştirin ve sayfayı yenileyin. Görüntülenen zaman şimdi önbellek veritabanından yeni verileri yenilendiğini gösterir. Önbelleği güncelleştirilirken rağmen geri gönderme olay gerçekleşene kadar sayfada görüntülenen saati değişmez unutmayın.  
+ Artık bir Transact-SQL güncelleştirme komut kullanarak veritabanındaki verileri güncelleştirme ve sayfayı yenileyin. Görüntülenen zamanı artık önbellek veritabanından yeni verileri yenilenme gösterir. Önbellek güncelleştirilir olsa da, geri gönderme olayı gerçekleşinceye kadar sayfada görüntülenen zaman değiştirmez unutmayın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [SQL Server'da Sorgu Bildirimleri](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)  
- [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

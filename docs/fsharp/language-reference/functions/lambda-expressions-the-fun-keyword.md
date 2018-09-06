@@ -1,18 +1,17 @@
 ---
 title: 'Lambda İfadeleri: fun Anahtar Sözcüğü (F#)'
-description: "F # 'eğlenceli' anahtar sözcüğü adsız bir işlev bir lambda ifadesi tanımlamak için nasıl kullanılacağını öğrenin."
+description: "Anonim bir işlevdir bir lambda ifadesi tanımlamak için F # 'eğlenceli' anahtar sözcüğünü kullanmayı öğrenin."
 ms.date: 05/16/2016
-ms.openlocfilehash: 433451fb9bf89bfabdcd8e71560105317771d251
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a37757f6b7328cd348bbf13f058a6dbc881769cf
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563856"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43744294"
 ---
 # <a name="lambda-expressions-the-fun-keyword-f"></a>Lambda İfadeleri: fun Anahtar Sözcüğü (F#)
 
-`fun` Anahtar sözcüğü bir lambda ifadesi, başka bir deyişle, adsız bir işlev tanımlamak için kullanılır.
-
+`fun` Anahtar sözcüğü, bir lambda ifadesi, başka bir deyişle, anonim bir işlev tanımlamak için kullanılır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -21,7 +20,8 @@ fun parameter-list -> expression
 ```
 
 ## <a name="remarks"></a>Açıklamalar
-*Parametre listesi* genellikle adları ve parametre türlerini, isteğe bağlı olarak, oluşur. Daha fazla genel olarak, *parametre listesi* herhangi F # desenlerini oluşturulabilir. Olası desenleri tam bir listesi için bkz: [desen eşleştirme](../pattern-matching.md). Geçerli parametreler listesi örnek olarak şunlar gösterilebilir.
+
+*Parametre-listesi* genellikle adları ve parametre türleri, isteğe bağlı olarak oluşur. Daha genel *parametre-listesi* tüm F # desenlerini oluşabilir. Olası desenleri tam bir listesi için bkz. [desen eşleştirme](../pattern-matching.md). Geçerli parametrelerin bir listesi aşağıdaki örnekleri içerir.
 
 ```fsharp
 // Lambda expressions with parameter lists.
@@ -36,14 +36,16 @@ fun (a, b) -> …
 fun head :: tail -> …
 ```
 
-*İfade* gövdesi işlevinin biri son deyim dönüş değeri oluşturur. Geçerli lambda ifadeleri örnekleri şunlardır:
+*İfade* biri son deyim dönüş değeri oluşturur işlev gövdesidir. Geçerli lambda ifadeleri örnekleri şunları içerir:
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet301.fs)]
-    
+
 ## <a name="using-lambda-expressions"></a>Lambda İfadeleri kullanma
-Lambda ifadeleri bir liste veya diğer koleksiyon üzerinde işlem gerçekleştirmek ve bir işlev tanımlamanın ek iş önlemek istiyorsanız istediğinizde özellikle yararlıdır. Birçok F # kitaplığı işlevi bağımsız değişken olarak işlevi değerleri alır ve bir lambda ifadesi bu gibi durumlarda kullanılacak özellikle kullanışlı olabilir. Aşağıdaki kod bir lambda ifadesi bir liste öğelerine uygulanır. Bu durumda, anonim işlevi listesini her öğeye 1 ekler.
+
+Lambda ifadeleri, özellikle bir liste veya diğer toplama işlemleri ve bir işlevi tanımlayan kaynaklanan ek yükten kaçınmak istiyorsanız istediğinizde kullanışlıdır. İşlev değerleri olarak bağımsız değişkenler çoğu F # kitaplığı işlevleri yararlanın ve bir lambda ifadesi bu gibi durumlarda kullanılacak özellikle kullanışlı olabilir. Aşağıdaki kod bir lambda ifadesi bir liste öğelerine uygulanır. Bu durumda, anonim işlev listesini her öğeye 1 ekler.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet302.fs)]
-    
-## <a name="see-also"></a>Ayrıca Bkz.
-[İşlevler](index.md)
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [İşlevler](index.md)

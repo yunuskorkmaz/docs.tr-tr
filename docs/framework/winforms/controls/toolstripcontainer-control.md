@@ -6,40 +6,40 @@ helpviewer_keywords:
 - ToolStripContainer control [Windows Forms]
 - ToolStrip control [Windows Forms], ToolStripContainer
 ms.assetid: 378fa5b4-38e1-46f4-8e5c-d0c19dcd0200
-ms.openlocfilehash: d969e456c16f344e9f301511a89615b3c741151b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eb05627925534820544edc15e1fe06bf57f0ae84
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538854"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43740968"
 ---
 # <a name="toolstripcontainer-control"></a>ToolStripContainer Denetimi
-<xref:System.Windows.Forms.ToolStrip> denetimleri özelliği (yerleştirildiğinde aracı alanda yatay veya dikey alanı paylaşımı) yerleşik radye kullanarak <xref:System.Windows.Forms.ToolStripContainer>.  
+<xref:System.Windows.Forms.ToolStrip> özellik denetimleri yerleşik radye (Yuvalandığında araç alanı içinde yatay veya dikey boşluk paylaşımını) kullanarak <xref:System.Windows.Forms.ToolStripContainer>.  
   
- Bu bölümdeki konular, kavramlar ve oluşturmak için kullanabileceğiniz teknikleri açıklar <xref:System.Windows.Forms.ToolStripContainer> , uygulamalara özellikleri.  
+ Bu bölümdeki konular, kavramlar ve oluşturmak için kullanabileceğiniz teknikleri açıklar <xref:System.Windows.Forms.ToolStripContainer> uygulamalarınızla özellikleri.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [ToolStripContainer Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/toolstripcontainer-control-overview.md)  
- Amacı ve Windows Forms ana kavramlarını açıklayan konulara sağlar <xref:System.Windows.Forms.ToolStripContainer> denetim.  
+ Amacı ve Windows Forms ana kavramları açıklayan konuları sağlar <xref:System.Windows.Forms.ToolStripContainer> denetimi.  
   
  [Nasıl yapılır: Forma ToolStripContainer Ekleme](../../../../docs/framework/winforms/controls/how-to-add-a-toolstripcontainer-to-a-form.md)  
- Ekleme gösteren bir <xref:System.Windows.Forms.ToolStripContainer> bir uygulamaya ve denetim belirli bir panel ekleme <xref:System.Windows.Forms.ToolStripContainer>.  
+ Ekleme gösteren bir <xref:System.Windows.Forms.ToolStripContainer> uygulama ve denetim belirli bir panoya eklemek için <xref:System.Windows.Forms.ToolStripContainer>.  
   
  [Nasıl yapılır: ToolStripContentPanel'e Denetim Ekleme](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-toolstripcontentpanel.md)  
- Bir denetim eklenmesi gösterilmektedir <xref:System.Windows.Forms.ToolStripContentPanel>.  
+ Bir denetime ekleme gösterir <xref:System.Windows.Forms.ToolStripContentPanel>.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Forms.ToolStripContainer>  
- Başvuru belgelerine sağlar <xref:System.Windows.Forms.ToolStripContainer> denetim.  
+ İçin başvuru belgeleri sağlar <xref:System.Windows.Forms.ToolStripContainer> denetimi.  
   
  <xref:System.Windows.Forms.ToolStripContentPanel>  
- Başvuru belgelerine sağlar <xref:System.Windows.Forms.ToolStripContentPanel> , bir <xref:System.Windows.Forms.ToolStripContainer> denetim.  
+ İçin başvuru belgeleri sağlar <xref:System.Windows.Forms.ToolStripContentPanel> , bir <xref:System.Windows.Forms.ToolStripContainer> denetimi.  
   
- Ayrıca bkz. [ToolStripContainer görevler iletişim kutusu](http://msdn.microsoft.com/library/ms233647\(v=vs.110\)).  
+ Ayrıca bkz: [ToolStripContainer görevleri iletişim kutusu](https://msdn.microsoft.com/library/ms233647\(v=vs.110\)).  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  <xref:System.Windows.Forms.ToolStripPanel>  
- Başvuru belgelerine sağlar <xref:System.Windows.Forms.ToolStripPanel> denetim.  
+ İçin başvuru belgeleri sağlar <xref:System.Windows.Forms.ToolStripPanel> denetimi.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

@@ -1,18 +1,17 @@
 ---
 title: Statik Olarak Çözümlenmiş Tür Parametreleri (F#)
-description: 'F # kullanmayı öğrenin gerçek bir türüyle derleme zamanında yerine çalışma zamanında değiştirilir statik olarak çözümlenmiş tür parametresi.'
+description: "Bir F #'ı kullanmayı öğrenin, derleme zamanında yerine çalışma zamanında gerçek türle değiştirilen statik olarak çözümlenmiş tür parametresi."
 ms.date: 05/16/2016
-ms.openlocfilehash: 12c2af4d9df7ae1e5e77efc9413eb8777459a83c
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: 747917fef2746dcbf363ef4b717ace5e47229800
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34233788"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43777879"
 ---
 # <a name="statically-resolved-type-parameters"></a>Statik Olarak Çözümlenmiş Tür Parametreleri
 
-A *statik olarak çözümlenmiş tür parametresi* gerçek bir türüyle derleme zamanında yerine çalışma zamanında değiştirilir bir tür parametresidir. Bunlar, bir şapka (^) simgesi öncesinde olur.
-
+A *statik olarak çözümlenmiş tür parametresi* derleme zamanında yerine çalışma zamanında gerçek türle değiştirilen bir parametre türüdür. Bunlar, bir şapka (^) simgesi öncesinde olur.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -21,28 +20,29 @@ A *statik olarak çözümlenmiş tür parametresi* gerçek bir türüyle derleme
 ```
 
 ## <a name="remarks"></a>Açıklamalar
-F # dili, tür parametreleri iki farklı tür vardır. İlk standart genel tür parametresi türüdür. Bunlar kesme işareti (') olarak gösterilen `'T` ve `'U`. Bunlar, diğer .NET Framework dillerde genel tür parametreleri için eşdeğerdir. Diğer türü statik olarak çözümlenmiş ve düzeltme işareti sembolü tarafından olarak belirtilen `^T` ve `^U`.
 
-Statik olarak çözümlenmiş tür parametreleri, tür bağımsız değişkeni belirli bir üye veya üyeleri kullanılması için sahip gerektiğini belirtmenize olanak veren sınırlamalardır üye kısıtlamaları birlikte öncelikle faydalıdır. Normal genel tür parametresi kullanarak bu tür bir kısıtlama oluşturmak için bir yolu yoktur.
+F # dilinde iki farklı türden tür parametresi vardır. Standart genel tür parametresini ilk türüdür. Bu kesme işareti (') olarak gösterilen `'T` ve `'U`. Bunlar, diğer .NET Framework dillerinde genel tür parametreleri için eşdeğerdir. Diğer tür istatistiksel olarak çözümlenir ve gibi bir şapka karakteri ile belirtilir `^T` ve `^U`.
 
-Aşağıdaki tabloda benzerlikler ve tür parametreleri iki türleri arasındaki farklar özetlenmektedir.
+Statik çözülen tür parametrelerinin birlikte bir tür bağımsız değişkeni belirli bir üyeye veya belirli üyelere kullanılabilmesi için sahip olması gerektiğini belirtmenize izin veren kısıtlamalar olan üye kısıtlamalarıyla öncelikle yararlıdır. Normal genel tür parametre kullanarak bu tür bir kısıtlama oluşturmanın hiçbir yolu yoktur.
+
+İki tür parametre çeşidi arasındaki benzerlikler ve aşağıdaki tabloda özetlenmiştir.
 
 |Özellik|Genel|Statik olarak çözümlenmiş|
 |-------|-------|-------------------|
 |Sözdizimi|`'T`, `'U`|`^T`, `^U`|
 |Çözümleme süresi|Çalışma zamanı|Derleme zamanı|
-|Üye kısıtlamaları|Üye kısıtlamalarıyla kullanılamaz.|Üye kısıtlamaları ile kullanılabilir.|
-|Kod oluşturma|Tek genel türü veya yöntemi oluşturma bir türü (veya yöntem) standart genel tür parametreleri ile sonuçlanır.|Birden çok örneklemesi türleri ve yöntemleri üretilir, biri her türü için gereklidir.|
-|Türleriyle kullanın|Türlerinde kullanılabilir.|Türleri üzerinde kullanılamaz.|
-|Satır içi işlevlerle kullanın|Hayır. Satır içi işlev standart genel tür parametresi ile parametreli olamaz.|Evet. Statik olarak çözümlenmiş tür parametreleri işlevleri veya satır içi olmayan yöntemleri kullanılamaz.|
+|Üye kısıtlamaları|Üye kısıtlamaları ile kullanılamaz.|Üye kısıtlamaları ile kullanılabilir.|
+|Kod oluşturma|Standart genel türdeki parametrelere sahip bir türü (veya yöntem), bir tek genel tür veya yöntemin nesildeki sonuçlanır.|Türlerin ve yöntemlerin birden çok örnek oluşumu oluşturulur, biri her tür için gereklidir.|
+|Türler ile kullanın|Türlerde kullanılabilir.|Türlerde kullanılamaz.|
+|Satır içi işlevleri ile kullanın|Hayır. Satır içi işlev bir standart genel tür parametreyle parametreleştirilemez.|Evet. İşlevleri veya satır içi olmayan yöntemleri statik olarak çözümlenmiş tür parametreleri kullanılamaz.|
 
-Birçok F # core kitaplık işlevleri, özellikle de operatörler statik olarak çözümlenmiş tür parametreleri. Bu işlevler ve işleçler satır içi ve verimli kod oluşturma sayısal hesaplamalar için sonuçlanır.
+Çoğu F # çekirdek kitaplığı işlevinde, özellikle işleçlerde, statik olarak çözümlenmiş tür parametreleri. Bu işlevler ve işleçler satır içi ve sayısal hesaplamalar için etkili kod oluşturmayla sonuçlanır.
 
-Satır içi yöntemleri ve işleçleri veya statik olarak çözümlenmiş tür parametreleri, diğer işlevleri kullanın işlevleri statik olarak çözümlenmiş tür parametreleri kendileri de kullanabilirsiniz. Genellikle, tür çıkarımı statik olarak çözümlenmiş tür parametreleri gibi satır içi işlevler oluşturur. Aşağıdaki örnek, bir statik olarak çözümlenmiş tür parametreye sahip çıkarımı yapılan bir işleç tanımı gösterilmektedir.
+Satır içi yöntemler ve işleçleri kullanan ya da statik olarak çözümlenmiş tür parametreleri, diğer işlevleri kullanan işlevler statik çözülen tür parametrelerinin kendilerini de kullanabilirsiniz. Genellikle, tür çıkarımı, statik olarak çözümlenmiş tür parametreleri için gibi satır içi işlevleri çıkarır. Aşağıdaki örnek, statik olarak çözümlenmiş tür parametresi için ortaya çıkan bir işleç tanımını göstermektedir.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-3/snippet401.fs)]
 
-Çözümlenen türü `(+@)` ikisinin kullanım dayanarak `(+)` ve `(*)`, her iki hangi tür çıkarımı üye statik olarak çözümlenmiş tür parametrelerindeki kısıtlamalar Infer neden olarak. Çözümlenmiş tür F # Yorumlayıcı, gösterildiği gibi gibidir.
+Çözümlenen türünü `(+@)` kullanımına dayalı `(+)` ve `(*)`hem statik olarak çözülen tür parametreler üzerinde üye sınırlamalarını çıkarmak çıkarım neden olan. Çözümlenen tür F # yorumlayıcıda gösterildiği gibidir.
 
 ```fsharp
 ^a -> ^c -> ^d
@@ -57,7 +57,7 @@ when (^a or ^b) : (static member ( + ) : ^a * ^b -> ^d) and
 1.500000
 ```
 
-F # 4.1 ile başlayarak, somut tür adları statik olarak çözümlenmiş tür parametresi imzalarında de belirtebilirsiniz.  Dil önceki sürümlerinde, tür adı derleyici tarafından gerçekten çıkarsanamadı, ancak gerçekte imzası belirlenemedi.  F # 4.1 itibariyle, somut tür adları statik olarak çözümlenmiş tür parametresi imzalarında de belirtebilir. Örnek buradadır:
+F # 4.1 ile başlayarak, somut tür adları statik olarak çözümlenen tür parametresi imzaları de belirtebilirsiniz.  Dilin önceki sürümlerinde, tür adı derleyici tarafından gerçekten çıkarılan, ancak gerçekte imzasında belirlenemedi.  F # 4.1 itibariyle, somut tür adları statik olarak çözümlenen tür parametresi imzaları de belirtebilirsiniz. Örnek buradadır:
 
 ```fsharp
 let inline konst x _ = x
@@ -85,13 +85,10 @@ let inline replace (a: ^a) (f: ^b): ^a0 when (CFunctor or  ^b): (static member r
     replace_instance<CFunctor, _, _, _> (a, f)
 ```
 
-## <a name="see-also"></a>Ayrıca Bkz.
-[Genel Türler](index.md)
+## <a name="see-also"></a>Ayrıca bkz.
 
-[Tür Çıkarımı](../type-inference.md)
-
-[Otomatik Genelleştirme](automatic-generalization.md)
-
-[Kısıtlamalar](constraints.md)
-
-[Satır İçi İşlevler](../functions/inline-functions.md)
+- [Genel Türler](index.md)
+- [Tür Çıkarımı](../type-inference.md)
+- [Otomatik Genelleştirme](automatic-generalization.md)
+- [Kısıtlamalar](constraints.md)
+- [Satır İçi İşlevler](../functions/inline-functions.md)

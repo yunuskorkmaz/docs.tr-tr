@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
 ms.openlocfilehash: ac789ba81d728c067be515479e749440bb5809d4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43671973"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43779399"
 ---
 # <a name="trusted-subsystem"></a>Güvenilir Alt Sistem
 Bir istemci, bir ağ üzerinden dağıtılan bir veya daha fazla Web Hizmetleri erişir. Web Hizmetleri, Web hizmetinin uygulamadaki iş mantığının bu ek kaynaklara (örneğin, veritabanları veya diğer Web hizmetlerini) erişim kapsüllenir şekilde tasarlanmıştır. Bu kaynakların yetkisiz erişime karşı korunması gerekir. Aşağıdaki çizimde, bir güvenilir alt sistem işlemi gösterilmektedir.  

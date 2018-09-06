@@ -1,17 +1,17 @@
 ---
 title: let Bağlamaları (F#)
-description: "F # 'bir değer veya işlevi bir tanımlayıcı ilişkilendirir bağlama let' kullanmayı öğrenin."
+description: "F # 'let bir değer ya da işlevin tanımlayıcı ilişkilendiren bir bağlama' kullanmayı öğrenin."
 ms.date: 05/16/2016
-ms.openlocfilehash: bcdf01747c2a1d0ba9a894188dae1d42acdf9104
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1a35b5a39f2768a18665b5c7fe768af0e7714577
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566278"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43777476"
 ---
 # <a name="let-bindings"></a>let Bağlamaları
 
-A *bağlama* bir değer veya işlevi bir tanımlayıcı ilişkilendirir. Kullandığınız `let` bir değer veya işlevi için bir ad bağlamak için anahtar sözcüğü.
+A *bağlama* bir değer ya da işlevin tanımlayıcı ilişkilendirir. Kullandığınız `let` bir değer veya işlevi için bir ad bağlamak için anahtar sözcüğü.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -24,77 +24,77 @@ let identifier parameter-list [: return-type ] =expressionbody-expression
 
 ## <a name="remarks"></a>Açıklamalar
 
-`let` Anahtar sözcüğü değerleri veya bir veya daha fazla adları için işlevi değerleri tanımlamak için ifadeleri bağlama kullanılır. En basit biçimi `let` ifadesi bir ad gibi basit bir değere bağlar.
+`let` Anahtar sözcüğü, bağlama ifadeleri değerleri veya bir veya daha çok işlevi değerlerini tanımlamak için kullanılır. En basit biçimi `let` ifade bir ad gibi basit bir değere bağlar.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1101.fs)]
 
-Yeni bir satır kullanarak tanımlayıcı ifadesinden ayırmak, her satırın aşağıdaki kodu olduğu gibi ifadesinin girinti gerekir.
+Yeni bir satır kullanarak tanımlayıcı ifadesinden ayırarak, aşağıdaki kodda gösterildiği gibi ifadesinin her satırı girintile gerekir.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1102.fs)]
 
-Yalnızca bir adı yerine, adlarını içeren bir desen belirtilebilir, aşağıdaki kodda gösterildiği gibi bir tanımlama grubu,.
+Bir ad yerine yalnızca, adları içeren bir desen belirtilebilir, aşağıdaki kodda gösterildiği gibi bir tanımlama.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1103.fs)]
 
-*Gövde ifade* adları kullanılır ifadesidir. Gövde ifade ilk karakteri ile tam olarak yukarı satırına girintili kendi satırında görünen `let` anahtar sözcüğü:
+*Gövde ifadesi* ifade adları kullanılır. Gövde ifadesi ilk karakteri ile tam olarak ayarlamak için satır girintili kendi satırında görünür `let` anahtar sözcüğü:
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1104.fs)]
 
-A `let` bağlama görünebilir modülü düzeyinde bir sınıf türü tanımını veya yerel kapsamlar, işlev tanımının olduğu gibi. A `let` bağlama en üst düzeydeki bir modüle ya da bir sınıf türü bir gövde ifadesi olması gerekmez, ancak diğer kapsam düzeylerde gövde ifade gereklidir. Bağımlı adları, tanımının, ancak önce herhangi bir noktada değil noktadan sonra kullanılabilir `let` aşağıdaki kodda gösterildiği gibi bağlama görüntülenir.
+A `let` bağlama görünebilir Modül düzeyinde bir sınıf türünün tanımında veya yerel kapsamlar, bir işlev tanımı gibi. A `let` bağlama en üst düzeyinde bir modül veya sınıf türünde bir gövde ifadesi olması gerekmez, ancak diğer kapsam düzeylerinde gövde ifadesi gereklidir. Bağımlı adlar, tanımı, ancak önce herhangi bir noktada değil noktadan sonra kullanılabilir `let` aşağıdaki kodda gösterildiği gibi bağlama görünür.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1105.fs)]
-    
+
 ## <a name="function-bindings"></a>İşlev bağlamaları
 
-Aşağıdaki kodda gösterildiği gibi işlev bağlamaları işlev adı ve parametreleri dahil dışında işlev bağlamaları değeri bağlamaları için kuralları izleyin.
+Aşağıdaki kodda gösterildiği gibi işlev bağlamaları işlev adı ve parametreler dahil dışında işlev bağlamaları değeri bağlamaları için kuralları izleyin.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1106.fs)]
 
-Genel olarak, bir demet deseni gibi düzenleri Parametreler şunlardır:
+Genel olarak, bir kayıt düzeni deseni gibi kalıplar Parametreler şunlardır:
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1107.fs)]
 
-A `let` ifade bağlama son deyim değerine değerlendirir. Bu nedenle, aşağıdaki kod örneğinde, değeri içinde `result` gelen hesaplanan `100 * function3 (1, 2)`, hesaplar için `300`.
+A `let` ifade bağlama değeri son ifade olarak değerlendirir. Bu nedenle, aşağıdaki kod örneği, değeri içinde `result` gelen hesaplanan `100 * function3 (1, 2)`, hangi değerlendirir `300`.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1109.fs)]
 
-Daha fazla bilgi için bkz: [işlevler](index.md).
+Daha fazla bilgi için [işlevleri](index.md).
 
 ## <a name="type-annotations"></a>Tür ek açıklamaları
 
-Parantez içinde tüm iliştirilmiş bir tür adı ve ardından iki nokta (:) dahil ederek parametreler için türlerini belirtebilirsiniz. Dönüş değeri türü iki nokta üst üste ve türünü sonra son parametre ekleyerek de belirtebilirsiniz. Tam tür ek açıklamaları için `function1`, parametre türleri olarak tamsayılar ile aşağıdaki gibi olur.
+Tür parametreleri için parantez içinde tüm kapalı bir tür adını ardından bir iki nokta üst üste (:) dahil ederek belirtebilirsiniz. Dönüş değerinin türü iki nokta üst üste ve türdeki sonra son parametre ekleyerek de belirtebilirsiniz. İçin tam bir tür ek açıklamalar `function1`, parametre türleri olarak tamsayı ile şu şekilde olacaktır.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1108.fs)]
 
-Açık tür parametre bulunmadığında tür çıkarımı işlevlerin parametre türlerini belirlemek için kullanılır. Bu, otomatik olarak genel olarak bir parametrenin türü genelleme içerebilir.
+Açık tür parametre bulunmadığında tür çıkarımı işlevlerin parametre türlerini belirlemek için kullanılır. Bu, otomatik olarak genel bir parametre türü genelleştiriliyor içerebilir.
 
-Daha fazla bilgi için bkz: [otomatik Genelleştirme](../generics/automatic-generalization.md) ve [tür çıkarımı](../type-inference.md).
+Daha fazla bilgi için [otomatik Genelleştirme](../generics/automatic-generalization.md) ve [tür çıkarımı](../type-inference.md).
 
 ## <a name="let-bindings-in-classes"></a>Sınıflardaki let Bağlamaları
 
-A `let` bağlama, sınıf türü ancak yapısı veya kayıt türü görünebilir. Bir sınıf türü bağlama let kullanmak için sınıfı birincil bir oluşturucuya sahip olmalıdır. Oluşturucu parametreleri sınıf tanımında tür adından sonra görünmesi gerekir. A `let` bir sınıf türü bağlamasında tanımlar özel alanlar ve üyeleri bu sınıf türü için ve ile birlikte `do` türü bağlama türü için birincil Oluşturucu için kod oluşturur. Bir sınıfa aşağıdaki kodu örnekler `MyClass` özel alanlarla `field1` ve `field2`.
+A `let` bağlama, sınıf türünde ancak yapısı veya kayıt türü görünebilir. Sınıfı, bir sınıf türünde bağlama bir let kullanmak için bir birincil oluşturucuya sahip olmalıdır. Oluşturucu parametresi, sınıf tanımında tür adından sonra yer almalıdır. A `let` özel alanlar ve üyeleri sınıf türüne ve ile birlikte bir sınıf türü bağlamasında tanımlar `do` türündeki bağlama türü için birincil Oluşturucu için kod oluşturur. Aşağıdaki kod örnekleri, bir sınıf Göster `MyClass` özel alanlara sahip `field1` ve `field2`.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1110.fs)]
 
-Kapsamların `field1` ve `field2` bunlar bildirilen türü sınırlıdır. Daha fazla bilgi için bkz: [ `let` sınıflardaki bağlamaları](../members/let-bindings-in-classes.md) ve [sınıfları](../classes.md).
+Kapsamlar `field1` ve `field2` içinde bildirilen türü sınırlıdır. Daha fazla bilgi için [ `let` sınıflardaki bağlamaları](../members/let-bindings-in-classes.md) ve [sınıfları](../classes.md).
 
 ## <a name="type-parameters-in-let-bindings"></a>Tür parametrelerinde let bağlamaları
 
-A `let` bağlama düzeyinde modülü, bir tür ya da bir hesaplama ifadesi açık türü parametrelerine sahip olabilir. Bir işlev tanımı içinde gibi bir ifadede bağlama let tür parametreleri olamaz. Daha fazla bilgi için bkz: [genel türler](../generics/index.md).
+A `let` bağlama Modül düzeyinde bir türü veya bir hesaplama ifadesi açık tür parametrelerine sahip olabilir. Bir işlev tanımı içinde bağlama gibi bir ifadede bir let Tür parametrelerine sahip olamaz. Daha fazla bilgi için [genel türler](../generics/index.md).
 
-## <a name="attributes-on-let-bindings"></a>Özniteliklerde let bağlamaları
+## <a name="attributes-on-let-bindings"></a>Özniteliklerinde let bağlamaları
 
-Öznitelikleri uygulanabilir çok üst düzey `let` aşağıdaki kodda gösterildiği gibi bir modüldeki bağlar.
+Öznitelikleri uygulanabilir çok en üst düzey `let` bağlamaları aşağıdaki kodda gösterildiği gibi bir modülde.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1111.fs)]
-    
-## <a name="scope-and-accessibility-of-let-bindings"></a>Kapsam ve Let bağlamaları erişilebilirliğini
 
-Let bağlama ile bildirilen varlık kapsamı içeren bölümüne sınırlıdır kapsam (bir işlev, modül, dosya veya sınıf gibi) bağlama göründükten sonra. Bu nedenle, bir let bağlama kapsam içine bir ad tanıtır söylenebilir. Bir modül let bağlamaları modülünün genel işlevlerini derlenen beri modülü erişilebilen sürece bir modüldeki bir let ilişkili değer veya işlevi bir modül istemcilere erişilebilir. Bunun aksine, bir sınıf let bağlamaları sınıfına özeldir.
+## <a name="scope-and-accessibility-of-let-bindings"></a>Kapsamı ve erişilebilirliğini Let bağlamaları
 
-Normalde, modüllerdeki işlevlerin istemci kodu tarafından kullanıldığında, modülün adıyla nitelenmelidir. Örneğin, bir modül, `Module1` bir işlev `function1`, kullanıcıların belirtirsiniz `Module1.function1` işlevine başvurmak için.
+Let bağlama ile bildirilen bir varlığa kapsamını içeren kısmı sınırlıdır kapsamını (bir işlev, modül, dosya veya sınıf gibi) bağlama göründükten sonra. Bu nedenle, let bağlama bir kapsamın içine bir ad tanıtır söylenebilir. Let bağlamaları modülünde modülünün genel işlevlere derlenmiş modülü erişilebilir olduğu sürece bir modülde let ilişkili değer veya işlevi bir modül istemcilere erişilebilir. Aksine, sınıfa bir sınıfta let bağlamaları özeldir.
 
-Kullanıcılar bir modülün modül adı tarafından yetkili olmadan bu modül içinde işlevleri kullanmak için kullanılabilir hale getirmek alma bildirimi kullanabilir. Yalnızca belirtilen örnekte modülü kullanıcılarının bu durumda modül alma bildirimi açık kullanarak açabilirsiniz `Module1` ve bundan sonra başvurulacak `function1` doğrudan.
+Normalde, modüllerdeki İşlevler, istemci kodu tarafından kullanıldığında modülünün adı ile nitelenmelidir. Örneğin, bir modül, `Module1` bir işlev `function1`, kullanıcıların belirtirsiniz `Module1.function1` işleve başvurmak için.
+
+Bir modülün kullanıcılar, içeri aktarma bildirimi, modül adı tarafından yetkili olmadan bu modülündeki işlevleri kullanmak için kullanılabilir hale getirmek için kullanabilir. Yalnızca bahsedilen örnekte, modülün kullanıcılar bu durumda modül içeri aktarma bildirimi açık kullanarak açabilirsiniz `Module1` ve bundan sonra başvurmak `function1` doğrudan.
 
 ```fsharp
 module Module1 =
@@ -110,12 +110,11 @@ let function3 x =
     function1 x
 ```
 
-Bazı modüller özniteliğine sahip [RequireQualifiedAccess](https://msdn.microsoft.com/library/8b9b6ade-0471-4413-ac5d-638cd0de5f15), yani ortaya işlevleri modülünün adıyla nitelendirilmesi gerekir. Örneğin, F # List Modülü bu özniteliği vardır.
+Bazı modüller özniteliğine sahip [RequireQualifiedAccess](https://msdn.microsoft.com/library/8b9b6ade-0471-4413-ac5d-638cd0de5f15), yani ortaya işlevleri modül adı ile nitelenmelidir. Örneğin, F # List Modülü, bu öznitelik vardır.
 
-Modülleri ve erişim denetimi hakkında daha fazla bilgi için bkz: [modülleri](../modules.md) ve [erişim denetimi](../access-control.md).
+Modüller ve erişim denetimi hakkında daha fazla bilgi için bkz. [modülleri](../modules.md) ve [erişim denetimi](../access-control.md).
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-[İşlevler](index.md)
-
-[`let` Sınıflardaki bağlamaları](../members/let-bindings-in-classes.md)
+- [İşlevler](index.md)
+- [`let` Sınıflardaki bağlamaları](../members/let-bindings-in-classes.md)

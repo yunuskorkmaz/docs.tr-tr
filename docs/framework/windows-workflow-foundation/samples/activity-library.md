@@ -3,11 +3,11 @@ title: Etkinlik Kitaplığı
 ms.date: 03/30/2017
 ms.assetid: 5323e9d4-71d6-47eb-bfa6-31feac62044d
 ms.openlocfilehash: 29b3efd648ac103526f572a2cac5b8b67c4b220a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486574"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43746725"
 ---
 # <a name="activity-library"></a>Etkinlik Kitaplığı
 Bu bölüm, Gelişmiş özel etkinlikler Windows Workflow Foundation (WF) gösteren örnekler içerir.  

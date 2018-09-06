@@ -3,11 +3,11 @@ title: Tarih ve saat işlevleri
 ms.date: 03/30/2017
 ms.assetid: 971762d0-663b-4b64-8c61-352a8e6d3949
 ms.openlocfilehash: 56ef2f0b0a62f6b2cf6db5fe2c6713c58228ff6f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43556878"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43749547"
 ---
 # <a name="date-and-time-functions"></a>Tarih ve saat işlevleri
 SQL Server (SqlClient) için .NET Framework veri sağlayıcısı üzerinde işlem yapabileceğiniz date ve time işlevleri sağlayan bir `System.DateTime` giriş değeri ve dönüş bir `string`, sayısal, veya `System.DateTime` değer sonucu. Bu işlevler SqlServer ad alanında SqlClient kullanırken, kullanılabilir bağımlıdır. Bir sağlayıcının ad özelliği, hangi önekin türleri ve işlevleri gibi belirli yapılar için bu sağlayıcı tarafından kullanılan bulmak Entity Framework sağlar. Aşağıdaki tabloda SqlClient date ve time işlevleri gösterir.  

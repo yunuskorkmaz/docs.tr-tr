@@ -3,11 +3,11 @@ title: Workflowınvoker sınıfını kullanma
 ms.date: 03/30/2017
 ms.assetid: 0a966164-3990-4e78-8aa2-c6797ebbee94
 ms.openlocfilehash: d6525dbbd30aae95be4c4ee1de267736e557a541
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43552211"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43748719"
 ---
 # <a name="using-the-workflowinvoker-class"></a>Workflowınvoker sınıfını kullanma
 Bu örnek nasıl kullanılacağını gösterir <xref:System.Activities.WorkflowInvoker> bir yöntemi gibi bir etkinlik başlatmak için sınıf.  

@@ -3,11 +3,11 @@ title: ConcurrencyMode Yeniden Girme
 ms.date: 03/30/2017
 ms.assetid: b2046c38-53d8-4a6c-a084-d6c7091d92b1
 ms.openlocfilehash: c5fa690ca3b8ffe14eb9f19f0bb096b867ab992f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43533457"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43740535"
 ---
 # <a name="concurrencymode-reentrant"></a>ConcurrencyMode Yeniden Girme
 Bu örnek, bir hizmet uygulamasına ConcurrencyMode.Reentrant kullanmanın etkileri ve gerekliliğini gösterir. ConcurrencyMode.Reentrant gelir hizmet (veya geri çağırma) belirli bir zamanda yalnızca bir ileti işler (alınmak üzere `ConcurencyMode.Single`). İş parçacığı güvenliği sağlamak için Windows Communication Foundation (WCF) kilitler `InstanceContext` ileti işlenirken, böylece başka iletiler işlenebilir. Yeniden girilen modu durumunda `InstanceContext` yalnızca hizmet böylece (Bu örnekte gösterildiği gibi yeniden girilen olabilir) sonraki çağrı izin vererek giden bir çağrı yapmadan önce açılmış devamlı hizmete bir sonraki sefer kilidi almak için. Davranış göstermek için nasıl hizmet ve istemci arasında çift yönlü sözleşme kullanarak birbirlerinin iletiler gönderebilir örnek gösterir.  

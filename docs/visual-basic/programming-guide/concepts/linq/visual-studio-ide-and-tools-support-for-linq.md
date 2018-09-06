@@ -3,11 +3,11 @@ title: Visual Studio IDE ve LINQ (Visual Basic) için Araçlar desteği
 ms.date: 07/20/2015
 ms.assetid: e3bfe0d9-4a79-49cf-a31c-93297c688829
 ms.openlocfilehash: d284b47a0745b0c514f5e8c530d649c49b4cfa4f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43661782"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43779805"
 ---
 # <a name="visual-studio-ide-and-tools-support-for-linq-visual-basic"></a>Visual Studio IDE ve LINQ (Visual Basic) için Araçlar desteği
 Visual Studio tümleşik geliştirme ortamı (IDE), uygulama geliştirme LINQ destekleyen aşağıdaki özellikleri sağlar:  

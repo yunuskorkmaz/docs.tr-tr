@@ -2,12 +2,12 @@
 title: 'Temel türler (F #)'
 description: 'F # dilinde kullanılan temel temel türler keşfedin.'
 ms.date: 07/09/2018
-ms.openlocfilehash: fdb5e95e102fcf721569156c7fb3a32604fff1dd
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 8f948d066323527b09b1d3f9f4167b95b1c875cf
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37937189"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43777213"
 ---
 # <a name="basic-types"></a>Temel türler
 
@@ -38,4 +38,5 @@ Bu konu F # dilinde tanımlanmış temel türleri listeler. Bu F #'de neredeyse 
 Kullanarak 64-bit tamsayı türü için çok büyük bir tamsayı ile hesaplamalar gerçekleştirebilirsiniz [bigint](https://msdn.microsoft.com/library/dc8be18d-4042-46c4-b136-2f21a84f6efa) türü. `bigint` bir temel tür olarak kabul edilmez; Bunun için bir kısaltma olduğundan `System.Numerics.BigInteger`.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-[F# Dili Başvurusu](index.md)
+
+- [F# Dili Başvurusu](index.md)

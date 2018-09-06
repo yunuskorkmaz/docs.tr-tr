@@ -9,11 +9,11 @@ helpviewer_keywords:
 - returns C# XML tag
 ms.assetid: bb2d9958-62fc-47c7-9511-6311171f119f
 ms.openlocfilehash: fc3254062e4412c2a0640e27ce4d188b83507eea
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43540183"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43742130"
 ---
 # <a name="ltreturnsgt-c-programming-guide"></a>&lt;döndürür&gt; (C# programlama Kılavuzu)
 ## <a name="syntax"></a>Sözdizimi  

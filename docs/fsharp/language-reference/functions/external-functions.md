@@ -2,16 +2,16 @@
 title: Dış İşlevler (F#)
 description: 'Yerel kodda işlevleri çağırmak için F # dil desteği hakkında bilgi edinin.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 398697c5e0deab7f8d81ec5198ab1918bd865e13
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: db0d3362d867b07b333951f3380c6735ff471d5e
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33564488"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43747388"
 ---
 # <a name="external-functions"></a>Dış İşlevler
 
-Bu konuda yerel kodda işlevleri çağırma F # dili desteği açıklanmaktadır.
+Bu konuda, yerel kodda işlevleri çağırmak için F # dil desteği açıklanmaktadır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -22,9 +22,9 @@ extern declaration
 
 ## <a name="remarks"></a>Açıklamalar
 
-Önceki sözdiziminde *bağımsız değişkenleri* için sağlanan değişkenlerini temsil eden `System.Runtime.InteropServices.DllImportAttribute` özniteliği. İlk bağımsız değişken .dll uzantısı olmadan bu işlevi içeren dll Dosyasının adını temsil eden bir dizedir. Ek bağımsız değişkenler sağlanan herhangi bir ortak özellikleri için `System.Runtime.InteropServices.DllImportAttribute` çağırma gibi sınıfı.
+Önceki sözdiziminde, *bağımsız değişkenleri* için sağlanan bağımsız değişkenleri temsil eden `System.Runtime.InteropServices.DllImportAttribute` özniteliği. İlk bağımsız değişkeni, .dll uzantısı olmadan, bu işlevi içeren dll Dosyasının adını temsil eden bir dizedir. Herhangi bir genel özellikleri için ek bağımsız değişkenler sağlanabilir `System.Runtime.InteropServices.DllImportAttribute` çağırma kuralı gibi bir sınıf.
 
-Yerel C++ aşağıdaki dışarı aktarılan işlevi içeren DLL olduğunu varsayın.
+Yerel C++ aşağıdaki dışarı aktarılan işlevin içeren DLL olduğu varsayılır.
 
 ```cpp
 #include <stdio.h>
@@ -34,7 +34,7 @@ extern "C" void __declspec(dllexport) HelloWorld()
 }
 ```
 
-Bu işlev F # aşağıdaki kodu kullanarak çağırabilirsiniz.
+Bu işleve F #'den aşağıdaki kodu kullanarak çağırabilirsiniz.
 
 ```fsharp
 open System.Runtime.InteropServices
@@ -46,9 +46,8 @@ module InteropWithNative =
 InteropWithNative.HelloWorld()
 ```
 
-Yerel kod ile birlikte çalışabilirlik olarak adlandırılır *platform çağırma* ve CLR özelliğidir. Daha fazla bilgi için bkz: [yönetilmeyen kod ile birlikte çalışma](../../../../docs/framework/interop/index.md). Bu bölümdeki bilgiler, F # için geçerlidir.
+Yerel kod ile birlikte çalışabilirlik olarak adlandırılır *platform çağırma* ve CLR özelliğidir. Daha fazla bilgi için [yönetilmeyen kod ile birlikte çalışma](../../../../docs/framework/interop/index.md). Bu bölümdeki bilgiler, F # için geçerlidir.
 
+## <a name="see-also"></a>Ayrıca bkz.
 
-## <a name="see-also"></a>Ayrıca Bkz.
-
-[İşlevler](index.md)
+- [İşlevler](index.md)

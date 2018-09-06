@@ -2,26 +2,26 @@
 title: 'Nasıl yapılır: iki klasörün (LINQ) (C#) içeriğini karşılaştırma'
 ms.date: 07/20/2015
 ms.assetid: c7c4870e-c500-4de3-afa4-2c8e07f510e6
-ms.openlocfilehash: ef4f426ca11f6d1ac40b8080c989ddae5e4c75ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1517d1f9e451306e40835e6032e2aff2fe3e60ab
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330446"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43778444"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>Nasıl yapılır: iki klasörün (LINQ) (C#) içeriğini karşılaştırma
-Bu örnekte, iki dosya listelerini karşılaştırmak için üç yol gösterilmektedir:  
+Bu örnek, iki dosya listelerini karşılaştırmak için üç yol gösterir:  
   
--   İki dosya listeler olup olmadığını belirten bir Boole değeri için sorgulayarak aynıdır.  
+-   İki liste dosyası olup olmadığını belirten bir Boole değeri sorgulayarak aynıdır.  
   
--   Her iki klasörlerde bulunan dosyaları almak kesişimi sorgulayarak.  
+-   Her iki klasördeki dosyaları almak kesişimi sorgulayarak.  
   
 -   Bir klasör ancak diğer dosyaları almak ayarlanmış farkı sorgulayarak.  
   
     > [!NOTE]
-    >  Burada gösterilen teknikleri herhangi bir türde nesneler dizisi karşılaştırmak için uyarlanabilir.  
+    >  Burada gösterilen teknikler herhangi türünde nesne dizileri karşılaştırmak için uyarlanabilir.  
   
- `FileComparer` Burada gösterilen sınıfını standart sorgu işleçleri ile birlikte özel karşılaştırıcı sınıfının nasıl kullanılacağını gösterir. Sınıfı, gerçek senaryolarda kullanım için tasarlanmamıştır. Yalnızca ad ve uzunluk her dosyanın bayt cinsinden her klasörünün içeriğini aynı olup olmadığını belirlemek için kullanır. Gerçek hayattaki bir senaryoda, daha ayrıntılı bir eşitlik denetimi gerçekleştirmek için bu karşılaştırıcı değiştirmeniz gerekir.  
+ `FileComparer` Sınıfı burada gösterilen standart sorgu işleçleri ile birlikte bir özel bir karşılaştırıcı sınıfının nasıl kullanılacağını gösterir. Sınıfı, gerçek dünya senaryolarında kullanım için tasarlanmamıştır. Yalnızca ad ve uzunluk her dosyanın bayt cinsinden her klasörün içeriği aynı olup olmadığını belirlemek için kullanır. Gerçek hayattaki bir senaryoda, daha ayrıntılı bir eşitlik denetimi gerçekleştirmek için bu karşılaştırıcı değiştirmeniz gerekir.  
   
 ## <a name="example"></a>Örnek  
   
@@ -126,8 +126,9 @@ namespace QueryCompareTwoDirs
 ```  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- .NET Framework sürüm 3.5 veya daha yüksek System.Core.dll başvuru hedefleyen bir proje oluşturun ve `using` System.Linq ve System.IO ad alanları için yönergeleri.  
+ .NET Framework sürüm 3.5 veya üzeri bir System.Core.dll başvurusu ile hedefleyen bir proje oluşturun ve `using` System.Linq ve System.IO ad alanları için yönergeleri.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [LINQ to nesneler (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
- [LINQ ve dosya dizinleri (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [LINQ to Objects'in (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
+- [LINQ ve dosya dizinleri (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

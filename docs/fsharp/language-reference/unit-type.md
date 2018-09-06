@@ -1,18 +1,17 @@
 ---
 title: Birim Türü (F#)
-description: "Nasıl F # 'birimi' türü genellikle herhangi bir değer gerekli ya da istenen burada bir değer dili sözdizimi tarafından gerekli yer tutmak için kullanılan öğrenin."
+description: "Nasıl F # 'unit' türü genellikle burada herhangi bir değer gerekli ya da istenen dili sözdizimi tarafından bir değer gereklidir yerde tutmak için kullanılan bilgi edinin."
 ms.date: 05/16/2016
-ms.openlocfilehash: fdd6b62f9d5c6d73407d5326c7d1f66d55780682
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c3dfa5f63c25a1e8abc0f75b905c129b311479af
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33564426"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43773441"
 ---
 # <a name="unit-type"></a>Birim Türü
 
-`unit` Türüdür belirli bir değere; olmadığını gösteren bir tür `unit` türüne sahip başka bir değer yok veya gerekli olduğunda bir yer tutucu olarak davranan yalnızca tek bir değer.
-
+`unit` Türüdür; belirli bir değer devamsızlık gösteren bir türün `unit` türüne sahip başka bir değer yok veya gerekli olduğunda, bir yer tutucu olarak görev yapar yalnızca tek bir değer.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -22,19 +21,20 @@ ms.locfileid: "33564426"
 ```
 
 ## <a name="remarks"></a>Açıklamalar
-Her F # ifadesi bir değerde hesaplanmalıdır. İlgi türü değeri olan bir değer oluşturmaz ifadeler için `unit` kullanılır. `unit` Türü benzer `void` C# ve C++ gibi dillerde türü.
 
-`unit` Türü tek bir değer içeriyor ve bu değeri belirtecin tarafından gösterilen `()`.
+Her F # ifadesi bir değer olarak değerlendirilmesi gerekir. İlgi, değer türünde bir değer oluşturmaz ifadeler `unit` kullanılır. `unit` Türü benzer `void` C# ve C++ gibi dillerde türü.
 
-Değeri `unit` türü genellikle kullanılan F bir değer dili sözdizimi tarafından gerektiğinde, ancak hiçbir değer gerekli ya da istenen yer tutacak programlama # '. Bir örnek dönüş değeri olabilir bir `printf` işlevi. Çünkü önemli eylemleri `printf` işlemi ortaya işlevinde Gerçek bir değer döndürüleceğini işlevi yok. Bu nedenle, dönüş değeri türünde `unit`.
+`unit` Tek bir değer türüne sahip ve bu değer belirteci tarafından belirtilen `()`.
 
-Bazı yapıları beklediğiniz bir `unit` değeri. Örneğin, bir `do` bağlama veya en üst düzeyinde bir modülün herhangi bir kod için değerlendirilecek beklenmektedir bir `unit` değeri. Derleyici bir uyarı bildirir, bir `do` bağlama veya kod en üst düzeyinde bir modülün bir sonuç üretir dışında `unit` , aşağıdaki örnekte gösterildiği gibi kullanılmaz değeri.
+Değerini `unit` türü genellikle kullanılan bir değer, dili sözdizimi tarafından gerekli olduğu durumlarda, ancak hiçbir değer gerekli ya da istenen bir yerde tutmak için programlama içinde F #. Dönüş değeri bir örnek olabilir bir `printf` işlevi. Çünkü önemli eylemleri `printf` işlemi meydana işlevde harcanan, gerçek bir değer döndürmek işlev yok. Bu nedenle, dönüş değeri türünde `unit`.
+
+Bazı yapıları beklediğiniz bir `unit` değeri. Örneğin, bir `do` bağlama veya en üst düzeyde bir modülün herhangi bir kod için değerlendirilecek beklenmektedir bir `unit` değeri. Derleyici bir uyarı bildirir, bir `do` bağlamanız veya kodunuz en üst düzeyde bir modülün bir sonuç üretir dışında `unit` , aşağıdaki örnekte gösterildiği gibi kullanılmayan değer.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet901.fs)]
 
-Bu uyarı, işlevsel programlama özelliğidir; Diğer .NET programlama dilleri görünmez. İşlevler herhangi yan etkileri olmayan tamamen işlevsel bir programda son dönen değer işlev çağrısı yalnızca sonucudur. Sonuç göz ardı edilir, bu nedenle, bu olası bir programlama hatası değildir. F # tamamen işlevsel bir programlama dili olmamasına rağmen işlevsel programlama stili mümkün olduğunca izlemek için iyi bir uygulamadır.
+Bu uyarı, işlevsel programlama özelliğidir; Diğer .NET programlama dillerinin görünmüyor. İşlevler tüm yan etkileri de yoktur tamamen işlevsel bir programda son dönüş değeri bir işlev çağrısı yalnızca sonucudur. Bu nedenle sonuç göz ardı edilir olduğunda, olası bir programlama hatası gereklidir. F # tamamen işlevsel bir programlama dili olmamasına karşın, işlevsel programlama stil mümkün olduğunca izlemek için iyi bir uygulamadır.
 
-## <a name="see-also"></a>Ayrıca Bkz.
-[İlkel](primitive-types.md)
+## <a name="see-also"></a>Ayrıca bkz.
 
-[F# Dili Başvurusu](index.md)
+- [Temel](primitive-types.md)
+- [F# Dili Başvurusu](index.md)

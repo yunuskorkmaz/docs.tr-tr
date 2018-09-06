@@ -1,56 +1,56 @@
 ---
-title: Örnek veritabanları yükleme
+title: Örnek veritabanları indirme
 ms.date: 03/30/2017
 ms.assetid: ef9d69a1-9461-43fe-94bb-7c836754bcb5
-ms.openlocfilehash: 4f5799b395abbbb5a4e61bac9572c808bb4ad5a1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e0b842385762a486ffcc775974e15334c77b589b
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359682"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43741708"
 ---
-# <a name="downloading-sample-databases"></a>Örnek veritabanları yükleme
-Bir dizi örnekleri ve izlenecek yollarda [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Northwind örnek veritabanı ve SQL Server Express Edition belgeleri kullanın. Bu ürünler ücretsiz Microsoft sitesinden indirebilirsiniz.  
+# <a name="downloading-sample-databases"></a>Örnek veritabanları indirme
+Örnekler ve izlenecek yollar, bir dizi [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Northwind örnek veritabanı ve SQL Server Express Edition belgeleri kullanın. Bu ürünleri ücretsiz olarak Microsoft Yükleme sitesinden indirebilirsiniz.  
   
 ## <a name="downloading-the-northwind-database"></a>Northwind veritabanı indiriliyor  
   
-#### <a name="to-download-and-install-the-northwind-sample-database-for-sql-server"></a>Northwind örnek veritabanı için SQL Server yükleyip için  
+#### <a name="to-download-and-install-the-northwind-sample-database-for-sql-server"></a>İndirmek ve SQL Server için Northwind örnek veritabanını yüklemek için  
   
 1.  Internet Explorer'ı başlatın.  
   
-2.  Git [Northwind ve Pubs örnek veritabanları](http://go.microsoft.com/fwlink?linkid=64296) Web sitesi.  
+2.  Git [Northwind ve Pubs örnek veritabanları](https://go.microsoft.com/fwlink?linkid=64296) Web sitesi.  
   
 3.  **İndir**'e tıklayın.  
   
-4.  İçinde **dosya indirme** iletişim kutusunda **kaydetmek**.  
+4.  İçinde **dosya indirme** iletişim kutusunda **Kaydet**.  
   
-5.  Dosya indirdiği sonra çift tıklayarak **Nwind.exe** veritabanını yüklemek için dosya.  
+5.  Dosya indirdi sonra çift **Nwind.exe** veritabanını yüklemek için dosya.  
   
-     Veritabanı varsayılan olarak, yüklü olduğundan *sürücü*: \SQL Server 2000 örnek veritabanları.  
+     Varsayılan olarak, veritabanının yüklü olduğu *sürücü*: \SQL Server 2000 örnek veritabanları.  
   
-## <a name="downloading-sql-server-express-edition"></a>SQL Server Express sürümü indirme  
- SQL Server Express Edition ücretsiz kullanılabilir ve uygulamalarla yeniden dağıtabilirsiniz. Visual Studio kullanıyorsanız, SQL Server Express Edition Pro ve büyük sürümlerinde bulunur.  
+## <a name="downloading-sql-server-express-edition"></a>SQL Server Express sürümü indiriliyor  
+ SQL Server Express Edition ücretsiz kullanılabilir ve uygulamaları yeniden dağıtabilirsiniz. Visual Studio kullanıyorsanız, SQL Server Express Edition Pro ve üzeri sürümlerinde bulunur.  
   
-#### <a name="to-download-and-install-sql-server-express-edition"></a>SQL Server Express sürümünü karşıdan yükleyip  
+#### <a name="to-download-and-install-sql-server-express-edition"></a>SQL Server Express Edition'ı indirip  
   
 1.  Internet Explorer'ı başlatın.  
   
-2.  Git [Microsoft Download Center](http://go.microsoft.com/fwlink?linkid=74602) Web sitesi.  
+2.  Git [Microsoft Download Center](https://go.microsoft.com/fwlink?linkid=74602) Web sitesi.  
   
 3.  Anahtar sözcükler kutusuna **SQL Server Express**.  
   
-4.  tıklatın **Git**.  
+4.  Tıklayın **Git**.  
   
-5.  Sonuçları sayfasında bağlantısını **Microsoft SQL Server 2005 Express Edition** sayfa indirin.  
+5.  Sonuçları sayfasında bağlantısını tıklatın **Microsoft SQL Server 2005 Express Edition** indirme sayfası.  
   
-6.  Web sitesindeki yükleme yönergeleri izleyin.  
+6.  Web sitesi yükleme yönergelerini izleyin.  
   
-## <a name="downloading-management-studio-express"></a>Management Studio indiriliyor  
- Yüklediğiniz bir veritabanı değiştirmek istiyorsanız, veritabanından erişebilirsiniz **Sunucu Gezgini** Visual Studio tümleşik geliştirme ortamı (IDE) ya da Microsoft SQL Server Management Studio Express'i (SSMSE) kullanın .  
+## <a name="downloading-management-studio-express"></a>Management Studio Express'i karşıdan yükleme  
+ Yüklediğiniz bir veritabanını değiştirmek istiyorsanız, veritabanından erişebileceğiniz **Sunucu Gezgini** Visual Studio tümleşik geliştirme ortamı (IDE) veya Microsoft SQL Server Management Studio Express'i (SSMSE) kullanın .  
   
-#### <a name="to-download-management-studio-express"></a>Management Studio Express'i yüklemek için  
+#### <a name="to-download-management-studio-express"></a>Management Studio Express'i karşıdan yüklemek için  
   
--   Bölümündeki yönergeleri izleyin [SSMSE site](http://go.microsoft.com/fwlink/?LinkId=95933).  
+-   Konumundaki yönergeleri [SSMSE site](https://go.microsoft.com/fwlink/?LinkId=95933).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Başlarken](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)

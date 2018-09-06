@@ -1,27 +1,27 @@
 ---
-title: GetSchema ve şeması koleksiyonları
+title: GetSchema ve şema koleksiyonları
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7ab93b89-1221-427c-84ad-04803b3c64b4
-ms.openlocfilehash: 1694a6de515e5326264f345f50d0730fe2a62e4f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6c6ea41b9da9c98f8c4ee45ca1e223a29712729a
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32763949"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43742507"
 ---
-# <a name="getschema-and-schema-collections"></a>GetSchema ve şeması koleksiyonları
-**Bağlantı** her .NET Framework yönetilen sağlayıcıları uygulayan sınıflar bir **GetSchema** şu anda bağlı olduğu, veritabanında ilgili şema bilgileri almak için kullanılan yöntem ve döndürülen şema bilgileri **GetSchema** yöntemi gelen biçiminde bir <xref:System.Data.DataTable>. **GetSchema** dönmek için şema koleksiyonu belirtme ve döndürülen bilgi tutarını sınırlamak için isteğe bağlı parametreler sağlayan bir aşırı yüklenmiş yöntemin bir yöntemdir.  
+# <a name="getschema-and-schema-collections"></a>GetSchema ve şema koleksiyonları
+**Bağlantı** her .NET Framework yönetilen sağlayıcıları uygulama sınıfları bir **GetSchema** şu anda bağlı, veritabanı şema bilgilerini almak için kullanılan yöntem ve öğesinden döndürülen şema bilgileri **GetSchema** yöntemi gelen biçiminde bir <xref:System.Data.DataTable>. **GetSchema** döndürmek için şema koleksiyonu belirtme ve döndürülen bilgi tutarını sınırlamak için isteğe bağlı parametreler sağlayan aşırı yüklenmiş yöntem yöntemidir.  
   
 ## <a name="specifying-the-schema-collections"></a>Şema koleksiyonları belirtme  
- İlk isteğe bağlı parametresi **GetSchema** bir dize olarak belirtilen bir koleksiyon adını bir yöntemdir. Şema koleksiyonların iki tür vardır: tüm sağlayıcılar için ortak olan ortak şeması koleksiyonları ve her sağlayıcıya özgü belirli şeması koleksiyonları.  
+ İlk isteğe bağlı parametresi **GetSchema** bir dize olarak belirtilen bir koleksiyon adı bir yöntemdir. Şema koleksiyonları iki tür vardır: tüm sağlayıcılar için ortak olan ortak şema koleksiyonları ve her sağlayıcıya özgü belirli şema koleksiyonları.  
   
- Çağıran desteklenen şema koleksiyonları listesini belirlemek için bir .NET Framework yönetilen sağlayıcısı sorgulayabilirsiniz **GetSchema** yöntemi bağımsız değişken içermeyen veya şema koleksiyonu adı "MetaDataCollections". Bu döndürülecek bir <xref:System.Data.DataTable> desteklenen şeması koleksiyonları, her destekledikleri kısıtlama sayısı ve kullandıkları tanımlayıcı bölümlerinin sayısını listesini içeren.  
+ Desteklenen şema koleksiyonları listesi çağırarak belirlemek için bir .NET Framework yönetilen sağlayıcı sorgulayabilirsiniz **GetSchema** yöntemi bağımsız değişken olmadan veya şema koleksiyonu adı "MetaDataCollections". Bu döndürür bir <xref:System.Data.DataTable> listesiyle desteklenen şema koleksiyonları, desteklediği her kısıtlama sayısı ve kullandıkları tanımlayıcısı parçaların sayısı.  
   
-### <a name="retrieving-schema-collections-example"></a>Şema koleksiyonları örnek alma  
- Aşağıdaki örnekler nasıl kullanılacağını gösteren <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> SQL Server için .NET Framework veri sağlayıcısı yöntemi <xref:System.Data.SqlClient.SqlConnection> şema tüm içinde yer alan tabloları hakkında bilgi almak için sınıf **AdventureWorks**örnek veritabanı:  
+### <a name="retrieving-schema-collections-example"></a>Şema koleksiyonları örnek alınıyor  
+ Aşağıdaki örnek nasıl kullanılacağını gösteren <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> SQL Server için .NET Framework veri sağlayıcısı yöntemi <xref:System.Data.SqlClient.SqlConnection> tüm bulunan tabloların şema bilgilerini almak için sınıf **AdventureWorks**örnek veritabanı:  
   
 ```vb  
 Imports System.Data.SqlClient  
@@ -106,4 +106,4 @@ class Program
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Veritabanı Şema Bilgilerini Alma](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
- [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

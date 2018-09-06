@@ -6,11 +6,11 @@ helpviewer_keywords:
 - multicast delegates [C#]
 ms.assetid: 4e689450-6d0c-46de-acfd-f961018ae5dd
 ms.openlocfilehash: e3cc3f9082bd86004a7821b64c01253408c07641
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43535746"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43742143"
 ---
 # <a name="how-to-combine-delegates-multicast-delegatesc-programming-guide"></a>Nasıl yapılır: Temsilcileri Birleştirme (Çok Noktaya Yayın Temsilcileri)(C# Programlama Kılavuzu)
 Bu örnek, çok noktaya yayın temsilcileri oluşturma işlemini gösterir. Kullanışlı bir özelliği [temsilci](../../../csharp/language-reference/keywords/delegate.md) nesneleri, kullanarak birden çok nesne için bir temsilci örneği atanabilir `+` işleci. Çok noktaya yayın temsilci atanmış temsilcileri listesini içerir. Çok noktaya yayın temsilci çağrıldığında listesinde sırada, temsilciler çağırır. Yalnızca aynı türdeki temsilciler birleştirilebilir.  

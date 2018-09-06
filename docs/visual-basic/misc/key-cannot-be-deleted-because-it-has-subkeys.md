@@ -3,11 +3,11 @@ title: Alt anahtarlara sahip olduğundan anahtar silinemiyor
 ms.date: 07/20/2015
 ms.assetid: 71d7f28f-42ef-4eb7-a39e-512c40b79977
 ms.openlocfilehash: da784f0d22e0cdd5db5054645d977918fca47f4b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43563961"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43777703"
 ---
 # <a name="key-cannot-be-deleted-because-it-has-subkeys"></a>Alt anahtarlara sahip olduğundan anahtar silinemiyor
 Alt anahtarları olduğundan anahtar silinemiyor.  

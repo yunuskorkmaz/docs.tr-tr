@@ -6,11 +6,11 @@ ms.author: mairaw
 ms.date: 07/30/2018
 ms.custom: updateeachrelease
 ms.openlocfilehash: 8241b3afb518acf237c7b6181085e19576e5ce2f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43670658"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43778475"
 ---
 # <a name="globaljson-overview"></a>Global.JSON genel bakış
 

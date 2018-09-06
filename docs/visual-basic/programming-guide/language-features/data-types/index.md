@@ -9,11 +9,11 @@ helpviewer_keywords:
 - data types [Visual Basic], improving speed with
 ms.assetid: 5e1b9aaf-c7ca-4b29-9b22-0e82ed8e85e2
 ms.openlocfilehash: 83c3d9976f61513165e917da73dd50e846db3e83
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43565209"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43747356"
 ---
 # <a name="data-types-in-visual-basic"></a>Visual Basic'de Veri Türleri
 *Veri türü* programlama öğesinin, içerebileceği verilerin türünü ve bu verileri nasıl depoladı ifade eder. Veri türleri, bilgisayar belleğinde depolanabilir veya bir ifade değerlendirmesi katılabilirsiniz tüm değerleri için geçerlidir. Her değişken, değişmez değeri, sabiti, numaralandırma, özellik, yordam parametresi, yordam bağımsız değişkeninin ve yordamın dönüş değerini bir veri türüne sahip.  

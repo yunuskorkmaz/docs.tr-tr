@@ -18,11 +18,11 @@ ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 67955e2b9d523cdee02f6de548720fdad261ab4d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43659648"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43748439"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (Kod Erişimi Güvenliği İlke Aracı)
 Kod Erişim Güvenliği (CAS) İlkesi aracı (Caspol.exe) kullanıcıların ve yöneticilerin güvenlik ilkesini makine ilkesi düzeyinde, kullanıcı ilkesi düzeyinde ve kuruluş ilkesi düzeyinde değiştirmelerini sağlar.  
@@ -53,7 +53,7 @@ caspol [options]
 |**-a**[**ll**]|Bunu izleyen tüm seçeneklerin makineye, kullanıcıya ve kuruluş ilkelerine uygulanacağını belirtir. **-Tüm** seçeneği her zaman şu anda oturum açmış kullanıcının ilkesine başvuruyor. Bkz: **- customall** geçerli kullanıcıdan başka bir kullanıcının kullanıcı ilkesine başvurmak için seçeneği.|  
 |**-chggroup** {*etiket &#124;adı*} {*mship* &#124; *pset_name*&#124;<br /><br /> *bayrakları* `}`<br /><br /> veya<br /><br /> **-cg** {*etiket &#124;adı*} {*mship* &#124; *pset_name*&#124;<br /><br /> *bayrakları* `}`|Bir kod grubun üyelik koşulunu, izin kümesi veya ayarlarını değiştirir **özel**, **levelfinal**, **adı**, veya **açıklama**bayrakları. Belirtebilirsiniz *etiket* veya *adı*. *Etiket* bağımsız değişkeni belirtir (örneğin, 1 etiket. veya 1.1.) Kod grubu. *Adı* bağımsız değişkeni değiştirilecek kod grubunun adını belirtir. Çünkü *etiket* ve *adı* olabilir kullanılabileceğinden, Caspol.exe bunları ayırt edebilmelidir. Bu nedenle, *adı* bir sayı ile başlayamaz. Ayrıca, *adı* yalnızca A-Z, 0-9 ve alt çizgi karakterini içerebilir.<br /><br /> *Pset_name* bağımsız değişkeni kod grubu ile ilişkilendirmek için oluşturulan iznin adını belirtir. Hakkında bilgi için bu bölümün sonraki kısımlarında tablolara bakın *mship* ve *bayrakları* bağımsız değişkenler.|  
 |**-chgpset***psfile pset_name* <br /><br /> veya<br /><br /> **-TP** *psfile pset_name*|Adlandırılmış bir izin kümesini değiştirir. *Psfile* bağımsız değişkeni izin kümesi için yeni tanımı sağlar; her bir XML biçiminde seri hale getirilmiş bir izin kümesi dosyasıdır. *Pset_name* bağımsız değişkeni değiştirmek istediğiniz izin kümesinin adını belirtir.|  
-|**-customall***yolu* <br /><br /> veya<br /><br /> **-ca***yolu* |Bunu izleyen tüm seçeneklerin makineye, kuruluşa ve belirtilen özel kullanıcı ilkelerine uygulanacağını belirtir. İle özel kullanıcının güvenlik yapılandırma dosyasının konumunu belirtmelisiniz *yolu* bağımsız değişken.|  
+|**-customall***yolu*<br /><br /> veya<br /><br /> **-ca***yolu*|Bunu izleyen tüm seçeneklerin makineye, kuruluşa ve belirtilen özel kullanıcı ilkelerine uygulanacağını belirtir. İle özel kullanıcının güvenlik yapılandırma dosyasının konumunu belirtmelisiniz *yolu* bağımsız değişken.|  
 |**-cu**[**stomuser**] *yolu*|Adına Caspol.exe çalışmakta olan bir kullanıcıya ait olmayan özel bir kullanıcı ilkesinin yönetilmesine olanak verir. İle özel kullanıcının güvenlik yapılandırma dosyasının konumunu belirtmelisiniz *yolu* bağımsız değişken.|  
 |**-Kurumsal**<br /><br /> veya<br /><br /> **-tr**|Bunu izleyen tüm seçeneklerin kuruluş düzeyinde ilkeye uygulanacağını belirtir. Kurumsal yönetici olmayan kullanıcılar kuruluş ilkesini görüntüleyebilirler ancak onu değiştirmek için yeterli hakları yoktur. Kuruluş dışı senaryolarda bu ilke varsayılan olarak makine ve kullanıcı ilkesini engellemez.|  
 |**-e**[**xecution**] {**üzerinde** &#124; **kapalı**}|Kod yürütülmeye başlamadan önce çalıştırmak için izni denetleyen mekanizmayı etkinleştirir veya devre dışı bırakır. **Not:** bu anahtarı kaldırılmıştır [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] ve sonraki sürümler. Daha fazla bilgi için [güvenlik değişiklikleri](../../../docs/framework/security/security-changes.md).|  
@@ -85,7 +85,7 @@ caspol [options]
 |--------------|-----------------|  
 |**-allcode**|Tüm kodu belirtir. Bu üyelik koşulu hakkında daha fazla bilgi için bkz. <xref:System.Security.Policy.AllMembershipCondition?displayProperty=nameWithType>.|  
 |**-appdir**|Uygulama dizini belirtir. Belirtirseniz **– appdir** üyelik koşulu olarak URL kanıtı o kodun uygulama dizini kanıt ile karşılaştırılır. Her iki kanıt değeri de aynıysa, bu üyelik koşulu gerçekleşmiş demektir. Bu üyelik koşulu hakkında daha fazla bilgi için bkz. <xref:System.Security.Policy.ApplicationDirectoryMembershipCondition?displayProperty=nameWithType>.|  
-|**-özel***xmlfile* |Özel üyelik koşulu ekler. Zorunlu *xmlfile* bağımsız değişkeni özel üyelik koşulu, XML serileştirme içeren .xml dosyasını belirtir.|  
+|**-özel***xmlfile*|Özel üyelik koşulu ekler. Zorunlu *xmlfile* bağımsız değişkeni özel üyelik koşulu, XML serileştirme içeren .xml dosyasını belirtir.|  
 |**-karma** *hashAlg* {**-onaltılık** *hashValue* &#124; **-dosya** *assembly_file* }|Belirtilen derleme karmasına sahip kodu belirtir. Bir karmayı kod grubu üyelik koşulu olarak kullanmak için, karma değerini ya da derleme dosyasını belirtmelisiniz. Bu üyelik koşulu hakkında daha fazla bilgi için bkz. <xref:System.Security.Policy.HashMembershipCondition?displayProperty=nameWithType>.|  
 |**-pub** { **-cert** *cert_file_name*&#124;<br /><br /> **-Dosya** *signed_file_name* &#124; **-onaltılık***; hex_string* }  |Belirtilen yazılım yayıncısına sahip kodu (bir sertifika dosyasıyla, bir dosyadaki imzayla veya bir X 509 sertifikasının onaltılı gösterimiyle sunulduğu şekilde) belirtir. Bu üyelik koşulu hakkında daha fazla bilgi için bkz. <xref:System.Security.Policy.PublisherMembershipCondition?displayProperty=nameWithType>.|  
 |**-site** *Web sitesi*|Belirtilen kaynak siteyi içeren kodu belirtir. Örneğin:<br /><br /> `-site** www.proseware.com`<br /><br /> Bu üyelik koşulu hakkında daha fazla bilgi için bkz. <xref:System.Security.Policy.SiteMembershipCondition?displayProperty=nameWithType>.|  

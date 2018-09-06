@@ -1,13 +1,13 @@
 ---
 title: Dizini Oluşturulan Özellikler (F#)
-description: 'Sıralı verilerine dizi benzeri erişim sağlayan özellikleri olan F # dizin oluşturulmuş özellikleri hakkında bilgi edinin.'
+description: 'Sıralı verilerine dizi benzeri erişim sağlayan özellikleri olan F # dizinli özellikleri hakkında bilgi edinin.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 503cef9693cfe5e13d4e2d19a721d65bff1ce749
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: e56e4e2ea3f35df4c8ec46012357242cb6ce69f3
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34235947"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43749601"
 ---
 # <a name="indexed-properties"></a>Dizini Oluşturulan Özellikler
 
@@ -17,8 +17,7 @@ ms.locfileid: "34235947"
 * `Ordinal`
 * `Cardinal`
 
-F # üye dizi benzeri erişim sağlamak için bu üç adlarından birini adlandırılmalıdır. `IndexerName` Aşağıdaki üç seçenekten birini temsil etmek için kullanılır:
-
+Bir F # üye bir dizi benzeri erişim sağlamak için bu üç ad adlandırılmalıdır. `IndexerName` Aşağıdaki üç seçenekten birini temsil etmek için kullanılır:
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -46,17 +45,18 @@ member self-identifier.IndexerName
 ```
 
 ## <a name="remarks"></a>Açıklamalar
-Önceki sözdizimi forms hem de Dizinlenmiş özelliklerin nasıl tanımlanacağı Göster bir `get` ve `set` yöntemi, sahip bir `get` yöntemi yalnızca, veya bir `set` yalnızca yöntemi. Her ikisi de yalnızca get ve yalnızca kümesi için sözdizimini sözdizimini birleştirebilir ve hem get hem de kümesine sahip bir özellik üretir. Bu ikinci form farklı erişilebilirlik değiştiricileri ve öznitelikleri almada yerleştirin ve yöntemleri ayarlamanıza olanak sağlar.
 
-Zaman *IndexerName* olan `Item`, derleyici özelliği bir varsayılan dizin oluşturulmuş özellik olarak değerlendirir. A *varsayılan dizin oluşturulmuş özellik* nesne örneğinde dizi benzeri sözdizimi kullanarak erişebileceğiniz bir özelliktir. Örneğin, varsa `obj` bu özellik, söz dizimi tanımlayan türünde bir nesne `obj.[index]` özelliğine erişmek için kullanılır.
+Her ikisi de Dizinlenmiş özelliklerin nasıl tanımlanacağı önceki sözdizimi formlarda gösterilen bir `get` ve `set` yöntemi sahip bir `get` yöntemi yalnızca veya bir `set` yalnızca yöntemi. Her ikisi de yalnızca get ve yalnızca kümesi için sözdizimini sözdizimini birleştirin ve hem get hem de kümesi olan bir özellik oluşturur. Bu ikinci form üzerinde get farklı erişilebilirlik değiştiricileri ve öznitelikleri yerleştirin ve yöntemleri ayarlamanıza olanak sağlar.
 
-Varsayılan olmayan dizin oluşturulmuş özellik erişmek için söz dizimi özelliğin adını ve parantez içinde dizin sağlamaktır. Örneğin, özellik ise `Ordinal`, yazdığınız `obj.Ordinal(index)` erişmek için.
+Zaman *IndexerName* olduğu `Item`, derleyici özelliği bir varsayılan dizini oluşturulan özellik olarak değerlendirir. A *varsayılan dizini oluşturulan özellik* Pro instanci objektu dizi benzeri sözdizimi kullanarak erişebileceğiniz bir özelliktir. Örneğin, varsa `obj` bu özellik, söz dizimi tanımlayan türünde bir nesnedir `obj.[index]` özelliğine erişmek için kullanılır.
 
-Kullandığınız formdan bağımsız olarak, curried form için her zaman kullanmalısınız `set` dizinlenmiş özelliğine yöntemi. Curried işlevleri hakkında daha fazla bilgi için bkz: [işlevler](../functions/index.md).
+Varsayılan olmayan dizine özelliğine erişmek için söz dizimi, özelliğin adını ve parantez içinde dizin sağlamaktır. Örneğin, özellik ise `Ordinal`, yazdığınız `obj.Ordinal(index)` erişmek için.
+
+Kullandığınız formdan ne olursa olsun, curried form için her zaman kullanmalısınız `set` bir dizinlenmiş özellik yöntemi. Curried işlevleri hakkında daha fazla bilgi için bkz: [işlevleri](../functions/index.md).
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki kod örneği, tanım ve varsayılan ve get ve set yöntemlerinin varsayılan olmayan Dizinli Özellikler kullanımını gösterir.
+Aşağıdaki kod örneği, varsayılan ve get ve set yöntemlerinin varsayılan olmayan Dizinli Özellikler ve tanımı gösterilmektedir.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3301.fs)]
 
@@ -68,12 +68,14 @@ ONE first two second three third four fourth five fifth six 6th
 seven seventh eight eighth nine ninth ten tenth
 ```
 
-## <a name="indexed-properties-with-multiple-index-variables"></a>Birden çok dizin değişkenleriyle Dizinli Özellikler
-Dizinli Özellikler birden fazla dizin değişkeni olabilir. Özelliği kullanıldığında, bu durumda, değişkenleri virgülle ayrılır. Böyle bir özellik kümesi yönteminde anahtarları içeren bir tanımlama grubu ilki, ikinci ayarlanan değer ise iki curried bağımsız olması gerekir.
+## <a name="indexed-properties-with-multiple-index-variables"></a>Birden çok dizin değişkenleriyle dizini oluşturulan özellikler
 
-Aşağıdaki kod, birden çok dizin değişkenleriyle dizinli bir özelliği kullanımını göstermektedir.
+Dizinli Özellikler birden fazla dizin değişkeni olabilir. Özelliği kullanıldığında, bu durumda, değişkenlerin virgülle ayrılır. Böyle bir özellik kümesi yöntemi ilki anahtarları içeren bir tanımlama grubu, ve ikinci ayarlanan değer iki curried bağımsız olması gerekir.
+
+Aşağıdaki kod, birden çok dizin değişkenleri içeren bir dizini oluşturulmuş özelliğe kullanımını gösterir.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3302.fs)]
-    
-## <a name="see-also"></a>Ayrıca Bkz.
-[Üyeler](index.md)
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Üyeler](index.md)

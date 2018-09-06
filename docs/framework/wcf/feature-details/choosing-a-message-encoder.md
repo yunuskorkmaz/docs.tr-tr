@@ -3,11 +3,11 @@ title: İleti Kodlayıcı Seçme
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
 ms.openlocfilehash: 5d2b55f04954cdd855ff9e224d2bc0405919f7a3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43535194"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43773113"
 ---
 # <a name="choosing-a-message-encoder"></a>İleti Kodlayıcı Seçme
 Windows Communication Foundation (WCF) dahil edilen ileti kodlayıcılarda arasından seçim ölçütleri bu konuda ele alınmıştır: ikili ve metin iletisi iletim en iyi duruma getirme mekanizması (MTOM).  
