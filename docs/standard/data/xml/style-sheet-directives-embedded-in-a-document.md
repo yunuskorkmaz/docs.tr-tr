@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: d79fb295-ebc7-438d-ba1b-05be7d534834
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 08bd33aab6cbeeeb9060f3de3565a05896c6ba7f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 65987c5e29d593758b21259d6367202c882df2de
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43777456"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43882920"
 ---
 # <a name="style-sheet-directives-embedded-in-a-document"></a>Belgeye katıştırılmış stil sayfası yönergeleri
 
@@ -37,6 +37,6 @@ Bölüm 6 ad alanları XML belirtiminde olan etkisini **yük** ve **LoadXml** y�
 
 World Wide Web Consortium (W3C) göre [XML ile ilişkilendirme stil sayfaları, sürüm 1.0 öneri belgeleri](https://www.w3.org/TR/xml-stylesheet/), bir XSLT stil sayfası bir XML belgesi ile ilişkilendirmek için işleme yönergesi `<?xml-stylesheet?>`, ile bir iki nokta üst üste değiştirerek dash.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-[XML Belge Nesne Modeli (DOM)](xml-document-object-model-dom.md)  
+- [XML Belge Nesne Modeli (DOM)](xml-document-object-model-dom.md)

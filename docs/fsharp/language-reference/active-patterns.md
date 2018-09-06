@@ -2,12 +2,12 @@
 title: Etkin Desenler (F#)
 description: 'Etkin desenler, F # programlama dilinin girdi verileri alt bölümlere adlandırılmış bölümler tanımlamak için kullanmayı öğrenin.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 964ae8eb6db0191fab1e5a816e29bd0819605f2c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 4fb7d3e2b9c7e6f1c1ed9d64a47728c7f40017c8
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43786508"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43881882"
 ---
 # <a name="active-patterns"></a>Etkin Desenler
 
@@ -44,7 +44,7 @@ Bu program çıktısı aşağıdaki gibidir:
 
 Başka bir Etkin desenler veri türleri aynı temel alınan verilerin çeşitli olası gösterimleri olduğunda gibi birden çok yolla ayırmak için kullanılır. Örneğin, bir `Color` nesne ayrılmış bir RGB temsili ya da bir HSB temsili.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5003.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5003.fs)]
 
 Yukarıdaki program çıktısı aşağıdaki gibidir:
 
@@ -72,9 +72,9 @@ Sonuçta elde edilen desen eşleştirme ifadeleri çok okunabilir, büyük ölç
 
 ## <a name="partial-active-patterns"></a>Kısmi Etkin desenler
 
-Bazen, giriş alanı yalnızca bir kısmını bölümlemek gerekir. Bu durumda, kısmi desenleri, bazı girişler eşleşen ancak diğer girişler eşleştirilecek başarısız yazın. Her zaman bir değer üretmez Etkin desenler çağrılır *kısmi Etkin desenler*; bunlar seçeneği türünde bir dönüş değerine sahip. Kısmi bir etkin düzeni tanımlamak için Muz klipleri içinde Desen listesinin sonunda joker karakteri (_) kullanın. Aşağıdaki kodu kısmi bir etkin desen kullanımını gösterir.
+Bazen, giriş alanı yalnızca bir kısmını bölümlemek gerekir. Bu durumda, kısmi desenleri, bazı girişler eşleşen ancak diğer girişler eşleştirilecek başarısız yazın. Her zaman bir değer üretmez Etkin desenler çağrılır *kısmi Etkin desenler*; bunlar seçeneği türünde bir dönüş değerine sahip. Kısmi bir etkin düzeni tanımlamak için bir joker karakter kullanın. (\_) Muz klipleri içinde Desen listesinin sonunda. Aşağıdaki kodu kısmi bir etkin desen kullanımını gösterir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5004.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5004.fs)]
 
 Önceki örnek çıktısı aşağıdaki gibidir:
 
@@ -88,7 +88,7 @@ Something else : Not matched.
 
 Kısmi Etkin desenler kullanırken bazen tek tek seçimler ayrık veya birbirini dışlayan olabilir, ancak bunlar olmaması. Bazı sayılar kareler hem 64 gibi küpler olduğundan aşağıdaki örnekte, deseni kare ve küp deseni ayrık, değildir. Aşağıdaki program tüm tamsayıların en fazla kare hem de küp olan 1000000 yazdırır.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5005.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5005.fs)]
 
 Çıktı aşağıdaki gibidir:
 
@@ -109,7 +109,7 @@ Kısmi Etkin desenler kullanırken bazen tek tek seçimler ayrık veya birbirini
 
 Etkin desenler, eşleştirilen öğesi için en az bir bağımsız değişkeni her zaman alır ancak adı bu durumda da, ek bağımsız değişken alabilir *parametreli etkin desen* uygular. Ek bağımsız değişkenler özelleştirilmesi için genel bir desen sağlar. Örneğin, normal ifade ayrıca kısmi etkin deseni kullanan aşağıdaki kod, olduğu gibi ek bir parametre olarak dizeler genellikle ayrıştırmak için normal ifadeleri kullanma Etkin desenler dahil `Integer` önceki kod örneğinde tanımlanan. Bu örnekte, çeşitli tarih biçimleri için normal ifadeleri kullanma dizeleri genel ParseRegex etkin düzeni özelleştirildiği verilir. Tamsayı etkin deseni, eşleşen dizeleri DateTime oluşturucuya geçirilen tamsayı dönüştürmek için kullanılır.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5006.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5006.fs)]
 
 Önceki kodun çıktısı aşağıdaki gibidir:
 
@@ -119,7 +119,7 @@ Etkin desenler, eşleştirilen öğesi için en az bir bağımsız değişkeni h
 
 Etkin desenler yalnızca eşleşen bir ifade deseni için sınırlı değildir, ayrıca bunları let bağlamaları üzerinde kullanabilirsiniz.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5007.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5007.fs)]
 
 Önceki kodun çıktısı aşağıdaki gibidir:
 

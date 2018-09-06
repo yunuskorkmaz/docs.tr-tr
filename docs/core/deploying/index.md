@@ -3,13 +3,13 @@ title: .NET core uygulama dağıtımı
 description: Bir .NET Core uygulamasını dağıtma.
 author: rpetrusha
 ms.author: ronpet
-ms.date: 04/18/2017
-ms.openlocfilehash: ab65beaa293f7543a8436f913a1e5bf89ca7281b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.date: 09/03/2018
+ms.openlocfilehash: 2ef63ebd737739b2c8e671d982c3844135689ab4
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43562012"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43891317"
 ---
 # <a name="net-core-application-deployment"></a>.NET core uygulama dağıtımı
 
@@ -41,7 +41,9 @@ Bazı dezavantajları vardır:
 
 ## <a name="self-contained-deployments-scd"></a>Bağımsız dağıtımlar (SCD)
 
-Kendi içinde bir dağıtım için uygulamanızı ve tüm gerekli üçüncü taraf bağımlılıkları sürümü, uygulama oluşturmak için kullanılan bir .NET Core ile birlikte dağıtın. Bir SCD oluşturma içermez [yerel .NET Core bağımlılıklarını](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) çeşitli platformlarda, bu nedenle bu uygulama çalışmadan önce mevcut olmalıdır. Çalışma zamanında sürüm bağlama hakkında daha fazla bilgi için makaleye bakın [.NET core'da sürüm bağlama](../versions/selection.md)
+Kendi içinde bir dağıtım için uygulamanızı ve tüm gerekli üçüncü taraf bağımlılıkları sürümü, uygulama oluşturmak için kullanılan bir .NET Core ile birlikte dağıtın. Bir SCD oluşturma içermez [yerel .NET Core bağımlılıklarını](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) çeşitli platformlarda, bu nedenle bu uygulama çalışmadan önce mevcut olmalıdır. Çalışma zamanında sürüm bağlama hakkında daha fazla bilgi için makaleye bakın [sürüm bağlama .NET core'da](../versions/selection.md).
+
+NET Core 2.1 SDK (sürüm 2.1.300) ile başlayarak, .NET Core destekler *düzeltme eki sürümü ileri sarma*. .NET Core araçları kendi içinde bir dağıtım oluşturduğunuzda, otomatik olarak en son hizmet verilen çalışma zamanı .NET Core sürümünün içerir. Bu uygulama hedeflerinizi. (En son hizmet verilen çalışma zamanı için güvenlik yamaları ve diğer hata düzeltmeleri içerir.) Hizmet verilen çalışma zamanı yapı sisteminizde mevcut olması gerekmez; NuGet.org adresinden otomatik olarak yüklenir. İletme, düzeltme eki sürümü piyasaya çıkışını geri çevirmek yönergeler de dahil olmak üzere daha fazla bilgi için bkz. [müstakil dağıtım çalışma zamanı, ileri sarma](runtime-patch-selection.md).
 
 FDD ve SCD dağıtımları ayrı konak yürütülebilir dosyaları, kullandığından, yürütülebilir bir konak için bir SCD yayımcı imza ile oturum açabilirsiniz.
 
@@ -58,6 +60,8 @@ Ayrıca, bir dizi dezavantajları vardır:
 - .NET Core, dağıtım paketinde bulunduğundan, dağıtım paketleri önceden oluşturduğunuz hedef platformlar seçmeniz gerekir.
 
 - .NET Core yanı sıra, uygulamanızı ve üçüncü taraf bağımlılıkları içerecek şekilde sahip olduğundan, dağıtım paketi görece büyük boyutudur.
+
+  .NET Core 2.0 ile başlayarak, yaklaşık 28 MB Linux sistemlerinde dağıtımınızın boyutunu .NET Core kullanarak azaltabilir [ *Genelleştirme sabit modu*](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md). Linux üzerinde .NET Core dayanan normalde, [ICU kitaplıkları](https://github.com/dotnet/docs/issues/http%22//icu-project.org) Genelleştirme desteği. Sabit modunda kitaplıkları dağıtımınıza dahil edilmez ve tüm kültürler gibi davranırlar [invariannt kültür](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType).
 
 - Bir sistem için çok sayıda bağımsız bir .NET Core uygulamaları dağıtma, önemli miktarda disk alanı, her uygulama çoğaltmaları bu yana .NET Core dosyaları kullanabilir.
 

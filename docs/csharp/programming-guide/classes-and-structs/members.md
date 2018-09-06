@@ -6,11 +6,11 @@ helpviewer_keywords:
 - C# language, type members
 ms.assetid: 4a30a4ab-d690-4936-9124-92ce9448665a
 ms.openlocfilehash: dbfd0c48dc59b094af49e65d2ed4fcd4e2a70ff0
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43740000"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43884819"
 ---
 # <a name="members-c-programming-guide"></a>Üyeler (C# Programlama Kılavuzu)
 Sınıflar ve yapılar, kendi verilerini ve davranışlarını temsil eden üyelere sahiptir. Sınıfında, devralma hiyerarşisindeki tüm sınıflarda bildirilen tüm üyeleri (oluşturucular ve sonlandırıcılar dışında) bir sınıfın üyeleri bildirilen tüm üyeleri içerir. Temel sınıflardaki özel üyeler devralınır ancak türetilmiş sınıflardan erişilebilir değildir.  

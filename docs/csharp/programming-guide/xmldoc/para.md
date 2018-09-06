@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <para> C# XML tag
 - para C# XML tag
 ms.assetid: c74b8705-29df-40b1-bff5-237492b0e978
-ms.openlocfilehash: 6b38a5c1321db8eae8eee1b8b167090dad50ebab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e51df23db97aadddbc4c4e8c3cb38bda7ff7e3a4
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337268"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44035160"
 ---
 # <a name="ltparagt-c-programming-guide"></a>&lt;para&gt; (C# programlama Kılavuzu)
 ## <a name="syntax"></a>Sözdizimi  
@@ -27,13 +27,14 @@ ms.locfileid: "33337268"
  Paragraf metni.  
   
 ## <a name="remarks"></a>Açıklamalar  
- \<Para > gibi olan bir etiketi kullanmak için etiket [ \<Özet >](../../../csharp/programming-guide/xmldoc/summary.md), [ \<açıklamalar >](../../../csharp/programming-guide/xmldoc/remarks.md), veya [ \<döndürür >](../../../csharp/programming-guide/xmldoc/returns.md)ve yapısı metne eklemenize olanak tanır.  
+ \<Para > gibi olan bir etiketi içinde kullanmak için etiket [ \<Özet >](../../../csharp/programming-guide/xmldoc/summary.md), [ \<remarks >](../../../csharp/programming-guide/xmldoc/remarks.md), veya [ \<döndürür >](../../../csharp/programming-guide/xmldoc/returns.md)ve metnin yapısını eklemenizi sağlar.  
   
- İle derleme [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) bir dosyaya işlem belgesi açıklamaları için.  
+ Derleme [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) işlem belgeleri açıklamaları için bir dosya için.  
   
 ## <a name="example"></a>Örnek  
  Bkz: [ \<Özet >](../../../csharp/programming-guide/xmldoc/summary.md) kullanma örneği için \<para >.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [Belge Açıklamaları için Önerilen Etiketler](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [Belge Açıklamaları için Önerilen Etiketler](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

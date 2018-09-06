@@ -7,25 +7,26 @@ helpviewer_keywords:
 ms.assetid: 98aee307-dde6-4cad-bb58-078497b8064f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5cde1af00fb10f7a2ec7dd340575b3cfb4814f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 78be13bcc02d2df16c4dc6b0b7fb8479d62afbe5
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580165"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43883218"
 ---
 # <a name="for-further-reading-parallel-programming"></a>Daha Fazla Bilgi İçin (Paralel Programlama)
 
-Aşağıdaki kaynaklar .NET içinde paralel programlama hakkında ek bilgi içerir:
+Aşağıdaki kaynaklar, .NET içinde paralel programlama hakkında ek bilgiler içermektedir:
 
-- [Paralel programlama desenleri: anlama ve .NET Framework 4 paralel desenlerle uygulama](https://www.microsoft.com/download/details.aspx?id=19222) belge açıklar ortak paralel desen ve bunları kullanan paralel bileşenleri geliştirmek için en iyi yöntemler desenler.
+- [Paralel programlama için desenler: anlama ve .NET Framework 4 ile paralel düzenleri uygulama](https://www.microsoft.com/download/details.aspx?id=19222) belge ortak paralel desenler ve bunları kullanan paralel bileşenleri geliştirmek için en iyi uygulamalar açıklanmaktadır desenler.
 
-- [Ayrıştırma ve çok çekirdekli mimarileri üzerinde düzenleme için Tasarım desenleri](https://msdn.microsoft.com/library/ff963553.aspx) defteri paralel programlama için .NET Framework 4'te tanıtılan Paralel Programlama Desteği kullanmak desenleri açıklar.
+- [Ayrıştırma ve çok çekirdekli mimarilerde koordinasyon için Tasarım desenleri](https://msdn.microsoft.com/library/ff963553.aspx) kitap paralel programlama için .NET Framework 4'te tanıtılan Paralel Programlama Desteği desenleri açıklar.
 
-- [Paralel programlama .NET ile](https://blogs.msdn.microsoft.com/pfxteam/) blog .NET içinde paralel programlama hakkında birçok ayrıntılı makaleleri içerir.
+- [.NET ile paralel programlama](https://blogs.msdn.microsoft.com/pfxteam/) blog .NET içinde paralel programlama hakkında çok ayrıntılı makaleleri içerir.
 
-- [Paralel programlama .NET Framework ile için örnek](https://code.msdn.microsoft.com/ParExtSamples) sayfası Ara ve Gelişmiş paralel programlama tekniklerinin gösteren birçok örnekleri içerir.
+- [.NET Framework ile paralel programlama için örnekler](https://code.msdn.microsoft.com/ParExtSamples) sayfası Ara ve Gelişmiş paralel programlama tekniklerini göstermek pek çok örneği içerir.
 
-## <a name="see-also"></a>Ayrıca bkz.  
- [Paralel bilgi işlem Geliştirici Merkezi](https://msdn.microsoft.com/vstudio/bb964701)  
- [Visual C++'ta Paralel Programlama](/cpp/parallel/parallel-programming-in-visual-cpp)  
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Paralel bilgi işlem Geliştirici Merkezi](https://msdn.microsoft.com/vstudio/bb964701)  
+- [Visual C++'ta Paralel Programlama](/cpp/parallel/parallel-programming-in-visual-cpp)  

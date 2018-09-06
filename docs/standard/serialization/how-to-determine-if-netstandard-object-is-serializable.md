@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl yapılır: .NET standart bir nesne seri hale getirilebilir olup olmadığını belirler'
-description: Çalışma zamanında .NET standart bir türü seri olup olmadığını belirlemek gösterilmiştir.
+title: .NET Standard nesnesinin serileştirilebilir olup olmadığını belirleme
+description: Çalışma zamanında bir .NET Standard türü seri olup olmadığını belirlemek nasıl gösterir.
 ms.date: 10/20/2017
 dev_langs:
 - csharp
@@ -10,31 +10,31 @@ helpviewer_keywords:
 - objects, serializing steps
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 247eed2e7091930c6bcfaa524296b45350dd6510
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 196e99ab1f1a0baae53c6a1dc295b135e36fbfe0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580994"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43881414"
 ---
-# <a name="how-to-determine-if-a-net-standard-object-is-serializable"></a>Nasıl yapılır: .NET standart bir nesne seri hale getirilebilir olup olmadığını belirler
+# <a name="how-to-determine-if-a-net-standard-object-is-serializable"></a>.NET Standard nesnesinin serileştirilebilir olup olmadığını belirleme
 
-.NET standart türleri ve bu standart sürümüne uygun belirli .NET uygulamaları üzerinde mevcut olmalıdır üyeleri tanımlayan bir özelliğidir. Ancak, .NET standart bir türü seri hale getirilebilir olup olmadığını tanımlamaz. .NET standart Kitaplığı'nda tanımlanan türleri ile işaretlenmemiş <xref:System.SerializableAttribute> özniteliği. Bunun yerine, belirli .NET, .NET Framework ve .NET Core gibi belirli bir türü seri hale getirilebilir olup olmadığını belirlemek boş uygulamalarıdır. 
+.NET Standard türleri ve bu standart sürümüne uygun belirli .NET uygulamaları üzerinde bulunması gereken üyeleri tanımlayan bir özelliğidir. Ancak, .NET Standard seri hale getirilebilir bir tür olup olmadığını tanımlamaz. .NET Standard Kitaplığı'nda tanımlanan türleri ile işaretlenmemiş <xref:System.SerializableAttribute> özniteliği. Bunun yerine, belirli .NET uygulamaları, .NET Framework ve .NET Core gibi belirli bir tür serileştirilebilir olup olmadığını belirlemek ücretsizdir. 
 
-Bir kitaplık hedefleyen .NET standart geliştirdik, kitaplığınızın .NET standardını destekleyen herhangi bir .NET uygulaması tarafından tüketilebilir. Bu, önceden belirli bir türü seri hale getirilebilir olup olmadığını bilemezsiniz olduğunu anlamına gelir; yalnızca, çalışma zamanında seri hale getirilebilir olup olmadığını belirler.
+Hedefleyen .NET Standard kitaplığı geliştirdiyseniz kitaplığınızı .NET Standard destekleyen herhangi bir .NET uygulaması tarafından kullanılır. Başka bir deyişle, önceden belirli bir türü seri hale getirilebilir olduğunu bildiğiniz olamaz; yalnızca, çalışma zamanında serileştirilebilir olup olmadığını belirler.
 
-Değerini alarak nesneyi çalışma zamanında seri hale getirilebilir olup olmadığını belirleyebilirsiniz <xref:System.Type.IsSerializable> özelliği bir <xref:System.Type> o nesnenin türünü temsil eden nesne. Aşağıdaki örnek bir uygulama sağlar. Bunu tanımlayan bir `IsSerializable(Object)` gösterir genişletme yöntemi olup <xref:System.Object> örneği hale getirilebilir.
+Bir nesnenin değerini alarak çalışma zamanında serileştirilebilir olup olmadığını belirlemek <xref:System.Type.IsSerializable> özelliği bir <xref:System.Type> nesnenin türünü temsil eden nesne. Aşağıdaki örnek, bir uygulamasını sağlar. Tanımladığı bir `IsSerializable(Object)` gösteren bir genişletme yöntemi olmadığını <xref:System.Object> örneği seri hale getirilemiyor.
 
 [!code-csharp[is-a-type-serializable](~/samples/snippets/standard/serialization/is-serializable/csharp/program.cs#2)]
 [!code-vb[is-a-type-serializable](~/samples/snippets/standard/serialization/is-serializable/vb/library.vb#2)]
 
-Ardından, herhangi bir nesne, sıralanabilir ve aşağıdaki örnekte gösterildiği gibi geçerli .NET uygulaması seri olup olmadığını belirlemek amacıyla yöntemi geçirebilirsiniz:
+Ardından, sıralanabilir ve geçerli .NET uygulaması aşağıdaki örnekte gösterildiği gibi seri durumdan olup olmadığını belirlemek için yöntemin herhangi bir nesne geçirebilirsiniz:
 
 [!code-csharp[test-is-a-type-serializable](~/samples/snippets/standard/serialization/is-serializable/csharp/program.cs#1)]
 [!code-vb[test-is-a-type-serializable](~/samples/snippets/standard/serialization/is-serializable/vb/program.vb#1)]
 
-# <a name="see-also"></a>Ayrıca bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-[İkili seri hale getirme](binary-serialization.md)   
-<xref:System.SerializableAttribute?displayProperty=nameWithType>    
-<xref:System.Type.IsSerializable?displayProperty=nameWithType>   
+- [İkili seri hale getirme](binary-serialization.md)
+- <xref:System.SerializableAttribute?displayProperty=nameWithType>
+- <xref:System.Type.IsSerializable?displayProperty=nameWithType>

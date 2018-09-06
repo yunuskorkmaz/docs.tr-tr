@@ -10,45 +10,46 @@ helpviewer_keywords:
 ms.assetid: cc42267f-bb7a-427a-845e-df97408528d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f7202e10e41b9f114f42a4502ee2e6694bf3821
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6d8c445de44a69f6c0cb1eaefa0e59d682288318
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573752"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43885541"
 ---
 # <a name="sealing"></a>Mühürleme
-Nesne odaklı çerçeveleri özelliklerini geliştiriciler genişletmek ve framework tasarımcıların beklenmedik şekilde özelleştirin biridir. Güç ve Genişletilebilir tasarımının tehlike budur. Framework'ünüzün tasarlarken, bu nedenle, olduğu, istendiğinde Genişletilebilirliğe dikkatle tasarlamak için ve genişletilebilirlik tehlikeli olduğunda sınırlamak için çok önemlidir.  
+Nesne yönelimli çerçeveleri özelliklerinin geliştiriciler genişletmek ve framework Designer'ların beklenmedik şekilde özelleştirin biridir. Güç ve Genişletilebilir tasarım tehlike budur. Framework'ünüzün tasarlarken, bu nedenle olduğu için genişletilebilirlik, istendiğinde dikkatlice tasarlayın ve tehlikeli olduğunda genişletilebilirlik sınırlamak için çok önemlidir.  
   
- Genişletilebilirlik engeller güçlü bir mekanizma mühürleme. Sınıf veya tek tek üyeleri korumaya. Bir sınıf mühürleme kullanıcıların sınıfından devralan engeller. Üye mühürleme, kullanıcıların belirli bir üye önlemiş olursunuz.  
+ Genişletilebilirlik engelleyen güçlü bir mekanizma mühürleme. Sınıf veya bireysel üyelere adımını. Bir sınıf mühürleme kullanıcıların sınıftan devralmasını engeller. Üye mühürleme, kullanıcıların belirli bir üye geçersiz kılmasını önler.  
   
  **X DO NOT** sınıfları Bunu yapmak için iyi bir neden olmadan mühürlemek.  
   
- Bir sınıf bir genişletilebilirlik senaryo düşündüğünüz yapılamıyor çünkü mühürleme iyi bir nedenle değil. Framework kullanıcılar kolaylık üye ekleme gibi çeşitli nonobvious nedeniyle sınıflardan devralmak ister. Bkz: [korumasız sınıfları](../../../docs/standard/design-guidelines/unsealed-classes.md) nonobvious nedenleri örnekleri için kullanıcıları bir türünden devralan istiyor.  
+ Bir sınıf bir genişletilebilirlik senaryo düşündüğünüz olamaz çünkü mühürleme geçerli bir nedeniniz değil. Framework kullanıcılarını kolaylık üyeleri ekleme gibi çeşitli nonobvious nedeniyle sınıflardan devralmasına izin ister. Bkz: [Mühürsüz sınıflar](../../../docs/standard/design-guidelines/unsealed-classes.md) nonobvious nedenlerden örnekler için kullanıcıların bir türden devralmak istediğiniz.  
   
- Bir sınıf mühürleme iyi nedenleri şunlardır:  
+ Bir sınıf mühürleme için iyi nedenler şunlardır:  
   
 -   Sınıfı statik bir sınıftır. Bkz: [statik sınıf tasarımı](../../../docs/standard/design-guidelines/static-class.md).  
   
--   Sınıfı, güvenlik açısından duyarlı gizli devralınan korunan üyeleri depolar.  
+-   Sınıfı, güvenlik açısından duyarlı gizli dizileri devralınan korunan üyeleri depolar.  
   
--   Çok sayıda sanal üye sınıfı devralır ve tek tek mühürleme maliyetini korumasız sınıfı bırakarak, ağır basıyor.  
+-   Sınıf çok sayıda sanal üyelerini devralır ve ayrı ayrı mühürleme maliyeti korumasız sınıfı bırakmanın basıyor.  
   
--   Sınıf çok hızlı çalışma zamanı arama gerektiren bir özniteliktir. Korumalı öznitelikleri korumasız olanları daha biraz daha yüksek performans düzeyine sahip. Bkz: [öznitelikleri](../../../docs/standard/design-guidelines/attributes.md).  
+-   Sınıf çok hızlı çalışma zamanı arama gerektiren bir özniteliktir. Korumalı öznitelikleri korumasız yapılandırılanlardan biraz daha yüksek performans düzeyine sahip. bkz: [öznitelikleri](../../../docs/standard/design-guidelines/attributes.md).  
   
  **X DO NOT** korumalı türlerde korunan veya sanal üyeleri bildirme.  
   
- Tanımı gereği, korumalı türlerde kaynağından devralındı olamaz. Bu, korumalı türlerde korunan üyeleri çağrılamaz ve korumalı türlerde sanal yöntemleri geçersiz kılınamaz anlamına gelir.  
+ Tanımı gereği, mühürlenmiş türler öğesinden devralınamaz. Yani mühürlenmiş türler üzerindeki korunan üyeleri çağrılamaz ve mühürlenmiş türler üzerindeki sanal yöntemleri geçersiz kılınamaz.  
   
  **✓ CONSIDER** kılmanız üyeleri mühürleme.  
   
- Sanal üyeler Tanıtımı sonuçlanabilir sorunları (ele [sanal üyeler](../../../docs/standard/design-guidelines/virtual-members.md)) biraz daha düşük bir derecede rağmen de geçersiz kılmaları uygulamak. Bir geçersiz kılma korumalı hale getirilmesiyle, devralma hiyerarşisinde o noktadan başlayarak bu sorunlardan ayrıntılarından korur.  
+ Sanal üye eklemesini kaynaklanan sorunları (ele [sanal üyeleri](../../../docs/standard/design-guidelines/virtual-members.md)) ancak biraz daha düşük bir düzeyde de geçersiz kılmalar için geçerlidir. Bir geçersiz kılma mühürleme, devralma hiyerarşisinde o noktadan itibaren bu sorunlardan ayrıntılarından korur.  
   
- *Bölümleri © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
+ *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*  
+ *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)  
- [Genişletilebilirlik için Tasarlama](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
- [Mühürsüz Sınıflar](../../../docs/standard/design-guidelines/unsealed-classes.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)  
+- [Genişletilebilirlik için Tasarlama](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
+- [Mühürsüz Sınıflar](../../../docs/standard/design-guidelines/unsealed-classes.md)

@@ -4,35 +4,36 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], vs. C++ templates
 ms.assetid: 1da6beeb-d4a4-4da0-87b7-0cfbe04920b7
-ms.openlocfilehash: db3311c7fa81d48137c542f320d0abef791e5116
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eef2fc5919f405b75be7ae2a2069b1e7cf8a45a7
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331691"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43890443"
 ---
 # <a name="differences-between-c-templates-and-c-generics-c-programming-guide"></a>C++ Şablonları ve C# Genel Türleri Arasındaki Farklar (C# Programlama Kılavuzu)
-C# genel türleri ve C++ şablonları parametreli türleri için destek sağlayan iki dil özellikleridir. Bununla birlikte, ikisi arasındaki birçok farklılıklar vardır. Sözdizimi, C# genel türleri C++ şablonlarının KARMAŞASIZ parametreli türler için basit bir yaklaşım düzeyindedir. Ayrıca, C# tüm C++ şablonları sağlar işlevselliği sağlamak denemez. Uygulama düzeyinde birincil çalışma zamanında C# genel tür kısaltmaları gerçekleştirilir ve genel tür bilgileri için örnek nesneleri böylece korunur farktır. Daha fazla bilgi için bkz: [çalışma zamanı'nda genel türler](../../../csharp/programming-guide/generics/generics-in-the-run-time.md).  
+C# genel türleri ve C++ şablonları parametreli türler için destek sağlayan her iki dil özellikleridir. Ancak, ikisi arasındaki pek çok fark vardır. Sözdizimi, C# genel türleri için C++ şablonlarının karmaşıklığı olmadan parametreli türler basit bir yaklaşım düzeyindedir. Ayrıca, C# tüm C++ şablonları sağlayan işlevselliği sağlamak denemez. Uygulama düzeyinde birincil çalışma zamanında C# genel tür değişimler gerçekleştirilir ve genel tür bilgileri, böylece örneklenen nesneleri korunur farktır. Daha fazla bilgi için [çalışma zamanı'nda genel türler](../../../csharp/programming-guide/generics/generics-in-the-run-time.md).  
   
  C++ şablonları ile C# genel türleri arasındaki temel farklılıklar şunlardır:  
   
--   C# genel türleri esneklik C++ şablon olarak aynı miktarda sağlamaz. Kullanıcı tanımlı işleçler çağırmak mümkün olsa Örneğin, bunu bir C# genel sınıfta aritmetik işleçler çağırmak mümkün değil.  
+-   C# genel türleri aynı miktarda C++ şablonları olarak esneklik sağlamaz. Kullanıcı tanımlı işleçler çağrılabilir olsa gibi bir C# genel sınıfta, aritmetik işleçler çağırmak mümkün değildir.  
   
 -   C# izin vermiyor tür olmayan şablon parametreleri gibi `template C<int i> {}`.  
   
--   C# açık uzmanlık desteklemiyor; belirli bir tür için bir şablon başka bir deyişle, özel bir uygulaması.  
+-   C# açık özelleştirme desteklemez; diğer bir deyişle, özel uygulanışı belirli bir tür için bir şablon.  
   
--   C# kısmi uzmanlığı desteklemiyor: tür bağımsız değişkenleri bir alt kümesi için özel bir uygulaması.  
+-   C# kısmi özelleştirmede desteklemiyor: özel bir uygulama için bir alt tür bağımsız değişkenleri.  
   
--   C# genel tür için temel sınıf olarak kullanılacak tür parametresi izin vermiyor.  
+-   C# genel tür için temel sınıf olarak kullanılacak tür parametresi izin vermez.  
   
--   C# varsayılan türleri tür parametreleri izin vermiyor.  
+-   C# varsayılan türler tür parametreleri izin vermez.  
   
--   Genel türler oluşturulan türler kullanılabilse de C# ' ta bir genel tür parametresi kendisini bir genel olamaz. C++ şablon parametreleri izin vermez.  
+-   Genel türler oluşturulan türler kullanılabilir olsa da C# ' ta genel tür parametresi kendisi bir genel olamaz. C++ şablon parametreleri izin vermez.  
   
--   C++ tür parametresi kullanılan belirli türünün sonra kullanıma şablondaki tüm tür parametreleri için geçerli olmayabilir kodu sağlar. C# kod kısıtlamaları karşılayan herhangi bir türü ile çalışacağını şekilde yazılması için bir sınıf gerektirir. Örneğin, c++'ta aritmetik işleçler kullanan bir işlev yazmak mümkündür `+` ve `-` tür parametresi nesnelerde hangi oluşturacak bir hata şablonu örneklemesi bu desteklemeyen türüne sahip zaman işleçler. C# bu izin vermez; izin verilen tek dil yapıları kısıtlamaları anlaşılan izinlerdir.  
+-   C++ tür parametresi kullanılan belirli bir tür için denetlenir şablondaki tüm tür parametreleri için geçerli olmayabilir kod sağlar. C# kısıtlamalar karşılayan herhangi bir türde çalışır şekilde yazılacak bir sınıftaki kod gerektirir. Örneğin, c++'ta aritmetik işleçler kullanan bir işlev yazmak mümkündür `+` ve `-` tür parametresinin nesneler üzerinde hangi ilişkilendiren bir hata şablonu bir örneğinin bu desteği olmayan bir tür ile anında işleçler. C# bu izin vermiyor; izin verilen tek dil yapıları kısıtlamalardan çıkarılabildiği olanlardır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [Genel Türlere Giriş](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
- [Şablonlar](/cpp/cpp/templates-cpp)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [Genel Türlere Giriş](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
+- [Şablonlar](/cpp/cpp/templates-cpp)

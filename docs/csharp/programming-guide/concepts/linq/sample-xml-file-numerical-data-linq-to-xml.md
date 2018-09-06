@@ -3,11 +3,11 @@ title: 'Örnek XML dosyası: Sayısal veriler (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 365cae86-a166-46df-b56a-0209d9771c27
 ms.openlocfilehash: d0351ed8cf4960174fdc45db5d7a15a385c90a61
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43671470"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43891278"
 ---
 # <a name="sample-xml-file-numerical-data-linq-to-xml"></a>Örnek XML dosyası: Sayısal veriler (LINQ to XML)
 Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri. Bu dosya, birleşimi, ortalama ve Gruplama için sayısal veriler içerir.  

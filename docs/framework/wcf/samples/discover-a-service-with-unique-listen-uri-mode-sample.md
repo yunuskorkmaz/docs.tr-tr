@@ -3,11 +3,11 @@ title: Benzersiz Dinleme Uri Modu ile Hizmet Keşfetme Örneği
 ms.date: 03/30/2017
 ms.assetid: 9a6d35b2-0469-43c8-a0c9-63623e3d2733
 ms.openlocfilehash: 7e1c5ae0cb1a44c72a27566035b4bc20acbf1614
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43748135"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43882830"
 ---
 # <a name="discover-a-service-with-unique-listen-uri-mode-sample"></a>Benzersiz Dinleme Uri Modu ile Hizmet Keşfetme Örneği
 Bu örnek, bir hizmet bulma gösterir <xref:System.ServiceModel.Channels.BindingContext.ListenUriMode%2A> özelliğini <xref:System.ServiceModel.Description.ListenUriMode.Unique>. Zaman <xref:System.ServiceModel.Channels.BindingContext.ListenUriMode%2A> özelliği <xref:System.ServiceModel.Description.ListenUriMode.Unique>, ListenUri bağlantı noktası benzersiz olacak şekilde ayarlayarak ya da yolun bir GUID eklenerek benzersiz olması için benzersiz olmasını güvence altına.  

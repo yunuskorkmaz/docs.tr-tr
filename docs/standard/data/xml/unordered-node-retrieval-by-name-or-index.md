@@ -1,5 +1,5 @@
 ---
-title: Adı veya dizin tarafından sırasız düğümü alma
+title: Ada veya dizine göre sırasız düğüm alma
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,15 +8,15 @@ dev_langs:
 ms.assetid: 2038a90b-92af-4a0a-baaa-08e688d95194
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 785a609455a35dd87a9593f00b58fd160ac708e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: da1c9f25052bb2354b435cd28b7ff55d4a754ed1
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572947"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43878781"
 ---
-# <a name="unordered-node-retrieval-by-name-or-index"></a>Adı veya dizin tarafından sırasız düğümü alma
-**XmlNamedNodeMap** NamedNodeMap olarak World Wide Web Konsorsiyumu (W3C) belirtimi açıklandığı ve bunların adı veya dizin tarafından başvuru düğümlere yeteneği olan düğümler sırasız bir kümesini işlemek için gereklidir. Tek yolu erişiminiz bir **XmlNamedNodeMap** olduğunda bir **XmlNamedNodeMap** yöntemi veya özelliği döndürülür. Üç yöntem veya döndüren özellikleri bir **XmlNamedNodeMap**:  
+# <a name="unordered-node-retrieval-by-name-or-index"></a>Ada veya dizine göre sırasız düğüm alma
+**XmlNamedNodeMap** NamedNodeMap olarak World Wide Web Consortium (W3C) belirtimi açıklanmıştır ve bunların adı veya dizin tarafından başvuru düğümleri olanağı sırasız bir dizi düğümü işlemek için gerekli değildir. Tek yolu erişiminiz bir **XmlNamedNodeMap** olduğunda bir **XmlNamedNodeMap** bir yöntem veya özellik ile döndürülür. Üç yöntem veya döndüren özellikler bir **XmlNamedNodeMap**:  
   
 -   XmlElement.Attributes  
   
@@ -24,9 +24,9 @@ ms.locfileid: "33572947"
   
 -   XmlDocumentType.Notations  
   
- Örneğin, **XmlDocumentType.Entities** özelliği koleksiyonunu alır **XmlEntity** düğümleri belge türü bildiriminde bildirilmedi. Bu koleksiyonu olarak döndürülür bir **XmlNamedNodeMap**, ve kullanımı ile koleksiyon üzerinden yineleme **sayısı** özelliği ve görüntü varlık bilgileri. Üzerinden yineleme örneği için bir **XmlNamedNodeMap**, bkz: <xref:System.Xml.XmlDocumentType.Entities%2A>.  
+ Örneğin, **XmlDocumentType.Entities** özellik koleksiyonunu alır **XmlEntity** düğümleri belge türü bildirimi içinde bildirilmiş. Bu koleksiyonu olarak döndürülür bir **XmlNamedNodeMap**, ve kullanımı ile bir koleksiyon üzerinden yineleme **sayısı** özelliği ve görüntü varlık bilgileri. Bir örnek üzerinden yineleme için bir **XmlNamedNodeMap**, bkz: <xref:System.Xml.XmlDocumentType.Entities%2A>.  
   
- **XmlAttributeCollection** türetildiği **XmlNamedNodeMap** ve yalnızca öznitelikleri değiştirilebilir, gösterimler ve varlıkları salt okunur durumdayken. Kullanarak **XmlNamedNodeMap** özniteliklerini, bunların XML adlarını temel alarak bu öznitelikler için düğümleri elde edebilirsiniz. Bu, bir öğe düğümü üzerinde özniteliklerin koleksiyonu düzenleme için kolay bir yöntemini sağlar. Bu doğrudan contrasted **XmlNodeList**, ayrıca uygulayan **IEnumerable** arabirimi, ancak bir dize yerine bir dizin erişimci ile. **RemoveNamedItem** ve **SetNamedItem** yöntemleri karşı kullanılan yalnızca bir **XmlAttributeCollection**. Ekleme veya bir öznitelik koleksiyonundan kullanarak olup olmadığını kaldırma **AttributeCollection** veya **XmlNamedNodeMap** uygulaması, öznitelik koleksiyonu öğesindeki değiştirir. Aşağıdaki kod örneği, bir öznitelik taşıyın ve yeni bir öznitelik oluşturma gösterilmektedir.  
+ **XmlAttributeCollection** türetilir **XmlNamedNodeMap** ve gösterimler ve varlıkların salt okunur olsa yalnızca öznitelikler değiştirilebilir,. Kullanarak **XmlNamedNodeMap** öznitelikler için kendi XML adlarına göre bu öznitelikleri için düğümleri alabilirsiniz. Bu, bir öğe düğümü üzerinde özniteliklerin koleksiyonunu yönetmek için kolay bir yöntemini sağlar. Bu doğrudan karşıtlıklar **XmlNodeList**, ayrıca uygulayan **IEnumerable** arabirimi, ancak dizin erişimci yerine bir dize. **RemoveNamedItem** ve **SetNamedItem** yöntemleri karşı kullanılan yalnızca bir **XmlAttributeCollection**. Ekleme veya bir öznitelik koleksiyonundan olup olmadığını kaldırma **AttributeCollection** veya **XmlNamedNodeMap** uygulama, öznitelik koleksiyonundan öğesindeki değiştirir. Aşağıdaki kod örneği, bir özniteliği Taşı ve yeni bir öznitelik oluşturmak gösterilmektedir.  
   
 ```vb  
 Imports System  
@@ -117,7 +117,8 @@ class test {
 }  
 ```  
   
- Gelen kaldırılmakta olan bir öznitelik gösteren ek kod örneği görmek için bir **AttributeCollection**, bkz: [XmlNamedNodeMap.RemoveNamedItem yöntemi](Overload:System.Xml.XmlNamedNodeMap.RemoveNamedItem). Yöntemleri ve özellikleri hakkında daha fazla bilgi için bkz: [XmlNamedNodeMap üyeleri](AllMembers.T:System.Xml.XmlNamedNodeMap).  
+ Öğesinden kaldırılan bir öznitelik gösteren ek kod örneği görmek için bir **AttributeCollection**, bkz: [XmlNamedNodeMap.RemoveNamedItem yöntemi](Overload:System.Xml.XmlNamedNodeMap.RemoveNamedItem). Özellikler ve yöntemler hakkında daha fazla bilgi için bkz. [XmlNamedNodeMap üyeleri](AllMembers.T:System.Xml.XmlNamedNodeMap).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [XML Belge Nesne Modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [XML Belge Nesne Modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

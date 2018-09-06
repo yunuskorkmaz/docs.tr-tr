@@ -3,11 +3,11 @@ title: SQL Server veri türü eşlemeleri
 ms.date: 03/30/2017
 ms.assetid: fafdc31a-f435-4cd3-883f-1dfadd971277
 ms.openlocfilehash: 9bc2747dff7b6f2bffdca4186519f2a36083e5f0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43456402"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44031567"
 ---
 # <a name="sql-server-data-type-mappings"></a>SQL Server veri türü eşlemeleri
 Farklı tür sistemlerde, SQL Server ve .NET Framework'ü temel alır. Örneğin, .NET Framework <xref:System.Decimal> yapıya sahip 28, en fazla ölçeğini ise SQL Server ondalık ve sayısal veri türleri 38, en fazla bir ölçeğe sahip. Verileri okurken ve yazarken, veri bütünlüğünün sürdürülmesi <xref:System.Data.SqlClient.SqlDataReader> kullanıma sunan SQL Server'a özel yazılan nesnelerin döndüren erişimci metotlarını <xref:System.Data.SqlTypes> .NET Framework döndüren erişimci metotlarını yanı sıra türleri. SQL Server türleri hem .NET Framework türleri de temsil edilir numaralandırmalardan <xref:System.Data.DbType> ve <xref:System.Data.SqlDbType> belirtirken kullanabileceğiniz sınıflarını <xref:System.Data.SqlClient.SqlParameter> veri türleri.  

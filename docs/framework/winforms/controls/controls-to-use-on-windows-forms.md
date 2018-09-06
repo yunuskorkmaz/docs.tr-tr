@@ -5,99 +5,99 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - Windows Forms controls, list of
 ms.assetid: dec51976-eae0-4398-a537-20bca7974722
-ms.openlocfilehash: 53474de53375546e2a7f416488cf7758b3f9cd22
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 18c3cf638934551ba40306d98b3bf28dfdd03463
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529733"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44041154"
 ---
 # <a name="controls-to-use-on-windows-forms"></a>Windows Forms'ta Kullanılacak Denetimler
-Denetimler ve Windows formlarında kullanılan bileşenler alfabetik bir listesi verilmiştir. Bu bölümde yer alan Windows Forms denetimleri yanı sıra Windows formlarına ActiveX ve özel denetimler ekleyebilirsiniz. Gereksinim duyduğunuz Denetim burada listelenen bulamazsanız, ayrıca kendi oluşturabilirsiniz. Ayrıntılar için bkz [tasarım zamanında Windows Forms denetimleri geliştirme](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md). Denetim seçme hakkında daha fazla bilgi için bkz: ihtiyaç [işleve göre Windows Forms denetimleri](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md).  
+Denetimleri Windows formlarında kullanılan bileşenler ve alfabetik bir listesi verilmiştir. Bu bölümde yer alan Windows Forms denetimleri ek olarak, Windows Forms ActiveX ve özel denetimler ekleyebilirsiniz. İhtiyacınız olan denetimi burada listelenen bulamazsanız, kendi oluşturabilirsiniz. Ayrıntılar için bkz [tasarım zamanında Windows Forms denetimleri geliştirme](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md). Denetim seçme hakkında daha fazla bilgi için bkz ihtiyacınız [işleve göre Windows Forms denetimleri](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md).  
   
 > [!NOTE]
->  Visual Basic denetimleri sınıflar tarafından sağlanan temel [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
+>  Visual Basic denetimleri sınıfları tarafından sağlanan temel [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [İşleve Göre Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)  
- Listeler ve göre Windows Forms denetimleri açıklar [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
+ Listelenmekte ve açıklanmaktadır göre Windows Forms denetimleri [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
   
  [Yerleşik Sahip Çizimi Destekli Denetimler](../../../../docs/framework/winforms/controls/controls-with-built-in-owner-drawing-support.md)  
- Özellikleri kullanılabilir olmayan bir denetimin görünümünü yönlerini alter açıklar.  
+ Alter özellikleri aracılığıyla mevcut olmayan bir denetimin görünümünü yönlerini açıklar.  
   
  [BackgroundWorker Bileşeni](../../../../docs/framework/winforms/controls/backgroundworker-component.md)  
  Bir form veya bir işlem zaman uyumsuz olarak çalıştırmak için denetim sağlar.  
   
  [BindingNavigator Denetimi](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)  
- Verilere bağlı denetimler için gezinme ve düzenleme kullanıcı arabirimi (UI) sağlar.  
+ Verilere bağlı denetimler için gezinti ve düzenleme kullanıcı arabirimi (UI) sağlar.  
   
  [BindingSource Bileşeni](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
- Denetimlere bağlama için bir veri kaynağı yalıtır.  
+ Denetimlere bağlama için bir veri kaynağı kapsüller.  
   
  [Düğme Kontrolü](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)  
- Kullanıcının eylemleri gerçekleştirmek için tıklatabileceği standart bir düğme gösterir.  
+ Kullanıcının eylemleri gerçekleştirmek üzere tıklayabileceği standart bir düğme sunar.  
   
  [CheckBox Denetimi](../../../../docs/framework/winforms/controls/checkbox-control-windows-forms.md)  
- Bir koşul açık veya kapalı olduğunu gösterir.  
+ Bir koşul açıp olup olmadığını belirtir.  
   
  [CheckedListBox Denetimi](../../../../docs/framework/winforms/controls/checkedlistbox-control-windows-forms.md)  
  Her öğesinin yanındaki onay kutusu öğeleri listesini görüntüler.  
   
  [ColorDialog Bileşeni](../../../../docs/framework/winforms/controls/colordialog-component-windows-forms.md)  
- Renk paleti önceden yapılandırılmış iletişim kutusunda seçin ve bu paleti özel renkler eklemek için kullanıcının sağlar.  
+ Önceden yapılandırılmış iletişim kutusunda bir paletinden bir renk seçin ve özel renkler paleti bu eklemek için kullanıcının sağlar.  
   
  [ComboBox Denetimi](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)  
- Verileri bir açılan kutusunda görüntüler.  
+ Aşağı açılan kutudaki verilerini görüntüler.  
   
  [ContextMenu Bileşeni](../../../../docs/framework/winforms/controls/contextmenu-component-windows-forms.md)  
- Seçilen nesne ile ilişkili sık kullanılan komutlar, kolayca erişilebilir bir menü kullanıcılara sağlar. Ancak <xref:System.Windows.Forms.ContextMenuStrip> değiştirir ve işlevlerini ekler <xref:System.Windows.Forms.ContextMenu> önceki sürümlerinde, denetimin <xref:System.Windows.Forms.ContextMenu> geriye dönük uyumluluk ve gelecekte kullanım için bu nedenle isterseniz korunur.  
+ Kullanıcılara bir kolayca erişilebilir menüsü Seçili nesneyle ilişkili sık kullanılan komutlar sağlar. Ancak <xref:System.Windows.Forms.ContextMenuStrip> değiştirir ve işlevsellik ekler <xref:System.Windows.Forms.ContextMenu> önceki sürümlerinde, denetimin <xref:System.Windows.Forms.ContextMenu> geriye dönük uyumluluk ve gelecekte kullanım için bu nedenle isterseniz korunur.  
   
  [ContextMenuStrip Denetimi](../../../../docs/framework/winforms/controls/contextmenustrip-control.md)  
- Bir kısayol menüsü temsil eder. Ancak <xref:System.Windows.Forms.ContextMenuStrip> değiştirir ve işlevlerini ekler <xref:System.Windows.Forms.ContextMenu> önceki sürümlerinde, denetimin <xref:System.Windows.Forms.ContextMenu> geriye dönük uyumluluk ve gelecekte kullanım için bu nedenle isterseniz korunur.  
+ Bir kısayol menüsü temsil eder. Ancak <xref:System.Windows.Forms.ContextMenuStrip> değiştirir ve işlevsellik ekler <xref:System.Windows.Forms.ContextMenu> önceki sürümlerinde, denetimin <xref:System.Windows.Forms.ContextMenu> geriye dönük uyumluluk ve gelecekte kullanım için bu nedenle isterseniz korunur.  
   
  [DataGrid Denetimi](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
- Tablo veri kümesinden görüntüler ve veri kaynağı güncelleştirmelerini sağlar.  
+ Bir veri kümesinden sekmeli veri görüntüler ve güncelleştirmeler veri kaynağına izin verir.  
   
  [DataGridView Denetimi](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
- Esnek ve Genişletilebilir bir sistem görüntüleme ve düzenleme tablo veri sağlar.  
+ Görüntüleme ve düzenleme sekmeli veri için esnek, Genişletilebilir bir sistem sağlar.  
   
  [DateTimePicker Denetimi](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md)  
  Kullanıcının tarihleri veya saatleri listesinden tek bir öğe seçmesine olanak sağlar.  
   
  [İletişim Kutusu Denetimleri ve Bileşenleri](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)  
- Bir uygulama veya sistem standart etkileşimleri gerçekleştirmek kullanıcıların denetimleri açıklar.  
+ Kullanıcıların uygulama veya sistem standart etkileşim gerçekleştirmek denetimleri kümesini açıklar.  
   
  [DomainUpDown Denetimi](../../../../docs/framework/winforms/controls/domainupdown-control-windows-forms.md)  
- Bir kullanıcı gözatın ve seçim metin dizelerini görüntüler.  
+ Bir kullanıcı gözatın ve seçin metin dizelerini görüntüler.  
   
  [ErrorProvider Bileşeni](../../../../docs/framework/winforms/controls/errorprovider-component-windows-forms.md)  
- Hata bilgilerini kullanıcıya rahatsız edici olmayan bir şekilde görüntüler.  
+ Kullanıcıya kesintisiz bir şekilde hata bilgileri görüntüler.  
   
- [FileDialog sınıfı](../../../../docs/framework/winforms/controls/filedialog-class.md) dosya iletişim kutuları için temel sınıf işlevselliğini sağlar.
+ [FileDialog sınıfı](../../../../docs/framework/winforms/controls/filedialog-class.md) dosya iletişim kutuları için temel sınıf işlevlerini sağlar.
 
  [FlowLayoutPanel Denetimi](../../../../docs/framework/winforms/controls/flowlayoutpanel-control-windows-forms.md)  
- Dinamik olarak, içeriğini yatay veya dikey olarak mı yerleştireceğini bir panel temsil eder.  
+ Dinamik olarak, içeriğini yatay veya dikey olarak yerleştirir bir panel temsil eder.  
   
  [FolderBrowserDialog Bileşeni](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-windows-forms.md)  
- Hangi kullanıcıların arabirimiyle göz atabilir ve bir dizin seçin veya yeni bir tane oluşturun görüntüler.  
+ Hangi kullanıcılar göz atın ve bir dizin seçin veya yeni bir tane oluşturun, bir arabirim görüntüler.  
   
  [FontDialog Bileşeni](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md)  
  Sistemde yüklü yazı tiplerini kullanıma sunar.  
   
  [GroupBox Denetimi](../../../../docs/framework/winforms/controls/groupbox-control-windows-forms.md)  
- Diğer denetimler için tanımlanabilen bir gruplama sağlar.  
+ Diğer denetimleri için tanımlanabilen bir gruplama sağlar.  
   
  [HelpProvider Bileşeni](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md)  
- Bir HTML Yardım dosyasını Windows tabanlı bir uygulama ile ilişkilendirir.  
+ Bir HTML Yardım dosyasını Windows tabanlı bir uygulamayla ilişkilendirir.  
   
  [HScrollBar ve VScrollBar Denetimleri](../../../../docs/framework/winforms/controls/hscrollbar-and-vscrollbar-controls-windows-forms.md)  
- Kaydırarak ya da yatay veya dikey olarak bir uygulama veya denetim içinde listesini gezinmeyi öğeleri veya büyük miktarda bilgi sağlayın.  
+ Bir liste ile gezinti öğeleri veya büyük miktarda bilgi ya da yatay kaydırma tarafından veya içinde bir uygulamanın veya denetimin dikey olarak sağlayın.  
   
  [ImageList Bileşeni](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)  
- Görüntüleri diğer denetimleri görüntüler.  
+ Görüntüler, diğer denetimler sağlar.  
   
  [Etiket Denetimi](../../../../docs/framework/winforms/controls/label-control-windows-forms.md)  
- Kullanıcı tarafından düzenlenemez metin görüntüler.  
+ Kullanıcı tarafından düzenlenemez metni görüntüler.  
   
  [LinkLabel Denetimi](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)  
  Windows Forms uygulamaları için Web stili bağlantılar eklemenizi sağlar.  
@@ -106,130 +106,130 @@ Denetimler ve Windows formlarında kullanılan bileşenler alfabetik bir listesi
  Kullanıcının önceden tanımlanmış bir listeden bir veya daha fazla öğe seçmesine olanak sağlar.  
   
  [ListView Denetimi](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)  
- Windows Explorer'ın şekilde simgeleri olan öğeleri listesini görüntüler.  
+ Windows Explorer'ın şekilde simgeler ile öğeler listesini görüntüler.  
   
  [MainMenu Bileşeni](../../../../docs/framework/winforms/controls/mainmenu-component-windows-forms.md)  
- Menü çalışma zamanında görüntüler. Ancak <xref:System.Windows.Forms.MenuStrip> değiştirir ve işlevlerini ekler <xref:System.Windows.Forms.MainMenu> önceki sürümlerinde, denetimin <xref:System.Windows.Forms.MainMenu> seçerseniz geriye dönük uyumluluk ve gelecekte kullanım için korunur.  
+ Çalışma zamanında bir menü görüntüler. Ancak <xref:System.Windows.Forms.MenuStrip> değiştirir ve işlevsellik ekler <xref:System.Windows.Forms.MainMenu> önceki sürümlerinde, denetimin <xref:System.Windows.Forms.MainMenu> seçerseniz geriye dönük uyumluluk ve gelecekte kullanım için korunur.  
   
  [MaskedTextBox Denetimi](../../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md)  
- Kullanıcı girişi formdaki biçimi kısıtlar.  
+ Bir form uygulamasında kullanıcı girdisi biçimi kısıtlar.  
   
  [MenuStrip Denetimi](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)  
- Menü sistemi için bir form sağlar. Ancak <xref:System.Windows.Forms.MenuStrip> değiştirir ve işlevlerini ekler <xref:System.Windows.Forms.MainMenu> önceki sürümlerinde, denetimin <xref:System.Windows.Forms.MainMenu> seçerseniz geriye dönük uyumluluk ve gelecekte kullanım için korunur.  
+ Bir menü sistemi için bir form sağlar. Ancak <xref:System.Windows.Forms.MenuStrip> değiştirir ve işlevsellik ekler <xref:System.Windows.Forms.MainMenu> önceki sürümlerinde, denetimin <xref:System.Windows.Forms.MainMenu> seçerseniz geriye dönük uyumluluk ve gelecekte kullanım için korunur.  
   
  [MonthCalendar Denetimi](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)  
- Kullanıcıların görüntülemek ve tarih bilgisini ayarlamak sezgisel bir grafik arabirim sunar.  
+ Görüntülemek ve tarih bilgisini ayarlamak kullanıcılar için sezgisel bir grafik arabirim sunar.  
   
  [NotifyIcon Bileşeni](../../../../docs/framework/winforms/controls/notifyicon-component-windows-forms.md)  
- Arka planda çalışır ve kullanıcı arabirimine sahip olmayan işlemler için simgeler görüntüler.  
+ Arka planda çalışır ve kullanıcı arabirimleri erişemeyecek işlemler için simgeleri görüntüler.  
   
  [NumericUpDown Denetimi](../../../../docs/framework/winforms/controls/numericupdown-control-windows-forms.md)  
- Bir kullanıcı gözatın ve seçim rakamları görüntüler.  
+ Bir kullanıcının gözatın ve seçin rakamları görüntüler.  
   
  [OpenFileDialog Bileşeni](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md)  
- Dosyaları önceden yapılandırılmış iletişim kutusunu kullanarak açmasına izin verir.  
+ Önceden yapılandırılmış iletişim kutusunu kullanarak kullanıcıların dosyaları sağlar.  
   
  [PageSetupDialog bileşeni](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md)  
- Kümeleri önceden yapılandırılmış iletişim kutusu üzerinden yazdırma için Ayrıntılar sayfası.  
+ Ayarlar üzerinden önceden yapılandırılmış iletişim kutusunda yazdırma için Ayrıntılar sayfası.  
   
  [Panel Denetimi](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)  
- Diğer tanımlanabilen bir gruplandırma denetler ve kaydırma için verir sağlar.  
+ Diğer tanımlanabilir bir gruplandırma denetler ve kaydırma için izin verir sağlar.  
   
  [PictureBox Denetimi](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)  
- Grafik bitmap, GIF, JPEG, meta dosyası veya simge biçiminde görüntüler.  
+ Grafikleri, bit eşlem, GIF, JPEG, meta dosyası veya simge biçiminde görüntüler.  
   
  [PrintDialog Bileşeni](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md)  
- Bir yazıcı seçer, yazdırmak için sayfaları seçer ve diğer yazdırma ilgili ayarları belirler.  
+ Yazıcı seçer, yazdırmak için sayfaları seçer ve diğer yazdırmayla ayarları belirler.  
   
  [PrintDocument Bileşeni](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md)  
- Ne yazdırmak açıklayın özelliklerini ayarlar ve Windows tabanlı uygulamalar belgede yazdırır.  
+ Ne yazdırmak açıklayan özelliklerini ayarlar ve Windows tabanlı uygulamalarda belgesini yazdırır.  
   
  [PrintPreviewControl Denetimi](../../../../docs/framework/winforms/controls/printpreviewcontrol-control-windows-forms.md)  
- Kendi oluşturmanıza olanak tanıyan `PrintPreview` önceden yapılandırılmış sürüm kullanmak yerine bileşen veya iletişim kutusu.  
+ Kendi oluşturmanıza olanak tanır `PrintPreview` önceden yapılandırılan sürümü kullanmak yerine, bileşen veya iletişim kutusu.  
   
  [PrintPreviewDialog Denetimi](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)  
- Yazdırıldığında nasıl görüneceğini bir belgeyi görüntüler.  
+ Bir belge yazdırıldığında nasıl görüneceğini görüntüler.  
   
  [ProgressBar Denetimi](../../../../docs/framework/winforms/controls/progressbar-control-windows-forms.md)  
- Grafik tamamlama doğru bir eylemin ilerleme durumunu gösterir.  
+ Grafik olarak doğru tamamlama eylemi ilerlemesini gösterir.  
   
  [RadioButton Denetimi](../../../../docs/framework/winforms/controls/radiobutton-control-windows-forms.md)  
- İki veya daha fazla birbirini dışlayan seçenekleri bir dizi kullanıcıya sunar.  
+ Kullanıcı için iki veya daha fazla birbirini dışlayan seçenekleri kümesi sunar.  
   
  [RichTextBox Denetimi](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
- Kullanıcıların girin, görüntülemek ve biçimlendirmeye sahip metni düzenlemek olanak tanır.  
+ Kullanıcıların girin, görüntülemek ve metin biçimlendirmeyle işlemek olanak tanır.  
   
  [SaveFileDialog Bileşeni](../../../../docs/framework/winforms/controls/savefiledialog-component-windows-forms.md)  
  Kaydetmek için dosyaları ve bunları kaydedileceği yeri seçer.  
   
- [SoundPlayer sınıfı](../../../../docs/framework/winforms/controls/soundplayer-class.md) ses uygulamalarınızda kolayca eklemenizi sağlar.
+ [SoundPlayer sınıfı](../../../../docs/framework/winforms/controls/soundplayer-class.md) sesleri uygulamalarınıza kolayca dahil etmenize imkan sağlar.
   
  [SplitContainer Denetimi](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
- Yerleşik denetimi yeniden boyutlandırma olanak tanır.  
+ Yerleşik denetimi yeniden boyutlandırma izin verir.  
   
  [Ayırıcı Denetimi](../../../../docs/framework/winforms/controls/splitter-control-windows-forms.md)  
- Yerleşik denetimi yeniden boyutlandırma izin verir ([!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sürüm 1.x).  
+ Yerleşik denetimi yeniden boyutlandırma izin verir ([!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sürümü 1.x).  
   
  [StatusBar Denetimi](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md)  
- Durum bilgileri görüntüler denetimi odağa sahip ilgili. Ancak <xref:System.Windows.Forms.StatusStrip> değiştirir ve genişletir <xref:System.Windows.Forms.StatusBar> önceki sürümlerinde, denetimin <xref:System.Windows.Forms.StatusBar> seçerseniz geriye dönük uyumluluk ve gelecekte kullanım için korunur.  
+ Durum bilgilerini görüntüler, odaklanmış denetimle ilişkili. Ancak <xref:System.Windows.Forms.StatusStrip> değiştirir ve genişleten <xref:System.Windows.Forms.StatusBar> önceki sürümlerinde, denetimin <xref:System.Windows.Forms.StatusBar> seçerseniz geriye dönük uyumluluk ve gelecekte kullanım için korunur.  
   
  [StatusStrip Denetimi](../../../../docs/framework/winforms/controls/statusstrip-control.md)  
- Windows durum çubuğu denetimi temsil eder. Ancak <xref:System.Windows.Forms.StatusStrip> değiştirir ve genişletir <xref:System.Windows.Forms.StatusBar> önceki sürümlerinde, denetimin <xref:System.Windows.Forms.StatusBar> seçerseniz geriye dönük uyumluluk ve gelecekte kullanım için korunur.  
+ Windows durum çubuğu denetimi temsil eder. Ancak <xref:System.Windows.Forms.StatusStrip> değiştirir ve genişleten <xref:System.Windows.Forms.StatusBar> önceki sürümlerinde, denetimin <xref:System.Windows.Forms.StatusBar> seçerseniz geriye dönük uyumluluk ve gelecekte kullanım için korunur.  
   
  [TabControl Denetimi](../../../../docs/framework/winforms/controls/tabcontrol-control-windows-forms.md)  
- Resim veya diğer denetimleri içeren birden fazla sekme görüntüler.  
+ Resim ve diğer denetimleri içeren birden fazla sekme görüntüler.  
   
  [TableLayoutPanel Denetimi](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-windows-forms.md)  
- Dinamik olarak içeriğini satırları ve sütunları oluşan bir kılavuz olarak mı yerleştireceğini bir panel temsil eder.  
+ Satırları ve sütunları oluşan bir kılavuzda içeriği dışarı dinamik olarak yerleştirir bir panel temsil eder.  
   
  [TextBox Denetimi](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)  
- Kullanıcıdan düzenlenebilir, çok satırlı girdi sağlar.  
+ Kullanıcı girişi düzenlenebilir, çok satırlı sağlar.  
   
  [Süreölçer Bileşeni](../../../../docs/framework/winforms/controls/timer-component-windows-forms.md)  
  Düzenli aralıklarla bir olay başlatır.  
   
  [ToolBar Denetimi](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)  
- Menüleri ve komutları etkinleştirmek eşlemli düğmeleri görüntüler. Denetim işlevselliğini genişletmek ve görünümünü ve davranışını değiştirebilirsiniz. Ancak <xref:System.Windows.Forms.ToolStrip> değiştirir ve işlevlerini ekler <xref:System.Windows.Forms.ToolBar> önceki sürümlerinde, denetimin <xref:System.Windows.Forms.ToolBar> seçerseniz geriye dönük uyumluluk ve gelecekte kullanım için korunur.  
+ Menüler ve komutlar etkinleştirme bit eşlemli düğmeler görüntüler. Denetimi işlevlerini genişletmek ve onun görünümünü ve davranışını değiştirin. Ancak <xref:System.Windows.Forms.ToolStrip> değiştirir ve işlevsellik ekler <xref:System.Windows.Forms.ToolBar> önceki sürümlerinde, denetimin <xref:System.Windows.Forms.ToolBar> seçerseniz geriye dönük uyumluluk ve gelecekte kullanım için korunur.  
   
  [ToolStrip Denetimi](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)  
- Özel araç çubukları ve menüleri Windows Forms uygulamalarında oluşturur. Ancak <xref:System.Windows.Forms.ToolStrip> değiştirir ve işlevlerini ekler <xref:System.Windows.Forms.ToolBar> önceki sürümlerinde, denetimin <xref:System.Windows.Forms.ToolBar> seçerseniz geriye dönük uyumluluk ve gelecekte kullanım için korunur.  
+ Özel araç çubukları ve menüler, Windows Forms uygulamalarında oluşturur. Ancak <xref:System.Windows.Forms.ToolStrip> değiştirir ve işlevsellik ekler <xref:System.Windows.Forms.ToolBar> önceki sürümlerinde, denetimin <xref:System.Windows.Forms.ToolBar> seçerseniz geriye dönük uyumluluk ve gelecekte kullanım için korunur.  
   
  [ToolStripContainer Denetimi](../../../../docs/framework/winforms/controls/toolstripcontainer-control.md)  
- Yerleştirme, radye ve düzenleme için her bir form tarafında paneller sağlar <xref:System.Windows.Forms.ToolStrip> denetimleri ve bir orta <xref:System.Windows.Forms.ToolStripContentPanel> geleneksel denetimleri için.  
+ Yerleşik radye ve düzenleme için her bir form tarafında panel sağlar <xref:System.Windows.Forms.ToolStrip> denetimleri ve bir orta <xref:System.Windows.Forms.ToolStripContentPanel> geleneksel denetimleri için.  
   
  [ToolStripPanel Denetimi](../../../../docs/framework/winforms/controls/toolstrippanel-control.md)  
- Yerleşik radye ve düzenleme için bir panel sağlar <xref:System.Windows.Forms.ToolStrip> kontrol eder.  
+ Yerleşik radye ve düzenleme için tek bir panel sağlar <xref:System.Windows.Forms.ToolStrip> kontrol eder.  
   
  [ToolStripProgressBar Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/toolstripprogressbar-control-overview.md)  
- Grafik tamamlama doğru bir eylemin ilerleme durumunu gösterir. <xref:System.Windows.Forms.ToolStripProgressBar> Genellikle bulunan bir <xref:System.Windows.Forms.StatusStrip>.  
+ Grafik olarak doğru tamamlama eylemi ilerlemesini gösterir. <xref:System.Windows.Forms.ToolStripProgressBar> Tipik olarak bulunan bir <xref:System.Windows.Forms.StatusStrip>.  
   
  [ToolStripStatusLabel Denetimi](../../../../docs/framework/winforms/controls/toolstripstatuslabel-control.md)  
- Masası'nda temsil eden bir <xref:System.Windows.Forms.StatusStrip> denetim.  
+ Bir panel içinde temsil eden bir <xref:System.Windows.Forms.StatusStrip> denetimi.  
   
  [ToolTip Bileşeni](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md)  
- Kullanıcının diğer denetimleri işaret ettiğinde metin görüntüler.  
+ Kullanıcı diğer denetimlere işaret ettiğinde metni görüntüler.  
   
  [TrackBar Denetimi](../../../../docs/framework/winforms/controls/trackbar-control-windows-forms.md)  
- Büyük miktarda bilgi veya sayısal bir ayar görsel olarak ayarlayarak gezinmeyi sağlar.  
+ Büyük miktarda bilgi ya da bir sayısal ayar görsel olarak ayarlayarak gezinme sağlar.  
   
  [TreeView Denetimi](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)  
- Genişletilmiş veya daraltılmış düğümleri hiyerarşisini görüntüler.  
+ Genişletilmiş veya daraltılmış düğümlerinin hiyerarşisini görüntüler.  
   
  [WebBrowser Denetimi](../../../../docs/framework/winforms/controls/webbrowser-control-windows-forms.md)  
- Web sayfalarını barındıran ve Internet Web uygulamanıza yetenekleri tarama sağlar.  
+ Web sayfalarını barındıran ve İnternet'e göz atma özellikleri uygulamanıza Web sağlar.  
   
  [Seçenekleri Listelemede Kullanılan Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)  
- Aralarından seçim yapabileceğiniz seçeneklerin bir listesini kullanıcılara sağlamak için kullanılan denetimleri kümesini açıklar.  
+ Kullanıcılara bir seçenek yelpazesinden listesi sağlamak için kullanılan denetimleri kümesini açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/index.md)  
- Windows Forms denetimleri kullanımını açıklar ve bunlarla çalışmak için önemli kavramlar açıklanmaktadır.  
+ Windows Forms denetimlerini açıklar ve onlarla çalışmak için önemli kavramlar açıklanmaktadır.  
   
  [Tasarım Zamanında Windows Forms Denetimleri Geliştirme](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
- Adım adım konular, önerileri hangi tür oluşturmak için Denetim ve kendi denetimi oluşturma hakkında diğer bilgiler için bağlantılar sağlar.  
+ Adım adım yol gösteren konulara, hangi tür denetimi oluşturmak için kendi denetiminizi oluşturma hakkında diğer bilgi ve öneriler sağlar.  
   
- [Denetimleri ve çeşitli diller ve kitaplıkları karşılaştırıldığında programlanabilir nesneleri](http://msdn.microsoft.com/library/021f2a1b-8247-4348-a5ad-e1d9ab23004b)  
- Visual Basic 6.0 denetimlerinde ilgili denetimin eşleyen bir tablo sağlar [!INCLUDE[vbprvblong](../../../../includes/vbprvblong-md.md)]. Denetimleri şimdi sınıflarda olduğuna dikkat edin [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
+ [Denetimler ve programlanabilir nesneler çeşitli dillerde ve kitaplıklarda karşılaştırılan](https://msdn.microsoft.com/library/021f2a1b-8247-4348-a5ad-e1d9ab23004b)  
+ Visual Basic 6.0 denetimlerinde ilgili denetimin eşleyen bir tablo sağlar [!INCLUDE[vbprvblong](../../../../includes/vbprvblong-md.md)]. Denetimleri artık sınıflarda olduğuna dikkat edin [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
   
  [Nasıl yapılır: Windows Forms’a ActiveX Denetimleri Ekleme](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  
  Windows Forms ActiveX denetimlerinde kullanmayı açıklar.

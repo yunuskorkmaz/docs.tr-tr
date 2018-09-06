@@ -1,5 +1,5 @@
 ---
-title: Özel seri hale getirme
+title: Özel serileştirme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,23 +17,23 @@ helpviewer_keywords:
 - OnDeserializedAttribute class, custom serialization
 - OnSerializingAttribute class, custom serialization
 ms.assetid: 12ed422d-5280-49b8-9b71-a2ed129c0384
-ms.openlocfilehash: 79cb7a2a0706cb06cbd444f4a2e1ae87cb701101
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6151bf670a455d4c9862e80fd06314e4e1621080
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592112"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43881921"
 ---
-# <a name="custom-serialization"></a>Özel seri hale getirme
-Özel serileştirme seri hale getirme ve seri durumdan çıkarma türü denetleme işlemidir. Seri hale getirme denetleyerek, seri hale getirmek ve seri durumdan türü çekirdek işlevselliğini çiğnemekten olmadan bir türü sürümleri arasında özelliği seri hale getirme uyumluluğundan emin olmak mümkündür. Örneğin, bir tür ilk sürümü olabilir yalnızca iki alan. Sonraki sürümünde bir tür, pek çok daha fazla alan eklenir. Henüz bir uygulamanın ikinci sürümü seri hale getirmek ve her iki türü seri durumdan olması gerekir. Aşağıdaki bölümlerde serileştirme denetleme açıklanmaktadır.
+# <a name="custom-serialization"></a>Özel serileştirme
+Özel seri hale getirme serileştirme ve seri durumundan çıkarma bir türün denetleme işlemidir. Serileştirme denetleyerek, türü çekirdek işlevselliğini bozucu olmayan bir tür sürümleri arasında seri hale getrime ve yeteneği olan serileştirme uyumluluğu sağlamak mümkündür. Örneğin, bir tür ilk sürümü olabilir yalnızca iki alan. Sonraki sürümünde bir tür, pek çok daha fazla alan eklenir. Henüz bir uygulamanın ikinci sürümü seri hale getirmek ve her iki türü seri durumdan olması gerekir. Aşağıdaki bölümler serileştirme denetlemek nasıl açıklar.
 
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
   
 > [!IMPORTANT]
->  .NET Framework 4.0 önceki sürümlerde, kısmen güvenilir bir derleme özel kullanıcı verilerini serileştirmek GetObjectData kullanarak gerçekleştirilmiştir. Yöntem ile işaretlenmiş sürüm 4.0 başlayarak <xref:System.Security.SecurityCriticalAttribute> , kısmen güvenilir derlemeler yürütmeyi engelleyen özniteliği. Bu durum çalışmak için uygulayan <xref:System.Runtime.Serialization.ISafeSerializationData> arabirimi.  
+>  .NET Framework 4.0 önceki sürümlerinde, özel kullanıcı veri kısmen güvenilen bir derleme serileştirme GetObjectData kullanarak gerçekleştirilebilir. Yöntem ile işaretlenmiş bir sürüm 4.0, başlayarak <xref:System.Security.SecurityCriticalAttribute> kısmen güvenilen derlemelerde yürütme önleyen özniteliği. Bu durum çalışmak için uygulayan <xref:System.Runtime.Serialization.ISafeSerializationData> arabirimi.  
   
-## <a name="running-custom-methods-during-and-after-serialization"></a>Çalışmakta olan özel yöntemler sırasında ve sonrasında seri hale getirme  
- En iyi uygulama ve en kolay yolu (.NET Framework 2.0 sürümünde sunulan) olan aşağıdaki öznitelikler veri sırasında ve sonrasında serileştirme düzeltmek için kullanılan yöntemleri uygulamak için:  
+## <a name="running-custom-methods-during-and-after-serialization"></a>Özel yöntemlerini sırasında ve sonra serileştirme çalıştıran  
+ En iyi yöntem ve (.NET Framework'ün 2.0 sürümünde sunulan) kolay yolu olan aşağıdaki öznitelikler sırasında ve seri hale getirme sonra veri düzeltmek için kullanılan yöntemleri uygulamak için:  
   
 -   <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
   
@@ -43,16 +43,16 @@ ms.locfileid: "33592112"
   
 -   <xref:System.Runtime.Serialization.OnSerializingAttribute>  
   
- Özniteliklerden herhangi birinin veya tüm dört aşamaları seri hale getirme ve seri durumdan çıkarma işlemleri katılmayı türüne izin verme. Öznitelikleri her aşaması sırasında çağrılması gereken türü yöntemleri belirtin. Yöntem serileştirme akış erişmemesi ancak bunun yerine önce ve seri hale getirme, veya önce ve sonra seri durumdan çıkarma nesnesi alter izin verir. Öznitelikleri türü Devralma Hiyerarşisi tüm düzeylerinde uygulanabilir ve her yöntem hiyerarşide taban en çok türetilen çağrılır. Bu mekanizma karmaşıklığı ve uygulama ortaya çıkan sorunları kaçınan <xref:System.Runtime.Serialization.ISerializable> serileştirme ve seri durumundan çıkarma en türetilen uygulamaya için sorumluluk vererek arabirimi. Ayrıca, bu mekanizma alanları ve seri hale getirme akış alımı popülasyonunu yoksaymak biçimlendiricileri sağlar. Ayrıntılar ve seri hale getirme ve seri durumdan çıkarma denetleme örnekleri için önceki bağlantılardan birini tıklatın.  
+ Bu öznitelikler herhangi birinin veya tüm dört serileştirme ve seri durumundan çıkarma işlemlerinin aşamadan katılmak türüne izin verin. Öznitelikleri yöntemleri her aşamada çağrılmalıdır türü belirtin. Yöntemleri seri hale getirme akışı erişim değil ancak bunun yerine nesne önce ve seri hale getirme, veya önce ve sonra seri durumundan çıkarma alter izin. Öznitelikleri türü devralma hiyerarşisinin tüm düzeylerinde uygulanabilir ve her yöntem hiyerarşide temel en türetilen çağrılır. Bu mekanizma karmaşıklığı ve uygulama ortaya çıkan sorunları kaçınan <xref:System.Runtime.Serialization.ISerializable> serileştirme ve seri durumundan çıkarma en türetilen uygulamaya için sorumluluk vererek arabirimi. Ayrıca, bu mekanizma alanları ve seri hale getirme akışı almanın popülasyonu yok sayılacak biçimlendiricileri sağlar. Ayrıntıları ve örnekleri serileştirme ve seri durumundan çıkarma denetlemek için önceki bağlantılardan herhangi birine tıklayın.  
   
- Ayrıca, yeni bir alan için mevcut bir seri hale getirilebilir türü eklerken, uygulama <xref:System.Runtime.Serialization.OptionalFieldAttribute> alana özniteliği. <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> Ve <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> yeni alan eksik bir akış işlendiğinde alan yokluğu yok sayar.  
+ Ayrıca, yeni bir alan varolan serializable bir tür eklerken uygulamak <xref:System.Runtime.Serialization.OptionalFieldAttribute> alanına öznitelik. <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> Ve <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> yeni alan eksik olan bir akış işlendiğinde alan olmaması yok sayar.  
   
-## <a name="implementing-the-iserializable-interface"></a>ISerializable arabirimi uygulama  
- Seri hale getirme denetlemek için diğer bir yol uygulayarak elde edilen <xref:System.Runtime.Serialization.ISerializable> bir nesne üzerinde arabirimi. Ancak, önceki bölümde yöntemi denetim serileştirme için bu yöntem yerini aldığını unutmayın.  
+## <a name="implementing-the-iserializable-interface"></a>ISerializable arabirimini uygulayan  
+ Serileştirme denetlemek için başka bir şekilde uygulayarak sağlanır <xref:System.Runtime.Serialization.ISerializable> arabirimdeki bir nesne. Ancak, önceki bölümde yöntem Denetim serileştirme için bu yöntem yerine geçer unutmayın.  
   
- Ayrıca, varsayılan seri hale getirme ile işaretli bir sınıfını kullanmamalısınız [Serializable](xref:System.SerializableAttribute) özniteliği ve bildirim temelli veya kesinlik temelli güvenliği sınıf düzeyinde veya kendi oluşturucular sahiptir. Bunun yerine, bu sınıflar her zaman uygulamalıdır <xref:System.Runtime.Serialization.ISerializable> arabirimi.  
+ Ayrıca, varsayılan seri hale getirme ile işaretlenmiş bir sınıfındaki kullanmamalısınız [Serializable](xref:System.SerializableAttribute) öznitelik ve bildirim temelli veya kesinlik temelli güvenlik sınıf düzeyinde veya kendi oluşturucular sahiptir. Bunun yerine, bu sınıflar her zaman uygulamalıdır <xref:System.Runtime.Serialization.ISerializable> arabirimi.  
   
- Uygulama <xref:System.Runtime.Serialization.ISerializable> uygulama içerir `GetObjectData` yöntemi ve nesnenin seri durumda olduğunda kullanan bir özel Oluşturucu. Aşağıdaki örnek kodu nasıl uygulanacağını gösterir <xref:System.Runtime.Serialization.ISerializable> üzerinde `MyObject` önceki bölümünden sınıfı.  
+ Uygulama <xref:System.Runtime.Serialization.ISerializable> uygulayan içerir `GetObjectData` yöntemi ve nesnenin seri durumda olduğunda kullanılan özel bir oluşturucu. Aşağıdaki örnek kodu nasıl uygulanacağını gösterir <xref:System.Runtime.Serialization.ISerializable> üzerinde `MyObject` önceki bölümünden sınıfı.  
   
 ```csharp  
 [Serializable]  
@@ -112,21 +112,21 @@ Public Class MyObject
 End Class  
 ```  
   
- Zaman **GetObjectData** çağrılır doldurmak için sorumlu seri hale getirme sırasında <xref:System.Runtime.Serialization.SerializationInfo> yöntemi çağrısı ile sağlanan. Ad ve değer çiftleri olarak seri hale için değişkenlerini ekleyin. Herhangi bir metin adı olarak kullanılabilir. Hangi üye değişkenleri eklenir karar özgürlüğü sahip <xref:System.Runtime.Serialization.SerializationInfo>, nesne seri durumundan çıkarma sırasında geri yüklemek için yeterli veri serileştirilmiş koşuluyla. Türetilen sınıflar çağrısı **GetObjectData** temel nesnesi üzerinde yöntemi, ikinci uygular <xref:System.Runtime.Serialization.ISerializable>.  
+ Zaman **GetObjectData** çağrılır serileştirme sırasında hesaplarla için sorumlu olduğunuz <xref:System.Runtime.Serialization.SerializationInfo> yöntem çağrısının ile sağlanan. Ad ve değer çiftleri olarak seri hale için değişkenlerini ekleyin. Herhangi bir metin adı olarak kullanılabilir. Hangi üye değişkenleri eklenir karar özgürlüğü sahip <xref:System.Runtime.Serialization.SerializationInfo>, nesne seri durumundan çıkarma sırasında geri yüklemek için yeterli veri serileştirilmiş koşuluyla. Türetilen sınıfların çağrısı **GetObjectData** temel nesnesi üzerinde yöntemi, ikinci uygular <xref:System.Runtime.Serialization.ISerializable>.  
   
- Serileştirme bakın veya erişilemez durumda nesne örneği verileri değiştirmek başka bir kod izin vermek demektir unutmayın. Bu nedenle, serileştirme gerçekleştirir kodu gerektirir [SecurityPermission](xref:System.Security.Permissions.SecurityPermissionAttribute) ile <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter> bayrağı belirtilmiş. Varsayılan ilkesi altında için Internet indirilen bu izni verilmez veya intranet kodu; yalnızca yerel bilgisayarda kod bu izin verilir. **GetObjectData** yöntemi açıkça korunmalıdır ya da göre yoğun [SecurityPermission](xref:System.Security.Permissions.SecurityPermissionAttribute) ile <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter> göre özellikle yardımcı diğer izinler yoğun ya da belirtilen bayrağı özel verileri korur.  
+ Serileştirme bakın veya erişilemez durumda nesne örneği verileri değiştirmek başka bir kod izin vermek demektir unutmayın. Bu nedenle, serileştirme gerçekleştiren kod gerektirir [SecurityPermission](xref:System.Security.Permissions.SecurityPermissionAttribute) ile <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter> bayrağı belirtilmiş. Varsayılan ilkesi altında çok Internet karşıdan bu izin verilmez veya intranet kodu; yalnızca yerel bilgisayarda kod bu izin verilir. **GetObjectData** yöntemi açıkça korunmalıdır ya da göre zorlu [SecurityPermission](xref:System.Security.Permissions.SecurityPermissionAttribute) ile <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter> göre özellikle yardımcı olan diğer izinler yoğun ya da belirtilen bayrağı özel verileri koruyun.  
   
- Özel bir alan gizli bilgileri depoluyorsa, üzerinde uygun izinleri talep **GetObjectData** verileri korumak için. Verildi bu kodu unutmayın [SecurityPermission](xref:System.Security.Permissions.SecurityPermissionAttribute) ile **SerializationFormatter** bayrağı belirtilmiş görüntüleyebilir ve özel alanlarında depolanan verilerin değiştirebilirsiniz. Bu kötü amaçlı çağıran verilen [SecurityPermission](xref:System.Security.Permissions.SecurityPermissionAttribute) gizli dizin konumları veya izin verilenler gibi verileri görüntüleyebilir ve bilgisayardaki güvenlik açığından verileri kullanın. Güvenlik izni bayrakları belirtebilirsiniz tam bir listesi için bkz: [SecurityPermissionFlag numaralandırma](xref:System.Security.Permissions.SecurityPermissionFlag).  
+ Özel bir alan duyarlı bilgi içermiyorsa, üzerinde uygun izinleri talep **GetObjectData** verileri korumak için. Verilmiş kodun [SecurityPermission](xref:System.Security.Permissions.SecurityPermissionAttribute) ile **SerializationFormatter** belirtilen bayrağı görüntüleyebilir ve özel alanları depolanan verileri değiştirebilirsiniz. Kötü amaçlı bir arayan bu verilen [SecurityPermission](xref:System.Security.Permissions.SecurityPermissionAttribute) gizli dizin konumları veya izin verilenler gibi veri görüntüleyebilir ve bilgisayardaki güvenlik açığı verileri kullanın. Güvenlik izni bayrakları belirtebilirsiniz tam listesi için bkz. [SecurityPermissionFlag numaralandırma](xref:System.Security.Permissions.SecurityPermissionFlag).  
   
- Zaman stres önemlidir <xref:System.Runtime.Serialization.ISerializable> her ikisi de uygulanmalı bir sınıfa eklenen **GetObjectData** ve özel Oluşturucu. Derleyici, sizi uyarır **GetObjectData** eksik. Ancak, bir oluşturucu uyarlamasını gerçekleştirmek imkansız olduğu için hiçbir uyarı oluşturucusu yok ve sınıf oluşturucu olmadan serisini kaldırmak için bir girişimde zaman bir özel durum için sağlanır.  
+ Olduğunda vurgulamak önemlidir <xref:System.Runtime.Serialization.ISerializable> için bir sınıf her ikisi de uygulanmalı eklenir **GetObjectData** ve özel Oluşturucu. Varsa derleyici sizi uyarır **GetObjectData** eksik. Ancak, bir kurucu uygulanması zorlamak olanaksız olduğundan, hiçbir uyarı oluşturucu yok ve bir sınıf oluşturucu olmadan serisini kaldırmak için girişiminde bulunulduğunda bir özel durum için sağlanır.  
   
- Geçerli tasarım yukarıda tercih bir <xref:System.Runtime.Serialization.ISerializationSurrogate.SetObjectData%2A> güvenlik ve sürüm olası sorunları almak için yöntemi. Örneğin, bir `SetObjectData` yöntemi bir arabirim bir parçası olarak tanımlanmışsa ortak olmalıdır; böylece kullanıcıların sahip karşı korumak için kod yazmanız gerekir **SetObjectData** yöntemi birden çok kez çağrıldı. Aksi takdirde, kötü amaçlı bir uygulama, çağıran **SetObjectData** yöntemi bir işlem yürütme sürecinde bir nesne üzerinde olası sorunlara neden olabilir.  
+ Geçerli tasarım yukarıda tercih bir <xref:System.Runtime.Serialization.ISerializationSurrogate.SetObjectData%2A> güvenlik ve sürüm olası sorunları almak için yöntemi. Örneğin, bir `SetObjectData` yöntemi bir arabirim bir parçası olarak tanımlanmışsa ortak olmalıdır; böylece kullanıcılar sahip karşı korumaya için kod yazmanız gereken **SetObjectData** yöntemi birden çok kez çağrılır. Aksi takdirde, kötü amaçlı bir uygulamayı çağırır **SetObjectData** yöntemi bir işlem yürütülürken sürecinde bir nesne üzerinde olası sorunlara neden olabilir.  
   
- Seri durumdan çıkarma sırasında <xref:System.Runtime.Serialization.SerializationInfo> bu amaç için sağlanan Oluşturucusu kullanılarak sınıfı geçirilir. Nesnenin seri durumda olduğunda Oluşturucu yerleştirilen tüm görünürlük kısıtlamaları göz ardı edilir; Bu nedenle sınıf ortak, korumalı, iç veya özel olarak işaretleyebilirsiniz. Ancak, sınıf; bu durumda Oluşturucusu özel işaretlenmelidir korumalı olduğu sürece korumalı Oluşturucusu yapmak en iyi uygulamadır. Oluşturucusu de kapsamlı giriş doğrulaması gerçekleştirmeniz gerekir. Kötü amaçlı kod tarafından kötüye kullanımı önlemek için aynı güvenlik denetimleri ve diğer oluşturucuyu kullanarak sınıfının bir örneği elde etmek için gereken izinler Oluşturucusu uygulamalıdır. Bu öneriyi uygulamazsanız kötü amaçlı kod bir nesne preserialize, denetimi ile elde [SecurityPermission](xref:System.Security.Permissions.SecurityPermissionAttribute) ile <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter> bayrağı belirtilen ve nesnedeki atlayarak herhangi bir istemci bilgisayarda Standart örnek oluşturma sırasında bir public oluşturucuya kullanarak uygulanmış güvenliği.  
+ Seri durumundan çıkarma sırasında <xref:System.Runtime.Serialization.SerializationInfo> bu amaç için sağlanan oluşturucu kullanılarak sınıfına geçirilen. Nesnenin seri durumda olduğunda Oluşturucu tüm görünürlük kısıtlamaları göz ardı edilir; Bu nedenle ortak, korumalı, dahili veya özel olarak sınıf işaretleyebilirsiniz. Ancak, sınıf, bu durumda oluşturucu özel işaretlenmelidir korumalı olup sürece korumalı Oluşturucu olun en iyi uygulamadır. Oluşturucuya, ayrıca kapsamlı giriş doğrulaması gerçekleştirmeniz gerekir. Kötü amaçlı kod tarafından kötüye kaçınmak için oluşturucuya aynı güvenlik denetimleri ve diğer bir oluşturucu kullanılarak sınıfının bir örneği elde etmek için gereken izinler uygulaması gerekir. Bu öneri uygulamazsanız, kötü amaçlı kod bir nesne preserialize, denetimi ile elde [SecurityPermission](xref:System.Security.Permissions.SecurityPermissionAttribute) ile <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter> bayrağı belirtilen ve atlama herhangi bir istemci bilgisayarında bir nesneyi seri durumdan çıkarma Standart örnek oluşturma sırasında bir Genel oluşturucu kullanılarak uygulanmış güvenlik.  
   
- Nesnenin durumunu geri yüklemek için yalnızca değişkenlerin değerleri almak <xref:System.Runtime.Serialization.SerializationInfo> seri hale getirme sırasında kullanılan adları kullanarak. Taban sınıfı uyguluyorsa <xref:System.Runtime.Serialization.ISerializable>, temel oluşturucuyu değişkenlerini geri yüklemek temel nesne izin vermek için çağrılmalıdır.  
+ Nesne durumunu geri yüklemek için basitçe değişkenlerin değerlerini alma <xref:System.Runtime.Serialization.SerializationInfo> serileştirme sırasında kullanılan adları kullanarak. Temel sınıfı kullanılıyorsa <xref:System.Runtime.Serialization.ISerializable>, temel oluşturucuyu değişkenlerini geri yüklemek temel nesne izin vermek için çağrılmalıdır.  
   
- Ne zaman, türetilen yeni bir sınıf uygulayan bir <xref:System.Runtime.Serialization.ISerializable>, türetilen sınıfın iki Oluşturucusu uygulamalıdır yanı sıra **GetObjectData** serileştirilmesi gereken değişkenleri varsa yöntemi. Aşağıdaki kod örneğinde nasıl yapıldığını gösterir kullanarak `MyObject` daha önce gösterilen sınıfı.  
+ Olduğunda, türetilen yeni bir sınıf uygulayan birinden <xref:System.Runtime.Serialization.ISerializable>, türetilmiş sınıf oluşturucu her iki uygulamalıdır yanı sıra **GetObjectData** seri hale gerek değişkenleri varsa yöntemi. Aşağıdaki kod örneğinde nasıl yapıldığını gösterir kullanarak `MyObject` daha önce gösterilen sınıfı.  
   
 ```csharp  
 [Serializable]  
@@ -180,11 +180,12 @@ Public Class ObjectTwo
 End Class  
 ```  
   
- Seri durumdan çıkarma Oluşturucusu çağrı temel sınıfı unutmayın. Bu yapılır değil, temel sınıf oluşturucu hiçbir zaman denir ve nesne tamamen seri durumdan çıkarma sonra oluşturulan değil.  
+ Temel sınıfı seri durumundan çıkarma oluşturucuda çağrılacak unutmayın. Bu işlem değil, temel sınıfı Oluşturucu hiçbir zaman çağrılır ve nesne tam olarak seri durumundan çıkarma sonra oluşturulur değil.  
   
- Nesneleri, içinden yeniden; ve çağrılan yöntemler çağrıyı yapan zaman serisi değil nesne başvuruları başvurmak çünkü seri durumdan çıkarma sırasında çağıran yöntemleri istenmeyen yan etkileri olabilir. Sınıf olan Implements çıkarıldıysa <xref:System.Runtime.Serialization.IDeserializationCallback>, <xref:System.Runtime.Serialization.IDeserializationCallback.OnDeserialization*> yöntemi tüm nesne grafiğinin seri durumdan olduğunda otomatik olarak çağrılır. Bu noktada, başvurulan tüm alt nesneleri tam olarak geri yüklendi. Karma tablo olay dinleyicisi kullanmadan seri durumdan zor bir sınıfı tipik bir örneğidir. Seri durumdan çıkarma sırasında anahtar ve değer çiftleri almak kolaydır, ancak bu nesneleri geri karma tablosu için sorunlara neden olabilir karma tablosundan türetilmiş bu sınıfları garanti olduğundan ekleme seri durumdan. Bu aşamada karma tablo üzerinde yöntemleri çağırmak bu nedenle önerilir değil.  
+ Nesneleri içinden yeniden; ve arama yöntemleri seri durumundan çıkarma sırasında çağrılır yöntemleri için çağrı yapılır zaman serisi değil nesne başvurularını başvurabilir olduğundan istenmeyen yan etkileri olabilir. Sınıf olan uygular seri durumdan <xref:System.Runtime.Serialization.IDeserializationCallback>, <xref:System.Runtime.Serialization.IDeserializationCallback.OnDeserialization*> yöntemi tüm nesne grafiğinin seri olduğunda otomatik olarak çağrılır. Bu noktada, başvurulan tüm alt nesneleri tam olarak geri yüklendi. Karma tablo olay dinleyicisi kullanmadan seri durumdan zor bir sınıfı tipik bir örneğidir. Anahtar ve değer çiftleri seri durumundan çıkarma sırasında almak kolaydır, ancak bu nesnelerine geri karma tablo sorunlara neden olabilir karma tablosundan türetilmiş bu sınıfları garanti olduğundan ekleme seri durumdan. Bu aşamada karma tablo üzerinde yöntemleri çağırmak bu nedenle önerilir değil.  
   
-## <a name="see-also"></a>Ayrıca bkz.  
- [İkili Serileştirme](binary-serialization.md)  
- [XML ve SOAP Serileştirme](xml-and-soap-serialization.md)  
- [Güvenlik ve Serileştirme](../../../docs/framework/misc/security-and-serialization.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [İkili Serileştirme](binary-serialization.md)  
+- [XML ve SOAP Serileştirme](xml-and-soap-serialization.md)  
+- [Güvenlik ve Serileştirme](../../../docs/framework/misc/security-and-serialization.md)

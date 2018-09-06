@@ -10,33 +10,34 @@ helpviewer_keywords:
 ms.assetid: 7b964ebd-7a4f-4d28-8194-7841f9e4c702
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1e0d2747abbacf766ddeda6f41404d8701cbc273
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fdc12091a377a118dc533e5f299fa4833af64baf
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574372"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43879672"
 ---
 # <a name="pipe-operations-in-the-net-framework"></a>.NET Framework'te Kanal İşlemleri
 Kanallar, işlemler arası iletişim için bir yol sağlar. Kanallar iki tür vardır:  
   
 -   Anonim kanallar.  
   
-     Anonim kanallar, yerel bir bilgisayarda işlemler arası iletişim sağlar. Anonim kanallar adlandırılmış kanallar'den daha az ek yük gerektirir ancak sınırlı hizmetleri sunar. Anonim kanallar tek yönlüdür ve bir ağ üzerinden kullanılamaz. Bunlar yalnızca tek bir sunucu örneği destekler. Anonim Kanallar, iş parçacıkları arasında ya da oluşturulduğunda, burada kanal tanıtıcıları kolayca alt işlem geçirilebilir üst ve alt işlemleri arasındaki iletişim için faydalıdır.  
+     Anonim kanallar, yerel bir bilgisayarda işlemler arası iletişim sağlar. Anonim kanallar adlandırılmış kanallardan daha az ek yük gerektirir, ancak sınırlı hizmetleri sunar. Anonim Kanallar, tek yönlü ve bir ağ üzerinden kullanılamaz. Bunlar, yalnızca tek bir sunucu örneği destekler. Üst ve alt işlemlerin oluşturulduğunda burada kanal tanıtıcıları kolayca alt işleme geçirilebilir veya iş parçacığı arasında iletişim için anonim kanalları yararlıdır.  
   
-     .NET Framework, anonim kanallar kullanarak uygulama <xref:System.IO.Pipes.AnonymousPipeServerStream> ve <xref:System.IO.Pipes.AnonymousPipeClientStream> sınıfları.  
+     .NET Framework anonim kanalları kullanarak uygulamanız <xref:System.IO.Pipes.AnonymousPipeServerStream> ve <xref:System.IO.Pipes.AnonymousPipeClientStream> sınıfları.  
   
      Bkz: [nasıl yapılır: yerel işlemler arası iletişim için anonim kanallar kullanma](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md).  
   
 -   Adlandırılmış Kanallar.  
   
-     Adlandırılmış kanallar, bir kanal sunucusu ve bir veya daha fazla kanal istemcisi arasındaki işlemler arası iletişimi sağlar. Adlandırılmış Kanallar tek yönlü veya çift yönlü olabilir. Bunlar ileti tabanlı iletişim destekler ve birden çok istemcilerin aynı kanal adını kullanarak sunucu işlemi aynı anda bağlanmasına olanak sağlamak. Adlandırılmış kanallar da uzak sunucularda kendi izinlerini kullanmak bağlantı işlemleri sağlayan kimliğe bürünme özelliğini destekler.  
+     Adlandırılmış kanallar, bir kanal sunucusu ve bir veya daha fazla kanal istemcisi arasındaki işlemler arası iletişimi sağlar. Adlandırılmış Kanallar, tek yönlü veya çift yönlü olabilir. Bunlar, ileti tabanlı iletişim destekler ve birden çok istemci aynı anda aynı kanal adını kullanarak sunucu işlemine bağlanmasına izin. Adlandırılmış Kanallar, bağlantı işlemlerinin uzak sunucularda kendi izinlerini kullanmasını sağlayan kimliğe bürünme da destekler.  
   
-     .NET Framework, adlandırılmış kanallar kullanarak uygulama <xref:System.IO.Pipes.NamedPipeServerStream> ve <xref:System.IO.Pipes.NamedPipeClientStream> sınıfları.  
+     .NET Framework'teki adlandırılmış kanallar kullanarak uygulamanız <xref:System.IO.Pipes.NamedPipeServerStream> ve <xref:System.IO.Pipes.NamedPipeClientStream> sınıfları.  
   
      Bkz: [nasıl yapılır: ağ işlemler arası iletişimi için adlandırılmış kanallar kullanma](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Dosya ve Akış G/Ç'si](../../../docs/standard/io/index.md)  
- [Nasıl yapılır: Yerel İşlemler Arası İletişim için Anonim Kanallar Kullanma](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)  
- [Nasıl yapılır: Ağ İşlemler Arası İletişimi için Adlandırılmış Kanallar Kullanma](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Dosya ve Akış G/Ç'si](../../../docs/standard/io/index.md)  
+- [Nasıl yapılır: Yerel İşlemler Arası İletişim için Anonim Kanallar Kullanma](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)  
+- [Nasıl yapılır: Ağ İşlemler Arası İletişimi için Adlandırılmış Kanallar Kullanma](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)

@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: iki klasörün (LINQ) (C#) içeriğini karşılaştır
 ms.date: 07/20/2015
 ms.assetid: c7c4870e-c500-4de3-afa4-2c8e07f510e6
 ms.openlocfilehash: 1517d1f9e451306e40835e6032e2aff2fe3e60ab
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43778444"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43881349"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>Nasıl yapılır: iki klasörün (LINQ) (C#) içeriğini karşılaştırma
 Bu örnek, iki dosya listelerini karşılaştırmak için üç yol gösterir:  

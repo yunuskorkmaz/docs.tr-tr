@@ -10,28 +10,29 @@ helpviewer_keywords:
 ms.assetid: e52ff26c-c5d3-4fab-9fec-c937fb387963
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ebea62f33c5df252dd73a0708f31612cd2998728
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c85731b991399e92297d6109a3000c1e345e02f6
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580945"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43885924"
 ---
 # <a name="how-to-specify-the-execution-mode-in-plinq"></a>Nasıl yapılır: PLINQ'te Yürütme Modunu Belirtme
-Bu örnek varsayılan buluşsal atlamak için bir sorgu sorgu şekli bağımsız olarak paralel hale PLINQ zorlamak nasıl gösterir.  
+Bu örnekte, varsayılan buluşsal atlamak ve sorgunun şekli bağımsız olarak bir sorgu paralel hale getirmek için PLINQ zorlamak gösterilmektedir.  
   
 > [!WARNING]
->  Bu örnek kullanım göstermeye yöneliktir ve eşdeğer sıralı LINQ daha hızlı nesneleri sorguya çalışmayabilir. Speedup hakkında daha fazla bilgi için bkz: [Plınq'te hızlandırmayı anlama](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
+>  Bu örnek, kullanımını göstermek için tasarlanmıştır ve nesneleri sorgu için eşdeğer sıralı LINQ daha hızlı çalışmayabilir. Hızlandırmayı hakkında daha fazla bilgi için bkz: [plınq'te hızlandırmayı anlama](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[PLINQ#22](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#22)]
  [!code-vb[PLINQ#22](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#22)]  
   
- PLINQ paralelleştirme olanaklarını yararlanmak için tasarlanmıştır. Ancak, tüm sorguları paralel yürütülmesini yararlanır. Sorguda çok az şey yapan bir tek kullanıcı temsilci içeriyorsa, örneğin, sorgu genellikle daha hızlı sırayla çalışır. Parallelizing yürütme etkinleştirme söz konusu yükünü alınır speedup daha pahalı olmasıdır. Bu nedenle, PLINQ otomatik olarak her sorguyu paralel hale değil. Önce sorgu ve onu oluşturan çeşitli işleçler şeklini inceler. Bu analize dayalı olarak, varsayılan yürütme modu PLINQ'te bazılarını veya tümünü sorgu sırayla yürütmek karar verebilirsiniz. PLINQ kendi çözümlemesinden belirlemek mümkün olandan ancak, bazı durumlarda, daha sorgunuzu hakkında bilmeniz. Örneğin, bir temsilci çok pahalı olduğunu ve sorgu paralelleştirme kesinlikle faydalanırsınız biliyorsunuz. Böyle durumlarda, kullandığınız <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A> yöntemi ve belirtin <xref:System.Linq.ParallelExecutionMode.ForceParallelism> değer her zaman sorguyu paralel çalıştırmak için PLINQ isteyin.  
+ PLINQ, paralelleştirme için fırsatlar yararlanmak için tasarlanmıştır. Ancak, tüm sorguları paralel yürütmeyi yararlanır. Çok az çalışır bir tek kullanıcı temsilcisi bir sorgu içeriyor, örneğin, sorgu genellikle daha hızlı bir şekilde sırayla çalışır. Paralel yürütme etkinleştirirken yükü elde edilen hızlandırmayı daha ucuz olmasıdır. Bu nedenle, PLINQ otomatik olarak her bir sorguyu paralelleştirmesi değil. Öncelikle, sorgu ve onu oluşturan çeşitli işleçler şeklini inceler. Bu analizi temel alarak, PLINQ varsayılan yürütme modunda bazılarını veya tümünü sorgu ardışık olarak yürütmek karar verebilirsiniz. PLINQ, analiz belirlemek mümkün olandan ancak bazı durumlarda daha sorgunuzu hakkında haberdar olabilirsiniz. Örneğin, bir temsilci çok pahalı olduğundan ve sorgunun paralelleştirme kesinlikle faydalanır haberdar olabilirsiniz. Bu gibi durumlarda, kullandığınız <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A> yöntemi belirtin <xref:System.Linq.ParallelExecutionMode.ForceParallelism> değeri her zaman sorguyu paralel çalıştırmak için PLINQ bildirin.  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Bu kodu kesip [PLINQ veri örneği](../../../docs/standard/parallel-programming/plinq-data-sample.md) ve yöntemi çağırın `Main`.  
+ Bu kodu kesip [PLINQ veri örneği](../../../docs/standard/parallel-programming/plinq-data-sample.md) ve içinden yöntemi çağırın `Main`.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Linq.ParallelEnumerable.AsSequential%2A>  
- [Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- <xref:System.Linq.ParallelEnumerable.AsSequential%2A>  
+- [Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

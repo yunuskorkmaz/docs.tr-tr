@@ -1,81 +1,82 @@
 ---
-title: Basit türler çıkarımını yapma için kurallar
+title: Basit türlerin çıkarımını yapma kuralları
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d265d9247d00a20770d401d62fd1e065e2ef1627
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd5426de388ba2c7a22d66ce01d56a3139e36e38
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576399"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43891148"
 ---
-# <a name="rules-for-inferring-simple-types"></a>Basit türler çıkarımını yapma için kurallar
-Açıklar nasıl <xref:System.Xml.Schema.XmlSchemaInference> sınıfı öznitelikler ve öğeler için veri türünü oluşturur.  
+# <a name="rules-for-inferring-simple-types"></a>Basit türlerin çıkarımını yapma kuralları
+Açıklayan nasıl <xref:System.Xml.Schema.XmlSchemaInference> sınıfı öznitelikler ve öğeler için veri türünü çıkarsar.  
   
- <xref:System.Xml.Schema.XmlSchemaInference> Sınıfı öznitelikler ve öğeler basit türler için veri türünü oluşturur. Birden çok farklı değerler şunlardır: tek bir türle mutabakatı ve nasıl şemasını tanımlama olası oluşturulursa türleri, bu bölümde açıklanmıştır `xsi` öznitelikleri işlenir.  
+ <xref:System.Xml.Schema.XmlSchemaInference> Sınıfı öznitelikler ve öğeler basit türler için veri türünü çıkarsar. Bu bölümde birden çok farklı değerler şunlardır: tek bir tür için mutabık ve nasıl şema tanımlama olası çıkarsanan türleri açıklanmaktadır `xsi` öznitelikleri işlenir.  
   
 ## <a name="inferred-types"></a>Çıkarsanan türleri  
- <xref:System.Xml.Schema.XmlSchemaInference> Sınıfı öğesi oluşturur ve öznitelik değerleri basit türler olarak ve sonuçta elde edilen şemada türü özniteliği içerir. Tüm basit türler türleridir sonuçlandı. Taban türleri ya da modelleri elde edilen şeması bir parçası olarak dahil edilir.  
+ <xref:System.Xml.Schema.XmlSchemaInference> Sınıfı çıkarsar öğe ve öznitelik değerleri basit türler olarak ve sonuçta elde edilen şemada type özniteliği içerir. Tüm basit türler türleridir sonuçlandı. Temel türleri ya da modelleri elde edilen şemasını bir parçası olarak dahil edilir.  
   
- XML belgesinde karşılaşılan değerlerini ayrı ayrı incelenir. Türü için bir değer, incelenir zaman algılanır. Bir tür bir öznitelik veya bir öğe için ortaya çıkan ve öznitelik veya bir öğe için bir değer, şu anda çıkarılan türü eşleşmeyen karşılaştı <xref:System.Xml.Schema.XmlSchemaInference> sınıfın her bir kural kümesi için türü yükseltir. Bu kurallar tür yükseltme bölümünde, bu konunun ilerleyen bölümlerinde ele alınmıştır.  
+ XML belgesinde karşılaştığından değerleri ayrı ayrı incelenir. Türü için bir değer, incelenir zamanında algılanır. Bir tür bir öznitelik veya öğenin için ortaya çıkan ve bir öznitelik veya öğenin değeri, şu anda çıkarsanan tür eşleşmeyen karşılaşılanaa <xref:System.Xml.Schema.XmlSchemaInference> sınıfı her bir kural kümesi için tür yükseltir. Bu kurallar, tür yükseltme bölümünde, bu konunun ilerleyen bölümlerinde ele alınmıştır.  
   
- Aşağıdaki tabloda, sonuçta elde edilen şema için olası oluşturulursa türlerini listeler.  
+ Aşağıdaki tabloda, elde edilen şema için olası çıkarsanan türleri listelenmektedir.  
   
 |Basit tür|Açıklama|  
 |-----------------|-----------------|  
 |Boole değeri|TRUE, false, 0, 1.|  
-|byte|Tamsayı aralığında 127 – 128 arasında yer.|  
-|unsignedByte|0-255 aralığında tamsayılar.|  
-|short|Tamsayı aralığında –32768 ile 32767 arasında yer.|  
-|unsignedShort|0 ile 65535 aralığında tamsayılar.|  
-|int|Tamsayı aralığında –2147483648 ile 2147483647 arasında yer.|  
-|unsignedInt|0-4294967295 aralığında tamsayılar.|  
-|long|Tamsayılar 9223372036854775807 –9223372036854775808 aralığı içinde.|  
-|unsignedLong|Tamsayılar için 0 18446744073709551615 aralığı içinde.|  
-|tamsayı|Büyük olasılıkla önekine sahip basamak sınırlı sayıda "-".|  
-|decimal|0 ile 28 duyarlık için rakam sayısal değerleri.|  
-|float|"E" veya "e üs temsil eden bir tamsayı değeri tarafından izlenen" tarafından ardından isteğe bağlı bir ondalık sayı. Ondalık değer 16777216-16777216 aralığında olabilir. Üs değerler 104 –149 aralığında olabilir.<br /><br /> Float sonsuz göstermek özel değerler ve sayısal olmayan tüm değerleri olanak sağlar. Kayan nokta özel değerler: 0, - 0, INF, -INF, NaN.|  
-|çift|Kayan noktalı ondalık değerler dışında aynı 9007199254740992-9007199254740992 aralığında olabilir ve üs değerleri 970 –1075 aralığında olabilir.<br /><br /> Çift sonsuz göstermek özel değerler ve sayısal olmayan tüm değerleri olanak sağlar. Kayan nokta özel değerler: 0, - 0, INF, -INF, NaN.|  
+|byte|– 128 arasında 127 aralığında tamsayı.|  
+|unsignedByte|0-255 aralığında tamsayı.|  
+|short|İle 32767 –32768 aralığındaki tam sayılar.|  
+|unsignedShort|0 ile 65535 aralığındaki tam sayılar.|  
+|int|İle 2147483647 arasında –2147483648 aralığındaki tam sayılar.|  
+|unsignedInt|0-4294967295 aralığındaki tam sayılar.|  
+|long|Tamsayı aralığında –9223372036854775808 9223372036854775807 için.|  
+|unsignedLong|0 için 18446744073709551615 aralığındaki tam sayılar.|  
+|tamsayı|Sınırlı sayıda basamak büyük olasılıkla ön eki "-".|  
+|decimal|0 ile 28 kesinliği basamak içeren sayısal değerler.|  
+|float|"E" veya "e" üs temsil eden bir tamsayı değeri tarafından izlenen isteğe bağlı olarak arkasından bir ondalık sayı. Ondalık değerler için 16777216-16777216 aralığında olabilir. Üstel değerleri için 104 –149 aralığında olabilir.<br /><br /> Kayan noktalı sayı sonsuza göstermek özel değerler ve sayısal olmayan değerleri olanak sağlar. Kayan nokta için özel değerler: 0, - 0, INF, -INF, NaN.|  
+|çift|Kayan noktalı sayı ondalık değerler dışında aynı-9007199254740992 9007199254740992 için aralığında olabilir ve üstel değerleri için 970 –1075 aralığında olabilir.<br /><br /> Sonsuza göstermek özel değerler ve sayısal olmayan değerleri çift olanak sağlar. Kayan nokta için özel değerler: 0, - 0, INF, -INF, NaN.|  
 |süre|W3C süre biçimi.|  
-|tarih saat|W3C dateTime biçimi.|  
+|tarih saat|W3C tarih/saat biçimi.|  
 |zaman|W3C saat biçimi.|  
 |Tarih|Yıl değerlerini 0001 9999 kısıtlanır.|  
-|gYearMonth|W3C Gregoryen ay ve yıl biçimi.|  
-|dize|Bir veya daha fazla Unicode karakter.|  
+|gYearMonth|W3C Gregoryen ayı ve yılı biçimi.|  
+|dize|Bir veya daha fazla Unicode karakteri.|  
   
 ## <a name="type-promotion"></a>Tür Yükseltme  
- <xref:System.Xml.Schema.XmlSchemaInference> Sınıfı özniteliği ve öğesi değerlerine biri aynı anda inceler. Değerleri karşılaşılan gibi en kısıtlayıcı, imzasız türü algılanır. Bir tür bir öznitelik veya bir öğe için ortaya çıkan ve yeni bir değer, şu anda çıkarılan türü eşleşmeyen karşılaşılırsa, çıkarılan türü için şu anda çıkarılan türü ve yeni değer uygulanan yeni bir türe yükseltildi. <xref:System.Xml.Schema.XmlSchemaInference> Çıkarılan türü yükseltirken, sınıf önceki değerleri düşünün.  
+ <xref:System.Xml.Schema.XmlSchemaInference> Sınıfı özniteliği ve öğesi değerlerine bir anda inceler. Değerleri karşılaştığından, en kısıtlayıcı, işaretsiz tür algılanır. Bir tür bir öznitelik veya öğenin için ortaya çıkan ve yeni bir değer şu anda çıkarsanan tür eşleşmeyen karşılaştı, şu anda çıkarsanan tür ve yeni bir değer için geçerli yeni bir tür için çıkarsanan tür yükseltilir. <xref:System.Xml.Schema.XmlSchemaInference> Çıkarsanan tür yükseltilirken, sınıfı önceki değerleri düşünün.  
   
- Örneğin, iki XML belgelerinden aşağıdaki XML parçaları göz önünde bulundurun:  
+ Örneğin, aşağıdaki parçalarını iki XML belgelerinden göz önünde bulundurun:  
   
  `<MyElement1 attr1="12" />`  
   
  `<MyElement1 attr1="52344" />`  
   
- Zaman ilk `attr1` değeri karşılaştı, türü `attr1` olarak algılanır `unsignedByte` değere göre `12`. Zaman ikinci `attr1` olan karşılaştı, türü için yükseltilir `unsignedShort` şu anda oluşturulursa türüne göre `unsignedByte` geçerli değeri `52344`.  
+ Zaman ilk `attr1` değeri karşılaştı, türü `attr1` olarak çıkarılan `unsignedByte` değerine göre `12`. Zaman ikinci `attr1` olduğu ile karşılaşıldı, türüne yükseltilir `unsignedShort` şu anda gösterilen türüne göre `unsignedByte` geçerli değeri `52344`.  
   
- Şimdi, aşağıdaki iki XML belgelerini XML'den göz önünde bulundurun:  
+ Şimdi iki XML belgelerinden aşağıdaki XML göz önünde bulundurun:  
   
  `<MyElement2 attr2="0" />`  
   
  `<MyElement2 attr2="true" />`  
   
- Zaman ilk `attr2` değeri karşılaştı, türü `attr2` olarak algılanır `unsignedByte` değere göre `0`. Zaman ikinci `attr2` olan karşılaştı, türü için yükseltilir `string` şu anda oluşturulursa türüne göre `unsignedByte` geçerli değeri `true` çünkü <xref:System.Xml.Schema.XmlSchemaInference> yükseltirken, sınıf önceki değerleri düşünün tür çıkarımı yapılan. Ancak, her iki örneği `attr2` aynı XML belgesinde yer alan ve iki farklı XML belgeleri yukarıda gösterildiği gibi karşılaşıldı `attr2` olarak ortaya `boolean`.  
+ Zaman ilk `attr2` değeri karşılaştı, türü `attr2` olarak çıkarılan `unsignedByte` değerine göre `0`. Zaman ikinci `attr2` olduğu ile karşılaşıldı, türüne yükseltilir `string` şu anda gösterilen türüne göre `unsignedByte` geçerli değeri `true` çünkü <xref:System.Xml.Schema.XmlSchemaInference> yükseltilirken, sınıfı önceki değerleri düşünün türün gösterilmesi. Ancak, her iki `attr2` aynı XML belgesi ve iki farklı XML belgeleri, yukarıda gösterildiği gibi karşılaşılan `attr2` olarak ortaya çıkan `boolean`.  
   
-### <a name="ignored-attributes-from-the-httpwwww3org2001xmlschema-instance-namespace"></a>Öznitelikleri göz ardı http://www.w3.org/2001/XMLSchema-instance Namespace  
- Aşağıdaki şema tanımlama sırasında şema çıkarım göz ardı edilir öznitelikleri.  
+### <a name="ignored-attributes-from-the-httpwwww3org2001xmlschema-instance-namespace"></a>Öznitelikleri yoksayıldı http://www.w3.org/2001/XMLSchema-instance Namespace  
+ Aşağıdaki şema tanımlama öznitelikleri şema çıkarımı sırasında yok sayılır.  
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`xsi:type`|Bir öğe ile karşılaşıldığında `xsi:type` belirtilen `xsi:type` göz ardı edilir.|  
-|`xsi:nil`|Bir öğe ile bir `xsi:nil` özniteliği ile karşılaşıldı, öğesi bildiriminden oluşturulursa şemasında değerine sahip `nillable="true"`. Bir öğesiyle bir `xsi:nil` özniteliğini `true` alt öğelere sahip olamaz.|  
-|`xsi:schemaLocation`|Varsa `xsi:schemaLocation` olan karşılaştı, dikkate alınmaz.|  
-|`xsi:noNamespaceSchemaLocation`|Varsa `xsi:noNamespaceSchemaLocation` olan karşılaştı, dikkate alınmaz.|  
+|`xsi:type`|Bir öğe ile karşılaşılırsa `xsi:type` belirtilen `xsi:type` göz ardı edilir.|  
+|`xsi:nil`|Bir öğe ile bir `xsi:nil` öznitelik karşılaşıldığında, çıkarsanan şema öğesi bildiriminde sahip `nillable="true"`. Bir öğe ile bir `xsi:nil` özniteliğini `true` alt öğeleri olamaz.|  
+|`xsi:schemaLocation`|Varsa `xsi:schemaLocation` olan karşılaştı, göz ardı edilir.|  
+|`xsi:noNamespaceSchemaLocation`|Varsa `xsi:noNamespaceSchemaLocation` olan karşılaştı, göz ardı edilir.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [XML Şema Nesne Modeli (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
- [XML Belgelerinden Şema Çıkarımı Yapma](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
- [Şema Düğüm Türleri ve Yapısını Çıkarma Kuralları](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [XML Şema Nesne Modeli (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
+- [XML Belgelerinden Şema Çıkarımı Yapma](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
+- [Şema Düğüm Türleri ve Yapısını Çıkarma Kuralları](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)

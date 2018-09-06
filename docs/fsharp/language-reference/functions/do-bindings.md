@@ -1,18 +1,17 @@
 ---
 title: do Bağlamaları (F#)
-description: "F # 'bağlaması yapma' bir işlevi veya değer tanımlamadan kod yürütmek için nasıl kullanıldığı hakkında bilgi edinin."
+description: "F # 'bağlaması yapma' bir işlev veya değer tanımlamadan kod yürütmek için nasıl kullanıldığını öğrenin."
 ms.date: 05/16/2016
-ms.openlocfilehash: 6fd084090a204beab0da1c2deb5b5ae2a86281c8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 78dbf8da0fe40b5af566ad98693df1109eede7e4
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562342"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43882739"
 ---
 # <a name="do-bindings"></a>do Bağlamaları
 
-A `do` bağlama bir işlevi veya değer tanımlamadan kod yürütmek için kullanılır. Ayrıca, bağlamaları olabilir yapmak sınıflarda kullanıldığında, bkz: [ `do` sınıflardaki bağlamaları](../members/do-bindings-in-classes.md).
-
+A `do` bağlama, bir işlev veya değer tanımlamadan kod yürütmek için kullanılır. Ayrıca, bağlamaları olabilir misiniz sınıflarda kullanıldığında, bkz: [ `do` sınıflardaki bağlamaları](../members/do-bindings-in-classes.md).
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -22,14 +21,14 @@ A `do` bağlama bir işlevi veya değer tanımlamadan kod yürütmek için kulla
 ```
 
 ## <a name="remarks"></a>Açıklamalar
-Kullanım bir `do` bir işlevi veya değer tanımı bağımsız olarak kod yürütmek istediğinizde bağlama. İfade bir `do` bağlama döndürmelidir `unit`. Kodda bir üst düzey `do` bağlama modül başlatıldığında gerçekleştirilir. Anahtar sözcüğü `do` isteğe bağlıdır.
 
-Öznitelikleri uygulanabilir için üst düzey `do` bağlama. Örneğin, programınızı COM birlikte çalışma kullanıyorsa, uygulamak isteyebilirsiniz `STAThread` programınıza özniteliği. Bir öznitelik kullanarak bunu yapabilirsiniz bir `do` aşağıdaki kodda gösterildiği gibi bağlama.
+Kullanım bir `do` bir işlev veya değer tanımı bağımsız olarak kod yürütmek istediğiniz zaman bağlama. İfade bir `do` bağlama döndürmelidir `unit`. En üst düzey bir kod `do` bağlama modülü başlatıldığında yürütülür. Anahtar sözcüğü `do` isteğe bağlıdır.
+
+Öznitelikleri uygulanabilir için üst düzey `do` bağlama. Örneğin, programınız COM birlikte çalışma kullanıyorsa, uygulamak isteyebilirsiniz `STAThread` programınıza özniteliği. Bir öznitelik kullanarak bunu yapabilirsiniz bir `do` aşağıdaki kodda gösterildiği gibi bağlama.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet201.fs)]
-    
-## <a name="see-also"></a>Ayrıca Bkz.
-[F# Dili Başvurusu](../index.md)
 
-[İşlevler](index.md)
+## <a name="see-also"></a>Ayrıca bkz.
 
+- [F# Dili Başvurusu](../index.md)
+- [İşlevler](index.md)

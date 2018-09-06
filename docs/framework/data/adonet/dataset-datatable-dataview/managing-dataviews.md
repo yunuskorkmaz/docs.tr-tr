@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b67fab5-1722-4d2b-bfc1-247a75f0f1ee
-ms.openlocfilehash: c292c9f7827e86d48f2006c05f6012ad95da1485
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 76cf9eb70094dfe8bb760490c42503e08f4b1649
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757911"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43885100"
 ---
 # <a name="managing-dataviews"></a>DataView yönetme
-Kullanabileceğiniz bir <xref:System.Data.DataViewManager> tüm tablolarda görünüm ayarlarını yönetmek için bir <xref:System.Data.DataView>. Bir kılavuz gibi birden çok tablo bağlamak istediğiniz bir denetim varsa ilişkileri varlıklardan bir **DataViewManager** idealdir.  
+Kullanabileceğiniz bir <xref:System.Data.DataViewManager> tüm tablolarda görünüm ayarlarını yönetmek için bir <xref:System.Data.DataView>. Gibi bir kılavuz için birden fazla tabloyu bağlamak istediğiniz bir denetim varsa, ilişkileri varlıklardan bir **DataViewManager** idealdir.  
   
- **DataViewManager** oluşan bir koleksiyon içeren <xref:System.Data.DataViewSetting> tablo görünüm ayarını ayarlamak için kullanılan nesneleri <xref:System.Data.DataSet>. <xref:System.Data.DataViewSettingCollection> İçeriyor <xref:System.Data.DataViewSetting> nesne her tablo için bir **DataSet**. Varsayılan değer ayarlayabilirsiniz **ApplyDefaultSort**, **sıralama**, **RowFilter**, ve **RowStateFilter** tarafından başvurulan tablo özelliklerini kullanarak kendi **DataViewSetting**. Başvurusu yapabilir **DataViewSetting** belirli bir tablo adı veya sıralı başvuru ya da bu belirli tablo nesneye bir başvurusu geçirme için. Koleksiyonu erişebilirsiniz **DataViewSetting** nesnelerini bir **DataViewManager** kullanarak **DataViewSettings** özelliği.  
+ **DataViewManager** koleksiyonunu içeren <xref:System.Data.DataViewSetting> tablo görünüm ayarını ayarlamak için kullanılan nesneleri <xref:System.Data.DataSet>. <xref:System.Data.DataViewSettingCollection> İçerir <xref:System.Data.DataViewSetting> nesne her tablo için bir **veri kümesi**. Varsayılan ayarlayabilirsiniz **ApplyDefaultSort**, **sıralama**, **RowFilter**, ve **RowStateFilter** tarafından başvurulan tablo özellikleri kullanarak kendi **DataViewSetting**. Başvurabileceğiniz **DataViewSetting** ad veya sıra başvuru tarafından veya o belirli tabloyu nesnesine bir başvuru geçirerek belirli bir tablo için. Koleksiyonu erişebileceğiniz **DataViewSetting** nesneler bir **DataViewManager** kullanarak **DataViewSettings** özelliği.  
   
- Aşağıdaki kod örneği dolgular bir **DataSet** SQL Server ile **Northwind** veritabanı tablolarını **müşteriler**, **siparişleri**ve  **Sipariş ayrıntılarını**, tablolar arasında ilişkiler oluşturur, kullanan bir **DataViewManager** varsayılan ayarlamak için **DataView** ayarları ve bağlamalar bir **DataGrid**  için **DataViewManager**. Bu örnek varsayılan ayarlar **DataView** tüm tablolarda ayarlarını **DataSet** tablonun birincil anahtarı göre sıralamak için (**ApplyDefaultSort**  =  **true**) ve sıralama düzenini değiştirir **müşteriler** göre sıralamak için tablo **ŞirketAdı**.  
+ Aşağıdaki kod örneği dolduran bir **veri kümesi** SQL Server **Northwind** veritabanı tablolarını **müşteriler**, **siparişler**ve  **Sipariş Ayrıntıları**, tablolar arasında ilişki oluşturur, kullanan bir **DataViewManager** varsayılan ayarlamak için **DataView** ayarları ve bağlamalar bir **DataGrid**  için **DataViewManager**. Örnek, varsayılan ayarlar **DataView** tüm tablolar için ayarları **veri kümesi** tablonun birincil anahtara göre sıralamak için (**ApplyDefaultSort**  =  **true**) ve sonra sıralama düzenini değiştirir **müşteriler** göre sıralamak için tablo **CompanyName**.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection to Northwind.  
@@ -125,4 +125,4 @@ grid.SetDataBinding(viewManager, "Customers");
  <xref:System.Data.DataViewSetting>  
  <xref:System.Data.DataViewSettingCollection>  
  [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
- [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

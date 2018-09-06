@@ -3,11 +3,11 @@ title: Etkinlik için
 ms.date: 03/30/2017
 ms.assetid: 2ea751b4-36f0-48aa-a115-70a2ab89f6d8
 ms.openlocfilehash: 7a7023abb9057ab4b25552fbf9a81cd2ae2b4e88
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43801852"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43881530"
 ---
 # <a name="for-activity"></a>Etkinlik için
 Devralınan özel etkinlik oluşturma için örnek gösterir <xref:System.Activities.NativeActivity>ve bir iş akışında bir gerçek dünya örneği çalıştırmak için kullanın. Bu örnek işlevleri gibi C# içindeki özel etkinlik `for` deyimi. T  

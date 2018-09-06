@@ -1,5 +1,5 @@
 ---
-title: Seçmeli seri hale getirme
+title: Seçmeli serileştirme
 ms.date: 08/07/2017
 dev_langs:
 - CSharp
@@ -7,15 +7,15 @@ helpviewer_keywords:
 - serialization, selective serialization
 - binary serialization, selective serialization
 ms.assetid: 39c56635-95d2-4afd-aff1-b022e7649bb3
-ms.openlocfilehash: 6a91501c4c3763250a64c9849694bc4e5fa4829f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 74e21045ec70faf6ee82200a15362d51edf61433
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581543"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43879291"
 ---
-# <a name="selective-serialization"></a>Seçmeli seri hale getirme
-Bir sınıf genellikle seri hale döndürmemelidir alanları içerir. Örneğin, bir sınıf bir iş parçacığı kimliği bir üye değişkeni depolar varsayar. Sınıf serisi, iş parçacığı kimliği depolanan sınıfı zaman sıralandığı managementpack artık çalışmıyor; Bu nedenle bu değer seri hale getirme doesn't make Sense. Üye değişkenleri ile işaretlemeden tarafından seri hale gelen engelleyebilirsiniz [getirilmemiş](xref:System.NonSerializedAttribute) gibi özniteliği.  
+# <a name="selective-serialization"></a>Seçmeli serileştirme
+Bir sınıf seri hale olmamalıdır alanlar genellikle içerir. Örneğin, bir sınıf bir iş parçacığı kimliği bir üye değişkeni depolar varsayar. Sınıf seri olduğunda, iş parçacığı kimliği depolanan sınıfı zaman seri duruma artık çalışmıyor; Bu nedenle bu değeri serileştirmek mantıklı değildir. Üye değişkenleri ile işaretleyerek serileştirilen öğesinden engelleyebilirsiniz [getirilmemiş](xref:System.NonSerializedAttribute) özniteliğini aşağıdaki gibi.  
   
 ```csharp  
 [Serializable]  
@@ -27,11 +27,12 @@ public class MyObject
 }  
 ```
 
-Mümkünse, güvenlik bakımından hassas verileri nonserializable içerebilecek bir nesne olun. Nesne seri hale, Uygula `NonSerialized` özniteliği hassas verileri depolamak için belirli alanları. Seri hale getirme bu alanların yok bıraksanız, depoladıkları veri seri hale getirmek için izne sahip herhangi bir kod sunulan unutmayın. Güvenli serileştirme kodu yazma hakkında daha fazla bilgi için bkz: [güvenlik ve Serileştirme](../../../docs/framework/misc/security-and-serialization.md).
+Mümkünse, güvenlik bakımından hassas verileri nonserializable içerebilecek bir nesne olun. Nesnenin serileştirildiği, Uygula `NonSerialized` öznitelik hassas verileri depolamak için belirli alanlar. Serileştirme bu alanlar dışarıda tutmamanızı, bunlar depolamak verileri seri hale getirmek için izni olan herhangi bir kod sunulan dikkat edin. Güvenli serileştirme kod yazma hakkında daha fazla bilgi için bkz. [güvenlik ve Serileştirme](../../../docs/framework/misc/security-and-serialization.md).
 
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
   
-## <a name="see-also"></a>Ayrıca bkz.  
- [İkili Serileştirme](binary-serialization.md)  
- [XML ve SOAP Serileştirme](xml-and-soap-serialization.md)  
- [Güvenlik ve Serileştirme](../../../docs/framework/misc/security-and-serialization.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [İkili Serileştirme](binary-serialization.md)  
+- [XML ve SOAP Serileştirme](xml-and-soap-serialization.md)  
+- [Güvenlik ve Serileştirme](../../../docs/framework/misc/security-and-serialization.md)

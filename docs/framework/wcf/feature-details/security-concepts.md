@@ -5,11 +5,11 @@ ms.assetid: 944fa5ca-2c34-4268-8897-e005a61b470d
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 32b05766f82059634e6ad808c75fea6cc9e820e5
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43800735"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43877368"
 ---
 # <a name="security-concepts"></a>Güvenlik Kavramları
 Bu bölümde, Windows Communication Foundation (WCF) güvenlik ile ilgili kavramları kısaca açıklanmaktadır.  

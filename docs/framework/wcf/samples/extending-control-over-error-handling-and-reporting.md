@@ -3,11 +3,11 @@ title: Hata İşleme ve Bildirme Denetimini Genişletme
 ms.date: 03/30/2017
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
 ms.openlocfilehash: 6492807b55b50662790cf25807a35ddd65fbe01d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43557792"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44032844"
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>Hata İşleme ve Bildirme Denetimini Genişletme
 Bu örnek nasıl hata işleme ve hata raporlama kullanarak bir Windows Communication Foundation (WCF) hizmet üzerinde denetim genişletileceğini gösterir <xref:System.ServiceModel.Dispatcher.IErrorHandler> arabirimi. Örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hataları işlemek için hizmetine eklenen bazı ek kod. İstemci, birden çok hata koşulları zorlar. Hizmet hataları yakalar ve bunları bir dosyaya kaydeder.  

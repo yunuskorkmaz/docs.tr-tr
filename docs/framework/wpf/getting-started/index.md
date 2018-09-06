@@ -7,11 +7,11 @@ helpviewer_keywords:
 - WPF [WPF], getting started
 ms.assetid: 04f91da8-708c-46c7-8172-f1695ec847cd
 ms.openlocfilehash: f4c4c4a19c1919a27c15c623bcb30a119a560c75
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43561768"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43878658"
 ---
 # <a name="getting-started-wpf"></a>Başlarken (WPF)
 Windows Presentation Foundation (WPF) masaüstü istemci uygulamalar oluşturan bir kullanıcı Arabirimi çerçevedir. WPF geliştirme platformu, çok sayıda uygulama modeli, kaynaklar, denetimler, grafik, düzen, veri bağlama, belgeleri ve güvenlik dahil olmak üzere uygulama geliştirme özellikleri destekler. .NET Framework'ün bir alt kümesi olan şekilde, daha önce uygulamaları .NET Framework ile ASP.NET veya Windows Forms kullanarak oluşturduysanız, bir programlama deneyimi hakkında bilgi sahibi olmanız. WPF Extensible Application Markup Language (XAML) uygulama programlama için bildirime dayalı bir modeli sağlamak için kullanır. Bu bölümde tanıtır ve WPF ile çalışmaya başlamanıza yardımcı konuları bulunur.  

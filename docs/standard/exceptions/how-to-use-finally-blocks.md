@@ -15,22 +15,23 @@ helpviewer_keywords:
 ms.assetid: 4b9c0137-04af-4468-91d1-b9014df8ddd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dff1083256e24a35b7238ee5e8af6cb5743bc0ea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 213ab53c68a37ac0ba5f337a1d6fc32bfe6f8989
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571527"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43883686"
 ---
 # <a name="how-to-use-finally-blocks"></a>Finally bloklarını kullanma
 
-Özel durum oluştuğunda yürütme durur ve denetim için uygun özel durum işleyici verilir. Bu, genellikle yürütülecek beklediğiniz kod satırlarını atladığını anlamına gelir. Bir dosyayı kapatma gibi bazı kaynak temizleme bir özel durum olsa bile yapılmalıdır. Bunu yapmak için kullanabileceğiniz bir `finally` bloğu. A `finally` bloğu her zaman yürütür, bir özel durum ne olursa olsun.
+Bir özel durum oluştuğunda yürütmeyi durdurur ve denetim uygun bir özel durum işleyicisine verilir. Bu, genellikle yürütülecek beklediğiniz kod satırlarını atladığını anlamına gelir. Bir dosyayı kapatma gibi bazı kaynak temizleme bir özel durum olsa bile yapılmalıdır. Bunu yapmak için kullanabileceğiniz bir `finally` blok. A `finally` her zaman bloğun, bir özel durum ne olursa olsun.
 
-Aşağıdaki kod örneğinde bir `try` / `catch` catch bloğu bir <xref:System.ArgumentOutOfRangeException>. `Main` Yöntemi dizilerinin oluşturur ve diğerine kopyalamak çalışır. Eylem oluşturan bir <xref:System.ArgumentOutOfRangeException> ve hata konsoluna yazılır. `finally` Blok kopyalama eylemin sonucunu bağımsız olarak yürütür.
+Aşağıdaki kod örneğinde bir `try` / `catch` catch bloğu bir <xref:System.ArgumentOutOfRangeException>. `Main` Yöntemi iki diziler oluşturur ve diğerine kopyalamak çalışır. Eylem üretir bir <xref:System.ArgumentOutOfRangeException> ve hata konsoluna yazılır. `finally` Blok kopyalama eylem sonucunu bağımsız olarak yürütür.
 
 [!code-cpp[CodeTryCatchFinallyExample#3](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeTryCatchFinallyExample/CPP/source2.cpp#3)]
 [!code-csharp[CodeTryCatchFinallyExample#3](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeTryCatchFinallyExample/CS/source2.cs#3)]
 [!code-vb[CodeTryCatchFinallyExample#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeTryCatchFinallyExample/VB/source2.vb#3)]  
 
-## <a name="see-also"></a>Ayrıca Bkz.  
-[Özel Durumlar](index.md)   
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Özel Durumlar](index.md)

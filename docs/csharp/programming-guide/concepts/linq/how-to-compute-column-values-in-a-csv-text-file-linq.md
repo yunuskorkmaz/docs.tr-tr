@@ -2,19 +2,19 @@
 title: 'Nasıl yapılır: bir CSV metinde dosyasında (LINQ) (C#) sütun değerlerini hesaplama'
 ms.date: 07/20/2015
 ms.assetid: 4747f37a-a198-4df2-8efe-5b0731e0ea27
-ms.openlocfilehash: 6f203d7fa4a313be122d09d5bd68e77411c89ed2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: debc6bffd2a5c23e27fe8685c237b33016745be6
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328766"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43880567"
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>Nasıl yapılır: bir CSV metinde dosyasında (LINQ) (C#) sütun değerlerini hesaplama
-Bu örnek, birleşik toplam, ortalama, Min ve Max gibi bir .csv dosyası sütunlarda hesaplamalar gösterilmektedir. Burada gösterilen örnek ilkeleri diğer yapılandırılmış metin türü için uygulanabilir.  
+Bu örnek bir .csv dosyası sütunlarda gibi toplam, ortalama, Min ve Max toplama hesaplamalar gerçekleştirmek nasıl gösterir. Burada gösterilen örnek ilkeleri diğer yapılandırılmış metin türü için uygulanabilir.  
   
 ### <a name="to-create-the-source-file"></a>Kaynak dosyası oluşturmak için  
   
-1.  Aşağıdaki satırları scores.csv adlı bir dosyaya kopyalayın ve proje klasöründe kaydedin. İlk sütun Öğrenci Kimliğini temsil eder ve sonraki sütunları puanları dört alıştırmalar temsil varsayılır.  
+1.  Aşağıdaki satırları scores.csv adlı bir dosyaya kopyalayın ve proje klasörünüze kaydedin. İlk sütunda bir öğrenci Kimliğini temsil eder ve sonraki sütun, dört sınavları puanları temsil varsayılır.  
   
     ```  
     111, 97, 92, 81, 60  
@@ -156,11 +156,12 @@ class SumColumns
  */  
 ```  
   
- Sorgu kullanarak çalışır <xref:System.String.Split%2A> her metin satırının bir diziye dönüştürmek için yöntem. Her dizi öğesi bir sütunu temsil eder. Son olarak, her sütunundaki metni kendi sayısal gösterim dönüştürülür. Dosyanız bir sekmeyle ayrılmış dosyası ise, bağımsız değişkeninde yalnızca güncelleştirme `Split` yöntemine `\t`.  
+ Sorgu kullanarak çalışır <xref:System.String.Split%2A> her metin satırının bir dizisine dönüştürmek için yöntemi. Her dizi öğesi bir sütunu temsil eder. Son olarak, her sütundaki metin sayısal gösterimine dönüştürülür. Bağımsız değişkende dosyanızı sekmeyle ayrılmış bir dosya ise, yalnızca güncelleştirme `Split` yönteme `\t`.  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- .NET Framework sürüm 3.5 veya daha yüksek System.Core.dll başvuru hedefleyen bir proje oluşturun ve `using` System.Linq ve System.IO ad alanları için yönergeleri.  
+ .NET Framework sürüm 3.5 veya üzeri bir System.Core.dll başvurusu ile hedefleyen bir proje oluşturun ve `using` System.Linq ve System.IO ad alanları için yönergeleri.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [LINQ ve dizeler (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
- [LINQ ve dosya dizinleri (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [LINQ ve dizeler (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
+- [LINQ ve dosya dizinleri (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

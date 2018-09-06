@@ -1,5 +1,5 @@
 ---
-title: Enum tasarım
+title: Sabit listesi tasarımı
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: dd53c952-9d9a-4736-86ff-9540e815d545
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 544f617ca3a352814504125d7a61d70db5a81566
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9dea187b5f3911114e551d640e0bb0aa6fac1143
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579255"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43891239"
 ---
-# <a name="enum-design"></a>Enum tasarım
-Numaralandırmalar özel türde bir değer türü var. Numaralandırmalar iki tür vardır: Basit numaralandırmaları ve bayrağı numaralandırmaları.  
+# <a name="enum-design"></a>Sabit listesi tasarımı
+Numaralandırmalar özel türde bir değer türü var. İki enum türü vardır: Basit sabit listeleri ve bayrak sabit listeleri.  
   
- Basit numaralandırmaları seçenek küçük kapalı kümeleri temsil eder. Basit liste yaygın bir örneği, renkler kümesidir.  
+ Basit numaralandırmalar küçük kapalı seçenek kümeleri temsil eder. Yaygın olarak karşılaşılan örneklerden basit Enum renkleri kümesidir.  
   
- Bayrak numaralandırmalarında enum değerlerin Bitsel işlemleri desteklemek için tasarlanmıştır. Bir ortak bayrakları enum seçeneklerin bir listesini örnektir.  
+ Bayrak sabit listeleri, sabit listesi değerlerinin bit düzeyinde işlemler destekleyecek şekilde tasarlanmıştır. Yaygın olarak karşılaşılan örneklerden bayrak sabit listesinin seçenekleri listesidir.  
   
  **✓ DO** döndürülen değer kümesini temsil eden değerler ve kesin tür parametreleri, özellikler, için bir numaralandırma kullanın.  
   
@@ -33,70 +33,71 @@ Numaralandırmalar özel türde bir değer türü var. Numaralandırmalar iki t�
   
  **X DO NOT** gelecekte kullanılmak üzere tasarlanmıştır ayrılmış enum değerleri sağlayın.  
   
- Her zaman yalnızca daha sonraki bir aşamada varolan enum değerleri ekleyebilirsiniz. Bkz: [numaralandırmaları değerleri ekleyerek](#add_value) numaralandırmalar için değer ekleme hakkında daha fazla bilgi. Ayrılmış değerler yalnızca gerçek değerleri kümesi pollute ve kullanıcı hatalarına neden olma eğilimi gösterir.  
+ Her zaman yalnızca var olan bir enum değerleri daha sonraki bir aşamada ekleyebilirsiniz. Bkz: [numaralandırmalar değerlere ekleme](#add_value) numaralandırmalar için değer ekleme hakkında daha fazla bilgi. Ayrılmış bir değerler yalnızca gerçek değerler kümesini pollute ve kullanıcı hatalarına neden eğilimindedir.  
   
  **X AVOID** genel olarak tek bir değer ile numaralandırmaları gösterme.  
   
- C API'leri gelecekteki genişletilebilirlik sağlamaya yönelik yaygın bir yöntemi imzalar için ayrılmış parametreler eklemek için uygulamadır. Bu tür ayrılmış parametreleri tek varsayılan bir değerle numaralandırmaları olarak ifade edilebilir. Bu yönetilen API'leri yapılmalıdır değil. Yöntem aşırı yükleme parametrelerini gelecekteki Sunumlarda eklemeye izin verir.  
+ C API'lerinin sonra genişletilebilmek sağlamaya yönelik yaygın bir uygulama, yöntem imzaları için ayrılmış parametreler eklemektir. Ayrılmış tür parametreleri sabit listeleri ile tek bir varsayılan değer olarak ifade edilebilir. Bu yönetilen API'leri yapılmalıdır değil. Yöntem aşırı yükleme parametreleri gelecek sürümleri ekleme sağlar.  
   
  **X DO NOT** numaralandırmaları sentinel değerler içerir.  
   
- Bazen framework geliştiricileri için faydalı olsa da, sentinel framework kullanıcılar için kafa karıştırıcı değerlerdir. Enum tarafından temsil edilen kümesinden olma değerlerden biri yerine enum durumunu izlemek için kullanılır.  
+ Bazen framework geliştiricilere yararlı olmasına rağmen sentinel değerleri framework kullanıcıları için kafa karıştırıcı olabilir. Enum tarafından temsil edilen kümesinden şu değerlerden birini yerine enum durumunu izlemek için kullanılır.  
   
  **✓ DO** basit numaralandırmalar sıfır değerini sağlamalısınız.  
   
- Değer "None" gibi bir şey çağırmayı düşünün Böyle bir değer bu belirli enum için uygun değilse, temel alınan değerin sıfır enum için en sık kullanılan varsayılan değer atanmalıdır.  
+ Değer "None." gibi bir şey çağırmayı düşünün Bu tür bir değer bu belirli enum için uygun değilse, temel alınan değeri sıfır enum için en sık kullanılan varsayılan değer atanmalıdır.  
   
  **✓ CONSIDER** kullanarak <xref:System.Int32> (varsayılan olarak çoğu programlama dilleri) enum temel alınan türü olarak aşağıdakilerin doğru değilse:  
   
--   Enum bayrakları enum olduğu ve 32'den fazla bayrakları sahip veya gelecekte daha fazla olmasını bekler.  
+-   Sabit listesi flags sabit listesi olduğu ve 32'den fazla bayraklarınız veya ileride daha fazlasına sahip olmayı beklediğiniz.  
   
--   Temel alınan türü farklı olması gereken <xref:System.Int32> boyutu farklı numaralandırmaları bekleniyor yönetilmeyen kod ile daha kolay birlikte çalışabilirlik.  
+-   Temel alınan türü farklı olması gereken <xref:System.Int32> boyutu farklı numaralandırmalar bekleniyor yönetilmeyen kod ile daha kolay birlikte çalışabilirlik.  
   
--   Bir küçük temel alınan Tür alanında önemli tasarrufu neden olur. Çoğunlukla akış denetimi için bağımsız değişken olarak kullanılacak enum bekliyorsanız, boyutu çok az fark etmez. Boyut tasarrufları önemli varsa:  
+-   Küçük temel alınan türü alan önemli ölçüde tasarruf sonuçlanır. Denetim akışı için bir bağımsız değişken olarak esas olarak kullanılmak üzere enum bekliyorsanız, boyutu küçük fark eder. Boyut tasarrufları önemli değilse:  
   
-    -   Çok sık örneklenen yapısı veya sınıf alanı olarak kullanılacak enum bekler.  
+    -   Beklediğiniz alan çok sık örneklenmiş yapısı veya sınıf olarak kullanılacak sabit.  
   
-    -   Enum örneklerinin koleksiyonlarını veya büyük diziler oluşturmak için kullanıcıların bekler.  
+    -   Büyük diziler veya koleksiyonları numaralandırma örnekleri oluşturmak için kullanıcıları beklediğiniz.  
   
-    -   Çok sayıda serileştirilmesi için enum örneklerini bekler.  
+    -   Çok sayıda serileştirilecek enum örneklerini beklediğiniz.  
   
- Bellek içi kullanım için yönetilen nesneler her zaman olduğunu unutmayın `DWORD`-hizalı birden çok numaralandırmaları veya diğer küçük yapıları örneğindeki toplam örnek boyutu her zaman olduğu için bir fark yapmak için daha küçük bir enum ile paketlemek için etkili bir şekilde gerekiyor en fazla yuvarlanmasını devam eden bir `DWORD`.  
+ Bellek içi kullanım için yönetilen nesneler her zaman olduğunu unutmayın `DWORD`-hizalı etkili bir şekilde birden fazla sıralanmış sabit veya bir örneğindeki toplam örnek boyutu her zaman olduğu için daha küçük bir enum ile paketini bir fark yaratmak için diğer küçük yapıları gerekir en fazla yuvarlanacak giderek bir `DWORD`.  
   
  **✓ DO** ad bayrağı numaralandırmaları çoğul adlar ve isim ifadeler ile ve basit numaralandırmaları tekil isimleri veya isim deyimleri ile.  
   
  **X DO NOT** genişletmek <xref:System.Enum?displayProperty=nameWithType> doğrudan.  
   
- <xref:System.Enum?displayProperty=nameWithType> özel bir türü CLR tarafından kullanıcı tanımlı numaralandırmalar oluşturmak için kullanılır. Bu işlevsellik, erişim sağlayan bir programlama öğesi çoğu programlama dilleri belirtin. Örneğin, C# ' ta `enum` anahtar sözcüğü bir numaralandırma tanımlamak için kullanılır.  
+ <xref:System.Enum?displayProperty=nameWithType> özel bir türü CLR tarafından kullanıcı tanımlı sabit listeleri oluşturmak için kullanılır. Çoğu programlama dili, erişim için bu işlevi sağlayan bir programlama öğesi sağlar. Örneğin, C# dilinde `enum` anahtar sözcüğü bir numaralandırma tanımlamak için kullanılır.  
   
 <a name="design"></a>   
-### <a name="designing-flag-enums"></a>Tasarlama bayrağı numaralandırmaları  
- **✓ DO** uygulamak <xref:System.FlagsAttribute?displayProperty=nameWithType> bayrağı numaralandırmalar için. Bu öznitelik basit Enum değerleri için geçerli değildir.  
+### <a name="designing-flag-enums"></a>Tasarlama bayrak sabit listeleri  
+ **✓ DO** uygulamak <xref:System.FlagsAttribute?displayProperty=nameWithType> bayrağı numaralandırmalar için. Bu öznitelik basit numaralandırmalar için geçerli değildir.  
   
  **✓ DO** bayrak enum değerleri için iki tabanların kullandığından, bunlar serbestçe bit düzeyinde OR işlemi kullanılarak birleştirilebilir.  
   
  **✓ CONSIDER** özel enum değerleri için yaygın olarak sağlayarak kullanılan bayrakları birleşimlerini.  
   
- Bit düzeyinde işlemler, Gelişmiş bir kavramıdır ve basit görevleri için gerekli olmamalıdır. <xref:System.IO.FileAccess.ReadWrite> özel bir değere örneğidir.  
+ Bit düzeyinde işlemler, Gelişmiş bir kavram olarak oldukça basittir ve Basit görevler için gerekli olmamalıdır. <xref:System.IO.FileAccess.ReadWrite> özel bir değere örneğidir.  
   
  **X AVOID** burada belirli değerleri birleşimleridir geçersiz bayrak numaralandırmaları oluşturma.  
   
  **X AVOID** kullanarak bayrak enum değerleri sıfır sürece değeri "tüm bayraklar temizlenmiştir" temsil eder ve uygun şekilde, bir sonraki kural tarafından belirlenen olarak adlandırılır.  
   
- **✓ DO** bayrağı numaralandırmalar sıfır değeri adı `None`. Bayrak enum için değeri her zaman "tüm bayraklar temizlenmiştir." anlamı gerekir  
+ **✓ DO** bayrağı numaralandırmalar sıfır değeri adı `None`. Bayrak sabit listesi için değer her zaman "tüm bayraklar temizlenir." ortalama gerekir  
   
 <a name="add_value"></a>   
 ### <a name="adding-value-to-enums"></a>Numaralandırmalar için değer ekleme  
- Zaten sevk olan sonra bir enum değerleri eklemeniz gerekir bulmak için çok yaygındır. Bir olası uygulama uyumluluğu sorun var. Varolan bir API öğesinden yeni eklenen değer döndürüldüğünde kötü yazılmış uygulamalar yeni değer düzgün bir şekilde işler değil çünkü  
+ Zaten kullanıma sonra bir sabit listesi için değerleri eklemeniz gerektiğini bulmak için çok yaygındır. Bir olası uygulama uyumluluğu sorun var. mevcut bir API'ye yeni eklenen değer döndürüldüğünde kötü yazılmış uygulamaları yeni değeri doğru şekilde işlememesi çünkü  
   
  **✓ CONSIDER** küçük uyumluluk riski rağmen numaralandırmaları değerleri ekleme.  
   
- Enum eklemeler nedeni uygulama uyumsuzlukları ile ilgili gerçek veri varsa, yeni ve eski değerleri döndürür yeni bir API eklemeyi göz önünde bulundurun ve yalnızca eski değerler döndüren devam etmesi gerektiğini eski API alanı onaylanamadı. Bu, mevcut uygulamalarınızı uyumlu kalmasını güvence altına alır.  
+ Uygulama uyumsuzlukları enum eklemeler nedeni ile ilgili gerçek veriler varsa, yeni ve eski değerleri döndüren yeni bir API eklemeyi göz önünde bulundurun ve yalnızca eski değerler döndüren sürmelidir eski API'yi kullanımdan. Bu işlem, mevcut uygulamalarınızı uyumlu kalmasını sağlayacaktır.  
   
- *Bölümleri © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
+ *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*  
+ *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Tür Tasarımı Yönergeleri](../../../docs/standard/design-guidelines/type.md)  
- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Tür Tasarımı Yönergeleri](../../../docs/standard/design-guidelines/type.md)  
+- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)

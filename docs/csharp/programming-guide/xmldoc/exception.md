@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <exception> C# XML tag
 - exception C# XML tag
 ms.assetid: dd73aac5-3c74-4fcf-9498-f11bff3a2f3c
-ms.openlocfilehash: eca61416077896c9fa7d5828bbab79b399ad69d3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c865fe97db16c95396e03747958d3590e80de614
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332666"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43881191"
 ---
 # <a name="ltexceptiongt-c-programming-guide"></a>&lt;özel durum&gt; (C# programlama Kılavuzu)
 ## <a name="syntax"></a>Sözdizimi  
@@ -24,23 +24,24 @@ ms.locfileid: "33332666"
   
 #### <a name="parameters"></a>Parametreler  
  cref = " `member`"  
- Geçerli derleme ortamından kullanılabilir bir özel durum referansı. Belirtilen özel durum var ve çevirir derleyici denetler `member` XML çıktısında kurallı öğesi adı. `member` çift tırnak işaretleri içinde görünmesi gerekir ("").  
+ Geçerli derleme ortamdan kullanılabilir bir özel durum başvuru. Belirtilen özel var ve çevirir derleyici denetler `member` kurallı öğesi adı ' % s'çıkış XML dosyası. `member` çift tırnak içinde yer almalıdır ("").  
   
- Genel bir tür cref başvuru oluşturma hakkında daha fazla bilgi için bkz: [ \<bkz >](../../../csharp/programming-guide/xmldoc/see.md).  
+ Genel tür cref başvuru oluşturma hakkında daha fazla bilgi için bkz. [ \<bakın >](../../../csharp/programming-guide/xmldoc/see.md).  
   
  `description`  
- Özel durum açıklaması.  
+ Özel durumun açıklaması.  
   
 ## <a name="remarks"></a>Açıklamalar  
- \<Özel durum > etiketi hangi özel durum belirtmenize olanak sağlar. Bu etiket yöntemleri, özellikleri, olayları ve dizin oluşturucular için tanımları uygulanabilir.  
+ \<Özel durum > etiketi hangi özel durumlar atılabilir belirtmenize olanak sağlar. Bu etiket, yöntemleri, özellikleri, olayları ve dizin oluşturucular için tanımlarına uygulanabilir.  
   
- İle derleme [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) bir dosyaya işlem belgesi açıklamaları için.  
+ Derleme [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) işlem belgeleri açıklamaları için bir dosya için.  
   
- Özel durum işleme hakkında daha fazla bilgi için bkz: [özel durumlar ve özel durum işleme](../../../csharp/programming-guide/exceptions/index.md).  
+ Özel durum işleme hakkında daha fazla bilgi için bkz. [özel durumlar ve özel durum işleme](../../../csharp/programming-guide/exceptions/index.md).  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[csProgGuideDocComments#4](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/exception_1.cs)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [Belge Açıklamaları için Önerilen Etiketler](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [Belge Açıklamaları için Önerilen Etiketler](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

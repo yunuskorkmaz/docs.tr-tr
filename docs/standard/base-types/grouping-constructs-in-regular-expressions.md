@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95244e2f07a78113d1164e8f6fe4534f95cb4f88
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4e6a0b0a6fbad1c01ed26b5090cd18dcce3be057
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43559614"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44041606"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Normal İfadelerdeki Gruplandırma Yapıları
 Yapıları gruplandırma, normal ifade alt ifadeler tanımlamak ve bir Giriş dizesinin alt dizeler yakalayın. Yapıları gruplandırma, aşağıdakileri yapmak için kullanabilirsiniz:  
@@ -470,6 +470,7 @@ Yapıları gruplandırma, normal ifade alt ifadeler tanımlamak ve bir Giriş di
   
  Cümlenin her sözcüğün ilk yakalama grubuyla eşleşir. İkinci yakalama grubu kelimenin izleyen boşluk ve noktalama işaretleri ile birlikte her bir sözcüğü eşleştirir. <xref:System.Text.RegularExpressions.Group> Dizini 2 nesnenin ikinci yakalama grubuyla eşleşen metin hakkında bilgi sağlar. Eksiksiz bir kelimelerin yakalama grubu tarafından yakalanan web'da <xref:System.Text.RegularExpressions.CaptureCollection> tarafından döndürülen nesne <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> özelliği.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Normal İfade Dili - Hızlı Başvuru](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
- [Geri Dönüş](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Normal İfade Dili - Hızlı Başvuru](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- [Geri Dönüş](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)

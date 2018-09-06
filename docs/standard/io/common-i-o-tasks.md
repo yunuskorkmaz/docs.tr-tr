@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: bf00c380-706a-4e38-b829-454a480629fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bf0caa0513881d5a1096478d8b29fc708ac3d3ce
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f205040e0f044ab04112683c7bdb8edccdfb9f71
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577661"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43879402"
 ---
 # <a name="common-io-tasks"></a>Ortak G/Ç Görevleri
-<xref:System.IO> Ad alanı akışları ve okuma ve yazma dizinleri, dosyaları üzerinde gerçekleştirilecek gibi çeşitli eylemler için izin birkaç sınıfları sağlar. Daha fazla bilgi için bkz: [dosya ve akış g/ç](../../../docs/standard/io/index.md).  
+<xref:System.IO> Ad alanı, dosyalar, dizinler, gerçekleştirilecek yazma ve okuma gibi çeşitli eylemleri için izin birkaç sınıfları sağlar ve akışları. Daha fazla bilgi için [dosya ve Stream g/ç](../../../docs/standard/io/index.md).  
   
 ## <a name="common-file-tasks"></a>Yaygın Dosya Görevleri  
   
@@ -50,10 +50,11 @@ ms.locfileid: "33577661"
 |Bir dizini kopyalama|[Nasıl yapılır: Dizinleri Kopyalama](../../../docs/standard/io/how-to-copy-directories.md)|  
 |Bir dizini silme|<xref:System.IO.Directory.Delete%2A?displayProperty=nameWithType> Yöntemi<br /><br /> <xref:System.IO.DirectoryInfo.Delete%2A?displayProperty=nameWithType> Yöntemi|  
 |Bir dizindeki dosyaları ve alt dizinleri görme|[Nasıl yapılır: Dizinleri ve Dosyaları Numaralandırma](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)|  
-|Bir dizinin boyutunu bulma|<xref:System.IO.Directory?displayProperty=nameWithType> sınıfı|  
+|Bir dizinin boyutunu bulma|<xref:System.IO.Directory?displayProperty=nameWithType> Sınıfı|  
 |Bir dizinin var olup olmadığını belirleme|<xref:System.IO.Directory.Exists%2A?displayProperty=nameWithType> Yöntemi|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Dosya ve Akış G/Ç'si](../../../docs/standard/io/index.md)  
- [Akışlar Oluşturma](../../../docs/standard/io/composing-streams.md)  
- [Zaman Uyumsuz Dosya G/Ç](../../../docs/standard/io/asynchronous-file-i-o.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Dosya ve Akış G/Ç'si](../../../docs/standard/io/index.md)  
+- [Akışlar Oluşturma](../../../docs/standard/io/composing-streams.md)  
+- [Zaman Uyumsuz Dosya G/Ç](../../../docs/standard/io/asynchronous-file-i-o.md)
