@@ -10,53 +10,54 @@ helpviewer_keywords:
 ms.assetid: 9141076a-96c9-4b01-93de-366bb1d858bc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 858ee30479c959f30673725b4ba8088fcc2d8f3b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 27818d5e1779cd6e10e11830f91a20a3e638639a
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581761"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44066522"
 ---
 # <a name="security-and-user-input"></a>Güvenlik ve Kullanıcı Girdisi
-Herhangi türde bir giriş (bir Web isteği veya URL, bir Microsoft Windows Forms uygulaması ve benzeri denetimleri için giriş verileri), genellikle bu verilere doğrudan parametre olarak başka bir kod çağırmak için kullanıldığından kod olumsuz yönde etkileyebilir kullanıcı verileri. Bu durum kötü amaçlı kod kodunuzu garip parametrelerle çağırma paraleldir ve aynı önlemler yapılması gerekir. Kullanıcı girişi gerçekten zor olduğu için büyük olasılıkla güvenilmeyen veri izlemek için hiçbir yığın çerçevesi güvenli olmasını sağlamaktır.  
+Herhangi türde bir girdi (veriler bir Web isteği veya URL, bir Microsoft Windows Forms uygulaması ve benzeri denetimleri için giriş), bu verileri diğer kod çağırmak için doğrudan parametre olarak sıklıkla kullanılır çünkü kod olumsuz yönde etkileyebilir kullanıcı verileri. Bu durum kötü amaçlı kod kodunuzu garip parametrelerle çağırılıyor benzerdir ve aynı önlemler dikkat edilmelidir. Kullanıcı Giriş potansiyel olarak güvenilmeyen veri izlemek için hiçbir yığın çerçevesi olduğundan güvenli hale getirmek için gerçekten daha zor olabilir.  
   
- Bunlar, bunlar için başka bir kod aracılığıyla hatalı veri iletmek için bir ağ geçidi, güvenlik görünen ilgisiz olan kod bulunabilir ancak çünkü bulmak için belirsiz ve en zor güvenlik hatalar arasındadır. Bu hatalar için aramak için herhangi bir giriş verisi türünü izleyin, ne olası değerleri aralığı olabilir ve bu verileri görmesini kodu tüm durumlarda işlenip işlenmeyeceğini göz önünde bulundurun düşünün. Denetleme ve kod işleyemiyor herhangi bir giriş reddetme aralığı üzerinden bu hataları düzeltebilir.  
+ Bu, başka bir kod aracılığıyla hatalı veri iletmek için bir ağ geçidi olduğundan, güvenlik görünüşte ilgisiz olan kod bulunabilir ancak bunlar bulmak için belirsiz ve uygulamalarınızdaki güvenlik hatalar arasındadır. Bu hatalar için aramak için giriş verileri herhangi bir türden izleyin, hangi olası değerleri aralığı olması ve bu verileri görme hakkındaki kod tüm durumlarda işlenip işlenmeyeceğini göz önünde bulundurun Imagine. Bu hatalar denetleme ve kodu işleyemiyor herhangi bir giriş reddetme aralığı düzeltebilirsiniz.  
   
  Kullanıcı verilerini içeren bazı önemli noktalar şunlardır:  
   
--   Sunucu yanıtı herhangi bir kullanıcı verisini istemcide sunucunun site bağlamında çalışır. Web sunucunuzun kullanıcı verileri alır ve döndürülen Web sayfasına ekler, örneğin, dahil bir  **\<komut dosyası >** etiketi ve sunucudan gibi çalıştırın.  
+-   Tüm kullanıcı verilerini bir sunucu yanıtı sunucunun site bağlamında istemcide çalıştırır. Web sunucunuzun kullanıcı verileri alır ve döndürülen Web sayfasına ekler, örneğin, içerebilir bir  **\<betik >** etiketleyin ve sunucudan gibi çalıştırın.  
   
--   İstemcinin herhangi bir URL isteyebileceği unutmayın.  
+-   İstemcinin herhangi bir URL isteyebilir unutmayın.  
   
--   Hassas ya da geçersiz yolları göz önünde bulundurun:  
+-   Zor ya da geçersiz yolları göz önünde bulundurun:  
   
-    -   .. \, aşırı uzun yolları.  
+    -   .. \, son derece uzun yollar.  
   
     -   Joker karakter (*) kullanın.  
   
     -   Belirteç genişletme (% belirteci %).  
   
-    -   Garip formları özel bir anlamı olan yol.  
+    -   Garip formları yolların özel anlama sahip.  
   
     -   Dosya sistemi akışı adları gibi alternatif `filename::$DATA`.  
   
     -   Dosya adlarının sürümleri gibi kısa `longfi~1` için `longfilename`.  
   
--   Eval(UserData) herhangi bir şey yapabileceğinizi unutmayın.  
+-   Her şeyi yapabilirsiniz Eval(UserData) unutmayın.  
   
--   Bazı kullanıcı verilerini içeren bir ad olarak geç bağlama dikkatli olun.  
+-   Bazı kullanıcı verilerini içeren bir ad, geç bağlama dikkatli olun.  
   
--   Web verilerle çalışıyorsanız dahil olmak üzere izin verilen, çıkışları çeşitli biçimlerde göz önünde bulundurun:  
+-   Web veri ile uğraşıyorsanız, çeşitli türleri dahil olmak üzere izin çıkar, göz önünde bulundurun:  
   
-    -   Onaltılık çıkışları (% nn).  
+    -   Onaltılık kaçış karakterleri (% nn).  
   
-    -   Unicode çıkışları (% nnn).  
+    -   Unicode kaçış karakterleri (% nnn).  
   
-    -   Overlong UTF-8 çıkışları (% nn % nn).  
+    -   Overlong UTF-8 çıkar (% nn % nn).  
   
-    -   Çift kaçış karakterleri (% nn % mm '%' kaçış olduğu % mmnn olur).  
+    -   Çift kaçış karakterleri (% nn % mm '%' kaçış olduğu, % mmnn olur).  
   
--   Birden fazla kurallı biçimi olabilecek kullanıcı adlarını dikkatli olun. Örneğin, genellikle ya da MYDOMAIN kullanabilirsiniz\\*kullanıcıadı* form veya *kullanıcıadı* @mydomain.example.com formu.  
+-   Birden fazla kurallı biçimde olabilecek kullanıcı adlarını dikkatli olun. Örneğin, genellikle ya da MYDOMAIN kullanabilirsiniz\\*kullanıcıadı* form veya *kullanıcıadı* @mydomain.example.com form.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Güvenli Kodlama Yönergeleri](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Güvenli Kodlama Yönergeleri](../../../docs/standard/security/secure-coding-guidelines.md)

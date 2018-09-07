@@ -3,11 +3,11 @@ title: İstemciler
 ms.date: 03/30/2017
 ms.assetid: cce50025-0318-4a5e-9ce8-c67feab83b06
 ms.openlocfilehash: 844412b211fe6187e3475fc71b9c3ccca8dd178f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43743118"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44048198"
 ---
 # <a name="clients"></a>İstemciler
 Bu bölümdeki konular, istemci mimarisi nasıl ele erişmek için bir Windows Communication Foundation (WCF) hizmeti, bir WCF istemcisi ve bazı güvenlik önlemleri WCF istemciler için yapılandırma.  

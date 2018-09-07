@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
 ms.openlocfilehash: 7bb68a7d08d983e93119804db6c1f5a01cd047c9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43659395"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44081281"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Yapılandırma parametreleri ve parametre veri türleri
 Komut nesneleri SQL deyimleri ya da saklı yordamlar, tür denetlemesi ve doğrulama sağlayan değerleri geçirmek için parametreleri kullanın. Komut metni parametre girişi yürütülebilir kod olarak değil, değişmez değer olarak kabul edilir. Bu, bu sunucuda ödün güvenlik SQL deyimi içinde bir saldırganın komut ekler "SQL ekleme" saldırılarına karşı önlem yardımcı olur.  

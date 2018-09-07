@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 7e539067b20f0e018496b0076582619cb88072e1
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
-ms.translationtype: MT
+ms.openlocfilehash: 4c514f3a7dc1fb01b2f1ed2dddc9d938c1101809
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480671"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44067178"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Dağıtılmış veri yönetimi için sorunlar ve çözümler
 
@@ -79,7 +79,7 @@ HTTP REST tabanlı mikro hizmetler, kendi kolaylık olması nedeniyle uygulamak 
 
 Bu nedenle, mikro hizmet otonomi zorlamak ve daha iyi bir dayanıklılık olması için istek/yanıt iletişim zincirleri kullanımını mikro hizmetler arasında en aza indirmeniz gerekir. Yalnızca zaman uyumsuz etkileşim inter-mikro hizmet iletişimi için zaman uyumsuz ileti ve olay-tabanlı iletişim veya özgün HTTP istek/yanıt döngüsü bağımsız olarak HTTP yoklama kullanarak kullanmanız önerilir.
 
-Zaman uyumsuz iletişim kullanımı ile ek ayrıntılar sonraki bölümlerde bu kılavuzda açıklanan [zaman uyumsuz bir mikro hizmet tümleştirmesi zorlar mikro hizmet'ın bağımsız çalışma sınırı](#asynchronous-microservice-integration-enforce-microservices-autonomy) ve [zaman uyumsuz ileti tabanlı iletişim](#asynchronous-message-based-communication).
+Zaman uyumsuz iletişim kullanımı ile ek ayrıntılar sonraki bölümlerde bu kılavuzda açıklanan [zaman uyumsuz bir mikro hizmet tümleştirmesi zorlar mikro hizmet'ın bağımsız çalışma sınırı](communication-in-microservice-architecture.md#asynchronous-microservice-integration-enforces-microservices-autonomy) ve [zaman uyumsuz ileti tabanlı iletişim](asynchronous-message-based-communication.md).
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 

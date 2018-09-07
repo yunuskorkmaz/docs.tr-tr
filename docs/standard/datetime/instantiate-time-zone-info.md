@@ -11,40 +11,40 @@ helpviewer_keywords:
 ms.assetid: 8cb620e5-c6a6-4267-a52e-beeb73cd1a34
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e15e7f8968d7edf87ae3cd709d8fb26a2f49826a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8c8ff38325e26dd1bc946f6f12c365b6dea3e228
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572053"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44047340"
 ---
 # <a name="how-to-instantiate-a-timezoneinfo-object"></a>Nasıl yapılır: bir Timezoneınfo nesnesinin örneğini oluşturma
 
-Örneği oluşturmak için en yaygın yolu bir <xref:System.TimeZoneInfo> nesnesidir ilgili bilgileri kayıt defterinden alınamadı. Bu konuda ele alınmıştır örneği oluşturmak nasıl bir <xref:System.TimeZoneInfo> yerel sistem kayıt defterinden nesnesi.
+Örneği oluşturmak için en yaygın yolu bir <xref:System.TimeZoneInfo> nesnedir ilgili bilgileri kayıt defterinden alınamıyor. Bu konuda örneklemek anlatılmaktadır bir <xref:System.TimeZoneInfo> yerel sistem kayıt defterinden nesne.
 
-### <a name="to-instantiate-a-timezoneinfo-object"></a>Timezoneınfo nesnesinin örneğini oluşturmak için
+### <a name="to-instantiate-a-timezoneinfo-object"></a>Bir Timezoneınfo nesnesinin örneğini oluşturmak için
 
-1. Bildirme bir <xref:System.TimeZoneInfo> nesnesi.
+1. Bildirme bir <xref:System.TimeZoneInfo> nesne.
 
 2. Çağrı `static` (`Shared` Visual Basic'te) <xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A?displayProperty=nameWithType> yöntemi.
 
-3. Yöntemi tarafından oluşturulan tüm özel durumları işleme özellikle <xref:System.TimeZoneNotFoundException> saat dilimi kayıt defterinde tanımlanmazsa oluşur.
+3. Yöntemi tarafından oluşturulan özel durumları işlemek özellikle <xref:System.TimeZoneNotFoundException> saat dilimini kayıt defterinde tanımlı değilse, oluşturulur.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki kod alır bir <xref:System.TimeZoneInfo> Doğu Standart saat dilimi temsil eder ve karşılık gelen Doğu Standart Saati yerel saate görüntüleyen nesnesi.
+Aşağıdaki kod alır bir <xref:System.TimeZoneInfo> Doğu Standart saat dilimini temsil eder ve karşılık gelen Doğu Standart Saati yerel saate görüntüleyen bir nesne.
 
 [!code-csharp[System.TimeZone2.Concepts#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#5)]
 [!code-vb[System.TimeZone2.Concepts#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#5)]
 
-<xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A?displayProperty=nameWithType> Yöntemin tek bir parametre, saat almak istediğiniz nesnenin karşılık gelen dilimi tanımlayıcısıdır <xref:System.TimeZoneInfo.Id%2A?displayProperty=nameWithType> özelliği. Saat dilimi benzersiz olarak tanımlayan bir anahtar alanı saat dilimi tanımlayıcısıdır. Çoğu anahtarları görece kısa olsa da, saat dilimi tanımlayıcı daha uzun. Çoğu durumda, karşılık gelen değeri <xref:System.TimeZoneInfo.StandardName%2A> özelliği bir <xref:System.TimeZoneInfo> saat diliminin standart saat adını sağlamak için kullanılan nesne. Ancak, özel durumlar vardır. Geçerli bir tanımlayıcı sağladığınız emin olmak için en iyi sisteminizdeki kullanılabilir saat dilimlerini numaralandırma ve bunlar üzerinde mevcut saat dilimlerini tanımlayıcıların not edin yoludur. Çizim için bkz: [nasıl yapılır: bir bilgisayarda mevcut saat dilimlerini numaralandırma](../../../docs/standard/datetime/enumerate-time-zones.md). [Yerel sistemde tanımlanan saat dilimlerini bulma](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md) konu, seçili saat dilimi tanımlayıcıları listesini de içerir.
+<xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A?displayProperty=nameWithType> Yöntemin tek parametresi, saat, almak istediğiniz nesnenin karşılık gelen dilimi tanımlayıcısıdır <xref:System.TimeZoneInfo.Id%2A?displayProperty=nameWithType> özelliği. Saat dilimi benzersiz olarak tanımlayan bir anahtar alan saat dilimi tanımlayıcısıdır. Saat dilimi tanımlayıcı çoğu anahtarları görece kısa olsa da, daha uzun. Çoğu durumda, karşılık gelen değeri <xref:System.TimeZoneInfo.StandardName%2A> özelliği bir <xref:System.TimeZoneInfo> saat diliminin standart saat adını sağlamak için kullanılan nesne. Ancak, özel durumlar vardır. Geçerli bir tanımlayıcı sağlamanız emin olmak için en iyi yolu, sisteminizde mevcut saat dilimlerini numaralandırma ve bunlar üzerinde mevcut saat dilimlerini tanımlayıcıların Not sağlamaktır. Çizim için bkz: [nasıl yapılır: bir bilgisayarda mevcut saat dilimlerini numaralandırma](../../../docs/standard/datetime/enumerate-time-zones.md). [Yerel sistemde tanımlanan saat dilimlerini bulma](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md) konu ayrıca seçili saat dilimi tanımlayıcıları listesini içerir.
 
-Saat dilimi bulunursa, yöntem, <xref:System.TimeZoneInfo> nesnesi. Saat dilimi bulunamazsa, yöntem oluşturulur bir <xref:System.TimeZoneNotFoundException>. Saat dilimi bulundu, ancak verileri bozuk veya eksik yöntemi atar bir <xref:System.InvalidTimeZoneException>.
+Saat dilimi bulunursa yöntem döndürür, <xref:System.TimeZoneInfo> nesne. Saat dilimi bulunamazsa çağırılıyorsa yöntem bir <xref:System.TimeZoneNotFoundException>. Saat dilimi bulundu, ancak verileri bozuk veya eksik çağırılıyorsa yöntem bir <xref:System.InvalidTimeZoneException>.
 
-Uygulamanızı mevcut bir saat dilimini temel dayalıysa, ilk çağırmalısınız <xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A> kayıt defterinden saat dilimi bilgilerini alma yöntemi. Yöntem çağrısının başarısız olursa, özel durum işleyici sonra saat dilimi yeni bir örneğini oluşturmak veya seri hale getirilmiş bir seri durumdan tarafından yeniden oluşturun <xref:System.TimeZoneInfo> nesnesi. Bkz: [nasıl yapılır: katıştırılmış bir kaynaktan saat dilimlerini geri yükleme](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md) bir örnek.
+İlk uygulamanızı bulunması gereken bir saat dilimi üzerinde dayanıyorsa çağırmalısınız <xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A> yöntemi saat dilimi bilgileri kayıt defterinden alınamıyor. Yöntem çağrısı başarısız olursa, özel durum işleyicisi ardından saat dilimini yeni bir örneğini oluşturabilir veya seri hale getirilmiş bir seri durumdan çıkarılırken tarafından yeniden oluşturabilirsiniz <xref:System.TimeZoneInfo> nesne. Bkz: [nasıl yapılır: katıştırılmış bir kaynaktan saat dilimlerini geri yükleme](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md) örneği.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Tarih, saat ve saat dilimleri](../../../docs/standard/datetime/index.md)
-[yerel sistemde tanımlanan saat dilimlerini bulma](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)
-[nasıl yapılır: ön tanımlı UTC ve yerel saat dilimi nesneleri erişim](../../../docs/standard/datetime/access-utc-and-local.md)
+- [Tarihler, saatler ve saat dilimleri](../../../docs/standard/datetime/index.md)
+- [Yerel sistemde tanımlanan saat dilimlerini bulma](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)
+- [Nasıl yapılır: Ön tanımlı UTC ve yerel saat dilimi nesnelerine erişim](../../../docs/standard/datetime/access-utc-and-local.md)

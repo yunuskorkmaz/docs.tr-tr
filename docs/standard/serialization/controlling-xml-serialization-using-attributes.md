@@ -15,12 +15,12 @@ helpviewer_keywords:
 - serialization, examples
 - serialization, attributes
 ms.assetid: 47d4c39d-30e1-4c7b-8a2e-301325390647
-ms.openlocfilehash: d97798dd44e9661e82a303023e041f5af2f43711
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 28c7ebe1de3adb92e531597027e4b8bb7a63294c
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501784"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44048344"
 ---
 # <a name="controlling-xml-serialization-using-attributes"></a>Öznitelikleri kullanarak XML serileştirmeyi denetleme
 
@@ -315,12 +315,12 @@ Buna karşılık, sınıfının bir örneği, yalnızca serileştirmek için ols
 
 Ortak özelliği olduğunda durumlar olabilir veya alan seri hale gerekmez. Örneğin, bir alan veya özellik meta veriler içeren için kullanılabilir. Böyle durumlarda, uygulama <xref:System.Xml.Serialization.XmlIgnoreAttribute> alanı veya özelliği için ve <xref:System.Xml.Serialization.XmlSerializer> üzerine atlar.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-[XML Serileştirmeyi Denetleyen Öznitelikler](attributes-that-control-xml-serialization.md)  
-[Kodlanmış SOAP Serileştirmesini Denetleyen Öznitelikler](attributes-that-control-encoded-soap-serialization.md)  
-[XML Serileştirmeye Giriş](introducing-xml-serialization.md)  
-[XML Serileştirme Örnekleri](examples-of-xml-serialization.md)  
-[Nasıl yapılır: XML Akışı için Alternatif Öğe Adı Belirtme](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
-[Nasıl yapılır: Nesne Serileştirme](how-to-serialize-an-object.md)  
-[Nasıl yapılır: Nesneyi Seri Durumdan Çıkarma](how-to-deserialize-an-object.md)  
+- [XML Serileştirmeyi Denetleyen Öznitelikler](attributes-that-control-xml-serialization.md)  
+- [Kodlanmış SOAP Serileştirmesini Denetleyen Öznitelikler](attributes-that-control-encoded-soap-serialization.md)  
+- [XML Serileştirmeye Giriş](introducing-xml-serialization.md)  
+- [XML Serileştirme Örnekleri](examples-of-xml-serialization.md)  
+- [Nasıl yapılır: XML Akışı için Alternatif Öğe Adı Belirtme](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
+- [Nasıl yapılır: Nesne Serileştirme](how-to-serialize-an-object.md)  
+- [Nasıl yapılır: Nesneyi Seri Durumdan Çıkarma](how-to-deserialize-an-object.md)  

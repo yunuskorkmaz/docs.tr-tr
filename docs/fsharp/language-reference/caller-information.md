@@ -1,29 +1,29 @@
 ---
 title: 'Arayan bilgileri (F #)'
-description: Arayan bilgileri bağımsız değişkeni öznitelikleri bir yöntemden arayan bilgileri almak için nasıl kullanılacağını açıklar.
+description: Bir yöntemi arayan bilgileri almak için çağırıcı bilgisi bağımsız değişken öznitelikleri kullanmayı açıklar.
 ms.date: 04/25/2017
-ms.openlocfilehash: 6fd80213cdaf2c4662fd4c2ed9eaf8949e397efe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f2f4b16804d9156d234cc29d1f72ebe80a5b556
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33564811"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44048684"
 ---
 # <a name="caller-information"></a>Arayan bilgileri
 
 Arayan Bilgisi özniteliklerini kullanarak bir yöntemin arayanı hakkında bilgi edinebilirsiniz. Kaynak kodunun dosya yolunu, kaynak kodundaki satır numarasını ve arayanın üye adını alabilirsiniz. Bu bilgiler, tanılama araçlarının izlenmesine, oluşturulmasına ve bu araçlarda hata ayıklanmasına yardımcı olur.
 
-Bu bilgileri elde etmek için her biri varsayılan değere sahip isteğe bağlı parametrelere uygulanan öznitelikler kullanabilirsiniz. Aşağıdaki tabloda tanımlanan arayan bilgileri öznitelikleri listeler [System.Runtime.CompilerServices](/dotnet/api/system.runtime.compilerservices) ad alanı:
+Bu bilgileri elde etmek için her biri varsayılan değere sahip isteğe bağlı parametrelere uygulanan öznitelikler kullanabilirsiniz. Aşağıdaki tabloda tanımlanan arayan bilgisi öznitelikleri listelenmektedir [System.Runtime.CompilerServices](/dotnet/api/system.runtime.compilerservices) ad alanı:
 
 |Öznitelik|Açıklama|Tür|
 |---------|-----------|----|
 |[CallerFilePath](/dotnet/api/system.runtime.compilerservices.callerfilepathattribute)|Kaynak dosyasının arayanı içeren tam yolu. Bu, derleme zamanındaki dosya yoludur.|`String`
 |[CallerLineNumber](/dotnet/api/system.runtime.compilerservices.callerlinenumberattribute)|Yöntemin çağrıldığı kaynak dosyadaki satır numarası.|`Integer`|
-|[CallerMemberName](/dotnet/api/system.runtime.compilerservices.callermembernameattribute)|Arayanın yöntemi veya özellik adı. Bu konunun ilerleyen bölümlerinde üye adlarının bölümüne bakın.|`String`|
+|[CallerMemberName](/dotnet/api/system.runtime.compilerservices.callermembernameattribute)|Arayanın yöntemi veya özellik adı. Bu konunun ilerleyen bölümlerinde üye adları bölümüne bakın.|`String`|
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, çağıran izlemek için bu öznitelikler nasıl kullanabileceğinize gösterir.
+Aşağıdaki örnek, çağıran izlemek için bu öznitelikler nasıl kullanacağınızı gösterir.
 
 ```fsharp
 open System.Diagnostics
@@ -45,20 +45,20 @@ type Tracer() =
 
 ## <a name="remarks"></a>Açıklamalar
 
-Arayan bilgileri öznitelikleri için isteğe bağlı parametreler yalnızca uygulanabilir. Her bir isteğe bağlı parametre için açık bir değer sağlamanız gerekir. Arayan bilgileri öznitelikleri arayan bilgileri özniteliği ile donatılmış her isteğe bağlı bir parametre uygun değeri yazmak derleyici neden.
+Arayan bilgileri öznitelikleri yalnızca isteğe bağlı parametrelere uygulanabilir. İsteğe bağlı her parametre için açık bir değer sağlamanız gerekir. Arayan bilgisi öznitelikleri arayan bilgisi özniteliği ile donatılmış her isteğe bağlı parametre için uygun değeri yazmak derleyicinin neden.
 
-Arayan Bilgisi değerleri, derleme zamanında Ara Dile (IL) değişmez değerler olarak verilir. Sonuçlarını aksine [StackTrace](/dotnet/api/system.diagnostics.stacktrace) özellik için özel durumlar, sonuçları gizleme tarafından etkilenmez.
+Arayan Bilgisi değerleri, derleme zamanında Ara Dile (IL) değişmez değerler olarak verilir. Tersine sonuçlar [StackTrace](/dotnet/api/system.diagnostics.stacktrace) özelliği için özel durumlar, sonuçlar gizlemeden etkilenmez etkilenmez.
 
 Arayan bilgisini denetlemek veya gizlemek için isteğe bağlı bağımsız değişkenleri açıkça sağlayabilirsiniz.
 
-## <a name="member-names"></a>Üye adlarının
+## <a name="member-names"></a>Üye adları
 
-Kullanabileceğiniz [ `CallerMemberName` ](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) özniteliği üye adı olarak belirtmekten kaçının bir `String` çağrılan yöntemin bağımsız değişkeni. Bu yöntemi kullanarak, yeniden adlandırma yeniden düzenleme değişmez bir sorunu önlemenize `String` değerleri. Bu, özellikle aşağıdaki görevler için yararlı olur:
+Kullanabileceğiniz [ `CallerMemberName` ](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) üye adı olarak belirtmekten kaçınmak için öznitelik bir `String` çağrılan yöntemin bağımsız değişken. Bu tekniği kullanarak, yeniden adlandırma düzenlemesi değişmeyen ilişkin sorunu önleyebilirsiniz `String` değerleri. Bu, özellikle aşağıdaki görevler için yararlı olur:
 
 * İzleme ve tanılama yordamlarını kullanma.
-* Uygulama [INotifyPropertyChanged](/dotnet/api/system.componentmodel.inotifypropertychanged) veri bağlama sırasında arabirim. Bu arabirim, bir nesnenin özelliğinin bağlama denetimine özelliğin değiştirildiğini bildirmesini ve böylece denetimin güncelleştirilmiş bilgileri görüntüleyebilmesini sağlar. Olmadan [ `CallerMemberName` ](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) öznitelik, bir hazır değer özellik adını belirtmeniz gerekir.
+* Uygulama [INotifyPropertyChanged](/dotnet/api/system.componentmodel.inotifypropertychanged) veri bağlama sırasında arabirim. Bu arabirim, bir nesnenin özelliğinin bağlama denetimine özelliğin değiştirildiğini bildirmesini ve böylece denetimin güncelleştirilmiş bilgileri görüntüleyebilmesini sağlar. Olmadan [ `CallerMemberName` ](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) öznitelik, özellik adını değişmez değer olarak belirtmeniz gerekir.
 
-Aşağıdaki grafikte üye CallerMemberName özniteliğini kullandığınızda, döndürülen adlarını gösterir.
+Aşağıdaki grafik üyesi CallerMemberName özniteliğini kullandığınızda döndürülen adlarını gösterir.
 
 |Çağrının oluştuğu yer|Üye adı sonucu|
 |-------------------|------------------|
@@ -71,6 +71,7 @@ Aşağıdaki grafikte üye CallerMemberName özniteliğini kullandığınızda, 
 |İçeren üye yok (örneğin, derleme düzeyi veya türlere uygulanan öznitelikler)|İsteğe bağlı parametrenin varsayılan değeri.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
- [Öznitelikler](attributes.md)  
- [Adlandırılmış bağımsız değişkenler](parameters-and-arguments.md#named-arguments)  
- [İsteğe bağlı parametreler](parameters-and-arguments.md#optional-parameters)  
+
+- [Öznitelikler](attributes.md)  
+- [Adlandırılmış bağımsız değişkenler](parameters-and-arguments.md#named-arguments)  
+- [İsteğe bağlı parametreler](parameters-and-arguments.md#optional-parameters)  

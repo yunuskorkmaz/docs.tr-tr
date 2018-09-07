@@ -1,21 +1,22 @@
 ---
-title: Bir XML belgesinden düğümleri, içerik ve değerleri kaldırılıyor
+title: Bir XML belgesinden düğümleri, içeriği ve değerleri kaldırma
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: d818a29a-6ee5-4725-97c4-78cf60a156b6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6710ecc80b8b053c2f2899dd89f8a5844cb6404d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 960d69e7db4d06956bfff8fb849f1d085e4cb1c0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568943"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44047811"
 ---
-# <a name="removing-nodes-content-and-values-from-an-xml-document"></a>Bir XML belgesinden düğümleri, içerik ve değerleri kaldırılıyor
-Bir XML belge nesne modeli (DOM) bellekte eklendiğinde, ağaçtan düğümleri kaldırın veya içerik ve değerleri belirli düğüm türlerinden kaldırın. Bir yaprak düğüm veya tüm düğüm alt ağacı belgeden kaldırma hakkında daha fazla bilgi için bkz: [DOM kaldırma düğümlerden](../../../../docs/standard/data/xml/removing-nodes-from-the-dom.md). Öğenin özniteliklerinde kaldırma hakkında daha fazla bilgi için bkz: [DOM öğesi düğümünde kaldırma özniteliklerden](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md). Bir düğümün içeriği kaldırma ancak düğüm ağaçta bırakarak hakkında daha fazla bilgi için bkz: [düğümü içeriğinde kaldırma DOM](../../../../docs/standard/data/xml/removing-node-content-in-the-dom.md).  
+# <a name="removing-nodes-content-and-values-from-an-xml-document"></a>Bir XML belgesinden düğümleri, içeriği ve değerleri kaldırma
+Bir XML belge nesne modeli (DOM) bellek eklendiğinde, ağaç düğümleri kaldırın veya içerik ve değerleri, belirli düğüm türlerinden kaldırılır. Belgeden bir yaprak düğüm veya tüm düğüm alt ağacı kaldırma hakkında daha fazla bilgi için bkz: [dom'dan düğümleri kaldırma](../../../../docs/standard/data/xml/removing-nodes-from-the-dom.md). Bir öğenin öznitelikleri kaldırma hakkında daha fazla bilgi için bkz. [DOM'da bir öğe düğümünden öznitelikleri kaldırma](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md). Bir düğüm içeriğini kaldırma ancak düğüm ağaçta bırakarak hakkında daha fazla bilgi için bkz: [DOM düğüm içeriğini kaldırma](../../../../docs/standard/data/xml/removing-node-content-in-the-dom.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [XML Belge Nesne Modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)  
- [XML Belgesine Düğüm Ekleme](../../../../docs/standard/data/xml/inserting-nodes-into-an-xml-document.md)  
- [Bir XML Belgesindeki Düğüm, İçerik ve Değerleri Değiştirme](../../../../docs/standard/data/xml/modifying-nodes-content-and-values-in-an-xml-document.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [XML Belge Nesne Modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)  
+- [XML Belgesine Düğüm Ekleme](../../../../docs/standard/data/xml/inserting-nodes-into-an-xml-document.md)  
+- [Bir XML Belgesindeki Düğüm, İçerik ve Değerleri Değiştirme](../../../../docs/standard/data/xml/modifying-nodes-content-and-values-in-an-xml-document.md)

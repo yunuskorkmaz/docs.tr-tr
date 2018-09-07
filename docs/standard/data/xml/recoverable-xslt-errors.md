@@ -5,54 +5,55 @@ ms.technology: dotnet-standard
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5ef88add49cb4a269612965d14dfbca6b3263533
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f7630b9a233db009b6095abc8d833870c1f33d8
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579281"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44081553"
 ---
 # <a name="recoverable-xslt-errors"></a>Kurtarılabilir XSLT hataları
-W3C XSL Dönüşümleri (XSLT) sürüm 1.0 öneri uygulama sağlayıcısı bir durumu işlemek nasıl karar verebilir alanları içerir. Bu alanlar isteğe bağlı davranış olduğu kabul edilir. Örneğin, Bölüm 7.3 oluşturma işleme yönergelerde XSLT 1.0 öneri, bir hata içeriğinin başlatmasını varsa bildiren `xsl:processing-instruction` metin düğümleri dışında düğümleri oluşturur. Hatadan kurtarmak işlemci karar verirse ne karar öneri gösterir XSLT 1.0 bazı sorunlar için yapılması gerekir. 7.3 bölümünde verilen sorun için uygulama bu hatadan düğümleri ve bunların içeriği yoksayılıyor kurtarabilirsiniz W3C söyler.  
+W3C XSLT Dönüşümleri (XSLT) sürüm 1.0 öneri uygulama sağlayıcısı bir durumu işlemek nasıl karar verebilir alanları içerir. Bu alanlar isteğe bağlı bir davranış olarak değerlendirilir. Örneğin, bu içeriği, örnekleme, bir hata olduğunu Bölüm 7.3 oluşturma işleme yönergeleri, XSLT 1.0 öneri eyaletler `xsl:processing-instruction` metin düğümleri dışındaki düğümlerde oluşturur. İşlemci hatadan kurtarmayı karar verirse, bazı sorunlar için öneri ne karar gösterir XSLT 1.0 yapılmalıdır. 7.3 bölümde verilen sorun için uygulama bu hatadan düğümleri ve içeriklerini yoksayarak kurtarabilirsiniz W3C diyor.  
   
-## <a name="discretionary-behaviors"></a>İsteğe bağlı davranışları  
- Aşağıdaki tabloda her XSLT 1.0 öneri ve bu davranışların tarafından nasıl işleneceğini tarafından izin verilen isteğe bağlı davranışlar listelenmektedir <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı.  
+## <a name="discretionary-behaviors"></a>İsteğe bağlı davranışların uygulanması  
+ Aşağıdaki tabloda her XSLT 1.0 öneri ve bu davranışların tarafından nasıl işlendiğini tarafından izin verilen isteğe bağlı davranışların listeler <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı.  
   
--   Kurtarma gösterir <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı bu hatadan kurtarmak. <xref:System.Xml.Xsl.XsltArgumentList.XsltMessageEncountered?displayProperty=nameWithType> Olay XSLT işlemci tüm olayları raporlamak için kullanılabilir.  
+-   Kurtarma gösterir <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı bu hatadan kurtarır. <xref:System.Xml.Xsl.XsltArgumentList.XsltMessageEncountered?displayProperty=nameWithType> Olay, XSLT işlemci tüm olayları bildirmek için kullanılabilir.  
   
--   Bu koşul için bir özel durum tetiklenir hata gösterir.  
+-   Bu koşul için bir özel durum, hata olduğunu gösterir.  
   
--   Bölüm başvurular bulunabilir [W3C XSL Dönüşümleri (XSLT) sürüm 1.0 öneri](http://www.w3.org/TR/xslt) ve [W3C XSL Dönüşümleri (XSLT) sürüm 1.0 belirtimi ayrıntıyla açıklayan hata bilgilerini](https://www.w3.org/1999/11/REC-xslt-19991116-errata/).  
+-   Bölüm başvuruları bulunabilir [W3C XSLT Dönüşümleri (XSLT) sürüm 1.0 öneri](http://www.w3.org/TR/xslt) ve [W3C XSLT Dönüşümleri (XSLT) sürüm 1.0 belirtimi Errata](https://www.w3.org/1999/11/REC-xslt-19991116-errata/).  
   
 |XSLT koşulu|Bölüm|XslCompiledTransform davranışı|  
 |--------------------|-------------|-----------------------------------|  
-|Bir metin düğümü hem eşleşen `xsl:strip-space` ve `xsl:preserve-space`.|3.4|Kurtarma|  
-|Bir kaynak düğüm birden fazla şablon kuralla eşleşir.|5.5|Kurtarma|  
-|Bir ad alanı URI tüm aynı alma önceliğe sahip birden çok ad alanı URI, bir diğer ad olarak bildirildi.|7.1.1|Kurtarma|  
-|`name` Özniteliğini `xsl:attribute` ve `xsl:element` bir öznitelik değerinden oluşturulan bir QName değil.|7.1.2, 7.1.3|Hata *|  
-|İki öznitelik aynı alma işlemi kümeleriyle ve genişletilmiş ada sahip bir öznitelik ortak ve daha yüksek önem düzeyine sahip aynı ada sahip sık kullanılan özniteliği içeren hiçbir öznitelik kümesi yok.|7.1.4|Kurtarma|  
-|Alt eklendikten sonra bir özniteliği bir öğe olarak ekleniyor.|7.1.3|Hata *|  
+|Bir metin düğümü her ikisi de eşleşen `xsl:strip-space` ve `xsl:preserve-space`.|3.4|Kurtarma|  
+|Kaynak düğüm, birden fazla şablon kuralı eşleşir.|5.5|Kurtarma|  
+|Bir ad alanı URI için tüm aynı alma önceliğe sahip birden çok ad alanı URI, bir diğer ad olarak bildirilir.|7.1.1|Kurtarma|  
+|`name` Özniteliğini `xsl:attribute` ve `xsl:element` oluşturulan bir öznitelik değeri bir QName değil.|7.1.2, 7.1.3|Hata *|  
+|İki öznitelik aynı alma kümeleriyle genişletilmiş ada sahip bir öznitelik ortak ve daha yüksek önem derecesi ile aynı ada sahip genel öznitelik içeren diğer öznitelik ödenmez.|7.1.4|Kurtarma|  
+|Alt öğe eklendikten sonra bir öznitelik bir öğe ekleme.|7.1.3|Hata *|  
 |Bir öznitelik adı 'xmlns' ile oluşturma|7.1.3|Hata *|  
-|Öznitelik bir öğe değil bir düğüm ekleme.|7.1.3|Hata *|  
-|Metin düğümleri dışında düğümlerini içeriğini örnek oluşturma sırasında oluşturma `xsl:attribute` özniteliği.|7.1.3|Hata *|  
-|`name` Özniteliği bir `xsl:processing-instruction` NCName ve bir işleme yönergesi hedefi vermez.|7.3|Hata *|  
-|İçeriği başlatmasını `xsl:processing-instruction` metin düğümleri dışında düğümleri oluşturur.|7.3|Hata *|  
-|İçeriği başlatmasını sonucunu `xsl:processing-instruction` dizesini içeren "? >"|7.3|Kurtarma|  
-|İçeriği başlatmasını sonucunu `xsl:processing-instruction` dizesini içeren "--" veya ile biten "-".|7.4|Kurtarma|  
-|İçeriği başlatmasını sonucunu `xsl:comment` metin düğümleri dışında düğümleri oluşturur.|7.4|Hata *|  
-|Değişken bağlama öğesi şablonda bir öznitelik düğümü veya bir ad alanı düğümü döndürür.|11.2|Hata *|  
-|Kaynak belge işlevdeki geçirilen URI alınırken bir hata var.|12.1|Hata|  
-|Belge işlevi URI başvurusunda parça tanımlayıcısı içeriyor ve parça tanımlayıcısı işlenirken bir hata oluştu.|12.1|Kurtarma *|  
-|Aynı adlı ancak içinde cdata bölümünün öğeleri adlı değil farklı değerler, birden çok öznitelik `xsl:output` ile aynı öncelik içeri aktarın.|16|Kurtarma|  
+|Öznitelik bir öğe değil bir düğüme ekleniyor.|7.1.3|Hata *|  
+|Metin düğümleri dışındaki düğümlerde içeriği örnek oluşturma sırasında oluşturma `xsl:attribute` özniteliği.|7.1.3|Hata *|  
+|`name` Özniteliği bir `xsl:processing-instruction` NCName hem de bir işleme yönergesi hedefi vermez.|7.3|Hata *|  
+|İçeriği, örnekleme `xsl:processing-instruction` metin düğümleri dışındaki düğümlerde oluşturur.|7.3|Hata *|  
+|İçeriği, örnekleme sonucunu `xsl:processing-instruction` dizesini içeren "? >"|7.3|Kurtarma|  
+|İçeriği, örnekleme sonucunu `xsl:processing-instruction` dizesini içeren "--" veya ile biter "-".|7.4|Kurtarma|  
+|İçeriği, örnekleme sonucunu `xsl:comment` metin düğümleri dışındaki düğümlerde oluşturur.|7.4|Hata *|  
+|Bir değişkeni bağlama öğenin şablonda bir öznitelik düğümü veya ad alanı düğümü döndürür.|11.2|Hata *|  
+|Belge işleve geçirilen URI'deki kaynağı alınırken bir hata yoktur.|12.1|Hata|  
+|Bir parça tanımlayıcı belge işlevindeki URI başvuru içeren ve parça tanımlayıcı işlenirken bir hata yoktur.|12.1|Kurtarma *|  
+|Aynı adı taşıyan ancak cdata bölümü öğelerinde adlı değil, farklı değerler ile birden çok öznitelik `xsl:output` ile aynı öncelik içeri aktarın.|16|Kurtarma|  
 |İşlemci içinde kodlamasını desteklemediğini `xsl:output` kodlama özniteliği.|16.1|Kurtarma|  
-|Sonuç ağacındaki bir metin düğümü dışında bir şey için kullanılan bir metin düğümü için çıktı kaçış devre dışı bırakılıyor.|16.4|Kurtarma *|  
-|Sonuç ağacı parçası etkin çıkış kaçış ile bir metin düğümü içeriyorsa sonuç ağacı parçası bir sayı veya dize dönüştürme.|16.4|Kurtarma *|  
-|Çıktı kaçış XSLT işlemci çıktı için kullandığını kodlama temsil edilemeyen karakterler devre dışı bırakılmıştır.|16.4|Kurtarma *|  
-|Alt ona veya öznitelikleri eklendikten sonra eklendikten sonra bir ad alanı düğümü bir öğe olarak ekleniyor.|ayrıntıyla açıklayan hata bilgilerini 25|Hata *|  
-|`value` Özniteliği bir `xsl:number` NAN, sonsuz veya daha az 0,5 olup|ayrıntıyla açıklayan hata bilgilerini 24|Kurtarma|  
-|Düğüm kümesi belge işlevi ikinci bağımsız değişkeni boş ve göreli URI başvurudur.|ayrıntıyla açıklayan hata bilgilerini 14|Kurtarma|  
+|Bir metin düğümü sonucu ağacında dışında bir şey için kullanılan bir metin düğümü için çıkış kaçış devre dışı bırakılıyor.|16.4|Kurtarma *|  
+|Sonuç ağacı parçası etkin çıkış kaçış ile bir metin düğümü içeriyorsa, bir sayı veya dize bir sonuç ağacı parçası dönüştürülüyor.|16.4|Kurtarma *|  
+|Çıkış kaçış XSLT işlemci için çıkış kullandığını kodlama temsil edilemeyen bir karakter için devre dışı bırakıldı.|16.4|Kurtarma *|  
+|Alt öğeler veya öznitelikleri eklendikten sonra onu eklendikten sonra bir ad alanı düğümü için bir öğe ekleme.|errata 25|Hata *|  
+|`value` Özniteliği bir `xsl:number` sonsuz veya daha az 0,5 NAN olup|errata 24|Kurtarma|  
+|Düğüm kümesi belge işleve ikinci bağımsız değişken boş ve göreli URI referansı.|errata 14|Kurtarma|  
   
- <sup>*</sup> Bu davranış farklı <xref:System.Xml.Xsl.XslTransform> sınıfı. Daha fazla bilgi için bkz: [uygulama, isteğe bağlı davranışları çok sınıfında](../../../../docs/standard/data/xml/implementation-of-discretionary-behaviors-in-the-xsltransform-class.md).  
+ <sup>*</sup> Bu daha farklı, davranıştır <xref:System.Xml.Xsl.XslTransform> sınıfı. Daha fazla bilgi için [uygulama, isteğe bağlı davranışların XslTransform sınıfında](../../../../docs/standard/data/xml/implementation-of-discretionary-behaviors-in-the-xsltransform-class.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [XSLT Dönüşümleri](../../../../docs/standard/data/xml/xslt-transformations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [XSLT Dönüşümleri](../../../../docs/standard/data/xml/xslt-transformations.md)

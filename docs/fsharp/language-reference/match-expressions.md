@@ -1,17 +1,17 @@
 ---
 title: 'Eşleşme ifadeleri (F #)'
-description: 'F # eşleşme ifadesi karşılaştırmaya ifade desenleri dayalı dallanma denetim nasıl sağladığını öğrenin.'
+description: 'F # eşleşme ifadesi ifade desenleri ile karşılaştırma temel alan dallanma denetim nasıl sağladığını öğrenin.'
 ms.date: 04/19/2018
-ms.openlocfilehash: 22cc4b7a87a60d8a5dcbe05ac5abec5560a37516
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: e4cb82f20fe82bff562736557c2346562c557f59
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33565184"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44047681"
 ---
 # <a name="match-expressions"></a>Eşleşme ifadeleri
 
-`match` İfade karşılaştırmaya ifade desenleri dayalı dallanma denetim sağlar.
+`match` İfade karşılaştırma ifade desenleri temel alan dallanma denetim sağlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -31,9 +31,9 @@ function
 
 ## <a name="remarks"></a>Açıklamalar
 
-Desen eşleştirme ifadeleri karşılaştırmaya test ifadesinin desenleri dayalı karmaşık dallanma için izin verir. İçinde `match` ifadesi *test ifade* açın ve bir eşleşme bulunduğunda, karşılık gelen her deseni ile karşılaştırıldığında *sonuç ifadesi* değerlendirilir ve çıkan değeri eşleşme ifadesi değeri olarak döndürdü.
+Desen eşleştirme ifadeler, karşılaştırma test ifade desenleri temel karmaşık dallara ayırmaya olanak tanır. İçinde `match` ifade *test ifade* etkinleştirin ve bir eşleşme bulunduğunda, karşılık gelen her desen ile karşılaştırıldığında *sonuç ifadesi* değerlendirilir ve elde edilen değer eşleştirme ifadesi değerini döndürdü.
 
-Desen eşleştirme önceki sözdiziminde gösterilen işlevi hangi desen eşleştirme hemen bağımsız gerçekleştirilir lambda ifadesi ' dir. Desen eşleştirme önceki sözdiziminde gösterilen işlevi şuna eşdeğerdir.
+Önceki sözdiziminde gösterilen işlev desen, hangi desen eşleştirme hemen bağımsız değişken üzerinde gerçekleştirilen bir lambda ifadesidir. Önceki sözdiziminde gösterilen işlev desen aşağıdakine eşdeğerdir.
 
 ```fsharp
 fun arg ->
@@ -43,27 +43,27 @@ fun arg ->
     | ...
 ```
 
-Lambda ifadeleri hakkında daha fazla bilgi için bkz: [Lambda ifadeleri: `fun` anahtar sözcüğü](functions/lambda-expressions-the-fun-keyword.md).
+Lambda ifadeleri hakkında daha fazla bilgi için bkz. [Lambda ifadeleri: `fun` anahtar sözcüğü](functions/lambda-expressions-the-fun-keyword.md).
 
-Desenler tam kümesi giriş değişkenin tüm olası eşleşmeler kapsamalıdır. Joker karakter deseni sık kullandığınız (`_`) daha önce eşleşmeyen tüm giriş değerlerini eşleştirmek için son desen olarak.
+Desenler tam kümesini giriş değişkeni, tüm olası eşleşmeler kapsamalıdır. Joker karakter deseni sıkça kullandığınız (`_`) olarak daha önce eşleşmeyen tüm giriş değerlerini eşleştirmek için son desen.
 
-Aşağıdaki kod, yollardan bazılarını gösterir `match` ifade kullanılır. Bir başvuru ve kullanılabilir tüm olası düzeni örnekleri için bkz: [desen eşleştirme](pattern-matching.md).
+Aşağıdaki kod, bazı yöntemler gösterir `match` ifade kullanılır. Başvuru ve kullanılabilir tüm olası düzeni örnekleri için bkz: [desen eşleştirme](pattern-matching.md).
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4601.fs)]
 
-## <a name="guards-on-patterns"></a>Modeli koruyucuları
+## <a name="guards-on-patterns"></a>Cf desenleriyle ilgili
 
-Kullanabileceğiniz bir `when` değişkeni bir desenle eşleşen için karşılaması gereken ek bir koşulu belirtmek için yan tümcesi. Bu tür bir yan tümce olarak adlandırılır bir *koruma*. İfade aşağıdaki `when` anahtar sözcüğü bu koruyucusu ile ilişkili desenle eşleşen bir kılmadığınız sürece değerlendirilmez.
+Kullanabileceğiniz bir `when` yan tümcesi değişkeni bir desenle eşleşen için karşılaması gereken ek bir koşulu belirtmek için. Böyle bir yan tümce olarak adlandırılır bir *koruyucu*. İfade aşağıdaki `when` anahtar sözcüğü bir eşleşme deseni, koruyucusu ile ilişkili yapılmıyorsa değerlendirilmez.
 
-Aşağıdaki örnekte değişken deseni için sayısal bir aralık belirtmek için bir koruma kullanımını göstermektedir. Boole işleçleri kullanarak birden çok koşul birleştirilir unutmayın.
+Aşağıdaki örnek, bir değişken desen için sayısal bir aralık belirtmek için bir koruma kullanımını gösterir. Not Boole işleçleri kullanarak birden çok koşulu birleştirilir.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4602.fs)]
 
-Değişmez değerler dışında değerleri düzende kullanılamadığından kullanmanız gerektiğini unutmayın bir `when` değerle giriş kısmı karşılaştırmak varsa, yan tümcesi. Bu aşağıdaki kodda gösterilir:
+Değişmez değerler dışındaki değerler desende kullanılamaz çünkü kullanmanız gerektiğini unutmayın bir `when` değerle giriş kısmı Karşılaştırılacak varsa yan tümcesi. Bu, aşağıdaki kodda gösterilmiştir:
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4603.fs)]
 
-Birleşim deseni koruyucu tarafından kapsanan, koruma için geçerli olduğunu unutmayın **tüm** yalnızca sonuncu desen. Örneğin, aşağıdaki kod, koruma verilen `when a > 12` hem de geçerli `A a` ve `B a`:
+Bir birleşim deseni guard tarafından ele alınmıştır, koruma için geçerli olduğunu unutmayın **tüm** yalnızca sonuncu desenlerinin. Örneğin, aşağıdaki kod, koruma verilen `when a > 12` hem `A a` ve `B a`:
 
 ```fsharp
 type Union =
@@ -82,6 +82,6 @@ foo() // returns 42
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[F# Dili Başvurusu](index.md)  
-[Etkin Desenler](active-patterns.md)  
-[Desen Eşleştirme](pattern-matching.md)  
+- [F# Dili Başvurusu](index.md)  
+- [Etkin Desenler](active-patterns.md)  
+- [Desen Eşleştirme](pattern-matching.md)  

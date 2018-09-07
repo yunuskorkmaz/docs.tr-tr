@@ -1,5 +1,5 @@
 ---
-title: Bir XML belgesi DOM okuma
+title: DOM'da XML belgesi okuma
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,27 +8,27 @@ dev_langs:
 ms.assetid: a4fb291f-5630-49ba-a49a-5b66c3b71e49
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad649e61f4f006103d38a998eece174a07889828
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 9031f5df0d0f48dc2844cdfd0654ee4ab876cc22
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569726"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44046008"
 ---
-# <a name="reading-an-xml-document-into-the-dom"></a>Bir XML belgesi DOM okuma
-Farklı biçimlerden belleğe XML bilgileri okuyun. Bir dize, akışı, URL, metin okuyucu veya türetilmiş bir sınıf okunabilir <xref:System.Xml.XmlReader>.  
+# <a name="reading-an-xml-document-into-the-dom"></a>DOM'da XML belgesi okuma
+Farklı biçimler belleğe XML bilgileri okuyun. Bir dize, akış, URL, metin okuyucuyu ya da türetilen bir sınıf okunabilir <xref:System.Xml.XmlReader>.  
   
- <xref:System.Xml.XmlDocument.Load%2A> Yöntemi belge belleğe getirir ve her biri farklı biçimlerde verileri almak için kullanılabilen yöntemler aşırı yüklü. Ayrıca bir <xref:System.Xml.XmlDocument.LoadXml%2A> bir dizeden XML okur yöntemi.  
+ <xref:System.Xml.XmlDocument.Load%2A> Yöntemi her farklı biçimlerde veri almak için kullanılabilen yöntemler aşırı yüklü ve belleğe belge getirir. Ayrıca bir <xref:System.Xml.XmlDocument.LoadXml%2A> XML bir dizeden okur yöntemi.  
   
- Farklı <xref:System.Xml.XmlDocument.Load%2A> yöntemleri etkileyen XML belge nesne modeli (DOM) yüklendiğinde hangi düğümlerin oluşturulur. Aşağıdaki tabloda bazı arasındaki farklar listelenmektedir <xref:System.Xml.XmlDocument.Load%2A> yöntemleri ve bunları adres Konular.  
+ Farklı <xref:System.Xml.XmlDocument.Load%2A> yöntemleri etkileyen XML belge nesne modeli (DOM) yüklendiğinde hangi düğümleri oluşturulur. Aşağıdaki tabloda bazı arasındaki farklar listelenmektedir <xref:System.Xml.XmlDocument.Load%2A> yöntemleri ve onları adreslemek konuları.  
   
 |Konu|Konu|  
 |-------------|-----------|  
-|Beyaz alan düğümlerinin oluşturma|DOM yükleme için kullanılan nesne boşluk ve DOM içinde oluşturulan önemli boşluk düğümleri üzerinde bir etkisi Daha fazla bilgi için bkz: [boşluk ve önemli boşluk DOM yüklenirken işleme](../../../../docs/standard/data/xml/white-space-and-significant-white-space-handling-when-loading-the-dom.md).|  
-|Belirli bir düğümünden başlayan XML yüklenirken veya tüm XML belgesi yüklenirken|Kullanarak <xref:System.Xml.XmlDocument.Load%2A?displayProperty=nameWithType> yöntemi veri yüklenebilir belirli bir düğümden DOM Daha fazla bilgi için bkz: [bir okuyucu yük verileri](../../../../docs/standard/data/xml/load-data-from-a-reader.md).|  
-|XML olarak doğrulama yüklendi|Yüklendiği gibi DOM yüklenen XML veriler doğrulanamıyor. Bu bir doğrulama kullanılarak gerçekleştirilir <xref:System.Xml.XmlReader>. Yüklendiği gibi XML doğrulama hakkında daha fazla bilgi için bkz: [XML belgesi DOM içinde doğrulama](../../../../docs/standard/data/xml/validating-an-xml-document-in-the-dom.md).|  
+|Boşluk düğümleri oluşturma|DOM yükleme için kullanılan nesne boşluk ve DOM oluşturulan önemli boşluk düğümleri üzerinde bir etkisi Daha fazla bilgi için [boşluk ve önemli boşluk DOM yüklerken işleme](../../../../docs/standard/data/xml/white-space-and-significant-white-space-handling-when-loading-the-dom.md).|  
+|Belirli bir düğümünden başlayan XML yüklenirken veya tüm XML belgesi yüklenirken|Kullanarak <xref:System.Xml.XmlDocument.Load%2A?displayProperty=nameWithType> yöntemi veri yüklenebilir belirli bir düğüm DOM'a Daha fazla bilgi için [bir okuyucudan veri yükleme](../../../../docs/standard/data/xml/load-data-from-a-reader.md).|  
+|XML olarak doğrulama yüklendi|Yüklü olduğu gibi DOM'a XML verileri doğrulanamıyor. Bu bir doğrulama kullanılarak gerçekleştirilir <xref:System.Xml.XmlReader>. Yüklü olduğu gibi XML doğrulama hakkında daha fazla bilgi için bkz. [doğrulama bir XML belgesi DOM](../../../../docs/standard/data/xml/validating-an-xml-document-in-the-dom.md).|  
   
- Aşağıdaki örnek ile yüklenen XML gösterir <xref:System.Xml.XmlDocument.LoadXml%2A> yöntemi ve daha sonra bir metin dosyasına kaydedilen verileri adlı `data.xml`.  
+ Aşağıdaki örnek, XML ile yüklenen gösterir <xref:System.Xml.XmlDocument.LoadXml%2A> yöntemi ve daha sonra bir metin dosyasına kaydedilmiş veri adlı `data.xml`.  
   
 ```vb  
 Imports System  
@@ -70,5 +70,6 @@ public class Sample
 }  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [XML Belge Nesne Modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [XML Belge Nesne Modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

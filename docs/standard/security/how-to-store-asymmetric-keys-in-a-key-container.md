@@ -17,36 +17,36 @@ helpviewer_keywords:
 ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3db4afb00367f719391193ebce4053cc5da16164
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a5cd157f89797406fbe87c3d70c415d7b192d1a9
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588862"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44061214"
 ---
 # <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>Nasıl yapılır: Bir Anahtar Kapsayıcısında Asimetrik Anahtarlar Depolama
-Asimetrik özel anahtarlar yerel bilgisayarda asla oldukları gibi veya düz metin olarak tutulmamalıdır. Özel anahtarı depolamanız gerekiyorsa, bir anahtar kapsayıcısı kullanmanız gerekir. Anahtar kapsayıcıları hakkında daha fazla bilgi için bkz: [anlama makine düzeyinde ve kullanıcı düzeyinde RSA anahtar kapsayıcıları](https://msdn.microsoft.com/library/9a179f38-8fb7-4442-964c-fb7b9f39f5b9).  
+Asimetrik özel anahtarlar yerel bilgisayarda asla oldukları gibi veya düz metin olarak tutulmamalıdır. Özel anahtarı depolamanız gerekiyorsa, bir anahtar kapsayıcısı kullanmanız gerekir. Anahtar kapsayıcıları hakkında daha fazla bilgi için bkz. [anlama makine düzeyinde ve kullanıcı düzeyi RSA anahtar kapsayıcılarının](https://msdn.microsoft.com/library/9a179f38-8fb7-4442-964c-fb7b9f39f5b9).  
   
-### <a name="to-create-an-asymmetric-key-and-save-it-in-a-key-container"></a>Asimetrik anahtar oluşturmak ve bir anahtar kapsayıcısında kaydetmek için  
+### <a name="to-create-an-asymmetric-key-and-save-it-in-a-key-container"></a>Asimetrik bir anahtar oluşturun ve bir anahtar kapsayıcısında kaydetmek için  
   
-1.  Yeni bir örneğini oluşturmak bir <xref:System.Security.Cryptography.CspParameters> sınıfı ve anahtar kapsayıcısı aramak istediğiniz adı <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType> alan.  
+1.  Yeni bir örneğini oluşturmak bir <xref:System.Security.Cryptography.CspParameters> sınıfı ve anahtar kapsayıcısına aramak istediğiniz adı geçirin <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType> alan.  
   
-2.  Türetilen sınıfın yeni bir örnek oluşturmak <xref:System.Security.Cryptography.AsymmetricAlgorithm> sınıfı (genellikle **RSACryptoServiceProvider** veya **DSACryptoServiceProvider**) ve daha önce oluşturulmuş geçirin  **CspParameters** kendi oluşturucuya nesnesi.  
+2.  Türetilen bir sınıfın yeni bir örneğini oluşturma <xref:System.Security.Cryptography.AsymmetricAlgorithm> sınıfı (genellikle **RSACryptoServiceProvider** veya **DSACryptoServiceProvider**) ve önceden oluşturulmuş  **CspParameters** nesnesine, yapıcısına.  
   
-### <a name="to-delete-the-key-from-a-key-container"></a>Bir anahtar kapsayıcı anahtarını silmek için  
+### <a name="to-delete-the-key-from-a-key-container"></a>Anahtarı bir anahtar kapsayıcısından silinemedi  
   
-1.  Yeni bir örneğini oluşturmak bir **CspParameters** sınıfı ve anahtar kapsayıcısı aramak istediğiniz adı **CspParameters.KeyContainerName** alan.  
+1.  Yeni bir örneğini oluşturmak bir **CspParameters** sınıfı ve anahtar kapsayıcısına aramak istediğiniz adı geçirin **CspParameters.KeyContainerName** alan.  
   
-2.  Türetilen sınıfın yeni bir örnek oluşturmak **AsymmetricAlgorithm** sınıfı (genellikle **RSACryptoServiceProvider** veya **DSACryptoServiceProvider**) ve geçirin daha önce oluşturduğunuz **CspParameters** kendi oluşturucuya nesnesi.  
+2.  Türetilen bir sınıfın yeni bir örneğini oluşturma **AsymmetricAlgorithm** sınıfı (genellikle **RSACryptoServiceProvider** veya **DSACryptoServiceProvider**) ve geçirin daha önce oluşturduğunuz **CspParameters** nesnesine, yapıcısına.  
   
-3.  Ayarlama **PersistKeyInCSP** türetildiği sınıfın özelliği **AsymmetricAlgorithm** için **false** (**False** Visual Basic'te).  
+3.  Ayarlama **PersistKeyInCSP** , türetilen sınıfın özelliği **AsymmetricAlgorithm** için **false** (**False** Visual Basic'te).  
   
-4.  Çağrı **Temizle** yöntemi türetildiği sınıfın **AsymmetricAlgorithm**. Bu yöntem sınıfın tüm kaynakları serbest bırakır ve anahtar kapsayıcısı temizler.  
+4.  Çağrı **Temizle** yöntem, türetilen sınıfın **AsymmetricAlgorithm**. Bu yöntem, sınıfın tüm kaynakları serbest bırakır ve anahtar kapsayıcısı temizler.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir asimetrik anahtar oluşturmak, bir anahtar kapsayıcısında kaydedin, daha sonraki bir zamanda anahtarı almak ve anahtarı kapsayıcısından silin gösterilmiştir.  
+ Aşağıdaki örnek, asimetrik anahtar oluşturma, bir anahtar kapsayıcısında kaydedin, daha sonra anahtarı alamazsınız ve anahtar kapsayıcısından silin gösterilmektedir.  
   
- Bu kodu fark `GenKey_SaveInContainer` yöntemi ve `GetKeyFromContainer` yöntemi benzer.  İçin bir anahtar kapsayıcı adı belirttiğinizde bir <xref:System.Security.Cryptography.CspParameters> nesne ve ona geçirin bir <xref:System.Security.Cryptography.AsymmetricAlgorithm> nesnesi ile <xref:System.Security.Cryptography.RSACryptoServiceProvider.PersistKeyInCsp%2A> özelliği veya <xref:System.Security.Cryptography.DSACryptoServiceProvider.PersistKeyInCsp%2A> özelliği true, şunlar olur ayarlayın.  Belirtilen ada sahip bir anahtar kapsayıcısı mevcut değilse, ardından oluşturulur ve anahtar kalıcı.  Belirtilen ada sahip bir anahtar kapsayıcısı yok sonra anahtar kapsayıcısında geçerli otomatik olarak yüklenen <xref:System.Security.Cryptography.AsymmetricAlgorithm> nesnesi.  Bu nedenle, kodda `GenKey_SaveInContainer` yöntemi devam ederse anahtar kodda sırasında ilk çalıştığından `GetKeyFromContainer` yöntemi ikinci çalıştığından anahtarı yükler.  
+ Kodda fark `GenKey_SaveInContainer` yöntemi ve `GetKeyFromContainer` yöntemi benzerdir.  İçin bir anahtar kapsayıcısı adını belirtirseniz bir <xref:System.Security.Cryptography.CspParameters> geçirin ve nesne bir <xref:System.Security.Cryptography.AsymmetricAlgorithm> nesnesi ile <xref:System.Security.Cryptography.RSACryptoServiceProvider.PersistKeyInCsp%2A> özelliği veya <xref:System.Security.Cryptography.DSACryptoServiceProvider.PersistKeyInCsp%2A> özelliği true, aşağıdakiler gerçekleşir ayarlayın.  Belirtilen ada sahip bir anahtar kapsayıcı mevcut değilse, ardından bir oluşturulur ve anahtar kalıcı hale getirilir.  Belirtilen ada sahip bir anahtar kapsayıcısı mevcut sonra anahtar kapsayıcısında geçerli otomatik olarak yüklenen <xref:System.Security.Cryptography.AsymmetricAlgorithm> nesne.  Bu nedenle, kodda `GenKey_SaveInContainer` yöntemi kodunda çalışırken ilk çalıştığından anahtar devam ederse `GetKeyFromContainer` yöntemi ikinci çalıştığından anahtarı yükler.  
   
 ```vb  
 Imports System  
@@ -223,8 +223,9 @@ Key added to container:
 Key deleted.  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Şifreleme ve Şifre Çözme için Anahtarlar Oluşturma](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
- [Veri Şifreleme](../../../docs/standard/security/encrypting-data.md)  
- [Verilerin Şifresini Çözme](../../../docs/standard/security/decrypting-data.md)  
- [Şifreleme Hizmetleri](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Şifreleme ve Şifre Çözme için Anahtarlar Oluşturma](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
+- [Veri Şifreleme](../../../docs/standard/security/encrypting-data.md)  
+- [Verilerin Şifresini Çözme](../../../docs/standard/security/decrypting-data.md)  
+- [Şifreleme Hizmetleri](../../../docs/standard/security/cryptographic-services.md)

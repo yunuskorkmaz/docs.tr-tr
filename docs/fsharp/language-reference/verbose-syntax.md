@@ -1,23 +1,21 @@
 ---
 title: Ayrıntılı Sözdizimi (F#)
-description: 'F # programlama dili ayrıntılı ve basit sözdizimi arasındaki fark hakkında bilgi edinin.'
+description: 'F # programlama dilinin ayrıntılı ve basit söz dizimi arasındaki fark hakkında bilgi edinin.'
 ms.date: 05/16/2016
-ms.openlocfilehash: b0bed66b4a76c5ab11e6c9e7aaf695f864e74ca0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b4f2354738da4692cb444e5e7dd9531d80d26664
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563790"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44063124"
 ---
 # <a name="verbose-syntax"></a>Ayrıntılı Sözdizimi
 
-F # dilinde birçok yapıları için kullanılabilen iki tür sözdizimi vardır: *ayrıntılı sözdizimi* ve *basit sözdizimi*. Ayrıntılı sözdizimi gibi yaygın olarak kullanılmaz, ancak girintileme için daha az hassas olma avantajına sahiptir. Basit sözdizimi daha kısadır ve girinti başlangıcını ve bitişini yapıları sinyal kullanmasını yerine ek anahtar sözcükler gibi `begin`, `end`, `in`ve benzeri. Varsayılan sözdizimi basit sözdizimi şeklindedir. Bu konuda, basit sözdizimi etkinleştirilmediğinde F # yapılarını sözdizimi açıklanmaktadır. Basit sözdizimi bile etkinleştirirseniz, ayrıntılı sözdizimi için bazı yapılar hala kullanabilmeniz için ayrıntılı sözdizimi her zaman etkindir. Kullanarak basit sözdizimi devre dışı bırakabilirsiniz `#light "off"` yönergesi.
-
+F # Dili içinde birçok yapıları için kullanılabilir iki tür sözdizimi vardır: *ayrıntılı sözdizimi* ve *basit söz dizimi*. Ayrıntılı sözdizimi gibi yaygın olarak kullanılmaz, ancak için girinti daha az duyarlı olan, avantajına sahiptir. Basit sözdizimi daha kısadır ve girinti başlangıcını ve bitişini yapıları göstermek için kullandığı yerine ek anahtar sözcükler gibi `begin`, `end`, `in`ve benzeri. Basit sözdizimi varsayılan sözdizimidir. Basit sözdizimi etkinleştirilmediğinde Bu konu, F # yapılarını sözdizimi açıklar. Basit sözdizimi etkinleştirseniz bile bazı yapıları için ayrıntılı sözdizimi hala kullanabilmeniz için ayrıntılı sözdizimi her zaman etkindir. Kullanarak basit söz dizimi devre dışı bırakabilirsiniz `#light "off"` yönergesi.
 
 ## <a name="table-of-constructs"></a>Yapıları tablosu
-Aşağıdaki tabloda, bağlamlarda F # dil yapıları için basit ve ayrıntılı sözdizimi gösterilmektedir iki biçim arasında bir fark olduğu. Bu tabloda, açı köşeli ayraçlar (&lt;&gt;) kullanıcı tarafından sağlanan söz dizimi öğeleri alın. Bu yapıları içinde kullanılan sözdizimi hakkında daha ayrıntılı bilgi için her dil yapısı belgelerine bakın.
 
-
+Aşağıdaki tabloda, F # dil yapılarının basit ve ayrıntılı sözdizimi bağlamlarda gösterilmektedir. iki biçim arasında bir fark olduğunda. Bu tabloda, açı köşeli ayraçlar (&lt;&gt;) kullanıcı tarafından sağlanan söz dizimi öğeleri alın. Her dil yapısı içinde bu yapıları kullanılan söz dizimi hakkında daha ayrıntılı bilgi için belgelere bakın.
 
 <table>
 <tr>
@@ -164,7 +162,7 @@ in
 
 </td>
 </tr>
-<tr><td>Kayıt
+<tr><td>Kaydı
 </td><td>
 
 ```
@@ -304,7 +302,7 @@ interface <interface-name>
 
 </td>
 </tr>
-<tr><td>türü uzantısı</td><td>
+<tr><td>tür uzantısı</td><td>
 
 ```
 type <type-name>
@@ -343,11 +341,8 @@ module <module-name> =
 </tr>
 </table>
 
+## <a name="see-also"></a>Ayrıca bkz.
 
-
-## <a name="see-also"></a>Ayrıca Bkz.
-[F# Dili Başvurusu](index.md)
-
-[Derleyici Yönergeleri](compiler-directives.md)
-
-[Kod Biçimlendirme Yönergeleri](code-formatting-guidelines.md)
+- [F# Dili Başvurusu](index.md)
+- [Derleyici Yönergeleri](compiler-directives.md)
+- [Kod Biçimlendirme Yönergeleri](code-formatting-guidelines.md)

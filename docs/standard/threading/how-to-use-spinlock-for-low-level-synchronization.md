@@ -10,27 +10,28 @@ helpviewer_keywords:
 ms.assetid: a9ed3e4e-4f29-4207-b730-ed0a51ecbc19
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7795b25ca8e9337a53fc67ebc6f56130237d0764
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 216480e893f6dbebbb204cbf2bfebae8dc139ec4
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582762"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44047357"
 ---
 # <a name="how-to-use-spinlock-for-low-level-synchronization"></a>Nasıl yapılır: Düşük Düzeyli Eşitleme için SpinLock Kullanma
-Aşağıdaki örnekte nasıl kullanılacağını gösteren bir <xref:System.Threading.SpinLock>.  
+Aşağıdaki örnek nasıl kullanılacağını gösterir. bir <xref:System.Threading.SpinLock>.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte, en az miktarda iyi bir aday kolaylaştırır için iş kritik bölüm gerçekleştiren bir <xref:System.Threading.SpinLock>. İş artırılması küçük bir miktar performansını artırır <xref:System.Threading.SpinLock> standart kilit karşılaştırılan. Ancak bir SpinLock standart kilit daha pahalı hale noktası yoktur. Hangi tür kilit programınızdaki daha iyi performans sağlar görmek için profil oluşturma araçları işlevindeki profil eşzamanlılık kullanabilirsiniz. Daha fazla bilgi için bkz: [eşzamanlılık görselleştiricisi](/visualstudio/profiling/concurrency-visualizer).  
+ Bu örnekte, kritik bölüm için iyi bir aday hale getiren iş en az miktarda gerçekleştiren bir <xref:System.Threading.SpinLock>. Artan iş küçük bir miktar performansını artırır <xref:System.Threading.SpinLock> standart kilit karşılaştırılan. Bununla birlikte, başlangıçtan bir SpinLock standart bir kilit daha pahalı olur bir noktası yoktur. Kilit türü programınızdaki daha iyi performans sağlar görmek için profil oluşturma profil oluşturma araçlarındaki işlevselliği eşzamanlılık kullanabilirsiniz. Daha fazla bilgi için [eşzamanlılık görselleştiricisi](/visualstudio/profiling/concurrency-visualizer).  
   
  [!code-csharp[CDS_SpinLock#02](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_spinlock/cs/spinlockdemo.cs#02)]
  [!code-vb[CDS_SpinLock#02](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_spinlock/vb/spinlock_vb.vb#02)]  
   
- <xref:System.Threading.SpinLock> Paylaşılan bir kaynak üzerinde bir kilit için tutulması gonna yararlı olabilir çok uzun. Böyle durumlarda, çok çekirdekli bilgisayarlarda bu kilidi serbest kadar birkaç döngüsü boyunca dönmeye engellenmiş iş parçacığı için etkili olabilir. Dönen tarafından iş parçacığı, hangi CPU yoğunluklu bir işlemdir engellenmiş duruma değil. <xref:System.Threading.SpinLock> mantıksal işlemci veya Hyper-Threading sistemleriyle öncelik ters çevirmeyi engellenmiştir belirli koşullar altında dönen durdurur.  
+ <xref:System.Threading.SpinLock> Paylaşılan kaynakta kilit yönelik zaman yararlı olabileceği çok uzun. Bu gibi durumlarda, çok çekirdekli bilgisayarlarda, kilit yayımlanana kadar birkaç döngülerini dönmeye engellenmiş iş parçacığı için verimli olabilir. Dönen tarafından iş parçacığı, hangi CPU yoğunluklu bir işlemdir engellenmediğinden haline gelir. <xref:System.Threading.SpinLock> mantıksal işlemci veya Hyper-Threading sistemleriyle öncelik ters çevirmeyi engellenmiştir belirli koşullar altında dönen durdurur.  
   
- Bu örnekte <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType> kullanıcı eşitleme için çok iş parçacıklı erişmesi sınıfı. .NET Framework sürüm 4 hedef uygulamalarda, başka bir seçenek kullanmaktır <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType>, kullanıcı kilitleri gerektirmez.  
+ Bu örnekte <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType> sınıfını kullanıcı eşitleme için çok iş parçacıklı erişimi gerektirir. .NET Framework sürüm 4'ü hedefleyen uygulamalar, başka bir seçenek kullanmaktır <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType>, kullanıcı kilitleri gerektirmez.  
   
- Kullanımına dikkat edin `false` (`False` Visual Basic'te) çağrısında <xref:System.Threading.SpinLock.Exit%2A>. Bu, en iyi performans sağlar. Belirtin `true` (`True`) bellek sınırı kullanmak için IA64 mimarileri üzerinde hangi boşaltır kilidi çıkmak başka bir iş parçacığı için kullanılabilir olduğundan emin olmak için yazma arabelleği.  
+ Kullanımına dikkat edin `false` (`False` Visual Basic'te) çağrısında <xref:System.Threading.SpinLock.Exit%2A>. Bu, en iyi performansı sağlar. Belirtin `true` (`True`) IA64 mimariler bellek sınırı kullanmak için hangi aktarır kilit çıkmak diğer iş parçacıkları için kullanılabilir olmasını sağlamak için yazma arabelleği.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [İş Parçacığı Nesneleri ve Özellikleri](../../../docs/standard/threading/threading-objects-and-features.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [İş Parçacığı Nesneleri ve Özellikleri](../../../docs/standard/threading/threading-objects-and-features.md)

@@ -2,25 +2,25 @@
 title: Parametreler ve Bağımsız Değişkenler (F#)
 description: 'Parametreleri tanımlama ve bağımsız değişkenleri işlevleri, yöntemlere ve özelliklere geçirme için F # dil desteği hakkında bilgi edinin.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 9744339110314e4e6b3c3cf8d49b1c988bc25e3c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
-ms.translationtype: MT
+ms.openlocfilehash: a3418ec814e0419d08758cf035ecc0f402b5db1a
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43471987"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44062643"
 ---
 # <a name="parameters-and-arguments"></a>Parametreler ve Bağımsız Değişkenler
 
 Bu konuda tanımlayan parametreler ve bağımsız değişkenleri işlevleri, yöntemlere ve özelliklere geçirme için dil desteği açıklanmaktadır. Başvuruya göre nasıl ve tanımlayın ve değişken sayıda bağımsız değişken alabilir yöntemleri kullanma hakkında bilgiler içerir.
 
-
 ## <a name="parameters-and-arguments"></a>Parametreler ve Bağımsız Değişkenler
+
 Terim *parametre* sağlanacak beklenen değerleri adlarını tanımlamak için kullanılır. Terim *bağımsız değişken* her parametre için sağlanan değerler için kullanılır.
 
 Parametreleri, tanımlama grubu ya da curried form veya ikisinin birleşimi belirtilebilir. Bir açık parametre adını kullanarak, bağımsız değişkenler geçirebilirsiniz. Yöntemlerin parametreleri isteğe bağlı olarak belirtilebilir ve bir varsayılan değer verilir.
 
-
 ## <a name="parameter-patterns"></a>Parametre desenleri
+
 İşlevlere ve metotlara için sağlanan parametreler, genel olarak, boşluklarla ayırarak desenleri alır. İlkesi, herhangi bir kalıpla açıklanan, yani [eşleşme ifadeleri](match-expressions.md) bir işlevi veya üye için parametre listesinde kullanılabilir.
 
 Yöntemler, genellikle bağımsız değişkenleri geçirme demet biçimini kullanın. Kayıt formu .NET yöntemleri bağımsız değişkenler geçirilir şekilde eşleştiği için bu diğer .NET dilleri perspektifinden NET bir sonuç elde edilir.
@@ -90,6 +90,7 @@ Bazen, eksik eşleşmeler içeren desenleri kullanışlıdır, programınızdaki
 Tam eşleşme sahip desenleri kullanımını en iyi hızlı prototip oluşturma ve geçici diğer kullanımlar için ayrılmıştır. Derleyici bu tür kod için bir uyarı verir. Desenler, tüm olası girişleri genel durumunun kapsamamaktadır ve bileşen API'leri için uygun değildir.
 
 ## <a name="named-arguments"></a>Adlandırılmış bağımsız değişkenler
+
 Bağımsız değişkenler yöntemleri için bir virgülle ayrılmış bağımsız değişken listesindeki konumu ile belirtilebilir veya bunlar bir yönteme açıkça ardından bir eşittir işareti ve geçirilmesi değer adı sağlayarak geçirilebilir. Belirtilen ad sağlayarak, bildirimde kullanılan ile farklı bir sırada görünebilir.
 
 Adlandırılmış bağımsız değişkenler kod daha okunabilir ve uyarlanabilir daha belirli türde bir yöntem parametreleri, yeniden sıralama API'sindeki değişiklikler yapabilirsiniz.
@@ -107,6 +108,7 @@ Bir sınıf oluşturucusuna bir çağrı adlandırılmış bağımsız değişke
 Daha fazla bilgi için [oluşturucular (F #)](https://msdn.microsoft.com/library/2cd0ed07-d214-4125-8317-4f288af99f05).
 
 ## <a name="optional-parameters"></a>İsteğe Bağlı Parametreler
+
 İsteğe bağlı parametresi bir yöntem için parametre adının önüne bir soru işareti kullanarak belirtebilirsiniz. İsteğe bağlı parametreler, F # seçeneği türü olarak yorumlanır, seçenek türleri, kullanarak sorgulanır, normal şekilde sorgulayabilmesi bir `match` ifadesiyle `Some` ve `None`. İsteğe bağlı parametreler kullanılarak oluşturulan işlevleri, üye üzerinde yalnızca verilen `let` bağlar.
 
 Bir işlev de kullanabilirsiniz `defaultArg`, isteğe bağlı varsayılan değerini ayarlar. `defaultArg` İşlevi isteğe bağlı parametre olarak ilk bağımsız değişken ve varsayılan değer olarak saniye alır.
@@ -124,6 +126,7 @@ Baud Rate: 300 Duplex: Half Parity: true
 ```
 
 ## <a name="passing-by-reference"></a>Başvuruya göre geçirme
+
 Bir F # değere Başvuruya göre geçirme içerir `byref` anahtar sözcüğü parametresi başvuruya göre geçirilen değere gerçekten bir işaretçi olduğunu belirtir. Herhangi bir değer geçirildi yöntemi ile bir `byref` bağımsız değişken olarak `mutable`.
 
 Parametre bir işaretçi ve değer değişebilir olduğundan, işlevi yürütme sonrasında değeri herhangi bir değişiklik korunur.
@@ -139,6 +142,7 @@ Tüm depolamak için bir dönüş değeri olarak bir tanımlama grubu kullanabil
 [!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-1/snippet3810.fs)]
 
 ## <a name="parameter-arrays"></a>Parametre Dizileri
+
 Bazen tercihe bağlı sayıda heterojen türünde parametre alan bir işlev tanımlamak gereklidir. Kullanılabilen tüm türleri için hesap için tüm olası aşırı yüklenmiş yöntemler oluşturmak pratik olmaz. .NET uygulamaları için parametre dizisi özelliği aracılığıyla bu tür yöntemler için destek sağlar. Bir parametre dizisi içinde imzasını alan bir yöntem rastgele sayıda parametre ile sağlanabilir. Parametreler, bir dizi içine yerleştirilir. Dizi öğelerinin türü, işleve geçirilen parametre türleri belirler. Parametre dizisi ile tanımlarsanız `System.Object` öğe türü istemci kodu her türden değer geçirebilirsiniz.
 
 F #'ta parametre dizileri, yalnızca yöntemlerdeki tanımlanabilir. Tek başına işlevleri veya modül içinde tanımlanan işlevleri kullanılamaz.
@@ -161,5 +165,6 @@ a 1 10 Hello world 1 True
 true
 ```
 
-## <a name="see-also"></a>Ayrıca Bkz.
-[Üyeler](members/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Üyeler](members/index.md)
