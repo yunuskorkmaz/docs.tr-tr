@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data [Visual Basic]
 - Visual Basic, data access
 ms.assetid: 3086ab38-3be5-4b22-9385-7d0e16b04f6a
-ms.openlocfilehash: 2e6cfc3d6d8752b12fa20a357dedfeb1b3346dce
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 220d662576a5f23194dee7e23317bdbb0027546d
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39198869"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44098543"
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a>Visual Basic uygulamalarındaki verilere erişme
 Visual Basic, verilere erişen uygulamalar geliştirmede yardımcı olmak için çeşitli yeni özellikler içerir. Windows uygulamaları için veri sınır formları, öğeleri sürükleyerek oluşturulur [veri kaynakları penceresi](/visualstudio/data-tools/add-new-data-sources) forma. Öğeleri sürükleyerek verilere denetimler bağlama **veri kaynakları penceresi** varolan denetimler üzerine.  
@@ -28,7 +28,7 @@ Visual Basic, verilere erişen uygulamalar geliştirmede yardımcı olmak için 
  [LINQ to SQL](../../framework/data/adonet/sql/linq/index.md)  
  [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] hakkında bilgiler sağlar. Programlama örnekleri içerir.  
   
- [LINQ to SQL araçlarını Visual Studio'da](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
+ [Visual Studio'daki LINQ to SQL Araçları](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
  Nasıl oluşturulacağı hakkındaki konulara bağlantılar sağlar. bir [LINQ to SQL](../../framework/data/adonet/sql/linq/index.md) uygulamalarda nesne modeli.  
   
  [N katmanlı uygulamalarda veri kümeleriyle çalışma](/visualstudio/data-tools/work-with-datasets-in-n-tier-applications)  
@@ -55,5 +55,4 @@ Visual Basic, verilere erişen uygulamalar geliştirmede yardımcı olmak için 
  [ADO.NET](../../framework/data/adonet/index.md)  
  .NET Framework programcısına veri erişim hizmetlerini gösteren ADO.NET sınıflarını açıklar.
 
- [Office Çözümlerindeki Veriler](https://msdn.microsoft.com/library/xx069ybh)  
- Office çözümlerinde, şema yönelimli programlama, veriyi önbelleğe alma ve sunucu tarafı veri erişimi hakkında bilgiler de dahil olmak üzere, verilerin nasıl çalıştığını açıklayan sayfalara bağlantılar içerir.
+ [Office çözümlerindeki veriler](/visualstudio/vsto/data-in-office-solutions) şema tabanlı programlama, veriyi önbelleğe alma ve sunucu tarafı veri erişimi hakkında bilgiler dahil olmak üzere, Office çözümlerinde verilerin nasıl çalıştığını açıklayan sayfalara bağlantılar içerir.

@@ -10,11 +10,11 @@ ms.assetid: 7f1bc7f4-401b-459f-9078-f099cc711fde
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7e7892289248c9651b529bcc68d7228b8babb28a
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43872250"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44083825"
 ---
 # <a name="post-schema-compilation-infoset"></a>Şema derleme sonrası bilgi kümesi
 [World Wide Web Consortium (W3C) XML Şeması öneri](https://www.w3.org/XML/Schema) öncesi şema doğrulama ve şema derleme için sunulmalıdır bilgisi kümesi (bilgi kümesi) ele alınmaktadır. XML şema nesne modeli (SOM) önce ve sonra bu Etkilenme görünümleri <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> yöntemi <xref:System.Xml.Schema.XmlSchemaSet> çağrılır.  

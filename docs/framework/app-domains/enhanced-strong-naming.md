@@ -7,99 +7,127 @@ helpviewer_keywords:
 ms.assetid: 6cf17a82-62a1-4f6d-8d5a-d7d06dec2bb5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bf4a8df87cd507f2bfb17086e83dc8374a22fe71
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 659f9ffa8ebb10b34300167e9183f60568279513
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746897"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44082076"
 ---
 # <a name="enhanced-strong-naming"></a>Güçlü Adlandırmayı İyileştirme
-Tanımlayıcı ad imzası derlemeleri tanımlamak için bir kimlik .NET Framework'teki mekanizmasıdır. Bu, genellikle bir gönderene (imzalayan) bir alıcı (Doğrulayıcı) geçirilen verilerin bütünlüğünü doğrulamak için kullanılan bir ortak anahtar dijital imza olur. Bu imza, bir derleme için benzersiz bir kimliği olarak kullanılan ve derleme başvurularını belirsiz olmadığından sağlar. Derleme oluşturma işleminin bir parçası olarak imzalanır ve yüklendiğinde sonra doğrulandı.  
+Tanımlayıcı ad imzası derlemeleri tanımlamak için bir kimlik .NET Framework mekanizmasıdır. Buna genellikle bir oluşturucu (imzalayan) alıcıya (doğrulama) geçirilen verilerin bütünlüğünü doğrulamak için kullanılan ortak anahtar dijital imzası var. Bu imza, bir derleme için benzersiz bir kimlik kullanılır ve derlemeye yapılan başvuruların belirsiz olmamasını sağlar. Derleme oluşturma işleminin bir parçası imzalanır ve sonra yüklendiğinde doğrulanır.  
   
- Güçlü ad imzaları ile bir derlemeyi izinsiz ve derleme özgün imzalayan anahtarla yeniden imzalama amaçlı tarafların önlemeye yardımcı olur. Ancak, güçlü ad anahtarları yayımcı ilgili herhangi bir güvenilir bilgi içermeyen veya bir sertifika hiyerarşisi içerirler. Sağlam ad imzası derleme imzalanmamış kişiye'nın güvenilirliği garanti ya da bu kişi yasal bir anahtarın sahibi olduğunu gösterir; yalnızca anahtarın sahibini derleme imzalanmamış gösterir. Bu nedenle, bir tanımlayıcı ad imzası güvenen üçüncü taraf kodu için bir güvenlik Doğrulayıcı kullanarak önerilmez. Microsoft Authenticode kod kimlik doğrulaması için önerilen yoldur.  
+ Tanımlayıcı ad imzaları, kötü amaçlı taraflar bir derlemeye müdahale etmesine ve derlemeyi özgün İmzalayanın anahtarıyla yeniden imzalama engelleyin. Ancak kesin ad anahtarları yayıncı hakkında herhangi bir güvenilir bilgi içermeyen ya da bunlar bir sertifika hiyerarşisi içermez. Tanımlayıcı ad imzası derlemeyi imzalayan kişinin güvenilirliğini garanti vermez veya söz konusu kişinin anahtarın yasal sahibi olup olmadığını göstermez; yalnızca anahtar sahibinin derlemeyi imzaladığını gösterir. Bu nedenle, tanımlayıcı ad imzası, güvenen üçüncü taraf kodu için güvenlik Doğrulayıcısı olarak kullanılması önerilmez. Microsoft Authenticode, kod kimlik doğrulaması için önerilen yoldur.  
   
-## <a name="limitations-of-conventional-strong-names"></a>Geleneksel tanımlayıcı adlar sınırlamaları  
- Önceki sürümler kullanılan güçlü adlandırma teknolojisi [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] aşağıdaki eksiklikleri vardır:  
+## <a name="limitations-of-conventional-strong-names"></a>Geleneksel tanımlayıcı adlar kısıtlamaları  
+ Önceki sürümlerde kullanılan tanımlayıcı adlandırma teknolojisinin [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] aşağıdaki eksiklikleri vardır:  
   
--   Anahtarları sürekli Saldırıya uğramış olan ve geliştirilmiş teknikleri ve donanım ortak anahtarı bir özel anahtar Infer kolaylaştırmak. Saldırılara karşı koruma sağlamak için daha büyük anahtarları gereklidir. .NET framework sürümleri önce [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] (varsayılan büyüklüğü, 1024 bit) tüm boyutu anahtar ile oturum açma olanağı sağlar, ancak yeni bir anahtar ile bir derlemeyi imzalamak derleme eski kimliğini başvuru tüm ikili dosyaları keser. Bu nedenle, uyumluluğu korumak istiyorsanız, imzalama anahtarı boyutunu yükseltmek son derece zordur.  
+-   Anahtarlar sürekli saldırı altında olan ve gelişmiş teknikler ve donanım bir özel anahtarı bir ortak anahtar Infer kolaylaştırır. Saldırılara karşı korunmak için büyük anahtarlar gereklidir. .NET framework sürümlerini önce [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] herhangi boyutta anahtarla (varsayılan boyut 1024 bit olan) olanağı sağlar, ancak yeni anahtarla bir derlemeyi imzalamak, derlemenin daha eski kimliği başvuran tüm ikili dosyaları keser. Bu nedenle, uyumluluğu korumak istiyorsanız, bir imzalama anahtarı boyutunu yükseltmek son derece zordur.  
   
--   Tanımlayıcı ad imzası yalnızca SHA-1 algoritmasını destekler. SHA-1, güvenli karma uygulamalar için yetersiz olması için en son bulunmadı. Bu nedenle, daha güçlü bir algoritma (SHA-256 veya daha büyük) gereklidir. SHA-1 sorunları yalnızca FIPS uyumlu yazılım ve algoritmaları kullanmayı tercih olanlar için sunmak, FIPS uyumlu durumu kaybedersiniz mümkündür.  
+-   Tanımlayıcı ad imzası yalnızca SHA-1 algoritmasını destekler. SHA-1, güvenli karma uygulamalar için yetersiz olduğu yakın zamanda bulundu. Bu nedenle, daha güçlü bir algoritma (SHA-256 veya daha büyük) gereklidir. SHA-1 yalnızca FIPS uyumlu yazılım ve algoritmaları kullanmayı tercih edenler için sorunlara neden olabilir, FIPS uyumlu ayakta kaybedersiniz mümkündür.  
   
-## <a name="advantages-of-enhanced-strong-names"></a>Gelişmiş tanımlayıcı adlar avantajları  
- Önceden varolan tanımlayıcı adlar ile uyumluluk ve bir kimlik başka eşdeğer olduğunu talep yeteneği Gelişmiş tanımlayıcı adlar ana avantajları şunlardır:  
+## <a name="advantages-of-enhanced-strong-names"></a>Gelişmiş tanımlayıcı adların avantajları  
+ Önceden varolan tanımlayıcı adlarla uyumluluk ve tek bir kimlik diğerine eşdeğer olduğunu iddia edebilme yeteneğidir geliştirilmiş tanımlayıcı adların başlıca avantajları şunlardır:  
   
--   Önceden varolan imzalı derlemeler sahip geliştiriciler, SHA-2 algoritmaları eski kimlikleri başvuru derlemeleri uyumluluğunu korurken kimliklerini geçirebilirsiniz.  
+-   Önceden mevcut olan imzalı derlemelere sahip geliştiriciler eski kimliklere başvuran derlemeler ile uyumluluğu korurken kendi kimliklerini SHA-2 algoritmalarına geçirebilirsiniz.  
   
--   Yeni derlemeleri oluşturma ve güçlü ad imzaları önceden var olan bir kaygınız geliştiriciler daha güvenli SHA-2 algoritmaları ve her zamanki gibi derlemeler oturum kullanabilirsiniz.  
+-   Yeni derlemeler oluşturan ve tanımlayıcı ad imzaları önceden mevcut olan ilgisi olmayan geliştiriciler daha güvenli SHA-2 algoritmalarını kullanabilir ve her zaman olduğu gibi derlemelerini imzalayabilirler.  
   
-## <a name="using-enhanced-strong-names"></a>Gelişmiş güçlü adlarını kullanma  
- Güçlü ad anahtarları bir imza anahtarı ve bir kimlik anahtarı oluşur. Derleme imza anahtarı ile imzalanmış ve kimlik anahtar tarafından tanımlanır. Öncesinde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], bu iki anahtarlar aynı. İle başlayarak [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]kimlik anahtarı önceki .NET Framework sürümlerinde olduğu gibi aynı kalır, ancak imza anahtarı daha güçlü bir karma algoritması ile geliştirilmiştir. Ayrıca, imza anahtarı karşı imza oluşturmak için kimlik anahtarla imzalanmıştır.  
+## <a name="using-enhanced-strong-names"></a>Geliştirilmiş katı adları kullanma  
+ Tanımlayıcı ad anahtarı bir imza anahtarı ve bir kimlik anahtarından oluşur. Derleme imza anahtarıyla imzalanır ve kimlik anahtarı tarafından tanımlanır. Öncesinde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], bu iki tuş aynıydı. İle başlayarak [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]kimlik anahtarı önceki .NET Framework sürümlerinde olduğu gibi aynı kalır, ancak imza anahtarı daha güçlü bir karma algoritması ile geliştirilmiştir. Ayrıca, imza anahtarı kimlik anahtarı ile bir karşı imza oluşturmak için imzalanır.  
   
- <xref:System.Reflection.AssemblySignatureKeyAttribute> Özniteliği önceden var olan ortak anahtar çalışmaya devam etmek eski derleme başvurularını sağlayan derleme kimlik için kullanılacak derleme meta verilerini sağlar.  <xref:System.Reflection.AssemblySignatureKeyAttribute> Özniteliğini yeni imza anahtarı sahibi eski kimlik anahtarı sahibi olduğundan emin olmak için tamamlayıcı imza kullanır.  
+ <xref:System.Reflection.AssemblySignatureKeyAttribute> Özniteliği derleme meta verileri, eski derleme başvurularının çalışmaya devam etmeyi sağlayan derleme kimliği için önceden varolan genel anahtarı kullanmayı sağlar.  <xref:System.Reflection.AssemblySignatureKeyAttribute> Özniteliği, yeni imza anahtarı sahibinin eski kimlik anahtarının sahibi olduğundan emin olmak için olması için karşı imzayı kullanır.  
   
-### <a name="signing-with-sha-2-without-key-migration"></a>SHA-2, anahtar geçişi olmadan ile imzalama  
- Tanımlayıcı ad imzası geçirmeden derlemeyi imzalamak için bir komut istemi penceresinden aşağıdaki komutları çalıştırın:  
+### <a name="signing-with-sha-2-without-key-migration"></a>SHA-2, anahtar geçişi olmadan imzalama  
+ Bir derlemeyi bir güçlü ad geçirmeden imzalamak için bir komut istemi penceresinden aşağıdaki komutları çalıştırın:  
   
-1.  Yeni kimlik anahtarı (gerekirse) oluşturur.  
+1.  Yeni bir kimlik anahtarı (gerekiyorsa) üretin.  
   
     ```  
     sn -k IdentityKey.snk  
     ```  
   
-2.  Kimlik ortak anahtarı ayıklayın ve SHA-2 algoritmasını bu anahtarla imzalarken kullanılacağını belirtin.  
+2.  Kimlik genel anahtarını ayıklayın ve bu anahtar ile imzalarken bir SHA-2 algoritmasının kullanılacağını belirtin.  
   
     ```  
     sn -p IdentityKey.snk IdentityPubKey.snk sha256  
     ```  
   
-3.  Gecikme-oturum kimliğini ortak anahtar dosyası derleme.  
+3.  Derlemeyi kimlik genel anahtar dosyasıyla Gecikmeli imzalayın.  
   
     ```  
     csc MyAssembly.cs /keyfile:IdentityPubKey.snk /delaySign+  
     ```  
   
-4.  Derleme tam kimlik anahtar çifti ile yeniden oturum açın.  
+4.  Derlemeyi tam kimlik anahtar çifti ile yeniden imzalayın.  
   
     ```  
     sn -Ra MyAssembly.exe IdentityKey.snk  
     ```  
   
-### <a name="signing-with-sha-2-with-key-migration"></a>SHA-2, anahtar geçişi ile birlikte imzalama  
- Geçirilen sağlam ad imzası ile bir derlemeyi imzalamak için bir komut istemi penceresinden aşağıdaki komutları çalıştırın.  
+### <a name="signing-with-sha-2-with-key-migration"></a>SHA-2 ile anahtar geçişi ile imzalama  
+ Bir derlemeyi geçirilen kesin ad imzalı imzalamak için bir komut istemi penceresinden aşağıdaki komutları çalıştırın.  
   
-1.  Bir kimlik ve imza anahtar çifti (gerekirse) oluşturur.  
+1.  Bir kimlik ve imza anahtar çifti (gerekiyorsa) üretin.  
   
     ```  
     sn -k IdentityKey.snk  
     sn -k SignatureKey.snk  
     ```  
   
-2.  İmza ortak anahtarı ayıklayın ve SHA-2 algoritmasını bu anahtarla imzalarken kullanılacağını belirtin.  
+2.  İmza genel anahtarını ayıklayın ve bu anahtar ile imzalarken bir SHA-2 algoritmasının kullanılacağını belirtin.  
   
     ```  
     sn -p SignatureKey.snk SignaturePubKey.snk sha256  
     ```  
   
-3.  Tamamlayıcı imza oluşturur karma algoritmasını belirler kimlik ortak anahtarı ayıklayın.  
+3.  Bir karşı imza üreten karma algoritmayı belirleyen kimlik genel anahtarını ayıklayın.  
   
     ```  
     sn -p IdentityKey.snk IdentityPubKey.snk  
     ```  
   
-4.  Parametrelerini oluşturmak bir <xref:System.Reflection.AssemblySignatureKeyAttribute> özniteliği ve derlemeye öznitelik ekleyebilirsiniz.  
+4.  İçin parametreler üretin bir <xref:System.Reflection.AssemblySignatureKeyAttribute> özniteliği ve özniteliği derlemeye ekleyin.  
   
     ```  
-    sn -ac IdentityPubKey.snk IdentityKey.snk SignaturePubKey.snk  
+    sn -a IdentityPubKey.snk IdentityKey.snk SignaturePubKey.snk  
     ```  
+
+    Bu, aşağıdakine benzer bir çıktı üretir.
+
+    ```
+    Information for key migration attribute.
+    (System.Reflection.AssemblySignatureKeyAttribute):
+    publicKey=
+    002400000c80000094000000060200000024000052534131000400000100010005a3a81ac0a519
+    d96244a9c589fc147c7d403e40ccf184fc290bdd06c7339389a76b738e255a2bce1d56c3e7e936
+    e4fc87d45adc82ca94c716b50a65d39d373eea033919a613e4341c66863cb2dc622bcb541762b4
+    3893434d219d1c43f07e9c83fada2aed400b9f6e44ff05e3ecde6c2827830b8f43f7ac8e3270a3
+    4d153cdd
+
+    counterSignature=
+    e3cf7c211678c4d1a7b8fb20276c894ab74c29f0b5a34de4d61e63d4a997222f78cdcbfe4c91eb
+    e1ddf9f3505a32edcb2a76f34df0450c4f61e376b70fa3cdeb7374b1b8e2078b121e2ee6e8c6a8
+    ed661cc35621b4af53ac29c9e41738f199a81240e8fd478c887d1a30729d34e954a97cddce66e3
+    ae5fec2c682e57b7442738
+    ```
+
+    Bu çıkış ardından dönüştürülmüş bir AssemblySignatureKeyAttribute.
+
+    ```
+    [assembly:System.Reflection.AssemblySignatureKeyAttribute(
+    "002400000c80000094000000060200000024000052534131000400000100010005a3a81ac0a519d96244a9c589fc147c7d403e40ccf184fc290bdd06c7339389a76b738e255a2bce1d56c3e7e936e4fc87d45adc82ca94c716b50a65d39d373eea033919a613e4341c66863cb2dc622bcb541762b43893434d219d1c43f07e9c83fada2aed400b9f6e44ff05e3ecde6c2827830b8f43f7ac8e3270a34d153cdd",
+    "e3cf7c211678c4d1a7b8fb20276c894ab74c29f0b5a34de4d61e63d4a997222f78cdcbfe4c91ebe1ddf9f3505a32edcb2a76f34df0450c4f61e376b70fa3cdeb7374b1b8e2078b121e2ee6e8c6a8ed661cc35621b4af53ac29c9e41738f199a81240e8fd478c887d1a30729d34e954a97cddce66e3ae5fec2c682e57b7442738"
+    )]
+    ```
   
-5.  Gecikme-oturum kimliğini ortak anahtarla derleme.  
+5.  Derlemeyi kimlik genel anahtarıyla Gecikmeli imzalayın.  
   
     ```  
     csc MyAssembly.cs /keyfile:IdentityPubKey.snk /delaySign+  
     ```  
   
-6.  Derleme imza anahtar çifti ile tam olarak oturum açın.  
+6.  Derlemeyi imza kimlik anahtar çifti ile tam olarak imzalayın.  
   
     ```  
     sn -Ra MyAssembly.exe SignatureKey.snk  

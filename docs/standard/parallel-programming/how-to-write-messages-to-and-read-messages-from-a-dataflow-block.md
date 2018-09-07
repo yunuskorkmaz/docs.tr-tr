@@ -12,11 +12,11 @@ ms.assetid: 1a9bf078-aa82-46eb-b95a-f87237f028c5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 47a61a1d01984eeefb2f1f09774374dc29a774d3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44039231"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087815"
 ---
 # <a name="how-to-write-messages-to-and-read-messages-from-a-dataflow-block"></a>Nasıl yapılır: Veri Akışı Bloğuna İletiler Yazma ve Veri Akışı Bloğundan İletiler Okuma
 Bu belge, TPL veri akışı kitaplığı nasıl yazılacağını ve veri akışı bloğundan iletiler okuma için kullanmayı açıklar. TPL veri akışı kitaplığı, ileti ve veri akışı bloğu okuma iletileri yazmak için zaman uyumlu ve zaman uyumsuz yöntemler sağlar. Bu belgeyi kullanan <xref:System.Threading.Tasks.Dataflow.BufferBlock%601?displayProperty=nameWithType> sınıfı. <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> Sınıfı iletileri arabelleğe alır ve her iki ileti kaynağı olarak ve bir ileti hedefi olarak davranır.  

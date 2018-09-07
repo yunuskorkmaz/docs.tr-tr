@@ -8,52 +8,53 @@ helpviewer_keywords:
 ms.assetid: c834760f-ddd4-417f-abb7-a059679d5b8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 030b62688ba8985a2659769fe20b6ae527471df5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03b77074323346e1a26fa07dc1ec873152da356b
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579398"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44079701"
 ---
 # <a name="observer-design-pattern-best-practices"></a>Gözlemci Tasarım Deseni En İyi Yöntemleri
-.NET Framework'teki gözlemci tasarım deseni arabirimleri kümesi uygulanır. <xref:System.IObservable%601?displayProperty=nameWithType> Arabirimi temsil eder, aynı zamanda sağlamaktan sorumludur veri sağlayıcısı bir <xref:System.IDisposable> bildirim aboneliği gözlemcilerin sağlayan uygulama. <xref:System.IObserver%601?displayProperty=nameWithType> Arabirimi gözlemci temsil eder. Bu konu, geliştiriciler bu arabirimleri kullanarak gözlemci tasarım deseni uygularken izlemeniz gereken en iyi uygulamaları açıklar.  
+Gözlemci tasarım deseni, .NET Framework'teki arabirimleri kümesi uygulanır. <xref:System.IObservable%601?displayProperty=nameWithType> Arabirimi temsil eder, aynı zamanda sağlamaktan sorumlu olan veri sağlayıcısı bir <xref:System.IDisposable> bildirim aboneliği gözlemciler sağlayan uygulama. <xref:System.IObserver%601?displayProperty=nameWithType> Arabiriminin gözlemcisi temsil eder. Bu konu, geliştiricilerin bu arabirimleri kullanarak gözlemci tasarım deseni uygularken izlemelidir en iyi uygulamaları açıklar.  
   
 ## <a name="threading"></a>İş Parçacığı Oluşturma  
- Genellikle, bir sağlayıcı uygulayan <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType> belirli bir gözlemci bazı koleksiyon nesnesi ve onu tarafından temsil edilen bir abone listesine ekleyerek yöntemi uygulayan <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> belirli bir gözlemci abone listesinden kaldırarak yöntemi. Bir gözlemci bu yöntemlerin herhangi bir zamanda çağırabilirsiniz. Ayrıca, sağlayıcı/gözlemci sözleşme belirtmediği çünkü sorumlu sonra aboneliği için <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType> geri çağırma yöntemi, sağlayıcı ve gözlemci her ikisi de deneyebilir aynı üye listesinden kaldırmak. Bu olasılığı nedeniyle hem <xref:System.IObservable%601.Subscribe%2A> ve <xref:System.IDisposable.Dispose%2A> yöntemleri iş parçacığı açısından güvenli olması gerekir. Bu genellikle, kullanılmasına bir [eşzamanlı koleksiyonu](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md) ya da bir kilit. İş parçacığı güvenli olmayan uygulamaları, onlara açıkça belgelemeniz gerekir.  
+ Genellikle, bir sağlayıcıyı uygular <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType> belirli bir gözlemci bazı koleksiyon nesnesi ve tarafından temsil edilen bir abone listesine ekleyerek yöntemini uygulayan <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> belirli bir gözlemci abone listeden kaldırma yöntemi. Gözlemci herhangi bir zamanda bu yöntemleri çağırabilir. Ayrıca, çünkü sağlayıcı/gözlemci sözleşme belirttiğinde sorumlu sonra aboneliği için <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType> geri çağırma yöntemi, sağlayıcı ve gözlemci hem de çalışın aynı üye listesinden kaldırır. Bu olasılığı nedeniyle hem <xref:System.IObservable%601.Subscribe%2A> ve <xref:System.IDisposable.Dispose%2A> yöntemleri, iş parçacığı açısından güvenli olmalıdır. Bu genellikle, kullanılmasına bir [eşzamanlı koleksiyon](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md) ya da bir kilit. İş parçacığı güvenli olmayan uygulamaları, onlara açıkça belgelemeniz gerekir.  
   
- Ek garanti sağlayıcı/gözlemci sözleşme üstünde katmanda belirtilmesi gerekir. Bunlar gözlemci sözleşme hakkında kullanıcı Karışıklığı önlemek için ek gereksinimleri olduğunda Implementers açıkça duyurmak.  
+ Ek konusunda garanti sağlayıcısı/gözlemci sözleşme üzerinde bir katman belirtilmesi gerekir. Bunlar gözlemci sözleşmeyle ilgili kullanıcı Karışıklığı önlemek için ek gereksinimler dayatır olduğunda uygulayıcılar açıkça duyurmak.  
   
 ## <a name="handling-exceptions"></a>Özel Durumları İşleme  
- Veri sağlayıcı ve bir gözlemci arasında gevşek bağlantı nedeniyle gözlemci tasarım deseni durumlar bilgilendirme olacak şekilde tasarlanmıştır. Bu sağlayıcıları ve gözlemcilerin gözlemci tasarım deseni özel durumları nasıl işleneceğini etkiler.  
+ Arasındaki bu sıkı bağ nedeniyle bir veri sağlayıcısı ve gözlemci, gözlemci tasarım deseni durumlar bilgilendirici olacak şekilde tasarlanmıştır. Bu sağlayıcıları ve gözlemciler gözlemci tasarım deseni özel durumların nasıl işleneceğini etkiler.  
   
 ### <a name="the-provider----calling-the-onerror-method"></a>Sağlayıcısı--OnError yöntemi çağırma  
- <xref:System.IObserver%601.OnError%2A> Yöntemi amaçlanmıştır gözlemcilerin, bir bilgilendirme iletisi olarak çok gibi <xref:System.IObserver%601.OnNext%2A?displayProperty=nameWithType> yöntemi. Ancak, <xref:System.IObserver%601.OnNext%2A> yöntemi geçerli ya da güncelleştirilmiş verilerle bir gözlemci sağlamak için tasarlanmıştır ancak <xref:System.IObserver%601.OnError%2A> yöntemi sağlayıcı geçerli veri sağlayamaz olduğunu göstermek için tasarlanmıştır.  
+ <xref:System.IObserver%601.OnError%2A> Yöntemi amaçlanmıştır gözlemciler, bir bilgilendirme iletisi olarak çok gibi <xref:System.IObserver%601.OnNext%2A?displayProperty=nameWithType> yöntemi. Ancak, <xref:System.IObserver%601.OnNext%2A> yöntemi geçerli ya da güncelleştirilen verilerle bir gözlemci sağlamak için tasarlanmıştır ancak <xref:System.IObserver%601.OnError%2A> yöntemi sağlayıcısı geçerli verileri sağlayamadı olduğunu göstermek için tasarlanmıştır.  
   
  Sağlayıcı özel durumları işleme olduğunda bu en iyi uygulamaları izlemelisiniz ve çağırma <xref:System.IObserver%601.OnError%2A> yöntemi:  
   
--   Belirli gereksinimlere varsa, sağlayıcı kendi özel durumlarını işlemelidir.  
+-   Belirli gereksinimlere sahipse, sağlayıcı kendi özel durumlarını işlemelidir.  
   
--   Sağlayıcı beklediğiniz veya gözlemcilerin belirli herhangi bir yolla özel durumları işleme gerektiren gerekir.  
+-   Sağlayıcı beklemez veya gözlemciler herhangi belirli bir şekilde özel durumları işlemek gerektiren.  
   
--   Sağlayıcı çağırmalıdır <xref:System.IObserver%601.OnError%2A> güncelleştirmeleri sağlama yeteneğini etkilediğinde bir özel durum işleme yöntemi. Bu tür özel durumlar hakkında bilgi gözlemci geçirilebilir. Diğer durumlarda, bir özel durum gözlemcilerin bildirmek için gerek yoktur.  
+-   Sağlayıcı çağırmalıdır <xref:System.IObserver%601.OnError%2A> güncelleştirmeleri sağlamak üzere güncelleyebileceği etkilediğinde bir özel durum işleme yöntemi. Bu tür özel durumların bilgi gözlemci geçirilebilir. Diğer durumlarda, bir özel durumun gözlemciler bildirmek için gerek yoktur.  
   
- Bir kez sağlayıcısı çağrıları <xref:System.IObserver%601.OnError%2A> veya <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType> yöntemi, başka hiçbir bildirim olmalıdır ve sağlayıcı kendi gözlemcilerin aboneliğinizi iptal edebilirsiniz. Ancak, gözlemcilerin de kendilerini önce ve sonra aldıkları her ikisi de dahil, herhangi bir zamanda sona erdirebilirsiniz bir <xref:System.IObserver%601.OnError%2A> veya <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType> bildirim. Gözlemci tasarım deseni sağlayıcı veya gözlemci aboneliği için sorumlu olduğunu dikte etmez; Bu nedenle olasılığı yok her ikisi de aboneliğinizi iptal etmek deneyebilir. Genellikle, gözlemcilerin aboneliğinizi kaldırdığınızda, aboneler koleksiyondan kaldırılır. Bir tek iş parçacıklı uygulamada <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> uygulama nesne başvurusu geçerli olduğunu ve nesne Kaldırmaya çalışmadan önce aboneleri koleksiyonun üyesi olduğundan emin olun. Birden çok iş parçacıklı bir uygulamada bir iş parçacığı koleksiyonunun nesnesi gibi bir <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> nesne, kullanılmalıdır.  
+ Bir kez sağlayıcısı çağrıları <xref:System.IObserver%601.OnError%2A> veya <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType> yöntemi, daha fazla bildirim olmalıdır ve sağlayıcı kendi gözlemciler abonelikten çıkabilirsiniz. Ancak gözlemciler ayrıca kendilerini önce ve sonra aldıkları dahil olmak üzere istediğiniz zaman abonelikten çıkabilirsiniz bir <xref:System.IObserver%601.OnError%2A> veya <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType> bildirim. Gözlemci tasarım deseni sağlayıcı veya gözlemci aboneliği için sorumlu olduğunu dikte etmez; Bu nedenle, bir olasılık yoktur hem iptal etme deneyebilir. Genellikle, gözlemciler aboneliğinizi kaldırdığınızda, abonelerin koleksiyondan kaldırılır. Tek iş parçacıklı bir uygulamada <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> uygulama bir nesne başvurusu geçerli olduğunu ve nesne Kaldırmaya çalışmadan önce aboneleri koleksiyonunun bir üyesi olduğundan emin olun. Çok iş parçacıklı bir uygulamada, bir iş parçacığı koleksiyon nesnesi gibi bir <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> nesne, kullanılmalıdır.  
   
-### <a name="the-observer----implementing-the-onerror-method"></a>--Gözlemci OnError yöntemi uygulama  
- Bir gözlemci bir sağlayıcıdan bir hata bildirimi aldığında, gözlemci özel bilgi olarak değerlendirmeniz gerekir ve herhangi bir işlem yapması için gerekli olmamalıdır.  
+### <a name="the-observer----implementing-the-onerror-method"></a>Gözlemci--OnError yöntemi uygulama  
+ Gözlemci sağlayıcıdan bir hata bildirimi aldığında gözlemci özel bilgi olarak kabul etmelidir ve herhangi bir işlem yapmanız için gerekli olmamalıdır.  
   
- Gözlemci için yanıt verirken bu en iyi uygulamaları izlemelisiniz bir <xref:System.IObserver%601.OnError%2A> yöntem çağrısı bir sağlayıcıdan:  
+ Gözlemci yanıt vermek bu en iyi uygulamaları izlemelisiniz bir <xref:System.IObserver%601.OnError%2A> yöntem çağrısı bir sağlayıcısı:  
   
--   Gözlemci onun arabirim uygulamaları özel durumlar gibi oluşturmamalıdır <xref:System.IObserver%601.OnNext%2A> veya <xref:System.IObserver%601.OnError%2A>. Ancak, gözlemci özel durumlar oluşturma, işlenmemiş gitmek için bu özel durumlar beklemelisiniz.  
+-   Gözlemci onun arabirim uygulamaları özel durumlar gibi oluşturmamalıdır <xref:System.IObserver%601.OnNext%2A> veya <xref:System.IObserver%601.OnError%2A>. Ancak, gözlemci özel durum oluşturmaz, bu özel durum işlenmemiş gitmek için beklemeniz gerekir.  
   
--   Çağrı yığını, throw istediği bir gözlemci korumak için bir <xref:System.Exception> geçirilmedi nesne kendi <xref:System.IObserver%601.OnError%2A> yöntemi, atma önce özel durum sarmalamak. Standart özel durum nesnesi bu amaç için kullanılmalıdır.  
+-   Throw isteyen bir gözlemci çağrı yığını korumak için bir <xref:System.Exception> geçildi nesne kendi <xref:System.IObserver%601.OnError%2A> yöntemi özel durum, özel durum atma önce kaydırma. Bir standart özel durum nesnesi, bu amaç için kullanılmalıdır.  
   
 ## <a name="additional-best-practices"></a>Diğer en iyi yöntemler  
- İçinde kaydı çalışılıyor <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType> yöntemi null başvuru neden olabilir. Bu nedenle, bu yöntem kaçının öneririz.  
+ İçinde kaydını çalışılıyor <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType> yöntemi null başvuru neden olabilir. Bu nedenle, bu yöntem kaçınmanızı öneririz.  
   
- Bir gözlemci birden çok sağlayıcı eklemek mümkün olsa da, önerilen desenini eklemektir bir <xref:System.IObserver%601> yalnızca bir örneğine <xref:System.IObservable%601> örneği.  
+ Birden çok sağlayıcı için bir gözlemci eklemek mümkün olsa da, önerilen Düzen eklemektir bir <xref:System.IObserver%601> yalnızca bir örneğine <xref:System.IObservable%601> örneği.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Gözlemci Tasarım Deseni](../../../docs/standard/events/observer-design-pattern.md)  
- [Nasıl yapılır: Gözlemci Uygulama](../../../docs/standard/events/how-to-implement-an-observer.md)  
- [Nasıl yapılır: Sağlayıcıyı Uygulama](../../../docs/standard/events/how-to-implement-a-provider.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Gözlemci Tasarım Deseni](../../../docs/standard/events/observer-design-pattern.md)  
+- [Nasıl yapılır: Gözlemci Uygulama](../../../docs/standard/events/how-to-implement-an-observer.md)  
+- [Nasıl yapılır: Sağlayıcıyı Uygulama](../../../docs/standard/events/how-to-implement-a-provider.md)

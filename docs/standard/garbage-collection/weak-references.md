@@ -10,47 +10,48 @@ helpviewer_keywords:
 ms.assetid: 6a600fe5-3af3-4c64-82da-10a0a8e2d79b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03da36090c255f635036a9bd518bdacd99404ed4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 65492beb888da1986f456d3fd000fc02f340f3c4
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575661"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44075650"
 ---
 # <a name="weak-references"></a>Zayıf Başvurular
-Uygulamanın kodu söz konusu nesne ulaşabilir sırada atık toplayıcı bir uygulama tarafından kullanılan bir nesne toplayamazsınız. Uygulama nesnesi için güçlü bir başvuru barındırıyor olarak sınıflandırılır.  
+Uygulamanın kodu söz konusu nesne ulaşabileceği sırada Çöp toplayıcı bir uygulama tarafından kullanılan bir nesne toplayamazsınız. Uygulama, güçlü bir başvuru nesnesine sahip bildirilir.  
   
- Zayıf başvuru hala nesneye erişim uygulama verirken nesne toplamak için atık toplayıcı izin verir. Zayıf başvuru yalnızca belirsiz süreyi güçlü başvuru mevcut nesne toplanır kadar sırasında geçerlidir. Zayıf başvuru kullandığınızda, uygulama, toplanmakta olan engelleyen nesne, güçlü bir başvuru elde edebilirsiniz. Bununla birlikte, her zaman güçlü bir başvuru yeniden önce atık toplayıcı nesnesine ilk alırsınız riski yoktur.  
+ Zayıf bir başvuru, çöp toplayıcı nesneyi nesneye erişmek için uygulamayı hala izin verirken toplamak için izin verir. Zayıf bir başvuru yalnızca belirsiz süreyi güçlü başvuru varken nesne toplanana kadar sırasında büyük/küçük harf geçerlidir. Zayıf bir başvuru kullandığınızda, uygulama toplanmasını önleyen nesne, güçlü bir başvuru elde edebilirsiniz. Ancak, her zaman bir güçlü başvuruya kurulmaz önce çöp toplayıcı nesnenin ilk alırsınız riski yoktur.  
   
- Zayıf başvurular çok miktarda bellek kullanır, ancak atık toplama tarafından kazanılır varsa kolaylıkla yeniden oluşturulabilir nesneler için faydalıdır.  
+ Zayıf başvurular, çok miktarda bellek kullanır, ancak çöp toplama tarafından talep edilen, kolayca yeniden oluşturulabilir nesneler için kullanışlıdır.  
   
- Bir Windows Forms uygulaması ağaç görünümünde seçenekleri karmaşık hiyerarşik seçimine kullanıcıya görüntüler varsayalım. Temel alınan veri büyükse, kullanıcı uygulamada başka bir şey ile söz konusu olduğunda ağaç bellekte tutma yetersiz olduğunu.  
+ Bir Windows Forms uygulaması ağaç görünümünde, kullanıcıya bir karmaşık hiyerarşik, tercih ettiğiniz seçenekleri görüntüler varsayalım. Temel alınan veriler büyükse, ağaç bellekte tutulması, kullanıcı uygulamada başka bir şey ile söz konusu olduğunda verimsizdir.  
   
- Kullanıcı başka bir uygulamanın parçası için hemen geçiş yaparken kullanabileceğiniz <xref:System.WeakReference> ağaç zayıf başvuru oluşturun ve tüm güçlü başvuruları yok etmek için sınıf. Kullanıcı geri ağacına geçirildiğinde, uygulamanın ağaç güçlü bir başvuru almaya çalıştığında ve, başarılı olursa, ağaç yeniden oluşturuluyor önler.  
+ Kullanıcı başka bir uygulamanın parçası için hemen geçtiğinde kullanabileceğiniz <xref:System.WeakReference> zayıf bir başvuru ağacı oluşturmak ve tüm güçlü atıflar yok etmek için sınıf. Kullanıcı ağaca geri dön geçirildiğinde, uygulamanın güçlü bir başvuru ağacı almayı dener ve, başarılı olursa, ağaç yeniden oluşturuluyor önler.  
   
- Bir nesne zayıf bir başvuru oluşturmanız için oluşturduğunuz bir <xref:System.WeakReference> izlenmesi gereken nesne örneğini kullanarak. Ardından <xref:System.WeakReference.Target%2A> bu nesne ve özgün nesne başvurusu kümesi özelliğine `null`. Kod örneği için bkz: <xref:System.WeakReference> Sınıf Kitaplığı'nda.  
+ Zayıf bir başvuru içeren bir nesne oluşturmak için oluşturduğunuz bir <xref:System.WeakReference> izlenmesi nesnesinin örneğini kullanarak. Ardından <xref:System.WeakReference.Target%2A> bu nesne ve özgün nesneye başvurusu kümesi özelliğini `null`. Kod örneği için bkz: <xref:System.WeakReference> Sınıf Kitaplığı'nda.  
   
 ## <a name="short-and-long-weak-references"></a>Kısa ve uzun zayıf başvurular  
- Bir kısa zayıf bir başvuru veya uzun zayıf oluşturabilirsiniz:  
+ Zayıf bir başvuru kısa veya uzun zayıf bir başvuru oluşturabilirsiniz:  
   
 -   kısa  
   
-     Başvuru hedef için bir kısa zayıf hale `null` zaman nesne iadesi atık toplama tarafından. Zayıf başvuru kendisi yönetilen bir nesne değildir ve herhangi bir yönetilen nesne gibi çöp toplama tabidir.  Kısa zayıf için varsayılan oluşturucu başvurudur <xref:System.WeakReference>.  
+     Kısa bir zayıf başvuru hedefinin olur `null` zaman nesne iadesi çöp toplama tarafından. Zayıf başvuru kendisi yönetilen bir nesnedir ve çöp toplama gibi herhangi bir yönetilen nesne tabidir.  Kısa bir zayıf başvuru olduğu için varsayılan oluşturucu <xref:System.WeakReference>.  
   
 -   uzun  
   
-     Uzun zayıf başvurusu nesnenin sonra tutulur <xref:System.Object.Finalize%2A> yöntemi çağrılır. Bu nesnenin yeniden oluşturulması için sağlar, ancak nesnenin durumunu öngörülemeyen kalır. Uzun bir referans kullanmak üzere belirtmek `true` içinde <xref:System.WeakReference> Oluşturucusu.  
+     Nesnenin sonra uzun zayıf bir başvuru korunur <xref:System.Object.Finalize%2A> yöntemi çağrılır. Bu nesnenin oluşturulması sağlar, ancak nesnenin durumu beklenmedik kalır. Uzun bir başvuru kullanılacağını belirtin `true` içinde <xref:System.WeakReference> Oluşturucusu.  
   
-     Nesnenin türü yoksa bir <xref:System.Object.Finalize%2A> yöntemi, kısa zayıf başvuru işlevselliği uygular ve hedef toplanan kadar herhangi bir zaman sonra sonlandırıcıyı oluşabilen çalıştırılan yalnızca zayıf başvurusu geçerli değil.  
+     Nesnenin türü yoksa bir <xref:System.Object.Finalize%2A> yöntemi, kısa zayıf başvuru işlevselliğini uygular ve hedef toplanana kadar sonra dilediğiniz zaman Sonlandırıcı oluşabilen çalıştırılan yalnızca zayıf başvuru geçerli değil.  
   
- Güçlü bir başvuru kurmak ve nesne yeniden kullanmak için cast <xref:System.WeakReference.Target%2A> özelliği bir <xref:System.WeakReference> türde bir nesne. Varsa <xref:System.WeakReference.Target%2A> özelliği döndürür `null`nesne toplanan; Aksi takdirde, uygulamanın yeniden elde, güçlü bir başvuru olduğundan nesne kullanmaya devam edebilirsiniz.  
+ Güçlü bir başvuru'kurmak ve nesne yeniden kullanmak için tür dönüştürme <xref:System.WeakReference.Target%2A> özelliği bir <xref:System.WeakReference> nesnenin türü. Varsa <xref:System.WeakReference.Target%2A> özelliği döndürür `null`nesne toplanan; Aksi takdirde, uygulamanın kendisine güçlü başvuru buldum olduğundan, nesne kullanmaya devam edebilirsiniz.  
   
-## <a name="guidelines-for-using-weak-references"></a>Zayıf başvurular kullanma için yönergeler  
- Uzun zayıf başvurular yalnızca gerekli olduğunda nesnenin durumunu sonlandırma sonra öngörülemeyen olduğu gibi kullanın.  
+## <a name="guidelines-for-using-weak-references"></a>Zayıf başvurular kullanma yönergeleri  
+ Yalnızca gerekli olduğunda nesnenin durumu sonlandırma sonra tahmin edilemez şekilde uzun zayıf başvurular kullanın.  
   
- İşaretçi olarak büyük veya daha büyük olabilir çünkü küçük nesnelere zayıf başvurular kullanmaktan kaçının.  
+ Zayıf başvurular küçük nesneleri için işaretçi kadar büyük ya da daha büyük olabileceğinden kullanmaktan kaçının.  
   
- Bellek yönetimi sorunları için otomatik bir çözüm olarak zayıf başvurular kullanmaktan kaçının. Bunun yerine, uygulamanızın nesneleri işlemek için etkili bir önbellek İlkesi geliştirin.  
+ Zayıf başvurular bellek yönetimi sorunları için otomatik bir çözüm olarak kullanmaktan kaçının. Bunun yerine, uygulamanızın nesneleri işlemek için geçerli bir önbelleğe alma ilkesinin geliştirin.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Atık Toplama](../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Atık Toplama](../../../docs/standard/garbage-collection/index.md)

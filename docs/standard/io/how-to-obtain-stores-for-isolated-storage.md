@@ -16,11 +16,11 @@ ms.assetid: fcb6b178-d526-47c4-b029-e946f880f9db
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1e2f87bfe1e3e7f3a1c8135c047b25a998793453
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43886519"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084076"
 ---
 # <a name="how-to-obtain-stores-for-isolated-storage"></a>Nasıl yapılır: Yalıtılmış Depolama için Depoları Alma
 Bir yalıtılmış depolama bir veri bölmesi sanal dosya sisteminde kullanıma sunar. <xref:System.IO.IsolatedStorage.IsolatedStorageFile> Sınıfı bir dizi bir yalıtılmış depolama ile etkileşim kurmak için yöntem sağlar. Oluşturma ve depoları almak için <xref:System.IO.IsolatedStorage.IsolatedStorageFile> üç statik yöntemler sağlar:  

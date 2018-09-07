@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab14be82f3dedeab0a1e1e574ce5622d067f72ae
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 730c6abfe9d49c319d1438a0821ad47e19fc0638
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43789023"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44098968"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Özel Tarih ve Saat Biçim Dizeleri
 
@@ -742,6 +742,10 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
 
  Birçok özel tarih ve saat biçimi belirticisi tarafından üretilen sonuç dizesi ayrıca geçerli özelliklerine de bağlıdır <xref:System.Globalization.DateTimeFormatInfo> nesne. Uygulamanız karşılık gelen değiştirerek bazı özel tarih ve saat biçimi belirticisi tarafından üretilen sonuç değiştirebilirsiniz <xref:System.Globalization.DateTimeFormatInfo> özelliği. Örneğin, "ddd" biçim belirticisi bulunan kısaltılmış gün adını ekler <xref:System.Globalization.DateTimeFormatInfo.AbbreviatedDayNames%2A> sonuç dizesine dize dizisi. Benzer şekilde "MMMM" biçim belirticisi bulunan tam ay adını ekler <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A> sonuç dizesine dize dizisi.
 
-## <a name="see-also"></a>Ayrıca Bkz.
- <xref:System.DateTime?displayProperty=nameWithType><xref:System.IFormatProvider?displayProperty=nameWithType>
- [Biçimlendirme türleri](../../../docs/standard/base-types/formatting-types.md) [standart tarih ve saat biçim dizeleri](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) [örneği: .NET Framework 4 biçimlendirme yardımcı programı](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- <xref:System.DateTime?displayProperty=nameWithType>
+- <xref:System.IFormatProvider?displayProperty=nameWithType>
+- [Biçimlendirme Türleri](../../../docs/standard/base-types/formatting-types.md)
+- [Standart Tarih ve Saat Biçim Dizeleri](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [Örnek: .NET Framework 4 biçimlendirme yardımcı](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

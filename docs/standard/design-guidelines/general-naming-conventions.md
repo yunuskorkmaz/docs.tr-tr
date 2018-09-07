@@ -16,24 +16,24 @@ helpviewer_keywords:
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 207227b3e5c52b7c6e0f704543379874f3708c03
-ms.sourcegitcommit: ceca5a1c027627abcca2767567703c3879f33325
+ms.openlocfilehash: cd3defd969b5f26fb95e7feca9c3d533e67272b1
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2018
-ms.locfileid: "36338110"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44071102"
 ---
 # <a name="general-naming-conventions"></a>Genel adlandırma kuralları
-Bu bölümde, sözcük seçimi için ilgili genel adlandırma kuralları kısaltmalar ve kısaltmalar ve öneriler dile özel adlar kullanmaktan kaçının nasıl kullanma hakkında yönergeler açıklanmaktadır.  
+Bu bölümde, sözcük seçimi için ilgili genel adlandırma kuralları kısaltmalar ve kısaltmalar ve öneriler hakkında dile özgü adlarını kullanmaktan kaçınmak kullanma hakkında yönergeler açıklanmaktadır.  
   
 ## <a name="word-choice"></a>Sözcük seçimi  
  **✓ DO** kolay okunabilir tanımlayıcı adlarını seçin.  
   
- Örneğin, adında bir özellik `HorizontalAlignment` daha İngilizce-okunamaz daha `AlignmentHorizontal`.  
+ Örneğin, adında bir özellik `HorizontalAlignment` daha İngilizce-daha okunabilirdir `AlignmentHorizontal`.  
   
  **✓ DO** okunabilirlik kısaltma ayrıcalık tanıma.  
   
- Özellik adı `CanScrollHorizontally` daha iyidir `ScrollableX` (x ekseni belirsiz bir referansı).  
+ Özellik adı `CanScrollHorizontally` göre daha iyidir `ScrollableX` (x ekseni için belirsiz bir başvuru).  
   
  **X DO NOT** alt çizgi, kısa çizgi veya herhangi bir alfasayısal olmayan karakterler kullanın.  
   
@@ -41,7 +41,7 @@ Bu bölümde, sözcük seçimi için ilgili genel adlandırma kuralları kısalt
   
  **X AVOID** kullanılan programlama dilleri anahtar sözcükleriyle yaygın olarak çakışma kimlikleri kullanarak.  
   
- Ortak dil belirtimi (CLS), kural 4 göre tüm uyumlu diller söz konusu dilin anahtar sözcüğü bir tanımlayıcı olarak kullanmak adlandırılmış öğelere erişime izin veren bir mekanizma sağlamanız gerekir. Örneğin, C# ' ta, kullanır @ işareti bu durumda kaçış mekanizması olarak. Ancak, ortak anahtar sözcükleri olmadan birden kaçış sırası içeren bir yöntem kullanmak çok daha zor olduğundan önlemek için iyi bir fikir hala olduğu.  
+ Ortak dil belirtimi (CLS), kural 4 göre tüm uyumlu dilin dilin bir anahtar sözcük tanımlayıcı olarak kullanan adlandırılmış öğeleri erişmesini sağlayan bir mekanizma sağlamanız gerekir. Kullanan C# ' ta, örneğin, bu durumda bir kaçış mekanizması olarak oturum @. Ancak, yine de bir yöntemi olmadan bir kaçış dizisi ile kullanmak çok daha zor olduğundan, ortak anahtar sözcükleri önlemek için iyi bir fikirdir.  
   
 ## <a name="using-abbreviations-and-acronyms"></a>Kısaltmalar ve kısaltmalar kullanma  
  **X DO NOT** kısaltmalar veya kısaltmalar tanımlayıcı adları bir parçası olarak kullanın.  
@@ -50,14 +50,14 @@ Bu bölümde, sözcük seçimi için ilgili genel adlandırma kuralları kısalt
   
  **X DO NOT** yaygın olarak kabul edilen ve, yalnızca gerekli olduğunda olmaları durumunda bile olmayan kısaltmalar kullanın.  
   
-## <a name="avoiding-language-specific-names"></a>Dile özgü adları önleme  
+## <a name="avoiding-language-specific-names"></a>Dile özgü adları kaçınma  
  **✓ DO** dile özgü anahtar sözcükler yerine anlamsal olarak ilginç adları için tür adları kullanın.  
   
- Örneğin, `GetLength` daha iyi bir adı `GetInt`.  
+ Örneğin, `GetLength` daha iyi bir addır `GetInt`.  
   
  **✓ DO** bir tanımlayıcı türü ötesinde anlamsal anlamı olduğunda nadir durumlarda dile özgü adı yerine bir genel CLR türü adı kullanın.  
   
- Örneğin, dönüştürülürken bir yöntem <xref:System.Int64> adlı olmalıdır `ToInt64`değil `ToLong` (çünkü <xref:System.Int64> için C# bir CLR ad-belirli diğer `long`). Aşağıdaki tabloda, CLR türü adları (C#, Visual Basic ve C++ için karşılık gelen tür adları için olduğu gibi) kullanarak birden fazla temel veri türlerini gösterir.  
+ Örneğin, bir dönüştürme yöntemi <xref:System.Int64> adlandırılmalıdır `ToInt64`değil `ToLong` (çünkü <xref:System.Int64> C# için bir CLR ad-belirli bir diğer ad `long`). Aşağıdaki tabloda, CLR tür adları (C#, Visual Basic ve C++ için karşılık gelen tür adları için olduğu gibi) kullanarak birkaç temel veri türlerini gösterir.  
   
 |C#|Visual Basic|C++|CLR|  
 |---------|------------------|-----------|---------|  
@@ -65,27 +65,27 @@ Bu bölümde, sözcük seçimi için ilgili genel adlandırma kuralları kısalt
 |**byte**|**Bayt**|**İmzasız char**|**Bayt**|  
 |**short**|**kısa**|**short**|**Int16**|  
 |**ushort**|**UInt16**|**İmzasız short**|**UInt16**|  
-|**int**|**Tamsayı**|**int**|**Int32**|  
-|**uint**|**UInt32**|**İmzasız int**|**UInt32**|  
+|**int**|**tamsayı**|**int**|**Int32**|  
+|**uint**|**UInt32**|**işaretsiz int**|**UInt32**|  
 |**long**|**uzun**|**__int64**|**Int64**|  
-|**ulong**|**UInt64**|**İmzasız __int64**|**UInt64**|  
+|**ulong**|**UInt64**|**imzalanmamış __int64**|**UInt64**|  
 |**float**|**Tek**|**float**|**Tek**|  
 |**double**|**çift**|**double**|**çift**|  
 |**bool**|**Boole değeri**|**bool**|**Boole değeri**|  
-|**char**|**char**|**wchar_t**|**char**|  
-|**string**|**Dize**|**Dize**|**Dize**|  
+|**char**|**Char**|**wchar_t**|**Char**|  
+|**string**|**dize**|**dize**|**dize**|  
 |**object**|**Nesne**|**Nesne**|**Nesne**|  
   
  **✓ DO** gibi ortak bir ad kullanın `value` veya `item`, tür adı bir tanımlayıcı bir anlam anlamı yoktur ve parametresinin türü önemli olmadığında nadir durumlarda yinelenen yerine.  
   
-## <a name="naming-new-versions-of-existing-apis"></a>Mevcut API'lerini yeni sürümlerini adlandırma  
+## <a name="naming-new-versions-of-existing-apis"></a>Mevcut API'lere yeni sürümlerini adlandırma  
  **✓ DO** var olan bir API yeni sürümlerini oluştururken eski API için benzer bir ad kullanın.  
   
- Bu API'ları arasındaki ilişkiyi vurgulamaya yardımcı olur.  
+ Bu API'ler arasındaki ilişkiyi vurgulamaya yardımcı olur.  
   
  **✓ DO** var olan bir API yeni bir sürümünü belirtmek için bir önek yerine bir sonek ekleme tercih eder.  
   
- Bu belge, göz atarken bulma yardımcı olur veya IntelliSense kullanma. Çoğu tarayıcılar ve IntelliSense tanımlayıcıları alfabetik olarak göstermek için API eski sürümü yeni API'leri yakın düzenleneceğini.  
+ Bu keşif belgeleri, göz atarken size yardımcı olacak veya IntelliSense kullanma. Çoğu tarayıcı ve IntelliSense tanımlayıcıları alfabetik sırada gösterir çünkü yakın yeni API'leri, API eski sürümü düzenlenecektir.  
   
  **✓ CONSIDER** sonek veya bir önek eklemek yerine yepyeni, ancak anlamlı tanımlayıcısını kullanarak.  
   
@@ -93,12 +93,13 @@ Bu bölümde, sözcük seçimi için ilgili genel adlandırma kuralları kısalt
   
  **X DO NOT** "Eski" (veya benzeri) kullanmak aynı API önceki bir sürümünden ayırt etmek bir tanımlayıcı için soneki.  
   
- **✓ DO** 32 bit tamsayı yerine 64 bit tamsayı (uzun tamsayı) üzerinde çalışan API sürümleri Tanıtımı "64" soneki kullanın. Varolan 32-bit API varsa bu yaklaşımı benimsemeye yeterlidir; yapma, yalnızca 64-bit sürümü ile yepyeni API'leri için.  
+ **✓ DO** 32 bit tamsayı yerine 64 bit tamsayı (uzun tamsayı) üzerinde çalışan API sürümleri Tanıtımı "64" soneki kullanın. Var olan 32-bit API varsa bu yaklaşımı yeterlidir; yapma, yalnızca 64 bit sürümüne sahip yeni API'ler için.  
   
- *Bölümleri © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
+ *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*  
+ *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)  
- [Adlandırma Kuralları](../../../docs/standard/design-guidelines/naming-guidelines.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)  
+- [Adlandırma Kuralları](../../../docs/standard/design-guidelines/naming-guidelines.md)

@@ -11,76 +11,76 @@ helpviewer_keywords:
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d3470ebdd55adc97a60f07228c441cb7c94a53e6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 10f947fc44e69368e30614e0b41eaf7c73fb6563
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579164"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084955"
 ---
 # <a name="garbage-collection-notifications"></a>Çöp Toplama Bildirimleri
-Bazı durumlarda, tam atık toplama (diğer bir deyişle, 2. nesil toplama) ortak dil çalışma zamanı tarafından performansını olumsuz etkileyebilir. Bu, özellikle büyük miktarda istekleri işlemek sunucuları ile ilgili bir sorun olabilir; Bu durumda, uzun çöp toplama istek zaman aşımı neden olabilir. Tam bir koleksiyon kritik bir dönem boyunca oluşmasını önlemek için tam atık toplama yaklaştığını ve iş yükünü başka bir sunucu örneğine yönlendirmek için önlem bildirilebilir. Geçerli sunucu örneğini istekleri işleyen gerekmez koşuluyla, ayrıca bir koleksiyon kendiniz anlamına.  
+Bazı durumlarda, ortak dil çalışma zamanı tarafından tam çöp toplama (diğer bir deyişle, 2. nesil koleksiyonu) performansını olumsuz yönde etkileyebilir. Bu, özellikle büyük hacimlerde istekleri işleyebilir sunucuları ile ilgili bir sorun olabilir. Bu durumda, uzun bir çöp toplama, istek zaman aşımı neden olabilir. Tam koleksiyonu bir kritik süre içinde oluşmasını önlemek için tam çöp toplama işleminin yaklaşmakta olduğunun ve eylem iş yükünü başka bir sunucu örneğine yeniden yönlendirmek için bildirim alabilirsiniz. Koşuluyla isteklerini işlemek geçerli sunucu örneği gerekmez, ayrıca koleksiyon kendiniz zorlarsınız.  
   
- <xref:System.GC.RegisterForFullGCNotification%2A> Yöntemi, tam atık toplama yaklaştığını çalışma zamanı algılayan tetiklenir için bildirimini kaydeder. Bu bildirim için iki bölümden oluşur: tam atık toplama yaklaştığı ne zaman ve ne zaman tam atık toplama tamamlandı.  
+ <xref:System.GC.RegisterForFullGCNotification%2A> Yöntemi, bir tam çöp toplama işleminin yaklaşmakta olduğunun çalışma zamanı algılayan, oluşturulacak bildirim kaydeder. Bu bildirim için iki bölümden oluşur: ne zaman tam çöp toplama işleminin yaklaşmakta olduğunun ve ne zaman tam çöp toplama tamamlandı.  
   
 > [!WARNING]
->  Yalnızca engelleme çöp koleksiyonları bildirimleri yükseltin. Zaman [ \<gcConcurrent >](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) yapılandırma öğesi etkinleştirildiğinde, arka plan çöp koleksiyonları değil bildirimleri Yükselt.  
+>  Yalnızca engelleme atık toplama bildirimleri yükseltin. Zaman [ \<gcConcurrent >](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) yapılandırma öğesi etkin olduğunda, arka plan atık toplama olmayan bildirimleri Yükselt.  
   
- Ne zaman bir uyarı oluşturuldu belirlemek için <xref:System.GC.WaitForFullGCApproach%2A> ve <xref:System.GC.WaitForFullGCComplete%2A> yöntemleri. Bu yöntemleri genellikle, kullandığınız bir `while` sürekli olarak almak için döngü bir <xref:System.GCNotificationStatus> bildirim durumunu gösteren sabit listesi. Bu değer ise <xref:System.GCNotificationStatus.Succeeded>, aşağıdakileri yapabilirsiniz:  
+ Ne zaman bir bildiriminin tetiklendiğini belirlemek için <xref:System.GC.WaitForFullGCApproach%2A> ve <xref:System.GC.WaitForFullGCComplete%2A> yöntemleri. Bu yöntemleri genellikle, kullandığınız bir `while` döngü sürekli olarak almak için bir <xref:System.GCNotificationStatus> bildirim durumunu gösteren sabit listesi. Bu değer ise <xref:System.GCNotificationStatus.Succeeded>, aşağıdakileri yapabilirsiniz:  
   
--   Yanıt ile elde edilen bir bildirim olarak <xref:System.GC.WaitForFullGCApproach%2A> yöntemi, iş yükü yönlendirebilir ve büyük olasılıkla bir koleksiyon kendiniz anlamına.  
+-   Bir bildirim ile alınan yanıtta <xref:System.GC.WaitForFullGCApproach%2A> yöntemi, iş yükü yönlendirmek ve büyük olasılıkla bir koleksiyon kendiniz anlamına.  
   
--   Yanıt ile elde edilen bir bildirim olarak <xref:System.GC.WaitForFullGCComplete%2A> yöntemi, geçerli sunucu örneğini yeniden isteklerini işlemek kullanılabilir yapabilirsiniz. Ayrıca, bilgi toplayabilir. Örneğin, kullanabileceğiniz <xref:System.GC.CollectionCount%2A> koleksiyon sayısı kaydetmek için yöntem.  
+-   Bir bildirim ile alınan yanıtta <xref:System.GC.WaitForFullGCComplete%2A> yöntemi, geçerli sunucu örneği istekleri yeniden işleyecek duruma kullanılabilir yapabilirsiniz. Ayrıca, bilgi toplayabilir. Örneğin, kullanabileceğiniz <xref:System.GC.CollectionCount%2A> koleksiyon sayısına kaydetmek için yöntemi.  
   
- <xref:System.GC.WaitForFullGCApproach%2A> Ve <xref:System.GC.WaitForFullGCComplete%2A> yöntemleri birlikte çalışmak üzere tasarlanmıştır. Diğer olmadan kullanarak belirsiz sonuçlara yol açabilir.  
+ <xref:System.GC.WaitForFullGCApproach%2A> Ve <xref:System.GC.WaitForFullGCComplete%2A> yöntemleri, birlikte çalışmak üzere tasarlanmıştır. Biri diğeri olmadan kullanarak belirsiz sonuçlara neden olabilir.  
   
 ## <a name="full-garbage-collection"></a>Tam çöp toplama  
- Aşağıdaki senaryoların herhangi biri doğru olduğunda çalışma zamanı tam atık toplama neden olur:  
+ Aşağıdaki senaryolardan biri doğru olduğunda, çalışma zamanı tam çöp toplama neden olur:  
   
--   Yeterli bellek, sonraki 2. nesil koleksiyonu neden 2. nesil yükseltildi.  
+-   Yeterli bellek, sonraki 2. nesil koleksiyonu neden 2. nesle yükseltildi.  
   
--   Yeterli bellek, sonraki 2. nesil koleksiyonu neden büyük nesne yığın yükseltildi.  
+-   Yeterli bellek, sonraki 2. nesil koleksiyonu neden büyük nesne yığını yükseltildi.  
   
--   2. nesil diğer etkenler nedeniyle koleksiyonu için 1. nesil koleksiyonu ilerletilen.  
+-   1. nesil koleksiyonu 2. nesil diğer faktörler nedeniyle koleksiyonunu üzere ilerletilmiş.  
   
- Belirttiğiniz eşikleri <xref:System.GC.RegisterForFullGCNotification%2A> yöntemi ilk iki senaryo için geçerlidir. Ancak, ilk senaryoda, her zaman bildirim için iki nedenden dolayı belirttiğiniz eşik değerleri orantılı zaman almaz:  
+ Belirttiğiniz eşikleri <xref:System.GC.RegisterForFullGCNotification%2A> yöntemi ilk iki senaryo için geçerlidir. Ancak, ilk senaryoda, her zaman bildirim için iki nedenden dolayı zaman belirttiğiniz eşik değerleri orantılı almaz:  
   
--   Çalışma zamanı her küçük nesne ayırma (performans nedenleriyle) denetlemez.  
+-   Çalışma zamanı, her küçük nesne ayırma (performans nedenleriyle) denetlemez.  
   
--   Yalnızca 1 koleksiyonları nesil 2. nesil bellek yükseltin.  
+-   Yalnızca 1 koleksiyonları kuşak 2. nesle bellek tanıtın.  
   
- Üçüncü senaryo da bildirim aldığınızda, belirsizlik katkıda bulunur. Bu bir garantisi olmasa da bu süre boyunca istekleri yönlendirme ya da daha iyi yerleştirilebilecek zaman koleksiyon kendiniz inducing çıkarsanız tam atık toplama etkilerini azaltmak için kullanışlı bir yoldur kanıtlar.  
+ Üçüncü senaryo da bildirim aldığınızda, belirsizlik katkıda bulunur. Bu bir garantisi olmasa da bu süre boyunca istekleri yönlendirme ya da daha iyi yerleştirilebilecek olduğunda koleksiyon kendiniz inducing çıkarsanız tam çöp toplama etkilerini azaltmak için kullanışlı bir yoldur anlamına gelmez.  
   
 ## <a name="notification-threshold-parameters"></a>Bildirim eşiği parametreleri  
- <xref:System.GC.RegisterForFullGCNotification%2A> Yöntemi kuşak 2 nesnelerinin ve büyük nesne yığın eşik değerlerini belirtmek için iki parametreye sahiptir. Bu değerleri karşılandığında bir atık toplama bildirim oluşmalıdır. Aşağıdaki tabloda bu parametreler açıklanmaktadır.  
+ <xref:System.GC.RegisterForFullGCNotification%2A> Yöntemi 2. nesil nesneler ve büyük nesne yığını eşik değerlerini belirtmek için iki parametreye sahiptir. Bu değerleri karşılandığında bir çöp toplama bildirim oluşmalıdır. Aşağıdaki tabloda, bu parametreler açıklanmaktadır.  
   
 |Parametre|Açıklama|  
 |---------------|-----------------|  
-|`maxGenerationThreshold`|Bildirim ne zaman oluşturulması belirten bir sayı 1 ile 99 arasında nesil 2 yükseltilmiş nesneleri temel.|  
-|`largeObjectHeapThreshold`|Bildirim ne zaman oluşturulması belirten bir sayı 1 ile 99 arasında büyük nesne yığın ayrılmış nesneleri temel.|  
+|`maxGenerationThreshold`|Yükseltilen kuşak 2 nesneleri ne zaman bildirim harekete Geçirilmemesi gereken belirten bir sayı 1 ile 99 arasında temel.|  
+|`largeObjectHeapThreshold`|Bildirim zaman harekete Geçirilmemesi gereken belirten bir sayı 1 ile 99 arasında büyük nesne yığınında ayrılmış nesneleri temel.|  
   
- Çok yüksek bir değer belirtirseniz, bir bildirim alırsınız, ancak bir koleksiyon çalışma zamanı neden olmadan önce beklenecek çok uzun bir süre olabilir yüksek olasılık yoktur. Bir koleksiyon kendiniz anlamına, çalışma zamanı koleksiyonu neden olursa iadesi daha çok nesne geri.  
+ Çok yüksek bir değer belirtirseniz, bir bildirim alırsınız, ancak çalışma zamanı bir koleksiyon neden olmadan önce beklenecek çok uzun bir süre olabilir yüksek olasılık yoktur. Kendiniz bir koleksiyon anlamına, koleksiyonu çalışma zamanı neden olursa kazanılacak çok daha fazla nesne geri kazan.  
   
- Çok düşük bir değer belirtirseniz, bildirim almak için yeterli süre beklendiğinden önce çalışma zamanı koleksiyonu neden olabilir.  
+ Çok düşük bir değer belirtirseniz, çalışma zamanı, bildirim almak için yeterli zamana önce koleksiyonu neden olabilir.  
   
 ## <a name="example"></a>Örnek  
   
 ### <a name="description"></a>Açıklama  
- Aşağıdaki örnekte, bir sunucu grubu gelen Web isteklerini hizmet. İstek işleme yükünü benzetimini yapmak için bayt dizileri eklenir bir <xref:System.Collections.Generic.List%601> koleksiyonu. Her sunucu için bir atık toplama bildirimi kaydeder ve ardından üzerinde bir iş parçacığı başlatır `WaitForFullGCProc` sürekli olarak izlemek için kullanıcı yöntemi <xref:System.GCNotificationStatus> tarafından döndürülen numaralandırma <xref:System.GC.WaitForFullGCApproach%2A> ve <xref:System.GC.WaitForFullGCComplete%2A> yöntemleri.  
+ Aşağıdaki örnekte, bir sunucu grubu, gelen Web isteklerini hizmeti. İstekleri işleme iş yükünün benzetimini yapmak için bayt dizileri için eklenen bir <xref:System.Collections.Generic.List%601> koleksiyonu. Her sunucu çöp toplama bildirim için kaydeder ve sonra üzerinde bir iş parçacığı başlattığını `WaitForFullGCProc` sürekli olarak izlemek için kullanıcı yöntemi <xref:System.GCNotificationStatus> tarafından döndürülen sabit listesi <xref:System.GC.WaitForFullGCApproach%2A> ve <xref:System.GC.WaitForFullGCComplete%2A> yöntemleri.  
   
- <xref:System.GC.WaitForFullGCApproach%2A> Ve <xref:System.GC.WaitForFullGCComplete%2A> yöntemleri bir uyarı oluştuğunda kendi ilgili olay işleme kullanıcı yöntemlerini çağırın:  
+ <xref:System.GC.WaitForFullGCApproach%2A> Ve <xref:System.GC.WaitForFullGCComplete%2A> bir uyarı ortaya çıktığında kendi ilgili olay işleme kullanıcı yöntemlerini yöntemlerini çağırın:  
   
 -   `OnFullGCApproachNotify`  
   
-     Bu yöntemi çağırır `RedirectRequests` gönderme askıya alma isteği queuing sunucusuna bildirir kullanıcı yöntemi sunucuya ister. Bu sınıf düzeyi değişkeni ayarlayarak benzetilir `bAllocate` için `false` böylece daha fazla nesne ayrılır.  
+     Bu yöntemin çağırdığı `RedirectRequests` istekleri sunucuya gönderme askıya alma isteği sıraya alma sunucusuna bildirir kullanıcı yöntemi. Bu sınıf düzeyi değişkenleri ayarlayarak benzetimli `bAllocate` için `false` böylece daha fazla nesne ayrılır.  
   
-     İleri `FinishExistingRequests` kullanıcı yöntemi bekleyen sunucu isteklerini işlemini bitirmek için çağrılır. Bu temizleyerek benzetilir <xref:System.Collections.Generic.List%601> koleksiyonu.  
+     Ardından, `FinishExistingRequests` bekleyen sunucu istekleri işlemeyi tamamlamak için kullanıcı yöntemi çağrılır. Bu temizleyerek benzetimli <xref:System.Collections.Generic.List%601> koleksiyonu.  
   
-     Son olarak, iş yükü açık olduğundan çöp toplama işleminden.  
+     Son olarak, iş yükü açık olduğundan bir atık toplama işlemi başlattı.  
   
 -   `OnFullGCCompleteNotify`  
   
-     Bu yöntem kullanıcı yöntemini çağırır `AcceptRequests` istekleri kabul edip, sunucu artık bir tam atık toplama uygulanmadıkça olmadığı için devam etmek için. Bu eylem ayarlayarak benzetimli `bAllocate` değişkenini `true` nesnelerin eklenmesini devam edebilmeniz için <xref:System.Collections.Generic.List%601> koleksiyonu.  
+     Bu yöntem kullanıcı yöntemini çağırır `AcceptRequests` sunucusu artık tam çöp toplama için açık olduğundan, istekleri kabul sürdürmek için. Bu eylem ayarlayarak benzetimli `bAllocate` değişkenini `true` eklenen nesneleri devam edebilmeniz için <xref:System.Collections.Generic.List%601> koleksiyonu.  
   
  Aşağıdaki kodu içeren `Main` örnek yöntemi.  
   
@@ -88,13 +88,13 @@ Bazı durumlarda, tam atık toplama (diğer bir deyişle, 2. nesil toplama) orta
  [!code-csharp[GCNotification#2](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#2)]
  [!code-vb[GCNotification#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#2)]  
   
- Aşağıdaki kodu içeren `WaitForFullGCProc` çöp toplama bildirimleri için denetlemek için döngü sırasında sürekli içeren kullanıcı yöntemi.  
+ Aşağıdaki kodu içeren `WaitForFullGCProc` while döngüsü için çöp toplama bildirimleri denetlemek için bir sürekli içeren kullanıcı yöntemi.  
   
  [!code-cpp[GCNotification#8](../../../samples/snippets/cpp/VS_Snippets_CLR/GCNotification/cpp/program.cpp#8)]
  [!code-csharp[GCNotification#8](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#8)]
  [!code-vb[GCNotification#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#8)]  
   
- Aşağıdaki kodu içeren `OnFullGCApproachNotify` çağrılır gibi yöntemi  
+ Aşağıdaki kodu içeren `OnFullGCApproachNotify` çağrılır olarak yöntemi  
   
  `WaitForFullGCProc` yöntem.  
   
@@ -102,7 +102,7 @@ Bazı durumlarda, tam atık toplama (diğer bir deyişle, 2. nesil toplama) orta
  [!code-csharp[GCNotification#5](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#5)]
  [!code-vb[GCNotification#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#5)]  
   
- Aşağıdaki kodu içeren `OnFullGCApproachComplete` çağrılır gibi yöntemi  
+ Aşağıdaki kodu içeren `OnFullGCApproachComplete` çağrılır olarak yöntemi  
   
  `WaitForFullGCProc` yöntem.  
   
@@ -110,17 +110,18 @@ Bazı durumlarda, tam atık toplama (diğer bir deyişle, 2. nesil toplama) orta
  [!code-csharp[GCNotification#6](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#6)]
  [!code-vb[GCNotification#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#6)]  
   
- Aşağıdaki kod gelen adlı kullanıcı yöntemleri içeren `OnFullGCApproachNotify` ve `OnFullGCCompleteNotify` yöntemleri. Kullanıcı yöntemlerini yeniden yönlendirme istekleri, var olan istekleri bitiş ve tam atık toplama gerçekleştikten sonra istekleri Sürdür.  
+ Gelen adlı kullanıcı yöntemleri aşağıdaki kodu içeren `OnFullGCApproachNotify` ve `OnFullGCCompleteNotify` yöntemleri. Kullanıcı yöntemlerini yeniden yönlendirme istekleri, mevcut isteklerini tamamlamak ve sonra bir tam çöp toplama işlemi gerçekleştirildikten sonra istek'i sürdüremedi.  
   
  [!code-cpp[GCNotification#9](../../../samples/snippets/cpp/VS_Snippets_CLR/GCNotification/cpp/program.cpp#9)]
  [!code-csharp[GCNotification#9](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#9)]
  [!code-vb[GCNotification#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#9)]  
   
- Tüm kodu örneği aşağıdaki gibidir:  
+ Tüm kod örneği aşağıdaki gibidir:  
   
  [!code-cpp[GCNotification#1](../../../samples/snippets/cpp/VS_Snippets_CLR/GCNotification/cpp/program.cpp#1)]
  [!code-csharp[GCNotification#1](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#1)]
  [!code-vb[GCNotification#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#1)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Atık Toplama](../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Atık Toplama](../../../docs/standard/garbage-collection/index.md)

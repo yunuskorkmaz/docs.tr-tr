@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: ara değerleri (C#) hesaplama'
 ms.date: 07/20/2015
 ms.assetid: 7fd3001f-f8f9-4bce-879f-d4c7af8a04fe
 ms.openlocfilehash: 15ccf58738b64ebfaef77deb162ddb29db0ae33a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43787694"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44071037"
 ---
 # <a name="how-to-calculate-intermediate-values-c"></a>Nasıl yapılır: ara değerleri (C#) hesaplama
 Bu örnek, sıralama, filtreleme ve seçme içinde kullanılan ara değerleri hesaplama gösterilmektedir.  

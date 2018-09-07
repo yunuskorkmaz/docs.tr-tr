@@ -10,11 +10,11 @@ helpviewer_keywords:
 - type conversion [C#], explicit numeric
 ms.assetid: f3bb9e76-6b92-4df7-bc36-f866c24e1dfd
 ms.openlocfilehash: 5ca052dea4ee4abc866d2b02055188b0707499d4
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855184"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44071927"
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a>Açık Sayısal Dönüşümler Tablosu (C# Başvurusu)
 Açık sayısal Dönüşüm, var olan herhangi bir örtük dönüştürmeyi atama ifadesini kullanarak diğer sayısal türleri, herhangi bir sayısal tür dönüştürmek için kullanılır. Aşağıdaki tabloda, bu dönüştürmeleri gösterilmektedir.  

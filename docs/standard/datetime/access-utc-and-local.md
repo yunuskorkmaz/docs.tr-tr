@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: ön tanımlı UTC ve yerel saat dilimi nesneleri erişim'
+title: 'Nasıl yapılır: ön tanımlı UTC ve yerel saat dilimi nesnelerine erişim'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,48 +15,48 @@ helpviewer_keywords:
 ms.assetid: 961fb70b-83f0-4dab-a042-cb5fcd817cf5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b7ddf7ba69d8bed84f62d329fd26794e2641d954
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f074e6f6d9b11cc7d7405adced3a4523a31676fa
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571153"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44086919"
 ---
-# <a name="how-to-access-the-predefined-utc-and-local-time-zone-objects"></a>Nasıl yapılır: ön tanımlı UTC ve yerel saat dilimi nesneleri erişim
+# <a name="how-to-access-the-predefined-utc-and-local-time-zone-objects"></a>Nasıl yapılır: ön tanımlı UTC ve yerel saat dilimi nesnelerine erişim
 
-<xref:System.TimeZoneInfo> SAX iki özellik <xref:System.TimeZoneInfo.Utc%2A> ve <xref:System.TimeZoneInfo.Local%2A>, önceden tanımlanmış saat dilimi nesneleri için kod erişimi verin. Bu konuda ele alınmıştır nasıl erişileceği <xref:System.TimeZoneInfo> bu özellik tarafından döndürülen nesne.
+<xref:System.TimeZoneInfo> SAX iki özellik <xref:System.TimeZoneInfo.Utc%2A> ve <xref:System.TimeZoneInfo.Local%2A>, önceden tanımlanmış saat dilimi nesneleri, kod erişim verin. Bu konu nasıl erişileceğini açıklar <xref:System.TimeZoneInfo> bu özellik tarafından döndürülen nesne.
 
 ### <a name="to-access-the-coordinated-universal-time-utc-timezoneinfo-object"></a>Eşgüdümlü Evrensel Saat (UTC) Timezoneınfo nesnesinin erişmek için
 
 1. Kullanım `static` (`Shared` Visual Basic'te) <xref:System.TimeZoneInfo.Utc%2A?displayProperty=nameWithType> Eşgüdümlü Evrensel Saat erişmeye özelliği.
 
-2. Atama yerine <xref:System.TimeZoneInfo> nesne bir nesne değişkeni için özellik tarafından döndürülen üzerinden Eşgüdümlü Evrensel Saat erişmeye devam <xref:System.TimeZoneInfo.Utc%2A?displayProperty=nameWithType> özelliği.
+2. Atama yerine <xref:System.TimeZoneInfo> nesnesi bir nesne değişkenine özelliği tarafından döndürülen Eşgüdümlü Evrensel Saat üzerinden erişmeye devam <xref:System.TimeZoneInfo.Utc%2A?displayProperty=nameWithType> özelliği.
 
-### <a name="to-access-the-local-time-zone"></a>Yerel saat dilimini erişmek için
+### <a name="to-access-the-local-time-zone"></a>Yerel saat dilimi erişmek için
 
-1. Kullanım `static` (`Shared` Visual Basic'te) <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> yerel sistem saat dilimi erişmek için özellik.
+1. Kullanım `static` (`Shared` Visual Basic'te) <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> yerel sistem saat dilimi erişmek için özelliği.
 
-2. Atama yerine <xref:System.TimeZoneInfo> nesne bir nesne değişkeni için özellik tarafından döndürülen aracılığıyla yerel saat dilimi erişmeye devam <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> özelliği.
+2. Atama yerine <xref:System.TimeZoneInfo> nesnesi bir nesne değişkenine özelliği tarafından döndürülen yerel saat dilimi üzerinden erişmeye devam <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> özelliği.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki kod <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> ve <xref:System.TimeZoneInfo.Utc%2A?displayProperty=nameWithType> özellikleri ABD ve Kanada Doğu Standart Saati Bölgesi'nden bir saat dönüştürme gibi konsola saat dilimi adını görüntülemek için.
+Aşağıdaki kod <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> ve <xref:System.TimeZoneInfo.Utc%2A?displayProperty=nameWithType> ABD ve Kanada Doğu Standart saat diliminden dönüştürün gibi saat dilimi adını konsolda görüntülemek için özellikleri.
 
 [!code-csharp[System.TimeZone2.Concepts#13](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#13)]
 [!code-vb[System.TimeZone2.Concepts#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#13)]
 
-Yerel saat dilimi aracılığıyla her zaman erişim <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> yerel saat atama yerine özelliği bölge için bir <xref:System.TimeZoneInfo> nesne değişkeni. Benzer şekilde, her zaman Eşgüdümlü Evrensel Saat üzerinden erişim <xref:System.TimeZoneInfo.Utc%2A?displayProperty=nameWithType> UTC atama yerine özelliği bölge için bir <xref:System.TimeZoneInfo> nesne değişkeni. Bu engeller <xref:System.TimeZoneInfo> nesne değişkeni için bir çağrı tarafından geçersiz gelen <xref:System.TimeZoneInfo.ClearCachedData%2A?displayProperty=nameWithType> yöntemi.
+Her zaman yerel saat dilimi üzerinden erişmelidir <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> yerel saat atamak yerine özellik bölge için bir <xref:System.TimeZoneInfo> nesne değişkeni. Benzer şekilde, her zaman Eşgüdümlü Evrensel Saat üzerinden erişmelidir <xref:System.TimeZoneInfo.Utc%2A?displayProperty=nameWithType> UTC atamak yerine özellik bölge için bir <xref:System.TimeZoneInfo> nesne değişkeni. Bu engeller <xref:System.TimeZoneInfo> gelen bir çağrı tarafından geçersiz nesne değişkeni <xref:System.TimeZoneInfo.ClearCachedData%2A?displayProperty=nameWithType> yöntemi.
 
 ## <a name="compiling-the-code"></a>Kod derleme
 
 Bu örnek gerektirir:
 
-* Bir başvuru System.Core.dll projeye eklenmesini.
+* Projeye System.Core.dll öğesine başvuru eklenmesi gerektiğini.
 
-* Olduğunu <xref:System> ad alanı ile aktarılabilir `using` deyimi (C# kodunda gereklidir).
+* Olduğunu <xref:System> ad alanı içeri aktarılacak `using` deyimi (C# kodunda gereklidir).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Tarih, saat ve saat dilimleri](../../../docs/standard/datetime/index.md)
-[yerel sistemde tanımlanan saat dilimlerini bulma](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)
-[nasıl yapılır: bir Timezoneınfo nesnesinin örneğini oluşturma](../../../docs/standard/datetime/instantiate-time-zone-info.md)
+* [Tarihler, saatler ve saat dilimleri](../../../docs/standard/datetime/index.md)
+* [Yerel sistemde tanımlanan saat dilimlerini bulma](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)
+* [Nasıl yapılır: Bir TimeZoneInfo nesnesinin örneğini oluşturma](../../../docs/standard/datetime/instantiate-time-zone-info.md)

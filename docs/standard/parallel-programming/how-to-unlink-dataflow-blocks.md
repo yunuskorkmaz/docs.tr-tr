@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 40f0208d-4618-47f7-85cf-4913d07d2d7d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 65d42597c572a85a95f9e2b4407df42c6fb7bb3d
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: bc0f266169a2d82bb76355febd58b2268907fe97
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856017"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44075689"
 ---
 # <a name="how-to-unlink-dataflow-blocks"></a>Nasıl yapılır: Veri Akışı Bloklarının Bağlantısını Kaldırma
 Bu belge, bir hedef veri akışı bloğu kaynağından bağlantısının nasıl kaldırılacağını açıklar.
@@ -45,5 +45,6 @@ Bu belge, bir hedef veri akışı bloğu kaynağından bağlantısının nasıl 
   
  **Vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowReceiveAny.vb**  
 
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri akışı](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Veri akışı](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

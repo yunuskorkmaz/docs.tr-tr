@@ -2,12 +2,12 @@
 title: Visual Studio IDE ve LINQ (Visual Basic) için Araçlar desteği
 ms.date: 07/20/2015
 ms.assetid: e3bfe0d9-4a79-49cf-a31c-93297c688829
-ms.openlocfilehash: d284b47a0745b0c514f5e8c530d649c49b4cfa4f
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: b6b6cda40da1d54a68fdf924e6bf92efd5dec7a0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44038185"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44081722"
 ---
 # <a name="visual-studio-ide-and-tools-support-for-linq-visual-basic"></a>Visual Studio IDE ve LINQ (Visual Basic) için Araçlar desteği
 Visual Studio tümleşik geliştirme ortamı (IDE), uygulama geliştirme LINQ destekleyen aşağıdaki özellikleri sağlar:  
@@ -16,7 +16,7 @@ Visual Studio tümleşik geliştirme ortamı (IDE), uygulama geliştirme LINQ de
  Nesne İlişkisel Tasarımcısı kullanabileceğiniz bir görsel tasarım aracı olan [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md) temel alınan veritabanında bulunan ilişkisel verileri temsil eden sınıflar Visual Basic'te oluşturmak için uygulamalar. Daha fazla bilgi için [LINQ to SQL araçlarını Visual Studio'da](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
 ## <a name="sqlmetal-command-line-tool"></a>SQLMetal komut satırı aracı  
- SQLMetal yapı işlemlerini sınıflar LINQ kullanmak için mevcut veritabanlarını SQL uygulamaları oluşturmak için kullanılan bir komut satırı aracıdır. Daha fazla bilgi için [SqlMetal.exe (kod üretme aracı)](https://msdn.microsoft.com/library/819e5a96-7646-4fdb-b14b-fe31221b0614).  
+ SQLMetal yapı işlemlerini sınıflar LINQ kullanmak için mevcut veritabanlarını SQL uygulamaları oluşturmak için kullanılan bir komut satırı aracıdır. Daha fazla bilgi için [SqlMetal.exe (kod üretme aracı)](../../../../framework/tools/sqlmetal-exe-code-generation-tool.md).  
   
 ## <a name="linq-aware-code-editor"></a>LINQ algılayan Kod Düzenleyicisi  
  Visual Basic Kod Düzenleyicisi, IntelliSense ve biçimlendirme özellikleri ile kapsamlı bir şekilde LINQ destekler.  

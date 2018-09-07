@@ -8,21 +8,21 @@ dev_langs:
 ms.assetid: dd6dc920-b011-418a-b3db-f1580a7d9251
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fb1a337c2795627b82125c8c29335c52b5fb332c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 870e800220031338557792fa612d4a3101e79f90
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570390"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44071451"
 ---
 # <a name="creating-new-attributes-for-elements-in-the-dom"></a>DOM öğeleri için yeni öznitelikler oluşturma
-Yeni öznitelikler oluşturulması öznitelikleri düğümleri, ancak bir öğe düğümü özelliklerinin ve içerdiği diğer düğüm türleri oluşturmaktan daha farklı bir **XmlAttributeCollection** öğeyle ilişkili. Bir öznitelik oluşturun ve bir öğe olarak eklemek için birden çok yolu vardır:  
+Yeni öznitelikler oluşturma öznitelikleri düğümler, ancak bir öğe düğümü özellikleridir ve içerdiği diğer düğüm türleri oluşturmaktan daha farklı bir **XmlAttributeCollection** öğeyle ilişkili. Bir öznitelik oluşturun ve öğe eklemek için birden çok yolu vardır:  
   
--   Öğe düğümü almak ve kullanmak **SetAttribute** bir öznitelik, öğe özniteliği koleksiyona eklemek için.  
+-   Öğe düğümü edinin ve kullanın **SetAttribute** o öğenin özniteliği koleksiyona bir öznitelik eklemek için.  
   
--   Oluşturma bir **XmlAttribute** düğümünü kullanarak **CreateAttribute** yöntemi, öğe düğümü alın ve ardından kullanmak **SetAttributeNode** bu öznitelik koleksiyon düğümü eklemek için öğesi.  
+-   Oluşturma bir **XmlAttribute** düğümü kullanan **CreateAttribute** yöntemi, öğe düğümü alın ve ardından kullanmak **SetAttributeNode** bu öznitelik koleksiyon düğümü eklemek için öğe.  
   
- Aşağıdaki örnek, bir öznitelik kullanarak bir öğe eklemek gösterilmiştir **SetAttribute** yöntemi.  
+ Aşağıdaki örnek, bir öznitelik kullanarak bir öğe ekleme işlemi gösterilmektedir **SetAttribute** yöntemi.  
   
 ```vb  
 Imports System  
@@ -72,7 +72,7 @@ public class Sample
   }  
 ```  
   
- Aşağıdaki örnek yeni bir gösterir kullanılarak oluşturulan öznitelik **CreateAttribute** yöntemi. Ardından öznitelik koleksiyonuna eklenen öznitelik gösterir **defteri** öğesi kullanılarak **SetAttributeNode** yöntemi.  
+ Aşağıdaki örnek yeni bir gösterir kullanarak oluşturulan öznitelik **CreateAttribute** yöntemi. Daha sonra bir öznitelik koleksiyonu için eklenen öznitelik gösterir **kitap** öğesini kullanarak **SetAttributeNode** yöntemi.  
   
  Aşağıdaki XML verilen:  
   
@@ -82,7 +82,7 @@ public class Sample
 </book>  
 ```  
   
- Yeni bir öznitelik oluşturmak ve bir değer verin:  
+ Yeni bir öznitelik oluşturun ve bir değer verin:  
   
 ```vb  
 Dim attr As XmlAttribute = doc.CreateAttribute("publisher")  
@@ -112,17 +112,18 @@ doc.DocumentElement.SetAttributeNode(attr);
 </book>  
 ```  
   
- Tam kod örneği bulunabilir <xref:System.Xml.XmlDocument.CreateAttribute%2A>.  
+ Tam kod örneği şu yolda bulunabilir: <xref:System.Xml.XmlDocument.CreateAttribute%2A>.  
   
- Ayrıca oluşturabilirsiniz bir **XmlAttribute** düğümü ve kullanım **Insertbefore** veya **InsertAfter** koleksiyondaki uygun konuma yerleştirmek için yöntemleri. Aynı ada sahip bir öznitelik zaten var olan öznitelik koleksiyonda mevcut değilse **XmlAttribute** düğümü, koleksiyon ve yeni kaldırılır **XmlAttribute** düğümüne eklenir. Bu aynı şekilde gerçekleştirir **SetAttribute** yöntemi. Varolan bir düğümü yapmak için bir başvuru noktası olarak bir parametre olarak bu yöntemlerden ele **Insertbefore** ve **InsertAfter**. Yeni düğüm için varsayılan eklemek istediğiniz yeri gösteren bir referans düğümün sağlamazsanız **InsertAfter** yöntemdir koleksiyonu başında yeni düğüm eklemek için. İçin varsayılan konum **Insertbefore**, referans düğümün sağlanırsa, koleksiyonun sonuna ulaştı.  
+ Oluşturabilirsiniz bir **XmlAttribute** düğüm ve kullanım **Insertbefore** veya **InsertAfter** yöntemleri bir koleksiyon içinde uygun konuma yerleştirin. Aynı ada sahip bir öznitelik mevcut öznitelik koleksiyonda zaten varsa **XmlAttribute** koleksiyon ve yeni düğüm kaldırılır **XmlAttribute** düğümüne eklenir. Bu aynı şekilde gerçekleştirir **SetAttribute** yöntemi. Var olan bir düğüm yapmak için bir başvuru noktası olarak bir parametre olarak bu yöntemleri ele **Insertbefore** ve **InsertAfter**. Bir başvuru düğümü yeni düğümü için varsayılan ekleneceği konum gösteren sağlayamazsanız **InsertAfter** yöntemdir koleksiyonu başında yeni düğümü eklemek için. İçin varsayılan konum **Insertbefore**, hiçbir referans düğümün sağlanırsa, koleksiyonun sonuna ulaştı.  
   
- Oluşturduysanız bir **XmlNamedNodeMap** özniteliklerini, özniteliğin adı kullanarak ekleyebilirsiniz <xref:System.Xml.XmlNamedNodeMap.SetNamedItem%2A>. Daha fazla bilgi için bkz: [düğümü koleksiyonlarda NamedNodeMaps ve NodeLists](../../../../docs/standard/data/xml/node-collections-in-namednodemaps-and-nodelists.md).  
+ Oluşturduysanız bir **XmlNamedNodeMap** öznitelikleri, öznitelik adı'nı kullanarak ekleyebilirsiniz <xref:System.Xml.XmlNamedNodeMap.SetNamedItem%2A>. Daha fazla bilgi için [NamedNodeMaps ve NodeLists içindeki düğüm koleksiyonları](../../../../docs/standard/data/xml/node-collections-in-namednodemaps-and-nodelists.md).  
   
-## <a name="default-attributes"></a>Varsayılan öznitelikleri  
- Varsayılan bir özniteliği bulunması için bildirilen bir öğe oluşturun, sonra varsayılan değeri ile yeni bir varsayılan öznitelik XML belge nesne modeli (DOM) tarafından oluşturulur ve öğesine bağlı. Varsayılan özniteliğinin alt düğümler de şu anda oluşturulur.  
+## <a name="default-attributes"></a>Varsayılan öznitelikler  
+ Varsayılan özniteliği için bildirilmiş bir öğe oluşturun, ardından varsayılan değerine sahip yeni bir varsayılan öznitelik XML belge nesne modeli (DOM) tarafından oluşturulur ve öğesine bağlı. Varsayılan öznitelik alt düğümler de şu anda oluşturulur.  
   
 ## <a name="attribute-child-nodes"></a>Öznitelik alt düğümleri  
- Öznitelik düğümü değeri, alt düğümleri olur. Geçerli alt düğümleri yalnızca iki tür vardır: **XmlText** düğümleri ve **XmlEntityReference** düğümleri. Bu yöntemleri gibi herkese açık alt düğümleri bunlar **işlevi FirstChild** ve **LastChild** alt düğümleri olarak işlem. Bu ayrım alt düğümleri sahip bir öznitelik, öznitelikler veya öznitelik alt düğümleri kaldırmak çalışırken önemlidir. Daha fazla bilgi için bkz: [DOM öğesi düğümünde kaldırma özniteliklerden](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md).  
+ Bir öznitelik düğümü değeri alt düğümlerinden olur. Geçerli alt düğümleri yalnızca iki tür vardır: **XmlText** düğümleri ve **XmlEntityReference** düğümleri. Alt düğümleri anlamında gibi yöntemlerin bunlar **işlevi FirstChild** ve **LastChild** alt düğümleri olarak işlemeye. Bu ayrım alt düğümleri sahip bir öznitelik, öznitelikler veya öznitelik alt düğümleri kaldırmaya çalışırken önemlidir. Daha fazla bilgi için [DOM'da bir öğe düğümünden öznitelikleri kaldırma](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [XML Belge Nesne Modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [XML Belge Nesne Modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

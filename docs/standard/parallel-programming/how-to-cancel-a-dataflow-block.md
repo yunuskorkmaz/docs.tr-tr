@@ -13,11 +13,11 @@ ms.assetid: fbddda0d-da3b-4ec8-a1d6-67ab8573fcd7
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fa37909c76da804112464daacea6244f1c321516
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43880350"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085205"
 ---
 # <a name="how-to-cancel-a-dataflow-block"></a>Nasıl yapılır: Veri Akışı Bloğunu İptal Etme
 Bu belge, uygulamanızdaki iptalin gösterilmiştir. Bu örnekte, iş öğelerini bir veri akışı işlem hattı ve ayrıca iptal etkilerini etkin olduğu göstermek için Windows Forms kullanır.  

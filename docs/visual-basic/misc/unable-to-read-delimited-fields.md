@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_IllegalDelimiter
 ms.assetid: ab8a0c3a-b89c-4617-9e31-7e81f5dca433
-ms.openlocfilehash: faa42c2fec5851857496b321dbdb53c16c43e8c1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a119bf2592982b87c4bd361f9d125e6e8b7173c1
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525943"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087231"
 ---
 # <a name="unable-to-read-delimited-fields-because-a-double-quote-is-not-a-legal-delimiter-when-escapequotes-is-set-to-true"></a>Ayrılmış alanlar EscapeQuotes True olarak ayarlandığında çift tırnak işareti yasal sınırlayıcı olmadığından okunamıyor
 `TextFieldParser` Tırnak işareti (") ayırıcı olarak sağlanmadığından dosyasından okunamıyor ve `EscapeQuotes` ayarlanır `True`.  
@@ -18,8 +18,9 @@ ms.locfileid: "43525943"
   
 -   Ayarlama `EscapeQuotes` için `False`.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [TextFieldParser.SetDelimiters yöntemi](https://msdn.microsoft.com/library/21fa40ec-5866-4d0e-9fd9-c708a190dcc9)  
- [TextFieldParser.Delimiters özelliği](https://msdn.microsoft.com/library/4eb18f4d-3011-40a9-b668-be93eed0444f)  
- [Nasıl Yapılır: Virgülle Ayrılmış Metin Dosyalarından Okuma](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)  
- [TextFieldParser Nesnesi](../../visual-basic/language-reference/objects/textfieldparser-object.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [TextFieldParser.SetDelimiters yöntemi](xref:Microsoft.VisualBasic.FileIO.TextFieldParser.SetDelimiters%2A)  
+- [TextFieldParser.Delimiters özelliği](xref:Microsoft.VisualBasic.FileIO.TextFieldParser.Delimiters%2A)  
+- [Nasıl Yapılır: Virgülle Ayrılmış Metin Dosyalarından Okuma](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)  
+- [TextFieldParser Nesnesi](../../visual-basic/language-reference/objects/textfieldparser-object.md)

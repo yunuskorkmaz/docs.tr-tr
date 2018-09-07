@@ -3,11 +3,11 @@ title: Görsel iş akışı izleme
 ms.date: 03/30/2017
 ms.assetid: 0143448f-2044-40a0-8a3d-941f6d12468b
 ms.openlocfilehash: 7433d2497b9a9993093e13e88e073fb40403e3b6
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43803892"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085734"
 ---
 # <a name="visual-workflow-tracking"></a>Görsel iş akışı izleme
 Bu örnek nasıl izleme uygulaması aracılığıyla hata ayıklama işlevselliğini kullanarak görsel bir iş akışı yazılacağını gösterir [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)].  

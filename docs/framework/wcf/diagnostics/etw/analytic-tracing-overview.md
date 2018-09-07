@@ -5,11 +5,11 @@ helpviewer_keywords:
 - analytic tracing [WCF], overview
 ms.assetid: ae55e9cc-0809-442f-921f-d644290ebf15
 ms.openlocfilehash: 9918f07d9c26c1779a1eedfbc423c31e61659334
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43788019"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44070127"
 ---
 # <a name="analytic-tracing-overview"></a>Çözümleme İzleme Genel Bakış
 Analitik izleme [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] yüksek performanslı ve düşük ayrıntı izleme özelliği için olay izleme Windows (ETW üstünde) ayarlayın. ETW çekirdek izleme işlemlerinin ek yükü büyük ölçüde azaltmak için düzeyinde çalışır. Verimli bir şekilde kullanıcı ve çekirdek modu olaylarını arabelleğe alır ve dinamik günlük kaydını etkinleştirme hizmetin yeniden başlatılması gerekmeden sağlar. Sonraki günlükleri yayılan ve alınan olay izleme verileri mevcut değil.  

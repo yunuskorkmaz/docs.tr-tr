@@ -5,11 +5,11 @@ f1_keywords:
 - vbrTextFieldParser_WhitespaceInToken
 ms.assetid: 55107656-270e-4bbb-841a-478904df8e07
 ms.openlocfilehash: 2beda651dba952969593ffc7d64f01fd51ab7919
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43556282"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44070894"
 ---
 # <a name="textfieldparser-does-not-support-comment-tokens-that-contain-white-space"></a>TextFieldParser, boşluk içeren yorum belirtkeleri desteklemiyor.
 Boşluk içeren bir açıklama belirteci sağlandı. `TextFieldParser` Belirteç başında boşluk gerçekleşmediği sürece, boşluk içeren yorum belirtkeleri desteklemez. Gerçekleşen bir belirteç başında boşluk yoksayılır.  

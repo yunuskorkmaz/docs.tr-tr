@@ -3,11 +3,11 @@ title: Gelişmiş Biçim Seçimi
 ms.date: 03/30/2017
 ms.assetid: e02d9082-4d55-41d8-9329-98f6d1c77f06
 ms.openlocfilehash: e5c396ce22e9021d453a70f3826b0bd3cc6aaf42
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43535096"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44082219"
 ---
 # <a name="advanced-format-selection"></a>Gelişmiş Biçim Seçimi
 Bu örnek, yeni giden yanıt biçimleri desteklemek için Windows Communication Foundation (WCF) REST programlama modeli genişletme gösterir. Ayrıca, örnek bir XHTML sayfası olarak gösteren bir görünüm stili programlama modeli nasıl uygulanabileceği yanıt döndürmek için T4 şablonu kullanır.  
