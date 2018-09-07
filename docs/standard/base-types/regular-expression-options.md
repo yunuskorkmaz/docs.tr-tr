@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f3c229b0fc463863b7113c7ba73890b84e86553b
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: dbc5909a3d4ea1ba2747fcc694bf1f34e20e7d2b
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33579658"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44080887"
 ---
 # <a name="regular-expression-options"></a>Normal İfade Seçenekleri
 <a name="Top"></a> Varsayılan olarak, bir Giriş dizesinin normal ifade desenindeki herhangi bir sabit karakterin ile karşılaştırması büyük/küçük harfe duyarlıdır, normal ifade desenindeki boşluk, sabit boşluk karakterleri ve normal ifadedeki yakalama grupları olarak yorumlanır örtük ve açık olarak adlandırılır. Normal ifade seçeneklerini belirterek bunları ve varsayılan normal ifade davranışının diğer birçok yönünü değiştirebilirsiniz. Aşağıdaki tabloda listelenen Bu seçenekler, normal ifade deseni bir parçası olarak satır içi olabilir veya için sağlanabilir bir <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> sınıfı oluşturucusunun veya statik desen eşleştirme yöntemine olarak bir <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> numaralandırma değeri.  
@@ -394,5 +394,6 @@ ms.locfileid: "33579658"
  [!code-csharp[Conceptual.Regex.Language.Options#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/culture1.cs#15)]
  [!code-vb[Conceptual.Regex.Language.Options#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/culture1.vb#15)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Normal İfade Dili - Hızlı Başvuru](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Normal İfade Dili - Hızlı Başvuru](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
