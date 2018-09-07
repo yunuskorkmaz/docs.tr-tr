@@ -1,19 +1,19 @@
 ---
 title: 'Eşleşme ifadeleri (F #)'
-description: 'F # eşleşme ifadesi karşılaştırmaya ifade desenleri dayalı dallanma denetim nasıl sağladığını öğrenin.'
+description: 'F # eşleşme ifadesi ifade desenleri ile karşılaştırma temel alan dallanma denetim nasıl sağladığını öğrenin.'
 ms.date: 04/19/2018
-ms.openlocfilehash: 22cc4b7a87a60d8a5dcbe05ac5abec5560a37516
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: e4cb82f20fe82bff562736557c2346562c557f59
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33565184"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44047681"
 ---
-# <a name="match-expressions"></a><span data-ttu-id="19c88-103">Eşleşme ifadeleri</span><span class="sxs-lookup"><span data-stu-id="19c88-103">Match expressions</span></span>
+# <a name="match-expressions"></a><span data-ttu-id="86b8b-103">Eşleşme ifadeleri</span><span class="sxs-lookup"><span data-stu-id="86b8b-103">Match expressions</span></span>
 
-<span data-ttu-id="19c88-104">`match` İfade karşılaştırmaya ifade desenleri dayalı dallanma denetim sağlar.</span><span class="sxs-lookup"><span data-stu-id="19c88-104">The `match` expression provides branching control that is based on the comparison of an expression with a set of patterns.</span></span>
+<span data-ttu-id="86b8b-104">`match` İfade karşılaştırma ifade desenleri temel alan dallanma denetim sağlar.</span><span class="sxs-lookup"><span data-stu-id="86b8b-104">The `match` expression provides branching control that is based on the comparison of an expression with a set of patterns.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="19c88-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="19c88-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="86b8b-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="86b8b-105">Syntax</span></span>
 
 ```fsharp
 // Match expression.
@@ -29,11 +29,11 @@ function
 | ...
 ```
 
-## <a name="remarks"></a><span data-ttu-id="19c88-106">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="19c88-106">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="86b8b-106">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="86b8b-106">Remarks</span></span>
 
-<span data-ttu-id="19c88-107">Desen eşleştirme ifadeleri karşılaştırmaya test ifadesinin desenleri dayalı karmaşık dallanma için izin verir.</span><span class="sxs-lookup"><span data-stu-id="19c88-107">The pattern matching expressions allow for complex branching based on the comparison of a test expression with a set of patterns.</span></span> <span data-ttu-id="19c88-108">İçinde `match` ifadesi *test ifade* açın ve bir eşleşme bulunduğunda, karşılık gelen her deseni ile karşılaştırıldığında *sonuç ifadesi* değerlendirilir ve çıkan değeri eşleşme ifadesi değeri olarak döndürdü.</span><span class="sxs-lookup"><span data-stu-id="19c88-108">In the `match` expression, the *test-expression* is compared with each pattern in turn, and when a match is found, the corresponding *result-expression* is evaluated and the resulting value is returned as the value of the match expression.</span></span>
+<span data-ttu-id="86b8b-107">Desen eşleştirme ifadeler, karşılaştırma test ifade desenleri temel karmaşık dallara ayırmaya olanak tanır.</span><span class="sxs-lookup"><span data-stu-id="86b8b-107">The pattern matching expressions allow for complex branching based on the comparison of a test expression with a set of patterns.</span></span> <span data-ttu-id="86b8b-108">İçinde `match` ifade *test ifade* etkinleştirin ve bir eşleşme bulunduğunda, karşılık gelen her desen ile karşılaştırıldığında *sonuç ifadesi* değerlendirilir ve elde edilen değer eşleştirme ifadesi değerini döndürdü.</span><span class="sxs-lookup"><span data-stu-id="86b8b-108">In the `match` expression, the *test-expression* is compared with each pattern in turn, and when a match is found, the corresponding *result-expression* is evaluated and the resulting value is returned as the value of the match expression.</span></span>
 
-<span data-ttu-id="19c88-109">Desen eşleştirme önceki sözdiziminde gösterilen işlevi hangi desen eşleştirme hemen bağımsız gerçekleştirilir lambda ifadesi ' dir.</span><span class="sxs-lookup"><span data-stu-id="19c88-109">The pattern matching function shown in the previous syntax is a lambda expression in which pattern matching is performed immediately on the argument.</span></span> <span data-ttu-id="19c88-110">Desen eşleştirme önceki sözdiziminde gösterilen işlevi şuna eşdeğerdir.</span><span class="sxs-lookup"><span data-stu-id="19c88-110">The pattern matching function shown in the previous syntax is equivalent to the following.</span></span>
+<span data-ttu-id="86b8b-109">Önceki sözdiziminde gösterilen işlev desen, hangi desen eşleştirme hemen bağımsız değişken üzerinde gerçekleştirilen bir lambda ifadesidir.</span><span class="sxs-lookup"><span data-stu-id="86b8b-109">The pattern matching function shown in the previous syntax is a lambda expression in which pattern matching is performed immediately on the argument.</span></span> <span data-ttu-id="86b8b-110">Önceki sözdiziminde gösterilen işlev desen aşağıdakine eşdeğerdir.</span><span class="sxs-lookup"><span data-stu-id="86b8b-110">The pattern matching function shown in the previous syntax is equivalent to the following.</span></span>
 
 ```fsharp
 fun arg ->
@@ -43,27 +43,27 @@ fun arg ->
     | ...
 ```
 
-<span data-ttu-id="19c88-111">Lambda ifadeleri hakkında daha fazla bilgi için bkz: [Lambda ifadeleri: `fun` anahtar sözcüğü](functions/lambda-expressions-the-fun-keyword.md).</span><span class="sxs-lookup"><span data-stu-id="19c88-111">For more information about lambda expressions, see [Lambda Expressions: The `fun` Keyword](functions/lambda-expressions-the-fun-keyword.md).</span></span>
+<span data-ttu-id="86b8b-111">Lambda ifadeleri hakkında daha fazla bilgi için bkz. [Lambda ifadeleri: `fun` anahtar sözcüğü](functions/lambda-expressions-the-fun-keyword.md).</span><span class="sxs-lookup"><span data-stu-id="86b8b-111">For more information about lambda expressions, see [Lambda Expressions: The `fun` Keyword](functions/lambda-expressions-the-fun-keyword.md).</span></span>
 
-<span data-ttu-id="19c88-112">Desenler tam kümesi giriş değişkenin tüm olası eşleşmeler kapsamalıdır.</span><span class="sxs-lookup"><span data-stu-id="19c88-112">The whole set of patterns should cover all the possible matches of the input variable.</span></span> <span data-ttu-id="19c88-113">Joker karakter deseni sık kullandığınız (`_`) daha önce eşleşmeyen tüm giriş değerlerini eşleştirmek için son desen olarak.</span><span class="sxs-lookup"><span data-stu-id="19c88-113">Frequently, you use the wildcard pattern (`_`) as the last pattern to match any previously unmatched input values.</span></span>
+<span data-ttu-id="86b8b-112">Desenler tam kümesini giriş değişkeni, tüm olası eşleşmeler kapsamalıdır.</span><span class="sxs-lookup"><span data-stu-id="86b8b-112">The whole set of patterns should cover all the possible matches of the input variable.</span></span> <span data-ttu-id="86b8b-113">Joker karakter deseni sıkça kullandığınız (`_`) olarak daha önce eşleşmeyen tüm giriş değerlerini eşleştirmek için son desen.</span><span class="sxs-lookup"><span data-stu-id="86b8b-113">Frequently, you use the wildcard pattern (`_`) as the last pattern to match any previously unmatched input values.</span></span>
 
-<span data-ttu-id="19c88-114">Aşağıdaki kod, yollardan bazılarını gösterir `match` ifade kullanılır.</span><span class="sxs-lookup"><span data-stu-id="19c88-114">The following code illustrates some of the ways in which the `match` expression is used.</span></span> <span data-ttu-id="19c88-115">Bir başvuru ve kullanılabilir tüm olası düzeni örnekleri için bkz: [desen eşleştirme](pattern-matching.md).</span><span class="sxs-lookup"><span data-stu-id="19c88-115">For a reference and examples of all the possible patterns that can be used, see [Pattern Matching](pattern-matching.md).</span></span>
+<span data-ttu-id="86b8b-114">Aşağıdaki kod, bazı yöntemler gösterir `match` ifade kullanılır.</span><span class="sxs-lookup"><span data-stu-id="86b8b-114">The following code illustrates some of the ways in which the `match` expression is used.</span></span> <span data-ttu-id="86b8b-115">Başvuru ve kullanılabilir tüm olası düzeni örnekleri için bkz: [desen eşleştirme](pattern-matching.md).</span><span class="sxs-lookup"><span data-stu-id="86b8b-115">For a reference and examples of all the possible patterns that can be used, see [Pattern Matching](pattern-matching.md).</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4601.fs)]
 
-## <a name="guards-on-patterns"></a><span data-ttu-id="19c88-116">Modeli koruyucuları</span><span class="sxs-lookup"><span data-stu-id="19c88-116">Guards on patterns</span></span>
+## <a name="guards-on-patterns"></a><span data-ttu-id="86b8b-116">Cf desenleriyle ilgili</span><span class="sxs-lookup"><span data-stu-id="86b8b-116">Guards on patterns</span></span>
 
-<span data-ttu-id="19c88-117">Kullanabileceğiniz bir `when` değişkeni bir desenle eşleşen için karşılaması gereken ek bir koşulu belirtmek için yan tümcesi.</span><span class="sxs-lookup"><span data-stu-id="19c88-117">You can use a `when` clause to specify an additional condition that the variable must satisfy to match a pattern.</span></span> <span data-ttu-id="19c88-118">Bu tür bir yan tümce olarak adlandırılır bir *koruma*.</span><span class="sxs-lookup"><span data-stu-id="19c88-118">Such a clause is referred to as a *guard*.</span></span> <span data-ttu-id="19c88-119">İfade aşağıdaki `when` anahtar sözcüğü bu koruyucusu ile ilişkili desenle eşleşen bir kılmadığınız sürece değerlendirilmez.</span><span class="sxs-lookup"><span data-stu-id="19c88-119">The expression following the `when` keyword is not evaluated unless a match is made to the pattern associated with that guard.</span></span>
+<span data-ttu-id="86b8b-117">Kullanabileceğiniz bir `when` yan tümcesi değişkeni bir desenle eşleşen için karşılaması gereken ek bir koşulu belirtmek için.</span><span class="sxs-lookup"><span data-stu-id="86b8b-117">You can use a `when` clause to specify an additional condition that the variable must satisfy to match a pattern.</span></span> <span data-ttu-id="86b8b-118">Böyle bir yan tümce olarak adlandırılır bir *koruyucu*.</span><span class="sxs-lookup"><span data-stu-id="86b8b-118">Such a clause is referred to as a *guard*.</span></span> <span data-ttu-id="86b8b-119">İfade aşağıdaki `when` anahtar sözcüğü bir eşleşme deseni, koruyucusu ile ilişkili yapılmıyorsa değerlendirilmez.</span><span class="sxs-lookup"><span data-stu-id="86b8b-119">The expression following the `when` keyword is not evaluated unless a match is made to the pattern associated with that guard.</span></span>
 
-<span data-ttu-id="19c88-120">Aşağıdaki örnekte değişken deseni için sayısal bir aralık belirtmek için bir koruma kullanımını göstermektedir.</span><span class="sxs-lookup"><span data-stu-id="19c88-120">The following example illustrates the use of a guard to specify a numeric range for a variable pattern.</span></span> <span data-ttu-id="19c88-121">Boole işleçleri kullanarak birden çok koşul birleştirilir unutmayın.</span><span class="sxs-lookup"><span data-stu-id="19c88-121">Note that multiple conditions are combined by using Boolean operators.</span></span>
+<span data-ttu-id="86b8b-120">Aşağıdaki örnek, bir değişken desen için sayısal bir aralık belirtmek için bir koruma kullanımını gösterir.</span><span class="sxs-lookup"><span data-stu-id="86b8b-120">The following example illustrates the use of a guard to specify a numeric range for a variable pattern.</span></span> <span data-ttu-id="86b8b-121">Not Boole işleçleri kullanarak birden çok koşulu birleştirilir.</span><span class="sxs-lookup"><span data-stu-id="86b8b-121">Note that multiple conditions are combined by using Boolean operators.</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4602.fs)]
 
-<span data-ttu-id="19c88-122">Değişmez değerler dışında değerleri düzende kullanılamadığından kullanmanız gerektiğini unutmayın bir `when` değerle giriş kısmı karşılaştırmak varsa, yan tümcesi.</span><span class="sxs-lookup"><span data-stu-id="19c88-122">Note that because values other than literals cannot be used in the pattern, you must use a `when` clause if you have to compare some part of the input against a value.</span></span> <span data-ttu-id="19c88-123">Bu aşağıdaki kodda gösterilir:</span><span class="sxs-lookup"><span data-stu-id="19c88-123">This is shown in the following code:</span></span>
+<span data-ttu-id="86b8b-122">Değişmez değerler dışındaki değerler desende kullanılamaz çünkü kullanmanız gerektiğini unutmayın bir `when` değerle giriş kısmı Karşılaştırılacak varsa yan tümcesi.</span><span class="sxs-lookup"><span data-stu-id="86b8b-122">Note that because values other than literals cannot be used in the pattern, you must use a `when` clause if you have to compare some part of the input against a value.</span></span> <span data-ttu-id="86b8b-123">Bu, aşağıdaki kodda gösterilmiştir:</span><span class="sxs-lookup"><span data-stu-id="86b8b-123">This is shown in the following code:</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4603.fs)]
 
-<span data-ttu-id="19c88-124">Birleşim deseni koruyucu tarafından kapsanan, koruma için geçerli olduğunu unutmayın **tüm** yalnızca sonuncu desen.</span><span class="sxs-lookup"><span data-stu-id="19c88-124">Note that when a union pattern is covered by a guard, the guard applies to **all** of the patterns, not just the last one.</span></span> <span data-ttu-id="19c88-125">Örneğin, aşağıdaki kod, koruma verilen `when a > 12` hem de geçerli `A a` ve `B a`:</span><span class="sxs-lookup"><span data-stu-id="19c88-125">For example, given the following code, the guard `when a > 12` applies to both `A a` and `B a`:</span></span>
+<span data-ttu-id="86b8b-124">Bir birleşim deseni guard tarafından ele alınmıştır, koruma için geçerli olduğunu unutmayın **tüm** yalnızca sonuncu desenlerinin.</span><span class="sxs-lookup"><span data-stu-id="86b8b-124">Note that when a union pattern is covered by a guard, the guard applies to **all** of the patterns, not just the last one.</span></span> <span data-ttu-id="86b8b-125">Örneğin, aşağıdaki kod, koruma verilen `when a > 12` hem `A a` ve `B a`:</span><span class="sxs-lookup"><span data-stu-id="86b8b-125">For example, given the following code, the guard `when a > 12` applies to both `A a` and `B a`:</span></span>
 
 ```fsharp
 type Union =
@@ -80,8 +80,8 @@ let foo() =
 foo() // returns 42
 ```
 
-## <a name="see-also"></a><span data-ttu-id="19c88-126">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="19c88-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="86b8b-126">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="86b8b-126">See also</span></span>
 
-[<span data-ttu-id="19c88-127">F# Dili Başvurusu</span><span class="sxs-lookup"><span data-stu-id="19c88-127">F# Language Reference</span></span>](index.md)  
-[<span data-ttu-id="19c88-128">Etkin Desenler</span><span class="sxs-lookup"><span data-stu-id="19c88-128">Active Patterns</span></span>](active-patterns.md)  
-[<span data-ttu-id="19c88-129">Desen Eşleştirme</span><span class="sxs-lookup"><span data-stu-id="19c88-129">Pattern Matching</span></span>](pattern-matching.md)  
+- [<span data-ttu-id="86b8b-127">F# Dili Başvurusu</span><span class="sxs-lookup"><span data-stu-id="86b8b-127">F# Language Reference</span></span>](index.md)  
+- [<span data-ttu-id="86b8b-128">Etkin Desenler</span><span class="sxs-lookup"><span data-stu-id="86b8b-128">Active Patterns</span></span>](active-patterns.md)  
+- [<span data-ttu-id="86b8b-129">Desen Eşleştirme</span><span class="sxs-lookup"><span data-stu-id="86b8b-129">Pattern Matching</span></span>](pattern-matching.md)  

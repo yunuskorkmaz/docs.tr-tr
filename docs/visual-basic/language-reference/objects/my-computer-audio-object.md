@@ -6,26 +6,26 @@ helpviewer_keywords:
 - My.Computer.Audio object
 ms.assetid: ab5bdd04-b0ce-48b2-91c5-6404ceca31d0
 ms.openlocfilehash: 805e2a87e586e96048dd40033e7d80a74dcc94e9
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43744050"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44065816"
 ---
-# <a name="mycomputeraudio-object"></a><span data-ttu-id="a3bb3-102">My.Computer.Audio Nesnesi</span><span class="sxs-lookup"><span data-stu-id="a3bb3-102">My.Computer.Audio Object</span></span>
-<span data-ttu-id="a3bb3-103">Ses çalma için yöntemler sağlar.</span><span class="sxs-lookup"><span data-stu-id="a3bb3-103">Provides methods for playing sounds.</span></span>  
+# <a name="mycomputeraudio-object"></a><span data-ttu-id="bb7a1-102">My.Computer.Audio Nesnesi</span><span class="sxs-lookup"><span data-stu-id="bb7a1-102">My.Computer.Audio Object</span></span>
+<span data-ttu-id="bb7a1-103">Ses çalma için yöntemler sağlar.</span><span class="sxs-lookup"><span data-stu-id="bb7a1-103">Provides methods for playing sounds.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a3bb3-104">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="a3bb3-104">Remarks</span></span>  
- <span data-ttu-id="a3bb3-105">Yöntemleri ve özellikleri hakkında bilgi için `My.Computer.Audio` nesne, bkz: <xref:Microsoft.VisualBasic.Devices.Audio>.</span><span class="sxs-lookup"><span data-stu-id="a3bb3-105">For information about the methods and properties of the `My.Computer.Audio` object, see <xref:Microsoft.VisualBasic.Devices.Audio>.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="bb7a1-104">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="bb7a1-104">Remarks</span></span>  
+ <span data-ttu-id="bb7a1-105">Yöntemleri ve özellikleri hakkında bilgi için `My.Computer.Audio` nesne, bkz: <xref:Microsoft.VisualBasic.Devices.Audio>.</span><span class="sxs-lookup"><span data-stu-id="bb7a1-105">For information about the methods and properties of the `My.Computer.Audio` object, see <xref:Microsoft.VisualBasic.Devices.Audio>.</span></span>  
   
- <span data-ttu-id="a3bb3-106">Daha fazla bilgi için [oyun sesleri](../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md).</span><span class="sxs-lookup"><span data-stu-id="a3bb3-106">For more information, see [Playing Sounds](../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md).</span></span>  
+ <span data-ttu-id="bb7a1-106">Daha fazla bilgi için [oyun sesleri](../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md).</span><span class="sxs-lookup"><span data-stu-id="bb7a1-106">For more information, see [Playing Sounds](../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a3bb3-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="a3bb3-107">Requirements</span></span>  
- <span data-ttu-id="a3bb3-108">**Namespace:** <xref:Microsoft.VisualBasic.Devices></span><span class="sxs-lookup"><span data-stu-id="a3bb3-108">**Namespace:** <xref:Microsoft.VisualBasic.Devices></span></span>  
+## <a name="requirements"></a><span data-ttu-id="bb7a1-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="bb7a1-107">Requirements</span></span>  
+ <span data-ttu-id="bb7a1-108">**Namespace:** <xref:Microsoft.VisualBasic.Devices></span><span class="sxs-lookup"><span data-stu-id="bb7a1-108">**Namespace:** <xref:Microsoft.VisualBasic.Devices></span></span>  
   
- <span data-ttu-id="a3bb3-109">**Sınıf:** <xref:Microsoft.VisualBasic.Devices.Audio></span><span class="sxs-lookup"><span data-stu-id="a3bb3-109">**Class:** <xref:Microsoft.VisualBasic.Devices.Audio></span></span>  
+ <span data-ttu-id="bb7a1-109">**Sınıf:** <xref:Microsoft.VisualBasic.Devices.Audio></span><span class="sxs-lookup"><span data-stu-id="bb7a1-109">**Class:** <xref:Microsoft.VisualBasic.Devices.Audio></span></span>  
   
- <span data-ttu-id="a3bb3-110">**Bütünleştirilmiş kod:** Visual Basic çalışma zamanı kitaplığı (Microsoft.VisualBasic.dll içinde)</span><span class="sxs-lookup"><span data-stu-id="a3bb3-110">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
+ <span data-ttu-id="bb7a1-110">**Bütünleştirilmiş kod:** Visual Basic çalışma zamanı kitaplığı (Microsoft.VisualBasic.dll içinde)</span><span class="sxs-lookup"><span data-stu-id="bb7a1-110">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a3bb3-111">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="a3bb3-111">See Also</span></span>  
- [<span data-ttu-id="a3bb3-112">My.Computer Nesnesi</span><span class="sxs-lookup"><span data-stu-id="a3bb3-112">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)
+## <a name="see-also"></a><span data-ttu-id="bb7a1-111">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="bb7a1-111">See Also</span></span>  
+ [<span data-ttu-id="bb7a1-112">My.Computer Nesnesi</span><span class="sxs-lookup"><span data-stu-id="bb7a1-112">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)
