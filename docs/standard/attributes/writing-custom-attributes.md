@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 114d24c1fc523d5501deb4aa17f9541c5a918276
-ms.sourcegitcommit: c66ba2df2d2ecfb214f85ee0687d298e4941c1a8
+ms.openlocfilehash: 67a5ffe2075618020f3ab9f801852a1a97fc74d2
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "33574653"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44072174"
 ---
 # <a name="writing-custom-attributes"></a>Özel Öznitelikler Yazma
 Kendi özel öznitelikler tasarlamak için çok sayıda yeni kavramları ana gerekmez. Nesne odaklı programlama ile ilgili bilgi sahibi olduğunuz ve sınıfları tasarlama ne yapılacağını bildiğiniz, ihtiyacınız olan bilgileri çoğunu zaten vardır. Özel öznitelikler sınıflardır doğrudan veya dolaylı olarak türetilen temelde geleneksel <xref:System.Attribute?displayProperty=nameWithType>. Yalnızca geleneksel sınıflar gibi özel öznitelikler, veri depolama ve alma yöntemler içerir.  
@@ -148,7 +148,8 @@ Kendi özel öznitelikler tasarlamak için çok sayıda yeni kavramları ana ger
   
  İlk örnekte, yalnızca gerekli parametreler, hem gerekli ve isteğe bağlı parametrelerle uygulanan öznitelik gösterirken, ikinci örnek adlı ile uygulanan öznitelik gösterilmektedir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Attribute?displayProperty=nameWithType>  
- <xref:System.AttributeUsageAttribute?displayProperty=nameWithType>  
- [Öznitelikler](../../../docs/standard/attributes/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- <xref:System.Attribute?displayProperty=nameWithType>  
+- <xref:System.AttributeUsageAttribute?displayProperty=nameWithType>  
+- [Öznitelikler](../../../docs/standard/attributes/index.md)
