@@ -3,11 +3,11 @@ title: HTTP POST Kullanan AJAX Hizmeti
 ms.date: 03/30/2017
 ms.assetid: 1ac80f20-ac1c-4ed1-9850-7e49569ff44e
 ms.openlocfilehash: c102d9d403cefb1bf3d4ab75859a81172895c2e0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43659546"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44041115"
 ---
 # <a name="ajax-service-using-http-post"></a>HTTP POST Kullanan AJAX Hizmeti
 Bu örnek oluşturmak için Windows Communication Foundation (WCF) kullanmayı gösteren bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] HTTP POST kullanan zaman uyumsuz JavaScript ve XML (AJAX) hizmet. Bir AJAX temel JavaScript kodunu bir Web tarayıcısı istemcisini kullanarak erişebileceğiniz bir hizmettir. Bu örnek yapılar [temel AJAX hizmeti](../../../../docs/framework/wcf/samples/basic-ajax-service.md) örnek; iki örnek arasındaki tek fark, HTTP POST HTTP GET yerine kullanılmasıdır.  
