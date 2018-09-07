@@ -2,17 +2,16 @@
 title: Kısıtlamalar (F#)
 description: 'Bir genel tür veya işlev içinde bir tür bağımsız değişkeni için gereksinimleri belirtmek için genel tür parametreleri için geçerli olan F # kısıtlamaları hakkında bilgi edinin.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 0e79cf5b1a25ada49bf30416f85c1d59f8f2fd23
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
+ms.openlocfilehash: 9534db4ffd195022366af8c993658bd94f375f53
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525611"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43798218"
 ---
 # <a name="constraints"></a>Kısıtlamalar
 
 Bu konu başlığı altında genel için uygulayabileceğiniz kısıtlamasını açıklayan bir genel tür veya işlev içinde bir tür bağımsız değişkeni için gereksinimleri belirleme için parametre türü.
-
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -21,13 +20,14 @@ type-parameter-list when constraint1 [ and constraint2]
 ```
 
 ## <a name="remarks"></a>Açıklamalar
+
 Genel tür içinde kullanılabilir türleri sınırlamak uygulayabileceğiniz çeşitli farklı kısıtlamaları vardır. Aşağıdaki tabloda, listeler ve bu kısıtlamaları açıklar.
 
 |Kısıtlama|Sözdizimi|Açıklama|
 |----------|------|-----------|
 |Tür kısıtlaması|*tür-parametresi* :&gt; *türü*|Sağlanan türü belirtilen türünden eşit ya da bundan türetilmiş olmalıdır veya bir arabirim türü olduğundan, sağlanan türü arabirimini uygulaması gerekir.|
 |Null kısıtlaması|*tür-parametresi* : null|Sağlanan türü null sabiti desteklemesi gerekir. Bu tüm .NET nesne türlerini ancak F # listesi, tanımlama grubu, işlevi, sınıf, kayıt veya birleşim türleri içerir.|
-|Açık bir üye kısıtlaması|[()]*tür-parametresi* [veya... veya *tür-parametresi*)]: (*üye imzası*)|Sağlanan tür bağımsız değişkenlerini en az biri belirtilen imzaya sahip bir üyesi olması gerekir; Genel kullanım için tasarlanmamıştır. Üyeleri ya da açıkça türü veya bir örtük tür uzantısı bir parçası için açık bir üye kısıtlaması geçerli hedefleri olarak tanımlanması gerekir.|
+|Açık bir üye kısıtlaması|[(]*tür-parametresi* [veya... veya *tür-parametresi*)]: (*üye imzası*)|Sağlanan tür bağımsız değişkenlerini en az biri belirtilen imzaya sahip bir üyesi olması gerekir; Genel kullanım için tasarlanmamıştır. Üyeleri ya da açıkça türü veya bir örtük tür uzantısı bir parçası için açık bir üye kısıtlaması geçerli hedefleri olarak tanımlanması gerekir.|
 |Oluşturucu kısıtlaması|*tür-parametresi* : (yeni: birimi -&gt; ' bir)|Sağlanan türü bir varsayılan oluşturucuya sahip olmalıdır.|
 |Değer türü kısıtlaması|: Yapı|Sağlanan türü, bir .NET değer türü olması gerekir.|
 |Başvuru türü kısıtlaması|: Yapı değil|Sağlanan türü, bir .NET başvuru türü olması gerekir.|
@@ -114,7 +114,7 @@ type Class14<'T,'U when 'T : equality and 'U : equality> =
 class end
 ```
 
-## <a name="see-also"></a>Ayrıca Bkz.
-[Genel Türler](index.md)
+## <a name="see-also"></a>Ayrıca bkz.
 
-[Kısıtlamalar](constraints.md)
+- [Genel Türler](index.md)
+- [Kısıtlamalar](constraints.md)
