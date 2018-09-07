@@ -5,30 +5,31 @@ ms.date: 10/20/2017
 helpviewer_keywords:
 - LINQ to XML [Visual Basic]
 ms.assetid: 954b6e40-1246-4185-a018-4061724fcae9
-ms.openlocfilehash: 402d80184f569f041692d139209a8916bd87c49b
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 4ccdf0f4b05e23c1107d7df2a813e8b6de423589
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042575"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084393"
 ---
-# <a name="xml-in-visual-basic"></a><span data-ttu-id="dacce-103">Visual Basic'de XML</span><span class="sxs-lookup"><span data-stu-id="dacce-103">XML in Visual Basic</span></span>
+# <a name="xml-in-visual-basic"></a><span data-ttu-id="572e1-103">Visual Basic'de XML</span><span class="sxs-lookup"><span data-stu-id="572e1-103">XML in Visual Basic</span></span>
 
-<span data-ttu-id="dacce-104">Visual Basic ile etkileşim kurmak bağlayabileceğinizi tümleşik dil desteği sağlar [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="dacce-104">Visual Basic provides integrated language support that enables it to interact with [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span></span>  
+<span data-ttu-id="572e1-104">Visual Basic ile etkileşim kurmak bağlayabileceğinizi tümleşik dil desteği sağlar [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="572e1-104">Visual Basic provides integrated language support that enables it to interact with [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="dacce-105">Bu bölümde</span><span class="sxs-lookup"><span data-stu-id="dacce-105">In this section</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="572e1-105">Bu bölümde</span><span class="sxs-lookup"><span data-stu-id="572e1-105">In this section</span></span>  
 
- <span data-ttu-id="dacce-106">Bu bölümdeki konular kullanarak tanıtmak [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Visual Basic ile.</span><span class="sxs-lookup"><span data-stu-id="dacce-106">The topics in this section introduce using [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] with Visual Basic.</span></span>  
+ <span data-ttu-id="572e1-106">Bu bölümdeki konular kullanarak tanıtmak [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Visual Basic ile.</span><span class="sxs-lookup"><span data-stu-id="572e1-106">The topics in this section introduce using [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] with Visual Basic.</span></span>  
   
-|<span data-ttu-id="dacce-107">Konu</span><span class="sxs-lookup"><span data-stu-id="dacce-107">Topic</span></span>|<span data-ttu-id="dacce-108">Açıklama</span><span class="sxs-lookup"><span data-stu-id="dacce-108">Description</span></span>|  
+|<span data-ttu-id="572e1-107">Konu</span><span class="sxs-lookup"><span data-stu-id="572e1-107">Topic</span></span>|<span data-ttu-id="572e1-108">Açıklama</span><span class="sxs-lookup"><span data-stu-id="572e1-108">Description</span></span>|  
 |-----------|-----------------|  
-|[<span data-ttu-id="dacce-109">LINQ to XML Visual Basic'de genel bakış</span><span class="sxs-lookup"><span data-stu-id="dacce-109">Overview of LINQ to XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)|<span data-ttu-id="dacce-110">Visual Basic nasıl desteklediğini açıklar [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="dacce-110">Describes how Visual Basic supports [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span></span>|  
-|[<span data-ttu-id="dacce-111">Visual Basic'de XML oluşturma</span><span class="sxs-lookup"><span data-stu-id="dacce-111">Creating XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)|<span data-ttu-id="dacce-112">XML değişmez değer nesneleri kullanarak oluşturmayı açıklar [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="dacce-112">Describes how to create XML literal objects by using [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span></span>|  
-|[<span data-ttu-id="dacce-113">Visual Basic'de XML düzenleme</span><span class="sxs-lookup"><span data-stu-id="dacce-113">Manipulating XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)|<span data-ttu-id="dacce-114">Visual Basic kullanarak XML yüklenemedi ve açıklar.</span><span class="sxs-lookup"><span data-stu-id="dacce-114">Describes how to load and parse XML by using Visual Basic.</span></span>|  
-|[<span data-ttu-id="dacce-115">Visual Basic'de XML'e erişme</span><span class="sxs-lookup"><span data-stu-id="dacce-115">Accessing XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)|<span data-ttu-id="dacce-116">XML eksen özelliklerini açıklar ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] XML öğeleri ve özniteliklerinin erişmek için yöntemleri.</span><span class="sxs-lookup"><span data-stu-id="dacce-116">Describes the XML axis properties and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] methods for accessing XML elements and attributes.</span></span>|  
+|[<span data-ttu-id="572e1-109">LINQ to XML Visual Basic'de genel bakış</span><span class="sxs-lookup"><span data-stu-id="572e1-109">Overview of LINQ to XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)|<span data-ttu-id="572e1-110">Visual Basic nasıl desteklediğini açıklar [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="572e1-110">Describes how Visual Basic supports [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span></span>|  
+|[<span data-ttu-id="572e1-111">Visual Basic'de XML oluşturma</span><span class="sxs-lookup"><span data-stu-id="572e1-111">Creating XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)|<span data-ttu-id="572e1-112">XML değişmez değer nesneleri kullanarak oluşturmayı açıklar [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="572e1-112">Describes how to create XML literal objects by using [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span></span>|  
+|[<span data-ttu-id="572e1-113">Visual Basic'de XML düzenleme</span><span class="sxs-lookup"><span data-stu-id="572e1-113">Manipulating XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)|<span data-ttu-id="572e1-114">Visual Basic kullanarak XML yüklenemedi ve açıklar.</span><span class="sxs-lookup"><span data-stu-id="572e1-114">Describes how to load and parse XML by using Visual Basic.</span></span>|  
+|[<span data-ttu-id="572e1-115">Visual Basic'de XML'e erişme</span><span class="sxs-lookup"><span data-stu-id="572e1-115">Accessing XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)|<span data-ttu-id="572e1-116">XML eksen özelliklerini açıklar ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] XML öğeleri ve özniteliklerinin erişmek için yöntemleri.</span><span class="sxs-lookup"><span data-stu-id="572e1-116">Describes the XML axis properties and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] methods for accessing XML elements and attributes.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="dacce-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="dacce-117">See also</span></span>  
- <xref:System.Xml.Linq>  
- [<span data-ttu-id="dacce-118">XML Değişmez Değerleri</span><span class="sxs-lookup"><span data-stu-id="dacce-118">XML Literals</span></span>](../../../../visual-basic/language-reference/xml-literals/index.md)  
- [<span data-ttu-id="dacce-119">XML Eksen Özellikleri</span><span class="sxs-lookup"><span data-stu-id="dacce-119">XML Axis Properties</span></span>](../../../../visual-basic/language-reference/xml-axis/index.md)  
- [<span data-ttu-id="dacce-120">LINQ to XML</span><span class="sxs-lookup"><span data-stu-id="dacce-120">LINQ to XML</span></span>](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13)
+## <a name="see-also"></a><span data-ttu-id="572e1-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="572e1-117">See also</span></span>
+
+- <xref:System.Xml.Linq>  
+- [<span data-ttu-id="572e1-118">XML Değişmez Değerleri</span><span class="sxs-lookup"><span data-stu-id="572e1-118">XML Literals</span></span>](../../../../visual-basic/language-reference/xml-literals/index.md)  
+- [<span data-ttu-id="572e1-119">XML Eksen Özellikleri</span><span class="sxs-lookup"><span data-stu-id="572e1-119">XML Axis Properties</span></span>](../../../../visual-basic/language-reference/xml-axis/index.md)  
+- [<span data-ttu-id="572e1-120">LINQ to XML</span><span class="sxs-lookup"><span data-stu-id="572e1-120">LINQ to XML</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)
