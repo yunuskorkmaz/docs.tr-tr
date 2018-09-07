@@ -3,11 +3,11 @@ title: Kaynak Office Open XML belgesi (C#) oluşturma
 ms.date: 07/20/2015
 ms.assetid: 653c8cdb-73be-4dc2-927f-924cfb4ed9ed
 ms.openlocfilehash: 7941864e5dc2401a27df151c8c7806218609fcd4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43558239"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44082485"
 ---
 # <a name="creating-the-source-office-open-xml-document-c"></a>Kaynak Office Open XML belgesi (C#) oluşturma
 Bu konu, diğer bu öğreticideki örneklerde Office Open XML WordprocessingML belgesi nasıl oluşturacağınızı gösterir. Bu yönergeleri izleyin, çıkış her örnekte sağlanan çıkış eşleşir.  

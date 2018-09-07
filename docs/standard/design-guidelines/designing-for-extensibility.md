@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: 1cdb8740-871a-456c-9bd9-db96ca8d79b3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 68419fe293dd25936aa3c1e3def10bbe8852e175
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9c1690d0cdf1f57eaf0a794d6e71babfa4fa6425
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571390"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44080988"
 ---
 # <a name="designing-for-extensibility"></a>Genişletilebilirlik için tasarlama
-Bir çerçeve tasarlamanın önemli bir özelliği Genişletilebilirlik Çerçevesi dikkatle emin yapılmasıdır. Bu, çeşitli genişletilebilirlik mekanizmaları ile ilişkili yararlar ve maliyetleri anlamak gerektirir. Bu bölümde, genişletilebilirlik mekanizması karar vermenize yardımcı olan — sınıflara, olaylar, sanal üyeler, geri çağrılar ve benzeri —, framework gereksinimlerini en iyi karşılayabilecek.  
+Bir çerçeve tasarlamanın önemli yönlerinden biri framework'ün genişletilebilirlik dikkatle emin olmak. Bu, çeşitli genişletilebilirlik mekanizması ile ilişkili avantajlarını ve maliyetlerini anlamak gerektirir. Bu bölümde, genişletilebilirlik mekanizması karar vermenize yardımcı olur — sınıflara, olayları, sanal üyeleri, geri çağrılar ve benzeri — Çerçevenizi gereksinimlerini en iyi karşılayabilecek.  
   
- Genişletilebilirlik içinde çerçeve izin vermek için birçok yolu vardır. Bunlar daha az güçlü ancak daha az maliyetli pahalı ancak çok güçlü aralığının. Tüm verilen genişletilebilirlik gereksinimini gereksinimlerini karşılayan en az maliyetli genişletilebilirlik mekanizmasını seçmeniz gerekir. Daha fazla genişletilebilirlik daha sonra eklemek genellikle mümkündür, ancak hiçbir zaman onu hemen önemli değişiklikler oluşturmaksızın yapabileceğiniz aklınızda bulundurun.  
+ Genişletilebilirlik çerçeveleri alanında izin vermek için birçok yolu vardır. Bunlar daha güçlü ancak daha az maliyetli pahalı ancak çok güçlü aralığının. Herhangi bir belirli genişletilebilirlik gereksinim için gereksinimleri karşılayan az maliyetli genişletilebilirlik mekanizması seçmeniz gerekir. Daha sonra daha fazla genişletilebilirlik eklemek genellikle mümkündür, ancak hiçbir zaman onu hemen bozucu değişiklikleri oluşturmaksızın uygulayabileceğiniz aklınızda bulundurun.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Mühürsüz Sınıflar](../../../docs/standard/design-guidelines/unsealed-classes.md)  
@@ -30,9 +30,10 @@ Bir çerçeve tasarlamanın önemli bir özelliği Genişletilebilirlik Çerçev
  [Soyutlamalar (Soyut Türler ve Arabirimler)](../../../docs/standard/design-guidelines/abstractions-abstract-types-and-interfaces.md)  
  [Soyutlama Uygulamak için Temel Sınıflar](../../../docs/standard/design-guidelines/base-classes-for-implementing-abstractions.md)  
  [Mühürleme](../../../docs/standard/design-guidelines/sealing.md)  
- *Bölümleri © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
+ *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*  
+ *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)

@@ -3,11 +3,11 @@ title: 'Örnek XML dosyası: Birden fazla satın alma siparişi (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 2d29fcaa-60df-43d4-8ccc-6cdba7c013e9
 ms.openlocfilehash: f510de028198dc6ad1f86490704d1c8df6e39cf4
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43779201"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44070608"
 ---
 # <a name="sample-xml-file-multiple-purchase-orders-linq-to-xml"></a>Örnek XML dosyası: Birden fazla satın alma siparişi (LINQ to XML)
 Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri. Bu dosya, çeşitli satın alma siparişleri içerir.  

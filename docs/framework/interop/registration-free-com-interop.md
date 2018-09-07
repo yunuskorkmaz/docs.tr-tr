@@ -13,11 +13,11 @@ ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 939630726f399184c264f73ee01270f50981e83a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43860018"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44070036"
 ---
 # <a name="registration-free-com-interop"></a>Kayıtsız COM Birlikte Çalışma
 Kayıtsız COM birlikte çalışma bütünleştirilmiş kod bilgileri depolamak için Windows kayıt defteri kullanmadan bir bileşen etkinleştirir. Dağıtım sırasında bir bilgisayarda bir bileşen kaydetmek yerine Win32 stili bildirim dosyalarını, bağlama ve etkinleştirme hakkında bilgiler içeren tasarım zamanında oluşturun. Bu bildirim dosyaları yerine kayıt defteri anahtarları, bir nesnenin etkinleştirme doğrudan.  

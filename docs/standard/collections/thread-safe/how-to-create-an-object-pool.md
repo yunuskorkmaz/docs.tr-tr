@@ -10,21 +10,22 @@ helpviewer_keywords:
 ms.assetid: 0480e7ff-b6f9-480e-a889-2ed4264d8372
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9239a38d1970a052567f111b57be2b6596f1e5f1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0bc0c6bebbab6e84c165f41300a4cb16c8746a07
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32768313"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44067636"
 ---
 # <a name="how-to-create-an-object-pool-by-using-a-concurrentbag"></a>Nasıl yapılır: ConcurrentBag Kullanarak Nesne Havuzu Oluşturma
-Bu örnek bir eş zamanlı paketi nesne havuzu uygulamak için nasıl kullanılacağını gösterir. Nesne havuzları bir sınıfın birden çok örneği gerektirir ve sınıfı oluşturmak veya silmek pahalıdır durumlarda uygulama performansını iyileştirebilir. Bir istemci programı yeni bir nesne istediğinde, nesne havuzu ilk zaten oluşturulduğundan ve havuza geri döner bir sağlamaya çalışır. Ancak bundan sonra yeni bir nesne yoksa, oluşturulur.  
+Bu örnek, nesne havuzu uygulamak için eşzamanlı Torbaların kullanmayı gösterir. Nesne havuzları burada bir sınıfın birden çok örneği gerektirir ve sınıfı oluşturma veya yok et maliyetli durumlarda uygulama performansını iyileştirebilir. Bir istemci programını yeni bir nesne istediğinde, nesne havuzu zaten oluşturulduğundan ve havuza geri döndürülen bir sağlamaya ilk çalışır. Yoksa, ancak bundan sonra yeni bir nesne oluşturulur.  
   
- <xref:System.Collections.Concurrent.ConcurrentBag%601> özellikle iş parçacığı hem öğeler ekleme ve kaldırma zaman hızlı ekleme ve kaldırma, desteklediğinden, nesneleri depolamak için kullanılır. Bu örnek daha fazla geçici oluşturulacak engagement'ta bir <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>, yaptığınız gibi paketi veri yapısı uygulayan <xref:System.Collections.Concurrent.ConcurrentQueue%601> ve <xref:System.Collections.Concurrent.ConcurrentStack%601>.  
+ <xref:System.Collections.Concurrent.ConcurrentBag%601> özellikle aynı iş parçacığı hem öğeleri ekleme ve kaldırma sırasında hızlı ekleme ve kaldırma desteklediğinden, nesneleri depolamak için kullanılır. Bu örnek daha fazla geçici olarak oluşturulacak genişletilmesi bir <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>, olduğu gibi paket veri yapısı uygulayan <xref:System.Collections.Concurrent.ConcurrentQueue%601> ve <xref:System.Collections.Concurrent.ConcurrentStack%601>.  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[CDS#04](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds/cs/objectpool.cs#04)]
  [!code-vb[CDS#04](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/objectpool04.vb#04)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [İş Parçacığı Güvenli Koleksiyonları](../../../../docs/standard/collections/thread-safe/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [İş Parçacığı Güvenli Koleksiyonları](../../../../docs/standard/collections/thread-safe/index.md)

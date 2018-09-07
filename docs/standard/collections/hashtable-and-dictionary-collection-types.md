@@ -12,35 +12,36 @@ helpviewer_keywords:
 ms.assetid: bfc20837-3d02-4fc7-8a8f-c5215b6b7913
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6f682ba370e364629d6b79c5cedd28b4af834e58
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b4dde57e03e26085d19099e749afd50ba14874a5
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568891"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44063965"
 ---
 # <a name="hashtable-and-dictionary-collection-types"></a>Karma Tablo ve Sözlük Koleksiyon Türleri
-<xref:System.Collections.Hashtable?displayProperty=nameWithType> Sınıfı ve <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> ve <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> Genel sınıflar uygulamak <xref:System.Collections.IDictionary?displayProperty=nameWithType> arabirimi. <xref:System.Collections.Generic.Dictionary%602> Genel sınıfı ayrıca uygulayan <xref:System.Collections.Generic.IDictionary%602> genel arabirim. Bu nedenle, bu koleksiyonları her bir öğesinde bir anahtar ve değer çifti ' dir.  
+<xref:System.Collections.Hashtable?displayProperty=nameWithType> Sınıfı ve <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> ve <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> Genel sınıflar uygulamak <xref:System.Collections.IDictionary?displayProperty=nameWithType> arabirimi. <xref:System.Collections.Generic.Dictionary%602> Genel bir sınıf uygulayan <xref:System.Collections.Generic.IDictionary%602> genel arabirim. Bu nedenle, bu koleksiyonlardaki her öğe bir anahtar-değer çiftidir.  
   
- A <xref:System.Collections.Hashtable> nesnesi koleksiyon öğelerini içeren demet oluşur. Bir sanal alt öğeleri içinde kova grubudur <xref:System.Collections.Hashtable>, arama ve alma yapar daha kolay ve daha hızlıdır çoğu koleksiyonlarda. Her demet karma işlevi kullanılarak oluşturulur ve öğenin anahtarı temel bir karma kod ile ilişkilidir.  
+ A <xref:System.Collections.Hashtable> nesnesi koleksiyon öğelerini içeren kovaları oluşur. Bir sanal alt öğeleri içinde bir demet oluşturuyorum <xref:System.Collections.Hashtable>, alma ve arama yapar daha kolay ve çoğu koleksiyonlarda daha hızlı. Her bir demete bir karma işlevi kullanılarak oluşturulur ve öğe anahtarına göre bir karma kod ile ilişkilidir.  
   
- Genel <xref:System.Collections.Generic.HashSet%601> sınıfı, sırasız bir benzersiz öğeleri içeren koleksiyon.  
+ Genel <xref:System.Collections.Generic.HashSet%601> sırasız koleksiyonunun benzersiz öğeleri içeren bir sınıftır.  
   
- Hash işlevi bir anahtarı temel sayısal karma kodu döndürür bir algoritmadır. Anahtar depolanmakta nesnenin bazı özelliğinin değeri. Hash işlevi her zaman aynı anahtar için aynı karma koda döndürmelidir. İki farklı anahtarlar aynı karma kodunu oluşturmak için bir karma işlevi, ancak öğeleri karma tablosundan alınırken daha iyi performans her benzersiz anahtar sonuçlar için bir benzersiz karma kodu oluşturan karma işlevi mümkündür.  
+ Bir karma işlevi anahtarına göre sayısal karma kodu döndürür bir algoritmadır. Depolanmakta olan nesnenin bazı özelliğinin değeri anahtardır. Bir karma işlevi, her zaman aynı anahtar için aynı karma kodu döndürmesi gerekir. İki farklı anahtarlara aynı karma kodunu oluşturmak için bir karma işlevi, ancak daha iyi performans, öğeleri karma tablosundan alınırken her benzersiz anahtar sonuçları için bir benzersiz karma kodu oluşturan bir karma işlev mümkündür.  
   
- Bir öğe olarak kullanılan her nesne bir <xref:System.Collections.Hashtable> bir karma kod kendisi için uygulaması kullanarak oluşturabilir olmalıdır <xref:System.Object.GetHashCode%2A> yöntemi. Ancak, tüm öğeler için karma işlevi de belirleyebileceğiniz bir <xref:System.Collections.Hashtable> kullanarak bir <xref:System.Collections.Hashtable> kabul Oluşturucusu bir <xref:System.Collections.IHashCodeProvider> parametrelerinden biri olarak uygulama.  
+ Bir öğe olarak kullanılan her nesne bir <xref:System.Collections.Hashtable> uygulaması kullanarak üretmeden kendisi için bir karma kod olmalıdır <xref:System.Object.GetHashCode%2A> yöntemi. Ancak tüm öğeler için bir karma işlevi ayrıca belirtebileceğiniz bir <xref:System.Collections.Hashtable> kullanarak bir <xref:System.Collections.Hashtable> kabul eden Oluşturucu bir <xref:System.Collections.IHashCodeProvider> parametrelerinden biri olarak uygulama.  
   
- İçin bir nesne eklendiğinde bir <xref:System.Collections.Hashtable>, nesnenin karma kodu ile eşleşen karma kodu ile ilişkili demet depolanır. Ne zaman bir değer aranır için de <xref:System.Collections.Hashtable>karma kod için bu değer oluşturulur ve bu karma kodu ile ilişkili demet aranır.  
+ İçin bir nesne eklendiğinde bir <xref:System.Collections.Hashtable>, nesnenin karma kodu eşleşen karma kod ile ilişkili olan demetinde depolanır. Ne zaman bir değer aranır için de <xref:System.Collections.Hashtable>karma kod için bu değer oluşturulur ve bu karma koduyla ilişkili demetine aranır.  
   
- Örneğin, bir dize için bir karma işlevi bir dizede her karakter ASCII kodlarından alın ve bunları birlikte bir karma kodu oluşturmak için ekleyin. "Piknik" dize "sepet"; dize ilişkin karma kodu farklı bir karma kod gerekir Bu nedenle, dizeleri "Piknik" ve "sepet" içinde farklı demet olacaktır. Buna karşılık, "kullanımı yoğun" ve "desserts" aynı karma koda sahip ve aynı aralığındaki olacaktır.  
+ Örneğin, bir dize için karma işlevi bir dizedeki her karakterin ASCII kodları ele ve birlikte bir karma kod oluşturmak için bunları ekleyebilirsiniz. "Pikniğini" dize "sepet"; dize için karma kodu farklı bir karma kod gerekir Bu nedenle, farklı demet dizeleri "pikniğini" ve "sepet" olacaktır. Buna karşılık, "denebilecek" ve "desserts" aynı karma koda sahip ve aynı kovada olacaktır.  
   
- <xref:System.Collections.Generic.Dictionary%602> Ve <xref:System.Collections.Concurrent.ConcurrentDictionary%602> sınıfları aynı işlevselliğe sahip <xref:System.Collections.Hashtable> sınıfı. A <xref:System.Collections.Generic.Dictionary%602> belirli bir türdeki (dışında <xref:System.Object>) daha iyi performans sağlayan bir <xref:System.Collections.Hashtable> değer türleri için. Bunun nedeni, öğelerini <xref:System.Collections.Hashtable> türü <xref:System.Object>; bu nedenle, kutulama ve kutudan çıkarma genellikle ortaya depolamak ya da bir değer türü alır. <xref:System.Collections.Concurrent.ConcurrentDictionary%602> Birden çok iş parçacığı koleksiyonunun aynı anda erişirken sınıfı'nin kullanılması gerekir.  
+ <xref:System.Collections.Generic.Dictionary%602> Ve <xref:System.Collections.Concurrent.ConcurrentDictionary%602> sınıf ile aynı işlevlere sahip <xref:System.Collections.Hashtable> sınıfı. A <xref:System.Collections.Generic.Dictionary%602> belirli bir türdeki (dışında <xref:System.Object>) daha iyi performans sağlayan bir <xref:System.Collections.Hashtable> değer türleri için. Bunun nedeni, öğeleri <xref:System.Collections.Hashtable> türü <xref:System.Object>; bu nedenle, kutulama ve kutudan genellikle ortaya depolamak ya da bir değer türü alınamıyor. <xref:System.Collections.Concurrent.ConcurrentDictionary%602> Birden çok iş parçacığı koleksiyonu aynı anda erişirken sınıfı'nin kullanılması gerekir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Collections.Hashtable>  
- <xref:System.Collections.IDictionary>  
- <xref:System.Collections.IHashCodeProvider>  
- <xref:System.Collections.Generic.Dictionary%602>  
- <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>  
- <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>  
- [Yaygın Olarak Kullanılan Koleksiyon Türleri](../../../docs/standard/collections/commonly-used-collection-types.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- <xref:System.Collections.Hashtable>  
+- <xref:System.Collections.IDictionary>  
+- <xref:System.Collections.IHashCodeProvider>  
+- <xref:System.Collections.Generic.Dictionary%602>  
+- <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>  
+- <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>  
+- [Yaygın Olarak Kullanılan Koleksiyon Türleri](../../../docs/standard/collections/commonly-used-collection-types.md)

@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: üst bilgilere (C#) erişimle XML parçalarının Stre
 ms.date: 07/20/2015
 ms.assetid: 7f242770-b0c7-418d-894b-643215e1f8aa
 ms.openlocfilehash: 9c141b21a009f836fbf385c1f4179e288ec6c3b5
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745875"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44060602"
 ---
 # <a name="how-to-stream-xml-fragments-with-access-to-header-information-c"></a>Nasıl yapılır: üst bilgilere (C#) erişimle XML parçalarının Stream
 Bazen büyük XML dosyaları okur ve bellek Ayak izi uygulamanın öngörülebilir böylece uygulamanız yazma gerekir. İle büyük bir XML dosyasını bir XML ağacı doldurma çalışırsanız, bellek kullanım için dosya boyutu orantılı — diğer bir deyişle, aşırı. Bu nedenle, bir akış teknik yerine kullanmanız gerekir.  

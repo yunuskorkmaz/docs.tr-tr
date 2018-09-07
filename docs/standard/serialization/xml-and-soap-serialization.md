@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XML serialization
 - serialization
 ms.assetid: 832ac524-21bc-419a-a27b-ca8bfc45840f
-ms.openlocfilehash: ca3b31c1d60770a6b9db5e92275d9840036ee0b0
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: 366a4a42ff0bf968e51e11a66fa81566a47c86ea
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42753914"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44075289"
 ---
 # <a name="xml-and-soap-serialization"></a>XML ve SOAP serileştirme
 
@@ -90,6 +90,6 @@ Gelişmiş geliştirme görevlerini ve .NET Framework teknikleri hakkında daha 
 [ASP.NET ve XML Web hizmeti istemcileriyle kullanılarak oluşturulan XML Web Hizmetleri](https://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)  
 Açıklayan ve ASP.NET kullanarak XML Web Hizmetleri program açıklayan konuları sağlar.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-[İkili Serileştirme](binary-serialization.md)  
+- [İkili Serileştirme](binary-serialization.md)

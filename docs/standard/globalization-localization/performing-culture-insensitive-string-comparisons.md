@@ -16,11 +16,11 @@ ms.assetid: abae50ef-32f7-4a50-a540-fd256fd1aed0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 84b1c10b655fefcd420a0c3cf038dba00e688d3e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43876161"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084385"
 ---
 # <a name="performing-culture-insensitive-string-comparisons"></a>Kültüre Duyarsız Dize Karşılaştırmalarını Gerçekleştirme
 Varsayılan olarak, <xref:System.String.Compare%2A?displayProperty=nameWithType> yöntemi kültüre duyarlı ve büyük küçük harfe duyarlı karşılaştırmalar yapar. Bu yöntem sağlayan çeşitli tekrar yüklemeler de içerir. bir `culture` kullanılacak kültürü belirtmenize olanak sağlar. parametre ve bir `comparisonType` parametre kullanılacak karşılaştırma kurallarını belirtmenizi sağlar. Varsayılan tekrar yükleme yerine bu yöntemleri çağırmak, belirli bir yöntem çağrısında kullanılan kurallarla ilgili tüm belirsizlikleri kaldırır ve belirli bir karşılaştırmanın kültüre duyarlı veya kültüre duyarsız olduğunu netleştirir.  

@@ -10,23 +10,24 @@ helpviewer_keywords:
 ms.assetid: e1a253ff-e0fb-4df8-95ff-d01a90d4cb19
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a2dc5e650a479e782a6739a82e247c25e196fda
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 16dc60fa9cd8782efbe1b6028413138b5991839e
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583159"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44078814"
 ---
 # <a name="how-to-synchronize-concurrent-operations-with-a-barrier"></a>Nasıl yapılır: Eş Zamanlı Görevleri bir Engelle Eşitleme
 Aşağıdaki örnek, eş zamanlı görevleri ile eşitlemek gösterilmiştir bir <xref:System.Threading.Barrier>.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki programı amacı kaç yineleme (veya aşamaları) sayısı için her bulma için iki iş parçacığı için çözümü kendi yarısı aynı aşamaya sözcükleri sırasını yeniden ayarlaması randomizing bir algoritma kullanarak gereken budur. Her iş parçacığının kendi sözcükler karışık sonra engel sonrası aşaması işlemi tam bir cümle doğru word sırada işlenip işlenmediğini görmek için iki sonucu karşılaştırır.  
+ Aşağıdaki program amacı kaç yineleme (veya aşamaları) sayısı için her bulunacak iki iş parçacığı için çözümü kendi yarısında aynı aşamaya sözcük sırasını yeniden ayarlaması randomizing bir algoritma kullanarak gereklidir. Her iş parçacığı, sözcükleri karışık sonra engeli sonrası aşamasını işlemi doğru sözcük sırada işlendikten tam bir cümle görmek için iki sonucu karşılaştırır.  
   
  [!code-csharp[CDS_Barrier#01](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_barrier/cs/barrier.cs#01)]
  [!code-vb[CDS_Barrier#01](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_barrier/vb/barrier_vb.vb#01)]  
   
- A <xref:System.Threading.Barrier> tüm görevler engel ulaşana kadar devam etmeden bir paralel işlemin tek tek görevlere engelleyen bir nesnedir. Paralel işlem aşamada gerçekleşir ve her aşamada görevler arasında eşitleme gerektirdiğinde yararlı olacaktır. Bu örnekte, işlem için iki aşama vardır. İlk aşamada, her görev kendi bölümüne arabellek verilerle doldurur. Her görev kendi bölümüne doldurma tamamlandığında, görev devam etmeye hazır engel ve bekler işaret eder. Tüm Görevler engel işaret engeli ve ikinci aşaması başlar. İkinci aşama her görev, bu noktaya kadar üretilen tüm verilere erişimi olmasını gerektirdiğinden engel gereklidir. Engel ilk görevlerinin tamamlanması için henüz diğer görevler tarafından doldurulmuştur olmayan arabellekler okunacak deneyebilirsiniz. Bu şekilde aşamada herhangi bir sayıda eşitleyebilirsiniz.  
+ A <xref:System.Threading.Barrier> tüm görevler engel ulaşana kadar devam etmesini bir paralel işlemin içinde tek tek görevler engelleyen bir nesnedir. Bu aşamada paralel işlem gerçekleşir ve her aşamada görevler arasında eşitleme gerektirir yararlı olur. Bu örnekte, işlemi için iki aşaması vardır. İlk aşamada, her görev kendi bölümü arabellek verilerle doldurur. Her görev kendi bölümü doldurma tamamlandığında, görev, devam etmeye hazır engel ve bekler bildirir. Tüm Görevler engel sinyal kullanıcılar, engeli ve ikinci aşaması başlar. İkinci aşama, her görev, bu noktada oluşturulan tüm veri erişimi olmasını gerektirdiğinden engel gereklidir. Engel ilk görevleri tamamlamak için henüz diğer görevler tarafından doldurulmuştur olmayan arabellekler okunacak deneyebilir. Bu aşamada herhangi bir sayıda eşitleyebilirsiniz.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Paralel Programlama için Veri Yapıları](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Paralel Programlama için Veri Yapıları](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md)

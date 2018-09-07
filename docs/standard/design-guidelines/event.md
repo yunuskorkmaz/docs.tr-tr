@@ -1,5 +1,5 @@
 ---
-title: Olay tasarım
+title: Olay tasarımı
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: 67b3c6e2-6a8f-480d-a78f-ebeeaca1b95a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 48d1ad0f02ae34675c0a910d7651d718c060db60
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b257da73d33fae54ef464e9dd69906316b87fd88
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575400"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44064075"
 ---
-# <a name="event-design"></a>Olay tasarım
-Olayları geri aramalar (Framework'te kullanıcı kodu içine çağırmak izin yapıları) en yaygın kullanılan biçimidir. Diğer geri çağırma düzenekler Temsilciler, sanal üyeleri ve arabirim tabanlı eklentiler alma üyeleri içerir. Kullanılabilirlik incelemeleri verilerden geliştiriciler çoğunluğu için bir geri çağırma mekanizmaları kullanan çok olayları kullanarak daha rahat olduğunu gösterir. Olayları sorunsuz şekilde Visual Studio ve birçok dilde ile tümleşiktir.  
+# <a name="event-design"></a>Olay tasarımı
+Olayları en yaygın kullanılan geri çağırmalar (kullanıcı koda çağrı için framework izin yapıları) biçimindedir. Başka bir geri çağırma mekanizmalar Temsilciler, sanal üyeleri ve arabirim tabanlı eklentileri alma üyeleri içerir. Kullanılabilirlik incelemeleri verilerden geliştiricilerin çoğu kullandıkları için bir geri çağırma mekanizmaları çok olayları kullanarak daha iyi olduğunu gösterir. Olayları Visual Studio ve birçok dili ile sorunsuz şekilde tümleşiktir.  
   
- Olayların iki grup olduğunu dikkate almak önemlidir: öncesi olaylar ve durum değişiklikler sonra oluşturulan olaylara adlı Sistem değişiklikleri durumunu önce başlatılan olayları sonrası olayları çağrılır. Bir ön olayının bir örnek olabilir `Form.Closing`, bir form kapatılmadan önce oluşur. Bir örnek sonrası olay olabilir `Form.Closed`, bir form kapatıldıktan sonra oluşur.  
+ İki olay gruplarını olduğuna dikkat edin önemlidir: öncesi olayları ve bir durum olarak değiştirdikten sonra oluşturulan olayları adlı Sistem değişiklikleri durumunu önce harekete geçirilen olayları sonrası olayları çağrılır. Bir ön olayının örnek verilebilir `Form.Closing`, bir form kapatılmadan hemen önce oluşturulur. Örnek sonrası olayının `Form.Closed`, bir form kapatıldıktan sonra oluşturulur.  
   
  **✓ DO** olayları yerine "yangın" veya "tetikleyicisi." için "Oluştur" terimi kullanın  
   
@@ -30,17 +30,17 @@ Olayları geri aramalar (Framework'te kullanıcı kodu içine çağırmak izin y
   
  **✓ CONSIDER** öğesinin bir alt kümesi kullanarak <xref:System.EventArgs> olay bağımsız değişken olarak olay olay yöntemi, işleme için herhangi bir veri taşımak hiçbir zaman gerekir kesinlikle emin olmadığınız sürece bu durumda kullanabilirsiniz `EventArgs` doğrudan yazın.  
   
- Bir API kullanarak gönderirseniz `EventArgs` doğrudan, hiç olay ile uyumluluk bozmadan gerçekleştirilmesi için herhangi bir veri eklemek kullanamazsınız. Bir alt sınıfı kullanırsanız, hatta tamamen başlangıçta boş, gerektiğinde alt özellikleri eklemeniz mümkün olup olmayacağını.  
+ Bir API'yi kullanarak gönderdiğimde `EventArgs` doğrudan, hiç olay ile uyumluluk bozup olmadan gerçekleştirilmesi için herhangi bir veri eklemek mümkün olmayacak. Öğesinin alt sınıfı kullanırsanız, hatta başlangıçta tamamen boş, gerektiğinde alt özellikler eklemeniz mümkün olmayacak durumunda.  
   
- **✓ DO** her olay oluşturmak için korumalı sanal bir yöntem kullanın. Bu durum yalnızca korumasız sınıflar, yapılar, sealed sınıfları veya statik olaylar üzerinde statik olmayan olaylar için geçerlidir.  
+ **✓ DO** her olay oluşturmak için korumalı sanal bir yöntem kullanın. Bu durum yalnızca statik olmayan olayları mühürsüz sınıflar, yapılar, sınıfları veya statik olaylar için geçerlidir.  
   
- Yöntemin amacı bir geçersiz kılma kullanılarak olayını işlemek türetilmiş bir sınıf için bir yol sağlamaktır. Geçersiz kılma türetilmiş sınıflarda temel sınıf olayları işlemek için daha esnek, daha hızlı ve daha doğal bir yoludur. Kural tarafından yöntemin adını "ile" başlatmak ve olayın adı izlemelidir.  
+ Yöntem amacı, bir geçersiz kılma kullanılarak olayı işlemek bir türetilen sınıf için bir yol sağlamaktır. Geçersiz kılma türetilmiş sınıflarda temel sınıf olayları işlemek için daha esnek, daha hızlı ve daha doğal bir yoludur. Kural olarak, yöntemin adı "ile" başlatmak ve olay adıyla izlenmesi.  
   
- Türetilmiş sınıf kendi geçersiz kılmada yönteminin temel uygulamayı çağırması değil seçebilirsiniz. Bunun için herhangi bir işlem düzgün çalışması için temel sınıf gereklidir yöntemi ekleyerek değil hazır olun.  
+ Türetilmiş sınıf, yöntemin taban uygulamasını kendi geçersiz kılma seçeneğinde çağırmamanız seçebilirsiniz. Bu, herhangi bir işlem düzgün çalışması temel sınıf için gerekli olan yönteminde içermeden tarafından hazır olun.  
   
  **✓ DO** bir olay başlatır korumalı yöntemi için tek bir parametre almalıdır.  
   
- Parametre adlı `e` ve olay bağımsız değişkeni sınıf olarak yazılmalıdır.  
+ Parametre adlı `e` ve olay bağımsız değişken sınıf olarak yazılmalıdır.  
   
  **X DO NOT** statik olmayan bir olayı tetiklenmeden olduğunda gönderen olarak null geçir.  
   
@@ -48,18 +48,18 @@ Olayları geri aramalar (Framework'te kullanıcı kodu içine çağırmak izin y
   
  **X DO NOT** bir olayı tetiklenmeden olduğunda olay verileri parametre null geçir.  
   
- Geçmesi `EventArgs.Empty` olay yöntemi işleme için herhangi bir veri geçirmek istemiyorsanız. Geliştiriciler null olmaması için bu parametreyi bekler.  
+ Geçirmeniz `EventArgs.Empty` olay yöntemi işleme için herhangi bir veri geçirmek istemiyorsanız. Geliştiriciler bu parametre null olmaması beklenir.  
   
- **✓ CONSIDER** son kullanıcı iptal edebilirsiniz olaylar oluşturma. Bu, yalnızca ön olayları için geçerlidir.  
+ **✓ CONSIDER** son kullanıcı iptal edebilirsiniz olaylar oluşturma. Bu, yalnızca öncesi olaylar için geçerlidir.  
   
- Kullanım <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType> veya onun bir alt olayları iptal etmek son kullanıcı izin vermek için olay bağımsız değişken olarak.  
+ Kullanım <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType> veya onun alt olayları iptal etmek son kullanıcı izin vermek için olay bağımsız değişkeni olarak.  
   
 ### <a name="custom-event-handler-design"></a>Özel olay işleyicisi tasarım  
- Hangi durumlarda vardır `EventHandler<T>` Framework'te genel türler desteklememektedir CLR önceki sürümleri ile çalışması gerektiği zaman gibi kullanılamaz. Böyle durumlarda, özel olay işleyici temsilcisi tasarlayıp gerekebilir.  
+ Hangi durumlarda vardır `EventHandler<T>` Framework'te genel türler desteklememektedir CLR'nin önceki sürümleriyle çalışmaya gerektiğinde gibi kullanılamaz. Böyle durumlarda bir özel olay işleyici temsilcisini tasarlayıp gerekebilir.  
   
  **✓ DO** dönüş türü void olay işleyicileri için kullanın.  
   
- Olay işleyici birden çok olay işleme yöntemleri, büyük olasılıkla birden fazla nesne çağırabilirsiniz. Olay işleme yöntemleri bir değer döndürmesi izin verilmekteydi her olay başlatma için birden çok dönüş değerlerini olacaktır.  
+ Bir olay işleyicisi, birden çok olay işleme, birden çok nesnelerde yöntemi çağırabilirsiniz. Bir değer döndürmek için olay işleme yöntemleri izin verilirse, her olay çağırma için birden çok değer olacaktır.  
   
  **✓ DO** kullanmak `object` olay işleyicisinin ilk parametresinin türü olarak ve çağrısından `sender`.  
   
@@ -67,10 +67,11 @@ Olayları geri aramalar (Framework'te kullanıcı kodu içine çağırmak izin y
   
  **X DO NOT** olay işleyicileri ikiden fazla parametrelere sahip.  
   
- *Bölümleri © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
+ *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*  
+ *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Üye Tasarımı Yönergeleri](../../../docs/standard/design-guidelines/member.md)  
- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Üye Tasarımı Yönergeleri](../../../docs/standard/design-guidelines/member.md)  
+- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)

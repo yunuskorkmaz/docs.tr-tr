@@ -1,17 +1,17 @@
 ---
 title: Tür Kısaltmaları (F#)
-description: 'Bir tür kodu okunmasını kolaylaştırmak için daha anlamlı bir ad vermek için F # tür kısaltmaları hakkında bilgi edinin.'
+description: 'Bir tür, kodun okunmasını kolaylaştırmak için daha anlamlı bir ad vermek için F # tür kısaltmaları hakkında bilgi edinin.'
 ms.date: 05/16/2016
-ms.openlocfilehash: e222caa41a20a64071c94cffea6ea7b2bec8eb22
-ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
+ms.openlocfilehash: 259cd6c84e22fc7c98e08255d3e0ded5b87af352
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/11/2018
-ms.locfileid: "34058964"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44065441"
 ---
 # <a name="type-abbreviations"></a>Tür Kısaltmaları
 
-A *türü kısaltması* bir diğer ad veya bir tür için diğer ad.
+A *türü kısaltması* bir diğer ad ya da bir tür için diğer ad.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -20,23 +20,23 @@ type [accessibility-modifier] type-abbreviation = type-name
 ```
 
 ## <a name="remarks"></a>Açıklamalar
-Tür kısaltmaları türü kodu okunmasını kolaylaştırmak için daha anlamlı bir ad vermek için kullanabilirsiniz. Ayrıca bunları aksi yazamadı sıkıcı bir tür için kullanımı kolay bir ad oluşturmak için kullanabilirsiniz. Ayrıca, temel alınan tür türü kullanan tüm kodu değiştirmeden değiştirmek kolaylaştırmak için tür kısaltmaları kullanabilirsiniz. Bir basit tür kısaltması verilmiştir.
+
+Tür kısaltmaları bir tür, kodun okunmasını kolaylaştırmak için daha anlamlı bir ad vermek için kullanabilirsiniz. Ayrıca bunları aksi yazılmasına yarar yavaşlatan bir tür için kullanımı kolay bir ad oluşturmak için kullanabilirsiniz. Ayrıca, tür kısaltmaları türünü kullanan tüm kodunda değişiklik yapmadan bir temel türü değiştirme daha kolay hale getirmek için kullanabilirsiniz. Bir basit türü kısaltması verilmiştir.
 
 Tür kısaltmaları erişilebilirliğini varsayılanları `public`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2301.fs)]
 
-Tür kısaltmaları aşağıdaki kodu olduğu gibi genel parametreler içerebilir.
+Tür kısaltmaları, aşağıdaki kodda gösterildiği gibi genel parametreler ekleyebilir.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2302.fs)]
 
-Önceki kod `Transform` herhangi bir türde tek bir bağımsız değişken bir işlevi temsil eden bir tür kısaltması olduğu ve aynı türde tek bir değer döndürür.
+Önceki kodda, `Transform` herhangi bir türde tek bir bağımsız değişken alan bir işlev temsil eden bir tür kısaltması olduğundan ve aynı türde tek bir değer döndürür.
 
-Tür kısaltmaları .NET Framework MSIL kodda korunmaz. Bu nedenle, F # bütünleştirilmiş başka bir .NET Framework dilden kullandığınızda, bir tür kısaltması için temel alınan tür adını kullanmanız gerekir.
+Tür kısaltmaları .NET Framework MSIL kodu korunmaz. Bu nedenle, bir F # derleme başka bir .NET Framework dilden kullandığınızda, temel alınan tür adı için bir tür kısaltması kullanmanız gerekir.
 
-Tür kısaltmaları ölçü üzerinde de kullanılabilir. Daha fazla bilgi için bkz: [ölçü](units-of-measure.md).
+Tür kısaltmaları ölçü birimi üzerinde de kullanılabilir. Daha fazla bilgi için [ölçü](units-of-measure.md).
 
+## <a name="see-also"></a>Ayrıca bkz.
 
-## <a name="see-also"></a>Ayrıca Bkz.
-[F# Dili Başvurusu](index.md)
-
+- [F# Dili Başvurusu](index.md)

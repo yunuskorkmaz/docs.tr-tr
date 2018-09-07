@@ -2,12 +2,12 @@
 title: Web Hizmetleri genel serileştirme teknolojisi örneği
 ms.date: 03/30/2017
 ms.assetid: cdc15ea4-f678-4729-8ebe-188ae720bef7
-ms.openlocfilehash: 799206b1bd86e98c87441771174441d07074a325
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: b233ed4374231c7e7ff2b6617a63c4e4c94612c2
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37936782"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44060391"
 ---
 # <a name="web-services-generics-serialization-technology-sample"></a>Web Hizmetleri genel serileştirme teknolojisi örneği
 [Örneği indirin](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/GenericsSerialization.zip.exe)  
@@ -63,9 +63,10 @@ ms.locfileid: "37936782"
 ## <a name="remarks"></a>Açıklamalar  
  Örnek Web hizmeti tanımının bağlantılar içeren bir varsayılan ASP.NET sayfasını görüntüler. Web hizmeti için kaynak kodu değiştirme ek olarak görünen özelleştirebilirsiniz. Daha fazla bilgi için [yapı XML Web hizmeti istemcileriyle](https://msdn.microsoft.com/library/c606f3cb-4111-45b4-ae42-9300420fa16c).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Collections.Generic>  
- <xref:System.Web.Services>  
- <xref:System.Xml.Serialization>  
- [Serileştirme](../../../docs/standard/serialization/index.md)  
- [ASP.NET ve XML Web hizmeti istemcileriyle kullanılarak oluşturulan XML Web Hizmetleri](https://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- <xref:System.Collections.Generic>  
+- <xref:System.Web.Services>  
+- <xref:System.Xml.Serialization>  
+- [Serileştirme](../../../docs/standard/serialization/index.md)  
+- [ASP.NET ve XML Web hizmeti istemcileriyle kullanılarak oluşturulan XML Web Hizmetleri](https://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)

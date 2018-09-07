@@ -5,12 +5,12 @@ helpviewer_keywords:
 - statements [C#], about statements
 - C# language, statements
 ms.assetid: 901bcde7-87de-4e15-833c-f9cfd40c8ce3
-ms.openlocfilehash: 826fea55d1e85e2ec44ec1e752f809ec3cc08433
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 515ae6bb6030e80c80289ff888f07ade2f341792
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43660206"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44080091"
 ---
 # <a name="statements-c-programming-guide"></a>Deyimler (C# Programlama Kılavuzu)
 Bir programı alan eylemleri deyimlerinde ifade edilir. Ortak Eylemler değişkenleri bildirme, değerler atama, koleksiyonlar üzerinden döngü oluşturma ve bir ya da başka bir verili bir koşula bağlı kod bloğu için dallanma metotları çağırma içerir. Deyimleri bir programda yürütüldüğü sırada, denetim akışı veya, yürütmenin akışını çağrılır. Denetim akışı nasıl program çalışma zamanında aldığı giriş tepki verdiğini bağlı olarak bir program çalıştırıldığında her zaman değişiklik gösterebilir.  
@@ -32,7 +32,7 @@ Bir programı alan eylemleri deyimlerinde ifade edilir. Ortak Eylemler değişke
 |[Özel durum işleme deyimleri](../../../csharp/language-reference/keywords/exception-handling-statements.md)|Özel durum işleme deyimleri düzgün bir şekilde çalışma zamanında gerçekleşen özel durumları kurtarmanıza olanak tanır. Daha fazla bilgi için aşağıdaki konulara bakın:<br /><br /> [throw](../../../csharp/language-reference/keywords/throw.md), [try-catch](../../../csharp/language-reference/keywords/try-catch.md), [try-finally](../../../csharp/language-reference/keywords/try-finally.md), [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)|  
 |[Checked ve unchecked](../../../csharp/language-reference/keywords/checked-and-unchecked.md)|İşaretli ve işaretsiz ifadeler sayısal işlemleri sonucu sonuç değerini tutmak için çok küçük bir değişkende depolanan bir taşma zaman neden izin verilip verilmeyeceğini belirtmenizi sağlar. Daha fazla bilgi için [kullanıma](../../../csharp/language-reference/keywords/checked.md) ve [denetlenmeyen](../../../csharp/language-reference/keywords/unchecked.md).|  
 |`await` Deyimi|Bir yöntem ile işaretlerseniz [zaman uyumsuz](../../../csharp/language-reference/keywords/async.md) kullanabileceğiniz değiştiricisi [await](../../../csharp/language-reference/keywords/await.md) yönteminde işleci. Ulaştığında denetlemek bir `await` zaman uyumsuz yöntemin ifadesinde, Denetim çağırana döner ve awaited görevi tamamlanıncaya kadar yöntemin ediyor askıya alındı. Görev tamamlandığında, yürütme yönteminde devam edebilir.<br /><br /> Basit bir örnek için bkz. "Zaman uyumsuz yöntemler" bölümünü [yöntemleri](../../../csharp/programming-guide/classes-and-structs/methods.md). Daha fazla bilgi için [Asynchronous Programming with async ve await](../../../csharp/programming-guide/concepts/async/index.md).|  
-|`yield return` Deyimi|Bir yineleyici listesini veya bir dizi gibi bir koleksiyon üzerinde özel yineleme gerçekleştirir. Yineleyici [yield return](../../../csharp/language-reference/keywords/yield.md) her öğeyi bir defada döndürmek için deyimi. Olduğunda bir `yield return` deyimine ulaşıldığında, kodun geçerli konumu anımsanacak. Yürütme, yineleyici sonraki sefer çağrıldığında bu konumdan yeniden başlatılır.<br /><br /> Daha fazla bilgi için [yineleyiciler](https://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).|  
+|`yield return` Deyimi|Bir yineleyici listesini veya bir dizi gibi bir koleksiyon üzerinde özel yineleme gerçekleştirir. Yineleyici [yield return](../../../csharp/language-reference/keywords/yield.md) her öğeyi bir defada döndürmek için deyimi. Olduğunda bir `yield return` deyimine ulaşıldığında, kodun geçerli konumu anımsanacak. Yürütme, yineleyici sonraki sefer çağrıldığında bu konumdan yeniden başlatılır.<br /><br /> Daha fazla bilgi için [yineleyiciler](../../../csharp/programming-guide/concepts/iterators.md).|  
 |`fixed` Deyimi|Fixed deyimi, çöp toplayıcı taşınabilir bir değişken yerini değiştirme alanından engeller. Daha fazla bilgi için [sabit](../../../csharp/language-reference/keywords/fixed-statement.md).|  
 |`lock` Deyimi|Lock deyimi, bir kerede yalnızca bir iş parçacığına kod bloklarını erişimi sınırlamak sağlar. Daha fazla bilgi için [kilit](../../../csharp/language-reference/keywords/lock-statement.md).|  
 |Etiketli deyimler|Bir deyimi bir etiket verin ve ardından [goto](../../../csharp/language-reference/keywords/goto.md) etiketli deyime atlamak için anahtar sözcüğü. (Aşağıdaki satırı örneğe bakın.)|  

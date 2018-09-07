@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 81b64b95-13f7-4532-9249-ab532f629598
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a8bb84f2e26471e004678afde99a1dd725db6832
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: 98d30cd89114aa4aa3d4f7f71f5174c54d3fcecb
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42755112"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44075767"
 ---
 # <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Nasıl yapılır: Öğeleri Ekleme ve Bir ConcurrentDictionary'dan Alma
 Bu örnek, ekleyin, alma, güncelleştirme ve öğelerden Kaldır gösterir. bir <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>. Bir iş parçacığı açısından güvenli uygulaması bu koleksiyon sınıfıdır. Birden çok iş parçacığı öğeleri aynı anda erişmeye çalışıyor olabilir her bunu kullanmanızı öneririz.  
@@ -48,6 +48,7 @@ Bu örnek, ekleyin, alma, güncelleştirme ve öğelerden Kaldır gösterir. bir
   
  Bu nedenle, böyle değildir, tarafından döndürülen veri garanti <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> iş parçacığının valueFactory tarafından oluşturulan aynı verilerdir. Benzer bir olay dizisi oluşabilir olduğunda <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A> çağrılır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
- [İş Parçacığı Güvenli Koleksiyonları](../../../../docs/standard/collections/thread-safe/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
+- [İş Parçacığı Güvenli Koleksiyonları](../../../../docs/standard/collections/thread-safe/index.md)

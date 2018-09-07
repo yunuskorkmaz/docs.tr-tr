@@ -6,11 +6,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: dbd12b3e08b6e21d26e2cb688a591cd4e03574dc
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43565583"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44067415"
 ---
 # <a name="changes-to-the-systemuri-namespace-in-version-20"></a>System.Uri ad alanında sürüm 2.0 değişiklikler
 Birkaç değişiklik yapılmıştır <xref:System.Uri?displayProperty=nameWithType> sınıfı. Bu değişiklikler yanlış davranışa sabit, artırılmış kullanılabilirlik ve Gelişmiş Güvenlik.  

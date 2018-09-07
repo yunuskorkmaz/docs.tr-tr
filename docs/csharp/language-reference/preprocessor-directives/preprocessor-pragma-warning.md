@@ -7,11 +7,11 @@ helpviewer_keywords:
 - '#pragma warning [C#]'
 ms.assetid: 723493d5-9753-4cec-babb-54e2b8eb36b6
 ms.openlocfilehash: 89ff8151d55ac58a1b114f7727297704ce26b9a7
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43873698"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44083658"
 ---
 # <a name="pragma-warning-c-reference"></a>#pragma uyarısı (C# Başvurusu)
 `#pragma warning` etkinleştirebilir veya belirli uyarıları devre dışı bırak.  

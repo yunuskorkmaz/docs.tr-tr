@@ -1,33 +1,34 @@
 ---
-title: Bir okuyucudan veri yükleme
+title: Okuyucudan veri yükleme
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 7e74918c-bc72-4977-a49b-e1520a6d8f60
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5156374708beb07da875d2e2a8a3b74e52e21427
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 55756092f086de47c4b2acb8f147ca3ab231abe1
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569980"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44068930"
 ---
-# <a name="load-data-from-a-reader"></a>Bir okuyucudan veri yükleme
-Kullanarak bir XML belgesi yüklerse <xref:System.Xml.XmlDocument.Load%2A> yöntemi ve bir parametresi bir <xref:System.Xml.XmlReader>, verileri diğer biçimlerinden davranışı karşılaştırıldığında ortaya çıkan davranış farklılıklar vardır. Okuyucu ilk durumuna ise <xref:System.Xml.XmlDocument.Load%2A> okuyucudan tüm içeriği kullanır ve XML belge nesne modeli (DOM) Okuyucudaki tüm verileri oluşturur.  
+# <a name="load-data-from-a-reader"></a>Okuyucudan veri yükleme
+Bir XML belgesi kullanarak yüklü ise <xref:System.Xml.XmlDocument.Load%2A> yöntemi ve parametre olarak bir <xref:System.Xml.XmlReader>, diğer biçimlerinden veri yükleme davranışını karşılaştırıldığında ortaya çıkan davranış farkları vardır. Okuyucu, başlangıç durumunda ise <xref:System.Xml.XmlDocument.Load%2A> okuyucudan tüm içeriğini tüketir ve XML belge nesne modeli (DOM) tüm verileri okuyucu oluşturur.  
   
- Okuyucu zaten bir düğümünde herhangi bir yerde belge yerleştirilir ve okuyucu sonra geçirilir <xref:System.Xml.XmlDocument.Load%2A> yöntemi, <xref:System.Xml.XmlDocument.Load%2A> geçerli düğüme ve tüm geçerli derinlik belleğe kapatır bitiş etiketi kadar kardeşlerinin okumaya çalışır. Denenen başarısını <xref:System.Xml.XmlDocument.Load%2A> yük çalışırken, okuyucu açıktır düğümde bağlıdır olarak <xref:System.Xml.XmlDocument.Load%2A> okuyucu XML'den doğru biçimlendirilmiş olduğunu doğrular. Doğru biçimlendirilmiş XML değilse <xref:System.Xml.XmlDocument.Load%2A> bir özel durum oluşturur. Örneğin, aşağıdaki düğümleri kümesi iki kök düzeyinde öğesi içerebilir, doğru biçimlendirilmiş XML değil ve <xref:System.Xml.XmlDocument.Load%2A> bir özel durum oluşturur.  
+ Okuyucu belgedeki bir düğümde konumlandırılır ve okuyucu geçirilerek <xref:System.Xml.XmlDocument.Load%2A> yöntemi <xref:System.Xml.XmlDocument.Load%2A> geçerli düğüm ve tüm geçerli derinlik belleğe kapatır bitiş etiketi adede kadar eş değerleri okumaya çalışır. Denenen başarısını <xref:System.Xml.XmlDocument.Load%2A> yük çalışırken, okuyucu açık olan düğüme bağlıdır olarak <xref:System.Xml.XmlDocument.Load%2A> okuyucudan XML doğru biçimlendirilmemiş olduğunu doğrular. Doğru biçimlendirilmiş XML değilse <xref:System.Xml.XmlDocument.Load%2A> bir özel durum oluşturur. Örneğin, aşağıdaki düğümleri kümesini içeren iki kök düzeyinde öğe, doğru biçimlendirilmiş XML değil ve <xref:System.Xml.XmlDocument.Load%2A> bir özel durum oluşturur.  
   
--   EndElement düğüm tarafından izlenen bir öğe düğümü arkasından bir öğe düğümü ve ardından, açıklama düğümü.  
+-   Ardından bir EndElement düğümü tarafından izlenen bir öğe düğümü arkasından bir öğe düğümü, açıklama düğümü.  
   
- Kök düzeyinde bir öğe olduğundan aşağıdaki düğümler kümesini tamamlanmamış bir DOM oluşturur.  
+ Herhangi bir kök düzeyinde öğe olduğundan aşağıdaki dizi düğümü eksik bir DOM oluşturur.  
   
--   Açıklama düğümü EndElement düğümü tarafından izlenen bir açıklama düğümü arkasından instruction düğümünü ve ardından.  
+-   Açıklama düğümü bir EndElement düğümü tarafından izlenen bir açıklama düğümü ardından instruction bir düğüm tarafından izlenen.  
   
- Bu bir özel durum oluşturmadığını ve veri yüklenir. Bu düğümler üstüne bir kök öğe ekleyin ve hatasız kaydedilebilmesi için doğru biçimlendirilmiş XML oluşturun.  
+ Verileri yüklendi ve bir özel durum oluşturmaz. Bu düğümler üst bir kök öğe ekleyin ve hata kaydedilebilir iyi biçimlendirilmiş bir XML dosyası oluşturmak.  
   
- Okuyucu belge (örneğin, bir beyaz boşluk veya öznitelik düğümü) kök düzeyinde için geçersiz bir yaprak düğüm üzerinde konumlandırılmış okuyucu yerleştirilmiş kadar okumaya devam eder bir düğümde kökü için kullanılabilir. Belgenin bu noktada yüklemeye başlar.  
+ Okuyucu için (örneğin, bir beyaz boşluk veya öznitelik düğümü) belgenin kök düzeyinde geçersiz bir yaprak düğüm üzerinde konumlandırıldı, bunu konumlandırılmış kadar okumak okuyucu devam bir düğümdeki kök için kullanılabilir. Belge, bu noktada yüklemeye başlar.  
   
- Varsayılan olarak, <xref:System.Xml.XmlDocument.Load%2A> XML belge türü tanımı (DTD) veya şema doğrulaması kullanarak geçerli olup olmadığını doğrulamaz. Yalnızca XML iyi biçimlendirilmiş olup olmadığını doğrular. Gerçekleşmesi doğrulama için sırayla oluşturmanız gerekir. bir <xref:System.Xml.XmlReader> kullanarak <xref:System.Xml.XmlReaderSettings> sınıfı. <xref:System.Xml.XmlReader> Sınıfı DTD ya da şema tanım dili (XSD) şeması kullanarak doğrulama zorla. <xref:System.Xml.ValidationType> Özelliği <xref:System.Xml.XmlReaderSettings> sınıfı belirler olup olmadığını <xref:System.Xml.XmlReader> örneği doğrulama zorlar. XML verilerini doğrulama hakkında daha fazla bilgi için Açıklamalar bölümüne bakın <xref:System.Xml.XmlReader> başvuru sayfası.  
+ Varsayılan olarak, <xref:System.Xml.XmlDocument.Load%2A> XML belge türü tanımı (DTD'nin) veya şema doğrulaması kullanarak geçerli olup olmadığını doğrulamaz. Yalnızca XML iyi biçimlendirilmiş olup olmadığını doğrular. Doğrulama gerçekleşmesi için sırada oluşturmanız gerekir. bir <xref:System.Xml.XmlReader> kullanarak <xref:System.Xml.XmlReaderSettings> sınıfı. <xref:System.Xml.XmlReader> Sınıfı bir DTD'nin veya şema tanım dili (XSD) şeması kullanarak doğrulama zorunlu. <xref:System.Xml.ValidationType> Özelliği <xref:System.Xml.XmlReaderSettings> sınıfı belirleyen olmadığını <xref:System.Xml.XmlReader> örnek doğrulama zorlar. XML veri doğrulama hakkında daha fazla bilgi için bkz. Açıklamalar bölümüne <xref:System.Xml.XmlReader> başvuru sayfası.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [XML Belge Nesne Modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [XML Belge Nesne Modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

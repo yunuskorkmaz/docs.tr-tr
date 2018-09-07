@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: b5489c96-4afd-439a-a25d-fc82eb4a148d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 58f32dcb76246bed1030f3d0a45db2541f381877
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 70e13893cf350a193411f1833e2e3b21c9b64182
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43556506"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44061071"
 ---
 # <a name="extending-the-dom"></a>DOM genişletme
 
@@ -253,6 +253,6 @@ Düğüm olay işleme hakkında daha fazla bilgi için bkz. [olayları](../../..
 
 Kılıyorsa <xref:System.Xml.XmlDocument.CreateElement%2A> varsayılan belgesi düzenlenirken yeni öğeler oluştururken, öznitelikleri eklenip eklenmeyeceği türetilen bir sınıfta yöntemi. Düzenlenirken bir sorun budur. Çünkü <xref:System.Xml.XmlDocument.CreateElement%2A> yöntemdir varsayılan öznitelikler eklemek için sorumlu bir <xref:System.Xml.XmlDocument>, bu işlev kodu gerekir <xref:System.Xml.XmlDocument.CreateElement%2A> yöntemi. Yüklüyorsanız, size bir <xref:System.Xml.XmlDocument> , düzgün işlenecek, varsayılan öznitelikler içerir. Varsayılan öznitelikler hakkında daha fazla bilgi için bkz. [DOM öğeleri için yeni öznitelikler oluşturma](creating-new-attributes-for-elements-in-the-dom.md).
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-[XML Belge Nesne Modeli (DOM)](xml-document-object-model-dom.md)  
+- [XML Belge Nesne Modeli (DOM)](xml-document-object-model-dom.md)  

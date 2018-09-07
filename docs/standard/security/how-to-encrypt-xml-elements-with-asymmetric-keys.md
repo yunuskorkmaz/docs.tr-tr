@@ -19,32 +19,32 @@ helpviewer_keywords:
 ms.assetid: a164ba4f-e596-4bbe-a9ca-f214fe89ed48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b6840a9005aaca4805252298e1ceaf7e51f38971
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2b1ca4f0809659b3e164623f488a8585a33ea718
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591466"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44071732"
 ---
 # <a name="how-to-encrypt-xml-elements-with-asymmetric-keys"></a>Nasıl yapılır: XML Öğelerini Asimetrik Anahtarlarla Şifreleme
-Sınıflarda kullanabilirsiniz <xref:System.Security.Cryptography.Xml> bir XML belgesi içindeki bir öğe şifrelemek için ad alanı.  XML şifrelemesi, exchange veya kolayca okunan veriler hakkında endişelenmeden şifrelenmiş XML verileri depolamak için standart bir yoludur.  XML şifrelemesi konumunda bulunan için XML şifreleme standardı hakkında daha fazla bilgi için bkz: World Wide Web Konsorsiyumu (W3C) belirtimi http://www.w3.org/TR/xmldsig-core/.  
+Sınıfları kullanabilirsiniz <xref:System.Security.Cryptography.Xml> bir XML belgesi bir öğesinde şifrelemek için ad alanı.  XML şifreleme, exchange veya bir kolayca okunan verilerin hakkında endişelenmeden şifrelenmiş XML verileri depolamak için standart bir yoludur.  XML şifreleme konumundaki XML şifreleme standardı hakkında daha fazla bilgi için World Wide Web Consortium (W3C) belirtimi bakın http://www.w3.org/TR/xmldsig-core/.  
   
- XML şifrelemesi herhangi bir XML öğesi değiştirin veya ile belge için kullanabileceğiniz bir <`EncryptedData`> şifrelenmiş XML verileri içeren öğe.  <`EncryptedData`> Öğesi anahtarları ve şifreleme sırasında kullanılan işlemler hakkında bilgi içeren alt öğeleri de içerebilir.  XML şifrelemesi şifrelenmiş birden çok öğe içeren bir belge ve birden çok kez şifrelenmesi için bir öğe olanak sağlar.  Bu yordamı kod örneğinde nasıl oluşturulacağını gösterir bir <`EncryptedData`> öğesi, daha sonra şifre çözme sırasında kullanabileceğiniz diğer alt öğelerini birlikte.  
+ XML şifreleme herhangi bir XML öğesini değiştirin veya ile belge için kullanabileceğiniz bir <`EncryptedData`> şifrelenmiş XML verilerini içeren öğe.  <`EncryptedData`> Öğesi anahtarları ve şifreleme sırasında kullanılan işlemler hakkında bilgi içeren alt öğelerini içerebilir.  XML şifreleme şifrelenmiş birden çok öğe içeren bir belge sağlar ve bir öğe birden çok kez şifrelenmesini sağlar.  Bu yordam kod örneğinde nasıl oluşturulacağını gösterir. bir <`EncryptedData`> öğesi birlikte, daha sonra şifre çözme sırasında kullanabileceğiniz diğer alt öğeleri.  
   
- Bu örnek iki anahtarlar kullanılarak bir XML öğesi şifreler.  Bir RSA ortak/özel anahtar çifti oluşturur ve güvenli bir anahtar kapsayıcısı için anahtar çifti kaydeder.  Bu örnek daha sonra Rijndael algoritması olarak da bilinir Gelişmiş Şifreleme Standardı (AES) algoritması kullanılarak ayrı oturum anahtarı oluşturur.  Örnek XML belgesi şifrelemek için AES oturum anahtarı kullanır ve AES oturum anahtarı şifrelemek için RSA ortak anahtarı kullanır.  Son olarak, örnek şifrelenmiş AES oturum anahtarı ve şifrelenmiş XML verileri XML belgesi içinde yeni bir kaydeder <`EncryptedData`> öğesi.  
+ Bu örnekte, iki anahtar kullanarak bir XML öğesi şifreler.  Bu, bir RSA ortak/özel anahtar çifti oluşturur ve güvenli bir anahtar kapsayıcısı için bir anahtar çifti kaydeder.  Bu örnek, ardından Rijndael algoritma olarak da bilinir Gelişmiş Şifreleme Standardı (AES) algoritması kullanılarak ayrı bir oturum anahtarı oluşturur.  Örnek XML belgesi şifreleme için AES oturum anahtarı kullanır ve ardından AES oturum anahtarı şifrelemek için RSA ortak anahtarı kullanır.  Son olarak, örnek şifrelenmiş AES oturum anahtarı ve şifrelenmiş XML verileri için XML belgesi içinde yeni bir kaydeder <`EncryptedData`> öğesi.  
   
- XML öğesi şifresini çözmek için anahtar kapsayıcıdan RSA özel anahtarı almak, oturum anahtarının şifresini çözmek için kullanın ve sonra belgenin şifresini çözmek için oturum anahtarını kullanır.  Bu yordam kullanılarak şifrelenmiş bir XML öğesi şifresini hakkında daha fazla bilgi için bkz: [nasıl yapılır: XML öğelerini asimetrik anahtarlarla şifresini](../../../docs/standard/security/how-to-decrypt-xml-elements-with-asymmetric-keys.md).  
+ XML öğesinin şifresini çözmek için anahtar kapsayıcısından RSA özel anahtarını alamazsa, oturum anahtarının şifresini çözmek için kullanın ve sonra belgenin şifresini çözmek için oturum anahtarını kullanır.  Bu yordam kullanılarak şifrelenmiş bir XML öğesinin şifresini çözmek hakkında daha fazla bilgi için bkz. [nasıl yapılır: XML öğelerini asimetrik anahtarlarla şifre çözme](../../../docs/standard/security/how-to-decrypt-xml-elements-with-asymmetric-keys.md).  
   
- Bu örnek birden çok uygulama şifrelenmiş verileri paylaşmak gereken yeri veya burada çalıştırdığı zamanları arasında şifrelenmiş verileri kaydetmek bir uygulama gereken durumlar için uygundur.  
+ Bu örnek, birden çok uygulama şifrelenmiş veri paylaşımı gereken yere veya uygulamanın çalıştığı zamanları arasında şifrelenmiş verileri kaydetmek gereken yere durumlar için uygundur.  
   
-### <a name="to-encrypt-an-xml-element-with-an-asymmetric-key"></a>Bir XML öğesi bir asimetrik anahtar şifrelemek için  
+### <a name="to-encrypt-an-xml-element-with-an-asymmetric-key"></a>Bir XML öğesi bir asimetrik anahtarla şifrelemek için  
   
-1.  Oluşturma bir <xref:System.Security.Cryptography.CspParameters> nesne ve anahtar kapsayıcı adını belirtin.  
+1.  Oluşturma bir <xref:System.Security.Cryptography.CspParameters> nesne ve anahtar kapsayıcısı adını belirtin.  
   
      [!code-csharp[HowToEncryptXMLElementAsymmetric#2](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/cs/sample.cs#2)]
      [!code-vb[HowToEncryptXMLElementAsymmetric#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/vb/sample.vb#2)]  
   
-2.  Bir simetrik anahtar kullanarak Oluştur <xref:System.Security.Cryptography.RSACryptoServiceProvider> sınıfı.  Geçirdiğiniz zaman anahtar için anahtar kapsayıcısını otomatik olarak kaydedilir <xref:System.Security.Cryptography.CspParameters> oluşturucusunun nesnesine <xref:System.Security.Cryptography.RSACryptoServiceProvider> sınıfı.  Bu anahtar, AES oturum anahtarı şifrelemek için kullanılan ve daha sonra şifresini alınabilir.  
+2.  Bir simetrik anahtar kullanarak Oluştur <xref:System.Security.Cryptography.RSACryptoServiceProvider> sınıfı.  Geçirdiğinizde anahtarı için anahtar kapsayıcısını otomatik olarak kaydedilir <xref:System.Security.Cryptography.CspParameters> nesnesi oluşturucusuna <xref:System.Security.Cryptography.RSACryptoServiceProvider> sınıfı.  Bu anahtar, AES oturum anahtarı şifrelemek için kullanılan ve daha sonra şifresini alınabilir.  
   
      [!code-csharp[HowToEncryptXMLElementAsymmetric#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/cs/sample.cs#3)]
      [!code-vb[HowToEncryptXMLElementAsymmetric#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/vb/sample.vb#3)]  
@@ -64,58 +64,58 @@ Sınıflarda kullanabilirsiniz <xref:System.Security.Cryptography.Xml> bir XML b
      [!code-csharp[HowToEncryptXMLElementAsymmetric#6](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/cs/sample.cs#6)]
      [!code-vb[HowToEncryptXMLElementAsymmetric#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/vb/sample.vb#6)]  
   
-6.  Yeni bir örneğini oluşturmak <xref:System.Security.Cryptography.Xml.EncryptedXml> sınıfı ve oturum anahtarı kullanarak belirtilen öğe şifrelemek için kullanabilirsiniz.  <xref:System.Security.Cryptography.Xml.EncryptedXml.EncryptData%2A> Yöntem şifrelenmiş bir bayt dizisi şifrelenmiş öğesi döndürür.  
+6.  Yeni bir örneğini oluşturma <xref:System.Security.Cryptography.Xml.EncryptedXml> sınıfı ve oturum anahtarı kullanarak belirtilen öğeyi şifrelemek için kullanabilirsiniz.  <xref:System.Security.Cryptography.Xml.EncryptedXml.EncryptData%2A> Yöntem şifrelenmiş öğesi şifrelenmiş bayt dizisi döndürür.  
   
      [!code-csharp[HowToEncryptXMLElementAsymmetric#7](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/cs/sample.cs#7)]
      [!code-vb[HowToEncryptXMLElementAsymmetric#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/vb/sample.vb#7)]  
   
-7.  Oluşturmak bir <xref:System.Security.Cryptography.Xml.EncryptedData> nesne ve şifrelenmiş XML öğesi URL tanıtıcısı ile doldurur.  Bu URL tanımlayıcı XML şifrelenmiş bir öğe içeriyor bilmeniz şifresi çözme bir taraf sağlar.  Kullanabileceğiniz <xref:System.Security.Cryptography.Xml.EncryptedXml.XmlEncElementUrl> alan URL tanımlayıcısını belirtin.  Düz metin XML öğesi yerine bir <`EncryptedData`> öğesi tarafından bu kapsüllenmiş <xref:System.Security.Cryptography.Xml.EncryptedData> nesnesi.  
+7.  Oluşturmak bir <xref:System.Security.Cryptography.Xml.EncryptedData> nesne ve şifrelenmiş XML öğesi URL'si tanıtıcısı ile doldurun.  Bu URL tanımlayıcısı XML şifrelenmiş bir öğe içerdiğini bildiğiniz öğesinin şifresini çözerken bir taraf sağlar.  Kullanabileceğiniz <xref:System.Security.Cryptography.Xml.EncryptedXml.XmlEncElementUrl> alanını URL tanımlayıcısını belirtin.  Düz metin XML öğesi yerine bir <`EncryptedData`> öğesi tarafından bu kapsüllenmiş <xref:System.Security.Cryptography.Xml.EncryptedData> nesne.  
   
      [!code-csharp[HowToEncryptXMLElementAsymmetric#8](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/cs/sample.cs#8)]
      [!code-vb[HowToEncryptXMLElementAsymmetric#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/vb/sample.vb#8)]  
   
-8.  Oluşturma bir <xref:System.Security.Cryptography.Xml.EncryptionMethod> oturum anahtarı oluşturmak için kullanılan şifreleme algoritması URL tanıtıcısı başlatılmamış nesne.  Geçirmek <xref:System.Security.Cryptography.Xml.EncryptionMethod> nesnesinin <xref:System.Security.Cryptography.Xml.EncryptedType.EncryptionMethod%2A> özelliği.  
+8.  Oluşturma bir <xref:System.Security.Cryptography.Xml.EncryptionMethod> oturum anahtarı oluşturmak için kullanılan şifreleme algoritması URL tanımlayıcısı için başlatılmış olan bir nesne.  Geçirmek <xref:System.Security.Cryptography.Xml.EncryptionMethod> nesnesini <xref:System.Security.Cryptography.Xml.EncryptedType.EncryptionMethod%2A> özelliği.  
   
      [!code-csharp[HowToEncryptXMLElementAsymmetric#9](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/cs/sample.cs#9)]
      [!code-vb[HowToEncryptXMLElementAsymmetric#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/vb/sample.vb#9)]  
   
-9. Oluşturma bir <xref:System.Security.Cryptography.Xml.EncryptedKey> şifreli oturum anahtarı içeren nesne.  Oturum anahtarını şifrelemek, ekleyin <xref:System.Security.Cryptography.Xml.EncryptedKey> nesne ve bir oturum anahtarı adı ve anahtar tanımlayıcı URL'sini girin.  
+9. Oluşturma bir <xref:System.Security.Cryptography.Xml.EncryptedKey> şifrelenmiş oturum anahtarı içeren nesne.  Oturum anahtarı şifrelemek, ekleyin <xref:System.Security.Cryptography.Xml.EncryptedKey> nesnesinin ve oturum anahtarı adı ve anahtar tanımlayıcı URL'sini girin.  
   
      [!code-csharp[HowToEncryptXMLElementAsymmetric#10](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/cs/sample.cs#10)]
      [!code-vb[HowToEncryptXMLElementAsymmetric#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/vb/sample.vb#10)]  
   
-10. Yeni bir <xref:System.Security.Cryptography.Xml.DataReference> belirli oturum anahtarı için şifrelenmiş veriler eşlemeleri nesnesi.  Bu isteğe bağlı adım, bir XML belgesi birden fazla bölümü tek bir anahtarla şifrelenmiş kolayca belirtmenizi sağlar.  
+10. Yeni bir <xref:System.Security.Cryptography.Xml.DataReference> belirli oturum anahtarı şifreli verilere eşleyen nesne.  Bu isteğe bağlı bir adım, bir XML belgesi birden fazla bölümü tek bir anahtarla şifrelenmiş kolayca belirtmenizi sağlar.  
   
      [!code-csharp[HowToEncryptXMLElementAsymmetric#11](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/cs/sample.cs#11)]
      [!code-vb[HowToEncryptXMLElementAsymmetric#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/vb/sample.vb#11)]  
   
-11. Şifrelenmiş anahtar ekler <xref:System.Security.Cryptography.Xml.EncryptedData> nesnesi.  
+11. Şifrelenmiş anahtarı ekleme <xref:System.Security.Cryptography.Xml.EncryptedData> nesne.  
   
      [!code-csharp[HowToEncryptXMLElementAsymmetric#12](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/cs/sample.cs#12)]
      [!code-vb[HowToEncryptXMLElementAsymmetric#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/vb/sample.vb#12)]  
   
-12. Yeni bir <xref:System.Security.Cryptography.Xml.KeyInfo> nesne RSA anahtar adını belirtin.  Ekleyin <xref:System.Security.Cryptography.Xml.EncryptedData> nesnesi. Bu, oturum anahtarının şifresini çözme sırasında kullanmak için doğru asimetrik anahtar tanımlamak şifresi çözme taraf yardımcı olur.  
+12. Yeni bir <xref:System.Security.Cryptography.Xml.KeyInfo> RSA anahtarı adını belirtmek için nesne.  Ekleyin <xref:System.Security.Cryptography.Xml.EncryptedData> nesne. Bu oturum anahtarının şifresini çözerken doğru asimetrik anahtar tanımlamak şifresini çözmeyi taraf yardımcı olur.  
   
      [!code-csharp[HowToEncryptXMLElementAsymmetric#13](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/cs/sample.cs#13)]
      [!code-vb[HowToEncryptXMLElementAsymmetric#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/vb/sample.vb#13)]  
   
-13. Şifreli öğe verileri eklediğinizde <xref:System.Security.Cryptography.Xml.EncryptedData> nesnesi.  
+13. Şifreli öğe verileri eklediğinizde <xref:System.Security.Cryptography.Xml.EncryptedData> nesne.  
   
      [!code-csharp[HowToEncryptXMLElementAsymmetric#14](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/cs/sample.cs#14)]
      [!code-vb[HowToEncryptXMLElementAsymmetric#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/vb/sample.vb#14)]  
   
-14. Özgün öğeyi değiştirin <xref:System.Xml.XmlDocument> nesnesi ile <xref:System.Security.Cryptography.Xml.EncryptedData> öğesi.  
+14. Özgün öğeden değiştirin <xref:System.Xml.XmlDocument> nesnesi ile <xref:System.Security.Cryptography.Xml.EncryptedData> öğesi.  
   
      [!code-csharp[HowToEncryptXMLElementAsymmetric#15](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/cs/sample.cs#15)]
      [!code-vb[HowToEncryptXMLElementAsymmetric#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/vb/sample.vb#15)]  
   
-15. Kaydet <xref:System.Xml.XmlDocument> nesnesi.  
+15. Kaydet <xref:System.Xml.XmlDocument> nesne.  
   
      [!code-csharp[HowToEncryptXMLElementAsymmetric#16](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/cs/sample.cs#16)]
      [!code-vb[HowToEncryptXMLElementAsymmetric#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/vb/sample.vb#16)]  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, bir dosya adlı varsayar `"test.xml"` derlenmiş programın aynı dizinde bulunmaktadır.  Ayrıca varsayılmaktadır `"test.xml"` içeren bir `"creditcard"` öğesi.  Aşağıdaki XML adlı bir dosyaya yerleştirebilirsiniz `test.xml` ve bu örnek ile kullanın.  
+ Bu örnek adlı bir dosya olduğunu varsayar `"test.xml"` derlenmiş programın aynı dizinde bulunmaktadır.  Ayrıca varsayılmaktadır `"test.xml"` içeren bir `"creditcard"` öğesi.  Aşağıdaki XML adlı bir dosyaya yerleştirebilirsiniz `test.xml` ve bu örneği kullanın.  
   
 ```xml  
 <root>  
@@ -131,17 +131,18 @@ Sınıflarda kullanabilirsiniz <xref:System.Security.Cryptography.Xml> bir XML b
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
   
--   Bu örneği derlemek için bir başvuru eklemeniz gerekir `System.Security.dll`.  
+-   Bu örneği derlemeye bir başvuru eklemek gereken `System.Security.dll`.  
   
--   Şu ad alanlarından içerir: <xref:System.Xml>, <xref:System.Security.Cryptography>, ve <xref:System.Security.Cryptography.Xml>.  
+-   Aşağıdaki ad alanlarını içerir: <xref:System.Xml>, <xref:System.Security.Cryptography>, ve <xref:System.Security.Cryptography.Xml>.  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
- Düz metin olarak hiçbir zaman bir simetrik şifreleme anahtarı depolamak veya düz metin olarak makineler arasında bir simetrik anahtar aktarın.  Buna ek olarak, hiçbir zaman depolamak veya asimetrik anahtar çifti düz metin olarak özel anahtarı aktarın.  Simetrik ve asimetrik şifreleme anahtarları hakkında daha fazla bilgi için bkz: [şifreleme ve şifre çözme için anahtarlar oluşturma](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md).  
+ Hiçbir zaman düz metin olarak bir simetrik şifreleme anahtarı depolamak veya makine düz metin arasında bir simetrik anahtar aktarın.  Buna ek olarak, hiçbir zaman depolayabilen veya asimetrik anahtar çifti düz metin olarak özel anahtarı.  Simetrik hem de asimetrik şifreleme anahtarları hakkında daha fazla bilgi için bkz. [şifreleme ve şifre çözme için anahtarlar oluşturma](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md).  
   
- Hiç kaynak kodunuza doğrudan bir anahtar ekleyin.  Katıştırılmış anahtarları kullanarak bir derlemeye ait kolayca da okunabilir [Ildasm.exe (IL ayrıştırıcı)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) veya Not Defteri gibi bir metin düzenleyicisinde derleme açarak.  
+ Hiçbir zaman doğrudan sizin kaynak kodunuza bir anahtar ekleyin.  Katıştırılmış anahtarları kullanarak bir derlemeden kolayca da okunabilir [Ildasm.exe (IL ayrıştırıcı)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) veya Not Defteri gibi bir metin düzenleyicisinde derleme açarak.  
   
- İşiniz bittiğinde şifreleme anahtarını kullanarak temizleyin, bellekten her bayt sıfır olarak ayarlayarak veya çağırarak <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> yönetilen şifreleme sınıfının yöntemi.  Şifreleme anahtarları bazen bellekten bir hata ayıklayıcı tarafından okunabilir veya bellek konumuna disk belleği, bir sabit diskten okuma diske.  
+ İşiniz bittiğinde bir şifreleme anahtarı kullanarak temizleyin, bellekten her byte sıfır olarak ayarlayarak veya çağırarak <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> yönetilen şifreleme sınıfının yöntemi.  Şifreleme anahtarlarını bazen bellekten bir hata ayıklayıcı tarafından okunabilir veya disk belleğine alınan bellek konumunda bir sabit diskten okunur diske.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Security.Cryptography.Xml>  
- [Nasıl yapılır: XML Öğelerinin Şifresini Asimetrik Anahtarlarla Çözme](../../../docs/standard/security/how-to-decrypt-xml-elements-with-asymmetric-keys.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- <xref:System.Security.Cryptography.Xml>  
+- [Nasıl yapılır: XML Öğelerinin Şifresini Asimetrik Anahtarlarla Çözme](../../../docs/standard/security/how-to-decrypt-xml-elements-with-asymmetric-keys.md)

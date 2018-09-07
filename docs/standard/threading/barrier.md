@@ -10,34 +10,34 @@ helpviewer_keywords:
 ms.assetid: 613a8bc7-6a28-4795-bd6c-1abd9050478f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 864571262d1c9c060235840424542856187341df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 385e370f205851630f809b285a93c2609220efeb
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584304"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44062510"
 ---
 # <a name="barrier-net-framework"></a>Engel (.NET Framework)
-A *engel* birden çok iş parçacığı sağlayan bir kullanıcı tarafından tanımlanan eşitleme ilkel (olarak bilinen *katılımcıları*) aynı anda üzerinde bir algoritma aşamada çalışması için. Kodda engel noktası ulaşana kadar her katılımcı yürütür. Engeli iş bir aşamada sonunu temsil eder. Katılımcı engel ulaşırsa, tüm katılımcılar aynı engel ulaştınız kadar engeller. Tüm katılımcılar engel ulaştınız sonra sonrası aşaması eylem isteğe bağlı olarak çağırabilirsiniz. Diğer tüm iş parçacıklarının hala engellenirken sonrası Bu aşama eylemi eylemleri gerçekleştirmek için tek bir iş parçacığı tarafından kullanılabilir. Eylem yürütüldükten sonra katılımcıları tüm engellenmemiş.  
+A *engel* birden çok iş parçacığı sağlayan bir kullanıcı tanımlı eşitleme ilkel (olarak bilinen *katılımcıları*) üzerinde bir algoritma aşamalarında eşzamanlı olarak çalışacak şekilde. Kodda engel noktası ulaşana kadar her katılımcı yürütür. Engel çalışmanın bir aşama sonunu temsil eder. Katılımcı engel ulaştığında, tüm katılımcılar aynı engele kadar engeller. Tüm katılımcıları engele sonra isteğe bağlı olarak bir aşama sonrası eylemi çağırabilirsiniz. Diğer tüm iş parçacıklarının hala engellenirken sonrası Bu aşama eylem eylemleri gerçekleştirmek için tek bir iş parçacığı tarafından kullanılabilir. Katılımcılar, tüm Eylem yürütüldükten sonra engellenmemektedir.  
   
- Aşağıdaki kod parçacığını bir temel engel deseni gösterir.  
+ Aşağıdaki kod parçacığı bir engel temel deseni gösterir.  
   
  [!code-csharp[CDS_Barrier#02](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_barrier/cs/barrier.cs#02)]
  [!code-vb[CDS_Barrier#02](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_barrier/vb/barrier_vb.vb#02)]  
   
- Tam bir örnek için bkz: [nasıl yapılır: eşitleme eş zamanlı görevleri bir engelle ile](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md).  
+ Tam bir örnek için bkz. [nasıl yapılır: eş zamanlı görevleri bir engel ile eşitleme](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md).  
   
-## <a name="adding-and-removing-participants"></a>Ekleme ve katılımcıları kaldırma  
- Oluştururken bir <xref:System.Threading.Barrier>, katılımcılar sayısını belirtin. Ayrıca ekleyebilir veya katılımcıları dinamik olarak dilediğiniz zaman kaldırabilirsiniz. Örneğin, bir katılımcı sorunun onun parçası çözer, iş parçacığı ve arama sonucu, Dur yürütülmesine depolayabilirsiniz <xref:System.Threading.Barrier.RemoveParticipant%2A> engel katılımcıları sayısını düşürmek için. Çağırarak katılımcı eklediğinizde <xref:System.Threading.Barrier.AddParticipant%2A>, dönüş değeri yeni katılımcı iş başlatmak için yararlı olabilecek geçerli aşama numarasını belirtir.  
+## <a name="adding-and-removing-participants"></a>Ekleme ve kaldırma katılımcıları  
+ Oluştururken bir <xref:System.Threading.Barrier>, katılımcılar sayısını belirtin. Ayrıca, ekleyebilir veya katılımcıları dinamik olarak dilediğiniz zaman kaldırabilirsiniz. Örneğin, bir katılımcı kendi parçası sorunu çözer, iş parçacığı ve arama sonucu, Dur yürütülmesine depolayabilirsiniz <xref:System.Threading.Barrier.RemoveParticipant%2A> engel katılımcılarının sayısını azaltmak için. Eklediğinizde, bir katılımcı çağırarak <xref:System.Threading.Barrier.AddParticipant%2A>, dönüş değeri yeni katılımcı çalışmasını başlatmak için yararlı olabilecek geçerli aşama numarasını belirtir.  
   
 ## <a name="broken-barriers"></a>Bozuk engelleri  
- Kilitlenmeler bir katılımcı engel erişemeyen ortaya çıkabilir. Bu kilitlenmeler önlemek için aşırı kullanın <xref:System.Threading.Barrier.SignalAndWait%2A> yöntemi bir zaman aşımı süresi ve bir iptal belirteci belirtin. Bu aşırı dönüş her katılımcı önce kontrol edebilirsiniz bir Boole değeri sonraki aşamasına devam eder.  
+ Engel ulaşmak bir katılımcı başarısız olursa, kilitlenmeleri ortaya çıkabilir. Bu kilitlenmeleri önlemek için aşırı yüklemeleri kullanın. <xref:System.Threading.Barrier.SignalAndWait%2A> bir zaman aşımı süresi ve bir iptal belirteci belirtmek için yöntemi. Bu aşırı yüklemeler dönüş her katılımcı önce denetleyebilen bir Boole değeri sonraki aşamaya devam eder.  
   
-## <a name="post-phase-exceptions"></a>Özel durumlar sonrası aşaması  
- Sonrası aşaması temsilci bir özel durum oluşturursa, paketlenir bir <xref:System.Threading.BarrierPostPhaseException> sonra tüm katılımcılar yayıldığı nesnesidir.  
+## <a name="post-phase-exceptions"></a>Son aşama özel durumları  
+ Sonrası aşaması temsilci bir özel durum oluşturursa, sarmalandıktan bir <xref:System.Threading.BarrierPostPhaseException> için tüm katılımcıları sonra yayılır nesnesidir.  
   
 ## <a name="barrier-versus-continuewhenall"></a>Engel ContinueWhenAll karşılaştırması  
- İş parçacığı Döngülerde birden çok aşamaları gerçekleştirirken engelleri özellikle yararlı olur. Kodunuzu iş yalnızca bir veya iki aşamaları gerektiriyorsa, kullanıp kullanmayacağınızı düşünün <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> örtük birleştirme, her türlü nesneleriyle dahil olmak üzere:  
+ İş parçacıklarını birden çok aşama Döngülerde gerçekleştirirken engelleri özellikle yararlı olur. Kodunuzu iş yalnızca bir veya iki aşamaya gerektiriyorsa, kullanıp kullanmayacağınızı düşünün <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> örtük birleşim, herhangi bir türden nesneler de dahil olmak üzere:  
   
 -   <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A>  
   
@@ -47,8 +47,9 @@ A *engel* birden çok iş parçacığı sağlayan bir kullanıcı tarafından ta
   
 -   <xref:System.Threading.Tasks.Parallel.For%2A>  
   
- Daha fazla bilgi için bkz: [zincirleme görevleri devamlılık görevlerini kullanarak tarafından](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md).  
+ Daha fazla bilgi için [kullanarak devamlılık görevleri zinciri görevleriyle](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [İş Parçacığı Nesneleri ve Özellikleri](../../../docs/standard/threading/threading-objects-and-features.md)  
- [Nasıl yapılır: Eş Zamanlı Görevleri bir Engelle Eşitleme](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [İş Parçacığı Nesneleri ve Özellikleri](../../../docs/standard/threading/threading-objects-and-features.md)  
+- [Nasıl yapılır: Eş Zamanlı Görevleri bir Engelle Eşitleme](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md)

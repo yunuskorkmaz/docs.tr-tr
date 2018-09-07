@@ -11,12 +11,12 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-ms.openlocfilehash: ac8f6fa2ebd2f8d846c3662184c83a83477e2311
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: ed95d0a0c6fc9ba41bba2c4e16d4ed3b721ae4e3
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43805292"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44077073"
 ---
 # <a name="option-strict-statement"></a>Option Strict Deyimi
 Örtük veri türü dönüşümünü sadece genişletme dönüştürmeleri için sınırlar, geç bağlamaya izin vermiyor ve örtük sonuçlanan yazmaya izin vermeyen bir `Object` türü.  
@@ -151,15 +151,16 @@ Option Strict { On | Off }
   
  [!code-vb[VbVbalrStatements#164](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_4.vb)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Genişletme ve Daraltma Dönüştürmeleri](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
- [Örtük ve Açık Dönüştürmeler](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
- [Derleme Sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)  
- [Option Explicit Deyimi](../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
- [Tür Dönüştürme İşlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Nasıl yapılır: Bir Nesnenin Üyelerine Erişme](../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)  
- [XML'de Katıştırılmış İfadeler](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)  
- [Gevşek Temsilci Dönüştürme](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)  
- [Office Çözümlerinde Geç Bağlama](https://msdn.microsoft.com/library/3xxe951d)  
- [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)  
- [Visual Basic Varsayılanları, Projeler, Seçenekler İletişim Kutusu](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Genişletme ve Daraltma Dönüştürmeleri](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
+- [Örtük ve Açık Dönüştürmeler](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
+- [Derleme Sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)  
+- [Option Explicit Deyimi](../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
+- [Tür Dönüştürme İşlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+- [Nasıl yapılır: Bir Nesnenin Üyelerine Erişme](../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)  
+- [XML'de Katıştırılmış İfadeler](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)  
+- [Gevşek Temsilci Dönüştürme](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)  
+- [Office Çözümlerinde Geç Bağlama](/visualstudio/vsto/late-binding-in-office-solutions)  
+- [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)  
+- [Visual Basic Varsayılanları, Projeler, Seçenekler İletişim Kutusu](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

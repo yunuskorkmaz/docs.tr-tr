@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: özel durumları yakalamak için Try-Catch bloğu kullanın'
+title: 'Nasıl yapılır: özel durumları yakalamak için Try-Catch bloğu kullanma'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,27 +14,28 @@ helpviewer_keywords:
 ms.assetid: a3ce6dfd-1f64-471b-8ad8-8cfaf406275d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b169353752f6e6483a056cdc9dd8c3227b9ebeb8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 852df5cb3eeea2ee5fa44ddce2f97e9c4f8d8b5a
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571459"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44097067"
 ---
 # <a name="how-to-use-the-trycatch-block-to-catch-exceptions"></a>Özel durumları yakalamak için try/catch bloğu kullanma
 
-Özel durumlar oluşturma kodun bölümlerini yerleştirin bir `try` özel durumları işleme bloğu ve Yerleştir kod bir `catch` bloğu. `catch` Bloğu bir dizi anahtar sözcüğüyle başlayan deyimi `catch`, bir özel durum türünü ve bir eylem yapılması ardından.
+Özel durum oluşturma olasılığı olan kod bölümlerini yerleştirileceği bir `try` özel durumları işleyen bloğu ve yerde kodu bir `catch` blok. `catch` Bloğudur bir dizi deyim anahtar sözcüğü ile başlayan `catch`ve ardından bir özel durum türünü ve bir eylem gerçekleştirilebilir.
 
-Aşağıdaki kod örneğinde bir `try` / `catch` olası Özel catch bloğu. `Main` Yöntemini içeren bir `try` ile engelleme bir <xref:System.IO.StreamReader> veri dosyasını açar deyimi adlı `data.txt` ve dosyasından bir dize yazar. Aşağıdaki `try` bloğu bir `catch` oluşur özel durumları yakalar blok `try` bloğu.
+Aşağıdaki kod örneğinde bir `try` / `catch` olası bir özel durum yakalamak için blok. `Main` Yöntemi içeren bir `try` ile engelleyecek bir <xref:System.IO.StreamReader> adlı bir veri dosyası açılır deyimi `data.txt` ve dosyanın bir dize yazar. Aşağıdaki `try` bloğu bir `catch` oluşur herhangi bir özel durumu yakalar blok `try` blok.
 
  [!code-cpp[CatchException#3](../../../samples/snippets/cpp/VS_Snippets_CLR/CatchException/CPP/catchexception2.cpp#3)]
  [!code-csharp[CatchException#3](../../../samples/snippets/csharp/VS_Snippets_CLR/CatchException/CS/catchexception2.cs#3)]
  [!code-vb[CatchException#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CatchException/VB/catchexception2.vb#3)]  
 
-Ortak dil çalışma zamanı catch bloğu tarafından yakalandı özel durumları yakalar. Çalışma zamanı nasıl yapılandırıldığına bağlı olarak hata ayıklama iletişim kutusu görüntülenirse, programın yürütülmesi durdurulur ve özel durum bilgilerini içeren bir iletişim kutusu görünür veya STDERR'e bir hata yazdırılır.
+Ortak dil çalışma zamanı bir catch bloğu tarafından yakalandı özel durumu yakalar. Çalışma zamanının nasıl yapılandırdığına bağlı olarak hata ayıklama iletişim kutusu görüntülenirse, program yürütme durdurur ve özel durum bilgilerini içeren bir iletişim kutusu görünür veya bir hata stderr biçiminde yazdırılır.
 
 > [!NOTE] 
-> Neredeyse her kod satırının bir özel durum, özellikle ortak dil çalışma zamanı tarafından kendisine gibi oluşturulan özel durumlara neden olabilir <xref:System.OutOfMemoryException>. Uygulamaların çoğu bu durumlarla başa gerekmez, ancak, başkaları tarafından kullanılacak kitaplıkları yazılırken bu olasılığını dikkat etmeniz gerekir. Öneriler zaman ayarlamak bir Try bloğunda kod için bkz: [özel durumlar için en iyi uygulamaları](best-practices-for-exceptions.md).
+> Hemen hemen her kod satırının bir özel durum, özellikle ortak dil çalışma zamanı tarafından kendisi gibi attığı özel durumları oluşabilir <xref:System.OutOfMemoryException>. Uygulamaların çoğu bu özel durumlar gerekmez, ancak, başkaları tarafından kullanılacak kitaplıkları yazarken bu olasılığını bilmeniz gerekir. Öneriler ne zaman bir Try bloğu içinde kod için bkz: [özel durumlar için en iyi yöntemler](best-practices-for-exceptions.md).
 
-## <a name="see-also"></a>Ayrıca Bkz.  
-[Özel Durumlar](index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Özel Durumlar](index.md)

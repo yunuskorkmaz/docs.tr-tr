@@ -3,11 +3,11 @@ title: Desen Eşleştirme (F#)
 description: "Desenler F #'de mantıksal yapıları ile verileri karşılaştırmak, verileri bileşenlerine ayırmak veya verilerden bilgi ayıklamak için nasıl kullanılacağını öğrenin."
 ms.date: 05/16/2016
 ms.openlocfilehash: 5ad3d3e1a78246afdfa2948fd0fb84fa04686d30
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855249"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44077190"
 ---
 # <a name="pattern-matching"></a>Desen Eşleştirme
 

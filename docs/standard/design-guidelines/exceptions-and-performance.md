@@ -1,5 +1,5 @@
 ---
-title: Özel durumları ve performans
+title: Özel durumlar ve performans
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -11,21 +11,21 @@ helpviewer_keywords:
 ms.assetid: 3ad6aad9-08e6-4232-b336-0e301f2493e6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dfffc2a1c0f607541194a7f51717d5bf8a8537f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d664b7b61394bd9bfe6d0abd7130f9f0191e7a03
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575342"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44083552"
 ---
-# <a name="exceptions-and-performance"></a>Özel durumları ve performans
-Özel durumlar için ilgili bir ortak özel durumlar için düzenli olarak başarısız kodu kullandıysanız, uygulama performansını kabul edilemez olduğunu konusudur. Bu geçerli bir konudur. Üye bir özel durum oluşturduğunda, kendi performansını büyüklük yavaş olabilir. Ancak, kesinlikle hata kodlarını kullanarak izin vermeyecek özel durum yönergelerine uymak sırasında iyi performans elde etmek mümkündür. Bu bölümde açıklanan iki desenleri Bunu yapmak için yöntemler önerir.  
+# <a name="exceptions-and-performance"></a>Özel durumlar ve performans
+Özel durumlar için ilgili bir sık karşılaşılan özel durumlar için düzenli olarak başarısız kodu kullandıysanız, uygulama performansını kabul edilemez olduğunu konusudur. Bu geçerli bir konudur. Üye bir özel durum oluşturduğunda, kendi performans kat daha yavaş olabilir. Ancak, hata kodlarını kullanarak izin vermeyin. özel durum yönergeleri kesinlikle bağlılığı sırasında iyi performans elde etmek mümkündür. Bu bölümde açıklanan iki deseni, bunu yapmak için yöntemler önerir.  
   
  **X DO NOT** özel durumlar performansı olumsuz etkileyebilir sorunları nedeniyle hata kodları kullanın.  
   
- Performansı artırmak için Tester Doer desen veya deneyin ayrıştırma sonraki iki bölümde açıklanan düzeni kullanmak da mümkündür.  
+ Performansı artırmak için test edici Doer desen veya deneyin-Parse sonraki iki bölümde açıklanan düzeni kullanmak da mümkündür.  
   
-## <a name="tester-doer-pattern"></a>Tester Doer düzeni  
+## <a name="tester-doer-pattern"></a>Test edici Doer düzeni  
  Bazen bir özel durum atma üye performansını üye ikiye bölerek geliştirilebilir. Bakalım <xref:System.Collections.Generic.ICollection%601.Add%2A> yöntemi <xref:System.Collections.Generic.ICollection%601> arabirimi.  
   
 ```  
@@ -33,7 +33,7 @@ ICollection<int> numbers = ...
 numbers.Add(1);  
 ```  
   
- Yöntem `Add` koleksiyon salt okunur ise oluşturur. Bu yöntem çağrısının sık sık başarısız olmasına beklenirken senaryolarda bir performans sorunu olabilir. Sorunu çözmek için yollardan değer eklemek denemeden önce koleksiyona yazılabilir olup olmadığını sınamak için biridir.  
+ Yöntem `Add` koleksiyonu salt okunur ise oluşturur. Bu yöntem çağrısında burada sık sık başarısız beklenmektedir senaryolarda bir performans sorunu olabilir. Sorunu azaltmak için yollarla değer eklemek denemeden önce koleksiyona yazılabilir olup olmadığını sınamak için biridir.  
   
 ```  
 ICollection<int> numbers = ...   
@@ -43,12 +43,12 @@ if(!numbers.IsReadOnly){
 }  
 ```  
   
- Özelliği, örneğimizde bir koşulu test etmek için kullanılan üye `IsReadOnly`, tester adlandırılır. Olası oluşturma işlemi gerçekleştirmek için kullanılan üye `Add` örneğimizde yöntemi doer adlandırılır.  
+ Bizim örneğimizde, özellik koşulunu test etmek için kullanılan bir üye `IsReadOnly`, test edici adlandırılır. Olası oluşturma bir işlemi gerçekleştirmek için kullanılan bir üye `Add` yöntemi örneğimizde doer adlandırılır.  
   
  **✓ CONSIDER** Tester Doer düzeni özel durumlar oluşturma üyeleri için özel durumlar ortak senaryolar performans sorunlarını önlemek için ilgili.  
   
-## <a name="try-parse-pattern"></a>Try-ayrıştırma düzeni  
- Son derece performans duyarlı API'ler, önceki bölümde açıklanan Tester Doer düzeni daha daha hızlı bir desen kullanılması gerekir. Üye semantiğini parçası durumda iyi tanımlanmış bir test yapmak için üye adı ayarlamak için desen çağırır. Örneğin, <xref:System.DateTime> tanımlayan bir <xref:System.DateTime.Parse%2A> yöntemi dizesi ayrıştırma başarısız olursa, bir özel durum oluşturur. Ayrıca bir karşılık gelen tanımlar <xref:System.DateTime.TryParse%2A> ayrıştırmak için çalışır yöntemi ancak yanlış döndürür ayrıştırma başarısız olur ve bir başarılı ayrıştırma kullanmanın sonucu döndürürse bir `out` parametresi.  
+## <a name="try-parse-pattern"></a>Try-ayrıştırma desenindeki  
+ Son derece performans açısından duyarlı API'leri için önceki bölümde açıklanan test edici Doer düzeni daha daha hızlı bir desen kullanılması gerekir. Desen, bir üye semantiği parçası case iyi tanımlanmış bir test yapmak için üye adı ayarlamak için çağırır. Örneğin, <xref:System.DateTime> tanımlayan bir <xref:System.DateTime.Parse%2A> yöntemi bir dizeyi ayrıştırma başarısız olursa, bir özel durum oluşturur. Ayrıca, karşılık gelen tanımlar <xref:System.DateTime.TryParse%2A> ayrıştırmak için çalışır yöntemi ancak false döndürürse ayrıştırma başarısız ve başarılı ayrıştırma kullanarak bir sonuç döndürür bir `out` parametresi.  
   
 ```  
 public struct DateTime {  
@@ -61,7 +61,7 @@ public struct DateTime {
 }  
 ```  
   
- Bu deseni kullanılırken deneyin işlevselliği katı koşullarını tanımlamak önemlidir. Üye iyi tanımlanmış deneyin dışındaki herhangi bir nedenle başarısız olursa, üye karşılık gelen bir özel durum gerekir.  
+ Bu model kullanılırken, try işlevi katı koşullarını tanımlamak önemlidir. Üye, iyi tanımlanmış try dışındaki herhangi bir nedenle başarısız olursa, üye karşılık gelen bir özel durum throw gerekir.  
   
  **✓ CONSIDER** deneyin ayrıştırma düzeni özel durumlar oluşturma üyeleri için özel durumlar ortak senaryolar performans sorunlarını önlemek için ilgili.  
   
@@ -69,10 +69,11 @@ public struct DateTime {
   
  **✓ DO** deneyin ayrıştırma desenini kullanarak her üyesi için bir özel durum atma üye sağlayın.  
   
- *Bölümleri © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
+ *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*  
+ *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)  
- [Özel Durumlar için Tasarım Yönergeleri](../../../docs/standard/design-guidelines/exceptions.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)  
+- [Özel Durumlar için Tasarım Yönergeleri](../../../docs/standard/design-guidelines/exceptions.md)

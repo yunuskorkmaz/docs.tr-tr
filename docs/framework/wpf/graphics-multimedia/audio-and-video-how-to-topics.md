@@ -7,18 +7,18 @@ helpviewer_keywords:
 - multimedia [WPF]
 - media [WPF]
 ms.assetid: f7d96707-ffb5-486c-9e85-db6f0d5ac547
-ms.openlocfilehash: 446a7993f2c2849c8bdd67683c04c429ce9bc0c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d7c3a6b01591dd1c7fc7554a6e660f1ca7b12de1
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556022"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44075416"
 ---
 # <a name="audio-and-video-how-to-topics"></a>Ses ve Video ile İlgili Nasıl yapılır Konuları
-Aşağıdaki konular nasıl kullanılacağını gösteren <xref:System.Windows.Controls.MediaElement> ses ve video içeriğine uygulamalarınıza tümleştirmek için.  
+Aşağıdaki konular nasıl kullanılacağını gösteren <xref:System.Windows.Controls.MediaElement> uygulamalarınızda ses ve video içeriğine tümleştirmek için.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: dinamik olarak bir öğe ekleme](http://msdn.microsoft.com/library/d00f258a-7973-4de7-bc54-a3fc1f638419)  
+ [Nasıl yapılır: dinamik olarak bir öğe ekleme](https://msdn.microsoft.com/library/d00f258a-7973-4de7-bc54-a3fc1f638419)  
  [MediaElement (Yürüt, Duraklat, Durdur, Ses Düzeyi ve Hız) Denetimi](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md)  
  [Görsel Taslak Kullanarak MediaElement'i Denetleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-by-using-a-storyboard.md)  
  [Kullanıcı Olayı ile Medya Yürütme Tetikleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-media-playback-with-a-user-event.md)  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - arrays [C#]
 - C# language, arrays
 ms.assetid: bb79bdde-e570-4c30-adb0-1dd5759ae041
-ms.openlocfilehash: 1469336bf034fd22c9d7355b2f8dd8be32721fdf
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a34d13c0d5d0939bbb024ae958568e80dd74b26f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510644"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44070712"
 ---
 # <a name="arrays-c-programming-guide"></a>Diziler (C# Programlama Kılavuzu)
 
@@ -57,5 +57,5 @@ Bir dizi veri yapısında aynı türde birden fazla değişken depolayabilirsini
 ## <a name="see-also"></a>Ayrıca Bkz.
 
 - [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
-- [Koleksiyonlar](https://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
+- [Koleksiyonlar](../../../csharp/programming-guide/concepts/collections.md)  
 - [Dizi koleksiyon türü](https://msdn.microsoft.com/library/8a9964de-8941-47b1-a3cf-a01bc88db9e8)

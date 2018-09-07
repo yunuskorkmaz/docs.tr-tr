@@ -6,11 +6,11 @@ helpviewer_keywords:
 - menus
 ms.assetid: e361bf98-eed8-4ed3-9dfb-5a2e865e3ce6
 ms.openlocfilehash: 03328b324399c7500f2cf3a8b6ab12c843115e29
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44032416"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44077203"
 ---
 # <a name="menustrip-control-windows-forms"></a>MenuStrip Denetimi (Windows Forms)
 Bu denetimi grupları uygulama komutları ve bunları kolayca erişilebilir hale getirir.  

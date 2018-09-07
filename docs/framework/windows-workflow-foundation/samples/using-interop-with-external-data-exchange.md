@@ -3,11 +3,11 @@ title: Dış veri değişimi ile birlikte çalışması kullanarak
 ms.date: 03/30/2017
 ms.assetid: 96f6fe26-5305-494f-9119-7748e0c4b3fa
 ms.openlocfilehash: 534321e5b5568e0dd0988333dc98ccc18ff33df8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43804834"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44064826"
 ---
 # <a name="using-interop-with-external-data-exchange"></a>Dış veri değişimi ile birlikte çalışması kullanarak
 <xref:System.Activities.Statements.Interop> Etkinliği içinde Windows Workflow Foundation'a (WF) gelen etkinlikleri yürütmek için kullanılabilir [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] ve [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF3) ve iş akışı içinde Windows Workflow Foundation'da [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF4). Bu örnek, yapılandırmak ve kullandığı WF3 iş akışı çalıştırma işlemi gösterilmektedir <xref:System.Workflow.Activities.ExternalDataExchangeService> (ve yöntemlerini çağırmaya ve olayları işleme için karşılık gelen özel etkinlikler) kullanarak <xref:System.Activities.Statements.Interop> WF4 iş akışı hizmeti içinde etkinlik.  
