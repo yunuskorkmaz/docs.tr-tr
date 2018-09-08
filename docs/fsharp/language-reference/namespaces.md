@@ -3,11 +3,11 @@ title: Ad Alanları (F#)
 description: 'F # ad alanı, program öğeleri gruplandırması için bir ad eklemek sağlayarak, ilgili işlevleri alanlarına kod düzenlemek nasıl olanak tanıdığını öğrenin.'
 ms.date: 04/24/2017
 ms.openlocfilehash: 769a1241f76ac32d3a6a80bd637078493119bb3c
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43881895"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44178266"
 ---
 # <a name="namespaces"></a>Ad Alanları
 

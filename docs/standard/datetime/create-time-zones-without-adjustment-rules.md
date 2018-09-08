@@ -12,58 +12,58 @@ helpviewer_keywords:
 ms.assetid: a6af8647-7893-4f29-95a9-d94c65a6e8dd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 214e3bca811f87f4b8367b459564449d16e7c289
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3e06232a4e262b13439516114e65c81c07ba24ab
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572908"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44192970"
 ---
 # <a name="how-to-create-time-zones-without-adjustment-rules"></a>Nasıl yapılır: ayarlama kuralları olmadan saat dilimleri oluşturma
 
-Bir uygulama tarafından istenen kesin saat dilimi bilgilerini çeşitli nedenlerle belirli bir sistemde mevcut değil:
+Bir uygulama tarafından istenen kesin saat dilimi bilgilerini, çeşitli nedenlerle belirli bir sistemde mevcut olmayabilir:
 
-* Saat dilimi yerel sistemin kayıt defterinde hiçbir zaman tanımlamıştır.
+* Saat dilimi yerel sisteminin kayıt defterinde hiçbir zaman tanımlanmış.
 
-* Saat dilimi hakkındaki verileri değiştirilemiyor veya kayıt defteri anahtarından kaldırılamıyor.
+* Saat dilimi ilgili verileri değiştirilemez veya kayıt defterinden kaldırıldı.
 
 * Saat dilimi var, ancak belirli bir geçmiş dönem için saat dilimi düzeltmeleri hakkında doğru bilgileri yok.
 
-Bu durumlarda, çağırabilirsiniz <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> uygulamanızın gerektirdiği saat dilimi tanımlamak için yöntem. Bu yöntem aşırı ile veya ayarlama kuralları olmadan saat dilimi oluşturmak için kullanabilirsiniz. Saat diliminin gün ışığından yararlanma saati destekliyorsa, ayarlamalar ya da sabit veya değişken ayarlama kuralları ile tanımlayabilirsiniz. (Bu koşulları tanımları için "Saat dilimi terminolojisi" bölümüne bakın [saat dilimine genel bakış](../../../docs/standard/datetime/time-zone-overview.md).)
+Bu gibi durumlarda çağırabilirsiniz <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> uygulamanız için gereken saat dilimi tanımlamak için yöntemi. Bu yöntem aşırı yüklemeleri ile veya ayarlama kuralları olmadan saat dilimi oluşturmak için kullanabilirsiniz. Gün ışığından yararlanma saat dilimi destekliyorsa, ayarlamalar ya da sabit veya değişken ayarlama kuralları ile tanımlayabilirsiniz. (Bu terimlerin tanımları için "Saat dilimi terminolojisi" bölümüne bakın. [saat dilimine genel bakış](../../../docs/standard/datetime/time-zone-overview.md).)
 
 > [!IMPORTANT]
-> Özel saat dilimlerini çağrılarak oluşturulan <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> yöntemi kayıt defterine eklenmedi. Bunun yerine, bunlar yalnızca tarafından döndürülen nesne başvurusu aracılığıyla erişilebilen <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> yöntem çağrısı.
+> Özel saat dilimi çağrılarak oluşturulan <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> yöntemi kayıt defterine eklenmedi. Bunun yerine, bunlar tarafından döndürülen nesne başvurusu erişilebilir <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> yöntem çağrısı.
 
-Bu konuda ayarlama kuralları olmadan saat dilimi oluşturulacağını gösterir. Yaz Saati ayarlama kuralları destekleyen bir saat dilimi oluşturmak için bkz: [nasıl yapılır: ayarlama kuralları ile saat dilimleri oluşturma](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md).
+Bu konuda, bir saat dilimi ayarlama kuralları olmadan oluşturma gösterilmektedir. Gün ışığından yararlanma ayarlama kuralları destekleyen bir saat dilimi oluşturmak için bkz [nasıl yapılır: ayarlama kuralları ile saat dilimleri oluşturma](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md).
 
-### <a name="to-create-a-time-zone-without-adjustment-rules"></a>Ayarlama kuralları olmadan saat dilimi oluşturmak için
+### <a name="to-create-a-time-zone-without-adjustment-rules"></a>Bir saat dilimi ayarlama kuralları olmadan oluşturmak için
 
 1. Saat diliminin görünen adı tanımlayın.
 
-   Görünen ad saat diliminin uzaklığı gelen Eşgüdümlü Evrensel Saat (UTC) parantez içine alınmış ve saat dilimi, bir veya birkaçı Şehir saat dilimi ya da bir veya daha fazla cou tanımlayan bir dize tarafından izlenen oldukça standart bir biçim izler girişleri veya saat dilimi bölgelerde.
+   Görünen ad, saat diliminin uzaklığı ile eşgüdümlü evrensel saat (UTC) parantez içine alınmış ve bir veya daha fazla şehirlerin saat dilimini ya da bir veya daha cou saat dilimini tanımlayan bir dize tarafından izlenen oldukça standart bir biçim izleyen girişleri veya saat dilimi bölgelerde.
 
-2. Saat diliminin standart saat adını tanımlayın. Genellikle, bu dize saat diliminin tanımlayıcı olarak kullanılır.
+2. Saat diliminin standart saat adını tanımlayın. Genellikle, bu dizenin saat diliminin tanımlayıcı olarak kullanılır.
 
-3. Saat diliminin standart adından farklı bir kimlik kullanmak istiyorsanız, saat dilimi tanımlayıcı tanımlayın.
+3. Saat diliminin standart addan farklı bir kimlik kullanmak istiyorsanız, saat dilimi tanımlayıcı tanımlayın.
 
-4. Örneği bir <xref:System.TimeSpan> UTC saat diliminin uzaklığı tanımlayan nesne. Saat dilimi UTC sonraki sürelerine sahip bir pozitif uzaklığı vardır. Saat dilimi UTC önceki sürelerine sahip negatif uzaklık vardır.
+4. Örneği bir <xref:System.TimeSpan> UTC saat diliminin uzaklığı tanımlayan nesne. Saat dilimi ile UTC sonraki saatleri, pozitif bir sapma vardır. Saat dilimi ile UTC önceki bir kez bir negatif uzaklığa sahip.
 
-5. Çağrı <xref:System.TimeZoneInfo.CreateCustomTimeZone%28System.String%2CSystem.TimeSpan%2CSystem.String%2CSystem.String%29?displayProperty=nameWithType> yeni saat dilimine örneği oluşturmak için yöntem.
+5. Çağrı <xref:System.TimeZoneInfo.CreateCustomTimeZone%28System.String%2CSystem.TimeSpan%2CSystem.String%2CSystem.String%29?displayProperty=nameWithType> yeni saat dilimi örneklemek için yöntemi.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, özel bir saat dilimi Mawson, ayarlama kuralları yok Antarktika tanımlar.
+Aşağıdaki örnek, Mawson, ayarlama kuralları yok Antarktika, özel bir saat dilimi tanımlar.
 
 [!code-csharp[System.TimeZone2.CreateTimeZone#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/cs/System.TimeZone2.CreateTimeZone.cs#1)]
 [!code-vb[System.TimeZone2.CreateTimeZone#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/vb/System.TimeZone2.CreateTimeZone.vb#1)]
 
-Atanan dize <xref:System.TimeZoneInfo.DisplayName%2A> özelliği tarafından kolay bir açıklama saat dilimi UTC saat diliminin uzaklığı izlendiği standart bir biçim izler.
+Atanan dize <xref:System.TimeZoneInfo.DisplayName%2A> özelliği UTC saat diliminin uzaklığı saat dilimini kolay açıklaması tarafından izlendiği standart bir biçim izler.
 
 ## <a name="compiling-the-code"></a>Kod derleme
 
 Bu örnek gerektirir:
 
-* Bir başvuru System.Core.dll projeye eklenmesini.
+* Projeye System.Core.dll öğesine başvuru eklenmesi gerektiğini.
 
 * Şu ad alanlarından alınan olduğunu:
 
@@ -72,6 +72,6 @@ Bu örnek gerektirir:
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Tarih, saat ve saat dilimleri](../../../docs/standard/datetime/index.md)
-[saat dilimine genel bakış](../../../docs/standard/datetime/time-zone-overview.md)
-[nasıl yapılır: ayarlama kuralları ile saat dilimleri oluşturma](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md)
+* [Tarihler, saatler ve saat dilimleri](../../../docs/standard/datetime/index.md)
+* [Saat dilimine genel bakış](../../../docs/standard/datetime/time-zone-overview.md)
+* [Nasıl yapılır: Ayarlama kuralları ile saat dilimleri oluşturma](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md)

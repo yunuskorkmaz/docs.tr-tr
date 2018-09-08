@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WCF Data Services, learn more
 ms.assetid: e63a9baf-699c-42e2-b11f-fba57bcc14df
 ms.openlocfilehash: 790fe629ae709a9fcb57d5b551e9fa7aecfb04f5
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44137154"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44177066"
 ---
 # <a name="wcf-data-services-resources"></a>WCF Veri Hizmetleri Kaynakları
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Giriş konuları aşağıdaki konumlarda bulunabilir. Bu konular birçoğu ayrıca daha ayrıntılı bilgiler içeren ilgili konulara bağlantılar içerir.  

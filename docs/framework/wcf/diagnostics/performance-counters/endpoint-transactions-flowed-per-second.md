@@ -3,11 +3,11 @@ title: 'Uç noktası: Saniyede Akışı Yapılan İşlem'
 ms.date: 03/30/2017
 ms.assetid: 0f370ff1-a913-450b-bccb-c279ad165b3d
 ms.openlocfilehash: 79f50b6706facd040ec2d325c676f210d5327bf8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44064965"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44175023"
 ---
 # <a name="endpoint-transactions-flowed-per-second"></a>Uç noktası: Saniyede Akışı Yapılan İşlem
 Sayaç adı: Saniyede akışı yapılan işlemler.  

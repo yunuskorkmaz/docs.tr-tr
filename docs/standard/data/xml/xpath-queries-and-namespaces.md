@@ -8,28 +8,28 @@ dev_langs:
 ms.assetid: ef6402be-2f8e-4be2-8d3e-a80891cdef8b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a121f58df93f88af851bbcc85d75e71fc067af78
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b11ac80b671c345768da23d2b51d2333c228aaeb
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571468"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44208601"
 ---
 # <a name="xpath-queries-and-namespaces"></a>XPath sorguları ve ad alanları
-XPath sorguları bir XML belgesi, ad alanlarının farkında olduğundan ve ad alanı öneklerini öğe ve öznitelik adları nitelemek için kullanabilirsiniz. Bir ad alanı öneki ile öğe ve öznitelik adları niteleme belirli bir ad alanına ait düğümlere bir XPath sorgusu tarafından döndürülen düğümleri sınırlar.  
+XPath sorguları, XML belgesinde ad alanlarının farkındayız ve ad alanı öneklerini öğe ve öznitelik adları nitelemek için kullanabilirsiniz. Ad alanı öneki öğe ve öznitelik adlarını niteleme yalnızca belirli bir ad alanına ait düğümleri bir XPath sorgusu tarafından döndürülen düğümleri sınırlar.  
   
- Örneğin, önek `books` eşleyen ad alanına `http://www.contoso.com/books`, ardından aşağıdaki XPath sorgusu `/books:books/books:book` yalnızca seçer `book` ad alanındaki öğeler `http://www.contoso.com/books`.  
+ Örneğin, ön eki `books` eşleyen ad alanına `http://www.contoso.com/books`, ardından aşağıdaki XPath sorgusu `/books:books/books:book` yalnızca seçer `book` ad alanındaki öğeler `http://www.contoso.com/books`.  
   
 ## <a name="the-xmlnamespacemanager"></a>XmlNamespaceManager  
- Ad alanları bir XPath sorgusu kullanmak için bir nesne türetilmiş <xref:System.Xml.IXmlNamespaceResolver> gibi arabirim <xref:System.Xml.XmlNamespaceManager> sınıfı XPath sorgusu eklenecek öneki ve ad alanı URI'si ile yapılandırılmıştır.  
+ Bir XPath sorgusu ad alanları kullanmak için bir nesne türetilen <xref:System.Xml.IXmlNamespaceResolver> gibi arabirim <xref:System.Xml.XmlNamespaceManager> sınıfı XPath sorgusundaki eklenecek önek ve ad alanı URI ile oluşturulur.  
   
- <xref:System.Xml.XmlNamespaceManager> Nesnesi, her aşağıdaki yollardan biriyle sorgusunda kullanılabilir.  
+ <xref:System.Xml.XmlNamespaceManager> Sorguda aşağıdaki yollardan biriyle her nesne kullanılabilir.  
   
--   <xref:System.Xml.XmlNamespaceManager> Nesnesidir varolan ile ilişkili <xref:System.Xml.XPath.XPathExpression> kullanarak nesne <xref:System.Xml.XPath.XPathExpression.SetContext%2A> yöntemi <xref:System.Xml.XPath.XPathExpression> nesnesi. Ayrıca yeni bir derleme <xref:System.Xml.XPath.XPathExpression> statik kullanarak nesne <xref:System.Xml.XPath.XPathExpression.Compile%2A> XPath ifadesi temsil eden bir dize alan yöntemi ve bir <xref:System.Xml.XmlNamespaceManager> nesne parametreleri ve yeni bir döndürür olarak <xref:System.Xml.XPath.XPathExpression> nesnesi.  
+-   <xref:System.Xml.XmlNamespaceManager> Nesnedir varolan ile ilişkili <xref:System.Xml.XPath.XPathExpression> kullanarak nesne <xref:System.Xml.XPath.XPathExpression.SetContext%2A> yöntemi <xref:System.Xml.XPath.XPathExpression> nesne. Ayrıca yeni bir derleme <xref:System.Xml.XPath.XPathExpression> 'using static nesne <xref:System.Xml.XPath.XPathExpression.Compile%2A> yöntemi XPath ifadesi temsil eden bir dize alır ve bir <xref:System.Xml.XmlNamespaceManager> nesnesi parametrelerini ve yeni bir döndürür olarak <xref:System.Xml.XPath.XPathExpression> nesne.  
   
--   <xref:System.Xml.XmlNamespaceManager> Nesnenin kendisine geçirilen parametre olarak kabul bir <xref:System.Xml.XPath.XPathNavigator> sınıf XPath ifadesi temsil eden bir dize birlikte yöntemi.  
+-   <xref:System.Xml.XmlNamespaceManager> Nesnesinin kendisi bir kabul etmek için parametre olarak geçirilir <xref:System.Xml.XPath.XPathNavigator> sınıfı XPath ifadesi temsil eden bir dize ile birlikte yöntemi.  
   
- Yöntemleri şunlardır <xref:System.Xml.XPath.XPathNavigator> nesneyi kabul sınıfı türetilen <xref:System.Xml.IXmlNamespaceResolver> bir parametre olarak arabirimi.  
+ Yöntemleri şunlardır <xref:System.Xml.XPath.XPathNavigator> kabul eden bir nesne sınıfı türetilen <xref:System.Xml.IXmlNamespaceResolver> arabirimi bir parametre olarak.  
   
 -   <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>  
   
@@ -38,7 +38,7 @@ XPath sorguları bir XML belgesi, ad alanlarının farkında olduğundan ve ad a
 -   <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
   
 ### <a name="the-default-namespace"></a>Varsayılan Namespace  
- Aşağıdaki XML belgesinde bildirmek için varsayılan ad alanı boş bir önek ile kullanılan `http://www.contoso.com/books` ad alanı.  
+ Aşağıdaki XML belgesinde varsayılan ad alanı ön eki boş bildirmek için kullanılan `http://www.contoso.com/books` ad alanı.  
   
 ```xml  
 <books xmlns="http://www.example.com/books">  
@@ -50,13 +50,13 @@ XPath sorguları bir XML belgesi, ad alanlarının farkında olduğundan ve ad a
 </books>  
 ```  
   
- XPath boş önek davranır `null` ad alanı. Diğer bir deyişle, ad alanlarına eşlenen önekleri XPath sorguları kullanılabilir. Bu, varsayılan ad alanını olsa bile da, bir ad alanı bir XML belgesi karşı sorgulamak istiyorsanız, bunun için bir önek tanımlamak yapmanız gerektiği anlamına gelir.  
+ XPath boş önek olarak değerlendirir `null` ad alanı. Diğer bir deyişle, yalnızca ad alanlarına eşlenen ön ekleri XPath sorguları içinde kullanılabilir. Bu, varsayılan ad alanı olsa da, bir ad alanı bir XML belgesi karşı sorgulamak istiyorsanız, bunun için bir ön eki tanımlamak gerektiğini anlamına gelir.  
   
- Örneğin, yukarıdaki XPath XML belgesi için bir önek tanımlamadan sorgu `/books/book` herhangi bir sonuç döndürür değil.  
+ Örneğin, yukarıdaki XPath XML belgesi için bir önek tanımlamadan sorgu `/books/book` herhangi bir sonuç döndürmek değil.  
   
- Bir ad değil, bazı düğümler ve bazı durumlarda bir varsayılan ad alanı belgelerle sorgulanırken Karışıklığı önlemek için bir önek bağlı olması gerekir.  
+ Belgeler, bir ad alanındaki bazı düğümler ve bazı durumlarda bir varsayılan ad alanı sorgulanırken belirsizlik önlemek için bir önek bağlı olmalıdır.  
   
- Aşağıdaki kod, varsayılan ad alanı için bir önek tanımlar ve tüm seçer `book` öğelerinden `http://www.contoso.com/books` ad alanı.  
+ Aşağıdaki kod bir varsayılan ad alanı öneki tanımlar ve tüm seçer `book` öğelerden `http://www.contoso.com/books` ad alanı.  
   
 ```vb  
 Dim document As XPathDocument = New XPathDocument("books.xml")  
@@ -78,13 +78,14 @@ query.SetContext(manager);
 XPathNodeIterator nodes = navigator.Select(query);  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Xml.XmlDocument>  
- <xref:System.Xml.XPath.XPathDocument>  
- <xref:System.Xml.XPath.XPathNavigator>  
- [XPath Veri Modelini Kullanarak XML Verilerini İşleme](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
- [XPathNavigator Kullanarak XML Verileri Seçme](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)  
- [XPathNavigator Kullanarak XPath İfadelerini Değerlendirme](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)  
- [XPathNavigator Kullanarak Düğümleri Eşleştirme](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)  
- [XPath Sorguları ile Tanınan Düğüm Türleri](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)  
- [Derlenmiş XPath İfadeleri](../../../../docs/standard/data/xml/compiled-xpath-expressions.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- <xref:System.Xml.XmlDocument>  
+- <xref:System.Xml.XPath.XPathDocument>  
+- <xref:System.Xml.XPath.XPathNavigator>  
+- [XPath Veri Modelini Kullanarak XML Verilerini İşleme](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
+- [XPathNavigator Kullanarak XML Verileri Seçme](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)  
+- [XPathNavigator Kullanarak XPath İfadelerini Değerlendirme](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)  
+- [XPathNavigator Kullanarak Düğümleri Eşleştirme](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)  
+- [XPath Sorguları ile Tanınan Düğüm Türleri](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)  
+- [Derlenmiş XPath İfadeleri](../../../../docs/standard/data/xml/compiled-xpath-expressions.md)
