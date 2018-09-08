@@ -3,11 +3,11 @@ title: İş akışı hizmetlerinde iletileri biçimlendirme
 ms.date: 03/30/2017
 ms.assetid: 6d15d44b-20f8-4cb7-bd4f-598c32781ebc
 ms.openlocfilehash: eb9a6b3a83a28154dc968bd4c1c41d34028bdd41
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44134798"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44198978"
 ---
 # <a name="formatting-messages-in-workflow-services"></a>İş akışı hizmetlerinde iletileri biçimlendirme
 Bu örnek nasıl farklı kullanıcı türleri kullanılabilir Mesajlaşma etkinlikleri (WF Hizmetleri) gösterir. Örnek hizmet basit gider onay hizmetidir ve üç işlemini kullanıma sunar. `ApproveExpense` bir veri anlaşması türü alır ve bilinen türleri kullanmayı gösterir. İşlem döndürür `true` veya `false` gider tutarını temel. `ApprovePO` XmlSerializer türü alır ve döndürür `true` veya `false` gider tutarını temel.`ApprovedVendor` bir ileti anlaşması türü alır ve döndürür `true` veya `false` satıcı onaylanan satıcıları listesinde değilse veya istek (Finans departmanı, herhangi bir satıcı kullanabilirsiniz) Finans departmanında geldiyse.  

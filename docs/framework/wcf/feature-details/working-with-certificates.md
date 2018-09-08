@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: d0e54aeda1ee51fe7ba87c3ac69c556ea25e320f
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 938998a2316af28071e54e909fa60b5edbda0f35
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43870217"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44198939"
 ---
 # <a name="working-with-certificates"></a>Sertifikalarla Çalışma
 Windows Communication Foundation (WCF) güvenlik programlamak için X.509 dijital sertifikalar sık iletileri dijital olarak imzala istemcilere ve sunuculara kimlik doğrulaması ve şifreleme için kullanılır. Bu konuda kısaca X.509 dijital sertifika özellikleri ve bunların WCF'de nasıl kullanılacağını açıklar ve WCF ve sertifikaları kullanarak yaygın görevlerin nasıl yerine getirileceğini gösteren ya da, bu kavramları daha açıklayan konulara bağlantılar içerir.  
@@ -85,12 +85,12 @@ Windows Communication Foundation (WCF) güvenlik programlamak için X.509 dijita
   
  Özel bir kimlik doğrulayıcı oluştururken, geçersiz kılmak için en önemli yöntemdir <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A> yöntemi. Özel kimlik doğrulama örneği için bkz: [X.509 Sertifika Doğrulayıcı](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md) örnek. Daha fazla bilgi için [özel kimlik bilgileri ve kimlik bilgisi doğrulaması](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md).  
   
-## <a name="using-makecertexe-to-build-a-certificate-chain"></a>Bir sertifika zinciri MakeCert.exe ile  
- Sertifika Oluşturma Aracı'nı (Makecert.exe) X.509 sertifikaları ve özel anahtarı/genel anahtar çifti oluşturur. Disk ve vermek ve yeni sertifikaları imzalamak için kullanmak üzere özel anahtarı böylece Zincirli sertifikalar hiyerarşisini benzetimi kaydedebilirsiniz. Geliştirme Hizmetleri ve gerçek dağıtımı için sertifikaları oluşturmak için asla kullanılmamalıdır araç yalnızca yardımcı olarak kullanılmak üzere hazırlanmıştır. Bir WCF Hizmeti geliştirirken, bir Makecert.exe ile bir güven zinciri oluşturmak için aşağıdaki adımları kullanın.  
+## <a name="using-the-powershell-new-selfsignedcertificate-cmdlet-to-build-a-certificate-chain"></a>Bir sertifika zinciri oluşturmak için yeni Powershell-SelfSignedCertificate cmdlet'ini kullanarak  
+ New-SelfSignedCertificate Powershell cmdlet'i, X.509 sertifikaları ve özel anahtarı/genel anahtar çifti oluşturur. Disk ve vermek ve yeni sertifikaları imzalamak için kullanmak üzere özel anahtarı böylece Zincirli sertifikalar hiyerarşisini benzetimi kaydedebilirsiniz. Geliştirme Hizmetleri ve gerçek dağıtımı için sertifikaları oluşturmak için asla kullanılmamalıdır cmdlet'i yalnızca yardımcı olarak kullanıma yöneliktir. Bir WCF Hizmeti geliştirirken, bir New-SelfSignedCertificate cmdlet'i ile bir güven zinciri oluşturmak için aşağıdaki adımları kullanın.  
   
-#### <a name="to-build-a-chain-of-trust-with-makecertexe"></a>Makecert.exe ile bir güven zinciri oluşturmak için  
+#### <a name="to-build-a-chain-of-trust-with-the-new-selfsignedcertificate-cmdlet"></a>New-SelfSignedCertificate cmdlet'i ile bir güven zinciri oluşturmak için  
   
-1.  MakeCert.exe aracını kullanarak geçici kök yetkilisi (otomatik olarak imzalanan) bir sertifika oluşturun. Özel anahtarı, diske kaydedin.  
+1.  New-SelfSignedCertificate cmdlet'ini kullanarak bir geçici kök yetkilisi (otomatik olarak imzalanan) bir sertifika oluşturun. Özel anahtarı, diske kaydedin.  
   
 2.  Yeni sertifikanın ortak anahtarı içeren başka bir sertifika kullanın.  
   

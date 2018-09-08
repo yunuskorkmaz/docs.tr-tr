@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 500335af-f9b5-413b-968a-e6d9a824478c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c871dabd9d027e5716c863985bed7ef3b955a358
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 67062ab87182bcb42793cb166323020178ac1688
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43672663"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44197307"
 ---
 # <a name="xslt-transformations-with-the-xsltransform-class"></a>XslTransform sınıfı ile XSLT dönüşümleri
 
@@ -96,13 +96,13 @@ public class Sample
 }
 ```
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-<xref:System.Xml.Xsl.XslTransform>  
-[XslTransform Sınıfı XSLT İşlemcisini Uygular](xsltransform-class-implements-the-xslt-processor.md)  
-[XslTransform Sınıfında İsteğe Bağlı Davranışların Uygulanması](implementation-of-discretionary-behaviors-in-the-xsltransform-class.md)  
-[Dönüşümlerde XPathNavigator](xpathnavigator-in-transformations.md)  
-[Dönüşümlerde XPathNodeIterator](xpathnodeiterator-in-transformations.md)  
-[XslTransform’a XPathDocument Girişi](xpathdocument-input-to-xsltransform.md)  
-[XslTransform’a XmlDataDocument Girişi](xmldatadocument-input-to-xsltransform.md)  
-[XslTransform’a XmlDocument Girişi](xmldocument-input-to-xsltransform.md)  
+- <xref:System.Xml.Xsl.XslTransform>  
+- [XslTransform Sınıfı XSLT İşlemcisini Uygular](xsltransform-class-implements-the-xslt-processor.md)  
+- [XslTransform Sınıfında İsteğe Bağlı Davranışların Uygulanması](implementation-of-discretionary-behaviors-in-the-xsltransform-class.md)  
+- [Dönüşümlerde XPathNavigator](xpathnavigator-in-transformations.md)  
+- [Dönüşümlerde XPathNodeIterator](xpathnodeiterator-in-transformations.md)  
+- [XslTransform’a XPathDocument Girişi](xpathdocument-input-to-xsltransform.md)  
+- [XslTransform’a XmlDataDocument Girişi](xmldatadocument-input-to-xsltransform.md)  
+- [XslTransform’a XmlDocument Girişi](xmldocument-input-to-xsltransform.md)  

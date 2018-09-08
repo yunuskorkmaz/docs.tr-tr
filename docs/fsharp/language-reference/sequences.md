@@ -3,11 +3,11 @@ title: Diziler (F#)
 description: 'F # dizileri, veri koleksiyonu sıralı bir büyük, varsa, ancak tüm öğeleri kullanmak mutlaka beklemiyoruz kullanmayı öğrenin.'
 ms.date: 05/16/2016
 ms.openlocfilehash: cfe8d1e350a8ac46b7700c12aa84d250f8b35855
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44079909"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44195654"
 ---
 # <a name="sequences"></a>Diziler
 

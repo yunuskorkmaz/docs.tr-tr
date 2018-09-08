@@ -11,11 +11,11 @@ ms.assetid: 4265d169-6c69-4f36-b10d-b7ae7f72f4df
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8fd937d6ce2edf0c47fce78d48a90ec1aa409eef
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44135113"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44196653"
 ---
 # <a name="how-to-traverse-a-binary-tree-with-parallel-tasks"></a>Nasıl yapılır: Paralel Görevler İçeren Bir İkili Ağacı Gezme
 Aşağıdaki örnek, bir ağaç veri yapısı geçirmek için Paralel Görevler, kullanılabilir iki yolunu gösterir. Ağaç oluşturulmasını bir alıştırma olarak kalır.  

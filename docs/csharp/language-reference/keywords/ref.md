@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 689b61bb79718f4185e22a53bc669e7d67765ba0
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: e0b82de125246e95d8dce2a7afc20119a8a1fe4f
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43746895"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44200559"
 ---
 # <a name="ref-c-reference"></a>ref (C# Başvurusu)
 
@@ -55,8 +55,6 @@ Bir yöntem olduğunda ancak yöntemler aşırı yüklenebilir bir `ref`, `in`, 
  Gizleme veya geçersiz kılma, gibi imza eşleştirme gerektiren diğer durumlarda `in`, `ref`, ve `out` imzasının bir parçası olan ve birbiriyle uyuşmuyor.  
   
  Özellikler değişkenleri değildir. Yöntemler ve için geçirilemez `ref` parametreleri.  
-  
- Ona nasıl iletileceğini dizileri hakkında daha fazla bilgi için bkz [kullanarak dizileri geçirme ref ve out](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md).  
   
  Kullanamazsınız `ref`, `in`, ve `out` yöntemleri aşağıdaki türde için anahtar sözcükler:  
   

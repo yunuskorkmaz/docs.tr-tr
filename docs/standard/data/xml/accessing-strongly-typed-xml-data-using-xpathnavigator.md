@@ -9,11 +9,11 @@ ms.assetid: 898e0f52-8a7c-4d1f-afcd-6ffb28b050b4
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0c283d3c87effcf9e898bb769cc8991da6cea453
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44129483"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44199628"
 ---
 # <a name="accessing-strongly-typed-xml-data-using-xpathnavigator"></a>XPathNavigator kullanarak XML verilerini yazılan kesin erişme
 XPath 2.0 veri modeli, bir örneği olarak <xref:System.Xml.XPath.XPathNavigator> sınıfı, ortak dil çalışma zamanı (CLR) türleri ile eşleştirir, kesin türü belirtilmiş veri içerebilir. XPath 2.0 veri modeline göre yalnızca öğeler ve öznitelikler kesin türü belirtilmiş veri içerebilir. <xref:System.Xml.XPath.XPathNavigator> Sınıf içindeki verilerine erişmek için bir mekanizma sağlar bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> başka bir veri türünden dönüştürme mekanizmaları yanı sıra, kesin türü belirtilmiş veri nesnesi.  

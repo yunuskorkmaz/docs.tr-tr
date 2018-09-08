@@ -11,11 +11,11 @@ helpviewer_keywords:
 - templates [WPF]
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
 ms.openlocfilehash: 58d65ee9842270b07a76ff438c975955689197e9
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44139000"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44198185"
 ---
 # <a name="control-styles-and-templates"></a>Denetim Stilleri ve Şablonları
 Windows Presentation Foundation (WPF) denetiminiz bir <xref:System.Windows.Controls.ControlTemplate> , denetimin görsel ağacını içerir. Bir denetimin görünümünü ve yapısı değiştirerek değiştirebilirsiniz <xref:System.Windows.Controls.ControlTemplate> denetimin. Bir denetimin görsel ağacın yalnızca bir kısmını değiştirmek için bir yolu yoktur; görsel ağacı ayarlamalısınız bir denetimin değiştirmek için <xref:System.Windows.Controls.Control.Template%2A> yeni ve tam denetim özelliği <xref:System.Windows.Controls.ControlTemplate>.  

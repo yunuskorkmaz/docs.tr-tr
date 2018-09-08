@@ -5,11 +5,11 @@ helpviewer_keywords:
 - true operator [C#]
 ms.assetid: acaba817-5da5-4364-b3b2-2e5c75ec1839
 ms.openlocfilehash: 54b8d764dc673598474d6adbbee82e0223a16b93
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44079249"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44197805"
 ---
 # <a name="true-operator-c-reference"></a>true İşleci (C# Başvurusu)
 Döndürür [bool](../../../csharp/language-reference/keywords/bool.md) değer `true` bir işlenen true ise ve döndürür belirtmek için `false` Aksi takdirde.  
