@@ -9,25 +9,25 @@ helpviewer_keywords:
 - objects, serializing steps
 ms.assetid: a1207d05-32b2-4953-8582-959607991227
 ms.openlocfilehash: e4d6e3edb15dbf5ba4b7ec7f8658fec1a618d315
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43875755"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44194909"
 ---
-# <a name="how-to-serialize-an-object"></a><span data-ttu-id="9042d-102">Nasıl yapılır: bir nesneyi serileştirmek</span><span class="sxs-lookup"><span data-stu-id="9042d-102">How to: Serialize an Object</span></span>
-<span data-ttu-id="9042d-103">Bir nesneyi serileştirmek için önce sıralanabilir ve ortak özelliklerini ve alanları ayarlamak için olan nesne oluşturun.</span><span class="sxs-lookup"><span data-stu-id="9042d-103">To serialize an object, first create the object that is to be serialized and set its public properties and fields.</span></span> <span data-ttu-id="9042d-104">Bunu yapmak için XML akışı, bir akış olarak veya bir dosya olarak depolanır taşıma biçimi belirlemeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="9042d-104">To do this, you must determine the transport format in which the XML stream is to be stored, either as a stream or as a file.</span></span> <span data-ttu-id="9042d-105">XML Akışı kalıcı bir biçimde kaydedilmesi gerekir, örneğin, oluşturun bir <xref:System.IO.FileStream> nesne.</span><span class="sxs-lookup"><span data-stu-id="9042d-105">For example, if the XML stream must be saved in a permanent form, create a <xref:System.IO.FileStream> object.</span></span>  
+# <a name="how-to-serialize-an-object"></a><span data-ttu-id="af519-102">Nasıl yapılır: bir nesneyi serileştirmek</span><span class="sxs-lookup"><span data-stu-id="af519-102">How to: Serialize an Object</span></span>
+<span data-ttu-id="af519-103">Bir nesneyi serileştirmek için önce sıralanabilir ve ortak özelliklerini ve alanları ayarlamak için olan nesne oluşturun.</span><span class="sxs-lookup"><span data-stu-id="af519-103">To serialize an object, first create the object that is to be serialized and set its public properties and fields.</span></span> <span data-ttu-id="af519-104">Bunu yapmak için XML akışı, bir akış olarak veya bir dosya olarak depolanır taşıma biçimi belirlemeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="af519-104">To do this, you must determine the transport format in which the XML stream is to be stored, either as a stream or as a file.</span></span> <span data-ttu-id="af519-105">XML Akışı kalıcı bir biçimde kaydedilmesi gerekir, örneğin, oluşturun bir <xref:System.IO.FileStream> nesne.</span><span class="sxs-lookup"><span data-stu-id="af519-105">For example, if the XML stream must be saved in a permanent form, create a <xref:System.IO.FileStream> object.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="9042d-106">Daha fazla XML serileştirme örnekler için bkz. [XML serileştirme örnekler](../../../docs/standard/serialization/examples-of-xml-serialization.md).</span><span class="sxs-lookup"><span data-stu-id="9042d-106">For more examples of XML serialization, see [Examples of XML Serialization](../../../docs/standard/serialization/examples-of-xml-serialization.md).</span></span>  
+>  <span data-ttu-id="af519-106">Daha fazla XML serileştirme örnekler için bkz. [XML serileştirme örnekler](../../../docs/standard/serialization/examples-of-xml-serialization.md).</span><span class="sxs-lookup"><span data-stu-id="af519-106">For more examples of XML serialization, see [Examples of XML Serialization](../../../docs/standard/serialization/examples-of-xml-serialization.md).</span></span>  
   
-### <a name="to-serialize-an-object"></a><span data-ttu-id="9042d-107">Bir nesneyi serileştirmek için</span><span class="sxs-lookup"><span data-stu-id="9042d-107">To serialize an object</span></span>  
+### <a name="to-serialize-an-object"></a><span data-ttu-id="af519-107">Bir nesneyi serileştirmek için</span><span class="sxs-lookup"><span data-stu-id="af519-107">To serialize an object</span></span>  
   
-1.  <span data-ttu-id="9042d-108">Nesne oluşturun ve kendi ortak alanları ve özelliklerini ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="9042d-108">Create the object and set its public fields and properties.</span></span>  
+1.  <span data-ttu-id="af519-108">Nesne oluşturun ve kendi ortak alanları ve özelliklerini ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="af519-108">Create the object and set its public fields and properties.</span></span>  
   
-2.  <span data-ttu-id="9042d-109">Oluşturmak bir <xref:System.Xml.Serialization.XmlSerializer> kullanarak nesnenin türü.</span><span class="sxs-lookup"><span data-stu-id="9042d-109">Construct a <xref:System.Xml.Serialization.XmlSerializer> using the type of the object.</span></span> <span data-ttu-id="9042d-110">Daha fazla bilgi için <xref:System.Xml.Serialization.XmlSerializer> sınıf oluşturucu.</span><span class="sxs-lookup"><span data-stu-id="9042d-110">For more information, see the <xref:System.Xml.Serialization.XmlSerializer> class constructors.</span></span>  
+2.  <span data-ttu-id="af519-109">Oluşturmak bir <xref:System.Xml.Serialization.XmlSerializer> kullanarak nesnenin türü.</span><span class="sxs-lookup"><span data-stu-id="af519-109">Construct a <xref:System.Xml.Serialization.XmlSerializer> using the type of the object.</span></span> <span data-ttu-id="af519-110">Daha fazla bilgi için <xref:System.Xml.Serialization.XmlSerializer> sınıf oluşturucu.</span><span class="sxs-lookup"><span data-stu-id="af519-110">For more information, see the <xref:System.Xml.Serialization.XmlSerializer> class constructors.</span></span>  
   
-3.  <span data-ttu-id="9042d-111">Çağrı <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> bir XML akışı veya nesnenin ortak özellikler ve alanları dosya gösterimini oluşturmak için yöntemi.</span><span class="sxs-lookup"><span data-stu-id="9042d-111">Call the <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> method to generate either an XML stream or a file representation of the object's public properties and fields.</span></span> <span data-ttu-id="9042d-112">Aşağıdaki örnek, bir dosya oluşturur.</span><span class="sxs-lookup"><span data-stu-id="9042d-112">The following example creates a file.</span></span>  
+3.  <span data-ttu-id="af519-111">Çağrı <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> bir XML akışı veya nesnenin ortak özellikler ve alanları dosya gösterimini oluşturmak için yöntemi.</span><span class="sxs-lookup"><span data-stu-id="af519-111">Call the <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> method to generate either an XML stream or a file representation of the object's public properties and fields.</span></span> <span data-ttu-id="af519-112">Aşağıdaki örnek, bir dosya oluşturur.</span><span class="sxs-lookup"><span data-stu-id="af519-112">The following example creates a file.</span></span>  
   
     ```vb  
     Dim myObject As MySerializableClass = New MySerializableClass()  
@@ -50,7 +50,7 @@ ms.locfileid: "43875755"
     myWriter.Close();  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="9042d-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="9042d-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="af519-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="af519-113">See also</span></span>
 
-- [<span data-ttu-id="9042d-114">XML Serileştirmeye Giriş</span><span class="sxs-lookup"><span data-stu-id="9042d-114">Introducing XML Serialization</span></span>](../../../docs/standard/serialization/introducing-xml-serialization.md)  
-- [<span data-ttu-id="9042d-115">Nasıl yapılır: Nesneyi Seri Durumdan Çıkarma</span><span class="sxs-lookup"><span data-stu-id="9042d-115">How to: Deserialize an Object</span></span>](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [<span data-ttu-id="af519-114">XML Serileştirmeye Giriş</span><span class="sxs-lookup"><span data-stu-id="af519-114">Introducing XML Serialization</span></span>](../../../docs/standard/serialization/introducing-xml-serialization.md)  
+- [<span data-ttu-id="af519-115">Nasıl yapılır: Nesneyi Seri Durumdan Çıkarma</span><span class="sxs-lookup"><span data-stu-id="af519-115">How to: Deserialize an Object</span></span>](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

@@ -1,5 +1,5 @@
 ---
-title: Derlemeler ve DLL adları
+title: Bütünleştirilmiş kod ve DLL adları
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -10,32 +10,33 @@ helpviewer_keywords:
 ms.assetid: e800b610-31b4-4949-9c14-cb60e9f254be
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6cf175472d68e99598dd56e170bee3d37ae3c2a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 97bd152cff53fb1c2edb107b6d6b34bd91ca1c49
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570438"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44187656"
 ---
-# <a name="names-of-assemblies-and-dlls"></a><span data-ttu-id="8569d-102">Derlemeler ve DLL adları</span><span class="sxs-lookup"><span data-stu-id="8569d-102">Names of Assemblies and DLLs</span></span>
-<span data-ttu-id="8569d-103">Derleme dağıtımı ve yönetilen kod programlar kimliğini birimidir.</span><span class="sxs-lookup"><span data-stu-id="8569d-103">An assembly is the unit of deployment and identity for managed code programs.</span></span> <span data-ttu-id="8569d-104">Genellikle bir veya daha çok dosya derlemeleri yayılabilir karşın, bir derlemeyi bire bir DLL ile eşler.</span><span class="sxs-lookup"><span data-stu-id="8569d-104">Although assemblies can span one or more files, typically an assembly maps one-to-one with a DLL.</span></span> <span data-ttu-id="8569d-105">Bu nedenle, bu bölümde daha sonra derleme adlandırma kurallarına eşlenen yalnızca DLL adlandırma kuralları, açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="8569d-105">Therefore, this section describes only DLL naming conventions, which then can be mapped to assembly naming conventions.</span></span>  
+# <a name="names-of-assemblies-and-dlls"></a><span data-ttu-id="6888d-102">Bütünleştirilmiş kod ve DLL adları</span><span class="sxs-lookup"><span data-stu-id="6888d-102">Names of Assemblies and DLLs</span></span>
+<span data-ttu-id="6888d-103">Bir derleme dağıtım ve yönetilen kod programları için kimlik birimidir.</span><span class="sxs-lookup"><span data-stu-id="6888d-103">An assembly is the unit of deployment and identity for managed code programs.</span></span> <span data-ttu-id="6888d-104">Genellikle bir veya daha çok dosya derlemeleri yayılabilir olsa da, bir derleme bir DLL ile bire bir eşlenir.</span><span class="sxs-lookup"><span data-stu-id="6888d-104">Although assemblies can span one or more files, typically an assembly maps one-to-one with a DLL.</span></span> <span data-ttu-id="6888d-105">Bu nedenle, bu bölümde olan derleme adlandırma kurallarına eşlenebilir yalnızca DLL adlandırma kurallarını açıklar.</span><span class="sxs-lookup"><span data-stu-id="6888d-105">Therefore, this section describes only DLL naming conventions, which then can be mapped to assembly naming conventions.</span></span>  
   
- <span data-ttu-id="8569d-106">**✓ DO** derlemenizi System.Data gibi işlevleri büyük boyutta önermek DLL'ler için adları'ı seçin.</span><span class="sxs-lookup"><span data-stu-id="8569d-106">**✓ DO** choose names for your assembly DLLs that suggest large chunks of functionality, such as System.Data.</span></span>  
+ <span data-ttu-id="6888d-106">**✓ DO** derlemenizi System.Data gibi işlevleri büyük boyutta önermek DLL'ler için adları'ı seçin.</span><span class="sxs-lookup"><span data-stu-id="6888d-106">**✓ DO** choose names for your assembly DLLs that suggest large chunks of functionality, such as System.Data.</span></span>  
   
- <span data-ttu-id="8569d-107">Derleme ve DLL adları ad alanı adları için karşılık gelen gerekmez, ancak ad derlemeleri adlandırırken izlemek makul.</span><span class="sxs-lookup"><span data-stu-id="8569d-107">Assembly and DLL names don’t have to correspond to namespace names, but it is reasonable to follow the namespace name when naming assemblies.</span></span> <span data-ttu-id="8569d-108">Bir iyi derlemesinde bulunan ad alanları ortak önekini temel DLL adlandırmak için udur.</span><span class="sxs-lookup"><span data-stu-id="8569d-108">A good rule of thumb is to name the DLL based on the common prefix of the namespaces contained in the assembly.</span></span> <span data-ttu-id="8569d-109">Örneğin, iki ad alanı, bir derleme `MyCompany.MyTechnology.FirstFeature` ve `MyCompany.MyTechnology.SecondFeature`, çağrılabilir `MyCompany.MyTechnology.dll`.</span><span class="sxs-lookup"><span data-stu-id="8569d-109">For example, an assembly with two namespaces, `MyCompany.MyTechnology.FirstFeature` and `MyCompany.MyTechnology.SecondFeature`, could be called `MyCompany.MyTechnology.dll`.</span></span>  
+ <span data-ttu-id="6888d-107">Bütünleştirilmiş kod ve DLL adları ad alanı adları için karşılık gelen gerekmez ancak ad alanı adı derlemelerini adlandırma izlenmesi gereken şüphelenilebilir.</span><span class="sxs-lookup"><span data-stu-id="6888d-107">Assembly and DLL names don’t have to correspond to namespace names, but it is reasonable to follow the namespace name when naming assemblies.</span></span> <span data-ttu-id="6888d-108">Bir iyi derlemesinde bulunan ad alanlarının yaygın önekini temel DLL adı için udur.</span><span class="sxs-lookup"><span data-stu-id="6888d-108">A good rule of thumb is to name the DLL based on the common prefix of the namespaces contained in the assembly.</span></span> <span data-ttu-id="6888d-109">Örneğin, iki ad alanı, bir derlemeye `MyCompany.MyTechnology.FirstFeature` ve `MyCompany.MyTechnology.SecondFeature`, çağrılabilir `MyCompany.MyTechnology.dll`.</span><span class="sxs-lookup"><span data-stu-id="6888d-109">For example, an assembly with two namespaces, `MyCompany.MyTechnology.FirstFeature` and `MyCompany.MyTechnology.SecondFeature`, could be called `MyCompany.MyTechnology.dll`.</span></span>  
   
- <span data-ttu-id="8569d-110">**✓ CONSIDER** göre aşağıdaki düzeni DLL'leri adlandırma:</span><span class="sxs-lookup"><span data-stu-id="8569d-110">**✓ CONSIDER** naming DLLs according to the following pattern:</span></span>  
+ <span data-ttu-id="6888d-110">**✓ CONSIDER** göre aşağıdaki düzeni DLL'leri adlandırma:</span><span class="sxs-lookup"><span data-stu-id="6888d-110">**✓ CONSIDER** naming DLLs according to the following pattern:</span></span>  
   
  `<Company>.<Component>.dll`  
   
- <span data-ttu-id="8569d-111">Burada `<Component>` bir veya daha fazla nokta ayrılmış yan tümceleri içerir.</span><span class="sxs-lookup"><span data-stu-id="8569d-111">where `<Component>` contains one or more dot-separated clauses.</span></span> <span data-ttu-id="8569d-112">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="8569d-112">For example:</span></span>  
+ <span data-ttu-id="6888d-111">Burada `<Component>` bir veya daha fazla noktayla ayrılmış yan tümce içeriyor.</span><span class="sxs-lookup"><span data-stu-id="6888d-111">where `<Component>` contains one or more dot-separated clauses.</span></span> <span data-ttu-id="6888d-112">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="6888d-112">For example:</span></span>  
   
- <span data-ttu-id="8569d-113">`Litware.Controls.dll`.</span><span class="sxs-lookup"><span data-stu-id="8569d-113">`Litware.Controls.dll`.</span></span>  
+ <span data-ttu-id="6888d-113">`Litware.Controls.dll`.</span><span class="sxs-lookup"><span data-stu-id="6888d-113">`Litware.Controls.dll`.</span></span>  
   
- <span data-ttu-id="8569d-114">*Bölümleri © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*</span><span class="sxs-lookup"><span data-stu-id="8569d-114">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
+ <span data-ttu-id="6888d-114">*Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*</span><span class="sxs-lookup"><span data-stu-id="6888d-114">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- <span data-ttu-id="8569d-115">*Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*</span><span class="sxs-lookup"><span data-stu-id="8569d-115">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
+ <span data-ttu-id="6888d-115">*İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*</span><span class="sxs-lookup"><span data-stu-id="6888d-115">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8569d-116">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="8569d-116">See Also</span></span>  
- [<span data-ttu-id="8569d-117">Çerçeve Tasarım Yönergeleri</span><span class="sxs-lookup"><span data-stu-id="8569d-117">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)  
- [<span data-ttu-id="8569d-118">Adlandırma Kuralları</span><span class="sxs-lookup"><span data-stu-id="8569d-118">Naming Guidelines</span></span>](../../../docs/standard/design-guidelines/naming-guidelines.md)
+## <a name="see-also"></a><span data-ttu-id="6888d-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6888d-116">See also</span></span>
+
+- [<span data-ttu-id="6888d-117">Çerçeve Tasarım Yönergeleri</span><span class="sxs-lookup"><span data-stu-id="6888d-117">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)  
+- [<span data-ttu-id="6888d-118">Adlandırma Kuralları</span><span class="sxs-lookup"><span data-stu-id="6888d-118">Naming Guidelines</span></span>](../../../docs/standard/design-guidelines/naming-guidelines.md)

@@ -3,18 +3,18 @@ title: Özel türler ile Switch etkinliği kullanımı
 ms.date: 03/30/2017
 ms.assetid: 482a48c4-eb83-40c3-a4e2-2f9a8af88b75
 ms.openlocfilehash: b24a03573b31f3fb1c34d4aa6e03bc11f5b25455
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44133918"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44179773"
 ---
-# <a name="usage-of-the-switch-activity-with-custom-types"></a><span data-ttu-id="ad0f8-102">Özel türler ile Switch etkinliği kullanımı</span><span class="sxs-lookup"><span data-stu-id="ad0f8-102">Usage of the Switch Activity with Custom Types</span></span>
-<span data-ttu-id="ad0f8-103">Bu örnek nasıl etkinleştireceğiniz anlatılmaktadır bir <xref:System.Activities.Statements.Switch%601> çalışma zamanında kullanıcı tarafından tanımlanan karmaşık tür değerlendirmek için etkinlik.</span><span class="sxs-lookup"><span data-stu-id="ad0f8-103">This sample describes how to enable a <xref:System.Activities.Statements.Switch%601> activity to evaluate a user-defined complex type at runtime.</span></span> <span data-ttu-id="ad0f8-104">Çoğu geleneksel yordamsal programlama dillerinde, bir [geçiş](https://go.microsoft.com/fwlink/?LinkId=180521) deyimi bir yürütme mantığı bir değişkenin koşullu değerlendirmeye göre seçer.</span><span class="sxs-lookup"><span data-stu-id="ad0f8-104">In most traditional procedural programming languages, a [switch](https://go.microsoft.com/fwlink/?LinkId=180521) statement selects an execution logic based on the conditional evaluation of a variable.</span></span> <span data-ttu-id="ad0f8-105">Geleneksel olarak, bir `switch` deyimi, statik olarak değerlendirilen bir ifade üzerinde çalışır.</span><span class="sxs-lookup"><span data-stu-id="ad0f8-105">Traditionally, a `switch` statement operates on an expression that can be statically evaluated.</span></span> <span data-ttu-id="ad0f8-106">Örneğin, C# ' de, yalnızca temel türler, gibi başka bir deyişle <xref:System.Boolean>, <xref:System.Int32>, <xref:System.String>, ve sabit listesi türleri desteklenir.</span><span class="sxs-lookup"><span data-stu-id="ad0f8-106">For example, in C# this means that only primitive types, such as <xref:System.Boolean>, <xref:System.Int32>, <xref:System.String>, and enumeration types are supported.</span></span>  
+# <a name="usage-of-the-switch-activity-with-custom-types"></a><span data-ttu-id="011d2-102">Özel türler ile Switch etkinliği kullanımı</span><span class="sxs-lookup"><span data-stu-id="011d2-102">Usage of the Switch Activity with Custom Types</span></span>
+<span data-ttu-id="011d2-103">Bu örnek nasıl etkinleştireceğiniz anlatılmaktadır bir <xref:System.Activities.Statements.Switch%601> çalışma zamanında kullanıcı tarafından tanımlanan karmaşık tür değerlendirmek için etkinlik.</span><span class="sxs-lookup"><span data-stu-id="011d2-103">This sample describes how to enable a <xref:System.Activities.Statements.Switch%601> activity to evaluate a user-defined complex type at runtime.</span></span> <span data-ttu-id="011d2-104">Çoğu geleneksel yordamsal programlama dillerinde, bir [geçiş](https://go.microsoft.com/fwlink/?LinkId=180521) deyimi bir yürütme mantığı bir değişkenin koşullu değerlendirmeye göre seçer.</span><span class="sxs-lookup"><span data-stu-id="011d2-104">In most traditional procedural programming languages, a [switch](https://go.microsoft.com/fwlink/?LinkId=180521) statement selects an execution logic based on the conditional evaluation of a variable.</span></span> <span data-ttu-id="011d2-105">Geleneksel olarak, bir `switch` deyimi, statik olarak değerlendirilen bir ifade üzerinde çalışır.</span><span class="sxs-lookup"><span data-stu-id="011d2-105">Traditionally, a `switch` statement operates on an expression that can be statically evaluated.</span></span> <span data-ttu-id="011d2-106">Örneğin, C# ' de, yalnızca temel türler, gibi başka bir deyişle <xref:System.Boolean>, <xref:System.Int32>, <xref:System.String>, ve sabit listesi türleri desteklenir.</span><span class="sxs-lookup"><span data-stu-id="011d2-106">For example, in C# this means that only primitive types, such as <xref:System.Boolean>, <xref:System.Int32>, <xref:System.String>, and enumeration types are supported.</span></span>  
   
- <span data-ttu-id="ad0f8-107">Özel bir sınıf geçişi etkinleştirmek için mantıksal çalışma zamanında özel karmaşık türün değerlerini değerlendirmek için uygulanmalıdır.</span><span class="sxs-lookup"><span data-stu-id="ad0f8-107">To enable switching on a custom class, logic must be implemented to evaluate values of the custom complex type at runtime.</span></span> <span data-ttu-id="ad0f8-108">Bu örnek adlı bir özel karmaşık türde değiştirme olanağı tanıma gösterir `Person`.</span><span class="sxs-lookup"><span data-stu-id="ad0f8-108">This sample demonstrates how to enable switching on a custom complex type named `Person`.</span></span>  
+ <span data-ttu-id="011d2-107">Özel bir sınıf geçişi etkinleştirmek için mantıksal çalışma zamanında özel karmaşık türün değerlerini değerlendirmek için uygulanmalıdır.</span><span class="sxs-lookup"><span data-stu-id="011d2-107">To enable switching on a custom class, logic must be implemented to evaluate values of the custom complex type at runtime.</span></span> <span data-ttu-id="011d2-108">Bu örnek adlı bir özel karmaşık türde değiştirme olanağı tanıma gösterir `Person`.</span><span class="sxs-lookup"><span data-stu-id="011d2-108">This sample demonstrates how to enable switching on a custom complex type named `Person`.</span></span>  
   
--   <span data-ttu-id="ad0f8-109">Özel bir sınıf içinde `Person`, <xref:System.ComponentModel.TypeConverter> özniteliği özel adı ile bildirilen <xref:System.ComponentModel.TypeConverter>.</span><span class="sxs-lookup"><span data-stu-id="ad0f8-109">In the custom class `Person`, a <xref:System.ComponentModel.TypeConverter> attribute is declared with the name of the custom <xref:System.ComponentModel.TypeConverter>.</span></span>  
+-   <span data-ttu-id="011d2-109">Özel bir sınıf içinde `Person`, <xref:System.ComponentModel.TypeConverter> özniteliği özel adı ile bildirilen <xref:System.ComponentModel.TypeConverter>.</span><span class="sxs-lookup"><span data-stu-id="011d2-109">In the custom class `Person`, a <xref:System.ComponentModel.TypeConverter> attribute is declared with the name of the custom <xref:System.ComponentModel.TypeConverter>.</span></span>  
   
     ```  
     [TypeConverter(typeof(PersonConverter))]  
@@ -25,7 +25,7 @@ ms.locfileid: "44133918"
     ...  
     ```  
   
--   <span data-ttu-id="ad0f8-110">Özel bir sınıf içinde `Person`, <xref:System.Object.Equals%2A> ve <xref:System.Object.GetHashCode%2A> sınıfları geçersiz kılınır.</span><span class="sxs-lookup"><span data-stu-id="ad0f8-110">In the custom class `Person`, the <xref:System.Object.Equals%2A> and <xref:System.Object.GetHashCode%2A> classes are overridden.</span></span>  
+-   <span data-ttu-id="011d2-110">Özel bir sınıf içinde `Person`, <xref:System.Object.Equals%2A> ve <xref:System.Object.GetHashCode%2A> sınıfları geçersiz kılınır.</span><span class="sxs-lookup"><span data-stu-id="011d2-110">In the custom class `Person`, the <xref:System.Object.Equals%2A> and <xref:System.Object.GetHashCode%2A> classes are overridden.</span></span>  
   
     ```  
     public override bool Equals(object obj)  
@@ -51,7 +51,7 @@ ms.locfileid: "44133918"
     }  
     ```  
   
--   <span data-ttu-id="ad0f8-111">Özel bir <xref:System.ComponentModel.TypeConverter> sınıfı bir dize ve özel bir sınıf örneği için bir dize özel bir sınıf örneği dönüştürme gerçekleştiren uygulanır.</span><span class="sxs-lookup"><span data-stu-id="ad0f8-111">A custom <xref:System.ComponentModel.TypeConverter> class is implemented that performs the conversion of an instance of the custom class to a string and a string to an instance of a custom class.</span></span>  
+-   <span data-ttu-id="011d2-111">Özel bir <xref:System.ComponentModel.TypeConverter> sınıfı bir dize ve özel bir sınıf örneği için bir dize özel bir sınıf örneği dönüştürme gerçekleştiren uygulanır.</span><span class="sxs-lookup"><span data-stu-id="011d2-111">A custom <xref:System.ComponentModel.TypeConverter> class is implemented that performs the conversion of an instance of the custom class to a string and a string to an instance of a custom class.</span></span>  
   
     ```  
     public class PersonConverter : TypeConverter  
@@ -103,32 +103,32 @@ ms.locfileid: "44133918"
     }  
     ```  
   
- <span data-ttu-id="ad0f8-112">Bu örnekte aşağıdaki dosyalar dahildir:</span><span class="sxs-lookup"><span data-stu-id="ad0f8-112">The following files are included in this sample:</span></span>  
+ <span data-ttu-id="011d2-112">Bu örnekte aşağıdaki dosyalar dahildir:</span><span class="sxs-lookup"><span data-stu-id="011d2-112">The following files are included in this sample:</span></span>  
   
--   <span data-ttu-id="ad0f8-113">**Person.cs**: tanımlar `Person` sınıfı.</span><span class="sxs-lookup"><span data-stu-id="ad0f8-113">**Person.cs**: Defines the `Person` class.</span></span>  
+-   <span data-ttu-id="011d2-113">**Person.cs**: tanımlar `Person` sınıfı.</span><span class="sxs-lookup"><span data-stu-id="011d2-113">**Person.cs**: Defines the `Person` class.</span></span>  
   
--   <span data-ttu-id="ad0f8-114">**PersonConverter.cs**: tür dönüştürücü `Person` sınıfı.</span><span class="sxs-lookup"><span data-stu-id="ad0f8-114">**PersonConverter.cs**: The type converter for the `Person` class.</span></span>  
+-   <span data-ttu-id="011d2-114">**PersonConverter.cs**: tür dönüştürücü `Person` sınıfı.</span><span class="sxs-lookup"><span data-stu-id="011d2-114">**PersonConverter.cs**: The type converter for the `Person` class.</span></span>  
   
--   <span data-ttu-id="ad0f8-115">**Sequence.XAML**: geçer üzerinden bir iş akışı `Person` türü.</span><span class="sxs-lookup"><span data-stu-id="ad0f8-115">**Sequence.xaml**: a workflow that switches over the `Person` type.</span></span>  
+-   <span data-ttu-id="011d2-115">**Sequence.XAML**: geçer üzerinden bir iş akışı `Person` türü.</span><span class="sxs-lookup"><span data-stu-id="011d2-115">**Sequence.xaml**: a workflow that switches over the `Person` type.</span></span>  
   
--   <span data-ttu-id="ad0f8-116">**Program.cs**: iş akışını çalıştıran ana işlevi.</span><span class="sxs-lookup"><span data-stu-id="ad0f8-116">**Program.cs**: The main function that runs the workflow.</span></span>  
+-   <span data-ttu-id="011d2-116">**Program.cs**: iş akışını çalıştıran ana işlevi.</span><span class="sxs-lookup"><span data-stu-id="011d2-116">**Program.cs**: The main function that runs the workflow.</span></span>  
   
-#### <a name="to-use-this-sample"></a><span data-ttu-id="ad0f8-117">Bu örneği kullanmak için</span><span class="sxs-lookup"><span data-stu-id="ad0f8-117">To use this sample</span></span>  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="011d2-117">Bu örneği kullanmak için</span><span class="sxs-lookup"><span data-stu-id="011d2-117">To use this sample</span></span>  
   
-1.  <span data-ttu-id="ad0f8-118">İçinde Switch.sln yük [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ad0f8-118">Load Switch.sln in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
+1.  <span data-ttu-id="011d2-118">İçinde Switch.sln yük [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="011d2-118">Load Switch.sln in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
   
-2.  <span data-ttu-id="ad0f8-119">Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.</span><span class="sxs-lookup"><span data-stu-id="ad0f8-119">Press CTRL+SHIFT+B to build the solution.</span></span>  
+2.  <span data-ttu-id="011d2-119">Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.</span><span class="sxs-lookup"><span data-stu-id="011d2-119">Press CTRL+SHIFT+B to build the solution.</span></span>  
   
-3.  <span data-ttu-id="ad0f8-120">Örneği çalıştırmak için CTRL + F5 tuşlarına basın.</span><span class="sxs-lookup"><span data-stu-id="ad0f8-120">Press CTRL + F5 to run the sample.</span></span>  
+3.  <span data-ttu-id="011d2-120">Örneği çalıştırmak için CTRL + F5 tuşlarına basın.</span><span class="sxs-lookup"><span data-stu-id="011d2-120">Press CTRL + F5 to run the sample.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="ad0f8-121">Örnekler, makinenizde zaten yüklü.</span><span class="sxs-lookup"><span data-stu-id="ad0f8-121">The samples may already be installed on your machine.</span></span> <span data-ttu-id="ad0f8-122">Devam etmeden önce şu (varsayılan) dizin denetleyin.</span><span class="sxs-lookup"><span data-stu-id="ad0f8-122">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="011d2-121">Örnekler, makinenizde zaten yüklü.</span><span class="sxs-lookup"><span data-stu-id="011d2-121">The samples may already be installed on your machine.</span></span> <span data-ttu-id="011d2-122">Devam etmeden önce şu (varsayılan) dizin denetleyin.</span><span class="sxs-lookup"><span data-stu-id="011d2-122">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="ad0f8-123">Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri.</span><span class="sxs-lookup"><span data-stu-id="ad0f8-123">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="ad0f8-124">Bu örnek, şu dizinde bulunur.</span><span class="sxs-lookup"><span data-stu-id="ad0f8-124">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="011d2-123">Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri.</span><span class="sxs-lookup"><span data-stu-id="011d2-123">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="011d2-124">Bu örnek, şu dizinde bulunur.</span><span class="sxs-lookup"><span data-stu-id="011d2-124">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Switch`  
   
-## <a name="see-also"></a><span data-ttu-id="ad0f8-125">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="ad0f8-125">See Also</span></span>  
- [<span data-ttu-id="ad0f8-126">Yerleşik Etkinlik Kitaplığı</span><span class="sxs-lookup"><span data-stu-id="ad0f8-126">Built-In Activity Library</span></span>](../../../../docs/framework/windows-workflow-foundation/net-framework-4-5-built-in-activity-library.md)
+## <a name="see-also"></a><span data-ttu-id="011d2-125">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="011d2-125">See Also</span></span>  
+ [<span data-ttu-id="011d2-126">Yerleşik Etkinlik Kitaplığı</span><span class="sxs-lookup"><span data-stu-id="011d2-126">Built-In Activity Library</span></span>](../../../../docs/framework/windows-workflow-foundation/net-framework-4-5-built-in-activity-library.md)
