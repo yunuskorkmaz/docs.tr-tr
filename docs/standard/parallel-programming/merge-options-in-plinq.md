@@ -10,61 +10,62 @@ helpviewer_keywords:
 ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7df080185db9631e47bb7a886f6e0db894974a6b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0652f5f3f3629257f8f67c6b4a0b9551ef547b62
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584640"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44133811"
 ---
 # <a name="merge-options-in-plinq"></a>PLINQ'te Birleştirme Seçenekleri
-Birden çok iş parçacığı farklı bölümleri eşzamanlı olarak, genellikle ayrı iş parçacıklarına çalışabilmeniz için ne zaman bir sorgu paralel PLINQ bölümleri kaynak sıradaki yürütülüyor. Sonuçları bir iş parçacığı üzerinde tüketilmesi varsa örneğin, bir `foreach` (`For Each` Visual Basic'te) döngü her iş parçacığı sonuçlarından bir sıralı geri birleştirilmelidir sonra. Sorguda mevcut işleçleri PLINQ gerçekleştirir birleştirme türünü bağlıdır. Örneğin, yeni bir sipariş sonuçlarını zorunlu tuttukları işleçleri tüm iş parçacıklarının tüm öğeleri arabellek gerekir. (Aynı zamanda olan, uygulama kullanıcısı) Süren iş parçacığı açısından bir belirgin süre ilk sonucu üreten önce tamamen arabelleğe alınan bir sorgu çalıştırabilirsiniz. Diğer işleçler varsayılan olarak, kısmen arabelleğe; Bunlar kendi yığınlardaki sonuçlar. Bir işleç <xref:System.Linq.ParallelEnumerable.ForAll%2A> varsayılan olarak arabelleğe değil. Bunu tüm öğeleri tüm iş parçacıklarından hemen verir.  
+Birden çok iş parçacığı üzerinde farklı bölümleri aynı anda genellikle ayrı iş parçacıklarına çalışabilmek ne zaman bir sorgu paralel, PLINQ bölümler kaynak sırası yürütüyor. Sonuçları bir iş parçacığı üzerinde kullanılması, örneğin, bir `foreach` (`For Each` Visual Basic'te) döngü sonra her iş parçacığı sonuçlardan bir dizisi olarak birleştirilmesi gerekir. PLINQ gerçekleştiren bir birleştirme türü, sorguda bulunan işleçleri bağlıdır. Örneğin, yeni bir sipariş sonuçlarına dayatır işleçleri tüm iş parçacıklarının tüm öğeleri arabellek gerekir. (Aynı zamanda olan, uygulama kullanıcısı) kullanan bir iş parçacığı açısından bir belirgin süre ilk sonucunu üreten önce tamamen arabelleğe alınan sorgu çalıştırabilirsiniz. Diğer işleçler varsayılan olarak, kısmen ara belleğe alınır; Bunlar, toplu sonuçlar. Bir işleç <xref:System.Linq.ParallelEnumerable.ForAll%2A> varsayılan olarak arabelleğe değil. Bunu tüm öğeleri tüm iş parçacıklarından hemen verir.  
   
- Kullanarak <xref:System.Linq.ParallelEnumerable.WithMergeOptions%2A> yöntemi, aşağıdaki örnekte gösterildiği gibi sağlayabileceğiniz bir ipucu gerçekleştirmek için birleştirmenin ne tür gösteren PLINQ.  
+ Kullanarak <xref:System.Linq.ParallelEnumerable.WithMergeOptions%2A> yöntemi, aşağıdaki örnekte gösterildiği gibi sağlayabileceğiniz bir ipucu birleştirmenin gerçekleştirmek için ne tür gösteren PLINQ.  
   
  [!code-csharp[PLINQ#26](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#26)]
  [!code-vb[PLINQ#26](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinq2_vb.vb#26)]  
   
- Tam bir örnek için bkz: [nasıl yapılır: plınq'te birleştirme seçeneklerini belirtin](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md).  
+ Tam bir örnek için bkz. [nasıl yapılır: plınq'te birleştirme seçeneklerini belirtin](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md).  
   
- Belirli bir sorgu istenen seçeneği destekleyemiyorsa, seçeneği yalnızca yoksayılacak. Çoğu durumda, bir PLINQ sorgu için bir birleştirme seçeneği belirtmeniz gerekmez. Ancak, bazı durumlarda, test ve bir sorgu en iyi bir varsayılan olmayan modda yürütülür ölçüm tarafından bulabilirsiniz. Bir ortak bu seçeneğin sonuçlarını daha esnek bir kullanıcı arabirimi için akışını sağlamak için bir öbek birleştirme işleci zorlamak için kullanılır.  
+ Belirli bir sorgu istenen seçeneği destekleyemiyorsa seçeneği yalnızca yoksayılacak. Çoğu durumda, bir PLINQ sorgusu için bir birleştirme seçeneği belirtmeniz gerekmez. Ancak, bazı durumlarda, test etme ve bir sorgu en iyi bir varsayılan olmayan modda yürütülür ölçüm bulabilirsiniz. Bir ortak bu seçenek, sonuçları daha hızlı yanıt veren bir kullanıcı arabirimi sağlamak amacıyla akış için bir öbek birleştirme işleci zorlamak için kullanılır.  
   
 ## <a name="parallelmergeoptions"></a>ParallelMergeOptions  
- <xref:System.Linq.ParallelMergeOptions> Numaralandırma, desteklenen sorgu şekiller için sonuçları bir iş parçacığında kullanılan zaman sorgunun son Çıktıyı nasıl verdiğini belirtin aşağıdaki seçenekleri içerir:  
+ <xref:System.Linq.ParallelMergeOptions> Numaralandırma belirtin, desteklenen sorgu şekiller için sorgunun son çıktı sonuçları bir iş parçacığında kullanılan zaman nasıl oluşturulur aşağıdaki seçenekleri içerir:  
   
 -   `Not Buffered`  
   
-     <xref:System.Linq.ParallelMergeOptions.NotBuffered> Seçeneği, üretilen hemen her iş parçacığından döndürülecek işlenen her öğe neden olur. Bu davranış, "çıkış akış" benzerdir. Varsa <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> işlecidir sorgu, mevcut `NotBuffered` kaynak öğelerin sırasını korur. Ancak `NotBuffered` başlatır, kullanılabilir hemen sonuçları oluşturan tüm sonuçları yine üretmek için gereken toplam süre bir birleştirme seçeneklerinden birini kullanarak daha uzun.  
+     <xref:System.Linq.ParallelMergeOptions.NotBuffered> Seçenek neden üretilmiş hemen sonra her bir iş parçacığından döndürülecek işlenen her öğe. Bu davranış, "çıkış akış için" benzer. Varsa <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> işleci sorguda varsa `NotBuffered` kaynak öğelerin sırasını korur. Ancak `NotBuffered` başlatır, bunlara erişilebilir hemen sonra sonuçlar verir. tüm sonuçları yine de üretmek için toplam süreyi bir birleştirme seçeneklerinden birini kullanarak daha uzun.  
   
 -   `Auto Buffered`  
   
-     <xref:System.Linq.ParallelMergeOptions.AutoBuffered> Seçeneği bir arabelleğe öğeleri toplamak ve düzenli aralıklarla arabellek içeriği aynı anda süren iş parçacığı yield sorgu neden olur. Bu "akış" davranışını kullanmak yerine "öbek" kaynak verilerde sağlayan için benzer `NotBuffered`. `AutoBuffered` daha uzun sürebilir `NotBuffered` ilk öğe alabilir iş parçacığı üzerinde kullanılabilir hale getirmek. Arabellek boyutu tam yielding davranışı, yapılandırılabilir olmayan ve sorguya ilişkili çeşitli etkenlere bağlı olarak değişebilir.  
+     <xref:System.Linq.ParallelMergeOptions.AutoBuffered> Seçeneği bir arabelleğe öğeleri toplar ve düzenli aralıklarla arabellek içeriği aynı anda tüketim iş parçacığı yield sorgu neden olur. Bu "akış" davranışı kullanmak yerine, kaynak verileri "öbekler halinde" sonuçlanmıyor için benzer `NotBuffered`. `AutoBuffered` daha uzun sürebilir `NotBuffered` ilk öğeyi alabilir iş parçacığı üzerinde kullanılabilir hale getirmek için. Arabellek boyutuna ve tam yielding davranış, yapılandırılabilir olmayan ve sorgu ile ilgili çeşitli etkenlere bağlı olarak değişebilir.  
   
 -   `FullyBuffered`  
   
-     <xref:System.Linq.ParallelMergeOptions.FullyBuffered> Seçenek herhangi bir verdiğini önce arabelleğe alınan tüm sorgu çıktısı neden olur. Bu seçeneği kullandığınızda, ilk öğe alabilir iş parçacığı üzerinde kullanılabilir, ancak tüm sonuçları hala üretilen önce daha uzun sürebilir diğer seçenekleri kullanarak daha hızlı.  
+     <xref:System.Linq.ParallelMergeOptions.FullyBuffered> Seçeneği öğelerden üretilenleri kaydeder önce arabelleğe alınan tüm sorgu çıkışına neden olur. Bu seçeneği kullandığınızda, ilk öğeyi alabilir iş parçacığı üzerinde kullanılabilir, ancak tam sonuçları hala üretilen önce daha uzun sürebilir diğer seçenekleri kullanarak daha hızlı.  
   
 ## <a name="query-operators-that-support-merge-options"></a>Birleştirme seçeneklerini destekleyen sorgu işleçleri  
- Aşağıdaki tabloda belirtilen kısıtlamalarına tabidir tüm birleştirme seçeneği modlarını desteklemek işleçleri listeler.  
+ Aşağıdaki tabloda, belirtilen kısıtlamalara tabi tüm birleştirme seçeneği modları destekleyen işleçleri listelenmektedir.  
   
 |İşleç|Kısıtlamalar|  
 |--------------|------------------|  
 |<xref:System.Linq.ParallelEnumerable.AsEnumerable%2A>|Yok.|  
 |<xref:System.Linq.ParallelEnumerable.Cast%2A>|Yok.|  
-|<xref:System.Linq.ParallelEnumerable.Concat%2A>|Bir dizi veya liste kaynağı yalnızca sahip olmayan sıralı sorgular.|  
+|<xref:System.Linq.ParallelEnumerable.Concat%2A>|Bir dizi ya da liste kaynağı yalnızca sahip olmayan sıralı sorgular.|  
 |<xref:System.Linq.ParallelEnumerable.DefaultIfEmpty%2A>|Yok.|  
 |<xref:System.Linq.ParallelEnumerable.OfType%2A>|Yok.|  
-|<xref:System.Linq.ParallelEnumerable.Reverse%2A>|Bir dizi veya liste kaynağı yalnızca sahip olmayan sıralı sorgular.|  
+|<xref:System.Linq.ParallelEnumerable.Reverse%2A>|Bir dizi ya da liste kaynağı yalnızca sahip olmayan sıralı sorgular.|  
 |<xref:System.Linq.ParallelEnumerable.Select%2A>|Yok.|  
 |<xref:System.Linq.ParallelEnumerable.SelectMany%2A>|Yok.|  
 |<xref:System.Linq.ParallelEnumerable.Skip%2A>|Yok.|  
 |<xref:System.Linq.ParallelEnumerable.Take%2A>|Yok.|  
 |<xref:System.Linq.ParallelEnumerable.Where%2A>|Yok.|  
   
- Tüm diğer PLINQ sorgu işleçleri kullanıcı tarafından sağlanan birleştirme seçeneklerini yoksay. Bazı sorgu işleçleri, örneğin, <xref:System.Linq.ParallelEnumerable.Reverse%2A> ve <xref:System.Linq.ParallelEnumerable.OrderBy%2A>, tüm üretilen kaldırılmasında ve kadar herhangi bir öğe verim olamaz. Bu nedenle, <xref:System.Linq.ParallelMergeOptions> da operatörün gibi içeren bir sorguda kullanılan <xref:System.Linq.ParallelEnumerable.Reverse%2A>, işleç sonuçlarını üretilen sonra birleştirme davranışı sorgu kadar uygulanmaz.  
+ Diğer tüm PLINQ sorgu işleçleri, kullanıcı tarafından sağlanan birleştirme seçeneklerini yoksay. Bazı sorgu işleçleri, örneğin, <xref:System.Linq.ParallelEnumerable.Reverse%2A> ve <xref:System.Linq.ParallelEnumerable.OrderBy%2A>, tüm üretilen yeniden ve kadar herhangi bir öğe döndürülemez. Bu nedenle, <xref:System.Linq.ParallelMergeOptions> da operatörün gibi içeren bir sorguda kullanılan <xref:System.Linq.ParallelEnumerable.Reverse%2A>, işleç sonuçlarını üretmiştir sonra birleştirme davranışı sorgu kadar uygulanmaz.  
   
- Birleştirme seçeneklerini işleme yeteneği bazı işleçlerinin kaynak sırası türüne göre değişir ve olup <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> işleci sorgu daha önce kullanıldı. <xref:System.Linq.ParallelEnumerable.ForAll%2A> her zaman <xref:System.Linq.ParallelMergeOptions.NotBuffered> ; öğeleri hemen verir. <xref:System.Linq.ParallelEnumerable.OrderBy%2A> her zaman <xref:System.Linq.ParallelMergeOptions.FullyBuffered>; bunu verir önce tüm listeyi sıralamanız gerekir.  
+ Birleştirme seçeneklerini işleyebilme yeteneği bazı işleçlerinin kaynak dizisinin türüne bağlıdır ve <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> sorgu işleci kullanıldı. <xref:System.Linq.ParallelEnumerable.ForAll%2A> her zaman <xref:System.Linq.ParallelMergeOptions.NotBuffered> ; öğelerinden hemen verir. <xref:System.Linq.ParallelEnumerable.OrderBy%2A> her zaman <xref:System.Linq.ParallelMergeOptions.FullyBuffered>; bunu verir önce listesinin tümünü sıralamanız gerekir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
- [Nasıl yapılır: PLINQ'te Birleştirme Seçeneklerini Belirtme](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
+- [Nasıl yapılır: PLINQ'te Birleştirme Seçeneklerini Belirtme](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - qualifying XML elements
 - XML namespaces, qualifying elements and names in
 ms.assetid: 44719f90-7e15-42e8-a9e2-282287e2b5bf
-ms.openlocfilehash: 6b4d58f6b5bf23cbce2ace8fb40730d7b73994de
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 3c477923387e5a28dcc14b44b0f77bb6acb686e5
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43785498"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44133288"
 ---
 # <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>Nasıl yapılır: XML öğesi ve XML öznitelik adlarını Sınıflandır
 
@@ -169,13 +169,13 @@ public class Book
 }
 ```
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-<xref:System.Xml.Serialization.XmlSerializer>
-[XML şema tanımı aracı ve XML serileştirmeyi](the-xml-schema-definition-tool-and-xml-serialization.md)
-[XML serileştirmeye giriş](introducing-xml-serialization.md)
-[XmlSerializer sınıfını](xref:System.Xml.Serialization.XmlSerializer) 
- [XML serileştirme denetleyen öznitelikleri](attributes-that-control-xml-serialization.md)
-[nasıl yapılır: XML Stream için alternatif öğe adı belirtin](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
-[nasıl yapılır:nesneserihalegetirme](how-to-serialize-an-object.md) 
- [Nasıl yapılır: bir nesneyi seri durumdan çıkarma](how-to-deserialize-an-object.md)
+- <xref:System.Xml.Serialization.XmlSerializer>
+- [XML Şema Tanımı Aracı ve XML Serileştirme](the-xml-schema-definition-tool-and-xml-serialization.md)
+- [XML Serileştirmeye Giriş](introducing-xml-serialization.md)
+- [XmlSerializer sınıfını](xref:System.Xml.Serialization.XmlSerializer)
+- [XML Serileştirmeyi Denetleyen Öznitelikler](attributes-that-control-xml-serialization.md)
+- [Nasıl yapılır: XML Akışı için Alternatif Öğe Adı Belirtme](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [Nasıl yapılır: Nesne Serileştirme](how-to-serialize-an-object.md)
+- [Nasıl yapılır: Nesneyi Seri Durumdan Çıkarma](how-to-deserialize-an-object.md)

@@ -11,11 +11,11 @@ ms.assetid: 6d221724-bb21-4d76-90c3-0ee2a2e69be2
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ffb1081c80c31353ad38080ae16ef9f8a74b5481
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44046781"
+ms.locfileid: "44139962"
 ---
 # <a name="security-and-on-the-fly-code-generation"></a>Güvenlik ve Çalışma Sırasında Kod Oluşturma
 Kod oluşturup arayanı için bazı işlemi gerçekleştirmek için çalışan bazı kitaplıklar çalışır. Temel sorun daha düşük güven kodu adına kod oluşturma ve daha yüksek bir güven çalışır. Yalnızca güvenli göz önünde bulundurun kod oluşturulur emin olmanız gerekir, böylece çağıran kod oluşturma işlemini etkileyebilir, sorun worsens.  

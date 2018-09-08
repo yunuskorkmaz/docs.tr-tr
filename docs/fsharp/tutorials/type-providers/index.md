@@ -3,11 +3,11 @@ title: Tür Sağlayıcıları
 description: 'Bir F # tür sağlayıcısı türleri, özellikleri ve yöntemleri programlarınızda kullanmak için sağlayan bir bileşeni nasıl olduğunu öğrenin.'
 ms.date: 04/02/2018
 ms.openlocfilehash: 5fa9de229caa2ec3ba4a248ca5cd1c8aa5adb230
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43891674"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44134741"
 ---
 # <a name="type-providers"></a>Tür Sağlayıcıları
 

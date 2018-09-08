@@ -5,11 +5,11 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 08/13/2017
 ms.openlocfilehash: 02aac2dab2b892927c0c98fae30bb287a6e24ad6
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: HT
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44062607"
+ms.locfileid: "44133720"
 ---
 # <a name="whats-new-in-net-core-20"></a>.NET Core 2.0 yenilikleri
 

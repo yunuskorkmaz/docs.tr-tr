@@ -13,30 +13,30 @@ helpviewer_keywords:
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b6799763b4635632728561eef2820b26820aeed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7021a984f844660c45ae3e2d98569432ab64b657
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570417"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44137299"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>Özniteliklerde Depolanan Bilgileri Alma
-Özel bir öznitelik alma basit bir işlemdir. Öncelikle, almak istediğiniz öznitelik örneği bildirin. Ardından, <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> yöntemi almak istediğiniz özniteliğinin değeri için yeni öznitelik başlatılamadı. Yeni öznitelik başlatıldıktan sonra yalnızca özelliklerini değerleri almak için kullanın.  
+Özel bir öznitelik alma basit bir işlemdir. Öncelikle, almak istediğiniz öznitelik örneği bildirin. Ardından, <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> almak istediğiniz özniteliğinin değeri için yeni öznitelik başlatmak için yöntemi. Yeni öznitelik başlatıldıktan sonra sadece özellikleri değerlerini almak için kullanın.  
   
 > [!IMPORTANT]
->  Bu konu, yürütme bağlamına yüklenen kod için özniteliklerini Al açıklar. Salt yansıma bağlamına yüklenen kod öznitelikleri almak için kullanmanız gerekir <xref:System.Reflection.CustomAttributeData> gösterildiği gibi sınıfı [nasıl yapılır: yük derlemelerine Reflection-Only bağlamı](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
+>  Bu konu, kod yürütme bağlamı yüklenen öznitelikleri almak açıklar. Salt yansıma bağlamına yüklenen kod öznitelikleri almak için kullanmanız gerekir <xref:System.Reflection.CustomAttributeData> gösterildiği gibi sınıf [nasıl yapılır: derlemeleri Reflection-Only bağlamına](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
   
- Bu bölüm öznitelikleri almak için aşağıdaki yöntemleri açıklar:  
+ Bu bölümde, öznitelikleri almak için aşağıdaki yöntemleri açıklanmaktadır:  
   
--   [Bir öznitelik tek bir örneğini alma](#cpconretrievingsingleinstanceofattribute)  
+-   [Tek bir örneği bir öznitelik alma](#cpconretrievingsingleinstanceofattribute)  
   
--   [Birden çok örneğini aynı kapsama uygulanan bir öznitelik alınıyor](#cpconretrievingmultipleinstancesofattributeappliedtosamescope)  
+-   [Birden fazla aynı kapsam için uygulanan bir öznitelik alma](#cpconretrievingmultipleinstancesofattributeappliedtosamescope)  
   
--   [Birden çok örneğini farklı kapsamlar için uygulanan bir öznitelik alınıyor](#cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes)  
+-   [Birden çok örneğini farklı kapsamlara uygulanan bir öznitelik alma](#cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes)  
   
 <a name="cpconretrievingsingleinstanceofattribute"></a>   
-## <a name="retrieving-a-single-instance-of-an-attribute"></a>Bir öznitelik tek bir örneğini alma  
- Aşağıdaki örnekte, `DeveloperAttribute` (önceki bölümde açıklanan) uygulanan `MainApp` sınıf düzeyinde sınıfı. `GetAttribute` Yöntemi kullanan **GetCustomAttribute** depolanan değerleri almak için `DeveloperAttribute` konsola göstermeden önce sınıfı düzeyi.  
+## <a name="retrieving-a-single-instance-of-an-attribute"></a>Tek bir örneği bir öznitelik alma  
+ Aşağıdaki örnekte, `DeveloperAttribute` (önceki bölümde açıklanmıştır) uygulanan `MainApp` sınıf düzeyinde sınıfı. `GetAttribute` Yöntemi kullanan **GetCustomAttribute** depolanan değerleri almak için `DeveloperAttribute` bunları konsola göstermeden önce sınıf düzeyinde.  
   
  [!code-cpp[Conceptual.Attributes.Usage#18](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source3.cpp#18)]
  [!code-csharp[Conceptual.Attributes.Usage#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source3.cs#18)]
@@ -50,42 +50,43 @@ The Level Attribute is: 42.
 The Reviewed Attribute is: True.  
 ```  
   
- Öznitelik bulunmazsa **GetCustomAttribute** yöntemi başlatır `MyAttribute` bir null değer. Bu örnek denetler `MyAttribute` böyle bir örneği için ve hiçbir öznitelik bulunursa, kullanıcıya bildirir. Varsa `DeveloperAttribute` bulunamadı sınıfı kapsamda aşağıdaki iletiyi konsola görüntüler.  
+ Öznitelik bulunamazsa **GetCustomAttribute** yöntemi başlatır `MyAttribute` bir null değer. Bu örnek denetler `MyAttribute` bu tür bir örnek için ve bir öznitelik yok bulunursa kullanıcıyı uyarır. Varsa `DeveloperAttribute` bulunamadı sınıf kapsamında aşağıdaki iletiyi konsola görüntüler.  
   
 ```  
 The attribute was not found.   
 ```  
   
- Bu örnekte, öznitelik tanımı geçerli ad alanında olduğunu varsayar. Geçerli ad alanında değilse, öznitelik tanımı bulunduğu ad alanı içe aktarmayı unutmayın.  
+ Bu örnekte, öznitelik tanımı geçerli bir ad alanında olduğunu varsayar. Geçerli bir ad alanında değilse, öznitelik tanımı bulunduğu ad alanı almayı unutmayın.  
   
 <a name="cpconretrievingmultipleinstancesofattributeappliedtosamescope"></a>   
-## <a name="retrieving-multiple-instances-of-an-attribute-applied-to-the-same-scope"></a>Birden çok örneğini aynı kapsama uygulanan bir öznitelik alınıyor  
- Önceki örnekte incelemek için sınıf ve bulmak için belirli öznitelik geçirilecek <xref:System.Attribute.GetCustomAttribute%2A>. Bu kod, bir öznitelik bir örneği üzerinde sınıf düzeyinde iyi uygulanan yalnızca çalışır. Ancak, bir öznitelik birden çok örneğini aynı sınıf düzeyinde uyguladıysanız **GetCustomAttribute** yöntemi tüm bilgileri alamadı. Aynı öznitelik birden çok örneğini aynı kapsama uygulanır olduğu durumlarda, kullandığınız <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType> bir öznitelik tüm örnekleri bir dizi içine yerleştirilecek. Örneğin, iki örneklerini `DeveloperAttribute` aynı sınıfı sınıf düzeyinde uygulanır `GetAttribute` yöntemi, her iki öznitelik içinde bulunan bilgileri görüntülemek için değiştirilebilir. Aynı düzeyde birden çok öznitelik uygulanacağını unutmayın özniteliği ile tanımlanmalıdır **AttributeUsage** özelliğini **true** içinde <xref:System.AttributeUsageAttribute>.  
+## <a name="retrieving-multiple-instances-of-an-attribute-applied-to-the-same-scope"></a>Birden fazla aynı kapsam için uygulanan bir öznitelik alma  
+ Önceki örnekte, inceleme sınıfı ve bulmak için özel öznitelik geçirilen <xref:System.Attribute.GetCustomAttribute%2A>. Bu kod, bir özniteliğin bir örnek sınıf düzeyinde de uygulanır, yalnızca çalışır. Ancak, bir özniteliğin birden çok örneği aynı sınıf düzeyinde uygulanmışsa **GetCustomAttribute** yöntemi tüm bilgileri alamadı. Aynı öznitelik birden çok örneğini aynı kapsama uygulanır olduğu durumlarda, kullandığınız <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType> bir özniteliğin tüm örnekleri bir dizi içine yerleştirmek için. Örneğin, iki örneklerini `DeveloperAttribute` aynı sınıfın sınıf düzeyinde uygulanan `GetAttribute` yöntemi, her iki öznitelikleri içinde bulunan bilgileri görüntülemek için değiştirilebilir. Unutmayın aynı düzeyde birden çok öznitelik uygulamak için özniteliği ile tanımlanmalıdır **AttributeUsage** özelliğini **true** içinde <xref:System.AttributeUsageAttribute>.  
   
- Aşağıdaki kod örneğinde nasıl kullanılacağını gösterir **GetCustomAttributes** tüm örneklerini başvuruda bulunan bir dizi oluşturmak için yöntemi `DeveloperAttribute` birinde sınıfı verilir. Tüm öznitelik değerleri daha sonra konsola görüntülenir.  
+ Aşağıdaki kod örneği kullanma işlemini gösterir **GetCustomAttributes** tüm örneklerini başvuran bir dizi oluşturmak için gereken yöntemini `DeveloperAttribute` birinde sınıfı verilir. Tüm özniteliklerinin değerlerini sonra konsolda görüntülenir.  
   
  [!code-cpp[Conceptual.Attributes.Usage#19](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source3.cpp#19)]
  [!code-csharp[Conceptual.Attributes.Usage#19](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source3.cs#19)]
  [!code-vb[Conceptual.Attributes.Usage#19](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source3.vb#19)]  
   
- Hiçbir öznitelik bulunamazsa, bu kod kullanıcıyı uyarır. Aksi takdirde, bilgi bulunan her iki örneklerine `DeveloperAttribute` görüntülenir.  
+ Hiç öznitelik bulunamadı, bu kod, kullanıcıyı uyarır. Aksi takdirde, bilgileri bulunan iki örneklerine `DeveloperAttribute` görüntülenir.  
   
 <a name="cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes"></a>   
-## <a name="retrieving-multiple-instances-of-an-attribute-applied-to-different-scopes"></a>Birden çok örneğini farklı kapsamlar için uygulanan bir öznitelik alınıyor  
- <xref:System.Attribute.GetCustomAttributes%2A> Ve <xref:System.Attribute.GetCustomAttribute%2A> yöntemleri değil tüm sınıf arama ve bu sınıfta bir öznitelik tüm örneklerini döndürür. Bunun yerine, bunlar yalnızca bir belirtilen yöntem veya üye aynı anda arayın. Her üyeye uygulanan aynı özniteliği bir sınıf varsa ve bu üyelere uygulanan tüm öznitelikleri değerleri almak istediğiniz her bir yöntemi veya üye için ayrı ayrı sağlamanız gerekir **GetCustomAttributes** ve  **GetCustomAttribute**.  
+## <a name="retrieving-multiple-instances-of-an-attribute-applied-to-different-scopes"></a>Birden çok örneğini farklı kapsamlara uygulanan bir öznitelik alma  
+ <xref:System.Attribute.GetCustomAttributes%2A> Ve <xref:System.Attribute.GetCustomAttribute%2A> yöntemleri değil sınıfının tümüne arayın ve bu sınıfta bir öznitelik tüm örneklerini döndürür. Bunun yerine, bunlar yalnızca bir belirtilen yöntem veya üye aynı anda arayın. Bir sınıf her üyeye uygulanan aynı özniteliğe sahip ve bu üyeler için uygulanan tüm öznitelikleri değerleri almak istediğiniz her bir yöntem veya üye için ayrı ayrı sağlamanız gerekir **GetCustomAttributes** ve  **GetCustomAttribute**.  
   
- Aşağıdaki kod örneğinde bir sınıf bir parametre olarak alır ve arar `DeveloperAttribute` (tanımlanan önceden) Sınıf düzeyinde ve bu sınıfın tek tek her yöntemi.  
+ Aşağıdaki kod örneği, bir sınıf bir parametre olarak alır ve arar `DeveloperAttribute` (tanımlanan önceden) Sınıf düzeyinde ve söz konusu sınıfın tek tek her yöntemi.  
   
  [!code-cpp[Conceptual.Attributes.Usage#20](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source3.cpp#20)]
  [!code-csharp[Conceptual.Attributes.Usage#20](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source3.cs#20)]
  [!code-vb[Conceptual.Attributes.Usage#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source3.vb#20)]  
   
- Hiçbir örneği varsa `DeveloperAttribute` yöntemi düzeyi veya sınıf düzeyinde bulunan `GetAttribute` yöntemi hiç öznitelik bulunamadı kullanıcıyı uyarır ve yöntem veya öznitelik içermiyor sınıf adını görüntüler. Bir öznitelik bulunursa, `Name`, `Level`, ve `Reviewed` alanları, konsolda görüntülenir.  
+ Örneği, `DeveloperAttribute` yöntem düzeyine ya da sınıf düzeyinde bulunan `GetAttribute` yöntemi hiçbir öznitelik bulunamadı kullanıcıya bildirir ve yöntem veya özniteliği içermiyor, sınıf adını görüntüler. Bir öznitelik bulunursa `Name`, `Level`, ve `Reviewed` alanları, konsolda görüntülenir.  
   
- Üyeleri kullanabilir <xref:System.Type> üyeleri ve tek tek yöntemler geçirilen sınıfında almak için sınıf. Bu örnek ilk sorgular **türü** sınıf düzeyinde için öznitelik bilgileri almak için nesne. Ardından, kullanan <xref:System.Type.GetMethods%2A?displayProperty=nameWithType> tüm yöntemleri örnekleri bir dizi içine yerleştirilecek <xref:System.Reflection.MemberInfo?displayProperty=nameWithType> yöntemi düzeyi için öznitelik bilgileri almak için nesneleri. De kullanabilirsiniz <xref:System.Type.GetProperties%2A?displayProperty=nameWithType> özelliği düzeyindeki öznitelikler denetlemek için yöntemi veya <xref:System.Type.GetConstructors%2A?displayProperty=nameWithType> Oluşturucusu düzeyindeki öznitelikler denetlemek için.  
+ Üyelerinin kullanabileceği <xref:System.Type> geçirilen sınıfı üyeleri ve her bir yöntem almak için sınıf. Bu örnekte ilk sorgular **türü** sınıf düzeyinde için öznitelik bilgileri almak için nesne. Ardından, kullanır <xref:System.Type.GetMethods%2A?displayProperty=nameWithType> tüm yöntemleri örnekleri bir dizi içine yerleştirmek için <xref:System.Reflection.MemberInfo?displayProperty=nameWithType> nesneleri yöntem düzeyine öznitelik bilgileri alınamıyor. Ayrıca <xref:System.Type.GetProperties%2A?displayProperty=nameWithType> özellik düzeyinde öznitelikler için denetlenecek yöntemi veya <xref:System.Type.GetConstructors%2A?displayProperty=nameWithType> Oluşturucusu düzeyindeki öznitelikler denetlemek için.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Type?displayProperty=nameWithType>  
- <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType>  
- <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>  
- [Öznitelikler](../../../docs/standard/attributes/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- <xref:System.Type?displayProperty=nameWithType>  
+- <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType>  
+- <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>  
+- [Öznitelikler](../../../docs/standard/attributes/index.md)

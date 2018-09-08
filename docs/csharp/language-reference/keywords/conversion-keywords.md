@@ -7,11 +7,11 @@ helpviewer_keywords:
 - types [C#], conversion keywords
 ms.assetid: 8683ff14-5289-4efe-b4f5-1e6a075918ab
 ms.openlocfilehash: 34175f1bda169a9def9e3146214a6d5cd4d258e7
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44046911"
+ms.locfileid: "44136400"
 ---
 # <a name="conversion-keywords-c-reference"></a>Dönüşüm Anahtar Sözcükleri (C# Başvurusu)
 Bu bölümde, tür dönüştürmelerinde kullanılan anahtar sözcükler açıklanmaktadır:  

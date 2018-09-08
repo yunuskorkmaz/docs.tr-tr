@@ -2,12 +2,12 @@
 title: 'F # ile komut satırı araçları ile çalışmaya başlama'
 description: 'F # .NET Core CLI kullanarak tüm işletim sistemlerinde (Windows, macOs veya Linux) üzerinde basit bir çoklu proje çözümü oluşturmayı öğrenin.'
 ms.date: 03/26/2018
-ms.openlocfilehash: 6cdb2b42781dba6ba00c03b20e6a76d033e03063
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 8a82970f33c8bbe1b8cdd8fb6499b59b16d3cbf3
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37875020"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44134811"
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>F # ile .NET Core CLI kullanmaya başlama
 
@@ -41,7 +41,7 @@ Dizinleri *FSNetCore*.
 Kullanım `dotnet new` komutu, bir sınıf kitaplığı projesi oluşturma **src** kitaplığı adlı bir klasör.
 
 ```console
-dotnet new lib -lang F# -o src/Library
+dotnet new classlib -lang F# -o src/Library
 ```
 
 Önceki komutu çalıştırdıktan sonra aşağıdaki dizin yapısını üretilir:

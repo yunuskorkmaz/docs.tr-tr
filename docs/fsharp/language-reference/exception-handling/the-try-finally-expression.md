@@ -3,11 +3,11 @@ title: 'Özel Durumlar: try...finally İfadesi (F#)'
 description: "Bilgi nasıl F # ' try... finally' ifadesi, bir kod bloğu bir özel durum oluşturursa bile temizleme kodu yürütme olanak tanır."
 ms.date: 05/16/2016
 ms.openlocfilehash: 546a6b0619de6f51044600dc1ead73c6d5211299
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43803349"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44137063"
 ---
 # <a name="exceptions-the-tryfinally-expression"></a>Özel Durumlar: try...finally İfadesi
 

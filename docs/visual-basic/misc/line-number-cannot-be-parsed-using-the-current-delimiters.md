@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_MalFormedDelimitedLine
 ms.assetid: 1f8d4c2d-0334-4da8-acff-5460159835b3
-ms.openlocfilehash: 123040e38cfc42d7a6b00e12dd2c2555b0b149d7
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 47ab3dad8dc206acb0ef272ee86fe25365d2ac83
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44032169"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44136010"
 ---
 # <a name="line-ltnumbergt-cannot-be-parsed-using-the-current-delimiters"></a>Satır &lt;numarası&gt; geçerli sınırlayıcıları ayrıştırılamıyor
 Belirtilen satır sınırlayıcı belirtilenlerin dışındaki kullandığından ayrıştırılamıyor.  
@@ -18,10 +18,11 @@ Belirtilen satır sınırlayıcı belirtilenlerin dışındaki kullandığından
   
 -   Ayarlama `Delimiters` satır ayrıştırılabilecek ya da satırın işlemek için özel durum işleme kodu ekleyin.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl Yapılır: Birden Çok Biçimli Metin Dosyalarından Okuma](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)  
- [My.Computer.FileSystem.OpenTextFieldParser](xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFieldParser%2A)  
- [TextFieldParser Nesnesiyle Metin Dosyalarını Ayrıştırma](../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)  
- [TextFieldParser Nesnesi](../../visual-basic/language-reference/objects/textfieldparser-object.md)  
- [TextFieldParser.Delimiters özelliği](https://msdn.microsoft.com/library/4eb18f4d-3011-40a9-b668-be93eed0444f)  
- [TextFieldParser.SetDelimiters yöntemi](https://msdn.microsoft.com/library/21fa40ec-5866-4d0e-9fd9-c708a190dcc9)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Nasıl Yapılır: Birden Çok Biçimli Metin Dosyalarından Okuma](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)  
+- [My.Computer.FileSystem.OpenTextFieldParser](xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFieldParser%2A)  
+- [TextFieldParser Nesnesiyle Metin Dosyalarını Ayrıştırma](../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)  
+- [TextFieldParser Nesnesi](../../visual-basic/language-reference/objects/textfieldparser-object.md)  
+- [TextFieldParser.Delimiters özelliği](xref:Microsoft.VisualBasic.FileIO.TextFieldParser.Delimiters%2A)
+- [TextFieldParser.SetDelimiters yöntemi](xref:Microsoft.VisualBasic.FileIO.TextFieldParser.SetDelimiters%2A)

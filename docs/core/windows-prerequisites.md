@@ -4,12 +4,12 @@ description: Windows üzerinde gereken bağımlılıklar geliştirin ve .NET Cor
 author: mairaw
 ms.author: mairaw
 ms.date: 08/31/2018
-ms.openlocfilehash: bbf54c8d215783656830f0fa035708be82a7c39c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 477d303b50495070ba3a3540188deb274dd9f510
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512742"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44137089"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows üzerinde .NET Core önkoşulları
 
@@ -30,6 +30,8 @@ Bu makalede, Windows üzerinde .NET Core uygulamaları geliştirmek için ihtiya
 * Windows Server 2012 SP1 (tam sunucu veya Sunucu Çekirdeği)
 * Windows Server 2012 R2 (tam sunucu veya Sunucu Çekirdeği)
 * Windows Server 2016 veya sonraki sürümleri (tam sunucu, Sunucu Çekirdeği veya Nano Server)
+
+## <a name="net-core-supported-operating-systems"></a>.NET core tarafından desteklenen işletim sistemleri
 
 Aşağıdaki makaleler sürüm başına .NET Core desteklenen işletim sistemlerinin tam bir listesi vardır:
 
