@@ -1,67 +1,68 @@
 ---
-title: ".NET için Hoş Geldiniz"
-description: "Teknolojileri .NET ailesi ile çalışmaya başlama."
-keywords: ".NET, .NET core, Başlarken, haber"
+title: .NET için Hoş Geldiniz
+description: Teknoloji .NET ailesi ile çalışmaya başlama.
 author: mairaw
 ms.author: mairaw
-ms.date: 08/14/2017
+ms.date: 09/07/2018
 ms.topic: article
-ms.prod: .net
+ms.prod: dotnet
 ms.devlang: dotnet
-ms.assetid: cb788dcf-2120-467f-9c34-c02a90e1f68f
-ms.openlocfilehash: 303219086339a059a905e303a4ecd490e91ba7cc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.custom: updateeachrelease
+ms.openlocfilehash: 117b3cb4fc780da3c7624c78c5c242fa6ed9126f
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44128072"
 ---
-# <a name="welcome-to-net"></a><span data-ttu-id="d955e-104">.NET için Hoş Geldiniz</span><span class="sxs-lookup"><span data-stu-id="d955e-104">Welcome to .NET</span></span>
+# <a name="welcome-to-net"></a><span data-ttu-id="0b7ce-103">.NET için Hoş Geldiniz</span><span class="sxs-lookup"><span data-stu-id="0b7ce-103">Welcome to .NET</span></span>
 
-<span data-ttu-id="d955e-105">Bkz: [.NET Core ile çalışmaya başlama](core/get-started.md) .NET Core uygulamaları oluşturmayı öğrenmek için.</span><span class="sxs-lookup"><span data-stu-id="d955e-105">See [Getting Started with .NET Core](core/get-started.md) to learn how to create .NET Core apps.</span></span>
+<span data-ttu-id="0b7ce-104">Bkz: [.NET Core ile çalışmaya başlama](core/get-started.md) .NET Core uygulamaları oluşturma hakkında bilgi edinmek için.</span><span class="sxs-lookup"><span data-stu-id="0b7ce-104">See [Get started with .NET Core](core/get-started.md) to learn how to create .NET Core apps.</span></span>
 
-<span data-ttu-id="d955e-106">.NET ile uygulama bulut, IOT ve ücretsiz platformlar arası araçlarını kullanarak oyunlar gibi birçok türlerini oluşturun.</span><span class="sxs-lookup"><span data-stu-id="d955e-106">Build many types of apps with .NET, such as cloud, IoT, and games using free cross-platform tools.</span></span> <span data-ttu-id="d955e-107">Uygulamalarınızı, Android, iOS, Linux, macOS ve Windows çalıştırabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="d955e-107">Your apps can run on Android, iOS, Linux, macOS, and Windows.</span></span> <span data-ttu-id="d955e-108">Sunucularda ve Masaüstü uygulamaları dağıtma ve uygulama mağazalarının mobil cihazlarda dağıtımı için yayımlayın.</span><span class="sxs-lookup"><span data-stu-id="d955e-108">Deploy apps to servers or desktops and publish to app stores for deployment on mobile devices.</span></span> <span data-ttu-id="d955e-109">.NET Öğrenciler ve deneyimli olmayanlar için erişilebilir olduğundan ve tüm bir canlı uluslararası geliştirme topluluğuna katılma ve .NET teknolojilerin birçoğu doğrudan Katkıları yapmak Hoş Geldiniz.</span><span class="sxs-lookup"><span data-stu-id="d955e-109">.NET is accessible to students and hobbyists, and all are welcome to participate in a lively international developer community and make direct contributions to many of the .NET technologies.</span></span>
+<span data-ttu-id="0b7ce-105">.NET ile uygulama bulut, IOT ve ücretsiz platformlar arası Araçlar kullanan oyunlar gibi birçok türleri oluşturun.</span><span class="sxs-lookup"><span data-stu-id="0b7ce-105">Build many types of apps with .NET, such as cloud, IoT, and games using free cross-platform tools.</span></span> <span data-ttu-id="0b7ce-106">Uygulamalarınızı, Android, iOS, Linux, macOS ve Windows üzerinde çalıştırabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="0b7ce-106">Your apps can run on Android, iOS, Linux, macOS, and Windows.</span></span> <span data-ttu-id="0b7ce-107">Sunucuları veya Masaüstü uygulamaları dağıtma ve uygulama mağazalarının mobil cihazlarında dağıtılmak yayımlayın.</span><span class="sxs-lookup"><span data-stu-id="0b7ce-107">Deploy apps to servers or desktops and publish to app stores for deployment on mobile devices.</span></span> <span data-ttu-id="0b7ce-108">.NET için öğrencilere ve amatörler erişebilir ve tüm bir canlı uluslararası Geliştirici topluluğuna katılmak ve .NET teknolojilerin birçoğu için doğrudan katkı davetlidir.</span><span class="sxs-lookup"><span data-stu-id="0b7ce-108">.NET is accessible to students and hobbyists, and all are welcome to participate in a lively international developer community and make direct contributions to many of the .NET technologies.</span></span>
 
-## <a name="news"></a><span data-ttu-id="d955e-110">Haber</span><span class="sxs-lookup"><span data-stu-id="d955e-110">News</span></span>
+## <a name="news"></a><span data-ttu-id="0b7ce-109">Haberler</span><span class="sxs-lookup"><span data-stu-id="0b7ce-109">News</span></span>
 
-- [<span data-ttu-id="d955e-111">.NET core yayımlanan 2.0!</span><span class="sxs-lookup"><span data-stu-id="d955e-111">.NET Core 2.0 Released!</span></span>](https://channel9.msdn.com/Blogs/dotnet/NET-Core-20-Released)
-- [<span data-ttu-id="d955e-112">.NET Core 2.0 Duyurusu</span><span class="sxs-lookup"><span data-stu-id="d955e-112">Announcing .NET Core 2.0</span></span>](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-net-core-2-0/)
-- [<span data-ttu-id="d955e-113">.NET standart 2.0 Duyurusu</span><span class="sxs-lookup"><span data-stu-id="d955e-113">Announcing .NET Standard 2.0</span></span>](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-net-standard-2-0/)
-- [<span data-ttu-id="d955e-114">ASP.NET Core 2.0 Duyurusu</span><span class="sxs-lookup"><span data-stu-id="d955e-114">Announcing ASP.NET Core 2.0</span></span>](https://blogs.msdn.microsoft.com/webdev/2017/08/14/announcing-asp-net-core-2-0/)
-- [<span data-ttu-id="d955e-115">Entity Framework Çekirdek 2.0 Duyurusu</span><span class="sxs-lookup"><span data-stu-id="d955e-115">Announcing Entity Framework Core 2.0</span></span>](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-entity-framework-core-2-0/)
-- [<span data-ttu-id="d955e-116">Visual Basic için yeni: .NET standart sınıf kitaplıkları ve CLI dotnet!</span><span class="sxs-lookup"><span data-stu-id="d955e-116">New for Visual Basic: .NET Standard Class Libraries and the dotnet CLI!</span></span>](https://blogs.msdn.microsoft.com/vbteam/2017/08/14/new-for-visual-basic-net-standard-class-libraries-and-the-dotnet-cli/)
-- [<span data-ttu-id="d955e-117">Visual Studio 2017 sürüm yayımlanan 15.3</span><span class="sxs-lookup"><span data-stu-id="d955e-117">Visual Studio 2017 Version 15.3 Released</span></span>](https://blogs.msdn.microsoft.com/visualstudio/2017/08/14/visual-studio-2017-version-15-3-released/)
-- [<span data-ttu-id="d955e-118">.NET standart giriş</span><span class="sxs-lookup"><span data-stu-id="d955e-118">Introducing .NET Standard</span></span>](https://blogs.msdn.microsoft.com/dotnet/2016/09/26/introducing-net-standard/)
-- [<span data-ttu-id="d955e-119">Mac için Visual Studio: artık genel olarak kullanılabilir</span><span class="sxs-lookup"><span data-stu-id="d955e-119">Visual Studio for Mac: now generally available</span></span>](https://blogs.msdn.microsoft.com/visualstudio/2017/05/10/visual-studio-for-mac-now-generally-available/)
-- [<span data-ttu-id="d955e-120">Visual Studio 2017 genel kullanılabilirlik Duyurusu</span><span class="sxs-lookup"><span data-stu-id="d955e-120">Announcing Visual Studio 2017 General Availability</span></span>](https://blogs.msdn.microsoft.com/visualstudio/2017/03/07/announcing-visual-studio-2017-general-availability-and-more/)
-- [<span data-ttu-id="d955e-121">.NET Core ve Visual Studio 2017 (video) yenilikler</span><span class="sxs-lookup"><span data-stu-id="d955e-121">What's new for .NET Core and Visual Studio 2017 (video)</span></span>](https://channel9.msdn.com/events/Visual-Studio/Visual-Studio-2017-Launch/T108)
-- [<span data-ttu-id="d955e-122">.NET Framework 4.7 Duyurusu</span><span class="sxs-lookup"><span data-stu-id="d955e-122">Announcing the .NET Framework 4.7</span></span>](https://blogs.msdn.microsoft.com/dotnet/2017/04/05/announcing-the-net-framework-4-7/)
-- [<span data-ttu-id="d955e-123">C# 7.0 yeni özellikler</span><span class="sxs-lookup"><span data-stu-id="d955e-123">New Features in C# 7.0</span></span>](https://blogs.msdn.microsoft.com/dotnet/2017/03/09/new-features-in-c-7-0/)
-- [<span data-ttu-id="d955e-124">F # 4.1 ve Visual Studio 2017 için Visual F # Araçları Duyurusu</span><span class="sxs-lookup"><span data-stu-id="d955e-124">Announcing F# 4.1 and the Visual F# Tools for Visual Studio 2017</span></span>](https://blogs.msdn.microsoft.com/dotnet/2017/03/07/announcing-f-4-1-and-the-visual-f-tools-for-visual-studio-2017-2/)
-- [<span data-ttu-id="d955e-125">Kaynak Xamarin hazır için açık!</span><span class="sxs-lookup"><span data-stu-id="d955e-125">Open Source Xamarin, Ready for you!</span></span>](https://blog.xamarin.com/live-from-evolve-open-source-xamarin-ready-for-you/)
-- [<span data-ttu-id="d955e-126">.NET hafta</span><span class="sxs-lookup"><span data-stu-id="d955e-126">The week in .NET</span></span>](https://blogs.msdn.microsoft.com/dotnet/tag/week-in-net/)
-- [<span data-ttu-id="d955e-127">Channel 9 - Microsoft'un en yeni teknolojileri ve haber Video 2017 oluşturun!</span><span class="sxs-lookup"><span data-stu-id="d955e-127">Build 2017 on Channel 9 - Video on Microsoft's latest technologies and news!</span></span>](https://channel9.msdn.com/?wt.mc_id=build_hp#programGuide)
+<span data-ttu-id="0b7ce-110">.NET hakkında daha fazla haber için aşağıdaki Bloglara bakın:</span><span class="sxs-lookup"><span data-stu-id="0b7ce-110">For news about .NET, check the following blogs:</span></span>
 
-## <a name="documentation"></a><span data-ttu-id="d955e-128">Belgeler</span><span class="sxs-lookup"><span data-stu-id="d955e-128">Documentation</span></span>
+- [<span data-ttu-id="0b7ce-111">.NET blogu</span><span class="sxs-lookup"><span data-stu-id="0b7ce-111">.NET Blog</span></span>](https://blogs.msdn.microsoft.com/dotnet/)
+- [<span data-ttu-id="0b7ce-112">ASP.NET Web günlüğü</span><span class="sxs-lookup"><span data-stu-id="0b7ce-112">ASP.NET Blog</span></span>](https://blogs.msdn.microsoft.com/webdev/)
+- [<span data-ttu-id="0b7ce-113">Visual Studio blogu</span><span class="sxs-lookup"><span data-stu-id="0b7ce-113">The Visual Studio Blog</span></span>](https://blogs.msdn.microsoft.com/visualstudio/)
+- [<span data-ttu-id="0b7ce-114">Visual Basic ekip</span><span class="sxs-lookup"><span data-stu-id="0b7ce-114">The Visual Basic Team</span></span>](https://blogs.msdn.microsoft.com/vbteam/)
 
-<span data-ttu-id="d955e-129">Bu belge, .NET avantajlarına platformlar ve diller arasında ele alır.</span><span class="sxs-lookup"><span data-stu-id="d955e-129">This documentation covers the breadth of .NET across platforms and languages.</span></span>  <span data-ttu-id="d955e-130">.NET ve herhangi bir aşağıdaki bölümlerde, dilleriyle başlayabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="d955e-130">You can get started with .NET and its languages in any of the following sections:</span></span>
+<span data-ttu-id="0b7ce-115">Ayrıca en son .NET olayları izleyin:</span><span class="sxs-lookup"><span data-stu-id="0b7ce-115">Also follow the latest .NET events:</span></span>
 
-- [<span data-ttu-id="d955e-131">.NET Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="d955e-131">.NET Guide</span></span>](standard/index.md)
-- [<span data-ttu-id="d955e-132">.NET core Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="d955e-132">.NET Core Guide</span></span>](core/index.md)
-- [<span data-ttu-id="d955e-133">.NET framework Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="d955e-133">.NET Framework Guide</span></span>](framework/index.md)
-- [<span data-ttu-id="d955e-134">C# Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="d955e-134">C# Guide</span></span>](csharp/index.md)
-- [<span data-ttu-id="d955e-135">F # Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="d955e-135">F# Guide</span></span>](fsharp/index.md)
-- [<span data-ttu-id="d955e-136">Visual Basic Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="d955e-136">Visual Basic Guide</span></span>](visual-basic/index.md)
+- [<span data-ttu-id="0b7ce-116">Microsoft Build 2018'e</span><span class="sxs-lookup"><span data-stu-id="0b7ce-116">Microsoft Build 2018</span></span>](https://channel9.msdn.com/Events/Build/2018)
+- [<span data-ttu-id="0b7ce-117">.NET Conf</span><span class="sxs-lookup"><span data-stu-id="0b7ce-117">.NET Conf</span></span>](https://www.dotnetconf.net/)
 
-<span data-ttu-id="d955e-137">Ayrıca, Gözat [.NET API Başvurusu](/dotnet/api).</span><span class="sxs-lookup"><span data-stu-id="d955e-137">Additionally, you can browse the [.NET API reference](/dotnet/api).</span></span>
+<span data-ttu-id="0b7ce-118">En son özellikler hakkında bilgi için .NET uygulamaları eklendi ve desteklenen diller için aşağıdaki makalelere bakın:</span><span class="sxs-lookup"><span data-stu-id="0b7ce-118">For information about the latest features added to the .NET implementations and supported languages, see the following articles:</span></span>
 
-## <a name="open-source"></a><span data-ttu-id="d955e-138">Açık kaynak</span><span class="sxs-lookup"><span data-stu-id="d955e-138">Open source</span></span>
+- [<span data-ttu-id="0b7ce-119">​.NET Core'daki Yenilikler</span><span class="sxs-lookup"><span data-stu-id="0b7ce-119">What's new in .NET Core</span></span>](core/whats-new/index.md)
+- [<span data-ttu-id="0b7ce-120">.NET Framework'teki yenilikler</span><span class="sxs-lookup"><span data-stu-id="0b7ce-120">What's new in the .NET Framework</span></span>](framework/whats-new/index.md)
+- [<span data-ttu-id="0b7ce-121">C# Yenilikleri</span><span class="sxs-lookup"><span data-stu-id="0b7ce-121">What's new in C#</span></span>](csharp/whats-new/index.md)
+- [<span data-ttu-id="0b7ce-122">Visual Basic'teki yenilikler</span><span class="sxs-lookup"><span data-stu-id="0b7ce-122">What's new for Visual Basic</span></span>](visual-basic/getting-started/whats-new.md)
 
-<span data-ttu-id="d955e-139">Bu belgesidir tamamen [açık kaynak](https://github.com/dotnet/docs).</span><span class="sxs-lookup"><span data-stu-id="d955e-139">This documentation is completely [open source](https://github.com/dotnet/docs).</span></span> <span data-ttu-id="d955e-140">Belgeleri yazma sorunları oluşturma gibi herhangi bir şekilde katkıda bulunabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="d955e-140">You can contribute in any way you like, from creating issues to writing documentation.</span></span>  <span data-ttu-id="d955e-141">Ayrıca, .NET kendisini çoğunu açık kaynak şöyledir:</span><span class="sxs-lookup"><span data-stu-id="d955e-141">Additionally, much of .NET itself is open source:</span></span>
+## <a name="documentation"></a><span data-ttu-id="0b7ce-123">Belgeler</span><span class="sxs-lookup"><span data-stu-id="0b7ce-123">Documentation</span></span>
 
-- [<span data-ttu-id="d955e-142">.NET core giriş</span><span class="sxs-lookup"><span data-stu-id="d955e-142">.NET Core Home</span></span>](https://github.com/dotnet/core)
-- [<span data-ttu-id="d955e-143">.NET kitaplıkları</span><span class="sxs-lookup"><span data-stu-id="d955e-143">.NET Libraries</span></span>](https://github.com/dotnet/corefx)
-- [<span data-ttu-id="d955e-144">.NET çekirdeği çalışma zamanı</span><span class="sxs-lookup"><span data-stu-id="d955e-144">.NET Core Runtime</span></span>](https://github.com/dotnet/coreclr)
-- [<span data-ttu-id="d955e-145">Roslyn (C# ve Visual Basic) derleyici platformu ve IDE araçları</span><span class="sxs-lookup"><span data-stu-id="d955e-145">Roslyn (C# and Visual Basic) Compiler Platform and IDE Tools</span></span>](https://github.com/dotnet/roslyn)
-- [<span data-ttu-id="d955e-146">F # derleyici ve IDE araçları</span><span class="sxs-lookup"><span data-stu-id="d955e-146">F# Compiler and IDE Tools</span></span>](https://github.com/microsoft/visualfsharp)
+<span data-ttu-id="0b7ce-124">Bu belge, platformlar ve diller arasında .NET kapsamını ele alır.</span><span class="sxs-lookup"><span data-stu-id="0b7ce-124">This documentation covers the breadth of .NET across platforms and languages.</span></span>  <span data-ttu-id="0b7ce-125">.NET ve aşağıdaki bölümlerden herhangi birini kendi dillerinde ile başlayabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="0b7ce-125">You can get started with .NET and its languages in any of the following sections:</span></span>
 
-<span data-ttu-id="d955e-147">Zaten etkin olan diğer kişiler katılabilirsiniz [.NET topluluk](https://www.microsoft.com/net/community) yeni bulunamadı veya Yardım isteyin.</span><span class="sxs-lookup"><span data-stu-id="d955e-147">You can join other people who are already active in the [.NET community](https://www.microsoft.com/net/community) to find out what's new or ask for help.</span></span>
+- [<span data-ttu-id="0b7ce-126">.NET Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="0b7ce-126">.NET Guide</span></span>](standard/index.md)
+- [<span data-ttu-id="0b7ce-127">.NET Core Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="0b7ce-127">.NET Core Guide</span></span>](core/index.md)
+- [<span data-ttu-id="0b7ce-128">.NET Framework Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="0b7ce-128">.NET Framework Guide</span></span>](framework/index.md)
+- [<span data-ttu-id="0b7ce-129">C# Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="0b7ce-129">C# Guide</span></span>](csharp/index.md)
+- [<span data-ttu-id="0b7ce-130">F# Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="0b7ce-130">F# Guide</span></span>](fsharp/index.md)
+- [<span data-ttu-id="0b7ce-131">Visual Basic Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="0b7ce-131">Visual Basic Guide</span></span>](visual-basic/index.md)
+
+<span data-ttu-id="0b7ce-132">Ayrıca, göz atabilirsiniz [.NET API Başvurusu](/dotnet/api).</span><span class="sxs-lookup"><span data-stu-id="0b7ce-132">Additionally, you can browse the [.NET API reference](/dotnet/api).</span></span>
+
+## <a name="open-source"></a><span data-ttu-id="0b7ce-133">Açık kaynak</span><span class="sxs-lookup"><span data-stu-id="0b7ce-133">Open source</span></span>
+
+<span data-ttu-id="0b7ce-134">Bu belge tamamen olduğu [açık kaynak](https://github.com/dotnet/docs).</span><span class="sxs-lookup"><span data-stu-id="0b7ce-134">This documentation is completely [open source](https://github.com/dotnet/docs).</span></span> <span data-ttu-id="0b7ce-135">Belgeleri yazma sorunları oluşturmaktan gibi herhangi bir şekilde katkıda bulunabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="0b7ce-135">You can contribute in any way you like, from creating issues to writing documentation.</span></span>  <span data-ttu-id="0b7ce-136">Ayrıca, aynı zamanda açık kaynak .NET kendisini çoğunu şöyledir:</span><span class="sxs-lookup"><span data-stu-id="0b7ce-136">Additionally, much of .NET itself is also open source:</span></span>
+
+- [<span data-ttu-id="0b7ce-137">.NET core giriş</span><span class="sxs-lookup"><span data-stu-id="0b7ce-137">.NET Core Home</span></span>](https://github.com/dotnet/core)
+- [<span data-ttu-id="0b7ce-138">.NET kitaplıkları</span><span class="sxs-lookup"><span data-stu-id="0b7ce-138">.NET Libraries</span></span>](https://github.com/dotnet/corefx)
+- [<span data-ttu-id="0b7ce-139">.NET core çalışma zamanı</span><span class="sxs-lookup"><span data-stu-id="0b7ce-139">.NET Core Runtime</span></span>](https://github.com/dotnet/coreclr)
+- [<span data-ttu-id="0b7ce-140">(C# ve Visual Basic) Roslyn derleyici platformu ve IDE araçları</span><span class="sxs-lookup"><span data-stu-id="0b7ce-140">Roslyn (C# and Visual Basic) Compiler Platform and IDE Tools</span></span>](https://github.com/dotnet/roslyn)
+- [<span data-ttu-id="0b7ce-141">F # derleyici ve IDE araçları</span><span class="sxs-lookup"><span data-stu-id="0b7ce-141">F# Compiler and IDE Tools</span></span>](https://github.com/microsoft/visualfsharp)
+
+<span data-ttu-id="0b7ce-142">Zaten etkin olan diğer kişiler katılabilir [.NET topluluk](https://www.microsoft.com/net/community) yenilikleri bulunamıyor veya Yardım isteyin.</span><span class="sxs-lookup"><span data-stu-id="0b7ce-142">You can join other people who are already active in the [.NET community](https://www.microsoft.com/net/community) to find out what's new or ask for help.</span></span>
