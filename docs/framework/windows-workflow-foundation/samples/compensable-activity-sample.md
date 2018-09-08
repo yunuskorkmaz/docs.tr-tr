@@ -3,11 +3,11 @@ title: Compensable etkinliği örneği
 ms.date: 03/30/2017
 ms.assetid: 58f4898c-b2b8-44a4-9a73-3bef4da6d5ba
 ms.openlocfilehash: 3bf1d120cd700830a98f53495f7e9989ffec73db
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43670619"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44131383"
 ---
 # <a name="compensable-activity-sample"></a>Compensable etkinliği örneği
 Bu örnek nasıl kullanılacağını gösterir `CompensableActivity` normal yürütme sırasında belirli bir eylemi için yapılacak işleri ve bu eylemi dengelemek için daha sonra gerekirse yapılması gereken çalışmayı tanımlamak için etkinlik.  Windows Workflow Foundation (WF) compensable iş birimleri nasıl tanımlanabilir örnek ilk bölümü gösterir kullanarak bir `CompensableActivity` etkinliği ve nasıl başarılı bir çalıştırmada yürütülür.  İkinci örnek bölümü nasıl aynı compensable iş birimleri otomatik olarak maaş beklenmeyen bir olay ulaşılır ve iş akışı örneği iptal ilgileniriz gösterir.  

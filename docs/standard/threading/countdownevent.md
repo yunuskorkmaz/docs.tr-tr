@@ -11,11 +11,11 @@ ms.assetid: eec3812a-e20f-4ecd-bfef-6921d508b708
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 49b01fdd14d1adfe0480f93150ab6e996aa84dee
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43879174"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44128504"
 ---
 # <a name="countdownevent"></a>CountdownEvent
 <xref:System.Threading.CountdownEvent?displayProperty=nameWithType> sonra bekleyen iş parçacıklarının engellemesinin kaldırıldığı bir eşitleme temel öğesi bir belirli sayıda sinyal olur. <xref:System.Threading.CountdownEvent> içinde aksi takdirde kullanılacak senaryolarında için tasarlanmış bir <xref:System.Threading.ManualResetEvent> veya <xref:System.Threading.ManualResetEventSlim> ve el ile olay sinyal önce bir değişkeni azaltır. Örneğin, bir çatal/birleştir senaryosunda yalnızca oluşturabileceğiniz bir <xref:System.Threading.CountdownEvent> 5 sinyal sayısı olan ve sonra Başlangıç beş iş öğeleri iş parçacığı üzerinde havuz ve her iş öğesi arama sahip <xref:System.Threading.CountdownEvent.Signal%2A> tamamlandığında. Her çağrı <xref:System.Threading.CountdownEvent.Signal%2A> sinyal sayısı 1 ile azaltır. Ana iş parçacığı üzerinde çağrı <xref:System.Threading.CountdownEvent.Wait%2A> sinyal sayısı sıfır olana kadar engeller.  

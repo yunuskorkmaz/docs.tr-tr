@@ -9,11 +9,11 @@ ms.assetid: ad0b5717-3d32-41ad-a4d7-072c3e492b82
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0c570f812ec06c6ead0d12dc14c33fcdfd1f075c
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43871643"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44128371"
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemacollection"></a>XmlSchemaCollection ile XML Şeması (XSD) doğrulaması
 Kullanabileceğiniz <xref:System.Xml.Schema.XmlSchemaCollection> bir XML belgesi XML Şeması Tanım Dili (XSD) şemaları karşı doğrulamak için. <xref:System.Xml.Schema.XmlSchemaCollection> Her zaman doğrulama gerçekleşir belleğe yüklenen olmadıkları için koleksiyonda şemaları depolayarak performansı artırır. Şema şema koleksiyonunda varsa `schemaLocation` özniteliği şema koleksiyonunda aramak için kullanılır.  

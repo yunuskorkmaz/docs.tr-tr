@@ -5,11 +5,11 @@ helpviewer_keywords:
 - statements [C#], selection
 ms.assetid: cf21cfa2-34fb-48b0-9cbc-8bb4537a9a05
 ms.openlocfilehash: da3132a82e2cb0b3aaa55fbe82898414ebd31c12
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44036720"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44128004"
 ---
 # <a name="selection-statements-c-reference"></a>Seçim Deyimleri (C# Başvurusu)
 Seçimi deyimi programın denetimini belirli bir koşulu olup üzerine dayalı belirli bir akış aktarılmasını neden `true` veya yok.  

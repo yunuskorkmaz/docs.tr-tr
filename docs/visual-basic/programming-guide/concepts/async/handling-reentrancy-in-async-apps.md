@@ -2,29 +2,29 @@
 title: (Visual Basic) zaman uyumsuz uygulamalarda yeniden girişi işleme
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: b633e3cf9a499cd5f364692cd0461aed640fe54d
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: fa1bfcc5cfaf4a3ba1f5116be7b3f1851ce293af
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43868108"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44129727"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>(Visual Basic) zaman uyumsuz uygulamalarda yeniden girişi işleme
 Zaman uyumsuz kod uygulamanıza eklediğinizde, göz önünde bulundurun ve tamamlanmadan önce zaman uyumsuz bir işlem engellemelisiniz yeniden giriş muhtemelen önlemek gerekir. Olasılıklarını tanımlamaz ve yönetmezseniz, beklenmedik sonuçlara neden olabilir.  
   
  **Bu konudaki**  
   
--   [Yeniden giriş tanıma](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [Yeniden giriş tanıma](#BKMK_RecognizingReentrancy)  
   
--   [Yeniden girişi işleme](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [Yeniden girişi işleme](#BKMK_HandlingReentrancy)  
   
-    -   [Başlat düğmesini devre dışı bırak](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+    -   [Başlat düğmesini devre dışı bırak](#BKMK_DisableTheStartButton)  
   
-    -   [İptal edip işlemi yeniden başlatın](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+    -   [İptal edip işlemi yeniden başlatın](#BKMK_CancelAndRestart)  
   
-    -   [Birden çok işlemi çalıştırın ve çıktıyı sıraya alın](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+    -   [Birden çok işlemi çalıştırın ve çıktıyı sıraya alın](#BKMK_RunMultipleOperations)  
   
--   [Gözden geçirme ve örnek uygulamayı çalıştırma](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [Gözden geçirme ve örnek uygulamayı çalıştırma](#BKMD_SettingUpTheExample)  
   
 > [!NOTE]
 >  Yeni bilgisayarınızda yüklü veya örneği çalıştırmak için Visual Studio 2012 veya daha yeni ve .NET Framework 4.5 yüklü olmalıdır.  
@@ -84,20 +84,20 @@ TOTAL bytes returned:  890591
 TOTAL bytes returned:  890591  
 ```  
   
- Bu konunun sonuna kadar giderek bu çıkışı üreten kodu gözden geçirebilirsiniz. Çözümü yerel bilgisayarınıza indirerek ve WebsiteDownload proje çalıştırarak kodla denemeler yapın ya da daha fazla bilgi ve yönergeler için kendi projenizi oluşturmak için bu konunun sonunda kodu kullanma tarafından [ Gözden geçirme ve örnek uygulamayı çalıştırma](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645).  
+ Bu konunun sonuna kadar giderek bu çıkışı üreten kodu gözden geçirebilirsiniz. Çözümü yerel bilgisayarınıza indirerek ve WebsiteDownload proje çalıştırarak kodla denemeler yapın ya da daha fazla bilgi ve yönergeler için kendi projenizi oluşturmak için bu konunun sonunda kodu kullanma tarafından [ Gözden geçirme ve örnek uygulamayı çalıştırma](#BKMD_SettingUpTheExample).  
   
 ##  <a name="BKMK_HandlingReentrancy"></a> Yeniden girişi işleme  
  Yolu, uygulamanızı yapmak için istediğinize bağlı olarak çeşitli yollardan yeniden işleyebilirsiniz. Bu konu aşağıdaki örnekleri sunar:  
   
--   [Başlat düğmesini devre dışı bırak](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [Başlat düğmesini devre dışı bırak](#BKMK_DisableTheStartButton)  
   
      Devre dışı **Başlat** böylece kullanıcı, kesme işlemi devam ederken düğmesi.  
   
--   [İptal edip işlemi yeniden başlatın](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [İptal edip işlemi yeniden başlatın](#BKMK_CancelAndRestart)  
   
      Kullanıcı seçtiğinde devam eden tüm işlemleri iptal **Başlat** yeniden düğmesini ve ardından let en son İstenen işleme devam edin.  
   
--   [Birden çok işlemi çalıştırın ve çıktıyı sıraya alın](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [Birden çok işlemi çalıştırın ve çıktıyı sıraya alın](#BKMK_RunMultipleOperations)  
   
      Tüm istenen işlemlerin zaman uyumsuz olarak çalışır, ancak çıktı görünümünü koordine edecek her işlemin sonuçları birlikte ve sıralı görünür izin verir.  
   
@@ -134,7 +134,7 @@ End Sub
   
  İptal işlemleri hakkında daha fazla bilgi için bkz. [Fine-Tuning Async uygulamanızda (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md).  
   
- Bu senaryoyu ayarlamak için bağlantısında verilen temel kodda aşağıdaki değişiklikleri yapın [inceleme ve örnek uygulamayı çalıştırma](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645). Bitmiş uygulamayı da indirebilirsiniz [zaman uyumsuz örneği: .NET Desktop uygulamaları'na yeniden giriş](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). Bu projenin adı CancelAndRestart'tır.  
+ Bu senaryoyu ayarlamak için bağlantısında verilen temel kodda aşağıdaki değişiklikleri yapın [inceleme ve örnek uygulamayı çalıştırma](#BKMD_SettingUpTheExample). Bitmiş uygulamayı da indirebilirsiniz [zaman uyumsuz örneği: .NET Desktop uygulamaları'na yeniden giriş](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). Bu projenin adı CancelAndRestart'tır.  
   
 1.  Bildirme bir <xref:System.Threading.CancellationTokenSource> değişken `cts`, tüm yöntemler için kapsam dahilinde olan.  
   
@@ -285,11 +285,11 @@ TOTAL bytes returned:  890591
  Kısmi listelerini ortadan kaldırmak için ilk kod satırı açıklamadan çıkarın `StartButton_Click` kullanıcı her zaman metin kutusunu temizlemek için işlemi yeniden başlatır.  
   
 ###  <a name="BKMK_RunMultipleOperations"></a> Birden çok işlemi çalıştırın ve çıktıyı sıraya alın  
- Başka bir zaman uyumsuz işlemi kullanıcı her zaman uygulama başlatır, bu üçüncü örnek en karmaşık örnektir **Başlat** düğmesi ve tüm işlemler tamamlanmak üzere çalıştığı. Listeden Web siteleri tüm istenen işlemler zaman uyumsuz olarak yükleyin, ancak çıkış işlemlerden çıktılar ardışık olarak sunulur. Diğer bir deyişle, gerçek indirme etkinliği, deki çıkışın gösterdiği gibi aralanmıştır [yeniden giriş tanıma](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) gösterir, ancak her grup için sonuçların listesi ayrı ayrı sunulur.  
+ Başka bir zaman uyumsuz işlemi kullanıcı her zaman uygulama başlatır, bu üçüncü örnek en karmaşık örnektir **Başlat** düğmesi ve tüm işlemler tamamlanmak üzere çalıştığı. Listeden Web siteleri tüm istenen işlemler zaman uyumsuz olarak yükleyin, ancak çıkış işlemlerden çıktılar ardışık olarak sunulur. Diğer bir deyişle, gerçek indirme etkinliği, deki çıkışın gösterdiği gibi aralanmıştır [yeniden giriş tanıma](#BKMK_RecognizingReentrancy) gösterir, ancak her grup için sonuçların listesi ayrı ayrı sunulur.  
   
  İşlemleri genel paylaşım <xref:System.Threading.Tasks.Task>, `pendingWork`, görüntüleme işlemi için bir ağ geçidi olarak görev gören.  
   
- Bu örnek koda değişiklikleri yapıştırarak çalıştırabilirsiniz [uygulama](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), veya'ndaki yönergeleri takip edebilirsiniz [uygulamayı indirmeye](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) örneği indirip QueueResults projesini'ı çalıştırmak için.  
+ Bu örnek koda değişiklikleri yapıştırarak çalıştırabilirsiniz [uygulama](#BKMK_BuildingTheApp), veya'ndaki yönergeleri takip edebilirsiniz [uygulamayı indirmeye](#BKMK_DownloadingTheApp) örneği indirip QueueResults projesini'ı çalıştırmak için.  
   
  Aşağıdaki çıktı, kullanıcı seçtiğinde görülecek sonucu gösterir **Başlat** düğmesini yalnızca bir defa. Harf etiketi A, sonucun ilk kez gösterir **Başlat** düğmesi seçilir. Sayılar, yükleme hedefleri listesinde URL'lerin sırasını gösterir.  
   
@@ -473,7 +473,7 @@ Private Async Function FinishOneGroupAsync(urls As List(Of String), contentTasks
 End Function  
 ```  
   
- Bu örnek koda değişiklikleri yapıştırarak çalıştırabilirsiniz [uygulama](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), veya'ndaki yönergeleri takip edebilirsiniz [uygulamayı indirmeye](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) örneği indirip QueueResults projesini'ı çalıştırmak için.  
+ Bu örnek koda değişiklikleri yapıştırarak çalıştırabilirsiniz [uygulama](#BKMK_BuildingTheApp), veya'ndaki yönergeleri takip edebilirsiniz [uygulamayı indirmeye](#BKMK_DownloadingTheApp) örneği indirip QueueResults projesini'ı çalıştırmak için.  
   
 #### <a name="points-of-interest"></a>İlgi noktaları  
  Çıktıda pound işareti (#) ile başlayan bilgi satırları bu örneğin nasıl çalıştığını açıklamak.  
@@ -674,8 +674,9 @@ End Function
   
 11. Programı çalıştırın ve ardından CTRL + F5 tuşlarına basın **Başlat** düğmesine birkaç kez.  
   
-12. Değişikliklerini yapın [Başlat düğmesini devre dışı](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), [iptal edip işlemi yeniden](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), veya [birden çok işlemi çalıştırın ve çıktıyı sıraya](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) yeniden giriş işlemek için.  
+12. Değişikliklerini yapın [Başlat düğmesini devre dışı](#BKMK_DisableTheStartButton), [iptal edip işlemi yeniden](#BKMK_CancelAndRestart), veya [birden çok işlemi çalıştırın ve çıktıyı sıraya](#BKMK_RunMultipleOperations) yeniden giriş işlemek için.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [İzlenecek yol: Async kullanarak Web'e erişme ve Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- [Zaman uyumsuz programlama ile Async ve Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [İzlenecek yol: Async kullanarak Web'e erişme ve Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
+- [Zaman uyumsuz programlama ile Async ve Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)

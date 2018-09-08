@@ -2,12 +2,12 @@
 title: İşlevler (F#)
 description: 'F # ve nasıl F # ortak fonksiyonel programlama yapılarını destekler işlevleri hakkında bilgi edinin.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 7a5b54b7bcfdeee7018dba38016db6182ef95ff0
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 717eba7e69398048d229173e07ccc376797171bb
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43803918"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44140924"
 ---
 # <a name="functions"></a>İşlevler
 
@@ -112,7 +112,7 @@ Ardından, iki farklı boyutlardaki kanal çeşitli uzunluklarına gerektiği gi
 
 ## <a name="recursive-functions"></a>Özyinelemeli İşlevler
 
-*Özyinelemeli işlevler* kendisini çağıran işlev. Belirttiğiniz gerektirdikleri **rec** anahtar sözcüğü aşağıdaki **izin** anahtar sözcüğü. Herhangi bir işlev çağrısındaki çağırma işlevinin gövdesi içinde özyinelemeli işlevini çağırın. Aşağıdaki özyinelemeli işlev hesaplar *n*th Fibonacci sayı. Fibonacci sayı dizisi antiquity bu yana bilinen ve art arda gelen her bir sayının sıradaki önceki iki sayının toplamı olduğu bir dizidir.
+*Özyinelemeli işlevler* kendisini çağıran işlev. Belirttiğiniz gerektirdikleri **rec** anahtar sözcüğü aşağıdaki **izin** anahtar sözcüğü. Herhangi bir işlev çağrısındaki çağırma işlevinin gövdesi içinde özyinelemeli işlevini çağırın. Aşağıdaki özyinelemeli işlev hesaplar *n*<sup>th</sup> Fibonacci sayı. Fibonacci sayı dizisi antiquity bu yana bilinen ve art arda gelen her bir sayının sıradaki önceki iki sayının toplamı olduğu bir dizidir.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet108.fs)]
 

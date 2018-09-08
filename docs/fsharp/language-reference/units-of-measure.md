@@ -2,17 +2,16 @@
 title: Ölçü Birimleri (F#)
 description: 'Nasıl kayan nokta öğrenin ve F # imzalı tamsayı değerleri, genellikle uzunluğu, ses ve yığın belirtmek için kullanılan ölçü birimlerini ilişkili.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 6075742ec80d9510be51d4565e3397931c9f68c7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ad2193e25f3c0cee6e73cd529ab43d1e4b6b549b
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517432"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44131266"
 ---
 # <a name="units-of-measure"></a>Ölçü Birimleri
 
 Kayan nokta ve imzalı tamsayı değerleri F # genellikle toplu vb. uzunluğu, birim belirtmek için kullanılan ölçü birimlerini ilişkili. Birimleri ile miktarlar kullanarak önlemeye yardımcı olur aritmetik ilişkileri doğru birimleri, yüklü olduğunu doğrulamak derleyiciyi etkinleştir programlama hatalarını.
-
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -21,6 +20,7 @@ Kayan nokta ve imzalı tamsayı değerleri F # genellikle toplu vb. uzunluğu, b
 ```
 
 ## <a name="remarks"></a>Açıklamalar
+
 Önceki söz dizimi *birim adı* ölçü birimi olarak. İsteğe bağlı bir parçası, önceden tanımlanmış birimleri yeni bir ölçü tanımlamak için kullanılır. Örneğin, aşağıdaki satırı ölçü tanımlar `cm` (santimetre).
 
 ```fsharp
@@ -72,7 +72,7 @@ let convertg2kg (x : float<g>) = x / 1000.0<g/kg>
 Aşağıdaki örnek, ölçü kullanımını gösterir.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6901.fs)]
-    
+
 Aşağıdaki kod örneği, dimensionless kayan noktası numarasından dimensioned kayan nokta değerine dönüştürmek gösterilmektedir. Yalnızca tarafından 1.0, 1.0 boyutları uygulama çarpın. Bu gibi bir işlev uygulamasına soyutlamak `degreesFahrenheit`.
 
 Ayrıca, dimensioned değerlerini dimensionless kayan noktalı sayıları beklediğiniz bir işleve geçirdiğinizde, birimi iptal etmeli veya başvurusuna `float` kullanarak `float` işleci. Bu örnekte, bölen `1.0<degC>` bağımsız değişkenleri için `printf` çünkü `printf` dimensionless miktarlar bekliyor.
@@ -88,20 +88,23 @@ That temperature in degrees Celsius is    32.22.
 ```
 
 ## <a name="using-generic-units"></a>Genel birimler
+
 İlişkili bir ölçü olan veriler üzerinde çalışan genel işlevler yazabilirsiniz. Bir tür parametresi bir türle birlikte genel bir birim belirterek aşağıdaki kod örneğinde gösterildiği gibi yaparsınız.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6903.fs)]
-    
+
 ## <a name="creating-aggregate-types-with-generic-units"></a>Toplama türlerini genel birimleri ile oluşturma
+
 Aşağıdaki kod genel birimler sahip tek kayan nokta değerleri oluşan bir toplama türünü oluşturma işlemini gösterir. Bu, çeşitli birimleri ile birlikte çalışan oluşturulacak tek bir türü sağlar. Ayrıca, genel birimleri tür güvenliği birimleri bir dizi olan bir genel tür birimleri farklı bir dizi ile aynı genel tür farklı bir tür olduğundan emin olarak korur. Bu teknik temelini `Measure` özniteliği tür parametresi için uygulanabilir.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6904.fs)]
-    
+
 ## <a name="units-at-runtime"></a>Çalışma zamanında birimleri
+
 Ölçü birimleri statik tür denetlemek için kullanılır. Kayan nokta değerleri derlendiğinde çalışma zamanında birimleri kayıp olacak şekilde ölçü, ortadan kalkar. Bu nedenle, her türlü girişim çalışma zamanında birim denetimini bağlıdır işlevselliği uygulamak için mümkün değildir. Örneğin, uygulama bir `ToString` işlevi birimi yazdırmak için mümkün değildir.
 
-
 ## <a name="conversions"></a>Dönüşümler
+
 Birimleri olan bir türü dönüştürmek için (örneğin, `float<'u>`) birimleri sahip olmayan bir türe standart dönüştürme işlevini kullanabilirsiniz. Örneğin, kullanabileceğiniz `float` dönüştürmek için bir `float` birimleri, aşağıdaki kodda gösterildiği gibi yok değeri.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6905.fs)]
@@ -109,10 +112,11 @@ Birimleri olan bir türü dönüştürmek için (örneğin, `float<'u>`) birimle
 Unitless değeri birimleri olan bir değere dönüştürülecek uygun birimleri ile açıklanıyor 1 veya 1.0 değere göre çarpabilirsiniz. Ancak, birlikte çalışabilirlik katmanları yazmak için de bazı açık unitless değerleri birimleriyle değerlerine dönüştürmek için kullanabileceğiniz işlevi vardır. İçinde bunlar [Microsoft.FSharp.Core.LanguagePrimitives](https://msdn.microsoft.com/library/69d08ac5-5d51-4c20-bf1e-850fd312ece3) modülü. Örneğin, unitless dönüştürmek için `float` için bir `float<cm>`, kullanın [FloatWithMeasure](https://msdn.microsoft.com/library/69520bc7-d67b-46b8-9004-7cac9646b8d9)aşağıdaki kodda gösterildiği gibi.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6906.fs)]
-    
+
 ## <a name="units-of-measure-in-the-f-core-library"></a>F # çekirdek Kitaplığı'nda ölçü birimleri
+
 Bir birim kitaplığı kullanılabilir `FSharp.Data.UnitSystems.SI` ad alanı. Bunların her iki simge biçiminde sı birimleri içerir (gibi `m` ölçüm için) içinde `UnitSymbols` alt ad alanı ve bunların tam adı (gibi `meter` ölçüm için) içinde `UnitNames` alt ad.
 
+## <a name="see-also"></a>Ayrıca bkz.
 
-## <a name="see-also"></a>Ayrıca Bkz.
-[F# Dili Başvurusu](index.md)
+- [F# Dili Başvurusu](index.md)

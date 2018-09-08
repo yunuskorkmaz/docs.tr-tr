@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
 ms.openlocfilehash: deb1b6ca5c6fc996a015e32dd5e0c7b9bd6530fa
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43867887"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44137609"
 ---
 # <a name="how-to-create-an-activity"></a>Nasıl yapılır: bir etkinliği oluşturma
 Etkinlikleri olan çekirdek birimi davranış [!INCLUDE[wf1](../../../includes/wf1-md.md)]. Bir etkinlik yürütülme mantığı yönetilen kodda uygulanabilir veya diğer etkinlikleri kullanarak uygulanabilir. Bu konu, iki etkinliği oluşturma işlemini gösterir. İlk Etkinlik yürütme mantığını uygulamak için kodu kullanan basit bir etkinliktir. İkinci etkinlik uygulaması, diğer etkinlikleri kullanarak tanımlanır. Bu etkinlikler, aşağıdaki adımlarda öğreticide kullanılır.  

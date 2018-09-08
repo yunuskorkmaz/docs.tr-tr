@@ -3,11 +3,11 @@ title: Sürüme dayanıklı serileştirme teknolojisi örneği
 ms.date: 03/30/2017
 ms.assetid: 2a183664-bfbf-4ff0-96f6-c836284ea916
 ms.openlocfilehash: 34dccc9065c0100a01a7969a1fe762001e2999a9
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43866429"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44131665"
 ---
 # <a name="version-tolerant-serialization-technology-sample"></a>Sürüme dayanıklı serileştirme teknolojisi örneği
 [Örneği indirin](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/VTS.zip.exe)  

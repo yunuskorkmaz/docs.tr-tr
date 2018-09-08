@@ -2,12 +2,12 @@
 title: Parametreler ve Bağımsız Değişkenler (F#)
 description: 'Parametreleri tanımlama ve bağımsız değişkenleri işlevleri, yöntemlere ve özelliklere geçirme için F # dil desteği hakkında bilgi edinin.'
 ms.date: 05/16/2016
-ms.openlocfilehash: a3418ec814e0419d08758cf035ecc0f402b5db1a
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: HT
+ms.openlocfilehash: a1e2a70ca560bbb09d2cd10f47485cbe5c5e029d
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44062643"
+ms.locfileid: "44131986"
 ---
 # <a name="parameters-and-arguments"></a>Parametreler ve Bağımsız Değişkenler
 
@@ -127,15 +127,32 @@ Baud Rate: 300 Duplex: Half Parity: true
 
 ## <a name="passing-by-reference"></a>Başvuruya göre geçirme
 
-Bir F # değere Başvuruya göre geçirme içerir `byref` anahtar sözcüğü parametresi başvuruya göre geçirilen değere gerçekten bir işaretçi olduğunu belirtir. Herhangi bir değer geçirildi yöntemi ile bir `byref` bağımsız değişken olarak `mutable`.
+Bir F # değere Başvuruya göre geçirme içerir [zkratka](byrefs.md), Yönetilen işaretçi türleri olduğu. Kılavuz, hangi tür kullanmak aşağıdaki gibidir:
+
+* Kullanım `inref<'T>` yalnızca işaretçi okumak gerekiyorsa.
+* Kullanım `outref<'T>` yalnızca işaretçi yazmak gerekiyorsa.
+* Kullanım `byref<'T>` hem okuma hem de yazma işaretçisi gerekiyorsa.
+
+```fsharp
+let example1 (x: inref<int>) = printfn "It's %d" x
+
+let example2 (x: outref<int>) = x <- x + 1
+
+let example3 (x: byref<int>) =
+    printfn "It'd %d" x
+    x <- x + 1
+
+// No need to make it mutable, since it's read-only
+let x = 1
+example1 &x
+
+// Needs to be mutable, since we write to it
+let mutable y = 2
+example2 &y
+example3 &y // Now 'y' is 3
+```
 
 Parametre bir işaretçi ve değer değişebilir olduğundan, işlevi yürütme sonrasında değeri herhangi bir değişiklik korunur.
-
-Aynı işlemi gerçekleştirebilirsiniz [başvuru hücreleri](reference-cells.md), ancak dikkat etmeniz önemlidir **başvuru hücreleri ve `byref`s aynı şey değildir**. Bir başvuru hücresi inceleyin ve içeriğini değiştirme, ancak bu değer yığın üzerinde yaşadığı ve içerdiği değiştirilebilir bir değer ile kayıt olmakla eşdeğerdir bir değer için bir kapsayıcıdır. A `byref` farklı temel alınan semantiği ve (hangi oldukça kısıtlayıcı olabilir) kullanım kuralları, bu nedenle, gerçek bir işaretçi olduğu.
-
-Aşağıdaki örnekler, kullanımını gösterir `byref` anahtar sözcüğü. Parametre olarak bir başvuru hücresi kullanmanız, size gerekir adlandırılmış değeri olarak başvuru hücresini oluşturmak ve parametre olarak kullanan, yalnızca ekleme dikkat edin `ref` yapılan ilk çağrıda gösterildiği bir işleç `Increment` aşağıdaki kodda. Temel alınan değerinin bir kopyasıdır oluşturduğu bir başvuru hücresi oluşturmak için ilk çağrı yalnızca geçici bir değeri artırır.
-
-[!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-1/snippet3809.fs)]
 
 Tüm depolamak için bir dönüş değeri olarak bir tanımlama grubu kullanabilirsiniz `out` .NET kitaplığı yöntem parametreleri. Alternatif olarak davranabileceğiniz `out` parametre olarak bir `byref` parametresi. Aşağıdaki kod örneği iki yolunu gösterir.
 
@@ -155,7 +172,7 @@ Aşağıdaki kod, her iki arama alan bir parametre dizisi ve bir tür tanımın�
 
 Bir projeyi çalıştırdığınızda, önceki kodun çıktısı aşağıdaki gibidir:
 
-```
+```console
 a 1 10 Hello world 1 True
 "a"
 1

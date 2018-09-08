@@ -10,11 +10,11 @@ ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0d3d0e2dbd57d9581d1c8b0ca42d1e9d556d8905
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44064088"
+ms.locfileid: "44129413"
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>.NET Framework'te Sürüm Uyumluluğu
 Geriye dönük uyumluluk, bir platformun belirli bir sürümü için geliştirilen bir uygulamanın o platformun sonraki sürümlerinde çalışır anlamına gelir. .NET Framework, geriye dönük uyumluluğu en üst düzeye dener: .NET Framework'ün sonraki sürümlerinde .NET Framework'ün bir sürümünü derlemek ve bir .NET Framework sürümünde çalışan ikili dosyalar davranış üzerinde aynı şekilde yazılmış kod kaynağı .NET Framework'ün sonraki sürümler.  

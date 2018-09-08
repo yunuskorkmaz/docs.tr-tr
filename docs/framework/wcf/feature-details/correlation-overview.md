@@ -3,11 +3,11 @@ title: Bağıntı Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: edcc0315-5d26-44d6-a36d-ea554c418e9f
 ms.openlocfilehash: 8ac5d39866b23bc134f009fdb0df6ebf56c6d234
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44035924"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44128111"
 ---
 # <a name="correlation-overview"></a>Bağıntı Genel Bakış
 Bağıntı birbirine veya uygulama örneği durumu, bir ilk isteğine yanıt veya belirli sipariş kimliği gibi iş akışı hizmeti iletilerini kalıcı bir sipariş işleme iş akışı durumuna ilişkin yönelik mekanizmadır. Bu konu, bağıntı genel bir bakış sağlar. Bu bölümdeki diğer konulara bağıntı her türüne ilişkin ek bilgiler sağlayın.  

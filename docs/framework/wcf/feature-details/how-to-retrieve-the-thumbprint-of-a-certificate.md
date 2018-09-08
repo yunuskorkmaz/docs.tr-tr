@@ -4,39 +4,39 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], retrieving thumbprint
 ms.assetid: da3101aa-78cd-4c34-9652-d1f24777eeab
-ms.openlocfilehash: d827c2c5f407c3041a31efbc06fcfed205bef458
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f520e897ad467686e0dc151548a61ea8370eb07a
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492440"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44133236"
 ---
 # <a name="how-to-retrieve-the-thumbprint-of-a-certificate"></a>Nasıl yapılır: Bir Sertifikanın Parmak İzini Alma
-Windows Communication Foundation (WCF) uygulama kimlik doğrulaması için bir X.509 sertifikası kullanan yazarken, genellikle talep sertifika içinde bulunan belirtmek gereklidir. Örneğin, kullanırken bir parmak izi talep sağlamalısınız <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> numaralandırmada <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> yöntemi. Talep değeri bulma iki adımı gerektirir. İlk olarak, sertifikalar için Microsoft Yönetim Konsolu (MMC) ek bileşenini açın. (Bkz [nasıl yapılır: MMC ek bileşeni ile sertifikaları görüntüle](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).) İkinci olarak, burada açıklandığı gibi uygun bir sertifika Bul ve kendi parmak izi (veya diğer talep değerleri) kopyalayın.  
+Kimlik doğrulaması için bir X.509 sertifikası kullanan bir Windows Communication Foundation (WCF) uygulaması yazarken genellikle talep sertifika içinde bulunan belirtmek gereklidir. Örneğin, kullanırken bir parmak izi talep sağlamalısınız <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> numaralandırmada <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> yöntemi. Talep değeri bulmak için iki adım gerekir. İlk olarak, sertifikalar Microsoft Yönetim Konsolu (MMC) ek bileşenini açın. (Bkz [nasıl yapılır: MMC ek bileşeni ile sertifikaları görüntüleme](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).) İkinci olarak, aşağıda açıklandığı gibi uygun bir sertifikayı bulun ve parmak izi (veya diğer talep değerleri) kopyalayın.  
   
- Hizmet kimlik doğrulaması için bir sertifika kullanıyorsanız, değeri not daha önemlidir **çıkarılan** sütun (ilk sütun konsolunda). Tekdüzen Kaynak Tanımlayıcısı (URI) bir hizmetin temel karşılaştırmak için bir taşıma güvenliği, yapılan ilk denetimleri birini olduğu gibi Güvenli Yuva Katmanı (SSL) kullanarak adres **çıkarılan** değeri. Değerler eşleşmelidir veya kimlik doğrulama işlemi durdu.  
+ Hizmet kimlik doğrulaması için bir sertifika kullanıyorsanız, değerini not edin önemlidir **çıkarılan** sütun (konsolda ilk sütun). Tekdüzen Kaynak Tanımlayıcısı (URI) bir hizmet için bir aktarım güvenliği, yapılan ilk denetimler birini temel karşılaştırmak için olduğu gibi Güvenli Yuva Katmanı (SSL) kullanarak adres **çıkarılan** değeri. Değerlerin eşleşmesi gerekir ya da kimlik doğrulama işlemi durdurulur.  
   
- Makecert.exe aracından de kullanabilirsiniz [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] SDK'sını yalnızca geliştirme sırasında kullanmak için geçici sertifikalar oluşturma. Varsayılan olarak, ancak bu tür bir sertifika bir sertifika yetkilisi tarafından verilmemiş ve üretim için kullanılamaz. Daha fazla bilgi için bkz: [nasıl yapılır: geliştirme sırasında kullanmak için geçici sertifikalar oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md).  
+ Yalnızca geliştirme sırasında kullanmak için geçici sertifikalar oluşturmak için New-SelfSignedCertificate Powershell cmdlet'ini de kullanabilirsiniz. Varsayılan olarak, ancak bu tür bir sertifika bir sertifika yetkilisi tarafından verilmemiş ve üretim için kullanılamaz. Daha fazla bilgi için [nasıl yapılır: kullanım sırasında geliştirme için geçici sertifikalar oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md).  
   
-### <a name="to-retrieve-a-certificates-thumbprint"></a>Bir sertifikanın parmak izi almak için  
+### <a name="to-retrieve-a-certificates-thumbprint"></a>Bir sertifikanın parmak izi alınamadı  
   
-1.  Sertifikalar için Microsoft Yönetim Konsolu (MMC) ek bileşenini açın. (Bkz [nasıl yapılır: MMC ek bileşeni ile sertifikaları görüntüle](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).)  
+1.  Sertifikalar Microsoft Yönetim Konsolu (MMC) ek bileşenini açın. (Bkz [nasıl yapılır: MMC ek bileşeni ile sertifikaları görüntüleme](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).)  
   
-2.  İçinde **konsol kökü** penceresinin sol bölmesinde, tıklatın **sertifikalar (yerel bilgisayar)**.  
+2.  İçinde **konsol kökü** penceresinin sol bölmesinde, tıklayın **sertifikalar (yerel bilgisayar)**.  
   
-3.  Tıklatın **kişisel** klasörünü genişletin.  
+3.  Tıklayın **kişisel** klasörünü genişletin.  
   
-4.  Tıklatın **sertifikaları** klasörünü genişletin.  
+4.  Tıklayın **sertifikaları** klasörünü genişletin.  
   
-5.  Sertifikaları listesinde Not **Hedeflenen amaçlar** başlığı. Listeleyen bir sertifika bulunamadı **istemci kimlik doğrulaması** hedeflenen amacı olarak.  
+5.  Sertifikaları listesinde Not **Hedeflenen amaçlar** başlığı. Listeleyen bir sertifikayı bulma **istemci kimlik doğrulaması** bir amacı olarak.  
   
-6.  Sertifikayı çift tıklatın.  
+6.  Sertifikaya çift tıklayın.  
   
-7.  İçinde **sertifika** iletişim kutusu, tıklatın **ayrıntıları** sekmesi.  
+7.  İçinde **sertifika** iletişim kutusu, tıklayın **ayrıntıları** sekmesi.  
   
-8.  Alanları listede ilerleyin ve tıklayın **parmak izi**.  
+8.  Alanlar listesi boyunca kaydırın ve tıklayın **parmak izi**.  
   
-9. Onaltılık karakterler kutusundan kopyalayın. Bu parmak izi kodu kullanılıyorsa `X509FindType`, onaltılık sayılar arasında boşluk kaldırın. Örneğin, parmak izi "a9 09 50 2B d8 2a e4 14 33 e6 f8 38 86 b0 0d 42 77 a3 2a 7b" Code "a909502dd82ae41433e6f83886b00d4277a32a7b" olarak belirtilmelidir.  
+9. Onaltılık karakter kutusundan kopyalayın. Bu parmak izi kodu kullanılırsa `X509FindType`, onaltılık sayı arasındaki boşlukları Kaldır. Örneğin, parmak izi "a9 09 50 2B d8 2a e4 14 33 e6 f8 38 86 b0 0d 42 77 a3 2a 7b" code "a909502dd82ae41433e6f83886b00d4277a32a7b" olarak belirtilmelidir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint>  

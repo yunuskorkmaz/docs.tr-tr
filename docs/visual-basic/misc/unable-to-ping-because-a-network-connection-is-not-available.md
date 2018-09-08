@@ -5,11 +5,11 @@ f1_keywords:
 - vbrNetwork_NetworkNotAvailable
 ms.assetid: 8d2bac12-bc6a-42ae-b28b-80b026dfabce
 ms.openlocfilehash: f8659c1ef21dc61680d5de37f9de2b37732b06f9
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43869240"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44133128"
 ---
 # <a name="unable-to-ping-because-a-network-connection-is-not-available"></a>Bir ağ bağlantısı kullanılamadığından ping yapılamıyor
 Ağ bağlantısı kullanılamadığından işlem gerçekleştirilemiyor.  

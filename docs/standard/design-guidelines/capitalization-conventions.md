@@ -11,33 +11,33 @@ helpviewer_keywords:
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ef7913a2601c3a791cb028b4074ce37b9e9421b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 070fc69728c2cb38e465dab9f6f591a77a857531
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575290"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44131941"
 ---
 # <a name="capitalization-conventions"></a>Büyük/küçük harf kuralları
-Bu bölüm yerleşim kullanmak için basit bir yöntem çıkışı yönergeleri, sürekli türleri, üyeleri ve parametreleri okumak kolay yapma tanımlayıcıları uygulandığında durumda.  
+Yönergeleri bu bölümün yerleşim kullanmak için basit bir yöntemini, tutarlı bir şekilde, türleri, üyeler ve parametreler okuması yapma tanımlayıcıları uygulandığında durumda.  
   
-## <a name="capitalization-rules-for-identifiers"></a>Tanımlayıcılar için büyük/küçük harf kuralları  
- Tanımlayıcı sözcükleri ayırt etmek için tanımlayıcı her sözcüğün ilk harfini büyük harf. Alt çizgi sözcükleri ayırt etmek için kullanmayın veya tanımlayıcıları başka bir yerindeki Bu konular için. Tanımlayıcı kullanılmasına bağlı olarak tanımlayıcıları sağladığınızdan uygun iki yolu vardır:  
+## <a name="capitalization-rules-for-identifiers"></a>Tanımlayıcıların büyük/küçük harf kuralları  
+ Bir tanımlayıcı sözcükleri ayırt etmek için tanımlayıcının her sözcüğün ilk harfini büyük harfe Dönüştür. Sözcükleri ayırmak için alt çizgi kullanmayın veya tanımlayıcıları herhangi bir yerinden, sorgunuzun. Büyük harf tanımlayıcıları, tanımlayıcı kullanılmasına bağlı olarak uygun iki yolu vardır:  
   
 -   PascalCasing  
   
 -   camelCasing  
   
- Parametre adları dışındaki tüm tanımlayıcılar için kullanılan PascalCasing kuralı (iki harf uzunluğu üzerinden kısaltmalar dahil) her sözcüğün ilk karakteri aşağıdaki örneklerde gösterildiği gibi büyük harfe çevirir:  
+ Parametre adları hariç tüm tanımlayıcıları için kullanılan PascalCasing kural, ilk karakter (iki harf uzunluğu üzerinde kısaltmalar dahil), her bir sözcüğün aşağıdaki örneklerde gösterildiği gibi büyük harfe dönüştürür:  
   
  `PropertyDescriptor`  
  `HtmlTag`  
   
- Özel bir durum içinde her iki harf olduğundan, iki harfli kısaltmalar için aşağıdaki tanımlayıcıda gösterildiği gibi yapılır:  
+ Özel bir durum, her iki harf olduğundan, iki harfli kısaltmalar için aşağıdaki tanımlayıcıda gösterildiği şekilde yapılır:  
   
  `IOStream`  
   
- Parametre adları için yalnızca kullanılan camelCasing kuralı ilk word dışında her sözcüğün ilk karakteri aşağıdaki örneklerde gösterildiği gibi büyük harfe dönüştürür. Örnekte de görüldüğü gibi bir başlamalıdır tanımlayıcı başlamak iki harfli kısaltmalar küçük hem de ' dir.  
+ Parametre adları için yalnızca kullanılan camelCasing kural, aşağıdaki örneklerde gösterildiği gibi her sözcüğün ilk sözcük dışındaki ilk karakteri büyük harfe dönüştürür. Örnekte de gösterildiği gibi bir başlamalıdır tanımlayıcı başlayan iki harfli kısaltmalar hem küçük olan.  
   
  `propertyDescriptor`  
  `ioStream`  
@@ -47,9 +47,9 @@ Bu bölüm yerleşim kullanmak için basit bir yöntem çıkışı yönergeleri,
   
  **✓ DO** camelCasing parametre adları için kullanın.  
   
- Aşağıdaki tabloda, farklı türlerdeki tanımlayıcıları için büyük/küçük harf kurallar açıklanmaktadır.  
+ Aşağıdaki tabloda, farklı tür tanımlayıcıları büyük/küçük harf kurallarını açıklar.  
   
-|Tanımlayıcı|Büyük/küçük harf kullanımı|Örnek|  
+|tanımlayıcı|Büyük/küçük harf kullanımı|Örnek|  
 |----------------|------------|-------------|  
 |Ad Alanı|Pascal|`namespace System.Security { ... }`|  
 |Tür|Pascal|`public class StreamReader { ... }`|  
@@ -58,17 +58,17 @@ Bu bölüm yerleşim kullanmak için basit bir yöntem çıkışı yönergeleri,
 |Özellik|Pascal|`public class String {` <br />  `public int Length { get; }` <br /> `}`|  
 |Olay|Pascal|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|  
 |Alan|Pascal|`public class MessageQueue {` <br />  `public static readonly TimeSpan` <br /> `InfiniteTimeout;` <br /> `}` <br /> `public struct UInt32 {` <br />  `public const Min = 0;` <br /> `}`|  
-|Enum değeri|Pascal|`public enum FileMode {` <br />  `Append,` <br />  `...` <br /> `}`|  
-|Parametre|Ortası büyük|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|  
+|Sabit listesi değeri|Pascal|`public enum FileMode {` <br />  `Append,` <br />  `...` <br /> `}`|  
+|Parametre|Ortası|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|  
   
-## <a name="capitalizing-compound-words-and-common-terms"></a>Bileşik sözcüklerin ve Ortak terimleri büyük harfe dönüştürme  
+## <a name="capitalizing-compound-words-and-common-terms"></a>Bileşik sözcüklerin büyük harfe dönüştürme ve genel koşulları  
  Çoğu bileşik koşulları büyük/küçük harf amaçları için tek sözcük olarak kabul edilir.  
   
  **X DO NOT** sözde kapalı form bileşik sözcüklerin her sözcüğün büyük harfe çevirme.  
   
- Bu uç nokta gibi tek bir sözcük olarak yazılmış bileşik sözcüklerdir. Büyük/küçük harf yönergeleri amacıyla kapalı form bileşik word tek bir sözcük kabul eder. Geçerli bir sözlük, bileşik bir sözcük kapalı formunda yazılırsa belirlemek için kullanın.  
+ Bu uç nokta gibi tek bir sözcük olarak yazılan bileşik sözcüklerdir. Büyük/küçük harf kuralları amacıyla kapalı biçimli bir bileşik sözcük tek bir sözcük kabul eder. Bir bileşik sözcük kapalı formunda yazılırsa belirlemek için geçerli bir sözlük kullanın.  
   
-|Pascal|Ortası büyük|değil|  
+|Pascal|Ortası|değil|  
 |------------|-----------|---------|  
 |`BitFlag`|`bitFlag`|`Bitflag`|  
 |`Callback`|`callback`|`CallBack`|  
@@ -97,14 +97,15 @@ Bu bölüm yerleşim kullanmak için basit bir yöntem çıkışı yönergeleri,
 |`Writable`|`writable`|`Writeable`|  
   
 ## <a name="case-sensitivity"></a>Büyük/küçük harfe duyarlılık  
- Bazı yapmak rağmen üzerinde CLR çalıştırabilirsiniz dilleri büyük küçük harf duyarlılığı, desteklemek için gereken değil. Dilinizi desteklediği olsa bile, framework erişebilir diğer diller yoktur. Harici olarak erişilebilir olan tüm API'ları bu nedenle, tek başına aynı bağlamda iki ad arasında ayrım yapmak için durumu güvenir olamaz.  
+ Bazı yapın, ancak CLR üzerinde çalışabilen dilleri büyük küçük harf duyarlılığı, desteklemek için gerekli değildir. Dilinizi desteklediği bile Çerçevenizi erişebilecek diğer diller yoktur. Harici olarak erişilebilen herhangi bir API, bu nedenle, tek başına, aynı bağlamda iki ad arasında ayrım yapmak için servis talebi üzerinde güvenemezsiniz.  
   
- **X DO NOT** tüm programlama dilleriyle büyük küçük harfe duyarlı olduğunu varsayar. Bunlar değildir. Adları örneği tarafından tek başına farklı olamaz.  
+ **X DO NOT** tüm programlama dilleriyle büyük küçük harfe duyarlı olduğunu varsayar. Değiller. Adlar tek başına harfe göre farklılık göstermeyebilir.  
   
- *Bölümleri © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
+ *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*  
+ *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)  
- [Adlandırma Kuralları](../../../docs/standard/design-guidelines/naming-guidelines.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)  
+- [Adlandırma Kuralları](../../../docs/standard/design-guidelines/naming-guidelines.md)

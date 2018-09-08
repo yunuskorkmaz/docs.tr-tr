@@ -5,11 +5,11 @@ helpviewer_keywords:
 - My.Computer.Info object
 ms.assetid: 2eb2aa5f-303d-426c-918d-989c8b7b08d0
 ms.openlocfilehash: 9eabd2538d43c5a0104032c501da8cbf81b5c74d
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44068787"
+ms.locfileid: "44130545"
 ---
 # <a name="mycomputerinfo-object"></a>My.Computer.Info Nesnesi
 Bilgisayarın bellek, yüklenen derlemeler, ad ve işletim sistemi hakkında bilgi almak için özellikleri sağlar.  

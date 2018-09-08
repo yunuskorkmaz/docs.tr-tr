@@ -3,11 +3,11 @@ title: 'Kaynak Yönetimi: use Anahtar Sözcüğü (F#)'
 description: "F # anahtar sözcüğü 'use' ve yayın kaynakların ve başlatma denetleyebilirsiniz 'using' işlev hakkında bilgi edinin."
 ms.date: 05/16/2016
 ms.openlocfilehash: ffa1cb515139a3705920d9d9f79be1a69602f7d8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43878394"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44131691"
 ---
 # <a name="resource-management-the-use-keyword"></a>Kaynak Yönetimi: use Anahtar Sözcüğü
 

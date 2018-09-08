@@ -6,11 +6,11 @@ helpviewer_keywords:
 - C# Language, anonymous types
 ms.assetid: 59c9d7a4-3b0e-475e-b620-0ab86c088e9b
 ms.openlocfilehash: b732de508c8738de5e5e55168a6e17a1d88a3b02
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43885885"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44133171"
 ---
 # <a name="anonymous-types-c-programming-guide"></a>Anonim Türler (C# Programlama Kılavuzu)
 Anonim türleri açıkça bir tür ilk tanımlamak zorunda kalmadan tek bir nesnede salt okunur özellikler kümesi kapsüllemek için kullanışlı bir yol sağlar. Tür adı derleyici tarafından oluşturulan ve kaynak kod düzeyinde kullanılabilir değildir. Her bir özellik türü, derleyici tarafından algılanır.  

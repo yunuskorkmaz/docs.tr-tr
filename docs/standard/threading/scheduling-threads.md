@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 67e4a0eb-3095-4ea7-b20f-908faa476277
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a382dbea239b66e60d666a0e2e7add01d6d7bd54
-ms.sourcegitcommit: c66ba2df2d2ecfb214f85ee0687d298e4941c1a8
+ms.openlocfilehash: 811a75c9f0350eefc98c32181e859b7583ff74ef
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2018
-ms.locfileid: "42752196"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44129688"
 ---
 # <a name="scheduling-threads"></a>İş parçacıklarını zamanlama
 
@@ -21,6 +21,7 @@ Her iş parçacığı, kendisine atanmış bir iş parçacığı önceliği vard
   
  İş parçacıkları, önceliklerine göre yürütmek için zamanlanır. Tüm iş parçacıkları iş parçacıkları çalışma zamanı içinde yürütülen olsa da, işlemci zaman dilimleri işletim sistemi tarafından atanır. İş parçacıkları yürütüldüğü sırayı belirlemek için kullanılan algoritma zamanlama ayrıntılarını her işletim sistemiyle değişir. Bazı işletim sistemlerinde (yürütülebilir bu iş parçacığı)'ın en yüksek önceliğe sahip iş parçacığı her zaman ilk olarak çalıştırmak için zamanlandı. Aynı önceliğe sahip birden çok iş parçacığı her iş parçacığı bir sabit bir zaman dilimi yürütüleceği vererek, öncelik, iş parçacıklarının Zamanlayıcı dolaşma tüm kullanılabilir olması durumunda. Yüksek öncelikli bir iş parçacığı, çalıştırılmak için uygun olduğu sürece, daha düşük öncelikli iş parçacıklarını yürütmek almıyor. Belirli bir öncelikte artık çalıştırılabilir iş parçacıkları olduğunda Zamanlayıcı sonraki daha düşük önceliği taşır ve iş parçacıkları, öncelikle yürütme için zamanlanır. Daha yüksek öncelikli iş parçacığı çalıştırılabilir duruma gelirse, daha düşük öncelikli iş parçacığı etkisiz ve daha yüksek öncelikli iş parçacığını yeniden çalıştırmak için izin verilir. Bir uygulamanın kullanıcı arabirimini ön ve arka plan arasında geçirildiğinden tüm bunları en üstünde, işletim sistemini de iş parçacığı öncelikleri dinamik olarak ayarlayabilirsiniz. Diğer işletim sistemleri, farklı bir zamanlama algoritma kullanmayı seçebilirsiniz.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [İş Parçacıkları ve İş Parçacığı Oluşturmayı Kullanma](../../../docs/standard/threading/using-threads-and-threading.md)  
- [Windows'ta Yönetilen ve Yönetilmeyen İş Parçacığı Oluşturma](../../../docs/standard/threading/managed-and-unmanaged-threading-in-windows.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [İş Parçacıkları ve İş Parçacığı Oluşturmayı Kullanma](../../../docs/standard/threading/using-threads-and-threading.md)  
+- [Windows'ta Yönetilen ve Yönetilmeyen İş Parçacığı Oluşturma](../../../docs/standard/threading/managed-and-unmanaged-threading-in-windows.md)

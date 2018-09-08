@@ -15,11 +15,11 @@ ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 55b16d135449cad8ed489a8a3e21db326be0fae0
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44032377"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44129066"
 ---
 # <a name="how-to-round-trip-date-and-time-values"></a>Nasıl yapılır: Gidiş Dönüş Tarih ve Saat Değerleri
 Birçok uygulamada, bir tarih ve saat değerini, tek bir nokta zaman içinde kesin bir şekilde tanımlamak için tasarlanmıştır. Bu konuda, kaydetme ve geri yükleme işlemi gösterilmektedir bir <xref:System.DateTime> değeri bir <xref:System.DateTimeOffset> değer ve bir tarih ve saat değeri zaman ile kaydedilen değer aynı zamanda geri yüklenen değeri tanımlar, böylece bilgi bölge.  
