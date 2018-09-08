@@ -5,19 +5,19 @@ author: cartermp
 ms.author: mairaw
 ms.date: 05/16/2017
 ms.openlocfilehash: 5fdbdc115ea5cd6da54f7c43bec2aa6f82e71310
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44046112"
+ms.locfileid: "44135321"
 ---
-# <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a><span data-ttu-id="b34b5-103">Düzenleme ve .NET Core komut satırı ile projeleri test etme</span><span class="sxs-lookup"><span data-stu-id="b34b5-103">Organizing and testing projects with the .NET Core command line</span></span>
+# <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a><span data-ttu-id="e928e-103">Düzenleme ve .NET Core komut satırı ile projeleri test etme</span><span class="sxs-lookup"><span data-stu-id="e928e-103">Organizing and testing projects with the .NET Core command line</span></span>
 
-<span data-ttu-id="b34b5-104">Bu öğreticide aşağıdaki [Windows/Linus/macos'ta komut satırını kullanarak .NET Core ile çalışmaya başlama](using-with-xplat-cli.md), Gelişmiş ve iyi düzenlenmiş uygulamalar geliştirmek için basit bir konsol uygulaması oluşturmayı sürüyor.</span><span class="sxs-lookup"><span data-stu-id="b34b5-104">This tutorial follows [Getting started with .NET Core on Windows/Linux/macOS using the command line](using-with-xplat-cli.md), taking you beyond the creation of a simple console app to develop advanced and well-organized applications.</span></span> <span data-ttu-id="b34b5-105">Kodunuzu düzenlemek için klasörleri kullanmayı gösteren sonra Bu öğreticide, bir konsol uygulaması ile nasıl genişletileceğini gösterir [xUnit](https://xunit.github.io/) testi çerçevesi.</span><span class="sxs-lookup"><span data-stu-id="b34b5-105">After showing you how to use folders to organize your code, this tutorial shows you how to extend a console application with the [xUnit](https://xunit.github.io/) testing framework.</span></span>
+<span data-ttu-id="e928e-104">Bu öğreticide aşağıdaki [Windows/Linus/macos'ta komut satırını kullanarak .NET Core ile çalışmaya başlama](using-with-xplat-cli.md), Gelişmiş ve iyi düzenlenmiş uygulamalar geliştirmek için basit bir konsol uygulaması oluşturmayı sürüyor.</span><span class="sxs-lookup"><span data-stu-id="e928e-104">This tutorial follows [Getting started with .NET Core on Windows/Linux/macOS using the command line](using-with-xplat-cli.md), taking you beyond the creation of a simple console app to develop advanced and well-organized applications.</span></span> <span data-ttu-id="e928e-105">Kodunuzu düzenlemek için klasörleri kullanmayı gösteren sonra Bu öğreticide, bir konsol uygulaması ile nasıl genişletileceğini gösterir [xUnit](https://xunit.github.io/) testi çerçevesi.</span><span class="sxs-lookup"><span data-stu-id="e928e-105">After showing you how to use folders to organize your code, this tutorial shows you how to extend a console application with the [xUnit](https://xunit.github.io/) testing framework.</span></span>
 
-## <a name="using-folders-to-organize-code"></a><span data-ttu-id="b34b5-106">Kod düzenlemek için klasörleri'ni kullanarak</span><span class="sxs-lookup"><span data-stu-id="b34b5-106">Using folders to organize code</span></span>
+## <a name="using-folders-to-organize-code"></a><span data-ttu-id="e928e-106">Kod düzenlemek için klasörleri'ni kullanarak</span><span class="sxs-lookup"><span data-stu-id="e928e-106">Using folders to organize code</span></span>
 
-<span data-ttu-id="b34b5-107">Bir konsol uygulamasına yeni türlerini tanıtır istiyorsanız, bunu uygulama türlerini içeren dosyaları ekleyerek yapabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="b34b5-107">If you want to introduce new types into a console app, you can do so by adding files containing the types to the app.</span></span> <span data-ttu-id="b34b5-108">Örneğin dosyaları içeren eklediğiniz `AccountInformation` ve `MonthlyReportRecords` türleri projeniz için proje dosya yapısı düz ve kolay gidin:</span><span class="sxs-lookup"><span data-stu-id="b34b5-108">For example if you add files containing `AccountInformation` and `MonthlyReportRecords` types to your project, the project file structure is flat and easy to navigate:</span></span>
+<span data-ttu-id="e928e-107">Bir konsol uygulamasına yeni türlerini tanıtır istiyorsanız, bunu uygulama türlerini içeren dosyaları ekleyerek yapabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="e928e-107">If you want to introduce new types into a console app, you can do so by adding files containing the types to the app.</span></span> <span data-ttu-id="e928e-108">Örneğin dosyaları içeren eklediğiniz `AccountInformation` ve `MonthlyReportRecords` türleri projeniz için proje dosya yapısı düz ve kolay gidin:</span><span class="sxs-lookup"><span data-stu-id="e928e-108">For example if you add files containing `AccountInformation` and `MonthlyReportRecords` types to your project, the project file structure is flat and easy to navigate:</span></span>
 
 ```
 /MyProject
@@ -27,9 +27,9 @@ ms.locfileid: "44046112"
 |__Program.cs
 ```
 
-<span data-ttu-id="b34b5-109">Ancak, bu yalnızca iyi projenizin boyutu nispeten küçük olduğunda çalışır.</span><span class="sxs-lookup"><span data-stu-id="b34b5-109">However, this only works well when the size of your project is relatively small.</span></span> <span data-ttu-id="b34b5-110">Ne olacağını düşünün projeye 20 türleri eklerseniz?</span><span class="sxs-lookup"><span data-stu-id="b34b5-110">Can you imagine what will happen if you add 20 types to the project?</span></span> <span data-ttu-id="b34b5-111">Proje kesinlikle gidin ve ile çok sayıda dosya projenin kök dizinini doldurmak korumak kolay değildir.</span><span class="sxs-lookup"><span data-stu-id="b34b5-111">The project definitely wouldn't be easy to navigate and maintain with that many files littering the project's root directory.</span></span>
+<span data-ttu-id="e928e-109">Ancak, bu yalnızca iyi projenizin boyutu nispeten küçük olduğunda çalışır.</span><span class="sxs-lookup"><span data-stu-id="e928e-109">However, this only works well when the size of your project is relatively small.</span></span> <span data-ttu-id="e928e-110">Ne olacağını düşünün projeye 20 türleri eklerseniz?</span><span class="sxs-lookup"><span data-stu-id="e928e-110">Can you imagine what will happen if you add 20 types to the project?</span></span> <span data-ttu-id="e928e-111">Proje kesinlikle gidin ve ile çok sayıda dosya projenin kök dizinini doldurmak korumak kolay değildir.</span><span class="sxs-lookup"><span data-stu-id="e928e-111">The project definitely wouldn't be easy to navigate and maintain with that many files littering the project's root directory.</span></span>
 
-<span data-ttu-id="b34b5-112">Proje düzenlemek için yeni bir klasör oluşturun ve adlandırın *modelleri* tür dosyalarını tutacak.</span><span class="sxs-lookup"><span data-stu-id="b34b5-112">To organize the project, create a new folder and name it *Models* to hold the type files.</span></span> <span data-ttu-id="b34b5-113">Türü dosyaları içine yerleştirebilir *modelleri* klasörü:</span><span class="sxs-lookup"><span data-stu-id="b34b5-113">Place the type files into the *Models* folder:</span></span>
+<span data-ttu-id="e928e-112">Proje düzenlemek için yeni bir klasör oluşturun ve adlandırın *modelleri* tür dosyalarını tutacak.</span><span class="sxs-lookup"><span data-stu-id="e928e-112">To organize the project, create a new folder and name it *Models* to hold the type files.</span></span> <span data-ttu-id="e928e-113">Türü dosyaları içine yerleştirebilir *modelleri* klasörü:</span><span class="sxs-lookup"><span data-stu-id="e928e-113">Place the type files into the *Models* folder:</span></span>
 
 ```
 /MyProject
@@ -40,17 +40,17 @@ ms.locfileid: "44046112"
 |__Program.cs
 ```
 
-<span data-ttu-id="b34b5-114">Mantıksal olarak klasörlere Grup dosyaları gidin ve korumak kolay projeleri.</span><span class="sxs-lookup"><span data-stu-id="b34b5-114">Projects that logically group files into folders are easy to navigate and maintain.</span></span> <span data-ttu-id="b34b5-115">Sonraki bölümde, klasör ve birim testi ile daha karmaşık bir örnek oluşturun.</span><span class="sxs-lookup"><span data-stu-id="b34b5-115">In the next section, you create a more complex sample with folders and unit testing.</span></span>
+<span data-ttu-id="e928e-114">Mantıksal olarak klasörlere Grup dosyaları gidin ve korumak kolay projeleri.</span><span class="sxs-lookup"><span data-stu-id="e928e-114">Projects that logically group files into folders are easy to navigate and maintain.</span></span> <span data-ttu-id="e928e-115">Sonraki bölümde, klasör ve birim testi ile daha karmaşık bir örnek oluşturun.</span><span class="sxs-lookup"><span data-stu-id="e928e-115">In the next section, you create a more complex sample with folders and unit testing.</span></span>
 
-## <a name="organizing-and-testing-using-the-newtypes-pets-sample"></a><span data-ttu-id="b34b5-116">Düzenleme ve NewTypes Evcil Hayvanlar örneğini kullanarak test etme</span><span class="sxs-lookup"><span data-stu-id="b34b5-116">Organizing and testing using the NewTypes Pets Sample</span></span>
+## <a name="organizing-and-testing-using-the-newtypes-pets-sample"></a><span data-ttu-id="e928e-116">Düzenleme ve NewTypes Evcil Hayvanlar örneğini kullanarak test etme</span><span class="sxs-lookup"><span data-stu-id="e928e-116">Organizing and testing using the NewTypes Pets Sample</span></span>
 
-### <a name="building-the-sample"></a><span data-ttu-id="b34b5-117">Örnek oluşturma</span><span class="sxs-lookup"><span data-stu-id="b34b5-117">Building the sample</span></span>
+### <a name="building-the-sample"></a><span data-ttu-id="e928e-117">Örnek oluşturma</span><span class="sxs-lookup"><span data-stu-id="e928e-117">Building the sample</span></span>
 
-<span data-ttu-id="b34b5-118">Aşağıdaki adımları için aşağıdakilerden birini kullanarak izleyebilirsiniz [NewTypes Evcil Hayvanlar örnek](https://github.com/dotnet/samples/tree/master/core/console-apps/NewTypesMsBuild) veya dosya ve klasörlerinizi oluşturun.</span><span class="sxs-lookup"><span data-stu-id="b34b5-118">For the following steps, you can either follow along using the [NewTypes Pets Sample](https://github.com/dotnet/samples/tree/master/core/console-apps/NewTypesMsBuild) or create your own files and folders.</span></span> <span data-ttu-id="b34b5-119">Testler ayrıca mantıksal olarak klasörlere daha sonra ayrıca daha fazla test sorgulamasına yerleştirilir ve türlerini mantıksal olarak daha fazla türlerinin eklenmesi daha sonra izin veren bir klasör yapısına düzenlenir.</span><span class="sxs-lookup"><span data-stu-id="b34b5-119">The types are logically organized into a folder structure that permits the addition of more types later, and tests are also logically placed in folders permitting the addition of more tests later.</span></span>
+<span data-ttu-id="e928e-118">Aşağıdaki adımları için aşağıdakilerden birini kullanarak izleyebilirsiniz [NewTypes Evcil Hayvanlar örnek](https://github.com/dotnet/samples/tree/master/core/console-apps/NewTypesMsBuild) veya dosya ve klasörlerinizi oluşturun.</span><span class="sxs-lookup"><span data-stu-id="e928e-118">For the following steps, you can either follow along using the [NewTypes Pets Sample](https://github.com/dotnet/samples/tree/master/core/console-apps/NewTypesMsBuild) or create your own files and folders.</span></span> <span data-ttu-id="e928e-119">Testler ayrıca mantıksal olarak klasörlere daha sonra ayrıca daha fazla test sorgulamasına yerleştirilir ve türlerini mantıksal olarak daha fazla türlerinin eklenmesi daha sonra izin veren bir klasör yapısına düzenlenir.</span><span class="sxs-lookup"><span data-stu-id="e928e-119">The types are logically organized into a folder structure that permits the addition of more types later, and tests are also logically placed in folders permitting the addition of more tests later.</span></span>
 
-<span data-ttu-id="b34b5-120">İki tür örnek içeren `Dog` ve `Cat`ve bunları ortak bir arabirim uygulamak `IPet`.</span><span class="sxs-lookup"><span data-stu-id="b34b5-120">The sample contains two types, `Dog` and `Cat`, and has them implement a common interface, `IPet`.</span></span> <span data-ttu-id="b34b5-121">İçin `NewTypes` amacınız projesidir evcil hayvan ilgili tür olarak düzenlemek için bir *Evcil Hayvanlar* klasör.</span><span class="sxs-lookup"><span data-stu-id="b34b5-121">For the `NewTypes` project, your goal is to organize the pet-related types into a *Pets* folder.</span></span> <span data-ttu-id="b34b5-122">Daha sonra başka bir dizi türleri eklenirse *WildAnimals* bunlar, örneğin, yerleştirilir *NewTypes* klasör yanı sıra *Evcil Hayvanlar* klasör.</span><span class="sxs-lookup"><span data-stu-id="b34b5-122">If another set of types is added later, *WildAnimals* for example, they're placed in the *NewTypes* folder alongside the *Pets* folder.</span></span> <span data-ttu-id="b34b5-123">*WildAnimals* klasör hayvanlar gibi olmayan hayvanlar türleri içerebilir `Squirrel` ve `Rabbit` türleri.</span><span class="sxs-lookup"><span data-stu-id="b34b5-123">The *WildAnimals* folder may contain types for animals that aren't pets, such as `Squirrel` and `Rabbit` types.</span></span> <span data-ttu-id="b34b5-124">Bu şekilde türleri eklendikçe proje de düzenli olarak kalır.</span><span class="sxs-lookup"><span data-stu-id="b34b5-124">In this way as types are added, the project remains well organized.</span></span> 
+<span data-ttu-id="e928e-120">İki tür örnek içeren `Dog` ve `Cat`ve bunları ortak bir arabirim uygulamak `IPet`.</span><span class="sxs-lookup"><span data-stu-id="e928e-120">The sample contains two types, `Dog` and `Cat`, and has them implement a common interface, `IPet`.</span></span> <span data-ttu-id="e928e-121">İçin `NewTypes` amacınız projesidir evcil hayvan ilgili tür olarak düzenlemek için bir *Evcil Hayvanlar* klasör.</span><span class="sxs-lookup"><span data-stu-id="e928e-121">For the `NewTypes` project, your goal is to organize the pet-related types into a *Pets* folder.</span></span> <span data-ttu-id="e928e-122">Daha sonra başka bir dizi türleri eklenirse *WildAnimals* bunlar, örneğin, yerleştirilir *NewTypes* klasör yanı sıra *Evcil Hayvanlar* klasör.</span><span class="sxs-lookup"><span data-stu-id="e928e-122">If another set of types is added later, *WildAnimals* for example, they're placed in the *NewTypes* folder alongside the *Pets* folder.</span></span> <span data-ttu-id="e928e-123">*WildAnimals* klasör hayvanlar gibi olmayan hayvanlar türleri içerebilir `Squirrel` ve `Rabbit` türleri.</span><span class="sxs-lookup"><span data-stu-id="e928e-123">The *WildAnimals* folder may contain types for animals that aren't pets, such as `Squirrel` and `Rabbit` types.</span></span> <span data-ttu-id="e928e-124">Bu şekilde türleri eklendikçe proje de düzenli olarak kalır.</span><span class="sxs-lookup"><span data-stu-id="e928e-124">In this way as types are added, the project remains well organized.</span></span> 
 
-<span data-ttu-id="b34b5-125">Aşağıdaki klasör yapısını, belirtilen dosya içeriği oluşturun:</span><span class="sxs-lookup"><span data-stu-id="b34b5-125">Create the following folder structure with file content indicated:</span></span>
+<span data-ttu-id="e928e-125">Aşağıdaki klasör yapısını, belirtilen dosya içeriği oluşturun:</span><span class="sxs-lookup"><span data-stu-id="e928e-125">Create the following folder structure with file content indicated:</span></span>
 
 ```
 /NewTypes
@@ -64,54 +64,54 @@ ms.locfileid: "44046112"
       |__NewTypes.csproj
 ```
 
-<span data-ttu-id="b34b5-126">*IPet.cs*:</span><span class="sxs-lookup"><span data-stu-id="b34b5-126">*IPet.cs*:</span></span>
+<span data-ttu-id="e928e-126">*IPet.cs*:</span><span class="sxs-lookup"><span data-stu-id="e928e-126">*IPet.cs*:</span></span>
 
 [!code-csharp[IPet interface](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Pets/IPet.cs)]
 
-<span data-ttu-id="b34b5-127">*Dog.cs*:</span><span class="sxs-lookup"><span data-stu-id="b34b5-127">*Dog.cs*:</span></span>
+<span data-ttu-id="e928e-127">*Dog.cs*:</span><span class="sxs-lookup"><span data-stu-id="e928e-127">*Dog.cs*:</span></span>
 
 [!code-csharp[Dog class](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Pets/Dog.cs)]
 
-<span data-ttu-id="b34b5-128">*Cat.cs*:</span><span class="sxs-lookup"><span data-stu-id="b34b5-128">*Cat.cs*:</span></span>
+<span data-ttu-id="e928e-128">*Cat.cs*:</span><span class="sxs-lookup"><span data-stu-id="e928e-128">*Cat.cs*:</span></span>
 
 [!code-csharp[Cat class](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Pets/Cat.cs)]
 
-<span data-ttu-id="b34b5-129">*Program.cs*:</span><span class="sxs-lookup"><span data-stu-id="b34b5-129">*Program.cs*:</span></span>
+<span data-ttu-id="e928e-129">*Program.cs*:</span><span class="sxs-lookup"><span data-stu-id="e928e-129">*Program.cs*:</span></span>
 
 [!code-csharp[Main](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Program.cs)]
 
-<span data-ttu-id="b34b5-130">*NewTypes.csproj*:</span><span class="sxs-lookup"><span data-stu-id="b34b5-130">*NewTypes.csproj*:</span></span>
+<span data-ttu-id="e928e-130">*NewTypes.csproj*:</span><span class="sxs-lookup"><span data-stu-id="e928e-130">*NewTypes.csproj*:</span></span>
 
 [!code-xml[NewTypes csproj](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/NewTypes.csproj)]
 
-<span data-ttu-id="b34b5-131">Aşağıdaki komutları yürütün:</span><span class="sxs-lookup"><span data-stu-id="b34b5-131">Execute the following commands:</span></span>
+<span data-ttu-id="e928e-131">Aşağıdaki komutları yürütün:</span><span class="sxs-lookup"><span data-stu-id="e928e-131">Execute the following commands:</span></span>
 
 ```console
 dotnet run
 ```
 
-<span data-ttu-id="b34b5-132">Aşağıdaki çıktıyı alın:</span><span class="sxs-lookup"><span data-stu-id="b34b5-132">Obtain the following output:</span></span>
+<span data-ttu-id="e928e-132">Aşağıdaki çıktıyı alın:</span><span class="sxs-lookup"><span data-stu-id="e928e-132">Obtain the following output:</span></span>
 
 ```console
 Woof!
 Meow!
 ```
 
-<span data-ttu-id="b34b5-133">İsteğe bağlı alıştırma: yeni bir evcil hayvan türü gibi ekleyebilirsiniz bir `Bird`, bu proje genişleterek.</span><span class="sxs-lookup"><span data-stu-id="b34b5-133">Optional exercise: You can add a new pet type, such as a `Bird`, by extending this project.</span></span> <span data-ttu-id="b34b5-134">Kuşbakışı olun `TalkToOwner` yöntemi verin bir `Tweet!` sahibine.</span><span class="sxs-lookup"><span data-stu-id="b34b5-134">Make the bird's `TalkToOwner` method give a `Tweet!` to the owner.</span></span> <span data-ttu-id="b34b5-135">Uygulamayı yeniden çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="b34b5-135">Run the app again.</span></span> <span data-ttu-id="b34b5-136">Çıkış içerir `Tweet!`</span><span class="sxs-lookup"><span data-stu-id="b34b5-136">The output will include `Tweet!`</span></span>
+<span data-ttu-id="e928e-133">İsteğe bağlı alıştırma: yeni bir evcil hayvan türü gibi ekleyebilirsiniz bir `Bird`, bu proje genişleterek.</span><span class="sxs-lookup"><span data-stu-id="e928e-133">Optional exercise: You can add a new pet type, such as a `Bird`, by extending this project.</span></span> <span data-ttu-id="e928e-134">Kuşbakışı olun `TalkToOwner` yöntemi verin bir `Tweet!` sahibine.</span><span class="sxs-lookup"><span data-stu-id="e928e-134">Make the bird's `TalkToOwner` method give a `Tweet!` to the owner.</span></span> <span data-ttu-id="e928e-135">Uygulamayı yeniden çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="e928e-135">Run the app again.</span></span> <span data-ttu-id="e928e-136">Çıkış içerir `Tweet!`</span><span class="sxs-lookup"><span data-stu-id="e928e-136">The output will include `Tweet!`</span></span>
 
-### <a name="testing-the-sample"></a><span data-ttu-id="b34b5-137">Örnek test etme</span><span class="sxs-lookup"><span data-stu-id="b34b5-137">Testing the sample</span></span>
+### <a name="testing-the-sample"></a><span data-ttu-id="e928e-137">Örnek test etme</span><span class="sxs-lookup"><span data-stu-id="e928e-137">Testing the sample</span></span>
 
-<span data-ttu-id="b34b5-138">`NewTypes` Proje yerinde olduğundan ve bir klasörde Evcil Hayvanlar ilgili türleri tutarak düzenlediğiniz.</span><span class="sxs-lookup"><span data-stu-id="b34b5-138">The `NewTypes` project is in place, and you've organized it by keeping the pets-related types in a folder.</span></span> <span data-ttu-id="b34b5-139">Ardından, test projenizi oluşturmak ve testleri yazmaya [xUnit](https://xunit.github.io/) test çerçevesi.</span><span class="sxs-lookup"><span data-stu-id="b34b5-139">Next, create your test project and start writing tests with the [xUnit](https://xunit.github.io/) test framework.</span></span> <span data-ttu-id="b34b5-140">Birim testi, otomatik olarak bunlar düzgün şekilde çalıştıklarından olduğunu onaylamak için evcil hayvan türlerinin bevahior denetlemek sağlar.</span><span class="sxs-lookup"><span data-stu-id="b34b5-140">Unit testing allows you to automatically check the bevahior of your pet types to confirm that they're operating properly.</span></span>
+<span data-ttu-id="e928e-138">`NewTypes` Proje yerinde olduğundan ve bir klasörde Evcil Hayvanlar ilgili türleri tutarak düzenlediğiniz.</span><span class="sxs-lookup"><span data-stu-id="e928e-138">The `NewTypes` project is in place, and you've organized it by keeping the pets-related types in a folder.</span></span> <span data-ttu-id="e928e-139">Ardından, test projenizi oluşturmak ve testleri yazmaya [xUnit](https://xunit.github.io/) test çerçevesi.</span><span class="sxs-lookup"><span data-stu-id="e928e-139">Next, create your test project and start writing tests with the [xUnit](https://xunit.github.io/) test framework.</span></span> <span data-ttu-id="e928e-140">Birim testi, otomatik olarak bunlar düzgün şekilde çalıştıklarından olduğunu onaylamak için evcil hayvan türlerinin bevahior denetlemek sağlar.</span><span class="sxs-lookup"><span data-stu-id="e928e-140">Unit testing allows you to automatically check the bevahior of your pet types to confirm that they're operating properly.</span></span>
 
-<span data-ttu-id="b34b5-141">Oluşturma bir *test* klasörüyle bir *NewTypesTests* içindeki klasör.</span><span class="sxs-lookup"><span data-stu-id="b34b5-141">Create a *test* folder with a *NewTypesTests* folder within it.</span></span> <span data-ttu-id="b34b5-142">Bir komut istemi'nden en *NewTypesTests* klasöründe yürütme `dotnet new xunit`.</span><span class="sxs-lookup"><span data-stu-id="b34b5-142">At a command prompt from the *NewTypesTests* folder, execute `dotnet new xunit`.</span></span> <span data-ttu-id="b34b5-143">Bu iki dosya oluşturur: *NewTypesTests.csproj* ve *UnitTest1.cs*.</span><span class="sxs-lookup"><span data-stu-id="b34b5-143">This produces two files: *NewTypesTests.csproj* and *UnitTest1.cs*.</span></span>
+<span data-ttu-id="e928e-141">Oluşturma bir *test* klasörüyle bir *NewTypesTests* içindeki klasör.</span><span class="sxs-lookup"><span data-stu-id="e928e-141">Create a *test* folder with a *NewTypesTests* folder within it.</span></span> <span data-ttu-id="e928e-142">Bir komut istemi'nden en *NewTypesTests* klasöründe yürütme `dotnet new xunit`.</span><span class="sxs-lookup"><span data-stu-id="e928e-142">At a command prompt from the *NewTypesTests* folder, execute `dotnet new xunit`.</span></span> <span data-ttu-id="e928e-143">Bu iki dosya oluşturur: *NewTypesTests.csproj* ve *UnitTest1.cs*.</span><span class="sxs-lookup"><span data-stu-id="e928e-143">This produces two files: *NewTypesTests.csproj* and *UnitTest1.cs*.</span></span>
 
-<span data-ttu-id="b34b5-144">Test projesi türleri şu anda test edilemez `NewTypes` ve bir proje başvurusu gerektirir `NewTypes` proje.</span><span class="sxs-lookup"><span data-stu-id="b34b5-144">The test project cannot currently test the types in `NewTypes` and requires a project reference to the `NewTypes` project.</span></span> <span data-ttu-id="b34b5-145">Bir proje başvurusu eklemek için [ `dotnet add reference` ](../tools/dotnet-add-reference.md) komutu:</span><span class="sxs-lookup"><span data-stu-id="b34b5-145">To add a project reference, use the [`dotnet add reference`](../tools/dotnet-add-reference.md) command:</span></span>
+<span data-ttu-id="e928e-144">Test projesi türleri şu anda test edilemez `NewTypes` ve bir proje başvurusu gerektirir `NewTypes` proje.</span><span class="sxs-lookup"><span data-stu-id="e928e-144">The test project cannot currently test the types in `NewTypes` and requires a project reference to the `NewTypes` project.</span></span> <span data-ttu-id="e928e-145">Bir proje başvurusu eklemek için [ `dotnet add reference` ](../tools/dotnet-add-reference.md) komutu:</span><span class="sxs-lookup"><span data-stu-id="e928e-145">To add a project reference, use the [`dotnet add reference`](../tools/dotnet-add-reference.md) command:</span></span>
 
 ```
 dotnet add reference ../../src/NewTypes/NewTypes.csproj
 ```
 
-<span data-ttu-id="b34b5-146">El ile ekleyerek proje başvurusu ekleme seçeneğiniz de bir `<ItemGroup>` düğüme *NewTypesTests.csproj* dosyası:</span><span class="sxs-lookup"><span data-stu-id="b34b5-146">You also have the option of manually adding the project reference by adding an `<ItemGroup>` node to the *NewTypesTests.csproj* file:</span></span>
+<span data-ttu-id="e928e-146">El ile ekleyerek proje başvurusu ekleme seçeneğiniz de bir `<ItemGroup>` düğüme *NewTypesTests.csproj* dosyası:</span><span class="sxs-lookup"><span data-stu-id="e928e-146">You also have the option of manually adding the project reference by adding an `<ItemGroup>` node to the *NewTypesTests.csproj* file:</span></span>
 
 ```xml
 <ItemGroup>
@@ -119,18 +119,18 @@ dotnet add reference ../../src/NewTypes/NewTypes.csproj
 </ItemGroup>
 ```
 
-<span data-ttu-id="b34b5-147">*NewTypesTests.csproj*:</span><span class="sxs-lookup"><span data-stu-id="b34b5-147">*NewTypesTests.csproj*:</span></span>
+<span data-ttu-id="e928e-147">*NewTypesTests.csproj*:</span><span class="sxs-lookup"><span data-stu-id="e928e-147">*NewTypesTests.csproj*:</span></span>
 
 [!code-xml[NewTypesTests csproj](../../../samples/core/console-apps/NewTypesMsBuild/test/NewTypesTests/NewTypesTests.csproj)]
 
-<span data-ttu-id="b34b5-148">*NewTypesTests.csproj* dosyası şunları içerir:</span><span class="sxs-lookup"><span data-stu-id="b34b5-148">The *NewTypesTests.csproj* file contains the following:</span></span>
+<span data-ttu-id="e928e-148">*NewTypesTests.csproj* dosyası şunları içerir:</span><span class="sxs-lookup"><span data-stu-id="e928e-148">The *NewTypesTests.csproj* file contains the following:</span></span>
 
-* <span data-ttu-id="b34b5-149">Başvuru paketi `Microsoft.NET.Test.Sdk`, altyapı test .NET</span><span class="sxs-lookup"><span data-stu-id="b34b5-149">Package reference to `Microsoft.NET.Test.Sdk`, the .NET testing infrastructure</span></span>
-* <span data-ttu-id="b34b5-150">Başvuru paketi `xunit`, xUnit testi çerçevesi</span><span class="sxs-lookup"><span data-stu-id="b34b5-150">Package reference to `xunit`, the xUnit testing framework</span></span>
-* <span data-ttu-id="b34b5-151">Başvuru paketi `xunit.runner.visualstudio`, test Çalıştırıcısı</span><span class="sxs-lookup"><span data-stu-id="b34b5-151">Package reference to `xunit.runner.visualstudio`, the test runner</span></span>
-* <span data-ttu-id="b34b5-152">Proje başvurusu `NewTypes`, kodu test etmek için</span><span class="sxs-lookup"><span data-stu-id="b34b5-152">Project reference to `NewTypes`, the code to test</span></span>
+* <span data-ttu-id="e928e-149">Başvuru paketi `Microsoft.NET.Test.Sdk`, altyapı test .NET</span><span class="sxs-lookup"><span data-stu-id="e928e-149">Package reference to `Microsoft.NET.Test.Sdk`, the .NET testing infrastructure</span></span>
+* <span data-ttu-id="e928e-150">Başvuru paketi `xunit`, xUnit testi çerçevesi</span><span class="sxs-lookup"><span data-stu-id="e928e-150">Package reference to `xunit`, the xUnit testing framework</span></span>
+* <span data-ttu-id="e928e-151">Başvuru paketi `xunit.runner.visualstudio`, test Çalıştırıcısı</span><span class="sxs-lookup"><span data-stu-id="e928e-151">Package reference to `xunit.runner.visualstudio`, the test runner</span></span>
+* <span data-ttu-id="e928e-152">Proje başvurusu `NewTypes`, kodu test etmek için</span><span class="sxs-lookup"><span data-stu-id="e928e-152">Project reference to `NewTypes`, the code to test</span></span>
 
-<span data-ttu-id="b34b5-153">Adını değiştirmek *UnitTest1.cs* için *PetTests.cs* dosyasındaki kodu aşağıdakiyle değiştirin:</span><span class="sxs-lookup"><span data-stu-id="b34b5-153">Change the name of *UnitTest1.cs* to *PetTests.cs* and replace the code in the file with the following:</span></span>
+<span data-ttu-id="e928e-153">Adını değiştirmek *UnitTest1.cs* için *PetTests.cs* dosyasındaki kodu aşağıdakiyle değiştirin:</span><span class="sxs-lookup"><span data-stu-id="e928e-153">Change the name of *UnitTest1.cs* to *PetTests.cs* and replace the code in the file with the following:</span></span>
 
 ```csharp
 using System;
@@ -159,12 +159,12 @@ public class PetTests
 }
 ```
 
-<span data-ttu-id="b34b5-154">İsteğe bağlı alıştırma: eklediyseniz bir `Bird` verir türü daha önce bir `Tweet!` sahibine bir test yöntemine ekleyin *PetTests.cs* dosyası `BirdTalkToOwnerReturnsTweet`denetlemek için `TalkToOwner` yöntemi doğru çalıştığı `Bird` türü.</span><span class="sxs-lookup"><span data-stu-id="b34b5-154">Optional exercise: If you added a `Bird` type earlier that yields a `Tweet!` to the owner, add a test method to the *PetTests.cs* file, `BirdTalkToOwnerReturnsTweet`, to check that the `TalkToOwner` method works correctly for the `Bird` type.</span></span>
+<span data-ttu-id="e928e-154">İsteğe bağlı alıştırma: eklediyseniz bir `Bird` verir türü daha önce bir `Tweet!` sahibine bir test yöntemine ekleyin *PetTests.cs* dosyası `BirdTalkToOwnerReturnsTweet`denetlemek için `TalkToOwner` yöntemi doğru çalıştığı `Bird` türü.</span><span class="sxs-lookup"><span data-stu-id="e928e-154">Optional exercise: If you added a `Bird` type earlier that yields a `Tweet!` to the owner, add a test method to the *PetTests.cs* file, `BirdTalkToOwnerReturnsTweet`, to check that the `TalkToOwner` method works correctly for the `Bird` type.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="b34b5-155">Beklediğiniz ancak `expected` ve `actual` değerler eşit olan ilk onaylama `Assert.NotEqual` denetimini, bu değerler olduğunu belirtir *eşit değil*.</span><span class="sxs-lookup"><span data-stu-id="b34b5-155">Although you expect that the `expected` and `actual` values are equal, an initial assertion with the `Assert.NotEqual` check specifies that these values are *not equal*.</span></span> <span data-ttu-id="b34b5-156">Her zaman başlangıçta test mantığını denetlemek için başarısız bir test oluşturun.</span><span class="sxs-lookup"><span data-stu-id="b34b5-156">Always initially create a test to fail in order to check the logic of the test.</span></span> <span data-ttu-id="b34b5-157">Testin başarısız olduğunu onayladıktan sonra onaylama test geçmesine izin verecek şekilde ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="b34b5-157">After you confirm that the test fails, adjust the assertion to allow the test to pass.</span></span>
+> <span data-ttu-id="e928e-155">Beklediğiniz ancak `expected` ve `actual` değerler eşit olan ilk onaylama `Assert.NotEqual` denetimini, bu değerler olduğunu belirtir *eşit değil*.</span><span class="sxs-lookup"><span data-stu-id="e928e-155">Although you expect that the `expected` and `actual` values are equal, an initial assertion with the `Assert.NotEqual` check specifies that these values are *not equal*.</span></span> <span data-ttu-id="e928e-156">Her zaman başlangıçta test mantığını denetlemek için başarısız bir test oluşturun.</span><span class="sxs-lookup"><span data-stu-id="e928e-156">Always initially create a test to fail in order to check the logic of the test.</span></span> <span data-ttu-id="e928e-157">Testin başarısız olduğunu onayladıktan sonra onaylama test geçmesine izin verecek şekilde ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="e928e-157">After you confirm that the test fails, adjust the assertion to allow the test to pass.</span></span>
 
-<span data-ttu-id="b34b5-158">Tam proje yapısını gösterir:</span><span class="sxs-lookup"><span data-stu-id="b34b5-158">The following shows the complete project structure:</span></span>
+<span data-ttu-id="e928e-158">Tam proje yapısını gösterir:</span><span class="sxs-lookup"><span data-stu-id="e928e-158">The following shows the complete project structure:</span></span>
 
 ```
 /NewTypes
@@ -182,12 +182,12 @@ public class PetTests
       |__NewTypesTests.csproj
 ```
 
-<span data-ttu-id="b34b5-159">Başlangıç *test/NewTypesTests* dizin.</span><span class="sxs-lookup"><span data-stu-id="b34b5-159">Start in the *test/NewTypesTests* directory.</span></span> <span data-ttu-id="b34b5-160">Test projesi ile geri [ `dotnet restore` ](../tools/dotnet-restore.md) komutu.</span><span class="sxs-lookup"><span data-stu-id="b34b5-160">Restore the test project with the [`dotnet restore`](../tools/dotnet-restore.md) command.</span></span> <span data-ttu-id="b34b5-161">Testler ile [ `dotnet test` ](../tools/dotnet-test.md) komutu.</span><span class="sxs-lookup"><span data-stu-id="b34b5-161">Run the tests with the [`dotnet test`](../tools/dotnet-test.md) command.</span></span> <span data-ttu-id="b34b5-162">Bu komut, proje dosyasında belirtilen test Çalıştırıcısı başlatır.</span><span class="sxs-lookup"><span data-stu-id="b34b5-162">This command starts the test runner specified in the project file.</span></span>
+<span data-ttu-id="e928e-159">Başlangıç *test/NewTypesTests* dizin.</span><span class="sxs-lookup"><span data-stu-id="e928e-159">Start in the *test/NewTypesTests* directory.</span></span> <span data-ttu-id="e928e-160">Test projesi ile geri [ `dotnet restore` ](../tools/dotnet-restore.md) komutu.</span><span class="sxs-lookup"><span data-stu-id="e928e-160">Restore the test project with the [`dotnet restore`](../tools/dotnet-restore.md) command.</span></span> <span data-ttu-id="e928e-161">Testler ile [ `dotnet test` ](../tools/dotnet-test.md) komutu.</span><span class="sxs-lookup"><span data-stu-id="e928e-161">Run the tests with the [`dotnet test`](../tools/dotnet-test.md) command.</span></span> <span data-ttu-id="e928e-162">Bu komut, proje dosyasında belirtilen test Çalıştırıcısı başlatır.</span><span class="sxs-lookup"><span data-stu-id="e928e-162">This command starts the test runner specified in the project file.</span></span>
 
  [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
  
-<span data-ttu-id="b34b5-163">Test başarısız olur ve konsolu, beklendiği gibi aşağıdaki çıkışı görüntüler:</span><span class="sxs-lookup"><span data-stu-id="b34b5-163">As expected, testing fails, and the console displays the following output:</span></span>
+<span data-ttu-id="e928e-163">Test başarısız olur ve konsolu, beklendiği gibi aşağıdaki çıkışı görüntüler:</span><span class="sxs-lookup"><span data-stu-id="e928e-163">As expected, testing fails, and the console displays the following output:</span></span>
  
 ```
 Test run for C:\NewTypesMsBuild\test\NewTypesTests\bin\Debug\netcoreapp1.1\NewTypesTests.dll(.NETCoreApp,Version=v1.1)
@@ -231,11 +231,11 @@ Test Run Failed.
 Test execution time: 2.1371 Seconds
 ```
 
-<span data-ttu-id="b34b5-164">Testlerinizin onaylamaları değiştirme `Assert.NotEqual` için `Assert.Equal`:</span><span class="sxs-lookup"><span data-stu-id="b34b5-164">Change the assertions of your tests from `Assert.NotEqual` to `Assert.Equal`:</span></span>
+<span data-ttu-id="e928e-164">Testlerinizin onaylamaları değiştirme `Assert.NotEqual` için `Assert.Equal`:</span><span class="sxs-lookup"><span data-stu-id="e928e-164">Change the assertions of your tests from `Assert.NotEqual` to `Assert.Equal`:</span></span>
 
 [!code-csharp[PetTests class](../../../samples/core/console-apps/NewTypesMsBuild/test/NewTypesTests/PetTests.cs)]
 
-<span data-ttu-id="b34b5-165">Testleri yeniden çalıştırın `dotnet test` komutunu ve aşağıdaki çıktıyı alın:</span><span class="sxs-lookup"><span data-stu-id="b34b5-165">Re-run the tests with the `dotnet test` command and obtain the following output:</span></span>
+<span data-ttu-id="e928e-165">Testleri yeniden çalıştırın `dotnet test` komutunu ve aşağıdaki çıktıyı alın:</span><span class="sxs-lookup"><span data-stu-id="e928e-165">Re-run the tests with the `dotnet test` command and obtain the following output:</span></span>
 
 ```
 Microsoft (R) Test Execution Command Line Tool Version 15.0.0.0
@@ -252,7 +252,7 @@ Test Run Successful.
 Test execution time: 1.6634 Seconds
 ```
 
-<span data-ttu-id="b34b5-166">Geçiş testi.</span><span class="sxs-lookup"><span data-stu-id="b34b5-166">Testing passes.</span></span> <span data-ttu-id="b34b5-167">Evcil hayvan türleri yöntemleri, sahibi konuşurken doğru değerleri döndürür.</span><span class="sxs-lookup"><span data-stu-id="b34b5-167">The pet types' methods return the correct values when talking to the owner.</span></span>
+<span data-ttu-id="e928e-166">Geçiş testi.</span><span class="sxs-lookup"><span data-stu-id="e928e-166">Testing passes.</span></span> <span data-ttu-id="e928e-167">Evcil hayvan türleri yöntemleri, sahibi konuşurken doğru değerleri döndürür.</span><span class="sxs-lookup"><span data-stu-id="e928e-167">The pet types' methods return the correct values when talking to the owner.</span></span>
 
-<span data-ttu-id="b34b5-168">Düzenleme ve xUnit kullanarak projeleri test teknikleri öğrendiniz.</span><span class="sxs-lookup"><span data-stu-id="b34b5-168">You've learned techniques for organizing and testing projects using xUnit.</span></span> <span data-ttu-id="b34b5-169">Bunları kendi projelerinde uygulayarak bu teknikler ile ileri gidin.</span><span class="sxs-lookup"><span data-stu-id="b34b5-169">Go forward with these techniques applying them in your own projects.</span></span> <span data-ttu-id="b34b5-170">*İyi Kodlamalar!*</span><span class="sxs-lookup"><span data-stu-id="b34b5-170">*Happy coding!*</span></span>
+<span data-ttu-id="e928e-168">Düzenleme ve xUnit kullanarak projeleri test teknikleri öğrendiniz.</span><span class="sxs-lookup"><span data-stu-id="e928e-168">You've learned techniques for organizing and testing projects using xUnit.</span></span> <span data-ttu-id="e928e-169">Bunları kendi projelerinde uygulayarak bu teknikler ile ileri gidin.</span><span class="sxs-lookup"><span data-stu-id="e928e-169">Go forward with these techniques applying them in your own projects.</span></span> <span data-ttu-id="e928e-170">*İyi Kodlamalar!*</span><span class="sxs-lookup"><span data-stu-id="e928e-170">*Happy coding!*</span></span>
 

@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: ea3edb80-b2e8-4e85-bfed-311b20cb59b6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3e613ad4823254a6bed43cb95294e6b8d3674b6d
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 57ceaedc7c38ae70a0db5a7fd584a765a7474aff
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43881755"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44138948"
 ---
-# <a name="security-and-race-conditions"></a><span data-ttu-id="aab96-102">Güvenlik ve Yarış Durumları</span><span class="sxs-lookup"><span data-stu-id="aab96-102">Security and Race Conditions</span></span>
-<span data-ttu-id="aab96-103">Başka bir sorun olası güvenlik açıkları yarış koşulları tarafından kötüye alanıdır.</span><span class="sxs-lookup"><span data-stu-id="aab96-103">Another area of concern is the potential for security holes exploited by race conditions.</span></span> <span data-ttu-id="aab96-104">Bu gerçekleşebilir birkaç yolu vardır.</span><span class="sxs-lookup"><span data-stu-id="aab96-104">There are several ways in which this might happen.</span></span> <span data-ttu-id="aab96-105">Aşağıdaki alt konuları Geliştirici kaçınmalısınız ana düşebileceğiniz tuzakları bazıları özetler.</span><span class="sxs-lookup"><span data-stu-id="aab96-105">The subtopics that follow outline some of the major pitfalls that the developer must avoid.</span></span>  
+# <a name="security-and-race-conditions"></a><span data-ttu-id="99395-102">Güvenlik ve Yarış Durumları</span><span class="sxs-lookup"><span data-stu-id="99395-102">Security and Race Conditions</span></span>
+<span data-ttu-id="99395-103">Başka bir sorun olası güvenlik açıkları yarış koşulları tarafından kötüye alanıdır.</span><span class="sxs-lookup"><span data-stu-id="99395-103">Another area of concern is the potential for security holes exploited by race conditions.</span></span> <span data-ttu-id="99395-104">Bu gerçekleşebilir birkaç yolu vardır.</span><span class="sxs-lookup"><span data-stu-id="99395-104">There are several ways in which this might happen.</span></span> <span data-ttu-id="99395-105">Aşağıdaki alt konuları Geliştirici kaçınmalısınız ana düşebileceğiniz tuzakları bazıları özetler.</span><span class="sxs-lookup"><span data-stu-id="99395-105">The subtopics that follow outline some of the major pitfalls that the developer must avoid.</span></span>  
   
-## <a name="race-conditions-in-the-dispose-method"></a><span data-ttu-id="aab96-106">Dispose yöntemi yarış koşulları</span><span class="sxs-lookup"><span data-stu-id="aab96-106">Race Conditions in the Dispose Method</span></span>  
- <span data-ttu-id="aab96-107">Bir sınıf, ın **Dispose** yöntemi (daha fazla bilgi için bkz. [çöp toplama](../../../docs/standard/garbage-collection/index.md)) olan eşitlenmemiş, mümkündür içinde temizleme kodu **Dispose** çalıştırılabilir birden fazla Aşağıdaki örnekte gösterildiği gibi kez.</span><span class="sxs-lookup"><span data-stu-id="aab96-107">If a class's **Dispose** method (for more information, see [Garbage Collection](../../../docs/standard/garbage-collection/index.md)) is not synchronized, it is possible that cleanup code inside **Dispose** can be run more than once, as shown in the following example.</span></span>  
+## <a name="race-conditions-in-the-dispose-method"></a><span data-ttu-id="99395-106">Dispose yöntemi yarış koşulları</span><span class="sxs-lookup"><span data-stu-id="99395-106">Race Conditions in the Dispose Method</span></span>  
+ <span data-ttu-id="99395-107">Bir sınıf, ın **Dispose** yöntemi (daha fazla bilgi için bkz. [çöp toplama](../../../docs/standard/garbage-collection/index.md)) olan eşitlenmemiş, mümkündür içinde temizleme kodu **Dispose** çalıştırılabilir birden fazla Aşağıdaki örnekte gösterildiği gibi kez.</span><span class="sxs-lookup"><span data-stu-id="99395-107">If a class's **Dispose** method (for more information, see [Garbage Collection](../../../docs/standard/garbage-collection/index.md)) is not synchronized, it is possible that cleanup code inside **Dispose** can be run more than once, as shown in the following example.</span></span>  
   
 ```vb  
 Sub Dispose()  
@@ -38,7 +38,7 @@ End Sub
 ```csharp  
 void Dispose()   
 {  
-    if( myObj != null )   
+    if (myObj != null)   
     {  
         Cleanup(myObj);  
         myObj = null;  
@@ -46,20 +46,20 @@ void Dispose()
 }  
 ```  
   
- <span data-ttu-id="aab96-108">Çünkü bu **Dispose** uygulama eşitlenmemiş, mümkündür `Cleanup` ilk iş parçacığı ve önce ikinci bir iş parçacığı tarafından çağrılacak `_myObj` ayarlanır **null**.</span><span class="sxs-lookup"><span data-stu-id="aab96-108">Because this **Dispose** implementation is not synchronized, it is possible for `Cleanup` to be called by first one thread and then a second thread before `_myObj` is set to **null**.</span></span> <span data-ttu-id="aab96-109">Bu bir güvenlik sorunu olup olmadığını bağlıdır ne olur olduğunda `Cleanup` kodu çalıştırır.</span><span class="sxs-lookup"><span data-stu-id="aab96-109">Whether this is a security concern depends on what happens when the `Cleanup` code runs.</span></span> <span data-ttu-id="aab96-110">Önemli bir sorun ile eşitlenmemiş **Dispose** uygulamaları dosyalar gibi kaynak tanıtıcıları kullanımını içerir.</span><span class="sxs-lookup"><span data-stu-id="aab96-110">A major issue with unsynchronized **Dispose** implementations involves the use of resource handles such as files.</span></span> <span data-ttu-id="aab96-111">Hatalı elden çıkarma, genellikle güvenlik açıklarını müşteri adayları kullanılmak üzere yanlış tanıtıcı neden olabilir.</span><span class="sxs-lookup"><span data-stu-id="aab96-111">Improper disposal can cause the wrong handle to be used, which often leads to security vulnerabilities.</span></span>  
+ <span data-ttu-id="99395-108">Çünkü bu **Dispose** uygulama eşitlenmemiş, mümkündür `Cleanup` ilk iş parçacığı ve önce ikinci bir iş parçacığı tarafından çağrılacak `_myObj` ayarlanır **null**.</span><span class="sxs-lookup"><span data-stu-id="99395-108">Because this **Dispose** implementation is not synchronized, it is possible for `Cleanup` to be called by first one thread and then a second thread before `_myObj` is set to **null**.</span></span> <span data-ttu-id="99395-109">Bu bir güvenlik sorunu olup olmadığını bağlıdır ne olur olduğunda `Cleanup` kodu çalıştırır.</span><span class="sxs-lookup"><span data-stu-id="99395-109">Whether this is a security concern depends on what happens when the `Cleanup` code runs.</span></span> <span data-ttu-id="99395-110">Önemli bir sorun ile eşitlenmemiş **Dispose** uygulamaları dosyalar gibi kaynak tanıtıcıları kullanımını içerir.</span><span class="sxs-lookup"><span data-stu-id="99395-110">A major issue with unsynchronized **Dispose** implementations involves the use of resource handles such as files.</span></span> <span data-ttu-id="99395-111">Hatalı elden çıkarma, genellikle güvenlik açıklarını müşteri adayları kullanılmak üzere yanlış tanıtıcı neden olabilir.</span><span class="sxs-lookup"><span data-stu-id="99395-111">Improper disposal can cause the wrong handle to be used, which often leads to security vulnerabilities.</span></span>  
   
-## <a name="race-conditions-in-constructors"></a><span data-ttu-id="aab96-112">Oluşturucularda yarış durumları</span><span class="sxs-lookup"><span data-stu-id="aab96-112">Race Conditions in Constructors</span></span>  
- <span data-ttu-id="aab96-113">Bazı uygulamalarda, sınıf oluşturucuları tamamen çalıştırmadan önce sınıf üyelerinin erişmek diğer iş parçacıkları için mümkün olabilir.</span><span class="sxs-lookup"><span data-stu-id="aab96-113">In some applications, it might be possible for other threads to access class members before their class constructors have completely run.</span></span> <span data-ttu-id="aab96-114">Bu durum veya gerekirse iş parçacığı eşitleme, hiçbir güvenlik sorunu olduğundan emin olmak için tüm sınıf oluşturucuları gözden geçirmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="aab96-114">You should review all class constructors to make sure that there are no security issues if this should happen, or synchronize threads if necessary.</span></span>  
+## <a name="race-conditions-in-constructors"></a><span data-ttu-id="99395-112">Oluşturucularda yarış durumları</span><span class="sxs-lookup"><span data-stu-id="99395-112">Race Conditions in Constructors</span></span>  
+ <span data-ttu-id="99395-113">Bazı uygulamalarda, sınıf oluşturucuları tamamen çalıştırmadan önce sınıf üyelerinin erişmek diğer iş parçacıkları için mümkün olabilir.</span><span class="sxs-lookup"><span data-stu-id="99395-113">In some applications, it might be possible for other threads to access class members before their class constructors have completely run.</span></span> <span data-ttu-id="99395-114">Bu durum veya gerekirse iş parçacığı eşitleme, hiçbir güvenlik sorunu olduğundan emin olmak için tüm sınıf oluşturucuları gözden geçirmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="99395-114">You should review all class constructors to make sure that there are no security issues if this should happen, or synchronize threads if necessary.</span></span>  
   
-## <a name="race-conditions-with-cached-objects"></a><span data-ttu-id="aab96-115">Önbelleğe alınan nesneleri ile yarış durumları</span><span class="sxs-lookup"><span data-stu-id="aab96-115">Race Conditions with Cached Objects</span></span>  
- <span data-ttu-id="aab96-116">Güvenlik bilgileri önbelleğe alır veya kod erişimi güvenliği kullanan kod [Assert](../../../docs/framework/misc/using-the-assert-method.md) işlem de olabilir yarış durumlarını savunmasız sınıfı diğer bölümlerini uygun şekilde eşitlenmemişse, aşağıdaki örnekte gösterildiği gibi.</span><span class="sxs-lookup"><span data-stu-id="aab96-116">Code that caches security information or uses the code access security [Assert](../../../docs/framework/misc/using-the-assert-method.md) operation might also be vulnerable to race conditions if other parts of the class are not appropriately synchronized, as shown in the following example.</span></span>  
+## <a name="race-conditions-with-cached-objects"></a><span data-ttu-id="99395-115">Önbelleğe alınan nesneleri ile yarış durumları</span><span class="sxs-lookup"><span data-stu-id="99395-115">Race Conditions with Cached Objects</span></span>  
+ <span data-ttu-id="99395-116">Güvenlik bilgileri önbelleğe alır veya kod erişimi güvenliği kullanan kod [Assert](../../../docs/framework/misc/using-the-assert-method.md) işlem de olabilir yarış durumlarını savunmasız sınıfı diğer bölümlerini uygun şekilde eşitlenmemişse, aşağıdaki örnekte gösterildiği gibi.</span><span class="sxs-lookup"><span data-stu-id="99395-116">Code that caches security information or uses the code access security [Assert](../../../docs/framework/misc/using-the-assert-method.md) operation might also be vulnerable to race conditions if other parts of the class are not appropriately synchronized, as shown in the following example.</span></span>  
   
 ```vb  
 Sub SomeSecureFunction()  
     If SomeDemandPasses() Then  
         fCallersOk = True  
         DoOtherWork()  
-        fCallersOk = False()  
+        fCallersOk = False  
     End If  
 End Sub  
   
@@ -76,16 +76,16 @@ End Sub
 ```csharp  
 void SomeSecureFunction()   
 {  
-    if(SomeDemandPasses())   
+    if (SomeDemandPasses())   
     {  
         fCallersOk = true;  
         DoOtherWork();  
-        fCallersOk = false();  
+        fCallersOk = false;  
     }  
 }  
 void DoOtherWork()   
 {  
-    if( fCallersOK )   
+    if (fCallersOK)   
     {  
         DoSomethingTrusted();  
     }  
@@ -97,13 +97,13 @@ void DoOtherWork()
 }  
 ```  
   
- <span data-ttu-id="aab96-117">Diğer yollara varsa `DoOtherWork` aynı nesneye sahip başka bir iş parçacığından çağrılabilir, güvenilmeyen bir çağıranın isteğe bağlı Koçan.</span><span class="sxs-lookup"><span data-stu-id="aab96-117">If there are other paths to `DoOtherWork` that can be called from another thread with the same object, an untrusted caller can slip past a demand.</span></span>  
+ <span data-ttu-id="99395-117">Diğer yollara varsa `DoOtherWork` aynı nesneye sahip başka bir iş parçacığından çağrılabilir, güvenilmeyen bir çağıranın isteğe bağlı Koçan.</span><span class="sxs-lookup"><span data-stu-id="99395-117">If there are other paths to `DoOtherWork` that can be called from another thread with the same object, an untrusted caller can slip past a demand.</span></span>  
   
- <span data-ttu-id="aab96-118">Kodunuzu güvenlik bilgilerini önbelleğe alıyorsa, bu güvenlik açığı için incelemeyi unutmayın.</span><span class="sxs-lookup"><span data-stu-id="aab96-118">If your code caches security information, make sure that you review it for this vulnerability.</span></span>  
+ <span data-ttu-id="99395-118">Kodunuzu güvenlik bilgilerini önbelleğe alıyorsa, bu güvenlik açığı için incelemeyi unutmayın.</span><span class="sxs-lookup"><span data-stu-id="99395-118">If your code caches security information, make sure that you review it for this vulnerability.</span></span>  
   
-## <a name="race-conditions-in-finalizers"></a><span data-ttu-id="aab96-119">Sonlandırıcılar yarış koşulları</span><span class="sxs-lookup"><span data-stu-id="aab96-119">Race Conditions in Finalizers</span></span>  
- <span data-ttu-id="aab96-120">Ardından nesnenin Sonlandırıcısı serbest bırakan bir statik veya yönetilmeyen kaynağa başvuran bir nesnedeki yarış durumları da meydana gelebilir.</span><span class="sxs-lookup"><span data-stu-id="aab96-120">Race conditions can also occur in an object that references a static or unmanaged resource that it then frees in its finalizer.</span></span> <span data-ttu-id="aab96-121">Nesneleri, birden çok nesne bir sınıfın Sonlandırıcı içinde yönetilen bir kaynak paylaşıyorsanız, tüm bu kaynağa erişimi eşitlemeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="aab96-121">If multiple objects share a resource that is manipulated in a class's finalizer, the objects must synchronize all access to that resource.</span></span>  
+## <a name="race-conditions-in-finalizers"></a><span data-ttu-id="99395-119">Sonlandırıcılar yarış koşulları</span><span class="sxs-lookup"><span data-stu-id="99395-119">Race Conditions in Finalizers</span></span>  
+ <span data-ttu-id="99395-120">Ardından nesnenin Sonlandırıcısı serbest bırakan bir statik veya yönetilmeyen kaynağa başvuran bir nesnedeki yarış durumları da meydana gelebilir.</span><span class="sxs-lookup"><span data-stu-id="99395-120">Race conditions can also occur in an object that references a static or unmanaged resource that it then frees in its finalizer.</span></span> <span data-ttu-id="99395-121">Nesneleri, birden çok nesne bir sınıfın Sonlandırıcı içinde yönetilen bir kaynak paylaşıyorsanız, tüm bu kaynağa erişimi eşitlemeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="99395-121">If multiple objects share a resource that is manipulated in a class's finalizer, the objects must synchronize all access to that resource.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="aab96-122">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="aab96-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="99395-122">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="99395-122">See also</span></span>
 
-- [<span data-ttu-id="aab96-123">Güvenli Kodlama Yönergeleri</span><span class="sxs-lookup"><span data-stu-id="aab96-123">Secure Coding Guidelines</span></span>](../../../docs/standard/security/secure-coding-guidelines.md)
+- [<span data-ttu-id="99395-123">Güvenli Kodlama Yönergeleri</span><span class="sxs-lookup"><span data-stu-id="99395-123">Secure Coding Guidelines</span></span>](../../../docs/standard/security/secure-coding-guidelines.md)
