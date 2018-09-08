@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cfa44187d846c72f0dfd4fb131cacbe41648dd32
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: abb38e4f084575665954bc514584feed760b0666
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33579814"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44207648"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Standart Tarih ve Saat Biçim Dizeleri
 Standart tarih ve saat biçimi dizesi tek biçim belirleyici bir tarih ve saat değerinin metin gösterimini tanımlamak için kullanır. Beyaz boşluk da dahil olmak üzere birden fazla karakter içeren bir tarih ve saat biçim dizesi, özel bir tarih ve saat biçimi dizesi yorumlanır; Daha fazla bilgi için [özel tarih ve saat biçim dizeleri](../../../docs/standard/base-types/custom-date-and-time-format-strings.md). Standart veya özel bir biçim dizesi iki şekilde kullanılabilir:  
@@ -413,9 +413,10 @@ Standart tarih ve saat biçim dizeleri ile her ikisini de kullanılabilir <xref:
 ### <a name="datetimeformatinfo-properties"></a>DateTimeFormatInfo Özellikleri  
  Biçimlendirme geçerli bir özellik tarafından etkilenir <xref:System.Globalization.DateTimeFormatInfo> tarafından açık olarak veya geçerli iş parçacığı kültürü tarafından örtük olarak sağlanan nesne <xref:System.IFormatProvider> biçimlendirmeyi çağıran yöntemin parametre. İçin <xref:System.IFormatProvider> parametresi, uygulamanızın belirtmelidir bir <xref:System.Globalization.CultureInfo> bir kültürü temsil eden bir nesne veya <xref:System.Globalization.DateTimeFormatInfo> belirli bir kültürün tarih ve saat biçimlendirme kurallarını temsil eden nesne. Standart tarih ve saat biçim tanımlayıcılarının çoğu geçerli özellikleri tarafından tanımlanan biçimlendirme desenleri için diğer adlar: <xref:System.Globalization.DateTimeFormatInfo> nesne. Uygulamanız bazı standart tarih sonucu değiştirebilirsiniz ve saat biçim tanımlayıcılarının değiştirerek karşılık gelen tarih ve saat biçim desenleri karşılık gelen <xref:System.Globalization.DateTimeFormatInfo> özelliği.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.DateTime?displayProperty=nameWithType>  
- <xref:System.DateTimeOffset?displayProperty=nameWithType>  
- [Biçimlendirme Türleri](../../../docs/standard/base-types/formatting-types.md)  
- [Özel Tarih ve Saat Biçim Dizeleri](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
- [Örnek: .NET Framework 4 biçimlendirme yardımcı](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- <xref:System.DateTime?displayProperty=nameWithType>  
+- <xref:System.DateTimeOffset?displayProperty=nameWithType>  
+- [Biçimlendirme Türleri](../../../docs/standard/base-types/formatting-types.md)  
+- [Özel Tarih ve Saat Biçim Dizeleri](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
+- [Örnek: .NET Framework 4 biçimlendirme yardımcı](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
