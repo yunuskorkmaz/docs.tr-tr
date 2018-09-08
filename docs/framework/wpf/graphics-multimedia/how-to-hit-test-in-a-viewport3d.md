@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Viewport3D [WPF]
 ms.assetid: 42bfbd99-c7c6-43f1-940b-90448faa412e
 ms.openlocfilehash: 297fe17b8844f7542255afcfe442fbf9b7a0d59d
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44140664"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44192716"
 ---
 # <a name="how-to-hit-test-in-a-viewport3d"></a>Nasıl yapılır: Viewport3D'de Tıklama Testi
 Bu örnek nasıl tıklama testi için 3B Görsellerde gösterir bir <xref:System.Windows.Controls.Viewport3D>.  

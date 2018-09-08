@@ -3,11 +3,11 @@ title: Flowchart ve Pick birleşimini kullanarak senaryosu
 ms.date: 03/30/2017
 ms.assetid: 88d81395-f7a3-41d8-8439-20a425c538a6
 ms.openlocfilehash: b0f8e884a8a6c62c4e7edaf5cc9727bf7bfe8603
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44032339"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44195692"
 ---
 # <a name="statemachine-scenario-using-a-combination-of-flowchart-and-pick"></a>Flowchart ve Pick birleşimini kullanarak senaryosu
 Bu örnek bir birleşimini kullanarak bir kronometre basit senaryonun nasıl uygulanacağını gösterir <xref:System.Activities.Statements.Flowchart> ve <xref:System.Activities.Statements.Pick> etkinlikler. Alma ve gönderme Pick etkinliği içinde kronometre olaylarını dinleyecek şekilde kullanır.  

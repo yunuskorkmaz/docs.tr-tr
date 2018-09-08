@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: cdc3e42adcb2c7eae52aab0b14d0f9c6a822eeea
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: b900b85b4e3e56dbc587a15edea40f6e3032cbd1
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43882000"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44192437"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows Forms Uygulaması Temelleri (Visual Basic)
 Visual Basic önemli bir parçası, kullanıcıların bilgisayarlarında yerel olarak çalışan Windows Forms uygulamaları oluşturmak için olanağıdır. Visual Studio, Windows formları kullanarak uygulama ve kullanıcı arabirimi oluşturmak için kullanabilirsiniz. Bir Windows Forms uygulaması sınıflardan geliştirilmiştir <xref:System.Windows.Forms> ad alanı.  
@@ -67,7 +67,7 @@ Visual Basic önemli bir parçası, kullanıcıların bilgisayarlarında yerel o
 |Bitiş|Bkz. |  
 |--------|---------|  
 |Kullanım <xref:System.Windows.Forms.BindingSource> bileşeni|[Nasıl yapılır: Tasarımcı Kullanarak Windows Forms Denetimlerini BindingSource Bileşeni ile Bağlama](../../../framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|  
-|Çalışmak [!INCLUDE[vstecado](~/includes/vstecado-md.md)] veri kaynakları|[Nasıl yapılır: Windows Forms BindingSource Bileşeni ile ADO.NET Verilerini Sıralama ve Filtreleme](https://msdn.microsoft.com/library/ya3sah92.aspx)|  
+|Çalışmak [!INCLUDE[vstecado](~/includes/vstecado-md.md)] veri kaynakları|[Nasıl yapılır: Windows Forms BindingSource Bileşeni ile ADO.NET Verilerini Sıralama ve Filtreleme](../../../framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
 |Veri Kaynakları penceresini kullanma|[İzlenecek yol: Bir Windows formunda veri görüntüleme](/visualstudio/data-tools/accessing-data-in-visual-studio)|  
   
 ## <a name="deploying-applications-to-client-computers"></a>İstemci bilgisayarlara uygulamaları dağıtma  
@@ -95,7 +95,8 @@ Visual Basic önemli bir parçası, kullanıcıların bilgisayarlarında yerel o
 |Form içeriklerini yazdırma|[Nasıl yapılır: Windows Forms'ta Grafik Yazdırma](../../../framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [Nasıl yapılır: Windows Forms'ta Çok Sayfalı Metin Dosyası Yazdırma](../../../framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|   
 |Windows Forms güvenliği hakkında daha fazla bilgi edinin|[Windows Forms'ta Güvenliğe Genel Bakış](../../../framework/winforms/security-in-windows-forms-overview.md)|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>  
- [Windows Forms'a Genel Bakış](../../../framework/winforms/windows-forms-overview.md)  
- [My.Forms Nesnesi](../../../visual-basic/language-reference/objects/my-forms-object.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>  
+- [Windows Forms'a Genel Bakış](../../../framework/winforms/windows-forms-overview.md)  
+- [My.Forms Nesnesi](../../../visual-basic/language-reference/objects/my-forms-object.md)

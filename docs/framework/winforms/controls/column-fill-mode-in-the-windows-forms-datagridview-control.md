@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], column fill mode
 ms.assetid: b4ef7411-ebf4-4e26-bb33-aecec90de80c
 ms.openlocfilehash: a023d8d8c31131db46cc8535d0e903c2a8d8a345
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44070764"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44183281"
 ---
 # <a name="column-fill-mode-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetiminde Sütun Doldurma Modu
 Sütun doldurma modu içinde <xref:System.Windows.Forms.DataGridView> denetimi, böylece bunlar kullanılabilir görüntüleme alanının genişliğini dolgu sütunlarını otomatik olarak yeniden boyutlandırır. Denetimi dışında her bir sütunun genişliğini eşit tutmak gerekli veya daha büyük olduğunda yatay kaydırma çubuğunun görüntülemez, <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> özellik değeri.  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic code, COM interop
 - COM interop [Visual Basic], in Visual Basic
 ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
-ms.openlocfilehash: b6da65a0c94875f73c8e1094448d76a72823404d
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: dfd256fa7ccd8f089fab6eb1d42579deb2c4a64d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43871065"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44183177"
 ---
 # <a name="com-interop-visual-basic"></a>COM Birlikte Çalışma (Visual Basic)
 Bileşen Nesne Modeli (COM) diğer bileşenleri ve uygulamaları barındırmak için işlevselliği göstermek bir nesne sağlar. Günümüzün yazılımlarının çoğunu, COM nesnelerini içerir. .NET derlemeleri yeni uygulamalar için en iyi seçenek olsa da, bazen COM nesnelerini kullanmak istemiyorsunuz gerekebilir. Bu bölümde bazı oluşturma ve Visual Basic ile COM nesneleri kullanma ile ilgili sorunlar ele alınmaktadır.  
@@ -50,10 +50,10 @@ Bileşen Nesne Modeli (COM) diğer bileşenleri ve uygulamaları barındırmak i
  [Yönetilmeyen Kod ile Birlikte Çalışma](../../../framework/interop/index.md)  
  Ortak dil çalışma zamanı tarafından sağlanan birlikte çalışabilirlik hizmetlerini açıklar.  
   
- [COM Bileşenlerini .NET Framework'te Gösterme](https://msdn.microsoft.com/library/e78b14f1-e487-43cd-9c6d-1a07483f1730)  
+ [COM Bileşenlerini .NET Framework'te Gösterme](../../../framework/interop/exposing-com-components.md)  
  COM birlikte çalışma aracılığıyla COM tür arama işlemi açıklanır.  
   
- [.NET Framework Bileşenlerini COM'da Gösterme](https://msdn.microsoft.com/library/e42a65f7-1e61-411f-b09a-aca1bbce24c6)  
+ [.NET Framework Bileşenlerini COM'da Gösterme](../../../framework/interop/exposing-dotnet-components-to-com.md)  
  Hazırlama ve yönetilen türlerden com kullanımını açıklar.  
   
  [Birlikte Çalışma Özniteliklerini Uygulama](../../../framework/interop/applying-interop-attributes.md)  

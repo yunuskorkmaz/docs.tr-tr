@@ -18,11 +18,11 @@ ms.assetid: 822d551c-c69a-4191-82f4-183d82c9179c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 844b0edb93b93704c4886495c673dc0496f7ba71
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44129332"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44192983"
 ---
 # <a name="performing-culture-insensitive-case-changes"></a>Kültüre Duyarsız Büyük/Küçük Değişikliklerini Gerçekleştirme
 <xref:System.String.ToUpper%2A?displayProperty=nameWithType>, <xref:System.String.ToLower%2A?displayProperty=nameWithType>, <xref:System.Char.ToUpper%2A?displayProperty=nameWithType>, Ve <xref:System.Char.ToLower%2A?displayProperty=nameWithType> yöntemleri herhangi bir parametre kabul eden aşırı yükler sağlar. Varsayılan olarak, bu aşırı yüklemeler parametresiz değerine göre servis talebi değişiklikleri gerçekleştirmek <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>. Bu, kültüre göre değişebilen büyük küçük harfe duyarlı sonuçlar üretir. Temizleyin, kültüre duyarlı veya kültüre duyarsız büyük/küçük harf değişikliklerini isteyip istemediğinizi hale getirmek için açıkça belirtmek ihtiyaç duyduğunuz bu yöntemleri aşırı kullanmalısınız bir `culture` parametresi. Kültüre duyarlı büyük/küçük harf değişikliklerini belirtin `CultureInfo.CurrentCulture` için `culture` parametresi. Kültüre duyarsız büyük/küçük harf değişikliklerini belirtin `CultureInfo.InvariantCulture` için `culture` parametresi.  

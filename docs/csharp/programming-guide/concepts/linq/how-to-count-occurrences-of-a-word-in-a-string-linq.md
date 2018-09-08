@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: bir sözcüğün bir dizede (LINQ) (C#) sayma'
 ms.date: 07/20/2015
 ms.assetid: f8e6f546-7c14-4aa1-8a75-e8d09f3b8ccd
 ms.openlocfilehash: 48eda99970744a659a803f52bb3a3c499390f5c8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43872367"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44180960"
 ---
 # <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-c"></a>Nasıl yapılır: bir sözcüğün bir dizede (LINQ) (C#) sayma
 Bu örnek belirtilen bir sözcüğün bir dizede oluşumları saymak için LINQ sorgusu kullanmayı gösterir. Sayım gerçekleştirmeye unutmayın <xref:System.String.Split%2A> yöntemi bir kelimelerin dizi oluşturmak için çağrılır. Bir performans maliyetine yoktur <xref:System.String.Split%2A> yöntemi. Sözcükleri saymak için dize yalnızca işlemi ise kullanmayı düşünmelisiniz <xref:System.Text.RegularExpressions.Regex.Matches%2A> veya <xref:System.String.IndexOf%2A> yöntemleri yerine. Ancak, performans kritik bir sorunu değil ya da diğer sorgu türleri üzerinde gerçekleştirmek için önceden cümle ayırdıktan sonra sözcükler veya tümcecikler de saymak için LINQ kullanma mantıklıdır.  

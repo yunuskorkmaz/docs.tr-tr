@@ -2,12 +2,12 @@
 title: Nasıl yapılır makaleleri (C# Kılavuzu)
 description: Hızlı ipuçları ve kısa, odaklanmış kod örnekleri koleksiyonu
 ms.date: 12/20/2017
-ms.openlocfilehash: 86e245873c8316cc4ddd52fe59a06f2cac648e6c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9326235341ee38e46f4204b7b3d7f67cae2774af
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507681"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44191697"
 ---
 # <a name="how-to-c"></a>Nasıl yapılır (C#)
 
@@ -65,7 +65,7 @@ Nesneyi farklı bir türe dönüştürmeniz gerekebilir.
 - [Bir dizeye Dönüştür bir `DateTime` ](../../standard/base-types/parsing-datetime.md).
 - [Bir bayt dizisini int'e dönüştürme](../programming-guide/types/how-to-convert-a-byte-array-to-an-int.md).
 - [Bir dizeyi sayıya dönüştürme](../programming-guide/types/how-to-convert-a-string-to-a-number.md).
-- [Kullanım `as` ve `is` güvenli bir şekilde farklı bir türe dönüştürme yapmak](../programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md).
+- [Desen eşleştirme kullan `as` ve `is` güvenli bir şekilde farklı bir türe dönüştürme yapmak işleçleri](../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md).
 - [Dönüştürme işleçleri tanımlama `struct` türleri](../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md).
 - [Bir türü null bir değer türü olup olmadığını](../programming-guide/nullable-types/how-to-identify-a-nullable-type.md).
 - [Boş değer atanabilir ve NULL olmayan değer türleri arasında dönüştürme](../programming-guide/nullable-types/using-nullable-types.md#conversion-from-a-nullable-type-to-an-underlying-type).

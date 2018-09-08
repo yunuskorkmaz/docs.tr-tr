@@ -14,26 +14,27 @@ helpviewer_keywords:
 ms.assetid: 38a345ca-6963-4436-9608-5c9defef9c64
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15d99ef6ef3ae089216e586fe873043fa03b0d7b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bad5372af1d771dc93a20e61090ef84126f3e1eb
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567295"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44183424"
 ---
 # <a name="asynchronous-programming-using-delegates"></a>Temsilcileri Kullanarak Zaman Uyumsuz Programlama
-Temsilciler bir zaman uyumsuz olarak zaman uyumlu bir yöntemi çağırmak etkinleştirin. Zaman uyumlu olarak, bir temsilciyi çağırdığınızda `Invoke` yöntemi doğrudan geçerli iş parçacığı üzerinde hedef yöntemini çağırır. Varsa `BeginInvoke` yöntemi çağrıldığında, ortak dil çalışma zamanı (CLR) isteğini sıraya koyar ve hemen çağırana döndürür. Hedef yöntemin iş parçacığı havuzundaki iş parçacığı üzerinde zaman uyumsuz olarak çağrılır. İstek gönderildi, orijinal iş parçacığı, hedef yöntemin ile Paralel yürütme devam etmek ücretsizdir. Bir geri çağırma yöntemi çağrısında belirtildiğinde `BeginInvoke` yöntemi, geri çağırma yöntemi hedef yöntemin bittikten sonra çağrılır. Geri çağırma yöntemi `EndInvoke` yöntemi, dönüş değeri ve giriş/çıkış ya da yalnızca çıktı parametreleri alır. Geri çağırma yöntemi çağrılırken belirtilmişse `BeginInvoke`, `EndInvoke` çağıran iş parçacığının çağrılabilir `BeginInvoke`.  
+Temsilciler, zaman uyumsuz olarak bir zaman uyumlu yöntem çağrısı sağlar. Zaman uyumlu olarak, bir temsilci çağırdığınızda `Invoke` yöntemi doğrudan geçerli iş parçacığı üzerinde hedef yöntemini çağırır. Varsa `BeginInvoke` yöntemi çağrıldığında, ortak dil çalışma zamanı (CLR) isteğini sıraya koyar ve hemen çağırana döner. Hedef yöntemin, iş parçacığı havuzundan bir iş parçacığında zaman uyumsuz olarak adlandırılır. Hedef yöntemin ile paralel yürütmeye devam isteği gönderildi, özgün iş parçacığı, ücretsizdir. Bir geri çağırma yöntemi çağrısında belirtildiğinde `BeginInvoke` yöntemi, geri çağırma yöntemi hedef yöntemin sona erdiğinde çağrılır. Geri çağırma yöntemi `EndInvoke` yöntemi, dönüş değeri ve giriş/çıkış ya da yalnızca çıktı parametreleri alır. Hiçbir geri çağırma yöntemi çağırırken belirtilmişse `BeginInvoke`, `EndInvoke` çağrılan iş parçacığından çağrılabilir `BeginInvoke`.  
   
 > [!IMPORTANT]
->  Derleyicileri temsilci sınıflarıyla yayma `Invoke`, `BeginInvoke`, ve `EndInvoke` yöntemlerini kullanarak kullanıcı tarafından belirtilen temsilci imzası. `BeginInvoke` Ve `EndInvoke` yöntemleri donatılmış olarak yerel. Bu yöntemler yerel olarak işaretlenmiş olduğundan, CLR uygulamasını sınıf yükleme zamanında otomatik olarak sağlar. Bunlar değil geçersiz yükleyici sağlar.  
+>  Derleyiciler, temsilci sınıflarıyla yayma `Invoke`, `BeginInvoke`, ve `EndInvoke` yöntemlerini kullanarak kullanıcı tarafından belirtilen temsilci imzası. `BeginInvoke` Ve `EndInvoke` yöntemleri düzenlenmiş yerel olarak. Bu yöntemler, yerel olarak işaretlendikleri CLR sınıfı yükleme zamanında uygulamasını otomatik olarak sağlar. Yükleyici, bunlar geçersiz kılınmadığını güvence sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Zaman Uyumlu Metotları Zaman Uyumsuz Olarak Çağırma](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)  
- Sıradan yöntemleri zaman uyumsuz çağrı yapmak için temsilciler kullanmayı açıklar ve bir zaman uyumsuz çağrı döndürmek beklenecek dört yolu Göster basit kod örnekleri sağlar.  
+ Sıradan bir yöntem zaman uyumsuz çağrı yapmak için temsilciler kullanmayı açıklar ve döndürmek zaman uyumsuz bir çağrı için beklenecek dört yolu gösteren basit kod örnekleri sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Olay Tabanlı Zaman Uyumsuz Desen (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
  .NET Framework ile zaman uyumsuz programlama açıklar.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Delegate>
+## <a name="see-also"></a>Ayrıca bkz.
+
+* <xref:System.Delegate>

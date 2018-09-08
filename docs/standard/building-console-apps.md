@@ -10,11 +10,11 @@ ms.assetid: c21fb997-9f0e-40a5-8741-f73bba376bd8
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 979989c3e1f90f3de47473aa1bd8bc5268520e57
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43872812"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44183203"
 ---
 # <a name="building-console-applications-in-the-net-framework"></a>.NET Framework'te Konsol Uygulamaları Derleme
 .NET Framework uygulamalarında kullanabileceğiniz <xref:System.Console?displayProperty=nameWithType> karakterleri okumak ve konsola karakterleri yazmak için sınıf. Standart giriş akışından veri konsoldan okunan, konsola veriler standart çıkış akışına yazılır ve hata verileri konsola standart hata çıktı akışına yazılır. Uygulama başladığında ve bu olarak sunulduğunda bu akışları konsoluyla otomatik olarak ilişkili <xref:System.Console.In%2A>, <xref:System.Console.Out%2A>, ve <xref:System.Console.Error%2A> özellikleri, sırasıyla.  

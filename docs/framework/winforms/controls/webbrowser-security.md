@@ -6,11 +6,11 @@ helpviewer_keywords:
 - security [Windows Forms], WebBrowser control
 ms.assetid: 0968846e-48ee-485a-9797-65b5b9a622f8
 ms.openlocfilehash: 683c6ad4cbc55a889f4a0c1d20ebe8e8a2669a13
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44062737"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44180390"
 ---
 # <a name="webbrowser-security"></a>WebBrowser Güvenliği
 <xref:System.Windows.Forms.WebBrowser> Denetim, yalnızca tam güven içinde çalışacak şekilde tasarlanmıştır. Denetimde görüntülenen HTML içeriğini dış Web sunucularından gelebilir ve yönetilmeyen kodda betikleri ya da Web denetimleri içerebilir. Kullanırsanız <xref:System.Windows.Forms.WebBrowser> denetimi bu durumda, Denetim, Internet Explorer, yönetilen olandan en az güvenli <xref:System.Windows.Forms.WebBrowser> denetimi gibi yönetilmeyen kod çalışmasını engellemez.  

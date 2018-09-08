@@ -5,12 +5,12 @@ helpviewer_keywords:
 - method parameters [C#], reference types
 - parameters [C#], reference
 ms.assetid: 9e6eb65c-942e-48ab-920a-b7ba9df4ea20
-ms.openlocfilehash: ce434fdc7c8ea6b683321c4b3052b03c718601a4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: d577754e8cb686c40172abd6c0bbd00bc481f737
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864453"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44183216"
 ---
 # <a name="passing-reference-type-parameters-c-programming-guide"></a>Başvuru Türü Parametreleri Geçirme (C# Programlama Kılavuzu)
 Bir değişken bir [başvuru türüne](../../../csharp/language-reference/keywords/reference-types.md) verilerini içermiyor doğrudan; verilerine bir başvuru içeriyor. Değere göre bir başvuru türü parametresi geçirdiğinizde, bir sınıf üyesinin değerini gibi başvurulan nesnenin ait verileri değiştirmek mümkündür. Ancak, başvuru değeri değiştiremezsiniz; Örneğin, aynı başvuru için yeni bir sınıf bellek ayırmak ve sahip yöntemi dışında kalıcı hale getirmek için kullanamazsınız. Parametresini kullanarak bunu yapmak için geçirmek [ref](../../../csharp/language-reference/keywords/ref.md) veya [kullanıma](../../../csharp/language-reference/keywords/out-parameter-modifier.md) anahtar sözcüğü. Kolaylık olması için aşağıdaki örneklerde `ref`.  
@@ -42,7 +42,6 @@ Bir değişken bir [başvuru türüne](../../../csharp/language-reference/keywor
 
 - [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
 - [Parametreleri Geçirme](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)  
-- [ref ve out Kullanarak Dizileri Geçirme](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md)  
 - [ref](../../../csharp/language-reference/keywords/ref.md)  
 - [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md)  
 - [out](../../../csharp/language-reference/keywords/out.md)  

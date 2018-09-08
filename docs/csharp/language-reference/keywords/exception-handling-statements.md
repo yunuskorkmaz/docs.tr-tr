@@ -5,11 +5,11 @@ helpviewer_keywords:
 - keywords [C#], exception handling
 ms.assetid: 6d0323a3-3164-411c-9b84-a3606bd0e13c
 ms.openlocfilehash: 1d48981e0d36053fce1249b27cd15551ed59dc91
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44071602"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44185106"
 ---
 # <a name="exception-handling-statements-c-reference"></a>Özel Durum İşleme Deyimleri (C# Başvurusu)
 C# programınızı yürütülmesi sırasında oluşabilecek özel durumları olarak bilinen, anormal durumları işlemek için yerleşik destek sağlar. Bu özel durumlar dışında denetiminin normal akışı kod tarafından işlenir.  

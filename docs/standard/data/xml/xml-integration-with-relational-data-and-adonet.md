@@ -6,11 +6,11 @@ ms.assetid: f6ebb1a1-f2ca-49b9-92c9-0150940cf6e6
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d86c590f2d5fe6bc970c2f8ac6de43d3e8485650
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44127991"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44183151"
 ---
 # <a name="xml-integration-with-relational-data-and-adonet"></a>İlişkisel veriler ve ADO.NET ile XML tümleştirmesi
 **XmlDataDocument** , türetilmiş bir sınıfı **XmlDocument**ve XML verileri içerir. Avantajı **XmlDataDocument** ilişkisel ve hiyerarşik veriler arasında bir köprü sağlar. Bu bir **XmlDocument** için bağlanabilir bir **veri kümesi** ve hem sınıflarını iki sınıflarında bulunan verilere yapılan değişiklikleri eşitleyebilirsiniz. Bir **XmlDocument** bağlanan bir **veri kümesi** ilişkisel veriler ile tümleştirmek XML verir ve verilerinizin ya da XML olarak veya bir biçimde temsil gerekmez. Her ikisini de yapabilirsiniz ve tek bir veri temsilini için kısıtlı olabilir değil.  

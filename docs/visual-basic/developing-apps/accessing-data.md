@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Visual Basic, data access
 ms.assetid: 3086ab38-3be5-4b22-9385-7d0e16b04f6a
 ms.openlocfilehash: 220d662576a5f23194dee7e23317bdbb0027546d
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44098543"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44185748"
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a>Visual Basic uygulamalarındaki verilere erişme
 Visual Basic, verilere erişen uygulamalar geliştirmede yardımcı olmak için çeşitli yeni özellikler içerir. Windows uygulamaları için veri sınır formları, öğeleri sürükleyerek oluşturulur [veri kaynakları penceresi](/visualstudio/data-tools/add-new-data-sources) forma. Öğeleri sürükleyerek verilere denetimler bağlama **veri kaynakları penceresi** varolan denetimler üzerine.  

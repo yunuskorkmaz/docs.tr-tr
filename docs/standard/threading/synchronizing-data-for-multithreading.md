@@ -10,11 +10,11 @@ ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1a7561a09b1b47827b3476b5525863503765064f
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44038893"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44180143"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Çoklu İş Parçacığı Kullanımı için Veri Eşitleme
 Birden çok iş parçacığı özellikleri ve yöntemleri tek bir nesnenin çağrı yaptığınızda bu çağrıları eşitlenmiş önemlidir. Aksi takdirde bir iş parçacığı başka bir iş parçacığı yaptığı yarıda kesebilecek ve Nesne geçersiz bir durumda kalabilir. Böyle kesintilerden korunan üyeleri bir sınıf, iş parçacığı güvenli olarak adlandırılır.  

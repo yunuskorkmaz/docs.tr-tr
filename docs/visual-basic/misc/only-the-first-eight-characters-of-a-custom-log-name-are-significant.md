@@ -3,11 +3,11 @@ title: Özel günlük adı yalnızca ilk sekiz karakteri önemlidir
 ms.date: 07/20/2015
 ms.assetid: db2a0252-9ddd-4e93-a239-6a690cc09557
 ms.openlocfilehash: c994399a657de3872e70edce0a9168e22f781ce3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44064283"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44185184"
 ---
 # <a name="only-the-first-eight-characters-of-a-custom-log-name-are-significant"></a>Özel günlük adı yalnızca ilk sekiz karakteri önemlidir
 Olay günlüğü adları benzersiz olup olmadığını denetlerken, yalnızca ilk sekiz karakteri olarak kabul edilir. Bir çakışma olay günlüklerinden, ilk sekiz karakterini paylaşmak neden olabilir.  

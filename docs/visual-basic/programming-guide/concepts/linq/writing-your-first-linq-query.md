@@ -6,12 +6,12 @@ helpviewer_keywords:
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-ms.openlocfilehash: 83a1b7629672c6a74fd29ce698a6b8e6e152b1da
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 4c04c00c5392d8ba363346b06c806ec79041c439
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43798904"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44184317"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>İlk LINQ Sorgunuzu Yazma (Visual Basic)
 A *sorgu* , verileri bir veri kaynağından alır bir ifadedir. Sorgular, bir özel sorgu dilinde ifade edilir. Zaman içinde farklı dillerde farklı türde veri kaynakları için örneğin, ilişkisel veritabanları için SQL ve XML için XQuery geliştirilmiştir. Bu, uygulama geliştiricisi, her veri kaynağı veya desteklenmeyen veri biçimi türü için yeni bir sorgu dili öğrenmek için gerekli kılar.  
@@ -57,7 +57,7 @@ Dim db As New DataContext("C:\Northwind\Northwnd.mdf")
 Dim customers As Table(Of Customer) = db.GetTable(Of Customer)  
 ```  
   
- Belirli türde veri kaynaklarını oluşturma hakkında daha fazla bilgi için çeşitli belgelerine bakın [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sağlayıcıları. (Bu sağlayıcıları listesi için bkz. [LINQ (dil ile tümleşik sorgu)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).) Temel kural basittir: bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] genel destekleyen herhangi bir nesne veri kaynağı, <xref:System.Collections.Generic.IEnumerable%601> arabirimi ya da bundan devralan bir arabirim.  
+ Belirli türde veri kaynaklarını oluşturma hakkında daha fazla bilgi için çeşitli belgelerine bakın [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sağlayıcıları. (Bu sağlayıcıları listesi için bkz. [LINQ (dil ile tümleşik sorgu)](../../../../visual-basic/programming-guide/concepts/linq/index.md).) Temel kural basittir: bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] genel destekleyen herhangi bir nesne veri kaynağı, <xref:System.Collections.Generic.IEnumerable%601> arabirimi ya da bundan devralan bir arabirim.  
   
 > [!NOTE]
 >  Gibi türleri <xref:System.Collections.ArrayList> genel olmayan destekleyen <xref:System.Collections.IEnumerable> arabirimi de kullanılabilir olarak [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] veri kaynakları. Kullanan bir örnek için bir <xref:System.Collections.ArrayList>, bkz: [nasıl yapılır: (Visual Basic) LINQ ile ArrayList sorgulama](how-to-query-an-arraylist-with-linq.md).  
@@ -118,10 +118,11 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
   
  Bir sorgu kullanarak yürütülecek da neden olabilir bir `IEnumerable` yöntemi gibi <xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A> yöntemi.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Visual Basic'te lınq'e Başlarken](getting-started-with-linq.md)  
- [Yerel Çıkarım](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
- [Standart sorgu işleçlerine genel bakış (Visual Basic)](standard-query-operators-overview.md)  
- [Visual Basic'de LINQ'e giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Sorgular](../../../../visual-basic/language-reference/queries/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Visual Basic'te lınq'e Başlarken](getting-started-with-linq.md)  
+- [Yerel Çıkarım](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
+- [Standart sorgu işleçlerine genel bakış (Visual Basic)](standard-query-operators-overview.md)  
+- [Visual Basic'de LINQ'e giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
+- [Sorgular](../../../../visual-basic/language-reference/queries/index.md)

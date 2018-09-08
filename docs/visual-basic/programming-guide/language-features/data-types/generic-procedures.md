@@ -12,59 +12,57 @@ helpviewer_keywords:
 - generics [Visual Basic], procedures
 - generic procedures [Visual Basic], type inference
 ms.assetid: 95577b28-137f-4d5c-a149-919c828600e5
-ms.openlocfilehash: 686087e4520ea5e6e69e5906c628af3ad54749da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9a88a979a6b46f897e5f04f4481d4a23e245b165
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33649402"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44195026"
 ---
 # <a name="generic-procedures-in-visual-basic"></a>Visual Basic'de Genel Yordamlar
-A *genel yordam*, olarak da bilinir bir *genel yöntem*, bir yordamı ile en az bir tür parametresi tanımlı değil. Bu yordam çağrıları her saat veri türleri için kendi gereksinimlerine uyarlamak çağıran kodu sağlar.  
+A *genel yordam*ayrıca adlı bir *genel yöntem*, en az bir tür parametreyle tanımlanan bir yordam olduğunu. Bu, çağıran kodu yordam çağrıları her zaman veri türleri, gereksinimleri ile uyumlu hale getirmenizi sağlar.  
   
- Bir yordam yalnızca genel bir sınıf veya genel yapısı içinde tanımlanan genel değil. Genel olması için yordam bunun sürebilir normal parametreleri yanı sıra en az bir tür parametre almalıdır. Genel sınıf veya yapı nongeneric yordamları ve nongeneric bir sınıf, yapı, içerebilir veya modülü genel yordamlar içerebilir.  
+ Bir yordam, yalnızca genel bir sınıf veya yapının genel bir yapı içinde tanımlanan da genel değil. Yordamı, genel olması için ek normal işlem sürebilir herhangi bir parametre olarak en az bir tür parametresi atmanız gerekir. Bir genel sınıf veya yapı jenerik olmayan yordamları ve jenerik olmayan bir sınıf, yapı, içerebilir veya modülü genel yordamlar içerebilir.  
   
- Genel bir yordam, normal parametre listesinde bir ve kendi yordamdaki kodu varsa, dönüş türü türü parametrelerini kullanabilirsiniz.  
+ Genel bir yordam, normal parametre listesinde bir ve onun yordamdaki kodu varsa, dönüş türü, tür parametreleri kullanabilirsiniz.  
   
 ## <a name="type-inference"></a>Tür Çıkarma  
- Herhangi bir tür bağımsız değişkeni girmeden genel yordam çağırabilirsiniz. Bu şekilde çağırmak için yordam tür bağımsız değişkeni geçirmek için uygun veri türlerini belirlemek derleyici çalışır. Bu adlı *türü çıkarımı*. Aşağıdaki kod bir çağrı gösterir derleyici türü geçirmelisiniz oluşturur, `String` tür parametresi için `t`.  
+ Herhangi bir tür bağımsız değişkeni sağlamadan genel bir yordam çağırabilir. Bu şekilde çağırırsanız derleyici yordamın türü bağımsız değişkenler için uygun veri türlerini belirlemek çalışır. Bu adlandırılır *anlam çıkarma*. Aşağıdaki kod bir çağrı gösterir, derleyicinin tür geçmelidir algılar `String` tür parametresi için `t`.  
   
  [!code-vb[VbVbalrDataTypes#15](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-procedures_1.vb)]  
   
- Tür bağımsız değişkenleri aramanız bağlamından derleyici gösterilemez bir hata bildirir. Böyle bir hata bir olası nedeni bir dizi derece eşleşmemesidir. Örneğin, bir tür parametresi bir dizi normal parametresini tanımlama varsayalım. Genel yordam çağrısı, farklı bir derece (boyutları sayısı), bir dizi sağladığını uyuşmazlığı tür çıkarımı başarısız olmasına neden olur. Aşağıdaki kod bir çağrı gösterir, iki boyutlu bir dizi tek boyutlu dizi bekliyor yordamına geçirilen içinde.  
+ Derleyici, tür bağımsız değişkenlerini çağrınızın bağlamından çıkarsanamaz. bir hata bildirir. Bu tür bir hataya olası nedenlerinden biri, bir dizi derece uyuşmazlığı olmasıdır. Örneğin, bir tür parametresi bir dizi olarak normal parametresini tanımlama varsayalım. Genel bir yordamı çağırma sağlayan bir dizi farklı boyut sayısına (sayı) boyut uyuşmazlığı tür çıkarımı başarısız olmasına neden olur. Aşağıdaki kod bir çağrı gösterir, tek boyutlu dizi bekliyor bir yordam için iki boyutlu bir dizi geçirilir.  
   
- `Public Sub demoSub(Of t)(ByVal arg() As t)`  
+```vb  
+Public Sub demoSub(Of t)(ByVal arg() As t)
+End Sub
+
+Public Sub callDemoSub()
+    Dim twoDimensions(,) As Integer
+    demoSub(twoDimensions)
+End Sub
+```
   
- `End Sub`  
+ Tür çıkarımı, yalnızca tüm tür bağımsız değişkenlerini gt;(yok) çağırabilirsiniz. Bir tür bağımsız değişkeni sağlarsanız, tüm bunları sağlamanız gerekir.  
   
- `Public Sub callDemoSub()`  
-  
- `Dim twoDimensions(,) As Integer`  
-  
- `demoSub(twoDimensions)`  
-  
- `End Sub`  
-  
- Tür çıkarımı yalnızca tüm tür bağımsız değişkenleri kaldırarak çağırabilirsiniz. Bir tür bağımsız değişkeni sağlarsanız, tümünü sağlamanız gerekir.  
-  
- Tür çıkarımı yalnızca genel yordamlar için desteklenir. Tür çıkarımı Genel sınıflar, yapılar, arabirimleri veya temsilciler üzerinde çağrılamıyor.  
+ Tür çıkarımı, yalnızca genel yordamlar için desteklenir. Genel sınıflar, yapılar, arabirimler veya temsilciler tür çıkarımı çağrılamıyor.  
   
 ## <a name="example"></a>Örnek  
   
 ### <a name="description"></a>Açıklama  
- Aşağıdaki örnek, genel tanımlar `Function` bir dizide belirli bir öğeyi bulmak için yordamı. Bir tür parametresi tanımlar ve parametre listesinde iki parametre oluşturmak için kullanılır.  
+ Aşağıdaki örnek, genel tanımlar `Function` yordamı belirli bir öğenin bir dizide bulunacak. Bu, bir tür parametresi tanımlar ve parametre listesinde iki parametre oluşturmak için kullanır.  
   
 ### <a name="code"></a>Kod  
  [!code-vb[VbVbalrDataTypes#14](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-procedures_2.vb)]  
   
 ### <a name="comments"></a>Açıklamalar  
- Önceki örnekte karşılaştırmak olanağı gerektirir `searchValue` her öğeye karşı `searchArray`. Bu yeteneği sağlamak amacıyla, tür parametresi kısıtlar `T` uygulamak için <xref:System.IComparable%601> arabirimi. Kod kullanan <xref:System.IComparable%601.CompareTo%2A> yöntemi yerine `=` işleci, tür bağımsız değişkeni için sağlanan garanti olduğundan `T` destekler `=` işleci.  
+ Yukarıdaki örnekte karşılaştırma gerektirir `searchValue` her öğeye karşı `searchArray`. Bu yeteneği sağlamak için bu tür parametresi kısıtlaması uygular `T` uygulamak için <xref:System.IComparable%601> arabirimi. Kod <xref:System.IComparable%601.CompareTo%2A> yöntemi yerine `=` işleci, bir tür bağımsız değişkeni için sağlanan garanti olduğundan `T` destekler `=` işleci.  
   
  Test edebilirsiniz `findElement` aşağıdaki kodla yordamı.  
   
  [!code-vb[VbVbalrDataTypes#13](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-procedures_3.vb)]  
   
- Yukarıdaki çağrılar `MsgBox` sırasıyla görüntü "0", "1" ve "-1".  
+ Önceki çağrılar `MsgBox` sırasıyla "0", "1" ve "-1" görüntüler.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Visual Basic'de genel türler](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  

@@ -15,11 +15,11 @@ ms.assetid: b4496afe-5fa7-4bb0-85ca-70b0ef21e6fc
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6ad920c8028b102a13fdfe928d21768538e25b0f
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43868160"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44180455"
 ---
 # <a name="constructor-design"></a>Oluşturucu tasarımı
 Oluşturucular iki tür vardır: oluşturucular ve örnek oluşturucuları yazın.  

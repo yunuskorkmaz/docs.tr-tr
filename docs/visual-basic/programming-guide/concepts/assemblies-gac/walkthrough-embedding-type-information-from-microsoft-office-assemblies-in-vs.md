@@ -2,12 +2,12 @@
 title: "İzlenecek yol: Visual Studio'da (Visual Basic) Microsoft Office derlemelerinden tür bilgilerini katıştırma"
 ms.date: 07/20/2015
 ms.assetid: 26b44286-5066-4ad4-8e6a-c24902be347c
-ms.openlocfilehash: 6a28e95f9c3cfcc2481c8f4f9f83303648df43cd
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: bc8f7585964bdd60bac5d5a466f6276fab288c78
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244062"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44188663"
 ---
 # <a name="walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-visual-studio-visual-basic"></a>İzlenecek yol: Visual Studio'da (Visual Basic) Microsoft Office derlemelerinden tür bilgilerini katıştırma
 Tür bilgilerini COM nesnelerine başvuran bir uygulamaya eklerseniz, birincil birlikte çalışma derlemesi (PIA) gereksinimini ortadan kaldırabilir. Ek olarak, gömülü tür bilgileri, uygulamanız için sürüm bağımsızlığı elde etmenizi sağlar. Diğer bir deyişle, programınız her sürüm için belirli bir PIA'ya gerek kalmadan bir COM kitaplığının birden çok sürümünden türler kullanmak üzere yazılabilir. Bu, Microsoft Office kitaplıklarından nesne kullanan uygulamalar için yaygın bir senaryodur. Tür bilgilerini katıştırma farklı Microsoft Office sürümleri program ya da her sürümü Microsoft Office PIA'yı tekrar dağıtma gereği olmaksızın farklı bilgisayarlarda çalışmak için bir programı'nın aynı derlemesini etkinleştirir.  
@@ -101,7 +101,7 @@ Tür bilgilerini COM nesnelerine başvuran bir uygulamaya eklerseniz, birincil b
   
 1.  Bu kılavuzda Visual Studio tarafından oluşturulan projeyi açın.  
   
-2.  Üzerinde **derleme** menüsünde seçin **CreateExcelWorkbook Yayınla**. Uygulamanın yüklenebilir bir sürümünü oluşturmak için yayınlama Sihirbazı'nın adımları izleyin. Daha fazla bilgi için [Yayımlama Sihirbazı (Visual Studio'da Office Geliştirme)](https://msdn.microsoft.com/library/bb625071).  
+2.  Üzerinde **derleme** menüsünde seçin **CreateExcelWorkbook Yayınla**. Uygulamanın yüklenebilir bir sürümünü oluşturmak için yayınlama Sihirbazı'nın adımları izleyin. Daha fazla bilgi için [Yayımlama Sihirbazı (Visual Studio'da Office Geliştirme)](/visualstudio/vsto/publish-wizard-office-development-in-visual-studio).  
   
 3.  Uygulama, .NET Framework 4 veya daha yüksek ve farklı bir Excel sürümünün yüklü bir bilgisayara yükleyin.  
   
@@ -109,6 +109,7 @@ Tür bilgilerini COM nesnelerine başvuran bir uygulamaya eklerseniz, birincil b
   
 5.  Örnek kodda belirtilen konumda bir Excel çalışma kitabının oluşturulduğunu doğrulayın: C:\SampleFolder\SampleWorkbook.xls.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [İzlenecek yol: Visual Studio'da (Visual Basic) yönetilen derlemelerden türler katıştırma](../../../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)  
- [/ Link (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/link.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [İzlenecek yol: Visual Studio'da (Visual Basic) yönetilen derlemelerden türler katıştırma](../../../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)  
+- [/ Link (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/link.md)

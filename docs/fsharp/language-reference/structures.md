@@ -2,12 +2,12 @@
 title: Yapılar (F#)
 description: 'F # yapısı hakkında genellikle bir compact nesne türü bilgi türleri küçük miktarda veri ve basit davranışı için bir sınıf daha verimlidir.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 889d493af3c9c388bdc7969c02bc7b021b82517d
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 08af88132dda28883e246b94585ff4ed8bd2f16a
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43799677"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44181933"
 ---
 # <a name="structures"></a>Yapılar
 
@@ -48,9 +48,51 @@ Aşağıdaki kod örnekleri, yapı tanımları göstermektedir.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2501.fs)]
 
+## <a name="byreflike-structs"></a>ByRefLike yapılar
+
+Uyması için kendi yapılar tanımlayabilirsiniz `byref`-ister semantiği: bkz [Zkratka](byrefs.md) daha fazla bilgi için. Bunun <xref:System.Runtime.CompilerServices.IsByRefLikeAttribute> özniteliği:
+
+```fsharp
+open System
+open System.Runtime.CompilerServices
+
+[<IsByRefLike; Struct>]
+type S(count1: Span<int>, count2: Span<int>) =
+    member x.Count1 = count1
+    member x.Count2 = count2
+```
+
+`IsByRefLike` değil gelmez `Struct`. Her ikisi de türünde bulunmalıdır.
+
+Bir "`byref`-gibi" yapı F # içinde bir yığın bağlı değer türüdür. Bu, hiçbir zaman yönetilen yığında ayrılır. A `byref`-gibi yaşam süresi ve yakalama olmayan hakkında güçlü denetimleri kümesiyle zorlanmış olarak yapı yüksek performanslı programlama için kullanışlıdır. Kurallar şunlardır:
+
+* İşlev parametrelerini, yöntem parametreleri, yerel değişkenler döner kullanılabilirler.
+* Statik olamaz veya bir sınıf ya da normal yapı üyelerinin örneği.
+* Herhangi bir kapanış yapısı tarafından yakalanamıyor (`async` yöntemlerde veya lambda ifadelerinde).
+* Genel parametre olarak kullanılamaz.
+
+Bu kurallar çok kesin kullanımını kısıtlıyor olsa da, bunlar promise yüksek performanslı bilgi işlem güvenli bir şekilde karşılamak için bunu yapın.
+
+## <a name="readonly-structs"></a>Salt okunur yapılar
+
+Yapılar ile açıklama ekleyebilirsiniz <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute> özniteliği. Örneğin:
+
+```fsharp
+[<IsReadOnly; Struct>]
+type S(count1: int, count2: int) =
+    member x.Count1 = count1
+    member x.Count2 = count2
+```
+
+`IsReadOnly` değil gelmez `Struct`. Her ikisi de sahip olarak eklemelisiniz bir `IsReadOnly` yapısı.
+
+Bu özniteliğin kullanımı yayan F # ile C# işleme biçimi için bilmeniz izin vererek meta verileri `inref<'T>` ve `in ref`sırasıyla.
+
+Salt okunur yapı içinde değiştirilebilir bir değer tanımlayan bir hata oluşturur.
+
 ## <a name="struct-records-and-discriminated-unions"></a>Yapı kayıtları ve ayrılmış birleşimler
 
-F # 4.1 ile başlayarak, gösterebilir [kayıtları](records.md) ve [ayırt edici birleşimler](discriminated-unions.md) yapılar ile olarak `[<Struct>]` özniteliği.  Daha fazla bilgi için her bir makaleye göz atın.
+Temsil ettiğiniz [kayıtları](records.md) ve [ayırt edici birleşimler](discriminated-unions.md) yapılar ile olarak `[<Struct>]` özniteliği.  Daha fazla bilgi için her bir makaleye göz atın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

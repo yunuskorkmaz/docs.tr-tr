@@ -11,11 +11,11 @@ ms.assetid: 68384064-7ee7-41e2-90e3-71f00bde01bb
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 18458e52c6cf38b2900036613676adea3f3b2d0b
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44098928"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44188130"
 ---
 # <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>Nasıl yapılır: İş Parçacığı Yerel Değişkenleriyle bir Parallel.For Döngüsü Yazma
 Bu örnek tarafından oluşturulan her ayrı görev durumda depolanıp thread-local değişkenleri kullanmayı gösterir. bir <xref:System.Threading.Tasks.Parallel.For%2A> döngü. İş parçacığı-yerel verileri kullanarak, çok sayıda paylaşılan durum erişimin eşitleme ek yükü önleyebilirsiniz. Paylaşılan bir kaynağa her yinelemede yazmak, yerine işlem ve tüm yineleme için görev tamamlanana kadar değeri depolar. Paylaşılan kaynak için nihai sonucu bir defa yazın veya başka yönteme geçirin.  

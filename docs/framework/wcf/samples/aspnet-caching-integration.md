@@ -3,11 +3,11 @@ title: ASP.NET Önbelleğe Alma Tümleştirmesi
 ms.date: 03/30/2017
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
 ms.openlocfilehash: 55e6213bf0c4c212ebcf4e68882d16532c0e4229
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44128293"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44183164"
 ---
 # <a name="aspnet-caching-integration"></a>ASP.NET Önbelleğe Alma Tümleştirmesi
 Bu örnek, WCF WEB HTTP programlama modeli ile ASP.NET çıktı önbelleği nasıl gösterir. Lütfen [temel kaynak hizmeti](../../../../docs/framework/wcf/samples/basic-resource-service.md) derinliği hizmet uygulamasında anlatılmaktadır bu senaryo, şirket içinde barındırılan bir sürümü için örnek. Bu konu, ASP.NET çıktı önbelleği tümleştirme özelliği üzerinde odaklanır.  

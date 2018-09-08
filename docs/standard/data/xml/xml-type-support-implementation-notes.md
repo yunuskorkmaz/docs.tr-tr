@@ -6,11 +6,11 @@ ms.assetid: 26b071f3-1261-47ef-8690-0717f5cd93c1
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 51066ab6fb0fa4749befdd0f94790fa45a7ab5cf
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44047037"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44191072"
 ---
 # <a name="xml-type-support-implementation-notes"></a>XML tür desteği uygulama notları
 Bu konu, istediğiniz bazı uygulama ayrıntılarını açıklar.  

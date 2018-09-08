@@ -9,11 +9,11 @@ ms.assetid: a2758f40-e497-4964-8d8d-1bb68af14dcd
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4a6b80a885f43facf4b3d4dd1dcb56d937d4f8de
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44097998"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44188806"
 ---
 # <a name="changing-namespace-declarations-in-an-xml-document"></a>Namespace bildirimi bir XML belgesi değiştirme
 **XmlDocument** ad alanı bildirimi gösterir ve **xmlns** belge nesne modeli bir parçası olarak öznitelikleri. Bunlar depolanır **XmlDocument**, belgeyi kaydettiğinizde, bu öznitelikleri konumunu koruyabilirsiniz. Bu öznitelikler değiştirme sahip herhangi bir etkisi **adı**, **namespaceURI**, ve **önek** diğer düğümlere ağacında özellikleri. Örneğin aşağıdaki belge yüklemek, sonra `test` öğesinin **namespaceURI** `123.`  

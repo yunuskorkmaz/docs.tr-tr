@@ -11,11 +11,11 @@ ms.assetid: a49058d2-0276-43a7-9502-04adddf857b2
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6d68966f60c5039fd67195a03facc1586b9ed154
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44097015"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44183268"
 ---
 # <a name="names-of-namespaces"></a>Ad alanlarının adları
 Olarak diğer adlandırma kuralları ile hedef ad alanları adlandırırken yeterli netlik ad alanı içeriğini olma olasılığı nedir hemen bilmek framework kullanarak programcısı için oluşturuyor. Aşağıdaki şablonu genel bir kural ad alanlarını adlandırma belirtir:  

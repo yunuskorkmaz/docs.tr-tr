@@ -9,11 +9,11 @@ ms.assetid: a2aa99ba-8239-4818-9281-f1d72ee40bde
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: cec2b85c55871c8a21a74e79cfcdd041fa063bec
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43866630"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44187763"
 ---
 # <a name="conversion-of-xml-data-types"></a>XML veri türlerini dönüştürme
 Yöntemlerin çoğunun bulunan bir **XmlConvert** sınıfı veri dizeler ve kesin tür belirtilmiş biçimleri arasında dönüştürmek için kullanılır. Yerel ayar bağımsız yöntemlerdir. Bu, tüm yerel ayarlar dönüştürme yaparken dikkate değil, anlamına gelir.  
