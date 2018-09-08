@@ -6,45 +6,45 @@ helpviewer_keywords:
 - attributes [C#], with generics
 ms.assetid: da9fc326-4648-454a-8e13-3911a2edefd7
 ms.openlocfilehash: 0fe2d61001584aa7c175500bfa754b2ae2244660
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44097427"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44209257"
 ---
-# <a name="generics-and-attributes-c-programming-guide"></a><span data-ttu-id="42a4c-102">Genel Türler ve Öznitelikler (C# Programlama Kılavuzu)</span><span class="sxs-lookup"><span data-stu-id="42a4c-102">Generics and Attributes (C# Programming Guide)</span></span>
-<span data-ttu-id="42a4c-103">Genel türler için öznitelikleri genel olmayan türleri aynı şekilde uygulanabilir.</span><span class="sxs-lookup"><span data-stu-id="42a4c-103">Attributes can be applied to generic types in the same way as non-generic types.</span></span> <span data-ttu-id="42a4c-104">Öznitelikleri uygulama ile ilgili daha fazla bilgi için bkz: [öznitelikleri](../../../csharp/programming-guide/concepts/attributes/index.md).</span><span class="sxs-lookup"><span data-stu-id="42a4c-104">For more information on applying attributes, see [Attributes](../../../csharp/programming-guide/concepts/attributes/index.md).</span></span>  
+# <a name="generics-and-attributes-c-programming-guide"></a><span data-ttu-id="7b0d1-102">Genel Türler ve Öznitelikler (C# Programlama Kılavuzu)</span><span class="sxs-lookup"><span data-stu-id="7b0d1-102">Generics and Attributes (C# Programming Guide)</span></span>
+<span data-ttu-id="7b0d1-103">Genel türler için öznitelikleri genel olmayan türleri aynı şekilde uygulanabilir.</span><span class="sxs-lookup"><span data-stu-id="7b0d1-103">Attributes can be applied to generic types in the same way as non-generic types.</span></span> <span data-ttu-id="7b0d1-104">Öznitelikleri uygulama ile ilgili daha fazla bilgi için bkz: [öznitelikleri](../../../csharp/programming-guide/concepts/attributes/index.md).</span><span class="sxs-lookup"><span data-stu-id="7b0d1-104">For more information on applying attributes, see [Attributes](../../../csharp/programming-guide/concepts/attributes/index.md).</span></span>  
   
- <span data-ttu-id="42a4c-105">Özel öznitelikler için hiçbir tür bağımsız değişkenleri sağlanan genel türler ve tüm tür parametreleri için bağımsız değişkenleri kapalı oluşturulan genel türler, açık genel türler başvurmak için yalnızca izin verilir.</span><span class="sxs-lookup"><span data-stu-id="42a4c-105">Custom attributes are only permitted to reference open generic types, which are generic types for which no type arguments are supplied, and closed constructed generic types, which supply arguments for all type parameters.</span></span>  
+ <span data-ttu-id="7b0d1-105">Özel öznitelikler için hiçbir tür bağımsız değişkenleri sağlanan genel türler ve tüm tür parametreleri için bağımsız değişkenleri kapalı oluşturulan genel türler, açık genel türler başvurmak için yalnızca izin verilir.</span><span class="sxs-lookup"><span data-stu-id="7b0d1-105">Custom attributes are only permitted to reference open generic types, which are generic types for which no type arguments are supplied, and closed constructed generic types, which supply arguments for all type parameters.</span></span>  
   
- <span data-ttu-id="42a4c-106">Aşağıdaki örnekler, bu özel öznitelik kullanın:</span><span class="sxs-lookup"><span data-stu-id="42a4c-106">The following examples use this custom attribute:</span></span>  
+ <span data-ttu-id="7b0d1-106">Aşağıdaki örnekler, bu özel öznitelik kullanın:</span><span class="sxs-lookup"><span data-stu-id="7b0d1-106">The following examples use this custom attribute:</span></span>  
   
  [!code-csharp[csProgGuideGenerics#48](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-and-attributes_1.cs)]  
   
- <span data-ttu-id="42a4c-107">Öznitelik, bir açık genel tür başvurabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="42a4c-107">An attribute can reference an open generic type:</span></span>  
+ <span data-ttu-id="7b0d1-107">Öznitelik, bir açık genel tür başvurabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="7b0d1-107">An attribute can reference an open generic type:</span></span>  
   
  [!code-csharp[csProgGuideGenerics#49](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-and-attributes_2.cs)]  
   
- <span data-ttu-id="42a4c-108">Uygun sayıda virgül kullanarak birden çok tür parametreleri belirtin.</span><span class="sxs-lookup"><span data-stu-id="42a4c-108">Specify multiple type parameters using the appropriate number of commas.</span></span> <span data-ttu-id="42a4c-109">Bu örnekte, `GenericClass2` iki tür parametreleri vardır:</span><span class="sxs-lookup"><span data-stu-id="42a4c-109">In this example, `GenericClass2` has two type parameters:</span></span>  
+ <span data-ttu-id="7b0d1-108">Uygun sayıda virgül kullanarak birden çok tür parametreleri belirtin.</span><span class="sxs-lookup"><span data-stu-id="7b0d1-108">Specify multiple type parameters using the appropriate number of commas.</span></span> <span data-ttu-id="7b0d1-109">Bu örnekte, `GenericClass2` iki tür parametreleri vardır:</span><span class="sxs-lookup"><span data-stu-id="7b0d1-109">In this example, `GenericClass2` has two type parameters:</span></span>  
   
  [!code-csharp[csProgGuideGenerics#50](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-and-attributes_3.cs)]  
   
- <span data-ttu-id="42a4c-110">Öznitelik, kapalı bir oluşturulmuş genel tür başvurabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="42a4c-110">An attribute can reference a closed constructed generic type:</span></span>  
+ <span data-ttu-id="7b0d1-110">Öznitelik, kapalı bir oluşturulmuş genel tür başvurabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="7b0d1-110">An attribute can reference a closed constructed generic type:</span></span>  
   
  [!code-csharp[csProgGuideGenerics#51](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-and-attributes_4.cs)]  
   
- <span data-ttu-id="42a4c-111">Genel tür parametresine başvuran bir öznitelik, bir derleme zamanı hatasına neden olur:</span><span class="sxs-lookup"><span data-stu-id="42a4c-111">An attribute that references a generic type parameter will cause a compile-time error:</span></span>  
+ <span data-ttu-id="7b0d1-111">Genel tür parametresine başvuran bir öznitelik, bir derleme zamanı hatasına neden olur:</span><span class="sxs-lookup"><span data-stu-id="7b0d1-111">An attribute that references a generic type parameter will cause a compile-time error:</span></span>  
   
  [!code-csharp[csProgGuideGenerics#52](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-and-attributes_5.cs)]  
   
- <span data-ttu-id="42a4c-112">Genel tür devralamaz <xref:System.Attribute>:</span><span class="sxs-lookup"><span data-stu-id="42a4c-112">A generic type cannot inherit from <xref:System.Attribute>:</span></span>  
+ <span data-ttu-id="7b0d1-112">Genel tür devralamaz <xref:System.Attribute>:</span><span class="sxs-lookup"><span data-stu-id="7b0d1-112">A generic type cannot inherit from <xref:System.Attribute>:</span></span>  
   
  [!code-csharp[csProgGuideGenerics#53](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-and-attributes_6.cs)]  
   
- <span data-ttu-id="42a4c-113">Çalışma zamanında bir genel tür veya tür parametresi ile ilgili bilgi edinme yöntemlerini kullanabilirsiniz <xref:System.Reflection>.</span><span class="sxs-lookup"><span data-stu-id="42a4c-113">To obtain information about a generic type or type parameter at run time, you can use the methods of <xref:System.Reflection>.</span></span> <span data-ttu-id="42a4c-114">Daha fazla bilgi için [genel türler ve yansıma](../../../csharp/programming-guide/generics/generics-and-reflection.md)</span><span class="sxs-lookup"><span data-stu-id="42a4c-114">For more information, see [Generics and Reflection](../../../csharp/programming-guide/generics/generics-and-reflection.md)</span></span>  
+ <span data-ttu-id="7b0d1-113">Çalışma zamanında bir genel tür veya tür parametresi ile ilgili bilgi edinme yöntemlerini kullanabilirsiniz <xref:System.Reflection>.</span><span class="sxs-lookup"><span data-stu-id="7b0d1-113">To obtain information about a generic type or type parameter at run time, you can use the methods of <xref:System.Reflection>.</span></span> <span data-ttu-id="7b0d1-114">Daha fazla bilgi için [genel türler ve yansıma](../../../csharp/programming-guide/generics/generics-and-reflection.md)</span><span class="sxs-lookup"><span data-stu-id="7b0d1-114">For more information, see [Generics and Reflection](../../../csharp/programming-guide/generics/generics-and-reflection.md)</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="42a4c-115">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="42a4c-115">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7b0d1-115">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="7b0d1-115">See Also</span></span>
 
-- [<span data-ttu-id="42a4c-116">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="42a4c-116">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="42a4c-117">Genel Türler</span><span class="sxs-lookup"><span data-stu-id="42a4c-117">Generics</span></span>](../../../csharp/programming-guide/generics/index.md)  
-- [<span data-ttu-id="42a4c-118">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="42a4c-118">Attributes</span></span>](../../../../docs/standard/attributes/index.md)
+- [<span data-ttu-id="7b0d1-116">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="7b0d1-116">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="7b0d1-117">Genel Türler</span><span class="sxs-lookup"><span data-stu-id="7b0d1-117">Generics</span></span>](../../../csharp/programming-guide/generics/index.md)  
+- [<span data-ttu-id="7b0d1-118">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="7b0d1-118">Attributes</span></span>](../../../../docs/standard/attributes/index.md)

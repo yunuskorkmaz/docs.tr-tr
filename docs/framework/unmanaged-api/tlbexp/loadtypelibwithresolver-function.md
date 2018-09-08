@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b6a217e2212bb900d7ba83ccdd9cb00d30454baf
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44137102"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44211703"
 ---
-# <a name="loadtypelibwithresolver-function"></a><span data-ttu-id="3fd52-102">LoadTypeLibWithResolver İşlevi</span><span class="sxs-lookup"><span data-stu-id="3fd52-102">LoadTypeLibWithResolver Function</span></span>
-<span data-ttu-id="3fd52-103">Bir tür kitaplığı yükler ve sağlanan kullanan [Itypelibresolver arabirimi](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) tüm dahili olarak başvurulan tür kitaplıkları çözümlenecek.</span><span class="sxs-lookup"><span data-stu-id="3fd52-103">Loads a type library and uses the supplied [ITypeLibResolver interface](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) to resolve any internally referenced type libraries.</span></span>  
+# <a name="loadtypelibwithresolver-function"></a><span data-ttu-id="e20f8-102">LoadTypeLibWithResolver İşlevi</span><span class="sxs-lookup"><span data-stu-id="e20f8-102">LoadTypeLibWithResolver Function</span></span>
+<span data-ttu-id="e20f8-103">Bir tür kitaplığı yükler ve sağlanan kullanan [Itypelibresolver arabirimi](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) tüm dahili olarak başvurulan tür kitaplıkları çözümlenecek.</span><span class="sxs-lookup"><span data-stu-id="e20f8-103">Loads a type library and uses the supplied [ITypeLibResolver interface](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) to resolve any internally referenced type libraries.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3fd52-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="3fd52-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e20f8-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="e20f8-104">Syntax</span></span>  
   
 ```  
 HRESULT LoadTypeLibWithResolver(  
@@ -36,63 +36,63 @@ HRESULT LoadTypeLibWithResolver(
     [out] ITypeLib          **pptlib);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="3fd52-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="3fd52-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="e20f8-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="e20f8-105">Parameters</span></span>  
  `szFile`  
- <span data-ttu-id="3fd52-106">[in] Tür kitaplığı dosyasının yolu.</span><span class="sxs-lookup"><span data-stu-id="3fd52-106">[in] The file path of the type library.</span></span>  
+ <span data-ttu-id="e20f8-106">[in] Tür kitaplığı dosyasının yolu.</span><span class="sxs-lookup"><span data-stu-id="e20f8-106">[in] The file path of the type library.</span></span>  
   
  `regkind`  
- <span data-ttu-id="3fd52-107">[in] A [REGKIND numaralandırma](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/ne-oleauto-tagregkind) nasıl bir tür kitaplığı kaydedilmemiş denetleyen bayrak.</span><span class="sxs-lookup"><span data-stu-id="3fd52-107">[in] A [REGKIND enumeration](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/ne-oleauto-tagregkind) flag that controls how the type library is registered.</span></span> <span data-ttu-id="3fd52-108">Olası değerleri şunlardır:</span><span class="sxs-lookup"><span data-stu-id="3fd52-108">Its possible values are:</span></span>  
+ <span data-ttu-id="e20f8-107">[in] A [REGKIND numaralandırma](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/ne-oleauto-tagregkind) nasıl bir tür kitaplığı kaydedilmemiş denetleyen bayrak.</span><span class="sxs-lookup"><span data-stu-id="e20f8-107">[in] A [REGKIND enumeration](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/ne-oleauto-tagregkind) flag that controls how the type library is registered.</span></span> <span data-ttu-id="e20f8-108">Olası değerleri şunlardır:</span><span class="sxs-lookup"><span data-stu-id="e20f8-108">Its possible values are:</span></span>  
   
--   <span data-ttu-id="3fd52-109">`REGKIND_DEFAULT`: Varsayılan kayıt davranışı kullanın.</span><span class="sxs-lookup"><span data-stu-id="3fd52-109">`REGKIND_DEFAULT`: Use default registration behavior.</span></span>  
+-   <span data-ttu-id="e20f8-109">`REGKIND_DEFAULT`: Varsayılan kayıt davranışı kullanın.</span><span class="sxs-lookup"><span data-stu-id="e20f8-109">`REGKIND_DEFAULT`: Use default registration behavior.</span></span>  
   
--   <span data-ttu-id="3fd52-110">`REGKIND_REGISTER`: Bu tür kitaplığına kaydedin.</span><span class="sxs-lookup"><span data-stu-id="3fd52-110">`REGKIND_REGISTER`: Register this type library.</span></span>  
+-   <span data-ttu-id="e20f8-110">`REGKIND_REGISTER`: Bu tür kitaplığına kaydedin.</span><span class="sxs-lookup"><span data-stu-id="e20f8-110">`REGKIND_REGISTER`: Register this type library.</span></span>  
   
--   <span data-ttu-id="3fd52-111">`REGKIND_NONE`: Bu tür kitaplığı kaydetmeyin.</span><span class="sxs-lookup"><span data-stu-id="3fd52-111">`REGKIND_NONE`: Do not register this type library.</span></span>  
+-   <span data-ttu-id="e20f8-111">`REGKIND_NONE`: Bu tür kitaplığı kaydetmeyin.</span><span class="sxs-lookup"><span data-stu-id="e20f8-111">`REGKIND_NONE`: Do not register this type library.</span></span>  
   
  `pTlbResolver`  
- <span data-ttu-id="3fd52-112">[in] Uygulanmasına yönelik bir işaretçi [Itypelibresolver arabirimi](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md).</span><span class="sxs-lookup"><span data-stu-id="3fd52-112">[in] A pointer to the implementation of the [ITypeLibResolver interface](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md).</span></span>  
+ <span data-ttu-id="e20f8-112">[in] Uygulanmasına yönelik bir işaretçi [Itypelibresolver arabirimi](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md).</span><span class="sxs-lookup"><span data-stu-id="e20f8-112">[in] A pointer to the implementation of the [ITypeLibResolver interface](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md).</span></span>  
   
  `pptlib`  
- <span data-ttu-id="3fd52-113">[out] Yüklenmekte tür kitaplığına bir başvuru.</span><span class="sxs-lookup"><span data-stu-id="3fd52-113">[out] A reference to the type library that is being loaded.</span></span>  
+ <span data-ttu-id="e20f8-113">[out] Yüklenmekte tür kitaplığına bir başvuru.</span><span class="sxs-lookup"><span data-stu-id="e20f8-113">[out] A reference to the type library that is being loaded.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="3fd52-114">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="3fd52-114">Return Value</span></span>  
- <span data-ttu-id="3fd52-115">Aşağıdaki tabloda listelenen HRESULT değerlerinden biri.</span><span class="sxs-lookup"><span data-stu-id="3fd52-115">One of the HRESULT values listed in the following table.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="e20f8-114">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="e20f8-114">Return Value</span></span>  
+ <span data-ttu-id="e20f8-115">Aşağıdaki tabloda listelenen HRESULT değerlerinden biri.</span><span class="sxs-lookup"><span data-stu-id="e20f8-115">One of the HRESULT values listed in the following table.</span></span>  
   
-|<span data-ttu-id="3fd52-116">Dönüş değeri</span><span class="sxs-lookup"><span data-stu-id="3fd52-116">Return value</span></span>|<span data-ttu-id="3fd52-117">Açıklama</span><span class="sxs-lookup"><span data-stu-id="3fd52-117">Meaning</span></span>|  
+|<span data-ttu-id="e20f8-116">Dönüş değeri</span><span class="sxs-lookup"><span data-stu-id="e20f8-116">Return value</span></span>|<span data-ttu-id="e20f8-117">Açıklama</span><span class="sxs-lookup"><span data-stu-id="e20f8-117">Meaning</span></span>|  
 |------------------|-------------|  
-|`S_OK`|<span data-ttu-id="3fd52-118">Başarılı.</span><span class="sxs-lookup"><span data-stu-id="3fd52-118">Success.</span></span>|  
-|`E_OUTOFMEMORY`|<span data-ttu-id="3fd52-119">Bellek yetersiz.</span><span class="sxs-lookup"><span data-stu-id="3fd52-119">Out of memory.</span></span>|  
-|`E_POINTER`|<span data-ttu-id="3fd52-120">Bir veya daha fazla işaretçileri geçersizdir.</span><span class="sxs-lookup"><span data-stu-id="3fd52-120">One or more of the pointers are invalid.</span></span>|  
-|`E_INVALIDARG`|<span data-ttu-id="3fd52-121">Bir veya daha fazla bağımsız değişken geçersiz.</span><span class="sxs-lookup"><span data-stu-id="3fd52-121">One or more of the arguments are invalid.</span></span>|  
-|`TYPE_E_IOERROR`|<span data-ttu-id="3fd52-122">İşlevi, dosyaya yazılamadı.</span><span class="sxs-lookup"><span data-stu-id="3fd52-122">The function could not write to the file.</span></span>|  
-|`TYPE_E_REGISTRYACCESS`|<span data-ttu-id="3fd52-123">Sistem kayıt veritabanı açılamadı.</span><span class="sxs-lookup"><span data-stu-id="3fd52-123">The system registration database could not be opened.</span></span>|  
-|`TYPE_E_INVALIDSTATE`|<span data-ttu-id="3fd52-124">Tür kitaplığı dosyası açılamadı.</span><span class="sxs-lookup"><span data-stu-id="3fd52-124">The type library could not be opened.</span></span>|  
-|`TYPE_E_CANTLOADLIBRARY`|<span data-ttu-id="3fd52-125">Tür kitaplığı veya DLL yüklenemedi.</span><span class="sxs-lookup"><span data-stu-id="3fd52-125">The type library or DLL could not be loaded.</span></span>|  
+|`S_OK`|<span data-ttu-id="e20f8-118">Başarılı.</span><span class="sxs-lookup"><span data-stu-id="e20f8-118">Success.</span></span>|  
+|`E_OUTOFMEMORY`|<span data-ttu-id="e20f8-119">Bellek yetersiz.</span><span class="sxs-lookup"><span data-stu-id="e20f8-119">Out of memory.</span></span>|  
+|`E_POINTER`|<span data-ttu-id="e20f8-120">Bir veya daha fazla işaretçileri geçersizdir.</span><span class="sxs-lookup"><span data-stu-id="e20f8-120">One or more of the pointers are invalid.</span></span>|  
+|`E_INVALIDARG`|<span data-ttu-id="e20f8-121">Bir veya daha fazla bağımsız değişken geçersiz.</span><span class="sxs-lookup"><span data-stu-id="e20f8-121">One or more of the arguments are invalid.</span></span>|  
+|`TYPE_E_IOERROR`|<span data-ttu-id="e20f8-122">İşlevi, dosyaya yazılamadı.</span><span class="sxs-lookup"><span data-stu-id="e20f8-122">The function could not write to the file.</span></span>|  
+|`TYPE_E_REGISTRYACCESS`|<span data-ttu-id="e20f8-123">Sistem kayıt veritabanı açılamadı.</span><span class="sxs-lookup"><span data-stu-id="e20f8-123">The system registration database could not be opened.</span></span>|  
+|`TYPE_E_INVALIDSTATE`|<span data-ttu-id="e20f8-124">Tür kitaplığı dosyası açılamadı.</span><span class="sxs-lookup"><span data-stu-id="e20f8-124">The type library could not be opened.</span></span>|  
+|`TYPE_E_CANTLOADLIBRARY`|<span data-ttu-id="e20f8-125">Tür kitaplığı veya DLL yüklenemedi.</span><span class="sxs-lookup"><span data-stu-id="e20f8-125">The type library or DLL could not be loaded.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="3fd52-126">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="3fd52-126">Remarks</span></span>  
- <span data-ttu-id="3fd52-127">[Tlbexp.exe (tür kitaplığı dışarı Aktarıcı)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) çağrıları `LoadTypeLibWithResolver` derleme için tür kitaplığını dönüştürme işlemi sırasında işlevi.</span><span class="sxs-lookup"><span data-stu-id="3fd52-127">The [Tlbexp.exe (Type Library Exporter)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) calls the `LoadTypeLibWithResolver` function during the assembly-to-type-library conversion process.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e20f8-126">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="e20f8-126">Remarks</span></span>  
+ <span data-ttu-id="e20f8-127">[Tlbexp.exe (tür kitaplığı dışarı Aktarıcı)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) çağrıları `LoadTypeLibWithResolver` derleme için tür kitaplığını dönüştürme işlemi sırasında işlevi.</span><span class="sxs-lookup"><span data-stu-id="e20f8-127">The [Tlbexp.exe (Type Library Exporter)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) calls the `LoadTypeLibWithResolver` function during the assembly-to-type-library conversion process.</span></span>  
   
- <span data-ttu-id="3fd52-128">Bu işlev, belirtilen tür kitaplığı ile en az düzeyde erişim kayıt defterine yükler.</span><span class="sxs-lookup"><span data-stu-id="3fd52-128">This function loads the specified type library with minimal access to the registry.</span></span> <span data-ttu-id="3fd52-129">İşlev, her biri gerekir yüklenebilir ve üst tür kitaplığına eklenen dahili olarak başvurulan tür kitaplıkları için tür kitaplığı ardından inceler.</span><span class="sxs-lookup"><span data-stu-id="3fd52-129">The function then examines the type library for internally referenced type libraries, each of which must be loaded and added to the parent type library.</span></span>  
+ <span data-ttu-id="e20f8-128">Bu işlev, belirtilen tür kitaplığı ile en az düzeyde erişim kayıt defterine yükler.</span><span class="sxs-lookup"><span data-stu-id="e20f8-128">This function loads the specified type library with minimal access to the registry.</span></span> <span data-ttu-id="e20f8-129">İşlev, her biri gerekir yüklenebilir ve üst tür kitaplığına eklenen dahili olarak başvurulan tür kitaplıkları için tür kitaplığı ardından inceler.</span><span class="sxs-lookup"><span data-stu-id="e20f8-129">The function then examines the type library for internally referenced type libraries, each of which must be loaded and added to the parent type library.</span></span>  
   
- <span data-ttu-id="3fd52-130">Başvurulan tür kitaplığının yüklenmeden önce bir tam dosya yolu başvurusu dosya yoluna çözümlenmelidir.</span><span class="sxs-lookup"><span data-stu-id="3fd52-130">Before a referenced type library can be loaded, its reference file path must be resolved to a full file path.</span></span> <span data-ttu-id="3fd52-131">Bu aracılığıyla gerçekleştirilir [ResolveTypeLib yöntemi](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md) tarafından sağlanan [Itypelibresolver arabirimi](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md), içinde geçirilen `pTlbResolver` parametresi.</span><span class="sxs-lookup"><span data-stu-id="3fd52-131">This is accomplished through the [ResolveTypeLib method](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md) that is provided by the [ITypeLibResolver interface](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md), which is passed in the `pTlbResolver` parameter.</span></span>  
+ <span data-ttu-id="e20f8-130">Başvurulan tür kitaplığının yüklenmeden önce bir tam dosya yolu başvurusu dosya yoluna çözümlenmelidir.</span><span class="sxs-lookup"><span data-stu-id="e20f8-130">Before a referenced type library can be loaded, its reference file path must be resolved to a full file path.</span></span> <span data-ttu-id="e20f8-131">Bu aracılığıyla gerçekleştirilir [ResolveTypeLib yöntemi](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md) tarafından sağlanan [Itypelibresolver arabirimi](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md), içinde geçirilen `pTlbResolver` parametresi.</span><span class="sxs-lookup"><span data-stu-id="e20f8-131">This is accomplished through the [ResolveTypeLib method](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md) that is provided by the [ITypeLibResolver interface](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md), which is passed in the `pTlbResolver` parameter.</span></span>  
   
- <span data-ttu-id="3fd52-132">Başvurulan tür kitaplığının tam dosya yolunu bilindiğinde `LoadTypeLibWithResolver` işlevi yükler ve başvurulan tür kitaplığının bir birleşik asıl tür kütüphanesi oluşturuluyor üst türü, ekler.</span><span class="sxs-lookup"><span data-stu-id="3fd52-132">When the full file path of the referenced type library is known, the `LoadTypeLibWithResolver` function loads and adds the referenced type library to the parent type library, creating a combined master type library.</span></span>  
+ <span data-ttu-id="e20f8-132">Başvurulan tür kitaplığının tam dosya yolunu bilindiğinde `LoadTypeLibWithResolver` işlevi yükler ve başvurulan tür kitaplığının bir birleşik asıl tür kütüphanesi oluşturuluyor üst türü, ekler.</span><span class="sxs-lookup"><span data-stu-id="e20f8-132">When the full file path of the referenced type library is known, the `LoadTypeLibWithResolver` function loads and adds the referenced type library to the parent type library, creating a combined master type library.</span></span>  
   
- <span data-ttu-id="3fd52-133">İşlevi, çözümler ve tüm dahili olarak başvurulan tür kitaplıklarını yükler sonra ana çözümlenen tür kitaplığına bir başvuru döndürür. `pptlib` parametresi.</span><span class="sxs-lookup"><span data-stu-id="3fd52-133">After the function resolves and loads all internally referenced type libraries, it returns a reference to the master resolved type library in the `pptlib` parameter.</span></span>  
+ <span data-ttu-id="e20f8-133">İşlevi, çözümler ve tüm dahili olarak başvurulan tür kitaplıklarını yükler sonra ana çözümlenen tür kitaplığına bir başvuru döndürür. `pptlib` parametresi.</span><span class="sxs-lookup"><span data-stu-id="e20f8-133">After the function resolves and loads all internally referenced type libraries, it returns a reference to the master resolved type library in the `pptlib` parameter.</span></span>  
   
- <span data-ttu-id="3fd52-134">`LoadTypeLibWithResolver` İşlev çağrılan genellikle [Tlbexp.exe (tür kitaplığı dışarı Aktarıcı)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md), kendi iç sağladığı [Itypelibresolver arabirimi](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) uygulamasında `pTlbResolver` parametre.</span><span class="sxs-lookup"><span data-stu-id="3fd52-134">The `LoadTypeLibWithResolver` function is generally called by the [Tlbexp.exe (Type Library Exporter)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md), which supplies its own internal [ITypeLibResolver interface](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) implementation in the `pTlbResolver` parameter.</span></span>  
+ <span data-ttu-id="e20f8-134">`LoadTypeLibWithResolver` İşlev çağrılan genellikle [Tlbexp.exe (tür kitaplığı dışarı Aktarıcı)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md), kendi iç sağladığı [Itypelibresolver arabirimi](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) uygulamasında `pTlbResolver` parametre.</span><span class="sxs-lookup"><span data-stu-id="e20f8-134">The `LoadTypeLibWithResolver` function is generally called by the [Tlbexp.exe (Type Library Exporter)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md), which supplies its own internal [ITypeLibResolver interface](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) implementation in the `pTlbResolver` parameter.</span></span>  
   
- <span data-ttu-id="3fd52-135">Eğer `LoadTypeLibWithResolver` doğrudan, kendi sağlamalısınız [Itypelibresolver arabirimi](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) uygulaması.</span><span class="sxs-lookup"><span data-stu-id="3fd52-135">If you call `LoadTypeLibWithResolver` directly, you must supply your own [ITypeLibResolver interface](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) implementation.</span></span>  
+ <span data-ttu-id="e20f8-135">Eğer `LoadTypeLibWithResolver` doğrudan, kendi sağlamalısınız [Itypelibresolver arabirimi](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) uygulaması.</span><span class="sxs-lookup"><span data-stu-id="e20f8-135">If you call `LoadTypeLibWithResolver` directly, you must supply your own [ITypeLibResolver interface](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) implementation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3fd52-136">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="3fd52-136">Requirements</span></span>  
- <span data-ttu-id="3fd52-137">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3fd52-137">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e20f8-136">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="e20f8-136">Requirements</span></span>  
+ <span data-ttu-id="e20f8-137">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e20f8-137">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3fd52-138">**Başlık:** TlbRef.h</span><span class="sxs-lookup"><span data-stu-id="3fd52-138">**Header:** TlbRef.h</span></span>  
+ <span data-ttu-id="e20f8-138">**Başlık:** TlbRef.h</span><span class="sxs-lookup"><span data-stu-id="e20f8-138">**Header:** TlbRef.h</span></span>  
   
- <span data-ttu-id="3fd52-139">**Kitaplığı:** TlbRef.lib</span><span class="sxs-lookup"><span data-stu-id="3fd52-139">**Library:** TlbRef.lib</span></span>  
+ <span data-ttu-id="e20f8-139">**Kitaplığı:** TlbRef.lib</span><span class="sxs-lookup"><span data-stu-id="e20f8-139">**Library:** TlbRef.lib</span></span>  
   
- <span data-ttu-id="3fd52-140">**.NET framework sürümü:** 3.5, 3.0, 2.0</span><span class="sxs-lookup"><span data-stu-id="3fd52-140">**.NET Framework Version:** 3.5, 3.0, 2.0</span></span>  
+ <span data-ttu-id="e20f8-140">**.NET framework sürümü:** 3.5, 3.0, 2.0</span><span class="sxs-lookup"><span data-stu-id="e20f8-140">**.NET Framework Version:** 3.5, 3.0, 2.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3fd52-141">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="3fd52-141">See Also</span></span>  
- [<span data-ttu-id="3fd52-142">Tlbexp Yardımcı İşlevleri</span><span class="sxs-lookup"><span data-stu-id="3fd52-142">Tlbexp Helper Functions</span></span>](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
- [<span data-ttu-id="3fd52-143">LoadTypeLibEx işlevi</span><span class="sxs-lookup"><span data-stu-id="3fd52-143">LoadTypeLibEx Function</span></span>](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)
+## <a name="see-also"></a><span data-ttu-id="e20f8-141">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="e20f8-141">See Also</span></span>  
+ [<span data-ttu-id="e20f8-142">Tlbexp Yardımcı İşlevleri</span><span class="sxs-lookup"><span data-stu-id="e20f8-142">Tlbexp Helper Functions</span></span>](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
+ [<span data-ttu-id="e20f8-143">LoadTypeLibEx işlevi</span><span class="sxs-lookup"><span data-stu-id="e20f8-143">LoadTypeLibEx Function</span></span>](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

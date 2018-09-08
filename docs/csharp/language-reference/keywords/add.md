@@ -7,21 +7,21 @@ helpviewer_keywords:
 - add event accessor [C#]
 ms.assetid: faf30b99-10e8-45cd-ab9a-57585d4d1d8d
 ms.openlocfilehash: b55827b60a89da2569fad9da135c84571a24b094
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44067892"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44201211"
 ---
-# <a name="add-c-reference"></a><span data-ttu-id="2731b-102">add (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="2731b-102">add (C# Reference)</span></span>
-<span data-ttu-id="2731b-103">`add` Bağlamsal anahtar sözcük için istemci kodu abone olduğunda çağrılan bir özel olay erişimci tanımlamak için kullanılır, [olay](../../../csharp/language-reference/keywords/event.md).</span><span class="sxs-lookup"><span data-stu-id="2731b-103">The `add` contextual keyword is used to define a custom event accessor that is invoked when client code subscribes to your [event](../../../csharp/language-reference/keywords/event.md).</span></span> <span data-ttu-id="2731b-104">Özel bir sağlarsanız `add` erişimci gerekir da sağlamanız bir [Kaldır](../../../csharp/language-reference/keywords/remove.md) erişimcisi.</span><span class="sxs-lookup"><span data-stu-id="2731b-104">If you supply a custom `add` accessor, you must also supply a [remove](../../../csharp/language-reference/keywords/remove.md) accessor.</span></span>  
+# <a name="add-c-reference"></a><span data-ttu-id="beb27-102">add (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="beb27-102">add (C# Reference)</span></span>
+<span data-ttu-id="beb27-103">`add` Bağlamsal anahtar sözcük için istemci kodu abone olduğunda çağrılan bir özel olay erişimci tanımlamak için kullanılır, [olay](../../../csharp/language-reference/keywords/event.md).</span><span class="sxs-lookup"><span data-stu-id="beb27-103">The `add` contextual keyword is used to define a custom event accessor that is invoked when client code subscribes to your [event](../../../csharp/language-reference/keywords/event.md).</span></span> <span data-ttu-id="beb27-104">Özel bir sağlarsanız `add` erişimci gerekir da sağlamanız bir [Kaldır](../../../csharp/language-reference/keywords/remove.md) erişimcisi.</span><span class="sxs-lookup"><span data-stu-id="beb27-104">If you supply a custom `add` accessor, you must also supply a [remove](../../../csharp/language-reference/keywords/remove.md) accessor.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2731b-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="2731b-105">Example</span></span>  
- <span data-ttu-id="2731b-106">Aşağıdaki örnek, özel bir olayını gösterir `add` ve [Kaldır](../../../csharp/language-reference/keywords/remove.md) erişimcileri.</span><span class="sxs-lookup"><span data-stu-id="2731b-106">The following example shows an event that has custom `add` and [remove](../../../csharp/language-reference/keywords/remove.md) accessors.</span></span> <span data-ttu-id="2731b-107">Tam bir örnek için bkz: [nasıl yapılır: arabirim olaylarını uygulama](../../../csharp/programming-guide/events/how-to-implement-interface-events.md).</span><span class="sxs-lookup"><span data-stu-id="2731b-107">For the full example, see [How to:  Implement Interface Events](../../../csharp/programming-guide/events/how-to-implement-interface-events.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="beb27-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="beb27-105">Example</span></span>  
+ <span data-ttu-id="beb27-106">Aşağıdaki örnek, özel bir olayını gösterir `add` ve [Kaldır](../../../csharp/language-reference/keywords/remove.md) erişimcileri.</span><span class="sxs-lookup"><span data-stu-id="beb27-106">The following example shows an event that has custom `add` and [remove](../../../csharp/language-reference/keywords/remove.md) accessors.</span></span> <span data-ttu-id="beb27-107">Tam bir örnek için bkz: [nasıl yapılır: arabirim olaylarını uygulama](../../../csharp/programming-guide/events/how-to-implement-interface-events.md).</span><span class="sxs-lookup"><span data-stu-id="beb27-107">For the full example, see [How to:  Implement Interface Events](../../../csharp/programming-guide/events/how-to-implement-interface-events.md).</span></span>  
   
 [!code-csharp[csrefKeywordsContextual#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#15)]
   
- <span data-ttu-id="2731b-108">Genellikle kendi özel olay erişimcilerini sağlamanız gerekmez.</span><span class="sxs-lookup"><span data-stu-id="2731b-108">You do not typically need to provide your own custom event accessors.</span></span> <span data-ttu-id="2731b-109">Olay bildirdiğinizde, derleyici tarafından otomatik olarak oluşturulan erişimcileri, çoğu senaryo için yeterlidir.</span><span class="sxs-lookup"><span data-stu-id="2731b-109">The accessors that are automatically generated by the compiler when you declare an event are sufficient for most scenarios.</span></span>  
+ <span data-ttu-id="beb27-108">Genellikle kendi özel olay erişimcilerini sağlamanız gerekmez.</span><span class="sxs-lookup"><span data-stu-id="beb27-108">You do not typically need to provide your own custom event accessors.</span></span> <span data-ttu-id="beb27-109">Olay bildirdiğinizde, derleyici tarafından otomatik olarak oluşturulan erişimcileri, çoğu senaryo için yeterlidir.</span><span class="sxs-lookup"><span data-stu-id="beb27-109">The accessors that are automatically generated by the compiler when you declare an event are sufficient for most scenarios.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2731b-110">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="2731b-110">See Also</span></span>  
-- [<span data-ttu-id="2731b-111">Olaylar</span><span class="sxs-lookup"><span data-stu-id="2731b-111">Events</span></span>](../../../csharp/programming-guide/events/index.md)
+## <a name="see-also"></a><span data-ttu-id="beb27-110">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="beb27-110">See Also</span></span>  
+- [<span data-ttu-id="beb27-111">Olaylar</span><span class="sxs-lookup"><span data-stu-id="beb27-111">Events</span></span>](../../../csharp/programming-guide/events/index.md)

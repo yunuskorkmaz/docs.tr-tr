@@ -3,22 +3,22 @@ title: (C#) bir XML bildirimi ile serileştirme
 ms.date: 07/20/2015
 ms.assetid: c237fa4a-a042-40fd-886f-17b54c66bb75
 ms.openlocfilehash: 613280efc8c734c53c4af9252b4b83e2dd942f36
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44132668"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44222363"
 ---
-# <a name="serializing-with-an-xml-declaration-c"></a><span data-ttu-id="002d0-102">(C#) bir XML bildirimi ile serileştirme</span><span class="sxs-lookup"><span data-stu-id="002d0-102">Serializing with an XML Declaration (C#)</span></span>
-<span data-ttu-id="002d0-103">Bu konuda, serileştirme bir XML bildirimi oluşturup oluşturmayacağını denetlemek nasıl açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="002d0-103">This topic describes how to control whether serialization generates an XML declaration.</span></span>  
+# <a name="serializing-with-an-xml-declaration-c"></a><span data-ttu-id="436b6-102">(C#) bir XML bildirimi ile serileştirme</span><span class="sxs-lookup"><span data-stu-id="436b6-102">Serializing with an XML Declaration (C#)</span></span>
+<span data-ttu-id="436b6-103">Bu konuda, serileştirme bir XML bildirimi oluşturup oluşturmayacağını denetlemek nasıl açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="436b6-103">This topic describes how to control whether serialization generates an XML declaration.</span></span>  
   
-## <a name="xml-declaration-generation"></a><span data-ttu-id="002d0-104">XML bildirimi oluşturma</span><span class="sxs-lookup"><span data-stu-id="002d0-104">XML Declaration Generation</span></span>  
- <span data-ttu-id="002d0-105">Seri hale getirme için bir <xref:System.IO.File> veya <xref:System.IO.TextWriter> kullanarak <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=nameWithType> yöntemi veya <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=nameWithType> yöntem bir XML bildirimi oluşturur.</span><span class="sxs-lookup"><span data-stu-id="002d0-105">Serializing to a <xref:System.IO.File> or a <xref:System.IO.TextWriter> using the <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=nameWithType> method or the <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=nameWithType> method generates an XML declaration.</span></span> <span data-ttu-id="002d0-106">Ne zaman serileştirmek için bir <xref:System.Xml.XmlWriter>, yazıcı ayarları (belirtilen bir <xref:System.Xml.XmlWriterSettings> nesne) veya bir XML bildirimi oluşturulup oluşturulmayacağını belirler.</span><span class="sxs-lookup"><span data-stu-id="002d0-106">When you serialize to an <xref:System.Xml.XmlWriter>, the writer settings (specified in an <xref:System.Xml.XmlWriterSettings> object) determine whether an XML declaration is generated or not.</span></span>  
+## <a name="xml-declaration-generation"></a><span data-ttu-id="436b6-104">XML bildirimi oluşturma</span><span class="sxs-lookup"><span data-stu-id="436b6-104">XML Declaration Generation</span></span>  
+ <span data-ttu-id="436b6-105">Seri hale getirme için bir <xref:System.IO.File> veya <xref:System.IO.TextWriter> kullanarak <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=nameWithType> yöntemi veya <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=nameWithType> yöntem bir XML bildirimi oluşturur.</span><span class="sxs-lookup"><span data-stu-id="436b6-105">Serializing to a <xref:System.IO.File> or a <xref:System.IO.TextWriter> using the <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=nameWithType> method or the <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=nameWithType> method generates an XML declaration.</span></span> <span data-ttu-id="436b6-106">Ne zaman serileştirmek için bir <xref:System.Xml.XmlWriter>, yazıcı ayarları (belirtilen bir <xref:System.Xml.XmlWriterSettings> nesne) veya bir XML bildirimi oluşturulup oluşturulmayacağını belirler.</span><span class="sxs-lookup"><span data-stu-id="436b6-106">When you serialize to an <xref:System.Xml.XmlWriter>, the writer settings (specified in an <xref:System.Xml.XmlWriterSettings> object) determine whether an XML declaration is generated or not.</span></span>  
   
- <span data-ttu-id="002d0-107">Kullanarak bir dize cricheditdoc::m_brtf `ToString` elde edilen XML yöntemi, bir XML bildirimi içermez.</span><span class="sxs-lookup"><span data-stu-id="002d0-107">If you are serializing to a string using the `ToString` method, the resulting XML will not include an XML declaration.</span></span>  
+ <span data-ttu-id="436b6-107">Kullanarak bir dize cricheditdoc::m_brtf `ToString` elde edilen XML yöntemi, bir XML bildirimi içermez.</span><span class="sxs-lookup"><span data-stu-id="436b6-107">If you are serializing to a string using the `ToString` method, the resulting XML will not include an XML declaration.</span></span>  
   
-### <a name="serializing-with-an-xml-declaration"></a><span data-ttu-id="002d0-108">Bir XML bildirimi ile serileştirme</span><span class="sxs-lookup"><span data-stu-id="002d0-108">Serializing with an XML Declaration</span></span>  
- <span data-ttu-id="002d0-109">Aşağıdaki örnek, oluşturur bir <xref:System.Xml.Linq.XElement>, belgeyi bir dosyaya kaydeder ve sonra dosyanın konsola yazdırır:</span><span class="sxs-lookup"><span data-stu-id="002d0-109">The following example creates an <xref:System.Xml.Linq.XElement>, saves the document to a file, and then prints the file to the console:</span></span>  
+### <a name="serializing-with-an-xml-declaration"></a><span data-ttu-id="436b6-108">Bir XML bildirimi ile serileştirme</span><span class="sxs-lookup"><span data-stu-id="436b6-108">Serializing with an XML Declaration</span></span>  
+ <span data-ttu-id="436b6-109">Aşağıdaki örnek, oluşturur bir <xref:System.Xml.Linq.XElement>, belgeyi bir dosyaya kaydeder ve sonra dosyanın konsola yazdırır:</span><span class="sxs-lookup"><span data-stu-id="436b6-109">The following example creates an <xref:System.Xml.Linq.XElement>, saves the document to a file, and then prints the file to the console:</span></span>  
   
 ```csharp  
 XElement root = new XElement("Root",  
@@ -29,7 +29,7 @@ string str = File.ReadAllText("Root.xml");
 Console.WriteLine(str);  
 ```  
   
- <span data-ttu-id="002d0-110">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="002d0-110">This example produces the following output:</span></span>  
+ <span data-ttu-id="436b6-110">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="436b6-110">This example produces the following output:</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -38,8 +38,8 @@ Console.WriteLine(str);
 </Root>  
 ```  
   
-### <a name="serializing-without-an-xml-declaration"></a><span data-ttu-id="002d0-111">Bir XML bildirimi seri hale getirme</span><span class="sxs-lookup"><span data-stu-id="002d0-111">Serializing without an XML Declaration</span></span>  
- <span data-ttu-id="002d0-112">Aşağıdaki örnek nasıl kaydedileceğini gösterir bir <xref:System.Xml.Linq.XElement> için bir <xref:System.Xml.XmlWriter>.</span><span class="sxs-lookup"><span data-stu-id="002d0-112">The following example shows how to save an <xref:System.Xml.Linq.XElement> to an <xref:System.Xml.XmlWriter>.</span></span>  
+### <a name="serializing-without-an-xml-declaration"></a><span data-ttu-id="436b6-111">Bir XML bildirimi seri hale getirme</span><span class="sxs-lookup"><span data-stu-id="436b6-111">Serializing without an XML Declaration</span></span>  
+ <span data-ttu-id="436b6-112">Aşağıdaki örnek nasıl kaydedileceğini gösterir bir <xref:System.Xml.Linq.XElement> için bir <xref:System.Xml.XmlWriter>.</span><span class="sxs-lookup"><span data-stu-id="436b6-112">The following example shows how to save an <xref:System.Xml.Linq.XElement> to an <xref:System.Xml.XmlWriter>.</span></span>  
   
 ```csharp  
 StringBuilder sb = new StringBuilder();  
@@ -55,12 +55,12 @@ using (XmlWriter xw = XmlWriter.Create(sb, xws)) {
 Console.WriteLine(sb.ToString());  
 ```  
   
- <span data-ttu-id="002d0-113">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="002d0-113">This example produces the following output:</span></span>  
+ <span data-ttu-id="436b6-113">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="436b6-113">This example produces the following output:</span></span>  
   
 ```xml  
 <Root><Child>child content</Child></Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="002d0-114">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="002d0-114">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="436b6-114">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="436b6-114">See Also</span></span>
 
-- [<span data-ttu-id="002d0-115">Serileştirmek XML ağaçları (C#)</span><span class="sxs-lookup"><span data-stu-id="002d0-115">Serializing XML Trees (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)
+- [<span data-ttu-id="436b6-115">Serileştirmek XML ağaçları (C#)</span><span class="sxs-lookup"><span data-stu-id="436b6-115">Serializing XML Trees (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)

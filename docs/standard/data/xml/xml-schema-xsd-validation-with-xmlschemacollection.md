@@ -9,19 +9,19 @@ ms.assetid: ad0b5717-3d32-41ad-a4d7-072c3e492b82
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0c570f812ec06c6ead0d12dc14c33fcdfd1f075c
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44128371"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44204883"
 ---
-# <a name="xml-schema-xsd-validation-with-xmlschemacollection"></a><span data-ttu-id="a51ce-102">XmlSchemaCollection ile XML Şeması (XSD) doğrulaması</span><span class="sxs-lookup"><span data-stu-id="a51ce-102">XML Schema (XSD) Validation with XmlSchemaCollection</span></span>
-<span data-ttu-id="a51ce-103">Kullanabileceğiniz <xref:System.Xml.Schema.XmlSchemaCollection> bir XML belgesi XML Şeması Tanım Dili (XSD) şemaları karşı doğrulamak için.</span><span class="sxs-lookup"><span data-stu-id="a51ce-103">You can use the <xref:System.Xml.Schema.XmlSchemaCollection> to validate an XML document against XML Schema definition language (XSD) schemas.</span></span> <span data-ttu-id="a51ce-104"><xref:System.Xml.Schema.XmlSchemaCollection> Her zaman doğrulama gerçekleşir belleğe yüklenen olmadıkları için koleksiyonda şemaları depolayarak performansı artırır.</span><span class="sxs-lookup"><span data-stu-id="a51ce-104">The <xref:System.Xml.Schema.XmlSchemaCollection> improves performance by storing schemas in the collection so they are not loaded into memory each time validation occurs.</span></span> <span data-ttu-id="a51ce-105">Şema şema koleksiyonunda varsa `schemaLocation` özniteliği şema koleksiyonunda aramak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="a51ce-105">If the schema exists in the schema collection, the `schemaLocation` attribute is used to look up the schema in the collection.</span></span>  
+# <a name="xml-schema-xsd-validation-with-xmlschemacollection"></a><span data-ttu-id="965fa-102">XmlSchemaCollection ile XML Şeması (XSD) doğrulaması</span><span class="sxs-lookup"><span data-stu-id="965fa-102">XML Schema (XSD) Validation with XmlSchemaCollection</span></span>
+<span data-ttu-id="965fa-103">Kullanabileceğiniz <xref:System.Xml.Schema.XmlSchemaCollection> bir XML belgesi XML Şeması Tanım Dili (XSD) şemaları karşı doğrulamak için.</span><span class="sxs-lookup"><span data-stu-id="965fa-103">You can use the <xref:System.Xml.Schema.XmlSchemaCollection> to validate an XML document against XML Schema definition language (XSD) schemas.</span></span> <span data-ttu-id="965fa-104"><xref:System.Xml.Schema.XmlSchemaCollection> Her zaman doğrulama gerçekleşir belleğe yüklenen olmadıkları için koleksiyonda şemaları depolayarak performansı artırır.</span><span class="sxs-lookup"><span data-stu-id="965fa-104">The <xref:System.Xml.Schema.XmlSchemaCollection> improves performance by storing schemas in the collection so they are not loaded into memory each time validation occurs.</span></span> <span data-ttu-id="965fa-105">Şema şema koleksiyonunda varsa `schemaLocation` özniteliği şema koleksiyonunda aramak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="965fa-105">If the schema exists in the schema collection, the `schemaLocation` attribute is used to look up the schema in the collection.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="a51ce-106"><xref:System.Xml.Schema.XmlSchemaCollection> Sınıf artık kullanımdan kalkmıştır ve ile değiştirilmiştir <xref:System.Xml.Schema.XmlSchemaSet> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="a51ce-106">The <xref:System.Xml.Schema.XmlSchemaCollection> class is now obsolete and has been replaced with the <xref:System.Xml.Schema.XmlSchemaSet> class.</span></span> <span data-ttu-id="a51ce-107">Hakkında daha fazla bilgi için <xref:System.Xml.Schema.XmlSchemaSet> sınıfı bakın [şema derleme için XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md).</span><span class="sxs-lookup"><span data-stu-id="a51ce-107">For more information about the <xref:System.Xml.Schema.XmlSchemaSet> class see, [XmlSchemaSet for Schema Compilation](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md).</span></span>  
+>  <span data-ttu-id="965fa-106"><xref:System.Xml.Schema.XmlSchemaCollection> Sınıf artık kullanımdan kalkmıştır ve ile değiştirilmiştir <xref:System.Xml.Schema.XmlSchemaSet> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="965fa-106">The <xref:System.Xml.Schema.XmlSchemaCollection> class is now obsolete and has been replaced with the <xref:System.Xml.Schema.XmlSchemaSet> class.</span></span> <span data-ttu-id="965fa-107">Hakkında daha fazla bilgi için <xref:System.Xml.Schema.XmlSchemaSet> sınıfı bakın [şema derleme için XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md).</span><span class="sxs-lookup"><span data-stu-id="965fa-107">For more information about the <xref:System.Xml.Schema.XmlSchemaSet> class see, [XmlSchemaSet for Schema Compilation](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md).</span></span>  
   
- <span data-ttu-id="a51ce-108">Aşağıdaki örnek, bir veri dosyasının kök öğesini gösterir.</span><span class="sxs-lookup"><span data-stu-id="a51ce-108">The following example shows the root element of a data file.</span></span>  
+ <span data-ttu-id="965fa-108">Aşağıdaki örnek, bir veri dosyasının kök öğesini gösterir.</span><span class="sxs-lookup"><span data-stu-id="965fa-108">The following example shows the root element of a data file.</span></span>  
   
 ```xml  
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  
@@ -30,9 +30,9 @@ ms.locfileid: "44128371"
     targetNamespace="urn:bookstore-schema">  
 ```  
   
- <span data-ttu-id="a51ce-109">Bu örneğin değerini `targetNamespace` özniteliği `urn:bookstore-schema`, şemaya eklerken kullanılan aynı ad olduğu <xref:System.Xml.Schema.XmlSchemaCollection>.</span><span class="sxs-lookup"><span data-stu-id="a51ce-109">For this example, the value of the `targetNamespace` attribute is `urn:bookstore-schema`, which is the same namespace that is used when adding the schema to the <xref:System.Xml.Schema.XmlSchemaCollection>.</span></span>  
+ <span data-ttu-id="965fa-109">Bu örneğin değerini `targetNamespace` özniteliği `urn:bookstore-schema`, şemaya eklerken kullanılan aynı ad olduğu <xref:System.Xml.Schema.XmlSchemaCollection>.</span><span class="sxs-lookup"><span data-stu-id="965fa-109">For this example, the value of the `targetNamespace` attribute is `urn:bookstore-schema`, which is the same namespace that is used when adding the schema to the <xref:System.Xml.Schema.XmlSchemaCollection>.</span></span>  
   
- <span data-ttu-id="a51ce-110">Aşağıdaki kod örneği bir XML şemaya ekler <xref:System.Xml.Schema.XmlSchemaCollection>.</span><span class="sxs-lookup"><span data-stu-id="a51ce-110">The following code example adds an XML Schema to the <xref:System.Xml.Schema.XmlSchemaCollection>.</span></span>  
+ <span data-ttu-id="965fa-110">Aşağıdaki kod örneği bir XML şemaya ekler <xref:System.Xml.Schema.XmlSchemaCollection>.</span><span class="sxs-lookup"><span data-stu-id="965fa-110">The following code example adds an XML Schema to the <xref:System.Xml.Schema.XmlSchemaCollection>.</span></span>  
   
 ```vb  
 Dim xsc As New XmlSchemaCollection()  
@@ -52,9 +52,9 @@ vreader = new XmlValidatingReader (reader);
 vreader.Schemas.Add(xsc);  
 ```  
   
- <span data-ttu-id="a51ce-111">`targetNamespace` Özniteliği eklediğinizde, genellikle kullanılan `namespaceURI` özelliğinde <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> yöntemi <xref:System.Xml.Schema.XmlSchemaCollection>.</span><span class="sxs-lookup"><span data-stu-id="a51ce-111">The `targetNamespace` attribute is generally used when you add the `namespaceURI` property in the <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> method for the <xref:System.Xml.Schema.XmlSchemaCollection>.</span></span> <span data-ttu-id="a51ce-112">Şemaya eklemeden önce bir null başvuru belirtebilirsiniz <xref:System.Xml.Schema.XmlSchemaCollection>.</span><span class="sxs-lookup"><span data-stu-id="a51ce-112">You can specify a null reference before adding the schema to the <xref:System.Xml.Schema.XmlSchemaCollection>.</span></span> <span data-ttu-id="a51ce-113">Boş bir dize ("") ad alanı olmayan şemaları için kullanılmalıdır.</span><span class="sxs-lookup"><span data-stu-id="a51ce-113">An empty string ("") should be used for schemas without a namespace.</span></span> <span data-ttu-id="a51ce-114"><xref:System.Xml.Schema.XmlSchemaCollection> Yalnızca bir şema ad alanı olmayan olabilir.</span><span class="sxs-lookup"><span data-stu-id="a51ce-114">The <xref:System.Xml.Schema.XmlSchemaCollection> can have only one schema without a namespace.</span></span>  
+ <span data-ttu-id="965fa-111">`targetNamespace` Özniteliği eklediğinizde, genellikle kullanılan `namespaceURI` özelliğinde <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> yöntemi <xref:System.Xml.Schema.XmlSchemaCollection>.</span><span class="sxs-lookup"><span data-stu-id="965fa-111">The `targetNamespace` attribute is generally used when you add the `namespaceURI` property in the <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> method for the <xref:System.Xml.Schema.XmlSchemaCollection>.</span></span> <span data-ttu-id="965fa-112">Şemaya eklemeden önce bir null başvuru belirtebilirsiniz <xref:System.Xml.Schema.XmlSchemaCollection>.</span><span class="sxs-lookup"><span data-stu-id="965fa-112">You can specify a null reference before adding the schema to the <xref:System.Xml.Schema.XmlSchemaCollection>.</span></span> <span data-ttu-id="965fa-113">Boş bir dize ("") ad alanı olmayan şemaları için kullanılmalıdır.</span><span class="sxs-lookup"><span data-stu-id="965fa-113">An empty string ("") should be used for schemas without a namespace.</span></span> <span data-ttu-id="965fa-114"><xref:System.Xml.Schema.XmlSchemaCollection> Yalnızca bir şema ad alanı olmayan olabilir.</span><span class="sxs-lookup"><span data-stu-id="965fa-114">The <xref:System.Xml.Schema.XmlSchemaCollection> can have only one schema without a namespace.</span></span>  
   
- <span data-ttu-id="a51ce-115">Aşağıdaki kod örneği için bir XML Şeması HeadCount.xsd, ekler <xref:System.Xml.Schema.XmlSchemaCollection> ve HeadCount.xml doğrular.</span><span class="sxs-lookup"><span data-stu-id="a51ce-115">The following code example adds an XML Schema, HeadCount.xsd, to the <xref:System.Xml.Schema.XmlSchemaCollection> and validates HeadCount.xml.</span></span>  
+ <span data-ttu-id="965fa-115">Aşağıdaki kod örneği için bir XML Şeması HeadCount.xsd, ekler <xref:System.Xml.Schema.XmlSchemaCollection> ve HeadCount.xml doğrular.</span><span class="sxs-lookup"><span data-stu-id="965fa-115">The following code example adds an XML Schema, HeadCount.xsd, to the <xref:System.Xml.Schema.XmlSchemaCollection> and validates HeadCount.xml.</span></span>  
   
 ```vb  
 Imports System  
@@ -125,7 +125,7 @@ namespace ValidationSample
 }  
 ```  
   
- <span data-ttu-id="a51ce-116">Doğrulanacak HeadCount.xml, girdi dosyasının içeriği aşağıda açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="a51ce-116">The following outlines the contents of the input file, HeadCount.xml, to be validated.</span></span>  
+ <span data-ttu-id="965fa-116">Doğrulanacak HeadCount.xml, girdi dosyasının içeriği aşağıda açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="965fa-116">The following outlines the contents of the input file, HeadCount.xml, to be validated.</span></span>  
   
 ```xml  
 <!--Load HeadCount.xsd in SchemaCollection for Validation-->  
@@ -135,7 +135,7 @@ namespace ValidationSample
 </hc:HeadCount>  
 ```  
   
- <span data-ttu-id="a51ce-117">Karşı doğrulanacak HeadCount.xsd, XML şema dosyasının içeriğini açıklar.</span><span class="sxs-lookup"><span data-stu-id="a51ce-117">The following outlines the contents of the XML Schema file, HeadCount.xsd, to be validated against.</span></span>  
+ <span data-ttu-id="965fa-117">Karşı doğrulanacak HeadCount.xsd, XML şema dosyasının içeriğini açıklar.</span><span class="sxs-lookup"><span data-stu-id="965fa-117">The following outlines the contents of the XML Schema file, HeadCount.xsd, to be validated against.</span></span>  
   
 ```xml  
 <xs:schema xmlns="xsdHeadCount" targetNamespace="xsdHeadCount" xmlns:xs="http://www.w3.org/2001/XMLSchema">  
@@ -149,7 +149,7 @@ namespace ValidationSample
 </xs:schema>  
 ```  
   
- <span data-ttu-id="a51ce-118">Aşağıdaki kod örneği oluşturur bir <xref:System.Xml.XmlValidatingReader> almayan bir <xref:System.Xml.XmlTextReader>.</span><span class="sxs-lookup"><span data-stu-id="a51ce-118">The following code example creates an <xref:System.Xml.XmlValidatingReader> that takes an <xref:System.Xml.XmlTextReader>.</span></span> <span data-ttu-id="a51ce-119">Giriş dosyası, sample4.xml, XML şemasına göre doğrulanır sample4.xsd.</span><span class="sxs-lookup"><span data-stu-id="a51ce-119">The input file, sample4.xml, is validated against the XML Schema, sample4.xsd.</span></span>  
+ <span data-ttu-id="965fa-118">Aşağıdaki kod örneği oluşturur bir <xref:System.Xml.XmlValidatingReader> almayan bir <xref:System.Xml.XmlTextReader>.</span><span class="sxs-lookup"><span data-stu-id="965fa-118">The following code example creates an <xref:System.Xml.XmlValidatingReader> that takes an <xref:System.Xml.XmlTextReader>.</span></span> <span data-ttu-id="965fa-119">Giriş dosyası, sample4.xml, XML şemasına göre doğrulanır sample4.xsd.</span><span class="sxs-lookup"><span data-stu-id="965fa-119">The input file, sample4.xml, is validated against the XML Schema, sample4.xsd.</span></span>  
   
 ```vb  
 Dim tr As New XmlTextReader("sample4.xml")  
@@ -173,7 +173,7 @@ while(vr.Read()) {
     }  
 ```  
   
- <span data-ttu-id="a51ce-120">Doğrulanacak sample4.xml, girdi dosyasının içeriği aşağıda açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="a51ce-120">The following outlines the contents of the input file, sample4.xml, to be validated.</span></span>  
+ <span data-ttu-id="965fa-120">Doğrulanacak sample4.xml, girdi dosyasının içeriği aşağıda açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="965fa-120">The following outlines the contents of the input file, sample4.xml, to be validated.</span></span>  
   
 ```xml  
 <datatypes xmlns="datatypesTest">  
@@ -183,7 +183,7 @@ while(vr.Read()) {
 </datatypes>  
 ```  
   
- <span data-ttu-id="a51ce-121">Karşı doğrulanacak sample4.xsd, XML şema dosyasının içeriğini açıklar.</span><span class="sxs-lookup"><span data-stu-id="a51ce-121">The following outlines the contents of the XML Schema file, sample4.xsd, to be validated against.</span></span>  
+ <span data-ttu-id="965fa-121">Karşı doğrulanacak sample4.xsd, XML şema dosyasının içeriğini açıklar.</span><span class="sxs-lookup"><span data-stu-id="965fa-121">The following outlines the contents of the XML Schema file, sample4.xsd, to be validated against.</span></span>  
   
 ```xml  
 <xs:schema   
@@ -208,9 +208,9 @@ while(vr.Read()) {
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="a51ce-122">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a51ce-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="965fa-122">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="965fa-122">See also</span></span>
 
 - <xref:System.Xml.XmlParserContext>  
 - <xref:System.Xml.XmlValidatingReader.ValidationEventHandler?displayProperty=nameWithType>  
 - <xref:System.Xml.XmlValidatingReader.Schemas%2A?displayProperty=nameWithType>  
-- [<span data-ttu-id="a51ce-123">XmlSchemaCollection Şema Derlemesi</span><span class="sxs-lookup"><span data-stu-id="a51ce-123">XmlSchemaCollection Schema Compilation</span></span>](../../../../docs/standard/data/xml/xmlschemacollection-schema-compilation.md)
+- [<span data-ttu-id="965fa-123">XmlSchemaCollection Şema Derlemesi</span><span class="sxs-lookup"><span data-stu-id="965fa-123">XmlSchemaCollection Schema Compilation</span></span>](../../../../docs/standard/data/xml/xmlschemacollection-schema-compilation.md)

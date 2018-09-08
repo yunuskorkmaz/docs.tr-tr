@@ -9,42 +9,42 @@ helpviewer_keywords:
 - operator keyword [C#]
 ms.assetid: 59218cce-e90e-42f6-a6bb-30300981b86a
 ms.openlocfilehash: 1e11d7767b61becc39b1158fae9cb2abe997e4bd
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44134543"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44207635"
 ---
-# <a name="operator-c-reference"></a><span data-ttu-id="5c3cf-103">operator (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="5c3cf-103">operator (C# Reference)</span></span>
+# <a name="operator-c-reference"></a><span data-ttu-id="352d7-103">operator (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="352d7-103">operator (C# Reference)</span></span>
 
-<span data-ttu-id="5c3cf-104">Kullanım `operator` anahtar sözcük yerleşik bir işleç aşırı yüklemesi veya bir kullanıcı tanımlı dönüştürme bir class veya struct bildiriminde sağlamak için.</span><span class="sxs-lookup"><span data-stu-id="5c3cf-104">Use the `operator` keyword to overload a built-in operator or to provide a user-defined conversion in a class or struct declaration.</span></span>
+<span data-ttu-id="352d7-104">Kullanım `operator` anahtar sözcük yerleşik bir işleç aşırı yüklemesi veya bir kullanıcı tanımlı dönüştürme bir class veya struct bildiriminde sağlamak için.</span><span class="sxs-lookup"><span data-stu-id="352d7-104">Use the `operator` keyword to overload a built-in operator or to provide a user-defined conversion in a class or struct declaration.</span></span>
 
-<span data-ttu-id="5c3cf-105">Özel bir sınıf ya da yapı üzerinde operatör aşırı yükleme için karşılık gelen türü bir işleç bildirimi oluşturun.</span><span class="sxs-lookup"><span data-stu-id="5c3cf-105">To overload an operator on a custom class or struct, you create an operator declaration in the corresponding type.</span></span> <span data-ttu-id="5c3cf-106">Yerleşik bir C# işleci aşırı işleç bildirimi, aşağıdaki kurallar karşılamanız gerekir:</span><span class="sxs-lookup"><span data-stu-id="5c3cf-106">The operator declaration that overloads a built-in C# operator must satisfy the following rules:</span></span>
+<span data-ttu-id="352d7-105">Özel bir sınıf ya da yapı üzerinde operatör aşırı yükleme için karşılık gelen türü bir işleç bildirimi oluşturun.</span><span class="sxs-lookup"><span data-stu-id="352d7-105">To overload an operator on a custom class or struct, you create an operator declaration in the corresponding type.</span></span> <span data-ttu-id="352d7-106">Yerleşik bir C# işleci aşırı işleç bildirimi, aşağıdaki kurallar karşılamanız gerekir:</span><span class="sxs-lookup"><span data-stu-id="352d7-106">The operator declaration that overloads a built-in C# operator must satisfy the following rules:</span></span>
 
-- <span data-ttu-id="5c3cf-107">Her ikisini de içeren bir `public` ve `static` değiştiricisi.</span><span class="sxs-lookup"><span data-stu-id="5c3cf-107">It includes both a `public` and a `static` modifier.</span></span>
-- <span data-ttu-id="5c3cf-108">İçerdiği `operator X` burada `X` adı ya da sembol aşırı işleci.</span><span class="sxs-lookup"><span data-stu-id="5c3cf-108">It includes `operator X` where `X` is the name or symbol of the operator being overloaded.</span></span>
-- <span data-ttu-id="5c3cf-109">Birli işleçler bir parametreye sahip ve ikili işleçler iki parametreye sahiptir.</span><span class="sxs-lookup"><span data-stu-id="5c3cf-109">Unary operators have one parameter, and binary operators have two parameters.</span></span> <span data-ttu-id="5c3cf-110">Her durumda sınıfın veya yapının işleci bildiren aynı türde en az bir parametresi olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="5c3cf-110">In each case, at least one parameter must be the same type as the class or struct that declares the operator.</span></span>
+- <span data-ttu-id="352d7-107">Her ikisini de içeren bir `public` ve `static` değiştiricisi.</span><span class="sxs-lookup"><span data-stu-id="352d7-107">It includes both a `public` and a `static` modifier.</span></span>
+- <span data-ttu-id="352d7-108">İçerdiği `operator X` burada `X` adı ya da sembol aşırı işleci.</span><span class="sxs-lookup"><span data-stu-id="352d7-108">It includes `operator X` where `X` is the name or symbol of the operator being overloaded.</span></span>
+- <span data-ttu-id="352d7-109">Birli işleçler bir parametreye sahip ve ikili işleçler iki parametreye sahiptir.</span><span class="sxs-lookup"><span data-stu-id="352d7-109">Unary operators have one parameter, and binary operators have two parameters.</span></span> <span data-ttu-id="352d7-110">Her durumda sınıfın veya yapının işleci bildiren aynı türde en az bir parametresi olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="352d7-110">In each case, at least one parameter must be the same type as the class or struct that declares the operator.</span></span>
 
-<span data-ttu-id="5c3cf-111">Dönüştürme işleçleri tanımlama hakkında daha fazla bilgi için bkz: [açık](explicit.md) ve [örtük](implicit.md) anahtar sözcüğü makaleler.</span><span class="sxs-lookup"><span data-stu-id="5c3cf-111">For information about how to define conversion operators, see the [explicit](explicit.md) and [implicit](implicit.md) keyword articles.</span></span>
+<span data-ttu-id="352d7-111">Dönüştürme işleçleri tanımlama hakkında daha fazla bilgi için bkz: [açık](explicit.md) ve [örtük](implicit.md) anahtar sözcüğü makaleler.</span><span class="sxs-lookup"><span data-stu-id="352d7-111">For information about how to define conversion operators, see the [explicit](explicit.md) and [implicit](implicit.md) keyword articles.</span></span>
 
-<span data-ttu-id="5c3cf-112">Aşırı yüklenebilir C# işleçleri genel bir bakış için bkz: [fazla yüklenebilir işleçler](../../programming-guide/statements-expressions-operators/overloadable-operators.md) makalesi.</span><span class="sxs-lookup"><span data-stu-id="5c3cf-112">For an overview of the C# operators that can be overloaded, see the [Overloadable operators](../../programming-guide/statements-expressions-operators/overloadable-operators.md) article.</span></span>
+<span data-ttu-id="352d7-112">Aşırı yüklenebilir C# işleçleri genel bir bakış için bkz: [fazla yüklenebilir işleçler](../../programming-guide/statements-expressions-operators/overloadable-operators.md) makalesi.</span><span class="sxs-lookup"><span data-stu-id="352d7-112">For an overview of the C# operators that can be overloaded, see the [Overloadable operators](../../programming-guide/statements-expressions-operators/overloadable-operators.md) article.</span></span>
 
-## <a name="example"></a><span data-ttu-id="5c3cf-113">Örnek</span><span class="sxs-lookup"><span data-stu-id="5c3cf-113">Example</span></span>
+## <a name="example"></a><span data-ttu-id="352d7-113">Örnek</span><span class="sxs-lookup"><span data-stu-id="352d7-113">Example</span></span>
 
-<span data-ttu-id="5c3cf-114">Aşağıdaki örnekte tanımlayan bir `Fraction` kesirli sayılar temsil eden tür.</span><span class="sxs-lookup"><span data-stu-id="5c3cf-114">The following example defines a `Fraction` type that represents fractional numbers.</span></span> <span data-ttu-id="5c3cf-115">Aşırı `+` ve `*` kesirli toplama ve çarpma gerçekleştirmek için işleçler ve ayrıca bir dönüştürme işleci bu dönüştürür sağlar bir `Fraction` için yazın bir `double` türü.</span><span class="sxs-lookup"><span data-stu-id="5c3cf-115">It overloads the `+` and `*` operators to perform fractional addition and multiplication, and also provides a conversion operator that converts a `Fraction` type to a `double` type.</span></span>
+<span data-ttu-id="352d7-114">Aşağıdaki örnekte tanımlayan bir `Fraction` kesirli sayılar temsil eden tür.</span><span class="sxs-lookup"><span data-stu-id="352d7-114">The following example defines a `Fraction` type that represents fractional numbers.</span></span> <span data-ttu-id="352d7-115">Aşırı `+` ve `*` kesirli toplama ve çarpma gerçekleştirmek için işleçler ve ayrıca bir dönüştürme işleci bu dönüştürür sağlar bir `Fraction` için yazın bir `double` türü.</span><span class="sxs-lookup"><span data-stu-id="352d7-115">It overloads the `+` and `*` operators to perform fractional addition and multiplication, and also provides a conversion operator that converts a `Fraction` type to a `double` type.</span></span>
 
 [!code-csharp[csrefKeywordsConversion#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsConversion/CS/csrefKeywordsConversion.cs#6)]
 
-## <a name="c-language-specification"></a><span data-ttu-id="5c3cf-116">C# dili belirtimi</span><span class="sxs-lookup"><span data-stu-id="5c3cf-116">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="352d7-116">C# dili belirtimi</span><span class="sxs-lookup"><span data-stu-id="352d7-116">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="5c3cf-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="5c3cf-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="352d7-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="352d7-117">See also</span></span>
 
-- [<span data-ttu-id="5c3cf-118">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="5c3cf-118">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="5c3cf-119">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="5c3cf-119">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="5c3cf-120">C# Anahtar Sözcükleri</span><span class="sxs-lookup"><span data-stu-id="5c3cf-120">C# Keywords</span></span>](index.md)
-- [<span data-ttu-id="5c3cf-121">implicit</span><span class="sxs-lookup"><span data-stu-id="5c3cf-121">implicit</span></span>](implicit.md)
-- [<span data-ttu-id="5c3cf-122">explicit</span><span class="sxs-lookup"><span data-stu-id="5c3cf-122">explicit</span></span>](explicit.md)
-- [<span data-ttu-id="5c3cf-123">Fazla yüklenebilir işleçler</span><span class="sxs-lookup"><span data-stu-id="5c3cf-123">Overloadable operators</span></span>](../../programming-guide/statements-expressions-operators/overloadable-operators.md)
-- [<span data-ttu-id="5c3cf-124">Nasıl yapılır: Yapılar Arasında Kullanıcı Tanımlı Dönüştürmeler Uygulama</span><span class="sxs-lookup"><span data-stu-id="5c3cf-124">How to: Implement User-Defined Conversions Between Structs</span></span>](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)
+- [<span data-ttu-id="352d7-118">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="352d7-118">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="352d7-119">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="352d7-119">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="352d7-120">C# Anahtar Sözcükleri</span><span class="sxs-lookup"><span data-stu-id="352d7-120">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="352d7-121">implicit</span><span class="sxs-lookup"><span data-stu-id="352d7-121">implicit</span></span>](implicit.md)
+- [<span data-ttu-id="352d7-122">explicit</span><span class="sxs-lookup"><span data-stu-id="352d7-122">explicit</span></span>](explicit.md)
+- [<span data-ttu-id="352d7-123">Fazla yüklenebilir işleçler</span><span class="sxs-lookup"><span data-stu-id="352d7-123">Overloadable operators</span></span>](../../programming-guide/statements-expressions-operators/overloadable-operators.md)
+- [<span data-ttu-id="352d7-124">Nasıl yapılır: Yapılar Arasında Kullanıcı Tanımlı Dönüştürmeler Uygulama</span><span class="sxs-lookup"><span data-stu-id="352d7-124">How to: Implement User-Defined Conversions Between Structs</span></span>](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)
