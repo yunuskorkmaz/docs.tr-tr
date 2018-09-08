@@ -14,11 +14,11 @@ ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1d253e7a32d5f302b095a86ddb5c296d5fa8fa11
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44037087"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44209503"
 ---
 # <a name="numerics-in-the-net-framework"></a>.NET Framework'te sayısal türler
 Standart sayısal integral ve kayan nokta temelleri, .NET Framework'ü destekleyen yanı <xref:System.Numerics.BigInteger>, teorik bir üst veya alt sınırı olmayan bir tamsayı türü <xref:System.Numerics.Complex>, bir karmaşık sayılar temsil eden tür ve SIMD etkin kümesi vektör türleri <xref:System.Numerics> ad alanı.  

@@ -11,30 +11,30 @@ helpviewer_keywords:
 ms.assetid: fc2585dc-965e-4632-ace7-73dd02684ed3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a348a83ef0b05ce44b3b3adf8e0031ce350cd37b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd5963fee985633d843cc60f521b66000b84e55e
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583025"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44217197"
 ---
 # <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>Nasıl yapılır: Veri Akışı Bloğu Veri Aldığında İşlem Gerçekleştirme
-*Yürütme veri akışı bloğunda* türleri veri aldıklarında bir kullanıcı tarafından sağlanan temsilci çağırma. <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType>, Ve <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> sınıflardır yürütme veri akışı blok türü. Kullanabileceğiniz `delegate` anahtar sözcüğü (`Sub` Visual Basic'te), <xref:System.Action%601>, <xref:System.Func%602>, veya bir çalışma işlevi bir yürütme veri akışı bloğuna sağladığınızda lambda ifadesi. Bu belge nasıl kullanılacağını açıklar <xref:System.Func%602> ve yürütme bloklarında eylemi gerçekleştirmek için lambda ifadesi.  
+*Yürütme veri akışı bloğu* veri aldıklarında çağrı bir kullanıcı tarafından sağlanan temsilci türleri. <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType>, Ve <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> yürütme veri akışı bloğu türleri sınıflardır. Kullanabileceğiniz `delegate` anahtar sözcüğü (`Sub` Visual Basic'te), <xref:System.Action%601>, <xref:System.Func%602>, ya da bir iş işlevi bir yürütme veri akışı bloğuna sağladığınızda bir lambda ifadesi. Bu belgenin nasıl kullanılacağını açıklar <xref:System.Func%602> ve lambda ifadeleri, yürütme blokları eylemi gerçekleştirmek için.  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
 
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir dosya diskten okumak için veri akışı kullanır ve bu dosyaya sıfıra eşit bayt sayısı hesaplar. Kullandığı <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> dosyayı okuma ve sıfır bayt sayısı işlem ve <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> Konsolu'na sıfır bayt sayısı yazdırmak için. <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> Nesnesini belirtir. bir <xref:System.Func%602> bloğu veri aldığında iş gerçekleştirmek için nesne. <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> Nesnesi salt okunurdur sıfır bayt sayısı konsola yazdırmak için bir lambda ifadesi kullanır.  
+ Aşağıdaki örnek, bir dosyayı diskten okumak için veri akışı kullanır ve bu dosyanın sıfır bayt sayısını hesaplar. Kullandığı <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> dosyayı okumak ve sıfır bayt sayısı işlem ve <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> sıfır bayt konsola yazdırmak için. <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> Nesnesini belirtir bir <xref:System.Func%602> bloğu veri aldığında çalışmayı gerçekleştirmek için nesne. <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> Nesne okunur sıfır bayt sayısı konsola yazdırmak için bir lambda ifadesi kullanır.  
   
  [!code-csharp[TPLDataflow_ExecutionBlocks#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_executionblocks/cs/dataflowexecutionblocks.cs#1)]
  [!code-vb[TPLDataflow_ExecutionBlocks#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_executionblocks/vb/dataflowexecutionblocks.vb#1)]  
   
- Lambda ifadesi olarak sağlayabilirse bir <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> nesnesi, bu örnek kullanır <xref:System.Func%602> kullanmak başka bir kod etkinleştirmek için `CountBytes` yöntemi. <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> Yapılması iş bu göreve özeldir ve büyük olasılıkla diğer koddan yararlı olmadığından nesnesini kullanan bir lambda ifadesi. Lambda ifadeleri görev paralel Kitaplığı'nda nasıl çalıştığı hakkında daha fazla bilgi için bkz: [PLINQ ve TPL'deki Lambda ifadeleri](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).  
+ Bir lambda ifadesi sağlamasına karşın bir <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> nesnesi, bu örnekte <xref:System.Func%602> kullanmak başka bir kod etkinleştirmek için `CountBytes` yöntemi. <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> Nesnesi, gerçekleştirilmesi gereken iş bu görevin özgüdür ve başka bir koddan yararlı olabilir olmadığından bir lambda ifadesi kullanır. Lambda ifadeleri görev paralel Kitaplığı'nda nasıl çalıştığı hakkında daha fazla bilgi için bkz. [PLINQ ve TPL'deki Lambda ifadeleri](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).  
   
- Temsilci türleri özeti bölüm içinde [veri akışı](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) belge özetler sağlamak temsilci türleri <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602>, ve <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> nesneleri. Tabloda ayrıca temsilci türü eşzamanlı veya zaman uyumsuz olarak çalışıp çalışmayacağını belirtir.  
+ Temsilci türlerinin özeti bölümü içinde [veri akışı](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) belge sağlayabileceğiniz temsilci türleri özetlenmektedir <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602>, ve <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> nesneleri. Tablo de temsilci türünün zaman uyumlu veya zaman uyumsuz olarak çalışıp çalışmayacağını belirtir.  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Örnek kodu kopyalayın ve bir Visual Studio projesi yapıştırın veya adlı bir dosyaya yapıştırın `DataflowExecutionBlocks.cs` (`DataflowExecutionBlocks.vb` Visual Basic), ve ardından Visual Studio komut istemi penceresinde aşağıdaki komutu çalıştırın.  
+ Örnek kodu kopyalayın ve bir Visual Studio projesine yapıştırın veya adlı bir dosyaya yapıştırın `DataflowExecutionBlocks.cs` (`DataflowExecutionBlocks.vb` Visual Basic için), ve ardından bir Visual Studio komut istemi penceresinde aşağıdaki komutu çalıştırın.  
   
  Visual C#  
   
@@ -45,15 +45,16 @@ ms.locfileid: "33583025"
  **Vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowExecutionBlocks.vb**  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
- Bu örnek bir temsilci türü sağlar <xref:System.Func%602> için <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> eşzamanlı olarak veri akışı bloğu görev gerçekleştirmek için nesne. Zaman uyumsuz olarak davranacak şekilde veri akışı bloğu etkinleştirmek için bir temsilci türü sağlar <xref:System.Func%601> veri akışı bloğuna. Bir veri akışı bloğu zaman uyumsuz olarak davranır, veri akışı bloğu görevini tam yalnızca olduğunda olduğunda döndürülen <xref:System.Threading.Tasks.Task%601> nesne biter. Aşağıdaki örnek değiştirir `CountBytes` yöntemi ve kullandığı [zaman uyumsuz](~/docs/csharp/language-reference/keywords/async.md) ve [await](~/docs/csharp/language-reference/keywords/await.md) işleçleri ([zaman uyumsuz](~/docs/visual-basic/language-reference/modifiers/async.md) ve [bekleme](~/docs/visual-basic/language-reference/operators/await-operator.md) içinde Visual Basic) tüm sağlanan dosyasındaki sıfır bayt sayısı toplam zaman uyumsuz olarak işlem yapar. <xref:System.IO.FileStream.ReadAsync%2A> Yöntemi dosya okuma işlemlerini zaman uyumsuz olarak gerçekleştirir.  
+ Bu örnek, bir temsilci türü sağlar <xref:System.Func%602> için <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> eşzamanlı olarak veri akışı bloğu görevini gerçekleştirmek için nesne. Zaman uyumsuz olarak davranacak şekilde veri akışı bloğu etkinleştirmek için bir temsilci türü sağlar <xref:System.Func%601> veri akışı bloğu için. Bir veri akışı bloğu zaman uyumsuz olarak davranır, ancak veri akışı bloğu görevini olduğundan döndürülen <xref:System.Threading.Tasks.Task%601> nesne biter. Aşağıdaki örnek `CountBytes` yöntemi ve kullanımları [zaman uyumsuz](~/docs/csharp/language-reference/keywords/async.md) ve [await](~/docs/csharp/language-reference/keywords/await.md) işleçleri ([zaman uyumsuz](~/docs/visual-basic/language-reference/modifiers/async.md) ve [Await](~/docs/visual-basic/language-reference/operators/await-operator.md) içinde Zaman uyumsuz olarak sağlanan dosyadaki sıfır bayt toplam sayısını hesaplamak için visual Basic). <xref:System.IO.FileStream.ReadAsync%2A> Yöntemi dosya okuma işlemi zaman uyumsuz olarak gerçekleştirir.  
   
  [!code-csharp[TPLDataflow_ExecutionBlocks#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_executionblocks/cs/dataflowexecutionblocks.cs#2)]
  [!code-vb[TPLDataflow_ExecutionBlocks#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_executionblocks/vb/dataflowexecutionblocks.vb#2)]  
   
- Zaman uyumsuz lambda ifadeleri, bir yürütme veri akışı bloğunda eylemi gerçekleştirmek için de kullanabilirsiniz. Aşağıdaki örnek değiştirir <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> lambda ifadesi iş zaman uyumsuz olarak gerçekleştirmek için kullandığı şekilde, önceki örnekte kullanılan nesne.  
+ Bir yürütme veri akışı bloğunda eylemi gerçekleştirmek için zaman uyumsuz lambda ifadeleri de kullanabilirsiniz. Aşağıdaki örnek <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> böylece iş zaman uyumsuz olarak gerçekleştirmek için bir lambda ifadesi kullanır, önceki örnekte kullanılan nesne.  
   
  [!code-csharp[TPLDataflow_ExecutionBlocks#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_executionblocks/cs/dataflowexecutionblocks.cs#3)]
  [!code-vb[TPLDataflow_ExecutionBlocks#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_executionblocks/vb/dataflowexecutionblocks.vb#3)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri akışı](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Veri akışı](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

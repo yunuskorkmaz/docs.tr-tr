@@ -13,12 +13,12 @@ helpviewer_keywords:
 - public type information [C#]
 - -reference compiler option [C#]
 ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
-ms.openlocfilehash: 76a53d6adcf4c55faa57c25f851e46dd4c2c6c22
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 131cdf62917ab2fc8d564b85c30d13c8971e5809
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865491"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44213721"
 ---
 # <a name="-reference-c-compiler-options"></a>-başvurusu (C# Derleyici Seçenekleri)
 **-Başvuru** içeri aktarmak derleyici seçeneği neden [genel](../../../csharp/language-reference/keywords/public.md) tür bilgilerini belirtilen dosyada geçerli projeye bu nedenle belirtilen derleme dosyalarından meta verileri başvuru etkinleştirme.  
@@ -67,10 +67,12 @@ ms.locfileid: "43865491"
  Bu örnek nasıl kullanılacağını gösterir [extern diğer adı](../../../csharp/language-reference/keywords/extern-alias.md) özelliği.  
   
  Kaynak dosyasını derlemek ve meta verileri alma `grid.dll` ve `grid20.dll`, hangi önceden derlenmiş olan. Aynı bileşenin farklı sürümleri iki DLL içeren ve iki kullandığınız **-başvuru** kaynak dosyasını derlemek için diğer seçeneklere sahip. Seçenekler şöyle görünür:  
+
+```console
+-reference:GridV1=grid.dll -reference:GridV2=grid20.dll  
+```
   
- -reference:GridV1=grid.dll ve - reference:GridV2=grid20.dll  
-  
- Bu, "GridV1" ve "yoluyla bir extern deyimi programınıza kullandığınız GridV2," dış diğer ayarlar:  
+ Bu dış isimlerini ayarlar `GridV1` ve `GridV2`, programınızdaki yoluyla kullanan bir `extern` deyimi:  
   
 ```csharp  
 extern alias GridV1;  
@@ -78,13 +80,13 @@ extern alias GridV2;
 // Using statements go here.  
 ```  
   
- Bunu yaptıktan sonra GridV1 denetim adı bu gibi koyarak için kılavuz denetimi grid.dll öğesinden başvurabilir:  
+ Bunu yaptıktan sonra kılavuz denetiminden başvurabilirsiniz `grid.dll` denetim adını tarafından `GridV1`, şöyle:  
   
 ```csharp  
 GridV1::Grid  
 ```  
   
- Ayrıca, GridV2 denetim adıyla böyle koyarak grid20.dll öğesinden için kılavuz denetimi başvurabilir:  
+ Ayrıca, kılavuz denetiminden başvurabilirsiniz `grid20.dll` denetim adını tarafından `GridV2` şöyle:  
   
 ```csharp  
 GridV2::Grid   

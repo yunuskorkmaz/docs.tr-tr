@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e0954147-548b-461f-9c4b-a8f88845616c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 17528bb9faf137029b35e4a9f28bab7a28ae25db
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 5e3f691da48db863edd20bc6881785940a5451ef
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864621"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44209387"
 ---
 # <a name="-target-visual-basic"></a>-target (Visual Basic)
 Derleyici çıktı biçimi belirtir.  
@@ -38,7 +38,7 @@ Derleyici çıktı biçimi belirtir.
   
  Siz belirtmediğiniz sürece `-target:module`, `-target` neden olan bir [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] bütünleştirilmiş kod bildirimi için bir çıktı dosyası eklenecek.  
   
- Vbc.exe her bir örneğini oluşturur, en fazla bir çıkış dosyası. Gibi bir derleyici seçeneğini belirtirseniz `-out` veya `-target` birden fazla kez, derleyici işlemleri yürürlüğe koymak sonuncu. Bir derlemede tüm dosyaları hakkında bilgi bildirimine eklenir. Tüm dosyaları ile oluşturulanlar dışındaki çıktı `-target:module` bildirimindeki derleme metaverilerini içerir. Kullanım [Ildasm.exe (IL ayrıştırıcı)](https://msdn.microsoft.com/library/f7dy01k1) bir çıkış dosyası meta verileri görüntüleyebilirsiniz.  
+ Vbc.exe her bir örneğini oluşturur, en fazla bir çıkış dosyası. Gibi bir derleyici seçeneğini belirtirseniz `-out` veya `-target` birden fazla kez, derleyici işlemleri yürürlüğe koymak sonuncu. Bir derlemede tüm dosyaları hakkında bilgi bildirimine eklenir. Tüm dosyaları ile oluşturulanlar dışındaki çıktı `-target:module` bildirimindeki derleme metaverilerini içerir. Kullanım [Ildasm.exe (IL ayrıştırıcı)](../../../framework/tools/ildasm-exe-il-disassembler.md) bir çıkış dosyası meta verileri görüntüleyebilirsiniz.  
   
  Kısa formunu da `-target` olduğu `-t`.  
   
@@ -57,12 +57,13 @@ Derleyici çıktı biçimi belirtir.
 vbc -target:library in.vb  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)  
- [-main](../../../visual-basic/reference/command-line-compiler/main.md)  
- [-out (Visual Basic)](../../../visual-basic/reference/command-line-compiler/out.md)  
- [-başvuru (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)  
- [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)  
- [-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)  
- [Derlemeler ve Genel Derleme Önbelleği](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)  
+- [-main](../../../visual-basic/reference/command-line-compiler/main.md)  
+- [-out (Visual Basic)](../../../visual-basic/reference/command-line-compiler/out.md)  
+- [-başvuru (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)  
+- [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)  
+- [-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)  
+- [Derlemeler ve Genel Derleme Önbelleği](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
+- [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

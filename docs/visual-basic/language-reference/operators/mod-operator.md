@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5120823f4e001fc3aff71f267176311e2465597a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 456c19fc8e28517a0662b58e338028e1c75cd8c8
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604856"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44201237"
 ---
 # <a name="mod-operator-visual-basic"></a>Mod işleci (Visual Basic)
 İki sayıyı böler ve yalnızca kalanı döndürür.  
@@ -38,16 +38,16 @@ number1 Mod number2
  Gerekli. Herhangi bir sayısal ifade.  
   
 ## <a name="supported-types"></a>Desteklenen türler  
- Tüm sayısal türler. Bu imzasız ve kayan nokta türleri içerir ve `Decimal`.  
+ Tüm sayısal türler. Bu imzalanmamış ve kayan nokta türlerini içerir ve `Decimal`.  
   
 ## <a name="result"></a>Sonuç
 
-Sonra geri kalan sonucudur `number1` bölünür `number2`. Örneğin, ifade `14 Mod 4` 2 olarak değerlendirir.  
+Sonra kalan sonucudur `number1` bölünür `number2`. Örneğin, ifade `14 Mod 4` 2 olarak değerlendirilir.  
 
 > [!NOTE]
-> Arasında bir fark *kalan* ve *modulus* negatif sayılar için farklı sonuçlarla matematik içinde. `Mod` Visual Basic'te .NET Framework işleci `op_Modulus` işleci ve temel alınan [rem]<xref:System.Reflection.Emit.OpCodes.Rem> IL yönerge tüm kalan işlemi gerçekleştirin.
+> Arasında bir fark *kalan* ve *modulus* negatif sayılar için farklı sonuçlarla Matematikte. `Mod` İşleci Visual Basic'te .NET Framework `op_Modulus` işleci ve arka plandaki [rem](<xref:System.Reflection.Emit.OpCodes.Rem>) IL yönergesinin tüm kalan işlemi gerçekleştirin.
 
-Sonucunu bir `Mod` işlemi korur bölünen oturum `number1`, ve olumlu veya olumsuz olabilir. Sonucu her zaman aralığı içinde değil (-`number2`, `number2`), özel. Örneğin:
+Sonucu bir `Mod` işlemi korur bölünen sayının işaretini `number1`, ve pozitif veya negatif olabilir. Her zaman aralığında sonucudur (-`number2`, `number2`), özel. Örneğin:
 
 ```vb
 Public Module Example
@@ -66,39 +66,39 @@ End Module
 ```
 
 ## <a name="remarks"></a>Açıklamalar  
- Her iki `number1` veya `number2` bir kayan nokta bölme kayan nokta kalanı döndürülen değerdir. Sonuç veri türü veri türlerini bölme kaynaklanan tüm olası değerler tutabileceği en küçük veri türüdür `number1` ve `number2`.  
+ Ya da `number1` veya `number2` bir kayan nokta kayan nokta bölme kalanını döndürülen değerdir. Sonuç veri türü, veri türlerini bölme kaynaklanan tüm olası değerlerini tutabilecek en küçük veri türüdür `number1` ve `number2`.  
   
  Varsa `number1` veya `number2` değerlendiren [hiçbir şey](../../../visual-basic/language-reference/nothing.md), sıfır olarak kabul edilir.  
   
- İlgili işleçleri aşağıdakileri içerir:  
+ İlgili işleçler şunlardır:  
   
--   [\ İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) bir bölümünün tamsayı bölümü döndürür. Örneğin, ifade `14 \ 4` 3 olarak değerlendirir.  
+-   [\ İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) bölme işleminin tamsayı bölümünü döndürür. Örneğin, ifade `14 \ 4` 3 olarak değerlendirir.  
   
--   [/ İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) bir kayan noktalı sayı olarak kalan dahil olmak üzere tam sayının döndürür. Örneğin, ifade `14 / 4` 3.5 değerlendirir.  
+-   [/ İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) bir kayan noktalı sayı olarak kalan dahil olmak üzere tam kalanını döndürür. Örneğin, ifade `14 / 4` 3.5 için değerlendirir.  
   
-## <a name="attempted-division-by-zero"></a>Denenen sıfıra  
- Varsa `number2` sıfır olarak davranışını değerlendirir `Mod` işleci işlenen veri türüne bağlıdır. Tamsayı bölme oluşturur bir <xref:System.DivideByZeroException> özel durum. Kayan nokta bölme döndürür <xref:System.Double.NaN>.  
+## <a name="attempted-division-by-zero"></a>Denenen sıfıra bölme  
+ Varsa `number2` sıfır olarak davranışını değerlendirilen `Mod` işleci, işlenen veri türüne bağlıdır. Bir tamsayı bölme oluşturur bir <xref:System.DivideByZeroException> özel durum. Kayan nokta bölme döndürür <xref:System.Double.NaN>.  
   
 ## <a name="equivalent-formula"></a>Eşdeğer formülü  
- İfade `a Mod b` da aşağıdaki formüller eşdeğerdir:  
+ İfade `a Mod b` şu formüllerden birini eşdeğerdir:  
   
  `a - (b * (a \ b))`  
   
  `a - (b * Fix(a / b))`  
   
-## <a name="floating-point-imprecision"></a>Kayan nokta imprecision  
- Kayan nokta sayıları ile çalışırken, bunlar her zaman kesin bir ondalık gösterimi belleğe sahip olmadığını unutmayın. Değer karşılaştırması gibi bazı işlemleri alanından bu beklenmeyen sonuçlara neden olabilir ve `Mod` işleci. Daha fazla bilgi için bkz: [veri türleri sorunlarını giderme](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
+## <a name="floating-point-imprecision"></a>Kayan nokta kesinlik eksikliği  
+ Kayan noktalı sayı ile çalıştığınızda, bunlar her zaman kesin bir ondalık gösterim bellekte olmadığını unutmayın. Bu değer karşılaştırması gibi bazı işlemleri öğesinden beklenmeyen sonuçlara açabilir ve `Mod` işleci. Daha fazla bilgi için [veri türleri sorunlarını giderme](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
 ## <a name="overloading"></a>Aşırı Yükleme  
- `Mod` İşleci olabilir *aşırı*, yani bir sınıf veya yapı davranışını tanımlayabilirsiniz. Kodunuzu geçerliyse `Mod` bir sınıf ya da böyle bir aşırı içerir yapısı bir örneğine yeniden tanımlanan davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz: [işleç yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ `Mod` İşleci olabilir *aşırı*, yani bir sınıf veya yapı davranışını tanımlayabilirsiniz. Kodunuzu geçerliyse `Mod` bir sınıf veya yapı gibi bir aşırı yüklemeyi içeren bir örneği için yeniden tanımlanan davranışını anladığınızdan emin olun. Daha fazla bilgi için [işleç yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek kullanır `Mod` işleci iki sayı bölme ve yalnızca kalanı döndürür. Her iki sayı kayan noktalı sayı ise kalan temsil eden bir kayan noktalı sayı sonucudur.  
+ Aşağıdaki örnekte `Mod` işleci iki sayı bölme ve yalnızca kalanı döndürür. Ya da bir kayan noktalı sayı olan, kalan temsil eden bir kayan noktalı sayı sonucudur.  
   
  [!code-vb[VbVbalrOperators#31](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/mod-operator_1.vb)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, kayan nokta işlenenleri imprecision olası gösterir. İşlenen ilk deyiminde olan `Double`, ve 0.2 sonsuz yinelenen bir ikili Kesir 0.20000000000000001 depolanan değeri. İkinci deyiminde sabit değer türü karakteri `D` her iki işlenen zorlar `Decimal`, ve 0.2 kesin bir gösterimi.  
+ Aşağıdaki örnek, kayan nokta işlenenler kesinlik eksikliği olası gösterir. İlk ifade, işlenenin olduğu `Double`, ve 0.2 sonsuz yinelenen bir ikili Kesir 0.20000000000000001 depolanan değerine sahip. İkinci ifadede, değişmez değer türü karakteri `D` iki işlenen de zorlar `Decimal`, ve 0.2 kesin bir gösterimi.  
   
  [!code-vb[VbVbalrOperators#32](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/mod-operator_2.vb)]  
   

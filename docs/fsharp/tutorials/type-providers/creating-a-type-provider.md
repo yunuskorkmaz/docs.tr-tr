@@ -3,11 +3,11 @@ title: 'Öğretici: bir tür sağlayıcısı (F #) oluşturma'
 description: 'Temel kavramları göstermek üzere birkaç basit tür sağlayıcısı inceleyerek kendi F # tür sağlayıcıları F # 3.0 içinde oluşturmayı öğrenin.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 3c998377b2c3a408d536ef416f3799bf7f04b6bd
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44036619"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44212327"
 ---
 # <a name="tutorial-create-a-type-provider"></a>Öğretici: bir tür sağlayıcısı oluşturma
 

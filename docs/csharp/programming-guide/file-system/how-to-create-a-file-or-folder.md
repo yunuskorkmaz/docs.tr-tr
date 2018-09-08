@@ -8,11 +8,11 @@ helpviewer_keywords:
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
 ms.openlocfilehash: 34919efe32730fe0db11cb881b8e07629a3094fd
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43884817"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44207466"
 ---
 # <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>Nasıl yapılır: Dosya ve Klasör Oluşturma (C# Programlama Kılavuzu)
 Programlı olarak bilgisayarınızda bir klasör oluşturun, bir alt klasör oluşturun alt klasöründe bir dosya oluşturun ve dosyaya veri yazmak.  

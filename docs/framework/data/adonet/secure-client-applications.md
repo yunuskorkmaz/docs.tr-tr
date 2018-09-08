@@ -3,11 +3,11 @@ title: Güvenli istemci uygulamaları
 ms.date: 03/30/2017
 ms.assetid: 6239592e-fa7d-4dea-9f00-d296d0048b01
 ms.openlocfilehash: a3b035d59a39ca20f6a81fbd40d39069a7cc43c2
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43884695"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44208562"
 ---
 # <a name="secure-client-applications"></a>Güvenli istemci uygulamaları
 Uygulamalar genellikle tüm veri kaybına neden veya aksi halde sistemden güvenlik açıklarına karşı korunması gereken birçok bölümü oluşur. Güvenli kullanıcı arabirimleri oluşturmak, birçok sorunu verileri veya sistem kaynaklarına erişebilmeniz için önce saldırganların engelleyerek engelleyebilirsiniz.  

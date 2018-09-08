@@ -1,6 +1,6 @@
 ---
 title: Kod Sözleşmeleri
-ms.date: 03/30/2017
+ms.date: 09/05/2018
 dev_langs:
 - csharp
 - vb
@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a444b7eace18fa579324f540e8cf7537c420a6a8
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: f7f7a779cc10b32d66a184107359b502cf094979
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44080614"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44222129"
 ---
 # <a name="code-contracts"></a>Kod Sözleşmeleri
 Kod sözleşmeleri, önkoşulları ve koşul sonralarına nesne okuduğunuzda kodunuzda belirtmek için bir yol sağlar. Önkoşulları, bir metot veya özellik girerken karşılanması gereken gereksinimleri verilmiştir. Koşul sonralarına beklentileri metot veya özellik kod çıkar zaman açıklanmaktadır. Beklenen durum iyi durumda olan bir sınıf için nesne okuduğunuzda açıklanmaktadır.  
@@ -148,7 +148,7 @@ Contract.Invariant(this.x > this.y);
 }  
 ```  
   
- Okuduğunuzda koşullu CONTRACTS_FULL önişlemci sembolü tarafından tanımlanır. Çalışma zamanı denetimi sırasında her bir genel yöntem sonunda okuduğunuzda denetlenir. Değişmez değer aynı sınıftaki bir genel yöntem bahsetmeleri normalde, genel yönteminin sonunda olacağını sabit denetimi devre dışı bırakılır. Bunun yerine, yalnızca o sınıfın en dıştaki yöntem çağrısına sonunda onay gerçekleşir. Bu durum, aynı zamanda sınıfın başka bir sınıftaki bir yönteme bir çağrı nedeniyle yeniden girilirse gerçekleşir. Okuduğunuzda değil uygulayan herhangi bir yöntem veya nesnenin Sonlandırıcısı için iade <xref:System.IDisposable.Dispose%2A> yöntemi.  
+ Okuduğunuzda koşullu CONTRACTS_FULL önişlemci sembolü tarafından tanımlanır. Çalışma zamanı denetimi sırasında her bir genel yöntem sonunda okuduğunuzda denetlenir. Değişmez değer aynı sınıftaki bir genel yöntem bahsetmeleri normalde, genel yönteminin sonunda olacağını sabit denetimi devre dışı bırakılır. Bunun yerine, yalnızca o sınıfın en dıştaki yöntem çağrısına sonunda onay gerçekleşir. Bu durum, aynı zamanda sınıfın başka bir sınıftaki bir yönteme bir çağrı nedeniyle yeniden girilirse gerçekleşir. Okuduğunuzda bir nesnenin Sonlandırıcısı için onaylanmamış ve <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> uygulaması.  
   
 <a name="usage_guidelines"></a>   
 ## <a name="usage-guidelines"></a>Kullanım yönergeleri  

@@ -3,11 +3,11 @@ title: Numaralandırmalar (F#)
 description: 'F # değişmez değerler yerine numaralandırmalar kodunuzu daha okunabilir ve sürdürülebilir hale getirmek için kullanmayı öğrenin.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 47fb353c2698f8b1474834ebbd1b0eff2c7f76e7
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44097093"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44208328"
 ---
 # <a name="enumerations"></a>Numaralandırmalar
 

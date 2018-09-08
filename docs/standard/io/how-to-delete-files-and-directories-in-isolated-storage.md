@@ -20,11 +20,11 @@ ms.assetid: 8fcc0dea-435b-4d40-ba4d-ba056265c202
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4b324cc391bc784ac558ed3eb634506b5eea0d63
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43878616"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44214569"
 ---
 # <a name="how-to-delete-files-and-directories-in-isolated-storage"></a>Nasıl yapılır: Yalıtılmış Depolamadaki Dosya ve Dizinleri Silme
 Dizinleri ve bir yalıtılmış depolama dosyasında dosyaları silebilirsiniz. Bir depo içindeki dosya ve dizin adları, işletim sistemi bağımlıdır ve köküne sanal dosya sistemi olarak belirtilir. Bunlar, Windows işletim sistemlerinde büyük küçük harfe duyarlı değildir.  

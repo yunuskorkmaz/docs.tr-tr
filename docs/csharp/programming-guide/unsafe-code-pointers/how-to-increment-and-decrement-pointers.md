@@ -6,11 +6,11 @@ helpviewer_keywords:
 - pointer expressions [C#], increment and decrement
 ms.assetid: 1b8b9281-44ee-485a-9045-3db38a4b4b89
 ms.openlocfilehash: 39cefc5dcebf1331a5e0ac0fadb8284e9041eb27
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44138246"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44206477"
 ---
 # <a name="how-to-increment-and-decrement-pointers-c-programming-guide"></a>Nasıl yapılır: İşaretçileri Artırma ve Azaltma (C# Programlama Kılavuzu)
 Artırma ve azaltma işleçleri kullanan `++` ve `--`işaretçi konuma göre değişmesini [sizeof](../../../csharp/language-reference/keywords/sizeof.md) (`pointer-type`) işaretçi işaretçisi-türü *. Artırma ve azaltma ifadeleri aşağıdaki biçiminde:  

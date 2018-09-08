@@ -5,11 +5,11 @@ helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
 ms.openlocfilehash: c5064d90c8601ee44be593446b0fd5ad483e57f2
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44135802"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44222019"
 ---
 # <a name="configuring-tracing"></a>İzlemeyi Yapılandırma
 Bu konuda nasıl izlemeyi etkinleştirmek, izlemeleri ve küme izleme düzeylerini kümesi Etkinlik izleme ve uçtan uca izleme bağıntı desteklemek için yayma yaymak için izleme kaynakları yapılandırabilir ve izlemeleri erişmek için izleme dinleyicilerine ayarlama açıklanmaktadır.  
