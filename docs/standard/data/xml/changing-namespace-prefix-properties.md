@@ -9,14 +9,14 @@ ms.assetid: d5c87cbe-4d69-429f-aad5-3103c2ca2770
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4a6597a3a57cd68c4dd17c4fbae882590f373709
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: MT
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43869266"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44174126"
 ---
-# <a name="changing-namespace-prefix-properties"></a><span data-ttu-id="d15a4-102">Namespace ön ek özelliklerini değiştirme</span><span class="sxs-lookup"><span data-stu-id="d15a4-102">Changing Namespace Prefix Properties</span></span>
-<span data-ttu-id="d15a4-103">**XmlNode** sınıfı belirli bir düğümle ilişkili ad alanı öneki değiştirmenize izin verir.</span><span class="sxs-lookup"><span data-stu-id="d15a4-103">The **XmlNode** class allows you to change the namespace prefix associated with a given node.</span></span> <span data-ttu-id="d15a4-104">Örneğin, aşağıdaki kod, değişmekte olan bir öğenin ön ek gösterir.</span><span class="sxs-lookup"><span data-stu-id="d15a4-104">For example, the following code shows the prefix of an element being changed.</span></span>  
+# <a name="changing-namespace-prefix-properties"></a><span data-ttu-id="73457-102">Namespace ön ek özelliklerini değiştirme</span><span class="sxs-lookup"><span data-stu-id="73457-102">Changing Namespace Prefix Properties</span></span>
+<span data-ttu-id="73457-103">**XmlNode** sınıfı belirli bir düğümle ilişkili ad alanı öneki değiştirmenize izin verir.</span><span class="sxs-lookup"><span data-stu-id="73457-103">The **XmlNode** class allows you to change the namespace prefix associated with a given node.</span></span> <span data-ttu-id="73457-104">Örneğin, aşağıdaki kod, değişmekte olan bir öğenin ön ek gösterir.</span><span class="sxs-lookup"><span data-stu-id="73457-104">For example, the following code shows the prefix of an element being changed.</span></span>  
   
 ```vb  
 Dim doc as XmlDocument = new XmlDocument()  
@@ -34,13 +34,13 @@ e.Prefix = "b";
 Console.WriteLine(doc.InnerXml);  
 ```  
   
- <span data-ttu-id="d15a4-105">**Output**</span><span class="sxs-lookup"><span data-stu-id="d15a4-105">**Output**</span></span>  
+ <span data-ttu-id="73457-105">**Output**</span><span class="sxs-lookup"><span data-stu-id="73457-105">**Output**</span></span>  
   
 ```xml  
 <b:test xmlns:a="123" xmlns:b="456" />  
 ```  
   
- <span data-ttu-id="d15a4-106">Bir düğümün önek değiştirme, ad alanı değiştirmez.</span><span class="sxs-lookup"><span data-stu-id="d15a4-106">Changing the prefix of a node does not change its namespace.</span></span> <span data-ttu-id="d15a4-107">Ad alanı, yalnızca düğüm oluşturulduğunda ayarlanabilir.</span><span class="sxs-lookup"><span data-stu-id="d15a4-107">The namespace can only be set when the node is created.</span></span> <span data-ttu-id="d15a4-108">Ağaç kalıcı, yeni ad alanı öznitelikleri kullanıma ayarladığınız ön ekini karşılamak için kalıcı.</span><span class="sxs-lookup"><span data-stu-id="d15a4-108">When you persist the tree, new namespace attributes may be persisted out to satisfy the prefix you set.</span></span> <span data-ttu-id="d15a4-109">Yeni ad alanı oluşturulamazsa önek yerel adı ve ad alanı düğümü korur şekilde değiştirilir.</span><span class="sxs-lookup"><span data-stu-id="d15a4-109">If the new namespace cannot be created, then the prefix is changed so the node preserves its local name and namespace.</span></span> <span data-ttu-id="d15a4-110">Aşağıdaki örnek, eklenen bir ad alanı özniteliği gösterir.</span><span class="sxs-lookup"><span data-stu-id="d15a4-110">The following example shows a namespace attribute being added.</span></span>  
+ <span data-ttu-id="73457-106">Bir düğümün önek değiştirme, ad alanı değiştirmez.</span><span class="sxs-lookup"><span data-stu-id="73457-106">Changing the prefix of a node does not change its namespace.</span></span> <span data-ttu-id="73457-107">Ad alanı, yalnızca düğüm oluşturulduğunda ayarlanabilir.</span><span class="sxs-lookup"><span data-stu-id="73457-107">The namespace can only be set when the node is created.</span></span> <span data-ttu-id="73457-108">Ağaç kalıcı, yeni ad alanı öznitelikleri kullanıma ayarladığınız ön ekini karşılamak için kalıcı.</span><span class="sxs-lookup"><span data-stu-id="73457-108">When you persist the tree, new namespace attributes may be persisted out to satisfy the prefix you set.</span></span> <span data-ttu-id="73457-109">Yeni ad alanı oluşturulamazsa önek yerel adı ve ad alanı düğümü korur şekilde değiştirilir.</span><span class="sxs-lookup"><span data-stu-id="73457-109">If the new namespace cannot be created, then the prefix is changed so the node preserves its local name and namespace.</span></span> <span data-ttu-id="73457-110">Aşağıdaki örnek, eklenen bir ad alanı özniteliği gösterir.</span><span class="sxs-lookup"><span data-stu-id="73457-110">The following example shows a namespace attribute being added.</span></span>  
   
 ```vb  
 Dim doc as XmlDocument = new XmlDocument()  
@@ -58,14 +58,14 @@ e.Prefix = "a";
 Console.WriteLine(doc.InnerXml);  
 ```  
   
- <span data-ttu-id="d15a4-111">**Output**</span><span class="sxs-lookup"><span data-stu-id="d15a4-111">**Output**</span></span>  
+ <span data-ttu-id="73457-111">**Output**</span><span class="sxs-lookup"><span data-stu-id="73457-111">**Output**</span></span>  
   
 ```xml  
 <a:test xmlns="123" xmlns:a="123" />  
 ```  
   
- <span data-ttu-id="d15a4-112">Ne zaman ağaç kalıcı bir dizeye çağrısının sonucunda **belge. Sınıfının InnerXml**, `xmlns:a='123'` öznitelik ad alanı korumak için eklenen `test` öğesi.</span><span class="sxs-lookup"><span data-stu-id="d15a4-112">When the tree was persisted to a string as a result of the call to **doc.InnerXml**, the `xmlns:a='123'` attribute was added to preserve the namespace of the `test` element.</span></span> <span data-ttu-id="d15a4-113">Bu `'123'`, ve onu kaldığını `'123'`.</span><span class="sxs-lookup"><span data-stu-id="d15a4-113">It was `'123'`, and it remained `'123'`.</span></span>  
+ <span data-ttu-id="73457-112">Ne zaman ağaç kalıcı bir dizeye çağrısının sonucunda **belge. Sınıfının InnerXml**, `xmlns:a='123'` öznitelik ad alanı korumak için eklenen `test` öğesi.</span><span class="sxs-lookup"><span data-stu-id="73457-112">When the tree was persisted to a string as a result of the call to **doc.InnerXml**, the `xmlns:a='123'` attribute was added to preserve the namespace of the `test` element.</span></span> <span data-ttu-id="73457-113">Bu `'123'`, ve onu kaldığını `'123'`.</span><span class="sxs-lookup"><span data-stu-id="73457-113">It was `'123'`, and it remained `'123'`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d15a4-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d15a4-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="73457-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="73457-114">See also</span></span>
 
-- [<span data-ttu-id="d15a4-115">XML Belge Nesne Modeli (DOM)</span><span class="sxs-lookup"><span data-stu-id="d15a4-115">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [<span data-ttu-id="73457-115">XML Belge Nesne Modeli (DOM)</span><span class="sxs-lookup"><span data-stu-id="73457-115">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

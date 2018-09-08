@@ -11,44 +11,45 @@ helpviewer_keywords:
 ms.assetid: bc496a91-fefb-4ce0-ab4c-61f09964119a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b1e5784de277d59c7bc945cbe7b605653eec7bb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 27550a8fd8292029cad9c2e699374a190b1a532e
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571023"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44185642"
 ---
-# <a name="equality-operators"></a><span data-ttu-id="97d6e-102">Eşitlik İşleçleri</span><span class="sxs-lookup"><span data-stu-id="97d6e-102">Equality Operators</span></span>
-<span data-ttu-id="97d6e-103">Bu bölümde tekrar yüklemesi eşitlik işleçleri açıklanır ve başvurduğu `operator==` ve `operator!=` eşitlik işleçleri olarak.</span><span class="sxs-lookup"><span data-stu-id="97d6e-103">This section discusses overloading equality operators and refers to `operator==` and `operator!=` as equality operators.</span></span>  
+# <a name="equality-operators"></a><span data-ttu-id="b3619-102">Eşitlik İşleçleri</span><span class="sxs-lookup"><span data-stu-id="b3619-102">Equality Operators</span></span>
+<span data-ttu-id="b3619-103">Bu bölümde, aşırı yüklerken eşitlik işleci açıklar ve başvurduğu `operator==` ve `operator!=` eşitlik işleçleri olarak.</span><span class="sxs-lookup"><span data-stu-id="b3619-103">This section discusses overloading equality operators and refers to `operator==` and `operator!=` as equality operators.</span></span>  
   
- <span data-ttu-id="97d6e-104">**X DO NOT** eşitlik işleçleri ve diğer aşırı yükleme.</span><span class="sxs-lookup"><span data-stu-id="97d6e-104">**X DO NOT** overload one of the equality operators and not the other.</span></span>  
+ <span data-ttu-id="b3619-104">**X DO NOT** eşitlik işleçleri ve diğer aşırı yükleme.</span><span class="sxs-lookup"><span data-stu-id="b3619-104">**X DO NOT** overload one of the equality operators and not the other.</span></span>  
   
- <span data-ttu-id="97d6e-105">**✓ DO** emin <xref:System.Object.Equals%2A?displayProperty=nameWithType> ve eşitlik işleçleri tam olarak aynı semantiği ve benzer performans özellikleri vardır.</span><span class="sxs-lookup"><span data-stu-id="97d6e-105">**✓ DO** ensure that <xref:System.Object.Equals%2A?displayProperty=nameWithType> and the equality operators have exactly the same semantics and similar performance characteristics.</span></span>  
+ <span data-ttu-id="b3619-105">**✓ DO** emin <xref:System.Object.Equals%2A?displayProperty=nameWithType> ve eşitlik işleçleri tam olarak aynı semantiği ve benzer performans özellikleri vardır.</span><span class="sxs-lookup"><span data-stu-id="b3619-105">**✓ DO** ensure that <xref:System.Object.Equals%2A?displayProperty=nameWithType> and the equality operators have exactly the same semantics and similar performance characteristics.</span></span>  
   
- <span data-ttu-id="97d6e-106">Bu genellikle anlamına `Object.Equals` eşitlik işleçleri aşırı zaman geçersiz kılınacak gerekiyor.</span><span class="sxs-lookup"><span data-stu-id="97d6e-106">This often means that `Object.Equals` needs to be overridden when the equality operators are overloaded.</span></span>  
+ <span data-ttu-id="b3619-106">Bu genellikle anlamına `Object.Equals` eşitlik operatörleri aşırı yüklendiğinde geçersiz kılınması gerekiyor.</span><span class="sxs-lookup"><span data-stu-id="b3619-106">This often means that `Object.Equals` needs to be overridden when the equality operators are overloaded.</span></span>  
   
- <span data-ttu-id="97d6e-107">**X AVOID** eşitlik işleçleri özel durumları atma.</span><span class="sxs-lookup"><span data-stu-id="97d6e-107">**X AVOID** throwing exceptions from equality operators.</span></span>  
+ <span data-ttu-id="b3619-107">**X AVOID** eşitlik işleçleri özel durumları atma.</span><span class="sxs-lookup"><span data-stu-id="b3619-107">**X AVOID** throwing exceptions from equality operators.</span></span>  
   
- <span data-ttu-id="97d6e-108">Örneğin, bağımsız değişkenlerden biri atma yerine null ise false döndürür `NullReferenceException`.</span><span class="sxs-lookup"><span data-stu-id="97d6e-108">For example, return false if one of the arguments is null instead of throwing `NullReferenceException`.</span></span>  
+ <span data-ttu-id="b3619-108">Örneğin, bağımsız değişkenlerden biri oluşturmak yerine null ise yanlış geri `NullReferenceException`.</span><span class="sxs-lookup"><span data-stu-id="b3619-108">For example, return false if one of the arguments is null instead of throwing `NullReferenceException`.</span></span>  
   
-## <a name="equality-operators-on-value-types"></a><span data-ttu-id="97d6e-109">Değer türleri üzerinde eşitlik işleçleri</span><span class="sxs-lookup"><span data-stu-id="97d6e-109">Equality Operators on Value Types</span></span>  
- <span data-ttu-id="97d6e-110">**✓ DO** eşitlik anlamlı ise, değer türleri üzerinde eşitlik işleçleri aşırı yükleme.</span><span class="sxs-lookup"><span data-stu-id="97d6e-110">**✓ DO** overload the equality operators on value types, if equality is meaningful.</span></span>  
+## <a name="equality-operators-on-value-types"></a><span data-ttu-id="b3619-109">Değer türleri üzerinde eşitlik işleçleri</span><span class="sxs-lookup"><span data-stu-id="b3619-109">Equality Operators on Value Types</span></span>  
+ <span data-ttu-id="b3619-110">**✓ DO** eşitlik anlamlı ise, değer türleri üzerinde eşitlik işleçleri aşırı yükleme.</span><span class="sxs-lookup"><span data-stu-id="b3619-110">**✓ DO** overload the equality operators on value types, if equality is meaningful.</span></span>  
   
- <span data-ttu-id="97d6e-111">Çoğu programlama dillerinde hiçbir varsayılan uygulaması olduğundan `operator==` değer türleri için.</span><span class="sxs-lookup"><span data-stu-id="97d6e-111">In most programming languages, there is no default implementation of `operator==` for value types.</span></span>  
+ <span data-ttu-id="b3619-111">Çoğu programlama dilinde, hiçbir varsayılan uygulaması olduğundan `operator==` değer türleri için.</span><span class="sxs-lookup"><span data-stu-id="b3619-111">In most programming languages, there is no default implementation of `operator==` for value types.</span></span>  
   
-## <a name="equality-operators-on-reference-types"></a><span data-ttu-id="97d6e-112">Başvuru türleri üzerinde eşitlik işleçleri</span><span class="sxs-lookup"><span data-stu-id="97d6e-112">Equality Operators on Reference Types</span></span>  
- <span data-ttu-id="97d6e-113">**X AVOID** kesilebilir başvuru türleri üzerinde eşitlik işleçleri aşırı yükleme.</span><span class="sxs-lookup"><span data-stu-id="97d6e-113">**X AVOID** overloading equality operators on mutable reference types.</span></span>  
+## <a name="equality-operators-on-reference-types"></a><span data-ttu-id="b3619-112">Başvuru türlerinde eşitlik işleçleri</span><span class="sxs-lookup"><span data-stu-id="b3619-112">Equality Operators on Reference Types</span></span>  
+ <span data-ttu-id="b3619-113">**X AVOID** kesilebilir başvuru türleri üzerinde eşitlik işleçleri aşırı yükleme.</span><span class="sxs-lookup"><span data-stu-id="b3619-113">**X AVOID** overloading equality operators on mutable reference types.</span></span>  
   
- <span data-ttu-id="97d6e-114">Birçok dilin başvuru türleri için yerleşik eşitlik işleçleri vardır.</span><span class="sxs-lookup"><span data-stu-id="97d6e-114">Many languages have built-in equality operators for reference types.</span></span> <span data-ttu-id="97d6e-115">Yerleşik genellikle başvuru eşitliği işleçler ve varsayılan davranışı için değer eşitliği değiştirildiğinde, geliştiricilerin çoğu Şaşkın.</span><span class="sxs-lookup"><span data-stu-id="97d6e-115">The built-in operators usually implement the reference equality, and many developers are surprised when the default behavior is changed to the value equality.</span></span>  
+ <span data-ttu-id="b3619-114">Birçok dil başvuru türleri için yerleşik eşitlik işleçleri sahip.</span><span class="sxs-lookup"><span data-stu-id="b3619-114">Many languages have built-in equality operators for reference types.</span></span> <span data-ttu-id="b3619-115">Yerleşik işleçler, genellikle başvuru eşitliği uygulamak ve birçok geliştiricinin varsayılan davranışı için değer eşitliği değiştirildiğinde şaşırmayın.</span><span class="sxs-lookup"><span data-stu-id="b3619-115">The built-in operators usually implement the reference equality, and many developers are surprised when the default behavior is changed to the value equality.</span></span>  
   
- <span data-ttu-id="97d6e-116">Girişi çok referans eşitlik ve değer eşitliği arasındaki fark zorlaştıran çünkü bu sorunu değişmez başvuru türlerinde azalır.</span><span class="sxs-lookup"><span data-stu-id="97d6e-116">This problem is mitigated for immutable reference types because immutability makes it much harder to notice the difference between reference equality and value equality.</span></span>  
+ <span data-ttu-id="b3619-116">Bu sorun, değiştirilemezlik çok başvuru eşitliği değer eşitliği arasındaki fark zorlaştırır çünkü değişmez başvuru türleri için azalır.</span><span class="sxs-lookup"><span data-stu-id="b3619-116">This problem is mitigated for immutable reference types because immutability makes it much harder to notice the difference between reference equality and value equality.</span></span>  
   
- <span data-ttu-id="97d6e-117">**X AVOID** uygulama önemli ölçüde daha yavaş, başvuru eşitliği olacaksa başvuru türlerinde eşitlik işleçleri aşırı yükleme.</span><span class="sxs-lookup"><span data-stu-id="97d6e-117">**X AVOID** overloading equality operators on reference types if the implementation would be significantly slower than that of reference equality.</span></span>  
+ <span data-ttu-id="b3619-117">**X AVOID** uygulama önemli ölçüde daha yavaş, başvuru eşitliği olacaksa başvuru türlerinde eşitlik işleçleri aşırı yükleme.</span><span class="sxs-lookup"><span data-stu-id="b3619-117">**X AVOID** overloading equality operators on reference types if the implementation would be significantly slower than that of reference equality.</span></span>  
   
- <span data-ttu-id="97d6e-118">*Bölümleri © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*</span><span class="sxs-lookup"><span data-stu-id="97d6e-118">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
+ <span data-ttu-id="b3619-118">*Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*</span><span class="sxs-lookup"><span data-stu-id="b3619-118">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- <span data-ttu-id="97d6e-119">*Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*</span><span class="sxs-lookup"><span data-stu-id="97d6e-119">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
+ <span data-ttu-id="b3619-119">*İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*</span><span class="sxs-lookup"><span data-stu-id="b3619-119">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="97d6e-120">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="97d6e-120">See Also</span></span>  
- [<span data-ttu-id="97d6e-121">Çerçeve Tasarım Yönergeleri</span><span class="sxs-lookup"><span data-stu-id="97d6e-121">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)  
- [<span data-ttu-id="97d6e-122">Kullanım Yönergeleri</span><span class="sxs-lookup"><span data-stu-id="97d6e-122">Usage Guidelines</span></span>](../../../docs/standard/design-guidelines/usage-guidelines.md)
+## <a name="see-also"></a><span data-ttu-id="b3619-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b3619-120">See also</span></span>
+
+- [<span data-ttu-id="b3619-121">Çerçeve Tasarım Yönergeleri</span><span class="sxs-lookup"><span data-stu-id="b3619-121">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)  
+- [<span data-ttu-id="b3619-122">Kullanım Yönergeleri</span><span class="sxs-lookup"><span data-stu-id="b3619-122">Usage Guidelines</span></span>](../../../docs/standard/design-guidelines/usage-guidelines.md)
