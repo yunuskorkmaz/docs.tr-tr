@@ -4,12 +4,15 @@ description: Visual Studio ile .NET Core uygulama dağıtımı öğrenin
 author: rpetrusha
 ms.author: ronpet
 ms.date: 09/03/2018
-ms.openlocfilehash: 960a5efdfd7bc9c57f9101f9ddc05efb54f19708
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+dev_langs:
+- csharp
+- vb
+ms.openlocfilehash: 62cfef08a8319981891c713c08c34eba5ab54b6f
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43868659"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44227746"
 ---
 # <a name="deploying-net-core-apps-with-visual-studio"></a>Dağıtımı .NET Core uygulamaları Visual Studio ile
 

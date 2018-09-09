@@ -3,11 +3,11 @@ title: Özel Bulma Ölçütleri
 ms.date: 03/30/2017
 ms.assetid: b2723929-8829-424d-8015-a37ba2ab4f68
 ms.openlocfilehash: 699260fcef7680710f721d213dbf1126ebf7a896
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44135405"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44227252"
 ---
 # <a name="custom-find-criteria"></a>Özel Bulma Ölçütleri
 Bu örnek, mantığı kullanarak özel kapsam eşleşme oluşturma ve bir özel bulma hizmeti uygulama gösterir. İstemciler işlevselliği eşleşen özel kapsam iyileştirmek ve daha fazla WCF bulma bulma sistem tarafından sağlanan işlevleri temel alarak oluşturmak için kullanın. Bu örnek kapsayan senaryo aşağıdaki gibidir:  

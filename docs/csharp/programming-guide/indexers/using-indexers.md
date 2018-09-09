@@ -5,11 +5,11 @@ helpviewer_keywords:
 - indexers [C#], about indexers
 ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
 ms.openlocfilehash: 3e4c1f346b83cf97c57a359984bd08e075b6451b
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44173398"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44253227"
 ---
 # <a name="using-indexers-c-programming-guide"></a>Dizin Oluşturucular Kullanma (C# Programlama Kılavuzu)
 Dizin oluşturucular özelliklere oluşturmanıza olanak sağlayan bir söz dizimi kullanışlı bir [sınıfı](../../../csharp/language-reference/keywords/class.md), [yapı](../../../csharp/language-reference/keywords/struct.md), veya [arabirimi](../../../csharp/language-reference/keywords/interface.md) istemci uygulamaları bir dizi olarak erişebilirsiniz. Dizin Oluşturucular, bir iç toplama veya dizi yalıtılacak birincil amacı olan türlerinde en sık uygulanır. Örneğin, 24 saatlik dönemde 10 farklı zamanlarda kayıtlı Farenheit sıcaklık temsil eden TempRecord adlı bir sınıf olduğunu varsayalım. "Sıcaklıkların temsil etmek için koşulları" tür float adlı bir dizi sınıf içerir ve bir <xref:System.DateTime> Sıcaklıkların kaydedilme tarihi temsil eder. Bu sınıfta dizin oluşturucu uygulayarak, istemciler de TempRecord örnek olarak sıcaklıklar erişebilir `float temp = tr[4]` yerine olarak `float temp = tr.temps[4]`. Dizin Oluşturucu gösterimi yalnızca istemci uygulamaları için sözdizimini basitleştirir; Ayrıca sınıfı ve amacını anlamak diğer geliştiriciler için daha kolay kılar.  

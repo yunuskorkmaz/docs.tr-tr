@@ -5,11 +5,11 @@ helpviewer_keywords:
 - generics [C#], methods
 ms.assetid: 673eeea2-4b48-4faa-9c4e-2e89449221b9
 ms.openlocfilehash: 0fb5267e6324d3dffd1ad5a72ef3718c8cdd08b8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44048616"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44251488"
 ---
 # <a name="generic-methods-c-programming-guide"></a>Genel Yöntemler (C# Programlama Kılavuzu)
 Genel bir yöntem tür parametreleri ile aşağıdaki gibi belirtilen bir yöntemdir:  
