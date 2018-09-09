@@ -3,16 +3,16 @@ title: 'Örnek XML dosyası: Sayısal veriler (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 365cae86-a166-46df-b56a-0209d9771c27
 ms.openlocfilehash: d0351ed8cf4960174fdc45db5d7a15a385c90a61
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43891278"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44253292"
 ---
-# <a name="sample-xml-file-numerical-data-linq-to-xml"></a><span data-ttu-id="dcbfa-102">Örnek XML dosyası: Sayısal veriler (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="dcbfa-102">Sample XML File: Numerical Data (LINQ to XML)</span></span>
-<span data-ttu-id="dcbfa-103">Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri.</span><span class="sxs-lookup"><span data-stu-id="dcbfa-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="dcbfa-104">Bu dosya, birleşimi, ortalama ve Gruplama için sayısal veriler içerir.</span><span class="sxs-lookup"><span data-stu-id="dcbfa-104">This file contains numerical data for summing, averaging, and grouping.</span></span>  
+# <a name="sample-xml-file-numerical-data-linq-to-xml"></a><span data-ttu-id="339d9-102">Örnek XML dosyası: Sayısal veriler (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="339d9-102">Sample XML File: Numerical Data (LINQ to XML)</span></span>
+<span data-ttu-id="339d9-103">Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri.</span><span class="sxs-lookup"><span data-stu-id="339d9-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="339d9-104">Bu dosya, birleşimi, ortalama ve Gruplama için sayısal veriler içerir.</span><span class="sxs-lookup"><span data-stu-id="339d9-104">This file contains numerical data for summing, averaging, and grouping.</span></span>  
   
-## <a name="dataxml"></a><span data-ttu-id="dcbfa-105">Data.XML</span><span class="sxs-lookup"><span data-stu-id="dcbfa-105">Data.xml</span></span>  
+## <a name="dataxml"></a><span data-ttu-id="339d9-105">Data.XML</span><span class="sxs-lookup"><span data-stu-id="339d9-105">Data.xml</span></span>  
   
 ```xml  
 <Root>  
@@ -55,6 +55,6 @@ ms.locfileid: "43891278"
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="dcbfa-106">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="dcbfa-106">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="339d9-106">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="339d9-106">See Also</span></span>
 
-- [<span data-ttu-id="dcbfa-107">Örnek XML Belgeleri (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="dcbfa-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+- [<span data-ttu-id="339d9-107">Örnek XML Belgeleri (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="339d9-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
