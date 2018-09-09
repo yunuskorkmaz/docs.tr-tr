@@ -18,11 +18,11 @@ helpviewer_keywords:
 - OnSerializingAttribute class, custom serialization
 ms.assetid: 12ed422d-5280-49b8-9b71-a2ed129c0384
 ms.openlocfilehash: 6151bf670a455d4c9862e80fd06314e4e1621080
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44130360"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44225665"
 ---
 # <a name="custom-serialization"></a>Özel serileştirme
 Özel seri hale getirme serileştirme ve seri durumundan çıkarma bir türün denetleme işlemidir. Serileştirme denetleyerek, türü çekirdek işlevselliğini bozucu olmayan bir tür sürümleri arasında seri hale getrime ve yeteneği olan serileştirme uyumluluğu sağlamak mümkündür. Örneğin, bir tür ilk sürümü olabilir yalnızca iki alan. Sonraki sürümünde bir tür, pek çok daha fazla alan eklenir. Henüz bir uygulamanın ikinci sürümü seri hale getirmek ve her iki türü seri durumdan olması gerekir. Aşağıdaki bölümler serileştirme denetlemek nasıl açıklar.

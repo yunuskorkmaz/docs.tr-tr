@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: sıkıştırma ve dosyaları ayıklayın'
+title: 'Nasıl yapılır: Sıkıştır ve dosyaları ayıklayın'
 ms.date: 06/06/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: e9876165-3c60-4c84-a272-513e47acf579
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f045f2137d65a66ac025c81e58e66c96bcaca031
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: 669936d15cfe1ea125ed36ffdfcfd093b6aacbe1
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827130"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44225087"
 ---
-# <a name="how-to-compress-and-extract-files"></a>Nasıl yapılır: sıkıştırma ve dosyaları ayıklayın
+# <a name="how-to-compress-and-extract-files"></a>Nasıl yapılır: Sıkıştır ve dosyaları ayıklayın
 
-<xref:System.IO.Compression> Ad alanı, sıkıştırma ve açma dosyalar ve akışlar için aşağıdaki türleri içerir. Bu tür, okumak ve sıkıştırılmış bir dosya içeriğini değiştirmek için de kullanabilirsiniz:
+<xref:System.IO.Compression> Ad alanı, sıkıştırma ve açma dosyalar ve akışlar için aşağıdaki türleri içeriyor. Bu türler, okumak ve sıkıştırılmış bir dosyanın içeriğini değiştirmek için de kullanabilirsiniz:
 
 - <xref:System.IO.Compression.ZipFile>
 
@@ -33,46 +33,46 @@ ms.locfileid: "34827130"
 
 - <xref:System.IO.Compression.GZipStream>
 
-Aşağıdaki örnekler bazı sıkıştırılmış dosyaları ile çalışırken gerçekleştirebileceğiniz işlevlerin gösterir.
+Aşağıdaki örnekler sıkıştırılmış dosyalarıyla çalışırken gerçekleştirebileceğiniz işlevlerin bazılarını gösterir.
 
-## <a name="example-1---create-and-extract-a-zip-file"></a>Örnek 1 - oluşturun ve bir .zip dosyasını ayıklayın
+## <a name="example-1---create-and-extract-a-zip-file"></a>Örnek 1 - oluşturma ve bir .zip dosyasını çıkartın
 
-Aşağıdaki örnek oluşturun ve kullanarak bir .zip dosya adı uzantısına sahip sıkıştırılmış bir dosya ayıklayın gösterilmektedir <xref:System.IO.Compression.ZipFile> sınıfı. Yeni bir .zip dosyasına bir klasörün içeriğini sıkıştırır ve bu içeriği yeni bir klasöre ayıklar. Kullanılacak <xref:System.IO.Compression.ZipFile> sınıfı, başvurmalıdır `System.IO.Compression.FileSystem` projenizdeki derleme.
+Aşağıdaki örneği kullanarak bir .zip dosya adı uzantısına sahip sıkıştırılmış bir dosya oluşturun ve gösterilmektedir <xref:System.IO.Compression.ZipFile> sınıfı. Yeni bir .zip dosyasına bir klasörün içeriğini sıkıştırır ve sonra bu içeriği yeni bir klasöre ayıklar. Kullanılacak <xref:System.IO.Compression.ZipFile> sınıfı başvurmalıdır `System.IO.Compression.FileSystem` projenizdeki derleme.
 
 [!code-csharp[System.IO.Compression.ZipFile#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.zipfile/cs/program1.cs#1)]
 [!code-vb[System.IO.Compression.ZipFile#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.zipfile/vb/program1.vb#1)]
 
 ## <a name="example-2---extract-specific-file-extensions"></a>Örnek 2 - Extract belirli dosya uzantıları
 
-Aşağıdaki örnek, var olan bir .zip dosyasını içeriğini yinelemek ve bir .txt uzantısı olan dosyaları ayıklayın gösterilmektedir. Kullanır <xref:System.IO.Compression.ZipArchive> var olan bir .zip dosyasına erişmek için sınıf ve <xref:System.IO.Compression.ZipArchiveEntry> sınıfı sıkıştırılmış dosyası içinde ayrı girişleri inceleyin. Bir genişletme yöntemi kullanır (<xref:System.IO.Compression.ZipFileExtensions.ExtractToFile%2A>) için <xref:System.IO.Compression.ZipArchiveEntry> nesnesi. Genişletme yöntemi kullanılabilir <xref:System.IO.Compression.ZipFileExtensions?displayProperty=nameWithType> sınıfı. Kullanılacak <xref:System.IO.Compression.ZipFileExtensions> sınıfı, başvurmalıdır `System.IO.Compression.FileSystem` projenizdeki derleme.
+Sonraki örnek, bir .txt uzantısına sahip dosyaları ayıklayın ve var olan bir .zip dosyasının içeriğini yineleme gösterilmektedir. Kullandığı <xref:System.IO.Compression.ZipArchive> var olan bir .zip dosyasına erişmek için sınıf ve <xref:System.IO.Compression.ZipArchiveEntry> sıkıştırılmış dosyasındaki girişler incelemek için sınıf. Bir uzantı yöntemini kullanır (<xref:System.IO.Compression.ZipFileExtensions.ExtractToFile%2A>) için <xref:System.IO.Compression.ZipArchiveEntry> nesne. Genişletme yöntemi kullanılabilir <xref:System.IO.Compression.ZipFileExtensions?displayProperty=nameWithType> sınıfı. Kullanılacak <xref:System.IO.Compression.ZipFileExtensions> sınıfı başvurmalıdır `System.IO.Compression.FileSystem` projenizdeki derleme.
 
 > [!IMPORTANT]
-> Dosyaları olan zaman çıkışı dizinin içine sıkıştırmasını istediğiniz kaçınmak kötü amaçlı dosya yolları aramanız gerekir. Bu yol geçişi saldırı olarak bilinir.
+> Dosyaların sıkıştırmasını açarken, kötü amaçlı dosya yolları, bir çıkış dizini içine sıkıştırmasını istediğiniz kaçış yapılacağını da aramanız gerekir. Bu yol çapraz geçişi saldırısını bilinir.
 
-Aşağıdaki örnek, kötü amaçlı dosya yolları için denetleyin yapmayı gösteren ve sıkıştırmasını açmak için güvenli bir yol sağlar:
+Aşağıdaki örnek, kötü amaçlı dosya yolları için nasıl kontrol edileceğini göstermektedir ve sıkıştırmasını güvenli bir yol sağlar:
 
 [!code-csharp[System.IO.Compression.ZipArchive#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.ziparchive/cs/program1.cs#1)]
 [!code-vb[System.IO.Compression.ZipArchive#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.ziparchive/vb/program1.vb#1)]
 
-## <a name="example-3---add-a-new-file-to-an-existing-zip-file"></a>Örnek 3 - yeni bir dosya varolan bir .zip dosyasına Ekle
+## <a name="example-3---add-a-new-file-to-an-existing-zip-file"></a>Örnek 3 - mevcut bir .zip dosyası olarak yeni bir dosya ekleme
 
-Aşağıdaki örnek kullanır <xref:System.IO.Compression.ZipArchive> var olan bir .zip dosyasına erişmek için sınıf ve yeni bir dosya sıkıştırılmış dosyasına ekler. Varolan .zip dosyasına eklediğinizde yeni dosyası sıkıştırılmış.
+Aşağıdaki örnekte <xref:System.IO.Compression.ZipArchive> var olan bir .zip dosyasına erişmek için sınıf ve sıkıştırılmış dosya için yeni bir dosya ekler. Varolan bir .zip dosyasına eklediğinizde yeni dosyayı sıkıştırılmış.
 
 [!code-csharp[System.IO.Compression.ZipArchiveMode#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.ziparchivemode/cs/program1.cs#1)]
 [!code-vb[System.IO.Compression.ZipArchiveMode#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.ziparchivemode/vb/program1.vb#1)]
 
-## <a name="example-4---compress-and-decompress-a-directory-of-gz-files"></a>Örnek 4 - Sıkıştır ve bir dizin .gz dosyaların sıkıştırmasını
+## <a name="example-4---compress-and-decompress-a-directory-of-gz-files"></a>Örnek 4 - sıkıştırma ve .gz dosyaları dizini açılamadı
 
-Aynı zamanda <xref:System.IO.Compression.GZipStream> ve <xref:System.IO.Compression.DeflateStream> sıkıştırmak ve veri genişletmek için sınıflar. Bunlar aynı sıkıştırma algoritması kullanır. Sıkıştırılmış <xref:System.IO.Compression.GZipStream> .gz uzantısına sahip bir dosyaya yazılır nesneleri tarafından sağlanan yöntemleri ek olarak birçok ortak araçlarını kullanarak sıkıştırması açılmış <xref:System.IO.Compression.GZipStream>. Aşağıdaki örnek, sıkıştırmak ve kullanarak bir dosya dizininde genişletmek gösterilmiştir <xref:System.IO.Compression.GZipStream> sınıfı:
+Ayrıca <xref:System.IO.Compression.GZipStream> ve <xref:System.IO.Compression.DeflateStream> sıkıştırmak ve verileri genişletmek için sınıflar. Bunlar aynı sıkıştırma algoritması kullanır. Sıkıştırılmış <xref:System.IO.Compression.GZipStream> .gz uzantısına sahip bir dosyaya yazılır nesneler tarafından sağlanan yöntemleri yanı sıra birçok yaygın araçları kullanarak sıkıştırması açılmış <xref:System.IO.Compression.GZipStream>. Aşağıdaki örnek, sıkıştırma ve kullanarak bir dosya dizininde genişletmek gösterilmektedir <xref:System.IO.Compression.GZipStream> sınıfı:
 
 [!code-csharp[IO.Compression.GZip1#1](../../../samples/snippets/csharp/VS_Snippets_CLR/IO.Compression.GZip1/CS/gziptest.cs#1)]
 [!code-vb[IO.Compression.GZip1#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/IO.Compression.GZip1/VB/gziptest.vb#1)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-<xref:System.IO.Compression.ZipArchive>  
-<xref:System.IO.Compression.ZipFile>  
-<xref:System.IO.Compression.ZipArchiveEntry>  
-<xref:System.IO.Compression.DeflateStream>  
-<xref:System.IO.Compression.GZipStream>  
-[Dosya ve Akış G/Ç'si](../../../docs/standard/io/index.md)
+- <xref:System.IO.Compression.ZipArchive>  
+- <xref:System.IO.Compression.ZipFile>  
+- <xref:System.IO.Compression.ZipArchiveEntry>  
+- <xref:System.IO.Compression.DeflateStream>  
+- <xref:System.IO.Compression.GZipStream>  
+- [Dosya ve Akış G/Ç'si](../../../docs/standard/io/index.md)
