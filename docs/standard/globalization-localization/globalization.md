@@ -15,127 +15,127 @@ helpviewer_keywords:
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9eb57aa0d6645958691c0003b07db6e8bb844fc9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 5b59e0bda45b0b45b49c22d49ec2556fbcfef75d
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579580"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43871900"
 ---
 # <a name="globalization"></a>Genelleştirme
-Genelleştirme tasarlama ve birden çok kültürü kullanıcılar için yerelleştirilmiş arabirimleri ve bölgesel veri destekleyen bir dünya çapında kullanılmaya hazır uygulaması geliştirme içerir. Tasarım aşaması başlamadan önce uygulamanızı destekleyecek hangi kültürler belirlemeniz gerekir. Bir uygulama bir tek kültür veya bölge varsayılan olarak hedefler rağmen tasarlayın ve böylece diğer kültürler veya bölgelerdeki kullanıcılar için kolayca genişletilebilir yazma.  
+Genelleştirme, tasarlamaya ve geliştirmeye yönelik birden çok kültürde yerelleştirilmiş arabirimleri ve bölgesel verileri destekleyen dünya çapında kullanılmaya hazır uygulamasını içerir. Tasarım aşamasına başlamadan önce hangi kültürleri uygulamanızı destekleyeceğini belirlemeniz gerekir. Bir tek bir kültür veya bölgeyi varsayılan olarak bir uygulama hedeflese de, tasarlayın ve böylece diğer kültür ya da bölgelerdeki kullanıcılara kolayca genişletilebilir yazabilirsiniz.  
   
- Geliştiriciler, tüm kullanıcı arabirimleri ve bizim kültürler tarafından biçimlendirilmiş veriler hakkında varsayımlar sahibiz. Örneğin, bir İngilizce konuşan geliştiricisi Amerika Birleşik Devletleri'nde, tarih ve saat verileri biçiminde bir dize olarak seri hale getirme `MM/dd/yyyy hh:mm:ss` mükemmel makul gibi görünüyor. Ancak, farklı bir kültür sisteminde bu dizeyi seri durumdan throw olasıdır bir <xref:System.FormatException> özel durumu veya üretim yanlış bir veri. Genelleştirme gibi kültüre özgü varsayımlar tanımlamak ve bunlar bizim uygulamanın tasarım veya kod etkilemez emin olmak için bize sağlar.  
+ Geliştiriciler olarak, tüm kullanıcı arabirimleri kültürlerimiz tarafından biçimlendirilmiş veriler hakkında varsayımlar sahibiz. Örneğin, bir İngilizce konuşan bir geliştirici için Amerika Birleşik Devletleri, tarih ve saat verileri biçiminde bir dize olarak seri hale getirme `MM/dd/yyyy hh:mm:ss` son derece makuldür. Ancak, bu dize bir sistem üzerinde farklı bir kültür seri durumdan çıkarılırken kaldırıldığında bir <xref:System.FormatException> özel durumu veya yanlış veriler üretilebilir. Genelleştirme, bu tür kültüre özgü varsayımları tanımlamamıza ve bunların uygulama tasarım veya kod etkilemez emin olmak için bize sağlar.  
   
- Aşağıdaki bölümlerde bazı dikkate almanız gereken önemli sorunları ve dizeler, tarih ve saat değerleri ve bir globalized uygulamasında sayısal değerleri işlerken izleyebileceğiniz en iyi uygulamalar açıklanmaktadır.  
+ Aşağıdaki bölümlerde bazı dikkate almanız gereken ana sorunları ve, dizeleri, tarih ve saat değerleri ve genelleştirilmiş bir uygulamada sayısal değerleri işlerken uygulayabileceğiniz en iyi uygulamalar açıklanmaktadır.  
   
 -   [Dizeleri işleme](../../../docs/standard/globalization-localization/globalization.md#HandlingStrings)  
   
-    -   [Unicode dahili olarak kullanın](../../../docs/standard/globalization-localization/globalization.md#Strings_Unicode)  
+    -   [Dahili olarak Unicode kullanma](../../../docs/standard/globalization-localization/globalization.md#Strings_Unicode)  
   
     -   [Kaynak dosyaları kullan](../../../docs/standard/globalization-localization/globalization.md#Strings_Resources)  
   
-    -   [Arama ve dizeleri karşılaştırma ](../../../docs/standard/globalization-localization/globalization.md#Strings_Searching)  
+    -   [Dizeleri arama ve karşılaştırma ](../../../docs/standard/globalization-localization/globalization.md#Strings_Searching)  
   
-    -   [Dizeleri eşitlik için test etme](../../../docs/standard/globalization-localization/globalization.md#Strings_Equality)  
+    -   [Eşitlik için sınama](../../../docs/standard/globalization-localization/globalization.md#Strings_Equality)  
   
-    -   [Sıralama ve dizeleri sıralama ](../../../docs/standard/globalization-localization/globalization.md#Strings_Ordering)  
+    -   [Dizeleri sıralama ve düzenleme ](../../../docs/standard/globalization-localization/globalization.md#Strings_Ordering)  
   
-    -   [Dize birleştirme kaçının](../../../docs/standard/globalization-localization/globalization.md#Strings_Concat)  
+    -   [Dize Bitiştirmeden kaçınma](../../../docs/standard/globalization-localization/globalization.md#Strings_Concat)  
   
--   [Tarihler ve saatler işleme](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes)  
+-   [Tarih ve saatleri işleme](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes)  
   
     -   [Kalıcı tarihler ve saatler](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes_Persist)  
   
-    -   [Tarihler ve saatler görüntüleme](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes_Display)  
+    -   [Tarihleri ve saatleri görüntüleme](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes_Display)  
   
-    -   [Seri hale getirme ve saat dilimi tanıma](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes_TimeZones)  
+    -   [Seri hale getirme ve saat dilimini tanıma](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes_TimeZones)  
   
-    -   [Tarih ve saat Aritmetiğinde gerçekleştirme](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes_Arithmetic)  
+    -   [Tarih ve saat aritmetiğini gerçekleştirme](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes_Arithmetic)  
   
--   [Sayısal değerler işleme](../../../docs/standard/globalization-localization/globalization.md#Numbers)  
+-   [Sayısal değerleri işleme](../../../docs/standard/globalization-localization/globalization.md#Numbers)  
   
-    -   [Sayısal değerler görüntüleme](../../../docs/standard/globalization-localization/globalization.md#Numbers_Display)  
+    -   [Sayısal değerleri görüntüleme](../../../docs/standard/globalization-localization/globalization.md#Numbers_Display)  
   
     -   [Kalıcı sayısal değerler](../../../docs/standard/globalization-localization/globalization.md#Numbers_Persist)  
   
--   [Kültüre özgü ayarları ile çalışma](../../../docs/standard/globalization-localization/globalization.md#Cultures)  
+-   [Kültüre özgü ayarlarla çalışma](../../../docs/standard/globalization-localization/globalization.md#Cultures)  
   
 <a name="HandlingStrings"></a>   
 ## <a name="handling-strings"></a>Dizeleri İşleme  
- Her kültür veya bölge farklı karakterleri ve karakter kümesi kullanın ve farklı sıralama karakterler ve dizeleri işlenmesini Genelleştirme, merkezi bir odağını kaynaklanır. Bu bölümde globalized uygulamalarında dizeleri kullanmak için öneriler sağlar.  
+ Her kültür veya bölgeyi farklı karakterler ve karakter kümeleri kullandığı ve bunları farklı sıraladığından karakterlerin ve dizelerin işlenmesi bir işlenmesi genelleştirmede odaklanılan, olmasıdır. Bu bölüm Global uygulamalarda dizelerin kullanmaya yönelik öneriler sağlar.  
   
 <a name="Strings_Unicode"></a>   
 ### <a name="use-unicode-internally"></a>Dahili Olarak Unicode Kullanma  
- Varsayılan olarak, .NET Framework Unicode dizelerini kullanır. Bir UNICODE dizesi sıfır, bir veya daha fazla oluşur <xref:System.Char> nesneleri, her biri bir UTF-16 kod birimi temsil eder. Neredeyse her karakter kullanımı dünyanın her kümesindeki her karakteri, Unicode temsili yoktur.  
+ Varsayılan olarak, .NET Framework, Unicode dizelerini kullanır. Bir Unicode dizesi sıfır, bir veya daha fazla oluşur <xref:System.Char> her biri bir UTF-16 kod birimini temsil eden nesneleri. Dünyada kullanılan kümesindeki her karakteri neredeyse her karakter için bir Unicode gösterimi vardır.  
   
- Birçok uygulama ve işletim sistemleri, Windows işletim sistemi dahil olmak üzere kullanım kod sayfaları karakter kümelerini göstermek için de kullanabilirsiniz. Kod sayfaları genellikle 0x00 0x7F aracılığıyla standart ASCII değerleri içeren ve başka karakterler, 0x80 0xFF üzerinden gelen kalan değerler eşleyin. 0xFF aracılığıyla 0x80 değerlerinden yorumu belirli kod sayfasına bağlıdır. Bu nedenle, kod sayfaları globalized bir uygulamada mümkünse yapmaktan kaçınmalısınız.  
+ Birçok uygulama ve işletim sistemleri, Windows işletim sistemi dahil olmak üzere kod sayfalarını karakter kümelerini göstermek için de kullanabilirsiniz. Kod sayfaları genellikle 0x00 ila 0x7F standart ASCII değerlerini içerir ve diğer karakterleri, 0x80 ila 0xFF kalan değerlere eşleyin. 0xFF üzerinden 0x80'den alınan değerlerin yorumu belirli kod sayfasına bağlıdır. Bu nedenle, kod sayfaları mümkünse genelleştirilmiş uygulamada kullanmaktan kaçınmanız gerekir.  
   
- Aşağıdaki örnek, bir sistem varsayılan kod sayfasına veri kaydedilmiş olan kod sayfasından farklı olduğunda, kod sayfası verileri yorumlama tehlikeleri gösterilmektedir. (Bu senaryoda benzetimini yapmak için örnek açıkça farklı kod sayfaları belirtir.) İlk olarak, Yunanca Harf, büyük harf karakterlerden oluşan bir dizi örnek tanımlar. Kod sayfası 737 (MS-DOS Yunanca olarak da bilinir) kullanarak bir bayt dizisine kodlar ve bayt dizisi bir dosyaya kaydeder. Dosya alınır ve kod sayfası 737 kullanarak kendi bayt dizisi kodlanmamış yüklerseniz, özgün karakterlerin geri yüklenir. Ancak, dosya alınır ve 1252 kod sayfası (veya Latin alfabesi karakterleri temsil eden Windows-1252) kullanarak kendi bayt dizisi kodlanmamış, özgün karakterlerin kaybolur.  
+ Aşağıdaki örnek, bir sistemde varsayılan kod sayfası üzerinde verilerin kaydedildiği kod sayfasından farklı olduğunda, kod sayfası verilerini yorumlamanın tehlikelerini göstermektedir. (Bu senaryonun benzetimini yapmak için örnek açıkça farklı kod sayfalarını belirtir.) İlk olarak, örnek Yunan alfabesinin büyük harf karakterlerden oluşan bir dizi tanımlar. Bu kod sayfası 737 (MS-DOS Yunanca olarak da bilinir) kullanılarak Bayt dizisine kodlar ve bayt dizisini bir dosyaya kaydeder. Dosya alınırsa ve kod sayfası 737 kullanılarak bayt dizisinin kodu, özgün karakterler geri yüklenir. Ancak, dosya alınırsa ve kod sayfası 1252 (veya Latin alfabesindeki karakterleri temsil eden Windows-1252) kullanılarak bayt dizisinin kodu, özgün karakterler kaybolur.  
   
  [!code-csharp[Conceptual.Globalization#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/codepages1.cs#1)]
  [!code-vb[Conceptual.Globalization#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/codepages1.vb#1)]  
   
- Unicode kullanımını, aynı kod birimleri her zaman aynı karakterle eşleştirmek ve aynı karakterler her zaman aynı bayt dizileri eşleme sağlar.  
+ Unicode kullanımı, aynı kod birimlerinin her zaman aynı karakterle eşlenmesini ve aynı karakterlerin her zaman aynı bayt dizileri ile eşlenmesini sağlar.  
   
 <a name="Strings_Resources"></a>   
 ### <a name="use-resource-files"></a>Kaynak Dosyalarını Kullanma  
- Bir tek kültür veya bölge hedefleyen bir uygulama geliştiriyorsanız bile dizeler ve kullanıcı arabiriminde görüntülenir diğer kaynakları depolamak için kaynak dosyaları kullanmalısınız. Bunları doğrudan kodunuzu hiçbir zaman eklemelisiniz. Kaynak dosyaları kullanarak, çok sayıda avantaj vardır:  
+ Bir tek bir kültür veya bölgeyi hedefleyen bir uygulama geliştiriyor olsanız bile, dizeleri ve kullanıcı arabiriminde görüntülenen diğer kaynakları depolamak için kaynak dosyalarını kullanmanız gerekir. Ayrıca doğrudan kodunuza bunları asla eklemeniz gerekir. Kaynak dosyalarını kullanmanın birçok avantajı vardır:  
   
--   Tüm tek bir konumda dizelerdir. Belirli bir dil veya kültür için değiştirme dizeleri tanımlamak için kaynak kodunuz genelinde arama gerekmez.  
+-   Tüm dizeler tek bir konumda olan. Belirli bir dil veya kültür için değişiklik yapılacak dizeleri bulmak için kaynak kodunuz genelinde arama yapmak zorunda kalmazsınız.  
   
--   Dizeleri yeniden oluşturmaya gerek yoktur. Kaynak dosyaları sık kullanmadığınız geliştiriciler birden çok kaynak kodu dosyaları aynı dizesini tanımlayın. Bu çoğaltma olasılık bir artırır veya bir dize değiştirildiğinde daha fazla örnekleri atlamış.  
+-   Dizeleri çoğaltmaya gerek yoktur. Kaynak dosyaları genellikle kullanmayan geliştiriciler, birden çok kaynak kodu dosyasında aynı dize tanımlayın. Bu çoğaltma olasılığını artırır veya bir dize değiştirildiğinde daha fazla göz ardı edilmesi.  
   
--   Kolayca alınabilir şekilde ayrı tek başına dosyasında depolamak yerine kaynak dosyasında görüntüleri ya da ikili veriler, dize olmayan kaynaklar içerebilir.  
+-   Bunlar kolayca alınabilmesi bunları bir ayrı bağımsız dosyada depolamak yerine kaynak dosyasında, görüntü veya ikili veri gibi dize olmayan kaynaklar ekleyebilirsiniz.  
   
- Yerelleştirilmiş uygulama oluşturuyorsanız, kaynak dosyaları kullanarak belirli avantajları vardır. Uydu derlemeleri kaynaklarında dağıttığınızda, ortak dil çalışma zamanı tarafından tanımlandığı gibi kullanıcının geçerli UI kültürü dayalı olarak kültür uygun bir kaynağa otomatik olarak seçer. <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> özelliği. Uygun bir kültüre özgü kaynakları sağlayın ve doğru örnekleyin sürece bir <xref:System.Resources.ResourceManager> nesne veya kesin olarak belirtilmiş kaynak sınıfı kullanın, çalışma zamanı uygun kaynakları alma ayrıntılarını işler.  
+ Yerelleştirilmiş bir uygulama oluşturuyorsanız kaynak dosyaları kullanmanın belirli avantajları vardır. Kaynakları uydu derlemelerinde dağıttığınızda, ortak dil çalışma zamanı tarafından tanımlandığı gibi kullanıcının geçerli kullanıcı Arabirimi kültürüne göre kültüre uygun bir kaynağı otomatik olarak seçer. <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> özelliği. Uygun bir kültüre özgü kaynak sağladığınız ve doğru örnekleyin sürece bir <xref:System.Resources.ResourceManager> nesne veya türü kesin belirlenmiş kaynak sınıfı kullanın, çalışma zamanı uygun kaynakların alınmasına ilişkin ayrıntılar işler.  
   
- Kaynak dosyaları oluşturma hakkında daha fazla bilgi için bkz: [oluşturma kaynak dosyaları](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md). Oluşturma ve uydu derlemeleri dağıtma hakkında daha fazla bilgi için bkz: [uydu derlemeleri oluşturma](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md) ve [paketleme ve dağıtma kaynakları](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md).  
+ Kaynak dosyaları oluşturma hakkında daha fazla bilgi için bkz. [Creating Resource Files](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md). Oluşturma ve uydu derlemelerini dağıtma hakkında daha fazla bilgi için bkz: [uydu derlemeleri oluşturma](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md) ve [kaynakları paketleme ve dağıtma](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md).  
   
 <a name="Strings_Searching"></a>   
 ### <a name="searching-and-comparing-strings"></a>Dizeleri Arama ve Karşılaştırma  
- Mümkün olduğunda, tek tek karakter dizisi olarak işleme yerine tüm dizeleri olarak dizeleri işlemesi gerekir. Bu sıralama veya sorunları önlemek için alt dizeleri, arama ayrıştırma birleştirilen karakter ile ilişkili olduğunda özellikle önemlidir.  
+ Mümkün olduğunda, dizeler, bunları tek tek karakter dizisi olarak işlemek yerine bütün dizeler olarak işlemelidir. Bu sıralama veya arama sorunları önlemek için alt dizeler, birleşik karakterleri ayrıştırmayla ilişkili olduğunda özellikle önemlidir.  
   
 > [!TIP]
->  Kullanabileceğiniz <xref:System.Globalization.StringInfo> karakterleri tek tek bir dizede yerine metin öğeleri ile çalışmak için sınıf.  
+>  Kullanabileceğiniz <xref:System.Globalization.StringInfo> bir dizedeki karakterlerin tek tek yerine metin öğeleriyle çalışmak için sınıf.  
   
- Dize aramaları karşılaştırmaları, ortak bir hata dizesi karakterleri, her biri ile temsil edilir koleksiyonu olarak işlemek için olup bir <xref:System.Char> nesnesi. Aslında, tek bir karakter birini, iki veya daha fazla tarafından oluşturulmuş olması <xref:System.Char> nesneleri. Bu tür karakterler en sık karakterleri (U + 0021 ile U + 007E) Unicode temel Latin karakter aralığı dışında olan alfabesinde oluşur kültürler dizelerden bulunur. Aşağıdaki örnek, bir dize dizini ile LATIN büyük harf A işareti karakterinin (U + 00 C 0) bulmayı dener. Ancak, bu karakter iki farklı şekilde temsil edilebilir: tek kod birimi (U + 00C 0) veya bir bileşik karakter olarak (iki kod birimleri: U + 007E 0021 ve U +). Bu durumda, karakter dizesi örneğinde iki tarafından temsil edilen <xref:System.Char> nesneleri, U + 007E 0021 ve U +. Örnek kod çağrıları <xref:System.String.IndexOf%28System.Char%29?displayProperty=nameWithType> ve <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType> string örneği, ancak bunlar bu karakterin bulmak için aşırı farklı sonuçlar döndürür. İlk yöntem çağrısı sahip bir <xref:System.Char> bağımsız değişkeni; bir sıralı karşılaştırma gerçekleştirir ve bu nedenle bir eşleşme bulamıyor. İkinci çağrı sahip bir <xref:System.String> bağımsız değişkeni; kültüre duyarlı karşılaştırma gerçekleştirir ve bu nedenle bir eşleşme bulur.  
+ Dize aramalarında ve karşılaştırmalarında, sıkça dize karakter, her biri tarafından temsil edilen bir koleksiyon olarak değerlendirilecek olan bir <xref:System.Char> nesne. Tek bir karakter bir, iki veya daha fazla tarafından aslında oluşturulabilir <xref:System.Char> nesneleri. Bu tür karakterler en sık dizelerden karakterleri Unicode temel Latin karakter aralığı (U + 0021 ile U + 007E) dışında olan harfler oluşan kültürler bulunur. Aşağıdaki örnek, bir dizede ile LATIN CAPITAL LETTER A GRAVE karakterinin (U + 00 C 0) dizinini bulmaya çalışır. Ancak, bu karakter iki farklı şekilde temsil edilebilir: tek bir kod birimi (U + 00C 0) olarak veya bileşik bir karakter (iki kod birimi: U + 0021 ve U + 007E). Bu durumda, karakter dize örneğinde iki tarafından temsil edilen <xref:System.Char> nesneleri, U + 0021 ve U + 007E. Örnek kod çağrıları <xref:System.String.IndexOf%28System.Char%29?displayProperty=nameWithType> ve <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType> dize örneğinde, ancak bunlar bu karakterin konumunu bulmak için aşırı yüklemeler farklı sonuçlar döndürür. İlk yöntem çağrısında sahip bir <xref:System.Char> bağımsız değişkeni; sıralı bir karşılaştırma yapar ve bu nedenle bir eşleşme bulamaz. İkinci çağrıda sahip bir <xref:System.String> bağımsız değişkeni; bir kültüre duyarlı karşılaştırma yapar ve bu nedenle eşleşme bulur.  
   
  [!code-csharp[Conceptual.Globalization#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/search1.cs#18)]
  [!code-vb[Conceptual.Globalization#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/search1.vb#18)]  
   
- Bu örnek (iki benzer aşırı farklı sonuçlar döndüren bir yöntem çağrıları) belirsizliği bazıları içeren bir aşırı çağırarak kaçının bir <xref:System.StringComparison> parametresi gibi <xref:System.String.IndexOf%28System.String%2CSystem.StringComparison%29?displayProperty=nameWithType> veya <xref:System.String.LastIndexOf%28System.String%2CSystem.StringComparison%29?displayProperty=nameWithType> yöntemi.  
+ Bazı belirsizliklerden (çağrı farklı sonuçlar döndüren bir yöntemin iki benzer aşırı yüküne) Bu örnek içeren bir aşırı yükü çağırarak kaçının bir <xref:System.StringComparison> parametresi gibi <xref:System.String.IndexOf%28System.String%2CSystem.StringComparison%29?displayProperty=nameWithType> veya <xref:System.String.LastIndexOf%28System.String%2CSystem.StringComparison%29?displayProperty=nameWithType> yöntemi.  
   
- Ancak, arama her zaman kültüre duyarlı değildir. Arama amacı güvenlik kararı veya izin vermek veya bazı kaynağa erişimi engellemek için ise, karşılaştırma sonraki bölümde açıklandığı gibi sıralı, olması gerekir.  
+ Ancak aramalar her zaman kültüre duyarlı değildir. Aramanın amacı, bir güvenlik kararı vermek veya izin vermek veya bazı kaynaklara erişim engellemek için ise, karşılaştırma sonraki bölümde açıklandığı gibi sıralı olmalıdır.  
   
 <a name="Strings_Equality"></a>   
 ### <a name="testing-strings-for-equality"></a>Eşitlik için Sınama Ayarları  
- Bunlar sıralama düzenini nasıl karşılaştırmak belirleme yerine eşitlik kullanmak için iki dizeyi test etmek isterseniz <xref:System.String.Equals%2A?displayProperty=nameWithType> yöntemi gibi bir dize karşılaştırma yöntemi yerine <xref:System.String.Compare%2A?displayProperty=nameWithType> veya <xref:System.Globalization.CompareInfo.Compare%2A?displayProperty=nameWithType>.  
+ Sıralama düzeninde karşılaştırmasına belirleme yerine eşitlik kullanmak için iki dizeyi test etmek isterseniz <xref:System.String.Equals%2A?displayProperty=nameWithType> yöntemi gibi dize karşılaştırma yöntemi yerine <xref:System.String.Compare%2A?displayProperty=nameWithType> veya <xref:System.Globalization.CompareInfo.Compare%2A?displayProperty=nameWithType>.  
   
- Eşitlik karşılaştırmaları genellikle bazı kaynak koşullu erişim için gerçekleştirilir. Örneğin, bir parola doğrulamak veya bir dosyanın var olduğunu onaylamak için eşitliği karşılaştırma gerçekleştirebilir. Bu tür dil olmayan karşılaştırmaları her zaman sıralı yerine kültüre duyarlı olması gerekir. Genel olarak, örnek çağırmalıdır <xref:System.String.Equals%28System.String%2CSystem.StringComparison%29?displayProperty=nameWithType> yöntemi veya statik <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> değerini yöntemi <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> dizeleri parolaları ve değeri gibi <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> dosya adlarını veya URI gibi dizeleri.  
+ Eşitlik karşılaştırmaları genellikle koşullu olarak bazı kaynaklara erişmek için gerçekleştirilir. Örneğin, bir parolayı doğrulamak veya bir dosyanın var olduğunu doğrulamak üzere eşitlik için bir karşılaştırma gerçekleştirebilirsiniz. Bu tür dilsel olmayan karşılaştırmalar her zaman yerine sıralı kültüre duyarlı olmalıdır. Genel olarak, örnek çağırmalıdır <xref:System.String.Equals%28System.String%2CSystem.StringComparison%29?displayProperty=nameWithType> yöntemi veya statik <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> değeriyle yöntemi <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> parolalar ve değerini gibi dizeler için <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> dosya adları ya da URI gibi dizeler için.  
   
- Eşitlik karşılaştırmaları bazen ilgili aramalar veya alt dize karşılaştırmaları yerine çağrıları <xref:System.String.Equals%2A?displayProperty=nameWithType> yöntemi. Bazı durumlarda, bu alt dizeyi başka bir dize eşit olup olmadığını belirlemek için bir alt dizenin arama kullanabilir. Bu karşılaştırma amacı dil olmayan ise, aynı zamanda sıralı yerine kültüre duyarlı arama olması gerekir.  
+ Eşitlik karşılaştırmaları bazen ilgili aramalar veya alt dize karşılaştırmaları yapılan çağrılar yerine <xref:System.String.Equals%2A?displayProperty=nameWithType> yöntemi. Bazı durumlarda, alt dizenin başka bir dizeye eşit olup olmadığını belirlemek için alt dize aramayı kullanabilirsiniz. Bu karşılaştırmanın amacı dile ait olmayan ise, arama da yerine sıralı kültüre duyarlı olmalıdır.  
   
- Aşağıdaki örnek bir kültüre duyarlı arama dil olmayan veriler üzerinde tehlike gösterilmektedir. `AccessesFileSystem` Yöntemi alt dizeyi "Dosyası" ile başlayan URI için dosya sistemi erişimi engellemek üzere tasarlanmıştır. Bunu yapmak için URI'sı "Dosyası" dizesi ile başlayan kültüre duyarlı, büyük küçük harf duyarsız bir karşılaştırma gerçekleştirir. Dosya sistemi erişen bir URI ile ya da başlayabilirsiniz olduğundan "dosya:" veya "dosya:", örtük varsayımına olan "i" (U + 0069) her zaman küçük harfli "Yeni" eşdeğerdir (U + 0049). Ancak, Türkçe ve Azerice, büyük harfli sürümünü içinde "i" olan "İ" (U + 0130). Yasaklanmış, bu farklılık nedeniyle kültüre duyarlı karşılaştırma dosya sistemi erişimi sağlar.  
+ Aşağıdaki örnek, dilsel olmayan veriler üzerinde bir kültüre duyarlı aramada tehlikesi gösterir. `AccessesFileSystem` Yöntemi, "FILE" alt dizesi ile başlayan bir URI'leri için dosya sistemi erişimini engellemek için tasarlanmıştır. Bunu yapmak için "FILE" dizesiyle URI başlangıcını kültüre duyarlı ve büyük küçük harf duyarsız bir karşılaştırma gerçekleştirir. Dosya sistemine erişen bir URI ile başlayabilirsiniz çünkü "dosya:" veya "dosya:", örtük, varsayılır, "i" (U + 0069) her zaman "I" küçük harfli eşdeğeri olduğu (U + 0049). Ancak Türkçe ve Azerice, büyük harfli sürümünü içinde "i", "İ" olan (U + 0130). Yasaklanması gerektiğinde bu tutarsızlık nedeniyle, kültüre duyarlı bir karşılaştırma dosya sistemi erişimini sağlar.  
   
  [!code-csharp[Conceptual.Globalization#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/equals1.cs#12)]
  [!code-vb[Conceptual.Globalization#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/equals1.vb#12)]  
   
- Bu sorunu durumda, aşağıdaki örnekte gösterildiği gibi yoksayar bir sıralı karşılaştırma gerçekleştirerek önleyebilirsiniz.  
+ Bu durumda, aşağıdaki örnekte gösterildiği gibi yoksayar sıralı karşılaştırma gerçekleştirerek bu sorunu önleyebilirsiniz.  
   
  [!code-csharp[Conceptual.Globalization#13](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/equals2.cs#13)]
  [!code-vb[Conceptual.Globalization#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/equals2.vb#13)]  
   
 <a name="Strings_Ordering"></a>   
 ### <a name="ordering-and-sorting-strings"></a>Dizeleri Sıralama ve Düzenleme  
- Genellikle, kullanıcı arabiriminde görüntülenecek olan sıralı dizeleri kültür göre sıralanması gerektiğini. Dizeleri gibi sıralar bir yöntemini çağırdığınızda çoğunlukla, bu tür dize karşılaştırmaları örtük olarak .NET Framework tarafından işlenir <xref:System.Array.Sort%2A?displayProperty=nameWithType> veya <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType>. Varsayılan olarak, geçerli kültürü sıralama kuralları kullanarak dizeleri sıralanır. Aşağıdaki örnek, İngilizce (ABD) kültür ve İsveççe (İsviçre) kültür kurallarını kullanarak bir dizeler dizisi sıralandığında fark gösterilmektedir.  
+ Genellikle, kullanıcı arabiriminde görüntülenecek olan sıralı dizeler kültüre dayalı olarak sıralanmalıdır. Gibi dizeleri sıralayan bir yöntem çağırdığınızda çoğunlukla, bu tür dize karşılaştırmaları örtük olarak .NET Framework tarafından işlenen <xref:System.Array.Sort%2A?displayProperty=nameWithType> veya <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType>. Varsayılan olarak, dizeler, geçerli kültürün sıralama kuralları kullanılarak sıralanır. İngilizce (ABD) kültürü ve İsveç dili (İsveç) kültürü kurallarını kullanarak dize dizisi sıralandığında fark aşağıdaki örnekte gösterilmiştir.  
   
  [!code-csharp[Conceptual.Globalization#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/sort1.cs#14)]
  [!code-vb[Conceptual.Globalization#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/sort1.vb#14)]  
   
- Kültüre duyarlı dize karşılaştırma tarafından tanımlanan <xref:System.Globalization.CompareInfo> her kültürün tarafından döndürülen nesne <xref:System.Globalization.CultureInfo.CompareInfo%2A?displayProperty=nameWithType> özelliği. Kullanın kültüre duyarlı dize karşılaştırmalarını <xref:System.String.Compare%2A?displayProperty=nameWithType> yöntemi aşırı yüklemeleri ayrıca kullanım <xref:System.Globalization.CompareInfo> nesnesi.  
+ Kültüre duyarlı dize karşılaştırma tarafından tanımlanan <xref:System.Globalization.CompareInfo> her kültürün tarafından döndürülen nesne <xref:System.Globalization.CultureInfo.CompareInfo%2A?displayProperty=nameWithType> özelliği. Kullanan kültüre duyarlı dize karşılaştırmaları <xref:System.String.Compare%2A?displayProperty=nameWithType> yöntemi aşırı ayrıca kullanım <xref:System.Globalization.CompareInfo> nesne.  
   
- .NET Framework tablolar üzerinde dize verilerini kültüre duyarlı sıralar gerçekleştirmek için kullanır. Sıralama ağırlıkları verileri içeren ve normalleştirme dize, bu tabloların içeriği, belirli bir .NET Framework sürümü tarafından uygulanan Unicode standart sürümü tarafından belirlenir. Aşağıdaki tabloda belirtilen .NET Framework sürümleri tarafından uygulanan Unicode sürümleri listelenmiştir. Bu Desteklenen sürümlerin listesi için Unicode karakter karşılaştırma ve yalnızca sıralama için geçerli olduğunu unutmayın; kategoriye göre Unicode karakterler sınıflandırılması için uygulanmaz. Daha fazla bilgi için "Dizeler ve Unicode standart" bölümüne bakın <xref:System.String> makalesi.  
+ .NET Framework, kültüre duyarlı sıralamaları dize veriler üzerinde gerçekleştirmek için tablolar kullanır. Dize normalleştirme ve sıralama ağırlıkları verilerini içeren, bu tabloların içeriği, .NET Framework'ün belirli bir sürümü tarafından uygulanan Unicode standart sürümü tarafından belirlenir. Belirtilen .NET Framework sürümleri tarafından uygulanan Unicode sürümleri aşağıdaki tabloda listelenmiştir. Bu liste desteklenen Unicode sürümleri karakter karşılaştırma ve sıralama yalnızca geçerli olduğunu unutmayın. kategoriye göre Unicode karakter sınıflandırması için uygulanmaz. Daha fazla bilgi için bkz: "Dizeleri ve Unicode standardı" bölümünde <xref:System.String> makalesi.  
   
 |.NET Framework sürümü|İşletim sistemi|Unicode sürümü|  
 |----------------------------|----------------------|---------------------|  
@@ -146,26 +146,26 @@ Genelleştirme tasarlama ve birden çok kültürü kullanıcılar için yerelle�
 |.NET Framework 4.5|[!INCLUDE[win7](../../../includes/win7-md.md)]|Unicode 5.0|  
 |.NET Framework 4.5|[!INCLUDE[win8](../../../includes/win8-md.md)]|Unicode 6.0|  
   
- İçinde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], dize karşılaştırma ve sıralama işletim sistemine bağlıdır. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Üzerinde çalışan [!INCLUDE[win7](../../../includes/win7-md.md)] Unicode 5.0 uygulamak kendi tablolarından veri alır. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Üzerinde çalışan [!INCLUDE[win8](../../../includes/win8-md.md)] Unicode 6.0 uygulayan işletim sistemi tablolarından veri alır. Kültüre duyarlı sıralanmış veri seri hale, kullanabileceğiniz <xref:System.Globalization.SortVersion> böylece işletim sisteminin sıralama düzenini ve .NET Framework ile tutarlı sıralanacak serileştirilmiş verilerinizi gerektiği zaman belirlemek için sınıf. Bir örnek için bkz: <xref:System.Globalization.SortVersion> sınıfı konu.  
+ İçinde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], dize karşılaştırması ve sıralaması işletim sistemine bağlıdır. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Üzerinde çalışan [!INCLUDE[win7](../../../includes/win7-md.md)] verileri Unicode 5.0 uygulayan kendi tablolarından alır. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Üzerinde çalışan [!INCLUDE[win8](../../../includes/win8-md.md)] verileri Unicode 6.0 uygulayan işletim sistemi tablolarından alır. Kültüre duyarlı sıralanmış verileri sıralarsanız, kullanabileceğiniz <xref:System.Globalization.SortVersion> serileştirilmiş verilerinizi ne zaman .NET Framework ile işletim sisteminin sıralama düzeniyle tutarlı olması yeniden sırılanacığını saptamak için. Bir örnek için bkz <xref:System.Globalization.SortVersion> sınıf konusuna.  
   
- Uygulamanızı dize verilerini kapsamlı kültüre özgü tür gerçekleştirirse, çalışabilirsiniz <xref:System.Globalization.SortKey> dizeleri karşılaştırmak için sınıf. Sıralama anahtarı kültüre özgü sıralama ağırlıkları alfabetik dahil olmak üzere, durum ve belirli bir dizenin Aksan ağırlıkları yansıtır. Sıralama anahtarları kullanarak karşılaştırmaları ikili olduğundan, bunlar kullanan karşılaştırmaları hızlı bir <xref:System.Globalization.CompareInfo> örtük veya açık olarak nesne. Dizeye geçirerek belirli bir dizeyi kültüre özgü sıralama anahtarı oluşturma <xref:System.Globalization.CompareInfo.GetSortKey%2A?displayProperty=nameWithType> yöntemi.  
+ Uygulamanız dize verileri, kapsamlı kültüre özel sıralarını gerçekleştiriyorsa çalışabilirsiniz <xref:System.Globalization.SortKey> dizeleri karşılaştırmak için sınıf. Bir sıralama anahtarı alfabetik dahil, kültüre özgü sıralama ağırlıklarını, durum ve aksan ağırlıkları da belirli bir dizenin yansıtır. Sıralama anahtarlarını kullanan karşılaştırmalar ikili olduğundan, bunlar kullanan karşılaştırmalardan daha hızlı bir <xref:System.Globalization.CompareInfo> örtük veya açık olarak nesnesi. Dize olarak geçirerek belirli bir dize için kültüre özgü sıralama anahtarı oluşturma <xref:System.Globalization.CompareInfo.GetSortKey%2A?displayProperty=nameWithType> yöntemi.  
   
- Aşağıdaki örnek önceki örneğe benzer. Ancak, çağırmak yerine <xref:System.Array.Sort%28System.Array%29?displayProperty=nameWithType> örtük olarak çağırır yöntemi <xref:System.Globalization.CompareInfo.Compare%2A?displayProperty=nameWithType> yöntemi, tanımladığı bir <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> oluşturur ve geçirir sıralama anahtarları karşılaştırır uygulama <xref:System.Array.Sort%60%601%28%60%600%5B%5D%2CSystem.Collections.Generic.IComparer%7B%60%600%7D%29?displayProperty=nameWithType> yöntemi.  
+ Aşağıdaki örnek önceki örneğe benzerdir. Ancak, çağırmak yerine <xref:System.Array.Sort%28System.Array%29?displayProperty=nameWithType> örtük olarak çağırır ve yöntem <xref:System.Globalization.CompareInfo.Compare%2A?displayProperty=nameWithType> yöntemi tanımlar bir <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> başlatan ve geçirir Bu sıralama anahtarlarını karşılaştıran uygulama <xref:System.Array.Sort%60%601%28%60%600%5B%5D%2CSystem.Collections.Generic.IComparer%7B%60%600%7D%29?displayProperty=nameWithType> yöntemi.  
   
  [!code-csharp[Conceptual.Globalization#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/sortkey1.cs#15)]
  [!code-vb[Conceptual.Globalization#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/sortkey1.vb#15)]  
   
 <a name="Strings_Concat"></a>   
 ### <a name="avoid-string-concatenation"></a>Dize Bitiştirmeden Kaçınma  
- Mümkünse, birleştirilmiş tümcecikleri gelen çalışma zamanında oluşturulan bileşik dizeleri kullanmaktan kaçının. Bileşik dizeleri yerelleştirme zor olduğu bunlar genellikle diğer yerelleştirilmiş dillere uygulanmaz uygulamanın özgün dil dilbilgisi bir sırada varsayalım.  
+ Bu tamamen Mümkünse, yan tümcelerden çalışma zamanında oluşturulan bileşik dizeleri kullanmaktan kaçının. Bunlar genellikle sıralamasının diğer yerelleştirilmiş diller için geçerli olmayan uygulamanın orijinal dilinde olduğunu varsaydığından bileşik dizelerin yerelleştirmek zordur.  
   
 <a name="DatesAndTimes"></a>   
 ## <a name="handling-dates-and-times"></a>Tarih ve Saatleri İşleme  
- Nasıl tarih işlemek ve saat değerleri olup bunlar kullanıcı arabiriminde görüntülenir veya kalıcı üzerinde bağlıdır. Bu bölümde her iki kullanımları inceler. Ayrıca, nasıl aritmetik işlemler ve saat dilimi farkları tarih ve saatlerle çalışırken işleyebilir anlatılmaktadır.  
+ Nasıl tarih işlemek ve saat değerleri olup bunların kullanıcı arabiriminde görüntülenen veya kalıcı üzerinde bağlıdır. Bu bölüm her iki kullanımı da inceler. Nasıl, saat dilimi farklarını ve aritmetik işlemleri tarih ve saatlerle çalışırken işleyebileceğini açıklar.  
   
 <a name="DatesAndTimes_Display"></a>   
 ### <a name="displaying-dates-and-times"></a>Tarihleri ve Saatleri Görüntüleme  
- Genellikle, tarihler ve saatler kullanıcı arabiriminde görüntülendiğinde, tarafından tanımlanan kullanıcının kültür biçimlendirme kuralları kullanması gereken <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> özelliğini kullanarak ve <xref:System.Globalization.DateTimeFormatInfo> tarafından döndürülen nesne `CultureInfo.CurrentCulture.DateTimeFormat` özelliği. Bu yöntemlerden birini kullanarak bir tarih biçiminde geçerli kültür biçimlendirme kuralları otomatik olarak kullanılacaktır:  
+ Genellikle, tarihler ve saatler kullanıcı arabiriminde görüntülendiğinde tarafından tanımlanan kullanıcı kültürünün biçimlendirme kurallarını kullanmanız gerekir <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> özelliği ve <xref:System.Globalization.DateTimeFormatInfo> tarafından döndürülen nesne `CultureInfo.CurrentCulture.DateTimeFormat` özelliği. Bu yöntemlerden birini kullanarak bir tarihi biçimlendirdiğinizde geçerli kültürün biçimlendirme kuralları otomatik olarak kullanılır:  
   
 -   Parametresiz <xref:System.DateTime.ToString?displayProperty=nameWithType> yöntemi  
   
@@ -177,41 +177,41 @@ Genelleştirme tasarlama ve birden çok kültürü kullanıcılar için yerelle�
   
 -   [Bileşik biçimlendirme](../../../docs/standard/base-types/composite-formatting.md) tarihlerle kullanıldığında özelliği  
   
- Aşağıdaki örnekte, iki kez Ekim 11, 2012 için sunrise ve gün batımı verilerini görüntüler. Önce geçerli kültürü Hırvatça (Hırvatistan) ve ardından İngilizce (Türkiye) ayarlar. Her durumda, bu kültür için uygun olan biçimde tarihler ve saatler görüntülenir.  
+ Aşağıdaki örnek, iki kez 11 Ekim 2012 için Gün Doğumu ve gün batımı verilerini görüntüler. İlk geçerli kültürü Hırvatça (Hırvatistan) ve İngilizce (İngiltere) için ayarlar. Her durumda, tarihler ve saatler, o kültür için uygun biçimde görüntülenir.  
   
  [!code-csharp[Conceptual.Globalization#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates1.cs#2)]
  [!code-vb[Conceptual.Globalization#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates1.vb#2)]  
   
 <a name="DatesAndTimes_Persist"></a>   
 ### <a name="persisting-dates-and-times"></a>Kalıcı Tarihler ve Saatler  
- Hiçbir zaman kültür göre değişebilir bir biçimde tarih ve saat verilerini kalıcı. Bozuk veri veya bir çalışma zamanı özel sonuçları ortak bir programlama hatası budur. Aşağıdaki örnekte iki tarih, 9 Ocak 2013 ile 18 Ağustos 2013 İngilizce (ABD) kültür biçimlendirme kuralları kullanarak dizeleri olarak serileştirir. Verileri alınır ve İngilizce (ABD) kültür kurallarını kullanarak ayrıştırılır, başarıyla geri yüklendi. Ancak, alınır ve İngilizce (Birleşik Krallık) kültür kurallarını kullanarak ayrıştırılır, ilk tarih yanlış 1 Eylül yorumlanır ve ikinci Gregoryen takvim 6 ay olmadığından ayrıştırmak başarısız olur.  
+ Hiçbir zaman kültüre göre değişebilen bir biçimde tarih ve saat verilerini kalıcı olması. Bozuk veriler veya bir çalışma zamanı özel durumu sonuçları yaygın bir programlama hatası budur. Aşağıdaki örnek, dizeleri İngilizce (ABD) kültürünün biçimlendirme kurallarını kullanarak 9 Ocak 2013 ve 18 Ağustos 2013 iki tarih serileştirir. Veriler alınıp İngilizce (ABD) kültürünün kuralları geleneklerine göre ayrıştırıldığında, başarıyla geri yüklenir. Ancak, alındığında ve ayrıştırıldığında İngilizce (İngiltere) kültürü kurallarını kullanarak birinci tarih yanlışlıkla 1 Eylül olarak yorumlanır ve Gregoryen takvimini takviminde on sekizinci ay olmadığından ayrıştırmak saniye başarısız olur.  
   
  [!code-csharp[Conceptual.Globalization#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates2.cs#3)]
  [!code-vb[Conceptual.Globalization#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates2.vb#3)]  
   
- Bu sorunu herhangi üç şekilde önleyebilirsiniz:  
+ Üç yoldan herhangi birini bu sorunu önleyebilirsiniz:  
   
--   Tarih ve saat ikili biçimi yerine bir dize olarak serileştirir.  
+-   Tarih ve saat dizesi olarak yerine ikili biçimde serileştirin.  
   
--   Kaydet ve kullanıcının kültür bakılmaksızın aynı olacak bir özel biçim dizesi kullanarak tarih ve saat dize gösterimini ayrıştırılamadı.  
+-   Kaydet ve kullanıcının kültürü ne olursa olsun aynı olan özel biçim dizesi kullanarak tarih ve saat dize gösterimini ayrıştırın.  
   
--   Dize sabit kültür biçimlendirme kuralları kullanarak kaydedin.  
+-   Dize sabit kültürün biçimlendirme kurallarını kullanarak kaydedin.  
   
- Aşağıdaki örnek, son yaklaşım gösterilmektedir. Statik tarafından döndürülen sabit kültür biçimlendirme kuralları kullanan <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> özelliği.  
+ Aşağıdaki örnek, son yaklaşımı gösterir. Statik tarafından döndürülen sabit kültürün biçimlendirme kurallarını kullanır <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> özelliği.  
   
  [!code-csharp[Conceptual.Globalization#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates3.cs#4)]
  [!code-vb[Conceptual.Globalization#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates3.vb#4)]  
   
 <a name="DatesAndTimes_TimeZones"></a>   
 ### <a name="serialization-and-time-zone-awareness"></a>Seri Hale Getirme ve Saat Dilimini Tanıma  
- Tarih ve saat değeri bir genel süreden arasında birden çok yorumlar olabilir ("depoları 2 Ocak 2013'te 9: 00'da zaman içinde belirli bir süre için Aç") ("Doğum Tarihi: 2 Ocak 2013 6:32: 00'da"). Zaman içinde belirli bir süre bir saat değeri temsil eder ve seri hale getirilmiş bir değeri geri yüklemek, kullanıcının coğrafi konum veya saat dilimi bağımsız olarak zaman içinde aynı anda temsil ettiğini emin olmalısınız.  
+ Bir tarih ve saat değerini, genel zaman arasında birden çok yorumlaması olabilir ("mağazalar 2 Ocak 2013'te 9: 00'da zaman içinde belirli bir ana Aç") ("Doğum Tarihi: 2 Ocak 2013 6:32: 00'da"). Bir zaman değeri zaman içinde belirli bir ana temsil eder ve onu diziselleştirilmiş bir değerden geri, kullanıcının coğrafi konum veya saat dilimine bakılmaksızın zaman içinde aynı anı temsil ettiğini emin olun.  
   
- Aşağıdaki örnekte bu sorun gösterilmektedir. Bir dize olarak üç tek bir yerel tarih ve saat değeri kaydeder [standart biçimlerini](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) (genel tarih uzun zaman sıralanabilir tarih/saat, "s" için "G" ve "o" gidiş için tarih/saat) gibi ikili biçimde yanı.  
+ Aşağıdaki örnek bu sorunu gösterir. Bir dize olarak üç tek yerel tarih ve saat değerini kaydeder [standart biçim](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) (genel tarih uzun saat, "s" sıralanabilir tarih/saat, "G" ve "o" Ring tarih/saat) ikili biçimin yanı.  
   
  [!code-csharp[Conceptual.Globalization#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates4.cs#10)]
  [!code-vb[Conceptual.Globalization#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates4.vb#10)]  
   
- Doğru bir şekilde verileri bir sistemde sıralandığı managementpack sistem aynı saat diliminde geri yüklendiğinde seri durumdan çıkarılmış tarih ve saat değerleri özgün değeri çıktı gösterildiği gibi yansıtmak:  
+ Doğru bir şekilde sıralanmış sistem aynı saat dilimindeki bir sistemde verileri geri yüklendiğinde, Serisi kaldırılan tarih ve saat değerleri çıktıda gösterildiği gibi orijinal değeri yansıtır:  
   
 ```  
 '3/30/2013 6:00:00 PM' --> 3/30/2013 6:00:00 PM Unspecified  
@@ -221,7 +221,7 @@ Genelleştirme tasarlama ve birden çok kültürü kullanıcılar için yerelle�
 3/30/2013 6:00:00 PM Local  
 ```  
   
- Ancak, farklı bir zaman diliminde bir sistemde veri geri yüklerseniz, "o" (gidiş) standart biçim dizesi ile biçimlendirilmiş yalnızca tarih ve saat değeri saat dilimi bilgilerini korur ve bu nedenle aynı anlık zamanında temsil eder. Tarih ve saat verilerini Romantizm standart saat dilimi sisteminde geri yüklendiğinde çıktısı şöyledir:  
+ Ancak, farklı bir saat dilimindeki bir sistemde verileri geri yüklerseniz, "o" (gidiş dönüş) standart biçimi dize ile biçimlendirilmiş yalnızca tarih ve saat değerinin saat dilimi bilgilerini korur ve bu nedenle aynı anlık sürede temsil eder. Romanya Standart saat dilimindeki bir sistemde tarih ve saat verileri geri yüklendiğinde çıktı şöyledir:  
   
 ```  
 '3/30/2013 6:00:00 PM' --> 3/30/2013 6:00:00 PM Unspecified  
@@ -231,22 +231,22 @@ Genelleştirme tasarlama ve birden çok kültürü kullanıcılar için yerelle�
 3/30/2013 6:00:00 PM Local  
 ```  
   
- Doğru bir şekilde tek biraz verileri seri durumdan olan sistem saat dilimini bakılmaksızın süreyi temsil eden bir tarih ve saat değeri yansıtmak için aşağıdakilerden birini yapabilirsiniz:  
+ Veri seri durumda sistemin saat dilimine bakılmaksızın zaman içinde tek bir anı temsil eden bir tarih ve saat değerini doğru şekilde yansıtmak için aşağıdakilerden birini yapabilirsiniz:  
   
--   Değer, "o" (gidiş dönüş) standart biçim dizesi kullanarak bir dize olarak kaydedin. Ardından, hedef sistemde seri durumdan çıkarır.  
+-   Değer, "o" (gidiş-dönüş) standart biçim dizesini kullanarak dize olarak kaydedin. Daha sonra hedef sistemde serileştirmeyi kaldırın.  
   
--   UTC'ye dönüştürmek ve "r" (RFC1123) standart biçim dizesi kullanarak bir dize olarak kaydedin. Hedef sistemde seri durumdan sonra yerel saate dönüştürme.  
+-   UTC'ye dönüştürün ve "r" (RFC1123) standart biçim dizesini kullanarak dize olarak kaydedin. Daha sonra hedef sistemde serileştirmesini ve yerel saate dönüştürün.  
   
--   UTC'ye dönüştürmek ve "u" (Evrensel sıralanabilir) standart biçim dizesi kullanarak bir dize olarak kaydedin. Hedef sistemde seri durumdan sonra yerel saate dönüştürme.  
+-   UTC'ye dönüştürün ve "u" (Evrensel sıralanabilir) standart biçim dizesini kullanarak dize olarak kaydedin. Daha sonra hedef sistemde serileştirmesini ve yerel saate dönüştürün.  
   
--   UTC'ye dönüştürmek ve ikili dosya biçiminde kaydedin. Hedef sistemde seri durumdan sonra yerel saate dönüştürme.  
+-   UTC'ye dönüştürün ve ikili biçimde kaydedin. Daha sonra hedef sistemde serileştirmesini ve yerel saate dönüştürün.  
   
- Aşağıdaki örnek, her bir teknik gösterilmektedir.  
+ Aşağıdaki örnek her yöntemi gösterir.  
   
  [!code-csharp[Conceptual.Globalization#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates8.cs#11)]
  [!code-vb[Conceptual.Globalization#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates8.vb#11)]  
   
- Veri Pasifik Standart saat dilimi sisteminde serileştirilmiş ve Romantizm standart saat dilimi sisteminde seri, örnek aşağıdaki çıkış görüntüler:  
+ Veriler Pasifik Standart saat dilimindeki bir sistemde serileştirilmiş ve Romanya Standart saat dilimindeki bir sistemde serisi, örnek aşağıdaki çıkışı görüntüler:  
   
 ```  
 '2013-03-30T18:00:00.0000000-07:00' --> 3/31/2013 3:00:00 AM Local  
@@ -256,119 +256,120 @@ Genelleştirme tasarlama ve birden çok kültürü kullanıcılar için yerelle�
 3/31/2013 3:00:00 AM Local  
 ```  
   
- Daha fazla bilgi için bkz: [dönüştürme saatleri arasında saat dilimleri](../../../docs/standard/datetime/converting-between-time-zones.md).  
+ Daha fazla bilgi için [dönüştürme saatleri arasında saat dilimlerini](../../../docs/standard/datetime/converting-between-time-zones.md).  
   
 <a name="DatesAndTimes_Arithmetic"></a>   
 ### <a name="performing-date-and-time-arithmetic"></a>Tarih ve Saat Aritmetiğini Gerçekleştirme  
- Hem <xref:System.DateTime> ve <xref:System.DateTimeOffset> türlerini destekleyen aritmetik işlemler. İki tarih değerler arasındaki farkın hesaplayabilirsiniz ya da ekleyebilir veya belirli zaman aralıkları için veya bir tarih değeri çıkarır. Ancak, tarih ve saat değerleri aritmetik işlemler saat dilimleri ve saat dilimi ayarlama kuralları dikkate değil. Bu nedenle, tarih ve saat aritmetiği dakika zaman içinde temsil eden değerleri tutarsız sonuçlar döndürebilir.  
+ Hem <xref:System.DateTime> ve <xref:System.DateTimeOffset> türleri aritmetik işlemleri destekler. İki tarih değeri arasındaki farkı hesaplayabilirsiniz veya ekleyebilir veya belirli zaman aralıklarını bir tarih değerinden çıkarır. Ancak, tarih ve saat değerleri üzerinde aritmetik işlem saat dilimlerini ve saat dilimi ayarlama kurallarını dikkate almaz. Bu nedenle, tarih ve saat aritmetiği zaman içindeki anları temsil değerleri tutarsız sonuçlar döndürebilir.  
   
- Örneğin, 10 Mart 2013 yıl olduğundan Mart İkinci Pazar Pasifik Yaz Saati Pasifik Standart Saati geçiş oluşur. Aşağıdaki örnek olarak, saat ve hesaplaması, olduğunu gösterir 48 saat 9 Mart 2013'ün sonra 10: 30'da Pasifik Standart saat diliminde bir sistemde sonucu, 11 Mart 2013'ün en 10: 30'da, müdahalede bulunan saat ayarı dikkate almaz.  
+ Örneğin, Pasifik Standart saatinden Pasifik Yaz saatine geçiş, Mart 2013 yılı için 10 Mart İkinci Pazar oluşur. Aşağıdaki örnek tarih ve zamanda gösterir, 48 saat sonra 9 Mart 2013 10: 30'da Pasifik Standart saat dilimindeki bir sistemde bir araya giren zaman ayarlamasını hesaba 11 Mart 2013, 10: 30'da, sonuç almaz.  
   
  [!code-csharp[Conceptual.Globalization#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates5.cs#8)]
  [!code-vb[Conceptual.Globalization#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates5.vb#8)]  
   
- Tarih ve saat değerleri bir aritmetik işlemi doğru sonuçlar yapılmadığından emin olmak için şu adımları izleyin:  
+ Tarih ve saat değerleri üzerinde aritmetik işleminin doğru sonuçlar ürettiğinden emin olmak için bu adımları izleyin:  
   
-1.  Kaynak saat diliminde süresi için UTC dönüştürün.  
+1.  Kaynak saat dilimindeki saati UTC'ye dönüştürün.  
   
-2.  Aritmetik işlemi gerçekleştirin.  
+2.  Aritmetik işlemi gerçekleştirir.  
   
-3.  Sonuç bir tarih ve saat değeri ise, UTC saat kaynak saat diliminde dönüştürülemiyor.  
+3.  Sonuç bir tarih ve saat değeriyse UTC'den kaynak saat diliminde saate dönüştürün.  
   
- Doğru 48 saat 10: 30'da 9 Mart 2013'e eklemek için bu üç adımı aşağıdaki aşağıdaki örnek önceki örneğe benzerdir  
+ 48 saati 9 Mart 2013'e 10: 30'da doğru şekilde eklemek için bu üç adımı takip eden dışında aşağıdaki örnek önceki örneğe benzerdir  
   
  [!code-csharp[Conceptual.Globalization#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates6.cs#9)]
  [!code-vb[Conceptual.Globalization#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates6.vb#9)]  
   
- Daha fazla bilgi için bkz: [tarih ve saatlerle aritmetik işlemler gerçekleştirme](../../../docs/standard/datetime/performing-arithmetic-operations.md).  
+ Daha fazla bilgi için [tarih ve saatlerle aritmetik işlemler gerçekleştirme](../../../docs/standard/datetime/performing-arithmetic-operations.md).  
   
 ### <a name="using-culture-sensitive-names-for-date-elements"></a>Veri Öğeleri için Kültüre Duyarlı Adlar Kullanma  
- Uygulamanızı ayın adını veya haftanın günü görüntülemeniz gerekebilir. Bunu yapmak için aşağıdaki gibi ortak koddur.  
+ Ayın adı veya haftanın günü görüntülemek, uygulamanız gerekebilir. Bunu yapmak için aşağıdaki gibi bir kod yaygındır.  
   
  [!code-csharp[Conceptual.Globalization#19](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/monthname1.cs#19)]
  [!code-vb[Conceptual.Globalization#19](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/monthname1.vb#19)]  
   
- Ancak, bu kodu her zaman İngilizce haftanın günlerini adlarını döndürür. Ayın adını ayıklar kodu daha esnek olmayan görülür. Sıklıkla, on iki ay Takvim belirli bir dilde ay adlarıyla varsayar.  
+ Ancak, bu kod her zaman İngilizce olarak Haftanın günlerinin adlarını döndürür. Ayın adını ayıklayan kod genellikle daha az esnektir. Sıklıkla, belirli bir dilde ay adları ve bir on iki aylık takvimi varsayar.  
   
- Kullanarak [özel tarih ve saat biçim dizeleri](../../../docs/standard/base-types/custom-date-and-time-format-strings.md) veya özelliklerini <xref:System.Globalization.DateTimeFormatInfo> nesnesi, aşağıdaki örnekte gösterildiği gibi haftanın ya da kullanıcının kültürü aydaki gün adlarını yansıtmak dizeleri ayıklamak kolay olduğu. Geçerli kültür Fransızca (Fransa) değiştirir ve haftanın günü ve ayın adını 1 Temmuz 2013'ün adını görüntüler.  
+ Kullanarak [özel tarih ve saat biçim dizeleri](../../../docs/standard/base-types/custom-date-and-time-format-strings.md) veya özelliklerini <xref:System.Globalization.DateTimeFormatInfo> nesne, aşağıdaki örnekte gösterildiği gibi kullanıcının kültüründeki ayların veya Haftanın günlerinin adlarını yansıtan dizelerin çıkarılması kolaydır. Geçerli kültürü Fransızca (Fransa) değiştirir ve haftanın günü ve ay adını 1 Temmuz 2013 adını görüntüler.  
   
  [!code-csharp[Conceptual.Globalization#20](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/monthname2.cs#20)]
  [!code-vb[Conceptual.Globalization#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/monthname2.vb#20)]  
   
 <a name="Numbers"></a>   
 ## <a name="handling-numeric-values"></a>Sayısal Değerleri İşleme  
- Sayıların işleme olup bunlar kullanıcı arabiriminde görüntülenir veya kalıcı üzerinde bağlıdır. Bu bölümde her iki kullanımları inceler.  
+ Sayıların işlenmesi, bunlar kullanıcı arabiriminde görüntülenen olup kalıcı üzerinde bağlıdır. Bu bölüm her iki kullanımı da inceler.  
   
 > [!NOTE]
->  .NET Framework ayrıştırma ve işlemleri biçimlendirme, yalnızca temel Latin karakterler 0-9 arası tanıdığı (U + 0039 aracılığıyla, U + 0030) Sayısal basamaklar olarak.  
+>  Ayrıştırma ve biçimlendirme işlemleri, .NET Framework yalnızca temel Latin karakterleri 0-9 tanır (U + 0030-U + 0039) sayısal basamak olarak.  
   
 <a name="Numbers_Display"></a>   
 ### <a name="displaying-numeric-values"></a>Sayısal Değerleri Görüntüleme  
- Genellikle, sayılar kullanıcı arabiriminde görüntülendiğinde tarafından tanımlanan kullanıcının kültür biçimlendirme kuralları kullanması gereken <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> özelliğini kullanarak ve <xref:System.Globalization.NumberFormatInfo> tarafından döndürülen nesne `CultureInfo.CurrentCulture.NumberFormat` özelliği. Aşağıdaki yöntemlerden birini kullanarak bir tarih biçiminde geçerli kültür biçimlendirme kuralları otomatik olarak kullanılacaktır:  
+ Genellikle, kullanıcı arabiriminde sayılar görüntülendiğinde tarafından tanımlanan kullanıcı kültürünün biçimlendirme kurallarını kullanmanız gerekir <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> özelliği ve <xref:System.Globalization.NumberFormatInfo> tarafından döndürülen nesne `CultureInfo.CurrentCulture.NumberFormat` özelliği. Aşağıdaki yöntemlerden birini kullanarak bir tarihi biçimlendirdiğinizde geçerli kültürün biçimlendirme kuralları otomatik olarak kullanılır:  
   
--   Parametresiz `ToString` herhangi bir sayısal türde yöntemi  
+-   Parametresiz `ToString` herhangi bir sayısal tür yöntemi  
   
--   `ToString(String)` Bir biçim dizesi bağımsız değişken olarak içeren tüm sayısal türü yöntemi  
+-   `ToString(String)` Bağımsız değişken olarak bir biçim dizesi içeren her sayısal tür yöntemi  
   
--   [Bileşik biçimlendirme](../../../docs/standard/base-types/composite-formatting.md) sayısal değerleri ile kullanıldığında özelliği  
+-   [Bileşik biçimlendirme](../../../docs/standard/base-types/composite-formatting.md) sayısal değerlerle kullanıldığında özelliği  
   
- Aşağıdaki örnek, Paris, Fransa aylık Ortalama sıcaklık görüntüler. İlk veri görüntülemeden önce geçerli kültürü Fransızca (Fransa) ayarlar ve İngilizce (ABD) ayarlar. Her durumda, bu kültür için uygun olan biçimde etme ve ay adları görüntülenir. İki kültürler sıcaklık değeri farklı ondalık ayırıcı kullandığını unutmayın. Ayrıca, örneğin "Aaaa" özel tarih ve saat biçim dizesi tam ay adını görüntülemek için kullandığı ve uygun miktarını sonuç dizesinde ay adı için en uzun ayadıuzunluğubelirleyerekayırdığındaneminunutmayın<xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A?displayProperty=nameWithType></C0>dizi.  
+ Aşağıdaki örnek, Paris, Fransa'daki aylık Ortalama sıcaklığı görüntüler. İlk veri görüntülemeden önce geçerli kültürü Fransızca (Fransa) ayarlar ve sonra İngilizce (ABD) ayarlar. Her durumda, ay adları ve sıcaklıklar, o kültür için uygun biçimde görüntülenir. İki kültürün sıcaklık değerinde farklı ondalık ayırıcılar kullandığını unutmayın. Ayrıca örnek "MMMM" özel tarih ve saat biçim dizesi tam ay adını görüntülemek için kullandığı ve bunu uygun boşluk miktarını sonuçtaki ay adı için enuzunayadınınuzunluğunubelirleyerekayırdığınıunutmayın<xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A?displayProperty=nameWithType></C0>dizisi.  
   
  [!code-csharp[Conceptual.Globalization#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/numbers1.cs#5)]
  [!code-vb[Conceptual.Globalization#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/numbers1.vb#5)]  
   
 <a name="Numbers_Persist"></a>   
 ### <a name="persisting-numeric-values"></a>Kalıcı Sayısal Değerler  
- Kültüre özgü biçimde sayısal veri hiçbir zaman kalıcı olması. Bozuk veri veya bir çalışma zamanı özel sonuçları ortak bir programlama hatası budur. Aşağıdaki örnek, on rastgele kayan nokta sayıları oluşturur ve ardından bunları dize olarak İngilizce (ABD) kültür biçimlendirme kuralları kullanarak serileştirir. Verileri alınır ve İngilizce (ABD) kültür kurallarını kullanarak ayrıştırılır, başarıyla geri yüklendi. Alınan ve Fransızca (Fransa) kültür kurallarını kullanarak Ayrıştırılan kültürler farklı ondalık ayırıcı kullandığından ancak sayıları hiçbiri ayrıştırılabilir.  
+ Hiçbir zaman kültüre özgü biçimde sayısal veri kalıcı olması. Bozuk veriler veya bir çalışma zamanı özel durumu sonuçları yaygın bir programlama hatası budur. Aşağıdaki örnek rastgele on kayan noktalı sayı oluşturur ve ardından bunları dize olarak İngilizce (ABD) kültürünün biçimlendirme kurallarını kullanarak serileştirir. Veriler alınıp İngilizce (ABD) kültürünün kuralları geleneklerine göre ayrıştırıldığında, başarıyla geri yüklenir. Alındığında ve Fransızca (Fransa) kültürü kurallarını geleneklerine göre ayrıştırıldığında, kültürler farklı ondalık ayırıcılar kullandığından ancak sayıların hiçbiri ayrıştırılamaz.  
   
  [!code-csharp[Conceptual.Globalization#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/numbers2.cs#6)]
  [!code-vb[Conceptual.Globalization#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/numbers2.vb#6)]  
   
- Bu sorunu önlemek için bu teknikler birini kullanabilirsiniz:  
+ Bu sorunu önlemek için aşağıdaki tekniklerden birini kullanabilirsiniz:  
   
--   Kaydet ve kullanıcının kültür bakılmaksızın aynı olacak bir özel biçim dizesi kullanarak numarası dize gösterimini ayrıştırılamadı.  
+-   Kaydet ve kullanıcının kültürü ne olursa olsun aynı olan özel biçim dizesi kullanarak sayının dize gösterimini ayrıştırın.  
   
--   Sabit kültür biçimlendirme kuralları tarafından döndürülen kullanarak bir dize olarak numarası Kaydet <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> özelliği.  
+-   Tarafından döndürülen sabit kültürün biçimlendirme kurallarını kullanarak sayıyı bir dize olarak kaydedin <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> özelliği.  
   
--   Dize biçimi yerine ikili sayısında serileştirir.  
+-   Sayı dize biçimi yerine ikili biçimde serileştirin.  
   
- Aşağıdaki örnek, son yaklaşım gösterilmektedir. Dizi serileştiren <xref:System.Double> değerleri, seri durumdan çıkarır ve İngilizce (ABD) ve Fransızca (Fransa) kültür biçimlendirme kuralları kullanarak görüntüler.  
+ Aşağıdaki örnek, son yaklaşımı gösterir. Dizisini serileştirir <xref:System.Double> değerleri, seri durumdan çıkarır ve İngilizce (ABD) ve Fransızca (Fransa) kültürler biçimlendirme kurallarını kullanarak görüntüler.  
   
  [!code-csharp[Conceptual.Globalization#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/numbers3.cs#7)]
  [!code-vb[Conceptual.Globalization#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/numbers3.vb#7)]  
   
- Para birimi değerleri seri hale getirme özel bir durumdur. Para birimi değeri para birimi ifade edilir biriminde bağımlı olduğundan; bağımsız bir sayısal değer işlemek için az mantıklıdır. Para birimi değeri, para birimi simgesini içeren biçimlendirilmiş bir dize kaydederseniz, ancak bu, varsayılan kültürü farklı para birimi simgesini, aşağıdaki örnekte gösterildiği gibi kullanan bir sistemde serisi kaldırılamıyor.  
+ Para birimi değerlerini serileştirmek özel bir durumdur. Para birimi değerini ifade edildiği para biriminde bağlı olduğundan; Bu, bağımsız bir sayısal değer olarak değerlendirilmesi çok mantıklı. Para birimi değeri, para birimi sembolü içeren bir biçimlendirilmiş dize olarak kaydederseniz, ancak bu varsayılan kültürü aşağıdaki örnekte gösterildiği gibi farklı bir para birimi sembolü kullanan sistemde bunun serisi kaldırılamaz.  
   
  [!code-csharp[Conceptual.Globalization#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/currency1.cs#16)]
  [!code-vb[Conceptual.Globalization#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/currency1.vb#16)]  
   
- Bunun yerine, böylece değer ve para birimi simgesini bağımsız olarak geçerli kültür çıkarılabiliyorsa kültür adı gibi bazı kültürel bilgilerle birlikte sayısal değer seri hale. Aşağıdaki örnek tanımlayarak yapan bir `CurrencyValue` iki üye yapısıyla: <xref:System.Decimal> değer ve değeri ait olduğu kültür adı.  
+ Bunun yerine, böylece değer ve para birimi simgesi geçerli Kültürden bağımsız seri durumdan çıkarılabiliyorsa kültür adı gibi bazı kültürel bilgilerle birlikte sayısal değeri seri hale. Aşağıdaki örnek tanımlayarak yapan bir `CurrencyValue` yapısı iki üyeli: <xref:System.Decimal> değeri ve değerin ait olduğu kültürün adı.  
   
  [!code-csharp[Conceptual.Globalization#17](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/currency2.cs#17)]
  [!code-vb[Conceptual.Globalization#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/currency2.vb#17)]  
   
 <a name="Cultures"></a>   
 ## <a name="working-with-culture-specific-settings"></a>Kültüre Özgü Ayarlarla Çalışma  
- .NET Framework'teki <xref:System.Globalization.CultureInfo> belirli kültür veya bölge sınıfı temsil eder. Özelliklerinden bazıları bir kültür bazı yönlerinin hakkındaki belirli bilgileri sağlayan nesneleri döndürün:  
+ .NET Framework'teki <xref:System.Globalization.CultureInfo> sınıfı belirli bir kültür veya bölgeyi temsil eder. Bazı özellikleri bir kültürün bazı yönleri hakkında belirli bilgi sağlayan nesneleri döndürür:  
   
--   <xref:System.Globalization.CultureInfo.CompareInfo%2A?displayProperty=nameWithType> Özelliği döndürür bir <xref:System.Globalization.CompareInfo> kültürü karşılaştırır ve siparişleri dizeleri hakkında bilgi içeren nesne.  
+-   <xref:System.Globalization.CultureInfo.CompareInfo%2A?displayProperty=nameWithType> Özelliği döndürür bir <xref:System.Globalization.CompareInfo> kültürü karşılaştırır ve sıralar dizeleri hakkında bilgi içeren nesne.  
   
--   <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> Özelliği döndürür bir <xref:System.Globalization.DateTimeFormatInfo> tarih ve saat verilerini biçimlendirmede kullanılan kültüre özgü bilgileri sağlayan nesne.  
+-   <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> Özelliği döndürür bir <xref:System.Globalization.DateTimeFormatInfo> tarih ve saat verilerini biçimlendirmede kullanılan kültüre özgü bilgiler sağlayan nesne.  
   
--   <xref:System.Globalization.CultureInfo.NumberFormat%2A?displayProperty=nameWithType> Özelliği döndürür bir <xref:System.Globalization.NumberFormatInfo> sayısal veri biçimlendirmede kullanılan kültüre özgü bilgileri sağlayan nesne.  
+-   <xref:System.Globalization.CultureInfo.NumberFormat%2A?displayProperty=nameWithType> Özelliği döndürür bir <xref:System.Globalization.NumberFormatInfo> sayısal verileri biçimlendirmede kullanılan kültüre özgü bilgiler sağlayan nesne.  
   
--   <xref:System.Globalization.CultureInfo.TextInfo%2A?displayProperty=nameWithType> Özelliği döndürür bir <xref:System.Globalization.TextInfo> kültürü hakkında bilgi sağlayan nesne sistem yazma.  
+-   <xref:System.Globalization.CultureInfo.TextInfo%2A?displayProperty=nameWithType> Özelliği döndürür bir <xref:System.Globalization.TextInfo> kültürle ilgili bilgileri sağlayan nesne yazma sistemi.  
   
- Genel olarak, tüm özelliklerinin değerlerini özel yapmayın <xref:System.Globalization.CultureInfo> özellikler ve ilgili nesneleri. Bunun yerine, kültüre özgü veri değiştirilebilir olduğu gibi Bu nedenlerden dolayı görüntülemeniz gerekir:  
+ Genel olarak, belirli değerleri hakkında varsayımlar yapmayın <xref:System.Globalization.CultureInfo> özellikleri ve ilgili nesneleri. Bunun yerine, kültüre özel verileri değiştirmeniz Bu nedenlerden dolayı görüntülemeniz gerekir:  
   
--   Tek tek özellik değerlerini değiştirme ve düzeltme zaman içerisinde, veri düzeltilene, daha iyi veriler kullanılabilir duruma gelir veya kültüre özgü kuralları değiştirme gibi tabidir.  
+-   Tek tek özellik değerleri değiştirme ve düzeltme zaman içerisinde, veriler düzeltildiğinden, daha iyi veri kullanılabilir olduğunda veya kültüre özel kurallar değiştirme gibi tabidir.  
   
--   Tek tek özellik değerleri, .NET Framework veya işletim sistemi sürümleri sürümleri arasında farklılık gösterebilir.  
+-   Tek tek özellik değerleri, .NET Framework veya işletim sistemi sürümleri sürümleri arasında değişebilir.  
   
--   .NET Framework değiştirme kültürler destekler. Var olan standart kültürler tamamlayan ya da var olan bir standart kültür tamamen değiştirir yeni bir özel kültür tanımlamanızı mümkün kılar.  
+-   .NET Framework, yeni kültürleri destekler. Bu, varolan standart kültürleri tamamlayan veya varolan bir standart kültürü tamamen değiştiren özel bir yeni kültür tanımlamayı mümkün kılar.  
   
--   Kullanıcı kültüre özgü ayarları kullanarak özelleştirebileceğiniz **bölge ve dil** Denetim Masası'ndaki uygulama. Ne zaman örneği bir <xref:System.Globalization.CultureInfo> nesne çağırarak, bu kullanıcı özelleştirmeleri yansıtır olup olmadığını belirleyebilir <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> Oluşturucusu. Böylece kullanıcı çözemiyorsa beklediği biçiminde verilerle sunulan genellikle son kullanıcı uygulamaları için kullanıcı tercihlerini dikkate.  
+-   Kullanıcı kullanarak kültüre özgü ayarları özelleştirebilir **bölge ve dil** Denetim Masası'ndaki uygulama. Ne zaman örneği bir <xref:System.Globalization.CultureInfo> nesnesini çağırarak, bu kullanıcı özelleştirmelerini yansıtır olup olmadığını belirleyebilir <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> Oluşturucusu. Kullanıcının beklediği biçimde verilerle sunulur, böylece tipik olarak, son kullanıcı uygulamaları için kullanıcı tercihleri dikkate.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Genelleştirme ve Yerelleştirme](../../../docs/standard/globalization-localization/index.md)  
- [Dizeleri Kullanmak için En İyi Uygulamalar](../../../docs/standard/base-types/best-practices-strings.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Genelleştirme ve Yerelleştirme](../../../docs/standard/globalization-localization/index.md)  
+- [Dizeleri Kullanmak için En İyi Uygulamalar](../../../docs/standard/base-types/best-practices-strings.md)
