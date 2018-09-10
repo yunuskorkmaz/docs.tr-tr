@@ -3,11 +3,11 @@ title: Ortak şema koleksiyonları
 ms.date: 03/30/2017
 ms.assetid: 50127ced-2ac8-4d7a-9cd1-5c98c655ff03
 ms.openlocfilehash: 157330304ac656ddbdbb18408ca5144566746808
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44214920"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44260275"
 ---
 # <a name="common-schema-collections"></a>Ortak şema koleksiyonları
 Ortak şema koleksiyonları her .NET Framework yönetilen sağlayıcıları tarafından uygulanan şema koleksiyonlarıdır. Desteklenen şema koleksiyonları listesi çağırarak belirlemek için bir .NET Framework yönetilen sağlayıcı sorgulayabilirsiniz **GetSchema** yöntemi bağımsız değişken olmadan veya şema koleksiyonu adı "MetaDataCollections". Bu döndürür bir <xref:System.Data.DataTable> listesiyle desteklenen şema koleksiyonları, desteklediği her kısıtlama sayısı ve kullandıkları tanımlayıcısı parçaların sayısı. Bu koleksiyonlar tüm gerekli sütunlar açıklanmaktadır. Sağlayıcıları istedikleri ek sütunlar eklemek ücretsizdir. Örneğin, `SqlClient` ve `OracleClient` ParameterName kısıtlamaları koleksiyona ekleyin.  
