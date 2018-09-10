@@ -7,12 +7,12 @@ helpviewer_keywords:
 - dynamic [C#]
 - dynamic keyword [C#]
 ms.assetid: 9e797102-cc83-4964-bf58-afe4f54d16bc
-ms.openlocfilehash: bddcb8890ef7312047d05794ccef0b638de4ed78
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: HT
+ms.openlocfilehash: 840ecd6ab929b00e1be96c23eb06ccf362380f8e
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858297"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44195354"
 ---
 # <a name="dynamic-c-reference"></a>dynamic (C# Başvurusu)
 
@@ -72,5 +72,5 @@ Daha fazla bilgi ve örnekler için bkz. [türünü kullanarak dinamik](../../..
 - [is](../../../csharp/language-reference/keywords/is.md)  
 - [as](../../../csharp/language-reference/keywords/as.md)  
 - [typeof](../../../csharp/language-reference/keywords/typeof.md)  
-- [Nasıl yapılır: as ve is İşleçlerini Kullanarak Güvenli Bir Şekilde Atama](../../../csharp/programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md)  
+- [Nasıl yapılır: desen eşleştirme, kullanarak güvenli bir şekilde atama, ve işleçler](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)  
 - [İzlenecek yol: Nesneler oluşturma ve dinamik kullanma](../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
