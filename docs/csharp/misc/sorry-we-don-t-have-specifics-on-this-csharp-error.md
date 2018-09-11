@@ -883,32 +883,32 @@ helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
 ms.openlocfilehash: 81b33378519747060e604610ac1f3b9090332c11
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44180837"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44353089"
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a><span data-ttu-id="449e0-102">Ne yazık ki ki&#39;bu C# hatasıyla ilgili ayrıntı yok</span><span class="sxs-lookup"><span data-stu-id="449e0-102">Sorry, we don&#39;t have specifics on this C# error</span></span>
-<span data-ttu-id="449e0-103">Özür dileriz, ancak Biz bu hata hakkındaki belirli bilgilere sahip değildir.</span><span class="sxs-lookup"><span data-stu-id="449e0-103">We’re sorry, but we don’t have any specific information about this error.</span></span> <span data-ttu-id="449e0-104">Web'deki bilgileri bulmak hata sayısı ve ileti metni için arama yapabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="449e0-104">You can search for the error number and message text to find information on the web.</span></span> <span data-ttu-id="449e0-105">Veya şu forumlardan birine kullanarak diğer geliştiriciler isteyebilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="449e0-105">Or you can ask other developers using one of these forums:</span></span>  
+# <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a><span data-ttu-id="13b4d-102">Ne yazık ki ki&#39;bu C# hatasıyla ilgili ayrıntı yok</span><span class="sxs-lookup"><span data-stu-id="13b4d-102">Sorry, we don&#39;t have specifics on this C# error</span></span>
+<span data-ttu-id="13b4d-103">Özür dileriz, ancak Biz bu hata hakkındaki belirli bilgilere sahip değildir.</span><span class="sxs-lookup"><span data-stu-id="13b4d-103">We’re sorry, but we don’t have any specific information about this error.</span></span> <span data-ttu-id="13b4d-104">Web'deki bilgileri bulmak hata sayısı ve ileti metni için arama yapabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="13b4d-104">You can search for the error number and message text to find information on the web.</span></span> <span data-ttu-id="13b4d-105">Veya şu forumlardan birine kullanarak diğer geliştiriciler isteyebilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="13b4d-105">Or you can ask other developers using one of these forums:</span></span>  
   
- [<span data-ttu-id="449e0-106">Visual C# dili</span><span class="sxs-lookup"><span data-stu-id="449e0-106">Visual C# Language</span></span>](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharplanguage)  
- <span data-ttu-id="449e0-107">Hakkında sorular ve Visual C# dilinin sözdizimi ve derleyicisi genel tartışmalar için bir forum sağlar.</span><span class="sxs-lookup"><span data-stu-id="449e0-107">Provides a forum for questions about and general discussions of the Visual C# language syntax and compiler.</span></span>  
+ [<span data-ttu-id="13b4d-106">Visual C# dili</span><span class="sxs-lookup"><span data-stu-id="13b4d-106">Visual C# Language</span></span>](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharplanguage)  
+ <span data-ttu-id="13b4d-107">Hakkında sorular ve Visual C# dilinin sözdizimi ve derleyicisi genel tartışmalar için bir forum sağlar.</span><span class="sxs-lookup"><span data-stu-id="13b4d-107">Provides a forum for questions about and general discussions of the Visual C# language syntax and compiler.</span></span>  
   
- [<span data-ttu-id="449e0-108">Visual C# IDE</span><span class="sxs-lookup"><span data-stu-id="449e0-108">Visual C# IDE</span></span>](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharpide)  
- <span data-ttu-id="449e0-109">Visual Studio ortamında çalışma hakkında sorular için bir forum sağlar.</span><span class="sxs-lookup"><span data-stu-id="449e0-109">Provides a forum for questions about how to work in the Visual Studio environment.</span></span>  
+ [<span data-ttu-id="13b4d-108">Visual C# IDE</span><span class="sxs-lookup"><span data-stu-id="13b4d-108">Visual C# IDE</span></span>](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharpide)  
+ <span data-ttu-id="13b4d-109">Visual Studio ortamında çalışma hakkında sorular için bir forum sağlar.</span><span class="sxs-lookup"><span data-stu-id="13b4d-109">Provides a forum for questions about how to work in the Visual Studio environment.</span></span>  
   
- [<span data-ttu-id="449e0-110">Visual C# genel</span><span class="sxs-lookup"><span data-stu-id="449e0-110">Visual C# General</span></span>](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=csharpgeneral)  
- <span data-ttu-id="449e0-111">Hakkında sorular için bir forum sağlar ve sorunları ile Visual C, diğer forumlarda ele alınmamaktadır #.</span><span class="sxs-lookup"><span data-stu-id="449e0-111">Provides a forum for questions about and issues with Visual C# that are not discussed in other forums.</span></span>  
+ [<span data-ttu-id="13b4d-110">Visual C# genel</span><span class="sxs-lookup"><span data-stu-id="13b4d-110">Visual C# General</span></span>](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=csharpgeneral)  
+ <span data-ttu-id="13b4d-111">Hakkında sorular için bir forum sağlar ve sorunları ile Visual C, diğer forumlarda ele alınmamaktadır #.</span><span class="sxs-lookup"><span data-stu-id="13b4d-111">Provides a forum for questions about and issues with Visual C# that are not discussed in other forums.</span></span>  
   
- [<span data-ttu-id="449e0-112">StackOverflow</span><span class="sxs-lookup"><span data-stu-id="449e0-112">StackOverflow</span></span>](http://stackoverflow.com/questions/tagged/c%23)  
- <span data-ttu-id="449e0-113">Hakkında sorular için bir forum sağlar ve Visual C# ile verir.</span><span class="sxs-lookup"><span data-stu-id="449e0-113">Provides a forum for questions about and issues with Visual C#.</span></span>  
+ [<span data-ttu-id="13b4d-112">StackOverflow</span><span class="sxs-lookup"><span data-stu-id="13b4d-112">StackOverflow</span></span>](http://stackoverflow.com/questions/tagged/c%23)  
+ <span data-ttu-id="13b4d-113">Hakkında sorular için bir forum sağlar ve Visual C# ile verir.</span><span class="sxs-lookup"><span data-stu-id="13b4d-113">Provides a forum for questions about and issues with Visual C#.</span></span>  
   
- <span data-ttu-id="449e0-114">Ayrıca bkz:</span><span class="sxs-lookup"><span data-stu-id="449e0-114">Also see:</span></span>  
- [<span data-ttu-id="449e0-115">Visual C# programcıları için ek kaynaklar</span><span class="sxs-lookup"><span data-stu-id="449e0-115">Additional Resources for Visual C# Programmers</span></span>](../../csharp/getting-started/additional-resources.md)  
+ <span data-ttu-id="13b4d-114">Ayrıca bkz:</span><span class="sxs-lookup"><span data-stu-id="13b4d-114">Also see:</span></span>  
+ [<span data-ttu-id="13b4d-115">Visual C# programcıları için ek kaynaklar</span><span class="sxs-lookup"><span data-stu-id="13b4d-115">Additional Resources for Visual C# Programmers</span></span>](../../csharp/getting-started/additional-resources.md)  
   
-## <a name="see-also"></a><span data-ttu-id="449e0-116">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="449e0-116">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="13b4d-116">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="13b4d-116">See Also</span></span>
 
-- [<span data-ttu-id="449e0-117">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="449e0-117">C# Programming Guide</span></span>](../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="449e0-118">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="449e0-118">C# Reference</span></span>](../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="449e0-119">Bizimle İletişime Geçin</span><span class="sxs-lookup"><span data-stu-id="449e0-119">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)  
+- [<span data-ttu-id="13b4d-117">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="13b4d-117">C# Programming Guide</span></span>](../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="13b4d-118">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="13b4d-118">C# Reference</span></span>](../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="13b4d-119">Bizimle İletişime Geçin</span><span class="sxs-lookup"><span data-stu-id="13b4d-119">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)  
