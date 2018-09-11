@@ -3,17 +3,17 @@ title: 'Özyinelemeli İşlevler: rec Anahtar Sözcüğü (F#)'
 description: "'F # rec' anahtar sözcüğü bir özyinelemeli işlev tanımlamak için 'let' anahtar sözcüğü ile nasıl kullanıldığını öğrenin."
 ms.date: 05/16/2016
 ms.openlocfilehash: 5aab6ed8ab0fc3c0f0bcfc93c3ce6518ec53254f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
-ms.translationtype: HT
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44227067"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44336517"
 ---
-# <a name="recursive-functions-the-rec-keyword"></a><span data-ttu-id="0df20-103">Özyinelemeli İşlevler: rec Anahtar Sözcüğü</span><span class="sxs-lookup"><span data-stu-id="0df20-103">Recursive Functions: The rec Keyword</span></span>
+# <a name="recursive-functions-the-rec-keyword"></a><span data-ttu-id="4a331-103">Özyinelemeli İşlevler: rec Anahtar Sözcüğü</span><span class="sxs-lookup"><span data-stu-id="4a331-103">Recursive Functions: The rec Keyword</span></span>
 
-<span data-ttu-id="0df20-104">`rec` Anahtar sözcüğü ile birlikte kullanılır `let` özyinelemeli işlev tanımlamak için anahtar sözcüğü.</span><span class="sxs-lookup"><span data-stu-id="0df20-104">The `rec` keyword is used together with the `let` keyword to define a recursive function.</span></span>
+<span data-ttu-id="4a331-104">`rec` Anahtar sözcüğü ile birlikte kullanılır `let` özyinelemeli işlev tanımlamak için anahtar sözcüğü.</span><span class="sxs-lookup"><span data-stu-id="4a331-104">The `rec` keyword is used together with the `let` keyword to define a recursive function.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="0df20-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="0df20-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="4a331-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="4a331-105">Syntax</span></span>
 
 ```fsharp
 // Recursive function:
@@ -28,27 +28,27 @@ function2-body
 ...
 ```
 
-## <a name="remarks"></a><span data-ttu-id="0df20-106">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="0df20-106">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="4a331-106">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="4a331-106">Remarks</span></span>
 
-<span data-ttu-id="0df20-107">Özyinelemeli İşlevler, kendileri çağıran İşlevler F # dilinde açıkça tanımlanır.</span><span class="sxs-lookup"><span data-stu-id="0df20-107">Recursive functions, functions that call themselves, are identified explicitly in the F# language.</span></span> <span data-ttu-id="0df20-108">Bu tanımlanıyorsa tanımlayıcısı işlev kapsamında kullanılabilmesini sağlar.</span><span class="sxs-lookup"><span data-stu-id="0df20-108">This makes the identifer that is being defined available in the scope of the function.</span></span>
+<span data-ttu-id="4a331-107">Özyinelemeli İşlevler, kendileri çağıran İşlevler F # dilinde açıkça tanımlanır.</span><span class="sxs-lookup"><span data-stu-id="4a331-107">Recursive functions, functions that call themselves, are identified explicitly in the F# language.</span></span> <span data-ttu-id="4a331-108">Bu tanımlanıyorsa tanımlayıcısı işlev kapsamında kullanılabilmesini sağlar.</span><span class="sxs-lookup"><span data-stu-id="4a331-108">This makes the identifer that is being defined available in the scope of the function.</span></span>
 
-<span data-ttu-id="0df20-109">Aşağıdaki kod hesaplar bir özyinelemeli işlev göstermektedir *n*<sup>th</sup> Fibonacci sayı.</span><span class="sxs-lookup"><span data-stu-id="0df20-109">The following code illustrates a recursive function that computes the *n*<sup>th</sup> Fibonacci number.</span></span>
+<span data-ttu-id="4a331-109">Aşağıdaki kod hesaplar bir özyinelemeli işlev göstermektedir *n*<sup>th</sup> Fibonacci sayı.</span><span class="sxs-lookup"><span data-stu-id="4a331-109">The following code illustrates a recursive function that computes the *n*<sup>th</sup> Fibonacci number.</span></span>
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet4001.fs)]
 
 >[!NOTE]
-<span data-ttu-id="0df20-110">Yeniden hesaplama yapmayı daha önce hesaplanan değerler içerdiğinden, yukarıdaki kod bellek ve işlemci zamanı kısıp uygulamadır.</span><span class="sxs-lookup"><span data-stu-id="0df20-110">In practice, code like that above is wasteful of memory and processor time because it involves the recomputation of previously computed values.</span></span>
+<span data-ttu-id="4a331-110">Yeniden hesaplama yapmayı daha önce hesaplanan değerler içerdiğinden, yukarıdaki kod bellek ve işlemci zamanı kısıp uygulamadır.</span><span class="sxs-lookup"><span data-stu-id="4a331-110">In practice, code like that above is wasteful of memory and processor time because it involves the recomputation of previously computed values.</span></span>
 
-<span data-ttu-id="0df20-111">Yöntem türü içinde dolaylı olarak özyinelemelidir; eklemenize gerek yoktur `rec` anahtar sözcüğü.</span><span class="sxs-lookup"><span data-stu-id="0df20-111">Methods are implicitly recursive within the type; there is no need to add the `rec` keyword.</span></span> <span data-ttu-id="0df20-112">Sınıflardaki let bağlamaları örtülü olarak özyinelemeli değildir.</span><span class="sxs-lookup"><span data-stu-id="0df20-112">Let bindings within classes are not implicitly recursive.</span></span>
+<span data-ttu-id="4a331-111">Yöntem türü içinde dolaylı olarak özyinelemelidir; eklemenize gerek yoktur `rec` anahtar sözcüğü.</span><span class="sxs-lookup"><span data-stu-id="4a331-111">Methods are implicitly recursive within the type; there is no need to add the `rec` keyword.</span></span> <span data-ttu-id="4a331-112">Sınıflardaki let bağlamaları örtülü olarak özyinelemeli değildir.</span><span class="sxs-lookup"><span data-stu-id="4a331-112">Let bindings within classes are not implicitly recursive.</span></span>
 
-## <a name="mutually-recursive-functions"></a><span data-ttu-id="0df20-113">Karşılıklı özyinelemeli İşlevler</span><span class="sxs-lookup"><span data-stu-id="0df20-113">Mutually Recursive Functions</span></span>
+## <a name="mutually-recursive-functions"></a><span data-ttu-id="4a331-113">Karşılıklı özyinelemeli İşlevler</span><span class="sxs-lookup"><span data-stu-id="4a331-113">Mutually Recursive Functions</span></span>
 
-<span data-ttu-id="0df20-114">Bazen işlevlerdir *karşılıklı özyinelemeli*, çağrıları burada bir işlevi çağırır sırayla çağrıları herhangi bir sayıda ile ilk çağıran başka arasında bir daire, form anlamına gelir.</span><span class="sxs-lookup"><span data-stu-id="0df20-114">Sometimes functions are *mutually recursive*, meaning that calls form a circle, where one function calls another which in turn calls the first, with any number of calls in between.</span></span> <span data-ttu-id="0df20-115">Bu tür işlevleri bir araya tanımlamalısınız `let` kullanarak binding `and` birbirine bağlamak için anahtar sözcüğü.</span><span class="sxs-lookup"><span data-stu-id="0df20-115">You must define such functions together in the one `let` binding, using the `and` keyword to link them together.</span></span>
+<span data-ttu-id="4a331-114">Bazen işlevlerdir *karşılıklı özyinelemeli*, çağrıları burada bir işlevi çağırır sırayla çağrıları herhangi bir sayıda ile ilk çağıran başka arasında bir daire, form anlamına gelir.</span><span class="sxs-lookup"><span data-stu-id="4a331-114">Sometimes functions are *mutually recursive*, meaning that calls form a circle, where one function calls another which in turn calls the first, with any number of calls in between.</span></span> <span data-ttu-id="4a331-115">Bu tür işlevleri bir araya tanımlamalısınız `let` kullanarak binding `and` birbirine bağlamak için anahtar sözcüğü.</span><span class="sxs-lookup"><span data-stu-id="4a331-115">You must define such functions together in the one `let` binding, using the `and` keyword to link them together.</span></span>
 
-<span data-ttu-id="0df20-116">Aşağıdaki örnek iki birbirini gösterir özyinelemeli işlevler.</span><span class="sxs-lookup"><span data-stu-id="0df20-116">The following example shows two mutually recursive functions.</span></span>
+<span data-ttu-id="4a331-116">Aşağıdaki örnek iki birbirini gösterir özyinelemeli işlevler.</span><span class="sxs-lookup"><span data-stu-id="4a331-116">The following example shows two mutually recursive functions.</span></span>
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet4002.fs)]
 
-## <a name="see-also"></a><span data-ttu-id="0df20-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0df20-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4a331-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4a331-117">See also</span></span>
 
-- [<span data-ttu-id="0df20-118">İşlevler</span><span class="sxs-lookup"><span data-stu-id="0df20-118">Functions</span></span>](index.md)
+- [<span data-ttu-id="4a331-118">İşlevler</span><span class="sxs-lookup"><span data-stu-id="4a331-118">Functions</span></span>](index.md)
