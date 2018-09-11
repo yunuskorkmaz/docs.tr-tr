@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b270559e9e73e18bebb29e36b815268d5426a940
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
-ms.translationtype: MT
+ms.openlocfilehash: e6fe667ca908b2a4ba16e34e8e74dd39ca01f153
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34728686"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44070832"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>Normal İfade Örneği: HREF Tarama
-Aşağıdaki örnek giriş dizesi arar ve görüntüler tüm href = "..." değerlerini ve konumlarına dize.  
+Aşağıdaki örnek, bir Giriş dizesinin arar ve görüntüler veya href = "..." değerleri ve konumlarına dize.  
   
 ## <a name="the-regex-object"></a>Regex Nesnesi  
- Çünkü `DumpHRefs` yöntemi çağrılabilir birden çok kez kullanıcı kodundan, kullandığı `static` (`Shared` Visual Basic'te) <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> yöntemi. Bu normal ifade önbelleğe almak normal ifade altyapısı sağlar ve yeni bir örneği, yüke engel <xref:System.Text.RegularExpressions.Regex> nesne her zaman yöntemi çağrılır. A <xref:System.Text.RegularExpressions.Match> nesnesi dizesindeki tüm eşleşmeleri yinelemek için sonra kullanılır.  
+ Çünkü `DumpHRefs` yöntemi çağrıldığında birden çok kez kullanıcı kodundan, kullandığı `static` (`Shared` Visual Basic'te) <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> yöntemi. Bu normal ifade altyapısının normal ifade önbellekte sağlar ve yeni bir örnekleme ek yükü ortadan kaldırır <xref:System.Text.RegularExpressions.Regex> nesne her zaman yöntemi çağrılır. A <xref:System.Text.RegularExpressions.Match> nesne ardından dizedeki tüm eşleşmeleri yinelemek için kullanılır.  
   
  [!code-csharp[RegularExpressions.Examples.HREF#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.HREF/cs/example.cs#1)]
  [!code-vb[RegularExpressions.Examples.HREF#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.HREF/vb/example.vb#1)]  
@@ -40,21 +40,22 @@ Aşağıdaki örnek giriş dizesi arar ve görüntüler tüm href = "..." değer
   
 |Desen|Açıklama|  
 |-------------|-----------------|  
-|`href`|"Href" değişmez değer dize eşleşmesi. Eşleşme büyük/küçük harf duyarlıdır.|  
+|`href`|"Href =" sabit dizesini eşleştirin. Eşleşme büyük/küçük harf duyarlıdır.|  
 |`\s*`|Sıfır veya daha fazla boşluk karakteriyle eşleş.|  
-|`=`|Eşittir işareti ile aynı.|  
+|`=`|Eşittir işareti eşleyin.|  
 |`\s*`|Sıfır veya daha fazla boşluk karakteriyle eşleş.|  
-|<code>(?:\["'\](?<1>\[^"'\]*)["']&#124;(?<1>\S+))</code>|Aşağıdakilerden birini yakalanan bir gruba sonucu atamadan eşleştir:<br /> <ul><li><p>Tırnak işareti veya tırnak işareti veya kesme işareti, bir tırnak işareti veya kesme işareti gelmelidir dışındaki herhangi bir karakter, sıfır veya daha fazla tekrarı ve ardından kesme işareti. Adlı grup `1` bu modelinde eklenmiştir.</p></li><li><p>Bir veya daha fazla boşluk olmayan karakter. Adlı grup `1` bu modelinde eklenmiştir.</p></li></ul>|  
-|`(?<1>[^"']*)`|Tırnak işareti veya kesme işareti dışındaki herhangi bir karakter, sıfır veya daha fazla tekrarı adlı yakalama grubuna atayın `1`.|  
-|`(?<1>\S+)`|Bir veya daha fazla boşluk olmayan karakter adlı yakalama grubuna atayın `1`.|  
+|<code>(?:\["'\](?<1>\[^"'\]*)["']&#124;(?<1>\S+))</code>|Aşağıdakilerden birini bir yakalanan gruba sonucu atamadan eşleşmesi:<br /> <ul><li><p>Tırnak işareti veya kesme işareti, tırnak işareti veya kesme işareti, tırnak işareti veya kesme işareti tarafından izlenen dışındaki herhangi bir karakter sıfır veya daha çok tekrarı ardından. Adlı grubu `1` Bu düzende dahildir.</p></li><li><p>Bir veya daha fazla boşluk olmayan karakter. Adlı grubu `1` Bu düzende dahildir.</p></li></ul>|  
+|`(?<1>[^"']*)`|Adlandırılmış yakalama grubu için tırnak işareti veya kesme işareti dışındaki herhangi bir karakterin sıfır veya daha çok tekrarı atama `1`.|  
+|`(?<1>\S+)`|Adlandırılmış yakalama grubu için bir veya daha fazla boşluk olmayan karakterle atama `1`.|  
   
 ## <a name="match-result-class"></a>Sonuç Sınıfını Eşleştirme  
- Arama sonuçlarını depolanmış <xref:System.Text.RegularExpressions.Match> aramada ayıklanan tüm alt dizeler erişim sağlayan sınıf. Bunu çağırması, ayrıca Aranmakta dize ve kullanılan, normal ifade hatırlıyor <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> başka bir arama burada sonuncu sona erdi başlangıç yapmak için yöntemi.  
+ Bir aramanın sonuçları depolanan <xref:System.Text.RegularExpressions.Match> aramada ayıklanan tüm alt dizeler erişim sağlayan sınıf. Bunu çağırabilirsiniz, ayrıca Aranan dize ve kullanılan, normal ifade hatırlar <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> başka bir arama sonuncu burada sona erdi başlangıç yapmak için yöntemi.  
   
 ## <a name="explicitly-named-captures"></a>Açıkça Adlandırılmış Yakalamalar  
- Geleneksel normal ifadelerde yakalama parantez otomatik olarak ardışık olarak numaralandırılır. Bu iki sorunlara yol açar. Normal bir ifade ekleme veya bir dizi parantez kaldırarak değiştirilirse, ilk olarak, numaralandırılmış yakalamaları başvuran tüm kod yeni numaralandırma yansıtacak şekilde yazılması gerekir. İkinci olarak, genellikle farklı ayarlar parantez kabul edilebilir bir eşleşme için iki alternatif ifadeler sağlamak için kullanıldığından, iki ifadeye hangisinin gerçekte bir sonuç döndürdü belirlemek zor olabilir.  
+ Geleneksel normal ifadelerde yakalama parantez otomatik olarak ardışık olarak numaralandırılır. Bu iki sorunlara yol açar. Normal bir ifade ekleme veya kaldırma parantez kümesi değiştirilirse, ilk olarak, numaralandırılmış yakalama için başvuran tüm kodlar yeni numaralandırmalara yansıtacak şekilde yazılması gerekir. İkinci olarak, genellikle farklı ayarlar parantez iki alternatif ifadeleri kabul edilebilir bir eşleşme sağlamak için kullanıldığından, iki ifadeden aslında bir sonuç döndürdü saptamak zor olabilir.  
   
- Bu sorunları gidermek için <xref:System.Text.RegularExpressions.Regex> sınıfı destekler söz dizimi `(?<name>…)` bir eşleşme belirtilen yuvaya yakalamak için (bir string veya tamsayı kullanarak yuvaya adlandırılabilir; tamsayılar geri daha hızlı). Bu nedenle, tüm aynı yerde yönlendirilebilir aynı dize için alternatif eşleşir. Bir çakışma durumunda bir yuvaya bırakılan son başarılı eşleşme eşleşmedir. (Ancak, tek bir yuva için birden çok eşleşen tam bir listesi kullanılabilir. Bkz: <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> ayrıntıları toplamalarında.)  
+ Bu sorunları gidermeye yönelik <xref:System.Text.RegularExpressions.Regex> sınıfı sözdizimi destekler `(?<name>…)` bir eşleşmenin belirtilen yuvaya yakalanması için (bir dize veya tamsayı kullanarak yuvaya adlandırılabilir; tamsayılar geri daha hızlı). Bu nedenle, tüm aynı yere yönlendirilebilir aynı dize için alternatif eşleşir. Bir çakışma olması durumunda bir yuvaya bırakılan son eşleşmenin başarılı eşleşmedir. (Ancak, tek bir yuva için birden fazla eşleşme tam listesi kullanılabilir. Bkz: <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> koleksiyon için ayrıntıları.)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [.NET normal ifadeler](../../../docs/standard/base-types/regular-expressions.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [.NET normal ifadeler](../../../docs/standard/base-types/regular-expressions.md)

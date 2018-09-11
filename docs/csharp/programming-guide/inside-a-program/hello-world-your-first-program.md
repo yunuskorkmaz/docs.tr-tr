@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
 ms.openlocfilehash: 90f0ec6b88a2822cb3429948681c76c70f3d3f18
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44213851"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44339402"
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World -- İlk Programınız (C# Programlama Kılavuzu)
 Aşağıdaki yordam geleneksel "Hello World!"'ın bir C# sürümünü oluşturur. Program. Program dizesini görüntüler. `Hello World!`  

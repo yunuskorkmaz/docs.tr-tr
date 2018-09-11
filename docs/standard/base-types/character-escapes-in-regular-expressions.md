@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0f19cbf305165c2553d5a493f7011a6aea19fb23
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 9b390b1d3d935ad045d59dd6b3d2e42cdbe82dd7
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43779464"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44206162"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>Normal İfadelerdeki Karakter Çıkışları
 Ters eğik çizgi (\\) normal bir ifadede aşağıdakilerden birini gösterir:  
@@ -69,5 +69,6 @@ Ters eğik çizgi (\\) normal bir ifadede aşağıdakilerden birini gösterir:
 |`(.+)`|Herhangi bir karakter, bir veya daha fazla kez eşleştirin. Bu ikinci yakalama grubudur.|  
 |`\r?\n`|Bir yeni satırın izlediği bir satır başı sıfır veya bir oluşumunu eşleştirin.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Normal İfade Dili - Hızlı Başvuru](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Normal İfade Dili - Hızlı Başvuru](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
