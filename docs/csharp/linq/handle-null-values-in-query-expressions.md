@@ -4,11 +4,11 @@ description: C# LINQ Sorgu ifadelerinde boş değerler işleme hakkında bilgi e
 ms.date: 12/1/2016
 ms.assetid: ac63ae8b-724d-4251-9334-528f4e884ae7
 ms.openlocfilehash: 2c477ef371dbb424c72fb9d34948760b7e3f5609
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44133866"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44259505"
 ---
 # <a name="handle-null-values-in-query-expressions"></a>Sorgu ifadelerinde boş değerler işleme
 

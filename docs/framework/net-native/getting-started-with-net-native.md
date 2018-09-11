@@ -5,11 +5,11 @@ ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 41679d4041a6a5a7b9b71a451a083c539d6b4c7b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44189309"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262266"
 ---
 # <a name="getting-started-with-net-native"></a>.NET Native'i Kullanmaya Başlama
 Windows 10 için yeni bir Windows uygulaması yazmak ister mevcut bir Windows Store app geçiriyorsanız, aynı kümesini yordamları izleyebilirsiniz. Oluşturmak için bir [!INCLUDE[net_native](../../../includes/net-native-md.md)] uygulama, şu adımları izleyin:  

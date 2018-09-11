@@ -3,11 +3,11 @@ title: İş akışları, etkinlikler ve ifadeler kesin kod kullanarak geliştirm
 ms.date: 03/30/2017
 ms.assetid: cefc9cfc-2882-4eb9-8c94-7a6da957f2b2
 ms.openlocfilehash: a0566e01d5786c955562ef97d6d083d886278293
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
-ms.translationtype: MT
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44197504"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44265136"
 ---
 # <a name="authoring-workflows-activities-and-expressions-using-imperative-code"></a>İş akışları, etkinlikler ve ifadeler kesin kod kullanarak geliştirme
 Bir iş akışı tanımı, yapılandırılan etkinlik nesneleri ağacıdır. Bu ağaç etkinliklerin elle düzenlemeye XAML veya XAML üretmek için iş akışı Tasarımcısı kullanarak da dahil olmak üzere birçok şekilde tanımlanabilir. XAML, kullanımı, ancak bir gereksinim değildir. İş akışı tanımları da bir program aracılığıyla oluşturulabilir. Bu konuda, kod kullanarak iş akışı tanımları, etkinlikler ve ifadeler oluşturmaya genel bir bakış sağlar. Kod kullanarak XAML iş akışları ile çalışma örnekleri için bkz. [seri hale getirme iş akışları ve etkinlikler XAML gelen ve giden](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md).  

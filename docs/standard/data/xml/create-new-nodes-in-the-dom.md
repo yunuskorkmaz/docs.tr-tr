@@ -6,11 +6,11 @@ ms.assetid: 6c2b9789-b61a-49f9-b33f-db01a945edf2
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 390ffa1dd9f2e76372b0e4fcbf2916918b64d748
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44214608"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44260103"
 ---
 # <a name="create-new-nodes-in-the-dom"></a>DOM'da yeni düğümler oluşturma
 <xref:System.Xml.XmlDocument> Tüm düğüm türü için bir oluşturma yöntemi vardır. Gerekli olduğunda bir ada sahip yöntem sağlamanız ve içerik veya diğer parametreler (örneğin, bir metin düğümü) içeriğe sahip düğümleri ve düğüm için oluşturulur. Aşağıdaki yöntemlerden bir ada ihtiyacınız olanları ve uygun bir düğüm oluşturmak için doldurulmuş birkaç diğer parametreleri var.  

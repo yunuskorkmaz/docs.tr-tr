@@ -9,11 +9,11 @@ ms.assetid: 55c4b175-3170-4071-9d60-dd5a42f79b54
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c24fe637514ba773cecc7824de276b1707a4e90c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44221694"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262520"
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a>Şema derleme için XmlSchemaSet
 Açıklar <xref:System.Xml.Schema.XmlSchemaSet>, burada XML Şeması Tanım Dili (XSD) şemaları depolanabilir ve doğrulanmış bir önbellek.  

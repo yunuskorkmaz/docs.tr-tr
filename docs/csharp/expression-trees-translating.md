@@ -4,11 +4,11 @@ description: Bu ifade ağacını değiştirilmiş bir kopyasını oluşturulurke
 ms.date: 06/20/2016
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
 ms.openlocfilehash: bd4aec2ef34e4dc972ae867c6b5070f92dcbc498
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43788983"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262340"
 ---
 # <a name="translating-expression-trees"></a>İfade ağaçları çevirme
 

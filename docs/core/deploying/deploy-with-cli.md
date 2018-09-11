@@ -3,13 +3,16 @@ title: .NET core CLI araçları ile uygulama dağıtımı
 description: .NET Core uygulama dağıtımı ile komut satırı arabirimi (CLI) araçlarını edinin
 author: rpetrusha
 ms.author: ronpet
-ms.date: 04/18/2017
-ms.openlocfilehash: dbef9d91aa4e7af8e6e0ed2d8f361238385d4976
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.date: 09/05/2018
+dev_langs:
+- csharp
+- vb
+ms.openlocfilehash: a7e810372d831699eae777186385e45fe65cdf45
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855028"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44272897"
 ---
 # <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>Komut satırı arabirimi (CLI) araçları ile .NET Core uygulaması dağıtma
 
@@ -34,13 +37,14 @@ Herhangi bir üçüncü taraf bağımlılıkları olan bir framework bağımlı 
 
 1. Projeyi oluşturun.
 
-   Komut satırından yazın [dotnet yeni konsol](../tools/dotnet-new.md) bu dizinde yeni bir C# konsol projesi oluşturmak için.
+   Komut satırından yazın [dotnet yeni konsol](../tools/dotnet-new.md) yeni bir C# konsol projesi oluşturmak için veya [dotnet yeni konsol - vb dil](../tools/dotnet-new.md) bu dizinde yeni bir Visual Basic konsol projesi oluşturmak için.
 
 1. Uygulamanın kaynak kodunu ekleyin.
 
-   Açık *Program.cs* Düzenleyicisi'nde dosya ve otomatik olarak oluşturulan kodu aşağıdaki kodla değiştirin. Kullanıcının metin girmesini ister ve kullanıcı tarafından girilen kelimeler görüntüler. Normal ifade kullanan `\w+` giriş metnindeki sözcükleri ayırmak için.
+   Açık *Program.cs* veya *Program.vb* Düzenleyicisi'nde dosya ve otomatik olarak oluşturulan kodu aşağıdaki kodla değiştirin. Kullanıcının metin girmesini ister ve kullanıcı tarafından girilen kelimeler görüntüler. Normal ifade kullanan `\w+` giriş metnindeki sözcükleri ayırmak için.
 
-   [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
+   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
+   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
 
 1. Proje bağımlılıkları ve Araçları'nı güncelleştirin.
 
@@ -55,7 +59,7 @@ Herhangi bir üçüncü taraf bağımlılıkları olan bir framework bağımlı 
    Hata ayıklama ve test programı sonra aşağıdaki komutu kullanarak dağıtımı oluşturun:
 
       ```console
-      dotnet publish -f netcoreapp1.1 -c Release
+      dotnet publish -f netcoreapp2.1 -c Release
       ```
    Bu, bir yayın (bir hata ayıklama yerine) oluşturur, uygulama sürümü. Ortaya çıkan dosyalar adlı bir dizinde yerleştirilir *yayımlama* projenizin alt dizininde olan *bin* dizin.
 
@@ -101,8 +105,8 @@ Bir framework bağımlı dağıtımının bir veya daha fazla üçüncü taraf b
 
    Açık *Program.cs* Düzenleyicisi'nde dosya ve otomatik olarak oluşturulan kodu aşağıdaki kodla değiştirin. Kullanıcının metin girmesini ister ve kullanıcı tarafından girilen kelimeler görüntüler. Normal ifade kullanan `\w+` giriş metnindeki sözcükleri ayırmak için.
 
-   [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
-
+   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
+   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
 1. Uygulamanızı hedefleyen platformlar tanımlayın.
 
    Oluşturma bir `<RuntimeIdentifiers>` içindeki `<PropertyGroup>` bölümünü, *csproj* uygulamanız hedefler ve hedeflediğiniz her platform için çalışma zamanı tanımlayıcı (RID) belirtin platformları tanımlayan dosya. Aynı zamanda RID ayırmak için noktalı virgül eklemeniz gerektiğini unutmayın. Bkz: [çalışma zamanı tanımlayıcı Kataloğu](../rid-catalog.md) çalışma zamanı tanımlayıcılarının listesi.
@@ -121,6 +125,14 @@ Bir framework bağımlı dağıtımının bir veya daha fazla üçüncü taraf b
 
    Çalıştırma [dotnet restore](../tools/dotnet-restore.md) ([bkz. Not](#dotnet-restore-note)), projede belirtilen bağımlılıkları geri yüklemek için komutu.
 
+1. Genelleştirme sabit modu kullanmak isteyip istemediğinizi belirleyin.
+
+   Uygulamanızı Linux hedefliyorsa, özellikle, avantajlarından yararlanarak dağıtımınızın toplam boyutunu azaltabilirsiniz [Genelleştirme sabit modu](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md). Genelleştirme sabit modu, genel olarak duyarlı değildir ve biçimlendirme kuralları, büyük/küçük harf kuralları ve dize karşılaştırma ve sıralama düzenini kullanabilen uygulamalar için kullanışlıdır [sabit kültür](xref:System.Globalization.CultureInfo.InvariantCulture).
+
+   Sabit modunu etkinleştirmek için projenize (çözümü değil) sağ **Çözüm Gezgini**seçip **Düzenle SCD.csproj** veya **Düzenle SCD.vbproj**. Ardından aşağıdaki vurgulanan satırları dosyaya ekleyin:
+
+ [!code-xml[globalization-invariant-mode](~/samples/snippets/core/deploying/xml/invariant.csproj)]
+
 1. Uygulamanızı hata ayıklama yapısını oluşturun.
 
    Komut satırından kullanma [dotnet derleme](../tools/dotnet-build.md) komutu.
@@ -134,7 +146,7 @@ Bir framework bağımlı dağıtımının bir veya daha fazla üçüncü taraf b
       dotnet publish -c Release -r osx.10.11-x64
       ```
 
-   Bu, bir yayın (bir hata ayıklama yerine) oluşturur uygulamanızın her hedef platform sürümü. Ortaya çıkan dosyalar adlı bir alt dizinine yerleştirilir *yayımlama* projenizin alt dizininde olan *.\bin\Release\netcoreapp1.1\<runtime_identifier >* alt. Her alt uygulamanızı başlatmak için gerekli dosyaları (uygulama dosyalarınızı ve tüm .NET Core dosyaları) tam kümesini içerdiğine dikkat edin.
+   Bu, bir yayın (bir hata ayıklama yerine) oluşturur uygulamanızın her hedef platform sürümü. Ortaya çıkan dosyalar adlı bir alt dizinine yerleştirilir *yayımlama* projenizin alt dizininde olan *.\bin\Release\netcoreapp2.1\<runtime_identifier >* alt. Her alt uygulamanızı başlatmak için gerekli dosyaları (uygulama dosyalarınızı ve tüm .NET Core dosyaları) tam kümesini içerdiğine dikkat edin.
 
 Uygulamanızın dosyaları ile birlikte uygulamanızı hata ayıklama bilgilerini içeren bir program veritabanı (.pdb) dosyası yayımlama işlemi yayar. Dosya, öncelikle bir özel durum hata ayıklama için kullanışlıdır. Bu paket, uygulamanızın dosyaları ile değil seçebilirsiniz. Uygulamanızı yayın derlemesinin hatalarını ayıklamak istediğiniz olay, ancak kaydetmeniz gerekir.
 
@@ -146,7 +158,7 @@ Aşağıdaki tamamlandıktan *csproj* bu proje için dosya.
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
   </PropertyGroup>
 </Project>
@@ -172,7 +184,7 @@ Aşağıdaki tamamlandıktan *csproj* bu proje için dosya:
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
   </PropertyGroup>
   <ItemGroup>

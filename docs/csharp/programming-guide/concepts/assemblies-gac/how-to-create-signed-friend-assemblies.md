@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: imzalı arkadaş derlemeleri (C#) oluşturma'
 ms.date: 07/20/2015
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
 ms.openlocfilehash: 8f310055db6899bf315310efc22b67bca2c4500f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44197095"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44260012"
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a>Nasıl yapılır: imzalı arkadaş derlemeleri (C#) oluşturma
 Bu örnek, arkadaş derlemeleri tanımlayıcı adlara sahip derlemeler ile kullanma işlemini gösterir. İki derleme tanımlayıcı ada gerekir. Bu örnekte iki derleme, aynı anahtarları kullanmak olsa da, anahtarları farklı iki derlemeler için kullanabilirsiniz.  

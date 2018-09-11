@@ -10,11 +10,11 @@ ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d0f5ae64eb1017570a56efab59a4bf1a66d5e02b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44208549"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264395"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>Bir XML belgesi DOM doğrulanıyor
 <xref:System.Xml.XmlDocument> Sınıfı varsayılan olarak XML belge nesne modeli (DOM) içinde bir XML Şeması Tanım Dili (XSD) şeması veya belge türü tanımı (DTD'nin) karşı doğrulamaz; XML yalnızca doğru biçimlendirilmemiş doğrulanır.  

@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: yük derlemeleri ve yüklemelerini kaldırma (C#)'
 ms.date: 07/20/2015
 ms.assetid: 6a4f490f-3576-471f-9533-003737cad4a3
 ms.openlocfilehash: 2934ff07026d520f52309e50eb7da24731608292
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44197543"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44259655"
 ---
 # <a name="how-to-load-and-unload-assemblies-c"></a>Nasıl yapılır: yük derlemeleri ve yüklemelerini kaldırma (C#)
 Programınız tarafından başvurulan derlemeler otomatik olarak derleme zamanında yüklenir, ancak geçerli uygulama etki alanına çalışma zamanında belirli derlemeleri yüklemek mümkündür. Daha fazla bilgi için [nasıl yapılır: bir uygulama etki alanına derlemeleri](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md).  
