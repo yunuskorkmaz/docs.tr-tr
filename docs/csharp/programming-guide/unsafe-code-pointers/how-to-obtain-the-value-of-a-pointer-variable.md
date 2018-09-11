@@ -8,44 +8,44 @@ helpviewer_keywords:
 - pointers [C#], * operator
 ms.assetid: 460a813a-4995-44c1-9de2-213b91dc7668
 ms.openlocfilehash: 66f341e193a0f018adb76a40617f85266519e602
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44252242"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44267232"
 ---
-# <a name="how-to-obtain-the-value-of-a-pointer-variable-c-programming-guide"></a><span data-ttu-id="9c127-102">Nasıl yapılır: İşaretçi Değişkeninin Değerini Edinme (C# Programlama Kılavuzu)</span><span class="sxs-lookup"><span data-stu-id="9c127-102">How to: Obtain the Value of a Pointer Variable (C# Programming Guide)</span></span>
-<span data-ttu-id="9c127-103">İşaretçi yöneltme işleci için bir işaretçi tarafından işaret edilen konumda bir değişkeni almak için kullanın.</span><span class="sxs-lookup"><span data-stu-id="9c127-103">Use the pointer indirection operator to obtain the variable at the location pointed to by a pointer.</span></span> <span data-ttu-id="9c127-104">İfade, aşağıdaki biçimi alır burada `p` bir işaretçi türü:</span><span class="sxs-lookup"><span data-stu-id="9c127-104">The expression takes the following form, where `p` is a pointer type:</span></span>  
+# <a name="how-to-obtain-the-value-of-a-pointer-variable-c-programming-guide"></a><span data-ttu-id="a57ea-102">Nasıl yapılır: İşaretçi Değişkeninin Değerini Edinme (C# Programlama Kılavuzu)</span><span class="sxs-lookup"><span data-stu-id="a57ea-102">How to: Obtain the Value of a Pointer Variable (C# Programming Guide)</span></span>
+<span data-ttu-id="a57ea-103">İşaretçi yöneltme işleci için bir işaretçi tarafından işaret edilen konumda bir değişkeni almak için kullanın.</span><span class="sxs-lookup"><span data-stu-id="a57ea-103">Use the pointer indirection operator to obtain the variable at the location pointed to by a pointer.</span></span> <span data-ttu-id="a57ea-104">İfade, aşağıdaki biçimi alır burada `p` bir işaretçi türü:</span><span class="sxs-lookup"><span data-stu-id="a57ea-104">The expression takes the following form, where `p` is a pointer type:</span></span>  
   
 ```  
 *p;  
 ```  
   
- <span data-ttu-id="9c127-105">İşaretçi türünün dışındaki herhangi bir türde bir ifade üzerinde birli yöneltme işlecini kullanamazsınız.</span><span class="sxs-lookup"><span data-stu-id="9c127-105">You cannot use the unary indirection operator on an expression of any type other than the pointer type.</span></span> <span data-ttu-id="9c127-106">Ayrıca, kendisine uygulanamıyor bir [void](../../../csharp/language-reference/keywords/void.md) işaretçi.</span><span class="sxs-lookup"><span data-stu-id="9c127-106">Also, you cannot apply it to a [void](../../../csharp/language-reference/keywords/void.md) pointer.</span></span>  
+ <span data-ttu-id="a57ea-105">İşaretçi türünün dışındaki herhangi bir türde bir ifade üzerinde birli yöneltme işlecini kullanamazsınız.</span><span class="sxs-lookup"><span data-stu-id="a57ea-105">You cannot use the unary indirection operator on an expression of any type other than the pointer type.</span></span> <span data-ttu-id="a57ea-106">Ayrıca, kendisine uygulanamıyor bir [void](../../../csharp/language-reference/keywords/void.md) işaretçi.</span><span class="sxs-lookup"><span data-stu-id="a57ea-106">Also, you cannot apply it to a [void](../../../csharp/language-reference/keywords/void.md) pointer.</span></span>  
   
- <span data-ttu-id="9c127-107">Yöneltme işleci uygulandığında bir [null](../../../csharp/language-reference/keywords/null.md) işaretçisi sonucu uygulamasına bağlıdır.</span><span class="sxs-lookup"><span data-stu-id="9c127-107">When you apply the indirection operator to a [null](../../../csharp/language-reference/keywords/null.md) pointer, the result depends on the implementation.</span></span>  
+ <span data-ttu-id="a57ea-107">Yöneltme işleci uygulandığında bir [null](../../../csharp/language-reference/keywords/null.md) işaretçisi sonucu uygulamasına bağlıdır.</span><span class="sxs-lookup"><span data-stu-id="a57ea-107">When you apply the indirection operator to a [null](../../../csharp/language-reference/keywords/null.md) pointer, the result depends on the implementation.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9c127-108">Örnek</span><span class="sxs-lookup"><span data-stu-id="9c127-108">Example</span></span>  
- <span data-ttu-id="9c127-109">Aşağıdaki örnekte, türünde bir değişken `char` farklı türlerde işaretçiler kullanılarak erişilebilir.</span><span class="sxs-lookup"><span data-stu-id="9c127-109">In the following example, a variable of the type `char` is accessed by using pointers of different types.</span></span> <span data-ttu-id="9c127-110">Unutmayın adresini `theChar` gelen çalıştıracak çalışma için bir değişkene ayrılan fiziksel adresi geçebileceğiniz farklılık gösterir.</span><span class="sxs-lookup"><span data-stu-id="9c127-110">Note that the address of `theChar` will vary from run to run, because the physical address allocated to a variable can change.</span></span>  
+## <a name="example"></a><span data-ttu-id="a57ea-108">Örnek</span><span class="sxs-lookup"><span data-stu-id="a57ea-108">Example</span></span>  
+ <span data-ttu-id="a57ea-109">Aşağıdaki örnekte, türünde bir değişken `char` farklı türlerde işaretçiler kullanılarak erişilebilir.</span><span class="sxs-lookup"><span data-stu-id="a57ea-109">In the following example, a variable of the type `char` is accessed by using pointers of different types.</span></span> <span data-ttu-id="a57ea-110">Unutmayın adresini `theChar` gelen çalıştıracak çalışma için bir değişkene ayrılan fiziksel adresi geçebileceğiniz farklılık gösterir.</span><span class="sxs-lookup"><span data-stu-id="a57ea-110">Note that the address of `theChar` will vary from run to run, because the physical address allocated to a variable can change.</span></span>  
   
  [!code-csharp[csProgGuidePointers#5](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-obtain-the-value-of-a-pointer-variable_1.cs)]  
   
  [!code-csharp[csProgGuidePointers#6](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-obtain-the-value-of-a-pointer-variable_2.cs)]  
   
-<span data-ttu-id="9c127-111">**TheChar değerini Z =**
+<span data-ttu-id="a57ea-111">**TheChar değerini Z =**
 **theChar adresini 12F718 =**
 **pChar değerini Z =**
-**pInt değerini 90 =**</span><span class="sxs-lookup"><span data-stu-id="9c127-111">**Value of theChar = Z**
+**pInt değerini 90 =**</span><span class="sxs-lookup"><span data-stu-id="a57ea-111">**Value of theChar = Z**
 **Address of theChar = 12F718**
 **Value of pChar = Z**
 **Value of pInt = 90**</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="9c127-112">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="9c127-112">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a57ea-112">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="a57ea-112">See Also</span></span>
 
-- [<span data-ttu-id="9c127-113">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="9c127-113">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="9c127-114">İşaretçi İfadeleri</span><span class="sxs-lookup"><span data-stu-id="9c127-114">Pointer Expressions</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
-- [<span data-ttu-id="9c127-115">İşaretçi türleri</span><span class="sxs-lookup"><span data-stu-id="9c127-115">Pointer types</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
-- [<span data-ttu-id="9c127-116">Türler</span><span class="sxs-lookup"><span data-stu-id="9c127-116">Types</span></span>](../../../csharp/language-reference/keywords/types.md)  
-- [<span data-ttu-id="9c127-117">unsafe</span><span class="sxs-lookup"><span data-stu-id="9c127-117">unsafe</span></span>](../../../csharp/language-reference/keywords/unsafe.md)  
-- [<span data-ttu-id="9c127-118">fixed Deyimi</span><span class="sxs-lookup"><span data-stu-id="9c127-118">fixed Statement</span></span>](../../../csharp/language-reference/keywords/fixed-statement.md)  
-- [<span data-ttu-id="9c127-119">stackalloc</span><span class="sxs-lookup"><span data-stu-id="9c127-119">stackalloc</span></span>](../../../csharp/language-reference/keywords/stackalloc.md)
+- [<span data-ttu-id="a57ea-113">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="a57ea-113">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="a57ea-114">İşaretçi İfadeleri</span><span class="sxs-lookup"><span data-stu-id="a57ea-114">Pointer Expressions</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
+- [<span data-ttu-id="a57ea-115">İşaretçi türleri</span><span class="sxs-lookup"><span data-stu-id="a57ea-115">Pointer types</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
+- [<span data-ttu-id="a57ea-116">Türler</span><span class="sxs-lookup"><span data-stu-id="a57ea-116">Types</span></span>](../../../csharp/language-reference/keywords/types.md)  
+- [<span data-ttu-id="a57ea-117">unsafe</span><span class="sxs-lookup"><span data-stu-id="a57ea-117">unsafe</span></span>](../../../csharp/language-reference/keywords/unsafe.md)  
+- [<span data-ttu-id="a57ea-118">fixed Deyimi</span><span class="sxs-lookup"><span data-stu-id="a57ea-118">fixed Statement</span></span>](../../../csharp/language-reference/keywords/fixed-statement.md)  
+- [<span data-ttu-id="a57ea-119">stackalloc</span><span class="sxs-lookup"><span data-stu-id="a57ea-119">stackalloc</span></span>](../../../csharp/language-reference/keywords/stackalloc.md)

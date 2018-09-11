@@ -13,50 +13,50 @@ helpviewer_keywords:
 - o compiler option [C#]
 ms.assetid: 6dd5b6f2-cd1d-4593-a9f4-1c2ed9404ca0
 ms.openlocfilehash: f8fec2c4da49aa6cac2f8dc1dc9b07c5864b837a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44216457"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44259960"
 ---
-# <a name="-optimize-c-compiler-options"></a><span data-ttu-id="0e95c-102">-(C# Derleyici Seçenekleri) en iyi duruma getirme</span><span class="sxs-lookup"><span data-stu-id="0e95c-102">-optimize (C# Compiler Options)</span></span>
-<span data-ttu-id="0e95c-103">**-En iyi duruma getirme** seçeneğini etkinleştirir veya çıkış dosyanızı daha küçük, daha hızlı ve daha verimli yapmak için derleyici tarafından gerçekleştirilen iyileştirmeleri devre dışı bırakır.</span><span class="sxs-lookup"><span data-stu-id="0e95c-103">The **-optimize** option enables or disables optimizations performed by the compiler to make your output file smaller, faster, and more efficient.</span></span>  
+# <a name="-optimize-c-compiler-options"></a><span data-ttu-id="94199-102">-(C# Derleyici Seçenekleri) en iyi duruma getirme</span><span class="sxs-lookup"><span data-stu-id="94199-102">-optimize (C# Compiler Options)</span></span>
+<span data-ttu-id="94199-103">**-En iyi duruma getirme** seçeneğini etkinleştirir veya çıkış dosyanızı daha küçük, daha hızlı ve daha verimli yapmak için derleyici tarafından gerçekleştirilen iyileştirmeleri devre dışı bırakır.</span><span class="sxs-lookup"><span data-stu-id="94199-103">The **-optimize** option enables or disables optimizations performed by the compiler to make your output file smaller, faster, and more efficient.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0e95c-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="0e95c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="94199-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="94199-104">Syntax</span></span>  
   
 ```console  
 -optimize[+ | -]  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="0e95c-105">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="0e95c-105">Remarks</span></span>  
- <span data-ttu-id="0e95c-106">**-en iyi duruma getirme** zamanında kodu en iyi duruma getirmek için ortak dil çalışma zamanı da bildirir.</span><span class="sxs-lookup"><span data-stu-id="0e95c-106">**-optimize** also tells the common language runtime to optimize code at runtime.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="94199-105">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="94199-105">Remarks</span></span>  
+ <span data-ttu-id="94199-106">**-en iyi duruma getirme** zamanında kodu en iyi duruma getirmek için ortak dil çalışma zamanı da bildirir.</span><span class="sxs-lookup"><span data-stu-id="94199-106">**-optimize** also tells the common language runtime to optimize code at runtime.</span></span>  
   
- <span data-ttu-id="0e95c-107">Varsayılan olarak, en iyi duruma getirme devre dışıdır.</span><span class="sxs-lookup"><span data-stu-id="0e95c-107">By default, optimizations are disabled.</span></span> <span data-ttu-id="0e95c-108">Belirtin **-en iyi duruma getirme +** iyileştirmeleri etkinleştirmek için.</span><span class="sxs-lookup"><span data-stu-id="0e95c-108">Specify **-optimize+** to enable optimizations.</span></span>  
+ <span data-ttu-id="94199-107">Varsayılan olarak, en iyi duruma getirme devre dışıdır.</span><span class="sxs-lookup"><span data-stu-id="94199-107">By default, optimizations are disabled.</span></span> <span data-ttu-id="94199-108">Belirtin **-en iyi duruma getirme +** iyileştirmeleri etkinleştirmek için.</span><span class="sxs-lookup"><span data-stu-id="94199-108">Specify **-optimize+** to enable optimizations.</span></span>  
   
- <span data-ttu-id="0e95c-109">Bir derleme tarafından kullanılacak bir modül oluşturulurken, aynı kullanın **-en iyi duruma getirme** derleme olarak ayarlar.</span><span class="sxs-lookup"><span data-stu-id="0e95c-109">When building a module to be used by an assembly, use the same **-optimize** settings as those of the assembly.</span></span>  
+ <span data-ttu-id="94199-109">Bir derleme tarafından kullanılacak bir modül oluşturulurken, aynı kullanın **-en iyi duruma getirme** derleme olarak ayarlar.</span><span class="sxs-lookup"><span data-stu-id="94199-109">When building a module to be used by an assembly, use the same **-optimize** settings as those of the assembly.</span></span>  
   
- <span data-ttu-id="0e95c-110">**-o** öğesinin kısa biçimidir **-en iyi duruma getirme**.</span><span class="sxs-lookup"><span data-stu-id="0e95c-110">**-o** is the short form of **-optimize**.</span></span>  
+ <span data-ttu-id="94199-110">**-o** öğesinin kısa biçimidir **-en iyi duruma getirme**.</span><span class="sxs-lookup"><span data-stu-id="94199-110">**-o** is the short form of **-optimize**.</span></span>  
   
- <span data-ttu-id="0e95c-111">Birleştirmek mümkündür **-en iyi duruma getirme** ve [-hata ayıklama](../../../csharp/language-reference/compiler-options/debug-compiler-option.md) seçenekleri.</span><span class="sxs-lookup"><span data-stu-id="0e95c-111">It is possible to combine the **-optimize** and [-debug](../../../csharp/language-reference/compiler-options/debug-compiler-option.md) options.</span></span>  
+ <span data-ttu-id="94199-111">Birleştirmek mümkündür **-en iyi duruma getirme** ve [-hata ayıklama](../../../csharp/language-reference/compiler-options/debug-compiler-option.md) seçenekleri.</span><span class="sxs-lookup"><span data-stu-id="94199-111">It is possible to combine the **-optimize** and [-debug](../../../csharp/language-reference/compiler-options/debug-compiler-option.md) options.</span></span>  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="0e95c-112">Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için</span><span class="sxs-lookup"><span data-stu-id="0e95c-112">To set this compiler option in the Visual Studio development environment</span></span>  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="94199-112">Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için</span><span class="sxs-lookup"><span data-stu-id="94199-112">To set this compiler option in the Visual Studio development environment</span></span>  
   
-1.  <span data-ttu-id="0e95c-113">Projenin açın **özellikleri** sayfası.</span><span class="sxs-lookup"><span data-stu-id="0e95c-113">Open the project's **Properties** page.</span></span>  
+1.  <span data-ttu-id="94199-113">Projenin açın **özellikleri** sayfası.</span><span class="sxs-lookup"><span data-stu-id="94199-113">Open the project's **Properties** page.</span></span>  
   
-2.  <span data-ttu-id="0e95c-114">Tıklayın **derleme** özellik sayfası.</span><span class="sxs-lookup"><span data-stu-id="0e95c-114">Click the **Build** property page.</span></span>  
+2.  <span data-ttu-id="94199-114">Tıklayın **derleme** özellik sayfası.</span><span class="sxs-lookup"><span data-stu-id="94199-114">Click the **Build** property page.</span></span>  
   
-3.  <span data-ttu-id="0e95c-115">Değiştirme **kodu İyileştir** özelliği.</span><span class="sxs-lookup"><span data-stu-id="0e95c-115">Modify the **Optimize Code** property.</span></span>  
+3.  <span data-ttu-id="94199-115">Değiştirme **kodu İyileştir** özelliği.</span><span class="sxs-lookup"><span data-stu-id="94199-115">Modify the **Optimize Code** property.</span></span>  
   
- <span data-ttu-id="0e95c-116">Bu derleyici seçeneğini program üzerinden ayarlamak konusunda daha fazla bilgi için bkz: <xref:VSLangProj80.CSharpProjectConfigurationProperties3.Optimize%2A>.</span><span class="sxs-lookup"><span data-stu-id="0e95c-116">For information on how to set this compiler option programmatically, see <xref:VSLangProj80.CSharpProjectConfigurationProperties3.Optimize%2A>.</span></span>  
+ <span data-ttu-id="94199-116">Bu derleyici seçeneğini program üzerinden ayarlamak konusunda daha fazla bilgi için bkz: <xref:VSLangProj80.CSharpProjectConfigurationProperties3.Optimize%2A>.</span><span class="sxs-lookup"><span data-stu-id="94199-116">For information on how to set this compiler option programmatically, see <xref:VSLangProj80.CSharpProjectConfigurationProperties3.Optimize%2A>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="0e95c-117">Örnek</span><span class="sxs-lookup"><span data-stu-id="0e95c-117">Example</span></span>  
- <span data-ttu-id="0e95c-118">Derleme `t2.cs` ve derleyici iyileştirmelerini etkinleştir:</span><span class="sxs-lookup"><span data-stu-id="0e95c-118">Compile `t2.cs` and enable compiler optimizations:</span></span>  
+## <a name="example"></a><span data-ttu-id="94199-117">Örnek</span><span class="sxs-lookup"><span data-stu-id="94199-117">Example</span></span>  
+ <span data-ttu-id="94199-118">Derleme `t2.cs` ve derleyici iyileştirmelerini etkinleştir:</span><span class="sxs-lookup"><span data-stu-id="94199-118">Compile `t2.cs` and enable compiler optimizations:</span></span>  
   
 ```console  
 csc t2.cs -optimize  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="0e95c-119">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="0e95c-119">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="94199-119">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="94199-119">See Also</span></span>  
 
-- [<span data-ttu-id="0e95c-120">C# Derleyici Seçenekleri</span><span class="sxs-lookup"><span data-stu-id="0e95c-120">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
-- [<span data-ttu-id="0e95c-121">Proje ve Çözüm Özelliklerini Yönetme</span><span class="sxs-lookup"><span data-stu-id="0e95c-121">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
+- [<span data-ttu-id="94199-120">C# Derleyici Seçenekleri</span><span class="sxs-lookup"><span data-stu-id="94199-120">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
+- [<span data-ttu-id="94199-121">Proje ve Çözüm Özelliklerini Yönetme</span><span class="sxs-lookup"><span data-stu-id="94199-121">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)

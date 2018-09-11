@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 94171b0708c97eb7510e916e451ed03645d706f3
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44190091"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264213"
 ---
-# <a name="getpropertyhandle-function"></a><span data-ttu-id="e0fae-103">GetPropertyHandle işlevi</span><span class="sxs-lookup"><span data-stu-id="e0fae-103">GetPropertyHandle function</span></span>
-<span data-ttu-id="e0fae-104">Bir özelliği tanımlayan benzersiz bir tanıtıcı döndürür.</span><span class="sxs-lookup"><span data-stu-id="e0fae-104">Returns a unique handle that identifies a property.</span></span>
+# <a name="getpropertyhandle-function"></a><span data-ttu-id="9ec66-103">GetPropertyHandle işlevi</span><span class="sxs-lookup"><span data-stu-id="9ec66-103">GetPropertyHandle function</span></span>
+<span data-ttu-id="9ec66-104">Bir özelliği tanımlayan benzersiz bir tanıtıcı döndürür.</span><span class="sxs-lookup"><span data-stu-id="9ec66-104">Returns a unique handle that identifies a property.</span></span>
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
-## <a name="syntax"></a><span data-ttu-id="e0fae-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="e0fae-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9ec66-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="9ec66-105">Syntax</span></span>  
   
 ```  
 HRESULT GetPropertyHandle (
@@ -40,48 +40,48 @@ HRESULT GetPropertyHandle (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="e0fae-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="e0fae-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="9ec66-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="9ec66-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="e0fae-107">[in] Bu parametre kullanılmaz.</span><span class="sxs-lookup"><span data-stu-id="e0fae-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="9ec66-107">[in] Bu parametre kullanılmaz.</span><span class="sxs-lookup"><span data-stu-id="9ec66-107">[in] This parameter is unused.</span></span>
 
 `ptr`  
-<span data-ttu-id="e0fae-108">[in] Bir işaretçi bir [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) örneği.</span><span class="sxs-lookup"><span data-stu-id="e0fae-108">[in] A pointer to an [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) instance.</span></span>
+<span data-ttu-id="9ec66-108">[in] Bir işaretçi bir [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) örneği.</span><span class="sxs-lookup"><span data-stu-id="9ec66-108">[in] A pointer to an [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) instance.</span></span>
 
 `wszPropertyName`  
-<span data-ttu-id="e0fae-109">[in] UTF16 kodlu characaters, özellik adı içeriyor, null ile sonlandırılmış dize.</span><span class="sxs-lookup"><span data-stu-id="e0fae-109">[in] A null-terminated string of UTF16-encoded characaters that contains the property name.</span></span>   
+<span data-ttu-id="9ec66-109">[in] UTF16 kodlu characaters, özellik adı içeriyor, null ile sonlandırılmış dize.</span><span class="sxs-lookup"><span data-stu-id="9ec66-109">[in] A null-terminated string of UTF16-encoded characaters that contains the property name.</span></span>   
 
 `pType`  
-<span data-ttu-id="e0fae-110">[out] Bir işaretçi bir [ `CIMTYPE` ](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx) özelliği CIM türünü temsil eden numaralandırma üyesi.</span><span class="sxs-lookup"><span data-stu-id="e0fae-110">[out] A pointer to a [`CIMTYPE`](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx) enumeration member that represents the CIM type of the property.</span></span>
+<span data-ttu-id="9ec66-110">[out] Bir işaretçi bir [ `CIMTYPE` ](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx) özelliği CIM türünü temsil eden numaralandırma üyesi.</span><span class="sxs-lookup"><span data-stu-id="9ec66-110">[out] A pointer to a [`CIMTYPE`](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx) enumeration member that represents the CIM type of the property.</span></span>
 
 `pHandle`   
-<span data-ttu-id="e0fae-111">[out] Özellik işleyicisi içeren bir tamsayı işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="e0fae-111">[out] A pointer to an integer that contains the property handle.</span></span>
+<span data-ttu-id="9ec66-111">[out] Özellik işleyicisi içeren bir tamsayı işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="9ec66-111">[out] A pointer to an integer that contains the property handle.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="e0fae-112">Dönüş değeri</span><span class="sxs-lookup"><span data-stu-id="e0fae-112">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="9ec66-112">Dönüş değeri</span><span class="sxs-lookup"><span data-stu-id="9ec66-112">Return value</span></span>
 
-<span data-ttu-id="e0fae-113">Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda:</span><span class="sxs-lookup"><span data-stu-id="e0fae-113">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="9ec66-113">Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda:</span><span class="sxs-lookup"><span data-stu-id="9ec66-113">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="e0fae-114">Sabit</span><span class="sxs-lookup"><span data-stu-id="e0fae-114">Constant</span></span>  |<span data-ttu-id="e0fae-115">Değer</span><span class="sxs-lookup"><span data-stu-id="e0fae-115">Value</span></span>  |<span data-ttu-id="e0fae-116">Açıklama</span><span class="sxs-lookup"><span data-stu-id="e0fae-116">Description</span></span>  |
+|<span data-ttu-id="9ec66-114">Sabit</span><span class="sxs-lookup"><span data-stu-id="9ec66-114">Constant</span></span>  |<span data-ttu-id="9ec66-115">Değer</span><span class="sxs-lookup"><span data-stu-id="9ec66-115">Value</span></span>  |<span data-ttu-id="9ec66-116">Açıklama</span><span class="sxs-lookup"><span data-stu-id="9ec66-116">Description</span></span>  |
 |---------|---------|---------|
-|`WBEM_E_NOT_FOUND` | <span data-ttu-id="e0fae-117">0x80041002</span><span class="sxs-lookup"><span data-stu-id="e0fae-117">0x80041002</span></span> | <span data-ttu-id="e0fae-118">Belirtilen özellik adı bulunamadı.</span><span class="sxs-lookup"><span data-stu-id="e0fae-118">The specified property name was not found.</span></span> |
-|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="e0fae-119">0x80041008</span><span class="sxs-lookup"><span data-stu-id="e0fae-119">0x80041008</span></span> | <span data-ttu-id="e0fae-120">Bir parametre geçerli değil.</span><span class="sxs-lookup"><span data-stu-id="e0fae-120">A parameter is not valid.</span></span> |
-|`WBEM_E_NOT_SUPPORTED` | <span data-ttu-id="e0fae-121">0x8004100c</span><span class="sxs-lookup"><span data-stu-id="e0fae-121">0x8004100c</span></span> | <span data-ttu-id="e0fae-122">İstenen özellik türünde olan `CIM_OBJECT` veya `CIM_ARRAY`.</span><span class="sxs-lookup"><span data-stu-id="e0fae-122">The requested property is of type are `CIM_OBJECT` or `CIM_ARRAY`.</span></span> |
-|`WBEM_S_NO_ERROR` | <span data-ttu-id="e0fae-123">0</span><span class="sxs-lookup"><span data-stu-id="e0fae-123">0</span></span> | <span data-ttu-id="e0fae-124">İşlev çağrısı başarılı oldu.</span><span class="sxs-lookup"><span data-stu-id="e0fae-124">The function call was successful.</span></span>  |
+|`WBEM_E_NOT_FOUND` | <span data-ttu-id="9ec66-117">0x80041002</span><span class="sxs-lookup"><span data-stu-id="9ec66-117">0x80041002</span></span> | <span data-ttu-id="9ec66-118">Belirtilen özellik adı bulunamadı.</span><span class="sxs-lookup"><span data-stu-id="9ec66-118">The specified property name was not found.</span></span> |
+|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="9ec66-119">0x80041008</span><span class="sxs-lookup"><span data-stu-id="9ec66-119">0x80041008</span></span> | <span data-ttu-id="9ec66-120">Bir parametre geçerli değil.</span><span class="sxs-lookup"><span data-stu-id="9ec66-120">A parameter is not valid.</span></span> |
+|`WBEM_E_NOT_SUPPORTED` | <span data-ttu-id="9ec66-121">0x8004100c</span><span class="sxs-lookup"><span data-stu-id="9ec66-121">0x8004100c</span></span> | <span data-ttu-id="9ec66-122">İstenen özellik türünde olan `CIM_OBJECT` veya `CIM_ARRAY`.</span><span class="sxs-lookup"><span data-stu-id="9ec66-122">The requested property is of type are `CIM_OBJECT` or `CIM_ARRAY`.</span></span> |
+|`WBEM_S_NO_ERROR` | <span data-ttu-id="9ec66-123">0</span><span class="sxs-lookup"><span data-stu-id="9ec66-123">0</span></span> | <span data-ttu-id="9ec66-124">İşlev çağrısı başarılı oldu.</span><span class="sxs-lookup"><span data-stu-id="9ec66-124">The function call was successful.</span></span>  |
   
-## <a name="remarks"></a><span data-ttu-id="e0fae-125">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="e0fae-125">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="9ec66-125">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="9ec66-125">Remarks</span></span>
 
-<span data-ttu-id="e0fae-126">Bu işlev bir çağrı sarılır [IWbemClassObject::GetPropertyHandle](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-getpropertyhandle) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="e0fae-126">This function wraps a call to the [IWbemClassObject::GetPropertyHandle](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-getpropertyhandle) method.</span></span>
+<span data-ttu-id="9ec66-126">Bu işlev bir çağrı sarılır [IWbemClassObject::GetPropertyHandle](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-getpropertyhandle) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="9ec66-126">This function wraps a call to the [IWbemClassObject::GetPropertyHandle](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-getpropertyhandle) method.</span></span>
 
-<span data-ttu-id="e0fae-127">Kullanırken özellikleri tanımlamak için bu tutamacı kullan [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) özellik değerlerini okumak veya yazmak için yöntemleri.</span><span class="sxs-lookup"><span data-stu-id="e0fae-127">You can use this handle to identify properties when using  [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) methods to read or write property values.</span></span>
+<span data-ttu-id="9ec66-127">Kullanırken özellikleri tanımlamak için bu tutamacı kullan [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) özellik değerlerini okumak veya yazmak için yöntemleri.</span><span class="sxs-lookup"><span data-stu-id="9ec66-127">You can use this handle to identify properties when using  [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) methods to read or write property values.</span></span>
 
-<span data-ttu-id="e0fae-128">Tanıtıcıları alınabilir özellikleri için tüm veri türleri dışındaki `CIM_OBJECT` ve `CIM_ARRAY`.</span><span class="sxs-lookup"><span data-stu-id="e0fae-128">Handles can be retrieved for properties of all data types other than `CIM_OBJECT` and `CIM_ARRAY`.</span></span> <span data-ttu-id="e0fae-129">Bir sınıfın tüm örnekleri arasında tanıtıcıları iş döndürdü.</span><span class="sxs-lookup"><span data-stu-id="e0fae-129">Returned handles work across all instances of a class.</span></span>
+<span data-ttu-id="9ec66-128">Tanıtıcıları alınabilir özellikleri için tüm veri türleri dışındaki `CIM_OBJECT` ve `CIM_ARRAY`.</span><span class="sxs-lookup"><span data-stu-id="9ec66-128">Handles can be retrieved for properties of all data types other than `CIM_OBJECT` and `CIM_ARRAY`.</span></span> <span data-ttu-id="9ec66-129">Bir sınıfın tüm örnekleri arasında tanıtıcıları iş döndürdü.</span><span class="sxs-lookup"><span data-stu-id="9ec66-129">Returned handles work across all instances of a class.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="e0fae-130">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="e0fae-130">Requirements</span></span>  
-<span data-ttu-id="e0fae-131">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e0fae-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9ec66-130">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="9ec66-130">Requirements</span></span>  
+<span data-ttu-id="9ec66-131">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9ec66-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e0fae-132">**Başlık:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="e0fae-132">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="9ec66-132">**Başlık:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="9ec66-132">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="e0fae-133">**.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="e0fae-133">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="9ec66-133">**.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="9ec66-133">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e0fae-134">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e0fae-134">See also</span></span>  
-[<span data-ttu-id="e0fae-135">WMI ve performans sayaçları (yönetilmeyen API Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="e0fae-135">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="9ec66-134">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="9ec66-134">See also</span></span>  
+[<span data-ttu-id="9ec66-135">WMI ve performans sayaçları (yönetilmeyen API Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="9ec66-135">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

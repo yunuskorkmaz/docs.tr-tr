@@ -3,33 +3,33 @@ title: 'Fixed anahtar sözcüğü (F #)'
 description: "'Sabitleyebilirsiniz nasıl' ile F # koleksiyon önlemek için bir yerel yığına 'anahtar sözcüğü sabit' öğrenin."
 ms.date: 04/24/2017
 ms.openlocfilehash: 1bf1b2ad67d2dd7f854e569cfca7c06e8aec7f4c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44201419"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44271734"
 ---
-# <a name="the-fixed-keyword"></a><span data-ttu-id="72f65-103">Fixed anahtar sözcüğü</span><span class="sxs-lookup"><span data-stu-id="72f65-103">The Fixed Keyword</span></span>
+# <a name="the-fixed-keyword"></a><span data-ttu-id="db1b3-103">Fixed anahtar sözcüğü</span><span class="sxs-lookup"><span data-stu-id="db1b3-103">The Fixed Keyword</span></span>
 
-<span data-ttu-id="72f65-104">F # 4.1 tanıtır `fixed` ", toplanan veya çöp toplama sırasında taşınan önlemek için bir yerel yığına sabitlemek" izin veren anahtar sözcüğü.</span><span class="sxs-lookup"><span data-stu-id="72f65-104">F# 4.1 introduces the `fixed` keyword, which allows you to "pin" a local onto the stack to prevent it from being collected or moved during garbage-collection.</span></span>  <span data-ttu-id="72f65-105">Bu düşük düzeydeki programlama senaryoları için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="72f65-105">It is used for low-level programming scenarios.</span></span>
+<span data-ttu-id="db1b3-104">F # 4.1 tanıtır `fixed` ", toplanan veya çöp toplama sırasında taşınan önlemek için bir yerel yığına sabitlemek" izin veren anahtar sözcüğü.</span><span class="sxs-lookup"><span data-stu-id="db1b3-104">F# 4.1 introduces the `fixed` keyword, which allows you to "pin" a local onto the stack to prevent it from being collected or moved during garbage-collection.</span></span>  <span data-ttu-id="db1b3-105">Bu düşük düzeydeki programlama senaryoları için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="db1b3-105">It is used for low-level programming scenarios.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="72f65-106">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="72f65-106">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="db1b3-106">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="db1b3-106">Syntax</span></span>
 
 ```fsharp
 use ptr = fixed expression
 ```
 
-## <a name="remarks"></a><span data-ttu-id="72f65-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="72f65-107">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="db1b3-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="db1b3-107">Remarks</span></span>
 
-<span data-ttu-id="72f65-108">Bu, bir işaretçi çıkarma ve toplanan veya çöp toplama sırasında taşınan dan engelleyen bir ad bağlama izin vermek için ifadeler sözdizimi genişletir.</span><span class="sxs-lookup"><span data-stu-id="72f65-108">This extends the syntax of expressions to allow extracting a pointer and binding it to a name which is prevented from being collected or moved during garbage-collection.</span></span>  
+<span data-ttu-id="db1b3-108">Bu, bir işaretçi çıkarma ve toplanan veya çöp toplama sırasında taşınan dan engelleyen bir ad bağlama izin vermek için ifadeler sözdizimi genişletir.</span><span class="sxs-lookup"><span data-stu-id="db1b3-108">This extends the syntax of expressions to allow extracting a pointer and binding it to a name which is prevented from being collected or moved during garbage-collection.</span></span>  
 
-<span data-ttu-id="72f65-109">Bir ifade işaretçisinden aracılığıyla sabit `fixed` anahtar sözcüğü bir tanımlayıcıya bağlı `use` anahtar sözcüğü.</span><span class="sxs-lookup"><span data-stu-id="72f65-109">A pointer from an expression is fixed via the `fixed` keyword is bound to an identifier via the `use` keyword.</span></span>  <span data-ttu-id="72f65-110">Bu semantiği kaynak yönetimi benzerdir `use` anahtar sözcüğü.</span><span class="sxs-lookup"><span data-stu-id="72f65-110">The semantics of this are similar to resource management via the `use` keyword.</span></span>  <span data-ttu-id="72f65-111">İşaretçi sabit kapsamları dahilinde olması ve kapsam dışına olduktan sonra artık sabittir.</span><span class="sxs-lookup"><span data-stu-id="72f65-111">The pointer is fixed while it is in scope, and once it is out of scope, it is no longer fixed.</span></span>  <span data-ttu-id="72f65-112">`fixed` bağlamı dışında kullanılamaz bir `use` bağlama.</span><span class="sxs-lookup"><span data-stu-id="72f65-112">`fixed` cannot be used outside the context of a `use` binding.</span></span>  <span data-ttu-id="72f65-113">İşaretçiyi bir adla bağlamanız gerekir `use`.</span><span class="sxs-lookup"><span data-stu-id="72f65-113">You must bind the pointer to a name with `use`.</span></span>
+<span data-ttu-id="db1b3-109">Bir ifade işaretçisinden aracılığıyla sabit `fixed` anahtar sözcüğü bir tanımlayıcıya bağlı `use` anahtar sözcüğü.</span><span class="sxs-lookup"><span data-stu-id="db1b3-109">A pointer from an expression is fixed via the `fixed` keyword is bound to an identifier via the `use` keyword.</span></span>  <span data-ttu-id="db1b3-110">Bu semantiği kaynak yönetimi benzerdir `use` anahtar sözcüğü.</span><span class="sxs-lookup"><span data-stu-id="db1b3-110">The semantics of this are similar to resource management via the `use` keyword.</span></span>  <span data-ttu-id="db1b3-111">İşaretçi sabit kapsamları dahilinde olması ve kapsam dışına olduktan sonra artık sabittir.</span><span class="sxs-lookup"><span data-stu-id="db1b3-111">The pointer is fixed while it is in scope, and once it is out of scope, it is no longer fixed.</span></span>  <span data-ttu-id="db1b3-112">`fixed` bağlamı dışında kullanılamaz bir `use` bağlama.</span><span class="sxs-lookup"><span data-stu-id="db1b3-112">`fixed` cannot be used outside the context of a `use` binding.</span></span>  <span data-ttu-id="db1b3-113">İşaretçiyi bir adla bağlamanız gerekir `use`.</span><span class="sxs-lookup"><span data-stu-id="db1b3-113">You must bind the pointer to a name with `use`.</span></span>
 
-<span data-ttu-id="72f65-114">Kullanım `fixed` bir ifadede bir işlev veya yöntem içinde gerçekleşmelidir.</span><span class="sxs-lookup"><span data-stu-id="72f65-114">Use of `fixed` must occur within an expression in a function or a method.</span></span>  <span data-ttu-id="72f65-115">Bir komut dosyası düzeyi veya modül düzeyinde kapsamda kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="72f65-115">It cannot be used at a script-level or module-level scope.</span></span>
+<span data-ttu-id="db1b3-114">Kullanım `fixed` bir ifadede bir işlev veya yöntem içinde gerçekleşmelidir.</span><span class="sxs-lookup"><span data-stu-id="db1b3-114">Use of `fixed` must occur within an expression in a function or a method.</span></span>  <span data-ttu-id="db1b3-115">Bir komut dosyası düzeyi veya modül düzeyinde kapsamda kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="db1b3-115">It cannot be used at a script-level or module-level scope.</span></span>
 
-<span data-ttu-id="72f65-116">Tüm işaretçi kodu gibi bu güvenli olmayan bir özelliktir ve bir uyarı yayar.</span><span class="sxs-lookup"><span data-stu-id="72f65-116">Like all pointer code, this is an unsafe feature and will emit a warning when used.</span></span>
+<span data-ttu-id="db1b3-116">Tüm işaretçi kodu gibi bu güvenli olmayan bir özelliktir ve bir uyarı yayar.</span><span class="sxs-lookup"><span data-stu-id="db1b3-116">Like all pointer code, this is an unsafe feature and will emit a warning when used.</span></span>
 
-## <a name="example"></a><span data-ttu-id="72f65-117">Örnek</span><span class="sxs-lookup"><span data-stu-id="72f65-117">Example</span></span>
+## <a name="example"></a><span data-ttu-id="db1b3-117">Örnek</span><span class="sxs-lookup"><span data-stu-id="db1b3-117">Example</span></span>
 
 ```fsharp
 open Microsoft.FSharp.NativeInterop
@@ -61,6 +61,6 @@ let doPointerWork() =
 doPointerWork()
 ```
 
-## <a name="see-also"></a><span data-ttu-id="72f65-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="72f65-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="db1b3-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="db1b3-118">See also</span></span>
 
-- [<span data-ttu-id="72f65-119">NativePtr modülü</span><span class="sxs-lookup"><span data-stu-id="72f65-119">NativePtr Module</span></span>](https://msdn.microsoft.com/visualfsharpdocs/conceptual/nativeinterop.nativeptr-module-%5Bfsharp%5D)
+- [<span data-ttu-id="db1b3-119">NativePtr modülü</span><span class="sxs-lookup"><span data-stu-id="db1b3-119">NativePtr Module</span></span>](https://msdn.microsoft.com/visualfsharpdocs/conceptual/nativeinterop.nativeptr-module-%5Bfsharp%5D)

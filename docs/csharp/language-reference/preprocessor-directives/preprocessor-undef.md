@@ -7,18 +7,18 @@ helpviewer_keywords:
 - '#undef directive [C#]'
 ms.assetid: 686c92d2-7194-4be4-b2f4-80091712d513
 ms.openlocfilehash: 3957d58f61e51fab01618f5e1146be9cd0da58fd
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44185973"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44269309"
 ---
-# <a name="undef-c-reference"></a><span data-ttu-id="89f58-102">#undef (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="89f58-102">#undef (C# Reference)</span></span>
-<span data-ttu-id="89f58-103">`#undef` Bir sembolün tanımını olanak tanır şekilde sembol deyim olarak kullanarak, bir [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) yönergesi, ifade için değerlendirilecek olan `false`.</span><span class="sxs-lookup"><span data-stu-id="89f58-103">`#undef` lets you undefine a symbol, such that, by using the symbol as the expression in a [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) directive, the expression will evaluate to `false`.</span></span>  
+# <a name="undef-c-reference"></a><span data-ttu-id="b462a-102">#undef (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="b462a-102">#undef (C# Reference)</span></span>
+<span data-ttu-id="b462a-103">`#undef` Bir sembolün tanımını olanak tanır şekilde sembol deyim olarak kullanarak, bir [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) yönergesi, ifade için değerlendirilecek olan `false`.</span><span class="sxs-lookup"><span data-stu-id="b462a-103">`#undef` lets you undefine a symbol, such that, by using the symbol as the expression in a [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) directive, the expression will evaluate to `false`.</span></span>  
   
- <span data-ttu-id="89f58-104">Bir sembol olabilir ya da ile tanımlanan [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) yönergesi veya [-tanımlama](../../../csharp/language-reference/compiler-options/define-compiler-option.md) derleyici seçeneği.</span><span class="sxs-lookup"><span data-stu-id="89f58-104">A symbol can be defined either with the [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) directive or the [-define](../../../csharp/language-reference/compiler-options/define-compiler-option.md) compiler option.</span></span> <span data-ttu-id="89f58-105">`#undef` Yönergeleri de yer almayan herhangi bir deyim kullanmadan önce yönergesi dosyada görünmesi gerekir.</span><span class="sxs-lookup"><span data-stu-id="89f58-105">The `#undef` directive must appear in the file before you use any statements that are not also directives.</span></span>  
+ <span data-ttu-id="b462a-104">Bir sembol olabilir ya da ile tanımlanan [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) yönergesi veya [-tanımlama](../../../csharp/language-reference/compiler-options/define-compiler-option.md) derleyici seçeneği.</span><span class="sxs-lookup"><span data-stu-id="b462a-104">A symbol can be defined either with the [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) directive or the [-define](../../../csharp/language-reference/compiler-options/define-compiler-option.md) compiler option.</span></span> <span data-ttu-id="b462a-105">`#undef` Yönergeleri de yer almayan herhangi bir deyim kullanmadan önce yönergesi dosyada görünmesi gerekir.</span><span class="sxs-lookup"><span data-stu-id="b462a-105">The `#undef` directive must appear in the file before you use any statements that are not also directives.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="89f58-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="89f58-106">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="b462a-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="b462a-106">Example</span></span>  
 
 ```csharp
 // preprocessor_undef.cs  
@@ -38,10 +38,10 @@ class MyClass
 }  
 ```
 
-<span data-ttu-id="89f58-107">**Hata ayıklama tanımlı değil**</span><span class="sxs-lookup"><span data-stu-id="89f58-107">**DEBUG is not defined**</span></span>
+<span data-ttu-id="b462a-107">**Hata ayıklama tanımlı değil**</span><span class="sxs-lookup"><span data-stu-id="b462a-107">**DEBUG is not defined**</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="89f58-108">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="89f58-108">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b462a-108">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="b462a-108">See Also</span></span>
 
-- [<span data-ttu-id="89f58-109">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="89f58-109">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="89f58-110">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="89f58-110">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="89f58-111">C# Ön İşlemci Yönergeleri</span><span class="sxs-lookup"><span data-stu-id="89f58-111">C# Preprocessor Directives</span></span>](../../../csharp/language-reference/preprocessor-directives/index.md)
+- [<span data-ttu-id="b462a-109">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="b462a-109">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="b462a-110">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="b462a-110">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="b462a-111">C# Ön İşlemci Yönergeleri</span><span class="sxs-lookup"><span data-stu-id="b462a-111">C# Preprocessor Directives</span></span>](../../../csharp/language-reference/preprocessor-directives/index.md)

@@ -3,22 +3,22 @@ title: Bağlantı havuzu
 ms.date: 03/30/2017
 ms.assetid: 955c057f-aea8-4ba8-aa6d-e3dfa18ba8d5
 ms.openlocfilehash: 28a1036f377326b5f1fdfafa1eaffd8a47bc05bc
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44209374"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44266608"
 ---
-# <a name="connection-pooling"></a><span data-ttu-id="47c35-102">Bağlantı havuzu</span><span class="sxs-lookup"><span data-stu-id="47c35-102">Connection Pooling</span></span>
-<span data-ttu-id="47c35-103">Bir veri kaynağına bağlanırken zaman alıcı olabilir.</span><span class="sxs-lookup"><span data-stu-id="47c35-103">Connecting to a data source can be time consuming.</span></span> <span data-ttu-id="47c35-104">ADO.NET bağlantı açmayı maliyetini en aza indirmek için adı verilen bir iyileştirme teknik kullanır *bağlantı havuzu*, tekrar tekrar açarak ve bağlantıları kapatmayı maliyetini azaltır.</span><span class="sxs-lookup"><span data-stu-id="47c35-104">To minimize the cost of opening connections, ADO.NET uses an optimization technique called *connection pooling*, which minimizes the cost of repeatedly opening and closing connections.</span></span> <span data-ttu-id="47c35-105">Bağlantı havuzu .NET Framework veri sağlayıcıları için farklı şekilde ele alınır.</span><span class="sxs-lookup"><span data-stu-id="47c35-105">Connection pooling is handled differently for the .NET Framework data providers.</span></span>  
+# <a name="connection-pooling"></a><span data-ttu-id="2e3b7-102">Bağlantı havuzu</span><span class="sxs-lookup"><span data-stu-id="2e3b7-102">Connection Pooling</span></span>
+<span data-ttu-id="2e3b7-103">Bir veri kaynağına bağlanırken zaman alıcı olabilir.</span><span class="sxs-lookup"><span data-stu-id="2e3b7-103">Connecting to a data source can be time consuming.</span></span> <span data-ttu-id="2e3b7-104">ADO.NET bağlantı açmayı maliyetini en aza indirmek için adı verilen bir iyileştirme teknik kullanır *bağlantı havuzu*, tekrar tekrar açarak ve bağlantıları kapatmayı maliyetini azaltır.</span><span class="sxs-lookup"><span data-stu-id="2e3b7-104">To minimize the cost of opening connections, ADO.NET uses an optimization technique called *connection pooling*, which minimizes the cost of repeatedly opening and closing connections.</span></span> <span data-ttu-id="2e3b7-105">Bağlantı havuzu .NET Framework veri sağlayıcıları için farklı şekilde ele alınır.</span><span class="sxs-lookup"><span data-stu-id="2e3b7-105">Connection pooling is handled differently for the .NET Framework data providers.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="47c35-106">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="47c35-106">In This Section</span></span>  
- [<span data-ttu-id="47c35-107">SQL Server Bağlantı Havuzu (ADO.NET)</span><span class="sxs-lookup"><span data-stu-id="47c35-107">SQL Server Connection Pooling (ADO.NET)</span></span>](../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)  
- <span data-ttu-id="47c35-108">Bağlantı havuzu genel bir bakış sağlar ve SQL Server bağlantı havuzu nasıl çalıştığını açıklar.</span><span class="sxs-lookup"><span data-stu-id="47c35-108">Provides an overview of connection pooling and describes how connection pooling works in SQL Server.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="2e3b7-106">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="2e3b7-106">In This Section</span></span>  
+ [<span data-ttu-id="2e3b7-107">SQL Server Bağlantı Havuzu (ADO.NET)</span><span class="sxs-lookup"><span data-stu-id="2e3b7-107">SQL Server Connection Pooling (ADO.NET)</span></span>](../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)  
+ <span data-ttu-id="2e3b7-108">Bağlantı havuzu genel bir bakış sağlar ve SQL Server bağlantı havuzu nasıl çalıştığını açıklar.</span><span class="sxs-lookup"><span data-stu-id="2e3b7-108">Provides an overview of connection pooling and describes how connection pooling works in SQL Server.</span></span>  
   
- [<span data-ttu-id="47c35-109">OLE DB, ODBC ve Oracle Bağlantı Havuzu</span><span class="sxs-lookup"><span data-stu-id="47c35-109">OLE DB, ODBC, and Oracle Connection Pooling</span></span>](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)  
- <span data-ttu-id="47c35-110">OLE DB için .NET Framework veri sağlayıcısı, ODBC için .NET Framework veri sağlayıcısı ve Oracle için .NET Framework veri sağlayıcısı için bağlantı havuzu açıklar.</span><span class="sxs-lookup"><span data-stu-id="47c35-110">Describes connection pooling for the .NET Framework Data Provider for OLE DB, the .NET Framework Data Provider for ODBC, and the .NET Framework Data Provider for Oracle.</span></span>  
+ [<span data-ttu-id="2e3b7-109">OLE DB, ODBC ve Oracle Bağlantı Havuzu</span><span class="sxs-lookup"><span data-stu-id="2e3b7-109">OLE DB, ODBC, and Oracle Connection Pooling</span></span>](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)  
+ <span data-ttu-id="2e3b7-110">OLE DB için .NET Framework veri sağlayıcısı, ODBC için .NET Framework veri sağlayıcısı ve Oracle için .NET Framework veri sağlayıcısı için bağlantı havuzu açıklar.</span><span class="sxs-lookup"><span data-stu-id="2e3b7-110">Describes connection pooling for the .NET Framework Data Provider for OLE DB, the .NET Framework Data Provider for ODBC, and the .NET Framework Data Provider for Oracle.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="47c35-111">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="47c35-111">See Also</span></span>  
- [<span data-ttu-id="47c35-112">ADO.NET’te Veri Alma ve Değiştirme</span><span class="sxs-lookup"><span data-stu-id="47c35-112">Retrieving and Modifying Data in ADO.NET</span></span>](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [<span data-ttu-id="47c35-113">ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi</span><span class="sxs-lookup"><span data-stu-id="47c35-113">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="2e3b7-111">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="2e3b7-111">See Also</span></span>  
+ [<span data-ttu-id="2e3b7-112">ADO.NET’te Veri Alma ve Değiştirme</span><span class="sxs-lookup"><span data-stu-id="2e3b7-112">Retrieving and Modifying Data in ADO.NET</span></span>](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ [<span data-ttu-id="2e3b7-113">ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi</span><span class="sxs-lookup"><span data-stu-id="2e3b7-113">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)

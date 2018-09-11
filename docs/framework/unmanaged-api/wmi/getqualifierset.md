@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 635dc7605af00f2662a9f9553adefafcd25f9452
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
-ms.translationtype: MT
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44201250"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44267988"
 ---
-# <a name="getqualifierset-function"></a><span data-ttu-id="03b9a-103">GetQualifierSet işlevi</span><span class="sxs-lookup"><span data-stu-id="03b9a-103">GetQualifierSet function</span></span>
-<span data-ttu-id="03b9a-104">Bir sınıf örneği veya bir sınıf tanımı için ayarlanmış niteleyicisi alır.</span><span class="sxs-lookup"><span data-stu-id="03b9a-104">Retrieves the qualifier set for a class instance or a class definition.</span></span>
+# <a name="getqualifierset-function"></a><span data-ttu-id="815e3-103">GetQualifierSet işlevi</span><span class="sxs-lookup"><span data-stu-id="815e3-103">GetQualifierSet function</span></span>
+<span data-ttu-id="815e3-104">Bir sınıf örneği veya bir sınıf tanımı için ayarlanmış niteleyicisi alır.</span><span class="sxs-lookup"><span data-stu-id="815e3-104">Retrieves the qualifier set for a class instance or a class definition.</span></span>
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
-## <a name="syntax"></a><span data-ttu-id="03b9a-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="03b9a-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="815e3-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="815e3-105">Syntax</span></span>  
   
 ```  
 HRESULT GetQualifierSet (
@@ -38,41 +38,41 @@ HRESULT GetQualifierSet (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="03b9a-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="03b9a-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="815e3-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="815e3-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="03b9a-107">[in] Bu parametre kullanılmaz.</span><span class="sxs-lookup"><span data-stu-id="03b9a-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="815e3-107">[in] Bu parametre kullanılmaz.</span><span class="sxs-lookup"><span data-stu-id="815e3-107">[in] This parameter is unused.</span></span>
 
 `ptr`  
-<span data-ttu-id="03b9a-108">[in] Bir işaretçi bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneği.</span><span class="sxs-lookup"><span data-stu-id="03b9a-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
+<span data-ttu-id="815e3-108">[in] Bir işaretçi bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneği.</span><span class="sxs-lookup"><span data-stu-id="815e3-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
 
 `ppQualSet`  
-<span data-ttu-id="03b9a-109">[out] Niteleyiciler sınıf nesnesi erişimi sağlayan bir arabirim işaretçisi alır.</span><span class="sxs-lookup"><span data-stu-id="03b9a-109">[out] Receives the interface pointer that allows access to the qualifiers of the class object.</span></span> <span data-ttu-id="03b9a-110">`ppQualSet` olamaz `null`.</span><span class="sxs-lookup"><span data-stu-id="03b9a-110">`ppQualSet` cannot be `null`.</span></span> <span data-ttu-id="03b9a-111">Bir hata gerçekleşirse, yeni bir nesne döndürülmez ve işaretçi solda değiştirilmemiş.</span><span class="sxs-lookup"><span data-stu-id="03b9a-111">If an error occurs, a new object is not returned, and the pointer is left unmodified.</span></span> 
+<span data-ttu-id="815e3-109">[out] Niteleyiciler sınıf nesnesi erişimi sağlayan bir arabirim işaretçisi alır.</span><span class="sxs-lookup"><span data-stu-id="815e3-109">[out] Receives the interface pointer that allows access to the qualifiers of the class object.</span></span> <span data-ttu-id="815e3-110">`ppQualSet` olamaz `null`.</span><span class="sxs-lookup"><span data-stu-id="815e3-110">`ppQualSet` cannot be `null`.</span></span> <span data-ttu-id="815e3-111">Bir hata gerçekleşirse, yeni bir nesne döndürülmez ve işaretçi solda değiştirilmemiş.</span><span class="sxs-lookup"><span data-stu-id="815e3-111">If an error occurs, a new object is not returned, and the pointer is left unmodified.</span></span> 
 
-## <a name="return-value"></a><span data-ttu-id="03b9a-112">Dönüş değeri</span><span class="sxs-lookup"><span data-stu-id="03b9a-112">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="815e3-112">Dönüş değeri</span><span class="sxs-lookup"><span data-stu-id="815e3-112">Return value</span></span>
 
-<span data-ttu-id="03b9a-113">Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda:</span><span class="sxs-lookup"><span data-stu-id="03b9a-113">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="815e3-113">Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda:</span><span class="sxs-lookup"><span data-stu-id="815e3-113">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="03b9a-114">Sabit</span><span class="sxs-lookup"><span data-stu-id="03b9a-114">Constant</span></span>  |<span data-ttu-id="03b9a-115">Değer</span><span class="sxs-lookup"><span data-stu-id="03b9a-115">Value</span></span>  |<span data-ttu-id="03b9a-116">Açıklama</span><span class="sxs-lookup"><span data-stu-id="03b9a-116">Description</span></span>  |
+|<span data-ttu-id="815e3-114">Sabit</span><span class="sxs-lookup"><span data-stu-id="815e3-114">Constant</span></span>  |<span data-ttu-id="815e3-115">Değer</span><span class="sxs-lookup"><span data-stu-id="815e3-115">Value</span></span>  |<span data-ttu-id="815e3-116">Açıklama</span><span class="sxs-lookup"><span data-stu-id="815e3-116">Description</span></span>  |
 |---------|---------|---------|
-|`WBEM_E_FAILED` | <span data-ttu-id="03b9a-117">0x80041001</span><span class="sxs-lookup"><span data-stu-id="03b9a-117">0x80041001</span></span> | <span data-ttu-id="03b9a-118">Genel bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="03b9a-118">There has been a general failure.</span></span> |
-|`WBEM_E_NOT_FOUND` | <span data-ttu-id="03b9a-119">0x80041002</span><span class="sxs-lookup"><span data-stu-id="03b9a-119">0x80041002</span></span> | <span data-ttu-id="03b9a-120">Belirtilen yöntem yok.</span><span class="sxs-lookup"><span data-stu-id="03b9a-120">The specified method does not exist.</span></span> |
-|`WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="03b9a-121">0x80041006</span><span class="sxs-lookup"><span data-stu-id="03b9a-121">0x80041006</span></span> | <span data-ttu-id="03b9a-122">İşlemi tamamlamak yeterli bellek yok.</span><span class="sxs-lookup"><span data-stu-id="03b9a-122">Not enough memory is available to complete the operation.</span></span> |
-|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="03b9a-123">0x80041008</span><span class="sxs-lookup"><span data-stu-id="03b9a-123">0x80041008</span></span> | <span data-ttu-id="03b9a-124">Bir parametre `null`.</span><span class="sxs-lookup"><span data-stu-id="03b9a-124">A parameter is `null`.</span></span> |
-|`WBEM_S_NO_ERROR` | <span data-ttu-id="03b9a-125">0</span><span class="sxs-lookup"><span data-stu-id="03b9a-125">0</span></span> | <span data-ttu-id="03b9a-126">İşlev çağrısı başarılı oldu.</span><span class="sxs-lookup"><span data-stu-id="03b9a-126">The function call was successful.</span></span>  |
+|`WBEM_E_FAILED` | <span data-ttu-id="815e3-117">0x80041001</span><span class="sxs-lookup"><span data-stu-id="815e3-117">0x80041001</span></span> | <span data-ttu-id="815e3-118">Genel bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="815e3-118">There has been a general failure.</span></span> |
+|`WBEM_E_NOT_FOUND` | <span data-ttu-id="815e3-119">0x80041002</span><span class="sxs-lookup"><span data-stu-id="815e3-119">0x80041002</span></span> | <span data-ttu-id="815e3-120">Belirtilen yöntem yok.</span><span class="sxs-lookup"><span data-stu-id="815e3-120">The specified method does not exist.</span></span> |
+|`WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="815e3-121">0x80041006</span><span class="sxs-lookup"><span data-stu-id="815e3-121">0x80041006</span></span> | <span data-ttu-id="815e3-122">İşlemi tamamlamak yeterli bellek yok.</span><span class="sxs-lookup"><span data-stu-id="815e3-122">Not enough memory is available to complete the operation.</span></span> |
+|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="815e3-123">0x80041008</span><span class="sxs-lookup"><span data-stu-id="815e3-123">0x80041008</span></span> | <span data-ttu-id="815e3-124">Bir parametre `null`.</span><span class="sxs-lookup"><span data-stu-id="815e3-124">A parameter is `null`.</span></span> |
+|`WBEM_S_NO_ERROR` | <span data-ttu-id="815e3-125">0</span><span class="sxs-lookup"><span data-stu-id="815e3-125">0</span></span> | <span data-ttu-id="815e3-126">İşlev çağrısı başarılı oldu.</span><span class="sxs-lookup"><span data-stu-id="815e3-126">The function call was successful.</span></span>  |
   
-## <a name="remarks"></a><span data-ttu-id="03b9a-127">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="03b9a-127">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="815e3-127">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="815e3-127">Remarks</span></span>
 
-<span data-ttu-id="03b9a-128">Bu işlev bir çağrı sarılır [IWbemClassObject::GetQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getqualifierset) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="03b9a-128">This function wraps a call to the [IWbemClassObject::GetQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getqualifierset) method.</span></span> 
+<span data-ttu-id="815e3-128">Bu işlev bir çağrı sarılır [IWbemClassObject::GetQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getqualifierset) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="815e3-128">This function wraps a call to the [IWbemClassObject::GetQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getqualifierset) method.</span></span> 
 
-<span data-ttu-id="03b9a-129">[IWbemQualifierSet işaretçi](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) eklemek, düzenlemek veya bu niteleyiciler silme çağıran olanak tanır.</span><span class="sxs-lookup"><span data-stu-id="03b9a-129">The [IWbemQualifierSet pointer](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) lets the caller add, edit, or delete these qualifiers.</span></span> <span data-ttu-id="03b9a-130">Tüm örnek veya sınıf tanımına eklenen, düzenlenen veya silinen tür niteleyicileri uygulayın.</span><span class="sxs-lookup"><span data-stu-id="03b9a-130">Such added, edited, or deleted qualifiers apply to the entire instance or class definition.</span></span>
+<span data-ttu-id="815e3-129">[IWbemQualifierSet işaretçi](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) eklemek, düzenlemek veya bu niteleyiciler silme çağıran olanak tanır.</span><span class="sxs-lookup"><span data-stu-id="815e3-129">The [IWbemQualifierSet pointer](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) lets the caller add, edit, or delete these qualifiers.</span></span> <span data-ttu-id="815e3-130">Tüm örnek veya sınıf tanımına eklenen, düzenlenen veya silinen tür niteleyicileri uygulayın.</span><span class="sxs-lookup"><span data-stu-id="815e3-130">Such added, edited, or deleted qualifiers apply to the entire instance or class definition.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="03b9a-131">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="03b9a-131">Requirements</span></span>  
-<span data-ttu-id="03b9a-132">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="03b9a-132">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="815e3-131">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="815e3-131">Requirements</span></span>  
+<span data-ttu-id="815e3-132">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="815e3-132">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="03b9a-133">**Başlık:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="03b9a-133">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="815e3-133">**Başlık:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="815e3-133">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="03b9a-134">**.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="03b9a-134">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="815e3-134">**.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="815e3-134">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="03b9a-135">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="03b9a-135">See also</span></span>  
-[<span data-ttu-id="03b9a-136">WMI ve performans sayaçları (yönetilmeyen API Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="03b9a-136">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="815e3-135">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="815e3-135">See also</span></span>  
+[<span data-ttu-id="815e3-136">WMI ve performans sayaçları (yönetilmeyen API Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="815e3-136">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
