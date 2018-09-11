@@ -6,11 +6,11 @@ ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 470dd0eb37d8081d388ef69b204293f568096a5e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44197559"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44339149"
 ---
 # <a name="xslt-compiler-xsltcexe"></a>XSLT derleyicisi (xsltc.exe)
 XSLT derleyicisi (xsltc.exe) XSLT stil sayfalarını derler ve bir derleme oluşturur. Derlenmiş bir stil sayfası sonra doğrudan geçirilebilir <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> yöntemi. İmzalı derlemeler xsltc.exe ile oluşturulamıyor.  

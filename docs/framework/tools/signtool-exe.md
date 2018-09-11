@@ -8,11 +8,11 @@ ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b4cece1227b5210cf839aff0658267ae480b23b6
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44197465"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44339623"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (İmza Aracı)
 İmza aracı, dosyaları dijital imzalayan, dosyalardaki imzaları doğrulayan ve dosyalara zaman damgası veren bir komut satırı aracıdır.  

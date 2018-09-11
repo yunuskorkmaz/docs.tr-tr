@@ -3,11 +3,11 @@ title: Meta veri Store programlama
 ms.date: 03/30/2017
 ms.assetid: 5b613661-f3f9-4e07-8e88-28c9ea2fd8f8
 ms.openlocfilehash: 4ea6117686b985a9ea18ce4e5cc4ea2b5c25524c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44187026"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44276334"
 ---
 # <a name="metadata-store-programmability"></a>Meta veri Store programlama
 Meta veri deposu bir [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] türlerini çalışma zamanında CLR öznitelikleri biçiminde rastgele meta veriler ilişkisini olanak tanıyan özellik. Bu çalışma zamanı bileşenlerini ve tasarım zamanı karşılıkları yanı sıra, çalışma zamanı etkilemeden tasarım saati bileşenlerini değiştirme olanağı arasında gevşek bir bağlantı sağlar. Örnek, bir çalışma zamanı türü, biz denetimi içinde olan kaynak öznitelikleri uygulayarak meta veri deposuna karşı programlamak gösterilmektedir. Genellikle kullanılan terimler, barındırma uygulaması türleri kümesi için meta verileri kaydeder ' dir.  

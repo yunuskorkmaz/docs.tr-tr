@@ -13,11 +13,11 @@ ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d84bc5ac2256139626311ff7c848170c28ffbd5b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44211820"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44338458"
 ---
 # <a name="selecting-a-collection-class"></a>Koleksiyon Sınıfı Seçme
 Koleksiyon sınıfınıza seçmeye emin olun. Yanlış türde kullanarak koleksiyon kullanımını kısıtlayabilirsiniz. Genel olarak, türlerini kullanmaktan <xref:System.Collections> ad alanı .NET Framework sürüm 1.1 özellikle hedeflediğiniz sürece. Genel ve eş zamanlı koleksiyonlar, büyük tür güvenliği ve diğer iyileştirmeler nedeniyle tercih edilen olarak sürümleridir.  

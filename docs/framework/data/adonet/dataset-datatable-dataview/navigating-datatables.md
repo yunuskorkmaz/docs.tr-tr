@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 202026a1-ec79-435e-b507-12a77f5011b2
 ms.openlocfilehash: f00e2171c1adf4ff99a669085131ebc8d38f7006
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44181504"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44274157"
 ---
 # <a name="navigating-datatables"></a>DataTable içinde gezinme
 <xref:System.Data.DataTableReader> Bir veya daha fazla içeriğini alır <xref:System.Data.DataTable> nesneleri formunda bir veya daha fazla salt okunur, salt iletme sonuç kümeleri.  

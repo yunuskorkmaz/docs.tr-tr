@@ -3,11 +3,11 @@ title: (C#) XML ağacı dönüştürmek için XSLT kullanma
 ms.date: 07/20/2015
 ms.assetid: 373a2699-d4c5-471b-9bda-c1f0ab73b477
 ms.openlocfilehash: 3fa850c0f09404da49b2963e980d15e1ed54316f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192879"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44276480"
 ---
 # <a name="using-xslt-to-transform-an-xml-tree-c"></a>(C#) XML ağacı dönüştürmek için XSLT kullanma
 Bir XML ağacı oluşturma, oluşturun bir <xref:System.Xml.XmlReader> XML ağacından bir yeni belge oluşturun ve oluşturma bir <xref:System.Xml.XmlWriter> yeni belgeye yazacak. XSLT dönüşümü geçirme, daha sonra çağırabilirsiniz <xref:System.Xml.XmlReader> ve <xref:System.Xml.XmlWriter> dönüşümü için. Dönüştürme başarıyla tamamlandıktan sonra yeni bir XML ağacı dönüşüm sonuçları ile doldurulur.  

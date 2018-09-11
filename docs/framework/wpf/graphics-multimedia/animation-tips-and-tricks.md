@@ -15,11 +15,11 @@ helpviewer_keywords:
 - animations [WPF], use of system resources
 ms.assetid: e467796b-d5d4-45a6-a108-8c5d7ff69a0f
 ms.openlocfilehash: df4aa7f3bf046ec871333f665ab77fa460c4095c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44252109"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44277500"
 ---
 # <a name="animation-tips-and-tricks"></a>Animasyon İpuçları ve Püf Noktaları
 İçinde animasyon ile çalışırken [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], birkaç ipucu vardır ve animasyonlarınızın püf noktaları daha iyi performans ve yükünden kurtarın.  

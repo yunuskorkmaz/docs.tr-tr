@@ -8,11 +8,11 @@ helpviewer_keywords:
 - void keyword [C#]
 ms.assetid: 0d2d8a95-fe20-4fbd-bf5d-c1e54bce71d4
 ms.openlocfilehash: 223db893dd42181c234d9a07c1a1c00af26f0c30
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44213932"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44275588"
 ---
 # <a name="void-c-reference"></a>void (C# Başvurusu)
 Bir yöntem için dönüş türü olarak kullanıldığında `void` yöntemi bir değer döndürmediğini belirtir.

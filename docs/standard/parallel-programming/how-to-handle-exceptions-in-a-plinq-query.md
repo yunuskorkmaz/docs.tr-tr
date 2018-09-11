@@ -11,11 +11,11 @@ ms.assetid: 8d56ff9b-a571-4d31-b41f-80c0b51b70a5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 40b98e01d6c34fb01a1f508f2ea52309f2f7938b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44213598"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44338473"
 ---
 # <a name="how-to-handle-exceptions-in-a-plinq-query"></a>Nasıl yapılır: PLINQ Sorgusunda Özel Durumları İşleme
 Bu konudaki ilk örnek nasıl işleneceğini gösterir <xref:System.AggregateException?displayProperty=nameWithType> , durum konumundan bir PLINQ sorgusu yürütüldüğünde. İkinci örnek, try-catch bloklarını temsilciler içinde özel durumun olduğu için mümkün olduğunca yakın yerleştirin gösterilmektedir. Oluşur ve büyük olasılıkla sorgu yürütmeye devam et hemen sonra bu şekilde, siz bunları yakalayabilir. Ne zaman bir sorgu özel durum oluştuktan sonra bazı öğeleri işlemeye devam edebilir mümkündür özel durumları ayarlama geri katılan iş parçacığına Kabarcık halinde çıkmasına izin verilmez.  

@@ -12,11 +12,11 @@ ms.assetid: 8ecfa9f5-b500-473d-bcf0-5652ffb1e53d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6426e8bd138d06d3655562de6384e46a12c09279
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44202407"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44273267"
 ---
 # <a name="how-to-implement-an-observer"></a>Nasıl yapılır: Gözlemci Uygulama
 Gözlemci tasarım deseni için bildirimleri kaydeden bir gözlemci veri izler ve bir veya daha fazla gözlemciler için bildirim gönderen bir sağlayıcı arasındaki bölme işleminin gerektirir. Bu konu, bir gözlemci oluşturulacağını açıklar. İlgili konu başlığında, [nasıl yapılır: sağlayıcıyı uygulama](../../../docs/standard/events/how-to-implement-a-provider.md), bir sağlayıcı oluşturma anlatılmaktadır.  

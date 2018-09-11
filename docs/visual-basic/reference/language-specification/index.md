@@ -7,11 +7,11 @@ helpviewer_keywords:
 - specifications, Visual Basic
 ms.assetid: 42c30017-19d0-442e-87a2-850b66ddc3df
 ms.openlocfilehash: 6708ad107a2ee5b4ba2896d811c103ed49b476b8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44069230"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44339499"
 ---
 # <a name="visual-basic-language-specification"></a>Visual Basic Dil Belirtimi
 Visual Basic dil belirtimi, Visual Basic dilbilgisi ve dizilim hakkındaki tüm soruların yanıtları için yetkili kaynaktır. Visual Basic başvuru belgelerinde kapsanmayan pek çok nokta dahil dil hakkında ayrıntılı bilgiler içerir.  

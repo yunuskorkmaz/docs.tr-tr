@@ -3,11 +3,11 @@ title: Tür Kısaltmaları (F#)
 description: 'Bir tür, kodun okunmasını kolaylaştırmak için daha anlamlı bir ad vermek için F # tür kısaltmaları hakkında bilgi edinin.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 259cd6c84e22fc7c98e08255d3e0ded5b87af352
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44176776"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44336478"
 ---
 # <a name="type-abbreviations"></a>Tür Kısaltmaları
 

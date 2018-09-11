@@ -18,12 +18,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: 09746f01115a4b6bf3ca54cdc72c6ad936fbaaae
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 3fd01e19bc8aad8af709aee2fdaa020d8192d530
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042445"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44339558"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Nasıl yapılır: Olay Tabanlı Zaman Uyumsuz Deseni Destekleyen Bir Bileşeni Uygulama
 Bir sınıf belirgin gecikmeler kaynaklanabilecek bazı işlemleri yazıyorsanız uygulayarak zaman uyumsuz işlevleri vererek göz önünde bulundurun [olay tabanlı zaman uyumsuz desene genel bakış](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
@@ -58,7 +58,7 @@ Bir sınıf belirgin gecikmeler kaynaklanabilecek bazı işlemleri yazıyorsanı
 -   Adlı bir sınıf oluşturmak `PrimeNumberCalculator` öğesinden devralan <xref:System.ComponentModel.Component>.  
   
 ## <a name="defining-public-asynchronous-events-and-delegates"></a>Genel zaman uyumsuz olayları ve temsilcileri tanımlama  
- Bileşeniniz olayları kullanan istemciler için iletişim kurar. *MethodName***tamamlandı** olay uyarıları bir zaman uyumsuz görev tamamlandığında istemcilere ve *MethodName***ProgressChanged** olay zaman uyumsuz bir görevi ilerlemesini istemcileri bildirir.  
+ Bileşeniniz olayları kullanan istemciler için iletişim kurar. _MethodName_**tamamlandı** olay uyarıları zaman uyumsuz bir görev tamamlandığında istemcilere ve _MethodName_**ProgressChanged**olay bildiren istemciler ilerleme durumunu zaman uyumsuz bir görev.  
   
 #### <a name="to-define-asynchronous-events-for-clients-of-your-component"></a>Bileşeninizin istemciler için zaman uyumsuz olayları tanımlamak için:  
   

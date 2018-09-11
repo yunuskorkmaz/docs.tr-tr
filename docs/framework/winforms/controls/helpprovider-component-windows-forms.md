@@ -7,11 +7,11 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 ms.assetid: a09a6e0b-79d8-457f-bb36-86fad2beeada
 ms.openlocfilehash: 63574e6a4f7a9c5a1c2bcb267c64baa5c5e392f3
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44179448"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44339174"
 ---
 # <a name="helpprovider-component-windows-forms"></a>HelpProvider Bileşeni (Windows Forms)
 Windows Forms `HelpProvider` bileşen bir HTML Yardım 1.x Yardım dosyası (HTML Help Workshop ile üretilen bir .chm dosyası veya bir .htm dosyasının) ilişkilendirmek için kullanılan Windows tabanlı uygulamanızla.  

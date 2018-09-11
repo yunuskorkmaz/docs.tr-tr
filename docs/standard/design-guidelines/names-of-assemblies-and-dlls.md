@@ -11,11 +11,11 @@ ms.assetid: e800b610-31b4-4949-9c14-cb60e9f254be
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 97bd152cff53fb1c2edb107b6d6b34bd91ca1c49
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44187656"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44276321"
 ---
 # <a name="names-of-assemblies-and-dlls"></a>Bütünleştirilmiş kod ve DLL adları
 Bir derleme dağıtım ve yönetilen kod programları için kimlik birimidir. Genellikle bir veya daha çok dosya derlemeleri yayılabilir olsa da, bir derleme bir DLL ile bire bir eşlenir. Bu nedenle, bu bölümde olan derleme adlandırma kurallarına eşlenebilir yalnızca DLL adlandırma kurallarını açıklar.  

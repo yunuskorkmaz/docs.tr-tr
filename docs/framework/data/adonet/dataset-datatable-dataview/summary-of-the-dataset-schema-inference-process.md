@@ -3,11 +3,11 @@ title: DataSet şema çıkarımı işleminin özeti
 ms.date: 03/30/2017
 ms.assetid: fd0891c8-d068-4e30-a76f-7c375f078bf7
 ms.openlocfilehash: 1583d5232a3dd483bbe2a6fa0b1bc8a3ae6a659f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44180351"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44277633"
 ---
 # <a name="summary-of-the-dataset-schema-inference-process"></a>DataSet şema çıkarımı işleminin özeti
 Çıkarım işlemi önce hangi öğelerin tablo olarak çıkarılan XML belgesinden belirler. Kalan XML'den çıkarımı işleminin bu tablonun sütunlarını belirler. İç içe tablolar için çıkarım işlem oluşturur iç içe geçmiş <xref:System.Data.DataRelation> ve <xref:System.Data.ForeignKeyConstraint> nesneleri.  

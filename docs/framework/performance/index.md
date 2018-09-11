@@ -8,11 +8,11 @@ ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 59f8ceaf7981aebf3ae64e10d253004780f47e50
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44208724"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44272884"
 ---
 # <a name="net-framework-performance"></a>.NET Framework Performansı
 Mükemmel performans gösteren uygulamalar oluşturmak istiyorsanız, tasarım ve performans planlamanız başka bir uygulama özelliğini tasarladığınız gibi. Microsoft tarafından sağlanan araçları uygulamalarınızın performansını ölçmek için vb., gerekirse, bellek kullanımı, kod veriminde ve yanıt hızını iyileştirme yapın. Bu konu, Microsoft sağlar ve uygulama geliştirmenin belirli alanları için performansı kapsayan diğer konulara bağlantılar sağlar Performans analiz araçlarını listeler.  

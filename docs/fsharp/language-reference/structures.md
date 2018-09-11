@@ -3,11 +3,11 @@ title: Yapılar (F#)
 description: 'F # yapısı hakkında genellikle bir compact nesne türü bilgi türleri küçük miktarda veri ve basit davranışı için bir sınıf daha verimlidir.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 08af88132dda28883e246b94585ff4ed8bd2f16a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44181933"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44337961"
 ---
 # <a name="structures"></a>Yapılar
 

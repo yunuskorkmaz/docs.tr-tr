@@ -18,17 +18,17 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 35e9549c-1568-4768-ad07-17cc6dff11e1
-ms.openlocfilehash: 68b376d00762238b810f6463463aa78c492a1a1f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: e11bf8af6f56cbdcdcc920cafe145edcf744efed
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44187737"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44337518"
 ---
 # <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a>Nasıl yapılır: Olay Tabanlı Zaman Uyumsuz Deseni Destekleyen Bileşenleri Kullanma
 Birçok bileşen iş zaman uyumsuz olarak gerçekleştirme seçeneğini içeren sağlar. <xref:System.Media.SoundPlayer> Ve <xref:System.Windows.Forms.PictureBox> bileşenleri, örneğin, yüklemenizi ses ve kesinti olmadan çalışan, ana iş parçacığı devam ederken "arka planda" görüntüleri etkinleştirin.  
   
- Destekleyen bir sınıf üzerinde zaman uyumsuz metotlar kullanma [olay tabanlı zaman uyumsuz desene genel bakış](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md) bileşenin bir olay işleyicisi ekleme olarak basit olabilir *MethodName *** tamamlandı** olayı herhangi bir olay için yaptığınız gibi. Çağırdığınızda *MethodName *** zaman uyumsuz** yöntemi, uygulamanız çalışmaya devam eder kadar kesintisiz *MethodName *** tamamlandı** olayı oluşturulur. Olay işleyicisinde, incelemeniz <xref:System.ComponentModel.AsyncCompletedEventArgs> zaman uyumsuz işlem başarıyla tamamlanırsa veya iptal edildi belirlemek için parametre.  
+ Destekleyen bir sınıf üzerinde zaman uyumsuz metotlar kullanma [olay tabanlı zaman uyumsuz desene genel bakış](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md) bileşenin bir olay işleyicisi ekleme olarak basit olabilir _MethodName_  **Tamamlanan** olduğu gibi herhangi bir olay için olay. Çağırdığınızda _MethodName_**zaman uyumsuz** yöntemi, uygulamanız çalışmaya devam eder kadar kesintisiz _MethodName_**Tamamlandı** olayı oluşturulur. Olay işleyicisinde, incelemeniz <xref:System.ComponentModel.AsyncCompletedEventArgs> zaman uyumsuz işlem başarıyla tamamlanırsa veya iptal edildi belirlemek için parametre.  
   
  Olay işleyicileri kullanma hakkında daha fazla bilgi için bkz. [olay işleyicilerine genel bakış](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).  
   

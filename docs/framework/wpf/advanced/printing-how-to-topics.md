@@ -6,11 +6,11 @@ helpviewer_keywords:
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
 ms.openlocfilehash: e9b54cd7e59a5a410bfc5c0fb1ba4973c5e482af
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44222087"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44277305"
 ---
 # <a name="printing-how-to-topics"></a>Yazdırma ile İlgili Nasıl Yapılır Konuları
 Bu bölümdeki konular, yazdırma kullanımını göstermektedir ve yazdırma sistemi yönetimi özellikleri bulunan [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] yanı sıra yeni [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] yazdırma yolu.  

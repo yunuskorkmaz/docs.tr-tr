@@ -5,11 +5,11 @@ helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
 ms.openlocfilehash: f171a6380840fe2cb828ee06985317f002b353de
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44179760"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44275411"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Windows Communication Foundation Bağlamaları Genel Bakış
 Bağlamaları bir Windows Communication Foundation (WCF) hizmet uç noktasını bağlamak için gerekli olan iletişim ayrıntılarını belirtmek için kullanılan nesneleridir. Her bir WCF Hizmeti uç noktası bağlama iyi belirtilen olmasını gerektirir. Bu konuda bağlarını tanımlamak, iletişim ayrıntılarını bağlama, hangi bağlamaları WCF'de dahil edilir ve bir bağlama için bir uç nokta nasıl belirtilebilir öğelerin türleri açıklanmaktadır.  

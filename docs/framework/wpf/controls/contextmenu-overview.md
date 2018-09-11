@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ContextMenu controls [WPF], about ContextMenu controls
 ms.assetid: 16909c42-799a-4561-91e0-7d69dcfeea91
 ms.openlocfilehash: 54fd823594fba4500f35ed1d69720a3309e54a36
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44202108"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44277292"
 ---
 # <a name="contextmenu-overview"></a>ContextMenu Genel Bakışı
 <xref:System.Windows.Controls.ContextMenu> Sınıfı temsil eder, bağlam özgü kullanarak işlevselliği ortaya koyan öğe <xref:System.Windows.Controls.Menu>. Genellikle, bir kullanıcı sunan <xref:System.Windows.Controls.ContextMenu> içinde [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] fare düğmesine tıklanarak. Bu konu tanıtır <xref:System.Windows.Controls.ContextMenu> öğe ve içindeki kullanma örnekleri sağlar [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ve kod.  

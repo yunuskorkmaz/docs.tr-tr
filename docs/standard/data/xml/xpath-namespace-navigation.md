@@ -6,11 +6,11 @@ ms.assetid: 06cc7abb-7416-415c-9dd6-67751b8cabd5
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e6d4f63dacc09208176b47dbca38783f1e9bc0a1
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44194729"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44339259"
 ---
 # <a name="xpath-namespace-navigation"></a>XPath Namespace Gezinti
 XPath sorguları ile XML belgeleri kullanmak için doğru adres XML ad alanları ve ad alanları tarafından içerilen öğelerin sahip. Ad alanları, adları, birden fazla bağlamında kullanıldığında oluşabilecek belirsizlikleri önleyebilir. Örneğin, adı `ID` farklı bir XML belgesi öğelerle ilişkili birden fazla tanımlayıcı bakabilirsiniz. Namespace sözdizimi URI'ler, adları ve bir XML belgesinin öğelerini ayırt önekler belirtir.  

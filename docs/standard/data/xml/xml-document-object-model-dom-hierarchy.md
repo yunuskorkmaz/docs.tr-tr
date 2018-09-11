@@ -6,11 +6,11 @@ ms.assetid: 9d187d4f-c76e-4223-a670-cc290783ce47
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ef2b5b200f95cdfac9b08a33c328c1dfb797e59e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44179170"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44274667"
 ---
 # <a name="xml-document-object-model-dom-hierarchy"></a>XML belge nesne modeli (DOM) hiyerarşisi
 Sınıf hiyerarşisi için XML belge nesne modeli (DOM), aşağıdaki çizimde, ilgili olduğu sınıf adıyla birlikte parantez içinde World Wide Web Consortium (W3C) adı.  
