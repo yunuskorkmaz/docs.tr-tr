@@ -5,11 +5,11 @@ helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
 ms.openlocfilehash: 904abff4f3cae5873fe3cc9705dee84f73e2a523
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44195581"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44361540"
 ---
 # <a name="configuring-services-using-configuration-files"></a>Yapılandırma Dosyalarını Kullanarak Hizmetleri Yapılandırma
 Bir yapılandırma dosyası bir Windows Communication Foundation (WCF) hizmetini yapılandırma uç noktası sağlama esnekliği sunar ve hizmet davranışı veri yerine dağıtım noktasında tasarım. Bu konu, birincil teknikleri açıklar.  

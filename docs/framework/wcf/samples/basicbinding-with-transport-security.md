@@ -5,11 +5,11 @@ ms.assetid: f49b1de6-0254-4362-8ef2-fccd8ff9688b
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 69257099338ae2d50c5ea184c0800d0057e020f4
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
-ms.translationtype: HT
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 09/10/2018
-ms.locfileid: "44264694"
+ms.locfileid: "44342910"
 ---
 # <a name="basicbinding-with-transport-security"></a>Taşıma Güvenliği ile BasicBinding
 Bu örnek, basit bağlama ile SSL Aktarım güvenliği kullanımını gösterir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hesaplayıcı hizmet uygulayan.  

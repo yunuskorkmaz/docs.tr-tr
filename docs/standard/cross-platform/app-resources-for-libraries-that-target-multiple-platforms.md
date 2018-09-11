@@ -15,11 +15,11 @@ ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a6c589a393ccfb5610a19776af6e33e4046bf5d3
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
-ms.translationtype: HT
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 09/10/2018
-ms.locfileid: "44275958"
+ms.locfileid: "44342439"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>Birden Çok Platformu Hedefleyen Kitaplıklar için Uygulama Kaynakları
 .NET Framework kullanabilirsiniz [taşınabilir sınıf kitaplığı](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) proje türü sınıf kitaplıklarınızdaki kaynakların birden çok platformdan erişilebildiğinden emin olmak için. Bu proje türü kullanılabilir [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)] ve .NET Framework sınıf kitaplığının taşınabilir alt küme hedefler. Kullanarak bir [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] kitaplığınızı erişilip erişilemediğini Masaüstü uygulamaları, Silverlight uygulamaları, Windows Phone uygulamaları sağlar ve [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar.  
