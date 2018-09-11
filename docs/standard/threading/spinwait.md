@@ -11,11 +11,11 @@ ms.assetid: 36012f42-34e5-4f86-adf4-973f433ed6c6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1ff8b5b75d1d69d3d8c88810de1311540a239c52
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44273417"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44353219"
 ---
 # <a name="spinwait"></a>SpinWait
 <xref:System.Threading.SpinWait?displayProperty=nameWithType> alt düzey senaryolarda çekirdek olayları için gerekli olan çekirdek geçişleri ve pahalı bağlam anahtarları önlemek için kullanabileceğiniz bir hafif eşitleme türüdür. Bir kaynak saat, uzun süre boyunca bekletilmesini beklenmiyor çok çekirdekli bilgisayarlarda bir bekleyen iş parçacığı birkaç düzine veya birkaç yüz döngüler için kullanıcı modunda çalıştırın ve kaynak almak için yeniden denemek daha verimli olabilir. Ardından kaynak dönen sonra kullanılabilir haldeyse, birkaç bin döngü kaydettiniz. Kaynak hala kullanılabilir değil ise, yalnızca birkaç döngüleri harcadığınız sonra çekirdek tabanlı bekleme yine de girebilirsiniz. Bu dönen ardından bekleyen birlikte, bazen olarak adlandırılır bir *iki aşamalı bir bekleme işlemini*.  

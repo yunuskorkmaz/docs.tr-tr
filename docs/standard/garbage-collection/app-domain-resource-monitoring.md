@@ -11,11 +11,11 @@ ms.assetid: 318bedf8-7f35-4f00-b34a-2b7b8e3fa315
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 50d601d711579bce2e2651a1efc65d824a50d47a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44208763"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44354093"
 ---
 # <a name="application-domain-resource-monitoring"></a>Uygulama Etki Alanı Kaynak İzleme
 Uygulama etki alanı kaynak izleme (ARM), uygulama etki alanı tarafından CPU ve bellek kullanımını izlemek için ana bilgisayarları etkinleştirir. Bu, ASP.NET gibi bir uzun süre çalışan işlemde birden çok uygulama etki alanı kullanan konaklar için kullanışlıdır. Konak, sorunlu uygulamayı tanımlayabilirsiniz, ancak tüm işlemin performansını olumsuz yönde etkileyen bir uygulamanın uygulama etki alanını boşaltma. ARM gibi kararları vermekte yardımcı olmak için kullanılabilecek bilgiler sağlar.  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C# language, constructors
 ms.assetid: df2e2e9d-7998-418b-8e7d-890c17ff6c95
 ms.openlocfilehash: 3d07fe5f6164885a994838376887edccc260e291
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44185343"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44366211"
 ---
 # <a name="constructors-c-programming-guide"></a>Oluşturucular (C# Programlama Kılavuzu)
 Her bir [sınıfı](../../../csharp/language-reference/keywords/class.md) veya [yapı](../../../csharp/language-reference/keywords/struct.md) olan oluşturulan, kendi Oluşturucu çağrılır. Farklı bağımsız değişkenler almayan birden çok Oluşturucu, bir sınıf veya yapı olabilir. Oluşturucular, esnek ve kolay okunur kod yazma, örnekleme sınırlandırmak ve varsayılan değerlerini ayarlamak Programcı etkinleştirin. Daha fazla bilgi ve örnekler için bkz. [oluşturucuları kullanarak](../../../csharp/programming-guide/classes-and-structs/using-constructors.md) ve [örnek oluşturucuları](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).  

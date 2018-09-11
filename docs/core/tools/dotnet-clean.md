@@ -1,15 +1,15 @@
 ---
 title: DotNet command - .NET Core CLI Temizle
-description: Dotnet Temizle komutu, geçerli dizin temizler.
+description: Dotnet temiz komut geçerli dizinde temizler.
 author: mairaw
 ms.author: mairaw
 ms.date: 05/25/2018
-ms.openlocfilehash: 9e68781fe00590f3c8d429631a3f72d525d29fa9
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 5553e4b4423a2d824c05caf7114c47b5f1c20477
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34697037"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44367671"
 ---
 # <a name="dotnet-clean"></a>DotNet Temizle
 
@@ -17,9 +17,9 @@ ms.locfileid: "34697037"
 
 ## <a name="name"></a>Ad
 
-`dotnet clean` -Proje çıktı temizler.
+`dotnet clean` -Bir projenin çıkışı temizler.
 
-## <a name="synopsis"></a>Özet
+## <a name="synopsis"></a>Özeti
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
 ```
@@ -35,13 +35,13 @@ dotnet clean [-h|--help]
 
 ## <a name="description"></a>Açıklama
 
-`dotnet clean` Komutu önceki yapı çıktı temizler. Olarak uygulanan bir [MSBuild hedef](/visualstudio/msbuild/msbuild-targets), bu komutu çalıştırdığınızda proje değerlendirilir. Yalnızca derleme sırasında oluşturulan çıkışları temizlenir. Her iki ara (*obj*) ve son çıktı (*bin*) klasörleri temizlendi.
+`dotnet clean` Komut önceki yapı çıkışını temizler. Olarak uygulanan bir [MSBuild hedefi](/visualstudio/msbuild/msbuild-targets), projenin komut çalıştırıldığında değerlendirilir. Yalnızca derleme sırasında oluşturulan çıkışları temizlenir. Her iki Orta (*obj*) ve son çıktı (*bin*) klasörler temizlendi.
 
 ## <a name="arguments"></a>Arguments
 
 `PROJECT`
 
-Temizlemek için MSBuild proje. MSBuild proje dosyası belirtilmezse, geçerli çalışma dizini ile biten bir dosya uzantısına sahip bir dosya için arar *proj* ve bu dosyayı kullanır.
+Temizlemek için MSBuild proje. Bir proje dosyası belirtilmezse, MSBuild ile biten bir dosya uzantısına sahip bir dosya için geçerli çalışma dizini arar *proj* ve bu dosyayı kullanır.
 
 ## <a name="options"></a>Seçenekler
 
@@ -49,49 +49,49 @@ Temizlemek için MSBuild proje. MSBuild proje dosyası belirtilmezse, geçerli �
 
 `-c|--configuration {Debug|Release}`
 
-Derleme yapılandırması tanımlar. Varsayılan değer `Debug` şeklindedir. Bu seçeneği yalnızca olan yapı süre boyunca belirtilmişse temizlenirken gerekli.
+Derleme yapılandırmasını tanımlar. Varsayılan değer `Debug` şeklindedir. Bu seçeneği yalnızca olan derleme zamanında belirtilmişse temizlenirken gerekli.
 
 `-f|--framework <FRAMEWORK>`
 
-[Framework](../../standard/frameworks.md) derleme zamanında belirtildi. Framework tanımlanmalıdır [proje dosyası](csproj.md). Framework'te derleme zamanında belirtilmişse framework temizlenirken belirtmeniz gerekir.
+[Framework](../../standard/frameworks.md) oluşturma zamanında belirtildi. Framework tanımlanmalıdır [proje dosyası](csproj.md). Oluşturma zamanında framework belirtilmişse framework temizlenirken belirtmeniz gerekir.
 
 `-h|--help`
 
-Komutu için kısa bir Yardım yazdırır.
+Komut için kısa bir Yardım yazdırır.
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
-Dizin oluşturma çıkışları yer alır. Belirtin `-f|--framework <FRAMEWORK>` geçiş çıktı dizini ile proje yapılandırıldığında framework belirtilmişse.
+Dizini, derleme çıktılarını yerleştirilir. Belirtin `-f|--framework <FRAMEWORK>` çerçeve proje oluşturulduğunda belirttiyseniz çıkış dizini anahtarıyla geçin.
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-Belirtilen çalışma zamanının çıkış klasörü siler. Bu kullanılır olduğunda bir [müstakil dağıtım](../deploying/index.md#self-contained-deployments-scd) oluşturuldu.
+Belirtilen çalışma zamanı çıktı klasörünü siler. Bu, bir [müstakil dağıtım](../deploying/index.md#self-contained-deployments-scd) oluşturuldu.
 
 `-v|--verbosity <LEVEL>`
 
-Komutun ayrıntı düzeyi ayarlar. İzin verilen düzeyleri q [uiet], [en az sıfır] m, n [ormal], [kincil] d ve tanı [nostic] ' dir.
+Komutun ayrıntı düzeyini ayarlar. İzin verilen düzeyleri q [uiet], m [en az sıfır], [ormal] n, d [ayrıntılı] ve tanı [tanısı] ' dir.
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
 
 `-c|--configuration {Debug|Release}`
 
-Derleme yapılandırması tanımlar. Varsayılan değer `Debug` şeklindedir. Bu seçeneği yalnızca olan yapı süre boyunca belirtilmişse temizlenirken gerekli.
+Derleme yapılandırmasını tanımlar. Varsayılan değer `Debug` şeklindedir. Bu seçeneği yalnızca olan derleme zamanında belirtilmişse temizlenirken gerekli.
 
 `-f|--framework <FRAMEWORK>`
 
-[Framework](../../standard/frameworks.md) derleme zamanında belirtildi. Framework tanımlanmalıdır [proje dosyası](csproj.md). Framework'te derleme zamanında belirtilmişse framework temizlenirken belirtmeniz gerekir.
+[Framework](../../standard/frameworks.md) oluşturma zamanında belirtildi. Framework tanımlanmalıdır [proje dosyası](csproj.md). Oluşturma zamanında framework belirtilmişse framework temizlenirken belirtmeniz gerekir.
 
 `-h|--help`
 
-Komutu için kısa bir Yardım yazdırır.
+Komut için kısa bir Yardım yazdırır.
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
-Dizin oluşturma çıkışları yer alır. Belirtin `-f|--framework <FRAMEWORK>` geçiş çıktı dizini ile proje yapılandırıldığında framework belirtilmişse.
+Dizini, derleme çıktılarını yerleştirilir. Belirtin `-f|--framework <FRAMEWORK>` çerçeve proje oluşturulduğunda belirttiyseniz çıkış dizini anahtarıyla geçin.
 
 `-v|--verbosity <LEVEL>`
 
-Komutun ayrıntı düzeyi ayarlar. İzin verilen düzeyleri q [uiet], [en az sıfır] m, n [ormal], [kincil] d ve tanı [nostic] ' dir.
+Komutun ayrıntı düzeyini ayarlar. İzin verilen düzeyleri q [uiet], m [en az sıfır], [ormal] n, d [ayrıntılı] ve tanı [tanısı] ' dir.
 
 ---
 
@@ -101,6 +101,6 @@ Projenin varsayılan derlemeyi temizleme:
 
 `dotnet clean`
 
-Yayın yapılandırma kullanılarak oluşturulmuştur bir projeyi temizleyin:
+Yayın Yapılandırması kullanılarak oluşturulan bir projeyi Temizle:
 
 `dotnet clean --configuration Release`

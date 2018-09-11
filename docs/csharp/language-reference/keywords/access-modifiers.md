@@ -5,11 +5,11 @@ helpviewer_keywords:
 - access modifiers [C#]
 ms.assetid: 61c3fa51-c00f-48cb-9b49-c805dedd62d7
 ms.openlocfilehash: ff313df9683dbc76bab684ff484b746ad05e065a
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44262049"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44361050"
 ---
 # <a name="access-modifiers-c-reference"></a>Erişim Değiştiricileri (C# Başvurusu)
 Erişim değiştiricileri öğesinin bildirilen erişilebilirliği üyesi veya bir tür belirtmek için kullanılan anahtar sözcüklerdir. Bu bölümde, dört erişim değiştiricilerini tanıtır:  

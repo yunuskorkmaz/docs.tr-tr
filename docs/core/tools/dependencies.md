@@ -4,12 +4,12 @@ description: .NET Core araçları ile bağımlılıklarınızı yönetmesini aç
 author: blackdwarf
 ms.author: mairaw
 ms.date: 03/06/2017
-ms.openlocfilehash: c8f40b8571523b98da55b047fea8d2bf03b390a2
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: cbeb9ad17932f6abaf14333a71fab2b4b8fd099c
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244234"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44353284"
 ---
 # <a name="managing-dependencies-with-net-core-sdk-10"></a>.NET Core SDK'sı 1.0 ile bağımlılık Yönetimi
 
@@ -32,7 +32,7 @@ Msbuild'i iyi bilmiyorsanız, zaten mevcut olan diğer başvuru türlerine benze
 Yalnızca belirli bir hedef olarak kullanılabilir bir bağımlılık ekleme yapılır gibi koşullar kullanarak aşağıdaki örnekte:
 
 ```xml
-<PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" Condition="'$(TargetFramework)' == 'netcoreapp1.0'" />
+<PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" Condition="'$(TargetFramework)' == 'netcoreapp2.1'" />
 ```
 
 Bağımlılık yalnızca derleme için hedef verilen karşılaşıyorsanız geçerli olacağını yukarıdaki anlamına gelir. `$(TargetFramework)` Koşulda projede ayarlanan bir MSBuild özelliğidir. En yaygın .NET Core uygulamaları için bunu yapmak gerekmez. 
@@ -57,7 +57,7 @@ Tam proje şöyle görünür:
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.0</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>

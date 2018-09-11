@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
 ms.openlocfilehash: a1718429360d79c4628e9948eb1b052c3ac01964
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44270385"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44360758"
 ---
 # <a name="performing-an-xpath-query-on-a-dataset"></a>Bir veri kümesi üzerinde bir XPath sorgusu gerçekleştirme
 Eşitlenen bir alana arasındaki ilişkiyi <xref:System.Data.DataSet> ve <xref:System.Xml.XmlDataDocument> XML'sini yararlanması sağlar erişen gibi hizmetleri XML Path Language (XPath) sorgusu, **XmlDataDocument** ve bazı işlevleri gerçekleştirebilirsiniz erişim değerinden daha rahat **veri kümesi** doğrudan. Örneğin kullanmak yerine **seçin** yöntemi bir <xref:System.Data.DataTable> diğer tablolarla ilişki gitmek için bir **veri kümesi**, bir XPath sorgusu gerçekleştirebileceğiniz bir **XmlDataDocument**  ile eşitlenmiş **veri kümesi**biçiminde XML öğelerinin bir listesini almak için bir <xref:System.Xml.XmlNodeList>. Düğümlerin **XmlNodeList**, noktaya yayın olarak <xref:System.Xml.XmlElement> düğümler, ardından geçilebilir **GetRowFromElement** yöntemi **XmlDataDocument**, eşleşen döndürmek için <xref:System.Data.DataRow> eşitlenmiş tablodaki satırları için başvurular **veri kümesi**.  

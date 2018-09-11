@@ -1,40 +1,40 @@
 ---
-title: CI/CD ardışık düzen ve bulutta DevOps araçları ile uygulama yaşam döngüsü modernize
-description: Azure Bulut ve Windows kapsayıcılarla varolan .NET uygulamaları modernize | CI/CD ardışık düzen ve bulutta DevOps araçları ile uygulama yaşam döngüsü modernize
+title: Uygulamanızın yaşam döngüsü ile CI/CD işlem hatları ve DevOps araçları bulutta modernleştirin
+description: Azure Bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirme | Uygulamanızın yaşam döngüsü ile CI/CD işlem hatları ve DevOps araçları bulutta modernleştirin
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 63907a1911b4c95f0dbecb2af33964225cf3e7b1
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: c4d3eaa50f6c7645c954ca65bf42c6c1eab3a68d
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33958211"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44366849"
 ---
-# <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>CI/CD ardışık düzen ve bulutta DevOps araçları ile uygulama yaşam döngüsü modernize
+# <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>Uygulamanızın yaşam döngüsü ile CI/CD işlem hatları ve DevOps araçları bulutta modernleştirin
 
-Günümüzün işletmeler markette rekabetçi olmasını hızlı hızda yenilik gerekir. Yüksek kaliteli teslim etmek, modern uygulamalar gerektirir DevOps araçları ve yenilik sabit bu döngüsünü uygulamak için kritik olan işlemleri. Sağ DevOps araçları ile geliştiriciler sürekli dağıtım kolaylaştırmak ve ellerini yenilikçi uygulamalara kullanıcıların daha hızlı alın.
+Bugünkü işletmeler Market'te rekabetçi hale gelmesini hızlı bir hızda yenilik gerekir. Yüksek kaliteli, modern uygulamalar oluşturabilmek için DevOps araçları ve yenilik sabit bu döngüsünü uygulamak için kritik olan işlemleri. Doğru DevOps araçlarıyla geliştiriciler sürekli dağıtımını kolaylaştırın ve daha hızlı sunun yenilikçi uygulamalar kullanıcıların alma.
 
-Sürekli tümleştirme ve dağıtım yöntemleri iyi oluşturulmuş olsa da, özellikle çok kapsayıcı uygulamaları ile çalışırken kapsayıcıları giriş yeni konuları tanıtır.
+Sürekli tümleştirme ve dağıtım yöntemleri de oluşturulmuş olsa da, özellikle çok kapsayıcılı uygulamaları ile çalışırken giriş kapsayıcıların yeni konuları tanıtır.
 
-Visual Studio Team Services sürekli tümleştirme ve resmi Team Services dağıtım görevleri aracılığıyla ortamları çeşitli çok kapsayıcı uygulamalarının dağıtımını destekler:
+Azure DevOps hizmetleriyle, sürekli tümleştirme ve çeşitli ortamlarda resmi Azure DevOps Hizmetleri dağıtım görevleri aracılığıyla çoklu kapsayıcı uygulamalarının dağıtımını destekler:
 
--   [Tek başına Docker ana VM dağıtmak](https://docs.microsoft.com/vsts/build-release/apps/cd/deploy-docker-windowsvm) (Linux veya Windows Server 2016 veya üstü)
+-   [Tek başına konak VM'ye Docker dağıtma](https://docs.microsoft.com/azure/devops/build-release/apps/cd/deploy-docker-windowsvm) (Linux veya Windows Server 2016 veya üzeri)
 
--   [Service Fabric dağıtma](https://docs.microsoft.com/azure/service-fabric/service-fabric-tutorial-deploy-app-with-cicd-vsts)
+-   [Service Fabric'e dağıtma](https://docs.microsoft.com/azure/service-fabric/service-fabric-tutorial-deploy-app-with-cicd-vsts)
 
--   [Azure kapsayıcı hizmeti – Kubernetes dağıtma](https://docs.microsoft.com/vsts/build-release/apps/cd/azure/deploy-container-kubernetes)
+-   [Azure Container Service – Kubernetes dağıtımı](https://docs.microsoft.com/azure/devops/build-release/apps/cd/azure/deploy-container-kubernetes)
 
-Ancak, aynı zamanda dağıtabilirsiniz [Docker Swarm](https://blogs.msdn.microsoft.com/jcorioland/2016/11/29/full-ci-cd-pipeline-to-deploy-multi-containers-application-on-azure-container-service-docker-swarm-using-visual-studio-team-services/) veya Team Services betik tabanlı görevleri kullanarak DC/OS.
+Ancak ayrıca dağıtabileceğiniz [Docker Swarm](https://blogs.msdn.microsoft.com/jcorioland/2016/11/29/full-ci-cd-pipeline-to-deploy-multi-containers-application-on-azure-container-service-docker-swarm-using-visual-studio-team-services/) veya betik tabanlı Azure DevOps Hizmetleri'nin görevlerini kullanarak DC/OS.
 
-Dağıtım çeviklik kolaylaştırmanın devam etmek için bir geliştirme ve CI/CD çözümleri seçimiyle kapsayıcı iş yükleri için mükemmel geliştirme için-test-için-Üretim dağıtımı karşılaştığında bu araçlar sağlar.
+Hızlı Dağıtım etkinleştirme devam etmek için bu araçlar, geliştirme ve CI/CD çözümleri ile kapsayıcı iş yükleri için mükemmel bir geliştirme için-test-geliştirmeden üretime kadar dağıtım deneyimleri sağlar.
 
-Şekil 4-12 Azure kapsayıcı hizmeti Kubernetes kümede dağıtır sürekli dağıtım ardışık gösterir.
+Şekil 4-12 Azure Container Service'te bir Kubernetes kümesi dağıtır sürekli dağıtım işlem hattı gösterilmektedir.
 
-![Visual Studio Team Services sürekli dağıtım ardışık, Kubernetes kümeye dağıtma](./media/image12.png)
+![Azure DevOps Hizmetleri sürekli dağıtım ardışık, bir Kubernetes kümesine dağıtma](./media/image12.png)
 
-> **Şekil 4-12.** Visual Studio Team Services sürekli dağıtım ardışık, Kubernetes kümeye dağıtma
+> **Şekil 4-12.** Azure DevOps Hizmetleri sürekli dağıtım ardışık, bir Kubernetes kümesine dağıtma
 
 >[!div class="step-by-step"]
 [Önceki](modernize-your-apps-with-monitoring-and-telemetry.md)
-[sonraki](migrate-to-hybrid-cloud-scenarios.md)
+[İleri](migrate-to-hybrid-cloud-scenarios.md)

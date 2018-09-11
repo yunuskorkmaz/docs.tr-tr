@@ -4,12 +4,12 @@ description: Dotnet komutu çalıştırın, kaynak koddan uygulamanızı çalı�
 author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 609ac27f21e6801992b9e10c7d465a805492859e
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: f560e6f795f00488818647a4b5c711dcf9d59dcd
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245258"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44367750"
 ---
 # <a name="dotnet-run"></a>dotnet çalıştırın
 
@@ -44,7 +44,7 @@ dotnet run [-h|--help]
 
 `dotnet run` Komutu bir komut ile kaynak koddan uygulamanızı çalıştırmak için uygun bir seçenek sağlar. Komut satırından hızlı yinelemeli geliştirme için kullanışlıdır. Komut bağımlı [ `dotnet build` ](dotnet-build.md) Kodu derlemek için komutu. Derleme için tüm gereksinimleri, gibi proje gerekir geri ilk olarak, geçerli `dotnet run` de.
 
-Çıktı dosyaları olan varsayılan konumuna yazılır `bin/<configuration>/<target>`. Örneğin, varsa bir `netcoreapp1.0` ve uygulama çalıştırma `dotnet run`, çıkış yerleştirilir `bin/Debug/netcoreapp1.0`. Dosyaları gerektiği şekilde üzerine yazılır. Geçici dosyalar yerleştirildiğinde `obj` dizin.
+Çıktı dosyaları olan varsayılan konumuna yazılır `bin/<configuration>/<target>`. Örneğin, varsa bir `netcoreapp2.1` ve uygulama çalıştırma `dotnet run`, çıkış yerleştirilir `bin/Debug/netcoreapp2.1`. Dosyaları gerektiği şekilde üzerine yazılır. Geçici dosyalar yerleştirildiğinde `obj` dizin.
 
 Birden çok çerçeve proje belirtiyorsa, yürütme `dotnet run` sürece hatayla sonuçlanır `-f|--framework <FRAMEWORK>` seçeneği framework belirtmek için kullanılır.
 

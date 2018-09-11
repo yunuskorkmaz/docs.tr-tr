@@ -5,11 +5,11 @@ ms.assetid: 7667770e-d163-4ad6-a303-085cf73db2f2
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9cb7807fbfc1fbaf039fd7aef04331210dfa7cfa
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44227421"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44360974"
 ---
 # <a name="mef-for-net-for-windows-store-apps"></a>Windows Store uygulamaları için .NET için MEF
 <xref:System.Composition?displayProperty=nameWithType> ve bunun alt ad alanları içeren geliştirmek için türler Genişletilebilir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar Yönetilen Genişletilebilirlik Çerçevesi (MEF) ile. Bu ad alanları parçası olan [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] alt kümesi için [!INCLUDE[win8](../../../includes/win8-md.md)] işletim sistemi.  

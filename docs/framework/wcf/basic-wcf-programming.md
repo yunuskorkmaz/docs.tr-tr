@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], programming
 ms.assetid: 3ae3d498-f43c-4ecc-8cc0-6cbe36b62593
 ms.openlocfilehash: 7095784c2c9e2dc3c0ebafe84b89f9657321e1c5
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44275814"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44360513"
 ---
 # <a name="basic-wcf-programming"></a>Temel WCF Programlama
 Bu bölüm, Windows Communication Foundation (WCF) uygulamaları oluşturmaya yönelik temel bilgiler sunar.  

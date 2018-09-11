@@ -1,84 +1,84 @@
 ---
-title: Giriş olayları
-description: .NET Core ve dil tasarım hedeflerimiz bu genel bakışta olayları için olay hakkında bilgi edinin.
+title: Olaylara Giriş
+description: .NET Core ve olayları bu genel bakış için dil tasarım hedeflerimiz olayları hakkında bilgi edinin.
 ms.date: 06/20/2016
 ms.assetid: 9b8d2a00-1584-4a5b-8994-5003d54d8e0c
-ms.openlocfilehash: 2a2230ea5fba1b0cd5b13319677965e7a776549e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f14954dd2e8aeacf3c5ae70a9e891ad11a6f0d7
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33213480"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44365309"
 ---
-# <a name="introduction-to-events"></a>Giriş olayları
+# <a name="introduction-to-events"></a>Olaylara Giriş
 
 [Önceki](delegates-patterns.md)
 
-Olaylardır, temsilciler gibi bir *geç bağlama* mekanizması. Aslında, olayları temsilciler dil desteğini üzerinde oluşturulmuştur.
+Olaylar, temsilciler gibi bir *geç bağlama* mekanizması. Aslında, olaylar, temsilciler için dil desteği oluşturulur.
 
-(İçin sistemdeki tüm ilgilenen bileşenleri), bir yayın için bir nesne için bir yol gerçekleştirilmedi olaylardır. Herhangi bir bileşeni olaya abone olabilir ve bir olay oluşturulduğunda bildirilmesi.
+Bir yol ('ilgilenen tüm sistem bileşenlerinde), bir yayın bir nesne için gerçekleşen olaylardır. Başka bir bileşen olaya abone olabilir ve bir olay oluşturulduğunda bildirilmesi.
 
-Büyük olasılıkla programlama bazıları olayları kullandığınız. Çok sayıda grafik sistemleri rapor kullanıcı etkileşimi olay modeline sahiptir. Bu olaylar fare hareketini, düğme basma işlemlerine ve benzer etkileşimler raporlar. En yaygın ancak kesinlikle Hayır olayları kullanıldığı tek senaryo birini olmasıdır.
+Büyük olasılıkla programlama bazıları olayları kullandınız. Pek çok grafik sistemleri rapor kullanıcı etkileşimi bir olay modeline sahiptir. Bu olaylar, fare hareketini, düğme basma işlemlerine ve benzer etkileşimleri rapor. Bu en yaygın ancak açmamalı olayları kullanıldığı tek senaryo biridir.
 
-Sınıflar için oluşmalıdır olayları tanımlayabilirsiniz. Olaylarla çalışma, olduğunda bir önemli konu için belirli bir olay kayıtlı herhangi bir nesne olabilir. Kodunuzu olaylar hiçbir dinleyicileri zaman oluşturmaz böylece yapılandırılmış olan yazmanız gerekir.
+Sınıfları için harekete Geçirilmemesi gereken olayları tanımlayabilirsiniz. Olaylar ile çalışmayla, olduğunda önemli bir husus, belirli bir olay için kaydedilen herhangi bir nesne olmayabilir. Kodunuzu böylece hiçbir dinleyicileri olduğunda olayları geçirmemesi yapılandırılmış yazmanız gerekir.
 
-Bir olaya abone (olay kaynağı ve Olay havuzunu) iki nesne arasındaki bir ilişki oluşturur. Olay iç havuz olayları artık ilgileniyor olduğunda olay kaynağından işlemleri emin olmanız gerekir.
+Bir olaya abone olma, iki nesne (olay kaynağı ve olay havuzu) arasında bir bağlantı oluşturur. Olay havuzu olayları artık ilgilenilmiyor olduğunda olay kaynağından abonelikten çıkma emin olmak gerekir.
 
 ## <a name="design-goals-for-event-support"></a>Olay desteği için tasarım hedefleri
 
-Olaylar için dil tasarımı bu hedefleri hedefler.
+Olaylar için dil tasarımını bu hedeflere hedefler.
 
-İlk olarak, bir olay kaynağı ve bir olay havuz arasında çok az bağ etkinleştirin. Bu iki bileşenin aynı kuruluş tarafından yazılabilir değil ve farklı zamanlamada bile güncelleştirilebilir.
+İlk olarak, bir olay kaynağı ve olay havuzu arasında çok az eşleştirmeye etkinleştirin. Bu iki bileşenin aynı kuruluş tarafından yazılabilir değil ve hatta tamamen farklı zamanlamalarda güncelleştirilmemiş olabilir.
 
-İkincisi, bir olaya abone olmak ve o aynı olayından aboneliği için çok basit olmalıdır.
+İkincisi, çok basit bir olaya abone olun ve bu aynı olayın aboneliğini kaldırmak için olmalıdır.
 
-Ve son olarak, olay kaynakları birden çok olay aboneye desteklemesi gerekir. Ekli olay abone olması desteklemelidir.
+Ve son olarak, olay kaynakları birden çok etkinlik abonelerinden desteklemelidir. Bağlı hiçbir etkinlik abonelerinden sahip desteklemelidir.
 
-Hedefler olayları için temsilciler hedefleri için çok benzer olduğunu görebilirsiniz.
-İşte bu nedenle olay dil desteği temsilci dil desteği de yerleşiktir.
+Olaylar için hedef hedefler için temsilciler çok benzer olduğunu görebilirsiniz.
+İşte bu olay dil desteği temsilci dil desteği de yerleşik olarak bulunur.
 
 ## <a name="language-support-for-events"></a>Olaylar için dil desteği
 
-Olayları tanımlama ve abone olma ya da olayların aboneliği için sözdizimi temsilciler sözdizimi uzantısıdır.
+Olayları tanımlama ve abone veya olaylardan aboneliği sözdizimi temsilcileri söz diziminin bir uzantısıdır.
 
-Kullandığınız bir olay tanımlamak için `event` anahtar sözcüğü:
+Kullandığınız bir olayı tanımlamak için `event` anahtar sözcüğü:
 
 ```csharp
 public event EventHandler<FileListArgs> Progress;
 ```
 
-Olay türü (`EventHandler<FileListArgs>` Bu örnekte) bir temsilci türü olmalıdır. Bir olay bildirirken izlemelisiniz kuralları vardır. Genellikle, olay temsilci türü void dönüş sahiptir.
-Olay bildirimleri bir fiil veya bir fiil deyimi olmalıdır.
-Olay gerçekleştirilmedi bir şey bildirdiğinde geçmiş zamanın (Bu örnekte olduğu gibi) kullanın. Geçerli zamanın fiil kullanın (örneğin, `Closing`) çakışmasının benzer bildirilecek. Genellikle, geçerli zamanın kullanarak sınıfınız özelleştirme davranışı çeşit desteklediğini gösterir. En sık karşılaşılan senaryolardan biri, iptal desteklemektir. Örneğin, bir `Closing` olay kapatma işlemini, veya devam edip etmediğini gösteren bağımsız değişken içerebilir.  Diğer senaryolar olay bağımsız özelliklerini güncelleştirerek davranışını değiştirmek arayanlar sağlayabilir. Bir algoritma sürer önerilen bir sonraki eylem belirtmek için bir olay neden olabilir. Olay işleyicisi olay bağımsız değişkenini özelliklerini değiştirerek farklı bir eylem zorunlu kılabilir.
+Olay türü (`EventHandler<FileListArgs>` Bu örnekte) bir temsilci türü olmalıdır. Bir olay bildirirken izlemelidir kuralları vardır. Genellikle, olay temsilci türü bir void dönüş sahiptir.
+Olay bildirimleri, fiil veya bir fiil ifade olmalıdır.
+Olay gerçekleşen bir sorun bildirdiğinde geçmiş şimdiki (Bu örnekte olduğu gibi) kullanın. Şimdiki fiil kullanın (örneğin, `Closing`) gerçekleşmek üzere olan bir sorun bildirmek için. Genellikle, şimdiki kullanarak sınıfınız özelleştirme davranışı tür desteklediğini belirtir. En sık karşılaşılan senaryolardan biri, iptal desteklemektir. Örneğin, bir `Closing` olay kapatma işlemi, veya devam edip etmediğini belirtir bir bağımsız değişken içerebilir.  Olay bağımsız değişkenlerinin özelliklerini güncelleştirerek davranışını değiştirmek çağıranlar diğer senaryoları etkinleştirebilirsiniz. Bir algoritma sürer önerilen bir sonraki eylemi belirtmek için bir olay neden olabilir. Olay işleyicisi, olay bağımsız değişkenini özelliklerini değiştirerek farklı bir eylem zorunlu.
 
-Olayı oluşturmak istediğinizde, temsilci çağırma sözdizimini kullanarak olay işleyicileri arayın:
+Olayı oluşturmak istediğinizde, temsilci çağırma söz dizimi kullanarak olay işleyicileri çağırın:
 
 ```csharp
 Progress?.Invoke(this, new FileListArgs(file));
 ```
 
 Üzerinde bölümünde açıklandığı gibi [Temsilciler](delegates-patterns.md),?
-işleci, bu olaya abone olduğunuzda olayı çalışmayın emin olmak kolaylaştırır.
+işleci, o olaya abone olduğunuzda olayı çalışmayın emin olmak kolaylaştırır.
  
 Kullanarak bir olaya abone `+=` işleci:
 
 ```csharp
 EventHandler<FileListArgs> onProgress = (sender, eventArgs) => 
     Console.WriteLine(eventArgs.FoundFile);
-lister.Progress += OnProgress;
+lister.Progress += onProgress;
 ```
 
-İşleyici genellikle önekini 'On' olay adından yukarıda gösterildiği gibi yöntemidir.
+İşleyicisi yöntemi genellikle 'On' olay adından önce gelen yukarıda da gösterildiği gibi önekidir.
 
-Kullanarak aboneliği `-=` işleci:
+Kullanarak abonelikten `-=` işleci:
 
 ```csharp
 lister.Progress -= onProgress;
 ```
 
-Olay işleyicisini temsil eden ifade için yerel bir değişkeni bildirilen olduğunu dikkate almak önemlidir. İşleyici abonelikten kaldırır sağlar.
-Bunun yerine, lambda ifadesi gövdesi kullandıysanız, hiçbir şey yapmaz, hiçbir zaman eklenmiş olup, bir işleyici kaldırmaya çalışıyorsunuz.
+Olay işleyicisi temsil eden ifade için yerel bir değişken bildirildi olduğunu unutmayın. İşleyici unsubscribe kaldırır sağlar.
+Bunun yerine, lambda ifadesinin gövdesinin kullandıysanız, hiçbir şey yapan hiçbir zaman eklenmiş bir işleyici kaldırmaya çalışıyorsunuz.
 
-Sonraki makalede tipik olay desenleri ve bu örnek farklı çeşidi hakkında daha fazla bilgi edineceksiniz.
+Sonraki makalede, tipik olay desenleri ve bu örnekte farklı çeşitlerini hakkında daha fazla bilgi edineceksiniz.
 
 [Next](event-pattern.md)

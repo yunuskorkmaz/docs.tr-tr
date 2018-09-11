@@ -8,15 +8,15 @@ dev_langs:
 ms.assetid: 877e9c62-b082-4bfb-bc5b-f47297eb30ef
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5ab7632966cd2a0087a8bdc1d452d02543edbec4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b76140fb7d79b1e191c0451cd7556963130d224a
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572794"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44369023"
 ---
 # <a name="xml-document-creation"></a>XML belgesi oluşturma
-Bir XML belgesi oluşturmanın iki yolu vardır. Tek yönlü oluşturmaktır bir **XmlDocument** hiçbir parametre. Diğer bir yol oluşturmaktır bir **XmlDocument** ve bir XmlNameTable parametre olarak geçirin. Aşağıdaki örnek yeni bir boş oluşturulacağını gösterir **XmlDocument** hiçbir parametrelerini kullanarak.  
+Bir XML belgesi oluşturmak için iki yolu vardır. Oluşturmak için bir yolu olan bir **XmlDocument** parametre olmadan. Oluşturmak için diğer yol ise bir **XmlDocument** ve parametre olarak bir XmlNameTable geçirin. Aşağıdaki örnek, yeni, boş oluşturma işlemi gösterilmektedir **XmlDocument** hiçbir parametreleri kullanarak.  
   
 ```vb  
 Dim doc As New XmlDocument()  
@@ -26,9 +26,10 @@ Dim doc As New XmlDocument()
 XmlDocument doc = new XmlDocument();  
 ```  
   
- Bir belge oluşturulduktan sonra onu bir dize verilerle yükleyebilirsiniz akış, URL, metin okuyucu veya bir **XmlReader** sınıfını kullanarak türetilmiş **yük** yöntemi. Ayrıca başka bir yükleme yöntemini olan **LoadXML** bir dizeden XML okur yöntemi. Çeşitli hakkında daha fazla bilgi için **yük** yöntemleri bkz [bir XML belgesi DOM okuma](../../../../docs/standard/data/xml/reading-an-xml-document-into-the-dom.md).  
+ Bir belge oluşturulduktan sonra bu verileri bir dizeden ile yükleyebilirsiniz akış URL'si, metin okuyucuyu ya da bir **XmlReader** sınıfını kullanarak türetilmiş **yük** yöntemi. Ayrıca başka bir yükleme yöntemi vardır **LoadXML** yöntemi XML bir dizeden okur. Çeşitli hakkında daha fazla bilgi için **yük** yöntemleri bkz [DOM'da XML belgesi okuma](../../../../docs/standard/data/xml/reading-an-xml-document-into-the-dom.md).  
   
- Adlı bir sınıf yok **XmlNameTable**. Bu sınıf, atomized dize nesnelerin bir tablodur. Bu tabloda tüm yinelenen öğe ve öznitelik adları bir XML belgesi aynı dize nesnesi kullanılmak üzere XML Ayrıştırıcı için verimli bir yol sağlar. Bir **XmlNameTable** bir belge yukarıda gösterildiği gibi oluşturulduğunda ve belge yüklendiğinde özniteliği ve öğesi adlarıyla yüklendi otomatik olarak oluşturulur. Bir belge adı tablosu ile zaten varsa ve bu adlardan başka bir belgede yararlı olacaktır, kullanarak yeni bir belge oluşturabilirsiniz **yük** yönteminin alan bir **XmlNameTable** bir parametre olarak. Belgenin bu yöntemle oluşturulduğunda, varolan kullanan **XmlNameTable** ile tüm öznitelikler ve öğeler içine diğer belgesinden zaten yüklü. Verimli bir şekilde öğe ve öznitelik adları karşılaştırmak için kullanılabilir. Daha fazla bilgi için **XmlNameTable**, bkz: [nesne karşılaştırma kullanarak XmlNameTable](../../../../docs/standard/data/xml/object-comparison-using-xmlnametable.md). Başvuru için bkz: <xref:System.Xml.XmlNameTable>.  
+ Adlı bir sınıf yok **XmlNameTable**. Bu sınıf, parçalara ayrılmış bir dize nesnesi bir tablodur. Bu tabloda tüm yinelenen öğe ve öznitelik adları bir XML belgesi için aynı dize nesnesi kullanılacak XML Ayrıştırıcı için etkili bir yol sağlar. Bir **XmlNameTable** belge yukarıda da gösterildiği gibi oluşturulduğunda ve öğeyi ve öznitelik adları ile yüklenen belge yüklendiğinde otomatik olarak oluşturulur. Ad tablosu sahip bir belge zaten varsa ve bu başka bir belgede yararlı olacak adlardır, kullanarak yeni bir belge oluşturabilirsiniz **yük** gereken yöntemini bir **XmlNameTable** bir parametre olarak. Belgenin bu yöntemle oluşturulduğunda, varolan kullanır **XmlNameTable** tüm öznitelikleri ve öğeleri içine diğer belgeden zaten yüklü. Öğe ve öznitelik adları verimli bir şekilde karşılaştırmak için kullanılabilir. Daha fazla bilgi için **XmlNameTable**, bkz: [XmlNameTable kullanarak nesne karşılaştırma](../../../../docs/standard/data/xml/object-comparison-using-xmlnametable.md). Başvuru için bkz: <xref:System.Xml.XmlNameTable>.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [XML Belge Nesne Modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [XML Belge Nesne Modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

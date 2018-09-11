@@ -3,11 +3,11 @@ title: SQL iş akışı örneği Store özellikleri
 ms.date: 03/30/2017
 ms.assetid: 5bf75f3c-8f33-450d-967f-6ee862c14c67
 ms.openlocfilehash: 3707e4912628380e5e06eeae1a6d608a4b0d5555
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44264174"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44352287"
 ---
 # <a name="properties-of-sql-workflow-instance-store"></a>SQL iş akışı örneği Store özellikleri
 Bu bölümdeki konularda SQL iş akışı örneği Store özellikleri hakkında ayrıntılar verilmektedir.  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
 ms.openlocfilehash: 54fc56e5e7d6ee5cd0e7bc55bd22c7d4127eb4d3
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44228097"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44353794"
 ---
 # <a name="security-in-windows-forms-overview"></a>Windows Forms'ta Güvenliğe Genel Bakış
 Yayınlanmadan önce [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], çalışan tüm kod bir kullanıcı bilgisayar aynı haklarını veya bilgisayarın kullanıcısı olan kaynaklara erişim izinleri olan kullanıcının. Örneğin, kullanıcının dosya sistemine erişim izni, kod dosya sistemine erişebilir izin; Kullanıcı bir veritabanına erişmek için izin verilen, kod veritabanına erişmeye izin. Bu hak ve izinler kullanıcı açıkça yerel bilgisayarda yüklü olan yürütülebilir dosyaları, kod için kabul edilebilir olsa da, bunlar Internet veya yerel Intranet gelen kötü amaçlı kodlar için kabul edilebilir olmayabilir. Bu kod, kullanıcının izni olmadan bilgisayar kaynaklarına erişebilmesi olmamalıdır.  

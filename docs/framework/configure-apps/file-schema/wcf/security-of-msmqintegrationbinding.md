@@ -5,11 +5,11 @@ ms.assetid: ae5c68a8-14a2-4c6e-b9e0-3e94e3e9135e
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 6419c2157281d00cf79de16d4f494fc52bcee598
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44195601"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44353846"
 ---
 # <a name="ltsecuritygt-of-ltmsmqintegrationbindinggt"></a>&lt;msmqIntegrationBinding&gt; &lt;güvenliği&gt;
 Message Queuing (MSMQ) tümleştirme kanal taşıma güvenlik ayarlarını tanımlar.  

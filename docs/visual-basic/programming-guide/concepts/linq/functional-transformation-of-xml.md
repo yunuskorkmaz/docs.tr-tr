@@ -3,11 +3,11 @@ title: (Visual Basic) XML işlevsel dönüşümü
 ms.date: 07/20/2015
 ms.assetid: fdbe5b91-f457-4b4e-a11b-def4bdd77bab
 ms.openlocfilehash: 06803feb0fe23ae4afe2237b64bf920f6e229060
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44268714"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44365909"
 ---
 # <a name="functional-transformation-of-xml-visual-basic"></a>(Visual Basic) XML işlevsel dönüşümü
 Bu konu, XML belgelerinin sınırlandırması saf işlevsel dönüşüm yaklaşımını ele alır ve yordam yaklaşımından ile karşılaştırır.  

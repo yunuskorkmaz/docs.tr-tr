@@ -3,11 +3,11 @@ title: Temel serileştirme teknolojisi örneği
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
 ms.openlocfilehash: 474eb8ded01a72182533a6d49397d7567447d64e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44195239"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44361488"
 ---
 # <a name="basic-serialization-technology-sample"></a>Temel serileştirme teknolojisi örneği
 [Örneği indirin](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/Basic.zip.exe)  

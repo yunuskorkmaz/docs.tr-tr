@@ -6,11 +6,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 4275fa574d7fc30f5416c16aaafd2a9494904128
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44078795"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44361024"
 ---
 # <a name="understanding-webrequest-problems-and-exceptions"></a>Anlama WebRequest sorunlarını ve özel durumları
 <xref:System.Net.WebRequest> türetilen sınıflar (<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest>, ve <xref:System.Net.FileWebRequest>) olağan dışı bir koşul göstermek için özel durumlar. Bazı durumlarda bu sorunların çözümlenmesi belirgin değildir.  
