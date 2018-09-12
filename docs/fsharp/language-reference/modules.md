@@ -3,11 +3,11 @@ title: Modüller (F#)
 description: 'Bir F # modül değerleri, türleri ve işlev değerleri olarak F # programında gibi F # kodu, bir gruplandırma nasıl olduğunu öğrenin.'
 ms.date: 04/24/2017
 ms.openlocfilehash: fb0aa1d508d1141933b4fbdf10633f67ed078dc7
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
-ms.translationtype: HT
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 09/12/2018
-ms.locfileid: "44514361"
+ms.locfileid: "44705131"
 ---
 # <a name="modules"></a>Modüller
 

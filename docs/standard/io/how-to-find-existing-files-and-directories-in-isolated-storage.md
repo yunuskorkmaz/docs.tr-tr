@@ -20,11 +20,11 @@ ms.assetid: eb28458a-6161-4e7a-9ada-30ef93761b5c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 09c112374458b70a464291e898e9a880c8679773
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44197818"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44705872"
 ---
 # <a name="how-to-find-existing-files-and-directories-in-isolated-storage"></a>Nasıl yapılır: Yalıtılmış Depolamada Mevcut Dosya ve Dizinleri Bulma
 Yalıtılmış Depolama bir dizinde aramak için kullanın <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A?displayProperty=nameWithType> yöntemi. Bu yöntem bir arama deseni temsil eden bir dize alır. Hem tek karakterli (?) hem de birden çok karakter (*) kullanabilirsiniz joker karakterlere arama deseninde, ancak joker karakterler adının son bölümünde yer almalıdır. Örneğin, `directory1/*ect*` bir geçerli bir arama dizesi ancak `*ect*/directory2` değil.  

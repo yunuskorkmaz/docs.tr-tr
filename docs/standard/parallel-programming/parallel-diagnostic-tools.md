@@ -8,11 +8,11 @@ ms.assetid: 38f7302a-ddf6-4179-ba19-f49e00395b9f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4649f33fe07e7780630fbd11170bb54046617c14
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44368066"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44704355"
 ---
 # <a name="parallel-diagnostic-tools"></a>Paralel Tanılama Araçları
 Visual Studio hata ayıklama ve profil oluşturma çok iş parçacıklı uygulamalar için kapsamlı destek sağlar.  

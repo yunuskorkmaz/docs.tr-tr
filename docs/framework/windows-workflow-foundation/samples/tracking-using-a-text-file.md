@@ -3,11 +3,11 @@ title: Bir metin dosyası kullanarak izleme
 ms.date: 03/30/2017
 ms.assetid: 56a82682-73c2-4b91-a206-4d8bb12c561b
 ms.openlocfilehash: 19b4d544bc1d1c5bc9ebfa51b4ba28eb82c525d0
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44262706"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44707305"
 ---
 # <a name="tracking-using-a-text-file"></a>Bir metin dosyası kullanarak izleme
 Bu örnek bir özel izleme katılımcı oluşturarak izleme Windows Workflow Foundation (WF) gösterilmektedir. İzleme katılımcıları yayılan gibi çalışma zamanını şuradan izleme kayıtları bildiren .NET Framework sınıflardır. Hangi hedef senaryonuz için gerekli izleme olayları taşımak için izleme katılımcı oluşturabilirsiniz. Örneğin, (olay izleme için Windows) ETW İzleme katılımcı bir parçası olarak sağlanan [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Bu örnekte izleme katılımcı kayıtları XML biçiminde bir metin dosyasına yazar.  
