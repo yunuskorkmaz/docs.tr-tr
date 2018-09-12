@@ -13,11 +13,11 @@ ms.assetid: 416be383-cc61-4102-9b1b-88b51adb963e
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a8266db66abb46ffc9503bdaeaf4ec4078177760
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
-ms.translationtype: MT
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44342845"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44511571"
 ---
 # <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>Dizi ve Listeleri Düzenlemek için Genel Temsilciler
 Bu konu, bir dizi veya koleksiyon öğeleri üzerinde gerçekleştirilecek dönüştürmeler, terimlere arama yüklemleri ve Eylemler için genel temsilciler genel bir bakış sağlar.  

@@ -3,11 +3,11 @@ title: SQL iş akışı örneği Store
 ms.date: 03/30/2017
 ms.assetid: 8cd2f8a5-4bf8-46ea-8909-c7fdb314fabc
 ms.openlocfilehash: 680a233ca721cd8a0c620b797832419f460b13b6
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192060"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44698321"
 ---
 # <a name="sql-workflow-instance-store"></a>SQL iş akışı örneği Store
 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] Bir SQL Server 2005 veya SQL Server 2008 veritabanına iş akışı durumlarda hakkındaki durum bilgilerini kalıcı hale getirmek iş akışlarını tanır SQL iş akışı örneği Store ile birlikte gelir. Bu özellik öncelikle biçiminde uygulanan <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> Özet türetilen sınıfı <xref:System.Runtime.DurableInstancing.InstanceStore> Kalıcılık framework'ün sınıfı. SQL iş akışı örneği Store özelliği bir somut sürekliliğin uygulanmasını Kalıcılık komutları depoya göndermek için bir ana bilgisayar kullanan bir SQL Kalıcılık sağlayıcısı oluşturur.  

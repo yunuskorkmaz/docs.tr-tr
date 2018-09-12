@@ -3,11 +3,11 @@ title: İzlemeyi Genişletme
 ms.date: 03/30/2017
 ms.assetid: 2b971a99-16ec-4949-ad2e-b0c8731a873f
 ms.openlocfilehash: 02dfcc099883ed1d5e97b4f7b1a1f76d49b27a20
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44268453"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44494206"
 ---
 # <a name="extending-tracing"></a>İzlemeyi Genişletme
 Bu örnek, kullanıcı tanımlı etkinlik izlemeleri istemci ve hizmet kodu yazarak Windows Communication Foundation (WCF) izleme özelliğini genişletme gösterir. Bu izleme etkinliklerin oluşturup izlemeleri çalışmanın mantıksal birimler halinde gruplandırmak kullanıcı sağlar. Aktarımları (içinde aynı uç noktası) ile etkinlikleri ve yayma (uç noktalar genelinde) ilişkilendirmek mümkündür. Bu örnekte, hem istemci hem de hizmet için izlemeyi etkinleştirilir. İstemci ve hizmet yapılandırma dosyalarında izlemenin nasıl etkinleştirileceği hakkında daha fazla bilgi için bkz. [izleme ve ileti günlüğe kaydetme](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md).  

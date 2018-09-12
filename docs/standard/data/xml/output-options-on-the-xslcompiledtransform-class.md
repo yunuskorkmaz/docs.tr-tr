@@ -6,11 +6,11 @@ ms.assetid: 91ce8cba-386c-411e-bb38-0891a0393c0a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 694d2be51d025ab054caf19e4aa2900216ad5b2e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44183492"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44494050"
 ---
 # <a name="output-options-on-the-xslcompiledtransform-class"></a>XslCompiledTransform sınıfındaki çıkış seçenekleri
 Bu konu başlığı altında kullanılabilir XSLT çıkış seçenekleri açıklanır. Stil sayfası veya üzerinde çıkış seçenekleri belirtebilirsiniz <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> yöntemi.  

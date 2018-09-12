@@ -11,11 +11,11 @@ helpviewer_keywords:
 - SecurityToken class
 ms.assetid: 6d892973-1558-4115-a9e1-696777776125
 ms.openlocfilehash: fd168bf2e5233d9119872b267aea466a7af07041
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44195666"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44699744"
 ---
 # <a name="how-to-create-a-custom-token"></a>Nasıl yapılır: Özel Belirteç Oluşturma
 Bu konuda, kullanarak bir özel güvenlik belirteci oluşturma işlemi gösterilmektedir <xref:System.IdentityModel.Tokens.SecurityToken> sınıfı ve bir özel güvenlik belirteci sağlayıcı ve authenticator ile tümleştirmeyi öğreneceksiniz. Tam kod örneği için bkz. [özel belirteç](../../../../docs/framework/wcf/samples/custom-token.md) örnek.  

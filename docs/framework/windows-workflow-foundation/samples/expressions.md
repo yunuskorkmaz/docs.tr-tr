@@ -3,11 +3,11 @@ title: Expressions2
 ms.date: 03/30/2017
 ms.assetid: 43a85905-77b5-4893-bb38-1cb9b293d69d
 ms.openlocfilehash: e852b62e6d0b6b4b3ddc19b197902de5325310a1
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44275099"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44493544"
 ---
 # <a name="expressions"></a>İfadeler
 Bu örnek, temel ifadeleri bir iş akışında kullanmayı gösterir. Temel maaş istatistikleri hesaplar iki kurgusal bir şirkette çalışanlar için bir iş akışı oluşur. İki sınıf `Employee` ve `SalaryStats`, Employee.cs ve SalaryStats.cs tanımlanmış. Bu sınıfların nasıl basit aritmetik ve dizeyi değişkenleri özelliklerini karmaşık türleri işlemleri gösteren bir iş akışında kullanılır.  

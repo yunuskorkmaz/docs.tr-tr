@@ -10,11 +10,11 @@ ms.assetid: 2ed8c28b-b88d-4be7-9c87-92df01f0821f
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8b9eedfab68dc6aeacf9ed51ffc7205b73c062ca
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44338720"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44511662"
 ---
 # <a name="insert-xml-data-using-xpathnavigator"></a>XPathNavigator kullanarak XML verilerini Ekle
 <xref:System.Xml.XPath.XPathNavigator> Sınıf bir XML belgesinde eşdüzey, alt öğe ve öznitelik düğümleri eklemek için kullanılan yöntemler kümesi sağlar. Bu yöntemleri kullanmak için <xref:System.Xml.XPath.XPathNavigator> nesne olmalıdır düzenlenemez, diğer bir deyişle, kendi <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> özelliği olmalıdır `true`.  

@@ -3,11 +3,11 @@ title: do Bağlamaları (F#)
 description: "F # 'bağlaması yapma' bir işlev veya değer tanımlamadan kod yürütmek için nasıl kullanıldığını öğrenin."
 ms.date: 05/16/2016
 ms.openlocfilehash: 78dbf8da0fe40b5af566ad98693df1109eede7e4
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44353102"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44700329"
 ---
 # <a name="do-bindings"></a>do Bağlamaları
 

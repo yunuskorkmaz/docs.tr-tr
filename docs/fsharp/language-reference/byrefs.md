@@ -2,12 +2,12 @@
 title: 'Zkratka (F #)'
 description: 'Byref ve düşük düzeydeki programlama için kullanılan byref-like türleri F # hakkında bilgi edinin.'
 ms.date: 09/02/2018
-ms.openlocfilehash: 7d4138649ee39a0d342db2828ad4d32fbded978c
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.openlocfilehash: 6131104e4325f77da84368c337f998c6b2b5309b
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44338668"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44699652"
 ---
 # <a name="byrefs"></a>Zkratka
 
@@ -105,7 +105,7 @@ Tüm bu kuralların birlikte sahibi anlamına bir `inref` işaretçi işaret edi
 
 Amacı `outref<'T>` işaretçi gelen yalnızca okunmalıdır belirtmektir. Beklenmedik bir şekilde, `outref<'T>` değer adını rağmen temel alınan okuma izin verir. Bu, uyumluluk amacıyla kullanılır. Anlamsal olarak, `outref<'T>` farklı değildir `byref<'T>`.
 
-### <a name="interop-with-c"></a>C ile birlikte çalışma #
+### <a name="interop-with-c"></a>C# ile birlikte çalışma #
 
 C# destekler `in ref` ve `out ref` yanı sıra anahtar sözcükleri `ref` döndürür. Aşağıdaki tabloda, F # ne C# yayan yorumlaması gösterilmektedir:
 
@@ -196,7 +196,7 @@ Zincirleme birden çok çağrı yoluyla bir başvurusu geçirme gibi örtük ba�
 Bir geri dönmek de doğrudan atayabilir `byref`. Aşağıdaki (kesinlik temelli yüksek oranda) programı göz önünde bulundurun:
 
 ```fsharp
-ype C() =
+type C() =
     let mutable nums = [| 1; 3; 7; 15; 31; 63; 127; 255; 511; 1023 |]
 
     override __.ToString() = String.Join(' ', nums)

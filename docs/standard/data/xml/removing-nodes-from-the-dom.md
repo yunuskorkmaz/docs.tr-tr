@@ -6,11 +6,11 @@ ms.assetid: 0a98e0ca-0555-45c1-ab69-0d8d20ca1abd
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: be592466627e6ee7b23c608e0defe786548907ad
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44341348"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44493608"
 ---
 # <a name="removing-nodes-from-the-dom"></a>DOM'dan düğümleri kaldırma
 XML belge nesne modeli (DOM) öğesinden bir düğümü kaldırmak için <xref:System.Xml.XmlNode.RemoveChild%2A> belirli bir düğümü kaldırmak için yöntemi. Yöntemi, bir düğümü kaldırdığınızda, kaldırılmakta olan düğüme ait alt ağacı kaldırır; diğer bir deyişle, bir yaprak düğüm değilse.  

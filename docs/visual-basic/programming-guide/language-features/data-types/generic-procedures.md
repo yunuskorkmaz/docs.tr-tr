@@ -13,11 +13,11 @@ helpviewer_keywords:
 - generic procedures [Visual Basic], type inference
 ms.assetid: 95577b28-137f-4d5c-a149-919c828600e5
 ms.openlocfilehash: 9a88a979a6b46f897e5f04f4481d4a23e245b165
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44195026"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44509507"
 ---
 # <a name="generic-procedures-in-visual-basic"></a>Visual Basic'de Genel Yordamlar
 A *genel yordam*ayrıca adlı bir *genel yöntem*, en az bir tür parametreyle tanımlanan bir yordam olduğunu. Bu, çağıran kodu yordam çağrıları her zaman veri türleri, gereksinimleri ile uyumlu hale getirmenizi sağlar.  

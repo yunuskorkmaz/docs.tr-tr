@@ -7,11 +7,11 @@ helpviewer_keywords:
 - visual tree [WPF]
 ms.assetid: e83f25e5-d66b-4fc7-92d2-50130c9a6649
 ms.openlocfilehash: e6173916ad64a60d3727b5d35bb2a2302b881b38
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44265019"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44700722"
 ---
 # <a name="trees-in-wpf"></a>WPF İçinde Ağaçlar
 Birçok teknolojileri burada geliştiriciler nesne düğümleri işleme veya uygulamanın davranışını etkilemek için ağacında doğrudan düzenlemezsiniz ağaç yapısında öğeleri ve bileşenleri düzenlenir. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Ayrıca birkaç ağaç yapısı metaphors program öğeler arasındaki ilişkileri tanımlamak için kullanır. Çoğunlukla WPF geliştiricilerinin kod içinde bir uygulama oluşturun veya nesne ağaç benzetimini düşünmek kavramsal olarak çalışırken XAML içinde uygulama bölümlerini tanımlayan ancak olacak belirli bir API'yi çağırıp ya da bunu yerine bazı genel yapmak için özel biçimlendirme kullanma Nesne ağacında işlemeyi API gibi XML DOM kullanabilir WPF sunan bir ağaç benzetimini görünümü sağlayan iki yardımcı sınıflar <xref:System.Windows.LogicalTreeHelper> ve <xref:System.Windows.Media.VisualTreeHelper>. Bu aynı ağaçları belirli anahtar WPF özellikleri davranışını anlamak için yararlı olduğundan koşulları görsel ağacı ve mantıksal ağaç WPF belgelerinde de kullanılır. Bu konu ne görsel ağacı ve mantıksal ağaç temsil tanımlar, böyle ağaçları için genel bir nesne ağacında kavramdır nasıl ilişkili olduğunu açıklar ve tanıtır <xref:System.Windows.LogicalTreeHelper> ve <xref:System.Windows.Media.VisualTreeHelper>s.  

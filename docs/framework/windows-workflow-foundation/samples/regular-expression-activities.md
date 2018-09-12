@@ -3,11 +3,11 @@ title: Normal ifade etkinlikleri
 ms.date: 03/30/2017
 ms.assetid: b8f24694-49db-4339-92ec-014e3d4ae63b
 ms.openlocfilehash: 50daa5b6d7baab37f372de4c30c2e0d12b4fa943
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44201016"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44509888"
 ---
 # <a name="regular-expression-activities"></a>Normal ifade etkinlikleri
 Bu örnek normal ifade işlevselliğini kullanıma sunan bir etkinlik kümesini oluşturmak nasıl gösterir <xref:System.Text.RegularExpressions> ad alanı. Bu özel etkinlikler, bir iş akışı uygulama içinde kullanılabilir. Normal ifadeler hakkında daha fazla bilgi için bkz. [t:System.Text.RegularExpressions.Regex](https://go.microsoft.com/fwlink/?LinkId=150434) Namespace.  

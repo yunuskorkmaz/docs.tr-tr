@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
 ms.openlocfilehash: 0003e6c5e9499c066f47202a6dd03fc86268d679
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44341500"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44510842"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>Parametre olarak XML değerleri belirtme
 Sorgu değeri bir XML dizesi olan bir parametre gerektiriyorsa, geliştiricilerin bir örneğini kullanarak bu değeri sağlayabilir **SqlXml** veri türü. Gerçekten vardır hiçbir püf noktaları; SQL Server'da XML sütunları, diğer veri türleri ile aynı şekilde parametre değerleri kabul edin.  
