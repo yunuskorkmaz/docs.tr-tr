@@ -9,24 +9,24 @@ ms.assetid: 5412c90f-2703-4aa8-a9c4-1b8a35183c37
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 515edf26df6190d2bf4906f3de2d019b1a4175fb
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44341440"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44709178"
 ---
-# <a name="ordered-node-retrieval-by-index"></a><span data-ttu-id="81ab4-102">Düğüm alma dizine göre sıralı</span><span class="sxs-lookup"><span data-stu-id="81ab4-102">Ordered Node Retrieval by Index</span></span>
-<span data-ttu-id="81ab4-103">World Wide Web Consortium (W3C) XML belge nesne modeli (DOM) tarafından işlenen sıralanmamış aksine düğümleri sıralı bir listesi işleyebilme yeteneği olan bir düğüm listesine de açıklar **XmlNamedNodeMap**.</span><span class="sxs-lookup"><span data-stu-id="81ab4-103">The World Wide Web Consortium (W3C) XML Document Object Model (DOM) also describes a NodeList, which has the ability to handle an ordered list of nodes, as opposed to the unordered set handled by the **XmlNamedNodeMap**.</span></span> <span data-ttu-id="81ab4-104">Bir düğüm listesine neden Microsoft .NET Framework adlı **XmlNodeList**.</span><span class="sxs-lookup"><span data-stu-id="81ab4-104">The NodeList in the Microsoft .NET Framework is called **XmlNodeList**.</span></span> <span data-ttu-id="81ab4-105">Yöntemleri ve döndüren özellikler bir **XmlNodeList** şunlardır:</span><span class="sxs-lookup"><span data-stu-id="81ab4-105">Methods and properties that return an **XmlNodeList** are:</span></span>  
+# <a name="ordered-node-retrieval-by-index"></a><span data-ttu-id="bd8b4-102">Düğüm alma dizine göre sıralı</span><span class="sxs-lookup"><span data-stu-id="bd8b4-102">Ordered Node Retrieval by Index</span></span>
+<span data-ttu-id="bd8b4-103">World Wide Web Consortium (W3C) XML belge nesne modeli (DOM) tarafından işlenen sıralanmamış aksine düğümleri sıralı bir listesi işleyebilme yeteneği olan bir düğüm listesine de açıklar **XmlNamedNodeMap**.</span><span class="sxs-lookup"><span data-stu-id="bd8b4-103">The World Wide Web Consortium (W3C) XML Document Object Model (DOM) also describes a NodeList, which has the ability to handle an ordered list of nodes, as opposed to the unordered set handled by the **XmlNamedNodeMap**.</span></span> <span data-ttu-id="bd8b4-104">Bir düğüm listesine neden Microsoft .NET Framework adlı **XmlNodeList**.</span><span class="sxs-lookup"><span data-stu-id="bd8b4-104">The NodeList in the Microsoft .NET Framework is called **XmlNodeList**.</span></span> <span data-ttu-id="bd8b4-105">Yöntemleri ve döndüren özellikler bir **XmlNodeList** şunlardır:</span><span class="sxs-lookup"><span data-stu-id="bd8b4-105">Methods and properties that return an **XmlNodeList** are:</span></span>  
   
--   <span data-ttu-id="81ab4-106">XmlNode.ChildNodes</span><span class="sxs-lookup"><span data-stu-id="81ab4-106">XmlNode.ChildNodes</span></span>  
+-   <span data-ttu-id="bd8b4-106">XmlNode.ChildNodes</span><span class="sxs-lookup"><span data-stu-id="bd8b4-106">XmlNode.ChildNodes</span></span>  
   
--   <span data-ttu-id="81ab4-107">XmlDocument.GetElementsByTagName</span><span class="sxs-lookup"><span data-stu-id="81ab4-107">XmlDocument.GetElementsByTagName</span></span>  
+-   <span data-ttu-id="bd8b4-107">XmlDocument.GetElementsByTagName</span><span class="sxs-lookup"><span data-stu-id="bd8b4-107">XmlDocument.GetElementsByTagName</span></span>  
   
--   <span data-ttu-id="81ab4-108">XmlElement.GetElementsByTagName</span><span class="sxs-lookup"><span data-stu-id="81ab4-108">XmlElement.GetElementsByTagName</span></span>  
+-   <span data-ttu-id="bd8b4-108">XmlElement.GetElementsByTagName</span><span class="sxs-lookup"><span data-stu-id="bd8b4-108">XmlElement.GetElementsByTagName</span></span>  
   
--   <span data-ttu-id="81ab4-109">XmlNode.SelectNodes</span><span class="sxs-lookup"><span data-stu-id="81ab4-109">XmlNode.SelectNodes</span></span>  
+-   <span data-ttu-id="bd8b4-109">XmlNode.SelectNodes</span><span class="sxs-lookup"><span data-stu-id="bd8b4-109">XmlNode.SelectNodes</span></span>  
   
- <span data-ttu-id="81ab4-110">**XmlNodeList** sahip bir **sayısı** düğümler üzerinden yinelemek için döngüleri yazmak için kullanılan özellik **XmlNodeList**aşağıdaki kod örneğinde gösterildiği gibi:</span><span class="sxs-lookup"><span data-stu-id="81ab4-110">The **XmlNodeList** has a **Count** property that can be used to write loops to iterate over the nodes in the **XmlNodeList**, as shown in the following code sample:</span></span>  
+ <span data-ttu-id="bd8b4-110">**XmlNodeList** sahip bir **sayısı** düğümler üzerinden yinelemek için döngüleri yazmak için kullanılan özellik **XmlNodeList**aşağıdaki kod örneğinde gösterildiği gibi:</span><span class="sxs-lookup"><span data-stu-id="bd8b4-110">The **XmlNodeList** has a **Count** property that can be used to write loops to iterate over the nodes in the **XmlNodeList**, as shown in the following code sample:</span></span>  
   
 ```vb  
 Dim doc as XmlDocument = new XmlDocument()  
@@ -55,7 +55,7 @@ for (int i=0; i < elemList.Count; i++)
 }   
 ```  
   
- <span data-ttu-id="81ab4-111">Ek olarak **sayısı** özelliği var. bir **GetEnumerator** sağlayan yöntemi `foreach` düğümleri koleksiyonu üzerinden yineleme stil **XmlNodeList**.</span><span class="sxs-lookup"><span data-stu-id="81ab4-111">In addition to the **Count** property, there is a **GetEnumerator** method that provides a, `foreach` style iteration over the collection of nodes in the **XmlNodeList**.</span></span> <span data-ttu-id="81ab4-112">Aşağıdaki kod örneği, kullanımını gösterir `foreach` deyimi.</span><span class="sxs-lookup"><span data-stu-id="81ab4-112">The following code example shows the use of the `foreach` statement.</span></span>  
+ <span data-ttu-id="bd8b4-111">Ek olarak **sayısı** özelliği var. bir **GetEnumerator** sağlayan yöntemi `foreach` düğümleri koleksiyonu üzerinden yineleme stil **XmlNodeList**.</span><span class="sxs-lookup"><span data-stu-id="bd8b4-111">In addition to the **Count** property, there is a **GetEnumerator** method that provides a, `foreach` style iteration over the collection of nodes in the **XmlNodeList**.</span></span> <span data-ttu-id="bd8b4-112">Aşağıdaki kod örneği, kullanımını gösterir `foreach` deyimi.</span><span class="sxs-lookup"><span data-stu-id="bd8b4-112">The following code example shows the use of the `foreach` statement.</span></span>  
   
 ```vb  
 Dim doc As New XmlDocument()  
@@ -92,8 +92,8 @@ End While
   }  
 ```  
   
- <span data-ttu-id="81ab4-113">Kullanılabilir özellikler ve yöntemler hakkında daha fazla bilgi için **XmlNodeList**, bkz: <xref:System.Xml.XmlNodeList>.</span><span class="sxs-lookup"><span data-stu-id="81ab4-113">For more information on the methods and properties available on the **XmlNodeList**, see <xref:System.Xml.XmlNodeList>.</span></span>  
+ <span data-ttu-id="bd8b4-113">Kullanılabilir özellikler ve yöntemler hakkında daha fazla bilgi için **XmlNodeList**, bkz: <xref:System.Xml.XmlNodeList>.</span><span class="sxs-lookup"><span data-stu-id="bd8b4-113">For more information on the methods and properties available on the **XmlNodeList**, see <xref:System.Xml.XmlNodeList>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="81ab4-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="81ab4-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bd8b4-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="bd8b4-114">See also</span></span>
 
-- [<span data-ttu-id="81ab4-115">XML Belge Nesne Modeli (DOM)</span><span class="sxs-lookup"><span data-stu-id="81ab4-115">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [<span data-ttu-id="bd8b4-115">XML Belge Nesne Modeli (DOM)</span><span class="sxs-lookup"><span data-stu-id="bd8b4-115">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
