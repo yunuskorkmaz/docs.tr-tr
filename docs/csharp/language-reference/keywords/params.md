@@ -9,35 +9,35 @@ helpviewer_keywords:
 - params keyword [C#]
 ms.assetid: 1690815e-b52b-4967-8380-5780aff08012
 ms.openlocfilehash: 089e31f3aad12c2303619e2a1998d0d6a5a0ad86
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44342098"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44700511"
 ---
-# <a name="params-c-reference"></a><span data-ttu-id="8e9e8-102">params (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="8e9e8-102">params (C# Reference)</span></span>
+# <a name="params-c-reference"></a><span data-ttu-id="30829-102">params (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="30829-102">params (C# Reference)</span></span>
 
-<span data-ttu-id="8e9e8-103">Kullanarak `params` belirtebileceğiniz anahtar sözcüğü, bir [yöntem parametresi](method-parameters.md) , değişken sayıda bağımsız değişken alır.</span><span class="sxs-lookup"><span data-stu-id="8e9e8-103">By using the `params` keyword, you can specify a [method parameter](method-parameters.md) that takes a variable number of arguments.</span></span>
+<span data-ttu-id="30829-103">Kullanarak `params` belirtebileceğiniz anahtar sözcüğü, bir [yöntem parametresi](method-parameters.md) , değişken sayıda bağımsız değişken alır.</span><span class="sxs-lookup"><span data-stu-id="30829-103">By using the `params` keyword, you can specify a [method parameter](method-parameters.md) that takes a variable number of arguments.</span></span>
 
-<span data-ttu-id="8e9e8-104">Parametre bildiriminde belirtilen türde bağımsız değişkenleri dizisini belirtilen türdeki bağımsız değişkenlerin virgülle ayrılmış bir liste gönderebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="8e9e8-104">You can send a comma-separated list of arguments of the type specified in the parameter declaration or an array of arguments of the specified type.</span></span> <span data-ttu-id="8e9e8-105">Ayrıca, herhangi bir bağımsız değişken gönderebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="8e9e8-105">You also can send no arguments.</span></span> <span data-ttu-id="8e9e8-106">Hiçbir bağımsız değişken uzunluğu gönderirseniz `params` sıfır listesidir.</span><span class="sxs-lookup"><span data-stu-id="8e9e8-106">If you send no arguments, the length of the `params` list is zero.</span></span>
+<span data-ttu-id="30829-104">Parametre bildiriminde belirtilen türde bağımsız değişkenleri dizisini belirtilen türdeki bağımsız değişkenlerin virgülle ayrılmış bir liste gönderebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="30829-104">You can send a comma-separated list of arguments of the type specified in the parameter declaration or an array of arguments of the specified type.</span></span> <span data-ttu-id="30829-105">Ayrıca, herhangi bir bağımsız değişken gönderebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="30829-105">You also can send no arguments.</span></span> <span data-ttu-id="30829-106">Hiçbir bağımsız değişken uzunluğu gönderirseniz `params` sıfır listesidir.</span><span class="sxs-lookup"><span data-stu-id="30829-106">If you send no arguments, the length of the `params` list is zero.</span></span>
 
-<span data-ttu-id="8e9e8-107">Ek parametre sonra izin verilen `params` anahtar sözcüğü bir yöntem bildiriminde ve tek `params` anahtar sözcüğü bir metodun bildiriminde izin verilir.</span><span class="sxs-lookup"><span data-stu-id="8e9e8-107">No additional parameters are permitted after the `params` keyword in a method declaration, and only one `params` keyword is permitted in a method declaration.</span></span>
+<span data-ttu-id="30829-107">Ek parametre sonra izin verilen `params` anahtar sözcüğü bir yöntem bildiriminde ve tek `params` anahtar sözcüğü bir metodun bildiriminde izin verilir.</span><span class="sxs-lookup"><span data-stu-id="30829-107">No additional parameters are permitted after the `params` keyword in a method declaration, and only one `params` keyword is permitted in a method declaration.</span></span>
 
-<span data-ttu-id="8e9e8-108">Bildirilen türü `params` parametresi, aşağıdaki örnekte gösterildiği gibi bir tek boyutlu bir dizi olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="8e9e8-108">The declared type of the `params` parameter must be a single-dimensional array, as the following example shows.</span></span> <span data-ttu-id="8e9e8-109">Aksi halde bir derleyici hatası [CS0225](../../misc/cs0225.md) gerçekleşir.</span><span class="sxs-lookup"><span data-stu-id="8e9e8-109">Otherwise, a compiler error [CS0225](../../misc/cs0225.md) occurs.</span></span>
+<span data-ttu-id="30829-108">Bildirilen türü `params` parametresi, aşağıdaki örnekte gösterildiği gibi bir tek boyutlu bir dizi olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="30829-108">The declared type of the `params` parameter must be a single-dimensional array, as the following example shows.</span></span> <span data-ttu-id="30829-109">Aksi halde bir derleyici hatası [CS0225](../../misc/cs0225.md) gerçekleşir.</span><span class="sxs-lookup"><span data-stu-id="30829-109">Otherwise, a compiler error [CS0225](../../misc/cs0225.md) occurs.</span></span>
 
-## <a name="example"></a><span data-ttu-id="8e9e8-110">Örnek</span><span class="sxs-lookup"><span data-stu-id="8e9e8-110">Example</span></span>
+## <a name="example"></a><span data-ttu-id="30829-110">Örnek</span><span class="sxs-lookup"><span data-stu-id="30829-110">Example</span></span>
 
-<span data-ttu-id="8e9e8-111">Aşağıdaki örnek, bağımsız değişkenleri göndermenin çeşitli yollarını gösterir bir `params` parametresi.</span><span class="sxs-lookup"><span data-stu-id="8e9e8-111">The following example demonstrates various ways in which arguments can be sent to a `params` parameter.</span></span>
+<span data-ttu-id="30829-111">Aşağıdaki örnek, bağımsız değişkenleri göndermenin çeşitli yollarını gösterir bir `params` parametresi.</span><span class="sxs-lookup"><span data-stu-id="30829-111">The following example demonstrates various ways in which arguments can be sent to a `params` parameter.</span></span>
 
 [!code-csharp[csrefKeywordsMethodParams#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsMethodParams/CS/csrefKeywordsMethodParams.cs#5)] 
 
-## <a name="c-language-specification"></a><span data-ttu-id="8e9e8-112">C# dili belirtimi</span><span class="sxs-lookup"><span data-stu-id="8e9e8-112">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="30829-112">C# dili belirtimi</span><span class="sxs-lookup"><span data-stu-id="30829-112">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="8e9e8-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8e9e8-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="30829-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="30829-113">See also</span></span>
 
-- [<span data-ttu-id="8e9e8-114">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="8e9e8-114">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="8e9e8-115">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="8e9e8-115">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="8e9e8-116">C# Anahtar Sözcükleri</span><span class="sxs-lookup"><span data-stu-id="8e9e8-116">C# Keywords</span></span>](index.md)
-- [<span data-ttu-id="8e9e8-117">Yöntem Parametreleri</span><span class="sxs-lookup"><span data-stu-id="8e9e8-117">Method Parameters</span></span>](method-parameters.md)
+- [<span data-ttu-id="30829-114">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="30829-114">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="30829-115">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="30829-115">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="30829-116">C# Anahtar Sözcükleri</span><span class="sxs-lookup"><span data-stu-id="30829-116">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="30829-117">Yöntem Parametreleri</span><span class="sxs-lookup"><span data-stu-id="30829-117">Method Parameters</span></span>](method-parameters.md)
