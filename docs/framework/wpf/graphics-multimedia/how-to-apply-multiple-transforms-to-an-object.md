@@ -11,25 +11,25 @@ helpviewer_keywords:
 - TransformGroup [WPF]
 ms.assetid: 98cd1921-12bc-4bf5-8193-529228fb7402
 ms.openlocfilehash: 0700a7ae3f18f745b0d479ace3acbf2d7fbd9722
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44365880"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44710800"
 ---
-# <a name="how-to-apply-multiple-transforms-to-an-object"></a><span data-ttu-id="0e6eb-102">Nasıl yapılır: Nesneye Birden Çok Dönüşüm Uygulama</span><span class="sxs-lookup"><span data-stu-id="0e6eb-102">How to: Apply Multiple Transforms to an Object</span></span>
-<span data-ttu-id="0e6eb-103">Bu örnek nasıl kullanılacağını gösterir. bir <xref:System.Windows.Media.TransformGroup> iki veya daha fazla gruba <xref:System.Windows.Media.Transform> tek bileşik nesneler <xref:System.Windows.Media.Transform>.</span><span class="sxs-lookup"><span data-stu-id="0e6eb-103">This example shows how to use a <xref:System.Windows.Media.TransformGroup> to group two or more <xref:System.Windows.Media.Transform> objects into a single composite <xref:System.Windows.Media.Transform>.</span></span>  
+# <a name="how-to-apply-multiple-transforms-to-an-object"></a><span data-ttu-id="6d9c8-102">Nasıl yapılır: Nesneye Birden Çok Dönüşüm Uygulama</span><span class="sxs-lookup"><span data-stu-id="6d9c8-102">How to: Apply Multiple Transforms to an Object</span></span>
+<span data-ttu-id="6d9c8-103">Bu örnek nasıl kullanılacağını gösterir. bir <xref:System.Windows.Media.TransformGroup> iki veya daha fazla gruba <xref:System.Windows.Media.Transform> tek bileşik nesneler <xref:System.Windows.Media.Transform>.</span><span class="sxs-lookup"><span data-stu-id="6d9c8-103">This example shows how to use a <xref:System.Windows.Media.TransformGroup> to group two or more <xref:System.Windows.Media.Transform> objects into a single composite <xref:System.Windows.Media.Transform>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="0e6eb-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="0e6eb-104">Example</span></span>  
- <span data-ttu-id="0e6eb-105">Aşağıdaki örnekte bir <xref:System.Windows.Media.TransformGroup> uygulamak için bir <xref:System.Windows.Media.ScaleTransform> ve <xref:System.Windows.Media.RotateTransform> için bir <xref:System.Windows.Controls.Button>.</span><span class="sxs-lookup"><span data-stu-id="0e6eb-105">The following example uses a <xref:System.Windows.Media.TransformGroup> to apply a <xref:System.Windows.Media.ScaleTransform> and a <xref:System.Windows.Media.RotateTransform> to a <xref:System.Windows.Controls.Button>.</span></span>  
+## <a name="example"></a><span data-ttu-id="6d9c8-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="6d9c8-104">Example</span></span>  
+ <span data-ttu-id="6d9c8-105">Aşağıdaki örnekte bir <xref:System.Windows.Media.TransformGroup> uygulamak için bir <xref:System.Windows.Media.ScaleTransform> ve <xref:System.Windows.Media.RotateTransform> için bir <xref:System.Windows.Controls.Button>.</span><span class="sxs-lookup"><span data-stu-id="6d9c8-105">The following example uses a <xref:System.Windows.Media.TransformGroup> to apply a <xref:System.Windows.Media.ScaleTransform> and a <xref:System.Windows.Media.RotateTransform> to a <xref:System.Windows.Controls.Button>.</span></span>  
   
  [!code-xaml[Transforms_snip#MultipleTransformExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/MultipleTransformExample.xaml#multipletransformexamplewholepage)]  
   
  [!code-csharp[Transforms_Procedural_snip#MultipleTransformsCodeExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_Procedural_snip/CSharp/MultipleTransformsExample.cs#multipletransformscodeexamplewholepage)]
  [!code-vb[Transforms_Procedural_snip#MultipleTransformsCodeExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Transforms_Procedural_snip/VisualBasic/MultipleTransformsExample.vb#multipletransformscodeexamplewholepage)]  
   
-## <a name="see-also"></a><span data-ttu-id="0e6eb-106">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="0e6eb-106">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="6d9c8-106">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="6d9c8-106">See Also</span></span>  
  <xref:System.Windows.UIElement.RenderTransform%2A>  
  <xref:System.Windows.Media.TransformGroup>  
- [<span data-ttu-id="0e6eb-107">Dönüşümlere Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="0e6eb-107">Transforms Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
- [<span data-ttu-id="0e6eb-108">2B dönüşümleri örneği</span><span class="sxs-lookup"><span data-stu-id="0e6eb-108">2-D Transforms Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=158252)
+ [<span data-ttu-id="6d9c8-107">Dönüşümlere Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="6d9c8-107">Transforms Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
+ [<span data-ttu-id="6d9c8-108">2B dönüşümleri örneği</span><span class="sxs-lookup"><span data-stu-id="6d9c8-108">2-D Transforms Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=158252)

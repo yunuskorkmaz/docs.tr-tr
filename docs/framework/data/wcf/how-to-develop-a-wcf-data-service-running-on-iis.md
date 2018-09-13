@@ -10,98 +10,98 @@ helpviewer_keywords:
 - WCF Data Services, hosting
 ms.assetid: f6f768c5-4989-49e3-a36f-896ab4ded86e
 ms.openlocfilehash: af81e65dfd4661d62d7aa4a3e6075be312765cb7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44185447"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44710203"
 ---
-# <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a><span data-ttu-id="b2d34-102">Nasıl yapılır: IIS üzerinde çalışan bir WCF veri hizmeti geliştirme</span><span class="sxs-lookup"><span data-stu-id="b2d34-102">How to: Develop a WCF data service running on IIS</span></span>
+# <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a><span data-ttu-id="55a33-102">Nasıl yapılır: IIS üzerinde çalışan bir WCF veri hizmeti geliştirme</span><span class="sxs-lookup"><span data-stu-id="55a33-102">How to: Develop a WCF data service running on IIS</span></span>
 
-<span data-ttu-id="b2d34-103">Bu konuda, WCF Veri Hizmetleri Internet Information Services (IIS) üzerinde çalışan bir ASP.NET Web uygulaması tarafından barındırılıyor Northwind örnek veritabanını temel alan bir veri hizmeti oluşturmak için nasıl kullanılacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="b2d34-103">This topic shows how to use WCF Data Services to create a data service that is based on the Northwind sample database that is hosted by an ASP.NET Web application that is running on Internet Information Services (IIS).</span></span> <span data-ttu-id="b2d34-104">ASP.NET geliştirme sunucusu üzerinde çalışan ASP.NET Web uygulaması olarak aynı Northwind verileri hizmeti oluşturmak nasıl bir örnek için bkz [WCF Veri Hizmetleri Hızlı Başlangıç](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="b2d34-104">For an example of how to create the same Northwind data service as an ASP.NET Web application that runs on the ASP.NET Development Server, see the [WCF Data Services quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span></span>
+<span data-ttu-id="55a33-103">Bu konuda, WCF Veri Hizmetleri Internet Information Services (IIS) üzerinde çalışan bir ASP.NET Web uygulaması tarafından barındırılıyor Northwind örnek veritabanını temel alan bir veri hizmeti oluşturmak için nasıl kullanılacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="55a33-103">This topic shows how to use WCF Data Services to create a data service that is based on the Northwind sample database that is hosted by an ASP.NET Web application that is running on Internet Information Services (IIS).</span></span> <span data-ttu-id="55a33-104">ASP.NET geliştirme sunucusu üzerinde çalışan ASP.NET Web uygulaması olarak aynı Northwind verileri hizmeti oluşturmak nasıl bir örnek için bkz [WCF Veri Hizmetleri Hızlı Başlangıç](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="55a33-104">For an example of how to create the same Northwind data service as an ASP.NET Web application that runs on the ASP.NET Development Server, see the [WCF Data Services quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="b2d34-105">Northwind verileri hizmeti oluşturmak için Northwind örnek veritabanıyla yerel bilgisayarda yüklü gerekir.</span><span class="sxs-lookup"><span data-stu-id="b2d34-105">To create the Northwind data service, you must have installed the Northwind sample database on the local computer.</span></span> <span data-ttu-id="b2d34-106">Bu örnek veritabanı karşıdan yüklemek için indirme sayfasında bakın [örnek veritabanları için SQL Server](https://go.microsoft.com/fwlink/?linkid=24758).</span><span class="sxs-lookup"><span data-stu-id="b2d34-106">To download this sample database, see the download page, [Sample Databases for SQL Server](https://go.microsoft.com/fwlink/?linkid=24758).</span></span>
+> <span data-ttu-id="55a33-105">Northwind verileri hizmeti oluşturmak için Northwind örnek veritabanıyla yerel bilgisayarda yüklü gerekir.</span><span class="sxs-lookup"><span data-stu-id="55a33-105">To create the Northwind data service, you must have installed the Northwind sample database on the local computer.</span></span> <span data-ttu-id="55a33-106">Bu örnek veritabanı karşıdan yüklemek için indirme sayfasında bakın [örnek veritabanları için SQL Server](https://go.microsoft.com/fwlink/?linkid=24758).</span><span class="sxs-lookup"><span data-stu-id="55a33-106">To download this sample database, see the download page, [Sample Databases for SQL Server](https://go.microsoft.com/fwlink/?linkid=24758).</span></span>
 
- <span data-ttu-id="b2d34-107">Bu konuda Entity Framework kullanarak bir veri hizmeti oluşturulacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="b2d34-107">This topic shows how to create a data service by using the Entity Framework provider.</span></span> <span data-ttu-id="b2d34-108">Diğer Veri Hizmetleri sağlayıcıları kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="b2d34-108">Other data services providers are available.</span></span> <span data-ttu-id="b2d34-109">Daha fazla bilgi için [Veri Hizmetleri sağlayıcıları](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="b2d34-109">For more information, see [Data Services Providers](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).</span></span>
+ <span data-ttu-id="55a33-107">Bu konuda Entity Framework kullanarak bir veri hizmeti oluşturulacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="55a33-107">This topic shows how to create a data service by using the Entity Framework provider.</span></span> <span data-ttu-id="55a33-108">Diğer Veri Hizmetleri sağlayıcıları kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="55a33-108">Other data services providers are available.</span></span> <span data-ttu-id="55a33-109">Daha fazla bilgi için [Veri Hizmetleri sağlayıcıları](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="55a33-109">For more information, see [Data Services Providers](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).</span></span>
 
- <span data-ttu-id="b2d34-110">Hizmeti oluşturduktan sonra veri hizmeti kaynaklarına erişimi açıkça sağlamanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="b2d34-110">After you create the service, you must explicitly provide access to data service resources.</span></span> <span data-ttu-id="b2d34-111">Daha fazla bilgi için [nasıl yapılır: veri hizmetine erişimi etkinleştirme](../../../../docs/framework/data/wcf/how-to-enable-access-to-the-data-service-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="b2d34-111">For more information, see [How to: Enable Access to the Data Service](../../../../docs/framework/data/wcf/how-to-enable-access-to-the-data-service-wcf-data-services.md).</span></span>
+ <span data-ttu-id="55a33-110">Hizmeti oluşturduktan sonra veri hizmeti kaynaklarına erişimi açıkça sağlamanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="55a33-110">After you create the service, you must explicitly provide access to data service resources.</span></span> <span data-ttu-id="55a33-111">Daha fazla bilgi için [nasıl yapılır: veri hizmetine erişimi etkinleştirme](../../../../docs/framework/data/wcf/how-to-enable-access-to-the-data-service-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="55a33-111">For more information, see [How to: Enable Access to the Data Service](../../../../docs/framework/data/wcf/how-to-enable-access-to-the-data-service-wcf-data-services.md).</span></span>
 
-## <a name="create-the-aspnet-web-application-that-runs-on-iis"></a><span data-ttu-id="b2d34-112">IIS üzerinde çalışan ASP.NET web uygulaması oluşturun</span><span class="sxs-lookup"><span data-stu-id="b2d34-112">Create the ASP.NET web application that runs on IIS</span></span>
+## <a name="create-the-aspnet-web-application-that-runs-on-iis"></a><span data-ttu-id="55a33-112">IIS üzerinde çalışan ASP.NET web uygulaması oluşturun</span><span class="sxs-lookup"><span data-stu-id="55a33-112">Create the ASP.NET web application that runs on IIS</span></span>
 
-1. <span data-ttu-id="b2d34-113">Visual Studio'da üzerinde **dosya** menüsünde **yeni** > **proje**.</span><span class="sxs-lookup"><span data-stu-id="b2d34-113">In Visual Studio, on the **File** menu, select **New** > **Project**.</span></span>
+1. <span data-ttu-id="55a33-113">Visual Studio'da üzerinde **dosya** menüsünde **yeni** > **proje**.</span><span class="sxs-lookup"><span data-stu-id="55a33-113">In Visual Studio, on the **File** menu, select **New** > **Project**.</span></span>
 
-2. <span data-ttu-id="b2d34-114">İçinde **yeni proje** iletişim kutusunda **yüklü** > [**Visual C#** veya **Visual Basic**] > **Web** kategorisi.</span><span class="sxs-lookup"><span data-stu-id="b2d34-114">In the **New Project** dialog box, select the **Installed** > [**Visual C#** or **Visual Basic**] > **Web** category.</span></span>
+2. <span data-ttu-id="55a33-114">İçinde **yeni proje** iletişim kutusunda **yüklü** > [**Visual C#** veya **Visual Basic**] > **Web** kategorisi.</span><span class="sxs-lookup"><span data-stu-id="55a33-114">In the **New Project** dialog box, select the **Installed** > [**Visual C#** or **Visual Basic**] > **Web** category.</span></span>
 
-3. <span data-ttu-id="b2d34-115">Seçin **ASP.NET Web uygulaması** şablonu.</span><span class="sxs-lookup"><span data-stu-id="b2d34-115">Select the **ASP.NET Web Application** template.</span></span>
+3. <span data-ttu-id="55a33-115">Seçin **ASP.NET Web uygulaması** şablonu.</span><span class="sxs-lookup"><span data-stu-id="55a33-115">Select the **ASP.NET Web Application** template.</span></span>
 
-1. <span data-ttu-id="b2d34-116">Girin `NorthwindService` olarak projenin adı.</span><span class="sxs-lookup"><span data-stu-id="b2d34-116">Enter `NorthwindService` as the name of the project.</span></span>
+1. <span data-ttu-id="55a33-116">Girin `NorthwindService` olarak projenin adı.</span><span class="sxs-lookup"><span data-stu-id="55a33-116">Enter `NorthwindService` as the name of the project.</span></span>
 
-5. <span data-ttu-id="b2d34-117">**Tamam**'ı tıklatın.</span><span class="sxs-lookup"><span data-stu-id="b2d34-117">Click **OK**.</span></span>
+5. <span data-ttu-id="55a33-117">**Tamam**'ı tıklatın.</span><span class="sxs-lookup"><span data-stu-id="55a33-117">Click **OK**.</span></span>
 
-6. <span data-ttu-id="b2d34-118">Üzerinde **proje** menüsünde **NorthwindService özellikleri**.</span><span class="sxs-lookup"><span data-stu-id="b2d34-118">On the **Project** menu, select **NorthwindService Properties**.</span></span>
+6. <span data-ttu-id="55a33-118">Üzerinde **proje** menüsünde **NorthwindService özellikleri**.</span><span class="sxs-lookup"><span data-stu-id="55a33-118">On the **Project** menu, select **NorthwindService Properties**.</span></span>
 
-7. <span data-ttu-id="b2d34-119">Seçin **Web** sekmesine tıklayın ve ardından **kullanım yerel IIS Web sunucusunda**.</span><span class="sxs-lookup"><span data-stu-id="b2d34-119">Select the **Web** tab, and then select **Use Local IIS Web Server**.</span></span>
+7. <span data-ttu-id="55a33-119">Seçin **Web** sekmesine tıklayın ve ardından **kullanım yerel IIS Web sunucusunda**.</span><span class="sxs-lookup"><span data-stu-id="55a33-119">Select the **Web** tab, and then select **Use Local IIS Web Server**.</span></span>
 
-8. <span data-ttu-id="b2d34-120">Tıklayın **sanal dizin oluştur** ve ardından **Tamam**.</span><span class="sxs-lookup"><span data-stu-id="b2d34-120">Click **Create Virtual Directory** and then click **OK**.</span></span>
+8. <span data-ttu-id="55a33-120">Tıklayın **sanal dizin oluştur** ve ardından **Tamam**.</span><span class="sxs-lookup"><span data-stu-id="55a33-120">Click **Create Virtual Directory** and then click **OK**.</span></span>
 
-9. <span data-ttu-id="b2d34-121">Yönetici ayrıcalıklarıyla komut isteminden (işletim sistemi) bağlı olarak aşağıdaki komutlardan birini yürütün:</span><span class="sxs-lookup"><span data-stu-id="b2d34-121">From the command prompt with administrator privileges, execute one of the following commands (depending on the operating system):</span></span>
+9. <span data-ttu-id="55a33-121">Yönetici ayrıcalıklarıyla komut isteminden (işletim sistemi) bağlı olarak aşağıdaki komutlardan birini yürütün:</span><span class="sxs-lookup"><span data-stu-id="55a33-121">From the command prompt with administrator privileges, execute one of the following commands (depending on the operating system):</span></span>
 
-    -   <span data-ttu-id="b2d34-122">32 bit sistemler:</span><span class="sxs-lookup"><span data-stu-id="b2d34-122">32-bit systems:</span></span>
+    -   <span data-ttu-id="55a33-122">32 bit sistemler:</span><span class="sxs-lookup"><span data-stu-id="55a33-122">32-bit systems:</span></span>
 
         ```console
         "%windir%\Microsoft.NET\Framework\v3.0\Windows Communication Foundation\ServiceModelReg.exe" -i
         ```
 
-    -   <span data-ttu-id="b2d34-123">64 bit sistemler:</span><span class="sxs-lookup"><span data-stu-id="b2d34-123">64-bit systems:</span></span>
+    -   <span data-ttu-id="55a33-123">64 bit sistemler:</span><span class="sxs-lookup"><span data-stu-id="55a33-123">64-bit systems:</span></span>
 
         ```console
         "%windir%\Microsoft.NET\Framework64\v3.0\Windows Communication Foundation\ServiceModelReg.exe" -i
         ```
 
-     <span data-ttu-id="b2d34-124">Bu bilgisayarda Windows Communication Foundation (WCF) kayıtlı olduğundan emin olur.</span><span class="sxs-lookup"><span data-stu-id="b2d34-124">This makes sure that Windows Communication Foundation (WCF) is registered on the computer.</span></span>
+     <span data-ttu-id="55a33-124">Bu bilgisayarda Windows Communication Foundation (WCF) kayıtlı olduğundan emin olur.</span><span class="sxs-lookup"><span data-stu-id="55a33-124">This makes sure that Windows Communication Foundation (WCF) is registered on the computer.</span></span>
 
-10. <span data-ttu-id="b2d34-125">Yönetici ayrıcalıklarıyla komut isteminden (işletim sistemi) bağlı olarak aşağıdaki komutlardan birini yürütün:</span><span class="sxs-lookup"><span data-stu-id="b2d34-125">From the command prompt with administrator privileges, execute one of the following commands (depending on the operating system):</span></span>
+10. <span data-ttu-id="55a33-125">Yönetici ayrıcalıklarıyla komut isteminden (işletim sistemi) bağlı olarak aşağıdaki komutlardan birini yürütün:</span><span class="sxs-lookup"><span data-stu-id="55a33-125">From the command prompt with administrator privileges, execute one of the following commands (depending on the operating system):</span></span>
 
-    -   <span data-ttu-id="b2d34-126">32 bit sistemler:</span><span class="sxs-lookup"><span data-stu-id="b2d34-126">32-bit systems:</span></span>
+    -   <span data-ttu-id="55a33-126">32 bit sistemler:</span><span class="sxs-lookup"><span data-stu-id="55a33-126">32-bit systems:</span></span>
 
         ```console
         "%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_regiis.exe" -i -enable
         ```
 
-    -   <span data-ttu-id="b2d34-127">64 bit sistemler:</span><span class="sxs-lookup"><span data-stu-id="b2d34-127">64-bit systems:</span></span>
+    -   <span data-ttu-id="55a33-127">64 bit sistemler:</span><span class="sxs-lookup"><span data-stu-id="55a33-127">64-bit systems:</span></span>
 
         ```console
         "%windir%\Microsoft.NET\Framework64\v4.0.30319\aspnet_regiis.exe" -i -enable
         ```
 
-     <span data-ttu-id="b2d34-128">Bu WCF bilgisayara yüklendikten sonra IIS doğru şekilde çalışmasını sağlar.</span><span class="sxs-lookup"><span data-stu-id="b2d34-128">This makes sure that IIS runs correctly after WCF has been installed on the computer.</span></span> <span data-ttu-id="b2d34-129">Ayrıca IIS yeniden başlatmanız gerekebilir.</span><span class="sxs-lookup"><span data-stu-id="b2d34-129">You might have to also restart IIS.</span></span>
+     <span data-ttu-id="55a33-128">Bu WCF bilgisayara yüklendikten sonra IIS doğru şekilde çalışmasını sağlar.</span><span class="sxs-lookup"><span data-stu-id="55a33-128">This makes sure that IIS runs correctly after WCF has been installed on the computer.</span></span> <span data-ttu-id="55a33-129">Ayrıca IIS yeniden başlatmanız gerekebilir.</span><span class="sxs-lookup"><span data-stu-id="55a33-129">You might have to also restart IIS.</span></span>
 
-11. <span data-ttu-id="b2d34-130">IIS7'de ASP.NET uygulama çalıştığında, aşağıdaki adımları da gerçekleştirmeniz gerekir:</span><span class="sxs-lookup"><span data-stu-id="b2d34-130">When the ASP.NET application runs on IIS7, you must also perform the following steps:</span></span>
+11. <span data-ttu-id="55a33-130">IIS7'de ASP.NET uygulama çalıştığında, aşağıdaki adımları da gerçekleştirmeniz gerekir:</span><span class="sxs-lookup"><span data-stu-id="55a33-130">When the ASP.NET application runs on IIS7, you must also perform the following steps:</span></span>
 
-    1. <span data-ttu-id="b2d34-131">IIS Yöneticisi'ni açın ve altındaki PhotoService uygulamaya gidin **varsayılan Web sitesi**.</span><span class="sxs-lookup"><span data-stu-id="b2d34-131">Open IIS Manager and navigate to the PhotoService application under **Default Web Site**.</span></span>
+    1. <span data-ttu-id="55a33-131">IIS Yöneticisi'ni açın ve altındaki PhotoService uygulamaya gidin **varsayılan Web sitesi**.</span><span class="sxs-lookup"><span data-stu-id="55a33-131">Open IIS Manager and navigate to the PhotoService application under **Default Web Site**.</span></span>
 
-    2. <span data-ttu-id="b2d34-132">İçinde **özellikler görünümü**, çift **kimlik doğrulaması**.</span><span class="sxs-lookup"><span data-stu-id="b2d34-132">In **Features View**, double-click **Authentication**.</span></span>
+    2. <span data-ttu-id="55a33-132">İçinde **özellikler görünümü**, çift **kimlik doğrulaması**.</span><span class="sxs-lookup"><span data-stu-id="55a33-132">In **Features View**, double-click **Authentication**.</span></span>
 
-    3. <span data-ttu-id="b2d34-133">Üzerinde **kimlik doğrulaması** sayfasında **anonim kimlik doğrulaması**.</span><span class="sxs-lookup"><span data-stu-id="b2d34-133">On the **Authentication** page, select **Anonymous Authentication**.</span></span>
+    3. <span data-ttu-id="55a33-133">Üzerinde **kimlik doğrulaması** sayfasında **anonim kimlik doğrulaması**.</span><span class="sxs-lookup"><span data-stu-id="55a33-133">On the **Authentication** page, select **Anonymous Authentication**.</span></span>
 
-    4. <span data-ttu-id="b2d34-134">İçinde **eylemleri** bölmesinde tıklayın **Düzenle** altında hangi anonim kullanıcıların siteye bağlanacak güvenlik sorumlusu ayarlamak üzere.</span><span class="sxs-lookup"><span data-stu-id="b2d34-134">In the **Actions** pane, click **Edit** to set the security principal under which anonymous users will connect to the site.</span></span>
+    4. <span data-ttu-id="55a33-134">İçinde **eylemleri** bölmesinde tıklayın **Düzenle** altında hangi anonim kullanıcıların siteye bağlanacak güvenlik sorumlusu ayarlamak üzere.</span><span class="sxs-lookup"><span data-stu-id="55a33-134">In the **Actions** pane, click **Edit** to set the security principal under which anonymous users will connect to the site.</span></span>
 
-    5. <span data-ttu-id="b2d34-135">İçinde **anonim kimlik doğrulama bilgilerini Düzenle** iletişim kutusunda **uygulama havuzu kimliği**.</span><span class="sxs-lookup"><span data-stu-id="b2d34-135">In the **Edit Anonymous Authentication Credentials** dialog box, select **Application pool identity**.</span></span>
+    5. <span data-ttu-id="55a33-135">İçinde **anonim kimlik doğrulama bilgilerini Düzenle** iletişim kutusunda **uygulama havuzu kimliği**.</span><span class="sxs-lookup"><span data-stu-id="55a33-135">In the **Edit Anonymous Authentication Credentials** dialog box, select **Application pool identity**.</span></span>
 
     > [!IMPORTANT]
-    > <span data-ttu-id="b2d34-136">Ağ hizmeti hesabı kullandığınızda, anonim kullanıcılara bu hesaba ilişkin tüm iç ağ erişimini verin.</span><span class="sxs-lookup"><span data-stu-id="b2d34-136">When you use the Network Service account, you grant anonymous users all the internal network access associated with that account.</span></span>
+    > <span data-ttu-id="55a33-136">Ağ hizmeti hesabı kullandığınızda, anonim kullanıcılara bu hesaba ilişkin tüm iç ağ erişimini verin.</span><span class="sxs-lookup"><span data-stu-id="55a33-136">When you use the Network Service account, you grant anonymous users all the internal network access associated with that account.</span></span>
 
-12. <span data-ttu-id="b2d34-137">Visual Studio'da SQL Server Management Studio, sqlcmd.exe yardımcı programı veya Transact-SQL Düzenleyicisi'ni kullanarak Northwind veritabanına ekli olan SQL Server örneği üzerinde aşağıdaki Transact-SQL komutu yürütün:</span><span class="sxs-lookup"><span data-stu-id="b2d34-137">By using SQL Server Management Studio, the sqlcmd.exe utility, or the Transact-SQL Editor in Visual Studio, execute the following Transact-SQL command against the instance of SQL Server that has the Northwind database attached:</span></span>
+12. <span data-ttu-id="55a33-137">Visual Studio'da SQL Server Management Studio, sqlcmd.exe yardımcı programı veya Transact-SQL Düzenleyicisi'ni kullanarak Northwind veritabanına ekli olan SQL Server örneği üzerinde aşağıdaki Transact-SQL komutu yürütün:</span><span class="sxs-lookup"><span data-stu-id="55a33-137">By using SQL Server Management Studio, the sqlcmd.exe utility, or the Transact-SQL Editor in Visual Studio, execute the following Transact-SQL command against the instance of SQL Server that has the Northwind database attached:</span></span>
 
     ```sql
     CREATE LOGIN [NT AUTHORITY\NETWORK SERVICE] FROM WINDOWS;
     GO
     ```
 
-    <span data-ttu-id="b2d34-138">Bu, IIS çalıştırmak için kullanılan Windows hesabının SQL Server örneğinde bir oturum oluşturur.</span><span class="sxs-lookup"><span data-stu-id="b2d34-138">This creates a login in the SQL Server instance for the Windows account used to run IIS.</span></span> <span data-ttu-id="b2d34-139">Bu SQL Server örneğine bağlanmak IIS sağlar.</span><span class="sxs-lookup"><span data-stu-id="b2d34-139">This enables IIS to connect to the SQL Server instance.</span></span>
+    <span data-ttu-id="55a33-138">Bu, IIS çalıştırmak için kullanılan Windows hesabının SQL Server örneğinde bir oturum oluşturur.</span><span class="sxs-lookup"><span data-stu-id="55a33-138">This creates a login in the SQL Server instance for the Windows account used to run IIS.</span></span> <span data-ttu-id="55a33-139">Bu SQL Server örneğine bağlanmak IIS sağlar.</span><span class="sxs-lookup"><span data-stu-id="55a33-139">This enables IIS to connect to the SQL Server instance.</span></span>
 
-13. <span data-ttu-id="b2d34-140">Northwind veritabanına ekli ile aşağıdaki Transact-SQL komutlarını yürütün:</span><span class="sxs-lookup"><span data-stu-id="b2d34-140">With the Northwind database attached, execute the following Transact-SQL commands:</span></span>
+13. <span data-ttu-id="55a33-140">Northwind veritabanına ekli ile aşağıdaki Transact-SQL komutlarını yürütün:</span><span class="sxs-lookup"><span data-stu-id="55a33-140">With the Northwind database attached, execute the following Transact-SQL commands:</span></span>
 
     ```sql
     USE Northwind
@@ -118,50 +118,50 @@ ms.locfileid: "44185447"
     GO
     ```
 
-    <span data-ttu-id="b2d34-141">Bu verileri okumak ve Northwind veritabanına veri yazmak IIS sağlayan yeni oturum açma hakkı verir.</span><span class="sxs-lookup"><span data-stu-id="b2d34-141">This grants rights to the new login, which enables IIS to read data from and write data to the Northwind database.</span></span>
+    <span data-ttu-id="55a33-141">Bu verileri okumak ve Northwind veritabanına veri yazmak IIS sağlayan yeni oturum açma hakkı verir.</span><span class="sxs-lookup"><span data-stu-id="55a33-141">This grants rights to the new login, which enables IIS to read data from and write data to the Northwind database.</span></span>
 
-## <a name="define-the-data-model"></a><span data-ttu-id="b2d34-142">Veri modelini tanımlama</span><span class="sxs-lookup"><span data-stu-id="b2d34-142">Define the data model</span></span>
+## <a name="define-the-data-model"></a><span data-ttu-id="55a33-142">Veri modelini tanımlama</span><span class="sxs-lookup"><span data-stu-id="55a33-142">Define the data model</span></span>
 
-1. <span data-ttu-id="b2d34-143">İçinde **Çözüm Gezgini**ASP.NET proje adına sağ tıklayın ve ardından **Ekle** > **yeni öğe**.</span><span class="sxs-lookup"><span data-stu-id="b2d34-143">In **Solution Explorer**, right-click the name of the ASP.NET project, and then click **Add** > **New Item**.</span></span>
+1. <span data-ttu-id="55a33-143">İçinde **Çözüm Gezgini**ASP.NET proje adına sağ tıklayın ve ardından **Ekle** > **yeni öğe**.</span><span class="sxs-lookup"><span data-stu-id="55a33-143">In **Solution Explorer**, right-click the name of the ASP.NET project, and then click **Add** > **New Item**.</span></span>
 
-2. <span data-ttu-id="b2d34-144">İçinde **Yeni Öğe Ekle** iletişim kutusunda **ADO.NET varlık veri modeli**.</span><span class="sxs-lookup"><span data-stu-id="b2d34-144">In the **Add New Item** dialog box, select **ADO.NET Entity Data Model**.</span></span>
+2. <span data-ttu-id="55a33-144">İçinde **Yeni Öğe Ekle** iletişim kutusunda **ADO.NET varlık veri modeli**.</span><span class="sxs-lookup"><span data-stu-id="55a33-144">In the **Add New Item** dialog box, select **ADO.NET Entity Data Model**.</span></span>
 
-3. <span data-ttu-id="b2d34-145">Veri modeli için adını, `Northwind.edmx`.</span><span class="sxs-lookup"><span data-stu-id="b2d34-145">For the name of the data model, type `Northwind.edmx`.</span></span>
+3. <span data-ttu-id="55a33-145">Veri modeli için adını, `Northwind.edmx`.</span><span class="sxs-lookup"><span data-stu-id="55a33-145">For the name of the data model, type `Northwind.edmx`.</span></span>
 
-4. <span data-ttu-id="b2d34-146">Varlık veri modeli Sihirbazı'nda seçin **veritabanından Oluştur**ve ardından **sonraki**.</span><span class="sxs-lookup"><span data-stu-id="b2d34-146">In the Entity Data Model Wizard, select **Generate from Database**, and then click **Next**.</span></span>
+4. <span data-ttu-id="55a33-146">Varlık veri modeli Sihirbazı'nda seçin **veritabanından Oluştur**ve ardından **sonraki**.</span><span class="sxs-lookup"><span data-stu-id="55a33-146">In the Entity Data Model Wizard, select **Generate from Database**, and then click **Next**.</span></span>
 
-5. <span data-ttu-id="b2d34-147">Aşağıdakilerden birini yaparak veri modeli veritabanına bağlanmak ve ardından **sonraki**:</span><span class="sxs-lookup"><span data-stu-id="b2d34-147">Connect the data model to the database by doing one of the following steps, and then click **Next**:</span></span>
+5. <span data-ttu-id="55a33-147">Aşağıdakilerden birini yaparak veri modeli veritabanına bağlanmak ve ardından **sonraki**:</span><span class="sxs-lookup"><span data-stu-id="55a33-147">Connect the data model to the database by doing one of the following steps, and then click **Next**:</span></span>
 
-    -   <span data-ttu-id="b2d34-148">Önceden yapılandırılmış bir veritabanı bağlantısı yoksa tıklayın **yeni bağlantı** ve yeni bir bağlantı oluşturun.</span><span class="sxs-lookup"><span data-stu-id="b2d34-148">If you do not have a database connection already configured, click **New Connection** and create a new connection.</span></span> <span data-ttu-id="b2d34-149">Daha fazla bilgi için [nasıl yapılır: SQL Server veritabanları oluşturma bağlantıları](https://go.microsoft.com/fwlink/?LinkId=123631).</span><span class="sxs-lookup"><span data-stu-id="b2d34-149">For more information, see [How to: Create Connections to SQL Server Databases](https://go.microsoft.com/fwlink/?LinkId=123631).</span></span> <span data-ttu-id="b2d34-150">Bu SQL Server örneği, Northwind örnek veritabanına ekli olması gerekir.</span><span class="sxs-lookup"><span data-stu-id="b2d34-150">This SQL Server instance must have the Northwind sample database attached.</span></span>
+    -   <span data-ttu-id="55a33-148">Önceden yapılandırılmış bir veritabanı bağlantısı yoksa tıklayın **yeni bağlantı** ve yeni bir bağlantı oluşturun.</span><span class="sxs-lookup"><span data-stu-id="55a33-148">If you do not have a database connection already configured, click **New Connection** and create a new connection.</span></span> <span data-ttu-id="55a33-149">Daha fazla bilgi için [nasıl yapılır: SQL Server veritabanları oluşturma bağlantıları](https://go.microsoft.com/fwlink/?LinkId=123631).</span><span class="sxs-lookup"><span data-stu-id="55a33-149">For more information, see [How to: Create Connections to SQL Server Databases](https://go.microsoft.com/fwlink/?LinkId=123631).</span></span> <span data-ttu-id="55a33-150">Bu SQL Server örneği, Northwind örnek veritabanına ekli olması gerekir.</span><span class="sxs-lookup"><span data-stu-id="55a33-150">This SQL Server instance must have the Northwind sample database attached.</span></span>
 
-         <span data-ttu-id="b2d34-151">\- veya -</span><span class="sxs-lookup"><span data-stu-id="b2d34-151">\- or -</span></span>
+         <span data-ttu-id="55a33-151">\- veya -</span><span class="sxs-lookup"><span data-stu-id="55a33-151">\- or -</span></span>
 
-    -   <span data-ttu-id="b2d34-152">Northwind veritabanına bağlanmak için zaten yapılandırılmış bir veritabanı bağlantısı varsa, bu bağlantı bağlantılar listesinden seçin.</span><span class="sxs-lookup"><span data-stu-id="b2d34-152">If you have a database connection already configured to connect to the Northwind database, select that connection from the list of connections.</span></span>
+    -   <span data-ttu-id="55a33-152">Northwind veritabanına bağlanmak için zaten yapılandırılmış bir veritabanı bağlantısı varsa, bu bağlantı bağlantılar listesinden seçin.</span><span class="sxs-lookup"><span data-stu-id="55a33-152">If you have a database connection already configured to connect to the Northwind database, select that connection from the list of connections.</span></span>
 
-6. <span data-ttu-id="b2d34-153">Sihirbazın son sayfasında, veritabanında tüm tabloların onay kutularını işaretleyin ve görünümler ve saklı yordamlar için onay kutularını temizleyin.</span><span class="sxs-lookup"><span data-stu-id="b2d34-153">On the final page of the wizard, select the check boxes for all tables in the database, and clear the check boxes for views and stored procedures.</span></span>
+6. <span data-ttu-id="55a33-153">Sihirbazın son sayfasında, veritabanında tüm tabloların onay kutularını işaretleyin ve görünümler ve saklı yordamlar için onay kutularını temizleyin.</span><span class="sxs-lookup"><span data-stu-id="55a33-153">On the final page of the wizard, select the check boxes for all tables in the database, and clear the check boxes for views and stored procedures.</span></span>
 
-7. <span data-ttu-id="b2d34-154">Tıklayın **son** sihirbazı kapatın.</span><span class="sxs-lookup"><span data-stu-id="b2d34-154">Click **Finish** to close the wizard.</span></span>
+7. <span data-ttu-id="55a33-154">Tıklayın **son** sihirbazı kapatın.</span><span class="sxs-lookup"><span data-stu-id="55a33-154">Click **Finish** to close the wizard.</span></span>
 
-## <a name="create-the-data-service"></a><span data-ttu-id="b2d34-155">Veri hizmetini oluşturma</span><span class="sxs-lookup"><span data-stu-id="b2d34-155">Create the data service</span></span>
+## <a name="create-the-data-service"></a><span data-ttu-id="55a33-155">Veri hizmetini oluşturma</span><span class="sxs-lookup"><span data-stu-id="55a33-155">Create the data service</span></span>
 
-1. <span data-ttu-id="b2d34-156">İçinde **Çözüm Gezgini**ASP.NET projenizin adına sağ tıklayın ve ardından **Ekle** > **yeni öğe**.</span><span class="sxs-lookup"><span data-stu-id="b2d34-156">In **Solution Explorer**, right-click the name of your ASP.NET project, and then click **Add** > **New Item**.</span></span>
+1. <span data-ttu-id="55a33-156">İçinde **Çözüm Gezgini**ASP.NET projenizin adına sağ tıklayın ve ardından **Ekle** > **yeni öğe**.</span><span class="sxs-lookup"><span data-stu-id="55a33-156">In **Solution Explorer**, right-click the name of your ASP.NET project, and then click **Add** > **New Item**.</span></span>
 
-2. <span data-ttu-id="b2d34-157">İçinde **Yeni Öğe Ekle** iletişim kutusunda **WCF veri hizmeti**.</span><span class="sxs-lookup"><span data-stu-id="b2d34-157">In the **Add New Item** dialog box, select **WCF Data Service**.</span></span>
+2. <span data-ttu-id="55a33-157">İçinde **Yeni Öğe Ekle** iletişim kutusunda **WCF veri hizmeti**.</span><span class="sxs-lookup"><span data-stu-id="55a33-157">In the **Add New Item** dialog box, select **WCF Data Service**.</span></span>
 
    ![Visual Studio 2015'te WCF veri hizmeti öğe şablonu](media/wcf-data-service-item-template.png)
 
    > [!NOTE]
-   > <span data-ttu-id="b2d34-159">**WCF veri hizmeti** şablonu kullanılabilir Visual Studio 2015, ancak Visual Studio 2017 içinde değil.</span><span class="sxs-lookup"><span data-stu-id="b2d34-159">The **WCF Data Service** template is available in Visual Studio 2015, but not in Visual Studio 2017.</span></span>
+   > <span data-ttu-id="55a33-159">**WCF veri hizmeti** şablonu kullanılabilir Visual Studio 2015, ancak Visual Studio 2017 içinde değil.</span><span class="sxs-lookup"><span data-stu-id="55a33-159">The **WCF Data Service** template is available in Visual Studio 2015, but not in Visual Studio 2017.</span></span>
 
-3. <span data-ttu-id="b2d34-160">Hizmet adını girin `Northwind`.</span><span class="sxs-lookup"><span data-stu-id="b2d34-160">For the name of the service, enter `Northwind`.</span></span>
+3. <span data-ttu-id="55a33-160">Hizmet adını girin `Northwind`.</span><span class="sxs-lookup"><span data-stu-id="55a33-160">For the name of the service, enter `Northwind`.</span></span>
 
-     <span data-ttu-id="b2d34-161">Visual Studio, yeni hizmet için XML işaretleme ve kod dosyalarını oluşturur.</span><span class="sxs-lookup"><span data-stu-id="b2d34-161">Visual Studio creates the XML markup and code files for the new service.</span></span> <span data-ttu-id="b2d34-162">Varsayılan olarak, kod düzenleyicisi penceresi açılır.</span><span class="sxs-lookup"><span data-stu-id="b2d34-162">By default, the code-editor window opens.</span></span> <span data-ttu-id="b2d34-163">İçinde **Çözüm Gezgini**, hizmet adı, Northwind ve uzantısını içerir. svc.cs veya. svc.vb.</span><span class="sxs-lookup"><span data-stu-id="b2d34-163">In **Solution Explorer**, the service has the name, Northwind, and the extension .svc.cs or .svc.vb.</span></span>
+     <span data-ttu-id="55a33-161">Visual Studio, yeni hizmet için XML işaretleme ve kod dosyalarını oluşturur.</span><span class="sxs-lookup"><span data-stu-id="55a33-161">Visual Studio creates the XML markup and code files for the new service.</span></span> <span data-ttu-id="55a33-162">Varsayılan olarak, kod düzenleyicisi penceresi açılır.</span><span class="sxs-lookup"><span data-stu-id="55a33-162">By default, the code-editor window opens.</span></span> <span data-ttu-id="55a33-163">İçinde **Çözüm Gezgini**, hizmet adı, Northwind ve uzantısını içerir. svc.cs veya. svc.vb.</span><span class="sxs-lookup"><span data-stu-id="55a33-163">In **Solution Explorer**, the service has the name, Northwind, and the extension .svc.cs or .svc.vb.</span></span>
 
-4. <span data-ttu-id="b2d34-164">Veri Hizmeti için kod içinde açıklamayı değiştirin `/* TODO: put your data source class name here */` veri modelinin varlık kapsayıcı türü olan veri hizmeti tanımlayan sınıf tanımında, bu durumda olduğu `NorthwindEntities`.</span><span class="sxs-lookup"><span data-stu-id="b2d34-164">In the code for the data service, replace the comment `/* TODO: put your data source class name here */` in the definition of the class that defines the data service with the type that is the entity container of the data model, which in this case is `NorthwindEntities`.</span></span> <span data-ttu-id="b2d34-165">Sınıf tanımını aşağıdaki görünmesi gerekir:</span><span class="sxs-lookup"><span data-stu-id="b2d34-165">The class definition should look this the following:</span></span>
+4. <span data-ttu-id="55a33-164">Veri Hizmeti için kod içinde açıklamayı değiştirin `/* TODO: put your data source class name here */` veri modelinin varlık kapsayıcı türü olan veri hizmeti tanımlayan sınıf tanımında, bu durumda olduğu `NorthwindEntities`.</span><span class="sxs-lookup"><span data-stu-id="55a33-164">In the code for the data service, replace the comment `/* TODO: put your data source class name here */` in the definition of the class that defines the data service with the type that is the entity container of the data model, which in this case is `NorthwindEntities`.</span></span> <span data-ttu-id="55a33-165">Sınıf tanımını aşağıdaki görünmesi gerekir:</span><span class="sxs-lookup"><span data-stu-id="55a33-165">The class definition should look this the following:</span></span>
 
      [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria quickstart service/cs/northwind.svc.cs#servicedefinition)]
      [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart service/vb/northwind.svc.vb#servicedefinition)]
 
-## <a name="see-also"></a><span data-ttu-id="b2d34-166">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b2d34-166">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="55a33-166">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="55a33-166">See also</span></span>
 
-- [<span data-ttu-id="b2d34-167">Verilerinizi Hizmet Olarak Kullanıma Sunma</span><span class="sxs-lookup"><span data-stu-id="b2d34-167">Exposing Your Data as a Service</span></span>](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)
+- [<span data-ttu-id="55a33-167">Verilerinizi Hizmet Olarak Kullanıma Sunma</span><span class="sxs-lookup"><span data-stu-id="55a33-167">Exposing Your Data as a Service</span></span>](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)
