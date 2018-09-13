@@ -4,12 +4,12 @@ description: Komut satırı arabirimi (CLI) araçlarını nasıl genişletebilec
 author: blackdwarf
 ms.author: mairaw
 ms.date: 04/12/2017
-ms.openlocfilehash: 6cabd3959a29878788916ae26589be408c12e0ca
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: a9cfebbeddbedc329432c805c5956b382a726a77
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244796"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44510057"
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>.NET core CLI araçları genişletilebilirlik modeli
 
@@ -53,7 +53,7 @@ Basit bir proje için basit bir salt araçları aracı ekleme örneği gözden g
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
   <!-- The tools reference -->
