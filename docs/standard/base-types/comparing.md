@@ -21,11 +21,11 @@ ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b1fa907be4571e0a5f95ab798210bedb154e9170
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44339571"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44708447"
 ---
 # <a name="comparing-strings-in-net"></a>. NET'te dizeleri karşılaştırma
 .NET, dizeleri karşılaştırmak için çeşitli yöntemler sunar. Aşağıdaki tabloda, listeler ve değer karşılaştırma yöntemleri açıklar.  

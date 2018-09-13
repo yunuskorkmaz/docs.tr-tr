@@ -3,11 +3,11 @@ title: Örnek XML belgeleri (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 9ec89809-41a1-484c-b1e3-6c4ecdca7b8d
 ms.openlocfilehash: 2d13b1e42cd41d4ea54cdf1f585c29ddf71f6396
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44360313"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44706004"
 ---
 # <a name="sample-xml-documents-linq-to-xml"></a>Örnek XML belgeleri (LINQ to XML)
 Aşağıdaki örnek dosyaları kod örnekleri ve kod parçacıkları genelinde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri.  

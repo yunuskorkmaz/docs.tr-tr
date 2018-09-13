@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 94171b0708c97eb7510e916e451ed03645d706f3
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44264213"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44710543"
 ---
 # <a name="getpropertyhandle-function"></a>GetPropertyHandle işlevi
 Bir özelliği tanımlayan benzersiz bir tanıtıcı döndürür.

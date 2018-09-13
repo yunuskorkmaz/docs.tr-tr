@@ -3,11 +3,11 @@ title: 'F # ile komut satırı araçları ile çalışmaya başlama'
 description: 'F # .NET Core CLI kullanarak tüm işletim sistemlerinde (Windows, macOs veya Linux) üzerinde basit bir çoklu proje çözümü oluşturmayı öğrenin.'
 ms.date: 03/26/2018
 ms.openlocfilehash: 8a82970f33c8bbe1b8cdd8fb6499b59b16d3cbf3
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44198523"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44706877"
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>F # ile .NET Core CLI kullanmaya başlama
 

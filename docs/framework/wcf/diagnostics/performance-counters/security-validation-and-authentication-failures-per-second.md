@@ -5,11 +5,11 @@ ms.assetid: 266c3bd3-2ffc-4471-94b7-3675443be1ac
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 4836a5076401de2f7c3112b298cdadc0e0307962
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44261843"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44710284"
 ---
 # <a name="security-validation-and-authentication-failures-per-second"></a>Saniyede Güvenlik Doğrulaması ve Kimlik Doğrulaması Hatası
 Sayaç adı: güvenlik doğrulaması ve kimlik doğrulama hataları saniye başına.  

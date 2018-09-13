@@ -1,39 +1,39 @@
 ---
-title: Üretim ortamlarında oluşan ve mikro tabanlı uygulamaları çalıştırma
-description: Microsoft Platformu ve araçları ile kapsayıcılı Docker uygulama yaşam döngüsü
+title: Üretim ortamlarında oluşturulan ve mikro hizmet tabanlı uygulamaları çalıştırma
+description: Microsoft Platformu ve araçları ile kapsayıcı Docker uygulaması yaşam
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: b4192ff1d67a3f70bb5eeb9a36245cfd35bafb53
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 18e6cb1fb5f496b66c89cb8e009a67894b8a76ad
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105637"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44706047"
 ---
-# <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>Üretim ortamlarında oluşan ve mikro tabanlı uygulamaları çalıştırma
+# <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>Üretim ortamlarında oluşturulan ve mikro hizmet tabanlı uygulamaları çalıştırma
 
-Uygulamalar tarafından birden çok mikro oluşan dağıtım karmaşıklığını basitleştirmek ve açısından bir BT uygulanabilir yapabilmeniz için orchestrator kümeler halinde dağıtılması gerekiyor. Bir orchestrator küme dağıtmak ve genişleme karmaşık mikro uygulama çok zor olurdu.
+Uygulamalar tarafından birden çok mikro hizmetlerden dağıtım karmaşıklığını basitleştirir ve uygun bir BT açısından kolaylaştırmak için orchestrator kümeler halinde dağıtılması gerekiyor. Bir orchestrator kümesi ölçeği genişletilmiş bir karmaşık mikro Hizmetler uygulaması dağıtma ve oldukça zor olurdu.
 
-## <a name="introduction-to-orchestrators-schedulers-and-container-clusters"></a>Orchestrators, zamanlayıcılar ve kapsayıcı kümeleri giriş
+## <a name="introduction-to-orchestrators-schedulers-and-container-clusters"></a>Düzenleyicileri, zamanlayıcılar ve kapsayıcı kümeleri giriş
 
-Daha önce bu e-kitap içinde gösterdiğimizi *kümeleri* ve *zamanlayıcılar* yazılım mimarisi ve geliştirme tartışma bir parçası olarak. Docker Swarm ve Mesosphere Datacenter işletim sistemi (DC/OS) Docker kümeleri örnekleridir. Bunların her ikisi de, Microsoft Azure kapsayıcı hizmeti tarafından sağlanan alt yapısının bir parçası olarak çalıştırabilirsiniz.
+Daha önce bu e-kitap, sunduk *kümeleri* ve *zamanlayıcılar* yazılım mimarisi ve geliştirme tartışmaya bir parçası olarak. Docker Swarm ve Mesosphere Datacenter işletim sistemini (DC/OS) Docker kümeleri örnekleridir. Bunların her ikisi de, Microsoft Azure Container Service tarafından sunulan altyapıyı bir parçası olarak çalıştırabilirsiniz.
 
-Uygulamaları birden çok ana bilgisayar sistemleri arasında ölçeklendirilmiş olduğunda, her ana bilgisayar sistemi yönetmek ve hemen temel platform karmaşıklığını soyut olanağı çekici haline gelir. Tam olarak ne orchestrators ve zamanlayıcılar sağlamaktır. Burada onları kısa bir göz atalım:
+Uygulamalar arasında birden fazla konak sistemi genişletilmiş olduğunda, her bir konak sistemi yönetmek ve temel alınan platformu karmaşıklığını hemen soyut olanağı cazip hale gelir. Tam olarak neler düzenleyiciler ve zamanlayıcılar sağlar olmasıdır. Burada bunları kısa bir göz atalım:
 
--   **Zamanlayıcılar *** *özelliği bir yöneticinin belirli bir kapsayıcıya çalıştırma kurar bir ana bilgisayar sistemine üzerine hizmet dosyasını yüklemek "Zamanlama" başvurur. Kapsayıcıları bir Docker kümedeki başlatma planlama olarak bilindiği eğilimindedir. Hizmet tanımında daha genel bir fikir yüklenirken özel eylemi zamanlama başvuruyor ancak zamanlayıcılar gerekli ne olursa olsun kapasite hizmetleri yönetmek için bir ana bilgisayarın init sistemine takma için sorumludur.
+- **Zamanlayıcılar**. "Zamanlama" özelliği bir yöneticinin hizmet dosya belirli bir kapsayıcı çalıştırma kurar ve bir konak sistemi yüklemesini ifade eder. Kapsayıcıları bir Docker kümesi başlatma zamanlama olarak bilinen eğilimindedir. Hizmet tanımında daha genel bir fikir yükleme belirli Yasası zamanlama başvuruyor ancak zamanlayıcılar gereken herhangi bir kapasite hizmetleri yönetmek için bir ana bilgisayarın init sisteme takma için sorumlu olursunuz.
 
-Bir küme Zamanlayıcı birden çok hedefi vardır: küme kaynaklarını verimli bir şekilde kullanarak, kullanıcı tarafından sağlanan yerleşim kısıtlaması, hızlı bir şekilde bunları bekleyen bir durumda değil bırakmayı "eşitliği, hatalar için güçlü olan" derecesini sahip uygulamalar zamanlama ile çalışma ve her zaman kullanılabilir.
+   Bir küme Zamanlayıcı birden çok hedefi vardır: küme kaynaklarını verimli bir şekilde kullanarak, kullanıcı tarafından sağlanan yerleştirme kısıtlamaları, "eşitliği, hataları güçlü olan" derecesini sahip hızlı bir şekilde onlara bir bekleyen durumda bırakmamaya uygulamalar planlama ile çalışma ve her zaman kullanılabilir olacak.
 
--   **Orchestration *** *platformları bir konak kümesi üzerinde dağıtılmış multicontainer, karmaşık iş yükleri yaşam döngüsü yönetimi özelliklerini genişletir. Ana bilgisayar altyapı özetleyen tarafından düzenleme araçları kullanıcıların tüm küme tek dağıtım hedefi olarak işlemek için bir yol sağlar.
+- **Orchestration**. Platformları, bir konak kümesi üzerinde dağıtılmış karmaşık, çok kapsayıcılı iş yüklerini yaşam döngüsü yönetim özelliklerini genişletin. Aldığı konak altyapısının özetleyen tarafından düzenleme araçları kullanıcıların tüm küme tek dağıtım hedefi olarak değerlendirilecek bir yol sağlar.
 
-Düzenleme işlemi araçları ve uygulama yönetimi ilk yerleştirme veya kapsayıcı başına dağıtım tüm yönlerini otomatikleştirebilirsiniz bir platform gerektirir; kapsayıcılar kendi ana bilgisayarın sistem durumu veya performans bağlı olarak farklı ana taşıma; sürüm oluşturma ve çalışırken güncelleştirmeleri ve sistem durumu izleme ölçekleme ve yük devretme desteği işlevlerine; ve çok daha fazlası.
+   Düzenleme işlemi, Araçlar ve uygulama yönetimi ilk yerleştirme veya kapsayıcı başına dağıtım tüm yönlerini otomatikleştiren bir platform gerektirir; kapsayıcıları kendi ana bilgisayarın sistem durumu veya performans bağlı olarak farklı Konaklara taşıma; sürüm oluşturma ve sıralı güncelleştirmeler ve sistem durumu izleme, ölçeklendirme ve yük devretme destekleyen işlevleri; ve daha fazlası.
 
-Orchestration kapsayıcı zamanlama, küme yönetim ve büyük olasılıkla ek ana sağlama başvuran geniş bir terimdir.
+   Orchestration kapsayıcı zamanlama, küme yönetimi ve büyük olasılıkla ek ana sağlama için başvuruda bulunan bir geniş bir terimdir.
 
-Orchestrators ve zamanlayıcılar tarafından sağlanan özellikleri geliştirmek ve sıfırdan oluşturmak için çok karmaşık ve bu nedenle, genellikle yapmak istersiniz orchestration çözümleri kullanımını satıcılar tarafından sunulan.
+Düzenleyiciler ve zamanlayıcılar tarafından sağlanan özellikler geliştirmek ve sıfırdan oluşturmak için son derece karmaşık ve bu nedenle, genellikle yapmak istersiniz kullanım düzenleme çözümlerinin satıcıları tarafından sunulan.
 
 
 >[!div class="step-by-step"]
 [Önceki](index.md)
-[sonraki](manage-production-docker-environments.md)
+[İleri](manage-production-docker-environments.md)

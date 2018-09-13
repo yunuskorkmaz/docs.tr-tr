@@ -3,11 +3,11 @@ title: Oluşturma ve bir iş akışı örneği çalıştırma
 ms.date: 03/30/2017
 ms.assetid: 19d27f47-0491-4569-8f53-51bc1d940e80
 ms.openlocfilehash: 571d41194ebc98be81646fb5bfdab060225015ca
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44270662"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44705498"
 ---
 # <a name="creating-and-running-a-workflow-instance"></a>Oluşturma ve bir iş akışı örneği çalıştırma
 Bu örnek, bir iş akışı örneği çalıştırmak gösterilmektedir. Bu, zaman uyumlu ve zaman uyumsuz olarak yürütmek nasıl gösterir.  

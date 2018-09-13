@@ -3,11 +3,11 @@ title: Modelleme ve eşleme
 ms.date: 03/30/2017
 ms.assetid: ec8a9515-3708-4cde-a688-4d8e6975f150
 ms.openlocfilehash: 81080c416fd18c51be6626cb70a23073e049051d
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
-ms.translationtype: HT
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 09/12/2018
-ms.locfileid: "44514429"
+ms.locfileid: "44710456"
 ---
 # <a name="modeling-and-mapping"></a>Modelleme ve eşleme
 İçinde [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]tanımlayabilirsiniz depolama modeli, kavramsal model ve uygulamanızı en iyi iki şekilde arasındaki eşlemeyi uygun. Varlık veri modeli araçları Visual Studio'da oluşturmanızı sağlayan bir. [edmx dosyası](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4) bir veritabanı veya bir grafik modeli ve ardından güncelleştirme veritabanı ya da model değiştiğinde, dosya.  
