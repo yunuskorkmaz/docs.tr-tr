@@ -3,11 +3,11 @@ title: Şartlı Alma ve Yerleştirme
 ms.date: 03/30/2017
 ms.assetid: 3d22067f-57b8-4e0f-a571-a694512187ae
 ms.openlocfilehash: 29819f89327128cdd71cc89eb8d14126522dc2df
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44262531"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45595129"
 ---
 # <a name="conditional-get-and-put"></a>Şartlı Alma ve Yerleştirme
 Bu örnek, yeni koşullu almak ve WCF REST programlama modeli için API'leri güncelleştirebiliriz nasıl kullanılacağını gösterir. Koşullu alma ve güncelleştirme için en uygun olduğu için kaynak odaklı ve REST Hizmetleri, bu örnek genişletir [temel kaynak hizmeti](../../../../docs/framework/wcf/samples/basic-resource-service.md) örnek. Bu örnek, koşullu alma ve güncelleştirme desteği ekleme odaklanır [temel kaynak hizmeti](../../../../docs/framework/wcf/samples/basic-resource-service.md) de kullanıma sunulan yeni API'leri kullanarak örnek [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)].  

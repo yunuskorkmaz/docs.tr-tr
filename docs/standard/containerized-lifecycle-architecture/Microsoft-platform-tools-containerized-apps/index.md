@@ -1,63 +1,63 @@
 ---
 title: Microsoft Platformu ve araçları kapsayıcılı uygulamalar için giriş
-description: Microsoft Platformu ve araçları ile kapsayıcılı Docker uygulama yaşam döngüsü
+description: Microsoft Platformu ve araçları ile kapsayıcı Docker uygulaması yaşam
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
-ms.openlocfilehash: b14d361fb93b98de68b828514c7ea72811075fb8
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: bc13a0c8d6f14b8ea7ea2017009ba074f9a96ab3
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106197"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45594362"
 ---
 # <a name="introduction-to-the-microsoft-platform-and-tools-for-containerized-apps"></a>Microsoft Platformu ve araçları kapsayıcılı uygulamalar için giriş
 
 
-Şekil 3-1 ana ayaklar birden çok ekibin tarafından (uygulama geliştirme, DevOps altyapı işlemleri ve BT yönetimi ve işlemleri) teslim iş türüne göre sınıflandırılmış Docker uygulamaları yaşam döngüsünü gösterir. Genellikle, kuruluşta, "kişi" profilleri her alan için farklı sorumlu. Bu nedenle yeteneklerini var.
+Şekil 3-1 temel yapı taşları birden çok takımı tarafından (uygulama geliştirme, DevOps altyapı işlemlerini ve BT yönetim ve işlemler) teslim iş türüne göre sınıflandırılmış Docker uygulama yaşam döngüsünü gösterir. Genellikle, kuruluştaki, "kişi" profiller farklı her alan için sorumlu. Bu nedenle becerilerini var.
 
 ![](./media/image1.png)
 
-Şekil 3-1: ana ayaklar Microsoft Platformu ve araçları kapsayıcılı Docker uygulamalarla yaşam döngüsündeki
+Şekil 3-1: ana yapı taşları yaşam döngüsünde Microsoft Platformu ve araçları ile kapsayıcılı Docker uygulamaları için
 
-A kapsayıcılı yaşam döngüsü iş akışı olabilir başlangıçta Düzenleyici "varsayılan olarak ürün seçimleri daha hızlı başlamak geliştiriciler için kolaylaştıran," temel Docker ancak bu başlık altında olması gerektiğini bir açık çerçeve olacak şekilde, temel bir Esnek iş akışı her bir kuruluş veya Kurumsal farklı bağlamdan ayarlama özelliğine sahip. İş akışı altyapısı (bileşenlerin ve ürünlerin) her şirket gelecekte bile geliştirme veya başkalarına DevOps ürünleri değiştirme yeteneğine sahip olması gerekir bu ortamda kapsayacak şekilde esnek olması gerekir. Bu esneklik, açıklık ve altyapı ve platform teknolojilerinin geniş seçim kapsayıcılı Docker uygulamaları için tam olarak Microsoft öncelikleri izleyen bölümlerde açıklandığı gibi ' dir.
+Bir yaşam döngüsü iş akışı başlangıçta öngörücü "varsayılan olarak ürün seçenekleri daha hızlı kullanmaya başlamak, geliştiriciler için kolaylaştıran," temel Docker kapsayıcıya alınmış ancak başlık altında olması gerektiğini bir açık çerçeve olacaktır, böylece temel bir Esnek iş akışı farklı Bağlamlar için her kuruluş ya da enterprise ayarlama yeteneği. (Bileşenlerin ve ürünlerin) iş akışı altyapısı, her şirket, gelecekte bile geliştirme veya diğer ürünleri DevOps değiştirme özelliğine sahip olması gerekir bu ortamda kapsayacak şekilde esnek olması gerekir. Bu esneklik, açıklık ve altyapı ve platform teknolojilerini geniş seçimi tam olarak Microsoft kapsayıcılı Docker uygulamaları için aşağıdaki bölümlerde açıklandığı gibi aralığındadır.
 
-Tablo 3-1 kapsayıcılı Docker uygulamalar için Microsoft DevOps amacı her aşama için (Microsoft veya üçüncü taraf) kullanmak için hangi ürünleri seçebilmeleri açık bir DevOps iş akışı sağlamak için basitleştirilmiş bir iş akışı sağlarken olduğunu gösterir "yan varsayılan-Ürünler" zaten bağlı sağlayan; Bu nedenle, hızlı bir şekilde Docker uygulamalar için kuruluş düzeyi DevOps iş akışını kullanmaya.
+Tablo 3-1 kapsayıcılı Docker uygulamaları için Microsoft DevOps amacınıza her aşamada (Microsoft veya üçüncü taraf) kullanmak için hangi ürünleri seçebilmeniz açık bir DevOps iş akışı sağlamak için basitleştirilmiş bir iş akışı sağlarken olduğunu gösterir. "tarafından varsayılan-ürün" zaten bağlı sağlayan; Bu nedenle, size hızlıca Docker uygulamaları için kurumsal düzeyde DevOps iş akışınızla başlayabilirsiniz.
 
-Tablo 3-1: açık DevOps iş akışına herhangi teknolojisi
+Tablo 3-1: herhangi bir teknoloji açık DevOps iş akışı
 
-| Ana bilgisayar | Microsoft teknolojileri | Üçüncü taraf — Azure eklenebilir |
+| Ana bilgisayar | Microsoft teknolojileri | Üçüncü taraf: Azure eklenebilir |
 | ---------------------------| ----------------------------------------------------| --------------------------------------------------------------------------------|
-| Docker uygulamalar için Platform   | • Microsoft Visual Studio ve Visual Studio Code<br /> • .NET<br /> • Microsoft Azure kapsayıcı hizmeti<br /> • Azure Service Fabric<br /> • Azure kapsayıcı kayıt defteri<br /> | • (Örneğin, Sublime) herhangi bir kod Düzenleyicisi<br /> • Herhangi bir dil (Node.js, Java, Git, vb.)<br /> • Herhangi bir orchestrator ve Zamanlayıcı<br /> • Herhangi Docker kayıt defteri<br /> |
-| DevOps Docker uygulamalar için     | • Visual Studio Team Services<br /> • Microsoft Team Foundation Server<br /> • Azure kapsayıcı hizmeti<br /> • Azure Service Fabric<br /> | • GitHub, Git, alt sürüme, vs.<br /> • Jenkins, Chef, Puppet, hız, CircleCI, TravisCI, vs.<br /> • Şirket içi Docker Datacenter, Docker Swarm, Mesos DC/OS, Kubernetes, vs.<br /> |
-| Yönetim ve izleme  | • Operations Management Suite<br /> • Uygulamaları Öngörüler<br /> | • Marathon, Chronos, vb.<br />
+| Docker uygulamaları için Platform   | • Microsoft Visual Studio ve Visual Studio Code<br /> • .NET<br /> • Microsoft Azure kapsayıcı hizmeti<br /> • Azure Service Fabric<br /> • Azure kapsayıcı kayıt defteri<br /> | • Herhangi bir kod Düzenleyicisi (örneğin, Sublime)<br /> • Herhangi bir dile (Node.js, Java, Go, vb.)<br /> • Herhangi bir orchestrator ve Zamanlayıcı<br /> • Herhangi bir Docker kayıt defteri<br /> |
+| Docker uygulamaları için DevOps     | • Azure DevOps Hizmetleri<br /> • Microsoft Team Foundation Server<br /> • Azure kapsayıcı hizmeti<br /> • Azure Service Fabric<br /> | • GitHub, Git, Subversion, vs.<br /> • Jenkins, Chef, Puppet, hız, CircleCI, Travis CI, vs.<br /> • Şirket içi Docker Datacenter, Docker Swarm, Mesos DC/OS, Kubernetes, vs.<br /> |
+| Yönetim ve izleme  | • Operations Management Suite<br /> • Uygulama öngörüleri<br /> | • Marathon, Chronos, vb.<br />
 
-Microsoft Platformu ve araçları kapsayıcılı Docker uygulamalar için Tablo 3-1'de tanımlandığı gibi aşağıdaki bileşenleri oluşturan:
+Microsoft Platformu ve kapsayıcılı Docker uygulamaları için Araçlar Tablo 3-1'de tanımlandığı gibi aşağıdaki bileşenler oluşturan:
 
--   **Docker uygulamaları geliştirme platformu** bir hizmeti veya bir "uygulaması." Hizmetler koleksiyonu geliştirme Tüm iş geliştiriciler gerektirir ve kodunu paylaşılan kod depoya Ftp'den önce geliştirme platformu sağlar. Kapsayıcılar olarak dağıtılan geliştirme hizmetler, aynı uygulamalar veya hizmetler Docker olmadan geliştirilmesi çok benzer. Tercih edilen dili (.NET, Node.js, Git, vb.) ve tercih edilen Düzenleyicisi'ni ya da Visual Studio veya Visual Studio Code gibi IDE kullanmaya devam edersiniz. Ancak, bir dağıtım hedef Docker göz önünde bulundurun yerine hizmetlerinizi Docker ortamında geliştirin. Derleme, çalıştırmak, test ve geliştirme anında hedef ortam sağlama kodunuzu kapsayıcılarında yerel olarak hata ayıklama. Yerel olarak hedef ortam sağlayarak, Docker kapsayıcıları ne büyük ölçüde DevOps yaşam döngüsü geliştirmenize yardımcı olacak yukarı ayarlayın. Visual Studio ve Visual Studio Code geliştirme sürecini Docker kapsayıcılara tümleştirmek için uzantılarına sahip.
+-   **Docker uygulamaları geliştirme platformu** geliştirmeye yönelik bir hizmet veya bir "uygulamayı oluşturan." Hizmetler koleksiyonu Tüm iş geliştiricilerin gerektirir kodlarını bir paylaşılan kod deposuna göndermeden önce geliştirme platformu sağlar. Kapsayıcıları olarak, Dağıtılmış Geliştirme Hizmetleri, aynı uygulamalar veya hizmetler olmadan Docker geliştirme oldukça benzerdir. Tercih edilen dili (.NET, Node.js, Go, vb.) ve tercih edilen Düzenleyici ya da Visual Studio veya Visual Studio Code gibi IDE kullanmaya devam edersiniz. Ancak, dağıtım hedef Docker göz önünde bulundurun yerine Docker ortamında hizmetlerinizi geliştirin. Yapı, çalıştırın, test ve geliştirme zamanında hedef ortamı sağlayan kapsayıcıları yerel olarak kodunuzda hata ayıklama. Yerel olarak hedef ortam sağlayarak, Docker kapsayıcıları ne önemli ölçüde, DevOps yaşam döngüsü geliştirmenize yardımcı olacak yukarı ayarlayın. Visual Studio ve Visual Studio Code Uzantıları Geliştirme sürecinizin içinde Docker kapsayıcıları tümleştirmek için var.
 
--   **Docker uygulamalar için DevOps** Docker uygulamaları oluşturma geliştiricileri Visual Studio Team Services (VSTS) veya herhangi diğer üçüncü taraf ürün, Jenkins gibi kullanabilir, kapsamlı bir yapı için uygulama yaşam döngüsü yönetimi (ALM) otomatik.
+-   **Docker uygulamaları için DevOps** Docker uygulama oluşturan geliştiricilere, Azure DevOps Hizmetleri ya da başka üçüncü taraf bir ürün, Jenkins gibi kullanabileceğiniz, kapsamlı bir oluşturmak için uygulama yaşam döngüsü yönetimi (ALM) otomatik.
 
-VSTS ile geliştiriciler, kaynak kodu kapsayan hızlı ve yinelemeli bir işlem için kapsayıcı odaklı DevOps oluşturabilir yerden (VSTS Git, GitHub, uzak bir Git deposuna veya alt sürüme) sürekli tümleştirme (CI), iç birim testleri denetlemek, ağlar arası kapsayıcı/hizmet tümleştirme testleri, sürekli teslim (CD) ve yayın Yönetimi (RM). Geliştiriciler Ayrıca kendi Docker uygulama sürümlerden Azure kapsayıcı hizmeti içine geliştirme hazırlama ve üretim ortamları için otomatik hale getirebilirsiniz.
-
+Azure DevOps hizmetleriyle kapsayıcı odaklı geliştiriciler oluşturabilir, kaynak kodu kapsayan hızlı, yinelemeli bir işlem için DevOps denetim her yerden (Azure DevOps Hizmetleri-Gıt, GitHub, herhangi bir uzak Git deposu veya Subversion) sürekli tümleştirme (CI) , iç birim testleri, arası kapsayıcı/hizmet tümleştirme testleri, sürekli teslim (CD) ve sürüm Yönetimi'ni (RM). Geliştiricilerin kendi Docker uygulama sürümlerin içindeki Azure Container Service, geliştirme, hazırlama ve üretim ortamları için de otomatik hale getirebilirsiniz.
+ 
 -   BT üretim yönetim ve izleme.
 
-**Yönetim** BT üretim uygulamaları ve Hizmetleri birkaç yolla yönetebilir:
+**Yönetim** BT üretim uygulamalarınızda ve hizmetlerinizde birkaç yolla yönetebilir:
 
--   **Azure portal** açık kaynak orchestrators, Azure kapsayıcı Hizmeti'ni (ACS) kullanmakta olduğunuz artı Docker Datacenter ve Mesosphere Marathon ayarlamak ve Docker ortamınızı sürdürmek için yardımcı gibi kümesi Yönetim Araçları. Azure Service Fabric kullanıyorsanız, Service Fabric Explorer aracını, görselleştirin ve kümenizi yapılandırmak için mümkün kılar.
+-   **Azure portalında** açık kaynak düzenleyicileri, Azure Container Service (ACS) kullanıyorsanız artı kümesi yönetim araçları gibi Docker Datacenter ve Mesosphere Marathon, ayarlamak ve Docker ortamlarınızı korumak için yardımcı olur. Azure Service Fabric kullanıyorsanız, Service Fabric Explorer aracını, görselleştirin ve kümenizi yapılandırma için mümkün kılar.
 
--   **Docker Araçları** kapsayıcı uygulamalarınızı tanıdık araçlar kullanarak yönetebilirsiniz. Kapsayıcı iş yüklerinin buluta taşımak için varolan Docker yönetim uygulamalarınızı değiştirmenize gerek yoktur. Zaten aşina ve tercih ettiğiniz orchestrator için standart API uç noktaları bağlanma uygulama yönetim araçlarını kullanın. Diğer üçüncü taraf araçları, Docker Datacenter veya hatta CLI Docker araçları gibi Docker uygulamalarınızı yönetmek için de kullanabilirsiniz.
+-   **Docker Araçları** alışık olduğunuz araçları kullanarak kapsayıcı uygulamalarınızı yönetebilirsiniz. Kapsayıcı iş yüklerini buluta taşımak için mevcut Docker yönetim uygulamalarınızı değiştirmenize gerek yoktur. Alışık olduğunuz ve tercih ettiğiniz orchestrator için standart API uç noktaları aracılığıyla bağlanma uygulama yönetimi araçlarını kullanın. Docker Datacenter veya hatta Docker CLI araçları gibi Docker uygulamalarınızı yönetmek için diğer üçüncü taraf araçları da kullanabilirsiniz.
 
--   **Açık kaynaklı Araçları** çünkü ACS sunan düzenleme altyapısı için standart API uç noktaları, en popüler araçları ACS ile uyumludur ve çoğu durumda, kutudan çıktığı çalışır — görselleştiriciler, izleme de dahil olmak üzere komut satırı araçları ve kullanılabilir olduklarında bile gelecekteki araçları.
+-   **Açık kaynak Araçları** çünkü ACS düzenleme altyapısı için standart API uç noktalarını kullanıma sunar, en popüler araçların ACS ile uyumludur ve çoğu durumda kullanıma hazır olarak çalışır; görselleştiriciler, izleme, dahil olmak üzere komut satırı araçları ve kullanıma sunuldukça hatta gelecekte kullanıma sunulacak araçlar.
 
-**İzleme** üretim ortamlarında çalışırken, her açısı aşağıdaki kullanarak izleyebilirsiniz:
+**İzleme** üretim ortamlarında çalışırken, size her açıdan ele aşağıdaki kullanarak izleyebilirsiniz:
 
--   **Operations Management Suite (OMS)** "OMS kapsayıcı Çözüm" yönetme ve Docker ana bilgisayarları ve kapsayıcıları kapsayıcıları ve kapsayıcı konakları nerede hakkında bilgi göstererek izleme çalışan ya da başarısız, hangi kapsayıcıları ve Docker arka plan programı ve kapsayıcı günlükleri. Ayrıca, performans ölçümleri CPU, bellek, ağ ve depolama kapsayıcısı ve sorun giderme ve gürültülü komşu kapsayıcıları bulmanıza yardımcı olmak için ana bilgisayarların gibi gösterir.
+-   **Operations Management Suite (OMS)** "OMS kapsayıcı çözümünü" yönetebilir ve kapsayıcılar ve kapsayıcı konağında olduğu hakkında bilgi göstererek Docker ana bilgisayarları ve kapsayıcıları izleme çalışan ya da başarısız, kapsayıcıları ve Docker daemon ve kapsayıcı günlüklerini. Ayrıca CPU, bellek, ağ ve depolama kapsayıcısı ve sorun giderme ve gürültülü komşu kapsayıcıları bulmanıza yardımcı olması için ana bilgisayarları gibi performans ölçümlerini gösterir.
 
--   **Application Insights** böylece uygulamalardan telemetri verileri alabilir şekilde kendi SDK hizmetlerinizi içine ayarlayarak üretim Docker uygulamalarını izleyebilirsiniz.
+-   **Application Insights** uygulamalardan telemetri verilerini alabilmesi yalnızca kendi SDK hizmetlerinizi içine ayarlayarak üretim Docker uygulamalarını izleyebilirsiniz.
 
-Bu nedenle, Microsoft, bir uçtan uca kapsayıcılı Docker uygulama yaşam döngüsü için tam bir temel sunar. Ancak, *ürünleri ve isteğe bağlı olarak seçin ve var olan tümleştirmenize olanak tanıyan teknolojileri koleksiyonu araçları ve işler*. Geniş bir yaklaşım yetenekleri derinlemesine gücü birlikte esneklik kapsayıcılı Docker uygulama geliştirme için güçlü bir konumda Microsoft yerleştirin.
+Bu nedenle, Microsoft, bir uçtan uca kapsayıcı Docker uygulaması yaşam döngüsü için tam bir temel sunar. Ancak, *koleksiyonu ürünleri ve isteğe bağlı olarak seçin ve var olan tümleştirme olanak tanıyan teknolojileri, araçları ve işler*. Özelliklerin ayrıntılı gücü ile birlikte geniş bir yaklaşım esneklik, kapsayıcılı Docker uygulama geliştirme için güçlü bir konumda Microsoft yerleştirin.
 
 >[!div class="step-by-step"]
 [Önceki](../Docker-application-lifecycle/containers-foundation-for-devops-collaboration.md)
-[sonraki](../design-develop-containerized-apps/index.md)
+[İleri](../design-develop-containerized-apps/index.md)

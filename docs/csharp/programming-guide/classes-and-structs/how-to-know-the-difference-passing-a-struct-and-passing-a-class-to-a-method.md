@@ -7,11 +7,11 @@ helpviewer_keywords:
 - methods [C#], passing classes vs. structs
 ms.assetid: 9c1313a6-32a8-4ea7-a59f-450f66af628b
 ms.openlocfilehash: 670dfad3b9fc22709a0ad7f8048a0468bce54a2e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44190838"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45594730"
 ---
 # <a name="how-to-know-the-difference-between-passing-a-struct-and-passing-a-class-reference-to-a-method-c-programming-guide"></a>Nasıl yapılır: Yapı Geçirme ile Metoda Sınıf Başvurusu Geçirme Arasındaki Farkı Bilme (C# Programlama Kılavuzu)
 Aşağıdaki örnek nasıl geçirme gösterir bir [yapı](../../../csharp/language-reference/keywords/struct.md) bir yönteme geçirme'dan farklı bir [sınıfı](../../../csharp/language-reference/keywords/class.md) örneğinin bir yönteme. Örnekte, iki bağımsız değişkenler (yapı ve sınıf örneği) değere göre geçirilir ve her iki yöntem bağımsız değişkeninin bir alanın değerini değiştirin. Yapı başarılı olduğunda ne iletilen bir sınıfın örneğini geçirdiğinizde ne geçirilen gelen değiştiğinden ancak sonuçları iki yöntemden biriyle aynı değildir.  

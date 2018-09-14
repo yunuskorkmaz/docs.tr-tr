@@ -9,11 +9,11 @@ ms.assetid: 8e4450dc-56b3-472b-b467-32f5694f83ad
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9e02dd304893e4d9354144c5b412dfd145161c6e
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45557859"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45596955"
 ---
 # <a name="select-nodes-using-xpath-navigation"></a>XPath gezintisi kullanarak düğüm seçme
 XML belge nesne modeli (DOM) DOM'da XML Path Language (XPath) sorgusu bilgi gitme kullanmanıza olanak sağlayan yöntemler içerir. XPath tek, belirli bir düğümü bulunamadı veya bazı ölçütleri ile eşleşen tüm düğümleri bulmak için kullanabilirsiniz.  

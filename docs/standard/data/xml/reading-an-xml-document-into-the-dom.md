@@ -9,11 +9,11 @@ ms.assetid: a4fb291f-5630-49ba-a49a-5b66c3b71e49
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9031f5df0d0f48dc2844cdfd0654ee4ab876cc22
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44209543"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45592212"
 ---
 # <a name="reading-an-xml-document-into-the-dom"></a>DOM'da XML belgesi okuma
 Farklı biçimler belleğe XML bilgileri okuyun. Bir dize, akış, URL, metin okuyucuyu ya da türetilen bir sınıf okunabilir <xref:System.Xml.XmlReader>.  

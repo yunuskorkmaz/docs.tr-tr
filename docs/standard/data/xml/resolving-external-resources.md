@@ -6,11 +6,11 @@ ms.assetid: ad3fa320-4b8f-4e5c-b549-01157591007a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ef31d101769dca00f5cff545c72b3afbd59bc638
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44509992"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45569365"
 ---
 # <a name="resolving-external-resources"></a>Dış kaynakları çözümleme
 **XmlResolver** özelliği **XmlDocument** tarafından kullanılan **XmlDocument** XML verisindeki dış belge türü gibi satır içi olmayan kaynakları bulmak için sınıfı tanımları (DTD'ler), varlıkları ve şemalar. Bu öğeleri bir ağ veya yerel bir sürücüde bulunan olabilir ve bir Tekdüzen Kaynak Tanımlayıcısı (URI) tarafından tanımlanabilir. Böylece **XmlDocument** çözümlenecek **EntityReference** belgede mevcut olduğundan ve doğrulamak belgenin dış DTD'nin veya şema göre düğümleri.  

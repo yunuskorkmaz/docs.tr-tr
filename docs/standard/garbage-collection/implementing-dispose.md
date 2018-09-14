@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 176ae3589443937331259ee4716570c66053de3c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 36526da1fc678e933a75e19bac9c8e1d0a40909c
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44186194"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45597777"
 ---
 # <a name="implementing-a-dispose-method"></a>Dispose yöntemi uygulama
 
@@ -107,7 +107,7 @@ Geçersiz kılan bir temel sınıf için dispose deseni uygulamada genel Düzen 
 
 Uygulayan bir sınıftan türetilmiş bir sınıf <xref:System.IDisposable> arabirimini <xref:System.IDisposable>, temel sınıf çünkü uygulaması <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> kendi türetilmiş sınıflar tarafından devralınır. Onun yerine, türetilen bir sınıfa ilişkin olarak dispose desenini uygulamak için aşağıdakileri sağlarsınız:  
   
-* A `protected Dispose(Boolean)` temel sınıf yöntemini geçersiz kılan ve türetilen sınıfın kaynaklarını serbest bırakma işini gerçekleştiren yöntemi. Bu yöntem de çağırmalı `Dispose(Boolean)` yöntemi temel sınıf ve değerini geçirmelidir `true` için *disposing* bağımsız değişken.  
+* A `protected Dispose(Boolean)` temel sınıf yöntemini geçersiz kılan ve türetilen sınıfın kaynaklarını serbest bırakma işini gerçekleştiren yöntemi. Bu yöntemini de çağırmalı `Dispose(Boolean)` yöntemi temel sınıf ve disposing durumu bağımsız değişkeni için geçirin.  
   
 * Türetilen bir sınıf <xref:System.Runtime.InteropServices.SafeHandle> yönetilemeyen kaynağınızı (önerilir) veya bir geçersiz kılma sarmalar <xref:System.Object.Finalize%2A?displayProperty=nameWithType> yöntemi. <xref:System.Runtime.InteropServices.SafeHandle> Sınıf bir kod zorunda kalmanızı bir sonlandırıcı sağlar. Bir sonlandırıcı sağlarsanız, çağırmalıdır `Dispose(Boolean)` aşırı yüklemesine bir *disposing* bağımsız değişkeni `false`.  
   

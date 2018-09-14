@@ -10,11 +10,11 @@ ms.assetid: eed44dff-eaee-4937-a89f-444e418e74f6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3b106005ff07f55e05ae66dba94041cd8b5c24bb
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
-ms.translationtype: MT
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44700709"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45583813"
 ---
 # <a name="byte-data-type-visual-basic"></a>Byte veri türü (Visual Basic)
 Değeri 0 ile 255 arasında imzalanmamış 8-bit (1-bayt) tamsayıları tutar.

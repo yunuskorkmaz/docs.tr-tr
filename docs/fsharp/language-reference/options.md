@@ -3,11 +3,11 @@ title: Seçenekler (F#)
 description: 'Adlandırılmış değer veya değişken için gerçek bir değer türleri var olmayabilir F # seçeneği kullanmayı öğrenin.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 0859cb42e72ef9e67551b884f5cf6130fb099a78
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44262600"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45615767"
 ---
 # <a name="options"></a>Seçenekler
 

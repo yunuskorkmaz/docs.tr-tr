@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: tüm düğümleri bulmak bir Namespace (C#)'
 ms.date: 07/20/2015
 ms.assetid: 3a38b913-a53e-4d0e-a19d-8782bffd3364
 ms.openlocfilehash: 0675795da7c190e6d105ac61027c28f161961099
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
-ms.translationtype: MT
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44261557"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45589174"
 ---
 # <a name="how-to-find-all-nodes-in-a-namespace-c"></a>Nasıl yapılır: tüm düğümleri bulmak bir Namespace (C#)
 Her bir öğe veya öznitelik, belirli bir ad alanındaki tüm düğümleri bulmak için ad alanı filtreleyebilirsiniz.  

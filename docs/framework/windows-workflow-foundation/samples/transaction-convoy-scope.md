@@ -3,11 +3,11 @@ title: İşlem Konvoy kapsamı
 ms.date: 03/30/2017
 ms.assetid: 37141708-a29f-4b6a-81fe-f8a11f825061
 ms.openlocfilehash: fa1da6df5ad5256665610c9b3c2df7d706cef63c
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44705290"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45597227"
 ---
 # <a name="transaction-convoy-scope"></a>İşlem Konvoy kapsamı
 Bu örnek, paralel bir etkinlik deseni ile birlikte Mesajlaşma Konvoy oluşturma işlemini gösterir. bir <xref:System.ServiceModel.Activities.TransactedReceiveScope> burada işlemlerinin sayısı gerçekleşebilir tümü aynı işlem altında herhangi bir sırada bir protokol model. Bu örnek ayrıca gösterir nasıl bir <xref:System.ServiceModel.Activities.TransactedReceiveScope> istemci olmayan haline bir sunucuya akıtılan değil, otomatik olarak yeni bir işlem oluşturur işlemler kullanın.  

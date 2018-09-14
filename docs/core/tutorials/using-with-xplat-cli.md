@@ -3,14 +3,14 @@ title: CLI kullanarak .NET Core ile çalışmaya başlama
 description: Windows, Linux veya .NET Core komut satırı arabirimi (CLI) kullanarak macOS üzerinde .NET Core ile çalışmaya başlama gösteren adım adım bir öğretici.
 author: cartermp
 ms.author: mairaw
-ms.date: 03/08/2017
+ms.date: 09/10/2018
 ms.technology: dotnet-cli
-ms.openlocfilehash: 5ec7168ebc2ee4fc428d1ab520e986842f111ca7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: b31a0324c0d762e9898c681cc6581b3860d41f89
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44200323"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45591899"
 ---
 # <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Windows/Linus/macos'ta komut satırını kullanarak .NET Core ile çalışmaya başlama
 
@@ -20,7 +20,7 @@ Bu konuda, makinenizde .NET Core CLI araçları ile platformlar arası uygulamal
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-- [.NET core SDK'sı 1.0](https://www.microsoft.com/net/download/core).
+- [.NET core SDK'sını 2.1](https://www.microsoft.com/net/download/core).
 - Bir metin düzenleyicisi veya tercih ettiğiniz Kod Düzenleyicisi.
 
 ## <a name="hello-console-app"></a>Konsol uygulaması Merhaba!
@@ -31,7 +31,6 @@ Bir komut istemi açın ve adlı bir klasör oluşturun *Hello*. Oluşturduğunu
 
 ```console
 $ dotnet new console
-$ dotnet restore
 $ dotnet run
 ```
 
@@ -60,13 +59,12 @@ Hızlı bir kılavuz inceleyelim:
 
    [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-2. `$ dotnet restore`
+   `dotnet new` çağrıları [ `dotnet restore` ](../tools/dotnet-restore.md) örtük olarak. `dotnet restore` içine yapılan çağrılar [NuGet](https://www.nuget.org/) (bağımlılıkları ağacının geri yüklemek için Paket Yöneticisi .NET). NuGet çözümler *Hello.csproj* dosya, dosyasında tanımlanan bağımlılıkları indirir (veya bunları makinenizde önbellekten Dallarınızla) ve Yazar *obj/project.assets.json* için gerekli olan dosya derleme ve örneği çalıştırın. 
+   
+   > [!IMPORTANT]
+   > SDK'sının bir .NET Core 1.x sürümü kullanıyorsanız, çağırmanız gerekir `dotnet restore` arama sonra kendiniz `dotnet new`.
 
-   [`dotnet restore`](../tools/dotnet-restore.md) içine yapılan çağrılar [NuGet](https://www.nuget.org/) (bağımlılıkları ağacının geri yüklemek için Paket Yöneticisi .NET). NuGet çözümler *Hello.csproj* dosya, dosyasında belirtilen bağımlılıkları indirir (veya bunları makinenizde önbellekten Dallarınızla) ve Yazar *obj/project.assets.json* dosya.  *Project.assets.json* derlemek ve çalıştırmak dosya gereklidir.
-
-   *Project.assets.json* grafiği, NuGet bağımlılıklarını ve uygulamayı açıklayan diğer bilgilerin kalıcı ve eksiksiz bir kümesini dosyasıdır.  Bu dosya gibi diğer araçları tarafından okunur [ `dotnet build` ](../tools/dotnet-build.md) ve [ `dotnet run` ](../tools/dotnet-run.md), NuGet bağımlılıklarını doğru bir dizi kaynak koduyla işlenecek dönemlik ve çözümleri bağlama.
-
-3. `$ dotnet run`
+2. `$ dotnet run`
 
    [`dotnet run`](../tools/dotnet-run.md) çağrıları [ `dotnet build` ](../tools/dotnet-build.md) hedefleri oluşturulan derleme ve çağrıları emin olmak için `dotnet <assembly.dll>` hedef uygulamayı çalıştırın.
 
@@ -75,10 +73,9 @@ Hızlı bir kılavuz inceleyelim:
     Hello World!
     ```
 
-    Alternatif olarak, aynı zamanda yürütebilirsiniz [ `dotnet build` ](../tools/dotnet-build.md) konsol uygulamaları derleme çalıştırmadan Kodu derlemek için. İle çalıştırılabilir bir DLL dosyası olarak derlenmiş bir uygulama sonuçlanır `dotnet bin\Debug\netcoreapp1.0\Hello.dll` Windows üzerinde (kullanın `/` Windows olmayan sistemler için). Bu konuda daha sonra göreceğiniz üzere uygulamaya bağımsız değişkenler de belirtebilirsiniz.
-
+    Alternatif olarak, aynı zamanda yürütebilirsiniz [ `dotnet build` ](../tools/dotnet-build.md) konsol uygulamaları derleme çalıştırmadan Kodu derlemek için. İle çalıştırılabilir bir DLL dosyası olarak derlenmiş bir uygulama sonuçlanır `dotnet bin\Debug\netcoreapp2.1\Hello.dll` Windows üzerinde (kullanın `/` Windows olmayan sistemler için). Bu konuda daha sonra göreceğiniz üzere uygulamaya bağımsız değişkenler de belirtebilirsiniz.
     ```console
-    $ dotnet bin\Debug\netcoreapp1.0\Hello.dll
+    $ dotnet bin\Debug\netcoreapp2.1\Hello.dll
     Hello World!
     ```
 

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
 ms.openlocfilehash: e50f455ab83b0b057f8ce3c32f874e6856632d70
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45508180"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45615475"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>Olay Tabanlı Zaman Uyumsuz Desen Uygulamak için En İyi Yöntemler
 Olay tabanlı zaman uyumsuz desen sınıflarda, alışık olduğunuz olay ile zaman uyumsuz davranış ve semantiği temsilci etkili bir yol sağlar. Olay tabanlı zaman uyumsuz desen uygulamak için bazı belirli davranış gereksinimini takip etmeniz gerekir. Aşağıdaki bölümlerde, gereksinimleri ve olay-tabanlı zaman uyumsuz deseni izleyen bir sınıf uygularken dikkate almanız gereken yönergeler açıklanmaktadır.  

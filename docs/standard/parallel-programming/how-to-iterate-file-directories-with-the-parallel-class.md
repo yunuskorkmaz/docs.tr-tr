@@ -11,11 +11,11 @@ ms.assetid: 555e9f48-f53d-4774-9bcf-3e965c732ec5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 34f9208ac5007e26967c136f0599cabfd66ba2ea
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45516574"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45596383"
 ---
 # <a name="how-to-iterate-file-directories-with-the-parallel-class"></a>Nasıl yapılır: Paralel Sınıfla Dosya Dizinlerini Yineleme
 Çoğu durumda, dosya yineleme kolayca paralel bir işlemdir. Konu [nasıl yapılır: PLINQ ile dosya dizinlerini yineleme](../../../docs/standard/parallel-programming/how-to-iterate-file-directories-with-plinq.md) birçok senaryo için bu görevi gerçekleştirmek için en kolay yolu gösterir. Ancak, kodunuzu türlerde dosya sistemine erişirken oluşabilecek özel durumları ile uğraşmak zorunda kaldığında zorluklar ortaya çıkabilir. Aşağıdaki örnek, sorunun bir yaklaşımı gösterir. Tüm dosya ve klasörlerin belirtilen dizinin altındaki geçirmek için bir yığın tabanlı yineleme kullanır ve catch ve çeşitli özel durumları işlemek için kodunuzu sağlar. Elbette, özel durumları işlemeye size kalmıştır yoludur.  

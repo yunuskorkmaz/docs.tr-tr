@@ -4,12 +4,12 @@ description: "' De .NET Core bulunan yeni özellikler hakkında bilgi edinin."
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/13/2017
-ms.openlocfilehash: 02aac2dab2b892927c0c98fae30bb287a6e24ad6
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.openlocfilehash: 4be579f2000c86b3dad412b24589fa8e7024d2f0
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "44778473"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45591769"
 ---
 # <a name="whats-new-in-net-core-20"></a>.NET Core 2.0 yenilikleri
 
@@ -158,8 +158,8 @@ Artık Visual Studio bağımsız olarak .NET Core SDK'sını yükleyebilirsiniz.
 
 - [Mikro hizmetler ve Docker kapsayıcıları](../../standard/microservices-architecture/index.md)
 - [ASP.NET ile Web uygulamaları](../../standard/modern-web-apps-azure-architecture/index.md)
-- [Xamarin ile mobil uygulamalar](/xamarin/xamarin-forms/enterprise-application-patterns/index.md)
-- [Azure ile buluta dağıtılan uygulamalar](/azure/architecture/reference-architectures/index.md)
+- [Xamarin ile mobil uygulamalar](/xamarin/xamarin-forms/enterprise-application-patterns/index)
+- [Azure ile buluta dağıtılan uygulamalar](/azure/architecture/reference-architectures/index)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

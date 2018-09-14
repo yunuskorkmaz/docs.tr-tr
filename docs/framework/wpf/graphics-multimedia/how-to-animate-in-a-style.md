@@ -1,25 +1,27 @@
 ---
-title: 'Nasıl yapılır: Bir Stile Animasyon Ekleme'
+title: Nasıl (WPF) bir stile animasyon ekleme
 ms.date: 03/30/2017
 helpviewer_keywords:
 - animation [WPF], properties [WPF], within styles
 - styles [WPF], animating properties within
 ms.assetid: 6a791f3d-6b1f-4972-a2f9-35880bcfd954
-ms.openlocfilehash: e0741a869ab81875aaa25340de851ef939e11a6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a455bbfb9defbcf83f7e490f60031917a3b41779
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33558819"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45592856"
 ---
-# <a name="how-to-animate-in-a-style"></a>Nasıl yapılır: Bir Stile Animasyon Ekleme
-Bu örnek, stil içindeki özelliklere animasyon gösterilmektedir. Stil içinde animasyon eklerken, yalnızca stili tanımlandığı çerçeve öğesi doğrudan hedeflenebilir. Freezable nesne hedeflemek için "aşağı stilde öğe özelliğinden nokta gerekir".  
-  
- Aşağıdaki örnekte, birkaç animasyon stil içinde tanımlanır ve uygulanan bir <xref:System.Windows.Controls.Button>. Kullanıcı fare düğmesini taşındığında, opak görünümden kısmen saydam ve geri belirerek, tekrar. Kullanıcının fare düğmesini devre dışı geçtiğinde, tamamen opak olur. Düğmesine tıklandığında, arka plan rengi beyaz ve yeniden turuncu değiştirir. Çünkü <xref:System.Windows.Media.SolidColorBrush> boyamak için kullanılan düğme doğrudan hedefleyemez, düğmenin noktalanarak erişilir <xref:System.Windows.Controls.Control.Background%2A> özelliği.  
-  
-## <a name="example"></a>Örnek  
- [!code-xaml[timingbehaviors_snip#21](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/StyleStoryboardsExample.xaml#21)]  
-  
- Stil içinde animasyon eklerken, yoksa hedef nesneler için mümkün olduğunu unutmayın. Örneğin, stilinize kullandığını varsayın bir <xref:System.Windows.Media.SolidColorBrush> düğmenin arka plan özelliği ayarlanmış, ancak bir stil noktada için geçersiz kılınır ve düğmenin arka planı ile ayarlanmış bir <xref:System.Windows.Media.LinearGradientBrush>.  Animasyon çalışılırken <xref:System.Windows.Media.SolidColorBrush> bir özel durum; throw olmaz animasyon sessizce başarısız olur.  
-  
- Sözdizimi hedefleyen film şeridi hakkında daha fazla bilgi için bkz: [film şeritleri genel bakış](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md). Animasyon hakkında daha fazla bilgi için bkz: [animasyon genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md). Stilleri hakkında daha fazla bilgi için bkz: [stil ve şablon](../../../../docs/framework/wpf/controls/styling-and-templating.md).
+# <a name="how-to-animate-in-a-style"></a>Nasıl bir stile animasyon ekleme
+
+Bu örnek, bir stil içinde özelliklerine animasyon gösterilmektedir. Bir stil içinde animasyon zaman stili tanımlandığı framework öğesi doğrudan hedefleyebilir. Freezable nesne hedeflemek için "aşağı bir stil uygulanmış öğesi özellikten nokta gerekir".
+
+Aşağıdaki örnekte, birkaç animasyon bir stil içinde tanımlanan ve uygulanan bir <xref:System.Windows.Controls.Button>. Kullanıcı düğmenin üzerine fareyi hareket ettirdiğinde, donuk kısmen saydam ve geri belirerek, tekrar. Kullanıcı fareyi düğmeden hareket ettirdiğinde tamamen opak olur. Düğme tıklandığında, beyaz ve yeniden turuncudan arka plan rengini değiştirir. Çünkü <xref:System.Windows.Media.SolidColorBrush> boyamak için kullanılan düğme doğrudan hedeflenemez, düğmenin noktalanarak erişilir <xref:System.Windows.Controls.Control.Background%2A> özelliği.
+
+## <a name="example"></a>Örnek
+
+[!code-xaml[timingbehaviors_snip#21](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/StyleStoryboardsExample.xaml#21)]
+
+Stil içinde animasyon zaman, mevcut olmayan hedef nesnelere mümkün olduğunu unutmayın. Örneğin, stili kullanan varsayalım bir <xref:System.Windows.Media.SolidColorBrush> düğmenin arka plan ile ayarlanır ve bir düğmenin arka plan özelliği ayarlandı, ancak bir noktada stili için geçersiz bir <xref:System.Windows.Media.LinearGradientBrush>.  Animasyon çalışılırken <xref:System.Windows.Media.SolidColorBrush> ; özel durum olmaz animasyon sessizce başarısız olur.
+
+Söz dizimi hedefleyen görsel taslak hakkında daha fazla bilgi için bkz: [görsel taslaklara genel bakış](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md). Animasyon hakkında daha fazla bilgi için bkz. [animasyona genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md). Stilleri hakkında daha fazla bilgi için bkz. [stil ve şablon oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md).

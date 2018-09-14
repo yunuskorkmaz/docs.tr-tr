@@ -8,11 +8,11 @@ helpviewer_keywords:
 - libraries [WPF], controls
 ms.assetid: c1b33289-c389-4ac2-b153-3cbb0d8324ad
 ms.openlocfilehash: 26f81a2bfeb5ef4e448ddcbc9b8bac521624a629
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45526622"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45592758"
 ---
 # <a name="control-library"></a>Denetim Kitaplığı
 Windows Presentation Foundation (WPF) denetim kitaplığı, Windows Presentation Foundation (alfabetik olarak listelenen WPF tarafından), sağlanan denetimleri hakkında bilgi içerir.  

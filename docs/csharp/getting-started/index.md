@@ -8,11 +8,11 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 08/23/2017
 ms.openlocfilehash: aa34c181073d089d137ac0ef64c85c8fe2772093
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45514527"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45597848"
 ---
 # <a name="get-started-with-c"></a>C ile çalışmaya başlama\#
 

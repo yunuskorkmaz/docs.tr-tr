@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, delegates
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-ms.openlocfilehash: 3924d070ea012faf33f1d808b92b1328626ef567
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 96de5601c60dd309fe5467414affd20b8bc93d87
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43805461"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45592146"
 ---
 # <a name="delegates-c-programming-guide"></a>Temsilciler (C# Programlama Kılavuzu)
 A [temsilci](../../../csharp/language-reference/keywords/delegate.md) belirli bir parametre listesi olan yöntemlere başvuruları temsil eden bir tür ve dönüş türü. Bir temsilci oluşturduğunuzda, örneğini uyumlu bir imza ve dönüş türü içeren herhangi bir yöntemle ilişkilendirebilirsiniz. Yöntemi, temsilci örneği aracılığıyla çağırabilirsiniz.  
@@ -29,7 +29,7 @@ A [temsilci](../../../csharp/language-reference/keywords/delegate.md) belirli bi
 ## <a name="delegates-overview"></a>Temsilcilere Genel Bakış  
  Temsilciler aşağıdaki özelliklere sahiptir:  
   
--   Temsilciler C++ işlev işaretçileri gibidir, fakat tür bakımından güvenlidir.  
+-   Temsilciler C++ işlev işaretçilerine benzer ancak temsilcileri, bir tam nesne yönelimli ve hem nesne örneği hem de bir yöntem üye işlevlerinin C++ işaretçileri, temsilciler yalıtma.
   
 -   Temsilciler, yöntemlerin parametre olarak geçirilmesine olanak tanır.  
   

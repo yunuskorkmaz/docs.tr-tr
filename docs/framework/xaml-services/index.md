@@ -7,11 +7,11 @@ helpviewer_keywords:
 - System.Xaml [XAML Services], conceptual documentation
 ms.assetid: 0e11f386-808c-4eae-9ba6-029ad7ba2211
 ms.openlocfilehash: 373478e8c21fca66cbfbf7a58fc7d53f65ce5d0b
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45508323"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45617389"
 ---
 # <a name="xaml-services"></a>XAML Hizmetleri
 Bu konu, .NET Framework XAML Hizmetleri bilinen bir teknoloji kümesi yeteneklerini açıklar. Çoğu açıklanan API'leri ve Hizmetleri ile sunulan bir derleme System.Xaml, derlemede bulunur [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] .NET core derleme kümesi. Hizmetler dahil okuyucular ve yazıcılar, şema sınıfları ve şema desteği, fabrikaları, sınıflar, XAML dil desteği ve diğer XAML dil özellikleri öznitelik atanıyor.  

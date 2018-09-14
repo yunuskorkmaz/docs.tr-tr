@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: bir dosyanın bir derleme (Visual Basic) olup olmadı�
 ms.date: 07/20/2015
 ms.assetid: de26f410-9bd1-4b55-a343-cc82f81684be
 ms.openlocfilehash: ced41279e7e192d6d5bed53dbce7378395b32e6d
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45527557"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45618628"
 ---
 # <a name="how-to-determine-if-a-file-is-an-assembly-visual-basic"></a>Nasıl yapılır: bir dosyanın bir derleme (Visual Basic) olup olmadığını belirleme
 Yönetilen ve bir derleme girişi meta verilerini içeren ve yalnızca, bir dosyanın derleme olup. Derlemeler ve meta veriler hakkında daha fazla bilgi için Ek Yardım konusuna [derleme bildirimi](../../../../framework/app-domains/assembly-manifest.md).  

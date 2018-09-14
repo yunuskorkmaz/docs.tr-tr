@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ToolStripPanel control [Windows Forms], about ToolStripPanel control
 ms.assetid: ce54a60c-5eba-4b4c-bd77-cf0748a666cc
 ms.openlocfilehash: 1f13240df9879f656d986845552e8e93a74ade8f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44179029"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45595496"
 ---
 # <a name="toolstrippanel-control-overview"></a>ToolStripPanel Denetimine Genel Bakış
 A <xref:System.Windows.Forms.ToolStripPanel> konumlandırma ve radye için tek bir alan sağlar <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, ve <xref:System.Windows.Forms.StatusStrip> kontrol eder. Birden çok <xref:System.Windows.Forms.ToolStrip> bağlı denetimleri yığın yatay veya dikey olarak <xref:System.Windows.Forms.ToolStripPanelRow.Orientation%2A> , <xref:System.Windows.Forms.ToolStripPanel>.  

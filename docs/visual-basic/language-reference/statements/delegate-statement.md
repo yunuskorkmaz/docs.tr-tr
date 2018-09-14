@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
 ms.openlocfilehash: 4718c0a6e332d644a7f54c79246df95f841058d0
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45514219"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45616857"
 ---
 # <a name="delegate-statement"></a>Delegate Deyimi
 Bir temsilci bildirmek için kullanılır. Temsilci başvurduğu bir başvuru türüdür bir `Shared` türü veya bir nesnenin bir örnek yöntemi için yöntem. Parametre ve dönüş türleri eşleşen her türlü yordam, bu temsilci sınıfı örneğini oluşturmak için kullanılabilir. Yordamı, temsilci örneği aracılığıyla sonra bir daha sonra çağrılabilir.  

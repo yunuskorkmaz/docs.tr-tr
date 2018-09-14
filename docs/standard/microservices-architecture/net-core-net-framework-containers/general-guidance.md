@@ -1,51 +1,51 @@
 ---
-title: Genel yönergeler
-description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Genel yönergeler
+title: Genel rehberlik
+description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Genel rehberlik
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/18/2017
-ms.openlocfilehash: bd654c23cf8a8d0986575642ef25d6864251a4e4
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 09/11/2018
+ms.openlocfilehash: e77065614423cd2e7fdb51258a8c7650280d0400
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104085"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45609875"
 ---
-# <a name="general-guidance"></a>Genel yönergeler
+# <a name="general-guidance"></a>Genel rehberlik
 
-Bu bölümde, .NET Core veya .NET Framework seçmek ne zaman bir özetini sunar. Aşağıdaki bölümlerde bu seçenekler hakkında daha fazla ayrıntı sunuyoruz.
+Bu bölümde, ne zaman .NET Core veya .NET Framework seçin, bir özetini sağlar. Aşağıdaki bölümlerde bu seçenekler hakkında daha fazla bilgi sağlıyoruz.
 
-.NET Core, Linux veya Windows kapsayıcıları kapsayıcılı Docker server uygulamanız için kullanmanız gerekir zaman:
+.NET Core, Linux veya Windows kapsayıcıları ile kapsayıcılı Docker sunucusu uygulamanız için kullanmanız gereken zaman:
 
--   Platformlar arası gereksinimleri vardır. Örneğin, Linux ve Windows kapsayıcılar kullanmak istediğiniz.
+-   Platformlar arası ihtiyaçları vardır. Örneğin, hem Linux hem de Windows kapsayıcıları kullanmak istiyorsunuz.
 
--   Uygulama Mimarinizi mikro üzerinde temel alır.
+-   Uygulama mimarinizin üzerinde mikro hizmetler temel alır.
 
--   Kapsayıcıları Hızlı Başlat ve, maliyetleri azaltmak için daha iyi yoğunluğu elde etmek için kapsayıcı ya da daha fazla kapsayıcı donanım birim başına başına küçük bir yer istediğiniz gerekir.
+-   Kapsayıcıları Hızlı Başlat ve maliyetlerinizi azaltmak için daha iyi yoğunluklu elde etmek için kapsayıcı ya da daha fazla kapsayıcı donanım birim başına küçük ayak izine gerekir.
 
-Kısacası, yeni kapsayıcılı .NET uygulamaları oluşturduğunuzda varsayılan seçenek olarak .NET Core düşünmelisiniz. Birçok avantaj vardır ve kapsayıcıları felsefesi ve çalışma stilini en uygun.
+Kısacası, yeni kapsayıcılı .NET uygulamaları oluşturduğunuzda varsayılan seçenek olarak .NET Core düşünmelisiniz. Kapsayıcıları felsefesi ve çalışma tarzıyla ile gereksinimlerine ve pek çok faydası vardır.
 
-.NET Core kullanmanın ek bir faydası aynı makinedeki uygulamaları için yan yana .NET sürümleri çalıştırabilirsiniz ' dir. Uygulamanın gerekir .NET sürümlerinin kapsayıcıları yalıtmak için bu avantajı sunucuları veya kapsayıcıları, kullanmayın VM'ler için daha önemlidir. (Temel işletim sistemiyle uyumlu olduklarını sürece.)
+.NET Core kullanmanın ek bir avantaj, aynı makineye içindeki uygulamalar için .NET sürümleri yan yana çalıştırabileceğiniz ' dir. Uygulama gerektiren .NET sürümlerini kapsayıcıları yalıtmak için bu sunucuları veya kapsayıcılar, kullanmayan sanal makineleri için önemli bir avantajdır. (Bunlar temel işletim sistemi ile uyumlu olduğu sürece.)
 
-İle Windows kapsayıcıları, .NET Framework kapsayıcılı Docker server uygulamanız için kullanması gereken zaman:
+.NET Framework kapsayıcılı Docker sunucusu uygulamanız için kullanması gereken zaman:
 
--   Uygulamanız şu anda .NET Framework kullanır ve Windows'da güçlü bağımlılıklara sahiptir.
+-   Uygulamanız şu anda kullandığı .NET Framework ve Windows üzerinde güçlü bağımlılıkları vardır.
 
--   .NET Core tarafından desteklenmeyen Windows API'leri kullanmanız gerekir.
+-   .NET Core tarafından desteklenmeyen bir Windows API'leri kullanmanız gerekir.
 
--   Üçüncü taraf .NET kitaplıklarına veya .NET Core için kullanılabilir değil NuGet paketlerini kullanmanız gerekir.
+-   Üçüncü taraf .NET kitaplıkları veya .NET Core için kullanılabilir değil, NuGet paketlerini kullanmanız gerekir.
 
-.NET Framework üzerinde Docker kullanarak dağıtım deneyimlerinizi dağıtım sorunlarını en aza indirerek artırabilir. Bu [ *"kaldırın ve shift" senaryo* ](https://aka.ms/liftandshiftwithcontainersebook) ASP.NET WebForms, MVC web uygulamaları veya WCF (gibi geleneksel .NET Framework ile ilk olarak geliştirilen eski uygulamaları containerizing için önemlidir Windows Communication Foundation) Hizmetleri.
+Docker üzerinde .NET Framework kullanarak dağıtım sorunlarını en aza indirerek, dağıtım deneyimleri geliştirebilir. Bu ["kaldırma ve kaydırma" senaryo](https://aka.ms/liftandshiftwithcontainersebook) ASP.NET WebForms, MVC web uygulamaları veya WCF (Windows Communication Foundation gibi ilk olarak geleneksel .NET Framework ile geliştirilen eski uygulamaları kapsayıcılı hale getirmek için önemlidir ) Hizmetleri.
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
--   **e-kitap: Azure ve Windows kapsayıcıları ile var olan .NET Framework uygulamaları Modernize**
-    [*https://aka.ms/liftandshiftwithcontainersebook*](https://aka.ms/liftandshiftwithcontainersebook)
+-   **e-kitap: Azure ve Windows kapsayıcıları ile mevcut .NET Framework uygulamalarını Modernleştirin**  
+    https://aka.ms/liftandshiftwithcontainersebook
 
--   **Örnek uygulamalar: Modernization Windows kapsayıcıları kullanarak eski ASP.NET web uygulamaları**
-    [*https://aka.ms/eshopmodernizing*](https://aka.ms/eshopmodernizing)
+-   **Örnek uygulamalar: Windows kapsayıcıları kullanarak eski ASP.NET web uygulama Modernizasyonu**  
+    https://aka.ms/eshopmodernizing
 
 
 >[!div class="step-by-step"]
 [Önceki](index.md)
-[sonraki](net-core-container-scenarios.md)
+[İleri](net-core-container-scenarios.md)

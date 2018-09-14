@@ -4,12 +4,12 @@ description: Başvuru dönüş ve ref yerel değerlerine tanımlanacağını ve 
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
-ms.openlocfilehash: a869cd50c5512c9893b6e5056aa58e1f92ee26f4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6250d2b0c3490cce18623d6b06d5e1a352f22c09
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510571"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45616146"
 ---
 # <a name="ref-returns-and-ref-locals"></a>Ref dönüşler ve ref yerel ayarlar
 
@@ -58,7 +58,7 @@ Başvuru dönüş değeri çağrılan yöntemin kapsamında başka bir değişke
 - Değerlerini okumak, değişkenin değerini okuyorsanız, diğer adları.
 - Bu dönüş yaparsa *başvuruya göre*, bir diğer ad, aynı değişkene döndürüyor.
 - Başka bir yönteme geçirdiğinizde *başvuruya göre*, bir değişken başvurusu'nu geçirme, diğer adları.
-- Yaptığınızda bir [ref yerel](#ref-local) aynı değişkene yeni bir diğer ad yaptığınız diğer ad.
+- Yaptığınızda bir [ref yerel](#ref-locals) aynı değişkene yeni bir diğer ad yaptığınız diğer ad.
 
 
 ## <a name="ref-locals"></a>Ref yerel ayarlar
@@ -122,7 +122,7 @@ Aşağıdaki örnekte gösterildiği nasıl `FindNumber` yöntemi C# ref yerel y
 
 Bu ikinci sürüm numarasını Aranan dizinin sonuna yakın olduğu senaryolarda uzun dizileri ile daha verimli olur.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [ref anahtar sözcüğü](../../language-reference/keywords/ref.md)  
 - [Değer türleri ile başvuru semantiği](../../../csharp/reference-semantics-with-value-types.md)

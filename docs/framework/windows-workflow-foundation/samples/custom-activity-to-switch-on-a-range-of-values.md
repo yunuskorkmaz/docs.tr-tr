@@ -3,11 +3,11 @@ title: Üzerinde bir değer aralığına geçmek için özel etkinlik
 ms.date: 03/30/2017
 ms.assetid: 441e0a17-421f-430c-ba97-59e4cc6c88e3
 ms.openlocfilehash: cfaf4318b1557a9fc217de8254e164243ea54569
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45517417"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45616357"
 ---
 # <a name="custom-activity-to-switch-on-a-range-of-values"></a>Üzerinde bir değer aralığına geçmek için özel etkinlik
 Bu örnek, kullanımını genişleten özel etkinlik oluşturma işlemini gösterir. bir <xref:System.Activities.Statements.Switch%601>. Geleneksel <xref:System.Activities.Statements.Switch%601> deyimi geçişi sırasında tek bir değer temel sağlar. Ancak, bir etkinlik burada geçmelidir senaryolarını değer aralığını alarak iş vardır. Örneğin, bir etkinlik, geçiş sırasında değeri 1 ile 5 arasında olduğunda bir eylem, değer 6 ile 10 arasında olduğunda başka bir eylem ve diğer tüm değerler için bir varsayılan eylem paralellikle çalışabilir. Bu özel etkinlik tam olarak bir senaryo sağlar.  

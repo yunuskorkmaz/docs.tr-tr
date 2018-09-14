@@ -4,12 +4,12 @@ description: Windows üzerinde gereken bağımlılıklar geliştirin ve .NET Cor
 author: mairaw
 ms.author: mairaw
 ms.date: 08/31/2018
-ms.openlocfilehash: 477d303b50495070ba3a3540188deb274dd9f510
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.openlocfilehash: 63c0de2b413f38458dba89506f4070760b3f53f8
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45514206"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45594769"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows üzerinde .NET Core önkoşulları
 
@@ -61,7 +61,7 @@ Aşağıdaki makaleler sürüm başına .NET Core desteklenen işletim sistemler
 
 ## <a name="prerequisites-with-visual-studio-2017"></a>Visual Studio 2017 ile önkoşulları
 
-.NET Core SDK'sını kullanarak .NET Core uygulamaları geliştirmek için herhangi bir düzenleyici kullanabilirsiniz. [Visual Studio 2017](#visual-studio-2017) Windows üzerinde .NET Core uygulamaları için bir tümleşik geliştirme ortamı sağlar.
+.NET Core SDK'sını kullanarak .NET Core uygulamaları geliştirmek için herhangi bir düzenleyici kullanabilirsiniz. Visual Studio 2017, Windows üzerinde .NET Core uygulamaları için bir tümleşik geliştirme ortamı sağlar.
 
 Daha fazla Visual Studio 2017'deki değişiklikler hakkında [sürüm notları](/visualstudio/releasenotes/vs2017-relnotes).
 

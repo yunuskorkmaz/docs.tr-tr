@@ -12,12 +12,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
-ms.openlocfilehash: 805a495790266b34ede030b76fbd83e6f172ceaf
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 66412c620b8107312e5d58fef5cf1b5d9ee90107
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44206123"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45615527"
 ---
 # <a name="introducing-xml-serialization"></a>XML serileştirmeye giriş
 
@@ -111,7 +111,7 @@ Aşağıdaki öğeleri kullanılarak seri hale getirilebilir **XmLSerializer** s
 
 ## <a name="advantages-of-using-xml-serialization"></a>XML Serialization kullanarak avantajları
 
-**XmlSerializer**sınıfı size eksiksiz ve esnek denetim XML olarak bir nesne seri olduğunda. XML Web hizmeti oluşturuyorsanız, sınıf ve üyelerine XML çıktısı belirli bir şemaya uygun olduğunu emin olmak için serileştirme denetleyen öznitelikleri uygulayabilirsiniz.
+**XmlSerializer** sınıfı size eksiksiz ve esnek denetim XML olarak bir nesne seri olduğunda. XML Web hizmeti oluşturuyorsanız, sınıf ve üyelerine XML çıktısı belirli bir şemaya uygun olduğunu emin olmak için serileştirme denetleyen öznitelikleri uygulayabilirsiniz.
 
 Örneğin, **XmlSerializer** sağlar:
 

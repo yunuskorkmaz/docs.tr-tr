@@ -3,11 +3,11 @@ title: Invokepowershell etkinliğini kullanma
 ms.date: 03/30/2017
 ms.assetid: 956251a0-31ca-4183-bf76-d277c08585df
 ms.openlocfilehash: fa42cddd930b755e9938a02a137ee77ee273fad0
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45560980"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45595287"
 ---
 # <a name="using-the-invokepowershell-activity"></a>Invokepowershell etkinliğini kullanma
 Invokepowershell örnek Windows PowerShell komutlarını kullanarak çağırmak nasıl gösterir `InvokePowerShell` etkinlik.  

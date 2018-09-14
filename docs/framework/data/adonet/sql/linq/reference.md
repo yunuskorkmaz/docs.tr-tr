@@ -3,11 +3,11 @@ title: Başvuru
 ms.date: 03/30/2017
 ms.assetid: 312c3935-a947-4220-a837-0039d9fc458b
 ms.openlocfilehash: 3edfbe7d650fead507946610de8e76d27e94136f
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45514468"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45597504"
 ---
 # <a name="reference"></a>Başvuru
 Bu bölümde yönelik başvuru bilgileri [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] geliştiriciler.  

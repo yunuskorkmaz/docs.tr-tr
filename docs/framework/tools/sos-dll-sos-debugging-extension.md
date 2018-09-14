@@ -9,11 +9,11 @@ ms.assetid: 9ac1b522-77ab-4cdc-852a-20fcdc9ae498
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0c038b66e4ed62d614a25e717c52fdcc9c5f9a23
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44208841"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45615540"
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll (SOS Hata Ayıklama Uzantısı)
 SOS hata ayıklama uzantısı (SOS.dll) iç ortak dil çalışma zamanı (CLR) ortamıyla ilgili bilgi sağlayarak Visual Studio ve Windows hata ayıklayıcısındaki (WinDbg.exe) yönetilen programlarda hata ayıklamanıza yardımcı olur. Bu araç, projenizde yönetilmeyen hata ayıklamanın etkin olmasını gerektirir. SOS.dll, .NET Framework ile birlikte otomatik olarak yüklenir. SOS.dll, Visual Studio'da kullanmak için yükleyin [Windows Sürücü Seti'nin (WDK)](https://msdn.microsoft.com/windows/hardware/hh852362).  

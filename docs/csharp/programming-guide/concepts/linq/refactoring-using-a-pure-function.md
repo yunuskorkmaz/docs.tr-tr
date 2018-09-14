@@ -3,11 +3,11 @@ title: Saf işlev (C#) kullanarak yeniden düzenleme
 ms.date: 07/20/2015
 ms.assetid: a3416a45-9e12-4e4a-9747-897f06eef510
 ms.openlocfilehash: 28f31b144cbdbd85febfc57acccb9bd7a158d702
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45516483"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45610131"
 ---
 # <a name="refactoring-using-a-pure-function-c"></a>Saf işlev (C#) kullanarak yeniden düzenleme
 Aşağıdaki örnek, önceki örnekte, yeniden düzenler [bir genişletme yöntemi (C#) kullanarak yeniden düzenleme](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), saf işlev bu örnekte, bir paragraf metni, saf statik yönteme taşınır bulmak için kodu kullanmak için `ParagraphText`.  

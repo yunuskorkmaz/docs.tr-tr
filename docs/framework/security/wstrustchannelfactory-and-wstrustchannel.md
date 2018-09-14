@@ -5,11 +5,11 @@ ms.assetid: 96cec467-e963-4132-b18b-7d0b3a2e979f
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 7dfe18a55d8c7f56db1906cb2aa982ab043841c7
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45517937"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45597012"
 ---
 # <a name="wstrustchannelfactory-and-wstrustchannel"></a>WSTrustChannelFactory ve WSTrustChannel
 Windows Communication Foundation (WCF) bilginiz varsa, bir WCF istemcisi Federasyon uyumlu olduğunu bilirsiniz. Bir WCF istemcisi ile yapılandırarak bir <xref:System.ServiceModel.WSFederationHttpBinding> ya da benzer özel bağlama, bir hizmet için Federasyon kimlik doğrulamasını etkinleştirebilirsiniz.  
