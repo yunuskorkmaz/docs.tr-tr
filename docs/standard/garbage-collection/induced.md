@@ -8,11 +8,11 @@ ms.assetid: 019008fe-4708-4e65-bebf-04fd9941e149
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 69590b0efc924132d149621c135ef0816cac7d1e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192554"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45583615"
 ---
 # <a name="induced-collections"></a>Uyarılmış Koleksiyonlar
 Çoğu durumda, çöp toplayıcı bir toplama işlemi gerçekleştirmek için en iyi zamanı belirleyebilir ve bunun bağımsız olarak çalışmasına izin vermelisiniz. Zorlanmış bir koleksiyonun, uygulamanızın performansını iyileştirebileceği bazı nadir durumlar vardır. Bu durumlarda, çöp toplama kullanarak zorlarsınız <xref:System.GC.Collect%2A?displayProperty=nameWithType> Çöp toplamayı zorlamak için yöntemi.  
