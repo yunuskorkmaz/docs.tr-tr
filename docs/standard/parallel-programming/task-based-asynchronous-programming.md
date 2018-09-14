@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aee713bc6e8fd7f5721a684f38cea03b2a2b3aa4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: HT
+ms.openlocfilehash: 6a879cce8eb429e2daeaa5db963b3d95d1e944da
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43873192"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45520026"
 ---
 # <a name="task-based-asynchronous-programming"></a>Görev tabanlı zaman uyumsuz programlama
 Görev paralel kitaplığı (TPL) kavramını temel alan bir *görev*, zaman uyumsuz işlemi temsil eder. Bazı yönlerden, bir görev bir iş parçacığı benzer veya <xref:System.Threading.ThreadPool> öğesi ancak daha yüksek düzeyde soyutlama çalışır. Terim *görev paralelliği* eşzamanlı olarak çalışan bir veya daha fazla bağımsız görevi ifade eder. Görevler iki adet birincil avantaj sağlar:  
@@ -59,10 +59,10 @@ Görev paralel kitaplığı (TPL) kavramını temel alan bir *görev*, zaman uyu
  [!code-csharp[TPL_TaskIntro#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/run1.cs#2)]
  [!code-vb[TPL_TaskIntro#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/run1.vb#2)]  
   
- Ayrıca <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> oluşturun ve tek bir işlemde bir görevi başlatmak için yöntem. Oluşturma ve zamanlama zorunda değilsiniz ayrılması ve ek görev oluşturma seçenekleri veya belirli bir zamanlayıcı kullanımı gerektiğinde veya ek durumu göreve geçirmek istediğinizde bu yöntemi kullanın, <xref:System.Threading.Tasks.Task.AsyncState%2A> gösterildiği özelliği Aşağıdaki örnek.  
+ Ayrıca <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> oluşturun ve tek bir işlemde bir görevi başlatmak için yöntem. Oluşturma ve zamanlama zorunda değilsiniz ayrılması ve ek görev oluşturma seçenekleri veya belirli bir zamanlayıcı kullanımı gerektiğinde veya ek durumu göreve aracılığıyla alabilir geçirmek istediğinizde bu yöntemi kullanın, <xref:System.Threading.Tasks.Task.AsyncState%2A?displayProperty=nameWithType> özelliği, aşağıdaki örnekte gösterildiği gibi.  
   
- [!code-csharp[TPL_TaskIntro#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/startnew1.cs#3)]
- [!code-vb[TPL_TaskIntro#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/startnew1.vb#3)]  
+ [!code-csharp[TPL_TaskIntro#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/asyncstate.cs#23)]
+ [!code-vb[TPL_TaskIntro#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/asyncstate.vb#23)]  
   
  <xref:System.Threading.Tasks.Task> ve <xref:System.Threading.Tasks.Task%601> her bir statik kullanıma <xref:System.Threading.Tasks.Task.Factory%2A> varsayılan örneğini döndüren özellik <xref:System.Threading.Tasks.TaskFactory>, böylece yöntemi olarak çağırabilirsiniz `Task.Factory.StartNew()`. Ayrıca, aşağıdaki örnekte, görev türü olduğundan <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>, sahip oldukları her bir ortak <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> biri hesaplama sonucunu içeren özelliği. Görevler zaman uyumsuz olarak çalışır ve herhangi bir sırada tamamlanabilir. Varsa <xref:System.Threading.Tasks.Task%601.Result%2A> özelliğine hesaplama tamamlanmadan önce erişilirse, değeri kullanılabilir duruma gelene kadar özellik arama iş parçacığını engeller.  
   
