@@ -2,42 +2,42 @@
 title: Visual Studio'da AJAX etkin bir WCF hizmeti ve bir ASP.NET istemcisi oluşturma
 ms.date: 08/17/2018
 ms.assetid: 95012df8-2a66-420d-944a-8afab261013e
-ms.openlocfilehash: 07a1e903991e09243572f2a99c19edae7f9793b6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 954ee0409f370c3fa28814a70d51334fd75f7b79
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43384292"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45558047"
 ---
-# <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a><span data-ttu-id="66c16-102">Nasıl yapılır: AJAX Etkin Bir WCF Hizmeti ve Hizmete Erişen Bir ASP.NET İstemcisi Oluşturma</span><span class="sxs-lookup"><span data-stu-id="66c16-102">How to: Create an AJAX-Enabled WCF Service and an ASP.NET Client that Accesses the Service</span></span>
+# <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a><span data-ttu-id="09752-102">Nasıl yapılır: AJAX Etkin Bir WCF Hizmeti ve Hizmete Erişen Bir ASP.NET İstemcisi Oluşturma</span><span class="sxs-lookup"><span data-stu-id="09752-102">How to: Create an AJAX-Enabled WCF Service and an ASP.NET Client that Accesses the Service</span></span>
 
-<span data-ttu-id="66c16-103">Bu konuda bir AJAX etkinleştirilmiş Windows Communication Foundation (WCF) hizmeti ve hizmete erişen bir ASP.NET istemcisi oluşturmak için Visual Studio kullanmayı gösterir.</span><span class="sxs-lookup"><span data-stu-id="66c16-103">This topic shows how to use Visual Studio to create an AJAX-enabled Windows Communication Foundation (WCF) service and an ASP.NET client that accesses the service.</span></span>
+<span data-ttu-id="09752-103">Bu konuda bir AJAX etkinleştirilmiş Windows Communication Foundation (WCF) hizmeti ve hizmete erişen bir ASP.NET istemcisi oluşturmak için Visual Studio kullanmayı gösterir.</span><span class="sxs-lookup"><span data-stu-id="09752-103">This topic shows how to use Visual Studio to create an AJAX-enabled Windows Communication Foundation (WCF) service and an ASP.NET client that accesses the service.</span></span>
 
-## <a name="create-an-aspnet-web-app"></a><span data-ttu-id="66c16-104">ASP.NET web uygulaması oluşturma</span><span class="sxs-lookup"><span data-stu-id="66c16-104">Create an ASP.NET web app</span></span>
+## <a name="create-an-aspnet-web-app"></a><span data-ttu-id="09752-104">ASP.NET web uygulaması oluşturma</span><span class="sxs-lookup"><span data-stu-id="09752-104">Create an ASP.NET web app</span></span>
 
-1. <span data-ttu-id="66c16-105">Visual Studio'yu açın.</span><span class="sxs-lookup"><span data-stu-id="66c16-105">Open Visual Studio.</span></span>
+1. <span data-ttu-id="09752-105">Visual Studio'yu açın.</span><span class="sxs-lookup"><span data-stu-id="09752-105">Open Visual Studio.</span></span>
 
-1. <span data-ttu-id="66c16-106">Gelen **dosya** menüsünde **yeni** > **proje**</span><span class="sxs-lookup"><span data-stu-id="66c16-106">From the **File** menu, select **New** > **Project**</span></span>
+1. <span data-ttu-id="09752-106">Gelen **dosya** menüsünde **yeni** > **proje**</span><span class="sxs-lookup"><span data-stu-id="09752-106">From the **File** menu, select **New** > **Project**</span></span>
 
-1. <span data-ttu-id="66c16-107">İçinde **yeni proje** iletişim kutusunda Genişlet **yüklü** > **Visual C#** > **Web** kategorisi ve ardından seçin **ASP.NET Web uygulaması (.NET Framework)**.</span><span class="sxs-lookup"><span data-stu-id="66c16-107">In the **New Project** dialog, expand the **Installed** > **Visual C#** > **Web** category, and then select **ASP.NET Web Application (.NET Framework)**.</span></span>
+1. <span data-ttu-id="09752-107">İçinde **yeni proje** iletişim kutusunda Genişlet **yüklü** > **Visual C#** > **Web** kategorisi ve ardından seçin **ASP.NET Web uygulaması (.NET Framework)**.</span><span class="sxs-lookup"><span data-stu-id="09752-107">In the **New Project** dialog, expand the **Installed** > **Visual C#** > **Web** category, and then select **ASP.NET Web Application (.NET Framework)**.</span></span>
 
-1. <span data-ttu-id="66c16-108">Projeyi adlandırın **SandwichServices** tıklatıp **Tamam**.</span><span class="sxs-lookup"><span data-stu-id="66c16-108">Name the Project **SandwichServices** and click **OK**.</span></span>
+1. <span data-ttu-id="09752-108">Projeyi adlandırın **SandwichServices** tıklatıp **Tamam**.</span><span class="sxs-lookup"><span data-stu-id="09752-108">Name the Project **SandwichServices** and click **OK**.</span></span>
 
-1. <span data-ttu-id="66c16-109">İçinde **yeni ASP.NET Web uygulaması** iletişim kutusunda **boş** seçip **Tamam**.</span><span class="sxs-lookup"><span data-stu-id="66c16-109">In the **New ASP.NET Web Application** dialog, select **Empty** and then select **OK**.</span></span>
+1. <span data-ttu-id="09752-109">İçinde **yeni ASP.NET Web uygulaması** iletişim kutusunda **boş** seçip **Tamam**.</span><span class="sxs-lookup"><span data-stu-id="09752-109">In the **New ASP.NET Web Application** dialog, select **Empty** and then select **OK**.</span></span>
 
-   ![Visual Studio'da ASP.NET web uygulaması türü iletişim kutusu](../media/create-an-ajax-wcf-asp-net-client/new-asp-net-web-app-type.png)
+   ![Visual Studio'da ASP.NET web uygulaması türü iletişim kutusu](media/create-an-ajax-wcf-asp-net-client/new-asp-net-web-app-type.png)
 
-## <a name="add-a-web-form"></a><span data-ttu-id="66c16-111">Bir web formu ekleyin</span><span class="sxs-lookup"><span data-stu-id="66c16-111">Add a web form</span></span>
+## <a name="add-a-web-form"></a><span data-ttu-id="09752-111">Bir web formu ekleyin</span><span class="sxs-lookup"><span data-stu-id="09752-111">Add a web form</span></span>
 
-1. <span data-ttu-id="66c16-112">SandwichServices projeye sağ **Çözüm Gezgini** seçip **Ekle** > **yeni öğe**.</span><span class="sxs-lookup"><span data-stu-id="66c16-112">Right-click the SandwichServices project in **Solution Explorer** and select **Add** > **New Item**.</span></span>
+1. <span data-ttu-id="09752-112">SandwichServices projeye sağ **Çözüm Gezgini** seçip **Ekle** > **yeni öğe**.</span><span class="sxs-lookup"><span data-stu-id="09752-112">Right-click the SandwichServices project in **Solution Explorer** and select **Add** > **New Item**.</span></span>
 
-1. <span data-ttu-id="66c16-113">İçinde **Yeni Öğe Ekle** iletişim kutusunda Genişlet **yüklü** > **Visual C#** > **Web** kategorisi ve ardından seçin **Web formu** şablonu.</span><span class="sxs-lookup"><span data-stu-id="66c16-113">In the **Add New Item** dialog, expand the **Installed** > **Visual C#** > **Web** category, and then select the **Web Form** template.</span></span>
+1. <span data-ttu-id="09752-113">İçinde **Yeni Öğe Ekle** iletişim kutusunda Genişlet **yüklü** > **Visual C#** > **Web** kategorisi ve ardından seçin **Web formu** şablonu.</span><span class="sxs-lookup"><span data-stu-id="09752-113">In the **Add New Item** dialog, expand the **Installed** > **Visual C#** > **Web** category, and then select the **Web Form** template.</span></span>
 
-1. <span data-ttu-id="66c16-114">Varsayılan adı kabul edin (**WebForm1**) ve ardından **Ekle**.</span><span class="sxs-lookup"><span data-stu-id="66c16-114">Accept the default name (**WebForm1**), and then select **Add**.</span></span>
+1. <span data-ttu-id="09752-114">Varsayılan adı kabul edin (**WebForm1**) ve ardından **Ekle**.</span><span class="sxs-lookup"><span data-stu-id="09752-114">Accept the default name (**WebForm1**), and then select **Add**.</span></span>
 
-   <span data-ttu-id="66c16-115">*WebForm1.aspx* açılır **kaynak** görünümü.</span><span class="sxs-lookup"><span data-stu-id="66c16-115">*WebForm1.aspx* opens in **Source** view.</span></span>
+   <span data-ttu-id="09752-115">*WebForm1.aspx* açılır **kaynak** görünümü.</span><span class="sxs-lookup"><span data-stu-id="09752-115">*WebForm1.aspx* opens in **Source** view.</span></span>
 
-1. <span data-ttu-id="66c16-116">İçinde aşağıdaki işaretlemeyi ekleyin  **\<gövdesi >** etiketler:</span><span class="sxs-lookup"><span data-stu-id="66c16-116">Add the following markup inside the **\<body>** tags:</span></span>
+1. <span data-ttu-id="09752-116">İçinde aşağıdaki işaretlemeyi ekleyin  **\<gövdesi >** etiketler:</span><span class="sxs-lookup"><span data-stu-id="09752-116">Add the following markup inside the **\<body>** tags:</span></span>
 
    ```html
    <input type="button" value="Price of 3 sandwiches" onclick="Calculate()"/>
@@ -45,19 +45,19 @@ ms.locfileid: "43384292"
    <span id="additionResult"></span>
    ```
 
-## <a name="create-an-ajax-enabled-wcf-service"></a><span data-ttu-id="66c16-117">AJAX etkin bir WCF hizmeti oluşturma</span><span class="sxs-lookup"><span data-stu-id="66c16-117">Create an AJAX-enabled WCF service</span></span>
+## <a name="create-an-ajax-enabled-wcf-service"></a><span data-ttu-id="09752-117">AJAX etkin bir WCF hizmeti oluşturma</span><span class="sxs-lookup"><span data-stu-id="09752-117">Create an AJAX-enabled WCF service</span></span>
 
-1. <span data-ttu-id="66c16-118">SandwichServices projeye sağ **Çözüm Gezgini** seçip **Ekle** > **yeni öğe**.</span><span class="sxs-lookup"><span data-stu-id="66c16-118">Right-click the SandwichServices project in **Solution Explorer** and select **Add** > **New Item**.</span></span>
+1. <span data-ttu-id="09752-118">SandwichServices projeye sağ **Çözüm Gezgini** seçip **Ekle** > **yeni öğe**.</span><span class="sxs-lookup"><span data-stu-id="09752-118">Right-click the SandwichServices project in **Solution Explorer** and select **Add** > **New Item**.</span></span>
 
-1. <span data-ttu-id="66c16-119">İçinde **Yeni Öğe Ekle** iletişim kutusunda Genişlet **yüklü** > **Visual C#** > **Web** kategorisi ve ardından seçin **WCF Hizmeti (AJAX etkin)** şablonu.</span><span class="sxs-lookup"><span data-stu-id="66c16-119">In the **Add New Item** dialog, expand the **Installed** > **Visual C#** > **Web** category, and then select the **WCF Service (AJAX-enabled)** template.</span></span>
+1. <span data-ttu-id="09752-119">İçinde **Yeni Öğe Ekle** iletişim kutusunda Genişlet **yüklü** > **Visual C#** > **Web** kategorisi ve ardından seçin **WCF Hizmeti (AJAX etkin)** şablonu.</span><span class="sxs-lookup"><span data-stu-id="09752-119">In the **Add New Item** dialog, expand the **Installed** > **Visual C#** > **Web** category, and then select the **WCF Service (AJAX-enabled)** template.</span></span>
 
-   ![Visual Studio'da WCF Hizmeti (AJAX etkin) öğe şablonu](../media/create-an-ajax-wcf-asp-net-client/add-wcf-service.png)
+   ![Visual Studio'da WCF Hizmeti (AJAX etkin) öğe şablonu](media/create-an-ajax-wcf-asp-net-client/add-wcf-service.png)
 
-1. <span data-ttu-id="66c16-121">Hizmet adı **CostService** seçip **Ekle**.</span><span class="sxs-lookup"><span data-stu-id="66c16-121">Name the service **CostService** and then select **Add**.</span></span>
+1. <span data-ttu-id="09752-121">Hizmet adı **CostService** seçip **Ekle**.</span><span class="sxs-lookup"><span data-stu-id="09752-121">Name the service **CostService** and then select **Add**.</span></span>
 
-   <span data-ttu-id="66c16-122">*CostService.svc.cs* düzenleyicisinde açılır.</span><span class="sxs-lookup"><span data-stu-id="66c16-122">*CostService.svc.cs* opens in the editor.</span></span>
+   <span data-ttu-id="09752-122">*CostService.svc.cs* düzenleyicisinde açılır.</span><span class="sxs-lookup"><span data-stu-id="09752-122">*CostService.svc.cs* opens in the editor.</span></span>
 
-1. <span data-ttu-id="66c16-123">İşlem hizmette uygulayın.</span><span class="sxs-lookup"><span data-stu-id="66c16-123">Implement the operation in the service.</span></span> <span data-ttu-id="66c16-124">Sandwiches miktarı maliyetini hesaplamak için CostService sınıfına aşağıdaki yöntemi ekleyin:</span><span class="sxs-lookup"><span data-stu-id="66c16-124">Add the following method to the CostService class to calculate the cost of a quantity of sandwiches:</span></span>
+1. <span data-ttu-id="09752-123">İşlem hizmette uygulayın.</span><span class="sxs-lookup"><span data-stu-id="09752-123">Implement the operation in the service.</span></span> <span data-ttu-id="09752-124">Sandwiches miktarı maliyetini hesaplamak için CostService sınıfına aşağıdaki yöntemi ekleyin:</span><span class="sxs-lookup"><span data-stu-id="09752-124">Add the following method to the CostService class to calculate the cost of a quantity of sandwiches:</span></span>
 
     ```csharp
     [OperationContract]
@@ -67,15 +67,15 @@ ms.locfileid: "43384292"
     }
     ```
 
-## <a name="configure-the-client-to-access-the-service"></a><span data-ttu-id="66c16-125">Hizmete erişmek için istemciyi Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="66c16-125">Configure the client to access the service</span></span>
+## <a name="configure-the-client-to-access-the-service"></a><span data-ttu-id="09752-125">Hizmete erişmek için istemciyi Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="09752-125">Configure the client to access the service</span></span>
 
-1. <span data-ttu-id="66c16-126">Açık *WebForm1.aspx* seçin ve dosya **tasarım** görünümü.</span><span class="sxs-lookup"><span data-stu-id="66c16-126">Open the *WebForm1.aspx* file and select the **Design** view.</span></span>
+1. <span data-ttu-id="09752-126">Açık *WebForm1.aspx* seçin ve dosya **tasarım** görünümü.</span><span class="sxs-lookup"><span data-stu-id="09752-126">Open the *WebForm1.aspx* file and select the **Design** view.</span></span>
 
-2. <span data-ttu-id="66c16-127">Gelen **görünümü** menüsünde **araç kutusu**.</span><span class="sxs-lookup"><span data-stu-id="66c16-127">From the **View** menu, select **Toolbox**.</span></span>
+2. <span data-ttu-id="09752-127">Gelen **görünümü** menüsünde **araç kutusu**.</span><span class="sxs-lookup"><span data-stu-id="09752-127">From the **View** menu, select **Toolbox**.</span></span>
 
-3. <span data-ttu-id="66c16-128">Genişletin **AJAX uzantıları** düğüm ve sürükle ve bırak bir **ScriptManager** forma.</span><span class="sxs-lookup"><span data-stu-id="66c16-128">Expand the **AJAX Extensions** node and drag and drop a **ScriptManager** onto the form.</span></span>
+3. <span data-ttu-id="09752-128">Genişletin **AJAX uzantıları** düğüm ve sürükle ve bırak bir **ScriptManager** forma.</span><span class="sxs-lookup"><span data-stu-id="09752-128">Expand the **AJAX Extensions** node and drag and drop a **ScriptManager** onto the form.</span></span>
 
-4. <span data-ttu-id="66c16-129">Geri **kaynak** görüntülemek için arasına aşağıdaki kodu ekleyin  **\<ScriptManager >** WCF Hizmeti yolunu belirtmek için etiketler:</span><span class="sxs-lookup"><span data-stu-id="66c16-129">Back in the **Source** view, add the following code between the **\<ScriptManager>** tags to specify the path to the WCF service:</span></span>
+4. <span data-ttu-id="09752-129">Geri **kaynak** görüntülemek için arasına aşağıdaki kodu ekleyin  **\<ScriptManager >** WCF Hizmeti yolunu belirtmek için etiketler:</span><span class="sxs-lookup"><span data-stu-id="09752-129">Back in the **Source** view, add the following code between the **\<ScriptManager>** tags to specify the path to the WCF service:</span></span>
 
     ```html
     <Services>
@@ -83,7 +83,7 @@ ms.locfileid: "43384292"
     </Services>
     ```
 
-1. <span data-ttu-id="66c16-130">Javascript işlevi için kod ekleme `Calculate()`.</span><span class="sxs-lookup"><span data-stu-id="66c16-130">Add the code for the Javascript function `Calculate()`.</span></span> <span data-ttu-id="66c16-131">Aşağıdaki kodda yerleştirin **baş** web formu bölümünü:</span><span class="sxs-lookup"><span data-stu-id="66c16-131">Place the following code in the **head** section of the web form:</span></span>
+1. <span data-ttu-id="09752-130">Javascript işlevi için kod ekleme `Calculate()`.</span><span class="sxs-lookup"><span data-stu-id="09752-130">Add the code for the Javascript function `Calculate()`.</span></span> <span data-ttu-id="09752-131">Aşağıdaki kodda yerleştirin **baş** web formu bölümünü:</span><span class="sxs-lookup"><span data-stu-id="09752-131">Place the following code in the **head** section of the web form:</span></span>
 
     ```javascript
     <script type="text/javascript">
@@ -100,15 +100,15 @@ ms.locfileid: "43384292"
     </script>
     ```
 
-   <span data-ttu-id="66c16-132">Bu kod üç sandwiches fiyatı hesaplamak için CostService yöntemini çağırır ve sonucu adı verilen yayılımda görüntüler **additionResult**.</span><span class="sxs-lookup"><span data-stu-id="66c16-132">This code calls the method of CostService to calculate the price for three sandwiches, and then displays the result in the span called **additionResult**.</span></span>
+   <span data-ttu-id="09752-132">Bu kod üç sandwiches fiyatı hesaplamak için CostService yöntemini çağırır ve sonucu adı verilen yayılımda görüntüler **additionResult**.</span><span class="sxs-lookup"><span data-stu-id="09752-132">This code calls the method of CostService to calculate the price for three sandwiches, and then displays the result in the span called **additionResult**.</span></span>
 
-## <a name="run-the-program"></a><span data-ttu-id="66c16-133">Programı çalıştırın</span><span class="sxs-lookup"><span data-stu-id="66c16-133">Run the program</span></span>
+## <a name="run-the-program"></a><span data-ttu-id="09752-133">Programı çalıştırın</span><span class="sxs-lookup"><span data-stu-id="09752-133">Run the program</span></span>
 
-<span data-ttu-id="66c16-134">Emin olun *WebForm1.aspx* odaklı ve tuşuna **Başlat** web istemcisi için düğme.</span><span class="sxs-lookup"><span data-stu-id="66c16-134">Make sure that *WebForm1.aspx* has focus, and then press **Start** button to launch the web client.</span></span> <span data-ttu-id="66c16-135">Düğme yeşil üçgenle sahip ve aşağıdaki gibi diyor. **IIS Express (Microsoft Edge)**.</span><span class="sxs-lookup"><span data-stu-id="66c16-135">The button has a green triangle and says something like **IIS Express (Microsoft Edge)**.</span></span> <span data-ttu-id="66c16-136">Ya da basabilirsiniz **F5**.</span><span class="sxs-lookup"><span data-stu-id="66c16-136">Or, you can press **F5**.</span></span> <span data-ttu-id="66c16-137">Tıklayın **3 sandwiches fiyatı** beklenen çıktıyı "3,75" oluşturmak için düğme.</span><span class="sxs-lookup"><span data-stu-id="66c16-137">Click the **Price of 3 sandwiches** button to generate the expected output of "3.75".</span></span>
+<span data-ttu-id="09752-134">Emin olun *WebForm1.aspx* odaklı ve tuşuna **Başlat** web istemcisi için düğme.</span><span class="sxs-lookup"><span data-stu-id="09752-134">Make sure that *WebForm1.aspx* has focus, and then press **Start** button to launch the web client.</span></span> <span data-ttu-id="09752-135">Düğme yeşil üçgenle sahip ve aşağıdaki gibi diyor. **IIS Express (Microsoft Edge)**.</span><span class="sxs-lookup"><span data-stu-id="09752-135">The button has a green triangle and says something like **IIS Express (Microsoft Edge)**.</span></span> <span data-ttu-id="09752-136">Ya da basabilirsiniz **F5**.</span><span class="sxs-lookup"><span data-stu-id="09752-136">Or, you can press **F5**.</span></span> <span data-ttu-id="09752-137">Tıklayın **3 sandwiches fiyatı** beklenen çıktıyı "3,75" oluşturmak için düğme.</span><span class="sxs-lookup"><span data-stu-id="09752-137">Click the **Price of 3 sandwiches** button to generate the expected output of "3.75".</span></span>
 
-## <a name="example-code"></a><span data-ttu-id="66c16-138">Örnek kod</span><span class="sxs-lookup"><span data-stu-id="66c16-138">Example code</span></span>
+## <a name="example-code"></a><span data-ttu-id="09752-138">Örnek kod</span><span class="sxs-lookup"><span data-stu-id="09752-138">Example code</span></span>
 
-<span data-ttu-id="66c16-139">Tam kod aşağıdadır *CostService.svc.cs* dosyası:</span><span class="sxs-lookup"><span data-stu-id="66c16-139">Following is the full code in the *CostService.svc.cs* file :</span></span>
+<span data-ttu-id="09752-139">Tam kod aşağıdadır *CostService.svc.cs* dosyası:</span><span class="sxs-lookup"><span data-stu-id="09752-139">Following is the full code in the *CostService.svc.cs* file :</span></span>
 
 ```csharp
 using System.ServiceModel;
@@ -129,7 +129,7 @@ namespace SandwichServices
 }
 ```
 
-<span data-ttu-id="66c16-140">Aşağıdadır tam içeriğini *WebForm1.aspx* sayfası:</span><span class="sxs-lookup"><span data-stu-id="66c16-140">Following is the full contents of the *WebForm1.aspx* page:</span></span>
+<span data-ttu-id="09752-140">Aşağıdadır tam içeriğini *WebForm1.aspx* sayfası:</span><span class="sxs-lookup"><span data-stu-id="09752-140">Following is the full contents of the *WebForm1.aspx* page:</span></span>
 
 ```aspx-csharp
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="SandwichServices.WebForm1" %>

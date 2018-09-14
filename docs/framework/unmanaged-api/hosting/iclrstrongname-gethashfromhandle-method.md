@@ -19,16 +19,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 20c5f6bbb58b85f42ec00e356eccc5fb41ce813c
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44509927"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45558060"
 ---
-# <a name="iclrstrongnamegethashfromhandle-method"></a><span data-ttu-id="a3756-102">ICLRStrongName::GetHashFromHandle Metodu</span><span class="sxs-lookup"><span data-stu-id="a3756-102">ICLRStrongName::GetHashFromHandle Method</span></span>
-<span data-ttu-id="a3756-103">Belirtilen karma algoritması kullanılarak belirtilen tanıtıcıya sahip bir dosya içeriğini bir karma oluşturur.</span><span class="sxs-lookup"><span data-stu-id="a3756-103">Generates a hash over the contents of the file that has the specified file handle, using the specified hash algorithm.</span></span>  
+# <a name="iclrstrongnamegethashfromhandle-method"></a><span data-ttu-id="b71a9-102">ICLRStrongName::GetHashFromHandle Metodu</span><span class="sxs-lookup"><span data-stu-id="b71a9-102">ICLRStrongName::GetHashFromHandle Method</span></span>
+<span data-ttu-id="b71a9-103">Belirtilen karma algoritması kullanılarak belirtilen tanıtıcıya sahip bir dosya içeriğini bir karma oluşturur.</span><span class="sxs-lookup"><span data-stu-id="b71a9-103">Generates a hash over the contents of the file that has the specified file handle, using the specified hash algorithm.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a3756-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="a3756-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b71a9-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b71a9-104">Syntax</span></span>  
   
 ```  
 HRESULT GetHashFromHandle (  
@@ -40,33 +40,33 @@ HRESULT GetHashFromHandle (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="a3756-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="a3756-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="b71a9-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="b71a9-105">Parameters</span></span>  
  `hFile`  
- <span data-ttu-id="a3756-106">[in] Karma hale getirilecek dosya tanıtıcısı.</span><span class="sxs-lookup"><span data-stu-id="a3756-106">[in] The handle of the file to be hashed.</span></span>  
+ <span data-ttu-id="b71a9-106">[in] Karma hale getirilecek dosya tanıtıcısı.</span><span class="sxs-lookup"><span data-stu-id="b71a9-106">[in] The handle of the file to be hashed.</span></span>  
   
  `piHashAlg`  
- <span data-ttu-id="a3756-107">[out içinde] Sabit karma algoritmasını belirtir.</span><span class="sxs-lookup"><span data-stu-id="a3756-107">[in, out] A constant that specifies the hash algorithm.</span></span> <span data-ttu-id="a3756-108">Sıfır varsayılan algoritma için kullanın.</span><span class="sxs-lookup"><span data-stu-id="a3756-108">Use zero for the default algorithm.</span></span>  
+ <span data-ttu-id="b71a9-107">[out içinde] Sabit karma algoritmasını belirtir.</span><span class="sxs-lookup"><span data-stu-id="b71a9-107">[in, out] A constant that specifies the hash algorithm.</span></span> <span data-ttu-id="b71a9-108">Sıfır varsayılan algoritma için kullanın.</span><span class="sxs-lookup"><span data-stu-id="b71a9-108">Use zero for the default algorithm.</span></span>  
   
  `pbHash`  
- <span data-ttu-id="a3756-109">[out] Döndürülen karma arabellek.</span><span class="sxs-lookup"><span data-stu-id="a3756-109">[out] The returned hash buffer.</span></span>  
+ <span data-ttu-id="b71a9-109">[out] Döndürülen karma arabellek.</span><span class="sxs-lookup"><span data-stu-id="b71a9-109">[out] The returned hash buffer.</span></span>  
   
  `cchHash`  
- <span data-ttu-id="a3756-110">[in] İstenen en büyük boyutunu `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="a3756-110">[in] The requested maximum size of `pbHash`.</span></span>  
+ <span data-ttu-id="b71a9-110">[in] İstenen en büyük boyutunu `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="b71a9-110">[in] The requested maximum size of `pbHash`.</span></span>  
   
  `pchHash`  
- <span data-ttu-id="a3756-111">[out] Döndürülen bayt cinsinden boyutu `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="a3756-111">[out] The size, in bytes, of the returned `pbHash`.</span></span>  
+ <span data-ttu-id="b71a9-111">[out] Döndürülen bayt cinsinden boyutu `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="b71a9-111">[out] The size, in bytes, of the returned `pbHash`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a3756-112">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="a3756-112">Return Value</span></span>  
- <span data-ttu-id="a3756-113">`S_OK` yöntemi başarıyla tamamlandı Aksi takdirde hata olduğunu gösteren HRESULT değerini (bkz [ortak HRESULT değerlerini](https://go.microsoft.com/fwlink/?LinkId=213878) bir listesi için).</span><span class="sxs-lookup"><span data-stu-id="a3756-113">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="b71a9-112">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="b71a9-112">Return Value</span></span>  
+ <span data-ttu-id="b71a9-113">`S_OK` yöntemi başarıyla tamamlandı Aksi takdirde hata olduğunu gösteren HRESULT değerini (bkz [ortak HRESULT değerlerini](https://go.microsoft.com/fwlink/?LinkId=213878) bir listesi için).</span><span class="sxs-lookup"><span data-stu-id="b71a9-113">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a3756-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="a3756-114">Requirements</span></span>  
- <span data-ttu-id="a3756-115">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a3756-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b71a9-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b71a9-114">Requirements</span></span>  
+ <span data-ttu-id="b71a9-115">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b71a9-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a3756-116">**Başlık:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="a3756-116">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="b71a9-116">**Başlık:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="b71a9-116">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="a3756-117">**Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="a3756-117">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="b71a9-117">**Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="b71a9-117">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="a3756-118">**.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a3756-118">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="b71a9-118">**.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b71a9-118">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a3756-119">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="a3756-119">See Also</span></span>  
- [<span data-ttu-id="a3756-120">ICLRStrongName Arabirimi</span><span class="sxs-lookup"><span data-stu-id="a3756-120">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="b71a9-119">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="b71a9-119">See Also</span></span>  
+ [<span data-ttu-id="b71a9-120">ICLRStrongName Arabirimi</span><span class="sxs-lookup"><span data-stu-id="b71a9-120">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
