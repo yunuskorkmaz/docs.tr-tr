@@ -19,16 +19,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f4621a7d143d401d4cb620ac17c31e4ee5f13837
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43870308"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45588351"
 ---
-# <a name="iclrstrongnamestrongnamegetblob-method"></a><span data-ttu-id="ad8ce-102">ICLRStrongName::StrongNameGetBlob Yöntemi</span><span class="sxs-lookup"><span data-stu-id="ad8ce-102">ICLRStrongName::StrongNameGetBlob Method</span></span>
-<span data-ttu-id="ad8ce-103">Belirtilen arabellek, yürütülebilir dosyanın belirtilen adreste ikili gösterimini ile doldurur.</span><span class="sxs-lookup"><span data-stu-id="ad8ce-103">Fills the specified buffer with the binary representation of the executable file at the specified address.</span></span>  
+# <a name="iclrstrongnamestrongnamegetblob-method"></a><span data-ttu-id="270bc-102">ICLRStrongName::StrongNameGetBlob Yöntemi</span><span class="sxs-lookup"><span data-stu-id="270bc-102">ICLRStrongName::StrongNameGetBlob Method</span></span>
+<span data-ttu-id="270bc-103">Belirtilen arabellek, yürütülebilir dosyanın belirtilen adreste ikili gösterimini ile doldurur.</span><span class="sxs-lookup"><span data-stu-id="270bc-103">Fills the specified buffer with the binary representation of the executable file at the specified address.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ad8ce-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="ad8ce-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="270bc-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="270bc-104">Syntax</span></span>  
   
 ```  
 HRESULT StrongNameGetBlob (  
@@ -38,28 +38,28 @@ HRESULT StrongNameGetBlob (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="ad8ce-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="ad8ce-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="270bc-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="270bc-105">Parameters</span></span>  
  `wszFilePath`  
- <span data-ttu-id="ad8ce-106">[in] Yüklenen yürütülebilir dosyanın geçerli bir yol.</span><span class="sxs-lookup"><span data-stu-id="ad8ce-106">[in] A valid path to the executable file to be loaded.</span></span>  
+ <span data-ttu-id="270bc-106">[in] Yüklenen yürütülebilir dosyanın geçerli bir yol.</span><span class="sxs-lookup"><span data-stu-id="270bc-106">[in] A valid path to the executable file to be loaded.</span></span>  
   
  `pbBlob`  
- <span data-ttu-id="ad8ce-107">[in] Arabelleğe yürütülebilir dosyayı yüklemek için.</span><span class="sxs-lookup"><span data-stu-id="ad8ce-107">[in] The buffer into which to load the executable file.</span></span>  
+ <span data-ttu-id="270bc-107">[in] Arabelleğe yürütülebilir dosyayı yüklemek için.</span><span class="sxs-lookup"><span data-stu-id="270bc-107">[in] The buffer into which to load the executable file.</span></span>  
   
  `pcbBlob`  
- <span data-ttu-id="ad8ce-108">[out içinde] Bayt cinsinden en büyük boyutu, istenen `pbBlob`.</span><span class="sxs-lookup"><span data-stu-id="ad8ce-108">[in, out] The requested maximum size, in bytes, of `pbBlob`.</span></span> <span data-ttu-id="ad8ce-109">İade, bayt cinsinden gerçek boyutu bağlı, `pbBlob`.</span><span class="sxs-lookup"><span data-stu-id="ad8ce-109">Upon return, the actual size, in bytes, of `pbBlob`.</span></span>  
+ <span data-ttu-id="270bc-108">[out içinde] Bayt cinsinden en büyük boyutu, istenen `pbBlob`.</span><span class="sxs-lookup"><span data-stu-id="270bc-108">[in, out] The requested maximum size, in bytes, of `pbBlob`.</span></span> <span data-ttu-id="270bc-109">İade, bayt cinsinden gerçek boyutu bağlı, `pbBlob`.</span><span class="sxs-lookup"><span data-stu-id="270bc-109">Upon return, the actual size, in bytes, of `pbBlob`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="ad8ce-110">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="ad8ce-110">Return Value</span></span>  
- <span data-ttu-id="ad8ce-111">`S_OK` yöntemi başarıyla tamamlandı Aksi takdirde hata olduğunu gösteren HRESULT değerini (bkz [ortak HRESULT değerlerini](https://go.microsoft.com/fwlink/?LinkId=213878) bir listesi için).</span><span class="sxs-lookup"><span data-stu-id="ad8ce-111">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="270bc-110">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="270bc-110">Return Value</span></span>  
+ <span data-ttu-id="270bc-111">`S_OK` yöntemi başarıyla tamamlandı Aksi takdirde hata olduğunu gösteren HRESULT değerini (bkz [ortak HRESULT değerlerini](https://go.microsoft.com/fwlink/?LinkId=213878) bir listesi için).</span><span class="sxs-lookup"><span data-stu-id="270bc-111">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ad8ce-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="ad8ce-112">Requirements</span></span>  
- <span data-ttu-id="ad8ce-113">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ad8ce-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="270bc-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="270bc-112">Requirements</span></span>  
+ <span data-ttu-id="270bc-113">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="270bc-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ad8ce-114">**Başlık:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="ad8ce-114">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="270bc-114">**Başlık:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="270bc-114">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="ad8ce-115">**Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="ad8ce-115">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="270bc-115">**Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="270bc-115">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="ad8ce-116">**.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ad8ce-116">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="270bc-116">**.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="270bc-116">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ad8ce-117">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="ad8ce-117">See Also</span></span>  
- [<span data-ttu-id="ad8ce-118">StrongNameGetBlobFromImage Yöntemi</span><span class="sxs-lookup"><span data-stu-id="ad8ce-118">StrongNameGetBlobFromImage Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblobfromimage-method.md)  
- [<span data-ttu-id="ad8ce-119">ICLRStrongName Arabirimi</span><span class="sxs-lookup"><span data-stu-id="ad8ce-119">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="270bc-117">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="270bc-117">See Also</span></span>  
+ [<span data-ttu-id="270bc-118">StrongNameGetBlobFromImage Yöntemi</span><span class="sxs-lookup"><span data-stu-id="270bc-118">StrongNameGetBlobFromImage Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblobfromimage-method.md)  
+ [<span data-ttu-id="270bc-119">ICLRStrongName Arabirimi</span><span class="sxs-lookup"><span data-stu-id="270bc-119">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
