@@ -3,17 +3,17 @@ title: (Çağrılıyor XSLT) XmlReader'a serileştirme (C#)
 ms.date: 07/20/2015
 ms.assetid: 4cc3ee03-ef4c-429b-a408-fedd10b728cd
 ms.openlocfilehash: b1f5bc8bd71036636df9da152c4e364ea5ec6b6e
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44705053"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45527103"
 ---
-# <a name="serializing-to-an-xmlreader-invoking-xslt-c"></a><span data-ttu-id="d094e-102">(Çağrılıyor XSLT) XmlReader'a serileştirme (C#)</span><span class="sxs-lookup"><span data-stu-id="d094e-102">Serializing to an XmlReader (Invoking XSLT) (C#)</span></span>
-<span data-ttu-id="d094e-103">Kullanırken <xref:System.Xml?displayProperty=nameWithType> birlikte çalışabilirlik özelliklerini [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], kullanabileceğiniz <xref:System.Xml.Linq.XNode.CreateReader%2A> oluşturmak için bir <xref:System.Xml.XmlReader>.</span><span class="sxs-lookup"><span data-stu-id="d094e-103">When you use the <xref:System.Xml?displayProperty=nameWithType> interoperability capabilities of [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], you can use <xref:System.Xml.Linq.XNode.CreateReader%2A> to create an <xref:System.Xml.XmlReader>.</span></span> <span data-ttu-id="d094e-104">Buradan okur Modülü <xref:System.Xml.XmlReader> XML ağacından düğümleri okur ve bunları uygun şekilde işler.</span><span class="sxs-lookup"><span data-stu-id="d094e-104">The module that reads from this <xref:System.Xml.XmlReader> reads the nodes from the XML tree and processes them accordingly.</span></span>  
+# <a name="serializing-to-an-xmlreader-invoking-xslt-c"></a><span data-ttu-id="c274f-102">(Çağrılıyor XSLT) XmlReader'a serileştirme (C#)</span><span class="sxs-lookup"><span data-stu-id="c274f-102">Serializing to an XmlReader (Invoking XSLT) (C#)</span></span>
+<span data-ttu-id="c274f-103">Kullanırken <xref:System.Xml?displayProperty=nameWithType> birlikte çalışabilirlik özelliklerini [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], kullanabileceğiniz <xref:System.Xml.Linq.XNode.CreateReader%2A> oluşturmak için bir <xref:System.Xml.XmlReader>.</span><span class="sxs-lookup"><span data-stu-id="c274f-103">When you use the <xref:System.Xml?displayProperty=nameWithType> interoperability capabilities of [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], you can use <xref:System.Xml.Linq.XNode.CreateReader%2A> to create an <xref:System.Xml.XmlReader>.</span></span> <span data-ttu-id="c274f-104">Buradan okur Modülü <xref:System.Xml.XmlReader> XML ağacından düğümleri okur ve bunları uygun şekilde işler.</span><span class="sxs-lookup"><span data-stu-id="c274f-104">The module that reads from this <xref:System.Xml.XmlReader> reads the nodes from the XML tree and processes them accordingly.</span></span>  
   
-## <a name="invoking-an-xslt-transformation"></a><span data-ttu-id="d094e-105">XSLT dönüşümü çağırma</span><span class="sxs-lookup"><span data-stu-id="d094e-105">Invoking an XSLT Transformation</span></span>  
- <span data-ttu-id="d094e-106">Bu yöntem bir olası kullanım XSLT dönüştürmesi çağrılırken içindir.</span><span class="sxs-lookup"><span data-stu-id="d094e-106">One possible use for this method is when invoking an XSLT transformation.</span></span> <span data-ttu-id="d094e-107">Bir XML ağacı oluşturma, oluşturun bir <xref:System.Xml.XmlReader> XML ağacından bir yeni belge oluşturun ve ardından oluşturmak bir <xref:System.Xml.XmlWriter> yeni belgesine yazılacak.</span><span class="sxs-lookup"><span data-stu-id="d094e-107">You can create an XML tree, create an <xref:System.Xml.XmlReader> from the XML tree, create a new document, and then create an <xref:System.Xml.XmlWriter> to write into the new document.</span></span> <span data-ttu-id="d094e-108">Öğesinde geçen XSLT dönüşümü, daha sonra çağırabilirsiniz <xref:System.Xml.XmlReader> ve <xref:System.Xml.XmlWriter>.</span><span class="sxs-lookup"><span data-stu-id="d094e-108">Then, you can invoke the XSLT transformation, passing in <xref:System.Xml.XmlReader> and <xref:System.Xml.XmlWriter>.</span></span> <span data-ttu-id="d094e-109">Dönüştürme başarıyla tamamlandıktan sonra yeni bir XML ağacı dönüşümü sonuçları ile doldurulur.</span><span class="sxs-lookup"><span data-stu-id="d094e-109">After the transformation successfully completes, the new XML tree is populated with the results of the transformation.</span></span>  
+## <a name="invoking-an-xslt-transformation"></a><span data-ttu-id="c274f-105">XSLT dönüşümü çağırma</span><span class="sxs-lookup"><span data-stu-id="c274f-105">Invoking an XSLT Transformation</span></span>  
+ <span data-ttu-id="c274f-106">Bu yöntem bir olası kullanım XSLT dönüştürmesi çağrılırken içindir.</span><span class="sxs-lookup"><span data-stu-id="c274f-106">One possible use for this method is when invoking an XSLT transformation.</span></span> <span data-ttu-id="c274f-107">Bir XML ağacı oluşturma, oluşturun bir <xref:System.Xml.XmlReader> XML ağacından bir yeni belge oluşturun ve ardından oluşturmak bir <xref:System.Xml.XmlWriter> yeni belgesine yazılacak.</span><span class="sxs-lookup"><span data-stu-id="c274f-107">You can create an XML tree, create an <xref:System.Xml.XmlReader> from the XML tree, create a new document, and then create an <xref:System.Xml.XmlWriter> to write into the new document.</span></span> <span data-ttu-id="c274f-108">Öğesinde geçen XSLT dönüşümü, daha sonra çağırabilirsiniz <xref:System.Xml.XmlReader> ve <xref:System.Xml.XmlWriter>.</span><span class="sxs-lookup"><span data-stu-id="c274f-108">Then, you can invoke the XSLT transformation, passing in <xref:System.Xml.XmlReader> and <xref:System.Xml.XmlWriter>.</span></span> <span data-ttu-id="c274f-109">Dönüştürme başarıyla tamamlandıktan sonra yeni bir XML ağacı dönüşümü sonuçları ile doldurulur.</span><span class="sxs-lookup"><span data-stu-id="c274f-109">After the transformation successfully completes, the new XML tree is populated with the results of the transformation.</span></span>  
   
 ```csharp  
 string xslMarkup = @"<?xml version='1.0'?>  
@@ -50,7 +50,7 @@ using (XmlWriter writer = newTree.CreateWriter()) {
 Console.WriteLine(newTree);  
 ```  
   
- <span data-ttu-id="d094e-110">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="d094e-110">This example produces the following output:</span></span>  
+ <span data-ttu-id="c274f-110">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="c274f-110">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -59,6 +59,6 @@ Console.WriteLine(newTree);
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d094e-111">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="d094e-111">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c274f-111">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="c274f-111">See Also</span></span>
 
-- [<span data-ttu-id="d094e-112">Serileştirmek XML ağaçları (C#)</span><span class="sxs-lookup"><span data-stu-id="d094e-112">Serializing XML Trees (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)
+- [<span data-ttu-id="c274f-112">Serileştirmek XML ağaçları (C#)</span><span class="sxs-lookup"><span data-stu-id="c274f-112">Serializing XML Trees (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)

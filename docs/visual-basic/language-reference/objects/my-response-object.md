@@ -8,25 +8,25 @@ helpviewer_keywords:
 - My.Response object
 ms.assetid: 626359bc-3165-40b4-bfaf-2c610e26eb5b
 ms.openlocfilehash: d5f49529a2593093a234babc22f64b591ea3cc61
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44364929"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45514000"
 ---
-# <a name="myresponse-object"></a><span data-ttu-id="5d74b-102">My.Response Nesnesi</span><span class="sxs-lookup"><span data-stu-id="5d74b-102">My.Response Object</span></span>
-<span data-ttu-id="5d74b-103">Alır <xref:System.Web.HttpResponse> ilişkili nesne <xref:System.Web.UI.Page>.</span><span class="sxs-lookup"><span data-stu-id="5d74b-103">Gets the <xref:System.Web.HttpResponse> object associated with the <xref:System.Web.UI.Page>.</span></span> <span data-ttu-id="5d74b-104">Bu nesne, HTTP yanıt verilerini istemciye göndermenize olanak sağlar ve bu yanıt hakkında bilgiler içerir.</span><span class="sxs-lookup"><span data-stu-id="5d74b-104">This object allows you to send HTTP response data to a client and contains information about that response.</span></span>  
+# <a name="myresponse-object"></a><span data-ttu-id="13fbd-102">My.Response Nesnesi</span><span class="sxs-lookup"><span data-stu-id="13fbd-102">My.Response Object</span></span>
+<span data-ttu-id="13fbd-103">Alır <xref:System.Web.HttpResponse> ilişkili nesne <xref:System.Web.UI.Page>.</span><span class="sxs-lookup"><span data-stu-id="13fbd-103">Gets the <xref:System.Web.HttpResponse> object associated with the <xref:System.Web.UI.Page>.</span></span> <span data-ttu-id="13fbd-104">Bu nesne, HTTP yanıt verilerini istemciye göndermenize olanak sağlar ve bu yanıt hakkında bilgiler içerir.</span><span class="sxs-lookup"><span data-stu-id="13fbd-104">This object allows you to send HTTP response data to a client and contains information about that response.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="5d74b-105">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="5d74b-105">Remarks</span></span>  
- <span data-ttu-id="5d74b-106">`My.Response` Nesnesini içeren geçerli <xref:System.Web.HttpResponse> sayfası ile ilişkili nesne.</span><span class="sxs-lookup"><span data-stu-id="5d74b-106">The `My.Response` object contains the current <xref:System.Web.HttpResponse> object associated with the page.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="13fbd-105">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="13fbd-105">Remarks</span></span>  
+ <span data-ttu-id="13fbd-106">`My.Response` Nesnesini içeren geçerli <xref:System.Web.HttpResponse> sayfası ile ilişkili nesne.</span><span class="sxs-lookup"><span data-stu-id="13fbd-106">The `My.Response` object contains the current <xref:System.Web.HttpResponse> object associated with the page.</span></span>  
   
- <span data-ttu-id="5d74b-107">`My.Response` Nesne için kullanılabilir, yalnızca [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] uygulamalar.</span><span class="sxs-lookup"><span data-stu-id="5d74b-107">The `My.Response` object is only available for [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] applications.</span></span>  
+ <span data-ttu-id="13fbd-107">`My.Response` Nesne için kullanılabilir, yalnızca [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] uygulamalar.</span><span class="sxs-lookup"><span data-stu-id="13fbd-107">The `My.Response` object is only available for [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] applications.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="5d74b-108">Örnek</span><span class="sxs-lookup"><span data-stu-id="5d74b-108">Example</span></span>  
- <span data-ttu-id="5d74b-109">Aşağıdaki örnek, üst bilgi koleksiyondan alır `My.Request` nesne ve kullandığı `My.Response` ASP.NET sayfasına yazılacak nesne.</span><span class="sxs-lookup"><span data-stu-id="5d74b-109">The following example gets the header collection from the `My.Request` object and uses the `My.Response` object to write it to the ASP.NET page.</span></span>  
+## <a name="example"></a><span data-ttu-id="13fbd-108">Örnek</span><span class="sxs-lookup"><span data-stu-id="13fbd-108">Example</span></span>  
+ <span data-ttu-id="13fbd-109">Aşağıdaki örnek, üst bilgi koleksiyondan alır `My.Request` nesne ve kullandığı `My.Response` ASP.NET sayfasına yazılacak nesne.</span><span class="sxs-lookup"><span data-stu-id="13fbd-109">The following example gets the header collection from the `My.Request` object and uses the `My.Response` object to write it to the ASP.NET page.</span></span>  
   
  [!code-vb[VbVbalrMyWeb#1](../../../visual-basic/language-reference/objects/codesnippet/VisualBasic/my-response-object_1.aspx)]  
   
-## <a name="see-also"></a><span data-ttu-id="5d74b-110">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="5d74b-110">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="13fbd-110">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="13fbd-110">See Also</span></span>  
  <xref:System.Web.HttpResponse>  
- [<span data-ttu-id="5d74b-111">My.Request Nesnesi</span><span class="sxs-lookup"><span data-stu-id="5d74b-111">My.Request Object</span></span>](../../../visual-basic/language-reference/objects/my-request-object.md)
+ [<span data-ttu-id="13fbd-111">My.Request Nesnesi</span><span class="sxs-lookup"><span data-stu-id="13fbd-111">My.Request Object</span></span>](../../../visual-basic/language-reference/objects/my-request-object.md)

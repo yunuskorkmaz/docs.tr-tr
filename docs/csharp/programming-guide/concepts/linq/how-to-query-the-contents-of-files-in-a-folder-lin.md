@@ -3,16 +3,16 @@ title: 'Nasıl yapılır: metin dosyaları (LINQ) (C#) bir klasörde içeriğini
 ms.date: 07/20/2015
 ms.assetid: f5b4dce7-1a34-4eb4-9bf1-60d5bdda264c
 ms.openlocfilehash: dedb3b742805daa23151c61e89dd0835f730dd9c
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44270170"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45526551"
 ---
-# <a name="how-to-query-the-contents-of-text-files-in-a-folder-linq-c"></a><span data-ttu-id="f3695-102">Nasıl yapılır: metin dosyaları (LINQ) (C#) bir klasörde içeriğini sorgulama</span><span class="sxs-lookup"><span data-stu-id="f3695-102">How to: Query the Contents of Text Files in a Folder (LINQ) (C#)</span></span>
-<span data-ttu-id="f3695-103">Bu örnek, belirtilen dizin ağacındaki tüm dosyalar üzerinde sorgulama, her dosyasını açın ve içeriğini inceleyin gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="f3695-103">This example shows how to query over all the files in a specified directory tree, open each file, and inspect its contents.</span></span> <span data-ttu-id="f3695-104">Bu tür bir teknik dizinler oluşturmak veya bir dizin ağacında içeriği dizinlerini tersine çevirecek şekilde kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="f3695-104">This type of technique could be used to create indexes or reverse indexes of the contents of a directory tree.</span></span> <span data-ttu-id="f3695-105">Bu örnekte basit dize arama gerçekleştirilir.</span><span class="sxs-lookup"><span data-stu-id="f3695-105">A simple string search is performed in this example.</span></span> <span data-ttu-id="f3695-106">Ancak, daha karmaşık tür deseniyle eşleşen normal bir ifade ile gerçekleştirilebilir.</span><span class="sxs-lookup"><span data-stu-id="f3695-106">However, more complex types of pattern matching can be performed with a regular expression.</span></span> <span data-ttu-id="f3695-107">Daha fazla bilgi için [nasıl yapılır: normal ifadeler (C#) ile LINQ sorgularını birleştirme](../../../../csharp/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="f3695-107">For more information, see [How to: Combine LINQ Queries with Regular Expressions (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md).</span></span>  
+# <a name="how-to-query-the-contents-of-text-files-in-a-folder-linq-c"></a><span data-ttu-id="2c905-102">Nasıl yapılır: metin dosyaları (LINQ) (C#) bir klasörde içeriğini sorgulama</span><span class="sxs-lookup"><span data-stu-id="2c905-102">How to: Query the Contents of Text Files in a Folder (LINQ) (C#)</span></span>
+<span data-ttu-id="2c905-103">Bu örnek, belirtilen dizin ağacındaki tüm dosyalar üzerinde sorgulama, her dosyasını açın ve içeriğini inceleyin gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="2c905-103">This example shows how to query over all the files in a specified directory tree, open each file, and inspect its contents.</span></span> <span data-ttu-id="2c905-104">Bu tür bir teknik dizinler oluşturmak veya bir dizin ağacında içeriği dizinlerini tersine çevirecek şekilde kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="2c905-104">This type of technique could be used to create indexes or reverse indexes of the contents of a directory tree.</span></span> <span data-ttu-id="2c905-105">Bu örnekte basit dize arama gerçekleştirilir.</span><span class="sxs-lookup"><span data-stu-id="2c905-105">A simple string search is performed in this example.</span></span> <span data-ttu-id="2c905-106">Ancak, daha karmaşık tür deseniyle eşleşen normal bir ifade ile gerçekleştirilebilir.</span><span class="sxs-lookup"><span data-stu-id="2c905-106">However, more complex types of pattern matching can be performed with a regular expression.</span></span> <span data-ttu-id="2c905-107">Daha fazla bilgi için [nasıl yapılır: normal ifadeler (C#) ile LINQ sorgularını birleştirme](../../../../csharp/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="2c905-107">For more information, see [How to: Combine LINQ Queries with Regular Expressions (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f3695-108">Örnek</span><span class="sxs-lookup"><span data-stu-id="f3695-108">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="2c905-108">Örnek</span><span class="sxs-lookup"><span data-stu-id="2c905-108">Example</span></span>  
   
 ```csharp  
 class QueryContents  
@@ -70,10 +70,10 @@ class QueryContents
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="f3695-109">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="f3695-109">Compiling the Code</span></span>  
- <span data-ttu-id="f3695-110">.NET Framework sürüm 3.5 veya üzeri bir System.Core.dll başvurusu ile hedefleyen bir proje oluşturun ve `using` System.Linq ve System.IO ad alanları için yönergeleri.</span><span class="sxs-lookup"><span data-stu-id="f3695-110">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="2c905-109">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="2c905-109">Compiling the Code</span></span>  
+ <span data-ttu-id="2c905-110">.NET Framework sürüm 3.5 veya üzeri bir System.Core.dll başvurusu ile hedefleyen bir proje oluşturun ve `using` System.Linq ve System.IO ad alanları için yönergeleri.</span><span class="sxs-lookup"><span data-stu-id="2c905-110">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f3695-111">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="f3695-111">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2c905-111">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="2c905-111">See Also</span></span>
 
-- [<span data-ttu-id="f3695-112">LINQ ve dosya dizinleri (C#)</span><span class="sxs-lookup"><span data-stu-id="f3695-112">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)  
-- [<span data-ttu-id="f3695-113">LINQ to Objects'in (C#)</span><span class="sxs-lookup"><span data-stu-id="f3695-113">LINQ to Objects (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+- [<span data-ttu-id="2c905-112">LINQ ve dosya dizinleri (C#)</span><span class="sxs-lookup"><span data-stu-id="2c905-112">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)  
+- [<span data-ttu-id="2c905-113">LINQ to Objects'in (C#)</span><span class="sxs-lookup"><span data-stu-id="2c905-113">LINQ to Objects (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)

@@ -3,20 +3,20 @@ title: 'Zkratka (F #)'
 description: 'Byref ve düşük düzeydeki programlama için kullanılan byref-like türleri F # hakkında bilgi edinin.'
 ms.date: 09/02/2018
 ms.openlocfilehash: 6131104e4325f77da84368c337f998c6b2b5309b
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44699652"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45508310"
 ---
-# <a name="byrefs"></a><span data-ttu-id="5fdb5-103">Zkratka</span><span class="sxs-lookup"><span data-stu-id="5fdb5-103">Byrefs</span></span>
+# <a name="byrefs"></a><span data-ttu-id="89886-103">Zkratka</span><span class="sxs-lookup"><span data-stu-id="89886-103">Byrefs</span></span>
 
-<span data-ttu-id="5fdb5-104">F # düşük düzeydeki programlama alanında baş iki önemli özellik alanlarını sahiptir:</span><span class="sxs-lookup"><span data-stu-id="5fdb5-104">F# has two major feature areas that deal in the space of low-level programming:</span></span>
+<span data-ttu-id="89886-104">F # düşük düzeydeki programlama alanında baş iki önemli özellik alanlarını sahiptir:</span><span class="sxs-lookup"><span data-stu-id="89886-104">F# has two major feature areas that deal in the space of low-level programming:</span></span>
 
-* <span data-ttu-id="5fdb5-105">`byref` / `inref` / `outref` Yönetilen işaretçiler türlerinden.</span><span class="sxs-lookup"><span data-stu-id="5fdb5-105">The `byref`/`inref`/`outref` types, which are a managed pointers.</span></span> <span data-ttu-id="5fdb5-106">Böylece, çalışma zamanında geçersiz bir program derlenemez kullanım kısıtlamaları sahiptirler.</span><span class="sxs-lookup"><span data-stu-id="5fdb5-106">They have restrictions on usage so that you cannot compile a program that is invalid at runtime.</span></span>
-* <span data-ttu-id="5fdb5-107">A `byref`-olan yapı gibi bir [yapısı](structures.md) benzer semantiğe ve aynı derleme zamanı kısıtlamalara sahip `byref<'T>`.</span><span class="sxs-lookup"><span data-stu-id="5fdb5-107">A `byref`-like struct, which is a [structure](structures.md) that has similar semantics and the same compile-time restrictions as `byref<'T>`.</span></span> <span data-ttu-id="5fdb5-108">Bir örnek <xref:System.Span%601>.</span><span class="sxs-lookup"><span data-stu-id="5fdb5-108">One example is <xref:System.Span%601>.</span></span>
+* <span data-ttu-id="89886-105">`byref` / `inref` / `outref` Yönetilen işaretçiler türlerinden.</span><span class="sxs-lookup"><span data-stu-id="89886-105">The `byref`/`inref`/`outref` types, which are a managed pointers.</span></span> <span data-ttu-id="89886-106">Böylece, çalışma zamanında geçersiz bir program derlenemez kullanım kısıtlamaları sahiptirler.</span><span class="sxs-lookup"><span data-stu-id="89886-106">They have restrictions on usage so that you cannot compile a program that is invalid at runtime.</span></span>
+* <span data-ttu-id="89886-107">A `byref`-olan yapı gibi bir [yapısı](structures.md) benzer semantiğe ve aynı derleme zamanı kısıtlamalara sahip `byref<'T>`.</span><span class="sxs-lookup"><span data-stu-id="89886-107">A `byref`-like struct, which is a [structure](structures.md) that has similar semantics and the same compile-time restrictions as `byref<'T>`.</span></span> <span data-ttu-id="89886-108">Bir örnek <xref:System.Span%601>.</span><span class="sxs-lookup"><span data-stu-id="89886-108">One example is <xref:System.Span%601>.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="5fdb5-109">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="5fdb5-109">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="89886-109">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="89886-109">Syntax</span></span>
 
 ```fsharp
 // Byref types as parameters
@@ -37,19 +37,19 @@ type S(count1: int, count2: int) =
     member x.Count2 = count2
 ```
 
-## <a name="byref-inref-and-outref"></a><span data-ttu-id="5fdb5-110">ByRef ve inref outref</span><span class="sxs-lookup"><span data-stu-id="5fdb5-110">Byref, inref, and outref</span></span>
+## <a name="byref-inref-and-outref"></a><span data-ttu-id="89886-110">ByRef ve inref outref</span><span class="sxs-lookup"><span data-stu-id="89886-110">Byref, inref, and outref</span></span>
 
-<span data-ttu-id="5fdb5-111">Üç tür vardır `byref`:</span><span class="sxs-lookup"><span data-stu-id="5fdb5-111">There are three forms of `byref`:</span></span>
+<span data-ttu-id="89886-111">Üç tür vardır `byref`:</span><span class="sxs-lookup"><span data-stu-id="89886-111">There are three forms of `byref`:</span></span>
 
-* <span data-ttu-id="5fdb5-112">`inref<'T>`, temeldeki değeri okumak için yönetilen bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="5fdb5-112">`inref<'T>`, a managed pointer for reading the underlying value.</span></span>
-* <span data-ttu-id="5fdb5-113">`outref<'T>`, temel alınan değeri yazmak için yönetilen bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="5fdb5-113">`outref<'T>`, a managed pointer for writing to the underlying value.</span></span>
-* <span data-ttu-id="5fdb5-114">`byref<'T>`, temeldeki değer yazma ve okuma için yönetilen bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="5fdb5-114">`byref<'T>`, a managed pointer for reading and writing the underlying value.</span></span>
+* <span data-ttu-id="89886-112">`inref<'T>`, temeldeki değeri okumak için yönetilen bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="89886-112">`inref<'T>`, a managed pointer for reading the underlying value.</span></span>
+* <span data-ttu-id="89886-113">`outref<'T>`, temel alınan değeri yazmak için yönetilen bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="89886-113">`outref<'T>`, a managed pointer for writing to the underlying value.</span></span>
+* <span data-ttu-id="89886-114">`byref<'T>`, temeldeki değer yazma ve okuma için yönetilen bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="89886-114">`byref<'T>`, a managed pointer for reading and writing the underlying value.</span></span>
 
-<span data-ttu-id="5fdb5-115">A `byref<'T>` nerede geçirilebilir bir `inref<'T>` beklenir.</span><span class="sxs-lookup"><span data-stu-id="5fdb5-115">A `byref<'T>` can be passed where an `inref<'T>` is expected.</span></span> <span data-ttu-id="5fdb5-116">Benzer şekilde, bir `byref<'T>` nerede geçirilebilir bir `outref<'T>` beklenir.</span><span class="sxs-lookup"><span data-stu-id="5fdb5-116">Similarly, a `byref<'T>` can be passed where an `outref<'T>` is expected.</span></span>
+<span data-ttu-id="89886-115">A `byref<'T>` nerede geçirilebilir bir `inref<'T>` beklenir.</span><span class="sxs-lookup"><span data-stu-id="89886-115">A `byref<'T>` can be passed where an `inref<'T>` is expected.</span></span> <span data-ttu-id="89886-116">Benzer şekilde, bir `byref<'T>` nerede geçirilebilir bir `outref<'T>` beklenir.</span><span class="sxs-lookup"><span data-stu-id="89886-116">Similarly, a `byref<'T>` can be passed where an `outref<'T>` is expected.</span></span>
 
-## <a name="using-byrefs"></a><span data-ttu-id="5fdb5-117">Zkratka kullanma</span><span class="sxs-lookup"><span data-stu-id="5fdb5-117">Using byrefs</span></span>
+## <a name="using-byrefs"></a><span data-ttu-id="89886-117">Zkratka kullanma</span><span class="sxs-lookup"><span data-stu-id="89886-117">Using byrefs</span></span>
 
-<span data-ttu-id="5fdb5-118">Kullanılacak bir `inref<'T>`, bir işaretçi değeri ile almanız gereken `&`:</span><span class="sxs-lookup"><span data-stu-id="5fdb5-118">To use a `inref<'T>`, you need to get a pointer value with `&`:</span></span>
+<span data-ttu-id="89886-118">Kullanılacak bir `inref<'T>`, bir işaretçi değeri ile almanız gereken `&`:</span><span class="sxs-lookup"><span data-stu-id="89886-118">To use a `inref<'T>`, you need to get a pointer value with `&`:</span></span>
 
 ```fsharp
 open System
@@ -61,7 +61,7 @@ let dt = DateTime.Now
 f &dt // Pass a pointer to 'dt'
 ```
 
-<span data-ttu-id="5fdb5-119">İşaretçiyi kullanarak yazmak için bir `outref<'T>` veya `byref<'T>`, almak için bir işaretçi değeri de yapmalısınız `mutable`.</span><span class="sxs-lookup"><span data-stu-id="5fdb5-119">To write to the pointer by using an `outref<'T>` or `byref<'T>`, you must also make the value you grab a pointer to `mutable`.</span></span>
+<span data-ttu-id="89886-119">İşaretçiyi kullanarak yazmak için bir `outref<'T>` veya `byref<'T>`, almak için bir işaretçi değeri de yapmalısınız `mutable`.</span><span class="sxs-lookup"><span data-stu-id="89886-119">To write to the pointer by using an `outref<'T>` or `byref<'T>`, you must also make the value you grab a pointer to `mutable`.</span></span>
 
 ```fsharp
 open System
@@ -77,63 +77,63 @@ let mutable dt = DateTime.Now
 f &dt
 ```
 
-<span data-ttu-id="5fdb5-120">İşaretçiyi, okuma yerine yalnızca yazıyorsanız kullanmayı `outref<'T>` yerine `byref<'T>`.</span><span class="sxs-lookup"><span data-stu-id="5fdb5-120">If you are only writing the pointer instead of reading it, consider using `outref<'T>` instead of `byref<'T>`.</span></span>
+<span data-ttu-id="89886-120">İşaretçiyi, okuma yerine yalnızca yazıyorsanız kullanmayı `outref<'T>` yerine `byref<'T>`.</span><span class="sxs-lookup"><span data-stu-id="89886-120">If you are only writing the pointer instead of reading it, consider using `outref<'T>` instead of `byref<'T>`.</span></span>
 
-### <a name="inref-semantics"></a><span data-ttu-id="5fdb5-121">Inref semantiği</span><span class="sxs-lookup"><span data-stu-id="5fdb5-121">Inref semantics</span></span>
+### <a name="inref-semantics"></a><span data-ttu-id="89886-121">Inref semantiği</span><span class="sxs-lookup"><span data-stu-id="89886-121">Inref semantics</span></span>
 
-<span data-ttu-id="5fdb5-122">Aşağıdaki kodu göz önünde bulundurun:</span><span class="sxs-lookup"><span data-stu-id="5fdb5-122">Consider the following code:</span></span>
+<span data-ttu-id="89886-122">Aşağıdaki kodu göz önünde bulundurun:</span><span class="sxs-lookup"><span data-stu-id="89886-122">Consider the following code:</span></span>
 
 ```fsharp
 let f (x: inref<SomeStruct>) = s.SomeField
 ```
 
-<span data-ttu-id="5fdb5-123">Anlamsal olarak, bu aşağıdaki gelir:</span><span class="sxs-lookup"><span data-stu-id="5fdb5-123">Semantically, this means the following:</span></span>
+<span data-ttu-id="89886-123">Anlamsal olarak, bu aşağıdaki gelir:</span><span class="sxs-lookup"><span data-stu-id="89886-123">Semantically, this means the following:</span></span>
 
-* <span data-ttu-id="5fdb5-124">Sahibi `x` işaretçi yalnızca kullanabilir, değeri okunamıyor.</span><span class="sxs-lookup"><span data-stu-id="5fdb5-124">The holder of the `x` pointer may only use it to read the value.</span></span>
-* <span data-ttu-id="5fdb5-125">Herhangi bir işaretçi için alınan `struct` iç içe alanlar içinde `SomeStruct` türü verilen `inref<_>`.</span><span class="sxs-lookup"><span data-stu-id="5fdb5-125">Any pointer acquired to `struct` fields nested within `SomeStruct` are given type `inref<_>`.</span></span>
+* <span data-ttu-id="89886-124">Sahibi `x` işaretçi yalnızca kullanabilir, değeri okunamıyor.</span><span class="sxs-lookup"><span data-stu-id="89886-124">The holder of the `x` pointer may only use it to read the value.</span></span>
+* <span data-ttu-id="89886-125">Herhangi bir işaretçi için alınan `struct` iç içe alanlar içinde `SomeStruct` türü verilen `inref<_>`.</span><span class="sxs-lookup"><span data-stu-id="89886-125">Any pointer acquired to `struct` fields nested within `SomeStruct` are given type `inref<_>`.</span></span>
 
-<span data-ttu-id="5fdb5-126">Aşağıdakileri de geçerlidir:</span><span class="sxs-lookup"><span data-stu-id="5fdb5-126">The following is also true:</span></span>
+<span data-ttu-id="89886-126">Aşağıdakileri de geçerlidir:</span><span class="sxs-lookup"><span data-stu-id="89886-126">The following is also true:</span></span>
 
-* <span data-ttu-id="5fdb5-127">Diğer adlar yazma erişimine sahip değil veya diğer iş parçacıkları çekilmeye yoktur `x`.</span><span class="sxs-lookup"><span data-stu-id="5fdb5-127">There is no implication that other threads or aliases do not have write access to `x`.</span></span>
-* <span data-ttu-id="5fdb5-128">Çekilmeye yoktur, `SomeStruct` tarafından virtue, sabittir `x` olan bir `inref`.</span><span class="sxs-lookup"><span data-stu-id="5fdb5-128">There is no implication that `SomeStruct` is immutable by virtue of `x` being an `inref`.</span></span>
+* <span data-ttu-id="89886-127">Diğer adlar yazma erişimine sahip değil veya diğer iş parçacıkları çekilmeye yoktur `x`.</span><span class="sxs-lookup"><span data-stu-id="89886-127">There is no implication that other threads or aliases do not have write access to `x`.</span></span>
+* <span data-ttu-id="89886-128">Çekilmeye yoktur, `SomeStruct` tarafından virtue, sabittir `x` olan bir `inref`.</span><span class="sxs-lookup"><span data-stu-id="89886-128">There is no implication that `SomeStruct` is immutable by virtue of `x` being an `inref`.</span></span>
 
-<span data-ttu-id="5fdb5-129">Ancak, F # için değer türlerinden **olan** değişmezse, `this` işaretçi olarak çıkarılan bir `inref`.</span><span class="sxs-lookup"><span data-stu-id="5fdb5-129">However, for F# value types that **are** immutable, the `this` pointer is inferred to be an `inref`.</span></span>
+<span data-ttu-id="89886-129">Ancak, F # için değer türlerinden **olan** değişmezse, `this` işaretçi olarak çıkarılan bir `inref`.</span><span class="sxs-lookup"><span data-stu-id="89886-129">However, for F# value types that **are** immutable, the `this` pointer is inferred to be an `inref`.</span></span>
 
-<span data-ttu-id="5fdb5-130">Tüm bu kuralların birlikte sahibi anlamına bir `inref` işaretçi işaret edilen bellek hemen içeriğini değiştiremez.</span><span class="sxs-lookup"><span data-stu-id="5fdb5-130">All of these rules together mean that the holder of an `inref` pointer may not modify the immediate contents of the memory being pointed to.</span></span>
+<span data-ttu-id="89886-130">Tüm bu kuralların birlikte sahibi anlamına bir `inref` işaretçi işaret edilen bellek hemen içeriğini değiştiremez.</span><span class="sxs-lookup"><span data-stu-id="89886-130">All of these rules together mean that the holder of an `inref` pointer may not modify the immediate contents of the memory being pointed to.</span></span>
 
-### <a name="outref-semantics"></a><span data-ttu-id="5fdb5-131">Outref semantiği</span><span class="sxs-lookup"><span data-stu-id="5fdb5-131">Outref semantics</span></span>
+### <a name="outref-semantics"></a><span data-ttu-id="89886-131">Outref semantiği</span><span class="sxs-lookup"><span data-stu-id="89886-131">Outref semantics</span></span>
 
-<span data-ttu-id="5fdb5-132">Amacı `outref<'T>` işaretçi gelen yalnızca okunmalıdır belirtmektir.</span><span class="sxs-lookup"><span data-stu-id="5fdb5-132">The purpose of `outref<'T>` is to indicate that the pointer should only be read from.</span></span> <span data-ttu-id="5fdb5-133">Beklenmedik bir şekilde, `outref<'T>` değer adını rağmen temel alınan okuma izin verir.</span><span class="sxs-lookup"><span data-stu-id="5fdb5-133">Unexpectedly, `outref<'T>` permits reading the underlying value despite its name.</span></span> <span data-ttu-id="5fdb5-134">Bu, uyumluluk amacıyla kullanılır.</span><span class="sxs-lookup"><span data-stu-id="5fdb5-134">This is for compatibility purposes.</span></span> <span data-ttu-id="5fdb5-135">Anlamsal olarak, `outref<'T>` farklı değildir `byref<'T>`.</span><span class="sxs-lookup"><span data-stu-id="5fdb5-135">Semantically, `outref<'T>` is no different than `byref<'T>`.</span></span>
+<span data-ttu-id="89886-132">Amacı `outref<'T>` işaretçi gelen yalnızca okunmalıdır belirtmektir.</span><span class="sxs-lookup"><span data-stu-id="89886-132">The purpose of `outref<'T>` is to indicate that the pointer should only be read from.</span></span> <span data-ttu-id="89886-133">Beklenmedik bir şekilde, `outref<'T>` değer adını rağmen temel alınan okuma izin verir.</span><span class="sxs-lookup"><span data-stu-id="89886-133">Unexpectedly, `outref<'T>` permits reading the underlying value despite its name.</span></span> <span data-ttu-id="89886-134">Bu, uyumluluk amacıyla kullanılır.</span><span class="sxs-lookup"><span data-stu-id="89886-134">This is for compatibility purposes.</span></span> <span data-ttu-id="89886-135">Anlamsal olarak, `outref<'T>` farklı değildir `byref<'T>`.</span><span class="sxs-lookup"><span data-stu-id="89886-135">Semantically, `outref<'T>` is no different than `byref<'T>`.</span></span>
 
-### <a name="interop-with-c"></a><span data-ttu-id="5fdb5-136">C# ile birlikte çalışma</span><span class="sxs-lookup"><span data-stu-id="5fdb5-136">Interop with C#</span></span> #
+### <a name="interop-with-c"></a><span data-ttu-id="89886-136">C# ile birlikte çalışma</span><span class="sxs-lookup"><span data-stu-id="89886-136">Interop with C#</span></span> #
 
-<span data-ttu-id="5fdb5-137">C# destekler `in ref` ve `out ref` yanı sıra anahtar sözcükleri `ref` döndürür.</span><span class="sxs-lookup"><span data-stu-id="5fdb5-137">C# supports the `in ref` and `out ref` keywords, in addition to `ref` returns.</span></span> <span data-ttu-id="5fdb5-138">Aşağıdaki tabloda, F # ne C# yayan yorumlaması gösterilmektedir:</span><span class="sxs-lookup"><span data-stu-id="5fdb5-138">The following table shows how F# interprets what C# emits:</span></span>
+<span data-ttu-id="89886-137">C# destekler `in ref` ve `out ref` yanı sıra anahtar sözcükleri `ref` döndürür.</span><span class="sxs-lookup"><span data-stu-id="89886-137">C# supports the `in ref` and `out ref` keywords, in addition to `ref` returns.</span></span> <span data-ttu-id="89886-138">Aşağıdaki tabloda, F # ne C# yayan yorumlaması gösterilmektedir:</span><span class="sxs-lookup"><span data-stu-id="89886-138">The following table shows how F# interprets what C# emits:</span></span>
 
-|<span data-ttu-id="5fdb5-139">C# yapısı</span><span class="sxs-lookup"><span data-stu-id="5fdb5-139">C# construct</span></span>|<span data-ttu-id="5fdb5-140">F # algılar.</span><span class="sxs-lookup"><span data-stu-id="5fdb5-140">F# infers</span></span>|
+|<span data-ttu-id="89886-139">C# yapısı</span><span class="sxs-lookup"><span data-stu-id="89886-139">C# construct</span></span>|<span data-ttu-id="89886-140">F # algılar.</span><span class="sxs-lookup"><span data-stu-id="89886-140">F# infers</span></span>|
 |------------|---------|
-|<span data-ttu-id="5fdb5-141">`ref` Dönüş değeri</span><span class="sxs-lookup"><span data-stu-id="5fdb5-141">`ref` return value</span></span>|`outref<'T>`|
-|<span data-ttu-id="5fdb5-142">`ref readonly` Dönüş değeri</span><span class="sxs-lookup"><span data-stu-id="5fdb5-142">`ref readonly` return value</span></span>|`inref<'T>`|
-|<span data-ttu-id="5fdb5-143">`in ref` Parametre</span><span class="sxs-lookup"><span data-stu-id="5fdb5-143">`in ref` parameter</span></span>|`inref<'T>`|
-|<span data-ttu-id="5fdb5-144">`out ref` Parametre</span><span class="sxs-lookup"><span data-stu-id="5fdb5-144">`out ref` parameter</span></span>|`outref<'T>`|
+|<span data-ttu-id="89886-141">`ref` Dönüş değeri</span><span class="sxs-lookup"><span data-stu-id="89886-141">`ref` return value</span></span>|`outref<'T>`|
+|<span data-ttu-id="89886-142">`ref readonly` Dönüş değeri</span><span class="sxs-lookup"><span data-stu-id="89886-142">`ref readonly` return value</span></span>|`inref<'T>`|
+|<span data-ttu-id="89886-143">`in ref` Parametre</span><span class="sxs-lookup"><span data-stu-id="89886-143">`in ref` parameter</span></span>|`inref<'T>`|
+|<span data-ttu-id="89886-144">`out ref` Parametre</span><span class="sxs-lookup"><span data-stu-id="89886-144">`out ref` parameter</span></span>|`outref<'T>`|
 
-<span data-ttu-id="5fdb5-145">Aşağıdaki tabloda, hangi F # yayan gösterilmektedir:</span><span class="sxs-lookup"><span data-stu-id="5fdb5-145">The following table shows what F# emits:</span></span>
+<span data-ttu-id="89886-145">Aşağıdaki tabloda, hangi F # yayan gösterilmektedir:</span><span class="sxs-lookup"><span data-stu-id="89886-145">The following table shows what F# emits:</span></span>
 
-|<span data-ttu-id="5fdb5-146">F # yapısı</span><span class="sxs-lookup"><span data-stu-id="5fdb5-146">F# construct</span></span>|<span data-ttu-id="5fdb5-147">Yayılan yapısı</span><span class="sxs-lookup"><span data-stu-id="5fdb5-147">Emitted construct</span></span>|
+|<span data-ttu-id="89886-146">F # yapısı</span><span class="sxs-lookup"><span data-stu-id="89886-146">F# construct</span></span>|<span data-ttu-id="89886-147">Yayılan yapısı</span><span class="sxs-lookup"><span data-stu-id="89886-147">Emitted construct</span></span>|
 |------------|-----------------|
-|<span data-ttu-id="5fdb5-148">`inref<'T>` Bağımsız değişken</span><span class="sxs-lookup"><span data-stu-id="5fdb5-148">`inref<'T>` argument</span></span>|<span data-ttu-id="5fdb5-149">`[In]` bağımsız değişken özniteliği</span><span class="sxs-lookup"><span data-stu-id="5fdb5-149">`[In]` attribute on argument</span></span>|
-|<span data-ttu-id="5fdb5-150">`inref<'T>` döndürülecek</span><span class="sxs-lookup"><span data-stu-id="5fdb5-150">`inref<'T>` return</span></span>|<span data-ttu-id="5fdb5-151">`modreq` öznitelik değeri</span><span class="sxs-lookup"><span data-stu-id="5fdb5-151">`modreq` attribute on value</span></span>|
-|<span data-ttu-id="5fdb5-152">`inref<'T>` soyut yuvası veya uygulama</span><span class="sxs-lookup"><span data-stu-id="5fdb5-152">`inref<'T>` in abstract slot or implementation</span></span>|<span data-ttu-id="5fdb5-153">`modreq` bağımsız değişken veya dönüş</span><span class="sxs-lookup"><span data-stu-id="5fdb5-153">`modreq` on argument or return</span></span>|
-|<span data-ttu-id="5fdb5-154">`outref<'T>` Bağımsız değişken</span><span class="sxs-lookup"><span data-stu-id="5fdb5-154">`outref<'T>` argument</span></span>|<span data-ttu-id="5fdb5-155">`[Out]` bağımsız değişken özniteliği</span><span class="sxs-lookup"><span data-stu-id="5fdb5-155">`[Out]` attribute on argument</span></span>|
+|<span data-ttu-id="89886-148">`inref<'T>` Bağımsız değişken</span><span class="sxs-lookup"><span data-stu-id="89886-148">`inref<'T>` argument</span></span>|<span data-ttu-id="89886-149">`[In]` bağımsız değişken özniteliği</span><span class="sxs-lookup"><span data-stu-id="89886-149">`[In]` attribute on argument</span></span>|
+|<span data-ttu-id="89886-150">`inref<'T>` döndürülecek</span><span class="sxs-lookup"><span data-stu-id="89886-150">`inref<'T>` return</span></span>|<span data-ttu-id="89886-151">`modreq` öznitelik değeri</span><span class="sxs-lookup"><span data-stu-id="89886-151">`modreq` attribute on value</span></span>|
+|<span data-ttu-id="89886-152">`inref<'T>` soyut yuvası veya uygulama</span><span class="sxs-lookup"><span data-stu-id="89886-152">`inref<'T>` in abstract slot or implementation</span></span>|<span data-ttu-id="89886-153">`modreq` bağımsız değişken veya dönüş</span><span class="sxs-lookup"><span data-stu-id="89886-153">`modreq` on argument or return</span></span>|
+|<span data-ttu-id="89886-154">`outref<'T>` Bağımsız değişken</span><span class="sxs-lookup"><span data-stu-id="89886-154">`outref<'T>` argument</span></span>|<span data-ttu-id="89886-155">`[Out]` bağımsız değişken özniteliği</span><span class="sxs-lookup"><span data-stu-id="89886-155">`[Out]` attribute on argument</span></span>|
 
-### <a name="type-inference-and-overloading-rules"></a><span data-ttu-id="5fdb5-156">Tür çıkarımı ve kuralları aşırı yükleme</span><span class="sxs-lookup"><span data-stu-id="5fdb5-156">Type inference and overloading rules</span></span>
+### <a name="type-inference-and-overloading-rules"></a><span data-ttu-id="89886-156">Tür çıkarımı ve kuralları aşırı yükleme</span><span class="sxs-lookup"><span data-stu-id="89886-156">Type inference and overloading rules</span></span>
 
-<span data-ttu-id="5fdb5-157">Bir `inref<'T>` aşağıdaki durumlarda F # derleyicisi tarafından çıkarılan türü:</span><span class="sxs-lookup"><span data-stu-id="5fdb5-157">An `inref<'T>` type is inferred by the F# compiler in the following cases:</span></span>
+<span data-ttu-id="89886-157">Bir `inref<'T>` aşağıdaki durumlarda F # derleyicisi tarafından çıkarılan türü:</span><span class="sxs-lookup"><span data-stu-id="89886-157">An `inref<'T>` type is inferred by the F# compiler in the following cases:</span></span>
 
-1. <span data-ttu-id="5fdb5-158">Olan bir .NET parametre veya dönüş türü bir `IsReadOnly` özniteliği.</span><span class="sxs-lookup"><span data-stu-id="5fdb5-158">A .NET parameter or return type that has an `IsReadOnly` attribute.</span></span>
-2. <span data-ttu-id="5fdb5-159">`this` Değişebilir hiçbir alan bir yapı türü işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="5fdb5-159">The `this` pointer on a struct type that has no mutable fields.</span></span>
-3. <span data-ttu-id="5fdb5-160">Bir bellek konumunun adresini başka bir türetilmiş `inref<_>` işaretçi.</span><span class="sxs-lookup"><span data-stu-id="5fdb5-160">The address of a memory location derived from another `inref<_>` pointer.</span></span>
+1. <span data-ttu-id="89886-158">Olan bir .NET parametre veya dönüş türü bir `IsReadOnly` özniteliği.</span><span class="sxs-lookup"><span data-stu-id="89886-158">A .NET parameter or return type that has an `IsReadOnly` attribute.</span></span>
+2. <span data-ttu-id="89886-159">`this` Değişebilir hiçbir alan bir yapı türü işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="89886-159">The `this` pointer on a struct type that has no mutable fields.</span></span>
+3. <span data-ttu-id="89886-160">Bir bellek konumunun adresini başka bir türetilmiş `inref<_>` işaretçi.</span><span class="sxs-lookup"><span data-stu-id="89886-160">The address of a memory location derived from another `inref<_>` pointer.</span></span>
 
-<span data-ttu-id="5fdb5-161">Örtük bir adres, bir `inref` alınır, bir yükleme türünde bir bağımsız değişken ile `SomeType` türünde bir bağımsız değişken bir aşırı yüklemesi için tercih edilen `inref<SomeType>`.</span><span class="sxs-lookup"><span data-stu-id="5fdb5-161">When an implicit address of an `inref` is being taken, an overload with an argument of type `SomeType` is preferred to an overload with an argument of type `inref<SomeType>`.</span></span> <span data-ttu-id="5fdb5-162">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="5fdb5-162">For example:</span></span>
+<span data-ttu-id="89886-161">Örtük bir adres, bir `inref` alınır, bir yükleme türünde bir bağımsız değişken ile `SomeType` türünde bir bağımsız değişken bir aşırı yüklemesi için tercih edilen `inref<SomeType>`.</span><span class="sxs-lookup"><span data-stu-id="89886-161">When an implicit address of an `inref` is being taken, an overload with an argument of type `SomeType` is preferred to an overload with an argument of type `inref<SomeType>`.</span></span> <span data-ttu-id="89886-162">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="89886-162">For example:</span></span>
 
 ```fsharp
 type C() =
@@ -147,11 +147,11 @@ let v =  C.M(res)
 let v2 =  C.M2(res, 4)
 ```
 
-<span data-ttu-id="5fdb5-163">Her iki durumda da alma aşırı `System.DateTime` alma aşırı yerine çözümlendiği `inref<System.DateTime>`.</span><span class="sxs-lookup"><span data-stu-id="5fdb5-163">In both cases, the overloads taking `System.DateTime` are resolved rather than the overloads taking `inref<System.DateTime>`.</span></span>
+<span data-ttu-id="89886-163">Her iki durumda da alma aşırı `System.DateTime` alma aşırı yerine çözümlendiği `inref<System.DateTime>`.</span><span class="sxs-lookup"><span data-stu-id="89886-163">In both cases, the overloads taking `System.DateTime` are resolved rather than the overloads taking `inref<System.DateTime>`.</span></span>
 
-## <a name="byref-like-structs"></a><span data-ttu-id="5fdb5-164">ByRef benzeri yapılar</span><span class="sxs-lookup"><span data-stu-id="5fdb5-164">Byref-like structs</span></span>
+## <a name="byref-like-structs"></a><span data-ttu-id="89886-164">ByRef benzeri yapılar</span><span class="sxs-lookup"><span data-stu-id="89886-164">Byref-like structs</span></span>
 
-<span data-ttu-id="5fdb5-165">Ek olarak `byref` / `inref` / `outref` sorularının cevabını, uyması için kendi yapılar tanımlayabilirsiniz `byref`-semantiği ister.</span><span class="sxs-lookup"><span data-stu-id="5fdb5-165">In addition to the `byref`/`inref`/`outref` trio, you can define your own structs that can adhere to `byref`-like semantics.</span></span> <span data-ttu-id="5fdb5-166">Bunun <xref:System.Runtime.CompilerServices.IsByRefLikeAttribute> özniteliği:</span><span class="sxs-lookup"><span data-stu-id="5fdb5-166">This is done with the <xref:System.Runtime.CompilerServices.IsByRefLikeAttribute> attribute:</span></span>
+<span data-ttu-id="89886-165">Ek olarak `byref` / `inref` / `outref` sorularının cevabını, uyması için kendi yapılar tanımlayabilirsiniz `byref`-semantiği ister.</span><span class="sxs-lookup"><span data-stu-id="89886-165">In addition to the `byref`/`inref`/`outref` trio, you can define your own structs that can adhere to `byref`-like semantics.</span></span> <span data-ttu-id="89886-166">Bunun <xref:System.Runtime.CompilerServices.IsByRefLikeAttribute> özniteliği:</span><span class="sxs-lookup"><span data-stu-id="89886-166">This is done with the <xref:System.Runtime.CompilerServices.IsByRefLikeAttribute> attribute:</span></span>
 
 ```fsharp
 open System
@@ -163,22 +163,22 @@ type S(count1: Span<int>, count2: Span<int>) =
     member x.Count2 = count2
 ```
 
-<span data-ttu-id="5fdb5-167">`IsByRefLike` değil gelmez `Struct`.</span><span class="sxs-lookup"><span data-stu-id="5fdb5-167">`IsByRefLike` does not imply `Struct`.</span></span> <span data-ttu-id="5fdb5-168">Her ikisi de türünde bulunmalıdır.</span><span class="sxs-lookup"><span data-stu-id="5fdb5-168">Both must be present on the type.</span></span>
+<span data-ttu-id="89886-167">`IsByRefLike` değil gelmez `Struct`.</span><span class="sxs-lookup"><span data-stu-id="89886-167">`IsByRefLike` does not imply `Struct`.</span></span> <span data-ttu-id="89886-168">Her ikisi de türünde bulunmalıdır.</span><span class="sxs-lookup"><span data-stu-id="89886-168">Both must be present on the type.</span></span>
 
-<span data-ttu-id="5fdb5-169">Bir "`byref`-gibi" yapı F # içinde bir yığın bağlı değer türüdür.</span><span class="sxs-lookup"><span data-stu-id="5fdb5-169">A "`byref`-like" struct in F# is a stack-bound value type.</span></span> <span data-ttu-id="5fdb5-170">Bu, hiçbir zaman yönetilen yığında ayrılır.</span><span class="sxs-lookup"><span data-stu-id="5fdb5-170">It is never allocated on the managed heap.</span></span> <span data-ttu-id="5fdb5-171">A `byref`-gibi yaşam süresi ve yakalama olmayan hakkında güçlü denetimleri kümesiyle zorlanmış olarak yapı yüksek performanslı programlama için kullanışlıdır.</span><span class="sxs-lookup"><span data-stu-id="5fdb5-171">A `byref`-like struct is useful for high-performance programming, as it is enforced with set of strong checks about lifetime and non-capture.</span></span> <span data-ttu-id="5fdb5-172">Kurallar şunlardır:</span><span class="sxs-lookup"><span data-stu-id="5fdb5-172">The rules are:</span></span>
+<span data-ttu-id="89886-169">Bir "`byref`-gibi" yapı F # içinde bir yığın bağlı değer türüdür.</span><span class="sxs-lookup"><span data-stu-id="89886-169">A "`byref`-like" struct in F# is a stack-bound value type.</span></span> <span data-ttu-id="89886-170">Bu, hiçbir zaman yönetilen yığında ayrılır.</span><span class="sxs-lookup"><span data-stu-id="89886-170">It is never allocated on the managed heap.</span></span> <span data-ttu-id="89886-171">A `byref`-gibi yaşam süresi ve yakalama olmayan hakkında güçlü denetimleri kümesiyle zorlanmış olarak yapı yüksek performanslı programlama için kullanışlıdır.</span><span class="sxs-lookup"><span data-stu-id="89886-171">A `byref`-like struct is useful for high-performance programming, as it is enforced with set of strong checks about lifetime and non-capture.</span></span> <span data-ttu-id="89886-172">Kurallar şunlardır:</span><span class="sxs-lookup"><span data-stu-id="89886-172">The rules are:</span></span>
 
-* <span data-ttu-id="5fdb5-173">İşlev parametrelerini, yöntem parametreleri, yerel değişkenler döner kullanılabilirler.</span><span class="sxs-lookup"><span data-stu-id="5fdb5-173">They can be used as function parameters, method parameters, local variables, method returns.</span></span>
-* <span data-ttu-id="5fdb5-174">Statik olamaz veya bir sınıf ya da normal yapı üyelerinin örneği.</span><span class="sxs-lookup"><span data-stu-id="5fdb5-174">They cannot be static or instance members of a class or normal struct.</span></span>
-* <span data-ttu-id="5fdb5-175">Herhangi bir kapanış yapısı tarafından yakalanamıyor (`async` yöntemlerde veya lambda ifadelerinde).</span><span class="sxs-lookup"><span data-stu-id="5fdb5-175">They cannot be captured by any closure construct (`async` methods or lambda expressions).</span></span>
-* <span data-ttu-id="5fdb5-176">Genel parametre olarak kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="5fdb5-176">They cannot be used as a generic parameter.</span></span>
+* <span data-ttu-id="89886-173">İşlev parametrelerini, yöntem parametreleri, yerel değişkenler döner kullanılabilirler.</span><span class="sxs-lookup"><span data-stu-id="89886-173">They can be used as function parameters, method parameters, local variables, method returns.</span></span>
+* <span data-ttu-id="89886-174">Statik olamaz veya bir sınıf ya da normal yapı üyelerinin örneği.</span><span class="sxs-lookup"><span data-stu-id="89886-174">They cannot be static or instance members of a class or normal struct.</span></span>
+* <span data-ttu-id="89886-175">Herhangi bir kapanış yapısı tarafından yakalanamıyor (`async` yöntemlerde veya lambda ifadelerinde).</span><span class="sxs-lookup"><span data-stu-id="89886-175">They cannot be captured by any closure construct (`async` methods or lambda expressions).</span></span>
+* <span data-ttu-id="89886-176">Genel parametre olarak kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="89886-176">They cannot be used as a generic parameter.</span></span>
 
-<span data-ttu-id="5fdb5-177">Bu son noktası F # için ardışık düzen stili programlamada, önemli olarak `|>` giriş türlerinden parametreleştiren genel bir işlevdir.</span><span class="sxs-lookup"><span data-stu-id="5fdb5-177">This last point is crucial for F# pipeline-style programming, as `|>` is a generic function that parameterizes its input types.</span></span> <span data-ttu-id="5fdb5-178">Bu kısıtlama için rahat olmalıdır `|>` gelecekte satır içidir ve satır içi olmayan genel işlev çağrıları, gövdesinde yapmaz.</span><span class="sxs-lookup"><span data-stu-id="5fdb5-178">This restriction may be relaxed for `|>` in the future, as it is inline and does not make any calls to non-inlined generic functions in its body.</span></span>
+<span data-ttu-id="89886-177">Bu son noktası F # için ardışık düzen stili programlamada, önemli olarak `|>` giriş türlerinden parametreleştiren genel bir işlevdir.</span><span class="sxs-lookup"><span data-stu-id="89886-177">This last point is crucial for F# pipeline-style programming, as `|>` is a generic function that parameterizes its input types.</span></span> <span data-ttu-id="89886-178">Bu kısıtlama için rahat olmalıdır `|>` gelecekte satır içidir ve satır içi olmayan genel işlev çağrıları, gövdesinde yapmaz.</span><span class="sxs-lookup"><span data-stu-id="89886-178">This restriction may be relaxed for `|>` in the future, as it is inline and does not make any calls to non-inlined generic functions in its body.</span></span>
 
-<span data-ttu-id="5fdb5-179">Bu kurallar çok kesin kullanımını kısıtlıyor olsa da, bunlar promise yüksek performanslı bilgi işlem güvenli bir şekilde karşılamak için bunu yapın.</span><span class="sxs-lookup"><span data-stu-id="5fdb5-179">Although these rules very strongly restrict usage, they do so to fulfill the promise of high-performance computing in a safe manner.</span></span>
+<span data-ttu-id="89886-179">Bu kurallar çok kesin kullanımını kısıtlıyor olsa da, bunlar promise yüksek performanslı bilgi işlem güvenli bir şekilde karşılamak için bunu yapın.</span><span class="sxs-lookup"><span data-stu-id="89886-179">Although these rules very strongly restrict usage, they do so to fulfill the promise of high-performance computing in a safe manner.</span></span>
 
-## <a name="byref-returns"></a><span data-ttu-id="5fdb5-180">ByRef dönüşleri</span><span class="sxs-lookup"><span data-stu-id="5fdb5-180">Byref returns</span></span>
+## <a name="byref-returns"></a><span data-ttu-id="89886-180">ByRef dönüşleri</span><span class="sxs-lookup"><span data-stu-id="89886-180">Byref returns</span></span>
 
-<span data-ttu-id="5fdb5-181">F # işlevleri ByRef döndürür veya üyeleri oluşturulur ve tüketilen.</span><span class="sxs-lookup"><span data-stu-id="5fdb5-181">Byref returns from F# functions or members can be produced and consumed.</span></span> <span data-ttu-id="5fdb5-182">Tüketildiğinde bir `byref`-yöntemi döndürmek, örtük olarak başvurusu kaldırılmış bir değerdir.</span><span class="sxs-lookup"><span data-stu-id="5fdb5-182">When consuming a `byref`-returning method, the value is implicitly dereferenced.</span></span> <span data-ttu-id="5fdb5-183">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="5fdb5-183">For example:</span></span>
+<span data-ttu-id="89886-181">F # işlevleri ByRef döndürür veya üyeleri oluşturulur ve tüketilen.</span><span class="sxs-lookup"><span data-stu-id="89886-181">Byref returns from F# functions or members can be produced and consumed.</span></span> <span data-ttu-id="89886-182">Tüketildiğinde bir `byref`-yöntemi döndürmek, örtük olarak başvurusu kaldırılmış bir değerdir.</span><span class="sxs-lookup"><span data-stu-id="89886-182">When consuming a `byref`-returning method, the value is implicitly dereferenced.</span></span> <span data-ttu-id="89886-183">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="89886-183">For example:</span></span>
 
 ```fsharp
 let safeSum(bytes: Span<byte>) =
@@ -191,9 +191,9 @@ let sum = safeSum(mySpanOfBytes)
 printfn "%d" sum // 'sum' is of type 'int'
 ```
 
-<span data-ttu-id="5fdb5-184">Zincirleme birden çok çağrı yoluyla bir başvurusu geçirme gibi örtük başvuru önlemek için `&x` (burada `x` değerdir).</span><span class="sxs-lookup"><span data-stu-id="5fdb5-184">To avoid the implicit dereference, such as passing a reference through multiple chained calls, use `&x` (where `x` is the value).</span></span>
+<span data-ttu-id="89886-184">Zincirleme birden çok çağrı yoluyla bir başvurusu geçirme gibi örtük başvuru önlemek için `&x` (burada `x` değerdir).</span><span class="sxs-lookup"><span data-stu-id="89886-184">To avoid the implicit dereference, such as passing a reference through multiple chained calls, use `&x` (where `x` is the value).</span></span>
 
-<span data-ttu-id="5fdb5-185">Bir geri dönmek de doğrudan atayabilir `byref`.</span><span class="sxs-lookup"><span data-stu-id="5fdb5-185">You can also directly assign to a return `byref`.</span></span> <span data-ttu-id="5fdb5-186">Aşağıdaki (kesinlik temelli yüksek oranda) programı göz önünde bulundurun:</span><span class="sxs-lookup"><span data-stu-id="5fdb5-186">Consider the following (highly imperative) program:</span></span>
+<span data-ttu-id="89886-185">Bir geri dönmek de doğrudan atayabilir `byref`.</span><span class="sxs-lookup"><span data-stu-id="89886-185">You can also directly assign to a return `byref`.</span></span> <span data-ttu-id="89886-186">Aşağıdaki (kesinlik temelli yüksek oranda) programı göz önünde bulundurun:</span><span class="sxs-lookup"><span data-stu-id="89886-186">Consider the following (highly imperative) program:</span></span>
 
 ```fsharp
 type C() =
@@ -222,16 +222,16 @@ let main argv =
     0 // return an integer exit code
 ```
 
-<span data-ttu-id="5fdb5-187">Bu çıktı.</span><span class="sxs-lookup"><span data-stu-id="5fdb5-187">This is the output:</span></span>
+<span data-ttu-id="89886-187">Bu çıktı.</span><span class="sxs-lookup"><span data-stu-id="89886-187">This is the output:</span></span>
 
 ```console
 Original sequence: 1 3 7 15 31 63 127 255 511 1023
 New sequence:      1 3 7 30 31 63 127 255 511 1023
 ```
 
-## <a name="scoping-for-byrefs"></a><span data-ttu-id="5fdb5-188">Zkratka için kapsam belirleme</span><span class="sxs-lookup"><span data-stu-id="5fdb5-188">Scoping for byrefs</span></span>
+## <a name="scoping-for-byrefs"></a><span data-ttu-id="89886-188">Zkratka için kapsam belirleme</span><span class="sxs-lookup"><span data-stu-id="89886-188">Scoping for byrefs</span></span>
 
-<span data-ttu-id="5fdb5-189">A `let`-ilişkili değeri, tanımlandığı kapsamı aşıyor, başvuru sahip olamaz.</span><span class="sxs-lookup"><span data-stu-id="5fdb5-189">A `let`-bound value cannot have its reference exceed the scope in which it was defined.</span></span> <span data-ttu-id="5fdb5-190">Örneğin, aşağıdaki izin verilmiyor:</span><span class="sxs-lookup"><span data-stu-id="5fdb5-190">For example, the following is disallowed:</span></span>
+<span data-ttu-id="89886-189">A `let`-ilişkili değeri, tanımlandığı kapsamı aşıyor, başvuru sahip olamaz.</span><span class="sxs-lookup"><span data-stu-id="89886-189">A `let`-bound value cannot have its reference exceed the scope in which it was defined.</span></span> <span data-ttu-id="89886-190">Örneğin, aşağıdaki izin verilmiyor:</span><span class="sxs-lookup"><span data-stu-id="89886-190">For example, the following is disallowed:</span></span>
 
 ```fsharp
 let test2 () =
@@ -245,4 +245,4 @@ let test () =
     ()
 ```
 
-<span data-ttu-id="5fdb5-191">Bu iyileştirmeler açıp ile derleme yaparsanız bağlı olarak farklı sonuçlar alma engeller.</span><span class="sxs-lookup"><span data-stu-id="5fdb5-191">This prevents you from getting different results depending on if you compile with optimizations on or off.</span></span>
+<span data-ttu-id="89886-191">Bu iyileştirmeler açıp ile derleme yaparsanız bağlı olarak farklı sonuçlar alma engeller.</span><span class="sxs-lookup"><span data-stu-id="89886-191">This prevents you from getting different results depending on if you compile with optimizations on or off.</span></span>

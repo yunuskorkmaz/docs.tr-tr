@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0ec28c581b8e6e0aff3a2765720b6e9795be931b
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43860694"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "44756061"
 ---
-# <a name="gettypelibinfo-function"></a><span data-ttu-id="239ab-102">GetTypeLibInfo İşlevi</span><span class="sxs-lookup"><span data-stu-id="239ab-102">GetTypeLibInfo Function</span></span>
-<span data-ttu-id="239ab-103">Belirtilen tür kitaplığı hakkında bilgi inceleyerek döndürür, [TLIBATTR](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagtlibattr) yapısı.</span><span class="sxs-lookup"><span data-stu-id="239ab-103">Returns information about the specified type library by examining its [TLIBATTR](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagtlibattr) structure.</span></span>  
+# <a name="gettypelibinfo-function"></a><span data-ttu-id="49ac1-102">GetTypeLibInfo İşlevi</span><span class="sxs-lookup"><span data-stu-id="49ac1-102">GetTypeLibInfo Function</span></span>
+<span data-ttu-id="49ac1-103">Belirtilen tür kitaplığı hakkında bilgi inceleyerek döndürür, [TLIBATTR](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagtlibattr) yapısı.</span><span class="sxs-lookup"><span data-stu-id="49ac1-103">Returns information about the specified type library by examining its [TLIBATTR](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagtlibattr) structure.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="239ab-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="239ab-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="49ac1-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="49ac1-104">Syntax</span></span>  
   
 ```  
 HRESULT GetTypeLibInfo(  
@@ -39,39 +39,39 @@ HRESULT GetTypeLibInfo(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="239ab-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="239ab-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="49ac1-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="49ac1-105">Parameters</span></span>  
  `szFile`  
- <span data-ttu-id="239ab-106">[in] Tür kitaplığı dosyasının adı.</span><span class="sxs-lookup"><span data-stu-id="239ab-106">[in] The file name of the type library.</span></span>  
+ <span data-ttu-id="49ac1-106">[in] Tür kitaplığı dosyasının adı.</span><span class="sxs-lookup"><span data-stu-id="49ac1-106">[in] The file name of the type library.</span></span>  
   
  `pTypeLibID`  
- <span data-ttu-id="239ab-107">[out] Tür kitaplığının GUID.</span><span class="sxs-lookup"><span data-stu-id="239ab-107">[out] The GUID of the type library.</span></span>  
+ <span data-ttu-id="49ac1-107">[out] Tür kitaplığının GUID.</span><span class="sxs-lookup"><span data-stu-id="49ac1-107">[out] The GUID of the type library.</span></span>  
   
  `pTypeLibLCID`  
- <span data-ttu-id="239ab-108">[out] Tür kitaplığının yerelleştirme kimliği.</span><span class="sxs-lookup"><span data-stu-id="239ab-108">[out] The localization ID of the type library.</span></span>  
+ <span data-ttu-id="49ac1-108">[out] Tür kitaplığının yerelleştirme kimliği.</span><span class="sxs-lookup"><span data-stu-id="49ac1-108">[out] The localization ID of the type library.</span></span>  
   
  `pTypeLibPlatform`  
- <span data-ttu-id="239ab-109">[out] A [SYSKIND](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ne-oaidl-tagsyskind) tür kitaplığı için hedef işletim sistemini tanımlayan bir bayrak.</span><span class="sxs-lookup"><span data-stu-id="239ab-109">[out] A [SYSKIND](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ne-oaidl-tagsyskind) flag that identifies the target operating system for the type library.</span></span> <span data-ttu-id="239ab-110">Genel değerler şunlardır: SYS_WIN32 ve SYS_WIN64.</span><span class="sxs-lookup"><span data-stu-id="239ab-110">Common values are SYS_WIN32 and SYS_WIN64.</span></span>  
+ <span data-ttu-id="49ac1-109">[out] A [SYSKIND](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ne-oaidl-tagsyskind) tür kitaplığı için hedef işletim sistemini tanımlayan bir bayrak.</span><span class="sxs-lookup"><span data-stu-id="49ac1-109">[out] A [SYSKIND](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ne-oaidl-tagsyskind) flag that identifies the target operating system for the type library.</span></span> <span data-ttu-id="49ac1-110">Genel değerler şunlardır: SYS_WIN32 ve SYS_WIN64.</span><span class="sxs-lookup"><span data-stu-id="49ac1-110">Common values are SYS_WIN32 and SYS_WIN64.</span></span>  
   
  `pTypeLibMajorVer`  
- <span data-ttu-id="239ab-111">[out] Tür kitaplığı sürüm sayısı.</span><span class="sxs-lookup"><span data-stu-id="239ab-111">[out] The major version number of the type library.</span></span> <span data-ttu-id="239ab-112">Örneğin, sürüm için *x.y*, ana sürüm numarası *x*.</span><span class="sxs-lookup"><span data-stu-id="239ab-112">For example, for version *x.y*, the major version number is *x*.</span></span>  
+ <span data-ttu-id="49ac1-111">[out] Tür kitaplığı sürüm sayısı.</span><span class="sxs-lookup"><span data-stu-id="49ac1-111">[out] The major version number of the type library.</span></span> <span data-ttu-id="49ac1-112">Örneğin, sürüm için *x.y*, ana sürüm numarası *x*.</span><span class="sxs-lookup"><span data-stu-id="49ac1-112">For example, for version *x.y*, the major version number is *x*.</span></span>  
   
  `pTypeLibMinorVer`  
- <span data-ttu-id="239ab-113">[out] Tür kitaplığının ikincil sürüm numarası.</span><span class="sxs-lookup"><span data-stu-id="239ab-113">[out] The minor version number of the type library.</span></span> <span data-ttu-id="239ab-114">Örneğin, sürüm için *x.y*, ikincil sürüm numarası *y*.</span><span class="sxs-lookup"><span data-stu-id="239ab-114">For example, for version *x.y*, the minor version number is *y*.</span></span>  
+ <span data-ttu-id="49ac1-113">[out] Tür kitaplığının ikincil sürüm numarası.</span><span class="sxs-lookup"><span data-stu-id="49ac1-113">[out] The minor version number of the type library.</span></span> <span data-ttu-id="49ac1-114">Örneğin, sürüm için *x.y*, ikincil sürüm numarası *y*.</span><span class="sxs-lookup"><span data-stu-id="49ac1-114">For example, for version *x.y*, the minor version number is *y*.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="239ab-115">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="239ab-115">Remarks</span></span>  
- <span data-ttu-id="239ab-116">`GetTypeLibInfo` İşlevi çağrıldığında [Tlbexp.exe (tür kitaplığı dışarı Aktarıcı)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md).</span><span class="sxs-lookup"><span data-stu-id="239ab-116">The `GetTypeLibInfo` function is called by the [Tlbexp.exe (Type Library Exporter)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md).</span></span> <span data-ttu-id="239ab-117">Bu araç, bir ortak dil çalışma zamanı (CLR) derlemedeki türleri açıklayan bir tür kitaplığı üretir.</span><span class="sxs-lookup"><span data-stu-id="239ab-117">This tool generates a type library that describes the types in a common language runtime (CLR) assembly.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="49ac1-115">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="49ac1-115">Remarks</span></span>  
+ <span data-ttu-id="49ac1-116">`GetTypeLibInfo` İşlevi çağrıldığında [Tlbexp.exe (tür kitaplığı dışarı Aktarıcı)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md).</span><span class="sxs-lookup"><span data-stu-id="49ac1-116">The `GetTypeLibInfo` function is called by the [Tlbexp.exe (Type Library Exporter)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md).</span></span> <span data-ttu-id="49ac1-117">Bu araç, bir ortak dil çalışma zamanı (CLR) derlemedeki türleri açıklayan bir tür kitaplığı üretir.</span><span class="sxs-lookup"><span data-stu-id="49ac1-117">This tool generates a type library that describes the types in a common language runtime (CLR) assembly.</span></span>  
   
- <span data-ttu-id="239ab-118">Herhangi bir parametre null ise, işlev döndürür bir `HRESULT` , `E_POINTER`.</span><span class="sxs-lookup"><span data-stu-id="239ab-118">If any parameter is null, the function returns an `HRESULT` of `E_POINTER`.</span></span> <span data-ttu-id="239ab-119">Aksi halde `S_OK`.</span><span class="sxs-lookup"><span data-stu-id="239ab-119">Otherwise, it returns `S_OK`.</span></span>  
+ <span data-ttu-id="49ac1-118">Herhangi bir parametre null ise, işlev döndürür bir `HRESULT` , `E_POINTER`.</span><span class="sxs-lookup"><span data-stu-id="49ac1-118">If any parameter is null, the function returns an `HRESULT` of `E_POINTER`.</span></span> <span data-ttu-id="49ac1-119">Aksi halde `S_OK`.</span><span class="sxs-lookup"><span data-stu-id="49ac1-119">Otherwise, it returns `S_OK`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="239ab-120">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="239ab-120">Requirements</span></span>  
- <span data-ttu-id="239ab-121">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="239ab-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="49ac1-120">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="49ac1-120">Requirements</span></span>  
+ <span data-ttu-id="49ac1-121">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="49ac1-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="239ab-122">**Başlık:** TlbRef.h</span><span class="sxs-lookup"><span data-stu-id="239ab-122">**Header:** TlbRef.h</span></span>  
+ <span data-ttu-id="49ac1-122">**Başlık:** TlbRef.h</span><span class="sxs-lookup"><span data-stu-id="49ac1-122">**Header:** TlbRef.h</span></span>  
   
- <span data-ttu-id="239ab-123">**Kitaplığı:** TlbRef.lib</span><span class="sxs-lookup"><span data-stu-id="239ab-123">**Library:** TlbRef.lib</span></span>  
+ <span data-ttu-id="49ac1-123">**Kitaplığı:** TlbRef.lib</span><span class="sxs-lookup"><span data-stu-id="49ac1-123">**Library:** TlbRef.lib</span></span>  
   
- <span data-ttu-id="239ab-124">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="239ab-124">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="49ac1-124">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="49ac1-124">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="239ab-125">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="239ab-125">See Also</span></span>  
- [<span data-ttu-id="239ab-126">Tlbexp Yardımcı İşlevleri</span><span class="sxs-lookup"><span data-stu-id="239ab-126">Tlbexp Helper Functions</span></span>](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
- [<span data-ttu-id="239ab-127">LoadTypeLibEx işlevi</span><span class="sxs-lookup"><span data-stu-id="239ab-127">LoadTypeLibEx Function</span></span>](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)
+## <a name="see-also"></a><span data-ttu-id="49ac1-125">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="49ac1-125">See Also</span></span>  
+ [<span data-ttu-id="49ac1-126">Tlbexp Yardımcı İşlevleri</span><span class="sxs-lookup"><span data-stu-id="49ac1-126">Tlbexp Helper Functions</span></span>](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
+ [<span data-ttu-id="49ac1-127">LoadTypeLibEx işlevi</span><span class="sxs-lookup"><span data-stu-id="49ac1-127">LoadTypeLibEx Function</span></span>](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)
