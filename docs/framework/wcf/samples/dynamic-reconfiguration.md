@@ -3,11 +3,11 @@ title: Dinamik Yeniden Yapılandırma
 ms.date: 03/30/2017
 ms.assetid: b20786ae-cce6-4f91-b6cb-9cae116faf8b
 ms.openlocfilehash: a147a1d6cf61001832661376363ecc850ecad309
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44189935"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45508215"
 ---
 # <a name="dynamic-reconfiguration"></a>Dinamik Yeniden Yapılandırma
 Bu örnek, Windows Communication Foundation (WCF) yönlendirme hizmeti gösterir. Yönlendirme hizmeti, içerik tabanlı bir yönlendirici uygulamanıza dahil etmek kolay bir WCF bileşenidir. Bu örnek, yönlendirme hizmeti kullanarak iletişim kurmak için standart WCF hesaplayıcı örnek uyum sağlar. Bu örnek nasıl yönlendirme hizmeti dinamik olarak çalışma zamanı sırasında yapılandırılabilen gösterir.  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d6b7f9cb-81be-44e1-bb94-56137954876d
 ms.openlocfilehash: ca739f703267f27932ec7450a59d7f4afaffd64b
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44080078"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45526661"
 ---
 # <a name="retrieving-identity-or-autonumber-values"></a>Kimlik veya otomatik sayı değerlerini alma
 İlişkisel bir veritabanındaki bir birincil anahtar bir sütun veya her zaman benzersiz değerler içeren sütunlar bileşimidir. Birincil anahtar değeri bilerek, onu içeren satırın bulundurmanıza olanak tanır. SQL Server, Oracle ve Microsoft Access/Jet gibi ilişkisel veritabanı altyapılarından birincil anahtar olarak belirlenebilir sütunları otomatik olarak artırma oluşturmayı destekler. Tabloya satır eklendikçe bu değerler sunucu tarafından oluşturulur. SQL Server, bir sütunun kimlik özelliği ayarlamak, Oracle bir dizi oluşturun ve Microsoft Access içinde oluşturduğunuz bir sayı sütunu.  

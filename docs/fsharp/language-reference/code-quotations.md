@@ -3,11 +3,11 @@ title: Kod Tırnak İşaretleri (F#)
 description: 'F # kod teklifleri hakkında oluşturmak ve F # kodu ifadeleri ile programlı bir şekilde çalışmanıza olanak sağlayan bir dil özelliği hakkında bilgi edinin.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 27e9cf1d99e2b5955cc6359653fc87bdbe824cc7
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44508588"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45516350"
 ---
 # <a name="code-quotations"></a>Kod Tırnak İşaretleri
 

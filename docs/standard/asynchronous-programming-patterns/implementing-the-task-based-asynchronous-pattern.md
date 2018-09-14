@@ -14,11 +14,11 @@ ms.assetid: fab6bd41-91bd-44ad-86f9-d8319988aa78
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 639a7ae4eb20cfc95f4d01dd0c7035f17656e3e1
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44207349"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45508271"
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a>Görev Tabanlı Zaman Uyumsuz Deseni Uygulama
 Görev tabanlı zaman uyumsuz desen (TAP) üç yolla gerçekleştirebilirsiniz: Visual Studio'da C# ve Visual Basic derleyicileri kullanarak, el ile veya derleyici ve el yönteminin bir birleşimi yoluyla. Aşağıdaki bölümlerde, her bir yöntemin ayrıntılı ele alınmıştır. DOKUNUN deseni hesaplama bağlantılı hem miyim/O-ilişkili zaman uyumsuz işlemleri uygulamak için kullanabilirsiniz. [İş yükleri](#workloads) bölümde her işlem türü açıklanmaktadır.

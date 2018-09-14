@@ -1,3 +1,3 @@
 > [!NOTE]
 > .NET Core 2.0 ile başlayarak, çalıştırma gerekmez [ `dotnet restore` ](~/docs/core/tools/dotnet-restore.md) bir geri yükleme, örneğin, gerçekleşmesi için gerekli tüm komutlar tarafından örtük olarak çalıştırıldığından `dotnet new`, `dotnet build` ve `dotnet run`.
-> Bunu hala geçerli bir komut burada açık bir geri yükleme yaparsanız anlamlı, bazı senaryolarda olduğu gibi [Visual Studio Team Services sürekli tümleştirme derlemeleri](https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core) veya açıkça zaman denetlemek için gereken derleme sistemlerinde geri yükleme gerçekleşir.
+> Bunu hala geçerli bir komut burada açık bir geri yükleme yaparsanız anlamlı, bazı senaryolarda olduğu gibi [sürekli tümleştirme derlemeleri Azure DevOps Hizmetleri'nde](https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core) veya açıkça zaman denetlemek için gereken derleme sistemlerinde geri yükleme gerçekleşir.

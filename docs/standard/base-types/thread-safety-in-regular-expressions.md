@@ -12,11 +12,11 @@ ms.assetid: 7c4a167b-5236-4cde-a2ca-58646230730f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1c0bcab0757bc48f6a8216dd5878f0289e49a275
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44493894"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45507095"
 ---
 # <a name="thread-safety-in-regular-expressions"></a>Normal İfadelerde İş Parçacığı Güvenliği
 <xref:System.Text.RegularExpressions.Regex> Sınıfının kendisini güvenli ve sabit (salt okunur) iş parçacığıdır. Diğer bir deyişle, **Regex** nesneler üzerinde herhangi bir iş parçacığı oluşturulabilir ve iş parçacıkları arasında paylaşılan; eşleme yöntemlerini herhangi bir iş parçacığından çağrılabilir ve hiçbir zaman herhangi bir genel durumu değiştirme.  

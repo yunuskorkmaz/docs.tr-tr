@@ -17,12 +17,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
-ms.openlocfilehash: 7054fde1b1a961f434842b88a6c6256910549816
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 3cb38cd9d7b27ab28b602e4e4c813d58d904abd3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44184263"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45516785"
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a>Olay Tabanlı Zaman Uyumsuz Deseni Uygulama
 Bir sınıf belirgin gecikmeler kaynaklanabilecek bazı işlemleri yazıyorsanız uygulayarak zaman uyumsuz işlevleri vererek göz önünde bulundurun [olay tabanlı zaman uyumsuz desene genel bakış](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
@@ -63,7 +63,7 @@ Bir sınıf belirgin gecikmeler kaynaklanabilecek bazı işlemleri yazıyorsanı
 ## <a name="naming-asynchronous-methods"></a>Zaman uyumsuz yöntemler Adlandırma  
  Her bir zaman uyumlu yöntemin *MethodName* zaman uyumsuz bir karşılığı sağlamak istediğiniz:  
   
- Tanımlayan bir *MethodName *** zaman uyumsuz** yöntemi:  
+ Tanımlayan bir _MethodName_**zaman uyumsuz** yöntemi:  
   
 -   Döndürür `void`.  
   
@@ -71,9 +71,9 @@ Bir sınıf belirgin gecikmeler kaynaklanabilecek bazı işlemleri yazıyorsanı
   
 -   Birden çok çağrılarını kabul eder.  
   
- İsteğe bağlı olarak tanımlayan bir *MethodName *** zaman uyumsuz** aşırı yükleme, aynı * MethodName ***zaman uyumsuz**, ancak nesne değerli ek bir parametre olarak adlandırılan `userState`. Bu durumda birden çok eş zamanlı, yöntem çağrılarını yönetmek için hazır olmanız durumunda bunu `userState` değeri, yöntem çağrılarını ayırt etmek için geri tüm olay işleyicilerine gönderilir. Bunu yapmak de tercih edebilirsiniz sonraki alma için kullanıcı durumunu depolamak için yalnızca bir yer olarak.  
+ İsteğe bağlı olarak tanımlayan bir _MethodName_**zaman uyumsuz** aşırı yükleme, aynı _MethodName_**zaman uyumsuz**, ancak bir ek nesne değerli adlı parametreyi `userState`. Bu durumda birden çok eş zamanlı, yöntem çağrılarını yönetmek için hazır olmanız durumunda bunu `userState` değeri, yöntem çağrılarını ayırt etmek için geri tüm olay işleyicilerine gönderilir. Bunu yapmak de tercih edebilirsiniz sonraki alma için kullanıcı durumunu depolamak için yalnızca bir yer olarak.  
   
- Her ayrı için *MethodName *** zaman uyumsuz** yöntem imzası:  
+ Her ayrı için _MethodName_**zaman uyumsuz** yöntem imzası:  
   
 1.  Aşağıdaki olay yöntemi olarak aynı sınıftaki tanımlayın:  
   
@@ -108,7 +108,7 @@ Bir sınıf belirgin gecikmeler kaynaklanabilecek bazı işlemleri yazıyorsanı
     }  
     ```  
   
-    -   Emin *MethodName *** CompletedEventArgs** sınıfı gösterir üyelerine salt okunur özellikler ve alanları değil alanları veri bağlamayı Önle gibi.  
+    -   Emin _MethodName_**CompletedEventArgs** sınıfı gösterir üyelerine salt okunur özellikler ve alanları değil alanları veri bağlamayı Önle gibi.  
   
     -   Tüm tanımlamazsanız <xref:System.ComponentModel.AsyncCompletedEventArgs>-türetilmiş sınıflar için sonuçlar üretmez yöntemleri. Yalnızca bir örneğini kullanması <xref:System.ComponentModel.AsyncCompletedEventArgs> kendisi.  
   
@@ -120,7 +120,7 @@ Bir sınıf belirgin gecikmeler kaynaklanabilecek bazı işlemleri yazıyorsanı
   
 -   Gelecekteki beklenen eklemeler, dahil olmak üzere, kendi sınıfınızı iptali destekler yalnızca tek bir zaman uyumsuz işlem var mı?  
   
--   İptal etme desteği birden fazla bekleyen işlemler zaman uyumsuz işlemleri yapabilirsiniz? Diğer bir deyişle, mu *MethodName *** zaman uyumsuz** yöntemi Al bir `userState` parametresi ve herhangi tamamlanmasını beklemeden birden çok çağrılarına izin vermediğinden?  
+-   İptal etme desteği birden fazla bekleyen işlemler zaman uyumsuz işlemleri yapabilirsiniz? Diğer bir deyişle, mu _MethodName_**zaman uyumsuz** yöntemi Al bir `userState` parametresi ve herhangi tamamlanmasını beklemeden birden çok çağrılarına izin vermediğinden?  
   
  Bu iki soruların yanıtlarını aşağıdaki tabloda, iptal için imzası olması gerektiğini belirlemek için kullanın.  
   
@@ -140,16 +140,16 @@ Bir sınıf belirgin gecikmeler kaynaklanabilecek bazı işlemleri yazıyorsanı
   
  Tanımlarsanız `CancelAsync(object userState)` yöntemi, istemcilerin bunları özellikli olan nesne üzerinde çağrılan tüm zaman uyumsuz yöntemler arasında ayrım yapmak için durum değerleri seçerken dikkatli ve yalnızca tek bir zaman uyumsuz yöntemin tüm çağrıları arasında olmalıdır.  
   
- Tek zaman uyumsuz işlem sürüm adı kararı *MethodName *** AsyncCancel** Visual Studio IntelliSense gibi bir tasarım ortamında yöntemi daha kolay bulmak için temel alır. Bu, ilgili üyeleri grupları ve bunları zaman uyumsuz işlevleri ile ilgisi olan diğer üyelerinden ayırır. Olabileceğini ek bekliyorsanız zaman uyumsuz işlemler eklenir sonraki sürümlerinde, onu tanımlamak daha iyi `CancelAsync`.  
+ Tek zaman uyumsuz işlem sürüm adı kararı _MethodName_**AsyncCancel** yöntemi Visual Studio IntelliSense gibi bir tasarım ortamında daha kolay bulmak için temel alır. Bu, ilgili üyeleri grupları ve bunları zaman uyumsuz işlevleri ile ilgisi olan diğer üyelerinden ayırır. Olabileceğini ek bekliyorsanız zaman uyumsuz işlemler eklenir sonraki sürümlerinde, onu tanımlamak daha iyi `CancelAsync`.  
   
  Yukarıdaki tabloda birden fazla yöntemleri aynı sınıfta tanımlamaz. Anlam ifade etmez veya sınıf arabirimi yöntemleri bir yaygınlaşmasının ile dağıtmayı.  
   
- Bu yöntemler genellikle hemen döndürür ve işlem olabilir ya da gerçekte iptal. İçin olay işleyicisinde *MethodName *** tamamlandı** olay *MethodName *** CompletedEventArgs** nesnesi içeren bir `Cancelled` istemcileri belirlemek için kullanabileceğiniz bir alan olmadığını İptali oluştu.  
+ Bu yöntemler genellikle hemen döndürür ve işlem olabilir ya da gerçekte iptal. İçin olay işleyicisinde _MethodName_**tamamlandı** olay _MethodName_**CompletedEventArgs** nesne içeren bir `Cancelled` alanı istemciler iptal oluşup oluşmadığını belirlemek için kullanabilirsiniz.  
   
  Tarafından açıklanan iptal semantiği uymayı [olay tabanlı zaman uyumsuz desen uygulamak için en iyi yöntemler](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md).  
   
 ## <a name="optionally-support-the-isbusy-property"></a>İsteğe bağlı olarak IsBusy özelliği desteği  
- Sınıfınız birden çok eş zamanlı çağrılarını desteklemiyor ise kullanıma sunmak isteyebilirsiniz bir `IsBusy` özelliği. Bu hizmet sayesinde geliştiriciler belirlemek için olup olmadığını bir *MethodName *** zaman uyumsuz** yöntemi, bir özel durum yakalama olmadan çalışıyor *MethodName *** zaman uyumsuz** yöntemi.  
+ Sınıfınız birden çok eş zamanlı çağrılarını desteklemiyor ise kullanıma sunmak isteyebilirsiniz bir `IsBusy` özelliği. Bu hizmet sayesinde geliştiriciler belirlemek için olup olmadığını bir _MethodName_**zaman uyumsuz** yöntemi, bir özel durum yakalama olmadan çalışıyor _MethodName_**zaman uyumsuz**  yöntemi.  
   
  Tarafından uymayı `IsBusy` semantiği açıklanan [olay tabanlı zaman uyumsuz desen uygulamak için en iyi yöntemler](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md).  
   
@@ -162,15 +162,15 @@ Bir sınıf belirgin gecikmeler kaynaklanabilecek bazı işlemleri yazıyorsanı
   
     -   `ProgressChanged` sınıfı birden çok zaman uyumsuz işlemleri vardır (veya gelecek sürümlerde birden çok zaman uyumsuz işlemler içerecek şekilde ulaşması için bekleniyor);  
   
-    -   *MethodName *** ProgressChanged** sınıfın tek bir zaman uyumsuz işlem varsa.  
+    -   _MethodName_**ProgressChanged** sınıfın tek bir zaman uyumsuz işlem varsa.  
   
      Bu adlandırma seçimi iptal yöntem için yapılan isteğe bağlı olarak destek iptal bölümünde açıklandığı gibi paraleldir.  
   
  Bu olay kullanması gereken <xref:System.ComponentModel.ProgressChangedEventHandler> temsilci imzası ve <xref:System.ComponentModel.ProgressChangedEventArgs> sınıfı. Bir etki alanına özgü daha İlerleme göstergesi (için örnek, okunan bayt ve bir yükleme işlemi için toplam bayt) sağlanabilir, alternatif olarak, ardından, türetilmiş bir sınıf, tanımlamalıdır <xref:System.ComponentModel.ProgressChangedEventArgs>.  
   
- Yalnızca bir tane olduğunu unutmayın `ProgressChanged` veya *MethodName *** ProgressChanged** destekliyorsa, zaman uyumsuz yöntemler sayısından bağımsız olarak, sınıf için olay. İstemciler, kullanılacak beklenir `userState` geçirilen nesne *MethodName *** zaman uyumsuz** birden fazla eşzamanlı işlem üzerinde devam eden güncelleştirmelerin arasında ayrım yapmak için yöntemleri.  
+ Yalnızca bir tane olduğunu unutmayın `ProgressChanged` veya _MethodName_**ProgressChanged** destekliyorsa, zaman uyumsuz yöntemler sayısından bağımsız olarak, sınıf için olay. İstemciler, kullanılacak beklenir `userState` geçirilen nesne _MethodName_**zaman uyumsuz** birden fazla eşzamanlı işlem üzerinde devam eden güncelleştirmelerin arasında ayrım yapmak için yöntemleri.  
   
- Devam eden birden çok işlem desteği ve her ilerleme durumu için farklı bir göstergesini döndürür durumlar olabilir. Bu durumda, tek bir `ProgressChanged` olay uygun değilse ve birden fazla destekleyici düşünebilirsiniz `ProgressChanged` olayları. Bu durumda, bir adlandırma desenini kullanın *MethodName *** ProgressChanged** her *MethodName *** zaman uyumsuz** yöntemi.  
+ Devam eden birden çok işlem desteği ve her ilerleme durumu için farklı bir göstergesini döndürür durumlar olabilir. Bu durumda, tek bir `ProgressChanged` olay uygun değilse ve birden fazla destekleyici düşünebilirsiniz `ProgressChanged` olayları. Bu durumda, bir adlandırma desenini kullanın _MethodName_**ProgressChanged** her _MethodName_**zaman uyumsuz** yöntemi.  
   
  Açıklanan ilerleme durumunu bildirme semantiği tarafından uymayı [olay tabanlı zaman uyumsuz desen uygulamak için en iyi yöntemler](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md).  
   
@@ -180,23 +180,23 @@ Bir sınıf belirgin gecikmeler kaynaklanabilecek bazı işlemleri yazıyorsanı
 ### <a name="single-operation-class"></a>Tek işlem sınıfı  
  Sınıfınıza yalnızca tek bir zaman uyumsuz işlem destekler ve bu işlemin ardından artımlı sonuçları döndürmek için ise:  
   
--   Genişletme <xref:System.ComponentModel.ProgressChangedEventArgs> artımlı sonuç verilerini taşımak için yazın ve tanımlamak bir *MethodName *** ProgressChanged** bu veri genişletilmiş olay.  
+-   Genişletme <xref:System.ComponentModel.ProgressChangedEventArgs> artımlı sonuç verilerini taşımak için yazın ve tanımlamak bir _MethodName_**ProgressChanged** bu veri genişletilmiş olay.  
   
--   Bu yükseltme *MethodName *** ProgressChanged** rapor için artımlı bir sonuç olduğunda olay.  
+-   Bu yükseltme _MethodName_**ProgressChanged** rapor için artımlı bir sonuç olduğunda olay.  
   
- Aynı olay olarak "tüm işlemleri", artımlı sonuçları döndürmek için gerçekleşen herhangi bir sorun olduğundan bu çözüm, özellikle bir tek zaman uyumsuz işlemi sınıf için geçerlidir. *MethodName *** ProgressChanged** olay yok.  
+ Aynı olay olarak "tüm işlemleri", artımlı sonuçları döndürmek için gerçekleşen herhangi bir sorun olduğundan bu çözüm, özellikle bir tek zaman uyumsuz işlemi sınıf için geçerlidir. _MethodName_**ProgressChanged**  olay yok.  
   
 ### <a name="multiple-operation-class-with-homogeneous-incremental-results"></a>Artımlı homojen sonuçlarla birden çok işlem sınıfı  
  Bu durumda, sınıfınız birden çok zaman uyumsuz yöntem, artımlı sonuç döndürme özelliği destekler ve bu artımlı sonuçları tüm verilerin aynı türe sahip.  
   
- Aynı olarak tek işlem sınıflar için yukarıda açıklanan modelini <xref:System.EventArgs> yapısı için tüm artımlı sonuçları çalışır. Tanımlayan bir `ProgressChanged` olay yerine bir *MethodName *** ProgressChanged** olduğundan, birden çok zaman uyumsuz yöntemler için geçerli olay.  
+ Aynı olarak tek işlem sınıflar için yukarıda açıklanan modelini <xref:System.EventArgs> yapısı için tüm artımlı sonuçları çalışır. Tanımlayan bir `ProgressChanged` olay yerine bir _MethodName_**ProgressChanged** olduğundan, birden çok zaman uyumsuz yöntemler için geçerli olay.  
   
 ### <a name="multiple-operation-class-with-heterogeneous-incremental-results"></a>Heterojen artımlı sonuçlarla birden çok işlem sınıfı  
  Birden çok zaman uyumsuz yöntemler sınıfınıza destekliyorsa, her farklı bir veri türü döndüren şunları yapmalısınız:  
   
 -   Raporlama, ilerleme durumunu raporlama artımlı sonuç ayırın.  
   
--   Ayrı bir tanımlama *MethodName *** ProgressChanged** olay uygun <xref:System.EventArgs> her zaman uyumsuz yöntemin bu yöntemin sonucu artımlı verileri işlemek.  
+-   Ayrı bir tanımlama _MethodName_**ProgressChanged** olay uygun <xref:System.EventArgs> her zaman uyumsuz yöntemin bu yöntemin sonucu artımlı verileri işlemek.  
   
  Bu olay işleyicisi uygun iş parçacığında içinde açıklanan şekilde çağırır [olay tabanlı zaman uyumsuz desen uygulamak için en iyi yöntemler](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md).  
   
@@ -205,9 +205,9 @@ Bir sınıf belirgin gecikmeler kaynaklanabilecek bazı işlemleri yazıyorsanı
   
  Zaman uyumlu bir yöntem verilen *MethodName*:  
   
--   `out` parametreleri *MethodName* parçası olmamalıdır *MethodName ***zaman uyumsuz**. Bunun yerine, bir parçası olmalıdır *MethodName *** CompletedEventArgs**  eşdeğer parametre olarak aynı ada sahip *MethodName* (olmadığı sürece daha uygun bir ad).  
+-   `out` parametreleri *MethodName* parçası olmamalıdır _MethodName_**zaman uyumsuz**. Bunun yerine, bir parçası olmalıdır _MethodName_**CompletedEventArgs** eşdeğer parametre olarak aynı ada sahip *MethodName* (olmadığı sürece daha uygun adı).  
   
--   `ref` parametreleri *MethodName* parçası olarak görünmesi gereken *MethodName ***zaman uyumsuz**ve bir parçası olarak *MethodName *** CompletedEventArgs**  eşdeğer parametre olarak aynı ada sahip *MethodName* (olmadığı sürece daha uygun bir ad).  
+-   `ref` parametreleri *MethodName* parçası olarak görünmesi gereken _MethodName_**zaman uyumsuz**ve bir parçası olarak _MethodName_  **CompletedEventArgs** eşdeğer parametre olarak aynı ada sahip *MethodName* (olmadığı sürece daha uygun bir ad).  
   
  Örneğin, verilen:  
   

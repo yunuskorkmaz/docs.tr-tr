@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
 ms.openlocfilehash: ea079a0b55dde8df7b3442f3d604b2b6467ba785
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44361527"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "44778675"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>ADO.NET içinde büyük değerli (Maks) verileri değiştirme
 Büyük nesne (LOB) veri türleri 8 kilobayt (KB) maksimum satır boyutu aşan olanlardır. SQL Server sağlayan bir `max` tanımlayıcısı için `varchar`, `nvarchar`, ve `varbinary` veri türleri değerlerinin depolama 2 büyüklüğünde izin vermek için ^ 32 bayt. Tablo sütunları ve Transact-SQL değişkenleri belirtin `varchar(max)`, `nvarchar(max)`, veya `varbinary(max)` veri türleri. ADO.NET, `max` veri türleri getirilen tarafından bir `DataReader`ve iki giriş ve çıkış parametresi değerleri olmadan herhangi bir özel işleme olarak belirtilebilir. İçin büyük `varchar` veri türleri, veriler alınır ve artımlı olarak güncelleştirildi.  

@@ -3,11 +3,11 @@ title: Girdi Noktası (F#)
 description: 'Yürütme resmi olarak başladığı bir yürütülebilir dosyası olarak derlenmiş bir F # programına giriş noktası kurmayı öğrenin.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 298500931d49c891a7a243295333df3a9f5d413e
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44710349"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45515217"
 ---
 # <a name="entry-point"></a>Girdi Noktası
 

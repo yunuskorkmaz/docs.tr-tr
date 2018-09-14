@@ -10,11 +10,11 @@ ms.assetid: b5757c4a-ea59-467e-ac62-be2bfe24eb77
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 241ff40448c3dca2846f9e420dc7df41427dc79d
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44698936"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45509876"
 ---
 # <a name="reading-and-writing-xml-schemas"></a>XML şemaları yazma ve okuma
 Şema nesne modeli (SOM) API okuyup dosyaları veya diğer kaynakları XML Şeması Tanım Dili (XSD) şemaları yazma ve XML şemaları sınıfları kullanarak bellek içi derleme için kullanılabilir <xref:System.Xml.Schema?displayProperty=nameWithType> dünyada tanımlanan yapıları eşleyen ad alanı Wide Web Consortium (W3C) XML Şeması öneri.  

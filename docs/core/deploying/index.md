@@ -4,12 +4,12 @@ description: Bir .NET Core uygulamasını dağıtma.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 09/03/2018
-ms.openlocfilehash: 2ef63ebd737739b2c8e671d982c3844135689ab4
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 390af06e81788c3f64f255e5c85efdaa167274f4
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44277164"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45510323"
 ---
 # <a name="net-core-application-deployment"></a>.NET core uygulama dağıtımı
 
@@ -61,7 +61,7 @@ Ayrıca, bir dizi dezavantajları vardır:
 
 - .NET Core yanı sıra, uygulamanızı ve üçüncü taraf bağımlılıkları içerecek şekilde sahip olduğundan, dağıtım paketi görece büyük boyutudur.
 
-  .NET Core 2.0 ile başlayarak, yaklaşık 28 MB Linux sistemlerinde dağıtımınızın boyutunu .NET Core kullanarak azaltabilir [ *Genelleştirme sabit modu*](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md). Linux üzerinde .NET Core dayanan normalde, [ICU kitaplıkları](https://github.com/dotnet/docs/issues/http%22//icu-project.org) Genelleştirme desteği. Sabit modunda kitaplıkları dağıtımınıza dahil edilmez ve tüm kültürler gibi davranırlar [invariannt kültür](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType).
+  .NET Core 2.0 ile başlayarak, yaklaşık 28 MB Linux sistemlerinde dağıtımınızın boyutunu .NET Core kullanarak azaltabilir [ *Genelleştirme sabit modu*](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md). Linux üzerinde .NET Core dayanan normalde, [ICU kitaplıkları](https://github.com/dotnet/docs/issues/http%22//icu-project.org) Genelleştirme desteği. Sabit modunda kitaplıkları dağıtımınıza dahil edilmez ve tüm kültürler gibi davranırlar [sabit kültür](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType).
 
 - Bir sistem için çok sayıda bağımsız bir .NET Core uygulamaları dağıtma, önemli miktarda disk alanı, her uygulama çoğaltmaları bu yana .NET Core dosyaları kullanabilir.
 

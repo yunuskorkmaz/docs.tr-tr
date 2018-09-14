@@ -3,11 +3,11 @@ title: WPF ve WF tümleştirmesi XAML
 ms.date: 03/30/2017
 ms.assetid: a4f53b48-fc90-4315-bca0-ba009562f488
 ms.openlocfilehash: 619f3b7ce2b854e27fe9229fd08727627ce37f1a
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44365932"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "44757428"
 ---
 # <a name="wpf-and-wf-integration-in-xaml"></a>WPF ve WF tümleştirmesi XAML
 Bu örnek, tek bir XAML belgesi içinde Windows Presentation Foundation (WPF) ve Windows Workflow Foundation (WF) özelliklerini kullanan bir uygulamanın nasıl oluşturulacağını gösterir. Bunu yapmak için Windows Workflow Foundation (WF) ve XAML genişletilebilirlik örnek kullanır.  

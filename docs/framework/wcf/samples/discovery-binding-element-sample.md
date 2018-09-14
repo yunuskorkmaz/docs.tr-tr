@@ -3,11 +3,11 @@ title: Keşif Bağlama Öğesi Örneği
 ms.date: 03/30/2017
 ms.assetid: af513015-85bf-417b-8729-1bdff77ff6d6
 ms.openlocfilehash: d906d9a389c50095f2af5d52e3874c3e43199e68
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44511925"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45514061"
 ---
 # <a name="discovery-binding-element-sample"></a>Keşif Bağlama Öğesi Örneği
 Bu örnek, bir hizmet bulmak için bulma istemci bağlama öğesi kullanmayı gösterir. Bu özellik, geliştiricilerin çok sezgisel programlama modeli yaparak kendi mevcut istemci kanal yığınına bir keşif istemcisi kanalını eklemelerini sağlar. İlişkili kanalı açıldığında hizmetinin adresini bulma kullanılarak çözümlenir. Bu örnek aşağıdaki projeleri oluşur:  

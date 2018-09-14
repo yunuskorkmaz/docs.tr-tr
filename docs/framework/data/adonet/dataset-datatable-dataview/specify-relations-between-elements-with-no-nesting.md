@@ -3,11 +3,11 @@ title: İç içe yerleştirme içermeyen öğeler arasındaki ilişkileri belirt
 ms.date: 03/30/2017
 ms.assetid: e31325da-7691-4d33-acf4-99fccca67006
 ms.openlocfilehash: d04a3d946b87c7203497313c6e21a75ef69f50eb
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44251751"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45526564"
 ---
 # <a name="specify-relations-between-elements-with-no-nesting"></a>İç içe yerleştirme içermeyen öğeler arasındaki ilişkileri belirtme
 Öğeleri iç içe değil, hiçbir örtük ilişkileri oluşturulur. Bununla birlikte, aşağıdakileri yapabilirsiniz açıkça belirtmeniz kullanarak iç içe olmayan öğeler arasındaki ilişkileri **msdata:Relationship** ek açıklama.  

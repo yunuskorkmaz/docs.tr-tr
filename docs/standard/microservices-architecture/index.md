@@ -3,45 +3,87 @@ title: .NET mikro Hizmetleri. Kapsayıcılı .NET uygulamaları mimarisi
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Mikro hizmetler, modüler ve bağımsız bir şekilde dağıtılabilen hizmetleridir. Docker kapsayıcıları (için Linux ve Windows), dağıtım ve bir hizmeti ve bağımlılıklarını ardından yalıtılmış bir ortamda çalıştırılır tek bir birim halinde paketleme tarafından test basitleştirin.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 06/06/2018
-ms.openlocfilehash: 6b57f66068409ade24eecff636b9dd3f4084fd71
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.date: 08/31/2018
+ms.openlocfilehash: 3585ec322f7ce82c5e178088d19ee6dadd58ab24
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516157"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45519845"
 ---
-![](./media/cover.png)
+# <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET mikro Hizmetleri: Kapsayıcılı .NET uygulamaları mimarisi
+![Kitap kapsar](./media/cover-small.png)
 
-# <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET mikro Hizmetleri. Kapsayıcılı .NET uygulamaları mimarisi
+**Sürüm v2.1.02** - ASP.NET Core 2.1 için güncelleştirilmiş
 
-İNDİRME bulunabilir: <https://aka.ms/microservicesebook>
+Mikro hizmet tabanlı uygulamaları geliştirmek ve bunları yönetmek için giriş niteliğindeki bu kılavuzda, kapsayıcıları kullanma. Mimari Tasarım açıklar ve .NET Core ve Docker kapsayıcılarını kullanarak uygulama yaklaşıyor. 
 
-TARAFINDAN YAYIMLANAN
+Başlama daha kolay hale getirmek için bir kapsayıcıya alınmış başvuru ve keşfedebilirsiniz mikro hizmet tabanlı uygulama Kılavuzu odaklanır. Başvuru uygulama kullanılabilir [hizmetine](https://github.com/dotnet-architecture/eShopOnContainers) GitHub deposu.
 
-Microsoft Geliştirici bölme, .NET ve Visual Studio ürün takımları
+## <a name="action-links"></a>Eylem bağlantıları
 
-Microsoft Corporation'ın bir bölme
+* Tercih ettiğiniz biçimdeki bu e-kitabı indirin: | [PDF](https://aka.ms/microservicesebook) | [MOBI](https://www.microsoft.com/net/download/thank-you/microservices-architecture-ebook-mobi) | [EPUB](https://www.microsoft.com/net/download/thank-you/microservices-architecture-ebook-epub) |
 
-One Microsoft Way
+* Kopyalama/çatal başvurusu [hizmetine github'da](https://github.com/dotnet-architecture/eShopOnContainers)
+ 
+* İzleme [tanıtım videosunu Channel 9](http://aka.ms/microservices-video)
 
-Redmond, Washington 98052-6399
+* Tanıyalım [mikro hizmet mimarisi](http://aka.ms/MicroservicesArchitecture) hemen
 
-Telif Hakkı © 2018 Microsoft Corporation
+## <a name="introduction"></a>Giriş
 
-Tüm hakları saklıdır. Bu kitap içeriğini bir parçası çoğaltılamaz veya herhangi bir araçla yayımcı yazılı izni olmadan herhangi bir biçimdeki aktarılamaz.
+Kuruluşların giderek daha fazla maliyet tasarrufu taahhüdünü gerçekleştirmeye dağıtım sorunlarını giderme ve kapsayıcıları kullanarak DevOps ve üretim işlemleri iyileştirme. Microsoft Windows ve Linux kapsayıcı yenilikten Azure Container Service ve Azure Service Fabric gibi ürünleri oluşturarak ve Docker, Mesosphere ve Kubernetes gibi sektör öncüleri ile işbirliği yapan mıt'li serbest. Bu ürünler, bulut hızı ve ölçeği, hangi uygulamaları derlemeye ve dağıtmaya şirketlerin yardımcı kapsayıcı çözümler sunmak kendi seçtiğiniz platform veya araçları.
 
-Bu kitap sağlanan "olarak-olduğunu" ve yazarın görünümleri ve düşünceleri son derece ifade eder. Görünümleri ve düşünceleri son derece bilgi URL ve diğer Internet Web sitesi referansları da dahil olmak üzere bu kitap, ifade verilmeksizin değiştirilebilir.
+Docker kapsayıcı sektördeki en önemli Windows ve Linux eko satıcılar tarafından desteklenen, pratikte bir standart hale gelmektedir. (Microsoft, Docker'ı destekleyen temel bulut satıcıları biridir.) Gelecekte, Docker büyük olasılıkla bulutta veya şirket içinde herhangi bir veri merkezinde bulunabilen olacaktır.
 
-Burada açıklanan bazı örnekler yalnızca çizim için sağlanmıştır ve bu kurgusaldır. Gerçek bir ilişki veya bağlantı amaçlanmamıştır veya çıkarılmamalıdır.
+Ayrıca, [mikro Hizmetler](https://martinfowler.com/articles/microservices.html) mimarisi Gelişmekte olan dağıtılmış görev açısından kritik uygulamalar için önemli bir yaklaşım. Mikro hizmet tabanlı bir mimaride, uygulama koleksiyonu, test edilmiş, dağıtılan ve tutulan bağımsız olarak geliştirilebilir hizmetleri üzerinde oluşturulmuştur.
 
-Microsoft ve adresinde listelenmiş ticari http://www.microsoft.com "Ticari" Web sayfasında Microsoft şirketler grubunun ticari markalarıdır.
+## <a name="about-this-guide"></a>Bu kılavuz hakkında
 
-Mac ve macOS Apple Inc.'in ticari markalarıdır.
+Mikro hizmet tabanlı uygulamaları geliştirmek ve bunları yönetmek için giriş niteliğindeki bu kılavuzda, kapsayıcıları kullanma. Mimari Tasarım açıklar ve .NET Core ve Docker kapsayıcılarını kullanarak uygulama yaklaşıyor. Kapsayıcılar ve mikro hizmetler kullanmaya başlama daha kolay hale getirmek için bir kapsayıcıya alınmış başvuru ve keşfedebilirsiniz mikro hizmet tabanlı uygulama Kılavuzu odaklanır. Örnek uygulamayı kullanılabilir [hizmetine](https://github.com/dotnet-architecture/eShopOnContainers) GitHub deposu.
 
-Docker whale logosu, Docker, Inc.'in kayıtlı ticari markasıdır. İzni tarafından kullanılır.
+Bu kılavuz iki teknoloji odaklanan temel geliştirme ve öncelikli olarak geliştirme ortamı düzeyde mimari rehberlik sağlar: Docker ve .NET Core. Bizim engellemekse altyapıya üretim ortamınızın (Bulut veya şirket içi) odaklanmadan uygulama tasarımınızı düşünürken, bu kılavuzu okumadan ' dir. Üretime hazır uygulamalar oluşturduğunuzda, altyapı konusunda kararlar daha sonra yapar. Bu nedenle, bu kılavuz dilden bağımsız ve daha fazla geliştirme ortamı-merkezli altyapı olması amaçlanmıştır.
 
-Diğer tüm işaretleri ve logoları sahiplerinin özelliği var.
+Bu kılavuzda eğitim sonra Microsoft Azure üzerinde üretime hazır mikro hizmetler hakkında bilgi edinmek için sonraki adımınız olacaktır.
+
+## <a name="version"></a>Sürüm
+
+Bu kılavuzda kaplayacak şekilde yeniden düzenlendi **.NET Core 2.1** yanı sıra birçok ek güncelleştirme sürümü ilgili aynı "(yani. wave" teknolojileri Azure ve ek 3. taraf teknolojileri) ile .NET Core 2.1 zamanlı durdurulmasıyla. İşte bu kitap sürümü de sürümüne güncelleştirildi **2.1**. 
+
+## <a name="what-this-guide-does-not-cover"></a>Ne bu kılavuzda ele alınmamaktadır
+
+Bu kılavuz, uygulama yaşam döngüsü üzerinde DevOps, CI/CD işlem hatları, odaklı değildir veya takım iş. Tamamlayıcı Kılavuzu [kapsayıcılı Docker uygulaması yaşam döngüsü Microsoft Platformu ve araçları ile](https://aka.ms/dockerlifecycleebook) Bu konu üzerinde odaklanır. Geçerli Kılavuz ayrıca uygulama ayrıntıları gibi belirli düzenleyicileri bilgi Azure altyapı sağlamaz.
+
+### <a name="additional-resources"></a>Ek kaynaklar
+
+-   **Docker uygulaması yaşam döngüsü Microsoft Platformu ve araçları ile kapsayıcılı hale** (indirilebilir e-kitap)  
+    [*https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
+
+## <a name="who-should-use-this-guide"></a>Bu kılavuzda kullanan
+
+Geliştiriciler ve Docker tabanlı uygulama geliştirmeyi ve mikro hizmet tabanlı mimari için yeni olan çözüm mimarları için bu kılavuzu yazdığımız. Mimari hakkında bilgi edinmek isterseniz tasarlamanıza ve kavram kanıtı uygulamalarını (.NET Core odaklanmaktadır ile) Microsoft geliştirme teknolojileri ile uygulamak için bu kılavuzda sunulmaktadır ve Docker kapsayıcıları ile.
+
+Ayrıca bu kılavuzun yararlı bir mimari isteyen bir kuruluş Mimarı'gibi bir teknik karar mercii olan ve teknoloji genel bakış, önce karar verirseniz dağıtılmış uygulamalar yeni ve modern seçmek için hangi yaklaşımı hakkında bulabilirsiniz.
+
+### <a name="how-to-use-this-guide"></a>Bu kılavuz nasıl kullanılır?
+
+Bu kılavuzun ilk bölümü Docker kapsayıcıları sunar, .NET Core ve geliştirme framework .NET Framework arasında seçim anlatılmaktadır ve mikro hizmetler için genel bir bakış sağlar. Bu içerik mimarları ve genel bir bakış istiyor ancak kod uygulaması ayrıntılara odaklanmak gerekmez teknik karar verenler içindir.
+
+İle başlayan Kılavuzu ikinci bölümü [geliştirme süreci için Docker tabanlı uygulamalar](#ch_dev_process_for_docker_based_apps) bölümü. .NET Core ve Docker kullanan uygulamalar, uygulama geliştirme ve mikro hizmet desenleri odaklanır. Bu bölümde, geliştiricilere ve mimarlara desenleri ve uygulama ayrıntılarını ve kod üzerinde odaklanmak isteyen çoğu ilgi olacaktır.
+
+## <a name="related-microservice-and-container-based-reference-application-eshoponcontainers"></a>Mikro hizmet ve kapsayıcı tabanlı başvuru uygulaması ilgili: hizmetine
+
+.NET Core ve Docker kapsayıcılarını kullanarak dağıtılması için tasarlanmış bir mikro hizmetler için açık kaynak başvuru uygulama hizmetine uygulamasıdır. Uygulama birden çok e-store UI ön uçlar (bir MVC Web uygulaması, Web SPA ve yerel bir mobil uygulama) dahil olmak üzere birden çok alt oluşur. Ayrıca arka uç mikro hizmetler ve kapsayıcılar için gerekli tüm sunucu tarafı işlemleri içerir. 
+
+Mimari desenleri göstermek için uygulama amacı olan. **BT değil bir ÜRETİME hazır şablonu** gerçek uygulamaları başlatmak için. Ayrıca bunlar gösterildiği gibi yeni ilginç olabilecek teknolojileri test etmek için kullanılır, uygulama bir kalıcı beta durumda aynıdır.
+
+## <a name="send-us-your-feedback"></a>Bize geri bildirim gönderin!
+
+Kapsayıcılı uygulamaları ve .NET içinde mikro hizmetler mimarisi anlamanıza yardımcı olması için bu kılavuzu yazdığımız. Bildirimleriniz bizim için değerli şekilde Kılavuzu ve ilgili başvuru uygulaması, gelişen! Bu kılavuz nasıl geliştirilebilir hakkında açıklamalar varsa, Lütfen bunları gönderin:
+
+[dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com)
+
+## <a name="credits"></a>Krediler
 
 Ortak yazarlar:
 
@@ -102,54 +144,40 @@ Katılımcılar ve gözden geçirenler:
 > **Michael Friis**, ürün Yöneticisi, Docker Inc.
 >
 > **Charles Lowell**, yazılım mühendisi, VS CAT ekibi, Microsoft
+>
+> **Miguel Veloso**, üst düzey Danışman Turing sınaması sırasında
 
-## <a name="introduction"></a>Giriş
 
-Kuruluşların giderek daha fazla maliyet tasarrufu taahhüdünü gerçekleştirmeye dağıtım sorunlarını giderme ve kapsayıcıları kullanarak DevOps ve üretim işlemleri iyileştirme. Microsoft Windows ve Linux kapsayıcı yenilikten Azure Container Service ve Azure Service Fabric gibi ürünleri oluşturarak ve Docker, Mesosphere ve Kubernetes gibi sektör öncüleri ile işbirliği yapan mıt'li serbest. Bu ürünler, bulut hızı ve ölçeği, hangi uygulamaları derlemeye ve dağıtmaya şirketlerin yardımcı kapsayıcı çözümler sunmak kendi seçtiğiniz platform veya araçları.
+## <a name="copyright"></a>Telif Hakkı
 
-Docker kapsayıcı sektördeki en önemli Windows ve Linux eko satıcılar tarafından desteklenen, pratikte bir standart hale gelmektedir. (Microsoft, Docker'ı destekleyen temel bulut satıcıları biridir.) Gelecekte, Docker büyük olasılıkla bulutta veya şirket içinde herhangi bir veri merkezinde bulunabilen olacaktır.
+İNDİRME bulunabilir: <https://aka.ms/microservicesebook>
 
-Ayrıca, [mikro Hizmetler](https://martinfowler.com/articles/microservices.html) mimarisi Gelişmekte olan dağıtılmış görev açısından kritik uygulamalar için önemli bir yaklaşım. Mikro hizmet tabanlı bir mimaride, uygulama koleksiyonu, test edilmiş, dağıtılan ve tutulan bağımsız olarak geliştirilebilir hizmetleri üzerinde oluşturulmuştur.
+TARAFINDAN YAYIMLANAN
 
-## <a name="about-this-guide"></a>Bu kılavuz hakkında
+Microsoft Geliştirici bölme, .NET ve Visual Studio ürün takımları
 
-Mikro hizmet tabanlı uygulamaları geliştirmek ve bunları yönetmek için giriş niteliğindeki bu kılavuzda, kapsayıcıları kullanma. Mimari Tasarım açıklar ve .NET Core ve Docker kapsayıcılarını kullanarak uygulama yaklaşıyor. Kapsayıcılar ve mikro hizmetler kullanmaya başlama daha kolay hale getirmek için bir kapsayıcıya alınmış başvuru ve keşfedebilirsiniz mikro hizmet tabanlı uygulama Kılavuzu odaklanır. Örnek uygulamayı kullanılabilir [hizmetine](https://github.com/dotnet-architecture/eShopOnContainers) GitHub deposu.
+Microsoft Corporation'ın bir bölme
 
-Bu kılavuz iki teknoloji odaklanan temel geliştirme ve öncelikli olarak geliştirme ortamı düzeyde mimari rehberlik sağlar: Docker ve .NET Core. Bizim engellemekse altyapıya üretim ortamınızın (Bulut veya şirket içi) odaklanmadan uygulama tasarımınızı düşünürken, bu kılavuzu okumadan ' dir. Üretime hazır uygulamalar oluşturduğunuzda, altyapı konusunda kararlar daha sonra yapar. Bu nedenle, bu kılavuz dilden bağımsız ve daha fazla geliştirme ortamı-merkezli altyapı olması amaçlanmıştır.
+One Microsoft Way
 
-Bu kılavuzda eğitim sonra Microsoft Azure üzerinde üretime hazır mikro hizmetler hakkında bilgi edinmek için sonraki adımınız olacaktır.
+Redmond, Washington 98052-6399
 
-## <a name="what-this-guide-does-not-cover"></a>Ne bu kılavuzda ele alınmamaktadır
+Telif Hakkı © 2018 Microsoft Corporation
 
-Bu kılavuz, uygulama yaşam döngüsü üzerinde DevOps, CI/CD işlem hatları, odaklı değildir veya takım iş. Tamamlayıcı Kılavuzu [kapsayıcılı Docker uygulaması yaşam döngüsü Microsoft Platformu ve araçları ile](https://aka.ms/dockerlifecycleebook) Bu konu üzerinde odaklanır. Geçerli Kılavuz ayrıca uygulama ayrıntıları gibi belirli düzenleyicileri bilgi Azure altyapı sağlamaz.
+Tüm hakları saklıdır. Bu kitap içeriğini bir parçası çoğaltılamaz veya herhangi bir araçla yayımcı yazılı izni olmadan herhangi bir biçimdeki aktarılamaz.
 
-### <a name="additional-resources"></a>Ek kaynaklar
+Bu kitap sağlanan "olarak-olduğunu" ve yazarın görünümleri ve düşünceleri son derece ifade eder. Görünümleri ve düşünceleri son derece bilgi URL ve diğer Internet Web sitesi referansları da dahil olmak üzere bu kitap, ifade verilmeksizin değiştirilebilir.
 
--   **Docker uygulaması yaşam döngüsü Microsoft Platformu ve araçları ile kapsayıcılı hale** (indirilebilir e-kitap) [*https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
+Burada açıklanan bazı örnekler yalnızca çizim için sağlanmıştır ve bu kurgusaldır. Gerçek bir ilişki veya bağlantı amaçlanmamıştır veya çıkarılmamalıdır.
 
-## <a name="who-should-use-this-guide"></a>Bu kılavuzda kullanan
+Microsoft ve adresinde listelenmiş ticari http://www.microsoft.com "Ticari" Web sayfasında Microsoft şirketler grubunun ticari markalarıdır.
 
-Geliştiriciler ve Docker tabanlı uygulama geliştirmeyi ve mikro hizmet tabanlı mimari için yeni olan çözüm mimarları için bu kılavuzu yazdığımız. Mimari hakkında bilgi edinmek isterseniz tasarlamanıza ve kavram kanıtı uygulamalarını (.NET Core odaklanmaktadır ile) Microsoft geliştirme teknolojileri ile uygulamak için bu kılavuzda sunulmaktadır ve Docker kapsayıcıları ile.
+Mac ve macOS Apple Inc.'in ticari markalarıdır.
 
-Ayrıca bu kılavuzun yararlı bir mimari isteyen bir kuruluş Mimarı'gibi bir teknik karar mercii olan ve teknoloji genel bakış, önce karar verirseniz dağıtılmış uygulamalar yeni ve modern seçmek için hangi yaklaşımı hakkında bulabilirsiniz.
+Docker whale logosu, Docker, Inc.'in kayıtlı ticari markasıdır. İzni tarafından kullanılır.
 
-### <a name="how-to-use-this-guide"></a>Bu kılavuz nasıl kullanılır?
+Diğer tüm işaretleri ve logoları sahiplerinin özelliği var.
 
-Bu kılavuzun ilk bölümü Docker kapsayıcıları sunar, .NET Core ve geliştirme framework .NET Framework arasında seçim anlatılmaktadır ve mikro hizmetler için genel bir bakış sağlar. Bu içerik mimarları ve kimlerin kod uygulaması ayrıntılara odaklanmak gerekmez ancak isteyen bir Genel Bakış Teknik karar verenler içindir.
-
-İle başlayan Kılavuzu ikinci bölümü [geliştirme süreci için Docker tabanlı uygulamalar](#ch_dev_process_for_docker_based_apps) bölümü. .NET Core ve Docker kullanan uygulamalar, uygulama geliştirme ve mikro hizmet desenleri odaklanır. Bu bölümde, geliştiricilere ve mimarlara desenleri ve uygulama ayrıntılarını ve kod üzerinde odaklanmak isteyen çoğu ilgi olacaktır.
-
-## <a name="related-microservice-and-container-based-reference-application-eshoponcontainers"></a>Mikro hizmet ve kapsayıcı tabanlı başvuru uygulaması ilgili: hizmetine
-
-.NET Core ve Docker kapsayıcılarını kullanarak dağıtılması için tasarlanmış bir mikro hizmetler için bir başvuru uygulaması hizmetine uygulamasıdır. Uygulama birden çok e-store UI ön uçlar (bir Web uygulaması ve yerel bir mobil uygulama) dahil olmak üzere birden çok alt oluşur. Ayrıca arka uç mikro hizmetler ve kapsayıcılar için gerekli tüm sunucu tarafı işlemleri içerir.
-
-Bu mikro hizmet ve kapsayıcı tabanlı uygulama kaynak kodu, açık kaynak ve [hizmetine](https://aka.ms/MicroservicesArchitecture) GitHub deposu.
-
-## <a name="send-us-your-feedback"></a>Bize geri bildirim gönderin!
-
-Kapsayıcılı uygulamaları ve .NET içinde mikro hizmetler mimarisi anlamanıza yardımcı olması için bu kılavuzu yazdığımız. Bildirimleriniz bizim için değerli şekilde Kılavuzu ve ilgili başvuru uygulaması, gelişen! Bu kılavuz nasıl geliştirilebilir hakkında açıklamalar varsa, Lütfen bunları gönderin:
-
-[dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com)
 
 >[!div class="step-by-step"]
 [Next](container-docker-introduction/index.md)

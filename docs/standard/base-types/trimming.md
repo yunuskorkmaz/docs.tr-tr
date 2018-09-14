@@ -18,11 +18,11 @@ ms.assetid: ab248dab-70d4-4413-81c6-542d153fd195
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1d13d4e115caa636e5d760b65bc98e195490f911
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44184099"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45508102"
 ---
 # <a name="trimming-and-removing-characters-from-strings-in-net"></a>Karakterleri kırpma ve. NET'te dizelerden kaldırma
 Kelimeler bir cümle ayrıştırma ise, word'ün her iki ucunda boşluk (boşluk olarak da bilinir) sahip sözcük çıkabilir. Bu durumda, kırpma metotlarından birini kullanabilirsiniz **System.String** dizedeki belirtilen herhangi bir sayıda boşluk veya diğer karakterler kaldırmak için sınıf. Aşağıdaki tabloda kullanılabilir kesim yöntemleri açıklar.  

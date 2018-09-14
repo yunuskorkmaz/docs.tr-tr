@@ -6,11 +6,11 @@ helpviewer_keywords:
 - data types [Visual Basic], elementary
 ms.assetid: dfad6fe9-2da6-49a4-b0b1-2d7ae0283de5
 ms.openlocfilehash: 0db989bbfcb8aa00278eb20bd269872c9447616f
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44271630"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "44778048"
 ---
 # <a name="elementary-data-types-visual-basic"></a>Başlangıç Veri Türleri (Visual Basic)
 Visual Basic, birçok programlama öğeleriniz için kullanabileceğiniz önceden tanımlı veri türleri kümesi sağlar. Bu bölümde, bu türleri ve bunların nasıl kullanılacağı açıklanmaktadır.  

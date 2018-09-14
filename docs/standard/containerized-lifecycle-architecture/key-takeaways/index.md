@@ -1,29 +1,29 @@
 ---
-title: Anahtar paketler
-description: Microsoft Platformu ve Araçları (e-kitap) _v1.1 kapsayıcılı Docker uygulama yaşam döngüsü
+title: Önemli dersler
+description: Microsoft Platformu ve Araçları (e-kitap) _v1.1 kapsayıcı Docker uygulaması yaşam döngüsü
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: bf5648b1aa21ffd783c76aaa11c8e81371f45d18
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 24a4e826ece691a6a1221b39c164bba2eef8a059
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104644"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "44778428"
 ---
-# <a name="key-takeaways"></a>Anahtar paketler
+# <a name="key-takeaways"></a>Önemli dersler
 
--   Kapsayıcıları üretim ortamlarında, bu nedenle, bağımlılıkları eksikliği nedeniyle dağıtım sorunlarını DevOps ve üretim işlemlerinin önemli ölçüde geliştirmeye yönelik bir çözüm olduğundan kapsayıcı tabanlı çözümler önemli yararlarından biri maliyet tasarrufu sağlar. .
+-   Kapsayıcılar, DevOps ve üretim işlemlerini önemli ölçüde geliştirmeye üretim ortamlarında, bu nedenle, bağımlılıkları eksikliği nedeniyle dağıtım sorunları için bir çözüm olduğundan kapsayıcı tabanlı çözümler maliyet tasarrufu önemli avantajları sunar. .
 
--   Docker gerçek Microsoft dahil olmak üzere Linux ve Windows ekosistemlerini en önemli satıcılar tarafından desteklenen kapsayıcı endüstri standardında durumundadır. Gelecekte, Docker bulutta veya şirket içi herhangi bir veri merkezinde bulunabilen olacaktır.
+-   Docker kapsayıcı sektördeki en önemli Microsoft dahil olmak üzere Linux ve Windows ekosistemlerini satıcılar tarafından desteklenen, pratikte bir standart hale gelmektedir. Gelecekte, Docker, bulutta veya şirket içinde herhangi bir veri merkezinde bulunabilen olacaktır.
 
--   Docker kapsayıcısı için herhangi bir sunucu tabanlı bir uygulama veya hizmet dağıtımının standart birim durumundadır.
+-   Bir Docker kapsayıcısı standart birim için herhangi bir sunucu tabanlı uygulama veya hizmet dağıtımının gelmektedir.
 
--   Docker orchestrators Azure kapsayıcı hizmeti (Mesosphere Datacenter işletim sistemi (DC/OS), Docker Swarm, Kubernetes) ve Azure Service Fabric sağlanan olanlar gibi temel ve her mikro tabanlı veya multicontainer için vazgeçilmez önemli karmaşıklık ve ölçeklenebilirlik ile uygulaması gerekir.
+-   Temel ve vazgeçilmez her mikro hizmet tabanlı veya çok kapsayıcılı docker Düzenleyicileri (Mesosphere Datacenter işletim sistemini (DC/OS), Docker Swarm, Kubernetes) Azure Container Service ve Azure Service Fabric sağlanan olanlar gibi önemli karmaşıklığı ve ölçeklenebilirlik uygulama gerekir.
 
--   Üretim Docker ortamlara bağlanırken sürekli tümleştirme/sürekli dağıtımı destekleyen bir uçtan uca DevOps ortam çeviklik sağlar ve sonuç olarak pazarlama süresini kısaltırken uygulamalarınızın artırır.
+-   Sürekli Tümleştirme/sürekli dağıtım için üretim Docker ortamlarını bağlanmayı destekleyen bir uçtan uca DevOps ortamlarından çeviklik sağlar ve sonuç olarak uygulamalarınızı pazara çıkış süresini artırır.
 
-Visual Studio Team Services basit Docker ortamları veya göre daha gelişmiş mikro hizmet ve kapsayıcı orchestrators dahil olmak üzere sürekli dağıtım hatlarınızı gelen Docker ortamlar için belirlenmiş DevOps ortamınızı büyük ölçüde basitleştirir Azure.
+Azure DevOps hizmetleriyle DevOps ortamınızı Docker ortamlarını öğesinden basit Docker ortamlarını veya Azure tabanlı daha gelişmiş mikro hizmet ve kapsayıcı düzenleyicileri dahil olmak üzere sürekli dağıtım işlem hatlarınızı, belirlenen büyük ölçüde kolaylaştırır.
 
 >[!div class="step-by-step"]
 [Önceki](../run-manage-monitor-docker-environments/monitor-containerized-application-services.md)

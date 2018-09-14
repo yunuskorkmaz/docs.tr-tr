@@ -9,11 +9,11 @@ ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 68c98b3b4effbe7cea1a3c4443d2222e6bbcd43c
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44708393"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45508076"
 ---
 # <a name="xslt-stylesheet-scripting-using-ltmsxslscriptgt"></a>XSLT stil sayfası komut dosyalarını kullanarak &lt;msxsl: Script&gt;
 <xref:System.Xml.Xsl.XslTransform> Sınıfı destekler kullanarak katıştırılmış betik `script` öğesi.  

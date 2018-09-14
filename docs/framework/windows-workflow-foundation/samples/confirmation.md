@@ -3,11 +3,11 @@ title: Onaylama
 ms.date: 03/30/2017
 ms.assetid: 8637aeaf-ac9e-49b8-93f4-da15dee45277
 ms.openlocfilehash: caa712aa52da01ce44335a361fd6c9f5215316bf
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44368118"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "44757245"
 ---
 # <a name="confirmation"></a>Onaylama
 Bu örnek kullanımını çevreleyen dört ilgili yaygın senaryolar gösterilmektedir <xref:System.Activities.Statements.CompensableActivity> ve onay. Örnek onayı gösteren dört iş akışlarını çalıştırır. Bu örnek, bildirim temelli ve buyurgan sürümlerinde kullanılabilir.  

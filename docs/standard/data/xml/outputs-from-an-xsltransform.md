@@ -6,11 +6,11 @@ ms.assetid: 8e149d32-4b2f-493f-9e4b-d0d93475acde
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3b299f09f3dc47b5d136284d4d1d285f2e5aad5f
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44705381"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45507803"
 ---
 # <a name="outputs-from-an-xsltransform"></a>XslTransform çıkışları
 Stil sayfaları kullanıp çıkış biçimini belirlemek bu yana bir `<xsl:output>` deyimiyle `method` öznitelik, aşağıdaki tabloda açıklanmaktadır çıkış biçimini olduğunda <xref:System.Xml.Xsl.XslTransform.Transform%2A> yöntemi çıkışını yazmak için kullanılır ve çıkış biçimi olarak bildirilen bir <xref:System.IO.Stream> veya <xref:System.IO.TextWriter>.  

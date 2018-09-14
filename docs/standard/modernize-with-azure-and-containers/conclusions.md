@@ -1,33 +1,33 @@
 ---
 title: Sonuçları
-description: Azure Bulut ve Windows kapsayıcıları varolan .NET uygulamaları modernize | Sonuçları
+description: Azure Bulutu ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirme | Sonuçları
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
-ms.openlocfilehash: 9c115aa09c3de2cbd71a3b7dab7e8bbedc911ce1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: af6151d04622c72acdb7f27ebb220bf611418b4c
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580516"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45509750"
 ---
 # <a name="conclusions"></a>Sonuçları
 
-- Kapsayıcı tabanlı çözümler sonuçta maliyet tasarrufu yararlar sağlar. Üretim ortamlarında bağımlılıkları olmayışı nedeni uyuşmazlık kaldırdığı dağıtım sorunları için bir çözüm kapsayıcılardır. Bu sorunları kaldırarak, geliştirme ve Test, DevOps ve üretim işlemlerinin önemli ölçüde iyileştirir.
+- Kapsayıcı tabanlı çözümler, sonuçta maliyet tasarrufu avantajları sunar. Bunlar bir üretim ortamlarında bağımlılıkları olmaması nedeniyle uyuşmazlıkları kaldırdığı dağıtım sorunları için bir çözüm kapsayıcılardır. Bu sorunların kaldırarak bunu üretim geliştirme/Test ve DevOps işlemlerini önemli ölçüde artırır.
 
-- Docker kapsayıcısı için herhangi bir sunucu tabanlı bir uygulama veya hizmet dağıtımının standart birim durumundadır.
+- Bir Docker kapsayıcısı standart birim için herhangi bir sunucu tabanlı uygulama veya hizmet dağıtımının gelmektedir.
 
-- Üretim ortamları için ana bilgisayar ölçeklenebilir Windows kapsayıcıları tabanlı uygulamalar için bir orchestrator (örneğin, Service Fabric veya Kubernetes) kullanmanız gerekir.
+- Üretim ortamları için ölçeklenebilir Windows kapsayıcı tabanlı uygulamaları barındırmak için bir orchestrator (örneğin, Service Fabric veya Kubernetes) kullanmanız gerekir.
 
-- Azure VM'ler kapsayıcıları barındırma bulutta küçük geliştirme ve Test ortamları oluşturmak için hızlı ve kolay bir yoludur.
+- Kapsayıcıları barındıran azure sanal makineleri, bulutta küçük geliştirme ve Test ortamları oluşturmak için hızlı ve basit bir yoludur.
 
-- Yönetilen Azure SQL veritabanı örneği, varsayılan olarak ilişkisel veritabanlarınızı azure'a mevcut uygulamalardan taşırken önerilir.
+- Azure SQL veritabanı yönetilen örneği, ilişkisel veritabanlarınızı azure'a mevcut uygulamalardan geçiş sırasında varsayılan olarak önerilir.
 
-- Visual Studio 2017 ve Image2Docker alma başlatılan öğrenme eğrisi hızlandırmaya tarafından varolan .NET uygulamalarınızın Windows kapsayıcılarla modernizing başlatma temel araçlardır.
+- Visual Studio 2017 ve Image2Docker alınırken başlangıç öğrenme eğrisi daha hızlı sunabilirsiniz Windows kapsayıcıları ile mevcut .NET uygulamalarınızı modernleştirme başlatma temel araçlardır.
 
-- Kapsayıcılı uygulamalar üretimde yerleştirirken her zaman oluşturacak veya bir DevOps kültür ve DevOps araçları Visual Studio Team Services veya Jenkins gibi CI/CD ardışık düzenler için benimsemeyi.
+- Kapsayıcılı uygulamaları, üretim ortamında yerleştirirken her zaman oluşturacak veya bir DevOps kültürü ve DevOps araçları, Azure DevOps Services veya Jenkins gibi CI/CD işlem hatları için benimseyin.
 
-- Microsoft Azure, var olan .NET Framework uygulamalarınızın Windows kapsayıcıları, bulut altyapısı ve PaaS Hizmetleri ile modernize en kapsamlı ve eksiksiz ortamı sağlar.
+- Microsoft Azure, Windows kapsayıcıları, bulut altyapısından ve PaaS Hizmetleri ile mevcut .NET Framework uygulamalarınızı modernleştirin için en kapsamlı ve eksiksiz bir ortam sağlar.
 
 >[!div class="step-by-step"]
 [Önceki](walkthroughs-technical-get-started-overview.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a8f806a1f1f7840f21e82d77d1b639b9318259e7
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.openlocfilehash: ab01005b6f73cf1dbae5d0e44df4440bf6a1d7e6
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44366130"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45527505"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>İzlenecek yol: İlk WPF Masaüstü Uygulamam
 
@@ -42,9 +42,9 @@ Bu izlenecek yol aşağıdaki adımları içerir:
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-- Visual Studio 2012 veya üzeri
+- (Bu makalede, Visual Studio 2017'de bağlıdır) visual Studio 2012 veya üzeri
 
-Visual Studio'nun en son sürümü yükleme hakkında daha fazla bilgi için bkz. [Visual Studio'yu yükleyin](/visualstudio/install/install-visual-studio).
+   Visual Studio'nun en son sürümü yükleme hakkında daha fazla bilgi için bkz. [Visual Studio'yu yükleyin](/visualstudio/install/install-visual-studio).
 
 ## <a name="create-the-application-project"></a>Uygulama projesini oluşturun
 

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - CLR attributes for custom types [XAML Services]
 ms.assetid: 5dfb299a-b6e2-41b8-8694-e6ac987547f1
 ms.openlocfilehash: 13cc4d85a1a4b5c9b1ff61afbf7980a54e3d22d0
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44188559"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45514488"
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>Özel Türler ve Kitaplıkar İçin XAML İlişkili CLR Öznitelikleri
 Bu konuda, .NET Framework XAML hizmetlerinde tarafından tanımlanan ortak dil çalışma zamanı (CLR) öznitelikleri açıklanmaktadır. Ayrıca, XAML ile ilgili bir senaryo uygulamayı derlemeler veya türler için olan .NET Framework içinde tanımlanan diğer CLR öznitelikleri açıklar. Derlemeleri, türleri veya üyeleri bu CLR öznitelikleri ile öznitelik atanıyor, türleriyle ilgili XAML türü sistem bilgileri sağlar. XAML düğümü akışı doğrudan işlemek veya ayrılmış XAML okuyucular ve yazıcılar XAML aracılığıyla .NET Framework XAML hizmetlerinde kullanan herhangi bir XAML tüketici bilgileri sağlanır.  

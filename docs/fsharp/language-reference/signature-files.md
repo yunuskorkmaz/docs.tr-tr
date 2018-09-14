@@ -3,11 +3,11 @@ title: 'İmza dosyaları (F #)'
 description: 'F # program öğelerine, türleri, ad alanları ve modüller gibi bir dizi ortak imzalarını hakkındaki bilgileri tutmak için F # imza dosyalarını kullanmayı öğrenin.'
 ms.date: 06/15/2018
 ms.openlocfilehash: f0836aa7f638dc9e2b066b0f46bbb6c086347615
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44338067"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45508427"
 ---
 # <a name="signatures"></a>İmzalar
 
