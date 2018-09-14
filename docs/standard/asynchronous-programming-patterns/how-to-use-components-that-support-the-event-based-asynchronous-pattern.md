@@ -19,11 +19,11 @@ helpviewer_keywords:
 - AsyncCompletedEventArgs class
 ms.assetid: 35e9549c-1568-4768-ad07-17cc6dff11e1
 ms.openlocfilehash: e11bf8af6f56cbdcdcc920cafe145edcf744efed
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44509716"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45560928"
 ---
 # <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a>Nasıl yapılır: Olay Tabanlı Zaman Uyumsuz Deseni Destekleyen Bileşenleri Kullanma
 Birçok bileşen iş zaman uyumsuz olarak gerçekleştirme seçeneğini içeren sağlar. <xref:System.Media.SoundPlayer> Ve <xref:System.Windows.Forms.PictureBox> bileşenleri, örneğin, yüklemenizi ses ve kesinti olmadan çalışan, ana iş parçacığı devam ederken "arka planda" görüntüleri etkinleştirin.  

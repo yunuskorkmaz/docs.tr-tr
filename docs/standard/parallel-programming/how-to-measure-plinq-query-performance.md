@@ -11,11 +11,11 @@ ms.assetid: 491ba43b-2c10-473d-9aab-e2cb96446711
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dd9e3a0ead62450e87225212f4fc6ecec6ec9489
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44360524"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45533470"
 ---
 # <a name="how-to-measure-plinq-query-performance"></a>Nasıl yapılır: PLINQ Sorgu Performansını Ölçme
 Bu örnek nasıl kullanıldığını gösterir <xref:System.Diagnostics.Stopwatch> bir PLINQ sorgusu yürütmek gereken süreyi ölçmek için sınıf.  

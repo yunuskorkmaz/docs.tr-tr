@@ -1,16 +1,16 @@
 ---
 title: Visual Basic ile çalışmaya başlama
-ms.date: 08/10/2017
+ms.date: 09/10/2018
 helpviewer_keywords:
 - get started, Visual Basic
 - Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
-ms.openlocfilehash: 373f5815e1ca466545da4e2368bdf55e944d28f8
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.openlocfilehash: c17b3e1849664bb1a5d56b60e8f4121fedfcdae3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44367580"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45557779"
 ---
 # <a name="get-started-with-visual-basic"></a>Visual Basic ile çalışmaya başlama
 Belgelerinin bu bölümü Visual Basic ile uygulama geliştirmeye başlamanıza yardımcı olur.  
@@ -31,12 +31,6 @@ Bu sürümde önleyen bir uygulamanın derlenmesini veya çalışma zamanı davr
   
 [Visual Basic Programcıları için Ek Kaynaklar](additional-resources.md)  
 Sık karşılaşılan sorunların yanıtlarını bulmanıza yardımcı olabilecek Web sitelerinin ve haber gruplarının bir listesini sağlar.  
-
-## <a name="develop-net-core-applications-with-visual-basic"></a>Visual Basic ile .NET Core uygulamaları geliştirin
-
-[Visual Studio 2017’de .NET Core ile bir Visual Basic Merhaba Dünya uygulaması derleme](../../core/tutorials/vb-with-visual-studio.md) 
-
-[Visual Studio 2017’de Visual Basic ve .NET Core ile bir sınıf kitaplığı derleme](../../core/tutorials/vb-library-with-visual-studio.md) 
 
 ## <a name="see-also"></a>Ayrıca bkz.
  [Visual Basic edinin](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)  

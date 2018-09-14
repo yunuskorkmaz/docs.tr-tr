@@ -15,11 +15,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 3c9550bf9d3483a8d2961e6137138bfb11f71bca
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44360641"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45527596"
 ---
 # <a name="how-to-configure-network-tracing"></a>Nasıl yapılır: ağ izlemeyi yapılandırma
 Uygulama veya bilgisayar yapılandırma dosyası, ağ izlemelerinin biçimini ve içeriğini belirleyen ayarları içerir. Bu yordamı gerçekleştirmeden önce izlemenin etkin olduğundan emin olun. İzlemeyi etkinleştirme hakkında daha fazla bilgi için bkz: [Enabling Network Tracing](../../../docs/framework/network-programming/enabling-network-tracing.md).  

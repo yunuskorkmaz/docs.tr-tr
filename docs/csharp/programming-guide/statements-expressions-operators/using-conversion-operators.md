@@ -10,11 +10,11 @@ helpviewer_keywords:
 - explicit conversion operators [C#]
 ms.assetid: caf36e89-c6c0-4b87-9f9e-85780a45c9a4
 ms.openlocfilehash: 17a722f7160ae9cd03caa2dff9c4436fcf0f9d9e
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44514481"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45558034"
 ---
 # <a name="using-conversion-operators-c-programming-guide"></a>Dönüşüm İşleçleri Kullanma (C# Programlama Kılavuzu)
 Kullanımı daha kolay olan `implicit` dönüştürme operatörlerini veya kodu okuyan herkese bir türü dönüştürdüğünüzü açıkça gösteren `explicit` dönüştürme operatörlerini kullanabilirsiniz. Bu konuda, her iki dönüştürme operatörü türü gösterilir.  

@@ -3,11 +3,11 @@ title: 'Fixed anahtar sözcüğü (F #)'
 description: "'Sabitleyebilirsiniz nasıl' ile F # koleksiyon önlemek için bir yerel yığına 'anahtar sözcüğü sabit' öğrenin."
 ms.date: 04/24/2017
 ms.openlocfilehash: 1bf1b2ad67d2dd7f854e569cfca7c06e8aec7f4c
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44271734"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45560379"
 ---
 # <a name="the-fixed-keyword"></a>Fixed anahtar sözcüğü
 

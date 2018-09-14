@@ -9,11 +9,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating
 ms.assetid: f88481a8-c746-4a36-9479-374ce5f2e91f
 ms.openlocfilehash: 5f8384140b813400e106ad959684264304541c93
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44511610"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45529814"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-c"></a>İzlenecek yol: Visual C# İle Bileşik Denetim Yazma #
 Bileşik denetimler, özel bir grafik arabirim oluşturulabilir yeniden ve bir yöntemdir. Bileşik Denetim aslında bir görsel bir temsili ile bileşenidir. Bu nedenle, bir veya daha fazla Windows Forms denetimleri, bileşenleri veya kullanıcı girişini doğrulama, görüntü özelliklerini değiştirerek veya yazar tarafından gereken diğer görevleri gerçekleştirme işlevselliğini genişletebildiği kod bloklarını oluşabilir. Bileşik denetimler, diğer denetimlerle aynı şekilde Windows formlarında yerleştirilebilir. Bu kılavuzun ilk bölümünde oluşturduğunuz adlı basit bir bileşik denetim `ctlClock`. İzlenecek yol ikinci kısmında, işlevlerini genişletmek `ctlClock` devralma yoluyla.  

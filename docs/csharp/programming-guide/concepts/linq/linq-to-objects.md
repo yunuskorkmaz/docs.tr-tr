@@ -3,11 +3,11 @@ title: LINQ to Objects'in (C#)
 ms.date: 07/20/2015
 ms.assetid: c5c2c178-3529-4f6c-b3df-2d5267af7f22
 ms.openlocfilehash: 19dd15fdd7e818e0619647205f2369a55f3bc2b0
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44213958"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45528545"
 ---
 # <a name="linq-to-objects-c"></a>LINQ to Objects'in (C#)
 Tüm sorgular "LINQ için nesneler" LINQ kullanımı ifade eder <xref:System.Collections.IEnumerable> veya <xref:System.Collections.Generic.IEnumerable%601> koleksiyon Ara LINQ sağlayıcısı veya API gibi kullanmadan, doğrudan [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md) veya [LINQ to XML](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md). LINQ gibi herhangi bir sıralanabilir koleksiyonu sorgulamak için kullanabileceğiniz <xref:System.Collections.Generic.List%601>, <xref:System.Array>, veya <xref:System.Collections.Generic.Dictionary%602>. Koleksiyon veya bir .NET Framework API tarafından döndürülen kullanıcı tanımlı olabilir.  

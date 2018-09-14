@@ -11,11 +11,11 @@ helpviewer_keywords:
 - BindingSource [Windows Forms], using with multiple forms
 ms.assetid: a1a49630-db9c-4485-b888-1f62a373a4f7
 ms.openlocfilehash: 765bdb7ee75d7e0c6461311263afe9481830673f
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44706634"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45527863"
 ---
 # <a name="how-to-share-bound-data-across-forms-using-the-bindingsource-component"></a>Nasıl Yapılır: BindingSource Bileşenini Kullanarak Bağlı Verileri Formlar Arasında Paylaşma
 Kullanarak formlar arasında verileri kolayca paylaşabilirsiniz <xref:System.Windows.Forms.BindingSource> bileşeni. Örneğin, veri kaynağı verileri özetleyen bir salt okunur ve veri kaynağındaki geçerli seçilmiş öğe hakkındaki ayrıntılı bilgileri içeren başka bir düzenlenebilir formunda görüntülemek isteyebilirsiniz. Bu örnekte, bu senaryo gösterilmektedir.  

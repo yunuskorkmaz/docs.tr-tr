@@ -3,11 +3,11 @@ title: Aritmetik İşleçler (F#)
 description: 'F # programlama dilinde kullanılabilen aritmetik işleçler hakkında bilgi edinin.'
 ms.date: 04/04/2018
 ms.openlocfilehash: 008aa84b8736bb3a734ce8bb9713d34c17f1b76e
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44361965"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45560733"
 ---
 # <a name="arithmetic-operators"></a>Aritmetik İşleçler
 

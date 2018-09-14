@@ -13,11 +13,11 @@ helpviewer_keywords:
 - AsyncCompletedEventArgs class
 ms.assetid: a00046aa-785d-4f7f-a8e5-d06475ea50da
 ms.openlocfilehash: af30f0d09ce772f20f342ec0936d0ca63f5465d7
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44708224"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45557898"
 ---
 # <a name="deciding-when-to-implement-the-event-based-asynchronous-pattern"></a>Olay Tabanlı Zaman Uyumsuz Desenin Ne Zaman Uygulanacağını Belirleme
 Olay tabanlı zaman uyumsuz desen, bir sınıfın zaman uyumsuz davranış açığa çıkarmak için bir desen sağlar. Bu düzen sunulmasıyla birlikte [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] iki deseni için zaman uyumsuz davranış gösterme tanımlar: zaman uyumsuz desen dayalı <xref:System.IAsyncResult?displayProperty=nameWithType> arabirimi ve olay-tabanlı düzeni. Bu konu, her iki desenleri uygulamak, uygun olduğunda açıklar.  

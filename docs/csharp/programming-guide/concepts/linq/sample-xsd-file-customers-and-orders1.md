@@ -3,11 +3,11 @@ title: 'Örnek XSD dosyası: Müşteriler ve Orders1'
 ms.date: 07/20/2015
 ms.assetid: ef9911a3-7ac4-44fd-b36e-a0c0ad0a157d
 ms.openlocfilehash: 3e6eaf41ad8c91f1b59f70f58a8c8f0e127ec949
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44367645"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45557671"
 ---
 # <a name="sample-xsd-file-customers-and-orders"></a>Örnek XSD dosyası: Müşteriler ve siparişler
 Aşağıdaki XSD dosyası çeşitli örneklerde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri. Bu dosya için bir şema tanımı içeriyor [örnek XML dosyası: müşteriler ve siparişler (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md). Şemayı kullanan `xs:key` ve `xs:keyref` , kurmak için XSD özelliklerinin `CustomerID` özniteliği `Customer` öğesi olan bir anahtar ve arasında ilişki kurmak için `CustomerID` her öğe `Order` öğesi ve `CustomerID` her öznitelik `Customer` öğesi.  

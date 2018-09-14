@@ -3,11 +3,11 @@ title: ADO.NET'te veri kaynağına bağlanma
 ms.date: 03/30/2017
 ms.assetid: 9abc3f92-1be3-4e1a-b360-762dc689650e
 ms.openlocfilehash: f5788b9b0b19f32d03c917575db7b3f40324c0a2
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44706404"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45528249"
 ---
 # <a name="connecting-to-a-data-source-in-adonet"></a>ADO.NET'te veri kaynağına bağlanma
 ADO.NET kullandığınız bir **bağlantı** bağlantı dizesinde gerekli kimlik doğrulama bilgileri vererek belirli bir veri kaynağına bağlanmak için nesne. **Bağlantı** kullandığınız nesne veri kaynağı türüne bağlıdır.  

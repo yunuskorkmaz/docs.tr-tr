@@ -7,11 +7,11 @@ ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: e0bed1e47302cc80a04498f39144177acdbc9ae6
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44338369"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45529655"
 ---
 # <a name="securing-clients"></a>İstemcileri Güvenli Hale Getirme
 Windows Communication Foundation (WCF) hizmet istemciler için güvenlik gereksinimlerini belirler. Diğer bir deyişle, hizmeti kullanmak için hangi güvenlik modunu belirtir ve istemci bir kimlik bilgisi olup olmadığına sağlamalıdır. Bir istemciyi, bu nedenle, güvenli hale getirme işlem basittir: (yayımlanıyorsa) hizmetinden alınan meta verileri kullanın ve bir istemci oluşturun. Meta veriler istemci yapılandırma belirler. Hizmet istemci kimlik bilgileri sağlamanız gerekiyorsa, gereksinime uyan bir kimlik bilgisini edinmeniz gerekir. Bu konu başlığı altında daha ayrıntılı ele alınmaktadır. Güvenli bir hizmet oluşturma hakkında daha fazla bilgi için bkz. [Hizmetleri güvenli hale getirme](../../../docs/framework/wcf/securing-services.md).  

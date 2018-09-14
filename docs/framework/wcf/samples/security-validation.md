@@ -5,11 +5,11 @@ ms.assetid: 48dcd496-0c4f-48ce-8b9b-0e25b77ffa58
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 0aaa88268959561cabe4613d51feb0f219275634
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44178038"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45528214"
 ---
 # <a name="security-validation"></a>Güvenlik Doğrulaması
 Bu örnek, özel bir davranış Hizmetleri bunlar belirli ölçütlere uyan emin olmak için bir bilgisayar üzerinde doğrulamak için nasıl kullanılacağını gösterir. Bu örnekte, hizmetleri, hizmette her bir uç noktası aracılığıyla tarama ve güvenli bir bağlama öğeleri içeren denetleniyor özel davranış tarafından doğrulanır. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md).  

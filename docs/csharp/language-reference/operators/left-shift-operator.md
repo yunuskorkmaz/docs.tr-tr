@@ -8,11 +8,11 @@ helpviewer_keywords:
 - << operator [C#]
 ms.assetid: a654eb56-1ff7-4bf3-9064-b631be0cdccc
 ms.openlocfilehash: 036acd6159bcf5ca1677ee6383c9db357625cd67
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44511139"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45560830"
 ---
 # <a name="ltlt-operator-c-reference"></a>&lt;&lt; İşleci (C# Başvurusu)
 Sola kaydırma işleci (`<<`) ilk işlenenin sol tarafından ikinci işlenen tarafından belirtilen bit sayısı kadar kaydırır. İkinci işlenenin türünde olmalıdır bir [int](../../../csharp/language-reference/keywords/int.md) veya önceden tanımlanmış bir örtük sayısal dönüştürme için olan bir türü `int`.  

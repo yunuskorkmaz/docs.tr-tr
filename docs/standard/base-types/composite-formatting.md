@@ -16,11 +16,11 @@ ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 17ec17d3b90dc7248d1497be1f7d31a324ad10b2
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44264929"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45528269"
 ---
 # <a name="composite-formatting"></a>Bileşik Biçimlendirme
 .NET bileşik biçimlendirme özelliği, nesneleri ve bir bileşik biçimlendirme dizesi listesini girdi olarak alır. Bir bileşik biçimlendirme dizesi, sabit metinle karışık bir şekilde listedeki nesnelere karşılık gelen, biçim öğeleri adı verilen dizinli yer tutuculardan oluşur. Biçimlendirme işlemi sonuç olarak, orijinal sabit metin ve listedeki nesnelerin dize temsillerinin karışımından oluşan bir dize oluşturur.  
