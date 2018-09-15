@@ -3,49 +3,49 @@ title: WCF &lt;workflowInstanceQueries&gt;
 ms.date: 03/30/2017
 ms.assetid: b0852f77-16e4-4d55-8eb7-a19feb0e8fc4
 ms.openlocfilehash: dfa75a7e4729244ba5887e6666c0fdfe840e9faf
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45508362"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45647295"
 ---
-# <a name="ltworkflowinstancequeriesgt-of-wcf"></a><span data-ttu-id="8b36c-102">WCF &lt;workflowInstanceQueries&gt;</span><span class="sxs-lookup"><span data-stu-id="8b36c-102">&lt;workflowInstanceQueries&gt; of WCF</span></span>
-<span data-ttu-id="8b36c-103">Başlatılmamış veya tamamlanmış olay gibi iş akışı örneği yaşam döngüsü değişiklikleri izleme yapılandırma öğelerinin bir koleksiyonunu temsil eder.</span><span class="sxs-lookup"><span data-stu-id="8b36c-103">Represents a collection of configuration elements that track workflow instance life cycle changes such as a started or completed event.</span></span>  
+# <a name="ltworkflowinstancequeriesgt-of-wcf"></a><span data-ttu-id="87094-102">WCF &lt;workflowInstanceQueries&gt;</span><span class="sxs-lookup"><span data-stu-id="87094-102">&lt;workflowInstanceQueries&gt; of WCF</span></span>
+<span data-ttu-id="87094-103">Başlatılmamış veya tamamlanmış olay gibi iş akışı örneği yaşam döngüsü değişiklikleri izleme yapılandırma öğelerinin bir koleksiyonunu temsil eder.</span><span class="sxs-lookup"><span data-stu-id="87094-103">Represents a collection of configuration elements that track workflow instance life cycle changes such as a started or completed event.</span></span>  
   
- <span data-ttu-id="8b36c-104">Profil sorguları izleme ile ilgili daha fazla bilgi için bkz: [profillerini izleme](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span><span class="sxs-lookup"><span data-stu-id="8b36c-104">For more information on tracking profile queries, see [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span></span>  
+ <span data-ttu-id="87094-104">Profil sorguları izleme ile ilgili daha fazla bilgi için bkz: [profillerini izleme](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span><span class="sxs-lookup"><span data-stu-id="87094-104">For more information on tracking profile queries, see [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span></span>  
   
- <span data-ttu-id="8b36c-105">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="8b36c-105">\<system.serviceModel></span></span>  
-<span data-ttu-id="8b36c-106">\<İzleme ></span><span class="sxs-lookup"><span data-stu-id="8b36c-106">\<tracking></span></span>  
-<span data-ttu-id="8b36c-107">\<trackingProfile></span><span class="sxs-lookup"><span data-stu-id="8b36c-107">\<trackingProfile></span></span>  
-<span data-ttu-id="8b36c-108">\<İş akışı ></span><span class="sxs-lookup"><span data-stu-id="8b36c-108">\<workflow></span></span>  
-<span data-ttu-id="8b36c-109">\<Workflowınstancequeries ></span><span class="sxs-lookup"><span data-stu-id="8b36c-109">\<workflowInstanceQueries></span></span>  
+ <span data-ttu-id="87094-105">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="87094-105">\<system.serviceModel></span></span>  
+<span data-ttu-id="87094-106">\<İzleme ></span><span class="sxs-lookup"><span data-stu-id="87094-106">\<tracking></span></span>  
+<span data-ttu-id="87094-107">\<trackingProfile></span><span class="sxs-lookup"><span data-stu-id="87094-107">\<trackingProfile></span></span>  
+<span data-ttu-id="87094-108">\<İş akışı ></span><span class="sxs-lookup"><span data-stu-id="87094-108">\<workflow></span></span>  
+<span data-ttu-id="87094-109">\<Workflowınstancequeries ></span><span class="sxs-lookup"><span data-stu-id="87094-109">\<workflowInstanceQueries></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8b36c-110">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="8b36c-110">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="87094-110">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="87094-110">Syntax</span></span>  
   
 ```xml
 <tracking>   <trackingProfile name="Name">       <workflow>          <workflowInstanceQueries>             <workflowInstanceQuery>                <states>                   <state name="Name"/>                </states>            </workflowInstanceQuery>         </workflowInstanceQueries>       </workflow>   </trackingProfile></tracking>  
 ```
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="8b36c-111">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="8b36c-111">Attributes and Elements</span></span>  
- <span data-ttu-id="8b36c-112">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="8b36c-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="87094-111">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="87094-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="87094-112">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="87094-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="8b36c-113">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="8b36c-113">Attributes</span></span>  
- <span data-ttu-id="8b36c-114">Yok.</span><span class="sxs-lookup"><span data-stu-id="8b36c-114">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="87094-113">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="87094-113">Attributes</span></span>  
+ <span data-ttu-id="87094-114">Yok.</span><span class="sxs-lookup"><span data-stu-id="87094-114">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="8b36c-115">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="8b36c-115">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="87094-115">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="87094-115">Child Elements</span></span>  
   
-|<span data-ttu-id="8b36c-116">Öğe</span><span class="sxs-lookup"><span data-stu-id="8b36c-116">Element</span></span>|<span data-ttu-id="8b36c-117">Açıklama</span><span class="sxs-lookup"><span data-stu-id="8b36c-117">Description</span></span>|  
+|<span data-ttu-id="87094-116">Öğe</span><span class="sxs-lookup"><span data-stu-id="87094-116">Element</span></span>|<span data-ttu-id="87094-117">Açıklama</span><span class="sxs-lookup"><span data-stu-id="87094-117">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="8b36c-118">\<Workflowınstancequery ></span><span class="sxs-lookup"><span data-stu-id="8b36c-118">\<workflowInstanceQuery></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflowinstancequery.md)|<span data-ttu-id="8b36c-119">İş akışı örneği yaşam döngüsü değişiklikleri izlemek için kullanılan sorgu.</span><span class="sxs-lookup"><span data-stu-id="8b36c-119">A query that is used to track workflow instance life cycle changes.</span></span>|  
+|[<span data-ttu-id="87094-118">\<Workflowınstancequery ></span><span class="sxs-lookup"><span data-stu-id="87094-118">\<workflowInstanceQuery></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflowinstancequery.md)|<span data-ttu-id="87094-119">İş akışı örneği yaşam döngüsü değişiklikleri izlemek için kullanılan sorgu.</span><span class="sxs-lookup"><span data-stu-id="87094-119">A query that is used to track workflow instance life cycle changes.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="8b36c-120">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="8b36c-120">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="87094-120">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="87094-120">Parent Elements</span></span>  
   
-|<span data-ttu-id="8b36c-121">Öğe</span><span class="sxs-lookup"><span data-stu-id="8b36c-121">Element</span></span>|<span data-ttu-id="8b36c-122">Açıklama</span><span class="sxs-lookup"><span data-stu-id="8b36c-122">Description</span></span>|  
+|<span data-ttu-id="87094-121">Öğe</span><span class="sxs-lookup"><span data-stu-id="87094-121">Element</span></span>|<span data-ttu-id="87094-122">Açıklama</span><span class="sxs-lookup"><span data-stu-id="87094-122">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="8b36c-123">\<İş akışı ></span><span class="sxs-lookup"><span data-stu-id="8b36c-123">\<workflow></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|<span data-ttu-id="8b36c-124">Belirli bir iş akışı tarafından tanımlanan tüm sorgularında içeren bir yapılandırma öğesi [activityDefinitionId](https://msdn.microsoft.com/library/system.servicemodel.activities.tracking.configuration.profileworkflowelement.activitydefinitionid(VS.100).aspx) özelliği.</span><span class="sxs-lookup"><span data-stu-id="8b36c-124">A configuration element that contains all queries for a specific workflow identified by the [activityDefinitionId](https://msdn.microsoft.com/library/system.servicemodel.activities.tracking.configuration.profileworkflowelement.activitydefinitionid(VS.100).aspx) property.</span></span>|  
+|[<span data-ttu-id="87094-123">\<İş akışı ></span><span class="sxs-lookup"><span data-stu-id="87094-123">\<workflow></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|<span data-ttu-id="87094-124">Belirli bir iş akışı tarafından tanımlanan tüm sorgularında içeren bir yapılandırma öğesi [activityDefinitionId](https://msdn.microsoft.com/library/system.servicemodel.activities.tracking.configuration.profileworkflowelement.activitydefinitionid(VS.100).aspx) özelliği.</span><span class="sxs-lookup"><span data-stu-id="87094-124">A configuration element that contains all queries for a specific workflow identified by the [activityDefinitionId](https://msdn.microsoft.com/library/system.servicemodel.activities.tracking.configuration.profileworkflowelement.activitydefinitionid(VS.100).aspx) property.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="8b36c-125">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="8b36c-125">Remarks</span></span>  
- <span data-ttu-id="8b36c-126"><xref:System.Activities.Tracking.WorkflowInstanceQuery> Aşağıdaki abone olmak için kullanılan <xref:System.Activities.Tracking.TrackingRecord> nesneleri:</span><span class="sxs-lookup"><span data-stu-id="8b36c-126">The <xref:System.Activities.Tracking.WorkflowInstanceQuery> is used to subscribe to the following <xref:System.Activities.Tracking.TrackingRecord> objects:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="87094-125">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="87094-125">Remarks</span></span>  
+ <span data-ttu-id="87094-126"><xref:System.Activities.Tracking.WorkflowInstanceQuery> Aşağıdaki abone olmak için kullanılan <xref:System.Activities.Tracking.TrackingRecord> nesneleri:</span><span class="sxs-lookup"><span data-stu-id="87094-126">The <xref:System.Activities.Tracking.WorkflowInstanceQuery> is used to subscribe to the following <xref:System.Activities.Tracking.TrackingRecord> objects:</span></span>  
   
 -   <xref:System.Activities.Tracking.WorkflowInstanceRecord>  
   
@@ -57,8 +57,8 @@ ms.locfileid: "45508362"
   
 -   <xref:System.Activities.Tracking.WorkflowInstanceSuspendedRecord>  
   
-## <a name="example"></a><span data-ttu-id="8b36c-127">Örnek</span><span class="sxs-lookup"><span data-stu-id="8b36c-127">Example</span></span>  
- <span data-ttu-id="8b36c-128">İş akışı örnek düzeyi kayıtları için izleme için aşağıdaki yapılandırma abone `Started` bu sorguyu kullanarak örnek durumu.</span><span class="sxs-lookup"><span data-stu-id="8b36c-128">The following configuration subscribes to workflow instance-level tracking records for the `Started` instance state using this query.</span></span>  
+## <a name="example"></a><span data-ttu-id="87094-127">Örnek</span><span class="sxs-lookup"><span data-stu-id="87094-127">Example</span></span>  
+ <span data-ttu-id="87094-128">İş akışı örnek düzeyi kayıtları için izleme için aşağıdaki yapılandırma abone `Started` bu sorguyu kullanarak örnek durumu.</span><span class="sxs-lookup"><span data-stu-id="87094-128">The following configuration subscribes to workflow instance-level tracking records for the `Started` instance state using this query.</span></span>  
   
 ```xml  
 <workflowInstanceQueries>  
@@ -70,8 +70,8 @@ ms.locfileid: "45508362"
 </workflowInstanceQueries>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="8b36c-129">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="8b36c-129">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="87094-129">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="87094-129">See Also</span></span>  
  <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElementCollection?displayProperty=nameWithType>       
  <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>       
- [<span data-ttu-id="8b36c-130">İş Akışı Takip ve İzleme</span><span class="sxs-lookup"><span data-stu-id="8b36c-130">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [<span data-ttu-id="8b36c-131">İzleme Profilleri</span><span class="sxs-lookup"><span data-stu-id="8b36c-131">Tracking Profiles</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+ [<span data-ttu-id="87094-130">İş Akışı Takip ve İzleme</span><span class="sxs-lookup"><span data-stu-id="87094-130">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+ [<span data-ttu-id="87094-131">İzleme Profilleri</span><span class="sxs-lookup"><span data-stu-id="87094-131">Tracking Profiles</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
