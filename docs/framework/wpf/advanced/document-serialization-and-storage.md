@@ -7,11 +7,11 @@ helpviewer_keywords:
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
 ms.openlocfilehash: 39466eb528003e36bfa05751f83619d86b78a2a7
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44262574"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45625320"
 ---
 # <a name="document-serialization-and-storage"></a>Belge Serileştirme ve Depolama
 Microsoft .NET Framework, yüksek kaliteli belgeleri görüntülemek ve oluşturmak için güçlü bir ortam sağlar.  Sabit belgeler hem akış Gelişmiş belgelerini destekleyen gelişmiş özellikler ile güçlü 2B görüntüleme denetimleri, birleştirilmiş ve 3B grafik özellikleri .NET Framework uygulamaları, kalite ve kullanıcı deneyimi yepyeni bir düzeye taşıyın.  Esnek bir bellek içi temsili bir belgenin yönetebilmek .NET Framework'ün temel bir özelliği ve verimli bir şekilde kaydedin ve bir veri deposundan belge yükleme neredeyse her uygulamanın.  Bir belge bir dış veri deposuna iç bellek içi gösterimden dönüştürme işlemi, serileştirme olarak adlandırılır.  Bir veri deposunun okuma ve orijinal bellek içi örnek yeniden ters işlemi seri durumundan çıkarma olarak adlandırılır.  

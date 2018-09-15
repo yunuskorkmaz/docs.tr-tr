@@ -3,11 +3,11 @@ title: ADO.NET bağlantı dizeleri
 ms.date: 03/30/2017
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
 ms.openlocfilehash: b4e057cab4c562fc51893631c35d66409e1c3731
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
-ms.translationtype: HT
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 09/14/2018
-ms.locfileid: "45583404"
+ms.locfileid: "45617055"
 ---
 # <a name="connection-strings-in-adonet"></a>ADO.NET bağlantı dizeleri
 .NET Framework 2.0 sunulan geçerli bağlantı dizeleri çalışma zamanında oluşturma kolaylaştırmak bağlantı dizesi Oluşturucusu sınıfları yeni anahtar sözcüklerin Tanıtımı da dahil olmak üzere, bağlantı dizeleri ile çalışmak için yeni özellikler.  

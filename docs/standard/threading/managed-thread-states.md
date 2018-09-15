@@ -8,11 +8,11 @@ ms.assetid: 63890d5e-6025-4a7c-aaf0-d8bfd54b455f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a55409cd2c3bed2bc09db10622de1cceab934112
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45521316"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45624573"
 ---
 # <a name="managed-thread-states"></a>Yönetilen İş Parçacığı Durumları
 Özellik <xref:System.Threading.Thread.ThreadState%2A?displayProperty=nameWithType> iş parçacığının geçerli durumunu belirten bir bit maskesi sağlar. Bir iş parçacığı her zaman mümkün olan durumlarda en az birinde olan <xref:System.Threading.ThreadState> numaralandırma ve aynı anda birden çok durumda olabilir.  

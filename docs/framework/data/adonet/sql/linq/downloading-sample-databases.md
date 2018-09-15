@@ -3,11 +3,11 @@ title: Örnek veritabanları indirme
 ms.date: 03/30/2017
 ms.assetid: ef9d69a1-9461-43fe-94bb-7c836754bcb5
 ms.openlocfilehash: e0b842385762a486ffcc775974e15334c77b589b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44225275"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45624729"
 ---
 # <a name="downloading-sample-databases"></a>Örnek veritabanları indirme
 Örnekler ve izlenecek yollar, bir dizi [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Northwind örnek veritabanı ve SQL Server Express Edition belgeleri kullanın. Bu ürünleri ücretsiz olarak Microsoft Yükleme sitesinden indirebilirsiniz.  
