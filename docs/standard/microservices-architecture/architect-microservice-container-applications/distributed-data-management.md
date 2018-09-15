@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 4c514f3a7dc1fb01b2f1ed2dddc9d938c1101809
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.openlocfilehash: 7574a28fc3e8eb3288a81fa5a7ad26f34f1a3eb9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45514397"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45646226"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Dağıtılmış veri yönetimi için sorunlar ve çözümler
 
@@ -19,7 +19,7 @@ Mikro hizmet sınırlarını tanımlama herkes karşılaştığında ilk testten
 
 İlk olarak, uygulamanın mantıksal etki alanı modelleri ve ilgili verileri gerekir. Veri ve aynı uygulama içinde farklı bağlamlardaki ayrılmış Adaları belirlemeye çalışın gerekir. Her bağlamı, farklı iş dili (farklı iş terimlerini) olabilir. Bağlamları tanımlanabilir ve bağımsız olarak yönetilebilir. Hüküm ve bu farklı bağlamlardaki kullanılabilir varlıklar benzer görünebilir, ancak başka bir bağlamda farklı bir amaç için bir iş kavramını belirli bir bağlamda kullanılan keşfedin ve hatta farklı bir ad olabilir. Örneğin, bir kullanıcının kullanıcı kimliği veya üyelik bağlamı olarak olarak CRM bağlamda, bir müşteri bir sipariş bağlamında bir alıcı olarak adlandırılabilir ve VS.
 
-Her bağlamı tam olarak her iş mikro hizmet ve onun ilişkili için sınırları nasıl tanımlamak için farklı bir etki alanı ile birden çok uygulama içerikleri arasındaki sınırları tanımlamak şekilde etki alanı modeli ve veri. Her zaman bu mikro hizmetler arasında eşleştirmeye en aza indirmek çalışır. Bu kılavuzda bu bölümdeki tanımlama ve etki alanı modeli tasarımı hakkında daha fazla ayrıntıya gider [her mikro hizmet için etki alanı modeli sınırlarını tanımlama](#identifying-domain-model-boundaries-for-each-microservice) daha sonra.
+Her bağlamı tam olarak her iş mikro hizmet ve onun ilişkili için sınırları nasıl tanımlamak için farklı bir etki alanı ile birden çok uygulama içerikleri arasındaki sınırları tanımlamak şekilde etki alanı modeli ve veri. Her zaman bu mikro hizmetler arasında eşleştirmeye en aza indirmek çalışır. Bu kılavuzda bu bölümdeki tanımlama ve etki alanı modeli tasarımı hakkında daha fazla ayrıntıya gider [her mikro hizmet için etki alanı modeli sınırlarını tanımlama](identify-microservice-domain-model-boundaries.md) daha sonra.
 
 ## <a name="challenge-2-how-to-create-queries-that-retrieve-data-from-several-microservices"></a>Sınama \#2: veri birden fazla mikro hizmetler sorgu oluşturma
 
@@ -57,7 +57,7 @@ Tarafından belirtildiği gibi [CAP Teoremi](https://en.wikipedia.org/wiki/CAP_t
 
 Ayrıca, ACID stili veya iki aşamalı tamamlama işlemleri yalnızca mikro hizmetler ilkelerine karşı değildir; Çoğu NoSQL veritabanları (örneğin, Azure Cosmos DB, MongoDB, vb.) iki aşamalı tamamlama işlemleri desteklemez. Ancak, veri koruma hizmetleri ve veritabanları arasında tutarlılığı gereklidir. Bu zorluğu da yedekli olacak şekilde bazı verilere ihtiyaç duyduğunda, birden fazla mikro hizmetler arasında değişiklikleri yaymak nasıl soruyu ilgili — Örneğin, ne zaman ürün adına veya açıklamasına Kataloğu mikro hizmet ve sepet olması gerekir mikro hizmet.
 
-Bu sorun için iyi bir çözümdür, olay tabanlı iletişim ve bir Yayımla ve abone ol sistemi geliştirilmiştir mikro hizmetler arasındaki son tutarlılık kullanmaktır. Bu konulara bölümünde ele alınmıştır [zaman uyumsuz olay temelli iletişim](#async_event_driven_communication) bu kılavuzun sonraki.
+Bu sorun için iyi bir çözümdür, olay tabanlı iletişim ve bir Yayımla ve abone ol sistemi geliştirilmiştir mikro hizmetler arasındaki son tutarlılık kullanmaktır. Bu konulara bölümünde ele alınmıştır [zaman uyumsuz olay temelli iletişim](asynchronous-message-based-communication.md#asynchronous-event-driven-communication) bu kılavuzun sonraki.
 
 ## <a name="challenge-4-how-to-design-communication-across-microservice-boundaries"></a>Sınama \#4: nasıl mikro hizmet sınırları arasında iletişim
 

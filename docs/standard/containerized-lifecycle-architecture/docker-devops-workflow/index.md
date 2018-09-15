@@ -1,39 +1,39 @@
 ---
-title: Microsoft araçları ile docker uygulama devops iş akışı
-description: Microsoft araçları ile Microsoft Platformu ve Toolsdevops akışıyla kapsayıcılı Docker uygulama yaşam döngüsü
+title: Microsoft araçları ile docker uygulaması devops iş akışı
+description: Microsoft araçları ile Microsoft Platformu ve Toolsdevops iş akışı ile kapsayıcı Docker uygulaması yaşam döngüsü
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: b915c53b70192139c64c63d8b47110263e1621d0
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: d313cb8ff6762eba6534ca20b214063315a456f0
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104471"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45639191"
 ---
-# <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Microsoft araçları ile docker uygulama DevOps iş akışı
+# <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Microsoft araçları ile docker uygulaması DevOps iş akışı
 
-Microsoft Visual Studio, Visual Studio Team Services, Team Foundation Server ve Application Insights geliştirme ve takım projeleri yönetme ve hızlı bir şekilde derleme, test ve dağıtmak için Araçlar verir BT işlemleri için kapsamlı bir ekosistem sağlayın Kapsayıcılı uygulamalar.
+Microsoft Visual Studio, Azure DevOps Services, Team Foundation Server ve Application Insights, geliştirme ve takım projeleri yönetme ve hızlı bir şekilde oluşturun, test etmek ve dağıtmak için Araçlar verir BT işlemleri için kapsamlı bir ekosistem sağlar Kapsayıcılı uygulamaları.
 
-Visual Studio ve Team Foundation Server şirket yanı sıra bulut Visual Studio Team Services ile geliştirme ekipleri üretken derleme, test ve herhangi bir platformda doğru (Windows veya Linux) yönlendirilmiş kapsayıcılı uygulamaları bırakın.
+Visual Studio ve Azure DevOps hizmetleriyle birlikte Team Foundation Server şirket içi, bulut geliştirme ekipleri üretken bir şekilde derleme, test ve platformdan (Windows veya Linux) doğru yönlendirilmiş kapsayıcılı uygulamaları yayınlayın.
 
-Microsoft araçları ardışık düzen kapsayıcılı uygulamaların belirli uygulamaları için otomatik hale getirebilirsiniz — Docker, .NET Core veya diğer platformlar ile herhangi bir birleşimini — genel yapılar ve sürekli tümleştirme (CI) ve Visual Studio Team Services ile testleri veya Team Foundation Server için sürekli dağıtım (CD) Docker ortamlara (hazırlama, geliştirme, üretim) ve Application Insights ile geliştirme ekibi hizmetlere analytics bilgilerini iletmek için. Her kod tamamlama Hizmetleri belirli kapsayıcılı ortamları (CD) otomatik olarak dağıtmak ve bir yapı (CI) başlatın.
+Microsoft araçları kapsayıcılı uygulamaların belirli uygulamalar için ardışık düzenini otomatik hale getirebilirsiniz: Docker, .NET Core ve diğer platformlarla herhangi bir birleşimini — genel yapılar ve sürekli tümleştirme (CI) ve Azure DevOps Services veya Team ile testleri Foundation Server için sürekli dağıtım (CD) Docker ortamlarını (hazırlama, geliştirme, üretim) ve Application Insights ile Geliştirme ekibine hizmetleri hakkında bilgi analytics iletmek için. Her kod işlemesinde bir derleme (CI) başlatabilir ve Hizmetleri belirli kapsayıcılı ortamlara (CD) otomatik olarak dağıtır.
 
-Geliştiriciler ve sınayıcılar hızla ve kolayca Docker üzerinde Microsoft Azure'da şablonları kullanarak bağlı üretim benzeri geliştirme ve test ortamları sağlayabilirsiniz.
+Geliştiricilere ve test edicilere kolayca ve hızlı bir şekilde Microsoft Azure'da şablonları kullanarak Docker tabanlı üretim ortamına benzer geliştirme ve test ortamları sağlayabilirsiniz.
 
-Kapsayıcılı uygulama geliştirme karmaşıklığını sürekli olarak iş karmaşıklık ve ölçeklenebilirlik gereksinimlerine bağlı olarak artırır. Bu iyi bir örneği olan mikro mimarileri üzerinde tabanlı uygulamalar. Bu tür bir ortamda başarılı olması için projenizi tüm yaşam döngüsünü otomatikleştirmek — yalnızca derleme ve dağıtım, ancak telemetri koleksiyonunu birlikte sürümleri de yönetmeniz gerekir. Visual Studio Team Services ve Azure aşağıdaki yetenekleri sağlar:
+Kapsayıcılı uygulama geliştirme karmaşıklığını iş karmaşıklığını ve ölçeklenebilirlik gereksinimlerine bağlı olarak giderek artar. Mikro hizmet mimarileri üzerinde tabanlı uygulamaları bu iyi bir örneği var. Bu tür bir ortamda başarılı olmak için projeniz tüm yaşam döngüsünü otomatikleştirin — yalnızca derleme ve dağıtım, ancak telemetri koleksiyonunu birlikte sürümleri de yönetmeniz gerekir. Azure DevOps hizmetler ve Azure aşağıdaki özellikleri sunar:
 
--   Visual Studio Team Services/Team Foundation Server kaynak kodu Yönetimi (Git veya Team Foundation sürüm denetimi göre), Çevik planlama (Çevik, Scrum ve CMMI desteklenir), CI, yayın yönetimi ve diğer araçları Çevik ekipler için.
+-   Azure DevOps Hizmetleri/Team Foundation Server kaynak kodu Yönetimi (Git veya Team Foundation sürüm denetimi göre), Çevik planlama (Agile, Scrum ve CMMI desteklenir), CI, sürüm yönetimi ve Çevik ekipler için diğer araçlar.
 
--   Visual Studio Team Services/Team Foundation Server ile kolayca bir CI, derleme, test, teslim oluşturmak ve mikro hizmetler için yönetim potansiyel yayın ilk ve üçüncü taraf uzantıları güçlü ve artan bir ekosistemi içerir.
+-   Azure DevOps Hizmetleri/Team Foundation Server, güçlü ve giderek büyüyen bir ekosistem ile kolayca oluşturun, CI, derleme, test, teslim ve yayın Yönetimi işlem mikro hizmetlere yönelik birinci ve üçüncü taraf uzantılar içerir.
 
--   Visual Studio Team Services yapı ardışık düzeninize bir parçası olarak otomatikleştirilmiş testleri çalıştırma.
+-   Azure DevOps Hizmetleri'nde, derleme işlem hattı bir parçası olarak otomatik testler çalıştırın.
 
--   Visual Studio Team Services sıkılaştırabilirsiniz DevOps yaşam döngüsü üretim ortamları için değil, ancak ayrıca test, birden çok ortamlara teslimin A dahil olmak üzere / B deneme, [yalancı sürümleri](https://martinfowler.com/bliki/CanaryRelease.html)ve benzeri.
+-   Azure DevOps hizmetleriyle sıkılaştıran üretim ortamları için değil, aynı zamanda test, DevOps yaşam döngüsü ile birden çok ortama teslim A dahil olmak üzere / B deneme [kanarya sürümleri](https://martinfowler.com/bliki/CanaryRelease.html)ve benzeri.
 
--   Kuruluşlar kolayca hazırlayabilirsiniz Docker kapsayıcıları (veri, PaaS, vb.) Azure bileşenleri bağımlılıkları yanı sıra Azure kapsayıcı kayıt defterinde depolanan özel görüntülerden oldukları zaten araçlarıyla Azure Resource Manager şablonları kullanma rahat çalışma.
+-   Kuruluşların kolayca sağlayabilirsiniz (veri, PaaS, vb.) Azure bileşenlerini bağımlılığın yanı sıra Azure Container Registry'de depolanan özel görüntülerden Docker kapsayıcıları oldukları zaten araçlarıyla Azure Resource Manager şablonlarını kullanma deneyimli çalışma.
 
 
 >[!div class="step-by-step"]
 [Önceki](../design-develop-containerized-apps/set-up-windows-containers-with-powershell.md)
-[sonraki](docker-application-outer-loop-devops-workflow.md)
+[İleri](docker-application-outer-loop-devops-workflow.md)

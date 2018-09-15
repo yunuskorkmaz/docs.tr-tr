@@ -6,11 +6,11 @@ helpviewer_keywords:
 - copy constructor [C#]
 ms.assetid: fba899b5-fc41-428e-a745-3ebdbf37990a
 ms.openlocfilehash: d6ecfc3659dcf533db0f4e7b67fdffd620a584fd
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44705852"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45638116"
 ---
 # <a name="how-to-write-a-copy-constructor-c-programming-guide"></a>Nasıl yapılır: Kopya Oluşturucu Yazma (C# Programlama Kılavuzu)
 C# nesneler için bir kopya Oluşturucusu sağlamaz, ancak kendiniz bir tane yazabilirsiniz.  

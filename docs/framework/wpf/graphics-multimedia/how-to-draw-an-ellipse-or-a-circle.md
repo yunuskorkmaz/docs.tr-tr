@@ -10,11 +10,11 @@ helpviewer_keywords:
 - graphics [WPF], drawing ellipses
 ms.assetid: 99763b8c-bfc8-44be-8231-8a70daf5481a
 ms.openlocfilehash: ddeada8619d1b6c8970f1efb7cca1bc98773d0c5
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44262080"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45641436"
 ---
 # <a name="how-to-draw-an-ellipse-or-a-circle"></a>Nasıl yapılır: Elips veya Daire Çizme
 Bu örnekte kullanarak elips ve daireler çizin gösterilmektedir <xref:System.Windows.Shapes.Ellipse> öğesi. Elips çizin için oluşturma bir <xref:System.Windows.Shapes.Ellipse> öğesi ve kendi <xref:System.Windows.FrameworkElement.Width%2A> ve <xref:System.Windows.FrameworkElement.Height%2A>. Kullanım, <xref:System.Windows.Shapes.Shape.Fill%2A> belirtmek için özellik <xref:System.Windows.Media.Brush> elipsin iç kısmını boyamak için kullanılan. Kullanım, <xref:System.Windows.Shapes.Shape.Stroke%2A> belirtmek için özellik <xref:System.Windows.Media.Brush> elipsin anahat boyamak için kullanılan. <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> Elipsin Anahat kalınlığı özelliği belirtir.  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 2d45cf41-d8ae-4409-af3e-a96a7e476d85
 ms.openlocfilehash: ccf95ff250cc7c23b1ff981087de0f1310472880
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44368292"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45648827"
 ---
 # <a name="creating-a-datatable-from-a-dataview"></a>Dataview'den DataTable oluşturma
 Verileri bir veri kaynağından alınan ve doldurduktan sonra bir <xref:System.Data.DataTable> verilerle, sıralama, filtreleme veya aksi halde tekrar almadan döndürülen verileri sınırlamak isteyebilirsiniz. <xref:System.Data.DataView> Sınıfı bunu mümkün kılar. Ayrıca, yeni bir oluşturmanız gerekir, <xref:System.Data.DataTable> gelen <xref:System.Data.DataView>, kullanabileceğiniz <xref:System.Data.DataView.ToTable%2A> tüm satırları ve sütunları veya verilerin bir alt kümesini yeni kopyalamak için yöntemi <xref:System.Data.DataTable>. <xref:System.Data.DataView.ToTable%2A> Yöntemi için aşırı yüklemeler sağlar:  

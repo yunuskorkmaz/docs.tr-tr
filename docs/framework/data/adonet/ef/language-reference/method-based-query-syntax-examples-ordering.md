@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 5d21b178-d731-471a-8534-1f8184a2ef06
 ms.openlocfilehash: c059bd771667c23bb9aeb78b548e7036e4b8a73a
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45519900"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45647797"
 ---
 # <a name="method-based-query-syntax-examples-ordering"></a>Metot tabanlı sorgu söz dizimi örnekleri: sıralama
 Bu konudaki örnekler nasıl kullanılacağını gösteren <xref:System.Linq.Enumerable.ThenBy%2A> sorgu yöntemine [AdventureWorks satışları modeli](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) metot tabanlı sorgu söz dizimini kullanarak. Bu örneklerde kullanılan AdventureWorks satışları modeli kişi, adres, ürün, SalesOrderHeader ve satış siparişi ayrıntısını tablolarda AdventureWorks örnek veritabanı oluşturulur.  

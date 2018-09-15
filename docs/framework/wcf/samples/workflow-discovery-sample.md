@@ -3,11 +3,11 @@ title: İş Akışı Keşif Örneği
 ms.date: 03/30/2017
 ms.assetid: 82cc43f1-3c8f-4771-ac19-a75ac936e2c3
 ms.openlocfilehash: 1076e7045ca546fed7e6902f69406bfc002c4c26
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45516217"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45649568"
 ---
 # <a name="workflow-discovery-sample"></a>İş Akışı Keşif Örneği
 Bu örnek, bir iş akışı hizmeti bulunabilir hale getirme ve belirli bir hizmet için arayan bir özel kod etkinliği yazmak nasıl gösterir.  

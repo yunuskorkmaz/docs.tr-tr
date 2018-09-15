@@ -9,11 +9,11 @@ ms.assetid: 8c71acf2-2c18-4f4d-8cdb-0728639265fd
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8be9b4eef30333fbbdc26915635d17157176d6fc
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45513509"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45640939"
 ---
 # <a name="reader-writer-locks"></a>Okuyucu-Yazıcı Kilitleri
 <xref:System.Threading.ReaderWriterLockSlim> Sınıfı için bir kaynak eş zamanlı olarak okumak birden çok iş parçacığı sağlar, ancak bu kaynağa yazmak üzere özel bir kilit için beklenecek bir iş parçacığı gerektirir.  

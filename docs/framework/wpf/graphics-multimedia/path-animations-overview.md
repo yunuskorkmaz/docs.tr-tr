@@ -9,11 +9,11 @@ helpviewer_keywords:
 - path animations [WPF]
 ms.assetid: 979c732c-df74-47a6-be96-8e07b3707d53
 ms.openlocfilehash: 0f795ad00823e7b1c37221f7417b09d3982c4c18
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45507709"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45647639"
 ---
 # <a name="path-animations-overview"></a>Yol Animasyonlarına Genel Bakış
 <a name="introduction"></a> Bu konu, çıkış değerleri oluşturmak için bir geometrik yol kullanmanıza olanak sağlayan yol animasyonları tanıtır. Yol animasyonları, taşıma ve karmaşık yollar üzerindeki nesneler döndürmek için kullanışlıdır.  

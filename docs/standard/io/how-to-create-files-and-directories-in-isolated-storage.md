@@ -17,11 +17,11 @@ ms.assetid: 2ca4d2a4-809b-4f00-bc08-bf4a64d3a5c3
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 08beb44fdb58ab1c1d53f70ac0653348b96fcb18
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45518759"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45638892"
 ---
 # <a name="how-to-create-files-and-directories-in-isolated-storage"></a>Nasıl yapılır: Yalıtılmış Depolamada Dosya ve Dizinler Oluşturma
 Bir yalıtılmış depolama aldıktan sonra dizin ve dosya verilerini depolamak için oluşturabilirsiniz. Bir depo dosya ve dizin adları sanal dosya sisteminin kökünü göre belirtilir.  

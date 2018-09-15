@@ -25,11 +25,11 @@ ms.assetid: e35d4535-3732-421e-b1a3-37412e036145
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 16b12a1ab274a63b8d190278d6312d36a61efe16
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44207726"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45649392"
 ---
 # <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>Nasıl yapılır: Yalıtılmış Depolama ile Alan Dolu Koşullarını Öngörme
 Yalıtılmış depolama kullanan kodu je omezeno tarafından bir [kota](../../../docs/standard/io/isolated-storage.md#quotas) veri bölümünde yalıtılmış depolama dosyalarının ve dizinleri mevcut en büyük boyutu belirtir. Kota güvenlik ilkesi tarafından tanımlanır ve yöneticiler tarafından yapılandırılabilir. Veri yazma çalıştığınızda boyutu aşıldı izin verilen en fazla, bir <xref:System.IO.IsolatedStorage.IsolatedStorageException> özel durum oluştu ve işlem başarısız olur. Bu uygulama, veri depolama alanı dolu olduğundan istekleri reddetmek neden olabilecek kötü amaçlı hizmet reddi saldırılarını önlemeye yardımcı olur.  

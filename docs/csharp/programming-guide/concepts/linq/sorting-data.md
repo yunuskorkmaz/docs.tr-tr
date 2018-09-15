@@ -3,11 +3,11 @@ title: Verileri sıralama (C#)
 ms.date: 07/20/2015
 ms.assetid: d93fa055-2f19-46d2-9898-e2aed628f1c9
 ms.openlocfilehash: 6a7f687895385bfb77d2a1e3e785742a794bb1b6
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45509941"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45638314"
 ---
 # <a name="sorting-data-c"></a>Verileri sıralama (C#)
 Sıralama işlemi bir veya daha fazla özniteliklerine dayalı bir dizinin öğeleri sıralar. İlk sıralama ölçütü öğelerde birincil sıralama gerçekleştirir. İkinci bir sıralama ölçütünü belirterek, her birincil sıralama grup içindeki öğeleri sıralayabilirsiniz.  

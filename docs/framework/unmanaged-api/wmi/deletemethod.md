@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5996ce41c80cb54c4fcb9104c2993c85bcc2b466
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45510240"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45641202"
 ---
 # <a name="deletemethod-function"></a>DeleteMethod işlevi
 Belirtilen yöntemde bir CIM sınıfı tanımını siler.

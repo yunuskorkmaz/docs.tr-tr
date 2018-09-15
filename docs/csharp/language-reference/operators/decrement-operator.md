@@ -8,11 +8,11 @@ helpviewer_keywords:
 - decrement operator (--) [C#]
 ms.assetid: 6b9cfe86-63c7-421f-9379-c9690fea8720
 ms.openlocfilehash: 615b100447233856ab3740d075d69e3ae19285fd
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45588091"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45648788"
 ---
 # <a name="---operator-c-reference"></a>-- İşleci (C# Başvurusu)
 Azaltma işleci (`--`) azaltır işleneniyle 1. Azaltma işleci önce veya sonra işleneniyle görünebilir: `--variable` ve `variable--`. Önek azaltma işlemi ilk biçimidir. "İndirildiği sonra" işleminin sonucu işlenenin değerdir. İkinci bir sonek azaltma işlemi biçimidir. "Önce" indirildiği olmuştur işleminin sonucu işlenenin değerdir.  

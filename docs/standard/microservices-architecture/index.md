@@ -4,14 +4,15 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: 3585ec322f7ce82c5e178088d19ee6dadd58ab24
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.openlocfilehash: 0f401f89b0a568b8dc7c3734b2f06fa3a14de110
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45519845"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45648167"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET mikro Hizmetleri: Kapsayıcılı .NET uygulamaları mimarisi
+
 ![Kitap kapsar](./media/cover-small.png)
 
 **Sürüm v2.1.02** - ASP.NET Core 2.1 için güncelleştirilmiş
@@ -69,7 +70,7 @@ Ayrıca bu kılavuzun yararlı bir mimari isteyen bir kuruluş Mimarı'gibi bir 
 
 Bu kılavuzun ilk bölümü Docker kapsayıcıları sunar, .NET Core ve geliştirme framework .NET Framework arasında seçim anlatılmaktadır ve mikro hizmetler için genel bir bakış sağlar. Bu içerik mimarları ve genel bir bakış istiyor ancak kod uygulaması ayrıntılara odaklanmak gerekmez teknik karar verenler içindir.
 
-İle başlayan Kılavuzu ikinci bölümü [geliştirme süreci için Docker tabanlı uygulamalar](#ch_dev_process_for_docker_based_apps) bölümü. .NET Core ve Docker kullanan uygulamalar, uygulama geliştirme ve mikro hizmet desenleri odaklanır. Bu bölümde, geliştiricilere ve mimarlara desenleri ve uygulama ayrıntılarını ve kod üzerinde odaklanmak isteyen çoğu ilgi olacaktır.
+İle başlayan Kılavuzu ikinci bölümü [geliştirme süreci için Docker tabanlı uygulamalar](./docker-application-development-process/index.md) bölümü. .NET Core ve Docker kullanan uygulamalar, uygulama geliştirme ve mikro hizmet desenleri odaklanır. Bu bölümde, geliştiricilere ve mimarlara desenleri ve uygulama ayrıntılarını ve kod üzerinde odaklanmak isteyen çoğu ilgi olacaktır.
 
 ## <a name="related-microservice-and-container-based-reference-application-eshoponcontainers"></a>Mikro hizmet ve kapsayıcı tabanlı başvuru uygulaması ilgili: hizmetine
 

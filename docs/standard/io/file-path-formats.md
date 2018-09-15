@@ -9,19 +9,16 @@ helpviewer_keywords:
 - path formats, Windows
 author: rpetrusha
 ms.author: ronpet
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 0efef54abd1da9631b5a560b49c6587d726e9193
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 5821d15e71492bd54fa6b5d891f2ff38a2902a06
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861308"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45646408"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows sistemlerde dosya yolu biçimleri
 
-Çoğu içindeki türlerin üyelerini <xref:System.IO> ad alanı içeren bir `path` mutlak veya göreli bir yol için bir dosya sistemi kaynak belirtmenize olanak sağlar. parametre. Bu yolu geçirilerek [Windows dosya API'lerini sysem](https://msdn.microsoft.com/library/windows/desktop/aa364407(v=vs.85).aspx). Bu konuda Windows sistemlerinde kullanabilirsiniz dosya yolları için biçimleri açıklanır.
+Çoğu içindeki türlerin üyelerini <xref:System.IO> ad alanı içeren bir `path` mutlak veya göreli bir yol için bir dosya sistemi kaynak belirtmenize olanak sağlar. parametre. Bu yolu geçirilerek [Windows dosya sistemi API'ları](https://msdn.microsoft.com/library/windows/desktop/aa364407(v=vs.85).aspx). Bu konuda Windows sistemlerinde kullanabilirsiniz dosya yolları için biçimleri açıklanır.
 
 ## <a name="traditional-dos-paths"></a>Geleneksel DOS yolları
 

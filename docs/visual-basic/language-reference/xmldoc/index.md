@@ -9,11 +9,11 @@ helpviewer_keywords:
 - comments, recommended XML tags
 ms.assetid: 294e0736-ff1e-498e-af83-6db71ed41a72
 ms.openlocfilehash: 3b2dec4224006d35fb9add11e170b9dcbeeafcf3
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45583563"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45649978"
 ---
 # <a name="recommended-xml-tags-for-documentation-comments-visual-basic"></a>Belge Açıklamaları için Önerilen XML Etiketleri (Visual Basic)
 Visual Basic Derleyicisi, bir XML dosyasına kod belge açıklamaları işleyebilir. Belgeleme XML dosyasını işlemek için ek araçları kullanabilirsiniz.  

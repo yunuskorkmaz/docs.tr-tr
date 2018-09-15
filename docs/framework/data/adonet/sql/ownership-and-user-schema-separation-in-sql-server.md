@@ -3,11 +3,11 @@ title: Sahiplik ve SQL Server kullanıcı şeması ayrımı
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
 ms.openlocfilehash: 7b1cda211fdc89732afa8eed1eaaf2c98309a969
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44708068"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45649126"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>Sahiplik ve SQL Server kullanıcı şeması ayrımı
 Bir SQL Server güvenlik kavramının sahipleri nesnelerin Dönülmez bunları yönetme izni olmasıdır. Bir nesne sahibinden ayrıcalıkları kaldıramazsınız ve sahip oldukları nesneleri da, kullanıcıların bir veritabanından bırakılamıyor.  

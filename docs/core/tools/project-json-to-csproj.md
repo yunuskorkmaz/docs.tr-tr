@@ -4,12 +4,12 @@ description: Project.json ile csproj öğeleri arasında bir eşleme bakın.
 author: natemcmaster
 ms.author: mairaw
 ms.date: 03/13/2017
-ms.openlocfilehash: 369075f91c0d5ea6c7eb5d09ac2535c4e60f28f6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0079164470f87df665be6f9de62bc98d3fb51696
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518563"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45647375"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>Project.json ile csproj özellikleri arasında bir eşleme
 
@@ -487,7 +487,7 @@ Ayrıca bkz: [dosyaları](#files).
 ```
 
 İçin eşdeğeri yoktur `owners` msbuild'de öğe.
-İçin `summary`, MSBuild kullanabilirsiniz `<Description>` özelliği olsa bile değerini `summary` bu özellik eşlendiği olduğundan bu özellik için otomatik olarak taşınmaz [ `description` ](#-other-common-root-level-options) öğesi.
+İçin `summary`, MSBuild kullanabilirsiniz `<Description>` özelliği olsa bile değerini `summary` bu özellik eşlendiği olduğundan bu özellik için otomatik olarak taşınmaz [ `description` ](#other-common-root-level-options) öğesi.
 
 ## <a name="scripts"></a>betikler
 

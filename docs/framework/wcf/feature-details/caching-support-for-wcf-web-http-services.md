@@ -3,11 +3,11 @@ title: WCF Web HTTP Hizmetleri için Önbelleğe Alma Desteği
 ms.date: 03/30/2017
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
 ms.openlocfilehash: 25b564235b5d2b3b26b5d657f3e5f0bd5d594125
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45527544"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45648398"
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>WCF Web HTTP Hizmetleri için Önbelleğe Alma Desteği
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] WCF Web HTTP hizmetlerinizi ASP.NET'te zaten kullanılabilen bildirim temelli önbelleğe alma mekanizması kullanmanıza olanak sağlar. Bu, önbellek yanıtları WCF Web HTTP hizmet işlemlerinizi sağlar. Bir kullanıcı bir HTTP GET önbelleğe almak üzere yapılandırıldığında hizmetinize gönderdiğinde, ASP.NET, önbelleğe alınan yanıtı geri gönderir ve hizmet yöntemi çağrılmadı. Önbellek, bir kullanıcının bir HTTP GET gönderdiği sonraki süresi dolduğunda, hizmet yönteminiz olarak adlandırılır ve yanıt yine önbelleğe alınır. ASP.NET önbelleğe alma hakkında daha fazla bilgi için bkz. [ASP.NET önbelleğe alma genel bakış](https://go.microsoft.com/fwlink/?LinkId=152534)  

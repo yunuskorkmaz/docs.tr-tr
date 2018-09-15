@@ -12,11 +12,11 @@ helpviewer_keywords:
 - scroll bars [Windows Forms], about scroll bars
 ms.assetid: 8b307679-1cae-41d8-99aa-3d1efd207cd6
 ms.openlocfilehash: 2c6436e77753322733580acba5a20d6bb220f29c
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45588117"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45638732"
 ---
 # <a name="hscrollbar-and-vscrollbar-controls-overview-windows-forms"></a>HScrollBar ve VScrollBar Denetimlerine Genel Bakış (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ScrollBar> denetimleri yatay kaydırma tarafından veya içinde bir uygulamanın veya denetimin dikey olarak uzun bir liste aracılığıyla kolay gezinti öğeleri veya büyük miktarda bilgi sağlamak amacıyla kullanılır. Kaydırma çubukları Windows arabiriminin ortak bir öğesi olan böylece <xref:System.Windows.Forms.ScrollBar> öğesinden türetilen değil denetimlerle genellikle Denetim kullanılır <xref:System.Windows.Forms.ScrollableControl> sınıfı. Benzer şekilde, dahil etmek birçok geliştiricinin seçin <xref:System.Windows.Forms.ScrollBar> denetlemek, kendi kullanıcı denetimleri yazma.  

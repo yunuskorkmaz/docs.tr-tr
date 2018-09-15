@@ -11,11 +11,11 @@ ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0652f5f3f3629257f8f67c6b4a0b9551ef547b62
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45513660"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45648076"
 ---
 # <a name="merge-options-in-plinq"></a>PLINQ'te Birleştirme Seçenekleri
 Birden çok iş parçacığı üzerinde farklı bölümleri aynı anda genellikle ayrı iş parçacıklarına çalışabilmek ne zaman bir sorgu paralel, PLINQ bölümler kaynak sırası yürütüyor. Sonuçları bir iş parçacığı üzerinde kullanılması, örneğin, bir `foreach` (`For Each` Visual Basic'te) döngü sonra her iş parçacığı sonuçlardan bir dizisi olarak birleştirilmesi gerekir. PLINQ gerçekleştiren bir birleştirme türü, sorguda bulunan işleçleri bağlıdır. Örneğin, yeni bir sipariş sonuçlarına dayatır işleçleri tüm iş parçacıklarının tüm öğeleri arabellek gerekir. (Aynı zamanda olan, uygulama kullanıcısı) kullanan bir iş parçacığı açısından bir belirgin süre ilk sonucunu üreten önce tamamen arabelleğe alınan sorgu çalıştırabilirsiniz. Diğer işleçler varsayılan olarak, kısmen ara belleğe alınır; Bunlar, toplu sonuçlar. Bir işleç <xref:System.Linq.ParallelEnumerable.ForAll%2A> varsayılan olarak arabelleğe değil. Bunu tüm öğeleri tüm iş parçacıklarından hemen verir.  

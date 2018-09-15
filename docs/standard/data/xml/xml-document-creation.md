@@ -9,11 +9,11 @@ ms.assetid: 877e9c62-b082-4bfb-bc5b-f47297eb30ef
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b76140fb7d79b1e191c0451cd7556963130d224a
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44369023"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45646187"
 ---
 # <a name="xml-document-creation"></a>XML belgesi oluşturma
 Bir XML belgesi oluşturmak için iki yolu vardır. Oluşturmak için bir yolu olan bir **XmlDocument** parametre olmadan. Oluşturmak için diğer yol ise bir **XmlDocument** ve parametre olarak bir XmlNameTable geçirin. Aşağıdaki örnek, yeni, boş oluşturma işlemi gösterilmektedir **XmlDocument** hiçbir parametreleri kullanarak.  

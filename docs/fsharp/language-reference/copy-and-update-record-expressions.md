@@ -4,11 +4,11 @@ description: "'Var olan bir kaydı, güncelleştirmeleri kopyalayan bir kopyalam
 author: ChrSteinert
 ms.date: 06/04/2016
 ms.openlocfilehash: d2b089e8a7fc5c7ee26139003e23d2eaa8a3174e
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44494076"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45638353"
 ---
 # <a name="copy-and-update-record-expressions"></a>Kopyalama ve güncelleştirme kayıt ifadeleri
 

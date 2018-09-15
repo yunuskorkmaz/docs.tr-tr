@@ -11,11 +11,11 @@ ms.assetid: 38f2f3d8-15e5-4bf4-9c83-2b5b6f22bad1
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 74518f6f56f65668d4c7f073a79c9e7de27d7978
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45516665"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45645768"
 ---
 # <a name="how-to-add-and-take-items-individually-from-a-blockingcollection"></a>Nasıl yapılır: Öğeleri Tek Tek Ekleme ve Bir BlockingCollection'dan ve Alma
 Bu örnek nasıl öğelerinden ekleyip gösterir bir <xref:System.Collections.Concurrent.BlockingCollection%601> bir engelleyici ve engelleyici olmayan bir şekilde. Daha fazla bilgi için <xref:System.Collections.Concurrent.BlockingCollection%601>, bkz: [BlockingCollection genel bakışı](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md).  

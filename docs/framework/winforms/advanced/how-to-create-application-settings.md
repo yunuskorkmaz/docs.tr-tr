@@ -9,11 +9,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], creating
 ms.assetid: 1e7aa347-af75-41e5-89ca-f53cab704f72
 ms.openlocfilehash: 7a84fc85b42f2b78ccafcae3c815847633b9916d
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45508050"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45641501"
 ---
 # <a name="how-to-create-application-settings"></a>Nasıl yapılır: Uygulama Ayarları Oluşturma
 Yönetilen kod kullanarak, yeni uygulama ayarları oluşturma ve böylece bu ayarlar yüklenir ve çalışma zamanında otomatik olarak kaydedilir bunları özelliklerine formunuza veya form denetimlerinde bağlayın.  

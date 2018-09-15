@@ -3,11 +3,11 @@ title: Değişken ve bağımsız değişken izleme
 ms.date: 03/30/2017
 ms.assetid: 8f3d9d30-d899-49aa-b7ce-a8d0d32c4ff0
 ms.openlocfilehash: 45ed3761cd7ead82650023b93a2f32a43e847339
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45560535"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45646172"
 ---
 # <a name="variable-and-argument-tracking"></a>Değişken ve bağımsız değişken izleme
 Bir iş akışı yürütülmesini izlerken, genellikle verileri ayıklamak kullanışlıdır. Bu izleme kayıt sonrası yürütme erişirken ek bağlam sağlar. İçinde [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], herhangi bir görünür bir değişken veya bağımsız değişken izleme kullanarak iş akışı herhangi bir etkinliği kapsamında ayıklayabilirsiniz. İzleme profilleri verileri ayıklamak kolaylaştırır.  

@@ -8,11 +8,11 @@ ms.assetid: bf00c380-706a-4e38-b829-454a480629fc
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f205040e0f044ab04112683c7bdb8edccdfb9f71
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45558138"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45641514"
 ---
 # <a name="common-io-tasks"></a>Ortak G/Ç Görevleri
 <xref:System.IO> Ad alanı, dosyalar, dizinler, gerçekleştirilecek yazma ve okuma gibi çeşitli eylemleri için izin birkaç sınıfları sağlar ve akışları. Daha fazla bilgi için [dosya ve Stream g/ç](../../../docs/standard/io/index.md).  

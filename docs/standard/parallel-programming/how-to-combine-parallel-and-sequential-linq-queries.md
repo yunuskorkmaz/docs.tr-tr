@@ -11,11 +11,11 @@ ms.assetid: 1167cfe6-c8aa-4096-94ba-c66c3a4edf4c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9fd67d5f0cb5af33dc2b79f86148557a0dca6ec4
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45515476"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45647742"
 ---
 # <a name="how-to-combine-parallel-and-sequential-linq-queries"></a>Nasıl yapılır: Paralel ve Sıralı LINQ Sorgularını Birleştirme
 Bu örnek nasıl kullanılacağını gösterir <xref:System.Linq.ParallelEnumerable.AsSequential%2A> sorgudaki izleyen tüm işleçler sırayla işlemek için PLINQ istemek için yöntemi. Bazen sıralı işleme paralel genelde daha yavaş olsa da, doğru sonuçlar üretmek için gerekli olabilir.  

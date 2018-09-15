@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, accessing data
 ms.assetid: 9665ff5b-3e3a-495d-bf83-d531d5d060ed
 ms.openlocfilehash: d4f4de1fa12418bd56f9680e5414bfe7dd0aa128
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44705917"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45641553"
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>Veri Hizmeti kaynaklarına (WCF Veri Hizmetleri) erişme
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] destekleyen [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] verilerinizi tarafından bir URI'leri adreslenebilir kaynaklarla bir akış olarak kullanıma sunmak için. Varlık ilişkisi kurallarına göre bu kaynakları temsil edilen [varlık veri modeli](../../../../docs/framework/data/adonet/entity-data-model.md). Bu modelde, işletimsel birimleri, müşteri, sipariş, öğeleri ve ürünleri gibi uygulama etki alanında veri türleri veri varlıkları temsil eder. Varlık verilerini erişilen ve özellikle standart HTTP fiilleri, GET, temsili durum aktarımı (REST) semantiği kullanarak değiştirilen koy Gönder ve Sil.  
