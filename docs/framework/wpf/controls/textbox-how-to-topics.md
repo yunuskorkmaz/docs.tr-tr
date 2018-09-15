@@ -8,31 +8,31 @@ helpviewer_keywords:
 - TextBox control [WPF], how-to topics
 ms.assetid: 006aa461-fe37-4cd8-860a-d38d76e8b9f7
 ms.openlocfilehash: 2319ea8522a90705cf65006ffb368801921cda57
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44212054"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45624502"
 ---
-# <a name="textbox-how-to-topics"></a><span data-ttu-id="186ce-102">TextBox Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="186ce-102">TextBox How-to Topics</span></span>
-<span data-ttu-id="186ce-103">Bu bölümde kullanarak yaygın görevlerin nasıl yerine getirileceğini gösteren örnekler <xref:System.Windows.Controls.TextBox> denetimi.</span><span class="sxs-lookup"><span data-stu-id="186ce-103">This section provides examples that demonstrate how to accomplish common tasks using the <xref:System.Windows.Controls.TextBox> control.</span></span>  
+# <a name="textbox-how-to-topics"></a><span data-ttu-id="09dbf-102">TextBox Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="09dbf-102">TextBox How-to Topics</span></span>
+<span data-ttu-id="09dbf-103">Bu bölümde kullanarak yaygın görevlerin nasıl yerine getirileceğini gösteren örnekler <xref:System.Windows.Controls.TextBox> denetimi.</span><span class="sxs-lookup"><span data-stu-id="09dbf-103">This section provides examples that demonstrate how to accomplish common tasks using the <xref:System.Windows.Controls.TextBox> control.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="186ce-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="186ce-104">In This Section</span></span>  
- [<span data-ttu-id="186ce-105">Çok Satırlı TextBox Denetimi Oluşturma</span><span class="sxs-lookup"><span data-stu-id="186ce-105">Create a Multiline TextBox Control</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-multiline-textbox-control.md)  
- [<span data-ttu-id="186ce-106">TextBox İçindeki Metin Değiştirildiğinde Algılama</span><span class="sxs-lookup"><span data-stu-id="186ce-106">Detect When Text in a TextBox Has Changed</span></span>](../../../../docs/framework/wpf/controls/how-to-detect-when-text-in-a-textbox-has-changed.md)  
- [<span data-ttu-id="186ce-107">Sekme Karakterlerini TextBox Denetimi İçinde Etkinleştirme</span><span class="sxs-lookup"><span data-stu-id="186ce-107">Enable Tab Characters in a TextBox Control</span></span>](../../../../docs/framework/wpf/controls/how-to-enable-tab-characters-in-a-textbox-control.md)  
- [<span data-ttu-id="186ce-108">TextBox'tan Satır Koleksiyonu Alma</span><span class="sxs-lookup"><span data-stu-id="186ce-108">Get a Collection of Lines from a TextBox</span></span>](../../../../docs/framework/wpf/controls/how-to-get-a-collection-of-lines-from-a-textbox.md)  
- [<span data-ttu-id="186ce-109">TextBox Denetimini Salt Okunur Yapma</span><span class="sxs-lookup"><span data-stu-id="186ce-109">Make a TextBox Control Read-Only</span></span>](../../../../docs/framework/wpf/controls/how-to-make-a-textbox-control-read-only.md)  
- [<span data-ttu-id="186ce-110">TextBox Denetiminde İmleci Metnin Başlangıcında veya Sonunda Konumlandırma</span><span class="sxs-lookup"><span data-stu-id="186ce-110">Position the Cursor at the Beginning or End of Text in a TextBox Control</span></span>](../../../../docs/framework/wpf/controls/position-the-cursor-at-the-beginning-or-end-of-text.md)  
- [<span data-ttu-id="186ce-111">Metin Seçimi Alma</span><span class="sxs-lookup"><span data-stu-id="186ce-111">Retrieve a Text Selection</span></span>](../../../../docs/framework/wpf/controls/how-to-retrieve-a-text-selection.md)  
- [<span data-ttu-id="186ce-112">TextBox Denetiminde Odak Ayarlama</span><span class="sxs-lookup"><span data-stu-id="186ce-112">Set Focus in a TextBox Control</span></span>](../../../../docs/framework/wpf/controls/how-to-set-focus-in-a-textbox-control.md)  
- [<span data-ttu-id="186ce-113">TextBox Denetiminin Metin İçeriğini Ayarlama</span><span class="sxs-lookup"><span data-stu-id="186ce-113">Set the Text Content of a TextBox Control</span></span>](../../../../docs/framework/wpf/controls/how-to-set-the-text-content-of-a-textbox-control.md)  
- [<span data-ttu-id="186ce-114">Metin Düzenleme Denetiminde Yazım Denetimini Etkinleştirme</span><span class="sxs-lookup"><span data-stu-id="186ce-114">Enable Spell Checking in a Text Editing Control</span></span>](../../../../docs/framework/wpf/controls/how-to-enable-spell-checking-in-a-text-editing-control.md)  
- [<span data-ttu-id="186ce-115">TextBox ile Özel Bağlam Menüsü Kullanma</span><span class="sxs-lookup"><span data-stu-id="186ce-115">Use a Custom Context Menu with a TextBox</span></span>](../../../../docs/framework/wpf/controls/how-to-use-a-custom-context-menu-with-a-textbox.md)  
- [<span data-ttu-id="186ce-116">Açılır Menü ile Yazım Denetimi Kullanma</span><span class="sxs-lookup"><span data-stu-id="186ce-116">Use Spell Checking with a Context Menu</span></span>](../../../../docs/framework/wpf/controls/how-to-use-spell-checking-with-a-context-menu.md)  
- [<span data-ttu-id="186ce-117">TextBox'a Filigran Ekleme</span><span class="sxs-lookup"><span data-stu-id="186ce-117">Add a Watermark to a TextBox</span></span>](../../../../docs/framework/wpf/controls/how-to-add-a-watermark-to-a-textbox.md)  
+## <a name="in-this-section"></a><span data-ttu-id="09dbf-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="09dbf-104">In This Section</span></span>  
+ [<span data-ttu-id="09dbf-105">Çok Satırlı TextBox Denetimi Oluşturma</span><span class="sxs-lookup"><span data-stu-id="09dbf-105">Create a Multiline TextBox Control</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-multiline-textbox-control.md)  
+ [<span data-ttu-id="09dbf-106">TextBox İçindeki Metin Değiştirildiğinde Algılama</span><span class="sxs-lookup"><span data-stu-id="09dbf-106">Detect When Text in a TextBox Has Changed</span></span>](../../../../docs/framework/wpf/controls/how-to-detect-when-text-in-a-textbox-has-changed.md)  
+ [<span data-ttu-id="09dbf-107">Sekme Karakterlerini TextBox Denetimi İçinde Etkinleştirme</span><span class="sxs-lookup"><span data-stu-id="09dbf-107">Enable Tab Characters in a TextBox Control</span></span>](../../../../docs/framework/wpf/controls/how-to-enable-tab-characters-in-a-textbox-control.md)  
+ [<span data-ttu-id="09dbf-108">TextBox'tan Satır Koleksiyonu Alma</span><span class="sxs-lookup"><span data-stu-id="09dbf-108">Get a Collection of Lines from a TextBox</span></span>](../../../../docs/framework/wpf/controls/how-to-get-a-collection-of-lines-from-a-textbox.md)  
+ [<span data-ttu-id="09dbf-109">TextBox Denetimini Salt Okunur Yapma</span><span class="sxs-lookup"><span data-stu-id="09dbf-109">Make a TextBox Control Read-Only</span></span>](../../../../docs/framework/wpf/controls/how-to-make-a-textbox-control-read-only.md)  
+ [<span data-ttu-id="09dbf-110">TextBox Denetiminde İmleci Metnin Başlangıcında veya Sonunda Konumlandırma</span><span class="sxs-lookup"><span data-stu-id="09dbf-110">Position the Cursor at the Beginning or End of Text in a TextBox Control</span></span>](../../../../docs/framework/wpf/controls/position-the-cursor-at-the-beginning-or-end-of-text.md)  
+ [<span data-ttu-id="09dbf-111">Metin Seçimi Alma</span><span class="sxs-lookup"><span data-stu-id="09dbf-111">Retrieve a Text Selection</span></span>](../../../../docs/framework/wpf/controls/how-to-retrieve-a-text-selection.md)  
+ [<span data-ttu-id="09dbf-112">TextBox Denetiminde Odak Ayarlama</span><span class="sxs-lookup"><span data-stu-id="09dbf-112">Set Focus in a TextBox Control</span></span>](../../../../docs/framework/wpf/controls/how-to-set-focus-in-a-textbox-control.md)  
+ [<span data-ttu-id="09dbf-113">TextBox Denetiminin Metin İçeriğini Ayarlama</span><span class="sxs-lookup"><span data-stu-id="09dbf-113">Set the Text Content of a TextBox Control</span></span>](../../../../docs/framework/wpf/controls/how-to-set-the-text-content-of-a-textbox-control.md)  
+ [<span data-ttu-id="09dbf-114">Metin Düzenleme Denetiminde Yazım Denetimini Etkinleştirme</span><span class="sxs-lookup"><span data-stu-id="09dbf-114">Enable Spell Checking in a Text Editing Control</span></span>](../../../../docs/framework/wpf/controls/how-to-enable-spell-checking-in-a-text-editing-control.md)  
+ [<span data-ttu-id="09dbf-115">TextBox ile Özel Bağlam Menüsü Kullanma</span><span class="sxs-lookup"><span data-stu-id="09dbf-115">Use a Custom Context Menu with a TextBox</span></span>](../../../../docs/framework/wpf/controls/how-to-use-a-custom-context-menu-with-a-textbox.md)  
+ [<span data-ttu-id="09dbf-116">Açılır Menü ile Yazım Denetimi Kullanma</span><span class="sxs-lookup"><span data-stu-id="09dbf-116">Use Spell Checking with a Context Menu</span></span>](../../../../docs/framework/wpf/controls/how-to-use-spell-checking-with-a-context-menu.md)  
+ [<span data-ttu-id="09dbf-117">TextBox'a Filigran Ekleme</span><span class="sxs-lookup"><span data-stu-id="09dbf-117">Add a Watermark to a TextBox</span></span>](../../../../docs/framework/wpf/controls/how-to-add-a-watermark-to-a-textbox.md)  
   
-## <a name="reference"></a><span data-ttu-id="186ce-118">Başvuru</span><span class="sxs-lookup"><span data-stu-id="186ce-118">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="09dbf-118">Başvuru</span><span class="sxs-lookup"><span data-stu-id="09dbf-118">Reference</span></span>  
  <xref:System.Windows.Controls.TextBox>  
   
  <xref:System.Windows.Controls.RichTextBox>  
@@ -41,6 +41,6 @@ ms.locfileid: "44212054"
   
  <xref:System.Windows.Controls.PasswordBox>  
   
-## <a name="see-also"></a><span data-ttu-id="186ce-119">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="186ce-119">See Also</span></span>  
- [<span data-ttu-id="186ce-120">WPF denetimleri Galerisi örneği</span><span class="sxs-lookup"><span data-stu-id="186ce-120">WPF Controls Gallery Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=160053)  
- [<span data-ttu-id="186ce-121">TextBox Stilleri ve Şablonları</span><span class="sxs-lookup"><span data-stu-id="186ce-121">TextBox Styles and Templates</span></span>](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)
+## <a name="see-also"></a><span data-ttu-id="09dbf-119">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="09dbf-119">See Also</span></span>  
+ [<span data-ttu-id="09dbf-120">WPF denetimleri Galerisi örneği</span><span class="sxs-lookup"><span data-stu-id="09dbf-120">WPF Controls Gallery Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=160053)  
+ [<span data-ttu-id="09dbf-121">TextBox Stilleri ve Şablonları</span><span class="sxs-lookup"><span data-stu-id="09dbf-121">TextBox Styles and Templates</span></span>](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)
