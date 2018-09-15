@@ -12,11 +12,11 @@ ms.assetid: e8f58e17-2714-4821-802a-f8eb3b2baa62
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fc3af01167fe97b701bdb0c7bc37af02d8e8a77c
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44511912"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45658593"
 ---
 # <a name="threadsuspend-garbage-collection-and-safe-points"></a>Thread.Suspend Çöp Toplama ve Güvenli Noktalar
 Çağırdığınızda <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> bir iş parçacığında, bir iş parçacığını askıya alma isteğinde bulundu ve güvenli bir noktadan aslında bir iş parçacığını askıya almadan önce ulaştı kadar yürütmek iş parçacığının sağlar sistem notlar. Bir güvenli iş parçacığı hangi çöp toplama gerçekleştirilebilir, yürütme noktasında noktasıdır.  

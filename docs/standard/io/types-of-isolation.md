@@ -21,11 +21,11 @@ ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 49708175f8501c735a77b0f7f965a106b6e086f2
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45569397"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45652998"
 ---
 # <a name="types-of-isolation"></a>Yalıtım Türleri
 Yalıtılmış Depolama erişimi oluşturan kullanıcıya her zaman kısıtlandırılır. Bu tür bir yalıtım uygulamak için kod deposu açıldığında çalıştığı işlemle ilişkili kimlik olduğu ortak dil çalışma zamanı aynı işletim sistemini algılar, kullanıcı kimlik kavramını kullanır. Bu kimlik, kimliği doğrulanmış kullanıcı kimliği olmakla birlikte kimliğe bürünme dinamik olarak değiştirmek için geçerli kullanıcının kimliğini neden olabilir.  

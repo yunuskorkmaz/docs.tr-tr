@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 5e7ff0be-3f23-4996-a92c-bd54d65c3836
 ms.openlocfilehash: 274a6e87b272002a567fd92605c4e690c03b6e26
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "44778571"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45652800"
 ---
 # <a name="single-bulk-copy-operations"></a>Tekil toplu kopyalama işlemleri
 Bir SQL Server toplu kopyalama işlemi gerçekleştirmek için en kolay yaklaşım, bir veritabanında tek bir işlem gerçekleştirmektir. Varsayılan olarak, toplu kopyalama işlemi yalıtılmış bir işlem olarak gerçekleştirilir: yedekleme, geri fırsat ile işlem temelli olmayan bir şekilde, kopyalama işlemi gerçekleşir.  

@@ -3,11 +3,11 @@ title: Oluşturucular (F#)
 description: 'Tanımlamak ve oluşturucular F # oluşturup sınıfı ve yapı nesneleri için kullanma hakkında bilgi edinin.'
 ms.date: 05/16/2016
 ms.openlocfilehash: ff2463f890034cce0bbaa85d9a5c93e50427cd03
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45508440"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45658647"
 ---
 # <a name="constructors"></a>Oluşturucular
 

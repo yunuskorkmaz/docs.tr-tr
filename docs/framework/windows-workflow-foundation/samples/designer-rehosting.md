@@ -3,11 +3,11 @@ title: Tasarımcıyı yeniden barındırma
 ms.date: 03/30/2017
 ms.assetid: b676ad31-5f64-4d84-9a36-b4d7113a2f4d
 ms.openlocfilehash: 1901df62ccdeec3f75ce0d8cd85484f46fac4541
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44274102"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45652930"
 ---
 # <a name="designer-rehosting"></a>Tasarımcıyı yeniden barındırma
 Tasarımcı yeniden barındırma başvuran özel bir uygulama içinde iş akışı tasarım tuvali barındırmak için kullanılan yaygın bir senaryodur. Çoğu kişi bilginiz barındırma kullanılabilen birkaç senaryolar burada iş akışı Tasarımcısı uygulamada gösteren yararlı olabilir ancak Visual Studio uygulamasıdır:  
