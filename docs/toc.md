@@ -82,7 +82,7 @@
 ### [Mac için Visual Studio kullanarak macOS üzerinde .NET Core kullanmaya başlama](core/tutorials/using-on-mac-vs.md)
 ### [Mac için Visual Studio kullanarak macOS’ta eksiksiz bir .NET Core çözümü derleme](core/tutorials/using-on-mac-vs-full-solution.md)
 ### [CLI araçları ile .NET Core kullanmaya başlama](core/tutorials/using-with-xplat-cli.md)
-#### [.NET Core komut satırı ile projeleri düzenleme ve test etme](core/tutorials/testing-with-cli.md)
+### [.NET Core komut satırı ile projeleri düzenleme ve test etme](core/tutorials/testing-with-cli.md)
 ### [Platformlar Arası Araçlarla Kitaplık Geliştirme](core/tutorials/libraries.md)
 ### [ASP.NET Core uygulamaları geliştirme](core/tutorials/aspnet-core.md)
 ### [.NET Core 1.0 için Paket Bağımlılığı Sürümlerini Yönetme](core/tutorials/managing-package-dependency-versions.md)
