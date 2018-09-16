@@ -5,12 +5,12 @@ helpviewer_keywords:
 - clients [WCF], running
 - WCF clients [WCF], running
 ms.assetid: a67884cc-1c4b-416b-8c96-5c954099f19f
-ms.openlocfilehash: 9e6d75bf8911a3c36e63b3bc108faae823434d1d
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.openlocfilehash: e5655a6fdc06e69d801cb38b7ee7412450f0d34c
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44510005"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45674149"
 ---
 # <a name="how-to-create-a-windows-communication-foundation-client"></a>Nasıl yapılır: Bir Windows Communication Foundation İstemcisi Oluşturma
 
@@ -36,18 +36,18 @@ Bu konuda, bir WCF hizmetinden meta verileri alma ve hizmete erişmek bir WCF pr
 
 3.  System.ServiceModel başvuru GettingStartedClient projeye sağ tıklayarak ekleyin **başvuru** klasörü altında Çözüm Gezgini seçip GettingStartedClient proje **Ekle** Başvuru. İçinde **Başvuru Ekle** iletişim kutusunda **Framework** iletişim kutusunun sol taraftaki. Derlemeleri arama metin kutusuna yazın `System.ServiceModel`. İletişim kutusunun orta kısmını seçin **System.ServiceModel**, tıklayın **Ekle** düğmesini **Kapat** düğmesi. Çözüm Kaydet'e tıklayarak **Tümünü Kaydet** aşağıda ana menü düğmesi.
 
-4.  Ardından bir hesap makinesi hizmetine hizmet başvurusu ekleyin. Bunu yapmadan önce GettingStartedHost konsol uygulamasını başlatmanız gerekir. Konak çalıştırıldıktan sonra sağ **başvuruları** klasörü altında GettingStartedClient projede **Çözüm Gezgini** seçip **Ekle**  >   **Hizmet başvurusu**. Adres kutusuna şu URL'yi yazın **hizmet Başvurusu Ekle** iletişim: [ http://localhost:8000/ServiceModelSamples/Service ](http://localhost:8000/ServiceModelSamples/Service) tıklatıp **Git** düğmesi. CalculatorService Hizmetleri liste kutusunda sonra görüntülenmelidir. CalculatorService çift tıklayın ve onu genişletin ve hizmeti tarafından uygulanan hizmet sözleşmelerini gösterir. Varsayılan ad olan ve'ı tıklatın bırakın **Tamam** düğmesi.
+4.  Ardından bir hesap makinesi hizmetine hizmet başvurusu ekleyin. Bunu yapmadan önce GettingStartedHost konsol uygulamasını başlatmanız gerekir. Konak çalıştırıldıktan sonra sağ **başvuruları** klasörü altında GettingStartedClient projede **Çözüm Gezgini** seçip **Ekle**  >   **Hizmet başvurusu**. Adres kutusuna şu URL'yi yazın **hizmet Başvurusu Ekle** iletişim: [ http://localhost:8000/GettingStartedClient/Service ](http://localhost:8000/GettingStartedClient/Service) tıklatıp **Git** düğmesi. CalculatorService Hizmetleri liste kutusunda sonra görüntülenmelidir. CalculatorService çift tıklayın ve onu genişletin ve hizmeti tarafından uygulanan hizmet sözleşmelerini gösterir. Varsayılan ad olan ve'ı tıklatın bırakın **Tamam** düğmesi.
 
      Yeni bir öğe Visual Studio kullanarak bir hizmet başvurusu GettingStartedClient projesi altındaki hizmet başvuruları klasörünün altında Çözüm Gezgini'nde görünür eklerken.  Kullanırsanız [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) aracı bir kaynak kodu dosyası ve app.config dosyası oluşturulur.
 
      Komut satırı aracını da kullanabilirsiniz [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) istemci kodu oluşturmak için uygun anahtarlara sahip. Aşağıdaki örnek, bir kod dosyası ve hizmet için bir yapılandırma dosyası oluşturur. İlk örnek VB proxy oluşturma işlemini gösterir ve ikinci oluşturulan proxy C# ' de gösterilmiştir:
 
     ```
-    svcutil.exe /language:vb /out:generatedProxy.vb /config:app.config http://localhost:8000/ServiceModelSamples/service
+    svcutil.exe /language:vb /out:generatedProxy.vb /config:app.config http://localhost:8000/GettingStartedClient/service
     ```
 
     ```csharp
-    svcutil.exe /language:cs /out:generatedProxy.cs /config:app.config http://localhost:8000/ServiceModelSamples/service
+    svcutil.exe /language:cs /out:generatedProxy.cs /config:app.config http://localhost:8000/GettingStartedClient/service
     ```
 
  İstemci uygulamanızın hesaplayıcı hizmeti çağırmak için kullanacağı Ara oluşturdunuz. Serideki sonraki konuya geçin: [nasıl yapılır: istemci yapılandırma](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md)

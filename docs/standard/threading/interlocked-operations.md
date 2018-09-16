@@ -13,11 +13,11 @@ ms.assetid: cbda7114-c752-4f3e-ada1-b1e8dd262f2b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6478ea94b6c54272a01497ac7b1cb1b197892309
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45527492"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45675710"
 ---
 # <a name="interlocked-operations"></a>Birbirine Kenetlenmiş İşlemler
 <xref:System.Threading.Interlocked> Sınıfı, birden çok iş parçacığı tarafından paylaşılan bir değişkene erişimi eşitleme yöntemler sağlar. Değişken paylaşılan bellekte ise, iş parçacıkları farklı işlemler, bu mekanizma kullanabilirsiniz. Birbirine kenetlenmiş işlemler atomik — diğer bir deyişle, tüm işlemi aynı değişken üzerinde başka bir birbirine kenetlenmiş işlem tarafından kesintiye birimidir. Burada bir iş parçacığı bir bellek adresi, ancak önce onu değiştirmenize ve depolamak için bir fırsat sahip bir değer yüklendikten sonra askıya alınmadan bu işletim sistemlerinde preemptive ile çoklu iş parçacığı önem taşır.  

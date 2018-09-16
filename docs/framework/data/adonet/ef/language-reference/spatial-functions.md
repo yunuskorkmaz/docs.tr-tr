@@ -3,11 +3,11 @@ title: Uzamsal İşlevler
 ms.date: 03/30/2017
 ms.assetid: 90cb177d-88a0-45be-97e8-3b306283c6e0
 ms.openlocfilehash: ad6b722e84aae40354e30434b107752d02352645
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45526674"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45676155"
 ---
 # <a name="spatial-functions"></a>Uzamsal İşlevler
 Uzamsal türler için sabit biçim yoktur. Ancak, iyi bilinen metin biçiminde dizeleriyle çağrı kurallı Entity Framework işlevleri kullanabilirsiniz. Örneğin, aşağıdaki işlev çağrısı geometri noktası oluşturur:  

@@ -9,11 +9,11 @@ ms.assetid: 9404d758-679f-4ffb-995d-3d07d817659e
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1d8b8c21af8ca0a21d97e8246ad82c42aaaf4974
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44342608"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45678580"
 ---
 # <a name="migrating-from-the-xsltransform-class"></a>XslTransform sınıfından geçirme
 XSLT mimari olarak tasarlandı [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)] bırakın. <xref:System.Xml.Xsl.XslTransform> Sınıfı tarafından değiştirilmiştir <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı.  

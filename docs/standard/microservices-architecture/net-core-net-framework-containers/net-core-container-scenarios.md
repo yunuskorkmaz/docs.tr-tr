@@ -1,57 +1,59 @@
 ---
-title: Ne zaman Docker kapsayıcıları için .NET Core seçin
-description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Ne zaman Docker kapsayıcıları için .NET Core seçin
+title: .NET Core için Docker kapsayıcıları ne zaman
+description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | .NET Core için Docker kapsayıcıları ne zaman
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/18/2017
-ms.openlocfilehash: 761a9579cc301b7ca4b949a2a83af20ab8bb0f20
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 09/11/2018
+ms.openlocfilehash: fa5efd3c2478965ef01efc39b57918ec2d35962a
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104660"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45666609"
 ---
-# <a name="when-to-choose-net-core-for-docker-containers"></a>Ne zaman Docker kapsayıcıları için .NET Core seçin
+# <a name="when-to-choose-net-core-for-docker-containers"></a>.NET Core için Docker kapsayıcıları ne zaman
 
-.NET Core modülerlik ve basit yapısını kapsayıcıları için ideal hale getirir. Dağıtma ve bir kapsayıcı başlatma görüntüsünü .NET çerçevesi ile .NET Core ile çok daha küçük olur. Buna karşılık, .NET Framework için bir kapsayıcı kullanmak için görüntünüzü Windows Nano Server veya .NET Core için kullandığınız Linux görüntüleri daha çok daha ağır Windows Server Core görüntüyü temel gerekir.
+.NET Core modüler ve hafif yapısını kapsayıcılar için mükemmel bir hale getirir. Bir kapsayıcı başlatma dağıtırken, .NET Framework ile .NET Core çok daha küçük bir görüntüsüdür. Buna karşılık, .NET Framework için bir kapsayıcı kullanmak için görüntünüzü Windows Nano sunucu veya .NET Core için kullandığınız Linux görüntüleri daha çok daha ağır Windows Server Core görüntüyü temel gerekir.
 
-Ayrıca, Linux veya Windows kapsayıcı görüntü ile sunucu uygulamaları dağıtabilmek için .NET Core platformlar arası ' dir. Ancak, geleneksel .NET Framework'te kullanıyorsanız, yalnızca Windows Server Core üzerinde görüntülerini dağıtabilirsiniz.
+Ayrıca, Linux veya Windows kapsayıcı görüntüleri ile sunucu uygulamaları dağıtabilirsiniz böylece .NET Core platformlar arası. Bununla birlikte, geleneksel .NET Framework kullanıyorsa, yalnızca Windows Server Core'da temelinde görüntülerini dağıtabilirsiniz.
 
 .NET Core seçmek neden daha ayrıntılı bir açıklaması verilmiştir.
 
-## <a name="developing-and-deploying-cross-platform"></a>Geliştirme ve platform dağıtma
+## <a name="developing-and-deploying-cross-platform"></a>Geliştirme ve platformlar arası dağıtma
 
-Amacınız için .NET Framework yalnızca Windows desteklediğinden Açıkçası, doğru seçim (Linux ve Windows), Docker tarafından desteklenen birden çok platformu üzerinde çalışan bir uygulama (web uygulaması veya hizmeti) .NET Core ise.
+Amacınız için .NET Framework yalnızca Windows desteklediğinden NET bir şekilde, doğru seçim (Linux ve Windows), Docker tarafından desteklenen çeşitli platformlarda çalışabilen bir uygulama (web uygulaması veya hizmeti) .NET Core ise.
 
-.NET core macOS geliştirme platformu olarak da destekler. Kapsayıcıları bir Docker konağına dağıttığınızda, ancak bu ana bilgisayar (şu anda) Linux veya Windows üzerinde temel alması gerekir. Örneğin, bir geliştirme ortamında, Mac'te çalışan bir Linux VM kullanabilirsiniz
+.NET core, macOS geliştirme platformu olarak da destekler. Kapsayıcıları bir Docker konağına dağıttığınızda, ancak bu ana bilgisayar (şu anda) Linux veya Windows üzerinde temel alması gerekir. Örneğin, bir geliştirme ortamında, bir Mac üzerinde çalışan bir Linux VM kullanabilirsiniz
 
-[Visual Studio](https://visualstudio.microsoft.com/) için Windows tümleşik geliştirme ortamı (IDE) sağlar ve Docker için geliştirmeyi destekler. 
+[Visual Studio](https://www.visualstudio.com/vs/) Windows için bir tümleşik geliştirme ortamı (IDE) sağlar ve Docker için geliştirmeyi destekler.
 
-[Mac için Visual Studio](https://visualstudio.microsoft.com/vs/visual-studio-mac/) bir IDE içinde macOS çalıştıran Xamarin Studio evrimi ve Docker mid-2017 bu yana destekler.
+[Mac için Visual Studio](https://www.visualstudio.com/vs/visual-studio-mac/) macOS üzerinde çalışır ve Docker tabanlı uygulama geliştirmeyi destekleyen Xamarin Studio evrimi bir IDE. Bu da güçlü bir IDE kullanmak isteyen Mac makinelerinizde çalışan geliştiriciler için tercih edilen seçenek olmalıdır.
 
-Aynı zamanda [Visual Studio Code](https://code.visualstudio.com/) (VS Code) macOS, Linux ve Windows üzerinde. VS Code .NET Core ve hata ayıklama IntelliSense dahil olmak üzere, tam olarak destekler. VS Code basit bir düzenleyici olduğundan, Docker CLI ile birlikte Mac kapsayıcılı uygulamaları geliştirmek için kullanabilirsiniz ve [.NET Core komut satırı arabirimi (CLI) araçları](../../../core/tools/index.md). Ayrıca, Sublime Text, Emacs, VI ve .NET dilleri için IntelliSense desteği sağlayan açık kaynak OmniSharp proje gibi üçüncü taraf en düzenleyicileri ile .NET Core hedefleyebilirsiniz. IDE ve düzenleyiciler ek olarak, .NET Core CLI desteklenen tüm platformlar için kullanabilirsiniz.
+Ayrıca [Visual Studio Code](https://code.visualstudio.com/) (VS Code) macOS, Linux ve Windows. VS Code, .NET Core hata ayıklama ve IntelliSense dahil olmak üzere, tam olarak destekler. VS Code basit Düzenleyici olduğundan, kapsayıcılı uygulamaları Docker CLI ile birlikte Mac'te geliştirin olarak da kullanabilirsiniz ve [.NET Core komut satırı arabirimi (CLI)](https://docs.microsoft.com/dotnet/core/tools/?tabs=netcore2x). Ayrıca, Sublime, Emacs, VI ve IntelliSense desteği sağlayan açık kaynaklı OmniSharp proje gibi üçüncü taraf en düzenleyicileri ile .NET Core hedefleyebilirsiniz.
+
+IDE'ler ve düzenleyicilerden ek olarak kullanabileceğiniz [.NET Core CLI](https://docs.microsoft.com/dotnet/core/tools/?tabs=netcore2x) desteklenen tüm platformlar için Araçlar.
 
 ## <a name="using-containers-for-new-green-field-projects"></a>Yeni ("alanı yeşil") projeler için kapsayıcıları kullanma
 
-Web uygulamaları veya herhangi bir mimari modeliyle izleyin Hizmetleri containerize için de kullanılabilir olsa da kapsayıcıları genellikle mikro mimarisi ile birlikte kullanılır. .NET Core basit yapısını kapsayıcıları ve mikro mimarileri için mükemmel bir yapar ve .NET Framework Windows kapsayıcıları ancak modülerlik kullanabilirsiniz. Oluşturduğunuzda ve bir kapsayıcıyı dağıtmak görüntüsünü kadar ile .NET çerçevesi ile .NET çekirdek küçüktür.
+Web uygulamaları veya herhangi bir mimari deseni izleyen Hizmetleri kapsayıcılı hale getirme için de kullanılabilir olsa da kapsayıcılar, mikro hizmet mimarisi ile birlikte sık kullanılan bloblardır. .NET Framework Windows kapsayıcıları ancak modülerlik kullanabilirsiniz ve .NET Core basit doğasını kapsayıcıları ve mikro hizmet mimarileri için mükemmel yapar. Bir kapsayıcı oluşturup görüntüsünü .NET Framework ile .NET Core çok daha küçük olur.
 
-## <a name="creating-and-deploying-microservices-on-containers"></a>Oluşturma ve mikro kapsayıcılarında dağıtma
+## <a name="creating-and-deploying-microservices-on-containers"></a>Oluşturma ve mikro hizmetler kapsayıcılarına dağıtma
 
-Geleneksel .NET Framework düz işlemleri kullanarak mikro tabanlı uygulamaları (olmadan kapsayıcıları) oluşturmak için kullanabilirsiniz. Böylece, .NET Framework zaten yüklü ve süreçler arasında paylaşılan çünkü işlemleri açık olan ve başlatmak için hızlı. Ancak, kapsayıcıları kullanıyorsanız, görüntünün geleneksel .NET Framework için Windows Server Core üzerinde temel alır ve, mikro üzerinde kapsayıcıları yaklaşım için çok yoğun yapar.
+Geleneksel .NET Framework düz işlemleri kullanarak mikro hizmet tabanlı uygulamalar (kapsayıcılar) olmadan oluşturmak için kullanabilirsiniz. Böylece, .NET Framework yüklü ve süreçler arasında paylaşılan işlemleri açık olan ve başlamak için hızlı. Ancak, kapsayıcıları kullanıyorsanız, görüntü geleneksel .NET Framework için de Windows Server Core'da dayalıdır ve, bir kapsayıcı üzerinde mikro hizmetler yaklaşımı çok ağır yapar.
 
-Buna karşılık, .NET Core .NET Core basit olduğundan kapsayıcılara göre tabanlı mikro odaklı bir sistem benimsemenin, en iyi adaydır. Ayrıca, Linux veya Windows Nano görüntüsüne ya da kendi ilgili kapsayıcı görüntüleri yalın ve başlatmak için hızlı ve küçük kapsayıcıları açık hale getirme.
+Buna karşılık, .NET Core, .NET Core basit olduğu için kapsayıcılarında, temel bir mikro hizmet odaklı bir sistemi benimsemektedir en iyi adaydır. Ayrıca, ilgili kapsayıcı görüntülerini, Linux görüntüsü ya da Windows Nano görüntü yalın ve küçük kapsayıcıları açık hale getirme ve başlamak için hızlı.
 
-Bir mikro hizmet olabildiğince küçük olacak şekilde tasarlanmıştır: Yukarı dönmesini açık olması için bir küçük ilişkisindeki bağlamı, sorunları, küçük bir alanı temsil eder ve hızlı durdurmak ve başlatmak olması için küçük bir yer sağlamak için. Bu gereksinimleri için .NET Core kapsayıcı görüntü gibi küçük ve örneği hızlı kapsayıcı görüntüleri kullanmak istersiniz.
+Bir mikro hizmet, olabildiğince az olacak şekilde tasarlanmıştır: yedekleme dönen açık olması, küçük bir sınırlanmış bağlam sağlamak için küçük bir boyut için (DDD, kontrol [etki alanı Odaklı Tasarım](https://en.wikipedia.org/wiki/Domain-driven_design)), ilgilenilecek alanların küçük bir alanı temsil etmek için ve başlatabilmeniz için ve hızlı durdurun. Bu gereksinimleri için .NET Core kapsayıcı görüntüsü gibi küçük ve örneği hızlı kapsayıcı görüntülerini kullanmak isteyebilirsiniz.
 
-Mikro mimarisi teknolojileri hizmet sınırından karışık sağlar. Bu, .NET Core için aşamalı bir geçiş için diğer mikro veya Node.js, Python, Java, GoLang veya diğer teknolojiler ile geliştirilen Hizmetleri ile birlikte çalışma yeni mikro sağlar.
+Bir mikro hizmet mimarisi hizmet sınırında teknolojilerinin karışımı sağlar. Bu, aşamalı bir geçiş .NET Core, Node.js, Python, Java, GoLang veya diğer teknolojiler ile geliştirilen Hizmetleri veya diğer mikro hizmetler ile birlikte çalışan yeni mikro hizmetler için sağlar.
 
-## <a name="deploying-high-density-in-scalable-systems"></a>Yüksek yoğunluklu ölçeklenebilir sistemleri dağıtma
+## <a name="deploying-high-density-in-scalable-systems"></a>Yüksek yoğunluklu ölçeklenebilir sistemlerini dağıtma
 
-Kapsayıcı tabanlı sisteminizin en iyi olası yoğunluğu, ayrıntı düzeyi ve performans gerektiğinde, .NET Core ve ASP.NET Core en iyi seçenekleriniz şunlardır. ASP.NET Core en fazla on kez geleneksel .NET Framework ASP.NET hızlıdır ve diğer popüler endüstri teknolojileri Java servlets, Git ve Node.js gibi mikro için yol açar.
+.NET Core ve ASP.NET Core, kapsayıcı tabanlı sisteminizi en iyi olası yoğunluğu, ayrıntı düzeyi ve performans gerektiğinde, en iyi seçenekleriniz şunlardır. ASP.NET Core on kata kadar daha hızlı bir şekilde ASP.NET geleneksel .NET Framework ve mikro hizmetler, Java servlet'ler, Git ve Node.js gibi diğer popüler sektör teknolojiler gidiyor.
 
-Bu özellikle çalıştıran mikro (kapsayıcı) yüzlerce olduğu mikro mimari için geçerlidir. (.NET çekirdeği Çalışma Zamanı Modülü) ASP.NET Core görüntülerini ile Linux veya Windows Nano, çok daha az sayıda sunucular veya VM'ler, sonuçta altyapısında maliyetleri kaydetme ve barındırma sisteminizle çalıştırabilirsiniz.
+Bu özellikle burada çalışan mikro hizmetler (kapsayıcılar) yüzlerce olabilir, mikro hizmet mimarileri için geçerlidir. (.NET Core çalışma zamanına göre) ASP.NET Core görüntülerinde ile Linux veya Windows Nano çok daha az sayıda sunucular veya VM'ler, sonuçta maliyetleri altyapısında kaydetme ve barındırma sisteminizle çalıştırabilirsiniz.
 
 
 >[!div class="step-by-step"]
 [Önceki](general-guidance.md)
-[sonraki](net-framework-container-scenarios.md)
+[İleri](net-framework-container-scenarios.md)

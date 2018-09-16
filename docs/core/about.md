@@ -4,19 +4,19 @@ description: .NET Core hakkında bilgi edinin.
 author: richlander
 ms.author: mairaw
 ms.date: 08/01/2018
-ms.openlocfilehash: 5a8d0a45e0113afd1dbb5f243f3ed45f4bfc0760
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: d9943246b683c8fd892e7bc5fd09a10b72e31a5f
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087776"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45678939"
 ---
 # <a name="about-net-core"></a>.NET Core hakkında
 
 .NET core, aşağıdaki özelliklere sahiptir:
 
 - **Platformlar arası:** Windows, macOS ve Linux'ta çalışan [işletim sistemleri](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md).
-- **Architecures arasında tutarlı:** kodunuz ile aynı davranışı x64, x86 ve ARM gibi birden fazla mimari üzerinde çalışır.
+- **Mimariler arasında tutarlı:** kodunuz ile aynı davranışı x64, x86 ve ARM gibi birden fazla mimari üzerinde çalışır.
 - **Komut satırı araçları:** , kullanımı kolay komut satırı araçlarını içerir yerel geliştirme için ve sürekli tümleştirme senaryolarında kullanılır.
 - **Esnek dağıtım:** uygulamanıza dahil edilebilir ya da yan yana kullanıcı - veya makineye yüklü. Kullanılabilir [Docker kapsayıcıları](docker/index.md).
 - **Uyumlu:** .NET Core, .NET Framework, Xamarin ve Mono, uyumlu aracılığıyla [.NET Standard](../standard/net-standard.md).

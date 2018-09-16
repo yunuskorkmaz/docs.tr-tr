@@ -14,11 +14,11 @@ helpviewer_keywords:
 - binary serialization, examples
 ms.assetid: 22f1b818-7e0d-428a-8680-f17d6ebdd185
 ms.openlocfilehash: 4b83e841db1afc898c5c3c99ed4186fd264ed2ef
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45585505"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45676551"
 ---
 # <a name="how-to-chunk-serialized-data"></a>Nasıl yapılır: seri hale getirilmiş verileri öbek
 

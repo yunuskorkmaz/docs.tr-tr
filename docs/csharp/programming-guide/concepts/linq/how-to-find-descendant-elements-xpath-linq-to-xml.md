@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: alt öğeleri bulma (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: b318da39-bb8b-4c56-a019-e13b12b01831
 ms.openlocfilehash: df1b151948b7b11757f2f8f312fa1f0bba00673a
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45585539"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45675660"
 ---
 # <a name="how-to-find-descendant-elements-xpath-linq-to-xml-c"></a>Nasıl yapılır: alt öğeleri bulma (XPath-LINQ to XML) (C#)
 Bu konuda, belirli bir ada sahip alt öğeleri almak gösterilmektedir.  

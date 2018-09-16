@@ -1,24 +1,28 @@
 ---
 title: .NET içinde Paralel Programlama
-ms.date: 03/30/2017
+ms.date: 09/12/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - parallel programming
 ms.assetid: 4d83c690-ad2d-489e-a2e0-b85b898a672d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 372ffd7e17f60b8045cd5f89d52456c5f9655de1
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 3d1cd0b797373da4cab59484e3e6302927d821ed
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43802309"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45676739"
 ---
 # <a name="parallel-programming-in-net"></a>.NET içinde Paralel Programlama
 
-Birçok Kişisel bilgisayarları ve iş istasyonları, birden çok iş parçacığının aynı anda yürütülmesini sağlayan birden fazla CPU çekirdeği var. Yakın gelecekte bilgisayarların önemli ölçüde daha fazla çekirdeğe sahip olacağı tahmin edilmektedir. Bugünün ve yarının donanımlarından yararlanmak için kodunuzu işi birden fazla işlemci arasında dağıtacak şekilde paralel hale getirebilirsiniz. Geçmişte, paralel hale getirme için iş parçacıklarının ve kilitlerin düşük düzeyde kullanımı gerekiyordu. Visual Studio 2010 ve .NET Framework 4, yeni bir çalışma zamanı, yeni sınıf kitaplığı türleri ve yeni tanılama araçları sağlayarak paralel programlama için destek geliştirin. Bu özellikler, doğrudan iş parçacıkları veya iş parçacığı havuzuyla çalışmak zorunda kalmadan doğal bir ifadede etkili, ayrıntılı ve ölçeklenebilir paralel kod yazmanız için paralel geliştirmeyi basitleştirir. Aşağıdaki çizim, .NET Framework 4 içinde paralel programlama mimarisi üst düzey bir genel bakış sağlar.
+Birçok Kişisel bilgisayarları ve iş istasyonları, birden çok iş parçacığının aynı anda yürütülmesini sağlayan birden çok CPU çekirdeği var. Donanım yararlanmak için kodunuzu iş birden çok işlemci arasında dağıtacak şekilde paralel hale getirebilirsiniz.
 
- ![.NET paralel programlama mimarisi](./media/tpl-architecture.png "TPL_Architecture")
+Geçmişte, paralel hale getirme için iş parçacıklarının ve kilitlerin düşük düzeyde kullanımı gerekiyordu. Visual Studio ve .NET Framework, bir çalışma zamanı, sınıf kitaplığı türleri ve tanılama araçları sağlayarak paralel programlama için destek geliştirin. .NET Framework 4 ile tanıtılan, bu özellikler için paralel geliştirmeyi basitleştirir. Doğrudan iş parçacıkları veya iş parçacığı havuzuyla çalışmak zorunda kalmadan doğal bir ifadede etkili, ayrıntılı ve ölçeklenebilir paralel kod yazabilirsiniz.
+
+Aşağıdaki çizim, .NET Framework'te paralel programlama mimarisi üst düzey bir genel bakış sağlar:
+
+![.NET paralel programlama mimarisi](./media/tpl-architecture.png)
 
 ## <a name="related-topics"></a>İlgili Konular
 

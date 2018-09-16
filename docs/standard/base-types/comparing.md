@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b1fa907be4571e0a5f95ab798210bedb154e9170
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.openlocfilehash: d8f126aa5b69c99beae740de261ac3da3c5d2544
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45507738"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45674630"
 ---
 # <a name="comparing-strings-in-net"></a>. NET'te dizeleri karşılaştırma
 .NET, dizeleri karşılaştırmak için çeşitli yöntemler sunar. Aşağıdaki tabloda, listeler ve değer karşılaştırma yöntemleri açıklar.  
@@ -154,4 +154,5 @@ ms.locfileid: "45507738"
 
 - [Temel Dize İşlemleri](../../../docs/standard/base-types/basic-string-operations.md)  
 - [Kültüre Duyarsız Dize İşlemlerini Gerçekleştirme](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
-- [Sıralama ağırlık tabloları](https://www.microsoft.com/en-us/download/details.aspx?id=10921)
+- [Sıralama ağırlık tablolar (için Windows üzerinde .NET)](https://www.microsoft.com/en-us/download/details.aspx?id=10921)
+- [Varsayılan Unicode Harmanlama öğesi tablosu (Linux ve Macos'ta .NET Core)](https://www.unicode.org/Public/UCA/latest/allkeys.txt)

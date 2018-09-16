@@ -3,11 +3,11 @@ title: Kullanıcı tanımlı CLR Türleri
 ms.date: 03/30/2017
 ms.assetid: 9f70e0b0-3a0d-4eb1-b914-07a5d0c167c2
 ms.openlocfilehash: 4ea415a348375c52e42ddf26ea09a74e7de5e355
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45561090"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45673772"
 ---
 # <a name="clr-user-defined-types"></a>Kullanıcı tanımlı CLR Türleri
 Microsoft SQL Server, Microsoft .NET Framework ortak dil çalışma zamanı ile (CLR) uygulanan kullanıcı tanımlı türler(UDT) için destek sağlar. SQL Server CLR tümleşiktir ve bu tür sistemi veritabanının genişletmenizi sağlar. Udt'ler kullanıcı genişletilebilirlik SQL Server veri türü sistemi hem de karmaşık yapılandırılmış türler tanımlama yeteneği sağlar.  

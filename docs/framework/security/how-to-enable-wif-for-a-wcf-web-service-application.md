@@ -5,11 +5,11 @@ ms.assetid: bfc64b3d-64e9-4093-a6a4-72e933917af7
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 71897299d68c2f0e43def8e70730ea456d6e9e24
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45514631"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45678991"
 ---
 # <a name="how-to-enable-wif-for-a-wcf-web-service-application"></a>Nasıl yapılır: WCF Web hizmeti uygulaması için WIF etkinleştirme
 ## <a name="applies-to"></a>Uygulandığı öğe:  

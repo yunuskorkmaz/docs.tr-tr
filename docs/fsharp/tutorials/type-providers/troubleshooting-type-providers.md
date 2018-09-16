@@ -3,11 +3,11 @@ title: Tür Sağlayıcıları Sorunlarını Giderme
 description: 'Tür sağlayıcıları F # kullanırken karşılaşabileceğiniz en olası sorunlar için olası çözümleri keşfedin.'
 ms.date: 05/16/2016
 ms.openlocfilehash: f3b8ffdaf615563305b7b84b45a9ed1e066d0dcc
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45589134"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45685692"
 ---
 # <a name="troubleshooting-type-providers"></a>Tür Sağlayıcıları Sorunlarını Giderme
 

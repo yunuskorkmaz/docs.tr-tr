@@ -1,62 +1,92 @@
 ---
-title: Karar tablo. .NET Framework için Docker kullanmak için
-description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Karar tablosu, .NET Framework için Docker kullanmak için
+title: Karar tablosu. Docker için kullanılacak .NET çerçeveleri
+description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Karar tablosu, Docker için kullanılacak .NET çerçeveleri
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/18/2017
-ms.openlocfilehash: c45fbb9f26e6cd315e1b623ba2c79d5d038a6919
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 09/11/2018
+ms.openlocfilehash: 74b3749077fdb375f84ddacd98221aa4afcf2f67
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105306"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45674019"
 ---
-# <a name="decision-table-net-frameworks-to-use-for-docker"></a>Karar tablosu: .NET Framework için Docker kullanmak için
+# <a name="decision-table-net-frameworks-to-use-for-docker"></a>Karar tablosu: Docker için kullanılacak .NET çerçeveleri
 
-.NET Framework veya .NET Core ve Windows veya Linux kapsayıcıları kullanıp kullanmayacağınızı aşağıda özetlenmiştir. Linux kapsayıcıları için Linux tabanlı Docker ana bilgisayarları (VM'ler veya sunucular) gerekir ve Docker konakları (VM'ler veya sunucular) göre Windows kapsayıcıları için Windows Server gerektiğini unutmayın.
-
-Uygulamanızın kararınızı etkileyen çeşitli özellikler vardır. Bu özellikler önemini karar verirken tartmanız gerekir.
+Aşağıdaki tabloda karar .NET Framework veya .NET Core kullanıp kullanmayacağınızı özetler. Linux kapsayıcıları için Linux tabanlı Docker konakları (VM'ler veya sunucular) gerekir ve Docker ana bilgisayarları (VM'ler veya sunucular) tabanlı Windows kapsayıcıları için Windows Server ihtiyacınız olduğunu unutmayın.
 
 > [!IMPORTANT]
-> Geliştirme makinelerinizi bir Docker ana bilgisayar, Linux veya Windows çalışır. Bir çözümde birlikte test ve çalıştırmak istediğiniz ilgili mikro tüm aynı kapsayıcı platformda çalışması gerekir.
+> Geliştirme makineleriniz bir Docker konağı, Linux veya Windows çalıştırılır. İlgili mikro hizmetler ve birlikte bir çözümde test çalıştırmak istediğiniz tüm aynı kapsayıcı platformu üzerinde çalıştırmanız gerekir.
 
-* Uygulama Mimarisi seçimdir **kapsayıcılarında mikro**.
-    - .NET uygulaması seçiminizi olmalıdır *.NET Core*.
-    - Kapsayıcı platform tercih ettiğiniz ya da olabilir *Linux kapsayıcıları* veya *Windows kapsayıcıları*.
-* Uygulama Mimarisi seçimdir bir **tek yapılı uygulama**.
-    - .NET uygulaması tercih ettiğiniz ya da olabilir *.NET Core* veya *.NET Framework*.
-    - Seçmiş olmanız durumunda *.NET Core*, kapsayıcı platform tercih ettiğiniz ya da olabilir *Linux kapsayıcıları* veya *Windows kapsayıcıları*.
-    - Seçmiş olmanız durumunda *.NET Framework*, kapsayıcı platform seçiminizi olmalıdır *Windows kapsayıcıları*.
-* Uygulamanız bir **yeni kapsayıcı tabanlı geliştirme ("alanı yeşil")**.
-    - .NET uygulaması seçiminizi olmalıdır *.NET Core*.
-    - Kapsayıcı platform tercih ettiğiniz ya da olabilir *Linux kapsayıcıları* veya *Windows kapsayıcıları*.
-* Uygulamanız bir **kapsayıcıları için Windows Server eski uygulama ("alanı kahverengi") geçiş**
-    - .NET uygulaması seçimdir *.NET Framework* framework bağımlılığını tabanlı.
-    - Kapsayıcı platform seçiminizi olmalıdır *Windows kapsayıcıları* .NET Framework bağımlılık nedeniyle.
-* Uygulamanızın tasarım hedefi olan **sınıfı içinde en iyi performans ve ölçeklenebilirlik**.
-    - .NET uygulaması seçiminizi olmalıdır *.NET Core*.
-    - Kapsayıcı platform tercih ettiğiniz ya da olabilir *Linux kapsayıcıları* veya *Windows kapsayıcıları*.
-* Kullanarak uygulamanızı yerleşik **ASP.NET Core**.
-    - .NET uygulaması seçiminizi olmalıdır *.NET Core*.
-    - Kullanabileceğiniz *.NET Framework* diğer çerçevesi bağımlılıklarına varsa uygulaması.
-    - Seçmiş olmanız durumunda *.NET Core*, kapsayıcı platform tercih ettiğiniz ya da olabilir *Linux kapsayıcıları* veya *Windows kapsayıcıları*.
-    - Seçmiş olmanız durumunda *.NET Framework*, kapsayıcı platform seçiminizi olmalıdır *Windows kapsayıcıları*.
-* Kullanarak uygulamanızı yerleşik **ASP.NET 4 (MVC 5, Web API 2 ve Web formları)**.
-    - .NET uygulaması seçimdir *.NET Framework* framework bağımlılığını tabanlı.
-    - Kapsayıcı platform seçiminizi olmalıdır *Windows kapsayıcıları* .NET Framework bağımlılık nedeniyle.
-* Uygulamanızın kullandığı **SignalR Hizmetleri**.
-    - .NET uygulaması seçiminizi olabilir *.NET Framework*, veya *.NET Core (yayımlandığında) 2.1 veya üzeri*.
-    - Kapsayıcı platform seçiminizi olmalıdır *Windows kapsayıcıları* SignalR uygulama .NET Framework seçerseniz.
-    - .NET Core 2.1 veya üzeri SignalR uygulaması (yayımlandığında) seçerseniz kapsayıcı platform seçiminizi Linux kapsayıcıları veya Windows kapsayıcıları olabilir.  
-    - Zaman **SignalR Hizmetleri** çalıştıracağınız *.NET Core*, kullanabileceğiniz *Linux kapsayıcıları ya da Windows kapsayıcıları*.
-* Uygulamanızın kullandığı **WCF, WF ve diğer eski çerçeveleri**.
-    - .NET uygulaması seçimdir *.NET Framework*, veya *(ın gelecek sürümlerinden için yol haritası) .NET Core*.
-    - Kapsayıcı platform seçiminizi olmalıdır *Windows kapsayıcıları* .NET Framework bağımlılık nedeniyle.
-* Uygulamanızı içerir **tüketim, Azure Hizmetleri**.
-    - .NET uygulaması seçimdir *.NET Framework*, veya *.NET Core (sonunda tüm Azure Hizmetleri sağlayacaktır istemci SDK'ları için .NET Core)*.
-    - Kapsayıcı platform seçiminizi olmalıdır *Windows kapsayıcıları* .NET Framework istemci API kullanıyorsanız.
-    - İstemci için kullanılabilen API'lerin kullanırsanız *.NET Core*, arasından seçim yapabilirsiniz *Linux kapsayıcıları ve Windows kapsayıcıları*.
+<table>
+<thead>
+<tr class="header">
+<th><strong>Mimari / uygulama yazın</strong></th>
+<th><strong>Linux kapsayıcıları</strong></th>
+<th><strong>Windows kapsayıcıları</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Kapsayıcıları çalıştırma</td>
+<td>.NET Core</td>
+<td>.NET Core</td>
+</tr>
+<tr class="even">
+<td>Tek parçalı uygulama</td>
+<td>.NET Core</td>
+<td><p>.NET Framework</p>
+<p>.NET Core</p></td>
+</tr>
+<tr class="odd">
+<td>Sınıfının en iyi performans ve ölçeklenebilirlik</td>
+<td>.NET Core</td>
+<td>.NET Core</td>
+</tr>
+<tr class="even">
+<td>Windows Server kapsayıcıları için eski uygulama ("alanı brown") geçiş</td>
+<td>--</td>
+<td>.NET Framework</td>
+</tr>
+<tr class="odd">
+<td>Yeni kapsayıcı tabanlı geliştirme ("alanı yeşil")</td>
+<td>.NET Core</td>
+<td>.NET Core</td>
+</tr>
+<tr class="even">
+<td>ASP.NET Core</td>
+<td>.NET Core</td>
+<td><p>.NET core (önerilir)</p>
+<p>.NET Framework</p></td>
+</tr>
+<tr class="odd">
+<td>ASP.NET 4 (MVC 5, Web API 2 ve Web Forms)</td>
+<td>--</td>
+<td>.NET Framework</td>
+</tr>
+<tr class="even">
+<td>SignalR Hizmetleri</td>
+<td>.NET core 2.1 veya üzeri bir sürüm</td>
+<td><p>.NET Framework</p>
+<p>.NET core 2.1 veya üzeri bir sürüm</p></td>
+</tr>
+<tr class="odd">
+<td>WCF, WF ve diğer eski çerçeveleri</td>
+<td>WCF .NET core'da (yalnızca WCF istemci kitaplığı)</td>
+<td><p>.NET Framework</p>
+<p>WCF .NET core'da (yalnızca WCF istemci kitaplığı)</p></td>
+</tr>
+<tr class="even">
+<td>Azure hizmetlerinin tüketiminin</td>
+<td><p>.NET Core</p>
+<p>(sonunda tüm Azure Hizmetleri İstemci SDK'ları için .NET Core sağlar)</p></td>
+<td><p>.NET Framework</p>
+<p>.NET Core</p>
+<p>(sonunda tüm Azure Hizmetleri İstemci SDK'ları için .NET Core sağlar)</p></td>
+</tr>
+</tbody>
+</table>
 
 >[!div class="step-by-step"]
 [Önceki](net-framework-container-scenarios.md)
-[sonraki](net-container-os-targets.md)
+[İleri](net-container-os-targets.md)

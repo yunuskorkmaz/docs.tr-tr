@@ -3,11 +3,11 @@ title: LINQ - Varlıklar
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
 ms.openlocfilehash: 0a02899ab9dc751cfee1127a092854b81b8360db
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44338330"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45664767"
 ---
 # <a name="linq-to-entities"></a>LINQ - Varlıklar
 LINQ to Entities, geliştiricilerin Visual Basic veya Visual C# kullanarak varlık çerçevesi kavramsal modeline karşı sorgular yazmaya olanak tanıyan dil ile tümleşik sorgu (LINQ) destekler. Entity Framework sorguları nesne bağlamı karşı yürütülen komut ağaç sorguları tarafından temsil edilir. LINQ to Entities ağaç sorgular, Entity Framework sorguları yürütür ve Entity Framework ve LINQ tarafından kullanılan nesneleri döndürür komut dil ile tümleşik sorgu (LINQ) sorguları dönüştürür. Oluşturma ve bir LINQ to Entities sorgusunda yürütme işlemi aşağıda verilmiştir:  

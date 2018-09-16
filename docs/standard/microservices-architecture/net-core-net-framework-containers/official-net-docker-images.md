@@ -1,60 +1,56 @@
 ---
 title: Resmi .NET Docker görüntüleri
-description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Resmi .NET Docker görüntüleri
+description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Resmi .NET Docker görüntüleri
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 06/06/2018
-ms.openlocfilehash: 8664493f3d5d5e03cccbe1c33f2c2abe048e3f57
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 09/11/2018
+ms.openlocfilehash: 5d42ec77958e056b75b0e379f8ab520ac926c72a
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105582"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45666648"
 ---
 # <a name="official-net-docker-images"></a>Resmi .NET Docker görüntüleri
 
-Resmi .NET Docker görüntüleri oluşturulur ve Microsoft tarafından en iyi duruma getirilmiş Docker görüntüleri bağımsızdır. Microsoft depoları üzerinde genel kullanıma açık bulundukları [Docker hub'a](https://hub.docker.com/u/microsoft/). Her depo .NET sürümleri bağlı olarak ve işletim sistemi ve sürümleri (Linux Debian, Alpine Linux, Windows Nano Server, Windows Server Core, vb.) bağlı olarak birden fazla görüntü içerebilir.
+Resmi .NET Docker görüntüleri oluşturulan ve Microsoft tarafından en iyi duruma getirilmiş Docker görüntüleridir. Microsoft depolara göre genel kullanıma açık olduğu [Docker Hub](https://hub.docker.com/u/microsoft/). Her depo bağlı .NET sürümleri ve işletim sistemi ve sürümleri (Linux, Debian, Alpine Linux, Windows Nano sunucu, Windows Server Core, vb.) bağlı olarak birden çok görüntüsü içerebilir.
 
-.NET Core 2.1 itibaren Docker Hub'ına adresindeki ASP.NET Core için de dahil olmak üzere tüm .NET Core görüntüleri kullanılabilir [.NET Core görüntü deposuna](https://hub.docker.com/r/microsoft/dotnet/).
+.NET Core 2.1 beri ASP.NET Core için de dahil olmak üzere tüm .NET Core görüntüleri adresinde deponun .NET Core görüntü Docker Hub kullanılabilir: https://hub.docker.com/r/microsoft/dotnet/
 
-Çoğu görüntü depoları, yalnızca belirli framework sürümünü seçmenize yardımcı olmak için aynı zamanda bir işletim sistemine (Linux distro veya Windows sürümü) seçmek için kapsamlı etiketleme sağlar.
+Çoğu resmi depoları, yalnızca belirli framework sürümü seçmenize yardımcı olmak için aynı zamanda (Linux distro veya Windows sürümü) bir işletim sistemi seçin kapsamlı etiketleme sağlar.
 
+## <a name="net-core-and-docker-image-optimizations-for-development-versus-production"></a>Üretim ve geliştirme için .NET core ve Docker görüntü iyileştirmeleri
 
-## <a name="net-core-and-docker-image-optimizations-for-development-versus-production"></a>.NET core ve Docker görüntü iyileştirmeler geliştirme üretim karşılaştırması
+Geliştiriciler için Docker görüntülerini oluştururken, Microsoft aşağıdaki temel senaryolara odaklanır:
 
-Geliştiriciler için Docker görüntülerinizi oluşturmak, Microsoft aşağıdaki ana senaryoları odaklanır:
+-   Kullanılacak görüntüleri *geliştirme* ve .NET Core uygulamaları oluşturun.
 
--   Kullanılacak görüntüleri *geliştirmek* ve .NET Core uygulamaları oluşturun.
+-   Kullanılacak görüntüleri *çalıştırma* .NET Core uygulamaları.
 
--   Kullanılacak görüntüleri *çalıştırmak* .NET Core uygulamaları.
-
-Neden birden fazla görüntü? Geliştirme, derleme ve kapsayıcılı uygulamaları çalıştıran genellikle farklı önceliklere sahip. Microsoft, bu farklı görevler için farklı görüntüleri sağlayarak, geliştirme, derleme ve uygulamaları dağıtma ayrı işlemleri en iyi duruma getirme yardımcı olur.
+Neden birden çok görüntü? Geliştirme, derleme ve kapsayıcılı uygulamalar çalıştırmak, genellikle farklı önceliklere sahip. Microsoft, ayrı aşağıdaki görevler için farklı görüntüleri sağlayarak geliştirme, derleme ve uygulamaları dağıtma ayrı işlemleri iyileştirilmesine yardımcı olur.
 
 ### <a name="during-development-and-build"></a>Geliştirme ve derleme sırasında
 
-Geliştirme sırasında ne kadar hızlı değişiklikler ve değişiklikleri hata ayıklama özelliği yineleyebilirsiniz önemli olan ' dir. Görüntü boyutunu kodunuzda değişiklikler yapmak ve değişiklikleri hızlıca görmek yeteneği gibi önemli değildir. Bazı araçlar ve "yapı aracısı kapsayıcıları" ASP.NET Core görüntü geliştirme kullanır (**microsoft / dotnet:2.1-sdk**) geliştirme ve oluşturma işlemi sırasında. Docker kapsayıcısı içindeki oluştururken, önemli yönlerinden uygulamanızı derlemek için gereken öğelerdir. Bu, derleyici ve herhangi diğer .NET bağımlılıkları yanı sıra web geliştirme bağımlılıkları içerir.
+Geliştirme sırasında ne kadar hızlı değişiklikler ve değişiklikleri hata ayıklama özelliği yineleyebilirsiniz önemli ' dir. Resmin boyutu kodunuzda değişiklikler yapmak ve değişiklikleri hızlıca görmek için özelliği gibi önemli değildir. Bazı araçlar ve "derleme aracısı kapsayıcılar" geliştirme .NET Core görüntüsü kullanma (*microsoft / dotnet:2.1-sdk*) geliştirme ve derleme işlemi sırasında. Bir Docker kapsayıcısı içinde oluştururken, önemli yönleri, uygulamanızı derlemek için gereken öğelerdir. Bu, derleyici ve diğer .NET bağımlılıklar içerir.
 
-Bu tür yapı görüntü neden önemlidir? Bu görüntü üretime dağıtmayın. Bunun yerine, bir üretim görüntüsüne yerleştirdiğiniz içeriği oluşturmak için kullandığınız bir görüntüdür. Bu görüntü, sürekli tümleştirme (CI) ortamınızda kullanılacak veya Docker çok aşama kullanırken yapı ortamı oluşturur.
+Bu tür bir yapı görüntüyü neden önemlidir? Bu görüntü için üretim dağıtmayın. Bunun yerine, bir üretim görüntüsüne yerleştirdiğiniz içerik oluşturmak için kullandığınız bir görüntüsüdür. Bu görüntü, sürekli tümleştirme (CI) ortamınızda kullanılan veya Docker çok aşamalı kullanırken yapı ortamı oluşturur.
 
 ### <a name="in-production"></a>Üretimde
 
-Üretimde önemlidir ne kadar hızlı dağıtma ve üretim .NET Core görüntüyü temel alarak kapsayıcılarınızı başlatma ' dir. Bu nedenle, yalnızca çalışma zamanında resmin dayalı olarak **microsoft / dotnet:2.1-aspnetcore-çalışma zamanı** küçük, böylelikle onu hızlı bir şekilde ağ üzerinden Docker kayıt defterinden Docker konaklarınızın izler. Sonuçlar işlenirken kapsayıcıya başlatılmasını süreye etkinleştirme içeriği çalıştırmak hazır olursunuz. Docker modelinde c derleme için gerek yoktur\# kod, orada ne zaman dotnet yapı çalıştırmak veya dotnet yayımlama yapı kapsayıcı kullanıyor.
+Üretim ortamında önemli ne kadar hızlı dağıtabilir ve bir üretim .NET Core görüntüyle kapsayıcılarınızı Başlat ' dir. Bu nedenle, yalnızca çalışma zamanı görüntüyü temel alarak *microsoft / dotnet:2.1-aspnetcore-çalışma zamanı* , küçük, böylelikle onu hızlı ağ üzerinden Docker kayıt defterinizden Docker konaklarınıza izler. Sonuçları işleme için kapsayıcı başlatılmasını süreye etkinleştirme içeriğini çalıştırmak hazır olursunuz. Docker modelinde c derleme için gerek yoktur\# kod, derleme kapsayıcısı burada ne zaman dotnet yapıyı çalıştırmak veya dotnet yayımlama kullanıyor.
 
-Bu en iyi duruma getirilmiş yansımasına yalnızca ikili dosyaları ve uygulamayı çalıştırmak için gereken diğer içeriği yerleştirin. Örneğin, dotnet tarafından oluşturulmuş içerik yayımlama yalnızca derlenmiş .NET ikili dosyaları, görüntüler, .js ve .css dosyaları içerir. Zaman içinde öncesi jitted paketleri içeren resimler görürsünüz.
+Bu en iyi duruma getirilmiş görüntüde yalnızca ikili dosyalar ve uygulamayı çalıştırmak için gereken diğer içerik yerleştirin. Örneğin, dotnet tarafından oluşturulan içerik yayımlama yalnızca derlenmiş .NET ikili dosyaları, görüntüler, .js ve .css dosyaları içerir. Zaman içinde pre-jıtted (IL derlemeden çalışma zamanında gerçekleşen yerel için) içeren resimler görürsünüz paketleri.
 
-.NET Core ve ASP.NET Core görüntüleri birden fazla sürümünü olsa da, tüm temel katmanın dahil olmak üzere, bir veya daha fazla katmanları paylaşın. Bu nedenle, görüntüyü depolamak için gereken disk alanı miktarını küçüktür; yalnızca özel görüntünüzü ve temel görüntü arasındaki delta oluşur. Kayıt defterinden görüntü çekmesini hızlı sonucudur.
+Birden çok sürümü .NET Core ve ASP.NET Core görüntülerin olsa da, tüm temel katman dahil, bir veya daha fazla katman paylaşırlar. Bu nedenle, bir görüntü depolamak için gereken disk alanı miktarını küçüktür; yalnızca özel görüntü ve taban görüntüsünü arasındaki delta oluşur. Görüntüyü kayıt defterinizden çekme hızlı sonucudur.
 
-Docker hub'a adresindeki .NET görüntü depoları geçirirken, sınıflandırılmış veya etiketleriyle işaretlenmiş birden fazla görüntü sürümleri bulacaksınız. Bu etiketler hangisinin, aşağıdaki tabloda bulunanlar gibi ihtiyaç sürümüne bağlı olarak kullanmaya karar vermenize yardımcı olur:
+Docker Hub .NET resmi depoları geçirirken, Sınıflandırılmamış veya etiketlerle işaretlenmiş birden çok görüntü sürümü bulabilirsiniz. Bu etiketler, hangisinin kullanılacağını gelenler aşağıdaki tabloda, gereken sürümüne bağlı olarak karar vermek için yardımcı olur:
 
--   Microsoft/dotnet:**2.1 aspnetcore çalışma**
-
-        ASP.NET Core, with runtime only and ASP.NET Core optimizations, on Linux and Windows (multi-arch)
-
--   Microsoft /**dotnet:2.1-sdk**
-
-        .NET Core, with SDKs included, on Linux and Windows (multi-arch)
+| Görüntü                                       | Açıklamalar                                                                                          |
+| ------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| Microsoft/dotnet:**2.1-aspnetcore-çalışma zamanı** | ASP.NET Core, yalnızca çalışma zamanı ve ASP.NET Core iyileştirmeler, Linux ve Windows (çok arch) |
+| Microsoft/dotnet:**sdk 2.1**                | .NET core SDK'ları dahil, Linux ve Windows (çok arch)                                  |
 
 
 >[!div class="step-by-step"]
 [Önceki](net-container-os-targets.md)
-[sonraki](../architect-microservice-container-applications/index.md)
+[İleri](../architect-microservice-container-applications/index.md)

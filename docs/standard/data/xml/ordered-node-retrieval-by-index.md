@@ -9,11 +9,11 @@ ms.assetid: 5412c90f-2703-4aa8-a9c4-1b8a35183c37
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 515edf26df6190d2bf4906f3de2d019b1a4175fb
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45512510"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45676197"
 ---
 # <a name="ordered-node-retrieval-by-index"></a>Düğüm alma dizine göre sıralı
 World Wide Web Consortium (W3C) XML belge nesne modeli (DOM) tarafından işlenen sıralanmamış aksine düğümleri sıralı bir listesi işleyebilme yeteneği olan bir düğüm listesine de açıklar **XmlNamedNodeMap**. Bir düğüm listesine neden Microsoft .NET Framework adlı **XmlNodeList**. Yöntemleri ve döndüren özellikler bir **XmlNodeList** şunlardır:  

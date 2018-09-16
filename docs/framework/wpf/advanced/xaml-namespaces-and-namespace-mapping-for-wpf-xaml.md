@@ -15,11 +15,11 @@ helpviewer_keywords:
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
 ms.openlocfilehash: 9e93d3cd417d0d075fcebb8327ec51799884f8d6
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45529772"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45664650"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>WPF XAML için XAML Ad Alanları ve Ad Alanı Eşlemesi
 Bu konuda daha fazla varlığı ve sık WPF XAML dosyasının kök etiketi içinde bulunan iki XAML ad uzayı eşlemelerinden amacını açıklar. Ayrıca, kendi kod ve/veya ayrı derlemeler içinde tanımlanan öğeleri kullanmak için benzer eşlemeleri oluşturmak nasıl açıklar.  

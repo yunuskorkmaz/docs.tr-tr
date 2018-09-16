@@ -11,11 +11,11 @@ ms.assetid: c95788bf-90a6-4e96-b7bc-58e36a228cc5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 83451af25006e9da396a3e6618cbecee036e9fe2
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44188273"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45687679"
 ---
 # <a name="attached-and-detached-child-tasks"></a>Eklenen ve Ayrılan Alt Görevler
 A *alt görev* (veya *iç içe görev*) olan bir <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> olarak da bilinen başka bir görevin kullanıcı temsilcisinde oluşturulan örnek *üst görev*. Bir alt görev ya da iliştirilemez ya da. A *ayrılmış alt görev* üst bağımsız olarak yürütülen bir görevdir. Bir *iliştirilmiş alt görevi* ile oluşturulan iç içe bir görevdir <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> ana değil açıkça veya varsayılan olarak engelliyor, bağlı olmak seçeneği. Bir görev yalnızca sistem kaynakları tarafından sınırlanan, eklenen veya ilişkisi kesilen alt herhangi bir sayıda oluşturabilirsiniz.  
