@@ -1,63 +1,93 @@
 ---
-title: Karar tablo. .NET Framework için Docker kullanmak için
-description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Karar tablosu, .NET Framework için Docker kullanmak için
+title: Karar tablosu. Docker için kullanılacak .NET çerçeveleri
+description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Karar tablosu, Docker için kullanılacak .NET çerçeveleri
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/18/2017
-ms.openlocfilehash: c45fbb9f26e6cd315e1b623ba2c79d5d038a6919
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 09/11/2018
+ms.openlocfilehash: 74b3749077fdb375f84ddacd98221aa4afcf2f67
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105306"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45674019"
 ---
-# <a name="decision-table-net-frameworks-to-use-for-docker"></a><span data-ttu-id="167a3-104">Karar tablosu: .NET Framework için Docker kullanmak için</span><span class="sxs-lookup"><span data-stu-id="167a3-104">Decision table: .NET frameworks to use for Docker</span></span>
+# <a name="decision-table-net-frameworks-to-use-for-docker"></a><span data-ttu-id="58952-104">Karar tablosu: Docker için kullanılacak .NET çerçeveleri</span><span class="sxs-lookup"><span data-stu-id="58952-104">Decision table: .NET frameworks to use for Docker</span></span>
 
-<span data-ttu-id="167a3-105">.NET Framework veya .NET Core ve Windows veya Linux kapsayıcıları kullanıp kullanmayacağınızı aşağıda özetlenmiştir.</span><span class="sxs-lookup"><span data-stu-id="167a3-105">The following summarizes whether to use .NET Framework or .NET Core, and Windows or Linux containers.</span></span> <span data-ttu-id="167a3-106">Linux kapsayıcıları için Linux tabanlı Docker ana bilgisayarları (VM'ler veya sunucular) gerekir ve Docker konakları (VM'ler veya sunucular) göre Windows kapsayıcıları için Windows Server gerektiğini unutmayın.</span><span class="sxs-lookup"><span data-stu-id="167a3-106">Remember that for Linux containers, you need Linux-based Docker hosts (VMs or servers) and that for Windows Containers you need Windows Server based Docker hosts (VMs or servers).</span></span>
-
-<span data-ttu-id="167a3-107">Uygulamanızın kararınızı etkileyen çeşitli özellikler vardır.</span><span class="sxs-lookup"><span data-stu-id="167a3-107">There are several features of your application that affect your decision.</span></span> <span data-ttu-id="167a3-108">Bu özellikler önemini karar verirken tartmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="167a3-108">You should weigh the importance of these features when making your decision.</span></span>
+<span data-ttu-id="58952-105">Aşağıdaki tabloda karar .NET Framework veya .NET Core kullanıp kullanmayacağınızı özetler.</span><span class="sxs-lookup"><span data-stu-id="58952-105">The following decision table summarizes whether to use .NET Framework or .NET Core.</span></span> <span data-ttu-id="58952-106">Linux kapsayıcıları için Linux tabanlı Docker konakları (VM'ler veya sunucular) gerekir ve Docker ana bilgisayarları (VM'ler veya sunucular) tabanlı Windows kapsayıcıları için Windows Server ihtiyacınız olduğunu unutmayın.</span><span class="sxs-lookup"><span data-stu-id="58952-106">Remember that for Linux containers, you need Linux-based Docker hosts (VMs or servers) and that for Windows Containers you need Windows Server based Docker hosts (VMs or servers).</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="167a3-109">Geliştirme makinelerinizi bir Docker ana bilgisayar, Linux veya Windows çalışır.</span><span class="sxs-lookup"><span data-stu-id="167a3-109">Your development machines will run one Docker host, either Linux or Windows.</span></span> <span data-ttu-id="167a3-110">Bir çözümde birlikte test ve çalıştırmak istediğiniz ilgili mikro tüm aynı kapsayıcı platformda çalışması gerekir.</span><span class="sxs-lookup"><span data-stu-id="167a3-110">Related microservices that you want to run and test together in one solution will all need to run on the same container platform.</span></span>
+> <span data-ttu-id="58952-107">Geliştirme makineleriniz bir Docker konağı, Linux veya Windows çalıştırılır.</span><span class="sxs-lookup"><span data-stu-id="58952-107">Your development machines will run one Docker host, either Linux or Windows.</span></span> <span data-ttu-id="58952-108">İlgili mikro hizmetler ve birlikte bir çözümde test çalıştırmak istediğiniz tüm aynı kapsayıcı platformu üzerinde çalıştırmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="58952-108">Related microservices that you want to run and test together in one solution will all need to run on the same container platform.</span></span>
 
-* <span data-ttu-id="167a3-111">Uygulama Mimarisi seçimdir **kapsayıcılarında mikro**.</span><span class="sxs-lookup"><span data-stu-id="167a3-111">Your application architecture choice is **Microservices on containers**.</span></span>
-    - <span data-ttu-id="167a3-112">.NET uygulaması seçiminizi olmalıdır *.NET Core*.</span><span class="sxs-lookup"><span data-stu-id="167a3-112">Your .NET implementation choice should be *.NET Core*.</span></span>
-    - <span data-ttu-id="167a3-113">Kapsayıcı platform tercih ettiğiniz ya da olabilir *Linux kapsayıcıları* veya *Windows kapsayıcıları*.</span><span class="sxs-lookup"><span data-stu-id="167a3-113">Your container platform choice can be either *Linux containers* or *Windows containers*.</span></span>
-* <span data-ttu-id="167a3-114">Uygulama Mimarisi seçimdir bir **tek yapılı uygulama**.</span><span class="sxs-lookup"><span data-stu-id="167a3-114">Your application architecture choice is a **Monolithic application**.</span></span>
-    - <span data-ttu-id="167a3-115">.NET uygulaması tercih ettiğiniz ya da olabilir *.NET Core* veya *.NET Framework*.</span><span class="sxs-lookup"><span data-stu-id="167a3-115">Your .NET implementation choice can be either *.NET Core* or *.NET Framework*.</span></span>
-    - <span data-ttu-id="167a3-116">Seçmiş olmanız durumunda *.NET Core*, kapsayıcı platform tercih ettiğiniz ya da olabilir *Linux kapsayıcıları* veya *Windows kapsayıcıları*.</span><span class="sxs-lookup"><span data-stu-id="167a3-116">If you have chosen *.NET Core*, your container platform choice can be either *Linux containers* or *Windows containers*.</span></span>
-    - <span data-ttu-id="167a3-117">Seçmiş olmanız durumunda *.NET Framework*, kapsayıcı platform seçiminizi olmalıdır *Windows kapsayıcıları*.</span><span class="sxs-lookup"><span data-stu-id="167a3-117">If you have chosen *.NET Framework*, your container platform choice must be *Windows containers*.</span></span>
-* <span data-ttu-id="167a3-118">Uygulamanız bir **yeni kapsayıcı tabanlı geliştirme ("alanı yeşil")**.</span><span class="sxs-lookup"><span data-stu-id="167a3-118">Your application is a  **New container-based development ("green-field")**.</span></span>
-    - <span data-ttu-id="167a3-119">.NET uygulaması seçiminizi olmalıdır *.NET Core*.</span><span class="sxs-lookup"><span data-stu-id="167a3-119">Your .NET implementation choice should be *.NET Core*.</span></span>
-    - <span data-ttu-id="167a3-120">Kapsayıcı platform tercih ettiğiniz ya da olabilir *Linux kapsayıcıları* veya *Windows kapsayıcıları*.</span><span class="sxs-lookup"><span data-stu-id="167a3-120">Your container platform choice can be either *Linux containers* or *Windows containers*.</span></span>
-* <span data-ttu-id="167a3-121">Uygulamanız bir **kapsayıcıları için Windows Server eski uygulama ("alanı kahverengi") geçiş**</span><span class="sxs-lookup"><span data-stu-id="167a3-121">Your application is a **Windows Server legacy app ("brown-field") migration to containers**</span></span>
-    - <span data-ttu-id="167a3-122">.NET uygulaması seçimdir *.NET Framework* framework bağımlılığını tabanlı.</span><span class="sxs-lookup"><span data-stu-id="167a3-122">Your .NET implementation choice is *.NET Framework* based on framework dependency.</span></span>
-    - <span data-ttu-id="167a3-123">Kapsayıcı platform seçiminizi olmalıdır *Windows kapsayıcıları* .NET Framework bağımlılık nedeniyle.</span><span class="sxs-lookup"><span data-stu-id="167a3-123">Your container platform choice must be *Windows containers* because of the .NET Framework dependency.</span></span>
-* <span data-ttu-id="167a3-124">Uygulamanızın tasarım hedefi olan **sınıfı içinde en iyi performans ve ölçeklenebilirlik**.</span><span class="sxs-lookup"><span data-stu-id="167a3-124">Your application's design goal is **Best-in-class performance and scalability**.</span></span>
-    - <span data-ttu-id="167a3-125">.NET uygulaması seçiminizi olmalıdır *.NET Core*.</span><span class="sxs-lookup"><span data-stu-id="167a3-125">Your .NET implementation choice should be *.NET Core*.</span></span>
-    - <span data-ttu-id="167a3-126">Kapsayıcı platform tercih ettiğiniz ya da olabilir *Linux kapsayıcıları* veya *Windows kapsayıcıları*.</span><span class="sxs-lookup"><span data-stu-id="167a3-126">Your container platform choice can be either *Linux containers* or *Windows containers*.</span></span>
-* <span data-ttu-id="167a3-127">Kullanarak uygulamanızı yerleşik **ASP.NET Core**.</span><span class="sxs-lookup"><span data-stu-id="167a3-127">You built your application using **ASP.NET Core**.</span></span>
-    - <span data-ttu-id="167a3-128">.NET uygulaması seçiminizi olmalıdır *.NET Core*.</span><span class="sxs-lookup"><span data-stu-id="167a3-128">Your .NET implementation choice should be *.NET Core*.</span></span>
-    - <span data-ttu-id="167a3-129">Kullanabileceğiniz *.NET Framework* diğer çerçevesi bağımlılıklarına varsa uygulaması.</span><span class="sxs-lookup"><span data-stu-id="167a3-129">You can use the *.NET Framework* implementation, if you have other framework dependencies.</span></span>
-    - <span data-ttu-id="167a3-130">Seçmiş olmanız durumunda *.NET Core*, kapsayıcı platform tercih ettiğiniz ya da olabilir *Linux kapsayıcıları* veya *Windows kapsayıcıları*.</span><span class="sxs-lookup"><span data-stu-id="167a3-130">If you have chosen *.NET Core*, your container platform choice can be either *Linux containers* or *Windows containers*.</span></span>
-    - <span data-ttu-id="167a3-131">Seçmiş olmanız durumunda *.NET Framework*, kapsayıcı platform seçiminizi olmalıdır *Windows kapsayıcıları*.</span><span class="sxs-lookup"><span data-stu-id="167a3-131">If you have chosen *.NET Framework*, your container platform choice must be *Windows containers*.</span></span>
-* <span data-ttu-id="167a3-132">Kullanarak uygulamanızı yerleşik **ASP.NET 4 (MVC 5, Web API 2 ve Web formları)**.</span><span class="sxs-lookup"><span data-stu-id="167a3-132">You built your application using **ASP.NET 4 (MVC 5, Web API 2, and Web Forms)**.</span></span>
-    - <span data-ttu-id="167a3-133">.NET uygulaması seçimdir *.NET Framework* framework bağımlılığını tabanlı.</span><span class="sxs-lookup"><span data-stu-id="167a3-133">Your .NET implementation choice is *.NET Framework* based on framework dependency.</span></span>
-    - <span data-ttu-id="167a3-134">Kapsayıcı platform seçiminizi olmalıdır *Windows kapsayıcıları* .NET Framework bağımlılık nedeniyle.</span><span class="sxs-lookup"><span data-stu-id="167a3-134">Your container platform choice must be *Windows containers* because of the .NET Framework dependency.</span></span>
-* <span data-ttu-id="167a3-135">Uygulamanızın kullandığı **SignalR Hizmetleri**.</span><span class="sxs-lookup"><span data-stu-id="167a3-135">Your application uses **SignalR services**.</span></span>
-    - <span data-ttu-id="167a3-136">.NET uygulaması seçiminizi olabilir *.NET Framework*, veya *.NET Core (yayımlandığında) 2.1 veya üzeri*.</span><span class="sxs-lookup"><span data-stu-id="167a3-136">Your .NET implementation choice can be *.NET Framework*, or *.NET Core 2.1 (when released) or later*.</span></span>
-    - <span data-ttu-id="167a3-137">Kapsayıcı platform seçiminizi olmalıdır *Windows kapsayıcıları* SignalR uygulama .NET Framework seçerseniz.</span><span class="sxs-lookup"><span data-stu-id="167a3-137">Your container platform choice must be *Windows containers* if you chose the SignalR implementation in .NET Framework.</span></span>
-    - <span data-ttu-id="167a3-138">.NET Core 2.1 veya üzeri SignalR uygulaması (yayımlandığında) seçerseniz kapsayıcı platform seçiminizi Linux kapsayıcıları veya Windows kapsayıcıları olabilir.</span><span class="sxs-lookup"><span data-stu-id="167a3-138">Your container platform choice can be either Linux containers or Windows containers if you chose the SignalR implementation in .NET Core 2.1 or later (when released).</span></span>  
-    - <span data-ttu-id="167a3-139">Zaman **SignalR Hizmetleri** çalıştıracağınız *.NET Core*, kullanabileceğiniz *Linux kapsayıcıları ya da Windows kapsayıcıları*.</span><span class="sxs-lookup"><span data-stu-id="167a3-139">When **SignalR services** run on *.NET Core*, you can use *Linux containers or Windows Containers*.</span></span>
-* <span data-ttu-id="167a3-140">Uygulamanızın kullandığı **WCF, WF ve diğer eski çerçeveleri**.</span><span class="sxs-lookup"><span data-stu-id="167a3-140">Your application uses **WCF, WF, and other legacy frameworks**.</span></span>
-    - <span data-ttu-id="167a3-141">.NET uygulaması seçimdir *.NET Framework*, veya *(ın gelecek sürümlerinden için yol haritası) .NET Core*.</span><span class="sxs-lookup"><span data-stu-id="167a3-141">Your .NET implementation choice is *.NET Framework*, or *.NET Core (in the roadmap for a future release)*.</span></span>
-    - <span data-ttu-id="167a3-142">Kapsayıcı platform seçiminizi olmalıdır *Windows kapsayıcıları* .NET Framework bağımlılık nedeniyle.</span><span class="sxs-lookup"><span data-stu-id="167a3-142">Your container platform choice must be *Windows containers* because of the .NET Framework dependency.</span></span>
-* <span data-ttu-id="167a3-143">Uygulamanızı içerir **tüketim, Azure Hizmetleri**.</span><span class="sxs-lookup"><span data-stu-id="167a3-143">Your application involves **Consumption of Azure services**.</span></span>
-    - <span data-ttu-id="167a3-144">.NET uygulaması seçimdir *.NET Framework*, veya *.NET Core (sonunda tüm Azure Hizmetleri sağlayacaktır istemci SDK'ları için .NET Core)*.</span><span class="sxs-lookup"><span data-stu-id="167a3-144">Your .NET implementation choice is *.NET Framework*, or *.NET Core (eventually all Azure services will provide client SDKs for .NET Core)*.</span></span>
-    - <span data-ttu-id="167a3-145">Kapsayıcı platform seçiminizi olmalıdır *Windows kapsayıcıları* .NET Framework istemci API kullanıyorsanız.</span><span class="sxs-lookup"><span data-stu-id="167a3-145">Your container platform choice must be *Windows containers* if you use .NET Framework client APIs.</span></span>
-    - <span data-ttu-id="167a3-146">İstemci için kullanılabilen API'lerin kullanırsanız *.NET Core*, arasından seçim yapabilirsiniz *Linux kapsayıcıları ve Windows kapsayıcıları*.</span><span class="sxs-lookup"><span data-stu-id="167a3-146">If you use client APIs available for *.NET Core*, you can also choose between *Linux containers and Windows containers*.</span></span>
+<table>
+<thead>
+<tr class="header">
+<th><span data-ttu-id="58952-109"><strong>Mimari / uygulama yazın</strong></span><span class="sxs-lookup"><span data-stu-id="58952-109"><strong>Architecture / App Type</strong></span></span></th>
+<th><span data-ttu-id="58952-110"><strong>Linux kapsayıcıları</strong></span><span class="sxs-lookup"><span data-stu-id="58952-110"><strong>Linux containers</strong></span></span></th>
+<th><span data-ttu-id="58952-111"><strong>Windows kapsayıcıları</strong></span><span class="sxs-lookup"><span data-stu-id="58952-111"><strong>Windows Containers</strong></span></span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span data-ttu-id="58952-112">Kapsayıcıları çalıştırma</span><span class="sxs-lookup"><span data-stu-id="58952-112">Microservices on containers</span></span></td>
+<td><span data-ttu-id="58952-113">.NET Core</span><span class="sxs-lookup"><span data-stu-id="58952-113">.NET Core</span></span></td>
+<td><span data-ttu-id="58952-114">.NET Core</span><span class="sxs-lookup"><span data-stu-id="58952-114">.NET Core</span></span></td>
+</tr>
+<tr class="even">
+<td><span data-ttu-id="58952-115">Tek parçalı uygulama</span><span class="sxs-lookup"><span data-stu-id="58952-115">Monolithic app</span></span></td>
+<td><span data-ttu-id="58952-116">.NET Core</span><span class="sxs-lookup"><span data-stu-id="58952-116">.NET Core</span></span></td>
+<td><p><span data-ttu-id="58952-117">.NET Framework</span><span class="sxs-lookup"><span data-stu-id="58952-117">.NET Framework</span></span></p>
+<p><span data-ttu-id="58952-118">.NET Core</span><span class="sxs-lookup"><span data-stu-id="58952-118">.NET Core</span></span></p></td>
+</tr>
+<tr class="odd">
+<td><span data-ttu-id="58952-119">Sınıfının en iyi performans ve ölçeklenebilirlik</span><span class="sxs-lookup"><span data-stu-id="58952-119">Best-in-class performance and scalability</span></span></td>
+<td><span data-ttu-id="58952-120">.NET Core</span><span class="sxs-lookup"><span data-stu-id="58952-120">.NET Core</span></span></td>
+<td><span data-ttu-id="58952-121">.NET Core</span><span class="sxs-lookup"><span data-stu-id="58952-121">.NET Core</span></span></td>
+</tr>
+<tr class="even">
+<td><span data-ttu-id="58952-122">Windows Server kapsayıcıları için eski uygulama ("alanı brown") geçiş</span><span class="sxs-lookup"><span data-stu-id="58952-122">Windows Server legacy app ("brown-field") migration to containers</span></span></td>
+<td>--</td>
+<td><span data-ttu-id="58952-123">.NET Framework</span><span class="sxs-lookup"><span data-stu-id="58952-123">.NET Framework</span></span></td>
+</tr>
+<tr class="odd">
+<td><span data-ttu-id="58952-124">Yeni kapsayıcı tabanlı geliştirme ("alanı yeşil")</span><span class="sxs-lookup"><span data-stu-id="58952-124">New container-based development ("green-field")</span></span></td>
+<td><span data-ttu-id="58952-125">.NET Core</span><span class="sxs-lookup"><span data-stu-id="58952-125">.NET Core</span></span></td>
+<td><span data-ttu-id="58952-126">.NET Core</span><span class="sxs-lookup"><span data-stu-id="58952-126">.NET Core</span></span></td>
+</tr>
+<tr class="even">
+<td><span data-ttu-id="58952-127">ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="58952-127">ASP.NET Core</span></span></td>
+<td><span data-ttu-id="58952-128">.NET Core</span><span class="sxs-lookup"><span data-stu-id="58952-128">.NET Core</span></span></td>
+<td><p><span data-ttu-id="58952-129">.NET core (önerilir)</span><span class="sxs-lookup"><span data-stu-id="58952-129">.NET Core (recommended)</span></span></p>
+<p><span data-ttu-id="58952-130">.NET Framework</span><span class="sxs-lookup"><span data-stu-id="58952-130">.NET Framework</span></span></p></td>
+</tr>
+<tr class="odd">
+<td><span data-ttu-id="58952-131">ASP.NET 4 (MVC 5, Web API 2 ve Web Forms)</span><span class="sxs-lookup"><span data-stu-id="58952-131">ASP.NET 4 (MVC 5, Web API 2, and Web Forms)</span></span></td>
+<td>--</td>
+<td><span data-ttu-id="58952-132">.NET Framework</span><span class="sxs-lookup"><span data-stu-id="58952-132">.NET Framework</span></span></td>
+</tr>
+<tr class="even">
+<td><span data-ttu-id="58952-133">SignalR Hizmetleri</span><span class="sxs-lookup"><span data-stu-id="58952-133">SignalR services</span></span></td>
+<td><span data-ttu-id="58952-134">.NET core 2.1 veya üzeri bir sürüm</span><span class="sxs-lookup"><span data-stu-id="58952-134">.NET Core 2.1 or higher version</span></span></td>
+<td><p><span data-ttu-id="58952-135">.NET Framework</span><span class="sxs-lookup"><span data-stu-id="58952-135">.NET Framework</span></span></p>
+<p><span data-ttu-id="58952-136">.NET core 2.1 veya üzeri bir sürüm</span><span class="sxs-lookup"><span data-stu-id="58952-136">.NET Core 2.1 or higher version</span></span></p></td>
+</tr>
+<tr class="odd">
+<td><span data-ttu-id="58952-137">WCF, WF ve diğer eski çerçeveleri</span><span class="sxs-lookup"><span data-stu-id="58952-137">WCF, WF, and other legacy frameworks</span></span></td>
+<td><span data-ttu-id="58952-138">WCF .NET core'da (yalnızca WCF istemci kitaplığı)</span><span class="sxs-lookup"><span data-stu-id="58952-138">WCF in .NET Core (only the WCF client library)</span></span></td>
+<td><p><span data-ttu-id="58952-139">.NET Framework</span><span class="sxs-lookup"><span data-stu-id="58952-139">.NET Framework</span></span></p>
+<p><span data-ttu-id="58952-140">WCF .NET core'da (yalnızca WCF istemci kitaplığı)</span><span class="sxs-lookup"><span data-stu-id="58952-140">WCF in .NET Core (only the WCF client library)</span></span></p></td>
+</tr>
+<tr class="even">
+<td><span data-ttu-id="58952-141">Azure hizmetlerinin tüketiminin</span><span class="sxs-lookup"><span data-stu-id="58952-141">Consumption of Azure services</span></span></td>
+<td><p><span data-ttu-id="58952-142">.NET Core</span><span class="sxs-lookup"><span data-stu-id="58952-142">.NET Core</span></span></p>
+<p><span data-ttu-id="58952-143">(sonunda tüm Azure Hizmetleri İstemci SDK'ları için .NET Core sağlar)</span><span class="sxs-lookup"><span data-stu-id="58952-143">(eventually all Azure services will provide client SDKs for .NET Core)</span></span></p></td>
+<td><p><span data-ttu-id="58952-144">.NET Framework</span><span class="sxs-lookup"><span data-stu-id="58952-144">.NET Framework</span></span></p>
+<p><span data-ttu-id="58952-145">.NET Core</span><span class="sxs-lookup"><span data-stu-id="58952-145">.NET Core</span></span></p>
+<p><span data-ttu-id="58952-146">(sonunda tüm Azure Hizmetleri İstemci SDK'ları için .NET Core sağlar)</span><span class="sxs-lookup"><span data-stu-id="58952-146">(eventually all Azure services will provide client SDKs for .NET Core)</span></span></p></td>
+</tr>
+</tbody>
+</table>
 
 >[!div class="step-by-step"]
-<span data-ttu-id="167a3-147">[Önceki](net-framework-container-scenarios.md)
-[sonraki](net-container-os-targets.md)</span><span class="sxs-lookup"><span data-stu-id="167a3-147">[Previous](net-framework-container-scenarios.md)
+<span data-ttu-id="58952-147">[Önceki](net-framework-container-scenarios.md)
+[İleri](net-container-os-targets.md)</span><span class="sxs-lookup"><span data-stu-id="58952-147">[Previous](net-framework-container-scenarios.md)
 [Next](net-container-os-targets.md)</span></span>
