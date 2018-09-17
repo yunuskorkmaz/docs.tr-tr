@@ -3,11 +3,11 @@ title: TransactionScope'u bir hizmet içinde iç içe geçirme
 ms.date: 03/30/2017
 ms.assetid: e7e1ba64-1384-4eba-add8-415636e2d6d0
 ms.openlocfilehash: cf73c0c2d061f1c997a8ade5d7b2bf61887915ca
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591101"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45743433"
 ---
 # <a name="nesting-of-transactionscope-within-a-service"></a>TransactionScope'u bir hizmet içinde iç içe geçirme
 Bu örnek iki senaryo oluşur, çalışan nasıl ele alınacağını gösteren <xref:System.Activities.Statements.TransactionScope> hizmetinden etkinlik örnekleri. İşlem kullanarak ilk kez başlatılan <xref:System.Activities.Statements.TransactionScope> istemcide yeni bir işlem oluşturmak için etkinlik ve <xref:System.ServiceModel.Activities.TransactedReceiveScope> almak için sunucu üzerinde işlem ömrü kapsam. İlk senaryoda hizmetinde ikincil çalıştıran <xref:System.Activities.Statements.TransactionScope> iç içe göstermek için etkinlik <xref:System.Activities.Statements.TransactionScope> hizmetindeki etkinlikler. İkinci senaryoda zaman aşımları nasıl uymaya gösterilmektedir içinde iç içe <xref:System.Activities.Statements.TransactionScope> etkinlikler.  

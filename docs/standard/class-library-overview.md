@@ -40,11 +40,11 @@ ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: acc51287a8c670da63d0ec421aa232864ea91c2b
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45592042"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45749876"
 ---
 # <a name="net-class-library-overview"></a>.NET sınıf kitaplığına genel bakış
 
@@ -89,12 +89,12 @@ ms.locfileid: "45592042"
 |Kategori|Sınıf adı|Açıklama|Visual Basic veri türü|C# veri türü|C + +/ CLI veri türü|F # veri türü|  
 |--------------|----------------|-----------------|----------------------------|-------------------|---------------------|-----------------------|  
 |Tamsayı|<xref:System.Byte>|8 bitlik işaretsiz tamsayı.|**Bayt**|**byte**|**İmzasız char**|**byte**|  
-||<xref:System.SByte>|Bir 8 bit işaretli tamsayı.<br /><br /> CLS uyumlu değil.|**SByte**|**sbyte**|**char**<br /> veya<br /> **İmzalı** **char**|**sbyte**|  
+||<xref:System.SByte>|Bir 8 bit işaretli tamsayı.<br /><br /> CLS uyumlu değil.|**SByte**|**sbyte**|**char**<br /> -veya-<br /> **İmzalı** **char**|**sbyte**|  
 ||<xref:System.Int16>|Bir 16 bitlik işaretli tamsayı.|**kısa**|**short**|**short**|**Int16**|  
-||<xref:System.Int32>|32-bit işaretli tamsayı.|**tamsayı**|**int**|**int**<br /><br /> veya<br /><br /> **long**|**int**|  
+||<xref:System.Int32>|32-bit işaretli tamsayı.|**tamsayı**|**int**|**int**<br /><br /> -veya-<br /><br /> **long**|**int**|  
 ||<xref:System.Int64>|64-bit imzalı bir tamsayı.|**uzun**|**long**|**__int64**|**int64**|  
 ||<xref:System.UInt16>|Bir 16 bitlik işaretsiz tamsayı.<br /><br /> CLS uyumlu değil.|**UShort**|**ushort**|**İmzasız short**|**uint16**|  
-||<xref:System.UInt32>|32-bit işaretsiz bir tamsayı.<br /><br /> CLS uyumlu değil.|**Uınteger**|**uint**|**işaretsiz int**<br /> veya<br /> **İmzasız long**|**uint32**|  
+||<xref:System.UInt32>|32-bit işaretsiz bir tamsayı.<br /><br /> CLS uyumlu değil.|**Uınteger**|**uint**|**işaretsiz int**<br /> -veya-<br /> **İmzasız long**|**uint32**|  
 ||<xref:System.UInt64>|64-bit işaretsiz bir tamsayı.<br /><br /> CLS uyumlu değil.|**ULong**|**ulong**|**imzalanmamış __int64**|**uint64**|  
 |Kayan nokta|<xref:System.Single>|Bir tek duyarlıklı (32-bit) kayan noktalı sayı.|**Tek**|**float**|**float**|**float32**</br> veya</br>**single**|  
 ||<xref:System.Double>|Bir çift duyarlıklı (64-bit) kayan noktalı sayı.|**çift**|**double**|**double**|**float**</br> veya </br> **double**|  

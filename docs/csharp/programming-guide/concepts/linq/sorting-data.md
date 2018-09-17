@@ -3,11 +3,11 @@ title: Verileri sıralama (C#)
 ms.date: 07/20/2015
 ms.assetid: d93fa055-2f19-46d2-9898-e2aed628f1c9
 ms.openlocfilehash: 6a7f687895385bfb77d2a1e3e785742a794bb1b6
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45638314"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45749585"
 ---
 # <a name="sorting-data-c"></a>Verileri sıralama (C#)
 Sıralama işlemi bir veya daha fazla özniteliklerine dayalı bir dizinin öğeleri sıralar. İlk sıralama ölçütü öğelerde birincil sıralama gerçekleştirir. İkinci bir sıralama ölçütünü belirterek, her birincil sıralama grup içindeki öğeleri sıralayabilirsiniz.  
@@ -20,13 +20,13 @@ Sıralama işlemi bir veya daha fazla özniteliklerine dayalı bir dizinin öğe
   
 ## <a name="methods"></a>Yöntemler  
   
-|Yöntem adı|Açıklama|C# sorgu ifade sözdizimi|Daha fazla bilgi|  
+|Yöntem adı|Açıklama|C# sorgu ifade sözdizimi|Daha Fazla Bilgi|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |OrderBy|Artan değerleri sıralar.|`orderby`|<xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderBy%2A?displayProperty=nameWithType>|  
 |OrderByDescending|Değerleri azalan düzende sıralar.|`orderby … descending`|<xref:System.Linq.Enumerable.OrderByDescending%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderByDescending%2A?displayProperty=nameWithType>|  
 |ThenBy|İkincil bir sıralama, azalan sırada gerçekleştirir.|`orderby …, …`|<xref:System.Linq.Enumerable.ThenBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ThenBy%2A?displayProperty=nameWithType>|  
 |ThenByDescending|İkincil bir sıralama, azalan sırada gerçekleştirir.|`orderby …, … descending`|<xref:System.Linq.Enumerable.ThenByDescending%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ThenByDescending%2A?displayProperty=nameWithType>|  
-|geriye doğru|Bir koleksiyondaki öğelerin sırasını tersine çevirir.|Yok.|<xref:System.Linq.Enumerable.Reverse%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Reverse%2A?displayProperty=nameWithType>|  
+|geriye doğru|Bir koleksiyondaki öğelerin sırasını tersine çevirir.|Uygulanamaz.|<xref:System.Linq.Enumerable.Reverse%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Reverse%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-examples"></a>Sorgu ifadesi söz dizimi örnekleri  
   

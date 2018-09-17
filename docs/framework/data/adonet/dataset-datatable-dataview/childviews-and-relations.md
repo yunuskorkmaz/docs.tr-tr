@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d475d356-6abb-4701-8fd1-2906fb93dfba
 ms.openlocfilehash: e27ef72f0341524524a8f267eeeb13a6f46deb52
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
-ms.translationtype: MT
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45517924"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45692598"
 ---
 # <a name="childviews-and-relations"></a>ChildViews ve ilişkileri
 Tablolar arasında bir ilişki varsa, bir <xref:System.Data.DataSet>, oluşturabileceğiniz bir <xref:System.Data.DataView> kullanarak ilgili alt tablosundan satırları içeren <xref:System.Data.DataRowView.CreateChildView%2A> yöntemi <xref:System.Data.DataRowView> üst tablosundaki satırlar için. Örneğin, aşağıdaki görüntüler kod **kategorileri** ve bunların ilgili **ürünleri** alfabetik olarak sıralanmış **CategoryName** ve **ProductName** .  

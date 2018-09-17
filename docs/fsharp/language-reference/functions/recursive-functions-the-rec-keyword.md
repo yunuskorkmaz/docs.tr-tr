@@ -1,15 +1,15 @@
 ---
-title: 'Özyinelemeli İşlevler: rec Anahtar Sözcüğü (F#)'
+title: 'Yinelemeli İşlevler: rec Anahtar Sözcüğü (F#)'
 description: "'F # rec' anahtar sözcüğü bir özyinelemeli işlev tanımlamak için 'let' anahtar sözcüğü ile nasıl kullanıldığını öğrenin."
 ms.date: 05/16/2016
 ms.openlocfilehash: 5aab6ed8ab0fc3c0f0bcfc93c3ce6518ec53254f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45675879"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45745977"
 ---
-# <a name="recursive-functions-the-rec-keyword"></a>Özyinelemeli İşlevler: rec Anahtar Sözcüğü
+# <a name="recursive-functions-the-rec-keyword"></a>Yinelemeli İşlevler: rec Anahtar Sözcüğü
 
 `rec` Anahtar sözcüğü ile birlikte kullanılır `let` özyinelemeli işlev tanımlamak için anahtar sözcüğü.
 

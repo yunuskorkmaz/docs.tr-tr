@@ -3,11 +3,11 @@ title: Kod Tırnak İşaretleri (F#)
 description: 'F # kod teklifleri hakkında oluşturmak ve F # kodu ifadeleri ile programlı bir şekilde çalışmanıza olanak sağlayan bir dil özelliği hakkında bilgi edinin.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 27e9cf1d99e2b5955cc6359653fc87bdbe824cc7
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45666728"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45749962"
 ---
 # <a name="code-quotations"></a>Kod Tırnak İşaretleri
 
@@ -71,7 +71,7 @@ Aşağıdaki örnek bir ifade nesnesine F # kodu yerleştirin ve ardından ifade
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-3/snippet601.fs)]
 
-### <a name="output"></a>Çıkış
+### <a name="output"></a>Çıktı
 
 ```fsharp
 fun (x:System.Int32) -> x + 1
@@ -93,7 +93,7 @@ Etkin desen bir dala kodda değişiklik elde edilen ifade tek değişiklik, bu n
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-3/snippet701.fs)]
 
-### <a name="output"></a>Çıkış
+### <a name="output"></a>Çıktı
 
 ```fsharp
 1 + Module1.add(2,Module1.add(3,4))

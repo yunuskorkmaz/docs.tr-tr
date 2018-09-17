@@ -11,11 +11,11 @@ helpviewer_keywords:
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
 ms.openlocfilehash: 543d095c88670024a53fad7c865883ecaab1c6e0
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45527583"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45747063"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Akış sağlayıcısı (WCF Data Services)
 Bir veri hizmeti, büyük nesne ikili verilerini açığa çıkarabilir. Bu ikili veriler, video ve ses akışları, görüntüleri, belge dosyaları ya da diğer ikili medya türleri temsil edebilir. Bir varlık veri Modeli'nde bir veya daha fazla ikili özellikleri içerdiğinde, bu ikili veri akışı yanıt giriş içinde base 64 olarak kodlanmış veri hizmeti döndürür. Yükleme ve bu şekilde büyük ikili verileri seri hale getirme, performansı etkileyebilir çünkü [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] ait olduğu varlığı bağımsız ikili verileri almak için bir mekanizma tanımlar. Bu işlem, ikili veri varlıktan bir veya daha fazla veri akışlarını ayrılarak gerçekleştirilir.  

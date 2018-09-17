@@ -3,11 +3,11 @@ title: 'Açık Alanlar: val Anahtar Sözcüğü (F#)'
 description: "F # hakkında 'val' öğrenin anahtar sözcüğü bir değer türü başlatma olmadan bir sınıf veya yapı türü depolamak için bir konum bildirmek için kullanılır."
 ms.date: 05/16/2016
 ms.openlocfilehash: 9cd06f7e90192be79490dd0ff67f118cce4339c3
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45617376"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45746405"
 ---
 # <a name="explicit-fields-the-val-keyword"></a>Açık Alanlar: val Anahtar Sözcüğü
 

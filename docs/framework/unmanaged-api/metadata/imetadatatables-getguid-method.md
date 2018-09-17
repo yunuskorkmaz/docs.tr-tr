@@ -1,5 +1,5 @@
 ---
-title: IMetaDataTables::GetGuid Metodu
+title: IMetaDataTables::GetGuid Yöntemi
 ms.date: 03/30/2017
 api_name:
 - IMetaDataTables.GetGuid
@@ -18,13 +18,13 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f589225dde1ba2aabc4ca32542339a771c3287d4
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591457"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45742949"
 ---
-# <a name="imetadatatablesgetguid-method"></a>IMetaDataTables::GetGuid Metodu
+# <a name="imetadatatablesgetguid-method"></a>IMetaDataTables::GetGuid Yöntemi
 Belirtilen dizindeki satırdaki bir GUID alır.  
   
 ## <a name="syntax"></a>Sözdizimi  

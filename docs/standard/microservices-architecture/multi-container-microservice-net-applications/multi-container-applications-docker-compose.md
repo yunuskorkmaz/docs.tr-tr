@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/30/2017
-ms.openlocfilehash: 0c4eda54fbb1f48095d52fa798ea839eb509a636
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: d1c4166129716ccbbc86855e38d631f493b82290
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42754735"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45750264"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Docker-compose.yml ile çok Kapsayıcılı uygulamanızı tanımlama 
 
@@ -126,7 +126,7 @@ Bu kapsayıcı hizmeti, temel yapılandırması aşağıdaki gibidir:
 
 -   SQL Server sql.data, Linux için SQL Server örneğini çalıştıran kapsayıcısı için kullanılan aynı adı olan addır. Bu kullanışlıdır; Bu ad çözümlemesi (Docker konağı dahili) kullanabilmek için ağ adresi çözer, bu diğer kapsayıcılardan eriştiğiniz kapsayıcılar için iç IP bilmek zorunda kalmazsınız.
 
-Bağlantı dizesi bir ortam değişkeni tarafından tanımlı olduğundan, farklı bir mekanizma aracılığıyla ve farklı bir zamanda bu değişkeni ayarlayabilirsiniz. Örneğin, son konaklar veya CI/CD işlem hatlarınızı VSTS veya tercih edilen DevOps sisteminizi gelen yapmakta üretime dağıtırken farklı bağlantı dizesi ayarlayabilirsiniz.
+Bağlantı dizesi bir ortam değişkeni tarafından tanımlı olduğundan, farklı bir mekanizma aracılığıyla ve farklı bir zamanda bu değişkeni ayarlayabilirsiniz. Örneğin, son konaklar veya CI/CD işlem hatlarınızı Azure DevOps Hizmetleri veya tercih edilen DevOps sisteminizi gelen yapmakta üretime dağıtırken farklı bağlantı dizesi ayarlayabilirsiniz.
 
 -   Bu, Docker konağının catalog.api hizmetinde iç erişimi için 80 numaralı bağlantı noktasını kullanıma sunar. Konak şu anda bir Linux VM Linux için Docker görüntü temel alan, ancak bunun yerine bir Windows görüntüsü üzerinde çalıştırmak için kapsayıcı yapılandırabilirsiniz olmasıdır.
 
@@ -180,7 +180,7 @@ Farklı ortamlar hedeflenirken birden çok kullanması gereken compose dosyası.
 
 Önceki bölümlerde gösterildiği Basitleştirilmiş örneklerde gösterildiği gibi bir tek docker-compose.yml dosyası kullanabilirsiniz. Bununla birlikte, çoğu uygulama için önerilmez.
 
-Varsayılan olarak, iki dosya, docker-compose.yml ve docker-compose.override.yml isteğe bağlı dosya oluşturma okur. Şekil 8-11'de gösterildiği gibi ne zaman, Visual Studio kullanarak ve Docker desteği, Visual Studio ayrıca etkinleştirme, CI/CD işlem hatlarınızı gibi vsts'de kullanmak için bir ek docker compose.ci.build,yml dosyası oluşturur.
+Varsayılan olarak, iki dosya, docker-compose.yml ve docker-compose.override.yml isteğe bağlı dosya oluşturma okur. Şekil 8-11'de gösterildiği gibi ne zaman, Visual Studio kullanarak ve Docker desteği, Visual Studio ayrıca etkinleştirme, CI/CD işlem hatlarınızı gibi Azure DevOps hizmetlerinde kullanmak için bir ek docker compose.ci.build,yml dosyası oluşturur.
 
 ![](./media/image12.png)
 

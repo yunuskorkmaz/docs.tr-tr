@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b6a217e2212bb900d7ba83ccdd9cb00d30454baf
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45625730"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45749654"
 ---
 # <a name="loadtypelibwithresolver-function"></a>LoadTypeLibWithResolver İşlevi
 Bir tür kitaplığı yükler ve sağlanan kullanan [Itypelibresolver arabirimi](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) tüm dahili olarak başvurulan tür kitaplıkları çözümlenecek.  
@@ -58,7 +58,7 @@ HRESULT LoadTypeLibWithResolver(
 ## <a name="return-value"></a>Dönüş Değeri  
  Aşağıdaki tabloda listelenen HRESULT değerlerinden biri.  
   
-|Dönüş değeri|Açıklama|  
+|Dönüş değeri|Anlamı|  
 |------------------|-------------|  
 |`S_OK`|Başarılı.|  
 |`E_OUTOFMEMORY`|Bellek yetersiz.|  

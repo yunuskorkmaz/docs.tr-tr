@@ -21,16 +21,16 @@ ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d8f126aa5b69c99beae740de261ac3da3c5d2544
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45674630"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45698568"
 ---
 # <a name="comparing-strings-in-net"></a>. NET'te dizeleri karşılaştırma
 .NET, dizeleri karşılaştırmak için çeşitli yöntemler sunar. Aşağıdaki tabloda, listeler ve değer karşılaştırma yöntemleri açıklar.  
   
-|Yöntem adı|Bir yönetim grubuna bağlanmak veya bağlı bir yönetim grubunun özelliklerini düzenlemek için Yönetim çalışma alanında|  
+|Yöntem adı|Kullan|  
 |-----------------|---------|  
 |<xref:System.String.Compare%2A?displayProperty=nameWithType>|İki dizenin değerini karşılaştırır. Bir Integer değeri döndürür.|  
 |<xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType>|Yerel kültüre bakılmaksızın iki dizeyi karşılaştırır. Bir Integer değeri döndürür.|  
@@ -46,9 +46,9 @@ ms.locfileid: "45674630"
   
 |Dönüş değeri|Koşul|  
 |------------------|---------------|  
-|Negatif bir tamsayı|Birinci dize ikinci dize sıralama düzeninde önce gelir.<br /><br /> veya<br /><br /> İlk dize `null`.|  
-|0|İlk dize ve ikinci dize eşit olur.<br /><br /> veya<br /><br /> Her iki dizelerdir `null`.|  
-|Pozitif bir tamsayı<br /><br /> veya<br /><br /> 1.|Birinci dize ikinci dize sıralama düzenini izler.<br /><br /> veya<br /><br /> İkinci dize `null`.|  
+|Negatif bir tamsayı|Birinci dize ikinci dize sıralama düzeninde önce gelir.<br /><br /> -veya-<br /><br /> İlk dize `null`.|  
+|0|İlk dize ve ikinci dize eşit olur.<br /><br /> -veya-<br /><br /> Her iki dizelerdir `null`.|  
+|Pozitif bir tamsayı<br /><br /> -veya-<br /><br /> 1.|Birinci dize ikinci dize sıralama düzenini izler.<br /><br /> -veya-<br /><br /> İkinci dize `null`.|  
   
 > [!IMPORTANT]
 >  <xref:System.String.Compare%2A?displayProperty=nameWithType> Yöntemi için sıralama veya dizeleri sıralama sırasında kullanılacak amaçlanmaktadır. Kullanmamalısınız <xref:System.String.Compare%2A?displayProperty=nameWithType> yöntemi eşitlik için test etmek için (diğer bir deyişle, 0 ile hiçbir şekilde mi için dönüş değeri açıkça aramak için bir dizedir küçük veya büyük). İki dizenin eşit olup olmadığını belirlemek için bunun yerine, kullanın <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> yöntemi.  

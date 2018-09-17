@@ -6,11 +6,11 @@ ms.assetid: 536c6fce-1453-4654-9c72-bca54d47e081
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: da8b623d3a73ca8791a0619c67b0ed3bd42447d3
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45569915"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45696295"
 ---
 # <a name="process-xml-data-using-the-xpath-data-model"></a>XPath veri modelini kullanarak XML verilerini işleme
 <xref:System.Xml?displayProperty=nameWithType> Ad alanı XML belgeleri, parçalar, düğüm veya düğüm kümeleri bellek içi, programlı bir gösterimini sağlar kullanarak <xref:System.Xml.XmlDocument> veya <xref:System.Xml.XPath.XPathDocument> sınıfları.  

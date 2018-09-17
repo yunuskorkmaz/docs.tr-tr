@@ -15,11 +15,11 @@ ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ddf8f52ab98d0188235d8c9f97293adced4bfe90
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45649401"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45698321"
 ---
 # <a name="application-domains"></a>Uygulama Etki Alanları
 İşletim sistemleri ve çalışma zamanı ortamlarını normalde çeşit uygulamalar arasında yalıtım sağlar. Örneğin, Windows uygulamalarını yalıtmak için işlemleri kullanır. Bir uygulama içinde çalışan kodun ilgisiz başka uygulamaları olumsuz yönde etkilememesini sağlamak bu yalıtım gereklidir.  

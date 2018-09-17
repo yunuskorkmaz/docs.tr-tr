@@ -5,11 +5,11 @@ helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
 ms.openlocfilehash: c181a415c8702c3032077728139b23e86d85d1f0
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45588689"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45746224"
 ---
 # <a name="queues-overview"></a>Kuyruklar Genel Bakış
 Bu bölümde genel tanıtır ve ardındaki temel kavramları, kuyruğa alınmış iletişim. Sonraki bölümlerde, sıraya alma burada açıklanan kavramlar, Windows Communication Foundation (WCF) nasıl bildirilen hakkında ayrıntılara gidin.  

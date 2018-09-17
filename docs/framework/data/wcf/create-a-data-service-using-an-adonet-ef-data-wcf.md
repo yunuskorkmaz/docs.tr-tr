@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-ms.openlocfilehash: 72439596ec6dc6c42024ed38116ba0026922154c
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 4bccd1e4655786ae24166cdc32619b420c4a54d3
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45679615"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45743780"
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>Nasıl yapılır: ADO.NET varlık çerçevesi veri kaynağı (WCF Veri Hizmetleri) kullanarak veri hizmeti oluşturma
 
@@ -34,7 +34,7 @@ WCF Veri Hizmetleri, varlık verilerini bir veri hizmeti kullanıma sunar. Bu va
 
 6. İçinde **bağlantı özellikleri** iletişim kutusu, sunucunuzun adını yazın, kimlik doğrulama yöntemini seçin, veritabanı adını yazın ve ardından **Tamam**.
 
-     **Veri bağlantınızı seçin**s iletişim kutusunda, veritabanı bağlantı ayarlarınızı ile güncelleştirilir.
+     **Veri bağlantınızı seçin** iletişim kutusunda, veritabanı bağlantı ayarlarınızı ile güncelleştirilir.
 
 7. Emin **varlığı App.Config dosyasındaki bağlantı ayarlarını Kaydet:** onay kutusu işaretli. Sonra **İleri**'ye tıklayın.
 

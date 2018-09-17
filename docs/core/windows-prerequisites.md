@@ -5,11 +5,11 @@ author: mairaw
 ms.author: mairaw
 ms.date: 08/31/2018
 ms.openlocfilehash: 63c0de2b413f38458dba89506f4070760b3f53f8
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45594769"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45747474"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows üzerinde .NET Core önkoşulları
 
@@ -24,7 +24,7 @@ Bu makalede, Windows üzerinde .NET Core uygulamaları geliştirmek için ihtiya
 .NET core üzerinde aşağıdaki sürümleri desteklenir:
 
 * Windows 7 SP1
-* Windows 8.1
+* Windows 8.1
 * Windows 10 Yıldönümü Güncelleştirmesi (sürüm 1607) veya sonraki sürümler
 * Windows Server 2008 R2 SP1 (tam sunucu veya Sunucu Çekirdeği)
 * Windows Server 2012 SP1 (tam sunucu veya Sunucu Çekirdeği)

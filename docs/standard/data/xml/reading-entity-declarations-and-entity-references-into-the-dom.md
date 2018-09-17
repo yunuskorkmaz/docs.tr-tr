@@ -6,11 +6,11 @@ ms.assetid: 86dba977-5cc4-4567-964f-027ffabc47b2
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e30b52b8cdfb4d185687d58c80f4475730031c86
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615221"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45748687"
 ---
 # <a name="reading-entity-declarations-and-entity-references-into-the-dom"></a>DOM'da varlık bildirimleri ve varlık başvuruları okuma
 XML içeriği veya biçimlendirme yerine kullanılmak üzere bir adını belirten bir bildirimi bir varlıktır. Varlıkları iki bölümü vardır. İlk olarak, bir ad kullanarak bir varlık bildirimi değiştirme içerik bağlamak gerekir. Bir varlık bildirimi kullanılarak oluşturulan `<!ENTITY name "value">` belge türü tanımı (DTD'nin) veya XML şema söz dizimi. İkincisi, varlık bildiriminde tanımlanan adını XML bundan sonra kullanılır. XML'de kullanıldığında, bir varlık başvurusu adı verilir. Örneğin, aşağıdaki varlık bildirimi varlığın adını bildirir `publisher` "Microsoft Press" içeriğini ile ilişkilendiriliyor.  
