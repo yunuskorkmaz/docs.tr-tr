@@ -7,35 +7,35 @@ helpviewer_keywords:
 - -codepage compiler option [Visual Basic]
 ms.assetid: be36ec33-6800-4505-838c-4124564f5cc9
 ms.openlocfilehash: fda75383435fdff718d1d50bc8583afc9858e7e2
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45666398"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45746403"
 ---
-# <a name="-codepage-visual-basic"></a><span data-ttu-id="6ba80-102">-codepage (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6ba80-102">-codepage (Visual Basic)</span></span>
-<span data-ttu-id="6ba80-103">Derlemedeki tüm kaynak kodu dosyaları için kullanılacak kod sayfasını belirtir.</span><span class="sxs-lookup"><span data-stu-id="6ba80-103">Specifies the code page to use for all source-code files in the compilation.</span></span>  
+# <a name="-codepage-visual-basic"></a><span data-ttu-id="72aaf-102">-codepage (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="72aaf-102">-codepage (Visual Basic)</span></span>
+<span data-ttu-id="72aaf-103">Derlemedeki tüm kaynak kodu dosyaları için kullanılacak kod sayfasını belirtir.</span><span class="sxs-lookup"><span data-stu-id="72aaf-103">Specifies the code page to use for all source-code files in the compilation.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6ba80-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="6ba80-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="72aaf-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="72aaf-104">Syntax</span></span>  
   
 ```  
 -codepage:id  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="6ba80-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="6ba80-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="72aaf-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="72aaf-105">Arguments</span></span>  
   
-|<span data-ttu-id="6ba80-106">Terim</span><span class="sxs-lookup"><span data-stu-id="6ba80-106">Term</span></span>|<span data-ttu-id="6ba80-107">Tanım</span><span class="sxs-lookup"><span data-stu-id="6ba80-107">Definition</span></span>|  
+|<span data-ttu-id="72aaf-106">Terim</span><span class="sxs-lookup"><span data-stu-id="72aaf-106">Term</span></span>|<span data-ttu-id="72aaf-107">Tanım</span><span class="sxs-lookup"><span data-stu-id="72aaf-107">Definition</span></span>|  
 |---|---|  
-|`id`|<span data-ttu-id="6ba80-108">Gerekli.</span><span class="sxs-lookup"><span data-stu-id="6ba80-108">Required.</span></span> <span data-ttu-id="6ba80-109">Derleyici tarafından belirtilen kod sayfası kullanır `id` kaynak dosyalarını kodlama yorumlamak için.</span><span class="sxs-lookup"><span data-stu-id="6ba80-109">The compiler uses the code page specified by `id` to interpret the encoding of the source files.</span></span>|  
+|`id`|<span data-ttu-id="72aaf-108">Gerekli.</span><span class="sxs-lookup"><span data-stu-id="72aaf-108">Required.</span></span> <span data-ttu-id="72aaf-109">Derleyici tarafından belirtilen kod sayfası kullanır `id` kaynak dosyalarını kodlama yorumlamak için.</span><span class="sxs-lookup"><span data-stu-id="72aaf-109">The compiler uses the code page specified by `id` to interpret the encoding of the source files.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="6ba80-110">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="6ba80-110">Remarks</span></span>  
- <span data-ttu-id="6ba80-111">Belirli bir kodlama ile kaydedilmiş kaynak kodu derlemek için kullanabileceğiniz `-codepage` hangi kod sayfası kullanılması gerektiğini belirtmek için.</span><span class="sxs-lookup"><span data-stu-id="6ba80-111">To compile source code saved with a specific encoding, you can use `-codepage` to specify which code page should be used.</span></span> <span data-ttu-id="6ba80-112">`-codepage` Derlemenizdeki tüm kaynak kodu dosyaları seçeneğini uygular.</span><span class="sxs-lookup"><span data-stu-id="6ba80-112">The `-codepage` option applies to all source-code files in your compilation.</span></span> <span data-ttu-id="6ba80-113">Daha fazla bilgi için [karakter kodlaması .NET Framework'teki](../../../standard/base-types/character-encoding.md).</span><span class="sxs-lookup"><span data-stu-id="6ba80-113">For more information, see [Character Encoding in the .NET Framework](../../../standard/base-types/character-encoding.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="72aaf-110">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="72aaf-110">Remarks</span></span>  
+ <span data-ttu-id="72aaf-111">Belirli bir kodlama ile kaydedilmiş kaynak kodu derlemek için kullanabileceğiniz `-codepage` hangi kod sayfası kullanılması gerektiğini belirtmek için.</span><span class="sxs-lookup"><span data-stu-id="72aaf-111">To compile source code saved with a specific encoding, you can use `-codepage` to specify which code page should be used.</span></span> <span data-ttu-id="72aaf-112">`-codepage` Derlemenizdeki tüm kaynak kodu dosyaları seçeneğini uygular.</span><span class="sxs-lookup"><span data-stu-id="72aaf-112">The `-codepage` option applies to all source-code files in your compilation.</span></span> <span data-ttu-id="72aaf-113">Daha fazla bilgi için [karakter kodlaması .NET Framework'teki](../../../standard/base-types/character-encoding.md).</span><span class="sxs-lookup"><span data-stu-id="72aaf-113">For more information, see [Character Encoding in the .NET Framework](../../../standard/base-types/character-encoding.md).</span></span>  
   
- <span data-ttu-id="6ba80-114">`-codepage` Seçeneği kaynak kodu dosyaları bir imza ile geçerli ANSI kod sayfası, Unicode veya UTF-8 kullanarak kaydedildiyse gerekli değildir.</span><span class="sxs-lookup"><span data-stu-id="6ba80-114">The `-codepage` option is not needed if the source-code files were saved using the current ANSI code page, Unicode, or UTF-8 with a signature.</span></span> <span data-ttu-id="6ba80-115">Visual Studio kaydeder tüm kaynak kodu dosyaları geçerli ANSI kod sayfasıyla varsayılan olarak, kullanıcı, başka bir kodlama belirtmediği sürece **kodlama** iletişim kutusu.</span><span class="sxs-lookup"><span data-stu-id="6ba80-115">Visual Studio saves all source-code files with the current ANSI code page by default, unless the user specifies another encoding in the **Encoding** dialog box.</span></span> <span data-ttu-id="6ba80-116">Visual Studio kullanan **kodlama** farklı bir kod sayfası ile kaydedilen kaynak kodu dosyaları açmak için iletişim kutusu.</span><span class="sxs-lookup"><span data-stu-id="6ba80-116">Visual Studio uses the **Encoding** dialog box to open source-code files saved with a different code page.</span></span>  
+ <span data-ttu-id="72aaf-114">`-codepage` Seçeneği kaynak kodu dosyaları bir imza ile geçerli ANSI kod sayfası, Unicode veya UTF-8 kullanarak kaydedildiyse gerekli değildir.</span><span class="sxs-lookup"><span data-stu-id="72aaf-114">The `-codepage` option is not needed if the source-code files were saved using the current ANSI code page, Unicode, or UTF-8 with a signature.</span></span> <span data-ttu-id="72aaf-115">Visual Studio kaydeder tüm kaynak kodu dosyaları geçerli ANSI kod sayfasıyla varsayılan olarak, kullanıcı, başka bir kodlama belirtmediği sürece **kodlama** iletişim kutusu.</span><span class="sxs-lookup"><span data-stu-id="72aaf-115">Visual Studio saves all source-code files with the current ANSI code page by default, unless the user specifies another encoding in the **Encoding** dialog box.</span></span> <span data-ttu-id="72aaf-116">Visual Studio kullanan **kodlama** farklı bir kod sayfası ile kaydedilen kaynak kodu dosyaları açmak için iletişim kutusu.</span><span class="sxs-lookup"><span data-stu-id="72aaf-116">Visual Studio uses the **Encoding** dialog box to open source-code files saved with a different code page.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="6ba80-117">`-codepage` Seçeneği, Visual Studio geliştirme ortamında kullanılabilir değil; yalnızca komut satırından derleme yapılırken kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="6ba80-117">The `-codepage` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span></span>  
+>  <span data-ttu-id="72aaf-117">`-codepage` Seçeneği, Visual Studio geliştirme ortamında kullanılabilir değil; yalnızca komut satırından derleme yapılırken kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="72aaf-117">The `-codepage` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6ba80-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6ba80-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="72aaf-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="72aaf-118">See also</span></span>
 
-- [<span data-ttu-id="6ba80-119">Visual Basic komut satırı derleyicisi</span><span class="sxs-lookup"><span data-stu-id="6ba80-119">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
+- [<span data-ttu-id="72aaf-119">Visual Basic komut satırı derleyicisi</span><span class="sxs-lookup"><span data-stu-id="72aaf-119">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)

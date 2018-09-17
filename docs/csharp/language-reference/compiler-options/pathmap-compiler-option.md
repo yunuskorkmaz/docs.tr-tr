@@ -8,49 +8,49 @@ helpviewer_keywords:
 - pathmap compiler option [C#]
 - /pathmap compiler option [C#]
 ms.openlocfilehash: 277ab8e094f28fd5e3cbba4de12e742bb9614730
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45678013"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45743293"
 ---
-# <a name="-pathmap-c-compiler-options"></a><span data-ttu-id="8f306-102">-pathmap (C# Derleyici Seçenekleri)</span><span class="sxs-lookup"><span data-stu-id="8f306-102">-pathmap (C# Compiler Options)</span></span>
+# <a name="-pathmap-c-compiler-options"></a><span data-ttu-id="f7145-102">-pathmap (C# Derleyici Seçenekleri)</span><span class="sxs-lookup"><span data-stu-id="f7145-102">-pathmap (C# Compiler Options)</span></span>
 
-<span data-ttu-id="8f306-103">**- Pathmap** derleyici seçeneği, fiziksel yollar, derleyici tarafından kaynak yol adları çıktısına eşlemeyle ilgili bilgi belirtir.</span><span class="sxs-lookup"><span data-stu-id="8f306-103">The **-pathmap** compiler option specifies how to map physical paths to source path names output by the compiler.</span></span>
+<span data-ttu-id="f7145-103">**- Pathmap** derleyici seçeneği, fiziksel yollar, derleyici tarafından kaynak yol adları çıktısına eşlemeyle ilgili bilgi belirtir.</span><span class="sxs-lookup"><span data-stu-id="f7145-103">The **-pathmap** compiler option specifies how to map physical paths to source path names output by the compiler.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="8f306-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="8f306-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="f7145-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="f7145-104">Syntax</span></span>
 
 ```console
 -pathmap:path1=sourcePath1,path2=sourcePath2
 ```
 
-## <a name="arguments"></a><span data-ttu-id="8f306-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="8f306-105">Arguments</span></span>
+## <a name="arguments"></a><span data-ttu-id="f7145-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="f7145-105">Arguments</span></span>
 
- <span data-ttu-id="8f306-106">`path1` Geçerli ortamda kaynak dosyalarının tam yolu</span><span class="sxs-lookup"><span data-stu-id="8f306-106">`path1` The full path to the source files in the current environment</span></span>
+ <span data-ttu-id="f7145-106">`path1` Geçerli ortamda kaynak dosyalarının tam yolu</span><span class="sxs-lookup"><span data-stu-id="f7145-106">`path1` The full path to the source files in the current environment</span></span>
 
- <span data-ttu-id="8f306-107">`sourcePath1` Kaynak yolu için yerine `path1` herhangi bir çıktı dosyaları içinde.</span><span class="sxs-lookup"><span data-stu-id="8f306-107">`sourcePath1` The source path substituted for `path1` in any output files.</span></span>
+ <span data-ttu-id="f7145-107">`sourcePath1` Kaynak yolu için yerine `path1` herhangi bir çıktı dosyaları içinde.</span><span class="sxs-lookup"><span data-stu-id="f7145-107">`sourcePath1` The source path substituted for `path1` in any output files.</span></span>
 
-<span data-ttu-id="8f306-108">Birden çok eşleşen kaynak yolları belirlemek için her virgül ile ayırın.</span><span class="sxs-lookup"><span data-stu-id="8f306-108">To specify multiple mapped source paths, separate each with a comma.</span></span>
+<span data-ttu-id="f7145-108">Birden çok eşleşen kaynak yolları belirlemek için her virgül ile ayırın.</span><span class="sxs-lookup"><span data-stu-id="f7145-108">To specify multiple mapped source paths, separate each with a comma.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="8f306-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="8f306-109">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="f7145-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="f7145-109">Remarks</span></span>
 
-<span data-ttu-id="8f306-110">Derleyici, aşağıdaki nedenlerden dolayı çıktısını kaynak yol Yazar:</span><span class="sxs-lookup"><span data-stu-id="8f306-110">The compiler writes the source path path into its output for the following reasons:</span></span>
+<span data-ttu-id="f7145-110">Derleyici, aşağıdaki nedenlerden dolayı çıktısını kaynak yol Yazar:</span><span class="sxs-lookup"><span data-stu-id="f7145-110">The compiler writes the source path path into its output for the following reasons:</span></span>
 
-1. <span data-ttu-id="8f306-111">Kaynak yolu için bağımsız değişken yerine zaman <xref:System.Runtime.CompilerServices.CallerFilePathAttribute> için isteğe bağlı parametresi uygulanır.</span><span class="sxs-lookup"><span data-stu-id="8f306-111">The source path is substituted for an argument when the <xref:System.Runtime.CompilerServices.CallerFilePathAttribute> is applied to an optional parameter.</span></span>
-1. <span data-ttu-id="8f306-112">Kaynak yolu bir PDB dosyasına eklenir.</span><span class="sxs-lookup"><span data-stu-id="8f306-112">The source path is embedded in a PDB file.</span></span>
-1. <span data-ttu-id="8f306-113">PDB dosyasının yolu (taşınabilir çalıştırılabilir) PE dosyasına eklenir.</span><span class="sxs-lookup"><span data-stu-id="8f306-113">The path of the PDB file is embedded into a PE (portable executable) file.</span></span>
+1. <span data-ttu-id="f7145-111">Kaynak yolu için bağımsız değişken yerine zaman <xref:System.Runtime.CompilerServices.CallerFilePathAttribute> için isteğe bağlı parametresi uygulanır.</span><span class="sxs-lookup"><span data-stu-id="f7145-111">The source path is substituted for an argument when the <xref:System.Runtime.CompilerServices.CallerFilePathAttribute> is applied to an optional parameter.</span></span>
+1. <span data-ttu-id="f7145-112">Kaynak yolu bir PDB dosyasına eklenir.</span><span class="sxs-lookup"><span data-stu-id="f7145-112">The source path is embedded in a PDB file.</span></span>
+1. <span data-ttu-id="f7145-113">PDB dosyasının yolu (taşınabilir çalıştırılabilir) PE dosyasına eklenir.</span><span class="sxs-lookup"><span data-stu-id="f7145-113">The path of the PDB file is embedded into a PE (portable executable) file.</span></span>
 
-<span data-ttu-id="8f306-114">Bu seçenek derleyici çıktı dosyaları yazılmalıdır karşılık gelen bir yola çalıştırıldığı makine üzerinde her fiziksel yolu eşler.</span><span class="sxs-lookup"><span data-stu-id="8f306-114">This option maps each physical path on the machine where the compiler runs to a corresponding path that should be written in the output files.</span></span>
+<span data-ttu-id="f7145-114">Bu seçenek derleyici çıktı dosyaları yazılmalıdır karşılık gelen bir yola çalıştırıldığı makine üzerinde her fiziksel yolu eşler.</span><span class="sxs-lookup"><span data-stu-id="f7145-114">This option maps each physical path on the machine where the compiler runs to a corresponding path that should be written in the output files.</span></span>
 
-## <a name="example"></a><span data-ttu-id="8f306-115">Örnek</span><span class="sxs-lookup"><span data-stu-id="8f306-115">Example</span></span>
+## <a name="example"></a><span data-ttu-id="f7145-115">Örnek</span><span class="sxs-lookup"><span data-stu-id="f7145-115">Example</span></span>
 
-<span data-ttu-id="8f306-116">Derleme `t.cs` dizinde **C:\\çalışma\\testleri** ve bu dizine harita **\publish** çıktı:</span><span class="sxs-lookup"><span data-stu-id="8f306-116">Compile `t.cs` in the directory **C:\\work\\tests** and map that directory to **\publish** in the output:</span></span>
+<span data-ttu-id="f7145-116">Derleme `t.cs` dizinde **C:\\çalışma\\testleri** ve bu dizine harita **\publish** çıktı:</span><span class="sxs-lookup"><span data-stu-id="f7145-116">Compile `t.cs` in the directory **C:\\work\\tests** and map that directory to **\publish** in the output:</span></span>
 
 ```console
 csc -pathmap:C:\work\tests=\publish t.cs
 ```
 
-## <a name="see-also"></a><span data-ttu-id="8f306-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8f306-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f7145-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f7145-117">See also</span></span>
 
-- [<span data-ttu-id="8f306-118">C# Derleyici Seçenekleri</span><span class="sxs-lookup"><span data-stu-id="8f306-118">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
-- [<span data-ttu-id="8f306-119">Proje ve Çözüm Özelliklerini Yönetme</span><span class="sxs-lookup"><span data-stu-id="8f306-119">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
+- [<span data-ttu-id="f7145-118">C# Derleyici Seçenekleri</span><span class="sxs-lookup"><span data-stu-id="f7145-118">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
+- [<span data-ttu-id="f7145-119">Proje ve Çözüm Özelliklerini Yönetme</span><span class="sxs-lookup"><span data-stu-id="f7145-119">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
