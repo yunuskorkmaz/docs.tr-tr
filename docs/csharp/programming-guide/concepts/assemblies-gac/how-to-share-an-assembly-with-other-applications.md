@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: bir derlemeyi başka uygulamalarla (C#) paylaşma'
 ms.date: 07/20/2015
 ms.assetid: c30e972b-1693-4e05-b115-c31831fdf9f2
 ms.openlocfilehash: a5b20061c759fd914193f24aa123317f13d31dce
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
-ms.translationtype: HT
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45570190"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45638402"
 ---
 # <a name="how-to-share-an-assembly-with-other-applications-c"></a>Nasıl yapılır: bir derlemeyi başka uygulamalarla (C#) paylaşma
 Özel veya paylaşılan derlemeler olabilir: varsayılan olarak, diğer uygulamalar tarafından kullanılmak üzere amaçlanmamıştır çünkü basit programlarının çoğu özel bir derleme oluşur.  
