@@ -3,12 +3,12 @@ title: XML açıklamalarıyla kodunuzu belgeleme
 description: XML belgeleri yorumları ile kodunuzu belgeleme ve derleme zamanında XML belge dosyası oluşturma hakkında bilgi edinin.
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 4c94e98478e71449a3f9cc4bf1f21462e17a371b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e211543a6a5cc5f6f29d8c195492b474eb24a38d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517487"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45683063"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>XML açıklamalarıyla kodunuzu belgeleme
 
@@ -29,7 +29,7 @@ XML dosyası, aşağıdakilerden birini yaparak, bir derleme zamanında oluştur
    XML dosyasının adını ve tam mutlak veya göreli yolu belirtebilirsiniz. Aşağıdaki örnek, bir uygulamanın hata ayıklama sürümü ile aynı dizinde XML dosyası oluşturur:
 
    ```xml
-   <DocumentationFile>bin\Debug\netcoreapp1.0\App.xml</DocumentationFile>
+   <DocumentationFile>bin\Debug\netcoreapp2.1\App.xml</DocumentationFile>
    ```
 
 - Visual Studio kullanarak bir uygulama geliştiriyorsanız sağ tıklatın ve proje **özellikleri**. Özellikler iletişim kutusunda, seçmek **derleme** sekmesini tıklatıp denetleyin **XML belge dosyası**. Ayrıca, derleyici dosyayı yazacağı konum değiştirebilirsiniz.
