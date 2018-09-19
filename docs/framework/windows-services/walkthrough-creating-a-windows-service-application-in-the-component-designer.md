@@ -11,11 +11,11 @@ ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
 manager: douge
 ms.openlocfilehash: 27acdac5d34b96dd04fec1bb763edec9077ff928
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45677376"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46288309"
 ---
 # <a name="walkthrough-create-a-windows-service-app"></a>İzlenecek yol: bir Windows hizmeti uygulaması oluşturma
 

@@ -10,17 +10,17 @@ helpviewer_keywords:
 - type conversion [C#], explicit numeric
 ms.assetid: f3bb9e76-6b92-4df7-bc36-f866c24e1dfd
 ms.openlocfilehash: 22bb2117e7b78596e1fb6af63584f51b066564c9
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45747513"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46288357"
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a>Açık sayısal dönüşümler tablosu (C# Başvurusu)
 
 Aşağıdaki tabloda önceden tanımlanmış açık dönüştürmeler kendisi için .NET sayısal türler arasında gösterir. hiçbir [örtük dönüştürme](implicit-numeric-conversions-table.md).
 
-|From|Amaç|  
+|Başlangıç|Bitiş|  
 |----------|--------|  
 |[sbyte](sbyte.md)|`byte`, `ushort`, `uint`, `ulong`, veya `char`|  
 |[byte](byte.md)|`sbyte` veya `char`|  

@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d5fd96f390b0bba60d1b95d20273bbf670208d41
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45745583"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46287296"
 ---
 # <a name="imetadatadispenserexopenscopeonitypeinfo-method"></a>IMetaDataDispenserEx::OpenScopeOnITypeInfo Yöntemi
 Bu yöntem uygulanmadı. Çağrılırsa E_NOTIMPL döndürür.  

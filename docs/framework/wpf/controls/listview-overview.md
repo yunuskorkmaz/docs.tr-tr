@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
 ms.openlocfilehash: a3b5805808ce2e84e7713f07694464b75d83a391
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45666823"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46287721"
 ---
 # <a name="listview-overview"></a>ListView Genel Bakışı
 <xref:System.Windows.Controls.ListView> Denetim bir veri öğeleri kümesi farklı düzenler veya görünümleri görüntülemek için altyapı sağlar. Örneğin, bir kullanıcı, bir tablodaki veri öğelerini görüntülemek ve sıralama sütunlarını isteyebilirsiniz.  
