@@ -10,11 +10,11 @@ ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 3d5d91db9256cdfb3aa0062d66333f13797ee1bb
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45647505"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46006489"
 ---
 # <a name="net-performance-tips"></a>.NET Performans İpuçları
 Terim *performans* genellikle bir programı yürütme hızını gösterir. Ayrıca, bazı temel kurallara kaynak kodunuza uygulayarak bazen yürütme hızını artırabilirsiniz. Bazı programlarda, kodu yakından incelemek ve mümkün olduğunca hızlı çalıştığından emin olmak için profil oluşturucuları kullanmak önemlidir. Diğer programlarda, hızlı yazıldığı gibi kod yazıldıkça yeterince çalıştığından böyle bir iyileştirme gerçekleştirmek zorunda değildir. Bu makalede, bazı ortak alanlar burada performans olumsuz etkilenebilir ve bunun yanı sıra ek performans konularının bağlantılarını geliştirme ipuçları listelenmektedir. Planlama ve performans ölçümü hakkında daha fazla bilgi için bkz. [performans](../../../docs/framework/performance/index.md)  

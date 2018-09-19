@@ -17,11 +17,11 @@ ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9b390b1d3d935ad045d59dd6b3d2e42cdbe82dd7
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45658658"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45988615"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>Normal İfadelerdeki Karakter Çıkışları
 Ters eğik çizgi (\\) normal bir ifadede aşağıdakilerden birini gösterir:  
@@ -38,7 +38,7 @@ Ters eğik çizgi (\\) normal bir ifadede aşağıdakilerden birini gösterir:
   
 |Karakter veya dizisi|Açıklama|  
 |---------------------------|-----------------|  
-|Aşağıdakiler dışında tüm karakterleri:<br /><br /> . $ ^ { [ ( &#124; ) * + ? \ |Listelenenler dışında karakterler **karakter veya dizisi** sütun normal ifadeler özel bir anlamı vardır; bunların kendileri eşleşmesi.<br /><br /> İçindeki karakterleri **karakter veya dizisi** sütun, özel normal ifade dil öğe. Normal bir ifadede ayarlarla eşleşecek şekilde bunlar kaçış karakterleri veya gereken dahil bir [pozitif karakter grubu](../../../docs/standard/base-types/character-classes-in-regular-expressions.md). Örneğin, normal ifade `\$\d+` veya `[$]\d+` "$1200" ile eşleşir.|  
+|Aşağıdakiler dışında tüm karakterleri:<br /><br /> biçimindeki telefon numarasıdır. $ ^ { [ ( &#124; ) * + ? \ |Listelenenler dışında karakterler **karakter veya dizisi** sütun normal ifadeler özel bir anlamı vardır; bunların kendileri eşleşmesi.<br /><br /> İçindeki karakterleri **karakter veya dizisi** sütun, özel normal ifade dil öğe. Normal bir ifadede ayarlarla eşleşecek şekilde bunlar kaçış karakterleri veya gereken dahil bir [pozitif karakter grubu](../../../docs/standard/base-types/character-classes-in-regular-expressions.md). Örneğin, normal ifade `\$\d+` veya `[$]\d+` "$1200" ile eşleşir.|  
 |`\a`|Zil (alarm) bir karakterle eşleşir `\u0007`.|  
 |`\b`|İçinde bir `[` *character_group* `]` karakter sınıfı, Geri Al, bir eşleşme `\u0008`.  (Bkz [karakter sınıfları](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).) Bir karakter sınıfı dışında `\b` bir sözcük sınırı eşleşen bir tutturucudur. (Bkz [bağlayıcılarını](../../../docs/standard/base-types/anchors-in-regular-expressions.md).)|  
 |`\t`|Bir sekmeyle eşleşir, `\u0009`.|  

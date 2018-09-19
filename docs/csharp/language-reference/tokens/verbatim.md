@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 89bc7e53-85f5-478a-866d-1cca003c4e8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7dbab5a743b4f9fed759210e8410cd6e3459efac
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 6d6da87159e3ec9184eaa76ad069102204e2fcfc
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591405"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46009381"
 ---
 # <a name="-c-reference"></a>(, C# Başvurusu)
 
@@ -33,46 +33,9 @@ ms.locfileid: "45591405"
 
    [!code-csharp[verbatim3](../../../../samples/snippets/csharp/language-reference/keywords/verbatim1.cs#3)]
 
-1. Ad çakışması örneklerini öznitelikleri arasında ayrım yapmak derleyici etkinleştirmek için. Türetilen bir tür bir özniteliktir <xref:System.Attribute>. Tür adı genellikle soneki içerir **özniteliği**, ancak derleyici, bu kural uygulamaz. Öznitelik başvurulabilir tam tür adıyla ya da kod (örneğin, `[InfoAttribute]` ya da kısaltılmış adını (örneğin, `[Info]`). İki kısalttık, ancak bir adlandırma çakışması öznitelik türü adları aynıdır ve bir tür adını içeren meydana gelir **özniteliği** soneki ancak diğer desteklemez. Örneğin, aşağıdaki kod derleyici belirlenemiyor çünkü derleme başarısız olup olmadığını `Info` veya `InfoAttribute` özniteliği uygulandığı `Example` sınıfı.
+1. Ad çakışması örneklerini öznitelikleri arasında ayrım yapmak derleyici etkinleştirmek için. Türetilen bir sınıf bir özniteliktir <xref:System.Attribute>. Tür adı genellikle soneki içerir **özniteliği**, ancak derleyici, bu kural uygulamaz. Öznitelik başvurulabilir tam tür adıyla ya da kod (örneğin, `[InfoAttribute]` ya da kısaltılmış adını (örneğin, `[Info]`). İki kısalttık, ancak bir adlandırma çakışması öznitelik türü adları aynıdır ve bir tür adını içeren meydana gelir **özniteliği** soneki ancak diğer desteklemez. Örneğin, aşağıdaki kod derleyici belirlenemiyor çünkü derleme başarısız olup olmadığını `Info` veya `InfoAttribute` özniteliği uygulandığı `Example` sınıfı. Bkz: [CS1614](../compiler-messages/cs1614.md) daha fazla bilgi için.
 
-   ```csharp
-   using System;
-
-   [AttributeUsage(AttributeTargets.Class)]
-   public class Info : Attribute
-   {
-      private string information;
-      
-      public Info(string info)
-      {
-          information = info;
-      }
-   }
-
-   [AttributeUsage(AttributeTargets.Method)]
-   public class InfoAttribute : Attribute
-   {
-      private string information;
-      
-      public InfoAttribute(string info)
-      {
-          information = info;
-      }
-   }
-
-   [Info("A simple executable.")]
-   public class Example
-   {
-      [InfoAttribute("The entry point.")]
-      public static void Main()
-      {
-      }
-   }
-   ```  
-
-   Tam tanımlayıcı tanımlamak için kullanılıyorsa `Info` özniteliği, örnek derler başarıyla.
-
-   [!code-csharp[verbatim4](../../../../samples/snippets/csharp/language-reference/keywords/verbatim4.cs#1)]
+   [!code-csharp[verbatim4](../../../../samples/snippets/csharp/language-reference/keywords/verbatim2.cs#1)]
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 

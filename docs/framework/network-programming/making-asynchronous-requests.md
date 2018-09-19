@@ -1,5 +1,5 @@
 ---
-title: Zaman uyumsuz istekleri yapan
+title: Zaman uyumsuz istekler yapma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,39 +14,39 @@ ms.assetid: 735d3fce-f80c-437f-b02c-5c47f5739674
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 27860feed5fbb33fb007120d082599c8f80b240d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f5729f0a3d36a631b227c77de51f68b95e8df22
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395914"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46287825"
 ---
-# <a name="making-asynchronous-requests"></a>Zaman uyumsuz istekleri yapan
-<xref:System.Net> Sınıfları için zaman uyumsuz Internet kaynaklarına erişim için .NET Framework'ün standart zaman uyumsuz programlama modeli kullanın. <xref:System.Net.WebRequest.BeginGetResponse%2A> Ve <xref:System.Net.WebRequest.EndGetResponse%2A> yöntemlerinin <xref:System.Net.WebRequest> sınıf başlangıç ve bir Internet kaynağına için tam zaman uyumsuz istek.  
+# <a name="making-asynchronous-requests"></a>Zaman uyumsuz istekler yapma
+<xref:System.Net> Sınıfları, zaman uyumsuz Internet kaynaklarına erişim için .NET Framework'ün standart zaman uyumsuz programlama modeli kullanın. <xref:System.Net.WebRequest.BeginGetResponse%2A> Ve <xref:System.Net.WebRequest.EndGetResponse%2A> yöntemlerinin <xref:System.Net.WebRequest> başlangıç ve tüm zaman uyumsuz istekler için bir Internet kaynağına sınıfı.  
   
 > [!NOTE]
->  Zaman uyumlu kullanarak zaman uyumsuz geri çağırma yöntemleri önemli performans yaptırımlarla sonuçlanabilir olarak çağırır. İle yapılan Internet istekleri **WebRequest** ve alt öğeleri kullanmalıdır <xref:System.IO.Stream.BeginRead%2A?displayProperty=nameWithType> tarafından döndürülen akış okumak için <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType> yöntemi.  
+>  Zaman uyumsuz geri çağırma yöntemleri ciddi performans yaptırımlarla sonuçlanabilir, zaman uyumlu kullanarak çağırır. Internet isteklerini yapılan **WebRequest** ve alt öğelerini kullanmalıdır <xref:System.IO.Stream.BeginRead%2A?displayProperty=nameWithType> tarafından döndürülen akışını okumak için <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType> yöntemi.  
   
- Aşağıdaki örnek kod ile zaman uyumsuz çağrılarının nasıl kullanılacağını gösteren **WebRequest** sınıfı. Komut satırından bir URI alır, URI kaynak ister ve Internet'ten alınan gibi verileri konsola yazdırır bir konsol programı örnektir.  
+ Aşağıdaki örnek kod ile zaman uyumsuz çağrıları nasıl yapılacağı açıklanır **WebRequest** sınıfı. Komut satırından bir URI alır, kaynağın urı'sindeki ister ve ardından Internet'ten alınan verileri konsola yazdırır. bir konsol programı örnektir.  
   
- Program kendi kullanımı için iki sınıf tanımlar **RequestState** verileri zaman uyumsuz çağrılar geçirir, sınıf ve **ClientGetAsync** zaman uyumsuz istek uygulayan sınıfı bir Internet kaynağının.  
+ Program, kendi kullanımı için iki sınıf tanımlar **RequestState** verileri zaman uyumsuz çağrıları arasında geçen, sınıf ve **ClientGetAsync** için zaman uyumsuz istek uygulayan bir sınıf bir Internet kaynağıyla.  
   
- **RequestState** sınıfı isteğe hizmet zaman uyumsuz yöntemleri çağrıları arasında istek durumunu korur. İçerdiği **WebRequest** ve <xref:System.IO.Stream> kaynak ve yanıt, şu anda Internet kaynağının ve bir alınanverileriiçerenbirarabelleğealınanakışageçerliistekleiçerenörnekleri<xref:System.Text.StringBuilder> tam yanıtı içerir. A **RequestState**olarak geçirilen *durumu* parametresi zaman <xref:System.AsyncCallback> yöntemi ile kayıtlı **WebRequest.BeginGetResponse**.  
+ **RequestState** sınıfı, hizmet isteğini zaman uyumsuz yöntemleri çağrılar üzerinden isteğin durumu korur. İçerdiği **WebRequest** ve <xref:System.IO.Stream> geçerli istek için kaynak ve yanıt, şu anda Internet kaynağının ve bir alınanverileriçerenbirarabelleğealınanakışaiçerenörnekler<xref:System.Text.StringBuilder> , tam yanıtı içerir. A **RequestState** olarak geçirilen *durumu* parametre olduğunda <xref:System.AsyncCallback> yöntemi ile kayıtlı **WebRequest.BeginGetResponse**.  
   
- **ClientGetAsync** sınıfı zaman uyumsuz isteği bir Internet kaynağına uygular ve sonuçta elde edilen yanıtı konsola yazar. Aşağıdaki listede açıklanan özellikleri ve yöntemleri içerir.  
+ **ClientGetAsync** sınıfı zaman uyumsuz isteği bir Internet kaynağına uygular ve sonuçta elde edilen yanıtı konsola yazar. Bunu, aşağıdaki listede açıklanan özellikler ve yöntemler içerir.  
   
--   `allDone` Özelliği içeren bir örneğini <xref:System.Threading.ManualResetEvent> isteği tamamlama sinyalleri sınıfı.  
+-   `allDone` Özelliği içeren bir örneğini <xref:System.Threading.ManualResetEvent> isteğin tamamlandığını bildiren bir sınıf.  
   
--   `Main()` Yöntemi komut satırını okur ve belirtilen Internet kaynak isteği başlar. Oluşturduğu **WebRequest** `wreq` ve **RequestState** `rs`, çağrıları **BeginGetResponse** isteği ve ardından çağrıları işlemesi için `allDone.WaitOne()`yöntemi böylece geri çağırma işlemi tamamlanana kadar uygulamadan çıkmak değil. Yanıt Internet kaynaktan okuduktan sonra `Main()` konsol ve uygulama sona erer yazar.  
+-   `Main()` Yöntemi komut satırını okur ve istek için belirtilen Internet kaynağıyla başlar. Oluşturur **WebRequest** `wreq` ve **RequestState** `rs`, çağrıları **BeginGetResponse** isteği ve ardından aramaları işlemesi için `allDone.WaitOne()`yöntemi böylece geri çağırma işlemi tamamlanana kadar uygulamadan çıkın değil. Yanıt, Internet kaynaktan okuduktan sonra `Main()` konsolu ve uygulama sona erer için yazar.  
   
--   `showusage()` Yöntemi bir örnek komut satırı konsola yazar. Çağrılır `Main()` komut satırında hiçbir URI sağlandığında.  
+-   `showusage()` Yöntemi konsolda bir örnek komut satırı yazar. Tarafından çağrılır `Main()` hiçbir URI komut satırında sağlanan zaman.  
   
--   `RespCallBack()` Yöntemi uygulayan Internet bu istek için zaman uyumsuz geri çağırma yöntemi. Oluşturduğu **WebResponse** Internet kaynağının gelen yanıtı içeren örneği yanıt akışı alır ve verileri akıştan zaman uyumsuz olarak okumak başlatır.  
+-   `RespCallBack()` Yöntemini uygulayan Internet istek için zaman uyumsuz geri çağırma yöntemi. Oluşturur **WebResponse** Internet kaynağının yanıtı içeren örnek yanıt akışı alır ve ardından verileri akıştan zaman uyumsuz olarak okuma başlatır.  
   
--   `ReadCallBack()` Yöntemi uygulayan yanıt akışına okumak için zaman uyumsuz geri çağırma yöntemi. Internet kaynağından alınan veri aktarımı **ResponseData** özelliği **RequestState** örneği sonra başka bir zaman uyumsuz okuma yanıt akışı başka veri yok kadar başlatır döndürdü. Tüm verileri okumasını sonra `ReadCallBack()` çağrıları ve yanıt akışı kapatır `allDone.Set()` tüm yanıt mevcut olduğunu göstermek için yöntemi **ResponseData**.  
+-   `ReadCallBack()` Yöntemini uygulayan yanıt akışına okumak için zaman uyumsuz geri çağırma yöntemi. Internet kaynağına alınan veri aktarımları **ResponseData** özelliği **RequestState** örneği ve ardından başka bir zaman uyumsuz okuma yanıt akışı başka veri yok olana kadar başlatır döndürdü. Tüm verileri okuduktan sonra `ReadCallBack()` çağırır ve yanıt akışı kapatır `allDone.Set()` yanıtın tamamını mevcut olduğunu belirtmek için yöntemi **ResponseData**.  
   
     > [!NOTE]
-    >  Tüm ağ akışlarına kapalı olduğundan önemlidir. Her istek ve yanıt akışı kapatmazsanız uygulamanızı sunucuya bağlantıları dışında çalıştırın ve ek istekleri işleyemiyor.  
+    >  Tüm ağ akışlarına kapalı olduğundan önemlidir. Her istek ve yanıt akışı kapatmazsanız, uygulamanızın bağlantılar dışında sunucuya çalıştırın ve ek istekleri işleyemiyor.  
   
 ```csharp  
 using System;  

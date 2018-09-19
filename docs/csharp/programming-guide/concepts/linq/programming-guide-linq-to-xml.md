@@ -3,11 +3,11 @@ title: Programlama Kılavuzu (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4b1ffd10-ab81-4a0d-a0ca-e9876478d924
 ms.openlocfilehash: acb8271ad9ea338d31516c35bae46593a5fd2f78
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
-ms.translationtype: MT
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45594840"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46006905"
 ---
 # <a name="programming-guide-linq-to-xml-c"></a>Programlama Kılavuzu (LINQ to XML) (C#)
 Bu bölümde ile programlama hakkında kavramsal bilgiler ve nasıl yapılır bilgileri [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  

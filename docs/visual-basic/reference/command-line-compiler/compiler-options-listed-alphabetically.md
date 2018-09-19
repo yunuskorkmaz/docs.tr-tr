@@ -7,11 +7,11 @@ ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9f24759d68f007caf5f79096c6d4cebb7c050851
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
-ms.translationtype: MT
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45647427"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46007236"
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>Alfabetik listelenmiş Visual Basic derleyici seçenekleri
 Visual Basic komut satırı derleyicisi, Visual Studio tümleşik geliştirme ortamından (IDE) programları derleme alternatif olarak sağlanır. Alfabetik olarak sıralanmış Visual Basic derleyici komut satırı seçeneklerinin listesi verilmiştir.  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
 ms.openlocfilehash: 35af3090c0f898578a5f8dfb81d02d22a0074ad2
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45649373"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46007067"
 ---
 # <a name="ws-transaction-flow"></a>WS İşlem Akışı
 Bu örnek, bir istemci Eşgüdümlü işlem kullanımını gösterir ve WS-Atomic işlem ya da OleTransactions protokolünü kullanarak işlem istemci ve sunucu seçeneklerini akış. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hesaplayıcı hizmet uygulayan ancak işlemleri kullanımını göstermek için öznitelikli `TransactionFlowAttribute` ile **TransactionFlowOption** ne derece işlem akışı etkin belirlemek için sabit listesi. Akışlı işlem kapsamında, istenen işlemlerin bir günlük veritabanına yazılır ve istemci işlemi tamamlanmazsa, Eşgüdümlü istemci işlemi tamamlanana kadar - devam ederse Web hizmeti işlemi sağlar ilgili güncelleştirmeleri veritabanına iletilmez.  

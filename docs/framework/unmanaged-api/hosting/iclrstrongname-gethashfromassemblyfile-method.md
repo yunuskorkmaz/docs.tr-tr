@@ -1,5 +1,5 @@
 ---
-title: ICLRStrongName::GetHashFromAssemblyFile Yöntemi
+title: ICLRStrongName::GetHashFromAssemblyFile Metodu
 ms.date: 03/30/2017
 api_name:
 - ICLRStrongName.GetHashFromAssemblyFile
@@ -18,13 +18,13 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a8d9e7d593c2a8a9cce798724b2705dee21a740e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
-ms.translationtype: HT
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45692729"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46009303"
 ---
-# <a name="iclrstrongnamegethashfromassemblyfile-method"></a>ICLRStrongName::GetHashFromAssemblyFile Yöntemi
+# <a name="iclrstrongnamegethashfromassemblyfile-method"></a>ICLRStrongName::GetHashFromAssemblyFile Metodu
 Belirtilen karma algoritması kullanılarak, belirtilen derleme dosyasının bir karmasını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
