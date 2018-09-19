@@ -3,11 +3,11 @@ title: Kullanıcı tanımlı işlevler (varlık SQL)
 ms.date: 03/30/2017
 ms.assetid: 3f9e6bbd-8e5a-43e1-809f-f8a61338e522
 ms.openlocfilehash: 03146d895c6ca780692228937fafcf25b24902aa
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615735"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46002027"
 ---
 # <a name="user-defined-functions-entity-sql"></a>Kullanıcı tanımlı işlevler (varlık SQL)
 Entity SQL kullanıcı tanımlı işlevler çağırma sorguda destekler. Bu işlevleri satır içi sorgu tanımlayabilirsiniz (bkz [nasıl yapılır: bir kullanıcı tanımlı işlevi çağırın](https://msdn.microsoft.com/library/ad131b86-8b4e-4747-8605-d4fc64fb9d02)) veya kavramsal modelin parçası olarak (bkz [nasıl yapılır: kavramsal modeldeki özel işlevleri tanımlamak](https://msdn.microsoft.com/library/0dad7b8b-58f6-4271-b238-f34810d68e5f)). Entity SQL komutu tanımlı kavramsal model işlevler [DefiningExpression](https://msdn.microsoft.com/library/d3da8d8b-a048-47ee-8d81-0c2ea3acdd3e) öğesinin bir [işlevi](https://msdn.microsoft.com/library/dc3beca7-55cf-4977-8db0-5064cdbab134) kavramsal model öğesi.  

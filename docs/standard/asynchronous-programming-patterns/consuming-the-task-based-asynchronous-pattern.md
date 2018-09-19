@@ -12,11 +12,11 @@ ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5b538cb53e1cbc1fdbd8e34506710a1967e50f9d
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615553"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45988705"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>Görev Tabanlı Zaman Uyumsuz Desen Kullanma
 Zaman uyumsuz işlemler ile çalışmak için görev tabanlı zaman uyumsuz desen (TAP) kullandığınızda, geri çağırmaları engellemeden beklemeyi için kullanabilirsiniz.  Görevler için bu yöntemleri gibi gerçekleştirilir <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType>. İçinde normal denetim akışını beklenmesini zaman uyumsuz işlemleri sağlayarak geri çağırmaları dil tabanlı zaman uyumsuz destek gizler ve derleyicinin ürettiği kodun bu aynı API düzeyinde destek sağlar.  

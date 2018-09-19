@@ -3,11 +3,11 @@ title: Game1 Sınıfı Oluşturma
 ms.date: 03/30/2017
 ms.assetid: 47932ce3-2ba5-476f-a26b-3ddfd5226f27
 ms.openlocfilehash: 368da9df4dffc7017abb02888bc2eb2641f04b8b
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45652904"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46006684"
 ---
 # <a name="creating-the-game1-class"></a>Game1 Sınıfı Oluşturma
 Tüm Microsoft XNA projeler Game1 sınıfı türetilen gibi [Microsoft.Xna.Framework.Game](https://msdn.microsoft.com/library/microsoft.xna.framework.game.aspx) temel grafik cihazı başlatma, oyun mantığı ve kod için XNA oyunlar oluşturma sağlar sınıfını. Game1 sınıfı çoğunu içinde GamePiece ve GamePieceCollection sınıfları için oldukça basittir.  

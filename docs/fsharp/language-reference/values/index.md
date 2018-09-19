@@ -3,11 +3,11 @@ title: Değerler (F#)
 description: 'F # değerleri belirli bir tür olan miktarlar nasıl olduğunu öğrenin.'
 ms.date: 05/16/2016
 ms.openlocfilehash: f645481ce8395c11ae920aee06cbf07955aeb684
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45677831"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45991174"
 ---
 # <a name="values"></a>Değerler
 

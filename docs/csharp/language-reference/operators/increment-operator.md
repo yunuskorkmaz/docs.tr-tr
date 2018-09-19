@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ++ operator [C#]
 ms.assetid: e9dec353-070b-44fb-98ed-eb8fdf753feb
 ms.openlocfilehash: a52f614ce1bbfb8e9d9be686b277c1e69f6f9d35
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45749528"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46007209"
 ---
 # <a name="-operator-c-reference"></a>++ İşleci (C# Başvurusu)
 Artırım işleci (`++`) işleneniyle 1 artar. Artırım işleci önce veya sonra işleneniyle görünebilir: `++variable` ve `variable++`.  

@@ -3,11 +3,11 @@ title: Arabirimler (F#)
 description: 'F # arabirimleri diğer sınıfları uygulayan ilgili üyelerinin kümeleri nasıl belirteceğinizi öğrenin.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 6d7f8ee9ea17d2294933f88577c30a96975ae5d4
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45683196"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46009355"
 ---
 # <a name="interfaces"></a>Arabirimler
 

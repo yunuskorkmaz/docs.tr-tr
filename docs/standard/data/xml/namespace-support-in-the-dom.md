@@ -6,11 +6,11 @@ ms.assetid: f0548ead-0fed-41ee-b33e-117ba900d3bc
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bcc796f8d895e3daa81a9607bd7c4941b747cf24
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45596760"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45990966"
 ---
 # <a name="namespace-support-in-the-dom"></a>DOM Namespace desteği
 XML belge nesne modeli (DOM) ad alanı tamamen uyumlu. Yalnızca ad alanı algılayan XML belgeler desteklenir. World Wide Web Consortium (W3C) Düzey 1 uygulayan DOM uygulamalar ad alanı kullanmayan ve DOM Düzey 2 özellikleri kullanan ad alanı belirtir. Ancak, tüm özellikler XML DOM ad alanı kullanan, yöntem düzey 1 veya Düzey 2 DOM öneri ise bağımsız olarak uygulanır.  

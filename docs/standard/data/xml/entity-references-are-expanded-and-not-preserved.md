@@ -6,11 +6,11 @@ ms.assetid: ffd97806-ab43-4538-8de2-5828bfbbde57
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7a55aa71ff3976241b96dd12baef06a9a13ef9dd
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45676986"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45998428"
 ---
 # <a name="entity-references-are-expanded-and-not-preserved"></a>Varlık başvuruları genişletilir ve korunmaz olan
 Varlık başvurusu genişletilmiş ve temsil ettiği metin tarafından değiştirilen **XmlEntityReference** düğüm oluşturulmaz. Bunun yerine, varlık bildirimi ayrıştırılır ve bildirimde içeriğinden oluşturulan düğümler yerine, kopyalanır **XmlEntityReference**. Bu nedenle `&publisher;` örnek, `&publisher;` , ancak bunun yerine, kaydedilmemiş bir **XmlText** düğüm oluşturulur.  

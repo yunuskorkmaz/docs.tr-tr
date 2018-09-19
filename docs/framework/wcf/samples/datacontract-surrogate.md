@@ -3,11 +3,11 @@ title: DataContract Yedeği
 ms.date: 03/30/2017
 ms.assetid: b0188f3c-00a9-4cf0-a887-a2284c8fb014
 ms.openlocfilehash: 10b0c2a3e82e39b03291f567ca360c51042b464e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45597374"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46003145"
 ---
 # <a name="datacontract-surrogate"></a>DataContract Yedeği
 Bu örnek nasıl sınıf serileştirme ve seri durumundan çıkarma, şema dışarı aktarma ve şema içeri aktarma veri anlaşması kullanılarak özelleştirilebilir gibi işlemleri vekil gösterir. Bu örnek senaryoda verilerin serileştirilmiş ve Windows Communication Foundation (WCF) istemci ve hizmet arasında aktarılan bir istemci ve sunucu bir vekil kullanmayı gösterir.  

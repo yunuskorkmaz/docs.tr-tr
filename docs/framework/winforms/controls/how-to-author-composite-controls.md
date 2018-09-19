@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user controls [Windows Forms], inheriting from
 - composite controls [Windows Forms], creating
 ms.assetid: 79c9cf05-5ab6-4a18-886d-88a64748b098
-ms.openlocfilehash: 2c7d2c94c376b671d6e9e4e4b71bc8a9b0fbc343
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 7abdeae4d19ceb6425f85e3cdd28f565a03d7ea4
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43798764"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46007451"
 ---
 # <a name="how-to-author-composite-controls"></a>Nasıl yapılır: Bileşik Denetimler Yazma
 Bileşik denetimler, birçok bakımdan çalıştırılacağı. Bir Windows masaüstü uygulaması projesi bir parçası olarak bunları yazar ve bunları yalnızca projedeki formlarında kullanabilirsiniz. Veya bunları Windows Denetim Kitaplığı projesinde yazar, projenin bir derlemeye derlemek ve diğer projelerde denetimleri kullanın. Bile, bunları devralır ve bunları hızlı bir şekilde özel amaçlarla özelleştirmek için görsel devralma kullanın.  
@@ -26,11 +26,11 @@ Bileşik denetimler, birçok bakımdan çalıştırılacağı. Bir Windows masa�
   
 1.  Yeni bir **Windows uygulama** adlı proje `DemoControlHost`.  
   
-2.  Üzerinde **proje**menüsünü tıklatın **kullanıcı denetimi Ekle**.  
+2.  Üzerinde **proje** menüsünü tıklatın **kullanıcı denetimi Ekle**.  
   
 3.  İçinde **Yeni Öğe Ekle** iletişim kutusu, sınıf dosyası (.vb veya .cs dosyası) bileşik denetime sahip olmasını istediğiniz adı verin.  
   
-4.  Tıklayın **Ekle** bileşik denetim için sınıf dosyası oluşturmak için.  
+4.  Seçin **Ekle** bileşik denetim için sınıf dosyası oluşturmak için.  
   
 5.  Ekleme denetimlerini **araç kutusu** bileşik denetim yüzeyine bırakın.  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: 8f4e60eef443f772de3574d988ce48470f8c2017
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: acb9af688025fc6cbcd9e41fbc5a0c85f6ebb29e
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856185"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46009788"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (Bildirim Üretme ve Düzenleme Aracı)
 
@@ -40,8 +40,7 @@ Aşağıdaki tablo tarafından desteklenen komutları gösterir *Mage.exe*. Bu k
 |**-s-oturum** `[signOptions]`|Bir dosyayı imzalamak için bir anahtar çifti veya X509 sertifikası kullanır. İmzalar, dosyaların içine XML öğeleri olarak eklenir.<br /><br /> Belirten bir bildirimi imzalarken Internet'e gereken bir **- TimestampUri** değeri.|
 |**-h-?, - yardımcı** *[ayrıntılı]*|Tüm kullanılabilir komutları ve seçeneklerini açıklar. Belirtin `verbose` ayrıntılı yardım almak için.|
 
-<a name="NewUpdate"></a>
-## <a name="new-and-update-command-options"></a>New ve Update Komutu Seçenekleri
+## <a name="new-and-update-command-options"></a>Yeni ve Update komutu seçenekleri
 
 Aşağıdaki tablo tarafından desteklenen seçenekleri gösterir `-New` ve `-Update` komutları:
 
@@ -70,9 +69,9 @@ Aşağıdaki tablo tarafından desteklenen seçenekleri gösterir `-New` ve `-Up
 |**-v,-sürüm** `versionNumber`|1.0.0.0|Uygulama bildirimleri.<br /><br /> Dağıtım bildirimleri.|Dağıtımın sürümü. Bağımsız değişken geçerli bir sürüm dizesi biçimi olmalıdır "*N.N.N.N*","*N*" imzalanmamış bir 32-bit tamsayı.|
 |**-wpf, - WPFBrowserApp**  `isWPFApp`|false|Uygulama bildirimleri.<br /><br /> Dağıtım bildirimleri.|Bu bayrağı yalnızca, uygulama Internet Explorer içinde barındırılacak bir Windows Presentation Foundation (WPF) uygulaması ise ve tek başına yürütülebilir dosya değil ise kullanın. Geçerli değerler "true" veya "t" ve "false" veya "f" değerleridir.<br /><br /> Uygulama bildirimleri için ekler `hostInBrowser` altında özniteliği `entryPoint` uygulama bildiriminin öğesi.<br /><br /> Dağıtım bildirimleri için ayarlar `install` özniteliği `deployment` öğesi false ve dağıtım bildirimini bir .xbap uzantısıyla kaydeder. Bu bağımsız değişken ile birlikte belirtme **-yükleme** bağımsız değişkeni, tarayıcıda barındırılan bir uygulama yüklenen, çevrimdışı bir uygulama olamaz çünkü bir hata üretir.|
 
-<a name="Sign"></a>
-## <a name="sign-command-options"></a>İmza Komut Seçenekleri
- Aşağıdaki tablo tarafından desteklenen seçenekleri gösterir `-Sign` tüm dosya türleri için geçerli komutu.
+## <a name="sign-command-options"></a>Sign komut seçenekleri
+
+Aşağıdaki tablo tarafından desteklenen seçenekleri gösterir `-Sign` tüm dosya türleri için geçerli komutu.
 
 |Seçenekler|Açıklama|
 |-------------|-----------------|
@@ -105,7 +104,11 @@ mage -Update c:\HelloWorldDeployment\HelloWorld.deploy -CertFile cert.pfx
 
  Uygulama bildirimleri de özel güven bölümlerini destekler. Bu, uygulamanızın en az izni isteme güvenlik ilkesine uymasına yardımcı olur; çünkü bildirimi, uygulamanın yürütülebilmesi için gereken belirli izinleri isteyecek şekilde yapılandırabilirsiniz. *Mage.exe* doğrudan bir özel güven bölümü eklemeyi desteklemez. Bir metin düzenleyicisi, bir XML Ayrıştırıcısı veya grafik aracını kullanarak bir tane ekleyebilirsiniz *MageUI.exe*. Nasıl kullanılacağı hakkında daha fazla bilgi için *MageUI.exe* özel güven bölümleri eklemek için bkz: [MageUI.exe (bildirim üretme ve düzenleme aracı, grafik istemci)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).
 
- ' In 4 sürümü ile oluşturulan yeni bildirimler *Mage.exe*, bulunan Visual Studio 2010 ile hedef [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. .NET Framework'ün önceki sürümlerini hedeflemek için önceki bir sürümünü kullanmanız gerekir *Mage.exe*. Eklerken veya varolan bir bildirimi veya varolan bir bildirimi yeniden imzalarken derlemeleri kaldırma *Mage.exe* bildirim hedefleyecek şekilde güncelleştirmez [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. Aşağıdaki tablolar bu özellikleri ve kısıtlamaları gösterir.
+Visual Studio 2017 sürümünü 4.6.1 içerir *Mage.exe*. Bu sürümü ile oluşturulan bildirimleri *Mage.exe* hedef .NET Framework 4. .NET Framework'ün eski sürümlerini hedeflemek için önceki bir sürümünü kullanmak *Mage.exe*.
+
+Eklediğinizde veya mevcut bir bildirimden derlemeleri kaldırmak veya varolan bir bildirimi yeniden imzalayın *Mage.exe* bildirimi hedef .NET Framework 4 güncelleştirmez.
+
+Aşağıdaki tablolar bu özellikleri ve kısıtlamaları gösterir:
 
 |Bildirim sürümü|Çalışma|Mage v2.0|Mage v4.0|
 |----------------------|---------------|---------------|---------------|
@@ -131,7 +134,9 @@ mage -Update c:\HelloWorldDeployment\HelloWorld.deploy -CertFile cert.pfx
 ||Bir derleme ekle|Desteklenmez|Tamam|
 ||Bir derlemeyi kaldır|Desteklenmez|Tamam|
 
- Mage.exe hedefleyen yeni bildirimleri oluşturur [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. Hedefleyen ClickOnce uygulamaları [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] ikisinde çalıştırabilirsiniz [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] ve tam sürümünü [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. Uygulamanızın tam sürümünü hedeflerse [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] üzerinde çalışamazsa [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)], istemci kaldırma `<framework>` bir metin düzenleyicisi ve ve bildirimi yeniden imzalayın kullanarak öğesi. Bir örnek verilmiştir `<framework>` hedefleyen öğesi [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)].
+ Mage.exe hedefleyen yeni bildirimleri oluşturur [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. Hedefleyen ClickOnce uygulamaları [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] ikisinde çalıştırabilirsiniz [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] ve .NET Framework 4'ün tam sürümünü. Uygulamanızı .NET Framework 4 tam sürümünü hedeflerse ve üzerinde çalışamazsa [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)], istemci kaldırma `<framework>` bir metin düzenleyicisi ve ve bildirimi yeniden imzalayın kullanarak öğesi.
+
+Bir örnek verilmiştir `<framework>` hedefleyen öğesi [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]:
 
 ```xml
 <framework targetVersion="4.0" profile="client" supportedRuntime="4.0.20506" />
@@ -195,7 +200,7 @@ Aşağıdaki örnek geçerli çalışma dizinindeki bir dijital sertifikayı kul
 mage -Sign deploy.application -CertFile cert.pfx -Password <passwd>
 ```
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [ClickOnce Güvenliği ve Dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment)
 - [İzlenecek yol: ClickOnce Uygulamasını El ile Dağıtma](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)

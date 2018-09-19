@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID51
 ms.assetid: 21266dbb-f4a1-4c5d-a646-27909cf53248
 ms.openlocfilehash: 219f7b31beec468a7d3e14e750a7163831f58548
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
-ms.translationtype: MT
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45528370"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45989676"
 ---
 # <a name="internal-error-visual-basic"></a>İç hata (Visual Basic)
 Visual Basic'te bir iç hatası oluştu.  

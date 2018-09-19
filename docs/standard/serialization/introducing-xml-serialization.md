@@ -12,12 +12,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
-ms.openlocfilehash: 66412c620b8107312e5d58fef5cf1b5d9ee90107
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: e1625d2cdf0be4106a43b9d40aef97ea2b5c4ec4
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615527"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45999475"
 ---
 # <a name="introducing-xml-serialization"></a>XML serileştirmeye giriş
 
@@ -61,7 +61,7 @@ Bir uygulama oluşturma kullandığında **XmlSerializer**, aşağıdaki öğele
 
 - Serileştirilmiş hassas verileri açık olabilir.
 
-  Sonra **XmlSerializer**verileri seri hale getirilmiş bir XML dosyasına veya diğer veri deposu depolanabilir. Veri deponuzun diğer işlemler için kullanılabilir veya Intranet veya Internet üzerinde görülebilir, veri çalındıysa ve kötü amaçlı olarak kullanılır. Örneğin, bir uygulama oluşturursanız, siparişler serileştiren kredi kartı numaraları dahil, veri yüksek oranda duyarlıdır. Bunu önlemek için her zaman için veri deposu korumak ve özel olarak saklamak için adımları izleyin.
+  Sonra **XmlSerializer** verileri seri hale getirilmiş bir XML dosyasına veya diğer veri deposu depolanabilir. Veri deponuzun diğer işlemler için kullanılabilir veya Intranet veya Internet üzerinde görülebilir, veri çalındıysa ve kötü amaçlı olarak kullanılır. Örneğin, bir uygulama oluşturursanız, siparişler serileştiren kredi kartı numaraları dahil, veri yüksek oranda duyarlıdır. Bunu önlemek için her zaman için veri deposu korumak ve özel olarak saklamak için adımları izleyin.
 
 ## <a name="serialization-of-a-simple-class"></a>Basit bir sınıfın seri hale getirme
 

@@ -9,11 +9,11 @@ ms.assetid: ef6402be-2f8e-4be2-8d3e-a80891cdef8b
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b11ac80b671c345768da23d2b51d2333c228aaeb
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615017"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46003741"
 ---
 # <a name="xpath-queries-and-namespaces"></a>XPath sorguları ve ad alanları
 XPath sorguları, XML belgesinde ad alanlarının farkındayız ve ad alanı öneklerini öğe ve öznitelik adları nitelemek için kullanabilirsiniz. Ad alanı öneki öğe ve öznitelik adlarını niteleme yalnızca belirli bir ad alanına ait düğümleri bir XPath sorgusu tarafından döndürülen düğümleri sınırlar.  

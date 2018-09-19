@@ -3,11 +3,11 @@ title: XElement ve XDocument Objects3 geçerli içerik
 ms.date: 07/20/2015
 ms.assetid: 0d253586-2b97-459f-b1a7-f30f38f3ed9f
 ms.openlocfilehash: afaeed7ba49891380982ec9c3cade43574ab8c16
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45649087"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45990069"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>XElement ve XDocument nesnelerinin geçerli içeriği
 Bu konuda, Oluşturucular ve öğelerini ve belgeleri için içerik eklemek için kullandığınız yöntemlere geçirilen geçerli bağımsız değişkenler açıklanmaktadır.  

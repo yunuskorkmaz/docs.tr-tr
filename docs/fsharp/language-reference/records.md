@@ -3,11 +3,11 @@ title: Kayıtlar (F#)
 description: 'F # kayıt üyeleri ile isteğe bağlı olarak adlandırılmış değerler basit toplamalarla nasıl temsil öğrenin.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 6103d96b6b80a9e2ed168755958dbe800f7fa862
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45638577"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46009394"
 ---
 # <a name="records"></a>Kayıtlar
 

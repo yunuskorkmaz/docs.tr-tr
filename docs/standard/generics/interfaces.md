@@ -11,11 +11,11 @@ ms.assetid: 88bf5b04-d371-4edb-ba38-01ec7cabaacf
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a6c151798c807206cc7f4b2fbeb21e75e9142379
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591444"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46005966"
 ---
 # <a name="generic-interfaces"></a>Genel Arabirimler
 Bu konu, genel türlerin aileleri arasında ortak işlevselliği sağlayan genel arabirimler genel bir bakış sağlar.  

@@ -3,11 +3,11 @@ title: Değişiklik SQL oluşturma
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
 ms.openlocfilehash: 8e0568e32094b6cc27137409f3d908928d82cebb
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615134"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45989962"
 ---
 # <a name="modification-sql-generation"></a>Değişiklik SQL oluşturma
 Bu bölümde bir değişiklik SQL oluşturma modülü için geliştirme anlatılmaktadır, (SQL:1999-uyumlu veritabanı) sağlayıcısı. Bu modül, uygun SQL INSERT, UPDATE veya DELETE deyimlerine bir değişikliği komut ağacı çevirmek için sorumludur.  

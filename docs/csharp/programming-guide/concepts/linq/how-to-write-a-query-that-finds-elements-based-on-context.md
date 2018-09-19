@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: bağlama (C#) göre öğeleri bulan bir sorgu yazma'
 ms.date: 07/20/2015
 ms.assetid: 3ff79ef0-fc8b-42fe-8cc0-10dc32b06b4e
 ms.openlocfilehash: c1c43bc47df1612be26c78351a9d30272a020160
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45593315"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45987961"
 ---
 # <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a>Nasıl yapılır: bağlama (C#) göre öğeleri bulan bir sorgu yazma
 Bazen, bağlama göre öğeleri seçen bir sorgu yazmak zorunda kalabilirsiniz. Bağlı olarak önceki veya Eşdüzey öğeleri aşağıdaki filtreleme isteyebilirsiniz. Temel alınarak alt veya üst öğeleri filtrelemek isteyebilirsiniz.  
