@@ -6,21 +6,21 @@ ms.assetid: cabdfcad-f359-479b-b71c-8b2fad42ca49
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9cff30147da82896fb3a757ba2fed16d794ec3c9
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45673850"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46004055"
 ---
-# <a name="mapping-xml-data-types-to-clr-types"></a><span data-ttu-id="f93f5-102">XML veri türlerini CLR türleriyle eşleme</span><span class="sxs-lookup"><span data-stu-id="f93f5-102">Mapping XML Data Types to CLR Types</span></span>
-<span data-ttu-id="f93f5-103">Aşağıdaki tablo, XML veri türleri ve ortak dil çalışma zamanı (CLR) türleri arasında Varsayılan eşleme açıklar.</span><span class="sxs-lookup"><span data-stu-id="f93f5-103">The following table describes the default mapping between the XML data types and the common language runtime (CLR) types.</span></span>  
+# <a name="mapping-xml-data-types-to-clr-types"></a><span data-ttu-id="81177-102">XML veri türlerini CLR türleriyle eşleme</span><span class="sxs-lookup"><span data-stu-id="81177-102">Mapping XML Data Types to CLR Types</span></span>
+<span data-ttu-id="81177-103">Aşağıdaki tablo, XML veri türleri ve ortak dil çalışma zamanı (CLR) türleri arasında Varsayılan eşleme açıklar.</span><span class="sxs-lookup"><span data-stu-id="81177-103">The following table describes the default mapping between the XML data types and the common language runtime (CLR) types.</span></span>  
   
-## <a name="the-following-table-describes-the-default-mappings-of-an-xml-data-type-to-a-clr-type"></a><span data-ttu-id="f93f5-104">Aşağıdaki tabloda bir XML veri türü bir CLR türü için varsayılan eşlemeleri açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="f93f5-104">The following table describes the default mappings of an XML data type to a CLR type.</span></span>  
+## <a name="the-following-table-describes-the-default-mappings-of-an-xml-data-type-to-a-clr-type"></a><span data-ttu-id="81177-104">Aşağıdaki tabloda bir XML veri türü bir CLR türü için varsayılan eşlemeleri açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="81177-104">The following table describes the default mappings of an XML data type to a CLR type.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="f93f5-105">`xs` Ve `xdt` önekleri eşleştirilmiş http://www.w3.org/2001/XMLSchema ve http://www.w3.org/2003/05/xpath-datatypes ad alanı URI sırasıyla.</span><span class="sxs-lookup"><span data-stu-id="f93f5-105">The `xs` and the `xdt` prefixes are mapped to the http://www.w3.org/2001/XMLSchema and the http://www.w3.org/2003/05/xpath-datatypes namespace URIs respectively.</span></span>  
+>  <span data-ttu-id="81177-105">`xs` Ve `xdt` önekleri eşleştirilmiş http://www.w3.org/2001/XMLSchema ve http://www.w3.org/2003/05/xpath-datatypes ad alanı URI sırasıyla.</span><span class="sxs-lookup"><span data-stu-id="81177-105">The `xs` and the `xdt` prefixes are mapped to the http://www.w3.org/2001/XMLSchema and the http://www.w3.org/2003/05/xpath-datatypes namespace URIs respectively.</span></span>  
   
-|<span data-ttu-id="f93f5-106">XML türü</span><span class="sxs-lookup"><span data-stu-id="f93f5-106">XML Type</span></span>|<span data-ttu-id="f93f5-107">CLR türü</span><span class="sxs-lookup"><span data-stu-id="f93f5-107">CLR Type</span></span>|  
+|<span data-ttu-id="81177-106">XML türü</span><span class="sxs-lookup"><span data-stu-id="81177-106">XML Type</span></span>|<span data-ttu-id="81177-107">CLR türü</span><span class="sxs-lookup"><span data-stu-id="81177-107">CLR Type</span></span>|  
 |--------------|--------------|  
 |`xs:anyURI`|<xref:System.Uri>|  
 |`xs:base64Binary`|`Byte[]`|  
@@ -71,14 +71,14 @@ ms.locfileid: "45673850"
 |`xdt:untypedAtomic`|<xref:System.String>|  
 |`xdt:anyAtomicType`|<xref:System.Object>|  
 |`xs:anySimpleType`|<xref:System.String>|  
-|<span data-ttu-id="f93f5-108">Belge düğümü</span><span class="sxs-lookup"><span data-stu-id="f93f5-108">Document node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
-|<span data-ttu-id="f93f5-109">Öğe düğümü</span><span class="sxs-lookup"><span data-stu-id="f93f5-109">Element node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
-|<span data-ttu-id="f93f5-110">Öznitelik düğümü</span><span class="sxs-lookup"><span data-stu-id="f93f5-110">Attribute node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
-|<span data-ttu-id="f93f5-111">Namespace düğümü</span><span class="sxs-lookup"><span data-stu-id="f93f5-111">Namespace node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
-|<span data-ttu-id="f93f5-112">Metin düğümü</span><span class="sxs-lookup"><span data-stu-id="f93f5-112">Text node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
-|<span data-ttu-id="f93f5-113">Açıklama düğümü</span><span class="sxs-lookup"><span data-stu-id="f93f5-113">Comment node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
-|<span data-ttu-id="f93f5-114">İşlem yönergesi düğümü</span><span class="sxs-lookup"><span data-stu-id="f93f5-114">Processing instruction node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="81177-108">Belge düğümü</span><span class="sxs-lookup"><span data-stu-id="81177-108">Document node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="81177-109">Öğe düğümü</span><span class="sxs-lookup"><span data-stu-id="81177-109">Element node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="81177-110">Öznitelik düğümü</span><span class="sxs-lookup"><span data-stu-id="81177-110">Attribute node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="81177-111">Namespace düğümü</span><span class="sxs-lookup"><span data-stu-id="81177-111">Namespace node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="81177-112">Metin düğümü</span><span class="sxs-lookup"><span data-stu-id="81177-112">Text node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="81177-113">Açıklama düğümü</span><span class="sxs-lookup"><span data-stu-id="81177-113">Comment node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="81177-114">İşlem yönergesi düğümü</span><span class="sxs-lookup"><span data-stu-id="81177-114">Processing instruction node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
   
-## <a name="see-also"></a><span data-ttu-id="f93f5-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f93f5-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="81177-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="81177-115">See also</span></span>
 
-- [<span data-ttu-id="f93f5-116">System.Xml Sınıflarında Tür Desteği</span><span class="sxs-lookup"><span data-stu-id="f93f5-116">Type Support in the System.Xml Classes</span></span>](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)
+- [<span data-ttu-id="81177-116">System.Xml Sınıflarında Tür Desteği</span><span class="sxs-lookup"><span data-stu-id="81177-116">Type Support in the System.Xml Classes</span></span>](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)
