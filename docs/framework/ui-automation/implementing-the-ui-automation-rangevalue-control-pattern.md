@@ -10,11 +10,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 3736d1e8b23b8e05882a3fe016be0ac1a18ef51d
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45743014"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46321016"
 ---
 # <a name="implementing-the-ui-automation-rangevalue-control-pattern"></a>UI Otomasyon RangeValue Denetim Düzeni Uygulama
 > [!NOTE]
@@ -40,13 +40,13 @@ Değerin türü tamsayı ve Minimum ve maksimum özellik değerlerini olduğu bi
   
 |Gerekli üye|Üye türü|Notlar|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty>|Özellik|Hiçbiri|  
-|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty>|Özellik|Hiçbiri|  
-|<xref:System.Windows.Automation.RangeValuePattern.LargeChangeProperty>|Özellik|Hiçbiri|  
-|<xref:System.Windows.Automation.RangeValuePattern.SmallChangeProperty>|Özellik|Hiçbiri|  
-|<xref:System.Windows.Automation.RangeValuePattern.MaximumProperty>|Özellik|Hiçbiri|  
-|<xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>|Özellik|Hiçbiri|  
-|<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A>|Yöntemler|Hiçbiri|  
+|<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty>|Özellik|Yok.|  
+|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty>|Özellik|Yok.|  
+|<xref:System.Windows.Automation.RangeValuePattern.LargeChangeProperty>|Özellik|Yok.|  
+|<xref:System.Windows.Automation.RangeValuePattern.SmallChangeProperty>|Özellik|Yok.|  
+|<xref:System.Windows.Automation.RangeValuePattern.MaximumProperty>|Özellik|Yok.|  
+|<xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>|Özellik|Yok.|  
+|<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A>|Yöntemler|Yok.|  
   
  Bu denetim düzeni, ilişkili olay vardır.  
   

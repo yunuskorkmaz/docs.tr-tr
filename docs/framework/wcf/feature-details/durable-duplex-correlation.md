@@ -2,21 +2,21 @@
 title: Dayanıklı Çift Yönlü Bağıntı
 ms.date: 03/30/2017
 ms.assetid: 8eb0e49a-6d3b-4f7e-a054-0d4febee2ffb
-ms.openlocfilehash: 5bef3e243afc0ea9a51f474bfed98320134ec043
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 82c052ff87eb8b125dfc64e1567dbd00d255894d
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491494"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46323788"
 ---
 # <a name="durable-duplex-correlation"></a>Dayanıklı Çift Yönlü Bağıntı
-Dayanıklı çift yönlü bağıntı, geri çağırma bağıntı olarak da bilinen bir iş akışı hizmeti ilk çağıran için bir geri çağırma göndermek için bir gereksinim olduğunda yararlıdır. WCF çift yönlü aksine geri çağırma herhangi bir zamanda gelecekte oluşabilir ve aynı kanalı veya kanal ömrü bağlı değildir; tek gereksinim çağıran bir etkin uç nokta için geri çağırma iletisi dinleme olmasıdır. Bu, uzun süre çalışan konuşmada iletişim kurmak iki iş akışı hizmetleri sağlar. Bu konu, dayanıklı çift yönlü bağıntı genel bir bakış sağlar.  
+Dayanıklı çift yönlü bağıntı, geri çağırma bağıntı olarak da bilinen bir iş akışı hizmeti ilk çağırana bir geri çağırma göndermek için bir gereksinimi olduğunda yararlıdır. WCF çift yönlü, farklı bir geri çağırma dilediğiniz zaman gelecekte oluşabilir ve aynı kanalı veya kanal ömrü bağlı değildir; çağıran bir etkin uç noktası için geri çağırma iletiyi dinleme sahip tek gereksinim olmasıdır. Bu, uzun süre çalışan konuşmada iletişim kurmak iki iş akışı hizmetleri sağlar. Bu konu, dayanıklı çift yönlü bağıntı genel bir bakış sağlar.  
   
 ## <a name="using-durable-duplex-correlation"></a>Dayanıklı çift yönlü bağıntı kullanma  
- Dayanıklı çift yönlü bağıntı kullanmak için iki hizmet, iki yönlü işlemleri gibi destekleyen bir bağlamı etkin bağlama kullanmalısınız <xref:System.ServiceModel.NetTcpContextBinding> veya <xref:System.ServiceModel.WSHttpContextBinding>. Arama hizmeti yazmaçlar bir <xref:System.ServiceModel.WSHttpContextBinding.ClientCallbackAddress%2A> kendi istemci üzerinde istenen bağlama ile <xref:System.ServiceModel.Endpoint>. Alan hizmete ilk çağrıda bu verileri alır ve ardından, kendi kullanır <xref:System.ServiceModel.Endpoint> içinde <xref:System.ServiceModel.Activities.Send> çağrıda arama hizmeti etkinliği. Bu örnekte, iki hizmet birbirleri ile iletişim kurar. İlk hizmetin ikinci hizmetinde bir yöntemini çağırır ve yanıt için bekler. Geri çağırma yöntemi adını ikinci hizmet bilir, ancak bu yöntem uygulayan hizmet uç noktası tasarım zamanında bilinmiyor.  
+ Dayanıklı çift yönlü bağıntı kullanmak için iki hizmet gibi çift yönlü işlemleri destekleyen bir bağlamı etkin bağlama kullanmalısınız <xref:System.ServiceModel.NetTcpContextBinding> veya <xref:System.ServiceModel.WSHttpContextBinding>. Arama hizmeti kayıtları bir <xref:System.ServiceModel.WSHttpContextBinding.ClientCallbackAddress%2A> kendi istemci üzerinde istenen bağlama <xref:System.ServiceModel.Endpoint>. Alan hizmeti ilk çağrıda bu verileri alır ve ardından, kendi kullanır <xref:System.ServiceModel.Endpoint> içinde <xref:System.ServiceModel.Activities.Send> çağrıda arama hizmeti etkinlik. Bu örnekte, iki hizmet birbiriyle iletişim kurar. İlk hizmet ikinci hizmet üzerinde bir yöntemi çağırır ve ardından bir yanıt bekler. İkinci hizmet adını geri çağırma yöntemi bilir, ancak bu yöntem hizmetinin uç noktası, tasarım zamanında bilinmiyor.  
   
 > [!NOTE]
->  Dayanıklı çift yönlü yalnızca olabilir kullanılır <xref:System.ServiceModel.Channels.AddressingVersion> uç noktası ile yapılandırılmış <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A>. Değilse sonra bir <xref:System.InvalidOperationException> aşağıdaki iletiyle özel durum: "ileti bir uç nokta başvurusu olan bir geri çağırma içerik üstbilgisi için AddressingVersion değerini içeriyor. ' Addressing200408 (HYPERLINK"http://schemas.xmlsoap.org/ws/2004/08/addressing" http://schemas.xmlsoap.org/ws/2004/08/addressing)'. AddressingVersion değerini 'WSAddressing10' ile yapılandırıldığında, geri çağırma bağlamı yalnızca iletilebilir."  
+> Dayanıklı çift yönlü yalnızca olabilir kullanılabilir <xref:System.ServiceModel.Channels.AddressingVersion> uç noktası ile yapılandırılmış <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A>. Bu değilse bir <xref:System.InvalidOperationException> şu ileti ile özel durum oluştu: "iletiyi içeren bir uç nokta başvurusu için bir geri çağırma bağlam üstbilgiyle [AddressingVersion değerini](http://schemas.xmlsoap.org/ws/2004/08/addressing). Geri çağırma bağlam AddressingVersion değerini 'WSAddressing10' ile yapılandırıldığında, yalnızca iletilebilir.
   
  Aşağıdaki örnekte, bir geri çağırma oluşturan bir iş akışı hizmeti barındırılan <xref:System.ServiceModel.Endpoint> kullanarak <xref:System.ServiceModel.WSHttpContextBinding>.  
   
@@ -37,7 +37,7 @@ host1.Open();
 Console.WriteLine("Service1 waiting at: {0}", baseAddress1);  
 ```  
   
- Bu iş akışı hizmeti uygulayan bir iş akışı ile geri çağırma bağıntı başlatır, <xref:System.ServiceModel.Activities.Send> etkinliği ve bu geri çağırma uç noktasından başvurur <xref:System.ServiceModel.Activities.Receive> ile karşılık gelen etkinlik <xref:System.ServiceModel.Activities.Send>. Aşağıdaki örnekte sunucudan döndürülen iş akışı temsil eden `GetWF1` yöntemi.  
+ Bu iş akışı hizmeti uygulayan bir iş akışı geri çağırma yurt içi hasıla ile başlatır, <xref:System.ServiceModel.Activities.Send> etkinliği ve bu geri çağırma uç noktasından başvurur <xref:System.ServiceModel.Activities.Receive> ile karşılık gelen etkinlik <xref:System.ServiceModel.Activities.Send>. Aşağıdaki örnek öğesinden döndürülen iş akışını temsil eden `GetWF1` yöntemi.  
   
 ```csharp  
 Variable<CorrelationHandle> CallbackHandle = new Variable<CorrelationHandle>();  
@@ -104,7 +104,7 @@ Activity wf = new Sequence
 };  
 ```  
   
- İkinci iş akışı hizmeti, bir sistem tarafından sağlanan, bağlam tabanlı bağlamayı kullanarak barındırılır.  
+ İkinci iş akışı hizmeti kullanarak sistem tarafından sağlanan, içerik tabanlı bir bağlama barındırılır.  
   
 ```csharp  
 // Host WF Service 2.  
@@ -120,7 +120,7 @@ host2.Open();
 Console.WriteLine("Service2 waiting at: {0}", baseAddress2);  
 ```  
   
- Bu iş akışı hizmeti uygulayan bir iş akışı ile başlayan bir <xref:System.ServiceModel.Activities.Receive> etkinlik. Bu uzun süre çalışan iş ve tekrar ilk çağrıda hizmete geçirildi geri çağırma bağlamı kullanarak ilk hizmet çağrıları benzetimini yapmak için bir süre için gecikmeler bu hizmet için geri çağırma bağıntı etkinlik başlatır alırsınız. Aşağıdaki örnek çağrısından döndürülen iş akışı temsil eden `GetWF2`. Unutmayın <xref:System.ServiceModel.Activities.Send> etkinliği olan bir yer tutucu adresini `http://www.contoso.com`; çalışma zamanında kullanılan gerçek adresi sağlanan geri çağırma adresidir.  
+ Bu iş akışı hizmeti uygulayan bir iş akışı ile başlayan bir <xref:System.ServiceModel.Activities.Receive> etkinlik. Bu geri çağırma bağıntı gecikmeleri uzun süre çalışan işler ve hizmete ilk çağrıda geçirilen geri çağırma bağlamı kullanarak ilk hizmet geri çağırıyor benzetimini yapmak için bir süre için bu hizmet için etkinlik başlatır alırsınız. Aşağıdaki örnek çağrısından döndürülen iş akışını temsil eden `GetWF2`. Unutmayın <xref:System.ServiceModel.Activities.Send> etkinliğinde bir yer tutucu adresini `http://www.contoso.com`; çalışma zamanında kullanılan gerçek adresi sağlanan geri çağırma adresidir.  
   
 ```csharp  
 Variable<CorrelationHandle> ItemsCallbackHandle = new Variable<CorrelationHandle>();  
@@ -184,7 +184,7 @@ Activity wf = new Sequence
 };  
 ```  
   
- Zaman `StartOrder` yöntemi ilk iş akışını çağrıldığında, iki iş akışları aracılığıyla akışını gösterir, aşağıdaki çıktısı görüntülenir.  
+ Zaman `StartOrder` ilk iş akışını yöntemi çağrıldığında, iki iş akışları aracılığıyla akışını gösterir aşağıdaki çıktıyı görüntülenir.  
   
 ```Output  
 Service1 waiting at: http://localhost:8080/Service1  
@@ -198,7 +198,7 @@ WF2 - Items sent
 WF1 - Items Received  
 ```  
   
- Bu örnekte, her iki iş akışları açıkça bağıntı kullanarak yönetebileceğiniz bir <xref:System.ServiceModel.Activities.CallbackCorrelationInitializer>. Bu örnek iş akışları, varsayılan olarak yalnızca tek bir bağıntı olduğundan <xref:System.ServiceModel.Activities.CorrelationHandle> yönetim olabilirdi yeterli.  
+ Bağıntı kullanarak açıkça Bu örnekte, her iki iş akışlarını yönetme bir <xref:System.ServiceModel.Activities.CallbackCorrelationInitializer>. Bu örnek iş akışları, varsayılan olarak yalnızca tek bir bağıntı olduğundan <xref:System.ServiceModel.Activities.CorrelationHandle> yönetim olabilirdi yeterli.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Dayanıklı çift yönlü &#91;WF örnekleri&#93;](../../../../docs/framework/windows-workflow-foundation/samples/durable-duplex.md)

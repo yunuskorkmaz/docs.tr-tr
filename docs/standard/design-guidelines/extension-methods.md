@@ -6,11 +6,11 @@ ms.assetid: 5de945cb-88f4-49d7-b0e6-f098300cf357
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6bfc2e6def94d0830df4a4cdf738cdeef106de9f
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
-ms.translationtype: HT
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46287471"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46323239"
 ---
 # <a name="extension-methods"></a>Uzantı Metotları
 Genişletme yöntemleri örnek yöntem çağrısı sözdizimi kullanılarak çağrılabilir için statik yöntemler sağlayan bir dil özelliğidir. Bu yöntemler üzerinde çalışılacak yöntemidir örneği temsil eden en az bir parametre almalıdır.  

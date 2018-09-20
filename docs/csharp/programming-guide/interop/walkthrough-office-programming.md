@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: 718be7e201788906fa0fad829922eb5b77b48aed
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 997affa2f4cc5332339a49450d68ab3aaadffc4b
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857316"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46321081"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>İzlenecek yol: Office Programlama (C# ve Visual Basic)
 Visual Studio, C# ve Visual Basic, Microsoft Office programlama artıran özellikleri sunar. Yararlı C# özellikleri adlandırılmış ve isteğe bağlı bağımsız değişkenler içerir ve dönüş türü değerlerinin `dynamic`. COM programlama, atlayabilirsiniz `ref` Dizinli Özellikler anahtar sözcüğü ve kazanç erişim. Visual Basic'de özellikler, lambda ifadeleri ve koleksiyon başlatıcıları deyimlerinde otomatik uygulanan özellikler içerir.
@@ -176,7 +176,7 @@ Bu izlenecek yolu tamamlamak için Microsoft Office Excel ve Microsoft Office Wo
   
 1.  İçinde **Çözüm Gezgini**, tıklayın **tüm dosyaları göster** düğmesi. Genişletin **başvuruları** klasörü ve select **Microsoft.Office.Interop.Excel**. Görüntülenecek F4 tuşuna **özellikleri** penceresi.  
   
-2.  İçinde **zellikleri**s penceresinde değişiklik **birlikte çalışma türlerini katıştır** özelliğinden **True** için **False**.  
+2.  İçinde **özellikleri** penceresinde değişiklik **birlikte çalışma türlerini katıştır** özelliğinden **True** için **False**.  
   
 3.  1. ve 2 için bu yordamdaki adımları yineleyin `Microsoft.Office.Interop.Word`.  
   

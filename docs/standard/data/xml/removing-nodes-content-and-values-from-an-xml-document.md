@@ -6,11 +6,11 @@ ms.assetid: d818a29a-6ee5-4725-97c4-78cf60a156b6
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 960d69e7db4d06956bfff8fb849f1d085e4cb1c0
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45990186"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46323461"
 ---
 # <a name="removing-nodes-content-and-values-from-an-xml-document"></a>Bir XML belgesinden düğümleri, içeriği ve değerleri kaldırma
 Bir XML belge nesne modeli (DOM) bellek eklendiğinde, ağaç düğümleri kaldırın veya içerik ve değerleri, belirli düğüm türlerinden kaldırılır. Belgeden bir yaprak düğüm veya tüm düğüm alt ağacı kaldırma hakkında daha fazla bilgi için bkz: [dom'dan düğümleri kaldırma](../../../../docs/standard/data/xml/removing-nodes-from-the-dom.md). Bir öğenin öznitelikleri kaldırma hakkında daha fazla bilgi için bkz. [DOM'da bir öğe düğümünden öznitelikleri kaldırma](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md). Bir düğüm içeriğini kaldırma ancak düğüm ağaçta bırakarak hakkında daha fazla bilgi için bkz: [DOM düğüm içeriğini kaldırma](../../../../docs/standard/data/xml/removing-node-content-in-the-dom.md).  

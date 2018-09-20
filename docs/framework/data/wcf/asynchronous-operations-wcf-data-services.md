@@ -7,11 +7,11 @@ helpviewer_keywords:
 - WCF Data Services, client library
 ms.assetid: 679644c7-e3fc-422c-b14a-b44b683900d0
 ms.openlocfilehash: 665e424ada24e5e2990eccde7193a91dc039b265
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45743806"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46324025"
 ---
 # <a name="asynchronous-operations-wcf-data-services"></a>Zaman uyumsuz işlemler (WCF Data Services)
 Web uygulamaları, iç ağ içinde çalışan uygulamalar daha yüksek gecikme istemci ve sunucu arasında uyum gerekir. Uygulamanızın performans ve kullanıcı deneyimini iyileştirmek için zaman uyumsuz yöntemleri kullanılarak öneririz <xref:System.Data.Services.Client.DataServiceContext> ve <xref:System.Data.Services.Client.DataServiceQuery%601> sınıfları erişirken [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] sunucuları Web üzerinden.  
@@ -25,7 +25,7 @@ Web uygulamaları, iç ağ içinde çalışan uygulamalar daha yüksek gecikme i
   
  .NET Framework istemci kitaplıkları, aşağıdaki zaman uyumsuz işlemleri destekler:  
   
-|İşlem|Yöntemler|  
+|Çalışma|Yöntemler|  
 |---------------|-------------|  
 |Yürütülen bir <xref:System.Data.Services.Client.DataServiceQuery%601>.|-   <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A><br />-   <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A>|  
 |Bir sorgu yürütme <xref:System.Data.Services.Client.DataServiceContext>.|-   <xref:System.Data.Services.Client.DataServiceContext.BeginExecute%2A><br />-   <xref:System.Data.Services.Client.DataServiceContext.EndExecute%2A>|  

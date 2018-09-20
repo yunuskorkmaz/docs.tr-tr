@@ -7,11 +7,11 @@ ms.assetid: 79e4e6f7-0c00-4045-b0f0-e6a7c37c7788
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 95836865bcf8908583e3a5c347bfcef805997fdc
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964299"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46320519"
 ---
 # <a name="security-guidance-and-best-practices"></a>Güvenlik Kılavuzu ve En İyi Uygulamalar
 Bu bölümdeki konular için rehberlik ve güvenli bir Windows Communication Foundation (WCF) uygulamaları oluştururken dikkate alınması gereken öğeleri sunar. Windows Server AppFabric ve güvenlik bakın hakkında daha fazla bilgi için [güvenlik modeli için Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  

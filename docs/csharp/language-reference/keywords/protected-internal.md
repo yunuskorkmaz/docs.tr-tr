@@ -3,11 +3,11 @@ title: korumalı iç (C# Başvurusu)
 ms.date: 11/15/2017
 author: sputier
 ms.openlocfilehash: 1a305cb84989f12350e2e7cc28dd18f9d0c7ae5e
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
-ms.translationtype: HT
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46288296"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46322901"
 ---
 # <a name="protected-internal-c-reference"></a>korumalı iç (C# Başvurusu)
 

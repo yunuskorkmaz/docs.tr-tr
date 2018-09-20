@@ -12,11 +12,11 @@ ms.assetid: df54e648-c5d1-47c9-bd29-8e4438c1db6d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9a243c95aff77a5de2b3af15542c0bcc44870333
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46006476"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46323343"
 ---
 # <a name="destroying-threads"></a>İş parçacıklarını yok etme
 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> Yöntemi, bir yönetilen iş parçacığı kalıcı olarak durdurmak için kullanılır. Çağırdığınızda <xref:System.Threading.Thread.Abort%2A>, ortak dil çalışma zamanı bir <xref:System.Threading.ThreadAbortException> hedef iş parçacığı, hedef iş parçacığı yakalayabilir. Daha fazla bilgi için bkz. <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.  

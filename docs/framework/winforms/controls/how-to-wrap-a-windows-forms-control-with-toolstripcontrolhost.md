@@ -11,11 +11,11 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], hosting controls
 ms.assetid: e2ce4990-661d-4882-a116-8a9eb575dc84
 ms.openlocfilehash: b502890fcad051d2393bb175bb0795acee2df613
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46008330"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46326432"
 ---
 # <a name="how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost"></a>Nasıl yapılır: ToolStripControlHost ile Bir Windows Forms Denetimini Kaydırma
 <xref:System.Windows.Forms.ToolStripControlHost> kullanarak isteğe bağlı Windows Forms denetimleri barındırma sağlamak üzere tasarlanmış <xref:System.Windows.Forms.ToolStripControlHost> Oluşturucusu veya genişleterek <xref:System.Windows.Forms.ToolStripControlHost> kendisi. Genişleterek denetimini kaydırma daha kolaydır <xref:System.Windows.Forms.ToolStripControlHost> ve uygulama özellikleri ve sık kullanıma sunma yöntemleri kullanılan özellikleri ve yöntemleri denetimi. Denetim olaylarını da getirebilir <xref:System.Windows.Forms.ToolStripControlHost> düzeyi.  

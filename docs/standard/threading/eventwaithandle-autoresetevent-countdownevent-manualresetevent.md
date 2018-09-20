@@ -1,6 +1,6 @@
 ---
 title: EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent
-ms.date: 03/30/2017
+ms.date: 09/14/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - wait handles
@@ -9,40 +9,36 @@ helpviewer_keywords:
 ms.assetid: cd94fc34-ac15-427f-b723-a1240a4fab7d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2f61e614696e731a85a030e34aa4356137d9000d
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: be9c858d7c76fdcc1b3e02485eb0b459f4e7555c
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260155"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46323541"
 ---
 # <a name="eventwaithandle-autoresetevent-countdownevent-manualresetevent"></a>EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent
-Olay bekleme tanıtıcıları birbirine sinyal ve birbirlerinin sinyalleri bekleyen etkinlikleri eşitlemek için iş parçacığı izin verir. Bu eşitleme olayları Win32 bekleme tanıtıcıları üzerinde temel alır ve iki tür olarak ayrılabilir: sinyal olduğunda otomatik olarak sıfırlayan ve el ile Sıfırlanan.  
+
+Olay bekleme tanıtıcıları birbirine sinyal ve birbirlerinin sinyalleri bekleyen etkinlikleri eşitlemek için iş parçacığı izin verir. Bu eşitleme olaylar üzerinde işletim sistemi bekleme tanıtıcıları temel alır ve iki tür olarak ayrılabilir: sinyal olduğunda otomatik olarak sıfırlayan ve el ile Sıfırlanan.  
   
- Olay bekleme tanıtıcıları, birçok aynı eşitleme senaryolarda kullanışlıdır <xref:System.Threading.Monitor> sınıfı. Olay bekleme tanıtıcıları daha kolay genellikle <xref:System.Threading.Monitor.Wait%2A?displayProperty=nameWithType> ve <xref:System.Threading.Monitor.Pulse%2A?displayProperty=nameWithType> yöntemleri ve sinyal üzerinde daha fazla denetim sağlar. İzleyicileri uygulama etki alanı için yerel ise adlandırılmış olay bekleme tanıtıcıları uygulama etki alanları ve işlemleri arasında etkinlikleri eşitlemek için de kullanılabilir.  
+Olay bekleme tanıtıcıları, birçok aynı eşitleme senaryolarda kullanışlıdır <xref:System.Threading.Monitor> sınıfı. Olay bekleme tanıtıcıları daha kolay genellikle <xref:System.Threading.Monitor.Wait%2A?displayProperty=nameWithType> ve <xref:System.Threading.Monitor.Pulse%2A?displayProperty=nameWithType> yöntemleri ve sinyal üzerinde daha fazla denetim sağlar. İzleyicileri uygulama etki alanı için yerel ise adlandırılmış olay bekleme tanıtıcıları uygulama etki alanları ve işlemleri arasında etkinlikleri eşitlemek için de kullanılabilir.  
   
-## <a name="in-this-section"></a>Bu Bölümde  
- [EventWaitHandle](../../../docs/standard/threading/eventwaithandle.md)  
- <xref:System.Threading.EventWaitHandle> Veya el ile sıfırlama olayları ve yerel ya da olaylar veya sistem olaylarını adlı sınıfı ya da otomatik temsil eder.  
+## <a name="in-this-section"></a>Bu bölümde
+
+ [EventWaitHandle](eventwaithandle.md)  
+ <xref:System.Threading.EventWaitHandle?displayProperty=nameWithType> Veya el ile sıfırlama olayları ve yerel ya da olaylar veya sistem olaylarını adlı sınıfı ya da otomatik temsil eder.  
   
- [AutoResetEvent](../../../docs/standard/threading/autoresetevent.md)  
- <xref:System.Threading.AutoResetEvent> Sınıf türetilir <xref:System.Threading.EventWaitHandle> ve otomatik olarak sıfırlar yerel bir olayı temsil eder.  
+ [AutoResetEvent](autoresetevent.md)  
+ <xref:System.Threading.AutoResetEvent?displayProperty=nameWithType> Sınıf türetilir <xref:System.Threading.EventWaitHandle> ve otomatik olarak sıfırlar yerel bir olayı temsil eder.  
   
- [ManualResetEvent ve ManualResetEventSlim](../../../docs/standard/threading/manualresetevent-and-manualreseteventslim.md)  
- <xref:System.Threading.ManualResetEvent> Sınıf türetilir <xref:System.Threading.EventWaitHandle> ve el ile sıfırlamanız gerekir yerel bir olayı temsil eder. <xref:System.Threading.ManualResetEventSlim> Sınıfı, aynı işlem içinde olaylar için kullanılan basit ve hızlı bir sürümü.  
+ [ManualResetEvent ve ManualResetEventSlim](manualresetevent-and-manualreseteventslim.md)  
+ <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> Sınıf türetilir <xref:System.Threading.EventWaitHandle> ve el ile sıfırlamanız gerekir yerel bir olayı temsil eder. <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> Sınıfı, aynı işlem içinde olaylar için kullanılan basit ve hızlı bir sürümü.  
   
- [CountdownEvent](../../../docs/standard/threading/countdownevent.md)  
- <xref:System.Threading.CountdownEvent> Sınıfı çatal/birleştir paralellik desenleri bekleme tanıtıcıları kullanan koda uygulanması için basitleştirilmiş bir yol sağlar.  
-  
-## <a name="related-sections"></a>İlgili Bölümler  
- [Bekleme tanıtıcıları](https://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
- <xref:System.Threading.WaitHandle> İçin temel sınıfı <xref:System.Threading.EventWaitHandle>, <xref:System.Threading.Semaphore>, ve <xref:System.Threading.Mutex> sınıfları. Statik yöntemler gibi içeren <xref:System.Threading.WaitHandle.SignalAndWait%2A> ve <xref:System.Threading.WaitHandle.WaitAll%2A> bekleme tanıtıcıları tüm türleriyle çalışırken yararlı olan.  
-  
+ [CountdownEvent](countdownevent.md)  
+ <xref:System.Threading.CountdownEvent?displayProperty=nameWithType> Sınıfı çatal/birleştir paralellik desenleri bekleme tanıtıcıları kullanan koda uygulanması için basitleştirilmiş bir yol sağlar.  
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Threading.EventWaitHandle>  
-- <xref:System.Threading.WaitHandle>  
-- <xref:System.Threading.AutoResetEvent>  
-- <xref:System.Threading.ManualResetEvent>  
-- [İş Parçacığı Nesneleri ve Özellikleri](../../../docs/standard/threading/threading-objects-and-features.md)  
-- [Yönetilen İş Parçacığı Oluşturma Temelleri](../../../docs/standard/threading/managed-threading-basics.md)
+- <xref:System.Threading.WaitHandle?displayProperty=nameWithType>
+- <xref:System.Threading.Barrier?displayProperty=nameWithType>
+- [İş parçacığı nesneleri ve özellikleri](threading-objects-and-features.md)
+- [Yönetilen iş parçacığı oluşturma temelleri](managed-threading-basics.md)

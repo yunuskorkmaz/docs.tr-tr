@@ -12,11 +12,11 @@ ms.assetid: eee2f227-91f2-4f2b-a9d6-1c51c5320858
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2a69d0e15f9094860c4c66f3fe0a195a0a609db9
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45746490"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46321333"
 ---
 # <a name="-resource-visual-basic"></a>-Kaynak (Visual Basic)
 Yönetilen kaynak bir derlemeye gömer.  

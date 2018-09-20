@@ -2,21 +2,21 @@
 title: Bir İş Akışı Hizmetinden OperationContext Erişimi
 ms.date: 03/30/2017
 ms.assetid: b1dafe55-a20e-4db0-9ac8-90c315883cdd
-ms.openlocfilehash: 11c10e83c02ec0e2e74462e84c68fd2fcd3ff761
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 15dd817dddbe3272b188f6b74697f8c5839d498b
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495573"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46326377"
 ---
 # <a name="accessing-operationcontext-from-a-workflow-service"></a>Bir İş Akışı Hizmetinden OperationContext Erişimi
-Erişim için <xref:System.ServiceModel.OperationContext> bir iş akışı hizmeti içinde uygulamanız gereken <xref:System.ServiceModel.Activities.IReceiveMessageCallback> özel yürütme özelliğinde arabirimi. Geçersiz kılma <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> başvuru iletilen yöntemi <xref:System.ServiceModel.OperationContext>. Bu konu, bu özelliğe belirir özel etkinlik yanı sıra, bir özel üst bilgi almak için bu yürütme özelliği uygulama aracılığıyla yükselteceğinizi <xref:System.ServiceModel.Activities.Receive> çalışma zamanında.  Özel Etkinlik aynı davranışı uygulayacak bir <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` etkinlik olduğunda dışında bir <xref:System.ServiceModel.Activities.Receive> bunun içinde yerleştirilir <xref:System.ServiceModel.Activities.IReceiveMessageCallback> çağrılacağı ve <xref:System.ServiceModel.OperationContext> bilgi alınabilir.  Bu konu aynı zamanda istemci-tarafı erişim gösterilmektedir <xref:System.ServiceModel.OperationContext> aracılığıyla giden üstbilgilerini eklemek için <xref:System.ServiceModel.Activities.ISendMessageCallback> arabirimi.  
+Erişim için <xref:System.ServiceModel.OperationContext> bir iş akışı hizmeti içinde uygulamanız gereken <xref:System.ServiceModel.Activities.IReceiveMessageCallback> özel yürütme özelliğinde arabirimi. Geçersiz kılma <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> başvuru geçirilen yöntemi <xref:System.ServiceModel.OperationContext>. Bu konuda, bu özelliğe belirir özel bir etkinlik yanı sıra, bir özel üst bilgi almak için bu yürütme özelliğini uygulama konusunda size yol gösterecek <xref:System.ServiceModel.Activities.Receive> zamanında.  Özel Etkinlik aynı davranışı uygulayan bir <xref:System.Activities.Statements.Sequence> olduğunda dışında bir etkinlik bir <xref:System.ServiceModel.Activities.Receive> bunun içinde yerleştirilir <xref:System.ServiceModel.Activities.IReceiveMessageCallback> olarak adlandırılır ve <xref:System.ServiceModel.OperationContext> bilgiler alınabilir.  Bu konuda ayrıca istemci-tarafı erişmek nasıl gösterir <xref:System.ServiceModel.OperationContext> aracılığıyla giden üst bilgilerini eklemek için <xref:System.ServiceModel.Activities.ISendMessageCallback> arabirimi.  
   
-### <a name="implement-the-service-side-ireceivemessagecallback"></a>Hizmet tarafı IReceiveMessageCallback uygulama  
+### <a name="implement-the-service-side-ireceivemessagecallback"></a>Hizmet tarafı IReceiveMessageCallback uygulayın  
   
-1.  Boş bir oluşturma [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] çözümü.  
+1.  Boş bir oluşturma [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] çözüm.  
   
-2.  Adlı yeni bir konsol uygulaması ekleyin `Service` çözüme.  
+2.  Adlı yeni bir konsol uygulaması Ekle `Service` çözüm.  
   
 3.  Aşağıdaki derlemelere başvurular ekleyin:  
   
@@ -26,7 +26,7 @@ Erişim için <xref:System.ServiceModel.OperationContext> bir iş akışı hizme
   
     3.  System.ServiceModel.Activities  
   
-4.  Adlı yeni bir sınıf ekleyin `ReceiveInstanceIdCallback` ve uygulamanıza <xref:System.ServiceModel.Activities.IReceiveMessageCallback> aşağıdaki örnekte gösterildiği gibi.  
+4.  Adlı yeni bir sınıf ekleyin `ReceiveInstanceIdCallback` ve uygulama <xref:System.ServiceModel.Activities.IReceiveMessageCallback> aşağıdaki örnekte gösterildiği gibi.  
   
     ```csharp  
     class ReceiveInstanceIdCallback : IReceiveMessageCallback  
@@ -49,13 +49,13 @@ Erişim için <xref:System.ServiceModel.OperationContext> bir iş akışı hizme
     }  
     ```  
   
-     Bu kodu kullanır <xref:System.ServiceModel.OperationContext> gelen ileti üstbilgilerini erişmek için yönteme geçirilen.  
+     Bu kod <xref:System.ServiceModel.OperationContext> gelen ileti üstbilgileri erişmek için metodun Metoda geçilen.  
   
-### <a name="implement-a-service-side-native-activity-to-add-the-ireceivemessagecallback-implementation-to-the-nativeactivitycontext"></a>NativeActivityContext IReceiveMessageCallback uygulama eklemek için bir hizmet tarafı yerel etkinlik uygulayan  
+### <a name="implement-a-service-side-native-activity-to-add-the-ireceivemessagecallback-implementation-to-the-nativeactivitycontext"></a>İçin NativeActivityContext IReceiveMessageCallback uygulama eklemek için bir hizmet tarafı yerel etkinlik uygulayan  
   
 1.  Türetilen bir yeni sınıf ekleyin <xref:System.Activities.NativeActivity> adlı `ReceiveInstanceIdScope`.  
   
-2.  Alt etkinlikler, değişkenleri, geçerli etkinliği dizin izlemek için yerel değişkenler ekleyin ve bir <xref:System.Activities.CompletionCallback> geri çağırma.  
+2.  Alt etkinlikleri, değişkenleri, geçerli etkinlik dizini izlemek için yerel değişkeni ekleyin ve bir <xref:System.Activities.CompletionCallback> geri çağırma.  
   
     ```  
     public sealed class ReceiveInstanceIdScope : NativeActivity  
@@ -142,11 +142,11 @@ Erişim için <xref:System.ServiceModel.OperationContext> bir iş akışı hizme
             }  
     ```  
   
-### <a name="implement-the-workflow-service"></a>İş akışı hizmeti uygulama  
+### <a name="implement-the-workflow-service"></a>Bir iş akışı hizmet ekleme  
   
 1.  Varolan öğeyi `Program` sınıfı.  
   
-2.  Aşağıdaki sabit değerleri tanımlayın:  
+2.  Aşağıdaki sabitler tanımlayın:  
   
     ```  
     class Program  
@@ -156,7 +156,7 @@ Erişim için <xref:System.ServiceModel.OperationContext> bir iş akışı hizme
     }  
     ```  
   
-3.  Adlı bir statik yöntem ekleyin `GetWorkflowService` iş akışı hizmeti oluşturur.  
+3.  Adlı statik bir yöntem ekleyin `GetWorkflowService` iş akışı hizmeti oluşturur.  
   
     ```  
     static Activity GetServiceWorkflow()  
@@ -194,7 +194,7 @@ Erişim için <xref:System.ServiceModel.OperationContext> bir iş akışı hizme
             }  
     ```  
   
-4.  Varolan `Main` yöntemi, iş akışı hizmeti ana bilgisayar.  
+4.  Mevcut `Main` yöntemi, iş akışı hizmeti konağı.  
   
     ```  
     static void Main(string[] args)  
@@ -214,9 +214,9 @@ Erişim için <xref:System.ServiceModel.OperationContext> bir iş akışı hizme
             }  
     ```  
   
-### <a name="implement-the-client-side-isendmessagecallback"></a>İstemci tarafı ISendMessageCallback uygulama  
+### <a name="implement-the-client-side-isendmessagecallback"></a>İstemci tarafı ISendMessageCallback uygulayın  
   
-1.  Adlı yeni bir konsol uygulaması ekleyin `Service` çözüme.  
+1.  Adlı yeni bir konsol uygulaması Ekle `Service` çözüm.  
   
 2.  Aşağıdaki derlemelere başvurular ekleyin:  
   
@@ -226,7 +226,7 @@ Erişim için <xref:System.ServiceModel.OperationContext> bir iş akışı hizme
   
     3.  System.ServiceModel.Activities  
   
-3.  Adlı yeni bir sınıf ekleyin `SendInstanceIdCallback` ve uygulamanıza <xref:System.ServiceModel.Activities.ISendMessageCallback> aşağıdaki örnekte gösterildiği gibi.  
+3.  Adlı yeni bir sınıf ekleyin `SendInstanceIdCallback` ve uygulama <xref:System.ServiceModel.Activities.ISendMessageCallback> aşağıdaki örnekte gösterildiği gibi.  
   
     ```csharp  
     class SendInstanceIdCallback : ISendMessageCallback  
@@ -243,13 +243,13 @@ Erişim için <xref:System.ServiceModel.OperationContext> bir iş akışı hizme
         }  
     ```  
   
-     Bu kodu kullanır <xref:System.ServiceModel.OperationContext> gelen iletiye bir özel üst bilgi eklemek için yöntemiyle geçirildi.  
+     Bu kod <xref:System.ServiceModel.OperationContext> gelen iletiyi özel bir başlık eklemek için yöntemini yöntemlere geçirilen.  
   
-### <a name="implement-a-client-side-native-activity-to-add-the-client-side-isendmessagecallback-implementation-to-the-nativeactivitycontext"></a>İstemci-tarafı ISendMessageCallback uygulaması NativeActivityContext eklemek için bir istemci-tarafı yerel etkinlik uygulayan  
+### <a name="implement-a-client-side-native-activity-to-add-the-client-side-isendmessagecallback-implementation-to-the-nativeactivitycontext"></a>İstemci-tarafı ISendMessageCallback uygulaması için NativeActivityContext eklemek için bir istemci-tarafı yerel etkinlik uygulayan  
   
 1.  Türetilen bir yeni sınıf ekleyin <xref:System.Activities.NativeActivity> adlı `SendInstanceIdScope`.  
   
-2.  Alt etkinlikler, değişkenleri, geçerli etkinliği dizin izlemek için yerel değişkenler ekleyin ve bir <xref:System.Activities.CompletionCallback> geri çağırma.  
+2.  Alt etkinlikleri, değişkenleri, geçerli etkinlik dizini izlemek için yerel değişkeni ekleyin ve bir <xref:System.Activities.CompletionCallback> geri çağırma.  
   
     ```  
     public sealed class SendInstanceIdScope : NativeActivity  
@@ -378,7 +378,7 @@ Erişim için <xref:System.ServiceModel.OperationContext> bir iş akışı hizme
   
     3.  System.ServiceModel.Activities  
   
-3.  Oluşturulan Program.cs dosyasını açın ve adlı bir statik yöntem ekleyin `GetClientWorkflow` istemci iş akışı oluşturmak için.  
+3.  Oluşturulan Program.cs dosyasını açın ve adlı statik bir yöntem ekleyin `GetClientWorkflow` istemci iş akışı oluşturmak için.  
   
     ```  
     static Activity GetClientWorkflow()  
@@ -438,7 +438,7 @@ Erişim için <xref:System.ServiceModel.OperationContext> bir iş akışı hizme
             }  
     ```  
   
-4.  Aşağıdaki barındırma kodu eklemek `Main()` yöntemi.  
+4.  Barındırma için aşağıdaki kodu ekleyin `Main()` yöntemi.  
   
     ```  
     static void Main(string[] args)  
@@ -452,7 +452,7 @@ Erişim için <xref:System.ServiceModel.OperationContext> bir iş akışı hizme
     ```  
   
 ## <a name="example"></a>Örnek  
- Kaynak tam listesi İşte bu konuda kullanılan kod.  
+ Kaynak tam bir listesi aşağıdadır. Bu konuda kullanılan kod.  
   
 ```  
 // ReceiveInstanceIdScope.cs  
