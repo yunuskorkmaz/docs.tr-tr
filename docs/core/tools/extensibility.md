@@ -4,12 +4,12 @@ description: Komut satırı arabirimi (CLI) araçlarını nasıl genişletebilec
 author: blackdwarf
 ms.author: mairaw
 ms.date: 04/12/2017
-ms.openlocfilehash: a9cfebbeddbedc329432c805c5956b382a726a77
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
-ms.translationtype: HT
+ms.openlocfilehash: 9f54479704f547ada567619a82b24a47a0b104c4
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46288176"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46326588"
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>.NET core CLI araçları genişletilebilirlik modeli
 
@@ -133,7 +133,7 @@ Aşağıdaki örnekte, hedefin proje gördüğünüz kullanarak dosya `csproj` s
 
 Özel hedefleri tüketen yapılır sağlayarak bir `<PackageReference>` işaret eden paket ve Genişletilmekte olan proje içinde sürümü. Araçları özel hedefleri paket kaybı projenin bağımlılık kapanış dahil.
 
-Özel hedef kullanarak yalnızca nasıl yapılandırmanız üzerinde bağlıdır. MSBuild hedefi olduğundan, güvenebileceğiniz bir belirtilen hedef sonra başka bir hedef çalıştırın ve ayrıca el ile çağrılabilir `dotnet msbuild /t:<target-name>` komutu.
+Özel hedef kullanarak yalnızca nasıl yapılandırmanız üzerinde bağlıdır. MSBuild hedefi olduğundan, güvenebileceğiniz bir belirtilen hedef sonra başka bir hedef çalıştırın ve ayrıca el ile çağrılabilir `dotnet msbuild -t:<target-name>` komutu.
 
 Ancak, kullanıcılarınıza daha iyi bir kullanıcı deneyimi sağlamak istiyorsanız, proje başına Araçlar ve özel hedefleri birleştirebilirsiniz. Bu senaryoda, her proje araç aslında yalnızca ne olursa olsun gerekli parametreleri ve gerekli çevirir kabul [ `dotnet msbuild` ](dotnet-msbuild.md) hedef yürüterek çağırma. Bu tür bir synergy örneği gördüğünüz [MVP Zirvesi 2016 HACK Maratonunda örnekleri](https://github.com/dotnet/MVPSummitHackathon2016) depoda [ `dotnet-packer` ](https://github.com/dotnet/MVPSummitHackathon2016/tree/master/dotnet-packer) proje.
 
