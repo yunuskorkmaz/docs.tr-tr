@@ -1,6 +1,6 @@
 ---
 title: EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent
-ms.date: 03/30/2017
+ms.date: 09/14/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - wait handles
@@ -9,40 +9,36 @@ helpviewer_keywords:
 ms.assetid: cd94fc34-ac15-427f-b723-a1240a4fab7d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2f61e614696e731a85a030e34aa4356137d9000d
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: be9c858d7c76fdcc1b3e02485eb0b459f4e7555c
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260155"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46323541"
 ---
-# <a name="eventwaithandle-autoresetevent-countdownevent-manualresetevent"></a><span data-ttu-id="b5f69-102">EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent</span><span class="sxs-lookup"><span data-stu-id="b5f69-102">EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent</span></span>
-<span data-ttu-id="b5f69-103">Olay bekleme tanıtıcıları birbirine sinyal ve birbirlerinin sinyalleri bekleyen etkinlikleri eşitlemek için iş parçacığı izin verir.</span><span class="sxs-lookup"><span data-stu-id="b5f69-103">Event wait handles allow threads to synchronize activities by signaling each other and by waiting on each other's signals.</span></span> <span data-ttu-id="b5f69-104">Bu eşitleme olayları Win32 bekleme tanıtıcıları üzerinde temel alır ve iki tür olarak ayrılabilir: sinyal olduğunda otomatik olarak sıfırlayan ve el ile Sıfırlanan.</span><span class="sxs-lookup"><span data-stu-id="b5f69-104">These synchronization events are based on Win32 wait handles and can be divided into two types: those that reset automatically when signaled and those that are reset manually.</span></span>  
-  
- <span data-ttu-id="b5f69-105">Olay bekleme tanıtıcıları, birçok aynı eşitleme senaryolarda kullanışlıdır <xref:System.Threading.Monitor> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="b5f69-105">Event wait handles are useful in many of the same synchronization scenarios as the <xref:System.Threading.Monitor> class.</span></span> <span data-ttu-id="b5f69-106">Olay bekleme tanıtıcıları daha kolay genellikle <xref:System.Threading.Monitor.Wait%2A?displayProperty=nameWithType> ve <xref:System.Threading.Monitor.Pulse%2A?displayProperty=nameWithType> yöntemleri ve sinyal üzerinde daha fazla denetim sağlar.</span><span class="sxs-lookup"><span data-stu-id="b5f69-106">Event wait handles are often easier to use than the <xref:System.Threading.Monitor.Wait%2A?displayProperty=nameWithType> and <xref:System.Threading.Monitor.Pulse%2A?displayProperty=nameWithType> methods, and they offer more control over signaling.</span></span> <span data-ttu-id="b5f69-107">İzleyicileri uygulama etki alanı için yerel ise adlandırılmış olay bekleme tanıtıcıları uygulama etki alanları ve işlemleri arasında etkinlikleri eşitlemek için de kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="b5f69-107">Named event wait handles can also be used to synchronize activities across application domains and processes, whereas monitors are local to an application domain.</span></span>  
-  
-## <a name="in-this-section"></a><span data-ttu-id="b5f69-108">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="b5f69-108">In This Section</span></span>  
- [<span data-ttu-id="b5f69-109">EventWaitHandle</span><span class="sxs-lookup"><span data-stu-id="b5f69-109">EventWaitHandle</span></span>](../../../docs/standard/threading/eventwaithandle.md)  
- <span data-ttu-id="b5f69-110"><xref:System.Threading.EventWaitHandle> Veya el ile sıfırlama olayları ve yerel ya da olaylar veya sistem olaylarını adlı sınıfı ya da otomatik temsil eder.</span><span class="sxs-lookup"><span data-stu-id="b5f69-110">The <xref:System.Threading.EventWaitHandle> class can represent either automatic or manual reset events and either local events or named system events.</span></span>  
-  
- [<span data-ttu-id="b5f69-111">AutoResetEvent</span><span class="sxs-lookup"><span data-stu-id="b5f69-111">AutoResetEvent</span></span>](../../../docs/standard/threading/autoresetevent.md)  
- <span data-ttu-id="b5f69-112"><xref:System.Threading.AutoResetEvent> Sınıf türetilir <xref:System.Threading.EventWaitHandle> ve otomatik olarak sıfırlar yerel bir olayı temsil eder.</span><span class="sxs-lookup"><span data-stu-id="b5f69-112">The <xref:System.Threading.AutoResetEvent> class derives from <xref:System.Threading.EventWaitHandle> and represents a local event that resets automatically.</span></span>  
-  
- [<span data-ttu-id="b5f69-113">ManualResetEvent ve ManualResetEventSlim</span><span class="sxs-lookup"><span data-stu-id="b5f69-113">ManualResetEvent and ManualResetEventSlim</span></span>](../../../docs/standard/threading/manualresetevent-and-manualreseteventslim.md)  
- <span data-ttu-id="b5f69-114"><xref:System.Threading.ManualResetEvent> Sınıf türetilir <xref:System.Threading.EventWaitHandle> ve el ile sıfırlamanız gerekir yerel bir olayı temsil eder.</span><span class="sxs-lookup"><span data-stu-id="b5f69-114">The <xref:System.Threading.ManualResetEvent> class derives from <xref:System.Threading.EventWaitHandle> and represents a local event that must be reset manually.</span></span> <span data-ttu-id="b5f69-115"><xref:System.Threading.ManualResetEventSlim> Sınıfı, aynı işlem içinde olaylar için kullanılan basit ve hızlı bir sürümü.</span><span class="sxs-lookup"><span data-stu-id="b5f69-115">The <xref:System.Threading.ManualResetEventSlim> class is a lightweight, faster version that can be used for events within the same process.</span></span>  
-  
- [<span data-ttu-id="b5f69-116">CountdownEvent</span><span class="sxs-lookup"><span data-stu-id="b5f69-116">CountdownEvent</span></span>](../../../docs/standard/threading/countdownevent.md)  
- <span data-ttu-id="b5f69-117"><xref:System.Threading.CountdownEvent> Sınıfı çatal/birleştir paralellik desenleri bekleme tanıtıcıları kullanan koda uygulanması için basitleştirilmiş bir yol sağlar.</span><span class="sxs-lookup"><span data-stu-id="b5f69-117">The <xref:System.Threading.CountdownEvent> class provides a simplified way to implement fork/join parallelism patterns in code that uses wait handles.</span></span>  
-  
-## <a name="related-sections"></a><span data-ttu-id="b5f69-118">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="b5f69-118">Related Sections</span></span>  
- [<span data-ttu-id="b5f69-119">Bekleme tanıtıcıları</span><span class="sxs-lookup"><span data-stu-id="b5f69-119">Wait Handles</span></span>](https://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
- <span data-ttu-id="b5f69-120"><xref:System.Threading.WaitHandle> İçin temel sınıfı <xref:System.Threading.EventWaitHandle>, <xref:System.Threading.Semaphore>, ve <xref:System.Threading.Mutex> sınıfları.</span><span class="sxs-lookup"><span data-stu-id="b5f69-120">The <xref:System.Threading.WaitHandle> class is the base class for the <xref:System.Threading.EventWaitHandle>, <xref:System.Threading.Semaphore>, and <xref:System.Threading.Mutex> classes.</span></span> <span data-ttu-id="b5f69-121">Statik yöntemler gibi içeren <xref:System.Threading.WaitHandle.SignalAndWait%2A> ve <xref:System.Threading.WaitHandle.WaitAll%2A> bekleme tanıtıcıları tüm türleriyle çalışırken yararlı olan.</span><span class="sxs-lookup"><span data-stu-id="b5f69-121">It contains static methods such as <xref:System.Threading.WaitHandle.SignalAndWait%2A> and <xref:System.Threading.WaitHandle.WaitAll%2A> that are useful when working with all types of wait handles.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="b5f69-122">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b5f69-122">See also</span></span>
+# <a name="eventwaithandle-autoresetevent-countdownevent-manualresetevent"></a><span data-ttu-id="4caff-102">EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent</span><span class="sxs-lookup"><span data-stu-id="4caff-102">EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent</span></span>
 
-- <xref:System.Threading.EventWaitHandle>  
-- <xref:System.Threading.WaitHandle>  
-- <xref:System.Threading.AutoResetEvent>  
-- <xref:System.Threading.ManualResetEvent>  
-- [<span data-ttu-id="b5f69-123">İş Parçacığı Nesneleri ve Özellikleri</span><span class="sxs-lookup"><span data-stu-id="b5f69-123">Threading Objects and Features</span></span>](../../../docs/standard/threading/threading-objects-and-features.md)  
-- [<span data-ttu-id="b5f69-124">Yönetilen İş Parçacığı Oluşturma Temelleri</span><span class="sxs-lookup"><span data-stu-id="b5f69-124">Managed Threading Basics</span></span>](../../../docs/standard/threading/managed-threading-basics.md)
+<span data-ttu-id="4caff-103">Olay bekleme tanıtıcıları birbirine sinyal ve birbirlerinin sinyalleri bekleyen etkinlikleri eşitlemek için iş parçacığı izin verir.</span><span class="sxs-lookup"><span data-stu-id="4caff-103">Event wait handles allow threads to synchronize activities by signaling each other and by waiting on each other's signals.</span></span> <span data-ttu-id="4caff-104">Bu eşitleme olaylar üzerinde işletim sistemi bekleme tanıtıcıları temel alır ve iki tür olarak ayrılabilir: sinyal olduğunda otomatik olarak sıfırlayan ve el ile Sıfırlanan.</span><span class="sxs-lookup"><span data-stu-id="4caff-104">These synchronization events are based on operating system wait handles and can be divided into two types: those that reset automatically when signaled and those that are reset manually.</span></span>  
+  
+<span data-ttu-id="4caff-105">Olay bekleme tanıtıcıları, birçok aynı eşitleme senaryolarda kullanışlıdır <xref:System.Threading.Monitor> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="4caff-105">Event wait handles are useful in many of the same synchronization scenarios as the <xref:System.Threading.Monitor> class.</span></span> <span data-ttu-id="4caff-106">Olay bekleme tanıtıcıları daha kolay genellikle <xref:System.Threading.Monitor.Wait%2A?displayProperty=nameWithType> ve <xref:System.Threading.Monitor.Pulse%2A?displayProperty=nameWithType> yöntemleri ve sinyal üzerinde daha fazla denetim sağlar.</span><span class="sxs-lookup"><span data-stu-id="4caff-106">Event wait handles are often easier to use than the <xref:System.Threading.Monitor.Wait%2A?displayProperty=nameWithType> and <xref:System.Threading.Monitor.Pulse%2A?displayProperty=nameWithType> methods, and they offer more control over signaling.</span></span> <span data-ttu-id="4caff-107">İzleyicileri uygulama etki alanı için yerel ise adlandırılmış olay bekleme tanıtıcıları uygulama etki alanları ve işlemleri arasında etkinlikleri eşitlemek için de kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="4caff-107">Named event wait handles can also be used to synchronize activities across application domains and processes, whereas monitors are local to an application domain.</span></span>  
+  
+## <a name="in-this-section"></a><span data-ttu-id="4caff-108">Bu bölümde</span><span class="sxs-lookup"><span data-stu-id="4caff-108">In this section</span></span>
+
+ [<span data-ttu-id="4caff-109">EventWaitHandle</span><span class="sxs-lookup"><span data-stu-id="4caff-109">EventWaitHandle</span></span>](eventwaithandle.md)  
+ <span data-ttu-id="4caff-110"><xref:System.Threading.EventWaitHandle?displayProperty=nameWithType> Veya el ile sıfırlama olayları ve yerel ya da olaylar veya sistem olaylarını adlı sınıfı ya da otomatik temsil eder.</span><span class="sxs-lookup"><span data-stu-id="4caff-110">The <xref:System.Threading.EventWaitHandle?displayProperty=nameWithType> class can represent either automatic or manual reset events and either local events or named system events.</span></span>  
+  
+ [<span data-ttu-id="4caff-111">AutoResetEvent</span><span class="sxs-lookup"><span data-stu-id="4caff-111">AutoResetEvent</span></span>](autoresetevent.md)  
+ <span data-ttu-id="4caff-112"><xref:System.Threading.AutoResetEvent?displayProperty=nameWithType> Sınıf türetilir <xref:System.Threading.EventWaitHandle> ve otomatik olarak sıfırlar yerel bir olayı temsil eder.</span><span class="sxs-lookup"><span data-stu-id="4caff-112">The <xref:System.Threading.AutoResetEvent?displayProperty=nameWithType> class derives from <xref:System.Threading.EventWaitHandle> and represents a local event that resets automatically.</span></span>  
+  
+ [<span data-ttu-id="4caff-113">ManualResetEvent ve ManualResetEventSlim</span><span class="sxs-lookup"><span data-stu-id="4caff-113">ManualResetEvent and ManualResetEventSlim</span></span>](manualresetevent-and-manualreseteventslim.md)  
+ <span data-ttu-id="4caff-114"><xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> Sınıf türetilir <xref:System.Threading.EventWaitHandle> ve el ile sıfırlamanız gerekir yerel bir olayı temsil eder.</span><span class="sxs-lookup"><span data-stu-id="4caff-114">The <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> class derives from <xref:System.Threading.EventWaitHandle> and represents a local event that must be reset manually.</span></span> <span data-ttu-id="4caff-115"><xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> Sınıfı, aynı işlem içinde olaylar için kullanılan basit ve hızlı bir sürümü.</span><span class="sxs-lookup"><span data-stu-id="4caff-115">The <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> class is a lightweight, faster version that can be used for events within the same process.</span></span>  
+  
+ [<span data-ttu-id="4caff-116">CountdownEvent</span><span class="sxs-lookup"><span data-stu-id="4caff-116">CountdownEvent</span></span>](countdownevent.md)  
+ <span data-ttu-id="4caff-117"><xref:System.Threading.CountdownEvent?displayProperty=nameWithType> Sınıfı çatal/birleştir paralellik desenleri bekleme tanıtıcıları kullanan koda uygulanması için basitleştirilmiş bir yol sağlar.</span><span class="sxs-lookup"><span data-stu-id="4caff-117">The <xref:System.Threading.CountdownEvent?displayProperty=nameWithType> class provides a simplified way to implement fork/join parallelism patterns in code that uses wait handles.</span></span>  
+
+## <a name="see-also"></a><span data-ttu-id="4caff-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4caff-118">See also</span></span>
+
+- <xref:System.Threading.WaitHandle?displayProperty=nameWithType>
+- <xref:System.Threading.Barrier?displayProperty=nameWithType>
+- [<span data-ttu-id="4caff-119">İş parçacığı nesneleri ve özellikleri</span><span class="sxs-lookup"><span data-stu-id="4caff-119">Threading objects and features</span></span>](threading-objects-and-features.md)
+- [<span data-ttu-id="4caff-120">Yönetilen iş parçacığı oluşturma temelleri</span><span class="sxs-lookup"><span data-stu-id="4caff-120">Managed threading basics</span></span>](managed-threading-basics.md)

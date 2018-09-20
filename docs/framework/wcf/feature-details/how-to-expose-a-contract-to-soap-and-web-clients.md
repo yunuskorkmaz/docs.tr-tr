@@ -5,105 +5,109 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: bb765a48-12f2-430d-a54d-6f0c20f2a23a
-ms.openlocfilehash: a9a730fe94d1df8c887a2eaf20c1e338bd056ed5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d82c5e3fc33528eadc3c404cca59a3dcf905e0e2
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494156"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46323988"
 ---
-# <a name="how-to-expose-a-contract-to-soap-and-web-clients"></a><span data-ttu-id="dae18-102">Nasıl yapılır: Bir Sözleşmeyi SOAP ve Web İstemcilerine Sunma</span><span class="sxs-lookup"><span data-stu-id="dae18-102">How to: Expose a Contract to SOAP and Web Clients</span></span>
-<span data-ttu-id="dae18-103">Varsayılan olarak, Windows Communication Foundation (WCF) uç noktalar yalnızca SOAP istemcilerin kullanımına sunuyor.</span><span class="sxs-lookup"><span data-stu-id="dae18-103">By default, Windows Communication Foundation (WCF) makes endpoints available only to SOAP clients.</span></span> <span data-ttu-id="dae18-104">İçinde [nasıl yapılır: temel bir WCF Web HTTP hizmeti oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md), bir uç nokta SOAP olmayan istemciler için kullanılabilir hale getirilir.</span><span class="sxs-lookup"><span data-stu-id="dae18-104">In [How to: Create a Basic WCF Web HTTP Service](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md), an endpoint is made available to non-SOAP clients.</span></span> <span data-ttu-id="dae18-105">Aynı sözleşme çift yönlü bir Web uç noktası ve bir SOAP uç noktası olarak kullanılabilir hale getirmek istediğinizde zamanlar olabilir.</span><span class="sxs-lookup"><span data-stu-id="dae18-105">There may be times when you want to make the same contract available both ways, as a Web endpoint and as a SOAP endpoint.</span></span> <span data-ttu-id="dae18-106">Bu konu bunun nasıl yapılacağı örneği gösterir.</span><span class="sxs-lookup"><span data-stu-id="dae18-106">This topic shows an example of how to do this.</span></span>  
-  
-### <a name="to-define-the-service-contract"></a><span data-ttu-id="dae18-107">Hizmet sözleşmesi tanımlamak için</span><span class="sxs-lookup"><span data-stu-id="dae18-107">To define the service contract</span></span>  
-  
-1.  <span data-ttu-id="dae18-108">İle işaretlenen arabirimini kullanarak bir hizmet sözleşmesini tanımlayan <xref:System.ServiceModel.ServiceContractAttribute>, <xref:System.ServiceModel.Web.WebInvokeAttribute> ve <xref:System.ServiceModel.Web.WebGetAttribute> aşağıdaki kodda gösterildiği gibi öznitelikleri.</span><span class="sxs-lookup"><span data-stu-id="dae18-108">Define a service contract using an interface marked with the <xref:System.ServiceModel.ServiceContractAttribute>, <xref:System.ServiceModel.Web.WebInvokeAttribute> and the <xref:System.ServiceModel.Web.WebGetAttribute> attributes, as shown in the following code.</span></span>  
-  
-     [!code-csharp[htSoapWeb#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/htsoapweb/cs/program.cs#0)]
-     [!code-vb[htSoapWeb#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htsoapweb/vb/program.vb#0)]  
-  
+# <a name="how-to-expose-a-contract-to-soap-and-web-clients"></a><span data-ttu-id="1b94c-102">Nasıl yapılır: Bir Sözleşmeyi SOAP ve Web İstemcilerine Sunma</span><span class="sxs-lookup"><span data-stu-id="1b94c-102">How to: Expose a Contract to SOAP and Web Clients</span></span>
+
+<span data-ttu-id="1b94c-103">Varsayılan olarak, Windows Communication Foundation (WCF) uç noktalar yalnızca SOAP istemcilerin kullanımına sunuyor.</span><span class="sxs-lookup"><span data-stu-id="1b94c-103">By default, Windows Communication Foundation (WCF) makes endpoints available only to SOAP clients.</span></span> <span data-ttu-id="1b94c-104">İçinde [nasıl yapılır: temel bir WCF Web HTTP hizmeti oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md), bir uç nokta SOAP olmayan istemciler için kullanılabilir hale getirilir.</span><span class="sxs-lookup"><span data-stu-id="1b94c-104">In [How to: Create a Basic WCF Web HTTP Service](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md), an endpoint is made available to non-SOAP clients.</span></span> <span data-ttu-id="1b94c-105">Aynı anlaşmaya her iki yönde bir Web uç noktası ve bir SOAP uç noktası olarak kullanılabilir hale getirmek istediğinizde zamanlar olabilir.</span><span class="sxs-lookup"><span data-stu-id="1b94c-105">There may be times when you want to make the same contract available both ways, as a Web endpoint and as a SOAP endpoint.</span></span> <span data-ttu-id="1b94c-106">Bu konuda bir örnek bunun nasıl yapılacağı gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="1b94c-106">This topic shows an example of how to do this.</span></span>
+
+## <a name="to-define-the-service-contract"></a><span data-ttu-id="1b94c-107">Hizmet sözleşmesini tanımlama</span><span class="sxs-lookup"><span data-stu-id="1b94c-107">To define the service contract</span></span>
+
+1. <span data-ttu-id="1b94c-108">İle işaretlenmiş bir arabirim kullanarak bir hizmet sözleşmesini tanımlama <xref:System.ServiceModel.ServiceContractAttribute>, <xref:System.ServiceModel.Web.WebInvokeAttribute> ve <xref:System.ServiceModel.Web.WebGetAttribute> , aşağıdaki kodda gösterildiği gibi öznitelikleri:</span><span class="sxs-lookup"><span data-stu-id="1b94c-108">Define a service contract using an interface marked with the <xref:System.ServiceModel.ServiceContractAttribute>, <xref:System.ServiceModel.Web.WebInvokeAttribute> and the <xref:System.ServiceModel.Web.WebGetAttribute> attributes, as shown in the following code:</span></span>
+
+    [!code-csharp[htSoapWeb#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/htsoapweb/cs/program.cs#0)]
+    [!code-vb[htSoapWeb#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htsoapweb/vb/program.vb#0)]
+
     > [!NOTE]
-    >  <span data-ttu-id="dae18-109">Varsayılan olarak <xref:System.ServiceModel.Web.WebInvokeAttribute> işlemi POST çağrıları eşler.</span><span class="sxs-lookup"><span data-stu-id="dae18-109">By default <xref:System.ServiceModel.Web.WebInvokeAttribute> maps POST calls to the operation.</span></span> <span data-ttu-id="dae18-110">Bununla birlikte, belirterek işlemi eşleştirmek için yöntemini belirleyebilirsiniz bir "yöntemi =" parametresi.</span><span class="sxs-lookup"><span data-stu-id="dae18-110">You can, however, specify the method to map to the operation by specifying a "method=" parameter.</span></span> <span data-ttu-id="dae18-111"><xref:System.ServiceModel.Web.WebGetAttribute> sahip olmayan bir "yöntemi =" GET parametre ve yalnızca eşlemeleri hizmet işlemini çağırır.</span><span class="sxs-lookup"><span data-stu-id="dae18-111"><xref:System.ServiceModel.Web.WebGetAttribute> does not have a "method=" parameter and only maps GET calls to the service operation.</span></span>  
-  
-2.  <span data-ttu-id="dae18-112">Aşağıdaki kodda gösterildiği gibi hizmet sözleşmesini uygulayın.</span><span class="sxs-lookup"><span data-stu-id="dae18-112">Implement the service contract, as shown in the following code.</span></span>  
-  
+    > <span data-ttu-id="1b94c-109">Varsayılan olarak <xref:System.ServiceModel.Web.WebInvokeAttribute> işlemi POST çağrısına eşler.</span><span class="sxs-lookup"><span data-stu-id="1b94c-109">By default <xref:System.ServiceModel.Web.WebInvokeAttribute> maps POST calls to the operation.</span></span> <span data-ttu-id="1b94c-110">Ancak, belirterek işlemi eşleştirmek için yöntemini belirtebilirsiniz bir "yöntemi =" parametresi.</span><span class="sxs-lookup"><span data-stu-id="1b94c-110">You can, however, specify the method to map to the operation by specifying a "method=" parameter.</span></span> <span data-ttu-id="1b94c-111"><xref:System.ServiceModel.Web.WebGetAttribute> olmayan bir "yöntemi =" parametresi ve yalnızca eşlemeler GET hizmet işlemine çağırır.</span><span class="sxs-lookup"><span data-stu-id="1b94c-111"><xref:System.ServiceModel.Web.WebGetAttribute> does not have a "method=" parameter and only maps GET calls to the service operation.</span></span>
+
+2. <span data-ttu-id="1b94c-112">Hizmet sözleşmesi, aşağıdaki kodda gösterildiği şekilde uygulayın:</span><span class="sxs-lookup"><span data-stu-id="1b94c-112">Implement the service contract, as shown in the following code:</span></span>
+
      [!code-csharp[htSoapWeb#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/htsoapweb/cs/program.cs#1)]
-     [!code-vb[htSoapWeb#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htsoapweb/vb/program.vb#1)]  
-  
-### <a name="to-host-the-service"></a><span data-ttu-id="dae18-113">Ana bilgisayar hizmeti</span><span class="sxs-lookup"><span data-stu-id="dae18-113">To host the service</span></span>  
-  
-1.  <span data-ttu-id="dae18-114">Oluşturma bir <xref:System.ServiceModel.ServiceHost> aşağıdaki kodda gösterildiği gibi nesne.</span><span class="sxs-lookup"><span data-stu-id="dae18-114">Create a <xref:System.ServiceModel.ServiceHost> object, as shown in the following code.</span></span>  
-  
+     [!code-vb[htSoapWeb#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htsoapweb/vb/program.vb#1)]
+
+## <a name="to-host-the-service"></a><span data-ttu-id="1b94c-113">Ana bilgisayar hizmeti</span><span class="sxs-lookup"><span data-stu-id="1b94c-113">To host the service</span></span>
+
+1. <span data-ttu-id="1b94c-114">Oluşturma bir <xref:System.ServiceModel.ServiceHost> aşağıdaki kodda gösterildiği gibi nesne:</span><span class="sxs-lookup"><span data-stu-id="1b94c-114">Create a <xref:System.ServiceModel.ServiceHost> object, as shown in the following code:</span></span>
+
      [!code-csharp[htSoapWeb#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/htsoapweb/cs/program.cs#2)]
-     [!code-vb[htSoapWeb#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htsoapweb/vb/program.vb#2)]  
-  
-2.  <span data-ttu-id="dae18-115">Ekleme bir <xref:System.ServiceModel.Description.ServiceEndpoint> ile <xref:System.ServiceModel.BasicHttpBinding> aşağıdaki kodda gösterildiği gibi SOAP uç için.</span><span class="sxs-lookup"><span data-stu-id="dae18-115">Add a <xref:System.ServiceModel.Description.ServiceEndpoint> with <xref:System.ServiceModel.BasicHttpBinding> for the SOAP endpoint, as shown in the following code.</span></span>  
-  
+     [!code-vb[htSoapWeb#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htsoapweb/vb/program.vb#2)]
+
+2. <span data-ttu-id="1b94c-115">Ekleme bir <xref:System.ServiceModel.Description.ServiceEndpoint> ile <xref:System.ServiceModel.BasicHttpBinding> aşağıdaki kodda gösterildiği gibi SOAP uç noktası için:</span><span class="sxs-lookup"><span data-stu-id="1b94c-115">Add a <xref:System.ServiceModel.Description.ServiceEndpoint> with <xref:System.ServiceModel.BasicHttpBinding> for the SOAP endpoint, as shown in the following code:</span></span>
+
      [!code-csharp[htSoapWeb#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/htsoapweb/cs/program.cs#3)]
-     [!code-vb[htSoapWeb#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htsoapweb/vb/program.vb#3)]  
-  
-3.  <span data-ttu-id="dae18-116">Ekleme bir <xref:System.ServiceModel.Description.ServiceEndpoint> ile <xref:System.ServiceModel.WebHttpBinding> olmayan SOAP uç noktası için ve ekleme <xref:System.ServiceModel.Description.WebHttpBehavior> aşağıdaki kodda gösterildiği gibi uç.</span><span class="sxs-lookup"><span data-stu-id="dae18-116">Add a <xref:System.ServiceModel.Description.ServiceEndpoint> with <xref:System.ServiceModel.WebHttpBinding> for the non-SOAP endpoint and add the <xref:System.ServiceModel.Description.WebHttpBehavior> to the endpoint, as shown in the following code.</span></span>  
-  
+     [!code-vb[htSoapWeb#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htsoapweb/vb/program.vb#3)]
+
+3. <span data-ttu-id="1b94c-116">Ekleme bir <xref:System.ServiceModel.Description.ServiceEndpoint> ile <xref:System.ServiceModel.WebHttpBinding> olmayan SOAP uç noktası için ve ekleme <xref:System.ServiceModel.Description.WebHttpBehavior> aşağıdaki kodda gösterildiği gibi uç:</span><span class="sxs-lookup"><span data-stu-id="1b94c-116">Add a <xref:System.ServiceModel.Description.ServiceEndpoint> with <xref:System.ServiceModel.WebHttpBinding> for the non-SOAP endpoint and add the <xref:System.ServiceModel.Description.WebHttpBehavior> to the endpoint, as shown in the following code:</span></span>
+
      [!code-csharp[htSoapWeb#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/htsoapweb/cs/program.cs#4)]
-     [!code-vb[htSoapWeb#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htsoapweb/vb/program.vb#4)]  
-  
-4.  <span data-ttu-id="dae18-117">Çağrı `Open()` üzerinde bir <xref:System.ServiceModel.ServiceHost> aşağıdaki kodda gösterildiği gibi hizmet ana bilgisayarını açma örneği.</span><span class="sxs-lookup"><span data-stu-id="dae18-117">Call `Open()` on a <xref:System.ServiceModel.ServiceHost> instance to open the service host, as shown in the following code.</span></span>  
-  
+     [!code-vb[htSoapWeb#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htsoapweb/vb/program.vb#4)]
+
+4. <span data-ttu-id="1b94c-117">Çağrı `Open()` üzerinde bir <xref:System.ServiceModel.ServiceHost> örneği, hizmet ana bilgisayarı, aşağıdaki kodda gösterildiği gibi açın:</span><span class="sxs-lookup"><span data-stu-id="1b94c-117">Call `Open()` on a <xref:System.ServiceModel.ServiceHost> instance to open the service host, as shown in the following code:</span></span>
+
      [!code-csharp[htSoapWeb#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/htsoapweb/cs/program.cs#5)]
-     [!code-vb[htSoapWeb#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htsoapweb/vb/program.vb#5)]  
-  
-### <a name="to-call-service-operations-mapped-to-get-in-internet-explorer"></a><span data-ttu-id="dae18-118">Internet Explorer'da GET eşlenen hizmet işlemleri çağırmak için</span><span class="sxs-lookup"><span data-stu-id="dae18-118">To call service operations mapped to GET in Internet Explorer</span></span>  
-  
-1.  <span data-ttu-id="dae18-119">Açık Internet Explorer ve türü "`http://localhost:8000/Web/EchoWithGet?s=Hello, world!`" ve ENTER tuşuna basın.</span><span class="sxs-lookup"><span data-stu-id="dae18-119">Open Internet Explorer and type "`http://localhost:8000/Web/EchoWithGet?s=Hello, world!`" and press ENTER.</span></span> <span data-ttu-id="dae18-120">Hizmetin taban adresi URL içerir ("http://localhost:8000/"), bitiş noktasının göreli adresi (""), hizmet işlemi çağrı ("EchoWithGet") ve bir soru işareti adlandırılmış parametreleri ampersan tarafından ayrılmış bir listesi ve ardından (&).</span><span class="sxs-lookup"><span data-stu-id="dae18-120">The URL contains the base address of the service ("http://localhost:8000/"), the relative address of the endpoint (""), the service operation to call ("EchoWithGet"), and a question mark followed by a list of named parameters separated by an ampersand (&).</span></span>  
-  
-### <a name="to-call-service-operations-on-the-web-endpoint-in-code"></a><span data-ttu-id="dae18-121">Kod içinde hizmet işlemleri üzerinde Web uç noktası çağırmak için</span><span class="sxs-lookup"><span data-stu-id="dae18-121">To call service operations on the Web endpoint in code</span></span>  
-  
-1.  <span data-ttu-id="dae18-122">Bir örneğini oluşturmak <xref:System.ServiceModel.Web.WebChannelFactory%601> içinde bir `using` aşağıdaki kodda gösterildiği gibi engelleyin.</span><span class="sxs-lookup"><span data-stu-id="dae18-122">Create an instance of <xref:System.ServiceModel.Web.WebChannelFactory%601> within a `using` block, as shown in the following code.</span></span>  
-  
+     [!code-vb[htSoapWeb#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htsoapweb/vb/program.vb#5)]
+
+## <a name="to-call-service-operations-mapped-to-get-in-internet-explorer"></a><span data-ttu-id="1b94c-118">Internet Explorer'da GET eşlenen hizmet işlemlerini aramak üzere</span><span class="sxs-lookup"><span data-stu-id="1b94c-118">To call service operations mapped to GET in Internet Explorer</span></span>
+
+1. <span data-ttu-id="1b94c-119">Internet Explorer ve tür açın "`http://localhost:8000/Web/EchoWithGet?s=Hello, world!`" ve ENTER tuşuna basın.</span><span class="sxs-lookup"><span data-stu-id="1b94c-119">Open Internet Explorer and type "`http://localhost:8000/Web/EchoWithGet?s=Hello, world!`" and press ENTER.</span></span> <span data-ttu-id="1b94c-120">Hizmetin taban adresi URL içerir (`http://localhost:8000/`), ilgili uç nokta adresi (""), hizmet işlemine çağrı ("EchoWithGet") yanı sıra, bir soru işareti ve işareti tarafından ayrılmış, adlandırılan parametrelerin bir listesi ve ardından (&).</span><span class="sxs-lookup"><span data-stu-id="1b94c-120">The URL contains the base address of the service (`http://localhost:8000/`), the relative address of the endpoint (""), the service operation to call ("EchoWithGet"), and a question mark followed by a list of named parameters separated by an ampersand (&).</span></span>
+
+## <a name="to-call-service-operations-on-the-web-endpoint-in-code"></a><span data-ttu-id="1b94c-121">Web uç noktasında hizmet işlemleri çağırmak için</span><span class="sxs-lookup"><span data-stu-id="1b94c-121">To call service operations on the Web endpoint in code</span></span>
+
+1. <span data-ttu-id="1b94c-122">Bir örneğini oluşturmak <xref:System.ServiceModel.Web.WebChannelFactory%601> içinde bir `using` , aşağıdaki kodda gösterildiği gibi engelleyin.</span><span class="sxs-lookup"><span data-stu-id="1b94c-122">Create an instance of <xref:System.ServiceModel.Web.WebChannelFactory%601> within a `using` block, as shown in the following code.</span></span>
+
      [!code-csharp[htSoapWeb#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/htsoapweb/cs/program.cs#6)]
-     [!code-vb[htSoapWeb#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htsoapweb/vb/program.vb#6)]  
-  
+     [!code-vb[htSoapWeb#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htsoapweb/vb/program.vb#6)]
+
 > [!NOTE]
->  <span data-ttu-id="dae18-123">`Close()` kanalda sonunda otomatik olarak çağrılır `using` bloğu.</span><span class="sxs-lookup"><span data-stu-id="dae18-123">`Close()` is automatically called on the channel at the end of the `using` block.</span></span>  
-  
-1.  <span data-ttu-id="dae18-124">Kanal oluşturun ve aşağıdaki kodda gösterildiği gibi hizmet çağırın.</span><span class="sxs-lookup"><span data-stu-id="dae18-124">Create the channel and call the service, as shown in the following code.</span></span>  
-  
+> <span data-ttu-id="1b94c-123">`Close()` Kanal sonunda otomatik olarak çağrılır `using` blok.</span><span class="sxs-lookup"><span data-stu-id="1b94c-123">`Close()` is automatically called on the channel at the end of the `using` block.</span></span>
+
+1. <span data-ttu-id="1b94c-124">Kanalı oluşturun ve aşağıdaki kodda gösterildiği gibi hizmetin çağırın.</span><span class="sxs-lookup"><span data-stu-id="1b94c-124">Create the channel and call the service, as shown in the following code.</span></span>
+
      [!code-csharp[htSoapWeb#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/htsoapweb/cs/program.cs#8)]
-     [!code-vb[htSoapWeb#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htsoapweb/vb/program.vb#8)]  
-  
-### <a name="to-call-service-operations-on-the-soap-endpoint"></a><span data-ttu-id="dae18-125">SOAP uç noktasındaki hizmet işlemleri çağırmak için</span><span class="sxs-lookup"><span data-stu-id="dae18-125">To call service operations on the SOAP endpoint</span></span>  
-  
-1.  <span data-ttu-id="dae18-126">Bir örneğini oluşturmak <xref:System.ServiceModel.ChannelFactory> içinde bir `using` aşağıdaki kodda gösterildiği gibi engelleyin.</span><span class="sxs-lookup"><span data-stu-id="dae18-126">Create an instance of <xref:System.ServiceModel.ChannelFactory> within a `using` block, as shown in the following code.</span></span>  
-  
-     [!code-csharp[htSoapWeb#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/htsoapweb/cs/program.cs#10)]
-     [!code-vb[htSoapWeb#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htsoapweb/vb/program.vb#10)]  
-  
-2.  <span data-ttu-id="dae18-127">Kanal oluşturun ve aşağıdaki kodda gösterildiği gibi hizmet çağırın.</span><span class="sxs-lookup"><span data-stu-id="dae18-127">Create the channel and call the service, as shown in the following code.</span></span>  
-  
-     [!code-csharp[htSoapWeb#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/htsoapweb/cs/program.cs#11)]
-     [!code-vb[htSoapWeb#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htsoapweb/vb/program.vb#11)]  
-  
-### <a name="to-close-the-service-host"></a><span data-ttu-id="dae18-128">Hizmet ana bilgisayarı kapatmak için</span><span class="sxs-lookup"><span data-stu-id="dae18-128">To close the service host</span></span>  
-  
-1.  <span data-ttu-id="dae18-129">Aşağıdaki kodda gösterildiği gibi hizmet ana bilgisayarını kapatın.</span><span class="sxs-lookup"><span data-stu-id="dae18-129">Close the service host, as shown in the following code.</span></span>  
-  
-     [!code-csharp[htSoapWeb#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/htsoapweb/cs/program.cs#9)]
-     [!code-vb[htSoapWeb#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htsoapweb/vb/program.vb#9)]  
-  
-## <a name="example"></a><span data-ttu-id="dae18-130">Örnek</span><span class="sxs-lookup"><span data-stu-id="dae18-130">Example</span></span>  
- <span data-ttu-id="dae18-131">Bu konu için tam kod verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="dae18-131">The following is the full code listing for this topic.</span></span>  
-  
- [!code-csharp[htSoapWeb#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/htsoapweb/cs/program.cs#13)]
- [!code-vb[htSoapWeb#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htsoapweb/vb/program.vb#13)]  
-  
-## <a name="compiling-the-code"></a><span data-ttu-id="dae18-132">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="dae18-132">Compiling the Code</span></span>  
- <span data-ttu-id="dae18-133">Adını da derlerken System.ServiceModel.dll ve System.ServiceModel.Web.dll başvuru.</span><span class="sxs-lookup"><span data-stu-id="dae18-133">When compiling Service.cs, reference System.ServiceModel.dll and System.ServiceModel.Web.dll.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="dae18-134">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="dae18-134">See Also</span></span>  
- <xref:System.ServiceModel.WebHttpBinding>  
- <xref:System.ServiceModel.Web.WebGetAttribute>  
- <xref:System.ServiceModel.Web.WebInvokeAttribute>  
- <xref:System.ServiceModel.Web.WebServiceHost>  
- <xref:System.ServiceModel.ChannelFactory>  
- <xref:System.ServiceModel.Description.WebHttpBehavior>  
- [<span data-ttu-id="dae18-135">WCF Web HTTP Programlama Modeli</span><span class="sxs-lookup"><span data-stu-id="dae18-135">WCF Web HTTP Programming Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+     [!code-vb[htSoapWeb#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htsoapweb/vb/program.vb#8)]
+
+## <a name="to-call-service-operations-on-the-soap-endpoint"></a><span data-ttu-id="1b94c-125">SOAP uç noktasında hizmet işlemlerini aramak üzere</span><span class="sxs-lookup"><span data-stu-id="1b94c-125">To call service operations on the SOAP endpoint</span></span>
+
+1. <span data-ttu-id="1b94c-126">Bir örneğini oluşturmak <xref:System.ServiceModel.ChannelFactory> içinde bir `using` , aşağıdaki kodda gösterildiği gibi engelleyin.</span><span class="sxs-lookup"><span data-stu-id="1b94c-126">Create an instance of <xref:System.ServiceModel.ChannelFactory> within a `using` block, as shown in the following code.</span></span>
+
+    [!code-csharp[htSoapWeb#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/htsoapweb/cs/program.cs#10)]
+    [!code-vb[htSoapWeb#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htsoapweb/vb/program.vb#10)]
+
+2. <span data-ttu-id="1b94c-127">Kanalı oluşturun ve aşağıdaki kodda gösterildiği gibi hizmetin çağırın.</span><span class="sxs-lookup"><span data-stu-id="1b94c-127">Create the channel and call the service, as shown in the following code.</span></span>
+
+    [!code-csharp[htSoapWeb#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/htsoapweb/cs/program.cs#11)]
+    [!code-vb[htSoapWeb#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htsoapweb/vb/program.vb#11)]
+
+## <a name="to-close-the-service-host"></a><span data-ttu-id="1b94c-128">Hizmet ana bilgisayarı kapatmak için</span><span class="sxs-lookup"><span data-stu-id="1b94c-128">To close the service host</span></span>
+
+1. <span data-ttu-id="1b94c-129">Aşağıdaki kodda gösterildiği gibi hizmet konağı kapatın.</span><span class="sxs-lookup"><span data-stu-id="1b94c-129">Close the service host, as shown in the following code.</span></span>
+
+    [!code-csharp[htSoapWeb#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/htsoapweb/cs/program.cs#9)]
+    [!code-vb[htSoapWeb#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htsoapweb/vb/program.vb#9)]
+
+## <a name="example"></a><span data-ttu-id="1b94c-130">Örnek</span><span class="sxs-lookup"><span data-stu-id="1b94c-130">Example</span></span>
+
+<span data-ttu-id="1b94c-131">Bu konu için listeleme tam kod aşağıda verilmiştir:</span><span class="sxs-lookup"><span data-stu-id="1b94c-131">The following is the full code listing for this topic:</span></span>
+
+[!code-csharp[htSoapWeb#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/htsoapweb/cs/program.cs#13)]
+[!code-vb[htSoapWeb#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htsoapweb/vb/program.vb#13)]
+
+## <a name="compiling-the-code"></a><span data-ttu-id="1b94c-132">Kod derleme</span><span class="sxs-lookup"><span data-stu-id="1b94c-132">Compiling the code</span></span>
+
+ <span data-ttu-id="1b94c-133">Adını da derlenirken System.ServiceModel.dll ve System.ServiceModel.Web.dll başvuru.</span><span class="sxs-lookup"><span data-stu-id="1b94c-133">When compiling Service.cs, reference System.ServiceModel.dll and System.ServiceModel.Web.dll.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="1b94c-134">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1b94c-134">See also</span></span>
+
+- <xref:System.ServiceModel.WebHttpBinding>
+- <xref:System.ServiceModel.Web.WebGetAttribute>
+- <xref:System.ServiceModel.Web.WebInvokeAttribute>
+- <xref:System.ServiceModel.Web.WebServiceHost>
+- <xref:System.ServiceModel.ChannelFactory>
+- <xref:System.ServiceModel.Description.WebHttpBehavior>
+- [<span data-ttu-id="1b94c-135">WCF Web HTTP Programlama Modeli</span><span class="sxs-lookup"><span data-stu-id="1b94c-135">WCF Web HTTP Programming Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
