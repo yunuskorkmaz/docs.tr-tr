@@ -2,12 +2,12 @@
 title: SQL-CLR tür eşlemesi
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-ms.openlocfilehash: ac00d78fff65f5d44a52f92509db3aa493952949
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d5c0072d8561efa1211de191a1f2b6f3a1e55b7b
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862111"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46478701"
 ---
 # <a name="sql-clr-type-mapping"></a>SQL-CLR tür eşlemesi
 LINQ to SQL'de, ilişkisel veritabanı veri modeli, kendi seçtiğiniz programlama dilinde ifade nesne modeli eşlenir. Uygulama çalışırken, LINQ to SQL nesne modeli dil ile tümleşik sorgu SQL'e çevirir ve bunları yürütme için veritabanı gönderir. Veritabanı sonuçları döndürdüğünde, LINQ to SQL geri kendi programlama dilinde çalışabileceğiniz nesneleri sonuçları çevirir.  
@@ -122,7 +122,7 @@ LINQ to SQL'de, ilişkisel veritabanı veri modeli, kendi seçtiğiniz programla
  Seçebileceğiniz çok sayıda diğer sayısal eşlemeler bulunur, ancak bazı taşması veya veri kaybı, özel durumlar için veya veritabanından çevrilirken neden olabilir. Daha fazla bilgi için [türü eşleme çalıştırma zamanı davranışını matris](#BehaviorMatrix).  
   
 ### <a name="decimal-and-money-types"></a>Ondalık ve para türleri  
- SQL Server'ın varsayılan duyarlık `DECIMAL` türü (18 ondalık basamak sola ve Ondalık ayırıcının sağında) CLR duyarlıklı çok daha küçük olan <!--zz <xref:System.Decima?displayProperty=nameWithType>l --> `Decimal` bunu ile varsayılan olarak eşleştirilir türü. Bu durum, veri veritabanına kaydederken duyarlık kaybına neden olabilir. Ancak tersi oluşabilir SQL Server `DECIMAL` türü, 29 basamak duyarlılığındadır büyüktür ile yapılandırılır. SQL Server olduğunda `DECIMAL` türü, CLR daha büyük kesinliği ile yapılandırılmış <xref:System.Decimal?displayProperty=nameWithType>, verileri veritabanından alırken duyarlık kaybı meydana gelebilir.  
+ SQL Server'ın varsayılan duyarlık `DECIMAL` türü (18 ondalık basamak sola ve Ondalık ayırıcının sağında) CLR duyarlıklı çok daha küçük olan <xref:System.Decimal?displayProperty=nameWithType> bunu ile varsayılan olarak eşleştirilir türü. Bu durum, veri veritabanına kaydederken duyarlık kaybına neden olabilir. Ancak tersi oluşabilir SQL Server `DECIMAL` türü, 29 basamak duyarlılığındadır büyüktür ile yapılandırılır. SQL Server olduğunda `DECIMAL` türü, CLR daha büyük kesinliği ile yapılandırılmış <xref:System.Decimal?displayProperty=nameWithType>, verileri veritabanından alırken duyarlık kaybı meydana gelebilir.  
   
  SQL Server `MONEY` ve `SMALLMONEY` ayrıca CLR ile eşleştirilmiş durumda türleri <xref:System.Decimal?displayProperty=nameWithType> türü varsayılan olarak, verileri veritabanına kaydedilirken taşması veya veri kaybı durumlar sonucunda çok daha küçük kesinliği, vardır.  
   
