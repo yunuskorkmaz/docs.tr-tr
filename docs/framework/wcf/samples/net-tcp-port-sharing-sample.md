@@ -3,11 +3,11 @@ title: Net.TCP Bağlantı Noktası Paylaşımı Örneği
 ms.date: 03/30/2017
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
 ms.openlocfilehash: db4cd5be73e3c170f2feaa1e76f275eb7d9cd226
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46006268"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46490000"
 ---
 # <a name="nettcp-port-sharing-sample"></a>Net.TCP Bağlantı Noktası Paylaşımı Örneği
 TCP/IP protokolünün bir bağlantı noktası olarak adlandırılan 16 bit bir sayı, aynı makinede çalışan birden çok ağ uygulamalarına bağlantıları ayırt etmek için kullanır. Uygulamaya bir bağlantı noktasında dinliyorsa, bu bağlantı için tüm TCP trafiği bu uygulamaya gider. Diğer uygulamalar bu bağlantı noktasına aynı anda dinleyemiyor.  

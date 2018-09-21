@@ -4,12 +4,12 @@ description: .NET Core ve .NET Core CLI kaynak kodundan oluşturmayı öğrenin.
 author: bleroy
 ms.author: mairaw
 ms.date: 06/28/2017
-ms.openlocfilehash: 2623c5d21121b71960d174301c35bdd0d7f8558a
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: fa9c193ea4088f04745bdadc6040552e18c0858a
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002092"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46492882"
 ---
 # <a name="build-net-core-from-source"></a>Kaynaktan .NET Core derleme
 
@@ -93,7 +93,7 @@ Yeni, çalışma zamanı kullanmak için iki temel teknik vardır:
   * Xcode
   * Openssl
 
-Derleme için çalıştırmanız `build.cmd` Windows, şirket veya `build.sh` Linux ve Macos'ta kök. Testleri yürütmek istemiyorsanız çalıştırma `build.cmd /t:Compile` veya `./build.sh /t:Compile`. MacOS Sierra CLI'daki oluşturmak için çalıştırarak DOTNET_RUNTIME_ID ortam değişkenini ayarlamanız gerekir `export DOTNET_RUNTIME_ID=osx.10.11-x64`.
+Derleme için çalıştırmanız `build.cmd` Windows, şirket veya `build.sh` Linux ve Macos'ta kök. Testleri yürütmek istemiyorsanız çalıştırma `build.cmd -t:Compile` veya `./build.sh -t:Compile`. MacOS Sierra CLI'daki oluşturmak için çalıştırarak DOTNET_RUNTIME_ID ortam değişkenini ayarlamanız gerekir `export DOTNET_RUNTIME_ID=osx.10.11-x64`.
 
 ### <a name="using-your-build"></a>Yapınızı kullanma
 

@@ -4,12 +4,12 @@ description: Dotnet paketi komut, .NET Core projesi için NuGet paketlerini olu�
 author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 8c2569ec7598b21fe9b673176143d0e54b9eb065
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 434f1c97af24d1417cd79edd52b63814fd4c6512
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44204857"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46473070"
 ---
 # <a name="dotnet-pack"></a>DotNet paketi
 
@@ -43,7 +43,7 @@ Paketlenmiş proje, NuGet bağımlılıklarını eklenir *.nuspec* düzgün bulu
 
 Varsayılan olarak, `dotnet pack` önce projeyi oluşturur. Bu davranışı engellemek istiyorsanız, geçmesi `--no-build` seçeneği. Bu seçenek genellikle kod daha önce oluşturulmuş bildiğiniz sürekli tümleştirme (CI) derleme senaryolarda yararlıdır.
 
-MSBuild özellikleri sağlayabilir `dotnet pack` paketleme işlemi için komutu. Daha fazla bilgi için [NuGet meta veri özelliklerini](csproj.md#nuget-metadata-properties) ve [MSBuild komut satırı başvurusu](/visualstudio/msbuild/msbuild-command-line-reference). [Örnekler](#examples) bölüm birkaç farklı senaryolar için MSBuild /p anahtarını kullanmayı gösterir.
+MSBuild özellikleri sağlayabilir `dotnet pack` paketleme işlemi için komutu. Daha fazla bilgi için [NuGet meta veri özelliklerini](csproj.md#nuget-metadata-properties) ve [MSBuild komut satırı başvurusu](/visualstudio/msbuild/msbuild-command-line-reference). [Örnekler](#examples) bölüm birkaç farklı senaryolar için MSBuild -p anahtar kullanmayı gösterir.
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
@@ -109,6 +109,14 @@ Değerini tanımlayan `$(VersionSuffix)` projesinde MSBuild özelliği.
 
 Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, ve `diag[nostic]`.
 
+> [!NOTE]
+> Web projeleri, varsayılan olarak packable değildir. Varsayılan davranışı geçersiz kılmak için aşağıdaki özelliği ekleyin, *.csproj* dosyası:
+> ```xml
+> <PropertyGroup>
+>    <IsPackable>true</IsPackable>
+> </PropertyGroup>
+> ```
+
 # <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
 
 `-c|--configuration {Debug|Release}`
@@ -173,11 +181,11 @@ Projeyle Sürüm soneki olarak yapılandırılmış `<VersionSuffix>$(VersionSuf
 
 Paket sürümü kümesine `2.1.0` ile `PackageVersion` MSBuild özelliği:
 
-`dotnet pack /p:PackageVersion=2.1.0`
+`dotnet pack -p:PackageVersion=2.1.0`
 
 Belirli bir proje pack [hedef Framework'ü](../../standard/frameworks.md):
 
-`dotnet pack /p:TargetFrameworks=net45`
+`dotnet pack -p:TargetFrameworks=net45`
 
 Proje paketi ve belirli bir çalışma zamanı (Windows 10) geri yükleme işlemi için (.NET Core SDK 2.0 ve sonraki sürümler) kullanın:
 

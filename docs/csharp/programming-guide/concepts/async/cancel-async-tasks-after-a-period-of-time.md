@@ -3,11 +3,11 @@ title: Bir süre (C#) sonra zaman uyumsuz görevleri iptal etme
 ms.date: 07/20/2015
 ms.assetid: 194282c2-399f-46da-a7a6-96674e00b0b3
 ms.openlocfilehash: b95b87e1e93a9c8f8c74680a917a128d45172ed5
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46006918"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46481630"
 ---
 # <a name="cancel-async-tasks-after-a-period-of-time-c"></a>Bir süre (C#) sonra zaman uyumsuz görevleri iptal etme
 

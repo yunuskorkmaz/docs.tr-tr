@@ -4,12 +4,12 @@ description: .NET Core 2.1 içinde bulunan yeni özellikler hakkında bilgi edin
 author: rpetrusha
 ms.author: ronpet
 ms.date: 06/06/2018
-ms.openlocfilehash: 850df87666c5beb0594f0672d8f558c11653f973
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: aa80e6b7214f91c49803adde49a1e03d1971b3f6
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45746776"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46473466"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1 yenilikler nelerdir?
 
@@ -66,7 +66,7 @@ Yalnızca bir proje kullanarak mevcut Araçlar [ `DotnetCliToolReference` ](../t
 
 .NET core 2.1 destekler *genel Araçları* --genel olarak komut satırından kullanılabilen diğer bir deyişle, özel araçlar. Genişletilebilirlik modeli '.NET Core önceki sürümlerinde özel araçlarla proje bazında yalnızca kullanarak sunulan [ `DotnetCliToolReference` ](../tools/extensibility.md#consuming-per-project-tools).
 
-Genel bir aracı yüklemek için kullandığınız [dotnet aracı yükleme](..\tools\dotnet-tool-install.md) komutu. Örneğin:
+Genel bir aracı yüklemek için kullandığınız [dotnet aracı yükleme](../tools/dotnet-tool-install.md) komutu. Örneğin:
 
 ```console
 dotnet tool install -g dotnetsay

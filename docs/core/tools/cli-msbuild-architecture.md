@@ -3,12 +3,12 @@ title: .NET core komut satırı araçları mimarisi
 description: Katmanlar ve en son sürümlerde nelerin değiştiğini .NET Core hakkında bilgi edinin.
 author: blackdwarf
 ms.date: 03/06/2017
-ms.openlocfilehash: 1d96a0b1e19bf84af0ab645ebd104afc899ae656
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 85987129421e8ee22f7cf7fe1d44e0768d95a214
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245135"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46490659"
 ---
 # <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>.NET Core Araçları'nda değişiklikler üst düzey genel bakış
 
@@ -63,7 +63,7 @@ Yürütme açısından bakıldığında, CLI komutları, parametre ve gerekli ö
     
 Bu komut, bir uygulamayı yayımlama bir `pub` klasörü "Sürüm" yapılandırmasını kullanarak. Dahili olarak, bu komutu aşağıdaki MSBuild çağrısına çevrilir: 
 
-   `dotnet msbuild /t:Publish /p:OutputPath=pub /p:Configuration=Release`
+   `dotnet msbuild -t:Publish -p:OutputPath=pub -p:Configuration=Release`
 
 Bu kural için önemli olan özel durumdur `new` ve `run` komutları gibi MSBuild hedefleri henüz geliştirilmemiştir.
 

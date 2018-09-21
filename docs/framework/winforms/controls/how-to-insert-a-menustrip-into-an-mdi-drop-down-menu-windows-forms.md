@@ -10,11 +10,11 @@ helpviewer_keywords:
 - MDI [Windows Forms], merging menu items
 ms.assetid: 0fad444e-26d9-49af-8860-044d9c10d608
 ms.openlocfilehash: 64e7e7875a635bcd4fbafb62d3ee7b7018214ee4
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45746404"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46473008"
 ---
 # <a name="how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms"></a>Nasıl yapılır: Bir MDI Açılan Menüsüne MenuStrip ekleme (Windows Forms)
 Bazı uygulamalarda, bir Çoklu belge arabirimi (MDI) alt penceresi türünü MDI ana penceresinde farklı olabilir. Örneğin, bir elektronik tablo MDI olabilir ve MDI alt bir grafik olabilir. Bu durumda, farklı türlerde MDI alt pencereleri etkin olarak MDI üst menü içeriğini MDI alt menü içeriğini güncelleştirmek istediğiniz.  
@@ -44,10 +44,10 @@ Bazı uygulamalarda, bir Çoklu belge arabirimi (MDI) alt penceresi türünü MD
     |Form2 menü öğesi|MergeAction değeri|MergeIndex değeri|  
     |---------------------|-----------------------|----------------------|  
     |Dosya|MatchOnly|-1|  
-    |Ayırıcı|Insert|2|  
-    |Kaydet|Insert|3|  
-    |Kaydet ve Kapat|Insert|4|  
-    |Ayırıcı|Insert|5|  
+    |Ayırıcı|Ekleme|2|  
+    |Kaydet|Ekleme|3|  
+    |Kaydet ve Kapat|Ekleme|4|  
+    |Ayırıcı|Ekleme|5|  
   
 10. İçin bir olay işleyicisi oluşturun <xref:System.Windows.Forms.Control.Click> olayı `&Open` <xref:System.Windows.Forms.ToolStripMenuItem>.  
   

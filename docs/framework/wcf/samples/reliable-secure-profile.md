@@ -5,11 +5,11 @@ ms.assetid: 921edc41-e91b-40f9-bde9-b6148b633e61
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: dfdafbcdc461c80192e310a86d5bff50f0885283
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
-ms.translationtype: MT
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45998974"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46471177"
 ---
 # <a name="reliable-secure-profile"></a>Güvenilir Güvenlik Profili
 Bu örnek WCF oluşturmak nasıl gösterir ve [güvenilir güvenli profili](https://go.microsoft.com/fwlink/?LinkId=178140) (RSP). Bu örnek uygulamasını gösterir. bir [bağlantı yap](https://go.microsoft.com/fwlink/?LinkId=178141) güvenilir Mesajlaşma ile birlikte ve isteğe bağlı olarak oluşan kanal güvenilir güvenli bir bağlama oluşturmak için güvenli bir kanal tabanlı RSP belirtimi.  

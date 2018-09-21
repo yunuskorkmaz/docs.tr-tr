@@ -7,12 +7,12 @@ dev_langs:
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 9a04b8aaf9c6263a8935099963aaa1dc8d9100fd
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: c656811e493c11ca463ce85d71b716c681501f21
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664676"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46481903"
 ---
 # <a name="transport-security-overview"></a>Taşıma Güvenliği Genel Bakış
 Aktarım güvenlik mekanizmaları Windows Communication Foundation (WCF) bağlaması ve kullanılan aktarım bağlıdır. Örneğin, kullanırken <xref:System.ServiceModel.WSHttpBinding> sınıfı taşıma HTTP ve taşıma güvenliğini sağlamak için birincil mekanizma Güvenli Yuva Katmanı (SSL) yaygın olarak HTTPS adlı HTTP üzerinden. Bu konu, WCF sistem tarafından sağlanan bağlamalar kullanılan ana Aktarım güvenlik mekanizmalarını açıklar.  
@@ -21,7 +21,7 @@ Aktarım güvenlik mekanizmaları Windows Communication Foundation (WCF) bağlam
 >  SSL güvenlik .NET Framework 3.5 ve üzeri kullanıldığında bir WCF istemcisi hem Ara sertifikaları, sertifika deposunda kullanır ve hizmetin üzerinde sertifika zinciri doğrulamayı gerçekleştirmek için SSL anlaşması sırasında Ara sertifikaları alındı Sertifika. .NET framework 3.0, yalnızca yerel sertifika deposunda yüklü Ara sertifikaları kullanır.  
   
 > [!WARNING]
->  Aktarım güvenliği kullanıldığında <!--zz <xref:System.Treading.Thread.CurrentPrincipal%2A> --> `CurrentPrincipal` özelliği yazılabilir. Bunun gerçekleşmesini kümesinden önlemek için <!--zz <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermission%2A> --> `PrincipalPermission` yok. <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> Hizmet açıklaması üzerinde ayarlanabilir bir hizmet davranıştır.  
+>  Aktarım güvenliği kullanıldığında <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> özelliği yazılabilir. Bunun gerçekleşmesini kümesinden önlemek için <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A?displayProperty=nameWithType> için <xref:System.ServiceModel.Description.PrincipalPermissionMode.None?displayProperty=nameWithType>. <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> Hizmet açıklaması üzerinde ayarlanabilir bir hizmet davranıştır.  
   
 ## <a name="basichttpbinding"></a>BasicHttpBinding  
  Varsayılan olarak, <xref:System.ServiceModel.BasicHttpBinding> sınıfı, güvenlik sağlamaz. Bu bağlama, güvenlik uygulamayan Web hizmeti sağlayıcıları ile birlikte çalışabilirlik için tasarlanmıştır. Ancak, ayarlayarak güvenliği geçiş yapabilirsiniz <xref:System.ServiceModel.BasicHttpSecurity.Mode%2A> dışında bir değer özelliği <xref:System.ServiceModel.BasicHttpSecurityMode.None>. Aktarım güvenliği etkinleştirmek için özelliği ayarlamak <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>.  

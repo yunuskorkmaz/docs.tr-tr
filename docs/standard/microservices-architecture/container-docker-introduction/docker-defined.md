@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: 342fd8a4da5f05112e2e0ea85f5b78196ca62fdd
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.openlocfilehash: 1b0cae037371666f2f1cd2ccb8c509a5618e7397
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45589423"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46493392"
 ---
 # <a name="what-is-docker"></a>Docker nedir?
 
@@ -62,7 +62,7 @@ Bir kapsayıcı görüntüsü, bir uygulama veya hizmet paketini ve güvenilir v
 
 Docker'ı kullanırken, geliştiricilerin söyleyin duyacak değil, "Benim makinemde neden üretimde çalışır?" Bunlar yalnızca diyebilirsiniz, "Docker üzerinde çalıştığı", çünkü paket Docker uygulama herhangi bir desteklenen Docker ortamda yürütülebilir ve bu şekilde çalışır, tüm dağıtım hedefleri üzerinde (hazırlama, üretim, vs. Dev, QA.) kullanılması.
 
-# <a name="a-simple-analogy"></a>Basit benzerleme
+## <a name="a-simple-analogy"></a>Basit benzerleme
 
 Belki de basit benzerleme kavrayın, Docker'ın temel kavramı alma yardımcı olabilir.
 

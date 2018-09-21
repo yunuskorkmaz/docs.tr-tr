@@ -3,11 +3,11 @@ title: .NET Framework XAML Hizmetleri İçin XAML Ad Uzayları
 ms.date: 03/30/2017
 ms.assetid: e4f15f13-c420-4c1e-aeab-9b6f50212047
 ms.openlocfilehash: ac6554cbdeb5bc6e0fe7fb96ea95d0143c293d22
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
-ms.translationtype: MT
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45749923"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46473622"
 ---
 # <a name="xaml-namespaces-for-net-framework-xaml-services"></a>.NET Framework XAML Hizmetleri İçin XAML Ad Uzayları
 XAML ad alanı tanımını bir XML ad alanı üzerinde genişleten bir kavramdır. Benzer şekilde bir XML ad alanı, XAML ad alanını kullanarak tanımlayabilirsiniz bir `xmlns` biçimlendirme özniteliği. XAML ad alanları, XAML düğümü akışı ve diğer XAML hizmetler API'lerini de temsil edilir. Bu konu, XAML ad alanı kavramını tanımlar ve XAML ad alanları'nın tanımlanabilir ve XAML şema bağlamları ve .NET Framework XAML hizmetlerinde diğer yönleri tarafından kullanılan nasıl açıklanmaktadır.  

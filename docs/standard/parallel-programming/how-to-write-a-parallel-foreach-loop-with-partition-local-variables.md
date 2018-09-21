@@ -11,11 +11,11 @@ ms.assetid: 24b10041-b30b-45cb-aa65-66cf568ca76d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 357cc488705ec3dab66543fa4814dbe3e6a22777
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45749481"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46478980"
 ---
 # <a name="how-to-write-a-parallelforeach-loop-with-partition-local-variables"></a>Nasıl yapılır: bölüm yerel değişkenleriyle bir Parallel.ForEach döngüsü yazma
 Aşağıdaki örnek nasıl yazılacağını gösterir. bir <xref:System.Threading.Tasks.Parallel.ForEach%2A> bölüm yerel değişkenler kullanan yöntemi. Olduğunda bir <xref:System.Threading.Tasks.Parallel.ForEach%2A> döngü yürütür, kendi kaynak koleksiyonu birden çok bölümlere böler. Her bölüm, kendi bölümü yerel değişken kopyasına sahip olur. Bir bölüm yerel değişkene benzer bir [iş parçacığı yerel değişkeni](xref:System.Threading.ThreadLocal%601)dışında birden çok bölüm tek bir iş parçacığı üzerinde çalıştırabilirsiniz.

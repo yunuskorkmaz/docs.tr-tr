@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
-ms.openlocfilehash: 43964331f6728db0f094eaceb63e2c306d2dd3ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d14fd1434cb87dc62babeabb79cb780e568aacb7
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490110"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46471696"
 ---
 # <a name="how-to-configure-com-service-settings"></a>Nasıl yapılır: COM+ Hizmet Ayarlarını Yapılandırma
-Bir uygulama arabirimi eklendiğinde veya COM + hizmet yapılandırması aracını kullanarak kaldırıldığında, Web hizmeti yapılandırması uygulamanın yapılandırma dosyasında güncelleştirilir. COM + barındırılan modunda uygulama kök dizininde Application.config dosya yerleştirilir (%PROGRAMFILES%\ComPlus uygulamaları\\{AppID} varsayılandır). Ya da Web barındırılan modları, Web.config dosyasında belirtilen vroot dizininde yer alır.  
+Bir uygulama arabirimi eklendi veya kaldırıldı COM + hizmet yapılandırması aracını kullanarak, Web hizmeti yapılandırması uygulamanın yapılandırma dosyası içinde güncelleştirilir. COM + barındırılan modunda Application.config dosya uygulamanın kök dizinine yerleştirilir (%PROGRAMFILES%\ComPlus uygulamaları\\{AppID} varsayılan değerdir). Ya da Web barındırılan modları, Web.config dosyasının vroot belirtilen dizine yerleştirilir.  
   
 > [!NOTE]
->  İleti imzalama iletilerinin bir istemci ve sunucu arasındaki kurcalanmaya karşı korumak için kullanılmalıdır. Ayrıca, ileti veya Aktarım katmanı şifreleme iletilerden bir istemci ve sunucu arasında bilginin açığa çıkmasına karşı korumak için kullanılmalıdır. Windows Communication Foundation (WCF) hizmetlerini gibi ile azaltma eşzamanlı çağrıları, bağlantıları, örnekler ve bekleyen işlemler sınırlamak için kullanmanız gerekir. Bu kaynakların fazla tüketimi önlemeye yardımcı olur. Davranış azaltma hizmet yapılandırma dosyası ayarları aracılığıyla belirtilir.  
+>  İleti imzalama bir istemci ve sunucu arasındaki mesajların kurcalanmaya karşı korumak için kullanılmalıdır. Ayrıca, ileti veya Aktarım katmanı şifreleme bilgi ifşaatına karşı bir istemci ve sunucu arasında iletileri karşı korumak için kullanılmalıdır. Windows Communication Foundation (WCF) Hizmetleri gibi ile azaltma eş zamanlı çağrılar, bağlantılar, örnekler ve bekleyen işlemler sınırlamak için kullanmanız gerekir. Bu durum, kaynakların aşırı kullanımını önlemeye yardımcı olur. Azaltma davranışı, hizmet yapılandırma dosyası ayarlarının ile belirtilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki arabirimini uygulayan bir bileşeni göz önünde bulundurun:  
+ Aşağıdaki arabirimi uygulayan bir bileşeni göz önünde bulundurun:  
   
 ```  
 [Guid("C551FBA9-E3AA-4272-8C2A-84BD8D290AC7")]  
@@ -29,7 +29,7 @@ public interface IFinances
 }  
 ```  
   
- Bileşen bir Web hizmeti olarak açılırsa, açıksa ve istemciler için uyması gereken karşılık gelen bir hizmet sözleşmesini aşağıdaki gibidir:  
+ Bileşen bir Web hizmeti olarak kullanıma sunulan, karşılık gelen hizmet sözleşmesi kullanıma sunulmuştur ve istemciler için uyması gereken aşağıdaki gibidir:  
   
 ```  
 [ServiceContract(Session = true,  
@@ -45,21 +45,21 @@ public interface IFinancesContract : IDisposable
 ```  
   
 > [!NOTE]
->  IID sözleşmesi için ilk ad alanının parçası oluşturur.  
+>  IID ilk ad alanının sözleşmenin parçası oluşturur.  
   
- Bu hizmeti kullanan istemci uygulamaları, uygulama yapılandırmasında belirtilen bir ile uyumlu bir bağlamayı kullanarak yanı sıra bu sözleşme, uygun olması gerekir.  
+ Bu hizmet kullanan istemci uygulamalar uygulama yapılandırmasında belirtilen ile uyumlu bir bağlamayı kullanarak yanı sıra, bu sözleşme uygun gerekecektir.  
   
- Aşağıdaki kod örneği, varsayılan yapılandırma dosyası gösterir. Bir Windows Communication Foundation (WCF) Web hizmeti, bu standart hizmet modeli yapılandırma şemasıyla uyumlu ve diğer WCF hizmetleri yapılandırma dosyaları aynı şekilde düzenlenebilir.  
+ Aşağıdaki kod örneği, varsayılan yapılandırma dosyası gösterir. Bir Windows Communication Foundation (WCF) Web hizmeti olduğundan, bu standart hizmet modeli yapılandırma şemasına uyan ve diğer WCF hizmetleri yapılandırma dosyaları aynı şekilde düzenlenebilir.  
   
- Tipik değişiklikler aşağıdakileri içerir:  
+ Tipik değişiklikleri aşağıdakileri içerir:  
   
--   Uç nokta adresi varsayılan ComponentName/ApplicationName/InterfaceName formundan daha kullanışlı bir forma değiştirme.  
+- Uç nokta adresini varsayılan ComponentName/ApplicationName/InterfaceName formdan daha kullanışlı bir forma değiştiriliyor.  
   
--   Varsayılan hizmet ad alanı değiştirme "http://tempuri.org/InterfaceID" daha ilgili bir form için form.  
+- Hizmet varsayılan ad alanını değiştirme `http://tempuri.org/InterfaceID` daha uygun bir form için form.  
   
--   Farklı bir aktarım bağlama kullanmak için uç nokta değiştirme.  
+- Farklı bir aktarım bağlama kullanılacak uç nokta değiştiriliyor.  
   
-     COM +-barındırılan durumda, adlandırılmış kanallar taşıma, varsayılan olarak kullanılır, ancak bunun yerine bir makine kapalı taşıması TCP gibi kullanılabilir.  
+     COM +-adlandırılmış taşıma barındırılan durumda, varsayılan olarak kullanılır, ancak bunun yerine bir makine kapalı aktarım TCP gibi kullanılabilir.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

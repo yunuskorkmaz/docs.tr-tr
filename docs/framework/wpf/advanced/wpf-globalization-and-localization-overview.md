@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: 54c5caaf3ade07f342e94ad0359f00c1418eace4
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: d8fef7965e3248d5361d866a441783bf4968460e
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45646460"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46478908"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF Genelleştirmesi ve Yerelleştirmesine Genel Bakış
 Yalnızca bir dil için ürününüzün kullanılabilirlik sınırladığınızda, müşterilerimizin dünyanın 6.5 milyar popülasyonun bir kesir olarak temel potansiyel müşteri sınırlayın. Uygun maliyetli yerelleştirme ürününüzden uygulamalarınız küresel bir hedef kitlesine ulaşmak için isterseniz daha fazla müşteriye ulaşmak için en iyi ve en ekonomik yolu biridir.  
@@ -54,7 +54,7 @@ Yalnızca bir dil için ürününüzün kullanılabilirlik sınırladığınızd
   
 -   Yerelleştirme öznitelikleri seçerek atlama yerine yerelleştirme denetlemek için kullanmak <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> öğelerde özellikleri. Bkz: [Yerelleştirme öznitelikleri ve Yorumlar](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md) daha fazla bilgi için.  
   
--   Kullanım **msbuild /t:updateuid** ve **/t:checkuid** ekleyin ve denetlemek için <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> özelliklerinde, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Kullanım <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> geliştirme ve yerelleştirme değişiklikleri izlemek için özellikler. <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> Özellikler yeni geliştirme değişiklikler yerelleştirmek yardımcı olur. El ile eklerseniz <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> özelliklerine bir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], genellikle sıkıcı ve daha az doğru görevdir.  
+-   Kullanım `msbuild -t:updateuid` ve `-t:checkuid` ekleyin ve denetlemek için <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> özelliklerinde, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Kullanım <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> geliştirme ve yerelleştirme değişiklikleri izlemek için özellikler. <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> Özellikler yeni geliştirme değişiklikler yerelleştirmek yardımcı olur. El ile eklerseniz <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> özelliklerine bir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], genellikle sıkıcı ve daha az doğru görevdir.  
   
     -   Düzen değiştirmek veya <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> yerelleştirme başladıktan sonra Özellikler.  
   
@@ -125,7 +125,7 @@ Yalnızca bir dil için ürününüzün kullanılabilirlik sınırladığınızd
   
  <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> özellikler için sırayla gereklidir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yerelleştirme [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] düzgün çalışması için.  
   
- Tarafından kullanılan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yerelleştirme [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] yerelleştirilmesi ve geliştirme değişiklikleri izlemek için [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> özellikleri etkinleştirmek, daha yeni bir sürümü birleştirmek [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] daha eski bir yerelleştirme ile [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Eklediğiniz bir <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> çalıştırarak özelliği **msbuild /t:updateuid RunDialog.csproj** komut kabuğu'nda. Ekleme önerilen yöntem budur <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> özellikleri el ile ekleme, genellikle zaman alan ve daha az doğru olduğu için. Bunu kontrol edebiliriz <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> özellikler doğru ayarlandığını çalıştırarak **msbuild /t:checkuid RunDialog.csproj**.  
+ Tarafından kullanılan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yerelleştirme [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] yerelleştirilmesi ve geliştirme değişiklikleri izlemek için [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> özellikleri etkinleştirmek, daha yeni bir sürümü birleştirmek [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] daha eski bir yerelleştirme ile [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Eklediğiniz bir <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> çalıştırarak özelliği `msbuild -t:updateuid RunDialog.csproj` komut kabuğu'nda. Ekleme önerilen yöntem budur <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> özellikleri el ile ekleme, genellikle zaman alan ve daha az doğru olduğu için. Bunu kontrol edebiliriz <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> özellikler doğru ayarlandığını çalıştırarak `msbuild -t:checkuid RunDialog.csproj`.
   
  [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Kullanarak yapılandırılmış <xref:System.Windows.Controls.Grid> otomatik düzen yararlanarak için faydalı bir denetim denetimi içinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. İletişim kutusunda üç satır ve beş sütunlar halinde bölme unutmayın. Satır ve sütun tanımları birinin değil, sabit bir boyutu vardır; Bu nedenle, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] her hücreye konumlandırılmış öğeler bir artış uyum sağlamak ve yerelleştirme sırasında boyutunu azaltır.  
   

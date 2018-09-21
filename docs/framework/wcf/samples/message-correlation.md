@@ -2,12 +2,12 @@
 title: İleti Bağıntısı
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-ms.openlocfilehash: e4cd5dfd6f03370a408dc6f8fb39c983db3d43df
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: fd97f12f536da85619f300d36d02a10306f32aa5
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45999435"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46493203"
 ---
 # <a name="message-correlation"></a>İleti Bağıntısı
 Bu örnek nasıl bir Message Queuing (MSMQ) uygulaması bir MSMQ iletisinin bir Windows Communication Foundation (WCF) hizmetine gönderebilir ve iletileri bir istek/yanıt senaryosunda gönderen ve alıcı uygulamalar arasında nasıl eşleştirilebilir gösterir. Bu örnek MsmqIntegrationBinding bağlama kullanır. Bu durumda, alan hizmet kuyruğa alınmış iletileri gözlemleyin olanak sağlamak için şirket içinde barındırılan bir konsol uygulaması hizmetidir. K  
@@ -16,7 +16,7 @@ Bu örnek nasıl bir Message Queuing (MSMQ) uygulaması bir MSMQ iletisinin bir 
   
  `IOrderProcessor` Hizmet sözleşmesini tanımlayan queuing ile kullanım için uygun olan bir tek yönlü hizmet işlemi. Bir MSMQ iletisinin bir eylem üst bilgisi olmadığından, işlem sözleşmeleri farklı MSMQ iletileri otomatik olarak eşlemeye mümkün değildir. Bu nedenle, olabilir yalnızca bir işlem anlaşması bu durumda. Tanımlamak istiyorsanız hizmette daha fazla işlem sözleşmeleri, uygulamanın hangi üstbilgisinde MSMQ (örneğin, etiket veya Correlationıd) ileti göndermek için hangi işlem anlaşması karar vermek için kullanılabilir bilgileri sağlamanız gerekir. Bu gösterilmiştir [özel Demux](../../../../docs/framework/wcf/samples/custom-demux.md).  
   
- MSMQ iletisinin, ayrıca hangi üstbilgileri da işlem anlaşması farklı parametrelerle eşlenir bilgi içermiyor. Bu nedenle, işlem anlaşması içinde yalnızca bir parametresi olabilir. Parametre türüdür <!--zz <xref:System.ServiceModel.MSMQIntegration.MsmqMessage%601>`MsmqMessage<T>`--> , `System.ServiceModel.MSMQIntegration.MsmqMessage` temel alınan MSMQ iletisi içerir. ' % S'tür "T" içinde `MsmqMessage<T>` sınıf MSMQ ileti gövdesine seri verileri temsil eder. Bu örnekte `PurchaseOrder` türü MSMQ ileti gövdesine seri.  
+ MSMQ iletisinin, ayrıca hangi üstbilgileri da işlem anlaşması farklı parametrelerle eşlenir bilgi içermiyor. Bu nedenle, işlem anlaşması içinde yalnızca bir parametresi olabilir. Parametre türüdür <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>, temel alınan MSMQ iletisi içerir. ' % S'tür "T" içinde `MsmqMessage<T>` sınıf MSMQ ileti gövdesine seri verileri temsil eder. Bu örnekte `PurchaseOrder` türü MSMQ ileti gövdesine seri.  
 
 ```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  

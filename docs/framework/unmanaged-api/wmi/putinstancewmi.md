@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 67abf017040b9e6bbe9b10e560c8d57c124ae84e
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45743311"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46488983"
 ---
 # <a name="putinstancewmi-function"></a>PutInstanceWmi işlevi
 Oluşturur veya mevcut bir sınıfın bir örneğini güncelleştirir. Örneği, WMI deposuna yazılır. 

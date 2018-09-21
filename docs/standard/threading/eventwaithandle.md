@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 11ee0b38-d663-4617-b793-35eb6c64e9fc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cdb11b283cc008e7f4bb060d1c2cb18706c824b7
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 86376919d7456167c58ada4145d213b39e050e33
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084724"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46489113"
 ---
 # <a name="eventwaithandle"></a>EventWaitHandle
 <xref:System.Threading.EventWaitHandle> Sinyal ve sinyalleri için bekleyen birbirleri ile iletişim kurmak için iş parçacığı sınıfı sağlar. Olay bekleme tanıtıcıları (yalnızca olaylar olarak da bilinir) bir veya daha fazla bekleyen iş parçacıklarının serbest bırakmak için işareti bekleme tanıtıcıları ' dir. Bu sinyal sonra bir olay bekleme tanıtıcısı el ile veya otomatik olarak sıfırlanır. <xref:System.Threading.EventWaitHandle> Sınıfı ya da bir yerel olay bekleme tanıtıcısı (yerel olay) temsil edebilir veya adlandırılmış sistem olay işleyici (veya sistem olayın, tüm işlemler için görünür olarak adlandırılır) bekleyin.  
   
 > [!NOTE]
->  Olay bekleme tanıtıcıları olaylar genellikle, .NET Framework, sözcük ile belirtilmek istenen anlamında değildir. Temsilciler ya da olay işleyicileri kullanılan vardır. "Olay" sözcük olduğundan, bunlar geleneksel için işletim sistemi olaylar olarak adlandırılmıştır ve bekleyen iş parçacığı bekleme tanıtıcısı sinyal eylemi belirttiğinden tanımlamak için bir olayın oluştuğunu kullanılır.  
+>  Olay bekleme tanıtıcıları .NET olmayan [olayları](../events/index.md). Temsilciler ya da olay işleyicileri kullanılan vardır. "Olay" sözcük olduğundan, bunlar geleneksel için işletim sistemi olaylar olarak adlandırılmıştır ve bekleyen iş parçacığı bekleme tanıtıcısı sinyal eylemi belirttiğinden tanımlamak için bir olayın oluştuğunu kullanılır.  
   
  Sistem tarafından korunan eşitleme nesneleri hem yerel hem de adlandırılmış olay bekleme tanıtıcıları kullanan <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle> sarmalayıcıları kaynakların serbest bırakıldığından emin olmak için. Kullanabileceğiniz <xref:System.Threading.WaitHandle.Dispose%2A> ne zaman, nesneyi kullanmayı bitirdikten hemen ücretsiz kaynaklar için yöntem.  
   

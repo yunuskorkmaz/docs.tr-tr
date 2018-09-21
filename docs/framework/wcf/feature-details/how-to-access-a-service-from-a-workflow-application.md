@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Bir İş Akışı Uygulamasından Bir Hizmete Erişme'
 ms.date: 03/30/2017
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
-ms.openlocfilehash: 5bc18b446d4bf818c874839a421793a997ddc543
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 460e5d0f1bbfdebf885176ed9fcc336b76731edd
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45595470"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46493321"
 ---
 # <a name="how-to-access-a-service-from-a-workflow-application"></a>Nasıl yapılır: Bir İş Akışı Uygulamasından Bir Hizmete Erişme
 Bu konu, bir iş akışı hizmeti, bir iş akışı konsol uygulamasından çağırmak açıklar. Tamamlanmasına bağlıdır [nasıl yapılır: Mesajlaşma etkinlikleriyle iş akışı hizmeti oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) konu. Bu konu, bir iş akışı uygulamasından bir iş akışı hizmeti çağırmak amacıyla açıklar ancak aynı yöntemleri herhangi bir Windows Communication Foundation (WCF) hizmeti bir iş akışı uygulamasından çağırmak için kullanılabilir.
@@ -42,13 +42,13 @@ Bu konu, bir iş akışı hizmeti, bir iş akışı konsol uygulamasından çağ
 
      ![Etkinlik araç kutusu echo](../../../../docs/framework/wcf/feature-details/media/echoactivity.JPG "EchoActivity")
 
-7.  Sürükle ve bırak bir <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` Tasarımcı yüzeyine etkinlik. Bunun altında olduğunu **akış denetimi** araç bölümü.
+7.  Sürükle ve bırak bir <xref:System.Activities.Statements.Sequence> Tasarımcı yüzeyine etkinlik. Bunun altında olduğunu **akış denetimi** araç bölümü.
 
-8.  İle <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` odağı etkinliği tıklatın **değişkenleri** adlı bir dize değişkeni ekleyin ve bağlayın `inString`. Değişkeni varsayılan değerini verin `"Hello, world"` adlı bir dize değişkeni yanı sıra `outString` Aşağıdaki diyagramda gösterildiği gibi.
+8.  İle <xref:System.Activities.Statements.Sequence> odağı etkinliği tıklatın **değişkenleri** adlı bir dize değişkeni ekleyin ve bağlayın `inString`. Değişkeni varsayılan değerini verin `"Hello, world"` adlı bir dize değişkeni yanı sıra `outString` Aşağıdaki diyagramda gösterildiği gibi.
 
      ![Bir değişkeni ekleme](../../../../docs/framework/wcf/feature-details/media/instringvar.JPG "inStringVar")
 
-9. Sürükle ve bırak bir **Yankı** etkinliğini <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence`. Özellikler penceresinde bağlama `inMsg` bağımsız değişkeni `inString` değişkeni ve `outMsg` bağımsız değişkeni `outString` aşağıdaki çizimde gösterildiği gibi bir değişken. Bu değeri geçirir `inString` değişken işleme ve dönüş değeri alır ve yerleştirir `outString` değişkeni.
+9. Sürükle ve bırak bir **Yankı** etkinliğini <xref:System.Activities.Statements.Sequence>. Özellikler penceresinde bağlama `inMsg` bağımsız değişkeni `inString` değişkeni ve `outMsg` bağımsız değişkeni `outString` aşağıdaki çizimde gösterildiği gibi bir değişken. Bu değeri geçirir `inString` değişken işleme ve dönüş değeri alır ve yerleştirir `outString` değişkeni.
 
      ![Bağımsız değişkenleri için bağlama](../../../../docs/framework/wcf/feature-details/media/argumentbind.JPG "ArgumentBind")
 

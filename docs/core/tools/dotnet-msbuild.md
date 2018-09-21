@@ -1,15 +1,15 @@
 ---
-title: DotNet msbuild komut - .NET Core CLI
-description: Dotnet msbuild komut MSBuild komut satırında erişim sağlar.
+title: DotNet msbuild command - .NET Core CLI
+description: Dotnet msbuild komut MSBuild komut satırını erişim sağlar.
 author: mairaw
 ms.author: mairaw
 ms.date: 05/25/2018
-ms.openlocfilehash: 58aac2a5314758b8711c0b014154022168fb671c
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
-ms.translationtype: MT
+ms.openlocfilehash: 76165590478b0e76d19d546c87e012da4716b6db
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696851"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46471466"
 ---
 # <a name="dotnet-msbuild"></a>DotNet msbuild
 
@@ -17,32 +17,32 @@ ms.locfileid: "34696851"
 
 ## <a name="name"></a>Ad
 
-`dotnet msbuild` -Bir proje ve tüm bağımlılıkları oluşturur.
+`dotnet msbuild` -Bir proje ve tüm bağımlılıklarını oluşturur.
 
-## <a name="synopsis"></a>Özet
+## <a name="synopsis"></a>Özeti
 
 `dotnet msbuild <msbuild_arguments> [-h]`
 
 ## <a name="description"></a>Açıklama
 
-`dotnet msbuild` Komutu tam olarak işlevsel MSBuild erişim sağlar.
+`dotnet msbuild` Komutu tam olarak işlevsel bir MSBuild erişim sağlar.
 
-Komut varolan MSBuild komut satırı istemcisi tam aynı özelliklerine sahiptir. Tümü aynı seçeneklerdir. Kullanılabilir seçenekler hakkında daha fazla bilgi için bkz: [MSBuild komut satırı başvurusu](/visualstudio/msbuild/msbuild-command-line-reference).
+Komutu, var olan MSBuild komut satırı istemcisi tam aynı özellikleri vardır. Seçenekler tüm aynıdır. Kullanılabilir seçenekler hakkında daha fazla bilgi için bkz. [MSBuild komut satırı başvurusu](/visualstudio/msbuild/msbuild-command-line-reference).
 
 ## <a name="examples"></a>Örnekler
 
-Proje ve bağımlılıklarını oluşturun:
+Bir proje ve bağımlılıkları derleme:
 
 `dotnet msbuild`
 
-Proje ve bağımlılıklarını yayın Yapılandırması'nı kullanarak oluşturun:
+Bir proje ve bağımlılıkları sürüm yapılandırmasını oluşturun:
 
-`dotnet msbuild /p:Configuration=Release`
+`dotnet msbuild -p:Configuration=Release`
 
-Yayımlama hedefi çalıştırın ve için Yayımlama `osx.10.11-x64` RID:
+Yayımlama hedefi çalıştırın ve yayımlama için `osx.10.11-x64` RID:
 
-`dotnet msbuild /t:Publish /p:RuntimeIdentifiers=osx.10.11-x64`
+`dotnet msbuild -t:Publish -p:RuntimeIdentifiers=osx.10.11-x64`
 
-SDK tarafından eklenen tüm hedefleri olan tüm proje bakın:
+SDK tarafından eklenen tüm hedefleri ile tüm proje bakın:
 
-`dotnet msbuild /pp`
+`dotnet msbuild -pp`

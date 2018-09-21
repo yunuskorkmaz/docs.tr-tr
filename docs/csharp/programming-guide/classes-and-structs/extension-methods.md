@@ -6,12 +6,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: 80ecca30b534591ffb2633ade961425f694403f7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 7ebd04665d91f599edcb4a5c07680216dfb8925a
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192205"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46471284"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Uzantı Metotları (C# Programlama Kılavuzu)
 Uzantı yöntemleri, yeni türetilmiş bir tür oluşturmadan, yeniden derlemeden ya da özgün türü değiştirmeden yöntemler "eklemenizi" sağlar. Uzantı yöntemleri özel bir statik yöntem türüdür, ancak bunlar genişletilmiş türdeki örnek yöntemler ise çağrılır. C#, F # ve Visual Basic'te yazılmış istemci kodu için bir genişletme yöntemi ve gerçekte bir tür içinde tanımlanan yöntemleri çağırma arasında görünür bir fark yoktur.  
@@ -52,9 +52,6 @@ using System.Linq;
 ```  
   
  (System.Core.dll öğesine başvuru eklemeniz gerekebilir.) Standart sorgu işleçlerinizin artık IntelliSense'de çoğu kullanılabilen ek yöntemler olarak gösterildiğini fark edeceksiniz <xref:System.Collections.Generic.IEnumerable%601> türleri.  
-  
-> [!NOTE]
->  Standart sorgu işleçleri için ıntellisense'te görünmez olsa da <xref:System.String>, hala kullanılabilir.  
   
 ## <a name="binding-extension-methods-at-compile-time"></a>Derleme Zamanında Uzantı Yöntemleri Bağlama  
  Bir sınıfı veya arabirimi genişletmek için genişletme yöntemini kullanabilir, ancak bunları geçersiz kılamazsınız. Arabirim veya sınıf yöntemiyle aynı ada ve imzaya sahip genişletme yöntemi asla çağrılmaz. Derleme sırasında genişletme yöntemleri, her zaman türün kendisinde tanımlı örnek yöntemlerden daha düşük önceliğe sahiptir. Diğer bir deyişle, bir türü adlı yöntemi `Process(int i)`ve aynı imzaya sahip genişletme yöntemi olması, derleyici her zaman için örnek yöntemine bağlanır. Derleyici bir yöntem çağırmayla karşılaştığında, türün örnek yöntemleri önce bir eşleşme arar. Eşleşme bulunmazsa, tür için tanımlanan uzantı yöntemleri aranır ve ilk bulunan uzantı yöntemine bağlanılır. Aşağıdaki örnek, derleyicinin hangi genişletme yöntemine veya örnek yöntemine bağlanılacağını nasıl belirlediğini gösterir.  
