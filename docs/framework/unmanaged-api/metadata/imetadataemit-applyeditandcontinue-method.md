@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: faa9bc412e67e0e49ee969bd8b246a424fe628a0
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
-ms.translationtype: MT
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46287283"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46472119"
 ---
-# <a name="imetadataemitapplyeditandcontinue-method"></a><span data-ttu-id="7180a-102">IMetaDataEmit::ApplyEditAndContinue Yöntemi</span><span class="sxs-lookup"><span data-stu-id="7180a-102">IMetaDataEmit::ApplyEditAndContinue Method</span></span>
-<span data-ttu-id="7180a-103">Belirtilen meta verilerde yapılan değişiklikleri geçerli derleme kapsamı güncelleştirir.</span><span class="sxs-lookup"><span data-stu-id="7180a-103">Updates the current assembly scope with the changes made in the specified metadata.</span></span>  
+# <a name="imetadataemitapplyeditandcontinue-method"></a><span data-ttu-id="c50ad-102">IMetaDataEmit::ApplyEditAndContinue Yöntemi</span><span class="sxs-lookup"><span data-stu-id="c50ad-102">IMetaDataEmit::ApplyEditAndContinue Method</span></span>
+<span data-ttu-id="c50ad-103">Belirtilen meta verilerde yapılan değişiklikleri geçerli derleme kapsamı güncelleştirir.</span><span class="sxs-lookup"><span data-stu-id="c50ad-103">Updates the current assembly scope with the changes made in the specified metadata.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7180a-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="7180a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c50ad-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c50ad-104">Syntax</span></span>  
   
 ```  
 HRESULT ApplyEditAndContinue (   
@@ -35,21 +35,21 @@ HRESULT ApplyEditAndContinue (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="7180a-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="7180a-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="c50ad-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="c50ad-105">Parameters</span></span>  
  `pImport`  
- <span data-ttu-id="7180a-106">\[içinde\] işaretçi bir [IUnknown](/cpp/atl/iunknown) taşınabilir yürütülebilir (PE) dosyasından delta meta verileri temsil eden nesne.</span><span class="sxs-lookup"><span data-stu-id="7180a-106">\[in\] Pointer to an [IUnknown](/cpp/atl/iunknown) object that represents the delta metadata from the portable executable (PE) file.</span></span>
+ <span data-ttu-id="c50ad-106">\[içinde\] işaretçi bir [IUnknown](/cpp/atl/iunknown) taşınabilir yürütülebilir (PE) dosyasından delta meta verileri temsil eden nesne.</span><span class="sxs-lookup"><span data-stu-id="c50ad-106">\[in\] Pointer to an [IUnknown](/cpp/atl/iunknown) object that represents the delta metadata from the portable executable (PE) file.</span></span>
   
- <span data-ttu-id="7180a-107">Delta meta veriler modülün gerçek meta verilerinin kopyaya yapılan değişiklikler içeren bloğudur.</span><span class="sxs-lookup"><span data-stu-id="7180a-107">The delta metadata is the block of metadata that includes the changes that were made to the copy of the module's actual metadata.</span></span>  
+ <span data-ttu-id="c50ad-107">Delta meta veriler modülün gerçek meta verilerinin kopyaya yapılan değişiklikler içeren bloğudur.</span><span class="sxs-lookup"><span data-stu-id="c50ad-107">The delta metadata is the block of metadata that includes the changes that were made to the copy of the module's actual metadata.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7180a-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="7180a-108">Requirements</span></span>  
- <span data-ttu-id="7180a-109">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7180a-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c50ad-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c50ad-108">Requirements</span></span>  
+ <span data-ttu-id="c50ad-109">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c50ad-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7180a-110">**Başlık:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="7180a-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="c50ad-110">**Başlık:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="c50ad-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="7180a-111">**Kitaplığı:** MSCorEE.dll kaynak olarak kullanılan</span><span class="sxs-lookup"><span data-stu-id="7180a-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="c50ad-111">**Kitaplığı:** MSCorEE.dll kaynak olarak kullanılan</span><span class="sxs-lookup"><span data-stu-id="c50ad-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="7180a-112">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7180a-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="c50ad-112">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c50ad-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7180a-113">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="7180a-113">See Also</span></span>  
- [<span data-ttu-id="7180a-114">IMetaDataEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="7180a-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [<span data-ttu-id="7180a-115">IMetaDataEmit2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="7180a-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="c50ad-113">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="c50ad-113">See Also</span></span>  
+ [<span data-ttu-id="c50ad-114">IMetaDataEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="c50ad-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
+ [<span data-ttu-id="c50ad-115">IMetaDataEmit2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="c50ad-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -8,26 +8,26 @@ helpviewer_keywords:
 - '| operator [C#]'
 - binary operator (|) [C#]
 ms.assetid: 82d6bb78-54c8-40bf-b679-531180ddaf70
-ms.openlocfilehash: d95fe29aa7ffab9938e8edc57999445268fe41a8
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
-ms.translationtype: MT
+ms.openlocfilehash: 999df9db0819a5f33e21a29b892de0a8854dd5d8
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085711"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46470333"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="9a4e1-102">| İşleci (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="9a4e1-102">| Operator (C# Reference)</span></span>
-<span data-ttu-id="9a4e1-103">İkili `|` işleçleri tamsayı türleri için önceden tanımlanmış ve `bool`.</span><span class="sxs-lookup"><span data-stu-id="9a4e1-103">Binary `|` operators are predefined for the integral types and `bool`.</span></span> <span data-ttu-id="9a4e1-104">İntegral türleri için `|` kendi işlenenden bit seviyesinde veya hesaplar.</span><span class="sxs-lookup"><span data-stu-id="9a4e1-104">For integral types, `|` computes the bitwise OR of its operands.</span></span> <span data-ttu-id="9a4e1-105">İçin `bool` işlenenini `|` işlenenleri; mantıksal OR hesaplar diğer bir deyişle, sonucudur `false` , her iki işlenen ve yalnızca, `false`.</span><span class="sxs-lookup"><span data-stu-id="9a4e1-105">For `bool` operands, `|` computes the logical OR of its operands; that is, the result is `false` if and only if both its operands are `false`.</span></span>  
+# <a name="-operator-c-reference"></a><span data-ttu-id="ab35f-102">| İşleci (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="ab35f-102">| Operator (C# Reference)</span></span>
+<span data-ttu-id="ab35f-103">İkili `|` işleçleri tamsayı türleri için önceden tanımlanmış ve `bool`.</span><span class="sxs-lookup"><span data-stu-id="ab35f-103">Binary `|` operators are predefined for the integral types and `bool`.</span></span> <span data-ttu-id="ab35f-104">İntegral türleri için `|` kendi işlenenden bit seviyesinde veya hesaplar.</span><span class="sxs-lookup"><span data-stu-id="ab35f-104">For integral types, `|` computes the bitwise OR of its operands.</span></span> <span data-ttu-id="ab35f-105">İçin `bool` işlenenini `|` işlenenleri; mantıksal OR hesaplar diğer bir deyişle, sonucudur `false` , her iki işlenen ve yalnızca, `false`.</span><span class="sxs-lookup"><span data-stu-id="ab35f-105">For `bool` operands, `|` computes the logical OR of its operands; that is, the result is `false` if and only if both its operands are `false`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="9a4e1-106">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="9a4e1-106">Remarks</span></span>  
- <span data-ttu-id="9a4e1-107">İkili `|` işleci, birinci bağımsız olarak her iki işlenen değerlendirilir değerini, [koşullu-OR işleci] aksine (koşullu veya operator.md) `||`.</span><span class="sxs-lookup"><span data-stu-id="9a4e1-107">The binary `|` operator evaluates both operands regardless of the first one's value, in contrast to the [conditional-OR operator]     (conditional-or-operator.md) `||`.</span></span>
+## <a name="remarks"></a><span data-ttu-id="ab35f-106">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="ab35f-106">Remarks</span></span>  
+ <span data-ttu-id="ab35f-107">İkili `|` işleci, birinci bağımsız olarak her iki işlenen değerlendirilir değerini, buna için [koşullu-OR işleci](conditional-or-operator.md) `||`.</span><span class="sxs-lookup"><span data-stu-id="ab35f-107">The binary `|` operator evaluates both operands regardless of the first one's value, in contrast to the [conditional-OR operator](conditional-or-operator.md) `||`.</span></span>
  
- <span data-ttu-id="9a4e1-108">Kullanıcı tanımlı türler aşırı yükleme `|` işleci (bkz [işleci](../../../csharp/language-reference/keywords/operator.md)).</span><span class="sxs-lookup"><span data-stu-id="9a4e1-108">User-defined types can overload the `|` operator (see [operator](../../../csharp/language-reference/keywords/operator.md)).</span></span>  
+ <span data-ttu-id="ab35f-108">Kullanıcı tanımlı türler aşırı yükleme `|` işleci (bkz [işleci](../../../csharp/language-reference/keywords/operator.md)).</span><span class="sxs-lookup"><span data-stu-id="ab35f-108">User-defined types can overload the `|` operator (see [operator](../../../csharp/language-reference/keywords/operator.md)).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9a4e1-109">Örnek</span><span class="sxs-lookup"><span data-stu-id="9a4e1-109">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="ab35f-109">Örnek</span><span class="sxs-lookup"><span data-stu-id="ab35f-109">Example</span></span>  
  [!code-csharp[csRefOperators#31](../../../csharp/language-reference/operators/codesnippet/CSharp/or-operator_1.cs)]  
   
-## <a name="see-also"></a><span data-ttu-id="9a4e1-110">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="9a4e1-110">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ab35f-110">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="ab35f-110">See Also</span></span>
 
-- [<span data-ttu-id="9a4e1-111">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="9a4e1-111">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="9a4e1-112">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="9a4e1-112">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="9a4e1-113">C# İşleçleri</span><span class="sxs-lookup"><span data-stu-id="9a4e1-113">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
+- [<span data-ttu-id="ab35f-111">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="ab35f-111">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="ab35f-112">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="ab35f-112">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="ab35f-113">C# İşleçleri</span><span class="sxs-lookup"><span data-stu-id="ab35f-113">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)

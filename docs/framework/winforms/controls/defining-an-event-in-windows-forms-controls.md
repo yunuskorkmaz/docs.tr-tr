@@ -9,16 +9,16 @@ helpviewer_keywords:
 - custom controls [Windows Forms], events using code
 ms.assetid: d89f1096-8061-42e2-a855-a1f053f1940a
 ms.openlocfilehash: 60ae01ca63f895bfb1c7aabbe3337596cd13933d
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46320246"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46489659"
 ---
-# <a name="defining-an-event-in-windows-forms-controls"></a><span data-ttu-id="e7ae3-102">Windows Forms Denetimlerinde Olay Tanımlama</span><span class="sxs-lookup"><span data-stu-id="e7ae3-102">Defining an Event in Windows Forms Controls</span></span>
-<span data-ttu-id="e7ae3-103">Özel olaylar tanımlama hakkında daha fazla ayrıntı için bkz [olayları](../../../../docs/standard/events/index.md).</span><span class="sxs-lookup"><span data-stu-id="e7ae3-103">For details about defining custom events, see [Events](../../../../docs/standard/events/index.md).</span></span> <span data-ttu-id="e7ae3-104">İlişkili tüm veriler yok. bir olay tanımlarsanız, temel tür, olay verileri için kullanın. <xref:System.EventArgs>ve <xref:System.EventHandler> olay temsilci olarak.</span><span class="sxs-lookup"><span data-stu-id="e7ae3-104">If you define an event that does not have any associated data, use the base type for event data, <xref:System.EventArgs>, and use <xref:System.EventHandler> as the event delegate.</span></span> <span data-ttu-id="e7ae3-105">Yapmak için kalan tek şey bir olay üyesi ve korumalı tanımlamak için `On` *EventName* olayını yöntemi.</span><span class="sxs-lookup"><span data-stu-id="e7ae3-105">All that remains to do is to define an event member and a protected `On`*EventName* method that raises the event.</span></span>  
+# <a name="defining-an-event-in-windows-forms-controls"></a><span data-ttu-id="6ba85-102">Windows Forms Denetimlerinde Olay Tanımlama</span><span class="sxs-lookup"><span data-stu-id="6ba85-102">Defining an Event in Windows Forms Controls</span></span>
+<span data-ttu-id="6ba85-103">Özel olaylar tanımlama hakkında daha fazla ayrıntı için bkz [olayları](../../../../docs/standard/events/index.md).</span><span class="sxs-lookup"><span data-stu-id="6ba85-103">For details about defining custom events, see [Events](../../../../docs/standard/events/index.md).</span></span> <span data-ttu-id="6ba85-104">İlişkili tüm veriler yok. bir olay tanımlarsanız, temel tür, olay verileri için kullanın. <xref:System.EventArgs>ve <xref:System.EventHandler> olay temsilci olarak.</span><span class="sxs-lookup"><span data-stu-id="6ba85-104">If you define an event that does not have any associated data, use the base type for event data, <xref:System.EventArgs>, and use <xref:System.EventHandler> as the event delegate.</span></span> <span data-ttu-id="6ba85-105">Yapmak için kalan tek şey bir olay üyesi ve korumalı tanımlamak için `On` *EventName* olayını yöntemi.</span><span class="sxs-lookup"><span data-stu-id="6ba85-105">All that remains to do is to define an event member and a protected `On`*EventName* method that raises the event.</span></span>  
   
- <span data-ttu-id="e7ae3-106">Aşağıdaki kod parçası gösterir nasıl `FlashTrackBar` özel denetim tanımlayan özel bir olay `ValueChanged`.</span><span class="sxs-lookup"><span data-stu-id="e7ae3-106">The following code fragment shows how the `FlashTrackBar` custom control defines a custom event, `ValueChanged`.</span></span> <span data-ttu-id="e7ae3-107">İçin tam kod için `FlashTrackBar` örnek için bkz: [nasıl yapılır: bir Windows Forms denetimi olduğunu gösteren oluşturma ilerleme durumu](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md).</span><span class="sxs-lookup"><span data-stu-id="e7ae3-107">For the complete code for the `FlashTrackBar` sample, see the [How to: Create a Windows Forms Control That Shows Progress](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md).</span></span>  
+ <span data-ttu-id="6ba85-106">Aşağıdaki kod parçası gösterir nasıl `FlashTrackBar` özel denetim tanımlayan özel bir olay `ValueChanged`.</span><span class="sxs-lookup"><span data-stu-id="6ba85-106">The following code fragment shows how the `FlashTrackBar` custom control defines a custom event, `ValueChanged`.</span></span> <span data-ttu-id="6ba85-107">İçin tam kod için `FlashTrackBar` örnek için bkz: [nasıl yapılır: bir Windows Forms denetimi olduğunu gösteren oluşturma ilerleme durumu](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md).</span><span class="sxs-lookup"><span data-stu-id="6ba85-107">For the complete code for the `FlashTrackBar` sample, see the [How to: Create a Windows Forms Control That Shows Progress](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md).</span></span>  
   
 ```vb  
 Option Explicit  
@@ -76,7 +76,7 @@ public class FlashTrackBar : Control {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="e7ae3-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e7ae3-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6ba85-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6ba85-108">See also</span></span>
 
-- [<span data-ttu-id="e7ae3-109">Windows Forms Denetimlerindeki Olaylar</span><span class="sxs-lookup"><span data-stu-id="e7ae3-109">Events in Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)
-- [<span data-ttu-id="e7ae3-110">Olaylar</span><span class="sxs-lookup"><span data-stu-id="e7ae3-110">Events</span></span>](../../../../docs/standard/events/index.md)
+- [<span data-ttu-id="6ba85-109">Windows Forms Denetimlerindeki Olaylar</span><span class="sxs-lookup"><span data-stu-id="6ba85-109">Events in Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)
+- [<span data-ttu-id="6ba85-110">Olaylar</span><span class="sxs-lookup"><span data-stu-id="6ba85-110">Events</span></span>](../../../../docs/standard/events/index.md)
