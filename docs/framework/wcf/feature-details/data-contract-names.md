@@ -7,75 +7,78 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], naming
 ms.assetid: 31f87e6c-247b-48f5-8e94-b9e1e33d8d09
-ms.openlocfilehash: 18ba9aa1f7af3733acd60924d0aa24ceb1b5126c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: cd878452f3ec99627507334a26873a004e5b5314
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494276"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46489204"
 ---
 # <a name="data-contract-names"></a>Veri Sözleşmesi Adları
-Bazen bir istemci ve hizmet aynı türlerini paylaşmayın. Veri sözleşmeleri iki tarafta da eşdeğer sürece bunlar hala veri birbirlerine geçirebilirsiniz. [Veri sözleşmesi eşitliği](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md) veri sözleşmesi ve veri üye adları, temel alır ve bu nedenle türleri ve üyeleri bu adlarıyla eşlemek için bir mekanizma sağlanır. Bu konu, Windows Communication Foundation (WCF) Altyapısı'nın varsayılan davranışını yanı sıra veri sözleşmeleri adları oluşturulurken adlandırma kurallarını açıklar.  
-  
-## <a name="basic-rules"></a>Temel kurallar  
- Sözleşmeler dahil adlandırma veri ilgili temel kurallarını:  
-  
--   Tam veri sözleşme adına, bir ad ve bir ad oluşur.  
-  
--   Veri üyeleri yalnızca adlarını, ancak ad alanı vardır.  
-  
--   Veri sözleşmeleri işlerken WCF altyapı hem ad hem de veri sözleşmeleri ve veri üyeleri adları küçük harf duyarlıdır.  
-  
-## <a name="data-contract-namespaces"></a>Veri sözleşmesi ad alanları  
- Veri sözleşmesi ad formun Tekdüzen Kaynak Tanımlayıcısı (URI) alır. URI mutlak veya göreli olabilir. Varsayılan olarak, belirli bir tür için veri sözleşmeleri ortak dil çalışma zamanı (CLR) ad Türü alanından gelen bir ad alanı atanır.  
-  
- Varsayılan olarak, tüm belirtilen CLR ad alanı (biçimde *Clr.Namespace*) ad alanına eşlenir "http://schemas.datacontract.org/2004/07/Clr.Namespace". Bu varsayılanı geçersiz kılmak için uygulama <xref:System.Runtime.Serialization.ContractNamespaceAttribute> tüm modüle ya da derleme özniteliği. Alternatif olarak, her tür için veri sözleşmesi ad denetlemek için ayarlanmış <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> özelliği <xref:System.Runtime.Serialization.DataContractAttribute>.  
-  
+
+Bazen bir hizmet ve bir istemci aynı türlerini paylaşmayın. Veri sözleşmeleri her iki kenarı da eşdeğer olduğu sürece kullanıcılar hala verileri birbirine geçirebilirsiniz. [Veri sözleşmesi eşitliği](data-contract-equivalence.md) veri anlaşması ve veri üye adları, temel alır ve bu nedenle türler ve üyeler bu adlarla eşlemek için bir mekanizma yoktur. Bu konu, Windows Communication Foundation (WCF) Altyapısı'nın varsayılan davranışını yanı sıra veri sözleşmeleri adları oluştururken adlandırma kurallarını açıklar.
+
+## <a name="basic-rules"></a>Temel kurallar
+Temel kurallar sözleşmeler dahil adlandırma veri ile ilgili:
+
+- Bir tam veri anlaşması adına bir ad alanı ve bir ad oluşur.
+
+- Veri üyeleri yalnızca adları, ancak herhangi bir ad alanı var.
+
+- Veri sözleşmeleri işlerken, WCF altyapısı hem ad hem de veri sözleşmeleri ve veri üyelerinin adları duyarlıdır.
+
+## <a name="data-contract-namespaces"></a>Veri anlaşması ad alanları
+Bir veri anlaşması ad alanı Tekdüzen Kaynak Tanımlayıcısı (URI) alır. URI, mutlak veya göreli olabilir. Varsayılan olarak, belirli bir tür için veri sözleşmeleri ortak dil çalışma zamanı (CLR) ad Türü alanından gelen ad alanı atanır.
+
+Varsayılan olarak, herhangi belirli bir CLR ad alanı (biçimde *Clr.Namespace*) ad alanına eşlenen `http://schemas.datacontract.org/2004/07/Clr.Namespace`. Bu varsayılanı geçersiz kılmak için geçerli <xref:System.Runtime.Serialization.ContractNamespaceAttribute> özniteliği olan tüm modül veya bütünleştirilmiş kod. Alternatif olarak, her türü için veri anlaşması ad denetlemek için ayarlanmış <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> özelliği <xref:System.Runtime.Serialization.DataContractAttribute>.
+
 > [!NOTE]
->  "http://schemas.microsoft.com/2003/10/Serialization"Ad alanı ayrılmıştır ve bir veri sözleşmesi ad kullanılamaz.  
-  
+> `http://schemas.microsoft.com/2003/10/Serialization` Ad ayrılmış ve bir veri anlaşması ad kullanılamaz.
+
 > [!NOTE]
->  Varsayılan ad alanını içeren veri sözleşme türleri geçersiz kılamaz `delegate` bildirimleri.  
-  
-## <a name="data-contract-names"></a>Veri Sözleşmesi Adları  
- Belirli bir türde bir veri sözleşmesi varsayılan adını türü adıdır. Varsayılan yerine geçecek şekilde ayarlanmış <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> özelliği <xref:System.Runtime.Serialization.DataContractAttribute> için bir diğer ad. Genel türler için özel kurallar "Veri sözleşmesi adları için genel türleri" Bu konunun ilerleyen bölümlerinde açıklanmıştır.  
-  
-## <a name="data-member-names"></a>Veri üye adları  
- Verilen alan veya özellik için bir veri üyesi varsayılan adını, alan veya özellik adıdır. Varsayılan yerine geçecek şekilde ayarlanmış <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A> özelliği <xref:System.Runtime.Serialization.DataMemberAttribute> alternatif bir değer.  
-  
-### <a name="examples"></a>Örnekler  
- Aşağıdaki örnek veri sözleşmeleri ve veri üyeleri davranışını adlandırma varsayılan ayarlarını geçersiz kılabilir nasıl gösterir.  
-  
- [!code-csharp[C_DataContractNames#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractnames/cs/source.cs#1)]
- [!code-vb[C_DataContractNames#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#1)]  
-  
-## <a name="data-contract-names-for-generic-types"></a>Genel türler için veri sözleşmesi adları  
- Genel türler için veri sözleşmesi adları belirlemek için özel kurallar mevcut. Bu kurallar, aynı genel türde iki kapalı genel türler arasında veri sözleşmesi ad çakışmaları korunmanıza yardımcı olun.  
-  
- Varsayılan olarak, veri sözleşme adı için genel bir tür "," dizesi tarafından izlenen türünün adı ve ardından genel parametreler veri sözleşmesi adları ve ardından bir *karma* veri sözleşmesi ad alanlarını kullanılarak hesaplanır Genel parametreler. "Veri parçası olarak tanıtan bir parmak izi" davranır matematiksel bir işlevin sonucu karmasıdır. Genel Parametreler ilkel türler tümü, karma atlanır.  
-  
- Örneğin, aşağıdaki örnekte türleri bölümüne bakın.  
-  
- [!code-csharp[C_DataContractNames#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractnames/cs/source.cs#2)]
- [!code-vb[C_DataContractNames#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#2)]  
-  
- Bu örnekte, türü `Drawing<Square,RegularRedBrush>` veri sözleşme adına "DrawingOfSquareRedBrush5HWGAU6h", "5HWGAU6h", "urn: şekiller" ve "urn: varsayılan" ad karmasını olduğu sahiptir. Türü `Drawing<Square,SpecialRedBrush>` veri sözleşme adına "DrawingOfSquareRedBrushjpB5LgQ_S", "jpB5LgQ_S", "urn: şekiller" ve "urn: özel" ad alanları karmasını olduğu sahiptir. Karma kullanılmazsa, iki ad aynıdır ve bu nedenle bir ad çakışması ortaya çıkar unutmayın.  
-  
-## <a name="customizing-data-contract-names-for-generic-types"></a>Genel türler için özelleştirme veri sözleşmesi adları  
- Bazı durumlarda, daha önce açıklandığı gibi genel türleri için oluşturulan veri sözleşmesi adları kabul edilemez. Örneğin, ad çakışmaları çalışmaz ve karma kaldırmak isteyebilirsiniz önceden biliyorsunuz. Bu durumda, kullanabileceğiniz <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> özelliği `DataContractAttribute` öznitelik adları oluşturmak için farklı bir yol belirtin. Süslü ayraçlar içinde numaralarını kullanabileceğiniz `Name` veri sözleşmesi adları genel parametrelerinin başvurmak için özellik. (0 ilk parametresine başvuruyor, ikinci ve benzeri için 1 gösterir.) Karma başvurmak için bir sayı (#) işareti süslü ayraçlar içinde kullanabilirsiniz. Her bu başvuruları birden çok kez veya hiç kullanabilirsiniz.  
-  
- Örneğin, genel önceki `Drawing` türü bildirilmiş aşağıdaki örnekte gösterildiği gibi.  
-  
- [!code-csharp[c_DataContractNames#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractnames/cs/source.cs#3)]
- [!code-vb[c_DataContractNames#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#3)]  
-  
- Bu durumda, türü `Drawing<Square,RegularRedBrush>` "Drawing_using_RedBrush_brush_and_Square_shape" veri sözleşme adına sahip. Olduğundan unutmayın bir "{#}" içinde <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> özelliği, karma adının bir kısmını değil ve bu nedenle türü adlandırma için açıktır çakışmaları; Örneğin, türü `Drawing<Square,SpecialRedBrush>` tam olarak aynı veri sözleşme adına sahip.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Runtime.Serialization.DataContractAttribute>  
- <xref:System.Runtime.Serialization.DataMemberAttribute>  
- <xref:System.Runtime.Serialization.ContractNamespaceAttribute>  
- [Veri Anlaşmalarını Kullanma](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [Veri Anlaşması Eşitliği](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
- [Veri Anlaşması Adları](../../../../docs/framework/wcf/feature-details/data-contract-names.md)  
- [Veri Anlaşması Sürümü Oluşturma](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
+> Varsayılan ad alanı içeren bir veri anlaşması türlerinde geçersiz kılınamaz `delegate` bildirimleri.
+
+## <a name="data-contract-names"></a>Veri Sözleşmesi Adları
+Verilen tür için bir veri anlaşması varsayılan adını, bu tür adıdır. Varsayılan geçersiz kılmak için ayarlanmış <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> özelliği <xref:System.Runtime.Serialization.DataContractAttribute> için bir diğer ad. Genel türler için özel kurallar "Veri sözleşmesi adları için genel türleri", bu konunun ilerleyen bölümlerinde açıklanmıştır.
+
+## <a name="data-member-names"></a>Veri üye adları
+Belirtilen alan veya özellik için bir veri üyesi varsayılan adını, alan veya özellik adıdır. Varsayılan geçersiz kılmak için ayarlanmış <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A> özelliği <xref:System.Runtime.Serialization.DataMemberAttribute> için alternatif bir değer.
+
+### <a name="examples"></a>Örnekler
+Aşağıdaki örnek, varsayılan adlandırma veri sözleşmeleri ve veri üyeleri davranışını nasıl geçersiz gösterir.
+
+[!code-csharp[C_DataContractNames#1](~/samples/snippets/csharp/VS_Snippets_CFX/c_datacontractnames/cs/source.cs#1)]
+[!code-vb[C_DataContractNames#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#1)]
+
+## <a name="data-contract-names-for-generic-types"></a>Genel türler için veri sözleşmesi adları
+Özel kurallar, genel türler için veri sözleşmesi adları belirlemek için mevcut. Bu kurallar, aynı genel tür iki kapalı genel türler arasında veri anlaşması ad çakışmalarını önlemek.
+
+Varsayılan olarak, veri anlaşması adında ardından genel parametre veri sözleşmesi adları için genel bir tür "," dize tarafından izlenen bir türün adını ardından bir *karma* veri anlaşması ad alanlarını kullanarak hesaplanan Genel parametreler. "Bir veri parçasını benzersiz olarak tanımlayan bir parmak izi" görevi gören bir matematiksel işlev sonucu karmasıdır. Genel Parametreler temel türlerin tümü, karma atlanır.
+
+Örneğin, aşağıdaki örnekte türleri bakın.
+
+[!code-csharp[C_DataContractNames#2](~/samples/snippets/csharp/VS_Snippets_CFX/c_datacontractnames/cs/source.cs#2)]
+[!code-vb[C_DataContractNames#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#2)]
+
+Bu örnekte, türü `Drawing<Square,RegularRedBrush>` "5HWGAU6h", "urn: şekiller" ve "urn: varsayılan" ad alanları karması olduğu "DrawingOfSquareRedBrush5HWGAU6h" veri anlaşması adına sahip. Türü `Drawing<Square,SpecialRedBrush>` "jpB5LgQ_S", "urn: şekiller" ve "urn: özel" ad alanları karması olduğu "DrawingOfSquareRedBrushjpB5LgQ_S" veri anlaşması adına sahip. Karma kullanılmıyorsa, iki adlarının aynı olduğunu ve bu nedenle bir ad çakışması gerçekleşir. unutmayın.
+
+## <a name="customizing-data-contract-names-for-generic-types"></a>Genel türler için özelleştirme veri sözleşmesi adları
+
+Bazı durumlarda, daha önce açıklandığı gibi genel türler için oluşturulan veri sözleşmesi adları kabul edilemez. Örneğin, önceden ad çakışması çalışmaz ve karma kaldırmak isteyebilirsiniz haberdar olabilirsiniz. Bu durumda, kullanabileceğiniz <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> özelliği `DataContractAttribute` adları oluşturmak için farklı bir yol belirtmek için özniteliği. Küme ayraçları içine numaralarını kullanabileceğiniz `Name` veri sözleşmesi adları genel parametre başvurmak için özellik. (0 ilk parametresine başvuruyor, 1 saniye ve benzeri için ifade eder.) Sayı (#) işareti küme ayraçlarının içindeki karma başvurmak için kullanabilirsiniz. Her bu başvuruları birden çok kez veya hiç kullanabilirsiniz.
+
+Örneğin, genel önceki `Drawing` türü bildirilmiş aşağıdaki örnekte gösterildiği gibi.
+
+[!code-csharp[c_DataContractNames#3](~/samples/snippets/csharp/VS_Snippets_CFX/c_datacontractnames/cs/source.cs#3)]
+[!code-vb[c_DataContractNames#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#3)]
+
+Bu durumda, türü `Drawing<Square,RegularRedBrush>` "Drawing_using_RedBrush_brush_and_Square_shape" veri anlaşması adına sahip. Olduğundan unutmayın bir "{#}" içinde <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> özelliği, karma adının bir parçası değil ve bu nedenle türü için adlandırma maruz çakışmaları; Örneğin, türü `Drawing<Square,SpecialRedBrush>` tam olarak aynı veri anlaşması adına sahip.
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+- <xref:System.Runtime.Serialization.DataContractAttribute>
+- <xref:System.Runtime.Serialization.DataMemberAttribute>
+- <xref:System.Runtime.Serialization.ContractNamespaceAttribute>
+- [Veri Anlaşmalarını Kullanma](using-data-contracts.md)
+- [Veri Anlaşması Eşitliği](data-contract-equivalence.md)
+- [Veri Anlaşması Adları](data-contract-names.md)
+- [Veri Anlaşması Sürümü Oluşturma](data-contract-versioning.md)

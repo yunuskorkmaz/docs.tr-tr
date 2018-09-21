@@ -6,11 +6,11 @@ helpviewer_keywords:
 - certificates [WCF], verifying signatures
 ms.assetid: 7c719355-aa41-4567-80d0-5115a8cf73fd
 ms.openlocfilehash: 9e2ba9f3550442602cab217fec329e6c19efd3b3
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46287701"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46481695"
 ---
 # <a name="how-to-specify-the-certificate-authority-certificate-chain-used-to-verify-signatures-wcf"></a>Nasıl yapılır: İmzaları Doğrulamak için Kullanılan Sertifika Yetkilendirme Sertifika Zincirini Belirtme (WCF)
 Windows Communication Foundation (WCF) bir X.509 sertifikası ile imzalanmış bir SOAP ileti aldığında, varsayılan olarak, X.509 Sertifika bir güvenilen sertifika yetkilisi tarafından verildiğini doğrular. Bu sertifika deposunda aramak ve sertifikayı, sertifika yetkilisi olarak belirlendi güvenilen belirleme gerçekleştirilir. Bunun belirlenmesi WCF için sırada doğru sertifika deposunda sertifika yetkilendirme sertifika zincirini yüklenmesi gerekir.  

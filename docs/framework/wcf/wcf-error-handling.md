@@ -2,14 +2,15 @@
 title: WCF Hata İşleme
 ms.date: 03/30/2017
 ms.assetid: 1e4b1e0f-9598-449d-9d73-90bda62305b8
-ms.openlocfilehash: 90c1d5a955de10b7e65dd21bda7ebfb64f24399d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4fad317d8cb696b29d9c8e4e4d8209abc28410f8
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46473453"
 ---
 # <a name="wcf-error-handling"></a>WCF Hata İşleme
-Bir WCF uygulaması tarafından karşılaşılan hataları üç gruplardan birine ait:  
+WCF uygulaması tarafından karşılaşılan hataları üç gruplardan birine ait:  
   
 1.  İletişim hataları  
   
@@ -17,33 +18,33 @@ Bir WCF uygulaması tarafından karşılaşılan hataları üç gruplardan birin
   
 3.  Uygulama hataları  
   
- Ağ kullanılamıyor, istemci yanlış bir adres kullanır ya da hizmet konağı gelen iletiler için dinleme yapmıyor iletişim hataları oluşur. Bu tür hataları istemciye döndürülen <xref:System.ServiceModel.CommunicationException> veya <xref:System.ServiceModel.CommunicationException>-türetilmiş sınıfları.  
+ İletişim hataları ağ kullanılamıyor, istemci yanlış bir adresi kullanır veya hizmet ana bilgisayarı gelen iletiler için dinleme yapmıyor ortaya çıkar. Bu tür hatalar istemciye döndürülür <xref:System.ServiceModel.CommunicationException> veya <xref:System.ServiceModel.CommunicationException>-türetilmiş sınıflar.  
   
- Proxy/kanal, kanal veya proxy kendisini içinde oluşan hataları hatalardır. Bu tür hataları şunlardır: bir proxy kullanır veya bu kanal girişimi kapatıldı, istemci ile hizmet arasında bir sözleşme uyumsuzluğu var. veya istemci kimlik bilgileri hizmeti tarafından reddedilir. Farklı türlerde bu kategorideki hataları vardır burada listelemek için çok fazla. Bu tür hataları istemciye döndürülen-olduğu (hiçbir dönüştürme özel durum nesnelerde gerçekleştirilir).  
+ Proxy/kanal, kanal veya proxy kendisi içinde oluşan hataları hatalardır. Bu tür hatalar vardır: bir ara sunucu kullanmak veya, kanal çalışılıyor kapatıldı, hizmet ve istemci arasında bir anlaşma uyumsuzluğu var. veya istemci kimlik bilgileri hizmet tarafından reddedilir. Farklı türlerde bu kategoriye giren hataları vardır. burada listelemek için çok fazla. Bu tür hatalar istemciye döndürülür-olduğu (hiçbir dönüştürme yapılmadı, özel durum nesnelerinde gerçekleştirilir).  
   
- Uygulama hataları bir hizmet işlemi yürütme sırasında oluşur. Bu tür hataların istemci olarak gönderilen <xref:System.ServiceModel.FaultException> veya <xref:System.ServiceModel.FaultException%601>.  
+ Bir hizmet işlemi yürütülürken uygulama hataları oluşur. Bu tür hatalar istemciye gönderilen <xref:System.ServiceModel.FaultException> veya <xref:System.ServiceModel.FaultException%601>.  
   
- WCF'de işleme hatası, bir veya daha fazlasını tarafından gerçekleştirilir:  
+ WCF'de işleme hata, bir veya daha fazlasını tarafından gerçekleştirilir:  
   
--   Doğrudan oluşturulan özel durum işleme. Bu, yalnızca iletişimi ve proxy/kanal hataları için yapılır.  
+-   Doğrudan özel durum işleme. Bu yalnızca iletişimi ve proxy/kanal hataları için gerçekleştirilir.  
   
--   Hataya sözleşmeleri kullanma  
+-   Hata sözleşmeleri kullanma  
   
 -   Uygulama <xref:System.ServiceModel.Dispatcher.IErrorHandler> arabirimi  
   
 -   İşleme <xref:System.ServiceModel.ServiceHost> olayları  
   
-## <a name="fault-contracts"></a>Hataya sözleşmeleri  
- Hataya sözleşmeleri izin Platform hizmet işlemi sırasında oluşabilecek hataları tanımlamanızı bağımsız şekilde. Varsayılan olarak gelen bir hizmet işlemi içinde oluşturulan tüm özel durumları istemciye döndürülecek bir <xref:System.ServiceModel.FaultException> nesnesi. <xref:System.ServiceModel.FaultException> Nesne çok az bilgileri içerir. Bir arıza sözleşmesi tanımlayarak ve hata olarak döndüren istemciye gönderilen bilgiler denetleyebilirsiniz bir <xref:System.ServiceModel.FaultException%601>. Daha fazla bilgi için bkz: [belirtme ve işleme hataları sözleşme ve hizmetlerde](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
+## <a name="fault-contracts"></a>Hata sözleşmeleri  
+ Hata sözleşmelerine izin vermek, Platform hizmeti işlemi sırasında oluşabilecek hataları tanımlamak bağımsız bir şekilde. Varsayılan olarak, gelen bir hizmet işlemi içinde oluşturulan tüm özel durumlar istemciye döndürülecek bir <xref:System.ServiceModel.FaultException> nesne. <xref:System.ServiceModel.FaultException> Nesne çok az bilgi içerir. Hatalı sözleşme tanımlayarak ve hata olarak döndüren istemciye gönderilen bilgiler denetleyebilirsiniz bir <xref:System.ServiceModel.FaultException%601>. Daha fazla bilgi için [belirtme ve işleme hataları sözleşme ve hizmetlerde](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
   
-## <a name="ierrorhandler"></a>IErrorHandler  
- <xref:System.ServiceModel.Dispatcher.IErrorHandler> Arabirimi WCF uygulamanızın hatalarının nasıl yanıt vereceğini üzerinde daha fazla denetim sağlar.  İstemciye döndürülen ve günlüğe kaydetme gibi işlenirken özel hata gerçekleştirmenize olanak sağlayan hata iletisi üzerinde tam denetim verir.  Hakkında daha fazla bilgi için <xref:System.ServiceModel.Dispatcher.IErrorHandler> ve [genişletme denetim üzerinden hata işleme ve Raporlama](../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
+## <a name="ierrorhandler"></a>Ierrorhandler  
+ <xref:System.ServiceModel.Dispatcher.IErrorHandler> Arabirim WCF uygulamanızı hatalara nasıl yanıt vereceğini üzerinde daha fazla denetim sağlar.  Özel Hata günlük kaydı gibi işlem yapmanıza olanak tanır ve istemciye döndürülen hata iletisi üzerinde tam denetim verir.  Hakkında daha fazla bilgi için <xref:System.ServiceModel.Dispatcher.IErrorHandler> ve [genişletme denetiminin üzerine hata işleme ve Raporlama](../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
   
 ## <a name="servicehost-events"></a>ServiceHost olayları  
- <xref:System.ServiceModel.ServiceHost> Sınıfı konakları Hizmetleri ve hataları işlemek için gerekli olabilecek çeşitli olaylarını tanımlar. Örneğin:  
+ <xref:System.ServiceModel.ServiceHost> Sınıfı konakları Hizmetleri ve hataları işleme için gerekli olabilecek çeşitli olayları tanımlar. Örneğin:  
   
-1.  <!--zz <xref:System.ServiceModel.ServiceHost.Faulted>-->  `System.ServiceModel.ServiceHost.Faulted`
+1. <xref:System.ServiceModel.Channels.CommunicationObject.Faulted>
   
-2. <!--zz  <xref:System.ServiceModel.ServiceHost.UnknownMessageReceived>  --> `System.ServiceModel.ServiceHost.UnknownMessageReceived`
+2. <xref:System.ServiceModel.ServiceHostBase.UnknownMessageReceived>
   
- Daha fazla bilgi için bkz: <xref:System.ServiceModel.ServiceHost>
+ Daha fazla bilgi için bkz. <xref:System.ServiceModel.ServiceHost>

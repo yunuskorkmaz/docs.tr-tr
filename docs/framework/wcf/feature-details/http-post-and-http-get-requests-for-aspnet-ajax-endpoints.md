@@ -2,14 +2,15 @@
 title: 'Nasıl yapılır: ASP.NET AJAX Uç Noktaları için HTTP POST ve HTTP GET İstekleri Arasında Seçim Yapma'
 ms.date: 03/30/2017
 ms.assetid: b47de82a-4c92-4af6-bceb-a5cb8bb8ede9
-ms.openlocfilehash: 079bbd98b3fc3d5538f87cad39a4a83a0dc1e242
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 5cebdf0bae937d84ec23ed97a5d2feca24fff473
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863341"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46473057"
 ---
 # <a name="how-to-choose-between-http-post-and-http-get-requests-for-aspnet-ajax-endpoints"></a>Nasıl yapılır: ASP.NET AJAX Uç Noktaları için HTTP POST ve HTTP GET İstekleri Arasında Seçim Yapma
+
 Windows Communication Foundation (WCF), istemci Web sitesinde JavaScript'ten çağrılabilen bir ASP.NET AJAX etkinleştirilmiş bir uç nokta hizmetidir oluşturmanıza olanak sağlar. Bu hizmetler oluşturmaya yönelik temel yordamları ele alınmıştır [nasıl yapılır: ASP.NET AJAX uç noktası eklemek için yapılandırma kullan](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) ve [nasıl yapılır: bir ASP.NET AJAX uç noktası olmadan kullanarak Yapılandırması Ekle](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md).  
   
  ASP.NET AJAX varsayılan olan HTTP POST ile HTTP POST ve GET HTTP fiilleri kullanan işlemleri destekler. Bir işlem oluşturma yan etkileri varsa ve nadiren bağlanan veya hiç değişen verileri döndürür, HTTP GET bunun yerine kullanın. GET işlemleri sonuçlarını, aynı işlemi birden çok çağrı hizmetinize tek bir istekte neden olabilir yani önbelleğe alınabilir. WCF tarafından belirtilmez ancak (tarayıcıda bir kullanıcının, bir ara sunucu ve diğer düzeylere.) herhangi bir düzeyde gerçekleştirilebildiği önbelleğe alma Önbelleğe alma hizmeti performansını artırmak istiyorsanız verileri sık sık değişiyorsa kabul edilebilir olmayabilir ancak veya işlem bir eylem gerçekleştirirse avantajlıdır.  
@@ -30,11 +31,11 @@ Windows Communication Foundation (WCF), istemci Web sitesinde JavaScript'ten ça
   
  POST kullanan bir örnek için bkz. [hizmet HTTP POST kullanan AJAX](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md) örnek.  
   
-### <a name="to-create-a-wcf-service-that-responds-to-http-get-or-http-post-requests"></a>Bir WCF hizmeti oluşturmak için HTTP GET veya POST HTTP isteklerine yanıt  
+## <a name="to-create-a-wcf-service-that-responds-to-http-get-or-http-post-requests"></a>Bir WCF hizmeti oluşturmak için HTTP GET veya POST HTTP isteklerine yanıt
   
-1.  İle işaretlenen arabirim ile temel bir WCF sözleşmesi tanımlayın. <xref:System.ServiceModel.ServiceContractAttribute> özniteliği. Her işlemi ile işaretle <xref:System.ServiceModel.OperationContractAttribute>. Ekleme <xref:System.ServiceModel.Web.WebGetAttribute> bir işlem HTTP GET isteklerine yanıt vermesini işleyebileceği için özniteliği. Ayrıca ekleyebilirsiniz <xref:System.ServiceModel.Web.WebInvokeAttribute> HTTP POST açıkça belirtmek için özniteliği veya bir öznitelik varsayılan olarak HTTP POST belirtmeyin.  
+1. İle işaretlenen arabirim ile temel bir WCF sözleşmesi tanımlayın. <xref:System.ServiceModel.ServiceContractAttribute> özniteliği. Her işlemi ile işaretle <xref:System.ServiceModel.OperationContractAttribute>. Ekleme <xref:System.ServiceModel.Web.WebGetAttribute> bir işlem HTTP GET isteklerine yanıt vermesini işleyebileceği için özniteliği. Ayrıca ekleyebilirsiniz <xref:System.ServiceModel.Web.WebInvokeAttribute> HTTP POST açıkça belirtmek için özniteliği veya bir öznitelik varsayılan olarak HTTP POST belirtmeyin.
   
-    ```  
+    ```csharp
     [ServiceContract]  
     public interface IMusicService  
     {  
@@ -58,9 +59,9 @@ Windows Communication Foundation (WCF), istemci Web sitesinde JavaScript'ten ça
     }  
     ```  
   
-2.  Uygulama `IMusicService` hizmet söyleşmesi bir `MusicService`.  
+2. Uygulama `IMusicService` hizmet söyleşmesi bir `MusicService`.
   
-    ```  
+    ```csharp
     public class MusicService : IMusicService  
     {  
         public void AddAlbum(string user, string album)  
@@ -72,7 +73,7 @@ Windows Communication Foundation (WCF), istemci Web sitesinde JavaScript'ten ça
     }  
     ```  
   
-3.  Uygulamada .svc uzantılı hizmeti adlı yeni bir dosya oluşturun. Uygun ekleyerek bu dosyayı Düzenle [ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) hizmeti yönerge bilgi. Belirten <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> kullanılacak olan [ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) yönergesi, bir ASP.NET AJAX uç noktası otomatik olarak yapılandırılır.  
+3. Uygulamada .svc uzantılı hizmeti adlı yeni bir dosya oluşturun. Uygun ekleyerek bu dosyayı Düzenle [ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) hizmeti yönerge bilgi. Belirten <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> kullanılacak olan [ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) yönergesi, bir ASP.NET AJAX uç noktası otomatik olarak yapılandırılır.  
   
     ```  
     <%@ServiceHost   
@@ -83,11 +84,11 @@ Windows Communication Foundation (WCF), istemci Web sitesinde JavaScript'ten ça
     %>  
     ```  
   
-### <a name="to-call-the-service"></a>Hizmeti çağırmak için  
+## <a name="to-call-the-service"></a>Hizmeti çağırmak için  
   
-1.  Tarayıcıyı kullanarak herhangi bir istemci kod olmadan hizmetinizin GET işlemleri test edebilirsiniz. Örneğin, hizmetiniz, yapılandırılmışsa, "http://example.com/service.svc"adresi, sonra"http://example.com/service.svc/LookUpArtist?album=SomeAlbum" tarayıcı adres çubuğuna hizmeti çağırır ve indirdiğiniz ya da görüntülenen yanıt neden olur.  
+1. Tarayıcıyı kullanarak herhangi bir istemci kod olmadan hizmetinizin GET işlemleri test edebilirsiniz. Örneğin, hizmetiniz, yapılandırılması durumunda `http://example.com/service.svc` sonra yazarak adresi `http://example.com/service.svc/LookUpArtist?album=SomeAlbum` tarayıcı adres çubuğuna hizmeti çağırır ve indirdiğiniz ya da görüntülenen yanıt neden olur.
   
-2.  Diğer bir ASP.NET AJAX Hizmetleri aynı şekilde GET işlemleri ile Hizmetleri'ni kullanabilirsiniz - URL ASP.NET AJAX komut Yöneticisi'nin betikleri koleksiyonuna hizmet girerek denetim. Bir örnek için bkz. [temel AJAX hizmeti](../../../../docs/framework/wcf/samples/basic-ajax-service.md).  
+2. Diğer bir ASP.NET AJAX Hizmetleri aynı şekilde GET işlemleri ile Hizmetleri'ni kullanabilirsiniz - URL ASP.NET AJAX komut Yöneticisi'nin betikleri koleksiyonuna hizmet girerek denetim. Bir örnek için bkz. [temel AJAX hizmeti](../../../../docs/framework/wcf/samples/basic-ajax-service.md).
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ASP.NET AJAX için WCF Hizmetleri Oluşturma](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)  

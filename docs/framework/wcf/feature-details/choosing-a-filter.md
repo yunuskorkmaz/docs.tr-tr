@@ -2,12 +2,12 @@
 title: Filtre Seçme
 ms.date: 03/30/2017
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
-ms.openlocfilehash: bc3bba9a2b00b35f3e0cff1786ea98cfa881f311
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: MT
+ms.openlocfilehash: 377d4f5c221ad37acf954b1dafc8712a388122ff
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43743156"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46478510"
 ---
 # <a name="choosing-a-filter"></a>Filtre Seçme
 Yönlendirme hizmeti yapılandırırken, doğru ileti filtreleri seçin ve bunları tam eşleşme aldığınız mesajlarına karşı yapmanıza izin verecek şekilde yapılandırmak önemlidir. Seçtiğiniz filtreler kendi eşleşmelerin aşırı geniş kapsamlı veya yanlış yapılandırılırsa, iletiler yanlış yönlendirilir. Filtreleri çok fazla kısıtlayıcıysa, kullanılabilir tüm geçerli rotalar iletilerinizi bazıları için sahip olmayabilir.  
@@ -16,7 +16,7 @@ Yönlendirme hizmeti yapılandırırken, doğru ileti filtreleri seçin ve bunla
  Yönlendirme hizmeti tarafından kullanılan filtreler seçerken, hangi bilgilerin kullanılabilir yanı sıra her bir filtrenin nasıl çalıştığını anlamanız önemli gelen iletiler bir parçası olarak. Tüm iletiler aynı uç noktası üzerinden alınırsa, tüm iletileri bu filtrelerle eşleşen örneği için adres ve Uçnoktaadı filtreleri kullanışlı değildir.  
   
 ### <a name="action"></a>Eylem  
- Eylem filtresi inceler <xref:System.ServiceModel.Channels.MessageHeaders.Action%2A> özelliği. İleti eylem başlığında içeriğini filtre yapılandırmasında belirtilen filtre veri değeri eşleşen ardından bu filtre döndürür `true`. Aşağıdaki örnekte tanımlayan bir `FilterElement` iletileri değerini içeren bir eylem üst bilgisi ile eşleşecek şekilde eylem filtresi kullanan "http://namespace/contract/operation/".  
+ Eylem filtresi inceler <xref:System.ServiceModel.Channels.MessageHeaders.Action%2A> özelliği. İleti eylem başlığında içeriğini filtre yapılandırmasında belirtilen filtre veri değeri eşleşen ardından bu filtre döndürür `true`. Aşağıdaki örnekte tanımlayan bir `FilterElement` iletileri değerini içeren bir eylem üst bilgisi ile eşleşecek şekilde eylem filtresi kullanan `http://namespace/contract/operation/`.
   
 ```xml  
 <filter name="action1" filterType="Action" filterData="http://namespace/contract/operation/" />  
@@ -47,7 +47,7 @@ EndpointAddressMessageFilter address1 = new EndpointAddressMessageFilter(new End
  Bu filtre benzersiz bir adrese gönderilen gelen iletiler kullanılmalıdır.  
   
 ### <a name="endpointaddressprefix"></a>EndpointAddressPrefix  
- EndpointAddressPrefix filtre EndpointAddress filtreye benzerdir. EndpointAddressPrefix filtre iletisi alındı EndpointAddress inceler. Ancak EndpointAddressPrefix filtre, filtre yapılandırmasında belirtilen değerle başlayan adresler eşleşen bir joker karakter olarak görür. Aşağıdaki örnekte tanımlayan bir `FilterElement` gönderilen iletileri eşleştirilecek EndpointAddressPrefix filtresi kullanan "http://\<ana bilgisayar adı > / vdir *".  
+ EndpointAddressPrefix filtre EndpointAddress filtreye benzerdir. EndpointAddressPrefix filtre iletisi alındı EndpointAddress inceler. Ancak EndpointAddressPrefix filtre, filtre yapılandırmasında belirtilen değerle başlayan adresler eşleşen bir joker karakter olarak görür. Aşağıdaki örnekte tanımlayan bir `FilterElement` gönderilen iletileri eşleştirilecek EndpointAddressPrefix filtresi kullanan `http://<hostname>/vdir*`.  
   
 ```xml  
 <filter name="prefix1" filterType="EndpointAddressPrefix" filterData="http://host/vdir" />  

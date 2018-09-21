@@ -3,12 +3,12 @@ title: Söz dizimi dönüştürme (Roslyn API'leri) ile çalışmaya başlama
 description: Geçiş, sorgulama ve söz dizimi ağacı walking giriş.
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: c372b1ba1e08a7d3b57ceea0d4449d03e55a39cf
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.openlocfilehash: acba7ac590154ad8458d0d9a8abac55a12e96265
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46009829"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46493600"
 ---
 # <a name="get-started-with-syntax-transformation"></a>Söz dizimi dönüştürme ile çalışmaya başlama
 
@@ -30,7 +30,7 @@ Söz dizimi dönüştürmeleri için iki stratejileri birini seçin. **Fabrika y
 
 İlk söz dizimi dönüşümü Fabrika yöntemleri gösterir. Değiştirilecek gideceğinizi bir `using System.Collections;` deyimiyle bir `using System.Collections.Generic;` deyimi. Bu örnek nasıl oluşturabileceğinizi gösterir <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode?displayProperty=nameWithType> kullanarak nesneleri <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType> Fabrika yöntemleri. Her tür için **düğüm**, **belirteci**, veya **Meraklısına Notlar** o türün bir örneği oluşturan bir Üreteç yöntemi yoktur. Hiyerarşik olarak aşağıdan yukarıya çıktısından düğümler tarafından söz dizimi ağacı oluşturmak. Ardından, var olan dönüştürme programı var olan düğümleri oluşturduğunuz yeni ağaçta değiştirdiğiniz.
 
-Visual Studio'yu başlatın ve yeni C# oluşturma **tek başına kod analizi aracı** proje. Visual Studio'da **dosya** > **yeni* > **proje** yeni proje iletişim kutusu görüntülenecek. Altında **Visual C#** > **genişletilebilirlik** seçin bir **tek başına kod analizi aracı**. Bu hızlı başlangıçta iki örnek projeler varsa, bu nedenle çözümünü arlandırın **SyntaxTransformationQuickStart**, projeyi adlandırın **ConstructionCS**. **Tamam**'ı tıklatın.
+Visual Studio'yu başlatın ve yeni C# oluşturma **tek başına kod analizi aracı** proje. Visual Studio'da **dosya** > **yeni** > **proje** yeni proje iletişim kutusu görüntülenecek. Altında **Visual C#** > **genişletilebilirlik** seçin bir **tek başına kod analizi aracı**. Bu hızlı başlangıçta iki örnek projeler varsa, bu nedenle çözümünü arlandırın **SyntaxTransformationQuickStart**, projeyi adlandırın **ConstructionCS**. **Tamam**'ı tıklatın.
 
 Bu proje kullanan <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType> sınıfı oluşturmak için yöntemleri bir <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax?displayProperty=nameWithType> temsil eden `System.Collections.Generic` ad alanı.
 

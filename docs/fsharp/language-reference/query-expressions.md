@@ -3,11 +3,11 @@ title: Sorgu İfadeleri (F#)
 description: 'F # programlama dilinin LINQ için sorgu ifade desteği hakkında bilgi edinin.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 6586d991dde550380d04c4d9831bb954eb94a715
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591788"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46473380"
 ---
 # <a name="query-expressions"></a>Sorgu İfadeleri
 

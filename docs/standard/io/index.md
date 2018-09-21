@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a0ffef95c8f9a187d5dac6902462d9747023384d
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 6bd0187f831db7fd68272e14c022efb45c8260f2
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45685718"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46482111"
 ---
 # <a name="file-and-stream-io"></a>Dosya ve Akış G/Ç
 Dosya ve akış I/O (giriş/çıkış) bir veri aktarımının depolama ortamına mı gittiğini yoksa oradan mı geldiğini belirtir. .NET Framework'teki `System.IO` ad alanlarında, okuma ve yazma, zaman uyumlu ve zaman uyumsuz olarak veri akışları ve dosyalar üzerinde sağlayan türler bulunur. Bu ad alanları aynı zamanda dosyaları sıkıştırma ve sıkıştırmayı açma işini gerçekleştiren türleri ve borular ve seri bağlantı noktaları üzerinden iletişim sağlayan türleri içerir.  
@@ -41,6 +41,8 @@ Yolu için adlandırma kuralları ve .NET Core 1.1 ve üstünde desteklenir DOS 
   
 -   <xref:System.IO.Path> -bir platformlar arası şekilde dizin dizeleri işlemek için yöntemler ve özellikler sağlar.  
   
+ Her zaman, sağlam özel durum dosya sistemi yöntemleri çağrılırken işleme sağlamalıdır. Daha fazla bilgi için [g/ç işleme hataları](handling-io-errors.md).
+ 
  Bu sınıfları kullanmaya ek olarak, Visual Basic kullanıcıları tarafından sağlanan özellikler ve yöntemler kullanabilirsiniz <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=nameWithType> dosya g/ç için sınıf.  
   
  Bkz: [nasıl yapılır: dizinleri kopyalama](../../../docs/standard/io/how-to-copy-directories.md), [nasıl yapılır: Create a Directory Listing](https://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69), ve [nasıl yapılır: dizinleri ve dosyaları numaralandırma](../../../docs/standard/io/how-to-enumerate-directories-and-files.md).  

@@ -3,12 +3,12 @@ title: Konsol Uygulaması
 description: Bu öğretici, .NET Core ve C# dili özellikleri sayısı öğretir.
 ms.date: 03/06/2017
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: bae03c9ae02f2888b1b70617ca712ef7927e9dce
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: da3f8f913d452b5c3c9dcda6079067c879a678dd
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961423"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46478623"
 ---
 # <a name="console-application"></a>Konsol Uygulaması
 
@@ -20,7 +20,7 @@ Bu öğretici, .NET Core ve C# dili özellikleri sayısı öğretir. Şunları �
 - .NET içindeki dosya g/ç API'leri temelleri
 - Görev tabanlı zaman uyumsuz programlama .NET temelleri
 
-Bir metin dosyasını okur ve konsola, metin dosyasının içeriğini yankılayan bir uygulama oluşturacaksınız. Konsola çıktı yüksek sesle okumak eşleştirmek için adım adım. Hız performansındaki veya uygun bir hızda tuşlarına basarak yavaş ' <' veya ' >' anahtarları.
+Bir metin dosyasını okur ve konsola, metin dosyasının içeriğini yankılayan bir uygulama oluşturacaksınız. Konsola çıktı yüksek sesle okumak eşleştirmek için adım adım. Hız performansındaki veya uygun bir hızda tuşlarına basarak yavaş ' <' (küçüktür) veya ' >' (büyüktür) anahtarları.
 
 Bu öğreticide birçok özellik vardır. Bunları tek tek oluşturalım.
 
@@ -190,7 +190,7 @@ Burada, `Main`, kod zaman uyumlu olarak bekleyin. Kullanmanız gereken `await` m
 > [!NOTE]
 > C# 7.1 kullandığınız ya da daha sonra konsol uygulamaları ile oluşturabileceğiniz [ `async` `Main` yöntemi](../whats-new/csharp-7-1.md#async-main).
 
-Konsoldan okunan ve izlemek için ikinci zaman uyumsuz yöntem yazmanıza gerek ardından, ' <' ve ' >' anahtarları. Bu görev için eklediğiniz yöntemi aşağıda verilmiştir:
+Konsoldan okunan ve izlemek için ikinci zaman uyumsuz yöntem yazmanıza gerek ardından, ' <' (küçüktür) ve ' >' (büyüktür) anahtarları. Bu görev için eklediğiniz yöntemi aşağıda verilmiştir:
 
 ```csharp
 private static async Task GetInput()
@@ -214,7 +214,7 @@ private static async Task GetInput()
 }
 ```
 
-Bu bir lambda ifadesini göstermek için oluşturur bir <xref:System.Action> konsoldan bir anahtar okuyan ve kullanıcının bastığında gecikmesini temsil eden yerel bir değişken değiştirir temsilci ' <' veya ' >' anahtarları. Bu yöntemde <xref:System.Console.ReadKey> engelleyin ve kullanıcıyı bir tuşa basın.
+Bu bir lambda ifadesini göstermek için oluşturur bir <xref:System.Action> konsoldan bir anahtar okuyan ve kullanıcının bastığında gecikmesini temsil eden yerel bir değişken değiştirir temsilci ' <' (küçüktür) veya ' >' (büyüktür) anahtarları. Bu yöntemde <xref:System.Console.ReadKey> engelleyin ve kullanıcıyı bir tuşa basın.
 
 Bu özellik tamamlamak için yeni bir gereksinim `async Task` bu görevlerin her ikisi de başlatan yöntem döndüren (`GetInput` ve `ShowTeleprompter`) ve bu iki görevler arasında paylaşılan veri da yönetir.
 
@@ -277,10 +277,10 @@ Ardından, her ikisi de güncelleştirmeye gerek duyduğunuz `ShowTeleprompter` 
 private static async Task ShowTeleprompter(TelePrompterConfig config)
 {
     var words = ReadFrom("sampleQuotes.txt");
-    foreach (var line in words)
+    foreach (var word in words)
     {
-        Console.Write(line);
-        if (!string.IsNullOrWhiteSpace(line))
+        Console.Write(word);
+        if (!string.IsNullOrWhiteSpace(word))
         {
             await Task.Delay(config.DelayInMilliseconds);
         }

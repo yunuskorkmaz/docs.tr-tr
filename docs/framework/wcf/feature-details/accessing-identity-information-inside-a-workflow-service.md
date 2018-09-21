@@ -2,21 +2,21 @@
 title: Bir İş Akışı Hizmeti içinde Kimlik Bilgilerine Erişme
 ms.date: 03/30/2017
 ms.assetid: 0b832127-b35b-468e-a45f-321381170cbc
-ms.openlocfilehash: a87c21215c37fefd8d9306fd0ccd0c5b2a1dfd11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7951782946f5b8ef989598d01229dcf193d97689
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491981"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46480753"
 ---
 # <a name="accessing-identity-information-inside-a-workflow-service"></a>Bir İş Akışı Hizmeti içinde Kimlik Bilgilerine Erişme
-Bir iş akışı hizmeti içinde kimlik bilgilerine erişmek için uygulamanız gereken <xref:System.ServiceModel.Activities.IReceiveMessageCallback> özel yürütme özelliğinde arabirimi. İçinde <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> erişebilirsiniz yöntemi <xref:System.ServiceModel.OperationContext.ServiceSecurityContext> erişim kimlik bilgileri. Bu konuda bu özelliğe belirir özel bir aktivite yanı sıra bu yürütme özellik uygulama aracılığıyla yükselteceğinizi <xref:System.ServiceModel.Activities.Receive> çalışma zamanında etkinlik.  Özel Etkinlik aynı davranışı uygulayacak bir <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` etkinlik olduğunda dışında bir <xref:System.ServiceModel.Activities.Receive> bunun içinde yerleştirilir <xref:System.ServiceModel.Activities.IReceiveMessageCallback> çağrılacağı ve kimlik bilgileri alınır.  
+Bir iş akışı hizmeti içinde kimlik bilgilerine erişmek için uygulamanız gereken <xref:System.ServiceModel.Activities.IReceiveMessageCallback> özel yürütme özelliğinde arabirimi. İçinde <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> erişebilirsiniz yöntemi <xref:System.ServiceModel.OperationContext.ServiceSecurityContext> erişim kimlik bilgileri. Bu konu başlığı altında bu özelliği belirir özel bir etkinlik yanı sıra, bu yürütme özelliğini uygulama konusunda size yol gösterecek <xref:System.ServiceModel.Activities.Receive> çalışma zamanında etkinlik. Özel Etkinlik aynı davranışı uygulayan bir <xref:System.Activities.Statements.Sequence> olduğunda dışında bir etkinlik bir <xref:System.ServiceModel.Activities.Receive> bunun içinde yerleştirilir <xref:System.ServiceModel.Activities.IReceiveMessageCallback> olarak adlandırılır ve kimlik bilgileri alınır.  
   
-### <a name="implement-ireceivemessagecallback"></a>Uygulama IReceiveMessageCallback  
+## <a name="implement-ireceivemessagecallback"></a>IReceiveMessageCallback uygulayın  
   
-1.  Boş bir oluşturma [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] çözümü.  
+1.  Boş bir oluşturma [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] çözüm.  
   
-2.  Adlı yeni bir konsol uygulaması ekleyin `Service` çözüme.  
+2.  Adlı yeni bir konsol uygulaması Ekle `Service` çözüm.  
   
 3.  Aşağıdaki derlemelere başvurular ekleyin:  
   
@@ -26,7 +26,7 @@ Bir iş akışı hizmeti içinde kimlik bilgilerine erişmek için uygulamanız 
   
     3.  System.ServiceModel.Activities  
   
-4.  Adlı yeni bir sınıf ekleyin `AccessIdentityCallback` ve uygulamanıza <xref:System.ServiceModel.Activities.IReceiveMessageCallback> aşağıdaki örnekte gösterildiği gibi.  
+4.  Adlı yeni bir sınıf ekleyin `AccessIdentityCallback` ve uygulama <xref:System.ServiceModel.Activities.IReceiveMessageCallback> aşağıdaki örnekte gösterildiği gibi.  
   
     ```csharp  
     class AccessIdentityCallback : IReceiveMessageCallback  
@@ -48,15 +48,15 @@ Bir iş akışı hizmeti içinde kimlik bilgilerine erişmek için uygulamanız 
     }  
     ```  
   
-     Bu kodu kullanır <xref:System.ServiceModel.OperationContext> erişim kimlik bilgileri yönteme geçirilen.  
+     Bu kod <xref:System.ServiceModel.OperationContext> metodun Metoda geçilen erişim kimlik bilgileri.  
   
-### <a name="implement-a-native-activity-to-add-the-ireceivemessagecallback-implementation-to-the-nativeactivitycontext"></a>NativeActivityContext IReceiveMessageCallback uygulama eklemek için yerel bir etkinlik uygulayan  
+## <a name="implement-a-native-activity-to-add-the-ireceivemessagecallback-implementation-to-the-nativeactivitycontext"></a>Uygulama için NativeActivityContext IReceiveMessageCallback uygulama eklemek için bir yerel etkinlik  
   
 1.  Türetilen bir yeni sınıf ekleyin <xref:System.Activities.NativeActivity> adlı `AccessIdentityScope`.  
   
-2.  Alt etkinlikler, değişkenleri, geçerli etkinliği dizin izlemek için yerel değişkenler ekleyin ve bir <xref:System.Activities.CompletionCallback> geri çağırma.  
+2.  Alt etkinlikleri, değişkenleri, geçerli etkinlik dizini izlemek için yerel değişkeni ekleyin ve bir <xref:System.Activities.CompletionCallback> geri çağırma.  
   
-    ```  
+    ```csharp
     public sealed class AccessIdentityScope : NativeActivity  
     {  
         Collection<Activity> children;  
@@ -68,7 +68,7 @@ Bir iş akışı hizmeti içinde kimlik bilgilerine erişmek için uygulamanız 
   
 3.  Uygulama Oluşturucu  
   
-    ```  
+    ```csharp
     public AccessIdentityScope() : base()  
     {  
         this.children = new Collection<Activity>();  
@@ -79,7 +79,7 @@ Bir iş akışı hizmeti içinde kimlik bilgilerine erişmek için uygulamanız 
   
 4.  Uygulama `Activities` ve `Variables` özellikleri.  
   
-    ```  
+    ```csharp
     public Collection<Activity> Activities  
     {  
          get { return this.children; }  
@@ -93,7 +93,7 @@ Bir iş akışı hizmeti içinde kimlik bilgilerine erişmek için uygulamanız 
   
 5.  geçersiz kılma <xref:System.Activities.NativeActivity.CacheMetadata%2A>  
   
-    ```  
+    ```csharp
     protected override void CacheMetadata(NativeActivityMetadata metadata)  
     {  
         //call base.CacheMetadata to add the Activities and Variables to this activity's metadata  
@@ -105,7 +105,7 @@ Bir iş akışı hizmeti içinde kimlik bilgilerine erişmek için uygulamanız 
   
 6.  geçersiz kılma <xref:System.Activities.NativeActivity.Execute%2A>  
   
-    ```  
+    ```csharp
     protected override void Execute(NativeActivityContext context)  
     {  
        // Add the IReceiveMessageCallback implementation as an Execution property   
@@ -139,13 +139,13 @@ Bir iş akışı hizmeti içinde kimlik bilgilerine erişmek için uygulamanız 
     }  
     ```  
   
-### <a name="implement-the-workflow-service"></a>İş akışı hizmeti uygulama  
+## <a name="implement-the-workflow-service"></a>Bir iş akışı hizmet ekleme  
   
 1.  Varolan öğeyi `Program` sınıfı.  
   
-2.  Aşağıdaki sabit değerleri tanımlayın:  
+2.  Aşağıdaki sabitler tanımlayın:  
   
-    ```  
+    ```csharp
     class Program  
     {  
        const string addr = "http://localhost:8080/Service";  
@@ -153,9 +153,9 @@ Bir iş akışı hizmeti içinde kimlik bilgilerine erişmek için uygulamanız 
     }  
     ```  
   
-3.  Adlı bir statik yöntem ekleyin `GetWorkflowService` iş akışı hizmeti oluşturur.  
+3.  Adlı statik bir yöntem ekleyin `GetWorkflowService` iş akışı hizmeti oluşturur.  
   
-    ```  
+    ```csharp
     static Activity GetServiceWorkflow()  
     {  
        Variable<string> echoString = new Variable<string>();  
@@ -192,9 +192,9 @@ Bir iş akışı hizmeti içinde kimlik bilgilerine erişmek için uygulamanız 
      }  
     ```  
   
-4.  Varolan `Main` yöntemi, iş akışı hizmeti ana bilgisayar.  
+4.  Mevcut `Main` yöntemi, iş akışı hizmeti konağı.  
   
-    ```  
+    ```csharp
     static void Main(string[] args)  
     {  
        string addr = "http://localhost:8080/Service";  
@@ -213,7 +213,7 @@ Bir iş akışı hizmeti içinde kimlik bilgilerine erişmek için uygulamanız 
     }  
     ```  
   
-### <a name="implement-a-workflow-client"></a>İş akışı istemcisini uygulama  
+## <a name="implement-a-workflow-client"></a>İş akışı istemcisini uygulama  
   
 1.  Adlı yeni bir konsol uygulama projesi oluşturma `Client`.  
   
@@ -225,9 +225,9 @@ Bir iş akışı hizmeti içinde kimlik bilgilerine erişmek için uygulamanız 
   
     3.  System.ServiceModel.Activities  
   
-3.  Oluşturulan Program.cs dosyasını açın ve adlı bir statik yöntem ekleyin `GetClientWorkflow` istemci iş akışı oluşturmak için.  
+3.  Oluşturulan Program.cs dosyasını açın ve adlı statik bir yöntem ekleyin `GetClientWorkflow` istemci iş akışı oluşturmak için.  
   
-    ```  
+    ```csharp
     static Activity GetClientWorkflow()  
     {  
        Variable<string> echoString = new Variable<string>();  
@@ -245,7 +245,7 @@ Bir iş akışı hizmeti içinde kimlik bilgilerine erişmek için uygulamanız 
           OperationName = "Echo",  
           Content = new SendParametersContent()  
           {  
-             Parameters = { { "echoString", new InArgument<string>("Hello, World") } }   
+             Parameters = { { "echoString", new InArgument<string>("Hello, World") } }
           }  
        };  
   
@@ -253,12 +253,12 @@ Bir iş akışı hizmeti içinde kimlik bilgilerine erişmek için uygulamanız 
        {  
           Variables = { echoString },  
           Activities =  
-          {                      
+          {
              new CorrelationScope  
              {  
                 Body = new Sequence  
                 {  
-                   Activities =   
+                   Activities =
                    {  
                       echoRequest,  
                       new ReceiveReply  
@@ -271,17 +271,17 @@ Bir iş akışı hizmeti içinde kimlik bilgilerine erişmek için uygulamanız 
                       }  
                    }  
                 }  
-             },                      
-             new WriteLine { Text = new InArgument<string>( (e) => "Received Text: " + echoString.Get(e) ) },                      
+             },
+             new WriteLine { Text = new InArgument<string>( (e) => "Received Text: " + echoString.Get(e) ) },
              }  
           };  
        }  
     }  
     ```  
   
-4.  Aşağıdaki barındırma kodu eklemek `Main()` yöntemi.  
+4.  Barındırma için aşağıdaki kodu ekleyin `Main()` yöntemi.  
   
-    ```  
+    ```csharp
     static void Main(string[] args)  
     {  
        Activity workflow = GetClientWorkflow();  
@@ -292,10 +292,10 @@ Bir iş akışı hizmeti içinde kimlik bilgilerine erişmek için uygulamanız 
     }  
     ```  
   
-## <a name="example"></a>Örnek  
- Kaynak tam listesi İşte bu konuda kullanılan kod.  
+## <a name="example"></a>Örnek
+ Kaynak tam bir listesi aşağıdadır. Bu konuda kullanılan kod.  
   
-```  
+```csharp
 // AccessIdentityCallback.cs  
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
@@ -333,9 +333,9 @@ namespace Microsoft.Samples.AccessingOperationContext.Service
         }  
     }  
 }  
-```  
+```
   
-```  
+```csharp
 // AccessIdentityScope.cs  
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
@@ -381,9 +381,9 @@ namespace Microsoft.Samples.AccessingOperationContext.Service
         {  
             //call base.CacheMetadata to add the Activities and Variables to this activity's metadata  
             base.CacheMetadata(metadata);  
-            //add the private implementation variable: currentIndex   
+            //add the private implementation variable: currentIndex
             metadata.AddImplementationVariable(this.currentIndex);  
-        }                     
+        }
   
         protected override void Execute(  
             NativeActivityContext context)  
@@ -418,9 +418,9 @@ namespace Microsoft.Samples.AccessingOperationContext.Service
         }  
     }  
 }  
-```  
+```
   
-```  
+```csharp
 // Service.cs  
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
@@ -493,10 +493,10 @@ namespace Microsoft.Samples.AccessingOperationContext.Service
         }  
     }  
 }  
-```  
+```
   
-```  
-// client.cs   
+```csharp
+// client.cs
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
 //----------------------------------------------------------------  
@@ -546,12 +546,12 @@ namespace Microsoft.Samples.AccessingOperationContext.Client
             {  
                 Variables = { echoString },  
                 Activities =  
-                {                      
+                {
                     new CorrelationScope  
                     {  
                         Body = new Sequence  
                         {  
-                            Activities =   
+                            Activities =
                             {  
                                 echoRequest,  
                                 new ReceiveReply  
@@ -564,8 +564,8 @@ namespace Microsoft.Samples.AccessingOperationContext.Client
                                 }  
                             }  
                         }  
-                    },                      
-                    new WriteLine { Text = new InArgument<string>( (e) => "Received Text: " + echoString.Get(e) ) },                      
+                    },
+                    new WriteLine { Text = new InArgument<string>( (e) => "Received Text: " + echoString.Get(e) ) },
                 }  
             };  
         }  

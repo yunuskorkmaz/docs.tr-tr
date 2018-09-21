@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: 4c47013ebc84c6006d65a89e57217ce1c720b45a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
-ms.translationtype: MT
+ms.openlocfilehash: f9ae53aeb988f23611adb4b00354f65918790d3b
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44197572"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46490172"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>ServiceModel Meta Veri Yardımcı Programracı (Svcutil.exe)
 
@@ -192,7 +192,7 @@ Svcutil.exe gerekli C# serileştirme kodu, bu nedenle bu uygulamaları için ba�
 |/ reference:\<dosya yolu >|Belirtilen derleme, tür başvurularını çözümlemek için kullanılan derlemeler kümesini ekler.<br /><br /> Kısa biçim: `/r`|
 |/excludeType:\<türü >|Dışarı aktarma veya doğrulama hariç tutulacak bir türün tam veya bütünleştirilmiş kodla nitelenen adını belirtir.<br /><br /> Kısa biçim: `/et`|
 |/ out:\<dosyası >|Oluşturulan kodun dosya adını belirtir. Birden çok derleme aracı için giriş olarak geçirildiğinde, bu seçenek göz ardı edilir.<br /><br /> Varsayılan: Derleme adından türetilir.<br /><br /> Kısa biçim: `/o`|
-|/ UseSerializerForFaults|Belirten <!--zz <xref:System.Xml.XmlSerializer> --> `xref:System.Xml.XmlSerializer ` hataları, varsayılan yerine yazma ve okuma için kullanılması gereken <xref:System.Runtime.Serialization.DataContractSerializer>.|
+|/ UseSerializerForFaults|Belirten <xref:System.Xml.Serialization.XmlSerializer> hataları, varsayılan yerine yazma ve okuma için kullanılması gereken <xref:System.Runtime.Serialization.DataContractSerializer>.|
 
 ## <a name="examples"></a>Örnekler
 

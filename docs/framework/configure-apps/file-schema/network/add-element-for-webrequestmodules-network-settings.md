@@ -1,5 +1,5 @@
 ---
-title: '&lt;ekleme&gt; öğesi webRequestModules (ağ ayarları) için'
+title: '&lt;ekleme&gt; webRequestModules (ağ ayarları) için'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/add
@@ -13,20 +13,20 @@ ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 921f5f2bfda1a19d022d3f3f4131e3653fd17ea7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f3c3ea63df8d99154c42e40b359180ad1065f6c5
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742796"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46481760"
 ---
-# <a name="ltaddgt-element-for-webrequestmodules-network-settings"></a>&lt;ekleme&gt; öğesi webRequestModules (ağ ayarları) için
+# <a name="ltaddgt-element-for-webrequestmodules-network-settings"></a>&lt;ekleme&gt; webRequestModules (ağ ayarları) için
 Uygulamaya özel bir Web isteği modülü ekler.  
   
  \<Yapılandırma >  
 \<system.net>  
 \<webRequestModules >  
-\<ekleme >  
+\<Ekle >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,34 +42,34 @@ Uygulamaya özel bir Web isteği modülü ekler.
   
 ### <a name="attributes"></a>Öznitelikler  
   
-|**Özniteliği**|**Açıklama**|  
+|**Öznitelik**|**Açıklama**|  
 |-------------------|---------------------|  
 |`prefix`|Bu Web isteği modülü tarafından işlenen isteklerin için URI öneki.|  
-|`type`|Tam olarak nitelenmiş tür adını (belirttiği <xref:System.Type.FullName%2A> özelliği) ve derleme adının (belirttiği <xref:System.Reflection.Assembly.FullName%2A> özelliği), bu Web isteği modülü uygulayan bir virgülle ayrılmış.|  
+|`type`|Tam nitelikli tür adı (belirttiği <xref:System.Type.FullName%2A> özelliği) ve derleme adı (belirttiği <xref:System.Reflection.Assembly.FullName%2A> özelliği) bu Web isteği modülü uygulayan bir virgülle ayrılmış.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
-|**Öğesi**|**Açıklama**|  
+|**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Ağ ana bilgisayarlardan bilgi istemek için kullanılacak modülleri belirtir.|  
+|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Ağ konaklarından bilgi istemek için modüller belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `prefix` Öznitelik belirtilen Web isteği modülü kullanan URI öneki tanımlar. Web isteği modülleri HTTP veya FTP gibi belirli bir iletişim kuralı işlemek için genellikle kayıtlı ancak belirli sunucu veya bir sunucudaki yolu bir isteği işlemek üzere kaydettirilmiş.  
+ `prefix` Özniteliği belirtilen Web isteği modül kullanan URI öneki tanımlar. Web isteği modülleri, HTTP veya FTP gibi belirli bir protokol işlemek için genellikle kayıtlı ancak belirli sunucu veya bir sunucudaki yolu bir isteği işlemek için kaydedilebilir.  
   
- Web isteği modülü bir URI eşleşen Önek geçirilir oluşturulduğunda <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> yöntemi.  
+ Web isteği modülü URI'si ile eşleşen bir ön eki geçirilir oluşturulduğunda <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> yöntemi.  
   
- Değeri `prefix` özniteliği geçerli bir URI--Örneğin, "http", baştaki karakterleri olmalıdır veya "http://www.contoso.com".  
+ Değeri `prefix` özniteliği önde gelen karakterleri geçerli bir URI olmalıdır. Örneğin, `http` veya `http://www.contoso.com`.
   
- Değeri `type` özniteliği geçerli bir tür adı ve karşılık gelen derleme adı, virgülle ayrılmış olmalıdır.  
+ Değeri `type` özniteliği geçerli tür adı ve karşılık gelen derleme adı, virgülle ayrılmış olmalıdır.
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
  Bu öğe, uygulama yapılandırma dosyası veya makine yapılandırma dosyası (Machine.config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, HTTP için özel bir Web isteği modülü kaydeder. Belirtilen modül için doğru değerlerle sürüm ve PublicKeyToken için değerleri değiştirmelisiniz.  
+ Aşağıdaki örnek, HTTP için özel bir Web isteği modülü kaydeder. Belirtilen modül için doğru değerlerle PublicKeyToken ve Version değerleri değiştirmelisiniz.  
   
 ```xml  
 <configuration>  

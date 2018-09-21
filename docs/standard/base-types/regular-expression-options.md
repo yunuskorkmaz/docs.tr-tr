@@ -15,11 +15,11 @@ ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dbc5909a3d4ea1ba2747fcc694bf1f34e20e7d2b
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44262561"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46509125"
 ---
 # <a name="regular-expression-options"></a>Normal İfade Seçenekleri
 <a name="Top"></a> Varsayılan olarak, bir Giriş dizesinin normal ifade desenindeki herhangi bir sabit karakterin ile karşılaştırması büyük/küçük harfe duyarlıdır, normal ifade desenindeki boşluk, sabit boşluk karakterleri ve normal ifadedeki yakalama grupları olarak yorumlanır örtük ve açık olarak adlandırılır. Normal ifade seçeneklerini belirterek bunları ve varsayılan normal ifade davranışının diğer birçok yönünü değiştirebilirsiniz. Aşağıdaki tabloda listelenen Bu seçenekler, normal ifade deseni bir parçası olarak satır içi olabilir veya için sağlanabilir bir <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> sınıfı oluşturucusunun veya statik desen eşleştirme yöntemine olarak bir <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> numaralandırma değeri.  

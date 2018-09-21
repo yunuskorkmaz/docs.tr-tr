@@ -2,12 +2,12 @@
 title: WCF Kolaylaştırma Özellikleri
 ms.date: 03/30/2017
 ms.assetid: 4535a511-6064-4da0-b361-80262a891663
-ms.openlocfilehash: 010f941850dedd73e9cc203ea2b180dae7d4742c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ded4fc93e5e8f33d98e58ffcb3cb98c2bff2b410
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526359"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46493244"
 ---
 # <a name="wcf-simplification-features"></a>WCF Kolaylaştırma Özellikleri
 Bu konuda ele alınmıştır WCF yazma sağlayan yeni özellikler daha basit uygulamalar.  
@@ -106,7 +106,7 @@ Bu konuda ele alınmıştır WCF yazma sağlayan yeni özellikler daha basit uyg
 |----------------|-------------------|-----------------|  
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A>|Int32.MaxValue|İzin verilen en büyük dizi uzunluğu ayarlar ve alır. Bu kota, bir XML okuyucusu döndüren bayt dizileri de dahil olmak üzere temel elemanlar dizisinde en büyük boyutu sınırlar. Bu kota, XML okuyucusu bellek tüketimini sınırlamaz, ancak okuyucu kullanarak hangi bileşeni. Örneğin, <xref:System.Runtime.Serialization.DataContractSerializer> ile güvenli bir okuyucu kullanan <xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A>, bayt dizileri bu kotayı daha büyük serisini değil.|  
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A>|Int32.MaxValue|Her okuma için döndürülen en fazla izin verilen bayt ayarlar ve alır. Bu kota, öğe okuma başlattığınızda etiketini ve onun özniteliklerini tek bir okuma işleminde okunan bayt sayısını sınırlar. (Akış olmayan durumlarda, öğe adı kotaya dahil edilmez). Benzersizlik için denetlenecek öznitelik adları olduğundan çok fazla XML özniteliklere sahip orantısız işleme zamanı kullanıyor olabilir. <xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A> Bu tehdidi azaltır.|  
-|<xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A>|ayrıntılı 128 düğüm|Bu kota, XML öğeleri en fazla iç içe geçme derinliği sınırlar.  <xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A> etkileşime <xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A>: en yüksek bellek tüketimi Okuyucu için bu iki ayar çarpımını orantılı, bu nedenle okuyucu her zaman veri bellekte geçerli öğenin ve tüm alt öğelerinden tutar. Bir iç içe geçmiş Nesne grafiği işlenirken, seri durumdan çıkarıcı tüm yığını erişip kurtarılamaz bir throw zorlanır <xref:System.StackOverflowException>. XML iç içe geçirme ve nesnenin iç içe her ikisi için de arasında doğrudan bağıntı var. <xref:System.Runtime.Serialization.DataContractSerializer> ve <!--zz <xref:System.Runtime.Serialization.XmlSerializer>--> `System.Runtime.Serialization.XmlSerializer`. <xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A> Bu tehdidi azaltmak için kullanılır.|  
+|<xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A>|ayrıntılı 128 düğüm|Bu kota, XML öğeleri en fazla iç içe geçme derinliği sınırlar.  <xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A> etkileşime <xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A>: en yüksek bellek tüketimi Okuyucu için bu iki ayar çarpımını orantılı, bu nedenle okuyucu her zaman veri bellekte geçerli öğenin ve tüm alt öğelerinden tutar. Bir iç içe geçmiş Nesne grafiği işlenirken, seri durumdan çıkarıcı tüm yığını erişip kurtarılamaz bir throw zorlanır <xref:System.StackOverflowException>. XML iç içe geçirme ve nesnenin iç içe her ikisi için de arasında doğrudan bağıntı var. <xref:System.Runtime.Serialization.DataContractSerializer> ve <xref:System.Xml.Serialization.XmlSerializer>. <xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A> Bu tehdidi azaltmak için kullanılır.|  
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxNameTableCharCount%2A>|Int32.MaxValue|Bu kota en fazla bir ad izin verilen karakter sayısını sınırlar. Ad tablosu, bir XML belgesi işleme sırasında karşılaşılan belirli dizeleri (örneğin, ad alanlarını ve önekleri) içerir. Bu dizeler bellekte arabelleğe alınmış olarak bu kotayı akış beklendiğinde aşırı arabelleğe almayı önlemek için kullanılır.|  
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxStringContentLength%2A>|Int32.MaxValue|Bu kota, XML okuyucusu döndüren maksimum dize boyutu sınırlar. Bu kota, XML okuyucusu bellek tüketimini sınırlamaz, ancak okuyucu kullanan bileşen. Örneğin, <xref:System.Runtime.Serialization.DataContractSerializer> ile güvenli bir okuyucu kullanan <xref:System.Xml.XmlDictionaryReaderQuotas.MaxStringContentLength%2A>, dizeleri bu kotayı daha büyük serisini değil.|  
   

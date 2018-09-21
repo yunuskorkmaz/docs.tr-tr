@@ -2,37 +2,37 @@
 title: WF etkinlik yazma seçenekleri
 ms.date: 03/30/2017
 ms.assetid: b9061f5f-12c3-47f0-adbe-1330e2714c94
-ms.openlocfilehash: f91c74b4e3dc002ed2abf979619b84a81db65e78
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 219d759cd1390a83abfb90af509b21047085f6e9
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516406"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46481260"
 ---
 # <a name="activity-authoring-options-in-wf"></a>WF etkinlik yazma seçenekleri
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] özel etkinlikler oluşturmak için çeşitli seçenekler sağlar. Belirli bir etkinlik yazmak için kullanılacak doğru yöntemi hangi çalışma zamanı özellikleri gerekli bağlıdır.  
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] özel etkinlikler oluşturmak için çeşitli seçenekler sunar. Belirli bir etkinlik yazma için kullanılacak doğru yöntemi hangi çalışma zamanı özellikleri gerekli mı olduğuna bağlıdır.  
   
-## <a name="deciding-which-base-activity-class-to-use-for-authoring-custom-activities"></a>Temel hangi etkinliğin sınıf özel etkinlikler yazma kullanmaya karar verme  
- Özel Etkinlik temel sınıflarda kullanılabilir özellikler aşağıdaki tabloda listelenmektedir.  
+## <a name="deciding-which-base-activity-class-to-use-for-authoring-custom-activities"></a>Hangi temel etkinlik sınıf özel etkinlikler yazmak için kullanılacak karar verme  
+ Özel Etkinlik taban sınıflardaki kullanılabilen özellikler aşağıdaki tabloda listelenmektedir.  
   
-|Temel etkinliğe sınıfı|Kullanılabilir özellikler|  
+|Temel etkinlik sınıfı|Kullanılabilir özellikler|  
 |-------------------------|------------------------|  
-|<xref:System.Activities.Activity>|Bileşik etkinlik sistem tarafından sağlanan ve özel etkinliklerine grupları oluşturur.|  
-|<xref:System.Activities.CodeActivity>|Uygulayan kesinlik temelli işlevselliği sağlayarak bir <xref:System.Activities.CodeActivity%601.Execute%2A> geçersiz kılınabilir yöntemi. Ayrıca izleme, değişkenleri ve bağımsız değişkenler erişim sağlar...|  
+|<xref:System.Activities.Activity>|Sistem tarafından sağlanan ve özel bileşik bir etkinlik etkinliklerine gruplarını oluşturur.|  
+|<xref:System.Activities.CodeActivity>|Sağlayarak kesinlik temelli işlevselliğini uygulayan bir <xref:System.Activities.CodeActivity%601.Execute%2A> geçersiz kılınabilir bir yöntemi. Ayrıca, izleme, değişkenler ve bağımsız değişkenler erişim sağlar...|  
 |<xref:System.Activities.NativeActivity>|Tüm özellikleri sağlayan <xref:System.Activities.CodeActivity>, Etkinlik yürütme iptal ediliyor, alt etkinlik yürütme iptal ediliyor, yer işaretlerini kullanma ve etkinliklerini, etkinlik eylemleri ve işlevleri zamanlama artı.|  
-|<xref:System.Activities.DynamicActivity>|WF Tasarımcısı ve çalışma zamanı makineler aracılığıyla arabirimleri etkinlikleri oluşturmak için bir DOM benzeri yaklaşımını sunar <!--zz <xref:System.ComponentModel.IcustomTypeDescriptor>--> `IcustomTypeDescriptor`, yeni türleri tanımlamadan oluşturulacak yeni etkinlikler izin verme.|  
+|<xref:System.Activities.DynamicActivity>|WF tasarımcı ve çalışma zamanı makineler aracılığıyla arabirimleri etkinlikleri oluşturmak için bir DOM benzeri yaklaşım sağlar <xref:System.ComponentModel.ICustomTypeDescriptor>, izin vererek yeni türleri tanımlama olmadan oluşturulacak yeni etkinlikler.|  
   
-## <a name="authoring-activities-using-activity"></a>Yazma etkinlikleri etkinlik kullanma  
- Öğesinden türetilen etkinlikleri <xref:System.Activities.Activity> varolan diğer etkinlikleri birleştirerek işlevselliği oluşturun. Bu etkinlikler varolan özel olabilir etkinlikleri ve etkinlikten [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] etkinlik kitaplığı. Bu etkinlikler birleştirme, özel işlevsellik oluşturmak için en temel bir yoludur. Bu yaklaşım, en yaygın iş akışları yazmak için bir görsel tasarım ortamında kullanırken alınır.  
+## <a name="authoring-activities-using-activity"></a>Geliştirme etkinlikleri etkinlik kullanma  
+ Öğesinden türetilen etkinlikleri <xref:System.Activities.Activity> işlevselliği varolan diğer etkinlikleri birleştirerek oluşturun. Bu etkinlikler mevcut özel olabilir etkinlikleri ve etkinlikler [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] etkinlik kitaplığı. Bu etkinlikler derleyerek, özel işlevler oluşturmak için en temel bir yoludur. Bu yaklaşım, en yaygın iş akışları yazmak için bir görsel tasarım ortamı kullanarak alınır.  
   
-## <a name="authoring-activities-using-codeactivity-or-asynccodeactivity"></a>Yazma etkinlikleri CodeActivity veya AsyncCodeActivity kullanma  
- Öğesinden türetilen etkinlikleri <xref:System.Activities.CodeActivity> veya <xref:System.Activities.AsyncCodeActivity> kesinlik temelli işlevselliği kılarak uygulayabilirsiniz <xref:System.Activities.CodeActivity%601.Execute%2A> özel kesinlik temelli kod ile yöntemi. Etkinlik çalışma zamanı tarafından çalıştırıldığında özel kod yürütülür. Bu yolla oluşturulan etkinlikleri özel işlevine erişimi olsa da, bunlar erişiminiz yok yürütme ortamı için tam erişim gibi çalışma zamanı özelliklerini tümüne alt etkinlikler, yer işareti oluşturma ya da desteği zamanlama olanağı bir İptal edin veya Abort yöntemi. Zaman bir <xref:System.Activities.CodeActivity> yürütür, erişim yürütme ortamı azaltılmış bir sürümüne sahip (aracılığıyla <xref:System.Activities.CodeActivityContext> veya <xref:System.Activities.AsyncCodeActivityContext> sınıfı). Kullanılarak oluşturulan etkinlikleri <xref:System.Activities.CodeActivity> bağımsız değişkeni ve değişken çözümleme, uzantıları ve izleme erişimi. Zaman uyumsuz aktivitesi zamanlama yapılabilir kullanarak <xref:System.Activities.AsyncCodeActivity>.  
+## <a name="authoring-activities-using-codeactivity-or-asynccodeactivity"></a>Geliştirme etkinlikleri CodeActivity veya AsyncCodeActivity kullanma  
+ Öğesinden türetilen etkinlikleri <xref:System.Activities.CodeActivity> veya <xref:System.Activities.AsyncCodeActivity> kesinlik temelli işlevi geçersiz kılarak uygulayabilirsiniz <xref:System.Activities.CodeActivity%601.Execute%2A> özel kesinlik temelli kod ile yöntemi. Etkinliğin çalışma zamanı tarafından yürütüldüğünde, özel kod yürütülür. Bu şekilde oluşturulan etkinlikleri özel işlevler için erişimi olsa da, bunlar erişiminiz yok çalışma zamanının yürütme ortamı için tam erişim gibi özelliklerin tümü için zamanlayabilme alt etkinlikleri, yer işareti oluşturma veya destek için bir İptal etme veya Abort yöntemi. Olduğunda bir <xref:System.Activities.CodeActivity> yürütür, Yürütme Ortamı'nın daha düşük bir sürüme erişiminin (aracılığıyla <xref:System.Activities.CodeActivityContext> veya <xref:System.Activities.AsyncCodeActivityContext> sınıfı). Kullanılarak oluşturulan etkinlikleri <xref:System.Activities.CodeActivity> bağımsız değişken ve değişken çözümü, uzantıları ve izleme erişebilir. Zaman uyumsuz bir etkinlik zamanlama yapılabilir kullanarak <xref:System.Activities.AsyncCodeActivity>.  
   
-## <a name="authoring-activities-using-nativeactivity"></a>Yazma etkinlikleri NativeActivity kullanma  
- Öğesinden türetilen etkinlikleri <xref:System.Activities.NativeActivity>, ister öğesinden türetilen o <xref:System.Activities.CodeActivity>, kesinlik temelli işlevselliğe kılarak oluşturmak <xref:System.Activities.NativeActivity.Execute%2A>, ancak aynı zamanda tüm iş akışı çalışma zamanı işlevselliğini erişimi <xref:System.Activities.NativeActivityContext> alır içine aktarılan <xref:System.Activities.NativeActivity.Execute%2A> yöntemi. Bu bağlamı zamanlama ve yürütme alt etkinlikleri iptal etme desteği olan <xref:System.Activities.ActivityAction> ve <!--zz <xref:System.Activities.ActivityFunc>--> `ActivityFunc` nesneleri, iptal etme ve yürütme durduruluyor zaman uyumsuz işlemleri, çağırma bir iş akışı boyunca işlemlere erişim yürütme özellikler ve uzantılar ve yer işaretleri (işleç devam ettirme duraklatılmış iş akışları için).  
+## <a name="authoring-activities-using-nativeactivity"></a>Geliştirme etkinlikleri NativeActivity kullanma  
+ Öğesinden türetilen etkinlikleri <xref:System.Activities.NativeActivity>, ister, türetilen <xref:System.Activities.CodeActivity>, geçersiz kılarak kesinlik temelli işlevi oluşturma <xref:System.Activities.NativeActivity.Execute%2A>, ancak tüm işlevleri iş akışı çalışma zamanı erişimi de <xref:System.Activities.NativeActivityContext> alır yöntemlere geçirilen <xref:System.Activities.NativeActivity.Execute%2A> yöntemi. Bu bağlam için zamanlama ve yürütme, çocuk etkinliklerinin iptal etme desteği olan <xref:System.Activities.ActivityAction> ve <xref:System.Activities.ActivityFunc%601> nesneleri, zaman uyumsuz işlemlerin iptal etme ve yürütme iptal ediliyor çağrılırken bir iş akışı işlemleri akan erişmek için yürütme Özellikler ve uzantılar ve yer işaretlerini (işleç sürdürme duraklatılmış iş akışları için).  
   
-## <a name="authoring-activities-using-dynamicactivity"></a>Yazma etkinlikleri DynamicActivity kullanma  
- Diğer üç tür etkinlik farklı olarak, yeni işlevsellik yeni türlerinden türetme tarafından oluşturulmaz <xref:System.Activities.DynamicActivity> (sınıf korumalı değil), ancak bunun yerine, işlevsellik atayarak tarafından <xref:System.Activities.DynamicActivity.Properties%2A> ve <xref:System.Activities.DynamicActivity.Implementation%2A> kullanarak bir etkinlik belge özellikleri Nesne Modeli (DOM).  
+## <a name="authoring-activities-using-dynamicactivity"></a>Geliştirme etkinlikleri DynamicActivity kullanma  
+ Diğer üç tür etkinliği, yeni işlevsellik yeni türleri türetme tarafından oluşturulmaz <xref:System.Activities.DynamicActivity> (sınıfı korumalı), ancak bunun yerine, işlevlerini birleştirme tarafından <xref:System.Activities.DynamicActivity.Properties%2A> ve <xref:System.Activities.DynamicActivity.Implementation%2A> kullanarak bir etkinlik belge özellikleri Nesne Modeli (DOM).  
   
 ## <a name="authoring-activities-that-return-a-result"></a>Bir sonuç yazma etkinliği  
- Birçok etkinlik kendi yürütme sonrasında bir sonuç döndürmesi gerekir. Her zaman özel tanımlama mümkün olmakla <xref:System.Activities.OutArgument%601> kullanmayı önerilen bu amaç için bir etkinlik üzerinde <xref:System.Activities.Activity%601>, veya öğesinden türetilen <xref:System.Activities.CodeActivity%601> veya <xref:System.Activities.NativeActivity%601>. Bu temel sınıfların her biri olan bir <xref:System.Activities.OutArgument%601> etkinliklerinizi dönüş değeri için kullanabileceğiniz sonuç adlı. Bir sonuç etkinliği döndürülmesi gereken yalnızca bir sonuç etkinlikleri yalnızca kullanılmalıdır; birden çok sonuç döndürülmesi gerekiyorsa, ayrı <xref:System.Activities.OutArgument%601> üyeleri bunun yerine kullanılmalıdır.
+ Birçok etkinlik kendi yürütme sonrasında bir sonuç döndürmesi gerekir. Her zaman özel bir tanımlamak mümkündür ancak <xref:System.Activities.OutArgument%601> kullanmayı önerilen bu amaç için bir etkinliğe bağlı <xref:System.Activities.Activity%601>, ya da türetilen <xref:System.Activities.CodeActivity%601> veya <xref:System.Activities.NativeActivity%601>. Bu temel sınıfların her bir <xref:System.Activities.OutArgument%601> adlı dönüş değeri için etkinliğinizi kullanan sonucu. Tek bir sonuç etkinliği döndürülmesi gereken yalnızca bir sonuç etkinlikleri yalnızca kullanılmalıdır; birden çok sonuç döndürülmesi gerekiyorsa ayrı <xref:System.Activities.OutArgument%601> üyeleri bunun yerine kullanılmalıdır.
