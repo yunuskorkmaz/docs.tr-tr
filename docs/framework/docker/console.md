@@ -1,84 +1,84 @@
 ---
-title: Docker çalışan konsol uygulamaları
-description: Varolan bir .NET Framework konsol uygulaması almak ve bir Windows Docker kapsayıcısı çalıştırmak öğrenin.
+title: Docker'da çalışan konsol uygulamaları
+description: Mevcut bir .NET Framework konsol uygulamasını alıp Windows Docker kapsayıcısında çalıştırmayı öğrenin.
 author: spboyer
 ms.date: 09/28/2016
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: 266c439163888962075f804a0f5651a8e7d83151
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f5a38ac63db969a58e920ea79bf4bf10bcfcf64f
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392690"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46485619"
 ---
-# <a name="running-console-applications-in-windows-containers"></a>Windows kapsayıcılarında çalışan konsol uygulamaları
+# <a name="running-console-applications-in-windows-containers"></a>Windows kapsayıcıları içinde çalışan konsol uygulamaları
 
-Konsol uygulamaları birçok amaçlar için kullanılır; Basit durum uzun süre çalışan belge görüntüsüne sorgulamasını görevleri işleniyor. Herhangi bir durumda, başlatılması ve bu uygulamaları ölçeklendirme olanağı karşılanmadığı donanım satın almalar, başlatma süreleri veya birden çok örneği çalıştıran kısıtlamalarla.
+Konsol uygulamaları, birçok farklı amaçla kullanılır; Basit bir durum için uzun süre çalışan görüntüsünün sorgulamasını işleme görevlerini. Herhangi bir durumda, başlatın ve bu uygulamaları ölçeklendirme olanağı karşılanmadığı sınırlamaları donanım satın almalar, başlangıç sürelerinde veya birden fazla örneği çalışıyor.
 
-Docker ve Windows Server kullanmak için konsol uygulamaları taşıma kapsayıcıları sağlar işlem ve ardından kapatma düzgün bir şekilde gerçekleştirmek üzere bunları etkinleştirme temiz bir durumdan bu uygulamaları başlatmak için. Bu konuda, bir Windows konsol uygulaması taşımak için gerekli olan adımları kapsayıcı temel ve bunu bir PowerShell Betiği kullanılarak gösterir.
+Docker ve Windows Server'ı kullanmak için konsol uygulamaları taşıma kapsayıcıları tanır bu uygulamaları etkinleştirme işlemi ve ardından kapatma düzgün bir şekilde gerçekleştirmek için temiz bir durumdan başlatmak için. Bu konuda, bir Windows konsol uygulamaya taşımak için gerekli olan adımları kapsayıcı tabanlı ve bir PowerShell Betiği kullanarak gösterilir.
 
-Örnek konsol uygulaması bağımsız değişken, bir soru bu durumda alır ve rastgele bir yanıt döndüren basit bir örnektir. Bu sürebilir bir `customer_id` ve bunların vergileri işlem veya için bir küçük resim oluşturma bir `image_url` bağımsız değişkeni.
+Örnek konsol uygulaması, bu durumda bir soru bağımsız değişken alır ve rastgele bir yanıt döndürür basit bir örnektir. Bu sürebilir bir `customer_id` ve bunların vergileri işlemek veya ilişkin bir küçük resim oluşturma bir `image_url` bağımsız değişken.
 
-Yanıt yanı sıra `Environment.MachineName` uygulama yerel olarak ve bir Windows kapsayıcıda çalışan arasındaki farkı göstermek için yanıta eklenir. Uygulamayı yerel olarak çalışırken, yerel makine adınızı döndürülmelidir ve bir Windows kapsayıcısında; çalıştırırken kapsayıcı oturum kimliği döndürülür.
+Yanıt yanı sıra `Environment.MachineName` yerel olarak ve bir Windows kapsayıcı uygulaması çalıştıran arasındaki farkı göstermek için yanıta eklenir. Uygulamayı yerel olarak çalışırken, yerel makine adını döndürülmesi gerektiğini ve bir Windows kapsayıcısı içinde çalışırken kapsayıcı oturum kimliği döndürülür.
 
-[Tam örnek](https://github.com/dotnet/samples/tree/master/framework/docker/ConsoleRandomAnswerGenerator) github'da dotnet/samples Havuzda kullanılabilir. Yükleme yönergeleri için bkz: [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+[Tam bir örnek](https://github.com/dotnet/samples/tree/master/framework/docker/ConsoleRandomAnswerGenerator) dotnet/samples deposuna github'da mevcuttur. Yükleme yönergeleri için bkz: [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-Bir kapsayıcı uygulamanıza taşıma çalışmaya başlamadan önce koşulları bazı Docker ile ilgili bilgi sahibi olmanız gerekir.
+Uygulamanız bir kapsayıcıya taşıma çalışmaya başlamadan önce koşulları bazı Docker ile ilgili bilgi sahibi olmanız gerekir.
 
-> A *Docker görüntü* ortam için işletim sistemi (OS), sistem bileşenleri ve uygulamaları dahil olmak üzere, çalışan bir kapsayıcı tanımlar salt okunur bir şablondur.
+> A *Docker görüntüsü* ortam için işletim sistemi (OS), sistem bileşenleri ve uygulamaları dahil olmak üzere, çalışan bir kapsayıcı tanımlar salt okunur bir şablondur.
 
-Görüntüleri temel bir görüntüden oluşan Docker görüntülerinin bir önemli özelliklerinden biridir. Her yeni görüntüyü küçük bir özellikler kümesi için varolan bir görüntü ekler. 
+Docker görüntüleri bir önemli özelliği, görüntüleri bir temel görüntüden oluşur. Her yeni görüntüyü küçük bir özellik kümesi için mevcut bir görüntü ekler. 
 
-> A *Docker kapsayıcısı* bir görüntü, çalışan bir örneğidir. 
+> A *Docker kapsayıcısı* görüntü, çalışan bir örneğidir. 
 
-Aynı görüntüyü birçok kapsayıcılarında çalıştırarak uygulama ölçeklendirme.
-Kavramsal olarak, bu aynı uygulamayı birden çok ana çalıştırmaya benzer.
+Bir uygulama, çok sayıda kapsayıcı içinde aynı görüntü çalıştırarak ölçeklendirin.
+Kavramsal olarak, bu birden çok konak aynı uygulamayı çalıştırmaya benzer.
 
-Docker mimarisi hakkında daha fazla okuyarak bilgi [Docker genel bakış](https://docs.docker.com/engine/understanding-docker/) Docker sitesinde. 
+Okuyarak Docker mimarisi hakkında daha fazla bilgi edinebilirsiniz [Docker'a genel bakış](https://docs.docker.com/engine/understanding-docker/) Docker sitesinde. 
 
-Konsol uygulamanızın taşıma birkaç adım bir konudur.
+Konsol uygulamanızı taşımak birkaç adım bir konudur.
 
-1. [Uygulama oluşturma](#building-the-application)
-1. [Görüntüsü için bir Dockerfile oluşturma](#creating-the-dockerfile)
-1. [Derleme ve Docker kapsayıcısı çalıştırma işlemi](#creating-the-image)
+1. [Uygulamayı oluşturun](#building-the-application)
+1. [Görüntü için bir Dockerfile'ı oluşturma](#creating-the-dockerfile)
+1. [Derleme ve Docker kapsayıcısını çalıştırma işlemi](#creating-the-image)
 
 ## <a name="prerequisites"></a>Önkoşullar
-Windows kapsayıcıları üzerinde desteklenir [Windows 10 Anniversary güncelleştirme](https://www.microsoft.com/en-us/software-download/windows10/) veya [Windows Server 2016](https://www.microsoft.com/en-us/cloud-platform/windows-server).
+Windows kapsayıcıları desteklenmektedir [Windows 10 Yıldönümü güncelleştirmesi](https://www.microsoft.com/en-us/software-download/windows10/) veya [Windows Server 2016](https://www.microsoft.com/en-us/cloud-platform/windows-server).
 
 > [!NOTE]
->Windows Server 2016 kullanıyorsanız, Docker için Windows Installer özelliğini etkinleştirmemeniz beri kapsayıcıları el ile etkinleştirmeniz gerekir. Tüm güncelleştirmeler için işletim sistemi çalıştıran ve makalesindeki yönergeleri izleyin emin olun [kapsayıcı konak dağıtımı](https://msdn.microsoft.com/virtualization/windowscontainers/deployment/deployment) kapsayıcıları ve Docker özellikleri yüklemek için makale.
+>Windows Server 2016'yı kullanıyorsanız, Docker için Windows Yükleyici özelliği etkin değildir bu yana kapsayıcılar el ile etkinleştirmeniz gerekir. Tüm güncelleştirmeler için işletim sistemi çalıştıran ve ardından yönergeleri izleyin emin [kapsayıcı konak dağıtımı](https://msdn.microsoft.com/virtualization/windowscontainers/deployment/deployment) kapsayıcıları ve Docker özellikleri yüklemek için makale.
 
-Docker için Windows, sürüm 1.12 desteklemek için Beta 26 ya da daha yüksek Windows kapsayıcıları olması gerekir. Varsayılan olarak, Linux tabanlı kapsayıcıları Docker sağlar; geçiş Windows kapsayıcılara sistem tepsisindeki Docker simgesini sağ tıklayarak ve seçin **geçiş Windows kapsayıcılara**. Docker değiştirme işlemi çalışacak ve yeniden başlatma gerekli olabilir.
+Docker için Windows, sürüm 1.12 desteklemek için Beta 26 veya üzeri Windows kapsayıcıları olması gerekir. Varsayılan olarak, Docker, Linux tabanlı kapsayıcılar sağlar; Windows kapsayıcıları için Docker sistem tepsisindeki simgeye sağ tıklayarak geçin ve seçin **Windows kapsayıcılarına geç**. Docker değiştirme işlemi çalışır ve bir yeniden başlatma gerekebilir.
 
 ![Windows kapsayıcıları](./media/console/SwitchContainer.png)
 
 ## <a name="building-the-application"></a>Uygulama oluşturma
-Yükleyici, FTP veya dosya paylaşımı konsol uygulamaları genellikle dağıtılmış dağıtım. Bir kapsayıcıya dağıtırken varlıklar derlenir ve Docker görüntü oluşturulduğunda, kullanılabilir bir konuma hazırlanan gerekir.
+Yükleyici, FTP veya dosya paylaşımı konsol uygulamaları genellikle dağıtılmış dağıtım. Bir kapsayıcıya dağıtılırken varlıkları derlenir ve Docker görüntüsü oluşturulduğunda kullanılabilecek bir konuma aşamalı gerekir.
 
-İçinde *build.ps1*, komut dosyası kullanan [MSBuild](/visualstudio/msbuild/msbuild) varlıkları oluşturma görevini tamamlamak için uygulamayı derlemek için. Gerekli varlıklar sonlandırmaya MSBuild için geçirilen birkaç parametre vardır. Proje dosyası veya derlenecek çözüm, konum adı çıkış ve son olarak yapılandırma (sürüm ya da hata ayıklama).
+İçinde *build.ps1*, betikte [MSBuild](/visualstudio/msbuild/msbuild) varlıkları oluşturma görevini tamamlamak için bir uygulama derlemek için. Gerekli varlıkları sonlandırmak için MSBuild'e geçirilen birkaç parametre yok. Proje dosyası veya derlenecek çözüm, konum adı için çıktı ve son olarak yapılandırma (yayınlama veya hata ayıklama).
 
-Çağrısında `Invoke-MSBuild` `OutputPath` ayarlanır **yayımlama** ve `Configuration` kümesine **sürüm**. 
+Çağrısında `Invoke-MSBuild` `OutputPath` ayarlanır **yayımlama** ve `Configuration` kümesine **yayın**. 
 
 ```
 function Invoke-MSBuild ([string]$MSBuildPath, [string]$MSBuildParameters) {
     Invoke-Expression "$MSBuildPath $MSBuildParameters"
 }
 
-Invoke-MSBuild -MSBuildPath "MSBuild.exe" -MSBuildParameters ".\ConsoleRandomAnswerGenerator.csproj /p:OutputPath=.\publish /p:Configuration=Release"
+Invoke-MSBuild -MSBuildPath "MSBuild.exe" -MSBuildParameters ".\ConsoleRandomAnswerGenerator.csproj -p:OutputPath=.\publish -p:Configuration=Release"
 ```
 
-## <a name="creating-the-dockerfile"></a>Dockerfile oluşturma
-.NET Framework uygulama Konsolu için kullanılan temel görüntü `microsoft/windowsservercore`, genel kullanıma açık üzerinde [Docker hub'a](https://hub.docker.com/r/microsoft/windowsservercore/). Temel görüntü en az bir Windows Server 2016, .NET Framework 4.6.2 yüklemesini içerir ve Windows kapsayıcıları için temel işletim sistemi görüntüsü görev yapar.
+## <a name="creating-the-dockerfile"></a>Dockerfile'ı oluşturma
+.NET Framework uygulamasına Konsolu için kullanılan temel görüntü `microsoft/windowsservercore`, üzerinde genel kullanıma açık [Docker Hub](https://hub.docker.com/r/microsoft/windowsservercore/). Temel görüntü en az bir Windows Server 2016, .NET Framework 4.6.2 yüklenmesini içerir ve Windows kapsayıcıları için temel işletim sistemi görüntüsü görev yapar.
 
 ```
 FROM microsoft/windowsservercore
 ADD publish/ /
 ENTRYPOINT ConsoleRandomAnswerGenerator.exe
 ```
-Temel görüntü kullanarak Dockerfile ilk satırı atar [ `FROM` ](https://docs.docker.com/engine/reference/builder/#/from) yönergesi. İleri [ `ADD` ](https://docs.docker.com/engine/reference/builder/#/add) dosyasında uygulama varlıklarından kopyalar **yayımlama** klasörü kök klasöre kapsayıcı ve son; ayarı [ `ENTRYPOINT` ](https://docs.docker.com/engine/reference/builder/#/entrypoint) Görüntü durumlarını bu kapsayıcı başlatıldığında, çalıştırılacak komut veya uygulamadır. 
+Temel görüntüyü kullanarak Dockerfile ilk satırı atayan [ `FROM` ](https://docs.docker.com/engine/reference/builder/#/from) yönergesi. Ardından, [ `ADD` ](https://docs.docker.com/engine/reference/builder/#/add) dosyasında uygulama varlıklarından kopyalar **yayımlama** klasörünü kök klasöre kapsayıcı ve son; ayarı [ `ENTRYPOINT` ](https://docs.docker.com/engine/reference/builder/#/entrypoint) Görüntü durumlarını söz konusu komut veya kapsayıcı başlatıldığında çalıştırılacak uygulama budur. 
 
 ## <a name="creating-the-image"></a>Görüntü oluşturma
-Docker görüntü oluşturmak için aşağıdaki kodu eklenen *build.ps1* komut dosyası. Komut dosyasını çalıştırdığınızda `console-random-answer-generator` görüntü tanımlanan MSBuild gelen derlenmiş varlıklar kullanılarak oluşturulan [uygulama oluşturma](#building-the-application) bölümü.
+Docker görüntüsünü oluşturmak için aşağıdaki kodu eklenir *build.ps1* betiği. Betiği çalıştırdığınızda `console-random-answer-generator` görüntü MSBuild içinde tanımlanan gelen derlenmiş varlıklar kullanılarak oluşturulan [uygulama oluşturma](#building-the-application) bölümü.
 
 ```powershell
 $ImageName="console-random-answer-generator"
@@ -91,9 +91,9 @@ function Invoke-Docker-Build ([string]$ImageName, [string]$ImagePath, [string]$D
 Invoke-Docker-Build -ImageName $ImageName -ImagePath "."
 ```
 
-Komut dosyası kullanarak çalıştırmak `.\build.ps1` PowerShell komut isteminde.
+Betik kullanarak çalıştırma `.\build.ps1` PowerShell komut isteminde.
 
-Yapı tamamlandığında kullanarak `docker images` komutu bir komut satırından veya PowerShell komut isteminde; görüntü oluşturulan ve çalıştırılmaya hazır olduğunu görürsünüz.
+Derleme tamamlandığında kullanarak `docker images` komutu bir komut satırı ya da PowerShell isteminden; görüntü oluşturulur ve çalıştırılmaya hazır olduğunu görürsünüz.
 
 ```
 REPOSITORY                        TAG                 IMAGE ID            CREATED             SIZE
@@ -101,7 +101,7 @@ console-random-answer-generator   latest              8f7c807db1b5        8 seco
 ```
 
 ## <a name="running-the-container"></a>Kapsayıcı çalıştırma
-Kapsayıcı Docker komutları kullanarak komut satırından başlatabilirsiniz.
+Kapsayıcı Docker komutlarını kullanarak komut satırından başlayabilirsiniz.
 
 ```
 docker run console-random-answer-generator "Are you a square container?"
@@ -113,23 +113,23 @@ docker run console-random-answer-generator "Are you a square container?"
 The answer to your question: 'Are you a square container?' is Concentrate and ask again on (70C3D48F4343)
 ```
 
-Çalıştırırsanız `docker ps -a` komutunu Powershell'den, kapsayıcı hala var olduğundan görebilirsiniz.
+Çalıştırırsanız `docker ps -a` komutunu Powershell'den kapsayıcının hala olduğunu görebilirsiniz.
 
 ```
 CONTAINER ID        IMAGE                             COMMAND                  CREATED             STATUS                          
 70c3d48f4343        console-random-answer-generator   "cmd /S /C ConsoleRan"   2 minutes ago       Exited (0) About a minute ago      
 ```
 
-Durum sütununda "yaklaşık bir dakika önce", gösterir uygulama tam ve kapatılabilir. Komutu yüzlerce kez çalıştırırsanız kapsayıcıları sol statik yapması ile yüzlerce olacaktır. İşlerini yapmak için ideal işlemi başına senaryoda oldu ve kapatma veya temizleme. Bu iş akışı gerçekleştirmek için ekleme `--rm` için seçenek `docker run` komutu kapsayıcı kaldırmak hemen `Exited` sinyali aldı.
+Durum sütununda "yaklaşık bir dakika önce", gösterir uygulama tam ve kapatılabilir. Komutu yüzlerce kez çalıştırırsanız yapması ile kapsayıcıları sol statik bir yüz olacaktır. Başlangıç senaryosunda, işlerini gerçekleştirmek için ideal işlemin tamamlandığını ve kapatma veya temizleme. O iş akışını gerçekleştirmek için ekleme `--rm` seçeneğini `docker run` komutu, kapsayıcı kaldırılır hemen sonra `Exited` sinyali aldı.
 
 ```
 docker run --rm console-random-answer-generator "Are you a square container?"
 ```
 
-Bu seçenekle komutu çalıştırmak ve çıktısını arayan `docker ps -a` dikkat edin; komutu kapsayıcı kimliği ( `Environment.MachineName`) listesinde değil.
+Bu seçenek ile çalıştırarak ve ardından çıktısına arayarak `docker ps -a` komut; dikkat kapsayıcı kimliği ( `Environment.MachineName`) listesinde değil.
 
 ### <a name="running-the-container-using-powershell"></a>PowerShell kullanarak kapsayıcı çalıştırma
-Örnek proje dosyalarında bulunmaktadır bir *run.ps1* bağımsız değişkenleri kabul uygulamayı çalıştırmak için PowerShell kullanma örneği verilmiştir.
+Örnek proje dosyalarında olduğu da bir *run.ps1* bağımsız değişkenleri kabul eden uygulamayı çalıştırmak için PowerShell kullanma örneği verilmiştir.
 
 Çalıştırmak için PowerShell'i açın ve aşağıdaki komutu kullanın:
 
@@ -138,4 +138,4 @@ Bu seçenekle komutu çalıştırmak ve çıktısını arayan `docker ps -a` dik
 ```
 
 ## <a name="summary"></a>Özet
-Yalnızca bir Dockerfile ekleme ve uygulama yayımlama, .NET Framework'te konsol uygulamaları containerize ve artık birden çok örneği, temiz Başlat ve Durdur ve daha fazla Windows Server 2016 yetenekleri herhangi yapmadan çalıştıran avantajlarından yararlanmak uygulama kodu hiç değiştirir.
+Yalnızca bir Dockerfile ekleme ve uygulama yayımlama, .NET Framework konsol uygulamalarınızı kapsayıcılı hale getirme ve artık birden çok örneği, temiz bir başlangıç ve durdurma ve daha fazla Windows Server 2016 özellikleri, herhangi yapmadan çalıştıran avantajından faydalanın hiç uygulama koduna değiştirir.
