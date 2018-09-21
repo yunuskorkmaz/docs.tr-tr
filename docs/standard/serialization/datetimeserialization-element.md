@@ -7,19 +7,19 @@ helpviewer_keywords:
 - <dateTimeSerialization> element
 ms.assetid: 90fda55c-7730-41e9-bc4b-6423a4b920af
 ms.openlocfilehash: cd275cdbc51c86b1d774058db839c38349b319a6
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46324509"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46532406"
 ---
-# <a name="ltdatetimeserializationgt-element"></a><span data-ttu-id="b4610-102">&lt;dateTimeSerialization&gt; öğesi</span><span class="sxs-lookup"><span data-stu-id="b4610-102">&lt;dateTimeSerialization&gt; Element</span></span>
-<span data-ttu-id="b4610-103">Serileştirme modu belirler <xref:System.DateTime> nesneleri.</span><span class="sxs-lookup"><span data-stu-id="b4610-103">Determines the serialization mode of <xref:System.DateTime> objects.</span></span>  
+# <a name="ltdatetimeserializationgt-element"></a><span data-ttu-id="87154-102">&lt;dateTimeSerialization&gt; öğesi</span><span class="sxs-lookup"><span data-stu-id="87154-102">&lt;dateTimeSerialization&gt; Element</span></span>
+<span data-ttu-id="87154-103">Serileştirme modu belirler <xref:System.DateTime> nesneleri.</span><span class="sxs-lookup"><span data-stu-id="87154-103">Determines the serialization mode of <xref:System.DateTime> objects.</span></span>  
   
- <span data-ttu-id="b4610-104">\<Yapılandırma ></span><span class="sxs-lookup"><span data-stu-id="b4610-104">\<configuration></span></span>  
-<span data-ttu-id="b4610-105">\<dateTimeSerialization ></span><span class="sxs-lookup"><span data-stu-id="b4610-105">\<dateTimeSerialization></span></span>  
+ <span data-ttu-id="87154-104">\<Yapılandırma ></span><span class="sxs-lookup"><span data-stu-id="87154-104">\<configuration></span></span>  
+<span data-ttu-id="87154-105">\<dateTimeSerialization ></span><span class="sxs-lookup"><span data-stu-id="87154-105">\<dateTimeSerialization></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b4610-106">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b4610-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="87154-106">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="87154-106">Syntax</span></span>  
   
 ```xml  
 <dateTimeSerialization  
@@ -27,35 +27,35 @@ ms.locfileid: "46324509"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="b4610-107">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="b4610-107">Attributes and Elements</span></span>  
- <span data-ttu-id="b4610-108">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="b4610-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="87154-107">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="87154-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="87154-108">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="87154-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="b4610-109">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="b4610-109">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="87154-109">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="87154-109">Attributes</span></span>  
   
-|<span data-ttu-id="b4610-110">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="b4610-110">Attributes</span></span>|<span data-ttu-id="b4610-111">Açıklama</span><span class="sxs-lookup"><span data-stu-id="b4610-111">Description</span></span>|  
+|<span data-ttu-id="87154-110">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="87154-110">Attributes</span></span>|<span data-ttu-id="87154-111">Açıklama</span><span class="sxs-lookup"><span data-stu-id="87154-111">Description</span></span>|  
 |----------------|-----------------|  
-|`mode`|<span data-ttu-id="b4610-112">İsteğe bağlı.</span><span class="sxs-lookup"><span data-stu-id="b4610-112">Optional.</span></span> <span data-ttu-id="b4610-113">Serileştirme modunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="b4610-113">Specifies the serialization mode.</span></span> <span data-ttu-id="b4610-114">Birine ayarlayın <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode> değerleri.</span><span class="sxs-lookup"><span data-stu-id="b4610-114">Set to one of the <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode> values.</span></span> <span data-ttu-id="b4610-115">Varsayılan değer **gidiş dönüş**.</span><span class="sxs-lookup"><span data-stu-id="b4610-115">The default is **RoundTrip**.</span></span>|  
+|`mode`|<span data-ttu-id="87154-112">İsteğe bağlı.</span><span class="sxs-lookup"><span data-stu-id="87154-112">Optional.</span></span> <span data-ttu-id="87154-113">Serileştirme modunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="87154-113">Specifies the serialization mode.</span></span> <span data-ttu-id="87154-114">Birine ayarlayın <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode> değerleri.</span><span class="sxs-lookup"><span data-stu-id="87154-114">Set to one of the <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode> values.</span></span> <span data-ttu-id="87154-115">Varsayılan değer **gidiş dönüş**.</span><span class="sxs-lookup"><span data-stu-id="87154-115">The default is **RoundTrip**.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="b4610-116">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="b4610-116">Child Elements</span></span>  
- <span data-ttu-id="b4610-117">Yok.</span><span class="sxs-lookup"><span data-stu-id="b4610-117">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="87154-116">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="87154-116">Child Elements</span></span>  
+ <span data-ttu-id="87154-117">Yok.</span><span class="sxs-lookup"><span data-stu-id="87154-117">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="b4610-118">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="b4610-118">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="87154-118">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="87154-118">Parent Elements</span></span>  
   
-|<span data-ttu-id="b4610-119">Öğe</span><span class="sxs-lookup"><span data-stu-id="b4610-119">Element</span></span>|<span data-ttu-id="b4610-120">Açıklama</span><span class="sxs-lookup"><span data-stu-id="b4610-120">Description</span></span>|  
+|<span data-ttu-id="87154-119">Öğe</span><span class="sxs-lookup"><span data-stu-id="87154-119">Element</span></span>|<span data-ttu-id="87154-120">Açıklama</span><span class="sxs-lookup"><span data-stu-id="87154-120">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="b4610-121">dizileştirme mekanizmasını System.xml.Serialization</span><span class="sxs-lookup"><span data-stu-id="b4610-121">system.xml.serialization</span></span>|<span data-ttu-id="b4610-122">XML serileştirme denetlemek için üst düzey öğe.</span><span class="sxs-lookup"><span data-stu-id="b4610-122">The top-level element for controlling XML serialization.</span></span>|  
+|<span data-ttu-id="87154-121">dizileştirme mekanizmasını System.xml.Serialization</span><span class="sxs-lookup"><span data-stu-id="87154-121">system.xml.serialization</span></span>|<span data-ttu-id="87154-122">XML serileştirme denetlemek için üst düzey öğe.</span><span class="sxs-lookup"><span data-stu-id="87154-122">The top-level element for controlling XML serialization.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="b4610-123">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="b4610-123">Remarks</span></span>  
- <span data-ttu-id="b4610-124">Sürümlerinde 1.0, 1.1, 2.0 ve sonraki sürümlerinde bu özelliği ayarlandığında .NET Framework, **yerel**, <xref:System.DateTime> nesneler her zaman yerel saat biçimlendirilmiş.</span><span class="sxs-lookup"><span data-stu-id="b4610-124">In versions 1.0, 1.1, 2.0 and later versions of the .NET Framework, when this property is set to **Local**, <xref:System.DateTime> objects are always formatted as the local time.</span></span> <span data-ttu-id="b4610-125">Diğer bir deyişle, yerel saat dilimi bilgilerini her zaman serileştirilmiş verilerle birlikte gelir.</span><span class="sxs-lookup"><span data-stu-id="b4610-125">That is, local time zone information is always included with the serialized data.</span></span> <span data-ttu-id="b4610-126">Bu özellik kümesine **yerel** .NET Framework'ün önceki sürümlerle uyumluluk sağlamak için.</span><span class="sxs-lookup"><span data-stu-id="b4610-126">Set this property to **Local** to ensure compatibility with older versions of the .NET Framework.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="87154-123">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="87154-123">Remarks</span></span>  
+ <span data-ttu-id="87154-124">Sürümlerinde 1.0, 1.1, 2.0 ve sonraki sürümlerinde bu özelliği ayarlandığında .NET Framework, **yerel**, <xref:System.DateTime> nesneler her zaman yerel saat biçimlendirilmiş.</span><span class="sxs-lookup"><span data-stu-id="87154-124">In versions 1.0, 1.1, 2.0 and later versions of the .NET Framework, when this property is set to **Local**, <xref:System.DateTime> objects are always formatted as the local time.</span></span> <span data-ttu-id="87154-125">Diğer bir deyişle, yerel saat dilimi bilgilerini her zaman serileştirilmiş verilerle birlikte gelir.</span><span class="sxs-lookup"><span data-stu-id="87154-125">That is, local time zone information is always included with the serialized data.</span></span> <span data-ttu-id="87154-126">Bu özellik kümesine **yerel** .NET Framework'ün önceki sürümlerle uyumluluk sağlamak için.</span><span class="sxs-lookup"><span data-stu-id="87154-126">Set this property to **Local** to ensure compatibility with older versions of the .NET Framework.</span></span>  
   
- <span data-ttu-id="b4610-127">Sürüm 2.0 ve bu özellik kümesine sahip sonraki sürümlerinde .NET Framework'ün **gidiş dönüş**, <xref:System.DateTime> nesneler incelenebilen yerel, UTC veya belirtilmeyen bir saat dilimi olup olmadığını belirlemek için.</span><span class="sxs-lookup"><span data-stu-id="b4610-127">In version 2.0 and later versions of the .NET Framework that have this property set to **Roundtrip**, <xref:System.DateTime> objects are examined to determine whether they are in the local, UTC, or an unspecified time zone.</span></span> <span data-ttu-id="b4610-128"><xref:System.DateTime> Nesneleri sonra bu bilgileri korunur bir şekilde serileştirilmiş.</span><span class="sxs-lookup"><span data-stu-id="b4610-128">The <xref:System.DateTime> objects are then serialized in such a way that this information is preserved.</span></span> <span data-ttu-id="b4610-129">Bu varsayılan davranış ve eski sürümleri framework ile iletişim kuran değil tüm yeni uygulamalar için önerilen davranışı.</span><span class="sxs-lookup"><span data-stu-id="b4610-129">This is the default behavior and is the recommended behavior for all new applications that do not communicate with older versions of the framework.</span></span>  
+ <span data-ttu-id="87154-127">Sürüm 2.0 ve bu özellik kümesine sahip sonraki sürümlerinde .NET Framework'ün **gidiş dönüş**, <xref:System.DateTime> nesneler incelenebilen yerel, UTC veya belirtilmeyen bir saat dilimi olup olmadığını belirlemek için.</span><span class="sxs-lookup"><span data-stu-id="87154-127">In version 2.0 and later versions of the .NET Framework that have this property set to **Roundtrip**, <xref:System.DateTime> objects are examined to determine whether they are in the local, UTC, or an unspecified time zone.</span></span> <span data-ttu-id="87154-128"><xref:System.DateTime> Nesneleri sonra bu bilgileri korunur bir şekilde serileştirilmiş.</span><span class="sxs-lookup"><span data-stu-id="87154-128">The <xref:System.DateTime> objects are then serialized in such a way that this information is preserved.</span></span> <span data-ttu-id="87154-129">Bu varsayılan davranış ve eski sürümleri framework ile iletişim kuran değil tüm yeni uygulamalar için önerilen davranışı.</span><span class="sxs-lookup"><span data-stu-id="87154-129">This is the default behavior and is the recommended behavior for all new applications that do not communicate with older versions of the framework.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b4610-130">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b4610-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="87154-130">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="87154-130">See also</span></span>
 
 - <xref:System.DateTime>  
 - <xref:System.Xml.Serialization.XmlSchemaImporter>  
 - <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>  
-- [<span data-ttu-id="b4610-131">Yapılandırma Dosyası Şeması</span><span class="sxs-lookup"><span data-stu-id="b4610-131">Configuration File Schema</span></span>](../../../docs/framework/configure-apps/file-schema/index.md)  
-- [<span data-ttu-id="b4610-132">\<schemaImporterExtensions > öğesi</span><span class="sxs-lookup"><span data-stu-id="b4610-132">\<schemaImporterExtensions> Element</span></span>](../../../docs/standard/serialization/schemaimporterextensions-element.md)  
-- [<span data-ttu-id="b4610-133">\<Ekle > öğesi için \<schemaImporterExtensions ></span><span class="sxs-lookup"><span data-stu-id="b4610-133">\<add> Element for \<schemaImporterExtensions></span></span>](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)  
-- [<span data-ttu-id="b4610-134">\<System.xml.Serialization > öğesi</span><span class="sxs-lookup"><span data-stu-id="b4610-134">\<system.xml.serialization> Element</span></span>](../../../docs/standard/serialization/system-xml-serialization-element.md)
+- [<span data-ttu-id="87154-131">Yapılandırma Dosyası Şeması</span><span class="sxs-lookup"><span data-stu-id="87154-131">Configuration File Schema</span></span>](../../../docs/framework/configure-apps/file-schema/index.md)  
+- [<span data-ttu-id="87154-132">\<schemaImporterExtensions > öğesi</span><span class="sxs-lookup"><span data-stu-id="87154-132">\<schemaImporterExtensions> Element</span></span>](../../../docs/standard/serialization/schemaimporterextensions-element.md)  
+- [<span data-ttu-id="87154-133">\<Ekle > öğesi için \<schemaImporterExtensions ></span><span class="sxs-lookup"><span data-stu-id="87154-133">\<add> Element for \<schemaImporterExtensions></span></span>](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)  
+- [<span data-ttu-id="87154-134">\<System.xml.Serialization > öğesi</span><span class="sxs-lookup"><span data-stu-id="87154-134">\<system.xml.serialization> Element</span></span>](../../../docs/standard/serialization/system-xml-serialization-element.md)

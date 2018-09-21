@@ -13,26 +13,35 @@ helpviewer_keywords:
 ms.assetid: c5f786a0-969b-4f14-9f02-e77c3384d9af
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3650de934cb3d2940d0e8e971d03aff856bddfd7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4142c3f12cc5a0e2277cc8dba28a281d5cf0ba55
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515485"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46540719"
 ---
-# <a name="how-to-view-the-contents-of-the-global-assembly-cache"></a><span data-ttu-id="91ad6-102">Nasıl yapılır: Genel Derleme Önbelleğinin İçeriğini Görüntüleme</span><span class="sxs-lookup"><span data-stu-id="91ad6-102">How to: View the Contents of the Global Assembly Cache</span></span>
-<span data-ttu-id="91ad6-103">Kullanım [Genel Derleme Önbelleği aracını (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) genel derleme önbelleğinin içeriğini görüntülemek için.</span><span class="sxs-lookup"><span data-stu-id="91ad6-103">Use the [Global Assembly Cache tool (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) to view the contents of the global assembly cache.</span></span>  
-  
-### <a name="to-view-a-list-of-the-assemblies-in-the-global-assembly-cache"></a><span data-ttu-id="91ad6-104">Genel bütünleştirilmiş kod önbelleğinde derlemelerin bir listesini görüntülemek için</span><span class="sxs-lookup"><span data-stu-id="91ad6-104">To view a list of the assemblies in the global assembly cache</span></span>  
-  
-1.  <span data-ttu-id="91ad6-105">Konumunda [Visual Studio komut istemi](../../../docs/framework/tools/developer-command-prompt-for-vs.md), aşağıdaki komutu yazın:</span><span class="sxs-lookup"><span data-stu-id="91ad6-105">At the [Visual Studio command prompt](../../../docs/framework/tools/developer-command-prompt-for-vs.md), type the following command:</span></span>  
-  
-     <span data-ttu-id="91ad6-106">**Gacutil -l** </span><span class="sxs-lookup"><span data-stu-id="91ad6-106">**gacutil -l** </span></span>  
-     <span data-ttu-id="91ad6-107">veya</span><span class="sxs-lookup"><span data-stu-id="91ad6-107">-or-</span></span>  
-    <span data-ttu-id="91ad6-108">**Gacutil/l**</span><span class="sxs-lookup"><span data-stu-id="91ad6-108">**gacutil /l**</span></span>  
-  
- <span data-ttu-id="91ad6-109">.NET Framework'ün önceki sürümlerindeki [Shfusion.dll](https://msdn.microsoft.com/library/0d9464cf-ddba-4ca9-bbec-f678fb58f380) Windows kabuk uzantısı, genel derleme önbelleğini dosya Gezgini'nde görüntülemek etkin.</span><span class="sxs-lookup"><span data-stu-id="91ad6-109">In earlier versions of the .NET Framework, the [Shfusion.dll](https://msdn.microsoft.com/library/0d9464cf-ddba-4ca9-bbec-f678fb58f380) Windows shell extension enabled you to view the global assembly cache in File Explorer.</span></span> <span data-ttu-id="91ad6-110">İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], Shfusion.dll kullanımdan kalkmıştır.</span><span class="sxs-lookup"><span data-stu-id="91ad6-110">Beginning with the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], Shfusion.dll is obsolete.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="91ad6-111">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="91ad6-111">See Also</span></span>  
- [<span data-ttu-id="91ad6-112">Bütünleştirilmiş Kodlar ve Genel Derleme Önbelleği ile Çalışma</span><span class="sxs-lookup"><span data-stu-id="91ad6-112">Working with Assemblies and the Global Assembly Cache</span></span>](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)  
- [<span data-ttu-id="91ad6-113">Gacutil.exe (Genel Derleme Önbelleği Aracı)</span><span class="sxs-lookup"><span data-stu-id="91ad6-113">Gacutil.exe (Global Assembly Cache Tool)</span></span>](../../../docs/framework/tools/gacutil-exe-gac-tool.md)
+# <a name="how-to-view-the-contents-of-the-global-assembly-cache"></a><span data-ttu-id="8be97-102">Nasıl yapılır: genel derleme önbelleğinin içeriğini görüntüleme</span><span class="sxs-lookup"><span data-stu-id="8be97-102">How to: View the contents of the global assembly cache</span></span>
+
+<span data-ttu-id="8be97-103">Kullanım [Genel Derleme Önbelleği aracını (gacutil.exe)](../tools/gacutil-exe-gac-tool.md) Genel Derleme Önbelleği (GAC) içeriğini görüntülemek için.</span><span class="sxs-lookup"><span data-stu-id="8be97-103">Use the [global assembly cache tool (gacutil.exe)](../tools/gacutil-exe-gac-tool.md) to view the contents of the global assembly cache (GAC).</span></span>
+
+## <a name="view-the-assemblies-in-the-gac"></a><span data-ttu-id="8be97-104">Derlemeleri GAC'ye görüntüleyin</span><span class="sxs-lookup"><span data-stu-id="8be97-104">View the assemblies in the GAC</span></span>
+
+<span data-ttu-id="8be97-105">Genel derleme önbelleğinde derlemelerin bir listesini görmek için [Visual Studio için geliştirici komut istemi](../tools/developer-command-prompt-for-vs.md)ve ardından aşağıdaki komutu girin:</span><span class="sxs-lookup"><span data-stu-id="8be97-105">To view a list of the assemblies in the global assembly cache, open [Developer Command Prompt for Visual Studio](../tools/developer-command-prompt-for-vs.md), and then enter the following command:</span></span>
+
+```shell
+gacutil -l
+```
+
+<span data-ttu-id="8be97-106">veya</span><span class="sxs-lookup"><span data-stu-id="8be97-106">-or-</span></span>
+
+```shell
+gacutil /l
+```
+
+> [!NOTE]
+> <span data-ttu-id="8be97-107">.NET Framework'ün önceki sürümlerindeki [Shfusion.dll](/previous-versions/dotnet/netframework-4.0/34149zk3(v=vs.100)) Windows kabuk uzantısı, genel derleme önbelleğini dosya Gezgini'nde görüntülemek etkin.</span><span class="sxs-lookup"><span data-stu-id="8be97-107">In earlier versions of the .NET Framework, the [Shfusion.dll](/previous-versions/dotnet/netframework-4.0/34149zk3(v=vs.100)) Windows shell extension enabled you to view the global assembly cache in File Explorer.</span></span> <span data-ttu-id="8be97-108">İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], Shfusion.dll kullanımdan kalkmıştır.</span><span class="sxs-lookup"><span data-stu-id="8be97-108">Beginning with the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], Shfusion.dll is obsolete.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="8be97-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8be97-109">See also</span></span>
+
+- [<span data-ttu-id="8be97-110">Bütünleştirilmiş Kodlar ve Genel Derleme Önbelleği ile Çalışma</span><span class="sxs-lookup"><span data-stu-id="8be97-110">Working with Assemblies and the Global Assembly Cache</span></span>](working-with-assemblies-and-the-gac.md)
+- [<span data-ttu-id="8be97-111">Gacutil.exe (Genel Derleme Önbelleği Aracı)</span><span class="sxs-lookup"><span data-stu-id="8be97-111">Gacutil.exe (Global Assembly Cache Tool)</span></span>](../tools/gacutil-exe-gac-tool.md)

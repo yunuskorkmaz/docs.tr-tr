@@ -8,29 +8,29 @@ helpviewer_keywords:
 - null keyword [C#]
 ms.assetid: fecb1c60-6232-4efe-87f7-9a86ba2e9119
 ms.openlocfilehash: 67961027c7eab40344251db3d57e4d80ca5e8cdc
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46479741"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46538462"
 ---
-# <a name="null-c-reference"></a><span data-ttu-id="98a98-102">null (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="98a98-102">null (C# Reference)</span></span>
+# <a name="null-c-reference"></a><span data-ttu-id="f22ff-102">null (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="f22ff-102">null (C# Reference)</span></span>
 
-<span data-ttu-id="98a98-103">`null` Anahtar sözcüğü, bir null başvuru, herhangi bir nesneye başvurmuyor birini temsil eden bir sabit değer.</span><span class="sxs-lookup"><span data-stu-id="98a98-103">The `null` keyword is a literal that represents a null reference, one that does not refer to any object.</span></span> <span data-ttu-id="98a98-104">`null` Başvuru türü değişkenlerin varsayılan değeridir.</span><span class="sxs-lookup"><span data-stu-id="98a98-104">`null` is the default value of reference-type variables.</span></span> <span data-ttu-id="98a98-105">Sıradan değer türleri null olamaz.</span><span class="sxs-lookup"><span data-stu-id="98a98-105">Ordinary value types cannot be null.</span></span> <span data-ttu-id="98a98-106">Ancak, C# 2.0 boş değer atanabilir türler kullanıma sunuldu.</span><span class="sxs-lookup"><span data-stu-id="98a98-106">However, C# 2.0 introduced nullable value types.</span></span> <span data-ttu-id="98a98-107">Bkz: [boş değer atanabilir türler](../../programming-guide/nullable-types/index.md).</span><span class="sxs-lookup"><span data-stu-id="98a98-107">See [Nullable Types](../../programming-guide/nullable-types/index.md).</span></span>
+<span data-ttu-id="f22ff-103">`null` Anahtar sözcüğü, bir null başvuru, herhangi bir nesneye başvurmuyor birini temsil eden bir sabit değer.</span><span class="sxs-lookup"><span data-stu-id="f22ff-103">The `null` keyword is a literal that represents a null reference, one that does not refer to any object.</span></span> <span data-ttu-id="f22ff-104">`null` Başvuru türü değişkenlerin varsayılan değeridir.</span><span class="sxs-lookup"><span data-stu-id="f22ff-104">`null` is the default value of reference-type variables.</span></span> <span data-ttu-id="f22ff-105">Sıradan değer türleri null olamaz.</span><span class="sxs-lookup"><span data-stu-id="f22ff-105">Ordinary value types cannot be null.</span></span> <span data-ttu-id="f22ff-106">Ancak, C# 2.0 boş değer atanabilir türler kullanıma sunuldu.</span><span class="sxs-lookup"><span data-stu-id="f22ff-106">However, C# 2.0 introduced nullable value types.</span></span> <span data-ttu-id="f22ff-107">Bkz: [boş değer atanabilir türler](../../programming-guide/nullable-types/index.md).</span><span class="sxs-lookup"><span data-stu-id="f22ff-107">See [Nullable Types](../../programming-guide/nullable-types/index.md).</span></span>
 
-<span data-ttu-id="98a98-108">Aşağıdaki örnek, bazı davranışları null anahtar sözcüğü gösterir:</span><span class="sxs-lookup"><span data-stu-id="98a98-108">The following example demonstrates some behaviors of the null keyword:</span></span>
+<span data-ttu-id="f22ff-108">Aşağıdaki örnek, bazı davranışları null anahtar sözcüğü gösterir:</span><span class="sxs-lookup"><span data-stu-id="f22ff-108">The following example demonstrates some behaviors of the null keyword:</span></span>
 
 [!code-csharp[csrefKeywordsLiteral#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsLiteral/CS/csrefKeywordsLiteral.cs#1)]
 
-## <a name="c-language-specification"></a><span data-ttu-id="98a98-109">C# dili belirtimi</span><span class="sxs-lookup"><span data-stu-id="98a98-109">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="f22ff-109">C# dili belirtimi</span><span class="sxs-lookup"><span data-stu-id="f22ff-109">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="98a98-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="98a98-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f22ff-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f22ff-110">See also</span></span>
 
-- [<span data-ttu-id="98a98-111">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="98a98-111">C# Reference</span></span>](../../language-reference/index.md)
-- [<span data-ttu-id="98a98-112">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="98a98-112">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="98a98-113">C# Anahtar Sözcükleri</span><span class="sxs-lookup"><span data-stu-id="98a98-113">C# Keywords</span></span>](index.md)
-- [<span data-ttu-id="98a98-114">Değişmez Değer Anahtar Sözcükleri</span><span class="sxs-lookup"><span data-stu-id="98a98-114">Literal Keywords</span></span>](literal-keywords.md)
-- [<span data-ttu-id="98a98-115">Varsayılan Değerler Tablosu</span><span class="sxs-lookup"><span data-stu-id="98a98-115">Default Values Table</span></span>](default-values-table.md)
-- [<span data-ttu-id="98a98-116">Nothing</span><span class="sxs-lookup"><span data-stu-id="98a98-116">Nothing</span></span>](../../../visual-basic/language-reference/nothing.md)
+- [<span data-ttu-id="f22ff-111">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="f22ff-111">C# Reference</span></span>](../../language-reference/index.md)
+- [<span data-ttu-id="f22ff-112">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="f22ff-112">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="f22ff-113">C# Anahtar Sözcükleri</span><span class="sxs-lookup"><span data-stu-id="f22ff-113">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="f22ff-114">Değişmez Değer Anahtar Sözcükleri</span><span class="sxs-lookup"><span data-stu-id="f22ff-114">Literal Keywords</span></span>](literal-keywords.md)
+- [<span data-ttu-id="f22ff-115">Varsayılan Değerler Tablosu</span><span class="sxs-lookup"><span data-stu-id="f22ff-115">Default Values Table</span></span>](default-values-table.md)
+- [<span data-ttu-id="f22ff-116">Nothing</span><span class="sxs-lookup"><span data-stu-id="f22ff-116">Nothing</span></span>](../../../visual-basic/language-reference/nothing.md)
