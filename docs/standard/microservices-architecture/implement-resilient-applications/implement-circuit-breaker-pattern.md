@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
 ms.openlocfilehash: 8cd3564e5240ec5a8783edb336957549be27ea6a
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
-ms.translationtype: HT
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 09/21/2018
-ms.locfileid: "46517674"
+ms.locfileid: "46561649"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>Devre kesici desenini uygulama
 

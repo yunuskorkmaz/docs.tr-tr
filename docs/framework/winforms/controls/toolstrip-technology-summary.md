@@ -8,11 +8,11 @@ helpviewer_keywords:
 - menus [Windows Forms], technology summary
 ms.assetid: e8d61973-7af9-429f-9df5-05a899c15a7b
 ms.openlocfilehash: 26317fad5796989a58a48e4f26549805b279228a
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46473427"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46530277"
 ---
 # <a name="toolstrip-technology-summary"></a>ToolStrip Teknoloiji Özeti
 Bu konu hakkında bilgiler için özetlenmiştir `ToolStrip` denetimi ve kullanımını destekleyen sınıflar.  

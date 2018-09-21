@@ -3,11 +3,11 @@ title: 'Özel İleti Kodlayıcı: Sıkıştırma Kodlayıcısı'
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
 ms.openlocfilehash: b70875e385fa32256476f6d1ae53e8cc1f5ff9de
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46471781"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46525311"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>Özel İleti Kodlayıcı: Sıkıştırma Kodlayıcısı
 Bu örnek, Windows Communication Foundation (WCF) platformunu kullanarak özel bir kodlayıcı uygulamak nasıl gösterir.  
