@@ -11,11 +11,11 @@ ms.assetid: 987ea3d7-0ad5-4238-8b64-331ce4eb3f0b
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 257435516b38d0e4389b7feceba68371bcc8f90e
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46326562"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46517720"
 ---
 # <a name="blockingcollection-overview"></a>BlockingCollection Genel Bakışı
 <xref:System.Collections.Concurrent.BlockingCollection%601> Aşağıdaki özellikleri sağlayan bir iş parçacığı güvenli koleksiyon sınıfı şöyledir:  

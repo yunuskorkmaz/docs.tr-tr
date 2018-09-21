@@ -18,11 +18,11 @@ ms.assetid: 5cdc9396-a64b-4615-a1cd-b605db4c5983
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0e458f45fea8e2207ced930daebf10e653901fa7
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46490471"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46537689"
 ---
 # <a name="performing-culture-insensitive-string-operations-in-collections"></a>Koleksiyonlarda Kültüre Duyarsız Dize İşlemlerini Gerçekleştirme
 Sınıfları ve üyeleri <xref:System.Collections> varsayılan olarak kültüre duyarlı davranış sağlayan ad alanı. İçin varsayılan oluşturucular <xref:System.Collections.CaseInsensitiveComparer> ve <xref:System.Collections.CaseInsensitiveHashCodeProvider> sınıfları başlatma kullanarak yeni bir örneğini <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> özelliği. Tüm aşırı yüklemeler, <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType> yöntemi yeni bir örneğini oluşturma <xref:System.Collections.Hashtable> kullanarak `Thread.CurrentCulture` özelliği varsayılan olarak. Overloads biri <xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType> yöntemi gerçekleştirmek varsayılan kullanarak kültüre duyarlı sıralamaları `Thread.CurrentCulture`. Sıralama ve arama bir <xref:System.Collections.SortedList> etkilenebilir `Thread.CurrentCulture` dizeleri anahtar olarak kullanılan zaman. Bu sınıfları ve yöntemleri kültüre duyarlı olmayan sonuçlar elde etmek için bu bölümde sağlanan kullanım önerilere uyun `Collections` ad alanı.  

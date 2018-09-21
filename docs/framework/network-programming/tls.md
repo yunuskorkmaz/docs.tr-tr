@@ -13,12 +13,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
 author: blowdart
-ms.openlocfilehash: a45d57af1069bba9e3afe8c2e6e6d463115a4e39
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: a421b73edc1dd90be53d301d12160d39abe78f90
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43798918"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46540417"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework ile Aktarım Katmanı Güvenliği (TLS) en iyi uygulamalar
 
@@ -178,6 +178,9 @@ Bu değeri varsayılan olarak .NET Framework 4.7.1 ve sonraki sürümleri hedefl
 TLS protokolleri hakkında daha fazla bilgi için bkz. [azaltma: TLS protokolleri](../migration-guide/mitigation-tls-protocols.md). Hakkında daha fazla bilgi için `AppContext` anahtarları bkz [ `<AppContextSwitchOverrides> Element` ](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md).
 
 ## <a name="configuring-security-via-the-windows-registry"></a>Windows kayıt defteri aracılığıyla güvenliği yapılandırma
+
+> [!WARNING]
+> Kayıt defteri anahtarlarını ayarlamak sistem üzerindeki tüm uygulamaları etkiler. Yalnızca makine tam denetimi sizdedir ve kayıt defterindeki değişiklikleri kontrol edebilirsiniz, bu seçeneği kullanın.
 
 Birini veya ikisini de ayarlıyorsanız `AppContext` anahtarları bir seçenek değildir, bu bölümde açıklanan Windows kayıt defteri anahtarları ile uygulamanızın kullandığı güvenlik protokollerini denetleyebilirsiniz. Aşağıdakilerden birini veya her ikisi de kullanmanız mümkün olmayabilir `AppContext` uygulamanızı 4.6'den önceki bir .NET Framework sürümünü hedefler ve yapılandırma dosyası düzenleyemezsiniz geçer. Ardından güvenlik kayıt defteri ile yapılandırmak istiyorsanız, kodunuzdaki güvenlik protokolü değeri belirtmeyin; Bunun yapılması, bu nedenle kayıt defteri geçersiz kılarsınız.
 

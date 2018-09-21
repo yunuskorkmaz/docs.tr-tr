@@ -2,16 +2,16 @@
 title: Yetkilendirme İlkesi
 ms.date: 03/30/2017
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-ms.openlocfilehash: eaf4dfc6e1f02a1cd98d9ab48af70426e8ba6151
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
-ms.translationtype: MT
+ms.openlocfilehash: 78ca42abfd2df56edeeb273fcd8ba585aa16f635
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44217301"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46508797"
 ---
 # <a name="authorization-policy"></a>Yetkilendirme İlkesi
 
-Bu örnek bir özel talep yetkilendirme ilkesi ve bir ilişkili özel hizmet Yetkilendirme Yöneticisi'ni uygulamak nasıl gösterir. Hizmet işlemlerine ve erişim denetimleri önce talep tabanlı erişim denetimlerini hizmet yapar verdiğinde çağıran belirli hakları kullanışlıdır. Bu örnek, talepleri ve bunun yanı sıra işlemi sonlandırılmış talepler kümesi karşı bir erişim denetimi yapmak için ekleme işlemini gösterir. Tüm uygulama iletileri istemci ve sunucu arasında imzalanmış ve şifrelenmiş. Varsayılan olarak `wsHttpBinding` bağlama, bir kullanıcı adı ve parola istemci tarafından sağlanan kullanılan oturum açmak için geçerli bir Windows NT hesap. Bu örnek nasıl özel bir gösterir <!--zz <xref:System.IdentityModel.Selectors.UsernamePasswordValidator>--> `System.IdentityModel.Selectors.UsernamePasswordValidator` istemcinin kimliğini doğrulamak için. Ayrıca bu örnek, bir X.509 sertifikası kullanarak hizmet kimlik doğrulaması istemci gösterir. Bu örnek uygulanışı gösterilmektedir <xref:System.IdentityModel.Policy.IAuthorizationPolicy> ve <xref:System.ServiceModel.ServiceAuthorizationManager>, bunlar arasında belirli kullanıcılar için hizmetin belirli yöntemler için erişim verin. Bu örnek dayanır [ileti güvenliği kullanıcı adı](../../../../docs/framework/wcf/samples/message-security-user-name.md), ama öncesinde bir talep dönüştürmeyi gerçekleştirmek nasıl gösterir <xref:System.ServiceModel.ServiceAuthorizationManager> çağrılan.
+Bu örnek bir özel talep yetkilendirme ilkesi ve bir ilişkili özel hizmet Yetkilendirme Yöneticisi'ni uygulamak nasıl gösterir. Hizmet işlemlerine ve erişim denetimleri önce talep tabanlı erişim denetimlerini hizmet yapar verdiğinde çağıran belirli hakları kullanışlıdır. Bu örnek, talepleri ve bunun yanı sıra işlemi sonlandırılmış talepler kümesi karşı bir erişim denetimi yapmak için ekleme işlemini gösterir. Tüm uygulama iletileri istemci ve sunucu arasında imzalanmış ve şifrelenmiş. Varsayılan olarak `wsHttpBinding` bağlama, bir kullanıcı adı ve parola istemci tarafından sağlanan kullanılan oturum açmak için geçerli bir Windows NT hesap. Bu örnek nasıl özel bir gösterir <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> istemcinin kimliğini doğrulamak için. Ayrıca bu örnek, bir X.509 sertifikası kullanarak hizmet kimlik doğrulaması istemci gösterir. Bu örnek uygulanışı gösterilmektedir <xref:System.IdentityModel.Policy.IAuthorizationPolicy> ve <xref:System.ServiceModel.ServiceAuthorizationManager>, bunlar arasında belirli kullanıcılar için hizmetin belirli yöntemler için erişim verin. Bu örnek dayanır [ileti güvenliği kullanıcı adı](../../../../docs/framework/wcf/samples/message-security-user-name.md), ama öncesinde bir talep dönüştürmeyi gerçekleştirmek nasıl gösterir <xref:System.ServiceModel.ServiceAuthorizationManager> çağrılan.
 
 > [!NOTE]
 > Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.

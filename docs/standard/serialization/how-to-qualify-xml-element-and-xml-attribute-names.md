@@ -10,11 +10,11 @@ helpviewer_keywords:
 - XML namespaces, qualifying elements and names in
 ms.assetid: 44719f90-7e15-42e8-a9e2-282287e2b5bf
 ms.openlocfilehash: 3c477923387e5a28dcc14b44b0f77bb6acb686e5
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46326117"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46526564"
 ---
 # <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>Nasıl yapılır: XML öğesi ve XML öznitelik adlarını Sınıflandır
 

@@ -6,11 +6,11 @@ ms.assetid: 7ede6f9e-a3ac-49a4-8488-ab8360a44aa4
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 65fd6d2baae29c72241350e4568faf09b9c71f39
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45594103"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46540969"
 ---
 # <a name="removing-attributes-from-an-element-node-in-the-dom"></a>DOM'da bir öğe düğümünden öznitelikleri kaldırma
 Öznitelikleri kaldırmak için birçok yolu vardır. Öznitelik koleksiyonundan kaldırabilirsiniz bir tekniktir. Bunu yapmak için aşağıdaki adımları gerçekleştirilir:  

@@ -16,11 +16,11 @@ ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 663f9d88315f396b187cca874c930179f1dea523
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45746893"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46532827"
 ---
 # <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>Nasıl yapılır: Web Denetimlerindeki Sayısal Kullanıcı Girişlerini Sayıya Dönüştürme
 Kullanıcıların dünyanın herhangi bir Web sayfası görüntülenebileceğinden sayısal verileri girebilirsiniz bir <xref:System.Web.UI.WebControls.TextBox> neredeyse sınırsız sayıda biçimleri denetimi. Sonuç olarak, yerel ve Web sayfasının kullanıcı kültürü belirlemek çok önemlidir. Kullanıcı girişini ayrıştırmasına, daha sonra kullanıcının yerel ayar ve kültür tarafından tanımlanan biçimlendirme kurallarını uygulayabilirsiniz.  

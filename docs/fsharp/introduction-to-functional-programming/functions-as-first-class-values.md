@@ -3,11 +3,11 @@ title: İlk Sınıf Değerleri Olarak İşlevler (F#)
 description: 'İşlevler F # programlama dilinin birinci sınıf durumuna nasıl yükseltilir öğrenin.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 45b65ab2454a592d38c80fd367e7243635614727
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46478590"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46537533"
 ---
 # <a name="functions-as-first-class-values"></a>İlk Sınıf Değerleri Olarak İşlevler
 

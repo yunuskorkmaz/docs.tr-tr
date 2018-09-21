@@ -1,16 +1,16 @@
 ---
-title: WF etkinlikleri koleksiyonu
+title: WF etkinliklerini koleksiyonu
 ms.date: 03/30/2017
 ms.assetid: 2680c3e2-9902-4968-b98d-cab776103dbe
-ms.openlocfilehash: 442da07e78ee08b49ad0e023362cace23dcd5b8d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6b3a02cdd020d303519f605a206d62b42f4fe731
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516733"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46538394"
 ---
-# <a name="collection-activities-in-wf"></a>WF etkinlikleri koleksiyonu
-Koleksiyon etkinlikler koleksiyonu nesneleri bir iş akışında çalışmak için kullanılır. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] ekleme ve koleksiyondan öğeleri kaldırma, bir koleksiyondaki bir öğe varlığını için test etme ve bir koleksiyon temizlemek için sistem tarafından sağlanan etkinlikler içeriyor. `ExistsInCollection` ve `RemoveFromCollection` sahip bir <xref:System.Activities.OutArgument%601> türü <xref:System.Boolean>, sonuç gösterir.  
+# <a name="collection-activities-in-wf"></a>WF etkinliklerini koleksiyonu
+Koleksiyon etkinlikler, bir iş akışında koleksiyon nesnelerini çalışmak için kullanılır. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] ekleme ve bir koleksiyondaki öğeleri kaldırma, bir koleksiyondaki bir öğenin bulunup bulunmadığını test ve bir koleksiyon temizlemek için sistem tarafından sağlanan etkinlikler vardır. `ExistsInCollection` ve `RemoveFromCollection` sahip bir <xref:System.Activities.OutArgument%601> türü <xref:System.Boolean>, sonucu gösterir.  
   
 > [!IMPORTANT]
 >  Temel alınan koleksiyon nesnesi ayarlamadan önce bir toplama etkinliği yürütülürse bir <xref:System.InvalidOperationException> oluşturulur ve etkinlik hatalarını.  
@@ -19,13 +19,13 @@ Koleksiyon etkinlikler koleksiyonu nesneleri bir iş akışında çalışmak iç
   
 |||  
 |-|-|  
-|<xref:System.Activities.Statements.AddToCollection%601>|Bir öğe, belirtilen bir koleksiyona ekler.|  
+|<xref:System.Activities.Statements.AddToCollection%601>|Belirtilen bir koleksiyona bir öğe ekler.|  
 |<xref:System.Activities.Statements.ClearCollection%601>|Belirtilen bir koleksiyondaki tüm öğeleri kaldırır.|  
 |<xref:System.Activities.Statements.ExistsInCollection%601>|Döndürür `true` bir koleksiyondaki bir öğe zaten varsa.|  
-|<xref:System.Activities.Statements.RemoveFromCollection%601>|Belirli bir koleksiyona bir öğeyi kaldırır ve döndürür `true` öğe başarıyla kaldırıldıysa.|  
+|<xref:System.Activities.Statements.RemoveFromCollection%601>|Belirtilen bir koleksiyondaki bir öğeyi kaldırır ve döndürür `true` öğe başarıyla kaldırıldıysa.|  
   
 ## <a name="using-collection-activities"></a>Koleksiyon etkinlikleri kullanma  
- Aşağıdaki kod örneği, bir iş akışı değişkeni olarak bildirilen bir koleksiyon etkileşimde gösterilmiştir. Kullanılan koleksiyon bir <!--zz <xref:System.Collections.Generic.List%E2%80%991>--> `System.Collections.Generic.List` , <xref:System.String> adlı nesneleri `fruitList`.  
+ Aşağıdaki kod örneği, bir iş akışı değişkeni olarak bildirilen bir koleksiyon etkileşim gösterilmektedir. Kullanılan koleksiyonu bir <xref:System.Collections.Generic.List%601> , <xref:System.String> adlı nesneleri `fruitList`.  
   
 ```csharp  
 Variable<ICollection<string>> fruitList = new Variable<ICollection<string>>  
@@ -225,9 +225,9 @@ Activity wf = new Sequence
 </Sequence>  
 ```  
   
- Yukarıdaki kod örnekleri de kullanılarak oluşturulabilir <xref:Microsoft.CSharp.Activities.CSharpValue%601> yerine <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>  
+ Yukarıdaki kod örnekleri kullanılarak da oluşturulabilir <xref:Microsoft.CSharp.Activities.CSharpValue%601> yerine <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>  
   
-```  
+```csharp
 Variable<ICollection<string>> fruitList = new Variable<ICollection<string>>  
 {  
     Default = new CSharpValue<ICollection<string>>("new List<String> From {\"Apple\", \"Orange\"};"),  

@@ -6,11 +6,11 @@ ms.assetid: 46e059f8-4dc8-4185-9236-784be95228ed
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2544070bb7ea891a804edd559a5d58e08b071771
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46490393"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46532853"
 ---
 # <a name="selecting-evaluating-and-matching-xml-data-using-xpathnavigator"></a>Seçme, değerlendirme ve eşleştirme XPathNavigator kullanarak XML verileri
 <xref:System.Xml.XPath.XPathNavigator> Sınıfı düğümleri seçmek için yöntemler sağlar bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> XPath sorgusunu kullanarak, değerlendirin ve bir XPath ifadesi sonuçları inceleyin ve bir düğüm olup bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> nesne eşleşen bir belirli bir XPath ifadesi. Bunlar ve seçme, değerlendirme ve eşleşen düğümleri ile ilgili diğer kavramlara bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> nesne, aşağıdaki konularda açıklanmıştır.  

@@ -3,11 +3,11 @@ title: .NET Framework 4. 5'te ilke etkinliği
 ms.date: 03/30/2017
 ms.assetid: 8e375e0c-d7c1-4d69-88ab-36d52db0aa7e
 ms.openlocfilehash: 9d8983f2f1d3f75beffeacfff4b673f6c23c4204
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
-ms.translationtype: MT
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45994383"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46508971"
 ---
 # <a name="policy-activity-in-net-framework-45"></a>.NET Framework 4. 5'te ilke etkinliği
 Windows Workflow Foundation'da Policy4 etkinliği sağlar [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> Windows Workflow Foundation'da kullanılmak üzere nesneleri [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF 4.5) kullanarak WF 3. 5'sevk kurallar altyapısı tarafından doğrudan. Bu etkinlik kullanarak oluşturabilir ve WF 3.5 yürütme <xref:System.Workflow.Activities.Rules.RuleSet>. WF 3.5 kural Windows Workflow Foundation bir parçası olarak dahil edilen altyapısı hakkında daha fazla bilgi için Windows Workflow Foundation kurallar altyapısı giriş okuyun. Geçiş hakkında daha fazla bilgi için WF kuralları [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)], okuyun [geçiş kılavuzuna](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  

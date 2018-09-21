@@ -11,11 +11,11 @@ ms.assetid: 6a600fe5-3af3-4c64-82da-10a0a8e2d79b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 65492beb888da1986f456d3fd000fc02f340f3c4
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45609690"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46538761"
 ---
 # <a name="weak-references"></a>Zayıf Başvurular
 Uygulamanın kodu söz konusu nesne ulaşabileceği sırada Çöp toplayıcı bir uygulama tarafından kullanılan bir nesne toplayamazsınız. Uygulama, güçlü bir başvuru nesnesine sahip bildirilir.  

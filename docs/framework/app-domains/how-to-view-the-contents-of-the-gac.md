@@ -13,26 +13,35 @@ helpviewer_keywords:
 ms.assetid: c5f786a0-969b-4f14-9f02-e77c3384d9af
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3650de934cb3d2940d0e8e971d03aff856bddfd7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4142c3f12cc5a0e2277cc8dba28a281d5cf0ba55
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515485"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46540719"
 ---
-# <a name="how-to-view-the-contents-of-the-global-assembly-cache"></a>Nasıl yapılır: Genel Derleme Önbelleğinin İçeriğini Görüntüleme
-Kullanım [Genel Derleme Önbelleği aracını (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) genel derleme önbelleğinin içeriğini görüntülemek için.  
-  
-### <a name="to-view-a-list-of-the-assemblies-in-the-global-assembly-cache"></a>Genel bütünleştirilmiş kod önbelleğinde derlemelerin bir listesini görüntülemek için  
-  
-1.  Konumunda [Visual Studio komut istemi](../../../docs/framework/tools/developer-command-prompt-for-vs.md), aşağıdaki komutu yazın:  
-  
-     **Gacutil -l**   
-     veya  
-    **Gacutil/l**  
-  
- .NET Framework'ün önceki sürümlerindeki [Shfusion.dll](https://msdn.microsoft.com/library/0d9464cf-ddba-4ca9-bbec-f678fb58f380) Windows kabuk uzantısı, genel derleme önbelleğini dosya Gezgini'nde görüntülemek etkin. İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], Shfusion.dll kullanımdan kalkmıştır.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Bütünleştirilmiş Kodlar ve Genel Derleme Önbelleği ile Çalışma](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)  
- [Gacutil.exe (Genel Derleme Önbelleği Aracı)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)
+# <a name="how-to-view-the-contents-of-the-global-assembly-cache"></a>Nasıl yapılır: genel derleme önbelleğinin içeriğini görüntüleme
+
+Kullanım [Genel Derleme Önbelleği aracını (gacutil.exe)](../tools/gacutil-exe-gac-tool.md) Genel Derleme Önbelleği (GAC) içeriğini görüntülemek için.
+
+## <a name="view-the-assemblies-in-the-gac"></a>Derlemeleri GAC'ye görüntüleyin
+
+Genel derleme önbelleğinde derlemelerin bir listesini görmek için [Visual Studio için geliştirici komut istemi](../tools/developer-command-prompt-for-vs.md)ve ardından aşağıdaki komutu girin:
+
+```shell
+gacutil -l
+```
+
+veya
+
+```shell
+gacutil /l
+```
+
+> [!NOTE]
+> .NET Framework'ün önceki sürümlerindeki [Shfusion.dll](/previous-versions/dotnet/netframework-4.0/34149zk3(v=vs.100)) Windows kabuk uzantısı, genel derleme önbelleğini dosya Gezgini'nde görüntülemek etkin. İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], Shfusion.dll kullanımdan kalkmıştır.
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Bütünleştirilmiş Kodlar ve Genel Derleme Önbelleği ile Çalışma](working-with-assemblies-and-the-gac.md)
+- [Gacutil.exe (Genel Derleme Önbelleği Aracı)](../tools/gacutil-exe-gac-tool.md)

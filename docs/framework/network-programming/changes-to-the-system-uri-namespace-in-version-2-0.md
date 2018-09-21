@@ -6,11 +6,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: f300ab05f28feca8baa13c4078df622e1e7d9d19
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46479786"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46531237"
 ---
 # <a name="changes-to-the-systemuri-namespace-in-version-20"></a>System.Uri ad 2.0 sürümündeki değişiklikler
 

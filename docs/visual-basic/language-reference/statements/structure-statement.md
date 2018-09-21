@@ -13,11 +13,11 @@ helpviewer_keywords:
 - types [Visual Basic], user-defined
 ms.assetid: 9bd1deea-2a89-4cdc-812c-6dcbb947c391
 ms.openlocfilehash: 9377d889f56049720ab10439582300913f5cbb37
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46490302"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46539637"
 ---
 # <a name="structure-statement"></a>Structure Yapısı
 Bir yapının adını bildirir ve değişkenleri, özellikleri, olayları ve yapısını oluşturan yordamların tanımını tanıtır.  
