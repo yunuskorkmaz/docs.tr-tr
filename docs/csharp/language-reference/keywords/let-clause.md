@@ -9,30 +9,30 @@ helpviewer_keywords:
 - let clause [C#]
 ms.assetid: 13c9c1a4-ce57-48ef-8e1b-4c2a59b99fb4
 ms.openlocfilehash: 62294df7f0f2ebb3249dffd72ba4910fbae984c8
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46324155"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46531661"
 ---
-# <a name="let-clause-c-reference"></a><span data-ttu-id="aaf34-102">let tümcesi (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="aaf34-102">let clause (C# Reference)</span></span>
+# <a name="let-clause-c-reference"></a><span data-ttu-id="dd57b-102">let tümcesi (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="dd57b-102">let clause (C# Reference)</span></span>
 
-<span data-ttu-id="aaf34-103">Bir sorgu ifadesinde bazen sonraki yan tümcelerinde kullanmak için bir alt ifadenin sonucu depolamak yararlıdır.</span><span class="sxs-lookup"><span data-stu-id="aaf34-103">In a query expression, it is sometimes useful to store the result of a sub-expression in order to use it in subsequent clauses.</span></span> <span data-ttu-id="aaf34-104">İle bunu yapabilirsiniz `let` yeni bir aralık değişkenine oluşturan ve sağladığınız ifadenin sonucu ile başlatır anahtar sözcüğü.</span><span class="sxs-lookup"><span data-stu-id="aaf34-104">You can do this with the `let` keyword, which creates a new range variable and initializes it with the result of the expression you supply.</span></span> <span data-ttu-id="aaf34-105">Bir değerle başlatıldıktan sonra başka bir değeri depolamak için aralık değişkeni kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="aaf34-105">Once initialized with a value, the range variable cannot be used to store another value.</span></span> <span data-ttu-id="aaf34-106">Ancak, aralık değişkeni bir sorgulanabilir tür tutar, sorgulanabilir.</span><span class="sxs-lookup"><span data-stu-id="aaf34-106">However, if the range variable holds a queryable type, it can be queried.</span></span>
+<span data-ttu-id="dd57b-103">Bir sorgu ifadesinde bazen sonraki yan tümcelerinde kullanmak için bir alt ifadenin sonucu depolamak yararlıdır.</span><span class="sxs-lookup"><span data-stu-id="dd57b-103">In a query expression, it is sometimes useful to store the result of a sub-expression in order to use it in subsequent clauses.</span></span> <span data-ttu-id="dd57b-104">İle bunu yapabilirsiniz `let` yeni bir aralık değişkenine oluşturan ve sağladığınız ifadenin sonucu ile başlatır anahtar sözcüğü.</span><span class="sxs-lookup"><span data-stu-id="dd57b-104">You can do this with the `let` keyword, which creates a new range variable and initializes it with the result of the expression you supply.</span></span> <span data-ttu-id="dd57b-105">Bir değerle başlatıldıktan sonra başka bir değeri depolamak için aralık değişkeni kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="dd57b-105">Once initialized with a value, the range variable cannot be used to store another value.</span></span> <span data-ttu-id="dd57b-106">Ancak, aralık değişkeni bir sorgulanabilir tür tutar, sorgulanabilir.</span><span class="sxs-lookup"><span data-stu-id="dd57b-106">However, if the range variable holds a queryable type, it can be queried.</span></span>
 
-## <a name="example"></a><span data-ttu-id="aaf34-107">Örnek</span><span class="sxs-lookup"><span data-stu-id="aaf34-107">Example</span></span>
+## <a name="example"></a><span data-ttu-id="dd57b-107">Örnek</span><span class="sxs-lookup"><span data-stu-id="dd57b-107">Example</span></span>
 
-<span data-ttu-id="aaf34-108">Aşağıdaki örnekte `let` iki şekilde kullanılır:</span><span class="sxs-lookup"><span data-stu-id="aaf34-108">In the following example `let` is used in two ways:</span></span>
+<span data-ttu-id="dd57b-108">Aşağıdaki örnekte `let` iki şekilde kullanılır:</span><span class="sxs-lookup"><span data-stu-id="dd57b-108">In the following example `let` is used in two ways:</span></span>
 
-1. <span data-ttu-id="aaf34-109">Kendisini sorgulanabilir bir numaralandırma türü oluşturmak için.</span><span class="sxs-lookup"><span data-stu-id="aaf34-109">To create an enumerable type that can itself be queried.</span></span>
+1. <span data-ttu-id="dd57b-109">Kendisini sorgulanabilir bir numaralandırma türü oluşturmak için.</span><span class="sxs-lookup"><span data-stu-id="dd57b-109">To create an enumerable type that can itself be queried.</span></span>
 
-2. <span data-ttu-id="aaf34-110">Aranacak sorgu etkinleştirmek için `ToLower` aralık değişkeni üzerinde yalnızca bir kez `word`.</span><span class="sxs-lookup"><span data-stu-id="aaf34-110">To enable the query to call `ToLower` only one time on the range variable `word`.</span></span> <span data-ttu-id="aaf34-111">Kullanmadan `let`, çağırmak zorunda `ToLower` her koşulda içinde `where` yan tümcesi.</span><span class="sxs-lookup"><span data-stu-id="aaf34-111">Without using `let`, you would have to call `ToLower` in each predicate in the `where` clause.</span></span>
+2. <span data-ttu-id="dd57b-110">Aranacak sorgu etkinleştirmek için `ToLower` aralık değişkeni üzerinde yalnızca bir kez `word`.</span><span class="sxs-lookup"><span data-stu-id="dd57b-110">To enable the query to call `ToLower` only one time on the range variable `word`.</span></span> <span data-ttu-id="dd57b-111">Kullanmadan `let`, çağırmak zorunda `ToLower` her koşulda içinde `where` yan tümcesi.</span><span class="sxs-lookup"><span data-stu-id="dd57b-111">Without using `let`, you would have to call `ToLower` in each predicate in the `where` clause.</span></span>
 
 [!code-csharp[cscsrefQueryKeywords#28](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Let.cs#28)]
 
-## <a name="see-also"></a><span data-ttu-id="aaf34-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="aaf34-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dd57b-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="dd57b-112">See also</span></span>
 
-- [<span data-ttu-id="aaf34-113">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="aaf34-113">C# Reference</span></span>](../../language-reference/index.md)
-- [<span data-ttu-id="aaf34-114">Sorgu anahtar sözcükleri (LINQ)</span><span class="sxs-lookup"><span data-stu-id="aaf34-114">Query Keywords (LINQ)</span></span>](query-keywords.md)
-- [<span data-ttu-id="aaf34-115">Dil ile Tümleşik Sorgu (LINQ)</span><span class="sxs-lookup"><span data-stu-id="aaf34-115">Language Integrated Query (LINQ)</span></span>](../../linq/index.md)
-- [<span data-ttu-id="aaf34-116">C#'de LINQ Kullanmaya Başlama</span><span class="sxs-lookup"><span data-stu-id="aaf34-116">Getting Started with LINQ in C#</span></span>](../../programming-guide/concepts/linq/getting-started-with-linq.md)
-- [<span data-ttu-id="aaf34-117">Sorgu ifadelerinde özel durumları işleme</span><span class="sxs-lookup"><span data-stu-id="aaf34-117">Handle exceptions in query expressions</span></span>](../../linq/handle-exceptions-in-query-expressions.md)
+- [<span data-ttu-id="dd57b-113">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="dd57b-113">C# Reference</span></span>](../../language-reference/index.md)
+- [<span data-ttu-id="dd57b-114">Sorgu anahtar sözcükleri (LINQ)</span><span class="sxs-lookup"><span data-stu-id="dd57b-114">Query Keywords (LINQ)</span></span>](query-keywords.md)
+- [<span data-ttu-id="dd57b-115">Dil ile Tümleşik Sorgu (LINQ)</span><span class="sxs-lookup"><span data-stu-id="dd57b-115">Language Integrated Query (LINQ)</span></span>](../../linq/index.md)
+- [<span data-ttu-id="dd57b-116">C#'de LINQ Kullanmaya Başlama</span><span class="sxs-lookup"><span data-stu-id="dd57b-116">Getting Started with LINQ in C#</span></span>](../../programming-guide/concepts/linq/getting-started-with-linq.md)
+- [<span data-ttu-id="dd57b-117">Sorgu ifadelerinde özel durumları işleme</span><span class="sxs-lookup"><span data-stu-id="dd57b-117">Handle exceptions in query expressions</span></span>](../../linq/handle-exceptions-in-query-expressions.md)

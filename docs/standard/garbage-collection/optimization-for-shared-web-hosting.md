@@ -10,28 +10,28 @@ ms.assetid: be98c0ab-7ef8-409f-8a0d-cb6e5b75ff20
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7831e383a3048523909b79ac5a4706f3c1c48371
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46323569"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46507839"
 ---
-# <a name="optimization-for-shared-web-hosting"></a><span data-ttu-id="42ee3-102">Paylaşılan Web Barındırma için İyileştirme</span><span class="sxs-lookup"><span data-stu-id="42ee3-102">Optimization for Shared Web Hosting</span></span>
-<span data-ttu-id="42ee3-103">Birkaç küçük Web sitesi barındırma tarafından paylaşılan bir sunucu yöneticisiyseniz performansı iyileştirmek ve aşağıdakileri ekleyerek site kapasitesini artırmak `gcTrimCommitOnLowMemory` ayarını `runtime` .NET Aspnet.config dosyasında düğümü dizini:</span><span class="sxs-lookup"><span data-stu-id="42ee3-103">If you are the administrator for a server that is shared by hosting several small Web sites, you can optimize performance and increase site capacity by adding the following `gcTrimCommitOnLowMemory` setting to the `runtime` node in the Aspnet.config file in the .NET directory:</span></span>  
+# <a name="optimization-for-shared-web-hosting"></a><span data-ttu-id="110bf-102">Paylaşılan Web Barındırma için İyileştirme</span><span class="sxs-lookup"><span data-stu-id="110bf-102">Optimization for Shared Web Hosting</span></span>
+<span data-ttu-id="110bf-103">Birkaç küçük Web sitesi barındırma tarafından paylaşılan bir sunucu yöneticisiyseniz performansı iyileştirmek ve aşağıdakileri ekleyerek site kapasitesini artırmak `gcTrimCommitOnLowMemory` ayarını `runtime` .NET Aspnet.config dosyasında düğümü dizini:</span><span class="sxs-lookup"><span data-stu-id="110bf-103">If you are the administrator for a server that is shared by hosting several small Web sites, you can optimize performance and increase site capacity by adding the following `gcTrimCommitOnLowMemory` setting to the `runtime` node in the Aspnet.config file in the .NET directory:</span></span>  
   
  `<gcTrimCommitOnLowMemory enabled="true|false"/>`  
   
 > [!NOTE]
->  <span data-ttu-id="42ee3-104">Bu ayar, yalnızca paylaşılan Web barındırma senaryolarında önerilir.</span><span class="sxs-lookup"><span data-stu-id="42ee3-104">This setting is recommended only for shared Web hosting scenarios.</span></span>  
+>  <span data-ttu-id="110bf-104">Bu ayar, yalnızca paylaşılan Web barındırma senaryolarında önerilir.</span><span class="sxs-lookup"><span data-stu-id="110bf-104">This setting is recommended only for shared Web hosting scenarios.</span></span>  
   
- <span data-ttu-id="42ee3-105">Çöp toplayıcı belleği gelecekteki ayırmalar için koruyacağından, onun kaydedilmiş alan birden çok kesinlikle gerekli olabilir.</span><span class="sxs-lookup"><span data-stu-id="42ee3-105">Because the garbage collector retains memory for future allocations, its committed space can be more than what is strictly needed.</span></span> <span data-ttu-id="42ee3-106">Saatleri gerçekleştirmek için bu alan azaltabilir sistem belleği üzerinde ağır bir yük olduğunda.</span><span class="sxs-lookup"><span data-stu-id="42ee3-106">You can reduce this space to accommodate times when there is a heavy load on system memory.</span></span> <span data-ttu-id="42ee3-107">Bu taahhüt alanını azaltma, performansı geliştirir ve daha fazla siteyi barındırma kapasitesi genişletir.</span><span class="sxs-lookup"><span data-stu-id="42ee3-107">Reducing this committed space improves performance and expands the capacity to host more sites.</span></span>  
+ <span data-ttu-id="110bf-105">Çöp toplayıcı belleği gelecekteki ayırmalar için koruyacağından, onun kaydedilmiş alan birden çok kesinlikle gerekli olabilir.</span><span class="sxs-lookup"><span data-stu-id="110bf-105">Because the garbage collector retains memory for future allocations, its committed space can be more than what is strictly needed.</span></span> <span data-ttu-id="110bf-106">Saatleri gerçekleştirmek için bu alan azaltabilir sistem belleği üzerinde ağır bir yük olduğunda.</span><span class="sxs-lookup"><span data-stu-id="110bf-106">You can reduce this space to accommodate times when there is a heavy load on system memory.</span></span> <span data-ttu-id="110bf-107">Bu taahhüt alanını azaltma, performansı geliştirir ve daha fazla siteyi barındırma kapasitesi genişletir.</span><span class="sxs-lookup"><span data-stu-id="110bf-107">Reducing this committed space improves performance and expands the capacity to host more sites.</span></span>  
   
- <span data-ttu-id="42ee3-108">Zaman `gcTrimCommitOnLowMemory` ayarı etkinse, çöp toplayıcı sistem bellek yükü değerlendirir ve yük % 90'ını ulaştığında bir kesme moduna girer.</span><span class="sxs-lookup"><span data-stu-id="42ee3-108">When the `gcTrimCommitOnLowMemory` setting is enabled, the garbage collector evaluates the system memory load and enters a trimming mode when the load reaches 90%.</span></span> <span data-ttu-id="42ee3-109">Yük altında % 85'lik düşene kadar kesme modu tutar.</span><span class="sxs-lookup"><span data-stu-id="42ee3-109">It maintains the trimming mode until the load drops under 85%.</span></span>  
+ <span data-ttu-id="110bf-108">Zaman `gcTrimCommitOnLowMemory` ayarı etkinse, çöp toplayıcı sistem bellek yükü değerlendirir ve yük % 90'ını ulaştığında bir kesme moduna girer.</span><span class="sxs-lookup"><span data-stu-id="110bf-108">When the `gcTrimCommitOnLowMemory` setting is enabled, the garbage collector evaluates the system memory load and enters a trimming mode when the load reaches 90%.</span></span> <span data-ttu-id="110bf-109">Yük altında % 85'lik düşene kadar kesme modu tutar.</span><span class="sxs-lookup"><span data-stu-id="110bf-109">It maintains the trimming mode until the load drops under 85%.</span></span>  
   
- <span data-ttu-id="42ee3-110">Koşullar izin, çöp toplayıcı, karar verebilirsiniz `gcTrimCommitOnLowMemory` ayar değil geçerli uygulamanın yardımcı olmak ve onu yok sayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="42ee3-110">When conditions permit, the garbage collector can decide that the `gcTrimCommitOnLowMemory` setting will not help the current application and ignore it.</span></span>  
+ <span data-ttu-id="110bf-110">Koşullar izin, çöp toplayıcı, karar verebilirsiniz `gcTrimCommitOnLowMemory` ayar değil geçerli uygulamanın yardımcı olmak ve onu yok sayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="110bf-110">When conditions permit, the garbage collector can decide that the `gcTrimCommitOnLowMemory` setting will not help the current application and ignore it.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="42ee3-111">Örnek</span><span class="sxs-lookup"><span data-stu-id="42ee3-111">Example</span></span>  
- <span data-ttu-id="42ee3-112">Aşağıdaki XML parçası nasıl etkinleştirileceğini göstermektedir `gcTrimCommitOnLowMemory` ayarı.</span><span class="sxs-lookup"><span data-stu-id="42ee3-112">The following XML fragment shows how to enable the `gcTrimCommitOnLowMemory` setting.</span></span> <span data-ttu-id="42ee3-113">Üç nokta içinde olabilecek diğer ayarları belirtmek `runtime` düğümü.</span><span class="sxs-lookup"><span data-stu-id="42ee3-113">Ellipses indicate other settings that would be in the `runtime` node.</span></span>  
+## <a name="example"></a><span data-ttu-id="110bf-111">Örnek</span><span class="sxs-lookup"><span data-stu-id="110bf-111">Example</span></span>  
+ <span data-ttu-id="110bf-112">Aşağıdaki XML parçası nasıl etkinleştirileceğini göstermektedir `gcTrimCommitOnLowMemory` ayarı.</span><span class="sxs-lookup"><span data-stu-id="110bf-112">The following XML fragment shows how to enable the `gcTrimCommitOnLowMemory` setting.</span></span> <span data-ttu-id="110bf-113">Üç nokta içinde olabilecek diğer ayarları belirtmek `runtime` düğümü.</span><span class="sxs-lookup"><span data-stu-id="110bf-113">Ellipses indicate other settings that would be in the `runtime` node.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="UTF-8"?>  
@@ -44,6 +44,6 @@ ms.locfileid: "46323569"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="42ee3-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="42ee3-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="110bf-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="110bf-114">See also</span></span>
 
-- [<span data-ttu-id="42ee3-115">Atık Toplama</span><span class="sxs-lookup"><span data-stu-id="42ee3-115">Garbage Collection</span></span>](../../../docs/standard/garbage-collection/index.md)
+- [<span data-ttu-id="110bf-115">Atık Toplama</span><span class="sxs-lookup"><span data-stu-id="110bf-115">Garbage Collection</span></span>](../../../docs/standard/garbage-collection/index.md)
