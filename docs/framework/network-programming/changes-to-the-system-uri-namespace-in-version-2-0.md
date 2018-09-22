@@ -6,23 +6,23 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: f300ab05f28feca8baa13c4078df622e1e7d9d19
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46531237"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46579452"
 ---
-# <a name="changes-to-the-systemuri-namespace-in-version-20"></a><span data-ttu-id="d23aa-102">System.Uri ad 2.0 sürümündeki değişiklikler</span><span class="sxs-lookup"><span data-stu-id="d23aa-102">Changes to the System.Uri namespace in version 2.0</span></span>
+# <a name="changes-to-the-systemuri-namespace-in-version-20"></a><span data-ttu-id="f20d5-102">System.Uri ad 2.0 sürümündeki değişiklikler</span><span class="sxs-lookup"><span data-stu-id="f20d5-102">Changes to the System.Uri namespace in version 2.0</span></span>
 
-<span data-ttu-id="d23aa-103">Birkaç değişiklik yapılmıştır <xref:System.Uri?displayProperty=nameWithType> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="d23aa-103">Several changes were made to the <xref:System.Uri?displayProperty=nameWithType> class.</span></span> <span data-ttu-id="d23aa-104">Bu değişiklikler yanlış davranışa sabit, artırılmış kullanılabilirlik ve Gelişmiş Güvenlik.</span><span class="sxs-lookup"><span data-stu-id="d23aa-104">These changes fixed incorrect behavior, enhanced usability, and enhanced security.</span></span>
+<span data-ttu-id="f20d5-103">Birkaç değişiklik yapılmıştır <xref:System.Uri?displayProperty=nameWithType> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="f20d5-103">Several changes were made to the <xref:System.Uri?displayProperty=nameWithType> class.</span></span> <span data-ttu-id="f20d5-104">Bu değişiklikler yanlış davranışa sabit, artırılmış kullanılabilirlik ve Gelişmiş Güvenlik.</span><span class="sxs-lookup"><span data-stu-id="f20d5-104">These changes fixed incorrect behavior, enhanced usability, and enhanced security.</span></span>
 
-## <a name="obsolete-and-deprecated-members"></a><span data-ttu-id="d23aa-105">Artık kullanılmıyor ve kullanım dışı bırakılan üyeleri</span><span class="sxs-lookup"><span data-stu-id="d23aa-105">Obsolete and deprecated Members</span></span>
+## <a name="obsolete-and-deprecated-members"></a><span data-ttu-id="f20d5-105">Artık kullanılmıyor ve kullanım dışı bırakılan üyeleri</span><span class="sxs-lookup"><span data-stu-id="f20d5-105">Obsolete and deprecated Members</span></span>
 
- <span data-ttu-id="d23aa-106">Oluşturucular:</span><span class="sxs-lookup"><span data-stu-id="d23aa-106">Constructors:</span></span>
+ <span data-ttu-id="f20d5-106">Oluşturucular:</span><span class="sxs-lookup"><span data-stu-id="f20d5-106">Constructors:</span></span>
 
-- <span data-ttu-id="d23aa-107">Sahip tüm oluşturucular bir `dontEscape` parametresi.</span><span class="sxs-lookup"><span data-stu-id="d23aa-107">All constructors that have a `dontEscape` parameter.</span></span>
+- <span data-ttu-id="f20d5-107">Sahip tüm oluşturucular bir `dontEscape` parametresi.</span><span class="sxs-lookup"><span data-stu-id="f20d5-107">All constructors that have a `dontEscape` parameter.</span></span>
 
- <span data-ttu-id="d23aa-108">Yöntemleri:</span><span class="sxs-lookup"><span data-stu-id="d23aa-108">Methods:</span></span>
+ <span data-ttu-id="f20d5-108">Yöntemleri:</span><span class="sxs-lookup"><span data-stu-id="f20d5-108">Methods:</span></span>
 
 - <xref:System.Uri.CheckSecurity%2A>
 
@@ -40,40 +40,40 @@ ms.locfileid: "46531237"
 
 - <xref:System.Uri.EscapeString%2A>
 
-## <a name="changes"></a><span data-ttu-id="d23aa-109">Değişiklikler</span><span class="sxs-lookup"><span data-stu-id="d23aa-109">Changes</span></span>
+## <a name="changes"></a><span data-ttu-id="f20d5-109">Değişiklikler</span><span class="sxs-lookup"><span data-stu-id="f20d5-109">Changes</span></span>
 
-- <span data-ttu-id="d23aa-110">(Dosya, ftp ve diğerleri), sorgu parçası olmayan bilinen URI düzenleri için '?' karakteri, her zaman Atlanan ve başlangıcı olarak kabul edilmez bir <xref:System.Uri.Query%2A> bölümü.</span><span class="sxs-lookup"><span data-stu-id="d23aa-110">For URI schemes that are known to not have a query part (file, ftp, and others), the '?' character is always escaped and is not considered the beginning of a <xref:System.Uri.Query%2A> part.</span></span>
+- <span data-ttu-id="f20d5-110">(Dosya, ftp ve diğerleri), sorgu parçası olmayan bilinen URI düzenleri için '?' karakteri, her zaman Atlanan ve başlangıcı olarak kabul edilmez bir <xref:System.Uri.Query%2A> bölümü.</span><span class="sxs-lookup"><span data-stu-id="f20d5-110">For URI schemes that are known to not have a query part (file, ftp, and others), the '?' character is always escaped and is not considered the beginning of a <xref:System.Uri.Query%2A> part.</span></span>
 
-- <span data-ttu-id="d23aa-111">Örtük dosya URI'ler için (form `c:\directory\file@name.txt`), parça karakter ('#') tam unescaping istenen sürece her zaman kaçırılmışsa veya <xref:System.Uri.LocalPath%2A> olduğu `true`.</span><span class="sxs-lookup"><span data-stu-id="d23aa-111">For implicit file URIs (of the form `c:\directory\file@name.txt`), the fragment character ('#') is always escaped unless full unescaping is requested or <xref:System.Uri.LocalPath%2A> is `true`.</span></span>
+- <span data-ttu-id="f20d5-111">Örtük dosya URI'ler için (form `c:\directory\file@name.txt`), parça karakter ('#') tam unescaping istenen sürece her zaman kaçırılmışsa veya <xref:System.Uri.LocalPath%2A> olduğu `true`.</span><span class="sxs-lookup"><span data-stu-id="f20d5-111">For implicit file URIs (of the form `c:\directory\file@name.txt`), the fragment character ('#') is always escaped unless full unescaping is requested or <xref:System.Uri.LocalPath%2A> is `true`.</span></span>
 
-- <span data-ttu-id="d23aa-112">UNC ana bilgisayar adı desteği kaldırıldı; Uluslararası ana bilgisayar adları temsil eden IDN belirtimi benimsenen.</span><span class="sxs-lookup"><span data-stu-id="d23aa-112">UNC hostname support was removed; the IDN specification for representing international hostnames was adopted.</span></span>
+- <span data-ttu-id="f20d5-112">UNC ana bilgisayar adı desteği kaldırıldı; Uluslararası ana bilgisayar adları temsil eden IDN belirtimi benimsenen.</span><span class="sxs-lookup"><span data-stu-id="f20d5-112">UNC hostname support was removed; the IDN specification for representing international hostnames was adopted.</span></span>
 
-- <span data-ttu-id="d23aa-113"><xref:System.Uri.LocalPath%2A> her zaman tamamen atlanmayan bir dize döndürür.</span><span class="sxs-lookup"><span data-stu-id="d23aa-113"><xref:System.Uri.LocalPath%2A> always returns a completely unescaped string.</span></span>
+- <span data-ttu-id="f20d5-113"><xref:System.Uri.LocalPath%2A> her zaman tamamen atlanmayan bir dize döndürür.</span><span class="sxs-lookup"><span data-stu-id="f20d5-113"><xref:System.Uri.LocalPath%2A> always returns a completely unescaped string.</span></span>
 
-- <span data-ttu-id="d23aa-114"><xref:System.Uri.ToString%2A> bir kaçış '%', unescape değil '?', veya '#' karakteri.</span><span class="sxs-lookup"><span data-stu-id="d23aa-114"><xref:System.Uri.ToString%2A> does not unescape an escaped '%', '?', or '#' character.</span></span>
+- <span data-ttu-id="f20d5-114"><xref:System.Uri.ToString%2A> bir kaçış '%', unescape değil '?', veya '#' karakteri.</span><span class="sxs-lookup"><span data-stu-id="f20d5-114"><xref:System.Uri.ToString%2A> does not unescape an escaped '%', '?', or '#' character.</span></span>
 
-- <span data-ttu-id="d23aa-115"><xref:System.Uri.Equals%2A> artık <xref:System.Uri.Query%2A> yapılan eşitlik kontrolüne bölümünde.</span><span class="sxs-lookup"><span data-stu-id="d23aa-115"><xref:System.Uri.Equals%2A> now includes the <xref:System.Uri.Query%2A> part in the equality check.</span></span>
+- <span data-ttu-id="f20d5-115"><xref:System.Uri.Equals%2A> artık <xref:System.Uri.Query%2A> yapılan eşitlik kontrolüne bölümünde.</span><span class="sxs-lookup"><span data-stu-id="f20d5-115"><xref:System.Uri.Equals%2A> now includes the <xref:System.Uri.Query%2A> part in the equality check.</span></span>
 
-- <span data-ttu-id="d23aa-116">İşleçleri "=="ve"! =" geçersiz kılınacak ve bağlantılı <xref:System.Uri.Equals%2A> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="d23aa-116">Operators "==" and "!=" are overridden and linked to the <xref:System.Uri.Equals%2A> method.</span></span>
+- <span data-ttu-id="f20d5-116">İşleçleri "=="ve"! =" geçersiz kılınacak ve bağlantılı <xref:System.Uri.Equals%2A> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="f20d5-116">Operators "==" and "!=" are overridden and linked to the <xref:System.Uri.Equals%2A> method.</span></span>
 
-- <span data-ttu-id="d23aa-117"><xref:System.Uri.IsLoopback%2A> Şimdi, tutarlı sonuçlar üretir.</span><span class="sxs-lookup"><span data-stu-id="d23aa-117"><xref:System.Uri.IsLoopback%2A> now produces consistent results.</span></span>
+- <span data-ttu-id="f20d5-117"><xref:System.Uri.IsLoopback%2A> Şimdi, tutarlı sonuçlar üretir.</span><span class="sxs-lookup"><span data-stu-id="f20d5-117"><xref:System.Uri.IsLoopback%2A> now produces consistent results.</span></span>
 
-- <span data-ttu-id="d23aa-118">URI "`file:///path`" artık veri dönüştürülür `file://path`.</span><span class="sxs-lookup"><span data-stu-id="d23aa-118">The URI "`file:///path`" is no longer translated into `file://path`.</span></span>
+- <span data-ttu-id="f20d5-118">URI "`file:///path`" artık veri dönüştürülür `file://path`.</span><span class="sxs-lookup"><span data-stu-id="f20d5-118">The URI "`file:///path`" is no longer translated into `file://path`.</span></span>
 
-- <span data-ttu-id="d23aa-119">"#", artık bir konak adı Sonlandırıcı kabul edilir.</span><span class="sxs-lookup"><span data-stu-id="d23aa-119">"#" is now recognized as a host name terminator.</span></span> <span data-ttu-id="d23aa-120">Diğer bir deyişle, `http://contoso.com#fragment` artık dönüştürülür `http://contoso.com/#fragment`.</span><span class="sxs-lookup"><span data-stu-id="d23aa-120">That is, `http://contoso.com#fragment` is now converted to `http://contoso.com/#fragment`.</span></span>
+- <span data-ttu-id="f20d5-119">"#", artık bir konak adı Sonlandırıcı kabul edilir.</span><span class="sxs-lookup"><span data-stu-id="f20d5-119">"#" is now recognized as a host name terminator.</span></span> <span data-ttu-id="f20d5-120">Diğer bir deyişle, `http://contoso.com#fragment` artık dönüştürülür `http://contoso.com/#fragment`.</span><span class="sxs-lookup"><span data-stu-id="f20d5-120">That is, `http://contoso.com#fragment` is now converted to `http://contoso.com/#fragment`.</span></span>
 
-- <span data-ttu-id="d23aa-121">Taban URI ile bir parça birleştirilirken bir hata düzeltildi.</span><span class="sxs-lookup"><span data-stu-id="d23aa-121">A bug when combining a base URI with a fragment has been fixed.</span></span>
+- <span data-ttu-id="f20d5-121">Taban URI ile bir parça birleştirilirken bir hata düzeltildi.</span><span class="sxs-lookup"><span data-stu-id="f20d5-121">A bug when combining a base URI with a fragment has been fixed.</span></span>
 
-- <span data-ttu-id="d23aa-122">Bir hatada <xref:System.Uri.HostNameType%2A> sabittir.</span><span class="sxs-lookup"><span data-stu-id="d23aa-122">A bug in <xref:System.Uri.HostNameType%2A> is fixed.</span></span>
+- <span data-ttu-id="f20d5-122">Bir hatada <xref:System.Uri.HostNameType%2A> sabittir.</span><span class="sxs-lookup"><span data-stu-id="f20d5-122">A bug in <xref:System.Uri.HostNameType%2A> is fixed.</span></span>
 
-- <span data-ttu-id="d23aa-123">NNTP ayrıştırılırken bir hata düzeltildi.</span><span class="sxs-lookup"><span data-stu-id="d23aa-123">A bug in NNTP parsing is fixed.</span></span>
+- <span data-ttu-id="f20d5-123">NNTP ayrıştırılırken bir hata düzeltildi.</span><span class="sxs-lookup"><span data-stu-id="f20d5-123">A bug in NNTP parsing is fixed.</span></span>
 
-- <span data-ttu-id="d23aa-124">Bir URI biçiminde HTTP:contoso.com artık bir ayrıştırma özel durumu oluşturur.</span><span class="sxs-lookup"><span data-stu-id="d23aa-124">A URI of the form HTTP:contoso.com now throws a parsing exception.</span></span>
+- <span data-ttu-id="f20d5-124">Bir URI biçiminde HTTP:contoso.com artık bir ayrıştırma özel durumu oluşturur.</span><span class="sxs-lookup"><span data-stu-id="f20d5-124">A URI of the form HTTP:contoso.com now throws a parsing exception.</span></span>
 
-- <span data-ttu-id="d23aa-125">Framework doğru bir Uri kullanıcı bilgileri işler.</span><span class="sxs-lookup"><span data-stu-id="d23aa-125">The Framework correctly handles userinfo in a URI.</span></span>
+- <span data-ttu-id="f20d5-125">Framework doğru bir Uri kullanıcı bilgileri işler.</span><span class="sxs-lookup"><span data-stu-id="f20d5-125">The Framework correctly handles userinfo in a URI.</span></span>
 
-- <span data-ttu-id="d23aa-126">Bozuk URI yukarıda kök dosya sistemine çapraz olamaz, URI yolu sıkıştırma sabittir.</span><span class="sxs-lookup"><span data-stu-id="d23aa-126">URI path compression is fixed so that a broken URI cannot traverse the file system above the root.</span></span>
+- <span data-ttu-id="f20d5-126">Bozuk URI yukarıda kök dosya sistemine çapraz olamaz, URI yolu sıkıştırma sabittir.</span><span class="sxs-lookup"><span data-stu-id="f20d5-126">URI path compression is fixed so that a broken URI cannot traverse the file system above the root.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="d23aa-127">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d23aa-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f20d5-127">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f20d5-127">See also</span></span>
 
 - <xref:System.Uri?displayProperty=nameWithType>

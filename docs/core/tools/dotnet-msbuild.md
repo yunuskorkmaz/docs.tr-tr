@@ -5,44 +5,44 @@ author: mairaw
 ms.author: mairaw
 ms.date: 05/25/2018
 ms.openlocfilehash: 76165590478b0e76d19d546c87e012da4716b6db
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46532700"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46578902"
 ---
-# <a name="dotnet-msbuild"></a><span data-ttu-id="18909-103">DotNet msbuild</span><span class="sxs-lookup"><span data-stu-id="18909-103">dotnet msbuild</span></span>
+# <a name="dotnet-msbuild"></a><span data-ttu-id="6a8f7-103">DotNet msbuild</span><span class="sxs-lookup"><span data-stu-id="6a8f7-103">dotnet msbuild</span></span>
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a><span data-ttu-id="18909-104">Ad</span><span class="sxs-lookup"><span data-stu-id="18909-104">Name</span></span>
+## <a name="name"></a><span data-ttu-id="6a8f7-104">Ad</span><span class="sxs-lookup"><span data-stu-id="6a8f7-104">Name</span></span>
 
-<span data-ttu-id="18909-105">`dotnet msbuild` -Bir proje ve tüm bağımlılıklarını oluşturur.</span><span class="sxs-lookup"><span data-stu-id="18909-105">`dotnet msbuild` - Builds a project and all of its dependencies.</span></span>
+<span data-ttu-id="6a8f7-105">`dotnet msbuild` -Bir proje ve tüm bağımlılıklarını oluşturur.</span><span class="sxs-lookup"><span data-stu-id="6a8f7-105">`dotnet msbuild` - Builds a project and all of its dependencies.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="18909-106">Özeti</span><span class="sxs-lookup"><span data-stu-id="18909-106">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="6a8f7-106">Özeti</span><span class="sxs-lookup"><span data-stu-id="6a8f7-106">Synopsis</span></span>
 
 `dotnet msbuild <msbuild_arguments> [-h]`
 
-## <a name="description"></a><span data-ttu-id="18909-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="18909-107">Description</span></span>
+## <a name="description"></a><span data-ttu-id="6a8f7-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="6a8f7-107">Description</span></span>
 
-<span data-ttu-id="18909-108">`dotnet msbuild` Komutu tam olarak işlevsel bir MSBuild erişim sağlar.</span><span class="sxs-lookup"><span data-stu-id="18909-108">The `dotnet msbuild` command allows access to a fully functional MSBuild.</span></span>
+<span data-ttu-id="6a8f7-108">`dotnet msbuild` Komutu tam olarak işlevsel bir MSBuild erişim sağlar.</span><span class="sxs-lookup"><span data-stu-id="6a8f7-108">The `dotnet msbuild` command allows access to a fully functional MSBuild.</span></span>
 
-<span data-ttu-id="18909-109">Komutu, var olan MSBuild komut satırı istemcisi tam aynı özellikleri vardır.</span><span class="sxs-lookup"><span data-stu-id="18909-109">The command has the exact same capabilities as existing MSBuild command-line client.</span></span> <span data-ttu-id="18909-110">Seçenekler tüm aynıdır.</span><span class="sxs-lookup"><span data-stu-id="18909-110">The options are all the same.</span></span> <span data-ttu-id="18909-111">Kullanılabilir seçenekler hakkında daha fazla bilgi için bkz. [MSBuild komut satırı başvurusu](/visualstudio/msbuild/msbuild-command-line-reference).</span><span class="sxs-lookup"><span data-stu-id="18909-111">For more information about the available options, see the [MSBuild Command-Line Reference](/visualstudio/msbuild/msbuild-command-line-reference).</span></span>
+<span data-ttu-id="6a8f7-109">Komutu, var olan MSBuild komut satırı istemcisi tam aynı özellikleri vardır.</span><span class="sxs-lookup"><span data-stu-id="6a8f7-109">The command has the exact same capabilities as existing MSBuild command-line client.</span></span> <span data-ttu-id="6a8f7-110">Seçenekler tüm aynıdır.</span><span class="sxs-lookup"><span data-stu-id="6a8f7-110">The options are all the same.</span></span> <span data-ttu-id="6a8f7-111">Kullanılabilir seçenekler hakkında daha fazla bilgi için bkz. [MSBuild komut satırı başvurusu](/visualstudio/msbuild/msbuild-command-line-reference).</span><span class="sxs-lookup"><span data-stu-id="6a8f7-111">For more information about the available options, see the [MSBuild Command-Line Reference](/visualstudio/msbuild/msbuild-command-line-reference).</span></span>
 
-## <a name="examples"></a><span data-ttu-id="18909-112">Örnekler</span><span class="sxs-lookup"><span data-stu-id="18909-112">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="6a8f7-112">Örnekler</span><span class="sxs-lookup"><span data-stu-id="6a8f7-112">Examples</span></span>
 
-<span data-ttu-id="18909-113">Bir proje ve bağımlılıkları derleme:</span><span class="sxs-lookup"><span data-stu-id="18909-113">Build a project and its dependencies:</span></span>
+<span data-ttu-id="6a8f7-113">Bir proje ve bağımlılıkları derleme:</span><span class="sxs-lookup"><span data-stu-id="6a8f7-113">Build a project and its dependencies:</span></span>
 
 `dotnet msbuild`
 
-<span data-ttu-id="18909-114">Bir proje ve bağımlılıkları sürüm yapılandırmasını oluşturun:</span><span class="sxs-lookup"><span data-stu-id="18909-114">Build a project and its dependencies using Release configuration:</span></span>
+<span data-ttu-id="6a8f7-114">Bir proje ve bağımlılıkları sürüm yapılandırmasını oluşturun:</span><span class="sxs-lookup"><span data-stu-id="6a8f7-114">Build a project and its dependencies using Release configuration:</span></span>
 
 `dotnet msbuild -p:Configuration=Release`
 
-<span data-ttu-id="18909-115">Yayımlama hedefi çalıştırın ve yayımlama için `osx.10.11-x64` RID:</span><span class="sxs-lookup"><span data-stu-id="18909-115">Run the publish target and publish for the `osx.10.11-x64` RID:</span></span>
+<span data-ttu-id="6a8f7-115">Yayımlama hedefi çalıştırın ve yayımlama için `osx.10.11-x64` RID:</span><span class="sxs-lookup"><span data-stu-id="6a8f7-115">Run the publish target and publish for the `osx.10.11-x64` RID:</span></span>
 
 `dotnet msbuild -t:Publish -p:RuntimeIdentifiers=osx.10.11-x64`
 
-<span data-ttu-id="18909-116">SDK tarafından eklenen tüm hedefleri ile tüm proje bakın:</span><span class="sxs-lookup"><span data-stu-id="18909-116">See the whole project with all targets included by the SDK:</span></span>
+<span data-ttu-id="6a8f7-116">SDK tarafından eklenen tüm hedefleri ile tüm proje bakın:</span><span class="sxs-lookup"><span data-stu-id="6a8f7-116">See the whole project with all targets included by the SDK:</span></span>
 
 `dotnet msbuild -pp`

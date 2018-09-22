@@ -10,27 +10,27 @@ helpviewer_keywords:
 - /nologo compiler option [C#]
 ms.assetid: 426afb36-a8fb-469d-9c45-a35d9512557c
 ms.openlocfilehash: a8f4582e9c8d5a54d924ff5b456ef8ffd8cc56f3
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46519597"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46583528"
 ---
-# <a name="-nologo-c-compiler-options"></a><span data-ttu-id="df412-102">-nologo (C# Derleyici Seçenekleri)</span><span class="sxs-lookup"><span data-stu-id="df412-102">-nologo (C# Compiler Options)</span></span>
-<span data-ttu-id="df412-103">**- Nologo** seçeneği derleyici başlatıldığında oturum açma başlığının görüntülenmesini ve derleme sırasında görüntülenen bilgi iletilerini engeller.</span><span class="sxs-lookup"><span data-stu-id="df412-103">The **-nologo** option suppresses display of the sign-on banner when the compiler starts up and display of informational messages during compiling.</span></span>  
+# <a name="-nologo-c-compiler-options"></a><span data-ttu-id="cc589-102">-nologo (C# Derleyici Seçenekleri)</span><span class="sxs-lookup"><span data-stu-id="cc589-102">-nologo (C# Compiler Options)</span></span>
+<span data-ttu-id="cc589-103">**- Nologo** seçeneği derleyici başlatıldığında oturum açma başlığının görüntülenmesini ve derleme sırasında görüntülenen bilgi iletilerini engeller.</span><span class="sxs-lookup"><span data-stu-id="cc589-103">The **-nologo** option suppresses display of the sign-on banner when the compiler starts up and display of informational messages during compiling.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="df412-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="df412-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cc589-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="cc589-104">Syntax</span></span>  
   
 ```console  
 -nologo  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="df412-105">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="df412-105">Remarks</span></span>  
- <span data-ttu-id="df412-106">Bu seçenek geliştirme ortamı içinden erişilebilir değildir; Yalnızca komut satırından derleme yapılırken kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="df412-106">This option is not available from within the development environment; it is only available when compiling from the command line.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="cc589-105">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="cc589-105">Remarks</span></span>  
+ <span data-ttu-id="cc589-106">Bu seçenek geliştirme ortamı içinden erişilebilir değildir; Yalnızca komut satırından derleme yapılırken kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="cc589-106">This option is not available from within the development environment; it is only available when compiling from the command line.</span></span>  
   
- <span data-ttu-id="df412-107">Bu derleyici seçeneğini Visual Studio'da kullanılamıyor ve program aracılığıyla değiştirilemez.</span><span class="sxs-lookup"><span data-stu-id="df412-107">This compiler option is unavailable in Visual Studio and cannot be changed programmatically.</span></span>  
+ <span data-ttu-id="cc589-107">Bu derleyici seçeneğini Visual Studio'da kullanılamıyor ve program aracılığıyla değiştirilemez.</span><span class="sxs-lookup"><span data-stu-id="cc589-107">This compiler option is unavailable in Visual Studio and cannot be changed programmatically.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="df412-108">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="df412-108">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="cc589-108">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="cc589-108">See Also</span></span>  
 
-- [<span data-ttu-id="df412-109">C# Derleyici Seçenekleri</span><span class="sxs-lookup"><span data-stu-id="df412-109">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
-- [<span data-ttu-id="df412-110">Proje ve Çözüm Özelliklerini Yönetme</span><span class="sxs-lookup"><span data-stu-id="df412-110">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
+- [<span data-ttu-id="cc589-109">C# Derleyici Seçenekleri</span><span class="sxs-lookup"><span data-stu-id="cc589-109">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
+- [<span data-ttu-id="cc589-110">Proje ve Çözüm Özelliklerini Yönetme</span><span class="sxs-lookup"><span data-stu-id="cc589-110">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
