@@ -8,11 +8,11 @@ dev_langs:
 - VB
 ms.assetid: 67bf05b7-1d08-4911-83b7-a45d0b036fc3
 ms.openlocfilehash: 4f85a51c47eb045d1d2f0111cb217199c9acf0d7
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
-ms.translationtype: HT
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 09/21/2018
-ms.locfileid: "46525324"
+ms.locfileid: "46537884"
 ---
 # <a name="how-to-define-a-windows-communication-foundation-service-contract"></a>Nasıl yapılır: Windows Communication Foundation Hizmet Sözleşmesini Tanımlama
 
