@@ -3,11 +3,11 @@ title: Entity Framework'e Genel Bakış
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
 ms.openlocfilehash: 35eb3b1503c8754752662aef0c5101251d60d49c
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46493548"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46584012"
 ---
 # <a name="entity-framework-overview"></a>Entity Framework'e Genel Bakış
 

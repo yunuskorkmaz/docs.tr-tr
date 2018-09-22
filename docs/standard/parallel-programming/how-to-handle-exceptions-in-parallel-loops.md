@@ -11,11 +11,11 @@ ms.assetid: 512f0d5a-4636-4875-b766-88f20044f143
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ddf311ad2b79e615f5c3097686035e7bbfbc49c9
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46531872"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46698100"
 ---
 # <a name="how-to-handle-exceptions-in-parallel-loops"></a>Nasıl yapılır: Paralel Döngülerde Özel Durumları İşleme
 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> Ve <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> aşırı oluşturulabilecek özel durumları işlemek için özel bir mekanizma yoktur. Bu bakımdan, bunlar normal benzer `for` ve `foreach` döngüler (`For` ve `For Each` Visual Basic'te); işlenmeyen bir özel durum hemen sonlandırmak döngüye neden oluyor.  

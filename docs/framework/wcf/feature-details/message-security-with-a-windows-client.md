@@ -8,11 +8,11 @@ ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 34f6078baba86868fa03f37873731c39e73ac81f
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
-ms.translationtype: MT
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46481669"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46568787"
 ---
 # <a name="message-security-with-a-windows-client"></a>Windows İstemcisi ile İleti Güvenliği
 Bu senaryo, bir Windows Communication Foundation (WCF) istemci ve sunucu güvenli ileti güvenlik modunu gösterir. İstemci ve hizmet Windows kimlik bilgilerini kullanarak kimlik doğrulaması yapılır.  

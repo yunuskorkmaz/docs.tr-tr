@@ -3,11 +3,11 @@ title: NoPersistScope etkinliği
 ms.date: 03/30/2017
 ms.assetid: 9a0baeb7-a05c-4fac-b905-252758cb71bb
 ms.openlocfilehash: 6543756594b6734aec39bf22c5ab6215605341b1
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46561425"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46698262"
 ---
 # <a name="nopersistscope-activity"></a>NoPersistScope etkinliği
 Bu örnek, bir iş akışındaki serileştirilebilir olmayan ve tek kullanımlık bir durumu işlemek nasıl gösterir. Seri hale getirilemeyen durumu kalıcı hale getirmek iş akışlarını çalışmayın ve ayrıca önemli iş akışında kullanılan sonra temizlenmesi atılabilir nesneler için önemlidir.  

@@ -13,11 +13,11 @@ ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8956726915ebe1c0b1c7654e62e2e28620274b4a
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46481747"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46580713"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>Normal İfadelerdeki Çeşitli Yapılar
 .NET içinde normal ifadeler üç çeşitli dil yapıları içerir. Biri, etkinleştirme veya devre dışı ortasında bir normal ifade deseni eşleştirme belirli seçenekleri sağlar. Kalan iki normal bir ifadede açıklamalar ekleme olanak tanır.  

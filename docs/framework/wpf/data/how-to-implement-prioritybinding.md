@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data binding [WPF], PriorityBinding class
 ms.assetid: d63b65ab-b3e9-4322-9aa8-1450f8d89532
 ms.openlocfilehash: a7729ec3d06ec701cf2194bed5d90b5bed76573a
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46538767"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46576530"
 ---
 # <a name="how-to-implement-prioritybinding"></a>Nasıl yapılır: PriorityBinding Uygulama
 <xref:System.Windows.Data.PriorityBinding> içinde [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bağlamaları listesi belirterek çalışır. Bağlamaları listesi en düşük önceliği en yüksek öncelik aralığı sıralanır. En yüksek öncelikli bağlama bir değer döndürürse başarıyla işlendiğinde yoktur hiçbir zaman listedeki diğer bağlamalar işlem gerekmez. En yüksek öncelikli bağlama uyumluluğunun değerlendirilebilmesi için çok uzun sürüyor durumu olabilir, başarıyla bir değer döndüren bir sonraki en yüksek öncelikli bir daha yüksek bir öncelik değeri başarıyla döndürünceye kadar kullanılır.  

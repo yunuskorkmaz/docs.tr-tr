@@ -2,11 +2,11 @@
 title: 'İzlenecek yol: C# kullanarak bir nesneyi kalıcı kılma'
 ms.date: 04/26/2018
 ms.openlocfilehash: c3cff57f008eb524c2d2bec406431e4c41dca617
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46525090"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46568147"
 ---
 # <a name="walkthrough-persisting-an-object-using-c"></a>İzlenecek yol: C# kullanarak bir nesneyi kalıcı kılma #
 

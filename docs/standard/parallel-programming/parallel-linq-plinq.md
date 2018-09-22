@@ -8,11 +8,11 @@ ms.assetid: 3d4d0cd3-bde4-490b-99e7-f4e41be96455
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1fe7edffd53023cba6dac1454e620d6e0d7e9513
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46007444"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46697613"
 ---
 # <a name="parallel-linq-plinq"></a>Paralel LINQ (PLINQ)
 Paralel LINQ (PLINQ) bir paralel LINQ to Objects'in uygulamasıdır. PLINQ için genişletme yöntemleri olarak LINQ standart sorgu işleçlerinin tam kümesini uygular <xref:System.Linq> ad alanı ve paralel işlemler için ek işleçler. PLINQ'nun paralel programlama gücüyle basitliği ve LINQ söz dizimi okunabilirliğini birleştirir. Kod gibi ana bilgisayar becerilerine dayalı eşzamanlılık derecesini, PLINQ sorguları hedefleyen görev paralel kitaplığı ölçeklendirin.  

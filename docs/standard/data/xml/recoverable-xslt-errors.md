@@ -6,11 +6,11 @@ ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8f7630b9a233db009b6095abc8d833870c1f33d8
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46473174"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46581940"
 ---
 # <a name="recoverable-xslt-errors"></a>Kurtarılabilir XSLT hataları
 W3C XSLT Dönüşümleri (XSLT) sürüm 1.0 öneri uygulama sağlayıcısı bir durumu işlemek nasıl karar verebilir alanları içerir. Bu alanlar isteğe bağlı bir davranış olarak değerlendirilir. Örneğin, bu içeriği, örnekleme, bir hata olduğunu Bölüm 7.3 oluşturma işleme yönergeleri, XSLT 1.0 öneri eyaletler `xsl:processing-instruction` metin düğümleri dışındaki düğümlerde oluşturur. İşlemci hatadan kurtarmayı karar verirse, bazı sorunlar için öneri ne karar gösterir XSLT 1.0 yapılmalıdır. 7.3 bölümde verilen sorun için uygulama bu hatadan düğümleri ve içeriklerini yoksayarak kurtarabilirsiniz W3C diyor.  

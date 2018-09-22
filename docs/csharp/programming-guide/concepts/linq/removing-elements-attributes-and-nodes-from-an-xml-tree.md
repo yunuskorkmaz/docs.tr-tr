@@ -3,11 +3,11 @@ title: XML ağacından (C#) öğe, öznitelik ve düğümleri kaldırma
 ms.date: 07/20/2015
 ms.assetid: 07dd06d6-1117-4077-bf98-9120cf51176e
 ms.openlocfilehash: 9ce63ce6a4ef75dedc788efca11e8dd2bdb471eb
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46480480"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46584122"
 ---
 # <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-c"></a>XML ağacından (C#) öğe, öznitelik ve düğümleri kaldırma
 Bir XML ağacına öğe, öznitelik ve düğümleri diğer türleri kaldırma değiştirebilirsiniz.  

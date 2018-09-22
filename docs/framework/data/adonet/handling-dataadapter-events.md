@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 11515b25-ee49-4b1d-9294-a142147c1ec5
 ms.openlocfilehash: 3c2158e94f936dd2b28fe46310fd96df8dbc50fb
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46525558"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46577301"
 ---
 # <a name="handling-dataadapter-events"></a>DataAdapter olaylarını işleme
 ADO.NET <xref:System.Data.Common.DataAdapter> veri kaynağındaki verilere yapılan değişikliklere yanıt vermek için kullanabileceğiniz üç olayları gösterir. Aşağıdaki tabloda `DataAdapter` olayları.  

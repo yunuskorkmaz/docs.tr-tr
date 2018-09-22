@@ -3,11 +3,11 @@ title: İşlevsel ve Yordam programlama karşılaştırması (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: fc64e39c-a487-4882-9169-da4de97917d9
 ms.openlocfilehash: 888c360e1b868c79d378f2fc46a26c152121300f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45749757"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46580050"
 ---
 # <a name="functional-vs-procedural-programming-linq-to-xml-c"></a>İşlevsel ve Yordam programlama karşılaştırması (LINQ to XML) (C#)
 XML uygulama çeşitli türleri şunlardır:  

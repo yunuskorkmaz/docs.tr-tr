@@ -3,11 +3,11 @@ title: Öznitelikler (F#)
 description: 'F # öznitelikleri bir programlama yapısı için uygulanacak meta verileri nasıl etkinleştirme hakkında bilgi edinin.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 3e7f1d0ff383e1070b3db72e633f80ea37150548
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46471096"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46568069"
 ---
 # <a name="attributes"></a>Öznitelikler
 

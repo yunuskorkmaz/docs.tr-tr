@@ -4,12 +4,12 @@ description: Dotnet testi komut, belirli bir projede birim testleri yürütmek i
 author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 7946196b27489870da1c16b15cbf5f078ae89c61
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: e80ba874ec8d0fbc49858719dc3b9b6e02254c78
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46479188"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46696462"
 ---
 # <a name="dotnet-test"></a>DotNet testi
 
@@ -48,7 +48,7 @@ dotnet test [-h|--help]
 
 ## <a name="description"></a>Açıklama
 
-`dotnet test` Komutu, belirli bir projede birim testleri yürütmek için kullanılır. `dotnet test` Test Çalıştırıcısı konsol uygulaması projesi için belirtilen komutu çalıştırır. Test Çalıştırıcısı, birim test çerçevesi (örneğin, MSTest, NUnit veya xUnit) için tanımlanan testleri yürütür ve başarılı veya başarısız her test raporlar. Test Çalıştırıcısı ve birim testi kitaplığı NuGet paketleri olarak paketlenir ve proje için sıradan bağımlılık olarak geri yüklenir.
+`dotnet test` Komutu, belirli bir projede birim testleri yürütmek için kullanılır. `dotnet test` Test Çalıştırıcısı konsol uygulaması projesi için belirtilen komutu çalıştırır. Test Çalıştırıcısı, birim test çerçevesi (örneğin, MSTest, NUnit veya xUnit) için tanımlanan testleri yürütür ve başarılı veya başarısız her test raporlar. Tüm testler başarılı olursa, test Çalıştırıcısı 0 bir çıkış kodu döndürür; Aksi takdirde herhangi bir test başarısız olursa, 1 döndürür. Test Çalıştırıcısı ve birim testi kitaplığı NuGet paketleri olarak paketlenir ve proje için sıradan bağımlılık olarak geri yüklenir.
 
 Test projeleri belirtmek sıradan kullanarak test Çalıştırıcısı `<PackageReference>` aşağıdaki örnek proje dosyasında görülen öğe:
 

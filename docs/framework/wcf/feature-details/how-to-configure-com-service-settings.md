@@ -5,11 +5,11 @@ helpviewer_keywords:
 - COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
 ms.openlocfilehash: d14fd1434cb87dc62babeabb79cb780e568aacb7
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46538381"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46699020"
 ---
 # <a name="how-to-configure-com-service-settings"></a>Nasıl yapılır: COM+ Hizmet Ayarlarını Yapılandırma
 Bir uygulama arabirimi eklendi veya kaldırıldı COM + hizmet yapılandırması aracını kullanarak, Web hizmeti yapılandırması uygulamanın yapılandırma dosyası içinde güncelleştirilir. COM + barındırılan modunda Application.config dosya uygulamanın kök dizinine yerleştirilir (%PROGRAMFILES%\ComPlus uygulamaları\\{AppID} varsayılan değerdir). Ya da Web barındırılan modları, Web.config dosyasının vroot belirtilen dizine yerleştirilir.  

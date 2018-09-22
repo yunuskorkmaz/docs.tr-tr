@@ -2,17 +2,17 @@
 title: Bellek içi XML ağacı değişikliği ve İşlevsel oluşturma (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: b5afc31d-a325-4ec6-bf17-0ff90a20ffca
-ms.openlocfilehash: 836141185629683106698cc9b505c063de6c445e
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: fb461d6730260f01f0439b7feb239d51b29ee3c7
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45750017"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46577210"
 ---
 # <a name="in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml-c"></a>Bellek içi XML ağacı değişikliği ve İşlevsel oluşturma (LINQ to XML) (C#)
 Bir XML ağacı yerde değiştirme, bir XML belgesi şeklini değiştirmek için geleneksel bir yaklaşımdır. Tipik bir uygulama bir belge DOM gibi bir veri deposuna yükler ya da [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]; düğümleri eklediğinizde, düğümleri silin veya düğümler; içeriğini değiştirmek için bir programlama arabirimi kullanır ve ardından XML bir dosyaya kaydeder veya bir ağ üzerinden iletir.  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] pek çok senaryoda kullanışlıdır başka bir yaklaşım sağlayan *: işlev yapım*. İşlevsel oluşturma, değiştirme veri dönüşümünün bir sorun, yerine ayrıntılı işleme bir veri deposu olarak değerlendirir. Bir veri temsilini alın ve verimli bir şekilde bir formdan başka bir dönüştürme, bir veri deposu sürdü ve başka bir şekil gerçekleştirilecek şekilde yönetilebilir gibi sonuç aynıdır. İşlevsel oluşturma yaklaşımını anahtarı için sorguların sonuçlarını geçirmektir <xref:System.Xml.Linq.XDocument> ve <xref:System.Xml.Linq.XElement> oluşturucular.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] pek çok senaryoda kullanışlıdır başka bir yaklaşım sağlar: *işlevsel oluşturma*. İşlevsel oluşturma, değiştirme veri dönüşümünün bir sorun, yerine ayrıntılı işleme bir veri deposu olarak değerlendirir. Bir veri temsilini alın ve verimli bir şekilde bir formdan başka bir dönüştürme, bir veri deposu sürdü ve başka bir şekil gerçekleştirilecek şekilde yönetilebilir gibi sonuç aynıdır. İşlevsel oluşturma yaklaşımını anahtarı için sorguların sonuçlarını geçirmektir <xref:System.Xml.Linq.XDocument> ve <xref:System.Xml.Linq.XElement> oluşturucular.  
   
  Çoğu durumda veri deposu işlemek için harcadığım süreyi kesir dönüşümsel kodu yazabilirsiniz ve bu kodu daha sağlam ve bakımı kolay. Daha fazla işlemci gücü, dönüşümsel yaklaşım sürebilir olsa bile bu gibi durumlarda, bu verileri değiştirmek için bir daha etkili yoludur. Bir geliştirici işlevsel yaklaşım ile ilgili bilgi sahibi ise, çoğu durumda Sonuç kodu anlamak daha kolay olur. Her ağacın parçası değiştiren bir kodun bulmak daha kolaydır.  
   

@@ -12,11 +12,11 @@ ms.assetid: bc496a91-fefb-4ce0-ab4c-61f09964119a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 27550a8fd8292029cad9c2e699374a190b1a532e
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46526497"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46696085"
 ---
 # <a name="equality-operators"></a>Eşitlik İşleçleri
 Bu bölümde, aşırı yüklerken eşitlik işleci açıklar ve başvurduğu `operator==` ve `operator!=` eşitlik işleçleri olarak.  

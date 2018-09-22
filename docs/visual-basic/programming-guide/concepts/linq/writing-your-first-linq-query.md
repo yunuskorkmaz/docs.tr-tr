@@ -7,11 +7,11 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
 ms.openlocfilehash: 4c04c00c5392d8ba363346b06c806ec79041c439
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46508693"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46580336"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>İlk LINQ Sorgunuzu Yazma (Visual Basic)
 A *sorgu* , verileri bir veri kaynağından alır bir ifadedir. Sorgular, bir özel sorgu dilinde ifade edilir. Zaman içinde farklı dillerde farklı türde veri kaynakları için örneğin, ilişkisel veritabanları için SQL ve XML için XQuery geliştirilmiştir. Bu, uygulama geliştiricisi, her veri kaynağı veya desteklenmeyen veri biçimi türü için yeni bir sorgu dili öğrenmek için gerekli kılar.  

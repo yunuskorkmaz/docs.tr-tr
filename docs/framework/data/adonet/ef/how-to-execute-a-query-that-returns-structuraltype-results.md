@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 2314f2a2-b1c3-40c4-95bb-cdf9b21a7b53
 ms.openlocfilehash: 1a53ab6ab455975f0597eab76aeaa2db3ffd42a3
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562749"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46580518"
 ---
 # <a name="how-to-execute-a-query-that-returns-structuraltype-results"></a>Nasıl yapılır: StructuralType sonuçları döndüren bir sorgu yürütme
 Bu konuda kullanarak kavramsal modeline karşı komut yürütme işlemi gösterilmektedir bir <xref:System.Data.EntityClient.EntityCommand> nesne ve nasıl alınacağını <xref:System.Data.Metadata.Edm.StructuralType> kullanarak sonuçları bir <xref:System.Data.EntityClient.EntityDataReader>. <xref:System.Data.Metadata.Edm.EntityType>, <xref:System.Data.Metadata.Edm.RowType> Ve <xref:System.Data.Metadata.Edm.ComplexType> sınıflar türetilen <xref:System.Data.Metadata.Edm.StructuralType> sınıfı.  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
 ms.openlocfilehash: 997affa2f4cc5332339a49450d68ab3aaadffc4b
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46321081"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46585273"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>İzlenecek yol: Office Programlama (C# ve Visual Basic)
 Visual Studio, C# ve Visual Basic, Microsoft Office programlama artıran özellikleri sunar. Yararlı C# özellikleri adlandırılmış ve isteğe bağlı bağımsız değişkenler içerir ve dönüş türü değerlerinin `dynamic`. COM programlama, atlayabilirsiniz `ref` Dizinli Özellikler anahtar sözcüğü ve kazanç erişim. Visual Basic'de özellikler, lambda ifadeleri ve koleksiyon başlatıcıları deyimlerinde otomatik uygulanan özellikler içerir.

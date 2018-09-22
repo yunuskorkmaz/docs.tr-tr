@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 697a3991-b660-4a5a-8a54-1a2304ff158e
 ms.openlocfilehash: 3b1e0cbfc6118ad9ca670f5d91183b78b2c99d89
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46538774"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46697632"
 ---
 # <a name="modifying-dataviews"></a>DataView değiştirme
 Kullanabileceğiniz <xref:System.Data.DataView> eklemek, silmek veya temel tablodaki veri satırlarının değiştirin. Kullanabilme **DataView** temel tablodaki verileri değiştirmek için üç Boole özelliklerinden birini ayarlayarak denetlenir **DataView**. Bu özellikleri <xref:System.Data.DataView.AllowNew%2A>, <xref:System.Data.DataView.AllowEdit%2A>, ve <xref:System.Data.DataView.AllowDelete%2A>. Bunlar ayarlandığından **true** varsayılan olarak.  

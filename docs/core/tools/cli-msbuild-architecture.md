@@ -4,11 +4,11 @@ description: Katmanlar ve en son sürümlerde nelerin değiştiğini .NET Core h
 author: blackdwarf
 ms.date: 03/06/2017
 ms.openlocfilehash: 85987129421e8ee22f7cf7fe1d44e0768d95a214
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46490659"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46696343"
 ---
 # <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>.NET Core Araçları'nda değişiklikler üst düzey genel bakış
 

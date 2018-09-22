@@ -5,11 +5,11 @@ ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2603c29fe9108a32f3c3ba86a5aba9fae5042b17
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
-ms.translationtype: HT
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46508287"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46586067"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>.NET Yerel ile Başlangıç İyileştirmesini Hesaplama
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] uygulama başlatma süresini önemli ölçüde artırır. Bu geliştirme, taşınabilir, düşük güç tüketimli cihazlar ve karmaşık uygulamaları ile özellikle fark edilebilir. Bu konu, bu başlangıç geliştirme ölçmek için gereken temel araçları ile çalışmaya başlamanıza yardımcı olur.  

@@ -14,11 +14,11 @@ ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 263e6394a57ec3e7ef00eb79671d9b8ac47e724f
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46287263"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46698551"
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>İşleme ve .NET özel durumları atma
 

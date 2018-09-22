@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Net Profile Named Pipe
 ms.assetid: e78e845f-c325-46e2-927d-81616f97f7d5
 ms.openlocfilehash: d69d647b4fe4c38a0b2b355ae72cedfee6894f4b
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46528360"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46581989"
 ---
 # <a name="netnamedpipebinding"></a>NetNamedPipeBinding
 Bu örnek gösterir `netNamedPipeBinding` aynı makinede çapraz proses haberleşmesi sağlayan bağlama. Adlandırılmış Kanallar makinelerde çalışmaz. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hesaplayıcı hizmeti.  

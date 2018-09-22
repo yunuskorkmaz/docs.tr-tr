@@ -3,11 +3,11 @@ title: LINQ ve dosya dizinleri (C#)
 ms.date: 07/20/2015
 ms.assetid: b66c55e4-0f72-44e5-b086-519f9962335c
 ms.openlocfilehash: 4bdd21cf4d8558f140b265f195368082964c34c4
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46517230"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46695893"
 ---
 # <a name="linq-and-file-directories-c"></a>LINQ ve dosya dizinleri (C#)
 Çok sayıda dosya sistemi işlemleri temelde sorgular ve bu nedenle LINQ yaklaşım için çok uygundur.  

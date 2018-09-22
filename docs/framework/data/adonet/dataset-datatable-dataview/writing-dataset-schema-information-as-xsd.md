@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 4e530831-695e-49ff-8f0b-e5b0c526b8eb
 ms.openlocfilehash: 2a59a9fc1c3b2f52543f4cc69de22a5703fa9b8b
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46540852"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46584613"
 ---
 # <a name="writing-dataset-schema-information-as-xsd"></a>XSD olarak DataSet Schema bilgilerini yazma
 Şemasını yazabileceğiniz bir <xref:System.Data.DataSet> olarak XML Şeması Tanım Dili (XSD) şemaya, böylece onu içeren veya içermeyen bir XML belgesi ilgili verileri taşıyabilir. XML şeması bir dosyaya, bir akışa yazılabilir bir <xref:System.Xml.XmlWriter>, veya bir dize; türü kesin belirlenmiş oluşturmada yararlıdır **veri kümesi**. Hakkında daha fazla bilgi için türü kesin belirlenmiş **veri kümesi** nesneleri bkz [yazılan veri kümeleri](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md).  

@@ -1,38 +1,60 @@
 ---
-title: Sayısal Sonuçlar Tablosunu Biçimlendirme (C# Başvurusu)
-ms.date: 07/20/2015
+title: Biçimlendirme sayısal sonuçlar tablosunu (C# Başvurusu)
+description: C# standart sayısal biçim dizeleri hakkında bilgi edinin
+ms.date: 09/20/2018
 helpviewer_keywords:
 - formatting [C#]
 - numeric formatting [C#]
 - String.Format method
-- Console.Write method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
-ms.openlocfilehash: 8d034955d5d5d31788eafc0c21246451d7fd1f35
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c29884dc868049a68cc46d44f4373d9dc1007f92
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508205"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46576833"
 ---
-# <a name="formatting-numeric-results-table-c-reference"></a>Sayısal Sonuçlar Tablosunu Biçimlendirme (C# Başvurusu)
-Sayısal sonuçlar kullanarak biçimlendirebilirsiniz <xref:System.String.Format%2A?displayProperty=nameWithType> yöntemi temellidir <xref:System.Console.Write%2A?displayProperty=nameWithType> veya <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> daha çağıran yöntemleri `String.Format`, kullanarak veya [dize ilişkilendirme](../tokens/interpolated.md). Biçim, biçim dizelerini kullanarak belirtilir. Aşağıdaki tabloda, desteklenen standart biçim dizelerini içerir. Biçim dizesi aşağıdaki biçimdedir: `Axx`burada `A` biçim tanımlayıcısıdır ve `xx` duyarlık belirtici. Biçim belirticisinin biçimlendirme sayısal değere uygulanmış türünü denetler ve duyarlık belirtici basamak sayısı veya biçimlendirilmiş çıktı ondalık basamak denetler. Duyarlık belirticisi aralıkları 0 ile 99 değeri.  
-  
- Standart ve özel biçimlendirme dizeleri hakkında daha fazla bilgi için bkz. [biçimlendirme türleri](../../../standard/base-types/formatting-types.md).
-  
-|Biçim belirleyicisi|Açıklama|Örnekler|Çıkış|  
-|----------------------|-----------------|--------------|------------|  
-|C ya da c|Para Birimi|Console.Write ("{0:C}", 2.5);<br /><br /> Console.Write ("{0:C}",-2.5);|$2.50<br /><br /> ($2.50)|  
-|D veya d|Ondalık|Console.Write ("{0:D5}", 25);|00025|  
-|E veya e|Bilimsel|Console.Write ("{0:E}", 250000);|2.500000E + 005|  
-|F veya f|Sabit nokta|Console.Write ("{0:F2}", 25);<br /><br /> Console.Write ("{0:F0}", 25);|25.00<br /><br /> 25|  
-|G veya g|Genel|Console.Write ("{0:G}", 2.5);|2,5|  
-|N veya n|Sayı|Console.Write ("{0:N}", 2500000);|2,500,000.00|  
-|X ya da x|Onaltılık|Console.Write ("{0:X}", 250);<br /><br /> Console.Write ("{0:X}", 0xffff);|FA<br /><br /> FFFF|  
-  
-## <a name="see-also"></a>Ayrıca Bkz.
+# <a name="formatting-numeric-results-table-c-reference"></a>Biçimlendirme sayısal sonuçlar tablosunu (C# Başvurusu)
 
-- [C# başvurusu](../../../csharp/language-reference/index.md)  
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
-- [Standart Sayısal Biçim Dizeleri](../../../standard/base-types/standard-numeric-format-strings.md)  
-- [Türler için Başvuru Tabloları](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
-- [string](../../../csharp/language-reference/keywords/string.md)
+Aşağıdaki tablo, sayısal sonuçlarını biçimlendirme için desteklenen biçim belirticileri gösterir. Biçimlendirilmiş sonuç "en-US" karşılık gelen <xref:System.Globalization.CultureInfo>.
+
+|Biçim belirteci|Açıklama|Örnekler|Sonuç|  
+|----------------------|-----------------|--------------|------------|  
+|C ya da c|Para Birimi|`string s = $"{2.5:C}";`<br /><br /> `string s = $"{-2.5:C}";`|$2.50<br /><br /> ($2.50)|  
+|D veya d|Ondalık|`string s = $"{25:D5}";`|00025|  
+|E veya e|Üstel|`string s = $"{250000:E2}";`|2.50E + 005|  
+|F veya f|Sabit nokta|`string s = $"{2.5:F2}";`<br /><br /> `string s = $"{2.5:F0}";`|2.50<br /><br /> 3|  
+|G veya g|Genel|`string s = $"{2.5:G}";`|2,5|  
+|N veya n|Sayısal|`string s = $"{2500000:N}";`|2,500,000.00|  
+|P ya da p|Yüzde|`string s = $"{0.25:P}";`|%25.00|  
+|R veya r|Gidiş|`string s = $"{2.5:R}";`|2,5|  
+|X ya da x|Onaltılık|`string s = $"{250:X}";`<br /><br /> `string s = $"{0xffff:X}";`|FA<br /><br /> FFFF|  
+
+## <a name="remarks"></a>Açıklamalar
+
+Bir biçim belirticisi bir biçim dizesi oluşturmak için kullanın. Biçim dizesi aşağıdaki şekildedir: `Axx`burada
+
+- `A` Biçimlendirme sayısal değere uygulanmış türünü denetleyen biçim belirticisi ' dir.
+- `xx` biçimlendirilmiş çıktı basamak sayısını etkiler. duyarlık belirticisi ' dir. Duyarlık belirticisi aralıkları 0 ile 99 değeri.
+
+Ondalık ("D" veya "d") ve ("X" veya "x") onaltılı biçim belirticileri yalnızca integral türleri için desteklenir. Gidiş dönüş ("R" veya "r") biçim tanımlayıcısı sadece desteklenen <xref:System.Single>, <xref:System.Double>, ve <xref:System.Numerics.BigInteger> türleri.
+
+Standart sayısal biçim dizeleri tarafından desteklenir:
+
+- Bazı aşırı yüklemeleri `ToString` tüm sayısal türlerin yöntemi. Örneğin, bir sayısal biçim dizesi sağlayabilirsiniz <xref:System.Int32.ToString%28System.String%29?displayProperty=nameWithType> ve <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> yöntemleri.
+
+- .NET [bileşik biçimlendirme özelliği](../../../standard/base-types/composite-formatting.md), tarafından desteklenen <xref:System.String.Format%2A?displayProperty=nameWithType> örneğin bir yöntem.
+
+- [İlişkilendirilmiş dizeler](../tokens/interpolated.md).
+
+Daha fazla bilgi için [standart sayısal biçim dizeleri](../../../standard/base-types/standard-numeric-format-strings.md).
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [C# başvurusu](../index.md)
+- [C# Programlama Kılavuzu](../../programming-guide/index.md)
+- [Türler için başvuru tabloları](reference-tables-for-types.md)
+- [Biçimlendirme türleri](../../../standard/base-types/formatting-types.md)
+- [Bileşik biçimlendirme](../../../standard/base-types/composite-formatting.md)
+- [Dize ilişkilendirme](../tokens/interpolated.md)
+- [string](string.md)

@@ -6,11 +6,11 @@ ms.assetid: 64359aee-aab0-4042-9a32-d19789af6ca7
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4231516848cc50212a3a6a03d101907b2f6b3920
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46561467"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46585177"
 ---
 # <a name="namespace-affect-on-entity-reference-expansion-for-new-nodes-containing-elements-and-attributes"></a>Öğeler ve öznitelikler içeren yeni düğümler için varlık başvurusu genişlemesine Namespace etkiler
 Bir varlık bildiriminin içeriği neredeyse her şeyi içerebileceğinden, içeriği gibi bir öğe içerebilecek bir olasılık yoktur `<!ENTITY aname "<elem>test</elem>">`.  

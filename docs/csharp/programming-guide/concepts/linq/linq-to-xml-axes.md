@@ -3,11 +3,11 @@ title: LINQ to XML eksenleri (C#)
 ms.date: 07/20/2015
 ms.assetid: 3f7d54ff-b608-43a1-9e2d-e70668b72df8
 ms.openlocfilehash: 6a27adb1c7e1dcfefda13a355700202ccda3ffab
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46528833"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46584129"
 ---
 # <a name="linq-to-xml-axes-c"></a>LINQ to XML eksenleri (C#)
 Bir XML ağacı oluşturduğunuz veya bir XML belgesi bir XML ağacına yüklenen sonra öğeler ve öznitelikler bulun ve bunların değerlerini almak için sorgulayabilirsiniz.  

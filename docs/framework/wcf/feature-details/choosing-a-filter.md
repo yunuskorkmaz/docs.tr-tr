@@ -3,11 +3,11 @@ title: Filtre Seçme
 ms.date: 03/30/2017
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
 ms.openlocfilehash: 377d4f5c221ad37acf954b1dafc8712a388122ff
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
-ms.translationtype: HT
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46519256"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46581927"
 ---
 # <a name="choosing-a-filter"></a>Filtre Seçme
 Yönlendirme hizmeti yapılandırırken, doğru ileti filtreleri seçin ve bunları tam eşleşme aldığınız mesajlarına karşı yapmanıza izin verecek şekilde yapılandırmak önemlidir. Seçtiğiniz filtreler kendi eşleşmelerin aşırı geniş kapsamlı veya yanlış yapılandırılırsa, iletiler yanlış yönlendirilir. Filtreleri çok fazla kısıtlayıcıysa, kullanılabilir tüm geçerli rotalar iletilerinizi bazıları için sahip olmayabilir.  

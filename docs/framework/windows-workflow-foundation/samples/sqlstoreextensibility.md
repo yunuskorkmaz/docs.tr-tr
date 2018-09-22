@@ -3,11 +3,11 @@ title: SQLStoreExtensibility
 ms.date: 03/30/2017
 ms.assetid: 5da1b5a3-f144-41ba-b9c4-02818b28b15d
 ms.openlocfilehash: f49d05244cf9f65a8e06f39c7e40391aaebd9f77
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46530316"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46576976"
 ---
 # <a name="sqlstoreextensibility"></a>SQLStoreExtensibility
 Bu örnek, kullanılması ve yapılandırılması SQL iş akışı örnek deposu yükseltilen özellikleri gösterir. SQL iş akışı örnek deposu örnek deposunun SQL tabanlı bir uygulamasıdır. İmkanı tanıyacaktır ve durumuna için ve SQL Server veya SQL Server Express veritabanı yüklemek bir örnek sağlar. Örnek deposunda saklanır özelliklerini tanımlamak kullanıcı deposu genişletilebilirlik özelliği sağlar. Bu özellikler için sorgu kullanıcıya veren bir yükseltilen özellikleri görünümü görüntülenir.  

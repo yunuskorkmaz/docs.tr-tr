@@ -6,11 +6,11 @@ ms.assetid: 1e9b55c4-76ad-4f54-8d96-7ce4b4cf1e05
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bc8a1de8ab10eff88757720a35aa9668125cfbfa
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46507285"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46568747"
 ---
 # <a name="namespaces-and-dtds-in-the-dom"></a>Ad alanları ve DTD'ler DOM
 Belge türü tanımları (DTD'ler) complicate ad alanı desteği. Örneğin, aşağıdaki XML, iki nokta üst üste adlarında içeren varsayılan öznitelikler içeriyor.  

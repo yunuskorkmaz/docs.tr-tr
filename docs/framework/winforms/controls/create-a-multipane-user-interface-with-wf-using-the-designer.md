@@ -7,11 +7,11 @@ helpviewer_keywords:
 - multipane user interface
 ms.assetid: c3f9294d-a26c-4198-9242-f237f55f7573
 ms.openlocfilehash: 9c8cab952fd9d0c58380a308dd360dcedb2ea8f1
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46471736"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46696384"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Formları ile Çok Bölmeli bir Kullanıcı Arabirimi Oluşturma
 Aşağıdaki yordamda, Microsoft Outlook ile kullanılan benzer çok bölmeli kullanıcı arabirimi oluşturacaksınız bir **klasör** listesinde bir **iletileri** bölmesinde ve **Önizleme** bölmesi. Bu düzenleme formu denetimleri yerleştirme temelde aracılığıyla sağlanır.  

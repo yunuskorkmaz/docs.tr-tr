@@ -13,11 +13,11 @@ ms.assetid: 67b3c6e2-6a8f-480d-a78f-ebeeaca1b95a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b257da73d33fae54ef464e9dd69906316b87fd88
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46540300"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46577671"
 ---
 # <a name="event-design"></a>Olay tasarımı
 Olayları en yaygın kullanılan geri çağırmalar (kullanıcı koda çağrı için framework izin yapıları) biçimindedir. Başka bir geri çağırma mekanizmalar Temsilciler, sanal üyeleri ve arabirim tabanlı eklentileri alma üyeleri içerir. Kullanılabilirlik incelemeleri verilerden geliştiricilerin çoğu kullandıkları için bir geri çağırma mekanizmaları çok olayları kullanarak daha iyi olduğunu gösterir. Olayları Visual Studio ve birçok dili ile sorunsuz şekilde tümleşiktir.  

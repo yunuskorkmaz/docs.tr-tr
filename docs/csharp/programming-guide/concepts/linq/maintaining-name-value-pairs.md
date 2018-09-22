@@ -3,11 +3,11 @@ title: Ad-değer çiftleri (C#) sağlama
 ms.date: 07/20/2015
 ms.assetid: 7b04b0f1-af64-42eb-8737-83f8861b5915
 ms.openlocfilehash: 28c01ce17881ffe7e8fcc35e2c23dec85d50955d
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46540128"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46578883"
 ---
 # <a name="maintaining-namevalue-pairs-c"></a>Ad/değer çiftleri Bakımı (C#)
 Çoğu uygulama iyi ad/değer çiftleri tutulur bilgileri korumak sahip. Bu bilgiler, yapılandırma bilgileri veya genel ayarlar olabilir. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ad/değer çiftleri kümesini tutmak kolaylaştıran bazı yöntemler içerir. Öğeleri bilgilerin öznitelikleri veya bir alt kümesi olarak ya da koruyabilir.  

@@ -3,11 +3,11 @@ title: FILESTREAM verileri
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
 ms.openlocfilehash: eef03d171d288cb2bc62c3aaa477a95a5ce718c3
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46323671"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46579881"
 ---
 # <a name="filestream-data"></a>FILESTREAM verileri
 FILESTREAM depolama alanı özniteliğe VARBINARY(max) sütunda depolanan ikili (BLOB) veri içindir. FILESTREAM önce özel işlem ikili verilerin depolanması gerekir. Metin belgeleri, görüntüler ve video gibi yapılandırılmamış verileri yönetmek zorlaştıran veritabanı haricinde, genellikle depolanır.  

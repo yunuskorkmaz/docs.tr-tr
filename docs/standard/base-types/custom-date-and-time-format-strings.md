@@ -17,11 +17,11 @@ ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 730c6abfe9d49c319d1438a0821ad47e19fc0638
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45994513"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46586447"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Özel Tarih ve Saat Biçim Dizeleri
 

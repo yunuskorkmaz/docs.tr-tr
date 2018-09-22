@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: normal ifadeler (C#) ile LINQ sorgularını birleştir
 ms.date: 07/20/2015
 ms.assetid: 6b003b65-20a4-4ca2-929e-2ee3f215aecc
 ms.openlocfilehash: c535620f2dee1ec9cd1b6ee994fbf860629601ba
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45641358"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46696693"
 ---
 # <a name="how-to-combine-linq-queries-with-regular-expressions-c"></a>Nasıl yapılır: normal ifadeler (C#) ile LINQ sorgularını birleştirme
 Bu örnek nasıl kullanılacağını gösterir <xref:System.Text.RegularExpressions.Regex> daha karmaşık metin dizelerini eşleştirme için normal bir ifade oluşturmak için sınıf. LINQ Sorgu tam olarak normal ifade ile arama ve sonuçlar şekil için istediğiniz dosyaları filtre kolaylaştırır.  

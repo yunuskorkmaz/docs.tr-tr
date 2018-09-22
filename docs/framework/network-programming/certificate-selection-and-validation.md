@@ -6,11 +6,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: fe3b10e17c3cdf181f0b33b4305008655047fb0f
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46009666"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46577184"
 ---
 # <a name="certificate-selection-and-validation"></a>Sertifika seçimi ve doğrulama
 <xref:System.Net> Sınıfları seçin ve doğrulamak için birkaç yol destekler <xref:System.Security.Cryptography.X509Certificates> Güvenli Yuva Katmanı (SSL) bağlantıları için. Bir istemci, kendisi için bir sunucu kimliğini doğrulamak için bir veya daha fazla sertifikaları seçebilirsiniz. Bir istemci sertifikası kimlik doğrulaması için bir veya daha fazla belirli özniteliklere sahip bir sunucu gerektirebilir.  

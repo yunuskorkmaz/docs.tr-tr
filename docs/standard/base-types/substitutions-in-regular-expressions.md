@@ -16,18 +16,18 @@ ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 20050bee696f9d47324f1b095b0b3c1120f78255
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45750121"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46696735"
 ---
 # <a name="substitutions-in-regular-expressions"></a>Normal İfadelerdeki Değişimler
 <a name="Top"></a> Değişimler, yalnızca değişiklik desenleri içinde tanınan dil öğeleridir. Giriş dizesinde eşleşen metnin yerini alacak metnin tümünü veya bir kısmını tanımlamak için normal bir ifade deseni kullanırlar. Değiştirme deseni, değişmez karakterlerin yanı sıra bir veya birden çok değiştirmeden oluşabilir. Değiştirme desenleri aşırı yüklemeleri için sağlanan <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> yönteminin bir `replacement` parametresi ve <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> yöntemi. Yöntemleri tarafından tanımlanan deseni ile eşleşen desen değiştirin `replacement` parametresi.  
   
  .NET Framework, aşağıdaki tabloda listelenen değişim öğelerini tanımlar.  
   
-|Değişim|Açıklama|  
+|Değiştirme|Açıklama|  
 |------------------|-----------------|  
 |`$` *Sayı*|İle tanımlanan yakalama grubuyla eşleşen son alt dizeyi içerir *numarası*burada *numarası* değiştirme dizesindeki ondalık bir değer. Daha fazla bilgi için [numaralandırılmış bir grubu değiştirme](#Numbered).|  
 |`${` *Adı* `}`|Tarafından belirtilen adlandırılmış grubuyla eşleştirilen son alt dizeyi içerir `(?<` *adı* `> )` değiştirme dizesinde. Daha fazla bilgi için [adlandırılmış bir grubu değiştirme](#Named).|  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - generics [C#], default keyword
 - default keyword [C#], generic programming
 ms.openlocfilehash: 94866f22fb3ad921a834cffb16fe17e44cef5965
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
-ms.translationtype: MT
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46473135"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46567809"
 ---
 # <a name="default-value-expressions-c-programming-guide"></a>Varsayılan değer ifadeleri (C# programlama Kılavuzu)
 

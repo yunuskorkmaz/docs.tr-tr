@@ -9,11 +9,11 @@ helpviewer_keywords:
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
 ms.openlocfilehash: c2948cf76f7763eae51689973346965bc6c720a8
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46530257"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46583934"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Zaman Uyumlu ve Zaman Uyumsuz İşlemler
 Bu konuda, uygulama ve zaman uyumsuz hizmet işlemleri çağırma anlatılmaktadır.  

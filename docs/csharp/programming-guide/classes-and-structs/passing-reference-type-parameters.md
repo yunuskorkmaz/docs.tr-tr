@@ -6,11 +6,11 @@ helpviewer_keywords:
 - parameters [C#], reference
 ms.assetid: 9e6eb65c-942e-48ab-920a-b7ba9df4ea20
 ms.openlocfilehash: d577754e8cb686c40172abd6c0bbd00bc481f737
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46529015"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46584111"
 ---
 # <a name="passing-reference-type-parameters-c-programming-guide"></a>Başvuru Türü Parametreleri Geçirme (C# Programlama Kılavuzu)
 Bir değişken bir [başvuru türüne](../../../csharp/language-reference/keywords/reference-types.md) verilerini içermiyor doğrudan; verilerine bir başvuru içeriyor. Değere göre bir başvuru türü parametresi geçirdiğinizde, bir sınıf üyesinin değerini gibi başvurulan nesnenin ait verileri değiştirmek mümkündür. Ancak, başvuru değeri değiştiremezsiniz; Örneğin, aynı başvuru için yeni bir sınıf bellek ayırmak ve sahip yöntemi dışında kalıcı hale getirmek için kullanamazsınız. Parametresini kullanarak bunu yapmak için geçirmek [ref](../../../csharp/language-reference/keywords/ref.md) veya [kullanıma](../../../csharp/language-reference/keywords/out-parameter-modifier.md) anahtar sözcüğü. Kolaylık olması için aşağıdaki örneklerde `ref`.  

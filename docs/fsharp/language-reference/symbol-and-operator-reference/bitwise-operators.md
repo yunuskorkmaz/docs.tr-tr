@@ -3,11 +3,11 @@ title: Bitwise İşleçleri (F#)
 description: 'F # programlama dilinde kullanılabilen bit düzeyinde işleçler hakkında bilgi edinin.'
 ms.date: 07/20/2018
 ms.openlocfilehash: ed76fcf5f9c569a2f288cf260e99dc29fd65ef3b
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46531329"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46576989"
 ---
 # <a name="bitwise-operators"></a>Bitwise İşleçleri
 

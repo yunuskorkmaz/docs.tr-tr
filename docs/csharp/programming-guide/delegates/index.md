@@ -6,11 +6,11 @@ helpviewer_keywords:
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
 ms.openlocfilehash: 96de5601c60dd309fe5467414affd20b8bc93d87
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46530173"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46585078"
 ---
 # <a name="delegates-c-programming-guide"></a>Temsilciler (C# Programlama Kılavuzu)
 A [temsilci](../../../csharp/language-reference/keywords/delegate.md) belirli bir parametre listesi olan yöntemlere başvuruları temsil eden bir tür ve dönüş türü. Bir temsilci oluşturduğunuzda, örneğini uyumlu bir imza ve dönüş türü içeren herhangi bir yöntemle ilişkilendirebilirsiniz. Yöntemi, temsilci örneği aracılığıyla çağırabilirsiniz.  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Option keyword [Visual Basic]
 ms.assetid: 6b2f41c4-2403-43b6-8a14-94a3775e5b47
 ms.openlocfilehash: f4996b0c03ee98fef31bc301dc957060afdfdac8
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
-ms.translationtype: HT
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46561387"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46576580"
 ---
 # <a name="option-ltkeywordgt-statement"></a>Seçenek &lt;anahtar sözcüğü&gt; deyimi
 Kaynak dosyanın tümüne uygulanan derleyici seçeneğini belirten bir deyimi ortaya çıkarır.  
