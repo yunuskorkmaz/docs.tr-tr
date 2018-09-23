@@ -6,11 +6,11 @@ ms.author: wiwagn
 ms.date: 12/15/2017
 ms.custom: vs-dotnet
 ms.openlocfilehash: 4623f4efa8637bd30f378006a92bfc4965429182
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
-ms.translationtype: HT
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45696152"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46473419"
 ---
 # <a name="debug-your-hello-world-application-with-visual-studio-2017"></a>Merhaba Dünya uygulamanızı Visual Studio 2017 ile hata ayıklama
 

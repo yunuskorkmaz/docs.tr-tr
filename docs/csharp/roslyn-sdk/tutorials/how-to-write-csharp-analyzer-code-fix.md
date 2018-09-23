@@ -4,11 +4,11 @@ description: Bu öğretici bir çözümleyici oluşturmak için adım adım yön
 ms.date: 08/01/2018
 ms.custom: mvc
 ms.openlocfilehash: 2959fe3008bfca972d3a164ed27d05c2a8b0e69a
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45666875"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46584216"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Öğretici: ilk Çözümleyicisi ve kod düzeltmenizi yazın
 

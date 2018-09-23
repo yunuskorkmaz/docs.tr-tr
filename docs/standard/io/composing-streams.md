@@ -16,11 +16,11 @@ ms.assetid: da761658-a535-4f26-a452-b30df47f73d5
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5e52b827f337892c33ec61b9affa1cc646a759c5
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45676830"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46577028"
 ---
 # <a name="composing-streams"></a>Akışlar Oluşturma
 Bir disk veya bellek gibi bir depolama ortamına bir yedekleme deposudur. Her farklı yedekleme deposu uygulaması kendi akış uygulayan <xref:System.IO.Stream> sınıfı. Her akış türü okur ve Kimden ve Kime, belirtilen yedekleme deposu bayt yazar. Temel akışlar depoları için bağlandığı akışları çağrılır. Temel akışlar yedekleme deposu için akışa bağlanmak için gereken parametrelerine sahip oluşturucular sahiptir. Örneğin, <xref:System.IO.FileStream> dosya işlemleri ve benzeri nasıl paylaşılır belirtir bir yol parametresi belirtin Oluşturucusu vardır.  

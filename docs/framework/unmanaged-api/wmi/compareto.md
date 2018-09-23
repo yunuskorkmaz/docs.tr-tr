@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bde25ae7455dd7fe35fe1a0a43bb2a6b560c0e3e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45641536"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46580284"
 ---
 # <a name="compareto-function"></a>CompareTo işlevi
 Başka bir Windows Yönetim nesnesi için bir nesne ile karşılaştırır.  

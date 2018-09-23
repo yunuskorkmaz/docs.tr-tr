@@ -15,11 +15,11 @@ ms.assetid: 87a4b0da-ed64-43b1-ac43-968576c444ce
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0c56f840bc5ebd5070c9b686384751acab3f0203
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
-ms.translationtype: MT
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45678457"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46326273"
 ---
 # <a name="names-of-classes-structs-and-interfaces"></a>Sınıf, yapı ve arabirimlerin adları
 Adlandırma yönergeleri izleyin, genel bir tür adlandırma için geçerlidir.  

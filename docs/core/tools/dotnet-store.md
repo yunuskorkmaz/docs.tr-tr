@@ -5,11 +5,11 @@ author: bleroy
 ms.author: mairaw
 ms.date: 05/29/2018
 ms.openlocfilehash: a12738d0cc8edcbb65d5b6fab6e7c8b209b0f4b5
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45595327"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46699007"
 ---
 # <a name="dotnet-store"></a>DotNet deposu
 

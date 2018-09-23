@@ -3,11 +3,11 @@ title: WCF Veri Hizmetleri protokol uygulama ayrıntıları
 ms.date: 03/30/2017
 ms.assetid: 712d689b-fada-4cbb-bcdb-d65a3ef83b4c
 ms.openlocfilehash: 1d68e278fbac0137d1a5b2dca2daedba2294a7ee
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45666843"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46528153"
 ---
 # <a name="wcf-data-services-protocol-implementation-details"></a>WCF Veri Hizmetleri protokol uygulama ayrıntıları
 ## <a name="odata-protocol-implementation-details"></a>OData protokol uygulama ayrıntıları  

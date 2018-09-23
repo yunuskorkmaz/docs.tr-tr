@@ -9,11 +9,11 @@ ms.assetid: d5c87cbe-4d69-429f-aad5-3103c2ca2770
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4a6597a3a57cd68c4dd17c4fbae882590f373709
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45674305"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46525710"
 ---
 # <a name="changing-namespace-prefix-properties"></a>Namespace ön ek özelliklerini değiştirme
 **XmlNode** sınıfı belirli bir düğümle ilişkili ad alanı öneki değiştirmenize izin verir. Örneğin, aşağıdaki kod, değişmekte olan bir öğenin ön ek gösterir.  
