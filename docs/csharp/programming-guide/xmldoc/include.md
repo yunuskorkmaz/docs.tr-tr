@@ -9,11 +9,11 @@ helpviewer_keywords:
 - include C# XML tag
 ms.assetid: a8a70302-6196-4643-bd09-ef33f411f18f
 ms.openlocfilehash: 854c8b61fa8164bccfc9451f2f163dab4a56388f
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
-ms.translationtype: HT
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 09/22/2018
-ms.locfileid: "46568734"
+ms.locfileid: "46697743"
 ---
 # <a name="ltincludegt-c-programming-guide"></a>&lt;dahil&gt; (C# programlama Kılavuzu)
 ## <a name="syntax"></a>Sözdizimi  
