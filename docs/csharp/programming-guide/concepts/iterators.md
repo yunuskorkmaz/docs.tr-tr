@@ -3,11 +3,11 @@ title: C# dilinde koleksiyonlar üzerinden yineleme yapma
 ms.date: 08/14/2018
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
 ms.openlocfilehash: d8a39569df517dffa8ff4b2f638f089f420e44c7
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46569270"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46705701"
 ---
 # <a name="iterators-c"></a>Yineleyiciler (C#)
 
