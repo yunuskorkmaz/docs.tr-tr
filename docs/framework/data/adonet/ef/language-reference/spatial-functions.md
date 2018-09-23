@@ -3,17 +3,17 @@ title: Uzamsal İşlevler
 ms.date: 03/30/2017
 ms.assetid: 90cb177d-88a0-45be-97e8-3b306283c6e0
 ms.openlocfilehash: ad6b722e84aae40354e30434b107752d02352645
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45676155"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46580687"
 ---
-# <a name="spatial-functions"></a><span data-ttu-id="6ec5d-102">Uzamsal İşlevler</span><span class="sxs-lookup"><span data-stu-id="6ec5d-102">Spatial Functions</span></span>
-<span data-ttu-id="6ec5d-103">Uzamsal türler için sabit biçim yoktur.</span><span class="sxs-lookup"><span data-stu-id="6ec5d-103">There is no literal format for spatial types.</span></span> <span data-ttu-id="6ec5d-104">Ancak, iyi bilinen metin biçiminde dizeleriyle çağrı kurallı Entity Framework işlevleri kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="6ec5d-104">However, you can use canonical Entity Framework functions that you call using strings in Well-Known Text format.</span></span> <span data-ttu-id="6ec5d-105">Örneğin, aşağıdaki işlev çağrısı geometri noktası oluşturur:</span><span class="sxs-lookup"><span data-stu-id="6ec5d-105">For example, the following function call creates a geometry point:</span></span>  
+# <a name="spatial-functions"></a><span data-ttu-id="c407c-102">Uzamsal İşlevler</span><span class="sxs-lookup"><span data-stu-id="c407c-102">Spatial Functions</span></span>
+<span data-ttu-id="c407c-103">Uzamsal türler için sabit biçim yoktur.</span><span class="sxs-lookup"><span data-stu-id="c407c-103">There is no literal format for spatial types.</span></span> <span data-ttu-id="c407c-104">Ancak, iyi bilinen metin biçiminde dizeleriyle çağrı kurallı Entity Framework işlevleri kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="c407c-104">However, you can use canonical Entity Framework functions that you call using strings in Well-Known Text format.</span></span> <span data-ttu-id="c407c-105">Örneğin, aşağıdaki işlev çağrısı geometri noktası oluşturur:</span><span class="sxs-lookup"><span data-stu-id="c407c-105">For example, the following function call creates a geometry point:</span></span>  
   
 ```  
 GeometryFromText('POINT (43 -73)')  
 ```  
   
- <span data-ttu-id="6ec5d-106">[SpatialEdmFunctions yöntemleri](https://msdn.microsoft.com/library/hh749531.aspx) sayfası uzamsal kurallı Entity Framework yöntemlerini listeler.</span><span class="sxs-lookup"><span data-stu-id="6ec5d-106">The [SpatialEdmFunctions Methods](https://msdn.microsoft.com/library/hh749531.aspx) page lists all spatial canonical Entity Framework methods.</span></span> <span data-ttu-id="6ec5d-107">Hangi parametreler bir işleve geçilmesi gerekir görmek için ilgilendiğiniz bir yöntemi tıklayın.</span><span class="sxs-lookup"><span data-stu-id="6ec5d-107">Click on a method of interest to see what parameters should be passed to a function.</span></span>
+ <span data-ttu-id="c407c-106">[SpatialEdmFunctions yöntemleri](https://msdn.microsoft.com/library/hh749531.aspx) sayfası uzamsal kurallı Entity Framework yöntemlerini listeler.</span><span class="sxs-lookup"><span data-stu-id="c407c-106">The [SpatialEdmFunctions Methods](https://msdn.microsoft.com/library/hh749531.aspx) page lists all spatial canonical Entity Framework methods.</span></span> <span data-ttu-id="c407c-107">Hangi parametreler bir işleve geçilmesi gerekir görmek için ilgilendiğiniz bir yöntemi tıklayın.</span><span class="sxs-lookup"><span data-stu-id="c407c-107">Click on a method of interest to see what parameters should be passed to a function.</span></span>
