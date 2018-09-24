@@ -1,7 +1,7 @@
 ---
 title: '&lt;AppContextSwitchOverrides&gt; öğesi'
 ms.custom: updateeachrelease
-ms.date: 04/19/2018
+ms.date: 09/19/2018
 helpviewer_keywords:
 - AppContextSwitchOverrides
 - compatibility switches
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d16ce7f2744869c812b9988e91edd153d9cb4fd2
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: c06b63c492d31d1391b53a36ced5b5c7277f5ad6
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "32747531"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47027379"
 ---
 # <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt; öğesi
 Tarafından kullanılan bir veya daha fazla anahtarları tanımlar <xref:System.AppContext> yeni işlevselliği için bir geri çevirme mekanizma sağlar sınıfını.  
@@ -125,7 +125,21 @@ Tarafından kullanılan bir veya daha fazla anahtarları tanımlar <xref:System.
   
  Kitaplık geliştiricilerin kitaplıklarının sonraki sürümlerde değiştirilmiş işlev dışında bırakmak arayanlara izin vermek için özel anahtarlar da tanımlayabilirsiniz. Daha fazla bilgi için <xref:System.AppContext> sınıfı.  
   
-## <a name="example"></a>Örnek  
+## <a name="switches-in-aspnet-applications"></a>ASP.NET uygulamalarında anahtarları
+
+Ekleyerek uyumluluk ayarlarını kullanmak için bir ASP.NET uygulaması yapılandırabileceğiniz bir [ \<Ekle >](~/docs/framework/configure-apps/file-schema/appsettings/add-element-for-appsettings.md) öğesine [ \<appSettings >](~/docs/framework/configure-apps/file-schema/appsettings/index.md) web.config dosyasının bölümü. 
+
+Aşağıdaki örnekte `<add>` iki ayarlarına eklenecek öğe `<appSettings>` web.config dosyasının bölümü:
+
+```xml
+<appSettings>
+  <add key="AppContext.SetSwitch:Switch.System.Globalization.NoAsyncCurrentCulture" value="true" />
+  <add key="AppContext.SetSwitch:Switch.System.Uri.DontEnableStrictRFC3986ReservedCharacterSets" value="true" />
+</appSettings>
+```
+
+## <a name="example"></a>Örnek
+
  Aşağıdaki örnekte `AppContextSwitchOverrides` tek bir uygulama uyumluluk anahtarı tanımlamak için `Switch.System.Globalization.NoAsyncCurrentCulture`, engelleyen kültür zaman uyumsuz yöntem çağrısı iş parçacıkları arasında akar.  
   
 ```xml  
