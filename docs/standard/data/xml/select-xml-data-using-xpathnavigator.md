@@ -9,11 +9,11 @@ ms.assetid: c268c49e-32b9-4171-b782-dcb7b065fa73
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: fea54d36759b12b01fa7a68748d069c7890d84e4
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45675918"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46711330"
 ---
 # <a name="select-xml-data-using-xpathnavigator"></a>XPathNavigator kullanarak XML verileri seçme
 <xref:System.Xml.XPath.XPathNavigator> Sınıfı bir dizi içinde düğümü seçmek için kullanılan yöntemler kümesi sağlar bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> bir XPath ifadesi kullanarak nesne. Sonra seçili düğümleri kümesini yineleyebilirsiniz.  

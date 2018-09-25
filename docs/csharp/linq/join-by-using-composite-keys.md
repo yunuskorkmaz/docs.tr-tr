@@ -4,11 +4,11 @@ description: LINQ to bileşik anahtarlar kullanarak birleştirme hakkında bilgi
 ms.date: 12/1/2016
 ms.assetid: da70b54d-3213-45eb-8437-fbe75cbcf935
 ms.openlocfilehash: ae37d03f996f0b0cc184a86663f16d62e6c29c69
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
-ms.translationtype: HT
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46489740"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46711070"
 ---
 # <a name="join-by-using-composite-keys"></a>Bileşik anahtarlar kullanarak birleştirme
 

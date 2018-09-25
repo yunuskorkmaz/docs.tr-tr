@@ -6,11 +6,11 @@ helpviewer_keywords:
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
 ms.openlocfilehash: d8fef7965e3248d5361d866a441783bf4968460e
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46478908"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47058415"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF Genelleştirmesi ve Yerelleştirmesine Genel Bakış
 Yalnızca bir dil için ürününüzün kullanılabilirlik sınırladığınızda, müşterilerimizin dünyanın 6.5 milyar popülasyonun bir kesir olarak temel potansiyel müşteri sınırlayın. Uygun maliyetli yerelleştirme ürününüzden uygulamalarınız küresel bir hedef kitlesine ulaşmak için isterseniz daha fazla müşteriye ulaşmak için en iyi ve en ekonomik yolu biridir.  

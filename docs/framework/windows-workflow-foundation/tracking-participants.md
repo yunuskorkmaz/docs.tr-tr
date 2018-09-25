@@ -3,11 +3,11 @@ title: İzleme katılımcıları
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
 ms.openlocfilehash: e346e0df3417f6ac83854bd96d6e64dcf103ea93
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46518811"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46711187"
 ---
 # <a name="tracking-participants"></a>İzleme katılımcıları
 İzleme katılımcıları erişmek bir iş akışı Geliştirici tanıyan genişletilebilirlik noktaları olan <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> nesneleri ve bunları işlem. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] izleme kayıtları için olay izleme Windows (ETW) olayları olarak yazan standart izleme katılımcı içerir. Gereksinimlerinizi karşılamıyorsa, özel izleme katılımcı de yazabilirsiniz.  

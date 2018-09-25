@@ -2,12 +2,12 @@
 title: Yönlendirme Tanıtımı
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-ms.openlocfilehash: 3ee7ea8271df47354a0897434bf8f203eaf09a51
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: e540e084305aee51d6820cc9ae43f7791d5c07d6
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33496870"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47058467"
 ---
 # <a name="routing-introduction"></a>Yönlendirme Tanıtımı
 Yönlendirme hizmeti, yönlendirme iletilerinin ileti içeriğine göre yeteneğine sahip bir genel takılabilir SOAP aracı sağlar. Yönlendirme hizmeti ile hizmet toplama, hizmet sürümü oluşturma, öncelikli Yönlendirme ve çok noktaya yayın yönlendirme gibi senaryolara olanak tanır ve yönlendirme karmaşık mantık oluşturabilirsiniz. Yönlendirme hizmeti, hata, işleme sağlar ve birincil hedef uç noktasına gönderilirken bir hata oluşması durumunda iletilerin gönderildiği listelerini yedekleme uç nokta ayarlamak de sağlar.  
@@ -29,9 +29,9 @@ Yönlendirme hizmeti, yönlendirme iletilerinin ileti içeriğine göre yeteneğ
  Başka bir deyişle, hedef uç noktaları (örneğin, tek yönlü ve çift yönlü işlemleri karıştırma) birden çok kimlik doğrulaması desenleri ile sözleşmeler kullanırsanız, bu bildirimleri alabilen ve bunların tümüne iletileri yönlendirmek bir tek hizmet uç noktası oluşturulamıyor. Hangi uç noktaları uyumlu şekilleri sahip ve hedef Uç noktalara yönlendirilmesi için iletileri almak için kullanılacak bir veya daha fazla hizmet uç noktaları tanımlamak belirlemeniz gerekir.  
   
 > [!NOTE]
->  Belirtin (örneğin, tek yönlü ve çift yönlü işlemlerin bir karışımı) birden çok desenleri sözleşmeleri ile çalışırken, geçici bir çözüm çift yönlü sözleşme yönlendirme hizmeti gibi kullanmaktır <xref:System.ServiceModel.Routing.IDuplexSessionRouter>. Ancak bu bağlama için tüm senaryoları mümkün olmayabilir çift yönlü iletişim özellikli olması gerektiği anlamına gelir. Bu mümkün olduğu senaryolarda yazışmaya birden fazla uç nokta hesaba katacak şekilde veya uygulamayı değiştirmek gerekli olabilir.  
+> Belirtin (örneğin, tek yönlü ve çift yönlü işlemlerin bir karışımı) birden çok desenleri sözleşmeleri ile çalışırken, geçici bir çözüm çift yönlü sözleşme yönlendirme hizmeti gibi kullanmaktır <xref:System.ServiceModel.Routing.IDuplexSessionRouter>. Ancak bu bağlama için tüm senaryoları mümkün olmayabilir çift yönlü iletişim özellikli olması gerektiği anlamına gelir. Bu mümkün olduğu senaryolarda yazışmaya birden fazla uç nokta hesaba katacak şekilde veya uygulamayı değiştirmek gerekli olabilir.  
   
- Sözleşmeleri yönlendirme hakkında daha fazla bilgi için bkz: [sözleşmeleri yönlendirme](../../../../docs/framework/wcf/feature-details/routing-contracts.md).  
+ Sözleşmeleri yönlendirme hakkında daha fazla bilgi için bkz: [sözleşmeleri yönlendirme](routing-contracts.md).  
   
  Hizmet uç noktası tanımlandıktan sonra kullanabileceğiniz **RoutingBehavior** belirli bir ilişkilendirilecek **RoutingConfiguration** uç nokta ile. Yönlendirme hizmeti bir yapılandırma dosyası kullanarak yapılandırırken **RoutingBehavior** Bu uç noktada alınan iletileri işlemek için kullanılan yönlendirme mantığı içeren filtre tablo belirtmek için kullanılır. Yönlendirme hizmeti programlı bir şekilde yapılandırıyorsanız kullanarak filtreleme tablosu belirtebilirsiniz **RoutingConfiguration**.  
   
@@ -51,7 +51,7 @@ Yönlendirme hizmeti, yönlendirme iletilerinin ileti içeriğine göre yeteneğ
         <endpoint address=""  
                   binding="wsHttpBinding"  
                   name="reqReplyEndpoint"  
-                  contract="System.ServiceModel.Routing.IRequestReplyRouter" />      
+                  contract="System.ServiceModel.Routing.IRequestReplyRouter" />
       </service>  
     </services>  
     <behaviors>  
@@ -98,16 +98,16 @@ serviceHost.Description.Behaviors.Add(
      new RoutingBehavior(rc));  
 ```  
   
- Bu örnek bir adresi olan tek bir uç nokta kullanıma sunmak için yönlendirme hizmetini yapılandırır. "http://localhost:8000/routingservice/router", yönlendirilmesini iletileri almak için kullanılır. Hizmet uç noktası kullanır, iletileri istek-yanıt Uç noktalara yönlendirilir çünkü <xref:System.ServiceModel.Routing.IRequestReplyRouter> sözleşme. Bu yapılandırma bir tek istemcisi bitiş noktasının da tanımlar. "http://localhost:8000/servicemodelsample/service" iletileri için yönlendirilir. "RoutingTable1" adlı (gösterilmemiştir) filtre tablo iletileri yönlendirmek için kullanılan yönlendirme mantığı içerir ve hizmet uç noktası ile ilişkili olup'ı kullanarak **RoutingBehavior** (için bir yapılandırma dosyası) veya  **RoutingConfiguration** (için program yapılandırması).  
+ Bu örnek bir adresi olan tek bir uç nokta kullanıma sunmak için yönlendirme hizmetini yapılandırır `http://localhost:8000/routingservice/router`, yönlendirilmesini iletileri almak için kullanılır. Hizmet uç noktası kullanır, iletileri istek-yanıt Uç noktalara yönlendirilir çünkü <xref:System.ServiceModel.Routing.IRequestReplyRouter> sözleşme. Bu yapılandırma aynı zamanda tek istemcisi bitiş noktasının tanımlar `http://localhost:8000/servicemodelsample/service` iletiler için yönlendirilir. "RoutingTable1" adlı (gösterilmemiştir) filtre tablo iletileri yönlendirmek için kullanılan yönlendirme mantığı içerir ve hizmet uç noktası ile ilişkili olup'ı kullanarak **RoutingBehavior** (için bir yapılandırma dosyası) veya  **RoutingConfiguration** (için program yapılandırması).  
   
 ### <a name="routing-logic"></a>Yönlendirme mantığı  
  İletileri yönlendirmek için kullanılan yönlendirme mantığı tanımlamak için hangi gelen iletileri içinde bulunan verileri belirlemeniz gerekir bağlı benzersiz olarak eylem gerçekleştirilmesi. İleti içinde yer alan eylem değerini aynı SOAP eylemleri paylaşmak için yönlendirme tüm hedef uç noktaları değilse, iyi bir göstergesi gibi belirli hangi uç noktaya, ileti için yönlendirileceğini. İletileri belirli bir uç nokta için benzersiz bir şekilde yönlendirmek gerekir, ileti yönlendirilir hedef uç nokta benzersiz olarak tanımlayan veri üzerine filtre.  
   
- Yönlendirme hizmeti birkaç sağlayan **MessageFilter** adresi, eylem, uç nokta adı veya hatta bir XPath sorgusu gibi ileti içindeki belirli değerleri inceleyin uygulamaları. Bu uygulamaların hiçbiri gereksinimlerinizi karşılamıyorsa, özel bir oluşturabilirsiniz **MessageFilter** uygulaması. İleti filtreleri ve yönlendirme hizmeti tarafından kullanılan uygulamaları karşılaştırması hakkında daha fazla bilgi için bkz. [ileti filtreleri](../../../../docs/framework/wcf/feature-details/message-filters.md) ve [filtre seçme](../../../../docs/framework/wcf/feature-details/choosing-a-filter.md).  
+ Yönlendirme hizmeti birkaç sağlayan **MessageFilter** adresi, eylem, uç nokta adı veya hatta bir XPath sorgusu gibi ileti içindeki belirli değerleri inceleyin uygulamaları. Bu uygulamaların hiçbiri gereksinimlerinizi karşılamıyorsa, özel bir oluşturabilirsiniz **MessageFilter** uygulaması. İleti filtreleri ve yönlendirme hizmeti tarafından kullanılan uygulamaları karşılaştırması hakkında daha fazla bilgi için bkz. [ileti filtreleri](message-filters.md) ve [filtre seçme](choosing-a-filter.md).  
   
  Birden çok ileti filtreleri birlikte her ilişkilendirmeniz filtre tablolarına düzenlenir **MessageFilter** hedef uç noktası ile. İsteğe bağlı olarak, filtre tablosunda yönlendirme hizmeti için bir iletim hatası durumunda ileti göndermeye çalışır yedekleme uç noktalarının bir listesini belirtmek için de kullanılabilir.  
   
- Varsayılan olarak tüm ileti filtreleri filtreleme tablosu içinde eşzamanlı olarak değerlendirilir; Ancak, belirtebileceğiniz bir <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement.Priority%2A> belirli bir sırada değerlendirilecek ileti filtreleri neden olur. En yüksek önceliğe sahip tüm girişleri ilk olarak değerlendirilir ve daha yüksek bir öncelik düzeyinde bir eşleşme bulunursa ileti filtreleri daha düşük önceliklerin değerlendirilmez. Filtre tabloları hakkında daha fazla bilgi için bkz. [ileti filtreleri](../../../../docs/framework/wcf/feature-details/message-filters.md).  
+ Varsayılan olarak tüm ileti filtreleri filtreleme tablosu içinde eşzamanlı olarak değerlendirilir; Ancak, belirtebileceğiniz bir <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement.Priority%2A> belirli bir sırada değerlendirilecek ileti filtreleri neden olur. En yüksek önceliğe sahip tüm girişleri ilk olarak değerlendirilir ve daha yüksek bir öncelik düzeyinde bir eşleşme bulunursa ileti filtreleri daha düşük önceliklerin değerlendirilmez. Filtre tabloları hakkında daha fazla bilgi için bkz. [ileti filtreleri](message-filters.md).  
   
  Aşağıdaki örneklerde <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter>, hangi değerlendirilen `true` tüm iletiler için. Bu **MessageFilter** ilişkilendirir "routingTable1" filtre tablosuna ekleneceğinden **MessageFilter** "CalculatorService" adlı istemci uç noktası ile. **RoutingBehavior** ardından bu tablo Hizmeti uç noktası tarafından işlenen iletileri yönlendirmek için kullanılması gerektiğini belirtir.  
   
@@ -160,7 +160,7 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), endpointList);
   
 -   Birden çok filtre döndürmelidir `true` ileti değerlendirirken.  
   
- Bu koşullar karşılanıyorsa, ileti değerlendirmek için tüm filtre tüm uç noktalara yönlendirilir `true`. Aşağıdaki örnek, uç nokta adresini iletisi ise iki uç noktalara yönlendirilmek iletilerinde sonuçları bir yönlendirme yapılandırması tanımlar http://localhost:8000/routingservice/router/rounding.  
+ Bu koşullar karşılanıyorsa, ileti değerlendirmek için tüm filtre tüm uç noktalara yönlendirilir `true`. Aşağıdaki örnek, uç nokta adresini iletisi ise iki uç noktalara yönlendirilmek iletilerinde sonuçları bir yönlendirme yapılandırması tanımlar `http://localhost:8000/routingservice/router/rounding`.  
   
 ```xml  
 <!--ROUTING SECTION -->  
@@ -357,19 +357,19 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), backupList);
 |Desen|Oturum|İşlem|Bağlamı alma|Desteklenen yedekleme listesi|Notlar|  
 |-------------|-------------|-----------------|---------------------|---------------------------|-----------|  
 |Tek Yönlü||||Evet|Bir yedekleme uç noktasında iletiyi yeniden dener. Bu ileti olup olmadığını çok noktaya yayın, yalnızca başarısız bir kanalda ileti, yedekleme hedefine taşınır.|  
-|Tek Yönlü||![Onay işareti](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "onay işareti")||Hayır|Bir özel durum ve işlem geri alındı.|  
-|Tek Yönlü|||![Onay işareti](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "onay işareti")|Evet|Bir yedekleme uç noktasında iletiyi yeniden dener. İleti sonra başarıyla alındı, tam tüm bağlamı alır. İleti tarafından herhangi bir uç noktası başarıyla alınmazsa alma bağlamı tamamlamayın.<br /><br /> Bu ileti yükleniyor, çok noktaya yayın alma bağlamı ileti en az bir uç noktası tarafından (birincil veya yedek) başarıyla alınırsa yalnızca tamamlandı. Uç noktaları çok noktaya yayın yollardan birinde hiçbiri başarılı bir şekilde iletisi alırsanız, alma bağlamı tamamlamayın.|  
-|Tek Yönlü||![Onay işareti](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "onay işareti")|![Onay işareti](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "onay işareti")|Evet|Önceki işlem durdurma, yeni bir işlem oluşturun ve tüm iletileri yeniden gönderin. Bir hatayla karşılaştı iletileri yedekleme hedefine aktarılır.<br /><br /> Bir işlem oluşturulduktan sonra tüm iletimler başarısız, alma bağlamı tamamlayın ve hareketi.|  
-|Tek Yönlü|![Onay işareti](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "onay işareti")|||Evet|Bir yedekleme uç noktasında iletiyi yeniden dener. Bir çok noktaya yayın senaryosunda, yedekleme hedefi için yalnızca iletileri bir oturumda bir hatayla karşılaştı veya başarısız oturumunu kapatmak bir oturumda gönderilir.|  
-|Tek Yönlü|![Onay işareti](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "onay işareti")|![Onay işareti](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "onay işareti")||Hayır|Bir özel durum ve işlem geri alındı.|  
-|Tek Yönlü|![Onay işareti](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "onay işareti")||![Onay işareti](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "onay işareti")|Evet|Bir yedekleme uç noktasında iletiyi yeniden dener. Tüm hata tamamlandı iletisi sonra oturumu başka iletilerin gösterir ve yönlendirme hizmeti başarıyla tüm giden oturumu kanallarınızı kapatır, tüm alma bağlamları tamamlanır ve gelen oturum kanalı kapatıldı.|  
-|Tek Yönlü|![Onay işareti](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "onay işareti")|![Onay işareti](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "onay işareti")|![Onay işareti](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "onay işareti")|Evet|Geçerli işlem iptal edip yeni bir tane oluşturun. Tüm önceki iletileri oturumunda yeniden gönderin. Bir işlem, tüm ileti başarıyla gönderildi oluşturulduktan sonra daha fazla ileti, tüm giden oturum kanalları kapalı olduğundan, alma oturumu gösterir bağlamları tüm olan işlem tamamlanır, gelen oturum kanalı Kapalı, ve işlem taahhüt eder.<br /><br /> Çok noktaya yayın aynı hedefe önce herhangi bir hata vardı iletileri gönderilir ve hatayla iletileri oturumları ne zaman gönderildiğini yedekleme hedefi için gönderilir.|  
+|Tek Yönlü||![Onay işareti](media/checkmark.gif "onay işareti")||Hayır|Bir özel durum ve işlem geri alındı.|  
+|Tek Yönlü|||![Onay işareti](media/checkmark.gif "onay işareti")|Evet|Bir yedekleme uç noktasında iletiyi yeniden dener. İleti sonra başarıyla alındı, tam tüm bağlamı alır. İleti tarafından herhangi bir uç noktası başarıyla alınmazsa alma bağlamı tamamlamayın.<br /><br /> Bu ileti yükleniyor, çok noktaya yayın alma bağlamı ileti en az bir uç noktası tarafından (birincil veya yedek) başarıyla alınırsa yalnızca tamamlandı. Uç noktaları çok noktaya yayın yollardan birinde hiçbiri başarılı bir şekilde iletisi alırsanız, alma bağlamı tamamlamayın.|  
+|Tek Yönlü||![Onay işareti](media/checkmark.gif "onay işareti")|![Onay işareti](media/checkmark.gif "onay işareti")|Evet|Önceki işlem durdurma, yeni bir işlem oluşturun ve tüm iletileri yeniden gönderin. Bir hatayla karşılaştı iletileri yedekleme hedefine aktarılır.<br /><br /> Bir işlem oluşturulduktan sonra tüm iletimler başarısız, alma bağlamı tamamlayın ve hareketi.|  
+|Tek Yönlü|![Onay işareti](media/checkmark.gif "onay işareti")|||Evet|Bir yedekleme uç noktasında iletiyi yeniden dener. Bir çok noktaya yayın senaryosunda, yedekleme hedefi için yalnızca iletileri bir oturumda bir hatayla karşılaştı veya başarısız oturumunu kapatmak bir oturumda gönderilir.|  
+|Tek Yönlü|![Onay işareti](media/checkmark.gif "onay işareti")|![Onay işareti](media/checkmark.gif "onay işareti")||Hayır|Bir özel durum ve işlem geri alındı.|  
+|Tek Yönlü|![Onay işareti](media/checkmark.gif "onay işareti")||![Onay işareti](media/checkmark.gif "onay işareti")|Evet|Bir yedekleme uç noktasında iletiyi yeniden dener. Tüm hata tamamlandı iletisi sonra oturumu başka iletilerin gösterir ve yönlendirme hizmeti başarıyla tüm giden oturumu kanallarınızı kapatır, tüm alma bağlamları tamamlanır ve gelen oturum kanalı kapatıldı.|  
+|Tek Yönlü|![Onay işareti](media/checkmark.gif "onay işareti")|![Onay işareti](media/checkmark.gif "onay işareti")|![Onay işareti](media/checkmark.gif "onay işareti")|Evet|Geçerli işlem iptal edip yeni bir tane oluşturun. Tüm önceki iletileri oturumunda yeniden gönderin. Bir işlem, tüm ileti başarıyla gönderildi oluşturulduktan sonra daha fazla ileti, tüm giden oturum kanalları kapalı olduğundan, alma oturumu gösterir bağlamları tüm olan işlem tamamlanır, gelen oturum kanalı Kapalı, ve işlem taahhüt eder.<br /><br /> Çok noktaya yayın aynı hedefe önce herhangi bir hata vardı iletileri gönderilir ve hatayla iletileri oturumları ne zaman gönderildiğini yedekleme hedefi için gönderilir.|  
 |İki yönlü||||Evet|Yedekleme hedefine gönderin.  Bir kanal bir yanıt iletisi döndürür. sonra özgün istemci yanıtı döndürür.|  
-|İki yönlü|![Onay işareti](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "onay işareti")|||Evet|Tüm iletileri kanalda yedekleme hedefine gönderin.  Bir kanal bir yanıt iletisi döndürür. sonra özgün istemci yanıtı döndürür.|  
-|İki yönlü||![Onay işareti](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "onay işareti")||Hayır|Bir özel durum ve işlem geri alındı.|  
-|İki yönlü|![Onay işareti](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "onay işareti")|![Onay işareti](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "onay işareti")||Hayır|Bir özel durum ve işlem geri alındı.|  
+|İki yönlü|![Onay işareti](media/checkmark.gif "onay işareti")|||Evet|Tüm iletileri kanalda yedekleme hedefine gönderin.  Bir kanal bir yanıt iletisi döndürür. sonra özgün istemci yanıtı döndürür.|  
+|İki yönlü||![Onay işareti](media/checkmark.gif "onay işareti")||Hayır|Bir özel durum ve işlem geri alındı.|  
+|İki yönlü|![Onay işareti](media/checkmark.gif "onay işareti")|![Onay işareti](media/checkmark.gif "onay işareti")||Hayır|Bir özel durum ve işlem geri alındı.|  
 |Çift Yönlü||||Hayır|Çift yönlü iletişim olmayan oturumu şu anda desteklenmiyor.|  
-|Çift Yönlü|![Onay işareti](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "onay işareti")|||Evet|Yedekleme hedefine gönderin.|  
+|Çift Yönlü|![Onay işareti](media/checkmark.gif "onay işareti")|||Evet|Yedekleme hedefine gönderin.|  
   
 ## <a name="hosting"></a>Barındırma  
  Yönlendirme hizmeti bir WCF hizmeti olarak uygulandığından, bir uygulamadaki şirket içinde barındırılan veya barındırılan IIS ya da WAS tarafından. Yönlendirme hizmeti, IIS, WAS veya bir Windows hizmeti uygulaması otomatik olarak başlamasını avantajlarından yararlanın ve yaşam döngüsü yönetim özellikleri bu barındırma ortamları kullanılabilir barındırılan önerilir.  
@@ -390,9 +390,9 @@ using (ServiceHost serviceHost =
 ```  
   
 ## <a name="routing-service-and-impersonation"></a>Yönlendirme hizmeti ile kimliğe bürünme  
- WCF yönlendirme hizmeti ile kimliğe bürünme hem ileti gönderme ve alma için kullanılabilir. Tüm kimliğe bürünme normal Windows kısıtlamaları uygulanır. Kimliğe bürünme kendi hizmet yazarken kullanmak için hizmet veya hesap izinlerini ayarlamak gerekli olursa, kimliğe bürünme yönlendirme hizmeti ile kullanmak için bu aynı adımları uygulamanız gerekir. Daha fazla bilgi için [temsilcilik ve kimliğe bürünme](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+ WCF yönlendirme hizmeti ile kimliğe bürünme hem ileti gönderme ve alma için kullanılabilir. Tüm kimliğe bürünme normal Windows kısıtlamaları uygulanır. Kimliğe bürünme kendi hizmet yazarken kullanmak için hizmet veya hesap izinlerini ayarlamak gerekli olursa, kimliğe bürünme yönlendirme hizmeti ile kullanmak için bu aynı adımları uygulamanız gerekir. Daha fazla bilgi için [temsilcilik ve kimliğe bürünme](delegation-and-impersonation-with-wcf.md).  
   
- Yönlendirme hizmeti ile kimliğe bürünme, ASP.NET kimliğe bürünme modunda ASP.NET uyumluluk kullanımı ya da kimliğe bürünme izin verecek şekilde yapılandırılmış bir Windows kimlik bilgilerinin kullanımını gerektirir. ASP.NET uyumluluğu modu hakkında daha fazla bilgi için bkz. [WCF hizmetleri ve ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).  
+ Yönlendirme hizmeti ile kimliğe bürünme, ASP.NET kimliğe bürünme modunda ASP.NET uyumluluk kullanımı ya da kimliğe bürünme izin verecek şekilde yapılandırılmış bir Windows kimlik bilgilerinin kullanımını gerektirir. ASP.NET uyumluluğu modu hakkında daha fazla bilgi için bkz. [WCF hizmetleri ve ASP.NET](wcf-services-and-aspnet.md).  
   
 > [!WARNING]
 >  WCF yönlendirme hizmeti, temel kimlik doğrulaması ile kimliğe bürünme desteklemez.  
@@ -402,6 +402,6 @@ using (ServiceHost serviceHost =
  Windows kimlik bilgisi kimliğe bürünme yönlendirme hizmeti ile kullanmak için kimlik bilgilerini hem service'ı yapılandırmanız gerekir. İstemci kimlik bilgileri nesnesi (<xref:System.ServiceModel.Security.WindowsClientCredential>, gelen erişilebilir operasyonlar <xref:System.ServiceModel.ChannelFactory>) tanımlayan bir <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> kimliğe bürünme izin vermek için ayarlanmalıdır özelliği. Son olarak, hizmette yapılandırmanız gereken <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> ayarlamak için davranış `ImpersonateCallerForAllOperations` için `true`. Yönlendirme hizmeti ile kişileştirme etkinleştirildi iletilerini yönlendirmede istemcileri oluşturma karar vermek için bu bayrağı kullanır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İleti Filtreleri](../../../../docs/framework/wcf/feature-details/message-filters.md)  
- [Anlaşmaları Yönlendirme](../../../../docs/framework/wcf/feature-details/routing-contracts.md)  
- [Filtre Seçme](../../../../docs/framework/wcf/feature-details/choosing-a-filter.md)
+ [İleti Filtreleri](message-filters.md)  
+ [Anlaşmaları Yönlendirme](routing-contracts.md)  
+ [Filtre Seçme](choosing-a-filter.md)

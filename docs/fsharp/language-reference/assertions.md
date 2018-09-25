@@ -3,11 +3,11 @@ title: Onaylamalar (F#)
 description: "'Onay' ifadesi, ifadeler F # programlama dilinin test etmek için bir hata ayıklama özelliği olarak kullanmayı öğrenin."
 ms.date: 05/16/2016
 ms.openlocfilehash: 85b1e839bfd19bada48b7f1821d15ddd8fa77754
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46322988"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46710979"
 ---
 # <a name="assertions"></a>Onaylamalar
 

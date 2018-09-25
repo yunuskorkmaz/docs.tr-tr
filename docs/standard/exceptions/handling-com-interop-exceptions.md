@@ -12,11 +12,11 @@ ms.assetid: e6104aa8-8e5f-4069-b864-def85579c96c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0a17752257589ea4ee4d9e58182d4448f02f6460
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46568627"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46937559"
 ---
 # <a name="handling-com-interop-exceptions"></a>COM Birlikte Çalışması Özel Durumlarını İşleme
 Yönetilen ve yönetilmeyen kod özel durumları işlemek için birlikte çalışabilir. Bir yöntem, yönetilen kodda bir özel durum oluşturursa, ortak dil çalışma zamanı için bir COM nesnesi HRESULT geçirebilirsiniz. Bir hata HRESULT döndüren bir yöntemi yönetilmeyen kodda başarısız olursa, çalışma zamanı, yönetilen kod tarafından yakalanan özel durum oluşturur.  

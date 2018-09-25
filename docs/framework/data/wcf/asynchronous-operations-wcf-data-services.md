@@ -7,11 +7,11 @@ helpviewer_keywords:
 - WCF Data Services, client library
 ms.assetid: 679644c7-e3fc-422c-b14a-b44b683900d0
 ms.openlocfilehash: 665e424ada24e5e2990eccde7193a91dc039b265
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46532314"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47027862"
 ---
 # <a name="asynchronous-operations-wcf-data-services"></a>Zaman uyumsuz işlemler (WCF Data Services)
 Web uygulamaları, iç ağ içinde çalışan uygulamalar daha yüksek gecikme istemci ve sunucu arasında uyum gerekir. Uygulamanızın performans ve kullanıcı deneyimini iyileştirmek için zaman uyumsuz yöntemleri kullanılarak öneririz <xref:System.Data.Services.Client.DataServiceContext> ve <xref:System.Data.Services.Client.DataServiceQuery%601> sınıfları erişirken [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] sunucuları Web üzerinden.  

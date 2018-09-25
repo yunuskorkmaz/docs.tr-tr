@@ -3,11 +3,11 @@ title: LINQ - DataSet
 ms.date: 03/30/2017
 ms.assetid: 743e3755-3ecb-45a2-8d9b-9ed41f0dcf17
 ms.openlocfilehash: 5e1644af7e07ad3395a30e56df52b7f85cefa77c
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46529093"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46710637"
 ---
 # <a name="linq-to-dataset"></a>LINQ - DataSet
 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] daha kolay ve hızlı sorgu için verileri önbelleğe üzerinde kolaylaştırır bir <xref:System.Data.DataSet> nesne. Özellikle, [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sorguları programlama dilinden kendisi yerine ayrı bir sorgu dilini kullanarak yazma geliştiricilerin etkinleştirerek sorgulama basitleştirir. Bu, özellikle artık derleme zamanı söz dizimi denetimini statik yazmaya ve sorguları Visual Studio tarafından sağlanan IntelliSense desteği yararlanabilirsiniz Visual Studio geliştiriciler için yararlıdır.  

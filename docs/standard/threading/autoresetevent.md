@@ -9,11 +9,11 @@ ms.assetid: 6d39c48d-6b37-4a9b-8631-f2924cfd9c18
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 38efbe0ecd88c02752d610de4b1eec8b62eca1f8
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46540823"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46937557"
 ---
 # <a name="autoresetevent"></a>AutoResetEvent
 <xref:System.Threading.AutoResetEvent> Sınıf sinyal, tek bir bekleyen iş parçacığı bırakılıyor sonra otomatik olarak sıfırlanır bir yerel bekleme tanıtıcısı olayı temsil eder. Bu sınıfın temel sınıfının, özel bir durum temsil <xref:System.Threading.EventWaitHandle>. Bkz: [EventWaitHandle](../../../docs/standard/threading/eventwaithandle.md) kullanın ve otomatik sıfırlama olayları özellikleri için kavramsal belgelerde.  

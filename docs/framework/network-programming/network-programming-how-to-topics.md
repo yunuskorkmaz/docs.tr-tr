@@ -11,11 +11,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 703d3c2260f46f46e85831f809386d5a3af647a4
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46536595"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46937533"
 ---
 # <a name="network-programming-how-to-topics"></a>Ağ programlama nasıl yapılır konuları
 Aşağıdaki liste, ağ programlama için kavramsal belgelerde bulunan nasıl yapılır konulara bağlantılar içerir.  

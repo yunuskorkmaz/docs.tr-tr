@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: bcbc9625-7cf7-476e-85d2-058f12682f54
 ms.openlocfilehash: bc8bfaabb9e90e66e4ec81e551fd66319a78ca7e
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46493444"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47058259"
 ---
 # <a name="query-expression-syntax-examples-ordering"></a>Sorgu ifadesi söz dizimi örnekleri: sıralama
 Bu konudaki örnekler nasıl kullanılacağını gösteren `OrderBy` ve `OrderByDescending` sorgulamak için yöntemleri [AdventureWorks satışları modeli](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) sorgu ifadesi söz dizimini kullanarak. Bu örneklerde kullanılan AdventureWorks satışları modeli kişi, adres, ürün, SalesOrderHeader ve satış siparişi ayrıntısını tablolarda AdventureWorks örnek veritabanı oluşturulur.  

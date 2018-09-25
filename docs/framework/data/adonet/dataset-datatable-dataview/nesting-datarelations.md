@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 9530f9c9-dd98-4b93-8cdb-40d7f1e8d0ab
 ms.openlocfilehash: 9255615c7786773f1d4f453b910fdccdf191721f
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46532512"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47058337"
 ---
 # <a name="nesting-datarelations"></a>İç içe geçme DataRelations
 Verilerin ilişkisel bir temsilini içinde tek tek tablolar, bir sütun veya sütun kümesini kullanarak birbirleriyle satırları içerir. ADO.NET'te <xref:System.Data.DataSet>, tablolar arasında ilişki kullanılarak uygulanan bir <xref:System.Data.DataRelation>. Oluştururken bir **DataRelation**, sütun üst-alt ilişkileri yalnızca ilişkisi yönetilir. Tabloları ve sütunları ayrı varlıklardır. XML sağlayan veri hiyerarşik temsili, iç içe geçmiş alt öğelerini içeren üst öğeler tarafından üst-alt ilişkilerini temsil edilir.  
