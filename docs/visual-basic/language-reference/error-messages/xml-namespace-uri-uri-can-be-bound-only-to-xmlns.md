@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC31183
 ms.assetid: 0ab1dbce-8397-4959-b2cd-f58798b051a0
 ms.openlocfilehash: 46a6c4896dae3951b5aedae79361f2e06d02bc04
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46698116"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47077154"
 ---
 # <a name="xml-namespace-uri-httpwwww3orgxml1998namespace-can-be-bound-only-to-39xmlns39"></a>XML ad alanı URI `http://www.w3.org/XML/1998/namespace`; yalnızca bağlanabilir &#39;xmlns&#39;
 URI `http://www.w3.org/XML/1998/namespace` bir XML ad alanı bildiriminde kullanılır. Bu URI, ayrılmış bir ad alanı ve bir XML ad alanı bildiriminde yer alamaz.  
