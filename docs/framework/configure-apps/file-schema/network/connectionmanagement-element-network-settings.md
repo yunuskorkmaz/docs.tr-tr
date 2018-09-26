@@ -11,54 +11,54 @@ ms.assetid: bedccaab-12a2-4511-8f67-e961f249aec6
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: bc0b75db5b3f35087df70c9155a1ba3b39ceae4d
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47173077"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47205989"
 ---
-# <a name="ltconnectionmanagementgt-element-network-settings"></a><span data-ttu-id="79fe5-102">&lt;connectionManagement&gt; öğesi (ağ ayarları)</span><span class="sxs-lookup"><span data-stu-id="79fe5-102">&lt;connectionManagement&gt; Element (Network Settings)</span></span>
-<span data-ttu-id="79fe5-103">Bir ağ konak bağlantı maksimum sayısını belirtir.</span><span class="sxs-lookup"><span data-stu-id="79fe5-103">Specifies the maximum number of connections to a network host.</span></span>  
+# <a name="ltconnectionmanagementgt-element-network-settings"></a><span data-ttu-id="4bcb6-102">&lt;connectionManagement&gt; öğesi (ağ ayarları)</span><span class="sxs-lookup"><span data-stu-id="4bcb6-102">&lt;connectionManagement&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="4bcb6-103">Bir ağ konak bağlantı maksimum sayısını belirtir.</span><span class="sxs-lookup"><span data-stu-id="4bcb6-103">Specifies the maximum number of connections to a network host.</span></span>  
   
- <span data-ttu-id="79fe5-104">\<Yapılandırma ></span><span class="sxs-lookup"><span data-stu-id="79fe5-104">\<configuration></span></span>  
-<span data-ttu-id="79fe5-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="79fe5-105">\<system.net></span></span>  
-<span data-ttu-id="79fe5-106">\<connectionManagement ></span><span class="sxs-lookup"><span data-stu-id="79fe5-106">\<connectionManagement></span></span>  
+ <span data-ttu-id="4bcb6-104">\<Yapılandırma ></span><span class="sxs-lookup"><span data-stu-id="4bcb6-104">\<configuration></span></span>  
+<span data-ttu-id="4bcb6-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="4bcb6-105">\<system.net></span></span>  
+<span data-ttu-id="4bcb6-106">\<connectionManagement ></span><span class="sxs-lookup"><span data-stu-id="4bcb6-106">\<connectionManagement></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="79fe5-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="79fe5-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4bcb6-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="4bcb6-107">Syntax</span></span>  
   
 ```xml  
 <connectionManagement>   
 </connectionManagement>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="79fe5-108">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="79fe5-108">Attributes and Elements</span></span>  
- <span data-ttu-id="79fe5-109">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="79fe5-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="4bcb6-108">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="4bcb6-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="4bcb6-109">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="4bcb6-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="79fe5-110">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="79fe5-110">Attributes</span></span>  
- <span data-ttu-id="79fe5-111">Yok.</span><span class="sxs-lookup"><span data-stu-id="79fe5-111">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="4bcb6-110">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="4bcb6-110">Attributes</span></span>  
+ <span data-ttu-id="4bcb6-111">Yok.</span><span class="sxs-lookup"><span data-stu-id="4bcb6-111">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="79fe5-112">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="79fe5-112">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="4bcb6-112">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="4bcb6-112">Child Elements</span></span>  
   
-|<span data-ttu-id="79fe5-113">**Öğe**</span><span class="sxs-lookup"><span data-stu-id="79fe5-113">**Element**</span></span>|<span data-ttu-id="79fe5-114">**Açıklama**</span><span class="sxs-lookup"><span data-stu-id="79fe5-114">**Description**</span></span>|  
+|<span data-ttu-id="4bcb6-113">**Öğe**</span><span class="sxs-lookup"><span data-stu-id="4bcb6-113">**Element**</span></span>|<span data-ttu-id="4bcb6-114">**Açıklama**</span><span class="sxs-lookup"><span data-stu-id="4bcb6-114">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="79fe5-115">add</span><span class="sxs-lookup"><span data-stu-id="79fe5-115">add</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-connectionmanagement-network-settings.md)|<span data-ttu-id="79fe5-116">Bir IP adresi veya DNS adı bağlantı yönetimi listesine ekler.</span><span class="sxs-lookup"><span data-stu-id="79fe5-116">Adds an IP address or DNS name to the connection management list.</span></span>|  
-|[<span data-ttu-id="79fe5-117">Temizle</span><span class="sxs-lookup"><span data-stu-id="79fe5-117">clear</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-connectionmanagement-network-settings.md)|<span data-ttu-id="79fe5-118">Bağlantı yönetim listesini temizler.</span><span class="sxs-lookup"><span data-stu-id="79fe5-118">Clears the connection management list.</span></span>|  
-|[<span data-ttu-id="79fe5-119">remove</span><span class="sxs-lookup"><span data-stu-id="79fe5-119">remove</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-connectionmanagement-network-settings.md)|<span data-ttu-id="79fe5-120">Bir IP adresi veya DNS adı bağlantı yönetimi listesinden kaldırır.</span><span class="sxs-lookup"><span data-stu-id="79fe5-120">Removes an IP address or DNS name from the connection management list.</span></span>|  
+|[<span data-ttu-id="4bcb6-115">add</span><span class="sxs-lookup"><span data-stu-id="4bcb6-115">add</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-connectionmanagement-network-settings.md)|<span data-ttu-id="4bcb6-116">Bir IP adresi veya DNS adı bağlantı yönetimi listesine ekler.</span><span class="sxs-lookup"><span data-stu-id="4bcb6-116">Adds an IP address or DNS name to the connection management list.</span></span>|  
+|[<span data-ttu-id="4bcb6-117">Temizle</span><span class="sxs-lookup"><span data-stu-id="4bcb6-117">clear</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-connectionmanagement-network-settings.md)|<span data-ttu-id="4bcb6-118">Bağlantı yönetim listesini temizler.</span><span class="sxs-lookup"><span data-stu-id="4bcb6-118">Clears the connection management list.</span></span>|  
+|[<span data-ttu-id="4bcb6-119">remove</span><span class="sxs-lookup"><span data-stu-id="4bcb6-119">remove</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-connectionmanagement-network-settings.md)|<span data-ttu-id="4bcb6-120">Bir IP adresi veya DNS adı bağlantı yönetimi listesinden kaldırır.</span><span class="sxs-lookup"><span data-stu-id="4bcb6-120">Removes an IP address or DNS name from the connection management list.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="79fe5-121">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="79fe5-121">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="4bcb6-121">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="4bcb6-121">Parent Elements</span></span>  
   
-|<span data-ttu-id="79fe5-122">**Öğe**</span><span class="sxs-lookup"><span data-stu-id="79fe5-122">**Element**</span></span>|<span data-ttu-id="79fe5-123">**Açıklama**</span><span class="sxs-lookup"><span data-stu-id="79fe5-123">**Description**</span></span>|  
+|<span data-ttu-id="4bcb6-122">**Öğe**</span><span class="sxs-lookup"><span data-stu-id="4bcb6-122">**Element**</span></span>|<span data-ttu-id="4bcb6-123">**Açıklama**</span><span class="sxs-lookup"><span data-stu-id="4bcb6-123">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="79fe5-124">System.NET</span><span class="sxs-lookup"><span data-stu-id="79fe5-124">system.net</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|<span data-ttu-id="79fe5-125">.NET Framework ağa nasıl bağlandığını belirten ayarları içerir.</span><span class="sxs-lookup"><span data-stu-id="79fe5-125">Contains settings that specify how the .NET Framework connects to the network.</span></span>|  
+|[<span data-ttu-id="4bcb6-124">System.NET</span><span class="sxs-lookup"><span data-stu-id="4bcb6-124">system.net</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|<span data-ttu-id="4bcb6-125">.NET Framework ağa nasıl bağlandığını belirten ayarları içerir.</span><span class="sxs-lookup"><span data-stu-id="4bcb6-125">Contains settings that specify how the .NET Framework connects to the network.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="79fe5-126">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="79fe5-126">Remarks</span></span>  
- <span data-ttu-id="79fe5-127">`connectionManagement` Öğesi, sunucu veya sunucu grubu için en fazla bağlantı sayısını tanımlar.</span><span class="sxs-lookup"><span data-stu-id="79fe5-127">The `connectionManagement` element defines the maximum number of connections to a server or group of servers.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4bcb6-126">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="4bcb6-126">Remarks</span></span>  
+ <span data-ttu-id="4bcb6-127">`connectionManagement` Öğesi, sunucu veya sunucu grubu için en fazla bağlantı sayısını tanımlar.</span><span class="sxs-lookup"><span data-stu-id="4bcb6-127">The `connectionManagement` element defines the maximum number of connections to a server or group of servers.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="79fe5-128">Yapılandırma Dosyaları</span><span class="sxs-lookup"><span data-stu-id="79fe5-128">Configuration Files</span></span>  
- <span data-ttu-id="79fe5-129">Bu öğe, uygulama yapılandırma dosyası veya makine yapılandırma dosyası (Machine.config) kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="79fe5-129">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="4bcb6-128">Yapılandırma Dosyaları</span><span class="sxs-lookup"><span data-stu-id="4bcb6-128">Configuration Files</span></span>  
+ <span data-ttu-id="4bcb6-129">Bu öğe, uygulama yapılandırma dosyası veya makine yapılandırma dosyası (Machine.config) kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="4bcb6-129">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="79fe5-130">Örnek</span><span class="sxs-lookup"><span data-stu-id="79fe5-130">Example</span></span>  
- <span data-ttu-id="79fe5-131">Aşağıdaki örnek, bir uygulamayı server www.contoso.com için dört bağlantıları ve diğer tüm sunucular iki bağlantıları kullanmak için yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="79fe5-131">The following example configures an application to use four connections to the server www.contoso.com and two connections to all other servers.</span></span>  
+## <a name="example"></a><span data-ttu-id="4bcb6-130">Örnek</span><span class="sxs-lookup"><span data-stu-id="4bcb6-130">Example</span></span>  
+ <span data-ttu-id="4bcb6-131">Aşağıdaki örnek, bir uygulamayı server www.contoso.com için dört bağlantıları ve diğer tüm sunucular iki bağlantıları kullanmak için yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="4bcb6-131">The following example configures an application to use four connections to the server www.contoso.com and two connections to all other servers.</span></span>  
   
 ```xml  
 <configuration>  
@@ -71,7 +71,7 @@ ms.locfileid: "47173077"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="79fe5-132">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="79fe5-132">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="4bcb6-132">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="4bcb6-132">See Also</span></span>  
  <xref:System.Net.ServicePoint>  
  <xref:System.Net.ServicePointManager>  
- [<span data-ttu-id="79fe5-133">Ağ Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="79fe5-133">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+ [<span data-ttu-id="4bcb6-133">Ağ Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="4bcb6-133">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
