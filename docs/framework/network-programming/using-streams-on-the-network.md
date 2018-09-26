@@ -20,11 +20,11 @@ ms.assetid: 02b05fba-7235-45ce-94e5-060436ee0875
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 1157fd8772546a1e34343bcf05ac40ca8ad592a5
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47080987"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47194030"
 ---
 # <a name="using-streams-on-the-network"></a>Ağda akışları kullanma
 Ağ kaynaklarını .NET Framework akışları olarak temsil edilir. .NET Framework akışları genel düşünerek, aşağıdaki özellikleri sunar:  

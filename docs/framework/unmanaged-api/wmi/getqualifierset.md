@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 635dc7605af00f2662a9f9553adefafcd25f9452
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47079471"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47198767"
 ---
 # <a name="getqualifierset-function"></a>GetQualifierSet işlevi
 Bir sınıf örneği veya bir sınıf tanımı için ayarlanmış niteleyicisi alır.

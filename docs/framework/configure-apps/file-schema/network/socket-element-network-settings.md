@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 995a89dd67664fd6a408f88f20f6837d2dbaaad4
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: fb057ab75c31edd7bbdaf5d5115cda2802d3b057
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744245"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47204001"
 ---
 # <a name="ltsocketgt-element-network-settings"></a>&lt;Yuva&gt; öğesi (ağ ayarları)
-Yuva işlemleri tamamlama bağlantı noktalarını kullanacak olup olmadığını belirtir.  
+Yuva işlemleri tamamlama bağlantı noktalarını kullanıp kullanmadığını belirtir.  
   
  \<Yapılandırma >  
 \<system.net>  
@@ -41,56 +40,56 @@ Yuva işlemleri tamamlama bağlantı noktalarını kullanacak olup olmadığın�
   
 ### <a name="attributes"></a>Öznitelikler  
   
-|**Özniteliği**|**Açıklama**|  
+|**Öznitelik**|**Açıklama**|  
 |-------------------|---------------------|  
-|`alwaysUseCompletionPortsForAccept`|Yuva her zaman tamamlama bağlantı noktalarını kabul yöntemi çağrıları için kullanılması gerekip gerekmediğini gösterir. Varsayılan değer `false` şeklindedir.|  
-|`alwaysUseCompletionPortsForConnect`|Yuva her zaman tamamlama bağlantı noktalarını Bağlan yöntem çağrıları için kullanılması gerekip gerekmediğini gösterir. Varsayılan değer `false` şeklindedir.|  
-|`ipProtectionLevel`|Varsayılan belirtir <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> yuva için kullanılacak. Varsayılan değer Windows sürümüne bağlıdır.|  
+|`alwaysUseCompletionPortsForAccept`|Yuva tamamlama bağlantı noktaları her zaman için Accept yöntemi çağrıları kullanıp kullanmayacağını belirtir. Varsayılan değer `false` şeklindedir.|  
+|`alwaysUseCompletionPortsForConnect`|Yuva tamamlama bağlantı noktaları her zaman Connect yöntem çağrıları için kullanıp kullanmayacağını belirtir. Varsayılan değer `false` şeklindedir.|  
+|`ipProtectionLevel`|Varsayılan belirtir <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> bir yuva için kullanılacak. Varsayılan değer Windows sürümüne bağlıdır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
-|**Öğesi**|**Açıklama**|  
+|**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
 |[Ayarlar](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Temel ağ seçeneklerini yapılandırır <xref:System.Net> ad alanı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `alwaysUseCompletionPortsForAccept` Ve `alwaysUseCompletionPortsForConnect` öznitelikleri tamamlama bağlantı noktaları kullanımına ilişkin varsayılan davranışı belirtmek için tarafından kullanılan sınıfları <xref:System.Net.Sockets?displayProperty=nameWithType>.namespace. Tamamlama bağlantı noktaları, yüksek performanslı sunucu uygulamaları için önerilir.  
+ `alwaysUseCompletionPortsForAccept` Ve `alwaysUseCompletionPortsForConnect` öznitelikleri tamamlama bağlantı noktaları kullanımına ilişkin varsayılan davranışını belirtmek için kullanılan sınıfları tarafından <xref:System.Net.Sockets?displayProperty=nameWithType>.namespace. Tamamlama bağlantı noktaları, yüksek performanslı sunucu uygulamaları için önerilir.  
   
  İçin varsayılan değer `alwaysUseCompletionPortsForAccept` ve `alwaysUseCompletionPortsForConnect` öznitelikleri **false**.  
   
- <xref:System.Net.Configuration.SocketElement.AlwaysUseCompletionPortsForAccept%2A> Geçerli değerini almak için kullanılan `alwaysUseCompletionPortsForAccept` geçerli yapılandırma dosyalarını özniteliği. <xref:System.Net.Configuration.SocketElement.AlwaysUseCompletionPortsForConnect%2A> Geçerli değerini almak için kullanılan `alwaysUseCompletionPortsForConnect` geçerli yapılandırma dosyalarını özniteliği.  
+ <xref:System.Net.Configuration.SocketElement.AlwaysUseCompletionPortsForAccept%2A> Geçerli değerini almak için kullanılan `alwaysUseCompletionPortsForAccept` ilgili yapılandırma dosyaları özniteliği. <xref:System.Net.Configuration.SocketElement.AlwaysUseCompletionPortsForConnect%2A> Geçerli değerini almak için kullanılan `alwaysUseCompletionPortsForConnect` ilgili yapılandırma dosyaları özniteliği.  
   
- `ipProtectionLevel` Özniteliği belirtir. varsayılan <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> yuva için kullanılacak. <xref:System.Net.Configuration.SocketElement.IPProtectionLevel%2A> Özelliği, belirtilen kapsam için bir IPv6 yuva için bir kısıtlama yapılandırması gibi aynı adresleriyle site yerel öneki veya yerel bağlantı sağlar. Bu seçenek, erişim kısıtlamaları IPv6 yuvalarda yerleştirmek uygulamaları etkinleştirir. Tür kısıtlamaları sadece ve yerine kendi dış saldırılara karşı sağlamlaştırmak özel bir LAN üzerinde çalışan bir uygulama etkinleştirin. Bu seçenek widens veya dinleme yuva, ortak ve özel kullanıcılar uygun olduğunda veya yalnızca aynı sitede gerektiği için erişimi kısıtlamak etkinleştirme Kısıtlanmamış erişim kapsamını daraltır.  
+ `ipProtectionLevel` Özniteliği belirtir Varsayılan <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> bir yuva için kullanılacak. <xref:System.Net.Configuration.SocketElement.IPProtectionLevel%2A> Özelliği, belirtilen bir kapsam için bir IPv6 yuva için bir kısıtlama yapılandırması gibi adresleri aynı sitede yerel bir önek veya yerel bağlantı sağlar. Bu seçenek, IPv6 yuvalarda erişim kısıtlaması için uygulamaları etkinleştirir. Bu kısıtlamaların yeterlidir ve yerine kendisini dış saldırılarına karşı zorlaştırmak özel bir LAN üzerinde çalışan bir uygulama. Bu seçenek widens veya dinleme yuva, genel ve özel kullanıcılar uygun olduğunda veya gerektiği gibi aynı site için yalnızca erişimini etkinleştirme sınırsız erişim kapsamını daraltır.  
   
- Bu `ipProtectionLevel` özniteliği ayar, yalnızca ilk gelen trafiğe etkiler:  
+ Bu `ipProtectionLevel` özniteliğini yalnızca ilk gelen trafiği etkiler:  
   
--   Bir yuvada gelen bağlantılar için dinleme TCP sunucu.  
+-   Bir TCP yuva gelen bağlantıları için dinlemek sunucu.  
   
--   Paket bir yuvada alma UDP uygulama.  
+-   Bir paketin bir yuvada alma bir UDP uygulamasıdır.  
   
- Bu yapılandırma ayarının (her iki yönde trafik Kısıtlanmamış) zaten oluşturulmuş TCP bağlantılarını etkilemez ve UDP paketlerini gönderen uygulama etkilemez.  
+ Bu yapılandırma ayarının (her iki yönde trafik Kısıtlanmamış) önceden kurulmuş TCP bağlantıları etkilemez ve UDP paketlerini gönderen uygulama etkilemez.  
   
- Olası değerler için `ipProtectionLevel` özniteliğinin ayarına karşılık gelen belirtilen tanımlanan koruma düzeyleri ile <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> şekilde numaralandırma:  
+ Olası değerler için `ipProtectionLevel` özniteliğini karşılık gelen belirtilen tanımlı koruma düzeyleri ile <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> sabit listesi aşağıdaki gibi:  
   
 |**Öznitelik değeri**|**Açıklama**|  
 |-|-|  
-|EdgeRestricted|IP koruma düzeyi kenar sınırlı olur. Bu değer Internet üzerinden çalışmak için tasarlanmış uygulamalar tarafından kullanılır. Bu ayar Windows Teredo uygulamasını kullanarak ağ adresi çevirisi (NAT) geçişine izin vermiyor. Açılan bağlantı noktasına yönelik Internet saldırılarına karşı uygulamalar sıkı gerekir böylece bu uygulamaları IPv4 güvenlik duvarları, atlayabilir. Windows Server 2003 ve Windows XP üzerinde bir yuvada IP koruma düzeyi için varsayılan değer kısıtlanmış kenar ' dir.|  
-|Sınırlı|IP koruma düzeyi sınırlıdır. Bu değer Internet senaryoları kullanılmaz intranet uygulamalar tarafından kullanılır. Bu uygulamalar genellikle değil test veya Internet stili saldırılarına karşı sıkı. Bu ayar yalnızca bağlantı yerel alınan trafiğini sınırlar.|  
-|Sınırsız|IP koruma düzeyi kısıtlanır. Bu değer yerleşik IPv6 NAT geçişi özelliklerini yararlanarak uygulamalar dahil olmak üzere, Internet üzerinden çalışmak için tasarlanmış uygulamalar tarafından kullanılması halinde Windows (örneğin, Teredo). Açılan bağlantı noktasına yönelik Internet saldırılarına karşı uygulamalar sıkı gerekir böylece bu uygulamaları IPv4 güvenlik duvarları, atlayabilir. Windows Server 2008 R2 ve Windows Vista üzerinde bir yuvada IP koruma düzeyi için varsayılan değer kısıtlanır.|  
-|Belirtilmemiş|IP koruma düzeyi belirtilmedi. Windows 7 ve Windows Server 2008 R2 üzerinde bir yuvada IP koruma düzeyi için varsayılan değer belirtilmedi.|  
+|EdgeRestricted|IP koruma düzeyi kısıtlı edge ' dir. Bu değer Internet üzerinden çalışmak üzere tasarlanmış uygulamalar tarafından kullanılabilir. Bu ayar Windows Teredo uygulamasını kullanarak ağ adresi çevirisi (NAT) geçişine izin vermez. Bu uygulamalar, uygulamalar, açık bağlantı noktalarından yönlendirilmiş Internet saldırılarına karşı sıkı gerekir böylece IPv4 güvenlik duvarları, atlayabilir. Windows Server 2003 ve Windows XP'de bir yuvada IP koruma düzeyi için varsayılan değer edge kısıtlı ' dir.|  
+|kısıtlı|IP koruma düzeyi sınırlıdır. Bu değer olarak Internet senaryoları uygulamayan intranet uygulamalar tarafından kullanılır. Bu uygulamalar genel olmayan test veya Internet stili saldırılarına karşı sıkı. Bu ayar yalnızca bağlantı yerel alınan trafik sınırlar.|  
+|Sınırsız|IP koruma düzeyi kısıtlanır. Bu değer yerleşik IPv6 NAT geçişi özelliklerini yararlanarak uygulamaları dahil olmak üzere Internet üzerinden çalışmak üzere tasarlanmış uygulamalar tarafından kullanılması halinde Windows (örneğin, Teredo). Bu uygulamalar, uygulamalar, açık bağlantı noktalarından yönlendirilmiş Internet saldırılarına karşı sıkı gerekir böylece IPv4 güvenlik duvarları, atlayabilir. Bir yuva IP koruma düzeyi için varsayılan değer, Windows Server 2008 R2 ve Windows Vista, kısıtlanır.|  
+|Belirtilmemiş|IP koruma düzeyi belirtilmemiş. Windows 7 ve Windows Server 2008 R2 üzerinde bir yuvada IP koruma düzeyi için varsayılan değer belirtilmemiş.|  
   
  İçin varsayılan değer `ipProtectionLevel` özniteliği **belirtilmemiş**.  
   
- <xref:System.Net.Configuration.SocketElement.IPProtectionLevel%2A> Özelliği, geçerli değerini almak için kullanılabilir `ipProtectionLevel` geçerli yapılandırma dosyalarını özniteliği.  
+ <xref:System.Net.Configuration.SocketElement.IPProtectionLevel%2A> Özelliği, geçerli değerini almak için kullanılabilir `ipProtectionLevel` geçerli yapılandırma dosyalarından özniteliği.  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
  Bu öğe, uygulama yapılandırma dosyası veya makine yapılandırma dosyası (Machine.config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, tamamlama bağlantı noktalarının kullanılacağını belirtin ve sonra gösterir varsayılan <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> Kısıtlanmamış olmalıdır.  
+ Aşağıdaki örnek nasıl tamamlama bağlantı noktalarının kullanılması gerektiğini belirtin ve bu gösterir. varsayılan <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> sınırsız olmalıdır.  
   
 ```xml  
 <configuration>  

@@ -3,11 +3,11 @@ title: SQL Server Kalıcılık veritabanı
 ms.date: 03/30/2017
 ms.assetid: 4e594eec-2a31-4d49-ad31-aca2ecbb1f69
 ms.openlocfilehash: 3929148cf6a236db7d226b45da750e8d4ae1d0cc
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47088262"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47195541"
 ---
 # <a name="sql-server-persistence-database"></a>SQL Server Kalıcılık veritabanı
 Bu bölümde, SQL iş akışı örneği Store tarafından desteklenen ortak veritabanı görünümleri hakkında ayrıntılar sağlar ve basit bir örnek veri özelliklerini seri durumdan çıkarılamıyor ve kalıcı olmayan örnekleri sorgulama gösterilmektedir.  

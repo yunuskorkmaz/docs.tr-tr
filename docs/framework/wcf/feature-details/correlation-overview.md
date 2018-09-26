@@ -2,12 +2,12 @@
 title: Bağıntı Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: edcc0315-5d26-44d6-a36d-ea554c418e9f
-ms.openlocfilehash: 8ac5d39866b23bc134f009fdb0df6ebf56c6d234
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 342fa1d89bc179b6dabb59f87d63170980992a06
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47113942"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47205401"
 ---
 # <a name="correlation-overview"></a>Bağıntı Genel Bakış
 Bağıntı birbirine veya uygulama örneği durumu, bir ilk isteğine yanıt veya belirli sipariş kimliği gibi iş akışı hizmeti iletilerini kalıcı bir sipariş işleme iş akışı durumuna ilişkin yönelik mekanizmadır. Bu konu, bağıntı genel bir bakış sağlar. Bu bölümdeki diğer konulara bağıntı her türüne ilişkin ek bilgiler sağlayın.  
@@ -20,10 +20,10 @@ Bağıntı birbirine veya uygulama örneği durumu, bir ilk isteğine yanıt vey
 ## <a name="protocol-based-correlation"></a>Protokolüne dayalı bağıntı  
  Protokolüne dayalı bağıntı birbirine ve uygun örneğini iletilerini ilişkilendirmek için bir aktarım mekanizması kullanır. İstek-yanıt bağıntısı ve içerik temelli bağıntı bazı sistem tarafından sağlanan protokol bağıntılar içerir. İstek-yanıt bağıntısı gibi çift yönlü bir işlem oluşturmak için ileti etkinlikleri tek bir çift ilişkilendirmek için kullanılan bir <xref:System.ServiceModel.Activities.Send> ile eşleştirilmiş bir <xref:System.ServiceModel.Activities.ReceiveReply>, veya bir <xref:System.ServiceModel.Activities.Receive> ile eşleştirilmiş bir <xref:System.ServiceModel.Activities.SendReply>. [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] İş akışı Tasarımcısı, hızlı bir şekilde bu deseni uygulamak için etkinlik şablonları kümesi de sağlar. Bağlam değişimi mekanizması açıklanan bağlam tabanlı bir bağıntı dayanır [.NET bağlam değişimi protokolü belirtimi](https://go.microsoft.com/fwlink/?LinkID=166059). Bir bağlam tabanlı gibi bağlama, içerik temelli bağıntı kullanılacak <xref:System.ServiceModel.BasicHttpContextBinding>, <xref:System.ServiceModel.WSHttpContextBinding> veya <xref:System.ServiceModel.NetTcpContextBinding> uç noktada kullanılmalıdır.  
   
- Protokol bağıntı hakkında daha fazla bilgi için bkz: [bağlam değişimi](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md), [dayanıklı çift yönlü](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md), ve [istek-yanıt](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md). Kullanma hakkında daha fazla bilgi için [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] iş akışı Tasarımcısı etkinlik şablonları [Mesajlaşma etkinlikleri](../../../../docs/framework/wcf/feature-details/messaging-activities.md). Örnek kod için bkz: [dayanıklı çift yönlü &#91;WF örnekleri&#93; ](../../../../docs/framework/windows-workflow-foundation/samples/durable-duplex.md) ve [NetContextExchangeCorrelation](https://msdn.microsoft.com/library/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf) örnekleri.  
+ Protokol bağıntı hakkında daha fazla bilgi için bkz: [dayanıklı çift yönlü](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md), ve [istek-yanıt](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md). Kullanma hakkında daha fazla bilgi için [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] iş akışı Tasarımcısı etkinlik şablonları [Mesajlaşma etkinlikleri](../../../../docs/framework/wcf/feature-details/messaging-activities.md). Örnek kod için bkz: [dayanıklı çift yönlü &#91;WF örnekleri&#93; ](../../../../docs/framework/windows-workflow-foundation/samples/durable-duplex.md) ve [NetContextExchangeCorrelation](https://msdn.microsoft.com/library/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf) örnekleri.  
   
 ## <a name="content-based-correlation"></a>İçerik temelli bağıntı  
- İçerik temelli bağıntı bilgi parçası için belirli bir örneğine ilişkilendirmek için iletide kullanır. Protokolüne dayalı bağıntı, ilgili her iletide bu verilerin bulunabileceği açıkça durumuna uygulama yazarı içerik temelli bağıntı gerektirir. İçerik temelli bağıntı kullanan etkinlikleri kullanarak bu ileti verilerini belirtin bir <xref:System.ServiceModel.MessageQuerySet>. İçerik temelli bağıntı, bağlam bağlamaları gibi birini kullanmayın Hizmetleri ile iletişim kurarken yararlıdır <xref:System.ServiceModel.BasicHttpContextBinding>. İçerik temelli bağıntı hakkında daha fazla bilgi için bkz: [içeriğe dayalı](../../../../docs/framework/wcf/feature-details/content-based-correlation.md). Örnek kod için bkz: [içerik temelli bağıntı](../../../../docs/framework/windows-workflow-foundation/samples/content-based-correlation.md) ve [bağıntılı hesaplayıcı](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md) örnekleri.  
+ İçerik temelli bağıntı bilgi parçası için belirli bir örneğine ilişkilendirmek için iletide kullanır. Protokolüne dayalı bağıntı, ilgili her iletide bu verilerin bulunabileceği açıkça durumuna uygulama yazarı içerik temelli bağıntı gerektirir. İçerik temelli bağıntı kullanan etkinlikleri kullanarak bu ileti verilerini belirtin bir <xref:System.ServiceModel.MessageQuerySet>. İçerik temelli bağıntı, bağlam bağlamaları gibi birini kullanmayın Hizmetleri ile iletişim kurarken yararlıdır <xref:System.ServiceModel.BasicHttpContextBinding>. Örnek kod için bkz: [içerik temelli bağıntı](../../../../docs/framework/windows-workflow-foundation/samples/content-based-correlation.md) ve [bağıntılı hesaplayıcı](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md) örnekleri.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [İçerik Temelli Bağıntı](../../../../docs/framework/windows-workflow-foundation/samples/content-based-correlation.md)  

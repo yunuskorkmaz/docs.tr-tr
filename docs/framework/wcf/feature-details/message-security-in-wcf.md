@@ -3,11 +3,11 @@ title: WCF'de İleti Güvenliği
 ms.date: 03/30/2017
 ms.assetid: a80efb59-591a-4a37-bb3c-8fffa6ca0b7d
 ms.openlocfilehash: 81d9acde3c8fab1860904074199066cca55c7186
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47113851"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47195257"
 ---
 # <a name="message-security-in-wcf"></a>WCF'de İleti Güvenliği
 Windows Communication Foundation (WCF) güvenlik sağlamak için iki ana modu vardır (`Transport` ve `Message`) ve üçüncü modu (`TransportWithMessageCredential`), iki birleştirir. Bu konu, ileti güvenliği ve nedenleri kullanılacağını açıklar.  

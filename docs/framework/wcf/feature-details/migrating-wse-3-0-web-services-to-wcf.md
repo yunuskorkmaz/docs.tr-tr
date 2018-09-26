@@ -3,11 +3,11 @@ title: WSE 3.0 Web Hizmetlerini WCF'ye Taşıma
 ms.date: 03/30/2017
 ms.assetid: 7bc5fff7-a2b2-4dbc-86cc-ecf73653dcdc
 ms.openlocfilehash: 21e36be178bb0dd0c52213d8c4c1387a564a0e5a
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47156636"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47197870"
 ---
 # <a name="migrating-wse-30-web-services-to-wcf"></a>WSE 3.0 Web Hizmetlerini WCF'ye Taşıma
 Gelişmiş performans ve Destek ek taşımaları, ek güvenlik senaryoları ve WS - geçirme WSE 3.0 Web Hizmetleri için Windows Communication Foundation (WCF) avantajlarını içerir * belirtimleri. WSE 3.0 uygulamasından WCF'ye geçirilen bir Web hizmeti, en fazla %200 %400 performans iyileştirmesi oluşabilir. WCF tarafından desteklenen aktarmalar hakkında daha fazla bilgi için bkz: [taşıma seçme](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). WCF tarafından desteklenen senaryolarla listesi için bkz. [ortak güvenlik senaryoları](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md). WCF tarafından desteklenen belirtimleri listesi için bkz. [Web Hizmetleri protokolleri birlikte çalışabilirlik Kılavuzu](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md).  

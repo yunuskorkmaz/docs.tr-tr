@@ -2,19 +2,19 @@
 title: Genişletilebilirlik
 ms.date: 03/30/2017
 ms.assetid: cd7ddffc-a261-44aa-bd50-33c1c74f0df0
-ms.openlocfilehash: 010d6d7b17d3cb39e19c23550ca3522d6ea73a21
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: af6bbb5ea703c83ec38b97fae5a6f4bd266479b3
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805388"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47196882"
 ---
 # <a name="extensibility"></a>Genişletilebilirlik
 Bu bölüm, özel genişletilebilirlik ve diğer özellikleri Windows Communication Foundation (WCF) örnekleri içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Kanal Genişletilebilirliği](../../../../docs/framework/wcf/samples/channels-extensibility.md)  
- Özel kanal gösterir.  
+ Özel kanallar gösterir.  
   
  [Bulma Genişletilebilirliği](../../../../docs/framework/wcf/samples/discovery-extensibility.md)  
  Özel bulma gösterir.  
@@ -23,7 +23,7 @@ Bu bölüm, özel genişletilebilirlik ve diğer özellikleri Windows Communicat
  Özel genişletilebilirlik gösterir.  
   
  [Birlikte Çalışabilirlik Genişletmesi](../../../../docs/framework/wcf/samples/interop-extensibility.md)  
- Özel birlikte çalışabilirlik gösterir.  
+ Özel birlikte çalışabilirliği gösterir.  
   
  [İleti Kodlayıcı Genişletilebilirliği](../../../../docs/framework/wcf/samples/message-encoder-extensibility.md)  
  Özel ileti kodlama gösterir.  
@@ -38,28 +38,25 @@ Bu bölüm, özel genişletilebilirlik ve diğer özellikleri Windows Communicat
  Özel dağıtım gösterir.  
   
  [Taşıma Genişletilebilirliği](../../../../docs/framework/wcf/samples/transport-extensibility.md)  
- Özel taşımaları gösterir.  
-  
- [Web Genişletilebilirliği](../../../../docs/framework/wcf/samples/web-extensibility.md)  
- Özel Web işlevini gösterir.  
+ Özel taşımalar gösterir.
   
  [İşlem Biçimlendirici ve İşlem Seçici](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md)  
  Özel ileti veri biçimleri genişletilebilirlik noktaları nasıl tüketebileceği gösterir.  
   
  [Özel İleti Filtresi](../../../../docs/framework/wcf/samples/custom-message-filter.md)  
- uç noktaları iletileri gönderme Windows Communication Foundation (WCF) kullanan ileti filtreleri değiştirmek gösterilmiştir.  
+ Windows Communication Foundation (WCF) iletilerini uç noktalarına dağıtmak için kullandığı ileti filtreleri nasıl değiştirileceğini gösterir.  
   
  [Özel Hizmet Konağı](../../../../docs/framework/wcf/samples/custom-service-host.md)  
- Özel bir türevi kullanımı gösterilmiştir <xref:System.ServiceModel.ServiceHost> hizmet çalışma zamanı davranışını değiştirmek için sınıf.  
+ Özel bir türevi kullanmayı gösteren <xref:System.ServiceModel.ServiceHost> hizmet çalışma zamanı davranışını değiştirmek için sınıf.  
   
  [DataContract Yedeği](../../../../docs/framework/wcf/samples/datacontract-surrogate.md)  
- Seri hale getirme ve seri durumdan çıkarma, şema verme ve şema alma veri sözleşmesi kullanılarak özelleştirilebilir gibi işlemleri sınıfı nasıl vekil gösterir.  
+ Serileştirme ve seri durumundan çıkarma, şema dışarı aktarma ve şema içeri aktarma veri anlaşması kullanılarak özelleştirilebilir gibi işlemleri sınıfı nasıl vekil gösterir.  
   
  [Hata İşleme ve Bildirme Denetimini Genişletme](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
- Hata işleme ve hata raporlama kullanarak bir WCF Hizmeti üzerinde denetim genişletmek gösterilmiştir <xref:System.ServiceModel.Dispatcher.IErrorHandler> arabirimi.  
+ Hata işleme ve hata raporlama kullanarak bir WCF Hizmeti üzerinde denetim genişletmek gösterilmektedir <xref:System.ServiceModel.Dispatcher.IErrorHandler> arabirimi.  
   
  [İleti Denetçileri](../../../../docs/framework/wcf/samples/message-inspectors.md)  
  Uygulama ve hizmet ve istemci ileti denetçileri yapılandırma gösterilmektedir.  
   
  [WebContentTypeMapper](../../../../docs/framework/wcf/samples/webcontenttypemapper-sample.md)  
- Yeni içerik türleri için WCF ileti gövdesi biçimleri eşlemek gösterilmiştir.
+ Yeni içerik türleri için WCF ileti gövdesi biçimleri eşlemeyle ilgili bilgi gösterir.

@@ -8,11 +8,11 @@ helpviewer_keywords:
 ms.assetid: 42055ee0-6d0c-443d-9d89-788dfc345d6d
 author: BrucePerlerMS
 ms.openlocfilehash: f26369a567e89fc502f777383c22e74b96fe503c
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47109517"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47198045"
 ---
 # <a name="security-considerations-in-wcf"></a>WCF'de Güvenlik Değerlendirmeleri
 Bu bölümdeki konularda, Windows Communication Foundation (WCF) bir uygulama tasarlanırken dikkate alınması gereken çeşitli güvenlikle ilgili öğeleri listelenir.  

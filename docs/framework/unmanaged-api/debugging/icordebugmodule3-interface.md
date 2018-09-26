@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 58bad617eb91b7e529ff3d95edd06a5c73feee64
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47111756"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47196830"
 ---
 # <a name="icordebugmodule3-interface"></a>ICorDebugModule3 Arabirimi
 Dinamik modül için simge okuyucu oluşturur.  

@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: e78ef8ab-4f63-4656-ab93-b1deab2666d5
 author: BrucePerlerMS
 ms.openlocfilehash: 1469e5b48fbbdcbb289e4ca3147145688e1669f4
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47082422"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47193924"
 ---
 # <a name="security-considerations-with-metadata"></a>Meta Veriler Hakkında Güvenlik Konuları
 Meta veri özelliklerini Windows Communication Foundation (WCF) kullanırken, yayımlama, alma ve hizmet meta verileri kullanarak güvenlikle ilgili etkileri göz önünde bulundurun.  

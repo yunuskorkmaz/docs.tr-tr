@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 86c94153-e48d-4539-b6cf-cd8060582e7f
 author: BrucePerlerMS
 ms.openlocfilehash: 7a52ac584abe766a7517436e697aff89333c9833
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47171432"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47198169"
 ---
 # <a name="transport-security"></a>Taşıma Güvenliği
 Seçili bağlamadaki aktarım güvenliği Windows Communication Foundation (WCF) bağlıdır. Bağlama uygulayan aktarım gerçek güvenlik mekanizması belirler. Bu bölümdeki konularda, uygulanan mekanizmaları ve seçeneklerini açıklar.  

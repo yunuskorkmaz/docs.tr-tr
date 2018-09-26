@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: a092d98c-444d-4336-a644-63c2e11e96c8
 author: BrucePerlerMS
 ms.openlocfilehash: f3de86e19d440a43f18b3a16ad4af749a476d1dd
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47157395"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47195908"
 ---
 # <a name="namespace-mapping-between-wif-35-and-wif-45"></a>WIF 3.5 ile WIF 4.5 arasında Namespace eşleme
 .NET 4.5 ile başlayarak, Windows Identity Foundation (WIF), tam olarak .NET Framework'e tümleştirilmiştir. Bu tümleştirme, ad değişiklikleri ve bazı birleştirilmesi WIF ad alanları ve API yüzeyi oluşturmuştur. Bu konu, rehberlik ve ad alanlarının WIF 3.5 ile WIF 4.5 ad alanları arasındaki genel bir eşleme sağlar. Kapsamlı, ancak yerine bazı tanıdık WIF 3.5 sınıflar WIF 4.5 içinde nerede bulunacağı hakkında genel bilgileri sağlamak için tasarlanmamıştır. WIF 3.5 ile WIF 4.5 arasındaki farklar hakkında daha ayrıntılı bilgi için bkz: [Windows Identity Foundation 4. 5'deki yenilikler](../../../docs/framework/security/whats-new-in-wif.md). WIF 3.5 to WIF 4.5 kullanılarak oluşturulan bir uygulama geçirme hakkında yönergeler için bkz. [WIF 4.5 için bir Application Built Using WIF 3.5 geçirme yönergeleri](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md).  

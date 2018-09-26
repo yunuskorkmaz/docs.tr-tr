@@ -5,11 +5,11 @@ ms.assetid: f0370e08-9fa6-4ee5-ab78-9a58a20a7da2
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 436c84c948a867acedf69af1bc7b3e78c308ce54
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47113036"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47193557"
 ---
 # <a name="peer-name-publication-and-resolution"></a>Eş adı yayını ve çözümleme
 ## <a name="publishing-a-peer-name"></a>Bir eş ad yayımlama  

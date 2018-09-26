@@ -4,68 +4,66 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - rounting [WCF], scenarios
 ms.assetid: ec22f308-665a-413e-9f94-7267cb665dab
-ms.openlocfilehash: 458b67de57be2bd0847ceccbc8a3aebd3b025f64
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 629f478e1a5a9ad21ce77943fdad098aa21de4a6
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496158"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47200457"
 ---
 # <a name="routing-scenarios"></a>Yönlendirme Senaryoları
-Yönlendirme hizmeti yüksek oranda özelleştirilebilir olsa da, verimli yönlendirme mantığı yeni bir yapılandırma sıfırdan oluştururken tasarlamak için bir sınama olabilir.  Ancak, çoğu yönlendirme hizmeti yapılandırması izleyin birçok yaygın senaryolar vardır. Bu senaryolar belirli yapılandırmanızı doğrudan geçerli olmayabilir, ancak bu senaryoları işlemek için yönlendirme hizmeti nasıl yapılandırılabilir anlama, yönlendirme hizmeti anlaşılmasına yardımcı olur.  
+Yönlendirme hizmeti yüksek oranda özelleştirilebilir olsa da, bunu yeni bir yapılandırma sıfırdan oluştururken, verimli yönlendirme mantığı tasarlamak için bir mücadele haline gelebilir.  Ancak, çoğu yönlendirme hizmeti yapılandırma izleyin birçok yaygın senaryo vardır. Bu senaryolar belirli yapılandırmanızı doğrudan geçerli değil. ancak, yönlendirme hizmeti bu senaryolar işlemek için nasıl yapılandırılabileceğini anlama, yönlendirme hizmeti anlaşılmasına yardımcı olur.  
   
 ## <a name="common-scenarios"></a>Yaygın senaryolar  
- En temel yönlendirme hizmeti için kullanılır istemci uygulamaları için kullanıma sunulan uç noktaların sayısını azaltmak için birden çok hedef uç nokta toplamak ve her iletinin doğru hedefine yönlendirmek için ileti filtreleri kullanın. Belirli bir hizmeti tarafından işlenen veya gerekir öncelik belirli bir kaynaktan iletilerinin işlenmesini sağlayarak gibi rasgele iş gereksinimlerini temel bir ileti türü gibi mantıksal veya fiziksel işleme gereksinimlerine göre iletileri yönlendirilebilir. Aşağıdaki tabloda bazı yaygın senaryolar ve bunlar karşılaştığında yer almaktadır:  
+ En temel kullanımı yönlendirme hizmeti, birden çok hedef uç noktaları için istemci uygulamaları kullanıma sunulan uç noktaların sayısını azaltmak için toplama ve ardından her ileti için doğru hedef yolu için ileti filtreleri kullanın. İletileri gereken belirli bir hizmeti tarafından işlenen veya belirli bir kaynaktan gelen iletileri öncelik işlenmesini sağlamak gibi rastgele işletme ihtiyaçlarını temel türden bir ileti gibi mantıksal veya fiziksel işleme gereksinimlerine göre yönlendirilebilir. Aşağıdaki tablo bazı yaygın senaryolar ve bunlar karşılaştığında listeler:  
   
 |Senaryo|Şu durumlarda kullanın|  
 |--------------|--------------|  
-|Hizmet sürümü oluşturma|Bir hizmet birden fazla sürümünü desteklemesi gerekir ya da güncelleştirilmiş bir hizmet gelecekte dağıtma|  
-|Hizmet verilerini bölümlendirme|Bir hizmet birden çok konak genelinde bölüm|  
+|Hizmet sürümü oluşturma|Bir hizmet birden çok sürümünü destekliyor olması veya güncelleştirilmiş bir hizmet gelecekte dağıtma|  
+|Hizmet verilerini bölümlendirme|Birden çok konak genelinde hizmet bölümleme|  
 |Dinamik güncelleştirme|Yönlendirme mantığı değişen hizmet dağıtımları işlemek için çalışma zamanında dinamik olarak yeniden yapılandırmanız gerekir|  
-|Çok noktaya yayın|Birden çok uç nokta için bir ileti göndermesi gerekir|  
-|Protokol köprü oluşturma|Bir aktarım protokolü üzerinden iletileri almasına ve farklı bir protokol için hedef uç nokta kullanır|  
-|Hata İşleme|Ağ kesintileri ve iletişim hatası esnekliği sağlamanız gerekir|  
+|Çok noktaya yayın|Birden fazla uç nokta için bir ileti gönderin|  
+|Bağlantı protokolü|Bir aktarım protokolü üzerinden ileti alma ve farklı bir protokol hedef uç nokta kullanır|  
+|Hata İşleme|Ağ kesintilerine ve iletişim hatalarına dayanıklılık sağlamanız gerekir|  
   
 > [!NOTE]
->  Çalışma zamanında yönlendirme mantığı değiştirmenize izin sunulan senaryoları belirli iş ihtiyaçlarınızı karşılamak için özgü ya da işleme gereksinimlerini, dinamik güncelleştirmeleri destekleyecek şekilde planlama ve hata işleme kullanan genellikle için en iyi yöntemler değerlendirilmesi ve geçici ağ ve iletişim hatalarından kurtarın.  
+>  Çalışma zamanında yönlendirme mantığı değiştirmenize izin sunulan senaryoların çoğunun belirli iş ihtiyaçlarınızı karşılamak için belirli ya da işleme gereksinimlerine, dinamik güncelleştirmeleri desteklemek planlama ve hata işleme yararlanarak olabilir, genellikle en iyi yöntemler göz önünde bulundurulması ve geçici ağ ve iletişimi hatalardan kurtarın.  
   
 ### <a name="service-versioning"></a>Hizmet Sürümü Oluşturma  
- Tüm istemcilerin yeni hizmet geçti kadar bir hizmetin yeni bir sürümü uygulandığında, önceki sürüm genellikle bulundurmanız gerekir. Gün, hafta veya ay bile tamamlanması için gereken bir uzun süre çalışan işlemin hizmete ise, bu özellikle önemlidir. Genellikle bu yeni hizmet için yeni bir uç nokta adresi özgün uç nokta önceki sürümü için korurken uygulama gerektirir.  
+ Tüm istemcilerin yeni hizmete geçirileceğini kadar bir hizmetin yeni bir sürüm ile tanışın, önceki sürümü genellikle sürdürmeniz gerekir. Günler, haftalar veya aylar bile tamamlamak için gereken bir uzun süre çalışan işlem hizmeti ise, bu özellikle önemlidir. Genellikle bu yeni hizmet için yeni bir uç nokta adresi önceki sürümü için özgün uç nokta korurken uygulama gerektirir.  
   
- Yönlendirme hizmeti kullanarak, istemci uygulamalarından iletileri almasına ve ileti içeriğine göre doğru hizmet sürümüne her ileti yönlendirmek için bir uç nokta getirebilir. En temel uygulaması tarafından işlenmek üzere iletisidir hizmetinin sürümü bildiren ileti için bir özel üst bilgi eklenmesi gerektirir. Yönlendirme hizmeti XPathMessageFilter her ileti için özel üstbilgi varlığını inceleyin ve uygun hedef uç noktasına ileti yönlendirmek için kullanabilirsiniz.  
+ Yönlendirme hizmetini kullanarak, istemci uygulamalarından iletileri almak ve ardından her ileti, ileti içeriğine göre doğru hizmet sürümüne yönlendirmek için bir uç nokta üzerinden kullanıma sunabilirsiniz. En temel uygulama tarafından işlenmek üzere iletidir hizmetinin sürümü belirten ileti bir özel üst bilgi eklemeyi içerir. Yönlendirme hizmeti, her ileti için özel üst bilgi varlığını denetlemek ve uygun hedef uç noktasına ileti yönlendirme XPathMessageFilter kullanabilirsiniz.  
   
- Bir hizmet sürümü oluşturma yapılandırması oluşturmak için kullanılan adımlar için bkz: [nasıl yapılır: Hizmet sürümü oluşturma](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md). Özel bir üstbilgisi temelinde iletileri yönlendirmek için XPathMessageFilter kullanma örneği için bkz: [Gelişmiş filtreler](../../../../docs/framework/wcf/samples/advanced-filters.md) örnek.  
+ Bir hizmeti sürüm yapılandırması oluşturmak için kullanılan adımları için bkz [nasıl yapılır: Hizmet sürümü oluşturma](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).
   
 ### <a name="service-data-partitioning"></a>Hizmet verilerini bölümlendirme  
- Dağıtılmış bir ortama tasarlarken, genellikle yüksek kullanılabilirlik sağlamak için tek tek bilgisayarlarda işleme yükünü azaltmak için veya belirli bir alt için ayrılmış kaynakları sağlamak için işleme yükünü birden fazla bilgisayara yaymak için tercih edilir iletileri. Yönlendirme hizmeti adanmış bir yük dengeleme çözümü değiştirmez, ancak içerik tabanlı yönlendirme gerçekleştirme yeteneğini belirli hedeflere aksi benzer iletileri yönlendirmek için kullanılabilir. Örneğin, ayrı ayrı diğer istemcilerinden alınan iletilerin belirli bir istemciden gelen iletilerini işlemek için gerekli olabilir.  
+ Dağıtılmış bir ortama tasarlarken, genellikle yüksek kullanılabilirlik sağlamak için tek tek bilgisayarlarda işleme yükünü azaltın ya da belirli bir alt kümesi için ayrılmış kaynak sağlamak için işleme yükünü birden fazla bilgisayara yaymak için tercih edilir iletileri. Yönlendirme hizmeti, bir adanmış yük dengeleme çözümü değiştirmez, ancak içerik tabanlı yönlendirme gerçekleştirme becerisi, belirli hedeflere aksi benzer iletileri yönlendirmek için kullanılabilir. Örneğin, ayrı olarak diğer istemcilerden alınan iletileri belirli bir istemciden iletilerini işlemek için bir gereksinim olabilir.  
   
- Yapılandırma bölümleme hizmet verileri oluşturmak için kullanılan adımlar için bkz: [nasıl yapılır: hizmet verilerini bölümlendirme](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md). URL ve özel üstbilgi göre bölüm verileri filtrelerini kullanma örneği için bkz: [Gelişmiş filtreler](../../../../docs/framework/wcf/samples/advanced-filters.md) örnek.  
+ Yapılandırma bölümleme verileri bir hizmet oluşturmak için kullanılan adımları için bkz [nasıl yapılır: hizmet verilerini bölümlendirme](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md).  
   
 ### <a name="dynamic-routing"></a>Dinamik yönlendirme  
- Genellikle bir rota filtre yönlendirir belirli bir ileti yönlendirme ölçütlerini değiştirmek veya hedef uç nokta değiştirme hizmetinin daha yeni bir sürüme ekleme gibi değişen iş gereksinimlerini karşılamak için yönlendirme yapılandırmasını değiştirmek için tercih edilir. Yönlendirme hizmeti aracılığıyla bunu sayesinde <xref:System.ServiceModel.Routing.RoutingExtension>, çalışma zamanı sırasında yeni bir RoutingConfiguration sağlamak sağlar. Yeni yapılandırma hemen etkili olur, ancak yalnızca yönlendirme hizmeti tarafından işlenen tüm yeni oturumlar etkiler.  
+ Genellikle bir yol filtresi yönlendirir, belirli bir ileti yönlendirme ölçütlerini değiştirmek ya da hedef bitiş noktasını değiştirerek bir hizmeti daha yeni bir sürümüne ekleme gibi değişen iş gereksinimlerini karşılamak için yönlendirme yapılandırmasını değiştirmek için tercih edilir. Yönlendirme hizmeti aracılığıyla bunu sağlar <xref:System.ServiceModel.Routing.RoutingExtension>, çalışma zamanı sırasında yeni bir RoutingConfiguration sağlamak sağlar. Yeni yapılandırma hemen etkili olur, ancak yalnızca yönlendirme hizmeti tarafından işlenen tüm yeni oturumlar etkiler.  
   
- Dinamik yönlendirme uygulamak için kullanılan adımlar için bkz: [nasıl yapılır: dinamik güncelleştirme](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md). Dinamik yönlendirme kullanmanın bir örnek için bkz [dinamik yeniden yapılandırma](../../../../docs/framework/wcf/samples/dynamic-reconfiguration.md) örnek.  
+ Dinamik yönlendirme uygulamak için kullanılan adımları için bkz. [nasıl yapılır: dinamik güncelleştirme](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md).
   
 ### <a name="multicast"></a>Çok noktaya yayın  
- Genellikle iletilerin yönlendirme, belirli bir hedef uç noktasına her ileti yönlendirme.  Ancak, bazen iletinin bir kopyasını birden çok hedef Uç noktalara yönlendirmek gerekebilir. Çok noktaya yayın yönlendirme gerçekleştirmek için aşağıdaki koşulların doğru olması gerekir:  
+ Genellikle ileti yönlendirme, belirli bir hedef uç noktasına her ileti yönlendirme.  Bununla birlikte, iletinin bir kopyasını birden çok hedef Uç noktalara yönlendirmek zaman zaman gerekebilir. Çok noktaya yayın yönlendirme gerçekleştirmek için aşağıdaki koşulların doğru olması gerekir:  
   
--   (Ancak tek yönlü veya çift yönlü olabilir) istek-yanıt yalnızca bir yanıt isteğine yanıt olarak istemci uygulaması tarafından alınabilir olması zorunlu tutulmuştur çünkü kanal şekli istek-yanıt olması gerekir.  
+-   (Bu tek yönlü veya çift yönlü olabilir, ancak) kanal şekli yalnızca bir yanıt isteğine yanıt olarak istemci uygulaması tarafından alınan, istek-yanıt taahhütlerin olduğundan istek-yanıt olmamalıdır.  
   
 -   Birden çok filtre döndürmelidir **true** ileti değerlendirirken.  
   
- Bu koşullar karşılanıyorsa true değerini döndürür bir filtre ile ilişkili her hedef uç nokta iletinin kopyasını alır.  
+ Bu koşullar karşılanıyorsa true döndüren bir filtre ile ilişkili her bir hedef uç noktasının iletinin bir kopyasını alır.  
   
-### <a name="protocol-bridging"></a>Protokol köprü oluşturma  
- İletileri farklı SOAP protokolleri arasında yönlendirme, yönlendirme hizmeti WCF API'leri ileti bir protokolünden dönüştürmek için kullanır. Bu, otomatik olarak zaman Hizmeti uç iletileri yönlendirilir istemci uç daha farklı bir protokol yönlendirme hizmeti kullanımına sunulan oluşur. Kullanılan protokoller standart değilse bu davranışı devre dışı bırakmak mümkündür; Ancak, daha sonra kendi kod köprüleme sağlamanız gerekir.  
-  
- biçimindeki telefon numarasıdır. Protokolleri arasında iletileri çevirmek için yönlendirme hizmeti kullanarak bir örnek için bkz: [köprü oluşturma ve hata işleme](../../../../docs/framework/wcf/samples/bridging-and-error-handling.md) örnek.  
+### <a name="protocol-bridging"></a>Bağlantı protokolü  
+ Benzer olmayan SOAP protokollerini arasında iletileri yönlendirme, yönlendirme hizmeti ileti bir protokolden dönüştürmek için WCF API'lerini kullanır. Hizmet uç noktalarına yönlendirme hizmetini kullanarak iletileri yönlendirilir istemci uç noktalarına değerinden farklı bir protokol ne zaman kullanıma otomatik olarak gerçekleşir. Standart protokoller kullanımda değilse, bu davranışı devre dışı bırakmak mümkündür; Ancak, ardından kendi kod köprüleme sağlamalısınız.
   
 ### <a name="error-handling"></a>Hata İşleme  
- Dağıtılmış bir ortamda, geçici ağ ya da iletişim hatalarıyla karşılaşırsanız sık karşılaşılan bir durum değil. Yönlendirme hizmeti gibi bir aracı hizmeti olmadan istemci uygulaması gibi hatalarını işleme yükünü döner. İstemci uygulaması ağ veya iletişim hatası ve alternatif konumlar bilgisi durumunda yeniden denemek için belirli mantığı içermiyorsa, kullanıcı başarıyla önce burada bir ileti birden çok kez gönderilmelidir senaryoları karşılaşabilirsiniz Hedef hizmeti tarafından işlenen. Olarak güvenilmeyen algılanabilir gibi bu uygulama müşteri memnuniyetsizlik neden olabilir.  
+ Dağıtılmış bir ortamda geçici ağ ya da iletişim hatalarıyla karşılaşırsanız sık karşılaşılan bir durum değil. Yönlendirme hizmeti gibi bir aracı hizmeti olmadan da bu tür hataları işleme yükünü istemci uygulamasında döner. İstemci uygulaması belirli mantıksal ağ veya iletişim hatası ve alternatif konum bilgisine olması durumunda yeniden deneyecek şekilde içermiyorsa, kullanıcı başarıyla önce burada bir ileti birden çok kez gönderilmelidir durumlarla karşılaşabilirsiniz Hedef hizmet tarafından işlenir. Güvenilir olarak algılanabilir olarak bu uygulama ile müşteri memnuniyetsizliğine neden olabilir.  
   
- Bu senaryo için ağ veya iletişim ile ilgili hataları karşılaşmanız iletileri işleme özellikleri sağlam hata sağlayarak sorunu gidermek yönlendirme hizmeti çalışır. Olası hedef uç noktaları listesi oluşturma ve bu listede her ileti Filtresi ile ilişkilendirme tek tek olası hedef sağlayarak sonucunda oluşan hata noktası kaldırın. Bir arıza olması durumunda, yönlendirme hizmeti iletişimi olmayan hatası oluştuğunda, ileti taşınana veya tüm uç noktaları tüketmiş kadar sonraki uç listesinde ileti teslim dener.  
+ Yönlendirme hizmeti sağlam hata işleme özellikleri için ağ veya iletişim ile ilgili hataları karşılaşmanız iletileri sağlayarak bu senaryoyu çözmek çalışır. Olası hedef uç noktaları listesi oluşturma ve bu liste her ileti Filtresi ile ilişkilendirerek, tek tek bir olası hedef sağlayarak sonucunda hata noktasını kaldırın. Bir hata olması durumunda, yönlendirme hizmeti, tüm uç noktalar tüketmiş ya da olmayan bir iletişim hatası oluştuğunda hata, ileti taşınana kadar listedeki sonraki uç nokta için ileti teslim dener.  
   
- Hata işleme yapılandırmak için kullanılan adımlar için bkz: [nasıl yapılır: hata işleme](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md). Hata işleme uygulama örneği için bkz: [köprü oluşturma ve hata işleme](../../../../docs/framework/wcf/samples/bridging-and-error-handling.md) ve [Gelişmiş hata işleme](../../../../docs/framework/wcf/samples/advanced-error-handling.md) örnekleri.  
+ Hata işleme yapılandırmak için kullanılan adımları için bkz. [nasıl yapılır: hata işleme](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md).
   
 ### <a name="in-this-section"></a>Bu Bölümde  
  [Nasıl yapılır: Hizmet Sürümü Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  

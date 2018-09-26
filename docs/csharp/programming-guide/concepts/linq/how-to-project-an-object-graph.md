@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: Proje bir nesne grafiğinin (C#)'
 ms.date: 07/20/2015
 ms.assetid: 293d15d5-3eaf-48de-9a02-3e13cb117b5b
 ms.openlocfilehash: f8e15e80a6914a8dcb848d91a13958f7e4175342
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47172605"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47196089"
 ---
 # <a name="how-to-project-an-object-graph-c"></a>Nasıl yapılır: Proje bir nesne grafiğinin (C#)
 Bu konuda, proje veya doldurmak, bir nesne grafiğinin XML gösterilmektedir.  
