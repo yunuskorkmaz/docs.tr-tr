@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: bir uygulama için bir konum temelli önbellek İlkesi ayarlama'
+title: 'Nasıl yapılır: uygulama için bir konum temelli önbellek İlkesi ayarlama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,26 +13,25 @@ helpviewer_keywords:
 ms.assetid: 683bb88e-3411-4f46-9686-3411b6ba511c
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 50312578e9900f65fb2378de5201888fa5d77a8c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 61eb598ff2ca228e76b2a3633fe4d2bf37f2a476
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395238"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47079373"
 ---
-# <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a><span data-ttu-id="d9fca-102">Nasıl yapılır: bir uygulama için bir konum temelli önbellek İlkesi ayarlama</span><span class="sxs-lookup"><span data-stu-id="d9fca-102">How to: Set a Location-Based Cache Policy for an Application</span></span>
-<span data-ttu-id="d9fca-103">Konum temelli önbellek ilkeleri açıkça istenen kaynak konumunu temelinde önbelleğe alma davranışını tanımlamak bir uygulama sağlar.</span><span class="sxs-lookup"><span data-stu-id="d9fca-103">Location-based cache policies allow an application to explicitly define caching behavior based on the location of the requested resource.</span></span> <span data-ttu-id="d9fca-104">Bu konuda, önbellek ilkesini programlı olarak ayarlama gösterilir.</span><span class="sxs-lookup"><span data-stu-id="d9fca-104">This topic demonstrates setting the cache policy programmatically.</span></span> <span data-ttu-id="d9fca-105">Yapılandırma dosyalarını kullanarak bir uygulama için ilke ayarlama hakkında daha fazla bilgi için bkz: [ \<requestCaching > öğesi (ağ ayarları)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md).</span><span class="sxs-lookup"><span data-stu-id="d9fca-105">For information on setting the policy for an application using the configuration files, see [\<requestCaching> Element (Network Settings)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md).</span></span>  
+# <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a><span data-ttu-id="09a1a-102">Nasıl yapılır: uygulama için bir konum temelli önbellek İlkesi ayarlama</span><span class="sxs-lookup"><span data-stu-id="09a1a-102">How to: Set a Location-Based Cache Policy for an Application</span></span>
+<span data-ttu-id="09a1a-103">Konum temelli önbellek ilkeleri açıkça istenen kaynak konumunu temel alarak önbelleğe alma davranışını tanımlamak bir uygulama sağlar.</span><span class="sxs-lookup"><span data-stu-id="09a1a-103">Location-based cache policies allow an application to explicitly define caching behavior based on the location of the requested resource.</span></span> <span data-ttu-id="09a1a-104">Bu konuda önbellek ilkesini programlı olarak ayarlama gösterilir.</span><span class="sxs-lookup"><span data-stu-id="09a1a-104">This topic demonstrates setting the cache policy programmatically.</span></span> <span data-ttu-id="09a1a-105">Yapılandırma dosyalarını kullanarak bir uygulama için bir ilke ayarlama hakkında daha fazla bilgi için bkz. [ \<requestCaching > öğesi (ağ ayarları)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md).</span><span class="sxs-lookup"><span data-stu-id="09a1a-105">For information on setting the policy for an application using the configuration files, see [\<requestCaching> Element (Network Settings)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md).</span></span>  
   
-### <a name="to-set-a-location-based-cache-policy-for-an-application"></a><span data-ttu-id="d9fca-106">Bir uygulama için bir konum temelli önbellek ilkesini ayarlamak için</span><span class="sxs-lookup"><span data-stu-id="d9fca-106">To set a location-based cache policy for an application</span></span>  
+### <a name="to-set-a-location-based-cache-policy-for-an-application"></a><span data-ttu-id="09a1a-106">Bir uygulama için bir konum temelli önbellek İlkesi ayarlama</span><span class="sxs-lookup"><span data-stu-id="09a1a-106">To set a location-based cache policy for an application</span></span>  
   
-1.  <span data-ttu-id="d9fca-107">Oluşturma bir <xref:System.Net.Cache.RequestCachePolicy> veya <xref:System.Net.Cache.HttpRequestCachePolicy> nesnesi.</span><span class="sxs-lookup"><span data-stu-id="d9fca-107">Create a <xref:System.Net.Cache.RequestCachePolicy> or <xref:System.Net.Cache.HttpRequestCachePolicy> object.</span></span>  
+1.  <span data-ttu-id="09a1a-107">Oluşturma bir <xref:System.Net.Cache.RequestCachePolicy> veya <xref:System.Net.Cache.HttpRequestCachePolicy> nesne.</span><span class="sxs-lookup"><span data-stu-id="09a1a-107">Create a <xref:System.Net.Cache.RequestCachePolicy> or <xref:System.Net.Cache.HttpRequestCachePolicy> object.</span></span>  
   
-2.  <span data-ttu-id="d9fca-108">Uygulama etki alanı için varsayılan olarak ilkesi ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="d9fca-108">Set the policy object as the default for the application domain.</span></span>  
+2.  <span data-ttu-id="09a1a-108">Uygulama etki alanı için varsayılan olarak ilkesi ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="09a1a-108">Set the policy object as the default for the application domain.</span></span>  
   
-### <a name="to-set-a-policy-that-takes-requested-resources-from-a-cache"></a><span data-ttu-id="d9fca-109">İstenen kaynaklar bir önbellekten alır ilkesini ayarlamak için</span><span class="sxs-lookup"><span data-stu-id="d9fca-109">To set a policy that takes requested resources from a cache</span></span>  
+### <a name="to-set-a-policy-that-takes-requested-resources-from-a-cache"></a><span data-ttu-id="09a1a-109">Bir önbellekten istenen kaynaklara götüren bir ilke ayarlamak için</span><span class="sxs-lookup"><span data-stu-id="09a1a-109">To set a policy that takes requested resources from a cache</span></span>  
   
--   <span data-ttu-id="d9fca-110">İstenen kaynaklar kullanılabiliyorsa bir önbellekten alır ve aksi durumda, önbelleği düzeyini ayarlayarak istekleri sunucuya gönderir bir ilke oluşturmak <xref:System.Net.Cache.HttpRequestCacheLevel.CacheIfAvailable>.</span><span class="sxs-lookup"><span data-stu-id="d9fca-110">Create a policy that takes requested resources from a cache if available, and otherwise, sends requests to the server, by setting the cache level to <xref:System.Net.Cache.HttpRequestCacheLevel.CacheIfAvailable>.</span></span> <span data-ttu-id="d9fca-111">Uzak önbellekleri da dahil, sunucu ve istemci arasındaki tüm önbelleği tarafından bir istek yerine getirilmesi.</span><span class="sxs-lookup"><span data-stu-id="d9fca-111">A request can be fulfilled by any cache between the client and server, including remote caches.</span></span>  
+-   <span data-ttu-id="09a1a-110">Bir önbellekten kullanılabilir durumdaysa istenen kaynakları alır ve aksi takdirde, önbelleği düzeyini ayarlayarak istekleri sunucuya gönderir, bir ilke oluşturmak <xref:System.Net.Cache.HttpRequestCacheLevel.CacheIfAvailable>.</span><span class="sxs-lookup"><span data-stu-id="09a1a-110">Create a policy that takes requested resources from a cache if available, and otherwise, sends requests to the server, by setting the cache level to <xref:System.Net.Cache.HttpRequestCacheLevel.CacheIfAvailable>.</span></span> <span data-ttu-id="09a1a-111">Bir istek istemci ve uzak önbellekler dahil sunucusu arasındaki tüm önbelleği tarafından getirilmesi.</span><span class="sxs-lookup"><span data-stu-id="09a1a-111">A request can be fulfilled by any cache between the client and server, including remote caches.</span></span>  
   
     ```csharp  
     public static void UseCacheIfAvailable()  
@@ -51,9 +50,9 @@ ms.locfileid: "33395238"
     End Sub  
     ```  
   
-### <a name="to-set-a-policy-that-prevents-any-cache-from-supplying-resources"></a><span data-ttu-id="d9fca-112">Kaynak sağlama tüm önbellek önleyen bir ilke ayarlamak için</span><span class="sxs-lookup"><span data-stu-id="d9fca-112">To set a policy that prevents any cache from supplying resources</span></span>  
+### <a name="to-set-a-policy-that-prevents-any-cache-from-supplying-resources"></a><span data-ttu-id="09a1a-112">Tüm önbelleği kaynakları sağlama dan engelleyen bir ilke ayarlamak için</span><span class="sxs-lookup"><span data-stu-id="09a1a-112">To set a policy that prevents any cache from supplying resources</span></span>  
   
--   <span data-ttu-id="d9fca-113">Önbelleği düzeyini ayarlayarak istenen kaynaklar sağladığını herhangi önbellek engelleyen bir ilke oluşturmak <xref:System.Net.Cache.HttpRequestCacheLevel.NoCacheNoStore>.</span><span class="sxs-lookup"><span data-stu-id="d9fca-113">Create a policy that prevents any cache from supplying requested resources by setting the cache level to <xref:System.Net.Cache.HttpRequestCacheLevel.NoCacheNoStore>.</span></span> <span data-ttu-id="d9fca-114">Bu ilke düzeyi varsa ve bunlar da kaynak kaldırmalısınız uzak önbellekleri gösterir kaynak yerel önbellekten kaldırır.</span><span class="sxs-lookup"><span data-stu-id="d9fca-114">This policy level removes the resource from the local cache if it is present and indicates to remote caches that they should also remove the resource.</span></span>  
+-   <span data-ttu-id="09a1a-113">Önbelleği düzeyini ayarlayarak istenen kaynaklara sağladığı tüm önbelleği önleyen bir ilke oluşturmak <xref:System.Net.Cache.HttpRequestCacheLevel.NoCacheNoStore>.</span><span class="sxs-lookup"><span data-stu-id="09a1a-113">Create a policy that prevents any cache from supplying requested resources by setting the cache level to <xref:System.Net.Cache.HttpRequestCacheLevel.NoCacheNoStore>.</span></span> <span data-ttu-id="09a1a-114">Varsa ve bunlar da kaynak kaldırmalısınız uzak önbelleklere gösterir. Bu ilke düzeyi kaynak yerel önbellekten kaldırır.</span><span class="sxs-lookup"><span data-stu-id="09a1a-114">This policy level removes the resource from the local cache if it is present and indicates to remote caches that they should also remove the resource.</span></span>  
   
     ```csharp  
     public static void DoNotUseCache()  
@@ -72,9 +71,9 @@ ms.locfileid: "33395238"
     End Sub  
     ```  
   
-### <a name="to-set-a-policy-that-returns-requested-resources-only-if-they-are-in-the-local-cache"></a><span data-ttu-id="d9fca-115">İstenen kaynaklar yalnızca yerel önbellekte varsa döndüren bir ilkesini ayarlamak için</span><span class="sxs-lookup"><span data-stu-id="d9fca-115">To set a policy that returns requested resources only if they are in the local cache</span></span>  
+### <a name="to-set-a-policy-that-returns-requested-resources-only-if-they-are-in-the-local-cache"></a><span data-ttu-id="09a1a-115">İstenen kaynaklara yalnızca yerel önbellek üzerinde olduklarında döndüren bir ilke ayarlamak için</span><span class="sxs-lookup"><span data-stu-id="09a1a-115">To set a policy that returns requested resources only if they are in the local cache</span></span>  
   
--   <span data-ttu-id="d9fca-116">İstenen kaynaklar yalnızca yerel önbellekteki önbelleği düzeyini ayarlayarak olmaları durumunda döndüren bir ilke oluşturmak <xref:System.Net.Cache.HttpRequestCacheLevel.CacheOnly>.</span><span class="sxs-lookup"><span data-stu-id="d9fca-116">Create a policy that returns requested resources only if they are in the local cache by setting the cache level to <xref:System.Net.Cache.HttpRequestCacheLevel.CacheOnly>.</span></span> <span data-ttu-id="d9fca-117">İstenen kaynak önbelleğinde değilse, bir <xref:System.Net.WebException> özel durumu oluşur.</span><span class="sxs-lookup"><span data-stu-id="d9fca-117">If the requested resource is not in the cache, a <xref:System.Net.WebException> exception is thrown.</span></span>  
+-   <span data-ttu-id="09a1a-116">İstenen kaynaklara yalnızca yerel önbellek üzerinde önbelleği düzeyini ayarlayarak olmaları durumunda döndüren bir ilke oluşturmak <xref:System.Net.Cache.HttpRequestCacheLevel.CacheOnly>.</span><span class="sxs-lookup"><span data-stu-id="09a1a-116">Create a policy that returns requested resources only if they are in the local cache by setting the cache level to <xref:System.Net.Cache.HttpRequestCacheLevel.CacheOnly>.</span></span> <span data-ttu-id="09a1a-117">İstenen kaynak önbellekte değilse bir <xref:System.Net.WebException> özel durumu oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="09a1a-117">If the requested resource is not in the cache, a <xref:System.Net.WebException> exception is thrown.</span></span>  
   
     ```csharp  
     public static void OnlyUseCache()  
@@ -93,9 +92,9 @@ ms.locfileid: "33395238"
     End Sub  
     ```  
   
-### <a name="to-set-a-policy-that-prevents-the-local-cache-from-supplying-resources"></a><span data-ttu-id="d9fca-118">Yerel önbelleğe kaynakları sağladığını önleyen bir ilke ayarlamak için</span><span class="sxs-lookup"><span data-stu-id="d9fca-118">To set a policy that prevents the local cache from supplying resources</span></span>  
+### <a name="to-set-a-policy-that-prevents-the-local-cache-from-supplying-resources"></a><span data-ttu-id="09a1a-118">Yerel önbellek kaynakları sağlama dan engelleyen bir ilke ayarlamak için</span><span class="sxs-lookup"><span data-stu-id="09a1a-118">To set a policy that prevents the local cache from supplying resources</span></span>  
   
--   <span data-ttu-id="d9fca-119">Önbelleği düzeyini ayarlayarak istenen kaynaklar sağladığını yerel önbelleği engelleyen bir ilke oluşturmak <xref:System.Net.Cache.HttpRequestCacheLevel.Refresh>.</span><span class="sxs-lookup"><span data-stu-id="d9fca-119">Create a policy that prevents the local cache from supplying requested resources by setting the cache level to <xref:System.Net.Cache.HttpRequestCacheLevel.Refresh>.</span></span> <span data-ttu-id="d9fca-120">İstenen kaynak Ara cache içinde olduğundan ve başarıyla yeniden doğrulanır, Ara önbelleği istenen kaynak sağlayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="d9fca-120">If the requested resource is in an intermediate cache and is successfully revalidated, the intermediate cache can supply the requested resource.</span></span>  
+-   <span data-ttu-id="09a1a-119">Yerel önbellek, önbellek düzeyini ayarlayarak istenen kaynaklara sağlama önleyen bir ilke oluşturmak <xref:System.Net.Cache.HttpRequestCacheLevel.Refresh>.</span><span class="sxs-lookup"><span data-stu-id="09a1a-119">Create a policy that prevents the local cache from supplying requested resources by setting the cache level to <xref:System.Net.Cache.HttpRequestCacheLevel.Refresh>.</span></span> <span data-ttu-id="09a1a-120">İstenen kaynak Ara bir önbellekte ve başarıyla yeniden doğrulanır, istenen kaynak Ara önbellek sağlayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="09a1a-120">If the requested resource is in an intermediate cache and is successfully revalidated, the intermediate cache can supply the requested resource.</span></span>  
   
     ```csharp  
     public static void DoNotUseLocalCache()  
@@ -114,9 +113,9 @@ ms.locfileid: "33395238"
     End Sub  
     ```  
   
-### <a name="to-set-a-policy-that-prevents-any-cache-from-supplying-requested-resources"></a><span data-ttu-id="d9fca-121">İstenen kaynakları sağladığını gelen tüm önbellek önleyen bir ilke ayarlayın</span><span class="sxs-lookup"><span data-stu-id="d9fca-121">To set a policy that prevents any cache from supplying requested resources</span></span>  
+### <a name="to-set-a-policy-that-prevents-any-cache-from-supplying-requested-resources"></a><span data-ttu-id="09a1a-121">Kaynaklar istenen tüm önbelleği sağlayarak dan engelleyen bir ilke ayarlama</span><span class="sxs-lookup"><span data-stu-id="09a1a-121">To set a policy that prevents any cache from supplying requested resources</span></span>  
   
--   <span data-ttu-id="d9fca-122">Önbelleği düzeyini ayarlayarak istenen kaynaklar sağladığını herhangi önbellek engelleyen bir ilke oluşturmak <xref:System.Net.Cache.HttpRequestCacheLevel.Reload>.</span><span class="sxs-lookup"><span data-stu-id="d9fca-122">Create a policy that prevents any cache from supplying requested resources by setting the cache level to <xref:System.Net.Cache.HttpRequestCacheLevel.Reload>.</span></span> <span data-ttu-id="d9fca-123">Sunucu tarafından döndürülen kaynak önbellekte depolanabilir.</span><span class="sxs-lookup"><span data-stu-id="d9fca-123">The resource returned by the server can be stored in the cache.</span></span>  
+-   <span data-ttu-id="09a1a-122">Önbelleği düzeyini ayarlayarak istenen kaynaklara sağladığı tüm önbelleği önleyen bir ilke oluşturmak <xref:System.Net.Cache.HttpRequestCacheLevel.Reload>.</span><span class="sxs-lookup"><span data-stu-id="09a1a-122">Create a policy that prevents any cache from supplying requested resources by setting the cache level to <xref:System.Net.Cache.HttpRequestCacheLevel.Reload>.</span></span> <span data-ttu-id="09a1a-123">Sunucu tarafından döndürülen kaynak önbellekte depolanabilir.</span><span class="sxs-lookup"><span data-stu-id="09a1a-123">The resource returned by the server can be stored in the cache.</span></span>  
   
     ```csharp  
     public static void SendToServer()  
@@ -135,9 +134,9 @@ ms.locfileid: "33395238"
     End Sub  
     ```  
   
-### <a name="to-set-a-policy-that-allows-any-cache-to-supply-requested-resources-if-the-resource-on-the-server-is-not-newer-than-the-cached-copy"></a><span data-ttu-id="d9fca-124">Kaynak sunucuda önbelleğe alınmış kopyadan yeni değilse, istenen kaynak sağlamak bir önbellek izin veren bir İlkesi ayarlamak için</span><span class="sxs-lookup"><span data-stu-id="d9fca-124">To set a policy that allows any cache to supply requested resources if the resource on the server is not newer than the cached copy</span></span>  
+### <a name="to-set-a-policy-that-allows-any-cache-to-supply-requested-resources-if-the-resource-on-the-server-is-not-newer-than-the-cached-copy"></a><span data-ttu-id="09a1a-124">Kaynak sunucuda önbelleğe alınmış kopyayı yeni değil, istenen kaynakları sağlamak tüm önbelleği izin veren bir ilke ayarlamak için</span><span class="sxs-lookup"><span data-stu-id="09a1a-124">To set a policy that allows any cache to supply requested resources if the resource on the server is not newer than the cached copy</span></span>  
   
--   <span data-ttu-id="d9fca-125">Kaynak sunucuda önbelleği düzeyini ayarlayarak önbelleğe alınmış kopyadan yeni değilse, istenen kaynak sağlamak tüm önbellek izin veren bir ilke oluşturmak <xref:System.Net.Cache.HttpRequestCacheLevel.Revalidate>.</span><span class="sxs-lookup"><span data-stu-id="d9fca-125">Create a policy that allows any cache to supply requested resources if the resource on the server is not newer than the cached copy by setting the cache level to <xref:System.Net.Cache.HttpRequestCacheLevel.Revalidate>.</span></span>  
+-   <span data-ttu-id="09a1a-125">Kaynak sunucuda önbelleği düzeyini ayarlayarak önbelleğe alınmış kopyayı yeni değil, istenen kaynakları sağlamak tüm önbelleği izin veren bir ilke oluşturmak <xref:System.Net.Cache.HttpRequestCacheLevel.Revalidate>.</span><span class="sxs-lookup"><span data-stu-id="09a1a-125">Create a policy that allows any cache to supply requested resources if the resource on the server is not newer than the cached copy by setting the cache level to <xref:System.Net.Cache.HttpRequestCacheLevel.Revalidate>.</span></span>  
   
     ```csharp  
     public static void CheckServer()  
@@ -156,9 +155,9 @@ ms.locfileid: "33395238"
     End Sub  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="d9fca-126">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="d9fca-126">See Also</span></span>  
- [<span data-ttu-id="d9fca-127">Ağ Uygulamaları için Önbellek Yönetimi</span><span class="sxs-lookup"><span data-stu-id="d9fca-127">Cache Management for Network Applications</span></span>](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
- [<span data-ttu-id="d9fca-128">Önbellek İlkesi</span><span class="sxs-lookup"><span data-stu-id="d9fca-128">Cache Policy</span></span>](../../../docs/framework/network-programming/cache-policy.md)  
- [<span data-ttu-id="d9fca-129">Konum Temelli Önbellek İlkeleri</span><span class="sxs-lookup"><span data-stu-id="d9fca-129">Location-Based Cache Policies</span></span>](../../../docs/framework/network-programming/location-based-cache-policies.md)  
- [<span data-ttu-id="d9fca-130">Saat Temelli Önbellek İlkeleri</span><span class="sxs-lookup"><span data-stu-id="d9fca-130">Time-Based Cache Policies</span></span>](../../../docs/framework/network-programming/time-based-cache-policies.md)  
- [<span data-ttu-id="d9fca-131">\<requestCaching > öğesi (ağ ayarları)</span><span class="sxs-lookup"><span data-stu-id="d9fca-131">\<requestCaching> Element (Network Settings)</span></span>](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+## <a name="see-also"></a><span data-ttu-id="09a1a-126">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="09a1a-126">See Also</span></span>  
+ [<span data-ttu-id="09a1a-127">Ağ Uygulamaları için Önbellek Yönetimi</span><span class="sxs-lookup"><span data-stu-id="09a1a-127">Cache Management for Network Applications</span></span>](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
+ [<span data-ttu-id="09a1a-128">Önbellek İlkesi</span><span class="sxs-lookup"><span data-stu-id="09a1a-128">Cache Policy</span></span>](../../../docs/framework/network-programming/cache-policy.md)  
+ [<span data-ttu-id="09a1a-129">Konum Temelli Önbellek İlkeleri</span><span class="sxs-lookup"><span data-stu-id="09a1a-129">Location-Based Cache Policies</span></span>](../../../docs/framework/network-programming/location-based-cache-policies.md)  
+ [<span data-ttu-id="09a1a-130">Saat Temelli Önbellek İlkeleri</span><span class="sxs-lookup"><span data-stu-id="09a1a-130">Time-Based Cache Policies</span></span>](../../../docs/framework/network-programming/time-based-cache-policies.md)  
+ [<span data-ttu-id="09a1a-131">\<requestCaching > öğesi (ağ ayarları)</span><span class="sxs-lookup"><span data-stu-id="09a1a-131">\<requestCaching> Element (Network Settings)</span></span>](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)

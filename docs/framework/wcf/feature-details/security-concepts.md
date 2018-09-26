@@ -3,28 +3,27 @@ title: Güvenlik Kavramları
 ms.date: 03/30/2017
 ms.assetid: 944fa5ca-2c34-4268-8897-e005a61b470d
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 32b05766f82059634e6ad808c75fea6cc9e820e5
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 7e3a73f2f8c9a438451191c83e69c1722828d7df
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44188585"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47108032"
 ---
-# <a name="security-concepts"></a><span data-ttu-id="e1e76-102">Güvenlik Kavramları</span><span class="sxs-lookup"><span data-stu-id="e1e76-102">Security Concepts</span></span>
-<span data-ttu-id="e1e76-103">Bu bölümde, Windows Communication Foundation (WCF) güvenlik ile ilgili kavramları kısaca açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="e1e76-103">This section briefly explains the concepts associated with Windows Communication Foundation (WCF) security.</span></span>  
+# <a name="security-concepts"></a><span data-ttu-id="75917-102">Güvenlik Kavramları</span><span class="sxs-lookup"><span data-stu-id="75917-102">Security Concepts</span></span>
+<span data-ttu-id="75917-103">Bu bölümde, Windows Communication Foundation (WCF) güvenlik ile ilgili kavramları kısaca açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="75917-103">This section briefly explains the concepts associated with Windows Communication Foundation (WCF) security.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="e1e76-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="e1e76-104">In This Section</span></span>  
- [<span data-ttu-id="e1e76-105">WCF'de Kullanılan Güvenlik Kavramları</span><span class="sxs-lookup"><span data-stu-id="e1e76-105">Security Concepts Used in WCF</span></span>](../../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md)  
- <span data-ttu-id="e1e76-106">Güvenlik uygulamalarında kullanılan kavramları üst düzey bir bakış.</span><span class="sxs-lookup"><span data-stu-id="e1e76-106">A high-level overview of concepts used in security implementations.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="75917-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="75917-104">In This Section</span></span>  
+ [<span data-ttu-id="75917-105">WCF'de Kullanılan Güvenlik Kavramları</span><span class="sxs-lookup"><span data-stu-id="75917-105">Security Concepts Used in WCF</span></span>](../../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md)  
+ <span data-ttu-id="75917-106">Güvenlik uygulamalarında kullanılan kavramları üst düzey bir bakış.</span><span class="sxs-lookup"><span data-stu-id="75917-106">A high-level overview of concepts used in security implementations.</span></span>  
   
- [<span data-ttu-id="e1e76-107">Dağıtılan Uygulama Güvenliği</span><span class="sxs-lookup"><span data-stu-id="e1e76-107">Distributed Application Security</span></span>](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
- <span data-ttu-id="e1e76-108">WCF güvenlik dağıtılmış uygulama topografi nasıl sağladığını genel bakış.</span><span class="sxs-lookup"><span data-stu-id="e1e76-108">An overview of how WCF provides security in distributed application topography.</span></span>  
+ [<span data-ttu-id="75917-107">Dağıtılan Uygulama Güvenliği</span><span class="sxs-lookup"><span data-stu-id="75917-107">Distributed Application Security</span></span>](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
+ <span data-ttu-id="75917-108">WCF güvenlik dağıtılmış uygulama topografi nasıl sağladığını genel bakış.</span><span class="sxs-lookup"><span data-stu-id="75917-108">An overview of how WCF provides security in distributed application topography.</span></span>  
   
- [<span data-ttu-id="e1e76-109">Güvenlik Terimleri</span><span class="sxs-lookup"><span data-stu-id="e1e76-109">Security Terminology</span></span>](../../../../docs/framework/wcf/feature-details/wcf-security-terminology.md)  
- <span data-ttu-id="e1e76-110">WCF güvenliğini ele alınırken kullanılan terimler sözlüğü.</span><span class="sxs-lookup"><span data-stu-id="e1e76-110">A glossary of terms used when discussing WCF security.</span></span>  
+ [<span data-ttu-id="75917-109">Güvenlik Terimleri</span><span class="sxs-lookup"><span data-stu-id="75917-109">Security Terminology</span></span>](../../../../docs/framework/wcf/feature-details/wcf-security-terminology.md)  
+ <span data-ttu-id="75917-110">WCF güvenliğini ele alınırken kullanılan terimler sözlüğü.</span><span class="sxs-lookup"><span data-stu-id="75917-110">A glossary of terms used when discussing WCF security.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="e1e76-111">Başvuru</span><span class="sxs-lookup"><span data-stu-id="e1e76-111">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="75917-111">Başvuru</span><span class="sxs-lookup"><span data-stu-id="75917-111">Reference</span></span>  
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Channels>  
@@ -35,10 +34,10 @@ ms.locfileid: "44188585"
   
  <xref:System.Security>  
   
-## <a name="related-sections"></a><span data-ttu-id="e1e76-112">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="e1e76-112">Related Sections</span></span>  
- [<span data-ttu-id="e1e76-113">Güvenliği Genişletme</span><span class="sxs-lookup"><span data-stu-id="e1e76-113">Extending Security</span></span>](../../../../docs/framework/wcf/extending/extending-security.md)  
+## <a name="related-sections"></a><span data-ttu-id="75917-112">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="75917-112">Related Sections</span></span>  
+ [<span data-ttu-id="75917-113">Güvenliği Genişletme</span><span class="sxs-lookup"><span data-stu-id="75917-113">Extending Security</span></span>](../../../../docs/framework/wcf/extending/extending-security.md)  
   
-## <a name="see-also"></a><span data-ttu-id="e1e76-114">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="e1e76-114">See Also</span></span>  
- [<span data-ttu-id="e1e76-115">Güvenlik</span><span class="sxs-lookup"><span data-stu-id="e1e76-115">Security</span></span>](../../../../docs/framework/wcf/feature-details/security.md)  
- [<span data-ttu-id="e1e76-116">Güvenliğe Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="e1e76-116">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [<span data-ttu-id="e1e76-117">Windows Server AppFabric için güvenlik modeli</span><span class="sxs-lookup"><span data-stu-id="e1e76-117">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a><span data-ttu-id="75917-114">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="75917-114">See Also</span></span>  
+ [<span data-ttu-id="75917-115">Güvenlik</span><span class="sxs-lookup"><span data-stu-id="75917-115">Security</span></span>](../../../../docs/framework/wcf/feature-details/security.md)  
+ [<span data-ttu-id="75917-116">Güvenliğe Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="75917-116">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [<span data-ttu-id="75917-117">Windows Server AppFabric için güvenlik modeli</span><span class="sxs-lookup"><span data-stu-id="75917-117">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

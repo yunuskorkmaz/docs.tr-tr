@@ -1,5 +1,5 @@
 ---
-title: Temel ve Özet kimlik doğrulaması
+title: Temel ve Özet kimlik doğrulama
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -21,18 +21,17 @@ helpviewer_keywords:
 ms.assetid: 8cce2742-8d52-4643-9dd2-64ddf38aa878
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: fc061065caa4dad878a2a9b45e98ecb0d419d18b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 66b20c299252ff1f218a8131758e2cf03640aac6
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398228"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47090103"
 ---
-# <a name="basic-and-digest-authentication"></a><span data-ttu-id="8d26c-102">Temel ve Özet kimlik doğrulaması</span><span class="sxs-lookup"><span data-stu-id="8d26c-102">Basic and Digest Authentication</span></span>
-<span data-ttu-id="8d26c-103"><xref:System.Net> Basic uygulamasıdır ve Özet kimlik doğrulaması RFC2617 – HTTP kimlik doğrulaması uyumludur: temel ve Özet kimlik doğrulaması (www.w3.org adresindeki World Wide Web Konsorsiyumu'nın Web sitesinde kullanılabilir).</span><span class="sxs-lookup"><span data-stu-id="8d26c-103">The <xref:System.Net> implementation of basic and digest authentication complies with RFC2617 – HTTP Authentication: Basic and Digest Authentication (available on the World Wide Web Consortium's Web site at www.w3.org).</span></span>  
+# <a name="basic-and-digest-authentication"></a><span data-ttu-id="4821d-102">Temel ve Özet kimlik doğrulama</span><span class="sxs-lookup"><span data-stu-id="4821d-102">Basic and Digest Authentication</span></span>
+<span data-ttu-id="4821d-103"><xref:System.Net> Uygulama temel ve Özet kimlik doğrulaması uyan RFC2617 – HTTP kimlik doğrulaması: temel ve Özet kimlik doğrulaması (www.w3.org World Wide Web Consortium'ın Web sitesinde kullanılabilir).</span><span class="sxs-lookup"><span data-stu-id="4821d-103">The <xref:System.Net> implementation of basic and digest authentication complies with RFC2617 – HTTP Authentication: Basic and Digest Authentication (available on the World Wide Web Consortium's Web site at www.w3.org).</span></span>  
   
- <span data-ttu-id="8d26c-104">Özet kimlik doğrulaması ve temel kullanmak için bir uygulama bir kullanıcı adı ve parola sağlamalısınız <xref:System.Net.WebRequest.Credentials%2A> özelliği <xref:System.Net.WebRequest> aşağıdaki örnekte gösterildiği gibi Internet'ten veri istemek için kullandığı nesne.</span><span class="sxs-lookup"><span data-stu-id="8d26c-104">To use basic and digest authentication, an application must provide a user name and password in the <xref:System.Net.WebRequest.Credentials%2A> property of the <xref:System.Net.WebRequest> object that it uses to request data from the Internet, as shown in the following example.</span></span>  
+ <span data-ttu-id="4821d-104">Temel kullanmak ve Özet kimlik doğrulaması için bir uygulama bir kullanıcı adı ve parola sağlamalıdır <xref:System.Net.WebRequest.Credentials%2A> özelliği <xref:System.Net.WebRequest> , aşağıdaki örnekte gösterildiği gibi Internet'ten veri isteği için kullanılan nesne.</span><span class="sxs-lookup"><span data-stu-id="4821d-104">To use basic and digest authentication, an application must provide a user name and password in the <xref:System.Net.WebRequest.Credentials%2A> property of the <xref:System.Net.WebRequest> object that it uses to request data from the Internet, as shown in the following example.</span></span>  
   
 ```vb  
 Dim MyURI As String = "http://www.contoso.com/"  
@@ -47,8 +46,8 @@ WReq.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword);
 ```  
   
 > [!CAUTION]
->  <span data-ttu-id="8d26c-105">Verileri bir saldırganın tarafından görülebilir için temel ve Özet kimlik doğrulaması ile gönderilen veriler şifrelenmez.</span><span class="sxs-lookup"><span data-stu-id="8d26c-105">Data sent with Basic and Digest Authentication is not encrypted, so the data can be seen by an adversary.</span></span> <span data-ttu-id="8d26c-106">Ayrıca, temel kimlik doğrulaması kimlik bilgilerini (kullanıcı adı ve parola) açık bir şekilde gönderilir ve geçirilebilir.</span><span class="sxs-lookup"><span data-stu-id="8d26c-106">Additionally, Basic Authentication credentials (user name and password) are sent in the clear and can be intercepted.</span></span>  
+>  <span data-ttu-id="4821d-105">Temel ve Özet kimlik doğrulaması ile gönderilen veriler şifrelenmez, bu şekilde verileri bir saldırgan tarafından görülebilir.</span><span class="sxs-lookup"><span data-stu-id="4821d-105">Data sent with Basic and Digest Authentication is not encrypted, so the data can be seen by an adversary.</span></span> <span data-ttu-id="4821d-106">Ayrıca, temel kimlik doğrulaması kimlik bilgilerini (kullanıcı adı ve parola) açık bir şekilde gönderilir ve kesilebilir.</span><span class="sxs-lookup"><span data-stu-id="4821d-106">Additionally, Basic Authentication credentials (user name and password) are sent in the clear and can be intercepted.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8d26c-107">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="8d26c-107">See Also</span></span>  
- [<span data-ttu-id="8d26c-108">NTLM ve Kerberos Kimlik Doğrulaması</span><span class="sxs-lookup"><span data-stu-id="8d26c-108">NTLM and Kerberos Authentication</span></span>](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)  
- [<span data-ttu-id="8d26c-109">İnternet Kimlik Doğrulaması</span><span class="sxs-lookup"><span data-stu-id="8d26c-109">Internet Authentication</span></span>](../../../docs/framework/network-programming/internet-authentication.md)
+## <a name="see-also"></a><span data-ttu-id="4821d-107">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="4821d-107">See Also</span></span>  
+ [<span data-ttu-id="4821d-108">NTLM ve Kerberos Kimlik Doğrulaması</span><span class="sxs-lookup"><span data-stu-id="4821d-108">NTLM and Kerberos Authentication</span></span>](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)  
+ [<span data-ttu-id="4821d-109">İnternet Kimlik Doğrulaması</span><span class="sxs-lookup"><span data-stu-id="4821d-109">Internet Authentication</span></span>](../../../docs/framework/network-programming/internet-authentication.md)
