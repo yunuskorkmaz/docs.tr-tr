@@ -4,11 +4,11 @@ description: İfade ağaçlarını destekleyen çerçeve türleri ifade ağaçla
 ms.date: 06/20/2016
 ms.assetid: e9c85021-0d36-48af-91b7-aaaa66f22654
 ms.openlocfilehash: 687b521c52c1ca380a12e18469b5f66000049d3c
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45617973"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45972565"
 ---
 # <a name="framework-types-supporting-expression-trees"></a>İfade ağaçlarını destekleyen çerçeve türleri
 

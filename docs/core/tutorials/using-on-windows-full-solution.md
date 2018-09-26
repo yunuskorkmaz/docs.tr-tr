@@ -1,49 +1,50 @@
 ---
-title: Visual Studio 2017 kullanarak Windows'da eksiksiz bir .NET Core çözümü oluşturma
-description: Visual Studio 2017 Windows üzerinde tam bir .NET Core çözümde oluşturmayı öğrenin.
+title: Visual Studio 2017'yi kullanarak, Windows üzerinde eksiksiz bir .NET Core çözümü derleme
+description: Windows üzerinde Visual Studio 2017'de eksiksiz bir .NET Core çözümü oluşturmayı öğrenin.
 author: bleroy
 ms.author: mairaw
 ms.date: 11/16/2016
-ms.openlocfilehash: 52b8781cdc29ac776123402c982353ef437ce74f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.custom: vs-dotnet
+ms.openlocfilehash: 15537ea8c68b5c873bbf26ab0519a19de0b13230
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214399"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45969567"
 ---
-# <a name="building-a-complete-net-core-solution-on-windows-using-visual-studio-2017"></a>Visual Studio 2017 kullanarak Windows'da eksiksiz bir .NET Core çözümü oluşturma
+# <a name="building-a-complete-net-core-solution-on-windows-using-visual-studio-2017"></a>Visual Studio 2017'yi kullanarak, Windows üzerinde eksiksiz bir .NET Core çözümü derleme
 
-Visual Studio 2017 .NET Core uygulamaları geliştirmek için bir tam özellikli bir geliştirme ortamı sağlar. Bu belgedeki yordamlar, test ve üçüncü taraf kitaplıklar kullanılarak yeniden kullanılabilir kitaplıklarını içerir tipik bir .NET Core çözümü oluşturmak için gereken adımları açıklar. 
+Visual Studio 2017, .NET Core uygulamaları geliştirmek için bir tam özellikli bir geliştirme ortamı sağlar. Bu belgedeki yordamları, test ve üçüncü taraf kitaplıklar kullanılarak yeniden kullanılabilir kitaplıklar içeren tipik bir .NET Core çözümü oluşturmak gereken adımları açıklar. 
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Yönergeleri izleyerek [Önkoşullar sayfamızı](../windows-prerequisites.md) ortamınızı güncelleştirmek için.
+Yönergeleri takip edin [önkoşulları sayfamızı](../windows-prerequisites.md) ortamınızı güncelleştirilecek.
 
-## <a name="a-solution-using-only-net-core-projects"></a>Yalnızca .NET çekirdeği projeleri kullanarak bir çözüm
+## <a name="a-solution-using-only-net-core-projects"></a>Yalnızca .NET Core projeleri kullanarak çözümü
 
-### <a name="writing-the-library"></a>Kitaplık yazma
+### <a name="writing-the-library"></a>Kitaplığı yazma
 
-1. Visual Studio'da, **dosya**, **yeni**, **proje**. İçinde **yeni proje** iletişim kutusunda, genişletin **Visual C#** düğümü ve seçin **.NET standart** düğümünü ve ardından **(.NET standart)sınıfkitaplığı**. 
+1. Visual Studio'da **dosya**, **yeni**, **proje**. İçinde **yeni proje** iletişim kutusunda genişletin **Visual C#** düğüm ve **.NET Standard** düğümünü ve ardından **sınıf kitaplığı (.NET Standard)**. 
 
-2. Adı "Kitaplığı" proje ve Çözüm "Altın". Bırakın **çözüm için dizin oluştur** işaretli. **Tamam**'ı tıklatın.
+2. Adı ' % s'projesi "Library" ve "Altın" Çözüm. Bırakın **çözüm için dizin oluştur** işaretli. **Tamam**'ı tıklatın.
 
-3. Çözüm Gezgini'nde bağlam menüsünü açın **bağımlılıkları** düğümü seçin **NuGet paketlerini Yönet**.
+3. Çözüm Gezgini'nde, bağlam menüsünü açın **bağımlılıkları** düğümünü seçip **NuGet paketlerini Yönet**.
 
-4. "Nuget.org" olarak seçin **paket kaynağı**ve seçin **Gözat** sekmesi. Göz **Newtonsoft.Json**. Tıklatın **yükleme**ve Lisans Sözleşmesi'ni kabul edin. Paket artık altında görünmelidir **bağımlılıkları/NuGet** ve otomatik olarak geri yüklenir.
+4. "Nuget.org" olarak seçin **paket kaynağı**ve **Gözat** sekmesi. Göz atın **Newtonsoft.Json**. Tıklayın **yükleme**, lisans sözleşmesini kabul edin. Paket artık altında görünmelidir **bağımlılıkları/NuGet** ve otomatik olarak geri yüklenir.
 
-5. Yeniden Adlandır `Class1.cs` dosyasını `Thing.cs`. Yeniden Adlandır sınıfının kabul edin. Bir yöntem ekleyin: `public int Get(int number) => Newtonsoft.Json.JsonConvert.DeserializeObject<int>($"{number}");`
+5. Yeniden adlandırma `Class1.cs` dosyasını `Thing.cs`. Sınıfı yeniden adlandırılması kabul edin. Bir yöntem ekleyin: `public int Get(int number) => Newtonsoft.Json.JsonConvert.DeserializeObject<int>($"{number}");`
 
-7. Üzerinde **yapı** menüsünde seçin **yapı çözümü**.
+7. Üzerinde **derleme** menüsünde seçin **Çözümü Derle**.
 
-   Çözüm hatasız oluşturması gerekir.
+   Çözüm, hatasız oluşturması gerekir.
 
-### <a name="writing-the-test-project"></a>Oluşturduğunuz test projesinin yazma
+### <a name="writing-the-test-project"></a>Test projesi yazma
 
-1. Çözüm Gezgini'nde bağlam menüsünü açın **çözüm** düğümü seçin **Ekle**, **yeni proje**. İçinde **yeni proje** iletişim altında **Visual C# / .NET Core**, seçin **birim testi projesi (.NET Core)**. "TestLibrary" olarak adlandırın ve Tamam'ı tıklatın. 
+1. Çözüm Gezgini'nde, bağlam menüsünü açın **çözüm** düğümünü seçip **Ekle**, **yeni proje**. İçinde **yeni proje** iletişim altında **Visual C# / .NET Core**, seçin **birim testi projesi (.NET Core)**. "TestLibrary" olarak adlandırın ve Tamam'a tıklayın. 
 
-2. İçinde **TestLibrary** proje, bağlam menüsünü açın **bağımlılıkları** düğümü seçin **Başvuru Ekle**. Tıklatın **projeleri**, ardından kitaplığı projesi kontrol edin ve Tamam'ı tıklatın. Bu test projesinin kitaplığınıza bir başvuru ekler.
+2. İçinde **TestLibrary** için bağlam menüsünü açın, proje **bağımlılıkları** düğüm ve **Başvuru Ekle**. Tıklayın **projeleri**, sonra kitaplık projesi işaretleyin ve Tamam'a tıklayın. Bu test projesinden, kitaplığına bir başvuru ekler.
 
-3. Yeniden Adlandır `UnitTest1.cs` dosya `LibraryTests.cs` ve sınıf rename kabul edin. Ekleme `using Library;` dosyasını ve Değiştir üstüne `TestMethod1` aşağıdaki kod ile yöntemi:
+3. Yeniden adlandırma `UnitTest1.cs` dosyasını `LibraryTests.cs` sınıfı yeniden adlandır kabul edin. Ekleme `using Library;` dosyasını ve değiştirme en üstüne `TestMethod1` yöntemini aşağıdaki kod ile:
     ```csharp
     [TestMethod]
     public void ThingGetsObjectValFromNumber()
@@ -52,26 +53,26 @@ Yönergeleri izleyerek [Önkoşullar sayfamızı](../windows-prerequisites.md) o
     }
     ```
 
-   Artık çözümü oluşturabiliyor olması gerekir. 
+   Şimdi çözüm oluşturulabiliyor olması gerekir. 
    
-4. Üzerinde **Test** menüsünde seçin **Windows**, **Test Gezgini** test Gezgini penceresi çalışma alanınıza alabilmek için. Birkaç saniye sonra `ThingGetsObjectValFromNumber` test test Explorer'da görünmelidir. Seçin **çalıştırması**.
+4. Üzerinde **Test** menüsünde seçin **Windows**, **Test Gezgini** test Gezgini penceresi çalışma alanınıza almak için. Birkaç saniye sonra `ThingGetsObjectValFromNumber` test, test Gezgini'nde görüntülenmelidir. Seçin **çalıştırması**.
    
-   Test geçirmelisiniz.
+   Test geçişi yapılmalıdır.
 
 ### <a name="writing-the-console-app"></a>Konsol uygulaması yazma
 
-1. Çözüm Gezgini'nde, çözüm bağlam menüsünü açın ve yeni bir ekleyin **konsol uygulaması (.NET Core)** projesi. "Uygulama" adı.
+1. Çözüm Gezgini'nde, çözümü için bağlam menüsünü açın ve yeni bir **konsol uygulaması (.NET Core)** proje. "Uygulama" olarak adlandırın.
 
-2. İçinde **uygulama** proje, bağlam menüsünü açın **bağımlılıkları** düğümü seçin **Ekle**, **başvuru**. 
+2. İçinde **uygulama** için bağlam menüsünü açın, proje **bağımlılıkları** düğüm ve **Ekle**, **başvuru**. 
 
 3. İçinde **başvuru Yöneticisi** iletişim kutusunda, onay **Kitaplığı** altında **projeleri**, **çözüm** düğümünü ve ardından **Tamam**
 
-6. Bağlam menüsünü açın **uygulama** düğümü seçin **başlangıç projesi olarak ayarla**. Bu, F5 veya CTRL + F5 tuşuna konsol uygulaması başlangıç sağlar.
+6. Bağlam menüsünü **uygulama** düğüm ve **başlangıç projesi olarak ayarla**. Bu, F5 veya CTRL + F5 tuşlarına basarak konsol uygulamasını Başlat sağlar.
 
-7. Açık `Program.cs` dosya, ekleme bir `using Library;` dosyanın en üstüne yönerge ve ardından ekleyin `Console.WriteLine($"The answer is {new Thing().Get(42)}.");` için `Main` yöntemi.
+7. Açık `Program.cs` ekleyin bir `using Library;` dosyanın en üstüne yönerge ve ardından eklemek `Console.WriteLine($"The answer is {new Thing().Get(42)}.");` için `Main` yöntemi.
 
-8. Yeni eklediğiniz satırından sonra bir kesme noktası ayarlayın.
+8. Az önce eklediğiniz bir satırın sonunda bir kesme noktası ayarlayın.
 
-9. Uygulamayı çalıştırmak için F5'e basın...
+9. Uygulamayı çalıştırmak için F5 tuşuna basın...
 
-   Uygulama hatasız oluşturmalısınız ve kesme noktası isabet. Uygulama "yanıt 42 var." çıktı denetleyebilmek olmalıdır.
+   Uygulama hatasız oluşturması gerekir ve kesme noktasına isabet. Aynı zamanda "yanıt 42 sağlıyor." uygulama çıkış denetleme olanağına olmalıdır.

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
 ms.openlocfilehash: 52c5dba1a21b0e8d8e5af1dc159941e5f4b4aa5f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45668450"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45970079"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>SQL Server'da anlık görüntü yalıtımı
 Anlık görüntü yalıtımı OLTP uygulamalar için eşzamanlılık geliştirir.  
