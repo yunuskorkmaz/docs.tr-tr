@@ -1,21 +1,20 @@
 ---
-title: Ağ uygulamalarında önbelleğe alma yapılandırma
+title: Ağ uygulamalarında önbelleğe almayı yapılandırma
 ms.date: 03/30/2017
 helpviewer_keywords:
 - cache [.NET Framework], configuring
 ms.assetid: 3f694a1c-de5d-47cf-a6eb-cfc369fb8a9f
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 2213b5401c7b82771dcf7a1c982f1b3d0f347832
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a7fe54911755863adc6a9b2bd91eff5cad9f9d4e
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395264"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170489"
 ---
-# <a name="configuring-caching-in-network-applications"></a>Ağ uygulamalarında önbelleğe alma yapılandırma
-Önbelleğe alınmasını yapılandırmak için bir önbellek İlkesi uygulama belirtin veya <xref:System.Net.WebRequest> düzeyi. Aşağıdaki konular, yapılandırma uygulamaları ve önbelleğe almayı kullanmak üzere istekleri gösteren kod örnekleri sağlar.  
+# <a name="configuring-caching-in-network-applications"></a>Ağ uygulamalarında önbelleğe almayı yapılandırma
+Önbelleğe alınmasını yapılandırmak için bir önbellek İlkesi uygulama düzeyinde belirtin veya <xref:System.Net.WebRequest> düzeyi. Aşağıdaki konular, uygulamalar ve istekleri önbelleğe almayı kullanmak üzere yapılandırma gösteren kod örnekleri sağlar.  
   
 -   [Nasıl yapılır: Uygulama için Konum Temelli Önbellek İlkesi Ayarlama](../../../docs/framework/network-programming/how-to-set-a-location-based-cache-policy-for-an-application.md)  
   
@@ -25,7 +24,7 @@ ms.locfileid: "33395264"
   
 -   [Nasıl yapılır: İstek için Önbellek İlkesi Ayarlama](../../../docs/framework/network-programming/how-to-set-cache-policy-for-a-request.md)  
   
- Uygulama veya makine yapılandırma dosyalarını kullanarak önbellek İlkesi de yapılandırabilirsiniz. Daha fazla bilgi için bkz: &#124; [ \<requestCaching > öğesi (ağ ayarları)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md).  
+ Ayrıca, uygulama veya makine yapılandırma dosyalarını kullanarak önbellek İlkesi de yapılandırabilirsiniz. Daha fazla bilgi için &#124; [ \<requestCaching > öğesi (ağ ayarları)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Ağ Uygulamaları için Önbellek Yönetimi](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  

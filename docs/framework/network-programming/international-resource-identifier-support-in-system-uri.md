@@ -1,50 +1,49 @@
 ---
-title: System.Uri uluslararası kaynak tanımlayıcısı desteği
+title: System.uri'de uluslararası kaynak tanımlayıcı desteği
 ms.date: 03/30/2017
 ms.assetid: b5e994c3-3535-4aff-8e1b-b69be22e9a22
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: bf26f98773383ee6671162a53b84f155c18b5adf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef44453dce2f59a2b481d0533b8bd28de516c630
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398259"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47156572"
 ---
-# <a name="international-resource-identifier-support-in-systemuri"></a>System.Uri uluslararası kaynak tanımlayıcısı desteği
-<xref:System.Uri?displayProperty=nameWithType> Sınıfı genişletilmişse uluslararası kaynak tanımlayıcısı (IRI) ve Uluslararası yapılan etki alanı adları (IDN) desteği. Bu geliştirmeler, .NET Framework 3.5, 3.0 SP1 ve 2.0 SP1'de kullanılabilir.  
+# <a name="international-resource-identifier-support-in-systemuri"></a>System.uri'de uluslararası kaynak tanımlayıcı desteği
+<xref:System.Uri?displayProperty=nameWithType> Uluslararası kaynak tanımlayıcı (IRI) ve Uluslararası yapılan etki alanı adı (IDN) desteği sayesinde, sınıf genişletilmişse. Bu iyileştirmeler, .NET Framework 3.5, 3.0 SP1 ve 2.0 SP1'i kullanılabilir.  
   
 ## <a name="iri-and-idn-support"></a>IRI ve IDN desteği  
- Web adresleri genellikle Tekdüzen Kaynak Tanımlayıcıları (çok kısıtlı bir karakter kümesi oluşur URI) kullanarak belirtilmiştir:  
+ Web adresleri, genellikle Tekdüzen Kaynak Tanımlayıcıları (çok kısıtlı bir karakter kümesi oluşan URI) kullanılarak ifade edilir:  
   
--   Büyük ve küçük ASCII harf İngilizce alfabesinde.  
+-   Büyük ve küçük ASCII harf İngilizce alfabetik.  
   
--   9 basamak 0.  
+-   0'dan 9 basamak.  
   
--   Diğer ASCII simgelerini küçük sayısı.  
+-   Diğer ASCII simgeleri küçük bir sayı.  
   
- RFC 2396 ve RFC 3986 Internet Engineering Task Force (IETF) tarafından yayımlanan URI'ler belirtimleri belgelenmiştir.  
+ Belirtimleri için URI RFC 2396 ve RFC 3986'ya Internet Engineering Task Force (IETF) tarafından yayınlanan belgelenmiştir.  
   
- Internet büyümesi ile İngilizce dışındaki dilleri kullanarak kaynakları tanımlamak için büyüyen bir gereksinimi yoktur. Bu gereksinim kolaylaştırmak ve ASCII olmayan karakterler (karakter Unicode/ISO 10646 karakter kümesinde) izin tanımlayıcılarını uluslararası kaynak tanımlayıcıları (IRIS) bilinir. IRIs belirtimleri RFC IETF tarafından yayımlanan 3987 belgelenmiştir. IRIs kullanarak Unicode karakterler içeren bir URL sağlar.  
+ Internet büyümesi ile İngilizce dışındaki diller kullanarak kaynakları tanımlamak için artan bir ihtiyacı yoktur. Bunu kolaylaştırmak ve ASCII olmayan karakterler (Unicode/ISO 10646 karakter kümesindeki karakter) izin tanımlayıcılardan uluslararası kaynak tanımlayıcılarda (sınıflandırma) bilinir. Iris belirtimleri RFC IETF tarafından yayımlanan 3987 belgelenmiştir. Iris kullanarak Unicode karakterler içerecek şekilde bir URL sağlar.  
   
- Varolan <xref:System.Uri?displayProperty=nameWithType> sınıfı genişletilmişse RFC 3987 üzerinde IRI desteği sağlamak için. Bunlar IRI özellikle etkinleştirmediğiniz sürece geçerli kullanıcılar .NET Framework 2.0 davranış herhangi bir değişiklik görmez. Bu, .NET Framework'ün önceki sürümler ile uygulama uyumluluğunu sağlar.  
+ Varolan <xref:System.Uri?displayProperty=nameWithType> sınıfı üzerinde RFC 3987 IRI desteği sağlamak için genişletilmişse. Bunlar özellikle IRI etkinleştirmediğiniz sürece geçerli kullanıcıların .NET Framework 2.0 davranış herhangi bir değişiklik görmezsiniz. Bu, .NET Framework'ün önceki sürümleriyle uygulama uyumluluğu sağlar.  
   
- Uygulama etki alanı adlarına uygulanan Uluslararası yapılan etki alanı adı (IDN) ayrıştırma kullanılıp kullanılmayacağını ve kuralları ayrıştırma IRI uygulanıp belirtebilirsiniz. Machine.config veya app.config dosyasında yapılabilir.  
+ Bir uygulama etki alanı adlarına uygulanan Uluslararası yapılan etki alanı adı (IDN) ayrıştırma kullanılıp kullanılmayacağını ve IRI ayrıştırma kurallarını uygulanıp belirtebilirsiniz. Bu, machine.config veya app.config dosyasında yapılabilir.  
   
- Bir etki alanı adındaki tüm Unicode etiketleri IDN etkinleştirme Punycode eşdeğerlerine dönüştürür. Zayıf kod adları yalnızca ASCII karakterler içeren ve her zaman xn--önekiyle başlatın. Bunun nedeni çoğu DNS sunucuları, yalnızca ASCII karakterleri (RFC 3940 bakın) destekler beri Internet'te var olan DNS sunucuları desteklemektir.  
+ Bir etki alanı adındaki tüm Unicode etiketleri IDN etkinleştirme Punycode eşdeğerlerine dönüştürür. Zayıf kod adları yalnızca ASCII karakterler içeren ve her zaman xn--önekiyle başlayan. Bunun nedeni çoğu DNS sunucuları yalnızca ASCII karakterleri (bkz. RFC 3940) desteklemediğinden Internet'te mevcut DNS sunucuları desteklemektir.  
   
- IRI ve IDN etkinleştirilmesi etkiler değerini <xref:System.Uri.DnsSafeHost%2A?displayProperty=nameWithType> özelliği. IRI ve IDN etkinleştirme davranışını da değiştirebilir <xref:System.Uri.Equals%2A?displayProperty=nameWithType>, <xref:System.Uri.OriginalString%2A?displayProperty=nameWithType>, <xref:System.Uri.GetComponents%2A?displayProperty=nameWithType>, ve <xref:System.Uri.IsWellFormedOriginalString%2A> yöntemleri.  
+ IRI ve IDN etkinleştirilmesi, değerini etkiler <xref:System.Uri.DnsSafeHost%2A?displayProperty=nameWithType> özelliği. IRI ve IDN etkinleştirme davranışını da değiştirebilir <xref:System.Uri.Equals%2A?displayProperty=nameWithType>, <xref:System.Uri.OriginalString%2A?displayProperty=nameWithType>, <xref:System.Uri.GetComponents%2A?displayProperty=nameWithType>, ve <xref:System.Uri.IsWellFormedOriginalString%2A> yöntemleri.  
   
- <xref:System.GenericUriParser?displayProperty=nameWithType> Sınıfı ayrıca genişletilmişse IRI ve IDN destekleyen özelleştirilebilir ayrıştırıcı oluşturma izin vermek için. Davranışını bir <xref:System.GenericUriParser?displayProperty=nameWithType> nesne bulunan değerlerin Bitsel bir birleşimi geçirerek belirtilen <xref:System.GenericUriParserOptions?displayProperty=nameWithType> numaralandırma <xref:System.GenericUriParser?displayProperty=nameWithType> Oluşturucusu. <xref:System.GenericUriParserOptions.IriParsing?displayProperty=nameWithType> Türünü gösteren ayrıştırıcı RFC 3987 uluslararası kaynak tanımlayıcıları (IRI) için belirtilen ayrıştırma kuralları destekler. IRI gerçekten kullanılıp kullanılmadığını IRI etkin olup olmadığını bağlıdır.  
+ <xref:System.GenericUriParser?displayProperty=nameWithType> Sınıfı da genişletilmişse IRI ve IDN destekleyen özelleştirilebilir bir ayrıştırıcı oluşturma izni. Davranışını bir <xref:System.GenericUriParser?displayProperty=nameWithType> nesnesi Bitsel bir birleşimi kullanılabilir değerler geçirerek belirtildiğinde <xref:System.GenericUriParserOptions?displayProperty=nameWithType> sabit listesine <xref:System.GenericUriParser?displayProperty=nameWithType> Oluşturucusu. <xref:System.GenericUriParserOptions.IriParsing?displayProperty=nameWithType> Türünü belirten ayrıştırıcı RFC 3987 içinde belirtilen uluslararası kaynak tanımlayıcı (IRI) ayrıştırma kurallarını destekler. IRI gerçekten kullanılıp kullanılmadığını IRI etkinleştirilip etkinleştirilmeyeceğini bağlıdır.  
   
- <xref:System.GenericUriParserOptions.Idn?displayProperty=nameWithType> Türünü gösteren ayrıştırıcı Uluslararası yapılan etki alanı adı (IDN) ana bilgisayar adlarını (IDN) ayrıştırma destekler. IDN gerçekte kullanılıp kullanılmadığını IDN etkin olup olmadığını bağlıdır.  
+ <xref:System.GenericUriParserOptions.Idn?displayProperty=nameWithType> Türü belirten ayrıştırıcı Uluslararası yapılan etki alanı adı (IDN) ana bilgisayar adlarını (IDN) ayrıştırma destekler. IDN gerçekten kullanılıp kullanılmadığını IDN etkinleştirilip etkinleştirilmeyeceğini bağlıdır.  
   
- IRI etkinleştirme ayrıştırma normalleştirme ne yapacağını ve RFC 3987 göre en son IRI denetimi karakter kuralları. Normalleştirme ve karakter denetimi RFC 2396 ve RFC 3986 göre yapılan şekilde devre dışı bırakılması ayrıştırma IRI için varsayılan değerdir.  
+ IRI ayrıştırma normalleştirme ne yapacağını etkinleştirip RFC 3987 karakter göre en son IRI denetleme kuralları. IRI ayrıştırma normalleştirme ve karakter denetimi RFC 2396 ve RFC 3986'ya göre yapılır şekilde devre dışı bırakılması için varsayılan değerdir.  
   
- IRI ve içinde işleme IDN <xref:System.Uri?displayProperty=nameWithType> sınıfı da denetlenebilir kullanarak <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType> ve <xref:System.Configuration.IdnElement?displayProperty=nameWithType> yapılandırma ayarı sınıflarını. <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType> Ayarını etkinleştirir veya içinde işleme IRI devre dışı bırakır <xref:System.Uri?displayProperty=nameWithType> sınıfı. <xref:System.Configuration.IdnElement?displayProperty=nameWithType> Ayarını etkinleştirir veya içinde işleme IDN devre dışı bırakır <xref:System.Uri> sınıfı. <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType> Da dolaylı olarak ayarlama IDN denetler. IRI işleme olabilmesi için işleme IDN için etkinleştirilmesi gerekir. IRI işleme devre dışıysa, IDN işleme burada .NET Framework 2.0 davranışı uyumluluk için kullanılır ve IDN adları kullanılmayan varsayılan ayar olarak ayarlanır.  
+ IRI ve işleme IDN <xref:System.Uri?displayProperty=nameWithType> sınıfı da denetlenebilir kullanarak <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType> ve <xref:System.Configuration.IdnElement?displayProperty=nameWithType> yapılandırma ayarı sınıfları. <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType> Ayarını etkinleştirir veya işleme IRI devre dışı bırakır <xref:System.Uri?displayProperty=nameWithType> sınıfı. <xref:System.Configuration.IdnElement?displayProperty=nameWithType> Ayarını etkinleştirir veya işleme IDN devre dışı bırakır <xref:System.Uri> sınıfı. <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType> IDN denetimleri de dolaylı olarak ayarlama. IRI işleme mümkün olması için işleme IDN için etkinleştirilmesi gerekir. IRI işleme devre dışıysa, IDN işleme burada .NET Framework 2.0 davranışı uyumluluk için kullanılır ve IDN adları kullanılmaz varsayılan ayar olarak ayarlanır.  
   
- İçin yapılandırma ayarı <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType> ve <xref:System.Configuration.IdnElement?displayProperty=nameWithType> yapılandırma sınıfları okunabilir bir kez zaman ilk <xref:System.Uri?displayProperty=nameWithType> sınıfı yapılandırılmıştır. Bu süre sonunda yapılandırma ayarlarında yapılan değişiklikler göz ardı edilir.  
+ Bir yapılandırma ayarı için <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType> ve <xref:System.Configuration.IdnElement?displayProperty=nameWithType> yapılandırma sınıfları okuyup kez zaman ilk <xref:System.Uri?displayProperty=nameWithType> sınıf oluşturulur. Bu süreden sonra yapılandırma ayarlarında yapılan değişiklikler yok sayılır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Configuration.IdnElement?displayProperty=nameWithType>  

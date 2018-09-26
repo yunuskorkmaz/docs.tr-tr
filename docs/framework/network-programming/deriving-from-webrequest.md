@@ -1,5 +1,5 @@
 ---
-title: WebRequest türetme
+title: Webrequest'ten türetme
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WebRequest class, pluggable protocols
@@ -12,84 +12,83 @@ helpviewer_keywords:
 ms.assetid: 9810c177-973e-43d7-823c-14960bd625ea
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 1a1dd850c6534443603fbefb2c1444c85f84a31b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f4f1756d42e8931a5265017088021b5f4022044
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396824"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170723"
 ---
-# <a name="deriving-from-webrequest"></a>WebRequest türetme
-<xref:System.Net.WebRequest> Sınıfı, .NET Framework takılabilir Protokolü modeli uygun bir protokole özgü istek işleyicisi oluşturmak için temel yöntemleri ve özellikleri sağlayan bir Özet temel sınıf. Kullanan uygulamalar **WebRequest** sınıfı, kullanılan protokolü belirtmek için gerek kalmadan herhangi bir desteklenen protokolünü kullanarak veri isteyebilir.  
+# <a name="deriving-from-webrequest"></a>Webrequest'ten türetme
+<xref:System.Net.WebRequest> .NET Framework takılabilir Protokolü modeli uyan bir protokole özgü istek işleyicisi oluşturmak için temel yöntemleri ve özellikleri sağlayan soyut bir temel sınıfı. Kullanan uygulamalar **WebRequest** sınıfı, kullanılan protokolü belirtmek için gerek kalmadan herhangi bir desteklenen protokolünü kullanarak veri isteyebilir.  
   
- İki ölçütleri karşılar, takılabilir bir protokol olarak kullanılacak bir protokole özgü sınıf için sırayla: sınıf uygulamalıdır <xref:System.Net.IWebRequestCreate> arabirimi ve kaydetmeniz gerekir ile <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=nameWithType> yöntemi. Sınıfı, tüm soyut yöntemler ve özelliklerini geçersiz kılmanız gerekir **WebRequest** takılabilir arabirimi sağlamak için.  
+ İki ölçütleri karşılar, takılabilir bir protokolü olarak kullanılmak üzere bir protokole özgü sınıfı için sırayla: sınıf uygulamalıdır <xref:System.Net.IWebRequestCreate> arabirimi ve kaydetmeniz gerekir ile <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=nameWithType> yöntemi. Sınıfı, tüm soyut yöntemlerini ve özelliklerini geçersiz kılmanız gerekir **WebRequest** takılabilir arabirim sağlamak için.  
   
- **WebRequest** örnekleri tek seferlik kullanılmak üzere tasarlanmıştır; başka bir istek yapmak istiyorsanız Yeni Oluştur **WebRequest**. **WebRequest** destekleyen <xref:System.Runtime.Serialization.ISerializable> şablon seri hale getirmek, geliştiricilerin arabirimi **WebRequest** ve ek istekler için şablonu yeniden yapılandırma.  
+ **WebRequest** örnekleri tek seferlik kullanılmak üzere tasarlanmıştır; başka bir istekte bulunmak istiyorsanız yeni bir oluşturma **WebRequest**. **WebRequest** destekler <xref:System.Runtime.Serialization.ISerializable> geliştiricilerin şablon serileştirmek bir arabirim **WebRequest** ve ardından ek istekler için şablonu yeniden.  
   
 ## <a name="iwebrequest-create-method"></a>IWebRequest oluşturma yöntemi  
- <xref:System.Net.IWebRequestCreate.Create%2A> Yöntemdir protokole özgü sınıfının yeni bir örneğini başlatmak için sorumlu. Yeni bir **WebRequest** oluşturulur, <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> yöntemi ile kayıtlı URI öneklerle istenen URI'yi eşleşen **RegisterPrefix** yöntemi. **Oluşturma** uygun protokole özgü alt öğesi yöntemi döndürmelidir descendant başlatılmış örneği herhangi gerek kalmadan protokol için standart istek/yanıt işlem gerçekleştirme yeteneğine protokole özgü alanları değiştirdi.  
+ <xref:System.Net.IWebRequestCreate.Create%2A> Yöntemi, protokole özgü sınıfının yeni bir örneğini başlatmak için sorumludur. Yeni bir **WebRequest** oluşturulan <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> yöntemi kayıtlı URI ön ekine sahip istenen URI'yi eşleşen **RegisterPrefix** yöntemi. **Oluştur** uygun protokole özgü alt yöntemi döndürmelidir alt başlatılmış bir örneğini özellikli herhangi gerek kalmadan protokol için bir standart istek/yanıt işlem gerçekleştirme protokole özgü alanlar değiştirdi.  
   
 ## <a name="connectiongroupname-property"></a>ConnectionGroupName özelliği  
- <xref:System.Net.WebRequest.ConnectionGroupName%2A> Özelliği, böylece birden fazla isteği tek bir bağlantı üzerinden yapılabilir bağlantı için bir kaynak grubunun adı için kullanılır. Bağlantı Paylaşımı uygulamak için havuzu ve bağlantıları atama bir protokole özgü yöntemini kullanmanız gerekir. Örneğin, sağlanan <xref:System.Net.ServicePointManager> sınıfı uygulayan paylaşımı için bağlantı <xref:System.Net.HttpWebRequest> sınıfı. **ServicePointManager** sınıfı oluşturur bir <xref:System.Net.ServicePoint> , her bağlantı grubu için belirli bir sunucuya bağlantı sağlar.  
+ <xref:System.Net.WebRequest.ConnectionGroupName%2A> Özelliği, birden çok isteği tek bir bağlantı üzerinden yapılabilir, böylece bağlantı için bir kaynak grubunun adı için kullanılır. Bağlantı Paylaşımı uygulamak için havuzu ve bağlantıları atayarak protokole özgü yöntemi kullanmanız gerekir. Örneğin, sağlanan <xref:System.Net.ServicePointManager> sınıfın uyguladığı için paylaşım bağlantısı <xref:System.Net.HttpWebRequest> sınıfı. **ServicePointManager** sınıfı oluşturur bir <xref:System.Net.ServicePoint> , her bağlantı grubu için belirli bir sunucu için bir bağlantı sağlar.  
   
 ## <a name="contentlength-property"></a>ContentLength özelliğinin  
- <xref:System.Net.WebRequest.ContentLength%2A> Özelliği, sunucuya gönderilir, verileri karşıya yüklenirken veri bayt sayısını belirtir.  
+ <xref:System.Net.WebRequest.ContentLength%2A> Özellik sunucuya gönderilir, veriler karşıya yüklenirken veri bayt sayısını belirtir.  
   
- Genellikle <xref:System.Net.WebRequest.Method%2A> özelliğini ayarlayın, bir yükleme sürüyor belirtmek için ne zaman yerleştirin **ContentLength** özelliği ayarlanmış bir değer sıfırdan büyük.  
+ Genellikle <xref:System.Net.WebRequest.Method%2A> özelliğini ayarlayın, karşıya yükleme sürüyor belirtmek için ne zaman yerleştirin **ContentLength** özelliği ayarlanmış bir değer sıfırdan büyük.  
   
 ## <a name="contenttype-property"></a>ContentType özelliği  
- <xref:System.Net.WebRequest.ContentType%2A> Özelliği, protokol, göndermekte olduğunuz içerik türünü tanımlamak için sunucuya göndermenizi gerektirdiği herhangi bir özel bilgiyi sağlar. Genellikle bu MIME içerik karşıya herhangi bir veri türüdür.  
+ <xref:System.Net.WebRequest.ContentType%2A> Özelliği protokolünüzü gönderdiğiniz içerik türünü tanımlamak için sunucuya göndermek için gerektirdiği herhangi bir özel bilgiyi sağlar. Karşıya yüklenen tüm verilerin MIME içerik türü genellikle budur.  
   
-## <a name="credentials-property"></a>Kimlik bilgileri özelliği  
- <xref:System.Net.WebRequest.Credentials%2A> Özelliği, sunucu ile istek kimliğini doğrulamak için gereken bilgileri içerir. Kimlik doğrulama işleminin ayrıntılarını protokolü için uygulamalıdır. <xref:System.Net.AuthenticationManager> Sınıftır istekleri kimlik doğrulaması ve kimlik doğrulama belirtecini sağlama sorumlu. Protokolü tarafından kullanılan kimlik bilgilerini sağlayan sınıf uygulamalıdır <xref:System.Net.ICredentials> arabirimi.  
+## <a name="credentials-property"></a>Kimlik özelliği  
+ <xref:System.Net.WebRequest.Credentials%2A> Özelliği istekle birlikte sunucu kimlik doğrulaması için gereken bilgileri içerir. Kimlik doğrulama işleminin ayrıntılarını protokolünüzü için uygulamanız gerekir. <xref:System.Net.AuthenticationManager> Sınıftır isteklerine kimlik doğrulaması ve kimlik doğrulama belirteci sağlayan sorumlu. Protokolü tarafından kullanılan kimlik bilgilerini sağlar sınıfını uygulamalıdır <xref:System.Net.ICredentials> arabirimi.  
   
-## <a name="headers-property"></a>Üstbilgiler özelliği  
- <xref:System.Net.WebRequest.Headers%2A> Özelliği, istekle ilişkili meta verileri ad/değer çiftlerini rastgele bir koleksiyonunu içerir. Ad/değer çifti eklenebilir olarak ifade edilebilir protokol için gerekli herhangi bir meta veri **üstbilgileri** özelliği. Genellikle bu bilgileri çağırmadan önce ayarlamalısınız <xref:System.Net.WebRequest.GetRequestStream%2A> veya <xref:System.Net.WebRequest.GetResponse%2A> yöntemleri; istek gerçekleştirildikten sonra meta veriler salt okunur olarak kabul edilir.  
+## <a name="headers-property"></a>Üst özellik  
+ <xref:System.Net.WebRequest.Headers%2A> Özelliği, rastgele bir istekle ilişkili meta verilerin adı/değer çiftleri koleksiyonu içerir. Ad/değer çifti eklenebilir olarak ifade edilebilir protokolü için gerekli tüm meta verilere **üstbilgileri** özelliği. Çağırmadan önce bu bilgiler genellikle ayarlanmalıdır <xref:System.Net.WebRequest.GetRequestStream%2A> veya <xref:System.Net.WebRequest.GetResponse%2A> yöntemleri; istek yapıldıktan sonra meta veriler salt okunur olarak değerlendirilir.  
   
- Kullanmak için gerekli **üstbilgileri** üstbilgi meta veriyi kullanmak için özelliği. Protokol özgü meta veriler özellikleri olarak gösterilebilir; Örneğin, <xref:System.Net.HttpWebRequest.UserAgent%2A?displayProperty=nameWithType> özelliği çıkarır **User-Agent** HTTP üstbilgisi. Üstbilgi meta veri özelliği olarak kullanıma sunmak, kullanarak ayarlamak aynı özelliğe izin vermemelisiniz **üstbilgileri** özelliği.  
+ Kullanmak için gerekli **üstbilgileri** özelliğinin üstbilgi meta verileri kullanmak için. Protokole özgü meta veriler özellik olarak kullanıma sunulabilecek; Örneğin, <xref:System.Net.HttpWebRequest.UserAgent%2A?displayProperty=nameWithType> özelliği kullanıma sunan **User-Agent** HTTP üstbilgisi. Üst bilgi meta verilerini bir özellik olarak kullanıma sunduğunuzda, kullanarak ayarlamak aynı özellik vermemelidir **üstbilgileri** özelliği.  
   
 ## <a name="method-property"></a>Yöntem özelliği  
- <xref:System.Net.WebRequest.Method%2A> Fiil veya isteği gerçekleştirmek için sunucu isteyen eylem özelliği içerir. İçin varsayılan **yöntemi** özelliği, bir standart istek/yanıt eylemi ayarlanacak herhangi bir protokole özgü özellik gerek kalmadan etkinleştirmelisiniz. Örneğin, <xref:System.Net.HttpWebResponse.Method%2A> yöntemi varsayılan olarak, bir kaynak Web sunucusundan gelen istekleri ve yanıt döndüren GET.  
+ <xref:System.Net.WebRequest.Method%2A> Fiilin veya eylemin, isteği gerçekleştirmek için sunucu isteme özelliği içerir. İçin varsayılan **yöntemi** özelliği ayarlamak için herhangi bir protokole özgü özellikleri gerek kalmadan bir standart istek/yanıt eylemi etkinleştirmelidir. Örneğin, <xref:System.Net.HttpWebResponse.Method%2A> yöntemi varsayılan olarak, bir kaynağı bir Web sunucusundan istek ve yanıt döndüren GET.  
   
- Genellikle **ContentLength** özelliği için bir değer sıfır olduğunda büyük ayarlanmalıdır **yöntemi** bir fiil veya karşıya yükleme yer aldığını gösteren işlem özelliğini ayarlayın.  
+ Genellikle **ContentLength** özelliği ayarlanmalıdır bir değer sıfır olduğunda büyük **yöntemi** bir fiil ya da bir karşıya yükleme yer aldığını gösteren eylem özelliğini ayarlayın.  
   
 ## <a name="preauthenticate-property"></a>Özellik preAuthenticate  
- Uygulamaları kümesi <xref:System.Net.WebRequest.PreAuthenticate%2A> bu kimlik doğrulama bilgilerini belirtmek için özelliği ilk istekle gönderilmesi gerektiğini yerine bir kimlik doğrulaması sınaması için bekleniyor. **PreAuthenticate** özelliği Protokolü kimlik doğrulama bilgilerini ilk istekle birlikte gönderilen destekliyorsa anlamlı yalnızca.  
+ Uygulamaları kümesi <xref:System.Net.WebRequest.PreAuthenticate%2A> bu kimlik doğrulama bilgilerini belirtmek için özelliği ilk istekle gönderilmesi yerine bir kimlik doğrulaması sınaması için bekleniyor. **PreAuthenticate** özelliği yalnızca protokol ilk isteğiyle gönderilen kimlik doğrulama bilgilerini destekliyorsa, anlamlı.  
   
 ## <a name="proxy-property"></a>Proxy özelliği  
- <xref:System.Net.WebRequest.Proxy%2A> Özelliği içeren bir <xref:System.Net.IWebProxy> istenen kaynağa erişmek için kullanılan arabirim. **Proxy** özelliği yalnızca, Protokolü yönlendirilirken istekleri destekliyorsa anlamlı. Bir protokolü tarafından gerekirse varsayılan proxy ayarlamanız gerekir.  
+ <xref:System.Net.WebRequest.Proxy%2A> Özelliği içeren bir <xref:System.Net.IWebProxy> istenen kaynağa erişmek için kullanılan arabirim. **Proxy** özelliği yalnızca protokolünüzü proxy istekleri destekliyorsa anlamlı. Bir protokolünüzü tarafından gerekirse varsayılan ara sunucu ayarlamanız gerekir.  
   
- Bazı ortamlarda gibi kurumsal bir güvenlik duvarı, protokolü bir proxy sunucu kullanmak için gerekli olabilir. Bu durumda, uygulamanız gereken **IWebProxy** protokolü için çalışacak bir proxy sınıfı oluşturmak için arabirimi.  
+ Bazı ortamlarda gibi kurumsal bir güvenlik duvarı protokolünüzü bir ara sunucu kullanmak için gerekli olabilir. Bu durumda, uygulamanız gereken **IWebProxy** protokolünüzü için çalışır bir proxy sınıfı oluşturmak için arabirim.  
   
 ## <a name="requesturi-property"></a>RequestUri özelliği  
- <xref:System.Net.WebRequest.RequestUri%2A> Özelliği için geçirilen URI içeren **WebRequest.Create** yöntemi. Salt okunur olduğundan ve bir kez değiştirilemez **WebRequest** oluşturuldu. Yeniden yönlendirme, Protokolü destekliyorsa, yanıt farklı bir URI tarafından tanımlanan bir kaynaktan gelebilir. Yanıt URI'si erişim sağlamak gerekiyorsa, bu URI içeren bir ek özellik sağlamanız gerekir.  
+ <xref:System.Net.WebRequest.RequestUri%2A> Özelliği içerir URI'yi geçildi **WebRequest.Create** yöntemi. Salt okunur ve bir kez değiştirilemez **WebRequest** oluşturuldu. Yeniden yönlendirme, protokol destekliyorsa, farklı bir URI tarafından tanımlanan bir kaynaktan yanıt gelebilir. Yanıt URI'si için erişim sağlamanız gerekiyorsa, bu URI içeren ek bir özellik sağlamanız gerekir.  
   
 ## <a name="timeout-property"></a>Zaman aşımı özelliği  
- <xref:System.Net.WebRequest.Timeout%2A> Özelliği, milisaniye cinsinden istek zaman aşımına uğradı ve bir özel durum oluşturur önce beklenecek süreyi içerir. **Zaman aşımı** ile yapılan yalnızca çok zaman uyumlu istekleri geçerlidir <xref:System.Net.WebRequest.GetResponse%2A> yöntemi; zaman uyumsuz istekleri kullanmalıdır <xref:System.Net.WebRequest.Abort%2A> bekleyen isteği iptal etmek için yöntem.  
+ <xref:System.Net.WebRequest.Timeout%2A> Özelliği, milisaniye cinsinden istek zaman aşımına uğrar ve bir özel durum oluşturur önce beklenecek süreyi içerir. **Zaman aşımı** ile yalnızca çok zaman uyumlu istekleri geçerlidir <xref:System.Net.WebRequest.GetResponse%2A> yöntemi; zaman uyumsuz istekler kullanmalıdır <xref:System.Net.WebRequest.Abort%2A> bekleyen isteği iptal etmek için yöntemi.  
   
- Ayarı **zaman aşımı** özelliği yalnızca protokole özgü sınıfı bir zaman aşımı işlem uyguluyorsa anlamlı.  
+ Ayarı **zaman aşımı** özelliği yalnızca bir zaman aşımı işlem protokole özgü sınıfı kullanılıyorsa, anlamlı.  
   
 ## <a name="abort-method"></a>Abort Yöntemi  
- <xref:System.Net.WebRequest.Abort%2A> Yöntemi bir sunucu için bekleyen bir zaman uyumsuz isteği iptal eder. İstek iptal edildikten sonra çağırma **GetResponse**, **BeginGetResponse**, **EndGetResponse**, **GetRequestStream**,  **BeginGetRequestStream**, veya **EndGetRequestStream** özel durum oluşturacak bir <xref:System.Net.WebException> ile <xref:System.Net.WebException.Status%2A> özelliğini <xref:System.Net.WebExceptionStatus>.  
+ <xref:System.Net.WebRequest.Abort%2A> Yöntemi, bir sunucu için bekleyen zaman uyumsuz isteğini iptal eder. İstek iptal edildikten sonra çağırma **GetResponse yanıtına**, **BeginGetResponse**, **EndGetResponse**, **GetRequestStream**,  **BeginGetRequestStream**, veya **EndGetRequestStream** oluşturmaz bir <xref:System.Net.WebException> ile <xref:System.Net.WebException.Status%2A> özelliğini <xref:System.Net.WebExceptionStatus>.  
   
 ## <a name="begingetrequeststream-and-endgetrequeststream-methods"></a>BeginGetRequestStream ve EndGetRequestStream yöntemleri  
- <xref:System.Net.WebRequest.BeginGetRequestStream%2A> Yöntemi verileri sunucuya yüklemek için kullanılan akış için zaman uyumsuz isteği başlatır. <xref:System.Net.WebRequest.EndGetRequestStream%2A> Yöntemi zaman uyumsuz istek tamamlandıktan ve istenen akışı döndürür. Bu yöntemleri uygulamak **GetRequestStream** standart .NET Framework zaman uyumsuz desen kullanma yöntemi.  
+ <xref:System.Net.WebRequest.BeginGetRequestStream%2A> Yöntemi verileri sunucuya yüklemek için kullanılan akış için zaman uyumsuz isteği başlatır. <xref:System.Net.WebRequest.EndGetRequestStream%2A> Yöntemi zaman uyumsuz istek tamamlanır ve istenen akış döndürür. Bu yöntemleri uygulamak **GetRequestStream** yöntemi Standart .NET Framework zaman uyumsuz desen kullanma.  
   
 ## <a name="begingetresponse-and-endgetresponse-methods"></a>BeginGetResponse ve EndGetResponse yöntemleri  
- <xref:System.Net.WebRequest.BeginGetResponse%2A> Yöntemi bir sunucu için zaman uyumsuz isteği başlatır. <xref:System.Net.WebRequest.EndGetResponse%2A> Yöntemi zaman uyumsuz istek tamamlandıktan ve istenen yanıtı döndürür. Bu yöntemleri uygulamak **GetResponse** standart .NET Framework zaman uyumsuz desen kullanma yöntemi.  
+ <xref:System.Net.WebRequest.BeginGetResponse%2A> Yöntemi zaman uyumsuz isteği sunucuya başlatır. <xref:System.Net.WebRequest.EndGetResponse%2A> Yöntemi zaman uyumsuz istek tamamlanır ve istenen yanıt verir. Bu yöntemleri uygulamak **GetResponse yanıtına** yöntemi Standart .NET Framework zaman uyumsuz desen kullanma.  
   
 ## <a name="getrequeststream-method"></a>GetRequestStream yöntemi  
- <xref:System.Net.WebRequest.GetRequestStream%2A> Yöntemi, istenen sunucuya veri yazmak için kullanılan bir akış döndürür. Döndürülen akış arama değil yalnızca yazma akışı olmalıdır; tek yönlü bir sunucuya yazılan veri akışı olarak tasarlanmıştır. Akış için false döndürür <xref:System.IO.Stream.CanRead%2A> ve <xref:System.IO.Stream.CanSeek%2A> özellikleri ve için true <xref:System.IO.Stream.CanWrite%2A> özelliği.  
+ <xref:System.Net.WebRequest.GetRequestStream%2A> İstenen sunucuya veri yazmak için kullanılan bir akış yöntemi döndürür. Döndürülen akış zararı tazmin salt yazılır stream olmalıdır; tek yönlü bir sunucu için yazılan veri akışı olarak tasarlanmıştır. Akış için false döndürür <xref:System.IO.Stream.CanRead%2A> ve <xref:System.IO.Stream.CanSeek%2A> özellikleri ve için doğru <xref:System.IO.Stream.CanWrite%2A> özelliği.  
   
- **GetRequestStream** yöntemi genellikle sunucunun bir bağlantı açar ve akış göndermeden önce bu verileri gösterir gönderir üst bilgileri sunucuya gönderiliyor. Çünkü **GetRequestStream** herhangi bir ayarı isteğini başlatır **üstbilgi** özellikleri veya **ContentLength** özelliği genellikle izin verilmeyen çağrıldıktansonra**GetRequestStream**.  
+ **GetRequestStream** yöntemi genellikle sunucunun bir bağlantı açar ve akış göndermeden önce bu verileri gösteren gönderir başlık bilgilerini sunucuya gönderiliyor. Çünkü **GetRequestStream** herhangi bir ayarı isteğini başlatır **üstbilgi** özellikleri veya **ContentLength** özelliği genellikle izin verilmiyor çağrıldıktansonra**GetRequestStream**.  
   
-## <a name="getresponse-method"></a>GetResponse yöntemi  
- <xref:System.Net.WebRequest.GetResponse%2A> Yöntemi döndürür protokole özgü alt öğesi <xref:System.Net.WebResponse> sunucudan gelen yanıtı temsil eden sınıf. İstek tarafından zaten başlatıldı sürece **GetRequestStream** yöntemi, **GetResponse** yöntemi, bir bağlantı tarafından tanımlanan kaynağa oluşturur **RequestUri**yapılan bir istek türünü belirten üst bilgileri gönderir ve ardından kaynak yanıtı alır.  
+## <a name="getresponse-method"></a>GetResponse yanıtına yöntemi  
+ <xref:System.Net.WebRequest.GetResponse%2A> Yöntemi döndürür protokole özgü alt öğesi <xref:System.Net.WebResponse> sunucu yanıtı temsil eden sınıf. İstek tarafından zaten başlatıldı sürece **GetRequestStream** yöntemi **GetResponse yanıtına** yöntemi tarafından tanımlanan kaynağa bağlantı oluşturur **RequestUri**yapılan bir istek türünü belirten bir başlık bilgilerini gönderir ve sonra kaynak yanıtı alır.  
   
- Bir kez **GetResponse** yöntemi çağrıldığında, tüm özellikleri salt okunur olarak düşünülmelidir. **WebRequest** örnekleri tek seferlik kullanıma yöneliktir; başka bir istek yapmak istiyorsanız, yeni bir oluşturmalısınız **WebRequest**.  
+ Bir kez **GetResponse yanıtına** yöntemi çağrıldığında, tüm özellikleri salt okunur olarak düşünülmelidir. **WebRequest** örnekleri, tek seferlik kullanım yöneliktir; başka bir istekte bulunmak istiyorsanız, yeni bir oluşturmalısınız **WebRequest**.  
   
- **GetResponse** yöntemdir uygun bir oluşturmaktan sorumlu **WebResponse** gelen yanıtı içeren alt.  
+ **GetResponse yanıtına** yöntemdir uygun bir oluşturmaktan sorumlu **WebResponse** gelen yanıtı içeren alt.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Net.WebRequest>  

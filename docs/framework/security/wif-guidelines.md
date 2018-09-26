@@ -3,13 +3,12 @@ title: WIF yönergeleri
 ms.date: 03/30/2017
 ms.assetid: 2fc76a0b-e33c-44c1-8f32-44934eb03dd4
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: aa0dc3fc2e2121059700b5f55e4df34bc6af6b62
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ee0298af17083ca46d1e57c18d6484b4f7e554a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399658"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47079493"
 ---
 # <a name="wif-guidelines"></a>WIF yönergeleri
 -   [WIF 3.5 Kullanılarak Derlenmiş bir Uygulamayı WIF 4.5’e Geçirme Yönergeleri](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)  

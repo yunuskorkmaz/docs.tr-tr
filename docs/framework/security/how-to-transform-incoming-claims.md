@@ -1,17 +1,16 @@
 ---
-title: 'Nasıl yapılır: Gelen talep dönüştürme'
+title: 'Nasıl yapılır: Gelen talepleri dönüştürme'
 ms.date: 03/30/2017
 ms.assetid: 2831d514-d9d8-4200-9192-954bb6da1126
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: cb71e320116c3af73139f1a8083fa62e8a7e21a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8673b4520d9727ae1aa78ef0bc9f435defb02598
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400178"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47171328"
 ---
-# <a name="how-to-transform-incoming-claims"></a>Nasıl yapılır: Gelen talep dönüştürme
+# <a name="how-to-transform-incoming-claims"></a>Nasıl yapılır: Gelen talepleri dönüştürme
 ## <a name="applies-to"></a>Uygulandığı öğe:  
   
 -   Microsoft® Windows® Identity Foundation (WIF)  
@@ -19,7 +18,7 @@ ms.locfileid: "33400178"
 -   ASP.NET® Web formları  
   
 ## <a name="summary"></a>Özet  
- Bu yöntem basit bir talep kullanan ASP.NET Web Forms uygulaması oluşturma ve gelen talepleri dönüştürmek için ayrıntılı adım adım yordamlar verilmektedir. Ayrıca, uygulamayı çalıştırdığınızda, dönüştürülmüş talep sunulduğundan emin doğrulamak için uygulamayı test etme için yönergeler sağlar.  
+ Bu yöntem, basit bir talep kullanan ASP.NET Web Forms uygulaması oluşturma ve gelen talepleri dönüştürme için adım adım ayrıntılı yordamları sağlar. Ayrıca, uygulamayı çalıştırdığınızda dönüştürülmüş beyanların sunulduğunu doğrulamak için uygulamayı test etme için yönergeler sağlar.  
   
 ## <a name="contents"></a>İçindekiler  
   
@@ -31,7 +30,7 @@ ms.locfileid: "33400178"
   
 -   1. adım – basit bir ASP.NET Web Forms uygulaması oluşturma  
   
--   Adım 2 – uygulama talep özel ClaimsAuthenticationManager kullanarak dönüşümleri  
+-   Adım 2 – uygulama talepleri özel bir ClaimsAuthenticationManager kullanarak dönüştürme  
   
 -   3. Adım – Çözümünüzü Test Etme  
   
@@ -39,18 +38,18 @@ ms.locfileid: "33400178"
   
 -   Bir ASP.NET Web Forms uygulaması talep tabanlı kimlik doğrulaması için yapılandırma  
   
--   Bir yönetici rolü talep ekleyerek gelen talep dönüştürme  
+-   Bir yönetici rolü talep ekleyerek gelen talepleri dönüştürme  
   
 -   Düzgün çalışıp çalışmadığını görmek için ASP.NET Web Forms uygulamayı test etme  
   
 ## <a name="overview"></a>Genel Bakış  
- WIF sunan adlı bir sınıf <xref:System.Security.Claims.ClaimsAuthenticationManager> bir bağlı olan taraf (RP) uygulamaya verildikleri önce talep değiştirmek kullanıcıların sağlar. <xref:System.Security.Claims.ClaimsAuthenticationManager> Kimlik doğrulaması ve temel uygulama kodu arasında sorunları ayrılması için kullanışlıdır. Aşağıdaki örnek, gelen talepleri bir rolü eklemek gösterilmiştir <xref:System.Security.Claims.ClaimsPrincipal> , gereken tarafından RP.  
+ WIF sunan adlı bir sınıf <xref:System.Security.Claims.ClaimsAuthenticationManager> kullanıcıların bir bağlı olan taraf (RP) uygulaması verildikleri önce talep değiştirmesine izin verir. <xref:System.Security.Claims.ClaimsAuthenticationManager> Kimlik doğrulama ve temel uygulama kodu arasındaki ayrımı için kullanışlıdır. Aşağıdaki örnekte, gelen talepleri bir role eklemek gösterilmiştir <xref:System.Security.Claims.ClaimsPrincipal> tarafından RP gerekebilir.  
   
 ## <a name="summary-of-steps"></a>Adımların Özeti  
   
 -   1. adım – basit bir ASP.NET Web Forms uygulaması oluşturma  
   
--   Adım 2 – uygulama talep özel ClaimsAuthenticationManager kullanarak dönüşümleri  
+-   Adım 2 – uygulama talepleri özel bir ClaimsAuthenticationManager kullanarak dönüştürme  
   
 -   3. Adım – Çözümünüzü Test Etme  
   
@@ -61,17 +60,17 @@ ms.locfileid: "33400178"
   
 1.  Visual Studio'yu yönetici olarak yükseltilmiş modda başlatın.  
   
-2.  Visual Studio'da sırasıyla **dosya**, tıklatın **yeni**ve ardından **proje**.  
+2.  Visual Studio'da **dosya**, tıklayın **yeni**ve ardından **proje**.  
   
-3.  İçinde **yeni proje** penceresinde tıklatın **ASP.NET Web Forms uygulaması**.  
+3.  İçinde **yeni proje** penceresinde tıklayın **ASP.NET Web Forms uygulaması**.  
   
-4.  İçinde **adı**, girin `TestApp` ve basın **Tamam**.  
+4.  İçinde **adı**, girin `TestApp` basın **Tamam**.  
   
-5.  Sağ **TestApp** altında proje **Çözüm Gezgini**seçeneğini belirleyip **kimlik ve erişim**.  
+5.  Sağ **TestApp** altındaki proje **Çözüm Gezgini**, ardından **kimlik ve erişim**.  
   
-6.  **Kimlik ve erişim** penceresi görüntülenir. Altında **sağlayıcıları**seçin **yerel geliştirme STS ile uygulamanızı Test**, ardından **Uygula**.  
+6.  **Kimlik ve erişim** penceresi görüntülenir. Altında **sağlayıcıları**seçin **uygulamanızı yerel geliştirme STS'si ile Test**, ardından **Uygula**.  
   
-7.  İçinde *Default.aspx* dosya, varolan biçimlendirme şununla değiştirin ve ardından dosyayı kaydedin:  
+7.  İçinde *Default.aspx* dosya, var olan bir biçimlendirme aşağıdakiyle değiştirin ve ardından dosyayı kaydedin:  
   
     ```  
     <%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"  
@@ -88,7 +87,7 @@ ms.locfileid: "33400178"
     </asp:Content>  
     ```  
   
-8.  Adlı arka plan kodu dosyasını açın *Default.aspx.cs*. Ardından dosyayı kaydedin aşağıdaki var olan kodu değiştirin:  
+8.  Adlı arka plan kod dosyası açın *Default.aspx.cs*. Ardından dosyayı kaydedin, aşağıdaki varolan kodu değiştirin:  
   
     ```csharp  
     using System;  
@@ -109,32 +108,32 @@ ms.locfileid: "33400178"
     }  
     ```  
   
-## <a name="step-2--implement-claims-transformation-using-a-custom-claimsauthenticationmanager"></a>Adım 2 – uygulama talep özel ClaimsAuthenticationManager kullanarak dönüşümleri  
- Bu adımda varsayılan işlevleri geçersiz kılar <xref:System.Security.Claims.ClaimsAuthenticationManager> gelen asıl bir yönetici rolü eklemek için sınıfı.  
+## <a name="step-2--implement-claims-transformation-using-a-custom-claimsauthenticationmanager"></a>Adım 2 – uygulama talepleri özel bir ClaimsAuthenticationManager kullanarak dönüştürme  
+ Bu adımda varsayılan işlevler geçersiz kılacak olan <xref:System.Security.Claims.ClaimsAuthenticationManager> gelen sorumlusuna bir yönetici rolü eklemek için sınıfı.  
   
-#### <a name="to-implement-claims-transformation-using-a-custom-claimsauthenticationmanager"></a>Talep dönüştürme özel ClaimsAuthenticationManager kullanarak uygulamak için  
+#### <a name="to-implement-claims-transformation-using-a-custom-claimsauthenticationmanager"></a>Özel ClaimsAuthenticationManager kullanarak talep dönüştürme uygulamak için  
   
-1.  Visual Studio'da sağ çözüm üzerinde tıklatın **Ekle**ve ardından **yeni proje**.  
+1.  Visual Studio'da sağ tıklayın, çözümü tıklayın **Ekle**ve ardından **yeni proje**.  
   
-2.  İçinde **Yeni Proje Ekle** penceresinde, seçin **sınıf kitaplığı** gelen **Visual C#** şablonları listesinde, girin `ClaimsTransformation`ve tuşuna basarak **Tamam**. Yeni proje, çözüm klasörünüzde oluşturulur.  
+2.  İçinde **Yeni Proje Ekle** penceresinde **sınıf kitaplığı** gelen **Visual C#** şablonları listesinde, girin `ClaimsTransformation`ve tuşuna **Tamam**. Yeni proje, çözüm klasörünüzde oluşturulur.  
   
 3.  Sağ **başvuruları** altında **ClaimsTransformation** proje ve ardından **Başvuru Ekle**.  
   
-4.  İçinde **başvuru Yöneticisi** penceresinde, seçin **System.IdentityModel**ve ardından **Tamam**.  
+4.  İçinde **başvuru Yöneticisi** penceresinde **System.IdentityModel**ve ardından **Tamam**.  
   
-5.  Açık **Class1.cs**, veya yoksa, sağ **ClaimsTransformation**, tıklatın **Ekle**, ardından **sınıfı...**  
+5.  Açık **Class1.cs**, veya yoksa, sağ **ClaimsTransformation**, tıklayın **Ekle**, ardından **sınıfı...**  
   
-6.  Aşağıdaki kod dosyasına yönergeleri kullanarak:  
+6.  Aşağıdaki kod dosyasına using yönergeleri:  
   
     ```csharp  
     using System.Security.Claims;  
     using System.Security.Principal;  
     ```  
   
-7.  Aşağıdaki sınıf ve yöntemi kod dosyasına ekleyin.  
+7.  Aşağıdaki sınıf ve yöntem kod dosyasını ekleyin.  
   
     > [!WARNING]
-    >  Aşağıdaki kod, yalnızca tanıtım amaçlıdır; hedeflenen izinlerinizi üretim kodunda doğruladığınızdan emin olun.  
+    >  Aşağıdaki kod, yalnızca gösterim amaçlıdır; hedeflenen izinlerinizi üretim kodunda doğruladığınızdan emin olun.  
   
     ```csharp  
     public class ClaimsTransformationModule : ClaimsAuthenticationManager  
@@ -151,26 +150,26 @@ ms.locfileid: "33400178"
     }  
     ```  
   
-8.  Dosyayı kaydedin ve yapı **ClaimsTransformation** projesi.  
+8.  Dosyayı kaydedin ve yapı **ClaimsTransformation** proje.  
   
-9. İçinde **TestApp** ASP.NET proje başvuruları üzerinde sağ tıklayın ve ardından **Başvuru Ekle**.  
+9. İçinde **TestApp** ASP.NET projesi başvuruları üzerinde sağ tıklayın ve ardından **Başvuru Ekle**.  
   
-10. İçinde **başvuru Yöneticisi** penceresinde, seçin **çözüm** sol menüden seçin **ClaimsTransformation** doldurulan seçenekleri ve ardından  **Tamam**.  
+10. İçinde **başvuru Yöneticisi** penceresinde **çözüm** sol menüden **ClaimsTransformation** doldurulmuş seçenekleri ve ardından  **Tamam**.  
   
-11. Kök **Web.config** dosya, gitmek  **\<System.IdentityModel >** girişi. İçinde  **\<identityConfiguration >** öğeler eklemek için aşağıdakileri satır ve dosyayı kaydedin:  
+11. Kök **Web.config** gidin, dosya  **\<system.identityModel >** girişi. İçinde  **\<identityConfiguration >** öğeleri eklemek için aşağıdakileri satır ve dosyayı kaydedin:  
   
     ```xml  
     <claimsAuthenticationManager type="ClaimsTransformation.ClaimsTransformationModule, ClaimsTransformation" />  
     ```  
   
 ## <a name="step-3--test-your-solution"></a>3. Adım – Çözümünüzü Test Etme  
- Bu adımda ASP.NET Web Forms uygulamanızı test etmek ve kullanıcı Forms kimlik doğrulaması ile oturum açtığında, talep sunulduğundan emin olun.  
+ Bu adımda ASP.NET Web Forms uygulamanızı test edin ve bir kullanıcı, Forms kimlik doğrulaması ile oturum açtığında beyanların sunulduğunu doğrulayın.  
   
-#### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-forms-authentication"></a>Form kimlik doğrulaması kullanarak talepler için ASP.NET Web Forms uygulamanızı test etmek için  
+#### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-forms-authentication"></a>Form kimlik doğrulaması kullanarak talep için ASP.NET Web Forms uygulamanızı test etmek için  
   
 1.  Tuşuna **F5** oluşturun ve uygulamayı çalıştırın. İle sunulan *Default.aspx*.  
   
-2.  Üzerinde *Default.aspx* sayfasında, bir tablonun altına görmelisiniz **bilgisayarınızı talep** içeren başlık **veren**, **Serileştirilmiştir**, **Türü**, **değeri**, ve **ValueType** , hesabınız hakkında bilgiler talepleri. Son satırını aşağıdaki şekilde sunulması gereken:  
+2.  Üzerinde *Default.aspx* sayfasında, bir tablonun altına görmeniz **bilgisayarınızı talep** içeren başlık **veren**, **OriginalIssuer**, **Türü**, **değer**, ve **ValueType** talep, hesabınız hakkında bilgiler. Son satırı aşağıdaki şekilde sunulması:  
   
     ||||||  
     |-|-|-|-|-|  

@@ -1,5 +1,5 @@
 ---
-title: Ağ izleme yorumlama
+title: Ağ izlemeyi yorumlama
 ms.date: 03/30/2017
 helpviewer_keywords:
 - TraceMode attribute
@@ -11,25 +11,24 @@ helpviewer_keywords:
 ms.assetid: ad22b4b8-00af-4778-9cca-cb609ce1f8ff
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 74ffa8a0ced264b29cd30cdcd1ca8f9a87c8c358
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d05e0f374f4454c95dd02be8bd2eff573040f97e
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396967"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47087859"
 ---
-# <a name="interpreting-network-tracing"></a>Ağ izleme yorumlama
-Ağ izleme etkinleştirildiğinde izleme uygulamanızı yapar çeşitli çağrıları yakalamak için kullanabileceğiniz <xref:System.Net> sınıfı üyeleri. Bu çağrılar çıkışı aşağıdaki örneklere benzer olabilir.  
+# <a name="interpreting-network-tracing"></a>Ağ izlemeyi yorumlama
+Ağ izleme etkin olduğunda izleme çağrıları, uygulamanızın çeşitli yapar yakalamak için kullanabileceğiniz <xref:System.Net> sınıf üyeleri. Bu çağrılarının çıktısı aşağıdaki örneklere benzer olabilir.  
   
 ```  
 [588]   (4357)   Entering Socket#33574638::Send()  
 [588]   (4387)   Exiting Socket#33574638::Send()-> 61#61  
 ```  
   
- [588] önceki örnekte geçerli iş parçacığının benzersiz tanımlayıcısıdır. (4357) ve (4387) olan zaman damgaları belirten uygulama başlatıldığından bu yana geçen milisaniye sayısı. Zaman damgası aşağıdaki veri girme ve yönteminden çıkılıyor uygulama gösterir **Socket.Send**. Nesne yürütme **Gönder** yöntemi kendi benzersiz tanımlayıcı olarak 33574638 sahiptir. Yöntemi çıkış izleme dönüş değeri (önceki örnekte 61) içerir.  
+ [588] yukarıdaki örnekte geçerli iş parçacığının benzersiz tanımlayıcısıdır. (4357) ve (4387) olan zaman damgaları gösteren uygulama başlatıldığından beri geçen milisaniye sayısını. Zaman damgası aşağıdaki veri girme ve yönteminden çıkılıyor uygulama gösterir **Socket.Send**. Nesnesini yürütürken **Gönder** yöntemi kendi benzersiz tanımlayıcı olarak 33574638 sahiptir. Yöntemi çıkış izleme (önceki örnekte 61) dönüş değerini içerir.  
   
- Ağ izlerini gönderilen veya uygulama düzeyi protokolleri Köprü Metni Aktarım Protokolü (HTTP) gibi kullanarak, uygulama tarafından alınan ağ trafiği yakalayabilirsiniz. Bu veriler metin olarak yakalanabilir ve isteğe bağlı olarak, onaltılık veri. Onaltılık veri, belirttiğiniz zaman kullanılabilir **includehex** değeri olarak **İzlemeModu** özniteliği. (Bu öznitelik hakkında ayrıntılı bilgi için bkz: [nasıl yapılır: yapılandırma ağ izleme](../../../docs/framework/network-programming/how-to-configure-network-tracing.md).) Aşağıdaki örnek izleme kullanılarak oluşturulan **includehex**.  
+ Ağ izlerini gönderilen veya alınan Köprü Metni Aktarım Protokolü (HTTP) gibi uygulama düzeyi protokolleri kullanarak uygulamanız tarafından ağ trafiği yakalayabilirsiniz. Bu veriler metin olarak yakalanır ve isteğe bağlı olarak onaltılık veri. Onaltılık veriler, belirttiğiniz zaman kullanılabilir **includehex** değeri olarak **İzlemeModu** özniteliği. (Bu öznitelik hakkında ayrıntılı bilgi için bkz: [nasıl yapılır: ağ izlemeyi yapılandırma](../../../docs/framework/network-programming/how-to-configure-network-tracing.md).) Aşağıdaki örnek izleme kullanılarak oluşturulan **includehex**.  
   
  `[1692]   (1142)   00000000 : 47 45 54 20 2F 77 70 61-64 2E 64 61 74 20 48 54 : GET /wpad.dat HT`  
   
@@ -39,7 +38,7 @@ Ağ izleme etkinleştirildiğinde izleme uygulamanızı yapar çeşitli çağrı
   
  `[1692]   (1142)   00000030 : 6F 6E 3A 20 43 6C 6F 73-65 0D 0A 0D 0A     : on: Close....`  
   
- Onaltılık verileri atlamak için belirtmeniz **protocolonly** değeri olarak **İzlemeModu** özniteliği. İzleme aşağıdaki örnekte, **protocolonly** belirtilir.  
+ Onaltılık veri atlamak için belirtin **protocolonly** değeri olarak **İzlemeModu** özniteliği. İzleme aşağıdaki örnekte, **protocolonly** belirtilir.  
   
  `[2444]   (594)   Data from ConnectStream#33574638::WriteHeaders<<GET /wpad.dat HTTP/1.1`  
   

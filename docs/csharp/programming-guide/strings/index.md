@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 9b108a1613e01016c541d088612303c6aaa13629
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: a06a5144e91901417906f071efd8e19c10cf2cba
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961475"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170658"
 ---
 # <a name="strings-c-programming-guide"></a>Dizeler (C# Programlama Kılavuzu)
 Türünde bir nesne bir dizedir <xref:System.String> metin değeri olan. Metin sıralı salt okunur bir koleksiyonu dahili olarak depolanan <xref:System.Char> nesneleri. Bir C# dizenin sonuna kadar hiçbir null Sonlandırıcı karakter yoktur; Bu nedenle bir C# dize herhangi bir sayıda gömülü null karakterleri ('\0') içerebilir. <xref:System.String.Length%2A> Bir dize özelliğini sayısını temsil eden `Char` içerdiği, Unicode karakter sayısını nesneleri. Bir dizedeki tek Unicode kod noktaları erişmek için <xref:System.Globalization.StringInfo> nesne.  
@@ -64,7 +64,7 @@ Türünde bir nesne bir dizedir <xref:System.String> metin değeri olan. Metin s
 |\U|Unicode çıkış dizisi vekil çiftleri için.|\Unnnnnnnn|  
 |\u|Unicode çıkış dizisi|\u0041 = "A"|  
 |\v|dikey sekme|0x000B|  
-|\x|Unicode çıkış dizisi değişken uzunluğu dışında "\u" benzer.|\x0041 = "A"|  
+|\x|Unicode çıkış dizisi değişken uzunluğu dışında "\u" benzer.|\x0041 veya \x41 "A" =|  
   
 > [!NOTE]
 >  Derleme zamanında harfi harfine dizeler sıradan dizelerle aynı kaçış dizileri dönüştürülür. Bu nedenle, hata ayıklayıcı İzleme penceresinde verbatim dizesi görüntülerseniz, kaynak kodunuzdan verbatim sürümünü değil derleyici tarafından eklenmiş kaçış karakterleri görürsünüz. Örneğin, verbatim dizesi @"C:\files.txt" İzleme penceresinde görünür "C:\\\files.txt".  

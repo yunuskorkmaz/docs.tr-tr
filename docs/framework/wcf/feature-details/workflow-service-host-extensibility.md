@@ -3,11 +3,11 @@ title: İş Akışı Hizmeti Konak Genişletilebilirliği
 ms.date: 03/30/2017
 ms.assetid: c0e8f7bb-cb13-49ec-852f-b85d7c23972f
 ms.openlocfilehash: 6541558601c8f5daf255f2e7e5d774e41b59be2d
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46696351"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47171861"
 ---
 # <a name="workflow-service-host-extensibility"></a>İş Akışı Hizmeti Konak Genişletilebilirliği
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] sağlar <xref:System.ServiceModel.Activities.WorkflowServiceHost> iş akışı hizmetlerini barındırma için sınıf. Bu sınıf, kendi kendine yönetilen bir uygulamada bir iş akışı hizmeti veya bir Windows hizmet barındırıyorsanız kullanılır. Bu sınıf, Internet Information Services (IIS) veya Windows İşlem Etkinleştirme Hizmeti (WAS) ile bir iş akışı hizmeti barındırma olduğunda da kullanılır. <xref:System.ServiceModel.Activities.WorkflowServiceHost> Sınıfı özel uzantıları eklemeyi uzantı noktaları boşta davranışı değiştirmek ve ana bilgisayar, hizmet olmayan iş akışları (Mesajlaşma etkinlikleri kullanmayın iş akışları) sağlar.  

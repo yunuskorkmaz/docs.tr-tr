@@ -19,18 +19,17 @@ helpviewer_keywords:
 ms.assetid: 945d00c6-7202-466c-9df9-140b84156d43
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: c9101957c6c4b9961ca5985bda8b8f82d69b45d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: edc65f46b69ef3b72092c0182529b9127cc25911
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397708"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47086203"
 ---
 # <a name="using-a-synchronous-client-socket"></a>Zaman uyumlu istemci yuvası kullanma
-Ağ işlemi tamamlanırken bir zaman uyumlu istemci yuva uygulama programı askıya alır. Zaman uyumlu yuva ağ yoğun olarak kullanılır, işlem için uygulamalar için uygun değildir, ancak basit ağ hizmetlerine erişim için diğer uygulamalar için etkinleştirebilirsiniz.  
+Ağ işlemi tamamlanırken bir zaman uyumlu istemci yuvası uygulama programı askıya alır. Eşzamanlı yuva kendi işlemleri için ağ ağır olarak kullanan uygulamalar için uygun değildir, ancak bunlar diğer uygulamalar için Ağ Hizmetleri için basit erişim sağlar.  
   
- Veri göndermek için bir bayt dizisi birine geçirmek <xref:System.Net.Sockets.Socket> sınıfının gönderme veri yöntemleri (<xref:System.Net.Sockets.Socket.Send%2A> ve <xref:System.Net.Sockets.Socket.SendTo%2A>). Aşağıdaki örnekte bir dizeyi bir bayt dizisi kullanarak arabellek kodlar <xref:System.Text.Encoding.ASCII%2A?displayProperty=nameWithType> özelliği ve kullanarak ağ aygıtı için arabellek iletir **Gönder** yöntemi. **Gönder** yöntemi ağ cihazına gönderilen bayt sayısını döndürür.  
+ Veri göndermek için bir bayt dizisi birine geçmesi <xref:System.Net.Sockets.Socket> sınıfın veri gönderme yöntemleri (<xref:System.Net.Sockets.Socket.Send%2A> ve <xref:System.Net.Sockets.Socket.SendTo%2A>). Aşağıdaki örnek bir dizeyi bir bayt dizisi kullanarak arabellek kodlar <xref:System.Text.Encoding.ASCII%2A?displayProperty=nameWithType> özelliği ve ardından ağ aygıtıyla arabellek iletir **Gönder** yöntemi. **Gönder** yöntem ağ cihazına gönderilen bayt sayısını döndürür.  
   
 ```vb  
 Dim msg As Byte() = _  
@@ -43,9 +42,9 @@ byte[] msg = System.Text.Encoding.ASCII.GetBytes("This is a test");
 int bytesSent = s.Send(msg);  
 ```  
   
- **Gönder** yöntemi arabellekteki bayt kaldırır ve bunları ağ cihazına gönderilmek üzere ağ arabirimine sahip sıralar. Ağ arabirimi verileri hemen göndermek, ancak bağlantı normalde ile kapalı olduğu sürece, sonuç olarak, göndereceğiniz <xref:System.Net.Sockets.Socket.Shutdown%2A> yöntemi.  
+ **Gönder** yöntemi arabellekteki bayt kaldırır ve ağ cihazına gönderilmek üzere ağ arabirimi ile kuyruğa. Ağ arabirimi verileri hemen göndermek, ancak bu bağlantı normalde ile kapalı olduğu sürece bu sonuç olarak, gönderecek <xref:System.Net.Sockets.Socket.Shutdown%2A> yöntemi.  
   
- Bir ağ aygıtından veri almak için bir arabellek birine geçirmek **yuva** sınıfının aldığınız verilerinin yöntemleri (<xref:System.Net.Sockets.Socket.Receive%2A> ve <xref:System.Net.Sockets.Socket.ReceiveFrom%2A>). Bayt ağdan veya yuva kapatılana kadar alınana kadar zaman uyumlu yuva uygulama askıya alınır. Aşağıdaki örnek veri ağdan alır ve konsolda görüntülenir. Örneğin, ağdan gelen veriler ASCII kodlanmış metin olduğunu varsayar. **Alma** yöntemi ağdan alınan bayt sayısını döndürür.  
+ Bir ağ aygıtından veri almak, bir arabellek birine geçmesi **yuva** sınıfın alma veri yöntemleri (<xref:System.Net.Sockets.Socket.Receive%2A> ve <xref:System.Net.Sockets.Socket.ReceiveFrom%2A>). Bayt ağdan veya yuva kapatılana kadar alınana kadar eşzamanlı yuva uygulama askıya alırız. Aşağıdaki örnek, ağ üzerinden veri aldığı ve daha sonra konsolda görüntüler. Örneğin, ağdan gelen verileri ASCII kodlamalı metin olduğunu varsayar. **Alma** yöntemi ağdan alınan bayt sayısını döndürür.  
   
 ```vb  
 Dim bytes(1024) As Byte  
@@ -61,7 +60,7 @@ Console.WriteLine("Echoed text = {0}",
     System.Text.Encoding.ASCII.GetString(bytes, 0, bytesRec));  
 ```  
   
- Yuva artık gerekli olmadığında çağırarak serbest bırakmanız <xref:System.Net.Sockets.Socket.Shutdown%2A> yöntemi ve ardından çağırma **Kapat** yöntemi. Aşağıdaki örnek serbest bir **yuva**. <xref:System.Net.Sockets.SocketShutdown> Numaralandırma yuva gönderme, alma veya her ikisi için de kapatılıp kapatılmayacağını belirtmek sabitleri tanımlar.  
+ Yuva artık gerekli değilse, bunu çağırarak serbest bırakmanız <xref:System.Net.Sockets.Socket.Shutdown%2A> yöntemi ve ardından arama **Kapat** yöntemi. Aşağıdaki örnek sürümleri bir **yuva**. <xref:System.Net.Sockets.SocketShutdown> Yuvaya gönderme, alma veya her ikisi için de kapatılıp kapatılmayacağını belirtir sabitleri sabit listesi tanımlar.  
   
 ```vb  
 s.Shutdown(SocketShutdown.Both)  

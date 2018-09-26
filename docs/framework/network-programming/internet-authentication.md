@@ -17,30 +17,29 @@ helpviewer_keywords:
 ms.assetid: d342e87c-f672-4660-a513-41a2f2b80c4a
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: e44d752e5743d7d56bdce9b216b4cf5f5f920734
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e0f1ad373f8ec7687b44856a53e1e35b8b6baf8c
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396191"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47089068"
 ---
 # <a name="internet-authentication"></a>Internet kimlik doğrulama
-<xref:System.Net> Sınıflarını istemci kimlik doğrulaması mekanizmaları, temel standart Internet kimlik doğrulama yöntemleri de dahil olmak üzere çeşitli destek, Özet, NTLM, negotiate ve Kerberos kimlik doğrulaması, yanı sıra oluşturabileceğiniz özel yöntemler.  
+<xref:System.Net> Sınıfları istemci kimlik doğrulama mekanizmaları, temel standart Internet kimlik doğrulama yöntemleri de dahil olmak üzere çeşitli destek, Özet, negotiate, NTLM ve Kerberos kimlik doğrulaması, hem de oluşturabileceğiniz özel yöntemler.  
   
- İçinde depolanan kimlik doğrulama kimlik bilgileri <xref:System.Net.NetworkCredential> ve <xref:System.Net.CredentialCache> sınıfları, uygulayan <xref:System.Net.ICredentials> arabirimi. Bu sınıfların biri için kimlik bilgileri sorgulandığında örneğini döndürür **NetworkCredential** sınıfı. Kimlik doğrulama işlemi tarafından yönetilen <xref:System.Net.AuthenticationManager> sınıfı ve gerçek kimlik doğrulama işlemi uygulayan bir kimlik doğrulama modülü sınıfı tarafından gerçekleştirilen <xref:System.Net.IAuthenticationModule> arabirimi. Özel kimlik doğrulama modülü ile kaydetmeniz gerekir **bulunan** kullanılabilmesi için önce; modülleri temel, Özet için anlaşma, NTLM ve Kerberos kimlik doğrulama yöntemleri varsayılan olarak kayıtlı.  
+ Kimlik doğrulama kimlik bilgileri depolanır <xref:System.Net.NetworkCredential> ve <xref:System.Net.CredentialCache> uygulayan sınıflar <xref:System.Net.ICredentials> arabirimi. Bu sınıflardan birine kimlik bilgileri sorgulandığında örneğini döndürür. **NetworkCredential** sınıfı. Kimlik doğrulama işlemi tarafından yönetilen <xref:System.Net.AuthenticationManager> sınıfı ve gerçek kimlik doğrulama işlemi uygulayan bir kimlik doğrulama modülü sınıfı tarafından gerçekleştirilen <xref:System.Net.IAuthenticationModule> arabirimi. Özel kimlik doğrulama modülü ile kaydetmelisiniz **bulunan** kullanılmadan önce; modüller için temel, Özet, negotiate, NTLM ve Kerberos kimlik doğrulama yöntemleri varsayılan olarak kayıtlı.  
   
- **NetworkCredential** bir URI tarafından tanımlanan tek bir Internet kaynağına ile ilişkili kimlik bilgileri kümesi depolar ve bunları herhangi çağrısının yanıtı döndürür <xref:System.Net.NetworkCredential.GetCredential%2A> yöntemi. **NetworkCredential** sınıf sınırlı sayıda Internet kaynaklarına erişen uygulamalar veya tüm durumlarda aynı kimlik bilgileri kümesi kullanan uygulamaları tarafından genellikle kullanılan.  
+ **NetworkCredential** URI tarafından tanımlanan tek bir Internet kaynağına ile ilişkili kimlik bilgileri depolar ve yanıt olarak yapılan tüm çağrıların döndürür <xref:System.Net.NetworkCredential.GetCredential%2A> yöntemi. **NetworkCredential** sınıf genellikle sınırlı sayıda Internet kaynaklarına erişen uygulamaları veya her durumda aynı kimlik bilgileri kümesi kullanan uygulamalar tarafından kullanılır.  
   
- **CredentialCache** sınıfı bir koleksiyon çeşitli Web kaynakları için kimlik bilgileri depolar. Zaman <xref:System.Net.CredentialCache.GetCredential%2A> yöntemi çağrıldığında, **CredentialCache** Web kaynağına ve istenen kimlik doğrulama şeması URI'si tarafından belirlenen kimlik bilgileri, uygun kümesini döndürür. Farklı kimlik doğrulama şemasını ile Internet kaynakların çeşitli kullanan uygulamalar yararlı kullanımından **CredentialCache** sınıfının tüm kimlik bilgilerini depolar ve istenen şekilde sağlar.  
+ **CredentialCache** sınıfı depolayan çeşitli Web kaynaklar için kimlik bilgileri koleksiyonu. Zaman <xref:System.Net.CredentialCache.GetCredential%2A> yöntemi çağrıldığında **CredentialCache** uygun bir dizi kimlik bilgisi, Web kaynağı ve istenen kimlik doğrulama şeması URI'si tarafından belirlenen şekilde döndürür. Farklı kimlik doğrulama düzenleri çeşitli Internet kaynakları kullanan uygulamalar kullanma avantajını yakalayabilirler **CredentialCache** tüm kimlik bilgilerini depolar ve bunların istendiği gibi sağlar sınıfını.  
   
- Bir Internet kaynağına kimlik doğrulaması istediğinde <xref:System.Net.WebRequest.GetResponse%2A?displayProperty=nameWithType> yöntemi gönderir <xref:System.Net.WebRequest> için **bulunan** istek için kimlik bilgileri ile birlikte. İsteği daha sonra şu işlem göre kimlik doğrulaması:  
+ Bir Internet kaynağına kimlik doğrulaması istediğinde <xref:System.Net.WebRequest.GetResponse%2A?displayProperty=nameWithType> yöntemi gönderir <xref:System.Net.WebRequest> için **bulunan** birlikte bir istek için kimlik bilgileri. İsteğin şu işlem göre doğrulanır:  
   
-1.  **Bulunan** çağrıları <xref:System.Net.IAuthenticationModule.Authenticate%2A> her kayıtlı sırayla kayıtlı kimlik doğrulama modülleri yöntemi. **Bulunan** döndürmez ilk modülünü kullanan **null** kimlik doğrulama işlemini gerçekleştirmek için. İşleminin ayrıntılarını dahil edilen kimlik doğrulama modülü türüne bağlı olarak farklılık gösterir.  
+1.  **Bulunan** çağrıları <xref:System.Net.IAuthenticationModule.Authenticate%2A> yöntemi her kayıtlı sırada kayıtlı kimlik doğrulama modülü. **Bulunan** döndürmez ilk modülü kullanır **null** kimlik doğrulama işlemini gerçekleştirmek için. İşlemin ayrıntılarını ilgili kimlik doğrulama modülü türüne bağlı olarak değişir.  
   
-2.  Kimlik doğrulama işlemi tamamlandığında, kimlik doğrulama modülü döndüren bir <xref:System.Net.Authorization> için **WebRequest** Internet kaynağa erişmek için gerekli bilgileri içerir.  
+2.  Kimlik doğrulama işlemi tamamlandıktan sonra kimlik doğrulama modülü döndürür bir <xref:System.Net.Authorization> için **WebRequest** Internet kaynağına erişmek için gereken bilgileri içerir.  
   
- Bazı kimlik doğrulama şemasını bir kullanıcı, bir kaynak için bir istek yapmadan doğrulayabilir. Bir uygulama, böylece en az bir gidiş dönüş sunucuya ortadan kaldırılır kullanıcıyla kaynak preauthenticating tarafından zamandan tasarruf edebilirsiniz. Ya da daha sonra kullanıcıya daha iyi yanıt olması için program başlatma sırasında kimlik doğrulaması gerçekleştirebilir. Ön kimlik doğrulaması kümesi kullanan kimlik doğrulama şemasını <xref:System.Net.IAuthenticationModule.PreAuthenticate%2A> özelliğine **doğru**.  
+ Bazı kimlik doğrulama düzeni bir kaynak için bir istek yapmadan kullanıcı kimlik doğrulaması yapabilir. Bir uygulama, bu nedenle sunucu için en az bir gidiş dönüş ortadan kaynak kullanıcıyla preauthenticating tarafından zamandan tasarruf edebilirsiniz. Veya, daha sonra kullanıcıya daha duyarlı olmamız için program başlatma sırasında kimlik doğrulaması gerçekleştirebilirsiniz. Ön kimlik doğrulaması kullanabilir kimlik doğrulama düzenleri <xref:System.Net.IAuthenticationModule.PreAuthenticate%2A> özelliğini **true**.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Temel ve Özet Kimlik Doğrulama](../../../docs/framework/network-programming/basic-and-digest-authentication.md)  

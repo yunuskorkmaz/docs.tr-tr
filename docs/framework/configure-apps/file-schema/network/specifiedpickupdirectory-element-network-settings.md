@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0121f49d-bff2-4bc6-af06-f1628dcd61f1
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 50ab7387fc5e2cac65cac1a6dba0e563225beec9
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: b62dc1a9118f7d4f1f693ade36626deaecd23999
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874708"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47072769"
 ---
 # <a name="ltspecifiedpickupdirectorygt-element-network-settings"></a>&lt;specifiedPickupDirectory&gt; öğesi (ağ ayarları)
 Bir Basit Posta Aktarım Protokolü (SMTP) sunucusu için yerel dizini yapılandırır.  

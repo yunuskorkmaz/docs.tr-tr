@@ -10,12 +10,12 @@ helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-ms.openlocfilehash: 70830b08f9be95422761e0c096071d726a3950c8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d1fd290444bc7841e32d955a4e7f2134afdbd484
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517399"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47113812"
 ---
 # <a name="try-catch-c-reference"></a>try-catch (C# Başvurusu)
 Try-catch deyiminin oluşan bir `try` blok izlenen bir veya daha fazla tarafından `catch` farklı özel durumlar için işleyiciler belirten yan tümceleri.  

@@ -3,13 +3,12 @@ title: Güvenlik Kavramları
 ms.date: 03/30/2017
 ms.assetid: 944fa5ca-2c34-4268-8897-e005a61b470d
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 32b05766f82059634e6ad808c75fea6cc9e820e5
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 7e3a73f2f8c9a438451191c83e69c1722828d7df
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44188585"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47108032"
 ---
 # <a name="security-concepts"></a>Güvenlik Kavramları
 Bu bölümde, Windows Communication Foundation (WCF) güvenlik ile ilgili kavramları kısaca açıklanmaktadır.  

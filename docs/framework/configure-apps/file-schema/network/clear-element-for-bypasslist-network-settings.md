@@ -1,5 +1,5 @@
 ---
-title: '&lt;Clear&gt; öğesi olarak ayarlanıyor (ağ ayarları) için'
+title: '&lt;Temizle&gt; bypasslist (ağ ayarları) için'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/clear
@@ -12,22 +12,21 @@ helpviewer_keywords:
 ms.assetid: 301584ca-a914-4100-b180-3b288d3b099e
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 9297b68a31117aabfa45328954ccb9c7cdac66c5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ca6c8e9334bdfcdf4d79c5a91612ee117445d9cb
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742198"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170645"
 ---
-# <a name="ltcleargt-element-for-bypasslist-network-settings"></a>&lt;Clear&gt; öğesi olarak ayarlanıyor (ağ ayarları) için
+# <a name="ltcleargt-element-for-bypasslist-network-settings"></a>&lt;Temizle&gt; bypasslist (ağ ayarları) için
 Proxy atlama listesi temizler.  
   
  \<Yapılandırma >  
 \<system.net>  
 \<defaultProxy >  
-\<olarak ayarlanıyor >  
-\<Clear >  
+\<bypasslist >  
+\<Temizleme >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -46,9 +45,9 @@ Proxy atlama listesi temizler.
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
-|**Öğesi**|**Açıklama**|  
+|**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[olarak ayarlanıyor](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Bir proxy kullanmayın adresleri açıklamak normal bir ifade kümesi sağlar.|  
+|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Bir proxy sunucu kullanmaması adresleri açıklayan normal bir ifade kümesi sağlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  `clear` Öğesi atlama listesindeki tüm girişleri siler.  
@@ -57,7 +56,7 @@ Proxy atlama listesi temizler.
  Bu öğe, uygulama yapılandırma dosyası veya makine yapılandırma dosyası (Machine.config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek atlama listesi temizler ve ardından iki adres atlama listesine ekler. İlk contoso.com etki alanındaki tüm sunucular için proxy atlar; İkinci IP adresini başlar 192.168 olan tüm sunucular için proxy atlar.  
+ Aşağıdaki örnek, atlama listesi temizler ve ardından iki adres atlama listesine ekler. İlk contoso.com etki alanındaki tüm sunucular için proxy atlar; İkinci proxy 192.168 tüm sunucularıyla başlar, IP adresi için atlar.  
   
 ```xml  
 <configuration>  

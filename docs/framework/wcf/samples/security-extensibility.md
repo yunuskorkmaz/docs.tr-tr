@@ -3,44 +3,43 @@ title: Güvenlik Genişletilebilirliği
 ms.date: 03/30/2017
 ms.assetid: 2afe044d-df4a-49a4-9865-38700474c3dd
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 8f68d842b305c37a9e23bf23429c0bfb66a8eae4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 09872b5422d9d66dd4f54753815067954be6c0bb
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33501042"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47090493"
 ---
 # <a name="security-extensibility"></a>Güvenlik Genişletilebilirliği
-Bu bölüm, özel güvenlik Windows Communication Foundation (WCF) gösteren örnekleri içerir.  
+Bu bölüm, özel güvenlik Windows Communication Foundation (WCF) gösteren örnekler içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Dayanıklı Verilen Belirteç Sağlayıcısı](../../../../docs/framework/wcf/samples/durable-issued-token-provider.md)  
  Özel istemci verilen belirteç sağlayıcısı için uygulanacak gösterilmiştir.  
   
  [SAML Belirteç Sağlayıcı](../../../../docs/framework/wcf/samples/saml-token-provider.md)  
- Özel bir istemci SAML belirteç sağlayıcı uygulamak gösterilmiştir.  
+ SAML belirteç sağlayıcı özel bir istemci uygulama gösterilmiştir.  
   
  [Destek Belirteçleri](../../../../docs/framework/wcf/samples/supporting-tokens.md)  
- WS güvenliği kullanan bir ileti için ek belirteçler ekleneceği gösterilmektedir.  
+ WS-güvenlik kullanan bir iletiye ek belirteçler ekleme gösterir.  
   
  [Belirteç Doğrulayıcı](../../../../docs/framework/wcf/samples/token-authenticator.md)  
- Özel belirteç kimlik doğrulayıcı uygulamak gösterilmiştir.  
+ Özel bir belirteç kimlik doğrulayıcısı uygulanacağı gösterilmiştir.  
   
  [Belirteç Sağlayıcı](../../../../docs/framework/wcf/samples/token-provider.md)  
- Özel bir belirteç sağlayıcısını uygulamak gösterilmiştir.  
+ Özel bir belirteç sağlayıcısını uygulamak nasıl gösterir.  
   
  [Kullanıcı Adı Parola Doğrulayıcı](../../../../docs/framework/wcf/samples/user-name-password-validator.md)  
- Özel bir UserNamePassword Doğrulayıcıyı uygulamak gösterilmiştir.  
+ Özel bir UserNamePassword Doğrulayıcıyı uygulamak nasıl gösterir.  
   
  [X.509 Sertifika Doğrulayıcı](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md)  
- Özel bir X.509 Sertifika Doğrulayıcı uygulamak gösterilmiştir.  
+ Özel bir X.509 Sertifika Doğrulayıcı uygulama gösterilmiştir.  
   
  [Yetkilendirme İlkesi](../../../../docs/framework/wcf/samples/authorization-policy.md)  
- Bir özel talep yetkilendirme ilkesini ve ilişkili özel hizmet Yetkilendirme Yöneticisi uygulama gösterilmiştir.  
+ Bir özel talep yetkilendirme ilkesi ve bir ilişkili özel hizmet Yetkilendirme Yöneticisi'ni uygulamak nasıl gösterir.  
   
  [Özel Belirteç](../../../../docs/framework/wcf/samples/custom-token.md)  
- Windows Communication Foundation (WCF) uygulamaya özel bir belirteç uygulamasını ekleneceği gösterilmektedir.  
+ Bir Windows Communication Foundation (WCF) uygulamasına özel bir belirteç uygulaması eklemek nasıl gösterir.  
   
  [İstemci Doğrulaması](../../../../docs/framework/wcf/samples/client-validation.md)  
- Bir İstemci Hizmeti uç noktası güvenli olduğundan emin olmak için hizmet uç noktası doğrulama uç noktası davranışı yazmak gösterilmiştir.
+ Hizmet uç noktası kullanmanın güvenli olduğundan emin olmak için hizmet uç noktası doğrular uç nokta davranışı bir istemci yazma işlemi gösterilmektedir.

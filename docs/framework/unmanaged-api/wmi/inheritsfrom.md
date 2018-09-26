@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4784e22d5a3eec031fbee00441958a62d66b52df
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46577002"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47075193"
 ---
 # <a name="inheritsfrom-function"></a>InheritsFrom işlevi
 Geçerli sınıf veya örnek belirtilen üst sınıftan türetilen olup olmadığını belirler.

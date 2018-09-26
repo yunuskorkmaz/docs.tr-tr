@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: fd85bc88-e06c-467d-a30d-9fd7cffcfca1
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 59d7e30bfa9bbaf2308e78f47de03bb7be69c44d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f4ab27a8e6cc5bd38620148b130823070e5102fa
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393689"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47111288"
 ---
 # <a name="using-an-asynchronous-client-socket"></a>Zaman uyumsuz istemci yuvası kullanma
-Zaman uyumsuz istemci yuvası ağ işlemlerinin tamamlanması beklenirken uygulama askıya almaz. Bunun yerine, uygulama orijinal iş parçacığı üzerinde çalışmaya devam ederken ağ bağlantısının bir iş parçacığı üzerinde işlemek için standart .NET Framework zaman uyumsuz programlama modeli kullanır. Zaman uyumsuz yuva ağ kullanımına ağırlık olun veya ağ işlemlerinin devam etmeden önce tamamlamak Bekleyemez uygulamalar için uygundur.  
+Zaman uyumsuz istemci yuvası ağ işlemlerinin tamamlanması beklenirken uygulama askıya almaz. Bunun yerine, ağ bağlantısı bir iş parçacığı üzerinde uygulama özgün iş parçacığı üzerinde çalışmaya devam ederken işlemek için standart .NET Framework zaman uyumsuz programlama modeli kullanır. Zaman uyumsuz yuva, ağ kullanımı yoğun oluşturan veya devam etmeden önce tamamlamak ağ işlemleri için sabırsızlanıyoruz uygulamalar için uygundur.  
   
- <xref:System.Net.Sockets.Socket> Sınıfı aşağıdaki .NET Framework adlandırma deseni için zaman uyumsuz yöntemleri; Örneğin, zaman uyumlu <xref:System.Net.Sockets.Socket.Receive%2A> yöntemi karşılık gelen için zaman uyumsuz <xref:System.Net.Sockets.Socket.BeginReceive%2A> ve <xref:System.Net.Sockets.Socket.EndReceive%2A> yöntemleri.  
+ <xref:System.Net.Sockets.Socket> Sınıfı aşağıdaki gibi .NET Framework adlandırma deseni için zaman uyumsuz yöntemler; Örneğin, zaman uyumlu <xref:System.Net.Sockets.Socket.Receive%2A> yöntemi karşılık gelen için zaman uyumsuz <xref:System.Net.Sockets.Socket.BeginReceive%2A> ve <xref:System.Net.Sockets.Socket.EndReceive%2A> yöntemleri.  
   
- Zaman uyumsuz işlemleri işlemin sonucunu döndürmek için bir geri çağırma yöntemi gerektirir. Uygulamanızı sonucu bilmeniz gerekmez, geri çağırma yöntemi gereklidir. Bu bölümdeki örnek kod bir ağ aygıtı ve bağlantı verileri gönder tamamlamak için bir geri çağırma yöntemi göndermek başlatmak için bir yöntem ve veri almaya başlamak için bir yöntem tamamlamak için bir geri çağırma yöntemi başlatmak için bir yöntem kullanarak gösterir ve alan veri sonlandırmak için geri çağırma yöntemi.  
+ Zaman uyumsuz işlemleri, işlemin sonucunu döndürmek için bir geri çağırma yöntemini gerektirir. Uygulamanızı sonucu bilmeniz gerekmez, geri çağırma yöntemi yok gereklidir. Bu bölümdeki örnek kodu bir ağ aygıtı ve bağlantı verileri gönder tamamlamak için bir geri çağırma yöntemi göndermek başlatmak için bir yöntem ve veri almaya başlaması için bir yöntem tamamlamak için bir geri çağırma yöntemi bağlamak, başlatmak için bir yöntem kullanılarak gösterir ve Alıcı veri sonlandırmak için geri çağırma yöntemi.  
   
- Zaman uyumsuz yuva birden çok iş parçacığı sistem iş parçacığı havuzundan işlem ağ bağlantıları kullanın. Bir iş parçacığı, gönderme ve alma veri başlatmaktan sorumludur; başka bir iş parçacığı ağ aygıtı bağlantı tamamlamak ve veri göndermek ve almak. Aşağıdaki örneklerde, örneklerini <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> sınıfı yürütme devam ederken sinyal ve ana iş parçacığı yürütmesi askıya almak için kullanılır.  
+ Zaman uyumsuz yuva birden çok iş parçacığı işlemi ağ bağlantıları için sistem iş parçacığı havuzu kullanın. Bir iş parçacığına gönderme veya alma veri başlatmaktan sorumludur; diğer iş parçacıklarını ağ aygıtı için bağlantıyı tamamlamak ve veri gönderme veya alma. Aşağıdaki örneklerde, örneklerini <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> sınıfı, yürütme devam edebilirsiniz, ana iş parçacığı ve sinyal yürütülmesini askıya almak için kullanılır.  
   
- Bir ağ aygıtı için bir zaman uyumsuz yuva bağlanmak için aşağıdaki örnekte, `Connect` yöntemi başlatır bir **yuva** ve çağırır <xref:System.Net.Sockets.Socket.Connect%2A?displayProperty=nameWithType> yöntemi, ağ aygıtını temsil eder uzak bir uç nokta geçirme , bağlantı geri çağırma yöntemini ve bir durum nesnesi (istemci **yuva**), durum bilgilerini zaman uyumsuz çağrılar arasında geçirmek için kullanılır. Örnek uygulayan `Connect` belirtilen bağlanmak için yöntemi **yuva** belirtilen uç noktası. Bir genel varsayar **ManualResetEvent** adlı `connectDone`.  
+ Bir ağ aygıtı için zaman uyumsuz bir yuva bağlanmak için aşağıdaki örnekte `Connect` yöntemi başlatır bir **yuva** ve <xref:System.Net.Sockets.Socket.Connect%2A?displayProperty=nameWithType> yöntemini bir uzak uç noktası ağ aygıtını temsil eder , Bağlan geri çağırma yöntemini ve durum nesnesi (istemci **yuva**), zaman uyumsuz çağrılar arasında durumunu bilgi geçirmek için kullanılır. Örnek uygulayan `Connect` yöntemini belirtilen **yuva** belirtilen uç noktası için. Genel bir varsayar **ManualResetEvent** adlı `connectDone`.  
   
 ```vb  
 Public Shared Sub Connect(remoteEP As EndPoint, client As Socket)  
@@ -56,7 +55,7 @@ public static void Connect(EndPoint remoteEP, Socket client) {
 }  
 ```  
   
- Connect geri çağırma yöntemi `ConnectCallback` uygulayan <xref:System.AsyncCallback> temsilci. Uzak aygıt kullanılabilir olduğunda ve ardından uygulama iş parçacığı bağlantı ayarlayarak tamamlandığını bildirir uzak aygıtına bağlayan **ManualResetEvent** `connectDone`. Aşağıdaki kod uygulayan `ConnectCallback` yöntemi.  
+ Connect geri çağırma yöntemi `ConnectCallback` uygulayan <xref:System.AsyncCallback> temsilci. Uzak cihaza uzak cihaz olduğunda ve ardından uygulama iş parçacığı bağlantı ayarlayarak tamamlandığını bildirir. bağladığı **ManualResetEvent** `connectDone`. Aşağıdaki kod uygulayan `ConnectCallback` yöntemi.  
   
 ```vb  
 Private Shared Sub ConnectCallback(ar As IAsyncResult)  
@@ -98,7 +97,7 @@ private static void ConnectCallback(IAsyncResult ar) {
 }  
 ```  
   
- Örnek yöntemi `Send` belirtilen dize veri ASCII biçimindedir kodlar ve belirtilen yuva tarafından temsil edilen ağ aygıtı zaman uyumsuz olarak gönderir. Aşağıdaki örnek uygulayan `Send` yöntemi.  
+ Örnek yöntemini `Send` belirtilen dize veri ASCII biçimindedir kodlar ve ağ aygıtına belirtilen yuva tarafından temsil edilen zaman uyumsuz olarak gönderir. Aşağıdaki örnek uygulayan `Send` yöntemi.  
   
 ```vb  
 Private Shared Sub Send(client As Socket, data As [String])  
@@ -122,7 +121,7 @@ private static void Send(Socket client, String data) {
 }  
 ```  
   
- Send geri çağırma yöntemi `SendCallback` uygulayan <xref:System.AsyncCallback> temsilci. Ağ aygıtı almaya hazır olduğunda verileri gönderir. Aşağıdaki örnek uygulamasını gösterir `SendCallback` yöntemi. Bir genel varsayar **ManualResetEvent** adlı `sendDone`.  
+ Send geri çağırma yöntemi `SendCallback` uygulayan <xref:System.AsyncCallback> temsilci. Ağ aygıtı almaya hazır olduğunda verileri gönderir. Aşağıdaki örnek uygulamasını gösterir `SendCallback` yöntemi. Genel bir varsayar **ManualResetEvent** adlı `sendDone`.  
   
 ```vb  
 Private Shared Sub SendCallback(ar As IAsyncResult)  
@@ -160,7 +159,7 @@ private static void SendCallback(IAsyncResult ar) {
 }  
 ```  
   
- Bir istemci yuvadan veri okunurken değerleri arasında zaman uyumsuz çağrılar geçiren bir durum nesnesi gerektirir. Aşağıdaki sınıf bir veri istemci yuvası gönderimini için örnek Durum nesnesidir. Arabelleğe alınan veriler için istemci yuva için bir alan içeriyor ve bir <xref:System.Text.StringBuilder> gelen veri dizesi tutmak için. Bu alanların durumu nesnesinde yerleştirme istemci yuvadan verileri okumak için birden fazla çağrı arasında korunması değerlerine izin verir.  
+ Bir istemci yuvadan verileri okuma değerleri arasında zaman uyumsuz çağrıları geçiren bir durum nesnesi gerektirir. Aşağıdaki örnek durumu nesnenin veri istemci yuvası gönderimini sınıftır. Bir alan için istemci yuvası alınan veriler için bir arabellek içerir ve bir <xref:System.Text.StringBuilder> gelen veri dizesi tutacak. Bu alanlar durumu nesnesinde yerleştirme istemci yuvadan verileri okumak için birden çok çağrı arasında saklanması değerleri verir.  
   
 ```vb  
 Public Class StateObject  
@@ -188,7 +187,7 @@ public class StateObject {
 }  
 ```  
   
- Örnek `Receive` yöntemi durumu nesnesini ayarlar ve ardından çağırır **BeginReceive** verileri istemci yuvadan zaman uyumsuz olarak okumak için yöntem. Aşağıdaki örnek uygulayan `Receive` yöntemi.  
+ Örnek `Receive` yöntemi durumu nesne ayarlar ve ardından çağırır **BeginReceive** verileri istemci yuvadan zaman uyumsuz olarak okumak için yöntem. Aşağıdaki örnek uygulayan `Receive` yöntemi.  
   
 ```vb  
 Private Shared Sub Receive(client As Socket)  
@@ -222,9 +221,9 @@ private static void Receive(Socket client) {
 }  
 ```  
   
- Receive geri çağırma yöntemi `ReceiveCallback` uygulayan **AsyncCallback** temsilci. Ağ aygıtından verileri alır ve bir ileti dizesi oluşturur. Bir veya daha fazla veri baytı sayısı ağ üzerinden veri arabelleğe okur ve çağırır **BeginReceive** yeniden istemci tarafından gönderilen verileri kadar yöntemi tamamlanmıştır. Tüm verileri okuma sonra istemciden `ReceiveCallback` veri ayarlayarak tamamlandığını uygulama iş parçacığı sinyalleri **ManualResetEvent** `sendDone`.  
+ Receive geri çağırma yöntemi `ReceiveCallback` uygulayan **AsyncCallback** temsilci. Bu ağ aygıtından verileri alır ve bir ileti dizisi oluşturur. Bir veya daha fazla bayt veri ağdan veri arabelleğe okur ve ardından çağırır **BeginReceive** yeniden istemci tarafından gönderilen verilerin kadar yöntemi tamamlandığında. Tüm verileri okuma sonra istemciden `ReceiveCallback` uygulama iş parçacığı ayarlayarak, verilerin tam olduğunu bildirir **ManualResetEvent** `sendDone`.  
   
- Aşağıdaki kod örneği uygulayan `ReceiveCallback` yöntemi. Adlı genel bir dize varsayar `response` alınan dize ve bir genel tutan **ManualResetEvent** adlı `receiveDone`. Sunucunun, düzgün biçimde Ağ oturumunu sona erdirmek için istemci yuvası kapatmanız gerekir.  
+ Aşağıdaki kod örneği uygulayan `ReceiveCallback` yöntemi. Adlı bir genel dize varsayar `response` alınan dize ve genel bir tutan **ManualResetEvent** adlı `receiveDone`. Sunucunun, düzgün bir şekilde ağ oturumu sonlandırmak için istemci yuvası kapatmanız gerekir.  
   
 ```vb  
 Private Shared Sub ReceiveCallback(ar As IAsyncResult)  

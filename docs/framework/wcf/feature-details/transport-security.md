@@ -3,31 +3,31 @@ title: Taşıma Güvenliği
 ms.date: 03/30/2017
 ms.assetid: 86c94153-e48d-4539-b6cf-cd8060582e7f
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: e7f804d34a47c5508839636a6fe5045ebce3972e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7a52ac584abe766a7517436e697aff89333c9833
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47171432"
 ---
 # <a name="transport-security"></a>Taşıma Güvenliği
-Taşıma güvenliği Windows Communication Foundation (WCF) seçili bağlama bağlıdır. Bağlama uygulayan taşıma gerçek güvenlik mekanizması belirler. Bu bölümdeki konular, uygulanan mekanizmaları ve bunların seçenekleri açıklanmaktadır.  
+Seçili bağlamadaki aktarım güvenliği Windows Communication Foundation (WCF) bağlıdır. Bağlama uygulayan aktarım gerçek güvenlik mekanizması belirler. Bu bölümdeki konularda, uygulanan mekanizmaları ve seçeneklerini açıklar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Aktarım Güvenliğine Genel Bakış](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
- WCF'de taşıma güvenliği temelleri açıklanır.  
+ Wcf'de aktarım güvenliği ile ilgili temel bilgileri açıklar.  
   
  [HTTP Aktarım Güvenliği](../../../../docs/framework/wcf/feature-details/http-transport-security.md)  
- WCF Güvenli Yuva Katmanı (SSL veya HTTPS) nasıl uyguladığını açıklanmaktadır.  
+ WCF Güvenli Yuva Katmanı (SSL veya HTTPS) nasıl uyguladığını açıklar.  
   
  [HTTP Kimlik Doğrulamasını Anlama](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)  
- Temel, Özet, NT LAN Yöneticisi (NTLM) ve diğerleri gibi HTTP kimlik doğrulama şemasını açıklar.  
+ Temel, Özet, NT LAN Manager (NTLM) ve diğerleri gibi HTTP kimlik doğrulaması düzenlerini açıklar.  
   
  [Aktarım Güvenliği ile Kimliğe Bürünme Kullanma](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)  
- Aktarım güvenlik modu ile olası beş kimliğe bürünme düzeyini açıklanmaktadır.  
+ Kimliğe bürünme transport güvenlik modunu ile mümkün olan beş düzeyleri açıklanmaktadır.  
   
  [Nasıl Yapılır: SSL Sertifikası ile Bir Bağlantı Noktasını Yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
- SSL (aktarım) güvenliği için bir X.509 sertifikası ile bir makinede bir bağlantı noktası yapılandırma temellerini anlatılmaktadır.  
+ Bir bağlantı noktası için SSL (taşıma) güvenlik X.509 sertifikası ile bir makinede yapılandırma temelleri gösterilir.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.ServiceModel>  

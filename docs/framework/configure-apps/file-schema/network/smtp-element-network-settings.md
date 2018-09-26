@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 9b6e01906c31316cfa8f148ed96944f309517f95
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 61110413f43e95060aa2cfecb4acdb3ebaae14df
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874929"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47082259"
 ---
 # <a name="ltsmtpgt-element-network-settings"></a>&lt;SMTP&gt; öğesi (ağ ayarları)
 Teslim biçimini, teslim yöntemini yapılandırır ve Kimden e-postaları gönderme için adresi.  
@@ -58,7 +57,7 @@ Teslim biçimini, teslim yöntemini yapılandırır ve Kimden e-postaları gönd
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
-|**Öğesi**|**Açıklama**|  
+|**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
 |[\<mailSettings > öğesi (ağ ayarları)](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|Posta gönderme seçeneklerini yapılandırır.|  
   

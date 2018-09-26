@@ -1,5 +1,5 @@
 ---
-title: '&lt;ekleme&gt; öğesi authenticationModules (ağ ayarları) için'
+title: '&lt;ekleme&gt; authenticationModules (ağ ayarları) için'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#add
@@ -12,21 +12,20 @@ helpviewer_keywords:
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 471e36bb584164b851e7a06c0e682ba9872f7910
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4a9bcc6cd5d2bbf30f463da0a51e1bccbcd5a3f1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742906"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47083893"
 ---
-# <a name="ltaddgt-element-for-authenticationmodules-network-settings"></a>&lt;ekleme&gt; öğesi authenticationModules (ağ ayarları) için
-Bir kimlik doğrulama modülü uygulamaya ekler.  
+# <a name="ltaddgt-element-for-authenticationmodules-network-settings"></a>&lt;ekleme&gt; authenticationModules (ağ ayarları) için
+Uygulamasına bir kimlik doğrulama modülü ekler.  
   
  \<Yapılandırma >  
 \<system.net>  
 \<authenticationModules >  
-\<ekleme >  
+\<Ekle >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,29 +40,29 @@ Bir kimlik doğrulama modülü uygulamaya ekler.
   
 ### <a name="attributes"></a>Öznitelikler  
   
-|**Özniteliği**|**Açıklama**|  
+|**Öznitelik**|**Açıklama**|  
 |-------------------|---------------------|  
-|`type`|Tam olarak nitelenmiş tür adını (belirttiği <xref:System.Type.FullName%2A> özelliği) ve derleme adının (belirttiği <xref:System.Reflection.Assembly.FullName%2A> özelliği), virgülle ayrılmış.|  
+|`type`|Tam nitelikli tür adı (belirttiği <xref:System.Type.FullName%2A> özelliği) ve derleme adı (belirttiği <xref:System.Reflection.Assembly.FullName%2A> özelliği) virgülle ayrılmış.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
-|**Öğesi**|**Açıklama**|  
+|**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|Ağ isteklerine kimlik doğrulaması için kullanılan modülleri belirtir.|  
+|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|Ağ isteklerinin kimliğini doğrulamak için kullanılan modülleri belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `add` Öğesi bir kimlik doğrulama modülü kayıtlı kimlik doğrulama modülleri listesinin sonuna ekler. Kimlik doğrulama modülleri listesine eklendikleri sırayla çağrılır.  
+ `add` Öğesi bir kimlik doğrulama modülü kayıtlı kimlik doğrulama modülleri listesinin sonuna ekler. Kimlik doğrulama modülleri listeye eklendikleri sırayla çağrılır.  
   
- Değeri `type` özniteliği geçerli bir tür adı ve karşılık gelen derleme adı, virgülle ayrılmış olmalıdır.  
+ Değeri `type` özniteliği geçerli tür adı ve karşılık gelen derleme adı, virgülle ayrılmış olmalıdır.  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
  Bu öğe, uygulama yapılandırma dosyası veya makine yapılandırma dosyası (Machine.config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, varsayılan kimlik doğrulama modülleri etkinleştirir. Belirtilen modül için doğru değerlerle sürüm ve PublicKeyToken için değerleri değiştirmelisiniz.  
+ Aşağıdaki örnek, varsayılan kimlik doğrulama modülü sağlar. Belirtilen modül için doğru değerlerle PublicKeyToken ve Version değerleri değiştirmelisiniz.  
   
 ```xml  
 <configuration>  

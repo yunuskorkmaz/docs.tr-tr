@@ -1,5 +1,5 @@
 ---
-title: Zaman uyumlu istemci yuva örneği
+title: Zaman uyumlu istemci yuvası örneği
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 2c7d5be7-2221-467c-a839-5744ec4d576d
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 2931e1ee9644952f2f643941e2076a7e2d5762db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 55fd8c33f80ecf3b31fdbacec1abd73ebab92396
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393123"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47110248"
 ---
-# <a name="synchronous-client-socket-example"></a>Zaman uyumlu istemci yuva örneği
-Aşağıdaki örnek program bir sunucuya bağlanan bir istemci oluşturur. İstemci zaman uyumlu bir yuvası ile oluşturulmuştur, bu sunucunun bir yanıt döndürür kadar istemci uygulamasının yürütme askıya alınmış şekilde. Uygulama bir dize sunucusuna gönderir ve konsolda sunucu tarafından döndürülen dize görüntüler.  
+# <a name="synchronous-client-socket-example"></a>Zaman uyumlu istemci yuvası örneği
+Aşağıdaki örnek program bir sunucuya bağlanan bir istemcinin oluşturur. İstemci, sunucunun bir yanıt döndürür kadar istemci uygulamanın yürütülmesini askıya alınmış şekilde zaman uyumlu bir yuva ile oluşturulmuştur. Uygulama sunucusuna bir dize gönderir ve daha sonra konsolda sunucu tarafından döndürülen dize görüntüler.  
   
 ```vb  
 Imports System  

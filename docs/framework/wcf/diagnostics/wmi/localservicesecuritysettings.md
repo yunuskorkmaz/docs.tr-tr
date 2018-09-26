@@ -3,13 +3,12 @@ title: LocalServiceSecuritySettings
 ms.date: 03/30/2017
 ms.assetid: 490aa0e5-5242-4f8d-b505-5ec6287633b4
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 8f80af782c474ccf3a232ab353125fa223d4f5d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c79eb11fcc1973a3ef25a78afb8b141443d865c3
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33486903"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47156954"
 ---
 # <a name="localservicesecuritysettings"></a>LocalServiceSecuritySettings
 LocalServiceSecuritySettings  
@@ -37,114 +36,114 @@ class LocalServiceSecuritySettings
 ```  
   
 ## <a name="methods"></a>Yöntemler  
- LocalServiceSecuritySettings sınıfı herhangi bir yöntem tanımlamıyor.  
+ LocalServiceSecuritySettings sınıf herhangi bir yöntemi tanımlamaz.  
   
 ## <a name="properties"></a>Özellikler  
  LocalServiceSecuritySettings sınıfı aşağıdaki özelliklere sahiptir:  
   
 ### <a name="detectreplays"></a>DetectReplays  
- Veri türü: boolean  
+ Veri türü: Boole  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Yeniden yürütme saldırılarına karşı kanal algılandı ve otomatik olarak ele olup olmadığını belirten bir Boole değeri.  
+ Kanal yeniden yürütme saldırıları algılandı ve otomatik olarak ele belirten bir Boole değeri.  
   
 ### <a name="inactivitytimeout"></a>InactivityTimeout  
- Veri türü: datetime  
+ Veri türü: tarih/saat  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Hizmeti destekler güvenlik oturumları bekleyen maksimum sayısı.  
+ Hizmetin desteklediği güvenlik oturumu bekleyen maksimum sayısı.  
   
 ### <a name="issuedcookielifetime"></a>IssuedCookieLifetime  
- Veri türü: datetime  
+ Veri türü: tarih/saat  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
  Tüm yeni güvenlik tanımlama bilgilerine verilen ömür süresini belirten bir TimeSpan.  
   
 ### <a name="maxcachedcookies"></a>MaxCachedCookies  
  Veri türü: SINT32  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Önbelleğe alınacak tanımlama bilgisi maksimum sayısı.  
+ Önbelleğe alınabilecek tanımlama bilgileri maksimum sayısı.  
   
 ### <a name="maxclockskew"></a>MaxClockSkew  
- Veri türü: datetime  
+ Veri türü: tarih/saat  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- İki iletişim kuran tarafların sistem saatlerinin arasındaki en büyük zaman farkı belirten bir TimeSpan.  
+ İki iletişim kuran tarafların sistem saatleri arasındaki en uzun süre farkını belirten bir TimeSpan.  
   
 ### <a name="maxpendingsessions"></a>MaxPendingSessions  
  Veri türü: SINT32  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Hizmet bağlantılarında bekleyen maksimum sayısı.  
+ Bekleyen hizmet bağlantıları maksimum sayısı.  
   
 ### <a name="maxstatefulnegotiations"></a>MaxStatefulNegotiations  
  Veri türü: SINT32  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Aynı anda etkin olabilen güvenlik anlaşmaları sayısı.  
+ Aynı anda etkin olabilen güvenlik anlaşmaları sayısını.  
   
 ### <a name="negotiationtimeout"></a>NegotiationTimeout  
- Veri türü: datetime  
+ Veri türü: tarih/saat  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Sunucu ve istemci arasındaki güvenlik anlaşması aşaması için en fazla süreyi belirten bir TimeSpan.  
+ Sunucu ve istemci arasındaki güvenlik anlaşması aşaması için süre üst sınırını belirten bir TimeSpan.  
   
 ### <a name="reconnecttransportonfailure"></a>ReconnectTransportOnFailure  
- Veri türü: boolean  
+ Veri türü: Boole  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- WS güvenilir Mesajlaşma kullanarak bağlantıları aktarım hataları sonra yeniden bağlanmayı denemek olup olmadığını belirten bir Boole değeri.  
+ WS-Reliable Mesajlaşma kullanan bağlantı aktarım hatasından sonra yeniden bağlanmaya olup olmadığını belirten bir Boole değeri.  
   
 ### <a name="replaycachesize"></a>ReplayCacheSize  
  Veri türü: SINT32  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Yeniden yürütme algılaması için önbelleğe alınan nonce sayısı.  
+ Yeniden yürütme algılaması için önbelleğe alınan nonce sayısını.  
   
 ### <a name="replaywindow"></a>ReplayWindow  
- Veri türü: datetime  
+ Veri türü: tarih/saat  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Tek ileti nonce öğelerinin geçerli olduğu süreyi belirten bir TimeSpan.  
+ Tek tek ileti nonce öğelerinin geçerli kalacağı süreyi belirten bir TimeSpan.  
   
 ### <a name="sessionkeyrenewalinterval"></a>SessionKeyRenewalInterval  
- Veri türü: datetime  
+ Veri türü: tarih/saat  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
  Sonra ve Başlatıcı anahtarı için güvenlik oturumu yeniler süreyi belirten bir TimeSpan.  
   
 ### <a name="sessionkeyrolloverinterval"></a>SessionKeyRolloverInterval  
- Veri türü: datetime  
+ Veri türü: tarih/saat  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Zaman aralığını belirten bir TimeSpan anahtar yenileme sırasında bir önceki oturum anahtarı gelen iletileri geçerli değil.  
+ Zaman aralığını belirten bir TimeSpan anahtar yenilemesi sırasında önceki oturum anahtarının gelen iletileri geçerli değil.  
   
 ### <a name="timestampvalidityduration"></a>TimestampValidityDuration  
- Veri türü: datetime  
+ Veri türü: tarih/saat  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
  Zaman damgası geçerli olduğu süreyi belirten bir TimeSpan.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|MOF|Bildirilen Servicemodel.mof.|  
+|MOF|Bildirilmiş Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Ad Alanı|İçinde tanımlanan root\ServiceModel|  
+|Ad Alanı|İçinde tanımlı root\ServiceModel|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
