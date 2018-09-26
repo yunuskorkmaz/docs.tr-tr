@@ -1,64 +1,66 @@
 ---
-title: (Windows için Visual Studio) Docker için Visual Studio araçlarını kullanma
+title: Windows üzerinde Docker için Visual Studio Araçları
 description: Microsoft Platformu ve araçları ile kapsayıcı Docker uygulaması yaşam
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/12/2018
 ms.custom: vs-dotnet
-ms.openlocfilehash: af14c92ab27885deec878dc33e7b94035f43e65b
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: cd140c12ef4a0187cce096e013937d5c98cd4b39
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46581226"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170801"
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>(Windows için Visual Studio) Docker için Visual Studio araçlarını kullanma
 
-Docker için Visual Studio araçları kullanarak, geliştirme iş akışı, Visual Studio Code ve Docker CLI'yı kullanırken iş akışına benzerdir. Aslında, aynı Docker CLI'yı dayanır ancak başlamak kolaydır, bu süreci kolaylaştırır ve daha yüksek üretkenlik sağlar, derleme için çalıştırın ve Görevler oluşturun. Ayrıca, yürütün ve kapsayıcılarınızı F5 ve Ctrl + F5 Visual Studio'dan gibi basit eylemleri aracılığıyla hata ayıklama mümkün değildir. Çalıştırın ve tek bir kapsayıcı hata ayıklama ek olarak isteğe bağlı bir kapsayıcı düzenleme desteği, çalıştırın ve bir grup kapsayıcının (tam çözüm) aynı anda hata ayıklama. Aynı kapsayıcıları tanımlamak *docker-compose.yml* çözüm düzeyinde dosya.
+Docker Geliştirici iş akışı için Visual Studio Araçları, Visual Studio Code ve Docker CLI'yı (aynı Docker CLI'yı temel alır) kullanmaya benzer. Visual Studio Araçları için Docker kullanmaya başlamak daha da kolay hale getirir, bu süreci kolaylaştırır ve derleme için daha yüksek üretkenlik sağlar çalıştırın ve Görevler oluşturun. Yürütme ve kapsayıcılarınızı gibi basit eylemleri aracılığıyla hata ayıklama **F5** ve **Ctrl**+**F5**.
 
-## <a name="configuring-your-local-environment"></a>Yerel ortamınızı yapılandırma
+> [!NOTE]
+> Bu makale Windows üzerinde Visual Studio ve Visual Studio değil, Mac için geçerlidir
 
-Docker desteği, herhangi bir yüklü .NET ve .NET Core iş yükleri ile Visual Studio 2017'de dahil edilmiştir. Docker için Windows ayrı yükleyin.
+## <a name="configure-your-local-environment"></a>Yerel ortamınızı yapılandırma
 
-Docker için Windows en son sürümleri ile Kurulumu aşağıdaki başvuruları açıklandığı gibi basit, çünkü Docker uygulamaları geliştirmek için her zamankinden daha kolaydır.
+Docker için Windows en son sürümlerinde ([https://docs.docker.com/docker-for-windows/](https://docs.docker.com/docker-for-windows/)), basit kurulum Docker uygulamaları geliştirmek kolaylaştırır.
 
-**Daha fazla bilgi:** için Docker Windows yükleme hakkında daha fazla bilgi edinmek için Git <https://docs.docker.com/docker-for-windows/>.
+Docker desteği, Visual Studio 2017'de dahildir. Visual Studio 2017'ı buradan indirin: [https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
 
-**Daha fazla bilgi:** Visual Studio'yu yükleme ile ilgili yönergeler için Git [ https://visualstudio.microsoft.com/downloads/ ](https://visualstudio.microsoft.com/downloads/).
+## <a name="use-docker-tools-in-visual-studio-2017"></a>Visual Studio 2017'de Docker araçları kullanın
 
-Docker için Visual Studio Araçları'nı yükleme hakkında daha fazla bilgi görmek için Git <http://aka.ms/vstoolsfordocker> ve <https://docs.microsoft.com/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker>.
+Bir projeye ekleyebilirsiniz Docker desteği iki düzeyi vardır. .NET Core web uygulaması projelerinde yalnızca ekleyebilirsiniz bir *Dockerfile* Docker desteği etkinleştirerek projeye dosya. İleri düzey ekler kapsayıcı Düzenleyicisi desteği olan bir *Dockerfile* (zaten yoksa) projeye ve *docker-compose.yml* çözüm düzeyinde dosya.
 
-## <a name="using-docker-tools-in-visual-studio-2017"></a>Visual Studio 2017'de Docker araçları kullanma
+**Ekle** > **Docker desteği** ve **Ekle** > **kapsayıcı Düzenleyicisi desteği** komutlar bir web uygulaması projesi için proje düğümünü sağ tıklama menüsünü (veya bağlam menüsü) bulunan **Çözüm Gezgini**, Şekil 4-26 gösterildiği gibi:
 
-Docker desteği bir projeye eklerken (bkz. Şekil 4-26), Visual Studio ekler bir *Dockerfile* proje kök dizini.
+![Visual Studio'da Docker desteği menü seçeneği ekleyin](media/add-docker-support-menu.png)
 
-![Docker çözümü desteği Visual Studio 2017 proje açma](./media/image32.png)
+Şekil 4-26: Visual Studio 2017 projeye Docker desteği ekleme
 
-Şekil 4-26: Docker çözümü desteği Visual Studio 2017 proje açma
+### <a name="add-docker-support"></a>Docker desteği Ekle
 
- Docker Compose, aracılığıyla kapsayıcı düzenleme desteği, varsayılan olarak Visual Studio 2017 sürüm 15.7 veya önceki eklenir. Kapsayıcı düzenleme desteği Tercihli özellik Visual Studio 2017 sürümlerinde 15,8 ya da daha sonra bu durumda Docker Compose ve Service Fabric desteklenir.
+Docker desteği seçerek mevcut bir .NET Core web uygulaması projesine ekleyebilirsiniz **Ekle** > **Docker desteği** içinde **Çözüm Gezgini**. Seçerek proje oluşturma sırasında Docker desteğini etkinleştirebilirsiniz **Docker desteği etkinleştirme** içinde **yeni ASP.NET Core Web uygulaması** tıkladığınızda açılan iletişim kutusunda **Tamam** içinde **yeni proje** iletişim kutusu, Şekil 4-27'de gösterildiği gibi.
 
-Visual Studio sürüm 15,8 ve üzeri ile her ilişkili bir kapsayıcıya sahip olduğunuzu bir çözümde birden çok proje için destek ekleyebilirsiniz. İçinde çözüm veya proje düğümünü sağ **Çözüm Gezgini**ve **Ekle** > **kapsayıcı düzenleme desteği**.  Ardından **Docker Compose** veya **Service Fabric** kapsayıcıları yönetmek için.
+![Visual Studio'da yeni bir ASP.NET Core web uygulaması için Docker desteğini etkinleştir](./media/enable-docker-support-visual-studio.png)
 
-Seçeneğini belirlediğinizde **Docker Compose**, Visual Studio çözümünüze ait bir hizmet bölümü ekler *docker-compose.yml* dosyaları (veya siz varsa dosyaları oluşturur). Çok kapsayıcılı çözümünüzü oluşturmaya başlamak için kolay bir yoludur; Daha sonra açabilirsiniz *docker-compose.yml* dosyaları ve ek özellikler ile güncelleştirin.
+Visual Studio 2017'de proje oluşturma sırasında Şekil 4-27: Docker desteğini etkinleştir
 
-Bu eylem için kod gerekli yapılandırma satırlarını ekler bir *docker-compose.yml* çözüm düzeyinde ayarlayın.
+Visual Studio ekleyin ya da Docker desteğini etkinleştirmek ekler bir *Dockerfile* projeye dosya.
 
-Ayrıca Docker desteğini Visual Studio 2017'de bir ASP.NET Core projesi oluştururken, Şekil 4-27'de gösterildiği gibi kapatabilirsiniz.
+> [!NOTE]
+> Bilgisayarınızda Docker Compose desteği proje oluştururken bir .NET Framework web uygulaması projesi (olmayan bir .NET Core web uygulaması projesi) için Şekil 4-28 gösterildiği etkinleştirdiğinizde, kapsayıcı Düzenleyicisi desteği de eklenir.
+>
+> ![Docker'ı etkinleştirme desteği için bir .NET Framework web uygulaması projesi oluşturma](media/enable-docker-compose-support.png)
 
-![Bir proje oluştururken, Docker desteği açma](./media/image33.png)
+> Şekil 4-28: Visual Studio 2017'de .NET Framework web uygulaması projesi üzerinde Docker Compose desteği etkinleştirme
 
-Bir proje oluştururken, Docker desteği Şekil 4-27: açma
+### <a name="add-container-orchestrator-support"></a>Kapsayıcı Düzenleyicisi desteği Ekle
 
-Visual Studio çözümünüzde Docker desteği ekledikten sonra ayrıca yeni bir düğüm ağaçta görürsünüz **Çözüm Gezgini** eklenen ile *docker-compose.yml* dosyaları, Şekil 4-28'de gösterildiği gibi.
+Çok kapsayıcılı bir çözüm oluşturmak istediğinizde, kapsayıcı Düzenleyicisi desteği, projenize ekleyin. Kapsayıcı Düzenleyicisi desteği eklediğinizde, Visual Studio ekler bir *Dockerfile* (zaten yoksa) proje ile genel *docker-compose.yml* çözüm düzeyinde dosya. Bu, çalıştırma ve aynı tanımlanan bir grup kapsayıcının (tam çözüm) aynı anda hata ayıklaması sağlar *docker-compose.yml* dosya. Varsa *docker-compose.yml* zaten var, Visual Studio yalnızca ekler gerekli yapılandırma kod satırı için.
 
-![docker-compose.yml dosyaları şimdi Çözüm Gezgininde görüntüle](./media/image34.PNG)
+Kapsayıcı düzenleme desteği projenize ekledikten sonra projeye eklenen bir Dockerfile bakın ve **docker-compose** çözümüne eklenmiş klasör **Çözüm Gezgini**, Şekil 4-29 gösterildiği gibi:
 
-Şekil 4-28: docker-compose.yml dosyaları artık öne **Çözüm Gezgini**
+![Visual Studio'daki Çözüm Gezgini'nde docker dosyaları](media/docker-support-solution-explorer.png)
 
-Tek bir kullanarak çok kapsayıcılı bir uygulama dağıtabilirsiniz *docker-compose.yml* dosyasını çalıştırdığınızda `docker-compose up`; ancak, Visual Studio (karşı geliştirme ortamına bağlı olarak değerleri geçersiz kılmak için bir grubu ekler Üretim) ve yürütme (hata ayıklama ve yayın) yazın. Bu özellik, daha iyi ilerleyen bölümlerde açıklanmıştır.
-
-Service Fabric Docker Compose yerine birden çok kapsayıcı yönetmek için kullanabilirsiniz. Bkz: [öğretici: Azure Service Fabric'e Windows kapsayıcısındaki bir .NET uygulaması dağıtma](https://docs.microsoft.com/azure/service-fabric/service-fabric-host-app-in-a-container).
+Şekil 4-29: Docker dosyaları Çözüm Gezgini'nde Visual Studio 2017
 
 **Daha fazla bilgi:** Hizmetleri uygulaması ve Docker için Visual Studio Araçları'nın kullanımı hakkında daha ayrıntılı bilgi için bu makaleleri okuyun:
 

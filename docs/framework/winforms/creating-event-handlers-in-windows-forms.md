@@ -9,11 +9,11 @@ helpviewer_keywords:
 - event handlers [Windows Forms]
 ms.assetid: 6514e530-c6b8-489c-a8d2-eda7b7072701
 ms.openlocfilehash: 9095946d52360c69fd6c4dd6285039fb3e1874d5
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46577801"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47082480"
 ---
 # <a name="creating-event-handlers-in-windows-forms"></a>Windows Forms'ta Olay İşleyicileri Oluşturma
 Bir olay işleyicisi, hangi eylemlerin bir ileti kuyruğu bir ileti alır ya da kullanıcı bir düğmeyi tıkladığında gibi bir olay meydana gerçekleştirilen belirler, kodunuzda bir yordamdır. Bir olay oluştuğunda, olay işleyicisi veya etkinliğin işleyicisi yürütülür. Olaylar için birden fazla işleyici atanabilir ve belirli olayları işleyen yöntemleri dinamik olarak değiştirilebilir. Windows Form Tasarımcısı, olay işleyicileri oluşturma için de kullanabilirsiniz.  

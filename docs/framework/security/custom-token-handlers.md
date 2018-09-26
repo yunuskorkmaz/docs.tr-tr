@@ -3,22 +3,21 @@ title: Özel belirteç işleyicileri
 ms.date: 03/30/2017
 ms.assetid: 5062669f-8bfc-420a-a25d-d8ab992ab10e
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 18be4babf7e9cfbfe9ebfb43da6f98a8544b2fe6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c27abb5df7f895a9dec5f7f784f1a3ff0b31edb7
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399983"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47082389"
 ---
 # <a name="custom-token-handlers"></a>Özel belirteç işleyicileri
-Bu konu, belirteç işleyicileri WIF ve belirteçleri işlemek için nasıl kullanılacağını açıklar. Varsayılan olarak WIF desteklenmeyen belirteç türleri için özel belirteç işleyiciler oluşturmak için gerekli nedir konu da kapsar.  
+Bu konu, belirteç işleyicileri WIF ve belirteçleri işlemek için nasıl kullanılacağını açıklar. Özel belirteç işleyicileri için varsayılan olarak WIF desteklenmeyen belirteç türleri oluşturmak gerekli konu da kapsar.  
   
-## <a name="introduction-to-token-handlers-in-wif"></a>WIF belirteci işleyicileri giriş  
- WIF güvenlik belirteci işleyicileri oluşturma, okuma, yazma ve bağlı olan taraf (RP) uygulama veya bir güvenlik belirteci hizmeti (STS) belirteçleri doğrulamak için kullanır. Belirteç işleyicileri için özel bir belirteç işleyici WIF ardışık düzeninde ekleyin ya da varolan bir belirteci işleyicisi belirteçleri yönetme biçimini özelleştirmek için genişletilebilirlik noktalarıdır. WIF değiştirilen veya tamamen gerektiği gibi işlevlerini değiştirmek için geçersiz kılındı dokuz yerleşik güvenlik belirteci işleyicileri sağlar.  
+## <a name="introduction-to-token-handlers-in-wif"></a>WIF belirteç işleyicileri giriş  
+ Güvenlik belirteci işleyicileri oluşturma, okuma, yazma ve belirteçleri için bir bağlı olan taraf (RP) uygulaması veya bir güvenlik belirteci hizmeti (STS) doğrulamak için WIF kullanır. Belirteç işleyicileri için özel bir belirteci işleyicisi WIF ardışık düzeni içine eklemek veya mevcut bir belirteci işleyicisi belirteçleri yönetme biçimini özelleştirmek için genişletilebilirlik noktalarıdır. WIF, değiştirilen veya tamamen gerektiği gibi işlevlerini değiştirmek için geçersiz kılınan dokuz yerleşik güvenlik belirteci işleyicileri sağlar.  
   
 ## <a name="built-in-security-token-handlers-in-wif"></a>WIF yerleşik güvenlik belirteci işleyicileri  
- WIF 4.5 soyut taban sınıfından türetilen dokuz güvenlik belirteci işleyicisi sınıflarını içerir <xref:System.IdentityModel.Tokens.SecurityTokenHandler>:  
+ WIF 4.5 soyut temel sınıfından türetilir dokuz güvenlik belirteci işleyici sınıflarını içerir <xref:System.IdentityModel.Tokens.SecurityTokenHandler>:  
   
 -   <xref:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler>  
   
@@ -38,14 +37,14 @@ Bu konu, belirteç işleyicileri WIF ve belirteçleri işlemek için nasıl kull
   
 -   <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>  
   
-## <a name="adding-a-custom-token-handler"></a>Özel belirteç işleyici ekleme  
- Basit Web belirteçleri (SWT) ve JSON Web belirteçleri (JWT) gibi bazı belirteç türleri tarafından WIF sağlanan yerleşik belirteci işleyicileri gerekmez. Bu belirteç türleri ve başkalarının yerleşik bir işleyiciye sahip değil, özel belirteç işleyici oluşturmak için aşağıdaki adımları uygulamanız gerekir.  
+## <a name="adding-a-custom-token-handler"></a>Özel bir belirteci işleyicisi ekleme  
+ Basit Web belirteçleri (SWT) ve JSON Web belirteçleri (JWT) gibi bazı belirteç türleri tarafından WIF sağlanan yerleşik belirteç işleyicileri yok. Bu belirteç türleri ve yerleşik bir işleyici olmayan diğer kişilerin, özel bir belirteci işleyicisi oluşturmak için aşağıdaki adımları gerçekleştirmek gerekir.  
   
-#### <a name="adding-a-custom-token-handler"></a>Özel belirteç işleyici ekleme  
+#### <a name="adding-a-custom-token-handler"></a>Özel bir belirteci işleyicisi ekleme  
   
 1.  Öğesinden türetilen yeni bir sınıf oluşturun <xref:System.IdentityModel.Tokens.SecurityTokenHandler>.  
   
-2.  Aşağıdaki yöntemleri geçersiz kılmak ve kendi uygulamanızı sağlar:  
+2.  Aşağıdaki yöntemleri geçersiz kılın ve kendi uygulamanız sağlayın:  
   
     -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken%2A>  
   
@@ -59,7 +58,7 @@ Bu konu, belirteç işleyicileri WIF ve belirteçleri işlemek için nasıl kull
   
     -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>  
   
-3.  Yeni özel belirteç işleyici içinde bir başvuru ekleyin *Web.config* veya *App.config* içinde dosya  **\<System.IdentityModel >** , bölüm WIF geçerlidir. Örneğin, aşağıdaki yapılandırma biçimlendirme adlı yeni bir belirteç işleyici belirtir **MyCustomTokenHandler** , bulunduğu **CustomToken** ad alanı.  
+3.  Yeni özel belirteci işleyici içinde bir başvuru ekleyin *Web.config* veya *App.config* içinde dosya  **\<system.identityModel >** , bölüm WIF için geçerlidir. Örneğin, aşağıdaki yapılandırma biçimlendirme adlı yeni bir belirteci işleyicisi belirtir **MyCustomTokenHandler** , bulunduğu **CustomToken** ad alanı.  
   
     ```xml  
     <system.identityModel>  
@@ -71,7 +70,7 @@ Bu konu, belirteç işleyicileri WIF ve belirteçleri işlemek için nasıl kull
     </system.identityModel>  
     ```  
   
-     Yerleşik bir belirteç işleyici zaten olan bir belirteç türü işlemek için kendi belirteci işleyicisi sağlıyorsanız eklemek gerektiğini unutmayın bir  **\<kaldırma >** öğesi varsayılan işleyici bırakın ve bunun yerine özel işleyicinizi kullanın. Örneğin, aşağıdaki yapılandırma varsayılan değiştirir <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> özel belirteç işleyici ile:  
+     Yerleşik bir belirteci işleyicisi zaten olan bir belirteç türü işlemek için kendi belirteci işleyicisi sağlıyorsanız eklemeniz gerektiğini unutmayın. bir  **\<kaldırma >** öğesi varsayılan işleyici bırakıp özel işleyicinizi kullanın. Örneğin, aşağıdaki yapılandırmayı varsayılan değiştirir <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> özel belirteci işleyicisi ile:  
   
     ```xml  
     <system.identityModel>  

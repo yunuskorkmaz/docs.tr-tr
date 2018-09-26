@@ -12,21 +12,20 @@ helpviewer_keywords:
 ms.assetid: 7d4e7faa-2e4e-4379-ac76-f6cd7f2f8fac
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 3bbba1c805c6b300f7cf7b3d9112cde9df7607a8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5172a2be163e178b9c7115825fa5dba4ff073a96
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745061"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47115145"
 ---
 # <a name="ltfiltergt-element-for-ltaddgt-for-ltsharedlistenersgt"></a>&lt;Filtre&gt; öğesi için &lt;ekleme&gt; için &lt;sharedListeners&gt;
-Bir dinleyici için bir filtre ekler `sharedListeners` koleksiyonu.  
+Bir dinleyicisi için bir filtre ekler `sharedListeners` koleksiyonu.  
   
  \<Yapılandırma >  
 \<System.Diagnostics >  
 \<sharedListeners > öğesi  
-\<ekleme >  
+\<Ekle >  
 \<Filtre >  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -43,8 +42,8 @@ Bir dinleyici için bir filtre ekler `sharedListeners` koleksiyonu.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|**Türü**|Gerekli öznitelik.<br /><br /> Filtre türünü belirtir. Türünün tam adını kullanabilirsiniz (biçiminde <xref:System.Type.FullName%2A?displayProperty=nameWithType> özelliği), ya da derleme bilgileri dahil tam olarak nitelenmiş tür adını kullanabilirsiniz (biçiminde <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> özelliği). Tam olarak nitelenmiş tür adları oluşturma hakkında daha fazla bilgi için bkz: [belirtme tam olarak nitelenmiş tür adları](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
-|**initializeData**|İsteğe bağlı öznitelik.<br /><br /> Dize için belirtilen sınıf oluşturucuya geçirilen.|  
+|**Türü**|Gerekli öznitelik.<br /><br /> Filtre türünü belirtir. Türünün tam adını kullanabilirsiniz (biçimi <xref:System.Type.FullName%2A?displayProperty=nameWithType> özelliği), veya derleme bilgiler dahil olmak üzere tam olarak nitelenmiş tür adını kullanabilirsiniz (biçimi <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> özelliği). Tam nitelikli tür adı oluşturma hakkında daha fazla bilgi için bkz. [belirtme tam olarak nitelenmiş tür adlarını](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
+|**initializeData**|İsteğe bağlı öznitelik.<br /><br /> Belirtilen sınıf için oluşturucuya geçirilen dizesi.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -54,17 +53,17 @@ Bir dinleyici için bir filtre ekler `sharedListeners` koleksiyonu.
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
-|`system.diagnostics`|Toplamak, depolamak ve iletileri ve izleme anahtarı ayarlandığı düzeyi rota izleme dinleyicilerini belirtir.|  
-|`sharedListeners`|Herhangi bir kaynak veya trace ögesi başvurabilir dinleyicileri koleksiyonu.|  
-|`add`|Bir dinleyici ekler **sharedListeners** koleksiyonu.|  
+|`system.diagnostics`|Toplamak, depolamak ve iletileri ve bir izleme anahtarı ayarlandığı düzeyi izleme dinleyicilerini belirtir.|  
+|`sharedListeners`|Herhangi bir kaynak veya trace ögesi başvurabilirsiniz dinleyicileri koleksiyonudur.|  
+|`add`|Bir ekler **sharedListeners** koleksiyonu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Dinleyici tanımlanmış olması durumunda bir `<add>` öğesinin `<sharedListeners>` öğesi, bu dinleyici için filtre tanımlanmalıdır içinde bir `<filter>` alt öğesi `<add>` öğesi.  
+ Dinleyici olarak tanımlanırsa, bir `<add>` öğesinin `<sharedListeners>` öğesi, bu dinleyici için filtre tanımlanmalıdır bir `<filter>` alt öğe `<add>` öğesi.  
   
- Bu öğe makine yapılandırma dosyası (Machine.config) ve uygulama yapılandırma dosyasında kullanılabilir.  
+ Bu öğe, makine yapılandırma dosyası (Machine.config) ve uygulama yapılandırma dosyasında kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte nasıl kullanılacağını gösterir `<filter>` İzleme dinleyicisi filtre eklemek için öğesi `console` içinde `sharedListeners` koleksiyonu.  
+ Aşağıdaki örnek nasıl kullanılacağını gösterir `<filter>` İzleme dinleyicisi için bir filtre eklemek için öğe `console` içinde `sharedListeners` koleksiyonu.  
   
 ```xml  
 <configuration>  

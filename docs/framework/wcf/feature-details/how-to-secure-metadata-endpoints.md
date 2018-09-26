@@ -6,56 +6,55 @@ dev_langs:
 - vb
 ms.assetid: 9f71b6ae-737c-4382-8d89-0a7b1c7e182b
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 659291975902ec78c1484ac77f898b4486000e8d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f1dae4b9d2976ddbc941e49843324a29ec8885a4
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497184"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47090233"
 ---
 # <a name="how-to-secure-metadata-endpoints"></a>Nasıl yapılır: Meta Veri Uç Noktalarını Güvenli Hale Getirme
-Bir hizmet için meta verileri, kötü niyetli bir kullanıcının yararlanabilirsiniz uygulamanız ile ilgili gizli bilgiler içerebilir. Hizmetinizin Tüketiciler, hizmetiniz hakkındaki meta verileri almak için güvenli bir mekanizma de gerektirebilir. Bu nedenle, bazen kullanarak güvenli bir uç noktası, meta verilerini yayımlamak gereklidir.  
+Bir hizmet için meta veriler, kötü niyetli bir kullanıcı yararlanabilen uygulamanızla ilgili gizli bilgiler içerebilir. Hizmet tüketicileri, hizmetinizi hakkındaki meta verileri almak için güvenli bir mekanizma da gerektirebilir. Bu nedenle, bazen meta verilerinizi güvenli bir uç noktayı kullanarak yayımlamak gereklidir.  
   
- Meta veri uç noktalarını, genellikle uygulama uç noktaları güvenliğini sağlamak için Windows Communication Foundation (WCF) tanımlanan standart güvenlik mekanizmalarını kullanarak güvenli hale getirilir. (Daha fazla bilgi için bkz: [güvenliğine genel bakış](../../../../docs/framework/wcf/feature-details/security-overview.md).)  
+ Meta veri uç noktalarını, genellikle uygulama uç noktaları güvenliğini sağlamak için Windows Communication Foundation (WCF) tanımlanan standart güvenlik mekanizmalarını kullanılarak güvenli hale getirilir. (Daha fazla bilgi için [güvenliğine genel bakış](../../../../docs/framework/wcf/feature-details/security-overview.md).)  
   
- Bu konuda bir Güvenli Yuva Katmanı (SSL) sertifikası veya bir HTTPS uç noktası tarafından diğer bir deyişle, güvenli bir uç nokta oluşturmak için adım adım anlatılmaktadır.  
+ Bu konuda bir Güvenli Yuva Katmanı (SSL) sertifikası veya HTTPS uç noktası, diğer bir deyişle, güvenli bir uç nokta oluşturma adımları gösterilmektedir.  
   
-### <a name="to-create-a-secure-https-get-metadata-endpoint-in-code"></a>Güvenli bir HTTPS alma meta veri uç kodu oluşturmak için  
+### <a name="to-create-a-secure-https-get-metadata-endpoint-in-code"></a>Kodda bir güvenli HTTPS GET meta veri uç noktası oluşturmak için  
   
-1.  Bir bağlantı noktası uygun bir X.509 sertifikası ile yapılandırın. Sertifika güvenilir bir yetkiliden gelmesi gerekir ve bir kullanım amacı "Hizmetinin yetkilendirmesi" olması gerekir Bağlantı noktasına sertifika eklemek için HttpCfg.exe aracını kullanmanız gerekir. Bkz: [nasıl yapılır: bir SSL sertifikası ile bir bağlantı noktası yapılandırın](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
+1.  Bir bağlantı noktası uygun bir X.509 sertifikasıyla yapılandırın. Sertifika bir güvenilen yetkilisinden gelmelidir ve kullanım amacı, "Service yetkilendirme" olmalıdır Bağlantı noktası için sertifika eklemek için HttpCfg.exe Aracı'nı kullanmanız gerekir. Bkz: [nasıl yapılır: bir SSL sertifikası ile bir bağlantı noktası yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
   
     > [!IMPORTANT]
-    >  Sertifika veya kendi etki alanı adı sistemi (DNS) bilgisayarın adı eşleşmelidir. Sertifika için aynı Tekdüzen Kaynak Tanımlayıcısı (URI) bağlı çağrılır adresi olarak verilmeden denetlemek için HTTPS mekanizması gerçekleştirir ilk adımlarından biri olduğu için bu önemlidir.  
+    >  Kendi etki alanı adı sistemi (DNS) veya sertifika konusunun bilgisayarın adı eşleşmelidir. HTTPS mekanizması gerçekleştirir ilk adımlarından biri sertifika için aynı Tekdüzen Kaynak Tanımlayıcısı (URI) çağırıldığı adresi verilir denetlemek için olduğundan, bu gereklidir.  
   
-2.  Yeni bir örneğini oluşturmak <xref:System.ServiceModel.Description.ServiceMetadataBehavior> sınıfı.  
+2.  Yeni bir örneğini oluşturma <xref:System.ServiceModel.Description.ServiceMetadataBehavior> sınıfı.  
   
 3.  Ayarlama <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> özelliği <xref:System.ServiceModel.Description.ServiceMetadataBehavior> sınıfının `true`.  
   
-4.  Ayarlama <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A> uygun bir URL'ye özelliği. Mutlak bir adres belirtirseniz, URL şeması "https://" ile başlamalıdır unutmayın. Göreli bir adresi belirtirseniz, hizmet konağınız için bir HTTPS temel adresi girmeniz gerekir. Bu özellik ayarlanmamışsa varsayılan adresidir "", veya doğrudan hizmeti için HTTPS temel adres.  
+4.  Ayarlama <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A> özelliğini uygun bir URL. Mutlak bir adres belirtirseniz, URL şeması "https://" ile başlamalıdır unutmayın. Göreli adres belirtirseniz, hizmet konağınız için bir HTTPS taban adresi sağlamanız gerekir. Bu özellik ayarlanmamışsa, varsayılan adresidir "", veya doğrudan hizmet için HTTPS temel adres.  
   
-5.  Örnek davranışları koleksiyona eklemek, <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> özelliği <xref:System.ServiceModel.Description.ServiceDescription> aşağıdaki kodda gösterildiği gibi sınıf döndürür.  
+5.  Örnek davranışları koleksiyona ekleyin, <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> özelliği <xref:System.ServiceModel.Description.ServiceDescription> döndürür, aşağıdaki kodda gösterildiği gibi sınıf.  
   
      [!code-csharp[c_HowToSecureEndpoint#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howtosecureendpoint/cs/source.cs#1)]
      [!code-vb[c_HowToSecureEndpoint#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtosecureendpoint/vb/source.vb#1)]  
   
-### <a name="to-create-a-secure-https-get-metadata-endpoint-in-configuration"></a>Güvenli bir HTTPS alma meta veri uç yapılandırmasında oluşturmak için  
+### <a name="to-create-a-secure-https-get-metadata-endpoint-in-configuration"></a>Güvenli bir HTTPS GET meta veri uç yapılandırması oluşturmak için  
   
-1.  Ekleme bir [ \<davranışları >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) öğesine [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) hizmetiniz için yapılandırma dosyası öğesi.  
+1.  Ekleme bir [ \<davranışları >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) öğesine [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) hizmetiniz için yapılandırma dosyasının öğesi.  
   
 2.  Ekleme bir [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) öğesine [ \<davranışları >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) öğesi.  
   
 3.  Ekleme bir [ \<davranışı >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) öğesine `<serviceBehaviors>` öğesi.  
   
-4.  Ayarlama `name` özniteliği `<behavior>` uygun bir değere öğesi. `name` Özniteliği gereklidir. Aşağıdaki örnek değeri kullanır `mySvcBehavior`.  
+4.  Ayarlama `name` özniteliği `<behavior>` öğesi için uygun bir değer. `name` Özniteliği gereklidir. Aşağıdaki örnek değeri kullanır `mySvcBehavior`.  
   
 5.  Ekleme bir [ \<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md) için `<behavior>` öğesi.  
   
 6.  Ayarlama `httpsGetEnabled` özniteliği `<serviceMetadata>` öğesine `true`.  
   
-7.  Ayarlama `httpsGetUrl` özniteliği `<serviceMetadata>` uygun bir değere öğesi. Mutlak bir adres belirtirseniz, URL şeması "https://" ile başlamalıdır unutmayın. Göreli bir adresi belirtirseniz, hizmet konağınız için bir HTTPS temel adresi girmeniz gerekir. Bu özellik ayarlanmamışsa varsayılan adresidir "", veya doğrudan hizmeti için HTTPS temel adres.  
+7.  Ayarlama `httpsGetUrl` özniteliği `<serviceMetadata>` öğesi için uygun bir değer. Mutlak bir adres belirtirseniz, URL şeması "https://" ile başlamalıdır unutmayın. Göreli adres belirtirseniz, hizmet konağınız için bir HTTPS taban adresi sağlamanız gerekir. Bu özellik ayarlanmamışsa, varsayılan adresidir "", veya doğrudan hizmet için HTTPS temel adres.  
   
-8.  Bir hizmetle davranışı kullanmak üzere ayarlanmış `behaviorConfiguration` özniteliği [ \<hizmet >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) davranışı öğesinin ad özniteliği değeri öğesine. Aşağıdaki yapılandırma kodunu tam bir örnek gösterilir.  
+8.  Davranış hizmeti ile kullanmak için ayarlama `behaviorConfiguration` özniteliği [ \<hizmet >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) davranışı öğesinin ad özniteliği değeri öğesine. Aşağıdaki yapılandırma kod tam bir örnek gösterir.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -82,13 +81,13 @@ Bir hizmet için meta verileri, kötü niyetli bir kullanıcının yararlanabili
     ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir örneğini oluşturur. bir <xref:System.ServiceModel.ServiceHost> sınıfı ve bir uç nokta ekler. Kod sonra bir örneğini oluşturur <xref:System.ServiceModel.Description.ServiceMetadataBehavior> sınıfı ve bir güvenli meta verileri exchange noktası oluşturmak için özellikleri ayarlar.  
+ Aşağıdaki örnek, bir örneğini oluşturur. bir <xref:System.ServiceModel.ServiceHost> sınıfı ve bir uç nokta ekler. Kodu daha sonra bir örneğini oluşturur <xref:System.ServiceModel.Description.ServiceMetadataBehavior> sınıfı ve güvenli meta veri değişimi noktası oluşturmak üzere özellikleri ayarlar.  
   
  [!code-csharp[c_HowToSecureEndpoint#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howtosecureendpoint/cs/source.cs#0)]
  [!code-vb[c_HowToSecureEndpoint#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtosecureendpoint/vb/source.vb#0)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Kod örneği, şu ad alanlarından kullanır:  
+ Kod örneği, aşağıdaki ad alanlarını kullanır:  
   
 -   <xref:System.ServiceModel?displayProperty=nameWithType>  
   

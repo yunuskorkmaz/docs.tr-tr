@@ -3,16 +3,15 @@ title: '&lt;windowsStreamSecurity&gt;'
 ms.date: 03/30/2017
 ms.assetid: 926bea29-90c7-4a26-9cf0-fb4aa44f6f70
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: a089a6fb61e8f7fac4116b2280a5c2fe0b703f94
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6c1253e6f402da6b818a4438142e122f8b31809c
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755116"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47084268"
 ---
 # <a name="ltwindowsstreamsecuritygt"></a>&lt;windowsStreamSecurity&gt;
-Özel bağlama Windows akış güvenlik ayarlarını belirtin.  
+Özel bağlamanın Windows akış güvenliği ayarlarını belirtin.  
   
  \<system.serviceModel>  
 \<bağlamaları >  
@@ -33,7 +32,7 @@ ms.locfileid: "32755116"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|ProtectionLevel|İleti düzeyi güvenlik tanımlar. İletileri imzalama bir üçüncü taraf onu aktarılırken iletiyle oynama riskini azaltır. Şifreleme, aktarım sırasında veri düzeyi gizliliği sağlar. Geçerli değerler şunlardır:<br /><br /> -Hiçbiri: Koruma yok.<br />-Oturum: İletileri imzalanmıştır.<br />-Da EncryptAndSign: İletileri imzalanmış ve şifrelenmiş.<br /><br /> Da EncryptAndSign varsayılandır.<br /><br /> Bu öznitelik türünde <xref:System.Net.Security.ProtectionLevel>.|  
+|protectionLevel|İleti düzeyi güvenliği tanımlar. İleti imzalama, bir üçüncü taraf aktarılırken iletinin oynama riskini azaltır. Şifreleme, aktarım sırasında verileri düzeyinde gizlilik sağlar. Geçerli değerler şunlardır:<br /><br /> -Hiçbiri: Koruma yok.<br />-Oturum: İletileri imzalanmıştır.<br />-EncryptAndSign: İletileri imzalanmış ve şifrelenmiş.<br /><br /> EncryptAndSign varsayılandır.<br /><br /> Bu öznitelik türünde <xref:System.Net.Security.ProtectionLevel>.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -42,10 +41,10 @@ ms.locfileid: "32755116"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<bağlama >](../../../../../docs/framework/misc/binding.md)|Özel bağlama tüm bağlama özelliklerini tanımlar.|  
+|[\<bağlama >](../../../../../docs/framework/misc/binding.md)|Özel bağlama tüm bağlama yeteneklerini tanımlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Adlandırılmış Kanallar ve akış odaklı bir protokol TCP gibi kullanan taşımaları aktarım akışı tabanlı yükseltmeyi destekler. Özellikle, WCF güvenlik yükseltmeler sağlar. Bu taşıma güvenliği yapılandırma bu yapılandırma öğesi tarafından yanı kapsüllenir [ \<sslStreamSecurity >](../../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md), hangi yapılandırılabilir ve özel bağlama için eklenen  
+ Bir akışa dayalı Protokolü gibi TCP ve adlandırılmış kanallar taşımalar aktarım akışı tabanlı yükseltmeyi destekler. Özellikle, WCF güvenlik yükseltmeleri sağlar. Bu aktarım güvenliği yapılandırma bu yapılandırma öğesi tarafından yanı kapsüllenir [ \<sslStreamSecurity >](../../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md), hangi yapılandırılabilir ve özel bağlama için eklendi  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Channels.CustomBinding>  

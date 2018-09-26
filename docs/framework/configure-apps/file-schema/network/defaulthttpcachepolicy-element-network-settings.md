@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: 2c1247d0-39b0-4c12-919a-a925ce075c79
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 0425711687a2f8b40f2c645e1c478d52b56ad979
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1e1b27cb8c0df4450c1a08151af19913b65fc2b3
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32741847"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47172933"
 ---
 # <a name="ltdefaulthttpcachepolicygt-element-network-settings"></a>&lt;defaultHttpCachePolicy&gt; öğesi (ağ ayarları)
-HTTP önbelleğe alma etkindir ve ilke önbelleğe almayı varsayılan açıklar olup olmadığını açıklar.  
+HTTP önbelleğe alma etkindir ve önbelleğe alma ilkesi varsayılan tanımlar olup olmadığını açıklar.  
   
  \<Yapılandırma >  
 \<system.net>  
@@ -44,10 +43,10 @@ HTTP önbelleğe alma etkindir ve ilke önbelleğe almayı varsayılan açıklar
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`maximumAge`|Önbelleğe alınmış nesnenin süresi dolmuş olarak işaretlenmiş önce maksimum zaman aralığını belirtir.|  
-|`maximumStale`|Önbelleğe alınmış nesnenin süresi dolmuş olarak işaretlenmiş önce hesaplanan yenilik süresini geçen en uzun süreyi belirtir.|  
-|`minimumFresh`|Yeni olarak kabul edilmesi önbelleğe alınmış bir nesne için en düşük saat belirtir.|  
-|`policyLevel`|Önbellek ilkesi otomatik olup veya önbelleği atlanır olup olmadığını belirtir. Varsayılan değer `BypassCache` şeklindedir.|  
+|`maximumAge`|Önbelleğe alınmış nesnenin süresi dolmuş olarak işaretlenmeden önce maksimum zaman aralığını belirtir.|  
+|`maximumStale`|Önbelleğe alınmış nesnenin süresi dolmuş olarak işaretlenmeden önce hesaplanan güncellik süresini geçen en uzun süreyi belirtir.|  
+|`minimumFresh`|Yeni olarak değerlendirilmesi önbelleğe alınmış bir nesne için minimum süre belirtir.|  
+|`policyLevel`|Önbellek ilkesi otomatik olup veya önbellek olup atlanır belirtir. Varsayılan değer `BypassCache` şeklindedir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -56,18 +55,18 @@ HTTP önbelleğe alma etkindir ve ilke önbelleğe almayı varsayılan açıklar
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[requestCaching](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Ağ isteği önbelleğe alma mekanizması denetler.|  
+|[requestCaching](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Ağ istekleri için önbelleğe alma mekanizması denetler.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Değeri `policyLevel` özniteliktir ya da `BypassCache` veya `Default`.  
+ Değeri `policyLevel` özniteliği, ya da `BypassCache` veya `Default`.  
   
- İçin değerler `maximumAge`, `maximumStale`, ve `minimumFresh` öğeleridir bir biçimi ile bir açık zaman aralığını *d*. *hh*:*mm*:*ss* (gün, saat, dakika ve saniye) veya sabitler `minValue` veya `maxValue`uygun şekilde.  
+ Değerleri `maximumAge`, `maximumStale`, ve `minimumFresh` öğeleri olan bir ya da açık bir zaman aralığı bir biçimi ile *d*. *hh*:*mm*:*ss* (gün, saat, dakika ve saniye) veya sabitler `minValue` veya `maxValue`uygun şekilde.  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
  Bu öğe, uygulama yapılandırma dosyası veya makine yapılandırma dosyası (Machine.config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, altı saate, iki gün en fazla geçerlilik süresini ve dört saat maksimum eski süresi en az bir yeni saat belirtmek üzere gösterilmiştir.  
+ Aşağıdaki örnek, en düşük yeni birer birer en uzun geçerlilik süresi iki gün ve dört saatlik süre üst sınırını eski altı saat belirtin gösterilmektedir.  
   
 ```xml  
 <configuration>  

@@ -10,11 +10,11 @@ ms.assetid: 5388e02b-52f5-460e-a2b5-eeafe60eeebe
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9fbbe84811e3fa096b9e13c459143311bb75a198
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46579907"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47077843"
 ---
 # <a name="exception-throwing"></a>Özel durum
 Bu bölümde açıklanan özel durum atma yönergeleri iyi bir anlamı yürütme hatası tanımı gerektirir. Üyesi ne olduğunu yapamayacağınız her yürütme hatası meydana gelir (ne üye adından da anlaşılacağı) yapmak için tasarlanmıştır. Örneğin, varsa `OpenFile` bir yürütme hatası değerlendirilebilecek, metodu çağırana bir açık dosya tanıtıcısı döndüremiyor.  

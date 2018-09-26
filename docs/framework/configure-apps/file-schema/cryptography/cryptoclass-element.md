@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: 03db52ef-010e-44ea-b6fd-b9c900ecad50
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 728fff7b8626e227e692c713f4cb05049c14a9f1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e74cc5fa99473562b158cd5068fb8bbaeb6a4a17
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742763"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47083919"
 ---
 # <a name="ltcryptoclassgt-element"></a>&lt;cryptoClass&gt; öğesi
-Bir kolay ad için bir eşleme olan bir şifreleme sınıfı içeren [ \<nameEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) öğesi.  
+İçin bir kolay ad eşlemesi var. bir şifreleme sınıfına içeren [ \<nameEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) öğesi.  
   
  \<Yapılandırma >  
 \<mscorlib >  
@@ -41,7 +40,7 @@ Bir kolay ad için bir eşleme olan bir şifreleme sınıfı içeren [ \<nameEnt
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`customClassName`|Gerekli öznitelik.<br /><br /> Şifreleme sınıfı için bilgiler içerir. Bu öznitelik, sınıf için kısa bir ad sağlamak için kullanın. Belirtilen gereksinimleri karşılayan bir dize belirtmelisiniz [belirtme tam olarak nitelenmiş tür adları](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
+|`customClassName`|Gerekli öznitelik.<br /><br /> Şifreleme sınıfı için bilgileri içerir. Bu öznitelik, sınıfınız için kısa bir ad vermek için kullanın. Belirtilen gereksinimleri karşılayan bir dize belirtmelisiniz [belirtme tam olarak nitelenmiş tür adlarını](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -51,13 +50,13 @@ Bir kolay ad için bir eşleme olan bir şifreleme sınıfı içeren [ \<nameEnt
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
-|`cryptoClasses`|Bir kolay ad eşlemeye sahip şifreleme sınıflarını listesini içeren [ \<nameEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) öğesi.|  
+|`cryptoClasses`|Bir eşleme için bir kolay ad şifreleme sınıflarını listesini içeren [ \<nameEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) öğesi.|  
 |`cryptographySettings`|Şifreleme ayarlarını içerir.|  
-|`cryptoNameMapping`|Kolay adlar sınıflarına eşlemelerini içerir.|  
+|`cryptoNameMapping`|Sınıf için kolay adlar eşlemeleri içerir.|  
 |`mscorlib`|İçeren [ \<cryptographySettings >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md) öğesi.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte nasıl kullanıldığını gösterir  **\<cryptoClass >** öğesi bir şifreleme sınıf başvurusu ve çalışma zamanı yapılandırmak için. Ardından "RSA" dizesi geçirebilirsiniz <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> yöntemi ve kullanım <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> döndürülecek yöntemi bir `MyCryptoRSAClass` nesnesi.  
+ Aşağıdaki örnek nasıl kullanıldığını gösterir  **\<cryptoClass >** bir şifreleme sınıfına başvurmak için ve çalışma zamanı yapılandırma öğesi. Ardından "RSA" dize iletebileceğiniz <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> yöntemini <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> döndürülecek yöntemi bir `MyCryptoRSAClass` nesne.  
   
 ```xml  
 <configuration>  

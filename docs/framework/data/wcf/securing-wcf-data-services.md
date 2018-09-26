@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, security
 ms.assetid: 99fc2baa-a040-4549-bc4d-f683d60298af
 ms.openlocfilehash: 56ece9c2c81f05047e85ab681e7cfe0da65f35b9
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46537703"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47078142"
 ---
 # <a name="securing-wcf-data-services"></a>WCF veri hizmetlerinin güvenliğini sağlama
 Bu konuda, geliştirme, dağıtma ve çalıştırma için belirli güvenlik konuları açıklanmaktadır. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ve desteği olan hizmetlere erişen uygulamalar [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. Güvenli oluşturmaya yönelik önerileri de izlemelidir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] uygulamalar.  

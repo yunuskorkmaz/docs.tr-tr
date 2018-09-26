@@ -13,30 +13,29 @@ helpviewer_keywords:
 - logs, service applications
 ms.assetid: c0d8140f-c055-4d8e-a2e0-37358a550116
 author: ghogen
-manager: douge
-ms.openlocfilehash: a046c62de8789cbe438dcc849ffc23991a803ea2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5556b83346aba5bc48eddb930dedc56f4786bdb5
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33513968"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47113630"
 ---
 # <a name="how-to-log-information-about-services"></a>Nasıl Yapılır: Hizmet Bilgilerini Günlüğe Kaydetme
-Varsayılan olarak, tüm Windows hizmeti projelerinin uygulama olay günlüğü ile etkileşim ve bilgi ve özel durumları yazma özelliği vardır. Kullandığınız <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> özelliği, bu işlev, uygulamanızda isteyip istemediğinizi belirtin. Varsayılan olarak, Windows hizmeti proje şablonu ile oluşturduğunuz herhangi bir hizmeti için günlüğe kaydetme açıktır. Statik bir form, kullanabileceğiniz <xref:System.Diagnostics.EventLog> sınıfının bir örneğini oluşturmak zorunda kalmadan hizmet bilgilerini günlüğe yazma bir <xref:System.Diagnostics.EventLog> bileşeni veya el ile bir kaynak kaydı.  
+Varsayılan olarak, tüm Windows Service projeleri uygulama olay günlüğü ile etkileşimli ve bilgi ve özel durumlar yazma olanağı vardır. Kullandığınız <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> uygulamanızda bu işlevi isteyip istemediğinizi belirtmek için özelliği. Varsayılan olarak, Windows hizmeti proje şablonu ile oluşturduğunuz herhangi bir hizmeti için günlüğe kaydetme açıktır. Statik bir formu kullanabilirsiniz <xref:System.Diagnostics.EventLog> sınıfı örneğini oluşturmak zorunda kalmadan hizmet bilgilerini günlüğe yazılacak bir <xref:System.Diagnostics.EventLog> bileşen veya el ile bir kaynak kaydı.  
   
- Hizmetiniz için yükleyici projenizde her bir hizmet olarak geçerli bir kaynak günlük kaydı etkinken hizmet, yüklendiği bilgisayarda uygulama günlüğü ile olayların otomatik olarak kaydeder. Hizmet bilgileri hizmet başlatıldı, durduruldu, sürdürüldü, yüklü, kaldırıldı veya duraklatıldı her zaman günlüğe kaydeder. Ortaya çıkan hataları günlüğe kaydeder. Varsayılan davranışı kullanırken girişleri günlüğüne yazılması için herhangi bir kod yazmak zorunda kalmazsınız; Hizmet bunu sizin için otomatik olarak yönetir.  
+ Hizmetiniz için yükleyici, projenizdeki her hizmet günlüğe kaydetme açık olduğunda, hizmet, yüklü olduğu geçerli bir kaynak bilgisayardaki Uygulama günlüğünü içeren olayların sayısını otomatik olarak kaydeder. Hizmet, hizmet çalışmaya, durdurulmuş, duraklatılmış, sürdürüldü, yüklü veya her saat bilgilerini günlüğe kaydeder. Ayrıca, oluşan tüm hataları kaydeder. Varsayılan davranış kullanırken girişleri günlüğüne yazmak için kod yazmanız gerekmez; Hizmet bunu sizin için otomatik olarak yönetir.  
   
- Uygulama günlüğü dışında bir olay günlüğüne yazmak istiyorsanız, ayarlamalısınız <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> özelliğine `false`, kendi özel olay günlüğü Hizmetleri kodunuzu içinde oluşturun ve hizmetiniz, günlük girişlerinin geçerli bir kaynak olarak kaydedin. Ardından oluşur girişlerini ilgilendiğiniz bir eylem olduğunda günlüğe kaydetmek için kod yazmanız gerekir.  
+ Uygulama günlüğünü dışındaki bir olay günlüğüne yazmak istiyorsanız, ayarlamalısınız <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> özelliğini `false`, kendi özel olay günlüğü Hizmetleri kodunuz içinde oluşturup hizmetiniz, günlük girişlerinin geçerli bir kaynak olarak kaydedin. Ardından, girişlerini ilginizi çeken bir eylem olduğunda günlüğe kaydetmek için kod yazmanız gerekir.  
   
 > [!NOTE]
->  Özel bir olay günlüğü kullanın ve hizmet uygulamanızın yazma yapılandırırsanız, hizmetin ayarlamadan önce olay günlüğüne erişmek çalışmamalısınız <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> kodunuzda özelliği. Olay günlüğü hizmetinizi olayların geçerli bir kaynak kaydetmek için bu özelliğin değeri gerekir.  
+>  Eğer özel bir olay günlüğü'nün ve yazma service uygulamanızı yapılandırma, hizmetin ayarlamadan önce olay günlüğüne erişmek kullanmamanız gerekir <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> kodunuzdaki özellik. Olay günlüğü, hizmet geçerli bir olay kaynağı kaydetmek için bu özelliğin değerini gerekir.  
   
-### <a name="to-enable-default-event-logging-for-your-service"></a>Hizmetiniz için varsayılan olay günlüğünü etkinleştirmek için  
+### <a name="to-enable-default-event-logging-for-your-service"></a>Hizmetiniz için varsayılan olay günlüğünü etkinleştirme  
   
 -   Ayarlama <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> bileşeniniz için özellik `true`.  
   
     > [!NOTE]
-    >  Varsayılan olarak, bu özelliği ayarlamak `true`. Bir koşulu değerlendirmek ve ardından ayarlama gibi daha karmaşık işlem oluşturmakta olduğunuz sürece açıkça ayarlamanız gerekmez <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> özelliği bu koşulun sonucuna bağlı.  
+    >  Varsayılan olarak, bu özellik kümesine `true`. Bir koşulu değerlendirmek ve ardından ayarlar gibi daha karmaşık bir işlem, oluşturmakta olduğunuz sürece bu açıkça ayarlamanız gerekmez <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> özelliği bu koşulun sonucuna bağlı.  
   
 ### <a name="to-disable-event-logging-for-your-service"></a>Hizmetiniz için olay günlüğünü devre dışı bırakmak için  
   
@@ -45,25 +44,25 @@ Varsayılan olarak, tüm Windows hizmeti projelerinin uygulama olay günlüğü 
      [!code-csharp[VbRadconService#17](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#17)]
      [!code-vb[VbRadconService#17](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#17)]  
   
-### <a name="to-set-up-logging-to-a-custom-log"></a>Özel günlük günlüğünü ayarlamak için  
+### <a name="to-set-up-logging-to-a-custom-log"></a>Özel günlük için'günlük kaydı ayarlamak için  
   
-1.  Ayarlama <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> özelliğine `false`.  
+1.  Ayarlama <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> özelliğini `false`.  
   
     > [!NOTE]
     >  Ayarlamalısınız <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> özel bir günlük kullanmak için false.  
   
-2.  Ayarlanan örneği bir <xref:System.Diagnostics.EventLog> Windows hizmeti uygulamanızda bileşen.  
+2.  Bir örneği bir <xref:System.Diagnostics.EventLog> Windows hizmeti uygulamanızda bileşen.  
   
-3.  Özel günlük çağırarak oluşturun <xref:System.Diagnostics.EventLog.CreateEventSource%2A> yöntemi ve kaynak dizesi ve günlük adını dosyası belirterek oluşturmak istiyorsanız.  
+3.  Özel günlük çağırarak oluşturmak <xref:System.Diagnostics.EventLog.CreateEventSource%2A> yöntemi ve kaynak dizeyi ve günlük adını dosyasını belirtme oluşturmak istiyorsanız.  
   
-4.  Ayarlama <xref:System.Diagnostics.EventLog.Source%2A> özellikte <xref:System.Diagnostics.EventLog> bileşen örneği için 3. adımda oluşturduğunuz kaynak dizesi.  
+4.  Ayarlama <xref:System.Diagnostics.EventLog.Source%2A> özelliği <xref:System.Diagnostics.EventLog> bileşen örneği için 3. adımda oluşturduğunuz kaynak dizesi.  
   
-5.  Erişerek girişlerinizi yazma <xref:System.Diagnostics.EventLog.WriteEntry%2A> yöntemi <xref:System.Diagnostics.EventLog> bileşen örneği.  
+5.  Girdilerinizi erişerek yazma <xref:System.Diagnostics.EventLog.WriteEntry%2A> metodunda <xref:System.Diagnostics.EventLog> bileşen örneği.  
   
-     Aşağıdaki kod, özel bir günlük günlüklerini ayarlayın gösterilmektedir.  
+     Aşağıdaki kod, özel bir günlük için günlük kaydı ayarlamak gösterilmektedir.  
   
     > [!NOTE]
-    >  Bu kod örneğinde, örneği bir <xref:System.Diagnostics.EventLog> bileşen adlandırılan `eventLog1` (`EventLog1` Visual Basic'te). 2. adımda başka bir adla örneğini oluşturduysanız, kodu uygun şekilde değiştirin.  
+    >  Bu kod örneğinde, örneği bir <xref:System.Diagnostics.EventLog> bileşeni adlı `eventLog1` (`EventLog1` Visual Basic'te). 2. adımda başka bir adla örneği oluşturduysanız, kodu uygun şekilde değiştirin.  
   
      [!code-csharp[VbRadconService#14](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#14)]
      [!code-vb[VbRadconService#14](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#14)]  

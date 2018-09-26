@@ -3,11 +3,11 @@ title: Saf işlevsel dönüşümlere XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 97e8e582-eb3d-4756-bbfb-0899eb688ae4
 ms.openlocfilehash: e05c6167973b2342aafd51aad7d9102db9e94ae0
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46705416"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47079993"
 ---
 # <a name="pure-functional-transformations-of-xml-c"></a>Saf işlevsel dönüşümlere XML (C#)
 Bu bölüm için XML işlevsel dönüşümü öğretici sağlar. Bu kavramlarla açıklamalarını içerir ve işlevsel dönüşümlere ve bir XML belgesi işlemek için işlevsel dönüşümlere kullanma örnekleri kullanmak için anlamanız gereken dil oluşturur. Bu öğreticide LINQ için XML kod örnekleri sağlasa da, tüm temel kavramları diğer LINQ teknolojileri için de geçerlidir.  

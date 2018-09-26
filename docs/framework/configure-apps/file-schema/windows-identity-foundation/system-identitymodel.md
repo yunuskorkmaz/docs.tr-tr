@@ -3,16 +3,15 @@ title: '&lt;System.IdentityModel&gt;'
 ms.date: 03/30/2017
 ms.assetid: 210ce7e9-d07b-400c-800f-5f525dcf95e8
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 6faeadc9fcdffc8c8aa14fdcc744896b45a941f0
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1b3121a6e7e036ec268cf83ffbf545c0e669a9b9
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755259"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47077336"
 ---
 # <a name="ltsystemidentitymodelgt"></a>&lt;System.IdentityModel&gt;
-Windows Identity Foundation (WIF) seçenekleri uygulamalarında etkinleştirmek için yapılandırma sağlar.  
+Windows Identity Foundation (WIF) seçenekleri uygulamalarda etkinleştirmek için yapılandırma sağlar.  
   
  \<system.identityModel>  
   
@@ -42,10 +41,10 @@ Windows Identity Foundation (WIF) seçenekleri uygulamalarında etkinleştirmek 
 |`<configuration>`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Ekleme bir `<system.identityModel>` bölümüne bir hizmet veya uygulamayı Windows Identity Foundation (WIF) kullanacak biçimde yapılandırmak için yapılandırma dosyası. `<system.identityModel>` Öğesi ile temsil edilir <xref:System.IdentityModel.Configuration.SystemIdentityModelSection> sınıfı.  
+ Ekleme bir `<system.identityModel>` yapılandırma dosyasına hizmet veya uygulamayı Windows Identity Foundation (WIF) kullanmak için yapılandırma bölümü. `<system.identityModel>` Öğesi tarafından temsil edilen <xref:System.IdentityModel.Configuration.SystemIdentityModelSection> sınıfı.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte nasıl ekleneceğini gösterir bir `<system.identityModel>` bölümüne bir yapılandırma dosyası. Yapılandırma bölümü ve ad alanı bildirimi altında ilk eklemelisiniz `<configSections>` öğesi. Ekleyebileceğiniz sonra `<system.IdentityModel>` bir veya daha fazla kimlik yapılandırmaları belirtmek için yapılandırma dosyanızı öğesi.  
+ Aşağıdaki örnek nasıl ekleneceğini gösterir. bir `<system.identityModel>` bölümüne bir yapılandırma dosyası. Yapılandırma bölümü ve ad alanı bildirimi altında önce eklemelisiniz `<configSections>` öğesi. Ekleyebileceğiniz sonra `<system.IdentityModel>` öğesi yapılandırma dosyanıza bir veya daha fazla kimlik yapılandırmaları belirtin.  
   
 ```xml  
 <configuration>  

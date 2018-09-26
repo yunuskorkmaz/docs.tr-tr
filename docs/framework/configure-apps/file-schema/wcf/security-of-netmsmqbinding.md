@@ -3,13 +3,12 @@ title: '&lt;netMsmqBinding&gt; &lt;güvenliği&gt;'
 ms.date: 03/30/2017
 ms.assetid: 001d11a9-7439-498c-b09d-fca20eaf8cd3
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: c525344b18322cef05f64e46c75cdab7b271561a
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 40f0e72069e96d3c0f28e708d67e8777e18e2b1f
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45673954"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47079967"
 ---
 # <a name="ltsecuritygt-of-ltnetmsmqbindinggt"></a>&lt;netMsmqBinding&gt; &lt;güvenliği&gt;
 MSMQ bağlama için güvenlik ayarlarını tanımlar. Bu aktarım veya SOAP Güvenliği etkinleştirilmiş ve bu durumda, hangi kimlik doğrulama modu ve koruma düzeyleri kullanımda olup olmadığını belirtir.  

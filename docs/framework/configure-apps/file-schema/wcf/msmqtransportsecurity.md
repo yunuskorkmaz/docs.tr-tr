@@ -3,13 +3,12 @@ title: '&lt;msmqTransportSecurity&gt;'
 ms.date: 03/30/2017
 ms.assetid: 092e911b-ab1b-4069-a26e-6134c3299e06
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: ff60772e96d2709e018a2201459a1a0c65659464
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2d9fd78e349f5c3affb1184ba0ee146eb7076922
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750212"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47079655"
 ---
 # <a name="ltmsmqtransportsecuritygt"></a>&lt;msmqTransportSecurity&gt;
 Özel bağlama için MSMQ taşıma güvenlik ayarlarını belirtir.  
@@ -39,10 +38,10 @@ ms.locfileid: "32750212"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`msmqAuthenticationMode`|İletinin MSMQ taşıma tarafından nasıl doğrulanmış gerekir belirtir. Bu ayarlanırsa `None`, değeri `msmqProtectionLevel` özniteliği de ayarlanmalıdır `None`.<br /><br /> Geçerli değerler şunlardır:<br /><br /> -Hiçbiri: Kimlik doğrulaması yok.<br />-Windows: SID iletiyle ilişkili X.509 sertifikası almak için Active Directory kimlik doğrulama mekanizması kullanır. Bu, daha sonra kullanıcı emin olmak için ACL sırasının sıraya yazmak için yeterli izne sahip denetlemek için kullanılır.<br />-Sertifika: Kanal sertifikayı sertifika deposundan alır.<br /><br /> Windows varsayılan değerdir. Bu öznitelik türünde <xref:System.ServiceModel.MsmqAuthenticationMode>.|  
-|`msmqEncryptionAlgorithm`|İleti şifreleme hattaki iletileri ileti sırası yöneticileri arasında aktarırken kullanılacak algoritmayı belirtir. Geçerli değerler şunlardır:<br /><br /> -RC4Stream<br />-AES<br /><br /> RC4Stream varsayılan değerdir. Bu öznitelik türünde <xref:System.ServiceModel.MsmqEncryptionAlgorithm>.|  
-|`msmqProtectionLevel`|İletinin MSMQ taşıma düzeyinde güvenliği nasıl belirtir. İleti bütünlüğü ve takası da EncryptAndSign sağlar ancak şifreleme ileti bütünlüğü sağlar; diğer bir deyişle, iletinin gerçekten gönderenden gelir ve gönderenin kim kendisinin gerçekleştirilmesine söyler. Geçerli değerler şunlardır:<br /><br /> -Hiçbiri: Koruma yok.<br />-Oturum: İletileri imzalanmıştır.<br />-Da EncryptAndSign: İletileri şifrelenmiş ve imzalanmış.<br /><br /> Varsayılan değer işaretidir. Bu öznitelik türünde <xref:System.Net.Security.ProtectionLevel>.|  
-|`msmqSecureHashAlgorithm`|Özet imzaları bir parçası olarak bilgisayar kullanılacak algoritmayı belirtir. Geçerli değerler şunlardır:<br /><br /> -MD5<br />-   SHA1<br />-   SHA256<br />-   SHA512<br /><br /> SHA1 varsayılan değerdir. Bu öznitelik türünde <xref:System.ServiceModel.MsmqSecureHashAlgorithm>.|  
+|`msmqAuthenticationMode`|İletinin MSMQ taşıma tarafından nasıl doğrulacağını belirtir. Bu ayarlanırsa `None`, değerini `msmqProtectionLevel` özniteliği de ayarlanması gerekir `None`.<br /><br /> Geçerli değerler şunlardır:<br /><br /> -Hiçbiri: Kimlik doğrulaması yok.<br />-Windows: SID iletiyle ilişkili için X.509 sertifikası almak için Active Directory kimlik doğrulama mekanizması kullanır. Bu, daha sonra kullanıcı emin olmak için ACL kuyruğun kuyruğa yazmak için yeterli izne sahip olmadığını denetlemek için kullanılır.<br />-Sertifika: Kanal sertifikayı sertifika deposundan alır.<br /><br /> Windows varsayılan değerdir. Bu öznitelik türünde <xref:System.ServiceModel.MsmqAuthenticationMode>.|  
+|`msmqEncryptionAlgorithm`|Etkin ileti şifreleme için iletileri ileti sıra yöneticileri arasında transfer ederken kullanılan algoritmayı belirtir. Geçerli değerler şunlardır:<br /><br /> -RC4Stream<br />-AES<br /><br /> RC4Stream varsayılan değerdir. Bu öznitelik türünde <xref:System.ServiceModel.MsmqEncryptionAlgorithm>.|  
+|`msmqProtectionLevel`|İletinin MSMQ taşıma düzeyinde güvenliği nasıl belirtir. İleti bütünlüğü hem takası EncryptAndSign sağlar ancak şifreleme ileti bütünlüğü sağlar; diğer bir deyişle, ileti gönderen gerçekten gelir ve gönderen kim kendisinin kendisinin olduğunu söylüyor. Geçerli değerler şunlardır:<br /><br /> -Hiçbiri: Koruma yok.<br />-Oturum: İletileri imzalanmıştır.<br />-EncryptAndSign: İletileri şifrelenir ve imzalanmış.<br /><br /> Oturum varsayılan değerdir. Bu öznitelik türünde <xref:System.Net.Security.ProtectionLevel>.|  
+|`msmqSecureHashAlgorithm`|İmzanın bir parçası Özet işlem alanında kullanılan algoritmayı belirtir. Geçerli değerler şunlardır:<br /><br /> -MD5<br />-   SHA1<br />-   SHA256<br />-   SHA512<br /><br /> Varsayılan, SHA1 değeridir. Bu öznitelik türünde <xref:System.ServiceModel.MsmqSecureHashAlgorithm>.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -51,11 +50,11 @@ ms.locfileid: "32750212"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<msmqIntegration >](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegration.md)|Message Queuing (MSMQ) gönderen veya alıcı ile etkileşim için gerekli ayarları belirtir.|  
-|[\<msmqTransport >](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqtransport.md)|Yerel MSMQ protokolünü kullanan bir Windows Communication Foundation (WCF) hizmetini queuing iletişimi özelliklerini belirtir.|  
+|[\<msmqIntegration >](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegration.md)|Message Queuing (MSMQ) gönderen veya alıcı ile etkileşimi için gereken ayarları belirtir.|  
+|[\<msmqTransport >](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqtransport.md)|Yerel MSMQ protokolünü kullanan bir Windows Communication Foundation (WCF) hizmeti için sıraya alma iletişim özelliklerini belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Taşıma güvenliği hakkında daha fazla bilgi için bkz: [taşıma güvenliği](../../../../../docs/framework/wcf/feature-details/transport-security.md).  
+ Aktarım güvenliği hakkında daha fazla bilgi için bkz. [aktarım güvenliği](../../../../../docs/framework/wcf/feature-details/transport-security.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurity>  

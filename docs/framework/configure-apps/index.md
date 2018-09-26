@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 4bd30b26a3e05f97904200cab40234d00924820c
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: b27a5dec4483afb0f6c66c3a015c89967483cb61
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46585127"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47087508"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Yapılandırma Dosyalarını Kullanarak Uygulamaları Yapılandırma
 .NET Framework, yapılandırma dosyaları geliştiricilerin ve yöneticilerin denetim verir ve esnekliğe göre uygulamaların çalıştırın. Yapılandırma dosyaları gerektikçe değiştirilebilen XML dosyalarıdır. Bir yönetici, bir uygulamanın hangi korunan kaynaklara erişebilir, bir uygulamanın derlemelerin hangi sürümlerini kullanır ve uzak uygulamaların ve nesnelerin bulunduğu yere kontrol edebilirsiniz. Geliştiriciler ayarları yapılandırma dosyalarına koyarak, bir ayar her değiştiğinde bir uygulamayı yeniden derleme gerekliliğini ortadan kaldırır. Bu bölümde nelerin yapılandırılabileceği ve neden bir uygulama yapılandırma yararlı olabileceği anlatılmaktadır.  

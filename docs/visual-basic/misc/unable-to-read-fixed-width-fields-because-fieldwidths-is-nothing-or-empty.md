@@ -5,11 +5,11 @@ f1_keywords:
 - vbrTextFieldParser_FieldWidthsNothing
 ms.assetid: 623e0825-5640-4e47-8341-7eeec80fc145
 ms.openlocfilehash: cb9051269bf46e23d5ae070956994212d3e98675
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47027524"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47071726"
 ---
 # <a name="unable-to-read-fixed-width-fields-because-fieldwidths-is-nothing-or-empty"></a>Sabit genişlikli alanlar FieldWidths hiçbir şey olduğundan okunamıyor veya boş
 `TextFieldParser` Çünkü sabit genişlikli alanları okuyamıyor `FieldWidths` özelliği `Nothing` veya boş.  

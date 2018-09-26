@@ -3,16 +3,15 @@ title: '&lt;sslStreamSecurity&gt;'
 ms.date: 03/30/2017
 ms.assetid: 430a378b-a742-4858-8a12-9f9b235fd627
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: a86e1aae7ddd5389f098e532ae2c2cc67f4085e3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6eacf1833ecf980696d75c5dbcaaba3ba6403d92
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752409"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47087456"
 ---
 # <a name="ltsslstreamsecuritygt"></a>&lt;sslStreamSecurity&gt;
-Bir SSL akışı kullanarak kanal güvenliği destekleyen bir özel bağlama öğeyi temsil eder.  
+SSL akışı kullanarak kanal güvenliğini destekleyen özel bağlama öğesini temsil eder.  
   
  \<system.serviceModel>  
 \<bağlamaları >  
@@ -33,7 +32,7 @@ Bir SSL akışı kullanarak kanal güvenliği destekleyen bir özel bağlama ö�
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|RequireClientCertificate|Bir istemci sertifikası Bu bağlama için gerekli olup olmadığını belirten bir Boole değeri. Varsayılan, `false` değeridir.|  
+|requireClientCertificate|Bir istemci sertifikasının Bu bağlama için gerekli olup olmadığını belirten bir Boole değeri. Varsayılan, `false` değeridir.|  
 |sslProtocols|Hangi SslProtocols belirten bir SslProtocols enum bayrak değeri desteklenir. Ssl3 varsayılandır&#124;Tls&#124;Tls11&#124;Tls12.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
@@ -43,7 +42,7 @@ Bir SSL akışı kullanarak kanal güvenliği destekleyen bir özel bağlama ö�
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<bağlama >](../../../../../docs/framework/misc/binding.md)|Özel bağlama tüm bağlama özelliklerini tanımlar.|  
+|[\<bağlama >](../../../../../docs/framework/misc/binding.md)|Özel bağlama tüm bağlama yeteneklerini tanımlar.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - MDI [Windows Forms], merging menu items
 ms.assetid: 0fad444e-26d9-49af-8860-044d9c10d608
 ms.openlocfilehash: 64e7e7875a635bcd4fbafb62d3ee7b7018214ee4
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46705633"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47115028"
 ---
 # <a name="how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms"></a>Nasıl yapılır: Bir MDI Açılan Menüsüne MenuStrip ekleme (Windows Forms)
 Bazı uygulamalarda, bir Çoklu belge arabirimi (MDI) alt penceresi türünü MDI ana penceresinde farklı olabilir. Örneğin, bir elektronik tablo MDI olabilir ve MDI alt bir grafik olabilir. Bu durumda, farklı türlerde MDI alt pencereleri etkin olarak MDI üst menü içeriğini MDI alt menü içeriğini güncelleştirmek istediğiniz.  

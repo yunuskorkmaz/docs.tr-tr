@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9b3d3de7-189f-4f7d-81ae-9c29c441aaaa
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 29077a1c0f2b803270adb730e0d810143095e709
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1e4eb6c88bfad132f9e974445adf9ae0d6531f57
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526548"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47085196"
 ---
 # <a name="managing-connections"></a>Bağlantıları yönetme
 Veri kaynaklarına bağlanmak için HTTP kullanan uygulamalar, .NET Framework'ün kullanabileceğiniz <xref:System.Net.ServicePoint> ve <xref:System.Net.ServicePointManager> sınıfları için Internet bağlantılarını yönetme ve en yüksek ölçek ve performans elde etmelerine yardımcı olmak için.  

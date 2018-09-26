@@ -3,11 +3,11 @@ title: Statik Olarak Çözümlenmiş Tür Parametreleri (F#)
 description: "Bir F #'ı kullanmayı öğrenin, derleme zamanında yerine çalışma zamanında gerçek türle değiştirilen statik olarak çözümlenmiş tür parametresi."
 ms.date: 05/16/2016
 ms.openlocfilehash: 747917fef2746dcbf363ef4b717ace5e47229800
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46706417"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47087271"
 ---
 # <a name="statically-resolved-type-parameters"></a>Statik Olarak Çözümlenmiş Tür Parametreleri
 

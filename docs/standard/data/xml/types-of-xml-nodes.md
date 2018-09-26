@@ -6,11 +6,11 @@ ms.assetid: 71d03b78-6898-4ce7-b0fc-1282573f31f7
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 623583f16c23b55c16f648fedcd039ca36f73b1f
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46583713"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47077713"
 ---
 # <a name="types-of-xml-nodes"></a>XML düğüm türleri
 Bir XML belgesi bir ağaç düğümleri olarak belleğe okunduğunda, düğüm için düğüm türleri düğümleri oluşturulduğunda verdi. XML belge nesne modeli (DOM), düğüm türleri, World Wide Web Consortium (W3C) tarafından belirlenen çeşitli türlerde olan ve DOM yapısı modeli 1.1.1 bölümünde listelenir. Aşağıdaki tabloda, bu düğüm türü ve her kısa bir açıklaması için atanan nesne düğüm türleri listelenmektedir.  

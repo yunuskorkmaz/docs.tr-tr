@@ -3,30 +3,29 @@ title: 'Hizmet: Güvenlik Doğrulaması ve Kimlik Doğrulaması Hataları'
 ms.date: 03/30/2017
 ms.assetid: 55c98268-b1ad-459d-851b-25ef52248187
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: e160b014b7aa7586566073b800084d44be15ccaf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4c74cb1962bbc0f03ac33d8fcc7b10052bec8273
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474408"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47077298"
 ---
 # <a name="service-security-validation-and-authentication-failures"></a>Hizmet: Güvenlik Doğrulaması ve Kimlik Doğrulaması Hataları
-Sayaç adı: güvenlik doğrulaması ve kimlik doğrulama hataları  
+Sayaç adı: güvenlik doğrulaması ve kimlik doğrulaması hataları  
   
 ## <a name="description"></a>Açıklama  
- Bir ileti "Güvenlik çağrıları yetkilendirilmedi" sayacı tarafından kapsanmayan bir güvenlik sorunu nedeniyle reddedilen olduğunda bu sayaç artırılır. Bu tür sorunlar içerir:  
+ Her bir ileti "Güvenlik çağrıları yetkilendirilmedi" sayacı tarafından kapsanmayan bir güvenlik sorunu nedeniyle reddedilmesi Bu sayaç artırılır. Bu tür sorunlar şunlardır:  
   
 -   İstemci belirteci iletiden okunamıyor.  
   
--   İstemci belirteci kimlik doğrulaması (örneğin, hatalı parola) başarısız oldu.  
+-   İstemci belirteci (örneğin, hatalı parola) kimlik doğrulaması başarısız oldu.  
   
--   İmza doğrulaması başarısız oldu (örneğin, ileti değiştirilmiş).  
+-   İmza doğrulaması başarısız oldu (örneğin, iletiyi oynanmadığını).  
   
--   İleti yeniden yürütme saldırı sırasında gerçekleşebilir bir önceki bir yineleniyor.  
+-   İleti yeniden yürütme bir saldırı sırasında gerçekleşebilir bir önceki bir yineleniyor.  
   
 -   Bir şifre çözme hatası oluştu.  
   
--   Gereken bazı iletiden öğeleri (örneğin, eksik zaman damgası veya engelleme şifrelenmiş veriler) eksik.  
+-   Gereken bazı öğeleri (örneğin, eksik bir zaman damgası veya şifrelenmiş veriler engelleme) gelen iletiyi yok.  
   
--   TLSNEGO/SPNEGO anlaşması sırasında hata oluştu.
+-   TLSNEGO/SPNEGO anlaşması sırasında hatalar oluştu.

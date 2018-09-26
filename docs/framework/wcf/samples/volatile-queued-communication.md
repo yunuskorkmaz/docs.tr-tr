@@ -3,11 +3,11 @@ title: Geçici Kuyruğa Alınmış İletişim
 ms.date: 03/30/2017
 ms.assetid: 0d012f64-51c7-41d0-8e18-c756f658ee3d
 ms.openlocfilehash: 55c2b695cdc672216ef6a76bef55bc0d427336a0
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46526766"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47171822"
 ---
 # <a name="volatile-queued-communication"></a>Geçici Kuyruğa Alınmış İletişim
 Bu örnek, Message Queuing (MSMQ) aktarma üzerinden geçici kuyruğa alınan iletişim gerçekleştirme gösterir. Bu örnekte <xref:System.ServiceModel.NetMsmqBinding>. Bu durumda, kuyruğa alınmış iletiler alma hizmeti gözlemleyin sağlamak için şirket içinde barındırılan bir konsol uygulaması hizmetidir.  

@@ -1,18 +1,17 @@
 ---
-title: '&lt;claimType&gt;'
+title: '&lt;ClaimType&gt;'
 ms.date: 03/30/2017
 ms.assetid: d17b5831-9a2c-45c4-b0d1-68f48e72e861
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 94f8586a9ca63b8c1f1128cdda4a74ccfe0f5416
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 805377565b6e835fd9ffba915a003bc56529a3b6
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767433"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47084221"
 ---
-# <a name="ltclaimtypegt"></a>&lt;claimType&gt;
-Gelen güvenlik belirteçlerinin için tek bir isteğe bağlı veya gerekli talep belirtir.  
+# <a name="ltclaimtypegt"></a>&lt;ClaimType&gt;
+Gelen güvenlik belirteçleri için tek bir isteğe bağlı veya gerekli talep belirtir.  
   
  \<system.identityModel>  
 \<identityConfiguration >  
@@ -39,7 +38,7 @@ Gelen güvenlik belirteçlerinin için tek bir isteğe bağlı veya gerekli tale
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|türü|Talep türü. Tipik olarak bir URI. Gerekli.|  
+|türü|Talep türü. Genellikle bir URI. Gerekli.|  
 |isteğe bağlı|Talep türü isteğe bağlı olup olmadığını belirten bir Boole değeri. İsteğe bağlı.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
@@ -49,4 +48,4 @@ Gelen güvenlik belirteçlerinin için tek bir isteğe bağlı veya gerekli tale
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<claimTypeRequired >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtyperequired.md)|Gelen güvenlik belirteçlerinin için gerekli talep kümesini belirtir.|
+|[\<claimTypeRequired >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtyperequired.md)|Gelen güvenlik belirteçleri için gerekli talep kümesini belirtir.|

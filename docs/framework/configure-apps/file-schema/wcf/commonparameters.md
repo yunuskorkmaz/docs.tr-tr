@@ -3,11 +3,11 @@ title: '&lt;commonParameters&gt;'
 ms.date: 03/30/2017
 ms.assetid: ffc20832-34d6-4622-8174-81924fd53514
 ms.openlocfilehash: 5e4c19c48709ffd81cb00e9820e6c3cdb297ec7e
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47027152"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47086404"
 ---
 # <a name="ltcommonparametersgt"></a>&lt;commonParameters&gt;
 Dünya çapında bir çok hizmette kullanılan parametrelerin bir koleksiyonunu temsil eder. Bu koleksiyon genellikle dayanıklı hizmetler tarafından paylaşılan veritabanı bağlantı dizesi içerir.  

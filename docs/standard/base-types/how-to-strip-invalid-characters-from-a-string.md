@@ -19,11 +19,11 @@ ms.assetid: b4319c8a-9032-4129-a9d5-6f6fc28e7f32
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a3bbd25e40607bd316f1bbab974174fe5433770f
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46698074"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47074865"
 ---
 # <a name="how-to-strip-invalid-characters-from-a-string"></a>Nasıl yapılır: Dizeden Geçersiz Karakterleri Çıkartma
 Aşağıdaki örnek, statik kullanır <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> yöntemi bir dizeden geçersiz karakterleri kaldırın.  

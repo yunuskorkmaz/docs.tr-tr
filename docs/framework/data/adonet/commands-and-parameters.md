@@ -3,11 +3,11 @@ title: Komutlar ve parametreler
 ms.date: 03/30/2017
 ms.assetid: b623f810-d871-49a5-b0f5-078cc3c34db6
 ms.openlocfilehash: 8e476d68b60272d944eecfe585fd77d8a7a8f08c
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46711083"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47087226"
 ---
 # <a name="commands-and-parameters"></a>Komutlar ve parametreler
 Bir veri kaynağı ile bağlantı kurulduktan sonra komutları yürütmek ve sonuçları döndürür kullanarak veri kaynağına bir <xref:System.Data.Common.DbCommand> nesne. Bir komut oluşturucular çalışıyorsanız ve .NET Framework veri sağlayıcısı kullanarak bir komut oluşturabilirsiniz. Oluşturucular, veri kaynağında yürütmek için bir SQL deyimi gibi isteğe bağlı bağımsız değişkenlere gerçekleştirebileceğiniz bir <xref:System.Data.Common.DbConnection> nesnesi veya bir <xref:System.Data.Common.DbTransaction> nesne. Bu gibi durumlarda, bu nesneleri ayrıca komut özellikleri olarak yapılandırabilirsiniz. Ayrıca belirli bir bağlantı kullanarak bir komut oluşturun <xref:System.Data.Common.DbConnection.CreateCommand%2A> yöntemi bir `DbConnection` nesne. Komutu tarafından yürütülen SQL deyimini kullanarak yapılandırılabilir <xref:System.Data.Common.DbCommand.CommandText%2A> özelliği.  

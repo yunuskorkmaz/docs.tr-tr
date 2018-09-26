@@ -3,13 +3,12 @@ title: SecurityBindingElement
 ms.date: 03/30/2017
 ms.assetid: ef93b6e6-3524-48a8-94d3-c8837f1872f9
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: ceb674ea7c20386acb821d3a41c1ad0c743a7607
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 19c65b3028ad63b8a78205d00f44cc32322648d5
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487561"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47069980"
 ---
 # <a name="securitybindingelement"></a>SecurityBindingElement
 SecurityBindingElement  
@@ -29,58 +28,58 @@ class SecurityBindingElement : BindingElement
 ```  
   
 ## <a name="methods"></a>Yöntemler  
- SecurityBindingElement sınıfı herhangi bir yöntem tanımlamıyor.  
+ SecurityBindingElement sınıf herhangi bir yöntemi tanımlamaz.  
   
 ## <a name="properties"></a>Özellikler  
  SecurityBindingElement sınıfı aşağıdaki özelliklere sahiptir:  
   
-### <a name="defaultalgorithmsuite"></a>DefaultAlgorithmSuite  
+### <a name="defaultalgorithmsuite"></a>defaultAlgorithmSuite  
  Veri türü: dize  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Bağlama ile birlikte kullanılacak algoritmaları belirler.  
+ Bağlama ile kullanmak için algoritmalar belirtir.  
   
-### <a name="includetimestamp"></a>IncludeTimestamp  
- Veri türü: boolean  
+### <a name="includetimestamp"></a>includeTimestamp  
+ Veri türü: Boole  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
  Her ileti bir zaman damgası içerip içermediğini belirten bir Boole değeri.  
   
-### <a name="keyentropymode"></a>KeyEntropyMode  
+### <a name="keyentropymode"></a>keyEntropyMode  
  Veri türü: dize  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Anahtarlar oluşturmak için kullanılan entropi kaynağı.  
+ Anahtarları oluşturmak için kullanılan entropi kaynağı.  
   
 ### <a name="localservicesecuritysettings"></a>LocalServiceSecuritySettings  
  Veri türü: LocalServiceSecuritySettings  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Yerel hizmet bağlama belirli güvenlik özellikleri.  
+ Yerel hizmet bağlama belirli güvenlik özelliklerini.  
   
-### <a name="messagesecurityversion"></a>MessageSecurityVersion  
+### <a name="messagesecurityversion"></a>messageSecurityVersion  
  Veri türü: dize  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
  İleti güvenliği için kullanılan sürümü.  
   
-### <a name="securityheaderlayout"></a>SecurityHeaderLayout  
+### <a name="securityheaderlayout"></a>securityHeaderLayout  
  Veri türü: dize  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Güvenlik üstbilgisinde öğelerin sırasını Bu bağlama için.  
+ Güvenlik üst bilgisindeki öğelerin sırasını Bu bağlama için.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|MOF|Bildirilen Servicemodel.mof.|  
+|MOF|Bildirilmiş Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Ad Alanı|İçinde tanımlanan root\ServiceModel|  
+|Ad Alanı|İçinde tanımlı root\ServiceModel|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Channels.SecurityBindingElement>

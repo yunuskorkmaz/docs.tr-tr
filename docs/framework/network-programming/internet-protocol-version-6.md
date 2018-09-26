@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: e6fa8ebd-010a-4c48-a5ec-a5102c53c06f
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 2c9b3b1c647d74444fed01e38b65c1b2fe8364c6
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: fc7aa27c07946b3a3da7e1ede8adaea30c06e58f
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45653465"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47071260"
 ---
 # <a name="internet-protocol-version-6"></a>Internet Protokolü sürüm 6
 Internet Protokolü sürüm 6 (IPv6) yeni bir Internet'e ağ katmanı standart protokoller paketidir. IPv6 adres tükenmesi, güvenlik, otomatik yapılandırma, genişletilebilirlik ve benzeri için haklısın ile birçok (IPv4 olarak bilinir) Internet Protokolü paketinin geçerli sürümü, sorunu çözmek için tasarlanmıştır. IPv6, yeni türde uygulamalar, eşler arası ile mobil uygulamalar dahil olmak üzere etkinleştirmek için yeteneklerini genişletir. Geçerli IPv4 protokolünün ana sorunlar şunlardır:  

@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: 8eb34f3b-427e-4288-a7ff-c73f489deb45
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 71769efa1233fc8a693219dc02ae56ea39c164e7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c5186aa94993ba551252db6fef55853b5b554789
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743803"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170827"
 ---
 # <a name="linkedconfiguration-element"></a>\<linkedConfiguration > öğesi
 
-Dahil etmek için bir yapılandırma dosyası belirtir.
+Dahil edilecek bir yapılandırma dosyası belirtir.
 
 [**\<Yapılandırma >**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
 &nbsp;&nbsp;[**\<assemblyBinding >**](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)   
@@ -39,13 +38,13 @@ Dahil etmek için bir yapılandırma dosyası belirtir.
 
 |           | Açıklama |
 | --------- | ----------- |
-| **href**  | Gerekli öznitelik.<br><br>Dahil etmek için yapılandırma dosyası URL'si. İçin desteklenen tek biçimi **href** özniteliği `file://`. Yerel dosyaları ve UNC dosyaları desteklenir. |
+| **href**  | Gerekli öznitelik.<br><br>Dahil etmek için yapılandırma dosyasının URL'si. Desteklenen tek biçimi **href** özniteliği `file://`. Yerel dosyaları ve UNC dosyaları desteklenir. |
 
-## <a name="parent-element"></a>Üst öğesi
+## <a name="parent-element"></a>Üst öğe
 
 |     | Açıklama |
 | --- | ----------- |
-| [**\<assemblyBinding >** öğesi](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | Derleme bağlama ilkesi yapılandırma düzeyinde belirtir. |
+| [**\<assemblyBinding >** öğesi](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | Derleme bağlama ilkesini yapılandırma düzeyinde belirtir. |
 
 ## <a name="child-elements"></a>Alt öğeleri
 
@@ -53,28 +52,28 @@ Yok.
 
 ## <a name="remarks"></a>Açıklamalar
 
-**\<LinkedConfiguration >** öğesi basitleştirir bileşen derlemeleri için bakım. Bir veya daha fazla uygulama iyi bilinen bir konumda bulunan bir yapılandırma dosyası sahip bir derleme kullanıyorsanız, derleme kullanan uygulamalar, yapılandırma dosyalarını kullanabilirsiniz  **\<linkedConfiguration >** yapılandırma bilgilerini doğrudan da dahil olmak üzere yerine derleme yapılandırma dosyası eklenecek öğe. Bileşen derleme hizmet, ortak yapılandırma dosyasını güncelleştirme derleme kullanan tüm uygulamalar için güncelleştirilmiş yapılandırma bilgileri sağlar.
+**\<LinkedConfiguration >** öğesi bileşeni derlemeler için bakım basitleştirir. İyi bilinen bir konumda bulunan bir yapılandırma dosyası bir derleme bir veya daha fazla kullanmanız durumunda derleme kullanan uygulamaların yapılandırma dosyalarını kullanabilirler  **\<linkedConfiguration >** yapılandırma bilgilerini doğrudan dahil olmak üzere yerine derleme yapılandırma dosyası eklenecek öğe. Bileşen derlemesi değiştiğinde, ortak yapılandırma dosyasını güncelleştirme derleme kullanan tüm uygulamalar için güncelleştirilmiş yapılandırma bilgilerini sağlar.
 
 > [!NOTE]
 > **\<LinkedConfiguration >** öğesi Windows yan yana bildirimleri olan uygulamalar için desteklenmez.
 
-Aşağıdaki kuralları bağlantılı yapılandırma dosyaları kullanımını yöneten:
+Aşağıdaki kuralları bağlantılı yapılandırma dosyaları yöneten:
 
-- Dahil edilen yapılandırma dosyalarında ayarlar yalnızca yükleyicisi bağlama ilkesi etkileyebilir ve yalnızca yükleyicisi tarafından kullanılır. Dahil edilen yapılandırma dosyalarını ilkeleri bağlama farklı ayarlara sahip olabilir, ancak bu ayarları herhangi bir etkisi yoktur.
+- Dahil edilen yapılandırma dosyalarındaki ayarlar yalnızca yükleyici bağlama ilkesi etkiler ve yalnızca yükleyicisi tarafından kullanılır. Dahil edilen yapılandırma dosyalarını ayarları ilkeleri bağlama dışında olabilir, ancak bu ayarlar, herhangi bir etkisi yok.
 
-- İçin desteklenen tek biçimi `href` özniteliği `file://`. Yerel dosyaları ve UNC dosyaları desteklenir.
+- Desteklenen tek biçimi `href` özniteliği `file://`. Yerel dosyaları ve UNC dosyaları desteklenir.
 
-- Yapılandırma dosya başına bağlı yapılandırmalar sayısı hiçbir kısıtlama yoktur.
+- Yapılandırma dosyası başına bağlı yapılandırmaları sayısı hiçbir kısıtlama yoktur.
 
-- Tüm bağlantılı yapılandırma dosyaları için davranışını benzer bir dosyayı oluşturmak için birleştirilir `#include` C/c++ yönergesi.
+- Tüm bağlantılı yapılandırma dosyaları davranıştır benzer bir dosya oluşturmak üzere birleştirilir `#include` C/C++'ta yönergesi.
 
-- **\<LinkedConfiguration >** yalnızca uygulama yapılandırma dosyaları öğesine izin verilir; içinde göz ardı *Machine.config*.
+- **\<LinkedConfiguration >** öğesi yalnızca uygulama yapılandırma dosyalarında izin verilir; içindeki sayılır *Machine.config*.
 
 - Döngüsel başvuru algılandı ve sonlandırıldı. Diğer bir deyişle,  **\<linkedConfiguration >** yapılandırma dosyalarını bir dizi öğeleri formunda bir döngü, döngü algılandı ve durduruldu.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, yerel sabit disk yapılandırma dosyasından dahil gösterilmektedir:
+Aşağıdaki örnek yapılandırma dosyasını yerel sabit diskten nasıl ekleyeceğinizi gösterir:
 
 ```xml
 <configuration>
@@ -87,4 +86,4 @@ Aşağıdaki örnek, yerel sabit disk yapılandırma dosyasından dahil gösteri
 ## <a name="see-also"></a>Ayrıca bkz.
 
 [**\<assemblyBinding >** öğesi](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)   
-[.NET Framework için yapılandırma dosyası şeması](~/docs/framework/configure-apps/file-schema/index.md)
+[.NET Framework yapılandırma dosyası şeması](~/docs/framework/configure-apps/file-schema/index.md)

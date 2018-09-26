@@ -3,11 +3,11 @@ title: Koleksiyonlar (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
 ms.openlocfilehash: 60519de1f580bf1cfa4aa067d4a999b20ea8d54d
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46711395"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47083130"
 ---
 # <a name="collections-visual-basic"></a>Koleksiyonlar (Visual Basic)
 Birçok uygulama için ilgili nesnelerin gruplarını oluşturmak ve yönetmek istersiniz. Grup nesnelerini iki yolu vardır: nesne dizileri oluşturarak ve veya nesne koleksiyonu oluşturarak.  

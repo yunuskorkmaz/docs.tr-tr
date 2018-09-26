@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Forms Designer [Windows Forms], interoperability with WPF
 - interoperability [WPF]
 ms.assetid: 03c85dce-26ad-44cd-bc1d-8e0cb56de096
-ms.openlocfilehash: 30b84f05898f823227415c410dc7ba5f89d58664
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: be925bdceea3dd01c568d85fe025d6e037066454
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504711"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170476"
 ---
 # <a name="using-wpf-controls"></a>WPF Denetimlerini Kullanma
 Windows Forms tabanlı uygulamalarınızı Windows Presentation Foundation (WPF) denetimleri kullanabilirsiniz. Bu iki farklı görünümü teknolojileri olsa da, bunlar düzgün çalışmak.  
@@ -24,16 +24,10 @@ Windows Forms tabanlı uygulamalarınızı Windows Presentation Foundation (WPF)
  Bir Windows formunda Windows Presentation Foundation denetim kopyalama işlemi gösterilmektedir.  
   
  [İzlenecek yol: Windows Forms'ta Tasarım Zamanında WPF İçeriğini Düzenleme](../../../../docs/framework/winforms/advanced/walkthrough-arranging-wpf-content-on-windows-forms-at-design-time.md)  
- Sabitleme ve dayama çizgileri, gibi Windows Forms düzeni özellikleri Windows Presentation Foundation denetimleri düzenlemek için nasıl kullanılacağını gösterir.  
-  
- [İzlenecek yol: Tasarım Zamanında Barındırılan bir WPF Öğesinin Özelliklerini Değiştirme](../../../../docs/framework/winforms/advanced/walkthrough-changing-properties-of-a-hosted-wpf-element-at-design-time.md)  
- Windows Form Tasarımcısı arasındaki iş akışını gösterir ve [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] WPF denetimlerinin özelliklerini değiştirmek için.  
+ Sabitleme ve dayama çizgileri, gibi Windows Forms düzeni özellikleri Windows Presentation Foundation denetimleri düzenlemek için nasıl kullanılacağını gösterir.
   
  [İzlenecek yol: Windows Forms’ta Tasarım Zamanında Yeni bir WPF İçeriği Oluşturma](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)  
- Windows Forms tabanlı uygulamalarda kullanmak için bir Windows Presentation Foundation denetim oluşturma işlemi gösterilmektedir.  
-  
- [İzlenecek yol: Bir ElementHost Denetimini Ayrı Windows Forms’a Kopyalama ve Yapıştırma](../../../../docs/framework/winforms/advanced/copy--paste-an-elementhost-control-into-forms.md)  
- Bir Windows formdan başka bir Windows Presentation Foundation denetim kopyalama işlemi gösterilmektedir.  
+ Windows Forms tabanlı uygulamalarda kullanmak için bir Windows Presentation Foundation denetim oluşturma işlemi gösterilmektedir.
   
  [İzlenecek yol: Windows Forms’ta Tasarım Zamanında WPF İçeriği Atama](../../../../docs/framework/winforms/advanced/walkthrough-assigning-wpf-content-on-windows-forms-at-design-time.md)  
  Formunuzda görüntülemek istediğiniz Windows Presentation Foundation denetim türlerini seçmek gösterilmektedir.  

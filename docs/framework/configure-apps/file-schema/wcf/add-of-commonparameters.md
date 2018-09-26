@@ -3,11 +3,11 @@ title: '&lt;commonParameters&gt; &lt;ekleme&gt;'
 ms.date: 03/30/2017
 ms.assetid: 3713bf25-20c8-455f-bb85-de46b6487932
 ms.openlocfilehash: 93e82aa3bd44a747d1e85986c51c21522d709bd0
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46578913"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170580"
 ---
 # <a name="ltaddgt-of-ltcommonparametersgt"></a>&lt;commonParameters&gt; &lt;ekleme&gt;
 Dünya çapında bir çok hizmette kullanılan parametreleri ad-değer çiftinin belirtir. Genellikle bu parametre, dayanıklı hizmetler tarafından paylaşılan veritabanı bağlantı dizesi içerir.  

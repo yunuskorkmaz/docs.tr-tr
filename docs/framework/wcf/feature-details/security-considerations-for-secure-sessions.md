@@ -3,24 +3,23 @@ title: Güvenli Oturumlar için Güvenlikli İlgili Önemli Noktalar
 ms.date: 03/30/2017
 ms.assetid: 0d5be591-9a7b-4a6f-a906-95d3abafe8db
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: f4ee56204d6980f412b9781868714dedb3c2675c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 470ffc007ed73b28beba24bd0eb9c670dea9337d
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497496"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47109387"
 ---
 # <a name="security-considerations-for-secure-sessions"></a>Güvenli Oturumlar için Güvenlikli İlgili Önemli Noktalar
-Güvenli oturumlar uygularken güvenliğini etkileyen aşağıdaki öğeleri göz önünde bulundurmalısınız. Güvenlik konuları hakkında daha fazla bilgi için bkz: [güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md) ve [en iyi güvenlik uygulamaları](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md).  
+Güvenli oturumlar uygularken güvenliğini etkileyen aşağıdakileri dikkate almanız gerekir. Güvenlik konuları hakkında daha fazla bilgi için bkz. [güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md) ve [en iyi güvenlik uygulamaları](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md).  
   
-## <a name="secure-sessions-and-metadata"></a>Güvenli oturumlar ve meta veriler  
- Güvenli bir oturum zaman kurulur ve <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.RequireCancellation%2A> özelliği ayarlanmış `false`, Windows Communication Foundation (WCF) gönderir bir `mssp:MustNotSendCancel` ve Web Hizmetleri Açıklama Dili (WSDL) belge için meta veriler bir parçası olarak onaylama Hizmet uç noktası. `mssp:MustNotSendCancel` Onaylama hizmet güvenli oturum iptal etmek için isteklerine yanıt vermemesine istemcileri bildirir. Zaman <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.RequireCancellation%2A> özelliği ayarlanmış `true`, WCF değil yayma sonra bir `mssp:MustNotSendCancel` WSDL belgesinde onaylama. İstemciler artık güvenli oturum gerektirdiğinde hizmete iptal etme isteği göndermek beklenir. Bir istemci kullanarak oluşturulduğunda [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), istemci kodu varlığı veya yokluğuna göre uygun şekilde tepki verdiğini `mssp:MustNotSendCancel` onaylama.  
+## <a name="secure-sessions-and-metadata"></a>Güvenli oturumlar ve meta verileri  
+ Güvenli bir oturum olduğunda kurulur ve <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.RequireCancellation%2A> özelliği `false`, Windows Communication Foundation (WCF) gönderen bir `mssp:MustNotSendCancel` onaylama Web Hizmetleri Açıklama Dili (WSDL) belge için meta verilerde bir parçası olarak Hizmet uç noktası. `mssp:MustNotSendCancel` Onaylama hizmet güvenli oturum iptal isteklerine yanıt vermezse istemciler bildirir. Zaman <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.RequireCancellation%2A> özelliği `true`, WCF ktıları sonra bir `mssp:MustNotSendCancel` onaylama WSDL belgesi. İstemciler artık güvenli oturum gerektirdiğinde hizmete bir iptal isteği Gönder beklenir. Bir istemci kullanarak oluşturulduğunda [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), istemci kodu belirli bir varlığı veya yokluğuna göre uygun şekilde tepki verdiğini `mssp:MustNotSendCancel` onaylama.  
   
-## <a name="secure-conversations-and-custom-tokens"></a>Güvenli görüşmeler ve özel belirteçler  
- Özel belirteçler ve türetilen anahtarları WS-SecureConversation belirtiminde tanımlanan şekilde nedeniyle karıştırma bazı sorunlar vardır. Belirtimi bildiren `wsse:SecurityTokenReference` türetilmiş belirteci başvuruda bulunan bir isteğe bağlı bir öğedir: "`/wsc:DerivedKeyToken/wsse:SecurityTokenReference` Bu isteğe bağlı öğe güvenlik bağlamı belirteci, güvenlik belirteci ya da türetme için kullanılan paylaşılan anahtarı/parola belirtmek için kullanılır. Belirtilmezse, alıcı iletiyi bağlamından paylaşılan anahtar belirleyebilirsiniz varsayılır. Bağlam belirlenemiyorsa, ardından bir arıza gibi `wsc:UnknownDerivationSource` oluşmalıdır. "  
+## <a name="secure-conversations-and-custom-tokens"></a>Güvenli konuşma ve özel belirteçler  
+ Özel belirteçler ve WS-SecureConversation belirtiminde tanımlanan şekilde nedeniyle türetilen anahtarlar karıştırma bazı sorunlar vardır. Belirtimi bildiren `wsse:SecurityTokenReference` türetilmiş belirteç başvuran isteğe bağlı bir öğedir: "`/wsc:DerivedKeyToken/wsse:SecurityTokenReference` Bu isteğe bağlı öğe, güvenlik bağlamı belirteci, güvenlik belirteci veya türetme için kullanılan paylaşılan anahtar/parola belirtmek için kullanılır. Belirtilmezse, alıcının ileti bağlamı paylaşılan anahtarı belirleyebilirsiniz varsayılır. Bağlam belirlenemiyorsa, ardından bir hata gibi `wsc:UnknownDerivationSource` harekete Geçirilmemesi gereken. "  
   
- Türetilmesi için özel bir belirteç isterseniz, onun yan tümcesi türü kaydırılacağını yani bir `SecurityTokenReference` öğesi. Türetme devre dışı bırakma seçeneği yoktur ancak anahtarlar türetilen varsayılandır. Anahtar kaydırma başarısız olursa, türetilen anahtar belirteci seri hale getirme başarılı olur, ancak bu seri çalışılırken bir özel durum oluşturur.  
+ Bu türetilmiş için özel bir belirteç isterseniz yan tümcesi türüne kaydıracağını anlamına gelir. bir `SecurityTokenReference` öğesi. Türetme devre dışı bırakma seçeneği yoktur, ancak anahtarları türetmek için varsayılandır. Bir anahtarı sarmalama başarısız olursa, türetilmiş anahtar belirtecinde seri hale getirme başarılı, ancak bu seri durumdan çalışılırken bir özel durum oluşturur.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Nasıl yapılır: WSFederationHttpBinding Güvenli Oturumlarını Devre Dışı Bırakma](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  

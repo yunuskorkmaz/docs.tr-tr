@@ -9,11 +9,11 @@ ms.assetid: 2038a90b-92af-4a0a-baaa-08e688d95194
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: da1c9f25052bb2354b435cd28b7ff55d4a754ed1
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46697873"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47088379"
 ---
 # <a name="unordered-node-retrieval-by-name-or-index"></a>Ada veya dizine göre sırasız düğüm alma
 **XmlNamedNodeMap** NamedNodeMap olarak World Wide Web Consortium (W3C) belirtimi açıklanmıştır ve bunların adı veya dizin tarafından başvuru düğümleri olanağı sırasız bir dizi düğümü işlemek için gerekli değildir. Tek yolu erişiminiz bir **XmlNamedNodeMap** olduğunda bir **XmlNamedNodeMap** bir yöntem veya özellik ile döndürülür. Üç yöntem veya döndüren özellikler bir **XmlNamedNodeMap**:  

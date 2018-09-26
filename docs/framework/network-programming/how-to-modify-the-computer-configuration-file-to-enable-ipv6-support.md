@@ -1,28 +1,27 @@
 ---
-title: 'Nasıl yapılır: IPv6 desteğini etkinleştirmek için bilgisayarı yapılandırma dosyasını değiştirme'
+title: 'Nasıl yapılır: IPv6 desteğini etkinleştirmek için bilgisayar yapılandırma dosyasını değiştirme'
 ms.date: 03/30/2017
 ms.assetid: 5611b677-b9cc-43b8-a434-60e18d89aada
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: aef2300ccde12ae224e373ca4e19b4d10b9b4423
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 77ad110a4f087ff21395fe4330793f8a1928b275
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395024"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47075729"
 ---
-# <a name="how-to-modify-the-computer-configuration-file-to-enable-ipv6-support"></a>Nasıl yapılır: IPv6 desteğini etkinleştirmek için bilgisayarı yapılandırma dosyasını değiştirme
-Aşağıdaki kod örneğinde bilgisayar yapılandırma dosyasının nasıl değiştirileceğini gösterir *machine.config*, IPv6 desteğini etkinleştirmek için. *Machine.config* dosya depolanır *%Windir%\Microsoft.NET\Framework* Windows yüklendiği klasörü dizininde. Ayrı bir yoktur *machine.config* altındaki klasörler dosyasında *%Windir%\Microsoft.NET\Framework* her bilgisayarda yüklü .NET Framework sürümü için (örneğin, *C:\ WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config*).  
+# <a name="how-to-modify-the-computer-configuration-file-to-enable-ipv6-support"></a>Nasıl yapılır: IPv6 desteğini etkinleştirmek için bilgisayar yapılandırma dosyasını değiştirme
+Aşağıdaki kod örneği bilgisayar yapılandırma dosyasının nasıl değiştirileceğini gösterir *machine.config*, IPv6 desteğini etkinleştirmek için. *Machine.config* dosyasının depolandığı *%Windir%\Microsoft.NET\Framework* dizinde Windows yüklendiği klasör. Ayrı bir yoktur *machine.config* altındaki klasörler dosyasında *%Windir%\Microsoft.NET\Framework* bilgisayarda yüklü .NET Framework'ün her sürümü için (örneğin, *C:\ WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config*).  
   
  Bu ayarlar, bilgisayarın yapılandırma dosyasında öncelikli olan uygulamanın bilgisayar yapılandırma dosyasında da yapılabilir.  
   
- .NET Framework sürüm 1.1 ve önceki değeri için **etkin IPv6** yapılandırma anahtarı belirtir olup olmadığını üyeleri <xref:System.Net.Dns?displayProperty=nameWithType> sınıfı IPv6 adresleri döndürür.  
+ .NET Framework sürüm 1.1 ve önceki değerini **IPv6 etkin** yapılandırma anahtarı belirtir olup olmadığını üyeleri <xref:System.Net.Dns?displayProperty=nameWithType> sınıf, IPv6 adreslerini döndürür.  
   
- .NET Framework sürüm 2.0 ve daha sonra Windows IPv6 sonra tüm üyeleri destekliyorsa için <xref:System.Net.Dns?displayProperty=nameWithType> sınıfı (örneğin, <xref:System.Net.Dns.GetHostEntry%2A?displayProperty=nameWithType> yöntemi), IPv6 adresleriyle bir sınırlama döndürür. Kullanımdan kalktı üyeleri <xref:System.Net.Dns?displayProperty=nameWithType> sınıfı (örneğin, <xref:System.Net.Dns.Resolve%2A?displayProperty=nameWithType> yöntemi) okuma ve yapılandırma dosyasındaki değer tanınamıyor.  
+ .NET Framework sürüm 2.0 ve üzeri, Windows IPv6, ardından tüm üyelerinin destekliyorsa <xref:System.Net.Dns?displayProperty=nameWithType> sınıfı (örneğin, <xref:System.Net.Dns.GetHostEntry%2A?displayProperty=nameWithType> yöntemi), tek bir kısıtlama olmaksızın IPv6 adreslerini döndürür. Üyeleri geçersiz <xref:System.Net.Dns?displayProperty=nameWithType> sınıfı (örneğin, <xref:System.Net.Dns.Resolve%2A?displayProperty=nameWithType> yöntemi) okuyun ve yapılandırma dosyasında değer tanınamıyor.  
   
 > [!NOTE]
->  .NET Framework sürüm 2.0 ve sonraki sürümleri için IPv6 varsayılan olarak etkindir. .NET Framework sürüm 1.1 ve önceki sürümler için IPv6 varsayılan olarak devre dışıdır.  
+>  .NET Framework sürüm 2.0 ve sonraki sürümleri için IPv6, varsayılan olarak etkindir. .NET Framework sürüm 1.1 ve önceki sürümler için IPv6, varsayılan olarak devre dışıdır.  
   
 ## <a name="example"></a>Örnek  
   

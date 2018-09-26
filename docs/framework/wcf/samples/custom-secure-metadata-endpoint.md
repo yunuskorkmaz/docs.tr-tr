@@ -3,13 +3,12 @@ title: Özel Güvenli Meta Veri Uç Noktaları
 ms.date: 03/30/2017
 ms.assetid: 9e369e99-ea4a-49ff-aed2-9fdf61091a48
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 3ff8c5b08bb50b894511d1f9bdd28ddb2683d13b
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: af3c7ca70ea38a1ee07e077440b3936d83a34d56
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43777200"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47171965"
 ---
 # <a name="custom-secure-metadata-endpoint"></a>Özel Güvenli Meta Veri Uç Noktaları
 Bu örnek, bir hizmeti meta veri olmayan exchange bağlamaları birini kullanan bir güvenli meta veri uç noktası ile uygulama ve nasıl yapılandırılacağını gösterir. [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) veya getirilecek istemcileri Böyle bir meta veri uç noktası meta verileri. Meta veri uç noktalarını açığa çıkarmak için kullanılabilen iki sistem tarafından sağlanan bağlamaları vardır: mexHttpBinding ve mexHttpsBinding. mexHttpBinding meta veri uç noktası güvenli olmayan bir yöntemle HTTP üzerinden kullanıma sunmak için kullanılır. mexHttpsBinding meta veri uç noktasına HTTPS üzerinden güvenli bir şekilde kullanıma sunmak için kullanılır. Bu örnek gösterir kullanarak bir güvenli meta veri uç noktası nasıl sunacağınızı öğrenin <xref:System.ServiceModel.WSHttpBinding>. Bu bağlama üzerinde güvenlik ayarlarını değiştirmek istediğiniz, ancak HTTPS kullanmak istemiyorsanız ne yapılacağını istersiniz. MexHttpsBinding kullanırsanız, meta veri uç noktası güvenli olacaktır, ancak bağlama ayarlarını değiştirmek için bir yolu yoktur.  

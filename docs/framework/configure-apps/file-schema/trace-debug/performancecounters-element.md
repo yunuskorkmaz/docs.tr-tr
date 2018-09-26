@@ -1,5 +1,5 @@
 ---
-title: '&lt;performans sayaçları&gt; öğesi'
+title: '&lt;performanceCounters&gt; öğesi'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/performanceCounters
@@ -10,20 +10,19 @@ helpviewer_keywords:
 ms.assetid: a71f605b-c7d9-4501-a5c3-abcbb964a43f
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: cb4af08095c14c0c748a79f53104d8454d3dcd47
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 69d6deafb6aad88f5d379c7e8d4ac707e4c51815
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754164"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47088691"
 ---
-# <a name="ltperformancecountersgt-element"></a>&lt;performans sayaçları&gt; öğesi
-Performans sayaçları tarafından paylaşılan genel bellek boyutunu belirtir.  
+# <a name="ltperformancecountersgt-element"></a>&lt;performanceCounters&gt; öğesi
+Performans sayaçlarını birer paylaşılan genel bellek boyutunu belirtir.  
   
  \<Yapılandırma >  
 \<System.Diagnostics >  
-\<performans sayaçları >  
+\<performanceCounters >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,7 +37,7 @@ Performans sayaçları tarafından paylaşılan genel bellek boyutunu belirtir.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|filemappingsize|Gerekli öznitelik.<br /><br /> Performans sayaçları tarafından paylaşılan genel belleğin bayt cinsinden boyutu belirtir. 524288 varsayılandır.|  
+|filemappingsize|Gerekli öznitelik.<br /><br /> Genel performans sayaçlarını birer paylaşılan belleğin bayt cinsinden boyutunu belirtir. 524288 varsayılandır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -48,14 +47,14 @@ Performans sayaçları tarafından paylaşılan genel bellek boyutunu belirtir.
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |`Configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
-|`system.diagnostics`|ASP.NET yapılandırma bölümü için kök öğesi belirtir.|  
+|`system.diagnostics`|ASP.NET yapılandırma bölümü için olan kök öğesini belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Performans sayaçları, bellekle eşlenen dosya veya paylaşılan bellek performans verilerini yayınlamak için kullanın.  Kaç tane aynı anda kullanılabilir paylaşılan bellek boyutunu belirler.  Paylaşılan bellek iki tür vardır: Genel paylaşılan bellek ve ayrı bir paylaşılan bellek.  Genel paylaşılan bellek, .NET Framework sürüm 1.0 veya 1.1 ile tüm performans sayacı kategorileri tarafından kullanılır.  .NET Framework sürüm 2.0 ile birlikte yüklenen performans sayacı kategorileri ayrı paylaşılan bellek, her performans sayacı kategorisi kendi bellek sahip kullanın.  
+ Performans sayaçları, performans verilerini yayınlamak için bellek eşlemeli dosya veya paylaşılan belleği'ni kullanın.  Tek seferde kaç tane kullanılabilir paylaşılan bellek boyutunu belirler.  Paylaşılan bellek iki tür vardır: Genel paylaşılan bellek ve ayrı bir paylaşılan bellek.  Genel paylaşılan bellek, .NET Framework sürümleri 1.0 veya 1.1 ile tüm performans sayacı kategorileri tarafından kullanılır.  .NET Framework sürüm 2.0 yüklü performans sayacı kategorileri ayrı paylaşılan bellek, her performans sayacı kategorisinin, kendi belleğe sahip kullanın.  
   
- Genel paylaşılan bellek boyutu yalnızca bir yapılandırma dosyası ile ayarlayabilirsiniz.  Varsayılan boyutu 524.288 bEvet en büyük boyutu 33,554,432 bayt ve minimum boyut 32.768 bayttır.  Genel paylaşılan bellek tüm işlemleri ve kategorileri tarafından paylaşılan olduğundan, ilk oluşturan boyutunu belirtir.  Uygulama yapılandırma dosyasında boyutu tanımlarsanız, uygulamanız yürütmek performans sayaçları neden olan ilk uygulama ise bu boyut yalnızca kullanılır.  Bu nedenle belirtmek için doğru konuma `filemappingsize` Machine.config dosyasının bir değerdir.  Genel paylaşılan bellek bellek performans sayacı örnekleri farklı adlara sahip çok sayıda oluşturduysanız genel paylaşılan bellek tükendi tek tek performans sayaçları tarafından sonuç bırakılamıyor.  
+ Yalnızca bir yapılandırma dosyası ile genel paylaşılan bellek boyutunu ayarlayabilirsiniz.  Varsayılan boyutu 524.288 bEvet en büyük boyutu 33,554,432 bayt ve en düşük boyut 32.768 bayttır.  Genel paylaşılan bellek tüm işlemleri ve kategorileri tarafından paylaşılan olduğundan, ilk oluşturan boyutunu belirtir.  Uygulama yapılandırma dosyanızda boyutu tanımlarsanız, uygulamanızı yürütmek performans sayaçları neden olan ilk uygulama ise, boyutu yalnızca kullanılır.  Bu nedenle doğru konumu belirlemek için `filemappingsize` Machine.config dosyasının bir değerdir.  Çok sayıda performans sayacı örneklerinin farklı adlara sahip oluşturduysanız genel paylaşılan bellek bitti bireysel performans sayaçlarını birer, sonuç genel paylaşılan bellek bellekte bırakılamıyor.  
   
- Ayrı bir paylaşılan bellek boyutu için anahtar DWORD FileMappingSize değeri kayıt defterinde HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\*\<kategori adı >* \Performance başvurusu ilk olarak, genel paylaşılan bellek yapılandırma dosyası için belirtilen değer arkasından. FileMappingSize değer yok sonra bir dördüncü kümesi ayrı bir paylaşılan bellek boyutu (1/4) yapılandırma dosyasında genel ayar.  
+ Ayrı bir paylaşılan bellek boyutu için kayıt defteri DWORD FileMappingSize değerinde anahtar HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\*\<kategori adı >* \Performance başvuruluyor yapılandırma dosyasındaki genel paylaşılan bellek için belirtilen değer ilk olarak, arkasından. FileMappingSize değeri yok sonra ayrı bir paylaşılan bellek boyutu için bir dördüncü ayarlanır (1/4) yapılandırma dosyasındaki genel ayarı.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Diagnostics.PerformanceCounter>  

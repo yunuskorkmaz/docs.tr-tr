@@ -9,21 +9,20 @@ helpviewer_keywords:
 ms.assetid: 712ac3a7-7abf-4a9e-8db4-acd241c2f369
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: e0dc425327f6577606e1205a23fdaffcc39f6e01
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0a1a2c9ec34c43eb1b9559d90a8da0d70193c19e
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747460"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47109530"
 ---
 # <a name="ltaddgt-element-for-ltswitchesgt"></a>&lt;ekleme&gt; öğesi için &lt;anahtarları&gt;
-İzleme anahtarı ayarlandığı düzeyini belirtir.  
+Bir izleme anahtarı ayarlandığı düzeyini belirtir.  
   
  \<Yapılandırma >  
 \<System.Diagnostics >  
-\<anahtarları >  
-\<ekleme >  
+\<anahtarlar >  
+\<Ekle >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -50,14 +49,14 @@ ms.locfileid: "32747460"
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
-|`switches`|İzleme anahtarları ve izleme anahtarları belirlendiği düzeyi içerir.|  
-|`system.diagnostics`|Toplamak, depolamak ve iletileri ve izleme anahtarı ayarlandığı düzeyi rota izleme dinleyicilerini belirtir.|  
+|`switches`|İzleme anahtarları ve izleme anahtarları ayarlandığı düzeyi içerir.|  
+|`system.diagnostics`|Toplamak, depolamak ve iletileri ve bir izleme anahtarı ayarlandığı düzeyi izleme dinleyicilerini belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir yapılandırma dosyasında koyarak izleme anahtarı düzeyini değiştirebilirsiniz. Anahtar ise bir <xref:System.Diagnostics.BooleanSwitch>açıp kapatabilirsiniz. Anahtar ise bir <xref:System.Diagnostics.TraceSwitch>, izleme türlerini belirtmek için farklı düzeyleri atayabilir veya hata ayıklama iletileri uygulama çıkarır.  
+ Bir yapılandırma dosyasına koyarak, bir izleme anahtarı düzeyini değiştirebilirsiniz. Anahtar ise bir <xref:System.Diagnostics.BooleanSwitch>açıp kapatabilirsiniz. Anahtar ise bir <xref:System.Diagnostics.TraceSwitch>hata ayıklama iletileri uygulama çıkışları veya izleme türlerini belirtmek için farklı düzeylerde atayabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte nasıl kullanılacağını gösterir  **\<Ekle >** ayarlamak için öğenin `General` izleme anahtara <xref:System.Diagnostics.TraceLevel> düzey ve etkinleştirme `Data` Boolean izleme anahtarı.  
+ Aşağıdaki örnek nasıl kullanılacağını gösterir  **\<Ekle >** ayarlanacak öğenin `General` izleme anahtarı <xref:System.Diagnostics.TraceLevel> düzeyi ve etkinleştirme `Data` Boole izleme anahtarı.  
   
 ```xml  
 <configuration>  

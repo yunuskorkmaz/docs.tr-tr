@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: c59c9494-149b-4ce6-b38d-371f896ae85c
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: f6811a2dbd8859a8765c5e855e0fe423bd31f287
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ad1611701dca48244f3b2a93ecc3ea86363081ed
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359393"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170515"
 ---
 # <a name="ltcryptonamemappinggt-element"></a>&lt;cryptoNameMapping&gt; öğesi
-Kolay adlar sınıflarına eşlemelerini içerir.  
+Sınıf için kolay adlar eşlemeleri içerir.  
   
  \<Yapılandırma >  
 \<mscorlib >  
@@ -43,8 +42,8 @@ Kolay adlar sınıflarına eşlemelerini içerir.
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|`cryptoClasses`|Bir kolay ad eşlemeye sahip şifreleme sınıflarını listesini içeren  **\<nameEntry >** öğesi.|  
-|`nameEntry`|Çok sayıda kolay adlar sağlamak bir sınıf sağlar ve kolay algoritma adı için bir sınıf adı eşler.|  
+|`cryptoClasses`|Bir eşleme için bir kolay ad şifreleme sınıflarını listesini içeren  **\<nameEntry >** öğesi.|  
+|`nameEntry`|Çok sayıda kolay adlara sahip bir sınıf sağlar ve kolay algoritma adı için bir sınıf adı eşler.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -52,11 +51,11 @@ Kolay adlar sınıflarına eşlemelerini içerir.
 |-------------|-----------------|  
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
 |`cryptographySettings`|Şifreleme ayarlarını içerir.|  
-|`cryptoNameMapping`|Kolay adlar sınıflarına eşlemelerini içerir.|  
+|`cryptoNameMapping`|Sınıf için kolay adlar eşlemeleri içerir.|  
 |`mscorlib`|İçeren \<cryptographySettings > öğesi.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte nasıl kullanılacağını gösterir  **\<cryptoNameMapping >** öğesi bir şifreleme sınıf başvurusu ve çalışma zamanı yapılandırmak için. Ardından "RSA" dizesi geçirebilirsiniz <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> yöntemi ve kullanım <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> döndürülecek yöntemi bir `MyCryptoRSAClass` nesnesi.  
+ Aşağıdaki örnek nasıl kullanılacağını gösterir  **\<cryptoNameMapping >** bir şifreleme sınıfına başvurmak için ve çalışma zamanı yapılandırma öğesi. Ardından "RSA" dize iletebileceğiniz <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> yöntemini <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> döndürülecek yöntemi bir `MyCryptoRSAClass` nesne.  
   
 ```xml  
 <configuration>  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - My.Response object
 ms.assetid: 626359bc-3165-40b4-bfaf-2c610e26eb5b
 ms.openlocfilehash: d5f49529a2593093a234babc22f64b591ea3cc61
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46526551"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47071640"
 ---
 # <a name="myresponse-object"></a>My.Response Nesnesi
 Alır <xref:System.Web.HttpResponse> ilişkili nesne <xref:System.Web.UI.Page>. Bu nesne, HTTP yanıt verilerini istemciye göndermenize olanak sağlar ve bu yanıt hakkında bilgiler içerir.  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ElementHost control [Windows Forms], copying and pasting at design time
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: e570375d-2a68-44ba-b4f7-c781af2d20e8
-ms.openlocfilehash: 43ebe50497df97511925bd2e413ab5b5988b7f57
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: a61a8538fb9b4245e3f3705c5d5cbb1b45ed0b72
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45624794"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47089094"
 ---
 # <a name="how-to-copy-and-paste-an-elementhost-control-at-design-time"></a>Nasıl yapılır: Tasarım Zamanında bir ElementHost Denetimini Kopyalayıp Yapıştırma
 Bu yordam Windows formunda bir Windows Presentation Foundation (WPF) denetimi kopyalamak nasıl gösterir.  
@@ -43,9 +43,9 @@ Bu yordam Windows formunda bir Windows Presentation Foundation (WPF) denetimi ko
      Yeni bir <xref:System.Windows.Forms.Integration.ElementHost> adlı Denetim `elementHost2` form üzerinde oluşturulur.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.Integration.ElementHost>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [İzlenecek yol: Bir ElementHost Denetimini Ayrı Windows Forms’a Kopyalama ve Yapıştırma](../../../../docs/framework/winforms/advanced/copy--paste-an-elementhost-control-into-forms.md)  
- [Geçiş ve Birlikte Çalışabilirlik](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
- [WPF Denetimlerini Kullanma](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
- [Visual Studio’da XAML tasarlama](/visualstudio/designers/designing-xaml-in-visual-studio)
+
+- <xref:System.Windows.Forms.Integration.ElementHost>  
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>   
+- [Geçiş ve Birlikte Çalışabilirlik](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
+- [WPF Denetimlerini Kullanma](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
+- [Visual Studio’da XAML tasarlama](/visualstudio/designers/designing-xaml-in-visual-studio)

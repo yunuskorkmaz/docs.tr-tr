@@ -6,13 +6,12 @@ dev_langs:
 - vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 7aad53e9c6d5708bceca9831264c112f885fb889
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 9100d3d16c39ca53e9afe3721c9d6f1027ba2048
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857368"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47071000"
 ---
 # <a name="message-security-with-a-certificate-client"></a>Sertifika İstemcisi ile İleti Güvenliği
 Aşağıdaki senaryoda, bir Windows Communication Foundation (WCF) istemci ve hizmet ileti güvenlik modunu kullanarak güvenli gösterilmektedir. Hem istemci hem de hizmet sertifikaları ile doğrulanır. Daha fazla bilgi için [dağıtılmış uygulama güvenliği](../../../../docs/framework/wcf/feature-details/distributed-application-security.md).  

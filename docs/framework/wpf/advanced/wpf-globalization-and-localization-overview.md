@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: d8fef7965e3248d5361d866a441783bf4968460e
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: fcf5b8f872e2f97497ff5387adb755da1832bf8c
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47058415"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47111341"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF Genelleştirmesi ve Yerelleştirmesine Genel Bakış
 Yalnızca bir dil için ürününüzün kullanılabilirlik sınırladığınızda, müşterilerimizin dünyanın 6.5 milyar popülasyonun bir kesir olarak temel potansiyel müşteri sınırlayın. Uygun maliyetli yerelleştirme ürününüzden uygulamalarınız küresel bir hedef kitlesine ulaşmak için isterseniz daha fazla müşteriye ulaşmak için en iyi ve en ekonomik yolu biridir.  
@@ -29,7 +29,7 @@ Yalnızca bir dil için ürününüzün kullanılabilirlik sınırladığınızd
   
 -   Mutlak Konumlar ve sabit boyutlar kullanarak içeriği teslim düzenlemek kaçının; Bunun yerine, göreli ya da otomatik boyutlandırma kullanın.
   
-    -   Kullanım <xref:System.Windows.Window.SizeToContent%2A>; ve genişlik ve yükseklik ayarlayın tutmak `Auto`.  
+    -   Kullanım <xref:System.Windows.Window.SizeToContent%2A> ve genişlik ve yükseklik ayarlayın tutmak `Auto`.  
   
     -   Kullanmaktan kaçının <xref:System.Windows.Controls.Canvas> düzenlenmesine izin [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]s.  
   
@@ -39,7 +39,7 @@ Yalnızca bir dil için ürününüzün kullanılabilirlik sınırladığınızd
   
 -   Etkinleştirme <xref:System.Windows.Controls.TextBlock.TextWrapping%2A> üzerinde <xref:System.Windows.Controls.TextBlock> kırpma önlemek için.
   
--   Ayarlama **XML: lang** özniteliği. Bu öznitelik, kültür, belirli bir öğeyi ve onun alt öğeleri açıklar. Bu özelliğin değeri çeşitli özellikleri davranışını değiştiren [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Örneğin, heceleme, yazım denetimi, numarası değiştirme, karmaşık kod şekillendirme ve yazı tipi geri dönüş davranışını değiştirir. Bkz: [WPF için genelleştirme](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md) ayarı hakkında daha fazla bilgi için [XML: lang işleme XAML içinde](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md).  
+-   Ayarlama `xml:lang` özniteliği. Bu öznitelik, kültür, belirli bir öğeyi ve onun alt öğeleri açıklar. Bu özelliğin değeri çeşitli özellikleri davranışını değiştiren [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Örneğin, heceleme, yazım denetimi, numarası değiştirme, karmaşık kod şekillendirme ve yazı tipi geri dönüş davranışını değiştirir. Bkz: [WPF için genelleştirme](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md) ayarı hakkında daha fazla bilgi için [XML: lang işleme XAML içinde](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md).  
   
 -   Farklı diller için kullanılan yazı tipi daha iyi denetim elde etmek için özelleştirilmiş bir bileşik yazı oluşturun. Varsayılan olarak, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Windows\\Fonts dizininizdeki GlobalUserInterface.composite yazı kullanır.  
   
@@ -64,7 +64,7 @@ Yalnızca bir dil için ürününüzün kullanılabilirlik sınırladığınızd
   
          Gt;(yok) ana derlemede kaynak dilinizi eklemeye karar `<UICulture>` ayarlamak, etiketi proje dosyanızda `UltimateResourceFallback` ana derlemenin uydu yerine konuma (örneğin, `[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.MainAssembly)]`).  
   
-<a name="workflow_to_localize"></a>   
+<a name="workflow_to_localize" />   
 ## <a name="localize-a-wpf-application"></a>Bir WPF uygulamasını yerelleştirme  
  Yerelleştirme ne zaman bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama, çeşitli seçenekleriniz vardır. Örneğin, uygulamanızdaki yerelleştirilebilir kaynaklar adlarınıza bağlayabileceğiniz bir [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dosya, yerelleştirilebilir metin resx tablolarında depolayın veya kullanın, yerelleştiriciye sahip [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] dosyaları. Bu bölüm, çeşitli avantajlar sağlayan XAML BAML formu kullanan bir Yerelleştirme iş akışını açıklar:  
   
@@ -92,7 +92,7 @@ Yalnızca bir dil için ürününüzün kullanılabilirlik sınırladığınızd
   
  ![İş akışı yerelleştirilmemiş](../../../../docs/framework/wpf/advanced/media/localizationworkflow2.png "LocalizationWorkflow2")  
   
-<a name="examples_of_localization"></a>   
+<a name="examples_of_localization" />   
 ## <a name="examples-of-wpf-localization"></a>WPF yerelleştirme örnekleri  
  Bu bölüm, yerelleştirilmiş uygulamalar oluşturup yerelleştirmek anlamanıza yardımcı olması için örnekleri içerir. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar.  
   
@@ -137,7 +137,7 @@ Yalnızca bir dil için ürününüzün kullanılabilirlik sınırladığınızd
   
  Paylaşılan boyutlandırma özelliği kullanır, örneğin Not <xref:System.Windows.Controls.Grid>. Son üç sütun bu kendileri aynı yerleştirerek yararlanmak <xref:System.Windows.Controls.DefinitionBase.SharedSizeGroup%2A>. Bu, bir özellik adından beklediğiniz gibi aynı boyutta paylaşmak sütunları sağlar. Bu nedenle uzun dize "Durchsuchen..." "Gözat..." yerelleştirileceği, tüm düğmeler küçük bir "Tamam" düğmesini ve orantısız büyük bir "Durchsuchen..." düğmesi yerine genişlik büyütün.  
   
- **XML: lang**  
+ **XML: lang**
   
  `Xml:lang="en-US"`  
   
@@ -146,7 +146,9 @@ Yalnızca bir dil için ürününüzün kullanılabilirlik sınırladığınızd
  **Uydu kaynak derlemesi oluşturma**  
   
  *.Csproj içinde:*  
-  
+
+ Düzen `.csproj` dosyasını açıp aşağıdaki etiketi koşulsuz bir ekleme `<PropertyGroup>`:
+ 
  `<UICulture>en-US</UICulture>`  
   
  Ek fark bir `UICulture` değeri. Bu ayarlandığında geçerli bir <xref:System.Globalization.CultureInfo> değeri en-US, proje oluşturma gibi tüm yerelleştirilebilir kaynakları içeren bir uydu derleme içinde oluşturacağını.  
@@ -197,7 +199,7 @@ Yalnızca bir dil için ürününüzün kullanılabilirlik sınırladığınızd
   
  **LocBaml.exe'yi / RunDialog.resources.dll /trans:RunDialog.resources.dll.CSV Oluştur/out:. /CUL:de-Gizle**  
   
- Almanca üzerinde [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], bu resources.dll ana derleme yanında bir de-DE klasördeki yerleştirilmişse, bu kaynak en-US klasöründe yerine otomatik olarak yüklenecektir. Almanca sürümünü yoksa [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] bunu test etmek için kültürü ne olursa olsun kültürü ayarlamanıza [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] (yani en-US) kullanıyorsanız ve özgün resources.dll değiştirin.  
+ Almanca üzerinde [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], bu resources.dll ana derleme yanında bir de-DE klasördeki yerleştirilmişse, bu kaynak en-US klasöründe yerine otomatik olarak yüklenecektir. Almanca sürümünü yoksa [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] bunu test etmek için kültürü ne olursa olsun kültürü ayarlamanıza [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] kullanıyorsunuz (örneğin, `en-US`) ve özgün kaynak DLL değiştirin.  
   
  **Uydu kaynak yükleniyor**  
   
@@ -246,7 +248,7 @@ Yalnızca bir dil için ürününüzün kullanılabilirlik sınırladığınızd
   
  **Sabit boyutlar paneller ve denetimler için kullanmaktan kaçının**  
   
- Homepage.xaml aracılığıyla göz atın, sabit genişlik ve yükseklik tüm belirtilen yanı sıra dikkat [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] üst <xref:System.Windows.Controls.DockPanel>, herhangi bir sabit boyutu vardır. Kaynak metin uzun yerelleştirilmiş metin kırpmayı önlemek için sabit boyutlar kullanmaktan kaçının. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] paneller ve denetimleri yeniden boyutlandırma içerdikleri içeriğine göre otomatik olarak ayarlanır. Çoğu denetimleri de daha fazla denetim için belirleyebileceğiniz minimum ve maksimum boyut (yani MinWidth = "20"). İle <xref:System.Windows.Controls.Grid>, kullanarak göreli genişlik ve yükseklik de ayarlayabilirsiniz ' *' (yani Width = "0,25\*") veya hücre boyutuna paylaşımı özelliğini kullanın.  
+ Homepage.xaml aracılığıyla göz atın, sabit genişlik ve yükseklik tüm belirtilen yanı sıra dikkat [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] üst <xref:System.Windows.Controls.DockPanel>, herhangi bir sabit boyutu vardır. Kaynak metin uzun yerelleştirilmiş metin kırpmayı önlemek için sabit boyutlar kullanmaktan kaçının. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] paneller ve denetimleri yeniden boyutlandırma içerdikleri içeriğine göre otomatik olarak ayarlanır. Çoğu denetimleri de daha fazla denetim için belirleyebileceğiniz minimum ve maksimum boyut (örneğin, MinWidth = "20"). İle <xref:System.Windows.Controls.Grid>, kullanarak göreli genişlik ve yükseklik de ayarlayabilirsiniz '\*' (örneğin, `Width="0.25*"`) veya hücre boyutuna paylaşımı özelliğini kullanın.  
   
  **Yerelleştirme açıklamalarını**  
   
@@ -275,26 +277,20 @@ Yalnızca bir dil için ürününüzün kullanılabilirlik sınırladığınızd
  [!code-xaml[LocalizationComAtt#LocalizationAttributesOverridden](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationComAtt/CSharp/Attributes.xaml#localizationattributesoverridden)]  
   
  Varsayılan Yerelleştirme öznitelikleri [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sağlar kodda, böylece doğru özel denetimler için doğru varsayılan değerleri ayarlayabilirsiniz ayrıca kılınabilir. Örneğin:  
-  
- `[Localizability(Readability = Readability.Readable, Modifiability=Modifiability.Unmodifiable, LocalizationCategory.None)]`  
-  
- `public class CorporateLogo: TextBlock`  
-  
- `{`  
-  
- `…`  
-  
- `..`  
-  
- `.`  
-  
- `}`  
-  
+
+```csharp 
+[Localizability(Readability = Readability.Readable, Modifiability=Modifiability.Unmodifiable, LocalizationCategory.None)] 
+public class CorporateLogo : TextBlock
+{
+    // ...
+}
+``` 
+ 
  Örnek öznitelikleri kümesi başına [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kodda özel denetimler üzerinde ayarlanan değerlerle öncelikli. Öznitelikleri ve Yorumlar hakkında daha fazla bilgi için bkz. [Yerelleştirme öznitelikleri ve Yorumlar](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
   
  **Yazı tipi geri dönüşü ve bileşik yazı tipleri**  
   
- Belirli bir kod noktası aralığı desteği olmayan bir yazı tipi belirtirseniz [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Windows\\Fonts dizininizde bulunan genel kullanıcı Interface.compositefont kullanarak yapan bir otomatik olarak geri dönüş olacaktır. Bileşik yazı tipleri yalnızca diğer yazı tipi çalışır ve bir öğenin FontFamily ayarlayarak açıkça kullanılabilir (yani FontFamily = "Genel kullanıcı arabirimi"). Bileşik yazı oluşturmaya ve belirli bir kod noktası aralığı ve diller için kullanılacak hangi yazı tipi belirterek kendi yazı tipi geri dönüş tercih belirtebilirsiniz.  
+ Belirli bir kod noktası aralığı desteği olmayan bir yazı tipi belirtirseniz [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Windows\\Fonts dizininizde bulunan genel kullanıcı Interface.compositefont kullanarak yapan bir otomatik olarak geri dönüş olacaktır. Bileşik yazı tipleri yalnızca diğer yazı tipi çalışır ve bir öğenin ayarlayarak açıkça kullanılabilir `FontFamily` (örneğin, `FontFamily="Global User Interface"`). Bileşik yazı oluşturmaya ve belirli bir kod noktası aralığı ve diller için kullanılacak hangi yazı tipi belirterek kendi yazı tipi geri dönüş tercih belirtebilirsiniz.  
   
  Bileşik yazı tipleri hakkında daha fazla bilgi için bkz <xref:System.Windows.Media.FontFamily>.  
   

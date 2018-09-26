@@ -9,11 +9,11 @@ helpviewer_keywords:
 - binary operator (|) [C#]
 ms.assetid: 82d6bb78-54c8-40bf-b679-531180ddaf70
 ms.openlocfilehash: 999df9db0819a5f33e21a29b892de0a8854dd5d8
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46706154"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47070259"
 ---
 # <a name="-operator-c-reference"></a>| İşleci (C# Başvurusu)
 İkili `|` işleçleri tamsayı türleri için önceden tanımlanmış ve `bool`. İntegral türleri için `|` kendi işlenenden bit seviyesinde veya hesaplar. İçin `bool` işlenenini `|` işlenenleri; mantıksal OR hesaplar diğer bir deyişle, sonucudur `false` , her iki işlenen ve yalnızca, `false`.  

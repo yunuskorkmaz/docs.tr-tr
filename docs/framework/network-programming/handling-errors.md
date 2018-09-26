@@ -33,45 +33,44 @@ helpviewer_keywords:
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 8020a92345ba85a99c0b46b2d4247d677defd054
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 776e0a728b56aa2acfb7a033c2a7244b2cc824f9
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397929"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47172647"
 ---
 # <a name="handling-errors"></a>Hataları işleme
-<xref:System.Net.WebRequest> Ve <xref:System.Net.WebResponse> sınıfları throw her iki sistem özel durumları (gibi <xref:System.ArgumentException>) ve Web özel durumlar (hangi <xref:System.Net.WebException> tarafından oluşturulan <xref:System.Net.WebRequest.GetResponse%2A> yöntemi).  
+<xref:System.Net.WebRequest> Ve <xref:System.Net.WebResponse> sınıflar her iki sistem özel durumlarını throw (gibi <xref:System.ArgumentException>) ve Web özel durumlar (hangi <xref:System.Net.WebException> tarafından oluşturulan <xref:System.Net.WebRequest.GetResponse%2A> yöntemi).  
   
- Her **WebException** içeren bir <xref:System.Net.WebException.Status%2A> arasında bir değer içeren özelliği <xref:System.Net.WebExceptionStatus> numaralandırması. İnceleyebilirsiniz **durum** özelliğini oluşan hata belirlemek ve sorunu çözümlemek için ilgili uygun adımları gerçekleştirin.  
+ Her **WebException** içeren bir <xref:System.Net.WebException.Status%2A> arasında bir değer içeren özellik <xref:System.Net.WebExceptionStatus> sabit listesi. İnceleyebilirsiniz **durumu** özelliği oluşan hata belirlemek ve hatayı gidermek için uygun adımları atın.  
   
- Aşağıdaki tabloda olası değerleri açıklanmaktadır **durum** özelliği.  
+ Aşağıdaki tabloda olası değerleri açıklanmaktadır **durumu** özelliği.  
   
 |Durum|Açıklama|  
 |------------|-----------------|  
-|ConnectFailure|Uzak Hizmet aktarım düzeyinde bağlantı kurulamadı.|  
+|ConnectFailure|Uzak Hizmet taşıma düzeyinde kurulamadı.|  
 |ConnectionClosed|Bağlantıyı erken sonlandırdı.|  
-|KeepAliveFailure|Sunucu tutma üstbilgi kümesi ile yapılan bir bağlantı kapatıldı.|  
-|NameResolutionFailure|Ad Hizmeti ana bilgisayar adı çözümlenemedi.|  
-|ProtocolError|Sunucudan alınan yanıt tamamlandı ancak protokol düzeyinde bir hata gösterilir.|  
-|ReceiveFailure|Tam bir yanıt Uzak sunucudan alınmadı.|  
+|KeepAliveFailure|Sunucu Keep-alive üst bilgisi kümesiyle yapılan bağlantı kapatıldı.|  
+|NameResolutionFailure|Ad hizmeti konak adı çözümlenemedi.|  
+|ProtocolError|Sunucudan alınan yanıtı tamamlandı ancak protokol düzeyinde bir hata gösterilir.|  
+|ReceiveFailure|Uzak sunucudan tam yanıtı alınmadı.|  
 |RequestCanceled|İstek iptal edildi.|  
-|SecureChannelFailure|Güvenli kanal bağlantıdaki bir hata oluştu.|  
+|SecureChannelFailure|Güvenli kanal bağlantısında hata oluştu.|  
 |SendFailure|Uzak sunucuya tam bir istek gönderilemedi.|  
 |ServerProtocolViolation|Sunucu yanıtı geçerli bir HTTP yanıt değildi.|  
-|Başarılı|Hiçbir hatayla karşılaşıldı.|  
-|Zaman aşımı|İstek için ayarlanmış zaman aşımı içinde yanıt alındı.|  
+|Başarılı|Herhangi bir hata ile karşılaşıldı.|  
+|zaman aşımı|İçin isteği zaman aşımı içinde yanıt alınmadı.|  
 |TrustFailure|Bir sunucu sertifikası doğrulanamadı.|  
-|MessageLengthLimitExceeded|Bir isteği gönderirken belirtilen sınırı aşan bir ileti alındı veya bir yanıt sunucudan alınıyor.|  
+|MessageLengthLimitExceeded|Bir isteği gönderirken belirtilen sınırı aşan bir ileti alındı veya bir yanıt sunucudan alma.|  
 |Bekleniyor|İç zaman uyumsuz isteği bekliyor.|  
-|PipelineFailure|Bu değer .NET Framework altyapısını destekler ve doğrudan kodunuzda kullanılmak üzere tasarlanmamıştır.|  
-|ProxyNameResolutionFailure|Ad Çözümleyici hizmeti proxy konak adı çözümlenemedi.|  
+|PipelineFailure|Bu değer .NET Framework altyapısını destekler ve doğrudan kodunuzda kullanılması amaçlanmamıştır.|  
+|ProxyNameResolutionFailure|Ad çözümleyici hizmetini proxy konak adı çözümlenemedi.|  
 |Başvuruları|Bilinmeyen türde bir özel durum oluştu.|  
   
- Zaman **durum** özelliği **WebExceptionStatus.ProtocolError**, **WebResponse** sunucudan gelen yanıtı içeren kullanılabilir. Protokol hatası gerçek kaynağını belirlemek için bu yanıt inceleyebilirsiniz.  
+ Zaman **durumu** özelliği **WebExceptionStatus.ProtocolError**, **WebResponse** sunucu yanıtı içeren kullanılabilir. Protokol hatası gerçek kaynağını belirlemek için bu yanıtı inceleyebilirsiniz.  
   
- Aşağıdaki örnek catch gösterilmektedir bir **WebException**.  
+ Aşağıdaki örnek catch gösterilmiştir bir **WebException**.  
   
 ```csharp  
 try   
@@ -166,9 +165,9 @@ Catch e As Exception
 End Try  
 ```  
   
- Kullanan uygulamalar <xref:System.Net.Sockets.Socket> sınıfı throw <xref:System.Net.Sockets.SocketException> hataları Windows yuvada olduğunda. <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener>, Ve <xref:System.Net.Sockets.UdpClient> sınıfları üstünde yerleşiktir **yuva** sınıfı ve throw **SocketExceptions** de.  
+ Kullanan uygulamalar <xref:System.Net.Sockets.Socket> sınıfı throw <xref:System.Net.Sockets.SocketException> hataları Windows yuva olduğunda. <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener>, Ve <xref:System.Net.Sockets.UdpClient> sınıfları üst kısmındaki yerleşiktir **yuva** sınıfı ve throw **SocketExceptions** de.  
   
- Zaman bir **SocketException** oluşturulur, **SocketException** sınıf kümeleri <xref:System.Net.Sockets.SocketException.ErrorCode%2A> oluştu son işletim sistemi Yuva hatası özelliğine. Yuva hata kodları hakkında daha fazla bilgi için MSDN'de Winsock 2.0 API hata kodu belgelerine bakın.  
+ Olduğunda bir **SocketException** oluşturulur, **SocketException** sınıf kümelerini <xref:System.Net.Sockets.SocketException.ErrorCode%2A> özelliğini gerçekleşen son işletim sistemi Yuva hatası. Yuva hata kodları hakkında daha fazla bilgi için MSDN'de Winsock 2.0 API'sine hata kodu belgelerine bakın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Özel durum işleme temelleri](../../../docs/standard/exceptions/exception-handling-fundamentals.md)  

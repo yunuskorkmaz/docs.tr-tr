@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
 ms.openlocfilehash: 0824a43cba1a21cc9ae92b1f807c6a1369fd63ed
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46530290"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47075794"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>Veri hizmetini (WCF Veri Hizmetleri) yapılandırma
 İle [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], kullanıma Veri Hizmetleri oluşturabileceğiniz [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akışları. Bu akışları verileri çeşitli veri kaynaklarından gelebilir. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Bu veriler olarak kullanıma sunmak için veri sağlayıcıları kullanan bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akış. Bu sağlayıcıları içerir bir [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] sağlayıcısı, yansıma sağlayıcısı ve özel veri hizmeti sağlayıcısı arabirimleri kümesi. Sağlayıcı uygulaması hizmeti için veri modelini tanımlar. Daha fazla bilgi için [Veri Hizmetleri sağlayıcıları](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).  

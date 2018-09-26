@@ -16,11 +16,11 @@ ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0a4cb3f126a51d6bf7027edb88b8fec74c6785d2
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46697847"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47072754"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (Sertifika Yönetim Aracı)
 Sertifika Yöneticisi aracı (Certmgr.exe) sertifikaları, sertifika güven listelerini (CTL) ve sertifika iptal listelerini (CRL) yönetir.  

@@ -4,11 +4,11 @@ description: C# içinde LINQ kullanarak bitişik anahtarlara göre sonuçları g
 ms.date: 08/14/2018
 ms.assetid: cbda9c08-151b-4c9e-82f7-c3d7f3dac66b
 ms.openlocfilehash: b5753c85bb07be4fc84b78a299eece961969ff9d
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46696967"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47090337"
 ---
 # <a name="group-results-by-contiguous-keys"></a>Grup sonuçları bitişik anahtarlara göre
 

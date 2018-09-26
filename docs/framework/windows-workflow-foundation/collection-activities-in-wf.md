@@ -3,11 +3,11 @@ title: WF etkinliklerini koleksiyonu
 ms.date: 03/30/2017
 ms.assetid: 2680c3e2-9902-4968-b98d-cab776103dbe
 ms.openlocfilehash: 6b3a02cdd020d303519f605a206d62b42f4fe731
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46579179"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47084023"
 ---
 # <a name="collection-activities-in-wf"></a>WF etkinliklerini koleksiyonu
 Koleksiyon etkinlikler, bir iş akışında koleksiyon nesnelerini çalışmak için kullanılır. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] ekleme ve bir koleksiyondaki öğeleri kaldırma, bir koleksiyondaki bir öğenin bulunup bulunmadığını test ve bir koleksiyon temizlemek için sistem tarafından sağlanan etkinlikler vardır. `ExistsInCollection` ve `RemoveFromCollection` sahip bir <xref:System.Activities.OutArgument%601> türü <xref:System.Boolean>, sonucu gösterir.  

@@ -1,5 +1,5 @@
 ---
-title: '&lt;Clear&gt; öğesi connectionManagement (ağ ayarları) için'
+title: '&lt;Temizle&gt; connectionManagement (ağ ayarları) için'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/connectionManagement/clear
@@ -12,21 +12,20 @@ helpviewer_keywords:
 ms.assetid: fb259282-84c4-4dc4-a226-78d904a6edc3
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 5bcd17cfe1f3bd7531453b62552a4907df5b96bc
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9542332085d0b0319c55db63fd98c9dd8eb3f576
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32741990"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47070506"
 ---
-# <a name="ltcleargt-element-for-connectionmanagement-network-settings"></a>&lt;Clear&gt; öğesi connectionManagement (ağ ayarları) için
-Bağlantı Yönetimi listesini temizler.  
+# <a name="ltcleargt-element-for-connectionmanagement-network-settings"></a>&lt;Temizle&gt; connectionManagement (ağ ayarları) için
+Bağlantı yönetim listesini temizler.  
   
  \<Yapılandırma >  
 \<system.net>  
 \<connectionManagement >  
-\<Clear >  
+\<Temizleme >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -45,9 +44,9 @@ Bağlantı Yönetimi listesini temizler.
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
-|**Öğesi**|**Açıklama**|  
+|**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[connectionManagement](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|Bir ağ ana bilgisayar için bağlantı sayısını belirtir.|  
+|[connectionManagement](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|Bir ağ konak bağlantı maksimum sayısını belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  `clear` Öğesi bağlantı yönetimi listesindeki tüm girişleri siler.  
@@ -56,7 +55,7 @@ Bağlantı Yönetimi listesini temizler.
  Bu öğe, uygulama yapılandırma dosyası veya makine yapılandırma dosyası (Machine.config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek bağlantı yönetim listesini temizler ve ardından sunucu www.contoso.com ve diğer tüm ağ konaklar için yeni bağlantı yönetimi girişleri ekler.  
+ Aşağıdaki örnekte, bağlantı yönetimi listesini temizler ve ardından sunucu www.contoso.com ve diğer tüm ağ konaklar için yeni bağlantı yönetimi girişleri ekler.  
   
 ```xml  
 <configuration>  

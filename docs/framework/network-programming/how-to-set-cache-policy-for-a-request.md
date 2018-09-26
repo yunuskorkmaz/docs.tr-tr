@@ -9,19 +9,18 @@ helpviewer_keywords:
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 98cd64aaab66d69c29c022d770b34bb0efdb4bef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03ddcbacf7de3753ca74c398e585447b2d769cd6
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395433"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47078324"
 ---
 # <a name="how-to-set-cache-policy-for-a-request"></a>Nasıl yapılır: bir istek için önbellek İlkesi ayarlama
 Aşağıdaki örnek, bir istek için bir önbellek İlkesi ayarlanarak gösterir. Örnek Giriş bir URI gibi http://www.contoso.com/.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneğinde bir günden uzun önbelleğindeki olmadıysa önbellekten kullanılacak istenen kaynağa izin veren bir önbellek ilkesi oluşturur. Örnek kaynak önbellekten kullanılıp kullanılmadığını belirten bir ileti görüntüler — örneğin, `"The response was retrieved from the cache : False."`— ve ardından kaynak görüntüler. İstemci ve sunucu arasındaki tüm önbelleği tarafından bir istek yerine getirilmesi.  
+ Aşağıdaki kod örneği, bir günden daha uzun süre önbellekte olmadıysa önbellekten kullanılacak istenen kaynağa izin veren bir önbellek ilkesi oluşturur. Örnek kaynak önbellekten kullanılıp kullanılmadığını belirten bir ileti görüntüler — örneğin, `"The response was retrieved from the cache : False."`— ve ardından kaynağı görüntüler. Bir istek istemci ve sunucu arasındaki tüm önbelleği tarafından getirilmesi.  
   
 ```csharp  
 using System;  

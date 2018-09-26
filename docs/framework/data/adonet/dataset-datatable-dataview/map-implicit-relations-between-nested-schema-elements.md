@@ -3,11 +3,11 @@ title: İç içe geçmiş şema öğeleri arasında örtük ilişkileri eşleme
 ms.date: 03/30/2017
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
 ms.openlocfilehash: 73cd8a83021934de3b8e3bf494a4f59dd32e183c
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46493626"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47085714"
 ---
 # <a name="map-implicit-relations-between-nested-schema-elements"></a>İç içe geçmiş şema öğeleri arasında örtük ilişkileri eşleme
 Bir XML Şeması Tanım Dili (XSD) şemaya karmaşık türler birbiriyle içinde iç içe olabilir. Bu durumda, eşleme işlemi varsayılan eşleme uygular ve aşağıdakileri oluşturur <xref:System.Data.DataSet>:  

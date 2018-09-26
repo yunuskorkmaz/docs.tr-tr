@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: ASP.NET AJAX Uç Noktaları için HTTP POST ve HTTP GE
 ms.date: 03/30/2017
 ms.assetid: b47de82a-4c92-4af6-bceb-a5cb8bb8ede9
 ms.openlocfilehash: 5cebdf0bae937d84ec23ed97a5d2feca24fff473
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46584626"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47084192"
 ---
 # <a name="how-to-choose-between-http-post-and-http-get-requests-for-aspnet-ajax-endpoints"></a>Nasıl yapılır: ASP.NET AJAX Uç Noktaları için HTTP POST ve HTTP GET İstekleri Arasında Seçim Yapma
 

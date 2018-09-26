@@ -1,5 +1,5 @@
 ---
-title: '&lt;derleyicileri&gt; öğesi'
+title: '&lt;derleyiciler&gt; öğesi'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#compilers
@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: d40fba59-98f9-4783-ae0c-2ebea27ce77b
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: fc85610f5c3db7929f824fda2dd211300d9b05c1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8ce303d33a83d972247609e5d02d16a4a57669ff
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742997"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47083800"
 ---
-# <a name="ltcompilersgt-element"></a>&lt;derleyicileri&gt; öğesi
-Compiler configuration öğeleri için kapsayıcı; sıfır veya daha fazla bilgi içeren [ \<derleyici >](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) öğeleri.  
+# <a name="ltcompilersgt-element"></a>&lt;derleyiciler&gt; öğesi
+Compiler configuration öğeleri için kapsayıcı; sıfır veya daha fazlasını içeren [ \<derleyici >](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) öğeleri.  
   
  \<Yapılandırma >  
 \<System.codeDom >  
-\<derleyicileri > öğesi  
+\<System.codeDom > öğesi  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -54,15 +53,15 @@ Compiler configuration öğeleri için kapsayıcı; sıfır veya daha fazla bilg
 |[\<System.codeDom > öğesi](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|Kullanılabilir dil sağlayıcıları için derleyici yapılandırma ayarlarını belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- [ \<Derleyicileri >](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md) öğesi bir bilgisayar üzerinde dil sağlayıcıları için derleyici yapılandırma ayarlarını içerir. Her [ \<derleyici >](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) öğesi için özgün dil sağlayıcısı compiler configuration öznitelikleri belirtir.  
+ [ \<Derleyiciler >](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md) öğesi bir bilgisayarda dil sağlayıcıları için derleyici yapılandırma ayarlarını içerir. Her [ \<derleyici >](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) öğesi için belirli bir dil sağlayıcısı compiler configuration öznitelikleri belirtir.  
   
- .NET Framework makine yapılandırma dosyasındaki (Machine.config) ilk derleyici ve dil sağlayıcısı ayarları tanımlar. Geliştiriciler ve derleyici satıcılar ekleyebilirsiniz yapılandırma ayarları için yeni bir <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> uygulaması. Kullanım <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> dil sağlayıcısı ve derleyici yapılandırma ayarları bir bilgisayarda program aracılığıyla listeleme yöntemi.  
+ .NET Framework, makine yapılandırma dosyasındaki (Machine.config) ilk derleyici ve dil sağlayıcısı ayarları tanımlar. Geliştiriciler ve derleyici satıcıları ekleyebilirsiniz yapılandırma ayarları için yeni bir <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> uygulaması. Kullanım <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> dil sağlayıcısı ve derleyici yapılandırma ayarlarını bir bilgisayardaki program aracılığıyla listeleme yöntemi.  
   
 ## <a name="configuration-file"></a>Yapılandırma Dosyası  
- Bu öğe makine yapılandırma dosyası ve uygulama yapılandırma dosyasında kullanılabilir.  
+ Bu öğe, makine yapılandırma dosyası ve uygulama yapılandırma dosyasında kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek tipik derleyici yapılandırma öğesi gösterilmektedir.  
+ Aşağıdaki örnek, tipik bir derleyici yapılandırma öğesi gösterir.  
   
 ```xml  
 <configuration>  

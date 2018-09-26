@@ -7,16 +7,15 @@ helpviewer_keywords:
 ms.assetid: 24211ea5-163e-4fe5-aed8-004d8499760c
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 6ffaea24910a6b8f4a120d6b72219bff592fab17
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f885416629ae58949cc688f4e6fbd41e77e872aa
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745220"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47071733"
 ---
 # <a name="ltremovegt-element-for-ltnamedcachesgt"></a>&lt;kaldırma&gt; öğesi için &lt;namedCaches&gt;
-Bir adlandırılmış önbellek girişi kaldırır `namedCaches` bir önbellek için koleksiyonu.  
+Bir adlandırılmış önbellek girişi kaldırır `namedCaches` koleksiyonu için bir önbellek.  
   
  \<System.Runtime.Caching >  
 \<memoryCache >  
@@ -48,10 +47,10 @@ Bir adlandırılmış önbellek girişi kaldırır `namedCaches` bir önbellek i
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<namedCaches >](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|Yapılandırma ayarları adlandırılmış bir koleksiyonu içerir <xref:System.Runtime.Caching.MemoryCache> örnekleri.|  
+|[\<namedCaches >](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|Yapılandırma ayarları için adlandırılmış bir koleksiyonunu içeren <xref:System.Runtime.Caching.MemoryCache> örnekleri.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `remove` Öğeyi kaldırır bir `namedCache` adlandırılmış önbellek koleksiyonu için bir önbellek girişi.  
+ `remove` Öğeyi kaldırır bir `namedCache` adlandırılmış önbelleği koleksiyon için bir önbellek girişi.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [\<namedCaches > öğesi (önbellek ayarları)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)

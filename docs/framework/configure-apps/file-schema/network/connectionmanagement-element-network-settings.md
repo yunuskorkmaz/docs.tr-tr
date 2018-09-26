@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: bedccaab-12a2-4511-8f67-e961f249aec6
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: a7e1609df0a7a1de4e70f425e649115459b43f8c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bc0b75db5b3f35087df70c9155a1ba3b39ceae4d
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742828"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47173077"
 ---
 # <a name="ltconnectionmanagementgt-element-network-settings"></a>&lt;connectionManagement&gt; öğesi (ağ ayarları)
-Bir ağ ana bilgisayar için bağlantı sayısını belirtir.  
+Bir ağ konak bağlantı maksimum sayısını belirtir.  
   
  \<Yapılandırma >  
 \<system.net>  
@@ -40,17 +39,17 @@ Bir ağ ana bilgisayar için bağlantı sayısını belirtir.
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
-|**Öğesi**|**Açıklama**|  
+|**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-connectionmanagement-network-settings.md)|Bir IP adresi veya DNS adı bağlantısı Yönetim listesine ekler.|  
-|[Temizle](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-connectionmanagement-network-settings.md)|Bağlantı Yönetimi listesini temizler.|  
+|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-connectionmanagement-network-settings.md)|Bir IP adresi veya DNS adı bağlantı yönetimi listesine ekler.|  
+|[Temizle](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-connectionmanagement-network-settings.md)|Bağlantı yönetim listesini temizler.|  
 |[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-connectionmanagement-network-settings.md)|Bir IP adresi veya DNS adı bağlantı yönetimi listesinden kaldırır.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
-|**Öğesi**|**Açıklama**|  
+|**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[System.NET](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|.NET Framework ağa nasıl bağlanacağını belirtin ayarları içerir.|  
+|[System.NET](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|.NET Framework ağa nasıl bağlandığını belirten ayarları içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  `connectionManagement` Öğesi, sunucu veya sunucu grubu için en fazla bağlantı sayısını tanımlar.  
@@ -59,7 +58,7 @@ Bir ağ ana bilgisayar için bağlantı sayısını belirtir.
  Bu öğe, uygulama yapılandırma dosyası veya makine yapılandırma dosyası (Machine.config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek bir uygulama sunucusu www.contoso.com için dört bağlantıları ve diğer tüm sunucular iki bağlantıları kullanmak için yapılandırır.  
+ Aşağıdaki örnek, bir uygulamayı server www.contoso.com için dört bağlantıları ve diğer tüm sunucular iki bağlantıları kullanmak için yapılandırır.  
   
 ```xml  
 <configuration>  

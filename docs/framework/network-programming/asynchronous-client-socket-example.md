@@ -1,5 +1,5 @@
 ---
-title: Zaman uyumsuz istemcisi yuva örneği
+title: Zaman uyumsuz istemci yuvası örneği
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: d4ac53a0-b50b-4232-9726-d47d25fcc38a
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: d295841173ee2f3bf018a2058b4eac1629c4828f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 562129b7deea4af9b91dfc92f83a538f6f89f06a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33390305"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47110324"
 ---
-# <a name="asynchronous-client-socket-example"></a>Zaman uyumsuz istemcisi yuva örneği
-Aşağıdaki örnek program bir sunucuya bağlanan bir istemci oluşturur. İstemci zaman uyumsuz bir yuvası ile oluşturulmuştur, bu sunucunun bir yanıt döndürür ancak istemci uygulamanın yürütülmesini askıya alınmadı şekilde. Uygulama bir dize sunucusuna gönderir ve konsolda sunucu tarafından döndürülen dize görüntüler.  
+# <a name="asynchronous-client-socket-example"></a>Zaman uyumsuz istemci yuvası örneği
+Aşağıdaki örnek program bir sunucuya bağlanan bir istemcinin oluşturur. İstemci, sunucunun bir yanıt döndürür ancak istemci uygulamanın yürütülmesini askıya şekilde zaman uyumsuz bir yuvası ile oluşturulmuştur. Uygulama sunucusuna bir dize gönderir ve daha sonra konsolda sunucu tarafından döndürülen dize görüntüler.  
   
 ```vb  
 Imports System  

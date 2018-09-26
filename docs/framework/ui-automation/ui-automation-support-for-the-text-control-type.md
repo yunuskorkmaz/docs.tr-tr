@@ -8,13 +8,12 @@ helpviewer_keywords:
 ms.assetid: ab0d0ada-8a71-4547-9c03-aadf675938f2
 author: Xansky
 ms.author: mhopkins
-manager: markl
-ms.openlocfilehash: e2030712be1b37fb67d3e223b787be69c1249b73
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 36a95ce3d00b52ecb3b83a6d95bff94dbeb43fb2
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529156"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47088704"
 ---
 # <a name="ui-automation-support-for-the-text-control-type"></a>Metin Denetim Türü İçin UI Otomasyon Desteği
 > [!NOTE]

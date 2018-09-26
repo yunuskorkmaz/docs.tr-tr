@@ -20,11 +20,11 @@ ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6114553c6bcdac8521c80c10f470d4c38b15e738
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46538027"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47080344"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>. NET'te dizeleri kullanmak için en iyi uygulamalar
 <a name="top"></a> .NET, yerelleştirilmiş ve genelleştirilmiş uygulamalar geliştirmek için kapsamlı destek sağlar ve sıralama ve dizeleri görüntüleme gibi yaygın işlemleri gerçekleştirirken geçerli kültürün veya belirli bir kültürün kurallarını uygulamak kolaylaştırır. Ancak dizeleri sıralamak veya karşılaştırmak her zaman kültüre duyarlı bir işlem değildir. Örneğin, bir uygulama tarafından dahili olarak kullanılan dizelerin genellikle tüm kültürlerde aynı şekilde işlenmeleri gerekir. XML etiketleri, HTML etiketleri, kullanıcı adları, dosya yolları ve sistem nesnelerinin adları gibi kültürden bağımsız dize verileri kültüre duyarlıymış gibi yorumlanırsa, uygulama kodu küçük hatalar, zayıf performans ve bazı durumlarda güvenlik sorunlarıyla karşılaşabilir.  

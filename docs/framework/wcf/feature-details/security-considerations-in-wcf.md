@@ -7,38 +7,37 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 42055ee0-6d0c-443d-9d89-788dfc345d6d
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 9d26acf8443967bff36637c482dd3270ef034f40
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f26369a567e89fc502f777383c22e74b96fe503c
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497535"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47109517"
 ---
 # <a name="security-considerations-in-wcf"></a>WCF'de Güvenlik Değerlendirmeleri
-Bu bölümdeki konular, bir Windows Communication Foundation (WCF) uygulama tasarlarken dikkate alınması gereken çeşitli güvenlikle ilgili öğeleri listeler.  
+Bu bölümdeki konularda, Windows Communication Foundation (WCF) bir uygulama tasarlanırken dikkate alınması gereken çeşitli güvenlikle ilgili öğeleri listelenir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Bilgilerin Açığa Çıkması](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
- Bilgi ifşa veya saldırıya dikkat çeşitli şekillerde ve bunu azaltmak nasıl anlatılmaktadır.  
+ Çeşitli yollarla bilgi ifşa veya Saldırıya uğrayan dikkat ve bunu azaltmak nasıl ele alır.  
   
  [Ayrıcalıkların Yükseltilmesi](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
- Bir saldırgan yetkilendirme izinleri başlangıçta verilenlerin ötesinde ve bunu azaltmak nasıl vermiş etkilerini açıklar.  
+ Başlangıçta verilen ötesinde bir saldırgan yetkilendirme izni ve bunu azaltmak nasıl etkilerini açıklar.  
   
  [Hizmet Reddi](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
- Ne olacağını açıklar ne zaman bir sistemi iletileri uygun şekilde işleyemedi ve nasıl önlenebileceğini.  
+ Ne olacağını açıklar bir sistemde iletilerin uygun şekilde işleyemedi olduğunda ve nasıl önlenebileceğini.  
   
  [İzinsiz Değişiklik](../../../../docs/framework/wcf/feature-details/tampering.md)  
- İletileri veya iletileri ve nasıl önlenebileceğini teslimini değiştirmeyi açıklar.  
+ İletileri veya iletileri ve nasıl önlenebileceğini teslimini değiştirmeyi anlatır.  
   
  [Yeniden Yürütme Saldırıları](../../../../docs/framework/wcf/feature-details/replay-attacks.md)  
- Bir saldırgan kopyalarken iki arasında ileti akışı taraflarla ve bir veya daha fazla tarafların akış başlayarak yeniden oynatılır ne olur ve bu durumu iyileştirmek nasıl anlatılmaktadır.  
+ Bir saldırganın kopyalarken arasında iki ileti akışı taraflarla ve bir veya daha fazla taraflar akışa başlayarak yeniden oynatılır ne olur ve bu durumu iyileştirmek nasıl ele alır.  
   
  [Güvenli Oturumlar için Güvenlikle İlgili Önemli Noktalar](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md)  
  Güvenli oturumlar uygularken güvenliğini etkileyen aşağıdaki öğeleri açıklanır.  
   
  [Desteklenmeyen Senaryolar](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)  
- Belirli bir güvenlik durumuyla desteklemez ve kaçınılması veya kabul çeşitli senaryoları listelenmiştir.  
+ Belirli bir güvenlik durumuyla desteklemez ve önlenmiş veya kabul çeşitli senaryolar listelenmiştir.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.IdentityModel.Tokens>  

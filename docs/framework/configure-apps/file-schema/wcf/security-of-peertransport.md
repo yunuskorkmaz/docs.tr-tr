@@ -3,16 +3,15 @@ title: '&lt;peerTransport&gt; &lt;güvenliği&gt;'
 ms.date: 03/30/2017
 ms.assetid: f73634ed-f896-4968-bf74-5e5ac52d3b6b
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 9d77c250b4843c9a0f83247cae5c2859429cf5bf
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 152087550d3fa881a7a88271d9c91dfcc5c894c8
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749848"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47176766"
 ---
 # <a name="ltsecuritygt-of-ltpeertransportgt"></a>&lt;peerTransport&gt; &lt;güvenliği&gt;
-Kullanılan kimlik doğrulama ve ileti taşıma için kullanılan güvenlik türünü de dahil olmak üzere bir eş kanalı ile ilişkili güvenlik ayarlarını içerir.  
+İle kullanılan kimlik doğrulaması ve ileti aktarım için kullanılan güvenlik türü de dahil olmak üzere, eş kanaldan ilgili güvenlik ayarlarını içerir.  
   
  \<system.serviceModel>  
 \<bağlamaları >  
@@ -42,22 +41,22 @@ Kullanılan kimlik doğrulama ve ileti taşıma için kullanılan güvenlik tür
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|`None`|Güvenliği devre dışı bırakıldı.|  
-|`Transport`|Güvenlik, HTTPS kullanılarak sağlanır.|  
-|`Message`|SOAP güvenliği kimlik doğrulama, bütünlüğü ve gizliliği sağlar.|  
-|`TransportWithMessageCredential`|HTTPS kimlik doğrulaması ve gizliliği sağlar. SOAP iletilerine zengin kimlik bilgisi türler sağlar.|  
+|`None`|Güvenlik devre dışı bırakıldı.|  
+|`Transport`|HTTPS kullanarak güvenliği sağlanır.|  
+|`Message`|SOAP güvenliği, kimlik doğrulaması, bütünlüğü ve gizliliği sağlar.|  
+|`TransportWithMessageCredential`|HTTPS kimlik doğrulaması ve gizlilik sağlar. SOAP iletilerini zengin kimlik bilgisi türler sağlar.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<taşıma >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-peertransport.md)|Özel bağlama için bir eş taşıma tanımlar. Bu öğeye sahip bir `clientCredentialType` özniteliği olan bir hizmeti kullanılırken kullanılacak kimlik bilgilerini belirtir. Bu öznitelik türünde <xref:System.ServiceModel.PeerTransportCredentialType>.<br /><br /> Bu öğe türünde <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>.|  
+|[\<taşıma >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-peertransport.md)|Özel bağlama için bir eş tanımlar. Bu öğeyi bir `clientCredentialType` özniteliği bir hizmetle etkileşim kurulurken kullanılacak kimlik bilgilerini belirtir. Bu öznitelik türünde <xref:System.ServiceModel.PeerTransportCredentialType>.<br /><br /> Bu öğe türünde <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<peerTransport >](../../../../../docs/framework/configure-apps/file-schema/wcf/peertransport.md)|Özel bağlama için bir eş taşıma tanımlar.|  
+|[\<peerTransport >](../../../../../docs/framework/configure-apps/file-schema/wcf/peertransport.md)|Özel bağlama için bir eş tanımlar.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Configuration.PeerSecurityElement>  

@@ -8,26 +8,25 @@ helpviewer_keywords:
 - security [WCF], creating a session
 ms.assetid: b6f42b5a-bbf7-45cf-b917-7ec9fa7ae110
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: ce351a87e70b09a2f68654af817e28fa3145d79d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 01ad849090bd66ba7e0b4e062f78ad7a04ad059d
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493226"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47084689"
 ---
 # <a name="how-to-create-a-secure-session"></a>Nasıl yapılır: Güvenli Oturum Oluşturma
 Dışında [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) bağlama, sistem tarafından sağlanan bağlamalar Windows Communication Foundation (WCF) otomatik olarak ileti güvenliği etkinleştirildiğinde güvenli oturumlar kullanın.  
   
- Varsayılan olarak, güvenli oturumlar geri dönüştürüldüğünde bir Web sunucusu varlığını sürdürmesini değil. Güvenli bir oturum oluşturulduğunda, istemci ve hizmet güvenli oturumla ilişkili anahtar önbelleğe. Değiştirilen mesajları gibi yalnızca bir tanımlayıcı önbelleğe alınan anahtarına değiştirilir. Web sunucusu geri dönüştürüldüğünde ise sağlayacak şekilde Web sunucusu tanımlayıcısı için önbelleğe alınan anahtar alınamıyor önbellek Ayrıca, dönüştürülmeden. Bu durumda, bir özel durum istemciye geri atılır. Bir durum bilgisi olan güvenlik bağlamı belirteci (SCT) kullanan güvenli oturumlar dönüştürüldüğü bir Web sunucusu varlığını sürdürmesini. Durum bilgisi olan SCT güvenli bir oturumda kullanma hakkında daha fazla bilgi için bkz: [nasıl yapılır: güvenli oturum açmak için bir güvenlik bağlamı belirteci oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+ Varsayılan olarak, güvenli oturumlar dönüştürülmeden bir Web sunucusu sürdürmez. Güvenli bir oturum kurulduktan sonra istemci ve hizmet güvenli bir oturum ile ilişkili anahtar önbelleğe alın. Önbelleğe alınan anahtarı için bir tanımlayıcı mesajları olarak değiştirilir. Web sunucusu dönüştürülmeden, Web sunucusunda önbelleğe alınan anahtar tanımlayıcısı alınamıyor, önbellek Ayrıca, dönüştürülmeden. Bu durumda, bir özel durum geri istemcinin durum oluşturulur. Bir durum bilgisi olan güvenlik bağlamı belirteci (SCT) kullanan güvenli oturumlar dönüştürüldüğü bir Web sunucusu hayatta kalamaz. Durum bilgisi olan SCT güvenli bir oturumda kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: güvenli oturum için bir güvenlik bağlamı belirteci oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
   
-### <a name="to-specify-that-a-service-uses-secure-sessions-by-using-one-of-the-system-provided-bindings"></a>Sistem tarafından sağlanan bağlamalar birini kullanarak bir hizmeti güvenli oturumlar kullandığını belirlemek için  
+### <a name="to-specify-that-a-service-uses-secure-sessions-by-using-one-of-the-system-provided-bindings"></a>Sistem tarafından sağlanan bağlamalar birini kullanarak bir hizmeti güvenli oturumlar kullandığını belirtmek için  
   
--   İleti güvenliği destekleyen sistem tarafından sağlanan bir bağlamayı kullanmak amacıyla hizmeti yapılandırın.  
+-   İleti güvenliği destekleyen sistem tarafından sağlanan bir bağlamayı kullanmak için bir hizmet yapılandırın.  
   
-     Dışında [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) bağlama, sistem tarafından sağlanan bağlamalar zaman ileti güvenliği, WCF otomatik olarak kullanmak üzere yapılandırılmış güvenli oturumlar kullanır. İleti güvenliği ve ileti güvenliği varsayılan güvenlik mekanizması olup destek sistem tarafından sağlanan bağlamaları aşağıdaki tabloda listelenmektedir.  
+     Dışında [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) bağlama, sistem tarafından sağlanan bağlamalar ileti güvenliği, WCF otomatik olarak kullanmak için yapılandırılmış zaman güvenli oturumlar kullanır. İleti güvenliği ve ileti güvenliği varsayılan güvenlik mekanizması olup destekleyen sistem tarafından sağlanan bağlamaları aşağıdaki tabloda listelenmektedir.  
   
-    |Sistem tarafından sağlanan bağlama|Yapılandırma öğesi|Varsayılan ileti güvenliği|  
+    |Sistem tarafından sağlanan bir bağlamayı|Yapılandırma öğesi|Varsayılan ileti güvenliği|  
     |------------------------------|---------------------------|------------------------------------|  
     |<xref:System.ServiceModel.BasicHttpBinding>|[\<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)|Hayır|  
     |<xref:System.ServiceModel.WSHttpBinding>|[\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)|Evet|  
@@ -36,7 +35,7 @@ Dışında [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/fil
     |<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|Hayır|  
     |<xref:System.ServiceModel.NetMsmqBinding>|[\<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|Hayır|  
   
-     Adlı bir bağlama belirtmek için aşağıdaki kod örneğinde yapılandırmasını kullanan `wsHttpBinding_Calculator` kullanan [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)ileti güvenlik ve güvenli oturumlar.  
+     Aşağıdaki kod örneği, adında bir bağlaması belirtmek için yapılandırma kullanır. `wsHttpBinding_Calculator` kullanan [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)ileti güvenlik ve güvenli oturumlar.  
   
     ```xml  
     <bindings>  
@@ -50,19 +49,19 @@ Dışında [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/fil
     </bindings>  
     ```  
   
-     Aşağıdaki kod örneğinde belirtir [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)ileti güvenlik ve güvenli oturumlar güvenliğini sağlamak için kullanılan `secureCalculator` hizmet.  
+     Aşağıdaki kod örneği belirtir [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)ileti güvenlik ve güvenli oturumlar güvenliğini sağlamak için kullanılan `secureCalculator` hizmeti.  
   
      [!code-csharp[c_CreateSecureSession#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_createsecuresession/cs/secureservice.cs#1)]
      [!code-vb[c_CreateSecureSession#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_createsecuresession/vb/secureservice.vb#1)]  
   
     > [!NOTE]
-    >  Güvenli oturumlar açılabilir için [ <wsHttpBinding> ](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) ayarlayarak `establishSecurityContext` özniteliğini `false`. Özel bağlama oluşturarak diğer sistem tarafından sağlanan bağlamaları için yalnızca güvenli oturumlar kapatılabilir.  
+    >  Güvenli oturumlar kapatılabilir için [ <wsHttpBinding> ](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) ayarlayarak `establishSecurityContext` özniteliğini `false`. Özel bağlama oluşturarak diğer sistem tarafından sağlanan bağlamalar için yalnızca güvenli oturumlar kapatılabilir.  
   
-### <a name="to-specify-that-a-service-uses-secure-sessions-by-using-a-custom-binding"></a>Özel bağlama kullanarak bir hizmeti güvenli oturumlar kullandığını belirlemek için  
+### <a name="to-specify-that-a-service-uses-secure-sessions-by-using-a-custom-binding"></a>Özel bağlama kullanarak bir hizmeti güvenli oturumlar kullandığını belirtmek için  
   
--   SOAP iletilerine güvenli bir oturum tarafından korunduğunu belirten özel bir bağlama oluşturun.  
+-   SOAP iletilerini güvenli bir oturum tarafından korunduğunu belirten özel bir bağlama oluşturun.  
   
-     Özel bağlama oluşturma hakkında daha fazla bilgi için bkz: [nasıl yapılır: System-Provided bir bağlamayı özelleştirme](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).  
+     Özel bağlama oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: System-Provided bir bağlamayı özelleştirme](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).  
   
      Aşağıdaki kod örneği, bir özel bağlama güvenli oturum kullanarak bu iletileri belirtmek için yapılandırma kullanır.  
   
@@ -80,7 +79,7 @@ Dışında [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/fil
     </bindings>  
     ```  
   
-     Aşağıdaki kod örneği kullanan özel bağlama oluşturur <xref:System.ServiceModel.Configuration.AuthenticationMode.MutualCertificate> güvenli bir oturum bootstrap için kimlik doğrulama modu.  
+     Aşağıdaki kod örneği kullanan özel bir bağlama oluşturur <xref:System.ServiceModel.Configuration.AuthenticationMode.MutualCertificate> güvenli bir oturum bootstrap için kimlik doğrulama modu.  
   
      [!code-csharp[c_CreateSecureSession#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_createsecuresession/cs/secureservice.cs#2)]
      [!code-vb[c_CreateSecureSession#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_createsecuresession/vb/secureservice.vb#2)]  

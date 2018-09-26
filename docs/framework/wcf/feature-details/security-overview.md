@@ -6,13 +6,12 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: f5f991296aa00bcc49c6672113fd1c25afac3c53
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 54cb952e2f3bffc9c37f2d75059c931d78f29eee
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43402873"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47088515"
 ---
 # <a name="security-overview"></a>Güvenlik Genel Bakış
 Windows Communication Foundation (WCF) bir SOAP ileti tabanlı dağıtılmış programlama platformudur ve istemciler ve hizmetler arasında iletileri güvenli hale getirme verileri korumak için gereklidir. WCF güvenlik altyapınız hem SOAP iletilerini tanınan güvenlik standartlarını temel güvenli ileti değişimi için verimli ve birlikte çalışabilen bir platform sağlar.  

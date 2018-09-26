@@ -1,5 +1,5 @@
 ---
-title: '&lt;Filtre&gt; öğesi için &lt;ekleme&gt; için &lt;dinleyicileri&gt; için &lt;kaynağı&gt;'
+title: '&lt;Filtre&gt; öğesi için &lt;ekleme&gt; için &lt;dinleyicileri&gt; için &lt;kaynak&gt;'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#filter
@@ -11,23 +11,22 @@ helpviewer_keywords:
 ms.assetid: 15808b80-4579-4c25-b385-178cfdf154ba
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 763d15a1391d8c9539d5fb92d4ad50132c17c065
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 19b28c3391a10cc522f17c5353c9ec0726b0a2f8
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745785"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47073287"
 ---
-# <a name="ltfiltergt-element-for-ltaddgt-for-ltlistenersgt-for-ltsourcegt"></a>&lt;Filtre&gt; öğesi için &lt;ekleme&gt; için &lt;dinleyicileri&gt; için &lt;kaynağı&gt;
-Bir dinleyici için bir filtre ekler `Listeners` koleksiyonu için bir izleme kaynağı.  
+# <a name="ltfiltergt-element-for-ltaddgt-for-ltlistenersgt-for-ltsourcegt"></a>&lt;Filtre&gt; öğesi için &lt;ekleme&gt; için &lt;dinleyicileri&gt; için &lt;kaynak&gt;
+Bir dinleyicisi için bir filtre ekler `Listeners` koleksiyonu için bir izleme kaynağı.  
   
  \<Yapılandırma >  
 \<System.Diagnostics >  
 \<Kaynakları >  
 \<Kaynak >  
 \<dinleyicileri >  
-\<ekleme >  
+\<Ekle >  
 \<Filtre >  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -45,8 +44,8 @@ Bir dinleyici için bir filtre ekler `Listeners` koleksiyonu için bir izleme ka
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`type`|Gerekli öznitelik.<br /><br /> Devralınan filtre türünü belirtir <xref:System.Diagnostics.TraceFilter> sınıfı. Tür için karşılık gelen türü ad alanı tam adını kullanabilirsiniz <xref:System.Type.FullName%2A> özelliği veya karşılık gelen derleme bilgileri dahil tam olarak nitelenmiş tür adını kullanabilir <xref:System.Type.AssemblyQualifiedName%2A> özelliği. Tam olarak nitelenmiş tür adları hakkında daha fazla bilgi için bkz: [belirtme tam olarak nitelenmiş tür adları](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
-|`initializeData`|İsteğe bağlı öznitelik.<br /><br /> Dize belirtilen filtre sınıfı oluşturucuya geçirilen.|  
+|`type`|Gerekli öznitelik.<br /><br /> Devralınan filtre türünü belirtir <xref:System.Diagnostics.TraceFilter> sınıfı. Türün karşılık gelen türü ad alanıyla nitelenen adı kullanabileceğiniz <xref:System.Type.FullName%2A> özelliği veya karşılık gelen derleme bilgiler dahil olmak üzere tam olarak nitelenmiş tür adını kullanabilir <xref:System.Type.AssemblyQualifiedName%2A> özelliği. Tam olarak nitelenmiş tür adları hakkında daha fazla bilgi için bkz: [belirtme tam olarak nitelenmiş tür adlarını](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
+|`initializeData`|İsteğe bağlı öznitelik.<br /><br /> Dize için belirtilen filtreyi sınıf oluşturucusuna geçirilen.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -56,19 +55,19 @@ Bir dinleyici için bir filtre ekler `Listeners` koleksiyonu için bir izleme ka
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
-|`system.diagnostics`|Toplamak, depolamak ve iletileri ve izleme anahtarı ayarlandığı düzeyi rota izleme dinleyicilerini belirtir.|  
-|`sources`|İzleme iletileri başlatmak izleme kaynaklarını içerir.|  
-|`source`|İzleme iletileri başlatan bir izleme kaynağını belirtir.|  
-|`listeners`|Toplamak, depolamak ve iletileri yönlendirmek dinleyicileri içerir. Dinleyicileri uygun hedef İzleme çıkışı yönlendirir.|  
-|`add`|Bir dinleyici ekler `Listeners` koleksiyonu için bir izleme kaynağı.|  
+|`system.diagnostics`|Toplamak, depolamak ve iletileri ve bir izleme anahtarı ayarlandığı düzeyi izleme dinleyicilerini belirtir.|  
+|`sources`|İzleme iletileri başlatmak iz kaynakları içerir.|  
+|`source`|İzleme iletileri başlatan bir izleme kaynağı belirtir.|  
+|`listeners`|Toplamak, depolamak ve iletileri yönlendirmek dinleyicileri içerir. Dinleyicileri bir uygun hedef izleme çıkışa doğrudan.|  
+|`add`|Bir ekler `Listeners` koleksiyonu için bir izleme kaynağı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `<filter>` Öğesi içeriyordu, içinde bir `<add>` yalnızca bir dinleyici adını öğesi dinleyicisi türünü belirtir. bir izleme kaynağı dinleyicisi için tanımlanmış bir [ \<sharedListeners >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md). Dinleyici tanımlanmış olması durumunda bir [ \<sharedListeners >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md), filtre bu dinleyici için bu öğe tanımlanmış olması gerekir.  
+ `<filter>` Öğe bulunmalıdır bir `<add>` öğesi dinleyicisi türünü belirten bir izleme kaynağı dinleyicisi için yalnızca bir dinleyicisi adı tanımlanmış bir [ \<sharedListeners >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md). Dinleyici olarak tanımlanırsa, bir [ \<sharedListeners >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md), filtre bu dinleyici için bu öğesinde tanımlanmış olması gerekir.  
   
- Bu öğe makine yapılandırma dosyası (Machine.config) ve uygulama yapılandırma dosyasında kullanılabilir.  
+ Bu öğe, makine yapılandırma dosyası (Machine.config) ve uygulama yapılandırma dosyasında kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte nasıl kullanılacağını gösterir `<filter>` dinleyiciye filtre eklemek için öğesi `console` içinde `Listeners` izleme kaynağı toplamalarında `myTraceSource`, filtre olay düzeyi olarak belirterek `Error`.  
+ Aşağıdaki örnek nasıl kullanılacağını gösterir `<filter>` dinleyici için filtre eklemek için öğe `console` içinde `Listeners` iz kaynağı için koleksiyon `myTraceSource`, filtre olay düzeyi'olarak belirterek `Error`.  
   
 ```xml  
 <configuration>  

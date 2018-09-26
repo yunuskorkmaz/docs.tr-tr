@@ -9,16 +9,15 @@ helpviewer_keywords:
 - source element
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: b7c2a71b129a0ad7d1c2a72b18b8a69a111f9495
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 818324077322fffb40a192c9197efde6e8ff7591
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752578"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47088951"
 ---
 # <a name="ltsourcegt-element"></a>&lt;Kaynak&gt; öğesi
-İzleme iletileri başlatan bir izleme kaynağını belirtir.  
+İzleme iletileri başlatan bir izleme kaynağı belirtir.  
   
  \<Yapılandırma >  
 \<System.Diagnostics >  
@@ -41,9 +40,9 @@ ms.locfileid: "32752578"
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
 |`name`|İsteğe bağlı öznitelik.<br /><br /> İzleme kaynağı adını belirtir.|  
-|`switchName`|İsteğe bağlı öznitelik.<br /><br /> Uygulama izleme anahtar örneğinin adını belirtir. Anahtar belirlediyseniz değil, bir `<switches>` öğesi, değer anahtar düzeyini belirtir.|  
+|`switchName`|İsteğe bağlı öznitelik.<br /><br /> Uygulamada bir izleme anahtarı örneğinin adını belirtir. İçindeki anahtar tanımlanmamışsa bir `<switches>` öğesi, değeri anahtar düzeyini belirtir.|  
 |`switchType`|İsteğe bağlı öznitelik.<br /><br /> İzleme anahtarı türünü belirtir. Varsa, türü geçerli bir sınıf adı olmalı ve boş bir dize olamaz.|  
-|`extraAttribute`|İsteğe bağlı öznitelik.<br /><br /> Tarafından tanımlanan bir izleme kaynağı özgü öznitelik değerini belirtir <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> yöntemi için bu izleme kaynağı.|  
+|`extraAttribute`|İsteğe bağlı öznitelik.<br /><br /> Tarafından tanımlanan bir izleme kaynağı özel özniteliğinin değeri belirtir <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> yöntemi için bu izleme kaynağı.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
@@ -56,14 +55,14 @@ ms.locfileid: "32752578"
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
-|`system.diagnostics`|Toplamak, depolamak ve iletileri ve izleme anahtarı ayarlandığı düzeyi rota izleme dinleyicilerini belirtir.|  
-|`sources`|İzleme iletileri başlatmak izleme kaynaklarını içerir.|  
+|`system.diagnostics`|Toplamak, depolamak ve iletileri ve bir izleme anahtarı ayarlandığı düzeyi izleme dinleyicilerini belirtir.|  
+|`sources`|İzleme iletileri başlatmak iz kaynakları içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu öğe makine yapılandırma dosyası (Machine.config) ve uygulama yapılandırma dosyasında kullanılabilir.  
+ Bu öğe, makine yapılandırma dosyası (Machine.config) ve uygulama yapılandırma dosyasında kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte nasıl kullanılacağını gösterir `<source>` izleme kaynağı eklemek için öğesi `mySource` ve kaynak anahtarı düzeyini ayarlamak için adlandırılmış `sourceSwitch`. Bir konsol İzleme dinleyicisi, izleme bilgilerini konsola eklenir.  
+ Aşağıdaki örnek nasıl kullanılacağını gösterir `<source>` iz eklenecek öğe `mySource` ve kaynak anahtarı düzeyini ayarlamak için adlı `sourceSwitch`. Bir konsol iz dinleyicisi, izleme bilgileri konsola yazar eklenir.  
   
 ```xml  
 <configuration>  

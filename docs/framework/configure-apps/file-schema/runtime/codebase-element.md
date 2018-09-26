@@ -1,5 +1,5 @@
 ---
-title: '&lt;codeBase&gt; öğesi'
+title: '&lt;kod tabanı&gt; öğesi'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#codeBase
@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: d48a3983-2297-43ff-a14d-1f29d3995822
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 3b614546e8ed23cc1a5e169a33fb5878695037ae
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d7563d3a0ba545bfd8d1b80981fcce607d230873
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746000"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47073196"
 ---
-# <a name="ltcodebasegt-element"></a>&lt;codeBase&gt; öğesi
-Ortak dil çalışma zamanı bütünleştirilmiş bulabileceğiniz belirtir.  
+# <a name="ltcodebasegt-element"></a>&lt;kod tabanı&gt; öğesi
+Ortak dil çalışma zamanının bir derlemeyi nerede belirtir.  
   
  \<Yapılandırma >  
 \<çalışma zamanı >  
@@ -43,14 +42,14 @@ href="URL of assembly"/>
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`href`|Gerekli öznitelik.<br /><br /> Çalışma zamanı derlemesi belirtilen sürümünü bulabileceğiniz URL'yi belirtir.|  
-|`version`|Gerekli öznitelik.<br /><br /> Codebase uygulandığı derleme sürümünü belirtir. Bir derleme sürüm numarası biçimi *major.minor.build.revision*.|  
+|`href`|Gerekli öznitelik.<br /><br /> Çalışma zamanı derlemenin belirtilen sürümü nereden URL'sini belirtir.|  
+|`version`|Gerekli öznitelik.<br /><br /> Kod temeli uygulandığı derleme sürümünü belirtir. Bir derleme sürümü numarasının biçimi *major.minor.build.revision*.|  
   
-## <a name="version-attribute"></a>Version özniteliği  
+## <a name="version-attribute"></a>Sürüm özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Sürüm numarasını her kısmı için geçerli değerler 0 ile 65535 arasındadır.|Yok.|  
+|Sürüm numarasının her bölüm için geçerli değerler 0 ile 65535 arasındadır.|Yok.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -59,20 +58,20 @@ href="URL of assembly"/>
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|`buildproviders`|Özel kaynak dosyalarını derlemek için kullanılan yapı sağlayıcıları koleksiyonu tanımlar. Yapı sağlayıcıları herhangi bir sayıda olabilir.|  
+|`buildproviders`|Özel kaynak dosyalarını derlemek için kullanılan derleme sağlayıcıları koleksiyonu tanımlar. Herhangi bir sayıda derleme sağlayıcıları olabilir.|  
 |`compilation`|ASP.NET kullanan tüm derleme ayarlarını yapılandırır.|  
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
-|`System.web`|ASP.NET yapılandırma bölümü için kök öğesi belirtir.|  
+|`System.web`|ASP.NET yapılandırma bölümü için olan kök öğesini belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Çalışma zamanı için  **\<codeBase >** bir makine yapılandırma dosyası veya yayımcı ilkesi dosyası ayarı dosyası ayrıca derleme sürümünü yönlendirme gerekir. Uygulama yapılandırma dosyaları, derleme sürümünü yeniden yönlendirme olmadan codebase ayarı olabilir. Hangi derleme sürümün kullanılacağını belirlendikten sonra çalışma zamanı sürümü belirler dosyasından codebase ayar uygulanır. Hiçbir codebase belirtilirse, çalışma zamanı derlemesi için Normal yollardan araştırmaları.  
+ Çalışma zamanı kullanmak için  **\<codeBase >** bir makine yapılandırma dosyası ya da Yayımcı ilkesi dosyası ayarı dosyası da derleme sürümünü yeniden yönlendirmeniz gerekir. Uygulama yapılandırma dosyaları, derleme sürümü yeniden yönlendirme olmadan bir kod temeli ayarı olabilir. Hangi derleme sürümünün kullanılacağını belirledikten sonra çalışma zamanı sürümünü belirleyen dosyasından codebase ayarı uygulanır. Herhangi bir kod temelinde belirtilirse, çalışma zamanı derlemesi için her zamanki yolla araştırmaları.  
   
- Derleme tanımlayıcı adı varsa, codebase ayarı Yerel intranet veya Internet üzerinde herhangi bir yere olabilir. Derleme özel bir derleme ise codebase ayarı uygulama dizinindeki göreli bir yol olmalıdır.  
+ Derlemeyi tanımlayıcı bir ada sahip, codebase ayar herhangi bir yerel intranet veya Internet üzerinde olabilir. Derleme özel bir derleme ise, kod tabanının ayarı uygulamanın dizinine göreli bir yol olmalıdır.  
   
- Güçlü bir ad olmadan derlemeler için sürüm dikkate alınmaz ve ilk görünümünü yükleyicisi kullanır \<codebase > içinde \<dependentAssembly >. Başka bir derlemeye bağlama yeniden yönlendirmelerini uygulama yapılandırma dosyasında bir girdi ise, yeniden yönlendirme derleme sürümünü bağlama isteği eşleşmiyor olsa bile öncelikli olur.  
+ Güçlü adı olmayan derlemeler için sürüm göz ardı edilir ve ilk görünümünü yükleyicisi kullanır \<codebase > içinde \<dependentAssembly >. Başka bir derleme için bağlama yeniden yönlendirmeleri uygulama yapılandırma dosyasında bir girdi varsa, bağlama isteği derleme sürümü eşleşmiyor olsa bile yönlendirme öncelikli olur.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, çalışma zamanı bütünleştirilmiş bulabileceğiniz belirtin gösterilmektedir.  
+ Aşağıdaki örnek, çalışma zamanının bir derlemeyi nerede belirtmek gösterilmektedir.  
   
 ```xml  
 <configuration>  

@@ -5,13 +5,12 @@ helpviewer_keywords:
 - WS Security
 ms.assetid: c321cbf9-8c05-4cce-b5a5-4bf7b230ee03
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: ab525cba0cc313466b22bc59bc458d2e355b86cb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 23f814b036d698a4973ca923cd534ea5f0f5b25c
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524800"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47075560"
 ---
 # <a name="message-security-anonymous"></a>İleti Güvenliği Anonim
 İleti güvenliği anonim örnek nasıl herhangi bir istemci kimlik doğrulaması ileti düzeyi güvenlik kullanan bir Windows Communication Foundation (WCF) uygulaması uygulamak için ancak sunucunun X.509 kullanarak kimlik doğrulaması gerektiren gösterir. Sertifika. Tüm uygulama iletileri istemci ve sunucu arasında imzalanmış ve şifrelenmiş. Bu örnek dayanır [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) örnek. Bu örnek, bir istemci konsol program (.exe) ve Internet Information Services (IIS) tarafından barındırılan bir hizmet kitaplığı (.dll) oluşur. Hizmet istek-yanıt iletişim deseni tanımlayan bir sözleşme uygular.  

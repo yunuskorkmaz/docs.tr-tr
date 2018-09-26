@@ -6,13 +6,12 @@ helpviewer_keywords:
 ms.assetid: 9b43f8b4-89d7-46a7-89fc-71aca916dd32
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: e5dc6ee0f2c832e3274a1e58808acfdb56ae804c
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 286ab6ad4742f3e31db8037e10e98d5890c6144d
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862984"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47084793"
 ---
 # <a name="ftp"></a>FTP
 .NET Framework ile FTP protokolünü için kapsamlı destek sağlar. <xref:System.Net.FtpWebRequest> ve <xref:System.Net.FtpWebResponse> sınıfları. Bu sınıflar türetilen <xref:System.Net.WebRequest> ve <xref:System.Net.WebResponse>. Çoğu durumda <xref:System.Net.WebRequest> ve <xref:System.Net.WebResponse> sınıfları istekte bulunmak gerekli olan tüm sağlar, ancak özellik olarak kullanıma FTP özgü özelliklere erişim gerekiyorsa, bu sınıflar için türü atayarak <xref:System.Net.FtpWebRequest> veya <xref:System.Net.FtpWebResponse>.  

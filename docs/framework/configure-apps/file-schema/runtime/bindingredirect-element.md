@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 67784ecd-9663-434e-bd6a-26975e447ac0
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 08dc7a55b5b0c580f19d137496b9405fa4e18a5f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 535519c65aba7ce13703bb33a16b09cde84c3f03
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745298"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47085560"
 ---
 # <a name="ltbindingredirectgt-element"></a>&lt;bindingRedirect&gt; öğesi
 Bir derleme sürümünü diğerine yeniden yönlendirir.  
@@ -43,8 +42,8 @@ newVersion="new assembly version"/>
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`oldVersion`|Gerekli öznitelik.<br /><br /> Başlangıçta istenen derleme sürümünü belirtir. Bir derleme sürüm numarası biçimi *major.minor.build.revision*. Bu sürüm numarasının her bir parçası için geçerli değerler 0 ile 65535 arasındadır.<br /><br /> Ayrıca, aşağıdaki biçimde bir sürüm aralığı da belirtebilirsiniz:<br /><br /> *n.n.n.n - n.n.n.n*|  
-|`newVersion`|Gerekli öznitelik.<br /><br /> İlk olarak istenen sürüm biçimde yerine kullanılacak derlemesinin sürümü belirtir: *n.n.n.n*<br /><br /> Bu değeri daha önceki bir sürümü belirtebilirsiniz `oldVersion`.|  
+|`oldVersion`|Gerekli öznitelik.<br /><br /> Başlangıçta istenen derleme sürümünü belirtir. Bir derleme sürümü numarasının biçimi *major.minor.build.revision*. Bu sürüm numarasının her bir parçası için geçerli değerler 0 ile 65535 arasındadır.<br /><br /> Ayrıca, aşağıdaki biçimde bir sürüm aralığı da belirtebilirsiniz:<br /><br /> *n.n.n.n - n.n.n.n*|  
+|`newVersion`|Gerekli öznitelik.<br /><br /> Biçimde başlangıçta istenen sürüm yerine kullanılacak derleme sürümünü belirtir: *n.n.n.n*<br /><br /> ' Den önceki sürümleri bu değeri belirtebilirsiniz `oldVersion`.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
@@ -62,11 +61,11 @@ newVersion="new assembly version"/>
 |`runtime`|Derleme bağlama ve atık toplama hakkında bilgi içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kesin adlandırılmış bir derlemeye ilişkin olarak bir .NET Framework uygulaması oluşturduğunuzda, yeni bir sürüm kullanılabilir olsa bile, uygulama varsayılan olarak çalışma zamanında derlemenin o sürümünü kullanır. Bununla birlikte, uygulamayı derlemenin daha yeni bir sürümüne ilişkin olarak çalışacak şekilde yapılandırabilirsiniz. Bu dosyaları çalışma zamanı kullanmak için hangi derleme sürümünü belirlemek için nasıl kullandığı hakkında daha fazla bilgi için bkz [nasıl çalışma zamanı bulur derlemeleri](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
+ Kesin adlandırılmış bir derlemeye ilişkin olarak bir .NET Framework uygulaması oluşturduğunuzda, yeni bir sürüm kullanılabilir olsa bile, uygulama varsayılan olarak çalışma zamanında derlemenin o sürümünü kullanır. Bununla birlikte, uygulamayı derlemenin daha yeni bir sürümüne ilişkin olarak çalışacak şekilde yapılandırabilirsiniz. Bu dosyalarını çalışma zamanının hangi derleme sürümünün kullanılacağını belirlemek için nasıl kullandığı hakkında daha fazla bilgi için bkz [çalışma zamanı derlemeleri nasıl konumlandırır](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
   
- Birden çok ekleyerek birden fazla derleme sürümünü yeniden yönlendirebilirsiniz `bindingRedirect` öğelerinde bir `dependentAssembly` öğesi. Ayrıca, derlemenin daha yeni bir sürümünden daha eski bir sürümüne yeniden yönlendirme de yapabilirsiniz.  
+ Ekleyerek, birden çok derleme sürümünü yeniden yönlendirebilirsiniz `bindingRedirect` öğelerinde bir `dependentAssembly` öğesi. Ayrıca, derlemenin daha yeni bir sürümünden daha eski bir sürümüne yeniden yönlendirme de yapabilirsiniz.  
   
- Bir uygulama yapılandırma dosyasında açık derleme bağlama yeniden yönlendirmesi için bir güvenlik izni gerekir. Bu, .NET Framework derlemelerinin ve üçüncü tarafların derlemelerinin yeniden yönlendirilmesi için geçerlidir. Ayarlayarak iznine sahip <xref:System.Security.Permissions.SecurityPermissionFlag> üzerinde bayrak <xref:System.Security.Permissions.SecurityPermission>. Daha fazla bilgi için bkz: [derleme bağlama yönlendirmesi güvenlik izni](../../../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md).  
+ Bir uygulama yapılandırma dosyasında açık derleme bağlama yeniden yönlendirmesi için bir güvenlik izni gerekir. Bu, .NET Framework derlemelerinin ve üçüncü tarafların derlemelerinin yeniden yönlendirilmesi için geçerlidir. İzin ayarlanarak verilir <xref:System.Security.Permissions.SecurityPermissionFlag> üzerinde bayrak <xref:System.Security.Permissions.SecurityPermission>. Daha fazla bilgi için [bütünleştirilmiş kod bağlama yönlendirmesi güvenlik izni](../../../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md).  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, bir derleme sürümünün diğerine nasıl yeniden yönlendirileceği gösterilmiştir.  

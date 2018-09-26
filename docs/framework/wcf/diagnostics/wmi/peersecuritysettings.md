@@ -3,13 +3,12 @@ title: PeerSecuritySettings
 ms.date: 03/30/2017
 ms.assetid: 24ae0d35-f3a3-419b-afd6-686e22aae27b
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 58b372f26fee7dc180d75731fd4855db569c87c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c74ee82d7aa3a23f0ee6a69185ad45857c31bb0b
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33484527"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47087885"
 ---
 # <a name="peersecuritysettings"></a>PeerSecuritySettings
 PeerSecuritySettings  
@@ -25,7 +24,7 @@ class PeerSecuritySettings
 ```  
   
 ## <a name="methods"></a>Yöntemler  
- PeerSecuritySettings sınıfı herhangi bir yöntem tanımlamıyor.  
+ PeerSecuritySettings sınıf herhangi bir yöntemi tanımlamaz.  
   
 ## <a name="properties"></a>Özellikler  
  PeerSecuritySettings sınıfı aşağıdaki özelliklere sahiptir:  
@@ -33,22 +32,22 @@ class PeerSecuritySettings
 ### <a name="mode"></a>Mod  
  Veri türü: dize  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- İleti düzeyi olup olmadığını ve aktarım düzeyinde güvenlik bağlama ile yapılandırılan bir uç nokta tarafından kullanılır.  
+ İleti düzeyi olup olmadığını ve aktarım düzeyi güvenlik bağlama ile yapılandırılan bir uç nokta tarafından kullanılır.  
   
 ### <a name="transport"></a>Taşıma  
  Veri türü: PeerTransportSecuritySettings  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
  Taşıma güvenliği ayarları.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|MOF|Bildirilen Servicemodel.mof.|  
+|MOF|Bildirilmiş Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Ad Alanı|İçinde tanımlanan root\ServiceModel|  
+|Ad Alanı|İçinde tanımlı root\ServiceModel|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.PeerSecuritySettings>

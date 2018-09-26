@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: Bir İş Akışı Uygulamasından Bir Hizmete Erişme'
 ms.date: 03/30/2017
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
 ms.openlocfilehash: 460e5d0f1bbfdebf885176ed9fcc336b76731edd
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47027340"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47075251"
 ---
 # <a name="how-to-access-a-service-from-a-workflow-application"></a>Nasıl yapılır: Bir İş Akışı Uygulamasından Bir Hizmete Erişme
 Bu konu, bir iş akışı hizmeti, bir iş akışı konsol uygulamasından çağırmak açıklar. Tamamlanmasına bağlıdır [nasıl yapılır: Mesajlaşma etkinlikleriyle iş akışı hizmeti oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) konu. Bu konu, bir iş akışı uygulamasından bir iş akışı hizmeti çağırmak amacıyla açıklar ancak aynı yöntemleri herhangi bir Windows Communication Foundation (WCF) hizmeti bir iş akışı uygulamasından çağırmak için kullanılabilir.

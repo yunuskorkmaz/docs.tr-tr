@@ -1,17 +1,16 @@
 ---
-title: 'Nasıl yapılır: Görüntü WIF kullanarak durumunda imzalı'
+title: 'Nasıl yapılır: Görüntü WIF kullanarak oturum açmış durumu gösterme'
 ms.date: 03/30/2017
 ms.assetid: 4d1174e4-5397-4962-9a5f-3b1ad7b3fc14
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 53ef5e8b3fae976bacff3be9a50c323a22aef0e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7d3d23dc1f2e081c0a7c53fbdfaef749c9729fd4
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398924"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47108338"
 ---
-# <a name="how-to-display-signed-in-status-using-wif"></a>Nasıl yapılır: Görüntü WIF kullanarak durumunda imzalı
+# <a name="how-to-display-signed-in-status-using-wif"></a>Nasıl yapılır: Görüntü WIF kullanarak oturum açmış durumu gösterme
 ## <a name="applies-to"></a>Uygulandığı öğe:  
   
 -   Microsoft® Windows® Identity Foundation (WIF) 4.5  
@@ -19,7 +18,7 @@ ms.locfileid: "33398924"
 -   ASP.NET® Web formları  
   
 ## <a name="summary"></a>Özet  
- Bu konuda, oturum WIF etkinleştirilmiş ASP.NET uygulamasının durumu görüntülemek açıklar. WIF, talep kullanan, uygulama ve yönetme kimlik doğrulama ve yetkilendirme için uygulama kaynaklarını yapmak için mekanizma sağlar.  
+ Bu konuda, oturum durumu WIF özelliği etkinleştirilmiş bir ASP.NET uygulamasında görüntülenecek açıklar. WIF, talep kullanan, uygulama ve yönetme kimlik doğrulaması ve yetkilendirme için uygulama kaynakları oluşturmaya yönelik bir mekanizma sağlar.  
   
 ## <a name="contents"></a>İçindekiler  
   
@@ -27,78 +26,78 @@ ms.locfileid: "33398924"
   
 -   Adımların Özeti  
   
--   1. adım – kimlik yüklemek ve erişim uzantısı  
+-   1. adım – yükleme kimlik ve erişim uzantısı  
   
--   Adım 2 – bir bağlı olan taraf ASP.NET uygulaması oluşturma  
+-   2. adım – bir bağlı olan taraf ASP.NET uygulaması oluşturma  
   
--   Adım 3 – kullanıcıların kimliklerini doğrulamak için etkinleştir yerel geliştirme STS  
+-   Adım 3 – kullanıcıların kimliğini doğrulamak için etkinleştirme yerel geliştirme  
   
--   4. adım – oturum durumunu görüntülemek için ASP.NET uygulamanızın değiştirme  
+-   4. adım: ASP.NET uygulamanız oturum durumu görüntülemek için değiştirin  
   
--   5. adım – WIF ve ASP.NET uygulamanızın arasında tümleştirme Test  
+-   5. adım – WIF ve ASP.NET uygulamanız arasındaki tümleştirme testi  
   
 ## <a name="overview"></a>Genel Bakış  
- Bu konu, WIF kullanarak basit bir talep kullanan uygulama oluşturma ve kolay bir kullanıcı veya oturum eşleşmediğini gösterir. Kimlik ve erişim Visual Studio uzantısı bulunan yerel geliştirme STS aşağıdaki adımları kullanın. Yerel geliştirme STS talepler uygulamanıza tümleştirmek için basit bir yöntem sağlamak bir test ve geliştirme ortamı için tasarlanmıştır. Bunu hiçbir zaman bir üretim ortamında gerçek kimlik doğrulaması gerçekleştirmez ve kimlik bilgileri gerekli değil olarak kullanılmalıdır. Ancak, kesinlik temelli kod aşağıdaki adımlarda gerçek kimlik doğrulaması kullanılarak üretime hazır bir uygulama için aynıdır.  
+ Bu konuda, WIF kullanarak talep kullanan uygulama oluşturmak nasıl ve nasıl kolayca veya bir kullanıcı oturumu açıkken eşleşmediğini gösterir. Kimlik ve erişim Visual Studio uzantısı dahil olan yerel geliştirme STS'si aşağıdaki adımları kullanın. Yerel geliştirme STS'si talep uygulamanızla tümleştirmenin basit bir yöntem sağlamak amacıyla bir test ve geliştirme ortamı için tasarlanmıştır. Hiçbir zaman bir üretim ortamında gerçek kimlik doğrulaması gerçekleştirmez ve kimlik bilgileri gerekli değil olarak kullanılmalıdır. Ancak, kesinlik temelli kod aşağıdaki adımlarda gerçek kimlik doğrulaması kullanarak üretime hazır bir uygulama için aynıdır.  
   
 ## <a name="summary-of-steps"></a>Adımların Özeti  
   
--   1. adım – kimlik yüklemek ve erişim uzantısı  
+-   1. adım – yükleme kimlik ve erişim uzantısı  
   
--   Adım 2 – bir bağlı olan taraf ASP.NET uygulaması oluşturma  
+-   2. adım – bir bağlı olan taraf ASP.NET uygulaması oluşturma  
   
--   Adım 3 – kullanıcıların kimliklerini doğrulamak için etkinleştir yerel geliştirme STS  
+-   Adım 3 – kullanıcıların kimliğini doğrulamak için etkinleştirme yerel geliştirme  
   
--   4. adım – oturum durumunu görüntülemek için ASP.NET uygulamanızın değiştirme  
+-   4. adım: ASP.NET uygulamanız oturum durumu görüntülemek için değiştirin  
   
--   5. adım – WIF ve ASP.NET uygulamanızın arasında tümleştirme Test  
+-   5. adım – WIF ve ASP.NET uygulamanız arasındaki tümleştirme testi  
   
-## <a name="step-1--install-the-identity-and-access-extension"></a>1. adım – kimlik yüklemek ve erişim uzantısı  
- Bu adım, Visual Studio 2012 için kimlik ve erişim uzantısının nasıl yapılandırılacağı açıklanmaktadır. Bu uzantı STS uç ile iletişim kurmak için uygulamanızın yapılandırma işlemini otomatikleştirir.  
+## <a name="step-1--install-the-identity-and-access-extension"></a>1. adım – yükleme kimlik ve erişim uzantısı  
+ Bu adımda, Visual Studio 2012 için kimlik ve erişim uzantısının nasıl yapılandırılacağı açıklanır. Bu uzantı STS uç noktaları ile iletişim kurmak için uygulamanızı yapılandırma işlemi otomatik hale getirir.  
   
 #### <a name="to-install-the-identity-and-access-extension"></a>Kimlik ve erişim uzantıyı yüklemek için  
   
 1.  Visual Studio'yu yönetici olarak yükseltilmiş modda başlatın.  
   
-2.  Visual Studio'da sırasıyla **Araçları** tıklatıp **Uzantı Yöneticisi**. **Uzantı Yöneticisi** penceresi görüntülenir.  
+2.  Visual Studio'da **Araçları** tıklatıp **Uzantı Yöneticisi**. **Uzantı Yöneticisi** penceresi görüntülenir.  
   
-3.  İçinde **Uzantı Yöneticisi**, tıklatın **çevrimiçi uzantıları** sol menüden seçip **Visual Studio Galerisi**.  
+3.  İçinde **Uzantı Yöneticisi**, tıklayın **çevrimiçi uzantılara** seçip sol menüden **Visual Studio Galerisi**.  
   
-4.  Sağ üst köşesindeki **Uzantı Yöneticisi**, arama *kimlik ve erişim*.  
+4.  Sağ üst köşesindeki içinde **Uzantı Yöneticisi**, arama *kimlik ve erişim*.  
   
-5.  **Kimlik ve erişim** öğesi, arama sonuçlarında görünür. Onu tıklayın ve ardından **karşıdan**.  
+5.  **Kimlik ve erişim** öğesi, arama sonuçlarında görünür. Tıklayın ve ardından **indirme**.  
   
-6.  **Yükleyip** iletişim kutusu görüntülenir. Lisans şartlarını kabul ediyorsanız, tıklatın **yükleme**.  
+6.  **Yükleyip** iletişim kutusu görüntülenir. Lisans şartlarını kabul ediyorsanız tıklayın **yükleme**.  
   
-7.  Zaman **kimlik ve erişim** uzantı yükleme tamamlandı, Visual Studio'yu Yönetici modunda yeniden başlatın.  
+7.  Zaman **kimlik ve erişim** uzantı yükleme tamamlandığında, Visual Studio'yu Yönetici modunda yeniden başlatın.  
   
-## <a name="step-2--create-a-relying-party-aspnet-application"></a>Adım 2 – bir bağlı olan taraf ASP.NET uygulaması oluşturma  
- Bu adım, bir bağlı olan taraf WIF ile tümleştirecek ASP.NET Web Forms uygulaması oluşturmayı açıklar.  
+## <a name="step-2--create-a-relying-party-aspnet-application"></a>2. adım – bir bağlı olan taraf ASP.NET uygulaması oluşturma  
+ Bu adım, bağlı olan taraf WIF ile tümleştirilecek bir ASP.NET Web Forms uygulaması oluşturmayı açıklar.  
   
 #### <a name="to-create-a-simple-aspnet-application"></a>Basit bir ASP.NET uygulaması oluşturmak için  
   
-1.  Visual Studio'yu başlatın ve tıklatın **dosya**, **yeni**ve ardından **proje**.  
+1.  Visual Studio'yu başlatın ve tıklayın **dosya**, **yeni**, ardından **proje**.  
   
-2.  İçinde **yeni proje** penceresinde tıklatın **ASP.NET Web Forms uygulaması**.  
+2.  İçinde **yeni proje** penceresinde tıklayın **ASP.NET Web Forms uygulaması**.  
   
-3.  İçinde **adı**, girin `TestApp` ve basın **Tamam**.  
+3.  İçinde **adı**, girin `TestApp` basın **Tamam**.  
   
-## <a name="step-3--enable-local-development-sts-to-authenticate-users"></a>Adım 3 – kullanıcıların kimliklerini doğrulamak için etkinleştir yerel geliştirme STS  
- Bu adım, uygulamanızda yerel geliştirme STS etkinleştirmeyi açıklar. Visual Studio için kimlik ve erişim uzantısını kullanarak yerel geliştirme STS etkinleştirilir.  
+## <a name="step-3--enable-local-development-sts-to-authenticate-users"></a>Adım 3 – kullanıcıların kimliğini doğrulamak için etkinleştirme yerel geliştirme  
+ Bu adım, uygulamanızı yerel geliştirme STS'si etkinleştirmeyi açıklar. Yerel geliştirme STS'si kimlik ve erişim uzantısı için Visual Studio aracılığıyla etkinleştirilir.  
   
-#### <a name="to-enable-local-development-sts-in-your-aspnet-application"></a>ASP.NET uygulamanızı yerel geliştirme STS etkinleştirmek için  
+#### <a name="to-enable-local-development-sts-in-your-aspnet-application"></a>ASP.NET uygulamanızı yerel geliştirme STS'si etkinleştirmek için  
   
-1.  Visual Studio'da sağ **TestApp** altında proje **Çözüm Gezgini**seçeneğini belirleyip **kimlik ve erişim**.  
+1.  Visual Studio'da sağ **TestApp** altındaki proje **Çözüm Gezgini**, ardından **kimlik ve erişim**.  
   
-2.  **Kimlik ve erişim** penceresi görüntülenir. Altında **sağlayıcıları**seçin **yerel geliştirme STS ile uygulamanızı Test**, ardından **Uygula**.  
+2.  **Kimlik ve erişim** penceresi görüntülenir. Altında **sağlayıcıları**seçin **uygulamanızı yerel geliştirme STS'si ile Test**, ardından **Uygula**.  
   
-## <a name="step-4--modify-your-aspnet-application-to-display-sign-in-status"></a>4. adım – oturum durumunu görüntülemek için ASP.NET uygulamanızın değiştirme  
- Bu adım, geçerli kullanıcının oturum açtığı olup olmadığını dinamik olarak görüntülemek için ASP.NET uygulamanızın değiştirmeyi açıklar. STS sağlayıcınız yapılandırıldıktan sonra WIF gelen talepleri işler. Şimdi kimlik doğrulaması sonucu görüntülemek için uygulamanızın kod yapılandırmanız gerekir.  
+## <a name="step-4--modify-your-aspnet-application-to-display-sign-in-status"></a>4. adım: ASP.NET uygulamanız oturum durumu görüntülemek için değiştirin  
+ Bu adım, ASP.NET uygulamanızı, geçerli kullanıcının oturum açtığı olmadığını dinamik olarak görüntülenecek değiştirmeniz açıklar. WIF, STS sağlayıcınız yapılandırıldıktan sonra gelen talepleri işler. Şimdi, kimlik doğrulaması sonucu görüntülemek için uygulamanızın kod yapılandırmanız gerekir.  
   
 #### <a name="to-display-sign-in-status"></a>Oturum durumunu görüntülemek için  
   
-1.  Visual Studio'da açın **Default.aspx** altında dosya **TestApp** projesi.  
+1.  Visual Studio'da açın **Default.aspx** altında dosya **TestApp** proje.  
   
-2.  Varolan biçimlendirmede Değiştir **Default.aspx** aşağıdaki biçimlendirme dosyasıyla:  
+2.  Mevcut biçimlendirmeyi Değiştir **Default.aspx** aşağıdaki işaretlemeyle dosyası:  
   
     ```  
     <%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>  
@@ -115,12 +114,12 @@ ms.locfileid: "33398924"
     </html>  
     ```  
   
-3.  Kaydet **Default.aspx**ve kendi kod adlı dosyanın arkasındaki açın **Default.aspx.cs**.  
+3.  Kaydet **Default.aspx**ve ardından adlı dosyanın arkasındaki kodunu açın **Default.aspx.cs**.  
   
     > [!NOTE]
-    >  **Default.aspx.cs** altındaki gizlenebilir **Default.aspx** Çözüm Gezgini'nde. Varsa **Default.aspx.cs** görünür durumda değilse genişletin **Default.aspx** yanında üçgen tıklayarak.  
+    >  **Default.aspx.cs** altındaki gizlenebilir **Default.aspx** Çözüm Gezgini'nde. Varsa **Default.aspx.cs** görünür durumda değilse genişletin **Default.aspx** yanında üçgeni tıklayarak.  
   
-4.  Varolan kodla **Default.aspx.cs** aşağıdaki kod ile:  
+4.  Varolan kodda değiştirin **Default.aspx.cs** aşağıdaki kod ile:  
   
     ```csharp  
     using System;  
@@ -145,13 +144,13 @@ ms.locfileid: "33398924"
     }  
     ```  
   
-5.  Kaydet **Default.aspx.cs**ve uygulama oluşturun.  
+5.  Kaydet **Default.aspx.cs**ve uygulamayı derleyin.  
   
-## <a name="step-5--test-the-integration-between-wif-and-your-aspnet-application"></a>5. adım – WIF ve ASP.NET uygulamanızın arasında tümleştirme Test  
- Bu adım, WIF ve ASP.NET uygulamanızın arasında tümleştirme test nasıl açıklar.  
+## <a name="step-5--test-the-integration-between-wif-and-your-aspnet-application"></a>5. adım – WIF ve ASP.NET uygulamanız arasındaki tümleştirme testi  
+ Bu adımda, WIF ve ASP.NET uygulamanızı arasında tümleştirmeyi nasıl sınayıp doğrulayabileceğiniz açıklanır.  
   
-#### <a name="to-test-the-integration-between-wif-and-aspnet"></a>WIF ve ASP.NET arasında tümleştirme sınamak için  
+#### <a name="to-test-the-integration-between-wif-and-aspnet"></a>WIF ve ASP.NET arasındaki tümleştirmeden test etmek için  
   
-1.  Visual Studio'da basın **F5** uygulamanızı hata ayıklama başlatılamıyor. Herhangi bir hata bulunursa, yeni bir tarayıcı penceresi açılır.  
+1.  Visual Studio'da **F5** uygulamanızı hata ayıklama başlatılamıyor. Hiçbir hata bulunamazsa, yeni bir tarayıcı penceresi açılır.  
   
-2.  Tarayıcı sessizce isteğiniz STS yönlendirir ve Default.aspx sayfasında açılır fark edebilirsiniz. WIF düzgün şekilde yapılandırılmışsa, aşağıdaki metni görüntüle sitesini görmeniz gerekir: **", oturumunuz"**.
+2.  Tarayıcı sessizce isteğiniz STS'ye yönlendirir ve ardından Default.aspx sayfasında açılır fark edebilirsiniz. WIF düzgün şekilde yapılandırılmışsa, aşağıdaki metni görüntüle sitesini görmeniz gerekir: **"Oturumunuz"**.

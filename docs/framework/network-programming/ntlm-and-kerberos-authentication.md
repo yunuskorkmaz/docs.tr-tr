@@ -21,16 +21,15 @@ helpviewer_keywords:
 ms.assetid: 9ef65560-f596-4469-bcce-f4d5407b55cd
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: d1f621af2b365d229b7b5e62069471af98be267a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e7638b9558363b77b03208d86d98330b922b414c
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394393"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47171234"
 ---
 # <a name="ntlm-and-kerberos-authentication"></a>NTLM ve Kerberos kimlik doğrulaması
-Varsayılan NTLM kimlik doğrulaması ve Kerberos kimlik doğrulaması sunucusu ile kimlik doğrulama denemesi için çağıran uygulama ile ilişkili Microsoft Windows NT kullanıcı kimlik bilgilerini kullanın. Varsayılan olmayan NTLM kimlik doğrulaması kullanırken, uygulama kimlik doğrulama türü NTLM olarak ayarlar ve kullandığı bir <xref:System.Net.NetworkCredential> kullanıcı adı, parola ve etki alanı aşağıdaki örnekte gösterildiği gibi ana bilgisayara geçirmek için nesne.  
+Varsayılan NTLM kimlik doğrulaması ve Kerberos kimlik doğrulama sunucusu ile kimlik doğrulamasını kullanmayı denemek çağıran uygulama ile ilişkili Microsoft Windows NT kullanıcı kimlik bilgilerini kullanın. Varsayılan olmayan NTLM kimlik doğrulaması kullanırken, uygulama kimlik doğrulama türü NTLM olarak ayarlar ve kullandığı bir <xref:System.Net.NetworkCredential> kullanıcı adı, parola ve etki alanı aşağıdaki örnekte gösterildiği gibi ana bilgisayara geçirmek için nesne.  
   
 ```vb  
 Dim MyURI As String = "http://www.contoso.com/"  
@@ -46,7 +45,7 @@ WReq.Credentials =
     new NetworkCredential(UserName, SecurelyStoredPassword, Domain);  
 ```  
   
- Uygulama kullanıcı kimlik bilgilerini kullanarak Internet hizmetlerine bağlanmak için gereken uygulamalar aşağıdaki örnekte gösterildiği gibi kullanıcının varsayılan kimlik bilgileri ile bunu yapabilirsiniz.  
+ Uygulama kullanıcısı kimlik bilgilerini kullanarak Internet hizmetlerine bağlanmak için gereken uygulamalar aşağıdaki örnekte gösterildiği gibi kullanıcının varsayılan kimlik bilgileri ile bunu yapabilirsiniz.  
   
 ```vb  
 Dim MyURI As String = "http://www.contoso.com/"  
@@ -60,7 +59,7 @@ WebRequest WReq = WebRequest.Create (MyURI);
 WReq.Credentials = CredentialCache.DefaultCredentials;  
 ```  
   
- Anlaşma kimlik doğrulama modülü uzak sunucu NTLM veya Kerberos kimlik doğrulaması kullanıyor ve uygun yanıtı gönderen olup olmadığını belirler.  
+ Anlaşma kimlik doğrulama modülü, uzak sunucu NTLM veya Kerberos kimlik doğrulaması kullanarak ve uygun yanıtı gönderen olup olmadığını belirler.  
   
 > [!NOTE]
 >  NTLM kimlik doğrulaması, bir proxy sunucu üzerinden çalışmaz.  

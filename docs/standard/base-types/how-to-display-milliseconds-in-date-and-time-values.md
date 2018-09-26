@@ -15,11 +15,11 @@ ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2f39b079de1c97d0954ba013ba1c87a8bd606920
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46585540"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47113588"
 ---
 # <a name="how-to-display-milliseconds-in-date-and-time-values"></a>Nasıl yapılır: Tarih ve Saat Değerlerinde Milisaniyeleri Görüntüleme
 <xref:System.DateTime.ToString?displayProperty=nameWithType> gibi varsayılan tarih ve saat biçimlendirme yöntemleri, bir zaman değerinin saatlerini, dakikalarını ve saniyelerini içerir ancak milisaniye bileşenini içermez. Bu konu, biçimlendirilen tarih ve saat dizelerine bir tarihin ve saatin milisaniye bileşeninin nasıl eklendiğini gösterir.  

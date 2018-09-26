@@ -5,13 +5,12 @@ helpviewer_keywords:
 - WS Security
 ms.assetid: c63cfc87-6b20-4949-93b3-bcd4b732b0a2
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 11cf225ca30117484cdc3bbcb6910e615e91f5ef
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 904916424c3ab199afd09a804c47b57a82e14158
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253318"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47077739"
 ---
 # <a name="message-security-user-name"></a>İleti Güvenliği Kullanıcı Adı
 Bu örnek, kullanıcı adı kimlik doğrulaması için istemci ile WS-güvenlik kullanan ve sunucusunun X.509v3 sertifikasını kullanarak kimlik doğrulaması gerektiren bir uygulamanın nasıl uygulanacağını gösterir. Tüm uygulama iletileri istemci ve sunucu arasında imzalanmış ve şifrelenmiş. Varsayılan olarak, kullanıcı adı ve parolanızı, istemci tarafından kullanılan oturum açmak için geçerli bir Windows hesabı. Bu örnek dayanır [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md). Bu örnek, bir istemci konsol programı'nı (Client.exe) ve Internet Information Services (IIS) tarafından barındırılan bir hizmet kitaplığı (Service.dll) oluşur. Hizmet istek-yanıt iletişim deseni tanımlayan bir sözleşme uygular.  

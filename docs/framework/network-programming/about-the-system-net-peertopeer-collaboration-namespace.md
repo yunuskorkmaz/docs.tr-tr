@@ -4,43 +4,42 @@ ms.date: 03/30/2017
 ms.assetid: b5d8c1c1-6844-4947-9759-c7f1b564bded
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 5d23fe51249df53b3874a8fd6fda60377f7366ee
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0b9e95c4ca723166639adf5b93d0811638378470
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394049"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47070844"
 ---
 # <a name="about-the-systemnetpeertopeercollaboration-namespace"></a>System.Net.PeerToPeer.Collaboration Namespace hakkında
-<xref:System.Net.PeerToPeer.Collaboration> Ad alanı, sınıflar ve eşler arası işbirliği altyapısı kullanarak eş işbirliği etkinlikleri uygulamak için kullanılan API'ler sağlar.  
+<xref:System.Net.PeerToPeer.Collaboration> Ad alanı, sınıflar ve eşler arası işbirliği altyapısı kullanılarak eş işbirliği etkinlikleri uygulamak için kullanılan API'ler sağlar.  
   
 ## <a name="classes"></a>Sınıflar  
- Bir eşler arası işbirliği etkinlik uygulamasında kullanılan ana sınıfları şunlardır:  
+ Eşler arası işbirliği etkinlik uygulamasında kullanılan ana sınıfları şunlardır:  
   
 -   <xref:System.Net.PeerToPeer.Collaboration.ContactManager>, Eş kişileri depolamak için kullanılabilir.  
   
 -   <xref:System.Net.PeerToPeer.Collaboration.PeerApplication> , Oyun, sohbet istemcisi veya konferans çözüm gibi işbirliği yapmak üzere.  
   
--   Bir etkinlik işbirliği eşler.  Bu eşlerden olarak temsil edilebilir <xref:System.Net.PeerToPeer.Collaboration.PeerContact>, <xref:System.Net.PeerToPeer.Collaboration.PeerNearMe>, veya <xref:System.Net.PeerToPeer.Collaboration.PeerEndPoint> nesneleri.  
+-   Bir etkinlik işbirliği eşler.  Bu eşlerden olarak gösterilebilir <xref:System.Net.PeerToPeer.Collaboration.PeerContact>, <xref:System.Net.PeerToPeer.Collaboration.PeerNearMe>, veya <xref:System.Net.PeerToPeer.Collaboration.PeerEndPoint> nesneleri.  
   
--   Statik <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration> sınıfının kendisini hangi uygulamaların kullanılabilir olduğunu belirtir ve hangi eşlerin katılmasını bunları.  
+-   Statik <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration> hangi uygulamaların kullanılabilir belirtir ve hangi eşlerin katılan bunları kendi sınıf.  
   
- <xref:System.Net.PeerToPeer.Collaboration.PeerContact.Invite%2A> Yöntemleri işbirliği oturumunu eşlere davet etmek için kullanılır.  Bir arama eş başka bir eşler arası uygulama, nesne veya iletişim durumu bilgilerini sinyal güncelleştirmeleri işbirliği oturumla bağlı olaylar için abone olabilirsiniz. Varlığı sınıflar belirtin olup bir <xref:System.Net.PeerToPeer.Collaboration.Peer> işbirliği için kullanılabilir ve <xref:System.Net.PeerToPeer.Collaboration.PeerScope> sınıfı bir eş için ne kadar katılım izin verildiğini belirtmek için kullanılır: <xref:System.Net.PeerToPeer.Collaboration.PeerScope.Internet> (Genel) <xref:System.Net.PeerToPeer.Collaboration.PeerScope.NearMe>, (alt ağ) veya <xref:System.Net.PeerToPeer.Collaboration.PeerScope.None>.  
+ <xref:System.Net.PeerToPeer.Collaboration.PeerContact.Invite%2A> Yöntemleri bir işbirliği oturumu genel eşlere davet etmek için kullanılır.  Çağıran bir eş için başka bir eş uygulama, nesne veya durum bilgilerini sinyal güncelleştirmeleri işbirliği oturumla ilişkili olaylar için abone olabilirsiniz. Varlık sınıfları belirtin olup olmadığını bir <xref:System.Net.PeerToPeer.Collaboration.Peer> işbirliği için kullanılabilir ve <xref:System.Net.PeerToPeer.Collaboration.PeerScope> sınıfı ne kadar katılım eşe yönelik izin verildiğini belirtmek için kullanılır: <xref:System.Net.PeerToPeer.Collaboration.PeerScope.Internet> (Genel), <xref:System.Net.PeerToPeer.Collaboration.PeerScope.NearMe>, (alt ağ) veya <xref:System.Net.PeerToPeer.Collaboration.PeerScope.None>.  
   
- İşbirliği oturumunu dört adımdan oluşur:  
+ Bir işbirliği oturumu dört adımdan oluşur:  
   
--   Bulma. Bul veya uygulamalar, eşlerdeki ve iletişim durumu bilgilerini yayımlayın.  Örneğin, aynı oyunlar yüklü olan diğer kişiler yerel alt ağda bulun.  
+-   Bulma. Bulmak veya uygulamaları, eşlerdeki ve durum bilgilerini yayımlayabilirsiniz.  Örneğin, aynı oyunlar yüklü olan diğer kişiler yerel alt ağdaki bulun.  
   
--   Davet. Gönderme ve Başlat veya katılmak uzak peer(s) için güvenli davetlerini kabul <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration> oturumları.  
+-   Davet. Gönder ve uzak peer(s) başlatmak veya katılmak için güvenli davetlerini kabul <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration> oturumları.  
   
--   Yönetim başvurun. Bir kişiye olarak keşfedilen eş eklemek bir <xref:System.Net.PeerToPeer.Collaboration.ContactManager>.  
+-   Kişi yönetimi. Bulunan eşleri için kişi olarak ekleyin bir <xref:System.Net.PeerToPeer.Collaboration.ContactManager>.  
   
--   İletişim. İletişimi kurulduğunda kullanmak <xref:System.Net> API'leri, <xref:System.Net.PeerToPeer> API ya da çok taraflı iletişimler için Windows Communication Foundation eş kanalı sınıfları.  
+-   İletişim. İletişimi kurulduğunda kullanın <xref:System.Net> API'leri <xref:System.Net.PeerToPeer> API ya da çok taraflı iletişim için Windows Communication Foundation eş kanalı sınıfları.  
   
- Örneğin, ana bilgisayar eş işbirliği oturumu başlatır ve yararlanan <xref:System.Net.PeerToPeer.Collaboration.ContactManager.CreateContact%2A> uzaktaki bir eş ve yerel eşlerine birini konak eş Contact Manager'a ekleme yöntemi.  Üç kullanıcı daha sonra kendi özel işbirliği oturumunda almayacak.  
+ Örneğin, konak eş bir işbirliği oturumu başlatır ve yararlanan <xref:System.Net.PeerToPeer.Collaboration.ContactManager.CreateContact%2A> konak eş için Kişi Yöneticisi uzak bir eş ve yerel eşlerine birini eklemek için yöntemi.  Üç kullanıcı daha sonra kendi özel işbirliği oturumunda katılacak.  
   
- Tipik P2P uygulamalar: konferans aramaları işbirliği not alma ya da whiteboarding, sunucusuz sohbet uygulamalar, etkileşimli reklamlar ve çevrimiçi oyunlar oturumları için.  
+ Tipik P2P uygulamalar: konferans aramaları için işbirliğine dayalı not alma ya da Beyaz Tahta kullanımı, sunucusuz bir sohbet uygulamalar, etkileşimli tanıtım ve çevrimiçi oyun oturumları.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Net.PeerToPeer.Collaboration>

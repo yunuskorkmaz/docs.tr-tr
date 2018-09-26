@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: 24c4cf4f-ad32-42b2-b040-8e4549e2855e
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 7527ee9e7528a0da47529bae93e8112705e03a36
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 39d305d429490380c76e15bdcdde434f0d75457b
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755168"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47083143"
 ---
 # <a name="ltsystemwebgt-element-web-settings"></a>&lt;System.Web&gt; öğesi (Web Ayarları)
-ASP.NET barındırma katman işlem genelinde davranışı nasıl yönettiği hakkında bilgi içerir.  
+ASP.NET barındırma katman işlem geneline yönelik davranışını nasıl yönettiği hakkında bilgi içerir.  
   
  \<Yapılandırma >  
 \<System.Web > öğesi (Web Ayarları)  
@@ -41,19 +40,19 @@ ASP.NET barındırma katman işlem genelinde davranışı nasıl yönettiği hak
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<ApplicationPool >](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)|IIS uygulama havuzları için yapılandırma ayarlarını bir aspnet.config dosyasında belirtir.|  
+|[\<ApplicationPool >](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)|IIS uygulama havuzları için yapılandırma ayarlarını bir aspnet.config dosyasını belirtir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Yapılandırma >](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Ortak dil çalışma zamanı tarafından kullanılan her yapılandırma dosyası kök öğesi belirtir ve [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] uygulamalar.|  
+|[\<Yapılandırma >](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Her yapılandırma dosyasında ortak dil çalışma zamanı tarafından kullanılan kök öğesini belirtir ve [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] uygulamalar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `system.web` Öğesi ve kendi alt `applicationPool` öğesi için eklendi [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] sürümünden [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)]. Çalıştırdığınızda [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] veya tümleşik mod sonraki sürümlerinde, bu öğe birleşimini ASP.NET iş parçacıklarını nasıl yönettiğini ve nasıl, kuyruklar istekleri ASP.NET bir IIS uygulama havuzunda barındırıldığında yapılandırmanıza sağlar. Çalıştırırsanız [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] veya sonraki sürümleri bu ayarları Klasik veya ISAPI modunda göz ardı edilir.  
+ `system.web` Öğesi ve kendi alt `applicationPool` öğesi eklendi [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] sürümünden [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)]. Çalıştırdığınızda [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] veya tümleşik modu sonraki sürümlerde, bu öğe birleşim ASP.NET iş parçacıkları nasıl yönettiğini ve nasıl Bu istekler kuyruğa bir IIS uygulama havuzunda ASP.NET barındırıldığında yapılandırmanıza sağlar. Çalıştırırsanız [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] veya sonraki sürümleri bu ayarları Klasik veya ISAPI modunda yoksayılır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, ASP.NET bir IIS uygulama havuzunda barındırıldığında ASP.NET işlem genelinde davranışı aspnet.config dosyasındaki yapılandırma gösterilmektedir. Örnek IIS tümleşik çalıştığını varsayar modu ve uygulama kullanıyor [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)] veya sonraki bir sürümü. Bu davranış sürümlerinde oluşmaz [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] öncesi [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)]. Örnek değerler varsayılan değerlerdir.  
+ Aşağıdaki örnek, bir IIS uygulama havuzunda ASP.NET barındırıldığında aspnet.config dosyasında ASP.NET işlem geneline yönelik davranışını yapılandırma gösterilmektedir. Örnek IIS içinde tümleşik çalıştığını varsayar modu ve uygulama kullanıyor [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)] veya sonraki bir sürümü. Bu davranış sürümlerinde oluşmaz [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] öncesi [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)]. Varsayılan değerleri örnekte değerlerdir.  
   
 ```xml  
 <configuration>  
@@ -72,7 +71,7 @@ ASP.NET barındırma katman işlem genelinde davranışı nasıl yönettiği hak
 |-|-|  
 |Ad Alanı||  
 |Şema adı||  
-|Dosya doğrulama||  
+|Doğrulama dosyası||  
 |Boş olabilir.||  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3aab4bcc-8397-4e1a-a1b6-bbd837a21430
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 158a68d97a52bb5a72985d260a3dd5c6bfd0bd41
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 9f979b6d065e23b6d448a14d9545327de254dc70
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084617"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47086229"
 ---
 # <a name="using-application-protocols"></a>Uygulama protokolleri kullanma
 .NET Framework, yaygın olarak kullanılan Internet uygulama protokolleri destekler. Bu bölüm hakkında bilgi içerir [HTTP](../../../docs/framework/network-programming/http.md), "TCP" ve "UDP" protokollerini kullanarak şirket bilgilerinin yanı sıra [Windows Sockets](../../../docs/framework/network-programming/sockets.md) özel protokoller uygulamak için arabirim.  

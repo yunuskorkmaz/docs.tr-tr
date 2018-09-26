@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 73fe0fb13c191843516a2218c708851abc1851b0
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a9c5c5529e349eca2ba089ed6fb71da4bd48430a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752708"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47084455"
 ---
 # <a name="ltsourcesgt-element"></a>&lt;Kaynakları&gt; öğesi
-İzleme iletileri başlatmak izleme kaynakları belirtir.  
+İzleme iletileri başlatmak iz kaynakları belirtir.  
   
  \<Yapılandırma >  
 \<System.Diagnostics >  
@@ -44,20 +43,20 @@ ms.locfileid: "32752708"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Kaynak >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)|Gerekli öğe.<br /><br /> İzleme iletileri başlatan bir izleme kaynağını belirtir.|  
+|[\<Kaynak >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)|Gerekli öğe.<br /><br /> İzleme iletileri başlatan bir izleme kaynağı belirtir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
-|`system.diagnostics`|Toplamak, depolamak ve iletileri ve izleme anahtarı ayarlandığı düzeyi rota izleme dinleyicilerini belirtir.|  
+|`system.diagnostics`|Toplamak, depolamak ve iletileri ve bir izleme anahtarı ayarlandığı düzeyi izleme dinleyicilerini belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu öğe makine yapılandırma dosyası (Machine.config) ve uygulama yapılandırma dosyasında kullanılabilir.  
+ Bu öğe, makine yapılandırma dosyası (Machine.config) ve uygulama yapılandırma dosyasında kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte nasıl kullanılacağını gösterir `<sources>` izleme kaynağı eklemek için öğesi `mySource` ve kaynak anahtarı düzeyini ayarlamak için adlandırılmış `sourceSwitch`. Bir konsol İzleme dinleyicisi, izleme bilgilerini konsola eklenir.  
+ Aşağıdaki örnek nasıl kullanılacağını gösterir `<sources>` iz eklenecek öğe `mySource` ve kaynak anahtarı düzeyini ayarlamak için adlı `sourceSwitch`. Bir konsol iz dinleyicisi, izleme bilgileri konsola yazar eklenir.  
   
 ```xml  
 <configuration>  

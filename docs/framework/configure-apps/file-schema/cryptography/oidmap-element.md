@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: db39d7de3566647b5171b71940c78a9a0ab6f5f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4ec2ba884f0f60182dd59bb6a4491e223f43ce1a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350228"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47073547"
 ---
 # <a name="ltoidmapgt-element"></a>&lt;oidMap&gt; öğesi
-ASN.1 nesne tanımlayıcısı (OID) eşlemeleri sınıflar içerir.  
+ASN.1 nesne tanımlayıcısını (OID) eşlemeleri için sınıflar içerir.  
   
  \<Yapılandırma >  
 \<mscorlib >  
@@ -43,7 +42,7 @@ ASN.1 nesne tanımlayıcısı (OID) eşlemeleri sınıflar içerir.
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<oidEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)|ASN.1 OID için kolay bir ad eşler.|  
+|[\<oidEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)|Kolay ad ASN.1 OID eşler.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -54,7 +53,7 @@ ASN.1 nesne tanımlayıcısı (OID) eşlemeleri sınıflar içerir.
 |`mscorlib`|İçeren `cryptographySettings` öğesi.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte nasıl kullanılacağını gösterir  **\<oidMap >** öğesi RIPEMD 160 karma algoritmasını Bu karma algoritmayı uygulaması için bir OID eşlemesi içerir.  
+ Aşağıdaki örnek nasıl kullanılacağını gösterir  **\<oidMap >** RIPEMD 160 karma algoritması için bu karma algoritmayı uygulaması için bir OID eşlemesi içerecek şekilde öğesi.  
   
 ```xml  
 <configuration>  

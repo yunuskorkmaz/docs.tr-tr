@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: WebRequest kullanarak özel bir protokolünü kaydetme'
+title: 'Nasıl yapılır: WebRequest kullanarak özel Protokolü kaydetme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,16 +7,15 @@ dev_langs:
 ms.assetid: 98ddbdb9-66b1-4080-92ad-51f5c447fcf8
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: e6902adeac04d95d576ae72469624a5b4f8aa0c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f78f98f94daa51c17a1294285e13dfddd457106
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394598"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47172264"
 ---
-# <a name="how-to-register-a-custom-protocol-using-webrequest"></a>Nasıl yapılır: WebRequest kullanarak özel bir protokolünü kaydetme
-Bu örnek, belirli classthat başka bir yerde tanımlanan protokolünü kaydetme gösterilmektedir. Bu örnekte, `CustomWebRequestCreator` uygulayan kullanıcı uygulanan nesne **oluşturma** döndüren yöntem `CustomWebRequest` nesnesi. Kod örneği, yazmıştır varsayar `CustomWebRequest` özel protokolü uygulayan kod.  
+# <a name="how-to-register-a-custom-protocol-using-webrequest"></a>Nasıl yapılır: WebRequest kullanarak özel Protokolü kaydetme
+Bu örnek, belirli classthat başka yerde tanımlanmış bir protokol kaydettirmek gösterilmektedir. Bu örnekte, `CustomWebRequestCreator` uygulayan kullanıcı uygulanan nesne **Oluştur** döndüren yöntem `CustomWebRequest` nesne. Örnek kodu, yazmış varsayar `CustomWebRequest` özel protokolü uygulayan kodu.  
   
 ## <a name="example"></a>Örnek  
   

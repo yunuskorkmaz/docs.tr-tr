@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: erişim HTTP özgü özellikleri'
+title: "Nasıl yapılır: HTTP'ye özgü özelliklere erişim"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,16 +7,15 @@ dev_langs:
 ms.assetid: f8848c7e-f5c5-4d42-b86d-9951ff8f4146
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 20773d2224f9c04f3b0f9d0906c9e6fc215c5619
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f008cf82b80e29f8fe741034a0e820b5eae5b0ba
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389619"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47084819"
 ---
-# <a name="how-to-access-http-specific-properties"></a>Nasıl yapılır: erişim HTTP özgü özellikleri
-Bu örnek, HTTP devre dışı bırakma gösterilmiştir **tutma** davranışı ve get Protokolü sürüm numarası Web sunucusundan.  
+# <a name="how-to-access-http-specific-properties"></a>Nasıl yapılır: HTTP'ye özgü özelliklere erişim
+Bu örnek HTTP devre dışı bırakma gösterir **tutma** davranışı ve get protokol sürümü, Web sunucusu vm'sinden sayı.  
   
 ## <a name="example"></a>Örnek  
   

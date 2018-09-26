@@ -11,11 +11,11 @@ ms.assetid: 0d07090c-9b47-4ecc-81d1-29d539603c9b
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 192ac28610f596bc6b6f4ebf1c80962ab2d71cbf
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46539271"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47084325"
 ---
 # <a name="reflection-in-the-net-framework-for-windows-store-apps"></a>Windows Mağazası Uygulamaları için .NET Framework'te Yansıma
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] başlayarak .NET Framework, [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamasında kullanılmak üzere bir yansıma türü ve üye kümesini içerir. Bu türler ve üyeler de tam .NET Framework'te de mevcuttur [.NET için Windows Store apps](https://go.microsoft.com/fwlink/?LinkID=225700). Bu belge, bunlar ile .NET Framework 4 ve daha önceki sürümlerdeki karşılıkları arasındaki temel farkları açıklar.  

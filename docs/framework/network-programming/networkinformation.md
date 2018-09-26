@@ -6,13 +6,12 @@ helpviewer_keywords:
 ms.assetid: 31b44dd3-b903-4a48-8419-40419a3e4038
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 88b39b5ae01ec5b22044dde82ba0f802c1a50ca9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b5293afbda1bdf13db318b072696c597a12b8187
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526758"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47075742"
 ---
 # <a name="networkinformation"></a>NetworkInformation
 <xref:System.Net.NetworkInformation> Ad alanı ağ olayları, değişiklikler, istatistikler ve özellikler hakkında bilgi toplamanızı sağlar. Kullanarak uzak ana erişilebilir olup olmadığını belirleyebilirsiniz <xref:System.Net.NetworkInformation.Ping?displayProperty=nameWithType> sınıfı.  

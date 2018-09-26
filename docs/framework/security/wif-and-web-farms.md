@@ -3,13 +3,12 @@ title: WIF ve Web grupları
 ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 365416a82881c32b8fdcd3211aa42acb9f273483
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f65e10fa44c9d245bc7d275ac0e1d8fe914bae0b
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502735"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47112516"
 ---
 # <a name="wif-and-web-farms"></a>WIF ve Web grupları
 Bağlı olan bir taraf (RP) uygulamasının bir web grubunda dağıtılan kaynakların güvenliğini sağlamak için Windows Identity Foundation (WIF) kullandığınızda, WIF üzerinde çalışan farklı RP uygulaması örneğini belirteçleri işleyebildiğinden emin olmak için bazı adımları uygulamanız gerekir gruptaki bilgisayarların. Oturum belirteci imzalar, şifreleme doğrulama Bu işleme içerir ve oturumu simgelerin şifresini, oturumu belirteçlerini önbelleğe alma ve algılama güvenlik belirteçleri yeniden yürütülmesi.  

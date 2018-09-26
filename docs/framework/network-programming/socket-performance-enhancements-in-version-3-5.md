@@ -4,13 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 225aa5f9-c54b-4620-ab64-5cd100cfd54c
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 0570241fa81b0870500daa9d6e94b45c28042737
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: ddf098d0da7411515592c5bfa5bbac2153d7f0eb
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865120"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47111938"
 ---
 # <a name="socket-performance-enhancements-in-version-35"></a>Sürüm 3.5 yuva performansı geliştirmeleri
 <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> Sınıfı geliştirilmiştir sürüm 3.5 kullanmak için en yüksek performans elde etmek için zaman uyumsuz ağ g/ç kullanan uygulamalar tarafından. Yeni sınıflar birtakım geliştirmeler kümesinin bir parçası olarak eklenmiştir <xref:System.Net.Sockets.Socket> özel yüksek performanslı yuva uygulamaları tarafından kullanılabilecek bir diğer zaman uyumsuz desen sağlayan sınıf. Bu geliştirmeler, yüksek performans gerektiren ağ sunucu uygulamaları için özel olarak tasarlanmıştır. Bir uygulama Gelişmiş zaman uyumsuz desen özel olarak kullanabilirsiniz ya da yalnızca kendi uygulama sık erişimli alanlarını (büyük miktarlarda veri, örneğin alırken) hedeflenen.  

@@ -14,31 +14,30 @@ helpviewer_keywords:
 ms.assetid: afb07899-2707-49ab-a57f-e0caf20d0171
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: a684fd1a7ce8cce52e00511b114cb4905ed0a42b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3e47828f14ffbaac57a43ddbf53094e220acb082
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393172"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47080266"
 ---
-# <a name="security-in-network-programming"></a>Güvenlik ağ programlama
+# <a name="security-in-network-programming"></a>Ağ programlama güvenliği
 
 .NET Framework <xref:System.Net> ad alanı sınıfları, .NET Framework kod erişim izinleri ve popüler Internet uygulama kimlik doğrulama mekanizmaları için yerleşik destek sağlar.  
   
 ## <a name="in-this-section"></a>Bu bölümde
 
 [.NET Framework ile Aktarım Katmanı Güvenliği (TLS) en iyi uygulamalar](tls.md)  
-.NET çerçevesinin ile TLS en iyi uygulamaları açıklar.
+.NET Framework ile TLS en iyi uygulamaları açıklar.
  
 [Güvenli Yuva Katmanı Kullanma](../../../docs/framework/network-programming/using-secure-sockets-layer.md)  
 Güvenli Yuva Katmanı (SSL) bağlantıları kullanmayı açıklar.  
   
 [İnternet Kimlik Doğrulaması](../../../docs/framework/network-programming/internet-authentication.md)  
-HTTP sunucuları için kimliği doğrulanmış bağlantıları kurmak için HTTP kimlik doğrulama yöntemleri kullanmayı açıklar.  
+HTTP sunucuları için kimliği doğrulanmış bağlantılar kurmak için HTTP kimlik doğrulama yöntemlerini kullanmayı açıklar.  
   
 [Web ve Yuva İzinleri](../../../docs/framework/network-programming/web-and-socket-permissions.md)  
-Internet bağlantısı kullanan uygulamalar için kod erişimi güvenliği ayarlamak açıklar.  
+Internet bağlantılarını kullanan uygulamalar için kod erişimi güvenliği ayarlama işlemi açıklanmaktadır.  
   
 ## <a name="related-sections"></a>İlgili bölümler
 

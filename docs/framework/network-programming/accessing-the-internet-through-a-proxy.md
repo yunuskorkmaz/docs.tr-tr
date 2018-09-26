@@ -1,5 +1,5 @@
 ---
-title: Bir Proxy üzerinden Internet erişimi
+title: İnternet'e bir Proxy üzerinden erişme
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Networking
@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: cbf46f63-ce28-486d-b827-ec0f1a9d8319
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 9671dae85a5057f9077437ea16275ddcfcb3a75e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 32799b14c88ee098e15e0ffa1dfa5aaa585cdc73
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394985"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47090045"
 ---
-# <a name="accessing-the-internet-through-a-proxy"></a>Bir Proxy üzerinden Internet erişimi
-Sitenizin Internet'e erişim sağlamak için bir proxy kullanıyorsa, uygulamanızı Web ara sunucusu ile iletişim kurmak etkinleştirmek için bir proxy örneği yapılandırmanız gerekir.  
+# <a name="accessing-the-internet-through-a-proxy"></a>İnternet'e bir Proxy üzerinden erişme
+Sitenizin Internet'e erişim sağlamak için bir ara sunucu kullanıyorsa, Web ara sunucusu ile iletişim kurmak uygulamanızı etkinleştirmek için bir proxy örneği yapılandırmanız gerekir.  
   
  Bu bölüm şu konuları içerir:  
   

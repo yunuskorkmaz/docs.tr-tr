@@ -6,13 +6,12 @@ helpviewer_keywords:
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 0dbc06afd4695b85f426fad2859b4c6d4b6684d6
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: dfefa94db2bd286cb92a7fe09e5c4addb52ba8c8
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857186"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47090548"
 ---
 # <a name="distributed-application-security"></a>Dağıtılan Uygulama Güvenliği
 Windows Communication Foundation (WCF) güvenlik üç önemli işlevsel alanları bozuk: güvenlik, erişim denetimi ve denetim aktarın. Aktarım güvenliği, kimlik doğrulaması bütünlüğü ve gizliliği sağlar. Aktarım güvenliği aşağıdakilerden biri tarafından sağlanır: aktarım güvenliği, ileti güvenliği veya `TransportWithMessageCredential`.  

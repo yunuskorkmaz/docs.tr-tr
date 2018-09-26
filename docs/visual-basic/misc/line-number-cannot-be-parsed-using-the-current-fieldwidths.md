@@ -5,11 +5,11 @@ f1_keywords:
 - vbrTextFieldParser_MalFormedFixedWidthLine
 ms.assetid: 84e14245-dfdf-4b62-8b84-e83a31608899
 ms.openlocfilehash: d362ed594fd343c22345df9767c94a5770e5303a
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47027693"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47071627"
 ---
 # <a name="line-ltnumbergt-cannot-be-parsed-using-the-current-fieldwidths"></a>Satır &lt;numarası&gt; geçerli FieldWidths kullanarak ayrıştırılamıyor
 Belirtilen satırın alanlarından belirtilenlerin dışındaki genişlikleri olduğundan ayrıştırılamıyor.  

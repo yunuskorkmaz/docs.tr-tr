@@ -1,19 +1,18 @@
 ---
-title: '&lt;schemeSettings&gt; öğesi (URI ayarları)'
+title: '&lt;schemeSettings&gt; öğesi (Uri ayarları)'
 ms.date: 03/30/2017
 ms.assetid: 0ae45c6e-8c4c-4c0d-8b9f-a93824648890
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 40ff62a48a3ba1f4a9b5aed28630ab70d37869fc
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 76ca5acc22eca07d372a2964cf3a6df4ea3b58d5
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742685"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47077492"
 ---
-# <a name="ltschemesettingsgt-element-uri-settings"></a>&lt;schemeSettings&gt; öğesi (URI ayarları)
-Belirtir nasıl bir <xref:System.Uri> için belirli düzenleri ayrıştırılır.  
+# <a name="ltschemesettingsgt-element-uri-settings"></a>&lt;schemeSettings&gt; öğesi (Uri ayarları)
+Belirtir nasıl bir <xref:System.Uri> belirli düzenleri için ayrıştırılacak.  
   
  \<Yapılandırma >  
 \<URI >  
@@ -34,38 +33,38 @@ Belirtir nasıl bir <xref:System.Uri> için belirli düzenleri ayrıştırılır
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
-|**Öğesi**|**Açıklama**|  
+|**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-schemesettings-uri-settings.md)|Düzen adı için bir düzeni ayarı ekler.|  
+|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-schemesettings-uri-settings.md)|Düzen adı için bir düzen ayarı ekler.|  
 |[Temizle](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-schemesettings-uri-settings.md)|Tüm mevcut düzeni ayarlarını temizler.|  
-|[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-schemesettings-uri-settings.md)|Düzen adı için bir düzeni ayarı kaldırır.|  
+|[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-schemesettings-uri-settings.md)|Düzen adı için bir düzen ayarı kaldırır.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
-|**Öğesi**|**Açıklama**|  
+|**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[URI](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|.NET Framework Tekdüzen Kaynak Tanımlayıcıları (URI'ler) kullanılarak ifade web adresleri işleme biçimini belirten ayarları içerir.|  
+|[URI](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|.NET Framework web adresleri Tekdüzen Kaynak Tanımlayıcıları (URI'lar) kullanılarak ifade nasıl işlediğini belirten ayarları içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Varsayılan olarak, <xref:System.Uri?displayProperty=nameWithType> sınıfı kaydını çıkışları yüzde yolu sıkıştırma yürütmeden önce yolu ayırıcısı kodlanmış. Bu, aşağıdaki gibi saldırılarına karşı bir güvenlik mekanizması olarak kullanılmıştır:  
+ Varsayılan olarak, <xref:System.Uri?displayProperty=nameWithType> sınıfı Geri Al çıkışları yüzde yolu sınırlayıcı yolu sıkıştırma yürütmeden önce kodlanmış. Bu, aşağıdaki gibi saldırılarına karşı bir güvenlik mekanizması olarak uygulanmıştır:  
   
  `http://www.contoso.com/..%2F..%2F/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- Bu URI aktarılırsa modülleri aşağıya doğru yüzde işlenmemesinin karakterlerin doğru kodlanmış, sunucu tarafından yürütülen aşağıdaki komutta neden olabilir:  
+ Bu URI iletilir aşağı modülleri yüzde işlenmemesinin karakterlerin doğru kodlanmış, sunucu tarafından çalıştırılan aşağıdaki komutu neden:  
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- Bu nedenle, <xref:System.Uri?displayProperty=nameWithType> sınıfı ilk kaydını çıkışları yol ayırıcısı ve yol sıkıştırma uygular. Yukarıdaki kötü amaçlı URL'sine geçirme sonucunu <xref:System.Uri?displayProperty=nameWithType> sınıfı aşağıdaki URI Oluşturucusu sonuçlanır:  
+ Bu nedenle, <xref:System.Uri?displayProperty=nameWithType> sınıf ilk geri al çıkışları yol ayırıcıları ve yol sıkıştırma uygular. Yukarıda kötü amaçlı URL'sini geçirme sonucunu <xref:System.Uri?displayProperty=nameWithType> sınıf oluşturucu sonuçları aşağıdaki URI:  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- Bu varsayılan davranışı değil, özel şema için schemeSettings yapılandırma seçeneğini kullanarak kaldırın kaçış yüzde kodlanmış yolu sınırlayıcıları için değiştirilebilir.  
+ Bu varsayılan davranışı değil, için belirli bir düzeni schemeSettings yapılandırma seçeneğini kullanarak kaldırın kaçış yüzde kodlanmış yolu sınırlayıcılar için değiştirilebilir.  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
  Bu öğe, uygulama yapılandırma dosyası veya makine yapılandırma dosyası (Machine.config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek tarafından kullanılan bir yapılandırma gösterir <xref:System.Uri> http şeması için yüzde olarak kodlanmış yol ayırıcısı kaçış değil desteklemek için sınıf.  
+ Aşağıdaki örnek tarafından kullanılan bir yapılandırma gösterir <xref:System.Uri> http düzeni için yol yüzde olarak kodlanmış sınırlayıcılar kaçış değil desteklemek için sınıf.  
   
 ```xml  
 <configuration>  
@@ -83,7 +82,7 @@ Belirtir nasıl bir <xref:System.Uri> için belirli düzenleri ayrıştırılır
 |-|-|  
 |Ad Alanı|Sistem|  
 |Şema adı||  
-|Dosya doğrulama||  
+|Doğrulama dosyası||  
 |Boş olabilir.||  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  

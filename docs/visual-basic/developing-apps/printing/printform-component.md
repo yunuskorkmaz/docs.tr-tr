@@ -5,11 +5,11 @@ helpviewer_keywords:
 - PrintForm component [Visual Basic]
 ms.assetid: 03de98b8-b54c-4764-91d7-83c64e974750
 ms.openlocfilehash: 879d31c5a572689d84af6b2e46f3d33e1a8841c8
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46480779"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47172160"
 ---
 # <a name="printform-component-visual-basic"></a>PrintForm Bileşeni (Visual Basic)
 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> Visual Basic için bileşen çalışma zamanında bir Windows Form görüntüsü yazdırmanızı sağlar. Bu davranışı yerini `PrintForm` Visual Basic'in önceki sürümlerindeki yöntemi.  

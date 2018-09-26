@@ -7,11 +7,11 @@ helpviewer_keywords:
 - type parameters [C#], constraints
 - unbound type parameter [C#]
 ms.openlocfilehash: df5a509296f3fb9e8e77a273a0636c74a6f86da3
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46711291"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47080032"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>(C# programlama Kılavuzu) tür parametrelerindeki kısıtlamalar
 

@@ -9,11 +9,11 @@ ms.assetid: 2bc6ddc6-674a-4f75-b264-abc35e4e5857
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6f71d409729707f4af93fd7f8d5b82a99404579b
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46517178"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47077271"
 ---
 # <a name="xpathnodeiterator-in-transformations"></a>Dönüşümlerde XPathNodeIterator
 <xref:System.Xml.XPath.XPathNodeIterator> Düğüm kümesi yöntemi kullanarak bir XML yolu dil (XPath) sorgusu veya bir düğüme dönüştürülen bir sonuç ağacı parçası olarak oluşturulan düğümleri kümesi üzerinden yineleme yapmak için yöntemler kümesi sağlar. <xref:System.Xml.XPath.XPathNodeIterator> , Düğüm kümesi içindeki düğümler üzerinden yineleme yapma sağlar. Bir düğüm kümesi alındıktan sonra <xref:System.Xml.XPath.XPathNodeIterator> seçili düğümleri kümesini için salt okunur, salt iletme imleç sınıf sağlar. Bu yöntemin çağrılması belge sırayla bir sonraki düğüme taşınmasını belge sırayla düğüm kümesi oluşturulur. <xref:System.Xml.XPath.XPathNodeIterator> bir düğüm ağacı kümedeki tüm düğümlerin oluşturmaz. Bunun yerine, temel alınan düğümü ağacında gezinme gibi işaret gösterme, verilerin bir tek düğümlü penceresi sağlar. Kullanılabilir özellikleri ve yöntemleri <xref:System.Xml.XPath.XPathNodeIterator> sınıfını geçerli düğüm bilgi almak etkinleştirin. Kullanılabilir yöntemlerin ve özelliklerin listesi için bkz. <xref:System.Windows.Forms.ToolBar>.  

@@ -3,11 +3,11 @@ title: Bir İş Akışı Hizmeti içinde Kimlik Bilgilerine Erişme
 ms.date: 03/30/2017
 ms.assetid: 0b832127-b35b-468e-a45f-321381170cbc
 ms.openlocfilehash: 7951782946f5b8ef989598d01229dcf193d97689
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46585513"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47108387"
 ---
 # <a name="accessing-identity-information-inside-a-workflow-service"></a>Bir İş Akışı Hizmeti içinde Kimlik Bilgilerine Erişme
 Bir iş akışı hizmeti içinde kimlik bilgilerine erişmek için uygulamanız gereken <xref:System.ServiceModel.Activities.IReceiveMessageCallback> özel yürütme özelliğinde arabirimi. İçinde <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> erişebilirsiniz yöntemi <xref:System.ServiceModel.OperationContext.ServiceSecurityContext> erişim kimlik bilgileri. Bu konu başlığı altında bu özelliği belirir özel bir etkinlik yanı sıra, bu yürütme özelliğini uygulama konusunda size yol gösterecek <xref:System.ServiceModel.Activities.Receive> çalışma zamanında etkinlik. Özel Etkinlik aynı davranışı uygulayan bir <xref:System.Activities.Statements.Sequence> olduğunda dışında bir etkinlik bir <xref:System.ServiceModel.Activities.Receive> bunun içinde yerleştirilir <xref:System.ServiceModel.Activities.IReceiveMessageCallback> olarak adlandırılır ve kimlik bilgileri alınır.  

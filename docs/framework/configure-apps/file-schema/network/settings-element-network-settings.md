@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: 189ce989-c39b-427d-b004-6b82a668b931
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 3f717705a6cd4cc29fe333f5012c7fec466d350b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9d6189c736e1f2843a986c3a96f8547e9a231db0
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752484"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47075154"
 ---
 # <a name="ltsettingsgt-element-network-settings"></a>&lt;ayarları&gt; öğesi (ağ ayarları)
 Temel ağ seçeneklerini yapılandırır <xref:System.Net?displayProperty=nameWithType> ad alanı.  
@@ -50,18 +49,18 @@ Temel ağ seçeneklerini yapılandırır <xref:System.Net?displayProperty=nameWi
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |[HttpListener](../../../../../docs/framework/configure-apps/file-schema/network/httplistener-element-network-settings.md)|Tarafından kullanılan parametreler özelleştirir <xref:System.Net.HttpListener> sınıfı.|  
-|[HttpWebRequest](../../../../../docs/framework/configure-apps/file-schema/network/httpwebrequest-element-network-settings.md)|Web isteği parametreleri özelleştirir.|  
-|[IPv6](../../../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)|Internet Protokolü sürüm 6 (IPv6) etkinleştirir destekler.|  
-|[\<performanceCounter > öğesi (ağ ayarları)](../../../../../docs/framework/configure-apps/file-schema/network/performancecounter-element-network-settings.md)|Performans sayaçları ağ sağlar.|  
+|[httpWebRequest](../../../../../docs/framework/configure-apps/file-schema/network/httpwebrequest-element-network-settings.md)|Web isteği parametreleri özelleştirir.|  
+|[IPv6](../../../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)|Internet Protokolü sürüm 6 (IPv6) sağlayan destekler.|  
+|[\<performanceCounter > öğesi (ağ ayarları)](../../../../../docs/framework/configure-apps/file-schema/network/performancecounter-element-network-settings.md)|Ağ performans sayaçları sağlar.|  
 |[servicePointManager](../../../../../docs/framework/configure-apps/file-schema/network/servicepointmanager-element-network-settings.md)|Ağ kaynaklarına bağlantılarını yapılandırır.|  
-|[Yuva](../../../../../docs/framework/configure-apps/file-schema/network/socket-element-network-settings.md)|Yuva işlemleri tamamlama bağlantı noktalarını kullanacak olup olmadığını belirtir.|  
-|[\<webProxyScript > öğesi (ağ ayarları)](../../../../../docs/framework/configure-apps/file-schema/network/webproxyscript-element-network-settings.md)|Web proxy bulmak için kullanılan komut dosyası özelliklerini yapılandırır.|  
+|[Yuva](../../../../../docs/framework/configure-apps/file-schema/network/socket-element-network-settings.md)|Yuva işlemleri tamamlama bağlantı noktalarını kullanıp kullanmadığını belirtir.|  
+|[\<webProxyScript > öğesi (ağ ayarları)](../../../../../docs/framework/configure-apps/file-schema/network/webproxyscript-element-network-settings.md)|Web proxy'leri bulmak için kullanılan komut dosyası özelliklerini yapılandırır.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[System.NET](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|.NET Framework ağa nasıl bağlanacağını belirtin ayarları içerir.|  
+|[System.NET](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|.NET Framework ağa nasıl bağlandığını belirten ayarları içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   

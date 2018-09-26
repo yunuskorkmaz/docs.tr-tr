@@ -3,11 +3,11 @@ title: Temel doğrulama
 ms.date: 03/30/2017
 ms.assetid: ba1343cc-aaab-4ade-b0c0-1dd5063bf4ad
 ms.openlocfilehash: 74d99e2d426e9ea5701fad80418fdf019112cc9e
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46581291"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47083328"
 ---
 # <a name="basic-validation"></a>Temel doğrulama
 Bu örnek bir etkinliğin oluşur `CreateProduct`, hangi doğrular, kendi `Cost` değerinden küçük veya eşit olmayan bağımsız değişken, `Price` bağımsız değişken.  

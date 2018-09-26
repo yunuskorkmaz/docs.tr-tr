@@ -2,12 +2,12 @@
 title: UriTemplate ve UriTemplateTable
 ms.date: 03/30/2017
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-ms.openlocfilehash: 75ef447d8c79bded99bd29292a544c72627f113e
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: 66463248f66457aa61ceea22afd003f7b93717e1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46478605"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47090519"
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate ve UriTemplateTable
 Web geliştiricileri şekil ve hizmetlerini yanıt bir URI'leri düzenini açıklayan olanağına sahip olmalıdır. Windows Communication Foundation (WCF), geliştiricilerin kendi bir URI'leri denetiminin kendilerinde olmasına iki yeni sınıflar eklendi. <xref:System.UriTemplate> ve <xref:System.UriTemplateTable> URI tabanlı dağıtım altyapısı WCF'de temelini oluşturur. Bu sınıflar, bir WCF Hizmeti uygulamadan kendi şablonlarını ve URI yararlanmak geliştiricilerin eşleme mekanizmasını de kullanılabilir.  
@@ -192,7 +192,7 @@ foreach (string key in m1.BoundVariables.AllKeys)
 ```  
   
 > [!NOTE]
->  Bir URI gibi http://localhost:8000/// önceki kodda, ancak listelenen şablonu eşleşmiyor gibi bir URI http://localhost:8000/ yapar.  
+> Bir URI gibi `http://localhost:8000///` önceki kodda, ancak listelenen şablonu eşleşmiyor gibi bir URI `http://localhost:8000/` yapar.  
   
  Aşağıdaki kod, bir URI ile bir şablon oluştururken varsayılan değişken değerleri nasıl işleneceğini gösterir.  
   

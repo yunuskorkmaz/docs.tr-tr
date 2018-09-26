@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: cea4d187-6398-4da4-af09-c1abc6a349c1
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 5d985d1620b7dec324c0113bcd5652cede044950
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2b0d7968ce2cf8f326004c9e564cb2e7912c1a0a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744973"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47077349"
 ---
 # <a name="ltassemblyidentitygt-element-for-ltruntimegt"></a>&lt;assemblyIdentity&gt; öğesi için &lt;çalışma zamanı&gt;
 Derleme hakkında tanımlayıcı bilgileri içerir.  
@@ -44,19 +43,19 @@ culture="assembly culture"/>
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`name`|Gerekli öznitelik.<br /><br /> Derleme adı|  
-|`culture`|İsteğe bağlı öznitelik.<br /><br /> Derlemenin ülke/bölge ve dil belirten bir dize.|  
-|`publicKeyToken`|İsteğe bağlı öznitelik.<br /><br /> Derleme güçlü adını belirtir. bir onaltılık değer.|  
-|`processorArchitecture`|İsteğe bağlı öznitelik.<br /><br /> Biri değerleri "x86", "amd64", "MSIL" veya "IA64" İşlemci mimarisi işlemciye özgü kodu içeren bir derleme için belirtme. Değerleri büyük küçük harfe duyarlı değildir. Öznitelik başka bir değer, tüm atanıp atanmadığını `<assemblyIdentity>` öğesi göz ardı edilir. Bkz: <xref:System.Reflection.ProcessorArchitecture>.|  
+|`name`|Gerekli öznitelik.<br /><br /> Derlemenin adı|  
+|`culture`|İsteğe bağlı öznitelik.<br /><br /> Dil ve ülke/bölge derlemenin belirten bir dize.|  
+|`publicKeyToken`|İsteğe bağlı öznitelik.<br /><br /> Bir onaltılık değer derlemenin tanımlayıcı adını belirtir.|  
+|`processorArchitecture`|İsteğe bağlı öznitelik.<br /><br /> Biri değerleri "x86", "amd64", "msil" veya "ia64" İşlemci mimarisi işlemciye özgü kodu içeren bir derleme için belirtme. Değerler büyük küçük harfe duyarlı değildir. Öznitelik başka bir değer tüm atanıp atanmadığını `<assemblyIdentity>` öğesi göz ardı edilir. Bkz: <xref:System.Reflection.ProcessorArchitecture>.|  
   
 ## <a name="processorarchitecture-attribute"></a>processorArchitecture özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|`amd64`|Bir 64-bit AMD işlemci yalnızca.|  
+|`amd64`|Bir 64 bitlik AMD işlemci yalnızca.|  
 |`ia64`|Bir 64-bit Intel işlemci yalnızca.|  
-|`msil`|İşlemci ve word başına BITS göre nötr|  
-|`x86`|32-bit Intel işlemci, ya da yerel ya da Windows 64-bit platformu üzerinde Windows (WOW) ortamında.|  
+|`msil`|Nötr göre işlemcisi ve sözcük başına bit|  
+|`x86`|Bir 32-bit Intel işlemci, ya da yerel ya da Windows 64-bit platformlarda ortamında Windows (WOW).|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -67,15 +66,15 @@ culture="assembly culture"/>
 |-------------|-----------------|  
 |`assemblyBinding`|Derleme sürümü yeniden yönlendirmesi ve derlemelerin konumları hakkında bilgi içerir.|  
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
-|`dependentAssembly`|Her bir derleme için bağlama ilkesi ve derleme konumunu saklar. Kullanmayı `<dependentAssembly>` her derleme için öğesi.|  
+|`dependentAssembly`|Her bir derleme için bağlama ilkesi ve derleme konumunu saklar. Bir `<dependentAssembly>` her derleme için öğesi.|  
 |`runtime`|Derleme bağlama ve atık toplama hakkında bilgi içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Her  **\<dependentAssembly >** öğesinin biri olmalı  **\<assemblyIdentity >** alt öğesi.  
+ Her  **\<dependentAssembly >** öğesi biri olmalı  **\<assemblyIdentity >** alt öğesi.  
   
- Varsa `processorArchitecture` özniteliği varsa, `<assemblyIdentity>` öğesi uygulandığı yalnızca derleme karşılık gelen İşlemci mimarisi ile. Varsa `processorArchitecture` özniteliği yoksa, `<assemblyIdentity>` öğesi, tüm işlemci mimarisine sahip bir derleme uygulayabilirsiniz.  
+ Varsa `processorArchitecture` özniteliği mevcutsa, `<assemblyIdentity>` öğesi uygulandığı yalnızca bütünleştirilmiş kod ile ilgili İşlemci mimarisi. Varsa `processorArchitecture` özniteliği mevcut değil `<assemblyIdentity>` öğesi herhangi bir işlemci mimarisine sahip bir derleme için geçerli olabilir.  
   
- Aşağıdaki örnekte, iki farklı iki işlemci mimarileri hedef ve sürümleri eşitlenmiş tutulmuş olmayan iki derlemeler için aynı ada sahip bir yapılandırma dosyası gösterir. Ne zaman uygulama yürütür üzerinde x86 platform ilk `<assemblyIdentity>` öğesine uygular ve diğer göz ardı edilir. Uygulama x86 veya IA64 başka bir platformda yürütülürse, iki göz ardı edilir.  
+ Aşağıdaki örnek, iki farklı iki işlemci mimarileri hedefleyen ve sürümleri eşitlenmiş tutulmuş olmayan iki derlemeler için aynı ada sahip bir yapılandırma dosyası gösterir. Ne zaman uygulama yürütür üzerinde x86 platformu ilk `<assemblyIdentity>` öğesine uygular ve diğer göz ardı edilir. Uygulama x86 veya IA64 dışındaki bir platformda yürütülürse, iki göz ardı edilir.  
   
 ```xml  
 <configuration>  
@@ -102,10 +101,10 @@ culture="assembly culture"/>
 </configuration>  
 ```  
   
- Bir yapılandırma dosyası içeriyorsa, bir `<assemblyIdentity>` hiçbir öğe `processorArchitecture` özniteliği ve öğesi olmadan platformuyla eşleşen bir öğe içermiyor `processorArchitecture` özniteliği kullanılır.  
+ Bir yapılandırma dosyası içeriyorsa bir `<assemblyIdentity>` öğe olmadan `processorArchitecture` özniteliği ve platformu, öğe olmadan eşleşen bir öğe içermiyor `processorArchitecture` özniteliği kullanılır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir derleme hakkında bilgi sağlamak gösterilmiştir.  
+ Aşağıdaki örnek, bir derleme hakkındaki bilgilerin nasıl sağlanacağını gösterir.  
   
 ```xml  
 <configuration>  

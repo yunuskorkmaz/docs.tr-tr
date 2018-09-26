@@ -3,11 +3,11 @@ title: X.509 Sertifika Doğrulayıcı
 ms.date: 03/30/2017
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
 ms.openlocfilehash: e54f79046113e5f1a1a1cc065606fd5b706b49ac
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46699280"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47078064"
 ---
 # <a name="x509-certificate-validator"></a>X.509 Sertifika Doğrulayıcı
 Bu örnek bir özel X.509 Sertifika Doğrulayıcı uygulama gösterir. Bu, yerleşik X.509 Sertifika doğrulama modları hiçbiri uygulama gereksinimlerini için uygun olduğu durumlarda kullanışlıdır. Bu örnek, şirket içinde verilen sertifikaları kabul eden özel Doğrulayıcı sağlayıcısı olan bir hizmete gösterir. İstemci hizmete kimlik doğrulaması için bu tür bir sertifika kullanır.  

@@ -3,13 +3,12 @@ title: Belirteç Sağlayıcı
 ms.date: 03/30/2017
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 57b353ba945377d9056f7726d96befbd5466ffa6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: b7b7750b51450d3b5d31b8034a20317ba03c49a4
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481308"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47080071"
 ---
 # <a name="token-provider"></a>Belirteç Sağlayıcı
 Bu örnek, özel bir belirteç sağlayıcısını uygulamak nasıl gösterir. Windows Communication Foundation (WCF) bir belirteç sağlayıcısı güvenlik altyapısı için kimlik bilgilerini sağlamak için kullanılır. Belirteç sağlayıcı genel hedef inceler ve böylece ileti güvenlik altyapısı güvenli hale getirebilirsiniz, kimlik bilgileri sorunları uygun. WCF varsayılan kimlik bilgileri Yöneticisi belirteç sağlayıcısı ile birlikte gelir. WCF ayrıca ile birlikte gelir bir [!INCLUDE[infocard](../../../../includes/infocard-md.md)] belirteç sağlayıcısı. Özel belirteç sağlayıcıları, aşağıdaki durumlarda kullanışlıdır:  

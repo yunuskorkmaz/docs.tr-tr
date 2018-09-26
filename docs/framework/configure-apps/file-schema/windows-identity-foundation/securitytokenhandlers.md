@@ -3,16 +3,15 @@ title: '&lt;securityTokenHandlers&gt;'
 ms.date: 03/30/2017
 ms.assetid: f11a631d-4094-4e11-bb03-4ede74b30281
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 16827aa774a8a76f16106a8650423d0d7f084982
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e63f02add81495e474b59b6c5cc090bd69add3d2
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758080"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47082996"
 ---
 # <a name="ltsecuritytokenhandlersgt"></a>&lt;securityTokenHandlers&gt;
-Uç noktası ile kayıtlı güvenlik belirteci işleyicileri koleksiyonunu belirtir.  
+Uç noktası ile kayıtlı bir güvenlik belirteci işleyicileri koleksiyonunu belirtir.  
   
  \<system.identityModel>  
 \<identityConfiguration >  
@@ -36,16 +35,16 @@ Uç noktası ile kayıtlı güvenlik belirteci işleyicileri koleksiyonunu belir
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|name|Bir belirteci işleyicisi koleksiyonunun adını belirtir. Çerçevesi tarafından kabul edilen değerler yalnızca "ActAs" ve "OnBehalfOf" dir. Belirteci işleyicisi koleksiyonları şu adlardan birini kullanarak belirtilirse, koleksiyon ActAs veya OnBehalfOf işleme sırasıyla belirteçler olduğunda kullanılır.|  
+|name|Bir belirteci işleyicisi koleksiyonunun adını belirtir. Framework tarafından kabul edilen değerler yalnızca "ActAs" ve "OnBehalfOf" dir. Bu adlardan birini kullanarak belirteci işleyicisi koleksiyonları belirtilirse, koleksiyon ActAs veya OnBehalfOf işleme sırasıyla belirteçler olduğunda kullanılır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<ekleme >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|Bir güvenlik belirteci işleyicisi belirteci işleyicisi koleksiyonuna ekler.|  
-|[\<Clear >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/clear.md)|Tüm güvenlik belirteci işleyicileri belirteci işleyicisi koleksiyondan kaldırır.|  
+|[\<Ekle >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|Bir güvenlik belirteci işleyicisi belirteci işleyicisi koleksiyona ekler.|  
+|[\<Temizleme >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/clear.md)|Tüm güvenlik belirteci işleyicileri belirteci işleyicisi koleksiyondan kaldırır.|  
 |[\<kaldırma >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/remove.md)|Bir güvenlik belirteci işleyicisi belirteci işleyicisi koleksiyondan kaldırır.|  
-|[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Belirteç işleyicileri koleksiyonunu yapılandırmasını sağlar.|  
+|[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Belirteç işleyicileri koleksiyonu için yapılandırma sağlar.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -54,8 +53,8 @@ Uç noktası ile kayıtlı güvenlik belirteci işleyicileri koleksiyonunu belir
 |[\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Hizmet düzeyi kimlik ayarlarını belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Hizmet yapılandırmasında güvenlik belirteci işleyicileri bir veya daha fazla adlandırılmış koleksiyonları belirtebilirsiniz. Kullanarak bir koleksiyon için bir ad belirtebilirsiniz `name` özniteliği. Çerçeve işleme yalnızca "ActAs" ve "OnBehalfOf" adlardır. İşleyicileri bu koleksiyonları yoksa, bir güvenlik belirteci hizmeti (STS) yerine varsayılan işleyicileri işlerken kullanıldıkları `ActAs` ve `OnBehalfOf` belirteçleri.  
+ Hizmet yapılandırmasında güvenlik belirteci işleyicileri bir veya daha fazla adlandırılmış koleksiyonları belirtebilirsiniz. Kullanarak bir koleksiyon için bir ad belirtebilirsiniz `name` özniteliği. Çerçeve işleme yalnızca "ActAs" ve "OnBehalfOf" adlarıdır. İşleyiciler bu koleksiyonlarında varsa, bunlar bir güvenlik belirteci hizmeti (STS) yerine varsayılan işleyicileri işlenirken kullanılır `ActAs` ve `OnBehalfOf` belirteçleri.  
   
- Varsayılan olarak, koleksiyon şu işleyici türlerini ile doldurulur: <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>, <xref:System.IdentityModel.Tokens.KerberosSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.WindowsUserNameSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.RsaSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>, ve <xref:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler>. Koleksiyon kullanarak değiştirebileceğiniz `<add>`, `<remove>`, ve `<clear>` öğeleri. Herhangi bir tür için tek bir işleyici koleksiyonunda var olduğundan emin olmalısınız. Örneğin, bir işleyicisinden türetirseniz <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> sınıfı, ya da işleyicinizi veya <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> tek bir koleksiyon, ancak ikisini yapılandırılabilir.  
+ Varsayılan olarak, koleksiyonun şu işleyici türlerini ile doldurulur: <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>, <xref:System.IdentityModel.Tokens.KerberosSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.WindowsUserNameSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.RsaSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>, ve <xref:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler>. Koleksiyon kullanarak değiştirebileceğiniz `<add>`, `<remove>`, ve `<clear>` öğeleri. Yalnızca tek bir işleyici herhangi bir tür koleksiyonunda var olduğundan emin olmanız gerekir. Örneğin, bir işleyiciden türetirseniz <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> ya da sınıf işleyicinizi veya <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> tek bir koleksiyon bulunmalıdır, ikisi yapılandırılabilir.  
   
- Kullanım `<securityTokenHandlerConfiguration>` öğe koleksiyonda işleyicileri için yapılandırma ayarlarını belirtin. Hizmet aracılığıyla belirtilen bu öğe belirtilen ayarları geçersiz kılar [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) öğesi. Bazı işleyicileri (birkaç yerleşik işleyici türlerini dahil) bir alt öğesi aracılığıyla ek yapılandırma destekleyebilir `<add>` öğesi. Üzerinde bir işleyici için belirtilen ayarları koleksiyon veya hizmeti belirtilen eşdeğer ayarları geçersiz kılar.
+ Kullanım `<securityTokenHandlerConfiguration>` koleksiyonda işleyiciler için yapılandırma ayarlarını belirtmek için öğesi. Bu hizmet aracılığıyla belirtilen bu öğe belirtilen ayarlarını geçersiz kıl [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) öğesi. Bazı işleyiciler (birkaç yerleşik işleyici türlerini dahil) bir alt öğesi aracılığıyla ek yapılandırma destekleyebilir `<add>` öğesi. Belirtilen bir işleyici ayarları koleksiyonu veya hizmet üzerinde belirtilen eşdeğer ayarları geçersiz kılar.

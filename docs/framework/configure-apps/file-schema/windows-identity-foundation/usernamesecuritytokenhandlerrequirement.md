@@ -3,21 +3,20 @@ title: '&lt;userNameSecurityTokenHandlerRequirement&gt;'
 ms.date: 03/30/2017
 ms.assetid: 6ec3bac1-b014-49ae-843c-c54518cb709a
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 5d725cc0d16457f2bdfb404baf4758e3431ce6b7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: dfcaad8b150321fda2a86e601bf57204cbdc1a0e
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756663"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47075044"
 ---
 # <a name="ltusernamesecuritytokenhandlerrequirementgt"></a>&lt;userNameSecurityTokenHandlerRequirement&gt;
-İçin yapılandırma sağlar <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> sınıf veya türetilmiş sınıflar.  
+İçin yapılandırma sağlar <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> sınıfı veya türetilmiş sınıflar.  
   
  \<system.identityModel>  
 \<identityConfiguration >  
 \<securityTokenHandlers >  
-\<ekleme >  
+\<Ekle >  
 \<userNameSecurityTokenHandlerRequirement >  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -51,10 +50,10 @@ ms.locfileid: "32756663"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<ekleme >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|Belirtilen güvenlik belirteci işleyicisi belirteci işleyicisi koleksiyonuna ekler.|  
+|[\<Ekle >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|Belirtilen güvenlik belirteci işleyicisi belirteci işleyicisi koleksiyona ekler.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `<userNameSecurityTokenHandlerRequirement>` Öğesi kümeleri <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler.MembershipProvider%2A> özelliği, bir <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> nesne yapılandırmasından başlatıldı.  
+ `<userNameSecurityTokenHandlerRequirement>` Öğe kümeleri <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler.MembershipProvider%2A> özelliği, bir <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> nesne yapılandırmadan başlatılır.  
   
 ## <a name="example"></a>Örnek  
   

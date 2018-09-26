@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: db209bac487ccbb98f7f0aeb272f51169e7a0148
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c5be6ef95693f274e5cb2002e5642d5e58a7661a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746361"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47082074"
 ---
 # <a name="ltoidentrygt-element"></a>&lt;oidEntry&gt; öğesi
 ASN.1 nesne tanımlayıcısı (OID) için bir kolay ad eşler.  
@@ -40,8 +39,8 @@ ASN.1 nesne tanımlayıcısı (OID) için bir kolay ad eşler.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|**OID**|Gerekli öznitelik.<br /><br /> Sınıfı tarafından uygulanan algoritması karşılık gelen ASN.1 OID belirtir.|  
-|**Adı**|Gerekli öznitelik.<br /><br /> Değerini belirtir **adı** özniteliğini [ \<nameEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) etiketi.|  
+|**OID**|Gerekli öznitelik.<br /><br /> Sınıfınız tarafından uygulanan algoritması karşılık gelen ASN.1 OID belirtir.|  
+|**Adı**|Gerekli öznitelik.<br /><br /> Değeri belirtir **adı** özniteliğini [ \<nameEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) etiketi.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -53,13 +52,13 @@ ASN.1 nesne tanımlayıcısı (OID) için bir kolay ad eşler.
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
 |`cryptographySettings`|Şifreleme ayarlarını içerir.|  
 |`mscorlib`|İçeren `cryptographySettings` öğesi.|  
-|`oidMap`|ASN.1 nesne tanımlayıcısı (OID) eşlemeleri sınıflar içerir.|  
+|`oidMap`|ASN.1 nesne tanımlayıcısını (OID) eşlemeleri için sınıflar içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- ASN.1 nesne tanımlayıcılarını şifreleme bazı biçimlerde algoritmaları tanımlayın. Nesne tanımlayıcıları tanımlamak istediğiniz algoritmalar için kolay adlar eşleyin.  
+ ASN.1 nesne tanımlayıcılarını şifreleme bazı biçimlerde algoritmaları tanımlar. Nesne tanımlayıcılarını tanımlamak istediğiniz algoritmalar için kolay adlar eşleyin.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte nasıl kullanılacağını gösterir  **\<oidEntry >** Bu karma algoritmayı uygulaması için bir nesne tanımlayıcı RIPEMD 160 karma algoritması için eşlemek için öğesi.  
+ Aşağıdaki örnek nasıl kullanılacağını gösterir  **\<oidEntry >** RIPEMD 160 karma algoritması için nesne tanımlayıcısı bu karma algoritmayı uygulaması için eşlemek için öğesi.  
   
 ```xml  
 <configuration>  

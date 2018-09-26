@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: 290d5f96-946d-4f02-babb-1d31ec0b8295
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 2706d2466bd7139d8a6c20802c32dd19f64abb40
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 671302003c3a1f3a37e1773aeeae9cb09a457d13
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743010"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47107759"
 ---
 # <a name="ltcryptoclassesgt-element"></a>&lt;cryptoClasses&gt; öğesi
-Bir kolay ad eşlemeye sahip şifreleme sınıflarını listesini içeren [ \<nameEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) öğesi.  
+Bir eşleme için bir kolay ad şifreleme sınıflarını listesini içeren [ \<nameEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) öğesi.  
   
  \<Yapılandırma >  
 \<mscorlib >  
@@ -44,7 +43,7 @@ Bir kolay ad eşlemeye sahip şifreleme sınıflarını listesini içeren [ \<na
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<cryptoClass >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md)|Bir kolay ad için bir eşleme olan bir şifreleme sınıfı içeren  **\<nameEntry >** öğesi.|  
+|[\<cryptoClass >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md)|İçin bir kolay ad eşlemesi var. bir şifreleme sınıfına içeren  **\<nameEntry >** öğesi.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -52,11 +51,11 @@ Bir kolay ad eşlemeye sahip şifreleme sınıflarını listesini içeren [ \<na
 |-------------|-----------------|  
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
 |`cryptographySettings`|Şifreleme ayarlarını içerir.|  
-|`cryptoNameMapping`|Kolay adlar sınıflarına eşlemelerini içerir.|  
+|`cryptoNameMapping`|Sınıf için kolay adlar eşlemeleri içerir.|  
 |`mscorlib`|İçeren `cryptographySettings` öğesi.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte nasıl kullanıldığını gösterir  **\<cryptoClass >** öğesi bir şifreleme sınıf başvurusu ve çalışma zamanı yapılandırmak için. Ardından "RSA" dizesi geçirebilirsiniz <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> yöntemi ve kullanım <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> döndürülecek yöntemi bir `MyCryptoRSAClass` nesnesi.  
+ Aşağıdaki örnek nasıl kullanıldığını gösterir  **\<cryptoClass >** bir şifreleme sınıfına başvurmak için ve çalışma zamanı yapılandırma öğesi. Ardından "RSA" dize iletebileceğiniz <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> yöntemini <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> döndürülecek yöntemi bir `MyCryptoRSAClass` nesne.  
   
 ```xml  
 <configuration>  

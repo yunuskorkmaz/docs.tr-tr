@@ -12,11 +12,11 @@ ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 070fc69728c2cb38e465dab9f6f591a77a857531
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46703232"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47089029"
 ---
 # <a name="capitalization-conventions"></a>Büyük/küçük harf kuralları
 Yönergeleri bu bölümün yerleşim kullanmak için basit bir yöntemini, tutarlı bir şekilde, türleri, üyeler ve parametreler okuması yapma tanımlayıcıları uygulandığında durumda.  

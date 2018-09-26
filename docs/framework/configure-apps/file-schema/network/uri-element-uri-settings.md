@@ -1,19 +1,18 @@
 ---
-title: '&lt;URI&gt; öğesi (URI ayarları)'
+title: '&lt;URI&gt; öğesi (Uri ayarları)'
 ms.date: 03/30/2017
 ms.assetid: c22bab8b-477c-4ae4-8498-65ad409e0847
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 05b2fb4255643f657f37012ec51a1b29ed68095d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a58c27500c0258415c12a5fd8e552b3ee43f50e8
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742815"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47108916"
 ---
-# <a name="lturigt-element-uri-settings"></a>&lt;URI&gt; öğesi (URI ayarları)
-.NET Framework Tekdüzen Kaynak Tanımlayıcıları (URI'ler) kullanılarak ifade web adresleri işleme biçimini belirten ayarları içerir.  
+# <a name="lturigt-element-uri-settings"></a>&lt;URI&gt; öğesi (Uri ayarları)
+.NET Framework web adresleri Tekdüzen Kaynak Tanımlayıcıları (URI'lar) kullanılarak ifade nasıl işlediğini belirten ayarları içerir.  
   
 ## <a name="schema-hierarchy"></a>Şema hiyerarşisi  
  [\<Yapılandırma > öğesi](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
@@ -35,25 +34,25 @@ ms.locfileid: "32742815"
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
-|**Öğesi**|**Açıklama**|  
+|**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[IDN](../../../../../docs/framework/configure-apps/file-schema/network/idn-element-uri-settings.md)|Etki alanı adlarının Uluslararası yapılan etki alanı adı (IDN) ayrıştırma uygulanmış olup olmadığını belirtir.|  
-|[iriParsing](../../../../../docs/framework/configure-apps/file-schema/network/iriparsing-element-uri-settings.md)|Uluslararası kaynak tanımlayıcısı (IRI) ayrıştırma için uygulanıp uygulanmadığını belirtir <xref:System.Uri> ve kuralları ayrıştırma IRI uygulanıp.|  
-|[schemeSettings](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Belirtir nasıl bir <xref:System.Uri> için belirli düzenleri ayrıştırılır.|  
+|[IDN](../../../../../docs/framework/configure-apps/file-schema/network/idn-element-uri-settings.md)|Etki alanı adları için Uluslararası yapılan etki alanı adı (IDN) ayrıştırma uygulanıp uygulanmadığını belirtir.|  
+|[iriParsing](../../../../../docs/framework/configure-apps/file-schema/network/iriparsing-element-uri-settings.md)|Uluslararası kaynak tanımlayıcı (IRI) ayrıştırma için uygulanıp uygulanmadığını belirtir <xref:System.Uri> ve IRI ayrıştırma kurallarını uygulanıp.|  
+|[schemeSettings](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Belirtir nasıl bir <xref:System.Uri> belirli düzenleri için ayrıştırılacak.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
-|**Öğesi**|**Açıklama**|  
+|**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[Yapılandırma](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Tüm ad alanlarını ayarlarını içerir.|  
+|[Yapılandırma](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Tüm ad alanları için ayarları içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `uri` Ögesinin üyeleri için ayarları <xref:System.Uri> sınıfları tarafından kullanılan sınıf <xref:System.Net> ad alanı. Ayarları IRI ve IDN desteğini yapılandırın.  
+ `uri` Ögesinin üyeleri için ayarları <xref:System.Uri> sınıfları tarafından kullanılan sınıf <xref:System.Net> ad alanı. IRI ve IDN desteğini ayarlarını yapılandırın.  
   
 ## <a name="example"></a>Örnek  
   
 ### <a name="description"></a>Açıklama  
- Aşağıdaki örnek tarafından kullanılan bir yapılandırma gösterir <xref:System.Uri> IRI ayrıştırma ve IDN adları desteklemek için sınıf. Örnek aynı zamanda tüm düzeni ayarlarını temizler ve yüzde olarak kodlanmış yol ayırıcısı http şeması için kaçış değil için destek ekler.  
+ Aşağıdaki örnek tarafından kullanılan bir yapılandırma gösterir <xref:System.Uri> IRI ayrıştırma ve IDN adları desteklemek için sınıf. Örnek aynı zamanda tüm düzeni ayarlarını temizler ve ardından http düzeni için yol yüzde olarak kodlanmış sınırlayıcılar kaçış değil desteği ekler.  
   
 ### <a name="code"></a>Kod  
   

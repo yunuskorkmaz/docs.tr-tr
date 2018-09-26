@@ -1,51 +1,52 @@
 ---
-title: C# 7.2 yenilikler nelerdir?
-description: C# 7.2 yeni özellikleri genel bakış.
+title: C# 7.2 yenilikleri
+description: C# 7.2 yenilikleri genel bakış.
 ms.date: 08/16/2017
-ms.openlocfilehash: b813bf5b38ef17986b21e928c9c86e583174c7d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 87fd67b37a31a02960334a2b2a325724e0cc2c73
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47109582"
 ---
-# <a name="whats-new-in-c-72"></a>C# 7.2 yenilikler nelerdir?
+# <a name="whats-new-in-c-72"></a>C# 7.2 yenilikleri
 
-C# 7.2 çok sayıda kullanışlı özelliği ekleyen başka bir nokta sürümüdür.
-Bu sürüm için bir tema, gereksiz kopya veya ayırmaları kaçınarak değer türleri ile daha verimli bir şekilde çalışıyor. 
+C# 7.2 birçok yararlı özellik ekleyen başka bir noktası sürümdür.
+Bu sürüm için bir tema, gereksiz kopyalarını veya ayırmaları önleyerek değer türleri ile daha verimli bir şekilde çalışıyor. 
 
-Kalan özellikler küçük, olması iyi özelliklerdir.
+Geri kalan özellikleri, küçük, iyi sahip özellikleridir.
 
-C# 7.2 kullanan [dil sürümü seçimi](csharp-7-1.md#language-version-selection) yapılandırma öğesi derleyici dil sürümünü seçin.
+C# 7.2 kullanan [dil sürüm seçimi](../language-reference/configure-language-version.md) derleyici dil sürüm seçmek için yapılandırma öğesi.
 
 Bu sürümdeki yeni diz özellikleri şunlardır:
 
 * [Değer türleri ile başvuru semantiği](#reference-semantics-with-value-types)
-  - Başvuru anlamsallarını kullanarak değer türleri ile çalışmayı etkinleştirmek sözdizimi geliştirmeleri birleşimi.
-* [Olmayan sondaki-adlandırılmış bağımsız değişkenler](#non-trailing-named-arguments)
-  - Adlandırılmış bağımsız değişkenler konumsal değişkenleriyle izlenebilir.
-* [Sayısal değişmez değerlerinde başında alt çizgiler](#leading-underscores-in-numeric-literals)
-  - Sayısal değişmez değerler artık yazdırılan herhangi bir rakam önce başında alt çizgi olabilir.
+  - Başvuru semantiği kullanarak değer türleri ile çalışmayı etkinleştirmek söz dizimi geliştirmeleri birleşimi.
+* [Olmayan trailing-adlandırılmış bağımsız değişkenler](#non-trailing-named-arguments)
+  - Adlandırılmış bağımsız değişkenler konumsal bağımsız değişken tarafından izlenebilir.
+* [Sayısal sabit değerlerde önde gelen altçizgilere](#leading-underscores-in-numeric-literals)
+  - Artık sayısal değişmez değerler yazdırılan herhangi bir rakam önce önde gelen altçizgilere sahip olabilir.
 * [`private protected` Erişim değiştiricisi](#private-protected-access-modifier)
-  - `private protected` Erişim değiştiricisi aynı bütünleştirilmiş kodda türetilmiş sınıfları için erişim sağlar.
+  - `private protected` Erişim değiştiricisi, aynı derlemedeki türetilmiş sınıflar için erişim sağlar.
 
-## <a name="reference-semantics-with-value-types"></a>Başvuru semantiği ile değer türleri
+## <a name="reference-semantics-with-value-types"></a>Değer türleri ile başvuru semantiği
 
-7.2 içinde sunulan dil özellikleri başvurusu semantiği kullanırken değer türleri ile çalışmanıza olanak tanır. Başvuru türleri kullanımıyla ilişkili bellek ayırmaları yansıtılmasını olmadan kopyalama değer türleri en aza performansı artırmak için tasarlanmıştır. Özellikleri içerir:
+Tanıtılan 7.2 dil özellikleri, değer türleri ile başvuru semantiği kullanırken çalışmanıza olanak tanır. Kopyalama değer türleri başvuru türleri kullanmayla ilişkili bellek ayırmaları ödemeden en aza indirerek, performansı artırmak için tasarlanmıştır. Özellikler şunlardır:
 
- - `in` Bağımsız değişken başvuruyla geçirildi ancak çağrılan yöntemi tarafından değiştirilmeyen belirtmek üzere parametreler, değiştiricisi.
- - `ref readonly` Değiştiricisi bir yöntem başvuruya göre değerini döndürür ancak o nesnenin yazmaları izin vermeyen belirtmek için yöntemi döndürür.
- - `readonly struct` Yapı sabittir ve olarak iletilmesi gereken göstermek için bildirim, bir `in` üye yöntemlerinden parametresi.
- - `ref struct` Bir yapı türü yönetilen bellek doğrudan erişir ve her zaman ayrılmış yığın göstermek için bildirim.
+ - `in` Değiştirici bağımsız değişken başvuruyla geçirildi ancak tarafından çağrılan yöntem değiştirilmemiş belirtmek için parametreleri. Ekleme `in` değiştiricisi bir bağımsız değişken için bir [kaynağı uyumlu değişiklik](version-update-considerations.md#source-compatible-changes).
+ - `ref readonly` Değiştirici yöntemi döndüğünde, bir yöntem değerine başvuru ile döndürülen ancak bu nesne için yazma izin vermez belirtmek için. Ekleme `ref readonly` değiştiricisi bir [kaynağı uyumlu değişiklik](version-update-considerations.md#source-compatible-changes), dönüş için bir değer atanır. Ekleme `readonly` varolan modifer `ref` dönüş deyimi bir [uyumsuz değişiklik](version-update-considerations.md#incompatible-changes). Bildirimi güncelleştirmek çağıranlar gerektirir `ref` eklemek için yerel değişkenleri `readonly` değiştiricisi.
+ - `readonly struct` Yapı sabittir ve olarak geçirilmelidir belirtmek için bildirimi bir `in` üye yöntemlerinin parametre. Ekleme `readonly` değiştiricisi var olan bir yapı bildirim için bir [ikili uyumlu değişiklik](version-update-considerations.md#binary-compatible-changes).
+ - `ref struct` Bildirimi, bir yapı türü yönetilen bellek doğrudan erişir ve her zaman yığını ayrılmalıdır. Ekleme `ref` değiştirici mevcut bir `struct` bildirimi bir [uyumsuz değişiklik](version-update-considerations.md#incompatible-changes). A `ref struct` bunu ayrıldığı yığında diğer konumlarda kullanılan veya bir sınıf üyesi olamaz.
 
-Tüm bunlar hakkında daha fazla bilgi için değişiklikler okuyabilirsiniz [başvuru semantiği ile değer türleri kullanarak](../reference-semantics-with-value-types.md).
+Tüm bunlar hakkında daha fazla değişiklikler okuyabilirsiniz [değer türleri ile başvuru semantiği kullanarak](../reference-semantics-with-value-types.md).
 
-## <a name="non-trailing-named-arguments"></a>Olmayan sondaki-adlandırılmış bağımsız değişkenler
+## <a name="non-trailing-named-arguments"></a>Olmayan trailing-adlandırılmış bağımsız değişkenler
 
-Yöntem çağrıları şimdi bu bağımsız değişken adlı doğru konumda olduğunda, konumsal bağımsız değişkenleri koyun adlandırılmış bağımsız değişkenler kullanabilirsiniz. Daha fazla bilgi için bkz: [adlandırılmış ve isteğe bağlı bağımsız değişkenler](../programming-guide/classes-and-structs/named-and-optional-arguments.md).
+Yöntem çağrıları artık bu adlandırılmış bağımsız değişkenler doğru konumda olduğunda, önünde konumsal bağımsız değişkenler adlandırılmış bağımsız değişkenler kullanabilirsiniz. Daha fazla bilgi için [adlandırılmış ve isteğe bağlı bağımsız değişkenler](../programming-guide/classes-and-structs/named-and-optional-arguments.md).
 
-## <a name="leading-underscores-in-numeric-literals"></a>Sayısal değişmez değerlerinde başında alt çizgiler
+## <a name="leading-underscores-in-numeric-literals"></a>Sayısal sabit değerlerde önde gelen altçizgilere
 
-C# 7.0 basamak ayırıcıları desteği uyarlamasını izin kaydetmedi `_` ilk karakter değişmez değeri olmalıdır. Onaltılık ve ikili sayısal değişmez değerleri şimdi başlamak ile bir `_`. 
+Rakam ayırıcıları C# 7.0 desteği uygulamasına izin vermedi `_` değişmez değerin ilk karakteri olarak. Onaltılık ve ikili sayısal değişmez değerler artık ile başlayan bir `_`. 
 
 Örneğin:
 
@@ -53,8 +54,8 @@ C# 7.0 basamak ayırıcıları desteği uyarlamasını izin kaydetmedi `_` ilk k
 int binaryValue = 0b_0101_0101;
 ```
 
-## <a name="private-protected-access-modifier"></a>_korumalı özel_ erişim değiştiricisi
+## <a name="private-protected-access-modifier"></a>_Özel korumalı_ erişim değiştiricisi
 
-Son olarak, yeni bir bileşik erişim değiştiricisi: `private protected` üyesi sınıfı ya da aynı bütünleştirilmiş kodda bildirilen türetilen sınıflar içeren tarafından erişilebileceği gösterir. Sırada `protected internal` türetilen sınıflar ya da aynı bütünleştirilmiş kodda olan sınıfları tarafından erişime izin veren `private protected` aynı bütünleştirilmiş kodda bildirilen türetilmiş türler erişimi sınırlar.
+Son olarak, yeni bir bileşik erişim değiştiricisi: `private protected` üye sınıfı veya aynı derlemede bildirilmiş türetilmiş sınıfları içeren tarafından erişilebilecek gösterir. Sırada `protected internal` türetilmiş sınıflar veya aynı derlemede bulunan sınıflar tarafından erişime `private protected` türetilen türlerin aynı derlemede bildirilmiş erişimi sınırlar.
 
-Daha fazla bilgi için bkz: [erişim değiştiricileri](../language-reference/keywords/access-modifiers.md) dil başvurusu.
+Daha fazla bilgi için [erişim değiştiricilerine](../language-reference/keywords/access-modifiers.md) dil başvurusu.

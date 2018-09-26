@@ -9,11 +9,11 @@ helpviewer_keywords:
 - as keyword [C#]
 ms.assetid: a9be126b-cbf4-4990-a70d-d0e1983cad0e
 ms.openlocfilehash: aee80b3262ccd9432d7c311dddec47185b66d05f
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46695416"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47071708"
 ---
 # <a name="as-c-reference"></a>as (C# Başvurusu)
 Kullanabileceğiniz `as` belirli türlerdeki uyumlu başvuru türleri arasında dönüştürmeler gerçekleştirmek için işleci veya [boş değer atanabilir türler](../../../csharp/programming-guide/nullable-types/index.md). Aşağıdaki kod örneği gösterir.  

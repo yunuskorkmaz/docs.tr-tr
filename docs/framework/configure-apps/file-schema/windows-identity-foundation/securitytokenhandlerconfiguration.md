@@ -3,16 +3,15 @@ title: '&lt;securityTokenHandlerConfiguration&gt;'
 ms.date: 03/30/2017
 ms.assetid: 28724cc6-020c-4a06-9a1f-d7594f315019
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 168bdc4fbf640b201ebc61462d04727c23f838f2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d66771ec7ed52ace52df6bb3bfafdcf9cce989b5
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758431"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47070935"
 ---
 # <a name="ltsecuritytokenhandlerconfigurationgt"></a>&lt;securityTokenHandlerConfiguration&gt;
-Belirteç işleyicileri koleksiyonunu yapılandırmasını sağlar.  
+Belirteç işleyicileri koleksiyonu için yapılandırma sağlar.  
   
  \<system.identityModel>  
 \<identityConfiguration >  
@@ -40,29 +39,29 @@ Belirteç işleyicileri koleksiyonunu yapılandırmasını sağlar.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|saveBootstrapContext|Oturum belirteci önyükleme belirteçlerini dahil edilip edilmeyeceğini belirtir. Değer ayrıca bir belirteç işleyici koleksiyonu ayarlayarak ayarlanabilir `saveBootstrapContext` özniteliği [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) öğesi. Bir değer belirteci işleyicisi koleksiyonda Ayarla hizmetinde değerini geçersiz kılar.|  
-|maximumClockSkew|A <xref:System.TimeSpan> izin verilen maksimum saat eğriltme belirtir. İzin verilen maksimum saat eğriltme bir oturum açma oturumu sona erme süresini doğrulama gibi zamana duyarlı işlemlerini gerçekleştirirken denetler. 5 dakika, varsayılan değer "00: 05:00". Nasıl belirleneceği hakkında daha fazla bilgi için <xref:System.TimeSpan> değerler, bakın [Timespan değerleri](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md). Maksimum saat eğriltme Ayrıca hizmet düzeyinde ayarlayarak ayarlanabilir `maximumClockSkew` özniteliği [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) öğesi. Bir değer belirteci işleyicisi koleksiyonda Ayarla hizmetinde değerini geçersiz kılar.|  
+|saveBootstrapContext|Oturum belirteci önyükleme simgeleri dahil edilip edilmeyeceğini belirtir. Değer aynı zamanda bir belirteci işleyicisi koleksiyonunda ayarlayarak ayarlanabilir `saveBootstrapContext` özniteliği [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) öğesi. Belirteci işleyicisi koleksiyonunda belirlenen bir değer hizmette ayarlanan değer geçersiz kılar.|  
+|maximumClockSkew|A <xref:System.TimeSpan> en fazla izin verilen saat sapması belirtir. Bir oturum açma oturumu sona erme süresini doğrulama gibi zamana duyarlı işlemleri gerçekleştirirken, en fazla izin verilen saat sapması denetler. 5 dakika, varsayılan değer "00: 05:00". Belirtme hakkında daha fazla bilgi için <xref:System.TimeSpan> değerleri, görmek [Timespan değerleri](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md). Maksimum saat eğriltme da hizmet düzeyinde ayarlayarak ayarlanabilir `maximumClockSkew` özniteliği [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) öğesi. Belirteci işleyicisi koleksiyonunda belirlenen bir değer hizmette ayarlanan değer geçersiz kılar.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<AudienceUri >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/audienceuris.md)|Bu bağlı olan taraf kabul edilebilir tanımlayıcılardır URI'ler kümesini belirtir. İsteğe bağlı.|  
+|[\<AudienceUri >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/audienceuris.md)|Bu bağlı olan tarafın tanımlayıcılardır kabul edilebilir bir URI'leri kümesini belirtir. İsteğe bağlı.|  
 |[\<önbelleğe alan >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|Oturum belirteçleri ve belirteç yeniden yürütme algılaması için kullanılan önbellekleri kaydeder. Hizmet düzeyinde veya bir güvenlik belirteci işleyicisi koleksiyonunda belirtilebilir. İsteğe bağlı.|  
-|[\<certificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|Sertifikaları doğrulamak için belirteci işleyicileri kullanma ayarlarını denetler. Hizmet düzeyinde veya bir güvenlik belirteci işleyicisi koleksiyonunda belirtilebilir. Belirli bir işleyici ile kendi Doğrulayıcı yapılandırdıysanız bu ayarları geçersiz kılınır. İsteğe bağlı.|  
-|[\<issuerNameRegistry >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)|Belirteci işleyicisi koleksiyonundaki işleyiciler tarafından kullanılan yayınlayıcı adı kaydını yapılandırır. İsteğe bağlı.|  
-|[\<issuerTokenResolver >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuertokenresolver.md)|Belirteci işleyicisi koleksiyonundaki işleyiciler tarafından kullanılan veren belirteci çözümleyiciyi kaydeder. Veren belirteç Çözümleyicisi gelen iletileri ve belirteç imzalama belirteçte çözmek için kullanılır. İsteğe bağlı.|  
-|[\<serviceTokenResolver >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicetokenresolver.md)|Belirteci işleyicisi koleksiyonundaki işleyiciler tarafından kullanılan hizmet belirteci çözümleyiciyi kaydeder. Hizmet belirteç Çözümleyicisi gelen belirteçleri ve iletileri şifreleme belirteci çözmek için kullanılır. İsteğe bağlı.|  
-|[\<tokenReplayDetection >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)|Belirteç yeniden yürütme algılaması sağlar ve belirteçler için sona erme saati belirtir. Hizmet düzeyinde veya bir güvenlik belirteci işleyicisi koleksiyonunda belirtilebilir. İsteğe bağlı.|  
+|[\<certificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|Belirteç işleyicileri sertifikalarını doğrulamak için ayar denetler. Hizmet düzeyinde veya bir güvenlik belirteci işleyicisi koleksiyonunda belirtilebilir. Belirli bir işleyici kendi Doğrulayıcı ile yapılandırılmışsa, bu ayarlar geçersiz kılınır. İsteğe bağlı.|  
+|[\<issuerNameRegistry >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)|Belirteci işleyicisi koleksiyondaki işleyiciler tarafından kullanılan verenin ad Kayıt Defteri'ni yapılandırır. İsteğe bağlı.|  
+|[\<issuerTokenResolver >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuertokenresolver.md)|Belirteci işleyicisi koleksiyondaki işleyiciler tarafından kullanılan verici belirteç çözümleyici kaydeder. Veren belirteç Çözümleyici, imzalama belirtecinin gelen belirteçleri ve iletileri çözmek için kullanılır. İsteğe bağlı.|  
+|[\<serviceTokenResolver >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicetokenresolver.md)|Belirteci işleyicisi koleksiyondaki işleyiciler tarafından kullanılan hizmet belirteci çözümleyiciyi kaydeder. Hizmet belirteç Çözümleyici, gelen belirteçleri ve ileti şifreleme belirteci çözmek için kullanılır. İsteğe bağlı.|  
+|[\<tokenReplayDetection >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)|Belirteç yeniden yürütme algılaması sağlar ve belirteçleri sona erme süresini belirtir. Hizmet düzeyinde veya bir güvenlik belirteci işleyicisi koleksiyonunda belirtilebilir. İsteğe bağlı.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<securityTokenHandlers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|Uç noktası ile kayıtlı güvenlik belirteci işleyicileri koleksiyonunu belirtir.|  
+|[\<securityTokenHandlers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|Uç noktası ile kayıtlı bir güvenlik belirteci işleyicileri koleksiyonunu belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu bölüm için özellik değerlerini sağlayan bir <xref:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration> nesnesi. Bu bölümde yapılandırılan ayarları hizmetinde yapılandırılan ayarları geçersiz kılar. Bu ayarlardan bazıları sırayla, güvenlik belirteci işleyicisi koleksiyonuna bir işleyici eklediğinizde, belirtilen ayarlarla geçersiz kılınabilir.  
+ Özellik değerleri için bu bölümde bir <xref:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration> nesne. Bu bölümde, yapılandırılan ayarları hizmetinde yapılandırılan ayarları geçersiz kılar. Bu ayarlardan bazıları sırasıyla bir işleyici güvenlik belirteci işleyicisi koleksiyona eklendiğinde, belirtilen ayarları tarafından geçersiz kılınabilir.  
   
 ## <a name="example"></a>Örnek  
   

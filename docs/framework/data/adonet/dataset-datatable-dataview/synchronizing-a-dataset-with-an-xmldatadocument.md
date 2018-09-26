@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: fbc96fa9-b5d1-4f97-b099-c89b0e14ce2c
 ms.openlocfilehash: 5aeb5fc3ad1008871b6c54d6c096cb3a76c3416e
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46586253"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47082469"
 ---
 # <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a>Bir veri kümesi bir XmlDataDocument ile eşitleme
 Bu bölüm işleme kullanarak türü kesin belirlenmiş bir satın alma siparişinin tek bir adımda gösterir <xref:System.Data.DataSet> ile eşitlenen bir <xref:System.Xml.XmlDataDocument>. Aşağıdaki örneklerde oluşturma bir **veri kümesi** kaynak XML belgesi yalnızca bir kısmını eşleşen bir simge durumuna küçültülmüş şema ile. Örneklerde bir **XmlDataDocument** kaynak XML belge kalitesini korumak için etkinleştirme **veri kümesi** bir alt XML belgesi oluşturmak için kullanılacak.  

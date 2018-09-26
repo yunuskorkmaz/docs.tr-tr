@@ -9,28 +9,27 @@ helpviewer_keywords:
 - federation
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 364d4e6b1009993c11a7f23edcd262de4ad435c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd2c4f32978107a82ce940e0ef984c70f461b2c3
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493884"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47172199"
 ---
 # <a name="how-to-create-a-security-token-service"></a>Nasıl yapılır: Güvenlik Belirteci Hizmeti Oluşturma
-Bir güvenlik belirteci hizmeti WS-Trust belirtimine tanımlanan protokolünü uygular. Bu protokol, ileti biçimleri ve verme, yenileme, iptal etme ve doğrulama güvenlik belirteçleri için ileti exchange desenleri tanımlar. Verilen güvenlik belirteci hizmeti bir veya daha fazla bu yetenekleri sağlar. Bu konuda en yaygın bir senaryo arar: belirteci verme uygulama.  
+Güvenlik belirteci hizmeti WS-Trust belirtiminde tanımlanan Protokolü uygular. Bu protokol, ileti biçimleri ve ileti verme, yenileme, iptal etme ve doğrulama güvenlik belirteçleri için exchange desenleri tanımlar. Belirli bir güvenlik belirteci hizmeti bir veya daha fazla bu yetenekleri sağlar. Bu konuda en sık karşılaşılan bir senaryodur arar: uygulama belirteci verme.  
   
 ## <a name="issuing-tokens"></a>Belirteç  
- WS-Trust tanımlayan temel ileti formatları `RequestSecurityToken` XML Şeması Tanım Dili (XSD) şema öğesi ve `RequestSecurityTokenResponse` belirteci verme gerçekleştirmek için XSD şema öğesi. Ayrıca, ilişkili eylem Tekdüzen Kaynak Tanımlayıcıları (URI'ler) tanımlar. URI ile ilişkili eylem `RequestSecurityToken` iletisi http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue. URI ile ilişkili eylem `RequestSecurityTokenResponse` iletisi http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue.  
+ WS-Trust tanımlar göre ileti formatları `RequestSecurityToken` XML Şeması Tanım Dili (XSD) şema öğesi ve `RequestSecurityTokenResponse` belirteç yayınında gerçekleştirmek için XSD şema öğesi. Ayrıca, ilişkili eylem Tekdüzen Kaynak Tanımlayıcıları (URI'lar) tanımlar. URI ile ilişkili eylem `RequestSecurityToken` ileti http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue. URI ile ilişkili eylem `RequestSecurityTokenResponse` ileti http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue.  
   
 ### <a name="request-message-structure"></a>İstek iletisi yapısı  
- Sorunu istek iletisi yapısı genellikle aşağıdaki öğelerden oluşur:  
+ Sorun istek iletisi yapısı genellikle şu öğelerden oluşur:  
   
--   Bir talep türü URI değerine sahip http://schemas.xmlsoap.org/ws/2005/02/trust/Issue.  
+-   Bir istek türü URI değeri olan http://schemas.xmlsoap.org/ws/2005/02/trust/Issue.  
   
--   Belirteç türü URI. Güvenlik onaylar biçimlendirme dili (SAML) 1.1 belirteçler için bu URI değeri http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1.  
+-   Belirteç türü URI. Güvenlik onaylama işaretleme dili (SAML) 1.1 belirteçler için bu URI değeri http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1.  
   
--   Verilen belirteciyle ilişkilendirilmesi anahtarındaki bit sayısını gösteren bir anahtar boyutu değeri.  
+-   Verilen belirteçle ilişkili olmasını anahtarında bit sayısını belirten bir anahtar boyutu değer.  
   
 -   Anahtar türü URI. Simetrik anahtarlar için bu URI değeri http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey.  
   
@@ -38,16 +37,16 @@ Bir güvenlik belirteci hizmeti WS-Trust belirtimine tanımlanan protokolünü u
   
 -   İstemci tarafından sağlanan anahtar malzemesi.  
   
--   Verilen belirteç kullanılacak hedef hizmete gösterir kapsam bilgileri.  
+-   Verilen belirteç kullanılacak hedef hizmeti gösteren kapsam bilgileri.  
   
- Sorun yanıt iletisi yapılandırdığında güvenlik belirteci hizmeti sorunu istek iletisinde bilgileri kullanır.  
+ Güvenlik belirteci hizmeti bilgileri sorunu istek iletisinde kullanır sorunu yanıt iletisi oluşturur.  
   
 ## <a name="response-message-structure"></a>Yanıt iletisi yapısı  
- Sorun yanıt iletisi yapısı genellikle aşağıdaki öğelerden oluşur;  
+ Sorunu yanıt iletisi yapısı genellikle şu öğelerden oluşur;  
   
--   Verilen güvenlik belirteci, örneğin, bir SAML 1.1 onaylama işlemi.  
+-   Verilen güvenlik belirteci, örneğin, bir SAML 1.1 onayı.  
   
--   Güvenlik belirteci ile ilişkili düzeltme belirteci. Simetrik anahtarlar için bu genellikle bir şifrelenmiş anahtar malzemesi biçimidir.  
+-   Güvenlik belirteciyle ilişkili düzeltme belirteci. Simetrik anahtarlar için bu genellikle bir şifrelenmiş anahtar malzemesi biçimidir.  
   
 -   Verilen güvenlik belirteci başvurular. Genellikle, güvenlik belirteci hizmeti verilen belirteç, belirtecin sonraki iletilerinde mevcut olmadığında kullanılabilir istemci ve başka tarafından gönderilen bir sonraki ileti görüntülendiğinde, kullanılabilecek bir başvuru döndürür.  
   
@@ -55,67 +54,67 @@ Bir güvenlik belirteci hizmeti WS-Trust belirtimine tanımlanan protokolünü u
   
 -   Güvenlik belirteci hizmeti tarafından sağlanan anahtar malzemesi.  
   
--   Paylaşılan anahtar işlem için gereken algoritması.  
+-   Paylaşılan anahtar hesaplamak için gereken algoritma.  
   
--   Verilen belirteç ömrü bilgileri.  
+-   Verilen belirteç ömrü çalıştırın.  
   
 ## <a name="processing-request-messages"></a>İstek iletilerini işleme  
- Güvenlik belirteci hizmeti, istek iletisi çeşitli parçaları incelenerek ve istek karşılayan bir belirteç verebilir sağlayarak sorunu isteğini işler. Güvenlik belirteci hizmeti verilmesi için belirteci oluşturur önce aşağıdaki belirlemeniz gerekir:  
+ Güvenlik belirteci hizmeti, istek iletisinin çeşitli parçaları inceleme ve istek karşılayan bir belirteci verebilir sağlayarak sorunu isteği işler. Verilmesi için belirteci oluşturur önce güvenlik belirteci hizmeti aşağıdakileri belirlemelisiniz:  
   
--   Gerçekten verilmesi için bir belirteç isteği isteğidir.  
+-   İstek verilmesi için bir belirteç için gerçekten bir istektir.  
   
--   Güvenlik belirteci hizmeti istenen belirteç türü destekler.  
+-   Güvenlik belirteci hizmeti istenen belirteç türünü destekler.  
   
--   İstek sahibinin istekte yetkisine sahiptir.  
+-   İstek sahibinin istekte bulunma yetkisine sahiptir.  
   
--   Güvenlik belirteci hizmeti anahtar malzemesi göre sahibinin beklentilerine uygun.  
+-   Güvenlik belirteci hizmeti sahibinin beklentilerini anahtar malzemesi ile ilgili.  
   
- Bir belirteç oluşturmak, iki önemli parçaları, belirteç ile imzalamak için hangi anahtar ve paylaşılan anahtar ile şifrelemek için hangi anahtar tanımlamış olursunuz. Belirteç, böylece istemci hizmeti, belirleyebilir hedef hizmete belirtece gösterdiğinde belirtecin güvenilen bir güvenlik belirteci hizmeti tarafından verilmiş imzalanması gerekiyor. Hedef hizmet bu anahtar malzeme şifresini çözebilir şekilde şifrelenecek anahtar malzemesi gerekir.  
+ Bir belirteç oluşturmak, iki önemli parçaları, belirteç imzalamak için hangi anahtar ve paylaşılan anahtar ile şifreleme için hangi anahtarı tanımlamış olursunuz. Belirteç, böylece istemci, hizmeti belirleyebilirsiniz hedef hizmet için belirteç gösterdiğinde belirteç güvendiği bir güvenlik belirteci hizmeti tarafından verilmiş imzalanması gerekir. Anahtar malzemesi hedef hizmeti, anahtar malzemesi şifresini çözebilir yolla şifrelenmiş gerekir.  
   
- SAML onayı imzalama içerir oluşturma bir <xref:System.IdentityModel.Tokens.SigningCredentials> örneği. Bu sınıf oluşturucusu aşağıdakileri yapar:  
+ SAML onaylama işlemi imzalama oluşturmanız gerekir bir <xref:System.IdentityModel.Tokens.SigningCredentials> örneği. Bu sınıf için oluşturucu aşağıdakileri yapar:  
   
--   A <xref:System.IdentityModel.Tokens.SecurityKey> SAML onayı imzalamak için kullanılacak anahtar.  
+-   A <xref:System.IdentityModel.Tokens.SecurityKey> SAML onaylaması imzalamak için kullanılacak anahtarı.  
   
--   Kullanmak için imza algoritması tanımlayan bir dize.  
+-   Kullanılacak imza algoritmasını tanımlayan bir dize.  
   
--   Kullanmak için Özet algoritması tanımlayan bir dize.  
+-   Kullanmak için bir Özet algoritması tanımlayan bir dize.  
   
--   İsteğe bağlı olarak, bir <xref:System.IdentityModel.Tokens.SecurityKeyIdentifier> onaylama imzalamak için kullanılan anahtarı tanımlar.  
+-   İsteğe bağlı olarak, bir <xref:System.IdentityModel.Tokens.SecurityKeyIdentifier> onaylama imzalamak için kullanılacak anahtarı tanımlar.  
   
  [!code-csharp[c_CreateSTS#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#1)]
  [!code-vb[c_CreateSTS#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#1)]  
   
- Paylaşılan anahtar şifreleme anahtar malzemesi alma ve hedef hizmete paylaşılan anahtarın şifresini çözmek için kullanabileceğiniz bir anahtarla şifreleme içerir. Genellikle, hedef hizmeti ortak anahtarını kullanılır.  
+ Paylaşılan anahtar şifreleme anahtar malzemesi çıkarır ve hedef hizmet paylaşılan anahtarın şifresini çözmek için kullanabileceğiniz bir anahtarla şifreleme içerir. Genellikle hedef hizmetin ortak anahtarı kullanılır.  
   
  [!code-csharp[c_CreateSTS#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#2)]
  [!code-vb[c_CreateSTS#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#2)]  
   
- Ayrıca, bir <xref:System.IdentityModel.Tokens.SecurityKeyIdentifier> için şifrelenmiş anahtar gereklidir.  
+ Ayrıca, bir <xref:System.IdentityModel.Tokens.SecurityKeyIdentifier> için şifrelenmiş anahtarı gereklidir.  
   
  [!code-csharp[c_CreateSTS#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#3)]
  [!code-vb[c_CreateSTS#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#3)]  
   
- Bu <xref:System.IdentityModel.Tokens.SecurityKeyIdentifier> sonra oluşturmak için kullanılan bir `SamlSubject` parçası olarak `SamlToken`.  
+ Bu <xref:System.IdentityModel.Tokens.SecurityKeyIdentifier> ardından oluşturmak için kullanılan bir `SamlSubject` parçası olarak `SamlToken`.  
   
  [!code-csharp[c_CreateSTS#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#4)]
  [!code-vb[c_CreateSTS#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#4)]  
   
- Daha fazla bilgi için bkz: [Federasyon örnek](../../../../docs/framework/wcf/samples/federation-sample.md).  
+ Daha fazla bilgi için [Federasyon örneği](../../../../docs/framework/wcf/samples/federation-sample.md).  
   
 ## <a name="creating-response-messages"></a>Yanıt iletilerini oluşturma  
- Güvenlik belirteci hizmeti sorunu isteği işler ve kanıt anahtarı ile birlikte verilen belirteç oluşturur sonra yanıt iletisi oluşturulması için en az istenen belirteci, düzeltme belirteci ve verilen belirteç başvuruları dahil olmak üzere gerekir. Verilen belirteç genellikle olan bir <xref:System.IdentityModel.Tokens.SamlSecurityToken> oluşturulan <xref:System.IdentityModel.Tokens.SamlAssertion>, aşağıdaki örnekte gösterildiği gibi.  
+ Güvenlik belirteci hizmeti sorunu isteği işler ve düzeltme anahtarıyla birlikte verilmesi için belirteci oluşturur sonra yanıt iletisi oluşturulması, en az istenen belirteci, düzeltme belirteci ve verilen belirteç başvuruları dahil olmak üzere gerekir. Verilen belirteç genellikle bir <xref:System.IdentityModel.Tokens.SamlSecurityToken> oluşturulan <xref:System.IdentityModel.Tokens.SamlAssertion>, aşağıdaki örnekte gösterildiği gibi.  
   
  [!code-csharp[c_CreateSTS#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#5)]
  [!code-vb[c_CreateSTS#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#5)]  
   
- Nereye güvenlik belirteci hizmeti sağlayan paylaşılan anahtar malzemesi durumda düzeltme belirteci oluşturarak oluşturulan bir <xref:System.ServiceModel.Security.Tokens.BinarySecretSecurityToken>.  
+ Burada güvenlik belirteci hizmeti sağlayan bir paylaşılan anahtar malzemesi durumda düzeltme belirteci oluşturarak oluşturulan bir <xref:System.ServiceModel.Security.Tokens.BinarySecretSecurityToken>.  
   
  [!code-csharp[c_CreateSTS#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#6)]
  [!code-vb[c_CreateSTS#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#6)]  
   
- İstemci hem de güvenlik belirteci hizmeti paylaşılan anahtar için anahtar malzemesi sağladığınızda düzeltme belirteci oluşturma hakkında daha fazla bilgi için bkz: [Federasyon örnek](../../../../docs/framework/wcf/samples/federation-sample.md).  
+ Paylaşılan anahtar için anahtar malzemesi istemci hem de güvenlik belirteci hizmeti sağladığınızda, düzeltme belirteci oluşturmak nasıl hakkında daha fazla bilgi için bkz. [Federasyon örneği](../../../../docs/framework/wcf/samples/federation-sample.md).  
   
- Verilen belirteç başvuruları örneklerini oluşturma tarafından oluşturulan <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause> sınıfı.  
+ Verilen belirteç başvuruları örneklerini oluşturarak oluşturulur <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause> sınıfı.  
   
  [!code-csharp[c_CreateSTS#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#7)]
  [!code-vb[c_CreateSTS#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#7)]  
@@ -123,7 +122,7 @@ Bir güvenlik belirteci hizmeti WS-Trust belirtimine tanımlanan protokolünü u
  Bu çeşitli değerleri, ardından istemciye döndürülen yanıt iletisine serileştirilir.  
   
 ## <a name="example"></a>Örnek  
- Bir güvenlik belirteci hizmeti için tam kodu için bkz: [Federasyon örnek](../../../../docs/framework/wcf/samples/federation-sample.md).  
+ Güvenlik belirteci hizmeti için tam kod için bkz: [Federasyon örneği](../../../../docs/framework/wcf/samples/federation-sample.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.IdentityModel.Tokens.SigningCredentials>  

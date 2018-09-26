@@ -4,12 +4,12 @@ description: ML.NET ikili sınıflandırma senaryoda yaklaşım tahmin uygun eyl
 ms.date: 06/04/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: dec44bf114472e19fdac131e0af6c13854957fe3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 7d2935fafe9dbad28205c8a896d97d80474a686f
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864780"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47113825"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Öğretici: Kullanımı bir yaklaşım analizi ikili sınıflandırma senaryosunda ML.NET
 
@@ -55,7 +55,7 @@ Bu öğreticide, bir makine öğrenimi düzenli bir şekilde taşımak işlem sa
 
 ### <a name="understand-the-problem"></a>Sorunu anlama
 
-Öncelikle, oluşturmak ve modeli eğitmek destekleyebileceği bölümleri aşağı kesmek için sorunu anlamak gerekir. Tahmin edin ve sonuçları değerlendirin problemi kesiliyor.
+Öncelikle, oluşturmak ve modeli eğitmek destekleyebileceği bölümleri aşağı kesmek için sorunu anlamak gerekir. Sorun bozucu, tahmin edin ve sonuçları değerlendirin olanak tanır.
 
 Sorun Bu öğretici için uygun eylemi gerçekleştirin gelen Web sitesi açıklama yaklaşım öğrenmektir.
 

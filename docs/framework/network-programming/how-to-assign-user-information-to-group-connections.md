@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Grup bağlantılar için kullanıcı bilgilerini atayın'
+title: 'Nasıl yapılır: bağlantıları gruplandırmak için kullanıcı bilgileri atama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,22 +7,21 @@ dev_langs:
 ms.assetid: 7ce550d6-8f7c-4ea7-add8-5bc27a7b51be
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 51e000019999056fd707c1fbf4fa1a9b0a8e7bc9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 009c23d0015f366ab5f1ee92609f0131465d827b
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395151"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47080688"
 ---
-# <a name="how-to-assign-user-information-to-group-connections"></a>Nasıl yapılır: Grup bağlantılar için kullanıcı bilgilerini atayın
+# <a name="how-to-assign-user-information-to-group-connections"></a>Nasıl yapılır: bağlantıları gruplandırmak için kullanıcı bilgileri atama
 
   
- Aşağıdaki örnek, uygulama değişkenlerini ayarlar varsayılarak grup bağlantıları için kullanıcı bilgilerini atamak gösterilmiştir *kullanıcıadı*, *SecurelyStoredPassword*, ve  *Etki alanı* kodu'nun bu bölümünde çağrılmadan önce ve *kullanıcıadı* benzersizdir.  
+ Aşağıdaki örnek, uygulama değişkenleri ayarlayan varsayılarak grup bağlantıları için kullanıcı bilgilerini atamak gösterilmiştir *kullanıcıadı*, *SecurelyStoredPassword*, ve  *Etki alanı* kodun bu bölümünü çağrılmadan önce ve *kullanıcıadı* benzersizdir.  
   
-### <a name="to-assign-user-information-to-a-group-connection"></a>Grup bağlantı kullanıcı bilgilerini atamak için  
+### <a name="to-assign-user-information-to-a-group-connection"></a>Bir grubu bağlantısı için kullanıcı bilgilerini atamak için  
   
-1.  Bir bağlantı adı oluşturun.  
+1.  Bir bağlantı grup adı oluşturun.  
   
     ```csharp  
     SHA1Managed Sha1 = new SHA1Managed();  
@@ -36,7 +35,7 @@ ms.locfileid: "33395151"
     Dim secureGroupName As [String] = Encoding.Default.GetString(updHash)  
     ```  
   
-2.  Belirli bir URL için bir istek oluşturun. Örneğin, aşağıdaki kod bir istek için URL oluşturur `http://www.contoso.com.`  
+2.  Belirli bir URL için bir istek oluşturun. Örneğin, aşağıdaki kod bir istek URL'sini oluşturur `http://www.contoso.com.`  
   
     ```csharp  
     WebRequest myWebRequest=WebRequest.Create("http://www.contoso.com");  
@@ -46,7 +45,7 @@ ms.locfileid: "33395151"
     Dim myWebRequest As WebRequest = WebRequest.Create("http://www.contoso.com")  
     ```  
   
-3.  Web isteği ve arama için kimlik bilgileri ve bağlantı GroupName Ayarla **GetResponse** almak için bir **WebResponse** nesnesi.  
+3.  Web isteği ve çağrısı için kimlik bilgileri ve bağlantı GroupName ayarlayın **GetResponse yanıtına** almak için bir **WebResponse** nesne.  
   
     ```csharp  
     myWebRequest.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword, Domain);   
@@ -62,7 +61,7 @@ ms.locfileid: "33395151"
     Dim myWebResponse As WebResponse = myWebRequest.GetResponse()  
     ```  
   
-4.  Yanıt akışı WebRespose nesne kullanıldıktan sonra kapatın.  
+4.  Yanıt akışına WebRespose nesne kullandıktan sonra kapatın.  
   
     ```csharp  
     MyWebResponse.Close();  

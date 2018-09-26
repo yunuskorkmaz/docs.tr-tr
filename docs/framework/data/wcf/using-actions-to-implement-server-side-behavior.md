@@ -3,11 +3,11 @@ title: Sunucu tarafı davranışı uygulamak için eylemleri kullanma
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
 ms.openlocfilehash: 515553540053ed0c16085fde06e2cc2d2dedda1e
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46697782"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47171900"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>Sunucu tarafı davranışı uygulamak için eylemleri kullanma
 

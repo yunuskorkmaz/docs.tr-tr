@@ -1,5 +1,5 @@
 ---
-title: Zaman uyumsuz Server yuva kullanma
+title: Zaman uyumsuz sunucu yuvası kullanma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: 813489a9-3efd-41b6-a33f-371d55397676
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: ad52291f5f5f40a65d2f9ec1c07bfb3a3f39fc01
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f89bf9e3ea9f2b3c385d267cfc77a05ee8eb82d6
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396613"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47082441"
 ---
-# <a name="using-an-asynchronous-server-socket"></a>Zaman uyumsuz Server yuva kullanma
-Zaman uyumsuz server yuva ağ hizmet isteklerini işlemek için .NET Framework zaman uyumsuz programlama modeli kullanın. <xref:System.Net.Sockets.Socket> Sınıfı izleyen standart .NET Framework zaman uyumsuz adlandırma deseni; Örneğin, zaman uyumlu <xref:System.Net.Sockets.Socket.Accept%2A> yöntemi karşılık gelen için zaman uyumsuz <xref:System.Net.Sockets.Socket.BeginAccept%2A> ve <xref:System.Net.Sockets.Socket.EndAccept%2A> yöntemleri.  
+# <a name="using-an-asynchronous-server-socket"></a>Zaman uyumsuz sunucu yuvası kullanma
+Zaman uyumsuz sunucu yuvası ağ hizmeti isteklerini işlemek için .NET Framework zaman uyumsuz programlama modeli kullanımı. <xref:System.Net.Sockets.Socket> Sınıfı aşağıdaki standart .NET Framework zaman uyumsuz adlandırma deseni; Örneğin, zaman uyumlu <xref:System.Net.Sockets.Socket.Accept%2A> yöntemi karşılık gelen için zaman uyumsuz <xref:System.Net.Sockets.Socket.BeginAccept%2A> ve <xref:System.Net.Sockets.Socket.EndAccept%2A> yöntemleri.  
   
- Zaman uyumsuz server yuva veri alma sona erdirmek için ağ, bağlantı isteklerini işler ve ağ üzerinden veri almaya başlamak için bir geri çağırma yöntemini ve bir geri çağırma yöntemi gelen bağlantı istekleri kabul başlamak için bir yöntem gerektirir. Tüm bu yöntemleri ele alınan bu bölümün sonraki kısımlarında.  
+ Zaman uyumsuz sunucu yuvası veri alma sonlandırmak için ağ bağlantı isteklerini işlemek ve ağdan veri almaya başlamak için bir geri çağırma yöntemini ve bir geri çağırma yöntemi gelen bağlantı istekleri kabul başlamak için bir yöntem gerektirir. Tüm bu yöntemleri ele alınmıştır Bu bölümde daha fazla.  
   
- Yöntemi ağ gelen bağlantı istekleri kabul başlamak için aşağıdaki örnekte, `StartListening` başlatır **yuva** ve ardından **BeginAccept** yeni kabul başlatmak için yöntemi bağlantılar. Yeni bir bağlantı isteği yuvada alındığında kabul geri çağırma yöntemi çağrılır. Dağıtımından sorumlu **yuva** bağlantı ve, teslim etme işleyecek örneği **yuva** isteği işleyen iş parçacığına kapalı. Accept geri çağırma yöntemini uygulayan <xref:System.AsyncCallback> temsilci; tek bir parametre türü alır ve bir geçersiz kılma döndürür <xref:System.IAsyncResult>. Aşağıdaki örnek bir accept geri çağırma yöntemini Kabuk aynıdır.  
+ Yöntem ağ üzerinden bağlantı isteklerini kabul eden başlamak için aşağıdaki örnekte `StartListening` başlatır **yuva** ve ardından **BeginAccept** yeni kabul başlatmak için yöntemi bağlantılar. Kabul et geri çağırma yöntemi, yuva yeni bir bağlantı isteği alındığında çağrılır. Dağıtımından sorumlu **yuva** bağlantı ve, teslim etme işleyecek örneği **yuva** isteği işleyen iş parçacığına kapalı. Kabul et geri çağırma yöntemini uygulayan <xref:System.AsyncCallback> temsilci; void döndürür ve türünde tek bir parametre alan <xref:System.IAsyncResult>. Aşağıdaki örnek, bir accept geri çağırma yöntemini kabuktur.  
   
 ```vb  
 Sub acceptCallback(ar As IAsyncResult)  
@@ -46,7 +45,7 @@ void acceptCallback( IAsyncResult ar) {
 }  
 ```  
   
- **BeginAccept** yöntemi iki parametre alan bir **AsyncCallback** accept geri çağırma yöntemini ve durum bilgilerini geri çağırma yöntemi iletmek için kullanılan nesneyi işaret eden temsilci. Aşağıdaki örnekte dinleme **yuva** geri çağırma yöntemine geçirilen *durumu* parametresi. Bu örnekte bir **AsyncCallback** temsilci ve ağ gelen bağlantıları kabul başlatır.  
+ **BeginAccept** yöntemi, iki parametre alan bir **AsyncCallback** accept geri çağırma yöntemini ve durum bilgilerini geri çağırma yöntemine geçirmek için kullanılan nesneyi işaret eden bir temsilci. Aşağıdaki örnekte dinleme **yuva** geri çağırma yöntemine geçirilen *durumu* parametresi. Bu örnekte bir **AsyncCallback** temsilci ve ağ üzerinden bağlantı kabul başlatır.  
   
 ```vb  
 listener.BeginAccept( _  
@@ -60,9 +59,9 @@ listener.BeginAccept(
     listener);  
 ```  
   
- Zaman uyumsuz yuva iş parçacıkları sistem iş parçacığı havuzundan gelen bağlantıları işlemek için kullanın. Bir iş parçacığı bağlantıları kabul etmek için sorumlu olduğu, başka bir iş parçacığı her gelen bağlantı işlemek için kullanılır ve başka bir iş parçacığı bağlantısından veri almak için sorumludur. Bu iş parçacığı havuzu tarafından atanan iş parçacığı bağlı olarak, aynı iş parçacığı olabilir. Aşağıdaki örnekte, <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> sınıf ana iş parçacığı yürütmesi askıya alır ve yürütme devam ederken işaret eder.  
+ Zaman uyumsuz yuva gelen bağlantıları işlemek için sistem iş parçacığı havuzu iş parçacıkları kullanın. Bir iş parçacığı bağlantıları kabul etmek için sorumlu, başka bir iş parçacığı her bir gelen bağlantı işlemek için kullanılır ve başka bir iş parçacığı, veri bağlantısı almak için sorumludur. Bunlar iş parçacığı havuzu tarafından atanmış iş parçacığı bağlı olarak aynı iş parçacığı olabilir. Aşağıdaki örnekte, <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> sınıf ana iş parçacığının yürütülmesini askıya alır ve yürütme devam edebilirsiniz, bildirir.  
   
- Aşağıdaki örnekte, yerel bilgisayarda bir zaman uyumsuz TCP/IP'yi yuva oluşturur ve bağlantıları kabul başlar zaman uyumsuz bir yöntem gösterilmektedir. Bunu olduğunu genel varsaydığını **ManualResetEvent** adlı `allDone`, yöntem adlı bir sınıf üyesi olduğunu `SocketListener`, ve bir geri çağırma yöntemi adlı `acceptCallback` tanımlanır.  
+ Aşağıdaki örnek, yerel bilgisayarda uyumsuz bir TCP/IP yuva oluşturur ve bağlantıları kabul başlar zaman uyumsuz bir yöntemi gösterir. Olduğunu genel varsayar **ManualResetEvent** adlı `allDone`, yöntem adlı bir sınıf üyesi olduğunu `SocketListener`, ve bir geri çağırma yöntemi adlı `acceptCallback` tanımlanır.  
   
 ```vb  
 Public Sub StartListening()  
@@ -127,7 +126,7 @@ public void StartListening() {
 }  
 ```  
   
- Kabul et geri çağırma yöntemi (`acceptCallback` önceki örnekte) işleme, istemci ile bağlantı kurma ve zaman uyumsuz başlatılıyor devam etmek için ana uygulama iş parçacığı sinyal verilerin istemciden okumak için sorumludur. Aşağıdaki örnek uygulaması ilk parçası olan `acceptCallback` yöntemi. Bu bölümde yönteminin işleme devam etmek için ana uygulama iş parçacığı bildirir ve istemci bağlantı kurar. Bir genel varsayar **ManualResetEvent** adlı `allDone`.  
+ Kabul et geri çağırma yöntemi (`acceptCallback` önceki örnekte) istemciden okunan veri işleme, istemci ile bağlantı kurma ve zaman uyumsuz başlatılıyor devam etmek için ana uygulama iş parçacığı sinyal için sorumludur. Aşağıdaki örnek uygulaması ilk parçasıdır `acceptCallback` yöntemi. Bu bölümde yönteminin ana uygulama iş parçacığının işlemeye devam eder ve istemci bağlantı kurar. Genel bir varsayar **ManualResetEvent** adlı `allDone`.  
   
 ```vb  
 Public Sub acceptCallback(ar As IAsyncResult)  
@@ -151,7 +150,7 @@ public void acceptCallback(IAsyncResult ar) {
 }  
 ```  
   
- Bir istemci yuvadan veri okunurken değerleri arasında zaman uyumsuz çağrılar geçiren bir durum nesnesi gerektirir. Aşağıdaki örnek uzak istemci tarafından bir dizesini almak için bir durum nesnesi uygular. Alan veri almak için bir veri arabelleğini istemci yuva için içeriyor ve bir <xref:System.Text.StringBuilder> istemci tarafından gönderilen veri dizesi oluşturmak için. Bu alanların durumu nesnesinde yerleştirme istemci yuvadan verileri okumak için birden fazla çağrı arasında korunması değerlerine izin verir.  
+ Bir istemci yuvadan verileri okuma değerleri arasında zaman uyumsuz çağrıları geçiren bir durum nesnesi gerektirir. Aşağıdaki örnek, bir dize uzak istemciden almak için bir durum nesnesi uygular. İstemci yuvası, verileri almak için bir veri arabelleği için alanları içerir ve bir <xref:System.Text.StringBuilder> istemci tarafından gönderilen veri dizesi oluşturmak için. Bu alanlar durumu nesnesinde yerleştirme istemci yuvadan verileri okumak için birden çok çağrı arasında saklanması değerleri verir.  
   
 ```vb  
 Public Class StateObject  
@@ -171,9 +170,9 @@ public class StateObject {
 }  
 ```  
   
- Bölümünü `acceptCallback` istemci yuvadan veri alma başlatır yöntemi ilk örneği başlatır `StateObject` sınıfı ve çağrıları <xref:System.Net.Sockets.Socket.BeginReceive%2A> verileri zaman uyumsuz olarak istemci yuvadan okumaya başlamak için yöntem.  
+ Bölümünü `acceptCallback` istemci yuvadan veri almaya başlar yöntemi ilk kez bir örneğini başlatır `StateObject` sınıfı ve çağrıları <xref:System.Net.Sockets.Socket.BeginReceive%2A> verileri zaman uyumsuz olarak istemci yuvadan okumaya başlamak için yöntemi.  
   
- Aşağıdaki örnek eksiksiz gösterir `acceptCallback` yöntemi. Bunu olduğunu genel varsaydığını **ManualResetEvent** adlı `allDone,` , `StateObject` sınıfı tanımlanır ve `readCallback` yöntemi adlı bir sınıf içinde tanımlanan `SocketListener`.  
+ Aşağıdaki örnek, tam gösterir `acceptCallback` yöntemi. Olduğunu genel varsayar **ManualResetEvent** adlı `allDone,` , `StateObject` sınıfı tanımlanır ve `readCallback` yöntemi adlı bir sınıfta tanımlanan `SocketListener`.  
   
 ```vb  
 Public Shared Sub acceptCallback(ar As IAsyncResult)  
@@ -209,9 +208,9 @@ public static void acceptCallback(IAsyncResult ar) {
 }  
 ```  
   
- Zaman uyumsuz yuvası sunucusu için uygulanması gereken son yöntemi istemci tarafından gönderilen verileri döndüren okuma geri çağırma yöntemidir. Kabul et geri çağırma yöntemi gibi okuma geri çağırma yöntemi olan bir **AsyncCallback** temsilci. Bu yöntem, bir veya daha fazla bayt veri arabelleğe istemci yuvadan okur ve daha sonra çağırır **BeginReceive** yeniden istemci tarafından gönderilen verileri kadar yöntemi tamamlanmıştır. İletinin tamamını istemciden okunan sonra dize konsolda görüntülenir ve istemci bağlantısı işleme server yuva kapalı.  
+ Zaman uyumsuz yuvası sunucusu için uygulanması gereken son yöntemi istemci tarafından gönderilen verileri döndüren okuma geri çağırma yöntemidir. Kabul et geri çağırma yöntemine benzer okuma geri çağırma yöntemi olan bir **AsyncCallback** temsilci. Bu yöntem, bir veya daha fazla bayt veri arabelleğe istemci yuvadan okur ve ardından çağırır **BeginReceive** yeniden istemci tarafından gönderilen verilerin kadar yöntemi tamamlandığında. Tüm ileti istemciden okunan sonra dize konsolda görüntülenir ve istemci bağlantısı işleme sunucu yuvası kapatılır.  
   
- Aşağıdaki örnek uygulayan `readCallback` yöntemi. Varsayılmaktadır `StateObject` sınıfı tanımlanır.  
+ Aşağıdaki örnek uygular `readCallback` yöntemi. Olduğunu varsayar `StateObject` sınıfı tanımlanır.  
   
 ```vb  
 Public Shared Sub readCallback(ar As IAsyncResult)  

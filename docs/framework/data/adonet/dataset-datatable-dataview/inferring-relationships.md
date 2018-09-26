@@ -3,11 +3,11 @@ title: İlişkilerin çıkarımını yapma
 ms.date: 03/30/2017
 ms.assetid: 8fa86a9d-6545-4a9d-b1f5-58d9742179c7
 ms.openlocfilehash: 7dc3fb0c6098d636e640aaf52b72a404c1486492
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46698223"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47080045"
 ---
 # <a name="inferring-relationships"></a>İlişkilerin çıkarımını yapma
 Tablo olarak ortaya çıkan bir öğe ayrıca bir tablo olarak ortaya çıkan bir alt öğe varsa bir <xref:System.Data.DataRelation> iki tablo arasında oluşturulur. Yeni bir sütun adıyla **ParentTableName_Id** üst öğe için oluşturulan tabloyu hem alt öğe için oluşturulan tabloyu eklenir. **Columnmapping'in** bu kimlik sütununun özellik ayarlanacak **MappingType.Hidden**. Sütun üst tablo için otomatik artırma birincil anahtarı olacaktır ve kullanılacak **DataRelation** iki tablo arasında. Eklenen kimlik sütununun veri türünün **System.Int32**, veri türü diğer tüm çıkarsanan sütun olduğu **System.String**. A <xref:System.Data.ForeignKeyConstraint> ile **DeleteRule** = **Cascade** ayrıca yeni bir sütun üst ve alt tablolarında kullanılarak oluşturulur.  

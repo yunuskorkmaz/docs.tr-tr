@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 1bffb72e7c68d10e2c0edd5ec3cb9bcff10cbc0a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9f8176ca3ee2340100978aef044140dafdeb179b
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743059"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47082376"
 ---
 # <a name="ltnameentrygt-element"></a>&lt;nameEntry&gt; öğesi
-Çok sayıda kolay adlar sağlamak bir sınıf sağlar ve kolay algoritma adı için bir sınıf adı eşler.  
+Çok sayıda kolay adlara sahip bir sınıf sağlar ve kolay algoritma adı için bir sınıf adı eşler.  
   
  \<Yapılandırma >  
 \<mscorlib >  
@@ -40,8 +39,8 @@ ms.locfileid: "32743059"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|**Adı**|Gerekli öznitelik.<br /><br /> Şifreleme sınıfı uygulayan algoritması kolay adı belirtir.|  
-|**class**|Gerekli öznitelik.<br /><br /> Değerini belirtir **adı** özniteliğini [ \<cryptoClass >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) öğesi.|  
+|**Adı**|Gerekli öznitelik.<br /><br /> Şifreleme sınıfına uygulayan algoritma kolay adı belirtir.|  
+|**class**|Gerekli öznitelik.<br /><br /> Değeri belirtir **adı** özniteliğini [ \<cryptoClass >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) öğesi.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -51,13 +50,13 @@ ms.locfileid: "32743059"
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
-|`system.web`|ASP.NET yapılandırma bölümü için kök öğesi belirtir.|  
+|`system.web`|ASP.NET yapılandırma bölümü için olan kök öğesini belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- **Adı** özniteliği bulunan soyut sınıflar birinin adını olabilir <xref:System.Security.Cryptography> ad alanı. Çağırdığınızda **oluşturma** yöntemi bir soyut şifreleme sınıf üzerinde soyut sınıf adı için geçirilir <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A> yöntemi. **CreateFromName** tarafından gösterilen türünün bir örneği döndürür **sınıfı** özniteliği. Varsa **adı** özniteliktir kısa bir ad RSA gibi bu adı çağrılırken kullanabilirsiniz **CreateFromName** yöntemi.  
+ **Adı** özniteliği bulunan soyut sınıflar birinin adı olabilir <xref:System.Security.Cryptography> ad alanı. Çağırdığınızda **Oluştur** bir soyut bir şifreleme sınıfına yönteminde, soyut sınıf adı için geçirilir <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A> yöntemi. **CreateFromName** tarafından belirtilen türün bir örneğini döndürür **sınıfı** özniteliği. Varsa **adı** kısa bir ad özniteliği olan RSA gibi bu adı çağırırken kullanabilirsiniz **CreateFromName** yöntemi.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte nasıl kullanılacağını gösterir  **\<nameEntry >** öğesi bir şifreleme sınıf başvurusu ve çalışma zamanı yapılandırmak için. Ardından "RSA" dizesi geçirebilirsiniz <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> yöntemi ve kullanım <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> döndürülecek yöntemi bir `MyCryptoRSAClass` nesnesi.  
+ Aşağıdaki örnek nasıl kullanılacağını gösterir  **\<nameEntry >** bir şifreleme sınıfına başvurmak için ve çalışma zamanı yapılandırma öğesi. Ardından "RSA" dize iletebileceğiniz <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> yöntemini <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> döndürülecek yöntemi bir `MyCryptoRSAClass` nesne.  
   
 ```xml  
 <configuration>  

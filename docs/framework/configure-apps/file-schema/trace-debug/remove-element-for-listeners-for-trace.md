@@ -9,16 +9,15 @@ helpviewer_keywords:
 ms.assetid: 9a5cd1b5-be1a-485f-8f0c-2890ad3ef3e0
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 11f4b648ac1ffc614f18a3686eb2b6508a272980
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 54fd529c571c8e8cf43c5dabe2398ae4a6cf4f11
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746559"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47088964"
 ---
 # <a name="ltremovegt-element-for-ltlistenersgt-for-lttracegt"></a>&lt;kaldırma&gt; öğesi için &lt;dinleyicileri&gt; için &lt;izleme&gt;
-Gelen bir dinleyici kaldırır **dinleyicileri** koleksiyonu.  
+Bir dinleyicisinden kaldırır **dinleyicileri** koleksiyonu.  
   
  \<Yapılandırma >  
 \<System.Diagnostics >  
@@ -39,7 +38,7 @@ Gelen bir dinleyici kaldırır **dinleyicileri** koleksiyonu.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|**Adı**|Gerekli öznitelik.<br /><br /> Kaldırmak için dinleyicisinin adını **dinleyicileri** koleksiyonu.|  
+|**Adı**|Gerekli öznitelik.<br /><br /> Dinleyiciyi kaldırmak için adını **dinleyicileri** koleksiyonu.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -49,17 +48,17 @@ Gelen bir dinleyici kaldırır **dinleyicileri** koleksiyonu.
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
-|`listeners`|Toplar, depolar, bir dinleyici belirtir ve iletileri yönlendirir. Dinleyicileri uygun hedef İzleme çıkışı yönlendirir.|  
-|`system.diagnostics`|Toplamak, depolamak ve iletileri ve izleme anahtarı ayarlandığı düzeyi rota izleme dinleyicilerini belirtir.|  
+|`listeners`|Toplar, depolar, bir dinleyici belirtir ve iletileri yönlendirir. Dinleyicileri bir uygun hedef izleme çıkışa doğrudan.|  
+|`system.diagnostics`|Toplamak, depolamak ve iletileri ve bir izleme anahtarı ayarlandığı düzeyi izleme dinleyicilerini belirtir.|  
 |`trace`|ASP.NET izleme hizmetini yapılandırır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!NOTE]
->  Kaldırma <xref:System.Diagnostics.DefaultTraceListener> gelen `Listeners` koleksiyonu davranışını değiştiren <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>, ve <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> yöntemleri. Çağıran bir `Assert` veya `Fail` yöntemi ileti kutusu görüntülenmez ancak bir ileti kutusu görüntüleme normalde sonuçları <xref:System.Diagnostics.DefaultTraceListener> bulunmayan `Listeners` koleksiyonu.  
+>  Kaldırma <xref:System.Diagnostics.DefaultTraceListener> gelen `Listeners` koleksiyon davranışını değiştiren <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>, ve <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> yöntemleri. Çağırma bir `Assert` veya `Fail` yöntemi ileti kutusu görüntülenmez ancak görüntülenen bir ileti kutusu normalde sonuçlanır <xref:System.Diagnostics.DefaultTraceListener> kullanımda olmayan `Listeners` koleksiyonu.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, varsayılan İzleme dinleyicisi izlemesinden kaldırmak gösterilmiştir **dinleyicileri** koleksiyonu.  
+ Aşağıdaki örnek, varsayılan izleme Dinleyicide izlemesinden kaldırmak gösterilmektedir **dinleyicileri** koleksiyonu.  
   
 ```xml  
 <configuration>  

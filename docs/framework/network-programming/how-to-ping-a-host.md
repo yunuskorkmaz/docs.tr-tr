@@ -1,21 +1,20 @@
 ---
-title: 'Nasıl yapılır: bir ana bilgisayara ping yapın'
+title: 'Nasıl yapılır: konağa ping yapma'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Ping
 ms.assetid: bbf20f5b-eca1-4661-af04-cb8837f9af05
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 62ab62520e42fcf3ecfb8bd7fd6b57485451e6e4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e066af175982b71fb42bf2eec75fe9d92f532e61
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394033"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47080701"
 ---
-# <a name="how-to-ping-a-host"></a>Nasıl yapılır: bir ana bilgisayara ping yapın
-Bu örnek, bir uzak ana bilgisayara ping işlemi gösterilmektedir.  
+# <a name="how-to-ping-a-host"></a>Nasıl yapılır: konağa ping yapma
+Bu örnek, uzak konağa ping yapma işlemi gösterilmektedir.  
   
 ## <a name="example"></a>Örnek  
   

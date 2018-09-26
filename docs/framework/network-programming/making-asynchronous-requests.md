@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 735d3fce-f80c-437f-b02c-5c47f5739674
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 0f5729f0a3d36a631b227c77de51f68b95e8df22
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 1770ba69be537ccbe1c5ec26150428a3618b21a9
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46576846"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47111069"
 ---
 # <a name="making-asynchronous-requests"></a>Zaman uyumsuz istekler yapma
 <xref:System.Net> Sınıfları, zaman uyumsuz Internet kaynaklarına erişim için .NET Framework'ün standart zaman uyumsuz programlama modeli kullanın. <xref:System.Net.WebRequest.BeginGetResponse%2A> Ve <xref:System.Net.WebRequest.EndGetResponse%2A> yöntemlerinin <xref:System.Net.WebRequest> başlangıç ve tüm zaman uyumsuz istekler için bir Internet kaynağına sınıfı.  

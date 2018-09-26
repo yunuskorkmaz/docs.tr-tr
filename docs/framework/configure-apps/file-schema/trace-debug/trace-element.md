@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7931c942-63c1-47c3-a045-9d9de3cacdbf
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 59d5083632630513d2afc1f8d78400310451e46f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 55a7eb431432b67b3252853d14bf93be304ee883
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746065"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47176353"
 ---
 # <a name="lttracegt-element"></a>&lt;İzleme&gt; öğesi
 Toplamak, depolamak ve izleme iletilerini yönlendirmek dinleyicileri içerir.  
@@ -42,22 +41,22 @@ Toplamak, depolamak ve izleme iletilerini yönlendirmek dinleyicileri içerir.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`autoflush`|İsteğe bağlı öznitelik.<br /><br /> İzleme dinleyicileri çıkış arabelleği sonra her yazma işlemi otomatik olarak temizleme olup olmadığını belirtir.|  
-|`indentsize`|İsteğe bağlı öznitelik.<br /><br /> Girinti alanları sayısını belirtir.|  
-|`useGlobalLock`|İsteğe bağlı öznitelik.<br /><br /> Genel kilit kullanılması gerekip gerekmediğini gösterir.|  
+|`autoflush`|İsteğe bağlı öznitelik.<br /><br /> İzleme dinleyicilerine çıkış arabelleği sonra her yazma işlemi otomatik olarak temizleme olup olmadığını belirtir.|  
+|`indentsize`|İsteğe bağlı öznitelik.<br /><br /> Girinti boşluk sayısını belirtir.|  
+|`useGlobalLock`|İsteğe bağlı öznitelik.<br /><br /> Genel kilit kullanılıp kullanılmayacağını belirtir.|  
   
 ## <a name="autoflush-attribute"></a>AutoFlush özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`false`|Otomatik olarak çıkış arabelleği temizleme değil. Bu varsayılandır.|  
-|`true`|Çıkış arabelleği otomatik olarak boşaltır.|  
+|`true`|Çıkış arabelleği otomatik olarak temizler.|  
   
 ## <a name="usegloballock-attribute"></a>useGlobalLock özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|`false`|Dinleyici iş parçacığı içinde korumalı ise genel kilit kullanmaz; Aksi takdirde, genel kilit kullanır.|  
+|`false`|Dinleyici iş parçacığı güvenli ise genel kilit kullanmaz; Aksi takdirde, genel kilit kullanır.|  
 |`true`|Dinleyici iş parçacığı güvenli olmasına bakılmaksızın genel kilit kullanır. Bu varsayılandır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
@@ -71,10 +70,10 @@ Toplamak, depolamak ve izleme iletilerini yönlendirmek dinleyicileri içerir.
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
-|`system.diagnostics`|Toplamak, depolamak ve iletileri ve izleme anahtarı ayarlandığı düzeyi rota izleme dinleyicilerini belirtir.|  
+|`system.diagnostics`|Toplamak, depolamak ve iletileri ve bir izleme anahtarı ayarlandığı düzeyi izleme dinleyicilerini belirtir.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte nasıl kullanılacağını gösterir `<trace>` dinleyicisi eklemek için öğesi `MyListener` için `Listeners` koleksiyonu. `MyListener` adlı bir dosya oluşturur `MyListener.log` ve çıkış dosyasına yazar. `useGlobalLock` Özniteliği `false`, İzleme dinleyicisi iş parçacığı içinde korumalı ise kullanılmayacak genel kilit neden olur. `autoflush` Özniteliği `true`, bağımsız olarak mı yoksa dosyaya yazmak İzleme dinleyicisi neden olan <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> yöntemi çağrılır. `indentsize` Özniteliği sıfır alanları girinti dinleyicisi neden olan 0 (sıfır) olarak ayarlanmış olduğunda <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> yöntemi çağrılır.  
+ Aşağıdaki örnek nasıl kullanılacağını gösterir `<trace>` dinleyici eklemek için öğe `MyListener` için `Listeners` koleksiyonu. `MyListener` adlı bir dosya oluşturur `MyListener.log` ve çıkış dosyasına yazar. `useGlobalLock` Özniteliği `false`, İzleme dinleyicisi iş parçacığı güvenli değilse kullanılamaz genel kilit neden olur. `autoflush` Özniteliği `true`, bağımsız olarak bir dosyaya yazmak İzleme dinleyicisi neden <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> yöntemi çağrılır. `indentsize` Özniteliği sıfır alanları girintilemek dinleyici neden 0 (sıfır) olarak ayarlanmış olduğunda <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> yöntemi çağrılır.  
   
 ```xml  
 <configuration>  

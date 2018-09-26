@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: 9d663c4b-07b4-4f6f-9b12-efbd3630354f
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 1e9548c6d43824ea5017b73a132eb49444ed6c77
-ms.sourcegitcommit: 736ec4d3e2c74895b47a0d36126657b95da383c9
+ms.openlocfilehash: c1783776b62532a2bd28067ca9bdb6ae4c80c717
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2018
-ms.locfileid: "37140196"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47070781"
 ---
 # <a name="ltdefaultproxygt-element-network-settings"></a>&lt;defaultProxy&gt; öğesi (ağ ayarları)
-Köprü Metni Aktarım Protokolü (HTTP) proxy sunucusu yapılandırır.  
+Köprü Metni Aktarım Protokolü (HTTP) proxy sunucusunu yapılandırır.  
   
  \<Yapılandırma >  
 \<system.net>  
@@ -42,35 +41,35 @@ Köprü Metni Aktarım Protokolü (HTTP) proxy sunucusu yapılandırır.
   
 ### <a name="attributes"></a>Öznitelikler  
   
-|**Öğesi**|**Açıklama**|  
+|**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
 |`enabled`|Bir web proxy kullanılıp kullanılmayacağını belirtir. Varsayılan değer `true` şeklindedir.|  
-|`useDefaultCredentials`|Bu ana bilgisayarın varsayılan kimlik bilgilerini web proxy sunucusuna erişmek için kullanılıp kullanılmayacağını belirtir. Varsayılan değer `false` şeklindedir.|  
+|`useDefaultCredentials`|Bu ana bilgisayarın varsayılan kimlik bilgileri web proxy sunucusuna erişmek için kullanılıp kullanılmayacağını belirtir. Varsayılan değer `false` şeklindedir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
-|**Öğesi**|**Açıklama**|  
+|**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[olarak ayarlanıyor](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Proxy kullanmayın adresleri açıklamak normal bir ifade kümesi sağlar.|  
-|[Modülü](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md)|Yeni bir proxy modülü uygulamaya ekler.|  
-|[Proxy](../../../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md)|Bir proxy sunucu tanımlar.|  
+|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Proxy kullanmayın adresleri açıklayan normal bir ifade kümesi sağlar.|  
+|[Modülü](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md)|Yeni proxy modülü uygulamayı ekler.|  
+|[Proxy](../../../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md)|Bir proxy sunucusu tanımlar.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
-|**Öğesi**|**Açıklama**|  
+|**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[System.NET](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|.NET Framework ağa nasıl bağlanacağını belirtin ayarları içerir.|  
+|[System.NET](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|.NET Framework ağa nasıl bağlandığını belirten ayarları içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- DefaultProxy öğesi boş ise, Internet Explorer proxy ayarları kullanılır. Bu davranış, .NET Framework 1.1 sürümünden farklıdır.  
+ DefaultProxy öğesi boş ise, Internet Explorer proxy ayarları kullanılacaktır. Bu davranış, .NET Framework'ün 1.1 sürümünden farklıdır.  
   
- Bir özel durum [Modülü](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md) öğesi genel türü belirttiğinden, türü öğesinden türetilen değil <xref:System.Net.IWebProxy> sınıfı, bu nesnenin varsayılan oluşturucusundan özel durum oluştu ya da bir özel durum oluştu sırada Sistem tarafından belirlenen varsayılan proxy alınıyor. <xref:System.Exception.InnerException%2A> Özel durum özelliği hatasının kök nedeni hakkında daha fazla bilgi sahip olmalıdır.  
+ Bir özel durum [Modülü](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md) öğeyi belirten bir ortak olmayan tür, türün öğesinden türetme değil <xref:System.Net.IWebProxy> sınıfı, bu nesnenin varsayılan oluşturucu adresinden bir özel durum oluştu veya bir özel durum oluştu sırada Sistem tarafından belirlenen varsayılan ara sunucu alınıyor. <xref:System.Exception.InnerException%2A> Özel durum özelliği, hatanın kök nedeni hakkında daha fazla bilgi olması gerekir.  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
  Bu öğe, uygulama yapılandırma dosyası veya makine yapılandırma dosyası (Machine.config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, varsayılan Internet Explorer proxy adlardan kullanır, proxy adresi belirtir ve yerel erişim ve contoso.com için proxy atlar.  
+ Aşağıdaki örnek, Internet Explorer proxy varsayılanlarından kullanır, proxy adresi belirtir ve yerel erişim ve contoso.com için proxy atlar.  
   
 ```xml  
 <configuration>  

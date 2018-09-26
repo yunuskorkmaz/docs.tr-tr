@@ -8,31 +8,30 @@ helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 1e288daeb717fa9fa041d552cac4ec5d0cd28808
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e0adbe9d1689e840d940dd22fcfe05f54e2131fa
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495638"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47171744"
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Nasıl yapılır: SecurityBindingElement Kullanarak Özel Bağlama Oluşturma
-Windows Communication Foundation (WCF) yapılandırılabilir, ancak tam esneklik WCF destekleyen tüm güvenlik seçeneklerini yapılandırırken sağlamaz birkaç sistem tarafından sağlanan bağlamaları içerir. Bu konuda doğrudan tek tek bağlama öğelerini özel bağlama oluşturma gösterir ve bu tür bir bağlama oluşturulurken belirtilen güvenlik ayarlarını bazılarını vurgular. Özel bağlama oluşturma hakkında daha fazla bilgi için bkz: [bağlamaları genişletme](../../../../docs/framework/wcf/extending/extending-bindings.md).  
+Windows Communication Foundation (WCF) yapılandırılabilir, ancak tam esneklik sağlamaz, WCF destekleyen tüm güvenlik seçeneklerini yapılandırırken birçok sistem tarafından sağlanan bağlamalar içerir. Bu konu, tek tek bağlama öğelerini doğrudan özel bağlama oluşturma işlemini gösterir ve böyle bir bağlamanın oluştururken belirttiğiniz güvenlik ayarlarından bazıları vurgular. Özel bağlamalar oluşturma hakkında daha fazla bilgi için bkz. [bağlamaları genişletme](../../../../docs/framework/wcf/extending/extending-bindings.md).  
   
 > [!WARNING]
->  <xref:System.ServiceModel.Channels.SecurityBindingElement> desteklemediği <xref:System.ServiceModel.Channels.IDuplexSessionChannel> kanal TCP tarafından varsayılan kanal şekli kullanımı şekli ne zaman aktarım <xref:System.ServiceModel.TransferMode> ayarlanır <xref:System.ServiceModel.TransferMode.Buffered>. Ayarlamalısınız <xref:System.ServiceModel.TransferMode> için <xref:System.ServiceModel.TransferMode.Streamed> kullanmak için <xref:System.ServiceModel.Channels.SecurityBindingElement> Bu senaryoda.  
+>  <xref:System.ServiceModel.Channels.SecurityBindingElement> desteklemediği <xref:System.ServiceModel.Channels.IDuplexSessionChannel> kanal TCP ile varsayılan kanal şekli kullanım şekli ne zaman aktarım <xref:System.ServiceModel.TransferMode> ayarlanır <xref:System.ServiceModel.TransferMode.Buffered>. Ayarlamalısınız <xref:System.ServiceModel.TransferMode> için <xref:System.ServiceModel.TransferMode.Streamed> kullanmak için <xref:System.ServiceModel.Channels.SecurityBindingElement> Bu senaryoda.  
   
 ## <a name="creating-a-custom-binding"></a>Özel bağlama oluşturma  
- WCF'de tüm bağlamaları, oluşur *bağlama öğeleri*. Her bağlama öğesi türetilen <xref:System.ServiceModel.Channels.BindingElement> sınıfı. Standart sistem tarafından sağlanan bağlamaları için bağlama öğeleri oluşturulur ve bazı özellik ayarları özelleştirebilirsiniz olsa da, sizin için yapılandırılmış.  
+ WCF'de tüm bağlamaları, oluşur *bağlama öğelerinin*. Her bağlama öğesi türetildiği <xref:System.ServiceModel.Channels.BindingElement> sınıfı. Standart sistem tarafından sağlanan bağlamaları için bağlama öğeleri oluşturulur ve bazı özellik ayarları özelleştirebilirsiniz ancak sizin için yapılandırılmış.  
   
- Buna karşılık, özel bağlama oluşturma için bağlama öğeleri oluşturulup yapılandırılıncaya ve <xref:System.ServiceModel.Channels.CustomBinding> bağlama öğelerini oluşturulur.  
+ Buna karşılık, özel bir bağlama oluşturmak için bağlama öğeleri oluşturulup yapılandırıldıktan ve <xref:System.ServiceModel.Channels.CustomBinding> bağlama öğelerini oluşturulur.  
   
- Bunu yapmak için tek tek bağlama öğelerinin bir örneği tarafından temsil edilen bir koleksiyon eklediğiniz <xref:System.ServiceModel.Channels.BindingElementCollection> sınıfı ve ardından `Elements` özelliği `CustomBinding` , bu nesneye eşit. Bağlama öğeleri aşağıdaki sırayla eklemeniz gerekir: işlem akış, güvenilir oturum, güvenlik, bileşik çift yönlü, tek yönlü, akış güvenliği, ileti kodlama ve taşıma. Listelenen tüm bağlama öğeleri her bağlama gerekli olduğunu unutmayın.  
+ Bunu yapmak için tek tek bağlama öğelerinin bir örneği tarafından temsil edilen bir koleksiyon eklediğiniz <xref:System.ServiceModel.Channels.BindingElementCollection> sınıfı ve ardından `Elements` özelliği `CustomBinding` bu nesneye eşit. Bağlama öğeleri şu sırayla eklemeniz gerekir: işlem akışı, güvenilir oturum, güvenlik, çift yönlü bileşik, tek yönlü, Stream güvenlik, ileti kodlama ve taşıma. Listelenen tüm bağlama öğelerini her bağlamanın gerekli olduğunu unutmayın.  
   
 ## <a name="securitybindingelement"></a>SecurityBindingElement  
- Üç bağlama öğeleri arasında ilişki bunların tümü türetilen ileti düzeyi güvenlik için <xref:System.ServiceModel.Channels.SecurityBindingElement> sınıfı. Üç olan <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>, <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>, ve <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>. <xref:System.ServiceModel.Channels.TransportSecurityBindingElement> Karma mod güvenliği sağlamak için kullanılır. İleti katmanı güvenlik sağlar, diğer iki öğe kullanılır.  
+ Üç bağlama öğeleri ile ilgili tüm türetilen ileti düzeyi güvenliği için <xref:System.ServiceModel.Channels.SecurityBindingElement> sınıfı. Üç olan <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>, <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>, ve <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>. <xref:System.ServiceModel.Channels.TransportSecurityBindingElement> Karma mod güvenliği sağlamak için kullanılır. Güvenlik iletisi katmanı sağlar, diğer iki öğe kullanılır.  
   
- Aktarım düzeyi güvenlik sağlandığında ek sınıfları kullanılır:  
+ Ek sınıflar, taşıma düzeyi güvenliği sağlandığında kullanılır:  
   
 -   <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
   
@@ -40,10 +39,10 @@ Windows Communication Foundation (WCF) yapılandırılabilir, ancak tam esneklik
   
 -   <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
   
-## <a name="required-binding-elements"></a>Bağlama öğeleri gerekli  
- Çok sayıda içinde bir bağlaması birleştirilebilir olası bağlama öğeleri vardır. Bu kombinasyon geçerli değildir. Bu bölümde bir güvenlik bağlaması bulunmalıdır gerekli öğeleri açıklar.  
+## <a name="required-binding-elements"></a>Bağlama öğelerinin gerekli  
+ Çok sayıda içine bir bağlama birleştirilebilir olası bağlama öğeleri vardır. Bu birleşim geçerli değildir. Bu bölümde, bir güvenlik bağlama bulunması gereken gerekli öğeler açıklanmaktadır.  
   
- Geçerli güvenlik bağlamaları aşağıdakiler gibi birçok faktöre bağlıdır:  
+ Geçerli güvenlik bağlamaları, aşağıdakiler dahil olmak üzere birçok faktöre bağlıdır:  
   
 -   Güvenlik modu.  
   
@@ -51,7 +50,7 @@ Windows Communication Foundation (WCF) yapılandırılabilir, ancak tam esneklik
   
 -   Sözleşmede belirtilen ileti değişim deseni (MEP).  
   
- Aşağıdaki tabloda her önceki Etkenler birleşimi için geçerli bağlama öğesi yığını yapılandırmaları gösterilmiştir. Bunlar gereken en düşük gereksinimleri olduğunu unutmayın. Bağlama öğeleri, işlem bağlama öğeleri ve diğer bağlama öğeleri kodlama ileti gibi bağlama ek bağlama öğeleri ekleyebilirsiniz.  
+ Aşağıdaki tabloda her bir önceki faktörler bileşimi geçerli bağlama öğesi yığın yapılandırmalarını gösterir. Bunların en az gereksinimleri olduğunu unutmayın. İleti bağlama öğeleri, işlem bağlama öğeleri ve diğer bağlama öğeleri kodlama gibi bağlamaya ek bağlama öğeleri ekleyebilirsiniz.  
   
 |Güvenlik modu|Taşıma|Sözleşme ileti değişim deseni|Sözleşme ileti değişim deseni|Sözleşme ileti değişim deseni|  
 |-------------------|---------------|---------------------------------------|---------------------------------------|---------------------------------------|  
@@ -69,7 +68,7 @@ Windows Communication Foundation (WCF) yapılandırılabilir, ancak tam esneklik
 |||HttpTransportBindingElement|HttpTransportBindingElement|HttpTransportBindingElement|  
 ||TCP|SecurityBindingElement|SecurityBindingElement|SymmetricSecurityBindingElement (kimlik doğrulama modu SecureConversation =)|  
 |||TcpTransportBindingElement|TcpTransportBindingElement|TcpTransportBindingElement|  
-|Karma (ileti kimlik bilgileri ile aktarma)|HTTPS|TransportSecurityBindingElement|TransportSecurityBindingElement||  
+|Karışık (ileti kimlik bilgileri ile taşıma)|HTTPS|TransportSecurityBindingElement|TransportSecurityBindingElement||  
 |||OneWayBindingElement|||  
 |||HttpsTransportBindingElement|HttpsTransportBindingElement||  
 ||TCP|TransportSecurityBindingElement|SymmetricSecurityBindingElement (kimlik doğrulama modu SecureConversation =)|SymmetricSecurityBindingElement (kimlik doğrulama modu SecureConversation =)|  
@@ -77,32 +76,32 @@ Windows Communication Foundation (WCF) yapılandırılabilir, ancak tam esneklik
 |||SSL veya Windows StreamSecurityBindingElement öğesini|SSL veya Windows StreamSecurityBindingElement öğesini|SSL veya Windows StreamSecurityBindingElement öğesini|  
 |||TcpTransportBindingElement|TcpTransportBindingElement|TcpTransportBindingElement|  
   
- SecurityBindingElements üzerinde birçok yapılandırılabilir ayarlar olduğunu unutmayın. Daha fazla bilgi için bkz: [SecurityBindingElement kimlik doğrulama modları](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).  
+ Birçok yapılandırılabilir ayarları SecurityBindingElements olduğunu unutmayın. Daha fazla bilgi için [SecurityBindingElement kimlik doğrulama modları](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).  
   
- Daha fazla bilgi için bkz: [güvenli görüşmeleri ve güvenli oturumlar](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md).  
+ Daha fazla bilgi için [güvenli konuşmaları ve oturumları güvenli](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md).  
   
 ## <a name="procedures"></a>Yordamlar  
   
 #### <a name="to-create-a-custom-binding-that-uses-a-symmetricsecuritybindingelement"></a>SymmetricSecurityBindingElement kullanan özel bağlama oluşturma  
   
-1.  Bir örneğini oluşturmak <xref:System.ServiceModel.Channels.BindingElementCollection> sınıfı adı ile `outputBec`.  
+1.  Bir örneğini oluşturmak <xref:System.ServiceModel.Channels.BindingElementCollection> sınıfı adıyla `outputBec`.  
   
-2.  Statik metodunu çağırın `M:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement(true)`, bir örneğini döndürür <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> sınıfı.  
+2.  Statik metodunu çağırın `M:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement(true)`, örneğini döndüren <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> sınıfı.  
   
-3.  Ekleme <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> koleksiyonuna (`outputBec`) çağırarak `Add` yöntemi <xref:System.Collections.ObjectModel.Collection%601> , <xref:System.ServiceModel.Channels.BindingElement> sınıfı.  
+3.  Ekleme <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> koleksiyona (`outputBec`) çağırarak `Add` yöntemi <xref:System.Collections.ObjectModel.Collection%601> , <xref:System.ServiceModel.Channels.BindingElement> sınıfı.  
   
 4.  Bir örneğini oluşturmak <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> sınıfı ve koleksiyona eklemek (`outputBec`). Bu bağlama tarafından kullanılan kodlamayı belirtir.  
   
-5.  Oluşturma bir <xref:System.ServiceModel.Channels.HttpTransportBindingElement> ve koleksiyona eklemek (`outputBec`). Bu bağlama HTTP aktarımı kullandığını belirtir.  
+5.  Oluşturma bir <xref:System.ServiceModel.Channels.HttpTransportBindingElement> ve koleksiyona eklemek (`outputBec`). Bu, bağlama HTTP aktarımı kullandığını belirtir.  
   
-6.  Bir örneğini oluşturarak yeni özel bağlama oluşturma <xref:System.ServiceModel.Channels.CustomBinding> sınıfı ve koleksiyon geçirme `outputBec` Oluşturucusu.  
+6.  Bir örneğini oluşturarak yeni özel bağlama oluşturma <xref:System.ServiceModel.Channels.CustomBinding> sınıfı ve koleksiyonu geçirme `outputBec` Oluşturucusu.  
   
-7.  Sonuçta elde edilen özel bağlama, standart olarak aynı özellikleri paylaşır <xref:System.ServiceModel.WSHttpBinding>. Bu ileti düzeyi güvenlik ve Windows kimlik bilgilerini belirtir ancak güvenli oturumlar devre dışı bırakır, belirtilen-bant, hizmet kimlik bilgilerini gerektirir ve imzalar şifrelemez. Son yalnızca ayarlayarak denetlenebilir <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A> adım 4'te gösterildiği gibi özelliği. Diğer iki standart bağlamada ayarları kullanılarak denetlenebilir.  
+7.  Sonuçta elde edilen özel bağlama birçok standart olarak aynı özellikleri paylaşır <xref:System.ServiceModel.WSHttpBinding>. Bu ileti düzeyi güvenliği ve Windows kimlik bilgilerini belirtir, ancak güvenli oturumlarını devre dışı bırakır, belirtilen-bant, hizmet kimlik bilgisi gerektirir ve imzalar şifrelemez. Yalnızca ayarlayarak son denetlenebilir <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A> adım 4'te gösterildiği gibi özelliği. Diğer iki standart bağlama üzerinde ayarları kullanılarak denetlenebilir.  
   
 ## <a name="example"></a>Örnek  
   
 ### <a name="description"></a>Açıklama  
- Aşağıdaki örnek kullanan özel bağlama oluşturma için tam bir işlev sağlar bir <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
+ Aşağıdaki örnek, kullanan özel bir bağlama oluşturmak için tam bir işlev sağlar. bir <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
   
 ### <a name="code"></a>Kod  
  [!code-csharp[c_CustomBinding#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#20)]

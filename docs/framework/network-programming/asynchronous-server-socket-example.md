@@ -1,5 +1,5 @@
 ---
-title: Zaman uyumsuz Server yuva örneği
+title: Zaman uyumsuz sunucu yuvası örneği
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 13624cd3-f5c5-4950-8cda-31273b1fa6d1
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 9b770101e4295ea0c254905dd31f0e57527346fa
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 6816b22014f9e6669abe0b1aab62d0863e1f895b
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728407"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47090142"
 ---
-# <a name="asynchronous-server-socket-example"></a>Zaman uyumsuz Server yuva örneği
-Aşağıdaki örnek programı istemcilerinden gelen bağlantı istekleri alan sunucu oluşturur. Bir istemciden bir bağlantı beklerken sunucu uygulaması yürütülmesini askıya alınmadı şekilde sunucusu zaman uyumsuz bir yuvası ile kurulur. Uygulama istemciden bir dize alır, konsolda dizesini görüntüler ve istemciye geri dize görüntülemektedir. İstemci, dizeden dize içermelidir "\<EOF >" iletisinin sonuna sinyal.  
+# <a name="asynchronous-server-socket-example"></a>Zaman uyumsuz sunucu yuvası örneği
+Aşağıdaki örnek program istemcilerinden gelen bağlantı istekleri alan bir sunucu oluşturur. Bir istemci bağlantı beklerken sunucu uygulamasının yürütülmesini askıya için sunucu zaman uyumsuz bir yuvası ile oluşturulmuştur. Uygulama istemciden bir dize alır, dize konsolda görüntüler ve ardından istemcisine dize görüntülemektedir. İstemciden gelen dize, dize içermelidir "\<EOF >" iletisinin son sinyal.  
   
 ```vb  
 Imports System  

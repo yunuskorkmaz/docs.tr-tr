@@ -14,11 +14,11 @@ ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b583df2eb6098fa28dd8999a6796e5053d13cab4
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46696436"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47114963"
 ---
 # <a name="encrypting-data"></a>Veri Şifreleme
 Simetrik şifreleme ve asimetrik şifreleme kullanarak farklı işlemler gerçekleştirilir. Simetrik şifreleme akışların gerçekleştirilir ve bu nedenle büyük miktarlarda verileri şifrelemek kullanışlıdır. Asimetrik şifreleme küçük bir bayt sayısına gerçekleştirilir ve bu nedenle yalnızca küçük miktarlarda veri için kullanışlıdır.  

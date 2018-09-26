@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: WebRequest sınıfı kullanarak veri gönderme'
+title: 'Nasıl yapılır: WebRequest sınıfını kullanarak veri gönderme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,20 +10,19 @@ helpviewer_keywords:
 ms.assetid: 66686878-38ac-4aa6-bf42-ffb568ffc459
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: a40ab63e0fbac4227d74999c8c83f02e3c9e4b4d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f62775a41f70e4dd96c749acd99bf8b850d96407
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394663"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47084962"
 ---
-# <a name="how-to-send-data-using-the-webrequest-class"></a>Nasıl yapılır: WebRequest sınıfı kullanarak veri gönderme
-Aşağıdaki yordamda bir sunucuya veri göndermek için kullanılan adımlar açıklanmaktadır. Bu yordam, genellikle bir Web sayfasında veri göndermek için kullanılır.  
+# <a name="how-to-send-data-using-the-webrequest-class"></a>Nasıl yapılır: WebRequest sınıfını kullanarak veri gönderme
+Aşağıdaki yordam bir sunucuya veri göndermek için kullanılan adımları açıklar. Bu yordam, genellikle bir Web sayfasında veri göndermek için kullanılır.  
   
-### <a name="to-send-data-to-a-host-server"></a>Bir ana bilgisayar sunucusuna veri göndermek için  
+### <a name="to-send-data-to-a-host-server"></a>Bir konak sunucusuna veri göndermek için  
   
-1.  Oluşturma bir <xref:System.Net.WebRequest> çağırarak örneği <xref:System.Net.WebRequest.Create%2A> verileri, örneğin kabul kaynak, bir komut dosyası veya ASP.NET sayfası URI ile.  
+1.  Oluşturma bir <xref:System.Net.WebRequest> çağırarak örneği <xref:System.Net.WebRequest.Create%2A> verileri, örneğin kabul kaynak, bir komut dosyası veya ASP.NET sayfası URI'yı içeren.  
   
     ```csharp  
     WebRequest request = WebRequest.Create("http://www.contoso.com/");  
@@ -34,9 +33,9 @@ Aşağıdaki yordamda bir sunucuya veri göndermek için kullanılan adımlar a�
     ```  
   
     > [!NOTE]
-    >  .NET Framework türetilmiş protokole özgü sınıflar sağlar **WebRequest** ve **WebResponse** ile başlayan URI için "http:", "https:''," ftp: ", ve" dosya: ". Diğer protokolleri kullanan kaynaklara erişmek için öğesinden türetilen protokole özgü sınıflar uygulamalıdır **WebRequest** ve **WebResponse**. Daha fazla bilgi için bkz: [programlama Takılabilir Protokol](../../../docs/framework/network-programming/programming-pluggable-protocols.md) .  
+    >  .NET Framework türetilen protokole özgü sınıfların sağlar **WebRequest** ve **WebResponse** ile başlayan bir URI'leri için "http:", "https:''," ftp: ", ve" dosya: ". Diğer protokoller kullanarak kaynaklara erişmeye öğesinden türetilen protokole özgü sınıfların uygulamalıdır **WebRequest** ve **WebResponse**. Daha fazla bilgi için [takılabilir protokoller programlama](../../../docs/framework/network-programming/programming-pluggable-protocols.md) .  
   
-2.  Gereksinim duyduğunuz tüm özellik değerlerini ayarlar **WebRequest**. Örneğin, kimlik doğrulamasını etkinleştirmek için ayarlar **kimlik bilgileri** örneği özelliğine <xref:System.Net.NetworkCredential> sınıfı.  
+2.  Size gereken tüm özellik değerlerini ayarlamak **WebRequest**. Örneğin, kimlik doğrulamasını etkinleştirmek için ayarlanmış **kimlik bilgilerini** örneğine özellik <xref:System.Net.NetworkCredential> sınıfı.  
   
     ```csharp  
     request.Credentials = CredentialCache.DefaultCredentials;  
@@ -46,7 +45,7 @@ Aşağıdaki yordamda bir sunucuya veri göndermek için kullanılan adımlar a�
     request.Credentials = CredentialCache.DefaultCredentials  
     ```  
   
-     Çoğu durumda, **WebRequest** örneğinin kendisi veri göndermek yeterli. Protokole özgü özelliklerini ayarlamak ihtiyacınız varsa, ancak atamalısınız **WebRequest** protokole özgü türü. Örneğin, erişim HTTP özgü özellikleri için <xref:System.Net.HttpWebRequest>, noktaya yayın **WebRequest** için bir **HttpWebRequest** başvuru. Aşağıdaki kod örneğinde HTTP özgü ayarlanacağı gösterilmiştir <xref:System.Net.HttpWebRequest.UserAgent%2A> özelliği.  
+     Çoğu durumda **WebRequest** örnek kendi veri göndermek yeterli. Ancak, protokole özgü özelliklerini ayarlamak gerekiyorsa dönüştürmelisiniz **WebRequest** protokole özgü türü. Örneğin, erişim HTTP'ye özgü özellikleri için <xref:System.Net.HttpWebRequest>, noktaya yayın **WebRequest** için bir **HttpWebRequest** başvuru. Aşağıdaki kod örneği, HTTP özgü ayarlanacak gösterilmektedir <xref:System.Net.HttpWebRequest.UserAgent%2A> özelliği.  
   
     ```csharp  
     ((HttpWebRequest)request).UserAgent = ".NET Framework Example Client";  
@@ -56,7 +55,7 @@ Aşağıdaki yordamda bir sunucuya veri göndermek için kullanılan adımlar a�
     Ctype(request,HttpWebRequest).UserAgent = ".NET Framework Example Client"  
     ```  
   
-3.  HTTP gibi bir istekle gönderilmesi için veri izin veren bir protokol yöntemini belirtin **POST** yöntemi.  
+3.  Veri ile HTTP gibi bir istek gönderilmesine izin veren bir protokol yöntemini belirtin **POST** yöntemi.  
   
     ```csharp  
     request.Method = "POST";  
@@ -76,7 +75,7 @@ Aşağıdaki yordamda bir sunucuya veri göndermek için kullanılan adımlar a�
     request.ContentLength = byteArray.Length  
     ```  
   
-5.  Ayarlama **ContentType** uygun bir değere özelliği.  
+5.  Ayarlama **ContentType** özelliğini uygun bir değer.  
   
     ```csharp  
     request.ContentType = "application/x-www-form-urlencoded";  
@@ -86,7 +85,7 @@ Aşağıdaki yordamda bir sunucuya veri göndermek için kullanılan adımlar a�
     request.ContentType = "application/x-www-form-urlencoded"  
     ```  
   
-6.  Get ayrı tutma çağırarak veri istek akışı <xref:System.Net.WebRequest.GetRequestStream%2A> yöntemi.  
+6.  Get ayrı tutma çağırarak verileri istek akışı <xref:System.Net.WebRequest.GetRequestStream%2A> yöntemi.  
   
     ```csharp  
     Stream dataStream = request.GetRequestStream ();  
@@ -96,7 +95,7 @@ Aşağıdaki yordamda bir sunucuya veri göndermek için kullanılan adımlar a�
     Stream dataStream = request.GetRequestStream ()  
     ```  
   
-7.  Veri yazma <xref:System.IO.Stream> bu yöntem tarafından döndürülen nesne.  
+7.  Veri yazılan <xref:System.IO.Stream> bu yöntem tarafından döndürülen nesne.  
   
     ```csharp  
     dataStream.Write (byteArray, 0, byteArray.Length);  
@@ -116,7 +115,7 @@ Aşağıdaki yordamda bir sunucuya veri göndermek için kullanılan adımlar a�
     dataStream.Close ()  
     ```  
   
-9. Çağırarak sunucuya istek göndermek <xref:System.Net.WebRequest.GetResponse%2A>. Bu yöntem, sunucu yanıtı içeren bir nesne döndürür. Döndürülen <xref:System.Net.WebResponse> nesnenin türü, isteğin URI düzeni tarafından belirlenir.  
+9. Çağırarak sunucuya istek göndermek <xref:System.Net.WebRequest.GetResponse%2A>. Bu yöntem sunucu yanıtını içeren bir nesne döndürür. Döndürülen <xref:System.Net.WebResponse> nesnenin türü, isteğin URI düzeni tarafından belirlenir.  
   
     ```csharp  
     WebResponse response = request.GetResponse();  
@@ -127,9 +126,9 @@ Aşağıdaki yordamda bir sunucuya veri göndermek için kullanılan adımlar a�
     ```  
   
     > [!NOTE]
-    >  İle tamamladıktan sonra bir <xref:System.Net.WebResponse> nesne kapatmalısınız onu çağırarak <xref:System.Net.WebResponse.Close%2A> yöntemi. Yanıt akışı yanıt nesnesinden getirildiğini, alternatif olarak, akış çağırarak kapatabilirsiniz <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> yöntemi. Yanıt veya akış kapatmazsanız uygulamanızı sunucuya bağlantıları dışında çalıştırın ve ek istekleri işleyemiyor haline gelir.  
+    >  İle tamamladıktan sonra bir <xref:System.Net.WebResponse> nesne kapatmalısınız bunu çağırarak <xref:System.Net.WebResponse.Close%2A> yöntemi. Yanıt nesneden yanıt akışına edindiğiniz, alternatif olarak, akış çağırarak kapatabilirsiniz <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> yöntemi. Yanıt veya akış kapatmazsanız uygulamanız bağlantılar dışında sunucuya çalıştırın ve ek istekleri işleyemediğinden haline gelir.  
   
-10. Özelliklerini erişebilirsiniz **WebResponse** veya cast **WebResponse** bir protokole özgü örneğine protokole özgü özellikleri okunamıyor. Örneğin, erişim HTTP özgü özellikleri için <xref:System.Net.HttpWebResponse>, noktaya yayın **WebResponse** için bir **HttpWebResponse** başvuru.  
+10. Özelliklerini erişebileceğiniz **WebResponse** veya dönüştürme **WebResponse** protokole özgü özelliklerini okumak için bir protokole özgü örneğine. Örneğin, erişim HTTP'ye özgü özellikleri için <xref:System.Net.HttpWebResponse>, noktaya yayın **WebResponse** için bir **HttpWebResponse** başvuru.  
   
     ```csharp  
     Console.WriteLine (((HttpWebResponse)response).StatusDescription);  
@@ -139,7 +138,7 @@ Aşağıdaki yordamda bir sunucuya veri göndermek için kullanılan adımlar a�
     Console.WriteLine(CType(response, HttpWebResponse).StatusDescription)  
     ```  
   
-11. Sunucu tarafından gönderilen yanıtı verilerini içeren akışı almak için arama <xref:System.Net.WebResponse.GetResponseStream%2A> yöntemi **WebResponse**.  
+11. Sunucu tarafından gönderilen yanıt verilerini içeren akış almak için arama <xref:System.Net.WebResponse.GetResponseStream%2A> yöntemi **WebResponse**.  
   
     ```csharp  
     Stream data = response.GetResponseStream;  
@@ -149,7 +148,7 @@ Aşağıdaki yordamda bir sunucuya veri göndermek için kullanılan adımlar a�
     Dim data As Stream = response.GetResponseStream  
     ```  
   
-12. Veri gelen yanıt okunduktan sonra ya da yanıt akışı kullanarak kapatmanız gerekir **Stream.Close** yöntemi veya yanıt kullanarak Kapat **WebResponse.Close** yöntemi. Bu çağrı gerekli değildir **Kapat** yanıt akışına yöntemi ve **WebResponse**, ancak bunun nedenle zararlı.  
+12. Yanıttan verileri okuduktan sonra ya da yanıt akışı kullanılarak kapatmalısınız **Stream.Close** yöntemi veya yanıtı kullanma Kapat **WebResponse.Close** yöntemi. Bu çağrı gerekli değildir **Kapat** yanıt akışında yöntemi ve **WebResponse**, ancak bunu yaparsanız bu nedenle zararlı.  
   
     ```csharp  
     response.Close();  

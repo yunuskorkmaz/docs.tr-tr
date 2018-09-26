@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: İstek WebRequest sınıfı kullanarak verileri'
+title: 'Nasıl yapılır: WebRequest sınıfını kullanarak veri isteme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 368b8d0f-dc5e-4469-a8b8-b2adbf5dd800
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: e02ad4772d3ba84a2735a2e146a9979862d75989
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8928ce8790f58b6920c16cbfd9fc8d9aa6644a44
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397721"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47075417"
 ---
-# <a name="how-to-request-data-using-the-webrequest-class"></a>Nasıl yapılır: İstek WebRequest sınıfı kullanarak verileri
-Aşağıdaki yordam, örneğin, bir sunucudan bir kaynak istemek için kullanılan adımlar, bir Web sayfasına veya dosya açıklar. Kaynak bir URI tarafından tanımlanan gerekir.  
+# <a name="how-to-request-data-using-the-webrequest-class"></a>Nasıl yapılır: WebRequest sınıfını kullanarak veri isteme
+Aşağıdaki yordamda, bir kaynak, örneğin, bir sunucudan istemek için kullanılan adımlarla, bir Web sayfası veya dosya açıklanmaktadır. Kaynak URI tarafından tanımlanması gerekir.  
   
-### <a name="to-request-data-from-a-host-server"></a>Bir ana bilgisayar sunucusundan veri istemek için  
+### <a name="to-request-data-from-a-host-server"></a>Bir konak sunucusundan veri istemek için  
   
-1.  Oluşturma bir <xref:System.Net.WebRequest> çağırarak örneği <xref:System.Net.WebRequest.Create%2A> kaynak URI'si ile.  
+1.  Oluşturma bir <xref:System.Net.WebRequest> çağırarak örneği <xref:System.Net.WebRequest.Create%2A> kaynağın URI'sini ile.  
   
     ```csharp  
     WebRequest request = WebRequest.Create("http://www.contoso.com/");  
@@ -37,9 +36,9 @@ Aşağıdaki yordam, örneğin, bir sunucudan bir kaynak istemek için kullanıl
     ```  
   
     > [!NOTE]
-    >  .NET Framework türetilmiş protokole özgü sınıflar sağlar **WebRequest** ve **WebResponse** ile başlayan URI için "http:", "https:''," ftp: ", ve" dosya: ". Diğer protokolleri kullanan kaynaklara erişmek için öğesinden türetilen protokole özgü sınıflar uygulamalıdır **WebRequest** ve **WebResponse**. Daha fazla bilgi için bkz: [programlama Takılabilir Protokol](../../../docs/framework/network-programming/programming-pluggable-protocols.md) .  
+    >  .NET Framework türetilen protokole özgü sınıfların sağlar **WebRequest** ve **WebResponse** ile başlayan bir URI'leri için "http:", "https:''," ftp: ", ve" dosya: ". Diğer protokoller kullanarak kaynaklara erişmeye öğesinden türetilen protokole özgü sınıfların uygulamalıdır **WebRequest** ve **WebResponse**. Daha fazla bilgi için [takılabilir protokoller programlama](../../../docs/framework/network-programming/programming-pluggable-protocols.md) .  
   
-2.  Gereksinim duyduğunuz tüm özellik değerlerini ayarlar **WebRequest**. Örneğin, kimlik doğrulamasını etkinleştirmek için ayarlar **kimlik bilgileri** örneği özelliğine <xref:System.Net.NetworkCredential> sınıfı.  
+2.  Size gereken tüm özellik değerlerini ayarlamak **WebRequest**. Örneğin, kimlik doğrulamasını etkinleştirmek için ayarlanmış **kimlik bilgilerini** örneğine özellik <xref:System.Net.NetworkCredential> sınıfı.  
   
     ```csharp  
     request.Credentials = CredentialCache.DefaultCredentials;  
@@ -49,7 +48,7 @@ Aşağıdaki yordam, örneğin, bir sunucudan bir kaynak istemek için kullanıl
     request.Credentials = CredentialCache.DefaultCredentials  
     ```  
   
-     Çoğu durumda, **WebRequest** sınıftır verileri almak yeterli. Protokole özgü özelliklerini ayarlamak ihtiyacınız varsa, ancak atamalısınız **WebRequest** protokole özgü türü. Örneğin, erişim HTTP özgü özellikleri için <xref:System.Net.HttpWebRequest>, noktaya yayın **WebRequest** için bir **HttpWebRequest** başvuru. Aşağıdaki kod örneğinde HTTP özgü ayarlanacağı gösterilmiştir <xref:System.Net.HttpWebRequest.UserAgent%2A> özelliği.  
+     Çoğu durumda **WebRequest** sınıfı, veri almak yeterli. Ancak, protokole özgü özelliklerini ayarlamak gerekiyorsa dönüştürmelisiniz **WebRequest** protokole özgü türü. Örneğin, erişim HTTP'ye özgü özellikleri için <xref:System.Net.HttpWebRequest>, noktaya yayın **WebRequest** için bir **HttpWebRequest** başvuru. Aşağıdaki kod örneği, HTTP özgü ayarlanacak gösterilmektedir <xref:System.Net.HttpWebRequest.UserAgent%2A> özelliği.  
   
     ```csharp  
     ((HttpWebRequest)request).UserAgent = ".NET Framework Example Client";  
@@ -59,7 +58,7 @@ Aşağıdaki yordam, örneğin, bir sunucudan bir kaynak istemek için kullanıl
     Ctype(request,HttpWebRequest).UserAgent = ".NET Framework Example Client"  
     ```  
   
-3.  Sunucuya istek göndermek için çağrı <xref:System.Net.HttpWebRequest.GetResponse%2A>. Döndürülen gerçek türünü **WebResponse** nesne, istenen URI düzeni tarafından belirlenir.  
+3.  Sunucuya istek göndermek için arama <xref:System.Net.HttpWebRequest.GetResponse%2A>. Gerçek türü döndürülen **WebResponse** nesne, istenen URI'nin şeması tarafından belirlenir.  
   
     ```csharp  
     WebResponse response = request.GetResponse();  
@@ -70,9 +69,9 @@ Aşağıdaki yordam, örneğin, bir sunucudan bir kaynak istemek için kullanıl
     ```  
   
     > [!NOTE]
-    >  İle tamamladıktan sonra bir <xref:System.Net.WebResponse> nesne kapatmalısınız onu çağırarak <xref:System.Net.WebResponse.Close%2A> yöntemi. Yanıt akışı yanıt nesnesinden getirildiğini, alternatif olarak, akış çağırarak kapatabilirsiniz <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> yöntemi. Yanıt veya akış kapatmazsanız uygulamanızı sunucuya bağlantıları dışında çalıştırın ve ek istekleri işleyemiyor haline gelir.  
+    >  İle tamamladıktan sonra bir <xref:System.Net.WebResponse> nesne kapatmalısınız bunu çağırarak <xref:System.Net.WebResponse.Close%2A> yöntemi. Yanıt nesneden yanıt akışına edindiğiniz, alternatif olarak, akış çağırarak kapatabilirsiniz <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> yöntemi. Yanıt ya da akış kapatmazsanız uygulamanız bağlantılar dışında sunucuya çalıştırın ve ek istekleri işleyemediğinden haline gelir.  
   
-4.  Özelliklerini erişebilirsiniz **WebResponse** veya cast **WebResponse** bir protokole özgü örneğine protokole özgü özellikleri okunamıyor. Örneğin, erişim HTTP özgü özellikleri için <xref:System.Net.HttpWebResponse>, noktaya yayın **WebResponse** için bir **HttpWebResponse** başvuru. Aşağıdaki kod örneği ile bir yanıt gönderdi durum bilgilerini görüntülemek nasıl gösterir.  
+4.  Özelliklerini erişebileceğiniz **WebResponse** veya dönüştürme **WebResponse** protokole özgü özelliklerini okumak için bir protokole özgü örneğine. Örneğin, erişim HTTP'ye özgü özellikleri için <xref:System.Net.HttpWebResponse>, noktaya yayın **WebResponse** için bir **HttpWebResponse** başvuru. Aşağıdaki kod örneği, yanıtta gönderilen durum bilgilerini görüntülemek gösterilmektedir.  
   
     ```csharp  
     Console.WriteLine (((HttpWebResponse)response).StatusDescription);  
@@ -82,7 +81,7 @@ Aşağıdaki yordam, örneğin, bir sunucudan bir kaynak istemek için kullanıl
     Console.WriteLine(CType(response,HttpWebResponse).StatusDescription)  
     ```  
   
-5.  Sunucu tarafından gönderilen yanıtı verilerini içeren akışı almak için <xref:System.Net.HttpWebResponse.GetResponseStream%2A> yöntemi **WebResponse**.  
+5.  Sunucu tarafından gönderilen yanıt verilerini içeren akış almak için kullanın <xref:System.Net.HttpWebResponse.GetResponseStream%2A> yöntemi **WebResponse**.  
   
     ```csharp  
     Stream dataStream = response.GetResponseStream();  
@@ -92,7 +91,7 @@ Aşağıdaki yordam, örneğin, bir sunucudan bir kaynak istemek için kullanıl
     Dim dataStream As Stream = response.GetResponseStream()  
     ```  
   
-6.  Veri gelen yanıt okunduktan sonra ya da yanıt akışı kullanarak kapatmanız gerekir **Stream.Close** yöntemi veya yanıt kullanarak Kapat **WebResponse.Close** yöntemi. Bu çağrı gerekli değildir **Kapat** yanıt akışına yöntemi ve **WebResponse**, ancak bunun nedenle zararlı. **WebResponse.Close** çağrıları **Stream.Close** yanıt kapatırken.  
+6.  Yanıttan verileri okuduktan sonra ya da yanıt akışı kullanılarak kapatmalısınız **Stream.Close** yöntemi veya yanıtı kullanma Kapat **WebResponse.Close** yöntemi. Bu çağrı gerekli değildir **Kapat** yanıt akışında yöntemi ve **WebResponse**, ancak bunu yaparsanız bu nedenle zararlı. **WebResponse.Close** çağrıları **Stream.Close** yanıt kapatırken.  
   
     ```csharp  
     response.Close();  

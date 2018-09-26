@@ -1,5 +1,5 @@
 ---
-title: '&lt;kaldırma&gt; öğesi webRequestModules (ağ ayarları) için'
+title: '&lt;kaldırma&gt; webRequestModules (ağ ayarları) için'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/remove
@@ -12,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 40eda14d4d578f10a77aa06843abd48f58c55f6a
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: d0da0fd2edae4687ea80b4a23cc82a25ead9cb7b
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37073027"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47112211"
 ---
-# <a name="ltremovegt-element-for-webrequestmodules-network-settings"></a>&lt;kaldırma&gt; öğesi webRequestModules (ağ ayarları) için
+# <a name="ltremovegt-element-for-webrequestmodules-network-settings"></a>&lt;kaldırma&gt; webRequestModules (ağ ayarları) için
 Özel bir Web isteği modülü uygulamadan kaldırır.  
   
  \<Yapılandırma >  
@@ -41,7 +40,7 @@ ms.locfileid: "37073027"
   
 ### <a name="attributes"></a>Öznitelikler  
   
-|**Özniteliği**|**Açıklama**|  
+|**Öznitelik**|**Açıklama**|  
 |-------------------|---------------------|  
 |`prefix`|Bu Web isteği modülü tarafından işlenen isteklerin için URI öneki.|  
   
@@ -50,20 +49,20 @@ ms.locfileid: "37073027"
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
-|**Öğesi**|**Açıklama**|  
+|**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Ağ ana bilgisayarlardan bilgi istemek için kullanılacak modülleri belirtir.|  
+|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Ağ konaklarından bilgi istemek için modüller belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `remove` Öğeyi belirtilen URI öneki için kayıtlı Web isteği modülü kaldırır.  
+ `remove` Belirtilen URI öneki kayıtlı Web isteği modülü öğeyi kaldırır.  
   
- Değeri `prefix` özniteliği geçerli bir URI--Örneğin, "http", baştaki karakterleri olmalıdır veya "`http://www.contoso.com` ".  
+ Değeri `prefix` özniteliği olmalıdır geçerli bir URI--Örneğin, "http", önde gelen karakterlerini veya "`http://www.contoso.com` ".  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
  Bu öğe, uygulama yapılandırma dosyası veya makine yapılandırma dosyası (Machine.config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, HTTP için var olan bir Web isteği modül kaldırır ve ardından yeni özel bir Web isteği modülü HTTP istekleri www.contoso.com için kaydeder.  
+ Aşağıdaki örnek, HTTP için mevcut Web isteği modülü kaldırır ve ardından yeni özel bir Web isteği modülü HTTP istekleri www.contoso.com için kaydeder.  
   
 ```xml  
 <configuration>  

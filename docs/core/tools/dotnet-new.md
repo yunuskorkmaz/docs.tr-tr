@@ -4,12 +4,12 @@ description: Belirtilen şablonu temel alan yeni .NET Core projeleri dotnet yeni
 author: mairaw
 ms.author: mairaw
 ms.date: 07/31/2018
-ms.openlocfilehash: 2c82dda2d93225edb360316637e22964135cd5e4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 396c4ddf09854fa4582226bdb1422f8c929e459b
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512561"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47083059"
 ---
 # <a name="dotnet-new"></a>DotNet yeni
 
@@ -228,8 +228,9 @@ Oluşturulan çıktı yerleştirileceği konumu. Geçerli dizin varsayılandır.
 Bir kaynak veya şablon paketini kaldırır `PATH` veya `NUGET_ID` sağlanan.
 
 > [!NOTE]
-> Bir şablon kullanarak kaldırmak için bir `PATH`, yol tam olarak nitelemek gerekir. Örneğin, *C:/Users/\<kullanıcı > /Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp* çalışır, ancak *./GarciaSoftware.ConsoleTemplate.CSharp* içeren gelen Klasör erişemez.
-> Ayrıca, şablonu yoldaki son Sonlandırıcı directory eğik çizgi içermez.
+> Bir kaynağı kullanan bir şablonu kaldırmak için `PATH`, yol tam olarak nitelemek gerekir. Örneğin, *C:/Users/\<kullanıcı > /Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp* çalışır, ancak *./GarciaSoftware.ConsoleTemplate.CSharp* içeren gelen Klasör erişemez. Ayrıca, şablonu yoldaki son Sonlandırıcı directory eğik çizgi içermez.
+> 
+> Belirlemek erişemiyorsanız `PATH` veya `NUGET_ID` çalıştıran, bir şablonu kaldırmak için gerekli bağımsız değişken `dotnet new --uninstall` bağımsız değişken yüklü tüm şablonları ve bunları kaldırmak için gerekli bağımsız değişken listesi olmayan.
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
 

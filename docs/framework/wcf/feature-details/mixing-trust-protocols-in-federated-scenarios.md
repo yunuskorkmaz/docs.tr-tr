@@ -3,19 +3,18 @@ title: Federe Senaryolarda Güven Protokollerini Karıştırma
 ms.date: 03/30/2017
 ms.assetid: d7b5fee9-2246-4b09-b8d7-9e63cb817279
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: bca23ba16c69c6d21ed7cf49aaebb8d2ed079f5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d4290880d8d708811a95b38356aa61f0d23c89a8
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494475"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47090376"
 ---
 # <a name="mixing-trust-protocols-in-federated-scenarios"></a>Federe Senaryolarda Güven Protokollerini Karıştırma
-Aynı güven sürümüne sahip değil Federasyon istemciler bir hizmeti ve bir güvenlik belirteci hizmeti (STS) ile iletişim senaryolar olabilir. WSDL içerebilir hizmeti bir `RequestSecurityTokenTemplate` STS daha farklı sürümlerini WS-Trust öğeleri onaylama işlemi. Böyle durumlarda, bir Windows Communication Foundation (WCF) istemci alınan WS-Trust öğeleri dönüştürür `RequestSecurityTokenTemplate` eşleşecek şekilde STS sürümü güvenen. WCF eşleşmeyen güven sürümleri yalnızca standart bağlamaları için işler. WCF tarafından tanınan tüm standart algoritma parametreleri standart bağlama bir parçasıdır. Bu konuda hizmeti ve STS arasında çeşitli güven ayarlarla WCF davranışını tanımlar.  
+Aynı güven sürümüne sahip değilseniz, Federasyon istemcileri bir güvenlik belirteci hizmeti (STS) bir hizmet ile iletişim kurmak senaryolar olabilir. WSDL içerebilir hizmeti bir `RequestSecurityTokenTemplate` STS farklı sürümlerine, WS-Trust öğelerle onaylama. Bu gibi durumlarda, alınan WS-Trust öğeleri bir Windows Communication Foundation (WCF) istemci dönüştürür `RequestSecurityTokenTemplate` eşleştirilecek sürüm STS güven. WCF eşleşmeyen güven sürümleri yalnızca standart bağlamaları için işler. WCF tarafından tanınan tüm standart algoritma parametreleriyle standart bağlama'nın bir parçasıdır. Bu konuda, STS ile hizmet arasındaki farklı güven ayarlarla WCF davranışı açıklanmaktadır.  
   
-## <a name="rp-feb-2005-and-sts-feb-2005"></a>RP Şub 2005 ve STS Şub 2005  
- WSDL için bağlı olan taraf (RP) içinde aşağıdaki öğeleri içeren `RequestSecurityTokenTemplate` bölümü:  
+## <a name="rp-feb-2005-and-sts-feb-2005"></a>RP Şubat 2005 ve STS Şubat 2005  
+ WSDL için bağlı olan taraf (RP) içinde şu öğeleri içeren `RequestSecurityTokenTemplate` bölümü:  
   
 -   `CanonicalizationAlgorithm`  
   
@@ -31,10 +30,10 @@ Aynı güven sürümüne sahip değil Federasyon istemciler bir hizmeti ve bir g
   
  İstemci yapılandırma dosyası parametrelerinin listesini içerir.  
   
- WCF istemcisi ve hizmeti parametreleri arasında ayrım; tüm parametreleri ekler ve bunları gönderir `RequestSecurityTokenTemplate` (RST).  
+ WCF istemci ve hizmet parametreleri arasında ayrım; tüm parametreleri ekler ve bunları gönderir `RequestSecurityTokenTemplate` (k).  
   
 ## <a name="rp-trust-13-and-sts-trust-13"></a>RP güven 1.3 ve STS güven 1.3  
- RP WSDL içinde aşağıdaki öğeleri içeren `RequestSecurityTokenTemplate` bölümü:  
+ RP için WSDL içinde şu öğeleri içeren `RequestSecurityTokenTemplate` bölümü:  
   
 -   `CanonicalizationAlgorithm`  
   
@@ -50,12 +49,12 @@ Aynı güven sürümüne sahip değil Federasyon istemciler bir hizmeti ve bir g
   
 -   `KeyWrapAlgorithm`  
   
- İstemci yapılandırma dosyası içeren bir `secondaryParameters` RP tarafından belirtilen parametreler sarmalar öğesi.  
+ İstemci yapılandırma dosyası içeren bir `secondaryParameters` RP tarafından belirtilen parametreler sarmalayan öğesi.  
   
- WCF kaldırır `EncryptionAlgorithm`, `CanonicalizationAlgorithm` ve `KeyWrapAlgorithm` bunlar içinde mevcut olup olmadığını RST altında en üst düzey öğesi öğelerinden `SecondaryParameters` öğesi. WCF ekler `SecondaryParameters` değiştirilmemiş giden RST öğesi.  
+ WCF kaldırır `EncryptionAlgorithm`, `CanonicalizationAlgorithm` ve `KeyWrapAlgorithm` bunlar içinde mevcut olması durumunda lk altında en üst düzey öğe öğelerden `SecondaryParameters` öğesi. WCF ekler `SecondaryParameters` değiştirilmemiş giden lk öğesi.  
   
-## <a name="rp-trust-feb-2005-and-sts-trust-13"></a>RP güven Şub 2005 ve STS 1.3 güven  
- RP WSDL aşağıdaki öğeleri içeren `RequestSecurityTokenTemplate` bölümü:  
+## <a name="rp-trust-feb-2005-and-sts-trust-13"></a>RP güven Şubat 2005 ve STS güven 1.3  
+ RP için WSDL aşağıdaki öğeleri içeren `RequestSecurityTokenTemplate` bölümü:  
   
 -   `CanonicalizationAlgorithm`  
   
@@ -71,18 +70,18 @@ Aynı güven sürümüne sahip değil Federasyon istemciler bir hizmeti ve bir g
   
  İstemci yapılandırma dosyası parametrelerinin listesini içerir.  
   
- İstemci yapılandırma dosyasından WCF hizmeti ve istemci parametreleri arasında ayrım. Bu nedenle WCF güven sürüm 1.3 ad alanı için tüm parametreleri dönüştürür.  
+ İstemci yapılandırma dosyasından WCF hizmet ve istemci parametreleri arasında ayırt edemez. Bu nedenle WCF güven 1.3 sürümü olmak şartıyla ad alanı için tüm parametreleri dönüştürür.  
   
  WCF tanıtıcıları `KeyType`, `KeySize`, ve `TokenType` aşağıdaki gibi öğeleri:  
   
--   WSDL indirin, bağlama oluşturmak ve atamak `KeyType`, `KeySize`, ve `TokenType` RP parametrelerinden. İstemci yapılandırma dosyası sonra oluşturulur.  
+-   WSDL indirin, bağlama oluşturmak ve atamak `KeyType`, `KeySize`, ve `TokenType` RP parametrelerinden. Ardından, istemci yapılandırma dosyası oluşturulur.  
   
--   İstemci yapılandırma dosyasındaki herhangi bir parametre artık değiştirebilirsiniz.  
+-   İstemci, artık yapılandırma dosyasındaki herhangi bir parametre değiştirebilirsiniz.  
   
--   Çalışma zamanı sırasında WCF içine belirtilen tüm parametreleri kopyalar `AdditionalTokenParameters` istemci yapılandırma dosyasının dışında `KeyType`, `KeySize` ve `TokenType`, bu parametreler için yapılandırma dosyası sırasında hesaba oluşturma.  
+-   Çalışma zamanı sırasında WCF içinde belirtilen tüm parametreler kopyalar `AdditionalTokenParameters` istemci yapılandırma dosyasının `KeyType`, `KeySize` ve `TokenType`, bu parametreler için yapılandırma dosyası sırasında tüketici oluşturma.  
   
-## <a name="rp-trust-13-and-sts-trust-feb-2005"></a>RP güven 1.3 ve STS güven Şub 2005  
- RP WSDL aşağıdaki öğeleri içeren `RequestSecurityTokenTemplate` bölümü:  
+## <a name="rp-trust-13-and-sts-trust-feb-2005"></a>RP güven 1.3 ve STS güven Şubat 2005  
+ RP için WSDL aşağıdaki öğeleri içeren `RequestSecurityTokenTemplate` bölümü:  
   
 -   `CanonicalizationAlgorithm`  
   
@@ -98,6 +97,6 @@ Aynı güven sürümüne sahip değil Federasyon istemciler bir hizmeti ve bir g
   
 -   `KeyWrapAlgorithm`  
   
- İstemci yapılandırma dosyası içeren bir `secondaryParamters` RP tarafından belirtilen parametreler sarmalar öğesi.  
+ İstemci yapılandırma dosyası içeren bir `secondaryParamters` RP tarafından belirtilen parametreler sarmalayan öğesi.  
   
- WCF kopyalar içinde belirtilen tüm parametreleri `SecondaryParameters` en üst düzey RST öğesi bölümüne ancak bunları 2005 WS-Trust ad alanına dönüştürmez.
+ WCF kopyalar içinde belirtilen tüm parametreler `SecondaryParameters` en üst düzey lk öğesi bölümüne ancak bunları 2005 WS-Trust ad alanına dönüştürmez.

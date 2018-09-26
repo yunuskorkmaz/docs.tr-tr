@@ -13,35 +13,34 @@ helpviewer_keywords:
 ms.assetid: c020b139-8699-4f0d-9ac9-70d0c5b2a8c8
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: beb38c00c7055d8edfff6f574ec454902e3a9b14
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c64dd85103e818ae603435c1a3f80f76e672ac84
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753696"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47069574"
 ---
 # <a name="compiler-and-language-provider-settings-schema"></a>Derleyici ve Dil Sağlayıcısı Ayarları Şeması
-Derleyici ve dil sağlayıcısı ayarları compiler configuration öğeleri için kullanılabilen dil sağlayıcısı belirtin. Her derleyici yapılandırma öğesi kod belirtir sağlayıcı türü adı, derleyici parametreleri, desteklenen dil adları ve dosya uzantılarını desteklenir.  
+Compiler configuration öğeleri kullanılabilir dil sağlayıcıları için derleyici ve dil sağlayıcısı ayarları belirtin. Her derleyici yapılandırma öğesi kodu belirtir. sağlayıcı türü adı, derleyici parametreler, desteklenen dil adları ve dosya uzantıları desteklenir.  
   
- .NET Framework makine yapılandırma dosyasındaki (Machine.config) ilk derleyici ayarları tanımlar. Geliştiriciler ve derleyici satıcılar ekleyebilirsiniz yapılandırma ayarları için yeni bir <xref:System.CodeDom.Compiler.CodeDomProvider> uygulaması. Kullanım <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> dil sağlayıcısı ve derleyici yapılandırma ayarları bir bilgisayarda program aracılığıyla listeleme yöntemi.  
+ .NET Framework ilk derleyici ayarları makine yapılandırma dosyasındaki (Machine.config) tanımlar. Geliştiriciler ve derleyici satıcıları ekleyebilirsiniz yapılandırma ayarları için yeni bir <xref:System.CodeDom.Compiler.CodeDomProvider> uygulaması. Kullanım <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> dil sağlayıcısı ve derleyici yapılandırma ayarlarını bir bilgisayardaki program aracılığıyla listeleme yöntemi.  
   
  [\<Yapılandırma > öğesi](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
  [\<System.codeDom >](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)  
   
- [\<derleyicileri >](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)  
+ [\<System.codeDom >](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)  
   
  [\<Derleyici >](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |[\<System.codeDom >](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|Kullanılabilir dil sağlayıcıları için derleyici yapılandırma ayarlarını belirtir.|  
-|[\<derleyicileri >](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|Compiler configuration öğeleri için kapsayıcı; sıfır veya daha fazla bilgi içeren [ \<derleyici >](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) öğeleri.|  
+|[\<System.codeDom >](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|Compiler configuration öğeleri için kapsayıcı; sıfır veya daha fazlasını içeren [ \<derleyici >](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) öğeleri.|  
 |[\<Derleyici >](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)|Compiler configuration öznitelikleri için dil sağlayıcısı belirtir.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek tipik derleyici yapılandırma öğesi gösterilmektedir.  
+ Aşağıdaki örnek, tipik bir derleyici yapılandırma öğesi gösterir.  
   
 ```xml  
 <configuration>  

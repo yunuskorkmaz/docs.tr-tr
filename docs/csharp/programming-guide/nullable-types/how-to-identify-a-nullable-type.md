@@ -1,20 +1,20 @@
 ---
 title: 'Nasıl yapılır: boş değer atanabilir bir tür (C# programlama Kılavuzu) belirleme'
 description: Boş değer atanabilir bir tür bir türdür örneği boş değer atanabilir bir tür olup olmadığını belirlemek hakkında bilgi edinin
-ms.date: 08/06/2018
+ms.date: 09/24/2018
 helpviewer_keywords:
 - nullable types [C#], identifying
 ms.assetid: d4b67ee2-66e8-40c1-ae9d-545d32c71387
-ms.openlocfilehash: c65f80974154d81b5ddf239b617eeeda68434e09
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: f9957568d3c68f60cc9286718be9f5a496f876e6
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45624956"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47089993"
 ---
 # <a name="how-to-identify-a-nullable-type-c-programming-guide"></a>Nasıl yapılır: boş değer atanabilir bir tür (C# programlama Kılavuzu) belirleme
 
-Aşağıdaki örnek nasıl belirleneceğini göstermektedir olup olmadığını bir <xref:System.Type?displayProperty=nameWithType> örneği boş değer atanabilir bir tür temsil eder:
+Aşağıdaki örnek nasıl belirleneceğini göstermektedir olup olmadığını bir <xref:System.Type?displayProperty=nameWithType> örneğini gösteren bir kapalı genel boş değer atanabilir tür diğer bir deyişle, <xref:System.Nullable%601?displayProperty=nameWithType> belirtilen türü parametre türüyle `T`:
 
 [!code-csharp-interactive[whether Type is nullable](../../../../samples/snippets/csharp/programming-guide/nullable-types/IdentifyNullableType.cs#1)]
 
@@ -32,7 +32,7 @@ Aşağıdaki örnekte gösterilen kod örneği boş değer atanabilir bir tür o
 
 [!code-csharp-interactive[whether an instance is of a nullable type](../../../../samples/snippets/csharp/programming-guide/nullable-types/IdentifyNullableType.cs#4)]
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Boş değer atanabilir türler](index.md)  
 - [Boş değer atanabilir türleri kullanma](using-nullable-types.md)  

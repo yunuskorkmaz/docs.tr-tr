@@ -1,5 +1,5 @@
 ---
-title: '&lt;Clear&gt; öğesi webRequestModules (ağ ayarları) için'
+title: '&lt;Temizle&gt; webRequestModules (ağ ayarları) için'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/clear
@@ -12,21 +12,20 @@ helpviewer_keywords:
 ms.assetid: 48f38bcb-f30c-4b74-a8f0-1a3caf1aa96f
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 4d89fbc757198f25219b8051bf77dbdeea0cef53
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2b313aa2481b1257715ac4dbc6d452e2120f4726
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752734"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47070389"
 ---
-# <a name="ltcleargt-element-for-webrequestmodules-network-settings"></a>&lt;Clear&gt; öğesi webRequestModules (ağ ayarları) için
-Tüm kayıtlı Web isteği modülleri uygulamadan kaldırır.  
+# <a name="ltcleargt-element-for-webrequestmodules-network-settings"></a>&lt;Temizle&gt; webRequestModules (ağ ayarları) için
+Tüm kayıtlı Web isteği modül uygulamadan kaldırır.  
   
  \<Yapılandırma >  
 \<system.net>  
 \<webRequestModules >  
-\<Clear >  
+\<Temizleme >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -45,18 +44,18 @@ Tüm kayıtlı Web isteği modülleri uygulamadan kaldırır.
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
-|**Öğesi**|**Açıklama**|  
+|**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Ağ ana bilgisayarlardan bilgi istemek için kullanılacak modülleri belirtir.|  
+|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Ağ konaklarından bilgi istemek için modüller belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `clear` Öğeyi yapılandırma dosyası veya yapılandırma hiyerarşisindeki daha yüksek düzeyde daha önce tanımlanan tüm kayıtlı Web isteği modülleri kaldırır.  
+ `clear` Öğeyi yapılandırma dosyası veya yapılandırma hiyerarşideki daha yüksek bir düzeyde daha önce tanımlanan tüm kayıtlı Web isteği modüllerini kaldırır.  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
  Bu öğe, uygulama yapılandırma dosyası veya makine yapılandırma dosyası (Machine.config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, tüm Web isteği modülleri temizler ve ardından HTTP için Web isteği modülü kaydeder.  
+ Aşağıdaki örnek, tüm Web isteği modülleri temizler ve ardından bir Web isteği modülü için HTTP kaydeder.  
   
 ```xml  
 <configuration>  
