@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 19710ae3-f197-4d28-ba9d-52e465006819
 author: BrucePerlerMS
 ms.openlocfilehash: 255393c3b1fd6d395e0013010fc590c4579dda77
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47077011"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47215840"
 ---
 # <a name="behavior-security"></a>Davranış Güvenliği
 Bu bölüm, hizmet davranışları için yapılandırma güvenlik gösteren örnekler içerir.  

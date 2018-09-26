@@ -8,11 +8,11 @@ helpviewer_keywords:
 - attributes [Windows Forms], classes
 ms.assetid: 2c5640e9-6c6c-49d7-a5e4-a768f6be7853
 ms.openlocfilehash: 5bb7a28e314d6c0b007c1579f371a26d0a714fce
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47075716"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47231290"
 ---
 # <a name="attributes-in-windows-forms-controls"></a>Windows Forms Denetimlerindeki Öznitelikler
 .NET Framework özel denetimleri ve bileşenleri üyelerine uygulayabilirsiniz özniteliklerin çeşitli sağlar. Bazı bu öznitelikler bir sınıfın çalışma zamanı davranışını etkiler ve diğer tasarım zamanı davranışını etkiler.  

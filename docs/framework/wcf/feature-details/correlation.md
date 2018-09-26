@@ -2,34 +2,28 @@
 title: Bağıntı
 ms.date: 03/30/2017
 ms.assetid: 60151f6c-19b7-47af-9cdc-76c2ac95f301
-ms.openlocfilehash: 9dbebf6d497a5cc109400d04206d39ad76321ba3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e72f462a9b8777fbeadb306c7fea8354f64ffe8c
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491289"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47216584"
 ---
 # <a name="correlation"></a>Bağıntı
-İş akışı hizmeti uygulamaları diğer hizmetlerle iletişim kurarken, aralarında iletileri için uygun iş akışı örneği gönderilir önemlidir. Bağıntı Bu mekanizma sağlar. Bu bölümdeki konular, bağıntı ve farklı iş akışı hizmeti senaryolarda kullanma hakkında genel bir bakış sağlar.  
+İş akışı hizmeti uygulamaları diğer hizmetlerle iletişim kurduğunda, bunlar arasındaki iletiler için uygun iş akışı örneği dağıtılmadan önemlidir. Bağıntı, bunun için bir mekanizma sağlar. Bu bölümdeki konular, bağıntı ve farklı bir iş akışı hizmeti senaryolarında kullanmak nasıl bir genel bakış sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Bağıntıya Genel Bakış](../../../../docs/framework/wcf/feature-details/correlation-overview.md)  
  Bağıntı bulunan tür genel bir bakış sağlar [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
   
- [Bağlam Değişimi](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md)  
- Bağlam değişimi bağıntısı açıklar.  
-  
  [Dayanıklı Çift Yönlü](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md)  
- Dayanıklı çift yönlü bağıntı açıklar.  
-  
- [İçeriğe Dayalı](../../../../docs/framework/wcf/feature-details/content-based-correlation.md)  
- İçeriğe dayalı bağıntı açıklar.  
+ Dayanıklı çift yönlü bağıntı açıklar.
   
  [İstek-Yanıt](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md)  
  İstek-yanıt bağıntısı açıklar.  
   
  [Bağıntı Sorunlarını Giderme](../../../../docs/framework/wcf/feature-details/troubleshooting-correlation.md)  
- Bağıntı sorunlarını giderme yöntemlerini sağlar.  
+ Bağıntı sorunlarını giderme için yöntemler sağlar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Activities.CorrelationHandle>  

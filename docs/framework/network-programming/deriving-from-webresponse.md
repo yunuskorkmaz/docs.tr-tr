@@ -7,11 +7,11 @@ ms.assetid: f11d4866-a199-4087-9306-a5a4c18b13db
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 84f29d1ec44383a42446316b8e53b2886314960b
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47075365"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47208862"
 ---
 # <a name="deriving-from-webresponse"></a>Webresponse'tan türetme
 <xref:System.Net.WebResponse> .NET Framework takılabilir Protokolü modeli uygun bir protokole özgü yanıt oluşturmak için temel yöntemleri ve özellikleri sağlayan soyut bir temel sınıfı. Kullanan uygulamalar <xref:System.Net.WebRequest> istek verileri bir sınıfa kaynaklardan gelen yanıtları almak bir **WebResponse**. Protokole özgü **WebResponse** alt öğeleri, soyut üyelerini uygulanmalı **WebResponse** sınıfı.  

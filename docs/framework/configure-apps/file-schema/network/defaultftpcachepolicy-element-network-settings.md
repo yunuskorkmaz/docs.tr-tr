@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: 0eb0c5cb-dd97-484d-8614-785e88877abb
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: e4ea16c925114d4ad4054af5f340c764ed6fe4fd
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e03fb02bd351058c1fcdedb8367d03318418a12c
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743153"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47209432"
 ---
 # <a name="ltdefaultftpcachepolicygt-element-network-settings"></a>&lt;defaultFtpCachePolicy&gt; öğesi (ağ ayarları)
-FTP önbelleğe alma etkindir ve ilke önbelleğe almayı varsayılan açıklar olup olmadığını açıklar.  
+FTP önbelleğe alma etkindir ve önbelleğe alma ilkesi varsayılan tanımlar olup olmadığını açıklar.  
   
  \<Yapılandırma >  
 \<system.net>  
@@ -41,20 +40,20 @@ FTP önbelleğe alma etkindir ve ilke önbelleğe almayı varsayılan açıklar 
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`policyLevel`|İlke önbelleği FTP belirtir. Varsayılan değer `Default` şeklindedir.|  
+|`policyLevel`|Önbelleğe alma İlkesi FTP belirtir. Varsayılan değer `Default` şeklindedir.|  
   
 ## <a name="policylevel-attribute"></a>policyLevel özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|`Default`|Önbelleğe alınan kaynak yeni bir kaynaktır, içerik uzunluğu doğru olduğundan ve süre sonu, değiştirilmesi ve içerik uzunluğu öznitelikleri mevcut döndürür.|  
+|`Default`|Önbelleğe alınmış kaynak sona erme, değiştirilmesi ve içerik uzunluğu öznitelikleri mevcut olduğundan yeni bir kaynaktır ve içerik uzunluğu doğru döndürür.|  
 |`BypassCache`|Kaynak sunucudan döndürür.|  
-|`CacheOnly`|İçerik uzunluğu varsa ve giriş boyutu eşleşen önbelleğe alınan kaynak döndürür.|  
-|`CacheIfAvailable`|İçerik uzunluğu sağlanır ve giriş boyutu eşleşiyorsa önbelleğe alınan kaynak döndürür; Aksi halde, kaynak sunucudan indirilir ve çağırana döndürülür.|  
-|`Revalidate`|Önbelleğe alınan kaynak damgası kaynak sunucuda damgası ile aynı olduğunda önbelleğe alınan kaynak döndürür; Aksi halde, kaynak sunucudan, önbellekte depolanır ve yapana.|  
-|`Reload`|Kaynak sunucudan indirir, önbellekte depolar ve kaynak çağırana döndürür.|  
-|`NoCacheNoStore`|Önbelleğe alınan bir kaynak zaten varsa, bu silinir. Kaynak sunucudan indirilir ve çağırana döndürülür.|  
-|`Revalidate`|Bir istek zaman damgası kaynak sunucuda damgası ile aynı olduğunda, kaynak önbelleğe alınmış bir kopyasını kullanarak karşılayan; Aksi halde, kaynak sunucudan, çağırana sunulan ve önbellekte depolanır.|  
+|`CacheOnly`|İçerik uzunluğu varsa ve giriş boyutu eşleşen önbelleğe alınmış kaynak döndürür.|  
+|`CacheIfAvailable`|İçerik uzunluğu sağlanır ve giriş boyutu eşleşiyorsa, önbelleğe alınmış kaynak döndürür; Aksi takdirde, kaynak sunucudan indirilir ve çağırana döndürülür.|  
+|`Revalidate`|Önbelleğe alınmış kaynak zaman damgası önbelleğe alınmış kaynak sunucusunda kaynak zaman damgası ile aynı olduğunda döndürür; Aksi takdirde, kaynak sunucudan, önbellekte depolanır ve arayana döndürülür.|  
+|`Reload`|Kaynak sunucudan indirir, önbellekte depolar ve kaynak çağırana döner.|  
+|`NoCacheNoStore`|Önbelleğe alınan bir kaynağın varolup olmadığını silinir. Kaynak sunucudan indirilir ve çağırana döndürülür.|  
+|`Revalidate`|Bir istek, zaman damgası zaman damgasını kaynak sunucudaki aynı olduğunda, kaynağın önbelleğe alınmış kopyasını kullanarak karşılayan; Aksi takdirde, kaynak sunucudan indirilir, çağırana sunulan ve önbellekte depolanır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -63,12 +62,12 @@ FTP önbelleğe alma etkindir ve ilke önbelleğe almayı varsayılan açıklar 
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[requestCaching](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Ağ isteği önbelleğe alma mekanizması denetler.|  
+|[requestCaching](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Ağ istekleri için önbelleğe alma mekanizması denetler.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, önbelleğe alma İlkesi, bir FTP belirtmek gösterilmiştir `NoCacheNoStore`.  
+ Aşağıdaki örnekte, önbelleğe alma İlkesi, bir FTP belirtmek gösterilmektedir `NoCacheNoStore`.  
   
 ```xml  
 <configuration>  

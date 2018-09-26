@@ -7,11 +7,11 @@ ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a21f4cd8657a9d2c26ac481e7f2b00e6a2f502c9
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47084663"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47209544"
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework Geliştirme Kılavuzu
 Bu bölümde, oluşturma, yapılandırma, hata ayıklama, güvenli ve .NET Framework uygulamalarınızı dağıtma açıklanmaktadır. Bölüm ayrıca dinamik programlama, birlikte çalışabilirlik, genişletilebilirlik, bellek yönetimi ve iş parçacığı gibi teknoloji alanları hakkında bilgi sağlar.  

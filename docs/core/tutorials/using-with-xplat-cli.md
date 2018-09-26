@@ -6,11 +6,11 @@ ms.author: mairaw
 ms.date: 09/10/2018
 ms.technology: dotnet-cli
 ms.openlocfilehash: b31a0324c0d762e9898c681cc6581b3860d41f89
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47108275"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47203767"
 ---
 # <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Windows/Linus/macos'ta komut satırını kullanarak .NET Core ile çalışmaya başlama
 

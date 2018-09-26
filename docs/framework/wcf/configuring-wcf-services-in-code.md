@@ -2,26 +2,26 @@
 title: WCF Hizmetlerini Kodda Yapılandırma
 ms.date: 03/30/2017
 ms.assetid: 193c725d-134f-4d31-a8f8-4e575233bff6
-ms.openlocfilehash: 714236bcdb562840323698622cdf3d0c6c89b6ca
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: abd75e514d698e73c2297a5dc2e511f89f0534b1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804153"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47216521"
 ---
 # <a name="configuring-wcf-services-in-code"></a>WCF Hizmetlerini Kodda Yapılandırma
-Windows Communication Foundation (WCF) hizmetlerini yapılandırma dosyalarının veya kod kullanarak yapılandırmak geliştiricilerin sağlar.  Yapılandırma dosyaları bir hizmet dağıtılan sonra yapılandırılması gerektiğinde faydalıdır. Yapılandırma dosyaları kullanırken, bir BT Uzmanı yapılandırma dosyasını güncelleştirmek yeterlidir, hiçbir yeniden derlenmek gereklidir. Yapılandırma dosyaları, ancak, karmaşık ve korumak zor olabilir. Hata ayıklama yapılandırma dosyaları için desteği yoktur ve yapılandırma öğeleri zor ve hataya yatkın yapılandırma dosyalarını geliştirme kılan adları tarafından başvurulur. WCF hizmetlerini kodda yapılandırma sağlar. WCF (4.0 ve önceki) yapılandırma Hizmetleri kod, önceki sürümlerindeki kendini barındıran senaryolarda kolay olan <xref:System.ServiceModel.ServiceHost> uç noktaları ve ServiceHost.Open çağırmadan önce davranışları yapılandırmak için sınıfa izin verilmiyor. Webde barındırılan senaryolarda, ancak, doğrudan erişiminiz yok <xref:System.ServiceModel.ServiceHost> sınıfı. Barındırılan hizmeti oluşturmak için gerekli bir web yapılandırmak için bir `System.ServiceModel.ServiceHostFactory` oluşturulan <xref:System.ServiceModel.Activation.ServiceHostFactory> ve gerekli olan herhangi bir yapılandırmaya gerçekleştirilir. .NET 4. 5'ile başlayarak, her ikisi de yapılandırmak için daha kolay bir yolu kendi kendini barındıran ve web kodu Hizmetleri'nde barındırılan WCF sağlar.  
+Windows Communication Foundation (WCF) hizmetlerini yapılandırma dosyalarının veya kod kullanarak yapılandırmak geliştiricilerin sağlar.  Yapılandırma dosyalarını, hizmet dağıtıldıktan sonra yapılandırılması gerektiğinde kullanışlıdır. Yapılandırma dosyalarını kullanarak, bir BT Uzmanı yalnızca yapılandırma dosyasını güncelleştirmeniz gerekir, hiçbir yeniden derleme gereklidir. Yapılandırma dosyaları, ancak karmaşık ve sürdürülmesi zor olabilir. Yapılandırma dosyalarında hata ayıklama desteği yoktur ve yapılandırma öğelerini yazma yapılandırma dosyalarını zor ve hata yapmaya açık olmasını sağlayan adlarına göre başvuru yapılır. WCF hizmetlerini kodda yapılandırma sağlar. Önceki sürümlerinde (4.0 ve daha önceki) WCF yapılandırma Hizmetleri kod kendinden senaryolarda kolaydı <xref:System.ServiceModel.ServiceHost> uç noktalar ve davranışlar ServiceHost.Open çağırmadan önce yapılandırmanıza izin sınıfı. Barındırılan web senaryolarda, ancak doğrudan için erişiminiz yoksa <xref:System.ServiceModel.ServiceHost> sınıfı. Barındırılan hizmet oluşturmak için gerekli bir web yapılandırmak için bir `System.ServiceModel.ServiceHostFactory` oluşturulan <xref:System.ServiceModel.Activation.ServiceHostFactory> ve tüm gerekli yapılandırma. .NET 4.5 ile başlayarak, her ikisi de yapılandırmak için daha kolay bir yolu şirket içinde barındırılan ve web hizmetleri kod barındırılan WCF sağlar.  
   
 ## <a name="the-configure-method"></a>Yapılandırma yöntemi  
- Yalnızca adlı genel statik yöntemi tanımlayın `Configure` hizmet uygulaması sınıfınızda aşağıdaki imzayla:  
+ Adlı bir ortak statik metodun yalnızca tanımlama `Configure` aşağıdaki hizmet uygulaması sınıfınızın imzasında ile:  
   
 ```csharp  
 public static void Configure(ServiceConfiguration config)  
 ```  
   
- Yapılandırma yöntemine geçen bir <xref:System.ServiceModel.ServiceConfiguration> uç noktaları ve davranışları eklemek Geliştirici etkinleştirir örneği. Hizmet ana bilgisayarı açılmadan önce bu yöntem WCF tarafından çağrılır. Tanımlandığında, bir app.config veya web.config dosyasında belirtilen tüm hizmet yapılandırma ayarları göz ardı edilir.  
+ Yapılandırma yöntemi alır bir <xref:System.ServiceModel.ServiceConfiguration> uç noktalar ve davranışlar eklemek geliştiricinin örneği. Bu yöntem, hizmet ana bilgisayarı açılmadan önce WCF tarafından çağrılır. Tanımlandığında, bir app.config veya web.config dosyasında belirtilen tüm hizmet yapılandırma ayarları göz ardı edilir.  
   
- Aşağıdaki kod parçacığını nasıl tanımlanacağı gösterilmektedir `Configure` yöntemi ve hizmet uç noktası, bir uç noktası davranışı ve hizmet davranışları ekleyin:  
+ Aşağıdaki kod parçacığını nasıl tanımlanacağı anlatılmakta `Configure` yöntemi ve bir hizmet uç noktası, bir uç nokta davranışı ve hizmet davranışlarını ekleyin:  
   
 ```csharp  
 public class Service1 : IService1  
@@ -56,7 +56,7 @@ public class Service1 : IService1
     }  
 ```  
   
- Bir hizmet için https gibi bir protokolü etkinleştirmek için ya da açıkça protokolünü kullanan bir uç nokta ekleyebilir ve her taban adresi için bir uç nokta ekleyen ServiceConfiguration.EnableProtocol(Binding) çağırarak otomatik olarak uç noktalar ekleyebilirsiniz protokol ve tanımlanan her hizmet sözleşmesi ile uyumludur. Aşağıdaki kod ServiceConfiguration.EnableProtocol yönteminin nasıl kullanılacağını gösterir:  
+ Https için bir hizmet gibi bir protokolü etkinleştirmek için ya da açıkça protokolünü kullanan bir uç nokta ekleyebilirsiniz veya otomatik olarak, her bir temel adres için bir uç nokta ekleyen ServiceConfiguration.EnableProtocol(Binding) çağırarak uç noktalar ekleyebilirsiniz protokol ve tanımlanan her bir hizmet sözleşmesi ile uyumlu. Aşağıdaki kod ServiceConfiguration.EnableProtocol yönteminin nasıl kullanılacağını göstermektedir:  
   
 ```csharp  
 public class Service1 : IService1   
@@ -77,7 +77,7 @@ public class Service1 : IService1
 }   
 ```  
   
- Ayarlarında <`protocolMappings`> bölümünde hiç uygulama uç nokta eklenir, yalnızca kullanılır <xref:System.ServiceModel.ServiceConfiguration> programlı olarak. Çağırarak hizmet yapılandırmasını varsayılan uygulama yapılandırma dosyasından isteğe bağlı olarak yükleyebilir <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> ve ayarlarını değiştirin. <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration> Sınıfı ayrıca yapılandırma merkezi yapılandırmasından yük olanak tanır. Aşağıdaki kod, bu uygulama verilmektedir:  
+ Ayarları <`protocolMappings`> bölüm yalnızca uygulama uç nokta için eklenirse kullanılan <xref:System.ServiceModel.ServiceConfiguration> programlı olarak. Çağırarak hizmet yapılandırmasını varsayılan uygulama yapılandırma dosyasından isteğe bağlı olarak yükleyebilir <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> ve ayarlarını değiştirin. <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration> Sınıfı ayrıca yapılandırma merkezi yapılandırmasından yük olanak tanır. Aşağıdaki kod bunu uygulamak nasıl gösterir:  
   
 ```  
 public class Service1 : IService1   
@@ -91,13 +91,12 @@ public class Service1 : IService1
 ```  
   
 > [!IMPORTANT]
->  Unutmayın <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> yoksayar <`host`> içindeki ayarlar <`service`> etiket <`system.serviceModel`>. Kavramsal olarak, <`host`> ana bilgisayar yapılandırması, değil hizmet yapılandırmasını ve bu hakkında yapılandırma yöntemi yürütülmeden önce yüklenen alır.  
+>  Unutmayın <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> yoksayar <`host`> ayarlarında <`service`> etiketi <`system.serviceModel`>. Kavramsal olarak, <`host`> ana bilgisayar yapılandırması, olmayan hizmet yapılandırması ve onu hakkında yapılandırma yöntemi yürütülmeden önce yüklenen alır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Yapılandırma Dosyalarını Kullanarak Hizmetleri Yapılandırma](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
  [İstemci Davranışlarını Yapılandırma](../../../docs/framework/wcf/configuring-client-behaviors.md)  
  [Basitleştirilmiş Yapılandırma](../../../docs/framework/wcf/simplified-configuration.md)  
- [Yapılandırma Temelli Etkinleştirme](../../../docs/framework/wcf/samples/configuration-based-activation.md)  
  [Yapılandırma](../../../docs/framework/wcf/samples/configuration-sample.md)  
  [IIS ve WAS'ta Yapılandırma Temelli Etkinleştirme](../../../docs/framework/wcf/feature-details/configuration-based-activation-in-iis-and-was.md)  
  [Yapılandırma ve Meta Veri Desteği](../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)  

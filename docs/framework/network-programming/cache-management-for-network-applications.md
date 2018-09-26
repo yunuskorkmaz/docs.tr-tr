@@ -9,11 +9,11 @@ ms.assetid: fc258a40-f370-434f-ae09-4a8cb11ddaeb
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 1e0b3ed66977dd6587789e3d88f532b699653c6f
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47110885"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47195582"
 ---
 # <a name="cache-management-for-network-applications"></a>Ağ uygulamaları için önbellek yönetimi
 Bu konu ve alt ilgili konuları kullanılarak elde edilen kaynaklar için önbelleğe alma açıklayan <xref:System.Net.WebClient>, <xref:System.Net.WebRequest>, <xref:System.Net.HttpWebRequest>, ve <xref:System.Net.FtpWebRequest> sınıfları.  

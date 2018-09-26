@@ -19,11 +19,11 @@ ms.assetid: d2811830-3bcb-495c-b82d-cda9cf919aad
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: e6ab51da72a7cecac02a2bbd5664dee164239401
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47108656"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47195477"
 ---
 # <a name="using-tcp-services"></a>TCP Hizmetleri kullanma
 <xref:System.Net.Sockets.TcpClient> Sınıfı veri TCP kullanarak bir Internet kaynaktan ister. Özellikleri ve yöntemleri **TcpClient** oluşturmak için ayrıntıları soyut bir <xref:System.Net.Sockets.Socket> istemek ve TCP kullanarak veri alma. Uzak cihazla bağlantı bir akış olarak temsil edilir çünkü veri okumak ve .NET Framework akış işleme teknikleri ile yazılır.  

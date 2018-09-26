@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: ef4c3229-b151-4d85-8091-e6456af9b935
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: ab1644d23e4d6d78b62e701902e5ec39e134b38b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b15e569ff6e42298c0a1de02f77ab7c302c70d86
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745126"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47193518"
 ---
 # <a name="ltassertgt-element"></a>&lt;Assert&gt; öğesi
-Bir ileti kutusu çağırdığınızda görüntülenip görüntülenmeyeceğini belirtir <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> yöntemi; ayrıca iletileri yazmak için dosya adını belirtir.  
+Bir ileti kutusu çağırdığınızda görüntülenip görüntülenmeyeceğini belirtir <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> yöntemi de ileti yazmak için dosya adını belirtir.  
   
  \<Yapılandırma >  
 \<System.Diagnostics >  
@@ -38,8 +37,8 @@ Bir ileti kutusu çağırdığınızda görüntülenip görüntülenmeyeceğini 
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`assertuienabled`|İsteğe bağlı öznitelik.<br /><br /> Görüntülenecek bir ileti kutusunu olup olmadığını belirtir **Debug.Assert** yöntemi hesaplar için **false**.|  
-|`logfilename`|İsteğe bağlı öznitelik.<br /><br /> İf ileti yazmak için dosya adını belirtir **Debug.Assert** değerlendiren **false**.|  
+|`assertuienabled`|İsteğe bağlı öznitelik.<br /><br /> Görüntülenecek bir ileti kutusunu olup olmadığını belirtir **Debug.Assert** yöntemi değerlendirilen **false**.|  
+|`logfilename`|İsteğe bağlı öznitelik.<br /><br /> Eğer ileti yazmak için dosya adını belirtir **Debug.Assert** değerlendiren **false**.|  
   
 ## <a name="assertuienabled-attribute"></a>assertuienabled özniteliği  
   
@@ -56,13 +55,13 @@ Bir ileti kutusu çağırdığınızda görüntülenip görüntülenmeyeceğini 
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
-|`system.diagnostics`|Toplamak, depolamak ve iletileri ve izleme anahtarı ayarlandığı düzeyi rota izleme dinleyicilerini belirtir.|  
+|`system.diagnostics`|Toplamak, depolamak ve iletileri ve bir izleme anahtarı ayarlandığı düzeyi izleme dinleyicilerini belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Her iki öznitelik  **\<assert >** öğesi isteğe bağlıdır. İletileri yazmak için bir dosya belirtmeden ileti kutuları devre dışı bırakabilir veya ileti kutuları etkin bırakarak çalışırken iletiler yazmak için bir dosya belirtebilirsiniz.  
+ Her iki öznitelikleri  **\<assert >** öğe isteğe bağlıdır. İleti yazmak için bir dosya belirtmeden ileti kutularını devre dışı bırakabilir veya ileti kutuları etkin bırakılması while iletiler yazmak için bir dosya belirtebilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek çağırdığınızda görüntüleme ileti kutuları devre dışı bırakma gösterir **Debug.Assert** ve iletileri yazma `c:\log.txt`.  
+ Aşağıdaki örnek, ileti kutularını görüntüleme çağırdığınızda devre dışı bırakmak gösterilmektedir **Debug.Assert** ve iletileri yazma `c:\log.txt`.  
   
 ```xml  
 <configuration>  

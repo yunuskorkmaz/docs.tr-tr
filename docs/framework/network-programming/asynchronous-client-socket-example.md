@@ -12,11 +12,11 @@ ms.assetid: d4ac53a0-b50b-4232-9726-d47d25fcc38a
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 562129b7deea4af9b91dfc92f83a538f6f89f06a
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47110324"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47208308"
 ---
 # <a name="asynchronous-client-socket-example"></a>Zaman uyumsuz istemci yuvası örneği
 Aşağıdaki örnek program bir sunucuya bağlanan bir istemcinin oluşturur. İstemci, sunucunun bir yanıt döndürür ancak istemci uygulamanın yürütülmesini askıya şekilde zaman uyumsuz bir yuvası ile oluşturulmuştur. Uygulama sunucusuna bir dize gönderir ve daha sonra konsolda sunucu tarafından döndürülen dize görüntüler.  

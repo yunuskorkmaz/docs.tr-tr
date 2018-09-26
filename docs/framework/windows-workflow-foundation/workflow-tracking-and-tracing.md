@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], tracking and tracing
 ms.assetid: b965ded6-370a-483d-8790-f794f65b137e
-ms.openlocfilehash: 8490299e995a469860f660a50a69915d5ddc4940
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 5358a3abe84c7fe7d753560611f0c7338b060826
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44038094"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47200301"
 ---
 # <a name="workflow-tracking-and-tracing"></a>İzleme ve izleme iş akışı
 Windows iş akışı izleme bir [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] özelliği iş akışının yürütülmesini görünürlük sağlayacak şekilde tasarlanmıştır. Bu, bir iş akışı örneği yürütülmesini izlemek için izleme altyapısı sağlar. İzleme WF altyapısının şeffaf bir şekilde yürütme sırasında anahtar olayları yansıtan kayıtları yaymak için bir iş akışı Instruments. Bu işlev varsayılan olarak tüm kullanılabilir [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] iş akışı. Herhangi bir değişiklik için yapılması gereken bir [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] gerçekleşmesi izleme iş akışını. Bu, almak istediğiniz izleme veri miktarını karar adımlarından oluşur. Bir iş akışı örneği başlatıldığında veya izleme işleme tamamlandıktan kayıtları yayılan. İzleme, iş akışı değişkenleri ile ilişkili iş ilgili verileri de ayıklayabilirsiniz. İş akışı sistem işleme bir sırayı temsil ediyorsa, örneğin, sipariş kimliği ile birlikte ayıklanabileceği <xref:System.Activities.Tracking.TrackingRecord> nesne. Genel olarak, izleme WF etkinleştirme Tanılama veya İş analizi verilerini bir iş akışı yürütülmesini erişilecek kolaylaştırır.  
@@ -50,9 +50,6 @@ Windows iş akışı izleme bir [!INCLUDE[netfx_current_long](../../../includes/
   
  [İş Akışı İzleme](../../../docs/framework/windows-workflow-foundation/workflow-tracing.md)  
  Bir iş akışı hata ayıklama izlemeyi etkinleştirmek için iki şekilde açıklar.  
-  
- [İzleme Kullanarak İş Akışı Yürütme Süresini Belirleme](../../../docs/framework/windows-workflow-foundation/determining-workflow-execution-duration-using-tracing.md)  
- İş akışı yürütme süresini belirlemek için izleme iletileri kullanmayı açıklar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [SQL İzleme](../../../docs/framework/windows-workflow-foundation/samples/sql-tracking.md)

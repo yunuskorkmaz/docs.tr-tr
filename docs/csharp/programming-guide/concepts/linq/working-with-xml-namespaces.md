@@ -3,11 +3,11 @@ title: XML ad alanları (C#) ile çalışma
 ms.date: 07/20/2015
 ms.assetid: 05cf4dc7-7b25-40f0-abc9-1bc35de4b48a
 ms.openlocfilehash: 4863794408adbfb8b51c4f125ee340eb718a5abe
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47082597"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47208873"
 ---
 # <a name="working-with-xml-namespaces-c"></a>XML ad alanları (C#) ile çalışma
 Bu bölümdeki konular açıklar nasıl [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ad alanlarını destekler.  

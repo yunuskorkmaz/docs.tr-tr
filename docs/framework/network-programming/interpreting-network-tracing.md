@@ -12,11 +12,11 @@ ms.assetid: ad22b4b8-00af-4778-9cca-cb609ce1f8ff
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: d05e0f374f4454c95dd02be8bd2eff573040f97e
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47087859"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47209148"
 ---
 # <a name="interpreting-network-tracing"></a>Ağ izlemeyi yorumlama
 Ağ izleme etkin olduğunda izleme çağrıları, uygulamanızın çeşitli yapar yakalamak için kullanabileceğiniz <xref:System.Net> sınıf üyeleri. Bu çağrılarının çıktısı aşağıdaki örneklere benzer olabilir.  

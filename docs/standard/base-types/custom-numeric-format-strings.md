@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf1fd3ff78065430800583eb97db986bad419710
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 83f3abb2c77461b74e388dcb421fac6c19a43655
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46584389"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47205077"
 ---
 # <a name="custom-numeric-format-strings"></a>Özel sayısal biçim dizeleri
 
@@ -53,7 +53,7 @@ Sayısal verinin nasıl biçimlendirileceğini tanımlamak için bir veya daha f
   
  Aşağıdaki bölümler her özel sayısal biçim tanımlayıcısı hakkında ayrıntılı bilgi sağlar.  
 
-[!INCLUDE[C# interactive-note](~/includes/csharp-interactive-note.md)] 
+[!INCLUDE[C# interactive-note](~/includes/csharp-interactive-partial-note.md)] 
   
 <a name="Specifier0"></a>   
 ## <a name="the-0-custom-specifier"></a>"0" özel Belirleyicisi  
@@ -64,7 +64,7 @@ Sayısal verinin nasıl biçimlendirileceğini tanımlamak için bir veya daha f
  Aşağıdaki örnek sıfır yer tutucu karakterleri içeren özel biçim dizelerini kullanarak biçimlendirilen birkaç değeri gösterir.  
   
  [!code-cpp[Formatting.Numeric.Custom#1](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#1)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#1](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#1)]
+ [!code-csharp[Formatting.Numeric.Custom#1](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#1)]
  [!code-vb[Formatting.Numeric.Custom#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#1)]  
   
  [Tabloya dön](#table)  
@@ -80,7 +80,7 @@ Sayısal verinin nasıl biçimlendirileceğini tanımlamak için bir veya daha f
  Aşağıdaki örnek basamak yer tutucu karakterleri içeren özel biçim dizelerini kullanarak biçimlendirilen birkaç değeri gösterir.  
   
  [!code-cpp[Formatting.Numeric.Custom#2](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#2)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#2](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#2)]
+ [!code-csharp[Formatting.Numeric.Custom#2](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#2)]
  [!code-vb[Formatting.Numeric.Custom#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#2)]  
   
  Basamak yok, bir sonuç dizesi veya 2f3b boşluk ile değiştirilir döndürmek için [bileşik biçimlendirme özelliği](../../../docs/standard/base-types/composite-formatting.md) ve aşağıdaki örnekte gösterildiği gibi bir alan genişliğini belirtin.  
@@ -100,7 +100,7 @@ Sayısal verinin nasıl biçimlendirileceğini tanımlamak için bir veya daha f
  Aşağıdaki örnek birkaç sonuç dizesindeki ondalık noktasının konumunu tanımlamak için "." biçim tanımlayıcısını kullanır.  
   
  [!code-cpp[Formatting.Numeric.Custom#3](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#3)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#3](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#3)]
+ [!code-csharp[Formatting.Numeric.Custom#3](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#3)]
  [!code-vb[Formatting.Numeric.Custom#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#3)]  
   
  [Tabloya dön](#table)  
@@ -120,13 +120,13 @@ Sayısal verinin nasıl biçimlendirileceğini tanımlamak için bir veya daha f
  Aşağıdaki örnek virgülün bir grup ayracı olarak kullanımını gösterir.  
   
  [!code-cpp[Formatting.Numeric.Custom#4](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#4)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#4](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#4)]
+ [!code-csharp[Formatting.Numeric.Custom#4](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#4)]
  [!code-vb[Formatting.Numeric.Custom#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#4)]  
   
  Aşağıdaki örnek virgülün sayı ölçekleme için bir tanımlayıcı olarak kullanımını gösterir.  
   
  [!code-cpp[Formatting.Numeric.Custom#5](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#5)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#5)]
+ [!code-csharp[Formatting.Numeric.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#5)]
  [!code-vb[Formatting.Numeric.Custom#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#5)]  
   
  [Tabloya dön](#table)  
@@ -138,7 +138,7 @@ Sayısal verinin nasıl biçimlendirileceğini tanımlamak için bir veya daha f
  Aşağıdaki örnek "%" özel tanımlayıcısını içeren birkaç özel biçim dizesini tanımlar.  
   
  [!code-cpp[Formatting.Numeric.Custom#6](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#6)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#6](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#6)]
+ [!code-csharp[Formatting.Numeric.Custom#6](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#6)]
  [!code-vb[Formatting.Numeric.Custom#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#6)]  
   
  [Tabloya dön](#table)  
@@ -150,7 +150,7 @@ Sayısal verinin nasıl biçimlendirileceğini tanımlamak için bir veya daha f
  Aşağıdaki örnek "‰" özel tanımlayıcısını içeren bir özel biçim dizesi tanımlar.  
   
  [!code-cpp[Formatting.Numeric.Custom#9](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#9)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#9](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#9)]
+ [!code-csharp[Formatting.Numeric.Custom#9](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#9)]
  [!code-vb[Formatting.Numeric.Custom#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#9)]  
   
  [Tabloya dön](#table)  
@@ -162,7 +162,7 @@ Sayısal verinin nasıl biçimlendirileceğini tanımlamak için bir veya daha f
  Aşağıdaki örnek bilimsel gösterim tanımlayıcılarını kullanarak birkaç sayısal değeri biçimlendirir.  
   
  [!code-cpp[Formatting.Numeric.Custom#7](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#7)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#7](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#7)]
+ [!code-csharp[Formatting.Numeric.Custom#7](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#7)]
  [!code-vb[Formatting.Numeric.Custom#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#7)]  
   
  [Tabloya dön](#table)  

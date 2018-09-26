@@ -12,11 +12,11 @@ ms.assetid: 8d84f936-2376-4356-9264-03162e0f9279
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 2d46f88b40fc48eb819877c49ff9e04e487a0f5a
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47087404"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47205258"
 ---
 # <a name="how-to-customize-a-time-based-cache-policy"></a>Nasıl yapılır: saat temelli önbellek ilkesini özelleştirme
 Bir saat temelli önbellek ilkesi oluştururken en uzun geçerlilik süresi, en az eskime, en fazla eskime veya önbellek eşitleme tarih değerleri belirtilerek, önbelleğe alma davranışını özelleştirebilirsiniz. <xref:System.Net.Cache.HttpRequestCachePolicy> Nesnesi, bu değerleri geçerli birleşimleri belirtmek olanak tanıyan birkaç Oluşturucusu sağlar.  

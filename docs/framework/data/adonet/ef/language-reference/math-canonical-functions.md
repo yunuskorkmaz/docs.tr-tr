@@ -3,11 +3,11 @@ title: Kurallı matematik işlevleri
 ms.date: 03/30/2017
 ms.assetid: 6f6cddc6-b561-4ebe-84b6-841ef5b4113b
 ms.openlocfilehash: 0fc9f4942c3f76f139ab7e4400005f0bfe80204e
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47111665"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47208456"
 ---
 # <a name="math-canonical-functions"></a>Kurallı matematik işlevleri
 

@@ -4,12 +4,12 @@ description: Varolan ve .NET Core csproj dosyalarına arasındaki farklar hakkı
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/22/2017
-ms.openlocfilehash: d868eb689af1d87ea2adb1f0069345cbb8195af7
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 1fd264da2863fbeb88900be0f6fe000acac08a09
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004383"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47216922"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core csproj biçimine eklemeler
 
@@ -83,11 +83,11 @@ Csproj ile varsayılan eğik çizgi genelleştirmeler projenizden kaldırmak ve 
 
 Csproj değişiklikleri proje dosyaları büyük ölçüde basitleştirme olsa da, SDK ve hedeflerine dahil olduğunda gördüğünde MSBuild gibi tam olarak genişletilmiş proje görmek isteyebilirsiniz. Projeyle önişle [ `/pp` geçiş](/visualstudio/msbuild/msbuild-command-line-reference#preprocess) , [ `dotnet msbuild` ](dotnet-msbuild.md) komutunu Katkıları derleme için hangi dosyaların içeri aktarılan hangi gösterir ve kaynakları gerçekten Proje oluşturma:
 
-`dotnet msbuild /pp:fullproject.xml`
+`dotnet msbuild -pp:fullproject.xml`
 
 Birden çok hedef çerçeve proje varsa komutun sonuçlarını yalnızca bunlardan birine bir MSBuild özellik olarak belirterek odaklanmış olur:
 
-`dotnet msbuild /p:TargetFramework=netcoreapp2.0 /pp:fullproject.xml`
+`dotnet msbuild -p:TargetFramework=netcoreapp2.0 -pp:fullproject.xml`
 
 ## <a name="additions"></a>Eklemeleri
 
@@ -265,3 +265,37 @@ Temel yolunu *.nuspec* dosya.
 
 ### <a name="nuspecproperties"></a>NuspecProperties
 Noktalı virgülle ayrılmış listesi anahtar = değer çiftleri.
+
+## <a name="assemblyinfo-properties"></a>AssemblyInfo özellikleri
+[Derleme özniteliklerinin](../../framework/app-domains/set-assembly-attributes.md) , genellikle mevcut bir *AssemblyInfo* dosya artık otomatik olarak üretilen özellikleri.
+
+### <a name="properties-per-attribute"></a>Öznitelik başına özellikleri
+
+Her öznitelik içeriği ve başka neslini aşağıdaki tabloda gösterildiği gibi devre dışı bırakmak için denetleyen bir özelliğe sahiptir:
+
+| Öznitelik                                                      | Özellik               | Özelliği devre dışı bırakmak için                             |
+|----------------------------------------------------------------|------------------------|-------------------------------------------------|
+| <xref:System.Reflection.AssemblyCompanyAttribute>              | `Company`              | `GenerateAssemblyCompanyAttribute`              |
+| <xref:System.Reflection.AssemblyConfigurationAttribute>        | `Configuration`        | `GenerateAssemblyConfigurationAttribute`        |
+| <xref:System.Reflection.AssemblyCopyrightAttribute>            | `Copyright`            | `GenerateAssemblyCopyrightAttribute`            |
+| <xref:System.Reflection.AssemblyDescriptionAttribute>          | `Description`          | `GenerateAssemblyDescriptionAttribute`          |
+| <xref:System.Reflection.AssemblyFileVersionAttribute>          | `FileVersion`          | `GenerateAssemblyFileVersionAttribute`          |
+| <xref:System.Reflection.AssemblyInformationalVersionAttribute> | `InformationalVersion` | `GenerateAssemblyInformationalVersionAttribute` |
+| <xref:System.Reflection.AssemblyProductAttribute>              | `Product`              | `GenerateAssemblyProductAttribute`              |
+| <xref:System.Reflection.AssemblyTitleAttribute>                | `AssemblyTitle`        | `GenerateAssemblyTitleAttribute`                |
+| <xref:System.Reflection.AssemblyVersionAttribute>              | `AssemblyVersion`      | `GenerateAssemblyVersionAttribute`              |
+| <xref:System.Resources.NeutralResourcesLanguageAttribute>      | `NeutralLanguage`      | `GenerateNeutralResourcesLanguageAttribute`     |
+
+Notlar:
+
+* `AssemblyVersion` ve `FileVersion` değerini almak için varsayılandır `$(Version)` soneki olmadan. Örneğin, varsa `$(Version)` olduğu `1.2.3-beta.4`, değer sonra `1.2.3`.
+* `InformationalVersion` değerini varsayılan olarak `$(Version)`.
+* `InformationalVersion` sahip `$(SourceRevisionId)` özelliği varsa eklenir. Bunu kullanarak devre dışı bırakılabilir `IncludeSourceRevisionInInformationalVersion`.
+* `Copyright` ve `Description` özellikleri NuGet meta veriler için de kullanılır.
+* `Configuration` tüm yapı işlemi ile paylaşılır ve aracılığıyla ayarlanan `--configuration` parametresinin `dotnet` komutları.
+
+### <a name="generateassemblyinfo"></a>GenerateAssemblyInfo 
+Etkinleştirme veya tüm AssemblyInfo oluşturma devre dışı bırakan bir Boole değeri. Varsayılan değer `true` şeklindedir. 
+
+### <a name="generatedassemblyinfofile"></a>GeneratedAssemblyInfoFile 
+Oluşturulan derleme bilgileri dosyasının yolu. Varsayılan bir dosyaya `$(IntermediateOutputPath)` (obj) dizini.

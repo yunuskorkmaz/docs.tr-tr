@@ -3,11 +3,11 @@ title: 'Lambda İfadeleri: fun Anahtar Sözcüğü (F#)'
 description: "Anonim bir işlevdir bir lambda ifadesi tanımlamak için F # 'eğlenceli' anahtar sözcüğünü kullanmayı öğrenin."
 ms.date: 05/16/2016
 ms.openlocfilehash: a37757f6b7328cd348bbf13f058a6dbc881769cf
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47080194"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47231027"
 ---
 # <a name="lambda-expressions-the-fun-keyword-f"></a>Lambda İfadeleri: fun Anahtar Sözcüğü (F#)
 

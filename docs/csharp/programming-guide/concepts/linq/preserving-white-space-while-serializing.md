@@ -3,11 +3,11 @@ title: While Serializing3 boşluk koruma
 ms.date: 07/20/2015
 ms.assetid: 0c4f8b98-483b-4cf8-86be-fa146eef90dc
 ms.openlocfilehash: 7fd0a38d2a9ed8c4712b8e9a03a24a23b408f38a
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47089392"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47204696"
 ---
 # <a name="preserving-white-space-while-serializing"></a>Serileştirirken boşlukları koruma
 Bu konuda, bir XML ağacı serileştirilirken boşluk denetlemek nasıl açıklanmaktadır.  

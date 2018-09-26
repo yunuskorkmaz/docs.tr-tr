@@ -4,12 +4,12 @@ description: Genel bir aracı oluşturmayı açıklar. Genel aracı ile .NET Cor
 author: Thraka
 ms.author: adegeo
 ms.date: 08/22/2018
-ms.openlocfilehash: 1ad3e5c585cbfcaecb7a4d04de068273ef240763
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 3860aad5e2c13714298d50bb9ac10daec3aadf01
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45991161"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47231229"
 ---
 # <a name="create-a-net-core-global-tool-using-the-net-core-cli"></a>Bir .NET Core genel .NET Core CLI'yı kullanarak aracı oluşturma
 
@@ -167,7 +167,7 @@ dotnet pack
 Bir paket olduğuna göre bu paketten aracını yükleyin: 
 
 ```console
-dotnet tool install --global --add-source ./nupkg botsay`
+dotnet tool install --global --add-source ./nupkg botsay
 ```
 
 `--add-source` Parametresi, geçici olarak kullanmak için .NET Core CLI bildirir `./nupkg` klasörü (bizim `<PackageOutputPath>` klasör) ek bir kaynak için NuGet paketlerini akış. Genel araçlarını yükleme hakkında daha fazla bilgi için bkz. [.NET Core Araçları Genel genel bakış][global-tool-info].

@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 66b46f95-fa2d-4b5b-b6ce-0572ab0cdd50
 author: BrucePerlerMS
 ms.openlocfilehash: 703e89342cbfd4a957c10419d6583e85ec6f6d2a
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47079850"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47216890"
 ---
 # <a name="ltsecureconversationbootstrapgt"></a>&lt;secureConversationBootstrap&gt;
 Güvenli konuşma hizmeti başlatmak için kullanılan varsayılan değerleri belirtir.  

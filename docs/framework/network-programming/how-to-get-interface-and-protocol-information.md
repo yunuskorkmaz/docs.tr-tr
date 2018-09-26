@@ -7,11 +7,11 @@ ms.assetid: fd88d26c-4063-495e-a253-736ac3e6b23f
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: ae4eb38c72a7f7629cea0f8137a4337553457808
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47078475"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47200912"
 ---
 # <a name="how-to-get-interface-and-protocol-information"></a>Nasıl yapılır: arabirim ve protokol bilgilerini alma
 Bu örnek, bir ağ arabiriminin TCP istatistikleri okumak gösterilmektedir.  

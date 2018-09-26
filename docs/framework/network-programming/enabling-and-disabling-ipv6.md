@@ -5,11 +5,11 @@ ms.assetid: 6408d3ef-c9ba-49d9-b15e-fe74bd3ef031
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: f63d62c7605d32dfbe97193f8aed53f0fc547cff
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47085846"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47195638"
 ---
 # <a name="enabling-and-disabling-ipv6"></a>IPv6 devre dışı bırakma ve etkinleştirme
 IPv6 protokolü kullanmak için bir IPv6 destekleyen bir işletim sistemi sürümünü çalıştırdığından emin olun ve işletim sistemi ve ağ sınıfları düzgün yapılandırıldığından emin olun.  

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - sum operator [Visual Basic]
 ms.assetid: 5694778f-0a2c-4539-8009-f66f318fb46d
 ms.openlocfilehash: 91806c204c313956b292eb9c9be078991f733b4e
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47172212"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47231487"
 ---
 # <a name="-operator-visual-basic"></a>+ İşleci (Visual Basic)
 İki sayı ekleyen veya sayısal bir ifadenin pozitif değerini döndürür. Ayrıca iki dize ifadeleri birleştirmek için kullanılabilir.  
