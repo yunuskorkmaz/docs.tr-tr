@@ -7,23 +7,23 @@ helpviewer_keywords:
 - types [C#], conversion keywords
 ms.assetid: 8683ff14-5289-4efe-b4f5-1e6a075918ab
 ms.openlocfilehash: 34175f1bda169a9def9e3146214a6d5cd4d258e7
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47089042"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47230936"
 ---
-# <a name="conversion-keywords-c-reference"></a><span data-ttu-id="0198f-102">Dönüşüm Anahtar Sözcükleri (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="0198f-102">Conversion Keywords (C# Reference)</span></span>
-<span data-ttu-id="0198f-103">Bu bölümde, tür dönüştürmelerinde kullanılan anahtar sözcükler açıklanmaktadır:</span><span class="sxs-lookup"><span data-stu-id="0198f-103">This section describes keywords used in type conversions:</span></span>  
+# <a name="conversion-keywords-c-reference"></a><span data-ttu-id="6bbdb-102">Dönüşüm Anahtar Sözcükleri (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="6bbdb-102">Conversion Keywords (C# Reference)</span></span>
+<span data-ttu-id="6bbdb-103">Bu bölümde, tür dönüştürmelerinde kullanılan anahtar sözcükler açıklanmaktadır:</span><span class="sxs-lookup"><span data-stu-id="6bbdb-103">This section describes keywords used in type conversions:</span></span>  
   
--   [<span data-ttu-id="0198f-104">explicit</span><span class="sxs-lookup"><span data-stu-id="0198f-104">explicit</span></span>](../../../csharp/language-reference/keywords/explicit.md)  
+-   [<span data-ttu-id="6bbdb-104">explicit</span><span class="sxs-lookup"><span data-stu-id="6bbdb-104">explicit</span></span>](../../../csharp/language-reference/keywords/explicit.md)  
   
--   [<span data-ttu-id="0198f-105">implicit</span><span class="sxs-lookup"><span data-stu-id="0198f-105">implicit</span></span>](../../../csharp/language-reference/keywords/implicit.md)  
+-   [<span data-ttu-id="6bbdb-105">implicit</span><span class="sxs-lookup"><span data-stu-id="6bbdb-105">implicit</span></span>](../../../csharp/language-reference/keywords/implicit.md)  
   
--   [<span data-ttu-id="0198f-106">operator</span><span class="sxs-lookup"><span data-stu-id="0198f-106">operator</span></span>](../../../csharp/language-reference/keywords/operator.md)  
+-   [<span data-ttu-id="6bbdb-106">operator</span><span class="sxs-lookup"><span data-stu-id="6bbdb-106">operator</span></span>](../../../csharp/language-reference/keywords/operator.md)  
   
-## <a name="see-also"></a><span data-ttu-id="0198f-107">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="0198f-107">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="6bbdb-107">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="6bbdb-107">See Also</span></span>  
 
-- [<span data-ttu-id="0198f-108">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="0198f-108">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="0198f-109">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="0198f-109">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="0198f-110">C# Anahtar Sözcükleri</span><span class="sxs-lookup"><span data-stu-id="0198f-110">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)
+- [<span data-ttu-id="6bbdb-108">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="6bbdb-108">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="6bbdb-109">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="6bbdb-109">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="6bbdb-110">C# Anahtar Sözcükleri</span><span class="sxs-lookup"><span data-stu-id="6bbdb-110">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)

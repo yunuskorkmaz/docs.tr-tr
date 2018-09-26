@@ -19,22 +19,22 @@ ms.assetid: f977ebdc-1b55-475a-bc3d-3376470b08ae
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9aecf7aef9023439e145d408e40fb4adf5c0e986
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47079035"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47192244"
 ---
-# <a name="how-to-read-and-write-to-files-in-isolated-storage"></a><span data-ttu-id="45e86-102">Nasıl yapılır: Yalıtılmış Depolamadaki Dosyaları Okuma ve Yazma</span><span class="sxs-lookup"><span data-stu-id="45e86-102">How to: Read and Write to Files in Isolated Storage</span></span>
-<span data-ttu-id="45e86-103">Okuma veya yazma için bir yalıtılmış depodaki bir dosya kullanın bir <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> bir akış okuyucusunu nesnesiyle (<xref:System.IO.StreamReader> nesne) veya akış yazıcı (<xref:System.IO.StreamWriter> nesne).</span><span class="sxs-lookup"><span data-stu-id="45e86-103">To read from, or write to, a file in an isolated store, use an <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> object with a stream reader (<xref:System.IO.StreamReader> object) or stream writer (<xref:System.IO.StreamWriter> object).</span></span>  
+# <a name="how-to-read-and-write-to-files-in-isolated-storage"></a><span data-ttu-id="f3335-102">Nasıl yapılır: Yalıtılmış Depolamadaki Dosyaları Okuma ve Yazma</span><span class="sxs-lookup"><span data-stu-id="f3335-102">How to: Read and Write to Files in Isolated Storage</span></span>
+<span data-ttu-id="f3335-103">Okuma veya yazma için bir yalıtılmış depodaki bir dosya kullanın bir <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> bir akış okuyucusunu nesnesiyle (<xref:System.IO.StreamReader> nesne) veya akış yazıcı (<xref:System.IO.StreamWriter> nesne).</span><span class="sxs-lookup"><span data-stu-id="f3335-103">To read from, or write to, a file in an isolated store, use an <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> object with a stream reader (<xref:System.IO.StreamReader> object) or stream writer (<xref:System.IO.StreamWriter> object).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="45e86-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="45e86-104">Example</span></span>  
- <span data-ttu-id="45e86-105">Aşağıdaki kod örneği, bir yalıtılmış depolama alır ve TestStore.txt adlı bir dosya deposunda mevcut olup olmadığını denetler.</span><span class="sxs-lookup"><span data-stu-id="45e86-105">The following code example obtains an isolated store and checks whether a file named TestStore.txt exists in the store.</span></span> <span data-ttu-id="45e86-106">Yoksa, dosyayı oluşturur ve "Merhaba yalıtılmış depolama" yazar.</span><span class="sxs-lookup"><span data-stu-id="45e86-106">If it doesn't exist, it creates the file and writes "Hello Isolated Storage" to the file.</span></span> <span data-ttu-id="45e86-107">TestStore.txt zaten varsa, örnek kod dosyasından okur.</span><span class="sxs-lookup"><span data-stu-id="45e86-107">If TestStore.txt already exists, the example code reads from the file.</span></span>  
+## <a name="example"></a><span data-ttu-id="f3335-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="f3335-104">Example</span></span>  
+ <span data-ttu-id="f3335-105">Aşağıdaki kod örneği, bir yalıtılmış depolama alır ve TestStore.txt adlı bir dosya deposunda mevcut olup olmadığını denetler.</span><span class="sxs-lookup"><span data-stu-id="f3335-105">The following code example obtains an isolated store and checks whether a file named TestStore.txt exists in the store.</span></span> <span data-ttu-id="f3335-106">Yoksa, dosyayı oluşturur ve "Merhaba yalıtılmış depolama" yazar.</span><span class="sxs-lookup"><span data-stu-id="f3335-106">If it doesn't exist, it creates the file and writes "Hello Isolated Storage" to the file.</span></span> <span data-ttu-id="f3335-107">TestStore.txt zaten varsa, örnek kod dosyasından okur.</span><span class="sxs-lookup"><span data-stu-id="f3335-107">If TestStore.txt already exists, the example code reads from the file.</span></span>  
   
  [!code-csharp[Conceptual.IsolatedStorage#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source5.cs#5)]
  [!code-vb[Conceptual.IsolatedStorage#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source5.vb#5)]  
   
-## <a name="see-also"></a><span data-ttu-id="45e86-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="45e86-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f3335-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f3335-108">See also</span></span>
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>  
@@ -42,5 +42,5 @@ ms.locfileid: "47079035"
 - <xref:System.IO.FileAccess?displayProperty=nameWithType>  
 - <xref:System.IO.StreamReader?displayProperty=nameWithType>  
 - <xref:System.IO.StreamWriter?displayProperty=nameWithType>  
-- [<span data-ttu-id="45e86-109">Dosya ve Akış G/Ç'si</span><span class="sxs-lookup"><span data-stu-id="45e86-109">File and Stream I/O</span></span>](../../../docs/standard/io/index.md)  
-- [<span data-ttu-id="45e86-110">Yalıtılmış Depolama</span><span class="sxs-lookup"><span data-stu-id="45e86-110">Isolated Storage</span></span>](../../../docs/standard/io/isolated-storage.md)
+- [<span data-ttu-id="f3335-109">Dosya ve Akış G/Ç'si</span><span class="sxs-lookup"><span data-stu-id="f3335-109">File and Stream I/O</span></span>](../../../docs/standard/io/index.md)  
+- [<span data-ttu-id="f3335-110">Yalıtılmış Depolama</span><span class="sxs-lookup"><span data-stu-id="f3335-110">Isolated Storage</span></span>](../../../docs/standard/io/isolated-storage.md)

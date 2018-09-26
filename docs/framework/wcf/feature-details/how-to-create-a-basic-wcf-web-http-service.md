@@ -6,66 +6,66 @@ dev_langs:
 - vb
 ms.assetid: 877662d3-d372-4e08-b417-51f66a0095cd
 ms.openlocfilehash: 1b76d21cb4f416aae76e7597ad16cfd45e5b7cad
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47090561"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47210272"
 ---
-# <a name="how-to-create-a-basic-wcf-web-http-service"></a><span data-ttu-id="d605b-102">Nasıl yapılır: Temel Bir WCF Web HTTP Hizmeti Oluşturma</span><span class="sxs-lookup"><span data-stu-id="d605b-102">How to: Create a Basic WCF Web HTTP Service</span></span>
+# <a name="how-to-create-a-basic-wcf-web-http-service"></a><span data-ttu-id="9c4a5-102">Nasıl yapılır: Temel Bir WCF Web HTTP Hizmeti Oluşturma</span><span class="sxs-lookup"><span data-stu-id="9c4a5-102">How to: Create a Basic WCF Web HTTP Service</span></span>
 
-<span data-ttu-id="d605b-103">Windows Communication Foundation (WCF), bir Web uç noktası hizmetidir oluşturmanıza olanak sağlar.</span><span class="sxs-lookup"><span data-stu-id="d605b-103">Windows Communication Foundation (WCF) allows you to create a service that exposes a Web endpoint.</span></span> <span data-ttu-id="d605b-104">Hiç SOAP Zarfı olduğunda, XML veya JSON veri Web uç gönderin.</span><span class="sxs-lookup"><span data-stu-id="d605b-104">Web endpoints send data by XML or JSON, there is no SOAP envelope.</span></span> <span data-ttu-id="d605b-105">Bu konuda, bu tür bir uç noktanın kullanıma gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="d605b-105">This topic demonstrates how to expose such an endpoint.</span></span>
+<span data-ttu-id="9c4a5-103">Windows Communication Foundation (WCF), bir Web uç noktası hizmetidir oluşturmanıza olanak sağlar.</span><span class="sxs-lookup"><span data-stu-id="9c4a5-103">Windows Communication Foundation (WCF) allows you to create a service that exposes a Web endpoint.</span></span> <span data-ttu-id="9c4a5-104">Hiç SOAP Zarfı olduğunda, XML veya JSON veri Web uç gönderin.</span><span class="sxs-lookup"><span data-stu-id="9c4a5-104">Web endpoints send data by XML or JSON, there is no SOAP envelope.</span></span> <span data-ttu-id="9c4a5-105">Bu konuda, bu tür bir uç noktanın kullanıma gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="9c4a5-105">This topic demonstrates how to expose such an endpoint.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="d605b-106">Yalnızca bir Web uç noktası güvenli şekilde bunu aktarım güvenliği kullanarak HTTPS kullanıma sağlamaktır.</span><span class="sxs-lookup"><span data-stu-id="d605b-106">The only way to secure a Web endpoint is to expose it through HTTPS, using transport security.</span></span> <span data-ttu-id="d605b-107">İleti tabanlı güvenlik kullanırken, güvenlik bilgileri genellikle SOAP üst bilgilerinde yerleştirilir ve gönderilen iletiler için hiç SOAP Zarfı olmayan SOAP uç noktaları içeren saklanıyorsa güvenlik bilgilerini yerleştirmek için yoktur ve aktarım güvenliği kullanmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="d605b-107">When using message-based security, security information is usually placed in SOAP headers and because the messages sent to non-SOAP endpoints contain no SOAP envelope, there is nowhere to place the security information and you must rely on transport security.</span></span>
+> <span data-ttu-id="9c4a5-106">Yalnızca bir Web uç noktası güvenli şekilde bunu aktarım güvenliği kullanarak HTTPS kullanıma sağlamaktır.</span><span class="sxs-lookup"><span data-stu-id="9c4a5-106">The only way to secure a Web endpoint is to expose it through HTTPS, using transport security.</span></span> <span data-ttu-id="9c4a5-107">İleti tabanlı güvenlik kullanırken, güvenlik bilgileri genellikle SOAP üst bilgilerinde yerleştirilir ve gönderilen iletiler için hiç SOAP Zarfı olmayan SOAP uç noktaları içeren saklanıyorsa güvenlik bilgilerini yerleştirmek için yoktur ve aktarım güvenliği kullanmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="9c4a5-107">When using message-based security, security information is usually placed in SOAP headers and because the messages sent to non-SOAP endpoints contain no SOAP envelope, there is nowhere to place the security information and you must rely on transport security.</span></span>
 
-## <a name="to-create-a-web-endpoint"></a><span data-ttu-id="d605b-108">Bir Web uç noktası oluşturma</span><span class="sxs-lookup"><span data-stu-id="d605b-108">To create a Web endpoint</span></span>
+## <a name="to-create-a-web-endpoint"></a><span data-ttu-id="9c4a5-108">Bir Web uç noktası oluşturma</span><span class="sxs-lookup"><span data-stu-id="9c4a5-108">To create a Web endpoint</span></span>
 
-1. <span data-ttu-id="d605b-109">İle işaretlenmiş bir arabirim kullanarak bir hizmet sözleşmesini tanımlama <xref:System.ServiceModel.ServiceContractAttribute>, <xref:System.ServiceModel.Web.WebInvokeAttribute> ve <xref:System.ServiceModel.Web.WebGetAttribute> öznitelikleri.</span><span class="sxs-lookup"><span data-stu-id="d605b-109">Define a service contract using an interface marked with the <xref:System.ServiceModel.ServiceContractAttribute>, <xref:System.ServiceModel.Web.WebInvokeAttribute> and the <xref:System.ServiceModel.Web.WebGetAttribute> attributes.</span></span>
+1. <span data-ttu-id="9c4a5-109">İle işaretlenmiş bir arabirim kullanarak bir hizmet sözleşmesini tanımlama <xref:System.ServiceModel.ServiceContractAttribute>, <xref:System.ServiceModel.Web.WebInvokeAttribute> ve <xref:System.ServiceModel.Web.WebGetAttribute> öznitelikleri.</span><span class="sxs-lookup"><span data-stu-id="9c4a5-109">Define a service contract using an interface marked with the <xref:System.ServiceModel.ServiceContractAttribute>, <xref:System.ServiceModel.Web.WebInvokeAttribute> and the <xref:System.ServiceModel.Web.WebGetAttribute> attributes.</span></span>
 
      [!code-csharp[htBasicService#0](~/samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#0)]
      [!code-vb[htBasicService#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#0)]
 
     > [!NOTE]
-    > <span data-ttu-id="d605b-110">Varsayılan olarak, <xref:System.ServiceModel.Web.WebInvokeAttribute> işlemi POST çağrısına eşler.</span><span class="sxs-lookup"><span data-stu-id="d605b-110">By default, <xref:System.ServiceModel.Web.WebInvokeAttribute> maps POST calls to the operation.</span></span> <span data-ttu-id="d605b-111">Ancak, işlemi belirterek eşleştirmek için HTTP yöntemini (örneğin, HEAD, PUT veya Sil) belirtebilirsiniz bir "yöntemi =" parametresi.</span><span class="sxs-lookup"><span data-stu-id="d605b-111">You can, however, specify the HTTP method (for example, HEAD, PUT, or DELETE) to map to the operation by specifying a "method=" parameter.</span></span> <span data-ttu-id="d605b-112"><xref:System.ServiceModel.Web.WebGetAttribute> olmayan bir "yöntemi =" parametresi ve yalnızca eşlemeler GET hizmet işlemine çağırır.</span><span class="sxs-lookup"><span data-stu-id="d605b-112"><xref:System.ServiceModel.Web.WebGetAttribute> does not have a "method=" parameter and only maps GET calls to the service operation.</span></span>
+    > <span data-ttu-id="9c4a5-110">Varsayılan olarak, <xref:System.ServiceModel.Web.WebInvokeAttribute> işlemi POST çağrısına eşler.</span><span class="sxs-lookup"><span data-stu-id="9c4a5-110">By default, <xref:System.ServiceModel.Web.WebInvokeAttribute> maps POST calls to the operation.</span></span> <span data-ttu-id="9c4a5-111">Ancak, işlemi belirterek eşleştirmek için HTTP yöntemini (örneğin, HEAD, PUT veya Sil) belirtebilirsiniz bir "yöntemi =" parametresi.</span><span class="sxs-lookup"><span data-stu-id="9c4a5-111">You can, however, specify the HTTP method (for example, HEAD, PUT, or DELETE) to map to the operation by specifying a "method=" parameter.</span></span> <span data-ttu-id="9c4a5-112"><xref:System.ServiceModel.Web.WebGetAttribute> olmayan bir "yöntemi =" parametresi ve yalnızca eşlemeler GET hizmet işlemine çağırır.</span><span class="sxs-lookup"><span data-stu-id="9c4a5-112"><xref:System.ServiceModel.Web.WebGetAttribute> does not have a "method=" parameter and only maps GET calls to the service operation.</span></span>
 
-2. <span data-ttu-id="d605b-113">Hizmet sözleşmesini uygulama.</span><span class="sxs-lookup"><span data-stu-id="d605b-113">Implement the service contract.</span></span>
+2. <span data-ttu-id="9c4a5-113">Hizmet sözleşmesini uygulama.</span><span class="sxs-lookup"><span data-stu-id="9c4a5-113">Implement the service contract.</span></span>
 
      [!code-csharp[htBasicService#1](~/samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#1)]
      [!code-vb[htBasicService#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#1)]
 
-## <a name="to-host-the-service"></a><span data-ttu-id="d605b-114">Ana bilgisayar hizmeti</span><span class="sxs-lookup"><span data-stu-id="d605b-114">To host the service</span></span>
+## <a name="to-host-the-service"></a><span data-ttu-id="9c4a5-114">Ana bilgisayar hizmeti</span><span class="sxs-lookup"><span data-stu-id="9c4a5-114">To host the service</span></span>
 
-1. <span data-ttu-id="d605b-115">Oluşturma bir <xref:System.ServiceModel.Web.WebServiceHost> nesne.</span><span class="sxs-lookup"><span data-stu-id="d605b-115">Create a <xref:System.ServiceModel.Web.WebServiceHost> object.</span></span>
+1. <span data-ttu-id="9c4a5-115">Oluşturma bir <xref:System.ServiceModel.Web.WebServiceHost> nesne.</span><span class="sxs-lookup"><span data-stu-id="9c4a5-115">Create a <xref:System.ServiceModel.Web.WebServiceHost> object.</span></span>
 
      [!code-csharp[htBasicService#2](~/samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#2)]
      [!code-vb[htBasicService#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#2)]
 
-2. <span data-ttu-id="d605b-116">Ekleme bir <xref:System.ServiceModel.Description.ServiceEndpoint> ile <xref:System.ServiceModel.Description.WebHttpBehavior>.</span><span class="sxs-lookup"><span data-stu-id="d605b-116">Add a <xref:System.ServiceModel.Description.ServiceEndpoint> with the <xref:System.ServiceModel.Description.WebHttpBehavior>.</span></span>
+2. <span data-ttu-id="9c4a5-116">Ekleme bir <xref:System.ServiceModel.Description.ServiceEndpoint> ile <xref:System.ServiceModel.Description.WebHttpBehavior>.</span><span class="sxs-lookup"><span data-stu-id="9c4a5-116">Add a <xref:System.ServiceModel.Description.ServiceEndpoint> with the <xref:System.ServiceModel.Description.WebHttpBehavior>.</span></span>
 
      [!code-csharp[htBasicService#3](~/samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#3)]
      [!code-vb[htBasicService#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#3)]
 
     > [!NOTE]
-    > <span data-ttu-id="d605b-117">Bir uç nokta eklemezseniz <xref:System.ServiceModel.Web.WebServiceHost> otomatik olarak bir varsayılan uç noktası oluşturur.</span><span class="sxs-lookup"><span data-stu-id="d605b-117">If you do not add an endpoint, <xref:System.ServiceModel.Web.WebServiceHost> automatically creates a default endpoint.</span></span> <span data-ttu-id="d605b-118"><xref:System.ServiceModel.Web.WebServiceHost> Ayrıca ekler <xref:System.ServiceModel.Description.WebHttpBehavior> ve meta veri uç noktasının varsayılan HTTP uç noktası ile aksatmaz için HTTP yardım sayfasına ve Web Hizmetleri Açıklama Dili (WSDL) alma işlevselliğini devre dışı bırakır.</span><span class="sxs-lookup"><span data-stu-id="d605b-118"><xref:System.ServiceModel.Web.WebServiceHost> also adds <xref:System.ServiceModel.Description.WebHttpBehavior> and disables the HTTP Help page and the Web Services Description Language (WSDL) GET functionality so the metadata endpoint does not interfere with the default HTTP endpoint.</span></span>
+    > <span data-ttu-id="9c4a5-117">Bir uç nokta eklemezseniz <xref:System.ServiceModel.Web.WebServiceHost> otomatik olarak bir varsayılan uç noktası oluşturur.</span><span class="sxs-lookup"><span data-stu-id="9c4a5-117">If you do not add an endpoint, <xref:System.ServiceModel.Web.WebServiceHost> automatically creates a default endpoint.</span></span> <span data-ttu-id="9c4a5-118"><xref:System.ServiceModel.Web.WebServiceHost> Ayrıca ekler <xref:System.ServiceModel.Description.WebHttpBehavior> ve meta veri uç noktasının varsayılan HTTP uç noktası ile aksatmaz için HTTP yardım sayfasına ve Web Hizmetleri Açıklama Dili (WSDL) alma işlevselliğini devre dışı bırakır.</span><span class="sxs-lookup"><span data-stu-id="9c4a5-118"><xref:System.ServiceModel.Web.WebServiceHost> also adds <xref:System.ServiceModel.Description.WebHttpBehavior> and disables the HTTP Help page and the Web Services Description Language (WSDL) GET functionality so the metadata endpoint does not interfere with the default HTTP endpoint.</span></span>
     >
-    >  <span data-ttu-id="d605b-119">Bir URL ile bir olmayan SOAP uç noktası ekleme "" uç noktasında bir işlemi çağırma girişimi yapıldığında beklenmeyen davranışlara neden olur.</span><span class="sxs-lookup"><span data-stu-id="d605b-119">Adding a non-SOAP endpoint with a URL of "" causes unexpected behavior when an attempt is made to call an operation on the endpoint.</span></span> <span data-ttu-id="d605b-120">Bunun nedeni, uç nokta URI'si (temel bir WCF Hizmeti adresine göz atarken görüntülenen sayfa) yardım sayfasına URI'sini aynıdır dinleme ' dir.</span><span class="sxs-lookup"><span data-stu-id="d605b-120">The reason for this is the listen URI of the endpoint is the same as the URI for the help page (the page that is displayed when you browse to the base address of a WCF service).</span></span>
+    >  <span data-ttu-id="9c4a5-119">Bir URL ile bir olmayan SOAP uç noktası ekleme "" uç noktasında bir işlemi çağırma girişimi yapıldığında beklenmeyen davranışlara neden olur.</span><span class="sxs-lookup"><span data-stu-id="9c4a5-119">Adding a non-SOAP endpoint with a URL of "" causes unexpected behavior when an attempt is made to call an operation on the endpoint.</span></span> <span data-ttu-id="9c4a5-120">Bunun nedeni, uç nokta URI'si (temel bir WCF Hizmeti adresine göz atarken görüntülenen sayfa) yardım sayfasına URI'sini aynıdır dinleme ' dir.</span><span class="sxs-lookup"><span data-stu-id="9c4a5-120">The reason for this is the listen URI of the endpoint is the same as the URI for the help page (the page that is displayed when you browse to the base address of a WCF service).</span></span>
 
-     <span data-ttu-id="d605b-121">Bunun gerçekleşmesini önlemek için aşağıdaki işlemlerden birini yapabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="d605b-121">You can do one of the following actions to prevent this from happening:</span></span>
+     <span data-ttu-id="9c4a5-121">Bunun gerçekleşmesini önlemek için aşağıdaki işlemlerden birini yapabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="9c4a5-121">You can do one of the following actions to prevent this from happening:</span></span>
 
-    - <span data-ttu-id="d605b-122">Her zaman bir olmayan SOAP uç noktası için boş olmayan URI belirtin.</span><span class="sxs-lookup"><span data-stu-id="d605b-122">Always specify a non-blank URI for a non-SOAP endpoint.</span></span>
+    - <span data-ttu-id="9c4a5-122">Her zaman bir olmayan SOAP uç noktası için boş olmayan URI belirtin.</span><span class="sxs-lookup"><span data-stu-id="9c4a5-122">Always specify a non-blank URI for a non-SOAP endpoint.</span></span>
 
-    - <span data-ttu-id="d605b-123">Yardım sayfasını kapat.</span><span class="sxs-lookup"><span data-stu-id="d605b-123">Turn off the help page.</span></span> <span data-ttu-id="d605b-124">Bu, aşağıdaki kod ile yapılabilir:</span><span class="sxs-lookup"><span data-stu-id="d605b-124">This can be done with the following code:</span></span>
+    - <span data-ttu-id="9c4a5-123">Yardım sayfasını kapat.</span><span class="sxs-lookup"><span data-stu-id="9c4a5-123">Turn off the help page.</span></span> <span data-ttu-id="9c4a5-124">Bu, aşağıdaki kod ile yapılabilir:</span><span class="sxs-lookup"><span data-stu-id="9c4a5-124">This can be done with the following code:</span></span>
 
      [!code-csharp[htBasicService#4](~/samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/snippets.cs#4)]
      [!code-vb[htBasicService#4](~/samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/snippets.vb#4)]
 
-3. <span data-ttu-id="d605b-125">Hizmet ana bilgisayarı'nı açın ve kullanıcı ENTER tuşuna bastığında kadar bekleyin.</span><span class="sxs-lookup"><span data-stu-id="d605b-125">Open the service host and wait until the user presses ENTER.</span></span>
+3. <span data-ttu-id="9c4a5-125">Hizmet ana bilgisayarı'nı açın ve kullanıcı ENTER tuşuna bastığında kadar bekleyin.</span><span class="sxs-lookup"><span data-stu-id="9c4a5-125">Open the service host and wait until the user presses ENTER.</span></span>
 
      [!code-csharp[htBasicService#5](~/samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/snippets.cs#5)]
      [!code-vb[htBasicService#5](~/samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/snippets.vb#5)]
 
-     <span data-ttu-id="d605b-126">Bu örnek bir konsol uygulaması ile Web stili hizmet barındırmak nasıl gösterir.</span><span class="sxs-lookup"><span data-stu-id="d605b-126">This sample demonstrates how to host a Web-Style service with a console application.</span></span> <span data-ttu-id="d605b-127">Ayrıca, böyle bir hizmet IIS içinde barındırabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="d605b-127">You can also host such a service within IIS.</span></span> <span data-ttu-id="d605b-128">Bunu yapmak için belirtin <xref:System.ServiceModel.Activation.WebServiceHostFactory> .svc dosyasında aşağıdaki kodun gösterdiği gibi sınıf.</span><span class="sxs-lookup"><span data-stu-id="d605b-128">To do this, specify the <xref:System.ServiceModel.Activation.WebServiceHostFactory> class in a .svc file as the following code demonstrates.</span></span>
+     <span data-ttu-id="9c4a5-126">Bu örnek bir konsol uygulaması ile Web stili hizmet barındırmak nasıl gösterir.</span><span class="sxs-lookup"><span data-stu-id="9c4a5-126">This sample demonstrates how to host a Web-Style service with a console application.</span></span> <span data-ttu-id="9c4a5-127">Ayrıca, böyle bir hizmet IIS içinde barındırabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="9c4a5-127">You can also host such a service within IIS.</span></span> <span data-ttu-id="9c4a5-128">Bunu yapmak için belirtin <xref:System.ServiceModel.Activation.WebServiceHostFactory> .svc dosyasında aşağıdaki kodun gösterdiği gibi sınıf.</span><span class="sxs-lookup"><span data-stu-id="9c4a5-128">To do this, specify the <xref:System.ServiceModel.Activation.WebServiceHostFactory> class in a .svc file as the following code demonstrates.</span></span>
 
     ```
     <%ServiceHost
@@ -75,48 +75,48 @@ ms.locfileid: "47090561"
         Factory=System.ServiceModel.Activation.WebServiceHostFactory%>
     ```
 
-## <a name="to-call-service-operations-mapped-to-get-in-internet-explorer"></a><span data-ttu-id="d605b-129">Internet Explorer'da GET eşlenen hizmet işlemlerini aramak üzere</span><span class="sxs-lookup"><span data-stu-id="d605b-129">To call service operations mapped to GET in Internet Explorer</span></span>
+## <a name="to-call-service-operations-mapped-to-get-in-internet-explorer"></a><span data-ttu-id="9c4a5-129">Internet Explorer'da GET eşlenen hizmet işlemlerini aramak üzere</span><span class="sxs-lookup"><span data-stu-id="9c4a5-129">To call service operations mapped to GET in Internet Explorer</span></span>
 
-1. <span data-ttu-id="d605b-130">Internet Explorer ve tür açın "`http://localhost:8000/EchoWithGet?s=Hello, world!`" ve ENTER tuşuna basın.</span><span class="sxs-lookup"><span data-stu-id="d605b-130">Open Internet Explorer and type "`http://localhost:8000/EchoWithGet?s=Hello, world!`" and press ENTER.</span></span> <span data-ttu-id="d605b-131">Hizmetin taban adresi URL içerir (`http://localhost:8000/`), ilgili uç nokta adresi (""), hizmet işlemine çağrı ("EchoWithGet") yanı sıra, bir soru işareti ve işareti tarafından ayrılmış, adlandırılan parametrelerin bir listesi ve ardından (&).</span><span class="sxs-lookup"><span data-stu-id="d605b-131">The URL contains the base address of the service (`http://localhost:8000/`), the relative address of the endpoint (""), the service operation to call ("EchoWithGet"), and a question mark followed by a list of named parameters separated by an ampersand (&).</span></span>
+1. <span data-ttu-id="9c4a5-130">Internet Explorer ve tür açın "`http://localhost:8000/EchoWithGet?s=Hello, world!`" ve ENTER tuşuna basın.</span><span class="sxs-lookup"><span data-stu-id="9c4a5-130">Open Internet Explorer and type "`http://localhost:8000/EchoWithGet?s=Hello, world!`" and press ENTER.</span></span> <span data-ttu-id="9c4a5-131">Hizmetin taban adresi URL içerir (`http://localhost:8000/`), ilgili uç nokta adresi (""), hizmet işlemine çağrı ("EchoWithGet") yanı sıra, bir soru işareti ve işareti tarafından ayrılmış, adlandırılan parametrelerin bir listesi ve ardından (&).</span><span class="sxs-lookup"><span data-stu-id="9c4a5-131">The URL contains the base address of the service (`http://localhost:8000/`), the relative address of the endpoint (""), the service operation to call ("EchoWithGet"), and a question mark followed by a list of named parameters separated by an ampersand (&).</span></span>
 
-## <a name="to-call-service-operations-in-code"></a><span data-ttu-id="d605b-132">Kod içinde hizmet işlemlerini aramak üzere</span><span class="sxs-lookup"><span data-stu-id="d605b-132">To call service operations in code</span></span>
+## <a name="to-call-service-operations-in-code"></a><span data-ttu-id="9c4a5-132">Kod içinde hizmet işlemlerini aramak üzere</span><span class="sxs-lookup"><span data-stu-id="9c4a5-132">To call service operations in code</span></span>
 
-1. <span data-ttu-id="d605b-133">Bir örneğini oluşturmak <xref:System.ServiceModel.ChannelFactory%601> içinde bir `using` blok.</span><span class="sxs-lookup"><span data-stu-id="d605b-133">Create an instance of <xref:System.ServiceModel.ChannelFactory%601> within a `using` block.</span></span>
+1. <span data-ttu-id="9c4a5-133">Bir örneğini oluşturmak <xref:System.ServiceModel.ChannelFactory%601> içinde bir `using` blok.</span><span class="sxs-lookup"><span data-stu-id="9c4a5-133">Create an instance of <xref:System.ServiceModel.ChannelFactory%601> within a `using` block.</span></span>
 
      [!code-csharp[htBasicService#6](~/samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#6)]
      [!code-vb[htBasicService#6](~/samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#6)]
 
-2. <span data-ttu-id="d605b-134">Ekleme <xref:System.ServiceModel.Description.WebHttpBehavior> uç noktasına <xref:System.ServiceModel.ChannelFactory%601> çağırır.</span><span class="sxs-lookup"><span data-stu-id="d605b-134">Add <xref:System.ServiceModel.Description.WebHttpBehavior> to the endpoint the <xref:System.ServiceModel.ChannelFactory%601> calls.</span></span>
+2. <span data-ttu-id="9c4a5-134">Ekleme <xref:System.ServiceModel.Description.WebHttpBehavior> uç noktasına <xref:System.ServiceModel.ChannelFactory%601> çağırır.</span><span class="sxs-lookup"><span data-stu-id="9c4a5-134">Add <xref:System.ServiceModel.Description.WebHttpBehavior> to the endpoint the <xref:System.ServiceModel.ChannelFactory%601> calls.</span></span>
 
      [!code-csharp[htBasicService#7](~/samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#7)]
      [!code-vb[htBasicService#7](~/samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#7)]
 
-3. <span data-ttu-id="d605b-135">Bir kanal oluşturmak ve hizmet çağırın.</span><span class="sxs-lookup"><span data-stu-id="d605b-135">Create the channel and call the service.</span></span>
+3. <span data-ttu-id="9c4a5-135">Bir kanal oluşturmak ve hizmet çağırın.</span><span class="sxs-lookup"><span data-stu-id="9c4a5-135">Create the channel and call the service.</span></span>
 
      [!code-csharp[htBasicService#8](~/samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#8)]
      [!code-vb[htBasicService#8](~/samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#8)]
 
-4. <span data-ttu-id="d605b-136">Kapat <xref:System.ServiceModel.Web.WebServiceHost>.</span><span class="sxs-lookup"><span data-stu-id="d605b-136">Close the <xref:System.ServiceModel.Web.WebServiceHost>.</span></span>
+4. <span data-ttu-id="9c4a5-136">Kapat <xref:System.ServiceModel.Web.WebServiceHost>.</span><span class="sxs-lookup"><span data-stu-id="9c4a5-136">Close the <xref:System.ServiceModel.Web.WebServiceHost>.</span></span>
 
      [!code-csharp[htBasicService#9](~/samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#9)]
      [!code-vb[htBasicService#9](~/samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#9)]
 
-## <a name="example"></a><span data-ttu-id="d605b-137">Örnek</span><span class="sxs-lookup"><span data-stu-id="d605b-137">Example</span></span>
+## <a name="example"></a><span data-ttu-id="9c4a5-137">Örnek</span><span class="sxs-lookup"><span data-stu-id="9c4a5-137">Example</span></span>
 
-<span data-ttu-id="d605b-138">Bu örnek için listeleme tam kod aşağıda verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="d605b-138">The following is the full code listing for this example.</span></span>
+<span data-ttu-id="9c4a5-138">Bu örnek için listeleme tam kod aşağıda verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="9c4a5-138">The following is the full code listing for this example.</span></span>
 
 [!code-csharp[htBasicService#10](~/samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#10)]
 [!code-vb[htBasicService#10](~/samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#10)]
 
-## <a name="compiling-the-code"></a><span data-ttu-id="d605b-139">Kod derleme</span><span class="sxs-lookup"><span data-stu-id="d605b-139">Compiling the code</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="9c4a5-139">Kod derleme</span><span class="sxs-lookup"><span data-stu-id="9c4a5-139">Compiling the code</span></span>
 
-<span data-ttu-id="d605b-140">Adını da başvuru System.ServiceModel.dll ve System.ServiceModel.Web.dll derlenirken.</span><span class="sxs-lookup"><span data-stu-id="d605b-140">When compiling Service.cs reference System.ServiceModel.dll and System.ServiceModel.Web.dll.</span></span>
+<span data-ttu-id="9c4a5-140">Adını da başvuru System.ServiceModel.dll ve System.ServiceModel.Web.dll derlenirken.</span><span class="sxs-lookup"><span data-stu-id="9c4a5-140">When compiling Service.cs reference System.ServiceModel.dll and System.ServiceModel.Web.dll.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="d605b-141">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d605b-141">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9c4a5-141">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="9c4a5-141">See also</span></span>
 
 - <xref:System.ServiceModel.WebHttpBinding>
 - <xref:System.ServiceModel.Web.WebGetAttribute>
 - <xref:System.ServiceModel.Web.WebInvokeAttribute>
 - <xref:System.ServiceModel.Web.WebServiceHost>
 - <xref:System.ServiceModel.Description.WebHttpBehavior>
-- [<span data-ttu-id="d605b-142">WCF Web HTTP Programlama Modeli</span><span class="sxs-lookup"><span data-stu-id="d605b-142">WCF Web HTTP Programming Model</span></span>](wcf-web-http-programming-model.md)
+- [<span data-ttu-id="9c4a5-142">WCF Web HTTP Programlama Modeli</span><span class="sxs-lookup"><span data-stu-id="9c4a5-142">WCF Web HTTP Programming Model</span></span>](wcf-web-http-programming-model.md)

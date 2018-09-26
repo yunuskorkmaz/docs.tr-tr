@@ -7,16 +7,16 @@ ms.assetid: fd88d26c-4063-495e-a253-736ac3e6b23f
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: ae4eb38c72a7f7629cea0f8137a4337553457808
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47078475"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47200912"
 ---
-# <a name="how-to-get-interface-and-protocol-information"></a><span data-ttu-id="e59f1-102">Nasıl yapılır: arabirim ve protokol bilgilerini alma</span><span class="sxs-lookup"><span data-stu-id="e59f1-102">How to: Get Interface and Protocol Information</span></span>
-<span data-ttu-id="e59f1-103">Bu örnek, bir ağ arabiriminin TCP istatistikleri okumak gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="e59f1-103">This sample shows how to read the TCP statistics of a network interface.</span></span>  
+# <a name="how-to-get-interface-and-protocol-information"></a><span data-ttu-id="04716-102">Nasıl yapılır: arabirim ve protokol bilgilerini alma</span><span class="sxs-lookup"><span data-stu-id="04716-102">How to: Get Interface and Protocol Information</span></span>
+<span data-ttu-id="04716-103">Bu örnek, bir ağ arabiriminin TCP istatistikleri okumak gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="04716-103">This sample shows how to read the TCP statistics of a network interface.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="e59f1-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="e59f1-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="04716-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="04716-104">Example</span></span>  
   
 ```  
 public static void ShowTcpStatistics(NetworkInterfaceComponent version)  
@@ -71,7 +71,7 @@ public static void ShowTcpStatistics(NetworkInterfaceComponent version)
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="e59f1-105">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="e59f1-105">Compiling the Code</span></span>  
- <span data-ttu-id="e59f1-106">Bu örnek gerektirir:</span><span class="sxs-lookup"><span data-stu-id="e59f1-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="04716-105">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="04716-105">Compiling the Code</span></span>  
+ <span data-ttu-id="04716-106">Bu örnek gerektirir:</span><span class="sxs-lookup"><span data-stu-id="04716-106">This example requires:</span></span>  
   
--   <span data-ttu-id="e59f1-107">Başvurular **System.Net** ad alanı.</span><span class="sxs-lookup"><span data-stu-id="e59f1-107">References to the **System.Net** namespace.</span></span>
+-   <span data-ttu-id="04716-107">Başvurular **System.Net** ad alanı.</span><span class="sxs-lookup"><span data-stu-id="04716-107">References to the **System.Net** namespace.</span></span>
