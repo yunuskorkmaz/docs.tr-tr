@@ -18,11 +18,11 @@ ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6c8db725e25fe441c875a25cba97eb2090d4c071
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47071175"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47204208"
 ---
 # <a name="common-type-system"></a>Ortak Tür Sistemi
 Ortak tür sistemi nasıl türleri bildirilen kullanılan ve ortak dil çalışma zamanı'nda yönetilen tanımlar ve çalışma zamanının diller arası tümleştirme desteğinin önemli bir bölümü de olan. Ortak tür sistemi şu işlevleri gerçekleştirir:  

@@ -2,12 +2,12 @@
 title: Keşif Bulma ve FindCriteria
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-ms.openlocfilehash: b2f679879bd3a32e770aa934f715dd70b4a2b5f8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: bd54a7bc896870035972daf1ea6f56d84dc5414e
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856009"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47205457"
 ---
 # <a name="discovery-find-and-findcriteria"></a>Keşif Bulma ve FindCriteria
 Bir bulma bulma işlemi bir veya daha fazla Hizmetleri bulmak için bir istemci tarafından başlatılan ve bulma ana eylemleri biridir. Bir bulma gerçekleştirme ağ üzerinden bir WS-bulma işlemi araştırma iletisi gönderir. Ölçütlerle eşleşen Hizmetleri yanıt WS-bulma ProbeMatch iletileriyle belirtilen. Bulma iletileri hakkında daha fazla bilgi için bkz. [WS-bulma belirtimi](https://go.microsoft.com/fwlink/?LinkID=122347).  
@@ -68,5 +68,4 @@ Console.WriteLine("Found {0} ICalculatorService endpoint(s).", findResponse.Endp
  [WCF Bulmaya Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
  [Keşif İstemcisi Kanalını Kullanma](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)  
  [Kapsamlarla Bulma](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)  
- [Zaman Uyumsuz Bulma](../../../../docs/framework/wcf/samples/asynchronous-find-sample.md)  
  [Temel](../../../../docs/framework/wcf/samples/basic-sample.md)

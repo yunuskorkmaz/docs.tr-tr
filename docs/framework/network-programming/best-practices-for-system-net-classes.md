@@ -13,11 +13,11 @@ ms.assetid: 716decc6-5952-47b7-9c5a-ba6fc5698684
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 987e2294f1e34eb3a4da1e31285868877338ccf4
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47111678"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47192212"
 ---
 # <a name="best-practices-for-systemnet-classes"></a>System.Net sınıfları için en iyi uygulamalar
 Aşağıdaki öneriler içinde bulunan sınıfları kullanmanıza yardımcı olacak <xref:System.Net> en iyi kendi lehlerine için:  

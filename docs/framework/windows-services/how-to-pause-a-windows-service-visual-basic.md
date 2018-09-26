@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: eddb9409-942b-46b6-a2ce-fbd4c65f2790
 author: ghogen
 ms.openlocfilehash: c62de97439ecf90ebfcc14d9fea4c5ab52f6ef73
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47110261"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47230832"
 ---
 # <a name="how-to-pause-a-windows-service-visual-basic"></a>Nasıl Yapılır: Windows Hizmetini Duraklatma (Visual Basic)
 Bu örnekte <xref:System.ServiceProcess.ServiceController> yerel bilgisayarda IIS Yönetici Hizmeti duraklatma bileşeni.  

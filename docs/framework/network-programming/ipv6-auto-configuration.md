@@ -5,11 +5,11 @@ ms.assetid: 581c1d21-1013-43a3-bf3e-2d9ead62b79c
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 30765a1658d00f1a966112c5a63dabee499060e8
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47075542"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47200938"
 ---
 # <a name="ipv6-auto-configuration"></a>IPv6 otomatik yapılandırma
 IPv6 için önemli bir hedef düğüm Tak ve Kullan desteklemektir. Diğer bir deyişle, bir IPv6 ağa bir düğüm eklenir ve herhangi bir insan müdahalesi olmadan otomatik olarak yapılandırılmış olması mümkündür.  

@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: Meta Veri Belgelerini İndirmek için Svcutil.exe Kull
 ms.date: 03/30/2017
 ms.assetid: 15524274-3167-4627-b722-d6cedb9fa8c6
 ms.openlocfilehash: 6643f0a5dba98afcef38870cf24d91e7d69a1440
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47080850"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47195426"
 ---
 # <a name="how-to-use-svcutilexe-to-download-metadata-documents"></a>Nasıl yapılır: Meta Veri Belgelerini İndirmek için Svcutil.exe Kullanma
 Svcutil.exe Hizmetleri çalışmasını meta verileri indirmek ve yerel dosyalar için meta verileri kaydetmek için kullanabilirsiniz. HTTP ve HTTPS URL'si düzenleri için Svcutil.exe WS-MetadataExchange kullanarak meta verilerini almayı dener ve [XML Web hizmeti bulma](https://go.microsoft.com/fwlink/?LinkId=94950). Diğer tüm URL şemalarını için Svcutil.exe yalnızca WS-MetadataExchange kullanır.  

@@ -20,11 +20,11 @@ ms.assetid: d5c3477a-e798-454c-a890-738ba14c5707
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 8aabd71a841af2b01c644d52806f213ca9c92ec2
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47082139"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47209365"
 ---
 # <a name="using-udp-services"></a>UDP Hizmetleri kullanma
 <xref:System.Net.Sockets.UdpClient> Sınıfı UDP kullanarak Ağ Hizmetleri ile iletişim kurar. Özellikleri ve yöntemleri <xref:System.Net.Sockets.UdpClient> oluşturma ayrıntıları soyut sınıf bir <xref:System.Net.Sockets.Socket> istemek ve UDP kullanarak verileri alma.  
