@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: WebRequest sınıfı kullanarak veri gönderme'
+title: 'Nasıl yapılır: WebRequest sınıfını kullanarak veri gönderme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,20 +10,19 @@ helpviewer_keywords:
 ms.assetid: 66686878-38ac-4aa6-bf42-ffb568ffc459
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: a40ab63e0fbac4227d74999c8c83f02e3c9e4b4d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f62775a41f70e4dd96c749acd99bf8b850d96407
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394663"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47084962"
 ---
-# <a name="how-to-send-data-using-the-webrequest-class"></a><span data-ttu-id="66cc7-102">Nasıl yapılır: WebRequest sınıfı kullanarak veri gönderme</span><span class="sxs-lookup"><span data-stu-id="66cc7-102">How to: Send Data Using the WebRequest Class</span></span>
-<span data-ttu-id="66cc7-103">Aşağıdaki yordamda bir sunucuya veri göndermek için kullanılan adımlar açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="66cc7-103">The following procedure describes the steps used to send data to a server.</span></span> <span data-ttu-id="66cc7-104">Bu yordam, genellikle bir Web sayfasında veri göndermek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="66cc7-104">This procedure is commonly used to post data to a Web page.</span></span>  
+# <a name="how-to-send-data-using-the-webrequest-class"></a><span data-ttu-id="5926c-102">Nasıl yapılır: WebRequest sınıfını kullanarak veri gönderme</span><span class="sxs-lookup"><span data-stu-id="5926c-102">How to: Send Data Using the WebRequest Class</span></span>
+<span data-ttu-id="5926c-103">Aşağıdaki yordam bir sunucuya veri göndermek için kullanılan adımları açıklar.</span><span class="sxs-lookup"><span data-stu-id="5926c-103">The following procedure describes the steps used to send data to a server.</span></span> <span data-ttu-id="5926c-104">Bu yordam, genellikle bir Web sayfasında veri göndermek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="5926c-104">This procedure is commonly used to post data to a Web page.</span></span>  
   
-### <a name="to-send-data-to-a-host-server"></a><span data-ttu-id="66cc7-105">Bir ana bilgisayar sunucusuna veri göndermek için</span><span class="sxs-lookup"><span data-stu-id="66cc7-105">To send data to a host server</span></span>  
+### <a name="to-send-data-to-a-host-server"></a><span data-ttu-id="5926c-105">Bir konak sunucusuna veri göndermek için</span><span class="sxs-lookup"><span data-stu-id="5926c-105">To send data to a host server</span></span>  
   
-1.  <span data-ttu-id="66cc7-106">Oluşturma bir <xref:System.Net.WebRequest> çağırarak örneği <xref:System.Net.WebRequest.Create%2A> verileri, örneğin kabul kaynak, bir komut dosyası veya ASP.NET sayfası URI ile.</span><span class="sxs-lookup"><span data-stu-id="66cc7-106">Create a <xref:System.Net.WebRequest> instance by calling <xref:System.Net.WebRequest.Create%2A> with the URI of the resource that accepts data, for example, a script or ASP.NET page.</span></span>  
+1.  <span data-ttu-id="5926c-106">Oluşturma bir <xref:System.Net.WebRequest> çağırarak örneği <xref:System.Net.WebRequest.Create%2A> verileri, örneğin kabul kaynak, bir komut dosyası veya ASP.NET sayfası URI'yı içeren.</span><span class="sxs-lookup"><span data-stu-id="5926c-106">Create a <xref:System.Net.WebRequest> instance by calling <xref:System.Net.WebRequest.Create%2A> with the URI of the resource that accepts data, for example, a script or ASP.NET page.</span></span>  
   
     ```csharp  
     WebRequest request = WebRequest.Create("http://www.contoso.com/");  
@@ -34,9 +33,9 @@ ms.locfileid: "33394663"
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="66cc7-107">.NET Framework türetilmiş protokole özgü sınıflar sağlar **WebRequest** ve **WebResponse** ile başlayan URI için "http:", "https:''," ftp: ", ve" dosya: ".</span><span class="sxs-lookup"><span data-stu-id="66cc7-107">The .NET Framework provides protocol-specific classes derived from **WebRequest** and **WebResponse** for URIs that begin with "http:", "https:'', "ftp:", and "file:".</span></span> <span data-ttu-id="66cc7-108">Diğer protokolleri kullanan kaynaklara erişmek için öğesinden türetilen protokole özgü sınıflar uygulamalıdır **WebRequest** ve **WebResponse**.</span><span class="sxs-lookup"><span data-stu-id="66cc7-108">To access resources using other protocols, you must implement protocol-specific classes that derive from **WebRequest** and **WebResponse**.</span></span> <span data-ttu-id="66cc7-109">Daha fazla bilgi için bkz: [programlama Takılabilir Protokol](../../../docs/framework/network-programming/programming-pluggable-protocols.md) .</span><span class="sxs-lookup"><span data-stu-id="66cc7-109">For more information, see [Programming Pluggable Protocols](../../../docs/framework/network-programming/programming-pluggable-protocols.md) .</span></span>  
+    >  <span data-ttu-id="5926c-107">.NET Framework türetilen protokole özgü sınıfların sağlar **WebRequest** ve **WebResponse** ile başlayan bir URI'leri için "http:", "https:''," ftp: ", ve" dosya: ".</span><span class="sxs-lookup"><span data-stu-id="5926c-107">The .NET Framework provides protocol-specific classes derived from **WebRequest** and **WebResponse** for URIs that begin with "http:", "https:'', "ftp:", and "file:".</span></span> <span data-ttu-id="5926c-108">Diğer protokoller kullanarak kaynaklara erişmeye öğesinden türetilen protokole özgü sınıfların uygulamalıdır **WebRequest** ve **WebResponse**.</span><span class="sxs-lookup"><span data-stu-id="5926c-108">To access resources using other protocols, you must implement protocol-specific classes that derive from **WebRequest** and **WebResponse**.</span></span> <span data-ttu-id="5926c-109">Daha fazla bilgi için [takılabilir protokoller programlama](../../../docs/framework/network-programming/programming-pluggable-protocols.md) .</span><span class="sxs-lookup"><span data-stu-id="5926c-109">For more information, see [Programming Pluggable Protocols](../../../docs/framework/network-programming/programming-pluggable-protocols.md) .</span></span>  
   
-2.  <span data-ttu-id="66cc7-110">Gereksinim duyduğunuz tüm özellik değerlerini ayarlar **WebRequest**.</span><span class="sxs-lookup"><span data-stu-id="66cc7-110">Set any property values that you need in the **WebRequest**.</span></span> <span data-ttu-id="66cc7-111">Örneğin, kimlik doğrulamasını etkinleştirmek için ayarlar **kimlik bilgileri** örneği özelliğine <xref:System.Net.NetworkCredential> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="66cc7-111">For example, to enable authentication, set the **Credentials** property to an instance of the <xref:System.Net.NetworkCredential> class.</span></span>  
+2.  <span data-ttu-id="5926c-110">Size gereken tüm özellik değerlerini ayarlamak **WebRequest**.</span><span class="sxs-lookup"><span data-stu-id="5926c-110">Set any property values that you need in the **WebRequest**.</span></span> <span data-ttu-id="5926c-111">Örneğin, kimlik doğrulamasını etkinleştirmek için ayarlanmış **kimlik bilgilerini** örneğine özellik <xref:System.Net.NetworkCredential> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="5926c-111">For example, to enable authentication, set the **Credentials** property to an instance of the <xref:System.Net.NetworkCredential> class.</span></span>  
   
     ```csharp  
     request.Credentials = CredentialCache.DefaultCredentials;  
@@ -46,7 +45,7 @@ ms.locfileid: "33394663"
     request.Credentials = CredentialCache.DefaultCredentials  
     ```  
   
-     <span data-ttu-id="66cc7-112">Çoğu durumda, **WebRequest** örneğinin kendisi veri göndermek yeterli.</span><span class="sxs-lookup"><span data-stu-id="66cc7-112">In most cases, the **WebRequest** instance itself is sufficient to send data.</span></span> <span data-ttu-id="66cc7-113">Protokole özgü özelliklerini ayarlamak ihtiyacınız varsa, ancak atamalısınız **WebRequest** protokole özgü türü.</span><span class="sxs-lookup"><span data-stu-id="66cc7-113">However, if you need to set protocol-specific properties, you must cast the **WebRequest** to the protocol-specific type.</span></span> <span data-ttu-id="66cc7-114">Örneğin, erişim HTTP özgü özellikleri için <xref:System.Net.HttpWebRequest>, noktaya yayın **WebRequest** için bir **HttpWebRequest** başvuru.</span><span class="sxs-lookup"><span data-stu-id="66cc7-114">For example, to access the HTTP-specific properties of <xref:System.Net.HttpWebRequest>, cast the **WebRequest** to an **HttpWebRequest** reference.</span></span> <span data-ttu-id="66cc7-115">Aşağıdaki kod örneğinde HTTP özgü ayarlanacağı gösterilmiştir <xref:System.Net.HttpWebRequest.UserAgent%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="66cc7-115">The following code example shows how to set the HTTP-specific <xref:System.Net.HttpWebRequest.UserAgent%2A> property.</span></span>  
+     <span data-ttu-id="5926c-112">Çoğu durumda **WebRequest** örnek kendi veri göndermek yeterli.</span><span class="sxs-lookup"><span data-stu-id="5926c-112">In most cases, the **WebRequest** instance itself is sufficient to send data.</span></span> <span data-ttu-id="5926c-113">Ancak, protokole özgü özelliklerini ayarlamak gerekiyorsa dönüştürmelisiniz **WebRequest** protokole özgü türü.</span><span class="sxs-lookup"><span data-stu-id="5926c-113">However, if you need to set protocol-specific properties, you must cast the **WebRequest** to the protocol-specific type.</span></span> <span data-ttu-id="5926c-114">Örneğin, erişim HTTP'ye özgü özellikleri için <xref:System.Net.HttpWebRequest>, noktaya yayın **WebRequest** için bir **HttpWebRequest** başvuru.</span><span class="sxs-lookup"><span data-stu-id="5926c-114">For example, to access the HTTP-specific properties of <xref:System.Net.HttpWebRequest>, cast the **WebRequest** to an **HttpWebRequest** reference.</span></span> <span data-ttu-id="5926c-115">Aşağıdaki kod örneği, HTTP özgü ayarlanacak gösterilmektedir <xref:System.Net.HttpWebRequest.UserAgent%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="5926c-115">The following code example shows how to set the HTTP-specific <xref:System.Net.HttpWebRequest.UserAgent%2A> property.</span></span>  
   
     ```csharp  
     ((HttpWebRequest)request).UserAgent = ".NET Framework Example Client";  
@@ -56,7 +55,7 @@ ms.locfileid: "33394663"
     Ctype(request,HttpWebRequest).UserAgent = ".NET Framework Example Client"  
     ```  
   
-3.  <span data-ttu-id="66cc7-116">HTTP gibi bir istekle gönderilmesi için veri izin veren bir protokol yöntemini belirtin **POST** yöntemi.</span><span class="sxs-lookup"><span data-stu-id="66cc7-116">Specify a protocol method that permits data to be sent with a request, such as the HTTP **POST** method.</span></span>  
+3.  <span data-ttu-id="5926c-116">Veri ile HTTP gibi bir istek gönderilmesine izin veren bir protokol yöntemini belirtin **POST** yöntemi.</span><span class="sxs-lookup"><span data-stu-id="5926c-116">Specify a protocol method that permits data to be sent with a request, such as the HTTP **POST** method.</span></span>  
   
     ```csharp  
     request.Method = "POST";  
@@ -66,7 +65,7 @@ ms.locfileid: "33394663"
     request.Method = "POST"  
     ```  
   
-4.  <span data-ttu-id="66cc7-117">Ayarlama **ContentLength** özelliği.</span><span class="sxs-lookup"><span data-stu-id="66cc7-117">Set the **ContentLength** property.</span></span>  
+4.  <span data-ttu-id="5926c-117">Ayarlama **ContentLength** özelliği.</span><span class="sxs-lookup"><span data-stu-id="5926c-117">Set the **ContentLength** property.</span></span>  
   
     ```csharp  
     request.ContentLength = byteArray.Length;  
@@ -76,7 +75,7 @@ ms.locfileid: "33394663"
     request.ContentLength = byteArray.Length  
     ```  
   
-5.  <span data-ttu-id="66cc7-118">Ayarlama **ContentType** uygun bir değere özelliği.</span><span class="sxs-lookup"><span data-stu-id="66cc7-118">Set the **ContentType** property to an appropriate value.</span></span>  
+5.  <span data-ttu-id="5926c-118">Ayarlama **ContentType** özelliğini uygun bir değer.</span><span class="sxs-lookup"><span data-stu-id="5926c-118">Set the **ContentType** property to an appropriate value.</span></span>  
   
     ```csharp  
     request.ContentType = "application/x-www-form-urlencoded";  
@@ -86,7 +85,7 @@ ms.locfileid: "33394663"
     request.ContentType = "application/x-www-form-urlencoded"  
     ```  
   
-6.  <span data-ttu-id="66cc7-119">Get ayrı tutma çağırarak veri istek akışı <xref:System.Net.WebRequest.GetRequestStream%2A> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="66cc7-119">Get the stream that holds request data by calling the <xref:System.Net.WebRequest.GetRequestStream%2A> method.</span></span>  
+6.  <span data-ttu-id="5926c-119">Get ayrı tutma çağırarak verileri istek akışı <xref:System.Net.WebRequest.GetRequestStream%2A> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="5926c-119">Get the stream that holds request data by calling the <xref:System.Net.WebRequest.GetRequestStream%2A> method.</span></span>  
   
     ```csharp  
     Stream dataStream = request.GetRequestStream ();  
@@ -96,7 +95,7 @@ ms.locfileid: "33394663"
     Stream dataStream = request.GetRequestStream ()  
     ```  
   
-7.  <span data-ttu-id="66cc7-120">Veri yazma <xref:System.IO.Stream> bu yöntem tarafından döndürülen nesne.</span><span class="sxs-lookup"><span data-stu-id="66cc7-120">Write the data to the <xref:System.IO.Stream> object returned by this method.</span></span>  
+7.  <span data-ttu-id="5926c-120">Veri yazılan <xref:System.IO.Stream> bu yöntem tarafından döndürülen nesne.</span><span class="sxs-lookup"><span data-stu-id="5926c-120">Write the data to the <xref:System.IO.Stream> object returned by this method.</span></span>  
   
     ```csharp  
     dataStream.Write (byteArray, 0, byteArray.Length);  
@@ -106,7 +105,7 @@ ms.locfileid: "33394663"
     dataStream.Write (byteArray, 0, byteArray.Length)  
     ```  
   
-8.  <span data-ttu-id="66cc7-121">İstek akışı çağırarak kapatmak **Stream.Close** yöntemi.</span><span class="sxs-lookup"><span data-stu-id="66cc7-121">Close the request stream by calling the **Stream.Close** method.</span></span>  
+8.  <span data-ttu-id="5926c-121">İstek akışı çağırarak kapatmak **Stream.Close** yöntemi.</span><span class="sxs-lookup"><span data-stu-id="5926c-121">Close the request stream by calling the **Stream.Close** method.</span></span>  
   
     ```csharp  
     dataStream.Close ();  
@@ -116,7 +115,7 @@ ms.locfileid: "33394663"
     dataStream.Close ()  
     ```  
   
-9. <span data-ttu-id="66cc7-122">Çağırarak sunucuya istek göndermek <xref:System.Net.WebRequest.GetResponse%2A>.</span><span class="sxs-lookup"><span data-stu-id="66cc7-122">Send the request to the server by calling <xref:System.Net.WebRequest.GetResponse%2A>.</span></span> <span data-ttu-id="66cc7-123">Bu yöntem, sunucu yanıtı içeren bir nesne döndürür.</span><span class="sxs-lookup"><span data-stu-id="66cc7-123">This method returns an object containing the server's response.</span></span> <span data-ttu-id="66cc7-124">Döndürülen <xref:System.Net.WebResponse> nesnenin türü, isteğin URI düzeni tarafından belirlenir.</span><span class="sxs-lookup"><span data-stu-id="66cc7-124">The returned <xref:System.Net.WebResponse> object's type is determined by the scheme of the request's URI.</span></span>  
+9. <span data-ttu-id="5926c-122">Çağırarak sunucuya istek göndermek <xref:System.Net.WebRequest.GetResponse%2A>.</span><span class="sxs-lookup"><span data-stu-id="5926c-122">Send the request to the server by calling <xref:System.Net.WebRequest.GetResponse%2A>.</span></span> <span data-ttu-id="5926c-123">Bu yöntem sunucu yanıtını içeren bir nesne döndürür.</span><span class="sxs-lookup"><span data-stu-id="5926c-123">This method returns an object containing the server's response.</span></span> <span data-ttu-id="5926c-124">Döndürülen <xref:System.Net.WebResponse> nesnenin türü, isteğin URI düzeni tarafından belirlenir.</span><span class="sxs-lookup"><span data-stu-id="5926c-124">The returned <xref:System.Net.WebResponse> object's type is determined by the scheme of the request's URI.</span></span>  
   
     ```csharp  
     WebResponse response = request.GetResponse();  
@@ -127,9 +126,9 @@ ms.locfileid: "33394663"
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="66cc7-125">İle tamamladıktan sonra bir <xref:System.Net.WebResponse> nesne kapatmalısınız onu çağırarak <xref:System.Net.WebResponse.Close%2A> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="66cc7-125">After you are finished with a <xref:System.Net.WebResponse> object, you must close it by calling the <xref:System.Net.WebResponse.Close%2A> method.</span></span> <span data-ttu-id="66cc7-126">Yanıt akışı yanıt nesnesinden getirildiğini, alternatif olarak, akış çağırarak kapatabilirsiniz <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="66cc7-126">Alternatively, if you have gotten the response stream from the response object, you can close the stream by calling the <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="66cc7-127">Yanıt veya akış kapatmazsanız uygulamanızı sunucuya bağlantıları dışında çalıştırın ve ek istekleri işleyemiyor haline gelir.</span><span class="sxs-lookup"><span data-stu-id="66cc7-127">If you do not close the response or the stream, your application can run out of connections to the server and become unable to process additional requests.</span></span>  
+    >  <span data-ttu-id="5926c-125">İle tamamladıktan sonra bir <xref:System.Net.WebResponse> nesne kapatmalısınız bunu çağırarak <xref:System.Net.WebResponse.Close%2A> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="5926c-125">After you are finished with a <xref:System.Net.WebResponse> object, you must close it by calling the <xref:System.Net.WebResponse.Close%2A> method.</span></span> <span data-ttu-id="5926c-126">Yanıt nesneden yanıt akışına edindiğiniz, alternatif olarak, akış çağırarak kapatabilirsiniz <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="5926c-126">Alternatively, if you have gotten the response stream from the response object, you can close the stream by calling the <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="5926c-127">Yanıt veya akış kapatmazsanız uygulamanız bağlantılar dışında sunucuya çalıştırın ve ek istekleri işleyemediğinden haline gelir.</span><span class="sxs-lookup"><span data-stu-id="5926c-127">If you do not close the response or the stream, your application can run out of connections to the server and become unable to process additional requests.</span></span>  
   
-10. <span data-ttu-id="66cc7-128">Özelliklerini erişebilirsiniz **WebResponse** veya cast **WebResponse** bir protokole özgü örneğine protokole özgü özellikleri okunamıyor.</span><span class="sxs-lookup"><span data-stu-id="66cc7-128">You can access the properties of the **WebResponse** or cast the **WebResponse** to a protocol-specific instance to read protocol-specific properties.</span></span> <span data-ttu-id="66cc7-129">Örneğin, erişim HTTP özgü özellikleri için <xref:System.Net.HttpWebResponse>, noktaya yayın **WebResponse** için bir **HttpWebResponse** başvuru.</span><span class="sxs-lookup"><span data-stu-id="66cc7-129">For example, to access the HTTP-specific properties of <xref:System.Net.HttpWebResponse>, cast the **WebResponse** to an **HttpWebResponse** reference.</span></span>  
+10. <span data-ttu-id="5926c-128">Özelliklerini erişebileceğiniz **WebResponse** veya dönüştürme **WebResponse** protokole özgü özelliklerini okumak için bir protokole özgü örneğine.</span><span class="sxs-lookup"><span data-stu-id="5926c-128">You can access the properties of the **WebResponse** or cast the **WebResponse** to a protocol-specific instance to read protocol-specific properties.</span></span> <span data-ttu-id="5926c-129">Örneğin, erişim HTTP'ye özgü özellikleri için <xref:System.Net.HttpWebResponse>, noktaya yayın **WebResponse** için bir **HttpWebResponse** başvuru.</span><span class="sxs-lookup"><span data-stu-id="5926c-129">For example, to access the HTTP-specific properties of <xref:System.Net.HttpWebResponse>, cast the **WebResponse** to an **HttpWebResponse** reference.</span></span>  
   
     ```csharp  
     Console.WriteLine (((HttpWebResponse)response).StatusDescription);  
@@ -139,7 +138,7 @@ ms.locfileid: "33394663"
     Console.WriteLine(CType(response, HttpWebResponse).StatusDescription)  
     ```  
   
-11. <span data-ttu-id="66cc7-130">Sunucu tarafından gönderilen yanıtı verilerini içeren akışı almak için arama <xref:System.Net.WebResponse.GetResponseStream%2A> yöntemi **WebResponse**.</span><span class="sxs-lookup"><span data-stu-id="66cc7-130">To get the stream containing response data sent by the server, call the <xref:System.Net.WebResponse.GetResponseStream%2A> method of the **WebResponse**.</span></span>  
+11. <span data-ttu-id="5926c-130">Sunucu tarafından gönderilen yanıt verilerini içeren akış almak için arama <xref:System.Net.WebResponse.GetResponseStream%2A> yöntemi **WebResponse**.</span><span class="sxs-lookup"><span data-stu-id="5926c-130">To get the stream containing response data sent by the server, call the <xref:System.Net.WebResponse.GetResponseStream%2A> method of the **WebResponse**.</span></span>  
   
     ```csharp  
     Stream data = response.GetResponseStream;  
@@ -149,7 +148,7 @@ ms.locfileid: "33394663"
     Dim data As Stream = response.GetResponseStream  
     ```  
   
-12. <span data-ttu-id="66cc7-131">Veri gelen yanıt okunduktan sonra ya da yanıt akışı kullanarak kapatmanız gerekir **Stream.Close** yöntemi veya yanıt kullanarak Kapat **WebResponse.Close** yöntemi.</span><span class="sxs-lookup"><span data-stu-id="66cc7-131">After reading the data from the response, you must either close the response stream using the **Stream.Close** method or close the response using the **WebResponse.Close** method.</span></span> <span data-ttu-id="66cc7-132">Bu çağrı gerekli değildir **Kapat** yanıt akışına yöntemi ve **WebResponse**, ancak bunun nedenle zararlı.</span><span class="sxs-lookup"><span data-stu-id="66cc7-132">It is not necessary to call the **Close** method on both the response stream and the **WebResponse**, but doing so is not harmful.</span></span>  
+12. <span data-ttu-id="5926c-131">Yanıttan verileri okuduktan sonra ya da yanıt akışı kullanılarak kapatmalısınız **Stream.Close** yöntemi veya yanıtı kullanma Kapat **WebResponse.Close** yöntemi.</span><span class="sxs-lookup"><span data-stu-id="5926c-131">After reading the data from the response, you must either close the response stream using the **Stream.Close** method or close the response using the **WebResponse.Close** method.</span></span> <span data-ttu-id="5926c-132">Bu çağrı gerekli değildir **Kapat** yanıt akışında yöntemi ve **WebResponse**, ancak bunu yaparsanız bu nedenle zararlı.</span><span class="sxs-lookup"><span data-stu-id="5926c-132">It is not necessary to call the **Close** method on both the response stream and the **WebResponse**, but doing so is not harmful.</span></span>  
   
     ```csharp  
     response.Close();  
@@ -159,7 +158,7 @@ ms.locfileid: "33394663"
     response.Close()  
     ```  
   
-## <a name="example"></a><span data-ttu-id="66cc7-133">Örnek</span><span class="sxs-lookup"><span data-stu-id="66cc7-133">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="5926c-133">Örnek</span><span class="sxs-lookup"><span data-stu-id="5926c-133">Example</span></span>  
   
 ```csharp  
 using System;  
@@ -258,9 +257,9 @@ Namespace Examples.System.Net
 End Namespace  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="66cc7-134">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="66cc7-134">See Also</span></span>  
- [<span data-ttu-id="66cc7-135">İnternet İstekleri Oluşturma</span><span class="sxs-lookup"><span data-stu-id="66cc7-135">Creating Internet Requests</span></span>](../../../docs/framework/network-programming/creating-internet-requests.md)  
- [<span data-ttu-id="66cc7-136">Ağda Akışları Kullanma</span><span class="sxs-lookup"><span data-stu-id="66cc7-136">Using Streams on the Network</span></span>](../../../docs/framework/network-programming/using-streams-on-the-network.md)  
- [<span data-ttu-id="66cc7-137">Ara Sunucu Üzerinden İnternet Erişimi</span><span class="sxs-lookup"><span data-stu-id="66cc7-137">Accessing the Internet Through a Proxy</span></span>](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
- [<span data-ttu-id="66cc7-138">Veri İsteme</span><span class="sxs-lookup"><span data-stu-id="66cc7-138">Requesting Data</span></span>](../../../docs/framework/network-programming/requesting-data.md)  
- [<span data-ttu-id="66cc7-139">Nasıl yapılır: WebRequest Sınıfını Kullanarak Veri İsteme</span><span class="sxs-lookup"><span data-stu-id="66cc7-139">How to: Request Data Using the WebRequest Class</span></span>](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)
+## <a name="see-also"></a><span data-ttu-id="5926c-134">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="5926c-134">See Also</span></span>  
+ [<span data-ttu-id="5926c-135">İnternet İstekleri Oluşturma</span><span class="sxs-lookup"><span data-stu-id="5926c-135">Creating Internet Requests</span></span>](../../../docs/framework/network-programming/creating-internet-requests.md)  
+ [<span data-ttu-id="5926c-136">Ağda Akışları Kullanma</span><span class="sxs-lookup"><span data-stu-id="5926c-136">Using Streams on the Network</span></span>](../../../docs/framework/network-programming/using-streams-on-the-network.md)  
+ [<span data-ttu-id="5926c-137">Ara Sunucu Üzerinden İnternet Erişimi</span><span class="sxs-lookup"><span data-stu-id="5926c-137">Accessing the Internet Through a Proxy</span></span>](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
+ [<span data-ttu-id="5926c-138">Veri İsteme</span><span class="sxs-lookup"><span data-stu-id="5926c-138">Requesting Data</span></span>](../../../docs/framework/network-programming/requesting-data.md)  
+ [<span data-ttu-id="5926c-139">Nasıl yapılır: WebRequest Sınıfını Kullanarak Veri İsteme</span><span class="sxs-lookup"><span data-stu-id="5926c-139">How to: Request Data Using the WebRequest Class</span></span>](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)

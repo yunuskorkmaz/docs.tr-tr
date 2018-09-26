@@ -11,26 +11,25 @@ helpviewer_keywords:
 ms.assetid: 55d419c0-2201-4101-90c9-2888df4dbb47
 author: Xansky
 ms.author: mhopkins
-manager: markl
-ms.openlocfilehash: 6180a5091b6072af97fd108b27a8dbe6cfd71324
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 247a353a3f68289a85e581fd9b9c308e442a9412
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501279"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47084075"
 ---
-# <a name="expose-a-server-side-ui-automation-provider"></a><span data-ttu-id="b81b2-102">Sunucu Tarafı UI Otomasyon Sağlayıcıyı Gösterme</span><span class="sxs-lookup"><span data-stu-id="b81b2-102">Expose a Server-side UI Automation Provider</span></span>
+# <a name="expose-a-server-side-ui-automation-provider"></a><span data-ttu-id="9e63a-102">Sunucu Tarafı UI Otomasyon Sağlayıcıyı Gösterme</span><span class="sxs-lookup"><span data-stu-id="9e63a-102">Expose a Server-side UI Automation Provider</span></span>
 > [!NOTE]
->  <span data-ttu-id="b81b2-103">Bu belge yönetilen kullanmak isteyen .NET Framework için tasarlanan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tanımlanan sınıflar <xref:System.Windows.Automation> ad alanı.</span><span class="sxs-lookup"><span data-stu-id="b81b2-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="b81b2-104">En son bilgileri [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], bkz: [Windows Automation API: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).</span><span class="sxs-lookup"><span data-stu-id="b81b2-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
+>  <span data-ttu-id="9e63a-103">Bu belge yönetilen kullanmak isteyen .NET Framework için tasarlanan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tanımlanan sınıflar <xref:System.Windows.Automation> ad alanı.</span><span class="sxs-lookup"><span data-stu-id="9e63a-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="9e63a-104">En son bilgileri [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], bkz: [Windows Automation API: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).</span><span class="sxs-lookup"><span data-stu-id="9e63a-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- <span data-ttu-id="b81b2-105">Bu konu içinde barındırılan bir sunucu tarafı UI Otomasyon sağlayıcıyı gösterme gösteren örnek kodu içeren bir <xref:System.Windows.Forms.Control?displayProperty=nameWithType> penceresi.</span><span class="sxs-lookup"><span data-stu-id="b81b2-105">This topic contains example code that shows how to expose a server-side UI Automation provider that is hosted in a <xref:System.Windows.Forms.Control?displayProperty=nameWithType> window.</span></span>  
+ <span data-ttu-id="9e63a-105">Bu konu içinde barındırılan bir sunucu tarafı UI Otomasyon sağlayıcıyı gösterme gösteren örnek kodu içeren bir <xref:System.Windows.Forms.Control?displayProperty=nameWithType> penceresi.</span><span class="sxs-lookup"><span data-stu-id="9e63a-105">This topic contains example code that shows how to expose a server-side UI Automation provider that is hosted in a <xref:System.Windows.Forms.Control?displayProperty=nameWithType> window.</span></span>  
   
- <span data-ttu-id="b81b2-106">İleti WM_GETOBJECT, yakalamak için pencere yordamını gönderilen örnek geçersiz kılmaları [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bir istemci uygulama penceresi hakkında bilgi istediğinde çekirdek hizmet.</span><span class="sxs-lookup"><span data-stu-id="b81b2-106">The example overrides the window procedure to trap WM_GETOBJECT, which is the message sent by the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] core service when a client application requests information about the window.</span></span>  
+ <span data-ttu-id="9e63a-106">İleti WM_GETOBJECT, yakalamak için pencere yordamını gönderilen örnek geçersiz kılmaları [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bir istemci uygulama penceresi hakkında bilgi istediğinde çekirdek hizmet.</span><span class="sxs-lookup"><span data-stu-id="9e63a-106">The example overrides the window procedure to trap WM_GETOBJECT, which is the message sent by the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] core service when a client application requests information about the window.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b81b2-107">Örnek</span><span class="sxs-lookup"><span data-stu-id="b81b2-107">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="9e63a-107">Örnek</span><span class="sxs-lookup"><span data-stu-id="9e63a-107">Example</span></span>  
  [!code-csharp[UIAFragmentProvider_snip#116](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAFragmentProvider_snip/CSharp/ListFragment.cs#116)]
  [!code-vb[UIAFragmentProvider_snip#116](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAFragmentProvider_snip/VisualBasic/ListFragment.vb#116)]  
   
-## <a name="see-also"></a><span data-ttu-id="b81b2-108">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="b81b2-108">See Also</span></span>  
- [<span data-ttu-id="b81b2-109">UI Otomasyonu Sağlayıcılara Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="b81b2-109">UI Automation Providers Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)  
- [<span data-ttu-id="b81b2-110">Sunucu Tarafı UI Otomasyonu Sağlayıcısı Uygulama</span><span class="sxs-lookup"><span data-stu-id="b81b2-110">Server-Side UI Automation Provider Implementation</span></span>](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+## <a name="see-also"></a><span data-ttu-id="9e63a-108">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="9e63a-108">See Also</span></span>  
+ [<span data-ttu-id="9e63a-109">UI Otomasyonu Sağlayıcılara Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="9e63a-109">UI Automation Providers Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)  
+ [<span data-ttu-id="9e63a-110">Sunucu Tarafı UI Otomasyonu Sağlayıcısı Uygulama</span><span class="sxs-lookup"><span data-stu-id="9e63a-110">Server-Side UI Automation Provider Implementation</span></span>](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)

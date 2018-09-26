@@ -13,68 +13,67 @@ helpviewer_keywords:
 ms.assetid: 8eb34f3b-427e-4288-a7ff-c73f489deb45
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 71769efa1233fc8a693219dc02ae56ea39c164e7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c5186aa94993ba551252db6fef55853b5b554789
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743803"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170827"
 ---
-# <a name="linkedconfiguration-element"></a><span data-ttu-id="5bc2e-102">\<linkedConfiguration > öğesi</span><span class="sxs-lookup"><span data-stu-id="5bc2e-102">\<linkedConfiguration> element</span></span>
+# <a name="linkedconfiguration-element"></a><span data-ttu-id="4d454-102">\<linkedConfiguration > öğesi</span><span class="sxs-lookup"><span data-stu-id="4d454-102">\<linkedConfiguration> element</span></span>
 
-<span data-ttu-id="5bc2e-103">Dahil etmek için bir yapılandırma dosyası belirtir.</span><span class="sxs-lookup"><span data-stu-id="5bc2e-103">Specifies a configuration file to include.</span></span>
+<span data-ttu-id="4d454-103">Dahil edilecek bir yapılandırma dosyası belirtir.</span><span class="sxs-lookup"><span data-stu-id="4d454-103">Specifies a configuration file to include.</span></span>
 
-<span data-ttu-id="5bc2e-104">[**\<Yapılandırma >**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="5bc2e-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
-<span data-ttu-id="5bc2e-105">&nbsp;&nbsp;[**\<assemblyBinding >**](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) </span><span class="sxs-lookup"><span data-stu-id="5bc2e-105">&nbsp;&nbsp;[**\<assemblyBinding>**](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) </span></span>  
-<span data-ttu-id="5bc2e-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<linkedConfiguration >**</span><span class="sxs-lookup"><span data-stu-id="5bc2e-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<linkedConfiguration>**</span></span>
+<span data-ttu-id="4d454-104">[**\<Yapılandırma >**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="4d454-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
+<span data-ttu-id="4d454-105">&nbsp;&nbsp;[**\<assemblyBinding >**](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) </span><span class="sxs-lookup"><span data-stu-id="4d454-105">&nbsp;&nbsp;[**\<assemblyBinding>**](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) </span></span>  
+<span data-ttu-id="4d454-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<linkedConfiguration >**</span><span class="sxs-lookup"><span data-stu-id="4d454-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<linkedConfiguration>**</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="5bc2e-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="5bc2e-107">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="4d454-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="4d454-107">Syntax</span></span>
 
 ```xml
 <linkedConfiguration href="URL of linked configuration file" />
 ```
 
-## <a name="attribute"></a><span data-ttu-id="5bc2e-108">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="5bc2e-108">Attribute</span></span>
+## <a name="attribute"></a><span data-ttu-id="4d454-108">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="4d454-108">Attribute</span></span>
 
-|           | <span data-ttu-id="5bc2e-109">Açıklama</span><span class="sxs-lookup"><span data-stu-id="5bc2e-109">Description</span></span> |
+|           | <span data-ttu-id="4d454-109">Açıklama</span><span class="sxs-lookup"><span data-stu-id="4d454-109">Description</span></span> |
 | --------- | ----------- |
-| <span data-ttu-id="5bc2e-110">**href**</span><span class="sxs-lookup"><span data-stu-id="5bc2e-110">**href**</span></span>  | <span data-ttu-id="5bc2e-111">Gerekli öznitelik.</span><span class="sxs-lookup"><span data-stu-id="5bc2e-111">Required attribute.</span></span><br><br><span data-ttu-id="5bc2e-112">Dahil etmek için yapılandırma dosyası URL'si.</span><span class="sxs-lookup"><span data-stu-id="5bc2e-112">The URL of the configuration file to include.</span></span> <span data-ttu-id="5bc2e-113">İçin desteklenen tek biçimi **href** özniteliği `file://`.</span><span class="sxs-lookup"><span data-stu-id="5bc2e-113">The only format supported for the **href** attribute is `file://`.</span></span> <span data-ttu-id="5bc2e-114">Yerel dosyaları ve UNC dosyaları desteklenir.</span><span class="sxs-lookup"><span data-stu-id="5bc2e-114">Local files and UNC files are supported.</span></span> |
+| <span data-ttu-id="4d454-110">**href**</span><span class="sxs-lookup"><span data-stu-id="4d454-110">**href**</span></span>  | <span data-ttu-id="4d454-111">Gerekli öznitelik.</span><span class="sxs-lookup"><span data-stu-id="4d454-111">Required attribute.</span></span><br><br><span data-ttu-id="4d454-112">Dahil etmek için yapılandırma dosyasının URL'si.</span><span class="sxs-lookup"><span data-stu-id="4d454-112">The URL of the configuration file to include.</span></span> <span data-ttu-id="4d454-113">Desteklenen tek biçimi **href** özniteliği `file://`.</span><span class="sxs-lookup"><span data-stu-id="4d454-113">The only format supported for the **href** attribute is `file://`.</span></span> <span data-ttu-id="4d454-114">Yerel dosyaları ve UNC dosyaları desteklenir.</span><span class="sxs-lookup"><span data-stu-id="4d454-114">Local files and UNC files are supported.</span></span> |
 
-## <a name="parent-element"></a><span data-ttu-id="5bc2e-115">Üst öğesi</span><span class="sxs-lookup"><span data-stu-id="5bc2e-115">Parent element</span></span>
+## <a name="parent-element"></a><span data-ttu-id="4d454-115">Üst öğe</span><span class="sxs-lookup"><span data-stu-id="4d454-115">Parent element</span></span>
 
-|     | <span data-ttu-id="5bc2e-116">Açıklama</span><span class="sxs-lookup"><span data-stu-id="5bc2e-116">Description</span></span> |
+|     | <span data-ttu-id="4d454-116">Açıklama</span><span class="sxs-lookup"><span data-stu-id="4d454-116">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="5bc2e-117">**\<assemblyBinding >** öğesi</span><span class="sxs-lookup"><span data-stu-id="5bc2e-117">**\<assemblyBinding>** Element</span></span>](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | <span data-ttu-id="5bc2e-118">Derleme bağlama ilkesi yapılandırma düzeyinde belirtir.</span><span class="sxs-lookup"><span data-stu-id="5bc2e-118">Specifies assembly binding policy at the configuration level.</span></span> |
+| [<span data-ttu-id="4d454-117">**\<assemblyBinding >** öğesi</span><span class="sxs-lookup"><span data-stu-id="4d454-117">**\<assemblyBinding>** Element</span></span>](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | <span data-ttu-id="4d454-118">Derleme bağlama ilkesini yapılandırma düzeyinde belirtir.</span><span class="sxs-lookup"><span data-stu-id="4d454-118">Specifies assembly binding policy at the configuration level.</span></span> |
 
-## <a name="child-elements"></a><span data-ttu-id="5bc2e-119">Alt öğeleri</span><span class="sxs-lookup"><span data-stu-id="5bc2e-119">Child elements</span></span>
+## <a name="child-elements"></a><span data-ttu-id="4d454-119">Alt öğeleri</span><span class="sxs-lookup"><span data-stu-id="4d454-119">Child elements</span></span>
 
-<span data-ttu-id="5bc2e-120">Yok.</span><span class="sxs-lookup"><span data-stu-id="5bc2e-120">None</span></span>
+<span data-ttu-id="4d454-120">Yok.</span><span class="sxs-lookup"><span data-stu-id="4d454-120">None</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="5bc2e-121">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="5bc2e-121">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="4d454-121">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="4d454-121">Remarks</span></span>
 
-<span data-ttu-id="5bc2e-122">**\<LinkedConfiguration >** öğesi basitleştirir bileşen derlemeleri için bakım.</span><span class="sxs-lookup"><span data-stu-id="5bc2e-122">The **\<linkedConfiguration>** element simplifies servicing for component assemblies.</span></span> <span data-ttu-id="5bc2e-123">Bir veya daha fazla uygulama iyi bilinen bir konumda bulunan bir yapılandırma dosyası sahip bir derleme kullanıyorsanız, derleme kullanan uygulamalar, yapılandırma dosyalarını kullanabilirsiniz  **\<linkedConfiguration >** yapılandırma bilgilerini doğrudan da dahil olmak üzere yerine derleme yapılandırma dosyası eklenecek öğe.</span><span class="sxs-lookup"><span data-stu-id="5bc2e-123">If one or more applications use an assembly that has a configuration file residing in a well-known location, the configuration files of the applications that use the assembly can use the **\<linkedConfiguration>** element to include the assembly configuration file, rather than including configuration information directly.</span></span> <span data-ttu-id="5bc2e-124">Bileşen derleme hizmet, ortak yapılandırma dosyasını güncelleştirme derleme kullanan tüm uygulamalar için güncelleştirilmiş yapılandırma bilgileri sağlar.</span><span class="sxs-lookup"><span data-stu-id="5bc2e-124">When the component assembly is serviced, updating the common configuration file provides updated configuration information to all applications that use the assembly.</span></span>
+<span data-ttu-id="4d454-122">**\<LinkedConfiguration >** öğesi bileşeni derlemeler için bakım basitleştirir.</span><span class="sxs-lookup"><span data-stu-id="4d454-122">The **\<linkedConfiguration>** element simplifies servicing for component assemblies.</span></span> <span data-ttu-id="4d454-123">İyi bilinen bir konumda bulunan bir yapılandırma dosyası bir derleme bir veya daha fazla kullanmanız durumunda derleme kullanan uygulamaların yapılandırma dosyalarını kullanabilirler  **\<linkedConfiguration >** yapılandırma bilgilerini doğrudan dahil olmak üzere yerine derleme yapılandırma dosyası eklenecek öğe.</span><span class="sxs-lookup"><span data-stu-id="4d454-123">If one or more applications use an assembly that has a configuration file residing in a well-known location, the configuration files of the applications that use the assembly can use the **\<linkedConfiguration>** element to include the assembly configuration file, rather than including configuration information directly.</span></span> <span data-ttu-id="4d454-124">Bileşen derlemesi değiştiğinde, ortak yapılandırma dosyasını güncelleştirme derleme kullanan tüm uygulamalar için güncelleştirilmiş yapılandırma bilgilerini sağlar.</span><span class="sxs-lookup"><span data-stu-id="4d454-124">When the component assembly is serviced, updating the common configuration file provides updated configuration information to all applications that use the assembly.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="5bc2e-125">**\<LinkedConfiguration >** öğesi Windows yan yana bildirimleri olan uygulamalar için desteklenmez.</span><span class="sxs-lookup"><span data-stu-id="5bc2e-125">The **\<linkedConfiguration>** element is not supported for applications with Windows side-by-side manifests.</span></span>
+> <span data-ttu-id="4d454-125">**\<LinkedConfiguration >** öğesi Windows yan yana bildirimleri olan uygulamalar için desteklenmez.</span><span class="sxs-lookup"><span data-stu-id="4d454-125">The **\<linkedConfiguration>** element is not supported for applications with Windows side-by-side manifests.</span></span>
 
-<span data-ttu-id="5bc2e-126">Aşağıdaki kuralları bağlantılı yapılandırma dosyaları kullanımını yöneten:</span><span class="sxs-lookup"><span data-stu-id="5bc2e-126">The following rules govern the use of linked configuration files:</span></span>
+<span data-ttu-id="4d454-126">Aşağıdaki kuralları bağlantılı yapılandırma dosyaları yöneten:</span><span class="sxs-lookup"><span data-stu-id="4d454-126">The following rules govern the use of linked configuration files:</span></span>
 
-- <span data-ttu-id="5bc2e-127">Dahil edilen yapılandırma dosyalarında ayarlar yalnızca yükleyicisi bağlama ilkesi etkileyebilir ve yalnızca yükleyicisi tarafından kullanılır.</span><span class="sxs-lookup"><span data-stu-id="5bc2e-127">The settings in included configuration files only affect loader binding policy and are used only by the loader.</span></span> <span data-ttu-id="5bc2e-128">Dahil edilen yapılandırma dosyalarını ilkeleri bağlama farklı ayarlara sahip olabilir, ancak bu ayarları herhangi bir etkisi yoktur.</span><span class="sxs-lookup"><span data-stu-id="5bc2e-128">The included configuration files can have settings other than binding policies, but those settings don't have any effect.</span></span>
+- <span data-ttu-id="4d454-127">Dahil edilen yapılandırma dosyalarındaki ayarlar yalnızca yükleyici bağlama ilkesi etkiler ve yalnızca yükleyicisi tarafından kullanılır.</span><span class="sxs-lookup"><span data-stu-id="4d454-127">The settings in included configuration files only affect loader binding policy and are used only by the loader.</span></span> <span data-ttu-id="4d454-128">Dahil edilen yapılandırma dosyalarını ayarları ilkeleri bağlama dışında olabilir, ancak bu ayarlar, herhangi bir etkisi yok.</span><span class="sxs-lookup"><span data-stu-id="4d454-128">The included configuration files can have settings other than binding policies, but those settings don't have any effect.</span></span>
 
-- <span data-ttu-id="5bc2e-129">İçin desteklenen tek biçimi `href` özniteliği `file://`.</span><span class="sxs-lookup"><span data-stu-id="5bc2e-129">The only format supported for the `href` attribute is `file://`.</span></span> <span data-ttu-id="5bc2e-130">Yerel dosyaları ve UNC dosyaları desteklenir.</span><span class="sxs-lookup"><span data-stu-id="5bc2e-130">Local files and UNC files are supported.</span></span>
+- <span data-ttu-id="4d454-129">Desteklenen tek biçimi `href` özniteliği `file://`.</span><span class="sxs-lookup"><span data-stu-id="4d454-129">The only format supported for the `href` attribute is `file://`.</span></span> <span data-ttu-id="4d454-130">Yerel dosyaları ve UNC dosyaları desteklenir.</span><span class="sxs-lookup"><span data-stu-id="4d454-130">Local files and UNC files are supported.</span></span>
 
-- <span data-ttu-id="5bc2e-131">Yapılandırma dosya başına bağlı yapılandırmalar sayısı hiçbir kısıtlama yoktur.</span><span class="sxs-lookup"><span data-stu-id="5bc2e-131">There is no constraint on the number of linked configurations per configuration file.</span></span>
+- <span data-ttu-id="4d454-131">Yapılandırma dosyası başına bağlı yapılandırmaları sayısı hiçbir kısıtlama yoktur.</span><span class="sxs-lookup"><span data-stu-id="4d454-131">There is no constraint on the number of linked configurations per configuration file.</span></span>
 
-- <span data-ttu-id="5bc2e-132">Tüm bağlantılı yapılandırma dosyaları için davranışını benzer bir dosyayı oluşturmak için birleştirilir `#include` C/c++ yönergesi.</span><span class="sxs-lookup"><span data-stu-id="5bc2e-132">All linked configuration files are merged to form one file, similar to the behavior of the `#include` directive in C/C++.</span></span>
+- <span data-ttu-id="4d454-132">Tüm bağlantılı yapılandırma dosyaları davranıştır benzer bir dosya oluşturmak üzere birleştirilir `#include` C/C++'ta yönergesi.</span><span class="sxs-lookup"><span data-stu-id="4d454-132">All linked configuration files are merged to form one file, similar to the behavior of the `#include` directive in C/C++.</span></span>
 
-- <span data-ttu-id="5bc2e-133">**\<LinkedConfiguration >** yalnızca uygulama yapılandırma dosyaları öğesine izin verilir; içinde göz ardı *Machine.config*.</span><span class="sxs-lookup"><span data-stu-id="5bc2e-133">The **\<linkedConfiguration>** element is allowed only in application configuration files; it's ignored in *Machine.config*.</span></span>
+- <span data-ttu-id="4d454-133">**\<LinkedConfiguration >** öğesi yalnızca uygulama yapılandırma dosyalarında izin verilir; içindeki sayılır *Machine.config*.</span><span class="sxs-lookup"><span data-stu-id="4d454-133">The **\<linkedConfiguration>** element is allowed only in application configuration files; it's ignored in *Machine.config*.</span></span>
 
-- <span data-ttu-id="5bc2e-134">Döngüsel başvuru algılandı ve sonlandırıldı.</span><span class="sxs-lookup"><span data-stu-id="5bc2e-134">Circular references are detected and terminated.</span></span> <span data-ttu-id="5bc2e-135">Diğer bir deyişle,  **\<linkedConfiguration >** yapılandırma dosyalarını bir dizi öğeleri formunda bir döngü, döngü algılandı ve durduruldu.</span><span class="sxs-lookup"><span data-stu-id="5bc2e-135">That is, if the **\<linkedConfiguration>** elements of a series of configuration files form a loop, the loop is detected and stopped.</span></span>
+- <span data-ttu-id="4d454-134">Döngüsel başvuru algılandı ve sonlandırıldı.</span><span class="sxs-lookup"><span data-stu-id="4d454-134">Circular references are detected and terminated.</span></span> <span data-ttu-id="4d454-135">Diğer bir deyişle,  **\<linkedConfiguration >** yapılandırma dosyalarını bir dizi öğeleri formunda bir döngü, döngü algılandı ve durduruldu.</span><span class="sxs-lookup"><span data-stu-id="4d454-135">That is, if the **\<linkedConfiguration>** elements of a series of configuration files form a loop, the loop is detected and stopped.</span></span>
 
-## <a name="example"></a><span data-ttu-id="5bc2e-136">Örnek</span><span class="sxs-lookup"><span data-stu-id="5bc2e-136">Example</span></span>
+## <a name="example"></a><span data-ttu-id="4d454-136">Örnek</span><span class="sxs-lookup"><span data-stu-id="4d454-136">Example</span></span>
 
-<span data-ttu-id="5bc2e-137">Aşağıdaki örnek, yerel sabit disk yapılandırma dosyasından dahil gösterilmektedir:</span><span class="sxs-lookup"><span data-stu-id="5bc2e-137">The following example shows how to include configuration file from the local hard disk:</span></span>
+<span data-ttu-id="4d454-137">Aşağıdaki örnek yapılandırma dosyasını yerel sabit diskten nasıl ekleyeceğinizi gösterir:</span><span class="sxs-lookup"><span data-stu-id="4d454-137">The following example shows how to include configuration file from the local hard disk:</span></span>
 
 ```xml
 <configuration>
@@ -84,7 +83,7 @@ ms.locfileid: "32743803"
 </configuration>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="5bc2e-138">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="5bc2e-138">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4d454-138">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4d454-138">See also</span></span>
 
-<span data-ttu-id="5bc2e-139">[**\<assemblyBinding >** öğesi](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) </span><span class="sxs-lookup"><span data-stu-id="5bc2e-139">[**\<assemblyBinding>** Element](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) </span></span>  
-[<span data-ttu-id="5bc2e-140">.NET Framework için yapılandırma dosyası şeması</span><span class="sxs-lookup"><span data-stu-id="5bc2e-140">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)
+<span data-ttu-id="4d454-139">[**\<assemblyBinding >** öğesi](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) </span><span class="sxs-lookup"><span data-stu-id="4d454-139">[**\<assemblyBinding>** Element](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) </span></span>  
+[<span data-ttu-id="4d454-140">.NET Framework yapılandırma dosyası şeması</span><span class="sxs-lookup"><span data-stu-id="4d454-140">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)

@@ -8,27 +8,27 @@ dev_langs:
 - VB
 ms.assetid: 190349fc-0573-49c7-bb85-8e316df7f31f
 ms.openlocfilehash: 12e911fb899cb85121c129b762828cdda01e64f1
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46580219"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47112672"
 ---
-# <a name="how-to-use-a-windows-communication-foundation-client"></a><span data-ttu-id="adcd5-102">Nasıl yapılır: Bir Windows Communication Foundation İstemcisi Kullanma</span><span class="sxs-lookup"><span data-stu-id="adcd5-102">How to: Use a Windows Communication Foundation Client</span></span>
+# <a name="how-to-use-a-windows-communication-foundation-client"></a><span data-ttu-id="5dd9a-102">Nasıl yapılır: Bir Windows Communication Foundation İstemcisi Kullanma</span><span class="sxs-lookup"><span data-stu-id="5dd9a-102">How to: Use a Windows Communication Foundation Client</span></span>
 
-<span data-ttu-id="adcd5-103">Son altı görev temel Windows Communication Foundation (WCF) uygulaması oluşturmak için gereken budur.</span><span class="sxs-lookup"><span data-stu-id="adcd5-103">This is the last of six tasks required to create a basic Windows Communication Foundation (WCF) application.</span></span> <span data-ttu-id="adcd5-104">Tüm altı görevleri genel bakış için bkz. [başlangıç Öğreticisi](../../../docs/framework/wcf/getting-started-tutorial.md) konu.</span><span class="sxs-lookup"><span data-stu-id="adcd5-104">For an overview of all six of the tasks, see the [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md) topic.</span></span>
+<span data-ttu-id="5dd9a-103">Son altı görev temel Windows Communication Foundation (WCF) uygulaması oluşturmak için gereken budur.</span><span class="sxs-lookup"><span data-stu-id="5dd9a-103">This is the last of six tasks required to create a basic Windows Communication Foundation (WCF) application.</span></span> <span data-ttu-id="5dd9a-104">Tüm altı görevleri genel bakış için bkz. [başlangıç Öğreticisi](../../../docs/framework/wcf/getting-started-tutorial.md) konu.</span><span class="sxs-lookup"><span data-stu-id="5dd9a-104">For an overview of all six of the tasks, see the [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md) topic.</span></span>
 
-<span data-ttu-id="adcd5-105">Bir Windows Communication Foundation (WCF) proxy oluşturulup yapılandırıldıktan sonra bir istemci örneği oluşturulabilir ve istemci uygulaması derlenmiş ve WCF Hizmeti ile iletişim kurmak için kullanılan.</span><span class="sxs-lookup"><span data-stu-id="adcd5-105">Once a Windows Communication Foundation (WCF) proxy has been created and configured, a client instance can be created and the client application can be compiled and used to communicate with the WCF service.</span></span> <span data-ttu-id="adcd5-106">Bu konuda, örnekleme ve bir WCF istemcisi kullanarak yordamlar açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="adcd5-106">This topic describes procedures for instantiating and using a WCF client.</span></span> <span data-ttu-id="adcd5-107">Bu yordam, üç şeyi yapar:</span><span class="sxs-lookup"><span data-stu-id="adcd5-107">This procedure does three things:</span></span>
+<span data-ttu-id="5dd9a-105">Bir Windows Communication Foundation (WCF) proxy oluşturulup yapılandırıldıktan sonra bir istemci örneği oluşturulabilir ve istemci uygulaması derlenmiş ve WCF Hizmeti ile iletişim kurmak için kullanılan.</span><span class="sxs-lookup"><span data-stu-id="5dd9a-105">Once a Windows Communication Foundation (WCF) proxy has been created and configured, a client instance can be created and the client application can be compiled and used to communicate with the WCF service.</span></span> <span data-ttu-id="5dd9a-106">Bu konuda, örnekleme ve bir WCF istemcisi kullanarak yordamlar açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="5dd9a-106">This topic describes procedures for instantiating and using a WCF client.</span></span> <span data-ttu-id="5dd9a-107">Bu yordam, üç şeyi yapar:</span><span class="sxs-lookup"><span data-stu-id="5dd9a-107">This procedure does three things:</span></span>
 
-1.  <span data-ttu-id="adcd5-108">Bir WCF istemcisi örneği oluşturur.</span><span class="sxs-lookup"><span data-stu-id="adcd5-108">Instantiates a WCF client.</span></span>
+1.  <span data-ttu-id="5dd9a-108">Bir WCF istemcisi örneği oluşturur.</span><span class="sxs-lookup"><span data-stu-id="5dd9a-108">Instantiates a WCF client.</span></span>
 
-2.  <span data-ttu-id="adcd5-109">Hizmet işlemleri üretilen Ara sunucuya çağırır.</span><span class="sxs-lookup"><span data-stu-id="adcd5-109">Calls the service operations from the generated proxy.</span></span>
+2.  <span data-ttu-id="5dd9a-109">Hizmet işlemleri üretilen Ara sunucuya çağırır.</span><span class="sxs-lookup"><span data-stu-id="5dd9a-109">Calls the service operations from the generated proxy.</span></span>
 
-3.  <span data-ttu-id="adcd5-110">İstemci işlem çağrısı tamamlandığında kapatır.</span><span class="sxs-lookup"><span data-stu-id="adcd5-110">Closes the client once the operation call is completed.</span></span>
+3.  <span data-ttu-id="5dd9a-110">İstemci işlem çağrısı tamamlandığında kapatır.</span><span class="sxs-lookup"><span data-stu-id="5dd9a-110">Closes the client once the operation call is completed.</span></span>
 
-## <a name="use-a-windows-communication-foundation-client"></a><span data-ttu-id="adcd5-111">Bir Windows Communication Foundation istemcisi kullanma</span><span class="sxs-lookup"><span data-stu-id="adcd5-111">Use a Windows Communication Foundation client</span></span>
+## <a name="use-a-windows-communication-foundation-client"></a><span data-ttu-id="5dd9a-111">Bir Windows Communication Foundation istemcisi kullanma</span><span class="sxs-lookup"><span data-stu-id="5dd9a-111">Use a Windows Communication Foundation client</span></span>
 
-<span data-ttu-id="adcd5-112">GettingStartedClient projeden Program.cs veya Program.vb dosyasını açın ve varolan kodu aşağıdaki kodla değiştirin:</span><span class="sxs-lookup"><span data-stu-id="adcd5-112">Open the Program.cs or Program.vb file from the GettingStartedClient project and replace the existing code with the following code:</span></span>
+<span data-ttu-id="5dd9a-112">GettingStartedClient projeden Program.cs veya Program.vb dosyasını açın ve varolan kodu aşağıdaki kodla değiştirin:</span><span class="sxs-lookup"><span data-stu-id="5dd9a-112">Open the Program.cs or Program.vb file from the GettingStartedClient project and replace the existing code with the following code:</span></span>
 
 ```csharp
 using System;
@@ -128,29 +128,29 @@ Module Module1
 End Module
 ```
 
-<span data-ttu-id="adcd5-113">Bildirim `using` veya `Imports` Imports deyimi `GettingStartedClient.ServiceReference1`.</span><span class="sxs-lookup"><span data-stu-id="adcd5-113">Notice the `using` or `Imports` statement that imports the `GettingStartedClient.ServiceReference1`.</span></span> <span data-ttu-id="adcd5-114">Bu tarafından oluşturulan kodu alır **hizmet Başvurusu Ekle** Visual Studio'da.</span><span class="sxs-lookup"><span data-stu-id="adcd5-114">This imports the code generated by **Add Service Reference** in Visual Studio.</span></span> <span data-ttu-id="adcd5-115">Kod WCF proxy başlatır ve ardından her biri hesap makinesi hizmet tarafından sunulan hizmet işlemleri çağırır, proxy kapatır ve sonlandırır.</span><span class="sxs-lookup"><span data-stu-id="adcd5-115">The code instantiates the WCF proxy and then calls each of the service operations exposed by the calculator service, closes the proxy, and terminates.</span></span>
+<span data-ttu-id="5dd9a-113">Bildirim `using` veya `Imports` Imports deyimi `GettingStartedClient.ServiceReference1`.</span><span class="sxs-lookup"><span data-stu-id="5dd9a-113">Notice the `using` or `Imports` statement that imports the `GettingStartedClient.ServiceReference1`.</span></span> <span data-ttu-id="5dd9a-114">Bu tarafından oluşturulan kodu alır **hizmet Başvurusu Ekle** Visual Studio'da.</span><span class="sxs-lookup"><span data-stu-id="5dd9a-114">This imports the code generated by **Add Service Reference** in Visual Studio.</span></span> <span data-ttu-id="5dd9a-115">Kod WCF proxy başlatır ve ardından her biri hesap makinesi hizmet tarafından sunulan hizmet işlemleri çağırır, proxy kapatır ve sonlandırır.</span><span class="sxs-lookup"><span data-stu-id="5dd9a-115">The code instantiates the WCF proxy and then calls each of the service operations exposed by the calculator service, closes the proxy, and terminates.</span></span>
 
-<span data-ttu-id="adcd5-116">Öğreticiyi tamamladınız.</span><span class="sxs-lookup"><span data-stu-id="adcd5-116">You have now completed the tutorial.</span></span> <span data-ttu-id="adcd5-117">Bir hizmet sözleşmesini tanımlanan, hizmet sözleşmesi uygulanan, WCF proxy oluşturulan, WCF istemci uygulaması yapılandırılmış ve sonra hizmet işlemlerini aramak için Ara sunucu kullanılır.</span><span class="sxs-lookup"><span data-stu-id="adcd5-117">You defined a service contract, implemented the service contract, generated a WCF proxy, configured a WCF client application, and then used the proxy to call service operations.</span></span> <span data-ttu-id="adcd5-118">Uygulamayı test etmek için önce GettingStartedHost hizmeti başlatın ve ardından GettingStartedClient çalıştırmak için Çalıştır.</span><span class="sxs-lookup"><span data-stu-id="adcd5-118">To test out the application, first run GettingStartedHost to start the service and then run GettingStartedClient.</span></span>
+<span data-ttu-id="5dd9a-116">Öğreticiyi tamamladınız.</span><span class="sxs-lookup"><span data-stu-id="5dd9a-116">You have now completed the tutorial.</span></span> <span data-ttu-id="5dd9a-117">Bir hizmet sözleşmesini tanımlanan, hizmet sözleşmesi uygulanan, WCF proxy oluşturulan, WCF istemci uygulaması yapılandırılmış ve sonra hizmet işlemlerini aramak için Ara sunucu kullanılır.</span><span class="sxs-lookup"><span data-stu-id="5dd9a-117">You defined a service contract, implemented the service contract, generated a WCF proxy, configured a WCF client application, and then used the proxy to call service operations.</span></span> <span data-ttu-id="5dd9a-118">Uygulamayı test etmek için önce GettingStartedHost hizmeti başlatın ve ardından GettingStartedClient çalıştırmak için Çalıştır.</span><span class="sxs-lookup"><span data-stu-id="5dd9a-118">To test out the application, first run GettingStartedHost to start the service and then run GettingStartedClient.</span></span>
 
-<span data-ttu-id="adcd5-119">GettingStartedHost çıktısı gibi görünmelidir:</span><span class="sxs-lookup"><span data-stu-id="adcd5-119">The output from GettingStartedHost should look like this:</span></span>
+<span data-ttu-id="5dd9a-119">GettingStartedHost çıktısı gibi görünmelidir:</span><span class="sxs-lookup"><span data-stu-id="5dd9a-119">The output from GettingStartedHost should look like this:</span></span>
 
 ```text
 The service is ready.Press <ENTER> to terminate service.Received Add(100,15.99)Return: 115.99Received Subtract(145,76.54)Return: 68.46Received Multiply(9,81.25)Return: 731.25Received Divide(22,7)Return: 3.14285714285714
 ```
 
-<span data-ttu-id="adcd5-120">GettingStartedClient çıktısı gibi görünmelidir:</span><span class="sxs-lookup"><span data-stu-id="adcd5-120">The output from GettingStartedClient should look like this:</span></span>
+<span data-ttu-id="5dd9a-120">GettingStartedClient çıktısı gibi görünmelidir:</span><span class="sxs-lookup"><span data-stu-id="5dd9a-120">The output from GettingStartedClient should look like this:</span></span>
 
 ```text
 Add(100,15.99) = 115.99Subtract(145,76.54) = 68.46Multiply(9,81.25) = 731.25Divide(22,7) = 3.14285714285714Press <ENTER> to terminate client.
 ```
 
-## <a name="see-also"></a><span data-ttu-id="adcd5-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="adcd5-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5dd9a-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="5dd9a-121">See also</span></span>
 
-- [<span data-ttu-id="adcd5-122">İstemci Derleme</span><span class="sxs-lookup"><span data-stu-id="adcd5-122">Building Clients</span></span>](../../../docs/framework/wcf/building-clients.md)
-- [<span data-ttu-id="adcd5-123">Nasıl yapılır: İstemci Oluşturma</span><span class="sxs-lookup"><span data-stu-id="adcd5-123">How to: Create a Client</span></span>](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
-- [<span data-ttu-id="adcd5-124">Başlangıç Öğreticisi</span><span class="sxs-lookup"><span data-stu-id="adcd5-124">Getting Started Tutorial</span></span>](../../../docs/framework/wcf/getting-started-tutorial.md)
-- [<span data-ttu-id="adcd5-125">Temel WCF Programlama</span><span class="sxs-lookup"><span data-stu-id="adcd5-125">Basic WCF Programming</span></span>](../../../docs/framework/wcf/basic-wcf-programming.md)
-- [<span data-ttu-id="adcd5-126">Nasıl yapılır: Çift Yönlü Anlaşma Oluşturma</span><span class="sxs-lookup"><span data-stu-id="adcd5-126">How to: Create a Duplex Contract</span></span>](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
-- [<span data-ttu-id="adcd5-127">Nasıl yapılır: Çift Yönlü Sözleşme ile Hizmetlere Erişme</span><span class="sxs-lookup"><span data-stu-id="adcd5-127">How to: Access Services with a Duplex Contract</span></span>](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
-- [<span data-ttu-id="adcd5-128">Başlarken</span><span class="sxs-lookup"><span data-stu-id="adcd5-128">Getting Started</span></span>](../../../docs/framework/wcf/samples/getting-started-sample.md)
-- [<span data-ttu-id="adcd5-129">Kendini Barındırma</span><span class="sxs-lookup"><span data-stu-id="adcd5-129">Self-Host</span></span>](../../../docs/framework/wcf/samples/self-host.md)
+- [<span data-ttu-id="5dd9a-122">İstemci Derleme</span><span class="sxs-lookup"><span data-stu-id="5dd9a-122">Building Clients</span></span>](../../../docs/framework/wcf/building-clients.md)
+- [<span data-ttu-id="5dd9a-123">Nasıl yapılır: İstemci Oluşturma</span><span class="sxs-lookup"><span data-stu-id="5dd9a-123">How to: Create a Client</span></span>](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+- [<span data-ttu-id="5dd9a-124">Başlangıç Öğreticisi</span><span class="sxs-lookup"><span data-stu-id="5dd9a-124">Getting Started Tutorial</span></span>](../../../docs/framework/wcf/getting-started-tutorial.md)
+- [<span data-ttu-id="5dd9a-125">Temel WCF Programlama</span><span class="sxs-lookup"><span data-stu-id="5dd9a-125">Basic WCF Programming</span></span>](../../../docs/framework/wcf/basic-wcf-programming.md)
+- [<span data-ttu-id="5dd9a-126">Nasıl yapılır: Çift Yönlü Anlaşma Oluşturma</span><span class="sxs-lookup"><span data-stu-id="5dd9a-126">How to: Create a Duplex Contract</span></span>](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+- [<span data-ttu-id="5dd9a-127">Nasıl yapılır: Çift Yönlü Sözleşme ile Hizmetlere Erişme</span><span class="sxs-lookup"><span data-stu-id="5dd9a-127">How to: Access Services with a Duplex Contract</span></span>](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [<span data-ttu-id="5dd9a-128">Başlarken</span><span class="sxs-lookup"><span data-stu-id="5dd9a-128">Getting Started</span></span>](../../../docs/framework/wcf/samples/getting-started-sample.md)
+- [<span data-ttu-id="5dd9a-129">Kendini Barındırma</span><span class="sxs-lookup"><span data-stu-id="5dd9a-129">Self-Host</span></span>](../../../docs/framework/wcf/samples/self-host.md)

@@ -1,5 +1,5 @@
 ---
-title: '&lt;anahtarlar&gt; öğesi'
+title: '&lt;anahtarları&gt; öğesi'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/switches
@@ -11,52 +11,51 @@ helpviewer_keywords:
 ms.assetid: 4cf36786-b89a-40e2-a0f1-86bb9b783343
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 60a18ae8d89d6be69b2c10c07064f123d3f9c0f8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7ca375935c1dfcdb406257ece1a9dfd18851dddf
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745155"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47113890"
 ---
-# <a name="ltswitchesgt-element"></a><span data-ttu-id="2b886-102">&lt;anahtarlar&gt; öğesi</span><span class="sxs-lookup"><span data-stu-id="2b886-102">&lt;switches&gt; Element</span></span>
-<span data-ttu-id="2b886-103">İzleme anahtarları ve izleme anahtarları belirlendiği düzeyi içerir.</span><span class="sxs-lookup"><span data-stu-id="2b886-103">Contains trace switches and the level where the trace switches are set.</span></span>  
+# <a name="ltswitchesgt-element"></a><span data-ttu-id="15df5-102">&lt;anahtarları&gt; öğesi</span><span class="sxs-lookup"><span data-stu-id="15df5-102">&lt;switches&gt; Element</span></span>
+<span data-ttu-id="15df5-103">İzleme anahtarları ve izleme anahtarları ayarlandığı düzeyi içerir.</span><span class="sxs-lookup"><span data-stu-id="15df5-103">Contains trace switches and the level where the trace switches are set.</span></span>  
   
- <span data-ttu-id="2b886-104">\<Yapılandırma ></span><span class="sxs-lookup"><span data-stu-id="2b886-104">\<configuration></span></span>  
-<span data-ttu-id="2b886-105">\<System.Diagnostics ></span><span class="sxs-lookup"><span data-stu-id="2b886-105">\<system.diagnostics></span></span>  
-<span data-ttu-id="2b886-106">\<anahtarları ></span><span class="sxs-lookup"><span data-stu-id="2b886-106">\<switches></span></span>  
+ <span data-ttu-id="15df5-104">\<Yapılandırma ></span><span class="sxs-lookup"><span data-stu-id="15df5-104">\<configuration></span></span>  
+<span data-ttu-id="15df5-105">\<System.Diagnostics ></span><span class="sxs-lookup"><span data-stu-id="15df5-105">\<system.diagnostics></span></span>  
+<span data-ttu-id="15df5-106">\<anahtarlar ></span><span class="sxs-lookup"><span data-stu-id="15df5-106">\<switches></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2b886-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="2b886-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="15df5-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="15df5-107">Syntax</span></span>  
   
 ```xml  
       <switches>   
 </switches>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="2b886-108">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="2b886-108">Attributes and Elements</span></span>  
- <span data-ttu-id="2b886-109">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="2b886-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="15df5-108">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="15df5-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="15df5-109">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="15df5-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="2b886-110">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="2b886-110">Attributes</span></span>  
- <span data-ttu-id="2b886-111">Yok.</span><span class="sxs-lookup"><span data-stu-id="2b886-111">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="15df5-110">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="15df5-110">Attributes</span></span>  
+ <span data-ttu-id="15df5-111">Yok.</span><span class="sxs-lookup"><span data-stu-id="15df5-111">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="2b886-112">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="2b886-112">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="15df5-112">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="15df5-112">Child Elements</span></span>  
   
-|<span data-ttu-id="2b886-113">Öğe</span><span class="sxs-lookup"><span data-stu-id="2b886-113">Element</span></span>|<span data-ttu-id="2b886-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="2b886-114">Description</span></span>|  
+|<span data-ttu-id="15df5-113">Öğe</span><span class="sxs-lookup"><span data-stu-id="15df5-113">Element</span></span>|<span data-ttu-id="15df5-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="15df5-114">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="2b886-115">\<ekleme ></span><span class="sxs-lookup"><span data-stu-id="2b886-115">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-switches.md)|<span data-ttu-id="2b886-116">İzleme anahtarı ayarlandığı düzeyini belirtir.</span><span class="sxs-lookup"><span data-stu-id="2b886-116">Specifies the level where a trace switch is set.</span></span>|  
+|[<span data-ttu-id="15df5-115">\<Ekle ></span><span class="sxs-lookup"><span data-stu-id="15df5-115">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-switches.md)|<span data-ttu-id="15df5-116">Bir izleme anahtarı ayarlandığı düzeyini belirtir.</span><span class="sxs-lookup"><span data-stu-id="15df5-116">Specifies the level where a trace switch is set.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="2b886-117">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="2b886-117">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="15df5-117">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="15df5-117">Parent Elements</span></span>  
   
-|<span data-ttu-id="2b886-118">Öğe</span><span class="sxs-lookup"><span data-stu-id="2b886-118">Element</span></span>|<span data-ttu-id="2b886-119">Açıklama</span><span class="sxs-lookup"><span data-stu-id="2b886-119">Description</span></span>|  
+|<span data-ttu-id="15df5-118">Öğe</span><span class="sxs-lookup"><span data-stu-id="15df5-118">Element</span></span>|<span data-ttu-id="15df5-119">Açıklama</span><span class="sxs-lookup"><span data-stu-id="15df5-119">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="2b886-120">Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.</span><span class="sxs-lookup"><span data-stu-id="2b886-120">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`System.diagnostics`|<span data-ttu-id="2b886-121">Toplamak, depolamak ve iletileri ve izleme anahtarı ayarlandığı düzeyi rota izleme dinleyicilerini belirtir.</span><span class="sxs-lookup"><span data-stu-id="2b886-121">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
+|`configuration`|<span data-ttu-id="15df5-120">Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.</span><span class="sxs-lookup"><span data-stu-id="15df5-120">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`System.diagnostics`|<span data-ttu-id="15df5-121">Toplamak, depolamak ve iletileri ve bir izleme anahtarı ayarlandığı düzeyi izleme dinleyicilerini belirtir.</span><span class="sxs-lookup"><span data-stu-id="15df5-121">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="2b886-122">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="2b886-122">Remarks</span></span>  
- <span data-ttu-id="2b886-123">Bir yapılandırma dosyasında koyarak izleme anahtarı düzeyini değiştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="2b886-123">You can change the level of a trace switch by putting it in a configuration file.</span></span> <span data-ttu-id="2b886-124">Anahtar ise bir <xref:System.Diagnostics.BooleanSwitch>açıp kapatabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="2b886-124">If the switch is a <xref:System.Diagnostics.BooleanSwitch>, you can turn it on and off.</span></span> <span data-ttu-id="2b886-125">Anahtar ise bir <xref:System.Diagnostics.TraceSwitch>, izleme türlerini belirtmek için farklı düzeyleri atayabilir veya hata ayıklama iletileri uygulama çıkarır.</span><span class="sxs-lookup"><span data-stu-id="2b886-125">If the switch is a <xref:System.Diagnostics.TraceSwitch>, you can assign different levels to it to specify the types of trace or debug messages the application outputs.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="15df5-122">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="15df5-122">Remarks</span></span>  
+ <span data-ttu-id="15df5-123">Bir yapılandırma dosyasına koyarak, bir izleme anahtarı düzeyini değiştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="15df5-123">You can change the level of a trace switch by putting it in a configuration file.</span></span> <span data-ttu-id="15df5-124">Anahtar ise bir <xref:System.Diagnostics.BooleanSwitch>açıp kapatabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="15df5-124">If the switch is a <xref:System.Diagnostics.BooleanSwitch>, you can turn it on and off.</span></span> <span data-ttu-id="15df5-125">Anahtar ise bir <xref:System.Diagnostics.TraceSwitch>hata ayıklama iletileri uygulama çıkışları veya izleme türlerini belirtmek için farklı düzeylerde atayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="15df5-125">If the switch is a <xref:System.Diagnostics.TraceSwitch>, you can assign different levels to it to specify the types of trace or debug messages the application outputs.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2b886-126">Örnek</span><span class="sxs-lookup"><span data-stu-id="2b886-126">Example</span></span>  
- <span data-ttu-id="2b886-127">Aşağıdaki örnekte nasıl kullanılacağını gösterir  **\<geçiş >** ayarlamak için öğenin `General` izleme anahtara <xref:System.Diagnostics.TraceLevel> düzey ve etkinleştirme `Data` Boolean izleme anahtarı.</span><span class="sxs-lookup"><span data-stu-id="2b886-127">The following example shows how to use the **\<switch>** element to set the `General` trace switch to the <xref:System.Diagnostics.TraceLevel> level, and enable the `Data` Boolean trace switch.</span></span>  
+## <a name="example"></a><span data-ttu-id="15df5-126">Örnek</span><span class="sxs-lookup"><span data-stu-id="15df5-126">Example</span></span>  
+ <span data-ttu-id="15df5-127">Aşağıdaki örnek nasıl kullanılacağını gösterir  **\<geçiş >** ayarlanacak öğenin `General` izleme anahtarı <xref:System.Diagnostics.TraceLevel> düzeyi ve etkinleştirme `Data` Boole izleme anahtarı.</span><span class="sxs-lookup"><span data-stu-id="15df5-127">The following example shows how to use the **\<switch>** element to set the `General` trace switch to the <xref:System.Diagnostics.TraceLevel> level, and enable the `Data` Boolean trace switch.</span></span>  
   
 ```xml  
 <configuration>  
@@ -69,8 +68,8 @@ ms.locfileid: "32745155"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="2b886-128">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="2b886-128">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="15df5-128">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="15df5-128">See Also</span></span>  
  <xref:System.Diagnostics.Switch>  
  <xref:System.Diagnostics.TraceSwitch>  
  <xref:System.Diagnostics.BooleanSwitch>  
- [<span data-ttu-id="2b886-129">İzleme ve Hata Ayıklama Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="2b886-129">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+ [<span data-ttu-id="15df5-129">İzleme ve Hata Ayıklama Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="15df5-129">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

@@ -10,22 +10,21 @@ helpviewer_keywords:
 ms.assetid: 54f0f153-17e5-4f49-afdc-deadb940c9c1
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: a9afd992a12392ae0ad1c27eea305cb7e367686d
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: f3a706edaeba551139368568a7467e0cdab3524c
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874422"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47171614"
 ---
-# <a name="ltmailsettingsgt-element-network-settings"></a><span data-ttu-id="dfbc4-102">&lt;mailSettings&gt; öğesi (ağ ayarları)</span><span class="sxs-lookup"><span data-stu-id="dfbc4-102">&lt;mailSettings&gt; Element (Network Settings)</span></span>
-<span data-ttu-id="dfbc4-103">Posta gönderme seçeneklerini yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="dfbc4-103">Configures mail sending options.</span></span>  
+# <a name="ltmailsettingsgt-element-network-settings"></a><span data-ttu-id="e8181-102">&lt;mailSettings&gt; öğesi (ağ ayarları)</span><span class="sxs-lookup"><span data-stu-id="e8181-102">&lt;mailSettings&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="e8181-103">Posta gönderme seçeneklerini yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="e8181-103">Configures mail sending options.</span></span>  
 
-<span data-ttu-id="dfbc4-104">\<Yapılandırma ></span><span class="sxs-lookup"><span data-stu-id="dfbc4-104">\<configuration></span></span>  
-<span data-ttu-id="dfbc4-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="dfbc4-105">\<system.net></span></span>  
-<span data-ttu-id="dfbc4-106">\<mailSettings ></span><span class="sxs-lookup"><span data-stu-id="dfbc4-106">\<mailSettings></span></span>  
+<span data-ttu-id="e8181-104">\<Yapılandırma ></span><span class="sxs-lookup"><span data-stu-id="e8181-104">\<configuration></span></span>  
+<span data-ttu-id="e8181-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="e8181-105">\<system.net></span></span>  
+<span data-ttu-id="e8181-106">\<mailSettings ></span><span class="sxs-lookup"><span data-stu-id="e8181-106">\<mailSettings></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dfbc4-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="dfbc4-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e8181-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="e8181-107">Syntax</span></span>  
   
 ```xml  
 <mailSettings>
@@ -33,26 +32,26 @@ ms.locfileid: "37874422"
 </mailSettings>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="dfbc4-108">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="dfbc4-108">Attributes and Elements</span></span>  
- <span data-ttu-id="dfbc4-109">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="dfbc4-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="e8181-108">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="e8181-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="e8181-109">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="e8181-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="dfbc4-110">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="dfbc4-110">Attributes</span></span>  
- <span data-ttu-id="dfbc4-111">Yok.</span><span class="sxs-lookup"><span data-stu-id="dfbc4-111">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="e8181-110">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="e8181-110">Attributes</span></span>  
+ <span data-ttu-id="e8181-111">Yok.</span><span class="sxs-lookup"><span data-stu-id="e8181-111">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="dfbc4-112">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="dfbc4-112">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="e8181-112">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="e8181-112">Child Elements</span></span>  
   
-|<span data-ttu-id="dfbc4-113">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="dfbc4-113">Attribute</span></span>|<span data-ttu-id="dfbc4-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="dfbc4-114">Description</span></span>|  
+|<span data-ttu-id="e8181-113">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="e8181-113">Attribute</span></span>|<span data-ttu-id="e8181-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="e8181-114">Description</span></span>|  
 |---------------|-----------------|  
-|[<span data-ttu-id="dfbc4-115">\<SMTP > öğesi (ağ ayarları)</span><span class="sxs-lookup"><span data-stu-id="dfbc4-115">\<smtp> Element (Network Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|<span data-ttu-id="dfbc4-116">Basit Posta Aktarım Protokolü seçeneklerini yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="dfbc4-116">Configures Simple Mail Transport Protocol options.</span></span>|  
+|[<span data-ttu-id="e8181-115">\<SMTP > öğesi (ağ ayarları)</span><span class="sxs-lookup"><span data-stu-id="e8181-115">\<smtp> Element (Network Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|<span data-ttu-id="e8181-116">Basit Posta Aktarım Protokolü seçeneklerini yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="e8181-116">Configures Simple Mail Transport Protocol options.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="dfbc4-117">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="dfbc4-117">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="e8181-117">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="e8181-117">Parent Elements</span></span>  
   
-|<span data-ttu-id="dfbc4-118">**Öğesi**</span><span class="sxs-lookup"><span data-stu-id="dfbc4-118">**Element**</span></span>|<span data-ttu-id="dfbc4-119">**Açıklama**</span><span class="sxs-lookup"><span data-stu-id="dfbc4-119">**Description**</span></span>|  
+|<span data-ttu-id="e8181-118">**Öğe**</span><span class="sxs-lookup"><span data-stu-id="e8181-118">**Element**</span></span>|<span data-ttu-id="e8181-119">**Açıklama**</span><span class="sxs-lookup"><span data-stu-id="e8181-119">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="dfbc4-120">\<system.Net > öğesi (ağ ayarları)</span><span class="sxs-lookup"><span data-stu-id="dfbc4-120">\<system.Net> Element (Network Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|<span data-ttu-id="dfbc4-121">.NET Framework ağa nasıl bağlandığını belirten ayarları içerir.</span><span class="sxs-lookup"><span data-stu-id="dfbc4-121">Contains settings that specify how the .NET Framework connects to the network.</span></span>|  
+|[<span data-ttu-id="e8181-120">\<system.Net > öğesi (ağ ayarları)</span><span class="sxs-lookup"><span data-stu-id="e8181-120">\<system.Net> Element (Network Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|<span data-ttu-id="e8181-121">.NET Framework ağa nasıl bağlandığını belirten ayarları içerir.</span><span class="sxs-lookup"><span data-stu-id="e8181-121">Contains settings that specify how the .NET Framework connects to the network.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="dfbc4-122">Örnek</span><span class="sxs-lookup"><span data-stu-id="dfbc4-122">Example</span></span>  
- <span data-ttu-id="dfbc4-123">Aşağıdaki örnek, varsayılan ağ kimlik bilgilerini kullanarak e-posta göndermek için uygun SMTP parametrelerini belirtir.</span><span class="sxs-lookup"><span data-stu-id="dfbc4-123">The following example specifies the appropriate SMTP parameters to send email using the default network credentials.</span></span>  
+## <a name="example"></a><span data-ttu-id="e8181-122">Örnek</span><span class="sxs-lookup"><span data-stu-id="e8181-122">Example</span></span>  
+ <span data-ttu-id="e8181-123">Aşağıdaki örnek, varsayılan ağ kimlik bilgilerini kullanarak e-posta göndermek için uygun SMTP parametrelerini belirtir.</span><span class="sxs-lookup"><span data-stu-id="e8181-123">The following example specifies the appropriate SMTP parameters to send email using the default network credentials.</span></span>  
   
 ```xml  
 <configuration>  
@@ -70,6 +69,6 @@ ms.locfileid: "37874422"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="dfbc4-124">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="dfbc4-124">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="e8181-124">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="e8181-124">See Also</span></span>  
  <xref:System.Net.Mail.SmtpClient>  
- [<span data-ttu-id="dfbc4-125">Ağ Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="dfbc4-125">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+ [<span data-ttu-id="e8181-125">Ağ Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="e8181-125">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

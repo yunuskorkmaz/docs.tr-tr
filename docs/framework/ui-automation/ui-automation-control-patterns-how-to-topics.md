@@ -9,23 +9,22 @@ helpviewer_keywords:
 ms.assetid: 72c80262-8ca9-4624-9bd6-96984c5b7c5c
 author: Xansky
 ms.author: mhopkins
-manager: markl
-ms.openlocfilehash: a5b67340ca63637bd5ba2e59e4e5b774abbae58d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 44f4befc03c886e51a19a44f45f7cbdc20f60fe3
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526709"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47076280"
 ---
-# <a name="ui-automation-control-patterns-how-to-topics"></a><span data-ttu-id="841db-102">UI Otomasyonu Denetim Düzenleri Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="841db-102">UI Automation Control Patterns How-to Topics</span></span>
+# <a name="ui-automation-control-patterns-how-to-topics"></a><span data-ttu-id="36026-102">UI Otomasyonu Denetim Düzenleri Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="36026-102">UI Automation Control Patterns How-to Topics</span></span>
 > [!NOTE]
->  <span data-ttu-id="841db-103">Bu belge yönetilen kullanmak isteyen .NET Framework için tasarlanan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tanımlanan sınıflar <xref:System.Windows.Automation> ad alanı.</span><span class="sxs-lookup"><span data-stu-id="841db-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="841db-104">En son bilgileri [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], bkz: [Windows Automation API: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).</span><span class="sxs-lookup"><span data-stu-id="841db-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
+>  <span data-ttu-id="36026-103">Bu belge yönetilen kullanmak isteyen .NET Framework için tasarlanan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tanımlanan sınıflar <xref:System.Windows.Automation> ad alanı.</span><span class="sxs-lookup"><span data-stu-id="36026-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="36026-104">En son bilgileri [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], bkz: [Windows Automation API: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).</span><span class="sxs-lookup"><span data-stu-id="36026-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- <span data-ttu-id="841db-105">Bu bölümde, uygulama denetim düzenleri hakkında ayrıntılı bilgiler içerir.</span><span class="sxs-lookup"><span data-stu-id="841db-105">This section contains detailed information about implementing control patterns.</span></span>  
+ <span data-ttu-id="36026-105">Bu bölümde, uygulama denetim düzenleri hakkında ayrıntılı bilgiler içerir.</span><span class="sxs-lookup"><span data-stu-id="36026-105">This section contains detailed information about implementing control patterns.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="841db-106">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="841db-106">In This Section</span></span>  
- [<span data-ttu-id="841db-107">UI Otomasyonu Kullanarak Tablo İçeriğini Kullanıma Sunma</span><span class="sxs-lookup"><span data-stu-id="841db-107">Expose the Content of a Table Using UI Automation</span></span>](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)  
- [<span data-ttu-id="841db-108">Desteklenen UI Otomasyonu Denetim Desenlerini Alma</span><span class="sxs-lookup"><span data-stu-id="841db-108">Get Supported UI Automation Control Patterns</span></span>](../../../docs/framework/ui-automation/get-supported-ui-automation-control-patterns.md)  
- [<span data-ttu-id="841db-109">UI Otomasyonunu Kullanarak Onay Kutusunun Değiştir Durumunu Alma</span><span class="sxs-lookup"><span data-stu-id="841db-109">Get the Toggle State of a Check Box Using UI Automation</span></span>](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
- [<span data-ttu-id="841db-110">UI Otomasyonu Kullanarak Denetim Çağırma</span><span class="sxs-lookup"><span data-stu-id="841db-110">Invoke a Control Using UI Automation</span></span>](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)  
- [<span data-ttu-id="841db-111">UI Otomasyonu Öğesini Taşıma</span><span class="sxs-lookup"><span data-stu-id="841db-111">Move a UI Automation Element</span></span>](../../../docs/framework/ui-automation/move-a-ui-automation-element.md)
+## <a name="in-this-section"></a><span data-ttu-id="36026-106">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="36026-106">In This Section</span></span>  
+ [<span data-ttu-id="36026-107">UI Otomasyonu Kullanarak Tablo İçeriğini Kullanıma Sunma</span><span class="sxs-lookup"><span data-stu-id="36026-107">Expose the Content of a Table Using UI Automation</span></span>](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)  
+ [<span data-ttu-id="36026-108">Desteklenen UI Otomasyonu Denetim Desenlerini Alma</span><span class="sxs-lookup"><span data-stu-id="36026-108">Get Supported UI Automation Control Patterns</span></span>](../../../docs/framework/ui-automation/get-supported-ui-automation-control-patterns.md)  
+ [<span data-ttu-id="36026-109">UI Otomasyonunu Kullanarak Onay Kutusunun Değiştir Durumunu Alma</span><span class="sxs-lookup"><span data-stu-id="36026-109">Get the Toggle State of a Check Box Using UI Automation</span></span>](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
+ [<span data-ttu-id="36026-110">UI Otomasyonu Kullanarak Denetim Çağırma</span><span class="sxs-lookup"><span data-stu-id="36026-110">Invoke a Control Using UI Automation</span></span>](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)  
+ [<span data-ttu-id="36026-111">UI Otomasyonu Öğesini Taşıma</span><span class="sxs-lookup"><span data-stu-id="36026-111">Move a UI Automation Element</span></span>](../../../docs/framework/ui-automation/move-a-ui-automation-element.md)
