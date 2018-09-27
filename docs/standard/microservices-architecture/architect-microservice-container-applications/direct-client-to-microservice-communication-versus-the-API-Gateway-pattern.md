@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/07/2018
 ms.openlocfilehash: 1aaddc96ee509815da9fc4e6519e1fb454f74b13
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47083117"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47198689"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>API ağ geçidi deseni ile doğrudan istemci-mikro hizmet iletişimi
 

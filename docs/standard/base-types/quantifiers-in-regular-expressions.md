@@ -17,11 +17,11 @@ ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a982082611760e4f901c427af25a0a49a4e243a1
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47087614"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47237364"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>Normal İfadelerdeki Miktar Belirleyiciler
 Bir karakter, Grup veya karakter sınıfı kaç tane giriş eşleşmenin bulunması mevcut olmalıdır, miktar belirleyiciler belirtin.  .NET tarafından desteklenen miktar belirleyiciler aşağıdaki tabloda listelenmektedir.  
