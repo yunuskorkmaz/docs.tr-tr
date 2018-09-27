@@ -5,11 +5,11 @@ helpviewer_keywords:
 - contextual keywords [C#]
 ms.assetid: 7c76bc29-a754-4389-b0ab-f6b441018298
 ms.openlocfilehash: 7b5f79f41306d6e4a8d2f1aa432ba6c2e0879f74
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47088067"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47232956"
 ---
 # <a name="contextual-keywords-c-reference"></a>Bağlamsal Anahtar Sözcükler (C# Başvurusu)
 Kodda özel bir anlamı sağlamak için bağlamsal anahtar sözcüğü kullanılır, ancak C# ' de ayrılmış bir sözcük değil. Bu bölümde aşağıdaki bağlamsal anahtar sözcükler yapılmıştır:  

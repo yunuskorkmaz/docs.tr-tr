@@ -2,34 +2,31 @@
 title: Kanal Genişletilebilirliği
 ms.date: 03/30/2017
 ms.assetid: 4cc3b20b-778a-4ae8-b58c-a3822fb13065
-ms.openlocfilehash: 13cce100875a4bab8d2c4e9f62933057d9c681a0
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: aeff683b786d81fc782914bd2df70adb10bcbcec
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33803374"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47236520"
 ---
 # <a name="channels-extensibility"></a>Kanal Genişletilebilirliği
-Bu bölüm, özel kanalları gösteren örnekleri içerir.  
+Bu bölüm, özel kanallar gösteren örnekler içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Yerel Kanal](../../../../docs/framework/wcf/samples/local-channel.md)  
- Yerel kanal, aynı uygulama etki alanı içinde iletişim için kullanılan bir WCF taşıma kanalı gösterir.  
+ Yerel kanal, aynı uygulama etki alanı içinde iletişim kurmak için kullanılan bir WCF taşıma kanalı gösterir.  
   
  [Güvenilir Güvenlik Profili](../../../../docs/framework/wcf/samples/reliable-secure-profile.md)  
- WCF ve güvenilir güvenli profil (RSP) oluşturmak gösterilmiştir.  
+ WCF ve güvenilir güvenli profili (RSP) oluşturma işlemini göstermektedir.  
   
  [Özel Kanal Dağıtıcı](../../../../docs/framework/wcf/samples/custom-channel-dispatcher.md)  
- Kanal yığını özel bir şekilde uygulayarak nasıl oluşturulacağını gösteren <xref:System.ServiceModel.ServiceHostBase> doğrudan ve Web ana bilgisayar ortamında özel kanal dağıtıcı oluşturma.  
+ Kanal yığın uygulayarak özel bir yöntemle derlemeyi gösterir <xref:System.ServiceModel.ServiceHostBase> doğrudan ve Web konak ortamında özel kanal dağıtıcı oluşturma.  
   
  [Öbekleme Kanalı](../../../../docs/framework/wcf/samples/chunking-channel.md)  
- WCF kullanılarak gönderilen büyük iletileri arabelleğe almak için kullanılan bellek miktarını sınırlamak gösterilmiştir.  
-  
- [HTTP Doğrulama Kanalı](../../../../docs/framework/wcf/samples/http-acknowledgement-channel.md)  
- Tek yönlü Mesajlaşma düzeni Değişeni katmanlı bir kanal gösterir.  
+ WCF kullanılarak gönderilen büyük iletileri arabelleğe almak için kullanılan bellek miktarını sınırlamak nasıl gösterir.
   
  [HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md)  
- Özel protokol kanalı oturum yönetimi için HTTP tanımlama bilgilerini kullanacak şekilde nasıl oluşturulacağını gösterir.  
+ Bir özel Protokolü kanalı HTTP tanımlama bilgileri oturum yönetimi için kullanılacak derlemeyi gösterir.  
   
  [Özel İleti Kesici](../../../../docs/framework/wcf/samples/custom-message-interceptor.md)  
- Kanal fabrikaları ve çalışma zamanı yığınında belirli bir noktada tüm gelen ve giden iletileri izlemesine kanal dinleyicileri oluşturur özel bağlama öğesi uygulamak gösterilmiştir.
+ Kanal fabrikaları ve tüm gelen ve giden iletileri çalışma zamanı yığını olarak belirli bir noktada ele alınması için kanal dinleyicileri oluşturan özel bağlama öğesinin uygulanması gösterilmektedir.

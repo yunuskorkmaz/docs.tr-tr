@@ -15,11 +15,11 @@ ms.assetid: aa5930ad-f3d7-40aa-b6f6-c6edcd5c64f7
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b8c7616a3187cd5fa28f231dffd15b0bfeea4b7f
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47171354"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47235198"
 ---
 # <a name="principal-and-identity-objects"></a>Asıl ve Kimlik Nesneleri
 Yönetilen kod kimliği veya sorumlu rolünü bulabilir bir <xref:System.Security.Principal.IPrincipal> başvuru içeren bir nesne bir <xref:System.Security.Principal.IIdentity> nesne. Kullanıcı ve grup hesapları gibi tanıdık kavramları kimlik ve asıl nesneleri karşılaştırmak yararlı olabilir. Grup hesapları belirli kullanıcıları ve bunların sahip hakları kategorilerini temsil ederken çoğu ağ ortamlarında, kullanıcı hesaplarını kişiler veya programları temsil eder. Benzer şekilde, rol üyeliğini ve güvenlik kapsamlarını temsil ederken kullanıcılar, .NET Framework kimlik nesneleri temsil eder. .NET Framework'teki asıl nesne bir rolü ve bir kimlik nesne kapsüller. .NET framework uygulamaları kimliğini veya daha çok rolü üyeliğine göre sorumlu hakları vermek mümkündür.  

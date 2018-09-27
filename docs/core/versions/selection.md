@@ -5,11 +5,11 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 06/27/2018
 ms.openlocfilehash: 28a76cc17346c40517a21e8dc902bd6c2a84597f
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47084858"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47233211"
 ---
 # <a name="net-core-version-selection"></a>.NET core sürüm seçimi
 

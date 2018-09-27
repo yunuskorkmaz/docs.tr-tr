@@ -10,11 +10,11 @@ ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5f2da2849bdf9ce922a89bf25e1758d868ee5ea8
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47070545"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47233021"
 ---
 # <a name="traversing-xml-schemas"></a>XML şemalarını çapraz geçirme
 Şema nesne modeli (SOM) API kullanarak bir XML Şeması geçiş öğeleri, öznitelikleri ve SOM. içinde depolanan türleri erişim sağlar Bir XML geçiş SOM yüklenen şema ayrıca SOM API'sini kullanarak bir XML şeması düzenleme ilk adımdır.  

@@ -3,11 +3,11 @@ title: 'F # kodlama kuralları'
 description: 'Genel yönergeler ve deyimler F # kodu yazarken öğrenin.'
 ms.date: 05/14/2018
 ms.openlocfilehash: b9afd1fbfbd9d8e04d9bfaa07615de045b7e05fe
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47078486"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47237415"
 ---
 # <a name="f-coding-conventions"></a>F # kodlama kuralları
 

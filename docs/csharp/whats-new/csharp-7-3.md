@@ -2,12 +2,12 @@
 title: C# 7.3 yenilikler nelerdir?
 description: C# 7.3 içindeki yeni özelliklere genel bakış
 ms.date: 05/16/2018
-ms.openlocfilehash: 383346569be2c0daf333b0cb3b28e2a8fbb24f66
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 570da53059242c0242609ddcba5cb23f1728aa9f
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47027914"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47235237"
 ---
 # <a name="whats-new-in-c-73"></a>C# 7.3 yenilikler nelerdir?
 
@@ -36,7 +36,7 @@ Yeni derleyici seçenekleri şunlardır:
 
 Bu makalenin geri kalanında, Ayrıntılar ve her geliştirmeleri hakkında daha fazla bilgi için bağlantılar sağlar.
 
-## <a name="enabling-more-performant-safe-code"></a>Daha fazla yüksek performanslı güvenli kod etkinleştirme
+## <a name="enabling-more-efficient-safe-code"></a>Daha verimli bir güvenli kod etkinleştirme
 
 Güvenli bir şekilde gerçekleştiren güvenli olmayan kod yanı sıra C# kodu yazacak olması gerekir. Güvenli kod hataları, arabellek taşmalarına parazit işaretçileri ve diğer bellek erişim hataları gibi sınıfları önler. Bu yeni özellikler doğrulanabilir bir güvenli kod yeteneklerini genişletmenizi sağlar. Daha fazla güvenli yapıları kullanarak kodunuzu yazmak çaba harcar. Bu özellikler, kolaylaştırır.
 
@@ -127,6 +127,8 @@ Türü artık belirtebilirsiniz <xref:System.Enum?displayProperty=nameWithType> 
 Ayrıca yeni kullanabilirsiniz `unmanaged` kısıtlaması, bir tür parametresi olması gerektiğini belirtmek için bir **yönetilmeyen tür**. Bir **yönetilmeyen tür** , bir başvuru türü değil ve iç içe geçme herhangi bir düzeyde herhangi bir başvuru türü içermeyen bir türdür.
 
 Daha fazla bilgi için üzerinde makalelerine bakın. [ `where` genel kısıtlamalara](../language-reference/keywords/where-generic-type-constraint.md) ve [tür parametrelerindeki kısıtlamalar](../programming-guide/generics/constraints-on-type-parameters.md).
+
+Bu kısıtlamaları var olan türlere ekleme bir [uyumsuz değişiklik](version-update-considerations.md#incompatible-changes). Kapalı genel türler, artık bu yeni kısıtlamalarını karşılamıyor.
 
 ## <a name="make-existing-features-better"></a>Mevcut özellikler daha iyi hale getirir
 

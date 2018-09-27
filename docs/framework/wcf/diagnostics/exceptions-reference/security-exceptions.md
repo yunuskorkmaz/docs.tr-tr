@@ -3,13 +3,12 @@ title: Güvenlik Özel Durumları
 ms.date: 03/30/2017
 ms.assetid: 76d5e5cd-e4f4-404f-9a5a-ec3522494ad8
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 057d01ba918a41df0bdf2acc30c9bb35777ebc27
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9e5795da5765e3dadfb169b1819b7154bd6ce0a9
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474889"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47233266"
 ---
 # <a name="security-exceptions"></a>Güvenlik Özel Durumları
 Bu konu, tüm güvenlik özel durumları listeler.  
@@ -19,142 +18,142 @@ Bu konu, tüm güvenlik özel durumları listeler.
 |Kaynak kodu|Kaynak dizesi|  
 |-------------------|---------------------|  
 |AnonymousLogonsAreNotAllowed|Hizmet anonim olarak oturum açmanıza izin vermiyor.|  
-|AtLeastOneContractOperationRequestRequiresProtectionLevelNotSupportedByBinding|İstek iletisi korunması gerekir. Bu, belirtilen sözleşme bir işlem tarafından gereklidir. Koruma belirtilen bağlama tarafından sağlanmalıdır.|  
-|AtLeastOneContractOperationResponseRequiresProtectionLevelNotSupportedByBinding|Yanıt iletisi korunması gerekir. Bu, belirtilen sözleşme bir işlem tarafından gereklidir. Koruma belirtilen bağlama tarafından sağlanmalıdır.|  
-|AtMostOnePrimarySignatureInReceiveSecurityHeader|Yalnızca bir birincil imza güvenlik üstbilgisinde izin verilir.|  
-|BadContextTokenFaultReason|Güvenlik kapsamı belirtecinin süresi doldu veya geçerli değil. İleti işlenmedi.|  
-|BadEncryptionState|EncryptedData veya EncryptedKey bu işlem için geçersiz bir durumda değil.|  
-|BasicHttpMessageSecurityRequiresCertificate|BasicHttp bağlama BasicHttpBinding.Security.Message.ClientCredentialType BasicHttpMessageCredentialType.Certificate kimlik bilgisi türü güvenli iletiler için eşit olmalıdır. Taşıma ya da TransportWithMessageCredential güvenlik için kullanıcı adı kimlik bilgilerini seçin.|  
+|AtLeastOneContractOperationRequestRequiresProtectionLevelNotSupportedByBinding|İstek iletisi korunması gerekir. Bu, belirtilen sözleşmenin bir işlem tarafından gereklidir. Belirtilen bağlama tarafından koruma sağlanması gerekir.|  
+|AtLeastOneContractOperationResponseRequiresProtectionLevelNotSupportedByBinding|Yanıt iletisi korunması gerekir. Bu, belirtilen sözleşmenin bir işlem tarafından gereklidir. Belirtilen bağlama tarafından koruma sağlanması gerekir.|  
+|AtMostOnePrimarySignatureInReceiveSecurityHeader|Yalnızca bir birincil bir imza, bir güvenlik üstbilgisinde izin verilir.|  
+|BadContextTokenFaultReason|Güvenlik bağlam belirtecinin süresi doldu veya geçerli değil. İleti işlenmedi.|  
+|BadEncryptionState|EncryptedData veya EncryptedKey, bu işlem için geçersiz bir durumda olduğundan.|  
+|BasicHttpMessageSecurityRequiresCertificate|BasicHttp bağlaması BasicHttpBinding.Security.Message.ClientCredentialType güvenli iletiler için BasicHttpBinding.Security.Message.ClientCredentialType öğesinin BasicHttpMessageCredentialType.Certificate kimlik bilgisi türüne eşdeğer olmasını gerektirir. UserName kimlik bilgileri için Transport ya da TransportWithMessageCredential güvenliğini seçin.|  
 |BasicTokenCannotBeWrittenWithoutEncryption|Temel belirteç şifreleme olmadan yazılamaz.|  
-|BindingDoesNotSupportProtectionForRst|Belirtilen sözleşme için belirtilen bağlama SecureConversation ile yapılandırılmış, ancak kimlik doğrulama modu istek/yanıt tabanlı bütünlüğü ve gizliliği anlaşması için gerekli sağlamak mümkün değil.|  
+|BindingDoesNotSupportProtectionForRst|Belirtilen sözleşme için belirtilen bağlama SecureConversation ile yapılandırılmış, ancak kimlik doğrulama modu, istek/yanıt tabanlı bütünlüğü ve gizlilik için anlaşma gerekli sağlamak mümkün değildir.|  
 |BindingDoesNotSupportWindowsIdenityForImpersonation|Belirtilen sözleşme işlemi otomatik kimliğe bürünme için Windows kimlik gerektirir. Belirtilen sözleşme için belirtilen bağlama tarafından çağıran temsil eden bir Windows Kimliği sağlanmadı.|  
-|CachedNegotiationStateQuotaReached|Belirtilen kapasitesine ulaşıldı gibi hizmet anlaşma durumunu önbelleğe alamıyor. İsteği yeniden deneyin.|  
-|CacheQuotaReached|Öğe eklenemez. Belirtilen en büyük önbellek boyutu.|  
-|CannotDetermineSPNBasedOnAddress|İstemci, hizmet asıl adı belirtilen hedef adres SspiNegotiation/Kerberos amacıyla kimliğini temel alarak belirleyemiyor. Hedef adres varlığı UPN kimlik olmalıdır (acmedomain gibi\\\alice) ya da SPN kimliği (örneğin, ana bilgisayar/bobs-makine).|  
-|CannotFindCert|Belirtilen arama ölçütleri kullanarak X.509 sertifikası bulunamıyor: StoreName, StoreLocation, FindType, FindValue.|  
-|CannotFindCertForTarget|Belirtilen arama ölçütleri kullanarak X.509 sertifikası bulunamıyor: StoreName, StoreLocation, FindType, belirtilen hedef için FindValue.|  
-|CannotFindCorrelationStateForApplyingSecurity|Bağıntı durumu Yanıtlayıcı yanıtlamak için güvenlik uygulamak için bulunamıyor.|  
-|CannotFindNegotiationState|Anlaşma durumu için belirtilen bağlamı bulunamıyor.|  
-|CannotFindSecuritySession|Belirtilen kimliğe sahip güvenlik oturumu bulunamıyor.|  
-|CannotImportProtectionLevelForContract|Bir işlem içeri aktarmak için ilke belirtilen sözleşme için bir bağlama alınamıyor. Bağlama için koruma gereksinimlerini sözleşme için aktarılmış bir bağlama ile uyumlu değildir. Bağlama yeniden yapılandırmanız gerekir.|  
-|CannotImportSupportingTokensForOperationWithoutRequestAction|Güvenlik İlkesi alma başarısız oldu. Güvenlik İlkesi işlemi kapsamında belirteci gereksinimleri destek içerir. Sözleşme açıklaması bu işlemle ilişkili istek iletisi için eylem belirtmiyor.|  
+|CachedNegotiationStateQuotaReached|Belirtilen kapasitesini erişildiğinden anlaşma durumu önbellek hizmeti olamaz. İsteği yeniden deneyin.|  
+|CacheQuotaReached|Öğe eklenemez. Belirtilen en yüksek önbellek boyutu.|  
+|CannotDetermineSPNBasedOnAddress|İstemci, SspiNegotiation/Kerberos amacıyla belirtilen hedef adresini kimliğini hizmet asıl adı temel belirlenemiyor. Hedef adres varlığı, bir UPN varlığı olmalıdır (ayse gibi\\\alice) ya da SPN varlığı (konak/ebrunun-makinesi).|  
+|CannotFindCert|Belirtilen arama ölçütleri kullanılarak X.509 sertifikası bulunamıyor: StoreName, StoreLocation, FindType, FindValue.|  
+|CannotFindCertForTarget|Belirtilen arama ölçütleri kullanılarak X.509 sertifikası bulunamıyor: StoreName, StoreLocation, FindType, belirtilen hedef FindValue.|  
+|CannotFindCorrelationStateForApplyingSecurity|Yanıtlayıcı yanıt vermek için güvenlik uygulamak için bağıntı durumu bulunamıyor.|  
+|CannotFindNegotiationState|Belirtilen bağlamı anlaşması durumu bulunamıyor.|  
+|CannotFindSecuritySession|Belirtilen kimliğe sahip güvenlik oturumu bulunamıyor|  
+|CannotImportProtectionLevelForContract|Bir işlem içeri aktarma İlkesi, belirtilen sözleşme için bir bağlama alamıyor. Bağlamanın koruma gereksinimleri için sözleşme zaten içeri aktarılmış bir bağlama ile uyumlu değildir. Bağlamayı yeniden yapılandırmalısınız.|  
+|CannotImportSupportingTokensForOperationWithoutRequestAction|Güvenlik İlkesi içeri aktarılamadı. Güvenlik İlkesi destekleme belirteci gereksinimleri işlem kapsamında içerir. Anlaşma açıklaması, bu işlemle ilişkilendirilen istek iletisi eylemini belirtmiyor.|  
 |CannotIssueRstTokenType|Belirteç ya da belirtilen türü veremez.|  
-|CannotObtainIssuedTokenKeySize|Verilen belirteç anahtar boyutu saptanamaz.|  
+|CannotObtainIssuedTokenKeySize|Verilen belirteç anahtar boyutunu belirlenemiyor.|  
 |CannotPerformImpersonationOnUsernameToken|İstemci belirteci kullanarak kimliğe bürünme mümkün değildir. Belirtilen sözleşme için belirtilen bağlama kullanıcı adı güvenlik belirteci istemci kimlik doğrulaması için kayıtlı bir üyelik sağlayıcısı kullanır. Farklı türde bir güvenlik belirteci istemcisini kullanabilirsiniz.|  
-|CannotPerformS4UImpersonationOnPlatform|Yalnızca belirtilen sözleşmenin kimliğe bürünme desteklediği için belirtilen bağlama [!INCLUDE[ws2003](../../../../../includes/ws2003-md.md)] ve daha yeni Windows sürümü. Güvenli Konuşmayla SspiNegotiated kimlik doğrulaması ve bağlama etkin iptalini kullanın.|  
-|CannotReadKeyIdentifier|KeyIdentifier belirtilen öğe belirtilen ad ile gelen okuyamaz.|  
-|CannotReadToken|Belirtecin belirtilen ValueType ile BinarySecretSecurityToken için belirtilen ad ile belirtilen öğeden okunamıyor. Bu öğe bekleniyorsa geçerli olması için güvenlik belirteçleri adı ile kullanmak üzere yapılandırılmış olduğundan emin olun, belirtilen ad ve değer türü.|  
-|CertificateUnsupportedForHttpTransportCredentialOnly|İstemci sertifikası tabanlı kimlik doğrulaması TransportCredentialOnly güvenlik modunda desteklenmiyor. Aktarım güvenlik modu seçin.|  
+|CannotPerformS4UImpersonationOnPlatform|Belirtilen sözleşme yalnızca kimliğe bürünme özelliğini destekler. belirtilen bağlama [!INCLUDE[ws2003](../../../../../includes/ws2003-md.md)] ve daha yeni Windows sürümü. SspiNegotiated kimlik doğrulaması ve bağlama ile Secure Conversation etkin iptal ile kullanın.|  
+|CannotReadKeyIdentifier|Belirtilen ad alanı ile belirtilen öğesinden KeyIdentifier okunamıyor.|  
+|CannotReadToken|Belirteç, belirtilen bir ValueType sahip BinarySecretSecurityToken için belirtilen ad alanı ile belirtilen öğesinden okunamıyor. Bu öğe bekleniyorsa geçerli olması için güvenlik belirteçleri adı ile kullanmak üzere yapılandırılmış olduğundan emin olun, belirtilen ad ve değer türü.|  
+|CertificateUnsupportedForHttpTransportCredentialOnly|İstemci sertifika tabanlı kimlik doğrulaması, TransportCredentialOnly güvenlik modunda desteklenmiyor. Transport güvenlik modunu seçin.|  
 |ClaimTypeCannotBeEmpty|ClaimType boş bir dize olamaz.|  
-|ClientCertificateNotProvided|İstemci sertifikası sağlanmadı. Sertifika ClientCredentials ya da ServiceCredentials ayarlayabilirsiniz.|  
-|ClientCredentialTypeMustBeSpecifiedForMixedMode|ClientCredentialType.None TransportWithMessageCredential güvenlik modu için geçerli değil. Bir kimlik bilgisi türü belirtin veya farklı bir güvenlik modu kullanın.|  
-|ConfigurationSchemaInsuffientForSecurityBindingElementInstance|Yapılandırma Şeması aşağıdaki güvenlik bağlama öğesi standart olmayan yapılandırmasını tanımlamak için yeterli değil:|  
-|DerivedKeyTokenGenerationAndLengthTooHigh|Türetilen anahtarın oluşturma ve uzunluğu sonucu izin verilen en fazla uzaklığında daha büyük bir anahtar türetme uzaklığı belirtilen.|  
-|DnsIdentityCheckFailedForIncomingMessage|Gelen ileti kimlik denetimi başarısız oldu. Uzak uç nokta beklenen etki alanı adı sistemi (DNS) kimliği belirtildi. Belirtilen etki alanı adı sistemi (DNS) talep uzak uç nokta sağlanır. Bu yasal uzak uç nokta ise, kanal proxy oluşturulurken EndpointAddress kimlik özelliği olarak etki alanı adı sistemi kimlik belirterek sorunu düzeltebilirsiniz.|  
-|DnsIdentityCheckFailedForOutgoingMessage|Kimlik denetimi çıkmasını ileti için başarısız oldu. Belirtilen etki alanı adı sistemi kimlik uzak uç nokta beklendiğinden. Etki alanı adı sistemi (DNS) talep uzak uç nokta sağlanır. Bu yasal uzak uç nokta ise, açıkça DNS kimlik EndpointAddress kimlik özelliği olarak kanal proxy oluşturulurken belirterek sorunu düzeltebilirsiniz.|  
-|DuplicateIdInMessageToBeVerified|Belirtilen kimlik doğrulama için sağlanan iki kez olan iletide oluştu.|  
-|EmptyBase64Attribute|Boş bir değer gerekli base-64 öznitelik adı ve ad alanı için bulunamadı.|  
-|ExportOfBindingWithAsymmetricAndTransportSecurityNotSupported|Güvenlik İlkesi verme başarısız oldu. Bağlama, hem AsymmetricSecurityBindingElement hem de güvenli aktarım bağlama öğesi içeriyor. Bu tür bir bağlama için ilke verme desteklenmez.|  
-|ExportOfBindingWithSymmetricAndTransportSecurityNotSupported|Güvenlik İlkesi verme başarısız oldu. Bağlama, hem SymmetricSecurityBindingElement hem de güvenli aktarım bağlama öğesi içeriyor. Bu tür bir bağlama için ilke verme desteklenmez.|  
-|ExportOfBindingWithTransportSecurityBindingElementAndNoTransportSecurityNotSupported|Güvenlik İlkesi verme başarısız oldu. Bağlama, bir TransportSecurityBindingElement ancak ITransportTokenAssertionProvider uygulayan herhangi bir aktarım bağlama öğe içeriyor. Bu tür bir bağlama için ilke verme desteklenmez. Bağlama aktarım bağlama öğesinde ITransportTokenAssertionProvider arabirimini uygulayan emin olun.|  
-|FoundMultipleCerts|Belirtilen arama ölçütleri kullanarak birden çok X.509 Sertifika bulundu: StoreName, StoreLocation, FindType, FindValue. Daha fazla belirli bir bulma değeri sağlayın.|  
-|FoundMultipleCertsForTarget|Belirtilen arama ölçütleri kullanarak birden çok X.509 Sertifika bulundu: StoreName, StoreLocation, FindType, belirtilen hedef için FindValue. Daha fazla belirli bir bulma değeri sağlayın.|  
-|HeaderDecryptionNotSupportedInWsSecurityJan2004|SecurityVersion.WSSecurityJan2004 üstbilgi şifre desteklemez. SecurityVersion.WsSecurityXXX2005 kullanın ve yukarıdaki veya tam iletiyi şifrelemek için Aktarım güvenliği'ni kullanın.|  
-|IdentityCheckFailedForIncomingMessage|Gelen ileti kimlik denetimi başarısız oldu. Hedef uç nokta için beklenen kimliği belirtildi.|  
-|IdentityCheckFailedForOutgoingMessage|Giden ileti kimlik denetimi başarısız oldu. Hedef uç nokta için beklenen kimliği belirtildi.|  
-|IncorrectSpnOrUpnSpecified|Güvenlik Desteği Sağlayıcısı Arabirimi (SSPI) kimlik doğrulaması başarısız oldu. Sunucu belirtilen kimliğe sahip bir hesap çalışmıyor olabilir. Sunucu hizmeti hesabı (örneğin ağ hizmeti) çalıştırıyorsa hesabın ServicePrincipalName EndpointAddress sunucusu için kimlik olarak belirtin. Sunucunun bir kullanıcı hesabında çalışıyorsa, hesabın UserPrincipalName EndpointAddress sunucusu için kimlik olarak belirtin.|  
+|ClientCertificateNotProvided|İstemci sertifikası sağlanmadı. Sertifika ClientCredentials ya da ServiceCredentials üstünde ayarlanabilir.|  
+|ClientCredentialTypeMustBeSpecifiedForMixedMode|ClientCredentialType.None, TransportWithMessageCredential güvenlik modu için geçerli değil. Kimlik bilgisi türü belirtin veya farklı bir güvenlik modu kullanın.|  
+|ConfigurationSchemaInsuffientForSecurityBindingElementInstance|Yapılandırma Şeması aşağıdaki güvenlik bağlama öğesinin standart dışı yapılandırmasını açıklamak için yeterli değil:|  
+|DerivedKeyTokenGenerationAndLengthTooHigh|Türetilmiş anahtarın sonucu oluşturma ve uzunluğu izin verilen en büyük uzaklık bir anahtar türetme uzaklığı belirtilen.|  
+|DnsIdentityCheckFailedForIncomingMessage|Kimlik denetimi gelen iletide başarısız oldu. Uzak uç noktanın beklenen etki alanı adı sistemi (DNS) kimliği belirtildi. Uzak uç nokta, belirtilen etki alanı adı sistemi (DNS) talebini sağladı. Bu yasal bir uzak uç noktaysa, kanal proxy'si oluştururken EndpointAddress Identity özelliği etki alanı adı Sistem kimliğini belirterek sorunu düzeltebilirsiniz.|  
+|DnsIdentityCheckFailedForOutgoingMessage|Dışına çıkmasını ileti kimlik denetimi başarısız oldu. Uzak uç nokta belirtilen etki alanı adı sistemi kimliği olan. Uzak uç nokta, etki alanı adı sistemi (DNS) talebini sağladı. Bu yasal bir uzak uç noktaysa, açıkça DNS kimliğini EndpointAddress Identity özelliği kanal proxy'si oluştururken belirterek sorunu düzeltebilirsiniz.|  
+|DuplicateIdInMessageToBeVerified|Belirtilen kimlik doğrulama için sağlanan ileti iki kez oluştu.|  
+|EmptyBase64Attribute|Ad alanı ve gerekli base-64 özniteliği adı için boş bir değer bulundu.|  
+|ExportOfBindingWithAsymmetricAndTransportSecurityNotSupported|Güvenlik İlkesi dışarı aktarılamadı. Bağlama, hem AsymmetricSecurityBindingElement hem de güvenli aktarım bağlama öğesi içeriyor. Böyle bir bağlamanın dışarı desteklenmiyor.|  
+|ExportOfBindingWithSymmetricAndTransportSecurityNotSupported|Güvenlik İlkesi dışarı aktarılamadı. Bağlama, SymmetricSecurityBindingElement hem de güvenli aktarım bağlama öğesi içeriyor. Böyle bir bağlamanın dışarı desteklenmiyor.|  
+|ExportOfBindingWithTransportSecurityBindingElementAndNoTransportSecurityNotSupported|Güvenlik İlkesi dışarı aktarılamadı. Bağlama, bir TransportSecurityBindingElement ancak Itransporttokenassertionprovider uygulayan aktarım bağlama öğesi içeriyor. Böyle bir bağlamanın dışarı desteklenmiyor. Bağlamadaki aktarım bağlama öğesinin Itransporttokenassertionprovider arabirimini uygulayan emin olun.|  
+|FoundMultipleCerts|Belirtilen arama ölçütleri kullanılarak birden çok X.509 sertifikası bulundu: StoreName, StoreLocation, FindType, FindValue. Daha fazla belirli bir arama değeri sağlayın.|  
+|FoundMultipleCertsForTarget|Belirtilen arama ölçütleri kullanılarak birden çok X.509 sertifikası bulundu: StoreName, StoreLocation, FindType, belirtilen hedef FindValue. Daha fazla belirli bir arama değeri sağlayın.|  
+|HeaderDecryptionNotSupportedInWsSecurityJan2004|SecurityVersion.WSSecurityJan2004 üstbilgi şifre desteklemiyor. SecurityVersion.WsSecurityXXX2005 kullanın ve yukarıdaki veya tam iletiyi şifrelemek için Aktarım güvenliği kullanın.|  
+|IdentityCheckFailedForIncomingMessage|Kimlik denetimi gelen iletide başarısız oldu. Hedef uç nokta için beklenen kimliği belirtildi.|  
+|IdentityCheckFailedForOutgoingMessage|Kimlik denetimi giden iletide başarısız oldu. Hedef uç nokta için beklenen kimliği belirtildi.|  
+|IncorrectSpnOrUpnSpecified|Güvenlik Desteği Sağlayıcısı Arabirimi (SSPI) kimlik doğrulaması başarısız oldu. Sunucu belirtilen kimliğe sahip bir hesap içinde çalışmıyor olabilir. Sunucu (örneğin ağ hizmeti) hizmet hesabı altında çalışıyorsa hesabın ServicePrincipalName EndpointAddress sunucusu için kimlik olarak belirtin. Sunucunun bir kullanıcı hesabı olarak çalışıyorsa, hesabın UserPrincipalName EndpointAddress sunucusu için kimlik olarak belirtin.|  
 |InvalidAttributeInSignedHeader|Belirtilen imzalı üstbilgi belirtilen öznitelik içeriyor. Beklenen özniteliği belirtildi.|  
-|InvalidCloseResponseAction|Belirtilen geçersiz eylemiyle güvenlik oturumu kapat bir yanıt alındı.|  
+|InvalidCloseResponseAction|Belirtilen geçersiz eylem güvenlik oturumu kapat bir yanıt alındı.|  
 |InvalidQName|QName geçersiz.|  
-|InvalidRenewResponseAction|Bir güvenlik oturumu yenileme yanıtı belirtilen geçersiz eylemiyle alındı.|  
+|InvalidRenewResponseAction|Bir güvenlik oturumu yanıt yenileme ile belirtilen geçersiz eylem alındı.|  
 |InvalidSspiNegotiation|Güvenlik Desteği Sağlayıcısı Arabirimi anlaşması başarısız oldu.|  
-|IssuerBindingNotPresentInTokenRequirement|Güvenlik belirteci yöneticisi önyükleme güvenliği bağlama öğesi güvenli Konuşmayla açıklayan belirteç gereksinimi belirtilmesini gerektirir. Belirteç gereksinimi gibi belirtilir.|  
-|KeyLengthMustBeMultipleOfEight|Belirtilen anahtar uzunluğu simetrik anahtarlar için 8 katı değil.|  
-|LsaAuthorityNotContacted|İç SSL hatası (Ayrıntılar için Win32 durum koduna bakın). Anahtar değişimi yeteneğine sahip olup olmadığını belirlemek için sunucu sertifikasının denetleyin.|  
-|MaximumPolicyRedirectionsExceeded|Yinelemeli ilke alma sınırı aşıldı. Federasyon Hizmeti zincirinde döngü olup olmadığını belirlemek için denetleyin.|  
-|MessagePartSpecificationMustBeImmutable|İleti bölümü belirtme ayarlamadan önce sabitlenmelidir.|  
+|IssuerBindingNotPresentInTokenRequirement|Güvenlik belirteci yöneticisi, önyükleme güvenliği bağlama öğesini güvenli konuşma açıklayan belirteç gereksinimi belirtilmesini gerektirir. Belirteç gereksinimi gibi belirtilir.|  
+|KeyLengthMustBeMultipleOfEight|Belirtilen anahtar uzunluğu simetrik anahtarlar için 8'in katı değil.|  
+|LsaAuthorityNotContacted|İç SSL hatası (Ayrıntılar için Win32 durum koduna bakın). Sunucu sertifikasının anahtar değişimi özelliğine sahip olup olmadığını belirlemek için denetleyin.|  
+|MaximumPolicyRedirectionsExceeded|Yinelemeli ilke alma sınırına ulaşıldı. Hizmet zincirinde bir döngü olup olmadığını belirlemek için bu seçeneği işaretleyin.|  
+|MessagePartSpecificationMustBeImmutable|İleti bölümü belirtimi ayarlamadan önce sabit olarak yapılmalıdır.|  
 |MissingCustomCertificateValidator|X509CertificateValidationMode.Custom CustomCertificateValidator gerektirir. CustomCertificateValidator özelliğini belirtin.|  
 |MissingCustomUserNamePasswordValidator|UserNamePasswordValidationMode.Custom CustomUserNamePasswordValidator gerektirir. CustomUserNamePasswordValidator özelliğini belirtin.|  
 |MissingMembershipProvider|UserNamePasswordValidationMode.MembershipProvider MembershipProvider gerektirir. MembershipProvider özelliğini belirtin.|  
-|NoBinaryNegoToSend|Herhangi bir ikili anlaşma diğer tarafa gönderildi.|  
-|NoEncryptionPartsSpecified|Belirtilen eyleme sahip iletiler için herhangi bir şifreleme iletisi bölümü belirtilmedi.|  
-|NoKeyInfoInEncryptedItemToFindDecryptingToken|KeyInfo değeri bulmak için şifrelenen öğede bulunamadı belirteci.|  
-|NonceLengthTooShort|Belirtilen nonce çok kısa. Gereken en düşük nonce uzunluğu 4 bayttır.|  
-|NoOutgoingEndpointAddressAvailableForDoingIdentityCheck|Herhangi bir EndpointAddress gönderilmek üzere bir ileti kimliğini denetlemek kullanılabilir.|  
+|NoBinaryNegoToSend|Herhangi bir ikili anlaşma tarafa gönderildi.|  
+|NoEncryptionPartsSpecified|Belirtilen eyleme sahip iletiler için hiçbir şifreleme ileti parçasının belirtildi.|  
+|NoKeyInfoInEncryptedItemToFindDecryptingToken|KeyInfo değeri bulmak için şifrelenmiş öğesinde bulunamadı belirteç.|  
+|NonceLengthTooShort|Belirtilen nonce çok kısa. Gereken en küçük nonce uzunluğu 4 bayttır.|  
+|NoOutgoingEndpointAddressAvailableForDoingIdentityCheck|Herhangi bir EndpointAddress gönderilecek bir iletinin kimliğini denetlemek kullanılabilir.|  
 |NoOutgoingEndpointAddressAvailableForDoingIdentityCheckOnReply|Herhangi bir EndpointAddress alınan yanıt kimliğini denetlemek kullanılabilir.|  
-|NoPartsOfMessageMatchedPartsToSign|Sağlanan ileti bölümü belirtimi hiçbir bölümü iletinin uymadığı için hiçbir imza oluşturulmadı.|  
+|NoPartsOfMessageMatchedPartsToSign|Sağlanan ileti bölümü belirtimi hiçbir bölümü iletinin uymadığı için imzasına oluşturuldu.|  
 |NoPrincipalSpecifiedInAuthorizationContext|Hiçbir özel kural yetkilendirme bağlamında belirtilir.|  
-|NoSignatureAvailableInSecurityHeaderToDoReplayDetection|Herhangi bir imza güvenlik üstbilgisinde yeniden yürütme algılaması için nonce sağlamak için kullanılabilir.|  
-|NoSignaturePartsSpecified|Hiç imza ileti bölümü belirtilen eyleme sahip iletiler için belirtildi.|  
-|NoSigningTokenAvailableToDoIncomingIdentityCheck|İmzalama belirteci yok gelen kimlik denetimi yapmak kullanılabilir.|  
+|NoSignatureAvailableInSecurityHeaderToDoReplayDetection|Yeniden yürütme algılaması için nonce sağlamak için güvenlik üst bilgisindeki imzasına kullanılabilir.|  
+|NoSignaturePartsSpecified|İmza ileti bölümü yok, belirtilen eylem içeren iletilere yönelik belirtildi.|  
+|NoSigningTokenAvailableToDoIncomingIdentityCheck|Hiçbir imzalama belirtecinin, gelen bir kimlik denetimi yapmak kullanılabilir.|  
 |NoTimestampAvailableInSecurityHeaderToDoReplayDetection|Hiçbir zaman damgası yeniden yürütme algılaması için güvenlik üstbilgisinde kullanılabilir.|  
-|NoTransportTokenAssertionProvided|Güvenlik ilkesi uzmanı başarısız oldu. Belirtilen türdeki sağlanan taşıma belirteci onayı TransportBinding güvenlik ilkesi eklemek için bir taşıma belirteci onayı oluşturmadı.|  
-|OnlyOneOfEncryptedKeyOrSymmetricBindingCanBeSelected|Simetrik güvenlik protokolü ya da bir simetrik belirteç sağlayıcısı ve simetrik belirteç kimlik doğrulayıcı veya asimetrik bir belirteç sağlayıcısı ile yapılandırılabilir. Her ikisi de yapılandırılamaz.|  
-|OperationCannotBeDoneOnReceiverSideSecurityHeaders|Bu işlem alıcı güvenlik üstbilgilerinde yapılamaz.|  
-|OperationDoesNotAllowImpersonation|Belirtilen ada ve ad sözleşmeyle ait belirtilen hizmet işlemi, kimliğe bürünme izin vermiyor.|  
-|PolicyRequiresConfidentialityWithoutIntegrity|Belirtilen eylem için ileti güvenlik ilkesi tutarlılık dışında güvenilirlik gerektirir. Gizliliği bütünlüğü olmadan desteklenmiyor.|  
-|PrimarySignatureIsRequiredToBeEncrypted|Birincil imza şifrelenmelidir.|  
-|PropertySettingErrorOnProtocolFactory|Belirtilen güvenlik protokolü fabrikası gerekli özelliği ayarlı değil veya geçersiz bir değere sahip.|  
-|ProtocolFactoryCouldNotCreateProtocol|Protokol fabrikası bir protokol oluşturamıyor.|  
-|PublicKeyNotRSA|Ortak anahtar bir RSA anahtarı değil.|  
-|RequiredMessagePartNotEncrypted|Belirtilen gerekli ileti bölümü şifrelenmez.|  
-|RequiredMessagePartNotEncryptedNs|Belirtilen gerekli ileti bölümü şifrelenmez.|  
-|RequiredMessagePartNotSigned|Belirtilen gerekli ileti bölümü imzalanmamış.|  
-|RequiredMessagePartNotSignedNs|Belirtilen gerekli ileti bölümü imzalanmamış.|  
-|RequiredSecurityHeaderElementNotSigned|Belirtilen kimliğe sahip belirtilen güvenlik üstbilgi öğesi imzalanması gerekir.|  
-|RequiredSecurityTokenNotEncrypted|Belirtilen ' belirtilen ek moduna sahip güvenlik belirteci yeniden şifrelenir.|  
-|RequiredSecurityTokenNotSigned|Belirtilen ek moduna sahip belirtilen güvenlik belirteci imzalanması gerekir.|  
-|RequiredSignatureMissing|İmza güvenlik üstbilgisinde olması gerekir.|  
-|RequireNonCookieMode|Belirtilen bağlama belirtilen ad ile tanımlama bilgisi güvenlik kapsamı belirteçleri vermek üzere yapılandırılır. COM + tümleştirme hizmetleri tanımlama bilgisi güvenlik kapsamı belirteçlerini desteklemez.|  
+|NoTransportTokenAssertionProvided|Güvenlik ilkesi uzmanı başarısız oldu. Belirtilen türün sağlanan aktarım belirteci onaylaması, SP: TransportBinding güvenlik ilkesi onayını kapsayan bir aktarım belirteci onayı oluşturmadınız.|  
+|OnlyOneOfEncryptedKeyOrSymmetricBindingCanBeSelected|Simetrik güvenlik protokolü ya da simetrik bir belirteç sağlayıcısını ve simetrik bir belirteç kimlik doğrulayıcısı veya asimetrik bir belirteç sağlayıcısı ile yapılandırılabilir. Her ikisi de yapılandırılamaz.|  
+|OperationCannotBeDoneOnReceiverSideSecurityHeaders|Alıcı güvenlik üst bilgilere bu işlem gerçekleştirilemez.|  
+|OperationDoesNotAllowImpersonation|Söyleşmesi, belirtilen ad ve ad alanı ait belirtilen hizmet işlemi, kimliğe bürünme izin vermez.|  
+|PolicyRequiresConfidentialityWithoutIntegrity|Belirtilen eylem için ileti güvenlik ilkesi tutarlılık dışında güvenilirlik gerektirir. Tutarlılık dışındaki güvenilirlik desteklenmiyor.|  
+|PrimarySignatureIsRequiredToBeEncrypted|Birincil bir imza şifrelenmelidir.|  
+|PropertySettingErrorOnProtocolFactory|Belirtilen güvenlik protokolü fabrikasında gerekli özelliği ayarlı değil veya geçersiz bir değere sahip.|  
+|ProtocolFactoryCouldNotCreateProtocol|Protokol fabrikası, bir protokol oluşturamıyor.|  
+|PublicKeyNotRSA|Ortak anahtarı bir RSA anahtarı değil.|  
+|RequiredMessagePartNotEncrypted|Belirtilen gerekli ileti parçası şifrelenmez.|  
+|RequiredMessagePartNotEncryptedNs|Belirtilen gerekli ileti parçası şifrelenmez.|  
+|RequiredMessagePartNotSigned|Belirtilen gerekli ileti parçası imzalandı değil.|  
+|RequiredMessagePartNotSignedNs|Belirtilen gerekli ileti parçası imzalandı değil.|  
+|RequiredSecurityHeaderElementNotSigned|Belirtilen kimliğe sahip belirtilen güvenlik header öğesi oturum açmanız gerekir.|  
+|RequiredSecurityTokenNotEncrypted|Belirtilen ' güvenlik belirteci belirtilen ek modu ile yeniden şifrelenir.|  
+|RequiredSecurityTokenNotSigned|Belirtilen eki moduyla belirtilen güvenlik belirteci oturum açmanız gerekir.|  
+|RequiredSignatureMissing|İmza güvenlik üst bilgisinde olmalıdır.|  
+|RequireNonCookieMode|Belirtilen ad alanı ile belirtilen bağlama, tanımlama bilgisinin güvenlik bağlamı belirteçlerini vermek için yapılandırılır. COM + tümleştirme hizmetleri, tanımlama bilgisinin güvenlik bağlamı belirteçleri desteklemez.|  
 |RevertingPrivilegeFailed|Geri alma işlemi belirtilen özel durumla başarısız oldu.|  
 |RSTRAuthenticatorIncorrect|RequestSecurityTokenResponse CombinedHash doğru değil.|  
-|SecureConversationCancelNotAllowedFaultReason|Bağlama tarafından güvenli konuşma iptaline izin verilmiyor.|  
-|SecureConversationDriverVersionDoesNotSupportSession|Yapılandırılan SecureConversation sürümü oturumları desteklemiyor. WSSecureConversationFeb2005 kullanın veya üstü.|  
-|SecureConversationRequiredByReliableSession|Güvenli Konuşmayla olmadan güvenilir bir oturum kurulamıyor. Güvenli Konuşmayla etkinleştirin.|  
+|SecureConversationCancelNotAllowedFaultReason|Güvenli konuşma iptal bağlama tarafından izin verilmiyor.|  
+|SecureConversationDriverVersionDoesNotSupportSession|Yapılandırılan SecureConversation sürümü, oturumları desteklemez. WSSecureConversationFeb2005 kullanın veya üzeri.|  
+|SecureConversationRequiredByReliableSession|Güvenli konuşma olmadan güvenilir bir oturum kurulamıyor. Güvenli konuşmayı etkinleştirin.|  
 |SecurityAuditFailToLoadDll|Belirtilen dinamik bağlantı kitaplığı (dll) yüklenemedi.|  
 |SecurityAuditNotSupportedOnChannelFactory|SecurityAuditBehavior kanal fabrikası üzerinde desteklenmiyor.|  
-|SecurityAuditPlatformNotSupported|Denetim iletileri güvenlik günlüğüne yazma geçerli platformu tarafından desteklenmiyor. Denetim iletileri uygulama günlüğüne yazmanız gerekir.|  
-|SecurityBindingElementCannotBeExpressedInConfig|Bir güvenlik ilkesi için uç noktaya alınmadı. Güvenlik İlkesi, bir Windows Communication Foundation yapılandırmasında gösterilemez gereksinimlerini içerir. Oluşturulan yapılandırma dosyasında gerekli SecurityBindingElement parametreleri hakkında bir yorum arayın. Doğru bağlama öğesi koduyla oluşturun. Yapılandırma dosyasında bulunan bağlama yapılandırması güvenli değil.|  
-|SecurityBindingSupportsOneWayOnly|Belirtilen sözleşme için belirtilen bağlama SecurityBinding yalnızca OneWay işlemi destekler.|  
-|SecurityContextDoesNotAllowImpersonation|Belirtilen eylemi olan istek iletisi UltimateReceiver rolü için SecurityContext bir Windows kimliğine eşlenmediğinden, kimliğe bürünme başlatılamıyor.|  
-|SecurityListenerClosing|Kapanmakta olduğundan dinleyici yeni güvenli konuşmaları kabul etmiyor.|  
-|SecurityListenerClosingFaultReason|Sunucu yeni güvenli konuşmaları şu anda kabul etmiyor kapanmakta olduğundan. Lütfen daha sonra yeniden deneyin.|  
-|SecurityProtocolFactoryShouldBeSetBeforeThisOperation|Bu işlem gerçekleştirilmeden önce güvenlik protokolü fabrikası ayarlamanız gerekir.|  
-|SecuritySessionAbortedFaultReason|Güvenlik oturumu sona erdirildi. Bu ileti çok uzun süre oturum alınan nedeniyle olabilir.|  
-|SecuritySessionKeyIsStale|Uygulama iletilerini koruyabilmesi için oturum anahtarını yenilenmesi gerekir.|  
+|SecurityAuditPlatformNotSupported|Güvenlik günlüğü denetim iletileri yazma geçerli platform tarafından desteklenmiyor. Uygulama günlüğüne denetleme iletileri yazmanız gerekir.|  
+|SecurityBindingElementCannotBeExpressedInConfig|Uç nokta için bir güvenlik ilkesi içeri aktarıldı. Güvenlik İlkesi, bir Windows Communication Foundation yapılandırmasında temsil edilemeyen gereksinimler içermektedir. Oluşturulan yapılandırma dosyasında gereken SecurityBindingElement parametreleri hakkında bir açıklama arayın. Doğru bağlama öğesi, kod ile oluşturun. Yapılandırma dosyasındaki bağlama yapılandırması güvenli değil.|  
+|SecurityBindingSupportsOneWayOnly|Belirtilen sözleşme için belirtilen bağlama için SecurityBinding yalnızca tek yönlü işlemi destekler.|  
+|SecurityContextDoesNotAllowImpersonation|Kimliğe bürünme için bir Windows kimliği için belirtilen eylemi olan istek iletisi UltimateReceiver rolünden SecurityContext eşlenmemiş başlatılamıyor.|  
+|SecurityListenerClosing|Dinleyici kapanmakta olduğundan yeni bir güvenli konuşma kabul etmiyor.|  
+|SecurityListenerClosingFaultReason|Sunucu şu anda yeni bir güvenli konuşma kabul kapanmakta olduğundan. Lütfen daha sonra yeniden deneyin.|  
+|SecurityProtocolFactoryShouldBeSetBeforeThisOperation|Bu işlem gerçekleştirilmeden önce güvenlik protokolü fabrikasında ayarlamanız gerekir.|  
+|SecuritySessionAbortedFaultReason|Güvenlik oturumu sonlandırıldı. Oturum çok uzun hiçbir ileti alınmadı çünkü bu olabilir.|  
+|SecuritySessionKeyIsStale|Uygulama iletilerini koruyabilmesi için oturum anahtarı yenilenmesi gerekir.|  
 |SecuritySessionLimitReached|Bir güvenlik oturumu oluşturulamıyor. Daha sonra yeniden deneyin.|  
 |SecuritySessionNotPending|Belirtilen kimliğe sahip hiçbir güvenlik oturumu beklemede.|  
-|SecurityTokenParametersHasIncompatibleInclusionMode|Belirtilen bağlama belirtilen uyumsuz güvenlik belirteci ekleme modu olan bir güvenlik belirteci parametresiyle yapılandırılır. Bir alternatif güvenlik belirteci ekleme modu belirtin.|  
-|SecurityVersionDoesNotSupportEncryptedKeyBinding|Belirtilen sözleşme için belirtilen bağlama da EncryptedKey öğelerini vermeyi eklenmemiş başvurular desteklemeyen bir uyumsuz güvenlik sürümü yapılandırıldı. Belirtilen değeri kullanır veya bağlama için güvenlik sürüm olarak daha yüksek.|  
-|SecurityVersionDoesNotSupportSignatureConfirmation|Belirtilen SecurityVersion imza onayı desteklemez. Daha yeni bir SecurityVersion kullanın.|  
-|SecurityVersionDoesNotSupportThumbprintX509KeyIdentifierClause|Belirtilen sözleşme için belirtilen bağlama sertifikanın parmak izi değerini kullanarak X.509 belirteçleri dış başvuruları desteklemiyor security sürüm ile yapılandırılır. Belirtilen değeri kullanır veya bağlama için güvenlik sürüm olarak daha yüksek.|  
-|SenderSideSupportingTokensMustSpecifySecurityTokenParameters|Her ileti için destek belirteçleri ile güvenlik belirteci parametreleri belirtilmelidir.|  
-|ServerCertificateNotProvided|Alıcı sertifikasını sağlamadı. Bu sertifika TLS protokolü tarafından gereklidir. Her iki taraf sertifikalarını erişiminiz olması gerekir.|  
-|SignatureConfirmationNotSupported|Yapılandırılan SecurityVersion imza onayı desteklemez. WSSecurityXXX2005 kullanın veya üstü.|  
-|SignatureConfirmationRequiresRequestReply|Protokol fabrikası imza onayı sunmak için istek/yanıt güvenlik desteklemesi gerekir.|  
-|SignatureNotExpected|İmza için bu iletiyi beklenmiyor.|  
-|SigningTokenHasNoKeys|Belirtilen imzalama belirteci anahtarı yok. Güvenlik belirteci şifreleme işlemlerini gerçekleştirmek için gerekli bir bağlamda kullanılır, ancak belirteç herhangi bir şifreleme anahtarı içerir. Belirteç türü şifreleme işlemlerini desteklemiyor ya da belirli belirteç örnekleri şifreleme anahtarları içermiyor. Onay, yapılandırma emin olmak için şifreleme açısından belirteç türleri (örneğin, UserNameSecurityToken) devre dışı değildir, şifreleme işlemlerini (örneğin, bir onaylama destekleme belirteci) gerektiren bir bağlamda belirtilmiş.|  
-|SpnegoImpersonationLevelCannotBeSetToNone|Güvenlik Desteği Sağlayıcısı Arabirimi kimliğe bürünme düzeyi 'None' desteklemez. Kimlik, kimliğe bürünme veya temsilci düzeyini belirtin.|  
-|SslClientCertMustHavePrivateKey|Belirtilen sertifika özel anahtarı olması gerekir. İşlem, özel anahtar için erişim haklarına sahip olmalıdır.|  
-|SslServerCertMustDoKeyExchange|Belirtilen sertifika anahtar değişim yeteneğine sahip bir özel anahtarı olması gerekir. İşlem, özel anahtar için erişim haklarına sahip olmalıdır.|  
-|StandardsManagerCannotWriteObject|Belirteci seri hale getirici, belirtilen nesne seri hale getirilemiyor.  Bu özel bir tür ise özel bir seri hale getirici sağlamanız gerekir.|  
-|TimeStampHasCreationAheadOfExpiry|Oluşturulma zamanı kendi sona erme zamanı eşit veya daha büyük olduğu için güvenlik damgasının geçersiz.|  
-|TimeStampHasCreationTimeInFuture|Oluşturulma zamanı gelecekte olduğu için güvenlik damgasının geçersiz. Geçerli saat belirtilir ve izin verilen saat eğriltme belirtilir.|  
-|TimeStampHasExpiryTimeInPast|Süre sonu zamanı geçmişte güvenlik zaman damgası eski olduğundan. Geçerli saat belirtilir ve izin verilen saat eğriltme belirtilir.|  
-|TimeStampWasCreatedTooLongAgo|Oluşturulma zamanı çok kadar geri geçmişte güvenlik zaman damgası eski olduğundan. Geçerli saati, maksimum zaman damgası yaşam süresi ve izin verilen saat eğriltme belirtilir.|  
-|TokenProviderCannotGetTokensForTarget|Belirteç sağlayıcı için belirtilen hedef belirteçleri alınamıyor.|  
-|TooManyIssuedSecurityTokenParameters|Federasyon güvenlik zincirinin bir bacağı birden çok IssuedSecurityTokenParameters içerir. Infocard sistemi, her Bacak için yalnızca bir IssuedSecurityTokenParameters destekler.|  
-|TransportDoesNotProtectMessage|Belirtilen bağlama belirtilen sözleşme için aktarım düzeyi bütünlüğü ve gizliliği gerektiren bir kimlik doğrulama modu ile yapılandırılır. Ancak taşıma bütünlüğü ve gizliliği sağlayamaz.|  
-|TrustApr2004DoesNotSupportCertainIssuedTokens|WSTrustApr2004 X.509 sertifikalarını ya da EncryptedKey öğelerini vermeyi desteklemez. WsTrustFeb2005 kullanın veya üstü.|  
-|TrustDriverVersionDoesNotSupportSession|Yapılandırılan güven sürümü oturumları desteklemiyor. WSTrustFeb2005 kullanın veya üstü.|  
+|SecurityTokenParametersHasIncompatibleInclusionMode|Belirtilen bağlama, belirtilen uyumsuz güvenlik belirteci ekleme modu olan bir güvenlik belirteci parametresi ile yapılandırılır. Bir alternatif güvenlik belirteci ekleme modunu belirtin.|  
+|SecurityVersionDoesNotSupportEncryptedKeyBinding|Belirtilen sözleşme için belirtilen bağlama eklenmemiş başvuruları da EncryptedKey öğelerini vermeyi desteklemiyor bir güvenlik sürümü ile yapılandırılmış. Belirtilen değeri kullanın veya daha yüksek güvenlik sürüm bağlama olarak.|  
+|SecurityVersionDoesNotSupportSignatureConfirmation|Belirtilen SecurityVersion, imza onayını desteklemiyor. Bir sonraki SecurityVersion kullanın.|  
+|SecurityVersionDoesNotSupportThumbprintX509KeyIdentifierClause|Belirtilen sözleşme için belirtilen bağlama, sertifikanın parmak izi değerini kullanarak X.509 belirteçleri dış başvuruları desteklemiyor bir güvenlik sürümü ile yapılandırılır. Belirtilen değeri kullanın veya daha yüksek güvenlik sürüm bağlama olarak.|  
+|SenderSideSupportingTokensMustSpecifySecurityTokenParameters|Her ileti için destek belirteçleri ile güvenliği belirteç parametrelerinin belirtilmesi gerekir.|  
+|ServerCertificateNotProvided|Alıcı sertifikasını sağlamadı. Bu sertifika TLS protokolünün gereklidir. Her iki taraf, sertifikalarını erişiminiz olması gerekir.|  
+|SignatureConfirmationNotSupported|Yapılandırılan SecurityVersion, imza onayını desteklemiyor. WSSecurityXXX2005 kullanın veya üzeri.|  
+|SignatureConfirmationRequiresRequestReply|Protokol fabrikası, imza onayını sunmak için Request/Reply güvenlik desteklemesi gerekir.|  
+|SignatureNotExpected|İmza için bu iletiye beklenmiyor.|  
+|SigningTokenHasNoKeys|Belirtilen imzalama belirtecinin anahtarı yok. Güvenlik belirteci şifreleme işlemleri gerçekleştirmesi için gerekli bir bağlamda kullanılır, ancak herhangi bir şifreleme anahtarı belirteç de yer alır. Belirteç türü şifreleme işlemlerini desteklemiyor olabilir ya da belirli belirteç örnekleri şifreleme anahtarları bulundurmuyor olabilir. Onay, belirteç türleri (örneğin UserNameSecurityToken) şifreleme yoluyla devre dışı emin olmak için yapılandırma değildir (örneğin, bir onaylama destekleme belirteci) şifreleme işlemleri gerektiren bir bağlamda belirtilmiş.|  
+|SpnegoImpersonationLevelCannotBeSetToNone|Güvenlik Desteği Sağlayıcısı Arabirimi kimliğe bürünme düzeyi 'None' desteklemez. Kimliği, kimliğe bürünme veya temsilci düzeyini belirtin.|  
+|SslClientCertMustHavePrivateKey|Belirtilen sertifika bir özel anahtara sahip olmalıdır. İşlem, özel anahtar için erişim haklarına sahip olmalıdır.|  
+|SslServerCertMustDoKeyExchange|Belirtilen sertifika anahtar değişim yeteneğine sahip bir özel anahtarı olmalıdır. İşlem, özel anahtar için erişim haklarına sahip olmalıdır.|  
+|StandardsManagerCannotWriteObject|Belirteç serializer özelliği, belirtilen nesne serileştirilemiyor.  Bu özel bir tür ise, özel bir serileştirici sağlamalısınız.|  
+|TimeStampHasCreationAheadOfExpiry|Oluşturulma zamanı, geçerlilik sonu zamanına eşit veya daha büyük olduğundan, güvenlik zaman damgası geçersiz.|  
+|TimeStampHasCreationTimeInFuture|Oluşturulma zamanı gelecekte olduğundan, güvenlik zaman damgası geçersiz. Geçerli saat belirtildi ve izin verilen saat sapması belirtilir.|  
+|TimeStampHasExpiryTimeInPast|Sona erme zamanı geçmişte olduğundan, güvenlik zaman damgası eskimiş. Geçerli saat belirtildi ve izin verilen saat sapması belirtilir.|  
+|TimeStampWasCreatedTooLongAgo|Oluşturulma zamanı geçmişte geride çok uzun olduğundan, güvenlik zaman damgası eskimiş. Geçerli zamanı, maksimum zaman damgası ömrü ve izin verilen saat sapması belirtilir.|  
+|TokenProviderCannotGetTokensForTarget|Belirteç sağlayıcısı, belirteç için belirtilen hedef alınamıyor.|  
+|TooManyIssuedSecurityTokenParameters|Birleşik güvenliği zincirinin bir oluşturan birden çok IssuedSecurityTokenParameters içerir. Infocard sistemi, her oluşturan için yalnızca bir IssuedSecurityTokenParameters destekler.|  
+|TransportDoesNotProtectMessage|Belirtilen sözleşme için belirtilen bağlama aktarım düzeyi bütünlüğü ve gizliliği gerektiren bir kimlik doğrulama modu ile yapılandırılır. Ancak taşıma bütünlüğü ve gizliliği sağlayamaz.|  
+|TrustApr2004DoesNotSupportCertainIssuedTokens|WSTrustApr2004 X.509 sertifikalarıyla ya da EncryptedKey öğelerini vermeyi desteklemez. WsTrustFeb2005 kullanın veya üzeri.|  
+|TrustDriverVersionDoesNotSupportSession|Yapılandırılan Trust sürümü, oturumları desteklemez. WSTrustFeb2005 kullanın veya üzeri.|  
 |UnableToCreateICryptoFromTokenForSignatureVerification|Belirtilen belirteç imza doğrulaması için bir ICrypto arabirimi oluşturamazsınız.|  
 |UnableToCreateSymmetricAlgorithmFromToken|Belirtilen Simetrik algoritma belirteçten oluşturulamıyor.|  
-|UnableToDeriveKeyFromKeyInfoClause|Türetme için kullanılan simetrik anahtar içermiyor belirtilen belirtecine çözümlendi belirtilen KeyInfo.|  
-|UnableToFindTokenAuthenticator|Belirtilen belirteç türü için bir belirteç kimlik doğrulayıcısı bulunamıyor. Bu tür belirteçler göre geçerli güvenlik ayarları kabul edilemez.|  
-|UnableToLoadCertificateIdentity|Yapılandırmada belirtilen X.509 sertifikası kimliği yüklenemiyor.|  
-|UnexpectedEmptyElementExpectingClaim|Belirtilen öğe belirtilen ad boş ve geçerli bir kimlik talebi belirtmiyor.|  
-|UnknownEncodingInBinarySecurityToken|Tanınmayan kodlama ikili güvenlik belirteci okunurken oluştu.|  
-|UnsecuredMessageFaultReceived|Diğer taraftan korunmayan ya da yanlış güvenli hatası alındı. Hata kodu ve ayrıntı için iç FaultException bakın.|  
-|UnsupportedPasswordType|Belirtilen kullanıcı adı belirteci desteklenmeyen bir parola türüne sahip.|  
-|UnsupportedSecureConversationBootstrapProtectionRequirements|Güvenlik İlkesi içeri aktarılamıyor. Güvenli konuşma başlatma bağlaması koruma gereksinimleri desteklenmez. Güvenli Konuşmayla önyükleme koruma gereksinimlerini istek ve yanıt İmzalanabilir ve şifrelenebilir gerektirir.|  
-|UnsupportedSecurityPolicyAssertion|Desteklenmeyen güvenlik ilkesini onaylama işlemi sırasında belirtilen güvenlik ilkesi alma algılandı.|
+|UnableToDeriveKeyFromKeyInfoClause|Türetme için kullanılan simetrik anahtar içermiyor belirtilen belirteç çözümlendi belirtilen KeyInfo.|  
+|UnableToFindTokenAuthenticator|Belirtilen belirteç türü için bir belirteç kimlik doğrulayıcısı bulunamıyor. Bu tür belirteçler göre geçerli güvenlik ayarlarını kabul edilemez.|  
+|UnableToLoadCertificateIdentity|Yapılandırmada belirtilen X.509 sertifika kimlik yüklenemiyor.|  
+|UnexpectedEmptyElementExpectingClaim|Belirtilen öğe belirtilen ad alanından boş ve geçerli bir kimlik talebi belirtmiyor.|  
+|UnknownEncodingInBinarySecurityToken|İkili güvenlik belirteci okunurken tanınmayan kodlama oluştu.|  
+|UnsecuredMessageFaultReceived|Diğer taraftan, güvenli olmayan veya yanlış güvenli bir hata alındı. İç FaultException hata kodu ve ayrıntı için bkz.|  
+|UnsupportedPasswordType|Belirtilen kullanıcı adı belirteci, desteklenmeyen bir parola türüne sahip.|  
+|UnsupportedSecureConversationBootstrapProtectionRequirements|Güvenlik İlkesi içeri aktarılamıyor. Güvenli konuşma başlatma bağlaması koruma gereksinimleri desteklenmiyor. Güvenli konuşma başlatma bağlaması koruma gereksinimleri, hem isteğin hem de yanıtın imzalanmış ve şifrelenmiş olmasını gerektirir.|  
+|UnsupportedSecurityPolicyAssertion|Belirtilen güvenlik ilkesi içeri aktarma sırasında bir desteklenmeyen güvenlik ilkesi eklemesi algılandı.|
