@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 5a9f5771-f5f6-4100-8501-406aa20d731a
 author: BrucePerlerMS
 ms.openlocfilehash: 373177924a0a2e03bd43237510c918694cd5a340
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47075352"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47236010"
 ---
 # <a name="how-to-enable-token-replay-detection"></a>Nasıl yapılır: Belirteç yeniden yürütme algılamayı etkinleştirme
 ## <a name="applies-to"></a>Uygulandığı öğe:  
