@@ -4,11 +4,11 @@ description: Geçiş, sorgulama ve söz dizimi ağacı walking giriş.
 ms.date: 06/01/2018
 ms.custom: mvc
 ms.openlocfilehash: acba7ac590154ad8458d0d9a8abac55a12e96265
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47083234"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47400796"
 ---
 # <a name="get-started-with-syntax-transformation"></a>Söz dizimi dönüştürme ile çalışmaya başlama
 

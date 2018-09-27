@@ -2,17 +2,17 @@
 title: Windows Communication Foundation'a İleti Kuyruğa Alma
 ms.date: 03/30/2017
 ms.assetid: 6d718eb0-9f61-4653-8a75-d2dac8fb3520
-ms.openlocfilehash: 983fd2ef7338e24c67e3556849e73c2feaf97a60
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 16b9c9fa3c66ad86fe9502b14fc09ff8d543d58a
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525704"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47397000"
 ---
 # <a name="message-queuing-to-windows-communication-foundation"></a>Windows Communication Foundation'a İleti Kuyruğa Alma
 Bu örnek, bir Message Queuing (MSMQ) uygulamasını bir Windows Communication Foundation (WCF) hizmetine bir MSMQ iletisinin nasıl gönderebileceğiniz gösterilir. Hizmeti, sıraya alınan iletileri alma hizmeti gözlemleyin sağlamak için bir şirket içinde barındırılan bir konsol uygulamasıdır.  
   
- Hizmet sözleşme `IOrderProcessor`, kuyruklar ile kullanım için uygun olan bir tek yönlü hizmeti tanımlar. Bir MSMQ iletisinin bir eylem üst bilgisi olmadığından, işlem sözleşmeleri farklı MSMQ iletileri otomatik olarak eşlemeye mümkün değildir. Bu nedenle, yalnızca bir işlem anlaşması olabilir. Hizmeti için birden fazla işlem anlaşması tanımlamak istiyorsanız, uygulamayı dağıtmak için hangi işlem anlaşması karar vermek için (örneğin, etiket veya Correlationıd) MSMQ iletisinin başlığında hangi kullanılabilir bilgi sağlamanız gerekir. Bu gösterilmiştir [özel Demux](../../../../docs/framework/wcf/samples/custom-demux.md).  
+ Hizmet sözleşme `IOrderProcessor`, kuyruklar ile kullanım için uygun olan bir tek yönlü hizmeti tanımlar. Bir MSMQ iletisinin bir eylem üst bilgisi olmadığından, işlem sözleşmeleri farklı MSMQ iletileri otomatik olarak eşlemeye mümkün değildir. Bu nedenle, yalnızca bir işlem anlaşması olabilir. Hizmeti için birden fazla işlem anlaşması tanımlamak istiyorsanız, uygulamayı dağıtmak için hangi işlem anlaşması karar vermek için (örneğin, etiket veya Correlationıd) MSMQ iletisinin başlığında hangi kullanılabilir bilgi sağlamanız gerekir.
   
  MSMQ iletisinin hangi üstbilgileri da işlem anlaşması farklı parametrelerle eşlenir bilgi içermiyor. Parametre türüdür <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>(`MsmqMessage<T>`), temel alınan MSMQ iletisi içerir. ' % S'tür "T" içinde <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>(`MsmqMessage<T>`) sınıfı, MSMQ ileti gövdesine seri verileri temsil eder. Bu örnekte `PurchaseOrder` türü MSMQ ileti gövdesine seri.  
   

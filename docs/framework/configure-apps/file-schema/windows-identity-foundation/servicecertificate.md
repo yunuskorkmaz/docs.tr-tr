@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 42c7f291-2ec3-43c5-8872-35897ff3c660
 author: BrucePerlerMS
 ms.openlocfilehash: 008d2269a72759117658e27ec130cc8cf62cfdfa
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47084312"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47400419"
 ---
 # <a name="ltservicecertificategt"></a>&lt;serviceCertificate&gt;
 Şifreleme ve belirteç şifre çözme için kullanılan X.509 sertifikasını yapılandırır.  

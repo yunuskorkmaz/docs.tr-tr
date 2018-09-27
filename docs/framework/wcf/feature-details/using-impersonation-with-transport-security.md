@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 426df8cb-6337-4262-b2c0-b96c2edf21a9
 author: BrucePerlerMS
 ms.openlocfilehash: 537bb1d9cfbda98b0e92833d94b40097fae205fd
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47088600"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47397039"
 ---
 # <a name="using-impersonation-with-transport-security"></a>Taşıma Güvenliği ile Kimliğe Bürünme Kullanma
 *Kimliğe bürünme* istemci kimliğini almak için bir sunucu uygulaması özelliğidir. Kimliğe bürünme, kaynaklara erişimi doğrularken kullanmak üzere hizmetlerin yaygındır. Bir hizmet hesabı kullanarak sunucu uygulaması çalışır ancak server istemci bağlantısı kabul ettiğinde, istemcinin kimlik bilgilerini kullanarak erişim denetimleri gerçekleştirilmesi, istemci kimliğine bürünür. Aktarım güvenliği hem de kimlik bilgilerini geçirerek ve bu kimlik bilgilerini kullanarak güvenli hale getirmek için bir mekanizma ' dir. Aktarım güvenliği ile kimliğe bürünme özelliğini Windows Communication Foundation (WCF) kullanarak bu konuda açıklanmaktadır. İleti güveliği kullanarak kimliğe bürünme hakkında daha fazla bilgi için bkz. [temsilcilik ve kimliğe bürünme](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  

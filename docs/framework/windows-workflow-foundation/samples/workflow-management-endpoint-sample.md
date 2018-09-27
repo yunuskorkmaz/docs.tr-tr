@@ -2,17 +2,17 @@
 title: İş akışı Yönetimi uç nokta örneği
 ms.date: 03/30/2017
 ms.assetid: 3ac6e08f-c43d-4bb7-83c3-e3890a4dac03
-ms.openlocfilehash: 3d99cbef20895381f5e40ee939e1d94a409f1391
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 398ace1c198f0db0268c44083ccc98c5ba2d2c7f
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47078402"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47399131"
 ---
 # <a name="workflow-management-endpoint-sample"></a>İş akışı Yönetimi uç nokta örneği
 Bu örnek, bir iş akışı denetim uç noktası oluşturma ve yerel olarak ve Uzaktan iş akışlarını çalıştırmak için nasıl kullanılabileceğini gösterir. Örnek, bir denetim uç noktası ana bilgisayar ve istemcileri yazma gösterir oluşturmak ve bir iş akışı örneğini çalıştırmak için denetim uç noktası çağrısı. İş akışı, bir hizmeti değil.  
   
- Örnek sunucusu tarafında WorkflowServiceHost ile iş akışı barındırılır ve istemcilerin denetimi işlemleri (askıya alma, Başlat, vb.) gerçekleştirebilmeleri için bir WorkflowControlEndpoint eklenir. Kullanıcı tanımlı bir CreationEndpoint oluşturulacak iş akışının izin vermek için de eklenir. Hizmet, ardından iş akışını askıya alınmış durumda başlatmak için bu uç noktaları kullanır ve ardından iş akışını sürdürmek. İstemci aynı işlemleri gerçekleştirir. ancak bu, istemci kodu. Bunlar hakkında daha fazla bilgi için bkz arabirimleri için [iş akışı denetim uç noktası](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md) ve [nasıl yapılır: IIS'de hizmet olmayan iş akışı barındırma](../../../../docs/framework/wcf/feature-details/how-to-host-a-non-service-workflow-in-iis.md)  
+ Örnek sunucusu tarafında WorkflowServiceHost ile iş akışı barındırılır ve istemcilerin denetimi işlemleri (askıya alma, Başlat, vb.) gerçekleştirebilmeleri için bir WorkflowControlEndpoint eklenir. Kullanıcı tanımlı bir CreationEndpoint oluşturulacak iş akışının izin vermek için de eklenir. Hizmet, ardından iş akışını askıya alınmış durumda başlatmak için bu uç noktaları kullanır ve ardından iş akışını sürdürmek. İstemci aynı işlemleri gerçekleştirir. ancak bu, istemci kodu. Bunlar hakkında daha fazla bilgi için bkz arabirimleri için [iş akışı denetim uç noktası](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md).  
   
 #### <a name="to-run-the-sample"></a>Örnek çalıştırmak için  
   

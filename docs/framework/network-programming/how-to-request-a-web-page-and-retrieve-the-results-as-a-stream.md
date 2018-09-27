@@ -8,11 +8,11 @@ ms.assetid: d32b7f35-29d8-4fb7-ad71-d219edc5e359
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 2ceaa7cbaf2035276a0ba0105f3969f0249c6132
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47084936"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47402610"
 ---
 # <a name="how-to-request-a-web-page-and-retrieve-the-results-as-a-stream"></a>Nasıl yapılır: Web sayfası isteme ve sonuçları bir Stream alma
 Bu örnek, bir Web sayfası isteme ve sonuçları bir akış alma gösterilmektedir.  

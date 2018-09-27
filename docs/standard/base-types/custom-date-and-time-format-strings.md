@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 730c6abfe9d49c319d1438a0821ad47e19fc0638
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: f51e3f36594a6f66c5fad32214d84a11b78726a4
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46586447"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47399352"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Özel Tarih ve Saat Biçim Dizeleri
 
@@ -32,7 +32,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
 
  Özel tarih ve saat biçim dizeleri ile her ikisini de kullanılabilir <xref:System.DateTime> ve <xref:System.DateTimeOffset> değerleri.
 
-[!INCLUDE[C# interactive-note](~/includes/csharp-interactive-with-utc-note.md)] 
+[!INCLUDE[C# interactive-note](~/includes/csharp-interactive-with-utc-partial-note.md)] 
 
 <a name="table"></a> Biçimlendirme işlemlerinde, özel tarih ve saat biçim dizeleri olabilir ile birlikte kullanılan `ToString` yöntemiyle veya bileşik biçimlendirmeyi destekleyen bir yöntemle bir tarih ve saat örneğinin. Aşağıdaki örnek her iki kullanımı da gösterir.
 
@@ -108,7 +108,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
 
  Aşağıdaki örnek birçok biçim dizesinde "d" özel biçim belirticisini içerir.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#1)]
+ [!code-csharp[Formatting.DateAndTime.Custom#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#1)]
  [!code-vb[Formatting.DateAndTime.Custom#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#1)]
 
  [Tabloya dön](#table)
@@ -120,7 +120,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
 
  Aşağıdaki örnek bir özel biçim dizesinde "dd" özel biçim belirticisini içerir.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#2)]
+ [!code-csharp[Formatting.DateAndTime.Custom#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#2)]
  [!code-vb[Formatting.DateAndTime.Custom#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#2)]
 
  [Tabloya dön](#table)
@@ -132,7 +132,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
 
  Aşağıdaki örnek bir özel biçim dizesinde "ddd" özel biçim belirticisini içerir.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#3)]
+ [!code-csharp[Formatting.DateAndTime.Custom#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#3)]
  [!code-vb[Formatting.DateAndTime.Custom#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#3)]
 
  [Tabloya dön](#table)
@@ -144,7 +144,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
 
  Aşağıdaki örnek bir özel biçim dizesinde "dddd" özel biçim belirticisini içerir.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#4)]
+ [!code-csharp[Formatting.DateAndTime.Custom#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#4)]
  [!code-vb[Formatting.DateAndTime.Custom#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#4)]
 
  [Tabloya dön](#table)
@@ -160,7 +160,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
 
  Aşağıdaki örnek bir özel biçim dizesinde "f" özel biçim belirticisini içerir.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#5)]
+ [!code-csharp[Formatting.DateAndTime.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#5)]
  [!code-vb[Formatting.DateAndTime.Custom#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#5)]
 
  [Tabloya dön](#table)
@@ -172,7 +172,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
 
  Aşağıdaki örnek, özel biçim dizesindeki "ff" özel biçim belirticisini içerir.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#5)]
+ [!code-csharp[Formatting.DateAndTime.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#5)]
  [!code-vb[Formatting.DateAndTime.Custom#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#5)]
 
  [Tabloya dön](#table)
@@ -184,7 +184,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
 
  Aşağıdaki örnek bir özel biçim dizesinde "fff" özel biçim belirticisini içerir.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#5)]
+ [!code-csharp[Formatting.DateAndTime.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#5)]
  [!code-vb[Formatting.DateAndTime.Custom#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#5)]
 
  [Tabloya dön](#table)
@@ -236,7 +236,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
 
  Aşağıdaki örnek bir özel biçim dizesinde "F" özel biçim belirticisini içerir.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#5)]
+ [!code-csharp[Formatting.DateAndTime.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#5)]
  [!code-vb[Formatting.DateAndTime.Custom#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#5)]
 
  [Tabloya dön](#table)
@@ -248,7 +248,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
 
  Aşağıdaki örnek bir özel biçim dizesinde "FF" özel biçim belirticisini içerir.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#5)]
+ [!code-csharp[Formatting.DateAndTime.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#5)]
  [!code-vb[Formatting.DateAndTime.Custom#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#5)]
 
  [Tabloya dön](#table)
@@ -260,7 +260,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
 
  Aşağıdaki örnek bir özel biçim dizesinde "FFF" özel biçim belirticisini içerir.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#5)]
+ [!code-csharp[Formatting.DateAndTime.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#5)]
  [!code-vb[Formatting.DateAndTime.Custom#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#5)]
 
  [Tabloya dön](#table)
@@ -310,7 +310,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
 
  Aşağıdaki örnek bir özel biçim dizesinde "g" özel biçim belirticisini içerir.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#6)]
+ [!code-csharp[Formatting.DateAndTime.Custom#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#6)]
  [!code-vb[Formatting.DateAndTime.Custom#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#6)]
 
  [Tabloya dön](#table)
@@ -324,7 +324,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
 
  Aşağıdaki örnek bir özel biçim dizesinde "h" özel biçim belirticisini içerir.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#7)]
+ [!code-csharp[Formatting.DateAndTime.Custom#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#7)]
  [!code-vb[Formatting.DateAndTime.Custom#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#7)]
 
  [Tabloya dön](#table)
@@ -336,7 +336,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
 
  Aşağıdaki örnek bir özel biçim dizesinde "hh" özel biçim belirticisini içerir.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#8)]
+ [!code-csharp[Formatting.DateAndTime.Custom#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#8)]
  [!code-vb[Formatting.DateAndTime.Custom#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#8)]
 
  [Tabloya dön](#table)
@@ -350,7 +350,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
 
  Aşağıdaki örnek bir özel biçim dizesinde "H" özel biçim belirticisini içerir.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#9](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#9)]
+ [!code-csharp[Formatting.DateAndTime.Custom#9](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#9)]
  [!code-vb[Formatting.DateAndTime.Custom#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#9)]
 
  [Tabloya dön](#table)
@@ -362,7 +362,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
 
  Aşağıdaki örnek bir özel biçim dizesinde "HH" özel biçim belirticisini içerir.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#10)]
+ [!code-csharp[Formatting.DateAndTime.Custom#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#10)]
  [!code-vb[Formatting.DateAndTime.Custom#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#10)]
 
  [Tabloya dön](#table)
@@ -398,7 +398,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
 
  Aşağıdaki örnek bir özel biçim dizesinde "m" özel biçim belirticisini içerir.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#7)]
+ [!code-csharp[Formatting.DateAndTime.Custom#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#7)]
  [!code-vb[Formatting.DateAndTime.Custom#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#7)]
 
  [Tabloya dön](#table)
@@ -410,7 +410,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
 
  Aşağıdaki örnek bir özel biçim dizesinde "mm" özel biçim belirticisini içerir.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#8)]
+ [!code-csharp[Formatting.DateAndTime.Custom#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#8)]
  [!code-vb[Formatting.DateAndTime.Custom#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#8)]
 
  [Tabloya dön](#table)
@@ -424,7 +424,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
 
  Aşağıdaki örnek bir özel biçim dizesinde "M" özel biçim belirticisini içerir.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#11)]
+ [!code-csharp[Formatting.DateAndTime.Custom#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#11)]
  [!code-vb[Formatting.DateAndTime.Custom#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#11)]
 
  [Tabloya dön](#table)
@@ -436,7 +436,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
 
  Aşağıdaki örnek bir özel biçim dizesinde "MM" özel biçim belirticisini içerir.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#2)]
+ [!code-csharp[Formatting.DateAndTime.Custom#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#2)]
  [!code-vb[Formatting.DateAndTime.Custom#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#2)]
 
  [Tabloya dön](#table)
@@ -448,7 +448,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
 
  Aşağıdaki örnek bir özel biçim dizesinde "MMM" özel biçim belirticisini içerir.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#3)]
+ [!code-csharp[Formatting.DateAndTime.Custom#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#3)]
  [!code-vb[Formatting.DateAndTime.Custom#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#3)]
 
  [Tabloya dön](#table)
@@ -460,7 +460,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
 
  Aşağıdaki örnek bir özel biçim dizesinde "MMMM" özel biçim belirticisini içerir.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#4)]
+ [!code-csharp[Formatting.DateAndTime.Custom#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#4)]
  [!code-vb[Formatting.DateAndTime.Custom#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#4)]
 
  [Tabloya dön](#table)
@@ -474,7 +474,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
 
  Aşağıdaki örnek bir özel biçim dizesinde "s" özel biçim belirticisini içerir.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#7)]
+ [!code-csharp[Formatting.DateAndTime.Custom#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#7)]
  [!code-vb[Formatting.DateAndTime.Custom#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#7)]
 
  [Tabloya dön](#table)
@@ -486,7 +486,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
 
  Aşağıdaki örnek bir özel biçim dizesinde "ss" özel biçim belirticisini içerir.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#8)]
+ [!code-csharp[Formatting.DateAndTime.Custom#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#8)]
  [!code-vb[Formatting.DateAndTime.Custom#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#8)]
 
  [Tabloya dön](#table)
@@ -500,7 +500,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
 
  Aşağıdaki örnek bir özel biçim dizesinde "t" özel biçim belirticisini içerir.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#7)]
+ [!code-csharp[Formatting.DateAndTime.Custom#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#7)]
  [!code-vb[Formatting.DateAndTime.Custom#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#7)]
 
  [Tabloya dön](#table)
@@ -514,7 +514,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
 
  Aşağıdaki örnek bir özel biçim dizesinde "tt" özel biçim belirticisini içerir.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#8)]
+ [!code-csharp[Formatting.DateAndTime.Custom#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#8)]
  [!code-vb[Formatting.DateAndTime.Custom#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#8)]
 
  [Tabloya dön](#table)

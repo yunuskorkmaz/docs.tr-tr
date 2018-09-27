@@ -20,11 +20,11 @@ ms.assetid: d1ce882e-653e-41f5-9289-844ec855b804
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 2e79c9a75e4513be91af1104195af3614b49092d
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47176496"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47398556"
 ---
 # <a name="using-a-synchronous-server-socket"></a>Zaman uyumlu sunucu yuvası kullanma
 Yuva bağlantısı isteği alınana kadar zaman uyumlu sunucu yuva uygulamanın yürütülmesini askıya alın. Zaman uyumlu sunucu yuva ağ kullanımı yoğun uygulamalar, işlemi için uygun değildir, ancak Basit Ağ uygulamaları için uygun olabilir.  
