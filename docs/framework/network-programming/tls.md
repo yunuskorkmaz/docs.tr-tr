@@ -13,12 +13,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
 author: blowdart
-ms.openlocfilehash: a421b73edc1dd90be53d301d12160d39abe78f90
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 96d37934b5e852b69c692bb1606d2998dac6f63a
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47111366"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47424486"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework ile Aktarım Katmanı Güvenliği (TLS) en iyi uygulamalar
 
@@ -182,7 +182,7 @@ TLS protokolleri hakkında daha fazla bilgi için bkz. [azaltma: TLS protokoller
 > [!WARNING]
 > Kayıt defteri anahtarlarını ayarlamak sistem üzerindeki tüm uygulamaları etkiler. Yalnızca makine tam denetimi sizdedir ve kayıt defterindeki değişiklikleri kontrol edebilirsiniz, bu seçeneği kullanın.
 
-Birini veya ikisini de ayarlıyorsanız `AppContext` anahtarları bir seçenek değildir, bu bölümde açıklanan Windows kayıt defteri anahtarları ile uygulamanızın kullandığı güvenlik protokollerini denetleyebilirsiniz. Aşağıdakilerden birini veya her ikisi de kullanmanız mümkün olmayabilir `AppContext` uygulamanızı 4.6'den önceki bir .NET Framework sürümünü hedefler ve yapılandırma dosyası düzenleyemezsiniz geçer. Ardından güvenlik kayıt defteri ile yapılandırmak istiyorsanız, kodunuzdaki güvenlik protokolü değeri belirtmeyin; Bunun yapılması, bu nedenle kayıt defteri geçersiz kılarsınız.
+Birini veya ikisini de ayarlıyorsanız `AppContext` anahtarları bir seçenek değilse, bu bölümde açıklanan Windows kayıt defteri anahtarları ile uygulamanızın kullandığı güvenlik protokollerini denetleyebilirsiniz. Aşağıdakilerden birini veya her ikisi de kullanmanız mümkün olmayabilir `AppContext` uygulamanız .NET Framework 4.5.2 veya önceki sürümlerinde çalışıyorsa veya yapılandırma dosyasını düzenleyemezsiniz geçer. Güvenlik kayıt defteri ile yapılandırmak istiyorsanız, kodunuzdaki güvenlik protokolü değeri belirtmeyin; Bunun yapılması, bu nedenle kayıt defteri ayarını geçersiz kılar.
 
 Adlara karşılık gelen kayıt defteri anahtarlarını adlarını benzer `AppContext` anahtarları olmadan bir `DontEnable` adına etkileşimlidir. Örneğin, `AppContext` geçiş `DontEnableSchUseStrongCrypto` kayıt defteri anahtarı adlı [SchUseStrongCrypto](#schusestrongcrypto).
 

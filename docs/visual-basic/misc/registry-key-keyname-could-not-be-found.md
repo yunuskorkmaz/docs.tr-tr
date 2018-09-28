@@ -3,11 +3,11 @@ title: Kayıt defteri anahtarı &#39; &lt;keyname&gt; &#39; bulunamadı
 ms.date: 07/20/2015
 ms.assetid: ca4eb74f-8303-48fc-9ea8-d792fa4c810b
 ms.openlocfilehash: 874371dd2d4dc9f7d4b1374ae08359e4ea6afc87
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47075469"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47436238"
 ---
 # <a name="registry-key-39ltkeynamegt39-could-not-be-found"></a>Kayıt defteri anahtarı &#39; &lt;keyname&gt; &#39; bulunamadı
 Bir kayıt defteri anahtarı bulunamıyor.  
