@@ -2,12 +2,12 @@
 title: Dayanıklı Çift Yönlü Bağıntı
 ms.date: 03/30/2017
 ms.assetid: 8eb0e49a-6d3b-4f7e-a054-0d4febee2ffb
-ms.openlocfilehash: 82c052ff87eb8b125dfc64e1567dbd00d255894d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f2f5fe557f1f8754758d0dd9b4042cacc62cc61f
+ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47205492"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47862902"
 ---
 # <a name="durable-duplex-correlation"></a>Dayanıklı Çift Yönlü Bağıntı
 Dayanıklı çift yönlü bağıntı, geri çağırma bağıntı olarak da bilinen bir iş akışı hizmeti ilk çağırana bir geri çağırma göndermek için bir gereksinimi olduğunda yararlıdır. WCF çift yönlü, farklı bir geri çağırma dilediğiniz zaman gelecekte oluşabilir ve aynı kanalı veya kanal ömrü bağlı değildir; çağıran bir etkin uç noktası için geri çağırma iletiyi dinleme sahip tek gereksinim olmasıdır. Bu, uzun süre çalışan konuşmada iletişim kurmak iki iş akışı hizmetleri sağlar. Bu konu, dayanıklı çift yönlü bağıntı genel bir bakış sağlar.  
@@ -198,7 +198,4 @@ WF2 - Items sent
 WF1 - Items Received  
 ```  
   
- Bağıntı kullanarak açıkça Bu örnekte, her iki iş akışlarını yönetme bir <xref:System.ServiceModel.Activities.CallbackCorrelationInitializer>. Bu örnek iş akışları, varsayılan olarak yalnızca tek bir bağıntı olduğundan <xref:System.ServiceModel.Activities.CorrelationHandle> yönetim olabilirdi yeterli.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Dayanıklı çift yönlü &#91;WF örnekleri&#93;](../../../../docs/framework/windows-workflow-foundation/samples/durable-duplex.md)
+ Bağıntı kullanarak açıkça Bu örnekte, her iki iş akışlarını yönetme bir <xref:System.ServiceModel.Activities.CallbackCorrelationInitializer>. Bu örnek iş akışları, varsayılan olarak yalnızca tek bir bağıntı olduğundan <xref:System.ServiceModel.Activities.CorrelationHandle> yönetim olabilirdi yeterli.

@@ -10,11 +10,11 @@ ms.assetid: 261dcc59-3a62-4e40-91dd-63ff9d2241c0
 author: Xansky
 ms.author: mhopkins
 ms.openlocfilehash: f15bdfd2643a8d4b17926d3a05cc15cb80e7a505
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47232800"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47863084"
 ---
 # <a name="ui-automation-control-types"></a>UI Otomasyon Denetim Türleri
 **Not** bu belgeler yönetilen kullanmak isteyen .NET Framework için tasarlanan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tanımlanan sınıflar <xref:System.Windows.Automation> ad alanı. En son bilgileri [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], bkz: [Windows Automation API: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  

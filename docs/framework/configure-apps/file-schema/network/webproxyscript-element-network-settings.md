@@ -11,11 +11,11 @@ ms.assetid: a13c26db-6218-4af3-9696-38f24b23bfac
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 1e1450d2df424b32aacc5c113b5936001f65915a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47204446"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47862743"
 ---
 # <a name="ltwebproxyscriptgt-element-network-settings"></a>&lt;webProxyScript&gt; öğesi (ağ ayarları)
 Web proxy'leri bulmak için kullanılan komut dosyası özelliklerini yapılandırır.  

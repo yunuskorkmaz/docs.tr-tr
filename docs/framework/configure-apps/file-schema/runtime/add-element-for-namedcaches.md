@@ -8,11 +8,11 @@ ms.assetid: ce2a63a8-c829-4742-a6ea-72ee5d89f169
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 695ee744bdf2226f0647c4cdf142a2dca4e97a4a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47400445"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47863331"
 ---
 # <a name="ltaddgt-element-for-ltnamedcachesgt"></a>&lt;ekleme&gt; öğesi için &lt;namedCaches&gt;
 Ekler bir `namedCache` girişe `namedCaches` koleksiyonu için bir önbellek.  

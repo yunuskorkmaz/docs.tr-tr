@@ -9,11 +9,11 @@ ms.assetid: aa80d155-060d-41b4-a636-1ceb424afee8
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d1e771a95542153dfad0981d3198e6b4c31cdeb9
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47436095"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47861711"
 ---
 # <a name="using-user-filtered-exception-handlers"></a>Kullanıcı Tarafından Filtrelenmiş Özel Durum İşleyicilerini Kullanma
 Şu anda, Visual Basic, kullanıcı tarafından filtrelenmiş özel durumu destekler. Kullanıcı tarafından filtrelenmiş özel durum işleyicileri catch ve özel durum için tanımladığınız gereksinimlerine göre özel durumları işleyin. Bu işleyicilerini **Catch** deyimiyle **olduğunda** anahtar sözcüğü.  

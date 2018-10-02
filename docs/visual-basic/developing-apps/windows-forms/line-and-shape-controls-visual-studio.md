@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Line control [Visual Basic], topic list
 ms.assetid: 29ee3a5f-920f-4677-85bc-bd7425ab57e8
 ms.openlocfilehash: 6d052af15257f00f43ad21b08765ab3c882b31bf
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47205972"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47863591"
 ---
 # <a name="line-and-shape-controls-visual-studio"></a>Çizgi ve Şekil Denetimleri (Visual Studio)
 Visual Basic Power Packs çizgi ve Şekil denetimleri yatay, dikey ve çapraz satırları, dikdörtgenler, kare, elips, daire ve dikdörtgenler ve kareler yuvarlatılmış köşeler bir form veya kapsayıcı ile çizme olanak tanıyan Grafik denetimlerdir.  

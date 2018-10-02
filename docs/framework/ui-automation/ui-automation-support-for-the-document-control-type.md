@@ -9,11 +9,11 @@ ms.assetid: a79d594b-1ca0-4543-8dac-afd2c645201d
 author: Xansky
 ms.author: mhopkins
 ms.openlocfilehash: 505d6f479a77c8a8579eba192250c08e932aea09
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47232839"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47863396"
 ---
 # <a name="ui-automation-support-for-the-document-control-type"></a>Belge Denetim Türü İçin UI Otomasyon Desteği
 > [!NOTE]

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - '#undef directive [C#]'
 ms.assetid: 686c92d2-7194-4be4-b2f4-80091712d513
 ms.openlocfilehash: 3957d58f61e51fab01618f5e1146be9cd0da58fd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47421472"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47862967"
 ---
 # <a name="undef-c-reference"></a>#undef (C# Başvurusu)
 `#undef` Bir sembolün tanımını olanak tanır şekilde sembol deyim olarak kullanarak, bir [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) yönergesi, ifade için değerlendirilecek olan `false`.  

@@ -14,11 +14,11 @@ ms.assetid: 07fba116-045b-473c-a0b7-acdbeb49861f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 23fa927dcdb91fb3905f1cbe845450751de91157
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47234854"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47862035"
 ---
 # <a name="calling-asynchronous-methods-using-iasyncresult"></a>IAsyncResult Kullanarak Zaman Uyumsuz Yöntemleri Çağırma 
 Üçüncü taraf sınıf kitaplıkları ve .NET Framework türleri bir uygulama ana uygulama iş parçacığı dışında iş parçacıklarında zaman uyumsuz işlemleri gerçekleştirilirken yürütmeye devam izin yöntemleri sağlar. Aşağıdaki bölümlerde açıklanmaktadır ve zaman uyumsuz yöntem çağırabilirsiniz farklı yollarını gösteren kod örnekleri sağlamak <xref:System.IAsyncResult> tasarım deseni.  
