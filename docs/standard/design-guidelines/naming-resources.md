@@ -12,11 +12,11 @@ ms.assetid: 8b0e97f3-7877-44fd-bc76-e05d36d5d79c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a5b53fc383e6fc9a5f056bab4eabde9979cd734b
-ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47862074"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48034616"
 ---
 # <a name="naming-resources"></a>Adlandırma kaynakları
 Yerelleştirilebilir kaynaklar özellikleri değilmiş gibi belirli nesneler başvurulabilir olduğundan kaynakları için adlandırma kuralları için özellik kılavuzları benzerdir.  

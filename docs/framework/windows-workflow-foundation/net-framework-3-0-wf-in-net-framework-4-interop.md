@@ -2,12 +2,12 @@
 title: Birlikte çalışma etkinliği ile .NET Framework 4, .NET Framework 3.0 WF etkinlikleri kullanma
 ms.date: 03/30/2017
 ms.assetid: 71f112ba-abb0-46f7-b05f-a5d2eb9d0c5c
-ms.openlocfilehash: b2dac91ffa0f4bf5e1c1afea1fc6f6629c345857
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 386f71f21a4164f6f0ffc0ed19aab68abbe5a0b5
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43467511"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48029270"
 ---
 # <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a>Birlikte çalışma etkinliği ile .NET Framework 4, .NET Framework 3.0 WF etkinlikleri kullanma
 <xref:System.Activities.Statements.Interop> Etkinliği bir [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] sarmalar (WF 4.5) etkinliği bir [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] (WF 3.5) etkinlik içinde bir [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] iş akışı. 3 WF etkinliği, bir tek yaprak etkinliği veya etkinlikleri ağacının tümünü olabilir. (İptal ve özel durum işleme dahil) yürütme ve sürekliliği [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] etkinlik bağlamında oluşan [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] yürütülmekte olan iş akışı örneği.  
@@ -52,7 +52,4 @@ ms.locfileid: "43467511"
   
 3.  İçindeki etkinlikler için WF 3 izleme kayıtları bir <xref:System.Activities.Statements.Interop> Etkinlik izleme katılımcıları WF 4.5 için sağlanan <xref:System.Activities.Tracking.InteropTrackingRecord> nesneleri. <xref:System.Activities.Tracking.InteropTrackingRecord> bir türevi olan <xref:System.Activities.Tracking.CustomTrackingRecord>.  
   
-4.  WF 3 özel aktivite 3 WF iş akışı çalışma zamanı gibi içinde tam olarak aynı şekilde birlikte çalışabilirlik ortamında iş akışı kuyrukları kullanarak verilere erişebilir. Özel Etkinlik kod değişikliği yapmadan gereklidir. Konakta veri sürdürme tarafından sıraya alınan 3 WF iş akışını kuyruğa olduğu bir <xref:System.Activities.Bookmark>. Yer işaretinin adı dize biçimindedir <xref:System.IComparable> iş akışı kuyruk adı.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [.NET Framework 4.5 İş Akışında .NET Framework 3.0 veya .NET Framework 3.5 Etkinliği Kullanma](../../../docs/framework/windows-workflow-foundation/samples/using-a-net-3-0-or-net-3-5-activity-in-a-net-4-5-workflow.md)
+4.  WF 3 özel aktivite 3 WF iş akışı çalışma zamanı gibi içinde tam olarak aynı şekilde birlikte çalışabilirlik ortamında iş akışı kuyrukları kullanarak verilere erişebilir. Özel Etkinlik kod değişikliği yapmadan gereklidir. Konakta veri sürdürme tarafından sıraya alınan 3 WF iş akışını kuyruğa olduğu bir <xref:System.Activities.Bookmark>. Yer işaretinin adı dize biçimindedir <xref:System.IComparable> iş akışı kuyruk adı.

@@ -1,39 +1,39 @@
 ---
-title: DynamicActivity ile çalışma zamanında bir etkinlik oluşturma
+title: Bir etkinlik, Dynamicactivity'nin ile çalışma zamanında oluşturma
 ms.date: 03/30/2017
 ms.assetid: 1af85cc6-912d-449e-90c5-c5db3eca5ace
-ms.openlocfilehash: 0450a56059083f355f3fd71d95c83bf8dd1cf0e2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 880dbc6263b64c877d3211347541766d91534c85
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515181"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48027370"
 ---
-# <a name="creating-an-activity-at-runtime-with-dynamicactivity"></a>DynamicActivity ile çalışma zamanında bir etkinlik oluşturma
-<xref:System.Activities.DynamicActivity> somut, korumalı bir public oluşturucuya sahip sınıfıdır. <xref:System.Activities.DynamicActivity> bir etkinlik DOM kullanarak çalışma zamanında etkinlik işlevleri bir araya getirmek için kullanılabilir  
+# <a name="creating-an-activity-at-runtime-with-dynamicactivity"></a>Bir etkinlik, Dynamicactivity'nin ile çalışma zamanında oluşturma
+<xref:System.Activities.DynamicActivity> bir somut, korumalı bir public Oluşturucu ile sınıftır. <xref:System.Activities.DynamicActivity> bir etkinlik yerli kullanarak çalışma zamanında etkinlik işlevselliğini bir araya getirmek için kullanılabilir  
   
 ## <a name="dynamicactivity-features"></a>DynamicActivity özellikleri  
- <xref:System.Activities.DynamicActivity> yürütme özellikleri, bağımsız değişkenleri ve değişkenleri erişimi, ancak alt etkinlikler zamanlama veya izleme gibi çalışma zamanı Hizmetleri erişimi vardır.  
+ <xref:System.Activities.DynamicActivity> yürütme özellikleri ve bağımsız değişkenler için erişim, ancak hiçbir alt etkinlikler zamanlamak veya izleme gibi çalışma zamanı hizmetlerine erişim vardır.  
   
- İş akışı kullanarak üst düzey özellikleri ayarlanabilir <xref:System.Activities.Argument> nesneleri. Kesinlik temelli kodda, bu bağımsız değişkenler, yeni bir tür CLR özellikleri kullanılarak oluşturulur. XAML'de, bunlar kullanılarak bildirilen `x:Class` ve `x:Member` etiketler.  
+ İş akışı kullanarak üst düzey özellikleri ayarlanabilir <xref:System.Activities.Argument> nesneleri. Kesinlik temelli kod içinde bu bağımsız değişkenler CLR özellikleri yeni bir türü kullanılarak oluşturulur. XAML içinde kullanılarak bildirilirler `x:Class` ve `x:Member` etiketler.  
   
- Kullanılarak oluşturulan etkinlikleri <xref:System.Activities.DynamicActivity> Tasarımcı kullanarak arabirimi <xref:System.ComponentModel.ICustomTypeDescriptor>. Tasarımcıda oluşturulan etkinlikleri kullanarak dinamik olarak yüklenebilir <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A>, aşağıdaki yordamda gösterildiği gibi.  
+ Kullanılarak oluşturulan etkinlikleri <xref:System.Activities.DynamicActivity> Tasarımcısı kullanarak arabirimi <xref:System.ComponentModel.ICustomTypeDescriptor>. Tasarımcısı'nda oluşturulan etkinlikleri kullanarak dinamik olarak yüklenebilir <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A>, aşağıdaki yordamda gösterildiği gibi.  
   
-#### <a name="to-create-an-activity-at-runtime-using-imperative-code"></a>Kesinlik temelli kod kullanarak çalışma zamanında bir etkinlik oluşturmak için  
+#### <a name="to-create-an-activity-at-runtime-using-imperative-code"></a>Kesin kod kullanarak çalışma zamanında bir etkinlik oluşturmak için  
   
 1.  Açık[!INCLUDE[vs2010](../../../includes/vs2010-md.md)].  
   
-2.  Seçin **dosya**, **yeni**, **proje**. Seçin **Workflow 4.0** altında **Visual C#** içinde **proje türleri** penceresi ve select **v2010** düğümü. Seçin **sıralı iş akışı konsol uygulaması** içinde **şablonları** penceresi. Yeni Proje DynamicActivitySample olarak adlandırın.  
+2.  Seçin **dosya**, **yeni**, **proje**. Seçin **Workflow 4.0** altında **Visual C#** içinde **proje türleri** penceresi ve select **v2010** düğümü. Seçin **sıralı iş akışı konsol uygulaması** içinde **şablonları** penceresi. Yeni Proje DynamicActivitySample adı.  
   
-3.  Workflow1.XAML HelloActivity projeye sağ tıklayıp **silmek**.  
+3.  Workflow1.XAML HelloActivity projeye sağ tıklayıp **Sil**.  
   
-4.  Program.cs açın. Aşağıdaki yönergesi dosyasının üstüne ekleyin.  
+4.  Program.cs dosyasını açın. Aşağıdaki yönerge dosyasının en üstüne ekleyin.  
   
     ```  
     using System.Collections.Generic;  
     ```  
   
-5.  Değiştir `Main` oluşturur aşağıdaki kod ile yöntemi bir <xref:System.Activities.Statements.Sequence> içeren tek bir etkinlik <xref:System.Activities.Statements.WriteLine> etkinliği ve atar <xref:System.Activities.DynamicActivity.Implementation%2A> yeni bir dinamik etkinlik özelliği.  
+5.  Öğesinin içeriğini değiştirin `Main` yöntemini aşağıdaki kodla oluşturan bir <xref:System.Activities.Statements.Sequence> içeren tek bir etkinlik <xref:System.Activities.Statements.WriteLine> etkinlik ve atar <xref:System.Activities.DynamicActivity.Implementation%2A> yeni dinamik bir etkinliğin özelliği.  
   
     ```csharp  
     //Define the input argument for the activity  
@@ -66,25 +66,25 @@ ms.locfileid: "33515181"
                 Console.ReadLine();  
     ```  
   
-6.  Uygulamayı çalıştırın. "Hello World!" metnini içeren bir konsol penceresi görüntüler.  
+6.  Uygulamayı çalıştırın. "Hello World!" metni ile bir konsol penceresi görüntüler.  
   
 #### <a name="to-create-an-activity-at-runtime-using-xaml"></a>XAML kullanarak çalışma zamanında bir etkinlik oluşturmak için  
   
 1.  Açık [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].  
   
-2.  Seçin **dosya**, **yeni**, **proje**. Seçin **Workflow 4.0** altında **Visual C#** içinde **proje türleri** penceresi ve select **v2010** düğümü. Seçin **iş akışı konsol uygulaması** içinde **şablonları** penceresi. Yeni Proje DynamicActivitySample olarak adlandırın.  
+2.  Seçin **dosya**, **yeni**, **proje**. Seçin **Workflow 4.0** altında **Visual C#** içinde **proje türleri** penceresi ve select **v2010** düğümü. Seçin **iş akışı konsol uygulaması** içinde **şablonları** penceresi. Yeni Proje DynamicActivitySample adı.  
   
-3.  Workflow1.XAML HelloActivity projeyi açın. Tıklatın **bağımsız değişkenleri** Tasarımcısı'nın altındaki seçeneği. Yeni bir `In` bağımsız değişkeni olarak adlandırılan `TextToWrite` türü `String`.  
+3.  Workflow1.XAML HelloActivity projeyi açın. Tıklayın **bağımsız değişkenleri** Tasarımcısı'nın altındaki seçeneği. Yeni bir `In` bağımsız değişken olarak adlandırılan `TextToWrite` türü `String`.  
   
 4.  Sürükleme bir **WriteLine** etkinliğinden **Temelleri** Tasarımcı yüzeyine araç bölümü. Değer atamak `TextToWrite` için **metin** etkinliğin özelliği.  
   
-5.  Program.cs açın. Aşağıdaki yönergesi dosyasının üstüne ekleyin.  
+5.  Program.cs dosyasını açın. Aşağıdaki yönerge dosyasının en üstüne ekleyin.  
   
     ```  
     using System.Activities.XamlIntegration;  
     ```  
   
-6.  Değiştir `Main` aşağıdaki kod ile yöntemi.  
+6.  Öğesinin içeriğini değiştirin `Main` yöntemini aşağıdaki kod ile.  
   
     ```  
     Activity act2 = ActivityXamlServices.Load(@"Workflow1.xaml");  
@@ -92,10 +92,10 @@ ms.locfileid: "33515181"
     Console.ReadLine();  
     ```  
   
-7.  Uygulamayı çalıştırın. "Hello World!" metnini içeren bir konsol penceresi görünür.  
+7.  Uygulamayı çalıştırın. "Hello World!" metni ile bir konsol penceresi görünür.  
   
-8.  Workflow1.xaml dosyasında sağ **Çözüm Gezgini** seçip **görünümü kodu**. Etkinliği sınıf ile oluşturulan Not `x:Class` ve özelliği ile oluşturulan `x:Property`.  
+8.  Workflow1.xaml dosyaya sağ **Çözüm Gezgini** seçip **kodu görüntüle**. Etkinliği sınıf oluşturulur Not `x:Class` ve özelliği ile oluşturulan `x:Property`.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Kesin Kod Kullanarak İş Akışları, Etkinlikler ve İfadeler Yazma](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)  
- [DynamicActivity Oluşturma](../../../docs/framework/windows-workflow-foundation/samples/dynamicactivity-creation.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [Kesin Kod Kullanarak İş Akışları, Etkinlikler ve İfadeler Yazma](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)

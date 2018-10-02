@@ -18,11 +18,11 @@ ms.assetid: e41d7f1a-0a6a-4dee-97d1-c6a8b6a07fc2
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 0344bbfc02a66a6f2ec9dace126bfae6811860be
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47209507"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48025366"
 ---
 # <a name="location-based-cache-policies"></a>Konum temelli önbellek ilkeleri
 Konum temelli önbellek İlkesi burada istenen kaynak gelen gerçekleştirilebilecek göre geçerli önbelleğe alınan girişlerin güncellik tanımlar. Önbelleğe alınmış kaynak geçerli kullanan mevcut değilse sunucu tarafından belirtilen yeniden doğrulama gereksinimlerini ihlal etmemesini. Konum temelli önbellek İlkesi kullanılarak programlı olarak oluşturulmuş bir <xref:System.Net.Cache.RequestCachePolicy> veya <xref:System.Net.Cache.HttpRequestCachePolicy> sınıf oluşturucusu. Konum tabanlı ilke türünü oluşturucu kullanılarak geçirilen bir <xref:System.Net.Cache.RequestCacheLevel> veya <xref:System.Net.Cache.HttpRequestCacheLevel> numaralandırma değeri. Konum temelli önbellek ilkeleri oluşturma kod örnekleri için bkz. [nasıl yapılır: uygulama için bir konum temelli önbellek İlkesi ayarlama](../../../docs/framework/network-programming/how-to-set-a-location-based-cache-policy-for-an-application.md). Köprü Metni Aktarım Protokolü (http ve https) kaynaklar için konum temelli önbellek İlkesi her türü aşağıdaki bölümlerde açıklanmaktadır.  

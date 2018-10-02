@@ -11,11 +11,11 @@ ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: fb057ab75c31edd7bbdaf5d5115cda2802d3b057
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47204001"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48028304"
 ---
 # <a name="ltsocketgt-element-network-settings"></a>&lt;Yuva&gt; öğesi (ağ ayarları)
 Yuva işlemleri tamamlama bağlantı noktalarını kullanıp kullanmadığını belirtir.  

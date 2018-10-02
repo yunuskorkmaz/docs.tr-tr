@@ -1,35 +1,27 @@
 ---
-title: Windows Workflow (WF) Örnekleri
-ms.date: 03/30/2017
+title: Windows Workflow (WF) örnek belgeleri
+ms.date: 09/24/2018
 ms.assetid: e0aef017-4381-4f2f-a904-6e1ed898687e
-ms.openlocfilehash: b6f614bd8543070ee69636344376b058988c2306
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 64153e885cd4203134d429d2d8b8e246628de5fb
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195270"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48027003"
 ---
 # <a name="windows-workflow-wf-samples"></a>Windows Workflow (WF) Örnekleri
 
-Bu örnekler üzerinde çeşitli yönlerini Windows Workflow Foundation (WF) yönerge sağlar.
+Yapabilecekleriniz [Windows Workflow örnekleri indirin](https://go.microsoft.com/fwlink/?LinkId=150780) çeşitli yönlerini Windows Workflow Foundation (WF) yönerge sağlar.
 
-Örnekleri indirilebileceğini [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=150780).
+Bu bölümdeki makaleleri indirme paketini örneklerinde bazılarını açıklar. Örneklerin tümünü kapsayan bir kapsamlı belgeler için kontrol [.NET Framework 4 WF örnekleri](/previous-versions/dotnet/netframework-4.0/dd483375(v%3dvs.100)) bölümü.
 
 > [!NOTE]
-> Bu örnekler, Visual Studio 2010 ile oluşturulan ve [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], ancak daha sonra Visual Studio ve .NET Framework sürümleri ile uyumludur. Ek örnekler için Windows Workflow Foundation'da [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] bulunabilir [MSDN kod örnekleri](https://aka.ms/WF45Samples).
+> İndirilebilir örneklere Visual Studio 2010 ile oluşturulan ve [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], ancak daha sonra Visual Studio ve .NET Framework sürümleri ile uyumludur. Ek örnekler için Windows Workflow Foundation'da [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] bulunabilir [MSDN kod örnekleri](https://aka.ms/WF45Samples).
 
 ## <a name="in-this-section"></a>Bu bölümde
 
-[Uygulama](../../../../docs/framework/windows-workflow-foundation/samples/application.md)
+[Uygulama](../../../../docs/framework/windows-workflow-foundation/samples/application.md) -iş akışı uygulamalarla ilgili örnekleri sağlar.
 
-İş akışı uygulamalarla ilgili örnekler sunar.
+[Temel](../../../../docs/framework/windows-workflow-foundation/samples/basic.md) -temel Windows Workflow Foundation (WF) işlevlerini gösteren örnekleri sağlar.
 
-[Temel](../../../../docs/framework/windows-workflow-foundation/samples/basic.md)
-
-Temel Windows Workflow Foundation (WF) işlevlerini gösteren örnekleri sağlar.
-
-[Senaryo](../../../../docs/framework/windows-workflow-foundation/samples/scenario.md)
-
-Windows Workflow Foundation (WF) senaryolarına örnekler sağlar.
-
-Örnekleri indirilebileceğini [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=150780).
+[Senaryo](../../../../docs/framework/windows-workflow-foundation/samples/scenario.md) -Windows Workflow Foundation (WF) senaryolarına örnekler sağlar.

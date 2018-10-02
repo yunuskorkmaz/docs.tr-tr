@@ -2,12 +2,12 @@
 title: Bağıntı Sorunlarını Giderme
 ms.date: 03/30/2017
 ms.assetid: 98003875-233d-4512-a688-4b2a1b0b5371
-ms.openlocfilehash: 56b17d0a865d1a6c1afaa2844878c82b755afdc7
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: fecfaf7374823bb19a4ad3d7f6cb2dbbdf139703
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397168"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48027929"
 ---
 # <a name="troubleshooting-correlation"></a>Bağıntı Sorunlarını Giderme
 Bağıntı birbirleriyle ve doğru iş akışı örneği iş akışı hizmeti iletileri ilişkilendirmek için kullanılır, ancak doğru şekilde yapılandırılmamışsa, ileti alınmadı ve uygulamalar düzgün çalışmaz. Bu konu, bağıntı sorunlarını giderme için çeşitli yöntemler için genel bir bakış sağlar ve ayrıca bağıntı kullanırken oluşabilecek bazı yaygın sorunlar listelenir.
@@ -76,7 +76,7 @@ class CustomFactory : WorkflowServiceHostFactory
 host.WorkflowExtensions.Add(new ConsoleTrackingParticipant());
 ```
 
- İzleme katılımcı ConsoleTrackingParticipant gibi bir konsol penceresi olan şirket içinde barındırılan iş akışı hizmetleri için kullanışlıdır. Bir Web barındırılan hizmeti için izleme bilgilerini dayanıklı bir depoya kaydeder. bir izleme katılımcı, gibi yerleşik kullanılmalıdır <xref:System.Activities.Tracking.EtwTrackingParticipant>, ya da bilgileri gibi bir dosyaya kaydeden özel izleme katılımcı `TextWriterTrackingParticpant` gelen[ Bir metin dosyası kullanarak izleme](../../../../docs/framework/windows-workflow-foundation/samples/tracking-using-a-text-file.md) örnek.
+ İzleme katılımcı ConsoleTrackingParticipant gibi bir konsol penceresi olan şirket içinde barındırılan iş akışı hizmetleri için kullanışlıdır. Bir Web barındırılan hizmeti için izleme bilgilerini dayanıklı bir depoya kaydeder. bir izleme katılımcı, gibi yerleşik kullanılmalıdır <xref:System.Activities.Tracking.EtwTrackingParticipant>, ya da bilgileri bir dosyaya kaydeden bir özel izleme katılımcı.
 
  İzleme ve izleme Web barındırılan iş akışı hizmeti için yapılandırma hakkında daha fazla bilgi için bkz. [takip ve izleme iş akışı](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md), [yapılandırma izleme için bir iş akışı](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)ve [ İzleme &#91;WF örnekleri&#93; ](../../../../docs/framework/windows-workflow-foundation/samples/tracking.md) örnekleri.
 
@@ -214,7 +214,7 @@ sm:body()/xg0:AddItemMessage/xg0:CartId
 sm:header()/tempuri:CartId
 ```
 
- Bu, ileti gövdesi inceleyerek onaylanabilir.
+Bu, ileti gövdesi inceleyerek onaylanabilir.
 
 ```xml
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
@@ -230,7 +230,7 @@ sm:header()/tempuri:CartId
 </s:Envelope>
 ```
 
- Aşağıdaki örnekte gösterildiği bir <xref:System.ServiceModel.Activities.Receive> etkinlik için yapılandırılmış bir `AddItem` verileri almak için önceki ileti sözleşmesi kullanan işlemi. XPath sorgusu doğru yapılandırılmamış.
+Aşağıdaki örnekte gösterildiği bir <xref:System.ServiceModel.Activities.Receive> etkinlik için yapılandırılmış bir `AddItem` verileri almak için önceki ileti sözleşmesi kullanan işlemi. XPath sorgusu doğru yapılandırılmamış.
 
 ```xaml
 <Receive CorrelatesWith="[CCHandle] OperationName="AddItem" ServiceContractName="p:IService">
@@ -247,5 +247,3 @@ sm:header()/tempuri:CartId
   </ReceiveMessageContent>
 </Receive>
 ```
-
-İçerik temelli bağıntı hakkında daha fazla bilgi için bkz: [bağıntılı hesaplayıcı](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md) örnek.

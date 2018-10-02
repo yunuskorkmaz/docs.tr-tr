@@ -10,11 +10,11 @@ ms.assetid: 8fd6c675-9ea6-4fad-a412-e2c2c1f233d8
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 6ca48627df37a98265b9078e2bc93dd823823e45
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193531"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48025420"
 ---
 # <a name="network-programming-how-to-topics"></a>Ağ programlama nasıl yapılır konuları
 Aşağıdaki liste, ağ programlama için kavramsal belgelerde bulunan nasıl yapılır konulara bağlantılar içerir.  

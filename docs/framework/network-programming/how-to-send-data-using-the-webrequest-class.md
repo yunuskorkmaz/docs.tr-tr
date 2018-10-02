@@ -11,11 +11,11 @@ ms.assetid: 66686878-38ac-4aa6-bf42-ffb568ffc459
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: f62775a41f70e4dd96c749acd99bf8b850d96407
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193037"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48032627"
 ---
 # <a name="how-to-send-data-using-the-webrequest-class"></a>Nasıl yapılır: WebRequest sınıfını kullanarak veri gönderme
 Aşağıdaki yordam bir sunucuya veri göndermek için kullanılan adımları açıklar. Bu yordam, genellikle bir Web sayfasında veri göndermek için kullanılır.  

@@ -2,12 +2,12 @@
 title: .NET Framework 4.5 te dış ilke etkinliği
 ms.date: 03/30/2017
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
-ms.openlocfilehash: 4d107188bbcb46006ba6a6eab491ccb97aa4a83d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1c2f66caeb9932422681ba7176346a5e5e084c11
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503413"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48046649"
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>.NET Framework 4.5 te dış ilke etkinliği
 
@@ -56,7 +56,7 @@ ExternalizedPolicy4 Tasarımcı, kod yazmaya gerek kalmadan var olan bir kural k
 
 ## <a name="policy4-and-externalpolicy4"></a>Policy4 ve ExternalPolicy4
 
-[.NET Framework 4. 5'te ilke etkinliği](../../../../docs/framework/windows-workflow-foundation/samples/policy-activity-in-net-framework-4-5.md) etkinlik oluşturma ve bir .NET Framework 3.5 kural kümesi WF 4.5 iş akışında yürütme olanak tanır. <xref:System.Workflow.Activities.Rules.RuleSet> Policy4 etkinliğinde XAML tanımı seri hale getirilmiş satır içidir. Mevcut bir kullanmayı ExternalizedPolicy4 örnek dış gösterir <xref:System.Workflow.Activities.Rules.RuleSet> (bir .rules dosyasında yer alan).
+İlke etkinlik oluşturma ve bir .NET Framework 3.5 kural kümesi WF 4.5 iş akışında yürütme sağlar. <xref:System.Workflow.Activities.Rules.RuleSet> Policy4 etkinliğinde XAML tanımı seri hale getirilmiş satır içidir. Mevcut bir kullanmayı ExternalizedPolicy4 örnek dış gösterir <xref:System.Workflow.Activities.Rules.RuleSet> (bir .rules dosyasında yer alan).
 
 ## <a name="use-this-sample"></a>Bu örneği kullanın
 

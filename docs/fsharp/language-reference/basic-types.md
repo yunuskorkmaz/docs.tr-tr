@@ -3,11 +3,11 @@ title: 'Temel türler (F #)'
 description: 'F # dilinde kullanılan temel temel türler keşfedin.'
 ms.date: 07/09/2018
 ms.openlocfilehash: 8f948d066323527b09b1d3f9f4167b95b1c875cf
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47203820"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48026955"
 ---
 # <a name="basic-types"></a>Temel türler
 

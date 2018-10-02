@@ -2,26 +2,26 @@
 title: İleti Kimlik Bilgileri ile WS Aktarma
 ms.date: 03/30/2017
 ms.assetid: 0d092f3a-b309-439b-920b-66d8f46a0e3c
-ms.openlocfilehash: 708869f2350f01e75b949f4817fcf8aac35ea018
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 44f37e3576b508e679d45a3cbafacfb5a68a7838
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33810154"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48030187"
 ---
 # <a name="ws-transport-with-message-credential"></a>İleti Kimlik Bilgileri ile WS Aktarma
-Bu örnek, iletide taşınmasına istemci kimlik bilgileri ile birlikte SSL taşıma güvenliği kullanımını göstermektedir. Bu örnekte `wsHttpBinding` bağlama.  
+Bu örnek, iletide taşınmasına istemci kimlik bilgileri ile birlikte SSL Aktarım güvenliği kullanımını gösterir. Bu örnekte `wsHttpBinding` bağlama.  
   
- Varsayılan olarak, `wsHttpBinding` bağlama HTTP iletişim sağlar. Taşıma güvenliği için yapılandırıldığında, bağlama HTTPS iletişimi destekler. HTTPS gizliliği ve bütünlük koruması kablo üzerinden gönderilen iletiler için sağlar. Ancak istemci hizmeti için kimlik doğrulaması için kullanılan kimlik doğrulama mekanizmaları HTTPS taşıma desteklediği için sınırlı kümesidir. Windows Communication Foundation (WCF) sunan bir `TransportWithMessageCredential` bu sınırlamanın üstesinden gelmek için tasarlanmış güvenlik modu. Bu güvenlik modu yapılandırıldığında, taşıma güvenliği için iletilen iletileri gizliliği ve bütünlük sağlamak ve hizmet kimlik doğrulaması yapmak için kullanılır. Ancak, istemci kimlik doğrulama ileti doğrudan istemci kimlik bilgileri koyarak gerçekleştirilir. Bu ileti güvenlik modu aktarım güvenlik modu performans avantajı korurken istemci kimlik doğrulaması için tarafından desteklenen herhangi bir kimlik bilgisi türü kullanmanıza olanak sağlar.  
+ Varsayılan olarak, `wsHttpBinding` bağlama, HTTP iletişimi sağlar. Aktarım güvenliği için yapılandırıldığında, bağlama HTTPS iletişimini destekler. HTTPS, gizliliği ve bütünlük koruması kablo üzerinden gönderilen iletiler için sağlar. Ancak bir hizmete istemcinin kimliğini doğrulamak için kullanılan kimlik doğrulama mekanizmaları kümesini destekleyen HTTPS aktarımı için sınırlıdır. Windows Communication Foundation (WCF) sunan bir `TransportWithMessageCredential` bu sınırlamanın üstesinden gelmek için tasarlanmış güvenlik modu. Bu güvenlik modu yapılandırıldığında, aktarım güvenliği, gizliliği ve bütünlüğü gönderilen iletileri sağlamak ve hizmet kimlik doğrulaması gerçekleştirmek için kullanılır. Ancak, istemci kimlik doğrulaması, istemci kimlik bilgilerini doğrudan iletisinde koyarak gerçekleştirilir. Bu ileti güvenlik modunu transport güvenlik modunu performans avantajı tutarken istemci kimlik doğrulaması için tarafından desteklenen herhangi bir kimlik bilgisi türü kullanmanıza olanak sağlar.  
   
- Bu örnekte, bir `UserName` kimlik bilgisi türü hizmeti için istemci kimlik doğrulaması için kullanılır.  
+ Bu örnekte, bir `UserName` kimlik bilgisi türü, bir hizmete istemcinin kimliğini doğrulamak için kullanılır.  
   
- Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hesap makinesi hizmetinin uygular. `wsHttpBinding` Bağlama belirtilen ve uygulama yapılandırma dosyaları istemci ve hizmet için yapılandırılır.  
+ Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hesaplayıcı hizmet uygulayan. `wsHttpBinding` Bağlama belirtildi ve uygulama yapılandırma dosyalarında istemci ve hizmet için yapılandırılır.  
   
 > [!NOTE]
->  Kurulum yordamı ve yapı yönergeleri Bu örnek için bu konunun sonunda yer alır.  
+>  Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.  
   
- Örnek program kodunda olarak neredeyse aynıdır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hizmet. Bir başka işlem tarafından hizmet sözleşmesini - sağlanan `GetCallerIdentity`. Bu işlem çağırana çağıranının kimliğini adını döndürür.  
+ Program kodu içinde örnek olarak neredeyse aynı [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hizmeti. -Hizmet sözleşmesi tarafından sağlanan tek bir ek işlem yoktur `GetCallerIdentity`. Bu işlem, çağırana çağıranının kimliğini adını döndürür.  
 
 ```csharp
 public string GetCallerIdentity()  
@@ -31,7 +31,7 @@ public string GetCallerIdentity()
 }  
 ```
 
- Bir sertifika oluşturun ve oluşturmaya ve örnek çalıştırmaya önce Web Sunucusu Sertifika Sihirbazı'nı kullanarak atamanız gerekir. Uç nokta tanımı ve bağlama tanımı dosyası ayarlarını etkinleştir `TransportWithMessageCredential` istemci için aşağıdaki örnek yapılandırma gösterildiği gibi güvenlik modu.  
+ Bir sertifika oluşturun ve bunu oluşturmak ve bu örneği çalıştırmadan önce Web sunucusu sertifikası Sihirbazı'nı kullanarak atamanız gerekir. Uç nokta tanımı ve bağlama tanımı yapılandırmadaki ayarları dosya `TransportWithMessageCredential` istemci için aşağıdaki örnek yapılandırma gösterildiği gibi güvenlik modu.  
   
 ```xml  
 <system.serviceModel>  
@@ -59,9 +59,9 @@ public string GetCallerIdentity()
 </system.serviceModel>  
 ```  
   
- Belirtilen adres https:// düzenini kullanır. Güvenlik modu bağlama yapılandırması ayarlar `TransportWithMessageCredential`. Aynı güvenlik modu hizmetin Web.config dosyasında belirtilmesi gerekir.  
+ Belirtilen adresi https:// şeması kullanır. Bağlama yapılandırması güvenlik modunu ayarlar `TransportWithMessageCredential`. Aynı güvenlik modu, hizmetin Web.config dosyasında belirtilmesi gerekir.  
   
- Bu örnekte kullanılan sertifikanın Makecert.exe ile oluşturulan bir test sertifikası olduğundan, bir https erişmeye çalıştığınızda bir güvenlik uyarısı görünür: gibi adres https://localhost/servicemodelsamples/service.svc, tarayıcınızdan. Bir test sertifikası yerinde çalışmak için WCF istemcisini izin vermek için bazı ek kod güvenlik uyarıyı gizlemek için istemciye eklendi. Bu kod, eşlik eden sınıfı değil ve gerekli üretim sertifikalar kullanıldığında.  
+ Bu örnekte kullanılan sertifika Makecert.exe ile oluşturulan bir test sertifikası olduğundan, bir https erişmeye çalıştığınızda bir güvenlik uyarısı görünür: adres gibi `https://localhost/servicemodelsamples/service.svc `, tarayıcınız üzerinden. Yerinde bir test sertifikası ile çalışmak için WCF istemcisini izin vermek için güvenlik uyarıyı gizlemek için istemci için bazı ek kod eklendi. Bu kod, eşlik eden sınıfı değil ve gerekli üretim sertifikalar kullanıldığında.  
 
 ```csharp
 // WARNING: This code is only needed for test certificates such as those created by makecert. It is   
@@ -69,7 +69,7 @@ public string GetCallerIdentity()
 PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");  
 ```
   
- Örneği çalıştırdığınızda, işlem isteklerini ve yanıtlarını istemci konsol penceresinde görüntülenir. İstemcisi penceresinde istemciyi aşağı kapatmak için ENTER tuşuna basın.  
+ Örneği çalıştırdığınızda, işlem isteklerini ve yanıtlarını istemci konsol penceresinde görüntülenir. İstemci bilgisayarı için istemci penceresinde ENTER tuşuna basın.  
   
 ```  
 Username authentication required.  
@@ -87,14 +87,14 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örnek çalıştırın  
+### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Gerçekleştirmiş emin olun [kerelik Kurulum prosedürü Windows Communication Foundation örnekleri için](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Gerçekleştirmiş emin olun [Internet Information Services (IIS) sunucu sertifikası yükleme yönergeleri](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md).  
+2.  Gerçekleştirdiğinizden emin olmak [Internet Information Services (IIS) sunucu sertifikası yükleme yönergeleri](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md).  
   
-3.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Tek veya çapraz makine yapılandırmada örneği çalıştırmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.

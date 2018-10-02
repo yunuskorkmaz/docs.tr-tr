@@ -4,12 +4,12 @@ description: Hangi .NET uygulamasının üzerinde. NET'te bir sunucu uygulaması
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: dbb5bd21d2fa43167a9624be2baec3f591d10920
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: ab44cca7c9a832dc7e5f03cfc2972de9d0785fd4
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864968"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48046545"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Sunucu uygulamaları için .NET Core ve .NET Framework arasında seçim
 
@@ -87,7 +87,7 @@ Burada kitaplıkları veya NuGet paketlerini de .NET standart/.NET Core kullanı
 
 * ASP.NET Web formları uygulamalarını: ASP.NET Web Forms yüklenebilir yalnızca .NET Framework. ASP.NET Core, ASP.NET Web formları için kullanılamaz. .NET Core ile ASP.NET Web Forms getirmek için herhangi bir plan yoktur.
 
-* ASP.NET Web Pages uygulamaları: ASP.NET Web sayfaları, ASP.NET Core dahil edilmemiş. ASP.NET Core [Razor sayfaları](/aspnet/core/mvc/razor-pages/) Web sayfaları ile birçok benzerlikler.
+* ASP.NET Web Pages uygulamaları: ASP.NET Web sayfaları, ASP.NET Core dahil edilmemiş. 
 
 * WCF hizmetleri uygulaması. Olduğunda bile bir [WCF istemci Kitaplığı](https://github.com/dotnet/wcf) .NET Core WCF hizmetlerinden kullanmak için WCF sunucusu uygulaması şu anda yalnızca .NET Framework içinde kullanılabilir. Bu senaryo, .NET Core için geçerli planın bir parçası değildir ancak geleceğe yönelik değerlendiriliyor.
 
@@ -104,6 +104,7 @@ Resmi yol haritası yanı sıra .NET Core için unity'nin için diğer çerçeve
 ## <a name="see-also"></a>Ayrıca bkz.
 
 * [ASP.NET ve ASP.NET Core arasında seçim yapma](/aspnet/core/choose-aspnet-framework)
+* [.NET Framework'ü hedefleyen ASP.NET Core](/aspnet/core#target-framework)
 * [Hedef çerçeveler](frameworks.md)
 * [.NET Core Kılavuzu](../core/index.md)  
 * [.NET Core ile .NET Framework'ten taşıma](../core/porting/index.md)  

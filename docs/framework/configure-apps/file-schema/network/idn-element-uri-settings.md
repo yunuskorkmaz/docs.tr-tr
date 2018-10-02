@@ -5,11 +5,11 @@ ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 1537c17cb3c16beeb41cfaa4103e0664e93facc7
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47205950"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48027552"
 ---
 # <a name="ltidngt-element-uri-settings"></a>&lt;IDN&gt; öğesi (Uri ayarları)
 Bir etki alanı adı için Uluslararası yapılan etki alanı adı (IDN) ayrıştırma uygulanıp uygulanmadığını belirtir.  

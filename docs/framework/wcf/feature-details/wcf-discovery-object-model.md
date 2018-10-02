@@ -3,11 +3,11 @@ title: WCF Keşif Nesnesi Modeli
 ms.date: 03/30/2017
 ms.assetid: 8365a152-eacd-4779-9130-bbc48fa5c5d9
 ms.openlocfilehash: b337eda40fc70a6d0e7b3aeccfc125e6e6bacf8f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47231394"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48046675"
 ---
 # <a name="wcf-discovery-object-model"></a>WCF Keşif Nesnesi Modeli
 WCF bulma çalışma zamanı ve bulun ve bu hizmetleri kullanan istemciler bulunabilir hizmetlerinizi yazmanızı sağlayan birleşik bir programlama modeli sağlayan türler kümesi oluşur.  
