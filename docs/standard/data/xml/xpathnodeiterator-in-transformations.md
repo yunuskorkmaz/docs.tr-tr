@@ -9,16 +9,16 @@ ms.assetid: 2bc6ddc6-674a-4f75-b264-abc35e4e5857
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6f71d409729707f4af93fd7f8d5b82a99404579b
-ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
-ms.translationtype: HT
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47862666"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48027792"
 ---
-# <a name="xpathnodeiterator-in-transformations"></a><span data-ttu-id="f4d7e-102">Dönüşümlerde XPathNodeIterator</span><span class="sxs-lookup"><span data-stu-id="f4d7e-102">XPathNodeIterator in Transformations</span></span>
-<span data-ttu-id="f4d7e-103"><xref:System.Xml.XPath.XPathNodeIterator> Düğüm kümesi yöntemi kullanarak bir XML yolu dil (XPath) sorgusu veya bir düğüme dönüştürülen bir sonuç ağacı parçası olarak oluşturulan düğümleri kümesi üzerinden yineleme yapmak için yöntemler kümesi sağlar.</span><span class="sxs-lookup"><span data-stu-id="f4d7e-103">The <xref:System.Xml.XPath.XPathNodeIterator> provides methods to iterate over a set of nodes created as the result of an XML Path Language (XPath) query or a result tree fragment converted to a node set by use of the node-set method.</span></span> <span data-ttu-id="f4d7e-104"><xref:System.Xml.XPath.XPathNodeIterator> , Düğüm kümesi içindeki düğümler üzerinden yineleme yapma sağlar.</span><span class="sxs-lookup"><span data-stu-id="f4d7e-104">The <xref:System.Xml.XPath.XPathNodeIterator> enables you to iterate over the nodes within that node set.</span></span> <span data-ttu-id="f4d7e-105">Bir düğüm kümesi alındıktan sonra <xref:System.Xml.XPath.XPathNodeIterator> seçili düğümleri kümesini için salt okunur, salt iletme imleç sınıf sağlar.</span><span class="sxs-lookup"><span data-stu-id="f4d7e-105">Once a node set is retrieved, the <xref:System.Xml.XPath.XPathNodeIterator> class provides a read-only, forward-only cursor to the selected set of nodes.</span></span> <span data-ttu-id="f4d7e-106">Bu yöntemin çağrılması belge sırayla bir sonraki düğüme taşınmasını belge sırayla düğüm kümesi oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="f4d7e-106">The node set is created in document order, so calling this method moves to the next node in document order.</span></span> <span data-ttu-id="f4d7e-107"><xref:System.Xml.XPath.XPathNodeIterator> bir düğüm ağacı kümedeki tüm düğümlerin oluşturmaz.</span><span class="sxs-lookup"><span data-stu-id="f4d7e-107"><xref:System.Xml.XPath.XPathNodeIterator> does not build a node tree of all the nodes in the set.</span></span> <span data-ttu-id="f4d7e-108">Bunun yerine, temel alınan düğümü ağacında gezinme gibi işaret gösterme, verilerin bir tek düğümlü penceresi sağlar.</span><span class="sxs-lookup"><span data-stu-id="f4d7e-108">Instead, it provides a single node window into the data, exposing the underlying node it points to as you move around in the tree.</span></span> <span data-ttu-id="f4d7e-109">Kullanılabilir özellikleri ve yöntemleri <xref:System.Xml.XPath.XPathNodeIterator> sınıfını geçerli düğüm bilgi almak etkinleştirin.</span><span class="sxs-lookup"><span data-stu-id="f4d7e-109">The methods and properties available from the <xref:System.Xml.XPath.XPathNodeIterator> class enable you to get information from the current node.</span></span> <span data-ttu-id="f4d7e-110">Kullanılabilir yöntemlerin ve özelliklerin listesi için bkz. <xref:System.Windows.Forms.ToolBar>.</span><span class="sxs-lookup"><span data-stu-id="f4d7e-110">For a list of the available methods and properties, see <xref:System.Windows.Forms.ToolBar>.</span></span>  
+# <a name="xpathnodeiterator-in-transformations"></a><span data-ttu-id="2805e-102">Dönüşümlerde XPathNodeIterator</span><span class="sxs-lookup"><span data-stu-id="2805e-102">XPathNodeIterator in Transformations</span></span>
+<span data-ttu-id="2805e-103"><xref:System.Xml.XPath.XPathNodeIterator> Düğüm kümesi yöntemi kullanarak bir XML yolu dil (XPath) sorgusu veya bir düğüme dönüştürülen bir sonuç ağacı parçası olarak oluşturulan düğümleri kümesi üzerinden yineleme yapmak için yöntemler kümesi sağlar.</span><span class="sxs-lookup"><span data-stu-id="2805e-103">The <xref:System.Xml.XPath.XPathNodeIterator> provides methods to iterate over a set of nodes created as the result of an XML Path Language (XPath) query or a result tree fragment converted to a node set by use of the node-set method.</span></span> <span data-ttu-id="2805e-104"><xref:System.Xml.XPath.XPathNodeIterator> , Düğüm kümesi içindeki düğümler üzerinden yineleme yapma sağlar.</span><span class="sxs-lookup"><span data-stu-id="2805e-104">The <xref:System.Xml.XPath.XPathNodeIterator> enables you to iterate over the nodes within that node set.</span></span> <span data-ttu-id="2805e-105">Bir düğüm kümesi alındıktan sonra <xref:System.Xml.XPath.XPathNodeIterator> seçili düğümleri kümesini için salt okunur, salt iletme imleç sınıf sağlar.</span><span class="sxs-lookup"><span data-stu-id="2805e-105">Once a node set is retrieved, the <xref:System.Xml.XPath.XPathNodeIterator> class provides a read-only, forward-only cursor to the selected set of nodes.</span></span> <span data-ttu-id="2805e-106">Bu yöntemin çağrılması belge sırayla bir sonraki düğüme taşınmasını belge sırayla düğüm kümesi oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="2805e-106">The node set is created in document order, so calling this method moves to the next node in document order.</span></span> <span data-ttu-id="2805e-107"><xref:System.Xml.XPath.XPathNodeIterator> bir düğüm ağacı kümedeki tüm düğümlerin oluşturmaz.</span><span class="sxs-lookup"><span data-stu-id="2805e-107"><xref:System.Xml.XPath.XPathNodeIterator> does not build a node tree of all the nodes in the set.</span></span> <span data-ttu-id="2805e-108">Bunun yerine, temel alınan düğümü ağacında gezinme gibi işaret gösterme, verilerin bir tek düğümlü penceresi sağlar.</span><span class="sxs-lookup"><span data-stu-id="2805e-108">Instead, it provides a single node window into the data, exposing the underlying node it points to as you move around in the tree.</span></span> <span data-ttu-id="2805e-109">Kullanılabilir özellikleri ve yöntemleri <xref:System.Xml.XPath.XPathNodeIterator> sınıfını geçerli düğüm bilgi almak etkinleştirin.</span><span class="sxs-lookup"><span data-stu-id="2805e-109">The methods and properties available from the <xref:System.Xml.XPath.XPathNodeIterator> class enable you to get information from the current node.</span></span> <span data-ttu-id="2805e-110">Kullanılabilir yöntemlerin ve özelliklerin listesi için bkz. <xref:System.Windows.Forms.ToolBar>.</span><span class="sxs-lookup"><span data-stu-id="2805e-110">For a list of the available methods and properties, see <xref:System.Windows.Forms.ToolBar>.</span></span>  
   
- <span data-ttu-id="f4d7e-111">Bu yana bir <xref:System.Xml.XPath.XPathNodeIterator> taşır bir dizi düğümü üzerinden bir XPath sorgudan oluşturulan ve yalnızca ileri taşır, taşımak için yolu kullanmaktır <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="f4d7e-111">Since an <xref:System.Xml.XPath.XPathNodeIterator> moves over a set of nodes created from an XPath query and moves forward only, the way to move is by using the <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> method.</span></span> <span data-ttu-id="f4d7e-112">Bu yöntemin dönüş türü `Boolean`, döndürme `true` sonraki Seçili düğüme geçerse ve `false` artık seçilen düğüm varsa.</span><span class="sxs-lookup"><span data-stu-id="f4d7e-112">The return type of this method is `Boolean`, returning `true` if it moves to the next selected node, and `false` if there are no more selected nodes.</span></span> <span data-ttu-id="f4d7e-113">Döndürürse `true`, aşağıdaki listede kullanılabilir özellikleri gösterir:</span><span class="sxs-lookup"><span data-stu-id="f4d7e-113">If it returns `true`, the following list shows the properties available:</span></span>  
+ <span data-ttu-id="2805e-111">Bu yana bir <xref:System.Xml.XPath.XPathNodeIterator> taşır bir dizi düğümü üzerinden bir XPath sorgudan oluşturulan ve yalnızca ileri taşır, taşımak için yolu kullanmaktır <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="2805e-111">Since an <xref:System.Xml.XPath.XPathNodeIterator> moves over a set of nodes created from an XPath query and moves forward only, the way to move is by using the <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> method.</span></span> <span data-ttu-id="2805e-112">Bu yöntemin dönüş türü `Boolean`, döndürme `true` sonraki Seçili düğüme geçerse ve `false` artık seçilen düğüm varsa.</span><span class="sxs-lookup"><span data-stu-id="2805e-112">The return type of this method is `Boolean`, returning `true` if it moves to the next selected node, and `false` if there are no more selected nodes.</span></span> <span data-ttu-id="2805e-113">Döndürürse `true`, aşağıdaki listede kullanılabilir özellikleri gösterir:</span><span class="sxs-lookup"><span data-stu-id="2805e-113">If it returns `true`, the following list shows the properties available:</span></span>  
   
 -   <xref:System.Xml.XPath.XPathNodeIterator.Current%2A>  
   
@@ -26,9 +26,9 @@ ms.locfileid: "47862666"
   
 -   <xref:System.Xml.XPath.XPathNodeIterator.Count%2A>  
   
- <span data-ttu-id="f4d7e-114">Bir düğümde, aradığınız ayarlamak ilk kez, bir çağrı <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> konumlandırmak için yapılmalıdır <xref:System.Xml.XPath.XPathNodeIterator> seçili kümenin ilk düğümü üzerinde.</span><span class="sxs-lookup"><span data-stu-id="f4d7e-114">When you are looking at a node set for the first time, a call to <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> must be made to position the <xref:System.Xml.XPath.XPathNodeIterator> on the first node of the selected set.</span></span> <span data-ttu-id="f4d7e-115">Bu işlem biraz sağlar yazılacak döngü.</span><span class="sxs-lookup"><span data-stu-id="f4d7e-115">This allows a while loop to be written.</span></span>  
+ <span data-ttu-id="2805e-114">Bir düğümde, aradığınız ayarlamak ilk kez, bir çağrı <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> konumlandırmak için yapılmalıdır <xref:System.Xml.XPath.XPathNodeIterator> seçili kümenin ilk düğümü üzerinde.</span><span class="sxs-lookup"><span data-stu-id="2805e-114">When you are looking at a node set for the first time, a call to <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> must be made to position the <xref:System.Xml.XPath.XPathNodeIterator> on the first node of the selected set.</span></span> <span data-ttu-id="2805e-115">Bu işlem biraz sağlar yazılacak döngü.</span><span class="sxs-lookup"><span data-stu-id="2805e-115">This allows a while loop to be written.</span></span>  
   
- <span data-ttu-id="f4d7e-116">Aşağıdaki kod örneğinde nasıl geçirileceğini gösterir. bir <xref:System.Xml.XPath.XPathNodeIterator> için bir <xref:System.Xml.Xsl.XslTransform> bir parametre olarak <xref:System.Xml.Xsl.XsltArgumentList>.</span><span class="sxs-lookup"><span data-stu-id="f4d7e-116">The following code example shows how to pass an <xref:System.Xml.XPath.XPathNodeIterator> to an <xref:System.Xml.Xsl.XslTransform> as a parameter in the <xref:System.Xml.Xsl.XsltArgumentList>.</span></span> <span data-ttu-id="f4d7e-117">Kod giriştir **books.xml**, ve stil sayfası **text.xsl**.</span><span class="sxs-lookup"><span data-stu-id="f4d7e-117">The input to the code is **books.xml**, and the style sheet is **text.xsl**.</span></span> <span data-ttu-id="f4d7e-118">Dosya **test.xml** olduğu <xref:System.Xml.XPath.XPathDocument>.</span><span class="sxs-lookup"><span data-stu-id="f4d7e-118">The file **test.xml** is the <xref:System.Xml.XPath.XPathDocument>.</span></span>  
+ <span data-ttu-id="2805e-116">Aşağıdaki kod örneğinde nasıl geçirileceğini gösterir. bir <xref:System.Xml.XPath.XPathNodeIterator> için bir <xref:System.Xml.Xsl.XslTransform> bir parametre olarak <xref:System.Xml.Xsl.XsltArgumentList>.</span><span class="sxs-lookup"><span data-stu-id="2805e-116">The following code example shows how to pass an <xref:System.Xml.XPath.XPathNodeIterator> to an <xref:System.Xml.Xsl.XslTransform> as a parameter in the <xref:System.Xml.Xsl.XsltArgumentList>.</span></span> <span data-ttu-id="2805e-117">Kod giriştir **books.xml**, ve stil sayfası **text.xsl**.</span><span class="sxs-lookup"><span data-stu-id="2805e-117">The input to the code is **books.xml**, and the style sheet is **text.xsl**.</span></span> <span data-ttu-id="2805e-118">Dosya **test.xml** olduğu <xref:System.Xml.XPath.XPathDocument>.</span><span class="sxs-lookup"><span data-stu-id="2805e-118">The file **test.xml** is the <xref:System.Xml.XPath.XPathDocument>.</span></span>  
   
 ```vb  
 Imports System  
@@ -89,7 +89,7 @@ public class sample
 }  
 ```  
   
-## <a name="booksxml"></a><span data-ttu-id="f4d7e-119">Books.XML</span><span class="sxs-lookup"><span data-stu-id="f4d7e-119">books.xml</span></span>  
+## <a name="booksxml"></a><span data-ttu-id="2805e-119">Books.XML</span><span class="sxs-lookup"><span data-stu-id="2805e-119">books.xml</span></span>  
   
 ```xml  
 <?xml version='1.0'?>  
@@ -122,7 +122,7 @@ public class sample
 </bookstore>  
 ```  
   
-## <a name="testxsl"></a><span data-ttu-id="f4d7e-120">Test.xsl</span><span class="sxs-lookup"><span data-stu-id="f4d7e-120">test.xsl</span></span>  
+## <a name="testxsl"></a><span data-ttu-id="2805e-120">Test.xsl</span><span class="sxs-lookup"><span data-stu-id="2805e-120">test.xsl</span></span>  
   
 ```xml  
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
@@ -142,13 +142,13 @@ xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 </xsl:stylesheet>  
 ```  
   
-## <a name="testxml"></a><span data-ttu-id="f4d7e-121">Test.XML</span><span class="sxs-lookup"><span data-stu-id="f4d7e-121">test.xml</span></span>  
+## <a name="testxml"></a><span data-ttu-id="2805e-121">Test.XML</span><span class="sxs-lookup"><span data-stu-id="2805e-121">test.xml</span></span>  
   
 ```xml  
 <Title attr="Test">this is a test</Title>  
 ```  
   
-## <a name="output-outxml"></a><span data-ttu-id="f4d7e-122">Çıkış (out.xml)</span><span class="sxs-lookup"><span data-stu-id="f4d7e-122">Output (out.xml)</span></span>  
+## <a name="output-outxml"></a><span data-ttu-id="2805e-122">Çıkış (out.xml)</span><span class="sxs-lookup"><span data-stu-id="2805e-122">Output (out.xml)</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -158,6 +158,6 @@ xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 </out>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="f4d7e-123">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f4d7e-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2805e-123">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="2805e-123">See also</span></span>
 
-- [<span data-ttu-id="f4d7e-124">XslTransform Sınıfı XSLT İşlemcisini Uygular</span><span class="sxs-lookup"><span data-stu-id="f4d7e-124">XslTransform Class Implements the XSLT Processor</span></span>](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+- [<span data-ttu-id="2805e-124">XslTransform Sınıfı XSLT İşlemcisini Uygular</span><span class="sxs-lookup"><span data-stu-id="2805e-124">XslTransform Class Implements the XSLT Processor</span></span>](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

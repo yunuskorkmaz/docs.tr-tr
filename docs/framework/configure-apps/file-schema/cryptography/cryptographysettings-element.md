@@ -11,48 +11,48 @@ ms.assetid: 6201b7da-bcb7-49f7-b9f5-ba1fe05573b9
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: dc55acd7a698ef37d45e8a412db684c13a3b8b16
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47203381"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48025466"
 ---
-# <a name="ltcryptographysettingsgt-element"></a><span data-ttu-id="f5a92-102">&lt;cryptographySettings&gt; öğesi</span><span class="sxs-lookup"><span data-stu-id="f5a92-102">&lt;cryptographySettings&gt; Element</span></span>
-<span data-ttu-id="f5a92-103">Şifreleme ayarlarını içerir.</span><span class="sxs-lookup"><span data-stu-id="f5a92-103">Contains cryptography settings.</span></span>  
+# <a name="ltcryptographysettingsgt-element"></a><span data-ttu-id="3bd40-102">&lt;cryptographySettings&gt; öğesi</span><span class="sxs-lookup"><span data-stu-id="3bd40-102">&lt;cryptographySettings&gt; Element</span></span>
+<span data-ttu-id="3bd40-103">Şifreleme ayarlarını içerir.</span><span class="sxs-lookup"><span data-stu-id="3bd40-103">Contains cryptography settings.</span></span>  
   
- <span data-ttu-id="f5a92-104">\<Yapılandırma ></span><span class="sxs-lookup"><span data-stu-id="f5a92-104">\<configuration></span></span>  
-<span data-ttu-id="f5a92-105">\<mscorlib ></span><span class="sxs-lookup"><span data-stu-id="f5a92-105">\<mscorlib></span></span>  
-<span data-ttu-id="f5a92-106">\<cryptographySettings ></span><span class="sxs-lookup"><span data-stu-id="f5a92-106">\<cryptographySettings></span></span>  
+ <span data-ttu-id="3bd40-104">\<Yapılandırma ></span><span class="sxs-lookup"><span data-stu-id="3bd40-104">\<configuration></span></span>  
+<span data-ttu-id="3bd40-105">\<mscorlib ></span><span class="sxs-lookup"><span data-stu-id="3bd40-105">\<mscorlib></span></span>  
+<span data-ttu-id="3bd40-106">\<cryptographySettings ></span><span class="sxs-lookup"><span data-stu-id="3bd40-106">\<cryptographySettings></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f5a92-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="f5a92-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3bd40-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="3bd40-107">Syntax</span></span>  
   
 ```xml  
       <cryptographySettings>   
 </cryptographySettings>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="f5a92-108">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="f5a92-108">Attributes and Elements</span></span>  
- <span data-ttu-id="f5a92-109">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="f5a92-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="3bd40-108">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="3bd40-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="3bd40-109">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="3bd40-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="f5a92-110">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="f5a92-110">Attributes</span></span>  
- <span data-ttu-id="f5a92-111">Yok.</span><span class="sxs-lookup"><span data-stu-id="f5a92-111">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="3bd40-110">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="3bd40-110">Attributes</span></span>  
+ <span data-ttu-id="3bd40-111">Yok.</span><span class="sxs-lookup"><span data-stu-id="3bd40-111">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="f5a92-112">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="f5a92-112">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="3bd40-112">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="3bd40-112">Child Elements</span></span>  
   
-|<span data-ttu-id="f5a92-113">Öğe</span><span class="sxs-lookup"><span data-stu-id="f5a92-113">Element</span></span>|<span data-ttu-id="f5a92-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="f5a92-114">Description</span></span>|  
+|<span data-ttu-id="3bd40-113">Öğe</span><span class="sxs-lookup"><span data-stu-id="3bd40-113">Element</span></span>|<span data-ttu-id="3bd40-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="3bd40-114">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="f5a92-115">\<cryptoNameMapping ></span><span class="sxs-lookup"><span data-stu-id="f5a92-115">\<cryptoNameMapping></span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptonamemapping-element.md)|<span data-ttu-id="f5a92-116">Sınıf için kolay adlar eşlemeleri içerir.</span><span class="sxs-lookup"><span data-stu-id="f5a92-116">Contains mappings of classes to friendly names.</span></span>|  
-|[<span data-ttu-id="f5a92-117">\<oidMap ></span><span class="sxs-lookup"><span data-stu-id="f5a92-117">\<oidMap></span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidmap-element.md)|<span data-ttu-id="f5a92-118">ASN.1 nesne tanımlayıcısını (OID) eşlemeleri için sınıflar içerir.</span><span class="sxs-lookup"><span data-stu-id="f5a92-118">Contains ASN.1 object identifier (OID) mappings to classes.</span></span>|  
+|[<span data-ttu-id="3bd40-115">\<cryptoNameMapping ></span><span class="sxs-lookup"><span data-stu-id="3bd40-115">\<cryptoNameMapping></span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptonamemapping-element.md)|<span data-ttu-id="3bd40-116">Sınıf için kolay adlar eşlemeleri içerir.</span><span class="sxs-lookup"><span data-stu-id="3bd40-116">Contains mappings of classes to friendly names.</span></span>|  
+|[<span data-ttu-id="3bd40-117">\<oidMap ></span><span class="sxs-lookup"><span data-stu-id="3bd40-117">\<oidMap></span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidmap-element.md)|<span data-ttu-id="3bd40-118">ASN.1 nesne tanımlayıcısını (OID) eşlemeleri için sınıflar içerir.</span><span class="sxs-lookup"><span data-stu-id="3bd40-118">Contains ASN.1 object identifier (OID) mappings to classes.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="f5a92-119">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="f5a92-119">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="3bd40-119">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="3bd40-119">Parent Elements</span></span>  
   
-|<span data-ttu-id="f5a92-120">Öğe</span><span class="sxs-lookup"><span data-stu-id="f5a92-120">Element</span></span>|<span data-ttu-id="f5a92-121">Açıklama</span><span class="sxs-lookup"><span data-stu-id="f5a92-121">Description</span></span>|  
+|<span data-ttu-id="3bd40-120">Öğe</span><span class="sxs-lookup"><span data-stu-id="3bd40-120">Element</span></span>|<span data-ttu-id="3bd40-121">Açıklama</span><span class="sxs-lookup"><span data-stu-id="3bd40-121">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="f5a92-122">Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.</span><span class="sxs-lookup"><span data-stu-id="f5a92-122">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`mscorlib`|<span data-ttu-id="f5a92-123">İçeren `cryptographySettings` öğesi.</span><span class="sxs-lookup"><span data-stu-id="f5a92-123">Contains the `cryptographySettings` element.</span></span>|  
+|`configuration`|<span data-ttu-id="3bd40-122">Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.</span><span class="sxs-lookup"><span data-stu-id="3bd40-122">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`mscorlib`|<span data-ttu-id="3bd40-123">İçeren `cryptographySettings` öğesi.</span><span class="sxs-lookup"><span data-stu-id="3bd40-123">Contains the `cryptographySettings` element.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="f5a92-124">Örnek</span><span class="sxs-lookup"><span data-stu-id="f5a92-124">Example</span></span>  
- <span data-ttu-id="f5a92-125">Aşağıdaki örnek nasıl kullanıldığını gösterir  **\<cryptographySettings >** şifreleme adı eşlemeleri ve OID eşlemeleri içerecek şekilde öğesi.</span><span class="sxs-lookup"><span data-stu-id="f5a92-125">The following example shows how use the **\<cryptographySettings>** element to contain cryptography name mappings and OID mappings.</span></span> <span data-ttu-id="f5a92-126">Bu örneği, çalışma zamanı yapılandırır. böylece <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> döndürür bir `MyHashClass` nesne ve `MyCryptoClass` sınıfı nesne tanımlayıcısı 1.3.36.2.1 eşlenir.</span><span class="sxs-lookup"><span data-stu-id="f5a92-126">This example configures the runtime so that <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> returns a `MyHashClass` object and the `MyCryptoClass` class maps to the object identifier 1.3.36.2.1.</span></span>  
+## <a name="example"></a><span data-ttu-id="3bd40-124">Örnek</span><span class="sxs-lookup"><span data-stu-id="3bd40-124">Example</span></span>  
+ <span data-ttu-id="3bd40-125">Aşağıdaki örnek nasıl kullanıldığını gösterir  **\<cryptographySettings >** şifreleme adı eşlemeleri ve OID eşlemeleri içerecek şekilde öğesi.</span><span class="sxs-lookup"><span data-stu-id="3bd40-125">The following example shows how use the **\<cryptographySettings>** element to contain cryptography name mappings and OID mappings.</span></span> <span data-ttu-id="3bd40-126">Bu örneği, çalışma zamanı yapılandırır. böylece <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> döndürür bir `MyHashClass` nesne ve `MyCryptoClass` sınıfı nesne tanımlayıcısı 1.3.36.2.1 eşlenir.</span><span class="sxs-lookup"><span data-stu-id="3bd40-126">This example configures the runtime so that <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> returns a `MyHashClass` object and the `MyCryptoClass` class maps to the object identifier 1.3.36.2.1.</span></span>  
   
 ```xml  
 <configuration>  
@@ -78,7 +78,7 @@ ms.locfileid: "47203381"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="f5a92-127">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="f5a92-127">See Also</span></span>  
- [<span data-ttu-id="f5a92-128">Yapılandırma Dosyası Şeması</span><span class="sxs-lookup"><span data-stu-id="f5a92-128">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [<span data-ttu-id="f5a92-129">Şifreleme Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="f5a92-129">Cryptography Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
- [<span data-ttu-id="f5a92-130">Şifreleme Hizmetleri</span><span class="sxs-lookup"><span data-stu-id="f5a92-130">Cryptographic Services</span></span>](../../../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a><span data-ttu-id="3bd40-127">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="3bd40-127">See Also</span></span>  
+ [<span data-ttu-id="3bd40-128">Yapılandırma Dosyası Şeması</span><span class="sxs-lookup"><span data-stu-id="3bd40-128">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="3bd40-129">Şifreleme Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="3bd40-129">Cryptography Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+ [<span data-ttu-id="3bd40-130">Şifreleme Hizmetleri</span><span class="sxs-lookup"><span data-stu-id="3bd40-130">Cryptographic Services</span></span>](../../../../../docs/standard/security/cryptographic-services.md)
