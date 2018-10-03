@@ -3,11 +3,11 @@ title: ASP.NET Web Hizmetlerini Amaç ve Kullanılan Standartları Temel Alarak 
 ms.date: 03/30/2017
 ms.assetid: d3890278-fa9b-4902-91ea-8da73b7143cc
 ms.openlocfilehash: 9ceb28fece3cc17aa4ac2329dc101eac8e89bd77
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47207302"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48025411"
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used"></a>ASP.NET Web Hizmetlerini Amaç ve Kullanılan Standartları Temel Alarak WCF ile Karşılaştırma
 ASP.NET Web Hizmetleri, HTTP üzerinden Basit Nesne Erişim Protokolü (SOAP) kullanarak ileti alma ve gönderme uygulamalar oluşturmak için geliştirilmiştir. İletileri yapısı, bir XML Şeması kullanılarak tanımlanabilir ve bir aracı, .NET Framework nesneleri gelen ve giden iletileri serileştirmek kolaylaştırmak için sağlanır. Teknoloji Web Hizmetleri Web Hizmetleri Açıklama Dili (WSDL) tanımlamak için meta verileri otomatik olarak oluşturabilir ve WSDL'den istemciler için Web hizmetleri oluşturmak için ikinci bir aracı sağlanır.  

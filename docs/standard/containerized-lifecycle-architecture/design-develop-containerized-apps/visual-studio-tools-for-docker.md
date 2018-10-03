@@ -5,16 +5,16 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/12/2018
 ms.custom: vs-dotnet
-ms.openlocfilehash: cd140c12ef4a0187cce096e013937d5c98cd4b39
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 7daac744238feb38358e4cc0ab185e90257aa98d
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47235721"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48027461"
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>(Windows için Visual Studio) Docker için Visual Studio araçlarını kullanma
 
-Docker Geliştirici iş akışı için Visual Studio Araçları, Visual Studio Code ve Docker CLI'yı (aynı Docker CLI'yı temel alır) kullanmaya benzer. Visual Studio Araçları için Docker kullanmaya başlamak daha da kolay hale getirir, bu süreci kolaylaştırır ve derleme için daha yüksek üretkenlik sağlar çalıştırın ve Görevler oluşturun. Yürütme ve kapsayıcılarınızı gibi basit eylemleri aracılığıyla hata ayıklama **F5** ve **Ctrl**+**F5**.
+Docker geliştirme iş akışı için Visual Studio Araçları, Visual Studio Code ve Docker CLI'yı kullanırken iş akışına benzerdir. Aslında, aynı Docker CLI'yı dayanır ancak başlamak kolaydır, bu süreci kolaylaştırır ve daha yüksek üretkenlik sağlar, derleme için çalıştırın ve Görevler oluşturun. Yürütme ve kapsayıcılarınızı gibi basit eylemleri aracılığıyla hata ayıklama **F5** ve **Ctrl**+**F5**. Çalıştırın ve tek bir kapsayıcı hata ayıklama ek olarak isteğe bağlı bir kapsayıcı düzenleme desteği, çalıştırın ve bir grup kapsayıcının (tam çözüm) aynı anda hata ayıklama.
 
 > [!NOTE]
 > Bu makale Windows üzerinde Visual Studio ve Visual Studio değil, Mac için geçerlidir
@@ -27,9 +27,9 @@ Docker desteği, Visual Studio 2017'de dahildir. Visual Studio 2017'ı buradan i
 
 ## <a name="use-docker-tools-in-visual-studio-2017"></a>Visual Studio 2017'de Docker araçları kullanın
 
-Bir projeye ekleyebilirsiniz Docker desteği iki düzeyi vardır. .NET Core web uygulaması projelerinde yalnızca ekleyebilirsiniz bir *Dockerfile* Docker desteği etkinleştirerek projeye dosya. İleri düzey ekler kapsayıcı Düzenleyicisi desteği olan bir *Dockerfile* (zaten yoksa) projeye ve *docker-compose.yml* çözüm düzeyinde dosya.
+Bir projeye ekleyebilirsiniz Docker desteği iki düzeyi vardır. .NET Core web uygulaması projelerinde yalnızca ekleyebilirsiniz bir *Dockerfile* Docker desteği etkinleştirerek projeye dosya. İleri düzey ekler kapsayıcı düzenleme desteği olan bir *Dockerfile* (zaten yoksa) projeye ve *docker-compose.yml* çözüm düzeyinde dosya. Docker Compose, aracılığıyla kapsayıcı düzenleme desteği, varsayılan olarak Visual Studio 2017 sürüm 15.7 veya önceki eklenir. Kapsayıcı düzenleme desteği Tercihli özellik Visual Studio 2017 sürümlerinde 15,8 ya da daha sonra bu durumda Docker Compose ve Service Fabric desteklenir.
 
-**Ekle** > **Docker desteği** ve **Ekle** > **kapsayıcı Düzenleyicisi desteği** komutlar bir web uygulaması projesi için proje düğümünü sağ tıklama menüsünü (veya bağlam menüsü) bulunan **Çözüm Gezgini**, Şekil 4-26 gösterildiği gibi:
+**Ekle** > **Docker desteği** ve **Ekle** > **kapsayıcı düzenleme desteği** komutlar bir web uygulaması projesi için proje düğümünü sağ tıklama menüsünü (veya bağlam menüsü) bulunan **Çözüm Gezgini**, Şekil 4-26 gösterildiği gibi:
 
 ![Visual Studio'da Docker desteği menü seçeneği ekleyin](media/add-docker-support-menu.png)
 
@@ -46,21 +46,25 @@ Visual Studio 2017'de proje oluşturma sırasında Şekil 4-27: Docker desteğin
 Visual Studio ekleyin ya da Docker desteğini etkinleştirmek ekler bir *Dockerfile* projeye dosya.
 
 > [!NOTE]
-> Bilgisayarınızda Docker Compose desteği proje oluştururken bir .NET Framework web uygulaması projesi (olmayan bir .NET Core web uygulaması projesi) için Şekil 4-28 gösterildiği etkinleştirdiğinizde, kapsayıcı Düzenleyicisi desteği de eklenir.
+> Bilgisayarınızda Docker Compose desteği proje oluştururken bir .NET Framework web uygulaması projesi (olmayan bir .NET Core web uygulaması projesi) için Şekil 4-28 gösterildiği etkinleştirdiğinizde, kapsayıcı düzenleme desteği de eklenir.
 >
 > ![Docker'ı etkinleştirme desteği için bir .NET Framework web uygulaması projesi oluşturma](media/enable-docker-compose-support.png)
 
 > Şekil 4-28: Visual Studio 2017'de .NET Framework web uygulaması projesi üzerinde Docker Compose desteği etkinleştirme
 
-### <a name="add-container-orchestrator-support"></a>Kapsayıcı Düzenleyicisi desteği Ekle
+### <a name="add-container-orchestration-support"></a>Kapsayıcı düzenleme desteği ekleme
 
-Çok kapsayıcılı bir çözüm oluşturmak istediğinizde, kapsayıcı Düzenleyicisi desteği, projenize ekleyin. Kapsayıcı Düzenleyicisi desteği eklediğinizde, Visual Studio ekler bir *Dockerfile* (zaten yoksa) proje ile genel *docker-compose.yml* çözüm düzeyinde dosya. Bu, çalıştırma ve aynı tanımlanan bir grup kapsayıcının (tam çözüm) aynı anda hata ayıklaması sağlar *docker-compose.yml* dosya. Varsa *docker-compose.yml* zaten var, Visual Studio yalnızca ekler gerekli yapılandırma kod satırı için.
+Çok kapsayıcılı bir çözüm oluşturmak istediğinizde, kapsayıcı düzenleme desteği, projenize ekleyin. Bu, çalıştırma ve aynı tanımlanan bir grup kapsayıcının (tam çözüm) aynı anda hata ayıklaması sağlar *docker-compose.yml* dosya.
+
+Kapsayıcı düzenleme desteği eklemek için çözümü veya proje düğümünü sağ **Çözüm Gezgini**ve **Ekle** > **kapsayıcı düzenlemedesteği**. Ardından **Docker Compose** veya **Service Fabric** kapsayıcıları yönetmek için.
 
 Kapsayıcı düzenleme desteği projenize ekledikten sonra projeye eklenen bir Dockerfile bakın ve **docker-compose** çözümüne eklenmiş klasör **Çözüm Gezgini**, Şekil 4-29 gösterildiği gibi:
 
 ![Visual Studio'daki Çözüm Gezgini'nde docker dosyaları](media/docker-support-solution-explorer.png)
 
 Şekil 4-29: Docker dosyaları Çözüm Gezgini'nde Visual Studio 2017
+
+Varsa *docker-compose.yml* zaten var, Visual Studio yalnızca ekler gerekli yapılandırma kod satırı için.
 
 **Daha fazla bilgi:** Hizmetleri uygulaması ve Docker için Visual Studio Araçları'nın kullanımı hakkında daha ayrıntılı bilgi için bu makaleleri okuyun:
 

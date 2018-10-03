@@ -10,11 +10,11 @@ ms.assetid: 8a5ea56c-0140-4b51-8997-875ae6a8e0cb
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 10b2471d13d410826cec3404725117649442297b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47402662"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48027500"
 ---
 # <a name="building-xml-schemas"></a>XML şemaları derleme
 Sınıflarda <xref:System.Xml.Schema?displayProperty=nameWithType> ad alanı, World Wide Web Consortium (W3C) XML Şeması öneri de tanımlanan yapıları eşlemeniz ve XML şemaları bellek içi derleme için kullanılabilir.  

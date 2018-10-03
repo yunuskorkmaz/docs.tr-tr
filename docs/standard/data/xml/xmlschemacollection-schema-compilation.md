@@ -9,11 +9,11 @@ ms.assetid: 76f28770-7126-428f-9ed5-7b5ae8bad5ee
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d7b6ea782020dde83aa7d59be8ec3058a27075ad
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47216127"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48030674"
 ---
 # <a name="xmlschemacollection-schema-compilation"></a>XmlSchemaCollection şema derlemesi
 **XmlSchemaCollection** bir önbellek ya da burada XML verileri azaltılmış (XDR) ve XML Şeması Tanım Dili (XSD) şemalarını depolanabilir ve doğrulanmış kitaplığı. **XmlSchemaCollection** şemaları bir dosyadan veya URL'den erişmek yerine bellekte önbelleğe alarak performansını artırır.  
