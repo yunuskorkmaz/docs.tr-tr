@@ -3,11 +3,11 @@ title: '&lt;Özel&gt;'
 ms.date: 03/30/2017
 ms.assetid: a6f65a00-bd1a-4d4a-955a-fe009ec02ab8
 ms.openlocfilehash: 7d558be66b8a1e46d9743c5f8bf0bb9a8b4c349e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47207818"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48036839"
 ---
 # <a name="ltcustomgt"></a>&lt;Özel&gt;
 Özel eş Çözücü hizmetinin ayarlarını belirtir.  

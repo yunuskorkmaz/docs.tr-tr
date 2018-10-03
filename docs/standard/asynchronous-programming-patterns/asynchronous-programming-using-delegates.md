@@ -15,11 +15,11 @@ ms.assetid: 38a345ca-6963-4436-9608-5c9defef9c64
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bad5372af1d771dc93a20e61090ef84126f3e1eb
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47205219"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48033330"
 ---
 # <a name="asynchronous-programming-using-delegates"></a>Temsilcileri Kullanarak Zaman Uyumsuz Programlama
 Temsilciler, zaman uyumsuz olarak bir zaman uyumlu yöntem çağrısı sağlar. Zaman uyumlu olarak, bir temsilci çağırdığınızda `Invoke` yöntemi doğrudan geçerli iş parçacığı üzerinde hedef yöntemini çağırır. Varsa `BeginInvoke` yöntemi çağrıldığında, ortak dil çalışma zamanı (CLR) isteğini sıraya koyar ve hemen çağırana döner. Hedef yöntemin, iş parçacığı havuzundan bir iş parçacığında zaman uyumsuz olarak adlandırılır. Hedef yöntemin ile paralel yürütmeye devam isteği gönderildi, özgün iş parçacığı, ücretsizdir. Bir geri çağırma yöntemi çağrısında belirtildiğinde `BeginInvoke` yöntemi, geri çağırma yöntemi hedef yöntemin sona erdiğinde çağrılır. Geri çağırma yöntemi `EndInvoke` yöntemi, dönüş değeri ve giriş/çıkış ya da yalnızca çıktı parametreleri alır. Hiçbir geri çağırma yöntemi çağırırken belirtilmişse `BeginInvoke`, `EndInvoke` çağrılan iş parçacığından çağrılabilir `BeginInvoke`.  

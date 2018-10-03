@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: 6e01dd9f-b5dd-4474-b24c-06e124de4ff7
 author: BrucePerlerMS
 ms.openlocfilehash: 32fd1ebede841488d1bfabd2f92bd3fb1ffb55e8
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193193"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48035662"
 ---
 # <a name="how-to-set-the-security-mode"></a>Nasıl yapılır: Güvenlik Modunu Ayarlama
 Windows Communication Foundation (WCF) güvenlik üzerinde en önceden tanımlanmış bağlamaları bulunan üç yaygın güvenlik modu vardır: aktarım iletisi ve "ileti kimlik bilgileri ile aktarma." İki ek modları için iki bağlamaları belirli: "yalnızca Aktarım-credential" modu sonucuna <xref:System.ServiceModel.BasicHttpBinding>ve bulunan "Hem" modu <xref:System.ServiceModel.NetMsmqBinding>. Ancak, bu konuda üç yaygın güvenlik modlarını yoğunlaşır: <xref:System.ServiceModel.SecurityMode.Transport>, <xref:System.ServiceModel.SecurityMode.Message>, ve <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.  

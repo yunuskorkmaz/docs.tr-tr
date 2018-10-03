@@ -12,11 +12,11 @@ helpviewer_keywords:
 ms.assetid: 02187c7b-dbf2-45f2-96c2-e11010225a22
 author: ghogen
 ms.openlocfilehash: a5a437af90f29bc601215176ad5c4fec702ddbc0
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47073729"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48036084"
 ---
 # <a name="how-to-specify-the-security-context-for-services"></a>Nasıl Yapılır: Hizmetler için Güvenlik İçeriği Belirtme
 Varsayılan olarak, hizmetler, oturum açan kullanıcının farklı güvenlik bağlamında çalışır. Varsayılan sistem hesabına ait içerikte çalıştırmasına Hizmetleri olarak adlandırılır `LocalSystem`, sağlayan farklı erişim ayrıcalığı kullanıcı dışındaki sistem kaynaklarına. Hizmetinizin altında çalıştırılması farklı bir kullanıcı hesabı belirtmek için bu davranışı değiştirebilirsiniz.  

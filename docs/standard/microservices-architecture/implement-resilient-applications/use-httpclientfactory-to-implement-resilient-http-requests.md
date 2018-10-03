@@ -4,12 +4,12 @@ description: HttpClientFactory oluşturmak için .NET Core 2.1 itibaren kullanı
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: 6fd30a9358ca9c07b2a6e2ec591e4c5d7db54ccb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d40e587966b2e62a197ad10770bf3e28bcbcb511
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513219"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48037222"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>Kullanım HttpClientFactory dayanıklı HTTP isteklerini uygulamak için
 
@@ -71,7 +71,7 @@ Türü belirlenmiş istemci sınıflarınızı AddHttpClient() ile yalnızca ekl
 
 ### <a name="httpclient-lifetimes"></a>HttpClient yaşam süresi yok
 
-Aldığınız her seferinde bir `HttpClient` IHttpClientFactory, yeni bir örneğini nesneden bir `HttpClient` döndürülür. Olacak bir HttpMessageHandler ** başına türü belirlenmiş istemci adlı. Ben`HttpClientFactory` kaynak tüketimini azaltmak için fabrika tarafından oluşturulan HttpMessageHandler örnekleri havuzu olur. HttpMessageHandler örneği havuzundan yeni bir oluştururken yeniden kullanılabilme `HttpClient` yaşam süresi dolmadıysa örneği.
+Aldığınız her seferinde bir `HttpClient` IHttpClientFactory, yeni bir örneğini nesneden bir `HttpClient` döndürülür. Olacak bir HttpMessageHandler ** başına türü belirlenmiş istemci adlı. `IHttpClientFactory` kaynak tüketimini azaltmak için fabrika tarafından oluşturulan HttpMessageHandler örnekleri havuzu. HttpMessageHandler örneği havuzundan yeni bir oluştururken yeniden kullanılabilme `HttpClient` yaşam süresi dolmadıysa örneği.
 
 Her işleyicisi genellikle kendi temel alınan HTTP bağlantıları yöneten işleyicileri havuzu tercih edilir; gerekenden daha fazla işleyicileri oluşturma bağlantı gecikmelerine neden olabilir. Bazı işleyiciler da bağlantıları açık süresiz olarak, DNS değişiklikleri tepki gelen, işleyici engelleyebilir tutun.
 

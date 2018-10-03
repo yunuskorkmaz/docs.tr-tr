@@ -3,11 +3,11 @@ title: WCF &lt;workflowInstanceQueries&gt;
 ms.date: 03/30/2017
 ms.assetid: b0852f77-16e4-4d55-8eb7-a19feb0e8fc4
 ms.openlocfilehash: dfa75a7e4729244ba5887e6666c0fdfe840e9faf
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47425855"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48034867"
 ---
 # <a name="ltworkflowinstancequeriesgt-of-wcf"></a>WCF &lt;workflowInstanceQueries&gt;
 Başlatılmamış veya tamamlanmış olay gibi iş akışı örneği yaşam döngüsü değişiklikleri izleme yapılandırma öğelerinin bir koleksiyonunu temsil eder.  

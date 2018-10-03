@@ -4,12 +4,12 @@ description: .NET Core nasıl bulur ve programınızın çalışma zamanı sür�
 author: billwagner
 ms.author: wiwagn
 ms.date: 06/27/2018
-ms.openlocfilehash: 28a76cc17346c40517a21e8dc902bd6c2a84597f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 34e31cbb224b58b1aad2935ea7310f2e4f5f9ee0
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47233211"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48036272"
 ---
 # <a name="net-core-version-selection"></a>.NET core sürüm seçimi
 
@@ -31,12 +31,12 @@ Bu belgenin geri kalan bu dört senaryo inceler.
 
 ## <a name="the-sdk-uses-the-latest-installed-version"></a>SDK'sı en son yüklenen sürüm kullanır.
 
-SDK'sı seçeneğindeki `dotnet new` ve `dotnet run`. `dotnet` CLI gerekir dotnet her komut için bir SDK sürümü seçin. Varsayılan olarak, makinede yüklü en son SDK'sı .NET Core CLI'yı kullanır bile:
+SDK'sı seçeneğindeki `dotnet new` ve `dotnet run`. .NET Core CLI için bir SDK sürümü seçmelisiniz her `dotnet` komutu. Varsayılan olarak, makinede yüklü en son SDK'sı kullanır bile:
 
-* Projeyi daha önceki bir sürümünü hedefler.
-* En son sürümü, bir önizleme sürümüdür.
+* Proje .NET Core çalışma zamanı'nın önceki bir sürümünü hedefler.
+* .NET Core SDK'sının en son sürümü, bir önizleme sürümüdür.
 
-Uygulamalar en son SDK'sı özellikler ve geliştirmeler önceki .NET Core çalışma zamanı sürümleri hedefleyen sırasında yararlanabilirsiniz. Tüm projelerde aynı SDK araçları kullanarak .NET Core farklı projelerde birden fazla çalışma zamanı sürümünü hedefleyebilirsiniz.
+Önceki .NET Core çalışma zamanı sürümleri hedefleyen sırasında en son SDK'sı özellikleri ve geliştirmeleri avantajlarından alabilir. Tüm projelerde aynı SDK araçları kullanarak .NET Core farklı projelerde birden fazla çalışma zamanı sürümünü hedefleyebilirsiniz.
 
 Nadir durumlarda, SDK'ın önceki bir sürümünü kullanmanız gerekebilir. Bu sürümde, belirttiğiniz bir [ *global.json* dosya](../tools/global-json.md). "En günceli kullan" ilke yalnızca kullanmak anlamına gelir *global.json* en son yüklenen sürüm'den önceki bir .NET Core SDK sürümünü belirtmek için.
 
