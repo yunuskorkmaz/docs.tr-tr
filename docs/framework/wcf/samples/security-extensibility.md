@@ -4,42 +4,42 @@ ms.date: 03/30/2017
 ms.assetid: 2afe044d-df4a-49a4-9865-38700474c3dd
 author: BrucePerlerMS
 ms.openlocfilehash: 09872b5422d9d66dd4f54753815067954be6c0bb
-ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
-ms.translationtype: HT
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47862821"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48026419"
 ---
-# <a name="security-extensibility"></a><span data-ttu-id="21d58-102">Güvenlik Genişletilebilirliği</span><span class="sxs-lookup"><span data-stu-id="21d58-102">Security Extensibility</span></span>
-<span data-ttu-id="21d58-103">Bu bölüm, özel güvenlik Windows Communication Foundation (WCF) gösteren örnekler içerir.</span><span class="sxs-lookup"><span data-stu-id="21d58-103">This section contains samples that demonstrate custom security in Windows Communication Foundation (WCF).</span></span>  
+# <a name="security-extensibility"></a><span data-ttu-id="30f6d-102">Güvenlik Genişletilebilirliği</span><span class="sxs-lookup"><span data-stu-id="30f6d-102">Security Extensibility</span></span>
+<span data-ttu-id="30f6d-103">Bu bölüm, özel güvenlik Windows Communication Foundation (WCF) gösteren örnekler içerir.</span><span class="sxs-lookup"><span data-stu-id="30f6d-103">This section contains samples that demonstrate custom security in Windows Communication Foundation (WCF).</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="21d58-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="21d58-104">In This Section</span></span>  
- [<span data-ttu-id="21d58-105">Dayanıklı Verilen Belirteç Sağlayıcısı</span><span class="sxs-lookup"><span data-stu-id="21d58-105">Durable Issued Token Provider</span></span>](../../../../docs/framework/wcf/samples/durable-issued-token-provider.md)  
- <span data-ttu-id="21d58-106">Özel istemci verilen belirteç sağlayıcısı için uygulanacak gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="21d58-106">Demonstrates how to implement a custom client issued token provider.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="30f6d-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="30f6d-104">In This Section</span></span>  
+ [<span data-ttu-id="30f6d-105">Dayanıklı Verilen Belirteç Sağlayıcısı</span><span class="sxs-lookup"><span data-stu-id="30f6d-105">Durable Issued Token Provider</span></span>](../../../../docs/framework/wcf/samples/durable-issued-token-provider.md)  
+ <span data-ttu-id="30f6d-106">Özel istemci verilen belirteç sağlayıcısı için uygulanacak gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="30f6d-106">Demonstrates how to implement a custom client issued token provider.</span></span>  
   
- [<span data-ttu-id="21d58-107">SAML Belirteç Sağlayıcı</span><span class="sxs-lookup"><span data-stu-id="21d58-107">SAML Token Provider</span></span>](../../../../docs/framework/wcf/samples/saml-token-provider.md)  
- <span data-ttu-id="21d58-108">SAML belirteç sağlayıcı özel bir istemci uygulama gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="21d58-108">Demonstrates how to implement a custom client SAML token provider.</span></span>  
+ [<span data-ttu-id="30f6d-107">SAML Belirteç Sağlayıcı</span><span class="sxs-lookup"><span data-stu-id="30f6d-107">SAML Token Provider</span></span>](../../../../docs/framework/wcf/samples/saml-token-provider.md)  
+ <span data-ttu-id="30f6d-108">SAML belirteç sağlayıcı özel bir istemci uygulama gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="30f6d-108">Demonstrates how to implement a custom client SAML token provider.</span></span>  
   
- [<span data-ttu-id="21d58-109">Destek Belirteçleri</span><span class="sxs-lookup"><span data-stu-id="21d58-109">Supporting Tokens</span></span>](../../../../docs/framework/wcf/samples/supporting-tokens.md)  
- <span data-ttu-id="21d58-110">WS-güvenlik kullanan bir iletiye ek belirteçler ekleme gösterir.</span><span class="sxs-lookup"><span data-stu-id="21d58-110">Demonstrates how to add additional tokens to a message that uses WS-Security.</span></span>  
+ [<span data-ttu-id="30f6d-109">Destek Belirteçleri</span><span class="sxs-lookup"><span data-stu-id="30f6d-109">Supporting Tokens</span></span>](../../../../docs/framework/wcf/samples/supporting-tokens.md)  
+ <span data-ttu-id="30f6d-110">WS-güvenlik kullanan bir iletiye ek belirteçler ekleme gösterir.</span><span class="sxs-lookup"><span data-stu-id="30f6d-110">Demonstrates how to add additional tokens to a message that uses WS-Security.</span></span>  
   
- [<span data-ttu-id="21d58-111">Belirteç Doğrulayıcı</span><span class="sxs-lookup"><span data-stu-id="21d58-111">Token Authenticator</span></span>](../../../../docs/framework/wcf/samples/token-authenticator.md)  
- <span data-ttu-id="21d58-112">Özel bir belirteç kimlik doğrulayıcısı uygulanacağı gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="21d58-112">Demonstrates how to implement a custom token authenticator.</span></span>  
+ [<span data-ttu-id="30f6d-111">Belirteç Doğrulayıcı</span><span class="sxs-lookup"><span data-stu-id="30f6d-111">Token Authenticator</span></span>](../../../../docs/framework/wcf/samples/token-authenticator.md)  
+ <span data-ttu-id="30f6d-112">Özel bir belirteç kimlik doğrulayıcısı uygulanacağı gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="30f6d-112">Demonstrates how to implement a custom token authenticator.</span></span>  
   
- [<span data-ttu-id="21d58-113">Belirteç Sağlayıcı</span><span class="sxs-lookup"><span data-stu-id="21d58-113">Token Provider</span></span>](../../../../docs/framework/wcf/samples/token-provider.md)  
- <span data-ttu-id="21d58-114">Özel bir belirteç sağlayıcısını uygulamak nasıl gösterir.</span><span class="sxs-lookup"><span data-stu-id="21d58-114">Demonstrates how to implement a custom token provider.</span></span>  
+ [<span data-ttu-id="30f6d-113">Belirteç Sağlayıcı</span><span class="sxs-lookup"><span data-stu-id="30f6d-113">Token Provider</span></span>](../../../../docs/framework/wcf/samples/token-provider.md)  
+ <span data-ttu-id="30f6d-114">Özel bir belirteç sağlayıcısını uygulamak nasıl gösterir.</span><span class="sxs-lookup"><span data-stu-id="30f6d-114">Demonstrates how to implement a custom token provider.</span></span>  
   
- [<span data-ttu-id="21d58-115">Kullanıcı Adı Parola Doğrulayıcı</span><span class="sxs-lookup"><span data-stu-id="21d58-115">User Name Password Validator</span></span>](../../../../docs/framework/wcf/samples/user-name-password-validator.md)  
- <span data-ttu-id="21d58-116">Özel bir UserNamePassword Doğrulayıcıyı uygulamak nasıl gösterir.</span><span class="sxs-lookup"><span data-stu-id="21d58-116">Demonstrates how to implement a custom UserNamePassword Validator.</span></span>  
+ [<span data-ttu-id="30f6d-115">Kullanıcı Adı Parola Doğrulayıcı</span><span class="sxs-lookup"><span data-stu-id="30f6d-115">User Name Password Validator</span></span>](../../../../docs/framework/wcf/samples/user-name-password-validator.md)  
+ <span data-ttu-id="30f6d-116">Özel bir UserNamePassword Doğrulayıcıyı uygulamak nasıl gösterir.</span><span class="sxs-lookup"><span data-stu-id="30f6d-116">Demonstrates how to implement a custom UserNamePassword Validator.</span></span>  
   
- [<span data-ttu-id="21d58-117">X.509 Sertifika Doğrulayıcı</span><span class="sxs-lookup"><span data-stu-id="21d58-117">X.509 Certificate Validator</span></span>](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md)  
- <span data-ttu-id="21d58-118">Özel bir X.509 Sertifika Doğrulayıcı uygulama gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="21d58-118">Demonstrates how to implement a custom X.509 Certificate Validator.</span></span>  
+ [<span data-ttu-id="30f6d-117">X.509 Sertifika Doğrulayıcı</span><span class="sxs-lookup"><span data-stu-id="30f6d-117">X.509 Certificate Validator</span></span>](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md)  
+ <span data-ttu-id="30f6d-118">Özel bir X.509 Sertifika Doğrulayıcı uygulama gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="30f6d-118">Demonstrates how to implement a custom X.509 Certificate Validator.</span></span>  
   
- [<span data-ttu-id="21d58-119">Yetkilendirme İlkesi</span><span class="sxs-lookup"><span data-stu-id="21d58-119">Authorization Policy</span></span>](../../../../docs/framework/wcf/samples/authorization-policy.md)  
- <span data-ttu-id="21d58-120">Bir özel talep yetkilendirme ilkesi ve bir ilişkili özel hizmet Yetkilendirme Yöneticisi'ni uygulamak nasıl gösterir.</span><span class="sxs-lookup"><span data-stu-id="21d58-120">Demonstrates how to implement a custom claim authorization policy and an associated custom service authorization manager.</span></span>  
+ [<span data-ttu-id="30f6d-119">Yetkilendirme İlkesi</span><span class="sxs-lookup"><span data-stu-id="30f6d-119">Authorization Policy</span></span>](../../../../docs/framework/wcf/samples/authorization-policy.md)  
+ <span data-ttu-id="30f6d-120">Bir özel talep yetkilendirme ilkesi ve bir ilişkili özel hizmet Yetkilendirme Yöneticisi'ni uygulamak nasıl gösterir.</span><span class="sxs-lookup"><span data-stu-id="30f6d-120">Demonstrates how to implement a custom claim authorization policy and an associated custom service authorization manager.</span></span>  
   
- [<span data-ttu-id="21d58-121">Özel Belirteç</span><span class="sxs-lookup"><span data-stu-id="21d58-121">Custom Token</span></span>](../../../../docs/framework/wcf/samples/custom-token.md)  
- <span data-ttu-id="21d58-122">Bir Windows Communication Foundation (WCF) uygulamasına özel bir belirteç uygulaması eklemek nasıl gösterir.</span><span class="sxs-lookup"><span data-stu-id="21d58-122">Demonstrates how to add a custom token implementation into a Windows Communication Foundation (WCF) application.</span></span>  
+ [<span data-ttu-id="30f6d-121">Özel Belirteç</span><span class="sxs-lookup"><span data-stu-id="30f6d-121">Custom Token</span></span>](../../../../docs/framework/wcf/samples/custom-token.md)  
+ <span data-ttu-id="30f6d-122">Bir Windows Communication Foundation (WCF) uygulamasına özel bir belirteç uygulaması eklemek nasıl gösterir.</span><span class="sxs-lookup"><span data-stu-id="30f6d-122">Demonstrates how to add a custom token implementation into a Windows Communication Foundation (WCF) application.</span></span>  
   
- [<span data-ttu-id="21d58-123">İstemci Doğrulaması</span><span class="sxs-lookup"><span data-stu-id="21d58-123">Client Validation</span></span>](../../../../docs/framework/wcf/samples/client-validation.md)  
- <span data-ttu-id="21d58-124">Hizmet uç noktası kullanmanın güvenli olduğundan emin olmak için hizmet uç noktası doğrular uç nokta davranışı bir istemci yazma işlemi gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="21d58-124">Demonstrates how to write a client endpoint behavior that validates the service endpoint to ensure that the service endpoint is safe to use.</span></span>
+ [<span data-ttu-id="30f6d-123">İstemci Doğrulaması</span><span class="sxs-lookup"><span data-stu-id="30f6d-123">Client Validation</span></span>](../../../../docs/framework/wcf/samples/client-validation.md)  
+ <span data-ttu-id="30f6d-124">Hizmet uç noktası kullanmanın güvenli olduğundan emin olmak için hizmet uç noktası doğrular uç nokta davranışı bir istemci yazma işlemi gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="30f6d-124">Demonstrates how to write a client endpoint behavior that validates the service endpoint to ensure that the service endpoint is safe to use.</span></span>

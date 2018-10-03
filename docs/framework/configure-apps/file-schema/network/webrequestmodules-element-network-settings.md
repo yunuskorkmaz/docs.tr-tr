@@ -11,56 +11,56 @@ ms.assetid: 1263de11-3e0a-4f94-97c9-710b2ae53817
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 34173812f4f6fac940632e23e6641e458250a4ee
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47436134"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48028198"
 ---
-# <a name="ltwebrequestmodulesgt-element-network-settings"></a><span data-ttu-id="498cc-102">&lt;webRequestModules&gt; öğesi (ağ ayarları)</span><span class="sxs-lookup"><span data-stu-id="498cc-102">&lt;webRequestModules&gt; Element (Network Settings)</span></span>
-<span data-ttu-id="498cc-103">Ağ konaklarından bilgi istemek için modüller belirtir.</span><span class="sxs-lookup"><span data-stu-id="498cc-103">Specifies modules to use to request information from network hosts.</span></span>  
+# <a name="ltwebrequestmodulesgt-element-network-settings"></a><span data-ttu-id="49d79-102">&lt;webRequestModules&gt; öğesi (ağ ayarları)</span><span class="sxs-lookup"><span data-stu-id="49d79-102">&lt;webRequestModules&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="49d79-103">Ağ konaklarından bilgi istemek için modüller belirtir.</span><span class="sxs-lookup"><span data-stu-id="49d79-103">Specifies modules to use to request information from network hosts.</span></span>  
   
- <span data-ttu-id="498cc-104">\<Yapılandırma ></span><span class="sxs-lookup"><span data-stu-id="498cc-104">\<configuration></span></span>  
-<span data-ttu-id="498cc-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="498cc-105">\<system.net></span></span>  
-<span data-ttu-id="498cc-106">\<webRequestModules ></span><span class="sxs-lookup"><span data-stu-id="498cc-106">\<webRequestModules></span></span>  
+ <span data-ttu-id="49d79-104">\<Yapılandırma ></span><span class="sxs-lookup"><span data-stu-id="49d79-104">\<configuration></span></span>  
+<span data-ttu-id="49d79-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="49d79-105">\<system.net></span></span>  
+<span data-ttu-id="49d79-106">\<webRequestModules ></span><span class="sxs-lookup"><span data-stu-id="49d79-106">\<webRequestModules></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="498cc-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="498cc-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="49d79-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="49d79-107">Syntax</span></span>  
   
 ```xml  
 <webRequestModules>   
 </webRequestModules>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="498cc-108">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="498cc-108">Attributes and Elements</span></span>  
- <span data-ttu-id="498cc-109">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="498cc-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="49d79-108">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="49d79-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="49d79-109">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="49d79-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="498cc-110">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="498cc-110">Attributes</span></span>  
- <span data-ttu-id="498cc-111">Yok.</span><span class="sxs-lookup"><span data-stu-id="498cc-111">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="49d79-110">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="49d79-110">Attributes</span></span>  
+ <span data-ttu-id="49d79-111">Yok.</span><span class="sxs-lookup"><span data-stu-id="49d79-111">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="498cc-112">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="498cc-112">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="49d79-112">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="49d79-112">Child Elements</span></span>  
   
-|<span data-ttu-id="498cc-113">**Öğe**</span><span class="sxs-lookup"><span data-stu-id="498cc-113">**Element**</span></span>|<span data-ttu-id="498cc-114">**Açıklama**</span><span class="sxs-lookup"><span data-stu-id="498cc-114">**Description**</span></span>|  
+|<span data-ttu-id="49d79-113">**Öğe**</span><span class="sxs-lookup"><span data-stu-id="49d79-113">**Element**</span></span>|<span data-ttu-id="49d79-114">**Açıklama**</span><span class="sxs-lookup"><span data-stu-id="49d79-114">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="498cc-115">add</span><span class="sxs-lookup"><span data-stu-id="498cc-115">add</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-webrequestmodules-network-settings.md)|<span data-ttu-id="498cc-116">Uygulamaya özel bir Web isteği modülü ekler.</span><span class="sxs-lookup"><span data-stu-id="498cc-116">Adds a custom Web request module to the application.</span></span>|  
-|[<span data-ttu-id="498cc-117">Temizle</span><span class="sxs-lookup"><span data-stu-id="498cc-117">clear</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-webrequestmodules-network-settings.md)|<span data-ttu-id="498cc-118">Tüm kayıtlı Web isteği modül uygulamadan kaldırır.</span><span class="sxs-lookup"><span data-stu-id="498cc-118">Removes all registered Web request modules from the application.</span></span>|  
-|[<span data-ttu-id="498cc-119">remove</span><span class="sxs-lookup"><span data-stu-id="498cc-119">remove</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-webrequestmodules-network-settings.md)|<span data-ttu-id="498cc-120">Özel bir Web isteği modülü uygulamadan kaldırır.</span><span class="sxs-lookup"><span data-stu-id="498cc-120">Removes a custom Web request module from the application.</span></span>|  
+|[<span data-ttu-id="49d79-115">add</span><span class="sxs-lookup"><span data-stu-id="49d79-115">add</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-webrequestmodules-network-settings.md)|<span data-ttu-id="49d79-116">Uygulamaya özel bir Web isteği modülü ekler.</span><span class="sxs-lookup"><span data-stu-id="49d79-116">Adds a custom Web request module to the application.</span></span>|  
+|[<span data-ttu-id="49d79-117">Temizle</span><span class="sxs-lookup"><span data-stu-id="49d79-117">clear</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-webrequestmodules-network-settings.md)|<span data-ttu-id="49d79-118">Tüm kayıtlı Web isteği modül uygulamadan kaldırır.</span><span class="sxs-lookup"><span data-stu-id="49d79-118">Removes all registered Web request modules from the application.</span></span>|  
+|[<span data-ttu-id="49d79-119">remove</span><span class="sxs-lookup"><span data-stu-id="49d79-119">remove</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-webrequestmodules-network-settings.md)|<span data-ttu-id="49d79-120">Özel bir Web isteği modülü uygulamadan kaldırır.</span><span class="sxs-lookup"><span data-stu-id="49d79-120">Removes a custom Web request module from the application.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="498cc-121">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="498cc-121">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="49d79-121">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="49d79-121">Parent Elements</span></span>  
   
-|<span data-ttu-id="498cc-122">**Öğe**</span><span class="sxs-lookup"><span data-stu-id="498cc-122">**Element**</span></span>|<span data-ttu-id="498cc-123">**Açıklama**</span><span class="sxs-lookup"><span data-stu-id="498cc-123">**Description**</span></span>|  
+|<span data-ttu-id="49d79-122">**Öğe**</span><span class="sxs-lookup"><span data-stu-id="49d79-122">**Element**</span></span>|<span data-ttu-id="49d79-123">**Açıklama**</span><span class="sxs-lookup"><span data-stu-id="49d79-123">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="498cc-124">System.NET</span><span class="sxs-lookup"><span data-stu-id="498cc-124">system.net</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|<span data-ttu-id="498cc-125">.NET Framework ağa nasıl bağlandığını belirten ayarları içerir.</span><span class="sxs-lookup"><span data-stu-id="498cc-125">Contains settings that specify how the .NET Framework connects to the network.</span></span>|  
+|[<span data-ttu-id="49d79-124">System.NET</span><span class="sxs-lookup"><span data-stu-id="49d79-124">system.net</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|<span data-ttu-id="49d79-125">.NET Framework ağa nasıl bağlandığını belirten ayarları içerir.</span><span class="sxs-lookup"><span data-stu-id="49d79-125">Contains settings that specify how the .NET Framework connects to the network.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="498cc-126">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="498cc-126">Remarks</span></span>  
- <span data-ttu-id="498cc-127">`webRequestModules` Öğenin alt öğeleri kaydeder <xref:System.Net.WebRequest> ağ Konaklara bilgi isteklerini işlemek için sınıf.</span><span class="sxs-lookup"><span data-stu-id="498cc-127">The `webRequestModules` element registers descendants of the <xref:System.Net.WebRequest> class to handle information requests to network hosts.</span></span> <span data-ttu-id="498cc-128">Web isteği modülleri uygulanmalı <xref:System.Net.IWebRequestCreate> arabirimi.</span><span class="sxs-lookup"><span data-stu-id="498cc-128">Web request modules must implement the <xref:System.Net.IWebRequestCreate> interface.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="49d79-126">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="49d79-126">Remarks</span></span>  
+ <span data-ttu-id="49d79-127">`webRequestModules` Öğenin alt öğeleri kaydeder <xref:System.Net.WebRequest> ağ Konaklara bilgi isteklerini işlemek için sınıf.</span><span class="sxs-lookup"><span data-stu-id="49d79-127">The `webRequestModules` element registers descendants of the <xref:System.Net.WebRequest> class to handle information requests to network hosts.</span></span> <span data-ttu-id="49d79-128">Web isteği modülleri uygulanmalı <xref:System.Net.IWebRequestCreate> arabirimi.</span><span class="sxs-lookup"><span data-stu-id="49d79-128">Web request modules must implement the <xref:System.Net.IWebRequestCreate> interface.</span></span>  
   
- <span data-ttu-id="498cc-129">.NET Framework http://, https:// ve file:// ile başlayan bir URI'leri için Web isteği modüllerini içerir.</span><span class="sxs-lookup"><span data-stu-id="498cc-129">The .NET Framework includes Web request modules for URIs that begin with http://, https://, and file://.</span></span> <span data-ttu-id="498cc-130">Yapılandırma dosyasında özel bir modülü yalnızca kaydederek varsayılan modülleri geçersiz kılabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="498cc-130">You can override the default modules only by registering a custom module in the configuration file.</span></span>  
+ <span data-ttu-id="49d79-129">.NET Framework http://, https:// ve file:// ile başlayan bir URI'leri için Web isteği modüllerini içerir.</span><span class="sxs-lookup"><span data-stu-id="49d79-129">The .NET Framework includes Web request modules for URIs that begin with http://, https://, and file://.</span></span> <span data-ttu-id="49d79-130">Yapılandırma dosyasında özel bir modülü yalnızca kaydederek varsayılan modülleri geçersiz kılabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="49d79-130">You can override the default modules only by registering a custom module in the configuration file.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="498cc-131">Yapılandırma Dosyaları</span><span class="sxs-lookup"><span data-stu-id="498cc-131">Configuration Files</span></span>  
- <span data-ttu-id="498cc-132">Bu öğe, uygulama yapılandırma dosyası veya makine yapılandırma dosyası (Machine.config) kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="498cc-132">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="49d79-131">Yapılandırma Dosyaları</span><span class="sxs-lookup"><span data-stu-id="49d79-131">Configuration Files</span></span>  
+ <span data-ttu-id="49d79-132">Bu öğe, uygulama yapılandırma dosyası veya makine yapılandırma dosyası (Machine.config) kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="49d79-132">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="498cc-133">Örnek</span><span class="sxs-lookup"><span data-stu-id="498cc-133">Example</span></span>  
- <span data-ttu-id="498cc-134">Aşağıdaki örnek, varsayılan HTTP modülü kaydeder.</span><span class="sxs-lookup"><span data-stu-id="498cc-134">The following example registers the default HTTP module.</span></span> <span data-ttu-id="498cc-135">Belirtilen modül için doğru değerlerle PublicKeyToken ve Version değerleri değiştirmelisiniz.</span><span class="sxs-lookup"><span data-stu-id="498cc-135">You should replace the values for Version and PublicKeyToken with the correct values for the specified module.</span></span>  
+## <a name="example"></a><span data-ttu-id="49d79-133">Örnek</span><span class="sxs-lookup"><span data-stu-id="49d79-133">Example</span></span>  
+ <span data-ttu-id="49d79-134">Aşağıdaki örnek, varsayılan HTTP modülü kaydeder.</span><span class="sxs-lookup"><span data-stu-id="49d79-134">The following example registers the default HTTP module.</span></span> <span data-ttu-id="49d79-135">Belirtilen modül için doğru değerlerle PublicKeyToken ve Version değerleri değiştirmelisiniz.</span><span class="sxs-lookup"><span data-stu-id="49d79-135">You should replace the values for Version and PublicKeyToken with the correct values for the specified module.</span></span>  
   
 ```xml  
 <configuration>  
@@ -75,7 +75,7 @@ ms.locfileid: "47436134"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="498cc-136">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="498cc-136">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="49d79-136">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="49d79-136">See Also</span></span>  
  <xref:System.Net.WebRequest>  
  <xref:System.Net.IWebRequestCreate>  
- [<span data-ttu-id="498cc-137">Ağ Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="498cc-137">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+ [<span data-ttu-id="49d79-137">Ağ Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="49d79-137">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

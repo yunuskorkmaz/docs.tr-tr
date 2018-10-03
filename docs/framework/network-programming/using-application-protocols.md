@@ -16,16 +16,16 @@ ms.assetid: 3aab4bcc-8397-4e1a-a1b6-bbd837a21430
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 9f979b6d065e23b6d448a14d9545327de254dc70
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47216480"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48025168"
 ---
-# <a name="using-application-protocols"></a><span data-ttu-id="ef079-102">Uygulama protokolleri kullanma</span><span class="sxs-lookup"><span data-stu-id="ef079-102">Using Application Protocols</span></span>
-<span data-ttu-id="ef079-103">.NET Framework, yaygın olarak kullanılan Internet uygulama protokolleri destekler.</span><span class="sxs-lookup"><span data-stu-id="ef079-103">The .NET Framework supports commonly used Internet application protocols.</span></span> <span data-ttu-id="ef079-104">Bu bölüm hakkında bilgi içerir [HTTP](../../../docs/framework/network-programming/http.md), "TCP" ve "UDP" protokollerini kullanarak şirket bilgilerinin yanı sıra [Windows Sockets](../../../docs/framework/network-programming/sockets.md) özel protokoller uygulamak için arabirim.</span><span class="sxs-lookup"><span data-stu-id="ef079-104">This section includes information on using the [HTTP](../../../docs/framework/network-programming/http.md), "TCP", and "UDP" protocols, as well as information on using the [Windows Sockets](../../../docs/framework/network-programming/sockets.md) interface to implement custom protocols.</span></span>  
+# <a name="using-application-protocols"></a><span data-ttu-id="27c14-102">Uygulama protokolleri kullanma</span><span class="sxs-lookup"><span data-stu-id="27c14-102">Using Application Protocols</span></span>
+<span data-ttu-id="27c14-103">.NET Framework, yaygın olarak kullanılan Internet uygulama protokolleri destekler.</span><span class="sxs-lookup"><span data-stu-id="27c14-103">The .NET Framework supports commonly used Internet application protocols.</span></span> <span data-ttu-id="27c14-104">Bu bölüm hakkında bilgi içerir [HTTP](../../../docs/framework/network-programming/http.md), "TCP" ve "UDP" protokollerini kullanarak şirket bilgilerinin yanı sıra [Windows Sockets](../../../docs/framework/network-programming/sockets.md) özel protokoller uygulamak için arabirim.</span><span class="sxs-lookup"><span data-stu-id="27c14-104">This section includes information on using the [HTTP](../../../docs/framework/network-programming/http.md), "TCP", and "UDP" protocols, as well as information on using the [Windows Sockets](../../../docs/framework/network-programming/sockets.md) interface to implement custom protocols.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ef079-105">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="ef079-105">See Also</span></span>  
- [<span data-ttu-id="ef079-106">.NET Framework'te Ağ Programlaması</span><span class="sxs-lookup"><span data-stu-id="ef079-106">Network Programming in the .NET Framework</span></span>](../../../docs/framework/network-programming/index.md)  
- [<span data-ttu-id="ef079-107">Ağ Programlama Örnekleri</span><span class="sxs-lookup"><span data-stu-id="ef079-107">Network Programming Samples</span></span>](../../../docs/framework/network-programming/network-programming-samples.md)  
- [<span data-ttu-id="ef079-108">MSDN Kod Galerisi'nde .NET için ağ örnekleri</span><span class="sxs-lookup"><span data-stu-id="ef079-108">Networking Samples for .NET on MSDN Code Gallery</span></span>](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
+## <a name="see-also"></a><span data-ttu-id="27c14-105">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="27c14-105">See Also</span></span>  
+ [<span data-ttu-id="27c14-106">.NET Framework'te Ağ Programlaması</span><span class="sxs-lookup"><span data-stu-id="27c14-106">Network Programming in the .NET Framework</span></span>](../../../docs/framework/network-programming/index.md)  
+ [<span data-ttu-id="27c14-107">Ağ Programlama Örnekleri</span><span class="sxs-lookup"><span data-stu-id="27c14-107">Network Programming Samples</span></span>](../../../docs/framework/network-programming/network-programming-samples.md)  
+ [<span data-ttu-id="27c14-108">MSDN Kod Galerisi'nde .NET için ağ örnekleri</span><span class="sxs-lookup"><span data-stu-id="27c14-108">Networking Samples for .NET on MSDN Code Gallery</span></span>](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
