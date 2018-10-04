@@ -3,11 +3,11 @@ title: Web Hizmetleri Protokolleri Birlikte Çalışabilirlik Kılavuzu
 ms.date: 03/30/2017
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
 ms.openlocfilehash: 37416a80c8b6f2ac086dbface1cda37609698bfc
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47204433"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580335"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Web Hizmetleri Protokolleri Birlikte Çalışabilirlik Kılavuzu
 Windows Communication Foundation (WCF) Web Hizmetleri protokolleri sayısı uygular. Çoğu bu protokolleri, bir dizi seçenekleri ve genişletilebilirlik noktaları uygulayan takdirine bağlı olarak sol içerir. Bu konuda, Web Hizmetleri protokolleri WCF uygulayan bir listesini sağlar. Bu bölüm içindeki diğer konular, desteklenen her protokol için uygulama ayrıntıları sağlar.  

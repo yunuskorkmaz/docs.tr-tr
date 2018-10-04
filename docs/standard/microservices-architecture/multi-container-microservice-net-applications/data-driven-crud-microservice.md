@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
 ms.openlocfilehash: b443f1b066d3c8ef0e798206510616aace32b377
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48032715"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582742"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Bir basit veri temelli CRUD mikro hizmeti oluşturma
 

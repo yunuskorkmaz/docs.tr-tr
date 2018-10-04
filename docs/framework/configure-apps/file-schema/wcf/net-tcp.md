@@ -2,12 +2,12 @@
 title: '&lt;net.tcp&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8bc2f2be-11c1-4bab-9018-1d21ae568d94
-ms.openlocfilehash: ae6837bf6dc8167e165a3adcd1fca8abc3dcd396
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c67aeca183eb476460fa0be2c6dcd9c6077165d8
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500817"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48579349"
 ---
 # <a name="ltnettcpgt"></a>&lt;net.tcp&gt;
 Ağ yapılandırma ayarlarını belirtir. TCP bağlantı noktası paylaşımı birden çok işlem aynı TCP bağlantı noktasını paylaşmasına izin veren hizmeti.  
@@ -71,9 +71,9 @@ Ağ yapılandırma ayarlarını belirtir. TCP bağlantı noktası paylaşımı b
 |[\<system.serviceModel.activation>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|Dinleyici işlem SMSvcHost.exe için yapılandırma ayarlarını içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bağlantı noktası paylaşma ile ilgili daha fazla bilgi için bkz: [Net.TCP bağlantı noktası paylaşma](https://msdn.microsoft.com/library/f13692ee-a179-4439-ae72-50db9534eded). Bağlantı noktası hizmetini yapılandırma hakkında bilgi almak için bkz. [Net.TCP bağlantı noktası paylaşım hizmetini yapılandırma](https://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0).  
+ Bağlantı noktası paylaşma ile ilgili daha fazla bilgi için bkz: [Net.TCP bağlantı noktası paylaşma](../../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md). Bağlantı noktası hizmetini yapılandırma hakkında bilgi almak için bkz. [Net.TCP bağlantı noktası paylaşım hizmetini yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Activation.Configuration.NetTcpSection>  
- [Net.TCP Bağlantı Noktası Paylaşımı](https://msdn.microsoft.com/library/f13692ee-a179-4439-ae72-50db9534eded)  
- [Net.TCP Bağlantı Noktası Hizmetini Yapılandırma](https://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)
+ [Net.TCP Bağlantı Noktası Paylaşımı](../../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)  
+ [Net.TCP Bağlantı Noktası Hizmetini Yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)

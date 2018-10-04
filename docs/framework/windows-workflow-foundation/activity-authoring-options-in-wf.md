@@ -3,11 +3,11 @@ title: WF etkinlik yazma seçenekleri
 ms.date: 03/30/2017
 ms.assetid: b9061f5f-12c3-47f0-adbe-1330e2714c94
 ms.openlocfilehash: 219d759cd1390a83abfb90af509b21047085f6e9
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030227"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580886"
 ---
 # <a name="activity-authoring-options-in-wf"></a>WF etkinlik yazma seçenekleri
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] özel etkinlikler oluşturmak için çeşitli seçenekler sunar. Belirli bir etkinlik yazma için kullanılacak doğru yöntemi hangi çalışma zamanı özellikleri gerekli mı olduğuna bağlıdır.  

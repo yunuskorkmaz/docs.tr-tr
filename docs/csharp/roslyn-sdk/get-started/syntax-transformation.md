@@ -3,12 +3,12 @@ title: Söz dizimi dönüştürme (Roslyn API'leri) ile çalışmaya başlama
 description: Geçiş, sorgulama ve söz dizimi ağacı walking giriş.
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: acba7ac590154ad8458d0d9a8abac55a12e96265
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3f8d152a2e17bc9e480bd0a76488c563720a63b1
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47400796"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48266721"
 ---
 # <a name="get-started-with-syntax-transformation"></a>Söz dizimi dönüştürme ile çalışmaya başlama
 
@@ -120,7 +120,7 @@ public override SyntaxNode VisitLocalDeclarationStatement(LocalDeclarationStatem
 ```
 
 > [!NOTE]
-> Roslyn API'leri birçoğu, döndürülen gerçek çalışma zamanı türlerinin temel sınıflardır dönüş türlerini bildirir. n birçok senaryo, bir tür düğümünün başka tür bir düğüm tarafından tamamen - değiştirilebilir veya bile kaldırıldı. Bu örnekte, <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter.VisitLocalDeclarationStatement(Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax)> yöntemi döndürür bir <xref:Microsoft.CodeAnalysis.SyntaxNode>, türetilmiş bir tür yerine <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax>. Bu dosyaları yeni bir döndürür <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax> düğüm üzerinde var olan bir alan.
+> Roslyn API'leri birçoğu, döndürülen gerçek çalışma zamanı türlerinin temel sınıflardır dönüş türlerini bildirir. Birçok senaryoda bir tür düğümünün başka tür bir düğüm tarafından tamamen - değiştirilebilir veya bile kaldırıldı. Bu örnekte, <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter.VisitLocalDeclarationStatement(Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax)> yöntemi döndürür bir <xref:Microsoft.CodeAnalysis.SyntaxNode>, türetilmiş bir tür yerine <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax>. Bu dosyaları yeni bir döndürür <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax> düğüm üzerinde var olan bir alan.
 
 Bu hızlı başlangıçta, yerel değişken bildirimlerini işler. Bunu diğer bildirimlerine gibi genişletilebiliyordu `foreach` döngüleri `for` döngüleri LINQ ifadeleri ve lambda ifadeleri. Ayrıca bu dosyaları en basit şekliyle bildirimleri yalnızca dönüştürür:
 

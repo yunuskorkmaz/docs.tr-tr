@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: Bir Araştırma İsteğinin Keşif sürümünü Belirl
 ms.date: 03/30/2017
 ms.assetid: b3c4e2e2-2957-4074-ae6a-776a5ca84278
 ms.openlocfilehash: 98dfd5ec5d3c180b619e2f15d95037feae8ebbaf
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48031581"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582193"
 ---
 # <a name="how-todetermine-the-discovery-version-of-a-probe-request"></a>Nasıl yapılır: Bir Araştırma İsteğinin Keşif sürümünü Belirleme
 Keşif proxy'si farklı bulma sürümlerini kullanan birden fazla bulma uç noktası getirebilir. Bir UDP, çok noktaya yayın araştırma isteğinin proxy bir çok noktaya yayın gizleme ileti ile yanıt vermelidir proxy ulaşır. Bunu yapmak için isteğinin keşif sürümünü bilmesi gerekir.  

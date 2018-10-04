@@ -10,11 +10,11 @@ helpviewer_keywords:
 - FlowLayoutPanel control [Windows Forms], about FlowLayoutPanel control
 ms.assetid: 3883e024-f5a0-456d-9c27-b4dfa1cc9045
 ms.openlocfilehash: 73767114da1c04222fb8ceaf812153421c4597aa
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47235958"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48261413"
 ---
 # <a name="flowlayoutpanel-control-overview"></a>FlowLayoutPanel Denetimine Genel Bakış
 <xref:System.Windows.Forms.FlowLayoutPanel> Denetim akışı yatay veya dikey yönde içeriği düzenler. Denetimin içeriği sonraki bir satır veya sonraki bir sütun sarabilirsiniz. Alternatif olarak, içeriği kaydırmayı yerine bölebilirsiniz.  

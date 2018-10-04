@@ -3,11 +3,11 @@ title: LINQ to XML genel bakış (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 502661e0-bc5d-438d-94c2-7efb63bb6fbd
 ms.openlocfilehash: 962fddcfec04259425c1094f07adf0e3966dfab0
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
-ms.translationtype: HT
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 10/03/2018
-ms.locfileid: "48245237"
+ms.locfileid: "48261452"
 ---
 # <a name="linq-to-xml-overview-visual-basic"></a>LINQ to XML genel bakış (Visual Basic)
 XML, yaygın olarak birçok bağlamları verileri biçimlendirme bir yolu olarak benimsenmiştir. Örneğin, yapılandırma dosyalarını, Microsoft Office Word dosyaları ve veritabanlarının Web XML bulabilirsiniz.  

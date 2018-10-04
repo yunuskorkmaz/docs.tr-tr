@@ -3,11 +3,11 @@ title: Özellikler (F#)
 description: 'Bir nesneyle ilişkili değerlerini temsil eden üyeleri olan F # özellikleri hakkında bilgi edinin.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 75d21415b44ccc1c26ef5f478d5f5de20c3412e8
-ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47863279"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48266592"
 ---
 # <a name="properties"></a>Özellikler
 

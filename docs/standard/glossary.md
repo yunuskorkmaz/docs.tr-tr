@@ -5,12 +5,12 @@ author: tdykstra
 ms.author: tdykstra
 ms.date: 07/08/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: 11fad691021ec897348177c67134750e72b4ff7c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4ffcf56ba171192048a736b58ddcfa591fd3af58
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698490"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580855"
 ---
 # <a name="net-glossary"></a>.NET sözlüğü
 
@@ -46,13 +46,13 @@ Bir bütünleştirilmiş kod arabirimleri, sınıflar, yapılar, sabit listeleri
 
 Ortak dil çalışma zamanı.
 
-Tam anlamı bağlam üzerinde bağlıdır, ancak bu genellikle .NET Framework çalışma zamanını gösterir. CLR bellek ayırma ve management işler. CLR, yalnızca uygulamalar yürütür, ancak ayrıca oluşturur ve kod üzerinde bir JIT derleyicisi kullanarak halindeyken derler bir sanal makine de bulunuyor. Geçerli Microsoft CLR Windows yalnızca uygulamasıdır.
+Tam anlamı bağlam üzerinde bağlıdır, ancak bu genellikle .NET Framework çalışma zamanını gösterir. CLR bellek ayırma ve management işler. CLR ayrıca yalnızca uygulamaları yürütür, ancak ayrıca oluşturur ve kod üzerinde kolayca kullanarak derler bir sanal makine olduğu bir [JIT](#jit) derleyici. Geçerli Microsoft CLR Windows yalnızca uygulamasıdır.
 
 ## <a name="coreclr"></a>CoreCLR
 
 .NET core ortak dil çalışma zamanı.
 
-Bu CLR aynı kod tabanını CLR oluşturulur. İlk olarak, CoreCLR Silverlight çalışma zamanı olan ve birden çok platformda çalışacak şekilde tasarlanmıştır, özellikle Windows ve OS x CoreCLR, artık .NET Core parçasıdır ve Basitleştirilmiş bir CLR sürümünü temsil eder. Bu, artık çok sayıda Linux dağıtımları da dahil olmak üzere bir platformlar arası çalışma zamanı hala olur. CoreCLR, ayrıca bir sanal makine JIT ve kod yürütme özelliklere sahip olur.
+Bu CLR aynı kod tabanını CLR oluşturulur. İlk olarak, CoreCLR Silverlight çalışma zamanı olan ve birden çok platformda çalışacak şekilde tasarlanmıştır, özellikle Windows ve OS x CoreCLR, artık .NET Core parçasıdır ve Basitleştirilmiş bir CLR sürümünü temsil eder. Hala bir [platformlar arası](#cross-platform) artık çok sayıda Linux dağıtımları da dahil olmak üzere çalışma zamanı. CoreCLR, ayrıca bir sanal makine JIT ve kod yürütme özelliklere sahip olur.
 
 ## <a name="corefx"></a>CoreFX
 
@@ -67,6 +67,10 @@ Kümesini oluşturan System.* kitaplıkları (ve sınırlı bir ölçüde Micros
 CLR/CoreCLR aksine CoreRT oluşturmak ve bunu içermez çünkü kod üzerinde kolayca çalıştırmak için özellikleri içermez anlamına gelir. bir sanal makine, değil bir [JIT](#jit). Ancak, dahil [GC](#gc) ve çalışma zamanı türü tanımı (RTTI) ve yansıma olanağı. Böylece meta verilerini yansıma için gerekli değildir, ancak kendi tür sistemi tasarlanmıştır. Böylece sahip bir [AOT](#aot) aracının koyma gereksiz meta verileri bağlama ve uygulama kullanmayan kod (daha da önemlisi) tanımlamak zinciri. CoreRT geliştirme aşamasında olan.
 
 Bkz: [.NET Native ve CoreRT giriş](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md)
+
+## <a name="cross-platform"></a>platformlar arası
+
+Geliştirin ve Linux, Windows ve iOS gibi birden çok farklı işletim sistemlerinde özellikle her biri için yeniden yazmak zorunda kalmadan kullanılabilir bir uygulama yürüttüklerinde yeteneği. Bu kod yeniden kullanımı ve farklı platformlarda uygulamalar arasında tutarlılık sağlar.
 
 ## <a name="ecosystem"></a>ekosistemi
 
@@ -136,7 +140,7 @@ Bkz: [paketler, meta paketler ve çerçeveler](../core/packages.md)
 
 ## <a name="mono"></a>Mono
 
-Mono küçük bir çalışma zamanı gerekli olduğunda, esas olarak kullanılan bir .NET uygulamasıdır. Bu, Android, Mac, iOS, tvOS ve watchOS Xamarin uygulamalarını çalıştırır ve öncelikli olarak küçük ayak izine gerektiren uygulamaları üzerinde odaklanmıştır çalışma zamanıdır.
+Mono, bir açık kaynak [platformlar arası](#cross-platform) küçük bir çalışma zamanı gerektiğinde .NET uygulamasında, esas olarak kullanılır. Bu, Android, Mac, iOS, tvOS ve watchOS Xamarin uygulamalarını çalıştırır ve öncelikli olarak küçük ayak izine gerektiren uygulamaları üzerinde odaklanmıştır çalışma zamanıdır.
 
 Tüm şu anda yayımlanan .NET Standard sürümlerini destekler.
 

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 8f9ce4fd-e84f-48c0-bb64-89e217236d3e
 ms.openlocfilehash: 13aa01fdc86e59c8cd132158df1dc4bd298b9710
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48031727"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48261504"
 ---
 # <a name="method-based-query-syntax-examples-ordering-linq-to-dataset"></a>Metot tabanlı sorgu söz dizimi örnekleri: Sıralama (LINQ to DataSet)
 Bu konudaki örnekler nasıl kullanılacağını gösteren <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.Reverse%2A>, ve <xref:System.Linq.Enumerable.ThenBy%2A> sorgulamak için yöntemleri bir <xref:System.Data.DataSet> ve yöntem sorgu sözdizimini kullanarak sonuçları sıralayabilir.  

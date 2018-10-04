@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 0bd3fac7-befd-4a45-ba51-c200b33be0fd
 author: BrucePerlerMS
 ms.openlocfilehash: 3adcf7ba9814bcf494d345cf0e3f47c57df2152c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47206469"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48266110"
 ---
 # <a name="ltsecureconversationauthenticationgt-of-ltservicecredentialgt"></a>&lt;serviceCredential&gt; için &lt;secureConversationAuthentication&gt;
 Güvenli konuşma hizmeti ayarlarını belirtir.  

@@ -2,12 +2,12 @@
 title: WCF Analiz İzleme
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: 006f8aa0bc2f32e43269aa83433e8ca7a773a1c9
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 9464f2a4c9bc52134e439c98b06ae50c828a14f6
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46532814"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580453"
 ---
 # <a name="wcf-analytic-tracing"></a>WCF Analiz İzleme
 Bu örnek ETW Windows Communication Foundation (WCF) Yazar analitik izlemeleri akışının içine kendi izleme olaylarını ekleme gösterir [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Analitik izlemeleri, yüksek performans cezası ödeme yapmadan hizmetlerinizi görünürlük elde etmek kolay hale getirmek için yöneliktir. Bu örnek nasıl kullanılacağını gösterir <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API WCF hizmetleri ile tümleştirme yazma olayları.  
@@ -43,7 +43,7 @@ Bu örnek ETW Windows Communication Foundation (WCF) Yazar analitik izlemeleri a
   
 #### <a name="to-use-this-sample"></a>Bu örneği kullanmak için  
   
-1.  Kullanarak [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], WCFAnalyticTracingExtensibility.sln çözüm dosyasını açın.  
+1.  Visual Studio 2012 kullanarak WCFAnalyticTracingExtensibility.sln çözüm dosyasını açın.  
   
 2.  Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.  
   
@@ -53,7 +53,7 @@ Bu örnek ETW Windows Communication Foundation (WCF) Yazar analitik izlemeleri a
   
 4.  WCF test istemcisi (WcfTestClient.exe) çalıştırın.  
   
-     WCF test istemcisi (WcfTestClient.exe) bulunan \< [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] yükleme dizini > WcfTestClient.exe \Common7\IDE\ (varsayılan [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] yükleme dizini olan C:\Program Files\Microsoft Visual Studio 10.0).  
+     WCF test istemcisi (WcfTestClient.exe) bulunan \<Visual Studio 2012 yükleme dizini > \Common7\IDE\ WcfTestClient.exe (Visual Studio 2012 yükleme dizini varsayılan değer C:\Program Files\Microsoft Visual Studio 10.0).  
   
 5.  WCF test istemcisi içinde hizmet seçerek ekleyin **dosya**, ardından **Hizmet Ekle**.  
   

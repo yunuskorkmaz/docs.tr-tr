@@ -9,35 +9,35 @@ helpviewer_keywords:
 - Windows Forms, anchoring and docking WPF content
 - interoperability [WPF]
 ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
-ms.openlocfilehash: 1466591a06e9e7ca61f94683e037566f8d0cb31a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 062b9b943d187ccd4105f3772688c563f540d696
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509781"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48266682"
 ---
 # <a name="walkthrough-arranging-wpf-content-on-windows-forms-at-design-time"></a>İzlenecek yol: Windows Forms'ta Tasarım Zamanında WPF İçeriğini Düzenleme
-Bu izlenecek yol sabitleme ve dayama çizgileri, gibi Windows Forms düzeni özellikleri Windows Presentation Foundation (WPF) denetimleri düzenlemek için nasıl kullanılacağını gösterir.  
-  
- Bu kılavuzda, aşağıdaki görevleri gerçekleştirin:  
-  
--   Projeyi oluşturun.  
-  
--   WPF denetimi oluşturun.  
-  
--   Konak WPF denetimleri Düzen paneli içinde.  
-  
--   WPF denetimleri hizalama dayama kullanın.  
-  
--   Sabitleme ve WPF denetimleri yerleştirme.  
-  
+Bu izlenecek yol sabitleme ve dayama çizgileri, gibi Windows Forms düzeni özellikleri Windows Presentation Foundation (WPF) denetimleri düzenlemek için nasıl kullanılacağını gösterir.
+
+ Bu kılavuzda, aşağıdaki görevleri gerçekleştirin:
+
+-   Projeyi oluşturun.
+
+-   WPF denetimi oluşturun.
+
+-   Konak WPF denetimleri Düzen paneli içinde.
+
+-   WPF denetimleri hizalama dayama kullanın.
+
+-   Sabitleme ve WPF denetimleri yerleştirme.
+
 > [!NOTE]
 >  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ## <a name="prerequisites"></a>Önkoşullar  
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:  
   
--   [!INCLUDE[vs_dev11_long](../../../../includes/vs-dev11-long-md.md)].  
+-   Visual Studio 2012.  
   
 ## <a name="creating-the-project"></a>Projeyi Oluşturma  
  İlk adım Windows Forms projesi oluşturmaktır.  

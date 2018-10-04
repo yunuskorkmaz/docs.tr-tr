@@ -9,11 +9,11 @@ helpviewer_keywords:
 - animation [WPF], changes to border thickness
 ms.assetid: fd021978-f74b-4e7b-a7f7-3987dcad9e0f
 ms.openlocfilehash: d1ead0493d75f708557f0598d603440221182ebc
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47237003"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580489"
 ---
 # <a name="how-to-animate-a-borderthickness-value"></a>Nasıl yapılır: BorderThickness Değerine Animasyon Ekleme
 Bu örnekte kullanarak kenarlık kalınlığına değişiklikler animasyon gösterilmektedir <xref:System.Windows.Media.Animation.ThicknessAnimation> sınıfı.  

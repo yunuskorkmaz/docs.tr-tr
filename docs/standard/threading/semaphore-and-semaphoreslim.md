@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8e98862aba937724c799adef597260a06ed495f6
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: e7d7f791fbc68a526f428f4f79d9b379a23ca771
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44199771"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580004"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semafor ve SemaphoreSlim
 <xref:System.Threading.Semaphore?displayProperty=nameWithType> Adlandırılmış (yükleyebilecek) veya yerel semafor sınıfını temsil eder. Win32 semafor nesne çevresinde ince bir sarmalayıcıdır. Win32 semaforları bir kaynak havuzu erişimi denetlemek için kullanılabilen semaforları sayma.  
@@ -25,7 +25,7 @@ ms.locfileid: "44199771"
  <xref:System.Threading.SemaphoreSlim> Sınıf bekleme süresini çok kısa olması beklendiğinde, tek bir işlem içinde bekleme için kullanılabilecek basit ve hızlı bir semaforu temsil eder. <xref:System.Threading.SemaphoreSlim> Eşitleme temellerine ortak dil çalışma (CLR) tarafından sağlanan üzerinde mümkün olduğunca kullanır. Ancak, ayrıca gevşek başlatılmış, çekirdek tabanlı bekleme tanıtıcıları üzerinde birden fazla semaforları bekleyen desteklemek için gerekli olarak sağlar. <xref:System.Threading.SemaphoreSlim> Semafor veya eşitleme bekleme tanıtıcısı kullanımını adlı iptal belirteçlerini, ancak kullanımını desteklemediği de destekler.  
   
 ## <a name="managing-a-limited-resource"></a>Sınırlı kaynak yönetme  
- İş parçacıkları çağırarak semafor girin <xref:System.Threading.WaitHandle.WaitOne%2A> devralındı yöntemi <xref:System.Threading.WaitHandle> durumunda sınıfı bir <xref:System.Threading.Semaphore?displayProperty=nameWithType> nesnesi veya <xref:System.Threading.SemaphoreSlim.Wait%2A?displayProperty=nameWithType> veya <xref:System.Threading.SemaphoreSlim.WaitAsync%2A?displayProperty=nameWithType> yönteminde büyük bir <xref:System.Threading.SemaphoreSlim> nesne... Semafor sayısına çağrısı döndürüldüğünde azaltılır. Bir iş parçacığı girişini ve sayısı istediğinde, iş parçacığı blokları sıfırdır. İş parçacıkları semafor çağırarak serbest olarak <xref:System.Threading.Semaphore.Release%2A?displayProperty=nameWithType> veya <xref:System.Threading.SemaphoreSlim.Release%2A?displayProperty=nameWithType> yöntemi, engellenen iş parçacıkları girin izin verilir. Semafor girmek engellenen iş parçacıkları için ilk giren ilk çıkar (FIFO) veya son giren ilk çıkar (LIFO) gibi yürütülme sırası yoktur.  
+ İş parçacıkları çağırarak semafor girin <xref:System.Threading.WaitHandle.WaitOne%2A> devralındı yöntemi <xref:System.Threading.WaitHandle> durumunda sınıfı bir <xref:System.Threading.Semaphore?displayProperty=nameWithType> nesnesi veya <xref:System.Threading.SemaphoreSlim.Wait%2A?displayProperty=nameWithType> veya <xref:System.Threading.SemaphoreSlim.WaitAsync%2A?displayProperty=nameWithType> yönteminde büyük bir <xref:System.Threading.SemaphoreSlim> nesne. Semafor sayısına çağrısı döndürüldüğünde azaltılır. Bir iş parçacığı girişini ve sayısı istediğinde, iş parçacığı blokları sıfırdır. İş parçacıkları semafor çağırarak serbest olarak <xref:System.Threading.Semaphore.Release%2A?displayProperty=nameWithType> veya <xref:System.Threading.SemaphoreSlim.Release%2A?displayProperty=nameWithType> yöntemi, engellenen iş parçacıkları girin izin verilir. Semafor girmek engellenen iş parçacıkları için ilk giren ilk çıkar (FIFO) veya son giren ilk çıkar (LIFO) gibi yürütülme sırası yoktur.  
   
  Bir iş parçacığı semafor birden çok kez çağırarak girebilirsiniz <xref:System.Threading.Semaphore?displayProperty=nameWithType> nesnenin <xref:System.Threading.WaitHandle.WaitOne%2A> yöntemi veya <xref:System.Threading.SemaphoreSlim> nesnenin <xref:System.Threading.SemaphoreSlim.Wait%2A> yöntemi tekrar tekrar. İş parçacığı semafor yayımlamayı çağrısı yapabilirsiniz <xref:System.Threading.Semaphore.Release?displayProperty=nameWithType> veya <xref:System.Threading.SemaphoreSlim.Release?displayProperty=nameWithType> yöntemi aşırı yüklemek, aynı sayıda veya çağrı <xref:System.Threading.Semaphore.Release%28System.Int32%29?displayProperty=nameWithType> veya <xref:System.Threading.SemaphoreSlim.Release%28System.Int32%29?displayProperty=nameWithType> yöntemi aşırı yüklemesini ve yayımlanacak giriş sayısını belirtin.  
   

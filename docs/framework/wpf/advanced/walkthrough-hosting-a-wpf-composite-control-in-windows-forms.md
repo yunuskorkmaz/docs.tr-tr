@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: 09f634c870eb78c16192ed30ffbbfdc71fdd5142
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b49d09ce81c0605ecd82b67ec4c0b24973ac293c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856172"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582820"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>İzlenecek yol: WPF Bileşik Denetimini Windows Forms İçinde Barındırma
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamaları oluşturmak için zengin bir ortam sağlar. Önemli ölçüde yatırımınız varsa [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kodu olabilir mevcut BT'nizi genişletin daha etkili [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ile uygulama [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yerine baştan yeniden. Sık karşılaşılan bir senaryodur birini eklemek istediğiniz ya da daha fazla denetim ile uygulanan olduğunda [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , Windows Forms uygulaması içinde. WPF denetimleri özelleştirme hakkında daha fazla bilgi için bkz. [denetimi özelleştirme](../../../../docs/framework/wpf/controls/control-customization.md).  
@@ -27,9 +27,8 @@ ms.locfileid: "43856172"
  Bu izlenecek yolda gösterilen görevler tam kod listesi için bkz. [WPF bileşik denetimini Windows Forms örneğinde barındırma](https://go.microsoft.com/fwlink/?LinkID=159996).  
   
 ## <a name="prerequisites"></a>Önkoşullar  
- Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:  
-  
--   [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)].  
+
+Bu izlenecek yolu tamamlamak için Visual Studio ihtiyacınız vardır.  
   
 ## <a name="implementing-the-wpf-composite-control"></a>WPF bileşik denetimini uygulama  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Bu örnekte kullanılan bileşik denetimdir kullanıcının adını ve adresini alan bir basit veri girişi formuna. Kullanıcı görevi tamamlandığını göstermek için iki düğme tıkladığında denetim konağa bu bilgileri döndürmek için özel bir olay başlatır. İşlenen denetimi aşağıda gösterilmektedir.  

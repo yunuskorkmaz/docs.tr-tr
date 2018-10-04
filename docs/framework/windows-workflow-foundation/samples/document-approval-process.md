@@ -2,16 +2,16 @@
 title: Belge onay işlemi
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-ms.openlocfilehash: 874ee560407c3054b4f270a35e5100eaf9e174b8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 34b63acaacde274210343a1135f3ed39a2df885e
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508936"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582716"
 ---
 # <a name="document-approval-process"></a>Belge onay işlemi
-Bu örnek, birlikte birçok Windows Workflow Foundation (WF) ve Windows Communication Foundation (WCF) özelliklerinin kullanımını gösterir. Birlikte bir belge onay işlemi senaryosu uygulayın. Bir istemci uygulaması, belgeler için onay gönderin ve onaylayın belgeleri. Kurallar onay işlemi uygular ve istemciler arasındaki iletişimi kolaylaştırmak için bir onay Yöneticisi uygulaması yok. Onay, onay çeşitli yürütebilen bir iş akışı işlemidir. Etkinlikler, tek bir onay, çekirdek onay (onaylayanlara kümesini yüzdesi) ve bir çekirdek ve dizideki tek onay içeren bir karmaşık bir onay işlemi mevcut.  
-  
+Bu örnek, birlikte birçok Windows Workflow Foundation (WF) ve Windows Communication Foundation (WCF) özelliklerinin kullanımını gösterir. Birlikte bir belge onay işlemi senaryosu uygulayın. Bir istemci uygulaması, belgeler için onay gönderin ve onaylayın belgeleri. Kurallar onay işlemi uygular ve istemciler arasındaki iletişimi kolaylaştırmak için bir onay Yöneticisi uygulaması yok. Onay, onay çeşitli yürütebilen bir iş akışı işlemidir. Etkinlikler, tek bir onay, çekirdek onay (onaylayanlara kümesini yüzdesi) ve bir çekirdek ve dizideki tek onay içeren bir karmaşık bir onay işlemi mevcut.
+
 > [!IMPORTANT]
 >  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
@@ -80,11 +80,11 @@ Bu örnek, birlikte birçok Windows Workflow Foundation (WF) ve Windows Communic
   
 ##### <a name="to-set-up-the-database"></a>Veritabanı ayarlamak için  
   
-1.  Gelen bir [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] komut istemini yönetici ayrıcalıklarıyla açılan, bu DocumentApprovalProcess klasörüne gidin ve Setup.cmd'yi çalıştırın.  
+1.  Yönetici ayrıcalıklarıyla açılan bir Visual Studio 2010 Komut isteminde bu DocumentApprovalProcess klasörüne gidin ve Setup.cmd'yi çalıştırın.  
   
 ##### <a name="to-set-up-the-application"></a>Uygulamayı kurmak için  
   
-1.  Kullanarak [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], DocumentApprovalProcess.sln çözüm dosyasını açın.  
+1.  Visual Studio 2010 kullanarak DocumentApprovalProcess.sln çözüm dosyasını açın.  
   
 2.  Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.  
   
@@ -146,4 +146,4 @@ Bu örnek, birlikte birçok Windows Workflow Foundation (WF) ve Windows Communic
   
 ##### <a name="to-clean-up"></a>Temizlemek için  
   
-1.  Gelen bir [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] komut isteminde, DocumentApprovalProcess klasöre gidin ve Cleanup.cmd çalıştırın.
+1.  Bir Visual Studio 2010 komut isteminden DocumentApprovalProcess klasöre gidin ve Cleanup.cmd çalıştırın.

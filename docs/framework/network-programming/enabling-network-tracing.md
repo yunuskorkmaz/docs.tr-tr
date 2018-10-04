@@ -14,11 +14,11 @@ ms.assetid: 5fff458c-51a6-4134-ba47-8a6137ddc41e
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: f7720016a94d78e8a49e8566ad7b5096e9b31722
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193492"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48261491"
 ---
 # <a name="enabling-network-tracing"></a>Ağ izlemeyi etkinleştirme
 Ağ izleme yöntem çağrıları ve yönetilen bir uygulama tarafından oluşturulan ağ trafiğiyle ilgili bilgilere erişim sağlar. Uygulamanızda ağ izlemeyi etkinleştirmek için aşağıdaki görevleri tamamlamanız gerekir:  

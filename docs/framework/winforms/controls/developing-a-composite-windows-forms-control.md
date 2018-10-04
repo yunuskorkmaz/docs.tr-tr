@@ -7,17 +7,17 @@ helpviewer_keywords:
 - composite controls [Windows Forms], Windows Forms
 - controls [Windows Forms], composite
 ms.assetid: d086f2a3-baa3-4e09-b40c-a5bb3cfc51a6
-ms.openlocfilehash: 24fbf17f02072b2d9922ca0998805b916afc41b6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3bd8a91942cf41be62ff1e66bd97064e2db26692
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510166"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580816"
 ---
 # <a name="developing-a-composite-windows-forms-control"></a>Bileşik Windows Forms Denetimi Geliştirme
 Diğer Windows Forms denetimleri bir araya getirerek bileşik Windows Forms denetimi geliştirme yapabilirsiniz. Öğesinden türetilen bileşik denetimler <xref:System.Web.UI.UserControl> kullanıcı denetimler olarak adlandırılır. Temel sınıfı, <xref:System.Windows.Forms.UserControl>, alt denetimler için yönlendirme, böylece alt denetimler odağı alabilecek sağlama klavye sağlar. Bir kullanıcı denetimi örneği için bkz: <xref:System.Windows.Forms.UserControl> içinde örnek [nasıl yapılır: Windows Forms denetiminde öznitelikleri uygulama](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md).  
   
- Windows Form Tasarımcısı'nda [!INCLUDE[vsprvsext](../../../../includes/vsprvsext-md.md)] kullanıcı denetimleri yazma için zengin bir tasarım zamanı desteği sağlar.  
+ Windows Form Tasarımcısı'nda Visual Studio, kullanıcı denetimleri yazma için zengin bir tasarım zamanı desteği sağlar.  
   
 -   [Nasıl yapılır: Araç Kutusu Öğelerini Seç İletişim Kutusunda bir Denetimi Görüntüleme](https://msdn.microsoft.com/library/9yxtkx75\(v=vs.110\))  
   

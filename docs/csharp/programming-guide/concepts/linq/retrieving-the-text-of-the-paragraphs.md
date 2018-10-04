@@ -3,11 +3,11 @@ title: (C#) paragrafların metnini alma
 ms.date: 07/20/2015
 ms.assetid: 127d635e-e559-408f-90c8-2bb621ca50ac
 ms.openlocfilehash: 1d23addb4c4c1ea17343585392fbe08fef08568a
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030528"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582232"
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-c"></a>(C#) paragrafların metnini alma
 Bu örnek önceki örneğe, yapılar [Their stilleri (C#) ve paragrafları alma](../../../../csharp/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md). Bu yeni örnek, her bir paragraf metni bir dize olarak alır.  

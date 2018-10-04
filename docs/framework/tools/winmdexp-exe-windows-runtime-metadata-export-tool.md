@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8a228513bd29e35e8793124846de16f1c8bf4c10
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 44a21426bd4fea8bbb42801d59c6590f2ee0aee8
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48037449"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48263173"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Windows Çalışma Zamanı Meta Veri Dışarı Aktarma Aracı)
 [!INCLUDE[wrt](../../../includes/wrt-md.md)] Meta verileri dışarı aktarma Aracı (Winmdexp.exe) bir .NET Framework modülünü içeren bir dosyaya dönüştürür [!INCLUDE[wrt](../../../includes/wrt-md.md)] meta verileri. Ancak .NET Framework derlemeleri ve [!INCLUDE[wrt](../../../includes/wrt-md.md)] meta veri dosyaları aynı fiziksel biçim kullanın, .NET Framework derlemeleri otomatik olarak kullanılamaz, yani meta veri tablolarının içeriğinde farklar vardır [!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşenleri . Bir .NET Framework modülünü işleminin bir [!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşeni olarak adlandırılır *verme*. İçinde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ve [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], sonuçta elde edilen Windows meta veri (.winmd) dosyası hem meta veriler hem de uygulama bulunur.  
   
- Kullanırken  **[!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşen** altında bulunan şablon **Windows Store** C# ve Visual Basic'te [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)] veya [!INCLUDE[vs_dev11_ext](../../../includes/vs-dev11-ext-md.md)], derleyici hedefi bir .winmdobj dosyası olduğu ve sonraki Oluşturma adımı .winmdobj dosyasını bir .winmd dosyasına aktarmak için Winmdexp.exe'yi çağırır. Derleme için önerilen yöntem budur bir [!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşeni. Oluşturma süreci üzerinde, Visual Studio'nun sağladığından daha fazla kontrol sahibi olmak istediğinizde doğrudan Winmdexp.exe'yi kullanın.  
+ Kullanırken  **[!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşen** altında bulunan şablon **Windows Store** C# ve Visual Studio 2013 veya Visual Studio 2012'de Visual Basic için derleyici hedefi bir .winmdobj dosyası olduğunu ve sonraki Oluşturma adımı .winmdobj dosyasını bir .winmd dosyasına aktarmak için Winmdexp.exe'yi çağırır. Derleme için önerilen yöntem budur bir [!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşeni. Oluşturma süreci üzerinde, Visual Studio'nun sağladığından daha fazla kontrol sahibi olmak istediğinizde doğrudan Winmdexp.exe'yi kullanın.  
   
  Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, Geliştirici Komut İstemi (veya Windows 7'de Visual Studio Komut İstemi) kullanın. Daha fazla bilgi için [komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   

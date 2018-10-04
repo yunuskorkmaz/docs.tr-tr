@@ -21,11 +21,11 @@ helpviewer_keywords:
 - numbers [Visual Basic], floating point
 ms.assetid: 224a2795-4cd5-496c-8f7a-a4f05a06d45d
 ms.openlocfilehash: 98433c0f1d1008664bb994f3b43fe48a753a432c
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028783"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582729"
 ---
 # <a name="single-data-type-visual-basic"></a>Single Veri Türü (Visual Basic)
 Ayrı tutma IEEE 32-bit (4-bayt) tek duyarlıklı kayan nokta sayı değerini - 3.4028235E + 38 arasında değişen imzalı ile - 1.401298E-45 negatif değerleri ve 1.401298E-45 3.4028235E + 38 pozitif değerler için aracılığıyla. Tek duyarlıklı sayılar yaklaşık bir gerçek sayı olarak depolar.  

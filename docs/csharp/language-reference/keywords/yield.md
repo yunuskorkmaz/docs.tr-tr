@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - yield keyword [C#]
 ms.assetid: 1089194f-9e53-46a2-8642-53ccbe9d414d
-ms.openlocfilehash: c566e2c83a6c40acfd85c1822d28cbaa097e4449
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: be93b91ceaecdcf00029be57f07b9237a60c07b9
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501476"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48261547"
 ---
 # <a name="yield-c-reference"></a>yield (C# Başvurusu)
-Kullanırken `yield` anahtar sözcüğü bir deyimde, belirttiğiniz yöntemin, işlecin veya `get` erişimci görünür olan bir yineleyici. Kullanarak `yield` bir yineleyici tanımlamak için açık bir ekstra sınıf gereksinimini ortadan kaldırır (bir numaralandırma için durumu tutan sınıf, bkz <xref:System.Collections.Generic.IEnumerator%601> örneği) uyguladığınızda <xref:System.Collections.IEnumerable> ve <xref:System.Collections.IEnumerator> özel bir koleksiyona deseni yazın.  
+Kullandığınızda `yield` [bağlamsal anahtar sözcük](../../../csharp/language-reference/keywords/index.md#contextual-keywords) bir deyimde, belirttiğiniz yöntemin, işlecin veya `get` erişimci görünür olan bir yineleyici. Kullanarak `yield` bir yineleyici tanımlamak için açık bir ekstra sınıf gereksinimini ortadan kaldırır (bir numaralandırma için durumu tutan sınıf, bkz <xref:System.Collections.Generic.IEnumerator%601> örneği) uyguladığınızda <xref:System.Collections.IEnumerable> ve <xref:System.Collections.IEnumerator> özel bir koleksiyona deseni yazın.  
   
  Aşağıdaki örnek, iki formunu gösterir `yield` deyimi.  
   

@@ -15,11 +15,11 @@ ms.assetid: cbf46f63-ce28-486d-b827-ec0f1a9d8319
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 32799b14c88ee098e15e0ffa1dfa5aaa585cdc73
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47421306"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48264414"
 ---
 # <a name="accessing-the-internet-through-a-proxy"></a>İnternet'e bir Proxy üzerinden erişme
 Sitenizin Internet'e erişim sağlamak için bir ara sunucu kullanıyorsa, Web ara sunucusu ile iletişim kurmak uygulamanızı etkinleştirmek için bir proxy örneği yapılandırmanız gerekir.  

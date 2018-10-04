@@ -2,16 +2,16 @@
 title: Temel Örnek
 ms.date: 03/30/2017
 ms.assetid: c1910bc1-3d0a-4fa6-b12a-4ed6fe759620
-ms.openlocfilehash: 8c99b4955dcc00015d54391dcb509b312190ddab
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 29edc8acb0293210e66e31660e3215220440fbae
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508715"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580322"
 ---
 # <a name="basic-sample"></a>Temel Örnek
-Bu örnek, bir hizmet bulunabilir hale getirme ve arayın ve kayıtlı bir bulunabilir hizmet çağırmak nasıl gösterir. Bu örnek iki projeden oluşan: hizmet ve istemci.  
-  
+Bu örnek, bir hizmet bulunabilir hale getirme ve arayın ve kayıtlı bir bulunabilir hizmet çağırmak nasıl gösterir. Bu örnek iki projeden oluşan: hizmet ve istemci.
+
 > [!NOTE]
 >  Bu örnek, kod içinde bulma uygular.  Yapılandırmada bulma uygulayan bir örnek için bkz. [yapılandırma](../../../../docs/framework/wcf/samples/configuration-sample.md).  
   
@@ -84,7 +84,7 @@ static void InvokeCalculatorService(ServiceEndpoint serviceEndpoint)
   
 1.  Bu örnek HTTP uç noktaları kullanır ve bu örneği çalıştırmak için doğru URL ACL eklenmesi gerekir. Daha fazla bilgi için [yapılandırma HTTP ve HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353). Aşağıdaki komut bir yükseltilmiş ayrıcalık yürütme uygun ACL'lerin eklemeniz gerekir. Olduğu gibi bir komut çalışmazsa, aşağıdaki bağımsız değişkenler yerine etki alanı ve kullanıcı adı isteyebilirsiniz. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
-2.  Kullanarak [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]Basic.sln açın ve örnek oluşturun.  
+2.  Visual Studio 2012 kullanarak Basic.sln açın ve örnek oluşturma.  
   
 3.  Service.exe uygulamayı çalıştırın.  
   

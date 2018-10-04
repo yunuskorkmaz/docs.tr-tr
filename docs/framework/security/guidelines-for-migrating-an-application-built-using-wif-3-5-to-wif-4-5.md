@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 7a32fe6e-5f68-4693-9371-19411fa8063c
 author: BrucePerlerMS
 ms.openlocfilehash: ec66803edc21f186fa9a8c5bcb91b5181789893d
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47086872"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582521"
 ---
 # <a name="guidelines-for-migrating-an-application-built-using-wif-35-to-wif-45"></a>WIF 4.5 WIF 3.5 kullanılarak oluşturulan bir uygulamayı geçirme yönergeleri
 ## <a name="applies-to"></a>Uygulandığı öğe:  

@@ -2,82 +2,82 @@
 title: Windows için WCF Hizmetleri ve Etkinlik İzleme
 ms.date: 03/30/2017
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
-ms.openlocfilehash: 11f476b966886d4a114f7870b4c029e200ee84e0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 26ce5fcb07b06a52f69ad8655adea563c177b055
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504778"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48266877"
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>Windows için WCF Hizmetleri ve Etkinlik İzleme
-Bu örnek, çözümleme izleme Windows Communication Foundation (WCF), olay izleme için Windows (ETW) olayları yaymak için nasıl kullanılacağını gösterir. Analitik izlemeleri, WCF hizmetleri üretim ortamında giderme sağlayan anahtar WCF yığın noktalarında yayılan olaylardır.  
-  
- WCF hizmetlerinde analitik izleme, izleme performans üzerinde en az etki ile bir üretim ortamında açılabilir. Bu izlemeler, olaylar bir ETW oturumu için olarak gönderilir.  
-  
- Bu örnek, olayları Olay Görüntüleyicisi kullanılarak görüntülenebilir olay günlüğü için hizmetten gönderilir, temel bir WCF hizmeti içerir. WCF hizmetinden gelen olayları dinler adanmış bir ETW oturumu başlatmak mümkündür. Örnek, olayları Olay Görüntüleyicisi'ni kullanarak okunabilir ikili bir dosyada depolayan ayrılmış bir ETW oturumu oluşturmak için bir betik içerir.  
-  
-#### <a name="to-use-this-sample"></a>Bu örneği kullanmak için  
-  
-1.  Kullanarak [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], EtwAnalyticTraceSample.sln çözüm dosyasını açın.  
-  
-2.  Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.  
-  
-3.  Çözümü çalıştırmak için CTRL + F5 tuşlarına basın.  
-  
-     Web tarayıcısında tıklayın **Calculator.svc**. WSDL belgesinde hizmet URI'si tarayıcı içinde görüntülenmesi gerekir. Bu URI'yi kopyalayın.  
-  
-     Varsayılan olarak, hizmet başlatılır 1378 bağlantı noktası isteklerini dinlemeye (http://localhost:1378/Calculator.svc).  
-  
-4.  WCF test istemcisi (WcfTestClient.exe) çalıştırın.  
-  
-     WCF test istemcisi (WcfTestClient.exe) bulunan \< [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] yükleme dizini > WcfTestClient.exe \Common7\IDE\ (varsayılan [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] yükleme dizini olan C:\Program Files\Microsoft Visual Studio 10.0).  
-  
-5.  WCF test istemcisi içinde hizmet seçerek ekleyin **dosya**, ardından **Hizmet Ekle**.  
-  
-     Uç nokta adresi giriş kutusuna ekleyin. Varsayılan, http://localhost:1378/Calculator.svc değeridir.  
-  
-6.  Olay Görüntüleyici uygulamasını açın.  
-  
-     Hizmetini çağırmak önce Olay Görüntüleyicisi'ni başlatın ve olay günlüğüne olayları WCF hizmetinden yayılan izleme dinlediğinden emin olun.  
-  
-7.  Gelen **Başlat** menüsünde **Yönetimsel Araçlar**, ardından **Olay Görüntüleyicisi'ni**.  Etkinleştirme **analitik** ve **hata ayıklama** günlükleri.  
-  
-8.  Olay Görüntüleyicisi'nde ağaç görünümünde gidin **Olay Görüntüleyicisi'ni**, **uygulama ve hizmet günlükleri**, **Microsoft**, **Windows**ve ardından **Uygulama uygulamalarının**. Sağ **uygulama uygulamalarının**seçin **görünümü**, ardından **Analitik ve hata ayıklama günlüklerini göster**.  
-  
-     Emin **Analitik ve hata ayıklama günlüklerini göster** seçeneği denetlenir.  
-  
-9. Etkinleştirme **analitik** günlük.  
-  
-     Olay Görüntüleyicisi'nde ağaç görünümünde gidin **Olay Görüntüleyicisi'ni**, **uygulama ve hizmet günlükleri**, **Microsoft**, **Windows**ve ardından **Uygulama uygulamalarının**. Sağ **analitik** seçip **günlüğü etkinleştir**.  
-  
-#### <a name="to-test-the-service"></a>Hizmeti test etmek için  
-  
-1.  WCF test istemcisi geri geçiş yapmak ve çift `Divide` ve bir Payda 0 belirtin varsayılan değerleri koruyun.  
-  
-     Payda 0 ise, hizmet bir hata oluşturur.  
-  
-2.  Hizmetten yayılan olayları gözlemektir.  
-  
-     Olay Görüntüleyicisi'ne geçin ve gidin **Olay Görüntüleyicisi'ni**, **uygulama ve hizmet günlükleri**, **Microsoft**, **Windows**ve ardından **Uygulama uygulamalarının**. Sağ **analitik** seçip **Yenile**.  
-  
-     WCF analiz izleme olayları Olay Görüntüleyicisi'nde görüntülenir. Tarafından bir hata oluştuğundan bir hata izleme olayı service Olay Görüntüleyicisi görüntülenen dikkat edin.  
-  
-3.  1 ve 2, ancak geçerli girişler. Değerini `N2` parametresi 0 dışındaki herhangi bir sayı olabilir.  
-  
-     WCF görüntülemek için analitik kanal Yenile olayları hata olaylarını dahil değildir.  
-  
- Örnek, bir WCF hizmetinden yayılan analitik izleme olayları gösterir.  
-  
-#### <a name="to-cleanup-optional"></a>(İsteğe bağlı) temizlemek için  
-  
-1.  Olay Görüntüleyicisi'ni açın.  
-  
-2.  Gidin **Olay Görüntüleyicisi'ni**, **uygulama ve hizmet günlükleri**, **Microsoft**, **Windows**, ardından  **Uygulama sunucusu uygulamalar**. Sağ **analitik** seçip **devre dışı günlük**.  
-  
-3.  Gidin **Olay Görüntüleyicisi'ni**, **uygulama ve hizmet günlükleri**, **Microsoft**, **Windows**, ardından  **Uygulama sunucusu uygulamalar**. Sağ **analitik** seçip **Günlüğü Temizle**.  
-  
-4.  Seçin **Temizle** olayları silmek için seçeneği.  
-  
+Bu örnek, çözümleme izleme Windows Communication Foundation (WCF), olay izleme için Windows (ETW) olayları yaymak için nasıl kullanılacağını gösterir. Analitik izlemeleri, WCF hizmetleri üretim ortamında giderme sağlayan anahtar WCF yığın noktalarında yayılan olaylardır.
+
+ WCF hizmetlerinde analitik izleme, izleme performans üzerinde en az etki ile bir üretim ortamında açılabilir. Bu izlemeler, olaylar bir ETW oturumu için olarak gönderilir.
+
+ Bu örnek, olayları Olay Görüntüleyicisi kullanılarak görüntülenebilir olay günlüğü için hizmetten gönderilir, temel bir WCF hizmeti içerir. WCF hizmetinden gelen olayları dinler adanmış bir ETW oturumu başlatmak mümkündür. Örnek, olayları Olay Görüntüleyicisi'ni kullanarak okunabilir ikili bir dosyada depolayan ayrılmış bir ETW oturumu oluşturmak için bir betik içerir.
+
+#### <a name="to-use-this-sample"></a>Bu örneği kullanmak için
+
+1.  Visual Studio 2012 kullanarak EtwAnalyticTraceSample.sln çözüm dosyasını açın.
+
+2.  Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.
+
+3.  Çözümü çalıştırmak için CTRL + F5 tuşlarına basın.
+
+     Web tarayıcısında tıklayın **Calculator.svc**. WSDL belgesinde hizmet URI'si tarayıcı içinde görüntülenmesi gerekir. Bu URI'yi kopyalayın.
+
+     Varsayılan olarak, hizmet başlatılır 1378 bağlantı noktası isteklerini dinlemeye (http://localhost:1378/Calculator.svc).
+
+4.  WCF test istemcisi (WcfTestClient.exe) çalıştırın.
+
+     WCF test istemcisi (WcfTestClient.exe) bulunan \<Visual Studio 2012 yükleme dizini > \Common7\IDE\ WcfTestClient.exe (Visual Studio 2012 yükleme dizini varsayılan değer C:\Program Files\Microsoft Visual Studio 10.0).
+
+5.  WCF test istemcisi içinde hizmet seçerek ekleyin **dosya**, ardından **Hizmet Ekle**.
+
+     Uç nokta adresi giriş kutusuna ekleyin. Varsayılan, http://localhost:1378/Calculator.svc değeridir.
+
+6.  Olay Görüntüleyici uygulamasını açın.
+
+     Hizmetini çağırmak önce Olay Görüntüleyicisi'ni başlatın ve olay günlüğüne olayları WCF hizmetinden yayılan izleme dinlediğinden emin olun.
+
+7.  Gelen **Başlat** menüsünde **Yönetimsel Araçlar**, ardından **Olay Görüntüleyicisi'ni**.  Etkinleştirme **analitik** ve **hata ayıklama** günlükleri.
+
+8.  Olay Görüntüleyicisi'nde ağaç görünümünde gidin **Olay Görüntüleyicisi'ni**, **uygulama ve hizmet günlükleri**, **Microsoft**, **Windows**ve ardından **Uygulama uygulamalarının**. Sağ **uygulama uygulamalarının**seçin **görünümü**, ardından **Analitik ve hata ayıklama günlüklerini göster**.
+
+     Emin **Analitik ve hata ayıklama günlüklerini göster** seçeneği denetlenir.
+
+9. Etkinleştirme **analitik** günlük.
+
+     Olay Görüntüleyicisi'nde ağaç görünümünde gidin **Olay Görüntüleyicisi'ni**, **uygulama ve hizmet günlükleri**, **Microsoft**, **Windows**ve ardından **Uygulama uygulamalarının**. Sağ **analitik** seçip **günlüğü etkinleştir**.
+
+#### <a name="to-test-the-service"></a>Hizmeti test etmek için
+
+1.  WCF test istemcisi geri geçiş yapmak ve çift `Divide` ve bir Payda 0 belirtin varsayılan değerleri koruyun.
+
+     Payda 0 ise, hizmet bir hata oluşturur.
+
+2.  Hizmetten yayılan olayları gözlemektir.
+
+     Olay Görüntüleyicisi'ne geçin ve gidin **Olay Görüntüleyicisi'ni**, **uygulama ve hizmet günlükleri**, **Microsoft**, **Windows**ve ardından **Uygulama uygulamalarının**. Sağ **analitik** seçip **Yenile**.
+
+     WCF analiz izleme olayları Olay Görüntüleyicisi'nde görüntülenir. Tarafından bir hata oluştuğundan bir hata izleme olayı service Olay Görüntüleyicisi görüntülenen dikkat edin.
+
+3.  1 ve 2, ancak geçerli girişler. Değerini `N2` parametresi 0 dışındaki herhangi bir sayı olabilir.
+
+     WCF görüntülemek için analitik kanal Yenile olayları hata olaylarını dahil değildir.
+
+ Örnek, bir WCF hizmetinden yayılan analitik izleme olayları gösterir.
+
+#### <a name="to-cleanup-optional"></a>(İsteğe bağlı) temizlemek için
+
+1.  Olay Görüntüleyicisi'ni açın.
+
+2.  Gidin **Olay Görüntüleyicisi'ni**, **uygulama ve hizmet günlükleri**, **Microsoft**, **Windows**, ardından  **Uygulama sunucusu uygulamalar**. Sağ **analitik** seçip **devre dışı günlük**.
+
+3.  Gidin **Olay Görüntüleyicisi'ni**, **uygulama ve hizmet günlükleri**, **Microsoft**, **Windows**, ardından  **Uygulama sunucusu uygulamalar**. Sağ **analitik** seçip **Günlüğü Temizle**.
+
+4.  Seçin **Temizle** olayları silmek için seçeneği.
+
 > [!IMPORTANT]
 >  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   

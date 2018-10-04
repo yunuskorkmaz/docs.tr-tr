@@ -7,15 +7,14 @@ dev_langs:
 - CSharp
 - VB
 ms.assetid: 67bf05b7-1d08-4911-83b7-a45d0b036fc3
-ms.openlocfilehash: 4f85a51c47eb045d1d2f0111cb217199c9acf0d7
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 9f7f696b1f5be2e96c50938f4627271d891deb32
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46537884"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582206"
 ---
 # <a name="how-to-define-a-windows-communication-foundation-service-contract"></a>Nasıl yapılır: Windows Communication Foundation Hizmet Sözleşmesini Tanımlama
-
 İlk altı görev temel Windows Communication Foundation (WCF) uygulaması oluşturmak için gereken budur. Tüm altı görevleri genel bakış için bkz. [başlangıç Öğreticisi](../../../docs/framework/wcf/getting-started-tutorial.md) konu.
 
  Bir WCF Hizmeti oluştururken, ilk görev bir hizmet sözleşmesini tanımlamaktır. Hizmet sözleşmesi hangi işlemleri belirtir destekler. Bir işlem, bir Web hizmeti yöntemi düşünülebilir. Sözleşmeler, bir C++, C# veya Visual Basic (VB) arabirimi tanımlamasıyla oluşturulur. Arabirimdeki her yöntem için bir hizmet işlemiyle karşılık gelir. Her arabirimde <xref:System.ServiceModel.ServiceContractAttribute> uygulanan ve her bir işlem olmalıdır <xref:System.ServiceModel.OperationContractAttribute> özniteliğinin. Arabirimdeki bir yöntem mümkünse <xref:System.ServiceModel.ServiceContractAttribute> özniteliği yok <xref:System.ServiceModel.OperationContractAttribute> öznitelik, hizmet tarafından yöntemi gösterilmez.

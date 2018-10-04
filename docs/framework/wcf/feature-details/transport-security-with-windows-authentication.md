@@ -7,11 +7,11 @@ dev_langs:
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
 author: BrucePerlerMS
 ms.openlocfilehash: babafe369ee9f5c9261e3b5c8bc749d3d1d39ec4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47236455"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48778522"
 ---
 # <a name="transport-security-with-windows-authentication"></a>Windows Kimlik Doğrulama ile Taşıma Güvenliği
 Aşağıdaki senaryoda, bir Windows Communication Foundation (WCF) istemci ve hizmet Windows güvenlik güvenli gösterilmektedir. Programlama hakkında daha fazla bilgi için bkz. [nasıl yapılır: Windows kimlik bilgileri ile bir hizmeti güvenli hale getirme](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).  

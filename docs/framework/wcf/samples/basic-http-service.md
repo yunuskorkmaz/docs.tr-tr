@@ -2,12 +2,12 @@
 title: Temel HTTP Hizmeti
 ms.date: 03/30/2017
 ms.assetid: 27048b43-8a54-4f2a-9952-594bbfab10ad
-ms.openlocfilehash: f97fcab1200b9c13860ab8030378b5402b087d7a
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 2e4aee93341404df5f06b096a9a7bf18a3c94f56
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028271"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48262401"
 ---
 # <a name="basic-http-service"></a>Temel HTTP Hizmeti
 Bu örnek, bu özellik Windows Communication Foundation (WCF) REST programlama modeli kullanarak "POX" (düz eski XML) hizmet olarak – başvurulan bir HTTP tabanlı, RPC tabanlı hizmeti - uygulama gösterilmiştir. Bu örnek iki bileşenden oluşur: şirket içinde barındırılan bir WCF HTTP hizmet (adını da) ve hizmet oluşturur ve bu çağrıları yapan bir konsol uygulaması (Program.cs).  
@@ -27,7 +27,7 @@ Bu örnek, bu özellik Windows Communication Foundation (WCF) REST programlama m
   
 #### <a name="to-use-this-sample"></a>Bu örneği kullanmak için  
   
-1.  Temel Http hizmeti örneği için çözümü açın. Başlatma sırasında [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], başarılı bir şekilde yürütmek için örnek için yönetici çalıştırmanız gerekir. Sağ tıklayarak bunu [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] simgesini seçip **yönetici olarak çalıştır** bağlam menüsünden.  
+1.  Temel Http hizmeti örneği için çözümü açın. Visual Studio 2012 başlatırken başarıyla yürütmek için örnek için yönetici olarak çalıştırmanız gerekir. Visual Studio 2012 simgesini sağ tıklatıp seçerek bunu **yönetici olarak çalıştır** bağlam menüsünden.  
   
 2.  Çözümü derleyin ve konsol uygulamasının hata ayıklama olmadan çalıştırmak için Ctrl + F5 tuşuna basın CTRL + SHIFT + B tuşlarına basın. Konsol penceresinde görünür ve çalışan hizmetin URI sağlar ve URI HTML Yardım sayfası çalışan hizmeti. Herhangi bir noktada HTML Yardım sayfası URI Yardım sayfasının bir tarayıcıda yazarak görüntüleyebilirsiniz. Örnek çalışırken, istemcinin geçerli etkinlik durumunu yazar.  
   

@@ -8,29 +8,30 @@ dev_langs:
 ms.assetid: 9404d758-679f-4ffb-995d-3d07d817659e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1d8b8c21af8ca0a21d97e8246ad82c42aaaf4974
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 7f835cfb45848ca2790c3dcb541629564e9cc48a
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45971974"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48261400"
 ---
 # <a name="migrating-from-the-xsltransform-class"></a>XslTransform sınıfından geçirme
-XSLT mimari olarak tasarlandı [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)] bırakın. <xref:System.Xml.Xsl.XslTransform> Sınıfı tarafından değiştirilmiştir <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı.  
-  
- Aşağıdaki bölümlerde ana farklılıklar açıklanmaktadır <xref:System.Xml.Xsl.XslCompiledTransform> ve <xref:System.Xml.Xsl.XslTransform> sınıfları.  
-  
-## <a name="performance"></a>Performans  
- <xref:System.Xml.Xsl.XslCompiledTransform> Sınıfı, çok sayıda performans iyileştirmeleri içerir. Yeni XSLT işlemci XSLT stil sayfası ortak Ara benzer bir biçimde, ortak dil çalışma zamanı (CLR) diğer programlama dili için yaptığı için aşağı derler. Stil sayfası derlenmiş sonra önbelleğe alınan ve yeniden.  
-  
- <xref:System.Xml.Xsl.XslCompiledTransform> Sınıfı da çok daha hızlı hale diğer iyileştirmeler içerir <xref:System.Xml.Xsl.XslTransform> sınıfı.  
-  
+
+XSLT mimarisi Visual Studio 2005 sürümünde yeniden tasarlandı. <xref:System.Xml.Xsl.XslTransform> Sınıfı yerine <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı.
+
+ Aşağıdaki bölümlerde ana farklılıklar açıklanmaktadır <xref:System.Xml.Xsl.XslCompiledTransform> ve <xref:System.Xml.Xsl.XslTransform> sınıfları.
+
+## <a name="performance"></a>Performans
+ <xref:System.Xml.Xsl.XslCompiledTransform> Sınıfı, çok sayıda performans iyileştirmeleri içerir. Yeni XSLT işlemci XSLT stil sayfası ortak Ara benzer bir biçimde, ortak dil çalışma zamanı (CLR) diğer programlama dili için yaptığı için aşağı derler. Stil sayfası derlenmiş sonra önbelleğe alınan ve yeniden.
+
+ <xref:System.Xml.Xsl.XslCompiledTransform> Sınıfı da çok daha hızlı hale diğer iyileştirmeler içerir <xref:System.Xml.Xsl.XslTransform> sınıfı.
+
 > [!NOTE]
->  Ancak genel performansını <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı, daha iyi <xref:System.Xml.Xsl.XslTransform> sınıfı <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> yöntemi <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı daha gerçekleştirebileceğiniz daha yavaş <xref:System.Xml.Xsl.XslTransform.Load%2A> yöntemi <xref:System.Xml.Xsl.XslTransform> sınıfı ilk kez bir dönüştürme üzerinde çağrılır. XSLT dosyası, yüklenmeden önce derlenmesi gereken olmasıdır. Daha fazla bilgi için bkz şu blog gönderisi: [XslCompiledTransform XslTransform daha yavaş?](https://blogs.msdn.microsoft.com/antosha/2006/07/16/xslcompiledtransform-slower-than-xsltransform/)  
-  
-## <a name="security"></a>Güvenlik  
- Varsayılan olarak, <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı XSLT desteğini devre dışı bırakır `document()` işlevi ve katıştırılmış betik oluşturma. Bu özellikler oluşturarak etkin hale getirilebilir bir <xref:System.Xml.Xsl.XsltSettings> aktarması ve etkinleştirilen özellikleri nesnesi <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> yöntemi. Aşağıdaki örnek komut dosyası yazmayı etkinleştirin ve XSLT dönüşümü gerçekleştirmek nasıl gösterir.  
-  
+>  Ancak genel performansını <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı, daha iyi <xref:System.Xml.Xsl.XslTransform> sınıfı <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> yöntemi <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı daha gerçekleştirebileceğiniz daha yavaş <xref:System.Xml.Xsl.XslTransform.Load%2A> yöntemi <xref:System.Xml.Xsl.XslTransform> sınıfı ilk kez bir dönüştürme üzerinde çağrılır. XSLT dosyası, yüklenmeden önce derlenmesi gereken olmasıdır. Daha fazla bilgi için bkz şu blog gönderisi: [XslCompiledTransform XslTransform daha yavaş?](https://blogs.msdn.microsoft.com/antosha/2006/07/16/xslcompiledtransform-slower-than-xsltransform/)
+
+## <a name="security"></a>Güvenlik
+ Varsayılan olarak, <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı XSLT desteğini devre dışı bırakır `document()` işlevi ve katıştırılmış betik oluşturma. Bu özellikler oluşturarak etkin hale getirilebilir bir <xref:System.Xml.Xsl.XsltSettings> aktarması ve etkinleştirilen özellikleri nesnesi <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> yöntemi. Aşağıdaki örnek komut dosyası yazmayı etkinleştirin ve XSLT dönüşümü gerçekleştirmek nasıl gösterir.
+
  [!code-csharp[XML_Migration#16](../../../../samples/snippets/csharp/VS_Snippets_Data/XML_Migration/CS/migration.cs#16)]
  [!code-vb[XML_Migration#16](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XML_Migration/VB/migration.vb#16)]  
   

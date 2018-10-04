@@ -6,20 +6,19 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], getting started
 - getting started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
-ms.openlocfilehash: 204869d0a7a7b8d56449c28cb37b18624a1701cf
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 5947e70b0dc4ef5838322722f2ee2a55034bae96
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47207133"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582180"
 ---
 # <a name="getting-started-tutorial"></a>Başlangıç Öğreticisi
-
 Bu bölümdeki konular, hızlı Etkilenme programlama deneyimi Windows Communication Foundation (WCF) için size yöneliktir. Bu konu başlığının altındaki listenin sırasına göre tamamlanması için tasarlanmıştır. Bu öğreticide, WCF hizmeti ve istemci uygulamaları oluşturmak için gerekli adımlar tanıtıcı bir anlayış verir. Her biri bir veya daha fazla hizmet işlemlerini kullanıma sunan bir veya daha fazla uç noktaları, bir hizmet sunar. *Uç nokta* Hizmetin nerede hizmet bulunabilir, adres nasıl bir istemci hizmeti ve işlevselliği tanımlayan bir sözleşme ile iletişim kurması gereken açıklayan bilgileri içeren bir bağlama belirtir hizmet tarafından istemcilerine sağlanan.
 
  Bu öğreticideki konu başlıklarını sırasıyla anlayıp uyguladıktan sonra çalışan bir hizmete ve hizmetini çağıran bir istemci sahip olacaktır. İlk üç konularda hizmeti barındırmak nasıl bir hizmet sözleşmesini tanımlama ve hizmet sözleşmesini uygulama konusunda açıklanmaktadır. Oluşturulan bir konsol uygulaması içinde şirket içinde barındırılan hizmetidir. Hizmetleri, Internet Information Services (IIS) altında da barındırılabilir. Bunun nasıl yapılacağı hakkında daha fazla bilgi için bkz. [nasıl yapılır: IIS'de WCF Hizmeti barındırma](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md). Hizmet kodu yapılandırılır; Ancak, hizmet yapılandırma dosyasının içinde yapılandırılabilir. Bir yapılandırma dosyası kullanma hakkında daha fazla bilgi için bkz. [yapılandırma dosyalarını kullanarak Hizmetleri Yapılandırma](../../../docs/framework/wcf/configuring-services-using-configuration-files.md).
 
- Sonraki üç konular istemci proxy oluşturmak, istemci uygulaması yapılandırma ve hizmet tarafından sunulan hizmet işlemi çağırmak için istemci proxy kullanmak nasıl açıklar. Hizmetleri, bir istemci uygulama hizmeti ile iletişim için gereken bilgileri tanımlayan meta verileri yayımlama. [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] Bu meta verilere erişme işlemini otomatikleştirir ve oluşturmak ve hizmeti için istemci uygulamasını yapılandırmak için kullanır. Kullanmıyorsanız, [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)], kullanabileceğiniz [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) yapılandırmak ve hizmeti için istemci uygulamasını yapılandırmak için.
+ Sonraki üç konular istemci proxy oluşturmak, istemci uygulaması yapılandırma ve hizmet tarafından sunulan hizmet işlemi çağırmak için istemci proxy kullanmak nasıl açıklar. Hizmetleri, bir istemci uygulama hizmeti ile iletişim için gereken bilgileri tanımlayan meta verileri yayımlama. Visual Studio 2012, bu meta verilere erişme işlemini otomatikleştiren ve oluşturmak ve hizmeti için istemci uygulamasını yapılandırmak için kullanır. Visual Studio 2012 kullanmıyorsanız, kullanabileceğiniz [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) yapılandırmak ve hizmeti için istemci uygulamasını yapılandırmak için.
 
 Bu bölümdeki konular, geliştirme ortamı olarak Visual Studio kullandığınız varsayılır. Başka bir geliştirme ortamı kullanıyorsanız, Visual Studio özgü yönergeleri yoksayın.
 

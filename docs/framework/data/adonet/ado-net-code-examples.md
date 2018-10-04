@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-ms.openlocfilehash: 93cc0cf34d2bba23ff0938c8c13d7343d665192d
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: a809dbc34d08fc864f6cfe8263489ab52ce41e35
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45649230"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580751"
 ---
 # <a name="adonet-code-examples"></a>ADO.NET kod örnekleri
 Bu konudaki kod listeleri aşağıdaki ADO.NET teknolojileri kullanarak bir veritabanından veri almak nasıl ekleyebileceğiniz gösterilmektedir:
@@ -66,7 +66,7 @@ Bu örnekteki kod tanıtım bağlantı varsayar. Bir Oracle sunucusunda müşter
 Aşağıdaki kod listeleri varlıkları bir varlık veri modeli (EDM) sorgulayarak bir veri kaynağından veri almak nasıl ekleyebileceğiniz gösterilmektedir. Bu örneklerde [Northwind modeli](https://msdn.microsoft.com/74521f8c-e974-48cb-8858-c08deff52638). Daha fazla bilgi için [Entity Framework'e Genel Bakış](../../../../docs/framework/data/adonet/ef/overview.md).
 
 ### <a name="linq-to-entities"></a>LINQ - Varlıklar
-Bu örnekteki kod, yalnızca kullanıcı, Categoryıd'si ve CategoryName özellikleri içeren bir anonim tür öngörülen kategorileri nesneleri olarak verileri döndürmek için LINQ sorgusu kullanır. Daha fazla bilgi için [LINQ to Entities genel bakış](https://msdn.microsoft.com/86d87a27-c17a-45ac-b28d-72c8500333c6).
+Bu örnekteki kod, yalnızca kullanıcı, Categoryıd'si ve CategoryName özellikleri içeren bir anonim tür öngörülen kategorileri nesneleri olarak verileri döndürmek için LINQ sorgusu kullanır. Daha fazla bilgi için [LINQ to Entities genel bakış](../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).
 
 ```csharp
 using System;

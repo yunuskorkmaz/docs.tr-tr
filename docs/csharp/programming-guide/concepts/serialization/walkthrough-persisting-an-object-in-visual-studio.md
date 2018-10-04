@@ -1,12 +1,12 @@
 ---
 title: 'İzlenecek yol: C# kullanarak bir nesneyi kalıcı kılma'
 ms.date: 04/26/2018
-ms.openlocfilehash: c3cff57f008eb524c2d2bec406431e4c41dca617
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 85c447ae43086cc789338e77555b7400a523662a
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47231499"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580185"
 ---
 # <a name="walkthrough-persisting-an-object-using-c"></a>İzlenecek yol: C# kullanarak bir nesneyi kalıcı kılma #
 
@@ -28,6 +28,8 @@ Bu kılavuzda, bir temel oluşturacak `Loan` nesne ve verileri bir dosyaya kalı
 
 > [!TIP]
 > Bir kod Düzenleyicisi'ni yüklemeniz gerekir? Deneyin [Visual Studio](https://visualstudio.com/downloads)!
+
+* Örnek C# 7.3 gerektirir. Bkz: [C# dil sürümünü seçin](../../../language-reference/configure-language-version.md) 
 
 Örnek kodu inceleyebilirsiniz [.NET örnekleri GitHub deposunda](https://github.com/dotnet/samples/tree/master/csharp/serialization).
 

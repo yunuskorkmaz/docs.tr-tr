@@ -2,12 +2,12 @@
 title: '&lt;netPeerTcpBinding&gt; &lt;taşıma&gt;'
 ms.date: 03/30/2017
 ms.assetid: c44d86d2-1160-44d7-9c7a-297b12eccc7f
-ms.openlocfilehash: 2b89ae090d24ff6aad1aae1b39a0a18961bd2537
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 62ba3b27b10afe182623f3be0f6738940e194579
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45678052"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48579796"
 ---
 # <a name="lttransportgt-of-ltnetpeertcpbindinggt"></a>&lt;netPeerTcpBinding&gt; &lt;taşıma&gt;
 Kullanırken aktarım düzeyi güvenlik ayarlarını belirtir [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).  
@@ -64,5 +64,5 @@ Kullanırken aktarım düzeyi güvenlik ayarlarını belirtir [ \<netPeerTcpBind
  [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)  
  [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Windows Communication Foundation Hizmetleri ve istemcileri yapılandırmak için bağlamaları kullanma](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
  [\<bağlama >](../../../../../docs/framework/misc/binding.md)

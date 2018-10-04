@@ -13,11 +13,11 @@ ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 64df186be7d9e503ac22e177bca8da31e165f240
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48032601"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48266318"
 ---
 # <a name="ltaddgt-element-for-webrequestmodules-network-settings"></a>&lt;ekleme&gt; webRequestModules (ağ ayarları) için
 Uygulamaya özel bir Web isteği modülü ekler.  

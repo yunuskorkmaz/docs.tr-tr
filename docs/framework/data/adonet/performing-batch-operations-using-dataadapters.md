@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e72ed5af-b24f-486c-8429-c8fd2208f844
 ms.openlocfilehash: cfc77ff3b030ffebf52feab0190f81fc4e581cf9
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47231144"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48780004"
 ---
 # <a name="performing-batch-operations-using-dataadapters"></a>DataAdapters kullanarak toplu işlemleri gerçekleştirme
 ADO.NET'te batch desteği sağlayan bir <xref:System.Data.Common.DataAdapter> INSERT, UPDATE ve DELETE işlemlerini gruplamak için bir <xref:System.Data.DataSet> veya <xref:System.Data.DataTable> yerine, aynı anda tek bir işlem sunucusuna. Sunucuya gidiş dönüş sayısı azalma, genellikle önemli performans artışları sonuçlanır. Toplu güncelleştirmeler, SQL Server için .NET veri sağlayıcıları desteklenir (<xref:System.Data.SqlClient>) ve Oracle (<xref:System.Data.OracleClient>).  

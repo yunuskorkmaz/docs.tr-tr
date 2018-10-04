@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: b900b85b4e3e56dbc587a15edea40f6e3032cbd1
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 59b21bf9bbe3e78a1ac8cedd3812863cbcae7382
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004503"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582586"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows Forms Uygulaması Temelleri (Visual Basic)
 Visual Basic önemli bir parçası, kullanıcıların bilgisayarlarında yerel olarak çalışan Windows Forms uygulamaları oluşturmak için olanağıdır. Visual Studio, Windows formları kullanarak uygulama ve kullanıcı arabirimi oluşturmak için kullanabilirsiniz. Bir Windows Forms uygulaması sınıflardan geliştirilmiştir <xref:System.Windows.Forms> ad alanı.  
@@ -54,7 +54,7 @@ Visual Basic önemli bir parçası, kullanıcıların bilgisayarlarında yerel o
 ## <a name="displaying-and-manipulating-data"></a>Verileri görüntüleme ve düzenleme  
  Birçok uygulama, verileri bir veritabanından, XML dosyası, XML Web hizmeti veya başka bir veri kaynağı görüntülemeniz gerekir. Windows Forms adlı esnek bir denetim sağlar <xref:System.Windows.Forms.DataGridView> kendi hücrenin her veri parçası kapladığı bir geleneksel satır ve sütun biçiminde tablo gibi veri işleme için denetimi. Kullanarak <xref:System.Windows.Forms.DataGridView> bireysel hücrelerin görünüşünü özelleştirme, rastgele satırları ve sütunları yerinde kilitleyebilir ve karmaşık denetimlerin yanı sıra başka özellikler hücreleri içine görüntüleme.  
   
- Bir ağ üzerinden veri kaynaklarına bağlanma, Windows Forms akıllı istemciler ile basit bir görevdir. <xref:System.Windows.Forms.BindingSource> Bileşeni, Windows Forms ile yeni [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)] ve [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)], bir veri kaynağı bağlantısını temsil eder ve önceki ve sonraki kayıtlara gezinme, kayıtları düzenleme ve kaydetme denetimlere veri bağlama için yöntemleri sunar. özgün kaynağına değişiklikler. <xref:System.Windows.Forms.BindingNavigator> Denetim sağlayan basit bir arabirim üzerinden <xref:System.Windows.Forms.BindingSource> kayıtlar arasında gezinmek kullanıcılar için bileşen.  
+ Bir ağ üzerinden veri kaynaklarına bağlanma, Windows Forms akıllı istemciler ile basit bir görevdir. <xref:System.Windows.Forms.BindingSource> Bileşeni, yeni Visual Studio 2005'te Windows Forms ile ve [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)], bir veri kaynağı bağlantısını temsil eder ve önceki ve sonraki kayıtlara gezinme, kayıtları düzenleme ve kaydetme denetimlere veri bağlama için yöntemleri sunar. özgün kaynağına değişiklikler. <xref:System.Windows.Forms.BindingNavigator> Denetim sağlayan basit bir arabirim üzerinden <xref:System.Windows.Forms.BindingSource> kayıtlar arasında gezinmek kullanıcılar için bileşen.  
   
 ### <a name="data-bound-controls"></a>Verilere bağlı denetimler  
  Veritabanları, Web servisleri ve nesneler gibi veri kaynakları projenizde görüntüler veri kaynakları penceresini kullanarak kolayca verilere bağlı denetimler oluşturabilirsiniz. Öğeleri bu pencereden projenizdeki formlara sürükleyerek veriye bağlı denetimler oluşturabilirsiniz. Ayrıca veri mevcut denetimleri için veri nesnelerini veri kaynakları penceresinden mevcut denetimlerin üzerine sürükleyerek bağlama.  

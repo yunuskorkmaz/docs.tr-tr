@@ -3,11 +3,11 @@ title: Variance in Generic Interfaces (C#)
 ms.date: 07/20/2015
 ms.assetid: 4828a8f9-48c0-4128-9749-7fcd6bf19a06
 ms.openlocfilehash: 11d0c8665412bb513cb68d58203a454b7c97e052
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030174"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48581543"
 ---
 # <a name="variance-in-generic-interfaces-c"></a>Variance in Generic Interfaces (C#)
 .NET framework 4, çeşitli genel arabirimlerin mevcut sapma desteği sunmuştur. Bu arabirimleri uygulayan sınıfların örtük dönüştürme varyansı desteği sağlar. Aşağıdaki arabirimlerinden şimdi değişken şunlardır:  

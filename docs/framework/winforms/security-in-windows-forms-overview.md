@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: 54fc56e5e7d6ee5cd0e7bc55bd22c7d4127eb4d3
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 36d38756f7df88ec04aca781525f0f6b0a48b768
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45747131"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580936"
 ---
 # <a name="security-in-windows-forms-overview"></a>Windows Forms'ta Güvenliğe Genel Bakış
 Yayınlanmadan önce [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], çalışan tüm kod bir kullanıcı bilgisayar aynı haklarını veya bilgisayarın kullanıcısı olan kaynaklara erişim izinleri olan kullanıcının. Örneğin, kullanıcının dosya sistemine erişim izni, kod dosya sistemine erişebilir izin; Kullanıcı bir veritabanına erişmek için izin verilen, kod veritabanına erişmeye izin. Bu hak ve izinler kullanıcı açıkça yerel bilgisayarda yüklü olan yürütülebilir dosyaları, kod için kabul edilebilir olsa da, bunlar Internet veya yerel Intranet gelen kötü amaçlı kodlar için kabul edilebilir olmayabilir. Bu kod, kullanıcının izni olmadan bilgisayar kaynaklarına erişebilmesi olmamalıdır.  
@@ -49,7 +49,7 @@ Yayınlanmadan önce [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)
   
  İsteğe bağlı izinler istediğinde, uygulamanızı kendisine verilmemiş izinleri gerektiren bir eylem gerçekleştirdiğinde oluşturulacak güvenlik özel durumlarını işlemelidir. Uygun olan işleme <xref:System.Security.SecurityException> uygulamanızın çalışmaya devam edebilir sağlayacaktır. Uygulamanızın özel durum, kullanıcı için bir özelliği devre haline olup olmadığını belirlemek için kullanabilirsiniz. Örneğin, bir uygulamanın devre dışı bırakabilirsiniz **Kaydet** gerekli dosya iznin verilmediği, menü seçeneği.  
   
- Bazı durumlarda, onaylanan tüm uygun izinleri varsa bilmek zordur. Yüzeysel olarak zararsız görünen bir yöntem çağrısının, örneğin, yürütme sırasında belirli bir noktada dosya sistemi erişebilir. Uygulamanızı gerekli tüm izinlere sahip dağıtılmaz, masaüstünüzde hata ayıklamak, ancak dağıtıldığında başarısız olduğunda bunu ince test. Her iki [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK ve [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] bir uygulama için gerekli olan izinleri hesaplamak için araçları içerir: MT.exe komut satırı aracı ve Visual Studio'nun hesaplama izinleri özelliği sırasıyla.  
+ Bazı durumlarda, onaylanan tüm uygun izinleri varsa bilmek zordur. Yüzeysel olarak zararsız görünen bir yöntem çağrısının, örneğin, yürütme sırasında belirli bir noktada dosya sistemi erişebilir. Uygulamanızı gerekli tüm izinlere sahip dağıtılmaz, masaüstünüzde hata ayıklamak, ancak dağıtıldığında başarısız olduğunda bunu ince test. Her iki [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK'sını ve Visual Studio 2005 içeren bir uygulama için gerekli olan izinleri hesaplamak için Araçlar: MT.exe komut satırı aracı ve Visual Studio'nun hesaplama izinleri özelliği sırasıyla.  
   
  Aşağıdaki konular, ek Windows Forms güvenlik özellikleri açıklanmaktadır.  
   

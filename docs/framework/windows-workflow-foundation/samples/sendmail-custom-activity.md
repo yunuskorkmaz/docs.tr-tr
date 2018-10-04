@@ -2,12 +2,12 @@
 title: SendMail özel etkinliği
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-ms.openlocfilehash: e9d27711754c3aa8ff7f68c23f528c9f5c4356f7
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: f51914ae01ea680ae09be8080cce1aa866bd6ec7
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45747211"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48266675"
 ---
 # <a name="sendmail-custom-activity"></a>SendMail özel etkinliği
 Bu örnek, türetilen özel etkinlik oluşturma işlemini gösterir <xref:System.Activities.AsyncCodeActivity> bir iş akışı uygulaması içinde kullanmak için SMTP kullanarak posta göndermek için. Özel Etkinlik özelliklerini kullanan <xref:System.Net.Mail.SmtpClient> zaman uyumsuz olarak e-posta gönderin ve kimlik doğrulaması içeren e-posta göndermek için. Test modu, belirteç değiştirme, dosya şablonları ve test bırakma yolu gibi bazı son kullanıcı özellikler de sağlar.  
@@ -24,8 +24,8 @@ Bu örnek, türetilen özel etkinlik oluşturma işlemini gösterir <xref:System
 |Konu|<xref:System.Activities.InArgument%601>\<dize >|İletinin konusu.|  
 |Gövde|<xref:System.Activities.InArgument%601>\<dize >|İletinin gövdesi.|  
 |Ekler|<xref:System.Activities.InArgument%601>\<dize >|Bu e-posta iletisine ekli veri depolamak için kullanılan ek koleksiyonu.|  
-|From|<xref:System.Net.Mail.MailAddress>|Bu e-posta iletisi için adres.|  
-|Amaç|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Bu e-posta iletisinin alıcıları içeren adres koleksiyonu.|  
+|Başlangıç|<xref:System.Net.Mail.MailAddress>|Bu e-posta iletisi için adres.|  
+|Bitiş|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Bu e-posta iletisinin alıcıları içeren adres koleksiyonu.|  
 |CC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Bilgi (CC) alıcılarını bu eposta iletisi için içeren koleksiyon adresi.|  
 |GİZLİ|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Bu e-posta iletisi için gizli kopya (gizli) alıcıları içeren adres koleksiyonu.|  
 |Belirteçler|<xref:System.Activities.InArgument%601>< IDictionary\<dize, dize >>|Belirteçleri gövdesinde değiştirin. Bu özellik, kullanıcıların daha sonra bu özelliği kullanarak verilen belirteçleri ile değiştirilebilir daha gövdesinde bazı değerleri belirtmesine izin verir.|  
@@ -36,7 +36,7 @@ Bu örnek, türetilen özel etkinlik oluşturma işlemini gösterir <xref:System
 ## <a name="solution-contents"></a>Çözüm içeriği  
  Çözüm iki proje içerir.  
   
-|Project|Açıklama|Önemli dosya|  
+|Proje|Açıklama|Önemli dosya|  
 |-------------|-----------------|---------------------|  
 |SendMail|SendMail etkinliği|1.  SendMail.cs: ana etkinlik uygulama<br />2.  SendMailDesigner.xaml ve SendMailDesigner.xaml.cs: SendMail etkinliğinin Tasarımcısı<br />3.  MailTemplateBody.htm: gönderilecek e-posta şablonu.|  
 |SendMailTestClient|SendMail etkinlik test etmek için istemci.  Bu proje SendMail etkinlik çağrılırken, iki yolunu gösterir: bildirimli ve programlı olarak.|1.  Sequence1.XAML: SendMail etkinlik çağıran iş akışı.<br />2.  Program.cs: Sıra1 çağırır ve aynı zamanda program aracılığıyla SendMail kullanan bir iş akışı oluşturur.|  
@@ -119,7 +119,7 @@ new SendMail
   
 ##### <a name="to-run-this-sample"></a>Bu örneği çalıştırmak için  
   
-1.  Kullanarak [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], SendMail.sln çözüm dosyasını açın.  
+1.  Visual Studio 2010 kullanarak SendMail.sln çözüm dosyasını açın.  
   
 2.  Geçerli bir SMTP sunucusuna erişimi olduğundan emin olun. Kurulum yönergelerine bakın.  
   

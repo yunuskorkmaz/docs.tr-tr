@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 69a49deb-6369-41ba-806b-ae8d21fac64b
 author: BrucePerlerMS
 ms.openlocfilehash: 565bf30d334c62c8132c60f411e89f7b260c54f1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47206196"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48777136"
 ---
 # <a name="ltroleclaimtypegt"></a>&lt;RoleClaimType&gt;
 Rol türü talep koleksiyonunda tanımlayan talep türünü belirtir <xref:System.Security.Claims.ClaimsIdentity> tarafından döndürülen nesne <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> belirteci işleyicisi yöntemi.  

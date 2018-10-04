@@ -2,12 +2,12 @@
 title: '&lt;netMsmqBinding&gt; &lt;iletisi&gt;'
 ms.date: 03/30/2017
 ms.assetid: 6ebf0240-d7be-4493-b0fe-f00fd5989d77
-ms.openlocfilehash: 65a8b0fa120d23931ad218ac67846c066b050af8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 124d53ae24b627c35863fda4cd8f404057978f1e
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515820"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48579094"
 ---
 # <a name="ltmessagegt-of-ltnetmsmqbindinggt"></a>&lt;netMsmqBinding&gt; &lt;iletisi&gt;
 SOAP ileti güvenlik ayarları bu tanımlar `netMsmqBinding` bağlama.  
@@ -60,5 +60,5 @@ SOAP ileti güvenlik ayarları bu tanımlar `netMsmqBinding` bağlama.
  [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)  
  [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Windows Communication Foundation Hizmetleri ve istemcileri yapılandırmak için bağlamaları kullanma](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
  [\<bağlama >](../../../../../docs/framework/misc/binding.md)

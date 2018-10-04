@@ -2,133 +2,133 @@
 title: Windows Communication Foundation'dan İleti Kuyruğuna
 ms.date: 03/30/2017
 ms.assetid: 78d0d0c9-648e-4d4a-8f0a-14d9cafeead9
-ms.openlocfilehash: ea0723d178b37b1ff2581981f8f49a6953c913cc
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: f6a686e658f4cc0097f86dfb19def2d0ba91b8ab
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45597815"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582469"
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a>Windows Communication Foundation'dan İleti Kuyruğuna
-Bu örnek, bir Windows Communication Foundation (WCF) uygulaması bir Message Queuing (MSMQ) uygulaması için bir ileti nasıl gönderebileceğiniz gösterilir. Hizmeti, sıraya alınan iletileri alma hizmeti gözlemleyin sağlamak için bir şirket içinde barındırılan bir konsol uygulamasıdır. Hizmet ve istemci aynı anda çalıştırılması gerekmez.  
-  
- Hizmet iletileri kuyruktan alır ve siparişler işler. Hizmet, bir işlem kuyruğu oluşturur ve bir ileti alındı ileti işleyicisini, aşağıdaki örnek kodda gösterildiği gibi ayarlar.  
+Bu örnek, bir Windows Communication Foundation (WCF) uygulaması bir Message Queuing (MSMQ) uygulaması için bir ileti nasıl gönderebileceğiniz gösterilir. Hizmeti, sıraya alınan iletileri alma hizmeti gözlemleyin sağlamak için bir şirket içinde barındırılan bir konsol uygulamasıdır. Hizmet ve istemci aynı anda çalıştırılması gerekmez.
+
+ Hizmet iletileri kuyruktan alır ve siparişler işler. Hizmet, bir işlem kuyruğu oluşturur ve bir ileti alındı ileti işleyicisini, aşağıdaki örnek kodda gösterildiği gibi ayarlar.
 
 ```csharp
-static void Main(string[] args)  
-{  
-    if (!MessageQueue.Exists(  
-              ConfigurationManager.AppSettings["queueName"]))  
-       MessageQueue.Create(  
-           ConfigurationManager.AppSettings["queueName"], true);  
-        //Connect to the queue  
-        MessageQueue Queue = new   
-    MessageQueue(ConfigurationManager.AppSettings["queueName"]);  
-    Queue.ReceiveCompleted +=   
-                 new ReceiveCompletedEventHandler(ProcessOrder);  
-    Queue.BeginReceive();  
-    Console.WriteLine("Order Service is running");  
-    Console.ReadLine();  
-}  
+static void Main(string[] args)
+{
+    if (!MessageQueue.Exists(
+              ConfigurationManager.AppSettings["queueName"]))
+       MessageQueue.Create(
+           ConfigurationManager.AppSettings["queueName"], true);
+        //Connect to the queue
+        MessageQueue Queue = new
+    MessageQueue(ConfigurationManager.AppSettings["queueName"]);
+    Queue.ReceiveCompleted +=
+                 new ReceiveCompletedEventHandler(ProcessOrder);
+    Queue.BeginReceive();
+    Console.WriteLine("Order Service is running");
+    Console.ReadLine();
+}
 ```
 
- Ne zaman bir ileti alındığında kuyrukta ileti işleyicisi `ProcessOrder` çağrılır.  
+ Ne zaman bir ileti alındığında kuyrukta ileti işleyicisi `ProcessOrder` çağrılır.
 
 ```csharp
-public static void ProcessOrder(Object source,  
-    ReceiveCompletedEventArgs asyncResult)  
-{  
-    try  
-    {  
-        // Connect to the queue.  
-        MessageQueue Queue = (MessageQueue)source;  
-        // End the asynchronous receive operation.  
-        System.Messaging.Message msg =   
-                     Queue.EndReceive(asyncResult.AsyncResult);  
-        msg.Formatter = new System.Messaging.XmlMessageFormatter(  
-                                new Type[] { typeof(PurchaseOrder) });  
-        PurchaseOrder po = (PurchaseOrder) msg.Body;  
-        Random statusIndexer = new Random();  
-        po.Status = PurchaseOrder.OrderStates[statusIndexer.Next(3)];  
-        Console.WriteLine("Processing {0} ", po);  
-        Queue.BeginReceive();  
-    }  
-    catch (System.Exception ex)  
-    {  
-        Console.WriteLine(ex.Message);  
-    }  
-  
-}  
+public static void ProcessOrder(Object source,
+    ReceiveCompletedEventArgs asyncResult)
+{
+    try
+    {
+        // Connect to the queue.
+        MessageQueue Queue = (MessageQueue)source;
+        // End the asynchronous receive operation.
+        System.Messaging.Message msg =
+                     Queue.EndReceive(asyncResult.AsyncResult);
+        msg.Formatter = new System.Messaging.XmlMessageFormatter(
+                                new Type[] { typeof(PurchaseOrder) });
+        PurchaseOrder po = (PurchaseOrder) msg.Body;
+        Random statusIndexer = new Random();
+        po.Status = PurchaseOrder.OrderStates[statusIndexer.Next(3)];
+        Console.WriteLine("Processing {0} ", po);
+        Queue.BeginReceive();
+    }
+    catch (System.Exception ex)
+    {
+        Console.WriteLine(ex.Message);
+    }
+
+}
 ```
 
- Hizmet ayıklar `ProcessOrder` MSMQ İleti gövdesi ve sırayla işler.  
-  
- MSMQ kuyruk adı, aşağıdaki örnek yapılandırmada gösterildiği gibi bir yapılandırma dosyasının appSettings bölümünde belirtilir.  
-  
-```xml  
-<appSettings>  
-    <add key="orderQueueName" value=".\private$\Orders" />  
-</appSettings>  
-```  
-  
+ Hizmet ayıklar `ProcessOrder` MSMQ İleti gövdesi ve sırayla işler.
+
+ MSMQ kuyruk adı, aşağıdaki örnek yapılandırmada gösterildiği gibi bir yapılandırma dosyasının appSettings bölümünde belirtilir.
+
+```xml
+<appSettings>
+    <add key="orderQueueName" value=".\private$\Orders" />
+</appSettings>
+```
+
 > [!NOTE]
->  Kuyruk adı, eğik çizgi ayırıcılar yolundaki ve yerel bilgisayar için bir nokta (.) kullanır.  
-  
- İstemci, bir sipariş oluşturur ve aşağıdaki örnek kodda gösterildiği gibi bir işlem kapsamında satın alma siparişi gönderir.  
+>  Kuyruk adı, eğik çizgi ayırıcılar yolundaki ve yerel bilgisayar için bir nokta (.) kullanır.
+
+ İstemci, bir sipariş oluşturur ve aşağıdaki örnek kodda gösterildiği gibi bir işlem kapsamında satın alma siparişi gönderir.
 
 ```csharp
-// Create the purchase order  
-PurchaseOrder po = new PurchaseOrder();  
-// Fill in the details  
-...  
-  
-OrderProcessorClient client = new OrderProcessorClient("OrderResponseEndpoint");  
-  
-MsmqMessage<PurchaseOrder> ordermsg = new MsmqMessage<PurchaseOrder>(po);  
-using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Required))  
-{  
-    client.SubmitPurchaseOrder(ordermsg);  
-    scope.Complete();  
-}  
-Console.WriteLine("Order has been submitted:{0}", po);  
-  
-//Closing the client gracefully closes the connection and cleans up resources  
-client.Close();  
+// Create the purchase order
+PurchaseOrder po = new PurchaseOrder();
+// Fill in the details
+...
+
+OrderProcessorClient client = new OrderProcessorClient("OrderResponseEndpoint");
+
+MsmqMessage<PurchaseOrder> ordermsg = new MsmqMessage<PurchaseOrder>(po);
+using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Required))
+{
+    client.SubmitPurchaseOrder(ordermsg);
+    scope.Complete();
+}
+Console.WriteLine("Order has been submitted:{0}", po);
+
+//Closing the client gracefully closes the connection and cleans up resources
+client.Close();
 ```
 
- İstemci bir özel istemci sırayla MSMQ ileti sırasına göndermek için kullanır. Alan ve iletiyi işleyen bir uygulama bir MSMQ uygulama ve WCF uygulaması olduğundan iki uygulama arasında örtük hizmet sözleşme yok. Bu nedenle, bu senaryoda Svcutil.exe aracını kullanarak bir proxy oluşturamıyoruz.  
-  
- Özel istemci temel olarak kullanan tüm WCF uygulamaları aynı olduğundan `MsmqIntegration` ileti göndermek için bağlama. Diğer istemcilerden farklı olarak, bir dizi hizmet işlemleri içermez. Bir gönderme iletisi yalnızca işlemdir.  
+ İstemci bir özel istemci sırayla MSMQ ileti sırasına göndermek için kullanır. Alan ve iletiyi işleyen bir uygulama bir MSMQ uygulama ve WCF uygulaması olduğundan iki uygulama arasında örtük hizmet sözleşme yok. Bu nedenle, bu senaryoda Svcutil.exe aracını kullanarak bir proxy oluşturamıyoruz.
+
+ Özel istemci temel olarak kullanan tüm WCF uygulamaları aynı olduğundan `MsmqIntegration` ileti göndermek için bağlama. Diğer istemcilerden farklı olarak, bir dizi hizmet işlemleri içermez. Bir gönderme iletisi yalnızca işlemdir.
 
 ```csharp
-[System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]  
-public interface IOrderProcessor  
-{  
-    [OperationContract(IsOneWay = true, Action = "*")]  
-    void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg);  
-}  
-  
-public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrderProcessor>, IOrderProcessor  
-{  
-    public OrderProcessorClient(){}  
-  
-    public OrderProcessorClient(string configurationName)  
-        : base(configurationName)  
-    { }  
-  
-    public OrderProcessorClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress address)  
-        : base(binding, address)  
-    { }  
-  
-    public void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg)  
-    {  
-        base.Channel.SubmitPurchaseOrder(msg);  
-    }  
-}  
+[System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]
+public interface IOrderProcessor
+{
+    [OperationContract(IsOneWay = true, Action = "*")]
+    void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg);
+}
+
+public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrderProcessor>, IOrderProcessor
+{
+    public OrderProcessorClient(){}
+
+    public OrderProcessorClient(string configurationName)
+        : base(configurationName)
+    { }
+
+    public OrderProcessorClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress address)
+        : base(binding, address)
+    { }
+
+    public void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg)
+    {
+        base.Channel.SubmitPurchaseOrder(msg);
+    }
+}
 ```
 
- Örneği çalıştırdığınızda, istemci ve hizmet etkinlikleri hizmet ve istemci konsol pencerelerinde görüntülenir. İstemciden hizmet alma iletileri görebilirsiniz. Her konsol penceresi hizmet ve istemci kapatmak için ENTER tuşuna basın. Sıraya alma kullanımda olduğundan, istemci ve hizmet aynı zamanda açık ve çalışıyor olması gerekmez, unutmayın. Örneğin, istemcisini çalıştıran, da kapatın ve ardından hizmeti başlatın ve hala iletileri alacaksınız.  
-  
+ Örneği çalıştırdığınızda, istemci ve hizmet etkinlikleri hizmet ve istemci konsol pencerelerinde görüntülenir. İstemciden hizmet alma iletileri görebilirsiniz. Her konsol penceresi hizmet ve istemci kapatmak için ENTER tuşuna basın. Sıraya alma kullanımda olduğundan, istemci ve hizmet aynı zamanda açık ve çalışıyor olması gerekmez, unutmayın. Örneğin, istemcisini çalıştıran, da kapatın ve ardından hizmeti başlatın ve hala iletileri alacaksınız.
+
 > [!NOTE]
 >  Bu örnek, Message Queuing yüklenmesini gerektirir. ' Ndaki yükleme yönergelerine bakın [Message Queuing](https://go.microsoft.com/fwlink/?LinkId=94968).  
   
@@ -138,7 +138,7 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
   
 2.  Hizmet ilk olarak çalıştırılırsa, sıranın mevcut olduğundan emin olun kontrol eder. Kuyruk yoksa, bir hizmeti oluşturacaksınız. İlk sırayı oluşturmak için hizmet çalıştırabileceğiniz veya bir MSMQ Kuyruk Yöneticisi ile oluşturabilirsiniz. Windows 2008'de bir kuyruk oluşturmak için aşağıdaki adımları izleyin.  
   
-    1.  Sunucu Yöneticisi'nde açın [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
+    1.  Visual Studio 2012'de Sunucu Yöneticisi'ni açın.  
   
     2.  Genişletin **özellikleri** sekmesi.  
   

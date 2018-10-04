@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 88bc2880-ecb9-47cd-9816-39016a07076f
 author: BrucePerlerMS
 ms.openlocfilehash: 51db352913999d5527ead5273e6488cd09d88670
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48032712"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582482"
 ---
 # <a name="security-concerns-and-useful-tips-for-tracing"></a>İzleme için Güvenlikle İlgili Noktalar ve Faydalı İpuçları
 Bu konuda, WebHost kullanırken faydalı ipuçları yanı sıra açıklanmasını hassas bilgileri nasıl Koruyabileceğiniz açıklanmaktadır.  

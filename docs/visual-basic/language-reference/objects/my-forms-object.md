@@ -8,11 +8,11 @@ helpviewer_keywords:
 - My.Forms object
 ms.assetid: f6bff4e6-6769-4294-956b-037aa6106d2a
 ms.openlocfilehash: d15765b7673f321d4362ceea0adb73959a7e7726
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035365"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582664"
 ---
 # <a name="myforms-object"></a>My.Forms Nesnesi
 Geçerli projede bildirilen her Windows formunu örneğini erişmek için özellikleri sağlar.  

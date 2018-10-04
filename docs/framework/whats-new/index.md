@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e04ccaf2ac97a3bd784c9aa110b53b16a31e920c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 6ab205ad12b60651443e0fc409e890ea93168ebd
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003070"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48264193"
 ---
 # .NET Framework'teki yenilikler <a name="introduction"></a>
 
@@ -1655,7 +1655,7 @@ Yönetilmeyen profil oluşturma API'si şu şekilde geliştirilmiştir:
 
  Çekirdek yeni özellikler ve .NET Framework 4.5.1'deki geliştirmeler şunları içerir:
 
-- Derlemeler için otomatik bağlama yeniden yönlendirme. İle başlayarak [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)]hedefleyen bir uygulama derleme yaparken [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], bağlama yönlendirmeleri eklenebilir uygulama yapılandırma dosyasına uygulamanız veya bileşenleri aynı derlemenin birden çok sürümüne başvuruyorsa. Bu özellik .NET Framework'ün eski sürümlerini hedefleyen projeler için de etkinleştirebilirsiniz. Daha fazla bilgi için [nasıl yapılır: etkinleştirme ve devre dışı otomatik bağlama yeniden yönlendirme](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
+- Derlemeler için otomatik bağlama yeniden yönlendirme. Visual Studio 2013 ile başlayarak, derleme yaptığınızda hedefleyen bir uygulama [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], bağlama yönlendirmeleri eklenebilir uygulama yapılandırma dosyasına uygulamanız veya bileşenleri aynı derlemenin birden çok sürümüne başvuruyorsa. Bu özellik .NET Framework'ün eski sürümlerini hedefleyen projeler için de etkinleştirebilirsiniz. Daha fazla bilgi için [nasıl yapılır: etkinleştirme ve devre dışı otomatik bağlama yeniden yönlendirme](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
 
 - Geliştiricilerin sunucu ve bulut uygulamalarının performansını artırmak amacıyla tanılama bilgilerini toplama yeteneği. Daha fazla bilgi için <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityId%2A> ve <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityIdCore%2A> yöntemleri <xref:System.Diagnostics.Tracing.EventSource> sınıfı.
 
@@ -1679,17 +1679,17 @@ Yönetilmeyen profil oluşturma API'si şu şekilde geliştirilmiştir:
     </appSettings>
     ```
 
- .NET Framework uygulamalarınızı ayıklanmasına ilişkin iyileştirmeler [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)] içerir:
+ .NET Framework uygulamalarınızı Visual Studio 2013'te hata ayıklama sırasında geliştirmeler şunlardır:
 
-- Visual Studio hata ayıklayıcıda dönüş değerleri. Hata ayıklaması yaptığınızda içinde yönetilen bir uygulama [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)], Otomatikler penceresi görüntülendiğinde, türleri ve yöntemleri için değerleri döndürür. Bu bilgiler Masaüstü, Windows Store ve Windows Phone uygulamaları için kullanılabilir. Daha fazla bilgi için [yöntem çağrılarının dönüş değerlerini İnceleme](https://msdn.microsoft.com/library/e3245b37-8e2e-4200-ba84-133726e95f1f\(v=vs.120\).aspx) MSDN Kitaplığı'nda.
+- Visual Studio hata ayıklayıcıda dönüş değerleri. Visual Studio 2013'te yönetilen bir uygulamada hata ayıklaması yaparken otomatik değişkenler penceresi dönüş türleri ve yöntemleri için değerleri görüntüler. Bu bilgiler Masaüstü, Windows Store ve Windows Phone uygulamaları için kullanılabilir. Daha fazla bilgi için [yöntem çağrılarının dönüş değerlerini İnceleme](https://msdn.microsoft.com/library/e3245b37-8e2e-4200-ba84-133726e95f1f\(v=vs.120\).aspx) MSDN Kitaplığı'nda.
 
-- Düzenle ve devam etmek için 64-bit uygulamalar. [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)] Masaüstü, Windows Store ve Windows Phone 64 bit yönetilen uygulamalar için Düzenle ve devam et özelliğini destekler. Varolan kısıtlamalar hem 32-bit hem de 64-bit uygulamalar için yürürlükte kalır. (son bölümüne bakın [desteklenen kod değişiklikleri (C#)](/visualstudio/debugger/supported-code-changes-csharp) makale).
+- Düzenle ve devam etmek için 64-bit uygulamalar. Visual Studio 2013, 64 bit yönetilen uygulamaları, masaüstü, Windows Store ve Windows Phone için Düzenle ve devam et özelliğini destekler. Varolan kısıtlamalar hem 32-bit hem de 64-bit uygulamalar için yürürlükte kalır. (son bölümüne bakın [desteklenen kod değişiklikleri (C#)](/visualstudio/debugger/supported-code-changes-csharp) makale).
 
-- Zaman uyumsuz yönteme duyarlı hata ayıklama. Zaman uyumsuz uygulamalarda hata ayıklama daha kolay hale getirmek için [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)], çağrı yığını Zamanuyumsuz programlamayı desteklemek için derleyiciler tarafından sağlanan altyapı kodunu gizler ve ayrıca mantıksal izleyebilmeniz mantıksal üst öğe çerçevelerini içeride sabitler daha program yürütmesini NET bir şekilde. Görevler penceresi Paralel Görevler penceresinin yerine geçer ve belirli bir kesme noktasıyla ilgili görevleri görüntüler ve ayrıca şu anda uygulamada zamanlanmış veya etkin olan diğer görevleri de görüntüler. "Zaman uyumsuz yönteme duyarlı hata ayıklama" bölümünde bu özellikle ilgili bilgi edinebilirsiniz [.NET Framework 4.5.1 duyurusunun](https://blogs.msdn.microsoft.com/dotnet/2013/06/26/announcing-the-net-framework-4-5-1-preview/).
+- Zaman uyumsuz yönteme duyarlı hata ayıklama. Visual Studio 2013'te zaman uyumsuz uygulamalarında hata ayıklama daha kolay hale getirmek için çağrı yığınını Zamanuyumsuz programlamayı desteklemek için derleyiciler tarafından sağlanan altyapı kodunu gizler ve daha fazla mantıksal program yürütme izleyebilmeniz mantıksal üst çerçeve içinde ayrıca zincir NET bir şekilde. Görevler penceresi Paralel Görevler penceresinin yerine geçer ve belirli bir kesme noktasıyla ilgili görevleri görüntüler ve ayrıca şu anda uygulamada zamanlanmış veya etkin olan diğer görevleri de görüntüler. "Zaman uyumsuz yönteme duyarlı hata ayıklama" bölümünde bu özellikle ilgili bilgi edinebilirsiniz [.NET Framework 4.5.1 duyurusunun](https://blogs.msdn.microsoft.com/dotnet/2013/06/26/announcing-the-net-framework-4-5-1-preview/).
 
 - Windows çalışma zamanı bileşenleri için daha iyi özel durum desteği. İçinde [!INCLUDE[win81](../../../includes/win81-md.md)], Windows Store uygulamalarından doğan özel durumlar, dil sınırları dahil özel duruma neden olan hata hakkında bilgi koruma. "Windows Store uygulaması geliştirme" bölümünde bu özellikle ilgili bilgi edinebilirsiniz [.NET Framework 4.5.1 duyurusunun](https://blogs.msdn.microsoft.com/dotnet/2013/06/26/announcing-the-net-framework-4-5-1-preview/).
 
- İle başlayarak [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)], kullanabileceğiniz [yönetilen profil Kılavuzlu optimizasyon Aracı (Mpgo.exe)](../../../docs/framework/tools/mpgo-exe-managed-profile-guided-optimization-tool.md) iyileştirmek için [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] Masaüstü uygulamaların yanı sıra uygulamaları.
+ Kullanabileceğiniz Visual Studio 2013 ile başlayarak, [yönetilen profil Kılavuzlu optimizasyon Aracı (Mpgo.exe)](../../../docs/framework/tools/mpgo-exe-managed-profile-guided-optimization-tool.md) iyileştirmek için [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] Masaüstü uygulamaların yanı sıra uygulamaları.
 
  ASP.NET 4.5.1'deki yeni özellikler için bkz: [için ASP.NET and Web Tools Visual Studio 2013 sürüm notları](/aspnet/visual-studio/overview/2013/release-notes).
 
@@ -1752,7 +1752,7 @@ Yönetilmeyen profil oluşturma API'si şu şekilde geliştirilmiştir:
 ### <a name="tools"></a>Araçlar
  İçinde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], kaynak dosya oluşturucu (Resgen.exe) kullanmak üzere bir .resw dosyası oluşturmanıza imkan tanır [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamaları bir .resources dosyasından bir .NET Framework derlemesine katıştırılmış. Daha fazla bilgi için [Resgen.exe (kaynak dosya oluşturucu)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md).
 
- Yönetilen profil temelli iyileştirme (Mpgo.exe), yerel görüntü derlemelerini en iyi duruma getirme tarafından uygulama başlangıç zamanı, bellek kullanımı (çalışma kümesi boyutu) ve aktarım hızı geliştirmenizi sağlar. Komut satırı aracı yerel görüntü uygulama derlemeleri için profil verileri oluşturur. Bkz: [Mpgo.exe (yönetilen profil temelli iyileştirme aracı)](../../../docs/framework/tools/mpgo-exe-managed-profile-guided-optimization-tool.md). İle başlayarak [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)], en iyi duruma getirmek için Mpgo.exe'yi kullanabilirsiniz [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] Masaüstü uygulamaların yanı sıra uygulamaları.
+ Yönetilen profil temelli iyileştirme (Mpgo.exe), yerel görüntü derlemelerini en iyi duruma getirme tarafından uygulama başlangıç zamanı, bellek kullanımı (çalışma kümesi boyutu) ve aktarım hızı geliştirmenizi sağlar. Komut satırı aracı yerel görüntü uygulama derlemeleri için profil verileri oluşturur. Bkz: [Mpgo.exe (yönetilen profil temelli iyileştirme aracı)](../../../docs/framework/tools/mpgo-exe-managed-profile-guided-optimization-tool.md). Visual Studio 2013 ile başlayarak, en iyi duruma getirmek için Mpgo.exe'yi kullanabilirsiniz [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] Masaüstü uygulamaların yanı sıra uygulamaları.
 
 <a name="parallel" />
 

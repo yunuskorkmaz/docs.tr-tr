@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: bfdc127f-8d94-4566-8bef-f583c6ae7398
 author: BrucePerlerMS
 ms.openlocfilehash: 99bf6edb4e4f631eba292990c65c1f0c8553d8c0
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48046454"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580228"
 ---
 # <a name="ltcookiehandlergt"></a>&lt;cookieHandler&gt;
 Yapılandırır <xref:System.IdentityModel.Services.CookieHandler> , <xref:System.IdentityModel.Services.SessionAuthenticationModule> okuma ve yazma tanımlama bilgileri (SAM) kullanır.  

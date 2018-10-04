@@ -2,19 +2,19 @@
 title: 'Nasıl yapılır: Mesajlaşma Etkinlikleriyle İş Akışı Hizmeti Oluşturma'
 ms.date: 03/30/2017
 ms.assetid: 53d094e2-6901-4aa1-88b8-024b27ccf78b
-ms.openlocfilehash: 6ccc4ddc6ba273f6f41efb023f077dd6b87c7ffb
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 12fc8706eb81df281571bb6ab54f7c2a2805f351
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196563"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580504"
 ---
 # <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Nasıl yapılır: Mesajlaşma Etkinlikleriyle İş Akışı Hizmeti Oluşturma
 Bu konuda, Mesajlaşma etkinlikleri kullanarak basit bir iş akışı hizmeti oluşturma işlemini açıklamaktadır. Bu konu, burada yalnızca Mesajlaşma etkinlikleri hizmet oluşan bir iş akışı hizmeti oluşturma mekanizması üzerinde odaklanır. Gerçek hizmetinde, diğer birçok etkinlik iş akışı içerir. Hizmet, bir dize alır ve dize çağırana döner, Echo adlı bir işlem uygular. Bu konu, ilk iki konuda serisinin yöneliktir. Bir sonraki konu [nasıl yapılır: bir hizmeti bir iş akışı uygulamanın erişim](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) Bu konu başlığında oluşturduğunuz hizmeti çağıran bir iş akışı uygulamasının nasıl oluşturulacağını açıklar.  
   
 ### <a name="to-create-a-workflow-service-project"></a>Bir iş akışı hizmeti projesi oluşturmak için  
   
-1.  Başlangıç [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
+1.  Visual Studio 2012 başlatın.  
   
 2.  Tıklayın **dosya** menüsünde **yeni**, ardından **proje** görüntülenecek **yeni proje iletişim kutusu**. Seçin **iş akışı** yüklü şablonlar listesinden ve **WCF iş akışı hizmeti uygulaması** proje türleri listesinden. Projeyi adlandırın `MyWFService` ve aşağıdaki çizimde gösterildiği gibi varsayılan konumu kullanın.  
   

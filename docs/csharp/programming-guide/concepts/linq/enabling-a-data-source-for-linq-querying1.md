@@ -2,12 +2,12 @@
 title: Veri kaynağı için LINQ Querying1 etkinleştirme
 ms.date: 07/20/2015
 ms.assetid: d2ef04a5-31a6-45cb-af9a-a5ce7732662c
-ms.openlocfilehash: 204d2d6104a065f1d1cf9e731dc01f400218f91b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 1aa3a22028b0b3d7c705076a3e16379e09323271
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253188"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580056"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>LINQ Sorgusu için Veri Kaynağı Etkinleştirme
 Genişletmenin çeşitli yolları vardır [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgulanmasını herhangi bir veri kaynağı etkinleştirmek için [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] deseni. Veri kaynağı örneğin bir veri yapısı, Web hizmeti, dosya sistemi veya veritabanı olabilir. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Kolaylaştırır istemcilerin bir veri kaynağı için sorgu [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgulamanın etkin olduğu, sözdizimi ve sorgu düzeni değişmediği. Yöntemler [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Genişletilebilir bu veri kaynakları şunları içerir:  
@@ -28,7 +28,7 @@ Genişletmenin çeşitli yolları vardır [!INCLUDE[vbteclinq](~/includes/vbtecl
  İki yolla etkinleştirebilirsiniz [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] bellek içi verileri sorgulama. Veriler uygulayan bir tür ise <xref:System.Collections.Generic.IEnumerable%601>, kullanarak verileri sorgulayabilir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] nesneleri. Uygulanarak türünüzün numaralandırmasını etkinleştirmek için anlamlı yapmaz, <xref:System.Collections.Generic.IEnumerable%601> arabirimi tanımlayabilirsiniz [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] standart sorgu işleci yöntemleri bu türde veya oluşturma [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] türü genişleten standart sorgu işleci yöntemleri. Standart sorgu işleçlerinin özel uygulamaları, sonuçları döndürmek için ertelenmiş yürütme kullanmalıdır.  
   
 ### <a name="remote-data"></a>Uzak Veriler  
- Etkinleştirmek için en iyi seçenek [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] uygulamak için olan bir uzak veri kaynağının sorgulama <xref:System.Linq.IQueryable%601> arabirimi. Ancak bu sağlayıcı gibi genişletilmesinden farklıdır [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] bir veri kaynağı için. Varolan genişletmek için sağlayıcı modeli yoktur [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] teknolojileri gibi [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], veri kaynağının diğer türleri kullanılabilir [!INCLUDE[vs_orcas_long](~/includes/vs-orcas-long-md.md)].  
+ Etkinleştirmek için en iyi seçenek [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] uygulamak için olan bir uzak veri kaynağının sorgulama <xref:System.Linq.IQueryable%601> arabirimi. Ancak bu sağlayıcı gibi genişletilmesinden farklıdır [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] bir veri kaynağı için. Varolan genişletmek için sağlayıcı modeli yoktur [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] teknolojileri gibi [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], veri kaynağının diğer türleri, Visual Studio 2008'de kullanılabilir.
   
 ## <a name="iqueryable-linq-providers"></a>IQueryable LINQ Sağlayıcıları  
  [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Uygulama sağlayıcıları <xref:System.Linq.IQueryable%601> yaygın olarak farklı. Bu bölümde, farklı karmaşıklık düzeyleri açıklanmaktadır.  

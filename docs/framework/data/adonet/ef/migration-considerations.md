@@ -2,12 +2,12 @@
 title: Geçiş konuları (varlık çerçevesi)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: d6643986190b376e188b19851b044bcf05ff7f02
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: cf705caa84742d654465a2dba005f2d8f32abcca
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511028"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48778029"
 ---
 # <a name="migration-considerations-entity-framework"></a>Geçiş konuları (varlık çerçevesi)
 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework, var olan bir uygulama için çeşitli avantajlar sağlar. Çoğu biri veri kaynağındaki şemasından uygulama tarafından kullanılan veri yapılarını ayırmak için kavramsal bir modeli kullanma olanağı Bu avantajlar önemlidir. Bu depolama modelinin veya uygulamaya telafi değişiklik yapmadan veri kaynağına kendisini gelecekteki değişikliklere kolayca yapmanıza olanak sağlar. Kullanmanın avantajları hakkında daha fazla bilgi için [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], bkz: [Entity Framework'e Genel Bakış](../../../../../docs/framework/data/adonet/ef/overview.md) ve [varlık veri modeli](../../../../../docs/framework/data/adonet/entity-data-model.md).  
@@ -29,11 +29,11 @@ ms.locfileid: "43511028"
  Mevcut bir uygulamasına geçirmek için yol [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] uygulama türü ve mevcut veri erişim stratejisi bağlıdır. Mevcut bir uygulamasına geçirirken ancak, her zaman aşağıdaki görevleri gerçekleştirmeniz [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
   
 > [!NOTE]
->  İle başlayarak varlık veri modeli araçları kullandığınızda bu görevlerin tümü otomatik olarak gerçekleştirilir [!INCLUDE[vsOrcas](../../../../../includes/vsorcas-md.md)]. Daha fazla bilgi için [nasıl yapılır: Varlık veri modeli Sihirbazı'nı](https://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d).  
+>  Visual Studio 2008 ile başlayan varlık veri modeli araçları kullandığınızda bu görevlerin tümü otomatik olarak gerçekleştirilir. Daha fazla bilgi için [nasıl yapılır: Varlık veri modeli Sihirbazı'nı](https://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d).  
   
 1.  Uygulamayı yükseltin.  
   
-     Visual Studio'nun önceki bir sürümü kullanılarak oluşturulmuş bir projeyi ve [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] kullanılacak yükseltilmelidir [!INCLUDE[vsOrcas](../../../../../includes/vsorcas-md.md)] SP1 ve [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 3.5 SP1 sürümünden itibaren.  
+     Visual Studio'nun önceki bir sürümü kullanılarak oluşturulmuş bir projeyi ve [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] Visual Studio 2008 SP1'i kullanmak için yükseltilmesi gerekir ve [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 3.5 SP1 sürümünden itibaren.  
   
 2.  Eşleme ve modelleri tanımlar.  
   

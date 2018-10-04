@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: de08662a825a84f19a40863cf73481d89364ebd0
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48046564"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580348"
 ---
 # <a name="putclasswmi-function"></a>PutClassWmi işlevi
 Yeni bir sınıf oluşturur veya mevcut olanı güncelleştirir.  

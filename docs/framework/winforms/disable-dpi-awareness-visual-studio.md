@@ -6,12 +6,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 7ecffedbe536f293945227d817e507f012816737
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 3b290b67ca97065dfc408c09850cf0b5720d65ae
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48037047"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48263512"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Visual Studio'da DPI tanıma devre dışı bırak
 
@@ -68,6 +68,10 @@ Kayıt defteri değişikliği yaparak Visual Studio DPI uyumlu işaretleyebilirs
 Windows 10'da ayarı % 100 ölçeklendirme ekranınıza ayarlamak için şunu yazın **görüntü ayarlarını** görev çubuğunda arama kutusuna tıklayın ve ardından **görünüm ayarlarını değiştirme**. İçinde **ayarları** penceresinde **metin, uygulamaları ve diğer öğelerin boyutunu değiştirme** için **% 100**.
 
 Kullanıcı arabiriminin kullanılabilmesi için çok küçük zorlaştırabilir çünkü ayarı % 100'e ölçeklendirmeyi ekranınıza istenmeyen, olabilir.
+
+## <a name="troubleshoot"></a>Sorun giderme
+
+DPI tanıma geçiş Visual Studio'da beklendiği gibi çalışmıyorsa, sahip olup olmadığını denetleyin `dpiAwareness` değerini **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows nt\currentversion\ımage dosya yürütme Options\devenv.exe**  Kayıt Defteri Düzenleyicisi'nde alt anahtar. Varsa, bu değeri silin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
