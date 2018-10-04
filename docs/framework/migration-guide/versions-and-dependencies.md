@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c18659fa3db1f2e7e047f1bbdc4f75ba6e96f0c6
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 33fdaf883e465b1c39b2f4d00d31c5d6b000a5cc
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44252453"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48781089"
 ---
-# <a name="net-framework-versions-and-dependencies"></a>.NET Framework Sürümleri ve Bağımlılıkları
+# <a name="net-framework-versions-and-dependencies"></a>.NET framework sürümleri ve bağımlılıkları
 Her bir .NET Framework sürümü ortak dil çalışma zamanını (CLR), temel sınıf kitaplıklarını ve diğer yönetilen kitaplıkları içerir. Bu konu, sürüme göre .NET Framework'ün temel özellikleri açıklar, temel CLR sürümleri ve ilişkili geliştirme ortamları hakkında bilgi sağlar ve Windows işletim sistemi tarafından yüklenen sürümleri tanımlar.  
   
 > [!NOTE]
@@ -40,7 +40,7 @@ Her bir .NET Framework sürümü ortak dil çalışma zamanını (CLR), temel s�
 |4.5.1<br/><br/>[Yeni Özellikler](../whats-new/index.md#whats-new-in-the-net-framework-451)|4|2013|✓ 8.1<br />+ 8<br />+ 7<br />+ Vista|✓ 2012 R2<br />+ 2012<br />+ 2008 R2 SP1<br />+ 2008 SP2|Kullanım `Release` DWORD:<br /><br /> -378675 (Windows 8.1)<br />-378758 (diğer)<br /><br /> (bkz [yönergeleri](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md))|  
 |4,5<br/><br/>[Yeni Özellikler](../whats-new/index.md#whats-new-in-the-net-framework-45)|4|2012|✓ 8<br />+ 7<br />+ Vista|✓ 2012<br />+ 2008 R2 SP1<br />+ 2008 SP2|Kullanım `Release` DWORD:<br /><br /> 378389<br /><br />(bkz [yönergeleri](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md))|  
 |4<br/><br/>[Yeni Özellikler](../whats-new/index.md)|4|2010|+ 7<br />+ Vista|+ 2008 R2 SP1<br />+ 2008 SP2<br />+ 2003|Bkz: [yönergeleri](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)|  
-|3.5<br/><br/>[Yeni Özellikler](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ms171868\(v=vs.90\))|2,0|2008|✓ 10\*<br/>✓ 8.1\*<br />✓ 8\*<br />✓ 7<br />+ Vista|✓2008 R2 SP1\*<br />+ 2012 R2\*<br />+ 2012\*<br />+ 2008 SP2<br />+ 2003|Bkz: [yönergeleri](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)|  
+|3.5<br/><br/>[Yeni Özellikler](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ms171868\(v=vs.90\))|2,0|2008|✓ 10\*<br/>✓ 8.1\*<br />✓ 8\*<br />✓ 7<br />+ Vista|  + Windows Server sürüm 1803\* <br/> + Windows Server 1709 sürümü\* <br/> + 2016\* <br/>+ 2012 R2\*<br />+ 2012\*<br />✓2008 R2 SP1\*<br />+ 2008 SP2<br />+ 2003|Bkz: [yönergeleri](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)|  
 |3.0<br/><br/>New:<br/>WPF, WCF, WF, CardSpace|2,0|-|✓ Vista|✓ 2008 R2 SP1 *<br />✓ 2008 SP2\*<br />+ 2003|Bkz: [yönergeleri](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)|  
 |2,0<br/><br/>[Yeni Özellikler](https://docs.microsoft.com/previous-versions/dotnet/netframework-2.0/ms229284\(v%3dvs.80\))|2,0|2005|-|✓ 2008 R2 SP1<br />✓ 2008 SP2<br />✓ 2003|Bkz: [yönergeleri](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)|  
 |1.1<br/><br/>[Yeni Özellikler](https://docs.microsoft.com/previous-versions/dotnet/netframework-1.1/9wtde3k4\(v%3dvs.71\))|1.1|2003|-|✓ 2003|Bkz: [yönergeleri](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)|  
@@ -52,7 +52,7 @@ Her bir .NET Framework sürümü ortak dil çalışma zamanını (CLR), temel s�
 
  Genel olarak, kullandığınız bir uygulama belirli bir sürüme bağlı olabileceği veya o sürüm kaldırılırsa bozulabileceği için bilgisayarınıza yüklü olan .NET Framework sürümlerinden hiçbirini kaldırmamanız gerekir. .NET Framework'ün birden çok sürümünü aynı anda tek bir bilgisayara yükleyebilirsiniz. Başka bir deyişle, önceki sürümleri kaldırmadan .NET Framework'ü yükleyebilirsiniz. Daha fazla bilgi için [Başlarken](../../../docs/framework/get-started/index.md).
 
-## <a name="targeting-and-running-net-framework-apps-for-version-45-and-later"></a>Hedefleme ve çalışan .NET Framework uygulamaları için sürüm 4.5 ve üzeri  
+## <a name="targeting-and-running-net-framework-apps-for-version-45-and-later"></a>Hedefleme ve .NET Framework uygulamaları için sürüm 4.5 ve sonraki çalıştırma  
  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Yerini alan bir yerinde güncelleştirmedir [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] bilgisayarınız ve .NET Framework 4.5.1 üzerinde benzer şekilde, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1 ve 4.7.2 yerinde güncelleştirmelerdir [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], yani aynı kullanın, çalışma zamanı sürümü, ancak derleme sürümlerini güncelleştirilir ve yeni türleri ve üyeleri içerir. Bu güncelleştirmeler birini yükledikten sonra [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], .NET Framework 4.6 veya .NET Framework 4.7 uygulamalarını yeniden derleme gerek kalmadan çalışmaya devam etmesi gerekir. Ancak tersi doğru değildir. .NET Framework'ün önceki bir sürümünde .NET Framework'ün sonraki bir sürümünü'ı hedefleyen uygulamaların çalıştırılmasını önermiyoruz. Bir uygulama hedefleri çalıştırın, önermiyoruz [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] üzerinde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Aşağıdaki kurallar uygulanır:  
   
 -   Visual Studio'da seçtiğiniz [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] bir projenin hedef çerçevesi (Bu ayarlar <xref:Microsoft.Build.Tasks.GetReferenceAssemblyPaths.TargetFrameworkMoniker%2A?displayProperty=nameWithType> özelliği) olarak Projeyi derlemek için bir [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] derleme veya yürütülebilir öğe. Bu derleme veya yürütülebilir öğe olan herhangi bir bilgisayarda sonra kullanılabilir [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1 veya 4.7.2 yüklü.  
@@ -80,6 +80,6 @@ Her bir .NET Framework sürümü ortak dil çalışma zamanını (CLR), temel s�
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Sürüm uyumluluğu](../../../docs/framework/migration-guide/version-compatibility.md)   
-[Microsoft .NET Framework Destek Ömrü İlkesi](https://go.microsoft.com/fwlink/?LinkId=196607)   
-[Engellenen .NET Framework yükleme ve kaldırma sorunlarını giderme](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
+- [Sürüm uyumluluğu](../../../docs/framework/migration-guide/version-compatibility.md)   - 
+- [Microsoft .NET Framework Destek Ömrü İlkesi](https://go.microsoft.com/fwlink/?LinkId=196607)   
+- [Engellenen .NET Framework yükleme ve kaldırma sorunlarını giderme](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)

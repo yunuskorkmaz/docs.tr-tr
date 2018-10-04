@@ -2,12 +2,12 @@
 title: Kurulum Sorunlarını Giderme
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 0270bd8c1006b39805e3486c4fef0cb379089ea8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 13828bee07dd455cd2b94d20d4afa7ea416ce186
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43805136"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48780134"
 ---
 # <a name="troubleshooting-setup-issues"></a>Kurulum Sorunlarını Giderme
 Bu konu, Windows Communication Foundation (WCF) sorunları kümesi sorun giderme açıklar.  
@@ -67,7 +67,7 @@ Bu konu, Windows Communication Foundation (WCF) sorunları kümesi sorun giderme
  Geçici çözüm için bu sorun, kullanım [WorkFlow hizmet Kayıt Aracı (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) ile `/c` IIS betik eşlemeleri makine üzerinde düzgün şekilde yapılandırmak için anahtar. [WorkFlow hizmet Kayıt Aracı (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) %windir%\Microsoft.NET\framework\v3.5\ veya %windir%\Microsoft.NET\framework64\v3.5\ bulunabilir  
   
 ## <a name="could-not-load-type-systemservicemodelactivationhttpmodule-from-assembly-systemservicemodel-version-3000-cultureneutral-publickeytokenb77a5c561934e089"></a>Türü 'System.ServiceModel.Activation.HttpModule' derlemesinden yüklenemiyor ' System.ServiceModel, sürüm 3.0.0.0, kültür neutral, PublicKeyToken = b77a5c561934e089 '  
- Bu hata oluşur [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] yüklenir ve WCF HTTP etkinleştirmesi sonra etkinleştirilir. İçinde komut satırından aşağıdaki komutu çalıştırın sorunu gidermek için [!INCLUDE[vs2010](../../../includes/vs2010-md.md)] komut istemi:  
+ Bu hata oluşur [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] yüklenir ve WCF HTTP etkinleştirmesi sonra etkinleştirilir. Aşağıdaki komut satırından ya Geliştirici Komut İstemi'içinde çalıştırmak için Visual Studio bu sorunu çözmek için:  
   
 ```Output  
 aspnet_regiis.exe -i -enable  

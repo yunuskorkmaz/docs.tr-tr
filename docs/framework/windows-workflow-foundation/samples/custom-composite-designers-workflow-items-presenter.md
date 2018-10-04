@@ -5,149 +5,149 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
-ms.openlocfilehash: 708b62290900db3e668de81c31f3a1dc85eb6d19
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f0a3616e6723d43ee4f2772c37e930c5facef31a
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528942"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48793662"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>Özel bileşik tasarımcılar - iş akışı öğeleri sunucu
-<xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> Düzenlemek kapsanan öğelerin koleksiyonunu için izin veren WF Tasarımcı programlama modeli içinde bir anahtar türü. Bu örnek, düzenlenebilir bir koleksiyon ortaya çıkarır bir etkinlik Tasarımcısı oluşturma gösterilmektedir.  
-  
- Bu örnek gösterir:  
-  
--   Özel Etkinlik Tasarımcısı ile oluşturma bir <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>.  
-  
--   Bir etkinlik Tasarımcısı ile "daraltılmış" ve "genişletilmiş" Görünüm oluşturuluyor.  
-  
--   Yeniden barındırılan bir uygulamanın varsayılan tasarımcıda geçersiz kılma.  
-  
-### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
-  
-1.  Açık **UsingWorkflowItemsPresenter.sln** örnek çözüm için C# veya vb içinde [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
-  
-2.  Derleme ve çözümü çalıştırın. Yeniden barındırılan iş akışı Tasarımcısı uygulamayı açmalıdır ve etkinlikleri tuvale sürükleyin.  
-  
-## <a name="sample-highlights"></a>Örnek öne çıkan özellikleri  
- Bu örneğe yönelik kodun aşağıda gösterilmiştir:  
-  
--   Bir tasarımcı etkinlik oluşturulmuştur:  `Parallel`  
-  
--   Özel Etkinlik Tasarımcısı ile oluşturulmasını bir <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>. Tablonuzu gereken bazı noktalar:  
-  
-    -   WPF verilerini bağlama bağlamak için kullanımına dikkat edin `ModelItem.Branches`. `ModelItem` özelliği açıktır `WorkflowElementDesigner` Tasarımcı kullanılmıştır, bu durumda, arka plandaki nesneye başvuran bizim `Parallel`.  
-  
-    -   <xref:System.Activities.Presentation.WorkflowItemsPresenter.SpacerTemplate?displayProperty=nameWithType> Koleksiyondaki bireysel öğeleri arasında görüntülemek için bir görsel yerleştirme için kullanılabilir.  
-  
-    -   <xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> koleksiyondaki öğelerin düzeni belirlemek için sağlanan bir şablonudur. Bu durumda, yatay yığın paneli kullanılır.  
-  
- Bu aşağıdaki kod örneği bunu gösterir.  
-  
-```xaml  
-<sad:WorkflowItemsPresenter HintText="Drop Activities Here"  
-                              Items="{Binding Path=ModelItem.Branches}">  
-    <sad:WorkflowItemsPresenter.SpacerTemplate>  
-      <DataTemplate>  
-        <Ellipse Width="10" Height="10" Fill="Black"/>  
-      </DataTemplate>  
-    </sad:WorkflowItemsPresenter.SpacerTemplate>  
-    <sad:WorkflowItemsPresenter.ItemsPanel>  
-      <ItemsPanelTemplate>  
-        <StackPanel Orientation="Horizontal"/>  
-      </ItemsPanelTemplate>  
-    </sad:WorkflowItemsPresenter.ItemsPanel>  
-  </sad:WorkflowItemsPresenter>  
-```  
-  
--   İlişkilendirmesini gerçekleştirmek `DesignerAttribute` için `Parallel` türü ve ardından çıkış öznitelikleri bildirdi.  
-  
-    -   İlk olarak, tüm varsayılan tasarımcıları kaydedin.  
-  
- Kod örneği verilmiştir.  
-  
-```csharp  
-// register metadata  
-(new DesignerMetadata()).Register();  
-RegisterCustomMetadata();  
-```  
-  
-```vb  
-' register metadata  
-Dim metadata = New DesignerMetadata()  
-metadata.Register()  
-' register custom metadata  
-RegisterCustomMetadata()  
-```  
-  
-    -   Ardından, paralel olarak geçersiz kılma `RegisterCustomMetadata` yöntemi.  
-  
- Aşağıdaki kod, C# ve Visual Basic'te bu gösterir.  
- 
-```csharp  
-void RegisterCustomMetadata()  
-{  
-      AttributeTableBuilder builder = new AttributeTableBuilder();  
-      builder.AddCustomAttributes(typeof(Parallel), new DesignerAttribute(typeof(CustomParallelDesigner)));  
-      MetadataStore.AddAttributeTable(builder.CreateTable());  
-}  
-```  
-  
-```vb  
-Sub RegisterCustomMetadata()  
-   Dim builder As New AttributeTableBuilder()  
-   builder.AddCustomAttributes(GetType(Parallel), New DesignerAttribute(GetType(CustomParallelDesigner)))  
-   MetadataStore.AddAttributeTable(builder.CreateTable())  
-End Sub  
-```  
-  
--   Son olarak, farklı veri şablonları ve temel uygun şablonu seçmek için Tetikleyiciler kullanımına dikkat edin `IsRootDesigner` özelliği.  
-  
- Kod örneği verilmiştir.  
-  
-```xaml  
-<sad:ActivityDesigner x:Class="Microsoft.Samples.CustomParallelDesigner"  
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"  
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
-    xmlns:sad="clr-namespace:System.Activities.Design;assembly=System.Activities.Design"  
-    xmlns:sadv="clr-namespace:System.Activities.Design.View;assembly=System.Activities.Design">  
-  <sad:ActivityDesigner.Resources>  
-    <DataTemplate x:Key="Expanded">  
-      <StackPanel>  
-        <TextBlock>This is the Expanded View</TextBlock>  
-        <sad:WorkflowItemsPresenter HintText="Drop Activities Here"  
-                                    Items="{Binding Path=ModelItem.Branches}">  
-          <sad:WorkflowItemsPresenter.SpacerTemplate>  
-            <DataTemplate>  
-              <Ellipse Width="10" Height="10" Fill="Black"/>  
-            </DataTemplate>  
-          </sad:WorkflowItemsPresenter.SpacerTemplate>  
-          <sad:WorkflowItemsPresenter.ItemsPanel>  
-            <ItemsPanelTemplate>  
-              <StackPanel Orientation="Horizontal"/>  
-            </ItemsPanelTemplate>  
-          </sad:WorkflowItemsPresenter.ItemsPanel>  
-        </sad:WorkflowItemsPresenter>  
-      </StackPanel>  
-    </DataTemplate>  
-    <DataTemplate x:Key="Collapsed">  
-      <TextBlock>This is the Collapsed View</TextBlock>  
-    </DataTemplate>  
-    <Style x:Key="ExpandOrCollapsedStyle" TargetType="{x:Type ContentPresenter}">  
-      <Setter Property="ContentTemplate" Value="{DynamicResource Collapsed}"/>  
-      <Style.Triggers>  
-        <DataTrigger Binding="{Binding Path=IsRootDesigner}" Value="true">  
-          <Setter Property="ContentTemplate" Value="{DynamicResource Expanded}"/>  
-        </DataTrigger>  
-      </Style.Triggers>  
-    </Style>  
-  </sad: ActivityDesigner.Resources>  
-  <Grid>  
-    <ContentPresenter Style="{DynamicResource ExpandOrCollapsedStyle}" Content="{Binding}"/>  
-  </Grid>  
-</sad: ActivityDesigner>  
-```  
-  
+<xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> Düzenlemek kapsanan öğelerin koleksiyonunu için izin veren WF Tasarımcı programlama modeli içinde bir anahtar türü. Bu örnek, düzenlenebilir bir koleksiyon ortaya çıkarır bir etkinlik Tasarımcısı oluşturma gösterilmektedir.
+
+ Bu örnek gösterir:
+
+-   Özel Etkinlik Tasarımcısı ile oluşturma bir <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>.
+
+-   Bir etkinlik Tasarımcısı ile "daraltılmış" ve "genişletilmiş" Görünüm oluşturuluyor.
+
+-   Yeniden barındırılan bir uygulamanın varsayılan tasarımcıda geçersiz kılma.
+
+### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma
+
+1.  Açık **UsingWorkflowItemsPresenter.sln** için C# veya VB Visual Studio 2010 için örnek çözümü.
+
+2.  Derleme ve çözümü çalıştırın. Yeniden barındırılan iş akışı Tasarımcısı uygulamayı açmalıdır ve etkinlikleri tuvale sürükleyin.
+
+## <a name="sample-highlights"></a>Örnek öne çıkan özellikleri
+ Bu örneğe yönelik kodun aşağıda gösterilmiştir:
+
+-   Bir tasarımcı etkinlik oluşturulmuştur:  `Parallel`
+
+-   Özel Etkinlik Tasarımcısı ile oluşturulmasını bir <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>. Tablonuzu gereken bazı noktalar:
+
+    -   WPF verilerini bağlama bağlamak için kullanımına dikkat edin `ModelItem.Branches`. `ModelItem` özelliği açıktır `WorkflowElementDesigner` Tasarımcı kullanılmıştır, bu durumda, arka plandaki nesneye başvuran bizim `Parallel`.
+
+    -   <xref:System.Activities.Presentation.WorkflowItemsPresenter.SpacerTemplate?displayProperty=nameWithType> Koleksiyondaki bireysel öğeleri arasında görüntülemek için bir görsel yerleştirme için kullanılabilir.
+
+    -   <xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> koleksiyondaki öğelerin düzeni belirlemek için sağlanan bir şablonudur. Bu durumda, yatay yığın paneli kullanılır.
+
+ Bu aşağıdaki kod örneği bunu gösterir.
+
+```xaml
+<sad:WorkflowItemsPresenter HintText="Drop Activities Here"
+                              Items="{Binding Path=ModelItem.Branches}">
+    <sad:WorkflowItemsPresenter.SpacerTemplate>
+      <DataTemplate>
+        <Ellipse Width="10" Height="10" Fill="Black"/>
+      </DataTemplate>
+    </sad:WorkflowItemsPresenter.SpacerTemplate>
+    <sad:WorkflowItemsPresenter.ItemsPanel>
+      <ItemsPanelTemplate>
+        <StackPanel Orientation="Horizontal"/>
+      </ItemsPanelTemplate>
+    </sad:WorkflowItemsPresenter.ItemsPanel>
+  </sad:WorkflowItemsPresenter>
+```
+
+-   İlişkilendirmesini gerçekleştirmek `DesignerAttribute` için `Parallel` türü ve ardından çıkış öznitelikleri bildirdi.
+
+    -   İlk olarak, tüm varsayılan tasarımcıları kaydedin.
+
+ Kod örneği verilmiştir.
+
+```csharp
+// register metadata
+(new DesignerMetadata()).Register();
+RegisterCustomMetadata();
+```
+
+```vb
+' register metadata
+Dim metadata = New DesignerMetadata()
+metadata.Register()
+' register custom metadata
+RegisterCustomMetadata()
+```
+
+    -   Ardından, paralel olarak geçersiz kılma `RegisterCustomMetadata` yöntemi.
+
+ Aşağıdaki kod, C# ve Visual Basic'te bu gösterir.
+
+```csharp
+void RegisterCustomMetadata()
+{
+      AttributeTableBuilder builder = new AttributeTableBuilder();
+      builder.AddCustomAttributes(typeof(Parallel), new DesignerAttribute(typeof(CustomParallelDesigner)));
+      MetadataStore.AddAttributeTable(builder.CreateTable());
+}
+```
+
+```vb
+Sub RegisterCustomMetadata()
+   Dim builder As New AttributeTableBuilder()
+   builder.AddCustomAttributes(GetType(Parallel), New DesignerAttribute(GetType(CustomParallelDesigner)))
+   MetadataStore.AddAttributeTable(builder.CreateTable())
+End Sub
+```
+
+-   Son olarak, farklı veri şablonları ve temel uygun şablonu seçmek için Tetikleyiciler kullanımına dikkat edin `IsRootDesigner` özelliği.
+
+ Kod örneği verilmiştir.
+
+```xaml
+<sad:ActivityDesigner x:Class="Microsoft.Samples.CustomParallelDesigner"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sad="clr-namespace:System.Activities.Design;assembly=System.Activities.Design"
+    xmlns:sadv="clr-namespace:System.Activities.Design.View;assembly=System.Activities.Design">
+  <sad:ActivityDesigner.Resources>
+    <DataTemplate x:Key="Expanded">
+      <StackPanel>
+        <TextBlock>This is the Expanded View</TextBlock>
+        <sad:WorkflowItemsPresenter HintText="Drop Activities Here"
+                                    Items="{Binding Path=ModelItem.Branches}">
+          <sad:WorkflowItemsPresenter.SpacerTemplate>
+            <DataTemplate>
+              <Ellipse Width="10" Height="10" Fill="Black"/>
+            </DataTemplate>
+          </sad:WorkflowItemsPresenter.SpacerTemplate>
+          <sad:WorkflowItemsPresenter.ItemsPanel>
+            <ItemsPanelTemplate>
+              <StackPanel Orientation="Horizontal"/>
+            </ItemsPanelTemplate>
+          </sad:WorkflowItemsPresenter.ItemsPanel>
+        </sad:WorkflowItemsPresenter>
+      </StackPanel>
+    </DataTemplate>
+    <DataTemplate x:Key="Collapsed">
+      <TextBlock>This is the Collapsed View</TextBlock>
+    </DataTemplate>
+    <Style x:Key="ExpandOrCollapsedStyle" TargetType="{x:Type ContentPresenter}">
+      <Setter Property="ContentTemplate" Value="{DynamicResource Collapsed}"/>
+      <Style.Triggers>
+        <DataTrigger Binding="{Binding Path=IsRootDesigner}" Value="true">
+          <Setter Property="ContentTemplate" Value="{DynamicResource Expanded}"/>
+        </DataTrigger>
+      </Style.Triggers>
+    </Style>
+  </sad: ActivityDesigner.Resources>
+  <Grid>
+    <ContentPresenter Style="{DynamicResource ExpandOrCollapsedStyle}" Content="{Binding}"/>
+  </Grid>
+</sad: ActivityDesigner>
+```
+
 > [!IMPORTANT]
 >  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   

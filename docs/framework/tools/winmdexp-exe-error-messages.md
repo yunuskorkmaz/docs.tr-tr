@@ -159,15 +159,15 @@ helpviewer_keywords:
 ms.assetid: 8271973c-deba-47a6-8e5e-04ce63f146ad
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f051af9284ddbf583e5454f7bdc106a061489d3c
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 95d971003a28ec411b3734009bcb978c630cb811
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44075468"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48780894"
 ---
 # <a name="winmdexpexe-error-messages"></a>Winmdexp.exe Hata İletileri
-Yapı işleminin çağırdığı [Winmdexp.exe (Windows çalışma zamanı meta verileri dışarı aktarma aracı)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) kullandığınızda  **[!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşen** şablonunda [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], Winmdexp.exe hata iletileri görüntülenir **Hata listesi**. Winmdexp.exe çalışır ile derlenmiş bir modülde `/target:winmdobj` seçeneği. Giriş olarak derlenmiş bir modül gerektiğinden, derleme başarılı sürece, hata iletileri görünmez.  
+Yapı işleminin çağırdığı [Winmdexp.exe (Windows çalışma zamanı meta verileri dışarı aktarma aracı)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) kullandığınızda  **[!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşen** 2012'de Visual Studio içinde Winmdexp.exe hata iletileri görünecek şekilde şablonu **Hata listesi**. Winmdexp.exe çalışır ile derlenmiş bir modülde `/target:winmdobj` seçeneği. Giriş olarak derlenmiş bir modül gerektiğinden, derleme başarılı sürece, hata iletileri görünmez.  
   
  Hata iletileri, bunlar rapor hata koşullarını gidermek için gereken tüm bilgileri içerecek şekilde tasarlanmıştır. Ancak, bazı sorunlar iletisinde sığmayacak kadar çok daha fazla bilgi gerektirir. Ek bilgiler bulabilirsiniz [tanılama Windows çalışma zamanı bileşeni hata koşulları](https://go.microsoft.com/fwlink/p/?LinkId=251127) Windows geliştirme Merkezi'nde.  
   

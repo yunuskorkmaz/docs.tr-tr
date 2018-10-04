@@ -6,20 +6,21 @@ helpviewer_keywords:
 - tables [Windows Forms], adding to DataGrid control
 - DataGrid control [Windows Forms], adding tables and columns
 ms.assetid: 4a6d1b34-b696-476b-bf8a-57c6230aa9e1
-ms.openlocfilehash: 745e866363dc7547ee540b9cac7e1e9fd3cc79ee
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b2e8f962ed7fb9d205a9061bdc1b32c3a2f8b0bd
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504939"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48780017"
 ---
 # <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Formları DataGrid Denetimine Tablolar ve Sütunlar Ekleme
+
 > [!NOTE]
 >  <xref:System.Windows.Forms.DataGridView> Denetimi değiştirir ve işlevsellik ekler <xref:System.Windows.Forms.DataGrid> denetler; ancak, <xref:System.Windows.Forms.DataGrid> denetim korunur geriye dönük uyumluluk ve gelecekte kullanım için seçerseniz. Daha fazla bilgi için [farklar arasında Windows Forms DataGridView ve DataGrid denetimleri](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
  Windows Forms'ta verileri görüntüleyebilirsiniz <xref:System.Windows.Forms.DataGrid> tablolar ve sütunlar oluşturarak denetiminde <xref:System.Windows.Forms.DataGridTableStyle> nesneleri ve bunlara ekleme <xref:System.Windows.Forms.GridTableStylesCollection> aracılığıyla erişilen nesne <xref:System.Windows.Forms.DataGrid> denetimin <xref:System.Windows.Forms.DataGrid.TableStyles%2A> özelliği. Hangi veri tablosu belirtilen İçindekiler her tablo stili görüntüler <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> özelliği <xref:System.Windows.Forms.DataGridTableStyle>. Varsayılan olarak, belirtilen sütun stillerini olmadan bir tablo stili veri tablosunun tüm sütunları görüntüler. Tablodaki hangi sütunların ekleyerek görünür kısıtlayabilirsiniz <xref:System.Windows.Forms.DataGridColumnStyle> nesneleri için <xref:System.Windows.Forms.GridColumnStylesCollection>, aracılığıyla erişilen <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> her özellik <xref:System.Windows.Forms.DataGridTableStyle>.  
   
- Aşağıdaki yordamlar gerektiren bir **Windows uygulama** proje içeren bir form bir <xref:System.Windows.Forms.DataGrid> denetimi. Böyle bir projeyi ayarlama hakkında daha fazla bilgi için bkz: [nasıl yapılır: bir Windows uygulaması projesi oluşturmak](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) ve [nasıl yapılır: Windows Forms denetimlerine ekleme](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md). Varsayılan olarak [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], <xref:System.Windows.Forms.DataGrid> denetimi içinde değil **araç kutusu**. Bu ekleme hakkında daha fazla bilgi için bkz: [nasıl yapılır: araç kutusu öğeleri Ekle](https://msdn.microsoft.com/library/458e119e-17fe-450b-b889-e31c128bd7e0).  
+ Aşağıdaki yordamlar gerektiren bir **Windows uygulama** proje içeren bir form bir <xref:System.Windows.Forms.DataGrid> denetimi. Böyle bir projeyi ayarlama hakkında daha fazla bilgi için bkz: [nasıl yapılır: bir Windows uygulaması projesi oluşturmak](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) ve [nasıl yapılır: Windows Forms denetimlerine ekleme](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md). Visual Studio 2005 ' te varsayılan olarak <xref:System.Windows.Forms.DataGrid> denetimi içinde değil **araç kutusu**. Bu ekleme hakkında daha fazla bilgi için bkz: [nasıl yapılır: araç kutusu öğeleri Ekle](https://msdn.microsoft.com/library/458e119e-17fe-450b-b889-e31c128bd7e0).  
   
 > [!NOTE]
 >  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  

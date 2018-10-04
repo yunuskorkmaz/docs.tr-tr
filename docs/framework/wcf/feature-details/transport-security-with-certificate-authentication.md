@@ -6,11 +6,11 @@ dev_langs:
 ms.assetid: 3d726b71-4d8b-4581-a3bb-02b9af51d11b
 author: BrucePerlerMS
 ms.openlocfilehash: 42de15daef7b18e7422bae836128356f37c1f03d
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48046415"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48781732"
 ---
 # <a name="transport-security-with-certificate-authentication"></a>Sertifika Kimlik Doğrulama ile Taşıma Güvenliği
 Bu konuda, X.509 sertifikaları aktarım güvenliği kullanarak sunucu ve istemci kimlik doğrulaması kullanılarak anlatılmaktadır. X.509 hakkında daha fazla bilgi için bkz: sertifikaları [X.509 ortak anahtar sertifikaları](https://msdn.microsoft.com/library/bb540819\(VS.85\).aspx). Sertifikaları çoğunlukla sertifika bir üçüncü taraf veren olduğu bir sertifika yetkilisi tarafından verilmiş olması gerekir. Bir Windows Server etki alanı Active Directory Sertifika Hizmetleri, etki alanındaki istemci bilgisayarlar için sertifikaları vermek için kullanılabilir. Daha fazla bilgi için [Windows 2008 R2 Sertifika Hizmetleri](https://go.microsoft.com/fwlink/?LinkID=209949&clcid=0x409). Bu senaryoda, hizmetin altında Internet Information Services (Güvenli Yuva Katmanı (SSL) ile yapılandırılmış olan IIS) barındırılır. Hizmet, istemcilerin kimliğini doğrulamak bir SSL (X.509) sertifikası ile yapılandırılır. İstemci, istemcinin kimliğini doğrulamak hizmet veren bir X.509 sertifikası ile de yapılandırılır. Sunucu sertifikasının istemci tarafından güvenilir olması gerekir ve istemcinin sertifika sunucusu tarafından güvenilir olması gerekir. Gerçek mekanizması nasıl hizmet ve istemci doğrular birbirlerinin kimliğini, bu konunun kapsamı dışındadır ' dir. Daha fazla bilgi için [wikipedia dijital imza](https://go.microsoft.com/fwlink/?LinkId=253157).  

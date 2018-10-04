@@ -2,7 +2,7 @@
 title: .NET framework sistem gereksinimleri
 description: Donanım, işletim sistemi ve .NET Framework 4.5 ve sonraki sürümler yüklemek için yazılım gereksinimleri ne olduğunu bulabilirsiniz.
 ms.custom: updateeachrelease
-ms.date: 04/10/2018
+ms.date: 10/01/2018
 helpviewer_keywords:
 - software requirements
 - .NET Framework, system requirements
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 909b9369aba6b22899ae3fe7ac15eb470c5c2697
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b8f9205863ce65b480aa048f99df62d9b522aac9
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509184"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48793415"
 ---
 # <a name="net-framework-system-requirements"></a>.NET framework sistem gereksinimleri
 
@@ -26,6 +26,8 @@ Bu başlıktaki tablolar, donanım, işletim sistemi ve yazılım gereksinimleri
 * .NET framework 4.5 ve nokta sürümleri (4.5.1 ve 4.5.2'yi).
 * .NET framework 4.6 ve onun nokta sürümleri (4.6.1 ve 4.6.2).
 * .NET framework 4.7 ve onun nokta sürümleri (4.7.1 ve 4.7.2).
+
+İçin .NET Framework sürümlerinde .NET Framework 4. 5'den önceki bilgi [.NET Framework sürümleri ve bağımlılıkları](../migration-guide/versions-and-dependencies.md).
 
 .NET Framework için uygulamalar geliştirmenizi sağlayan geliştirme ortamlarında bir ayrı gereksinimleri vardır.
 
@@ -105,6 +107,6 @@ Bu başlıktaki tablolar, donanım, işletim sistemi ve yazılım gereksinimleri
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Yükleme Kılavuzu](../../../docs/framework/install/index.md)   
-[Çalışmaya başlama](../../../docs/framework/get-started/index.md)   
-[Engellenen .NET Framework yükleme ve kaldırma sorunlarını giderme](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
+- [Yükleme Kılavuzu](../../../docs/framework/install/index.md)   
+- [Başlarken](../../../docs/framework/get-started/index.md)   
+- [Engellenen .NET Framework yükleme ve kaldırma sorunlarını giderme](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)

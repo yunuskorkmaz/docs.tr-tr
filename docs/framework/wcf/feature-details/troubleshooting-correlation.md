@@ -3,11 +3,11 @@ title: Bağıntı Sorunlarını Giderme
 ms.date: 03/30/2017
 ms.assetid: 98003875-233d-4512-a688-4b2a1b0b5371
 ms.openlocfilehash: fecfaf7374823bb19a4ad3d7f6cb2dbbdf139703
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027929"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48793740"
 ---
 # <a name="troubleshooting-correlation"></a>Bağıntı Sorunlarını Giderme
 Bağıntı birbirleriyle ve doğru iş akışı örneği iş akışı hizmeti iletileri ilişkilendirmek için kullanılır, ancak doğru şekilde yapılandırılmamışsa, ileti alınmadı ve uygulamalar düzgün çalışmaz. Bu konu, bağıntı sorunlarını giderme için çeşitli yöntemler için genel bir bakış sağlar ve ayrıca bağıntı kullanırken oluşabilecek bazı yaygın sorunlar listelenir.

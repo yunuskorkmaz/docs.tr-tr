@@ -6,31 +6,31 @@ helpviewer_keywords:
 - interoperability [WDF]
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
-ms.openlocfilehash: ad98c2da32084122dab529b8cf3a8fe7ef506b99
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: bd056bb9d5ad429e35e0b2625dee99ae5f18b527
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43489909"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48780147"
 ---
 # <a name="walkthrough-styling-wpf-content"></a>İzlenecek yol: WPF İçeriği için Stil Oluşturma
-Bu izlenecek yol, bir Windows Form üzerinde barındırılan bir Windows Presentation Foundation (WPF) denetimine stil uygulamak nasıl gösterir.  
-  
- Bu kılavuzda, aşağıdaki görevleri gerçekleştirin:  
-  
--   Projeyi oluşturun.  
-  
--   WPF denetim türü oluşturun.  
-  
--   Bir stil WPF denetimi için geçerlidir.  
-  
+Bu izlenecek yol, bir Windows Form üzerinde barındırılan bir Windows Presentation Foundation (WPF) denetimine stil uygulamak nasıl gösterir.
+
+ Bu kılavuzda, aşağıdaki görevleri gerçekleştirin:
+
+-   Projeyi oluşturun.
+
+-   WPF denetim türü oluşturun.
+
+-   Bir stil WPF denetimi için geçerlidir.
+
 > [!NOTE]
 >  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ## <a name="prerequisites"></a>Önkoşullar  
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:  
   
--   [!INCLUDE[vs_dev11_long](../../../../includes/vs-dev11-long-md.md)].  
+-   Visual Studio 2012.  
   
 ## <a name="creating-the-project"></a>Projeyi Oluşturma  
  İlk adım Windows Forms projesi oluşturmaktır.  

@@ -2,12 +2,12 @@
 title: MSMQ Etkinleştirme
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: a03f5783e732c4a0f3f13cf6abd7ec4803c07c8f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: a179fca70a97b4fd9c7b21bdf548afdda59dda91
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43779318"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48780160"
 ---
 # <a name="msmq-activation"></a>MSMQ Etkinleştirme
 Bu örnek, bir ileti kuyruktan okunmak uygulamaların Windows İşlem Etkinleştirme Hizmeti (WAS) barındırmak nasıl gösterir. Bu örnekte `netMsmqBinding` ve dayanır [iki yönlü iletişimi](../../../../docs/framework/wcf/samples/two-way-communication.md) örnek. Bu durumda Web barındırılan bir uygulama hizmetidir ve istemci kendiliğinden barındırılır ve gönderilen satın alma siparişleri durumunu izlemek için konsola çıkışı.  
@@ -20,7 +20,7 @@ Bu örnek, bir ileti kuyruktan okunmak uygulamaların Windows İşlem Etkinleşt
 >   
 >  \<Installdrive >: \WF_WCF_Samples  
 >   
->  Bu dizin mevcut değil, Windows Communication Foundation (WCF) köprü için Git "https://go.microsoft.com/fwlink/?LinkId=150780" \t "_blank" ve Windows Workflow Foundation (WF) örnekleri [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] tüm WCF indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
+>  Bu dizin mevcut değil, Windows Communication Foundation (WCF) köprü için Git "https://go.microsoft.com/fwlink/?LinkId=150780"\t"\_boş" ve Windows Workflow Foundation (WF) örnekleri [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] tüm WCF indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  \<Installdrive >: \Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.  
   
@@ -76,7 +76,8 @@ public class OrderProcessorService : IOrderProcessor
             client.OrderStatus(po.PONumber, po.Status);  
             scope.Complete();  
         }  
-    }  
+    }
+}
 ```  
   
  Kullanılacak bağlama istemci, bir yapılandırma dosyası kullanarak belirtilir.  
@@ -173,7 +174,7 @@ public class OrderStatusService : IOrderStatus
   
  Durum sırasını oluşturulan `Main` yöntemi. Aşağıdaki örnek yapılandırmada gösterildiği gibi istemci yapılandırması sipariş durumu hizmeti barındırmak için sipariş durumu hizmeti yapılandırması içerir.  
   
-```csharp  
+```xml  
 <appSettings>  
     <!-- use appSetting to configure MSMQ queue name -->  
     <add key="targetQueueName" value=".\private$\ServiceModelSamples/service.svc" />  
@@ -269,7 +270,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
         > [!NOTE]
         >  Tek metin satırı komutudur.  
   
-         Bu komut kullanılarak erişilecektir /servicemodelsamples uygulamayı etkinleştirir http://localhost/servicemodelsamples ve net.msmq://localhost/servicemodelsamples.  
+         Bu komut kullanılarak erişilecektir /servicemodelsamples uygulamayı etkinleştirir `http://localhost/servicemodelsamples` ve `net.msmq://localhost/servicemodelsamples`.
   
 7.  Daha önce yapmadıysanız, MSMQ Etkinleştirme Hizmeti'nın etkin olduğundan emin olun. Gelen **Başlat** menüsünde tıklatın **çalıştırın**ve türü `Services.msc`. Arama için Hizmetler listesi **Net.Msmq dinleyici bağdaştırıcısı**. Sağ tıklayıp **özellikleri**. Ayarlama **başlangıç türü** için **otomatik**, tıklayın **Uygula** tıklatıp **Başlat** düğmesi. Bu adım yalnızca bir kez Net.Msmq dinleyici bağdaştırıcı hizmeti ilk kullanımlar yapılmalıdır.  
   

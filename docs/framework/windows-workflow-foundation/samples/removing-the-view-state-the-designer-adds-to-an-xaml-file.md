@@ -2,118 +2,118 @@
 title: Tasarımcı görünüm durumunu kaldırma bir XAML dosyasına eklediği
 ms.date: 03/30/2017
 ms.assetid: a801ce22-8699-483c-a392-7bb3834aae4f
-ms.openlocfilehash: ed2fda0bb66b2c8fe58c60acc6f80b9e9c8e984e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0d4dccb16796893df58f709e011657457cc71670
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524958"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48781693"
 ---
 # <a name="removing-the-view-state-the-designer-adds-to-an-xaml-file"></a>Tasarımcı görünüm durumunu kaldırma bir XAML dosyasına eklediği
-Bu örnek, türetilen bir sınıf oluşturmak nasıl gösterir <xref:System.Windows.Markup.XamlWriter> ve kaldırır bir XAML dosyası durumunu görüntüleyin. [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] Görünüm durumu bilinen XAML belgesine bilgilerini yazar. Görünüm durumu çalışma zamanında gerekli değildir yerleşim konumlandırma gibi tasarım zamanında gerekli olan bilgileri ifade eder. [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] Bu bilgiler düzenlemiş XAML belgeye ekler. [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] Görünüm durumu ile XAML dosyasına yazar `mc:Ignorable` özniteliği için çalışma zamanı XAML dosya yüklendiğinde bu bilgileri yüklü değil. Bu örnek, Görünüm durumu bilgilerinin XAML düğümleri işlenirken kaldıran bir sınıf oluşturmak nasıl gösterir.  
-  
-## <a name="discussion"></a>Tartışma  
- Bu örnek, özel bir yazıcı oluşturma işlemini gösterir.  
-  
- Özel bir XAML yazıcısı oluşturmak için devralınan bir sınıf oluşturma <xref:System.Windows.Markup.XamlWriter>. XAML yazıcılar genellikle iç içe gibi "İç" bir XAML yazıcı izlemek için tipik bir durumdur. Bu "İç ' yazıcılar düşünülebilir çalışmak ve sonra işleme yığını geri kalanı için temsilci seçmek için birden çok giriş noktası olmasını sağlayarak, XAML yazıcılar kalan yığın başvuru olarak.  
-  
- Bu örnekte, ilgilenilen birkaç öğe yok. Yazılmakta olan öğe bir tasarımcı ad alanından olup olmadığını görmek için onay biridir. Bu da bir iş akışında Tasarımcı ad alanı diğer türlerden kullanımını göz şeritler olduğunu unutmayın.  
-  
-```csharp
-static Boolean IsDesignerAttachedProperty(XamlMember xamlMember)  
-{  
-    return xamlMember.IsAttachable &&  
-        xamlMember.PreferredXamlNamespace.Equals(c_sapNamespaceURI, StringComparison.OrdinalIgnoreCase);  
-}  
-  
-const String c_sapNamespaceURI = "http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation";  
+Bu örnek, türetilen bir sınıf oluşturmak nasıl gösterir <xref:System.Windows.Markup.XamlWriter> ve kaldırır bir XAML dosyası durumunu görüntüleyin. [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] Görünüm durumu bilinen XAML belgesine bilgilerini yazar. Görünüm durumu çalışma zamanında gerekli değildir yerleşim konumlandırma gibi tasarım zamanında gerekli olan bilgileri ifade eder. [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] Bu bilgiler düzenlemiş XAML belgeye ekler. [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] Görünüm durumu ile XAML dosyasına yazar `mc:Ignorable` özniteliği için çalışma zamanı XAML dosya yüklendiğinde bu bilgileri yüklü değil. Bu örnek, Görünüm durumu bilgilerinin XAML düğümleri işlenirken kaldıran bir sınıf oluşturmak nasıl gösterir.
 
-// The next item of interest is the constructor, where the utilization of the inner XAML writer is seen.  
-public ViewStateCleaningWriter(XamlWriter innerWriter)  
-{  
-    this.InnerWriter = innerWriter;  
-    this.MemberStack = new Stack<XamlMember>();  
-}  
-  
-XamlWriter InnerWriter {get; set; }  
-Stack<XamlMember> MemberStack {get; set; }  
-```  
-  
- Bu aynı zamanda bir yığın düğümü akışı geçişi sırasında kullanılan XAML üyelerinin oluşturur. Bu örnek, kalan iş büyük ölçüde bulunan <!--zz  <xref:System.Windows.Markup.XamlWriter.WriteStartMember%2A>--> `System.Windows.Markup.XamlWriter.WriteStartMember` yöntemi.  
-  
+## <a name="discussion"></a>Tartışma
+ Bu örnek, özel bir yazıcı oluşturma işlemini gösterir.
+
+ Özel bir XAML yazıcısı oluşturmak için devralınan bir sınıf oluşturma <xref:System.Windows.Markup.XamlWriter>. XAML yazıcılar genellikle iç içe gibi "İç" bir XAML yazıcı izlemek için tipik bir durumdur. Bu "İç ' yazıcılar düşünülebilir çalışmak ve sonra işleme yığını geri kalanı için temsilci seçmek için birden çok giriş noktası olmasını sağlayarak, XAML yazıcılar kalan yığın başvuru olarak.
+
+ Bu örnekte, ilgilenilen birkaç öğe yok. Yazılmakta olan öğe bir tasarımcı ad alanından olup olmadığını görmek için onay biridir. Bu da bir iş akışında Tasarımcı ad alanı diğer türlerden kullanımını göz şeritler olduğunu unutmayın.
+
 ```csharp
-public override void WriteStartMember(XamlMember xamlMember)  
-{  
+static Boolean IsDesignerAttachedProperty(XamlMember xamlMember)
+{
+    return xamlMember.IsAttachable &&
+        xamlMember.PreferredXamlNamespace.Equals(c_sapNamespaceURI, StringComparison.OrdinalIgnoreCase);
+}
+
+const String c_sapNamespaceURI = "http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation";
+
+// The next item of interest is the constructor, where the utilization of the inner XAML writer is seen.
+public ViewStateCleaningWriter(XamlWriter innerWriter)
+{
+    this.InnerWriter = innerWriter;
+    this.MemberStack = new Stack<XamlMember>();
+}
+
+XamlWriter InnerWriter {get; set; }
+Stack<XamlMember> MemberStack {get; set; }
+```
+
+ Bu aynı zamanda bir yığın düğümü akışı geçişi sırasında kullanılan XAML üyelerinin oluşturur. Bu örnek, kalan iş büyük ölçüde bulunan <!--zz  <xref:System.Windows.Markup.XamlWriter.WriteStartMember%2A>--> `System.Windows.Markup.XamlWriter.WriteStartMember` yöntemi.
+
+```csharp
+public override void WriteStartMember(XamlMember xamlMember)
+{
     MemberStack.Push(xamlMember);
 
-    if (IsDesignerAttachedProperty(xamlMember))  
-    {  
-        m_attachedPropertyDepth++;  
-    }  
-  
-    if (m_attachedPropertyDepth > 0)  
-    {  
-        return;  
-    }  
-  
-    InnerWriter.WriteStartMember(xamlMember);  
-}  
-```  
-  
- Sonraki yöntem sonra bunlar yine de bir görünüm durumu kapsayıcıda bulunan olup olmadığını denetleyin ve bu durumda, dönüş ve yazıcı yığın düğüm geçirmeyin.  
-  
-```csharp
-public override void WriteValue(Object value)  
-{  
-    if (m_attachedPropertyDepth > 0)  
-    {  
-        return;  
-    }  
-  
-    InnerWriter.WriteValue(value);  
-}  
-```  
-  
- Özel bir XAML yazıcı kullanmak için bu XAML yazıcılar yığında zincir gerekir. Aşağıdaki kod bunu nasıl kullanılabileceğini gösterir.  
-  
-```csharp 
-XmlWriterSettings writerSettings = new XmlWriterSettings {  Indent = true };  
-XmlWriter xmlWriter = XmlWriter.Create(File.OpenWrite(args[1]), writerSettings);  
-XamlXmlWriter xamlWriter = new XamlXmlWriter(xmlWriter, new XamlSchemaContext());  
-XamlServices.Save(new ViewStateCleaningWriter(ActivityXamlServices.CreateBuilderWriter(xamlWriter)), ab);  
-```  
-  
-#### <a name="to-use-this-sample"></a>Bu örneği kullanmak için  
-  
-1. Kullanarak [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], ViewStateCleaningWriter.sln çözüm dosyasını açın.  
-  
-2. Bir komut istemi açın ve burada ViewStageCleaningWriter.exe oluşturulmuştur dizine gidin.  
-  
-3. ViewStateCleaningWriter.exe Workflow1.xaml dosya üzerinde çalıştırın.  
+    if (IsDesignerAttachedProperty(xamlMember))
+    {
+        m_attachedPropertyDepth++;
+    }
 
-   Yürütülebilir dosya için söz dizimi aşağıdaki örnekte gösterilmiştir.  
-  
+    if (m_attachedPropertyDepth > 0)
+    {
+        return;
+    }
+
+    InnerWriter.WriteStartMember(xamlMember);
+}
+```
+
+ Sonraki yöntem sonra bunlar yine de bir görünüm durumu kapsayıcıda bulunan olup olmadığını denetleyin ve bu durumda, dönüş ve yazıcı yığın düğüm geçirmeyin.
+
+```csharp
+public override void WriteValue(Object value)
+{
+    if (m_attachedPropertyDepth > 0)
+    {
+        return;
+    }
+
+    InnerWriter.WriteValue(value);
+}
+```
+
+ Özel bir XAML yazıcı kullanmak için bu XAML yazıcılar yığında zincir gerekir. Aşağıdaki kod bunu nasıl kullanılabileceğini gösterir.
+
+```csharp
+XmlWriterSettings writerSettings = new XmlWriterSettings {  Indent = true };
+XmlWriter xmlWriter = XmlWriter.Create(File.OpenWrite(args[1]), writerSettings);
+XamlXmlWriter xamlWriter = new XamlXmlWriter(xmlWriter, new XamlSchemaContext());
+XamlServices.Save(new ViewStateCleaningWriter(ActivityXamlServices.CreateBuilderWriter(xamlWriter)), ab);
+```
+
+#### <a name="to-use-this-sample"></a>Bu örneği kullanmak için
+
+1. Visual Studio 2010 kullanarak ViewStateCleaningWriter.sln çözüm dosyasını açın.
+
+2. Bir komut istemi açın ve burada ViewStageCleaningWriter.exe oluşturulmuştur dizine gidin.
+
+3. ViewStateCleaningWriter.exe Workflow1.xaml dosya üzerinde çalıştırın.
+
+   Yürütülebilir dosya için söz dizimi aşağıdaki örnekte gösterilmiştir.
+
    ```console
    ViewStateCleaningWriter.exe [input file] [output file]
    ```
-   
-   Bu bir XAML dosyasına çıkarır \[outfile], sahip olduğu tüm görünüm durumu bilgilerini kaldırıldı.  
-  
+
+   Bu bir XAML dosyasına çıkarır \[outfile], sahip olduğu tüm görünüm durumu bilgilerini kaldırıldı.
+
 > [!NOTE]
-> İçin bir <xref:System.Activities.Statements.Sequence> iş akışı, bir dizi sanallaştırma ipuçları kaldırılır. Bu, sonraki yüklendiğinde düzenini yeniden hesapla Tasarımcı neden olur. Bu örnek için kullandığınızda bir <xref:System.Activities.Statements.Flowchart>, tüm konumlandırma ve yönlendirme bilgilerini satır kaldırılır ve ekranın sol tarafında yığılma Tasarımcı içinde sonraki yüklemeyi, tüm etkinlikler.  
-  
-#### <a name="to-create-a-sample-xaml-file-for-use-with-this-sample"></a>Bu örnek ile kullanmak için örnek bir XAML dosyası oluşturmak için  
-  
-1. Açık [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
-  
-2. Yeni bir iş akışı konsol uygulaması oluşturun.  
-  
-3. Sürükle ve bırak tuvale birkaç etkinlikleri  
-  
-4. İş akışı XAML dosyasını kaydedin.  
-  
-5. Ekli özellikler durumunu görmek için XAML dosyasını inceleyin.  
-  
+> İçin bir <xref:System.Activities.Statements.Sequence> iş akışı, bir dizi sanallaştırma ipuçları kaldırılır. Bu, sonraki yüklendiğinde düzenini yeniden hesapla Tasarımcı neden olur. Bu örnek için kullandığınızda bir <xref:System.Activities.Statements.Flowchart>, tüm konumlandırma ve yönlendirme bilgilerini satır kaldırılır ve ekranın sol tarafında yığılma Tasarımcı içinde sonraki yüklemeyi, tüm etkinlikler.
+
+#### <a name="to-create-a-sample-xaml-file-for-use-with-this-sample"></a>Bu örnek ile kullanmak için örnek bir XAML dosyası oluşturmak için
+
+1. Visual Studio 2010'u açın.
+
+2. Yeni bir iş akışı konsol uygulaması oluşturun.
+
+3. Sürükle ve bırak tuvale birkaç etkinlikleri
+
+4. İş akışı XAML dosyasını kaydedin.
+
+5. Ekli özellikler durumunu görmek için XAML dosyasını inceleyin.
+
 > [!IMPORTANT]
 > Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   

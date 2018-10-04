@@ -3,11 +3,11 @@ title: C# 7.3 yenilikler nelerdir?
 description: C# 7.3 içindeki yeni özelliklere genel bakış
 ms.date: 05/16/2018
 ms.openlocfilehash: 570da53059242c0242609ddcba5cb23f1728aa9f
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028098"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48781536"
 ---
 # <a name="whats-new-in-c-73"></a>C# 7.3 yenilikler nelerdir?
 

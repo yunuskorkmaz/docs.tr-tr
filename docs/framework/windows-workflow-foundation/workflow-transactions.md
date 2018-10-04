@@ -3,11 +3,11 @@ title: İş akışı işlemleri
 ms.date: 03/30/2017
 ms.assetid: 6081fb02-c0f2-483d-97b8-f3b7dc03011d
 ms.openlocfilehash: e2a0c301abac562904e976fe09e5a68697b191e5
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030161"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48779965"
 ---
 # <a name="workflow-transactions"></a>İş akışı işlemleri
 

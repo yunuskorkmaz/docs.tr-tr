@@ -9,11 +9,11 @@ ms.assetid: 97115892-410a-4657-ab47-1e14dfba73f8
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e83cf82aee57b1f40f695700d8d0b38c12e0ac39
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48029309"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48793584"
 ---
 # <a name="xmldocument-input-to-xsltransform"></a>Xsltransform'a XmlDocument girişi
 <xref:System.Xml.XmlDocument> Sınıf bir XML belgesi için düzenleme özellikleri sağlar. XML düzenlenmesine veya için gönderilmeden önce değiştirilen gerekip gerekmediğini <xref:System.Xml.Xsl.XslTransform.Transform%2A> yöntemi, XML verilerinin yük bir <xref:System.Xml.XmlDocument>, düzenlemek ve içinde göndermek <xref:System.Xml.Xsl.XslTransform>.  

@@ -2,42 +2,42 @@
 title: Şirket satın alma işlemi
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: a5e0d6191967c592d5a32baa7eee3f1659a27e50
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 1817b7af00abd9240eb427f61ed9f0255d51c60d
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43802917"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48781667"
 ---
 # <a name="corporate-purchase-process"></a>Şirket satın alma işlemi
-Bu örnek çok basit bir istek teklifleri (RFP) tabanlı satın alma işlemi için en iyi otomatik öneri seçimiyle oluşturma işlemini gösterir. Bunu birleştirir <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601>, ve <xref:System.Activities.Statements.ForEach%601> ve işlemini temsil eden bir iş akışı oluşturmak için özel bir etkinlik.  
-  
- Bu örnek içeren bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] farklı katılımcı (olarak, özgün istek sahibine veya belirli bir satıcının) işlemiyle etkileşim sağlayan istemci uygulaması.  
-  
-## <a name="requirements"></a>Gereksinimler  
-  
--   [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
-  
--   [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
-  
-## <a name="demonstrates"></a>Gösteriler  
-  
--   Özel etkinlikler.  
-  
--   Etkinlik oluşturma.  
-  
--   Yer işaretleri.  
-  
--   Kalıcılık.  
-  
--   Şema Kalıcılık.  
-  
--   İzleme.  
-  
--   İzleme.  
-  
--   Barındırma [!INCLUDE[wf1](../../../../includes/wf1-md.md)] farklı istemcileri ([!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web uygulamaları ve WinForms uygulamaları).  
-  
+Bu örnek çok basit bir istek teklifleri (RFP) tabanlı satın alma işlemi için en iyi otomatik öneri seçimiyle oluşturma işlemini gösterir. Bunu birleştirir <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601>, ve <xref:System.Activities.Statements.ForEach%601> ve işlemini temsil eden bir iş akışı oluşturmak için özel bir etkinlik.
+
+ Bu örnek içeren bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] farklı katılımcı (olarak, özgün istek sahibine veya belirli bir satıcının) işlemiyle etkileşim sağlayan istemci uygulaması.
+
+## <a name="requirements"></a>Gereksinimler
+
+-   Visual Studio 2012.
+
+-   [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].
+
+## <a name="demonstrates"></a>Gösteriler
+
+-   Özel etkinlikler.
+
+-   Etkinlik oluşturma.
+
+-   Yer işaretleri.
+
+-   Kalıcılık.
+
+-   Şema Kalıcılık.
+
+-   İzleme.
+
+-   İzleme.
+
+-   Barındırma [!INCLUDE[wf1](../../../../includes/wf1-md.md)] farklı istemcileri ([!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web uygulamaları ve WinForms uygulamaları).
+
 > [!IMPORTANT]
 >  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
@@ -143,7 +143,7 @@ Bu örnek çok basit bir istek teklifleri (RFP) tabanlı satın alma işlemi iç
   
 #### <a name="to-use-this-sample"></a>Bu örneği kullanmak için  
   
-1.  Kullanarak [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], PurchaseProcess.sln çözüm dosyasını açın.  
+1.  Visual Studio 2010 kullanarak PurchaseProcess.sln çözüm dosyasını açın.  
   
 2.  Web istemcisi projesi yürütmek için açık **Çözüm Gezgini** sağ tıklayın ve **Web istemcisi** proje. Seçin **başlangıç projesi olarak ayarla**.  
   

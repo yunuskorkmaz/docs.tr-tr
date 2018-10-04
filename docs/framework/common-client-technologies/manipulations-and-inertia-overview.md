@@ -2,12 +2,12 @@
 title: Düzenlemelere ve Eylemsizliğe Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: dd31b89b-eab6-45a1-8d0b-11e0eb84b234
-ms.openlocfilehash: 41c22dc305f8ef653705436544ab2342e55ed02a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 93d995d7afec24dedf168274fe29f6a250c0a532
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521245"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48793272"
 ---
 # <a name="manipulations-and-inertia-overview"></a>Düzenlemelere ve Eylemsizliğe Genel Bakış
 *İşlemeleri* taşımak, döndürmek ve kullanarak kullanıcı arabirimi (UI) öğeleri yeniden boyutlandırma kullanıcılara etkinleştirme *manipülatörleri*. Fare bir işleyiciyi temsil eder (bir senaryoda Dokunmatik özellikli) veya bir ekran kalemi veya bir parmağınızı.  
@@ -25,7 +25,7 @@ ms.locfileid: "43521245"
   
  İki manipülatörleri tarafından değiştirildiği bir görüntü  
   
- Düzenleme işlemi, bir alt kümesini manipülatörleri izleyen ve bunlar birlikte, hareket yerine bağımsız olarak varsa bunları yorumlar bir çerçeve sunar. İşlemci nesneleri aynı anda birden çok işleme oluşturabilirsiniz uygulamada yönetilebilmesini her kullanıcı Arabirimi öğesi için bir tane. Hangi cihazların gözlemleyin giriş bilgiye dayalı işleme işleyicisidir ve işlemeleri aracılığıyla raporları [.NET olayları](https://msdn.microsoft.com/library/17sde2xt.aspx).  
+ Düzenleme işlemi, bir alt kümesini manipülatörleri izleyen ve bunlar birlikte, hareket yerine bağımsız olarak varsa bunları yorumlar bir çerçeve sunar. İşlemci nesneleri aynı anda birden çok işleme oluşturabilirsiniz uygulamada yönetilebilmesini her kullanıcı Arabirimi öğesi için bir tane. Hangi cihazların gözlemleyin giriş bilgiye dayalı işleme işleyicisidir ve işlemeleri aracılığıyla raporları [.NET olayları](../../../docs/standard/events/index.md).  
   
  Bir işleme işlemci değiştirildiği belirli bir öğe hakkında bilgi yok. Bir uygulama, uygulamaya özgü öğeye değişiklikleri ayrı olarak uygular. Örneğin, bir uygulama görüntüye dönüşümleri uygular veya yeni konumunda ya da yeni bir boyut veya yönlendirme görüntülemek için yeniden çizer.  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-ms.openlocfilehash: 008bfb0042d31c7fbd1e853ba3ead4c1247dfa7c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 1fe3ea53be6305553e789f8644e378d95bfac71b
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47204459"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48793550"
 ---
 # <a name="whats-new-in-windows-communication-foundation-45"></a>Windows Communication Foundation 4.5'teki Yenilikler
 
@@ -67,9 +67,9 @@ Bu konu, Windows Communication Foundation (WCF) sürüm 4.5 için yeni özellikl
 |--------------|--------|-----------------|------------------------------|
 |ChannelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 saniye|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|12 * işlemci sayısı|<xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|
-|maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * taşıma için İşlemci sayısı<br /><br /> 4 \* SMSvcHost.exe işlemci sayısı|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A> [Net.TCP bağlantı noktası hizmetini yapılandırma](https://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)|
+|maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * taşıma için İşlemci sayısı<br /><br /> 4 \* SMSvcHost.exe işlemci sayısı|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A> [Net.TCP bağlantı noktası hizmetini yapılandırma](../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)|
 |maxPendingConnections|ConnectionOrientedTransportBindingElement|12 * işlemci sayısı|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A>|
-|receiveTimeout|SMSvcHost.exe|30 saniye|[Net.TCP Bağlantı Noktası Hizmetini Yapılandırma](https://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)|
+|receiveTimeout|SMSvcHost.exe|30 saniye|[Net.TCP Bağlantı Noktası Hizmetini Yapılandırma](../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)|
 
 ## <a name="xml-editor-tooltips"></a>XML Düzenleyicisi araç ipuçları
  Hizmetlerini yapılandırmak için yeni ve var olan WCF hizmet geliştiricileri yardımcı olmak amacıyla, Visual Studio XML Düzenleyicisi artık araç ipuçları her yapılandırma öğesi ve hizmet yapılandırma dosyasının bir parçası olan özellikleri sağlar.
