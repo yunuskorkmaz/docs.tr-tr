@@ -6,12 +6,12 @@ ms.date: 04/12/2018
 ms.technology: dotnet-standard
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c99f59478b61bd382d6bf9529d2921407cc70bc
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 19353bd068e3b04bc3d852c1e22db9c97ebef628
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253162"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48245055"
 ---
 # <a name="whats-new-in-the-net-standard"></a>.NET Standard'daki yenilikler
 
@@ -55,7 +55,7 @@ Bazı eklemeler <xref:System> ad alanında .NET Standard 2.0 içerir:
 
 ### <a name="support-for-net-framework-libraries"></a>.NET Framework kitaplıkları için desteği
 
-.NET Framework yerine .NET Standard kitaplıkları büyük çoğunluğu hedefleyin. Ancak, bu kitaplıkları çağrılarında .NET Standard 2.0 içinde bulunan API'lerin çoğu. .NET Standard 2.0 ile başlayarak, .NET Framework kitaplıkları bir .NET Standard Kitaplığı'ndan kullanarak erişebileceğiniz bir [uyumluluk dolgu](https://github.com/dotnet/standard/blob/master/docs/planning/netstandard-20/README.md#assembly-unification). Bu uyumluluk katmanı, geliştiriciler için saydamdır; .NET Framework kitaplıkları yararlanmak için herhangi bir şey yapmanız gerekmez.
+.NET Framework yerine .NET Standard kitaplıkları büyük çoğunluğu hedefleyin. Ancak, bu kitaplıkları çağrılarında .NET Standard 2.0 içinde bulunan API'lerin çoğu. .NET Standard 2.0 ile başlayarak, .NET Framework kitaplıkları bir .NET Standard Kitaplığı'ndan kullanarak erişebileceğiniz bir [uyumluluk dolgu](https://github.com/dotnet/standard/blob/master/docs/planning/netstandard-2.0/README.md#assembly-unification). Bu uyumluluk katmanı, geliştiriciler için saydamdır; .NET Framework kitaplıkları yararlanmak için herhangi bir şey yapmanız gerekmez.
 
 .NET Framework sınıf kitaplığının adlı API'leri .NET Standard 2.0 dahil edilmesi gerektiğini tek gereksinimdir.
 

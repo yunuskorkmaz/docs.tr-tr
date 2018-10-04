@@ -3,11 +3,11 @@ title: İş Akışı Hizmetlerini Barındırma Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: 19f3704f-06bf-4eeb-8724-5224e02d7ead
 ms.openlocfilehash: dbe271e30e9c4e98a52c01ffaa21de25c127c7ff
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
-ms.translationtype: MT
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47208463"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48245113"
 ---
 # <a name="hosting-workflow-services-overview"></a>İş Akışı Hizmetlerini Barındırma Genel Bakış
 Yürütülecek iş akışı hizmetleri barındırılması gerekir. <xref:System.ServiceModel.WorkflowServiceHost> (İş akışları barındırılması için Mesajlaşma kullanmak için gerekli olmasa da) destekleyen birden çok örneği, yapılandırma ve WCF ileti kullanıma hazır iş akışı ana bilgisayarı.  Ayrıca Kalıcılık, izleme ve hizmet davranışlarını bir dizi aracılığıyla örneği denetimi ile tümleştirilir.  WCF'ın ' olduğu gibi <xref:System.ServiceModel.ServiceHost>, <xref:System.ServiceModel.WorkflowServiceHost> herhangi bir yönetilen .NET uygulamasında şirket içinde barındırılan veya web barındırılan-(.xamlx dosyası) IIS / WAS'da.  Bu bölümdeki konular, bir iş akışı hizmeti barındırma açıklar.  
