@@ -5,578 +5,592 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
-ms.openlocfilehash: 525aeab7ff08da95735e9c9df7f6f040e8b9e215
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 721ab72ab1f67d2dc42574ed0147fa7686e02fd1
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856367"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48780316"
 ---
-# <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a><span data-ttu-id="55925-102">Nasıl yapılır: birden çok sürümünü bir iş akışı yan yana barındırma</span><span class="sxs-lookup"><span data-stu-id="55925-102">How to: Host Multiple Versions of a Workflow Side-by-Side</span></span>
-<span data-ttu-id="55925-103">`WorkflowIdentity` Bu bilgiler bir kalıcı iş akışı örneğiyle ilişkili olmasını yanı sıra, bir adı ve sürümü, bir iş akışı tanımıyla ilişkilendirilecek iş akışı uygulama geliştiricileri için bir yol sağlar.</span><span class="sxs-lookup"><span data-stu-id="55925-103">`WorkflowIdentity` provides a way for workflow application developers to associate a name and a version with a workflow definition, and for this information to be associated with a persisted workflow instance.</span></span> <span data-ttu-id="55925-104">Bu kimlik bilgileri birden çok iş akışı tanımı sürümünün yan yana yürütme gibi senaryoları etkinleştirmek için iş akışı uygulama geliştiricileri tarafından kullanılabilir ve dinamik güncelleştirme gibi diğer işlevleri için temel sağlar.</span><span class="sxs-lookup"><span data-stu-id="55925-104">This identity information can be used by workflow application developers to enable scenarios such as side-by-side execution of multiple versions of a workflow definition, and provides the cornerstone for other functionality such as dynamic update.</span></span> <span data-ttu-id="55925-105">Bu adım öğreticide nasıl kullanılacağını gösteren `WorkflowIdentity` aynı anda birden çok iş akışı sürümünü barındırmak için.</span><span class="sxs-lookup"><span data-stu-id="55925-105">This step in the tutorial demonstrates how to use `WorkflowIdentity` to host multiple versions of a workflow at the same time.</span></span>  
+# <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a><span data-ttu-id="33dc7-102">Nasıl yapılır: birden çok sürümünü bir iş akışı yan yana barındırma</span><span class="sxs-lookup"><span data-stu-id="33dc7-102">How to: Host Multiple Versions of a Workflow Side-by-Side</span></span>
+<span data-ttu-id="33dc7-103">`WorkflowIdentity` Bu bilgiler bir kalıcı iş akışı örneğiyle ilişkili olmasını yanı sıra, bir adı ve sürümü, bir iş akışı tanımıyla ilişkilendirilecek iş akışı uygulama geliştiricileri için bir yol sağlar.</span><span class="sxs-lookup"><span data-stu-id="33dc7-103">`WorkflowIdentity` provides a way for workflow application developers to associate a name and a version with a workflow definition, and for this information to be associated with a persisted workflow instance.</span></span> <span data-ttu-id="33dc7-104">Bu kimlik bilgileri birden çok iş akışı tanımı sürümünün yan yana yürütme gibi senaryoları etkinleştirmek için iş akışı uygulama geliştiricileri tarafından kullanılabilir ve dinamik güncelleştirme gibi diğer işlevleri için temel sağlar.</span><span class="sxs-lookup"><span data-stu-id="33dc7-104">This identity information can be used by workflow application developers to enable scenarios such as side-by-side execution of multiple versions of a workflow definition, and provides the cornerstone for other functionality such as dynamic update.</span></span> <span data-ttu-id="33dc7-105">Bu adım öğreticide nasıl kullanılacağını gösteren `WorkflowIdentity` aynı anda birden çok iş akışı sürümünü barındırmak için.</span><span class="sxs-lookup"><span data-stu-id="33dc7-105">This step in the tutorial demonstrates how to use `WorkflowIdentity` to host multiple versions of a workflow at the same time.</span></span>
+
+> [!NOTE]
+>  <span data-ttu-id="33dc7-106">Tamamlanmış bir sürümünü indirin veya videosu öğreticinin görüntülemek için bkz: [Windows Workflow Foundation (WF45) - başlangıç Öğreticisi](https://go.microsoft.com/fwlink/?LinkID=248976).</span><span class="sxs-lookup"><span data-stu-id="33dc7-106">To download a completed version or view a video walkthrough of the tutorial, see [Windows Workflow Foundation (WF45) - Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).</span></span>  
+  
+## <a name="in-this-topic"></a><span data-ttu-id="33dc7-107">Bu konuda</span><span class="sxs-lookup"><span data-stu-id="33dc7-107">In this topic</span></span>  
+ <span data-ttu-id="33dc7-108">Öğreticinin bu adımında `WriteLine` ek bilgiler ve yeni bir iş akışındaki etkinlikler değiştirildiğinde `WriteLine` etkinlik eklenir.</span><span class="sxs-lookup"><span data-stu-id="33dc7-108">In this step of the tutorial, the `WriteLine` activities in the workflow are modified to provide additional information, and a new `WriteLine` activity is added.</span></span> <span data-ttu-id="33dc7-109">Özgün iş akışı derleme kopyası depolanır ve aynı anda hem özgün hem de güncelleştirilmiş iş akışı çalışması için ana bilgisayar uygulaması güncelleştirilir.</span><span class="sxs-lookup"><span data-stu-id="33dc7-109">A copy of the original workflow assembly is stored, and the host application is updated so that it can run both the original and the updated workflows at the same time.</span></span>  
+  
+-   [<span data-ttu-id="33dc7-110">NumberGuessWorkflowActivities projenin bir kopyasını oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="33dc7-110">To make a copy of the NumberGuessWorkflowActivities project</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BackupCopy)  
+  
+-   [<span data-ttu-id="33dc7-111">İş akışları güncelleştirmek için</span><span class="sxs-lookup"><span data-stu-id="33dc7-111">To update the workflows</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflows)  
+  
+    -   [<span data-ttu-id="33dc7-112">Durum makinesi iş akışını güncelleştirme</span><span class="sxs-lookup"><span data-stu-id="33dc7-112">To update the StateMachine workflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)  
+  
+    -   [<span data-ttu-id="33dc7-113">Akış Çizelgesi iş akışını güncelleştirme</span><span class="sxs-lookup"><span data-stu-id="33dc7-113">To update the Flowchart workflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)  
+  
+    -   [<span data-ttu-id="33dc7-114">Sıralı iş akışını güncelleştirme</span><span class="sxs-lookup"><span data-stu-id="33dc7-114">To update the Sequential workflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)  
+  
+-   [<span data-ttu-id="33dc7-115">Önceki iş akışı sürümünün içerecek şekilde WorkflowVersionMap güncelleştirmek için</span><span class="sxs-lookup"><span data-stu-id="33dc7-115">To update WorkflowVersionMap to include the previous workflow versions</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflowVersionMap)  
+  
+-   [<span data-ttu-id="33dc7-116">Derleme ve uygulamayı çalıştırmak için</span><span class="sxs-lookup"><span data-stu-id="33dc7-116">To build and run the application</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BuildAndRun)  
   
 > [!NOTE]
->  <span data-ttu-id="55925-106">Tamamlanmış bir sürümünü indirin veya videosu öğreticinin görüntülemek için bkz: [Windows Workflow Foundation (WF45) - başlangıç Öğreticisi](https://go.microsoft.com/fwlink/?LinkID=248976).</span><span class="sxs-lookup"><span data-stu-id="55925-106">To download a completed version or view a video walkthrough of the tutorial, see [Windows Workflow Foundation (WF45) - Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).</span></span>  
-  
-## <a name="in-this-topic"></a><span data-ttu-id="55925-107">Bu konuda</span><span class="sxs-lookup"><span data-stu-id="55925-107">In this topic</span></span>  
- <span data-ttu-id="55925-108">Öğreticinin bu adımında `WriteLine` ek bilgiler ve yeni bir iş akışındaki etkinlikler değiştirildiğinde `WriteLine` etkinlik eklenir.</span><span class="sxs-lookup"><span data-stu-id="55925-108">In this step of the tutorial, the `WriteLine` activities in the workflow are modified to provide additional information, and a new `WriteLine` activity is added.</span></span> <span data-ttu-id="55925-109">Özgün iş akışı derleme kopyası depolanır ve aynı anda hem özgün hem de güncelleştirilmiş iş akışı çalışması için ana bilgisayar uygulaması güncelleştirilir.</span><span class="sxs-lookup"><span data-stu-id="55925-109">A copy of the original workflow assembly is stored, and the host application is updated so that it can run both the original and the updated workflows at the same time.</span></span>  
-  
--   [<span data-ttu-id="55925-110">NumberGuessWorkflowActivities projenin bir kopyasını oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="55925-110">To make a copy of the NumberGuessWorkflowActivities project</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BackupCopy)  
-  
--   [<span data-ttu-id="55925-111">İş akışları güncelleştirmek için</span><span class="sxs-lookup"><span data-stu-id="55925-111">To update the workflows</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflows)  
-  
-    -   [<span data-ttu-id="55925-112">Durum makinesi iş akışını güncelleştirme</span><span class="sxs-lookup"><span data-stu-id="55925-112">To update the StateMachine workflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)  
-  
-    -   [<span data-ttu-id="55925-113">Akış Çizelgesi iş akışını güncelleştirme</span><span class="sxs-lookup"><span data-stu-id="55925-113">To update the Flowchart workflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)  
-  
-    -   [<span data-ttu-id="55925-114">Sıralı iş akışını güncelleştirme</span><span class="sxs-lookup"><span data-stu-id="55925-114">To update the Sequential workflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)  
-  
--   [<span data-ttu-id="55925-115">Önceki iş akışı sürümünün içerecek şekilde WorkflowVersionMap güncelleştirmek için</span><span class="sxs-lookup"><span data-stu-id="55925-115">To update WorkflowVersionMap to include the previous workflow versions</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflowVersionMap)  
-  
--   [<span data-ttu-id="55925-116">Derleme ve uygulamayı çalıştırmak için</span><span class="sxs-lookup"><span data-stu-id="55925-116">To build and run the application</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BuildAndRun)  
-  
+>  <span data-ttu-id="33dc7-117">Bu konu başlığındaki adımları uygulayarak önce uygulamayı çalıştırmak, her türden çeşitli iş akışlarını başlatmak ve her biri için bir veya iki tahmin yapma.</span><span class="sxs-lookup"><span data-stu-id="33dc7-117">Before following the steps in this topic, run the application, start several workflows of each type, and making one or two guesses for each one.</span></span> <span data-ttu-id="33dc7-118">Bu adım ve aşağıdaki adımı kalıcı bu iş akışları kullanılan [nasıl yapılır: çalışan iş akışı örneğinin tanımını güncelleştirme](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).</span><span class="sxs-lookup"><span data-stu-id="33dc7-118">These persisted workflows are used in this step and the following step, [How to: Update the Definition of a Running Workflow Instance](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).</span></span>
+
 > [!NOTE]
->  <span data-ttu-id="55925-117">Bu konu başlığındaki adımları uygulayarak önce uygulamayı çalıştırmak, her türden çeşitli iş akışlarını başlatmak ve her biri için bir veya iki tahmin yapma.</span><span class="sxs-lookup"><span data-stu-id="55925-117">Before following the steps in this topic, run the application, start several workflows of each type, and making one or two guesses for each one.</span></span> <span data-ttu-id="55925-118">Bu adım ve aşağıdaki adımı kalıcı bu iş akışları kullanılan [nasıl yapılır: çalışan iş akışı örneğinin tanımını güncelleştirme](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).</span><span class="sxs-lookup"><span data-stu-id="55925-118">These persisted workflows are used in this step and the following step, [How to: Update the Definition of a Running Workflow Instance](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).</span></span>  
+>  <span data-ttu-id="33dc7-119">Başlarken Öğreticisi her adımda, önceki adımları bağlıdır.</span><span class="sxs-lookup"><span data-stu-id="33dc7-119">Each step in the Getting Started tutorial depends on the previous steps.</span></span> <span data-ttu-id="33dc7-120">Önceki adımları tamamlanmadıysa öğreticinin tamamlanmış bir sürümünü indirebilirsiniz [Windows Workflow Foundation (WF45) - başlangıç Öğreticisi](https://go.microsoft.com/fwlink/?LinkID=248976).</span><span class="sxs-lookup"><span data-stu-id="33dc7-120">If you did not complete the previous steps you can download a completed version of the tutorial from [Windows Workflow Foundation (WF45) - Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).</span></span>  
   
-> [!NOTE]
->  <span data-ttu-id="55925-119">Başlarken Öğreticisi her adımda, önceki adımları bağlıdır.</span><span class="sxs-lookup"><span data-stu-id="55925-119">Each step in the Getting Started tutorial depends on the previous steps.</span></span> <span data-ttu-id="55925-120">Önceki adımları tamamlanmadıysa öğreticinin tamamlanmış bir sürümünü indirebilirsiniz [Windows Workflow Foundation (WF45) - başlangıç Öğreticisi](https://go.microsoft.com/fwlink/?LinkID=248976).</span><span class="sxs-lookup"><span data-stu-id="55925-120">If you did not complete the previous steps you can download a completed version of the tutorial from [Windows Workflow Foundation (WF45) - Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).</span></span>  
+###  <a name="BKMK_BackupCopy"></a> <span data-ttu-id="33dc7-121">NumberGuessWorkflowActivities projenin bir kopyasını oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="33dc7-121">To make a copy of the NumberGuessWorkflowActivities project</span></span>  
   
-###  <a name="BKMK_BackupCopy"></a> <span data-ttu-id="55925-121">NumberGuessWorkflowActivities projenin bir kopyasını oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="55925-121">To make a copy of the NumberGuessWorkflowActivities project</span></span>  
+1.  <span data-ttu-id="33dc7-122">Açık **WF45GettingStartedTutorial** çözüm açık değilse Visual Studio 2012.</span><span class="sxs-lookup"><span data-stu-id="33dc7-122">Open the **WF45GettingStartedTutorial** solution in Visual Studio 2012 if it is not open.</span></span>  
   
-1.  <span data-ttu-id="55925-122">Açık **WF45GettingStartedTutorial** çözümde [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] açık değilse.</span><span class="sxs-lookup"><span data-stu-id="55925-122">Open the **WF45GettingStartedTutorial** solution in [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] if it is not open.</span></span>  
+2.  <span data-ttu-id="33dc7-123">Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.</span><span class="sxs-lookup"><span data-stu-id="33dc7-123">Press CTRL+SHIFT+B to build the solution.</span></span>  
   
-2.  <span data-ttu-id="55925-123">Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.</span><span class="sxs-lookup"><span data-stu-id="55925-123">Press CTRL+SHIFT+B to build the solution.</span></span>  
+3.  <span data-ttu-id="33dc7-124">Kapat **WF45GettingStartedTutorial** çözüm.</span><span class="sxs-lookup"><span data-stu-id="33dc7-124">Close the **WF45GettingStartedTutorial** solution.</span></span>  
   
-3.  <span data-ttu-id="55925-124">Kapat **WF45GettingStartedTutorial** çözüm.</span><span class="sxs-lookup"><span data-stu-id="55925-124">Close the **WF45GettingStartedTutorial** solution.</span></span>  
+4.  <span data-ttu-id="33dc7-125">Windows Gezgini'ni açın ve öğretici çözüm dosyası ve proje klasörleri bulunduğu klasöre gidin.</span><span class="sxs-lookup"><span data-stu-id="33dc7-125">Open Windows Explorer and navigate to the folder where the tutorial solution file and the project folders are located.</span></span>  
   
-4.  <span data-ttu-id="55925-125">Windows Gezgini'ni açın ve öğretici çözüm dosyası ve proje klasörleri bulunduğu klasöre gidin.</span><span class="sxs-lookup"><span data-stu-id="55925-125">Open Windows Explorer and navigate to the folder where the tutorial solution file and the project folders are located.</span></span>  
+5.  <span data-ttu-id="33dc7-126">Adlı yeni bir klasör oluşturun **PreviousVersions** aynı klasörde **NumberGuessWorkflowHost** ve **NumberGuessWorkflowActivities**.</span><span class="sxs-lookup"><span data-stu-id="33dc7-126">Create a new folder named **PreviousVersions** in the same folder as **NumberGuessWorkflowHost** and **NumberGuessWorkflowActivities**.</span></span> <span data-ttu-id="33dc7-127">Bu klasör, sonraki öğretici adımlarda kullanılan iş akışları farklı sürümlerini içeren derlemeler kapsamak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="33dc7-127">This folder is used to contain the assemblies that contain the different versions of the workflows used in the subsequent tutorial steps.</span></span>  
   
-5.  <span data-ttu-id="55925-126">Adlı yeni bir klasör oluşturun **PreviousVersions** aynı klasörde **NumberGuessWorkflowHost** ve **NumberGuessWorkflowActivities**.</span><span class="sxs-lookup"><span data-stu-id="55925-126">Create a new folder named **PreviousVersions** in the same folder as **NumberGuessWorkflowHost** and **NumberGuessWorkflowActivities**.</span></span> <span data-ttu-id="55925-127">Bu klasör, sonraki öğretici adımlarda kullanılan iş akışları farklı sürümlerini içeren derlemeler kapsamak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="55925-127">This folder is used to contain the assemblies that contain the different versions of the workflows used in the subsequent tutorial steps.</span></span>  
+6.  <span data-ttu-id="33dc7-128">Gidin **NumberGuessWorkflowActivities\bin\debug** klasörü (veya **bin\release** proje ayarlarınıza bağlı olarak).</span><span class="sxs-lookup"><span data-stu-id="33dc7-128">Navigate to the **NumberGuessWorkflowActivities\bin\debug** folder (or **bin\release** depending on your project settings).</span></span> <span data-ttu-id="33dc7-129">Kopyalama **NumberGuessWorkflowActivities.dll** yapıştırın **PreviousVersions** klasör.</span><span class="sxs-lookup"><span data-stu-id="33dc7-129">Copy **NumberGuessWorkflowActivities.dll** and paste it into the **PreviousVersions** folder.</span></span>  
   
-6.  <span data-ttu-id="55925-128">Gidin **NumberGuessWorkflowActivities\bin\debug** klasörü (veya **bin\release** proje ayarlarınıza bağlı olarak).</span><span class="sxs-lookup"><span data-stu-id="55925-128">Navigate to the **NumberGuessWorkflowActivities\bin\debug** folder (or **bin\release** depending on your project settings).</span></span> <span data-ttu-id="55925-129">Kopyalama **NumberGuessWorkflowActivities.dll** yapıştırın **PreviousVersions** klasör.</span><span class="sxs-lookup"><span data-stu-id="55925-129">Copy **NumberGuessWorkflowActivities.dll** and paste it into the **PreviousVersions** folder.</span></span>  
-  
-7.  <span data-ttu-id="55925-130">Yeniden adlandırma **NumberGuessWorkflowActivities.dll** içinde **PreviousVersions** klasörüne **NumberGuessWorkflowActivities_v1.dll**.</span><span class="sxs-lookup"><span data-stu-id="55925-130">Rename **NumberGuessWorkflowActivities.dll** in the **PreviousVersions** folder to **NumberGuessWorkflowActivities_v1.dll**.</span></span>  
+7.  <span data-ttu-id="33dc7-130">Yeniden adlandırma **NumberGuessWorkflowActivities.dll** içinde **PreviousVersions** klasörüne **NumberGuessWorkflowActivities_v1.dll**.</span><span class="sxs-lookup"><span data-stu-id="33dc7-130">Rename **NumberGuessWorkflowActivities.dll** in the **PreviousVersions** folder to **NumberGuessWorkflowActivities_v1.dll**.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="55925-131">Bu konu başlığındaki adımları iş akışları birden çok sürümünü kapsamak için kullanılmış olan derlemeleri yönetmek için bir yol gösterir.</span><span class="sxs-lookup"><span data-stu-id="55925-131">The steps in this topic demonstrate one way to manage the assemblies used to contain multiple versions of the workflows.</span></span> <span data-ttu-id="55925-132">Güçlü derlemelerini adlandırma ve bunları genel derleme önbelleğinde kaydetme gibi diğer yöntemleri de kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="55925-132">Other methods such as strong naming the assemblies and registering them in the global assembly cache could also be used.</span></span>  
-  
-8.  <span data-ttu-id="55925-133">Adlı yeni bir klasör oluşturun **NumberGuessWorkflowActivities_du** aynı klasörde **NumberGuessWorkflowHost**, **NumberGuessWorkflowActivities**ve yeni eklenen **PreviousVersions** klasörünü ve tüm dosyaları ve alt klasörlerdeki kopyalayın **NumberGuessWorkflowActivities** yeni klasöre  **NumberGuessWorkflowActivities_du** klasör.</span><span class="sxs-lookup"><span data-stu-id="55925-133">Create a new folder named **NumberGuessWorkflowActivities_du** in the same folder as **NumberGuessWorkflowHost**, **NumberGuessWorkflowActivities**, and the newly added **PreviousVersions** folder, and copy all of the files and subfolders from the **NumberGuessWorkflowActivities** folder into the new **NumberGuessWorkflowActivities_du** folder.</span></span> <span data-ttu-id="55925-134">Bu yedekleme kopyası proje etkinliklerinin ilk sürümü için kullanılan [nasıl yapılır: çalışan iş akışı örneğinin tanımını güncelleştirme](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).</span><span class="sxs-lookup"><span data-stu-id="55925-134">This backup copy of the project for the initial version of the activities is used in [How to: Update the Definition of a Running Workflow Instance](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).</span></span>  
-  
-9. <span data-ttu-id="55925-135">Yeniden açın **WF45GettingStartedTutorial** çözümde [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="55925-135">Re-open the **WF45GettingStartedTutorial** solution in [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].</span></span>  
-  
-###  <a name="BKMK_UpdateWorkflows"></a> <span data-ttu-id="55925-136">İş akışları güncelleştirmek için</span><span class="sxs-lookup"><span data-stu-id="55925-136">To update the workflows</span></span>  
- <span data-ttu-id="55925-137">Bu bölümde, iş akışı tanımları güncelleştirilir.</span><span class="sxs-lookup"><span data-stu-id="55925-137">In this section, the workflow definitions are updated.</span></span> <span data-ttu-id="55925-138">İki `WriteLine` güncelleştirilmiş ve yeni bir kullanıcının tahmin geri bildirimde bulunun etkinlikleri `WriteLine` etkinlik sayısını tahmin sonra oyun hakkında ek bilgi sağlayan eklenir.</span><span class="sxs-lookup"><span data-stu-id="55925-138">The two `WriteLine` activities that give feedback on the user's guess are updated, and a new `WriteLine` activity is added that provides additional information about the game once the number is guessed.</span></span>  
-  
-####  <a name="BKMK_UpdateStateMachine"></a> <span data-ttu-id="55925-139">Durum makinesi iş akışını güncelleştirme</span><span class="sxs-lookup"><span data-stu-id="55925-139">To update the StateMachine workflow</span></span>  
-  
-1.  <span data-ttu-id="55925-140">İçinde **Çözüm Gezgini**altında **NumberGuessWorkflowActivities** proje, çift **StateMachineNumberGuessWorkflow.xaml**.</span><span class="sxs-lookup"><span data-stu-id="55925-140">In **Solution Explorer**, under the **NumberGuessWorkflowActivities** project, double-click **StateMachineNumberGuessWorkflow.xaml**.</span></span>  
-  
-2.  <span data-ttu-id="55925-141">Çift **yanlış tahmin** durum makinesinin geçişi.</span><span class="sxs-lookup"><span data-stu-id="55925-141">Double-click the **Guess Incorrect** transition on the state machine.</span></span>  
-  
-3.  <span data-ttu-id="55925-142">Güncelleştirme `Text` en sol `WriteLine` içinde `If` etkinlik.</span><span class="sxs-lookup"><span data-stu-id="55925-142">Update the `Text` of the left-most `WriteLine` in the `If` activity.</span></span>  
-  
-    ```vb  
-    Guess & " is too low."  
-    ```  
-  
-    ```csharp  
-    Guess + " is too low."  
-    ```  
-  
-4.  <span data-ttu-id="55925-143">Güncelleştirme `Text` en sağ `WriteLine` içinde `If` etkinlik.</span><span class="sxs-lookup"><span data-stu-id="55925-143">Update the `Text` of the right-most `WriteLine` in the `If` activity.</span></span>  
-  
-    ```vb  
-    Guess & " is too high."  
-    ```  
-  
-    ```csharp  
-    Guess + " is too high."  
-    ```  
-  
-5.  <span data-ttu-id="55925-144">İade için genel durum makinesi iş akışı Tasarımcısı görünümünde tıklayarak **StateMachine** alan içerik haritasındaki iş akışı Tasarımcısı üst kısmında görüntüler.</span><span class="sxs-lookup"><span data-stu-id="55925-144">Return to the overall state machine view in the workflow designer by clicking **StateMachine** in the breadcrumb display at the top of the workflow designer.</span></span>  
-  
-6.  <span data-ttu-id="55925-145">Çift **doğru tahmin** durum makinesinin geçişi.</span><span class="sxs-lookup"><span data-stu-id="55925-145">Double-click the **Guess Correct** transition on the state machine.</span></span>  
-  
-7.  <span data-ttu-id="55925-146">Sürükleme bir **WriteLine** etkinliğinden **Temelleri** bölümünü **araç kutusu** ve bırakın **Buraya Bırak eylem etkinliği** etiketi geçiş.</span><span class="sxs-lookup"><span data-stu-id="55925-146">Drag a **WriteLine** activity from the **Primitives** section of the **Toolbox** and drop it on the **Drop Action activity here** label of the transition.</span></span>  
-  
-8.  <span data-ttu-id="55925-147">İçine aşağıdaki ifadeyi yazın `Text` özellik kutusu.</span><span class="sxs-lookup"><span data-stu-id="55925-147">Type the following expression into the `Text` property box.</span></span>  
-  
-    ```vb  
-    Guess & " is correct. You guessed it in " & Turns & " turns."  
-    ```  
-  
-    ```csharp  
-    Guess + " is correct. You guessed it in " + Turns + " turns."  
-    ```  
-  
-####  <a name="BKMK_UpdateFlowchart"></a> <span data-ttu-id="55925-148">Akış Çizelgesi iş akışını güncelleştirme</span><span class="sxs-lookup"><span data-stu-id="55925-148">To update the Flowchart workflow</span></span>  
-  
-1.  <span data-ttu-id="55925-149">İçinde **Çözüm Gezgini**altında **NumberGuessWorkflowActivities** proje, çift **FlowchartNumberGuessWorkflow.xaml**.</span><span class="sxs-lookup"><span data-stu-id="55925-149">In **Solution Explorer**, under the **NumberGuessWorkflowActivities** project, double-click **FlowchartNumberGuessWorkflow.xaml**.</span></span>  
-  
-2.  <span data-ttu-id="55925-150">Güncelleştirme `Text` en sol `WriteLine` etkinlik.</span><span class="sxs-lookup"><span data-stu-id="55925-150">Update the `Text` of the left-most `WriteLine` activity.</span></span>  
-  
-    ```vb  
-    Guess & " is too low."  
-    ```  
-  
-    ```csharp  
-    Guess + " is too low."  
-    ```  
-  
-3.  <span data-ttu-id="55925-151">Güncelleştirme `Text` en sağ `WriteLine` etkinlik.</span><span class="sxs-lookup"><span data-stu-id="55925-151">Update the `Text` of the right-most `WriteLine` activity.</span></span>  
-  
-    ```vb  
-    Guess & " is too high."  
-    ```  
-  
-    ```csharp  
-    Guess + " is too high."  
-    ```  
-  
-4.  <span data-ttu-id="55925-152">Sürükleme bir **WriteLine** etkinliğinden **Temelleri** bölümünü **araç kutusu** sürükleyip bırakma noktasına `True` eylemi üstteki `FlowDecision` .</span><span class="sxs-lookup"><span data-stu-id="55925-152">Drag a **WriteLine** activity from the **Primitives** section of the **Toolbox** and drop it on the drop point of the `True` action of the topmost `FlowDecision`.</span></span> <span data-ttu-id="55925-153">`WriteLine` Etkinliği için akış eklenir ve bağlantılı `True` eylemi `FlowDecision`.</span><span class="sxs-lookup"><span data-stu-id="55925-153">The `WriteLine` activity is added to the flowchart and linked to the `True` action of the `FlowDecision`.</span></span>  
-  
-5.  <span data-ttu-id="55925-154">İçine aşağıdaki ifadeyi yazın `Text` özellik kutusu.</span><span class="sxs-lookup"><span data-stu-id="55925-154">Type the following expression into the `Text` property box.</span></span>  
-  
-    ```vb  
-    Guess & " is correct. You guessed it in " & Turns & " turns."  
-    ```  
-  
-    ```csharp  
-    Guess + " is correct. You guessed it in " + Turns + " turns."  
-    ```  
-  
-####  <a name="BKMK_UpdateSequential"></a> <span data-ttu-id="55925-155">Sıralı iş akışını güncelleştirme</span><span class="sxs-lookup"><span data-stu-id="55925-155">To update the Sequential workflow</span></span>  
-  
-1.  <span data-ttu-id="55925-156">İçinde **Çözüm Gezgini**altında **NumberGuessWorkflowActivities** proje, çift **SequentialNumberGuessWorkflow.xaml**.</span><span class="sxs-lookup"><span data-stu-id="55925-156">In **Solution Explorer**, under the **NumberGuessWorkflowActivities** project, double-click **SequentialNumberGuessWorkflow.xaml**.</span></span>  
-  
-2.  <span data-ttu-id="55925-157">Güncelleştirme `Text` en sol `WriteLine` içinde `If` etkinlik.</span><span class="sxs-lookup"><span data-stu-id="55925-157">Update the `Text` of the left-most `WriteLine` in the `If` activity.</span></span>  
-  
-    ```vb  
-    Guess & " is too low."  
-    ```  
-  
-    ```csharp  
-    Guess + " is too low."  
-    ```  
-  
-3.  <span data-ttu-id="55925-158">Güncelleştirme `Text` en sağ `WriteLine` etkinliğinde `If` etkinlik.</span><span class="sxs-lookup"><span data-stu-id="55925-158">Update the `Text` of the right-most `WriteLine` activity in the `If` activity.</span></span>  
-  
-    ```vb  
-    Guess & " is too high."  
-    ```  
-  
-    ```csharp  
-    Guess + " is too high."  
-    ```  
-  
-4.  <span data-ttu-id="55925-159">Sürükleme bir **WriteLine** etkinliğinden **Temelleri** bölümünü **araç kutusu** ve bundan sonra açılan **DoWhile** etkinlik böylece  **WriteLine** kök son etkinlik olduğu `Sequence` etkinlik.</span><span class="sxs-lookup"><span data-stu-id="55925-159">Drag a **WriteLine** activity from the **Primitives** section of the **Toolbox** and drop it after the **DoWhile** activity so that the **WriteLine** is the final activity in the root `Sequence` activity.</span></span>  
-  
-5.  <span data-ttu-id="55925-160">İçine aşağıdaki ifadeyi yazın `Text` özellik kutusu.</span><span class="sxs-lookup"><span data-stu-id="55925-160">Type the following expression into the `Text` property box.</span></span>  
-  
-    ```vb  
-    Guess & " is correct. You guessed it in " & Turns & " turns."  
-    ```  
-  
-    ```csharp  
-    Guess + " is correct. You guessed it in " + Turns + " turns."  
-    ```  
-  
-###  <a name="BKMK_UpdateWorkflowVersionMap"></a> <span data-ttu-id="55925-161">Önceki iş akışı sürümünün içerecek şekilde WorkflowVersionMap güncelleştirmek için</span><span class="sxs-lookup"><span data-stu-id="55925-161">To update WorkflowVersionMap to include the previous workflow versions</span></span>  
-  
-1.  <span data-ttu-id="55925-162">Çift **WorkflowVersionMap.cs** (veya **WorkflowVersionMap.vb**) altında **NumberGuessWorkflowHost** açmak için proje.</span><span class="sxs-lookup"><span data-stu-id="55925-162">Double-click **WorkflowVersionMap.cs** (or **WorkflowVersionMap.vb**) under the **NumberGuessWorkflowHost** project to open it.</span></span>  
-  
-2.  <span data-ttu-id="55925-163">Aşağıdaki `using` (veya `Imports`) diğer dosyasının en `using` (veya `Imports`) ifadeleri.</span><span class="sxs-lookup"><span data-stu-id="55925-163">Add the following `using` (or `Imports`) statements to the top of the file with the other `using` (or `Imports`) statements.</span></span>  
-  
-    ```vb  
-    Imports System.Reflection  
-    Imports System.IO  
-    ```  
-  
-    ```csharp  
-    using System.Reflection;  
-    using System.IO;  
-    ```  
-  
-3.  <span data-ttu-id="55925-164">Üç mevcut iş akışı kimlik bildirimlerine hemen altına üç yeni iş akışı kimliklerini ekleyin.</span><span class="sxs-lookup"><span data-stu-id="55925-164">Add three new workflow identities just below the three existing workflow identity declarations.</span></span> <span data-ttu-id="55925-165">Bu yeni `v1` kimlikleri kullanılabilir iş akışı güncelleştirmeleri yapılmadan önce başlatılan iş akışları için doğru iş akışı tanımı belirtin.</span><span class="sxs-lookup"><span data-stu-id="55925-165">These new `v1` workflow identities will be used provide the correct workflow definition to workflows started before the updates were made.</span></span>  
-  
-    ```vb  
-    'Current version identities.  
-    Public StateMachineNumberGuessIdentity As WorkflowIdentity  
-    Public FlowchartNumberGuessIdentity As WorkflowIdentity  
-    Public SequentialNumberGuessIdentity As WorkflowIdentity  
-  
-    'v1 Identities.  
-    Public StateMachineNumberGuessIdentity_v1 As WorkflowIdentity  
-    Public FlowchartNumberGuessIdentity_v1 As WorkflowIdentity  
-    Public SequentialNumberGuessIdentity_v1 As WorkflowIdentity  
-    ```  
-  
-    ```csharp  
-    // Current version identities.  
-    static public WorkflowIdentity StateMachineNumberGuessIdentity;  
-    static public WorkflowIdentity FlowchartNumberGuessIdentity;  
-    static public WorkflowIdentity SequentialNumberGuessIdentity;  
-  
-    // v1 identities.  
-    static public WorkflowIdentity StateMachineNumberGuessIdentity_v1;  
-    static public WorkflowIdentity FlowchartNumberGuessIdentity_v1;  
-    static public WorkflowIdentity SequentialNumberGuessIdentity_v1;  
-    ```  
-  
-4.  <span data-ttu-id="55925-166">İçinde `WorkflowVersionMap` oluşturucusu, güncelleştirme `Version` üç geçerli iş akışı kimlikleri özelliği `2.0.0.0`.</span><span class="sxs-lookup"><span data-stu-id="55925-166">In the `WorkflowVersionMap` constructor, update the `Version` property of the three current workflow identities to `2.0.0.0`.</span></span>  
-  
-    ```vb  
-    'Add the current workflow version identities.  
-    StateMachineNumberGuessIdentity = New WorkflowIdentity With  
-    {  
-        .Name = "StateMachineNumberGuessWorkflow",  
-        .Version = New Version(2, 0, 0, 0)  
-    }  
-  
-    FlowchartNumberGuessIdentity = New WorkflowIdentity With  
-    {  
-        .Name = "FlowchartNumberGuessWorkflow",  
-        .Version = New Version(2, 0, 0, 0)  
-    }  
-  
-    SequentialNumberGuessIdentity = New WorkflowIdentity With  
-    {  
-        .Name = "SequentialNumberGuessWorkflow",  
-        .Version = New Version(2, 0, 0, 0)  
-    }  
-  
-    map.Add(StateMachineNumberGuessIdentity, New StateMachineNumberGuessWorkflow())  
-    map.Add(FlowchartNumberGuessIdentity, New FlowchartNumberGuessWorkflow())  
-    map.Add(SequentialNumberGuessIdentity, New SequentialNumberGuessWorkflow())  
-    ```  
-  
-    ```csharp  
-    // Add the current workflow version identities.  
-    StateMachineNumberGuessIdentity = new WorkflowIdentity  
-    {  
-        Name = "StateMachineNumberGuessWorkflow",  
-        // Version = new Version(1, 0, 0, 0),  
-        Version = new Version(2, 0, 0, 0)  
-    };  
-  
-    FlowchartNumberGuessIdentity = new WorkflowIdentity  
-    {  
-        Name = "FlowchartNumberGuessWorkflow",  
-        // Version = new Version(1, 0, 0, 0),  
-        Version = new Version(2, 0, 0, 0)  
-    };  
-  
-    SequentialNumberGuessIdentity = new WorkflowIdentity  
-    {  
-        Name = "SequentialNumberGuessWorkflow",  
-        // Version = new Version(1, 0, 0, 0),  
-        Version = new Version(2, 0, 0, 0)  
-    };  
-  
-    map.Add(StateMachineNumberGuessIdentity, new StateMachineNumberGuessWorkflow());  
-    map.Add(FlowchartNumberGuessIdentity, new FlowchartNumberGuessWorkflow());  
-    map.Add(SequentialNumberGuessIdentity, new SequentialNumberGuessWorkflow());  
-    ```  
-  
-     <span data-ttu-id="55925-167">İş akışları sözlüğüne geçerli sürümleri kullanan iş akışı tanımları başlatan kodu güncelleştirilmesi gerekmez, projenizde başvurulan geçerli sürümleri, kodu ekler.</span><span class="sxs-lookup"><span data-stu-id="55925-167">The code in that adds the current versions of the workflows to the dictionary uses the current versions that are referenced in the project, so the code that initializes the workflow definitions does not need to be updated.</span></span>  
-  
-5.  <span data-ttu-id="55925-168">Aşağıdaki kod oluşturucuda geçerli sürümler sözlüğe ekler koddan sonra ekleyin.</span><span class="sxs-lookup"><span data-stu-id="55925-168">Add the following code in the constructor just after the code that adds the current versions to the dictionary.</span></span>  
-  
-    ```vb  
-    'Initialize the previous workflow version identities.  
-    StateMachineNumberGuessIdentity_v1 = New WorkflowIdentity With  
-    {  
-        .Name = "StateMachineNumberGuessWorkflow",  
-        .Version = New Version(1, 0, 0, 0)  
-    }  
-  
-    FlowchartNumberGuessIdentity_v1 = New WorkflowIdentity With  
-    {  
-        .Name = "FlowchartNumberGuessWorkflow",  
-        .Version = New Version(1, 0, 0, 0)  
-    }  
-  
-    SequentialNumberGuessIdentity_v1 = New WorkflowIdentity With  
-    {  
-        .Name = "SequentialNumberGuessWorkflow",  
-        .Version = New Version(1, 0, 0, 0)  
-    }  
-    ```  
-  
-    ```csharp  
-    // Initialize the previous workflow version identities.  
-    StateMachineNumberGuessIdentity_v1 = new WorkflowIdentity  
-    {  
-        Name = "StateMachineNumberGuessWorkflow",  
-        Version = new Version(1, 0, 0, 0)  
-    };  
-  
-    FlowchartNumberGuessIdentity_v1 = new WorkflowIdentity  
-    {  
-        Name = "FlowchartNumberGuessWorkflow",  
-        Version = new Version(1, 0, 0, 0)  
-    };  
-  
-    SequentialNumberGuessIdentity_v1 = new WorkflowIdentity  
-    {  
-        Name = "SequentialNumberGuessWorkflow",  
-        Version = new Version(1, 0, 0, 0)  
-    };  
-    ```  
-  
-     <span data-ttu-id="55925-169">Bu iş akışı kimlikleri, karşılık gelen iş akışı tanımları ilk sürümleri ile ilişkilidir.</span><span class="sxs-lookup"><span data-stu-id="55925-169">These workflow identities are associated with the initial versions of the corresponding workflow definitions.</span></span>  
-  
-6.  <span data-ttu-id="55925-170">Ardından, iş akışı tanımları'nin ilk sürümünden içeren derlemeyi yüklemek ve oluşturun ve karşılık gelen iş akışı tanımları sözlüğüne ekleyin.</span><span class="sxs-lookup"><span data-stu-id="55925-170">Next, load the assembly that contains the initial version of the workflow definitions, and create and add the corresponding workflow definitions to the dictionary.</span></span>  
-  
-    ```vb  
-    'Add the previous version workflow identities to the dictionary along with  
-    'the corresponding workflow definitions loaded from the v1 assembly.  
-    'Assembly.LoadFile requires an absolute path so convert this relative path  
-    'to an absolute path.  
-    Dim v1AssemblyPath As String = "..\..\..\PreviousVersions\NumberGuessWorkflowActivities_v1.dll"  
-    v1AssemblyPath = Path.GetFullPath(v1AssemblyPath)  
-    Dim v1Assembly As Assembly = Assembly.LoadFile(v1AssemblyPath)  
-  
-    map.Add(StateMachineNumberGuessIdentity_v1,  
-        v1Assembly.CreateInstance("NumberGuessWorkflowActivities.StateMachineNumberGuessWorkflow"))  
-  
-    map.Add(SequentialNumberGuessIdentity_v1,  
-        v1Assembly.CreateInstance("NumberGuessWorkflowActivities.SequentialNumberGuessWorkflow"))  
-  
-    map.Add(FlowchartNumberGuessIdentity_v1,  
-        v1Assembly.CreateInstance("NumberGuessWorkflowActivities.FlowchartNumberGuessWorkflow"))  
-    ```  
-  
-    ```csharp  
-    // Add the previous version workflow identities to the dictionary along with  
-    // the corresponding workflow definitions loaded from the v1 assembly.  
-    // Assembly.LoadFile requires an absolute path so convert this relative path  
-    // to an absolute path.  
-    string v1AssemblyPath = @"..\..\..\PreviousVersions\NumberGuessWorkflowActivities_v1.dll";  
-    v1AssemblyPath = Path.GetFullPath(v1AssemblyPath);  
-    Assembly v1Assembly = Assembly.LoadFile(v1AssemblyPath);  
-  
-    map.Add(StateMachineNumberGuessIdentity_v1,  
-        v1Assembly.CreateInstance("NumberGuessWorkflowActivities.StateMachineNumberGuessWorkflow") as Activity);  
-  
-    map.Add(SequentialNumberGuessIdentity_v1,  
-        v1Assembly.CreateInstance("NumberGuessWorkflowActivities.SequentialNumberGuessWorkflow") as Activity);  
-  
-    map.Add(FlowchartNumberGuessIdentity_v1,  
-        v1Assembly.CreateInstance("NumberGuessWorkflowActivities.FlowchartNumberGuessWorkflow") as Activity);  
-    ```  
-  
-     <span data-ttu-id="55925-171">Aşağıdaki örnek, tam listesi için güncelleştirilmiş `WorkflowVersionMap` sınıfı.</span><span class="sxs-lookup"><span data-stu-id="55925-171">The following example is the complete listing for the updated `WorkflowVersionMap` class.</span></span>  
-  
-    ```vb  
-    Public Module WorkflowVersionMap  
-        Dim map As Dictionary(Of WorkflowIdentity, Activity)  
-  
-        'Current version identities.  
-        Public StateMachineNumberGuessIdentity As WorkflowIdentity  
-        Public FlowchartNumberGuessIdentity As WorkflowIdentity  
-        Public SequentialNumberGuessIdentity As WorkflowIdentity  
-  
-        'v1 Identities.  
-        Public StateMachineNumberGuessIdentity_v1 As WorkflowIdentity  
-        Public FlowchartNumberGuessIdentity_v1 As WorkflowIdentity  
-        Public SequentialNumberGuessIdentity_v1 As WorkflowIdentity  
-  
-        Sub New()  
-            map = New Dictionary(Of WorkflowIdentity, Activity)  
-  
-            'Add the current workflow version identities.  
-            StateMachineNumberGuessIdentity = New WorkflowIdentity With  
-            {  
-                .Name = "StateMachineNumberGuessWorkflow",  
-                .Version = New Version(2, 0, 0, 0)  
-            }  
-  
-            FlowchartNumberGuessIdentity = New WorkflowIdentity With  
-            {  
-                .Name = "FlowchartNumberGuessWorkflow",  
-                .Version = New Version(2, 0, 0, 0)  
-            }  
-  
-            SequentialNumberGuessIdentity = New WorkflowIdentity With  
-            {  
-                .Name = "SequentialNumberGuessWorkflow",  
-                .Version = New Version(2, 0, 0, 0)  
-            }  
-  
-            map.Add(StateMachineNumberGuessIdentity, New StateMachineNumberGuessWorkflow())  
-            map.Add(FlowchartNumberGuessIdentity, New FlowchartNumberGuessWorkflow())  
-            map.Add(SequentialNumberGuessIdentity, New SequentialNumberGuessWorkflow())  
-  
-            'Initialize the previous workflow version identities.  
-            StateMachineNumberGuessIdentity_v1 = New WorkflowIdentity With  
-            {  
-                .Name = "StateMachineNumberGuessWorkflow",  
-                .Version = New Version(1, 0, 0, 0)  
-            }  
-  
-            FlowchartNumberGuessIdentity_v1 = New WorkflowIdentity With  
-            {  
-                .Name = "FlowchartNumberGuessWorkflow",  
-                .Version = New Version(1, 0, 0, 0)  
-            }  
-  
-            SequentialNumberGuessIdentity_v1 = New WorkflowIdentity With  
-            {  
-                .Name = "SequentialNumberGuessWorkflow",  
-                .Version = New Version(1, 0, 0, 0)  
-            }  
-  
-            'Add the previous version workflow identities to the dictionary along with  
-            'the corresponding workflow definitions loaded from the v1 assembly.  
-            'Assembly.LoadFile requires an absolute path so convert this relative path  
-            'to an absolute path.  
-            Dim v1AssemblyPath As String = "..\..\..\PreviousVersions\NumberGuessWorkflowActivities_v1.dll"  
-            v1AssemblyPath = Path.GetFullPath(v1AssemblyPath)  
-            Dim v1Assembly As Assembly = Assembly.LoadFile(v1AssemblyPath)  
-  
-            map.Add(StateMachineNumberGuessIdentity_v1,  
-                v1Assembly.CreateInstance("NumberGuessWorkflowActivities.StateMachineNumberGuessWorkflow"))  
-  
-            map.Add(SequentialNumberGuessIdentity_v1,  
-                v1Assembly.CreateInstance("NumberGuessWorkflowActivities.SequentialNumberGuessWorkflow"))  
-  
-            map.Add(FlowchartNumberGuessIdentity_v1,  
-                v1Assembly.CreateInstance("NumberGuessWorkflowActivities.FlowchartNumberGuessWorkflow"))  
-        End Sub  
-  
-        Public Function GetWorkflowDefinition(identity As WorkflowIdentity) As Activity  
-            Return map(identity)  
-        End Function  
-  
-        Public Function GetIdentityDescription(identity As WorkflowIdentity) As String  
-            Return identity.ToString()  
-        End Function  
-    End Module  
-    ```  
-  
-    ```csharp  
-    public static class WorkflowVersionMap  
-    {  
-        static Dictionary<WorkflowIdentity, Activity> map;  
-  
-        // Current version identities.  
-        static public WorkflowIdentity StateMachineNumberGuessIdentity;  
-        static public WorkflowIdentity FlowchartNumberGuessIdentity;  
-        static public WorkflowIdentity SequentialNumberGuessIdentity;  
-  
-        // v1 identities.  
-        static public WorkflowIdentity StateMachineNumberGuessIdentity_v1;  
-        static public WorkflowIdentity FlowchartNumberGuessIdentity_v1;  
-        static public WorkflowIdentity SequentialNumberGuessIdentity_v1;  
-  
-        static WorkflowVersionMap()  
-        {  
-            map = new Dictionary<WorkflowIdentity, Activity>();  
-  
-            // Add the current workflow version identities.  
-            StateMachineNumberGuessIdentity = new WorkflowIdentity  
-            {  
-                Name = "StateMachineNumberGuessWorkflow",  
-                // Version = new Version(1, 0, 0, 0),  
-                Version = new Version(2, 0, 0, 0)  
-            };  
-  
-            FlowchartNumberGuessIdentity = new WorkflowIdentity  
-            {  
-                Name = "FlowchartNumberGuessWorkflow",  
-                // Version = new Version(1, 0, 0, 0),  
-                Version = new Version(2, 0, 0, 0)  
-            };  
-  
-            SequentialNumberGuessIdentity = new WorkflowIdentity  
-            {  
-                Name = "SequentialNumberGuessWorkflow",  
-                // Version = new Version(1, 0, 0, 0),  
-                Version = new Version(2, 0, 0, 0)  
-            };  
-  
-            map.Add(StateMachineNumberGuessIdentity, new StateMachineNumberGuessWorkflow());  
-            map.Add(FlowchartNumberGuessIdentity, new FlowchartNumberGuessWorkflow());  
-            map.Add(SequentialNumberGuessIdentity, new SequentialNumberGuessWorkflow());  
-  
-            // Initialize the previous workflow version identities.  
-            StateMachineNumberGuessIdentity_v1 = new WorkflowIdentity  
-            {  
-                Name = "StateMachineNumberGuessWorkflow",  
-                Version = new Version(1, 0, 0, 0)  
-            };  
-  
-            FlowchartNumberGuessIdentity_v1 = new WorkflowIdentity  
-            {  
-                Name = "FlowchartNumberGuessWorkflow",  
-                Version = new Version(1, 0, 0, 0)  
-            };  
-  
-            SequentialNumberGuessIdentity_v1 = new WorkflowIdentity  
-            {  
-                Name = "SequentialNumberGuessWorkflow",  
-                Version = new Version(1, 0, 0, 0)  
-            };  
-  
-            // Add the previous version workflow identities to the dictionary along with  
-            // the corresponding workflow definitions loaded from the v1 assembly.  
-            // Assembly.LoadFile requires an absolute path so convert this relative path  
-            // to an absolute path.  
-            string v1AssemblyPath = @"..\..\..\PreviousVersions\NumberGuessWorkflowActivities_v1.dll";  
-            v1AssemblyPath = Path.GetFullPath(v1AssemblyPath);  
-            Assembly v1Assembly = Assembly.LoadFile(v1AssemblyPath);  
-  
-            map.Add(StateMachineNumberGuessIdentity_v1,  
-                v1Assembly.CreateInstance("NumberGuessWorkflowActivities.StateMachineNumberGuessWorkflow") as Activity);  
-  
-            map.Add(SequentialNumberGuessIdentity_v1,  
-                v1Assembly.CreateInstance("NumberGuessWorkflowActivities.SequentialNumberGuessWorkflow") as Activity);  
-  
-            map.Add(FlowchartNumberGuessIdentity_v1,  
-                v1Assembly.CreateInstance("NumberGuessWorkflowActivities.FlowchartNumberGuessWorkflow") as Activity);  
-        }  
-  
-        public static Activity GetWorkflowDefinition(WorkflowIdentity identity)  
-        {  
-            return map[identity];  
-        }  
-  
-        public static string GetIdentityDescription(WorkflowIdentity identity)  
-        {  
-            return identity.ToString();  
-        }  
-    }  
-    ```  
-  
-###  <a name="BKMK_BuildAndRun"></a> <span data-ttu-id="55925-172">Derleme ve uygulamayı çalıştırmak için</span><span class="sxs-lookup"><span data-stu-id="55925-172">To build and run the application</span></span>  
-  
-1.  <span data-ttu-id="55925-173">Uygulamayı oluşturmak için CTRL + SHIFT + B ve başlatmak için CTRL + F5 tuşlarına basın.</span><span class="sxs-lookup"><span data-stu-id="55925-173">Press CTRL+SHIFT+B to build the application, and then CTRL+F5 to start.</span></span>  
-  
-2.  <span data-ttu-id="55925-174">Tıklayarak yeni bir iş akışının başlatılacağı **yeni oyun**.</span><span class="sxs-lookup"><span data-stu-id="55925-174">Start a new workflow by clicking **New Game**.</span></span> <span data-ttu-id="55925-175">İş akışı sürümü altında durum penceresi görüntülenir ve güncelleştirilmiş sürümü ilişkili yansıtır `WorkflowIdentity`.</span><span class="sxs-lookup"><span data-stu-id="55925-175">The version of the workflow is displayed under the status window and reflects the updated version from the associated `WorkflowIdentity`.</span></span> <span data-ttu-id="55925-176">Not `InstanceId` tamamlandığında, iş akışı için izleme dosyayı görüntülemek ve oyun tamamlanana kadar tahmin girin.</span><span class="sxs-lookup"><span data-stu-id="55925-176">Make a note of the `InstanceId` so you can view the tracking file for the workflow when it completes, and then enter guesses until the game is complete.</span></span> <span data-ttu-id="55925-177">Kullanıcının tahmin güncelleştirmeleri temel durum penceresinde görüntülenen bilgileri nasıl görüntüleneceğini unutmayın `WriteLine` etkinlikler.</span><span class="sxs-lookup"><span data-stu-id="55925-177">Note how the user's guess is displayed in the information displayed in the status window based on the updates to the `WriteLine` activities.</span></span>  
-  
- <span data-ttu-id="55925-178">**Lütfen 1 ile 10 arasında bir sayı girin**</span><span class="sxs-lookup"><span data-stu-id="55925-178">**Please enter a number between 1 and 10**</span></span>  
-<span data-ttu-id="55925-179">**5 çok yüksektir.** </span><span class="sxs-lookup"><span data-stu-id="55925-179">**5 is too high.** </span></span>  
-<span data-ttu-id="55925-180">**Lütfen 1 ile 10 arasında bir sayı girin** </span><span class="sxs-lookup"><span data-stu-id="55925-180">**Please enter a number between 1 and 10** </span></span>  
-<span data-ttu-id="55925-181">**3 çok yüksektir.** </span><span class="sxs-lookup"><span data-stu-id="55925-181">**3 is too high.** </span></span>  
-<span data-ttu-id="55925-182">**Lütfen 1 ile 10 arasında bir sayı girin** </span><span class="sxs-lookup"><span data-stu-id="55925-182">**Please enter a number between 1 and 10** </span></span>  
-<span data-ttu-id="55925-183">**1 çok düşüktür.** </span><span class="sxs-lookup"><span data-stu-id="55925-183">**1 is too low.** </span></span>  
-<span data-ttu-id="55925-184">**Lütfen 1 ile 10 arasında bir sayı girin** </span><span class="sxs-lookup"><span data-stu-id="55925-184">**Please enter a number between 1 and 10** </span></span>  
-<span data-ttu-id="55925-185">**Tebrikler, sayı 4 kapatır tahmin.**</span><span class="sxs-lookup"><span data-stu-id="55925-185">**Congratulations, you guessed the number in 4 turns.**</span></span>    
+    >  <span data-ttu-id="33dc7-131">Bu konu başlığındaki adımları iş akışları birden çok sürümünü kapsamak için kullanılmış olan derlemeleri yönetmek için bir yol gösterir.</span><span class="sxs-lookup"><span data-stu-id="33dc7-131">The steps in this topic demonstrate one way to manage the assemblies used to contain multiple versions of the workflows.</span></span> <span data-ttu-id="33dc7-132">Güçlü derlemelerini adlandırma ve bunları genel derleme önbelleğinde kaydetme gibi diğer yöntemleri de kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="33dc7-132">Other methods such as strong naming the assemblies and registering them in the global assembly cache could also be used.</span></span>
+
+8.  <span data-ttu-id="33dc7-133">Adlı yeni bir klasör oluşturun **NumberGuessWorkflowActivities_du** aynı klasörde **NumberGuessWorkflowHost**, **NumberGuessWorkflowActivities**ve yeni eklenen **PreviousVersions** klasörünü ve tüm dosyaları ve alt klasörlerdeki kopyalayın **NumberGuessWorkflowActivities** yeni klasöre  **NumberGuessWorkflowActivities_du** klasör.</span><span class="sxs-lookup"><span data-stu-id="33dc7-133">Create a new folder named **NumberGuessWorkflowActivities_du** in the same folder as **NumberGuessWorkflowHost**, **NumberGuessWorkflowActivities**, and the newly added **PreviousVersions** folder, and copy all of the files and subfolders from the **NumberGuessWorkflowActivities** folder into the new **NumberGuessWorkflowActivities_du** folder.</span></span> <span data-ttu-id="33dc7-134">Bu yedekleme kopyası proje etkinliklerinin ilk sürümü için kullanılan [nasıl yapılır: çalışan iş akışı örneğinin tanımını güncelleştirme](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).</span><span class="sxs-lookup"><span data-stu-id="33dc7-134">This backup copy of the project for the initial version of the activities is used in [How to: Update the Definition of a Running Workflow Instance](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).</span></span>
+
+9. <span data-ttu-id="33dc7-135">Yeniden açın **WF45GettingStartedTutorial** çözümü Visual Studio 2012.</span><span class="sxs-lookup"><span data-stu-id="33dc7-135">Re-open the **WF45GettingStartedTutorial** solution in Visual Studio 2012.</span></span>
+
+###  <a name="BKMK_UpdateWorkflows"></a> <span data-ttu-id="33dc7-136">İş akışları güncelleştirmek için</span><span class="sxs-lookup"><span data-stu-id="33dc7-136">To update the workflows</span></span>
+ <span data-ttu-id="33dc7-137">Bu bölümde, iş akışı tanımları güncelleştirilir.</span><span class="sxs-lookup"><span data-stu-id="33dc7-137">In this section, the workflow definitions are updated.</span></span> <span data-ttu-id="33dc7-138">İki `WriteLine` güncelleştirilmiş ve yeni bir kullanıcının tahmin geri bildirimde bulunun etkinlikleri `WriteLine` etkinlik sayısını tahmin sonra oyun hakkında ek bilgi sağlayan eklenir.</span><span class="sxs-lookup"><span data-stu-id="33dc7-138">The two `WriteLine` activities that give feedback on the user's guess are updated, and a new `WriteLine` activity is added that provides additional information about the game once the number is guessed.</span></span>
+
+####  <a name="BKMK_UpdateStateMachine"></a> <span data-ttu-id="33dc7-139">Durum makinesi iş akışını güncelleştirme</span><span class="sxs-lookup"><span data-stu-id="33dc7-139">To update the StateMachine workflow</span></span>
+
+1.  <span data-ttu-id="33dc7-140">İçinde **Çözüm Gezgini**altında **NumberGuessWorkflowActivities** proje, çift **StateMachineNumberGuessWorkflow.xaml**.</span><span class="sxs-lookup"><span data-stu-id="33dc7-140">In **Solution Explorer**, under the **NumberGuessWorkflowActivities** project, double-click **StateMachineNumberGuessWorkflow.xaml**.</span></span>
+
+2.  <span data-ttu-id="33dc7-141">Çift **yanlış tahmin** durum makinesinin geçişi.</span><span class="sxs-lookup"><span data-stu-id="33dc7-141">Double-click the **Guess Incorrect** transition on the state machine.</span></span>
+
+3.  <span data-ttu-id="33dc7-142">Güncelleştirme `Text` en sol `WriteLine` içinde `If` etkinlik.</span><span class="sxs-lookup"><span data-stu-id="33dc7-142">Update the `Text` of the left-most `WriteLine` in the `If` activity.</span></span>
+
+    ```vb
+    Guess & " is too low."
+    ```
+
+    ```csharp
+    Guess + " is too low."
+    ```
+
+4.  <span data-ttu-id="33dc7-143">Güncelleştirme `Text` en sağ `WriteLine` içinde `If` etkinlik.</span><span class="sxs-lookup"><span data-stu-id="33dc7-143">Update the `Text` of the right-most `WriteLine` in the `If` activity.</span></span>
+
+    ```vb
+    Guess & " is too high."
+    ```
+
+    ```csharp
+    Guess + " is too high."
+    ```
+
+5.  <span data-ttu-id="33dc7-144">İade için genel durum makinesi iş akışı Tasarımcısı görünümünde tıklayarak **StateMachine** alan içerik haritasındaki iş akışı Tasarımcısı üst kısmında görüntüler.</span><span class="sxs-lookup"><span data-stu-id="33dc7-144">Return to the overall state machine view in the workflow designer by clicking **StateMachine** in the breadcrumb display at the top of the workflow designer.</span></span>
+
+6.  <span data-ttu-id="33dc7-145">Çift **doğru tahmin** durum makinesinin geçişi.</span><span class="sxs-lookup"><span data-stu-id="33dc7-145">Double-click the **Guess Correct** transition on the state machine.</span></span>
+
+7.  <span data-ttu-id="33dc7-146">Sürükleme bir **WriteLine** etkinliğinden **Temelleri** bölümünü **araç kutusu** ve bırakın **Buraya Bırak eylem etkinliği** etiketi geçiş.</span><span class="sxs-lookup"><span data-stu-id="33dc7-146">Drag a **WriteLine** activity from the **Primitives** section of the **Toolbox** and drop it on the **Drop Action activity here** label of the transition.</span></span>
+
+8.  <span data-ttu-id="33dc7-147">İçine aşağıdaki ifadeyi yazın `Text` özellik kutusu.</span><span class="sxs-lookup"><span data-stu-id="33dc7-147">Type the following expression into the `Text` property box.</span></span>
+
+    ```vb
+    Guess & " is correct. You guessed it in " & Turns & " turns."
+    ```
+
+    ```csharp
+    Guess + " is correct. You guessed it in " + Turns + " turns."
+    ```
+
+####  <a name="BKMK_UpdateFlowchart"></a> <span data-ttu-id="33dc7-148">Akış Çizelgesi iş akışını güncelleştirme</span><span class="sxs-lookup"><span data-stu-id="33dc7-148">To update the Flowchart workflow</span></span>
+
+1.  <span data-ttu-id="33dc7-149">İçinde **Çözüm Gezgini**altında **NumberGuessWorkflowActivities** proje, çift **FlowchartNumberGuessWorkflow.xaml**.</span><span class="sxs-lookup"><span data-stu-id="33dc7-149">In **Solution Explorer**, under the **NumberGuessWorkflowActivities** project, double-click **FlowchartNumberGuessWorkflow.xaml**.</span></span>
+
+2.  <span data-ttu-id="33dc7-150">Güncelleştirme `Text` en sol `WriteLine` etkinlik.</span><span class="sxs-lookup"><span data-stu-id="33dc7-150">Update the `Text` of the left-most `WriteLine` activity.</span></span>
+
+    ```vb
+    Guess & " is too low."
+    ```
+
+    ```csharp
+    Guess + " is too low."
+    ```
+
+3.  <span data-ttu-id="33dc7-151">Güncelleştirme `Text` en sağ `WriteLine` etkinlik.</span><span class="sxs-lookup"><span data-stu-id="33dc7-151">Update the `Text` of the right-most `WriteLine` activity.</span></span>
+
+    ```vb
+    Guess & " is too high."
+    ```
+
+    ```csharp
+    Guess + " is too high."
+    ```
+
+4.  <span data-ttu-id="33dc7-152">Sürükleme bir **WriteLine** etkinliğinden **Temelleri** bölümünü **araç kutusu** sürükleyip bırakma noktasına `True` eylemi üstteki `FlowDecision` .</span><span class="sxs-lookup"><span data-stu-id="33dc7-152">Drag a **WriteLine** activity from the **Primitives** section of the **Toolbox** and drop it on the drop point of the `True` action of the topmost `FlowDecision`.</span></span> <span data-ttu-id="33dc7-153">`WriteLine` Etkinliği için akış eklenir ve bağlantılı `True` eylemi `FlowDecision`.</span><span class="sxs-lookup"><span data-stu-id="33dc7-153">The `WriteLine` activity is added to the flowchart and linked to the `True` action of the `FlowDecision`.</span></span>
+
+5.  <span data-ttu-id="33dc7-154">İçine aşağıdaki ifadeyi yazın `Text` özellik kutusu.</span><span class="sxs-lookup"><span data-stu-id="33dc7-154">Type the following expression into the `Text` property box.</span></span>
+
+    ```vb
+    Guess & " is correct. You guessed it in " & Turns & " turns."
+    ```
+
+    ```csharp
+    Guess + " is correct. You guessed it in " + Turns + " turns."
+    ```
+
+####  <a name="BKMK_UpdateSequential"></a> <span data-ttu-id="33dc7-155">Sıralı iş akışını güncelleştirme</span><span class="sxs-lookup"><span data-stu-id="33dc7-155">To update the Sequential workflow</span></span>
+
+1.  <span data-ttu-id="33dc7-156">İçinde **Çözüm Gezgini**altında **NumberGuessWorkflowActivities** proje, çift **SequentialNumberGuessWorkflow.xaml**.</span><span class="sxs-lookup"><span data-stu-id="33dc7-156">In **Solution Explorer**, under the **NumberGuessWorkflowActivities** project, double-click **SequentialNumberGuessWorkflow.xaml**.</span></span>
+
+2.  <span data-ttu-id="33dc7-157">Güncelleştirme `Text` en sol `WriteLine` içinde `If` etkinlik.</span><span class="sxs-lookup"><span data-stu-id="33dc7-157">Update the `Text` of the left-most `WriteLine` in the `If` activity.</span></span>
+
+    ```vb
+    Guess & " is too low."
+    ```
+
+    ```csharp
+    Guess + " is too low."
+    ```
+
+3.  <span data-ttu-id="33dc7-158">Güncelleştirme `Text` en sağ `WriteLine` etkinliğinde `If` etkinlik.</span><span class="sxs-lookup"><span data-stu-id="33dc7-158">Update the `Text` of the right-most `WriteLine` activity in the `If` activity.</span></span>
+
+    ```vb
+    Guess & " is too high."
+    ```
+
+    ```csharp
+    Guess + " is too high."
+    ```
+
+4.  <span data-ttu-id="33dc7-159">Sürükleme bir **WriteLine** etkinliğinden **Temelleri** bölümünü **araç kutusu** ve bundan sonra açılan **DoWhile** etkinlik böylece  **WriteLine** kök son etkinlik olduğu `Sequence` etkinlik.</span><span class="sxs-lookup"><span data-stu-id="33dc7-159">Drag a **WriteLine** activity from the **Primitives** section of the **Toolbox** and drop it after the **DoWhile** activity so that the **WriteLine** is the final activity in the root `Sequence` activity.</span></span>
+
+5.  <span data-ttu-id="33dc7-160">İçine aşağıdaki ifadeyi yazın `Text` özellik kutusu.</span><span class="sxs-lookup"><span data-stu-id="33dc7-160">Type the following expression into the `Text` property box.</span></span>
+
+    ```vb
+    Guess & " is correct. You guessed it in " & Turns & " turns."
+    ```
+
+    ```csharp
+    Guess + " is correct. You guessed it in " + Turns + " turns."
+    ```
+
+###  <a name="BKMK_UpdateWorkflowVersionMap"></a> <span data-ttu-id="33dc7-161">Önceki iş akışı sürümünün içerecek şekilde WorkflowVersionMap güncelleştirmek için</span><span class="sxs-lookup"><span data-stu-id="33dc7-161">To update WorkflowVersionMap to include the previous workflow versions</span></span>
+
+1.  <span data-ttu-id="33dc7-162">Çift **WorkflowVersionMap.cs** (veya **WorkflowVersionMap.vb**) altında **NumberGuessWorkflowHost** açmak için proje.</span><span class="sxs-lookup"><span data-stu-id="33dc7-162">Double-click **WorkflowVersionMap.cs** (or **WorkflowVersionMap.vb**) under the **NumberGuessWorkflowHost** project to open it.</span></span>
+
+2.  <span data-ttu-id="33dc7-163">Aşağıdaki `using` (veya `Imports`) diğer dosyasının en `using` (veya `Imports`) ifadeleri.</span><span class="sxs-lookup"><span data-stu-id="33dc7-163">Add the following `using` (or `Imports`) statements to the top of the file with the other `using` (or `Imports`) statements.</span></span>
+
+    ```vb
+    Imports System.Reflection
+    Imports System.IO
+    ```
+
+    ```csharp
+    using System.Reflection;
+    using System.IO;
+    ```
+
+3.  <span data-ttu-id="33dc7-164">Üç mevcut iş akışı kimlik bildirimlerine hemen altına üç yeni iş akışı kimliklerini ekleyin.</span><span class="sxs-lookup"><span data-stu-id="33dc7-164">Add three new workflow identities just below the three existing workflow identity declarations.</span></span> <span data-ttu-id="33dc7-165">Bu yeni `v1` kimlikleri kullanılabilir iş akışı güncelleştirmeleri yapılmadan önce başlatılan iş akışları için doğru iş akışı tanımı belirtin.</span><span class="sxs-lookup"><span data-stu-id="33dc7-165">These new `v1` workflow identities will be used provide the correct workflow definition to workflows started before the updates were made.</span></span>
+
+    ```vb
+    'Current version identities.
+    Public StateMachineNumberGuessIdentity As WorkflowIdentity
+    Public FlowchartNumberGuessIdentity As WorkflowIdentity
+    Public SequentialNumberGuessIdentity As WorkflowIdentity
+
+    'v1 Identities.
+    Public StateMachineNumberGuessIdentity_v1 As WorkflowIdentity
+    Public FlowchartNumberGuessIdentity_v1 As WorkflowIdentity
+    Public SequentialNumberGuessIdentity_v1 As WorkflowIdentity
+    ```
+
+    ```csharp
+    // Current version identities.
+    static public WorkflowIdentity StateMachineNumberGuessIdentity;
+    static public WorkflowIdentity FlowchartNumberGuessIdentity;
+    static public WorkflowIdentity SequentialNumberGuessIdentity;
+
+    // v1 identities.
+    static public WorkflowIdentity StateMachineNumberGuessIdentity_v1;
+    static public WorkflowIdentity FlowchartNumberGuessIdentity_v1;
+    static public WorkflowIdentity SequentialNumberGuessIdentity_v1;
+    ```
+
+4.  <span data-ttu-id="33dc7-166">İçinde `WorkflowVersionMap` oluşturucusu, güncelleştirme `Version` üç geçerli iş akışı kimlikleri özelliği `2.0.0.0`.</span><span class="sxs-lookup"><span data-stu-id="33dc7-166">In the `WorkflowVersionMap` constructor, update the `Version` property of the three current workflow identities to `2.0.0.0`.</span></span>
+
+    ```vb
+    'Add the current workflow version identities.
+    StateMachineNumberGuessIdentity = New WorkflowIdentity With
+    {
+        .Name = "StateMachineNumberGuessWorkflow",
+        .Version = New Version(2, 0, 0, 0)
+    }
+
+    FlowchartNumberGuessIdentity = New WorkflowIdentity With
+    {
+        .Name = "FlowchartNumberGuessWorkflow",
+        .Version = New Version(2, 0, 0, 0)
+    }
+
+    SequentialNumberGuessIdentity = New WorkflowIdentity With
+    {
+        .Name = "SequentialNumberGuessWorkflow",
+        .Version = New Version(2, 0, 0, 0)
+    }
+
+    map.Add(StateMachineNumberGuessIdentity, New StateMachineNumberGuessWorkflow())
+    map.Add(FlowchartNumberGuessIdentity, New FlowchartNumberGuessWorkflow())
+    map.Add(SequentialNumberGuessIdentity, New SequentialNumberGuessWorkflow())
+    ```
+
+    ```csharp
+    // Add the current workflow version identities.
+    StateMachineNumberGuessIdentity = new WorkflowIdentity
+    {
+        Name = "StateMachineNumberGuessWorkflow",
+        // Version = new Version(1, 0, 0, 0),
+        Version = new Version(2, 0, 0, 0)
+    };
+
+    FlowchartNumberGuessIdentity = new WorkflowIdentity
+    {
+        Name = "FlowchartNumberGuessWorkflow",
+        // Version = new Version(1, 0, 0, 0),
+        Version = new Version(2, 0, 0, 0)
+    };
+
+    SequentialNumberGuessIdentity = new WorkflowIdentity
+    {
+        Name = "SequentialNumberGuessWorkflow",
+        // Version = new Version(1, 0, 0, 0),
+        Version = new Version(2, 0, 0, 0)
+    };
+
+    map.Add(StateMachineNumberGuessIdentity, new StateMachineNumberGuessWorkflow());
+    map.Add(FlowchartNumberGuessIdentity, new FlowchartNumberGuessWorkflow());
+    map.Add(SequentialNumberGuessIdentity, new SequentialNumberGuessWorkflow());
+    ```
+
+     <span data-ttu-id="33dc7-167">İş akışları sözlüğüne geçerli sürümleri kullanan iş akışı tanımları başlatan kodu güncelleştirilmesi gerekmez, projenizde başvurulan geçerli sürümleri, kodu ekler.</span><span class="sxs-lookup"><span data-stu-id="33dc7-167">The code in that adds the current versions of the workflows to the dictionary uses the current versions that are referenced in the project, so the code that initializes the workflow definitions does not need to be updated.</span></span>
+
+5.  <span data-ttu-id="33dc7-168">Aşağıdaki kod oluşturucuda geçerli sürümler sözlüğe ekler koddan sonra ekleyin.</span><span class="sxs-lookup"><span data-stu-id="33dc7-168">Add the following code in the constructor just after the code that adds the current versions to the dictionary.</span></span>
+
+    ```vb
+    'Initialize the previous workflow version identities.
+    StateMachineNumberGuessIdentity_v1 = New WorkflowIdentity With
+    {
+        .Name = "StateMachineNumberGuessWorkflow",
+        .Version = New Version(1, 0, 0, 0)
+    }
+
+    FlowchartNumberGuessIdentity_v1 = New WorkflowIdentity With
+    {
+        .Name = "FlowchartNumberGuessWorkflow",
+        .Version = New Version(1, 0, 0, 0)
+    }
+
+    SequentialNumberGuessIdentity_v1 = New WorkflowIdentity With
+    {
+        .Name = "SequentialNumberGuessWorkflow",
+        .Version = New Version(1, 0, 0, 0)
+    }
+    ```
+
+    ```csharp
+    // Initialize the previous workflow version identities.
+    StateMachineNumberGuessIdentity_v1 = new WorkflowIdentity
+    {
+        Name = "StateMachineNumberGuessWorkflow",
+        Version = new Version(1, 0, 0, 0)
+    };
+
+    FlowchartNumberGuessIdentity_v1 = new WorkflowIdentity
+    {
+        Name = "FlowchartNumberGuessWorkflow",
+        Version = new Version(1, 0, 0, 0)
+    };
+
+    SequentialNumberGuessIdentity_v1 = new WorkflowIdentity
+    {
+        Name = "SequentialNumberGuessWorkflow",
+        Version = new Version(1, 0, 0, 0)
+    };
+    ```
+
+     <span data-ttu-id="33dc7-169">Bu iş akışı kimlikleri, karşılık gelen iş akışı tanımları ilk sürümleri ile ilişkilidir.</span><span class="sxs-lookup"><span data-stu-id="33dc7-169">These workflow identities are associated with the initial versions of the corresponding workflow definitions.</span></span>
+
+6.  <span data-ttu-id="33dc7-170">Ardından, iş akışı tanımları'nin ilk sürümünden içeren derlemeyi yüklemek ve oluşturun ve karşılık gelen iş akışı tanımları sözlüğüne ekleyin.</span><span class="sxs-lookup"><span data-stu-id="33dc7-170">Next, load the assembly that contains the initial version of the workflow definitions, and create and add the corresponding workflow definitions to the dictionary.</span></span>
+
+    ```vb
+    'Add the previous version workflow identities to the dictionary along with
+    'the corresponding workflow definitions loaded from the v1 assembly.
+    'Assembly.LoadFile requires an absolute path so convert this relative path
+    'to an absolute path.
+    Dim v1AssemblyPath As String = "..\..\..\PreviousVersions\NumberGuessWorkflowActivities_v1.dll"
+    v1AssemblyPath = Path.GetFullPath(v1AssemblyPath)
+    Dim v1Assembly As Assembly = Assembly.LoadFile(v1AssemblyPath)
+
+    map.Add(StateMachineNumberGuessIdentity_v1,
+        v1Assembly.CreateInstance("NumberGuessWorkflowActivities.StateMachineNumberGuessWorkflow"))
+
+    map.Add(SequentialNumberGuessIdentity_v1,
+        v1Assembly.CreateInstance("NumberGuessWorkflowActivities.SequentialNumberGuessWorkflow"))
+
+    map.Add(FlowchartNumberGuessIdentity_v1,
+        v1Assembly.CreateInstance("NumberGuessWorkflowActivities.FlowchartNumberGuessWorkflow"))
+    ```
+
+    ```csharp
+    // Add the previous version workflow identities to the dictionary along with
+    // the corresponding workflow definitions loaded from the v1 assembly.
+    // Assembly.LoadFile requires an absolute path so convert this relative path
+    // to an absolute path.
+    string v1AssemblyPath = @"..\..\..\PreviousVersions\NumberGuessWorkflowActivities_v1.dll";
+    v1AssemblyPath = Path.GetFullPath(v1AssemblyPath);
+    Assembly v1Assembly = Assembly.LoadFile(v1AssemblyPath);
+
+    map.Add(StateMachineNumberGuessIdentity_v1,
+        v1Assembly.CreateInstance("NumberGuessWorkflowActivities.StateMachineNumberGuessWorkflow") as Activity);
+
+    map.Add(SequentialNumberGuessIdentity_v1,
+        v1Assembly.CreateInstance("NumberGuessWorkflowActivities.SequentialNumberGuessWorkflow") as Activity);
+
+    map.Add(FlowchartNumberGuessIdentity_v1,
+        v1Assembly.CreateInstance("NumberGuessWorkflowActivities.FlowchartNumberGuessWorkflow") as Activity);
+    ```
+
+     <span data-ttu-id="33dc7-171">Aşağıdaki örnek, tam listesi için güncelleştirilmiş `WorkflowVersionMap` sınıfı.</span><span class="sxs-lookup"><span data-stu-id="33dc7-171">The following example is the complete listing for the updated `WorkflowVersionMap` class.</span></span>
+
+    ```vb
+    Public Module WorkflowVersionMap
+        Dim map As Dictionary(Of WorkflowIdentity, Activity)
+
+        'Current version identities.
+        Public StateMachineNumberGuessIdentity As WorkflowIdentity
+        Public FlowchartNumberGuessIdentity As WorkflowIdentity
+        Public SequentialNumberGuessIdentity As WorkflowIdentity
+
+        'v1 Identities.
+        Public StateMachineNumberGuessIdentity_v1 As WorkflowIdentity
+        Public FlowchartNumberGuessIdentity_v1 As WorkflowIdentity
+        Public SequentialNumberGuessIdentity_v1 As WorkflowIdentity
+
+        Sub New()
+            map = New Dictionary(Of WorkflowIdentity, Activity)
+
+            'Add the current workflow version identities.
+            StateMachineNumberGuessIdentity = New WorkflowIdentity With
+            {
+                .Name = "StateMachineNumberGuessWorkflow",
+                .Version = New Version(2, 0, 0, 0)
+            }
+
+            FlowchartNumberGuessIdentity = New WorkflowIdentity With
+            {
+                .Name = "FlowchartNumberGuessWorkflow",
+                .Version = New Version(2, 0, 0, 0)
+            }
+
+            SequentialNumberGuessIdentity = New WorkflowIdentity With
+            {
+                .Name = "SequentialNumberGuessWorkflow",
+                .Version = New Version(2, 0, 0, 0)
+            }
+
+            map.Add(StateMachineNumberGuessIdentity, New StateMachineNumberGuessWorkflow())
+            map.Add(FlowchartNumberGuessIdentity, New FlowchartNumberGuessWorkflow())
+            map.Add(SequentialNumberGuessIdentity, New SequentialNumberGuessWorkflow())
+
+            'Initialize the previous workflow version identities.
+            StateMachineNumberGuessIdentity_v1 = New WorkflowIdentity With
+            {
+                .Name = "StateMachineNumberGuessWorkflow",
+                .Version = New Version(1, 0, 0, 0)
+            }
+
+            FlowchartNumberGuessIdentity_v1 = New WorkflowIdentity With
+            {
+                .Name = "FlowchartNumberGuessWorkflow",
+                .Version = New Version(1, 0, 0, 0)
+            }
+
+            SequentialNumberGuessIdentity_v1 = New WorkflowIdentity With
+            {
+                .Name = "SequentialNumberGuessWorkflow",
+                .Version = New Version(1, 0, 0, 0)
+            }
+
+            'Add the previous version workflow identities to the dictionary along with
+            'the corresponding workflow definitions loaded from the v1 assembly.
+            'Assembly.LoadFile requires an absolute path so convert this relative path
+            'to an absolute path.
+            Dim v1AssemblyPath As String = "..\..\..\PreviousVersions\NumberGuessWorkflowActivities_v1.dll"
+            v1AssemblyPath = Path.GetFullPath(v1AssemblyPath)
+            Dim v1Assembly As Assembly = Assembly.LoadFile(v1AssemblyPath)
+
+            map.Add(StateMachineNumberGuessIdentity_v1,
+                v1Assembly.CreateInstance("NumberGuessWorkflowActivities.StateMachineNumberGuessWorkflow"))
+
+            map.Add(SequentialNumberGuessIdentity_v1,
+                v1Assembly.CreateInstance("NumberGuessWorkflowActivities.SequentialNumberGuessWorkflow"))
+
+            map.Add(FlowchartNumberGuessIdentity_v1,
+                v1Assembly.CreateInstance("NumberGuessWorkflowActivities.FlowchartNumberGuessWorkflow"))
+        End Sub
+
+        Public Function GetWorkflowDefinition(identity As WorkflowIdentity) As Activity
+            Return map(identity)
+        End Function
+
+        Public Function GetIdentityDescription(identity As WorkflowIdentity) As String
+            Return identity.ToString()
+        End Function
+    End Module
+    ```
+
+    ```csharp
+    public static class WorkflowVersionMap
+    {
+        static Dictionary<WorkflowIdentity, Activity> map;
+
+        // Current version identities.
+        static public WorkflowIdentity StateMachineNumberGuessIdentity;
+        static public WorkflowIdentity FlowchartNumberGuessIdentity;
+        static public WorkflowIdentity SequentialNumberGuessIdentity;
+
+        // v1 identities.
+        static public WorkflowIdentity StateMachineNumberGuessIdentity_v1;
+        static public WorkflowIdentity FlowchartNumberGuessIdentity_v1;
+        static public WorkflowIdentity SequentialNumberGuessIdentity_v1;
+
+        static WorkflowVersionMap()
+        {
+            map = new Dictionary<WorkflowIdentity, Activity>();
+
+            // Add the current workflow version identities.
+            StateMachineNumberGuessIdentity = new WorkflowIdentity
+            {
+                Name = "StateMachineNumberGuessWorkflow",
+                // Version = new Version(1, 0, 0, 0),
+                Version = new Version(2, 0, 0, 0)
+            };
+
+            FlowchartNumberGuessIdentity = new WorkflowIdentity
+            {
+                Name = "FlowchartNumberGuessWorkflow",
+                // Version = new Version(1, 0, 0, 0),
+                Version = new Version(2, 0, 0, 0)
+            };
+
+            SequentialNumberGuessIdentity = new WorkflowIdentity
+            {
+                Name = "SequentialNumberGuessWorkflow",
+                // Version = new Version(1, 0, 0, 0),
+                Version = new Version(2, 0, 0, 0)
+            };
+
+            map.Add(StateMachineNumberGuessIdentity, new StateMachineNumberGuessWorkflow());
+            map.Add(FlowchartNumberGuessIdentity, new FlowchartNumberGuessWorkflow());
+            map.Add(SequentialNumberGuessIdentity, new SequentialNumberGuessWorkflow());
+
+            // Initialize the previous workflow version identities.
+            StateMachineNumberGuessIdentity_v1 = new WorkflowIdentity
+            {
+                Name = "StateMachineNumberGuessWorkflow",
+                Version = new Version(1, 0, 0, 0)
+            };
+
+            FlowchartNumberGuessIdentity_v1 = new WorkflowIdentity
+            {
+                Name = "FlowchartNumberGuessWorkflow",
+                Version = new Version(1, 0, 0, 0)
+            };
+
+            SequentialNumberGuessIdentity_v1 = new WorkflowIdentity
+            {
+                Name = "SequentialNumberGuessWorkflow",
+                Version = new Version(1, 0, 0, 0)
+            };
+
+            // Add the previous version workflow identities to the dictionary along with
+            // the corresponding workflow definitions loaded from the v1 assembly.
+            // Assembly.LoadFile requires an absolute path so convert this relative path
+            // to an absolute path.
+            string v1AssemblyPath = @"..\..\..\PreviousVersions\NumberGuessWorkflowActivities_v1.dll";
+            v1AssemblyPath = Path.GetFullPath(v1AssemblyPath);
+            Assembly v1Assembly = Assembly.LoadFile(v1AssemblyPath);
+
+            map.Add(StateMachineNumberGuessIdentity_v1,
+                v1Assembly.CreateInstance("NumberGuessWorkflowActivities.StateMachineNumberGuessWorkflow") as Activity);
+
+            map.Add(SequentialNumberGuessIdentity_v1,
+                v1Assembly.CreateInstance("NumberGuessWorkflowActivities.SequentialNumberGuessWorkflow") as Activity);
+
+            map.Add(FlowchartNumberGuessIdentity_v1,
+                v1Assembly.CreateInstance("NumberGuessWorkflowActivities.FlowchartNumberGuessWorkflow") as Activity);
+        }
+
+        public static Activity GetWorkflowDefinition(WorkflowIdentity identity)
+        {
+            return map[identity];
+        }
+
+        public static string GetIdentityDescription(WorkflowIdentity identity)
+        {
+            return identity.ToString();
+        }
+    }
+    ```
+
+###  <a name="BKMK_BuildAndRun"></a> <span data-ttu-id="33dc7-172">Derleme ve uygulamayı çalıştırmak için</span><span class="sxs-lookup"><span data-stu-id="33dc7-172">To build and run the application</span></span>
+
+1.  <span data-ttu-id="33dc7-173">Uygulamayı oluşturmak için CTRL + SHIFT + B ve başlatmak için CTRL + F5 tuşlarına basın.</span><span class="sxs-lookup"><span data-stu-id="33dc7-173">Press CTRL+SHIFT+B to build the application, and then CTRL+F5 to start.</span></span>
+
+2.  <span data-ttu-id="33dc7-174">Tıklayarak yeni bir iş akışının başlatılacağı **yeni oyun**.</span><span class="sxs-lookup"><span data-stu-id="33dc7-174">Start a new workflow by clicking **New Game**.</span></span> <span data-ttu-id="33dc7-175">İş akışı sürümü altında durum penceresi görüntülenir ve güncelleştirilmiş sürümü ilişkili yansıtır `WorkflowIdentity`.</span><span class="sxs-lookup"><span data-stu-id="33dc7-175">The version of the workflow is displayed under the status window and reflects the updated version from the associated `WorkflowIdentity`.</span></span> <span data-ttu-id="33dc7-176">Not `InstanceId` tamamlandığında, iş akışı için izleme dosyayı görüntülemek ve oyun tamamlanana kadar tahmin girin.</span><span class="sxs-lookup"><span data-stu-id="33dc7-176">Make a note of the `InstanceId` so you can view the tracking file for the workflow when it completes, and then enter guesses until the game is complete.</span></span> <span data-ttu-id="33dc7-177">Kullanıcının tahmin güncelleştirmeleri temel durum penceresinde görüntülenen bilgileri nasıl görüntüleneceğini unutmayın `WriteLine` etkinlikler.</span><span class="sxs-lookup"><span data-stu-id="33dc7-177">Note how the user's guess is displayed in the information displayed in the status window based on the updates to the `WriteLine` activities.</span></span>
+
+ <span data-ttu-id="33dc7-178">**Lütfen 1 ile 10 arasında bir sayı girin**
+**5 çok yüksek.** 
+ **Lütfen 1 ile 10 arasında bir sayı girin**
+**3, çok yüksek.** 
+ **Lütfen 1 ile 10 arasında bir sayı girin**
+**1. çok düşük.** 
+ **Lütfen 1 ile 10 arasında bir sayı girin**
+**Tebrikler, sayı 4 kapatır tahmin.**</span><span class="sxs-lookup"><span data-stu-id="33dc7-178">**Please enter a number between 1 and 10**
+**5 is too high.**
+**Please enter a number between 1 and 10**
+**3 is too high.**
+**Please enter a number between 1 and 10**
+**1 is too low.**
+**Please enter a number between 1 and 10**
+**Congratulations, you guessed the number in 4 turns.**</span></span>
     > [!NOTE]
-    >  <span data-ttu-id="55925-186">Güncelleştirilmiş metinden `WriteLine` etkinlikleri görüntülenir, son çıktısını `WriteLine` bu konudaki eklendi etkinlik değil.</span><span class="sxs-lookup"><span data-stu-id="55925-186">The updated text from the `WriteLine` activities is displayed, but the output of the final `WriteLine` activity that was added in this topic is not.</span></span> <span data-ttu-id="55925-187">Durum penceresi tarafından güncelleştirildiğinden olan `PersistableIdle` işleyici.</span><span class="sxs-lookup"><span data-stu-id="55925-187">That is because the status window is updated by the `PersistableIdle` handler.</span></span> <span data-ttu-id="55925-188">İş akışı tamamlandıktan ve son etkinlikten sonra boşta geçmez, çünkü `PersistableIdle` işleyici çağrılmaz.</span><span class="sxs-lookup"><span data-stu-id="55925-188">Because the workflow completes and does not go idle after the final activity, the `PersistableIdle` handler is not called.</span></span> <span data-ttu-id="55925-189">Ancak, durum penceresi tarafından benzer bir ileti görüntülenir `Completed` işleyici.</span><span class="sxs-lookup"><span data-stu-id="55925-189">However, a similar message is displayed in the status window by the `Completed` handler.</span></span> <span data-ttu-id="55925-190">İçin isterseniz, kod eklenemedi `Completed` ından cümleler ayıklamak için işleyici `StringWriter` ve durum penceresi için görüntüleyin.</span><span class="sxs-lookup"><span data-stu-id="55925-190">If desired, code could be added to the `Completed` handler to extract the text from the `StringWriter` and display it to the status window.</span></span>  
-  
-3.  <span data-ttu-id="55925-191">Windows Gezgini'ni açın ve gidin **NumberGuessWorkflowHost\bin\debug** klasörü (veya **bin\release** proje ayarlarınıza bağlı olarak) karşılık gelen Not Defteri'ni kullanarak izleme dosyasını açın Tamamlanan iş akışı için.</span><span class="sxs-lookup"><span data-stu-id="55925-191">Open Windows Explorer and navigate to the **NumberGuessWorkflowHost\bin\debug** folder (or **bin\release** depending on your project settings) and open the tracking file using Notepad that corresponds to the completed workflow.</span></span> <span data-ttu-id="55925-192">Not yapmadıysanız `InstanceId`, doğru izleme dosyası kullanarak tanımlayabilirsiniz **değiştirilme tarihi** Windows Explorer'da bilgileri.</span><span class="sxs-lookup"><span data-stu-id="55925-192">If you did not make a note of the `InstanceId`, you can identify the correct tracking file by using the **Date modified** information in Windows Explorer.</span></span>  
-  
- <span data-ttu-id="55925-193">**Lütfen 1 ile 10 arasında bir sayı girin**</span><span class="sxs-lookup"><span data-stu-id="55925-193">**Please enter a number between 1 and 10**</span></span>  
-<span data-ttu-id="55925-194">**5 çok yüksektir.** </span><span class="sxs-lookup"><span data-stu-id="55925-194">**5 is too high.** </span></span>  
-<span data-ttu-id="55925-195">**Lütfen 1 ile 10 arasında bir sayı girin** </span><span class="sxs-lookup"><span data-stu-id="55925-195">**Please enter a number between 1 and 10** </span></span>  
-<span data-ttu-id="55925-196">**3 çok yüksektir.** </span><span class="sxs-lookup"><span data-stu-id="55925-196">**3 is too high.** </span></span>  
-<span data-ttu-id="55925-197">**Lütfen 1 ile 10 arasında bir sayı girin** </span><span class="sxs-lookup"><span data-stu-id="55925-197">**Please enter a number between 1 and 10** </span></span>  
-<span data-ttu-id="55925-198">**1 çok düşüktür.** </span><span class="sxs-lookup"><span data-stu-id="55925-198">**1 is too low.** </span></span>  
-<span data-ttu-id="55925-199">**Lütfen 1 ile 10 arasında bir sayı girin** </span><span class="sxs-lookup"><span data-stu-id="55925-199">**Please enter a number between 1 and 10** </span></span>  
-<span data-ttu-id="55925-200">**2 doğrudur. Bu 4 kapatır tahmin.**</span><span class="sxs-lookup"><span data-stu-id="55925-200">**2 is correct. You guessed it in 4 turns.**</span></span>      <span data-ttu-id="55925-201">Güncelleştirilmiş `WriteLine` çıkış çıktısını dahil olmak üzere izleme dosyası içinde yer alan `WriteLine` bu konudaki eklendi.</span><span class="sxs-lookup"><span data-stu-id="55925-201">The updated `WriteLine` output is contained within the tracking file, including the output of the `WriteLine` that was added in this topic.</span></span>  
-  
-4.  <span data-ttu-id="55925-202">Sayı tahmin eden uygulamaya geri geçin ve güncelleştirme yapılmadan önce başlatıldı iş akışları birini seçin.</span><span class="sxs-lookup"><span data-stu-id="55925-202">Switch back to the number guessing application and select one of the workflows that was started before the updates were made.</span></span> <span data-ttu-id="55925-203">Seçili durumdaki iş akışı sürümü durum penceresi görüntülenir sürüm bilgilerine bakarak belirleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="55925-203">You can identify the version of the currently selected workflow by looking at the version information that is displayed below the status window.</span></span> <span data-ttu-id="55925-204">Tahminler girin ve eşleşme güncelleştirme durumu Not `WriteLine` etkinliği önceki bir sürümünden çıktı ve kullanıcının tahmin içermez.</span><span class="sxs-lookup"><span data-stu-id="55925-204">Enter some guesses and note that the status updates match the `WriteLine` activity output from the previous version, and do not include the user's guess.</span></span> <span data-ttu-id="55925-205">Bu iş akışları sahip olmayan bir önceki iş akışı tanımı kullanıyorsunuz çünkü `WriteLine` güncelleştirmeleri.</span><span class="sxs-lookup"><span data-stu-id="55925-205">That is because these workflows are using the previous workflow definition that does not have the `WriteLine` updates.</span></span>  
-  
-     <span data-ttu-id="55925-206">Sonraki adımda [nasıl yapılır: çalışan iş akışı örneğinin tanımını güncelleştirme](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md), çalışan `v1` iş akışı örnekleri yeni işlevselliği içerdikleri şekilde güncelleştirilir `v2` örnekleri.</span><span class="sxs-lookup"><span data-stu-id="55925-206">In the next step, [How to: Update the Definition of a Running Workflow Instance](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md), the running `v1` workflow instances are updated so they contain the new functionality as the `v2` instances.</span></span>
+    >  <span data-ttu-id="33dc7-179">Güncelleştirilmiş metinden `WriteLine` etkinlikleri görüntülenir, son çıktısını `WriteLine` bu konudaki eklendi etkinlik değil.</span><span class="sxs-lookup"><span data-stu-id="33dc7-179">The updated text from the `WriteLine` activities is displayed, but the output of the final `WriteLine` activity that was added in this topic is not.</span></span> <span data-ttu-id="33dc7-180">Durum penceresi tarafından güncelleştirildiğinden olan `PersistableIdle` işleyici.</span><span class="sxs-lookup"><span data-stu-id="33dc7-180">That is because the status window is updated by the `PersistableIdle` handler.</span></span> <span data-ttu-id="33dc7-181">İş akışı tamamlandıktan ve son etkinlikten sonra boşta geçmez, çünkü `PersistableIdle` işleyici çağrılmaz.</span><span class="sxs-lookup"><span data-stu-id="33dc7-181">Because the workflow completes and does not go idle after the final activity, the `PersistableIdle` handler is not called.</span></span> <span data-ttu-id="33dc7-182">Ancak, durum penceresi tarafından benzer bir ileti görüntülenir `Completed` işleyici.</span><span class="sxs-lookup"><span data-stu-id="33dc7-182">However, a similar message is displayed in the status window by the `Completed` handler.</span></span> <span data-ttu-id="33dc7-183">İçin isterseniz, kod eklenemedi `Completed` ından cümleler ayıklamak için işleyici `StringWriter` ve durum penceresi için görüntüleyin.</span><span class="sxs-lookup"><span data-stu-id="33dc7-183">If desired, code could be added to the `Completed` handler to extract the text from the `StringWriter` and display it to the status window.</span></span>
+
+3.  <span data-ttu-id="33dc7-184">Windows Gezgini'ni açın ve gidin **NumberGuessWorkflowHost\bin\debug** klasörü (veya **bin\release** proje ayarlarınıza bağlı olarak) karşılık gelen Not Defteri'ni kullanarak izleme dosyasını açın Tamamlanan iş akışı için.</span><span class="sxs-lookup"><span data-stu-id="33dc7-184">Open Windows Explorer and navigate to the **NumberGuessWorkflowHost\bin\debug** folder (or **bin\release** depending on your project settings) and open the tracking file using Notepad that corresponds to the completed workflow.</span></span> <span data-ttu-id="33dc7-185">Not yapmadıysanız `InstanceId`, doğru izleme dosyası kullanarak tanımlayabilirsiniz **değiştirilme tarihi** Windows Explorer'da bilgileri.</span><span class="sxs-lookup"><span data-stu-id="33dc7-185">If you did not make a note of the `InstanceId`, you can identify the correct tracking file by using the **Date modified** information in Windows Explorer.</span></span>
+
+ <span data-ttu-id="33dc7-186">**Lütfen 1 ile 10 arasında bir sayı girin**
+**5 çok yüksek.** 
+ **Lütfen 1 ile 10 arasında bir sayı girin**
+**3, çok yüksek.** 
+ **Lütfen 1 ile 10 arasında bir sayı girin**
+**1. çok düşük.** 
+ **Lütfen 1 ile 10 arasında bir sayı girin**
+**2 doğru. Bu 4 kapatır tahmin.**</span><span class="sxs-lookup"><span data-stu-id="33dc7-186">**Please enter a number between 1 and 10**
+**5 is too high.**
+**Please enter a number between 1 and 10**
+**3 is too high.**
+**Please enter a number between 1 and 10**
+**1 is too low.**
+**Please enter a number between 1 and 10**
+**2 is correct. You guessed it in 4 turns.**</span></span>      <span data-ttu-id="33dc7-187">Güncelleştirilmiş `WriteLine` çıkış çıktısını dahil olmak üzere izleme dosyası içinde yer alan `WriteLine` bu konudaki eklendi.</span><span class="sxs-lookup"><span data-stu-id="33dc7-187">The updated `WriteLine` output is contained within the tracking file, including the output of the `WriteLine` that was added in this topic.</span></span>
+
+4.  <span data-ttu-id="33dc7-188">Sayı tahmin eden uygulamaya geri geçin ve güncelleştirme yapılmadan önce başlatıldı iş akışları birini seçin.</span><span class="sxs-lookup"><span data-stu-id="33dc7-188">Switch back to the number guessing application and select one of the workflows that was started before the updates were made.</span></span> <span data-ttu-id="33dc7-189">Seçili durumdaki iş akışı sürümü durum penceresi görüntülenir sürüm bilgilerine bakarak belirleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="33dc7-189">You can identify the version of the currently selected workflow by looking at the version information that is displayed below the status window.</span></span> <span data-ttu-id="33dc7-190">Tahminler girin ve eşleşme güncelleştirme durumu Not `WriteLine` etkinliği önceki bir sürümünden çıktı ve kullanıcının tahmin içermez.</span><span class="sxs-lookup"><span data-stu-id="33dc7-190">Enter some guesses and note that the status updates match the `WriteLine` activity output from the previous version, and do not include the user's guess.</span></span> <span data-ttu-id="33dc7-191">Bu iş akışları sahip olmayan bir önceki iş akışı tanımı kullanıyorsunuz çünkü `WriteLine` güncelleştirmeleri.</span><span class="sxs-lookup"><span data-stu-id="33dc7-191">That is because these workflows are using the previous workflow definition that does not have the `WriteLine` updates.</span></span>
+
+     <span data-ttu-id="33dc7-192">Sonraki adımda [nasıl yapılır: çalışan iş akışı örneğinin tanımını güncelleştirme](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md), çalışan `v1` iş akışı örnekleri yeni işlevselliği içerdikleri şekilde güncelleştirilir `v2` örnekleri.</span><span class="sxs-lookup"><span data-stu-id="33dc7-192">In the next step, [How to: Update the Definition of a Running Workflow Instance](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md), the running `v1` workflow instances are updated so they contain the new functionality as the `v2` instances.</span></span>
