@@ -8,175 +8,175 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: 773708eab617e7f4cfdffad2e5019e66c60ebf37
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 7128b23790588a604989cb18918a7a7e8b598191
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43787070"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48584233"
 ---
-# <a name="walkthrough-binding-to-data-in-hybrid-applications"></a><span data-ttu-id="9d872-102">İzlenecek yol: Karma Uygulamalarda Veriye Bağlama</span><span class="sxs-lookup"><span data-stu-id="9d872-102">Walkthrough: Binding to Data in Hybrid Applications</span></span>
-<span data-ttu-id="9d872-103">Bir veri kaynağı bir denetime bağlama olup, temel alınan verilere erişimi olan kullanıcılar sağlamak için gerekli kullanmakta olduğunuz [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] veya [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="9d872-103">Binding a data source to a control is essential for providing users with access to underlying data, whether you are using [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] or [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="9d872-104">Bu izlenecek yol, veri bağlama iki dahil karma uygulamalarda nasıl kullanabileceğinizi gösterir. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kontrol eder.</span><span class="sxs-lookup"><span data-stu-id="9d872-104">This walkthrough shows how you can use data binding in hybrid applications that include both [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] and [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] controls.</span></span>  
+# <a name="walkthrough-binding-to-data-in-hybrid-applications"></a><span data-ttu-id="01d1b-102">İzlenecek yol: Karma Uygulamalarda Veriye Bağlama</span><span class="sxs-lookup"><span data-stu-id="01d1b-102">Walkthrough: Binding to Data in Hybrid Applications</span></span>
+<span data-ttu-id="01d1b-103">Bir veri kaynağı bir denetime bağlama olup, temel alınan verilere erişimi olan kullanıcılar sağlamak için gerekli kullanmakta olduğunuz [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] veya [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="01d1b-103">Binding a data source to a control is essential for providing users with access to underlying data, whether you are using [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] or [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="01d1b-104">Bu izlenecek yol, veri bağlama iki dahil karma uygulamalarda nasıl kullanabileceğinizi gösterir. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kontrol eder.</span><span class="sxs-lookup"><span data-stu-id="01d1b-104">This walkthrough shows how you can use data binding in hybrid applications that include both [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] and [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] controls.</span></span>  
   
- <span data-ttu-id="9d872-105">Bu kılavuzda gösterilen görevler aşağıdakileri içerir:</span><span class="sxs-lookup"><span data-stu-id="9d872-105">Tasks illustrated in this walkthrough include:</span></span>  
+ <span data-ttu-id="01d1b-105">Bu kılavuzda gösterilen görevler aşağıdakileri içerir:</span><span class="sxs-lookup"><span data-stu-id="01d1b-105">Tasks illustrated in this walkthrough include:</span></span>  
   
--   <span data-ttu-id="9d872-106">Proje oluşturuluyor.</span><span class="sxs-lookup"><span data-stu-id="9d872-106">Creating the project.</span></span>  
+-   <span data-ttu-id="01d1b-106">Proje oluşturuluyor.</span><span class="sxs-lookup"><span data-stu-id="01d1b-106">Creating the project.</span></span>  
   
--   <span data-ttu-id="9d872-107">Veri şablonu tanımlama.</span><span class="sxs-lookup"><span data-stu-id="9d872-107">Defining the data template.</span></span>  
+-   <span data-ttu-id="01d1b-107">Veri şablonu tanımlama.</span><span class="sxs-lookup"><span data-stu-id="01d1b-107">Defining the data template.</span></span>  
   
--   <span data-ttu-id="9d872-108">Form düzenini belirtme.</span><span class="sxs-lookup"><span data-stu-id="9d872-108">Specifying the form layout.</span></span>  
+-   <span data-ttu-id="01d1b-108">Form düzenini belirtme.</span><span class="sxs-lookup"><span data-stu-id="01d1b-108">Specifying the form layout.</span></span>  
   
--   <span data-ttu-id="9d872-109">Veri bağlamaları belirtme.</span><span class="sxs-lookup"><span data-stu-id="9d872-109">Specifying data bindings.</span></span>  
+-   <span data-ttu-id="01d1b-109">Veri bağlamaları belirtme.</span><span class="sxs-lookup"><span data-stu-id="01d1b-109">Specifying data bindings.</span></span>  
   
--   <span data-ttu-id="9d872-110">Birlikte çalışması kullanarak veri görüntüleme.</span><span class="sxs-lookup"><span data-stu-id="9d872-110">Displaying data by using interoperation.</span></span>  
+-   <span data-ttu-id="01d1b-110">Birlikte çalışması kullanarak veri görüntüleme.</span><span class="sxs-lookup"><span data-stu-id="01d1b-110">Displaying data by using interoperation.</span></span>  
   
--   <span data-ttu-id="9d872-111">Veri kaynağı projeye ekleniyor.</span><span class="sxs-lookup"><span data-stu-id="9d872-111">Adding the data source to the project.</span></span>  
+-   <span data-ttu-id="01d1b-111">Veri kaynağı projeye ekleniyor.</span><span class="sxs-lookup"><span data-stu-id="01d1b-111">Adding the data source to the project.</span></span>  
   
--   <span data-ttu-id="9d872-112">Veri kaynağına bağlama.</span><span class="sxs-lookup"><span data-stu-id="9d872-112">Binding to the data source.</span></span>  
+-   <span data-ttu-id="01d1b-112">Veri kaynağına bağlama.</span><span class="sxs-lookup"><span data-stu-id="01d1b-112">Binding to the data source.</span></span>  
   
- <span data-ttu-id="9d872-113">Bu izlenecek yolda gösterilen görevler tam kod listesi için bkz. [karma uygulamalar için örnek veri bağlama](https://go.microsoft.com/fwlink/?LinkID=159983).</span><span class="sxs-lookup"><span data-stu-id="9d872-113">For a complete code listing of the tasks illustrated in this walkthrough, see [Data Binding in Hybrid Applications Sample](https://go.microsoft.com/fwlink/?LinkID=159983).</span></span>  
+ <span data-ttu-id="01d1b-113">Bu izlenecek yolda gösterilen görevler tam kod listesi için bkz. [karma uygulamalar için örnek veri bağlama](https://go.microsoft.com/fwlink/?LinkID=159983).</span><span class="sxs-lookup"><span data-stu-id="01d1b-113">For a complete code listing of the tasks illustrated in this walkthrough, see [Data Binding in Hybrid Applications Sample](https://go.microsoft.com/fwlink/?LinkID=159983).</span></span>  
   
- <span data-ttu-id="9d872-114">İşlemi tamamladığınızda, karma uygulamalarda veri bağlama özellikleri bir anlayışa sahip olacaksınız.</span><span class="sxs-lookup"><span data-stu-id="9d872-114">When you are finished, you will have an understanding of data binding features in hybrid applications.</span></span>  
+ <span data-ttu-id="01d1b-114">İşlemi tamamladığınızda, karma uygulamalarda veri bağlama özellikleri bir anlayışa sahip olacaksınız.</span><span class="sxs-lookup"><span data-stu-id="01d1b-114">When you are finished, you will have an understanding of data binding features in hybrid applications.</span></span>  
   
-## <a name="prerequisites"></a><span data-ttu-id="9d872-115">Önkoşullar</span><span class="sxs-lookup"><span data-stu-id="9d872-115">Prerequisites</span></span>  
- <span data-ttu-id="9d872-116">Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:</span><span class="sxs-lookup"><span data-stu-id="9d872-116">You need the following components to complete this walkthrough:</span></span>  
+## <a name="prerequisites"></a><span data-ttu-id="01d1b-115">Önkoşullar</span><span class="sxs-lookup"><span data-stu-id="01d1b-115">Prerequisites</span></span>  
+ <span data-ttu-id="01d1b-116">Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:</span><span class="sxs-lookup"><span data-stu-id="01d1b-116">You need the following components to complete this walkthrough:</span></span>  
   
--   [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)]<span data-ttu-id="9d872-117">.</span><span class="sxs-lookup"><span data-stu-id="9d872-117">.</span></span>  
+-   <span data-ttu-id="01d1b-117">Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="01d1b-117">Visual Studio.</span></span>  
   
--   <span data-ttu-id="9d872-118">Microsoft SQL Server üzerinde çalışan Northwind örnek veritabanına erişim.</span><span class="sxs-lookup"><span data-stu-id="9d872-118">Access to the Northwind sample database running on Microsoft SQL Server.</span></span>  
+-   <span data-ttu-id="01d1b-118">Microsoft SQL Server üzerinde çalışan Northwind örnek veritabanına erişim.</span><span class="sxs-lookup"><span data-stu-id="01d1b-118">Access to the Northwind sample database running on Microsoft SQL Server.</span></span>  
   
-## <a name="creating-the-project"></a><span data-ttu-id="9d872-119">Projeyi Oluşturma</span><span class="sxs-lookup"><span data-stu-id="9d872-119">Creating the Project</span></span>  
+## <a name="creating-the-project"></a><span data-ttu-id="01d1b-119">Projeyi Oluşturma</span><span class="sxs-lookup"><span data-stu-id="01d1b-119">Creating the Project</span></span>  
   
-#### <a name="to-create-and-set-up-the-project"></a><span data-ttu-id="9d872-120">Oluşturma ve projesi kurun</span><span class="sxs-lookup"><span data-stu-id="9d872-120">To create and set up the project</span></span>  
+#### <a name="to-create-and-set-up-the-project"></a><span data-ttu-id="01d1b-120">Oluşturma ve projesi kurun</span><span class="sxs-lookup"><span data-stu-id="01d1b-120">To create and set up the project</span></span>  
   
-1.  <span data-ttu-id="9d872-121">Adlı bir WPF uygulaması projesi oluşturmak `WPFWithWFAndDatabinding`.</span><span class="sxs-lookup"><span data-stu-id="9d872-121">Create a WPF Application project named `WPFWithWFAndDatabinding`.</span></span>  
+1.  <span data-ttu-id="01d1b-121">Adlı bir WPF uygulaması projesi oluşturmak `WPFWithWFAndDatabinding`.</span><span class="sxs-lookup"><span data-stu-id="01d1b-121">Create a WPF Application project named `WPFWithWFAndDatabinding`.</span></span>  
   
-2.  <span data-ttu-id="9d872-122">Çözüm Gezgini'nde, aşağıdaki derlemelere başvurular ekleyin.</span><span class="sxs-lookup"><span data-stu-id="9d872-122">In Solution Explorer, add references to the following assemblies.</span></span>  
+2.  <span data-ttu-id="01d1b-122">Çözüm Gezgini'nde, aşağıdaki derlemelere başvurular ekleyin.</span><span class="sxs-lookup"><span data-stu-id="01d1b-122">In Solution Explorer, add references to the following assemblies.</span></span>  
   
-    -   <span data-ttu-id="9d872-123">WindowsFormsIntegration</span><span class="sxs-lookup"><span data-stu-id="9d872-123">WindowsFormsIntegration</span></span>  
+    -   <span data-ttu-id="01d1b-123">WindowsFormsIntegration</span><span class="sxs-lookup"><span data-stu-id="01d1b-123">WindowsFormsIntegration</span></span>  
   
-    -   <span data-ttu-id="9d872-124">System.Windows.Forms</span><span class="sxs-lookup"><span data-stu-id="9d872-124">System.Windows.Forms</span></span>  
+    -   <span data-ttu-id="01d1b-124">System.Windows.Forms</span><span class="sxs-lookup"><span data-stu-id="01d1b-124">System.Windows.Forms</span></span>  
   
-3.  <span data-ttu-id="9d872-125">İçinde MainWindow.xaml açın [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="9d872-125">Open MainWindow.xaml in the [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].</span></span>  
+3.  <span data-ttu-id="01d1b-125">İçinde MainWindow.xaml açın [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="01d1b-125">Open MainWindow.xaml in the [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].</span></span>  
   
-4.  <span data-ttu-id="9d872-126">İçinde <xref:System.Windows.Window> öğesi, aşağıdaki [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ad alanlarını eşleme.</span><span class="sxs-lookup"><span data-stu-id="9d872-126">In the <xref:System.Windows.Window> element, add the following [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] namespaces mapping.</span></span>  
+4.  <span data-ttu-id="01d1b-126">İçinde <xref:System.Windows.Window> öğesi, aşağıdaki [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ad alanlarını eşleme.</span><span class="sxs-lookup"><span data-stu-id="01d1b-126">In the <xref:System.Windows.Window> element, add the following [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] namespaces mapping.</span></span>  
   
     ```xaml  
     xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"  
     ```  
   
-5.  <span data-ttu-id="9d872-127">Varsayılan ad <xref:System.Windows.Controls.Grid> öğesi `mainGrid` atayarak <xref:System.Windows.FrameworkElement.Name%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="9d872-127">Name the default <xref:System.Windows.Controls.Grid> element `mainGrid` by assigning the <xref:System.Windows.FrameworkElement.Name%2A> property.</span></span>  
+5.  <span data-ttu-id="01d1b-127">Varsayılan ad <xref:System.Windows.Controls.Grid> öğesi `mainGrid` atayarak <xref:System.Windows.FrameworkElement.Name%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="01d1b-127">Name the default <xref:System.Windows.Controls.Grid> element `mainGrid` by assigning the <xref:System.Windows.FrameworkElement.Name%2A> property.</span></span>  
   
      [!code-xaml[WPFWithWFAndDatabinding#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#8)]  
   
-## <a name="defining-the-data-template"></a><span data-ttu-id="9d872-128">Veri şablonu tanımlama</span><span class="sxs-lookup"><span data-stu-id="9d872-128">Defining the Data Template</span></span>  
- <span data-ttu-id="9d872-129">Müşteriler ana listesinde görüntülenen bir <xref:System.Windows.Controls.ListBox> denetimi.</span><span class="sxs-lookup"><span data-stu-id="9d872-129">The master list of customers is displayed in a <xref:System.Windows.Controls.ListBox> control.</span></span> <span data-ttu-id="9d872-130">Aşağıdaki kod örneği tanımlayan bir <xref:System.Windows.DataTemplate> adlı nesne `ListItemsTemplate` görsel ağacını denetimleri <xref:System.Windows.Controls.ListBox> denetimi.</span><span class="sxs-lookup"><span data-stu-id="9d872-130">The following code example defines a <xref:System.Windows.DataTemplate> object named `ListItemsTemplate` that controls the visual tree of the <xref:System.Windows.Controls.ListBox> control.</span></span> <span data-ttu-id="9d872-131">Bu <xref:System.Windows.DataTemplate> atandığı <xref:System.Windows.Controls.ListBox> denetimin <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="9d872-131">This <xref:System.Windows.DataTemplate> is assigned to the <xref:System.Windows.Controls.ListBox> control's <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> property.</span></span>  
+## <a name="defining-the-data-template"></a><span data-ttu-id="01d1b-128">Veri şablonu tanımlama</span><span class="sxs-lookup"><span data-stu-id="01d1b-128">Defining the Data Template</span></span>  
+ <span data-ttu-id="01d1b-129">Müşteriler ana listesinde görüntülenen bir <xref:System.Windows.Controls.ListBox> denetimi.</span><span class="sxs-lookup"><span data-stu-id="01d1b-129">The master list of customers is displayed in a <xref:System.Windows.Controls.ListBox> control.</span></span> <span data-ttu-id="01d1b-130">Aşağıdaki kod örneği tanımlayan bir <xref:System.Windows.DataTemplate> adlı nesne `ListItemsTemplate` görsel ağacını denetimleri <xref:System.Windows.Controls.ListBox> denetimi.</span><span class="sxs-lookup"><span data-stu-id="01d1b-130">The following code example defines a <xref:System.Windows.DataTemplate> object named `ListItemsTemplate` that controls the visual tree of the <xref:System.Windows.Controls.ListBox> control.</span></span> <span data-ttu-id="01d1b-131">Bu <xref:System.Windows.DataTemplate> atandığı <xref:System.Windows.Controls.ListBox> denetimin <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="01d1b-131">This <xref:System.Windows.DataTemplate> is assigned to the <xref:System.Windows.Controls.ListBox> control's <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> property.</span></span>  
   
-#### <a name="to-define-the-data-template"></a><span data-ttu-id="9d872-132">Veri şablonu tanımlamak için</span><span class="sxs-lookup"><span data-stu-id="9d872-132">To define the data template</span></span>  
+#### <a name="to-define-the-data-template"></a><span data-ttu-id="01d1b-132">Veri şablonu tanımlamak için</span><span class="sxs-lookup"><span data-stu-id="01d1b-132">To define the data template</span></span>  
   
--   <span data-ttu-id="9d872-133">İçine aşağıdaki XAML kopyalama <xref:System.Windows.Controls.Grid> öğenin bildirimi.</span><span class="sxs-lookup"><span data-stu-id="9d872-133">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element's declaration.</span></span>  
+-   <span data-ttu-id="01d1b-133">İçine aşağıdaki XAML kopyalama <xref:System.Windows.Controls.Grid> öğenin bildirimi.</span><span class="sxs-lookup"><span data-stu-id="01d1b-133">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element's declaration.</span></span>  
   
      [!code-xaml[WPFWithWFAndDatabinding#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#3)]  
   
-## <a name="specifying-the-form-layout"></a><span data-ttu-id="9d872-134">Form düzenini belirtme</span><span class="sxs-lookup"><span data-stu-id="9d872-134">Specifying the Form Layout</span></span>  
- <span data-ttu-id="9d872-135">Formun yerleşimini üç satır ve üç sütun içeren bir kılavuz olarak tanımlanır.</span><span class="sxs-lookup"><span data-stu-id="9d872-135">The layout of the form is defined by a grid with three rows and three columns.</span></span> <span data-ttu-id="9d872-136"><xref:System.Windows.Controls.Label> denetimleri Müşteriler tablosundaki her bir sütunu tanımlamak için sağlanmıştır.</span><span class="sxs-lookup"><span data-stu-id="9d872-136"><xref:System.Windows.Controls.Label> controls are provided to identify each column in the Customers table.</span></span>  
+## <a name="specifying-the-form-layout"></a><span data-ttu-id="01d1b-134">Form düzenini belirtme</span><span class="sxs-lookup"><span data-stu-id="01d1b-134">Specifying the Form Layout</span></span>  
+ <span data-ttu-id="01d1b-135">Formun yerleşimini üç satır ve üç sütun içeren bir kılavuz olarak tanımlanır.</span><span class="sxs-lookup"><span data-stu-id="01d1b-135">The layout of the form is defined by a grid with three rows and three columns.</span></span> <span data-ttu-id="01d1b-136"><xref:System.Windows.Controls.Label> denetimleri Müşteriler tablosundaki her bir sütunu tanımlamak için sağlanmıştır.</span><span class="sxs-lookup"><span data-stu-id="01d1b-136"><xref:System.Windows.Controls.Label> controls are provided to identify each column in the Customers table.</span></span>  
   
-#### <a name="to-set-up-the-grid-layout"></a><span data-ttu-id="9d872-137">Kılavuz düzeni'kurmak için</span><span class="sxs-lookup"><span data-stu-id="9d872-137">To set up the Grid layout</span></span>  
+#### <a name="to-set-up-the-grid-layout"></a><span data-ttu-id="01d1b-137">Kılavuz düzeni'kurmak için</span><span class="sxs-lookup"><span data-stu-id="01d1b-137">To set up the Grid layout</span></span>  
   
--   <span data-ttu-id="9d872-138">İçine aşağıdaki XAML kopyalama <xref:System.Windows.Controls.Grid> öğenin bildirimi.</span><span class="sxs-lookup"><span data-stu-id="9d872-138">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element's declaration.</span></span>  
+-   <span data-ttu-id="01d1b-138">İçine aşağıdaki XAML kopyalama <xref:System.Windows.Controls.Grid> öğenin bildirimi.</span><span class="sxs-lookup"><span data-stu-id="01d1b-138">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element's declaration.</span></span>  
   
      [!code-xaml[WPFWithWFAndDatabinding#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#4)]  
   
-#### <a name="to-set-up-the-label-controls"></a><span data-ttu-id="9d872-139">Etiket denetimleri ayarlamak için</span><span class="sxs-lookup"><span data-stu-id="9d872-139">To set up the Label controls</span></span>  
+#### <a name="to-set-up-the-label-controls"></a><span data-ttu-id="01d1b-139">Etiket denetimleri ayarlamak için</span><span class="sxs-lookup"><span data-stu-id="01d1b-139">To set up the Label controls</span></span>  
   
--   <span data-ttu-id="9d872-140">İçine aşağıdaki XAML kopyalama <xref:System.Windows.Controls.Grid> öğenin bildirimi.</span><span class="sxs-lookup"><span data-stu-id="9d872-140">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element's declaration.</span></span>  
+-   <span data-ttu-id="01d1b-140">İçine aşağıdaki XAML kopyalama <xref:System.Windows.Controls.Grid> öğenin bildirimi.</span><span class="sxs-lookup"><span data-stu-id="01d1b-140">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element's declaration.</span></span>  
   
      [!code-xaml[WPFWithWFAndDatabinding#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#5)]  
   
-## <a name="specifying-data-bindings"></a><span data-ttu-id="9d872-141">Veri bağlama belirtme</span><span class="sxs-lookup"><span data-stu-id="9d872-141">Specifying Data Bindings</span></span>  
- <span data-ttu-id="9d872-142">Müşteriler ana listesinde görüntülenen bir <xref:System.Windows.Controls.ListBox> denetimi.</span><span class="sxs-lookup"><span data-stu-id="9d872-142">The master list of customers is displayed in a <xref:System.Windows.Controls.ListBox> control.</span></span> <span data-ttu-id="9d872-143">Ekli `ListItemsTemplate` bağlayan bir <xref:System.Windows.Controls.TextBlock> denetimini `ContactName` veritabanından alan.</span><span class="sxs-lookup"><span data-stu-id="9d872-143">The attached `ListItemsTemplate` binds a <xref:System.Windows.Controls.TextBlock> control to the `ContactName` field from the database.</span></span>  
+## <a name="specifying-data-bindings"></a><span data-ttu-id="01d1b-141">Veri bağlama belirtme</span><span class="sxs-lookup"><span data-stu-id="01d1b-141">Specifying Data Bindings</span></span>  
+ <span data-ttu-id="01d1b-142">Müşteriler ana listesinde görüntülenen bir <xref:System.Windows.Controls.ListBox> denetimi.</span><span class="sxs-lookup"><span data-stu-id="01d1b-142">The master list of customers is displayed in a <xref:System.Windows.Controls.ListBox> control.</span></span> <span data-ttu-id="01d1b-143">Ekli `ListItemsTemplate` bağlayan bir <xref:System.Windows.Controls.TextBlock> denetimini `ContactName` veritabanından alan.</span><span class="sxs-lookup"><span data-stu-id="01d1b-143">The attached `ListItemsTemplate` binds a <xref:System.Windows.Controls.TextBlock> control to the `ContactName` field from the database.</span></span>  
   
- <span data-ttu-id="9d872-144">Her müşteri kaydın ayrıntılarını çeşitli görüntülenen <xref:System.Windows.Controls.TextBox> kontrol eder.</span><span class="sxs-lookup"><span data-stu-id="9d872-144">The details of each customer record are displayed in several <xref:System.Windows.Controls.TextBox> controls.</span></span>  
+ <span data-ttu-id="01d1b-144">Her müşteri kaydın ayrıntılarını çeşitli görüntülenen <xref:System.Windows.Controls.TextBox> kontrol eder.</span><span class="sxs-lookup"><span data-stu-id="01d1b-144">The details of each customer record are displayed in several <xref:System.Windows.Controls.TextBox> controls.</span></span>  
   
-#### <a name="to-specify-data-bindings"></a><span data-ttu-id="9d872-145">Veri bağlamaları belirtmek için</span><span class="sxs-lookup"><span data-stu-id="9d872-145">To specify data bindings</span></span>  
+#### <a name="to-specify-data-bindings"></a><span data-ttu-id="01d1b-145">Veri bağlamaları belirtmek için</span><span class="sxs-lookup"><span data-stu-id="01d1b-145">To specify data bindings</span></span>  
   
--   <span data-ttu-id="9d872-146">İçine aşağıdaki XAML kopyalama <xref:System.Windows.Controls.Grid> öğenin bildirimi.</span><span class="sxs-lookup"><span data-stu-id="9d872-146">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element's declaration.</span></span>  
+-   <span data-ttu-id="01d1b-146">İçine aşağıdaki XAML kopyalama <xref:System.Windows.Controls.Grid> öğenin bildirimi.</span><span class="sxs-lookup"><span data-stu-id="01d1b-146">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element's declaration.</span></span>  
   
-     <span data-ttu-id="9d872-147"><xref:System.Windows.Data.Binding> Sınıfı bağlamalar <xref:System.Windows.Controls.TextBox> veritabanında uygun alanlara denetimleri.</span><span class="sxs-lookup"><span data-stu-id="9d872-147">The <xref:System.Windows.Data.Binding> class binds the <xref:System.Windows.Controls.TextBox> controls to the appropriate fields in the database.</span></span>  
+     <span data-ttu-id="01d1b-147"><xref:System.Windows.Data.Binding> Sınıfı bağlamalar <xref:System.Windows.Controls.TextBox> veritabanında uygun alanlara denetimleri.</span><span class="sxs-lookup"><span data-stu-id="01d1b-147">The <xref:System.Windows.Data.Binding> class binds the <xref:System.Windows.Controls.TextBox> controls to the appropriate fields in the database.</span></span>  
   
      [!code-xaml[WPFWithWFAndDatabinding#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#6)]  
   
-## <a name="displaying-data-by-using-interoperation"></a><span data-ttu-id="9d872-148">Birlikte çalışması kullanarak verileri görüntüleme</span><span class="sxs-lookup"><span data-stu-id="9d872-148">Displaying Data by Using Interoperation</span></span>  
- <span data-ttu-id="9d872-149">İse seçili müşterilerle ilgili Siparişler görüntülenen bir <xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType> adlı Denetim `dataGridView1`.</span><span class="sxs-lookup"><span data-stu-id="9d872-149">The orders corresponding to the selected customer are displayed in a <xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType> control named `dataGridView1`.</span></span> <span data-ttu-id="9d872-150">`dataGridView1` Denetim arka plan kod dosyası veri kaynağına bağlanır.</span><span class="sxs-lookup"><span data-stu-id="9d872-150">The `dataGridView1` control is bound to the data source in the code-behind file.</span></span> <span data-ttu-id="9d872-151">A <xref:System.Windows.Forms.Integration.WindowsFormsHost> denetimidir bu üst [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimi.</span><span class="sxs-lookup"><span data-stu-id="9d872-151">A <xref:System.Windows.Forms.Integration.WindowsFormsHost> control is the parent of this [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control.</span></span>  
+## <a name="displaying-data-by-using-interoperation"></a><span data-ttu-id="01d1b-148">Birlikte çalışması kullanarak verileri görüntüleme</span><span class="sxs-lookup"><span data-stu-id="01d1b-148">Displaying Data by Using Interoperation</span></span>  
+ <span data-ttu-id="01d1b-149">İse seçili müşterilerle ilgili Siparişler görüntülenen bir <xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType> adlı Denetim `dataGridView1`.</span><span class="sxs-lookup"><span data-stu-id="01d1b-149">The orders corresponding to the selected customer are displayed in a <xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType> control named `dataGridView1`.</span></span> <span data-ttu-id="01d1b-150">`dataGridView1` Denetim arka plan kod dosyası veri kaynağına bağlanır.</span><span class="sxs-lookup"><span data-stu-id="01d1b-150">The `dataGridView1` control is bound to the data source in the code-behind file.</span></span> <span data-ttu-id="01d1b-151">A <xref:System.Windows.Forms.Integration.WindowsFormsHost> denetimidir bu üst [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimi.</span><span class="sxs-lookup"><span data-stu-id="01d1b-151">A <xref:System.Windows.Forms.Integration.WindowsFormsHost> control is the parent of this [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control.</span></span>  
   
-#### <a name="to-display-data-in-the-datagridview-control"></a><span data-ttu-id="9d872-152">DataGridView denetiminde verileri görüntülemek için</span><span class="sxs-lookup"><span data-stu-id="9d872-152">To display data in the DataGridView control</span></span>  
+#### <a name="to-display-data-in-the-datagridview-control"></a><span data-ttu-id="01d1b-152">DataGridView denetiminde verileri görüntülemek için</span><span class="sxs-lookup"><span data-stu-id="01d1b-152">To display data in the DataGridView control</span></span>  
   
--   <span data-ttu-id="9d872-153">İçine aşağıdaki XAML kopyalama <xref:System.Windows.Controls.Grid> öğenin bildirimi.</span><span class="sxs-lookup"><span data-stu-id="9d872-153">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element's declaration.</span></span>  
+-   <span data-ttu-id="01d1b-153">İçine aşağıdaki XAML kopyalama <xref:System.Windows.Controls.Grid> öğenin bildirimi.</span><span class="sxs-lookup"><span data-stu-id="01d1b-153">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element's declaration.</span></span>  
   
      [!code-xaml[WPFWithWFAndDatabinding#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#7)]  
   
-## <a name="adding-the-data-source-to-the-project"></a><span data-ttu-id="9d872-154">Veri kaynağı projeye ekleniyor</span><span class="sxs-lookup"><span data-stu-id="9d872-154">Adding the Data Source to the Project</span></span>  
- <span data-ttu-id="9d872-155">Visual Studio ile kolayca projenize bir veri kaynağı ekleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="9d872-155">With Visual Studio, you can easily add a data source to your project.</span></span> <span data-ttu-id="9d872-156">Bu yordam, kesin türü belirtilmiş veri kümesi projenize ekler.</span><span class="sxs-lookup"><span data-stu-id="9d872-156">This procedure adds a strongly typed data set to your project.</span></span> <span data-ttu-id="9d872-157">Seçilen tabloların her biri için tablo bağdaştırıcıları gibi diğer destek sınıfları da eklenir.</span><span class="sxs-lookup"><span data-stu-id="9d872-157">Several other support classes, such as table adapters for each of the chosen tables, are also added.</span></span>  
+## <a name="adding-the-data-source-to-the-project"></a><span data-ttu-id="01d1b-154">Veri kaynağı projeye ekleniyor</span><span class="sxs-lookup"><span data-stu-id="01d1b-154">Adding the Data Source to the Project</span></span>  
+ <span data-ttu-id="01d1b-155">Visual Studio ile kolayca projenize bir veri kaynağı ekleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="01d1b-155">With Visual Studio, you can easily add a data source to your project.</span></span> <span data-ttu-id="01d1b-156">Bu yordam, kesin türü belirtilmiş veri kümesi projenize ekler.</span><span class="sxs-lookup"><span data-stu-id="01d1b-156">This procedure adds a strongly typed data set to your project.</span></span> <span data-ttu-id="01d1b-157">Seçilen tabloların her biri için tablo bağdaştırıcıları gibi diğer destek sınıfları da eklenir.</span><span class="sxs-lookup"><span data-stu-id="01d1b-157">Several other support classes, such as table adapters for each of the chosen tables, are also added.</span></span>  
   
-#### <a name="to-add-the-data-source"></a><span data-ttu-id="9d872-158">Veri kaynağı eklemek için</span><span class="sxs-lookup"><span data-stu-id="9d872-158">To add the data source</span></span>  
+#### <a name="to-add-the-data-source"></a><span data-ttu-id="01d1b-158">Veri kaynağı eklemek için</span><span class="sxs-lookup"><span data-stu-id="01d1b-158">To add the data source</span></span>  
   
-1.  <span data-ttu-id="9d872-159">Gelen **veri** menüsünde **yeni veri kaynağı Ekle**.</span><span class="sxs-lookup"><span data-stu-id="9d872-159">From the **Data** menu, select **Add New Data Source**.</span></span>  
+1.  <span data-ttu-id="01d1b-159">Gelen **veri** menüsünde **yeni veri kaynağı Ekle**.</span><span class="sxs-lookup"><span data-stu-id="01d1b-159">From the **Data** menu, select **Add New Data Source**.</span></span>  
   
-2.  <span data-ttu-id="9d872-160">İçinde **veri kaynağı Yapılandırma Sihirbazı**, bir veri kümesini kullanarak Northwind veritabanına bağlantı oluşturun.</span><span class="sxs-lookup"><span data-stu-id="9d872-160">In the **Data Source Configuration Wizard**, create a connection to the Northwind database by using a dataset.</span></span> <span data-ttu-id="9d872-161">Daha fazla bilgi için [nasıl yapılır: bir veritabanındaki verilere bağlanma](https://msdn.microsoft.com/library/6c56e54e-8834-4297-85aa-cc1a443ba556).</span><span class="sxs-lookup"><span data-stu-id="9d872-161">For more information, see [How to: Connect to Data in a Database](https://msdn.microsoft.com/library/6c56e54e-8834-4297-85aa-cc1a443ba556).</span></span>  
+2.  <span data-ttu-id="01d1b-160">İçinde **veri kaynağı Yapılandırma Sihirbazı**, bir veri kümesini kullanarak Northwind veritabanına bağlantı oluşturun.</span><span class="sxs-lookup"><span data-stu-id="01d1b-160">In the **Data Source Configuration Wizard**, create a connection to the Northwind database by using a dataset.</span></span> <span data-ttu-id="01d1b-161">Daha fazla bilgi için [nasıl yapılır: bir veritabanındaki verilere bağlanma](https://msdn.microsoft.com/library/6c56e54e-8834-4297-85aa-cc1a443ba556).</span><span class="sxs-lookup"><span data-stu-id="01d1b-161">For more information, see [How to: Connect to Data in a Database](https://msdn.microsoft.com/library/6c56e54e-8834-4297-85aa-cc1a443ba556).</span></span>  
   
-3.  <span data-ttu-id="9d872-162">Tarafından istendiğinde **veri kaynağı Yapılandırma Sihirbazı**, bağlantı dizesi olarak Kaydet `NorthwindConnectionString`.</span><span class="sxs-lookup"><span data-stu-id="9d872-162">When you are prompted by the **Data Source Configuration Wizard**, save the connection string as `NorthwindConnectionString`.</span></span>  
+3.  <span data-ttu-id="01d1b-162">Tarafından istendiğinde **veri kaynağı Yapılandırma Sihirbazı**, bağlantı dizesi olarak Kaydet `NorthwindConnectionString`.</span><span class="sxs-lookup"><span data-stu-id="01d1b-162">When you are prompted by the **Data Source Configuration Wizard**, save the connection string as `NorthwindConnectionString`.</span></span>  
   
-4.  <span data-ttu-id="9d872-163">Veritabanı nesnelerinizi seçin. sorulduğunda `Customers` ve `Orders` tabloları ve oluşturulan veri kümesi adı `NorthwindDataSet`.</span><span class="sxs-lookup"><span data-stu-id="9d872-163">When you are prompted to choose your database objects, select the `Customers` and `Orders` tables, and name the generated data set `NorthwindDataSet`.</span></span>  
+4.  <span data-ttu-id="01d1b-163">Veritabanı nesnelerinizi seçin. sorulduğunda `Customers` ve `Orders` tabloları ve oluşturulan veri kümesi adı `NorthwindDataSet`.</span><span class="sxs-lookup"><span data-stu-id="01d1b-163">When you are prompted to choose your database objects, select the `Customers` and `Orders` tables, and name the generated data set `NorthwindDataSet`.</span></span>  
   
-## <a name="binding-to-the-data-source"></a><span data-ttu-id="9d872-164">Veri kaynağına bağlama</span><span class="sxs-lookup"><span data-stu-id="9d872-164">Binding to the Data Source</span></span>  
- <span data-ttu-id="9d872-165"><xref:System.Windows.Forms.BindingSource?displayProperty=nameWithType> Bileşeni, uygulamanın veri kaynağı için tek tip arabirim sağlar.</span><span class="sxs-lookup"><span data-stu-id="9d872-165">The <xref:System.Windows.Forms.BindingSource?displayProperty=nameWithType> component provides a uniform interface for the application's data source.</span></span> <span data-ttu-id="9d872-166">Veri kaynağına bağlama arka plan kod dosyasında uygulanır.</span><span class="sxs-lookup"><span data-stu-id="9d872-166">Binding to the data source is implemented in the code-behind file.</span></span>  
+## <a name="binding-to-the-data-source"></a><span data-ttu-id="01d1b-164">Veri kaynağına bağlama</span><span class="sxs-lookup"><span data-stu-id="01d1b-164">Binding to the Data Source</span></span>  
+ <span data-ttu-id="01d1b-165"><xref:System.Windows.Forms.BindingSource?displayProperty=nameWithType> Bileşeni, uygulamanın veri kaynağı için tek tip arabirim sağlar.</span><span class="sxs-lookup"><span data-stu-id="01d1b-165">The <xref:System.Windows.Forms.BindingSource?displayProperty=nameWithType> component provides a uniform interface for the application's data source.</span></span> <span data-ttu-id="01d1b-166">Veri kaynağına bağlama arka plan kod dosyasında uygulanır.</span><span class="sxs-lookup"><span data-stu-id="01d1b-166">Binding to the data source is implemented in the code-behind file.</span></span>  
   
-#### <a name="to-bind-to-the-data-source"></a><span data-ttu-id="9d872-167">Veri kaynağına bağlamak için</span><span class="sxs-lookup"><span data-stu-id="9d872-167">To bind to the data source</span></span>  
+#### <a name="to-bind-to-the-data-source"></a><span data-ttu-id="01d1b-167">Veri kaynağına bağlamak için</span><span class="sxs-lookup"><span data-stu-id="01d1b-167">To bind to the data source</span></span>  
   
-1.  <span data-ttu-id="9d872-168">MainWindow.xaml.vb veya MainWindow.xaml.cs adlı arka plan kod dosyasını açın.</span><span class="sxs-lookup"><span data-stu-id="9d872-168">Open the code-behind file, which is named MainWindow.xaml.vb or MainWindow.xaml.cs.</span></span>  
+1.  <span data-ttu-id="01d1b-168">MainWindow.xaml.vb veya MainWindow.xaml.cs adlı arka plan kod dosyasını açın.</span><span class="sxs-lookup"><span data-stu-id="01d1b-168">Open the code-behind file, which is named MainWindow.xaml.vb or MainWindow.xaml.cs.</span></span>  
   
-2.  <span data-ttu-id="9d872-169">Aşağıdaki kodu kopyalayın `MainWindow` sınıf tanımını.</span><span class="sxs-lookup"><span data-stu-id="9d872-169">Copy the following code into the `MainWindow` class definition.</span></span>  
+2.  <span data-ttu-id="01d1b-169">Aşağıdaki kodu kopyalayın `MainWindow` sınıf tanımını.</span><span class="sxs-lookup"><span data-stu-id="01d1b-169">Copy the following code into the `MainWindow` class definition.</span></span>  
   
-     <span data-ttu-id="9d872-170">Bu kod bildirir <xref:System.Windows.Forms.BindingSource> bileşeni ve veritabanı'na bağlanma ilişkili yardımcı sınıfları.</span><span class="sxs-lookup"><span data-stu-id="9d872-170">This code declares the <xref:System.Windows.Forms.BindingSource> component and associated helper classes that connect to the database.</span></span>  
+     <span data-ttu-id="01d1b-170">Bu kod bildirir <xref:System.Windows.Forms.BindingSource> bileşeni ve veritabanı'na bağlanma ilişkili yardımcı sınıfları.</span><span class="sxs-lookup"><span data-stu-id="01d1b-170">This code declares the <xref:System.Windows.Forms.BindingSource> component and associated helper classes that connect to the database.</span></span>  
   
      [!code-csharp[WPFWithWFAndDatabinding#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#11)]
-     [!code-vb[WPFWithWFAndDatabinding#11](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#11)]  
-  
-3.  <span data-ttu-id="9d872-171">Aşağıdaki kod oluşturucuya kopyalayın.</span><span class="sxs-lookup"><span data-stu-id="9d872-171">Copy the following code into the constructor.</span></span>  
-  
-     <span data-ttu-id="9d872-172">Bu kod oluşturur ve başlatır <xref:System.Windows.Forms.BindingSource> bileşeni.</span><span class="sxs-lookup"><span data-stu-id="9d872-172">This code creates and initializes the <xref:System.Windows.Forms.BindingSource> component.</span></span>  
-  
+     [!code-vb[WPFWithWFAndDatabinding#11](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#11)]
+
+3.  <span data-ttu-id="01d1b-171">Aşağıdaki kod oluşturucuya kopyalayın.</span><span class="sxs-lookup"><span data-stu-id="01d1b-171">Copy the following code into the constructor.</span></span>
+
+     <span data-ttu-id="01d1b-172">Bu kod oluşturur ve başlatır <xref:System.Windows.Forms.BindingSource> bileşeni.</span><span class="sxs-lookup"><span data-stu-id="01d1b-172">This code creates and initializes the <xref:System.Windows.Forms.BindingSource> component.</span></span>
+
      [!code-csharp[WPFWithWFAndDatabinding#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#12)]
-     [!code-vb[WPFWithWFAndDatabinding#12](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#12)]  
-  
-4.  <span data-ttu-id="9d872-173">MainWindow.xaml açın.</span><span class="sxs-lookup"><span data-stu-id="9d872-173">Open MainWindow.xaml.</span></span>  
-  
-5.  <span data-ttu-id="9d872-174">Tasarım görünümü veya XAML görünümünde seçin <xref:System.Windows.Window> öğesi.</span><span class="sxs-lookup"><span data-stu-id="9d872-174">In Design view or XAML view, select the <xref:System.Windows.Window> element.</span></span>  
-  
-6.  <span data-ttu-id="9d872-175">Özellikler penceresinde tıklayın **olayları** sekmesi.</span><span class="sxs-lookup"><span data-stu-id="9d872-175">In the Properties window, click the **Events** tab.</span></span>  
-  
-7.  <span data-ttu-id="9d872-176">Çift <xref:System.Windows.FrameworkElement.Loaded> olay.</span><span class="sxs-lookup"><span data-stu-id="9d872-176">Double-click the <xref:System.Windows.FrameworkElement.Loaded> event.</span></span>  
-  
-8.  <span data-ttu-id="9d872-177">Aşağıdaki kodu kopyalayın <xref:System.Windows.FrameworkElement.Loaded> olay işleyicisi.</span><span class="sxs-lookup"><span data-stu-id="9d872-177">Copy the following code into the <xref:System.Windows.FrameworkElement.Loaded> event handler.</span></span>  
-  
-     <span data-ttu-id="9d872-178">Bu kod atar <xref:System.Windows.Forms.BindingSource> veri bağlamı olarak bileşen ve dolduran `Customers` ve `Orders` bağdaştırıcısı nesneleri.</span><span class="sxs-lookup"><span data-stu-id="9d872-178">This code assigns the <xref:System.Windows.Forms.BindingSource> component as the data context and populates the `Customers` and `Orders` adapter objects.</span></span>  
-  
+     [!code-vb[WPFWithWFAndDatabinding#12](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#12)]
+
+4.  <span data-ttu-id="01d1b-173">MainWindow.xaml açın.</span><span class="sxs-lookup"><span data-stu-id="01d1b-173">Open MainWindow.xaml.</span></span>
+
+5.  <span data-ttu-id="01d1b-174">Tasarım görünümü veya XAML görünümünde seçin <xref:System.Windows.Window> öğesi.</span><span class="sxs-lookup"><span data-stu-id="01d1b-174">In Design view or XAML view, select the <xref:System.Windows.Window> element.</span></span>
+
+6.  <span data-ttu-id="01d1b-175">Özellikler penceresinde tıklayın **olayları** sekmesi.</span><span class="sxs-lookup"><span data-stu-id="01d1b-175">In the Properties window, click the **Events** tab.</span></span>
+
+7.  <span data-ttu-id="01d1b-176">Çift <xref:System.Windows.FrameworkElement.Loaded> olay.</span><span class="sxs-lookup"><span data-stu-id="01d1b-176">Double-click the <xref:System.Windows.FrameworkElement.Loaded> event.</span></span>
+
+8.  <span data-ttu-id="01d1b-177">Aşağıdaki kodu kopyalayın <xref:System.Windows.FrameworkElement.Loaded> olay işleyicisi.</span><span class="sxs-lookup"><span data-stu-id="01d1b-177">Copy the following code into the <xref:System.Windows.FrameworkElement.Loaded> event handler.</span></span>
+
+     <span data-ttu-id="01d1b-178">Bu kod atar <xref:System.Windows.Forms.BindingSource> veri bağlamı olarak bileşen ve dolduran `Customers` ve `Orders` bağdaştırıcısı nesneleri.</span><span class="sxs-lookup"><span data-stu-id="01d1b-178">This code assigns the <xref:System.Windows.Forms.BindingSource> component as the data context and populates the `Customers` and `Orders` adapter objects.</span></span>
+
      [!code-csharp[WPFWithWFAndDatabinding#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#13)]
-     [!code-vb[WPFWithWFAndDatabinding#13](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#13)]  
-  
-9. <span data-ttu-id="9d872-179">Aşağıdaki kodu kopyalayın `MainWindow` sınıf tanımını.</span><span class="sxs-lookup"><span data-stu-id="9d872-179">Copy the following code into the `MainWindow` class definition.</span></span>  
-  
-     <span data-ttu-id="9d872-180">Bu yöntem işleme <xref:System.Windows.Data.CollectionView.CurrentChanged> olay ve geçerli veri bağlama öğesini güncelleştirir.</span><span class="sxs-lookup"><span data-stu-id="9d872-180">This method handles the <xref:System.Windows.Data.CollectionView.CurrentChanged> event and updates the current item of the data binding.</span></span>  
-  
+     [!code-vb[WPFWithWFAndDatabinding#13](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#13)]
+
+9. <span data-ttu-id="01d1b-179">Aşağıdaki kodu kopyalayın `MainWindow` sınıf tanımını.</span><span class="sxs-lookup"><span data-stu-id="01d1b-179">Copy the following code into the `MainWindow` class definition.</span></span>
+
+     <span data-ttu-id="01d1b-180">Bu yöntem işleme <xref:System.Windows.Data.CollectionView.CurrentChanged> olay ve geçerli veri bağlama öğesini güncelleştirir.</span><span class="sxs-lookup"><span data-stu-id="01d1b-180">This method handles the <xref:System.Windows.Data.CollectionView.CurrentChanged> event and updates the current item of the data binding.</span></span>
+
      [!code-csharp[WPFWithWFAndDatabinding#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#14)]
      [!code-vb[WPFWithWFAndDatabinding#14](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#14)]  
   
-10. <span data-ttu-id="9d872-181">Derleme ve uygulamayı çalıştırmak için F5 tuşuna basın.</span><span class="sxs-lookup"><span data-stu-id="9d872-181">Press F5 to build and run the application.</span></span>  
+10. <span data-ttu-id="01d1b-181">Derleme ve uygulamayı çalıştırmak için F5 tuşuna basın.</span><span class="sxs-lookup"><span data-stu-id="01d1b-181">Press F5 to build and run the application.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9d872-182">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="9d872-182">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="01d1b-182">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="01d1b-182">See Also</span></span>  
  <xref:System.Windows.Forms.Integration.ElementHost>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [<span data-ttu-id="9d872-183">Visual Studio’da XAML tasarlama</span><span class="sxs-lookup"><span data-stu-id="9d872-183">Design XAML in Visual Studio</span></span>](/visualstudio/designers/designing-xaml-in-visual-studio)  
- [<span data-ttu-id="9d872-184">Veri bağlama karma uygulamaları örneği</span><span class="sxs-lookup"><span data-stu-id="9d872-184">Data Binding in Hybrid Applications Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=159983)  
- [<span data-ttu-id="9d872-185">İzlenecek yol: WPF'de Windows Forms Bileşik Denetimini Barındırma</span><span class="sxs-lookup"><span data-stu-id="9d872-185">Walkthrough: Hosting a Windows Forms Composite Control in WPF</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
- [<span data-ttu-id="9d872-186">İzlenecek yol: WPF Bileşik Denetimini Windows Forms İçinde Barındırma</span><span class="sxs-lookup"><span data-stu-id="9d872-186">Walkthrough: Hosting a WPF Composite Control in Windows Forms</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+ [<span data-ttu-id="01d1b-183">Visual Studio’da XAML tasarlama</span><span class="sxs-lookup"><span data-stu-id="01d1b-183">Design XAML in Visual Studio</span></span>](/visualstudio/designers/designing-xaml-in-visual-studio)  
+ [<span data-ttu-id="01d1b-184">Veri bağlama karma uygulamaları örneği</span><span class="sxs-lookup"><span data-stu-id="01d1b-184">Data Binding in Hybrid Applications Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=159983)  
+ [<span data-ttu-id="01d1b-185">İzlenecek yol: WPF'de Windows Forms Bileşik Denetimini Barındırma</span><span class="sxs-lookup"><span data-stu-id="01d1b-185">Walkthrough: Hosting a Windows Forms Composite Control in WPF</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
+ [<span data-ttu-id="01d1b-186">İzlenecek yol: WPF Bileşik Denetimini Windows Forms İçinde Barındırma</span><span class="sxs-lookup"><span data-stu-id="01d1b-186">Walkthrough: Hosting a WPF Composite Control in Windows Forms</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
