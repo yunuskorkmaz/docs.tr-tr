@@ -2,26 +2,26 @@
 title: SQL izleme
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-ms.openlocfilehash: 5f8d7bbd57965b4d7399373416caea87d4d84187
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 84d3fb994c790301ceb55b945bf972c21ed2a971
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43779149"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48584337"
 ---
 # <a name="sql-tracking"></a>SQL izleme
-Bu örnek nasıl yazılacağını özel SQL izleme katılımcı gösterir, bu bir SQL veritabanı'na izleme kayıtları yazar. Windows Workflow Foundation (WF) iş akışı yürütme iş akışı örneğinin görünürlük elde etmek için izleme sağlar. İzleme çalışma zamanı iş akışı iş akışı yürütülürken kayıtları izleme yayar. İş akışı izleme hakkında daha fazla bilgi için bkz: [takip ve izleme iş akışı](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).  
-  
-#### <a name="to-use-this-sample"></a>Bu örneği kullanmak için  
-  
-1.  Bilgisayarınızda SQL Server 2008, SQL Server 2008 Express veya üzerinin yüklü doğrulayın. Örnek ile paketlenmiş betikleri yerel bilgisayarınızda bir SQL Express örneği kullanımını varsayılır. Lütfen veritabanı ile ilgili betikleri örneği çalıştırmadan önce değiştirin. farklı bir örneğine sahipseniz.  
-  
-2.  SQL Server veritabanı izleme betikleri dizininde (\WF\Basic\Tracking\SqlTracking\CS\Scripts) Trackingsetup.cmd çalıştırarak oluşturun. Bu TrackingSample adlı bir veritabanı oluşturur.  
-  
+Bu örnek nasıl yazılacağını özel SQL izleme katılımcı gösterir, bu bir SQL veritabanı'na izleme kayıtları yazar. Windows Workflow Foundation (WF) iş akışı yürütme iş akışı örneğinin görünürlük elde etmek için izleme sağlar. İzleme çalışma zamanı iş akışı iş akışı yürütülürken kayıtları izleme yayar. İş akışı izleme hakkında daha fazla bilgi için bkz: [takip ve izleme iş akışı](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).
+
+#### <a name="to-use-this-sample"></a>Bu örneği kullanmak için
+
+1.  Bilgisayarınızda SQL Server 2008, SQL Server 2008 Express veya üzerinin yüklü doğrulayın. Örnek ile paketlenmiş betikleri yerel bilgisayarınızda bir SQL Express örneği kullanımını varsayılır. Lütfen veritabanı ile ilgili betikleri örneği çalıştırmadan önce değiştirin. farklı bir örneğine sahipseniz.
+
+2.  SQL Server veritabanı izleme betikleri dizininde (\WF\Basic\Tracking\SqlTracking\CS\Scripts) Trackingsetup.cmd çalıştırarak oluşturun. Bu TrackingSample adlı bir veritabanı oluşturur.
+
     > [!NOTE]
     >  Betik, SQL Express varsayılan örnekte veritabanı oluşturur. Farklı bir veritabanı örneği üzerinde yüklemek istiyorsanız, Trackingsetup.cmd betiği düzenleyin.  
   
-3.  İçinde SqlTrackingSample.sln açın [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+3.  SqlTrackingSample.sln Visual Studio 2010'da açın.  
   
 4.  Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.  
   
@@ -48,8 +48,8 @@ Bu örnek nasıl yazılacağını özel SQL izleme katılımcı gösterir, bu bi
 1.  Örnek dizini (\WF\Basic\Tracking\SqlTracking) theTrackingcleanup.cmd betiği çalıştırın.  
   
     > [!NOTE]
-    >  Trackingcleanup.cmd, yerel bilgisayarınıza SQL Express veritabanında silmeyi dener. Başka bir SQL server örneği kullanıyorsanız, Trackingcleanup.cmd düzenleyin.  
-  
+    >  Trackingcleanup.cmd, yerel bilgisayarınıza SQL Express veritabanında silmeyi dener. Başka bir SQL server örneği kullanıyorsanız, Trackingcleanup.cmd düzenleyin.
+
 > [!IMPORTANT]
 >  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   

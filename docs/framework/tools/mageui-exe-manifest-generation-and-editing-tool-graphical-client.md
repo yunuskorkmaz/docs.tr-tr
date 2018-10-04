@@ -5,22 +5,23 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: eb93e53e7b77ee2747bce3fb9a45d7061450e65c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9037e03398aa29d496f1a689e0e57bdb60fea5b9
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501667"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48584401"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (Bildirim Üretme ve Düzenleme Aracı, Grafik İstemci)
-MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windows tabanlı kullanıcı arabirimi (UI) ile destekler. Bu araçla, dağıtım ve uygulama bildirimleri oluşturabilir, düzenleyebilir ve imzalayabilirsiniz. MageUI.exe hedef ile oluşturulan yeni bildirimler [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. Önceki .NET Framework sürümlerini hedeflemek için MageUI.exe'nin önceki sürümleri kullanılmalıdır. Ekleme ya da bir bildirim ya da varolan bildirimleri yeniden imzalarken derlemeleri kaldırma MageUI.exe bildirim hedefleyecek şekilde güncelleştirmez [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. Daha fazla bilgi için [Mage.exe (bildirim üretme ve düzenleme aracı)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md).  
-  
- Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, Geliştirici Komut İstemi (veya Windows 7'de Visual Studio Komut İstemi) kullanın. Daha fazla bilgi için [komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
-  
- Mage.exe ve MageUI.exe iki sürümü olarak dahil edilir [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)] kurulumu. Sürüm bilgileri, MageUI.exe çalıştırın, görmek için seçin **yardımcı**seçip **hakkında**. Bu belge Mage.exe ve MageUI.exe'nin 4.0.x.x sürümünü açıklar.  
-  
+
+MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windows tabanlı kullanıcı arabirimi (UI) ile destekler. Bu araçla, dağıtım ve uygulama bildirimleri oluşturabilir, düzenleyebilir ve imzalayabilirsiniz. MageUI.exe hedef ile oluşturulan yeni bildirimler [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. Önceki .NET Framework sürümlerini hedeflemek için MageUI.exe'nin önceki sürümleri kullanılmalıdır. Ekleme ya da bir bildirim ya da varolan bildirimleri yeniden imzalarken derlemeleri kaldırma MageUI.exe bildirim hedefleyecek şekilde güncelleştirmez [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. Daha fazla bilgi için [Mage.exe (bildirim üretme ve düzenleme aracı)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md).
+
+ Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, Geliştirici Komut İstemi (veya Windows 7'de Visual Studio Komut İstemi) kullanın. Daha fazla bilgi için [komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+
+ Mage.exe ve MageUI.exe iki sürümü Visual Studio'nun bir bileşen olarak dahil edilir. Sürüm bilgileri, MageUI.exe çalıştırın, görmek için seçin **yardımcı**seçip **hakkında**. Bu belge Mage.exe ve MageUI.exe'nin 4.0.x.x sürümünü açıklar.
+
 > [!NOTE]
->  MageUI.exe desteklemiyor [compatibleFrameworks](/visualstudio/deployment/compatibleframeworks-element-clickonce-deployment) uygulama bildirimini kaydederken zaten MageUI.exe kullanarak bir sertifika ile imzalanmış olan bir öğe. Bunun yerine, kullanmalısınız [Mage.exe](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md).  
+> MageUI.exe desteklemiyor [compatibleFrameworks](/visualstudio/deployment/compatibleframeworks-element-clickonce-deployment) uygulama bildirimini kaydederken zaten MageUI.exe kullanarak bir sertifika ile imzalanmış olan bir öğe. Bunun yerine, kullanmalısınız [Mage.exe](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md).  
   
 ## <a name="uielement-list"></a>UIElement Listesi  
  Aşağıdaki tablo, kullanılabilen menü ve araç çubuğu öğelerini listeler.  

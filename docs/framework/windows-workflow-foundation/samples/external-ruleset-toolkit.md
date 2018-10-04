@@ -2,22 +2,22 @@
 title: Dış kural kümesi Araç Seti
 ms.date: 03/30/2017
 ms.assetid: a306d283-a031-475e-aa01-9ae86e7adcb0
-ms.openlocfilehash: f418c71b39611e64afea168ed40418dbe981521a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f545d083bb6caf9daca3ce553d0a1ee6711b0062
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43803362"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48584266"
 ---
 # <a name="external-ruleset-toolkit"></a>Dış kural kümesi Araç Seti
-Bir iş akışı uygulama içinde kuralları kullanıldığında, normal derlemenin parçası kurallardır. Bazı senaryolarda, yeniden oluşturma ve iş akışı derleme dağıtılmadan güncelleştirilebilir ayrı olarak derlemesinden RuleSets sağlamak isteyebilirsiniz. Bu örnek ve bir veritabanında RuleSets düzenleyin ve çalışma zamanında bir iş akışından bu RuleSets erişimi yönetmesine olanak tanır. Bu kural kümesi değişiklikleri otomatik olarak birleştirmek çalışan iş akışı örnekleri sağlar.  
-  
- Dış kural kümesi Araç Seti örnek yönetmek ve veritabanındaki RuleSet sürümlerini düzenlemek için kullanabileceğiniz bir Windows Forms tabanlı bir araç içerir. Ayrıca, etkinlik ve bu kurallar yürütmeye yönelik bir ana bilgisayar hizmeti de içerir.  
-  
+Bir iş akışı uygulama içinde kuralları kullanıldığında, normal derlemenin parçası kurallardır. Bazı senaryolarda, yeniden oluşturma ve iş akışı derleme dağıtılmadan güncelleştirilebilir ayrı olarak derlemesinden RuleSets sağlamak isteyebilirsiniz. Bu örnek ve bir veritabanında RuleSets düzenleyin ve çalışma zamanında bir iş akışından bu RuleSets erişimi yönetmesine olanak tanır. Bu kural kümesi değişiklikleri otomatik olarak birleştirmek çalışan iş akışı örnekleri sağlar.
+
+ Dış kural kümesi Araç Seti örnek yönetmek ve veritabanındaki RuleSet sürümlerini düzenlemek için kullanabileceğiniz bir Windows Forms tabanlı bir araç içerir. Ayrıca, etkinlik ve bu kurallar yürütmeye yönelik bir ana bilgisayar hizmeti de içerir.
+
 > [!NOTE]
 >  Bu örnek gerektirir [Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=96181).  
   
- [!INCLUDE[vsprvsext](../../../../includes/vsprvsext-md.md)] Windows Workflow Foundation (WF) bir parçası olarak bir kural kümesi Düzenleyicisi sağlar. Bu Düzenleyici'yi tıklatarak başlatabilirsiniz `Policy` etkinliğini bir iş akışında; iş akışıyla ilişkilendirilmiş .rules dosya için tanımlı RuleSet nesnesi seri hale getirir (bir `Policy` karşı iş akışı etkinlik çalıştırmalarını bir kural kümesi örneği). İş akışı projesi oluşturma sırasında .rules dosyanın derleme kaynağı olarak derlenir.  
+ Visual Studio, Windows Workflow Foundation (WF) bir parçası olarak bir kural kümesi Düzenleyicisi sağlar. Bu Düzenleyici'yi tıklatarak başlatabilirsiniz `Policy` etkinliğini bir iş akışında; iş akışıyla ilişkilendirilmiş .rules dosya için tanımlı RuleSet nesnesi seri hale getirir (bir `Policy` karşı iş akışı etkinlik çalıştırmalarını bir kural kümesi örneği). İş akışı projesi oluşturma sırasında .rules dosyanın derleme kaynağı olarak derlenir.  
   
  Bu örnek Ekle bileşenlerinin:  
   

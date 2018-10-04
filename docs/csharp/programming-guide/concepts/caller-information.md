@@ -2,12 +2,12 @@
 title: Arayan bilgileri (C#)
 ms.date: 07/20/2015
 ms.assetid: ffad3d24-2fb7-4641-9124-53b5bc91d339
-ms.openlocfilehash: 27f2e7624369061ff3089357c455ae51237e6dfa
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 4a0e4d6ecad1863832a33ba91485d0c12675cd57
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46586469"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48777071"
 ---
 # <a name="caller-information-c"></a>Arayan bilgileri (C#)
 
@@ -76,7 +76,7 @@ Aşağıdaki grafik üyesi kullandığınızda döndürülen adlarını gösteri
 |Statik oluşturucu|".cctor" dizesi|
 |Yok edici|"Finalize" dizesi|
 |Kullanıcı tanımlı işleçler veya dönüştürmeler|Üye için oluşturulan "op_Addition" gibi bir ad.|
-|Öznitelik oluşturucu|Özniteliğin uygulandığı üyenin adı. Öznitelik bir üye içerisindeki herhangi bir öğeyse (parametre, dönüş değeri veya genel tür parametresi gibi), bu sonuç bu öğeyle ilişkili öğenin adıdır.|
+|Öznitelik oluşturucu|Yöntem veya öznitelik uygulandığı özellik adı. Öznitelik bir üye içerisindeki herhangi bir öğeyse (parametre, dönüş değeri veya genel tür parametresi gibi), bu sonuç bu öğeyle ilişkili öğenin adıdır.|
 |İçeren üye yok (örneğin, derleme düzeyi veya türlere uygulanan öznitelikler)|İsteğe bağlı parametrenin varsayılan değeri.|
 
 ## <a name="see-also"></a>Ayrıca bkz.

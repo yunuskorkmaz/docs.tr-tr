@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Name attribute in XAML [XAML Services]
 ms.assetid: b7e61222-e8cf-48d2-acd0-6df3b7685d48
 ms.openlocfilehash: 08594d9757596eed470ffba8b5b63a01c493c358
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035064"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48583944"
 ---
 # <a name="xname-directive"></a>x:Name Yönergesi
 XAML namescope XAML tanımlı öğeleri benzersiz olarak tanımlar. XAML ad kapsamları ve benzersizlik modellerini çerçeveleri, API'leri sağlar veya çalışma zamanında XAML oluşturulan nesne grafiğine erişerek davranışları uygulayın örneklenmiş nesnelere uygulanabilir.  

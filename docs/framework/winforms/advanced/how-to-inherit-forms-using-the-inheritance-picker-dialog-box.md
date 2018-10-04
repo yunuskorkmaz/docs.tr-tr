@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Inheritance Picker dialog box
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
-ms.openlocfilehash: 5bcd29531858f9cf014042db7ee447cecfdd89b1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7a6de60ec7621792b4f19857a2743f64cbdc686c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525750"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48777415"
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Nasıl yapılır: Devralma Seçici İletişim Kutusunu Kullanarak Form Devralma
 Bir form veya diğer nesne devral en kolay yolu kullanmaktır **devralma Seçici** iletişim kutusu. Bununla, diğer çözümlere önceden oluşturduğunuz kodu veya kullanıcı arabirimi (UI) avantajlarından yararlanabilirsiniz.  
@@ -27,7 +27,7 @@ Bir form veya diğer nesne devral en kolay yolu kullanmaktır **devralma Seçici
   
      **Yeni Öğe Ekle** iletişim kutusu açılır.  
   
-2.  Seçin **devralınan Form** şablonunu ve bunun içinde ad **adı** kutusu. Tıklayın **Ekle** devam etmek için düğmesine.  
+2.  Arama **devralınan Form** searchbox ya tıklayarak şablonu **Windows Forms** kategorisini seçin ve içinde ad **adı** kutusu. Tıklayın **Ekle** devam etmek için düğmesine.  
   
      **Devralma Seçici** iletişim kutusu açılır. Geçerli proje forms içeriyorsa, bunlar görüntülenir **devralma Seçici** iletişim kutusu.  
   

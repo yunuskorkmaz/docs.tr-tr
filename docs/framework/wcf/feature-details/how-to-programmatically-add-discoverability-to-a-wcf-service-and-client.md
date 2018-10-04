@@ -2,19 +2,19 @@
 title: 'Nasıl yapılır: Bir WCF Hizmeti ve İstemcisine Programlı Bir Şekilde Keşfedilebilirlik Ekleme'
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: e32128a20a765762249e6892232447c56036c2d8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 407777b1545fb12eb3ed1787fdba86991c894fdb
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524146"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48779900"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Nasıl yapılır: Bir WCF Hizmeti ve İstemcisine Programlı Bir Şekilde Keşfedilebilirlik Ekleme
 Bu konuda, bir Windows Communication Foundation (WCF) hizmeti bulunabilir hale açıklanmaktadır. Dayanır [barındırma](https://go.microsoft.com/fwlink/?LinkId=145523) örnek.  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>Bulma için var olan barındırılan hizmet örneği yapılandırmak için  
   
-1.  Barındırılan bir çözüm açın [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]. Örnek TechnologySamples\Basic\Service\Hosting\SelfHost dizininde bulunur.  
+1.  Barındırma çözümü Visual Studio 2012'de açın. Örnek TechnologySamples\Basic\Service\Hosting\SelfHost dizininde bulunur.  
   
 2.  Bir başvuru ekleyin `System.ServiceModel.Discovery.dll` hizmet projesi için. "Sistemi. hata mesajını görebilirsiniz. ServiceModel.Discovery.dll veya bağımlılıklarından biri daha sonraki bir sürümü gerektirir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] belirtilenden projede... " Bu iletiyi görürseniz, Çözüm Gezgini'nde projeye sağ tıklayıp seçin **özellikleri**. İçinde **proje özellikleri** penceresinde emin **hedef Framework'ü** olan [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
   

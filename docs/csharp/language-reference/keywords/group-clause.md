@@ -8,12 +8,12 @@ helpviewer_keywords:
 - group keyword [C#]
 - group clause [C#]
 ms.assetid: c817242e-b12c-4baa-a57e-73ee138f34d1
-ms.openlocfilehash: 157bd07f3332883f010ef26ba920dae88276051b
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 8b2516b4e5b418e560d5763d8e551d2ab7646da3
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084683"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48584357"
 ---
 # <a name="group-clause-c-reference"></a>group tümcesi (C# Başvurusu)
 
@@ -53,7 +53,7 @@ Aşağıdaki örnek, sonuçları iki gruplara bölmek bir anahtar için bir bool
 
 ### <a name="grouping-by-numeric-range"></a>Sayısal Aralık göre gruplandırma
 
-Sonraki örnek, bir dilim aralığı temsil eden sayısal Grup anahtarları oluşturmak için bir ifade kullanır. Kullanımına dikkat edin [izin](let-clause.md) yöntemini iki kez çağırmak zorunda kalmazsınız bir yöntem depolamak için uygun bir konum arama sonucu, `group` yan tümcesi. Ayrıca unutmayın `group` "sıfıra" özel durumdan kaçınmak için kod Öğrenci sıfır ortalama sahip olmadığından emin olmak için kontrol eder, yan tümcesi. Güvenli bir şekilde sorgu ifadelerinde yöntemleri kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Sorgu ifadelerinde özel durumları işlemek](../../programming-guide/linq-query-expressions/how-to-handle-exceptions-in-query-expressions.md).
+Sonraki örnek, bir dilim aralığı temsil eden sayısal Grup anahtarları oluşturmak için bir ifade kullanır. Kullanımına dikkat edin [izin](let-clause.md) yöntemini iki kez çağırmak zorunda kalmazsınız bir yöntem depolamak için uygun bir konum arama sonucu, `group` yan tümcesi. Güvenli bir şekilde sorgu ifadelerinde yöntemleri kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Sorgu ifadelerinde özel durumları işlemek](../../programming-guide/linq-query-expressions/how-to-handle-exceptions-in-query-expressions.md).
 
 [!code-csharp[cscsrefQueryKeywords#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#15)]
 

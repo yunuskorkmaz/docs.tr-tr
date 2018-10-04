@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c06b63c492d31d1391b53a36ced5b5c7277f5ad6
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: ed2a81c4ec4f679b99f5f5a4d2a2c21270691e93
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028197"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48778413"
 ---
 # <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt; öğesi
 Tarafından kullanılan bir veya daha fazla anahtarları tanımlar <xref:System.AppContext> yeni işlevselliği için bir geri çevirme mekanizma sağlar sınıfını.  
@@ -93,7 +93,7 @@ Tarafından kullanılan bir veya daha fazla anahtarları tanımlar <xref:System.
 |`Switch.System.Security.Cryptography.`<br/>`DoNotAddrOfCspParentWindowHandle`|Denetimleri olmadığını değerini [CspParameters.ParentWindowHandle](xref:System.Security.Cryptography.CspParameters.ParentWindowHandle) özelliği bir [IntPtr](xref:System.IntPtr) pencere bellek konumunu temsil işlemek veya bir pencere tutucu (HWND) olup. Daha fazla bilgi için [azaltma: CspParameters.ParentWindowHandle bekliyor HWND](Mitigation:%20CspParameters.ParentWindowHandle%20Expects%20an%20HWND.md). |.NET framework 4.7|   
 |`Switch.System.Security.Cryptography.Pkcs.`<br/>`UseInsecureHashAlgorithms`|Bazı SignedCMS işlemleri için varsayılan, SHA1 veya SHA256 olup olmadığını belirler. |.NET framework 4.7.1|
 |`Switch.System.Security.Cryptography.Xml.`<br/>`UseInsecureHashAlgorithms`|Bazı SignedXML işlemleri için varsayılan, SHA1 veya SHA256 olup olmadığını belirler. |.NET framework 4.7.1|
-|`Switch.System.ServiceModel.`<br/>`AllowUnsignedToHeader`|Belirler olmadığını `TransportWithMessageCredential` güvenlik modu sağlar imzasız iletilerle "Kime" üst bilgisinde. Katılımı anahtar budur. Daha fazla bilgi için [.NET Framework 4.6.1 çalışma zamanı değişiklikleri](https://msdn.microsoft.com/library/mt592686.aspx#WCF).|.NET Framework 4.6.1| 
+|`Switch.System.ServiceModel.`<br/>`AllowUnsignedToHeader`|Belirler olmadığını `TransportWithMessageCredential` güvenlik modu sağlar imzasız iletilerle "Kime" üst bilgisinde. Katılımı anahtar budur. Daha fazla bilgi için [.NET Framework 4.6.1 çalışma zamanı değişiklikleri](~/docs/framework/migration-guide/runtime/4.5.2-4.6.1.md#windows-communication-foundation-wcf).|.NET Framework 4.6.1| 
 |`Switch.System.ServiceModel.`<br/>`DisableAddressHeaderCollectionValidation`>|Denetimleri olmadığını <xref:System.ServiceModel.Channels.AddressHeaderCollection.%23ctor(System.Collections.Generic.IEnumerable{System.ServiceModel.Channels.AddressHeader})> Oluşturucusu oluşturur bir <xref:System.ArgumentException> öğeler ise `null`.|.NET framework 4.7.1| 
 |`Switch.System.ServiceModel.`<br />`DisableCngCertificates`|İle X509 kullanma girişimi sertifikaları olmadığını CSG anahtar depolama sağlayıcısı, bir özel durum oluşturur. belirler. Daha fazla bilgi için [WCF aktarım güvenliği destekleyen CNG kullanarak depolanan sertifikaları](~/docs/framework/migration-guide/retargeting/4.6.1-4.6.2.md#wcf-transport-security-supports-certificates-stored-using-cng).|.NET Framework 4.6.1|
 |`Switch.System.ServiceModel.`<br/>`DisableExplicitConnectionCloseHeader`|HTTP taşıma şirket içinde barındırılan bir hizmetle kullanırken, bu değeri ayarlamak `true` neden olan bir uygulama eklendiğinde yok saymak WCF `Connection: close` üst bilgisi için bir istek için yanıt üstbilgileri. Bu değeri ayarlamak `false` sağlayan ekleme `Connection: close` yanıt üstbilgileri için bir yanıt gönderildikten sonra isteği yuva kapatma sonuçları başlığı.|.NET Framework 4.6|

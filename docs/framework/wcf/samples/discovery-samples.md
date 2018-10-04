@@ -3,11 +3,11 @@ title: Keşif (Örnekler)
 ms.date: 03/30/2017
 ms.assetid: 522a00b4-a789-4e8c-b8d7-a4c3d863a182
 ms.openlocfilehash: bf01e3fec15ddae0d0901b3c2dc91d3d6109fc97
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47421305"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48583132"
 ---
 # <a name="discovery-samples"></a>Keşif (Örnekler)
 Bu bölüm bulma özelliğini ilgili örnekleri içerir.  
