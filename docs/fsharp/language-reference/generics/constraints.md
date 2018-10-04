@@ -3,11 +3,11 @@ title: Kısıtlamalar (F#)
 description: 'Bir genel tür veya işlev içinde bir tür bağımsız değişkeni için gereksinimleri belirtmek için genel tür parametreleri için geçerli olan F # kısıtlamaları hakkında bilgi edinin.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 9534db4ffd195022366af8c993658bd94f375f53
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
-ms.translationtype: MT
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47231182"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48034843"
 ---
 # <a name="constraints"></a>Kısıtlamalar
 
