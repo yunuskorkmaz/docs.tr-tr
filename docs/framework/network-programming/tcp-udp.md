@@ -19,11 +19,11 @@ ms.assetid: df29b4b0-49e8-4923-82b9-13150dfc40f5
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: b3e39b952b37f70513b3a84ce6b6059b85e01c28
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48262427"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48845469"
 ---
 # <a name="tcp-udp"></a>TCP UDP
 Uygulamalar, İletim Denetimi Protokolü (TCP) ve kullanıcı veri birimi Protokolü (UDP) Hizmetleri ile kullanabileceğiniz <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener>, ve <xref:System.Net.Sockets.UdpClient> sınıfları. Bu protokol sınıfların üstünde oluşturulan <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> sınıfı ve veri aktarımı işlemlerinin ayrıntılarını ele ilgileniriz.  

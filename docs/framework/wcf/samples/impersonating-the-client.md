@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-ms.openlocfilehash: 5a13ab73e48616b38e583b1c9948fc1bf5eb8a64
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 29ed1f988819a47d8ac8845a379aeda5e15c655e
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522294"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48844299"
 ---
 # <a name="impersonating-the-client"></a>İstemci Kimliğine Bürünme
 Kimliğe bürünme örneği, hizmet adına çağıran sistem kaynaklarına erişebilmesi çağıran uygulama hizmetine bürünülecek gösterilmiştir.  
@@ -102,7 +102,7 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
  Örneği çalıştırdığınızda, işlem isteklerini ve yanıtlarını hem hizmet hem de istemci konsol pencerelerinde görüntülenir. Her konsol penceresi hizmet ve istemci kapatmak için ENTER tuşuna basın.  
   
 > [!NOTE]
->  Bir yönetici hesabı altında ya da çalışan hizmet gerekir veya altında çalıştığı hesabı kaydetme hakkı verilmesi http://localhost:8000/ServiceModelSamples URI HTTP katman. Oluşturarak bu hakların verilmesi bir [Namespace ayırma](https://go.microsoft.com/fwlink/?LinkId=95012) kullanarak [Httpcfg.exe aracı](https://go.microsoft.com/fwlink/?LinkId=95010).  
+>  Bir yönetici hesabı altında ya da çalışan hizmet gerekir veya altında çalıştığı hesabı kaydetme hakkı verilmesi `http://localhost:8000/ServiceModelSamples` URI HTTP katman. Oluşturarak bu hakların verilmesi bir [Namespace ayırma](https://go.microsoft.com/fwlink/?LinkId=95012) kullanarak [Httpcfg.exe aracı](https://go.microsoft.com/fwlink/?LinkId=95010).  
   
 > [!NOTE]
 >  Çalıştıran bilgisayarlarda [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], kimliğe bürünme, yalnızca Host.exe uygulamanın kimliğe bürünme ayrıcalık varsa desteklenir. (Varsayılan olarak, yalnızca Yöneticiler bu izne sahip.) Hizmet olarak çalıştığı bir hesabın bu ayrıcalığı eklemek için Git **Yönetimsel Araçlar**açın **yerel güvenlik ilkesi**açın **yerel ilkeler**, tıklayın**Kullanıcı hakları ataması**seçip **kimlik doğrulamasından sonra istemcinin özelliklerini al** ve çift **özellikleri** bir kullanıcı veya grup eklemek için.  

@@ -8,23 +8,23 @@ helpviewer_keywords:
 - strings [Visual Basic], converting to arrays
 - string conversion [Visual Basic], arrays
 ms.assetid: 1b54b686-ab29-413b-adce-6bd5422376eb
-ms.openlocfilehash: c109143601e304b1ec15a60c71d65fe6bd15aae8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cc12b70cddcb93a72b4421a8ddd93542ef84f55b
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648625"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48845196"
 ---
 # <a name="how-to-convert-a-string-to-an-array-of-characters-in-visual-basic"></a>Nasıl yapılır: Visual Basic'te Bir Dizeyi Karakter Dizilerine Dönüştürme
-Bazen dizenizi ve bu karakterleri ne zaman bir dizesini ayrıştırma, dizesindeki konumlarını karakterler hakkında veriler kullanışlıdır. Bu örnek, bir dize dizesinin çağırarak karakter nasıl erişebileceğini gösterir <xref:System.String.ToCharArray%2A> yöntemi.  
+Bazen, dize ve bu karakterleri ne zaman bir dizeyi ayrıştırma, dizesindeki konumlarını karakterler hakkında veriler kullanışlıdır. Bu örnek, bir dizedeki dizenin çağırarak karakter nasıl alabileceğiniz gösterir <xref:System.String.ToCharArray%2A> yöntemi.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, bir dizeye bölüneceği gösterilmiştir bir `Char` dizi ve nasıl bir dizeye bölüneceği bir `String` kendi Unicode metin karakter dizisi. Bu ayrım iki veya daha fazla Unicode metin karakterlerinin birleştirilebilen nedeni `Char` karakterleri (bir yedek çifti ya da bir birleştirme gibi karakter dizisi). Daha fazla bilgi için bkz: <xref:System.Globalization.TextElementEnumerator> ve "Unicode standart" konumundaki http://www.unicode.org.  
+ Bu örnek, bir dizeye bölme gösterir. bir `Char` dizi ve bir dizeye bölme bir `String` , Unicode karakterler dizisi. İki veya daha fazla Unicode metin karakterleri oluşturulabildikleri Bu ayrım sebebi `Char` karakter (bir yedek çifti ya da bir birleştirme gibi karakter dizisi). Daha fazla bilgi için <xref:System.Globalization.TextElementEnumerator> ve [Unicode standart](https://www.unicode.org/standard/standard.html).  
   
  [!code-vb[VbVbalrStrings#75](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-convert-a-string-to-an-array-of-characters_1.vb)]  
   
 ## <a name="example"></a>Örnek  
- Bir dize, Unicode metin karakterlere bölmek daha da zor olan, ancak bu görsel bir dize gösterimini hakkında bilgi istiyorsanız gereklidir. Bu örnekte <xref:System.Globalization.StringInfo.SubstringByTextElements%2A> bir dize olun Unicode metin karakterler hakkında bilgi almak için yöntemi.  
+ Bir dize, Unicode metin karakterlere bölmek daha zordur, ancak bu görsel bir dize temsilini hakkında bilgi almanız gerekiyorsa şarttır. Bu örnekte <xref:System.Globalization.StringInfo.SubstringByTextElements%2A> dizesini oluşturan Unicode karakterler hakkında bilgi almak için yöntemi.  
   
  [!code-vb[VbVbalrStrings#76](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-convert-a-string-to-an-array-of-characters_2.vb)]  
   
@@ -32,5 +32,5 @@ Bazen dizenizi ve bu karakterleri ne zaman bir dizesini ayrıştırma, dizesinde
  <xref:System.String.Chars%2A>  
  <xref:System.Globalization.StringInfo?displayProperty=nameWithType>  
  [Nasıl Yapılır: Dizelerdeki Karakterlere Erişme](../../../../visual-basic/programming-guide/language-features/strings/how-to-access-characters-in-strings.md)  
- [Dizeler ve diğer Visual Basic veri türleri arasında dönüştürme](../../../../visual-basic/programming-guide/language-features/strings/converting-between-strings-and-other-data-types.md)  
+ [Dizeler ve Visual Basic'te diğer veri türleri arasında dönüştürme](../../../../visual-basic/programming-guide/language-features/strings/converting-between-strings-and-other-data-types.md)  
  [Dizeler](../../../../visual-basic/programming-guide/language-features/strings/index.md)

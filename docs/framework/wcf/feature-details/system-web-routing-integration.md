@@ -2,15 +2,15 @@
 title: System.Web.Routing Integration
 ms.date: 03/30/2017
 ms.assetid: 31fe2a4f-5c47-4e5d-8ee1-84c524609d41
-ms.openlocfilehash: 2df1ff8230cd79f61fdee971d783544054bd8196
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 3b95b3117941ce7d019b87b00181b2cbac652f43
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48782109"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48843857"
 ---
 # <a name="systemwebrouting-integration"></a>System.Web.Routing Integration
-Bir Windows Communication Foundation (WCF) hizmeti Internet Information Service (IIS) yeniden barındırdığında sanal dizinde .svc dosya yerleştirin. Bu .svc dosya yanı sıra hizmeti uygulayan sınıf kullanmak için hizmet ana bilgisayar üreteci belirtir. Hizmetine istek yaparken .svc dosya URI'de, örneğin belirttiğiniz: http://contoso.com/EmployeeServce.svc. Bu tür bir URI REST Hizmetleri yazma programcıları için en uygun değil. REST Hizmetleri için bir URI'leri, belirli bir kaynak belirtin ve normalde herhangi bir uzantısı yok. <xref:System.Web.Routing> Tümleştirme özelliği için bir URI'leri uzantısız yanıt veren bir WCF REST hizmeti barındırmanıza olanak sağlar. Yönlendirme bakın hakkında daha fazla bilgi için [ASP.NET yönlendirme](https://go.microsoft.com/fwlink/?LinkId=184660).  
+Bir Windows Communication Foundation (WCF) hizmeti Internet Information Service (IIS) yeniden barındırdığında sanal dizinde .svc dosya yerleştirin. Bu .svc dosya yanı sıra hizmeti uygulayan sınıf kullanmak için hizmet ana bilgisayar üreteci belirtir. Hizmetine istek yaparken .svc dosya URI'de, örneğin belirttiğiniz: `http://contoso.com/EmployeeServce.svc`. Bu tür bir URI REST Hizmetleri yazma programcıları için en uygun değil. REST Hizmetleri için bir URI'leri, belirli bir kaynak belirtin ve normalde herhangi bir uzantısı yok. <xref:System.Web.Routing> Tümleştirme özelliği için bir URI'leri uzantısız yanıt veren bir WCF REST hizmeti barındırmanıza olanak sağlar. Yönlendirme bakın hakkında daha fazla bilgi için [ASP.NET yönlendirme](https://go.microsoft.com/fwlink/?LinkId=184660).  
   
 ## <a name="using-systemwebrouting-integration"></a>System.Web.Routing tümleştirmesi  
  Kullanılacak <xref:System.Web.Routing> tümleştirme özelliği, kullandığınız <xref:System.ServiceModel.Activation.ServiceRoute> sınıfı bir veya daha fazla rotalar oluşturun ve bunları Ekle <xref:System.Web.Routing.RouteTable> Global.asax dosyasındaki. Bu yolları göreli hizmet yanıt veren bir URI'leri belirtin. Aşağıdaki örnek bunun nasıl yapılacağı gösterilmektedir.  

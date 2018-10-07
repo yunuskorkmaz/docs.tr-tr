@@ -2,12 +2,12 @@
 title: Desteklenmeyen Senaryolar
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: 6c0ee061f754e85244bffdc06cbe23aee68d2222
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 2e44cbf159d5df724a5213648b28d952f49b8e8d
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858076"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48845690"
 ---
 # <a name="unsupported-scenarios"></a>Desteklenmeyen Senaryolar
 Çeşitli nedenlerden dolayı Windows Communication Foundation (WCF) bazı belirli güvenlik senaryoları desteklemez. Örneğin, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition SSPI veya Kerberos kimlik doğrulama protokolleri uygulamaz ve bu nedenle WCF hizmet Windows kimlik doğrulaması ile bu platform üzerinde çalıştırılmasını desteklemez. Kullanıcı adı/parola ve HTTP/HTTPS tümleşik kimlik doğrulaması gibi diğer kimlik doğrulama mekanizmaları, WCF, Windows XP Home Edition altında çalışırken desteklenir.  
@@ -93,11 +93,11 @@ ms.locfileid: "43858076"
   
  Bu durum aşağıdaki üç uç nokta adresleri bir hizmet örneğidir:  
   
--   http://localhost/CalculatorService/service (hizmet)  
+- `http://localhost/CalculatorService/service` (hizmet)  
   
--   http://localhost/CalculatorService/issue_ticket (STS)  
+- `http://localhost/CalculatorService/issue_ticket` (STS)  
   
--   http://localhost/CalculatorService/mex (meta veri uç noktası)  
+- `http://localhost/CalculatorService/mex` (meta veri uç noktası)  
   
  Bu, özel durum oluşturur.  
   

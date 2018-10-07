@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 429c9d09-92ac-46ec-829a-fbff0a9575a2
 ms.openlocfilehash: d52c6bfdadf0a53ac4c5f62c37f1056c6702a82c
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48779926"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48842716"
 ---
 # <a name="provider-statistics-for-sql-server"></a>SQL Server için sağlayıcı istatistikleri
 SQL Server için .NET Framework veri sağlayıcısı, .NET Framework sürüm 2.0 ile başlayarak, çalışma zamanı istatistikleri destekler. Ayarlayarak istatistikleri etkinleştirmelisiniz <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> özelliği <xref:System.Data.SqlClient.SqlConnection> nesnesini `True` sonra oluşturulmuş geçerli bir bağlantı nesnesi. İstatistikleri etkinleştirildikten sonra bunları "snapshot" zamanlı olarak alarak inceleyebilirsiniz bir <xref:System.Collections.IDictionary> aracılığıyla başvuru <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> yöntemi <xref:System.Data.SqlClient.SqlConnection> nesne. Listede bir ad/değer çifti dictionary girişlerinin kümesi olarak sıralar. Bu ad/değer çiftleri düzenlenmemiş olan. Herhangi bir zamanda çağırabilirsiniz <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A> yöntemi <xref:System.Data.SqlClient.SqlConnection> sayaçları sıfırlamak için nesne. İstatistiği toplama etkin değil, bir özel durum oluşturulmaz. Ayrıca, varsa <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> olmadan adlı <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> önce çağrılmış, alınan her giriş için başlangıç değerlerini değerlerdir. İstatistikleri etkinleştirirseniz, bir süre için uygulamanızı çalıştırın ve istatistikleri devre dışı bırakmak, alınan değerlerin nereden istatistikleri devre dışı noktaya kadar toplanan değerleri yansıtır. Toplanan tüm istatistiksel bir bağlantı başına temelinde değerlerdir.  

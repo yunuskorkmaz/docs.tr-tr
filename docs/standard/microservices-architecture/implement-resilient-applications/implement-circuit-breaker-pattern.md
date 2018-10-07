@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: 8cd3564e5240ec5a8783edb336957549be27ea6a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 343b9cc23f9d72d75a83ad785a3d565b8f5704e7
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47203469"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48842696"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>Devre kesici desenini uygulama
 
@@ -96,7 +96,7 @@ Bu istek Ara devre dışı bırakır.
 
 `http://localhost:5103/failing?enable` 
 
-Daha sonra URI'yi kullanarak durumu denetleyebilirsiniz http://localhost:5103/failingŞekil 10-4'te gösterildiği gibi.
+Daha sonra URI'yi kullanarak durumu denetleyebilirsiniz `http://localhost:5103/failing`Şekil 10-4'te gösterildiği gibi.
 
 ![](./media/image4.png)
 

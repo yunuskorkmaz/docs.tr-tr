@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 8bf0b428-5a21-4299-8d6e-bf8251fd978a
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: b679c137d31c1212e1e6c82fd41f89b9de7a18d4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: d67dec8814dc659e012b55439c2c8debd21e03ed
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47231176"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48844806"
 ---
 # <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>İçin sürüm 3.5 SP1'de HttpWebRequest için NTLM kimlik doğrulamasındaki değişiklikler
 Güvenlik değişiklikleri, .NET Framework sürüm 3.5 SP1 yapıldı ve tümleşik Windows kimlik doğrulaması tarafından işlenir, etkileyen daha sonra <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Security.NegotiateStream>, ve System.Net ad alanındaki ilgili sınıflar. Bu değişiklikler, NTLM tabanlı Tümleşik Windows kimlik doğrulaması kullanıldığı web isteklerinde bulunmak ve yanıt almak için bu sınıfları kullanan uygulamaları etkileyebilir. Bu değişiklik, web sunucuları ve tümleşik Windows kimlik doğrulaması kullanmak üzere yapılandırılmış istemci uygulamaları etkileyebilir.  
@@ -22,7 +22,7 @@ Güvenlik değişiklikleri, .NET Framework sürüm 3.5 SP1 yapıldı ve tümleş
 ## <a name="changes"></a>Değişiklikler  
  Tümleşik Windows kimlik doğrulamasıyla NTLM kimlik doğrulama işlemi, hedef bilgisayar tarafından verilen ve istemci bilgisayarına geri gönderilen bir sınama içerir. Bir bilgisayarı kendi oluşturulan bir sınama aldığında, döngü geri bağlantının (127.0.0.1, örneğin IPv4 adresi) olmadığı sürece kimlik doğrulaması başarısız olur.  
   
- Bir iç Web sunucusunda çalışan bir hizmetin erişirken, benzer bir URL kullanarak hizmete erişmek için ortak http://contoso/service veya https://contoso/service. "contoso" adı genellikle hizmet dağıtıldığı bilgisayarın bilgisayar adını değil. <xref:System.Net> Ve ilgili ad alanlarını destekleyen kullanarak Active Directory, DNS, NetBIOS, yerel bilgisayarın hosts dosyasını (genellikle WINDOWS\system32\drivers\etc\hosts, örneğin) veya (genellikle WINDOWS\system32\ yerel bilgisayarın lmhosts dosyası Örneğin drivers\etc\lmhosts) adları adreslerine çözümleyebilir. Adı "contoso", "contoso" için gönderilen istekleri uygun sunucu bilgisayara gönderilir, böylece çözümlenir.  
+ Bir iç Web sunucusunda çalışan bir hizmetin erişirken, benzer bir URL kullanarak hizmete erişmek için ortak `http://contoso/service` veya `https://contoso/service`. "contoso" adı genellikle hizmet dağıtıldığı bilgisayarın bilgisayar adını değil. <xref:System.Net> Ve ilgili ad alanlarını destekleyen kullanarak Active Directory, DNS, NetBIOS, yerel bilgisayarın hosts dosyasını (genellikle WINDOWS\system32\drivers\etc\hosts, örneğin) veya (genellikle WINDOWS\system32\ yerel bilgisayarın lmhosts dosyası Örneğin drivers\etc\lmhosts) adları adreslerine çözümleyebilir. Adı "contoso", "contoso" için gönderilen istekleri uygun sunucu bilgisayara gönderilir, böylece çözümlenir.  
   
  Büyük dağıtımlar için yapılandırıldığında, ayrıca bir tek bir sanal sunucu adı dağıtıma hiç istemci uygulamaları ve son kullanıcılar tarafından kullanılan temel alınan makine adları ile verilmesi yaygındır. Örneğin, sunucu www.contoso.com çağrı ancak bir iç ağdaki yalnızca "contoso" kullanın. Bu ad istemci web isteğinde ana bilgisayar üstbilgisi adı verilir. Belirtildiği gibi HTTP protokolü tarafından ana bilgisayar adı istek üstbilgisi alanı istenen kaynak Internet konak ve bağlantı noktası sayısını belirtir. Bu bilgiler kullanıcı veya başvurulan kaynak (genellikle bir HTTP URL'si) tarafından verilen ve özgün bir URI elde edilir. .NET Framework sürüm 4, bu bilgileri ayrıca kullanarak yeni istemci tarafından ayarlanabilir <xref:System.Net.HttpWebRequest.Host%2A> özelliği.  
   

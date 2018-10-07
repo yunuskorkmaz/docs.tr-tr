@@ -5,11 +5,11 @@ helpviewer_keywords:
 - wsHttpBinding Element
 ms.assetid: 0eee8ced-ad68-427d-b95a-97260e98deed
 ms.openlocfilehash: f0d7234007c3899220cbca99bd7fe8ea4e75abae
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48782096"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48844780"
 ---
 # <a name="ltwshttpbindinggt"></a>&lt;wsHttpBinding&gt;
 Uygun olmayan yönlü Hizmet sözleşmeleri için güvenli, güvenilir ve birlikte çalışabilen bağlama tanımlar. Aşağıdaki belirtimler bağlama uygular: WS-Reliable Mesajlaşma için güvenilirlik ve WS-güvenlik ileti güvenliği ve kimlik doğrulaması için. HTTP taşıma ve ileti kodlama ise metin/XML kodlama.  

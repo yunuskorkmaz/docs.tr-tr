@@ -2,12 +2,12 @@
 title: "F #'ı yükleme"
 description: 'F # ortamınıza bağlı olarak yüklemeyi öğrenin.'
 ms.date: 08/28/2018
-ms.openlocfilehash: 6c10b958e35bf7925965d076a48839b0ce19d2c0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 909e1c07ff7f6d52db77a987639d1c749146fdca
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515903"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48844013"
 ---
 # <a name="install-f"></a>F #'ı yükleme #
 
@@ -17,13 +17,13 @@ F # birden çok yolla, ortamınıza bağlı olarak yükleyebilirsiniz.
 
 Karşıdan yükleme, [Visual Studio](https://visualstudio.microsoft.com/) ilk kez, Visual Studio yükleyicisi ilk yükler. Uygun SKU, Visual Studio Yükleyicisi'nden yükleyin. Yüklü zaten varsa tıklayın **Değiştir**.
 
-Sonraki iş yüklerinin bir listesini görürsünüz. Seçin **ASP.NET ve web geliştirme**, F # desteği, .NET Core desteği yükler ve ASP.NET Core için destek F # projeleri.
+Sonraki iş yüklerinin bir listesini görürsünüz. Seçin **ASP.NET ve web geliştirme** hangi yükler F # desteği ve ASP.NET Core projeleri için .NET Core desteği.
 
 Ardından, **Değiştir** alt sağ tarafındaki.  Bu, seçtiğiniz her şeyi yükler. Ardından Visual Studio 2017 F # dil desteğiyle tıklayarak açabileceğiniz **başlatma**.
 
 ## <a name="install-f-with-visual-studio-for-mac"></a>F # Mac için Visual Studio ile yükleme
 
-F # yüklendiğinde varsayılan olarak [Mac için Visual Studio](https://visualstudio.microsoft.com/vs/mac/), hangi yapılandırma ne olursa olsun, seçin.
+F # yüklendiğinde varsayılan olarak [Mac için Visual Studio](https://visualstudio.microsoft.com/vs/mac/), seçtiğiniz yapılandırma ne olursa olsun.
 
 Yükleme tamamlandıktan sonra "Visual Studio Başlat"'i seçin. Ayrıca bu Bulucu Macos'ta başlatabilirsiniz.
 

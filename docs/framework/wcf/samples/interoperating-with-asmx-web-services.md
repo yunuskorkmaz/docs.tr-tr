@@ -2,12 +2,12 @@
 title: ASMX Web Hizmetleri ile Birlikte Çalışma
 ms.date: 03/30/2017
 ms.assetid: a7c11f0a-9e68-4f03-a6b1-39cf478d1a89
-ms.openlocfilehash: ff1b497dde615e5c14417bd0ad14f1dbfd80d5e2
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 58e0a527e853436acf4ab6420d2dd28cbdfbd1fa
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864543"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48842458"
 ---
 # <a name="interoperating-with-asmx-web-services"></a>ASMX Web Hizmetleri ile Birlikte Çalışma
 Bu örnek, bir Windows Communication Foundation (WCF) istemci uygulaması ile mevcut bir ASMX Web hizmetini tümleştirmek nasıl gösterir.  
@@ -46,7 +46,7 @@ public class CalculatorService : System.Web.Services.WebService
     }  
 ```  
   
- Adresinden yapılandırıldığı gibi hizmet erişilebilen http://localhost/servicemodelsamples/service.asmx aynı makinede bir istemci tarafından. Hizmete erişmek istemciler için uzak makinede, localhost yerine bir tam etki alanı adı belirtilmelidir.  
+ Adresinden yapılandırıldığı gibi hizmet erişilebilen `http://localhost/servicemodelsamples/service.asmx` aynı makinede bir istemci tarafından. Hizmete erişmek istemciler için uzak makinede, localhost yerine bir tam etki alanı adı belirtilmelidir.  
   
  İletişim tarafından oluşturulan bir istemci aracılığıyla gerçekleştirilir [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). İstemci dosyası generatedClient.cs içinde yer alır. Güncelleştirilmiş meta verilerini almak için kullanıldığından ASMX hizmeti proxy kodu oluşturmak kullanılabilir olmalıdır. Türü belirtilmiş bir proxy oluşturmak için istemci dizininde bir komut isteminden aşağıdaki komutu çalıştırın.  
   
