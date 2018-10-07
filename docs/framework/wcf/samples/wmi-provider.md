@@ -2,12 +2,12 @@
 title: WMI Sağlayıcısı
 ms.date: 03/30/2017
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-ms.openlocfilehash: c3eb97537706282491de1863224e1502d6b56fda
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 7947d9a1bedfe7a2a550a7b4d52b3cf5a8f40126
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45617947"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48839404"
 ---
 # <a name="wmi-provider"></a>WMI Sağlayıcısı
 Bu örnek, WCF yerleşik Windows Yönetim Araçları (WMI) sağlayıcısını kullanarak çalışma zamanında Windows Communication Foundation (WCF) hizmetlerden veri toplamak nasıl gösterir. Ayrıca, bu örnek, bir kullanıcı tanımlı WMI nesnesi için bir hizmet eklemek nasıl gösterir. Örnek için WMI sağlayıcısını etkinleştirir [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) ve veri toplamaya gösterilmiştir `ICalculator` zamanında hizmet.  
@@ -125,7 +125,7 @@ cscript EnumerateCustomObjects.js
   
 2.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  WMI hizmetleri şeması (InstallUtil.exe varsayılan konumları, "% WINDIR%\Microsoft.NET\Framework\v4.0.30319" dır) InstallUtil.exe çalıştırarak barındırma dizininde service.dll dosyasını yayımlayın. Bu adım yalnızca service.dll dosyasına değişiklikler yapıldığında yürütülmesi gerekiyor. Sağlama yönetim bilgilerini izleme uygulamaları tarafından daha fazla bilgi için bkz: http://msdn2.microsoft.com/library/ms186147.aspx "Nasıl için: yayımlama düzeni için WMI için bir izleme eklenmiş uygulama" bölümünde.  
+3.  WMI hizmetleri şeması (InstallUtil.exe varsayılan konumları, "% WINDIR%\Microsoft.NET\Framework\v4.0.30319" dır) InstallUtil.exe çalıştırarak barındırma dizininde service.dll dosyasını yayımlayın. Bu adım yalnızca service.dll dosyasına değişiklikler yapıldığında yürütülmesi gerekiyor.
   
 4.  Tek veya çoklu bilgisayar yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   

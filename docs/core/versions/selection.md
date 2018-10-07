@@ -4,12 +4,12 @@ description: .NET Core nasıl bulur ve programınızın çalışma zamanı sür�
 author: billwagner
 ms.author: wiwagn
 ms.date: 06/27/2018
-ms.openlocfilehash: 34e31cbb224b58b1aad2935ea7310f2e4f5f9ee0
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 5f6ec628a93dd349b003dfc9b89f84ff7a93a05a
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036272"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48841546"
 ---
 # <a name="net-core-version-selection"></a>.NET core sürüm seçimi
 
@@ -22,7 +22,7 @@ Bu makalede, .NET Core araçları, SDK ve çalışma zamanı sürümleri seçmek
 
 Sürüm seçimi oluşur:
 
-- Bir SDK komutu çalıştırdığınızda [en son yüklenen sürüm sdk kullanan](#the-sdk-uses-the-latest-installed-version).
+- Bir SDK komutu çalıştırdığınızda [en son yüklenen sürüm SDK kullanan](#the-sdk-uses-the-latest-installed-version).
 - Bir derleme oluşturduğunuzda [hedef çerçeve bilinen adlar tanımlama derleme zamanı API'leri](#target-framework-monikers-define-build-time-apis).
 - Bir .NET Core uygulamasını çalıştırdığınızda [hedef framework bağımlı uygulamaları alma İleri](#framework-dependent-apps-roll-forward).
 - Kendi içinde bir uygulama yayımladığınızda [müstakil dağıtımları içerecek seçili olan çalışma zamanını](#self-contained-deployments-include-the-selected-runtime).

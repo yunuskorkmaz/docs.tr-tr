@@ -5,12 +5,12 @@ author: mairaw
 ms.author: mairaw
 ms.date: 07/30/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: 8241b3afb518acf237c7b6181085e19576e5ce2f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 05ec296c4c8210c63c7c1b5ce63ef598ca6ac719
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43778475"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48838084"
 ---
 # <a name="globaljson-overview"></a>Global.JSON genel bakış
 
@@ -96,12 +96,12 @@ SDK sürümü, şu anda aşağıdaki bölümlerden oluşur:
 ## <a name="troubleshooting-build-warnings"></a>Sorun giderme derleme uyarıları
 
 > [!WARNING]
-> .NET Core SDK'sını bir önizleme sürümü ile çalışıyor. Geçerli projede SDK sürümü bir global.json dosyasını aracılığıyla tanımlayabilirsiniz. Daha fazla bilgi için https://go.microsoft.com/fwlink/?linkid=869452
+> .NET Core SDK'sını bir önizleme sürümü ile çalışıyor. Geçerli projede SDK sürümü bir global.json dosyasını aracılığıyla tanımlayabilirsiniz. Daha fazla bilgi için <https://go.microsoft.com/fwlink/?linkid=869452>
 
 Bu uyarı, projeniz .NET Core SDK'sı, bir önizleme sürümünü kullanarak açıklandığı şekilde derleniyor olduğunu gösterir. [kurallarına](#matching-rules) bölümü. .NET core SDK'sı sürümü geçmişi ve yüksek kaliteli olma taahhüdü bulunuyor. Ancak, bir önizleme sürümünü kullanmak istemiyorsanız, ekleme bir *global.json* proje hiyerarşisi yapısı kullanın ve hangi SDK sürümünü belirtmek üzere dosyaya `dotnet --list-sdks` sürümü, makinenizde yüklü olduğundan emin olmak için. Yeni bir sürümü yayımlandığında yeni sürümü kullanmak için ya da kaldırma *global.json* dosya ya da daha yeni sürümünü kullanacak şekilde güncelleştirin.
 
 > [!WARNING]
-> Başlangıç projesi '{startupProject}' hedef framework '. NETCoreApp' sürümü '{targetFrameworkVersion}'. Entity Framework Core ve .NET komut satırı araçları bu sürümü yalnızca sürüm 2.0 veya üstü destekler. Araçlar'ın eski sürümlerini kullanma hakkında daha fazla bilgi için bkz. https://go.microsoft.com/fwlink/?linkid=871254
+> Başlangıç projesi '{startupProject}' hedef framework '. NETCoreApp' sürümü '{targetFrameworkVersion}'. Entity Framework Core ve .NET komut satırı araçları bu sürümü yalnızca sürüm 2.0 veya üstü destekler. Araçlar'ın eski sürümlerini kullanma hakkında daha fazla bilgi için bkz. <https://go.microsoft.com/fwlink/?linkid=871254>
 
 Başlayarak .NET Core SDK 2.1 (v. 2.1.300) `dotnet ef` komutu birlikte gelen SDK. Bu uyarı, projenizi EF Core 1.0 veya 1.1, .NET Core SDK 2.1 ve sonraki sürümler ile uyumlu değil hedefleyen olduğunu gösterir. .NET Core SDK 2.0 (v. projenizi derlemek için yükleme 2.1.201) ve makinenizde önceki ve istenen SDK sürümüyle tanımlamak *global.json* dosya. Hakkında daha fazla bilgi için `dotnet ef` komutu, bkz: [EF Core .NET komut satırı araçları](/ef/core/miscellaneous/cli/dotnet).
 

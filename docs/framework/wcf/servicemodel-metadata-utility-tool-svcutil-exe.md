@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: f9ae53aeb988f23611adb4b00354f65918790d3b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 01a30ac6cb252eba51cfff8a221c28425f347b0a
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200769"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837270"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>ServiceModel Meta Veri Yardımcı Programracı (Svcutil.exe)
 
@@ -236,7 +236,7 @@ Aşağıdaki komutu için seri hale getirme türlerinde oluşturur <xref:System.
 
 Svcutil bir hizmet için meta verileri oluşturmak için kullanırken aşağıdaki iletiyi alabilirsiniz:
 
-Hata: Meta verileri alınamıyor http://localhost:8000/somesservice/mex XML verileri okunurken, en fazla ad tablosu karakter sayısı kotası (16384) aşıldı. Ad tablosu XML işlenirken karşılaşılan dizeleri depolamak için kullanılan bir veri yapısıdır - uzun XML belgeleri yinelenmeyen öğe adları, öznitelik adları ve öznitelik değerleri bu kotayı tetikleyebilir. Bu kota XML okuyucusu oluşturulurken kullanılan XmlDictionaryReaderQuotas nesnesindeki MaxNameTableCharCount özelliği değiştirilerek artırılabilir.
+Hata: Meta verileri alınamıyor `http://localhost:8000/somesservice/mex` XML verileri okunurken, en fazla ad tablosu karakter sayısı kotası (16384) aşıldı. Ad tablosu XML işlenirken karşılaşılan dizeleri depolamak için kullanılan bir veri yapısıdır - uzun XML belgeleri yinelenmeyen öğe adları, öznitelik adları ve öznitelik değerleri bu kotayı tetikleyebilir. Bu kota XML okuyucusu oluşturulurken kullanılan XmlDictionaryReaderQuotas nesnesindeki MaxNameTableCharCount özelliği değiştirilerek artırılabilir.
 
 Bu hata büyük bir WSDL dosyası meta verilerini istediğinde döndüren bir hizmet tarafından neden olabilir. Sorun için svcutil.exe aracını karakterle kota aşılırsa olmasıdır. Bu değer, (dos) hizmet reddi saldırılarını önlemeye yardımcı olmak için ayarlanır. Svcutil için aşağıdaki yapılandırma dosyası belirterek bu kotayı artırabilir.
 

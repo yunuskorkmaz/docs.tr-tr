@@ -2,12 +2,12 @@
 title: Tasarımcıyı yeniden barındırma
 ms.date: 03/30/2017
 ms.assetid: b676ad31-5f64-4d84-9a36-b4d7113a2f4d
-ms.openlocfilehash: f8dbe89ec605f3e957b5178eafd2e034e8159dc3
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 885590604532fba76fc9ab3f6bcc69e077868403
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028920"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837367"
 ---
 # <a name="designer-rehosting"></a>Tasarımcıyı yeniden barındırma
 Tasarımcı yeniden barındırma başvuran özel bir uygulama içinde iş akışı tasarım tuvali barındırmak için kullanılan yaygın bir senaryodur. Çoğu kişi bilginiz barındırma kullanılabilen birkaç senaryolar burada iş akışı Tasarımcısı uygulamada gösteren yararlı olabilir ancak Visual Studio uygulamasıdır:  
@@ -114,7 +114,7 @@ protected override void OnInitialized(EventArgs e)
   
 #### <a name="using-the-sample"></a>Örnek kullanma  
   
-1.  DesignerRehosting.sln çözümde açık [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+1.  Visual Studio 2010'da DesignerRehosting.sln çözümü açın.  
   
 2.  Derlemek ve uygulamayı çalıştırmak için F5 tuşuna basın.  
   

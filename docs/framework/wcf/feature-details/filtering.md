@@ -2,12 +2,12 @@
 title: Filtreleme
 ms.date: 03/30/2017
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
-ms.openlocfilehash: 74915a45ed5ca1d13790f64c7921d1f750fa04d3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 49813ac0f493d628a941b3060be93ef19bb1e802
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47208113"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836073"
 ---
 # <a name="filtering"></a>Filtreleme
 Sistem filtreleme Windows Communication Foundation (WCF), iletileri eşleşmesi ve işletimsel karar vermek için bildirim temelli filtreleri kullanabilirsiniz. Filtreleri içeren bir ileti iletinin bölümünü inceleyerek yapmanız gerekenler belirlemek için kullanabilirsiniz. Sıraya alma işlemi, örneğin, priority öğesi bir ileti kuyruğu öne taşınıp taşınmayacağını belirleme bilinen üstbilgisinin denetlemek için bir XPath 1.0 sorgu kullanabilirsiniz.  
@@ -42,7 +42,7 @@ Sistem filtreleme Windows Communication Foundation (WCF), iletileri eşleşmesi 
   
 ### <a name="prefix-endpoint-address-filters"></a>Uç nokta adresi filtreleri öneki  
   
-1.  <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> İşlevleri olduğu gibi <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> filtre dışında eşleşmenin bir ön ek iletisinin URI olabilir. Örneğin, adresi belirten bir filtre http://www.adatum.com eşleşen gönderilen iletileri http://www.adatum.com/userA.  
+1.  <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> İşlevleri olduğu gibi <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> filtre dışında eşleşmenin bir ön ek iletisinin URI olabilir. Örneğin, adresi belirten bir filtre `http://www.adatum.com` eşleşen gönderilen iletileri `http://www.adatum.com/userA`.  
   
 ### <a name="xpath-message-filters"></a>XPath ileti filtreleri  
  Bir <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> bir XPath ifadesi içeren bir XML belgesi belirli öğeler, öznitelikler, metin veya diğer XML söz dizimi yapıları olup olmadığını belirlemek için kullanır. Filtre bir katı XPath alt kümesi için son derece etkili olması için optimize edilmiştir. XML Path Language açıklanan [W3C XML yolu dil 1.0 belirtimi](https://go.microsoft.com/fwlink/?LinkId=94779).  

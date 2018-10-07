@@ -5,11 +5,11 @@ helpviewer_keywords:
 - routing [WCF], message filters
 ms.assetid: cb33ba49-8b1f-4099-8acb-240404a46d9a
 ms.openlocfilehash: fc4656a76894eb3a844bc9f2187847fd9eff0ffe
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48780459"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48839111"
 ---
 # <a name="message-filters"></a>İleti Filtreleri
 İçerik tabanlı yönlendirme uygulamak için yönlendirme hizmeti kullanan <xref:System.ServiceModel.Dispatcher.MessageFilter> adresi, uç nokta adı ya da belirli bir XPath ifadesi gibi bir ileti belirli bölümlerini inceleyin uygulamaları. İleti filtreleri hiçbiri ile sağlanmışsa [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] ihtiyaçlarınızı karşılamak, temel yeni bir uygulama oluşturarak özel filtre oluşturabilir <xref:System.ServiceModel.Dispatcher.MessageFilter> sınıfı.  

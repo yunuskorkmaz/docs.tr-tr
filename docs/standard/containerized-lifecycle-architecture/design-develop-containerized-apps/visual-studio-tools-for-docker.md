@@ -5,12 +5,12 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/12/2018
 ms.custom: vs-dotnet
-ms.openlocfilehash: 7daac744238feb38358e4cc0ab185e90257aa98d
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: faae4b3e3ef96d1d8dd73b7ac313b0a5deffec34
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027461"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48838240"
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>(Windows için Visual Studio) Docker için Visual Studio araçlarını kullanma
 
@@ -65,6 +65,23 @@ Kapsayıcı düzenleme desteği projenize ekledikten sonra projeye eklenen bir D
 Şekil 4-29: Docker dosyaları Çözüm Gezgini'nde Visual Studio 2017
 
 Varsa *docker-compose.yml* zaten var, Visual Studio yalnızca ekler gerekli yapılandırma kod satırı için.
+
+## <a name="configure-docker-tools"></a>Docker araçları yapılandırma
+
+Ana menüden **Araçları** > **seçenekleri**, genişletin **kapsayıcı Araçları** > **ayarları**. Kapsayıcı Araçları ayarları görüntülenir.
+
+![](./media/visual-studio-docker-tools-options.png)
+
+Şekil 4-30: seçenekleri Docker araçları
+
+Aşağıdaki tabloda, bu seçenekleri ayarlamak nasıl karar vermenize yardımcı olabilir.
+
+| Ad | Varsayılan ayar | Açıklama |
+| -----|:---------------:| ----------- |
+| Otomatik olarak proje yükünde gerekli Docker görüntülerini çekme | Açık | Proje yüklenirken daha yüksek performans için Visual Studio Docker çekme işlemi arka planda böylece kodunuzu çalıştırmak hazır olduğunuzda, görüntü zaten yüklenene veya yükleme sürecinde başlar. Yalnızca projeler yükleniyor ve kod gözatma ise, ihtiyacınız olmayan kapsayıcı görüntülerini yüklenmesini önlemek için kapatabilirsiniz. |
+| Kapsayıcıları arka planda otomatik olarak Başlat | Açık | Yeniden performansı artırmak için Visual Studio kapsayıcı ile birim başlatmalar, derleme ve kapsayıcı çalıştırma için hazır oluşturur. Kapsayıcı oluşturulduğunda denetlemek istiyorsanız, kapatır. |
+| KILL çözümdeki kapsayıcıları otomatik olarak Kapat | Açık | Kapsayıcıları çözümünüzün çözümün kapatılması veya Visual Studio kapatıldıktan sonra çalışmaya devam etmesini istiyorsanız kapatır. |
+| İçin localhost SSL sertifikasına güvenme istemi yapma | Kapalı | Visual Studio, yeni projeler için bile, SSL sertifikası eski bir proje için güvenilen alındıktan sonra isteyecek şekilde devam eder. Diğer proje açtığınızda istemi girmeyi önlemek için bu onay kutusunu ayarlayabilirsiniz. |
 
 **Daha fazla bilgi:** Hizmetleri uygulaması ve Docker için Visual Studio Araçları'nın kullanımı hakkında daha ayrıntılı bilgi için bu makaleleri okuyun:
 

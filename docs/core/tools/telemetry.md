@@ -4,12 +4,12 @@ description: Analiz, hangi verileri toplanır ve nasıl devre dışı bırakmak 
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2018
-ms.openlocfilehash: b60fc9d9d619334269343fd858a782cdfeb09ba4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a20d79e132726cb342064b681218ee568fab2c13
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513346"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48841632"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET core SDK'sı telemetri
 
@@ -106,7 +106,7 @@ Microsoft Dağıtım .NET Core ile lisanslanan [MICROSOFT .NET kitaplığı EULA
 
 [.NET NuGet paketleri](https://www.nuget.org/profiles/dotnetframework) aynı lisans kullanın, ancak telemetri etkinleştirme (bkz [kapsam](#scope)).
 
-> 2. VERİLER. Yazılım siz ve yazılımı kullanımınız hakkında bilgi toplamak ve bunları Microsoft'a gönderebilir. Microsoft, bu bilgiler, ürünlerimizi ve hizmetlerimizi geliştirmek için kullanabilir. Veri toplama hakkında daha fazla bilgi ve Yardım belgelerine ve gizlilik bildirimine kullanın http://go.microsoft.com/fwlink/?LinkId=528096. Bu uygulamalar onay yazılımı kullanımınız çalışır.
+> 2. VERİLER. Yazılım siz ve yazılımı kullanımınız hakkında bilgi toplamak ve bunları Microsoft'a gönderebilir. Microsoft, bu bilgiler, ürünlerimizi ve hizmetlerimizi geliştirmek için kullanabilir. Veri toplama hakkında daha fazla bilgi ve Yardım belgelerine ve gizlilik bildirimine kullanın <http://go.microsoft.com/fwlink/?LinkId=528096>. Bu uygulamalar onay yazılımı kullanımınız çalışır.
 
 ## <a name="disclosure"></a>Açığa çıkması
 

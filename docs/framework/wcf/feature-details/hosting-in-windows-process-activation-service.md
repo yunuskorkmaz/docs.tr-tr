@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: 0fe38b690d093e5a0bbe90d2b62e56b5d0cb4816
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: d51cd3bcef44c32c24630c1a3a332b2144a41469
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44188390"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48839436"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Windows İşlem Etkinleştirme Hizmetinde Barındırma
 Windows İşlem Etkinleştirme Hizmeti (WAS) etkinleştirme ve uygulamaları Windows Communication Foundation (WCF) hizmetlerini barındırmak içeren çalışan işlemleri yaşam süresini yönetir. WAS işlem modelini genelleştirir [!INCLUDE[iis601](../../../../includes/iis601-md.md)] HTTP sunucusu, HTTP bağımlılığını kaldırarak işlem modeli. Bu, hem HTTP hem de ileti tabanlı etkinleştirme destekleyen ve çok sayıda belirli bir makinede uygulamaları barındırmak için eklenebilir bir barındırma ortamında Net.TCP gibi HTTP olmayan protokolleri kullanmak WCF hizmetleri sağlar.  
@@ -45,8 +45,8 @@ Windows İşlem Etkinleştirme Hizmeti (WAS) etkinleştirme ve uygulamaları Win
   
  Hizmet ve uygulama içindeki kaynaklara da çözülebilir. Uygulamanın içinde uygulama kaynaklarını temel uygulama yoluyla göreli ele alınır. Örneğin, bir sitede bir makine adı contoso.com, hem HTTP hem de Net.TCP protokoller için site bağlamaları içerdiğini varsayar. Ayrıca site GetOrders.svc bir hizmeti sunan /Billing konumunda bulunan bir uygulama içerdiğini varsayın. Daha sonra GetOrders.svc hizmeti SecureEndpoint göreli adresi olan bir uç nokta kullanıma sunulan, hizmet uç noktası aşağıdaki iki bir URI'leri sırasında ortaya:  
   
- http://contoso.com/Billing/GetOrders.svc/SecureEndpoint  
-NET.TCP://contoso.com/billing/GetOrders.svc/SecureEndpoint  
+- `http://contoso.com/Billing/GetOrders.svc/SecureEndpoint`
+- `net.tcp://contoso.com/Billing/GetOrders.svc/SecureEndpoint`
   
 ## <a name="the-was-runtime"></a>WAS çalışma zamanı  
  Uygulamaları siteye adresleme ve yönetim amaçları doğrultusunda düzenlenir. Çalışma zamanında uygulamalar da birlikte uygulama havuzları halinde gruplandırılır. Bir uygulama havuzu, birçok farklı uygulama birçok farklı sitelerde barındırmak. Tüm uygulamalar bir uygulama havuzu içindeki ortak çalışma zamanı özelliklerine sahip. Örneğin, hepsi aynı ortak dil çalışma zamanı (CLR) sürümünü altında çalıştırmak ve bunların tümü ortak bir işlem kimliği paylaşın. Her bir uygulama havuzu bir çalışan işlemi (w3wp.exe) örneğine karşılık gelir. İçinde bir paylaşılan uygulama havuzu çalışan her yönetilen uygulamanın bir CLR AppDomain yoluyla diğer uygulamalardan ayrı tutulur.  

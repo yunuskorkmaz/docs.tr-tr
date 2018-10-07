@@ -5,12 +5,12 @@ author: bleroy
 ms.author: mairaw
 ms.date: 11/16/2016
 ms.custom: vs-dotnet
-ms.openlocfilehash: 15537ea8c68b5c873bbf26ab0519a19de0b13230
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: c21c257b55c4389ea4a60fca55eb83cff60ff3b5
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45969567"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48840946"
 ---
 # <a name="building-a-complete-net-core-solution-on-windows-using-visual-studio-2017"></a>Visual Studio 2017'yi kullanarak, Windows üzerinde eksiksiz bir .NET Core çözümü derleme
 
@@ -24,7 +24,7 @@ Yönergeleri takip edin [önkoşulları sayfamızı](../windows-prerequisites.md
 
 ### <a name="writing-the-library"></a>Kitaplığı yazma
 
-1. Visual Studio'da **dosya**, **yeni**, **proje**. İçinde **yeni proje** iletişim kutusunda genişletin **Visual C#** düğüm ve **.NET Standard** düğümünü ve ardından **sınıf kitaplığı (.NET Standard)**. 
+1. Visual Studio'da **dosya**, **yeni**, **proje**. İçinde **yeni proje** iletişim kutusunda genişletin **Visual C#** düğüm ve **.NET Standard** düğümünü ve ardından **sınıf kitaplığı (.NET Standard)**. Bu .NET Core hedefleyen bir .NET Standard kitaplığı 2.0 sürümünü destekleyen her bir .NET uygulaması oluşturur [.Net standart](https://docs.microsoft.com/en-us/dotnet/standard/net-standard)
 
 2. Adı ' % s'projesi "Library" ve "Altın" Çözüm. Bırakın **çözüm için dizin oluştur** işaretli. **Tamam**'ı tıklatın.
 

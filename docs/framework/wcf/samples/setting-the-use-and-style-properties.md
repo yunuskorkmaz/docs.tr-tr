@@ -2,12 +2,12 @@
 title: Kullanım ve Stil Özelliklerini Ayarlama
 ms.date: 03/30/2017
 ms.assetid: c09a0600-116f-41cf-900a-1b7e4ea4e300
-ms.openlocfilehash: d5e6409e3921d40b14b940786f6344aea657b84b
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: c4cee5fac84d8fb47565cc4ebde47f04365b989e
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865546"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836861"
 ---
 # <a name="setting-the-use-and-style-properties"></a>Kullanım ve Stil Özelliklerini Ayarlama
 Bu örnek üzerinde kullanım ve stil özelliklerini kullanmayı gösteren <xref:System.ServiceModel.XmlSerializerFormatAttribute> ve <xref:System.ServiceModel.DataContractFormatAttribute>. Bu özellikler, iletileri nasıl biçimlendirileceğini etkiler. Varsayılan olarak, ileti gövdesi ile stil kümesi biçimlendirilmiş <xref:System.ServiceModel.OperationFormatStyle.Document>. Bu ayarlar, ya da hizmet sözleşme düzeyi veya işlem anlaşması düzeyinde belirtilebilir.  
@@ -73,7 +73,7 @@ public interface IUseAndStyleCalculator
 }  
 ```  
   
- Farklı arasındaki farkı görmek için <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> ve <xref:System.ServiceModel.XmlSerializerFormatAttribute.Style%2A> ayarları, bunları hizmette değiştirmek, istemci yeniden, örneği çalıştırmak ve hizmet izleme Görüntüleyicisi aracı ile c:\logs\message.logs dosyasını inceleyin. Ayrıca görüntüleyerek meta veriler üzerindeki etkisini gözlemlemek http://localhost/ServiceModelSamples/service.svc?wsdl. Meta Veri Hizmetleri için genellikle birden çok sayfalarına ayrılmıştır. WSDL bağlamaları ana wsdl sayfa içeriyor, ancak görüntüleme http://localhost/ServiceModelSamples/service.svc?wsdl=wsdl0 ileti tanımları gözlemleyin.  
+ Farklı arasındaki farkı görmek için <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> ve <xref:System.ServiceModel.XmlSerializerFormatAttribute.Style%2A> ayarları, bunları hizmette değiştirmek, istemci yeniden, örneği çalıştırmak ve hizmet izleme Görüntüleyicisi aracı ile c:\logs\message.logs dosyasını inceleyin. Ayrıca görüntüleyerek meta veriler üzerindeki etkisini gözlemlemek `http://localhost/ServiceModelSamples/service.svc?wsdl`. Meta Veri Hizmetleri için genellikle birden çok sayfalarına ayrılmıştır. WSDL bağlamaları ana wsdl sayfa içeriyor, ancak görüntüleme `http://localhost/ServiceModelSamples/service.svc?wsdl=wsdl0` ileti tanımları gözlemleyin.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   

@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern Web uygulamaları tasarlama | ASP.
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: 7209789eb36dc717823625c0ae67357ee332086b
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 3ec7acb7bdb5e0e22965475ec267616694842ed0
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404664"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48842092"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>ASP.NET Core uygulamaları verilerle çalışma
 
@@ -281,7 +281,7 @@ DocumentDB sorgu dili, JSON belgelerini sorgulamak için basit ancak güçlü bi
 
 **Başvuruları – DocumentDB**
 
-- DocumentDB Introduction\
+- DocumentDB giriş  
   <https://docs.microsoft.com/azure/documentdb/documentdb-introduction>
 
 ## <a name="other-persistence-options"></a>Diğer Kalıcılık seçenekleri
@@ -298,7 +298,7 @@ Ek olarak ilişkisel ve NoSQL depolama seçenekleri, ASP.NET Core uygulamaları,
 
 **Başvuru-Azure depolama**
 
-- Azure depolama Introduction\
+- Azure depolama giriş  
   <https://docs.microsoft.com/azure/storage/storage-introduction>
 
 ## <a name="caching"></a>Önbelleğe alma

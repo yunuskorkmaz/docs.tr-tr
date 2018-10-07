@@ -7,12 +7,12 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/23/2017
-ms.openlocfilehash: aa34c181073d089d137ac0ef64c85c8fe2772093
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 73bf7ca1f05bd388239d970fcc6e33bf30810111
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45972536"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837899"
 ---
 # <a name="get-started-with-c"></a>C ile çalışmaya başlama\#
 
@@ -26,7 +26,7 @@ Aşağıdaki konular da mevcuttur:
 
 * [Visual Studio 2017’de .NET Core ile bir C# Merhaba Dünya uygulaması derleme](../../core/tutorials/with-visual-studio.md)
 
-   Visual Studio 2017, Visual Studio'nun en son sürümü, kodu, derleme, çalıştırma, hata ayıklama, profil ve Windows için bir tümleşik geliştirme ortamında uygulamalarınızı yayımlamanızı sağlar.
+   Visual Studio 2017, Visual Studio'nun en son sürümü, kodu, derleme, çalıştırma, hata ayıklama, profil ve Windows için bir tümleşik geliştirme ortamından uygulamalarınızı yayımlamanızı sağlar.
 
    Konu oluşturma ve basit bir Hello World uygulaması çalıştırın ve ardından biraz daha etkileşimli bir Hello World uygulaması çalıştırmak için değiştirme sağlar. Oluşturma ve uygulamanızı çalıştıran bitirdiğinizde, da bilgi edinebilirsiniz nasıl [ayıklama](../../core/tutorials/debugging-with-visual-studio.md) ve nasıl [yayımlamadan](../../core/tutorials/publishing-with-visual-studio.md) böylece .NET Core tarafından desteklenen tüm platformlarda çalıştırılabilir.
 

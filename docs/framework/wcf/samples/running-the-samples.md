@@ -2,12 +2,12 @@
 title: Windows Communication Foundation Örneklerini Çalıştırma
 ms.date: 03/30/2017
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-ms.openlocfilehash: d6fc93af217bfc282ce7030973be32baf7d864cd
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 3e49a88fa5369cc2ad2251e48f3eca74fa7c4445
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45618698"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836924"
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>Windows Communication Foundation Örneklerini Çalıştırma
 Windows Communication Foundation (WCF) örnekleri, tek bir makine veya çapraz makine yapılandırmada çalıştırabilirsiniz. Sağlanan olarak örnekler tek bir makinede çalıştırmak için hazır olursunuz. Çapraz makine yapılandırması, bir örnek 's yapılandırma dosyası ayarları değiştirmek gereklidir. Aşağıdaki yordamlarda, aynı makineye ve çapraz makine yapılandırmaları bir örnek çalıştırmak açıklanmaktadır. Internet Information Services (IIS) ve şirket içinde barındırılan örnekleri barındırılan hizmetler için adımları farklılığı olduğunu unutmayın. Çoğu örnekleri IIS'de barındırılan; nasıl barındırılan belirlemek için örnek Benioku bilgilere bakın.  
@@ -19,7 +19,7 @@ Windows Communication Foundation (WCF) örnekleri, tek bir makine veya çapraz m
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>Örneği aynı makinede çalıştırmak için  
   
-1.  Hizmeti, IIS tarafından barındırılıyorsa, hizmeti aşağıdaki adresi girerek bir tarayıcı kullanarak erişebildiğinden emin olun: http://localhost/servicemodelsamples/service.svc. Yanıtta bir onay sayfası gösterilmelidir. Onay sayfasında görüntülenmiyorsa bkz [sorun giderme ipuçları](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+1.  Hizmeti, IIS tarafından barındırılıyorsa, hizmeti aşağıdaki adresi girerek bir tarayıcı kullanarak erişebildiğinden emin olun: `http://localhost/servicemodelsamples/service.svc`. Yanıtta bir onay sayfası gösterilmelidir. Onay sayfasında görüntülenmiyorsa bkz [sorun giderme ipuçları](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 2.  Hizmet şirket içinde barındırılıyorsa Service.exe \service\bin, dile özgü klasörü altında çalıştırın. Hizmet etkinliğinin hizmet konsol penceresinde görüntülenir.  
   
@@ -63,7 +63,7 @@ Windows Communication Foundation (WCF) örnekleri, tek bir makine veya çapraz m
   
 2.  Hizmet IIS'de barındırılıyorsa:  
   
-    1.  Adresini girerek bir tarayıcı kullanarak hizmeti etkinleştirin http://localhost/servicemodelsamples/service.svc.  
+    1.  Adresini girerek bir tarayıcı kullanarak hizmeti etkinleştirin `http://localhost/servicemodelsamples/service.svc`.  
   
     2.  Çözümde seçin **hata ayıklama** menü ve **iliştirme** menü öğesi.  
   

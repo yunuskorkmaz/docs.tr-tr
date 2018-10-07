@@ -2,12 +2,12 @@
 title: WCF Hizmetleri için Basitleştirilmiş Yapılandırma
 ms.date: 03/30/2017
 ms.assetid: 1e39ec25-18a3-4fdc-b6a3-9dfafbd60112
-ms.openlocfilehash: ebdf7ab62676bb0c8ac99a5335a3047fcdd5a9b3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 333469cecdf2acae72e6d1add8f96829a127dcf8
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500719"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836728"
 ---
 # <a name="simplified-configuration-for-wcf-services"></a>WCF Hizmetleri için Basitleştirilmiş Yapılandırma
 Bu örnek nasıl uygulanacağını ve tipik hizmeti ve Windows Communication Foundation (WCF) kullanarak istemci yapılandırma gösterir. Bu örnek diğer tüm temel teknoloji örnekleri temelini oluşturur.  
@@ -37,7 +37,7 @@ Bu örnek nasıl uygulanacağını ve tipik hizmeti ve Windows Communication Fou
 </configuration>  
 ```  
   
- İçinde [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], `<service>` öğesi, isteğe bağlıdır. Ne zaman bir hizmet tanımlamıyor tüm uç noktalar, her bir temel adres ve uygulanan sözleşme için bir uç nokta eklenir hizmete. Temel adres uç nokta belirlemek için sözleşme adına eklenir ve bağlama adres düzeni tarafından belirlenir. Aşağıdaki kod örneği bir Basitleştirilmiş yapılandırma dosyası gösterir. Adresinden yapılandırıldığı gibi hizmet erişilebilen http://localhost/servicemodelsamples/service.svc aynı bilgisayarda bir istemci tarafından. Hizmete erişmek istemciler için uzak bilgisayarlarda, localhost yerine bir tam etki alanı adı belirtilmelidir. Hizmet meta verileri varsayılan olarak kullanıma sunmuyor. Bu nedenle, hizmet açar <xref:System.ServiceModel.Description.ServiceMetadataBehavior> davranışı.  
+ İçinde [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], `<service>` öğesi, isteğe bağlıdır. Ne zaman bir hizmet tanımlamıyor tüm uç noktalar, her bir temel adres ve uygulanan sözleşme için bir uç nokta eklenir hizmete. Temel adres uç nokta belirlemek için sözleşme adına eklenir ve bağlama adres düzeni tarafından belirlenir. Aşağıdaki kod örneği bir Basitleştirilmiş yapılandırma dosyası gösterir. Adresinden yapılandırıldığı gibi hizmet erişilebilen `http://localhost/servicemodelsamples/service.svc` aynı bilgisayarda bir istemci tarafından. Hizmete erişmek istemciler için uzak bilgisayarlarda, localhost yerine bir tam etki alanı adı belirtilmelidir. Hizmet meta verileri varsayılan olarak kullanıma sunmuyor. Bu nedenle, hizmet açar <xref:System.ServiceModel.Description.ServiceMetadataBehavior> davranışı.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  

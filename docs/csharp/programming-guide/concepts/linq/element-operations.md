@@ -1,13 +1,13 @@
 ---
 title: Öğe işlemleri (C#)
-ms.date: 07/20/2015
+ms.date: 10/03/2018
 ms.assetid: 283206c9-3246-4c48-b01a-d9de409a7231
-ms.openlocfilehash: 14fdfbc38e1c25aa00056a42e116be98a489ce0f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: dbae8c0b3d98fe9674fbbeb432c1e42763e81026
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856896"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836783"
 ---
 # <a name="element-operations-c"></a>Öğe işlemleri (C#)
 
@@ -25,8 +25,8 @@ ms.locfileid: "43856896"
 |FirstOrDefault|Koleksiyonun ilk öğesine veya bir koşulu karşılayan ilk öğeyi döndürür. Böyle bir öğe varsa, varsayılan bir değer döndürür.|Yok.|<xref:System.Linq.Enumerable.FirstOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.FirstOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.FirstOrDefault%60%601%28System.Linq.IQueryable%7B%60%600%7D%29?displayProperty=nameWithType>|  
 |Son|Koleksiyonun son öğesine ya da bir koşulu karşılayan son öğeyi döndürür.|Yok.|<xref:System.Linq.Enumerable.Last%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Last%2A?displayProperty=nameWithType>|  
 |LastOrDefault|Koleksiyonun son öğesine ya da bir koşulu karşılayan son öğeyi döndürür. Böyle bir öğe varsa, varsayılan bir değer döndürür.|Yok.|<xref:System.Linq.Enumerable.LastOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.LastOrDefault%2A?displayProperty=nameWithType>|  
-|Tek|Bir koleksiyonun tek öğe veya bir koşulu karşılayan tek öğe döndürür.|Yok.|<xref:System.Linq.Enumerable.Single%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Single%2A?displayProperty=nameWithType>|  
-|SingleOrDefault|Bir koleksiyonun tek öğe veya bir koşulu karşılayan tek öğe döndürür. Böyle bir öğe var veya tam bir öğe koleksiyonu içermiyor varsayılan bir değer döndürür.|Yok.|<xref:System.Linq.Enumerable.SingleOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SingleOrDefault%2A?displayProperty=nameWithType>|  
+|Tek|Bir koleksiyonun tek öğe veya bir koşulu karşılayan tek öğe döndürür. Oluşturur bir <xref:System.InvalidOperationException> herhangi bir öğe veya döndürmek için birden fazla öğe varsa. |Yok.|<xref:System.Linq.Enumerable.Single%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Single%2A?displayProperty=nameWithType>|  
+|SingleOrDefault|Bir koleksiyonun tek öğe veya bir koşulu karşılayan tek öğe döndürür. Herhangi bir öğe döndürmek için ise varsayılan bir değer döndürür. Oluşturur bir <xref:System.InvalidOperationException> döndürmek için birden fazla öğe varsa. |Yok.|<xref:System.Linq.Enumerable.SingleOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SingleOrDefault%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.
 

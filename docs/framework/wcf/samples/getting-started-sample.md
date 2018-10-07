@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-ms.openlocfilehash: dda11511904d452a3a5101417f8ab8a33c00204f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 74c3b825bbd51a082f20e8e2009e1ca5f0b35100
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857101"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837160"
 ---
 # <a name="getting-started-sample"></a>Başlarken Örneği
 Kullanmaya başlama örneği, tipik bir hizmet ve Windows Communication Foundation (WCF) kullanarak tipik bir istemci uygulama gösterilmiştir. Bu örnek diğer tüm temel teknoloji örnekleri temelini oluşturur.  
@@ -141,9 +141,9 @@ public class CalculatorService : ICalculator
   
  Hizmet, IIS veya WAS ana bilgisayar tarafından sağlanan taban adresinde uç noktasını kullanıma sunar. Bir standart yapılandırılmış bağlama <xref:System.ServiceModel.WSHttpBinding>, sağlayan HTTP iletişimi ve standart Web hizmeti protokolleri adresleme ve güvenlik için. Sözleşme `ICalculator` hizmeti tarafından uygulanan.  
   
- Adresinden yapılandırıldığı gibi hizmet erişilebilen http://localhost/servicemodelsamples/service.svc aynı bilgisayarda bir istemci tarafından. Uzak computersto erişimi hizmet istemciler için localhost yerine bir tam etki alanı adı belirtilmelidir.  
+ Adresinden yapılandırıldığı gibi hizmet erişilebilen `http://localhost/servicemodelsamples/service.svc` aynı bilgisayarda bir istemci tarafından. Hizmete erişmek istemciler için uzak bilgisayarlarda, localhost yerine bir tam etki alanı adı belirtilmelidir.  
   
- Framework meta verileri varsayılan olarak kullanıma sunmuyor. Bu nedenle, hizmet açar <xref:System.ServiceModel.Description.ServiceMetadataBehavior> ve bir meta veri değişimi (MEX) uç noktada ortaya çıkaran http://localhost/servicemodelsamples/service.svc/mex. Aşağıdaki yapılandırmayı bu gösterir.  
+ Framework meta verileri varsayılan olarak kullanıma sunmuyor. Bu nedenle, hizmet açar <xref:System.ServiceModel.Description.ServiceMetadataBehavior> ve bir meta veri değişimi (MEX) uç noktada ortaya çıkaran `http://localhost/servicemodelsamples/service.svc/mex`. Aşağıdaki yapılandırmayı bu gösterir.  
   
 ```xaml  
 <system.serviceModel>  
