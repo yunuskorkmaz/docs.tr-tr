@@ -3,28 +3,32 @@ title: (C# üzerinde LINQ) gruplandırma işleminde alt sorgu gerçekleştirme
 description: C# içinde LINQ kullanarak bir gruplandırma işleminde alt sorgu gerçekleştirme yapma.
 ms.date: 12/1/2016
 ms.assetid: d75a588e-9b6f-4f37-b195-f99ec8503855
-ms.openlocfilehash: 514db81b80557a3026589f00177910cc9446c0f4
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 19be93fe695982e93abea9a59153a4245dce4a60
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261126"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48846324"
 ---
-# <a name="perform-a-subquery-on-a-grouping-operation"></a><span data-ttu-id="c7a7c-103">Gruplandırma işleminde alt sorgu gerçekleştirme</span><span class="sxs-lookup"><span data-stu-id="c7a7c-103">Perform a subquery on a grouping operation</span></span>
+# <a name="perform-a-subquery-on-a-grouping-operation"></a><span data-ttu-id="71051-103">Gruplandırma işleminde alt sorgu gerçekleştirme</span><span class="sxs-lookup"><span data-stu-id="71051-103">Perform a subquery on a grouping operation</span></span>
 
-<span data-ttu-id="c7a7c-104">Bu makalede, kaynak verileri gruplar halinde sıralar ve sonra bir alt sorgu her bir grup üzerinde tek tek gerçekleştiren bir sorgu oluşturmak için iki farklı yolu gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="c7a7c-104">This article shows two different ways to create a query that orders the source data into groups, and then performs a subquery over each group individually.</span></span> <span data-ttu-id="c7a7c-105">Her örnekte temel tekniği kullanarak kaynak öğeleri gruplandırmak için olan bir *devamlılık* adlı `newGroup`ve ardından yeni bir alt sorgu karşı oluşturma `newGroup`.</span><span class="sxs-lookup"><span data-stu-id="c7a7c-105">The basic technique in each example is to group the source elements by using a *continuation* named `newGroup`, and then generating a new subquery against `newGroup`.</span></span> <span data-ttu-id="c7a7c-106">Bu alt sorgu, dış sorgu tarafından oluşturulan her yeni gruba göre çalıştırılır.</span><span class="sxs-lookup"><span data-stu-id="c7a7c-106">This subquery is run against each new group that is created by the outer query.</span></span> <span data-ttu-id="c7a7c-107">Bu örnekte son çıkışı değil bir grup ancak anonim türler düz dizisi olduğunu unutmayın.</span><span class="sxs-lookup"><span data-stu-id="c7a7c-107">Note that in this particular example the final output is not a group, but a flat sequence of anonymous types.</span></span>  
+<span data-ttu-id="71051-104">Bu makalede, kaynak verileri gruplar halinde sıralar ve sonra bir alt sorgu her bir grup üzerinde tek tek gerçekleştiren bir sorgu oluşturmak için iki farklı yolu gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="71051-104">This article shows two different ways to create a query that orders the source data into groups, and then performs a subquery over each group individually.</span></span> <span data-ttu-id="71051-105">Her örnekte temel tekniği kullanarak kaynak öğeleri gruplandırmak için olan bir *devamlılık* adlı `newGroup`ve ardından yeni bir alt sorgu karşı oluşturma `newGroup`.</span><span class="sxs-lookup"><span data-stu-id="71051-105">The basic technique in each example is to group the source elements by using a *continuation* named `newGroup`, and then generating a new subquery against `newGroup`.</span></span> <span data-ttu-id="71051-106">Bu alt sorgu, dış sorgu tarafından oluşturulan her yeni gruba göre çalıştırılır.</span><span class="sxs-lookup"><span data-stu-id="71051-106">This subquery is run against each new group that is created by the outer query.</span></span> <span data-ttu-id="71051-107">Bu örnekte son çıkışı değil bir grup ancak anonim türler düz dizisi olduğunu unutmayın.</span><span class="sxs-lookup"><span data-stu-id="71051-107">Note that in this particular example the final output is not a group, but a flat sequence of anonymous types.</span></span>  
   
-<span data-ttu-id="c7a7c-108">Gruba hakkında daha fazla bilgi için bkz. [group yan tümcesi](../language-reference/keywords/group-clause.md).</span><span class="sxs-lookup"><span data-stu-id="c7a7c-108">For more information about how to group, see [group clause](../language-reference/keywords/group-clause.md).</span></span>  
+<span data-ttu-id="71051-108">Gruba hakkında daha fazla bilgi için bkz. [group yan tümcesi](../language-reference/keywords/group-clause.md).</span><span class="sxs-lookup"><span data-stu-id="71051-108">For more information about how to group, see [group clause](../language-reference/keywords/group-clause.md).</span></span>  
   
-<span data-ttu-id="c7a7c-109">Devamlılıklar hakkında daha fazla bilgi için bkz: [içine](../language-reference/keywords/into.md).</span><span class="sxs-lookup"><span data-stu-id="c7a7c-109">For more information about continuations, see [into](../language-reference/keywords/into.md).</span></span> <span data-ttu-id="c7a7c-110">Aşağıdaki örnek, veri kaynağı olarak bir bellek içi veri yapısı kullanır, ancak tüm LINQ veri kaynağı türü için aynı ilkeler geçerlidir.</span><span class="sxs-lookup"><span data-stu-id="c7a7c-110">The following example uses an in-memory data structure as the data source, but the same principles apply for any kind of LINQ data source.</span></span>  
+<span data-ttu-id="71051-109">Devamlılıklar hakkında daha fazla bilgi için bkz: [içine](../language-reference/keywords/into.md).</span><span class="sxs-lookup"><span data-stu-id="71051-109">For more information about continuations, see [into](../language-reference/keywords/into.md).</span></span> <span data-ttu-id="71051-110">Aşağıdaki örnek, veri kaynağı olarak bir bellek içi veri yapısı kullanır, ancak tüm LINQ veri kaynağı türü için aynı ilkeler geçerlidir.</span><span class="sxs-lookup"><span data-stu-id="71051-110">The following example uses an in-memory data structure as the data source, but the same principles apply for any kind of LINQ data source.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c7a7c-111">Örnek</span><span class="sxs-lookup"><span data-stu-id="c7a7c-111">Example</span></span>
+## <a name="example"></a><span data-ttu-id="71051-111">Örnek</span><span class="sxs-lookup"><span data-stu-id="71051-111">Example</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="c7a7c-112">Bu örnekte örnek koda tanımlanan nesneleri başvuruları içeren [nesneler koleksiyonunu sorgulama](query-a-collection-of-objects.md).</span><span class="sxs-lookup"><span data-stu-id="c7a7c-112">This example contains references to objects that are defined in the sample code in [Query a collection of objects](query-a-collection-of-objects.md).</span></span>
+> <span data-ttu-id="71051-112">Bu örnekte örnek koda tanımlanan nesneleri başvuruları içeren [nesneler koleksiyonunu sorgulama](query-a-collection-of-objects.md).</span><span class="sxs-lookup"><span data-stu-id="71051-112">This example contains references to objects that are defined in the sample code in [Query a collection of objects](query-a-collection-of-objects.md).</span></span>
 
-[!code-csharp[csProgGuideLINQ#23](~/samples/snippets/csharp/concepts/linq/how-to-perform-a-subquery-on-a-grouping-operation_1.cs)]  
+[!code-csharp[csProgGuideLINQ#23](~/samples/snippets/csharp/concepts/linq/how-to-perform-a-subquery-on-a-grouping-operation_1.cs)] 
 
-## <a name="see-also"></a><span data-ttu-id="c7a7c-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c7a7c-113">See also</span></span>
+<span data-ttu-id="71051-113">Yukarıdaki kod parçacığında sorgu ayrıca yöntem sözdizimini kullanarak yazılabilir.</span><span class="sxs-lookup"><span data-stu-id="71051-113">The query in the snippet above can also be written using method syntax.</span></span> <span data-ttu-id="71051-114">Aşağıdaki kod parçacığı, yöntem sözdizimi kullanılarak yazılmış anlamsal olarak eşdeğer bir sorgu yok.</span><span class="sxs-lookup"><span data-stu-id="71051-114">The following code snippet has a semantically equivalent query written using method syntax.</span></span>
 
-- [<span data-ttu-id="c7a7c-114">Dil ile Tümleşik Sorgu (LINQ)</span><span class="sxs-lookup"><span data-stu-id="c7a7c-114">Language Integrated Query (LINQ)</span></span>](index.md)
+[!code-csharp[csProgGuideLINQ#86](~/samples/snippets/csharp/concepts/linq/how-to-perform-a-subquery-on-a-grouping-operation_2.cs)]
+
+## <a name="see-also"></a><span data-ttu-id="71051-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="71051-115">See also</span></span>
+
+- [<span data-ttu-id="71051-116">Dil ile Tümleşik Sorgu (LINQ)</span><span class="sxs-lookup"><span data-stu-id="71051-116">Language Integrated Query (LINQ)</span></span>](index.md)
