@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation özellik ayrıntıları
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: b18c6dd76762f4495ac475cd3dfa4e1995733b59
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 6929150f786f0d6b4a5887eb5c0758ebcfdd411c
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44205081"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48846012"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation özellik ayrıntıları
 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] Windows Workflow Foundation için bir dizi özellik ekler. Bu belge, bir dizi yeni özellik açıklar ve bunlar yararlı olabilecek senaryoları hakkında ayrıntılar sağlar.  
@@ -17,19 +17,11 @@ ms.locfileid: "44205081"
   
 ### <a name="getting-started-with-messaging-activities"></a>Mesajlaşma etkinlikleri ile çalışmaya başlama  
   
--   İçinde [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)], bir WCF iş akışı hizmeti uygulaması projesi oluşturun. A <xref:System.ServiceModel.Activities.Receive> ve <xref:System.ServiceModel.Activities.SendReply> çifti tuvalinizde yerleştirilir.  
+-   Visual Studio 2012'de bir WCF iş akışı hizmeti uygulaması projesi oluşturun. A <xref:System.ServiceModel.Activities.Receive> ve <xref:System.ServiceModel.Activities.SendReply> çifti tuvalinizde yerleştirilir.  
   
--   Sağ tıklatın ve proje **hizmet Başvurusu Ekle**.  Bir web hizmetiniz için WSDL'ın üzerine gelin ve tıklayın **Tamam**.  Oluşturulan etkinlikleri göstermek için projenizi derleyin (kullanılarak uygulanan <xref:System.ServiceModel.Activities.Send> ve <xref:System.ServiceModel.Activities.ReceiveReply>), araç çubuğundaki.  
+-   Sağ tıklatın ve proje **hizmet Başvurusu Ekle**.  Bir web hizmetiniz için WSDL'ın üzerine gelin ve tıklayın **Tamam**.  Oluşturulan etkinlikleri göstermek için projenizi derleyin (kullanılarak uygulanan <xref:System.ServiceModel.Activities.Send> ve <xref:System.ServiceModel.Activities.ReceiveReply>), araç çubuğundaki.
   
--   Aşağıdaki bölümlerde bu etkinlikler için örnekleri bulunabilir:  
-  
-    -   Temel: [Hizmetleri](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
-  
-    -   Senaryo: [Hizmetleri](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
-  
--   [Kavramsal belgeler](https://go.microsoft.com/fwlink/?LinkId=204801)  
-  
--   [Mesajlaşma etkinlikleri Tasarımcı belgeleri](https://go.microsoft.com/fwlink/?LinkId=204802)  
+-   [İş akışı Hizmetleri belgeleri](../wcf/feature-details/workflow-services.md)
   
 ### <a name="messaging-activities-example-scenario"></a>Mesajlaşma etkinlikleri Örnek senaryo  
  A `BestPriceFinder` belirli bir rota için en iyi bilet fiyatı bulmak için birden çok Havayolu hizmetlerine hizmetini çağırır.  Bu senaryoyu uygulamaya fiyat durdurmanız, Fiyatlar arka uç hizmetlerinden almak ve en iyi fiyatı Fiyat isteği yanıtlamak için ileti etkinlikleri kullanmanızı gerektirir.  Bu ayrıca en iyi fiyatı hesaplama iş mantığı oluşturmak için diğer kullanıma hazır etkinlikleri kullanmanızı gerektirir.  
@@ -47,15 +39,11 @@ ms.locfileid: "44205081"
   
 -   İçin örnek <xref:System.ServiceModel.WorkflowServiceHost> aşağıdaki bölümlerde bulunabilir:  
   
-    -   [Yürütme](../../../docs/framework/windows-workflow-foundation/samples/execution.md)  
+    -   [Yürütme](samples/execution.md)
   
-    -   Temel: [Hizmetleri](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
+    -   Uygulama: [askıya alınmış örnek Yönetimi](samples/suspended-instance-management.md)  
   
-    -   Senaryo: [Hizmetleri](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
-  
-    -   Uygulama: [askıya alınmış örnek Yönetimi](../../../docs/framework/windows-workflow-foundation/samples/suspended-instance-management.md)  
-  
--   [WorkflowServiceHost kavramsal belgeler](https://go.microsoft.com/fwlink/?LinkId=204807)  
+-   [İş akışı hizmetlerini barındırma genel bakış](../wcf/feature-details/hosting-workflow-services-overview.md)  
   
 ### <a name="workflowservicehost-scenario"></a>WorkflowServiceHost senaryosu  
  Belirli bir rota için en iyi bilet fiyatı bulmak için birden çok Havayolu hizmetlerine BestPriceFinder hizmeti çağırır.  Bu senaryoyu uygulamaya içerseydi, iş akışında barındırmak <xref:System.ServiceModel.WorkflowServiceHost>.  Bu da fiyatı almak, Fiyatlar arka uç hizmetlerinden almak ve en iyi fiyatı Fiyat isteği yanıtlamak için ileti etkinlikleri kullanırsınız.  
@@ -79,15 +67,9 @@ ms.locfileid: "44205081"
   
 -   Bir hizmet örneği için bir veri parçasını eşleme örneği için belirli bir iş akışı örneği verileri (örneğin, bir sipariş kimliği) bir parçası eşleştiren içerik temelli bağıntı var.  
   
-    -   Mesajlaşma tüm etkinliklerde tıklayarak `CorrelationInitializers` özelliği ve ekleme bir <xref:System.ServiceModel.Activities.QueryCorrelationInitializer> kullanarak <xref:System.ServiceModel.Activities.CorrelationHandle> yukarıda oluşturulan değişken. ' % S'iletisi (örneğin, orderId) açılan menüsünden istenen özelliği çift tıklayın. Ayarlama `CorrelatesWith` özelliğini <xref:System.ServiceModel.Activities.CorrelationHandle> yukarıda kullanılan değişkeni.  
+    -   Mesajlaşma tüm etkinliklerde tıklayarak `CorrelationInitializers` özelliği ve ekleme bir <xref:System.ServiceModel.Activities.QueryCorrelationInitializer> kullanarak <xref:System.ServiceModel.Activities.CorrelationHandle> yukarıda oluşturulan değişken. ' % S'iletisi (örneğin, orderId) açılan menüsünden istenen özelliği çift tıklayın. Ayarlama `CorrelatesWith` özelliğini <xref:System.ServiceModel.Activities.CorrelationHandle> yukarıda kullanılan değişkeni. 
   
--   Örnekler:  
-  
-    -   Temel: [Hizmetleri](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
-  
-    -   Senaryo: [Hizmetleri](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
-  
-    -   [Bağıntı kavramsal belgeler](https://go.microsoft.com/fwlink/?LinkId=204939)  
+-   [Bağıntı kavramsal belgeler](../wcf/feature-details/correlation.md)  
   
 ### <a name="correlation-scenario"></a>Bağıntı senaryosu  
  Bir sipariş işleme iş akışı, yeni sipariş oluşturulmasını ve işlemde olan mevcut siparişlerini güncelleştirme işlemek için kullanılır.  Bu senaryoyu uygulamaya içerseydi, iş akışında barındırmak <xref:System.ServiceModel.WorkflowServiceHost> ve mesajlaşma etkinlikleri kullanın.  Dayalı bağıntı gerektirecek `orderId` için güncelleştirmeleri doğru iş akışına yapıldığından emin olun.  
@@ -155,7 +137,7 @@ ms.locfileid: "44205081"
   
 ### <a name="getting-started"></a>Başlarken  
   
--   İçinde [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)], bir iş akışı konsol uygulaması oluşturun. Bir akış çizelgesi iş akışı Tasarımcısı'nda ekleyin.  
+-   Visual Studio 2012'de bir iş akışı konsol uygulaması oluşturun. Bir akış çizelgesi iş akışı Tasarımcısı'nda ekleyin.  
   
 -   Akış özelliğini aşağıdaki sınıflar kullanır:  
   
@@ -171,9 +153,7 @@ ms.locfileid: "44205081"
   
 -   Örnekler:  
   
-    -   [TryCatch Kullanarak Akış Çizelgesi Etkinliğine Hata İşleme](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
-  
-    -   [FlowChart ve Pick Birleşimini Kullanan StateMachine Senaryosu](../../../docs/framework/windows-workflow-foundation/samples/statemachine-scenario-using-a-combination-of-flowchart-and-pick.md)  
+    -   [TryCatch Kullanarak Akış Çizelgesi Etkinliğine Hata İşleme](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md) 
   
     -   [İşe Alma İşlemi](../../../docs/framework/windows-workflow-foundation/samples/hiring-process.md)  
   
@@ -201,7 +181,7 @@ ms.locfileid: "44205081"
   
 ### <a name="getting-started"></a>Başlarken  
   
--   İçinde [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)], bir iş akışı konsol uygulaması oluşturun. Yordam etkinlikleri iş akışı Tasarımcısı'nda ekleyin.  
+-   Visual Studio 2012'de bir iş akışı konsol uygulaması oluşturun. Yordam etkinlikleri iş akışı Tasarımcısı'nda ekleyin.  
   
 -   Örnekler:  
   
@@ -226,11 +206,7 @@ ms.locfileid: "44205081"
   
 ### <a name="getting-started"></a>Başlarken  
   
--   İçinde [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)], bir iş akışı konsol uygulaması oluşturun. Ekleme bir <xref:System.Activities.Statements.InvokeMethod> iş akışı tasarımcısında etkinlik statik yapılandırma ve örnek yöntemler üzerindeki.  
-  
--   Örnekler:  
-  
-    -   [InvokeMethod](../../../docs/framework/windows-workflow-foundation/samples/invokemethod.md)  
+-   Visual Studio 2012'de bir iş akışı konsol uygulaması oluşturun. Ekleme bir <xref:System.Activities.Statements.InvokeMethod> iş akışı tasarımcısında etkinlik statik yapılandırma ve örnek yöntemler üzerindeki.  
   
 -   Tasarımcı belgeler: [InvokeMethod etkinlik Tasarımcısı](/visualstudio/workflow-designer/invokemethod-activity-designer)  
   
@@ -245,13 +221,9 @@ ms.locfileid: "44205081"
   
 ### <a name="getting-started"></a>Başlarken  
   
--   İçinde [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)], bir iş akışı konsol uygulaması oluşturun. Ekleme bir <xref:System.Activities.Statements.TryCatch> iş akışı tasarımcısında etkinlik.  
+-   Visual Studio 2012'de bir iş akışı konsol uygulaması oluşturun. Ekleme bir <xref:System.Activities.Statements.TryCatch> iş akışı tasarımcısında etkinlik.  
   
--   Örnekler:  
-  
-    1.  [TryCatch Kullanarak Akış Çizelgesi Etkinliğine Hata İşleme](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
-  
-    2.  [Yordam Etkinlikleri Kullanma](../../../docs/framework/windows-workflow-foundation/samples/using-procedural-activities.md)  
+-   Örnek: [işlemede TryCatch kullanarak akış çizelgesi etkinliğine hata](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
   
 -   Tasarımcı belgeler: [hata işleme etkinlik tasarımcıları](/visualstudio/workflow-designer/error-handling-activity-designers)  
   
@@ -263,7 +235,7 @@ ms.locfileid: "44205081"
   
 ### <a name="getting-started"></a>Başlarken  
   
--   İçinde [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)], bir iş akışı konsol uygulaması oluşturun. Ekleme bir <xref:System.Activities.Statements.Pick> iş akışı tasarımcısında etkinlik.  
+-   Visual Studio 2012'de bir iş akışı konsol uygulaması oluşturun. Ekleme bir <xref:System.Activities.Statements.Pick> iş akışı tasarımcısında etkinlik.  
   
 -   Örnek: [Pick etkinliği kullanma](../../../docs/framework/windows-workflow-foundation/samples/using-the-pick-activity.md)  
   
@@ -337,7 +309,7 @@ ms.locfileid: "44205081"
   
 ### <a name="getting-started"></a>Başlarken  
   
-1.  İçinde [!INCLUDE[vs2010](../../../includes/vs2010-md.md)], bir WCF iş akışı hizmeti uygulaması projesi oluşturun. A <xref:System.ServiceModel.Activities.Receive> ve <xref:System.ServiceModel.Activities.SendReply> çifti başlatmak için tuvalinizde yerleştirilir.  
+1.  Visual Studio 2010'da bir WCF iş akışı hizmeti uygulaması projesi oluşturun. A <xref:System.ServiceModel.Activities.Receive> ve <xref:System.ServiceModel.Activities.SendReply> çifti başlatmak için tuvalinizde yerleştirilir.  
   
 2.  Web.config dosyasını açın ve bir ETW profil ile davranışını izleme ekleyin.  
   
@@ -358,7 +330,7 @@ ms.locfileid: "44205081"
   
 ### <a name="getting-started"></a>Başlarken  
   
-1.  İçinde [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)], kapalı veya açık içeren bir iş akışı oluşturmak <xref:System.Activities.Statements.Persist> etkinlik. Ekleme <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> davranışı, iş akışı hizmeti konağı için. Bu, kodda veya uygulama yapılandırma dosyasında yapılabilir.  
+1.  Visual Studio 2012'de kapalı veya açık içeren iş akışı oluşturma <xref:System.Activities.Statements.Persist> etkinlik. Ekleme <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> davranışı, iş akışı hizmeti konağı için. Bu, kodda veya uygulama yapılandırma dosyasında yapılabilir.  
   
 2.  Örnekler: [kalıcılığı](../../../docs/framework/windows-workflow-foundation/samples/persistence.md)  
   

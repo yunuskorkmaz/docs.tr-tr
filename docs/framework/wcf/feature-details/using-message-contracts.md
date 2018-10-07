@@ -7,37 +7,37 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-ms.openlocfilehash: ea0a107a67753e919439a6be2035ab77001641ff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 84640387e6d77e02d3b0d19b73c0d2b20d8d8831
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508585"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48848315"
 ---
 # <a name="using-message-contracts"></a>İleti Sözleşmeleri Kullanılıyor
-Genellikle Windows Communication Foundation (WCF) uygulamaları oluştururken geliştiriciler serileştirme sorunları ve veri yapıları Kapat dikkat ve kendilerini veri taşınan iletileri yapısıyla ilgilendiren gerekmez. Bu uygulamalar için parametreleri veya dönüş değerleri için veri sözleşmeleri oluşturma basittir. (Daha fazla bilgi için bkz: [hizmet sözleşmelerinde veri aktarımı belirtme](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
+Genellikle Windows Communication Foundation (WCF) uygulamaları oluştururken geliştiriciler serileştirme sorunlarına ve veri yapıları Kapat dikkat ve kendilerini hangi verileri taşınan iletileri yapısı ile uğraşmak zorunda değildir. Bu uygulamalar için parametreleri veya dönüş değerleri için veri sözleşmeleri oluşturma oldukça basittir. (Daha fazla bilgi için [hizmet sözleşmelerinde veri aktarımı belirtme](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
   
- Ancak, bir SOAP iletisi yapısını bazen tam kontrole yalnızca, içeriğini üzerinde denetim olarak önem taşır. Birlikte çalışabilirlik önemli veya özellikle güvenlik denetlemek için ileti veya ileti bölümü düzeyinde sorunları olduğunda özellikle geçerlidir. Bu durumlarda, oluşturduğunuz bir *ileti sözleşmesi* gerekli kesin SOAP iletisi yapısını belirtmenize olanak sağlar.  
+ Ancak, bir SOAP ileti yapısını bazen tam kontrole yalnızca içeriği üzerinde denetim olarak da önemlidir. Birlikte çalışabilirlik önemli olduğunda veya özellikle güvenlik denetlemek için ileti veya ileti bölümü düzeyinde sorunları özellikle doğrudur. Bu durumlarda, oluşturduğunuz bir *ileti anlaşması* gereken kesin SOAP iletisi yapısını belirtmenize imkan tanır.  
   
- Bu konu çeşitli ileti sözleşmesi öznitelikleri belirli ileti sözleşmesi işleminiz oluşturmak için nasıl kullanıldığını açıklar.  
+ Bu konu, çeşitli ileti anlaşması öznitelikleri oluşturma işlemi için bir özel ileti anlaşması için nasıl kullanılacağını açıklar.  
   
 ## <a name="using-message-contracts-in-operations"></a>İleti sözleşmeleri işlemlerinde kullanma  
- WCF üzerinde Modellenen işlemlerini destekleyen *uzak yordam çağrısı (RPC) stili* veya *stili Mesajlaşma*. Bir RPC-style işleminde serializable bir tür kullanabilirsiniz ve birden çok parametre gibi yerel aramalar için kullanılabilen özellikleri erişimi ve `ref` ve `out` parametreleri. Bu stili temel alınan iletilerde verilerin yapısını seçilen serileştirme form denetimlerini ve WCF çalışma zamanı işlemi desteklemek için iletileri oluşturur. Bu, SOAP ile tanıdık olmayan ve iletileri kolayca SOAP ve kolayca oluşturup hizmet uygulamaları kullanın geliştiriciler sağlar.  
+ WCF desteklediği işlemleri üzerinde modellenmiş *uzak yordam çağrısı (RPC) stili* veya *stil Mesajlaşma*. RPC stili işleminde, serializable bir tür kullanabilirsiniz ve birden çok parametre gibi yerel çağrıları kullanılabilir özelliklere erişiminiz ve `ref` ve `out` parametreleri. Bu stilde, temel alınan iletileri verilerin yapısını seçilen serileştirme biçimini denetler ve WCF çalıştırma zamanı işlemi desteklemek için iletileri oluşturur. Bu, SOAP ile tanıdık olmayan iletileri hızla SOAP ve kolayca oluşturun ve hizmet uygulamalarını kullanmak geliştiriciler sağlar.  
   
- Aşağıdaki kod örneğinde RPC stilini Modellenen bir hizmet işlemi gösterilmektedir.  
+ Aşağıdaki kod örneği bir hizmet işlemi RPC stili modellenmiş gösterir.  
   
 ```csharp  
 [OperationContract]  
 public BankingTransactionResponse PostBankingTransaction(BankingTransaction bt);  
 ```  
   
- Normalde, bir veri sözleşmesi şema iletileri tanımlamak yeterlidir. Örneğin, önceki örnekte, çoğu uygulama için yeterli değilse `BankingTransaction` ve `BankingTransactionResponse` temel alınan SOAP iletilerine içeriğini tanımlamak için veri sözleşmeleri sahip. Veri sözleşmeleri hakkında daha fazla bilgi için bkz: [kullanarak veri sözleşmeleri](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+ Normalde, bir veri anlaşması iletileri için şema tanımlamak yeterlidir. Örneğin, önceki örnekte, çoğu uygulama için yeterlidir, `BankingTransaction` ve `BankingTransactionResponse` temel SOAP iletilerinin içeriğini tanımlamak için veri sözleşmelerine sahiptir. Veri sözleşmeleri hakkında daha fazla bilgi için bkz: [kullanarak veri sözleşmeleri](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
- Ancak, bazen onu tam olarak nasıl SOAP iletisi yapısını kablo üzerinden aktarılan denetlemek gereklidir. Bunun en yaygın senaryo özel SOAP üstbilgileri ekleniyor. Başka bir yaygın senaryodur güvenlik özelliklerini ileti üstbilgi ve gövde, yani tanımlamak için bu öğeler dijital olarak imzalanmış ve şifrelenmiş olup olmadığını karar vermek için. Son olarak, bazı üçüncü taraf SOAP yığınları iletileri gerektiren belirli bir biçimde olabilir. Mesajlaşma stili operations bu denetim sağlar.  
+ Ancak, bazen nasıl SOAP iletisi yapısını hat üzerinden iletilen tam olarak denetlemek gereklidir. En yaygın senaryo için bu özel SOAP üstbilgileri ekliyor. Diğer bir deyişle ileti üstbilgileri ve gövdesi için güvenlik özelliklerini tanımlamak için bu öğeleri dijital olarak imzalanmış ve şifrelenmiş olmadığını karar vermek için başka bir yaygın bir senaryodur. Son olarak, bazı üçüncü taraf SOAP yığınları iletileri gerektiren belirli bir biçiminde olmalıdır. İleti stili işlemleri bu denetimi sağlar.  
   
- Bir ileti stili işlemi, her iki tür ileti türlerini nerede en fazla bir parametre ve dönüş değerini sahiptir; diğer bir deyişle, doğrudan belirtilen bir SOAP iletisi yapısına serileştirir. Bu ile işaretlenen herhangi bir tür olabilir <xref:System.ServiceModel.MessageContractAttribute> veya <xref:System.ServiceModel.Channels.Message> türü. Aşağıdaki kod örneğinde bir işlem benzer şekilde önceki RCP stili gösterir ancak Mesajlaşma stili kullanır.  
+ Her iki ileti türleri olduğu en fazla bir parametre ve bir dönüş değeri bir Mesajlaşma stili işlemi var; diğer bir deyişle, doğrudan belirtilen bir SOAP ileti yapısına serileştirir. Bu ile işaretlenen herhangi bir tür olabilir <xref:System.ServiceModel.MessageContractAttribute> veya <xref:System.ServiceModel.Channels.Message> türü. Aşağıdaki kod örneği bir işlemi önceki RCP stil benzeyen gösterir, ancak ileti stili kullanır.  
   
- Örneğin, varsa `BankingTransaction` ve `BankingTransactionResponse` kod aşağıdaki işlemleri içinde geçerli ise ileti sözleşmeleri olan iki türleridir.  
+ Örneğin, varsa `BankingTransaction` ve `BankingTransactionResponse` kod aşağıdaki işlemleri içinde geçerli ise, ileti sözleşmeleri, her iki türlerdir.  
   
 ```csharp  
 [OperationContract]  
@@ -59,14 +59,14 @@ void Reconcile(BankingTransaction bt1, BankingTransaction bt2);
 // Invalid, there is more than one parameter.  
 ```  
   
- Sözleşme türden bir ileti içerir ve, geçerli desenleri birini izlemez herhangi bir işlem için bir özel durum oluşur. Elbette, ileti sözleşme türleri içermeyen operations bu sınırlamalara tabi değildir.  
+ Bir özel durum, ileti anlaşması türü içerir ve bu geçerli desenlerden birini izlemez herhangi bir işlem için oluşturulur. Elbette, ileti anlaşması türleri içermeyen işlemler bu sınırlamalara tabi değildir.  
   
- Bir türü bir ileti sözleşmesi ve bir veri sözleşmesi varsa, yalnızca ileti sözleşmesi türü bir işlemde kullanıldığında olarak kabul edilir.  
+ Bir ileti anlaşması hem de bir veri anlaşması türü varsa, yalnızca ileti anlaşması türü bir işleminde kullanıldığında olarak kabul edilir.  
   
 ## <a name="defining-message-contracts"></a>İleti sözleşmeleri tanımlama  
- Bir tür için bir ileti sözleşmesi tanımlamak için (diğer bir deyişle, türü ve SOAP Zarfı arasında eşleme tanımlamak için), geçerli <xref:System.ServiceModel.MessageContractAttribute> türü. Daha sonra uygulamanız <xref:System.ServiceModel.MessageHeaderAttribute> SOAP üstbilgileri yapıp uygulamak istediğiniz türü bu üyeler için <xref:System.ServiceModel.MessageBodyMemberAttribute> iletinin SOAP gövdesi parçalara yapmak istediğiniz bu üyelere.  
+ Bir tür için bir ileti anlaşması tanımlamak için (diğer bir deyişle, türü ve SOAP Zarfı arasındaki eşlemeyi tanımlamak için), uygulama <xref:System.ServiceModel.MessageContractAttribute> türü. Daha sonra uygulamanızı <xref:System.ServiceModel.MessageHeaderAttribute> SOAP başlıkları ve uygulamak istediğiniz türü bu üye için <xref:System.ServiceModel.MessageBodyMemberAttribute> iletinin SOAP gövdesi parçalara yapmak istediğiniz bu üyelere.  
   
- Aşağıdaki kod bir ileti sözleşmesi kullanmaya ilişkin bir örnek sağlar.  
+ Aşağıdaki kod, bir ileti anlaşması kullanarak bir örnek sağlar.  
   
 ```csharp  
 [MessageContract]  
@@ -98,23 +98,23 @@ public class BankingTransaction
 </s:Envelope>  
 ```  
   
- Dikkat `operation` ve `transactionDate` SOAP üstbilgileri görünür ve SOAP gövdesi bir sarmalayıcı öğesi oluşur `BankingTransaction` içeren `sourceAccount`,`targetAccount`, ve `amount`.  
+ Dikkat `operation` ve `transactionDate` SOAP üst bilgi olarak görünür ve bir sarmalayıcı öğe SOAP gövdesi oluşur `BankingTransaction` içeren `sourceAccount`,`targetAccount`, ve `amount`.  
   
- Uygulayabileceğiniz <xref:System.ServiceModel.MessageHeaderAttribute> ve <xref:System.ServiceModel.MessageBodyMemberAttribute> tüm alanlar, özellikleri ve genel, özel, korumalı veya iç olup olmadıkları bakılmaksızın, olaylar.  
+ Uygulayabileceğiniz <xref:System.ServiceModel.MessageHeaderAttribute> ve <xref:System.ServiceModel.MessageBodyMemberAttribute> için tüm alanlar, özellikler ve olaylar, genel, özel, korumalı veya iç olup olmadıkları ne olursa olsun.  
   
- <xref:System.ServiceModel.MessageContractAttribute> SOAP iletisi gövdesinde sarmalayıcı öğesinin adı kontrol WrapperName ve WrapperNamespace öznitelikleri belirtmenize olanak tanır. Varsayılan ileti sözleşmesi adını türü sarmalayıcı ve ileti sözleşmesi tanımlanır ad alanı için kullanılan `HYPERLINK "http://tempuri.org/" http://tempuri.org/` varsayılan ad alanı olarak kullanılır.  
+ <xref:System.ServiceModel.MessageContractAttribute> Kontrol SOAP ileti gövdesinde sarmalayıcı öğe adı WrapperName ve WrapperNamespace öznitelikler belirtmenizi sağlar. İleti sözleşmesi adını varsayılan olarak tür sarmalayıcı ve ileti anlaşması tanımlanır ad alanı için kullanılan `http://tempuri.org/` varsayılan ad alanı olarak kullanılır.  
   
 > [!NOTE]
->  <xref:System.Runtime.Serialization.KnownTypeAttribute> ileti sözleşmeleri öznitelikleri göz ardı edilir. Varsa bir <xref:System.Runtime.Serialization.KnownTypeAttribute> olan gerekli, bunu ileti sözleşmesi kullanan işlemi söz konusu yerleştirin.  
+>  <xref:System.Runtime.Serialization.KnownTypeAttribute> ileti sözleşmeleri öznitelikleri yoksayılır. Varsa bir <xref:System.Runtime.Serialization.KnownTypeAttribute> olan gerekli, bunu, ileti anlaşması kullanarak işlemi söz konusu yerleştirin.  
   
-## <a name="controlling-header-and-body-part-names-and-namespaces"></a>Üstbilgi ve gövde bölümü adlarına ve ad alanlarını denetleme  
- İleti sözleşmesi SOAP gösterimini her üstbilgi ve gövde bölümü bir ad ve bir ad alanı olan bir XML öğesi eşler.  
+## <a name="controlling-header-and-body-part-names-and-namespaces"></a>Başlık ve gövde bölümü adlarına ve ad alanları denetleme  
+ Bir ileti anlaşması SOAP gösterimini her başlık ve gövde bölümü bir ad ve bir ad alanı olan bir XML öğesi eşler.  
   
- Varsayılan olarak, ileti katılıyor ve ad üye adına belirlenir hizmet sözleşmesi ad alanı ile aynı ad alanıdır <xref:System.ServiceModel.MessageHeaderAttribute> veya <xref:System.ServiceModel.MessageBodyMemberAttribute> öznitelikler uygulanır.  
+ Varsayılan olarak, ad alanı ileti katılan ve ad üye adı belirlenir hizmet sözleşmesi ad alanı ile aynı olduğu <xref:System.ServiceModel.MessageHeaderAttribute> veya <xref:System.ServiceModel.MessageBodyMemberAttribute> öznitelikler uygulanır.  
   
  Bu varsayılan işleyerek değiştirebileceğiniz <xref:System.ServiceModel.MessageContractMemberAttribute.Name%2A?displayProperty=nameWithType> ve <xref:System.ServiceModel.MessageContractMemberAttribute.Namespace%2A?displayProperty=nameWithType> (üst sınıfı üzerinde <xref:System.ServiceModel.MessageHeaderAttribute> ve <xref:System.ServiceModel.MessageBodyMemberAttribute> öznitelikleri).  
   
- Aşağıdaki kod örneğinde sınıfında göz önünde bulundurun.  
+ Aşağıdaki kod örneği sınıfında göz önünde bulundurun.  
   
 ```csharp  
 [MessageContract]  
@@ -126,7 +126,7 @@ public class BankingTransaction
 }  
 ```  
   
- Bu örnekte, `IsAudited` başlığıdır kodu ve temsil eden gövde bölümü belirtilen ad alanında `theData` üye ada sahip bir XML öğesi ile temsil edilir `transactionData`. Bu ileti sözleşmesi için oluşturulan XML gösterir.  
+ Bu örnekte, `IsAudited` başlığıdır kod ve gövde bölümünü temsil eden içinde belirtilen ad alanında `theData` üye bir XML öğesi adı ile temsil edilir `transactionData`. Bu ileti anlaşması için oluşturulan XML gösterir.  
   
 ```xml  
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">  
@@ -142,28 +142,28 @@ public class BankingTransaction
 </s:Envelope>  
 ```  
   
-## <a name="controlling-whether-the-soap-body-parts-are-wrapped"></a>SOAP gövdesi bölümleri Sarmalanan olup olmadığını denetleme  
- Varsayılan olarak, SOAP gövdesi bölümleri Sarmalanan bir öğesiyle iç serileştirilir. Örneğin, aşağıdaki gösterir kod `HelloGreetingMessage` adından oluşturulan sarmalayıcı öğeyi <xref:System.ServiceModel.MessageContractAttribute> için ileti sözleşmesi türü `HelloGreetingMessage` ileti.  
+## <a name="controlling-whether-the-soap-body-parts-are-wrapped"></a>SOAP gövdesi bölümleri sarmalanmış olup olmadığını denetleme  
+ Varsayılan olarak, SOAP gövdesi bölümleri içinde sarmalanmış bir öğe olarak serileştirilir. Örneğin, aşağıdaki kod gösterir `HelloGreetingMessage` adından oluşturulmuş sarmalayıcı öğe <xref:System.ServiceModel.MessageContractAttribute> için ileti anlaşması türü `HelloGreetingMessage` ileti.  
   
  [!code-csharp[MessageHeaderAttribute#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/messageheaderattribute/cs/services.cs#3)]
  [!code-vb[MessageHeaderAttribute#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/messageheaderattribute/vb/services.vb#3)]  
   
- Kapsayıcı öğe gizlemek için ayarlanmış <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> özelliğine `false`. Ad ve sarmalayıcı öğesinin ad alanı denetlemek için kullandığı <xref:System.ServiceModel.MessageContractAttribute.WrapperName%2A> ve <xref:System.ServiceModel.MessageContractAttribute.WrapperNamespace%2A> özellikleri.  
+ Sarmalayıcı öğe bastırmak için ayarlanmış <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> özelliğini `false`. Ad ve sarmalayıcı öğe ad alanı denetlemek için kullanın <xref:System.ServiceModel.MessageContractAttribute.WrapperName%2A> ve <xref:System.ServiceModel.MessageContractAttribute.WrapperNamespace%2A> özellikleri.  
   
 > [!NOTE]
->  Birden fazla ileti Gövde bölümünün değil sarılır iletilerinde sahip WS ile uyumlu değil-ı temel Profil 1.1 ve yeni ileti sözleşmeleri tasarlarken önerilmez. Ancak, birden fazla sarmalanmamış ileti Gövde bölümünün belirli belirli birlikte çalışabilirlik senaryolarda sağlamak gerekli olabilir. Birden fazla parça ileti gövdesinde veri iletmek için kullanacaksanız, varsayılan (Sarmalanan) modunu kullanmak için önerilir. Birden fazla ileti üstbilgisi sarmalanmamış iletilerinde sahip tamamen kabul edilebilir.  
+>  Birden fazla ileti Gövde bölümünün değil sarmalanır iletilerinde sahip WS ile uyumlu değil-ı Basic Profile 1.1 ve yeni ileti sözleşmeleri tasarlarken önerilmez. Ancak, birden fazla sarmalanmış halden ileti Gövde bölümünün sahip belirli belirli birlikte çalışabilirlik senaryolarında gerekli olabilir. Birden fazla parça ileti gövdesinde veri iletmek için kullanacaksanız, varsayılan (sarmalanmış) modunu kullanmak için önerilir. Açılmamış iletiler içinde birden fazla ileti üst bilgisi sahip, tamamen kabul edilebilir.  
   
 ## <a name="using-custom-types-inside-message-contracts"></a>İleti sözleşmeleri içinde özel türleri kullanma  
- (XML içinde açık) her bireysel ileti başlığı ve ileti Gövde bölümünün serileştirilir seçilen serileştirme motoruna ileti kullanıldığı için hizmet sözleşmesini kullanma. Varsayılan serileştirme motoruna `XmlFormatter`, bir veri sözleşmesi ya da açıkça olan herhangi bir tür işleyebilir (sahip <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType>) ya da örtük olarak (Basit tür olması, sahip <xref:System.SerializableAttribute?displayProperty=nameWithType>, vb.). Daha fazla bilgi için bkz: [kullanarak veri sözleşmeleri](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+ (XML olarak açık) her ayrı ileti üst bilgisi ve ileti Gövde bölümünün serileştirilmiş ileti kullanıldığı hizmet sözleşmesi için seçilen serileştirme motoruna kullanarak. Varsayılan serileştirme motoruna `XmlFormatter`, bir veri sözleşmesi ya da açıkça sahip herhangi bir türü işleyebilir (sahip <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType>) ya da örtük olarak (ilkel bir tür olan, sahip <xref:System.SerializableAttribute?displayProperty=nameWithType>, vb.). Daha fazla bilgi için [kullanarak veri sözleşmeleri](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
- Önceki örnekte `Operation` ve `BankingTransactionData` türleri, bir veri sözleşmesi olmalıdır ve `transactionDate` seri hale getirilemez çünkü <xref:System.DateTime> bir primitive (ve bu nedenle bir örtük veri sözleşmesi).  
+ Yukarıdaki örnekte, `Operation` ve `BankingTransactionData` türlerinin bir veri sözleşmesi olmalıdır ve `transactionDate` seri hale getirilemez çünkü <xref:System.DateTime> basit bir tür (ve bu nedenle bir örtük veri sözleşmesi).  
   
- Ancak, farklı seri hale getirme altyapısı için mümkün `XmlSerializer`. Bu tür bir geçiş yaparsanız, tüm ileti üstbilgilerini ve gövde bölümleri için kullanılan türleri seri hale getirilebilir kullanarak emin olun `XmlSerializer`.  
+ Ancak, farklı bir seri hale getirme altyapısı için geçiş yapmak olası `XmlSerializer`. Böyle bir geçiş yaparsanız, tüm ileti üstbilgileri ve gövde bölümleri için kullanılan türleri seri hale getirilebilir kullanarak olduğundan emin olmalı `XmlSerializer`.  
   
 ## <a name="using-arrays-inside-message-contracts"></a>İleti sözleşmeleri içinde dizileri kullanma  
  İleti sözleşmeleri iki yolla öğelerinde yineleme dizileri kullanabilirsiniz.  
   
- İlk kullanmaktır bir <xref:System.ServiceModel.MessageHeaderAttribute> veya <xref:System.ServiceModel.MessageBodyMemberAttribute> dizisi üzerinde doğrudan. Bu durumda, bir öğesiyle (diğer bir deyişle, bir üst bilgi veya bir gövde bölümü) birden çok alt öğesi olarak tüm diziyi serileştirilir. Aşağıdaki örnek sınıfında göz önünde bulundurun.  
+ İlk kullanmaktır bir <xref:System.ServiceModel.MessageHeaderAttribute> veya <xref:System.ServiceModel.MessageBodyMemberAttribute> dizi üzerinde doğrudan. Bu durumda, tüm dizi bir öğe (diğer bir deyişle, bir üst bilgi veya bir gövde bölümü) ile birden çok alt öğe olarak serileştirilir. Aşağıdaki örnekte sınıf göz önünde bulundurun.  
   
 ```csharp  
 [MessageContract]  
@@ -175,7 +175,7 @@ public class BankingDepositLog
 }  
 ```  
   
- SOAP üstbilgileri bu sonuçlarında aşağıdakine benzer.  
+ SOAP üstbilgileri bu sonuçlar aşağıdakine benzer.  
   
 ```xml  
 <BankingDepositLog>  
@@ -189,7 +189,7 @@ public class BankingDepositLog
 </BankingDepositLog>  
 ```  
   
- Bu alternatif kullanmaktır <xref:System.ServiceModel.MessageHeaderArrayAttribute>. Bu durumda, her dizi öğesi bağımsız olarak serileştirilmiş ve her dizi öğesi bir üst bilgi, aşağıdakine benzer bulunduğundan.  
+ Bu alternatif kullanmaktır <xref:System.ServiceModel.MessageHeaderArrayAttribute>. Bu durumda, her dizi öğesi bağımsız olarak serileştirilmiş ve her dizi öğesi bir üst bilgi, aşağıdakine benzer olduğundan.  
   
 ```xml  
 <numRecords>3</numRecords>  
@@ -199,29 +199,29 @@ public class BankingDepositLog
 <branchID>20643</branchID>  
 ```  
   
- Dizi girdiler için varsayılan adı üyesine adıdır <xref:System.ServiceModel.MessageHeaderArrayAttribute> öznitelikler uygulanır.  
+ Dizi girişleri için varsayılan adı üyesine adıdır <xref:System.ServiceModel.MessageHeaderArrayAttribute> öznitelikler uygulanır.  
   
- <xref:System.ServiceModel.MessageHeaderArrayAttribute> Özniteliği devraldığı <xref:System.ServiceModel.MessageHeaderAttribute>. Dizi olmayan öznitelikleri özellikleri kümesinin aynısını sahipse, örneğin, sipariş, adı ve üst bilgileri dizisi için ad alanı için tek bir başlık kümesi aynı şekilde ayarlamak mümkün olur. Kullandığınızda `Order` bir dizi özellik, dizinin tamamı için geçerlidir.  
+ <xref:System.ServiceModel.MessageHeaderArrayAttribute> Özniteliğini devraldığı <xref:System.ServiceModel.MessageHeaderAttribute>. Dizi olmayan öznitelikleri aynı özellik kümesini vardır, örneğin sırada, adı ve üst bilgileri dizisi için ad alanı için tek bir başlık kümesi aynı şekilde ayarlamak mümkündür. Kullanırken `Order` bir dizi özelliği, tüm dizi için geçerlidir.  
   
- Uygulayabileceğiniz <xref:System.ServiceModel.MessageHeaderArrayAttribute> yalnızca dizileri, değil koleksiyonlar için.  
+ Uygulayabileceğiniz <xref:System.ServiceModel.MessageHeaderArrayAttribute> yalnızca diziler değil koleksiyonlar için.  
   
 ## <a name="using-byte-arrays-in-message-contracts"></a>İleti sözleşmeleri bayt dizileri kullanma  
- Dizi olmayan özniteliklerle kullanıldığında bayt dizileri (<xref:System.ServiceModel.MessageBodyMemberAttribute> ve <xref:System.ServiceModel.MessageHeaderAttribute>), dizi olarak ancak Base64 ile kodlanmış veriler sonuç XML olarak gösterilen özel bir basit tür olarak kabul edilmediği.  
+ Bayt dizileri, dizi olmayan özniteliklerle kullanıldığında (<xref:System.ServiceModel.MessageBodyMemberAttribute> ve <xref:System.ServiceModel.MessageHeaderAttribute>), diziler olarak ancak Base64 kodlamalı veri elde edilen XML olarak temsil edilen özel bir basit tür olarak değerlendirilir.  
   
- Bayt dizileri dizi özniteliğiyle kullandığınızda <xref:System.ServiceModel.MessageHeaderArrayAttribute>, kullanımdaki seri hale getirici sonuçları bağlıdır. Varsayılan serileştirici ile dizinin her bir bayt için tek bir giriş olarak temsil edilir. Ancak, ne zaman `XmlSerializer` seçili (kullanarak <xref:System.ServiceModel.XmlSerializerFormatAttribute> hizmet sözleşmesi üzerinde), bayt dizileri Base64 veri dizisi veya dizi olmayan öznitelikleri kullanılıp bağımsız olarak kabul edilir.  
+ Bayt dizileri dizi özniteliğiyle kullanırken <xref:System.ServiceModel.MessageHeaderArrayAttribute>, sonuçları kullanımda seri hale getirici bağlıdır. Varsayılan serileştirici ile tek bir giriş için her bir bayt dizisi gösterilir. Ancak, `XmlSerializer` seçildiğinde (kullanarak <xref:System.ServiceModel.XmlSerializerFormatAttribute> hizmet sözleşmesindeki), bayt dizileri dizisi veya dizi olmayan öznitelikler kullanılıp bağımsız olarak verileri Base64 olarak kabul edilir.  
   
-## <a name="signing-and-encrypting-parts-of-the-message"></a>İmzalama ve şifreleme iletinin bölümleri  
- İleti sözleşmesi üstbilgileri ve/veya ileti gövdesini dijital olarak İmzalanabilir ve şifrelenebilir olup olmadığını gösterebilir.  
+## <a name="signing-and-encrypting-parts-of-the-message"></a>İmzalama ve şifreleme ileti bölümlerini  
+ Bir ileti anlaşması, üst bilgiler ve/veya iletinin gövdesi dijital olarak İmzalanabilir ve şifrelenebilir olup olmadığını gösterebilir.  
   
- Bu ayarlayarak yapılır <xref:System.ServiceModel.MessageContractMemberAttribute.ProtectionLevel%2A?displayProperty=nameWithType> özelliği <xref:System.ServiceModel.MessageHeaderAttribute> ve <xref:System.ServiceModel.MessageBodyMemberAttribute> öznitelikleri. Sabit listesi özelliktir <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType> yazın ve ayarlanabilir <xref:System.Net.Security.ProtectionLevel.None> (şifreleme veya imza), <xref:System.Net.Security.ProtectionLevel.Sign> (dijital imza yalnızca), veya <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> (şifreleme ve dijital imza). Varsayılan, <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> değeridir.  
+ Bu ayarı gerçekleştirilir <xref:System.ServiceModel.MessageContractMemberAttribute.ProtectionLevel%2A?displayProperty=nameWithType> özelliği <xref:System.ServiceModel.MessageHeaderAttribute> ve <xref:System.ServiceModel.MessageBodyMemberAttribute> öznitelikleri. Sabit listesi özelliği <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType> yazın ve ayarlanabilir <xref:System.Net.Security.ProtectionLevel.None> (şifreleme veya imza), <xref:System.Net.Security.ProtectionLevel.Sign> (dijital imzası yalnızca), veya <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> (şifreleme ve dijital imza). Varsayılan, <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> değeridir.  
   
- Bu güvenlik özellikleri çalışacak şekilde bağlama ve davranışları düzgün şekilde yapılandırmanız gerekir. Bu güvenlik özellikleri uygun yapılandırma olmadan (örneğin, bir ileti kimlik bilgilerinizi girmeden oturum çalışılıyor) kullanırsanız, doğrulama aynı anda özel durum oluşur.  
+ Bu güvenlik özellikleri çalışacak şekilde bağlama ve davranışları düzgün bir şekilde yapılandırmanız gerekir. (Örneğin, bir ileti kimlik bilgilerinizi sağlamadan kapatmaya çalışırken) uygun bir yapılandırma olmadan bu güvenlik özellikleri kullanırsanız, doğrulamayı zamanında bir özel durum oluşturulur.  
   
- İleti üstbilgilerini koruma düzeyi ayrı ayrı her bir üstbilgisi belirlenir.  
+ İleti üstbilgileri için koruma düzeyi, tek tek her üst bilgisi için belirlenir.  
   
- İleti gövdesi bölümleri için koruma düzeyi, "düşük koruma düzeyi." değerlendirilebilir Gövde gövde bölümlerinin sayısını bağımsız olarak yalnızca bir koruma düzeyi vardır. Gövde koruma düzeyi yüksek tarafından belirlenir <xref:System.ServiceModel.MessageContractMemberAttribute.ProtectionLevel%2A> tüm gövde bölümlerini özellik ayarı. Bununla birlikte, her bir gövde kısmının koruma düzeyini düzeyi gereken gerçek minimum koruma için ayarlamanız gerekir.  
+ İleti gövdesi bölümleri için koruma düzeyi "minimum koruma düzeyi." zorlayıcı olabilir Gövde gövde parçalarının sayısı ne olursa olsun yalnızca bir koruma derecesine sahip. Koruma düzeyi gövdesinin en yüksek tarafından belirlenir <xref:System.ServiceModel.MessageContractMemberAttribute.ProtectionLevel%2A> tüm gövde bölümlerini özelliğin ayarı. Ancak, her bir gövde kısmının koruma düzeyini düzeyi gereken gerçek en küçük koruma için ayarlamanız gerekir.  
   
- Aşağıdaki kod örneğinde sınıfında göz önünde bulundurun.  
+ Aşağıdaki kod örneği sınıfında göz önünde bulundurun.  
   
 ```csharp  
 [MessageContract]  
@@ -236,13 +236,13 @@ public class PatientRecord
 }  
 ```  
   
- Bu örnekte, `recordID` üstbilgi korumalı değil, `patientName` olan `signed`, ve `SSN` imzalı ve şifrelenir. En az bir gövde bölümü `medicalHistory`, sahip <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> uygulanan ve dolayısıyla tüm ileti gövdesi şifrelenir ve imzalanmış rağmen açıklamalar ve tanılama gövde bölümlerinin daha düşük koruma düzeyleri belirtin.  
+ Bu örnekte, `recordID` üstbilgi korunmuyor, `patientName` olduğu `signed`, ve `SSN` imzalanır ve şifrelenmiş. En az bir gövde bölümü, `medicalHistory`, sahip <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> uygulanan ve bu nedenle tüm ileti gövdesi şifrelenir ve imzalanmış olsa da açıklamalar ve tanılama gövde parçalarının daha düşük koruma düzeyleri belirtin.  
   
 ## <a name="soap-action"></a>SOAP eylemi  
- SOAP ve ilgili Web hizmeti standartlarını tanımlamak adlı bir özellik `Action` , olabilir gönderilen her SOAP iletisi için mevcut. İşlem <xref:System.ServiceModel.OperationContractAttribute.Action%2A?displayProperty=nameWithType> ve <xref:System.ServiceModel.OperationContractAttribute.ReplyAction%2A?displayProperty=nameWithType> denetim özelliklerini bu özelliğin değeri.  
+ SOAP ve ilgili Web hizmeti standartlarını adlı bir özellik tanımlayın `Action` , gönderilen her bir SOAP ileti mevcut olabilir. İşlemin <xref:System.ServiceModel.OperationContractAttribute.Action%2A?displayProperty=nameWithType> ve <xref:System.ServiceModel.OperationContractAttribute.ReplyAction%2A?displayProperty=nameWithType> denetim özelliklerini bu özelliğin değeri.  
   
-## <a name="soap-header-attributes"></a>SOAP üstbilgi öznitelikleri  
- SOAP standart üstbilgi bulunabilir aşağıdaki öznitelikleri tanımlar:  
+## <a name="soap-header-attributes"></a>SOAP üstbilgisi öznitelikleri  
+ SOAP standart bir üstbilgi varsa aşağıdaki öznitelikleri tanımlar:  
   
 -   `Actor/Role` (`Actor` SOAP 1.1 `Role` SOAP 1.2)  
   
@@ -250,9 +250,9 @@ public class PatientRecord
   
 -   `Relay`  
   
- `Actor` Veya `Role` özniteliği, verili bir üstbilginin amaçlanmıştır düğümü Tekdüzen Kaynak Tanımlayıcısı'nı (URI) belirtir. `MustUnderstand` Özniteliği, üst bilgi işlem düğümü, anlamak olup olmadığını belirtir. `Relay` Özniteliği, üstbilgi aşağı akış düğümlerine geçirilmesine izin olup olmadığını belirtir. WCF gerçekleştirmez bu özniteliklerin gelen iletileri üzerinde herhangi bir işlem dışında `MustUnderstand` özniteliği, bu konunun devamındaki "İleti sözleşmesi sürümü oluşturma" bölümünde belirtildiği gibi. Ancak, gerekirse aşağıdaki açıklama olduğu gibi bu öznitelikler okumasına ve yazmasına sağlar.  
+ `Actor` Veya `Role` öznitelik sağlanan üstbilgisi amaçlanmıştır düğümünün Tekdüzen Kaynak Tanımlayıcısı (URI) belirtir. `MustUnderstand` Özniteliği, üst bilgi işlem düğümü, anlamak olup olmadığını belirtir. `Relay` Özniteliği, aşağı akış düğümlerine geçirilmesine üstbilgi olup olmadığını belirtir. WCF gerçekleştirmez gelen iletiler bu özniteliklerin herhangi bir işleme dışında `MustUnderstand` özniteliği, bu konunun ilerleyen bölümlerindeki "İleti sözleşmesi sürümü oluşturma" bölümünde belirtildiği gibi. Ancak, bu öznitelik aşağıdaki açıklama olduğu gibi gerekli olarak okuyup sağlar.  
   
- İleti gönderirken bu öznitelikler varsayılan olarak gösterilen değil. Bunu iki şekilde değiştirebilirsiniz. İlk olarak, statik olarak öznitelikleri için istenen tüm değerleri değiştirerek ayarladığınız <xref:System.ServiceModel.MessageHeaderAttribute.Actor%2A?displayProperty=nameWithType>, <xref:System.ServiceModel.MessageHeaderAttribute.MustUnderstand%2A?displayProperty=nameWithType>, ve <xref:System.ServiceModel.MessageHeaderAttribute.Relay%2A?displayProperty=nameWithType> aşağıdaki kod örneğinde gösterildiği gibi özellikler. (Unutmayın hiçbir `Role` özellik; ayarı <xref:System.ServiceModel.MessageHeaderAttribute.Actor%2A> özelliği yayar `Role` SOAP 1.2 kullanıyorsanız özniteliği).  
+ Bir ileti gönderirken, varsayılan olarak bu öznitelikler yayılan değil. Bunu iki şekilde değiştirebilirsiniz. İlk olarak, statik olarak öznitelikleri için istenen tüm değerleri değiştirerek ayarlayabilir <xref:System.ServiceModel.MessageHeaderAttribute.Actor%2A?displayProperty=nameWithType>, <xref:System.ServiceModel.MessageHeaderAttribute.MustUnderstand%2A?displayProperty=nameWithType>, ve <xref:System.ServiceModel.MessageHeaderAttribute.Relay%2A?displayProperty=nameWithType> aşağıdaki kod örneğinde gösterildiği gibi özellikleri. (Unutmayın hiçbir `Role` özelliği; ayarı <xref:System.ServiceModel.MessageHeaderAttribute.Actor%2A> özelliğini yayan `Role` SOAP 1.2 kullanıyorsanız özniteliği).  
   
 ```csharp  
 [MessageContract]  
@@ -264,7 +264,7 @@ public class BankingTransaction
 }  
 ```  
   
- Bu öznitelikler denetlemek için ikinci yol dinamik olarak kodudur. Bu istenen üstbilgi türünde kaydırma tarafından elde <xref:System.ServiceModel.MessageHeader%601> türü (Bu tür genel olmayan sürümüyle karıştırır değil emin olun) ve türü ile birlikte kullanarak <xref:System.ServiceModel.MessageHeaderAttribute>. Daha sonra özellikleri kullanabileceğinizi <xref:System.ServiceModel.MessageHeader%601> aşağıdaki kod örneğinde gösterildiği gibi SOAP öznitelikleri ayarlamak için.  
+ Bu öznitelikler denetlemek için ikinci yol dinamik olarak kodudur. Bu istenen üst bilgi türünde sarmalama tarafından elde <xref:System.ServiceModel.MessageHeader%601> türü (Bu tür genel olmayan sürümüne sahip karıştırmamaya dikkat edin) ve türü ile birlikte kullanarak <xref:System.ServiceModel.MessageHeaderAttribute>. Ardından özellikleri kullanabileceğinizi <xref:System.ServiceModel.MessageHeader%601> aşağıdaki kod örneğinde gösterildiği gibi SOAP öznitelikleri ayarlanamadı.  
   
 ```csharp  
 [MessageContract]  
@@ -282,7 +282,7 @@ bt.IsAudited.Actor="http://auditingservice.contoso.com";
 bt.IsAudited.MustUnderstand=true;  
 ```  
   
- Dinamik ve statik denetimi düzenekleri kullanırsanız, statik ayarları varsayılan olarak kullanılır, ancak daha sonra dinamik mekanizmasını kullanarak aşağıdaki kodda gösterildiği gibi geçersiz kılınabilir.  
+ Hem dinamik ve statik denetimi düzenekleri kullanırsanız, statik ayarlarını varsayılan olarak kullanılır, ancak daha sonra dinamik mekanizmasını kullanarak aşağıdaki kodda gösterildiği gibi geçersiz kılınabilir.  
   
 ```csharp  
 [MessageHeader(MustUnderstand=true)] public MessageHeader<Person> documentApprover;  
@@ -292,20 +292,20 @@ bt.documentApprover = new MessageHeader<Person>();
 bt.documentApprover.MustUnderstand = false; // override the static default of 'true'  
 ```  
   
- Dinamik öznitelik denetimi ile yinelenen başlıkları oluşturma, aşağıdaki kodda gösterildiği olarak izin verilir.  
+ Dinamik öznitelik denetimiyle yinelenen başlıkları oluşturma, aşağıdaki kodda gösterildiği gibi izin.  
   
 ```csharp  
 [MessageHeaderArray] public MessageHeader<Person> documentApprovers[];  
 ```  
   
- Alıcı tarafında SOAP özniteliklerden okuma yalnızca varsa yapılabilir <xref:System.ServiceModel.MessageHeader%601> sınıfı türü üstbilgisinde için kullanılır. İncelemek `Actor`, `Relay`, veya `MustUnderstand` başlık özelliklerini <xref:System.ServiceModel.MessageHeader%601> alınan iletide öznitelik ayarlarını bulmak için türü.  
+ Alıcı tarafında bu SOAP öznitelikleri okuma yalnızca varsa yapılabilir <xref:System.ServiceModel.MessageHeader%601> sınıfı türü üst bilgisi için kullanılır. İnceleme `Actor`, `Relay`, veya `MustUnderstand` başlık özelliklerini <xref:System.ServiceModel.MessageHeader%601> alınan iletide öznitelik ayarlarını bulmak için yazın.  
   
- Bir ileti alındı ve geri gönderilen zaman SOAP özniteliği ayarları yalnızca üst bilgilerinin gidiş dönüş gidin <xref:System.ServiceModel.MessageHeader%601> türü.  
+ Bir ileti alındı ve geri gönderilen, SOAP özniteliği yalnızca üst bilgilerinin gidiş dönüş gidin <xref:System.ServiceModel.MessageHeader%601> türü.  
   
-## <a name="order-of-soap-body-parts"></a>SOAP gövdesi bölümleri sırasını  
- Bazı durumlarda, gövde bölümlerinin sırasını denetlemek gerekebilir. Gövde öğelerin sırasını varsayılan olarak alfabetik ancak tarafından denetlenen <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> özelliği. Bu özellik olarak aynı semantiklerine sahip <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A?displayProperty=nameWithType> devralma senaryolarda (ileti sözleşmeleri, temel türü gövdesi üyeleri önce türetilen tür gövde üyeleri sıralanmamış) davranış dışında özelliği. Daha fazla bilgi için bkz: [veri üye sırası](../../../../docs/framework/wcf/feature-details/data-member-order.md).  
+## <a name="order-of-soap-body-parts"></a>SOAP gövdesi bölümleri sırası  
+ Bazı durumlarda, gövde bölümlerinin sırasını denetlemek için gerekebilir. Gövde öğelerin sırasını varsayılan olarak alfabetik kullanılır, ancak tarafından denetlenen <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> özelliği. Bu özellik ile aynı semantiklere sahip <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A?displayProperty=nameWithType> devralma senaryolarda (ileti sözleşmeleri, temel tür gövdesi üyeler türetilmiş tür gövdesi üyeleri önce sıralanmamış) davranışı dışında bir özellik. Daha fazla bilgi için [veri üye sırası](../../../../docs/framework/wcf/feature-details/data-member-order.md).  
   
- Aşağıdaki örnekte, `amount` alfabetik olarak ilk olduğundan normal olarak ilk gelecektir. Ancak, <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A> özelliği, üçüncü yerine koyar.  
+ Aşağıdaki örnekte, `amount` alfabetik olarak ilk olduğundan normal olarak ilk gelecektir. Ancak, <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A> özelliği onu üçüncü konumuna koyar.  
   
 ```csharp  
 [MessageContract]  
@@ -319,26 +319,26 @@ public class BankingTransaction
 ```  
   
 ## <a name="message-contract-versioning"></a>İleti sözleşmesi sürümü oluşturma  
- Bazen, ileti sözleşmeleri değiştirmeniz gerekebilir. Örneğin, uygulamanızın yeni bir sürümünü iletiye ek üstbilgi ekleyebilir. Ardından, gelen yeni sürümü eski gönderirken, sistem bir ek üstbilgi yanı sıra ile üstbilgisi eksik ters yönde geçerken ilgilenmeniz gerekir.  
+ Zaman zaman ileti anlaşmaları değiştirmeniz gerekebilir. Örneğin, uygulamanızın yeni bir sürümünü iletiye ek bir üst bilgisi ekleyebilir. Ardından, yeni sürümünden eski gönderirken, sistem bir ek üst bilgisi, yanı sıra üst bilgisi eksik diğer yönde geçerken ilgilenmesi gerekir.  
   
- Sürüm üstbilgilerini aşağıdaki kurallar geçerli olur:  
+ Sürüm üst bilgileri için aşağıdaki kurallar geçerlidir:  
   
--   WCF eksik üstbilgileri nesne değildir — varsayılan değerlerine karşılık gelen üyeleri bırakılır.  
+-   WCF eksik üst nesne değildir — varsayılan değerlerine karşılık gelen üyeleri bırakılır.  
   
--   WCF da beklenmeyen fazladan üstbilgiler yok sayar. Ek üstbilgi varsa bu kuralın tek özel durum olan bir `MustUnderstand` özniteliğini `true` gelen SOAP iletisi — anlaşılmalıdır bir üstbilgi işlenemediği için bu durumda, bir özel durum oluşur.  
+-   WCF da beklenmeyen fazladan üst bilgiler yok sayar. Ek üstbilgi varsa bu kuralın tek özel durum olan bir `MustUnderstand` özniteliğini `true` gelen SOAP iletisi — bu durumda, anlaşılması gereken bir üstbilgi işlenemediği için bir özel durum oluşturulur.  
   
- İleti gövdeleri sahip benzer sürüm oluşturma kuralları — eksik ve ek İleti gövde bölümü yok sayılır.  
+ İleti gövdeleri benzer sürüm kurallara sahiptir — hem eksik hem de ek ileti gövdesi bölümü yok sayılır.  
   
-## <a name="inheritance-considerations"></a>Devralma hakkında önemli noktalar  
- Temel türü bir ileti sözleşmesi de sahip olduğu sürece başka bir türden bir ileti sözleşmesi türü devralabilirsiniz.  
+## <a name="inheritance-considerations"></a>Devralma konuları  
+ Temel türü bir ileti anlaşması de sahip olduğu sürece bir ileti anlaşması türü başka türden devralabilir.  
   
- Oluşturma veya diğer ileti sözleşme türlerinden devralan bir ileti sözleşmesi türü kullanarak ileti erişme, aşağıdaki kurallar geçerlidir:  
+ Oluşturma veya diğer ileti anlaşması türlerinden devralan bir ileti anlaşması türü kullanarak ileti erişme, aşağıdaki kurallar geçerlidir:  
   
--   Tüm devralma hiyerarşisinde iletisi üstbilgilerinin birlikte ileti üstbilgilerini kümesini oluşturmak için toplanır.  
+-   İleti üst bilgilerinde devralma hiyerarşisindeki tüm birlikte eksiksiz bir ileti üstbilgileri listesi oluşturmak için toplanır.  
   
--   Tüm devralma hiyerarşisi içinde ileti gövdesi parçalarını birlikte tam ileti gövdesini form için toplanır. Gövde bölümlerinin normal sıralama kurallara göre sıralanır (tarafından <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> özelliği ve ardından alfabetik), hiçbir göreli kendi yerleştirmek için devralma hiyerarşisi. İleti gövde bölümlerinin birden çok devralma ağacında düzeylerinde gerçekleştiği ileti sözleşme devralma kullanımı kesinlikle önerilmez. Bir taban sınıf ve türetilmiş bir sınıf bir üstbilgi veya aynı ada sahip bir gövde bölümü tanımlarsanız, çoğu temel sınıfından üye Bu üstbilgi veya gövde bölümü değeri depolamak için kullanılır.  
+-   İleti gövde bölümlerinin devralma hiyerarşisindeki tüm birlikte tam ileti gövdesi oluşturmak için toplanır. Gövde parçalarının normal sıralama kurallara göre sıralanır (tarafından <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> özelliği ve ardından alfabetik), bunun yerine Devralma Hiyerarşisi Hiçbir ilgisi olan. İleti gövdesi bölümleri birden çok devralma ağacını düzeylerinde nerede meydana ileti anlaşma devralma kullanarak kesinlikle önerilmez. Bir temel sınıf ve türetilen sınıf bir üst bilgi veya aynı ada sahip bir gövde bölümü tanımlarsanız, en temel sınıftan üye bu üst bilgi veya gövde bölümü değerini depolamak için kullanılır.  
   
- Aşağıdaki kod örneğinde sınıflarda göz önünde bulundurun.  
+ Aşağıdaki kod örneği sınıflarda göz önünde bulundurun.  
   
 ```csharp  
 [MessageContract]  
@@ -356,31 +356,31 @@ public class PatientRecord : PersonRecord
 }  
 ```  
   
- `PatientRecord` Sınıfı açıklayan bir ileti adlı bir üstbilgiyle `ID`. Üstbilgi karşılık gelen `personID` ve `patientID` üye, temel çoğu üyesi seçilir olduğundan. Bu nedenle, `patientID` alandır gereksiz bu durumda. İleti gövdesini içeren `diagnosis` öğesi arkasından `patientName` öğesi alfabetik olduğu için. Örnek kesinlikle önerilmez bir desen gösterdiğine dikkat edin: hem temel hem de türetilmiş ileti sözleşmeleri ileti gövdesi bölümden oluşur.  
+ `PatientRecord` Sınıfı olarak adlandırılan bir üstbilgiyle bir ileti açıklar `ID`. Üst bilgi karşılık gelen `personID` ve `patientID` üye, temel en üyesinin seçildiği için. Bu nedenle, `patientID` gereksiz bu durumda olan alan. İleti gövdesini içeren `diagnosis` öğesi tarafından izlenen `patientName` öğesi, çünkü, alfabetik olarak sıralayın. Örnek kesinlikle önerilmez bir desen gösterdiğine dikkat edin: hem temel hem de türetilmiş ileti sözleşmeleri, ileti gövdesi bölümden oluşur.  
   
 ## <a name="wsdl-considerations"></a>WSDL konuları  
- Web Hizmetleri Açıklama Dili (WSDL) sözleşme ileti sözleşmeleri kullanan bir hizmetinden oluştururken, tüm ileti sözleşmesi özellikleri elde edilen WSDL içinde yansıtılır hatırlamak önemlidir. Aşağıdaki noktaları göz önünde bulundurun:  
+ Web Hizmetleri Açıklama Dili (WSDL) sözleşmesi ileti sözleşmeleri kullanan bir hizmetten oluştururken, tüm ileti anlaşması özellikleri elde edilen WSDL içinde yansıtılır unutmamak önemlidir. Aşağıdaki noktaları göz önünde bulundurun:  
   
--   WSDL üstbilgileri dizisi kavramı hızlı olamaz. İletileri kullanarak üstbilgileri bir dizi oluşturulurken <xref:System.ServiceModel.MessageHeaderArrayAttribute>, sonuçta elde edilen WSDL dizi yerine yalnızca bir üstbilgi yansıtır.  
+-   WSDL, üst bilgiler bir dizi kavramı hızlı olamaz. İleti üst bilgileri kullanarak bir dizi oluştururken <xref:System.ServiceModel.MessageHeaderArrayAttribute>, dizi yerine yalnızca bir üst bilgi elde edilen WSDL yansıtır.  
   
 -   Sonuçta elde edilen WSDL belgesinde bazı koruma düzeyi bilgileri yansıtmaz.  
   
--   WSDL içinde oluşturulan ileti türü ileti sözleşme türü sınıf adı ile aynı ada sahiptir.  
+-   WSDL içinde oluşturulan ileti türü, ileti anlaşması türü sınıf adı ile aynı ada sahiptir.  
   
--   Birden çok işlemlerinde aynı iletiyi kullanarak sözleşme, birden çok ileti türlerini WSDL belgesinde üretilir. Adları "3", numaraları "2" ekleyerek ve benzeri sonraki kullanımlar için benzersiz yapılır. Geri WSDL içe aktarırken, birden çok ileti sözleşme türleri oluşturulur ve adlarını dışında aynıdır.  
+-   Birden çok ileti türü, aynı iletiyi kullanarak sözleşme, birden çok işlemlerinde, WSDL belgesinde üretilir. Sayı "2", "3" ekleyerek ve sonraki kullanımlar için vb. adları benzersiz yapılır. WSDL geri alırken, birden çok ileti anlaşması türleri oluşturulur ve bunların adları hariç olmak üzere aynıdır.  
   
-## <a name="soap-encoding-considerations"></a>SOAP konuları kodlama  
- WCF eski SOAP kodlama stilini XML kullanmanıza olanak tanır ancak kullanımı önerilmez. Bu stili kullanırken (ayarlayarak `Use` özelliğine `Encoded` üzerinde <xref:System.ServiceModel.XmlSerializerFormatAttribute?displayProperty=nameWithType> hizmet sözleşmesini uygulanan), aşağıdaki ek maddeler geçerlidir:  
+## <a name="soap-encoding-considerations"></a>SOAP değerlendirmeleri kodlama  
+ WCF eski SOAP XML stil kodlama kullanmanıza olanak tanır ancak kullanımı önerilmez. Bu stil kullanırken (ayarlayarak `Use` özelliğini `Encoded` üzerinde <xref:System.ServiceModel.XmlSerializerFormatAttribute?displayProperty=nameWithType> hizmet sözleşmesi için uygulanan), ek aşağıdaki maddeler geçerlidir:  
   
--   İleti üstbilgilerini desteklenmez; Bu öznitelik anlamına <xref:System.ServiceModel.MessageHeaderAttribute> ve dizi öznitelik <xref:System.ServiceModel.MessageHeaderArrayAttribute> SOAP kodlama ile uyumlu değil.  
+-   İleti üstbilgilerini desteklenmez; Bu öznitelik anlamına <xref:System.ServiceModel.MessageHeaderAttribute> ve dizisi özniteliği <xref:System.ServiceModel.MessageHeaderArrayAttribute> SOAP kodlamasına ile uyumlu değildir.  
   
--   İleti sözleşmesi, diğer bir deyişle, sarmalanmamış varsa özelliği <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> ayarlanır `false`, ileti sözleşmesi yalnızca bir gövde bölümü olabilir.  
+-   İleti sözleşmesi, diğer bir deyişle, sarmalanmamış ise özellik <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> ayarlanır `false`, ileti anlaşması yalnızca bir gövde bölümü olabilir.  
   
--   İstek ileti sözleşmesi için sarmalayıcı öğesi adını, işlem adı eşleşmelidir. Kullanım `WrapperName` bu ileti sözleşmesi özelliği.  
+-   İstek ileti anlaşması için sarmalayıcı öğe adı, işlem adı eşleşmelidir. Kullanım `WrapperName` ileti anlaşması için bu özelliği.  
   
--   Yanıt ileti sözleşmesi için kapsayıcı öğe adını 'Yanıtıyla' sonekine işlemin adı ile aynı olması gerekir. Kullanım <xref:System.ServiceModel.MessageContractAttribute.WrapperName%2A> bu ileti sözleşmesi özelliği.  
+-   Yanıt ileti anlaşması için sarmalayıcı öğe adı, 'Response' tarafından ve sonra işlemin adıyla aynı olmalıdır. Kullanım <xref:System.ServiceModel.MessageContractAttribute.WrapperName%2A> ileti anlaşması için bu özelliği.  
   
--   SOAP kodlama nesne başvuruları korur. Örneğin, aşağıdaki kodu göz önünde bulundurun.  
+-   SOAP kodlamasına nesne başvuruları korur. Örneğin, aşağıdaki kodu düşünün.  
   
     ```csharp  
     [MessageContract(WrapperName="updateChangeRecord")]  
@@ -407,10 +407,10 @@ public class PatientRecord : PersonRecord
     cr.changedTo=p;  
     ```  
   
- İletinin SOAP kodlama, kullanılarak seri hale getirme sonra `changedFrom` ve `changedTo` kendi kopyalarını içermeyen `p`, ancak bunun yerine iç kopyayı işaret `changedBy` öğesi.  
+ İletinin SOAP kodlaması kullanarak seri hale getirme sonra `changedFrom` ve `changedTo` kendi kopyalarını içermeyen `p`, ancak bunun yerine iç kopyayı işaret `changedBy` öğesi.  
   
 ## <a name="performance-considerations"></a>Başarım Değerlendirmeleri  
- Her ileti başlığı ve ileti Gövde bölümünün bağımsız olarak diğer serileştirilir. Bu nedenle, aynı ad alanları yeniden her başlık ve gövde bölümü için bildirilebilir. Özellikle Tel üzerinde iletinin boyutunu bakımından performansını artırmak için birden çok üst bilgiler ve gövde bölümlerinin tek bir üstbilgi veya gövde bölümüne birleştirin. Örneğin, aşağıdaki kodu yerine:  
+ Her ileti üst bilgisi ve ileti Gövde bölümünün diğerlerinden bağımsız olarak seri hale getirilir. Bu nedenle, aynı ad alanları yeniden her başlık ve gövde bölümü için bildirilebilir. Özellikle Tel üzerinde ileti boyutu bakımından performansı artırmak için tek bir üst bilgi veya gövde bölümüne birden çok üstbilgi ve gövde parçalarının birleştirin. Örneğin, aşağıdaki kodu yerine:  
   
 ```csharp  
 [MessageContract]  
@@ -443,9 +443,9 @@ public class OperationDetails
 ```  
   
 ### <a name="event-based-asynchronous-and-message-contracts"></a>Olay tabanlı zaman uyumsuz ve ileti sözleşmeleri  
- Olay tabanlı zaman uyumsuz modeli için tasarım yönergeleri birden fazla değer döndürülürse, tek bir değer olarak döndürülen durum `Result` özelliği ve diğerleri döndürülür özellikleri olarak üzerinde <xref:System.EventArgs> nesnesi. Bunun bir sonucu olduğundan, bu, istemci olay tabanlı zaman uyumsuz komut seçeneklerini kullanarak meta verilerini alır ve birden fazla değer, varsayılan işlemi döndürürse <xref:System.EventArgs> nesnesi döndüren bir değer olarak `Result` özelliği ve geri kalan özelliklerini <xref:System.EventArgs> nesnesi.  
+ Olay tabanlı zaman uyumsuz model için tasarım yönergeleri birden fazla değer döndürmüyorsa, bir değer olarak döndürülen durum `Result` özelliği ve diğerleri döndürülür özellikleri olarak üzerinde <xref:System.EventArgs> nesne. Bunun bir sonucu olduğundan, bu, bir istemci, olay tabanlı zaman uyumsuz komut seçeneklerini kullanarak meta verilerini içeri aktarır ve işlemin birden fazla değer, varsayılan döndürürse <xref:System.EventArgs> nesnesini bir değer olarak döndürür `Result` özelliği ve kalan özelliklerini <xref:System.EventArgs> nesne.  
   
- İleti nesnesi olarak almak istiyorsanız `Result` özelliği ve bu nesne üzerinde özellikleri kullanma gibi döndürülen değerlere sahip `/messageContract` komut seçeneği. Bu olarak yanıt iletisi döndüren bir imza oluşturur `Result` özellikte <xref:System.EventArgs> nesnesi. Tüm iç dönüş değerleri yanıt iletisi nesnesi sonra özellikleridir.  
+ İleti nesnesi olarak almak istiyorsanız `Result` özelliği ve o nesnenin özellikleri olarak döndürülen değerlerin `/messageContract` seçeneği komutu. Bu yanıt iletisi olarak döndüren bir imza oluşturur `Result` özelliği <xref:System.EventArgs> nesne. Tüm iç dönüş değerleri ardından yanıt iletisi nesnenin özellikleridir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Veri Anlaşmalarını Kullanma](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  

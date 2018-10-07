@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - client application services, configuring
 ms.assetid: 34a8688a-a32c-40d3-94be-c8e610c6a4e8
-ms.openlocfilehash: a65c216397f240b77eb81f88d8f2a2da122e1ccf
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 6f754a2a66187ac94d31d0d5a3a665c969652d26
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861630"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48846519"
 ---
 # <a name="how-to-configure-client-application-services"></a>Nasıl Yapılır: İstemci Uygulama Hizmetlerini Yapılandırma
 Bu konu Visual Studio'nun nasıl kullanılacağını açıklar **Proje Tasarımcısı** etkinleştirmek ve istemci uygulama hizmetleri yapılandırmak için. İstemci uygulama Hizmetleri kullanıcıları doğrulamak ve mevcut bir kullanıcı rolleri ve ayarlarını almak için kullanabileceğiniz [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] uygulama hizmeti. Yapılandırmadan sonra etkin hizmetler uygulama kodunuzda açıklandığı erişebileceğiniz [istemci uygulama servislerine genel bakış](../../../docs/framework/common-client-technologies/client-application-services-overview.md). Hakkında daha fazla bilgi için [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] uygulama hizmetleri [ASP.NET uygulama hizmetlerine genel bakış](https://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
   
- Etkinleştirme ve istemci uygulama servislerini yapılandırma **Hizmetleri** sayfasının **Proje Tasarımcısı**. **Hizmetleri** sayfasına projenizin App.config dosyasında değerlerini güncelleştirir. Erişim için **Proje Tasarımcısı**, kullanın **özellikleri** komutunu **proje** menüsü. Hakkında daha fazla bilgi için **Hizmetleri** sayfasında, bkz: [Hizmetler Sayfası, Proje Tasarımcısı](https://msdn.microsoft.com/library/bb398109).  
+ Etkinleştirme ve istemci uygulama servislerini yapılandırma **Hizmetleri** sayfasının **Proje Tasarımcısı**. **Hizmetleri** sayfasına projenizin App.config dosyasında değerlerini güncelleştirir. Erişim için **Proje Tasarımcısı**, kullanın **özellikleri** komutunu **proje** menüsü. Hakkında daha fazla bilgi için **Hizmetleri** sayfasında, bkz: [Hizmetler Sayfası, Proje Tasarımcısı](/visualstudio/ide/reference/services-page-project-designer).  
   
  Aşağıdaki yordam, istemci uygulama hizmetleri için temel yapılandırmayı gerçekleştirmek açıklar. Gelişmiş yapılandırma seçenekleri, sonraki bölümlerde açıklanmıştır.  
   
@@ -143,7 +143,7 @@ Bu konu Visual Studio'nun nasıl kullanılacağını açıklar **Proje Tasarımc
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [İstemci Uygulama Servisleri](../../../docs/framework/common-client-technologies/client-application-services.md)  
  [İstemci Uygulama Servislerine Genel Bakış](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
- [Hizmetler Sayfası, Proje Tasarımcısı](https://msdn.microsoft.com/library/bb398109)  
+ [Hizmetler Sayfası, Proje Tasarımcısı](/visualstudio/ide/reference/services-page-project-designer)  
  [Hizmetler İçin Gelişmiş Ayarlar İletişim Kutusu](/visualstudio/ide/reference/advanced-settings-for-services-dialog-box)  
  [Nasıl Yapılır: İstemci Uygulama Servisleri ile Kullanıcı Oturum Açma Adını Uygulama](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)  
  [İzlenecek Yol: İstemci Uygulama Servislerini Kullanma](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)  

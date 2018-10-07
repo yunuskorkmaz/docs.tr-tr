@@ -6,20 +6,20 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-ms.openlocfilehash: cc81e7ad45c308f5ecf476641dfd65fe47b36098
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 59b3aa87056cc2d32512c8b9ea68c0a6d5935814
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855721"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48847418"
 ---
 # <a name="endpoint-addresses"></a>Uç Noktası Adresleri
 Her uç nokta bulun ve uç noktayı tanımlamak için kullanılır, ilişkili bir adresi vardır. Bu adres, öncelikle bir Tekdüzen Kaynak Tanımlayıcısı (uç nokta konumu belirten URI), oluşur. Uç nokta adresini Windows Communication Foundation (WCF) programlama modeli tarafından temsil edilir <xref:System.ServiceModel.EndpointAddress> isteğe bağlı içeren sınıf <xref:System.ServiceModel.EndpointAddress.Identity%2A> bitiş noktası diğer uç noktalar tarafından kimlik doğrulaması sağlayan özelliği, Exchange, iletileri ve isteğe bağlı bir dizi <xref:System.ServiceModel.EndpointAddress.Headers%2A> hizmete erişmek için gereken diğer bir SOAP üstbilgileri tanımlayan özellikleri. İsteğe bağlı üst bilgiler ek sağlayın ve daha ayrıntılı tanımlamak veya hizmet uç noktası ile etkileşime geçmek için adresleme bilgi. Bir uç nokta adresini kablo bir WS-Addressing uç nokta başvurusu (EPR) temsil edilir.  
   
 ## <a name="uri-structure-of-an-address"></a>URI bir adresinin yapısı  
- Çoğu taşımalar için URI adresi dört bölümden oluşur. Örneğin, dört bölümden URI'ın http://www.fabrikam.com:322/mathservice.svc/secureEndpoint aşağıda listelenen:  
+ Çoğu taşımalar için URI adresi dört bölümden oluşur. Örneğin, dört bölümden URI'ın `http://www.fabrikam.com:322/mathservice.svc/secureEndpoint` aşağıda listelenen:  
   
--   Düzen: http:  
+-   Düzeni: `http:`
   
 -   Makine: `www.fabrikam.com`  
   
@@ -56,9 +56,9 @@ Her uç nokta bulun ve uç noktayı tanımlamak için kullanılır, ilişkili bi
   
  Örneğin, bir site aşağıdaki temel adresler içerebilir:  
   
--   http://payroll.myorg.com/Service.svc  
+- `http://payroll.myorg.com/Service.svc`
   
--   http://shipping.myorg.com/Service.svc  
+- `http://shipping.myorg.com/Service.svc`
   
  İle [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], AppDomain düzeyinde bir önek filtresi yapılandırma dosyasında belirtirsiniz. Bunu [ \<baseAddressPrefixFilters >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md) önekleri listesini içeren öğe. IIS tarafından sağlanan gelen temel adresler, isteğe bağlı bir ön ek listesini göre filtrelenir. Öneki belirtilmediğinde, varsayılan olarak, tüm adresleri üzerinden geçirilir. Doğrudan geçiş yapılacak bu şema için yalnızca eşleşen temel adres ön eki sonuçları belirterek.  
   
@@ -75,7 +75,7 @@ Her uç nokta bulun ve uç noktayı tanımlamak için kullanılır, ilişkili bi
 </system.serviceModel>  
 ```  
   
- Yukarıdaki örnekte, net.tcp://payroll.myorg.com: 8000 ve http://shipping.myorg.com:8000 aracılığıyla geçirilir, kendi şemaları için yalnızca temel adresler.  
+ Önceki örnekte `net.tcp://payroll.myorg.com:8000` ve `http://shipping.myorg.com:8000` aracılığıyla geçirilir, kendi şemaları için yalnızca temel adresler.  
   
  `baseAddressPrefixFilter` Joker karakterleri desteklemiyor.  
   

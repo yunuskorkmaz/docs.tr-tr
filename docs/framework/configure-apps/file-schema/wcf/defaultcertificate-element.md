@@ -2,18 +2,18 @@
 title: '&lt;defaultCertificate&gt; Öğesi'
 ms.date: 03/30/2017
 ms.assetid: f1ddf364-9a00-45d3-b989-ff381c154ce6
-ms.openlocfilehash: a4af1c6ec452b24634fa50162fa71f069e2451f5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9b99ee36fdb924ea12f3023984a3aa4b590937e8
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751018"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48847860"
 ---
 # <a name="ltdefaultcertificategt-element"></a>&lt;defaultCertificate&gt; Öğesi
-Kullanılacak bir X.509 sertifikası belirtir ne zaman bir hizmeti veya STS sağlamaz anlaşması protokolü aracılığıyla bir.  
+Kullanılacak olan X.509 sertifikasını belirtir, STS veya hizmetin sağlamadığı anlaşma protokolü aracılığıyla.  
   
  \<system.ServiceModel>  
-\<davranışları >  
+\<davranışlar >  
 endpointBehaviors bölümü  
 \<davranışı >  
 \<clientCredentials >  
@@ -30,40 +30,40 @@ x509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
- Öznitelikler, alt öğelerini ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır  
+ Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|findValue|Dize. Aranacak değer.|  
+|findValue|dize. Aranacak değer.|  
 |X509FindType|Sabit listesi. Aranacak sertifika alanlardan biri.|  
-|storeLocation|Sabit listesi. İki sistem birini aramak için konuma depolayın.|  
-|storeName|Sabit listesi. Sistem aramak için depolar.|  
+|storeLocation|Sabit listesi. İki sistem depolama biri Aranacak Konum.|  
+|storeName|Sabit listesi. Aranacak bir sistemin depolar.|  
   
 ## <a name="findvalue-attribute"></a>findValue özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Dize|Değer (X509FindType özniteliği tarafından belirtilen) alan bağlıdır Aranmakta. Örneğin, bir parmak izi için arama değeri bir onaltılık sayı dizesi olması gerekir.|  
+|Dize|Değer (X509FindType özniteliği tarafından belirtilen) alan bağlıdır Aranan. Örneğin, bir parmak izi için arama değeri bir dize onaltılık bir sayı olmalıdır.|  
   
 ## <a name="x509findtype-attribute"></a>x509FindType özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Sabit Listesi|Değerler şunlardır: FindByThumbprint, FindBySubjectName, FindBySubjectDistinguishedName, FindByIssuerName, FindByIssuerDistinguishedName, FindBySerialNumber, FindByTimeValid, FindByTimeNotYetValid, FindBySerialNumber, FindByTimeExpired, FindByTemplateName, FindByApplicationPolicy, FindByCertificatePolicy, FindByExtension, FindByKeyUsage, FindBySubjectKeyIdentifier.|  
+|Sabit Listesi|Değerler: FindByThumbprint, FindBySubjectName, FindBySubjectDistinguishedName, FindByIssuerName, FindByIssuerDistinguishedName, FindBySerialNumber, FindByTimeValid, FindByTimeNotYetValid, FindBySerialNumber, FindByTimeExpired, FindByTemplateName, FindByApplicationPolicy, FindByCertificatePolicy, FindByExtension, FindByKeyUsage, FindBySubjectKeyIdentifier.|  
   
 ## <a name="storelocation-attribute"></a>storeLocation özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Sabit Listesi|Currentuser'a veya LocalMachine.|  
+|Sabit Listesi|LocalMachine ya da CurrentUser.|  
   
 ## <a name="storename-attribute"></a>storeName özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Sabit Listesi|Değerler: adres defteri, AuthRoot, sertifika yetkilisi, izin verilmeyen, My, kök, TrustedPeople ve TrustedPublisher.|  
+|Sabit Listesi|Değerler: adres defteri, AuthRoot, CertificateAuthority izin verilmeyen, My, kök ve TrustedPeople TrustedPublisher.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -72,13 +72,13 @@ x509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)|İstemci bir hizmete kimlik doğrulanırken kullanılacak bir sertifika belirtir.|  
+|[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)|İstemci bir hizmete kimlik doğrulaması yapılırken kullanılacak sertifikayı belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Sertifika tabanlı ileti güvenliği kullanan bağlamaları için bu yapılandırma öğesi tarafından belirtilen sertifika hizmet iletileri şifrelemek için kullanılır ve istemciye yanıt imzalama hizmeti tarafından kullanılacak beklenmektedir. Sertifika bir hizmet tarafından belirtildiğinde kullanılacak tek bir sertifika depolar.  
+ Sertifika tabanlı ileti güvenliği kullanan bağlamaları için bu yapılandırma öğesi tarafından belirtilen sertifika hizmeti iletileri şifrelemek için kullanılır ve istemciye yanıt imzalama için hizmet tarafından kullanılmak üzere bekleniyor. Bu sertifika bir hizmet tarafından belirtildiğinde kullanılacak tek bir sertifika depolar.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, URI başlıyorsa uç noktalar için kullanılacak bir sertifika belirtir http://www.contoso.com ve sertifikası anlaşması gerçekleştiren değil tüm diğer uç noktalar için kullanılacak bir sertifika.  
+ Aşağıdaki örnek, URI ile başlayan uç noktalar için kullanılacak sertifikayı belirtir `http://www.contoso.com` ve sertifika anlaşmasını gerçekleştiren değil tüm diğer uç noktalar için kullanılacak bir sertifika.  
   
 ```xml  
 <serviceCertificate>  

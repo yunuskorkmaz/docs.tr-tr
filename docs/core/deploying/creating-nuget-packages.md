@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-cli
-ms.openlocfilehash: 6be94c2e2cef443f69b2d6df7c2d490cb1fb629d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 0be8d302568bc08d2c3dacfdf5738eff4b97d4b2
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44205068"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48848107"
 ---
 # <a name="how-to-create-a-nuget-package-with-cross-platform-tools"></a>Platformlar arası araçlarla NuGet paketi oluşturma
 
@@ -21,7 +21,7 @@ ms.locfileid: "44205068"
 
 Az önce NuGet dağıtmak istediğiniz bir harika yeni kitaplık yazdığınız varsayalım.  Tam olarak bunu yapmak için platformlar arası araçlarla NuGet paketi oluşturabilirsiniz!  Aşağıdaki örnekte adlı bir kitaplığı varsayılır **SuperAwesomeLibrary** hangi hedeflerin `netstandard1.0`.
 
-Geçişli bağımlılıkları varsa, diğer bir deyişle, başka bir projede bağımlı bir proje ile tüm çözümünüz için paketleri geri yüklediğinizden emin olmak ihtiyacınız `dotnet restore` NuGet paketini oluşturmadan önce komutu.  Bunu yapmazsanız sonuçlanır `dotnet pack` düzgün çalışmasını komutu.
+Geçişli bağımlılıkları varsa, diğer bir deyişle, başka bir pakete bağımlı bir proje ile tüm çözümünüz için paketleri geri yüklediğinizden emin olmak ihtiyacınız `dotnet restore` NuGet paketini oluşturmadan önce komutu.  Bunu yapmazsanız sonuçlanır `dotnet pack` düzgün çalışmasını komutu.
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
