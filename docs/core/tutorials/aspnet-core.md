@@ -1,16 +1,16 @@
 ---
-title: ASP.NET Core'u kullanmaya başlama
-description: ASP.NET Core belgeleri eğitimlerine ile ASP.NET Core hakkında daha fazla bilgi.
+title: ASP.NET Core kullanmaya başlama
+description: ASP.NET Core belgelerindeki öğreticiler ile ASP.NET Core hakkında daha fazla bilgi edinin.
 author: tdykstra
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: db2134cb88b088233ae4ff3562d99bef26fa6d90
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d3749152197997575022dea4828a62393369fd83
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33209504"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48840526"
 ---
-# <a name="getting-started-with-aspnet-core"></a><span data-ttu-id="076ca-103">ASP.NET Core'u kullanmaya başlama</span><span class="sxs-lookup"><span data-stu-id="076ca-103">Getting started with ASP.NET Core</span></span>
+# <a name="getting-started-with-aspnet-core"></a><span data-ttu-id="ada77-103">ASP.NET Core kullanmaya başlama</span><span class="sxs-lookup"><span data-stu-id="ada77-103">Getting started with ASP.NET Core</span></span>
 
-<span data-ttu-id="076ca-104">ASP.NET Core web uygulamaları geliştirme hakkında daha fazla öğreticileri için head üzerinden için önerdiğimiz [ASP.NET Core belgeleri](/aspnet/core/).</span><span class="sxs-lookup"><span data-stu-id="076ca-104">For tutorials about developing ASP.NET Core web applications, we suggest you head over to [ASP.NET Core documentation](/aspnet/core/).</span></span>
+<span data-ttu-id="ada77-104">Web uygulamaları ASP.NET Core geliştirme hakkında bir öğretici için bkz: [ASP.NET Core öğreticilerini](/aspnet/core/tutorials).</span><span class="sxs-lookup"><span data-stu-id="ada77-104">For tutorials about developing ASP.NET Core web applications, see [ASP.NET Core Tutorials](/aspnet/core/tutorials).</span></span>
