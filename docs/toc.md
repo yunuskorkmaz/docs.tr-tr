@@ -241,6 +241,7 @@
 ### [C# 6](csharp/whats-new/csharp-6.md)
 ### [C# Sürüm Geçmişi](csharp/whats-new/csharp-version-history.md)
 ### [Dil ile çerçeve arasındaki ilişkiler](csharp/whats-new/relationships-between-language-and-library.md)
+### [Sürüm ve güncelleştirme konusunda dikkat edilmesi gerekenler](csharp/whats-new/version-update-considerations.md)
 <!-- End What's New -->
 ## C# Kavramları
 ### [C# Tür sistemi](csharp/programming-guide/types/index.md)
