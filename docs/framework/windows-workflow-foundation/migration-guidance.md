@@ -3,11 +3,11 @@ title: Geçiş Kılavuzu
 ms.date: 03/30/2017
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
 ms.openlocfilehash: 73488354a807d8bf7d90c97b95f1021d884efd27
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48777964"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850419"
 ---
 # <a name="migration-guidance"></a>Geçiş Kılavuzu
 İçinde [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], Microsoft ikinci ana sürüm Windows Workflow Foundation (WF) yayımladı. [!INCLUDE[wf1](../../../includes/wf1-md.md)] çıkan [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] (Bu System.Workflow.* ad alanlarında türleri dahil; artık WF3 adlandırılır) ve geliştirilmiş içinde [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. WF3 olduğunu da parçası [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], ancak yeni bir iş akışı teknoloji vardır (System.Activities. türlerinde\* ad alanları; WF4 başvurulan). WF4 benimsemek ne zaman düşünürken öncelikle zamanlamasını denetlemek bilmek önemlidir.  

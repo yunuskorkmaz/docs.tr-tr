@@ -11,11 +11,11 @@ ms.assetid: dc5c76cf-7b12-406f-b79c-d1a023ec245d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ae8fbb47986e5baaecb919ce79ae384a8427737a
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48781076"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850484"
 ---
 # <a name="marshaling-data-with-platform-invoke"></a>Platform Çağırma ile Veri Hazırlama
 Yönetilmeyen bir kitaplığından dışa aktarılan işlevleri çağırmak için bir .NET Framework uygulaması yönetilmeyen işlev temsil eden yönetilen kodda bir işlev prototipi gerektirir. Platform sağlayan bir prototip oluşturmak için doğru veri sıralamakta çağırmak, aşağıdakileri yapmanız gerekir:  

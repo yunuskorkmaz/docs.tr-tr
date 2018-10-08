@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: 9f939175a77ff080b37491a36c15edbb8af15933
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: a4a8f33b45fa8433013cfa34fbc55f0db90737c4
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43462470"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850693"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>DataGrid Denetimine Genel Bakış (Windows Forms)
 > [!NOTE]
@@ -90,7 +90,7 @@ Bir DataGrid birden fazla tablo ile verilere bağlı
 |Birden çok ilişkili tabloyla.|Kılavuz üst tablo görüntüleme belirtebilirsiniz veya kılavuz tablolarla seçmek için ağaç görünümünde görüntüleyebilirsiniz. Üst tablodaki kayıtların izin ilgili alt satırları gidin.|  
   
 > [!NOTE]
->  Bir veri kümesindeki tabloları kullanarak ilgili bir <xref:System.Data.DataRelation>.  Ayrıca bkz: [HYPERLINK "http://msdn.microsoft.com/library/dbwcse3d(v=vs.110)" veri kümelerindeki ilişkiler](https://msdn.microsoft.com/library/dbwcse3d\(v=vs.110\)) veya [veri kümelerindeki ilişkiler](https://msdn.microsoft.com/library/dbwcse3d\(v=vs.120\)).  
+> Bir veri kümesindeki tabloları kullanarak ilgili bir <xref:System.Data.DataRelation>. Ayrıca bkz: [veri kümeleri arasında ilişki oluşturma](/visualstudio/data-tools/relationships-in-datasets).
   
  Zaman <xref:System.Windows.Forms.DataGrid> denetimi bir tabloda görüntüleyen ve <xref:System.Windows.Forms.DataGrid.AllowSorting%2A> özelliği `true`, veri tekrar sütun üstbilgilerini tıklatarak. Kullanıcı ayrıca satır ekleme ve hücre düzenleme.  
   

@@ -1,23 +1,23 @@
 ---
 title: lock deyimi (C# Başvurusu)
-description: C# lock deyiminin paylaşılan kaynak iş parçacığı erişimi eşitlemek için kullanın
-ms.date: 08/28/2018
+description: İş parçacığı paylaşılan bir kaynağa erişimi eşitlemek için C# lock deyiminin kullanın
+ms.date: 10/01/2018
 f1_keywords:
 - lock_CSharpKeyword
 - lock
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: 2b6fbfb2f81d7745c4effb9ea0087f34cc872a6c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 802f447e1ae01020fa80fa3048e3783ea24db3d3
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858362"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850107"
 ---
 # <a name="lock-statement-c-reference"></a>lock deyimi (C# Başvurusu)
 
-`lock` Deyimi belirli bir nesne için karşılıklı dışlama kilidini alır, bir deyim bloğunu yürütür ve ardından kilidi serbest bırakır. Kilidi açık tutulduğu sürece kilidi tutan iş parçacığı yeniden alabilir ve kilidi serbest bırakır. Başka bir iş parçacığı kilidi elde edilen engellenir ve kilidi serbest bırakılıncaya kadar bekler.
+`lock` Deyimi belirli bir nesne için karşılıklı dışlama kilidini alır, bir deyim bloğunu yürütür ve ardından kilidi serbest bırakır. Kilidi açık tutulduğu sürece kilidi tutan iş parçacığı yeniden almak ve kilidi serbest bırakır. Başka bir iş parçacığı kilit alınırken gelen engellenir ve kilidi serbest bırakılıncaya kadar bekler.
 
 `lock` Deyimdir biçimi
 
@@ -50,13 +50,11 @@ Kullanamazsınız [await](await.md) gövdesinde anahtar sözcüğü bir `lock` d
 
 ## <a name="remarks"></a>Açıklamalar
 
-İş parçacığı paylaşılan kaynağa erişimi eşitlediğinizde, adanmış Pro instanci objektu kilitleme (örneğin, `private readonly object balanceLock = new object();`) ya da bir kilit nesnesi olarak kodun ilgisiz parçaları tarafından kullanılmak üzere düşüktür, başka bir örneği. Kilitlenme veya kilit Çekişme neden olabilir, farklı paylaşılan kaynaklar için aynı kilit nesne örneğini kullanarak kaçının. Özellikle, kullanmaktan kaçının.
+İş parçacığı paylaşılan bir kaynağa erişmeye eşitlediğinizde, adanmış Pro instanci objektu kilitleme (örneğin, `private readonly object balanceLock = new object();`) ya da bir kilit nesnesi olarak kodun ilgisiz parçaları tarafından kullanılmak üzere düşüktür, başka bir örneği. Kilitlenme veya kilit Çekişme neden olabilir, farklı paylaşılan kaynaklar için aynı kilit nesne örneğini kullanarak kaçının. Özellikle, aşağıdaki nesneleri Kilitle kullanmaktan kaçının:
 
-- `this` (arayanlar tarafından bir kilit olarak kullanılabilir),
-- <xref:System.Type> örnekler (tarafından alınabilir [typeof](typeof.md) işleci veya yansıma),
-- dize değişmez değerleri dahil olmak üzere, dize örnekleri,
-
-nesneleri kilitle.
+- `this`, gibi bir kilit çağıranlar tarafından kullanılabilir.
+- <xref:System.Type> örnekler olanlar tarafından alınabilir olarak [typeof](typeof.md) işleci veya yansıma.
+- dize değişmez değerleri, bu durumda olabileceğinden dahil olmak üzere örnekleri, dize [interned](/dotnet/api/system.string.intern#remarks).
 
 ## <a name="example"></a>Örnek
 

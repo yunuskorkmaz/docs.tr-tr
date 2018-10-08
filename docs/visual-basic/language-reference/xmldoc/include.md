@@ -5,12 +5,12 @@ helpviewer_keywords:
 - include XML tag
 - <include> XML tag
 ms.assetid: ba8e9173-82cd-460b-8938-a075a2dfb36d
-ms.openlocfilehash: da7a6c15c558fc56dbc6a874d4a28c4434f67668
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 0f143f8c023102f44b41e3898f29d18be0083128
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48778711"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48849496"
 ---
 # <a name="ltincludegt-visual-basic"></a>&lt;dahil&gt; (Visual Basic)
 Türler ve üyeler, kaynak kodunuzdaki açıklayan başka bir dosyaya ifade eder.  
@@ -37,7 +37,7 @@ Türler ve üyeler, kaynak kodunuzdaki açıklayan başka bir dosyaya ifade eder
 ## <a name="remarks"></a>Açıklamalar  
  Kullanım `<include>` türlerini açıklayan yorumlar başka bir dosyaya ve kaynak kodunuzu üyelerine başvurmak için etiket. Bu belge açıklamaları doğrudan, kaynak kodu dosyasında yerleştirme için bir alternatifidir.  
   
- `<include>` Etiketini kullanır: W3C XML Path Language (XPath) sürüm 1.0 öneri. Daha fazla bilgi için özelleştirme yolları, `<include>` kullanım kullanılabilir http://www.w3.org/TR/xpath.  
+ `<include>` Etiketini kullanır: W3C XML Path Language (XPath) sürüm 1.0 öneri. Özelleştirme yolları hakkında daha fazla bilgi için `<include>` bakın <https://www.w3.org/TR/xpath>.  
   
 ## <a name="example"></a>Örnek  
  Bu örnekte `<include>` belge açıklamaları üye adlı bir dosyadan içeri aktarmak için etiket `commentFile.xml`.  

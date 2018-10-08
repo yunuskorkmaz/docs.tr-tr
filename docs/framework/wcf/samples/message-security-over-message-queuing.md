@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 329aea9c-fa80-45c0-b2b9-e37fd7b85b38
 author: BrucePerlerMS
 ms.openlocfilehash: 4578f93759379fabe258f6a70e38a9c5d46433dc
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48777821"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850843"
 ---
 # <a name="message-security-over-message-queuing"></a>İleti Kuyruğa Alma ile İleti Güvenliği
 Bu örnek X.509v3 sertifika kimlik doğrulaması için istemci ile WS-güvenlik kullanan ve üzerinde MSMQ sunucusunun X.509v3 sertifikasını kullanarak kimlik doğrulaması gerektiren bir uygulamanın nasıl uygulanacağını gösterir. Güvenlik bazen MSMQ depodaki ileti şifrelenmiş kalmasını sağlamak için daha fazla tercih ve uygulama ileti iletinin kendi kimlik doğrulaması gerçekleştirebilirsiniz.

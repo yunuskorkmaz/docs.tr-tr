@@ -21,11 +21,11 @@ ms.assetid: e993b7c3-087f-45d8-9c02-9dded936d804
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 65bd172d184b1346000c2bc84cb888dfab28bb61
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48777428"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48849457"
 ---
 # <a name="network-tracing-in-the-net-framework"></a>.NET Framework'te Ağ İzleme
 .NET Framework'te ağ izleme, yönetilen uygulama tarafından oluşturulan yöntem çağrıları ve ağ trafiğiyle ilgili bilgilere erişim sağlar. Bu özellik, geliştirilen uygulamalarda hata ayıklanırken ve dağıtılan uygulamalar analiz edilirken yararlı olur. Ağ izleme tarafından sağlanan çıkış, geliştirme zamanı ve üretim ortamında farklı kullanım senaryolarını destekleyecek şekilde özelleştirilebilir.  

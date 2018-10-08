@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 3afa1586-e1b8-473d-8985-c3fc90cf561b
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 549f3dcfd7225937fd04ad2116e2be311687861b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 259d8e0297025d496b3a10c3ef3ec2b3c96cffaa
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47399456"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48849795"
 ---
 # <a name="ltperformancecountergt-element-network-settings"></a>&lt;performanceCounter&gt; öğesi (ağ ayarları)
 Etkinleştirir veya ağ performans sayaçları devre dışı bırakır.  
@@ -54,7 +54,7 @@ Etkinleştirir veya ağ performans sayaçları devre dışı bırakır.
 ## <a name="remarks"></a>Açıklamalar  
  Bu öğe, uygulama yapılandırma dosyası veya makine yapılandırma dosyası (Machine.config) kullanılabilir.  
   
- Ağ performans sayaçları yapılandırma dosyasında kullanılacak etkinleştirilmesi gerekir. Tüm ağ performans sayaçları etkin veya yapılandırma dosyasında tek bir ayarı ile devre dışı. Ağ performans sayaçları tek etkin veya devre dışı. Belirli ağ performans sayaçları hakkında daha fazla bilgi için bkz. [ağ performans sayaçları](https://msdn.microsoft.com/library/d1860235-f643-46ae-846c-ff0ed8b0e3cd).  
+ Ağ performans sayaçları yapılandırma dosyasında kullanılacak etkinleştirilmesi gerekir. Tüm ağ performans sayaçları etkin veya yapılandırma dosyasında tek bir ayarı ile devre dışı. Ağ performans sayaçları tek etkin veya devre dışı. Belirli ağ performans sayaçları hakkında daha fazla bilgi için bkz. [ağ performans sayaçları](../../../../../docs/framework/debug-trace-profile/performance-counters.md#networking).  
   
  Ağ performans sayaçları devre dışı bırakıldı varsayılan değerdir.  
   
@@ -79,4 +79,4 @@ Etkinleştirir veya ağ performans sayaçları devre dışı bırakır.
  <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>  
  <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>  
  [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)  
- [Ağ performans sayaçları](https://msdn.microsoft.com/library/d1860235-f643-46ae-846c-ff0ed8b0e3cd)
+ [Ağ performans sayaçları](../../../../../docs/framework/debug-trace-profile/performance-counters.md#networking)

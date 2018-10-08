@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: Yapılandırma İçinde Hizmet Uç Noktası Oluşturma
 ms.date: 06/16/2016
 ms.assetid: f474e25d-2a27-4f31-84c5-395c442b8e70
 ms.openlocfilehash: 63a40576b805952197cec5af2f89a5dc4b5d3545
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266279"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850602"
 ---
 # <a name="how-to-create-a-service-endpoint-in-configuration"></a>Nasıl yapılır: Yapılandırma İçinde Hizmet Uç Noktası Oluşturma
 Uç noktaları, istemcilerin bir Windows Communication Foundation (WCF) hizmeti sunan işlevine erişim sağlar. Göreli ve mutlak uç nokta adresleri bir birleşimini kullanarak bir hizmet için bir veya daha fazla uç nokta tanımlayabilirsiniz veya herhangi bir hizmet uç noktaları tanımlamazsanız, çalışma zamanı bazı varsayılan olarak, sağlar. Bu konuda, göreli ve mutlak adreslerini içeren bir yapılandırma dosyası kullanarak uç noktalarını eklemek gösterilmektedir.  

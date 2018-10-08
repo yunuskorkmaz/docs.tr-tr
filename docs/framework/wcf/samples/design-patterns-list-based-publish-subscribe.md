@@ -2,12 +2,12 @@
 title: 'Tasarım Desenleri: Liste Tabanlı Yayımlama-Abone Olma'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 2807cc8cc197ff39417e3b6375ebbd595cf73c54
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: caec9a9aa6de267cb5407ad4a7166701740f9a63
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664702"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850133"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>Tasarım Desenleri: Liste Tabanlı Yayımlama-Abone Olma
 Bu örnek, bir Windows Communication Foundation (WCF) programı olarak uygulanan liste tabanlı yayımlama-abone olma deseni gösterilmektedir.  
@@ -118,7 +118,7 @@ public class PriceChangeEventArgs : EventArgs
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>Örneği aynı makinede çalıştırmak için  
   
-1.  Test hizmeti aşağıdaki adresi girerek bir tarayıcı kullanarak erişebilirsiniz: http://localhost/servicemodelsamples/service.svc. Yanıtta bir onay sayfası gösterilmelidir.  
+1.  Test hizmeti aşağıdaki adresi girerek bir tarayıcı kullanarak erişebilirsiniz: `http://localhost/servicemodelsamples/service.svc`. Yanıtta bir onay sayfası gösterilmelidir.  
   
 2.  \Client\bin Client.exe çalıştırma\\, dile özgü klasörü altında. İstemci etkinliği istemci konsol penceresinde görüntülenir. Çeşitli istemciler başlatın.  
   
