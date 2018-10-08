@@ -14,6 +14,7 @@
 ### [Akışlar Oluşturma](composing-streams.md)
 ### [Nasıl yapılır: .NET Framework Akışları ile Windows Çalışma Zamanı Akışları Arasında Dönüştürme](how-to-convert-between-dotnet-streams-and-winrt-streams.md)
 ## [Zaman Uyumsuz Dosya G/Ç](asynchronous-file-i-o.md)
+## [G/Ç hatalarını işleme](handling-io-errors.md)
 ## [Yalıtılmış Depolama](isolated-storage.md)
 ### [Yalıtım Türleri](types-of-isolation.md)
 ### [Nasıl yapılır: Yalıtılmış Depolama için Depoları Alma](how-to-obtain-stores-for-isolated-storage.md)

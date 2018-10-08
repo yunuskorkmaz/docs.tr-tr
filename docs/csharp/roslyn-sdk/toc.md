@@ -8,7 +8,8 @@
 ### [Söz dizimi analizi](get-started/syntax-analysis.md)
 ### [Anlam analizi](get-started/semantic-analysis.md)
 ### [Sözdizimi Dönüşümü](get-started/syntax-transformation.md)
-
+## Öğreticiler
+### [İlk çözümleyicinizi oluşturma ve kod düzeltmesi uygulama](tutorials/how-to-write-csharp-analyzer-code-fix.md)
 
 <!-- Taken from https://github.com/dotnet/roslyn/wiki/Samples-and-Walkthroughs -->
 <!--
