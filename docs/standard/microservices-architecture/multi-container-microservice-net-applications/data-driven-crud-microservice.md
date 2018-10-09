@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: b443f1b066d3c8ef0e798206510616aace32b377
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: bba0b93ee7e68ae0320460c6a45ab252ac34c326
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582742"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873509"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Bir basit veri temelli CRUD mikro hizmeti oluşturma
 
@@ -393,7 +393,7 @@ Bunu yaptıktan sonra uygulamanızı başlatın ve bu gibi URL'leri kullanarak a
   http://<your-root-url>/swagger/
 ```
 
-Daha önce oluşturulan kullanıcı arabirimini http:// gibi bir URL için Swashbuckle tarafından oluşturulan gördüğünüz&lt;kök URL'si your &gt; /swagger/kullanıcı arabirimi. Şekil 8-9'da herhangi bir API yöntemini nasıl test görebilirsiniz.
+Daha önce oluşturulan kullanıcı arabirimini gibi bir URL için Swashbuckle tarafından oluşturulan gördüğünüz `http://<your-root-url>/swagger/ui`. Şekil 8-9'da herhangi bir API yöntemini nasıl test görebilirsiniz.
 
 ![](./media/image10.png)
 

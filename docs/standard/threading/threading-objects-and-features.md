@@ -1,6 +1,6 @@
 ---
 title: İş parçacığı nesneleri ve özellikleri
-ms.date: 08/16/2018
+ms.date: 10/01/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - threading [.NET Framework], features
@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 239b2e8d-581b-4ca3-992b-0e8525b9321c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d56d962279120a03a6e4b89154ac1429ea5479e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 1ba47ece16c74555b58780733e14de9833718c33
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44039335"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873313"
 ---
 # <a name="threading-objects-and-features"></a>İş parçacığı nesneleri ve özellikleri
 
@@ -22,16 +22,16 @@ ms.locfileid: "44039335"
 |Başlık|Açıklama|  
 |-----------|-----------------|  
 |[Yönetilen iş parçacığı havuzu](the-managed-thread-pool.md)|Açıklar <xref:System.Threading.ThreadPool?displayProperty=nameWithType> .NET tarafından yönetilen çalışan iş parçacığı havuzu sağlar sınıfını.|  
-|[Süreölçerler](timers.md)|Çok iş parçacıklı bir ortamda kullanılabilir zamanlayıcılar açıklar.|
-|[Eşitleme temellerine genel bakış](overview-of-synchronization-primitives.md)|İş parçacığı etkileşim veri ya da Denetim erişimi eşitlemek için kullanılan sınıfları açıklar.|
+|[Süreölçerler](timers.md)|Çok iş parçacıklı bir ortamda kullanılabilir .NET zamanlayıcılar açıklar.|
+|[Eşitleme temellerine genel bakış](overview-of-synchronization-primitives.md)|Bir paylaşılan kaynağa veya denetimi iş parçacığı etkileşim erişimi eşitlemek için kullanılan türleri açıklanmaktadır.|
 |[EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)|Sinyal ve sinyalleri için bekleyen iş parçacığı etkinlikleri eşitlemek için kullanılan yönetilen bir olay bekleme tanıtıcıları açıklar.|
-|[Karşılıklı dışlamalar](mutexes.md)|Nasıl kullanılacağını açıklayan bir <xref:System.Threading.Mutex?displayProperty=nameWithType> bir nesneye erişimi eşitleme ya da kendi eşitleme mekanizmaları oluşturun.|
+|[Karşılıklı dışlamalar](mutexes.md)|Açıklar <xref:System.Threading.Mutex?displayProperty=nameWithType>, paylaşılan bir kaynağa özel erişim verir.|
 |[Birbirine kenetlenmiş işlemler](interlocked-operations.md)|Açıklar <xref:System.Threading.Interlocked?displayProperty=nameWithType> birden çok iş parçacığı tarafından paylaşılan değişkenleri için atomik işlemler sağlar sınıfını.|
-|[Okuyucu-Yazıcı Kilitleri](reader-writer-locks.md)|Açıklar <xref:System.Threading.ReaderWriterLockSlim?displayProperty=nameWithType> tek yazıcı/birden çok okuyucu semantikler sağlar sınıfını.|
-|[Semaphore ve SemaphoreSlim](semaphore-and-semaphoreslim.md)|Açıklar <xref:System.Threading.Semaphore?displayProperty=nameWithType> sınıfı ve bu sınırlı kaynaklara erişimi denetlemek için nasıl kullanılacağını açıklar.|
+|[Okuyucu-Yazıcı Kilitleri](reader-writer-locks.md)|Açıklar <xref:System.Threading.ReaderWriterLockSlim?displayProperty=nameWithType> tek yazıcı/birden çok okuyucu paylaşılan bir kaynağa erişim sağlayan sınıf.|
+|[Semaphore ve SemaphoreSlim](semaphore-and-semaphoreslim.md)|Açıklar <xref:System.Threading.Semaphore?displayProperty=nameWithType> sınıfını, paylaşılan bir kaynağa erişmek için iş parçacığı sayısı veya bir kaynak havuzu eşzamanlı olarak sınırlar.|
 |[Engel](barrier.md)|Açıklar <xref:System.Threading.Barrier?displayProperty=nameWithType> aşamalı işlemlerinde koordinasyon iş parçacıklarının engeli desenini uygulayan sınıf.|
-|[SpinLock](spinlock.md)|Açıklar <xref:System.Threading.SpinLock?displayProperty=nameWithType> hafif bir sınıf için alternatif <xref:System.Threading.Monitor?displayProperty=nameWithType> alt düzey belirli senaryolar için sınıf.|
-|[SpinWait](spinwait.md)|Açıklar <xref:System.Threading.SpinWait?displayProperty=nameWithType> çekirdek tabanlı bekleme başlatmadan önce meşgul dönme gerçekleştiren bir düşük düzeyli eşitleme temel sınıfı.|
+|[SpinLock](spinlock.md)|Açıklar <xref:System.Threading.SpinLock?displayProperty=nameWithType> hafif bir yapısı için alternatif <xref:System.Threading.Monitor?displayProperty=nameWithType> belirli alt düzey kilitleme senaryoları için sınıf.|
+|[SpinWait](spinwait.md)|Açıklar <xref:System.Threading.SpinWait?displayProperty=nameWithType> yapısı, döndürme tabanlı bekleme için destek sağlar.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

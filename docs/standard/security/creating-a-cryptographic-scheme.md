@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: d40c509f-5a5e-46cc-94cb-a951e9ab6843
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2db6d4229ac777801aff792c86fe0e5e9a1b4994
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 51d07fadcf359c2b44f22ca9868d0f12e24b80c5
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964390"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873131"
 ---
 # <a name="creating-a-cryptographic-scheme"></a>Şifreleme Düzeni Oluşturma
 .NET Framework şifreleme bileşenlerini şifrelemek ve verilerin şifresini çözmek için farklı düzenleri oluşturmak için birleştirilebilir.  
@@ -30,7 +30,7 @@ ms.locfileid: "45964390"
   
 5.  Taraflar ardından simetrik şifreleme kullanarak bir konuşma başlatır.  
   
- Şifreleme düzeni oluşturma, basit bir görev değildir. Şifreleme kullanarak daha fazla bilgi için Platform SDK belgelerine şifreleme bölümüne bakın. http://msdn.microsoft.com/library.  
+ Şifreleme düzeni oluşturma, basit bir görev değildir.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

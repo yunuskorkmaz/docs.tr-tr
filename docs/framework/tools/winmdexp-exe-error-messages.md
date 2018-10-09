@@ -160,11 +160,11 @@ ms.assetid: 8271973c-deba-47a6-8e5e-04ce63f146ad
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 95d971003a28ec411b3734009bcb978c630cb811
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48780894"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873793"
 ---
 # <a name="winmdexpexe-error-messages"></a>Winmdexp.exe Hata İletileri
 Yapı işleminin çağırdığı [Winmdexp.exe (Windows çalışma zamanı meta verileri dışarı aktarma aracı)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) kullandığınızda  **[!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşen** 2012'de Visual Studio içinde Winmdexp.exe hata iletileri görünecek şekilde şablonu **Hata listesi**. Winmdexp.exe çalışır ile derlenmiş bir modülde `/target:winmdobj` seçeneği. Giriş olarak derlenmiş bir modül gerektiğinden, derleme başarılı sürece, hata iletileri görünmez.  

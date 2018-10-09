@@ -17,11 +17,11 @@ ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4ca6109a61fb32cd148e69081da0772277743b6e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47204407"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873738"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Standart Tarih ve Saat Biçim Dizeleri
 Standart tarih ve saat biçimi dizesi tek biçim belirleyici bir tarih ve saat değerinin metin gösterimini tanımlamak için kullanır. Beyaz boşluk da dahil olmak üzere birden fazla karakter içeren bir tarih ve saat biçim dizesi, özel bir tarih ve saat biçimi dizesi yorumlanır; Daha fazla bilgi için [özel tarih ve saat biçim dizeleri](../../../docs/standard/base-types/custom-date-and-time-format-strings.md). Standart veya özel bir biçim dizesi iki şekilde kullanılabilir:  

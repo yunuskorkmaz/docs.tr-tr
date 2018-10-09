@@ -4,12 +4,12 @@ description: Kaldırma ve kaydırma ve bu e-kitap kapsayıcılarla ve Azure bulu
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 4/28/2018
-ms.openlocfilehash: 07e1a1e2ef145dce1b292d9425f33fcd99ffd1ae
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: b22ddd8a63d183571f9ca3a63fb7ae84ebb88510
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45747010"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873511"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Azure Bulutu ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirme (2 sürümü)
 
@@ -25,7 +25,7 @@ Telif Hakkı © 2018 Microsoft Corporation
 
 Tüm hakları saklıdır. Bu kitap içeriğini işlevinin hiçbir bölümü herhangi bir biçimdeki veya yayımcı yazılı izni olmadan herhangi bir yöntemle yeniden oluşturulabilir.
 
-Bu kitap gibi bir elektronik kitap (e-kitap) Microsoft'ta birden çok kanal aracılığıyla biçiminde ücretsiz kullanılabilir http://dot.net/architecture.
+Bu kitap gibi bir elektronik kitap (e-kitap) Microsoft'ta birden çok kanal aracılığıyla biçiminde ücretsiz kullanılabilir <http://dot.net/architecture>.
 
 Bu kitap, e-posta ile ilgili sorularınız varsa [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book)
 
@@ -33,7 +33,7 @@ Bu kitap sağlanan "olarak-olduğunu" ve yazarın görünümleri ve düşüncele
 
 Burada açıklanan bazı örnekler yalnızca çizim için sağlanmıştır ve bu kurgusaldır. Gerçek bir ilişki veya bağlantı amaçlanmamıştır veya çıkarılmamalıdır.
 
-Microsoft ve adresinde listelenmiş ticari http://www.microsoft.com "Ticari" Web sayfasında Microsoft şirketler grubunun ticari markalarıdır. Diğer tüm işaretleri sahiplerinin özelliği var.
+Microsoft ve adresinde listelenmiş ticari <https://www.microsoft.com> "Ticari" Web sayfasında Microsoft şirketler grubunun ticari markalarıdır. Diğer tüm işaretleri sahiplerinin özelliği var.
 
 Yazar:
 > **Cesar de la Torre**, üst düzey PM, .NET ürün ekibi, Microsoft Corp.

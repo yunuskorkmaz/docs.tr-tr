@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e2d1a6fe-31f9-4b83-9728-06c406a3394e
 ms.openlocfilehash: 30b2c303b1823430c480f0706500f8f7e7053c4c
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48780629"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873144"
 ---
 # <a name="acceptchanges-and-rejectchanges"></a>AcceptChanges ve RejectChanges
 Verilerde yapılan değişiklikleri doğruluğunu doğruladıktan sonra bir <xref:System.Data.DataTable>, kullanarak değişiklikleri kabul edebilir <xref:System.Data.DataRow.AcceptChanges%2A> yöntemi <xref:System.Data.DataRow>, <xref:System.Data.DataTable>, veya <xref:System.Data.DataSet>, hangi ayarlayacak **geçerli** satır değerlerinin **özgün** değerler ve ayarlar **RowState** özelliğini **Unchanged**. Kabul etme veya reddetme değişikliklerini temizler herhangi **RowError** bilgi ve kümelerini **HasErrors** özelliğini **false**. Kabul etme veya reddetme değişiklikleri güncelleştirme veri veri kaynağında da etkileyebilir. Daha fazla bilgi için [güncelleştirme veri kaynaklarını DataAdapters ile](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md).  

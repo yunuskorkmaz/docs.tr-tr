@@ -3,12 +3,12 @@ title: Yetkilendirme WIF kullanarak talep tabanlı
 ms.date: 03/30/2017
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
 author: BrucePerlerMS
-ms.openlocfilehash: c13ea5c9f2f62c9c01139741d06de35dd2ff4be1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 65254b31570ebf65d10c4d8c1f0fa776a6e2bae1
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47236062"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48872936"
 ---
 # <a name="claims-based-authorization-using-wif"></a>Yetkilendirme WIF kullanarak talep tabanlı
 Bağlı taraf uygulamasında, yetkilendirme kimliği doğrulanmış bir kimliğin hangi kaynaklara erişebileceğini ve bu kaynaklar üzerinde hangi işlemleri gerçekleştirebileceğini belirler. Uygunsuz veya zayıf yetkilendirme, bilgi ifşasına ve verilerin izinsiz kullanımına neden olur. Bu konuda, Windows Identity Foundation (WIF) ve Microsoft Azure Erişim Denetimi Hizmeti (ACS) gibi Güvenlik Belirteci Hizmeti (STS) kullanılarak talep kullanan ASP.NET web uygulamaları ve hizmetleri için yetkilendirme uygulama yaklaşımları açıklanmaktadır.  
@@ -36,7 +36,7 @@ Bağlı taraf uygulamasında, yetkilendirme kimliği doğrulanmış bir kimliği
 ### <a name="expressing-roles-as-claims"></a>Rolleri Talepler Olarak İfade Etme  
  Zaman **Isınrole()** yöntemi çağrıldığında, geçerli kullanıcının bu role sahip olup olmadığını görmek için yapılan bir denetim yoktur. Talep kullanan uygulamalarda, rol belirteçte kullanılabilir olması gereken bir rol talep türü olarak ifade edilir. Rol talep türü, aşağıdaki URI kullanılarak ifade edilir:  
   
- http://schemas.microsoft.com/ws/2008/06/identity/claims/role  
+ `http://schemas.microsoft.com/ws/2008/06/identity/claims/role`
   
  Bir belirteci rol talep türüyle zenginleştirmenin birkaç yöntemi vardır:  
   

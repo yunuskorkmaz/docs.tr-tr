@@ -3,11 +3,11 @@ title: Tasarlama ve uygulama özel etkinlikler
 ms.date: 03/30/2017
 ms.assetid: 4e30e63d-6e33-4842-a7a4-ce807cef1fad
 ms.openlocfilehash: 673145c856e950c8648a87cb3dcb9665ffa51ba9
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47216727"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873394"
 ---
 # <a name="designing-and-implementing-custom-activities"></a>Tasarlama ve uygulama özel etkinlikler
 Özel etkinlikleri [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] bileşik etkinlikleri assembling ya da sistem tarafından sağlanan etkinliklerine veya öğesinden türeyen yeni türleri oluşturarak oluşturulan <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity>, veya <xref:System.Activities.NativeActivity>. Bu bölümde, iki yöntemden biriyle özel etkinlikler oluşturmayı açıklar.  

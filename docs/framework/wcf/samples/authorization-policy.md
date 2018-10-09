@@ -2,12 +2,12 @@
 title: Yetkilendirme İlkesi
 ms.date: 03/30/2017
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-ms.openlocfilehash: 78ca42abfd2df56edeeb273fcd8ba585aa16f635
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 16549b90692d8061abe729521075e0f248446513
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198325"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873485"
 ---
 # <a name="authorization-policy"></a>Yetkilendirme İlkesi
 
@@ -284,7 +284,7 @@ Ya da aynı şeyi yapılandırmasında yapabilirsiniz:
 
 Windows Communication Foundation (WCF) erişim denetimi gerçekleştirmek için zengin talep tabanlı modeli sağlar. <xref:System.ServiceModel.ServiceAuthorizationManager> Nesne erişim denetimi gerçekleştirmek ve istemci ile ilişkili talep hizmet yöntemi erişimi gereksinimleri karşılayıp olup olmadığını belirlemek için kullanılır.
 
-Gösterim amaçları doğrultusunda, bu örnek uygulanışı gösterilmektedir. <xref:System.ServiceModel.ServiceAuthorizationManager> uygulayan <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> talep türü tabanlı yöntemler bir kullanıcının erişmesine izin vermek için yöntemini http://example.com/claims/allowedoperation değeri olan işlem eylemi URI'si çağrılacak izin verilir.
+Gösterim amaçları doğrultusunda, bu örnek uygulanışı gösterilmektedir. <xref:System.ServiceModel.ServiceAuthorizationManager> uygulayan <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> talep türü tabanlı yöntemler bir kullanıcının erişmesine izin vermek için yöntemini `http://example.com/claims/allowedoperation` değeri olan işlem eylemi URI'si çağrılacak izin verilir.
 
 ```csharp
 public class MyServiceAuthorizationManager : ServiceAuthorizationManager

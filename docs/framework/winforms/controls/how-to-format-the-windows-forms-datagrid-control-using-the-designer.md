@@ -9,14 +9,15 @@ helpviewer_keywords:
 - tables [Windows Forms], formatting in DataGrid control
 - formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
-ms.openlocfilehash: e0d703e16ab89243c7f7cf57dc858a0a3889a590
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 7a63ff5e070c9986fb5890fbf09fb7d4e8cccc9f
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253266"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873170"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Formları DataGrid Denetimini Biçimlendirme
+
 > [!NOTE]
 >  <xref:System.Windows.Forms.DataGridView> Denetimi değiştirir ve işlevsellik ekler <xref:System.Windows.Forms.DataGrid> denetler; ancak, <xref:System.Windows.Forms.DataGrid> denetim korunur geriye dönük uyumluluk ve gelecekte kullanım için seçerseniz. Daha fazla bilgi için [farklar arasında Windows Forms DataGridView ve DataGrid denetimleri](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
@@ -32,7 +33,7 @@ ms.locfileid: "44253266"
   
  Bir ilk adım olarak, veri kılavuzu biçimlendirme özellikleri ayarlayabilirsiniz <xref:System.Windows.Forms.DataGrid> kendisi. Bu renk ve biçim seçimleri kendisinden sonra veri tabloları ve sütunları görüntülenen bağlı olarak değişiklik yapabilirsiniz bir temel oluşturur.  
   
- Aşağıdaki yordam gerektirir bir **Windows uygulama** proje içeren bir form içeren bir <xref:System.Windows.Forms.DataGrid> denetimi. Bu tür bir proje ayarlama hakkında daha fazla bilgi için bkz: [nasıl yapılır: bir Windows uygulaması projesi oluşturmak](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) ve [nasıl yapılır: Windows Forms denetimlerine ekleme](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md). İçinde [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], <xref:System.Windows.Forms.DataGrid> denetimi içinde değil **araç kutusu** varsayılan olarak. Daha fazla bilgi için [nasıl yapılır: araç kutusu öğeleri Ekle](https://msdn.microsoft.com/library/458e119e-17fe-450b-b889-e31c128bd7e0).  
+ Aşağıdaki yordam gerektirir bir **Windows uygulama** proje içeren bir form içeren bir <xref:System.Windows.Forms.DataGrid> denetimi. Bu tür bir proje ayarlama hakkında daha fazla bilgi için bkz: [nasıl yapılır: bir Windows uygulaması projesi oluşturmak](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) ve [nasıl yapılır: Windows Forms denetimlerine ekleme](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md). Visual Studio 2005 ' te <xref:System.Windows.Forms.DataGrid> denetimi içinde değil **araç kutusu** varsayılan olarak. Daha fazla bilgi için [nasıl yapılır: araç kutusu öğeleri Ekle](https://msdn.microsoft.com/library/458e119e-17fe-450b-b889-e31c128bd7e0).  
   
 > [!NOTE]
 >  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -70,36 +71,37 @@ ms.locfileid: "44253266"
     |<xref:System.Windows.Forms.DataGrid.SelectionForeColor%2A>|Bu, bir satır veya hücre seçildiğinde, ön plan rengidir.|  
   
     > [!NOTE]
-    >  Renkleri denetimlerin özelleştirirken, denetimi kötü renk seçimi (örneğin, kırmızı ve yeşil) nedeniyle erişilemez hale mümkündür. Kullanılabilir renklerini kullan **sistem renkleri** bu sorunu önlemek için palet.  
-  
-     Aşağıdaki yordamı gerektiren bir <xref:System.Windows.Forms.DataGrid> denetim bir veri tablosuna bağlı. Daha fazla bilgi için [nasıl yapılır: Windows Forms DataGrid denetimini veri kaynağına bağlama](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).  
-  
-### <a name="to-set-the-table-and-column-style-of-a-data-table-at-design-time"></a>Tasarım zamanında bir veri tablosu tablo ve sütun stilini ayarlamak için  
-  
-1.  Seçin <xref:System.Windows.Forms.DataGrid> formunuzdaki denetimi.  
-  
-2.  İçinde **özellikleri** penceresinde <xref:System.Windows.Forms.DataGrid.TableStyles%2A> özelliği ve tıklatın **üç nokta** (![VisualStudioEllipsesButton ekran](../../../../docs/framework/winforms/media/vbellipsesbutton.png " vbEllipsesButton")) düğmesi.  
-  
-3.  İçinde **DataGridTableStyle Koleksiyonu Düzenleyicisi** iletişim kutusu, tıklayın **Ekle** tablo stili koleksiyona eklenecek.  
-  
-     İle **DataGridTableStyle Koleksiyonu Düzenleyicisi**ekleyebilir ve Kaldır tablo stilleri, kümesini görüntüleme ve düzen özelliklerini ve kümesi için tablo stilleri ad eşleştirme.  
-  
-4.  Ayarlama <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> özelliğini her tablo stili için eşleme adı.  
-  
-     Eşleme adı, hangi tablo stili ile hangi tabloyu kullanılması gerektiğini belirtmek için kullanılır.  
-  
-5.  İçinde **DataGridTableStyle Koleksiyonu Düzenleyicisi**seçin <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> özelliği ve üç nokta düğmesini (![VisualStudioEllipsesButton ekran](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton ")).  
-  
-6.  İçinde **DataGridColumnStyle Koleksiyonu Düzenleyicisi** iletişim kutusunda, oluşturduğunuz tablo stili sütun stil ekleyin.  
-  
-     İle **DataGridColumnStyle Koleksiyonu Düzenleyicisi**, ekleme ve sütun stil kaldırın, görüntü ve düzen özelliklerini ayarlama ve eşleme adını ayarlayın ve sütunları dizeleri için veri biçimlendirme.  
-  
+    >  Renkleri denetimlerin özelleştirirken, denetimi kötü renk seçimi (örneğin, kırmızı ve yeşil) nedeniyle erişilemez hale mümkündür. Kullanılabilir renklerini kullan **sistem renkleri** bu sorunu önlemek için palet.
+
+     Aşağıdaki yordamı gerektiren bir <xref:System.Windows.Forms.DataGrid> denetim bir veri tablosuna bağlı. Daha fazla bilgi için [nasıl yapılır: Windows Forms DataGrid denetimini veri kaynağına bağlama](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).
+
+### <a name="to-set-the-table-and-column-style-of-a-data-table-at-design-time"></a>Tasarım zamanında bir veri tablosu tablo ve sütun stilini ayarlamak için
+
+1.  Seçin <xref:System.Windows.Forms.DataGrid> formunuzdaki denetimi.
+
+2.  İçinde **özellikleri** penceresinde <xref:System.Windows.Forms.DataGrid.TableStyles%2A> özelliği ve tıklatın **üç nokta** (![VisualStudioEllipsesButton ekran](../../../../docs/framework/winforms/media/vbellipsesbutton.png " vbEllipsesButton")) düğmesi.
+
+3.  İçinde **DataGridTableStyle Koleksiyonu Düzenleyicisi** iletişim kutusu, tıklayın **Ekle** tablo stili koleksiyona eklenecek.
+
+     İle **DataGridTableStyle Koleksiyonu Düzenleyicisi**ekleyebilir ve Kaldır tablo stilleri, kümesini görüntüleme ve düzen özelliklerini ve kümesi için tablo stilleri ad eşleştirme.
+
+4.  Ayarlama <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> özelliğini her tablo stili için eşleme adı.
+
+     Eşleme adı, hangi tablo stili ile hangi tabloyu kullanılması gerektiğini belirtmek için kullanılır.
+
+5.  İçinde **DataGridTableStyle Koleksiyonu Düzenleyicisi**seçin <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> özelliği ve üç nokta düğmesini (![VisualStudioEllipsesButton ekran](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton ")).
+
+6.  İçinde **DataGridColumnStyle Koleksiyonu Düzenleyicisi** iletişim kutusunda, oluşturduğunuz tablo stili sütun stil ekleyin.
+
+     İle **DataGridColumnStyle Koleksiyonu Düzenleyicisi**, ekleme ve sütun stil kaldırın, görüntü ve düzen özelliklerini ayarlama ve eşleme adını ayarlayın ve sütunları dizeleri için veri biçimlendirme.
+
     > [!NOTE]
-    >  Biçimlendirme dizeleri hakkında daha fazla bilgi için bkz. [biçimlendirme türleri](../../../../docs/standard/base-types/formatting-types.md).  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.GridTableStylesCollection>  
- <xref:System.Windows.Forms.GridColumnStylesCollection>  
- <xref:System.Windows.Forms.DataGrid>  
- [Nasıl yapılır: Windows Forms DataGrid Denetiminde Sütunları Silme veya Gizleme](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)  
- [DataGrid Denetimi](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
+    >  Biçimlendirme dizeleri hakkında daha fazla bilgi için bkz. [biçimlendirme türleri](../../../../docs/standard/base-types/formatting-types.md).
+
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- <xref:System.Windows.Forms.GridTableStylesCollection>
+- <xref:System.Windows.Forms.GridColumnStylesCollection>
+- <xref:System.Windows.Forms.DataGrid>
+- [Nasıl yapılır: Windows Forms DataGrid Denetiminde Sütunları Silme veya Gizleme](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [DataGrid Denetimi](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)

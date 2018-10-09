@@ -2,12 +2,12 @@
 title: '&lt;ws2007HttpBinding&gt; &lt;iletisi&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9ffd8db6-84a8-4b38-a9fe-2cb1a87a1c97
-ms.openlocfilehash: a8f448f40dbbf5fabbbd833cb9366c3911045f95
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: d3b8b2bae4b28b58a24e32cc1e6927d0ed940af1
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042510"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873196"
 ---
 # <a name="ltmessagegt-of-ltws2007httpbindinggt"></a>&lt;ws2007HttpBinding&gt; &lt;iletisi&gt;
 İleti düzeyi güvenliği ayarlarını tanımlar [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) öğesi.  
@@ -99,5 +99,5 @@ ms.locfileid: "44042510"
  [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)  
  [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Windows Communication Foundation Hizmetleri ve istemcileri yapılandırmak için bağlamaları kullanma](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
  [\<bağlama >](../../../../../docs/framework/misc/binding.md)

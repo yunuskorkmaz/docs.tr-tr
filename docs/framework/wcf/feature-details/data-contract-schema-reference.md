@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-ms.openlocfilehash: 5eb4caee5c2057e112ed4f5a88f46fa82b1f57cc
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 33661061e1a5db4f7826c1a8eca188f8c782b58f
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44088043"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873725"
 ---
 # <a name="data-contract-schema-reference"></a>Veri Sözleşmesi Şema Başvurusu
 Bu konu, XML Şeması (tarafından kullanılan XSD) alt açıklar <xref:System.Runtime.Serialization.DataContractSerializer> açıklayan ortak dil çalışma zamanı (CLR) için XML serileştirme türleri.  
@@ -47,7 +47,7 @@ Bu konu, XML Şeması (tarafından kullanılan XSD) alt açıklar <xref:System.R
 |`elementFormDefault`|Nitelenmelidir. Tüm öğeler için bir şema tarafından desteklenen nitelenmelidir `DataContractSerializer`. Bu iki ayar tarafından gerçekleştirilebilir xs:schema/@elementFormDefault "tam" veya ayarlayarak xs:element/@form için "tam" her tek öğe bildiriminde.|  
 |`finalDefault`|Yoksayıldı.|  
 |`Id`|Yoksayıldı.|  
-|`targetNamespace`|Desteklenen ve veri anlaşması ad alanıyla eşlendi. Bu öznitelik belirtilmezse boş ad alanı kullanılır. Ayrılmış ad alanı olamaz http://schemas.microsoft.com/2003/10/Serialization/.|  
+|`targetNamespace`|Desteklenen ve veri anlaşması ad alanıyla eşlendi. Bu öznitelik belirtilmezse boş ad alanı kullanılır. Ayrılmış ad alanı olamaz `http://schemas.microsoft.com/2003/10/Serialization/`.|  
 |`version`|Yoksayıldı.|  
   
 ### <a name="xsschema-contents"></a>\<xs: Schema >: içeriği  
@@ -524,7 +524,7 @@ public class Employee : Person
 |`positiveInteger`|<xref:System.Int64>.|  
   
 ## <a name="iserializable-types-mapping"></a>Eşleme ISerializable türler  
- İçinde [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sürüm 1.0, `ISerializable` Kalıcılık ya da veri aktarımı için nesneleri serileştirmek için genel bir mekanizma olarak kullanıma sunulmuştur. Kullanabileceğiniz birçok [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] türleri uygulayan `ISerializable` ve uygulamalar arasında geçirilebilir. `DataContractSerializer` doğal olarak için destek sağlar `ISerializable` sınıfları. `DataContractSerializer` Eşler `ISerializable` uygulama şema türü, yalnızca QName türü tarafından (tam adı) değişir ve etkili bir şekilde özellik koleksiyonlarıdır. Örneğin, `DataContractSerializer` eşler <xref:System.Exception> aşağıdaki XSD türüne http://schemas.datacontract.org/2004/07/System ad alanı.  
+ İçinde [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sürüm 1.0, `ISerializable` Kalıcılık ya da veri aktarımı için nesneleri serileştirmek için genel bir mekanizma olarak kullanıma sunulmuştur. Kullanabileceğiniz birçok [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] türleri uygulayan `ISerializable` ve uygulamalar arasında geçirilebilir. `DataContractSerializer` doğal olarak için destek sağlar `ISerializable` sınıfları. `DataContractSerializer` Eşler `ISerializable` uygulama şema türü, yalnızca QName türü tarafından (tam adı) değişir ve etkili bir şekilde özellik koleksiyonlarıdır. Örneğin, `DataContractSerializer` eşler <xref:System.Exception> aşağıdaki XSD türüne `http://schemas.datacontract.org/2004/07/System` ad alanı.  
   
 ```xml  
 <xs:complexType name="Exception">  
@@ -541,7 +541,7 @@ public class Employee : Person
 ## <a name="datacontract-serialization-schema"></a>DataContract serileştirme şeması  
  Bir dizi Şemaları dışarı tarafından `DataContractSerializer` türleri, öğeleri ve bir özel veri sözleşme serileştirme ad öznitelikleri kullanın:  
   
- http://schemas.microsoft.com/2003/10/Serialization  
+ `http://schemas.microsoft.com/2003/10/Serialization`
   
  Eksiksiz bir veri sözleşme serileştirme şeması bildirimi verilmiştir.  
   

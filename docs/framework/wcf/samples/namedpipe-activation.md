@@ -2,12 +2,12 @@
 title: NamedPipe Etkinleştirme
 ms.date: 03/30/2017
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
-ms.openlocfilehash: 97221bfd00fb6b50b63eab11ed82356b002a38de
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5f277d2c72822d8828355d3d728864bedb6dc4f4
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504278"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873368"
 ---
 # <a name="namedpipe-activation"></a>NamedPipe Etkinleştirme
 Bu örnek adları Kanallar üzerinden iletişim kuran bir hizmeti etkinleştirmek için Windows İşlem Etkinleştirme Hizmeti (WAS) kullanan bir hizmet barındırma gösterir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) ve gerektiren [!INCLUDE[wv](../../../../includes/wv-md.md)] çalıştırılacak.  
@@ -196,7 +196,7 @@ Press <ENTER> to terminate client.
         > [!NOTE]
         >  Tek metin satırı komutudur.  
   
-         Bu komut, her ikisi de kullanılarak erişilecektir /servicemodelsamples uygulama etkinleştirir http://localhost/servicemodelsamples ve net.tcp://localhost/servicemodelsamples.  
+         Bu komut, her ikisi de kullanılarak erişilecektir /servicemodelsamples uygulama etkinleştirir `http://localhost/servicemodelsamples` ve `net.tcp://localhost/servicemodelsamples`.  
   
 4.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
