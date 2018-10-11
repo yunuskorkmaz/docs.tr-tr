@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: ab96e8f3395a78c88184872a2c78b71fb2bf7b9e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7e43d423109ea39a725a4bfa8b9d2b22a25cfb5c
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522117"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087342"
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>Bir XML Web hizmetinden DataSet kullanma
 <xref:System.Data.DataSet> Kısmen Internet üzerinden veri uygun taşıma kolaylaştırmak için bağlantısı kesik bir tasarım ile için tasarlanmıştır. **Veri kümesi** girdi olarak belirlenebilir veya ek kodlamaya gerek kalmadan, XML Web Hizmetleri çıktısını gerekli içeriğini akışını sağlamak için "seri hale getirilebilir" olan **veri kümesi** bir XML Web hizmeti bir istemci ve arka. **Veri kümesi** örtük olarak biçimini kullanarak bir XML akışı dönüştürülür, ağ üzerinden gönderilen ve ardından XML Akışı'ndan reconstructed bir **veri kümesi** alan uçta. Bu, basit ve esnek bir yöntem iletme ve XML Web Hizmetleri kullanarak ilişkisel verileri döndürmek için sağlar. Biçimini hakkında daha fazla bilgi için bkz: [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).  
@@ -163,7 +163,7 @@ ms.locfileid: "43522117"
   
      XML Web hizmeti istemcilerine kullanıma sunulan yöntemleri kullanmak için bir SOAP proxy gerektirir. Visual Studio sizin için bu proxy oluşturmak olabilir. Bir mevcut Web hizmetinden Visual Studio'dan bir Web başvurusu ayarlayarak bu adımda açıklandığı gibi davranış şeffaf bir şekilde gerçekleşir. Proxy sınıfı kendiniz oluşturmak istiyorsanız, bu tartışma ile devam edin. Çoğu durumda, ancak istemci uygulamanın proxy sınıfı oluşturmak için Visual Studio kullanarak yeterli olur.  
   
-     Bir proxy Web Hizmetleri Açıklama Dili aracını kullanarak oluşturulabilir. Örneğin, XML Web hizmeti URL'SİNDE açılırsa http://myserver/data/DataSetSample.asmx, Visual Basic .NET Ara sunucu ile bir ad alanı oluşturmak için komutu aşağıdaki gibi **WebData.DSSample** ve dosya sample.vb içinde depolar.  
+     Bir proxy Web Hizmetleri Açıklama Dili aracını kullanarak oluşturulabilir. Örneğin, XML Web hizmeti URL'SİNDE açılırsa `http://myserver/data/DataSetSample.asmx`, Visual Basic .NET Ara sunucu ile bir ad alanı oluşturmak için komutu aşağıdaki gibi **WebData.DSSample** ve dosya sample.vb içinde depolar.  
   
     ```console
     wsdl /l:VB -out:sample.vb http://myserver/data/DataSetSample.asmx /n:WebData.DSSample  

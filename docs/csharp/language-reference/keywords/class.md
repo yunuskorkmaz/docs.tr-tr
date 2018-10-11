@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 52ca30fe29025e637005b95ebc14fce8f320e8f4
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 3f30fb473b486efc8381faa9076b98763935b0ae
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084760"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086070"
 ---
 # <a name="class-c-reference"></a>class (C# Başvurusu)
 
@@ -39,7 +39,7 @@ C# ' de yalnızca tek devralma izin verilir. Diğer bir deyişle, bir sınıf bi
 
 Diğer sınıflar içinde iç içe değil doğrudan bir ad alanındaki bildirdiğiniz sınıf ya da olabilir [genel](../../../csharp/language-reference/keywords/public.md) veya [iç](../../../csharp/language-reference/keywords/internal.md). Sınıflar `internal` varsayılan olarak.
 
-İç içe geçmiş sınıflar, sınıf üyelerini olabilir [genel](../../../csharp/language-reference/keywords/public.md), `protected internal`, [korumalı](../../../csharp/language-reference/keywords/protected.md), [iç](../../../csharp/language-reference/keywords/internal.md), [özel](../../../csharp/language-reference/keywords/private.md), veya `private protected`. Üyeleri [özel](../../../csharp/language-reference/keywords/private.md) varsayılan olarak.
+İç içe geçmiş sınıflar, sınıf üyelerini olabilir [genel](public.md), [iç korumalı](protected-internal.md), [korumalı](protected.md), [iç](internal.md), [ özel](private.md), veya [korunan özel](private-protected.md). Üyeleri `private` varsayılan olarak.
 
 Daha fazla bilgi için [erişim değiştiricileri](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).
 

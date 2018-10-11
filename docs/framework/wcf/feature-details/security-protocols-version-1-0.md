@@ -3,33 +3,33 @@ title: Güvenlik Protokolleri sürüm 1.0
 ms.date: 03/30/2017
 ms.assetid: ee3402d2-1076-410b-a3cb-fae0372bd7af
 author: BrucePerlerMS
-ms.openlocfilehash: 043a092855b7f5827c03b1d247b03328ba561edf
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 59d82fc3238f12b33f3111c88854b9d6348a5e27
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036285"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086797"
 ---
 # <a name="security-protocols-version-10"></a>Güvenlik Protokolleri sürüm 1.0
 Web Hizmetleri Güvenlik protokollerini tüm var olan Kurumsal güvenlik gereksinimlerini Mesajlaşma kapsayan Web Hizmetleri güvenlik mekanizmaları sağlar. Bu bölümde Windows Communication Foundation (WCF) sürüm 1.0 ayrıntılarını açıklar (uygulanan <xref:System.ServiceModel.Channels.SecurityBindingElement>) güvenlik protokollerini aşağıdaki Web Hizmetleri için.  
   
 |Belirtimi/belge|Bağlantı|  
 |-|-|  
-|WSS: SOAP ileti güvenliği 1.0|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf|  
-|WSS: Kullanıcı adı belirteci profili 1.0|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf|  
-|WSS: X509 profili 1.0 belirteç.|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0.pdf|  
-|WSS: SAML 1.1 belirteç profili 1.0|http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.0.pdf|  
-|WSS: SOAP ileti güvenliği 1.1|http://www.oasis-open.org/committees/download.php/16790/wss-v1.1-spec-os-SOAPMessageSecurity.pdf|  
-|WSS kullanıcı adı belirteci Profil 1.1|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf|  
-|WSS: X.509 belirteci Profil 1.1|http://www.oasis-open.org/committees/download.php/16785/wss-v1.1-spec-os-x509TokenProfile.pdf|  
-|WSS: Kerberos belirteci Profil 1.1|http://www.oasis-open.org/committees/download.php/16788/wss-v1.1-spec-os-KerberosTokenProfile.pdf|  
-|WSS: SAML 1.1 belirteç Profil 1.1|http://www.oasis-open.org/committees/download.php/16768/wss-v1.1-spec-os-SAMLTokenProfile.pdf|  
-|WS-Secure Conversation|http://msdn.microsoft.com/ws/2005/02/ws-secure-conversation/|  
-|WS-Güven|http://msdn.microsoft.com/ws/2005/02/ws-trust/|  
+|WSS: SOAP ileti güvenliği 1.0|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf>|
+|WSS: Kullanıcı adı belirteci profili 1.0|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf>|
+|WSS: X509 profili 1.0 belirteç.|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0.pdf>|
+|WSS: SAML 1.1 belirteç profili 1.0|<https://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.0.pdf>|
+|WSS: SOAP ileti güvenliği 1.1|<https://www.oasis-open.org/committees/download.php/16790/wss-v1.1-spec-os-SOAPMessageSecurity.pdf>|
+|WSS kullanıcı adı belirteci Profil 1.1|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf>|
+|WSS: X.509 belirteci Profil 1.1|<https://www.oasis-open.org/committees/download.php/16785/wss-v1.1-spec-os-x509TokenProfile.pdf>|
+|WSS: Kerberos belirteci Profil 1.1|<https://www.oasis-open.org/committees/download.php/16788/wss-v1.1-spec-os-KerberosTokenProfile.pdf>|
+|WSS: SAML 1.1 belirteç Profil 1.1|<https://www.oasis-open.org/committees/download.php/16768/wss-v1.1-spec-os-SAMLTokenProfile.pdf>|
+|WS-Secure Conversation|<http://specs.xmlsoap.org/ws/2005/02/sc/WS-SecureConversation.pdf>|
+|WS-Güven|<http://specs.xmlsoap.org/ws/2005/02/trust/ws-trust.pdf>|
 |Uygulama Not:<br /><br /> WS-Trust TLS el sıkışma için kullanma|Yayımlanacak|  
 |Uygulama Not:<br /><br /> WS-Trust SPNEGO için kullanma|Yayımlanacak|  
 |Uygulama Not:<br /><br /> Web uç noktası başvuruları adresleme ve kimlik Hizmetleri|Yayımlanacak|  
-|WS-SecurityPolicy 1.1<br /><br /> (2005/07)|http://msdn.microsoft.com/ws/2005/07/ws-security-policy/<br /><br /> OASIS WS-SX teknik komitesi gönderilen errata tarafından düzeltilir gibi http://www.oasis-open.org/archives/ws-sx/200512/msg00017.html|  
+|WS-SecurityPolicy 1.1<br /><br /> (2005/07)|<http://specs.xmlsoap.org/ws/2005/07/securitypolicy/ws-securitypolicy.pdf><br /><br /> tarafından düzeltilir gibi [errata](https://lists.oasis-open.org/archives/ws-sx/200512/msg00017.html) OASIS WS-SX teknik komitesi gönderildi |  
   
  WCF, sürüm 1, Web Hizmetleri güvenlik yapılandırması için temel olarak kullanılabilecek 17 kimlik doğrulama modları sağlar. Her modu gibi dağıtım gereksinimleri, ortak bir dizi için optimize edilmiştir:  
   
@@ -69,9 +69,9 @@ Web Hizmetleri Güvenlik protokollerini tüm var olan Kurumsal güvenlik gereksi
   
 |Ön eki|Ad Alanı|  
 |------------|---------------|  
-|s|http://www.w3.org/2003/05/soap-envelope|  
-|SP|http://schemas.xmlsoap.org/ws/2005/07/securitypolicy|  
-|a|http://www.w3.org/2005/08/addressing|  
+|s|<https://www.w3.org/2003/05/soap-envelope/>|
+|SP|<http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/>|
+|a|<https://www.w3.org/2005/08/addressing>|  
 |wsse|TBD – OASIS WSS 1.0 URI'Sİ|  
 |wsse11|TBD – OASIS WSS 1.1 URI'Sİ|  
 |wsu|TBD – OASIS WSS 1.0 yardımcı programı URI'si|  
@@ -79,8 +79,8 @@ Web Hizmetleri Güvenlik protokollerini tüm var olan Kurumsal güvenlik gereksi
 |WST|TBD – WS-Trust 2005/02 URI'si|  
 |wssc|TBD – WS-SecureConversation 2005/02 URI'si|  
 |wsaw|TBD - WS-Addressing policy ad alanı|  
-|WSP|http://schemas.xmlsoap.org/ws/2004/09/policy|  
-|mssp|http://schemas.microsoft.com/ws/2005/07/securitypolicy|  
+|WSP|<http://schemas.xmlsoap.org/ws/2004/09/policy>|  
+|mssp|<http://schemas.xmlsoap.org/ws/2005/07/securitypolicy>|
   
 ## <a name="1-token-profiles"></a>1. Belirteç profilleri  
  Web Hizmetleri Güvenlik belirtimleri kimlik bilgisi güvenlik belirteçleri temsil eder. WCF aşağıdaki belirteç türlerini destekler:  

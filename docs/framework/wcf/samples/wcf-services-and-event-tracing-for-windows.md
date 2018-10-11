@@ -2,12 +2,12 @@
 title: Windows için WCF Hizmetleri ve Etkinlik İzleme
 ms.date: 03/30/2017
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
-ms.openlocfilehash: 26ce5fcb07b06a52f69ad8655adea563c177b055
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 6684f6415fa6ee82a59fc9b54911b5c65d6dadb2
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266877"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086589"
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>Windows için WCF Hizmetleri ve Etkinlik İzleme
 Bu örnek, çözümleme izleme Windows Communication Foundation (WCF), olay izleme için Windows (ETW) olayları yaymak için nasıl kullanılacağını gösterir. Analitik izlemeleri, WCF hizmetleri üretim ortamında giderme sağlayan anahtar WCF yığın noktalarında yayılan olaylardır.
@@ -34,7 +34,7 @@ Bu örnek, çözümleme izleme Windows Communication Foundation (WCF), olay izle
 
 5.  WCF test istemcisi içinde hizmet seçerek ekleyin **dosya**, ardından **Hizmet Ekle**.
 
-     Uç nokta adresi giriş kutusuna ekleyin. Varsayılan, http://localhost:1378/Calculator.svc değeridir.
+     Uç nokta adresi giriş kutusuna ekleyin. Varsayılan, `http://localhost:1378/Calculator.svc` değeridir.
 
 6.  Olay Görüntüleyici uygulamasını açın.
 

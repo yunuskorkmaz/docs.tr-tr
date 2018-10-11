@@ -3,11 +3,11 @@ title: Birlikte çalışma etkinliği ile .NET Framework 4, .NET Framework 3.0 W
 ms.date: 03/30/2017
 ms.assetid: 71f112ba-abb0-46f7-b05f-a5d2eb9d0c5c
 ms.openlocfilehash: 386f71f21a4164f6f0ffc0ed19aab68abbe5a0b5
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48844754"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086693"
 ---
 # <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a>Birlikte çalışma etkinliği ile .NET Framework 4, .NET Framework 3.0 WF etkinlikleri kullanma
 <xref:System.Activities.Statements.Interop> Etkinliği bir [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] sarmalar (WF 4.5) etkinliği bir [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] (WF 3.5) etkinlik içinde bir [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] iş akışı. 3 WF etkinliği, bir tek yaprak etkinliği veya etkinlikleri ağacının tümünü olabilir. (İptal ve özel durum işleme dahil) yürütme ve sürekliliği [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] etkinlik bağlamında oluşan [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] yürütülmekte olan iş akışı örneği.  

@@ -2,12 +2,12 @@
 title: 'F # kodlama kuralları'
 description: 'Genel yönergeler ve deyimler F # kodu yazarken öğrenin.'
 ms.date: 05/14/2018
-ms.openlocfilehash: b9afd1fbfbd9d8e04d9bfaa07615de045b7e05fe
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 21119b6d69e00f359104bfb6eab7681bdbfb8d78
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47237415"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087394"
 ---
 # <a name="f-coding-conventions"></a>F # kodlama kuralları
 
@@ -420,7 +420,7 @@ Bu teknik tüm kod temelinizde yapılan Evrensel uygulanmamalıdır ancak karma�
 
 F # için birden çok seçenek vardır [erişim denetimi](../language-reference/access-control.md), .NET çalışma zamanı'nda kullanılabilir öğesinden devralınan. Bunlar yalnızca türleri için kullanılabilir değildir - bunları işlevleri için de kullanabilirsiniz.
 
-* Tercih ettiğiniz olmayan`public` türler ve üyeler kadar genel olarak kullanılabilir olması gerekir. Bu ayrıca hangi tüketicilerin birkaç için en aza indirir
+* Tercih ettiğiniz olmayan`public` türler ve üyeler kadar genel olarak kullanılabilir olması gerekir. Bu, hangi tüketicilerin birkaç için de azaltır.
 * Tüm yardımcı işlevini tutun `private`.
 * Kullanımını göz önünde bulundurun `[<AutoOpen>]` çok sayıda vermediğinde yardımcı işlevleri, özel bir modül.
 

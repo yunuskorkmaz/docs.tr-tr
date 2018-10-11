@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application services host [client application services]
 - client application services, walkthroughs
 ms.assetid: bb7c8950-4517-4dae-b705-b74a14059b26
-ms.openlocfilehash: b800848fc3cefb1f82fb5822007bc670c1684363
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d09ad4b1f518ac6f4c42dffd4b3ca17249b95700
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43788934"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087862"
 ---
 # <a name="walkthrough-using-client-application-services"></a>İzlenecek Yol: İstemci Uygulama Hizmetlerini Kullanma
 Bu konuda, kullanıcıların kimliklerini doğrulamak ve kullanıcı rolleri ile ayarları almak için istemci uygulama hizmetleri kullanan bir Windows uygulaması oluşturma işlemini açıklar.  
@@ -35,9 +35,8 @@ Bu konuda, kullanıcıların kimliklerini doğrulamak ve kullanıcı rolleri ile
 -   Çevrimdışı modunu etkinleştirin. Böylece kullanıcılar kendi bağlantı durumunu belirleyebilir, bir onay kutusu sağlar. Ardından, istemci uygulama hizmet sağlayıcıları kendi Web hizmetlerine erişme yerine yerel olarak önbelleğe alınmış verileri kullanıp kullanmayacağını belirtmek için bu değeri kullanır. Son olarak, uygulama çevrimiçi moda geri döndüğünde geçerli kullanıcının yeniden kimliğini doğrular.  
   
 ## <a name="prerequisites"></a>Önkoşullar  
- Bu izlenecek yolu tamamlamak için aşağıdaki bileşen ihtiyacınız vardır:  
-  
--   [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)].  
+
+Bu izlenecek yolu tamamlamak için Visual Studio ihtiyacınız vardır.
   
 ## <a name="creating-the-client-application"></a>İstemci Uygulamasını Oluşturma  
  Yapacağınız ilk şey, bir Windows Forms projesi oluşturmaktır. Bu izlenecek yol, daha fazla insana kendisiyle ilgili bilgi sahibi olduğunuz, ancak işlemi için Windows Presentation Foundation (WPF) projelerini benzer çünkü Windows Forms kullanır.  

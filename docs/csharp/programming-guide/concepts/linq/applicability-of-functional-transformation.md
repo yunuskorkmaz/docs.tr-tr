@@ -3,11 +3,11 @@ title: (C#) işlev dönüşümün uygulanabilirliği
 ms.date: 07/20/2015
 ms.assetid: c78107bd-b006-4574-a3d4-bbf808388ff3
 ms.openlocfilehash: baa3866c8c2c148a3080522d7c02e28e9d0fd945
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845209"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086823"
 ---
 # <a name="applicability-of-functional-transformation-c"></a>(C#) işlev dönüşümün uygulanabilirliği
 Saf işlevsel dönüşümlere çok çeşitli durumlarda geçerlidir.  

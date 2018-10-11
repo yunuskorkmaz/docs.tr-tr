@@ -2,12 +2,12 @@
 title: Düzenlemelere ve Eylemsizliğe Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: dd31b89b-eab6-45a1-8d0b-11e0eb84b234
-ms.openlocfilehash: 93d995d7afec24dedf168274fe29f6a250c0a532
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 52cef7e617d577e6a63c8eaa79a6d9f74dd54bdf
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845820"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086745"
 ---
 # <a name="manipulations-and-inertia-overview"></a>Düzenlemelere ve Eylemsizliğe Genel Bakış
 *İşlemeleri* taşımak, döndürmek ve kullanarak kullanıcı arabirimi (UI) öğeleri yeniden boyutlandırma kullanıcılara etkinleştirme *manipülatörleri*. Fare bir işleyiciyi temsil eder (bir senaryoda Dokunmatik özellikli) veya bir ekran kalemi veya bir parmağınızı.  
@@ -41,7 +41,7 @@ ms.locfileid: "48845820"
  Manipülatörleri eklenen, taşınır veya kaldırılması için kullanıcı Arabirimi öğesi gibi bir uygulama güncelleştirmeleri <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D> çağırarak <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.ProcessManipulators%2A> yöntemi. İşleme ilk başladığında <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Started> olayı oluşturulur.  
   
 > [!NOTE]
->  Düzenleme işlemi, bir çerçeve tabanlı güncelleştirme ortamında kullanıldığında daha verimli olur. XNA Framework'ü kullanarak çerçeve tabanlı güncelleştirmeleri sağladığından Microsoft XNA uygulamasında işlem işleme kullanırken, bu önemli değildir [Game.Update](https://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx) yöntemi. (Örneğin, WinForms) başka bir ortamda işlemeleri toplamak ve bunları düzenli aralıklarla göndermek için kendi çerçeve tabanlı mantıksal sağlamanız gerekebilir <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.ProcessManipulators%2A> toplu olarak yöntemi.  
+> Düzenleme işlemi, bir çerçeve tabanlı güncelleştirme ortamında kullanıldığında daha verimli olur. XNA Framework'ü kullanarak çerçeve tabanlı güncelleştirmeleri sağladığından Microsoft XNA uygulamasında işlem işleme kullanırken, bu önemli değildir [Game.Update](/previous-versions/windows/xna/bb199616%28v%3dxnagamestudio.41%29) yöntemi. (Örneğin, WinForms) başka bir ortamda işlemeleri toplamak ve bunları düzenli aralıklarla göndermek için kendi çerçeve tabanlı mantıksal sağlamanız gerekebilir <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.ProcessManipulators%2A> toplu olarak yöntemi.  
   
  Manipülatörleri veya konum değiştirme sayısı arttıkça <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Delta> olayı oluşturulur. Özelliklerini <xref:System.Windows.Input.Manipulations.Manipulation2DDeltaEventArgs> geçirilen nesne <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Delta> olay işleyicisi, kaynak, Ölçek, döndürme ve son olayın itibaren gerçekleşen çeviri değişiklikleri belirtin. İşleme kaynağı manipülatörleri taşıdığınızda ve manipülatörleri eklendiğinde veya kaldırıldığında değiştirir. Çeviri değerlerini düzenlemeyi içerir ne kadar X veya Y taşıma belirtin.  
   

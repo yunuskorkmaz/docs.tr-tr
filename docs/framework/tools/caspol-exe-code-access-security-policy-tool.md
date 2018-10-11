@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c12444e435fa844095827411ba0e068303163bf4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: cfb1e29229393b44c193c4e88005ebc350dbcc6f
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47201146"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086862"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (Kod Erişimi Güvenliği İlke Aracı)
 Kod Erişim Güvenliği (CAS) İlkesi aracı (Caspol.exe) kullanıcıların ve yöneticilerin güvenlik ilkesini makine ilkesi düzeyinde, kullanıcı ilkesi düzeyinde ve kuruluş ilkesi düzeyinde değiştirmelerini sağlar.  
@@ -90,7 +90,7 @@ caspol [options]
 |**-pub** { **-cert** *cert_file_name*&#124;<br /><br /> **-Dosya** *signed_file_name* &#124; **-onaltılık***; hex_string* }  |Belirtilen yazılım yayıncısına sahip kodu (bir sertifika dosyasıyla, bir dosyadaki imzayla veya bir X 509 sertifikasının onaltılı gösterimiyle sunulduğu şekilde) belirtir. Bu üyelik koşulu hakkında daha fazla bilgi için bkz. <xref:System.Security.Policy.PublisherMembershipCondition?displayProperty=nameWithType>.|  
 |**-site** *Web sitesi*|Belirtilen kaynak siteyi içeren kodu belirtir. Örneğin:<br /><br /> `-site** www.proseware.com`<br /><br /> Bu üyelik koşulu hakkında daha fazla bilgi için bkz. <xref:System.Security.Policy.SiteMembershipCondition?displayProperty=nameWithType>.|  
 |**-strong - dosya** *file_name* {*adı* &#124; **- noname**} {*sürüm* &#124; **- noversion**}|Dosya adı, bir dize ve derleme sürümü olarak derleme adı tarafından atandığı gibi belirli bir tanımlayıcı ad biçiminde sahip kodu belirtir *ana*. *küçük*. *derleme*. *Düzeltme*. Örneğin:<br /><br /> **-strong - dosya** myAssembly.exe myAssembly 1.2.3.4<br /><br /> Bu üyelik koşulu hakkında daha fazla bilgi için bkz. <xref:System.Security.Policy.StrongNameMembershipCondition?displayProperty=nameWithType>.|  
-|**-url** *URL'si*|Belirtilen URL'den kaynaklanan kodu belirtir. URL'de http:// veya ftp:// gibi bir protokol bulunmalıdır. Ayrıca, bir joker karakter (\*) belirli bir URL'den birden çok derleme belirtmek için kullanılabilir. **Not:** birden çok ad kullanarak bir URL tanımlanabilir çünkü bir üyelik koşulu kod kimliğini belirlemek için güvenli bir yolu olmadığından bir URL kullanarak. Mümkün olan yerlerde, bir tanımlayıcı ad üyelik koşulu, bir yayımcı üyelik koşulu veya karma üyelik koşulu kullanın. <br /><br /> Bu üyelik koşulu hakkında daha fazla bilgi için bkz. <xref:System.Security.Policy.UrlMembershipCondition?displayProperty=nameWithType>.|  
+|**-url** *URL'si*|Belirtilen URL'den kaynaklanan kodu belirtir. URL gibi bir protokol içermelidir `http://` veya `ftp://`. Ayrıca, bir joker karakter (\*) belirli bir URL'den birden çok derleme belirtmek için kullanılabilir. **Not:** birden çok ad kullanarak bir URL tanımlanabilir çünkü bir üyelik koşulu kod kimliğini belirlemek için güvenli bir yolu olmadığından bir URL kullanarak. Mümkün olan yerlerde, bir tanımlayıcı ad üyelik koşulu, bir yayımcı üyelik koşulu veya karma üyelik koşulu kullanın. <br /><br /> Bu üyelik koşulu hakkında daha fazla bilgi için bkz. <xref:System.Security.Policy.UrlMembershipCondition?displayProperty=nameWithType>.|  
 |**-Bölge** *zonename*|Belirtilen kaynak bölgeyi içeren kodu belirtir. *Zonename* bağımsız değişkeni aşağıdaki değerlerden biri olabilir: **MyComputer**, **Intranet**, **güvenilen**, **Internet** , veya **güvenilmeyen**. Bu üyelik koşulu hakkında daha fazla bilgi için bkz. <xref:System.Security.Policy.ZoneMembershipCondition> sınıfı.|  
   
  *Bayrakları* kullanılabilir bağımsız değişken **– addgroup** ve **– chggroup** seçenekleri, aşağıdakilerden birini kullanarak belirtilir.  

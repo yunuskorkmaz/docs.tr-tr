@@ -3,11 +3,11 @@ title: Mesajlaşma Etkinlikleri
 ms.date: 03/30/2017
 ms.assetid: 8498f215-1823-4aba-a6e1-391407f8c273
 ms.openlocfilehash: 3391f7442ef4922a847a58b6316eb177cbcfbd5e
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48780472"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086348"
 ---
 # <a name="messaging-activities"></a>Mesajlaşma Etkinlikleri
 Mesajlaşma etkinlikleri, WCF iletileri almak ve göndermek için iş akışları sağlar. Mesajlaşma etkinlikleri iş akışı ekleyerek herhangi bir rasgele karmaşık ileti exchange Düzen (MEP) modelleyebilirsiniz.

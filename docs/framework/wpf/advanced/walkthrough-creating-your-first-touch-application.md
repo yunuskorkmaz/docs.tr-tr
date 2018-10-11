@@ -11,11 +11,11 @@ helpviewer_keywords:
 - creating a touchscreen application [WPF]
 ms.assetid: d69e602e-9a25-4e24-950b-e89eaa2a906b
 ms.openlocfilehash: 935999fd5ada93bedebb38462f9faa93b8ec923f
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48781485"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086732"
 ---
 # <a name="walkthrough-creating-your-first-touch-application"></a>İzlenecek yol: İlk Dokunmatik Uygulamanızı Oluşturma
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dokunmaya yanıt uygulamaları etkinleştirir. Örneğin, birini kullanarak bir uygulama ile etkileşim kurabilir veya daha fazla parmağınızı bir dokunmaya duyarlı cihazda dokunmatik ekranı sunduğumuz taşımak kullanıcı sağlayan bir uygulama oluşturur. Örneğin, yeniden boyutlandırma veya touch'ı kullanarak tek bir nesne döndürme.  

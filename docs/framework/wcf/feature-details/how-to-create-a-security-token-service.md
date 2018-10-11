@@ -9,29 +9,29 @@ helpviewer_keywords:
 - federation
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
 author: BrucePerlerMS
-ms.openlocfilehash: dd2c4f32978107a82ce940e0ef984c70f461b2c3
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 6dbf0e2be0a75fccd84a82fe2b3c8ab41762de83
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48046742"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087732"
 ---
 # <a name="how-to-create-a-security-token-service"></a>Nasıl yapılır: Güvenlik Belirteci Hizmeti Oluşturma
 Güvenlik belirteci hizmeti WS-Trust belirtiminde tanımlanan Protokolü uygular. Bu protokol, ileti biçimleri ve ileti verme, yenileme, iptal etme ve doğrulama güvenlik belirteçleri için exchange desenleri tanımlar. Belirli bir güvenlik belirteci hizmeti bir veya daha fazla bu yetenekleri sağlar. Bu konuda en sık karşılaşılan bir senaryodur arar: uygulama belirteci verme.  
   
 ## <a name="issuing-tokens"></a>Belirteç  
- WS-Trust tanımlar göre ileti formatları `RequestSecurityToken` XML Şeması Tanım Dili (XSD) şema öğesi ve `RequestSecurityTokenResponse` belirteç yayınında gerçekleştirmek için XSD şema öğesi. Ayrıca, ilişkili eylem Tekdüzen Kaynak Tanımlayıcıları (URI'lar) tanımlar. URI ile ilişkili eylem `RequestSecurityToken` ileti http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue. URI ile ilişkili eylem `RequestSecurityTokenResponse` ileti http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue.  
+ WS-Trust tanımlar göre ileti formatları `RequestSecurityToken` XML Şeması Tanım Dili (XSD) şema öğesi ve `RequestSecurityTokenResponse` belirteç yayınında gerçekleştirmek için XSD şema öğesi. Ayrıca, ilişkili eylem Tekdüzen Kaynak Tanımlayıcıları (URI'lar) tanımlar. URI ile ilişkili eylem `RequestSecurityToken` ileti `http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue`. URI ile ilişkili eylem `RequestSecurityTokenResponse` ileti `http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue`.  
   
 ### <a name="request-message-structure"></a>İstek iletisi yapısı  
  Sorun istek iletisi yapısı genellikle şu öğelerden oluşur:  
   
--   Bir istek türü URI değeri olan http://schemas.xmlsoap.org/ws/2005/02/trust/Issue.  
+-   Bir istek türü URI değeri olan `http://schemas.xmlsoap.org/ws/2005/02/trust/Issue`.
   
--   Belirteç türü URI. Güvenlik onaylama işaretleme dili (SAML) 1.1 belirteçler için bu URI değeri http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1.  
+-   Belirteç türü URI. Güvenlik onaylama işaretleme dili (SAML) 1.1 belirteçler için bu URI değeri `http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1`.  
   
 -   Verilen belirteçle ilişkili olmasını anahtarında bit sayısını belirten bir anahtar boyutu değer.  
   
--   Anahtar türü URI. Simetrik anahtarlar için bu URI değeri http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey.  
+-   Anahtar türü URI. Simetrik anahtarlar için bu URI değeri `http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey`.  
   
  Ayrıca, diğer öğeleri birkaç mevcut olabilir:  
   

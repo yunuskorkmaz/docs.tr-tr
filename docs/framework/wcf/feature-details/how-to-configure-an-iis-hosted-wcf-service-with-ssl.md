@@ -2,67 +2,67 @@
 title: 'Nasıl yapılır: IIS Tarafından Barındırılan Bir WCF Hizmetini SSL ile Yapılandırma'
 ms.date: 03/30/2017
 ms.assetid: df2fe31f-a4bb-4024-92ca-b74ba055e038
-ms.openlocfilehash: e739eb47611e5b73e7f1d62191a5aa61ad77abe2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2d6e367748222d7401bec6dc919815399b63b1d9
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493508"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086225"
 ---
 # <a name="how-to-configure-an-iis-hosted-wcf-service-with-ssl"></a>Nasıl yapılır: IIS Tarafından Barındırılan Bir WCF Hizmetini SSL ile Yapılandırma
-Bu konu, HTTP taşıma güvenliği kullanılacak bir IIS tarafından barındırılan bir WCF hizmeti kurmak açıklar. HTTP taşıma güvenliği ile IIS kaydedilmesi için bir SSL sertifikası gerektirir. Bir SSL sertifikası yoksa, bir test sertifikası oluşturmak için IIS kullanabilirsiniz. Sonraki web sitesi için SSL bağlaması eklemek ve web sitesinin kimlik doğrulama özelliklerini yapılandırmanız gerekir. Son olarak, WCF hizmetini HTTPS kullanacak şekilde yapılandırmanız gerekir.  
+Bu konu, HTTP aktarım güvenliği kullanılacak bir IIS barındırılan WCF hizmeti kurmak açıklar. HTTP aktarım güvenliği bir SSL sertifikası, IIS ile kayıtlı olması gerekir. Bir SSL sertifikası yoksa, IIS bir test sertifikası oluşturmak için kullanabilirsiniz. Sonraki web sitesine bir SSL bağlaması ekleyin ve web sitesinin kimlik doğrulaması özelliklerini yapılandırmanız gerekir. Son olarak, WCF hizmetini HTTPS kullanacak şekilde yapılandırmanız gerekir.  
   
 ### <a name="creating-a-self-signed-certificate"></a>Otomatik olarak imzalanan sertifika oluşturma  
   
-1.  Internet Information Services Yöneticisi (inetmgr.exe) açın ve sol ağaç görünümünde bilgisayarınızın adını seçin. Ekranın sağ tarafta sunucu sertifikası seç  
+1.  Internet Information Services Manager (inetmgr.exe) açın ve sol taraftaki ağaç görünümü'nde, bilgisayar adını seçin. Ekranın sağ tarafında sunucu sertifikası seç  
   
-     ![IIS Yöneticisi'ni giriş ekranı](../../../../docs/framework/wcf/feature-details/media/mg-inetmgrhome.jpg "mg_INetMgrHome")  
+     ![IIS Manager giriş ekranı](../../../../docs/framework/wcf/feature-details/media/mg-inetmgrhome.jpg "mg_INetMgrHome")  
   
-2.  Sunucu sertifikaları penceresinde tıklatın **otomatik olarak imzalanan sertifika oluştur...** Bağlantı.  
+2.  Sunucu sertifikaları pencerede **otomatik olarak imzalanan sertifika oluştur...** bağlantı.  
   
-     ![Kendi oluşturma&#45;IIS sertifikayla imzalanmış](../../../../docs/framework/wcf/feature-details/media/mg-createselfsignedcert.jpg "mg_CreateSelfSignedCert")  
+     ![Bir kendi kendini oluşturma&#45;IIS sertifikayla imzalanan](../../../../docs/framework/wcf/feature-details/media/mg-createselfsignedcert.jpg "mg_CreateSelfSignedCert")  
   
 3.  Otomatik olarak imzalanan sertifika için bir kolay ad girin ve tıklayın **Tamam**.  
   
-     ![Kendi kendini oluşturma&#45;imzalı sertifika iletişim kutusu](../../../../docs/framework/wcf/feature-details/media/mg-mycert.jpg "mg_MyCert")  
+     ![Kendi kendine oluşturmak&#45;imzalı sertifika iletişim kutusu](../../../../docs/framework/wcf/feature-details/media/mg-mycert.jpg "mg_MyCert")  
   
-     Yeni oluşturulan otomatik olarak imzalanan sertifika ayrıntılarını şimdi'nda gösterilen **sunucu sertifikaları** penceresi.  
+     Yeni oluşturulan kendinden imzalı bir sertifika ayrıntılarını artık gösterilen **sunucu sertifikaları** penceresi.  
   
      ![Sunucu sertifikası penceresi](../../../../docs/framework/wcf/feature-details/media/mg-servercertificatewindow.jpg "mg_ServerCertificateWindow")  
   
-     Oluşturulan sertifika güvenilen kök sertifika yetkilileri yüklü depolar.  
+     Oluşturulan sertifika, güvenilen kök sertifika yetkilileri deposunda yüklü depolayın.  
   
-### <a name="add-ssl-binding"></a>SSL bağlaması ekleme  
+### <a name="add-ssl-binding"></a>SSL bağlaması Ekle  
   
-1.  Hala Internet Bilgi Hizmetleri Yöneticisi'nde **siteleri** klasörünü ve ardından **varsayılan Web sitesi** ekranın sol taraftaki ağaç görünümünde klasörü.  
+1.  Hala Internet Bilgi Hizmetleri Yöneticisi'nde genişletin **siteleri** klasörünü ve ardından **varsayılan Web sitesi** ekranın sol tarafındaki ağaç görünümünde klasörü.  
   
-2.  Tıklatın **bağlamaları...** Bağlamak **Eylemler** pencerenin üst sağ taraftaki bölümünde bölümünde.  
+2.  Tıklayın **bağlamaları...** Bağlantısını **eylemleri** pencerenin sağ üst taraftaki bölümünde bölümünde.  
   
-     ![SSL bağlaması ekleme](../../../../docs/framework/wcf/feature-details/media/mg-addsslbinding.jpg "mg_AddSSLBinding")  
+     ![Bir SSL bağlaması ekleniyor](../../../../docs/framework/wcf/feature-details/media/mg-addsslbinding.jpg "mg_AddSSLBinding")  
   
-3.  Site bağlamaları penceresinde tıklatın **Ekle** düğmesi.  
+3.  Site bağlamaları pencerede **Ekle** düğmesi.  
   
      ![Site bağlamaları iletişim](../../../../docs/framework/wcf/feature-details/media/mg-sitebindingsdialog.jpg "mg_SiteBindingsDialog")  
   
-4.  İçinde **Site bağlaması Ekle** türü ve yeni imzalanan sertifikanın kolay adını Seç https iletişim kutusunda, oluşturulmuş.  
+4.  İçinde **Site bağlaması Ekle** türü ve kolay adı, tam otomatik olarak imzalanan sertifika için select https iletişim kutusunda, oluşturulan.  
   
      ![Site bağlama örnek](../../../../docs/framework/wcf/feature-details/media/mg-mycertbinding.jpg "mg_MyCertBinding")  
   
-### <a name="configure-virtual-directory-for-ssl"></a>Sanal dizin için SSL yapılandırma  
+### <a name="configure-virtual-directory-for-ssl"></a>SSL için sanal dizin Yapılandır  
   
-1.  Hala Internet Bilgi Hizmetleri Yöneticisi'nde, WCF güvenli hizmetinizi içeren sanal dizini seçin.  
+1.  Hala Internet Bilgi Hizmetleri Yöneticisi'nde güvenli WCF hizmetinizi içeren sanal dizini seçin.  
   
 2.  Pencerenin Orta bölmede seçin **SSL ayarları** IIS bölümünde.  
   
      ![Sanal dizin için SSL ayarları](../../../../docs/framework/wcf/feature-details/media/mg-sslsettingsforvdir.jpg "mg_SSLSettingsForVDir")  
   
-3.  SSL ayarları bölmesinde seçin **SSL iste** onay kutusunu tıklatıp **Uygula** bağlamak **Eylemler** ekranın sağ taraftaki bölüm.  
+3.  SSL ayarları bölmesinde seçin **SSL iste** onay kutusunu tıklatıp **Uygula** bağlantısını **eylemleri** ekranın sağ tarafındaki bölümü.  
   
      ![Sanal dizin SSL ayarları](../../../../docs/framework/wcf/feature-details/media/mg-vdirsslsettings.JPG "mg_VDirSSLSettings")  
   
-### <a name="configure-wcf-service-for-http-transport-security"></a>HTTP taşıma güvenliği için WCF hizmetini yapılandırma  
+### <a name="configure-wcf-service-for-http-transport-security"></a>HTTP aktarım güvenliği için WCF hizmetini yapılandırma  
   
-1.  WCF hizmet web.config aşağıdaki XML dosyasında gösterildiği gibi taşıma güvenliği kullanmak için HTTP bağlaması yapılandırın.  
+1.  WCF'de hizmetin web.config aşağıdaki XML'de gösterildiği aktarım güvenliği kullanılacak HTTP bağlama yapılandırın.  
   
     ```xml  
     <bindings>  
@@ -76,7 +76,7 @@ Bu konu, HTTP taşıma güvenliği kullanılacak bir IIS tarafından barındır�
     </bindings>  
     ```  
   
-2.  Hizmet ve hizmet uç noktası aşağıdaki XML dosyasında gösterildiği gibi belirtin.  
+2.  Aşağıdaki XML dosyasında gösterildiği gibi hizmet ve hizmet uç noktası belirtin.  
   
     ```xml  
     <services>  
@@ -94,7 +94,7 @@ Bu konu, HTTP taşıma güvenliği kullanılacak bir IIS tarafından barındır�
     ```  
   
 ## <a name="example"></a>Örnek  
- HTTP taşıma güvenliği kullanarak bir WCF hizmeti için web.config dosyasının tam bir örnek verilmiştir  
+ HTTP aktarım güvenliği kullanarak bir WCF hizmeti için web.config dosyasının tam bir örnek verilmiştir  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -145,7 +145,7 @@ Bu konu, HTTP taşıma güvenliği kullanılacak bir IIS tarafından barındır�
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Internet Information Services'te Barındırma](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
- [Internet Information Service Barındırma Yönergeleri](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
- [Internet Information Services Barındırma En İyi Uygulamaları](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
- [Satır İçi Kod Kullanarak IIS Barındırma](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)
+* [Internet Information Services'te Barındırma](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
+* [Internet Information Service Barındırma Yönergeleri](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
+* [Internet Information Services Barındırma En İyi Uygulamaları](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
+* [Satır İçi Kod Kullanarak IIS Barındırma](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)

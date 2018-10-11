@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - unsafe keyword [C#]
 ms.assetid: 7e818009-1c6e-4b9e-b769-3728a01586a0
-ms.openlocfilehash: b4615021a4fc3391ac0ae703b6c97301b44aa60e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: f4fcff02166091ae5dbd83e7ddf7762373fd9836
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45596551"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086459"
 ---
 # <a name="unsafe-c-reference"></a>unsafe (C# Başvurusu)
 `unsafe` Anahtar sözcüğü, işaretçileri içeren tüm işlemler için gerekli olan güvensiz bir bağlamı gösterir. Daha fazla bilgi için [güvenli olmayan kod ve işaretçiler](../../../csharp/programming-guide/unsafe-code-pointers/index.md).  
@@ -20,7 +20,7 @@ ms.locfileid: "45596551"
  Kullanabileceğiniz `unsafe` bildirimi bir tür veya üye değiştiricisi. Türe veya üyeye tüm metinsel kapsamını, bu nedenle güvenli olmayan bir bağlam kabul edilir. Örneğin, aşağıdaki ile bildirilen bir yöntemi olan `unsafe` değiştiricisi:  
   
 ```csharp  
-      unsafe static void FastCopy(byte[] src, byte[] dst, int count)  
+unsafe static void FastCopy(byte[] src, byte[] dst, int count)  
 {  
     // Unsafe context: can use pointers here.  
 }  
@@ -35,7 +35,7 @@ unsafe static void FastCopy ( byte* ps, byte* pd, int count ) {...}
  Güvenli olmayan bir blok, bu blok içinde bir güvenli olmayan kod kullanımını etkinleştirmek için de kullanabilirsiniz. Örneğin:  
   
 ```csharp  
-      unsafe  
+unsafe  
 {  
     // Unsafe context: can use pointers here.  
 }  

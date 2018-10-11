@@ -2,15 +2,15 @@
 title: WCF &lt;bookmarkResumptionQuery&gt;
 ms.date: 03/30/2017
 ms.assetid: 755a34f0-87c9-4a1e-ae4d-0fb8a6fbdc0e
-ms.openlocfilehash: 083b42efdd2b10dad870b6590fc20331a090f8aa
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 07215347da19a05d5915296668d990853fdae646
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748262"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087797"
 ---
 # <a name="ltbookmarkresumptionquerygt-of-wcf"></a>WCF &lt;bookmarkResumptionQuery&gt;
-Bir iş akışı örneği içinde yer işaretinin sürdürme izlemek için kullanılan bir sorgu temsil eder. Sorgu yer işareti sürdürme kayıtlara abone olmak izleme katılımcı gereklidir.  
+İş akışı örneği içinde yer işaretinin sürdürme izlemek için kullanılan bir sorgu temsil eder. Sorgu için yer imi sürdürme kayıtları abone olmak izleme Katılımcısı için gereklidir.  
   
  Profil sorguları izleme ile ilgili daha fazla bilgi için bkz: [profillerini izleme](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
@@ -24,7 +24,15 @@ Bir iş akışı örneği içinde yer işaretinin sürdürme izlemek için kulla
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml
-<tracking>   <trackingProfile name="Name">       <workflow>          <bookmarkResumptionQueries>             <bookmarkResumptionQuery name="String" />          </bookmarkResumptionQueries>       </workflow>   </trackingProfile></tracking>  
+<tracking>
+  <trackingProfile name="Name">
+    <workflow>
+      <bookmarkResumptionQueries>
+        <bookmarkResumptionQuery name="String" />
+      </bookmarkResumptionQueries>
+    </workflow>
+  </trackingProfile>
+</tracking>  
 ```
 
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
@@ -34,7 +42,7 @@ Bir iş akışı örneği içinde yer işaretinin sürdürme izlemek için kulla
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|name|Abone olunacak yer işareti kaydın adını belirten dize.|  
+|name|Abone olmak için yer imi kayıt adını belirten dize.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -43,7 +51,7 @@ Bir iş akışı örneği içinde yer işaretinin sürdürme izlemek için kulla
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<bookmarkResumptionQueries >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/bookmarkresumptionqueries.md)|Bir iş akışı örneği içinde yer işaretinin sürdürme izlemek için kullanılan sorgu koleksiyonunu temsil eder.|  
+|[\<bookmarkResumptionQueries >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/bookmarkresumptionqueries.md)|İş akışı örneği içinde yer işaretinin sürdürme izlemek için kullanılan sorguları koleksiyonunu temsil eder.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Activities.Tracking.Configuration.BookmarkResumptionQueryElementCollection?displayProperty=nameWithType>       
