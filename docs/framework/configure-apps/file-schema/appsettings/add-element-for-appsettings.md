@@ -10,21 +10,21 @@ ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
 author: guardrex
 ms.author: mairaw
 ms.openlocfilehash: bcdac76528e7a8b07b56b6fd1d827c3c8072c371
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48046376"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086330"
 ---
-# <a name="add-element-for-appsettings"></a><span data-ttu-id="93629-102">\<Ekle > öğesi için \<appSettings ></span><span class="sxs-lookup"><span data-stu-id="93629-102">\<add> element for \<appSettings></span></span>
+# <a name="add-element-for-appsettings"></a><span data-ttu-id="6974d-102">\<Ekle > öğesi için \<appSettings ></span><span class="sxs-lookup"><span data-stu-id="6974d-102">\<add> element for \<appSettings></span></span>
 
-<span data-ttu-id="93629-103">Özel uygulama ayarı ekler.</span><span class="sxs-lookup"><span data-stu-id="93629-103">Adds a custom application setting.</span></span>
+<span data-ttu-id="6974d-103">Özel uygulama ayarı ekler.</span><span class="sxs-lookup"><span data-stu-id="6974d-103">Adds a custom application setting.</span></span>
 
-<span data-ttu-id="93629-104">[**\<Yapılandırma >**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="93629-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
-<span data-ttu-id="93629-105">&nbsp;&nbsp;[**\<appSettings >**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) </span><span class="sxs-lookup"><span data-stu-id="93629-105">&nbsp;&nbsp;[**\<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) </span></span>  
-<span data-ttu-id="93629-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<Ekle >**</span><span class="sxs-lookup"><span data-stu-id="93629-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**</span></span>
+<span data-ttu-id="6974d-104">[**\<Yapılandırma >**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="6974d-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
+<span data-ttu-id="6974d-105">&nbsp;&nbsp;[**\<appSettings >**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) </span><span class="sxs-lookup"><span data-stu-id="6974d-105">&nbsp;&nbsp;[**\<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) </span></span>  
+<span data-ttu-id="6974d-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<Ekle >**</span><span class="sxs-lookup"><span data-stu-id="6974d-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="93629-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="93629-107">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="6974d-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="6974d-107">Syntax</span></span>
 
 ```xml
 <appSettings>
@@ -32,26 +32,26 @@ ms.locfileid: "48046376"
 </appSettings>
 ```
 
-## <a name="attributes"></a><span data-ttu-id="93629-108">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="93629-108">Attributes</span></span>
+## <a name="attributes"></a><span data-ttu-id="6974d-108">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="6974d-108">Attributes</span></span>
 
-|           | <span data-ttu-id="93629-109">Açıklama</span><span class="sxs-lookup"><span data-stu-id="93629-109">Description</span></span> |
+|           | <span data-ttu-id="6974d-109">Açıklama</span><span class="sxs-lookup"><span data-stu-id="6974d-109">Description</span></span> |
 | --------- | ----------- |
-| <span data-ttu-id="93629-110">**Anahtarı**</span><span class="sxs-lookup"><span data-stu-id="93629-110">**key**</span></span>   | <span data-ttu-id="93629-111">Gerekli öznitelik.</span><span class="sxs-lookup"><span data-stu-id="93629-111">Required attribute.</span></span><br><br><span data-ttu-id="93629-112">Eklenecek anahtar adını belirtir.</span><span class="sxs-lookup"><span data-stu-id="93629-112">Specifies the name of the key to add.</span></span> |
-| <span data-ttu-id="93629-113">**value**</span><span class="sxs-lookup"><span data-stu-id="93629-113">**value**</span></span> | <span data-ttu-id="93629-114">Gerekli öznitelik.</span><span class="sxs-lookup"><span data-stu-id="93629-114">Required attribute.</span></span><br><br><span data-ttu-id="93629-115">Eklenecek anahtar değerini belirtir.</span><span class="sxs-lookup"><span data-stu-id="93629-115">Specifies the value of the key to add.</span></span> |
+| <span data-ttu-id="6974d-110">**Anahtarı**</span><span class="sxs-lookup"><span data-stu-id="6974d-110">**key**</span></span>   | <span data-ttu-id="6974d-111">Gerekli öznitelik.</span><span class="sxs-lookup"><span data-stu-id="6974d-111">Required attribute.</span></span><br><br><span data-ttu-id="6974d-112">Eklenecek anahtar adını belirtir.</span><span class="sxs-lookup"><span data-stu-id="6974d-112">Specifies the name of the key to add.</span></span> |
+| <span data-ttu-id="6974d-113">**value**</span><span class="sxs-lookup"><span data-stu-id="6974d-113">**value**</span></span> | <span data-ttu-id="6974d-114">Gerekli öznitelik.</span><span class="sxs-lookup"><span data-stu-id="6974d-114">Required attribute.</span></span><br><br><span data-ttu-id="6974d-115">Eklenecek anahtar değerini belirtir.</span><span class="sxs-lookup"><span data-stu-id="6974d-115">Specifies the value of the key to add.</span></span> |
 
-## <a name="parent-element"></a><span data-ttu-id="93629-116">Üst öğe</span><span class="sxs-lookup"><span data-stu-id="93629-116">Parent element</span></span>
+## <a name="parent-element"></a><span data-ttu-id="6974d-116">Üst öğe</span><span class="sxs-lookup"><span data-stu-id="6974d-116">Parent element</span></span>
 
-|     | <span data-ttu-id="93629-117">Açıklama</span><span class="sxs-lookup"><span data-stu-id="93629-117">Description</span></span> |
+|     | <span data-ttu-id="6974d-117">Açıklama</span><span class="sxs-lookup"><span data-stu-id="6974d-117">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="93629-118">**\<appSettings >**</span><span class="sxs-lookup"><span data-stu-id="93629-118">**\<appSettings>**</span></span>](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | <span data-ttu-id="93629-119">Dosya yolları, XML Web hizmeti URL'leri ya da bir uygulama için diğer özel yapılandırma bilgileri gibi özel uygulama ayarları içerir.</span><span class="sxs-lookup"><span data-stu-id="93629-119">Contains custom application settings, such as file paths, XML Web service URLs, or any other custom configuration information for an application.</span></span> |
+| [<span data-ttu-id="6974d-118">**\<appSettings >**</span><span class="sxs-lookup"><span data-stu-id="6974d-118">**\<appSettings>**</span></span>](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | <span data-ttu-id="6974d-119">Dosya yolları, XML Web hizmeti URL'leri ya da bir uygulama için diğer özel yapılandırma bilgileri gibi özel uygulama ayarları içerir.</span><span class="sxs-lookup"><span data-stu-id="6974d-119">Contains custom application settings, such as file paths, XML Web service URLs, or any other custom configuration information for an application.</span></span> |
 
-## <a name="child-elements"></a><span data-ttu-id="93629-120">Alt öğeleri</span><span class="sxs-lookup"><span data-stu-id="93629-120">Child elements</span></span>
+## <a name="child-elements"></a><span data-ttu-id="6974d-120">Alt öğeleri</span><span class="sxs-lookup"><span data-stu-id="6974d-120">Child elements</span></span>
 
-<span data-ttu-id="93629-121">Yok.</span><span class="sxs-lookup"><span data-stu-id="93629-121">None</span></span>
+<span data-ttu-id="6974d-121">Yok.</span><span class="sxs-lookup"><span data-stu-id="6974d-121">None</span></span>
 
-## <a name="example"></a><span data-ttu-id="93629-122">Örnek</span><span class="sxs-lookup"><span data-stu-id="93629-122">Example</span></span>
+## <a name="example"></a><span data-ttu-id="6974d-122">Örnek</span><span class="sxs-lookup"><span data-stu-id="6974d-122">Example</span></span>
 
-<span data-ttu-id="93629-123">Aşağıdaki örnek, bir uygulamanın adı için özel yapılandırma ayarı eklemek gösterilmektedir:</span><span class="sxs-lookup"><span data-stu-id="93629-123">The following example shows how to add a custom configuration setting for the application's name:</span></span>
+<span data-ttu-id="6974d-123">Aşağıdaki örnek, bir uygulamanın adı için özel yapılandırma ayarı eklemek gösterilmektedir:</span><span class="sxs-lookup"><span data-stu-id="6974d-123">The following example shows how to add a custom configuration setting for the application's name:</span></span>
 
 ```xml
 <appSettings>
@@ -59,7 +59,7 @@ ms.locfileid: "48046376"
 </appSettings>
 ```
 
-<span data-ttu-id="93629-124">Aşağıdaki örnekte `<add>` bir ASP.NET uygulamasında iki uyumluluk ayarlarını tanımlamak için:</span><span class="sxs-lookup"><span data-stu-id="93629-124">The following example uses the `<add>` element to define two compatibility settings in an ASP.NET application:</span></span>
+<span data-ttu-id="6974d-124">Aşağıdaki örnekte `<add>` bir ASP.NET uygulamasında iki uyumluluk ayarlarını tanımlamak için:</span><span class="sxs-lookup"><span data-stu-id="6974d-124">The following example uses the `<add>` element to define two compatibility settings in an ASP.NET application:</span></span>
 
 ```xml
 <appSettings>
@@ -68,6 +68,6 @@ ms.locfileid: "48046376"
 </appSettings>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="93629-125">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="93629-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6974d-125">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6974d-125">See also</span></span>
 
-[<span data-ttu-id="93629-126">.NET Framework yapılandırma dosyası şeması</span><span class="sxs-lookup"><span data-stu-id="93629-126">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)
+[<span data-ttu-id="6974d-126">.NET Framework yapılandırma dosyası şeması</span><span class="sxs-lookup"><span data-stu-id="6974d-126">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)
