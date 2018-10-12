@@ -20,11 +20,11 @@ ms.assetid: 813489a9-3efd-41b6-a33f-371d55397676
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: f89bf9e3ea9f2b3c385d267cfc77a05ee8eb82d6
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266440"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086109"
 ---
 # <a name="using-an-asynchronous-server-socket"></a>Zaman uyumsuz sunucu yuvası kullanma
 Zaman uyumsuz sunucu yuvası ağ hizmeti isteklerini işlemek için .NET Framework zaman uyumsuz programlama modeli kullanımı. <xref:System.Net.Sockets.Socket> Sınıfı aşağıdaki standart .NET Framework zaman uyumsuz adlandırma deseni; Örneğin, zaman uyumlu <xref:System.Net.Sockets.Socket.Accept%2A> yöntemi karşılık gelen için zaman uyumsuz <xref:System.Net.Sockets.Socket.BeginAccept%2A> ve <xref:System.Net.Sockets.Socket.EndAccept%2A> yöntemleri.  
