@@ -2,12 +2,12 @@
 title: Bağımsız Tanılama Akış Örneği
 ms.date: 03/30/2017
 ms.assetid: d31c6c1f-292c-4d95-8e23-ed8565970ea5
-ms.openlocfilehash: 64222297373f194a33b5520ecd71b0acc7755359
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 6def1d02ed46675d98db115f77ac36bb9f9401de
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43418303"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123559"
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>Bağımsız Tanılama Akış Örneği
 Bu örnek, bir RSS/Atom sendikasyonu Windows Communication Foundation (WCF) ile akış oluşturma işlemini gösterir. Nesne modeli temellerini ve Windows Communication Foundation (WCF) hizmet üzerinde ayarlanan gösterilmektedir temel bir "Merhaba Dünya" programı var.  
@@ -49,7 +49,7 @@ WebServiceHost host = new WebServiceHost(typeof(ProcessService), new Uri("http:/
 <%@ ServiceHost Language="C#|VB" Debug="true" Service="ProcessService" %>  
 ```  
   
- Bu hizmeti kullanarak standart HTTP GET isteklerini aldığından, hizmete erişmek için herhangi bir RSS veya ATOM algılayan İstemcisi'ni kullanabilirsiniz. Giderek bu hizmet çıktısı gibi görüntüleyebilirsiniz http://localhost:8000/diagnostics/feed/?format=atom veya http://localhost:8000/diagnostics/feed/?format=rss RSS uyumlu bir tarayıcıda Internet Explorer 7 gibi.  
+ Bu hizmeti kullanarak standart HTTP GET isteklerini aldığından, hizmete erişmek için herhangi bir RSS veya ATOM algılayan İstemcisi'ni kullanabilirsiniz. Giderek bu hizmet çıktısı gibi görüntüleyebilirsiniz `http://localhost:8000/diagnostics/feed/?format=atom` veya `http://localhost:8000/diagnostics/feed/?format=rss` RSS uyumlu bir tarayıcıda.
   
  Ayrıca [nasıl WCF dağıtım nesnesi modeli eşlenir Atom ve RSS](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md) Dağıtılmış veri okuyup kesin kod kullanarak işleyin.  
   
@@ -82,7 +82,7 @@ foreach (SyndicationItem i in feed.Items)
   
 3.  Konsol uygulamasını çalıştırın.  
   
-4.  Konsol uygulaması çalışırken gidin http://localhost:8000/diagnostics/feed/?format=atom veya http://localhost:8000/diagnostics/feed/?format=rss RSS uyumlu bir tarayıcı kullanarak.  
+4.  Konsol uygulaması çalışırken gidin `http://localhost:8000/diagnostics/feed/?format=atom` veya `http://localhost:8000/diagnostics/feed/?format=rss` RSS uyumlu bir tarayıcı kullanarak.  
   
 > [!IMPORTANT]
 >  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  

@@ -3,11 +3,11 @@ title: Genel koleksiyonlar için (C#) arabirimlerde varyans kullanma
 ms.date: 07/20/2015
 ms.assetid: a44f0708-10fa-4c76-82cd-daa6e6b31e8e
 ms.openlocfilehash: 66a1eac33d5f715f52bd83c43bac4452df41aabd
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035337"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49122363"
 ---
 # <a name="using-variance-in-interfaces-for-generic-collections-c"></a>Genel koleksiyonlar için (C#) arabirimlerde varyans kullanma
 Birlikte değişen bir arabirimin yöntemlerinin dönüş arabiriminde belirtilenlerden daha türetilmiş türleri sağlar. Bir değişken karşıtı arabirimi belirtilenlerden daha az türetilmiş türler arabiriminde parametrelerini kabul edecek şekilde yöntemlerini sağlar.  

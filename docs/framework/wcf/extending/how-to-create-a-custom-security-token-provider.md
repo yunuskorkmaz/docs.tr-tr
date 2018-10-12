@@ -9,11 +9,11 @@ helpviewer_keywords:
 ms.assetid: db8cb478-aa43-478b-bf97-c6489ad7c7fd
 author: BrucePerlerMS
 ms.openlocfilehash: 3e304aa12d5e1c7aaa992191e6ed9ed25b026f9f
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266253"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121201"
 ---
 # <a name="how-to-create-a-custom-security-token-provider"></a>Nasıl yapılır: Özel Güvenlik Belirteci Sağlayıcı Oluşturma
 Bu konu, yeni belirteç türleri ile özel güvenlik belirteci sağlayıcı oluşturma ve sağlayıcı bir özel güvenlik belirteci yöneticisi ile tümleştirmek nasıl gösterir.  

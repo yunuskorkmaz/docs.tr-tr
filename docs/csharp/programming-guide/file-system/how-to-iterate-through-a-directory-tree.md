@@ -5,12 +5,12 @@ helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: 1aac40793fabe152e18a1bf1b634058e85b31481
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a6725463b042d51e20e5b293d7177903d2d35956
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515767"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123637"
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Nasıl yapılır: Dizin Ağacı ile Yineleme (C# Programlama Kılavuzu)
 Her iç içe geçmiş alt dizinde bir belirtilen kök klasöre herhangi derinliği her dosyaya erişmek deyimi "dizin ağacı yineleme" anlamına gelir. Mutlaka her dosyayı açmak gerekmez. Yalnızca dosya veya alt dizini olarak adını alabilirsiniz bir `string`, veya biçiminde ek bilgi almak bir <xref:System.IO.FileInfo?displayProperty=nameWithType> veya <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> nesne.  
@@ -54,7 +54,7 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
  Bir dizin ağacında içeriğini bellekte veya diskte depolamanız gerekir, yalnızca depolamak için en iyi seçenek olduğu <xref:System.IO.FileSystemInfo.FullName%2A> özelliği (tür `string`) her dosya için. Bu dize daha sonra yeni bir kullanabilirsiniz <xref:System.IO.FileInfo> veya <xref:System.IO.DirectoryInfo> nesne gerektiğinde veya ek işlem gerektiren her türlü dosyayı açmak.  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
- Sağlam bir dosya yineleme kod dosya sistemi birçok karmaşıklığını dikkate almanız gerekir. Windows dosya sistemi hakkında daha fazla bilgi için bkz. [NTFS teknik başvuru](https://technet.microsoft.com/library/81cc8a8a-bd32-4786-a849-03245d68d8e4).  
+ Sağlam bir dosya yineleme kod dosya sistemi birçok karmaşıklığını dikkate almanız gerekir. Windows dosya sistemi hakkında daha fazla bilgi için bkz. [NTFS genel bakış](/windows-server/storage/file-server/ntfs-overview).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.
 

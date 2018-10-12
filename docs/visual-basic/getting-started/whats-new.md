@@ -1,6 +1,6 @@
 ---
 title: Visual Basic'teki yenilikler
-ms.date: 02/15/2018
+ms.date: 10/04/2018
 f1_keywords:
 - VB.StartPage.WhatsNew
 helpviewer_keywords:
@@ -10,16 +10,16 @@ helpviewer_keywords:
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae29553b6a431c3f20f0e5e34614842946532a9b
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 07e6b201056614237a433ed7a297d40eab23da59
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925617"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49122654"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic'teki yenilikler
 
-Bu konu, her bir Visual Basic sürümü ile dil kullanılabileceği en son sürümündeki yeni ve geliştirilmiş özelliklerine ayrıntılı açıklamaları için anahtar özellik adlarını listeler.
+Bu konu, her bir Visual Basic sürümü ile dil en son sürümlerindeki yeni ve geliştirilmiş özellikler ayrıntılı açıklamaları için anahtar özellik adlarını listeler.
   
 ## <a name="current-version"></a>Geçerli sürüm
 
@@ -69,6 +69,10 @@ Bir yöntem çağrısının hem konuma ve ada göre bağımsız değişkenleri e
 ```vb
 StudentInfo.Display("Mary", age:=19, #9/21/1998#)
 ```
+
+[`Private Protected` üye erişim değiştiricisi](../language-reference/modifiers/private-protected.md)
+
+Bu yeni anahtar sözcüğü birleşimi içeren sınıfındaki tüm üyeleri veya içeren sınıfından türetilen türler tarafından erişilebilir, ancak yalnızca de içeren derlemede bulunan bir üye tanımlar. Yapıları devralınamaz çünkü `Private Protected` yalnızca bir sınıf üyelerine uygulanabilir.
 
 **Önde gelen onaltılık/ikili/sekizlik ayırıcı**
 

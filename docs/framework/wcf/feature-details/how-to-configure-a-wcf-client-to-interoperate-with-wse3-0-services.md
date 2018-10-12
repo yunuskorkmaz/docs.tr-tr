@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3dadd7f1-d207-4ea5-a73b-3e8aa44407f8
-ms.openlocfilehash: 9d7cb4869e9e460373bffbf33f61f61ecb6e9948
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: cf50cc9a095f091db6ec7a627536cf1c23a11e70
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505461"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49122824"
 ---
 # <a name="how-to-configure-a-wcf-client-to-interoperate-with-wse30-services"></a>Nasıl yapılır: WCF İstemcisini WSE3.0 Hizmetleriyle Çalışacak Şekilde Yapılandırma
 WCF istemcileri belirtiminin WS-Addressing Ağustos 2004 sürümü kullanmak için yapılandırıldığı zaman Windows Communication Foundation (WCF) istemcileri hat düzeyinde Web Hizmetleri iyileştirmeleri 3.0 ile Microsoft .NET (WSE) Hizmetleri için uyumludur.  
@@ -63,5 +63,5 @@ WCF istemcileri belirtiminin WS-Addressing Ağustos 2004 sürümü kullanmak iç
 [!code-vb[c_WCFClientToWSEService#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wcfclienttowseservice/vb/client.vb#0)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Channels.Binding>  
- [WSE ile birlikte çalışma](https://msdn.microsoft.com/library/f6816861-96a0-45f9-8736-8e4e82cd3a41)
+* <xref:System.ServiceModel.Channels.Binding>  
+* [WSE ile birlikte çalışma](https://msdn.microsoft.com/library/f6816861-96a0-45f9-8736-8e4e82cd3a41)

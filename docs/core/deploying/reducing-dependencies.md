@@ -4,12 +4,12 @@ description: Project.json tabanlı kitaplıkları yazma Paket bağımlılıklar�
 author: cartermp
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: ae314800f789cee363728def8347b5e6990acb0b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 67d53b45e5cb02f146f763966d1f76e8a8a469ce
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44193626"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49122584"
 ---
 # <a name="reducing-package-dependencies-with-projectjson"></a>Project.json ile Paket bağımlılıklarını azaltma
 
@@ -127,7 +127,7 @@ Ardından, paket başvuruları kopyalayabilirsiniz `dependencies` kitaplığın 
 }
 ```
 
-Birçok paketleri olan hangi, kesinlikle koleksiyon türlerini genişletmek için gerekli olmayan çoğu.  Paketleri el ile kaldırmanız veya gibi bir araç kullanın [yetenek](http://ilspy.net) veya [.NET Reflector](http://www.red-gate.com/products/dotnet-development/reflector) , kodunuzun gerçekte paketleri tanımlamak için kullanır.
+Birçok paketleri, çoğu kesinlikle koleksiyon türlerini genişletmek için gerekli olmayan olmasıdır.  Paketleri el ile kaldırmanız veya gibi bir araç kullanın [yetenek](http://ilspy.net) veya [.NET Reflector](http://www.red-gate.com/products/dotnet-development/reflector) , kodunuzun gerçekte paketleri tanımlamak için kullanır.
 
 İşte kırpılmış paket aşağıdaki gibi görünebilir:
 

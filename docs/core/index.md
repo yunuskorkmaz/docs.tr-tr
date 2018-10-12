@@ -5,12 +5,12 @@ author: richlander
 ms.author: mairaw
 ms.date: 08/01/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: cfa7c27871204b808c9d753a970d5abb907a183e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b302b6fc7e097a811c718d2244f603246cb5c259
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512847"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121044"
 ---
 # <a name="net-core-guide"></a>.NET Core Kılavuzu
 
@@ -18,7 +18,7 @@ ms.locfileid: "43512847"
 
 Bkz: [.NET Core hakkında](about.md) özellikleri, desteklenen diller ve çerçeveler ve API anahtarını dahil olmak üzere, .NET Core hakkında daha fazla bilgi edinmek için.
 
-Kullanıma [.NET Core öğreticilerini](tutorials/index.md) basit bir .NET Core uygulaması oluşturmayı öğrenin. Yalnızca ilk uygulamanızı çalıştırmaya başlayın birkaç dakika sürer. .NET Core, tarayıcıda denemek istiyorsanız, bakmak [C# dilinde sayılar](https://docs.microsoft.com/dotnet/csharp/quick-starts/hello-world) hızlı başlangıç.
+Kullanıma [.NET Core öğreticilerini](tutorials/index.md) basit bir .NET Core uygulaması oluşturmayı öğrenin. Yalnızca ilk uygulamanızı çalıştırmaya başlayın birkaç dakika sürer. .NET Core tarayıcınızda denemek istiyorsanız, bakmak [C# dilinde sayılar](https://docs.microsoft.com/dotnet/csharp/quick-starts/numbers-in-csharp) hızlı başlangıç.
 
 ## <a name="download-net-core-21"></a>.NET Core 2.1 indirme
 

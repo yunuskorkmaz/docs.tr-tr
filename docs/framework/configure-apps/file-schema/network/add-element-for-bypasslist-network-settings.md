@@ -13,11 +13,11 @@ ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: b6cf22fcaff928e53c33a8eb4987acd5a7f6250e
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48779120"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121846"
 ---
 # <a name="ltaddgt-element-for-bypasslist-network-settings"></a>&lt;ekleme&gt; bypasslist (ağ ayarları) için
 Bir IP adresi veya DNS adı için proxy atlama listesi ekler.  

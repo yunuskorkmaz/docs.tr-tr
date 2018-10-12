@@ -24,11 +24,11 @@ ms.assetid: bb707c72-eed2-4a82-8800-c9e68df2fd4f
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 81b0f69306a0f9a4ed6d35e3c8ef95271a779294
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49087784"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49122350"
 ---
 # <a name="configuring-internet-applications"></a>Internet uygulamalarını yapılandırma
 [ \<System.Net > öğesi (ağ ayarları)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) yapılandırma öğesi, uygulamalar için ağ yapılandırma bilgileri içerir. Kullanarak [ \<system.Net > öğesi (ağ ayarları)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) öğesini ayarlayın proxy sunucuları, bağlantı yönetimi parametrelerinin ve uygulamanıza özel kimlik doğrulama ve istek modülleri dahil.  

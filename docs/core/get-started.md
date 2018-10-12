@@ -4,18 +4,18 @@ description: Windows, Linux ve Macos'ta .NET Core uygulamaları oluşturma hakk�
 author: thraka
 ms.author: adegeo
 ms.date: 06/27/2018
-ms.openlocfilehash: fa5deb46b64e1a09c9ad6582486a993a24336b42
-ms.sourcegitcommit: 702d5ffc6e733b6c4ded85bf1c92e2293638ee9a
+ms.openlocfilehash: 3fff7884082c46477d37b08560a2c71e7ee345e5
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37792406"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121260"
 ---
 # <a name="get-started-with-net-core"></a>.NET Core ile çalışmaya başlama
 
 Bu makalede .NET Core kullanmaya başlama hakkında bilgi sağlar. Windows, Linux ve Macos'ta .NET core yüklenebilir. Sık kullandığınız metin düzenleyicinizde kod ve platformlar arası kitaplıklar ve uygulamalar oluşturur. 
 
-.NET Core nedir ve .NET teknolojilerden nasıl ilişkili olduğu emin değilseniz başlayın [.NET nedir](https://www.microsoft.com/net/learn/what-is-dotnet) genel bakış. Kısacası, .NET Core açık kaynaklı, platformlar arası .NET uygulamasıdır.
+.NET Core nedir ve .NET teknolojilerden nasıl ilişkili olduğu emin değilseniz başlayın [.NET nedir](https://www.microsoft.com/net/learn/dotnet/what-is-dotnet) genel bakış. Kısacası, .NET Core açık kaynaklı, platformlar arası .NET uygulamasıdır.
 
 ## <a name="create-an-application"></a>Uygulama oluşturma
 

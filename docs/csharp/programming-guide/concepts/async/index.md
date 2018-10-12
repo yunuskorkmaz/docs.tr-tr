@@ -2,12 +2,12 @@
 title: Zaman uyumsuz programlama ile async ve await (C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: bd1493319dd7f742158fe7d3e1b286a4900b05b5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7e95010f966119db72a32c21408852d6c3bd6521
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529169"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49122844"
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>Zaman uyumsuz programlama ile async ve await (C#)
 Zaman uyumsuz programlama kullanarak performans sorunlarını önleyebilir ve uygulamanızın genel yanıt verme becerisini geliştirebilirsiniz. Ancak, zaman uyumsuz uygulamalar yazmaya yönelik geleneksel teknikler karmaşık olabilir ve bu nedenle yazılmaları, hataların ayıklanması ve bakım yapılması zorlaşabilir.  
@@ -173,7 +173,7 @@ Belirttiğiniz <xref:System.Threading.Tasks.Task%601> yöntemi içeriyorsa, dön
   
 Kullandığınız <xref:System.Threading.Tasks.Task> dönüş türünü yöntem herhangi bir dönüş deyimi içeriyorsa ya da bir işleç döndürmeyen bir return deyimi vardır.  
 
-Koşuluyla bu türü içeren C# 7.0 ile başlayarak, ayrıca diğer dönüş türleri, belirtebilirsiniz bir `GetAwaiter` yöntemi. <xref:System.Threading.Tasks.ValueTask%601> Böyle bir türü örneğidir. Kullanılabilir, [System.Threading.Tasks.Extension](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/) NuGet paketi.
+Koşuluyla türünü içeren C# 7.0 ile başlayarak, ayrıca diğer dönüş türleri, belirtebilirsiniz bir `GetAwaiter` yöntemi. <xref:System.Threading.Tasks.ValueTask%601> Böyle bir türü örneğidir. Kullanılabilir, [System.Threading.Tasks.Extension](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/) NuGet paketi.
   
  Aşağıdaki örnek, bildirme ve döndüren bir yöntem çağırmak nasıl gösterir. bir <xref:System.Threading.Tasks.Task%601> veya <xref:System.Threading.Tasks.Task>.  
   

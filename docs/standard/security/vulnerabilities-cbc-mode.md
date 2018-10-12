@@ -4,12 +4,12 @@ description: Algılama ve doldurmayı kullanarak Şifre blok zincirleme (CBC) mo
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
-ms.openlocfilehash: 6d16b6849bfd4744f1828cda38a537f842243c1d
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 4f1d6df3c0368fa0273d871ff32564c159e62a2c
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840541"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123650"
 ---
 # <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Zamanlama açıklarıyla doldurmayı kullanarak CBC modunda simetrik şifre çözme
 
@@ -65,7 +65,7 @@ Tarihsel olarak, hem şifreleme hem de HMAC veya RSA imzaları gibi bir araç ku
 
 "Oracle saldırıları doldurma" 10 yılı aşkın süredir mevcut bilinmektedir olarak bilinen güvenlik açıklarının sınıf. Bu güvenlik açıklarına veri bloğu başına en fazla 4096 deneme kullanarak AES ve 3DES ' gibi blok simetrik algoritmaları ile şifrelenen verilerin şifresini çözmek bir saldırganın. Bu güvenlik açıklarına olun şifrelemeleri block olgu kullanımını sonunda doğrulanabilir doldurma verilerle en sık kullanılır. Bir saldırganın ile ciphertext değiştirmesine ve olup kurcalama hata en sonda doldurma biçimde neden olduğunu bulmak, saldırgan verilerin şifresini çözebilen bulunamadı.
 
-Başlangıçta, pratik saldırıları doldurma gibi ASP.NET güvenlik açığı geçerli olup üzerinde farklı hata kodları döndürecekti Hizmetleri bağlı [MS10-070](https://technet.microsoft.com/library/security/ms10-070.aspx). Ancak, Microsoft artık yalnızca zamanlama geçerli ve geçersiz doldurma işlem arasındaki farklılıkları kullanarak benzer saldırıları yürütmek pratik olduğunu düşündüğü.
+Başlangıçta, pratik saldırıları doldurma gibi ASP.NET güvenlik açığı geçerli olup üzerinde farklı hata kodları döndürecekti Hizmetleri bağlı [MS10-070](/security-updates/SecurityBulletins/2010/ms10-070). Ancak, Microsoft artık yalnızca zamanlama geçerli ve geçersiz doldurma işlem arasındaki farklılıkları kullanarak benzer saldırıları yürütmek pratik olduğunu düşündüğü.
 
 İmza şifreleme şeması kullanır ve imza doğrulaması (içeriği) bağımsız olarak veri belirli bir süre için sabit bir çalışma zamanı ile gerçekleştirilen şartıyla, veri bütünlüğünü herhangi bir bilgi yayma olmadan doğrulanabilir bir Saldırgan aracılığıyla bir [yan kanal](https://en.wikipedia.org/wiki/Side-channel_attack). Bütünlük denetimi değiştirilen tüm iletileri reddeder beri doldurma oracle tehdit azalır.
 

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1dc87b201638bab974c59722a69300977b14cf08
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5825f0425947f109ed834879684357fef7b70959
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426942"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123780"
 ---
 # <a name="isymunmanagedwriterdefinesequencepoints-method"></a>ISymUnmanagedWriter::DefineSequencePoints Yöntemi
-Geçerli yöntemi içinde sıralama noktaları grubunu tanımlar. Her bir başlangıç satırı ve başlangıç sütunu deyimi bir yöntem içinde başlangıcı tanımlayın. Her bitiş satır ve sütun bitiş deyimi bir yöntem içinde sonuna tanımlayın. Diziler uzaklıkları artan düzende sıralanmış. Uzaklık her zaman yönteminin bayt cinsinden ölçülür.  
+Bir dizi noktaları geçerli yöntemi içinde grubunu tanımlar. Her bir başlangıç satırı ve başlangıç sütunu bir ifade bir yöntem içinde başlangıcı tanımlayın. Her bitiş satır ve sütun bitiş sonu bir deyimin bir yöntem içinde tanımlayın. Diziler uzaklıkları artan düzende sıralanmalıdır. Uzaklık her zaman başından itibaren bayt cinsinden yöntemi ölçülür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,28 +42,28 @@ HRESULT DefineSequencePoints(
   
 #### <a name="parameters"></a>Parametreler  
  `document`  
- [in] Sıralama noktaları tanımlı belge nesnesi.  
+ [in] Dizi noktaları tanımlı belge nesnesi.  
   
  `spCount`  
- [in] A `ULONG32` her birinin boyutunu gösterir, `offsets`, `lines`, `columns`, `endLines`, ve `endColumns` arabellek.  
+ [in] A `ULONG32` her birinin boyutunu belirtir `offsets`, `lines`, `columns`, `endLines`, ve `endColumns` arabellek.  
   
  `offsets`  
- [in] Sıralama noktaları uzaklığını yöntemi başından itibaren ölçülür.  
+ [in] Dizi noktaları uzaklığı yöntemi başından itibaren ölçülür.  
   
  `lines`  
- [in] Sıralama noktaları başlangıç satır sayısı.  
+ [in] Dizi noktaları başlangıç satır sayısı.  
   
  `columns`  
- [in] Sıralama noktaları başlangıç sütun sayıları.  
+ [in] Başlangıç sütunu numaralarını sıralama noktaları.  
   
  `endLines`  
- [in] Sıralama noktaları bitiş satır numaralarını. Bu parametre isteğe bağlıdır.  
+ [in] Dizi noktaları bitiş satır numaraları. Bu parametre isteğe bağlıdır.  
   
  `endColumns`  
- [in] Sıralama noktaları bitiş sütun sayıları. Bu parametre isteğe bağlıdır.  
+ [in] Bitiş sütunu numaralarını sıralama noktaları. Bu parametre isteğe bağlıdır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde E_FAIL veya başka bir hata kodu.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Başlık:** CorSym.idl, CorSym.h  

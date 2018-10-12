@@ -3,13 +3,13 @@ title: Mevcut .NET uygulamaları ile Azure Bulut ve Windows kapsayıcıları mod
 description: Kaldırma ve kaydırma ve bu e-kitap kapsayıcılarla ve Azure bulut için mevcut uygulamaları modernize öğrenin.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 4/28/2018
-ms.openlocfilehash: b22ddd8a63d183571f9ca3a63fb7ae84ebb88510
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.date: 04/28/2018
+ms.openlocfilehash: f4ca3789ec4b3d84960f2ecd4494a899339a787b
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873511"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121447"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Azure Bulutu ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirme (2 sürümü)
 

@@ -2,12 +2,12 @@
 title: Temel AJAX Hizmeti
 ms.date: 03/30/2017
 ms.assetid: d66d0c91-0109-45a0-a901-f3e4667c2465
-ms.openlocfilehash: d8da6469101511b6b5a9ce19a11f1e5e3fe9d83e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2218c8e062f8fe0b799213831099a112a2df732b
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524889"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121018"
 ---
 # <a name="basic-ajax-service"></a>Temel AJAX Hizmeti
 Bu örnek, Windows Communication Foundation (WCF) temel bir ASP.NET zaman uyumsuz JavaScript ve XML (AJAX) hizmeti (bir Web tarayıcısı istemciden JavaScript kodu kullanarak erişebileceğiniz bir hizmeti) oluşturmak için nasıl kullanılacağını gösterir. Hizmeti kullandığı <xref:System.ServiceModel.Web.WebGetAttribute> hizmet HTTP GET isteklerine yanıt verir ve yanıtları için JavaScript nesne gösterimi (JSON) veri biçimini kullanacak şekilde yapılandırılmış emin olmak için özniteliği.  
@@ -29,7 +29,7 @@ public interface ICalculator
 }
 ```
 
- Örnek .svc dosyasını kullanan <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>, hangi ekler bir <xref:System.ServiceModel.Description.WebScriptEndpoint> hizmetine standart uç noktası. Uç nokta, boş bir adresten .svc dosyanın göreli yapılandırılır. Bu hizmet adresini olduğu anlamına gelir http://localhost/ServiceModelSamples/service.svc, işlem adı dışında hiçbir ek sonekleri ile.  
+ Örnek .svc dosyasını kullanan <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>, hangi ekler bir <xref:System.ServiceModel.Description.WebScriptEndpoint> hizmetine standart uç noktası. Uç nokta, boş bir adresten .svc dosyanın göreli yapılandırılır. Bu hizmet adresini olduğu anlamına gelir `http://localhost/ServiceModelSamples/service.svc`, işlem adı dışında hiçbir ek sonekleri ile.  
 
 ```svc
 <%@ServiceHost language="C#" Debug="true" Service="Microsoft.Samples.SimpleAjaxService.CalculatorService" Factory="System.ServiceModel.Activation.WebScriptServiceHostFactory" %>
@@ -48,7 +48,7 @@ public interface ICalculator
 </system.serviceModel>  
 ```  
   
- <xref:System.ServiceModel.Description.WebScriptEndpoint> Hizmeti için varsayılan veri biçimi XML yerine JSON ayarlar. Hizmetini çağırmak için gidin http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200 sonra kümesi kurma tamamlanıyor ve bu konunun ilerleyen bölümlerinde gösterilen adımları oluşturun. Bu test işlevi bir HTTP GET isteği kullanımını tarafından etkinleştirilir.  
+ <xref:System.ServiceModel.Description.WebScriptEndpoint> Hizmeti için varsayılan veri biçimi XML yerine JSON ayarlar. Hizmetini çağırmak için gidin `http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200` sonra kümesi kurma tamamlanıyor ve bu konunun ilerleyen bölümlerinde gösterilen adımları oluşturun. Bu test işlevi bir HTTP GET isteği kullanımını tarafından etkinleştirilir.  
   
  İstemci Web sayfası SimpleAjaxClientPage.aspx sayfasında işlemi düğmelerden birine kullanıcı tıkladığında hizmeti çağırmak için ASP.NET kodu içerir. `ScriptManager` Denetimi proxy hizmet için JavaScript üzerinden erişilebilir hale getirmek için kullanılır.  
 

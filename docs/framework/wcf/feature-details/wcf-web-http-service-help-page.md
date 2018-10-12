@@ -2,15 +2,15 @@
 title: WCF Web HTTP Hizmeti Yardım Sayfası
 ms.date: 03/30/2017
 ms.assetid: 63c7c695-44b6-4f31-bb9c-00f2763f525e
-ms.openlocfilehash: d0fe4f99fea4d414c95244e535cd75891f921790
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f803d2046684bc1aa148e78b6325f26a8ec5c427
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195998"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121213"
 ---
 # <a name="wcf-web-http-service-help-page"></a>WCF Web HTTP Hizmeti Yardım Sayfası
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] WCF WEB HTTP Hizmetleri için bir otomatik yardım sayfasına sağlar. Bu Yardım sayfası, her işlem, istek ve yanıt formatları ve şemalar açıklamasını listeler. Bu işlev varsayılan olarak kapalıdır. Ne zaman bir kullanıcı bir WCF WEB HTTP hizmetine gider ve ekler "/ Help" Örneğin URL'SİNİN sonuna açın http://localhost:8000/Customers/Help, aşağıda gösterilen gibi bir Yardım sayfası.  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] WCF WEB HTTP Hizmetleri için bir otomatik yardım sayfasına sağlar. Bu Yardım sayfası, her işlem, istek ve yanıt formatları ve şemalar açıklamasını listeler. Bu işlev varsayılan olarak kapalıdır. Ne zaman bir kullanıcı bir WCF WEB HTTP hizmetine gider ve ekler "/ Help" Örneğin URL'SİNİN sonuna açın `http://localhost:8000/Customers/Help`, aşağıda gösterilen gibi bir Yardım sayfası.  
   
  ![WCF REST Yardım sayfası](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagemain.gif "WCFRESTHELPPAGEMAIN")  
   

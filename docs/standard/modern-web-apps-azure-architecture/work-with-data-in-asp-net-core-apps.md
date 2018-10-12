@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern Web uygulamaları tasarlama | ASP.
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: 3ec7acb7bdb5e0e22965475ec267616694842ed0
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 069bfacd1ae08b5c84d6e304b2f12f18e1eecb22
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842092"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49122857"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>ASP.NET Core uygulamaları verilerle çalışma
 
@@ -91,7 +91,7 @@ var brandItems = await _context.CatalogBrands
 
 Hemen bir sorgu yürütmek için ToListAsync çağrısı eklemek için yukarıdaki örnekte önemlidir. Aksi takdirde, deyim Iqueryable atar<SelectListItem> brandItems için hangi yürütülmez numaralandırılana kadar. Artıları ve eksileri Iqueryable sonuçları döndüren yöntemler için vardır. Daha fazla değiştirilmesi, ancak operations EF Core çeviremez sorguya eklediyseniz yalnızca çalışma zamanında, oluşan hataları sonucunda ayrıca EF Core de oluşturmak sorgu sağlar. Herhangi bir filtre veri erişim gerçekleştirme yönteme geçirmek genellikle güvenlidir ve dönüş bir bellek içi koleksiyonu yeniden (örneğin, liste<T>) sonucu.
 
-EF Core Kalıcılık getirir varlıklardaki değişiklikleri izler. İzlenen bir varlığa değişiklikleri kaydetmek için yalnızca varlık getirmek için kullanılan aynı DbContext örneği olduğundan emin DbContext üzerinde SaveChanges yöntemi çağırın gerekir. Ekleme ve kaldırma varlıkları doğrudan çağrısıyla veritabanı komutlarını çalıştırmak için yeniden SaveChanges uygun olan DB özelliği açıktır. Aşağıdaki örnek, ekleme, güncelleştirme, Kalıcılık varlıkları kaldırma gösterir.
+EF Core Kalıcılık getirir varlıklardaki değişiklikleri izler. İzlenen bir varlığa değişiklikleri kaydetmek için yalnızca varlık getirmek için kullanılan aynı DbContext örneği olduğundan emin DbContext üzerinde SaveChanges yöntemi çağırın gerekir. Doğrudan ekleme ve kaldırma varlıkları çağrısıyla veritabanı komutlarını çalıştırmak için yeniden SaveChanges uygun olan DB özellik üzerinde gerçekleştirilir. Aşağıdaki örnek, ekleme, güncelleştirme, Kalıcılık varlıkları kaldırma gösterir.
 
 ```csharp
 // create

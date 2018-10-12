@@ -11,11 +11,11 @@ ms.assetid: 75a38b55-4bc4-488a-87d5-89dbdbdc76a2
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e44fd3e6f806eef3805416dafd90a4855e79b3c7
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027981"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121937"
 ---
 # <a name="potential-pitfalls-with-plinq"></a>PLINQ'te Olası Tuzaklar
 Çoğu durumda, PLINQ, sıralı LINQ-Plınq sorgularının üzerinde önemli performans geliştirmeleri sağlayabilir. Ancak, paralel sorgu yürütme işi, sıralı kodda olarak genel olmayan ya da hiç karşılaşılan değil sorunlara yol açabilecek daha karmaşık hâle getirir. Bu konuda, PLINQ sorguları yazarken önlemek için bazı yöntemler listelenmiştir.  

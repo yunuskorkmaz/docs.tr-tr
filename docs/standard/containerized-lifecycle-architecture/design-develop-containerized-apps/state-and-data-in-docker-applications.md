@@ -4,18 +4,18 @@ description: Microsoft Platformu ve araçları ile kapsayıcı Docker uygulamas�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 78db191bdec4c25c11728d819d89eaaaff4bd7da
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 9b048beb0eb913fc6587dcc639a16df8153c550b
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46586053"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123234"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Durum ve Docker uygulamalarında veri
 
 Bir basit kapsayıcıların değiştirilemezlik ' dir. Bir VM'ye karşılaştırıldığında kapsayıcıları sık karşılaştıkları kaybolur yok. Bir VM, çeşitli biçimlerde ölü işlemleri, aşırı yüklenmiş CPU ya da tam ya da başarısız bir disk başarısız olabilir. Henüz VM kullanılabilir olmasını bekliyoruz ve RAID sürücüleri sürücü hataları korumak güvence altına almak için sıradan bir hale gelir.
 
-İşlem örneklerinin olmasını kapsayıcıları düşündüğünüz ancak. Bir işlem kalıcı durumunu korumak değil. Yerel depolama alanı için bir kapsayıcı yazabilirsiniz olsa da, bu örneği çevresinde süresiz olarak olacağı varsayılarak tek kopyası bellek kalıcı olduğu varsayılarak için eşdeğer olacaktır. Sonlandırılan, işlemler, olduğu gibi kapsayıcılar da çoğaltılır veya yönetilen bir kapsayıcı Düzenleyicisi ile bunların taşınmış olabilir varsaymanız gerekir.
+İşlem örneklerinin olmasını kapsayıcıları düşündüğünüz ancak. Bir işlem kalıcı durumunu korumak değil. Yerel depolama alanı için bir kapsayıcı yazabilirsiniz olsa da, örneği çevresinde süresiz olarak olacağı varsayılarak tek kopyası bellek kalıcı olduğu varsayılarak için eşdeğer olacaktır. Sonlandırılan, işlemler, olduğu gibi kapsayıcılar da çoğaltılır veya yönetilen bir kapsayıcı Düzenleyicisi ile bunların taşınmış olabilir varsaymanız gerekir.
 
 Docker kullanan bir özellik olarak bilinen bir *kaplama dosya sistemi* depolayan herhangi bir yazarken kopyalama işlemini uygulamak için bu temel özgün görüntüye kıyasla, bir kapsayıcı kök dosya sistemine bilgiler güncelleştirilmiştir. Kapsayıcı sistemden sonradan silinirse bu değişiklikler kaybolur. Bir kapsayıcı varsayılan olarak bu nedenle, bir şekilde kalıcı depolama alanı yok. Kapsayıcı durumu kaydetmek mümkün olsa da, bu geçici bir sistem tasarımı kapsayıcı mimarisi ilkesini çakışıyor olabilir.
 

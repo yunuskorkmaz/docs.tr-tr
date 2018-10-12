@@ -2,12 +2,12 @@
 title: Adres Ayarlama
 ms.date: 03/30/2017
 ms.assetid: d438e6f2-d0f3-43aa-b259-b51b5bda2e64
-ms.openlocfilehash: 6f2ab732fd5758358c7347087694cab8d56703bf
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 0e18039db51a1060661b435640c356fd0610a68a
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43468371"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123208"
 ---
 # <a name="addressing"></a>Adres Ayarlama
 Adresleme örnek çeşitli yönleri ve uç nokta adresleri özelliklerini gösterir. Örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md). Bu örnekte hizmet kendiliğinden barındırılır. Hem hizmet hem de istemci konsol uygulamalardır. Hizmetin göreli ve mutlak uç nokta adresleri bir birleşimini kullanarak birden fazla uç nokta tanımlar.  
@@ -40,7 +40,7 @@ Adresleme örnek çeşitli yönleri ve uç nokta adresleri özelliklerini göste
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- Bu durumda, göreli adresi boştur (""), uç nokta adresini temel adresi ile aynıdır. Gerçek bir uç nokta adresi http://localhost:8000/servicemodelsamples/service.  
+ Bu durumda, göreli adresi boştur (""), uç nokta adresini temel adresi ile aynıdır. Gerçek bir uç nokta adresi `http://localhost:8000/servicemodelsamples/service`.
   
  İkinci uç nokta tanımı, ayrıca aşağıdaki örnek yapılandırmada gösterildiği gibi bir göreli adresini belirtir.  
   
@@ -53,7 +53,7 @@ Adresleme örnek çeşitli yönleri ve uç nokta adresleri özelliklerini göste
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- Hizmetin göreli adresini "test" öğesine taban adresi olarak eklenir. Gerçek bir uç nokta adresi http://localhost:8000/servicemodelsamples/service/test.  
+ Hizmetin göreli adresini "test" öğesine taban adresi olarak eklenir. Gerçek bir uç nokta adresi `http://localhost:8000/servicemodelsamples/service/test`.
   
  Aşağıdaki örnek yapılandırmada gösterildiği gibi üçüncü bir uç nokta tanımı mutlak bir adres belirtir.  
   
@@ -63,9 +63,9 @@ Adresleme örnek çeşitli yönleri ve uç nokta adresleri özelliklerini göste
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- Temel adres, adres, hiçbir rol oynar. Gerçek bir uç nokta adresi http://localhost:8001/hello/servicemodelsamples.  
+ Temel adres, adres, hiçbir rol oynar. Gerçek bir uç nokta adresi `http://localhost:8001/hello/servicemodelsamples`.
   
- Mutlak bir adres ve farklı bir aktarım dördüncü uç nokta adresini belirtir; TCP. Temel adres, adres, hiçbir rol oynar. Gerçek bir uç nokta adresi olduğunu NET.TCP://localhost: 9000/servicemodelsamples/hizmet.  
+ Mutlak bir adres ve farklı bir aktarım dördüncü uç nokta adresini belirtir; TCP. Temel adres, adres, hiçbir rol oynar. Gerçek bir uç nokta adresi `net.tcp://localhost:9000/servicemodelsamples/service`.
   
 ```xml  
 <!-- The absolute address specified, different transport: -->  

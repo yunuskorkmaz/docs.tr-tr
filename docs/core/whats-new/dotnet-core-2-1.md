@@ -1,15 +1,18 @@
 ---
 title: .NET Core 2.1 yenilikler nelerdir?
 description: .NET Core 2.1 içinde bulunan yeni özellikler hakkında bilgi edinin.
+dev_langs:
+- csharp
+- vb
 author: rpetrusha
 ms.author: ronpet
-ms.date: 06/06/2018
-ms.openlocfilehash: aa80e6b7214f91c49803adde49a1e03d1971b3f6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.date: 10/10/2018
+ms.openlocfilehash: bf14e21ec4d390d8ab753bfa45533442ff4f6e68
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47400073"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120953"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1 yenilikler nelerdir?
 
@@ -166,9 +169,11 @@ JIT derleyicisi tarafından gerçekleştirilen önemli görevlerinden birini ve 
 
 Bu tür öğeleri dizi değerinin bir bölümü veya bir bölümünü bellek arabelleği olarak geçirirken bu türleri, bir yönteme iletmeden önce bölümü verilerin bir kopyasını yapmanız gerekir. Bu türler ek bellek ayırma ve kopyalama işlemleri ihtiyacını ortadan kaldırır, verilerin sanal bir görünümünü sağlar.
 
-Aşağıdaki örnekte bir <xref:System.Span%601> dizi 10 öğelerini sanal bir görünümünü sağlamak için örneği.
+Aşağıdaki örnekte bir <xref:System.Span%601> ve <xref:System.Memory%601> dizi 10 öğelerini sanal bir görünümünü sağlamak için örneği.
 
 [!CODE-csharp[Span\<T>](~/samples/core/whats-new/whats-new-in-21/cs/program.cs)]
+
+[!CODE-vb[Memory\<T>](~/samples/core/whats-new/whats-new-in-21/vb/program.vb)]
 
 ### <a name="brotli-compression"></a>Brotli sıkıştırma
 

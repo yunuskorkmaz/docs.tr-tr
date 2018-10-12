@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: 0f401f89b0a568b8dc7c3734b2f06fa3a14de110
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 38f638b76a38c470daf51cb7be8566feb4b6362f
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47088503"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121369"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET mikro Hizmetleri: Kapsayıcılı .NET uygulamaları mimarisi
 
@@ -171,7 +171,7 @@ Bu kitap sağlanan "olarak-olduğunu" ve yazarın görünümleri ve düşüncele
 
 Burada açıklanan bazı örnekler yalnızca çizim için sağlanmıştır ve bu kurgusaldır. Gerçek bir ilişki veya bağlantı amaçlanmamıştır veya çıkarılmamalıdır.
 
-Microsoft ve adresinde listelenmiş ticari http://www.microsoft.com "Ticari" Web sayfasında Microsoft şirketler grubunun ticari markalarıdır.
+Microsoft ve adresinde listelenmiş ticari <https://www.microsoft.com> "Ticari" Web sayfasında Microsoft şirketler grubunun ticari markalarıdır.
 
 Mac ve macOS Apple Inc.'in ticari markalarıdır.
 

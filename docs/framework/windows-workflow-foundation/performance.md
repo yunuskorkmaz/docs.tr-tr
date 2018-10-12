@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation 4 performansı
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: c7dc098eee5f17e18f76c0b54a097a22f5d844b1
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 78e9ac1cc350fe8c04222b2698569412961d3b52
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873699"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123819"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 performansı
 Dustin Metzgar
@@ -287,7 +287,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
  Daha karmaşık iş akışlarıyla derinliği çok sayıda ve çok sayıda etkinlikleri performans sonuçlarını bu makalenin önceki bölümlerinde gösterilen diğer aktarım hızı numaralarının tutarlıdır.  WF4'ın aktarım hızı kat daha hızlı ve Logaritmik ölçekte Karşılaştırılacak vardır.
 
 ### <a name="memory"></a>Bellek
- Windows Workflow Foundation bellek yükü iki önemli alanda ölçülür: iş akışı karmaşıklığı ve iş akışı tanımları sayısı.  Bellek ölçümleri, Windows 7 64-bit istasyonunda alınmıştır.  Çalışma kümesi boyutu performans sayaçlarını izleme, Environment.WorkingSet yoklama veya VMMap kullanılabilir gibi bir araç kullanarak gibi ölçüsü elde etmek için birçok yolu vardır [VMMap](https://technet.microsoft.com/sysinternals/dd535533.aspx). Yöntemlerin bir bileşimi elde edilir ve her test sonuçlarını doğrulamak için kullanıldı.
+ Windows Workflow Foundation bellek yükü iki önemli alanda ölçülür: iş akışı karmaşıklığı ve iş akışı tanımları sayısı.  Bellek ölçümleri, Windows 7 64-bit istasyonunda alınmıştır.  Çalışma kümesi boyutu performans sayaçlarını izleme, Environment.WorkingSet yoklama veya VMMap kullanılabilir gibi bir araç kullanarak gibi ölçüsü elde etmek için birçok yolu vardır [VMMap](/sysinternals/downloads/vmmap). Yöntemlerin bir bileşimi elde edilir ve her test sonuçlarını doğrulamak için kullanıldı.
 
 ### <a name="workflow-complexity-test"></a>İş akışı karmaşıklığı Test
  Bir iş akışı karmaşıklığı fark çalışma kümesi iş akışı karmaşıklığı test ölçer.  Önceki bölümde kullanılan karmaşık iş akışlarının yanı sıra yeni çeşitlemeleri iki temel servis taleplerini karşılamak için eklenir: tek bir etkinlik iş akışı ve 1000 etkinliklerle bir dizisi.  Bu testler için iş akışlarını başlatılır ve tek bir seri döngü tamamlanmasında bir dakikalık bir süre için çalıştırılır.  Her test değişim üç kez çalışır ve kaydedilen bilgiler bu üç çalıştırması ortalamasıdır.

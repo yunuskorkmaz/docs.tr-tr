@@ -13,11 +13,11 @@ ms.assetid: 36e7e096-4e6c-4cf2-9ab6-68073026ea0e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a1d9f62055b497aa7522d589610c12badb2361d5
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48579461"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123286"
 ---
 # <a name="performing-formatting-operations"></a>Biçimlendirme İşlemlerini Gerçekleştirme
 Aşağıdaki konular, özel biçimlendirme işlemlerini gerçekleştirmek için adım adım yönergeler sağlar.  

@@ -4,12 +4,12 @@ description: Varolan ve .NET Core csproj dosyalarına arasındaki farklar hakkı
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/22/2017
-ms.openlocfilehash: 1fd264da2863fbeb88900be0f6fe000acac08a09
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0efca768545ab11319b2fe7b062cb6a4e751dc4d
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47216922"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121421"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core csproj biçimine eklemeler
 
@@ -110,11 +110,11 @@ Birden çok hedef çerçeve proje varsa komutun sonuçlarını yalnızca bunlard
 `Version` geri yüklemek için paket sürümünü belirtir. Öznitelik kurallarına uyar [NuGet sürüm](/nuget/create-packages/dependency-versions#version-ranges) düzeni. Bir tam sürüm eşleşiyorsa varsayılan davranıştır. Örneğin, belirten `Version="1.2.3"` NuGet gösterimine eşdeğerdir `[1.2.3]` tam 1.2.3-Beta için Paket sürümü.
 
 #### <a name="includeassets-excludeassets-and-privateassets"></a>IncludeAssets ve ExcludeAssets PrivateAssets
-`IncludeAssets` öznitelik belirtir pakete ait varlıklar tarafından belirtilen `<PackageReference>` kullanılması. 
+`IncludeAssets` öznitelik belirtir ait hangi varlıklar tarafından paket belirtilen `<PackageReference>` kullanılması. 
 
-`ExcludeAssets` öznitelik belirtir pakete ait varlıklar tarafından belirtilen `<PackageReference>` değil kullanılması.
+`ExcludeAssets` öznitelik belirtir ait hangi varlıklar tarafından paket belirtilen `<PackageReference>` değil kullanılması.
 
-`PrivateAssets` öznitelik belirtir pakete ait varlıklar tarafından belirtilen `<PackageReference>` bunlar sonraki projeye akmaması gerektiğini ancak kullanılması. 
+`PrivateAssets` öznitelik belirtir ait hangi varlıklar tarafından paket belirtilen `<PackageReference>` kullanılması ancak sonraki projeye akış değil. 
 
 > [!NOTE]
 > `PrivateAssets` eşdeğerdir *project.json*/*xproj* `SuppressParent` öğesi.

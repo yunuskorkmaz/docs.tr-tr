@@ -1,40 +1,40 @@
 ---
 title: Yayınlayıcı Adı Kaydı Paketini Doğrulamayı İndirme
-ms.date: 03/30/2017
+ms.date: 10/10/2018
 ms.assetid: ff8b0014-c5d4-4614-90f0-13fcc0ba777a
-ms.openlocfilehash: 03b68f4b9dc6fde02c951968067e0311e4981d33
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 654a513e06f528f617bc19fbc59961c5b0e16049
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398755"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121162"
 ---
-# <a name="downloading-the-validating-issuer-name-registry-package"></a>Yayınlayıcı Adı Kaydı Paketini Doğrulamayı İndirme
-Bu konu, indirin ve doğrulama verenin adı kayıt defteri (VINR) projenizde nasıl kullanılacağını açıklar.  
-  
-## <a name="downloading-the-validating-issuer-name-registry"></a>Doğrulama yayınlayıcı adı kaydını indirme  
- VINR gerekli derlemeler ve başvuruları projenize ekler bir NuGet paketi olarak kullanılabilir. Yüklü NuGet zaten yoksa, Git [nuget.org](http://nuget.org) yükleyin. NuGet üzerinde kendi sayfasını ziyaret ederek uzantısı sürüm geçmişini görebilirsiniz: [Microsoft doğrulama yayınlayıcı adı kaydını NuGet üzerinde](https://nuget.org/packages/System.IdentityModel.Tokens.ValidatingIssuerNameRegistry/)  
-  
-#### <a name="downloading-the-validating-issuer-name-registry-by-using-the-package-manager-gui"></a>Paket Yöneticisi GUI'sini kullanarak doğrulama yayınlayıcı adı kaydını indirme  
-  
-1.  Visual Studio'da, projenize sağ **Çözüm Gezgini**ve ardından **NuGet paketlerini Yönet**.  
-  
-2.  İçinde **NuGet paketlerini Yönet** penceresinde arama kutusuna tıklayın ve girin `ValidatingIssuerNameRegistry` ve basın **Enter**.  
-  
-3.  Sonuçlar bölmesinde, tıklatın **yüklemek** ilk sonucu düğmesi.  
-  
-4.  Paket, karşıdan yükleme başlar. Projenize eklenmeden önce lisans kabulünü iletişim kutusu görüntülenir. Lisans koşullarını kabul ediyorsa **kabul ediyorum**.  
-  
-5.  En son VINR derlemeler indirilir ve projenize eklenir.  
-  
-#### <a name="downloading-the-validating-issuer-name-registry-by-using-the-package-manager-console"></a>Paket Yöneticisi konsolunu kullanarak doğrulama yayınlayıcı adı kaydını indirme  
-  
-1.  Visual Studio'da sırasıyla **Araçları**, **kitaplık Paket Yöneticisi**ve ardından **Paket Yöneticisi Konsolu**.  
-  
-2.  **Paket Yöneticisi Konsolu** görüntülenir. Aşağıdaki metin ve ENTER tuşuna basın **Enter**:  
-  
-    ```powershell  
-    Install-Package System.IdentityModel.Tokens.ValidatingIssuerNameRegistry  
-    ```  
-  
-3.  En son VINR derlemeler indirilir ve projenize eklenir.
+# <a name="download-the-validating-issuer-name-registry-package"></a>Doğrulama verenin adı kaydı paketini indirme
+
+Bu konuda, indirin ve doğrulama verenin ad kayıt defteri (VINR) projenizde anlatılmaktadır.
+
+VINR, gerekli derlemeleri ve başvuruları projenize ekleyen bir NuGet paketi olarak kullanılabilir. Yüklü olan NuGet zaten yoksa, Git [nuget.org](http://nuget.org) yükleyin. Kendi sayfasını ziyaret ederek uzantının sürüm geçmişini görebilirsiniz: [NuGet üzerindeki Microsoft doğrulama verenin adı kaydı](https://nuget.org/packages/System.IdentityModel.Tokens.ValidatingIssuerNameRegistry/)
+
+## <a name="use-the-package-manager-gui"></a>Paket Yöneticisi GUI kullanma
+
+1. Visual Studio'da, projenize sağ tıklayın **Çözüm Gezgini**ve ardından **NuGet paketlerini Yönet**.
+
+2. İçinde **NuGet paketlerini Yönet** penceresinde arama kutusuna tıklayın ve girin `ValidatingIssuerNameRegistry` basın **Enter**.
+
+3. Sonuçlar bölmesinde, tıklayın **yükleme** düğmesine ilk sonuç.
+
+4. Paketin indirilmesi başlar. Projenize eklenmeden önce lisans kabulü iletişim kutusu görünür. Lisans koşullarını kabul ediyorsanız tıklayın **kabul ediyorum**.
+
+5. Son VINR derlemeleri indirilir ve projenize eklenir.
+
+## <a name="use-the-package-manager-console"></a>Paket Yöneticisi Konsolu
+
+1. Visual Studio'da **Araçları** > **NuGet Paket Yöneticisi** > **Paket Yöneticisi Konsolu**.
+
+2. **Paket Yöneticisi Konsolu** görünür. Aşağıdaki metni ve enter tuşuna basın **Enter**:
+
+    ```powershell
+    Install-Package System.IdentityModel.Tokens.ValidatingIssuerNameRegistry
+    ```
+
+3. Son VINR derlemeleri indirilir ve projenize eklenir.

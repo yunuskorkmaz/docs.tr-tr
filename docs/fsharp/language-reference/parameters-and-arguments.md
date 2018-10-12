@@ -3,11 +3,11 @@ title: Parametreler ve Bağımsız Değişkenler (F#)
 description: 'Parametreleri tanımlama ve bağımsız değişkenleri işlevleri, yöntemlere ve özelliklere geçirme için F # dil desteği hakkında bilgi edinin.'
 ms.date: 05/16/2016
 ms.openlocfilehash: a1e2a70ca560bbb09d2cd10f47485cbe5c5e029d
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48263722"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123364"
 ---
 # <a name="parameters-and-arguments"></a>Parametreler ve Bağımsız Değişkenler
 

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 6e0cacc1-9b11-4665-adb7-577a62626fd6
 ms.openlocfilehash: ac356ac9acd3f0b14fb3da902f1a9c3cfbdd9ef7
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847899"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49122636"
 ---
 # <a name="how-to-create-a-basic-atom-feed"></a>Nasıl Yapılır: Temel Bir Atom Akışı Oluşturma
 Windows Communication Foundation (WCF), bir dağıtım akışı hizmetidir oluşturmanıza olanak sağlar. Bu konu, bir Atom dağıtım akışı sunan bir dağıtım hizmetinin nasıl oluşturulduğunu açıklar.  

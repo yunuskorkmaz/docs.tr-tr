@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c8a619021f8e398c5c3dfc974b9130ecacb44d4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4f4f73ec60283e1ddf0fee0beaa76bdb68124698
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410039"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49122785"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (Kaynak Dosya Oluşturucu)
-Kaynak Dosya Oluşturucu (Resgen.exe), metin (.txt veya .restext) dosyalarını ve XML tabanlı kaynak biçimi (.resx) dosyalarını, bir çalışma zamanı ikili çalıştırılabilir dosyasına katıştırılabilen veya uydu derlemesi haline getirilebilen ortak dil çalışma zamanı ikili (.resources) dosyalarına dönüştürür. (Bkz [kaynak dosyalar oluşturma](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).)  
+Kaynak Dosya Oluşturucu (Resgen.exe), metin (.txt veya .restext) dosyalarını ve XML tabanlı kaynak biçimi (.resx) dosyalarını, bir çalışma zamanı ikili çalıştırılabilir dosyasına katıştırılabilen veya uydu derlemesi haline getirilebilen ortak dil çalışma zamanı ikili (.resources) dosyalarına dönüştürür. (Bkz [kaynak dosyaları oluşturma](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).)  
   
  Resgen.exe aşağıdaki görevleri gerçekleştiren genel amaçlı bir kaynak dönüştürme programıdır:  
   
@@ -35,9 +35,9 @@ Kaynak Dosya Oluşturucu (Resgen.exe), metin (.txt veya .restext) dosyalarını 
   
 -   .resx dosyalarını metin veya .resources dosyalarına dönüştürür.  
   
--   Dize kaynaklarını kullanmak için uygun bir .resw dosyasına bir derlemeden ayıklar bir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulama.  
+-   Dize kaynaklarını bir derlemeden kullanıma uygun bir .resw dosyasına ayıklar bir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulama.  
   
--   Adlandırılmış kaynakların ve çok erişim sağlayan kesin türü belirtilmiş bir sınıf oluşturur <xref:System.Resources.ResourceManager> örneği.  
+-   Tek tek adlandırılmış kaynaklara ve çok erişim sağlayan kesin belirlenmiş bir sınıf oluşturur <xref:System.Resources.ResourceManager> örneği.  
   
  Resgen.exe herhangi bir nedenle başarısız olursa, dönüş değeri –1'dir.  
   
@@ -47,15 +47,15 @@ Kaynak Dosya Oluşturucu (Resgen.exe), metin (.txt veya .restext) dosyalarını 
 resgen  
 ```  
   
- Aynı zamanda `/?` geçin:  
+ Ayrıca `/?` geçin:  
   
 ```  
 resgen /?  
 ```  
   
- Resgen, ikili .resources dosyaları oluşturmak için exe kullanıyorsanız, ikili dosyaları yürütülebilir derlemelerine katıştırmak için bir dil derleyici kullanabilirsiniz veya kullanabileceğiniz [derleme bağlayıcı (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) uydu derlemeye derlemesi için.  
+ Resgen, exe ikili .resources dosyaları üretmek için kullanıyorsanız, ikili dosyaları yürütülebilir derlemelere gömmek için bir dil derleyicisi kullanabilirsiniz veya kullanabileceğiniz [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) onları uydu derlemeler içinde derlemek için.  
   
- Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, Geliştirici Komut İstemi (veya Windows 7'de Visual Studio Komut İstemi) kullanın. Daha fazla bilgi için bkz: [komut istemlerini](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, Geliştirici Komut İstemi (veya Windows 7'de Visual Studio Komut İstemi) kullanın. Daha fazla bilgi için [komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  Komut satırına şunu yazın:  
   
@@ -73,15 +73,15 @@ resgen filename.extension [outputDirectory]
   
 |Parametre veya anahtar|Açıklama|  
 |-------------------------|-----------------|  
-|`/define:` *symbol1*[, *Simge2*,...]|İle başlayarak [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], koşullu derleme göre metin (.txt veya .restext) kaynak dosyalarını destekler. Varsa *simgesi* giriş metin dosyasında bulunan bir simge karşılık gelen bir `#ifdef` yapı, ilişkili dize kaynağını .resources dosyasında bulunur. Giriş metin dosyası içeriyorsa bir `#if !` tarafından tanımlanmamış bir simge deyimiyle `/define` anahtarı, ilişkili dize kaynağını kaynakları dosyasında bulunur.<br /><br /> `/define` metin dışı dosyalarıyla kullandıysanız göz ardı edilir. Simgeler büyük/küçük harfe duyarlıdır.<br /><br /> Bu seçenek hakkında daha fazla bilgi için bkz: [kaynaklara koşullu derleme](#Conditional) bu konuda daha sonra.|  
+|`/define:` *symbol1*[, *symbol2*,...]|İle başlayarak [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], metin tabanlı (.txt veya .restext) kaynak dosyalarında koşullu derlemeyi destekler. Varsa *sembol* içinde giriş metin dosyasına eklenen bir simgeye karşılık gelen bir `#ifdef` yapısı, ilişkili dize kaynağı .resources dosyasına eklenir. Giriş metin dosyası içeriyorsa bir `#if !` ile tanımlanmamış bir sembol deyimiyle `/define` anahtarı, ilişkili dize kaynağı .Resources dosyasına eklenir.<br /><br /> `/define` metin olmayan dosyalarla kullanılırsa, göz ardı edilir. Simgeler büyük/küçük harfe duyarlıdır.<br /><br /> Bu seçenek hakkında daha fazla bilgi için bkz. [kaynakları koşullu olarak derleme](#Conditional) bu konuda.|  
 |`useSourcePath`|Giriş dosyasının geçerli dizininin göreli dosya yollarını çözmek için kullanılacağını belirtir.|  
-|`/compile`|Tek bir toplu işlemde birden çok .resources dosyasına dönüştürmek için birden fazla .resx veya metin dosyası belirtmenize olanak sağlar. Bu seçeneği belirtmezseniz, yalnızca bir giriş dosyası bağımsız değişkeni belirtebilirsiniz. Çıkış dosyaları adlı *filename*.resources.<br /><br /> Bu seçenek kullanılamaz `/str:` seçeneği.<br /><br /> Bu seçenek hakkında daha fazla bilgi için bkz: [derleme veya birden çok dosya dönüştürme](#Multiple) bu konuda daha sonra.|  
-|`/r:``assembly`|Belirtilen derlemedeki meta verilere başvurur. .resx dosyaları dönüştürülürken kullanılır ve Resgen.exe'nin nesne kaynaklarını serileştirmesine veya serilerinin kaldırılmasına olanak sağlar. Aşağıdakine benzer `/reference:` veya `/r:` C# ve Visual Basic derleyicileri için Seçenekler.|  
-|`filename.extension`|Dönüştürülecek giriş dosyasının adını belirtir. Bu tablo önce sunulan ilk, lengthier komut satırı sözdizimi kullanıyorsanız `extension` şunlardan biri olmalıdır:<br /><br /> .txt veya .restext<br /> Bir .resources veya .resx dosyasına dönüştürülecek bir metin dosyası. Metin dosyaları yalnızca dize kaynakları içerebilir. Dosya biçimi hakkında daha fazla bilgi için "Metin dosyaları kaynaklar" bölümüne bakın [oluşturma kaynak dosyaları](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).<br /><br /> .resx<br /> Bir .resources veya metin (.txt veya .restext) dosyasına dönüştürülecek XML tabanlı bir kaynak dosyası.<br /><br /> .resources<br /> Bir .resx veya bir metin (.txt veya .restext) dosyasına dönüştürülecek ikili bir kaynak dosyası.<br /><br /> Bu tablo önce sunulan ikinci, kısa komut satırı sözdizimi kullanıyorsanız `extension` aşağıdaki olması gerekir:<br /><br /> .exe veya .dll<br /> Dize kaynakları olan geliştirme kullanımda .resw dosyaya ayıklanacak bir .NET Framework derleme (yürütülebilir dosya veya kitaplığa) [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar.|  
-|`outputFilename.extension`|Oluşturulacak kaynak dosyasının adını ve türünü belirtir.<br /><br /> Bir .txt, .restext veya .resx dosyasından bir .resources dosyasına dönüştürme yaparken bu bağımsız değişken isteğe bağlıdır. Belirtmezseniz, `outputFilename`, Resgen.exe .resources uzantısı girdisi ekler `filename` ve dosyayı içeren dizine yazan `filename,extension`.<br /><br /> `outputFilename.extension` .Resources dosyasından dönüştürülürken bağımsız değişkeni zorunludur. Bir .resources dosyasını XML tabanlı bir kaynak dosyasına dönüştürürken, .resx uzantılı bir dosya adı belirtin. Bir .resources dosyasını bir metin dosyasına dönüştürürken, .txt veya .restext uzantılı bir dosya adı belirtin. Bir .resources dosyasını, .resources dosyası yalnızca dize değerleri içerirken bir .txt dosyasına dönüştürmelisiniz.|  
-|`outputDirectory`|İçin [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar, içinde bir .resw dosya, directory dize kaynaklarını içeren belirtir `filename.extension` yazılır. `outputDirectory` önceden var olmalıdır.|  
-|`/str:``language[,namespace[,classname[,filename]]]`|Belirtilen programlama dilinde kesin türü belirtilmiş kaynak sınıfı dosyası oluşturur `language` seçeneği. `language` Aşağıdaki değişmez değerleri birini içerebilir:<br /><br /> -İçin C# ' ta: `c#`, `cs`, veya `csharp`.<br />-İçin Visual Basic: `vb` veya `visualbasic`.<br />-İçin VBScript: `vbs` veya `vbscript`.<br />-İçin C++: `c++`, `mc`, veya `cpp`.<br />-İçin JavaScript: `js`, `jscript`, veya `javascript`.<br /><br /> `namespace` Seçeneği belirtir projenin varsayılan ad alanı, `classname` seçeneği oluşturulan sınıfın adını belirtir ve `filename` seçeneği sınıfı dosya adını belirtir.<br /><br /> `/str:` Seçenek sağlar yalnızca bir giriş dosyası ile kullanılamaz `/compile` seçeneği.<br /><br /> Varsa `namespace` belirtildi ancak `classname` sınıf adı çıktı dosya adından türetilmiş değil, (örneğin, alt çizgi için nokta yerine kullanılır). Kesin olarak belirlenmiş kaynaklar sonuç olarak doğru çalışmayabilir. Bunu önlemek için, hem sınıf adı hem de çıkış dosyası adı belirtin.<br /><br /> Bu seçenek hakkında daha fazla bilgi için bkz: [bir kesin türü belirtilmiş kaynak sınıfı oluşturma](#Strong) bu konuda daha sonra.|  
-|`/publicClass`|Kesin belirlenmiş bir kaynak sınıfını bir genel sınıf olarak oluşturur. Varsayılan olarak, kaynak sınıftır `internal` C# ve `Friend` Visual Basic'te.<br /><br /> Bu seçenek yoksayılır `/str:` seçeneği kullanılamıyor.|  
+|`/compile`|Tek bir toplu işlemde birden çok .resources dosyasına dönüştürmek için birden fazla .resx veya metin dosyası belirtmenize olanak sağlar. Bu seçeneği belirtmezseniz, yalnızca bir giriş dosyası bağımsız değişkeni belirtebilirsiniz. Çıkış dosyaları *filename*.resources.<br /><br /> Bu seçenek kullanılamaz `/str:` seçeneği.<br /><br /> Bu seçenek hakkında daha fazla bilgi için bkz. [derleme veya dönüştürme birden çok dosya](#Multiple) bu konuda.|  
+|`/r:``assembly`|Belirtilen derlemedeki meta verilere başvurur. .resx dosyaları dönüştürülürken kullanılır ve Resgen.exe'nin nesne kaynaklarını serileştirmesine veya serilerinin kaldırılmasına olanak sağlar. Benzer `/reference:` veya `/r:` C# ve Visual Basic derleyicileri için Seçenekler.|  
+|`filename.extension`|Dönüştürülecek giriş dosyasının adını belirtir. Bu tablodan önce sunulan ilk ve daha uzun komut satırı sözdizimini kullanıyorsanız, `extension` aşağıdakilerden biri olmalıdır:<br /><br /> .txt veya .restext<br /> Bir .resources veya .resx dosyasına dönüştürülecek bir metin dosyası. Metin dosyaları yalnızca dize kaynakları içerebilir. Dosya biçimi hakkında daha fazla bilgi için bkz: "Metin dosyalarındaki kaynaklar" bölümünü [Creating Resource Files](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).<br /><br /> .resx<br /> Bir .resources veya metin (.txt veya .restext) dosyasına dönüştürülecek XML tabanlı bir kaynak dosyası.<br /><br /> .resources<br /> Bir .resx veya bir metin (.txt veya .restext) dosyasına dönüştürülecek ikili bir kaynak dosyası.<br /><br /> Bu tablodan önce sunulan ikinci ve daha kısa komut satırı sözdizimini kullanıyorsanız, `extension` aşağıdakilerden biri olmalıdır:<br /><br /> .exe veya .dll<br /> Dize kaynakları olan geliştirme kullanmak için bir .resw dosyasına ayıklanacak bir .NET Framework derlemesi (yürütülebilir veya kitaplık) [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar.|  
+|`outputFilename.extension`|Oluşturulacak kaynak dosyasının adını ve türünü belirtir.<br /><br /> Bir .txt, .restext veya .resx dosyasından bir .resources dosyasına dönüştürme yaparken bu bağımsız değişken isteğe bağlıdır. Siz belirtmezseniz `outputFilename`, Resgen.exe giriş .resources uzantısını ekler `filename` ve dosyayı içeren dizine yazar `filename,extension`.<br /><br /> `outputFilename.extension` Bir .resources dosyasından dönüştürme yaparken bağımsız değişkeni zorunludur. Bir .resources dosyasını XML tabanlı bir kaynak dosyasına dönüştürürken, .resx uzantılı bir dosya adı belirtin. Bir .resources dosyasını bir metin dosyasına dönüştürürken, .txt veya .restext uzantılı bir dosya adı belirtin. Bir .resources dosyasını, .resources dosyası yalnızca dize değerleri içerirken bir .txt dosyasına dönüştürmelisiniz.|  
+|`outputDirectory`|İçin [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamaları içinde bir .resw dosyasının dizini içindeki dize kaynaklarını içeren belirtir `filename.extension` yazılır. `outputDirectory` önceden var olmalıdır.|  
+|`/str:``language[,namespace[,classname[,filename]]]`|Belirtilen programlama dilinde, kesin olarak belirlenmiş kaynak sınıfı dosyası oluşturur `language` seçeneği. `language` Aşağıdaki değişmez değerlerden birini içerebilir:<br /><br /> -C# için: `c#`, `cs`, veya `csharp`.<br />-Visual Basic için: `vb` veya `visualbasic`.<br />-İçin VBScript: `vbs` veya `vbscript`.<br />-İçin C++: `c++`, `mc`, veya `cpp`.<br />-İçin JavaScript: `js`, `jscript`, veya `javascript`.<br /><br /> `namespace` Seçeneği projenin varsayılan ad alanını belirtir `classname` seçeneği üretilen sınıfın adını belirtir ve `filename` seçeneği sınıf dosyasının adını belirtir.<br /><br /> `/str:` Seçenek sayesinde yalnızca bir giriş dosyası ile kullanılamaz `/compile` seçeneği.<br /><br /> Varsa `namespace` belirtildi ancak `classname` sınıf adı çıkış dosyası adından türetilir değil, (örneğin, alt çizgiler noktaların yerini alır). Kesin olarak belirlenmiş kaynaklar sonuç olarak doğru çalışmayabilir. Bunu önlemek için, hem sınıf adı hem de çıkış dosyası adı belirtin.<br /><br /> Bu seçenek hakkında daha fazla bilgi için bkz. [bir türü kesin belirlenmiş kaynak sınıfı oluşturma](#Strong) bu konuda.|  
+|`/publicClass`|Kesin belirlenmiş bir kaynak sınıfını bir genel sınıf olarak oluşturur. Varsayılan olarak, kaynak sınıfı, `internal` C# ve `Friend` Visual Basic'te.<br /><br /> Bu seçenek yoksayılır `/str:` seçeneği kullanılamıyor.|  
   
 ## <a name="resgenexe-and-resource-file-types"></a>Resgen.exe ve Kaynak Dosya Türleri  
  Resgen.exe'nin kaynakları doğru olarak dönüştürmesi için, metin ve .resx dosyalarının doğru biçime uygun olması gerekir.  
@@ -90,16 +90,16 @@ resgen filename.extension [outputDirectory]
  Metin (.txt veya .restext) dosyaları yalnızca dize kaynakları içerebilir. Dizelerin çeşitli dillere çevrilmiş olması gereken bir uygulama yazıyorsanız, dize kaynakları yararlıdır. Örneğin, uygun dize kaynağını kullanarak, menü dizelerini kolayca bölgeselleştirebilirsiniz. Resgen.exe, ad/değer çiftlerini içeren metin dosyalarını okur; burada, ad kaynağı tanımlayan bir dizedir ve değer kaynak dizesinin kendisidir.  
   
 > [!NOTE]
->  .Txt ve .restext dosya biçimi hakkında daha fazla bilgi için "Metin dosyaları kaynaklar" bölümüne bakın [oluşturma kaynak dosyaları](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).  
+>  .Txt ve .restext dosyalarının biçimi hakkında daha fazla bilgi için bkz: "Metin dosyalarındaki kaynaklar" bölümünü [Creating Resource Files](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).  
   
  Yalnızca Temel Latince aralığındaki karakterleri (U+007F) içermedikçe, kaynakları içeren bir metin dosyasının UTF-8 veya Unicode (UTF-16) kodlamasıyla kaydedilmesi gerekir. Resgen.exe, ANSI kodlaması kullanılarak kaydedilen bir metin dosyasını işlerken genişletilmiş ANSI karakterlerini kaldırır.  
   
  Resgen.exe, metin dosyasında yinelenen kaynak adlarını denetler. Metin dosyası yinelenen kaynak adları içeriyorsa, Resgen.exe bir uyarı verir ve ikinci değeri yoksayar.  
   
 ### <a name="resx-files"></a>.resx Dosyaları  
- .resx kaynak dosyası biçimi XML girişlerinden oluşur. Metin dosyalarında olduğu gibi bu XML girdileri içinde dize kaynakları belirtebilirsiniz. .resx dosyalarının metin dosyalarına göre birincil yararlarından birisi, nesneler de belirtebilir veya gömebilir olmanızdır. Bir .resx dosyasını görüntülediğinizde, ikili bilgiler kaynak bildiriminin bir parçası olduğunda, gömülü bir nesnenin (örneğin, bir resim) ikili biçimini görebilirsiniz. Metin dosyalarında olduğu gibi, bir .resx dosyasını bir metin düzenleyicicisiyle (Not Defteri veya Microsoft Word gibi) açabilir ve içeriğini yazabilir, ayrıştırabilir ve değiştirebilirsiniz. Bunun için, XML etiketlerini ve .resx dosyası yapısını iyi bilmenin gerektiğini unutmayın. .Resx dosyası biçimi hakkında daha fazla bilgi için ".resx dosyaları kaynaklarında" bölümüne bakın [oluşturma kaynak dosyaları](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).  
+ .resx kaynak dosyası biçimi XML girişlerinden oluşur. Metin dosyalarında olduğu gibi bu XML girdileri içinde dize kaynakları belirtebilirsiniz. .resx dosyalarının metin dosyalarına göre birincil yararlarından birisi, nesneler de belirtebilir veya gömebilir olmanızdır. Bir .resx dosyasını görüntülediğinizde, ikili bilgiler kaynak bildiriminin bir parçası olduğunda, gömülü bir nesnenin (örneğin, bir resim) ikili biçimini görebilirsiniz. Metin dosyalarında olduğu gibi, bir .resx dosyasını bir metin düzenleyicicisiyle (Not Defteri veya Microsoft Word gibi) açabilir ve içeriğini yazabilir, ayrıştırabilir ve değiştirebilirsiniz. Bunun için, XML etiketlerini ve .resx dosyası yapısını iyi bilmenin gerektiğini unutmayın. .Resx dosya biçimi hakkında daha fazla bilgi için bkz: ".resx dosyalarındaki kaynaklar" bölümünü [Creating Resource Files](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).  
   
- Katıştırılmış dize olmayan nesneler içeren bir .resources dosyası oluşturmak için nesneleri içeren bir .resx dosyası dönüştürmek için Resgen.exe kullanın veya nesne kaynakları, tarafından sağlanan yöntemleri çağırarak doğrudan kodunuzdan dosyanıza ekleyin <xref:System.Resources.ResourceWriter> sınıf.  
+ Gömülü dize olmayan nesneler içeren bir .resources dosyası oluşturmak için gereken nesneleri içeren bir .resx dosyasını dönüştürmek için Resgen.exe kullanın ya da nesne kaynakları, tarafından sağlanan yöntemleri çağırarak doğrudan koddan dosyanıza ekleyin <xref:System.Resources.ResourceWriter> sınıf.  
   
  .resx veya .resources dosyanız nesneler içeriyorsa ve onu bir metin dosyasına dönüştürmek için Resgen.exe'yi kullanırsanız, tüm dize kaynakları doğru şekilde dönüştürülür, fakat dize olmayan nesnelerin veri türleri de dize olarak dosyaya yazılır. Gömülü nesneleri dönüştürmede kaybedersiniz ve Resgen.exe, kaynakları alırken bir hata oluştuğunu bildirir.  
   
@@ -114,23 +114,23 @@ resgen filename.extension [outputDirectory]
 |.exe veya .dll derlemesi|Desteklenmez|Desteklenmez|Yalnızca dize kaynakları (yol adları dahil) kaynak olarak tanınır.|Desteklenmez|  
   
 ## <a name="performing-specific-resgenexe-tasks"></a>Belirli Resgen.exe Görevlerini Gerçekleştirme  
- Resgen.exe çeşitli yollarla kullanabilirsiniz: bir ikili dosyasına, kaynak dosya biçimleri arasında dönüştürme yapmak ve saran bir sınıf oluşturmak için bir metin veya XML tabanlı kaynak dosyası derlemek için <xref:System.Resources.ResourceManager> işlevselliği ve kaynaklara erişim sağlar. Bu bölüm, her görevle ilgili ayrıntılı bilgi sağlar:  
+ Resgen.exe'yi çeşitli yollarla kullanabilirsiniz: bir ikili dosyaya dönüştürmek, kaynak dosya biçimleri arasında dönüştürmek için ve sarmalayan bir sınıf oluşturmak için bir metin veya XML tabanlı kaynak dosyasını derlemek için <xref:System.Resources.ResourceManager> işlevselliği ve kaynaklara erişim sağlar. Bu bölüm, her görevle ilgili ayrıntılı bilgi sağlar:  
   
--   [İkili bir dosyaya kaynakları derleme](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Compiling)  
+-   [Kaynakları bir ikili dosyaya derleme](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Compiling)  
   
 -   [Kaynak dosya türleri arasında dönüştürme](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Convert)  
   
--   [Derleme veya birden çok dosya dönüştürme](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Multiple)  
+-   [Derleme veya birden çok dosyayı dönüştürme](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Multiple)  
   
--   [Kaynakları .resw dosyasına dışarı aktarma](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Exporting)  
+-   [Kaynakları bir .resw dosyasına verme](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Exporting)  
   
--   [Kaynaklara koşullu derleme](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Conditional)  
+-   [Kaynakları koşullu olarak derleme](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Conditional)  
   
--   [Kesin türü belirtilmiş kaynak sınıfı oluşturma](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Strong)  
+-   [Türü kesin belirlenmiş kaynak sınıfı oluşturma](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Strong)  
   
 <a name="Compiling"></a>   
 ### <a name="compiling-resources-into-a-binary-file"></a>Kaynakları Bir İkili Dosyaya Derleme  
- Resgen.exe'nin en yaygın kullanımı, metin tabanlı bir kaynak dosyasını (bir .txt veya .restext dosyası) veya XML tabanlı bir kaynak dosyasını (bir .resx dosyası) bir ikili .resources dosyasına derlemektir. Çıktı dosyası sonra ana bütünleştirilmiş kodunda bir dil derleyici tarafından veya bir uydu derlemesi tarafından katıştırılabilen [derleme bağlayıcı (AL.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md).  
+ Resgen.exe'nin en yaygın kullanımı, metin tabanlı bir kaynak dosyasını (bir .txt veya .restext dosyası) veya XML tabanlı bir kaynak dosyasını (bir .resx dosyası) bir ikili .resources dosyasına derlemektir. Çıktı dosyası daha sonra bir ana derlemeye bir dil derleyicisi tarafından veya bir uydu derlemesi tarafından eklenebilir [Assembly Linker (AL.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md).  
   
  Bir kaynak dosyasını derlemek için sözdizimi aşağıdaki gibidir:  
   
@@ -144,9 +144,9 @@ resgen inputFilename [outputFilename]
  Uzantı dahil, derlenecek dosyanın adı. Resgen.exe yalnızca uzantısı .txt, .restext veya .resx olan dosyaları derler.  
   
  `outputFilename`  
- Çıktı dosyasının adı. Atlarsanız `outputFilename`, Resgen.exe kök dosya adı ile bir .resources dosyası oluşturur `inputFilename` aynı dizinde `inputFilename`. Varsa `outputFilename` bir dizin yolu içeren dizini mevcut olması gerekir.  
+ Çıktı dosyasının adı. Atlarsanız `outputFilename`, Resgen.exe, kök dosya adı ile bir .resources dosyası oluşturur `inputFilename` aynı dizinde `inputFilename`. Varsa `outputFilename` bir dizin yolu içeriyorsa dizin varolmalıdır.  
   
- .resources dosyası için tam olarak belirtilen bir ad alanını, ad alanını dosya adında belirterek ve bir nokta ile kök dosya adından ayırarak belirtirsiniz. Örneğin, varsa `outputFilename` olan `MyCompany.Libraries.Strings.resources`, MyCompany.Libraries ad alanıdır.  
+ .resources dosyası için tam olarak belirtilen bir ad alanını, ad alanını dosya adında belirterek ve bir nokta ile kök dosya adından ayırarak belirtirsiniz. Örneğin, varsa `outputFilename` olduğu `MyCompany.Libraries.Strings.resources`, ad alanı MyCompany.Libraries olur.  
   
  Aşağıdaki komut, Resources.txt dosyasındaki ad/değer çiftlerini okur ve Resources.resources adlı bir ikili .resources dosyası yazar. Çıkış dosyası adı açıkça belirtilmediği için, varsayılan olarak giriş dosyası adıyla aynı adı alır.  
   
@@ -180,7 +180,7 @@ resgen Resources.resx Resources.resources
   
  Sözdizimi, bir önceki bölümde gösterilenle aynıdır.  
   
- Ayrıca, bir .NET Framework derlemesindeki gömülü kaynaklar .resw dosya tor için dönüştürmek için Resgen.exe kullanabilirsiniz [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar.  
+ Ayrıca, bir .NET Framework derlemesindeki gömülü kaynakları bir .resw dosyası dönüştürmek için Resgen.exe'yi kullanabilirsiniz [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar.  
   
  Aşağıdaki komut, bir ikili .resources dosyası olan Resources.resources dosyasını okur ve Resources.resx adlı XML tabanlı bir çıkış dosyası yazar.  
   
@@ -203,7 +203,7 @@ resgen Resources.resx Resources.restext
   
 <a name="Multiple"></a>   
 ### <a name="compiling-or-converting-multiple-files"></a>Birden Çok Dosyayı Derleme veya Dönüştürme  
- Kullanabileceğiniz `/compile` tek bir işlemde başka bir kaynak dosyaların bir listesini bir biçimden diğerine dönüştürme için anahtar. Sözdizimi şöyledir:  
+ Kullanabileceğiniz `/compile` kaynak dosyaların listesini diğerine tek bir işlemde bir biçimden diğerine dönüştürmek için anahtar. Sözdizimi şöyledir:  
   
 ```  
 resgen /compile filename.extension [filename.extension...]  
@@ -217,10 +217,10 @@ resgen /compile StringResources.txt TableResources.resx ImageResources.resx
   
 <a name="Exporting"></a>   
 ### <a name="exporting-resources-to-a-resw-file"></a>Kaynakları Bir .resw Dosyasına Verme  
- Geliştirme yapıyorsanız bir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulama, var olan bir masaüstü uygulaması kaynaklarını kullanmak isteyebilirsiniz. Ancak, iki tür uygulama farklı dosya biçimlerini destekler. Masaüstü uygulamalarında, metin (.txt veya .restext) veya .resx dosyaları içinde kaynaklar ikili .resources dosyalarına derlenir. İçinde [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar, .resw dosyaları ikili paket kaynak dizini (PRI) dosyalarına derlenir. Resgen.exe bu boşluğunu kaynakları yürütülebilir bir dosya ya da bir uydu derleme ayıklanması ve geliştirirken kullanılabilir olan bir veya daha fazla .resw dosyalara yazma için kullanabileceğiniz bir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulama.  
+ Geliştiriyorsanız bir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulama, var olan bir masaüstü uygulamasından kaynakları kullanmak isteyebilirsiniz. Ancak, iki tür uygulama farklı dosya biçimlerini destekler. Masaüstü uygulamalarında, metin (.txt veya .restext) veya .resx dosyaları içinde kaynaklar ikili .resources dosyalarına derlenir. İçinde [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalarında, .resw dosyaları ikili paket kaynak dizini (PRI) dosyalarına derlenir. Resgen.exe bir yürütülebilir dosya veya bir uydu derleme kaynakları ayıklayarak ve bunları geliştirirken kullanılabilir olan bir veya daha fazla .resw dosyaları yazma bu boşluğu kapatmak için kullanabileceğiniz bir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulama.  
   
 > [!IMPORTANT]
->  Visual Studio otomatik olarak taşınabilir kitaplığa kaynakları eklemek için gerekli tüm dönüştürmeler işleyen bir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulama. Bir derlemeyi kaynakları için .resw dönüştürmek için dosya biçimi geliştirmek isteyen geliştiriciler için ilgilendirir doğrudan Resgen.exe kullanarak bir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulama Visual Studio dışında.  
+>  Visual Studio taşınabilir bir kitaplıktaki kaynakları dahil etmek için gereken tüm dönüştürmeleri otomatik olarak işleyen bir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulama. Resgen.exe, bir derleme içindeki kaynakları .resw dönüştürmek için dosya biçimi geliştirmek isteyen geliştiricileri ilgilendirir doğrudan kullanarak bir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulama Visual Studio dışında.  
   
  Bir derlemeden .resw dosyaları oluşturmak için sözdizimi aşağıdaki gibidir:  
   
@@ -234,7 +234,7 @@ resgen filename.extension  [outputDirectory]
  Bir .NET Framework derlemesinin (bir yürütülebilir veya .DLL) adı. Dosya hiç kaynak içermiyorsa, Resgen.exe herhangi bir dosya oluşturmaz.  
   
  `outputDirectory`  
- .resw dosyalarının yazılacağı varolan dizin. Varsa `outputDirectory` olan atlandığında .resw dosyaları geçerli dizine yazılır. Resgen.exe, derlemedeki her bir .resources dosyası için bir .resw dosyası oluşturur. .resw dosyasının kök dosya adı, .resources dosyasının kök adı ile aynıdır.  
+ .resw dosyalarının yazılacağı varolan dizin. Varsa `outputDirectory` olan atlanırsa, .resw dosyaları geçerli dizine yazılır. Resgen.exe, derlemedeki her bir .resources dosyası için bir .resw dosyası oluşturur. .resw dosyasının kök dosya adı, .resources dosyasının kök adı ile aynıdır.  
   
  Aşağıdaki komut, MyApp.exe içinde gömülü her .resources dosyası için Win8Resources dizininde bir .resw dosyası oluşturur:  
   
@@ -244,11 +244,11 @@ resgen MyApp.exe Win8Resources
   
 <a name="Conditional"></a>   
 ### <a name="conditionally-compiling-resources"></a>Kaynakları Koşullu Olarak Derleme  
- İle başlayarak [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Resgen.exe metin (.txt ve .restext) dosyalarında dize kaynaklarının koşullu derleme destekler. Bu, birden çok oluşturma yapılandırmasında tek bir metin tabanlı dosya kullanmanıza olanak tanır.  
+ İle başlayarak [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Resgen.exe, metin (.txt ve .restext) dosyalarında dize kaynaklarının koşullu derlenmesini destekler. Bu, birden çok oluşturma yapılandırmasında tek bir metin tabanlı dosya kullanmanıza olanak tanır.  
   
- Kullandığınız bir .txt veya .restext dosyasında `#ifdef`...`#endif` bir kaynak ikili .resources dosyasında bir simge tanımlanır ve kullanırsanız dahil etmek için yapı `#if !`... `#endif` bir simge tanımlanmazsa, bir kaynak eklemek için yapı. Derleme zamanında sonra simgeleri kullanarak tanımladığınız `/define:` seçeneğinin ardından simgeleri virgülle ayrılmış listesi tarafından. Karşılaştırma ortası duyarlı; tarafından tanımlanan simgeleri durumunun `/define` derlenecek metin dosyalarında simgelerin harf eşleşmelidir.  
+ Bir .txt veya .restext dosyasında, kullandığınız `#ifdef`...`#endif` bir simge tanımlanmadıysa ve kullanırsanız, ikili .resources dosyasına bir kaynak eklemek için `#if !`... `#endif` bir simge tanımlanmazsa bir kaynak eklemek için. Derleme zamanında, ardından kullanarak simgeler tanımlarsınız `/define:` seçeneğinin ardından simgeler virgülle ayrılmış bir listesi. Karşılaştırma büyük/küçük harfleri duyarlıdır; tarafından tanımlanan simgelerin `/define` derlenecek metin dosyalarındaki simgelerin eşleşmelidir.  
   
- Örneğin, UIResources.rext adlı aşağıdaki dosya adlı bir dize kaynağı içerir `AppTitle` , gerçekleştirebileceğiniz olup simgeleri adlı bağlı olarak üç değerden birini `PRODUCTION`, `CONSULT`, veya `RETAIL` tanımlanır.  
+ Örneğin, Uıresources.rext adlı aşağıdaki dosya adında bir dize kaynağı içerir `AppTitle` olup sembolleri adlı bağlı olarak üç değerden birini alabilir `PRODUCTION`, `CONSULT`, veya `RETAIL` tanımlanır.  
   
 ```  
 #ifdef PRODUCTION  
@@ -269,11 +269,11 @@ FileMenuName=File
 resgen /define:CONSULT UIResources.restext  
 ```  
   
- Bu, iki dize kaynağı içeren bir .resources dosyası oluşturur. Değeri `AppTitle` "My danışmanlık şirket proje yöneticisi" bir kaynaktır.  
+ Bu, iki dize kaynağı içeren bir .resources dosyası oluşturur. Değerini `AppTitle` "My danışmanlık proje yöneticisi" bir kaynaktır.  
   
 <a name="Strong"></a>   
 ### <a name="generating-a-strongly-typed-resource-class"></a>Kesin Olarak Belirlenmiş Bir Kaynak Sınıfı Oluşturma  
- Resgen.exe, bir statik salt okunur özellikler kümesi içeren sınıflar oluşturarak kaynaklara erişimi kapsülleyen, kesin olarak belirlenmiş kaynakları destekler. Bu yöntemleri çağırmak için bir alternatif sağlayan <xref:System.Resources.ResourceManager> doğrudan kaynakları almak için sınıf. Kesin türü belirtilmiş kaynak desteği kullanarak etkinleştirebilirsiniz `/str` işlevselliğini sarmalar Resgen.exe seçeneğinde <xref:System.Resources.Tools.StronglyTypedResourceBuilder> sınıfı. Belirttiğinizde `/str` Resgen.exe çıktısını seçenektir giriş parametresinde başvurulan kaynaklar eşleşen kesin türü belirtilmiş özellikleri içeren bir sınıf. Bu sınıf, işlenen dosyada kullanılabilir olan kaynaklara kesin belirlenmiş salt okunur erişim sağlar.  
+ Resgen.exe, bir statik salt okunur özellikler kümesi içeren sınıflar oluşturarak kaynaklara erişimi kapsülleyen, kesin olarak belirlenmiş kaynakları destekler. Bu yöntemlerini çağırmak için bir alternatif sağlayan <xref:System.Resources.ResourceManager> doğrudan kaynakları almak için sınıf. Kullanarak türü kesin olarak belirlenmiş kaynak desteğini etkinleştirebilirsiniz `/str` işlevini sarmalayan Resgen.exe, seçeneğinde <xref:System.Resources.Tools.StronglyTypedResourceBuilder> sınıfı. Belirttiğinizde `/str` seçeneği, Resgen.exe'nin çıktısı giriş parametresinde başvurulan kaynaklarla eşleşen kesin olarak belirlenmiş özellikler içeren bir sınıf. Bu sınıf, işlenen dosyada kullanılabilir olan kaynaklara kesin belirlenmiş salt okunur erişim sağlar.  
   
  Kesin belirlenmiş kaynak oluşturmak için sözdizimi aşağıdaki gibidir:  
   
@@ -287,28 +287,28 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
  Kendisi için kesin olarak belirlenmiş bir kaynak sınıfı oluşturulacak kaynak dosyasının dosya adı ve uzantısı. Dosya, metin tabanlı, XML-tabanlı veya ikili .resources dosyası olabilir; uzantısı .txt, .restext, .resw veya .resources olabilir.  
   
  `outputFilename`  
- Çıktı dosyasının adı. Varsa `outputFilename` bir dizin yolu içeren dizini mevcut olması gerekir. Atlarsanız `outputFilename`, Resgen.exe kök dosya adı ile bir .resources dosyası oluşturur `inputFilename` aynı dizinde `inputFilename`.  
+ Çıktı dosyasının adı. Varsa `outputFilename` bir dizin yolu içeriyorsa dizin varolmalıdır. Atlarsanız `outputFilename`, Resgen.exe, kök dosya adı ile bir .resources dosyası oluşturur `inputFilename` aynı dizinde `inputFilename`.  
   
- `outputFilename` bir metin tabanlı, XML tabanlı veya ikili .resources dosyası olabilir. Varsa dosya uzantısını `outputFilename` öğesinin dosya uzantısı, farklı `inputFilename`, Resgen.exe dosya dönüştürme gerçekleştirir.  
+ `outputFilename` bir metin tabanlı, XML-tabanlı veya ikili .resources dosyası olabilir. Dosya uzantısını `outputFilename` öğesinin dosya uzantısı farklı `inputFilename`, Resgen.exe Dosya dönüştürmeyi gerçekleştirir.  
   
- Varsa `inputFilename` .resources dosyasını varsa Resgen.exe kopyalar bir .resources dosyası `outputFilename` de .resources bir dosyadır. Varsa `outputFilename` olan atlandığında Resgen.exe üzerine yazar `inputFilename` aynı .resources dosyası ile.  
+ Varsa `inputFilename` Resgen.exe Kopyaları .resources dosyasını bir .resources dosyası olması `outputFilename` da bir .resources dosyası olması. Varsa `outputFilename` olan atlanırsa, Resgen.exe üzerine yazar `inputFilename` özdeş bir .resources dosyasını ile.  
   
  *Dil*  
- Kesin olarak belirlenmiş kaynak sınıfı için kaynak kodun üretileceği dil. Olası değerler şunlardır: `cs`, `C#`, ve `csharp` C# kodunu `vb` ve `visualbasic` Visual Basic kodu için `vbs` ve `vbscript` VBScript kodu ve `c++`, `mc`ve `cpp` C++ kodu için.  
+ Kesin olarak belirlenmiş kaynak sınıfı için kaynak kodun üretileceği dil. Olası değerler `cs`, `C#`, ve `csharp` C# kodunu `vb` ve `visualbasic` Visual Basic kodu için `vbs` ve `vbscript` VBScript kodu için ve `c++`, `mc`ve `cpp` C++ kodu için.  
   
  *namespace*  
- Kesin olarak belirlenmiş kaynak sınıfını içeren ad alanı. .resources dosyası ve kaynak sınıfı aynı ad alanına sahip olmalıdır. Ad alanında belirtme hakkında daha fazla bilgi için `outputFilename`, bkz: [derleme kaynakları ikili dosyasına](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Compiling). Varsa *ad alanı* olan atlandığında kaynak sınıfı bir ad alanında bulunmuyor.  
+ Kesin olarak belirlenmiş kaynak sınıfını içeren ad alanı. .resources dosyası ve kaynak sınıfı aynı ad alanına sahip olmalıdır. Ad alanını belirtmekle ilgili bilgi için `outputFilename`, bkz: [kaynakları bir ikili dosyaya derleme](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Compiling). Varsa *ad alanı* olan atlanırsa, kaynak sınıfı bir ad alanında bulunmuyor.  
   
  *ClassName*  
- kesin belirlenmiş kaynak sınıfının adı. Bu, .resources dosyasının kök adına karşılık gelmelidir. Örneğin, Resgen.exe MyCompany.Libraries.Strings.resources adlı bir .resources dosyası üretirse, belirlenmiş kaynak sınıfının adı Strings olur. Varsa *classname* olan atlanırsa, oluşturulan sınıfın kök adından türetilmiş `outputFilename`. Varsa `outputFilename` olan atlanırsa, oluşturulan sınıfın kök adından türetilmiş `inputFilename`.  
+ kesin belirlenmiş kaynak sınıfının adı. Bu, .resources dosyasının kök adına karşılık gelmelidir. Örneğin, Resgen.exe MyCompany.Libraries.Strings.resources adlı bir .resources dosyası üretirse, belirlenmiş kaynak sınıfının adı Strings olur. Varsa *classname* olan atlanırsa, üretilen sınıf kök adından türetilir `outputFilename`. Varsa `outputFilename` olan atlanırsa, üretilen sınıf kök adından türetilir `inputFilename`.  
   
- *ClassName* katıştırılmış boşluklar gibi geçersiz karakterler içeremez. Varsa *classname* katıştırılmış boşluklar içeriyor veya *classname* varsayılan olarak oluşturulan *Inputfilename*, ve *Inputfilename* Katıştırılmış boşluklar içeren Resgen.exe tüm geçersiz karakterler alt çizgi (_) ile değiştirir.  
+ *ClassName* gömülü boşluklar gibi geçersiz karakterler içeremez. Varsa *classname* gömülü boşluklar içeriyorsa veya *classname* varsayılan olarak oluşturulan *Inputfilename*, ve *Inputfilename* gömülü boşluklar içeriyorsa Resgen.exe tüm geçersiz karakterleri bir alt çizgiyle (_) değiştirir.  
   
  *Dosya adı*  
  Sınıf dosyasının adı.  
   
  `/publicclass`  
- Kesin türü belirtilmiş kaynak sınıfı ortak yapacağı yerine `internal` (C# ' ta) veya `Friend` (Visual Basic'te). Bu, kaynaklara, içine gömüldükleri derlemenin dışından erişmeye olanak tanır.  
+ Türü kesin belirlenmiş kaynak sınıfı genel yapar yerine `internal` (C# ' de) veya `Friend` (Visual Basic'te). Bu, kaynaklara, içine gömüldükleri derlemenin dışından erişmeye olanak tanır.  
   
 > [!IMPORTANT]
 >  Kesin olarak belirlenmiş bir kaynak sınıfı oluşturduğunuzda, .resources dosyanızın adı üretilen kodun ad alanıyla ve sınıf adıyla eşleşmelidir. Ancak, Resgen.exe uyumsuz bir adı olan bir .resources dosyası üretmek seçenekleri belirtmenize olanak verir. Bu davranışa geçici bir çözüm için, çıktı dosyası oluşturulduktan sonra dosyayı yeniden adlandırın.  
@@ -317,13 +317,13 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
   
 -   Kesin belirlenmiş kaynak sınıfı örneğini oluşturmak için kullanılabilecek, parametresiz bir oluşturucu.  
   
--   A `static` (C#) veya `Shared` (Visual Basic) ve salt okunur `ResourceManager` döndürür özelliği <xref:System.Resources.ResourceManager> kesin olarak belirtilmiş kaynak yönetir örneği.  
+-   A `static` (C#) veya `Shared` (Visual Basic) ve salt okunur `ResourceManager` döndüren özellik <xref:System.Resources.ResourceManager> kesin olarak belirlenmiş kaynağı yöneten bir örneği.  
   
--   Statik `Culture` kaynak alma işlemi için kullanılan kültür ayarlamanıza olanak tanıyan özellik. Varsayılan değeri olduğu `null`, anlamına geçerli UI kültürü kullanılır.  
+-   Statik `Culture` kaynak almak için kullanılan kültürü ayarlamanıza olanak tanıyan özellik. Varsayılan olarak, kendi değerdir `null`, geçerli UI kültürünün kullanıldığı anlamına gelir.  
   
--   Bir `static` (C#) veya `Shared` (Visual Basic) ve .resources dosyasındaki her bir kaynak için salt okunur özellik. Özelliğin adı, kaynağının adıdır.  
+-   Bir `static` (C#) veya `Shared` (Visual Basic) ve salt okunur özelliği .resources dosyasındaki her bir kaynak. Özelliğin adı, kaynağının adıdır.  
   
- Örneğin, aşağıdaki komutu StringResources.resources StringResources.txt adlı bir kaynak dosyasını derler ve adlı bir sınıf oluşturur `StringResources` bir Visual Basic kaynak kodu dosyasının adlı kaynağa erişmek için kullanılan StringResources.vb Yöneticisi.  
+ Örneğin, aşağıdaki komut StringResources.resources StringResources.txt adlı bir kaynak dosyasını derler ve adlı bir sınıf oluşturur `StringResources` içinde bir Visual Basic kaynak kod dosyası kaynağa erişmek için kullanılabilecek StringResources.vb adlı Yöneticisi.  
   
 ```  
 resgen StringResources.txt /str:vb,,StringResources   
