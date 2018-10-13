@@ -3,11 +3,11 @@ title: System.Web.Routing Integration
 ms.date: 03/30/2017
 ms.assetid: 31fe2a4f-5c47-4e5d-8ee1-84c524609d41
 ms.openlocfilehash: 3b95b3117941ce7d019b87b00181b2cbac652f43
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48843857"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49308214"
 ---
 # <a name="systemwebrouting-integration"></a>System.Web.Routing Integration
 Bir Windows Communication Foundation (WCF) hizmeti Internet Information Service (IIS) yeniden barındırdığında sanal dizinde .svc dosya yerleştirin. Bu .svc dosya yanı sıra hizmeti uygulayan sınıf kullanmak için hizmet ana bilgisayar üreteci belirtir. Hizmetine istek yaparken .svc dosya URI'de, örneğin belirttiğiniz: `http://contoso.com/EmployeeServce.svc`. Bu tür bir URI REST Hizmetleri yazma programcıları için en uygun değil. REST Hizmetleri için bir URI'leri, belirli bir kaynak belirtin ve normalde herhangi bir uzantısı yok. <xref:System.Web.Routing> Tümleştirme özelliği için bir URI'leri uzantısız yanıt veren bir WCF REST hizmeti barındırmanıza olanak sağlar. Yönlendirme bakın hakkında daha fazla bilgi için [ASP.NET yönlendirme](https://go.microsoft.com/fwlink/?LinkId=184660).  

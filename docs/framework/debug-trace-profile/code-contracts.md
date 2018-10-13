@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f7f7a779cc10b32d66a184107359b502cf094979
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 569be83b902e7634a0c22e78c3f3c3a23985076c
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45649223"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49308558"
 ---
 # <a name="code-contracts"></a>Kod Sözleşmeleri
 Kod sözleşmeleri, önkoşulları ve koşul sonralarına nesne okuduğunuzda kodunuzda belirtmek için bir yol sağlar. Önkoşulları, bir metot veya özellik girerken karşılanması gereken gereksinimleri verilmiştir. Koşul sonralarına beklentileri metot veya özellik kod çıkar zaman açıklanmaktadır. Beklenen durum iyi durumda olan bir sınıf için nesne okuduğunuzda açıklanmaktadır.  
@@ -90,7 +90,7 @@ Contract.EndContractBlock(); // All previous "if" checks are preconditions
   
 -   Sonkoşul prestate değeri bir ifade başlatma sırasında bir yöntem veya özellik değerini ifade eder. İfade kullanır `Contract.OldValue<T>(e)`burada `T` türü `e`. Derleyici, türü çıkarımı mümkün olduğunda genel tür bağımsız değişkeni atlayabilirsiniz. (Bağımsız değişken aldığından Örneğin, C# Derleyici her zaman türü çıkarır.) Ne ortaya çıkabilir bazı kısıtlamalar vardır `e` ve eski deyim görünebilir bağlamı. Eski bir ifade başka bir eski ifadesi içeremez. En önemlisi, eski bir ifade yöntemin önkoşulu durumunda var olan bir değer başvurmalıdır. Diğer bir deyişle, yöntemin önkoşulu olduğu sürece değerlendirilebilen bir ifade olmalıdır `true`. Bu kural için birkaç örneği aşağıda verilmiştir.  
   
-    -   Değer yöntemin önkoşulu durumda mevcut olması gerekir. Bir alan bir nesne üzerinde başvurmak için önkoşulları söz konusu nesne her zaman null olmayan olduğunu garanti gerekir.  
+    -   Değer yöntemin önkoşulu durumda mevcut olması gerekir. Bir alan bir nesne üzerinde başvurmak için önkoşulları nesneyi her zaman null olmayan olduğunu garanti gerekir.  
   
     -   Eski bir ifade yöntemin dönüş değeri başvuruda bulunamaz:  
   

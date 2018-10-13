@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern Web uygulamaları tasarlama | ASP.
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: 2fd3eb1e123959130884b96ee9d2e59b83c41b0a
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: de6b2e6650d173d325b2a717f5ee47506c307de7
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404651"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49308597"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>ASP.NET Core MVC geliştirme uygulamaları
 
@@ -290,7 +290,7 @@ Daha fazla uygulama filtreleri ve MSDN makalesi, bir çalışma örneği indirin
 
 ## <a name="security"></a>Güvenlik
 
-Web uygulamalarının güvenliğini sağlama, birçok konuları ile büyük bir konu olduğu. En temel düzeyde güvenlik, belirtilen bir isteğin geldiği ve ardından bu isteği yalnızca olması gerektiği kaynaklarına erişimi olduğundan emin bildiğiniz gelmelerini sağlamak anlamına gelir. Kimlik doğrulama isteği bilinen bir varlıktan yakında olarak değerlendirilip değerlendirilmeyeceğini görmek için bir istek bu güvenilir veri deposunda sağlanan kimlik bilgileri karşılaştırma işlemidir. Yetkilendirme, belirli kaynaklara kullanıcı kimliğine göre erişimi kısıtlama işlemidir. Üçüncü bir güvenlik sorunu için size gereken en az üçüncü taraflarca gizlice gelen istekleri koruduğu [uygulamanız için SSL kullanıldığından emin olun](/aspnet/core/security/enforcing-ssl).
+Web uygulamalarının güvenliğini sağlama, birçok konuları ile büyük bir konu olduğu. En temel düzeyde güvenlik, belirtilen bir isteğin geldiği ve ardından istek yalnızca olması gerektiği kaynaklarına erişimi olduğundan emin bildiğiniz gelmelerini sağlamak anlamına gelir. Kimlik doğrulama isteği bilinen bir varlıktan yakında olarak değerlendirilip değerlendirilmeyeceğini görmek için bir istek bu güvenilir veri deposunda sağlanan kimlik bilgileri karşılaştırma işlemidir. Yetkilendirme, belirli kaynaklara kullanıcı kimliğine göre erişimi kısıtlama işlemidir. Üçüncü bir güvenlik sorunu için size gereken en az üçüncü taraflarca gizlice gelen istekleri koruduğu [uygulamanız için SSL kullanıldığından emin olun](/aspnet/core/security/enforcing-ssl).
 
 ### <a name="authentication"></a>Kimlik doğrulaması
 

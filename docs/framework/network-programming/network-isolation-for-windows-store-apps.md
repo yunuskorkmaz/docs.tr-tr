@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: b064497c-d956-46b8-838d-7a0223c7e200
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 97096d6fa41cd25a92c23cd47008b33fb6037190
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 034dbfaf63826f8fd3b04e23ea4568e41783eb38
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195413"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49308246"
 ---
 # <a name="network-isolation-for-windows-store-apps"></a>Windows Store uygulamaları için ağ yalıtımı
 Sınıflar <xref:System.Net>, <xref:System.Net.Http>, ve <xref:System.Net.Http.Headers> ad alanlarında, Windows Store uygulamaları veya Masaüstü uygulamaları geliştirmek için kullanılabilir. Bir Windows Store uygulaması kullanıldığında, bu ad alanlarında sınıflar tarafından kullanılan uygulama güvenlik modelinin bir parçası olan ağ yalıtımı etkilenir [!INCLUDE[win8](../../../includes/win8-md.md)]. Uygun ağ yeteneklerini, sistemin ağ erişimine izin ver Windows Store uygulaması için uygulama bildirimindeki etkinleştirilmelidir.  
@@ -19,7 +19,7 @@ Sınıflar <xref:System.Net>, <xref:System.Net.Http>, ve <xref:System.Net.Http.H
   
 1.  Ağ erişimi isteklerini uygulama tarafından gereken yönü belirler. Bu istemci tarafından başlatılan giden istekleri ya da istenmeyen gelen istekleri olabilir veya bu ağ istek türleri her ikisinin bir birleşimi olabilir.  
   
-2.  Bu uygulama ile iletişim kurar ve ağ kaynaklarını türünü belirler. Bir uygulama bir ev veya iş ağı üzerinde güvenilen kaynaklarla iletişim gerekebilir. Bir uygulamayı Internet'teki kaynaklarla iletişim gerekebilir. Uygulama, her iki türdeki ağ kaynaklarına erişimi gerekebilir.  
+2.  Uygulama ile iletişim kurar ve ağ kaynaklarını türünü belirler. Bir uygulama bir ev veya iş ağı üzerinde güvenilen kaynaklarla iletişim gerekebilir. Bir uygulamayı Internet'teki kaynaklarla iletişim gerekebilir. Uygulama, her iki türdeki ağ kaynaklarına erişimi gerekebilir.  
   
 3.  Ağ yalıtımı gereken en düşük özellikleri uygulama bildirimine yapılandırın.  
   

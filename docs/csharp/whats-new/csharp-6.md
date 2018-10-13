@@ -3,12 +3,12 @@ title: C# 6 - C# Kılavuzu yenilikler nelerdir?
 description: C# sürüm 6'daki yeni özelliklerin öğrenin
 ms.date: 09/22/2016
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: f6f953eacc935d38cc7d45173109c96c52a5e2f3
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 53d9c5e60ac00b4c7c96aa3e42a60253219e1c70
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841124"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49308460"
 ---
 # <a name="whats-new-in-c-6"></a>C# 6 yenilikleri
 
@@ -22,13 +22,13 @@ C# 6.0 sürüm, geliştiriciler için üretkenliği artıran birçok özellik i�
     - Lambda ifadeleri kullanarak bir satır içi yöntemler yazabilirsiniz.
 * [' using static](#using-static):
     - Tek bir sınıfın tüm yöntemler geçerli bir ad alanına içeri aktarabilirsiniz.
-* [Null - Koşullu işleçler](#null-conditional-operators):
+* [Null koşullu işleçleri](#null-conditional-operators):
     - Null null koşullu işleci ile hala denetleme sırasında bir nesnenin üyelerine kısaca ve güvenli bir şekilde erişebilir.
 * [Dize ilişkilendirme](#string-interpolation):
     - Satır içi ifadeler yerine konumsal bağımsız değişkenlerle ifadeleri biçimlendirme dizesi yazabilirsiniz.
 * [Özel durum filtreleri](#exception-filters):
     - İfadeleri özelliklerine göre özel durum veya diğer program durumunu yakalayabilir. 
-* [nameof ifadeleri](#nameof-expressions):
+* [`nameof` İfade](#the-nameof-expression):
     - Semboller dize temsillerini oluşturmak derleyici izin verebilirsiniz.
 * [await catch ve finally bloklarında](#await-in-catch-and-finally-blocks):
     - Kullanabileceğiniz `await` ifadeleri önceden izin verilmeyen bir konumda.
@@ -211,34 +211,34 @@ Sol tarafta yalnızca bir kez değerlendirilir sağlamak da sol tarafındaki yö
 
 ## <a name="string-interpolation"></a>Dize ilişkilendirme
 
-C# 6 dizeleri bir biçim dizesi ve diğer string değerleri oluşturmak için değerlendirilen ifadeleri oluşturmak için yeni sözdizimi içeriyor.
+C# 6 dizeler dize ve diğer string değerleri oluşturmak için değerlendirilen katıştırılmış ifadeler oluşturmak için yeni sözdizimi içeriyor.
 
-Geleneksel olarak, konumsal parametreler gibi bir yöntem kullanmak için gereken `string.Format`:
+Geleneksel olarak, konumsal parametreler gibi bir yöntem kullanmak için gereken <xref:System.String.Format%2A?displayProperty=nameWithType>:
 
 [!code-csharp[stringFormat](../../../samples/snippets/csharp/new-in-6/oldcode.cs#stringFormat)]
 
-C# 6, yeni [dize ilişkilendirme](../language-reference/tokens/interpolated.md) özelliği Biçim dizesinde ifade katıştırma olanak sağlar. Yalnızca dize ile yazdığınızdan `$`:
+C# 6, yeni [dize ilişkilendirme](../language-reference/tokens/interpolated.md) özellik ifadeleri bir dizeye katıştırmak olanak sağlar. Yalnızca dize ile yazdığınızdan `$`:
 
 [!code-csharp[stringInterpolation](../../../samples/snippets/csharp/new-in-6/newcode.cs#FullNameExpressionMember)]
 
-Bu ilk örnek için yedek ifadeleri özellik ifadeleri kullanılır. Herhangi bir ifade kullanmak için bu sözdizimini genişletebilirsiniz. Örneğin, bir öğrencinin sınıf noktası ortalama ilişkilendirme bir parçası olarak işlem:
+Bu örnek özellik ifadeleri için yedek ifadeler kullanır. Herhangi bir ifade kullanmak için bu sözdizimini genişletebilirsiniz. Örneğin, bir öğrencinin sınıf noktası ortalama ilişkilendirme bir parçası olarak işlem:
 
 [!code-csharp[stringInterpolationExpression](../../../samples/snippets/csharp/new-in-6/newcode.cs#stringInterpolationExpression)]
 
-Önceki örnekte çalışan, size, çıktısı bulur `Grades.Average()` istediğiniz çok daha fazla ondalık basamak olabilir. Dize ilişkilendirme sözdizimi tüm biçim dizeleri kullanılabilir daha önce biçimlendirme yöntemleri kullanmayı destekler. Küme ayraçları içinde biçim dizeleri ekleyin. Ekleme bir `:` biçimlendirmek için ifadeyi aşağıdaki:
+Önceki örnekte çalışan, size, çıktısı bulur `Grades.Average()` istediğiniz çok daha fazla ondalık basamak olabilir. Dize ilişkilendirme sözdizimi tüm biçim dizeleri kullanılabilir daha önce biçimlendirme yöntemleri kullanmayı destekler. Küme ayraçları içinde biçim dizesi belirtin. Ekleme bir `:` biçimlendirmek için ifadeyi aşağıdaki:
 
 [!code-csharp[stringInterpolationFormat](../../../samples/snippets/csharp/new-in-6/newcode.cs#stringInterpolationFormat)]
 
 Önceki kod satırının değeri biçimlendirir `Grades.Average()` iki ondalık kayan noktalı bir sayı olarak.
 
-`:` Her zaman biçimlendirilen ifade ve biçim dizesi arasındaki ayırıcı olarak yorumlanır. İfadeniz kullandığında bu sorunları ortaya çıkarabilir bir `:` koşullu bir işleç gibi başka bir şekilde:
+`:` Her zaman biçimlendirilen ifade ve biçim dizesi arasındaki ayırıcı olarak yorumlanır. İfadeniz kullandığında bu sorunları ortaya çıkarabilir bir `:` başka bir yolla gibi bir [koşullu işleç](../language-reference/operators/conditional-operator.md):
 
 ```csharp
 public string GetGradePointPercentages() =>
     $"Name: {LastName}, {FirstName}. G.P.A: {Grades.Any() ? Grades.Average() : double.NaN:F2}";
 ```
 
-Önceki örnekte `:` koşullu işleç parçası olmayan biçim dizesinin başlangıcı olarak ayrıştırılır. Burada böyle her durumda, ifade düşündüğünüz olarak yorumlamak üzere zorlamanız parantezli ifade çevreleyebilirsiniz:
+Önceki örnekte `:` koşullu işleç parçası olmayan biçim dizesinin başlangıcı olarak ayrıştırılır. Burada böyle her durumda, parantezli ifade düşündüğünüz olarak yorumlamak üzere zorlamanız ifadeyi çevreler:
 
 [!code-csharp[stringInterpolationConditional](../../../samples/snippets/csharp/new-in-6/newcode.cs#stringInterpolationConditional)]
 
@@ -249,19 +249,21 @@ Küme ayraçları arasında yerleştirebilirsiniz ifadeleri herhangi bir sınır
 Bu örnekten başka bir dize ilişkilendirme ifadesi bir dize ilişkilendirme ifadesinde bile yuvalayabilirsiniz görebilirsiniz. Bu örnek daha daha karmaşık üretim kodunda istersiniz olasılıktır.
 Bunun yerine, bu özelliğin kapsamını yalnızca tanım olur. Herhangi bir C# deyimi, bir aradeğerlendirme dizesinde arasında ve küme ayraçlarının yerleştirilebilir.
 
+Dize ilişkilendirme ile çalışmaya başlamak için denetleme [dize ilişkilendirme C#](../quick-starts/interpolated-strings.yml) etkileşimli hızlı başlangıç.
+
 ### <a name="string-interpolation-and-specific-cultures"></a>Dize ilişkilendirme ve özel kültürler
 
-Önceki bölümde gösterilen örnekler, geçerli kültür ve dil burada kodu yürütür makine üzerinde kullanarak dizeleri biçimlendirin. Genellikle belirli bir kültür kullanılarak üretilen dize biçimlendirmeniz gerekebilir.
-Yapmak için bir dize ilişkilendirme tarafından üretilen nesne için örtük olarak dönüştürülebilir olgu kullanan <xref:System.FormattableString>.
+Tüm örnekleri burada kodu yürütür makine üzerinde geçerli kültürü kullanarak dizeleri önceki bölümde biçiminde gösterilir. Genellikle belirli bir kültür kullanılarak üretilen dize biçimlendirmeniz gerekebilir.
+Yapmak için bir dize ilişkilendirme tarafından üretilen nesne için örtük olarak dönüştürülebilir olgu kullanan <xref:System.FormattableString?displayProperty=nameWithType>.
 
-<xref:System.FormattableString> Örnek biçim dizesi ve dizeleri için dönüştürme önce ifadeleri değerlendirme sonuçlarını içerir. Genel yöntemleri kullanabilirsiniz <xref:System.FormattableString> kültür biçimlendirme dizesi bir zaman belirtmek için. Örneğin, aşağıdaki örnekte, Alman kültürü kullanarak bir dize oluşturur. (',' Karakteri ondalık ayırıcısı için kullanır ve '.' karakteri olarak binlik ayırıcı.)
+<xref:System.FormattableString> Örneği bileşik biçimlendirme dizesi ve dizeleri için dönüştürme önce ifadeleri değerlendirme sonuçlarını içerir. Kullanım <xref:System.FormattableString.ToString(System.IFormatProvider)> kültür biçimlendirme dizesi bir zaman belirtmek için yöntemi. Örneğin, aşağıdaki örnekte, Alman kültürü kullanarak bir dize oluşturur. (',' Karakteri ondalık ayırıcısı için kullanır ve '.' karakteri olarak binlik ayırıcı.)
 
 ```csharp
 FormattableString str = $"Average grade is {s.Grades.Average()}";
 var gradeStr = str.ToString(new System.Globalization.CultureInfo("de-DE"));
 ```
 
-Daha fazla bilgi için [dize ilişkilendirme](../language-reference/tokens/interpolated.md) konu.
+Daha fazla bilgi için [dize ilişkilendirme](../language-reference/tokens/interpolated.md) makale ve [dize ilişkilendirme C#](../tutorials/string-interpolation.md) öğretici.
 
 ## <a name="exception-filters"></a>Özel durum filtreleri
 
@@ -311,7 +313,7 @@ Yalnızca bir hata ayıklayıcısı iliştirilmemiş olduğunda herhangi bir kur
 Bu kodu ekledikten sonra tüm işlenmemiş özel durumlarda kesin, hata ayıklayıcının ayarlayın. Hata ayıklayıcısı altında programı çalıştırın ve hata ayıklayıcı keser her `PerformFailingOperation()` oluşturur bir `RecoverableException`.
 Catch yan tümcesi false döndüren özel durum filtresi nedeniyle yürütülen gerekmez çünkü hata ayıklayıcı, programınızın keser.
 
-## <a name="nameof-expressions"></a>`nameof` İfadeleri
+## <a name="the-nameof-expression"></a>`nameof` İfadesi
 
 `nameof` Bir sembol adı için ifadeyi hesaplar. Her bir değişken, bir özellik veya üye alan adını ihtiyaç duyduğunuzda çalışma araçları almak için harika bir yoludur.
 

@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 07/02/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 46db9dc7ff425c483f1a9f61da5e806e598b16d5
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: eddafc14de3a38cbf6f238199733ee667e6868b3
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37937183"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49308571"
 ---
 # <a name="tutorial-use-mlnet-to-cluster-iris-flowers-clustering"></a>Öğretici: Kullanımı ML.NET küme Iris çiçek (kümeleme) için
 
@@ -86,7 +86,7 @@ Varolan sınıf tanımına kaldırın ve sınıfları tanımlar aşağıdaki kod
 
 `IrisData` giriş verisi sınıfıdır ve veri kümesindeki her bir özellik tanımı yok. Kullanım [sütun](xref:Microsoft.ML.Runtime.Api.ColumnAttribute) veri kümesi dosyasında kaynak sütun dizinlerini belirtmek için özniteliği.
 
-`ClusterPrediction` Sınıfı temsil eder, uygulanan kümeleme modeli çıktısını bir `IrisData` örneği. Kullanım [ColumnName](xref:Microsoft.ML.Runtime.Api.ColumnNameAttribute) bağlanacak öznitelik `PredictedClusterId` ve `Distances` alanlarını **PredictedLabel** ve **puanı** sütunları sırasıyla. Kümeleme görev durumunda bu sütun şu anlama sahiptir:
+`ClusterPrediction` Sınıfı temsil eder, uygulanan kümeleme modeli çıktısını bir `IrisData` örneği. Kullanım [ColumnName](xref:Microsoft.ML.Runtime.Api.ColumnNameAttribute) bağlanacak öznitelik `PredictedClusterId` ve `Distances` alanlarını **PredictedLabel** ve **puanı** sütunları sırasıyla. Kümeleme görev olması durumunda bu sütun şu anlama gelir:
 
 - **PredictedLabel** sütun tahmin edilen kümenin Kimliğini içerir.
 - **Puan** küme centroids için kare Euclidean uzaklığa sahip bir dizi sütun içerir. Dizi uzunluğu küme sayısı eşittir.

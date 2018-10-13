@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: edc34eaa7704d788ff4b63328a2b6c0622d17e13
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 96e3ae8bf826931f39fab58fc2b7ad3f58f8e431
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502928"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49308584"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Geliştiriciler için .NET Framework'ü yükleme
 
@@ -125,7 +125,7 @@ Hem web hem de çevrimdışı yükleyiciler x86 ve x64 tabanlı bilgisayarlar i�
 
     - .NET framework 4.5.1 ([web yükleyicisi](https://go.microsoft.com/fwlink/p/?LinkId=310158) veya [çevrimdışı yükleyici](https://go.microsoft.com/fwlink/p/?LinkId=310159))
 
-    - [.NET framework 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245484)
+    - [.NET Framework 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245484)
 
 1. İndirme sayfası dilini seçin. Bu seçenek, .NET Framework'ün yerelleştirilmiş kaynaklarını karşıdan yüklemez; yalnızca karşıdan yükleme sayfasında görüntülenen metni etkiler.
 
@@ -154,7 +154,7 @@ Hem web hem de çevrimdışı yükleyiciler x86 ve x64 tabanlı bilgisayarlar i�
 
 - Yüklemek için yönetici kimlik bilgileriniz olmalıdır [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], sürümler, .NET Framework 4.6 ve onun nokta sürümleri ve .NET Framework 4.7 ve onun nokta yayın gelin.
 
-- .NET Framework 4.5 yeniden dağıtılabilir 2012'de 9 Ekim, dijital imzanın süresinin zamanından önce dolmasına Microsoft tarafından imzalanmış ve üretilen dosyaları neden bir dijital sertifika üzerinde hatalı zaman damgasıyla ilgili sorunu gidermek için güncelleştirildi. Daha önce yeniden dağıtılabilir paket 16 Ağustos 2012 tarihli .NET Framework 4.5 yüklü değilse kopyanızı ile en son yeniden dağıtılabilir Paketle güncelleştirmenizi öneririz [Microsoft Download Center](https://go.microsoft.com/fwlink/p/?LinkId=245484). Bu sorun hakkında daha fazla bilgi için bkz. [Microsoft Security Advisory 2749655](https://technet.microsoft.com/security/advisory/2749655) ve [Knowledge Base makalesi 2770445](https://support.microsoft.com/kb/2770445).
+- .NET Framework 4.5 yeniden dağıtılabilir 2012'de 9 Ekim, dijital imzanın süresinin zamanından önce dolmasına Microsoft tarafından imzalanmış ve üretilen dosyaları neden bir dijital sertifika üzerinde hatalı zaman damgasıyla ilgili sorunu gidermek için güncelleştirildi. Daha önce yeniden dağıtılabilir paket 16 Ağustos 2012 tarihli .NET Framework 4.5 yüklü değilse kopyanızı ile en son yeniden dağıtılabilir Paketle güncelleştirmenizi öneririz [Microsoft Download Center](https://go.microsoft.com/fwlink/p/?LinkId=245484). Bu sorun hakkında daha fazla bilgi için bkz. [Microsoft Security Advisory 2749655](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655) ve [Knowledge Base makalesi 2770445](https://support.microsoft.com/kb/2770445).
 
 ## <a name="to-install-language-packs"></a>Dil paketlerini yüklemek için
 
@@ -194,7 +194,7 @@ Aşağıdaki tabloda desteklenen diller listelenmiştir.
 | Arapça                | ar      |
 | Çekçe                 | cs      |
 | Danca                | da      |
-| Hollanda dili                 | nl      |
+| Felemenkçe                 | nl      |
 | Fince               | Fi      |
 | İngilizce (ABD)         | en-US   |
 | Fransızca                | FR      |
@@ -204,7 +204,7 @@ Aşağıdaki tabloda desteklenen diller listelenmiştir.
 | Macarca             | hu      |
 | İtalyanca               | Bunu      |
 | Japonca              | ja      |
-| Kore Dili                | Ko      |
+| Korece                | Ko      |
 | Norveççe             | Yok      |
 | Lehçe                | PL      |
 | Portekizce (Brezilya)   | pt-BR   |
@@ -212,7 +212,7 @@ Aşağıdaki tabloda desteklenen diller listelenmiştir.
 | Rusça               | RU      |
 | Basitleştirilmiş Çince    | zh-CHS  |
 | İspanyolca               | ES      |
-| İsveç dili               | sv      |
+| İsveççe               | sv      |
 | Geleneksel Çince   | zh-CHT  |
 | Türkçe               | tr      |
 
