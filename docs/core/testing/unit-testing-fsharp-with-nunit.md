@@ -1,26 +1,35 @@
 ---
-title: 'Birim F # kitaplığı .NET dotnet test ve NUnit kullanarak çekirdek testi'
-description: 'Birim testi kavramları F # .NET Core için adım adım örnek çözüm oluşturma bir etkileşimli deneyimler aracılığıyla öğrenmeniz dotnet test ve NUnit kullanarak.'
+title: 'Birim F # kitaplıkları, .NET Core dotnet testi ve NUnit kullanarak test etme'
+description: "Adım adım örnek çözüm oluşturma etkileşimli deneyim için F #'de .NET Core birim testi kavramları öğrenin dotnet testi ve NUnit kullanarak."
 author: rprouse
-ms.date: 12/01/2017
+ms.date: 10/04/2018
 dev_langs:
 - fsharp
-ms.openlocfilehash: c5653463ce43ab8660753aa03ef79ba10f339fac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: adadfc0358814f4600255aac7076f9ba6fbb4feb
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33215764"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49308440"
 ---
-# <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a><span data-ttu-id="81253-103">Birim F # kitaplığı .NET dotnet test ve NUnit kullanarak çekirdek testi</span><span class="sxs-lookup"><span data-stu-id="81253-103">Unit testing F# libraries in .NET Core using dotnet test and NUnit</span></span>
+# <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a><span data-ttu-id="79662-103">Birim F # kitaplıkları, .NET Core dotnet testi ve NUnit kullanarak test etme</span><span class="sxs-lookup"><span data-stu-id="79662-103">Unit testing F# libraries in .NET Core using dotnet test and NUnit</span></span>
 
-<span data-ttu-id="81253-104">Bu öğretici birim testi kavramlarını öğrenmek için adım adım örnek çözüm oluşturma etkileşimli bir deneyim gösterir.</span><span class="sxs-lookup"><span data-stu-id="81253-104">This tutorial takes you through an interactive experience building a sample solution step-by-step to learn unit testing concepts.</span></span> <span data-ttu-id="81253-105">Önceden oluşturulmuş bir çözümü kullanarak öğreticiyi izleyin tercih ediyorsanız [görüntülemek veya karşıdan örnek kod](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-with-fsharp-nunit/) başlamadan önce.</span><span class="sxs-lookup"><span data-stu-id="81253-105">If you prefer to follow the tutorial using a pre-built solution, [view or download the sample code](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-with-fsharp-nunit/) before you begin.</span></span> <span data-ttu-id="81253-106">Yükleme yönergeleri için bkz: [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).</span><span class="sxs-lookup"><span data-stu-id="81253-106">For download instructions, see [Samples and Tutorials](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).</span></span>
+<span data-ttu-id="79662-104">Bu öğretici örnek bir çözüm birim testi kavramlarını öğrenmek için adım adım oluşturmaya etkileşimli deneyim gösterir.</span><span class="sxs-lookup"><span data-stu-id="79662-104">This tutorial takes you through an interactive experience building a sample solution step-by-step to learn unit testing concepts.</span></span> <span data-ttu-id="79662-105">Önceden oluşturulmuş bir çözümü kullanarak öğreticiyi uygulamak isterseniz [görüntülemek veya örnek kodu indirdikten](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-with-fsharp-nunit/) başlamadan önce.</span><span class="sxs-lookup"><span data-stu-id="79662-105">If you prefer to follow the tutorial using a pre-built solution, [view or download the sample code](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-with-fsharp-nunit/) before you begin.</span></span> <span data-ttu-id="79662-106">Yükleme yönergeleri için bkz: [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).</span><span class="sxs-lookup"><span data-stu-id="79662-106">For download instructions, see [Samples and Tutorials](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).</span></span>
 
-## <a name="creating-the-source-project"></a><span data-ttu-id="81253-107">Kaynak projesi oluşturma</span><span class="sxs-lookup"><span data-stu-id="81253-107">Creating the source project</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="79662-107">Önkoşullar</span><span class="sxs-lookup"><span data-stu-id="79662-107">Prerequisites</span></span> 
+- <span data-ttu-id="79662-108">[.NET core SDK 2.1 (v. 2.1.400)](https://www.microsoft.com/net/download) veya sonraki sürümler.</span><span class="sxs-lookup"><span data-stu-id="79662-108">[.NET Core SDK 2.1 (v. 2.1.400)](https://www.microsoft.com/net/download) or later versions.</span></span> 
+- <span data-ttu-id="79662-109">Bir metin düzenleyicisi veya tercih ettiğiniz Kod Düzenleyicisi.</span><span class="sxs-lookup"><span data-stu-id="79662-109">A text editor or code editor of your choice.</span></span>
 
-<span data-ttu-id="81253-108">Kabuk penceresini açın.</span><span class="sxs-lookup"><span data-stu-id="81253-108">Open a shell window.</span></span> <span data-ttu-id="81253-109">Adlı bir dizin oluşturun *birim-test etme-ile-fsharp* çözümü tutmak için.</span><span class="sxs-lookup"><span data-stu-id="81253-109">Create a directory called *unit-testing-with-fsharp* to hold the solution.</span></span>
-<span data-ttu-id="81253-110">Bu yeni dizin içinde çalıştırmak [ `dotnet new sln` ](../tools/dotnet-new.md) yeni bir çözüm oluşturmak için.</span><span class="sxs-lookup"><span data-stu-id="81253-110">Inside this new directory, run [`dotnet new sln`](../tools/dotnet-new.md) to create a new solution.</span></span> <span data-ttu-id="81253-111">Bu sınıf kitaplığı ve birim testi projesi yönetmeyi kolaylaştırır.</span><span class="sxs-lookup"><span data-stu-id="81253-111">This makes it easier to manage both the class library and the unit test project.</span></span>
-<span data-ttu-id="81253-112">Çözüm dizini içinde oluşturmak bir *MathService* dizini.</span><span class="sxs-lookup"><span data-stu-id="81253-112">Inside the solution directory, create a *MathService* directory.</span></span> <span data-ttu-id="81253-113">Dizin ve dosya yapısı bugüne kadarki aşağıda gösterilmiştir:</span><span class="sxs-lookup"><span data-stu-id="81253-113">The directory and file structure thus far is shown below:</span></span>
+## <a name="creating-the-source-project"></a><span data-ttu-id="79662-110">Kaynak proje oluşturma</span><span class="sxs-lookup"><span data-stu-id="79662-110">Creating the source project</span></span>
+
+<span data-ttu-id="79662-111">Shell penceresini açın.</span><span class="sxs-lookup"><span data-stu-id="79662-111">Open a shell window.</span></span> <span data-ttu-id="79662-112">Adlı bir dizin oluşturun *birim-test-ile-fsharp* çözüm tutacak.</span><span class="sxs-lookup"><span data-stu-id="79662-112">Create a directory called *unit-testing-with-fsharp* to hold the solution.</span></span>
+<span data-ttu-id="79662-113">Bu yeni dizin içinde sınıf kitaplığı ve test projesi için yeni bir çözüm dosyası oluşturmak için aşağıdaki komutu çalıştırın:</span><span class="sxs-lookup"><span data-stu-id="79662-113">Inside this new directory, run the following command to create a new solution file for the class library and the test project:</span></span>
+
+```console
+dotnet new sln
+```
+
+<span data-ttu-id="79662-114">Ardından, oluşturun bir *MathService* dizin.</span><span class="sxs-lookup"><span data-stu-id="79662-114">Next, create a *MathService* directory.</span></span> <span data-ttu-id="79662-115">Aşağıdaki ana hat dizin ve dosya yapısı şu ana kadar gösterilmektedir:</span><span class="sxs-lookup"><span data-stu-id="79662-115">The following outline shows the directory and file structure so far:</span></span>
 
 ```
 /unit-testing-with-fsharp
@@ -28,26 +37,28 @@ ms.locfileid: "33215764"
     /MathService
 ```
 
-<span data-ttu-id="81253-114">Olun *MathService* geçerli dizin ve çalışma [ `dotnet new classlib -lang F#` ](../tools/dotnet-new.md) kaynak projesi oluşturmak için.</span><span class="sxs-lookup"><span data-stu-id="81253-114">Make *MathService* the current directory and run [`dotnet new classlib -lang F#`](../tools/dotnet-new.md) to create the source project.</span></span>  <span data-ttu-id="81253-115">Teste dayalı geliştirme (TDD) kullanmak için başarısız olan uygulama matematik hizmetinin oluşturursunuz:</span><span class="sxs-lookup"><span data-stu-id="81253-115">To use test-driven development (TDD), you'll create a failing implementation of the math service:</span></span>
+<span data-ttu-id="79662-116">Olun *MathService* aşağıdaki komut kaynak projesi oluşturmak için geçerli dizin ve çalıştırma:</span><span class="sxs-lookup"><span data-stu-id="79662-116">Make *MathService* the current directory and run the following command to create the source project:</span></span>
+
+```console
+dotnet new classlib -lang F#
+```
+
+<span data-ttu-id="79662-117">Teste dayalı geliştirme (TDD) kullanmak için bir matematik hizmetin başarısız uygulama oluşturun:</span><span class="sxs-lookup"><span data-stu-id="79662-117">To use test-driven development (TDD), you create a failing implementation of the math service:</span></span>
 
 ```fsharp
 module MyMath =
     let squaresOfOdds xs = raise (System.NotImplementedException("You haven't written a test yet!"))
 ```
 
-<span data-ttu-id="81253-116">Dizin geri değişiklik *birim-test etme-ile-fsharp* dizini.</span><span class="sxs-lookup"><span data-stu-id="81253-116">Change the directory back to the *unit-testing-with-fsharp* directory.</span></span> <span data-ttu-id="81253-117">Çalıştırma [ `dotnet sln add .\MathService\MathService.fsproj` ](../tools/dotnet-sln.md) sınıf kitaplığı proje çözüme eklemek için.</span><span class="sxs-lookup"><span data-stu-id="81253-117">Run [`dotnet sln add .\MathService\MathService.fsproj`](../tools/dotnet-sln.md) to add the class library project to the solution.</span></span>
+<span data-ttu-id="79662-118">Dizine dön değişiklik *birim-test-ile-fsharp* dizin.</span><span class="sxs-lookup"><span data-stu-id="79662-118">Change the directory back to the *unit-testing-with-fsharp* directory.</span></span> <span data-ttu-id="79662-119">Sınıf kitaplığı projesi çözüme eklemek için aşağıdaki komutu çalıştırın:</span><span class="sxs-lookup"><span data-stu-id="79662-119">Run the following command to add the class library project to the solution:</span></span>
 
-## <a name="install-the-nunit-project-template"></a><span data-ttu-id="81253-118">NUnit proje şablonu yükleyin</span><span class="sxs-lookup"><span data-stu-id="81253-118">Install the NUnit project template</span></span>
+```console
+dotnet sln add .\MathService\MathService.fsproj
+```
 
-<span data-ttu-id="81253-119">NUnit test projesi şablonları bir test projesi oluşturmadan önce yüklenmesi gerekir.</span><span class="sxs-lookup"><span data-stu-id="81253-119">The NUnit test project templates need to be installed before creating a test project.</span></span> <span data-ttu-id="81253-120">Bu yalnızca bir kez yeni NUnit projeleri oluşturacağınız her geliştirici makinede yapılmalıdır.</span><span class="sxs-lookup"><span data-stu-id="81253-120">This only needs to be done once on each developer machine where you'll create new NUnit projects.</span></span> <span data-ttu-id="81253-121">Çalıştırma [ `dotnet new -i NUnit3.DotNetNew.Template` ](../tools/dotnet-new.md) NUnit şablonları yüklemek için.</span><span class="sxs-lookup"><span data-stu-id="81253-121">Run [`dotnet new -i NUnit3.DotNetNew.Template`](../tools/dotnet-new.md) to install the NUnit templates.</span></span>
+## <a name="creating-the-test-project"></a><span data-ttu-id="79662-120">Test projesi oluşturma</span><span class="sxs-lookup"><span data-stu-id="79662-120">Creating the test project</span></span>
 
- ```
- dotnet new -i NUnit3.DotNetNew.Template
- ```
-
-## <a name="creating-the-test-project"></a><span data-ttu-id="81253-122">Test projesi oluşturma</span><span class="sxs-lookup"><span data-stu-id="81253-122">Creating the test project</span></span>
-
-<span data-ttu-id="81253-123">Ardından, oluşturun *MathService.Tests* dizini.</span><span class="sxs-lookup"><span data-stu-id="81253-123">Next, create the *MathService.Tests* directory.</span></span> <span data-ttu-id="81253-124">Aşağıdaki anahat dizin yapısını gösterir:</span><span class="sxs-lookup"><span data-stu-id="81253-124">The following outline shows the directory structure:</span></span>
+<span data-ttu-id="79662-121">Ardından, oluşturma *MathService.Tests* dizin.</span><span class="sxs-lookup"><span data-stu-id="79662-121">Next, create the *MathService.Tests* directory.</span></span> <span data-ttu-id="79662-122">Ana hat aşağıdaki dizin yapısını gösterir:</span><span class="sxs-lookup"><span data-stu-id="79662-122">The following outline shows the directory structure:</span></span>
 
 ```
 /unit-testing-with-fsharp
@@ -58,7 +69,13 @@ module MyMath =
     /MathService.Tests
 ```
 
-<span data-ttu-id="81253-125">Olun *MathService.Tests* dizine geçerli ve kullanarak yeni bir proje oluşturun [ `dotnet new nunit -lang F#` ](../tools/dotnet-new.md).</span><span class="sxs-lookup"><span data-stu-id="81253-125">Make the *MathService.Tests* directory the current directory and create a new project using [`dotnet new nunit -lang F#`](../tools/dotnet-new.md).</span></span> <span data-ttu-id="81253-126">Bu NUnit test çerçevesi kullanan bir test projesi oluşturur.</span><span class="sxs-lookup"><span data-stu-id="81253-126">This creates a test project that uses NUnit as the test framework.</span></span> <span data-ttu-id="81253-127">Test Çalıştırıcısı'nda oluşturulan şablon yapılandırır *MathServiceTests.fsproj*:</span><span class="sxs-lookup"><span data-stu-id="81253-127">The generated template configures the test runner in the *MathServiceTests.fsproj*:</span></span>
+<span data-ttu-id="79662-123">Olun *MathService.Tests* dizini geçerli dizin ve aşağıdaki komutu kullanarak yeni bir proje oluşturun:</span><span class="sxs-lookup"><span data-stu-id="79662-123">Make the *MathService.Tests* directory the current directory and create a new project using the following command:</span></span>
+
+```console
+dotnet new nunit -lang F#
+```
+
+<span data-ttu-id="79662-124">Bu, NUnit test çerçevesi kullanan bir test projesi oluşturur.</span><span class="sxs-lookup"><span data-stu-id="79662-124">This creates a test project that uses NUnit as the test framework.</span></span> <span data-ttu-id="79662-125">Test Çalıştırıcısı'nda oluşturulan şablon yapılandırır *MathServiceTests.fsproj*:</span><span class="sxs-lookup"><span data-stu-id="79662-125">The generated template configures the test runner in the *MathServiceTests.fsproj*:</span></span>
 
 ```xml
 <ItemGroup>
@@ -68,15 +85,15 @@ module MyMath =
 </ItemGroup>
 ```
 
-<span data-ttu-id="81253-128">Test projesi oluşturmak ve birim testleri çalıştırmak için diğer paketleri gerektirir.</span><span class="sxs-lookup"><span data-stu-id="81253-128">The test project requires other packages to create and run unit tests.</span></span> <span data-ttu-id="81253-129">`dotnet new` Önceki adımda NUnit ve NUnit test bağdaştırıcısı eklendi.</span><span class="sxs-lookup"><span data-stu-id="81253-129">`dotnet new` in the previous step added NUnit and the NUnit test adapter.</span></span> <span data-ttu-id="81253-130">Şimdi, ekleyin `MathService` sınıf kitaplığı proje için başka bir bağımlılık olarak.</span><span class="sxs-lookup"><span data-stu-id="81253-130">Now, add the `MathService` class library as another dependency to the project.</span></span> <span data-ttu-id="81253-131">Kullanım [ `dotnet add reference` ](../tools/dotnet-add-reference.md) komutu:</span><span class="sxs-lookup"><span data-stu-id="81253-131">Use the [`dotnet add reference`](../tools/dotnet-add-reference.md) command:</span></span>
+<span data-ttu-id="79662-126">Test projesi oluşturma ve birim testlerini çalıştırmak için diğer paketleri gerektirir.</span><span class="sxs-lookup"><span data-stu-id="79662-126">The test project requires other packages to create and run unit tests.</span></span> <span data-ttu-id="79662-127">`dotnet new` Önceki adımda NUnit ve NUnit test bağdaştırıcısı eklendi.</span><span class="sxs-lookup"><span data-stu-id="79662-127">`dotnet new` in the previous step added NUnit and the NUnit test adapter.</span></span> <span data-ttu-id="79662-128">Şimdi ekleyin `MathService` sınıf kitaplığı projesine başka bir bağımlılık olarak.</span><span class="sxs-lookup"><span data-stu-id="79662-128">Now, add the `MathService` class library as another dependency to the project.</span></span> <span data-ttu-id="79662-129">Kullanım [ `dotnet add reference` ](../tools/dotnet-add-reference.md) komutu:</span><span class="sxs-lookup"><span data-stu-id="79662-129">Use the [`dotnet add reference`](../tools/dotnet-add-reference.md) command:</span></span>
 
-```
+```console
 dotnet add reference ../MathService/MathService.fsproj
 ```
 
-<span data-ttu-id="81253-132">Tüm dosyasında görebilirsiniz [örnekleri deposu](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-with-fsharp/MathService.Tests/MathService.Tests.fsproj) github'da.</span><span class="sxs-lookup"><span data-stu-id="81253-132">You can see the entire file in the [samples repository](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-with-fsharp/MathService.Tests/MathService.Tests.fsproj) on GitHub.</span></span>
+<span data-ttu-id="79662-130">Dosyanın tamamını görebilirsiniz [örnekleri depomuzdan](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-with-fsharp/MathService.Tests/MathService.Tests.fsproj) GitHub üzerinde.</span><span class="sxs-lookup"><span data-stu-id="79662-130">You can see the entire file in the [samples repository](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-with-fsharp/MathService.Tests/MathService.Tests.fsproj) on GitHub.</span></span>
 
-<span data-ttu-id="81253-133">Aşağıdaki nihai çözüm düzeni vardır:</span><span class="sxs-lookup"><span data-stu-id="81253-133">You have the following final solution layout:</span></span>
+<span data-ttu-id="79662-131">Aşağıdaki nihai çözüm Düzen vardır:</span><span class="sxs-lookup"><span data-stu-id="79662-131">You have the following final solution layout:</span></span>
 
 ```
 /unit-testing-with-fsharp
@@ -86,14 +103,18 @@ dotnet add reference ../MathService/MathService.fsproj
         MathService.fsproj
     /MathService.Tests
         Test Source Files
-        MathServiceTests.fsproj
+        MathService.Tests.fsproj
 ```
 
-<span data-ttu-id="81253-134">Yürütme [ `dotnet sln add .\MathService.Tests\MathService.Tests.fsproj` ](../tools/dotnet-sln.md) içinde *birim-test etme-ile-fsharp* dizini.</span><span class="sxs-lookup"><span data-stu-id="81253-134">Execute [`dotnet sln add .\MathService.Tests\MathService.Tests.fsproj`](../tools/dotnet-sln.md) in the *unit-testing-with-fsharp* directory.</span></span>
+<span data-ttu-id="79662-132">Aşağıdaki komutu yürütün *birim-test-ile-fsharp* dizini:</span><span class="sxs-lookup"><span data-stu-id="79662-132">Execute the following command in the *unit-testing-with-fsharp* directory:</span></span>
 
-## <a name="creating-the-first-test"></a><span data-ttu-id="81253-135">İlk testi oluşturma</span><span class="sxs-lookup"><span data-stu-id="81253-135">Creating the first test</span></span>
+```console
+dotnet sln add .\MathService.Tests\MathService.Tests.fsproj
+```
 
-<span data-ttu-id="81253-136">TDD yaklaşım geçirmek kolaylaştırarak ve süreci tekrarlayarak yazma bir başarısız test için çağırır.</span><span class="sxs-lookup"><span data-stu-id="81253-136">The TDD approach calls for writing one failing test, making it pass, then repeating the process.</span></span> <span data-ttu-id="81253-137">Açık *Tests.fs* ve aşağıdaki kodu ekleyin:</span><span class="sxs-lookup"><span data-stu-id="81253-137">Open *Tests.fs* and add the following code:</span></span>
+## <a name="creating-the-first-test"></a><span data-ttu-id="79662-133">İlk testi oluşturma</span><span class="sxs-lookup"><span data-stu-id="79662-133">Creating the first test</span></span>
+
+<span data-ttu-id="79662-134">TDD yaklaşım geçer hale getirme ve süreci tekrarlayarak yazma bir başarısız test için çağırır.</span><span class="sxs-lookup"><span data-stu-id="79662-134">The TDD approach calls for writing one failing test, making it pass, then repeating the process.</span></span> <span data-ttu-id="79662-135">Açık *UnitTest1.fs* ve aşağıdaki kodu ekleyin:</span><span class="sxs-lookup"><span data-stu-id="79662-135">Open *UnitTest1.fs* and add the following code:</span></span>
 
 ```fsharp
 namespace MathService.Tests
@@ -113,11 +134,11 @@ type TestClass () =
      member this.FailEveryTime() = Assert.True(false)
 ```
 
-<span data-ttu-id="81253-138">`[<TestFixture>]` Özniteliği testleri içeren bir sınıfı gösterir.</span><span class="sxs-lookup"><span data-stu-id="81253-138">The `[<TestFixture>]` attribute denotes a class that contains tests.</span></span> <span data-ttu-id="81253-139">`[<Test>]` Özniteliği test Çalıştırıcısı tarafından çalıştırılan test yöntemini gösterir.</span><span class="sxs-lookup"><span data-stu-id="81253-139">The `[<Test>]` attribute denotes a test method that is run by the test runner.</span></span> <span data-ttu-id="81253-140">Gelen *birim-test etme-ile-fsharp* dizin, yürütme [ `dotnet test` ](../tools/dotnet-test.md) testleri ve sınıf kitaplığı oluşturmak ve ardından testleri çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="81253-140">From the *unit-testing-with-fsharp* directory, execute [`dotnet test`](../tools/dotnet-test.md) to build the tests and the class library and then run the tests.</span></span> <span data-ttu-id="81253-141">NUnit test Çalıştırıcısı testleri çalıştırmak için program giriş noktası içerir.</span><span class="sxs-lookup"><span data-stu-id="81253-141">The NUnit test runner contains the program entry point to run your tests.</span></span> <span data-ttu-id="81253-142">`dotnet test` oluşturduğunuz birim testi projesi kullanarak test Çalıştırıcısı başlatır.</span><span class="sxs-lookup"><span data-stu-id="81253-142">`dotnet test` starts the test runner using the unit test project you've created.</span></span>
+<span data-ttu-id="79662-136">`[<TestFixture>]` Özniteliği testleri içeren bir sınıfı gösterir.</span><span class="sxs-lookup"><span data-stu-id="79662-136">The `[<TestFixture>]` attribute denotes a class that contains tests.</span></span> <span data-ttu-id="79662-137">`[<Test>]` Test Çalıştırıcısı tarafından yürütülen bir test metodu özniteliği gösterir.</span><span class="sxs-lookup"><span data-stu-id="79662-137">The `[<Test>]` attribute denotes a test method that is run by the test runner.</span></span> <span data-ttu-id="79662-138">Gelen *birim-test-ile-fsharp* dizin yürütme [ `dotnet test` ](../tools/dotnet-test.md) testler ve sınıf kitaplığı oluşturun ve ardından testleri çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="79662-138">From the *unit-testing-with-fsharp* directory, execute [`dotnet test`](../tools/dotnet-test.md) to build the tests and the class library and then run the tests.</span></span> <span data-ttu-id="79662-139">NUnit test Çalıştırıcısı, testlerinizi çalıştırmak için programın giriş noktası içerir.</span><span class="sxs-lookup"><span data-stu-id="79662-139">The NUnit test runner contains the program entry point to run your tests.</span></span> <span data-ttu-id="79662-140">`dotnet test` oluşturduğunuz birim test projesi kullanarak test Çalıştırıcısı'nı başlatır.</span><span class="sxs-lookup"><span data-stu-id="79662-140">`dotnet test` starts the test runner using the unit test project you've created.</span></span>
 
-<span data-ttu-id="81253-143">Bu iki testleri en temel geçirme ve testleri başarısız gösterir.</span><span class="sxs-lookup"><span data-stu-id="81253-143">These two tests show the most basic passing and failing tests.</span></span> <span data-ttu-id="81253-144">`My test` geçirir, ve `Fail every time` başarısız olur.</span><span class="sxs-lookup"><span data-stu-id="81253-144">`My test` passes, and `Fail every time` fails.</span></span> <span data-ttu-id="81253-145">Şimdi, test için oluşturma `squaresOfOdds` yöntemi.</span><span class="sxs-lookup"><span data-stu-id="81253-145">Now, create a test for the `squaresOfOdds` method.</span></span> <span data-ttu-id="81253-146">`squaresOfOdds` Yöntemi Giriş dizisinin bir parçası olan tüm tek sayılı tamsayı değerleri kareleri bir dizi döndürür.</span><span class="sxs-lookup"><span data-stu-id="81253-146">The `squaresOfOdds` method returns a sequence of the squares of all odd integer values that are part of the input sequence.</span></span> <span data-ttu-id="81253-147">Bu işlevlerin tümüne tek seferde yazmaya çalışırken yerine işlevselliğini doğrulama testleri tekrarlayarak oluşturabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="81253-147">Rather than trying to write all of those functions at once, you can iteratively create tests that validate the functionality.</span></span> <span data-ttu-id="81253-148">Yöntemi için gerekli işlevselliği oluşturma anlamına gelir geçirmek her test yapma.</span><span class="sxs-lookup"><span data-stu-id="81253-148">Making each test pass means creating the necessary functionality for the method.</span></span>
+<span data-ttu-id="79662-141">Bu iki testleri en temel geçirme ve testleri başarısız gösterir.</span><span class="sxs-lookup"><span data-stu-id="79662-141">These two tests show the most basic passing and failing tests.</span></span> <span data-ttu-id="79662-142">`My test` geçer, ve `Fail every time` başarısız olur.</span><span class="sxs-lookup"><span data-stu-id="79662-142">`My test` passes, and `Fail every time` fails.</span></span> <span data-ttu-id="79662-143">Şimdi, test için oluşturma `squaresOfOdds` yöntemi.</span><span class="sxs-lookup"><span data-stu-id="79662-143">Now, create a test for the `squaresOfOdds` method.</span></span> <span data-ttu-id="79662-144">`squaresOfOdds` Yöntemi Giriş dizisinin bir parçası olan tüm tek tamsayı değerleri kareleri bir dizisi döndürür.</span><span class="sxs-lookup"><span data-stu-id="79662-144">The `squaresOfOdds` method returns a sequence of the squares of all odd integer values that are part of the input sequence.</span></span> <span data-ttu-id="79662-145">Bu işlevlerin tümü aynı anda yazma çalışmak yerine, tekrarlayarak işlevselliğini doğrulama testleri oluşturabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="79662-145">Rather than trying to write all of those functions at once, you can iteratively create tests that validate the functionality.</span></span> <span data-ttu-id="79662-146">Her test yöntemi için gereken işlevselliği oluşturma anlamına gelir geçirmek yapılıyor.</span><span class="sxs-lookup"><span data-stu-id="79662-146">Making each test pass means creating the necessary functionality for the method.</span></span>
 
-<span data-ttu-id="81253-149">Biz yazabilirler basit test çağırmaktır `squaresOfOdds` tüm çift numaraları, burada sonucu olmalıdır boş bir tam sayı dizisidir.</span><span class="sxs-lookup"><span data-stu-id="81253-149">The simplest test we can write is to call `squaresOfOdds` with all even numbers, where the result should be an empty sequence of integers.</span></span>  <span data-ttu-id="81253-150">Bu test şöyledir:</span><span class="sxs-lookup"><span data-stu-id="81253-150">Here's that test:</span></span>
+<span data-ttu-id="79662-147">Biz yazabilirsiniz basit test çağırmaktır `squaresOfOdds` ile sonucu boş bir tam sayı dizisidir olması burada tüm çift sayılarla.</span><span class="sxs-lookup"><span data-stu-id="79662-147">The simplest test we can write is to call `squaresOfOdds` with all even numbers, where the result should be an empty sequence of integers.</span></span>  <span data-ttu-id="79662-148">Test şu şekildedir:</span><span class="sxs-lookup"><span data-stu-id="79662-148">Here's that test:</span></span>
 
 ```fsharp
 [<Test>]
@@ -127,20 +148,20 @@ member this.TestEvenSequence() =
     Assert.That(actual, Is.EqualTo(expected))
 ```
 
-<span data-ttu-id="81253-151">Dikkat `expected` sıralı liste dönüştürülmüş.</span><span class="sxs-lookup"><span data-stu-id="81253-151">Notice that the `expected` sequence has been converted to a list.</span></span> <span data-ttu-id="81253-152">NUnit framework birçok standart .NET türlerine dayanır.</span><span class="sxs-lookup"><span data-stu-id="81253-152">The NUnit framework relies on many standard .NET types.</span></span> <span data-ttu-id="81253-153">Destek bağımlılık ortak arabirimi anlamına gelir ve beklenen sonuçları <xref:System.Collections.ICollection> yerine <xref:System.Collections.IEnumerable>.</span><span class="sxs-lookup"><span data-stu-id="81253-153">That dependency means that your public interface and expected results support <xref:System.Collections.ICollection> rather than <xref:System.Collections.IEnumerable>.</span></span>
+<span data-ttu-id="79662-149">Dikkat `expected` sıralı bir listeye dönüştürülmüş.</span><span class="sxs-lookup"><span data-stu-id="79662-149">Notice that the `expected` sequence has been converted to a list.</span></span> <span data-ttu-id="79662-150">NUnit framework birçok standart .NET türü kullanır.</span><span class="sxs-lookup"><span data-stu-id="79662-150">The NUnit framework relies on many standard .NET types.</span></span> <span data-ttu-id="79662-151">Destek bağımlılık, ortak arabirim anlamına gelir ve beklenen sonuçları <xref:System.Collections.ICollection> yerine <xref:System.Collections.IEnumerable>.</span><span class="sxs-lookup"><span data-stu-id="79662-151">That dependency means that your public interface and expected results support <xref:System.Collections.ICollection> rather than <xref:System.Collections.IEnumerable>.</span></span>
 
-<span data-ttu-id="81253-154">Testi çalıştırdığınızda, testiniz başarısız olduğunu görürsünüz.</span><span class="sxs-lookup"><span data-stu-id="81253-154">When you run the test, you see that your test fails.</span></span> <span data-ttu-id="81253-155">Uygulama henüz oluşturmadınız.</span><span class="sxs-lookup"><span data-stu-id="81253-155">You haven't created the implementation yet.</span></span> <span data-ttu-id="81253-156">Bu test basit kod yazarken yapmasına `Mathservice` çalışır sınıfı:</span><span class="sxs-lookup"><span data-stu-id="81253-156">Make this test by writing the simplest code in the `Mathservice` class that works:</span></span>
+<span data-ttu-id="79662-152">Test çalıştırdığınızda, test başarısız olduğunu görürsünüz.</span><span class="sxs-lookup"><span data-stu-id="79662-152">When you run the test, you see that your test fails.</span></span> <span data-ttu-id="79662-153">Uygulama henüz oluşturmadınız.</span><span class="sxs-lookup"><span data-stu-id="79662-153">You haven't created the implementation yet.</span></span> <span data-ttu-id="79662-154">En basit kod yazarak geçirmek bu testin geçmesini *Library.fs* sınıfı MathService projenizdeki çalışır:</span><span class="sxs-lookup"><span data-stu-id="79662-154">Make this test pass by writing the simplest code in the *Library.fs* class in your MathService project that works:</span></span>
 
 ```csharp
 let squaresOfOdds xs =
     Seq.empty<int>
 ```
 
-<span data-ttu-id="81253-157">İçinde *birim-test etme-ile-fsharp* çalışması dizini `dotnet test` yeniden.</span><span class="sxs-lookup"><span data-stu-id="81253-157">In the *unit-testing-with-fsharp* directory, run `dotnet test` again.</span></span> <span data-ttu-id="81253-158">`dotnet test` Komutu çalıştıran bir yapı `MathService` proje ve ardından `MathService.Tests` projesi.</span><span class="sxs-lookup"><span data-stu-id="81253-158">The `dotnet test` command runs a build for the `MathService` project and then for the `MathService.Tests` project.</span></span> <span data-ttu-id="81253-159">Her iki proje oluşturduktan sonra bu tek bir test çalıştırılır.</span><span class="sxs-lookup"><span data-stu-id="81253-159">After building both projects, it runs this single test.</span></span> <span data-ttu-id="81253-160">Bunu geçirir.</span><span class="sxs-lookup"><span data-stu-id="81253-160">It passes.</span></span>
+<span data-ttu-id="79662-155">İçinde *birim-test-ile-fsharp* çalışması dizini `dotnet test` yeniden.</span><span class="sxs-lookup"><span data-stu-id="79662-155">In the *unit-testing-with-fsharp* directory, run `dotnet test` again.</span></span> <span data-ttu-id="79662-156">`dotnet test` Komut çalıştıran bir derleme için `MathService` proje ve ardından `MathService.Tests` proje.</span><span class="sxs-lookup"><span data-stu-id="79662-156">The `dotnet test` command runs a build for the `MathService` project and then for the `MathService.Tests` project.</span></span> <span data-ttu-id="79662-157">Her iki proje oluşturduktan sonra testlerinizi çalıştırır.</span><span class="sxs-lookup"><span data-stu-id="79662-157">After building both projects, it runs your tests.</span></span> <span data-ttu-id="79662-158">Şimdi iki test geçirin.</span><span class="sxs-lookup"><span data-stu-id="79662-158">Two tests pass now.</span></span>
 
-## <a name="completing-the-requirements"></a><span data-ttu-id="81253-161">Gereksinimleri Tamamlanıyor</span><span class="sxs-lookup"><span data-stu-id="81253-161">Completing the requirements</span></span>
+## <a name="completing-the-requirements"></a><span data-ttu-id="79662-159">Gereksinimleri Tamamlanıyor</span><span class="sxs-lookup"><span data-stu-id="79662-159">Completing the requirements</span></span>
 
-<span data-ttu-id="81253-162">Bir test geçirmek yapmış olduğunuz, daha fazla yazma zamanı geldi.</span><span class="sxs-lookup"><span data-stu-id="81253-162">Now that you've made one test pass, it's time to write more.</span></span> <span data-ttu-id="81253-163">Sonraki basit bir durumda, yalnızca tek sayı olan bir sıra ile çalışır `1`.</span><span class="sxs-lookup"><span data-stu-id="81253-163">The next simple case works with a sequence whose only odd number is `1`.</span></span> <span data-ttu-id="81253-164">1 sayısı 1'in Kare 1 olduğundan daha kolay olur.</span><span class="sxs-lookup"><span data-stu-id="81253-164">The number 1 is easier because the square of 1 is 1.</span></span> <span data-ttu-id="81253-165">Sonraki test şöyledir:</span><span class="sxs-lookup"><span data-stu-id="81253-165">Here's that next test:</span></span>
+<span data-ttu-id="79662-160">Bir test geçirmek yaptığınız, daha fazla yazmak için zaman var.</span><span class="sxs-lookup"><span data-stu-id="79662-160">Now that you've made one test pass, it's time to write more.</span></span> <span data-ttu-id="79662-161">Basit bir sonraki durumda, yalnızca tek sayı içeren bir dizisini çalışır `1`.</span><span class="sxs-lookup"><span data-stu-id="79662-161">The next simple case works with a sequence whose only odd number is `1`.</span></span> <span data-ttu-id="79662-162">Sayı 1, 1 karesini 1 olduğundan daha kolay olur.</span><span class="sxs-lookup"><span data-stu-id="79662-162">The number 1 is easier because the square of 1 is 1.</span></span> <span data-ttu-id="79662-163">Sonraki test şu şekildedir:</span><span class="sxs-lookup"><span data-stu-id="79662-163">Here's that next test:</span></span>
 
 ```fsharp
 [<Test>]
@@ -150,7 +171,7 @@ member public this.TestOnesAndEvens() =
     Assert.That(actual, Is.EqualTo(expected))
 ```
 
-<span data-ttu-id="81253-166">Yürütme `dotnet test` yeni sınama başarısız olur.</span><span class="sxs-lookup"><span data-stu-id="81253-166">Executing `dotnet test` fails the new test.</span></span> <span data-ttu-id="81253-167">Güncelleştirmeniz gerekir `squaresOfOdds` bu yeni test işlemek için yöntem.</span><span class="sxs-lookup"><span data-stu-id="81253-167">You must update the `squaresOfOdds` method to handle this new test.</span></span> <span data-ttu-id="81253-168">Geçirmek bu testi yapmak için sıra dışında tüm çift sayıları filtre gerekir.</span><span class="sxs-lookup"><span data-stu-id="81253-168">You must filter all the even numbers out of the sequence to make this test pass.</span></span> <span data-ttu-id="81253-169">Küçük filtre işlevi yazma ve kullanarak bunu, `Seq.filter`:</span><span class="sxs-lookup"><span data-stu-id="81253-169">You can do that by writing a small filter function and using `Seq.filter`:</span></span>
+<span data-ttu-id="79662-164">Yürütme `dotnet test` yeni test başarısız olur.</span><span class="sxs-lookup"><span data-stu-id="79662-164">Executing `dotnet test` fails the new test.</span></span> <span data-ttu-id="79662-165">Güncelleştirmeniz gerekir `squaresOfOdds` bu yeni test işlemek için yöntemi.</span><span class="sxs-lookup"><span data-stu-id="79662-165">You must update the `squaresOfOdds` method to handle this new test.</span></span> <span data-ttu-id="79662-166">Tüm çift sayıları geçirmek bu testi yapmak için sıra dışı filtrelemesi gerekir.</span><span class="sxs-lookup"><span data-stu-id="79662-166">You must filter all the even numbers out of the sequence to make this test pass.</span></span> <span data-ttu-id="79662-167">Küçük bir filtre işlevi yazma ve kullanarak bunu yapabilirsiniz `Seq.filter`:</span><span class="sxs-lookup"><span data-stu-id="79662-167">You can do that by writing a small filter function and using `Seq.filter`:</span></span>
 
 ```fsharp
 let private isOdd x = x % 2 <> 0
@@ -160,9 +181,9 @@ let squaresOfOdds xs =
     |> Seq.filter isOdd
 ```
 
-<span data-ttu-id="81253-170">Çağrısını fark `Seq.toList`.</span><span class="sxs-lookup"><span data-stu-id="81253-170">Notice the call to `Seq.toList`.</span></span> <span data-ttu-id="81253-171">Arabirimini uygulayan bir liste oluşturur <xref:System.Collections.ICollection> arabirimi.</span><span class="sxs-lookup"><span data-stu-id="81253-171">That creates a list, which implements the <xref:System.Collections.ICollection> interface.</span></span>
+<span data-ttu-id="79662-168">Çağrısını fark `Seq.toList`.</span><span class="sxs-lookup"><span data-stu-id="79662-168">Notice the call to `Seq.toList`.</span></span> <span data-ttu-id="79662-169">Uygulayan bir liste oluşturur <xref:System.Collections.ICollection> arabirimi.</span><span class="sxs-lookup"><span data-stu-id="79662-169">That creates a list, which implements the <xref:System.Collections.ICollection> interface.</span></span>
 
-<span data-ttu-id="81253-172">Gitmek için bir adım daha vardır: her tek sayıların karesini.</span><span class="sxs-lookup"><span data-stu-id="81253-172">There's one more step to go: square each of the odd numbers.</span></span> <span data-ttu-id="81253-173">Yeni bir test yazarak başlatın:</span><span class="sxs-lookup"><span data-stu-id="81253-173">Start by writing a new test:</span></span>
+<span data-ttu-id="79662-170">Gitmek için bir adım daha vardır: her biri tek sayıları kare.</span><span class="sxs-lookup"><span data-stu-id="79662-170">There's one more step to go: square each of the odd numbers.</span></span> <span data-ttu-id="79662-171">Yeni bir test yazarak başlatın:</span><span class="sxs-lookup"><span data-stu-id="79662-171">Start by writing a new test:</span></span>
 
 ```fsharp
 [<Test>]
@@ -172,7 +193,7 @@ member public this.TestSquaresOfOdds() =
     Assert.That(actual, Is.EqualTo(expected))
 ```
 
-<span data-ttu-id="81253-174">Her tek sayı kare hesaplamak için eşleme işlemi aracılığıyla filtrelenmiş dizisi cmdlet'ine yönelterek test düzeltebilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="81253-174">You can fix the test by piping the filtered sequence through a map operation to compute the square of each odd number:</span></span>
+<span data-ttu-id="79662-172">Filtrelenmiş sırası tek her bir sayının karesini işlem için bir harita işlemi boyunca yönelterek test düzeltebilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="79662-172">You can fix the test by piping the filtered sequence through a map operation to compute the square of each odd number:</span></span>
 
 ```fsharp
 let private square x = x * x
@@ -184,4 +205,4 @@ let squaresOfOdds xs =
     |> Seq.map square
 ```
 
-<span data-ttu-id="81253-175">Küçük bir kitaplığı ve bu kitaplık için birim testleri kümesini temel aldık.</span><span class="sxs-lookup"><span data-stu-id="81253-175">You've built a small library and a set of unit tests for that library.</span></span> <span data-ttu-id="81253-176">Böylece yeni paketleri ekleme çözümü yapılandırılmış ve testleri normal iş akışı bir parçasıdır.</span><span class="sxs-lookup"><span data-stu-id="81253-176">You've structured the solution so that adding new packages and tests is part of the normal workflow.</span></span> <span data-ttu-id="81253-177">Çoğu zaman ve çaba uygulama amaçlarını çözme üzerinde yoğunlaşmıştır.</span><span class="sxs-lookup"><span data-stu-id="81253-177">You've concentrated most of your time and effort on solving the goals of the application.</span></span>
+<span data-ttu-id="79662-173">Küçük bir kitaplık ve bu kitaplık için birim testleri bir dizi oluşturdunuz.</span><span class="sxs-lookup"><span data-stu-id="79662-173">You've built a small library and a set of unit tests for that library.</span></span> <span data-ttu-id="79662-174">Böylece yeni paketler ekleme çözüm yapılandırılmış ve testleri normal iş akışı bir parçasıdır.</span><span class="sxs-lookup"><span data-stu-id="79662-174">You've structured the solution so that adding new packages and tests is part of the normal workflow.</span></span> <span data-ttu-id="79662-175">Zaman ve çaba çözme hedeflerinden biri, uygulama üzerinde en yoğun.</span><span class="sxs-lookup"><span data-stu-id="79662-175">You've concentrated most of your time and effort on solving the goals of the application.</span></span>
