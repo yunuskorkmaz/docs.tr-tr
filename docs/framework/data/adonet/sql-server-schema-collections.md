@@ -2,12 +2,12 @@
 title: SQL Server şema koleksiyonları
 ms.date: 03/30/2017
 ms.assetid: c6403cc3-d78b-4f85-bab1-ada7a3446ec5
-ms.openlocfilehash: 7020c74d41ce1feef38c4dfc66117a7b8c8eff4e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7f710af5c05942d2ff1718c9d59d4d776f45c6e7
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508496"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123871"
 ---
 # <a name="sql-server-schema-collections"></a>SQL Server şema koleksiyonları
 SQL Server için Microsoft .NET Framework veri sağlayıcısı, ortak şema koleksiyonları yanı sıra ek şema koleksiyonları destekler. Şema koleksiyonları kullanmakta olduğunuz SQL Server sürümüne göre biraz farklılık gösterir. Desteklenen şema koleksiyonları listesi belirlemek için çağrı **GetSchema** yöntemi bağımsız değişken olmadan veya şema koleksiyonu adı "MetaDataCollections". Bu döndürür bir <xref:System.Data.DataTable> listesiyle desteklenen şema koleksiyonları, desteklediği her kısıtlama sayısı ve kullandıkları tanımlayıcısı parçaların sayısı.  

@@ -2,12 +2,12 @@
 title: GamePieceCollection Sınıfı Oluşturma
 ms.date: 03/30/2017
 ms.assetid: e4b037ee-1201-4a55-b198-0d6532ed6f35
-ms.openlocfilehash: 6323122735273f77bfe9d61bf2df84cabe3e5d6c
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 960512e75e918779a598f7978ebedf1f1bd0065c
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041232"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121382"
 ---
 # <a name="creating-the-gamepiececollection-class"></a>GamePieceCollection Sınıfı Oluşturma
 **GamePieceCollection** sınıfı genel bir liste sınıftan türetilen ve çok daha kolay yönetmek için yöntemleri tanıtır **GamePiece** nesneleri.  
@@ -17,7 +17,7 @@ ms.locfileid: "44041232"
   
  [!code-csharp[ManipulationXNA#_GamePieceCollection_PrivateMembersAndConstructor](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiececollection.cs#_gamepiececollection_privatemembersandconstructor)]  
   
- **ProcessInertia** ve **çizmek** yöntemleri oyunda gerekli kodu basitleştirmek [Game.Update](https://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx) ve [Game.Draw](https://msdn.microsoft.com/library/microsoft.xna.framework.game.draw.aspx) yöntemlerle Oyun parçaları koleksiyondaki tüm numaralandırma ve ilgili yöntemini her çağırmak **GamePiece** nesne.  
+ **ProcessInertia** ve **çizmek** yöntemleri oyunda gerekli kodu basitleştirmek [Game.Update](/previous-versions/windows/xna/bb199616%28v%3dxnagamestudio.41%29) ve [Game.Draw](/previous-versions/windows/xna/bb196422%28v%3dxnagamestudio.41%29) yöntemlerle Oyun parçaları koleksiyondaki tüm numaralandırma ve ilgili yöntemini her çağırmak **GamePiece** nesne.  
   
  [!code-csharp[ManipulationXNA#_GamePieceCollection_ProcessInertiaAndDraw](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiececollection.cs#_gamepiececollection_processinertiaanddraw)]  
   

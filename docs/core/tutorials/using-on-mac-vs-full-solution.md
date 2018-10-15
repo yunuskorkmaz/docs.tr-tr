@@ -4,12 +4,12 @@ description: Bu konuda, bir yeniden kullanılabilir bir kitaplık ve birim testi
 author: guardrex
 ms.author: mairaw
 ms.date: 06/12/2017
-ms.openlocfilehash: 17d7cc5b085b4d47ebf1e5ed9a766be9d5d8b01f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 589b3e72f7e8425051a96f66f07f24327d273c45
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43530502"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49122833"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Mac için Visual Studio kullanarak macos'ta eksiksiz bir .NET Core çözümü derleme
 
@@ -32,7 +32,7 @@ Bu öğreticide, bir arama sözcüğünü ve bir kullanıcının metin dizesini 
 
 ## <a name="building-a-library"></a>Bir kitaplığı oluşturma
 
-1. Hoş Geldiniz ekranında seçin **yeni proje**. İçinde **yeni proje** iletişim altında **çok platformlu** düğümünü **.NET Standard Kitaplığı** şablonu. Seçin **sonraki**.
+1. Hoş Geldiniz ekranında seçin **yeni proje**. İçinde **yeni proje** iletişim altında **çok platformlu** düğümünü **.NET Standard Kitaplığı** şablonu. Bu .NET Core hedefleyen bir .NET Standard kitaplığı 2.0 sürümünü destekleyen her bir .NET uygulaması oluşturur [.Net standart](https://docs.microsoft.com/en-us/dotnet/standard/net-standard). Seçin **sonraki**.
 
    ![Yeni Proje iletişim kutusu](./media/using-on-mac-vs-full-solution/vsmacfull01.png)
 
