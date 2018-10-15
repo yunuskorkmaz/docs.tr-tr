@@ -3,12 +3,12 @@ title: Geçmişini C# - C# Kılavuzu
 description: Bu yana nasıl geliştirildiğini ve önceki sürümlerde dil göz ne gibi?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 7a7030eb9479ebae553f3bb4d569c9a9f931db9a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5e8ecdd971a043dc47c50b10c974d86f836818dc
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504419"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49316265"
 ---
 # <a name="the-history-of-c"></a>C# geçmişi #
 
@@ -145,10 +145,10 @@ Kendi içinde bir geleneksel dil özelliği olmasa da bu sürüm ile birlikte ba
 
 En son ana sürüm C# 7.0 sürümü var. Bu sürüm bazı gelişime ve harika şeyler damarlı C# 6.0, ancak derleyicinin bir hizmet olarak sahiptir. Yeni özelliklerden bazıları şunlardır:
 
-- [Değişkenleri](http://www.c-sharpcorner.com/article/out-variables-in-c-sharp-7-0/)
+- [Değişkenleri](https://www.c-sharpcorner.com/article/out-variables-in-c-sharp-7-0/)
 - [Diziler ve ayrıştırma](https://www.thomaslevesque.com/2016/08/23/tuple-deconstruction-in-c-7/)
 - [Desen eşleştirme](./csharp-7.md#pattern-matching)
-- [Yerel işlevler](http://www.infoworld.com/article/3182416/application-development/c-7-in-depth-exploring-local-functions.html)
+- [Yerel işlevler](https://www.infoworld.com/article/3182416/application-development/c-7-in-depth-exploring-local-functions.html)
 - [Genişletilmiş ifade bodied üyeleri](./csharp-7.md#more-expression-bodied-members)
 - [Ref yerel değerleri ve dönüşleri](./csharp-7.md#ref-locals-and-returns)
 

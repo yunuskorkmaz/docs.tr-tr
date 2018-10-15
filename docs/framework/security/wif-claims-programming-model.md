@@ -3,12 +3,12 @@ title: WIF talep programlama modeli
 ms.date: 03/30/2017
 ms.assetid: 149cb875-9b1c-4695-b88a-fbf1725a02f9
 author: BrucePerlerMS
-ms.openlocfilehash: 95df026684f536a64ffe15f65264c470dff164da
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 91b719967cd4ab9fd412e5c0799bb5e1921a4801
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197571"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49316512"
 ---
 # <a name="wif-claims-programming-model"></a>WIF talep programlama modeli
 ASP.NET ve Windows Communication Foundation (WCF) geliştiricileri, IIdentity ve IPrincipal arabirimleri genellikle kullanıcının kimlik bilgileri ile çalışmak için kullanın. Artık her zaman Aşağıdaki diyagramda gösterildiği gibi herhangi bir asıl için mevcut taleplerdir şekilde .NET 4.5 içinde Windows Identity Foundation (WIF) tümleştirilmiştir:
@@ -23,7 +23,7 @@ ASP.NET ve Windows Communication Foundation (WCF) geliştiricileri, IIdentity ve
 
 - <xref:System.Security.Claims.Claim.Value%2A> Talep değerini içeren ve bir dize olarak temsil edilir. Örneğin, e-posta adresi olarak gösterilebilir "someone@contoso.com".
 
-- <xref:System.Security.Claims.Claim.ValueType%2A> Talep değeri türünü temsil eder ve genellikle bir URI'dir. Örneğin, dize türü olarak temsil edilir `http://www.w3.org/2001/XMLSchema#string`. Değer türü XML şemasına göre bir QName olmalıdır. Değeri olması gereken biçim `namespace#format` geçerli bir QName değeri çıktısını almak WIF etkinleştirme. Ad alanı, iyi tanımlanmış bir ad alanı değil, olmayacak çünkü bu ad alanı için yayımlanmış bir XSD dosyası oluşturulan XML Şeması doğrulanır, büyük olasılıkla olamaz. Varsayılan değer türü `http://www.w3.org/2001/XMLSchema#string`. Lütfen [ http://www.w3.org/2001/XMLSchema ](https://go.microsoft.com/fwlink/?LinkId=209155) iyi bilinen değer türleri için güvenli bir şekilde kullanabilirsiniz.
+- <xref:System.Security.Claims.Claim.ValueType%2A> Talep değeri türünü temsil eder ve genellikle bir URI'dir. Örneğin, dize türü olarak temsil edilir `http://www.w3.org/2001/XMLSchema#string`. Değer türü XML şemasına göre bir QName olmalıdır. Değeri olması gereken biçim `namespace#format` geçerli bir QName değeri çıktısını almak WIF etkinleştirme. Ad alanı, iyi tanımlanmış bir ad alanı değil, olmayacak çünkü bu ad alanı için yayımlanmış bir XSD dosyası oluşturulan XML Şeması doğrulanır, büyük olasılıkla olamaz. Varsayılan değer türü `http://www.w3.org/2001/XMLSchema#string`. Güvenli bir şekilde kullanabileceğinizi iyi bilinen değer türleri hakkında daha fazla bilgi için bkz. [W3C XML Şeması](https://www.w3.org/2001/XMLSchema) sayfası.
 
 - <xref:System.Security.Claims.Claim.Issuer%2A> Talep veren güvenlik belirteci hizmeti (STS) tanımlayıcısıdır. Bu URL STS veya STS gibi temsil eden bir ad olarak temsil edilebilir `https://sts1.contoso.com/sts`.
 

@@ -2,12 +2,12 @@
 title: Dinamik güncelleştirme
 ms.date: 03/30/2017
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
-ms.openlocfilehash: dea930de2103a24aa48b1d0a31a3cbf5fc0ae26c
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 9b26bde8e524275d2eef34afc3f6442e2ebeea6f
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44076725"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49323129"
 ---
 # <a name="dynamic-update"></a>Dinamik güncelleştirme
 Dinamik güncelleştirme, uygulama geliştiricilerinin'bir kalıcı iş akışı örneği iş akışı tanımını güncelleştirmek için iş akışı için bir mekanizma sağlar. Bu, bir hata düzeltmesi, yeni gereksinimleri uygulamak için veya beklenmeyen değişiklikleri uyum sağlamak için olabilir. Bu konuda sunulan dinamik güncelleştirme işlevlerine genel bakış sağlar [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  
@@ -24,7 +24,7 @@ Dinamik güncelleştirme, uygulama geliştiricilerinin'bir kalıcı iş akışı
 4.  [Güncelleştirme eşlemesi istenen kalıcı iş akışı örnekleri için geçerlidir](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Apply)  
   
 > [!NOTE]
->  Adımlar güncelleştirme eşlemesi oluşturulmasını kapsar, 3, 1 güncelleştirmeyi uygulamadan bağımsız olarak gerçekleştirilebilir unutmayın. İş akışı Geliştirici güncelleştirme oluşturduğunuz çevrimdışı harita sık karşılaşılan bir senaryodur ve bir yönetici, güncelleştirmeyi daha sonra uygulanır.  
+>  Adımlar güncelleştirme eşlemesi oluşturulmasını kapsar, 3, 1 güncelleştirmeyi uygulamadan bağımsız olarak gerçekleştirilebilir unutmayın. İş akışı Geliştirici çevrimdışı güncelleştirme eşlemesi oluşturur ve ardından yönetici daha sonra güncelleştirme uygulanır sık karşılaşılan bir senaryodur.  
   
  Bu konu, yeni bir etkinlik için derlenmiş Xaml iş akışı kalıcı bir örneğini ekleme dinamik güncelleştirme işlemine genel bakış sağlar.  
   
