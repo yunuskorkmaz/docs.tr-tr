@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Duplex Service Contract
 ms.assetid: bc5de6b6-1a63-42a3-919a-67d21bae24e0
-ms.openlocfilehash: 54b941541ae0da4900608e61f08f4ed99c9ea472
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 45a5584a082c4b274614b8fd55be8be4b87945b3
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45969986"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347792"
 ---
 # <a name="duplex"></a>Çift Yönlü
 Çift yönlü örnek tanımlaması ve çift yönlü sözleşme nasıl gösterir. Bir istemci bir hizmeti ile bir oturumu oluşturur ve hizmet üzerinde hizmet istemciye iletileri gönderebilir bir kanal sağlar. çift yönlü iletişim gerçekleşir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md). Çift yönlü sözleşme çifti arabirimleri tanımlanan — birincil arabirim istemciden hizmete ve hizmetten geri çağırma arabirimi istemciye. Bu örnekte `ICalculatorDuplex` sonucu bir oturumu üzerinden hesaplama matematik işlemlerini gerçekleştirmek üzere istemci arabirimi sağlar. Sonuçlar döndürüyor hizmet `ICalculatorDuplexCallback` arabirimi. Hizmet ve istemci arasında gönderilen ileti kümesini ilişkilendirmek için bir bağlamı yeniden kurulması için çift yönlü sözleşme bir oturumu gerektirir.  
@@ -19,7 +19,7 @@ ms.locfileid: "45969986"
   
  Bu örnekte, istemci bir konsol uygulaması (.exe) ve hizmet Internet Information Services (IIS) tarafından barındırılır. Çift yönlü sözleşme şu şekilde tanımlanır:  
   
-```  
+```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples", SessionMode=SessionMode.Required,  
                  CallbackContract=typeof(ICalculatorDuplexCallback))]  
 public interface ICalculatorDuplex  
@@ -47,7 +47,7 @@ public interface ICalculatorDuplexCallback
   
  `CalculatorService` Sınıfın uyguladığı birincil `ICalculatorDuplex` arabirimi. Hizmeti kullandığı <xref:System.ServiceModel.InstanceContextMode.PerSession> her oturum için sonuç korumak için örnek modu. Adlı bir özel özellik `Callback` istemci geri çağırma kanala erişmek için kullanılır. Hizmet aracılığıyla geri çağırma arabirimi istemciye ileti göndermek için geri çağırma kullanır.  
   
-```  
+```csharp
 [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerSession)]  
 public class CalculatorService : ICalculatorDuplex  
 {  
@@ -71,7 +71,9 @@ public class CalculatorService : ICalculatorDuplex
         equation += " + " + n.ToString();  
         Callback.Result(result);  
     }  
-    ...  
+    
+    //...  
+    
     ICalculatorDuplexCallback Callback  
     {  
         get  
@@ -84,7 +86,7 @@ public class CalculatorService : ICalculatorDuplex
   
  İstemci, hizmeti iletileri almak için çift yönlü sözleşme geri arama arabirimini uygulayan bir sınıf sağlamanız gerekir. Örnekte, bir `CallbackHandler` sınıfı uygulamak için tanımlanmış `ICalculatorDuplexCallback` arabirimi.  
   
-```  
+```csharp 
 public class CallbackHandler : ICalculatorDuplexCallback  
 {  
    public void Result(double result)  
@@ -101,7 +103,7 @@ public class CallbackHandler : ICalculatorDuplexCallback
   
  Çift yönlü sözleşme gerektirir, oluşturulan proxy bir <xref:System.ServiceModel.InstanceContext> yapım sırasında sağlanacak. Bu <xref:System.ServiceModel.InstanceContext> site olarak geri arama arayüzü uygular ve hizmetinden gönderilen iletileri işleyen bir nesne için kullanılır. Bir <xref:System.ServiceModel.InstanceContext> örneği ile oluşturulmuş olan `CallbackHandler` sınıfı. Bu nesne, hizmetten geri çağırma arabirimi istemciye gönderilen iletileri işler.  
   
-```  
+```csharp
 // Construct InstanceContext to handle messages on callback interface.  
 InstanceContext instanceContext = new InstanceContext(new CallbackHandler());  
   
@@ -172,14 +174,14 @@ client.Close();
   
     ```xml  
     <client>  
-    <endpoint name = ""  
-    address="http://service_machine_name/servicemodelsamples/service.svc"  
-    ... />  
+        <endpoint name = ""  
+        address="http://service_machine_name/servicemodelsamples/service.svc"  
+        ... />  
     </client>  
     ...  
     <wsDualHttpBinding>  
-    <binding name="DuplexBinding" clientBaseAddress="http://client_machine_name:8000/myClient/">  
-    </binding>  
+        <binding name="DuplexBinding" clientBaseAddress="http://client_machine_name:8000/myClient/">  
+        </binding>  
     </wsDualHttpBinding>  
     ```  
   

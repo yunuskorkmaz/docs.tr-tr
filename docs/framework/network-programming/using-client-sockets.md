@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 81de9f59-8177-4d98-b25d-43fc32a98383
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: ee10681c8beddac06d5c4eae453f4070b2bf1b4e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 2bfc497076c99337d22512c657a40ba3963c974c
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195556"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347883"
 ---
 # <a name="using-client-sockets"></a>İstemci yuvaları kullanma
 Bir konuşma aracılığıyla başlatabilmesi bir <xref:System.Net.Sockets.Socket>, uygulamanızı hem de uzak cihazı veri kanalı oluşturmanız gerekir. Diğer ağ adresi ailelerini ve protokolleri mevcut olmasına karşın, bu örnek bir uzak hizmete bir TCP/IP bağlantısı oluşturma işlemi gösterilmektedir.  
@@ -42,7 +42,7 @@ IPHostEntry ipHostInfo = Dns.Resolve("host.contoso.com");
 IPAddress ipAddress = ipHostInfo.AddressList[0];  
 ```  
   
- Bağlantı noktası numaralarını (daha fazla bilgi için bkz: www.iana.org/assignments/port-numbers) ortak Hizmetleri için Internet Atanmış Numaralar Yetkilisi (IANA) tanımlar. Diğer hizmetler için 1024 65,535 aralığında bağlantı noktası numaralarını kayıtlı. Aşağıdaki kod host.contoso.com için IP adresi için bir bağlantı uzak uç noktası oluşturmak için bir bağlantı noktası numarası ile birleştirir.  
+ Ortak Hizmetleri için bağlantı noktası numaralarını Internet Atanmış Numaralar Yetkilisi (IANA) tanımlar (daha fazla bilgi için [hizmet adını ve Aktarım Protokolü bağlantı noktası numarasını kayıt defteri](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)). Diğer hizmetler için 1024 65,535 aralığında bağlantı noktası numaralarını kayıtlı. Aşağıdaki kod host.contoso.com için IP adresi için bir bağlantı uzak uç noktası oluşturmak için bir bağlantı noktası numarası ile birleştirir.  
   
 ```vb  
 Dim ipe As New IPEndPoint(ipAddress, 11000)  

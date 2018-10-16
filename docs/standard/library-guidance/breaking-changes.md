@@ -4,12 +4,12 @@ description: .NET kitaplıkları oluştururken bozucu değişiklikler gezinme i�
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: abea715cd93ae585ef0eef7747f6ace4e5d347ae
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 83c01fdad7d836877bf692b87eeb0230219ded36
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48914202"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49349159"
 ---
 # <a name="breaking-changes"></a>Bozucu değişiklikler
 

@@ -1,66 +1,66 @@
 ---
-title: Temel Windows iş akışı kavramları
+title: Temel Windows Workflow kavramları
 ms.date: 03/30/2017
 ms.assetid: 0e930e80-5060-45d2-8a7a-95c0690105d4
-ms.openlocfilehash: c5306f8616086835373bc52bdd8195564441b8b7
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: ef2f327bdf2641648d266cecd0c6674762a95c18
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805999"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347831"
 ---
-# <a name="fundamental-windows-workflow-concepts"></a>Temel Windows iş akışı kavramları
-İş akışı geliştirme [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] bazı geliştiriciler için yeni kavramları kullanır. Bu konuda bazı kavramlar ve nasıl uygulandığı açıklanmaktadır.  
+# <a name="fundamental-windows-workflow-concepts"></a>Temel Windows Workflow kavramları
+İş akışı geliştirme [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] bazı geliştiriciler için yeni kavramları kullanır. Bu konuda bazı kavramları ve nasıl uygulandığı açıklanmaktadır.  
   
 ## <a name="workflows-and-activities"></a>İş akışları ve etkinlikler  
- Bir iş akışı bir işlem modellerin yapılandırılmış eylemleri koleksiyonudur. Her eylem iş akışı içinde bir etkinlik olarak modellenir. Bir ana bilgisayar kullanarak bir iş akışı ile etkileşime giren <xref:System.Activities.WorkflowInvoker> bir yöntem değilmiş gibi bir iş akışı çağırma için <xref:System.Activities.WorkflowApplication> bir tek iş akışı örneğini yürütmeyi üzerinde açık denetim için ve <xref:System.ServiceModel.WorkflowServiceHost> için çok örnekli ileti tabanlı etkileşimleri senaryoları. İş akışının adımları etkinliklerin hiyerarşi olarak tanımlandığından hiyerarşideki en üstteki etkinliği iş akışını tanımlamak için söylenebilir. Bu hiyerarşi modeli açık gerçekleşir `SequentialWorkflow` ve `StateMachineWorkflow` önceki sürümlerden sınıfları. Etkinlikler kendilerini diğer etkinlikler koleksiyon olarak geliştirilen (kullanarak <xref:System.Activities.Activity> olarak genellikle XAML kullanılarak tanımlanmış bir taban sınıf) veya kullanılarak oluşturulan özel <xref:System.Activities.CodeActivity> çalışma veri erişimi için veya kullanarakkullanabileceğisınıfı<xref:System.Activities.NativeActivity> iş akışı çalışma zamanı etkinlik Yazar derecesini gösterir sınıfı. Etkinlikler kullanılarak geliştirilmiş <xref:System.Activities.CodeActivity> ve <xref:System.Activities.NativeActivity> C# gibi CLR uyumlu dilleri kullanılarak oluşturulur.  
+ Bir iş akışı, bir işlem modelleri yapılandırılmış eylemleri koleksiyonudur. İş akışındaki her eylem bir etkinlik modellenir. Bir konak kullanarak bir iş akışı ile etkileşime giren <xref:System.Activities.WorkflowInvoker> bir yöntemi gibi bir iş akışını çağırmak için <xref:System.Activities.WorkflowApplication> yürütme gibi tek bir iş akışı örneği üzerinde açık denetim ve <xref:System.ServiceModel.WorkflowServiceHost> için çok örnekli ileti tabanlı etkileşimleri Senaryo. İş akışının adımları etkinliklerin bir hiyerarşi tanımlı olduğundan, iş akışı tanımlamak için hiyerarşideki en üst etkinlik söylenebilir. Bu hiyerarşi modeli açık gerçekleşmeden `SequentialWorkflow` ve `StateMachineWorkflow` önceki sürümlerden sınıfları. Etkinlikleri kendilerini diğer etkinliklerin bir koleksiyon olarak geliştirilen (kullanarak <xref:System.Activities.Activity> sınıf genellikle XAML kullanarak tanımlanan, bir temel olarak) veya kullanılarak oluşturulan özel <xref:System.Activities.CodeActivity> çalışma zamanı veri erişimi için veya kullanarakkullanabileceğinizsınıfı<xref:System.Activities.NativeActivity> iş akışı çalışma zamanı etkinlik Yazar kapsamını sunan sınıfı. Etkinlikler kullanılarak geliştirilmiş <xref:System.Activities.CodeActivity> ve <xref:System.Activities.NativeActivity> C# gibi CLR-uyumlu dilin kullanılarak oluşturulur.  
   
 ## <a name="activity-data-model"></a>Etkinlik veri modeli  
- Etkinlikler depolamak ve aşağıdaki tabloda gösterilen türlerini kullanarak veri paylaşımı.  
+ Etkinlikler, depolamak ve aşağıdaki tabloda gösterilen türleri ile veri paylaşabilir.  
   
 |||  
 |-|-|  
-|Değişken|Verileri bir etkinlikte depolar.|  
-|Bağımsız Değişken|Verileri içine ve dışına bir etkinlik taşır.|  
-|İfade|Bağımsız değişken bağlantılarında kullanılan yükseltilmiş bir dönüş değeri olmayan bir etkinliği.|  
+|Değişken|Bir etkinlik verilerini depolar.|  
+|Bağımsız Değişken|Veri ekleme çıkarma bir etkinlik taşır.|  
+|İfade|Bir etkinlik bağımsız değişkeni bağlamalarında kullanılan yükseltilmiş bir dönüş değerine sahip.|  
   
 ## <a name="workflow-runtime"></a>İş akışı çalışma zamanı  
- İş akışı çalışma zamanı, iş akışlarını yürütmek ortamıdır. <xref:System.Activities.WorkflowInvoker> bir iş akışını yürütmek için kolay bir yoludur. Konağın kullandığı <xref:System.Activities.WorkflowInvoker> aşağıdaki için:  
+ İş akışı çalışma zamanı içinde iş akışları yürütme ortamıdır. <xref:System.Activities.WorkflowInvoker> bir iş akışını yürütmek için en basit yoludur. Konağın kullandığı <xref:System.Activities.WorkflowInvoker> aşağıdakiler:  
   
--   Zaman uyumlu olarak bir iş akışının çağırmak için.  
+-   Zaman uyumlu bir iş akışını çağırmak için.  
   
--   Giriş sağlamak ya da bir iş akışından çıkış almak için.  
+-   Giriş sağlamak veya bir iş akışından çıkış almak için.  
   
--   Etkinlikler tarafından kullanılacak uzantıları eklemek için.  
+-   Etkinlikleri tarafından kullanılmak üzere uzantıları eklemek için.  
   
- <xref:System.Activities.ActivityInstance> ana bilgisayarları çalışma zamanı ile etkileşim kurmak için kullandığı iş parçacığı proxy olduğunda. Konağın kullandığı <xref:System.Activities.ActivityInstance> aşağıdaki için:  
+ <xref:System.Activities.ActivityInstance> Konaklar çalışma zamanı ile etkileşim kurmak için kullanabileceğiniz bir iş parçacığı Ara sunucudur. Konağın kullandığı <xref:System.Activities.ActivityInstance> aşağıdakiler:  
   
--   Bunu oluşturarak veya bir örnek mağazadan yüklenirken örneğini almak için.  
+-   Oluşturma veya bir örnek deposundan yüklenirken örneğini almak için.  
   
--   Örnek yaşam döngüsü olayları hakkında bildirim almak için.  
+-   Örnek yaşam döngüsü olaylarını almak.  
   
--   İş akışı yürütme denetlemek için.  
+-   İş akışının yürütülmesini denetlemek için.  
   
--   Giriş sağlamak ya da bir iş akışından çıkış almak için.  
+-   Giriş sağlamak veya bir iş akışından çıkış almak için.  
   
--   Bir iş akışı devamlılık sinyal ve iş akışına değerleri geçirmek için.  
+-   Bir iş akışı devamlılık sinyal ve değerleri iş akışına aktarmak için.  
   
--   İş akışı veri kalıcı hale getirmek için.  
+-   İş akışı verileri kalıcı hale getirmek için.  
   
--   Etkinlikler tarafından kullanılacak uzantıları eklemek için.  
+-   Etkinlikleri tarafından kullanılmak üzere uzantıları eklemek için.  
   
- Etkinlikler uygun kullanarak iş akışı çalışma zamanı ortamı elde <xref:System.Activities.ActivityContext> gibi türetilmiş bir sınıf, <xref:System.Activities.NativeActivityContext> veya <xref:System.Activities.CodeActivityContext>. Bu bağımsız değişkenler ve değişkenleri çözmek için alt etkinlikler zamanlamak için ve birçok başka amaçlarla kullanırlar.  
+ Etkinlikler, uygun kullanarak iş akışı çalışma zamanı ortamı erişim elde edersiniz <xref:System.Activities.ActivityContext> gibi türetilmiş bir sınıf, <xref:System.Activities.NativeActivityContext> veya <xref:System.Activities.CodeActivityContext>. Bunlar bu bağımsız değişkenleri ve değişkenlerini çözmek için alt etkinlikler zamanlamak için ve birçok diğer amaçlar için kullanır.  
   
 ## <a name="services"></a>Hizmetler  
- İş akışları uygulamak ve mesajlaşma etkinlikleri kullanarak birbirine sıkı şekilde bağlı hizmetlere erişmek için doğal bir yolunu sağlar. Mesajlaşma etkinlikleri WCF yerleşiktir ve içine ve dışına bir iş akışı veri almak için kullanılan birincil sistemdir. İleti değişim deseni istediğiniz her türlü birlikte modellemek için Mesajlaşma etkinlikleri oluşturabilirsiniz. Daha fazla bilgi için bkz: [Mesajlaşma etkinlikleri](../../../docs/framework/wcf/feature-details/messaging-activities.md). İş akışı Hizmetleri kullanılarak barındırılır <xref:System.ServiceModel.Activities.WorkflowServiceHost> sınıfı. Daha fazla bilgi için bkz: [iş akışı hizmetleri genel bakış barındırma](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md). İş akışı hizmetleri hakkında daha fazla bilgi için bkz: [iş akışı Hizmetleri](../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ İş akışları uygulamak ve mesajlaşma etkinlikleri kullanma zamanı gevşek bağlanmış hizmetlerine erişmek için doğal bir yol sağlar. Mesajlaşma etkinlikleri WCF yerleşiktir ve veri ekleme çıkarma iş akışı almak için kullanılan birincil mekanizmadır. Mesajlaşma etkinlikleri birlikte ileti değişim deseni, istediğiniz herhangi bir türden model oluşturabilirsiniz. Daha fazla bilgi için [Mesajlaşma etkinlikleri](../../../docs/framework/wcf/feature-details/messaging-activities.md). İş akışı hizmetlerini kullanarak barındırılır <xref:System.ServiceModel.Activities.WorkflowServiceHost> sınıfı. Daha fazla bilgi için [iş akışı hizmetlerini barındırma genel bakış](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md). İş akışı hizmetleri hakkında daha fazla bilgi için bkz: [iş akışı Hizmetleri](../../../docs/framework/wcf/feature-details/workflow-services.md)  
   
 ## <a name="persistence-unloading-and-long-running-workflows"></a>Kalıcılık, kaldırma ve uzun süre çalışan iş akışları  
- Windows iş akışı sağlayarak uzun süre çalışan reaktif programları yazma kolaylaştırır:  
+ Windows iş akışı sağlayarak uzun süreli reaktif programlarını geliştirme kolaylaştırır:  
   
 -   Dış giriş erişim etkinlikler.  
   
--   Oluşturma olanağı <xref:System.Activities.Bookmark> konak dinleyicisi tarafından devam ettirilebilir nesneleri.  
+-   Oluşturma olanağı <xref:System.Activities.Bookmark> konak dinleyici tarafından devam ettirilebilir nesneleri.  
   
--   Bir iş akışının verilerini sürdürülmesi iş akışı kaldırma ve sonra yeniden yükleyin ve sürdürme yanıt akışında yeniden etkinleştirme olanağı <xref:System.Activities.Bookmark> belirli bir iş akışı nesneleri.  
+-   Bir iş akışının veriyi kalıcı olarak kaldırma iş akışı ve yeniden yükleyin ve işlemin sürdürülmesini yanıt akışında yeniden etkinleştirme olanağı <xref:System.Activities.Bookmark> belirli bir iş akışı nesneleri.  
   
- Bir iş akışı etkinlikleri yürütmek için daha fazla hiç etkinlik yok veya tüm kadar şu anda yürütülen etkinlikler için giriş bekleyen kadar sürekli olarak yürütür. Bu ikinci durumda, iş akışı boştadır. Boşta ilerlemiş iş akışları kaldırmak bir ana bilgisayar için ortak olan ve bunları bir ileti olduğunda yürütme devam etmek için yeniden ulaşır. <xref:System.ServiceModel.Activities.WorkflowServiceHost> Bu özellik için işlevsellik sağlar ve bir Genişletilebilir kaldırma İlkesi sağlar. Volatile durumu verilerini veya kalıcı yapılamıyor diğer verileri kullanan bloklarını yürütme için bir etkinlik bir konağa kullanarak kalıcı değil olduğunu gösterebilir <xref:System.Activities.NoPersistHandle>. Bir iş akışı kullanarak dayanıklı depolama ortamına verilerini de açıkça kalıcı <xref:System.Activities.Statements.Persist> etkinlik.
+ Bir iş akışı etkinlikleri yürütmek için daha fazla hiç etkinlik yok veya tüm kadar şu anda yürütülen etkinlikler için giriş bekleyen kadar sürekli olarak yürütür. Bu ikinci durumda, iş akışı boş. Boşta sahiplikten iş akışları kaldırmak bir konak için ortak olan ve bir ileti olduğunda yürütme devam etmek için bunları yeniden ulaşır. <xref:System.ServiceModel.Activities.WorkflowServiceHost> Bu özellik için işlevsellik sağlar ve Genişletilebilir bir kaldırma İlkesi sağlar. Geçici bir durum verilerini veya kalıcı yapılamıyor diğer veri bloklarını yürütme için onu kullanarak kalıcı olmasını değil bir etkinlik bir konağa belirtir <xref:System.Activities.NoPersistHandle>. Bir iş akışı kullanarak, veri kalıcı depolama ortamı için de açıkça kalıcı <xref:System.Activities.Statements.Persist> etkinlik.

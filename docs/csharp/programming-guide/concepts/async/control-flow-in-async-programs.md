@@ -2,12 +2,12 @@
 title: Denetim akışı zaman uyumsuz programlarda (C#)
 ms.date: 07/20/2015
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
-ms.openlocfilehash: 49123dde51acaa82a2d8fa7d27fdf27087675034
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: c4f1213eb9162985170c8eb1176fe01d8c721d2e
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46586785"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347961"
 ---
 # <a name="control-flow-in-async-programs-c"></a>Denetim akışı zaman uyumsuz programlarda (C#)
 
@@ -47,7 +47,7 @@ public partial class MainWindow : Window
         // TWO
         HttpClient client = new HttpClient();
         Task<string> getStringTask =
-            client.GetStringAsync("http://msdn.microsoft.com");
+            client.GetStringAsync("https://msdn.microsoft.com");
 
         // THREE
         string urlContents = await getStringTask;
@@ -212,7 +212,7 @@ Projeyi çalıştırmak için aşağıdaki adımları gerçekleştirin:
                 resultsTextBox.Text += "\r\n           Calling HttpClient.GetStringAsync.\r\n";
 
                 // GetStringAsync returns a Task<string>.
-                Task<string> getStringTask = client.GetStringAsync("http://msdn.microsoft.com");
+                Task<string> getStringTask = client.GetStringAsync("https://msdn.microsoft.com");
 
                 resultsTextBox.Text += "\r\nTHREE: Back in AccessTheWebAsync.\r\n" +
                     "           Task getStringTask is started.";
@@ -287,7 +287,7 @@ Bir görev döndüren zaman uyumsuz yöntem, Denetim arayana geri geçtiğinde b
  `client.GetStringAsync` Yöntemi bir görev için atanan bir dize döndürür `getStringTask` değişkeninde `AccessTheWebAsync`. Örnek programdaki aşağıdaki satır çağrısını gösterir `client.GetStringAsync` atama.
 
 ```csharp
-Task<string> getStringTask = client.GetStringAsync("http://msdn.microsoft.com");
+Task<string> getStringTask = client.GetStringAsync("https://msdn.microsoft.com");
 ```
 
  Görevini, hedefi olarak düşünebilirsiniz `client.GetStringAsync` sonuçta gerçek bir dize oluşturmak için. Bu arada, varsa `AccessTheWebAsync` dizeden bağımlı olmayan yapılacak çalışmaya sahipse `client.GetStringAsync`, iş devam edebilirsiniz ancak `client.GetStringAsync` bekler. Örnekte, "Üç" etiketli, aşağıdaki çıktı satırları bağımsız iş yapma fırsatını temsil eder.
@@ -311,7 +311,7 @@ string urlContents = await getStringTask;
  Await ifadesi askıya `AccessTheWebAsync` kadar `client.GetStringAsync` döndürür. Bu arada, Denetim çağırana döner `AccessTheWebAsync`, `startButton_Click`.
 
 > [!NOTE]
-> Genellikle, bir zaman uyumsuz yöntem çağrısı hemen bekler. Örneğin, aşağıdaki atama oluşturan ve sonra bekleyen önceki kodun yerini alabilir `getStringTask`: `string urlContents = await client.GetStringAsync("http://msdn.microsoft.com");`
+> Genellikle, bir zaman uyumsuz yöntem çağrısı hemen bekler. Örneğin, aşağıdaki atama oluşturan ve sonra bekleyen önceki kodun yerini alabilir `getStringTask`: `string urlContents = await client.GetStringAsync("https://msdn.microsoft.com");`
 >
 > Bu konuda, await işleci, program aracılığıyla denetim akışını işaretleyen çıkış satırlarını yerleştirmek için daha sonra uygulanır.
 

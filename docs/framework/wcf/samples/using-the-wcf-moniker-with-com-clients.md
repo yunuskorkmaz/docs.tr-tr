@@ -2,12 +2,12 @@
 title: WCF Bilinen Adını COM İstemcileri ile Kullanma
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: f052504648d381d6fb19fb6db0ebb1dd1086ed3c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1deeb125b94bcbab52db522b7304b972c05a28ed
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515725"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49348789"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>WCF Bilinen Adını COM İstemcileri ile Kullanma
 Bu örnek, Windows Communication Foundation (WCF) hizmet bilinen adını COM tabanlı geliştirme ortamlarına uygulamaları (Office VBA) için Microsoft Office Visual Basic veya Visual Basic 6.0 gibi Web Hizmetleri Tümleştirme için nasıl kullanılacağını gösterir. Bu örnek bir Windows komut dosyası ana bilgisayarı istemci (.vbs) destekleyen bir istemci kitaplığı (.dll) ve Internet Information Services (IIS) tarafından barındırılan bir hizmet kitaplığı (.dll) oluşur. Hizmet hesap makinesi hizmetidir ve COM istemcisi matematik işlemlerini çağıran — ekleme, çıkarma, çarpma ve bölme — hizmet. İleti kutusu windows istemci etkinliği görülebilir.  
@@ -26,7 +26,7 @@ Bu örnek, Windows Communication Foundation (WCF) hizmet bilinen adını COM tab
   
  Hizmet uygulayan bir `ICalculator` sözleşme aşağıdaki kod örneğinde gösterildiği gibi tanımlanır.  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface ICalculator  
 {  
@@ -52,19 +52,19 @@ public interface ICalculator
 ## <a name="typed-contract"></a>Yazılı sözleşme  
  Bilinen ad yazılı sözleşme ile kullanma için hizmet sözleşmesi için uygun şekilde öznitelikli türleri com ile kayıtlı olması gerekir İlk olarak, bir istemci kullanarak oluşturulmalıdır [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Türü belirtilmiş bir proxy oluşturmak için istemci dizininde bir komut isteminden aşağıdaki komutu çalıştırın.  
   
-```  
+```console  
 svcutil.exe /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost/servicemodelsamples/service.svc /out:generatedClient.cs  
 ```  
   
  Bu sınıf, bir projede eklenmelidir ve proje yapılandırılmalıdır bir COM görünür oluşturmak için derlendiğinde derleme imzalanmış. AssemblyInfo.cs dosyasında aşağıdaki öznitelik eklenmelidir.  
   
-```  
+```csharp
 [assembly: ComVisible(true)]  
 ```  
   
  COM görünür türü kullanarak kaydedin projeyi oluşturduktan sonra `regasm` aşağıdaki örnekte gösterildiği gibi.  
   
-```  
+```console  
 regasm.exe /tlb:CalcProxy.tlb client.dll  
 ```  
   
@@ -79,7 +79,7 @@ gacutil.exe /i client.dll
   
  ComCalcClient.vbs istemci uygulamanın kullandığı `GetObject` bağlamayı adresini belirtmek için hizmet bilinen adı sözdizimini kullanarak bir proxy hizmeti oluşturun ve hizmet için sözleşme işlevi.  
   
-```  
+```vbscript
 Set typedServiceMoniker = GetObject(  
 "service4:address=http://localhost/ServiceModelSamples/service.svc, binding=wsHttpBinding,   
 contractType={9213C6D2-5A6F-3D26-839B-3BA9B82228D3}")  
@@ -95,7 +95,7 @@ contractType={9213C6D2-5A6F-3D26-839B-3BA9B82228D3}")
   
  Hizmet bilinen adı proxy örneğiyle çağrılamadığından istemci uygulama, hizmet bilinen adı altyapısında karşılık gelen hizmet işlemleri çağırma sonuçları proxy yöntemleri çağırabilir.  
   
-```  
+```vbscript  
 ' Call the service operations using the moniker object  
 WScript.Echo "Typed service moniker: 100 + 15.99 = " & typedServiceMoniker.Add(100, 15.99)  
 ```  
@@ -107,7 +107,7 @@ WScript.Echo "Typed service moniker: 100 + 15.99 = " & typedServiceMoniker.Add(1
   
  ComCalcClient.vbs istemci uygulamanın kullandığı `FileSystemObject` yerel olarak kaydedilmiş bir WSDL dosyasına erişmek için ve daha sonra tekrar kullanır `GetObject` bir proxy hizmeti oluşturmak için işlev.  
   
-```  
+```vbscript  
 ' Open the WSDL contract file and read it all into the wsdlContract string  
 Const ForReading = 1  
 Set objFSO = CreateObject("Scripting.FileSystemObject")  
@@ -140,7 +140,7 @@ Set wsdlServiceMoniker = GetObject(wsdlMonikerString)
   
  Hizmet bilinen adı proxy örneğiyle çağrılamadığından istemci uygulama, hizmet bilinen adı altyapısında karşılık gelen hizmet işlemleri çağırma sonuçları proxy yöntemleri çağırabilir.  
   
-```  
+```vbscript  
 ' Call the service operations using the moniker object  
 WScript.Echo "WSDL service moniker: 145 - 76.54 = " & wsdlServiceMoniker.Subtract(145, 76.54)  
 ```  
@@ -152,7 +152,7 @@ WScript.Echo "WSDL service moniker: 145 - 76.54 = " & wsdlServiceMoniker.Subtrac
   
  ComCalcClient.vbs istemci uygulamaya yeniden kullanan `GetObject` bir proxy hizmeti oluşturmak için işlev.  
   
-```  
+```vbscript  
 ' Create a string for the service moniker specifying the address to retrieve the service metadata from  
 mexMonikerString = "service4:mexAddress='http://localhost/servicemodelsamples/service.svc/mex'"  
 mexMonikerString = mexMonikerString + ", address='http://localhost/ServiceModelSamples/service.svc'"  
@@ -175,7 +175,7 @@ Set mexServiceMoniker = GetObject(mexMonikerString)
   
  Hizmet bilinen adı proxy örneğiyle çağrılamadığından istemci uygulama, hizmet bilinen adı altyapısında karşılık gelen hizmet işlemleri çağırma sonuçları proxy yöntemleri çağırabilir.  
   
-```  
+```vbscript  
 ' Call the service operations using the moniker object  
 WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9, 81.25)  
 ```  

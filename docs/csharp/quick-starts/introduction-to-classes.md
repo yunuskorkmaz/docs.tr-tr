@@ -3,12 +3,12 @@ title: Giriş sınıfları Öğreticisi - C# yerel hızlı başlangıçları
 description: İlk C# programınızı oluşturma ve nesne yönelimli kavramları keşfedin
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: 5e59d2bc5db579f78cffa279d542e800e42395a8
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: c4eadfc431eb263777bf2b4543746f778dabb466
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121460"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347922"
 ---
 # <a name="introduction-to-classes"></a>Sınıflara giriş
 

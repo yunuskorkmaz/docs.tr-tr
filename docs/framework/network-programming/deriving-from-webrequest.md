@@ -13,11 +13,11 @@ ms.assetid: 9810c177-973e-43d7-823c-14960bd625ea
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 9f4f1756d42e8931a5265017088021b5f4022044
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48848001"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49337629"
 ---
 # <a name="deriving-from-webrequest"></a>Webrequest'ten türetme
 <xref:System.Net.WebRequest> .NET Framework takılabilir Protokolü modeli uyan bir protokole özgü istek işleyicisi oluşturmak için temel yöntemleri ve özellikleri sağlayan soyut bir temel sınıfı. Kullanan uygulamalar **WebRequest** sınıfı, kullanılan protokolü belirtmek için gerek kalmadan herhangi bir desteklenen protokolünü kullanarak veri isteyebilir.  

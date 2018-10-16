@@ -2,12 +2,12 @@
 title: Nesne Başvuruları
 ms.date: 03/30/2017
 ms.assetid: 7a93d260-91c3-4448-8f7a-a66fb562fc23
-ms.openlocfilehash: 1aa8b1c9d135186dba9e4da75f0c7cb9297d8e5c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 00caccaeed8cebeec2e053d418ae6a5bf9a12138
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46000248"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347750"
 ---
 # <a name="object-references"></a>Nesne Başvuruları
 Bu örnek nesnesinin başvuruları göre sunucu ile istemci arasında nasıl geçirileceğini gösterir. Benzetimli örnek kullandığı *sosyal ağlar*. Bir sosyal ağ oluşan bir `Person` her arkadaş örneği olduğu arkadaş listesi içeren sınıf `Person` sınıfıyla kendi arkadaş listesi. Bu nesne bir grafik oluşturur. Hizmet, bu sosyal ağlarda işlemini kullanıma sunar.  
@@ -20,7 +20,7 @@ Bu örnek nesnesinin başvuruları göre sunucu ile istemci arasında nasıl ge�
 ## <a name="service"></a>Hizmet  
  `Person` Sınıfında <xref:System.Runtime.Serialization.DataContractAttribute> özniteliği uygulandı, ile <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> alan kümesine `true` gibi bir başvuru türü bildirmek için. Tüm özelliklere sahip <xref:System.Runtime.Serialization.DataMemberAttribute> özniteliği uygulandı.  
   
-```  
+```csharp
 [DataContract(IsReference=true)]  
 public class Person  
 {  
@@ -53,7 +53,7 @@ public class Person
   
  `GetPeopleInNetwork` İşlemi türünde bir parametre alır `Person` ve tüm kişilerin ağdaki; döndürür. diğer bir deyişle, tüm kişiler `friends` listesi, arkadaşınızın arkadaşlarınız ve yinelemeleri olmadan benzeri.  
   
-```  
+```csharp
 public List<Person> GetPeopleInNetwork(Person p)  
 {  
     List<Person> people = new List<Person>();  
@@ -65,7 +65,7 @@ public List<Person> GetPeopleInNetwork(Person p)
   
  `GetMutualFriends` İşlemi türünde bir parametre alır `Person` ve ayrıca bu kişinin sahip listesindeki tüm arkadaşlarını döndürür içinde kendi `friends` listesi.  
   
-```  
+```csharp
 public List<Person> GetMutualFriends(Person p)  
 {  
     List<Person> mutual = new List<Person>();  
@@ -80,7 +80,7 @@ public List<Person> GetMutualFriends(Person p)
   
  `GetCommonFriends` İşlemi türü listesini alır `Person`. Listeye iki olması beklenir `Person` içindeki nesneleri. İşlem listesini döndürür `Person` bulunan nesneleri `friends` hem listelerini `Person` Giriş listesindeki nesneler.  
   
-```  
+```csharp
 public List<Person> GetCommonFriends(List<Person> people)  
 {  
     List<Person> common = new List<Person>();  

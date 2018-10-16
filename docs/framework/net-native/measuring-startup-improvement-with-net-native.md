@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2603c29fe9108a32f3c3ba86a5aba9fae5042b17
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 9d8e104b5d32c07c4730154ff3fc69b452a024b7
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025525"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347909"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>.NET Yerel ile Başlangıç İyileştirmesini Hesaplama
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] uygulama başlatma süresini önemli ölçüde artırır. Bu geliştirme, taşınabilir, düşük güç tüketimli cihazlar ve karmaşık uygulamaları ile özellikle fark edilebilir. Bu konu, bu başlangıç geliştirme ölçmek için gereken temel araçları ile çalışmaya başlamanıza yardımcı olur.  
@@ -54,7 +54,7 @@ ms.locfileid: "48025525"
  Uygulama izleme eklenmiş, olayları toplamak hazırsınız.  
   
 ## <a name="gathering-events-with-perfview"></a>PerfView ile olayları toplama  
- PerfView ETW olayları performans araştırmalar uygulamanızdan her türlü bunu yapmanıza yardımcı olmak için kullanır. Ayrıca, bir yapılandırma sağlayan GUI açıp farklı türde olaylar için günlüğe kaydetmeyi etkinleştirmek içerir. PerfView ücretsiz bir araçtır ve indirilebileceğini [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=28567). Daha fazla bilgi için izleme [PerfView öğretici videolar](http://channel9.msdn.com/Series/PerfView-Tutorial).  
+ PerfView ETW olayları performans araştırmalar uygulamanızdan her türlü bunu yapmanıza yardımcı olmak için kullanır. Ayrıca, bir yapılandırma sağlayan GUI açıp farklı türde olaylar için günlüğe kaydetmeyi etkinleştirmek içerir. PerfView ücretsiz bir araçtır ve indirilebileceğini [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=28567). Daha fazla bilgi için izleme [PerfView öğretici videolar](https://channel9.msdn.com/Series/PerfView-Tutorial).  
   
 > [!NOTE]
 >  PerfView ARM sistemlerinde olayları toplamak için kullanılamaz. ARM sistemlerinde olayları toplamak için Windows Performans kaydedici (WPR) kullanın. Daha fazla bilgi için [Vance Morrison'ın blog gönderisi](https://blogs.msdn.com/b/vancem/archive/2012/12/19/collecting-etw-perfview-data-on-an-windows-rt-winrt-arm-surface-device.aspx).  
@@ -95,7 +95,7 @@ perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFil
   
  Tüm olaylar, sol bölmede listelenen seçin (Ctrl-A) ve **Enter** anahtarı. Artık, her olay zaman damgası görmeye olmalıdır. Bu zaman damgaları izleme başlangıcını göreli olduğundan başlangıcından bu yana geçen süreyi belirlemek için işlemin başlangıç zamanından itibaren her olayın zaman çıkarılacak sahip. İki zaman damgaları seçmek için CTRL tuşuna basıp tıklayarak kullanıyorsanız, bunları sayfanın alt kısmındaki durum çubuğunda görüntülenen arasındaki fark görürsünüz. Bu, herhangi iki olay görüntüdeki (işlem başlangıç dahil) arasında geçen süreyi görmek kolaylaştırır. Görünüm için kısayol menüsünü açın ve CSV dosyalarına dışarı aktarma veya kaydetmek veya verileri işlemek için Microsoft Excel'i açıp gibi kullanışlı seçenekler, bir dizi seçin.  
   
- Yordam hem özgün uygulamanızı hem de sürümü için yinelenen, kullanılarak oluşturulan [!INCLUDE[net_native](../../../includes/net-native-md.md)] araç zinciri, performans farkı karşılaştırabilirsiniz.   [!INCLUDE[net_native](../../../includes/net-native-md.md)] uygulamalar genellikle başlangıç olmayan daha hızlı[!INCLUDE[net_native](../../../includes/net-native-md.md)] uygulamalar. Daha ayrıntılı araştırmaya ilgileniyorsanız, PerfView ayrıca en çok zaman alan, kodunuzun parçalarını belirleyebilir. Daha fazla bilgi için izleme [PerfView öğreticiler](http://channel9.msdn.com/Series/PerfView-Tutorial) veya okuma [Vance Morrison'ın blog girişine](https://blogs.msdn.com/b/vancem/archive/2011/12/28/publication-of-the-perfview-performance-analysis-tool.aspx).  
+ Yordam hem özgün uygulamanızı hem de sürümü için yinelenen, kullanılarak oluşturulan [!INCLUDE[net_native](../../../includes/net-native-md.md)] araç zinciri, performans farkı karşılaştırabilirsiniz.   [!INCLUDE[net_native](../../../includes/net-native-md.md)] uygulamalar genellikle başlangıç olmayan daha hızlı[!INCLUDE[net_native](../../../includes/net-native-md.md)] uygulamalar. Daha ayrıntılı araştırmaya ilgileniyorsanız, PerfView ayrıca en çok zaman alan, kodunuzun parçalarını belirleyebilir. Daha fazla bilgi için izleme [PerfView öğreticiler](https://channel9.msdn.com/Series/PerfView-Tutorial) veya okuma [Vance Morrison'ın blog girişine](https://blogs.msdn.com/b/vancem/archive/2011/12/28/publication-of-the-perfview-performance-analysis-tool.aspx).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Diagnostics.Tracing.EventSource>

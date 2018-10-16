@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c8d08d6fd6fb783f5cb8c7e714bffa2b655ffb41
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 620f9e59d65630895c01aff7d47c76876f3319d1
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44214829"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347805"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>XML belgesinde ad alanlarını yönetme
 XML ad alanları XML belgesinde öğe ve öznitelik adları, özel ve önceden tanımlanmış bir URI'leri ile ilişkilendirin. Bu ilişkileri oluşturmak için URI ad alanı ön eklerini tanımlayın ve bu ön ekler öğe ve öznitelik adları XML verisindeki nitelemek için kullanın. Ad alanları, öğe ve öznitelik adı çakışmalarını önlemek ve öğeleri ve öznitelikleri aynı ada sahip işlenmesini ve farklı şekilde doğrulanmış etkinleştirin.  
@@ -23,7 +23,7 @@ XML ad alanları XML belgesinde öğe ve öznitelik adları, özel ve önceden t
   
  Burada `<name>` ad alanı öneki ve `<"uri">` ad alanını tanımlayan URI. Önek bildirdikten sonra öğeleri ve özniteliklerinin bir XML belgesi sınıflandırmak ve ad alanı URI ile ilişkilendirmek için kullanabilirsiniz. Ad alanı öneki belge kullanılmakta olduğundan uzunluğu kısa olmalıdır.  
   
- Bu örnek iki tanımlar `BOOK` öğeleri. İlk öğe öğe ön eke göre nitelenmiş `mybook`, ve ikinci öğe ön eke göre nitelenmiş `bb`. Her ön eki farklı ad alanı URI ile ilişkilendirilir:  
+ Bu örnek iki tanımlar `BOOK` öğeleri. Ön eke göre ilk öğeyi nitelenmiş `mybook`, ve ikinci öğe ön eke göre nitelenmiş `bb`. Her ön eki farklı ad alanı URI ile ilişkilendirilir:  
   
 ```xml  
 <mybook:BOOK xmlns:mybook="http://www.contoso.com/books.dtd">  

@@ -2,12 +2,12 @@
 title: Duyuru Örnekleri
 ms.date: 03/30/2017
 ms.assetid: 954a75e4-9a97-41d6-94fc-43765d4205a9
-ms.openlocfilehash: a82056844c9ec8f77bce4b0adec481a025894d1f
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: d03f22b7dd4d9886151e61a2a846f2dc64e661c3
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865728"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347534"
 ---
 # <a name="announcements-sample"></a>Duyuru Örnekleri
 Bu örnek bulma özelliğinin duyuru işlevini nasıl kullanacağınızı gösterir. Duyurular hizmeti hakkında meta veriler içeren bir Duyurunun ileti göndermek için izin verin. Varsayılan olarak, hizmet başlatıldığı ve hizmet kapatıldığında bye duyuru gönderilir hello duyuru gönderilir. Bu duyurular çok noktaya yayın veya noktadan noktaya gönderilebilir. Bu örnek, iki proje hizmeti ve istemci oluşur.  
@@ -15,7 +15,7 @@ Bu örnek bulma özelliğinin duyuru işlevini nasıl kullanacağınızı göste
 ## <a name="service"></a>Hizmet  
  Bu proje, şirket içinde barındırılan hesaplayıcı hizmet içerir. İçinde `Main` yöntemi, bir hizmet konağı oluşturulur ve bir hizmet uç noktası eklenir. Ardından, bir <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> oluşturulur. Duyurular etkinleştirmek için bir Duyurunun bitiş noktası eklenmelidir <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>. Bu durumda UDP çok noktaya yayın kullanarak bir standart uç nokta duyuru uç noktası olarak eklenir. Bu, iyi bilinen bir UDP adresi duyurularını yayınlar.  
   
-```  
+```csharp
 Uri baseAddress = new Uri("http://localhost:8000/" + Guid.NewGuid().ToString());  
   
 // Create a ServiceHost for the CalculatorService type.  
@@ -39,7 +39,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), base
 ## <a name="client"></a>İstemci  
  Bu projede unutmayın istemci konakları bir <xref:System.ServiceModel.Discovery.AnnouncementService>. Ayrıca, iki temsilci olduğunda olayları ile kaydedilir. Bu olayları, istemcinin çevrimiçi ve çevrimdışı duyuruları alındığında ne yaptığını gerektirir.  
   
-```  
+```csharp
 // Create an AnnouncementService instance  
 AnnouncementService announcementService = new AnnouncementService();  
   
@@ -50,7 +50,7 @@ announcementService.OfflineAnnouncementReceived += OnOfflineEvent;
   
  `OnOnlineEvent` Ve `OnOfflineEvent` yöntemleri işleyen Merhaba ve bye duyuru iletileri sırasıyla.  
   
-```  
+```csharp
 static void OnOnlineEvent(object sender, AnnouncementEventArgs e)  
 {  
     Console.WriteLine();              

@@ -4,43 +4,43 @@ ms.date: 03/30/2017
 ms.assetid: ee8c5e17-35ea-48a1-8767-83298caac1e8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0b53150c90e473e7c4ed32991c43ff0b8ca5b75b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 45a053d2aefa8a295e0e8d52818472647e4ef834
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396291"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347597"
 ---
 # <a name="net-native-general-troubleshooting"></a>.NET Yerel Genel Sorun Giderme
-Bu konu ile uygulamaları geliştirirken karşılaşabileceğiniz olası sorunları gidermek nasıl açıklar [!INCLUDE[net_native](../../../includes/net-native-md.md)].  
+Bu konu ile uygulamalar geliştirirken karşılaşabileceğiniz olası sorunların nasıl giderileceği açıklanmaktadır [!INCLUDE[net_native](../../../includes/net-native-md.md)].  
   
--   **Sorun:** yapı çıktı penceresi düzgün şekilde güncelleştirilmez.  
+-   **Sorun:** yapı çıktı penceresini düzgün şekilde güncelleştirilmez.  
   
-     **Çözüm:** yapı tamamlanana kadar yapı çıktı penceresi güncelleştirilmez. Yapı zamanları karşılaşabileceğiniz için birkaç dakika kadar güncelleştirmeleri görmesini bir gecikme olabilir.  
+     **Çözüm:** yapı tamamlanana kadar yapı çıkış penceresinde güncelleştirilmez. Derleme zamanlarını karşılaşabileceğiniz için birkaç dakika kadar güncelleştirmeler görmeye bir gecikme olabilir.  
   
--   **Sorun:** ARM artırmıştır için uygulamanızın perakende derleme zamanı.  
+-   **Sorun:** uygulamanızın perakende derleme zamanı için ARM arttı.  
   
-     **Çözüm:** ARM Cihazınızı bir uygulama dağıttığınızda [!INCLUDE[net_native](../../../includes/net-native-md.md)] altyapı çağrılır. Bu derleme yansıma devam gibi çalışması, statik olmayan semantiği sağlarken en iyi duruma getirme, çok sayıda gerçekleştirir. Ayrıca, uygulamanın kullandığı .NET Framework kısmı statik olarak en iyi performans için bağlı ve de yerel koda derlenmiş gerekir. Derleme daha uzun sürer nedeni budur.  
+     **Çözüm:** ARM cihazınıza bir uygulamayı dağıttığınızda [!INCLUDE[net_native](../../../includes/net-native-md.md)] altyapı çağrılır. Bu derleme yansıma devam gibi çalışması, statik olmayan semantiğe sağlarken çok sayıda iyileştirmeleri gerçekleştirir. Ayrıca, uygulamanın kullandığı .NET Framework'ün bir bölümü, MFC'ye statik olarak en iyi performans için bağlı olan ve de yerel kod içine derlenmiş gerekir. Derleme daha uzun sürer nedeni budur.  
   
-     Ancak, derleme sürelerini hala dakikadır standart geliştirme makinedeki çoğu uygulamalarında standart derleme ağdadır.  Genellikle, yalnızca .NET Framework standart geliştirme makinede yerel görüntüler oluşturmak birkaç dakika sürer.  Oluşturulan kod geliştirmek için bile tüm en iyi duruma getirme ile .NET Framework dahil olmak üzere, uygulama yapı kez genellikle bir veya iki dakika olur.  
+     Ancak, yine de dakikadır standart geliştirme makinesindeki çoğu uygulama standart bir derleme içinde derleme sürelerini uygulanır.  Genellikle, yalnızca standart geliştirmenin bir makinede .NET Framework için yerel görüntüler oluşturuluyor, birkaç dakika sürer.  Oluşturulan kodun geliştirmek için bile tüm iyileştirmeler ve .NET Framework dahil olmak üzere ile uygulama derleme süreleri genellikle bir veya iki dakika olduğundan.  
   
-     Çok iş parçacıklı derleme ve diğer en iyi duruma getirme incelenerek derleme performansı iyileştirme çalışmaya devam ediliyor.  
+     Çok iş parçacıklı derleme ve diğer iyileştirmeler incelenerek derleme performansı iyileştirme üzerinde çalışmaya devam ediyoruz.  
   
--   **Sorun:** uygulamanızı kullanılarak derlendi tanımadığınız [!INCLUDE[net_native](../../../includes/net-native-md.md)].  
+-   **Sorun:** uygulamanızı kullanarak derlenen bilmiyorum [!INCLUDE[net_native](../../../includes/net-native-md.md)].  
   
-     **Çözüm:** varsa [!INCLUDE[net_native](../../../includes/net-native-md.md)] derleyici çağrıldığında, artık kez derleme görürsünüz ve Görev Yöneticisi'ni çeşitli gösterir [!INCLUDE[net_native](../../../includes/net-native-md.md)] ILC.exe ve nutc_driver.exe gibi bileşen işlemler.  
+     **Çözüm:** varsa [!INCLUDE[net_native](../../../includes/net-native-md.md)] derleyici çağrılır, artık kez yapı fark edeceksiniz ve Görev Yöneticisi'ni çeşitli gösterir [!INCLUDE[net_native](../../../includes/net-native-md.md)] bileşenini işlemlerin ILC.exe ve nutc_driver.exe gibi.  
   
-     Projenizi ile başarıyla yapı sonra [!INCLUDE[net_native](../../../includes/net-native-md.md)], çıktı obj altında bulabilirsiniz\\*config*\ *arch* \\  *ProjectName*. ilc\out.  Son Yerel Paket içeriğini depo altında bulunabilir\\*arch*\\*config*\AppX. Son Yerel Paket içeriğini \bin altında olan\\*arch*\\*config*uygulamayı dağıttıysanız \AppX.  
+     Başarıyla projenizi derledikten sonra [!INCLUDE[net_native](../../../includes/net-native-md.md)], çıkış obj altında bulabilirsiniz\\*config*\ *arch* \\  *ProjectName*. ilc\out.  Yerel son paket içeriğinin depo altında bulunabilir\\*arch*\\*config*\AppX. Son Yerel Paket içeriğini \bin altında olan\\*arch*\\*config*uygulama dağıttıysanız \AppX.  
   
--   **Sorun:** .NET yerel koda derlenmiş uygulama çalışma zamanı özel durumları atma (genellikle [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) veya [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) özel durumlar), değil throw .NET yerel derlendiğinde.  
+-   **Sorun:** .NET yerel olarak derlenmiş uygulamanızı, çalışma zamanı özel durumları atma (genellikle [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) veya [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) özel durumlar), değil durumunu oluşturamadı .NET Native derlendiğinde.  
   
-     **Çözüm:** .NET yerel meta verileri veya aksi halde yansıma yoluyla kullanılabilir uygulama kodu sağlamadığından özel durumlar. (Daha fazla bilgi için bkz: [.NET yerel ve derleme](../../../docs/framework/net-native/net-native-and-compilation.md).) Bir giriş eklemek zorunda özel ortadan kaldırmak için [çalışma zamanı yönergeleri (rd.xml) dosya](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md) .NET yerel araç zinciri meta veri veya uygulama kodunu kullanılabilir çalışma zamanında böylece yapabilirsiniz. İki sorun gidericileri kullanılabilir çalışma zamanı yönergeleri dosyasına eklemek için gerekli giriş üretir:  
+     **Çözüm:** .NET Native meta veriler ya da aksi takdirde yansıma yoluyla kullanılabilir uygulama kodu sağlamadığından özel durumlar. (Daha fazla bilgi için [.NET Native ve derleme](../../../docs/framework/net-native/net-native-and-compilation.md).) Özel durumu ortadan kaldırmak için bir girdi eklemeniz gerekir, [çalışma zamanı yönergeleri (rd.xml) dosyası](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md) .NET Native araç zinciri meta veri veya uygulama kodunu kullanılabilir çalışma zamanında yapabilmeleri için. İki sorun gidericileri kullanılabilir çalışma zamanı yönergeleri dosyanıza eklemek için gerekli giriş oluşturacağını:  
   
-    -   [MissingMetadataException sorun gidericisini](http://dotnet.github.io/native/troubleshooter/type.html) türleri için.  
+    -   [MissingMetadataException sorun giderici](https://dotnet.github.io/native/troubleshooter/type.html) türleri için.  
   
-    -   [MissingMetadataException sorun gidericisini](http://dotnet.github.io/native/troubleshooter/method.html) yöntemleri için.  
+    -   [MissingMetadataException sorun giderici](https://dotnet.github.io/native/troubleshooter/method.html) yöntemleri için.  
   
-     Daha fazla bilgi için bkz: [yansıma ve .NET yerel](../../../docs/framework/net-native/reflection-and-net-native.md).  
+     Daha fazla bilgi için [yansıma ve .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Windows Mağazası Uygulamanızı .NET Native'e Taşıma](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)

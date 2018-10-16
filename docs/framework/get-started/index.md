@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aef77e6f2ec572ec0969166770aaf617cc933d67
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 99da0b0367270c4cea470a23ea97f0165a712a9b
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522336"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49349075"
 ---
 # <a name="get-started-with-the-net-framework"></a>.NET Framework ile çalışmaya başlama
 
@@ -67,7 +67,7 @@ Bir geliştiriciyseniz, uygulamalarınızı oluşturmak için .NET Framework'ü 
 
 .NET Framework uygulamaları veya bileşenleri geliştirmek için aşağıdakileri yapın:
 
-1. İşletim sisteminize göre önceden değil, uygulamanızı hedefleyen .NET Framework sürümünü yükleyin. En son üretim sürümü .NET, Windows önceden 4.7.2, altyapısıdır 10 Nisan 2018 güncelleştirmesi ve Windows işletim sisteminin önceki sürümlerinde indirilebilir. .NET Framework sistem gereksinimleri için bkz: [sistem gereksinimleri](../../../docs/framework/get-started/system-requirements.md). .NET Framework'ın diğer sürümlerinin yüklenmesi hakkında daha fazla bilgi için bkz: [Yükleme Kılavuzu](../../../docs/framework/install/guide-for-developers.md). Ek .NET Framework paketleri, sıralı olarak dışında tüm normal veya zamanlanmış sürüm döngüsü yayımlandıktan, yani bant dışı bırakılır. Bu paketler hakkında daha fazla bilgi için bkz: [.NET Framework ve bant dışı yayınlar](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md).
+1. İşletim sisteminize göre önceden değil, uygulamanızı hedefleyen .NET Framework sürümünü yükleyin. En son üretim sürümü, .NET Framework 4.7.2 ' dir. Windows üzerinde önceden yüklenmiş olarak 10 Nisan 2018 güncelleştirmesi ve Windows 10 Ekim 2018 güncelleştirmesi ve Windows işletim sisteminin önceki sürümlerinde indirme için kullanılabilir. .NET Framework sistem gereksinimleri için bkz: [sistem gereksinimleri](../../../docs/framework/get-started/system-requirements.md). .NET Framework'ın diğer sürümlerinin yüklenmesi hakkında daha fazla bilgi için bkz: [Yükleme Kılavuzu](../../../docs/framework/install/guide-for-developers.md). Ek .NET Framework paketleri, sıralı olarak dışında tüm normal veya zamanlanmış sürüm döngüsü yayımlandıktan, yani bant dışı bırakılır. Bu paketler hakkında daha fazla bilgi için bkz: [.NET Framework ve bant dışı yayınlar](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md).
 
 2. Uygulamalarınızı geliştirmek için kullanmak istediğiniz .NET Framework tarafından desteklenen diller ve dil seçin. Çok sayıda dil kullanılabilir dahil olmak üzere [Visual Basic](../../visual-basic/index.md), [C#](../../csharp/index.md), [F #](../../fsharp/index.md)ve C + +/ CLI Microsoft gelen. (Aynılarını .NET Framework için uygulamalar geliştirmenizi sağlayan bir programlama dili [ortak dil altyapısı (CLI) belirtimi](https://go.microsoft.com/fwlink/?LinkId=199862).)
 
