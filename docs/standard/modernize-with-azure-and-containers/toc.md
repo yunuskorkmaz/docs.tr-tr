@@ -1,5 +1,5 @@
 # [Giriş](index.md)
-## [Mevcut uygulamaları Azure Iaas’ye lift-and-shit ile taşıma](lift-and-shift-existing-apps-azure-iaas.md)
+## [Mevcut uygulamaları Azure Iaas’ye lift-and-shift ile taşıma](lift-and-shift-existing-apps-azure-iaas.md)
 ## [İlişkisel veritabanlarınızı Azure'a geçirme](migrate-your-relational-databases-to-azure.md)
 ## [Mevcut .NET uygulamalarını Bulut için İyileştirilmiş olarak modernize etme](./modernize-existing-apps-to-cloud-optimized/index.md)
 ### [Mevcut .NET uygulamalarını Bulut için İyileştirilmiş olarak modernize etme nedenleri](./modernize-existing-apps-to-cloud-optimized/reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications.md)
