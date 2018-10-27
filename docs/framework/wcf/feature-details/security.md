@@ -6,69 +6,68 @@ helpviewer_keywords:
 - security [WCF]
 - Windows Communication Foundation, security
 ms.assetid: 7ea87fcb-dcfb-4a4a-8b03-6b954575d45b
-author: BrucePerlerMS
-ms.openlocfilehash: 2d4f2d67c8afd1687d9de506cf8a7616408069d2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 36a7943ec9a4bab361784b99c569dbf6c42f61e5
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200795"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181419"
 ---
-# <a name="windows-communication-foundation-security"></a><span data-ttu-id="10626-102">Windows Communication Foundation Güvenliği</span><span class="sxs-lookup"><span data-stu-id="10626-102">Windows Communication Foundation Security</span></span>
-<span data-ttu-id="10626-103">Bu bölümdeki konularda, Windows Communication Foundation (WCF) güvenlik özellikleri ve bunları güvenli iletiler yardımcı olmak için nasıl kullanılacağını açıklar.</span><span class="sxs-lookup"><span data-stu-id="10626-103">The topics in this section describe Windows Communication Foundation (WCF) security features and how to use them to help secure messages.</span></span>  
+# <a name="windows-communication-foundation-security"></a><span data-ttu-id="b2279-102">Windows Communication Foundation Güvenliği</span><span class="sxs-lookup"><span data-stu-id="b2279-102">Windows Communication Foundation Security</span></span>
+<span data-ttu-id="b2279-103">Bu bölümdeki konularda, Windows Communication Foundation (WCF) güvenlik özellikleri ve bunları güvenli iletiler yardımcı olmak için nasıl kullanılacağını açıklar.</span><span class="sxs-lookup"><span data-stu-id="b2279-103">The topics in this section describe Windows Communication Foundation (WCF) security features and how to use them to help secure messages.</span></span>  
   
- <span data-ttu-id="10626-104">Windows Server AppFabric ve güvenlik hakkında daha fazla bilgi için bkz. [Windows Server AppFabric güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)</span><span class="sxs-lookup"><span data-stu-id="10626-104">For more information about Windows Server AppFabric and security, see [Security Model for Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)</span></span>  
+ <span data-ttu-id="b2279-104">Windows Server AppFabric ve güvenlik hakkında daha fazla bilgi için bkz. [Windows Server AppFabric güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)</span><span class="sxs-lookup"><span data-stu-id="b2279-104">For more information about Windows Server AppFabric and security, see [Security Model for Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="10626-105">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="10626-105">In This Section</span></span>  
- [<span data-ttu-id="10626-106">Güvenliğe Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="10626-106">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- <span data-ttu-id="10626-107">Wcf'de güvenlik özelliklerini açıklar.</span><span class="sxs-lookup"><span data-stu-id="10626-107">Describes the security features in WCF.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="b2279-105">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="b2279-105">In This Section</span></span>  
+ [<span data-ttu-id="b2279-106">Güvenliğe Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="b2279-106">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ <span data-ttu-id="b2279-107">Wcf'de güvenlik özelliklerini açıklar.</span><span class="sxs-lookup"><span data-stu-id="b2279-107">Describes the security features in WCF.</span></span>  
   
- [<span data-ttu-id="10626-108">Güvenlik Kavramları</span><span class="sxs-lookup"><span data-stu-id="10626-108">Security Concepts</span></span>](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
- <span data-ttu-id="10626-109">Temel terminoloji ve WCF güvenliğinde kullanılan kavramları açıklar.</span><span class="sxs-lookup"><span data-stu-id="10626-109">Describes the basic terminology and concepts used in WCF security.</span></span>  
+ [<span data-ttu-id="b2279-108">Güvenlik Kavramları</span><span class="sxs-lookup"><span data-stu-id="b2279-108">Security Concepts</span></span>](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
+ <span data-ttu-id="b2279-109">Temel terminoloji ve WCF güvenliğinde kullanılan kavramları açıklar.</span><span class="sxs-lookup"><span data-stu-id="b2279-109">Describes the basic terminology and concepts used in WCF security.</span></span>  
   
- [<span data-ttu-id="10626-110">Ortak Güvenlik Senaryoları</span><span class="sxs-lookup"><span data-stu-id="10626-110">Common Security Scenarios</span></span>](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
- <span data-ttu-id="10626-111">Senaryo ve Topolojilerde WCF ile yapılandırabileceğiniz açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="10626-111">Describes scenarios and topologies you can configure with WCF.</span></span>  
+ [<span data-ttu-id="b2279-110">Ortak Güvenlik Senaryoları</span><span class="sxs-lookup"><span data-stu-id="b2279-110">Common Security Scenarios</span></span>](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
+ <span data-ttu-id="b2279-111">Senaryo ve Topolojilerde WCF ile yapılandırabileceğiniz açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="b2279-111">Describes scenarios and topologies you can configure with WCF.</span></span>  
   
- [<span data-ttu-id="10626-112">Güvenlik Davranışları</span><span class="sxs-lookup"><span data-stu-id="10626-112">Security Behaviors</span></span>](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- <span data-ttu-id="10626-113">Güvenlik, kimlik bilgilerini ayarlama gibi etkileyen WCF davranışları genel bir bakış sağlar.</span><span class="sxs-lookup"><span data-stu-id="10626-113">Provides an overview of WCF behaviors that affect security, such as setting credentials.</span></span>  
+ [<span data-ttu-id="b2279-112">Güvenlik Davranışları</span><span class="sxs-lookup"><span data-stu-id="b2279-112">Security Behaviors</span></span>](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
+ <span data-ttu-id="b2279-113">Güvenlik, kimlik bilgilerini ayarlama gibi etkileyen WCF davranışları genel bir bakış sağlar.</span><span class="sxs-lookup"><span data-stu-id="b2279-113">Provides an overview of WCF behaviors that affect security, such as setting credentials.</span></span>  
   
- [<span data-ttu-id="10626-114">Bağlamalar ve Güvenlik</span><span class="sxs-lookup"><span data-stu-id="10626-114">Bindings and Security</span></span>](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
- <span data-ttu-id="10626-115">Özel güvenlik bağlamaları oluşturmak nasıl gösteren konular da dahil olmak üzere bağlamaları, güvenlik odaklı görünümünü.</span><span class="sxs-lookup"><span data-stu-id="10626-115">A security-oriented view of the bindings, including topics that demonstrate how to create custom security bindings.</span></span>  
+ [<span data-ttu-id="b2279-114">Bağlamalar ve Güvenlik</span><span class="sxs-lookup"><span data-stu-id="b2279-114">Bindings and Security</span></span>](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
+ <span data-ttu-id="b2279-115">Özel güvenlik bağlamaları oluşturmak nasıl gösteren konular da dahil olmak üzere bağlamaları, güvenlik odaklı görünümünü.</span><span class="sxs-lookup"><span data-stu-id="b2279-115">A security-oriented view of the bindings, including topics that demonstrate how to create custom security bindings.</span></span>  
   
- [<span data-ttu-id="10626-116">Hizmet ve İstemcileri Güvenli Hale Getirme</span><span class="sxs-lookup"><span data-stu-id="10626-116">Securing Services and Clients</span></span>](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- <span data-ttu-id="10626-117">WCF güvenlik özellikleri kullanarak iletileri güvenli hale getirmek açıklar.</span><span class="sxs-lookup"><span data-stu-id="10626-117">Describes how to secure messages using WCF security features.</span></span>  
+ [<span data-ttu-id="b2279-116">Hizmet ve İstemcileri Güvenli Hale Getirme</span><span class="sxs-lookup"><span data-stu-id="b2279-116">Securing Services and Clients</span></span>](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ <span data-ttu-id="b2279-117">WCF güvenlik özellikleri kullanarak iletileri güvenli hale getirmek açıklar.</span><span class="sxs-lookup"><span data-stu-id="b2279-117">Describes how to secure messages using WCF security features.</span></span>  
   
- [<span data-ttu-id="10626-118">Kimlik Doğrulaması</span><span class="sxs-lookup"><span data-stu-id="10626-118">Authentication</span></span>](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
- <span data-ttu-id="10626-119">Genel kimlik doğrulama görevlerini gösterir.</span><span class="sxs-lookup"><span data-stu-id="10626-119">Demonstrates common authentication tasks.</span></span>  
+ [<span data-ttu-id="b2279-118">Kimlik Doğrulaması</span><span class="sxs-lookup"><span data-stu-id="b2279-118">Authentication</span></span>](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
+ <span data-ttu-id="b2279-119">Genel kimlik doğrulama görevlerini gösterir.</span><span class="sxs-lookup"><span data-stu-id="b2279-119">Demonstrates common authentication tasks.</span></span>  
   
- [<span data-ttu-id="10626-120">Yetkilendirme</span><span class="sxs-lookup"><span data-stu-id="10626-120">Authorization</span></span>](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
- <span data-ttu-id="10626-121">Güvenlik uygulamaları ile yetkilendirme senaryoları açıklar.</span><span class="sxs-lookup"><span data-stu-id="10626-121">Describes common authorization scenarios with security implementations.</span></span>  
+ [<span data-ttu-id="b2279-120">Yetkilendirme</span><span class="sxs-lookup"><span data-stu-id="b2279-120">Authorization</span></span>](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
+ <span data-ttu-id="b2279-121">Güvenlik uygulamaları ile yetkilendirme senaryoları açıklar.</span><span class="sxs-lookup"><span data-stu-id="b2279-121">Describes common authorization scenarios with security implementations.</span></span>  
   
- [<span data-ttu-id="10626-122">Federasyon ve Verilen Belirteçler</span><span class="sxs-lookup"><span data-stu-id="10626-122">Federation and Issued Tokens</span></span>](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
- <span data-ttu-id="10626-123">Federasyon ve Federasyon sunucuları ile iletişim kuran istemciler oluşturma hakkındaki temel bilgileri açıklar.</span><span class="sxs-lookup"><span data-stu-id="10626-123">Describes the basics of federation and how to create clients that communicate with federated servers.</span></span>  
+ [<span data-ttu-id="b2279-122">Federasyon ve Verilen Belirteçler</span><span class="sxs-lookup"><span data-stu-id="b2279-122">Federation and Issued Tokens</span></span>](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
+ <span data-ttu-id="b2279-123">Federasyon ve Federasyon sunucuları ile iletişim kuran istemciler oluşturma hakkındaki temel bilgileri açıklar.</span><span class="sxs-lookup"><span data-stu-id="b2279-123">Describes the basics of federation and how to create clients that communicate with federated servers.</span></span>  
   
- [<span data-ttu-id="10626-124">Kısmi Güven</span><span class="sxs-lookup"><span data-stu-id="10626-124">Partial Trust</span></span>](../../../../docs/framework/wcf/feature-details/partial-trust.md)  
- <span data-ttu-id="10626-125">Kısmen güvenilen senaryoları ve WCF sınırlamalar kısmen güvenilen çalıştırırken çalıştırma işlemi açıklanır.</span><span class="sxs-lookup"><span data-stu-id="10626-125">Describes how to run partially-trusted scenarios and WCF limitations when running partially trusted.</span></span>  
+ [<span data-ttu-id="b2279-124">Kısmi Güven</span><span class="sxs-lookup"><span data-stu-id="b2279-124">Partial Trust</span></span>](../../../../docs/framework/wcf/feature-details/partial-trust.md)  
+ <span data-ttu-id="b2279-125">Kısmen güvenilen senaryoları ve WCF sınırlamalar kısmen güvenilen çalıştırırken çalıştırma işlemi açıklanır.</span><span class="sxs-lookup"><span data-stu-id="b2279-125">Describes how to run partially-trusted scenarios and WCF limitations when running partially trusted.</span></span>  
   
- [<span data-ttu-id="10626-126">Denetim</span><span class="sxs-lookup"><span data-stu-id="10626-126">Auditing</span></span>](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
- <span data-ttu-id="10626-127">Güvenlik olaylarını açıklar.</span><span class="sxs-lookup"><span data-stu-id="10626-127">Describes how to audit security events.</span></span>  
+ [<span data-ttu-id="b2279-126">Denetim</span><span class="sxs-lookup"><span data-stu-id="b2279-126">Auditing</span></span>](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
+ <span data-ttu-id="b2279-127">Güvenlik olaylarını açıklar.</span><span class="sxs-lookup"><span data-stu-id="b2279-127">Describes how to audit security events.</span></span>  
   
- [<span data-ttu-id="10626-128">Güvenlik Kılavuzu ve En İyi Uygulamalar</span><span class="sxs-lookup"><span data-stu-id="10626-128">Security Guidance and Best Practices</span></span>](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
- <span data-ttu-id="10626-129">Güvenli WCF uygulamaları oluşturmaya yönelik yönergeler.</span><span class="sxs-lookup"><span data-stu-id="10626-129">Guidelines for creating secure WCF applications.</span></span>  
+ [<span data-ttu-id="b2279-128">Güvenlik Kılavuzu ve En İyi Uygulamalar</span><span class="sxs-lookup"><span data-stu-id="b2279-128">Security Guidance and Best Practices</span></span>](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
+ <span data-ttu-id="b2279-129">Güvenli WCF uygulamaları oluşturmaya yönelik yönergeler.</span><span class="sxs-lookup"><span data-stu-id="b2279-129">Guidelines for creating secure WCF applications.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="10626-130">Başvuru</span><span class="sxs-lookup"><span data-stu-id="10626-130">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="b2279-130">Başvuru</span><span class="sxs-lookup"><span data-stu-id="b2279-130">Reference</span></span>  
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Security>  
   
-## <a name="related-sections"></a><span data-ttu-id="10626-131">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="10626-131">Related Sections</span></span>  
- [<span data-ttu-id="10626-132">WCF Özellik Ayrıntıları</span><span class="sxs-lookup"><span data-stu-id="10626-132">WCF Feature Details</span></span>](../../../../docs/framework/wcf/feature-details/index.md)  
+## <a name="related-sections"></a><span data-ttu-id="b2279-131">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="b2279-131">Related Sections</span></span>  
+ [<span data-ttu-id="b2279-132">WCF Özellik Ayrıntıları</span><span class="sxs-lookup"><span data-stu-id="b2279-132">WCF Feature Details</span></span>](../../../../docs/framework/wcf/feature-details/index.md)  
   
- [<span data-ttu-id="10626-133">Temel WCF Programlama</span><span class="sxs-lookup"><span data-stu-id="10626-133">Basic WCF Programming</span></span>](../../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [<span data-ttu-id="b2279-133">Temel WCF Programlama</span><span class="sxs-lookup"><span data-stu-id="b2279-133">Basic WCF Programming</span></span>](../../../../docs/framework/wcf/basic-wcf-programming.md)  
   
- [<span data-ttu-id="10626-134">Başlangıç Öğreticisi</span><span class="sxs-lookup"><span data-stu-id="10626-134">Getting Started Tutorial</span></span>](../../../../docs/framework/wcf/getting-started-tutorial.md)  
+ [<span data-ttu-id="b2279-134">Başlangıç Öğreticisi</span><span class="sxs-lookup"><span data-stu-id="b2279-134">Getting Started Tutorial</span></span>](../../../../docs/framework/wcf/getting-started-tutorial.md)  
   
- [<span data-ttu-id="10626-135">Kavramsal Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="10626-135">Conceptual Overview</span></span>](../../../../docs/framework/wcf/conceptual-overview.md)  
+ [<span data-ttu-id="b2279-135">Kavramsal Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="b2279-135">Conceptual Overview</span></span>](../../../../docs/framework/wcf/conceptual-overview.md)  
   
-## <a name="see-also"></a><span data-ttu-id="10626-136">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="10626-136">See Also</span></span>  
- [<span data-ttu-id="10626-137">Uygulamanızı Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="10626-137">Configuring Your Application</span></span>](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)
+## <a name="see-also"></a><span data-ttu-id="b2279-136">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="b2279-136">See Also</span></span>  
+ [<span data-ttu-id="b2279-137">Uygulamanızı Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="b2279-137">Configuring Your Application</span></span>](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)

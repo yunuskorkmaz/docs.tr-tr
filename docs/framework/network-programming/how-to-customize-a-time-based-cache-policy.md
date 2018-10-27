@@ -9,21 +9,19 @@ helpviewer_keywords:
 - customizing time-based cache policies
 - cache [.NET Framework], time-based policies
 ms.assetid: 8d84f936-2376-4356-9264-03162e0f9279
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 2d46f88b40fc48eb819877c49ff9e04e487a0f5a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 1a9e0d3197dcba63ef5497613e216a96868a03da
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47205258"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50182456"
 ---
-# <a name="how-to-customize-a-time-based-cache-policy"></a><span data-ttu-id="722c0-102">Nasıl yapılır: saat temelli önbellek ilkesini özelleştirme</span><span class="sxs-lookup"><span data-stu-id="722c0-102">How to: Customize a Time-Based Cache Policy</span></span>
-<span data-ttu-id="722c0-103">Bir saat temelli önbellek ilkesi oluştururken en uzun geçerlilik süresi, en az eskime, en fazla eskime veya önbellek eşitleme tarih değerleri belirtilerek, önbelleğe alma davranışını özelleştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="722c0-103">When creating a time-based cache policy, you can customize caching behavior by specifying values for maximum age, minimum freshness, maximum staleness, or cache synchronization date.</span></span> <span data-ttu-id="722c0-104"><xref:System.Net.Cache.HttpRequestCachePolicy> Nesnesi, bu değerleri geçerli birleşimleri belirtmek olanak tanıyan birkaç Oluşturucusu sağlar.</span><span class="sxs-lookup"><span data-stu-id="722c0-104">The <xref:System.Net.Cache.HttpRequestCachePolicy> object provides several constructors that allow you to specify valid combinations of these values.</span></span>  
+# <a name="how-to-customize-a-time-based-cache-policy"></a><span data-ttu-id="56388-102">Nasıl yapılır: saat temelli önbellek ilkesini özelleştirme</span><span class="sxs-lookup"><span data-stu-id="56388-102">How to: Customize a Time-Based Cache Policy</span></span>
+<span data-ttu-id="56388-103">Bir saat temelli önbellek ilkesi oluştururken en uzun geçerlilik süresi, en az eskime, en fazla eskime veya önbellek eşitleme tarih değerleri belirtilerek, önbelleğe alma davranışını özelleştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="56388-103">When creating a time-based cache policy, you can customize caching behavior by specifying values for maximum age, minimum freshness, maximum staleness, or cache synchronization date.</span></span> <span data-ttu-id="56388-104"><xref:System.Net.Cache.HttpRequestCachePolicy> Nesnesi, bu değerleri geçerli birleşimleri belirtmek olanak tanıyan birkaç Oluşturucusu sağlar.</span><span class="sxs-lookup"><span data-stu-id="56388-104">The <xref:System.Net.Cache.HttpRequestCachePolicy> object provides several constructors that allow you to specify valid combinations of these values.</span></span>  
   
-### <a name="to-create-a-time-based-cache-policy-that-uses-a-cache-synchronization-date"></a><span data-ttu-id="722c0-105">Bir önbellek eşitleme tarihi kullanan bir saat temelli önbellek ilkesi oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="722c0-105">To create a time-based cache policy that uses a cache synchronization date</span></span>  
+### <a name="to-create-a-time-based-cache-policy-that-uses-a-cache-synchronization-date"></a><span data-ttu-id="56388-105">Bir önbellek eşitleme tarihi kullanan bir saat temelli önbellek ilkesi oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="56388-105">To create a time-based cache policy that uses a cache synchronization date</span></span>  
   
--   <span data-ttu-id="722c0-106">Bir önbellek eşitleme tarihi geçirerek kullanan bir saat temelli önbellek ilkesi oluşturma bir <xref:System.DateTime> nesnesini <xref:System.Net.Cache.HttpRequestCachePolicy> Oluşturucusu.</span><span class="sxs-lookup"><span data-stu-id="722c0-106">Create a time-based cache policy that uses a cache synchronization date by passing a <xref:System.DateTime> object to the <xref:System.Net.Cache.HttpRequestCachePolicy> constructor.</span></span>  
+-   <span data-ttu-id="56388-106">Bir önbellek eşitleme tarihi geçirerek kullanan bir saat temelli önbellek ilkesi oluşturma bir <xref:System.DateTime> nesnesini <xref:System.Net.Cache.HttpRequestCachePolicy> Oluşturucusu.</span><span class="sxs-lookup"><span data-stu-id="56388-106">Create a time-based cache policy that uses a cache synchronization date by passing a <xref:System.DateTime> object to the <xref:System.Net.Cache.HttpRequestCachePolicy> constructor.</span></span>  
   
     ```csharp  
     public static HttpRequestCachePolicy CreateLastSyncPolicy(DateTime when)  
@@ -45,16 +43,16 @@ ms.locfileid: "47205258"
     End Function  
     ```  
   
- <span data-ttu-id="722c0-107">Çıktı aşağıdakine benzer olacaktır:</span><span class="sxs-lookup"><span data-stu-id="722c0-107">The output is similar to the following:</span></span>  
+ <span data-ttu-id="56388-107">Çıktı aşağıdakine benzer olacaktır:</span><span class="sxs-lookup"><span data-stu-id="56388-107">The output is similar to the following:</span></span>  
   
 ```  
 When: 1/14/2004 8:07:30 AM  
 Level:Default CacheSyncDate:1/14/2004 8:07:30 AM  
 ```  
   
-### <a name="to-create-a-time-based-cache-policy-that-is-based-on-minimum-freshness"></a><span data-ttu-id="722c0-108">Üzerinde en az eskime dayalı olarak bir saat temelli önbellek ilkesi oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="722c0-108">To create a time-based cache policy that is based on minimum freshness</span></span>  
+### <a name="to-create-a-time-based-cache-policy-that-is-based-on-minimum-freshness"></a><span data-ttu-id="56388-108">Üzerinde en az eskime dayalı olarak bir saat temelli önbellek ilkesi oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="56388-108">To create a time-based cache policy that is based on minimum freshness</span></span>  
   
--   <span data-ttu-id="722c0-109">Üzerinde en az eskime belirterek temel bir saat temelli önbellek İlkesi <xref:System.Net.Cache.HttpCacheAgeControl.MinFresh> olarak `cacheAgeControl` parametre değeri ve geçirme bir <xref:System.TimeSpan> nesnesini <xref:System.Net.Cache.HttpRequestCachePolicy> Oluşturucusu.</span><span class="sxs-lookup"><span data-stu-id="722c0-109">Create a time-based cache policy that is based on minimum freshness by specifying <xref:System.Net.Cache.HttpCacheAgeControl.MinFresh> as the `cacheAgeControl` parameter value and passing a <xref:System.TimeSpan> object to the <xref:System.Net.Cache.HttpRequestCachePolicy> constructor.</span></span>  
+-   <span data-ttu-id="56388-109">Üzerinde en az eskime belirterek temel bir saat temelli önbellek İlkesi <xref:System.Net.Cache.HttpCacheAgeControl.MinFresh> olarak `cacheAgeControl` parametre değeri ve geçirme bir <xref:System.TimeSpan> nesnesini <xref:System.Net.Cache.HttpRequestCachePolicy> Oluşturucusu.</span><span class="sxs-lookup"><span data-stu-id="56388-109">Create a time-based cache policy that is based on minimum freshness by specifying <xref:System.Net.Cache.HttpCacheAgeControl.MinFresh> as the `cacheAgeControl` parameter value and passing a <xref:System.TimeSpan> object to the <xref:System.Net.Cache.HttpRequestCachePolicy> constructor.</span></span>  
   
     ```csharp  
     public static HttpRequestCachePolicy CreateMinFreshPolicy(TimeSpan span)  
@@ -74,7 +72,7 @@ Level:Default CacheSyncDate:1/14/2004 8:07:30 AM
     End Function  
     ```  
   
- <span data-ttu-id="722c0-110">Aşağıdaki çağrı için:</span><span class="sxs-lookup"><span data-stu-id="722c0-110">For the following invocation:</span></span>  
+ <span data-ttu-id="56388-110">Aşağıdaki çağrı için:</span><span class="sxs-lookup"><span data-stu-id="56388-110">For the following invocation:</span></span>  
   
 ```  
 CreateMinFreshPolicy(new TimeSpan(1,0,0));  
@@ -84,9 +82,9 @@ CreateMinFreshPolicy(new TimeSpan(1,0,0));
 Level:Default MinFresh:3600  
 ```  
   
-### <a name="to-create-a-time-based-cache-policy-that-is-based-on-minimum-freshness-and-maximum-age"></a><span data-ttu-id="722c0-111">En az eskime ve en yüksek yaşı dayalı olarak bir saat temelli önbellek ilkesi oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="722c0-111">To create a time-based cache policy that is based on minimum freshness and maximum age</span></span>  
+### <a name="to-create-a-time-based-cache-policy-that-is-based-on-minimum-freshness-and-maximum-age"></a><span data-ttu-id="56388-111">En az eskime ve en yüksek yaşı dayalı olarak bir saat temelli önbellek ilkesi oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="56388-111">To create a time-based cache policy that is based on minimum freshness and maximum age</span></span>  
   
--   <span data-ttu-id="722c0-112">En az eskime ve en uzun geçerlilik süresi, belirterek dayalı olarak bir saat temelli önbellek İlkesi <xref:System.Net.Cache.HttpCacheAgeControl.MaxAgeAndMinFresh> olarak `cacheAgeControl` parametre değeri ve iki geçirme <xref:System.TimeSpan> nesneleri için <xref:System.Net.Cache.HttpRequestCachePolicy> oluşturucusu, en fazla geçerlilik süresini belirtmek için Kaynaklar ve en az eskime belirtmek için ikinci bir önbellekten döndürülen bir nesne için izin verilir.</span><span class="sxs-lookup"><span data-stu-id="722c0-112">Create a time-based cache policy that is based on minimum freshness and maximum age by specifying <xref:System.Net.Cache.HttpCacheAgeControl.MaxAgeAndMinFresh> as the `cacheAgeControl` parameter value and passing two <xref:System.TimeSpan> objects to the <xref:System.Net.Cache.HttpRequestCachePolicy> constructor, one to specify the maximum age for resources and a second to specify the minimum freshness permitted for an object returned from the cache.</span></span>  
+-   <span data-ttu-id="56388-112">En az eskime ve en uzun geçerlilik süresi, belirterek dayalı olarak bir saat temelli önbellek İlkesi <xref:System.Net.Cache.HttpCacheAgeControl.MaxAgeAndMinFresh> olarak `cacheAgeControl` parametre değeri ve iki geçirme <xref:System.TimeSpan> nesneleri için <xref:System.Net.Cache.HttpRequestCachePolicy> oluşturucusu, en fazla geçerlilik süresini belirtmek için Kaynaklar ve en az eskime belirtmek için ikinci bir önbellekten döndürülen bir nesne için izin verilir.</span><span class="sxs-lookup"><span data-stu-id="56388-112">Create a time-based cache policy that is based on minimum freshness and maximum age by specifying <xref:System.Net.Cache.HttpCacheAgeControl.MaxAgeAndMinFresh> as the `cacheAgeControl` parameter value and passing two <xref:System.TimeSpan> objects to the <xref:System.Net.Cache.HttpRequestCachePolicy> constructor, one to specify the maximum age for resources and a second to specify the minimum freshness permitted for an object returned from the cache.</span></span>  
   
     ```csharp  
     public static HttpRequestCachePolicy CreateFreshAndAgePolicy(TimeSpan freshMinimum, TimeSpan ageMaximum)  
@@ -106,7 +104,7 @@ Level:Default MinFresh:3600
     End Function  
     ```  
   
- <span data-ttu-id="722c0-113">Aşağıdaki çağrı için:</span><span class="sxs-lookup"><span data-stu-id="722c0-113">For the following invocation:</span></span>  
+ <span data-ttu-id="56388-113">Aşağıdaki çağrı için:</span><span class="sxs-lookup"><span data-stu-id="56388-113">For the following invocation:</span></span>  
   
 ```  
 CreateFreshAndAgePolicy(new TimeSpan(5,0,0), new TimeSpan(10,0,0));  
@@ -116,9 +114,9 @@ CreateFreshAndAgePolicy(new TimeSpan(5,0,0), new TimeSpan(10,0,0));
 Level:Default MaxAge:36000 MinFresh:18000  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="722c0-114">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="722c0-114">See Also</span></span>  
- [<span data-ttu-id="722c0-115">Ağ Uygulamaları için Önbellek Yönetimi</span><span class="sxs-lookup"><span data-stu-id="722c0-115">Cache Management for Network Applications</span></span>](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
- [<span data-ttu-id="722c0-116">Önbellek İlkesi</span><span class="sxs-lookup"><span data-stu-id="722c0-116">Cache Policy</span></span>](../../../docs/framework/network-programming/cache-policy.md)  
- [<span data-ttu-id="722c0-117">Konum Temelli Önbellek İlkeleri</span><span class="sxs-lookup"><span data-stu-id="722c0-117">Location-Based Cache Policies</span></span>](../../../docs/framework/network-programming/location-based-cache-policies.md)  
- [<span data-ttu-id="722c0-118">Saat Temelli Önbellek İlkeleri</span><span class="sxs-lookup"><span data-stu-id="722c0-118">Time-Based Cache Policies</span></span>](../../../docs/framework/network-programming/time-based-cache-policies.md)  
- [<span data-ttu-id="722c0-119">\<requestCaching > öğesi (ağ ayarları)</span><span class="sxs-lookup"><span data-stu-id="722c0-119">\<requestCaching> Element (Network Settings)</span></span>](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+## <a name="see-also"></a><span data-ttu-id="56388-114">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="56388-114">See Also</span></span>  
+ [<span data-ttu-id="56388-115">Ağ Uygulamaları için Önbellek Yönetimi</span><span class="sxs-lookup"><span data-stu-id="56388-115">Cache Management for Network Applications</span></span>](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
+ [<span data-ttu-id="56388-116">Önbellek İlkesi</span><span class="sxs-lookup"><span data-stu-id="56388-116">Cache Policy</span></span>](../../../docs/framework/network-programming/cache-policy.md)  
+ [<span data-ttu-id="56388-117">Konum Temelli Önbellek İlkeleri</span><span class="sxs-lookup"><span data-stu-id="56388-117">Location-Based Cache Policies</span></span>](../../../docs/framework/network-programming/location-based-cache-policies.md)  
+ [<span data-ttu-id="56388-118">Saat Temelli Önbellek İlkeleri</span><span class="sxs-lookup"><span data-stu-id="56388-118">Time-Based Cache Policies</span></span>](../../../docs/framework/network-programming/time-based-cache-policies.md)  
+ [<span data-ttu-id="56388-119">\<requestCaching > öğesi (ağ ayarları)</span><span class="sxs-lookup"><span data-stu-id="56388-119">\<requestCaching> Element (Network Settings)</span></span>](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)

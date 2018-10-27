@@ -1,46 +1,52 @@
 ---
 title: += İşleci (C# Başvurusu)
-ms.date: 07/20/2015
+ms.date: 10/22/2018
 f1_keywords:
 - +=_CSharpKeyword
 helpviewer_keywords:
 - += operator [C#]
 - addition assignment operator (+=) [C#]
+- event subscription [C#]
 ms.assetid: 9cdf97e6-331d-492b-85e1-3ec3171484e9
-ms.openlocfilehash: bd0997ec5b7d79a41e01f9c2b17533293e412c1e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: ee335e3e2e7d352d4e26b802bad2b08a05c666ab
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857513"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192037"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="07290-102">+= İşleci (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="07290-102">+= Operator (C# Reference)</span></span>
-<span data-ttu-id="07290-103">Toplama atama işleci.</span><span class="sxs-lookup"><span data-stu-id="07290-103">The addition assignment operator.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="07290-104">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="07290-104">Remarks</span></span>  
- <span data-ttu-id="07290-105">Bir ifade kullanarak `+=` atama işleci gibi</span><span class="sxs-lookup"><span data-stu-id="07290-105">An expression using the `+=` assignment operator, such as</span></span>  
-  
-```csharp  
-x += y  
-```  
-  
- <span data-ttu-id="07290-106">eşdeğerdir</span><span class="sxs-lookup"><span data-stu-id="07290-106">is equivalent to</span></span>  
-  
-```csharp  
-x = x + y  
-```  
-  
- <span data-ttu-id="07290-107">dışında `x` yalnızca bir kez değerlendirilir.</span><span class="sxs-lookup"><span data-stu-id="07290-107">except that `x` is only evaluated once.</span></span> <span data-ttu-id="07290-108">Anlamını [+ işleci](../../../csharp/language-reference/operators/addition-operator.md) türlerine bağlıdır `x` ve `y` (sayısal işlenenler, dize işlenenler ve benzeri için birleştirme için ek olarak).</span><span class="sxs-lookup"><span data-stu-id="07290-108">The meaning of the [+ operator](../../../csharp/language-reference/operators/addition-operator.md) depends on the types of `x` and `y` (addition for numeric operands, concatenation for string operands, and so forth).</span></span>  
-  
- <span data-ttu-id="07290-109">`+=` İşleci aşırı yüklenemez doğrudan, ancak kullanıcı tanımlı türler aşırı yükleme [+ işleci](../../../csharp/language-reference/operators/addition-operator.md) (bkz [işleci](../../../csharp/language-reference/keywords/operator.md)).</span><span class="sxs-lookup"><span data-stu-id="07290-109">The `+=` operator cannot be overloaded directly, but user-defined types can overload the [+ operator](../../../csharp/language-reference/operators/addition-operator.md) (see [operator](../../../csharp/language-reference/keywords/operator.md)).</span></span>  
-  
- <span data-ttu-id="07290-110">`+=` İşleci ayrıca bir olaya yanıt olarak çağrılacak bir yöntem belirtmek için kullanılır; bu tür yöntemler olay işleyicileri olarak adlandırılır.</span><span class="sxs-lookup"><span data-stu-id="07290-110">The `+=` operator is also used to specify a method that will be called in response to an event; such methods are called event handlers.</span></span> <span data-ttu-id="07290-111">Kullanımını `+=` bu bağlam içinde işleç olarak adlandırılır *bir olaya abone olma*.</span><span class="sxs-lookup"><span data-stu-id="07290-111">The use of the `+=` operator in this context is referred to as *subscribing to an event*.</span></span> <span data-ttu-id="07290-112">Daha fazla bilgi için [nasıl yapılır: abone olma ve aboneliği, olaylarından](../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md) ve [Temsilciler](../../../csharp/programming-guide/delegates/index.md).</span><span class="sxs-lookup"><span data-stu-id="07290-112">For more information, see [How to: Subscribe to and Unsubscribe from Events](../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md) and [Delegates](../../../csharp/programming-guide/delegates/index.md).</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="07290-113">Örnek</span><span class="sxs-lookup"><span data-stu-id="07290-113">Example</span></span>  
- [!code-csharp[csRefOperators#35](../../../csharp/language-reference/operators/codesnippet/CSharp/addition-assignment-operator_1.cs)]  
-  
-## <a name="see-also"></a><span data-ttu-id="07290-114">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="07290-114">See Also</span></span>
+# <a name="-operator-c-reference"></a><span data-ttu-id="bc852-102">+= İşleci (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="bc852-102">+= Operator (C# Reference)</span></span>
 
-- [<span data-ttu-id="07290-115">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="07290-115">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="07290-116">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="07290-116">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="07290-117">C# İşleçleri</span><span class="sxs-lookup"><span data-stu-id="07290-117">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
+<span data-ttu-id="bc852-103">Toplama atama işleci.</span><span class="sxs-lookup"><span data-stu-id="bc852-103">The addition assignment operator.</span></span>
+
+<span data-ttu-id="bc852-104">Bir ifade kullanarak `+=` işleci gibi</span><span class="sxs-lookup"><span data-stu-id="bc852-104">An expression using the `+=` operator, such as</span></span>  
+
+```csharp
+x += y
+```  
+
+<span data-ttu-id="bc852-105">eşdeğerdir</span><span class="sxs-lookup"><span data-stu-id="bc852-105">is equivalent to</span></span>  
+
+```csharp
+x = x + y
+```  
+
+<span data-ttu-id="bc852-106">dışında `x` yalnızca bir kez değerlendirilir.</span><span class="sxs-lookup"><span data-stu-id="bc852-106">except that `x` is only evaluated once.</span></span>
+  
+<span data-ttu-id="bc852-107">Sayısal türlerin [Toplama işleci](addition-operator.md) `+` işlenenleri toplamını hesaplar.</span><span class="sxs-lookup"><span data-stu-id="bc852-107">For numeric types, the [addition operator](addition-operator.md) `+` computes the sum of its operands.</span></span> <span data-ttu-id="bc852-108">Bir veya iki işlenenin türü ise [dize](../keywords/string.md), işlenenleri dize temsillerini art arda ekler.</span><span class="sxs-lookup"><span data-stu-id="bc852-108">If one or both operands is of type [string](../keywords/string.md), it concatenates the string representations of its operands.</span></span> <span data-ttu-id="bc852-109">Temsilci türleri için `+` işleci işlenenleri birleşimi olan yeni bir temsilci örneği döndürür.</span><span class="sxs-lookup"><span data-stu-id="bc852-109">For delegate types, the `+` operator returns a new delegate instance that is combination of its operands.</span></span>
+
+<span data-ttu-id="bc852-110">Kullanıcı tanımlı bir tür ederse [aşırı](../keywords/operator.md) [Toplama işleci](addition-operator.md) `+`, toplama atama işleci `+=` örtük olarak aşırı yüklendi.</span><span class="sxs-lookup"><span data-stu-id="bc852-110">If a user-defined type [overloads](../keywords/operator.md) the [addition operator](addition-operator.md) `+`, the addition assignment operator `+=` is implicitly overloaded.</span></span>
+
+<span data-ttu-id="bc852-111">Ayrıca `+=` a abone olduğunuzda bir olay işleyicisi yöntemi belirtmek için işleci bir [olay](../keywords/event.md).</span><span class="sxs-lookup"><span data-stu-id="bc852-111">You also use the `+=` operator to specify an event handler method when you subscribe to an [event](../keywords/event.md).</span></span> <span data-ttu-id="bc852-112">Daha fazla bilgi için [nasıl yapılır: abone olma ve aboneliği, olaylarından](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).</span><span class="sxs-lookup"><span data-stu-id="bc852-112">For more information, see [How to: Subscribe to and Unsubscribe from Events](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).</span></span>
+
+<span data-ttu-id="bc852-113">Aşağıdaki örnek, kullanımını gösterir. `+=` işleci:</span><span class="sxs-lookup"><span data-stu-id="bc852-113">The following example demonstrates the usage of the `+=` operator:</span></span>
+
+[!code-csharp-interactive[+= examples](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddAndAssign)]
+  
+## <a name="see-also"></a><span data-ttu-id="bc852-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="bc852-114">See also</span></span>
+
+- [<span data-ttu-id="bc852-115">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="bc852-115">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="bc852-116">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="bc852-116">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="bc852-117">C# İşleçleri</span><span class="sxs-lookup"><span data-stu-id="bc852-117">C# Operators</span></span>](index.md)
+- [<span data-ttu-id="bc852-118">Olaylar</span><span class="sxs-lookup"><span data-stu-id="bc852-118">Events</span></span>](../../programming-guide/events/index.md)
+- [<span data-ttu-id="bc852-119">Temsilciler</span><span class="sxs-lookup"><span data-stu-id="bc852-119">Delegates</span></span>](../../programming-guide/delegates/index.md)
