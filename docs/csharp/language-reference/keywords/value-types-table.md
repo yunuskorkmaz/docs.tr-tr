@@ -6,12 +6,12 @@ helpviewer_keywords:
 - types [C#], value types
 - types [C#], suffixes
 ms.assetid: 67d8f631-b6e3-4d83-9910-5ec497f8c5f3
-ms.openlocfilehash: bc7143b9f006af20b0bb91203d3093410d4ac0bf
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: aa37e2237ca0cffe7ff2e64aa53739b6ffafd24a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45609729"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50182756"
 ---
 # <a name="value-types-table-c-reference"></a>Değer türleri tablosu (C# Başvurusu)
 
@@ -43,9 +43,9 @@ Bir sayısal değişmez değer türü belirtmek için kullanın. Örneğin:
 decimal a = 0.1M;
 ```
 
-Varsa bir [tamsayı sayısal sabit değer](/dotnet/csharp/language-reference/language-specification/lexical-structure#integer-literals) hiçbir soneki olan ilk hangi değeri gösterilebileceği aşağıdaki türleri içeriyor: `int`, `uint`, `long`, `ulong`.
+Varsa bir [tamsayı sayısal sabit değer](~/_csharplang/spec/lexical-structure.md#integer-literals) hiçbir soneki olan ilk hangi değeri gösterilebileceği aşağıdaki türleri içeriyor: `int`, `uint`, `long`, `ulong`.
 
-Varsa bir [gerçek sayısal sabit değer](/dotnet/csharp/language-reference/language-specification/lexical-structure#real-literals) hiçbir soneki olan türü `double`.
+Varsa bir [gerçek sayısal sabit değer](~/_csharplang/spec/lexical-structure.md#real-literals) hiçbir soneki olan türü `double`.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

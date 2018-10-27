@@ -9,17 +9,15 @@ helpviewer_keywords:
 - -? compiler option [Visual Basic]
 - '? compiler option [Visual Basic]'
 ms.assetid: eb984aa5-ac98-4d0b-a0d2-24238d7bc8dc
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 822b1925d2b8a672229dcda8e5b725aa5fd9de86
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ff13be6f2ec2e66bd3ff5f7c4b2c3e1a24e699db
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33651459"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50182131"
 ---
 # <a name="-help---visual-basic"></a>-help,-? (Visual Basic)
-Derleyici seçeneklerini görüntüler.  
+Derleyici seçenekleri görüntüler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -30,13 +28,13 @@ Derleyici seçeneklerini görüntüler.
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu seçenek bir derlemede eklerseniz, herhangi bir çıktı dosyası oluşturulur ve hiçbir derleme gerçekleşir.  
+ Bir derleme içinde bu seçeneği eklerseniz, çıkış dosyası oluşturulur ve hiçbir derleme gerçekleşir.  
   
 > [!NOTE]
->  `-help` Seçeneği Visual Studio geliştirme ortamında kullanılabilir değil; yalnızca komut satırından derlerken kullanılabilir.  
+>  `-help` Seçeneği, Visual Studio geliştirme ortamında kullanılabilir değil; yalnızca komut satırından derleme yapılırken kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod, komut satırından Yardımı görüntüler.  
+ Aşağıdaki kod, komut satırı yardımı görüntüler.  
   
 ```  
 vbc -help  

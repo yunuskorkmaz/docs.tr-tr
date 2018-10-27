@@ -2,13 +2,12 @@
 title: Davranış Güvenliği
 ms.date: 03/30/2017
 ms.assetid: 19710ae3-f197-4d28-ba9d-52e465006819
-author: BrucePerlerMS
-ms.openlocfilehash: 255393c3b1fd6d395e0013010fc590c4579dda77
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f5fd9cdb5fa0a84a151bc00ba63f1f5e89530629
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47215840"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192817"
 ---
 # <a name="behavior-security"></a>Davranış Güvenliği
 Bu bölüm, hizmet davranışları için yapılandırma güvenlik gösteren örnekler içerir.  

@@ -2,12 +2,12 @@
 title: Yönlendirme Hizmeti ile Merhaba Dünya
 ms.date: 03/30/2017
 ms.assetid: 0f4b0d5b-6522-4ad5-9f3a-baa78316d7d1
-ms.openlocfilehash: 52b5c3b167cbbfb032d8e6104a118c5c9384938e
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 25d0ce0663b60410912be94780fe8e89f6bf0d39
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845781"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50182548"
 ---
 # <a name="hello-world-with-the-routing-service"></a>Yönlendirme Hizmeti ile Merhaba Dünya
 Bu örnek, Windows Communication Foundation (WCF) yönlendirme hizmeti gösterir. Yönlendirme hizmeti, içerik tabanlı bir yönlendirici uygulamanıza dahil etmek kolay bir WCF bileşenidir. Bu örnek, yönlendirme hizmeti kullanarak iletişim kurmak için standart WCF hesaplayıcı örnek uyum sağlar. Bu örnekte, hesaplayıcı istemci yönlendirici tarafından sunulan bir uç noktaya iletileri göndermek için yapılandırılır. Yönlendirme hizmeti, kendisine gönderilen tüm iletileri kabul etmesini ve hesaplayıcı hizmetine karşılık gelen bir uç nokta iletmek için yapılandırılır. Bu nedenle istemci tarafından gönderilen iletileri yönlendirici tarafından alınan ve gerçek hesaplayıcı hizmete yeniden yönlendirilen. Hesaplayıcı hizmetinden gelen iletileri hangi sırayla bunları hesaplayıcı istemciye aktarır yeniden yönlendiriciye gönderilir.
@@ -29,13 +29,15 @@ Bu örnek, Windows Communication Foundation (WCF) yönlendirme hizmeti gösterir
 
      Aşağıdaki çıktıyı görmeniz gerekir:
 
-     Add(100,15.99) 115.99 =
+    ```console
+     Add(100,15.99) = 115.99
 
-     Subtract(145,76.54) 68.46 =
+     Subtract(145,76.54) = 68.46
 
-     Multiply(9,81.25) 731.25 =
+     Multiply(9,81.25) = 731.25
 
-     Divide(22,7) 3.14285714285714 =
+     Divide(22,7) = 3.14285714285714
+    ```
 
 ## <a name="configurable-via-code-or-appconfig"></a>Kod veya App.Config aracılığıyla yapılandırılabilir
  Bir App.config dosyası yönlendiricinin davranışını tanımlamak için kullanmak üzere yapılandırılmış örnek verilir. Ayrıca, App.config dosyasının adı bir şeye tanınmıyor şekilde değiştirin ve ConfigureRouterViaCode() yöntem çağrısına açıklamasını kaldırın. Her iki yöntem aynı davranışı yönlendiriciden sonuçlanır.

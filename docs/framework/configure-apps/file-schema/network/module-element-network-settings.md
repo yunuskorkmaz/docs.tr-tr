@@ -8,14 +8,12 @@ helpviewer_keywords:
 - module element
 - <module> element
 ms.assetid: 10318725-9666-4d65-ab61-b94c64e59f13
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 4d51010d6236103d252507802e14d01230d90219
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 2d263fd64475d119d536e7cef69896fcfa5ae42c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397195"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183704"
 ---
 # <a name="ltmodulegt-element-network-settings"></a>&lt;Modül&gt; öğesi (ağ ayarları)
 Yeni proxy modülü uygulamayı ekler.  
@@ -75,5 +73,5 @@ Yeni proxy modülü uygulamayı ekler.
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Net.IWebProxy?displayProperty=nameWithType>  
- [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net.IWebProxy?displayProperty=nameWithType>  
+- [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

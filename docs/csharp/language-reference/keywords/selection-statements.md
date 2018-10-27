@@ -1,34 +1,35 @@
 ---
-title: Seçim Deyimleri (C# Başvurusu)
+title: Seçim deyimleri (C# Başvurusu)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - statements [C#], selection
 ms.assetid: cf21cfa2-34fb-48b0-9cbc-8bb4537a9a05
-ms.openlocfilehash: da3132a82e2cb0b3aaa55fbe82898414ebd31c12
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: b4575884acc63489f3e40bd040257a9c6bca5df9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48026311"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181426"
 ---
-# <a name="selection-statements-c-reference"></a>Seçim Deyimleri (C# Başvurusu)
-Seçimi deyimi programın denetimini belirli bir koşulu olup üzerine dayalı belirli bir akış aktarılmasını neden `true` veya yok.  
-  
- Aşağıdaki anahtar sözcükler seçimi deyimlerinde kullanılır:  
-  
--   [Eğer](../../../csharp/language-reference/keywords/if-else.md)  
-  
--   [else](../../../csharp/language-reference/keywords/if-else.md)  
-  
--   [switch](../../../csharp/language-reference/keywords/switch.md)  
-  
--   [Servis talebi](../../../csharp/language-reference/keywords/switch.md)  
-  
--   [default](../../../csharp/language-reference/keywords/switch.md)  
+# <a name="selection-statements-c-reference"></a>Seçim deyimleri (C# Başvurusu)
 
-## <a name="see-also"></a>Ayrıca Bkz.
+Seçimi deyimi programın denetimini belirli bir koşulu olup üzerine dayalı belirli bir akış aktarılmasını neden `true` veya yok.
 
-- [C# başvurusu](../../../csharp/language-reference/index.md)  
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
-- [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
-- [Deyim Anahtar Sözcükleri](../../../csharp/language-reference/keywords/statement-keywords.md)
+Aşağıdaki anahtar sözcükler seçimi deyimlerinde kullanılır:
+
+- [Eğer](if-else.md)
+
+- [else](if-else.md)
+
+- [switch](switch.md)
+
+- [case](switch.md)
+
+- [default](switch.md)
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [C# başvurusu](../index.md)
+- [C# Programlama Kılavuzu](../../programming-guide/index.md)
+- [C# Anahtar Sözcükleri](index.md)
+- [Deyim Anahtar Sözcükleri](statement-keywords.md)

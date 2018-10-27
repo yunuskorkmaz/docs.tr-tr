@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: c617b2d7b56618867fe92cbe1d9ee04aa4c3ab64
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 51cc24fd8054b87b6c92a02450420a9c4abef525
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45653206"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191096"
 ---
 # <a name="c-features-that-support-linq"></a>LINQ'i Destekleyen C# Özellikleri
 Aşağıdaki bölümde, C# 3.0 sürümünde sunulan yeni dil yapıları sunar. Bu yeni özelliklerin tümünü bir dereceye kullanılsa [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgular olmadıkları için sınırlı [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] ve burada, bunları kullanışlı her bağlamda kullanılabilir.  
@@ -47,13 +47,26 @@ var query = from str in stringArray
 ```csharp  
 Customer cust = new Customer { Name = "Mike", Phone = "555-1212" };  
 ```  
-  
- Daha fazla bilgi için [nesne ve koleksiyon başlatıcıları](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).  
-  
+Devam etmeden bizim `Customer` sınıfı, adlandırılan bir veri kaynağı olduğunu varsayın `IncomingOrders`ve her sipariş büyük ile ilgili `OrderSize`, yeni bir istiyoruz `Customer` dışına o sırada temel. LINQ sorgusu, bu veri kaynağında yürütülen ve bir koleksiyonu doldurmak için nesne başlatmayı kullanın:
+```csharp
+var newLargeOrderCustomers = from o in IncomingOrders
+                            where o.OrderSize > 5
+                            select new Customer { Name = o.Name, Phone = o.Phone };
+```
+Veri kaynağını daha fazla özellik dizinimizin duran olabilir `Customer` gibi sınıf `OrderSize`, ancak ile nesne başlatmayı, istenen veri türüne sorgudan döndürülen verileri ekleme; biz bizim sınıfına ilgili verileri seçin. Sonuç olarak, artık sahip olduğumuz bir `IEnumerable` yeni doldurulmuş `Customer`s istedik. Yukarıdaki, ayrıca LINQ'ın yöntemi sözdiziminde yazılabilir:
+```csharp
+var newLargeOrderCustomers = IncomingOrders.Where(x => x.OrderSize > 5).Select(y => new Customer { Name = y.Name, Phone = y.Phone });
+```
+ Daha fazla bilgi için bkz.:
+ 
+ - [Nesne ve Koleksiyon Başlatıcıları](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+
+ - [Standart Sorgu İşleçleri için Sorgu İfade Sözdizimi](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
+
 ## <a name="anonymous-types"></a>Anonim Türler  
  Anonim bir tür derleyici tarafından oluşturulmuş olan ve yalnızca tür adı derleyici için kullanılabilir. Anonim türler bir sorgu sonucu özelliklerinde geçici olarak bir dizi türü adlı ayrı bir tanımlamak zorunda kalmadan gruplandırmak için kullanışlı bir yol sağlar. Anonim türler, burada gösterildiği gibi bir new ifadesi ve bir nesne Başlatıcı ile başlatılır:  
   
-```  
+```csharp
 select new {name = cust.Name, phone = cust.Phone};  
 ```  
   
@@ -74,16 +87,7 @@ select new {name = cust.Name, phone = cust.Phone};
 -   [Lambda İfadeleri](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
   
 -   [İfade ağaçları (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)  
-  
-## <a name="auto-implemented-properties"></a>Otomatik Uygulanan Özellikler  
- Otomatik uygulanan özellikler özellik bildirimini daha kısa yapın. Aşağıdaki örnekte gösterildiği gibi bir özellik bildirdiğinizde, derleyici özellik alıcı ve ayarlayıcı erişilemeyen dışında özel, anonim destek alanı oluşturacaksınız.  
-  
-```csharp  
-public string Name {get; set;}  
-```  
-  
- Daha fazla bilgi için [Implemented Properties](../../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md).  
-  
+   
 ## <a name="see-also"></a>Ayrıca Bkz.
 
 - [Dil ile tümleşik sorgu (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)

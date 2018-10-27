@@ -3,12 +3,12 @@ title: Konsol Uygulaması
 description: Bu öğretici, .NET Core ve C# dili özellikleri sayısı öğretir.
 ms.date: 03/06/2017
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: da3f8f913d452b5c3c9dcda6079067c879a678dd
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 9255ad9b1fefc828e767fb8e6ccc62b2eaf23fd6
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46937598"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183626"
 ---
 # <a name="console-application"></a>Konsol Uygulaması
 
@@ -155,7 +155,7 @@ if (lineLength > 70)
 
 ## <a name="async-tasks"></a>Zaman uyumsuz görevleri
 
-Bu son adımda, zaman uyumsuz olarak çıkış hızını artırın ya da metin görüntülenmesini yavaşlatan isterseniz de okumak için başka bir görev giriş kullanıcıdan çalıştırılırken bir görevde yazan kodu ekleyeceksiniz. Bu da ve sonuna birkaç adım vardır, ihtiyacınız olan tüm güncelleştirmeleri gerekir.
+Bu son adımda, çıkış hızlandırmak istiyorsanız bir kullanıcıdan giriş veya metin görüntüleme yavaşlamasına okumak için başka bir görev ayrıca çalıştırılırken bir görevde zaman uyumsuz olarak yazmak için kod ekleyin veya metin görüntülemeyi tamamen durdurmak. Bu da ve sonuna birkaç adım vardır, ihtiyacınız olan tüm güncelleştirmeleri gerekir.
 Zaman uyumsuz oluşturmak için ilk adımıdır <xref:System.Threading.Tasks.Task> okumak ve dosyayı görüntülemek için oluşturduğunuz şimdiye kodunu temsil eden yöntemi döndürüyor.
 
 Bu yöntemi ekleyin, `Program` sınıfı (gövdesinden alınır, `Main` yöntemi):
@@ -190,7 +190,7 @@ Burada, `Main`, kod zaman uyumlu olarak bekleyin. Kullanmanız gereken `await` m
 > [!NOTE]
 > C# 7.1 kullandığınız ya da daha sonra konsol uygulamaları ile oluşturabileceğiniz [ `async` `Main` yöntemi](../whats-new/csharp-7-1.md#async-main).
 
-Konsoldan okunan ve izlemek için ikinci zaman uyumsuz yöntem yazmanıza gerek ardından, ' <' (küçüktür) ve ' >' (büyüktür) anahtarları. Bu görev için eklediğiniz yöntemi aşağıda verilmiştir:
+Konsoldan okunan ve izlemek için ikinci zaman uyumsuz yöntem yazmanıza gerek ardından, ' <' (küçüktür), ' >' (büyüktür) ve 'X' veya 'x' anahtarları. Bu görev için eklediğiniz yöntemi aşağıda verilmiştir:
 
 ```csharp
 private static async Task GetInput()
@@ -208,13 +208,18 @@ private static async Task GetInput()
             {
                 delay += 10;
             }
+            else if (key.KeyChar == 'X' || key.KeyChar == 'x')
+            {
+                break;
+            }
         } while (true);
     };
     await Task.Run(work);
 }
 ```
 
-Bu bir lambda ifadesini göstermek için oluşturur bir <xref:System.Action> konsoldan bir anahtar okuyan ve kullanıcının bastığında gecikmesini temsil eden yerel bir değişken değiştirir temsilci ' <' (küçüktür) veya ' >' (büyüktür) anahtarları. Bu yöntemde <xref:System.Console.ReadKey> engelleyin ve kullanıcıyı bir tuşa basın.
+Bu bir lambda ifadesini göstermek için oluşturur bir <xref:System.Action> konsoldan bir anahtar okuyan ve kullanıcının bastığında gecikmesini temsil eden yerel bir değişken değiştirir temsilci ' <' (küçüktür) veya ' >' (büyüktür) anahtarları. Temsilci yöntemi, kullanıcının bastığında 'X' veya 'x' metin görüntülemeyi dilediğiniz zaman durdurmak kullanıcı izin veren anahtarları tamamlanır.
+Bu yöntemde <xref:System.Console.ReadKey> engelleyin ve kullanıcıyı bir tuşa basın.
 
 Bu özellik tamamlamak için yeni bir gereksinim `async Task` bu görevlerin her ikisi de başlatan yöntem döndüren (`GetInput` ve `ShowTeleprompter`) ve bu iki görevler arasında paylaşılan veri da yönetir.
 

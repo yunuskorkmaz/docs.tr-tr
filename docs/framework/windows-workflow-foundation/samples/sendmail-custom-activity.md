@@ -2,12 +2,12 @@
 title: SendMail özel etkinliği
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-ms.openlocfilehash: f51914ae01ea680ae09be8080cce1aa866bd6ec7
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 4cd2ed8c80bd5ab4c4e784f4c5c86a58ecceda2f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845261"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181296"
 ---
 # <a name="sendmail-custom-activity"></a>SendMail özel etkinliği
 Bu örnek, türetilen özel etkinlik oluşturma işlemini gösterir <xref:System.Activities.AsyncCodeActivity> bir iş akışı uygulaması içinde kullanmak için SMTP kullanarak posta göndermek için. Özel Etkinlik özelliklerini kullanan <xref:System.Net.Mail.SmtpClient> zaman uyumsuz olarak e-posta gönderin ve kimlik doğrulaması içeren e-posta göndermek için. Test modu, belirteç değiştirme, dosya şablonları ve test bırakma yolu gibi bazı son kullanıcı özellikler de sağlar.  
@@ -84,7 +84,7 @@ new SendMail
 ```  
   
 ### <a name="sending-mails-in-testing-mode"></a>Modu test e-postalar gönderme  
- Bu kod parçacığı, iki test özelliklerini ayarlama işlemi gösterilmektedir: ayarlayarak `TestMailTo` tüm iletileri gönderilir john.doe@contoso.con (bakmadan değerlerinin Kime, bilgi, gizli). TestDropPath ayarlayarak tüm giden e-postaları da sağlanan yolda kaydedilir. Bu özellikler bağımsız olarak ayarlanabilir (bunlar birbiriyle ilgili olmayan).  
+ Bu kod parçacığı, iki test özelliklerini ayarlama işlemi gösterilmektedir: ayarlayarak `TestMailTo` tüm iletileri gönderilir `john.doe@contoso.con` (bakmadan değerlerinin Kime, bilgi, gizli). TestDropPath ayarlayarak tüm giden e-postaları da sağlanan yolda kaydedilir. Bu özellikler bağımsız olarak ayarlanabilir (bunlar birbiriyle ilgili olmayan).  
   
 ```  
 new SendMail  

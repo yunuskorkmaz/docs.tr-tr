@@ -26,14 +26,12 @@ helpviewer_keywords:
 - IPv6, addresses in
 - IPv6, disabling
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 8c992a96f2fa8d55d1fe16c03922cc8dbb39451c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ac8b8bae69ba20f34bb74fbff533ba53f915a150
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47194015"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183418"
 ---
 # <a name="ipv6-addressing"></a>IPv6 adresleme
 Internet Protokolü sürüm 6 (IPv6), 128 bit uzunluğunda adresleridir. Kullanılabilir adresler Internet'in topolojisini yansıtmak Yönlendirme etki alanları bir hiyerarşiye alt bölümlere ayırmak için bu tür bir geniş adres alanı bir neden olmasıdır. Başka bir nedeni, cihazları ağa bağlanan adreslerini ağ bağdaştırıcıları (veya arabirimleri) eşlemektir. IPv6 adresleri ağ arabirimi düzeyinde olduğunu ve ayrıca otomatik yapılandırma özellikleri, düşük düzeyinde gidermek için doğal bir özellik sunar.  
@@ -41,7 +39,7 @@ Internet Protokolü sürüm 6 (IPv6), 128 bit uzunluğunda adresleridir. Kullan�
 ## <a name="text-representation"></a>Metin gösterimi  
  Metin dizesi olarak IPv6 adresleri temsil etmek için kullanılan üç geleneksel forms şunlardır:  
   
--   **İki nokta üst üste onaltılık form**. Tercih edilen form n:n:n:n:n:n:n:n budur. Her n adresinin sekiz 16-bit öğelerden biri onaltılık değerini temsil eder. Örneğin: `3FFE:FFFF:7654:FEDA:1245:BA98:3210:4562`.  
+-   **İki nokta üst üste onaltılık form**. Tercih edilen form n:n:n:n:n:n:n:n budur. Her n adresinin sekiz 16-bit öğelerden biri onaltılık değerini temsil eder. Örneğin: `3FFE:FFFF:7654:FEDA:1245:BA98:3210:4562`  
   
 -   **Sıkıştırılmış form**. Adresi uzunluğu nedeniyle sıfır uzunluğunda bir dize içeren adresler çok yaygındır. Bu adresler yazma basitleştirmek için 0 blokları tek bitişik bir dizi bir çift iki nokta üst üste (:) sembolü gösterilir, sıkıştırılmış biçimi kullanın. Bu simge, bir adres olarak yalnızca bir kez görünebilir. Örneğin, çok noktaya yayın adresi `FFED:0:0:0:0:BA98:3210:4562` sıkıştırılmış biçimindedir `FFED::BA98:3210:4562`. Tek noktaya yayın adresi `3FFE:FFFF:0:0:8:800:20C4:0` sıkıştırılmış biçimindedir `3FFE:FFFF::8:800:20C4:0`. Geri döngü adresine `0:0:0:0:0:0:0:1` sıkıştırılmış biçimindedir `::`1. Belirtilmemiş adres `0:0:0:0:0:0:0:0` sıkıştırılmış biçimindedir `::`.  
   

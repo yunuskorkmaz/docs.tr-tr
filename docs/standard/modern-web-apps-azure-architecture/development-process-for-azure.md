@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern Web uygulamaları tasarlama | Azur
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: a614cfe3d3437426893d8748165b2ef4d6389765
-ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
+ms.openlocfilehash: 487a303e5cf572cf4173423588ee7fb5a93cb394
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47863604"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185632"
 ---
 # <a name="development-process-for-azure"></a>Azure için geliştirme işlemi
 
@@ -94,7 +94,7 @@ Yeni bir yapı, yapı sunucusunda paylaşılan uygulama kodu deposunun yeni bir 
 
 #### <a name="step-4-build-server-continuous-delivery"></a>4. adımı. Yapı sunucusu: Sürekli teslim
 
-Bir kez başarılı şekilde bir derleme, üretilen derleme yapıları CD işlem seçer. Bu web içerecektir paketini dağıtabilirsiniz. Yapı sunucusunda bu paketin Azure App Service, yeni oluşturulan bir var olan herhangi bir hizmeti değiştirerek dağıtır. Bu adım bir hazırlık ortamı genellikle hedefler, ancak bazı uygulamaları doğrudan bir CD işlemiyle üretime dağıtın.
+Bir derleme başarılı olana sonra CD işlemiyle üretilen derleme yapıları seçer. Bu web içerecektir paketini dağıtabilirsiniz. Yapı sunucusunda bu paketin Azure App Service, yeni oluşturulan bir var olan herhangi bir hizmeti değiştirerek dağıtır. Bu adım bir hazırlık ortamı genellikle hedefler, ancak bazı uygulamaları doğrudan bir CD işlemiyle üretime dağıtın.
 
 #### <a name="step-5-azure-app-service-web-app"></a>5. adımı. Azure App Service Web uygulaması
 

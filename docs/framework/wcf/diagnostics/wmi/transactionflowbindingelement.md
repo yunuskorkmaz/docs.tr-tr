@@ -2,19 +2,19 @@
 title: TransactionFlowBindingElement
 ms.date: 03/30/2017
 ms.assetid: 0a9656fe-2400-45ca-ad79-92715c8cf190
-ms.openlocfilehash: c2fb32c4c693cbfc487ce89b36f013398cbdb703
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 027ace6ea9fc2a0e5ce63efa84e1a49c0ed2cd0a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33485626"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188033"
 ---
 # <a name="transactionflowbindingelement"></a>TransactionFlowBindingElement
 TransactionFlowBindingElement  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```csharp
 class TransactionFlowBindingElement : BindingElement  
 {  
   string IssuedTokens;  
@@ -24,7 +24,7 @@ class TransactionFlowBindingElement : BindingElement
 ```  
   
 ## <a name="methods"></a>Yöntemler  
- TransactionFlowBindingElement sınıfı herhangi bir yöntem tanımlamıyor.  
+ TransactionFlowBindingElement sınıf herhangi bir yöntemi tanımlamaz.  
   
 ## <a name="properties"></a>Özellikler  
  TransactionFlowBindingElement sınıfı aşağıdaki özelliklere sahiptir:  
@@ -32,29 +32,29 @@ class TransactionFlowBindingElement : BindingElement
 ### <a name="issuedtokens"></a>IssuedTokens  
  Veri türü: dize  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Verilen güvenlik belirteçleri üstbilgisi (WS-Trust gelen IssuedTokens) gereksinimini belirtir.  
+ Verilen güvenlik belirteçleri başlığı (WS-Trust gelen IssuedTokens) için gereksinim belirtir.  
   
 ### <a name="transactionprotocol"></a>transactionProtocol  
  Veri türü: dize  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Akış işlemleri için hizmet tarafından kullanılan işlemleri protokol.  
+ İşlem akış işlem hizmeti tarafından kullanılan protokol.  
   
 ### <a name="transactions"></a>İşlemler  
- Veri türü: boolean  
+ Veri türü: Boole  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Gelen işlemin desteklenip desteklenmediğini gösterir.  
+ Gelen işlem desteklenip desteklenmediğini gösterir.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|MOF|Bildirilen Servicemodel.mof.|  
+|MOF|Bildirilmiş Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Ad Alanı|İçinde tanımlanan root\ServiceModel|  
+|Ad Alanı|İçinde tanımlı root\ServiceModel|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>

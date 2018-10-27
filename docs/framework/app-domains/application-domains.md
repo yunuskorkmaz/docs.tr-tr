@@ -1,5 +1,5 @@
 ---
-title: Uygulama Etki Alanları
+title: Uygulama etki alanları
 ms.date: 03/30/2017
 helpviewer_keywords:
 - process boundaries for isolation
@@ -14,28 +14,21 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ddf8f52ab98d0188235d8c9f97293adced4bfe90
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 2e1db5447be5f46873b6648fc6791426b2886a75
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698321"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192622"
 ---
-# <a name="application-domains"></a>Uygulama Etki Alanları
+# <a name="application-domains"></a>Uygulama etki alanları
+
 İşletim sistemleri ve çalışma zamanı ortamlarını normalde çeşit uygulamalar arasında yalıtım sağlar. Örneğin, Windows uygulamalarını yalıtmak için işlemleri kullanır. Bir uygulama içinde çalışan kodun ilgisiz başka uygulamaları olumsuz yönde etkilememesini sağlamak bu yalıtım gereklidir.  
   
  Uygulama etki alanları, güvenlik, güvenilirlik ve sürüm oluşturma ve derlemeleri kaldırma için bir yalıtım sınırı sağlar. Uygulama etki alanları genellikle uygulama çalıştırılmadan önce ortak dil çalışma zamanı önyüklemesinden sorumlu çalışma zamanı ana bilgisayarları tarafından oluşturulur.  
   
- Belgelerin bu bölümdeki konular, derlemeler arasında yalıtım sağlamak için uygulama etki alanları kullanın işlemleri açıklanmaktadır.  
-  
- Bu genel bakış aşağıdaki bölümleri içerir:  
-  
--   [Uygulamaları yalıtmanın faydaları](#benefits)  
-  
--   [Başvuru](#reference)  
-  
-<a name="benefits"></a>   
-## <a name="the-benefits-of-isolating-applications"></a>Uygulamaları yalıtmanın faydaları  
+## <a name="the-benefits-of-isolating-applications"></a>Uygulamaları yalıtmanın faydaları
+
  Tarihsel olarak, işlem sınırları aynı bilgisayar üzerinde çalışan uygulamaları yalıtmak için kullanılmış. Her uygulama, aynı bilgisayarda çalışan diğer uygulamalardan yalıtan ayrı bir işlemde içine yüklenir.  
   
  Uygulamalar, bellek adresleri işlem göreli olduğu için yalıtılmıştır; bir işlemden diğerine geçirilen bir bellek işaretçi herhangi anlamlı bir şekilde hedef işlem içinde kullanılamaz. Ayrıca, iki işlem arasında doğrudan arama yapamazsınız. Bunun yerine, bir yönlendirme düzeyi sağlayan proxy'ler kullanmanız gerekir.  
@@ -61,9 +54,9 @@ ms.locfileid: "45698321"
   
 -   Koda verilen izinler, kodun çalıştığı uygulama etki alanı tarafından denetlenebilir.  
   
-  
-## <a name="application-domains-and-assemblies"></a>Uygulama Etki Alanları ve Derlemeler  
- Bu konuda uygulama etki alanları ve derlemeler arasındaki ilişki açıklanmaktadır. Bir derlemenin içerdiği kodu yürütmeden önce derlemeyi bir uygulama etki alanına yüklemeniz gerekir. Tipik bir uygulamayı çalıştırmak, bir uygulama etki alanına birkaç derlemenin yüklenmesine neden olur.  
+## <a name="application-domains-and-assemblies"></a>Uygulama Etki Alanları ve derlemeler
+
+ Bu bölümde, uygulama etki alanları ve derlemeler arasındaki ilişkiyi açıklar. Bir derlemenin içerdiği kodu yürütmeden önce derlemeyi bir uygulama etki alanına yüklemeniz gerekir. Tipik bir uygulamayı çalıştırmak, bir uygulama etki alanına birkaç derlemenin yüklenmesine neden olur.  
   
  Bir derlemenin yüklenme şekli, onun işlemdeki birden çok uygulama etki alanı ile paylaşılabilen anlık (JIT) derlenmiş kod olup olmadığını ve derlemenin işlemden kaldırılabilip kaldırılamayacağını belirler.  
   
@@ -95,21 +88,24 @@ ms.locfileid: "45698321"
   
 -   Derleme etki alanından bağımsız olarak yüklendiğinde, derlemenin tüm bağımlılıkları konumlandırılıp yüklenmelidir çünkü etki alanından bağımsız olarak yüklenemeyen bir bağımlılık, derlemenin etki alanından bağımsız olarak yüklenmesini engeller.  
   
-## <a name="application-domains-and-threads"></a>Uygulama Etki Alanları ve İş Parçacıkları  
+## <a name="application-domains-and-threads"></a>Uygulama etki alanları ve iş parçacıkları
+
  Uygulama etki alanı güvenlik, sürüm oluşturma, güvenilirlik ve yönetilen kod kaldırılması için bir yalıtım sınırı oluşturur. Bir iş parçacığı, kod yürütmek için ortak dil çalışma zamanı tarafından kullanılan işletim sistemi yapıdır. Çalışma zamanında tüm yönetilen kod, bir uygulama etki alanına yüklenir ve bir veya daha fazla yönetilen iş parçacıkları tarafından çalıştırılır.  
   
  Uygulama etki alanları ve iş parçacıkları arasında bire bir ilişki değil. Birkaç iş parçacığı herhangi bir zamanda tek bir uygulama etki alanında yürütebilir ve belirli bir iş parçacığında bir tek bir uygulama etki alanına sınırlı değildir. Diğer bir deyişle, iş parçacığı uygulama etki alanı sınırları geçilecek ücretsizdir; her uygulama etki alanı için yeni bir iş parçacığı oluşturulmaz.  
   
- Belirli bir zamanda, her iş parçacığı bir uygulama etki alanında yürütür. Sıfır, bir veya birden çok iş parçacığı herhangi bir belirli uygulama etki alanında yürütülüyor. Çalışma zamanını hangi iş parçacıkları hangi uygulama etki alanlarında çalışan izler. Etki alanı içinde bir iş parçacığının yürütülmekte herhangi bir zamanda çağırarak bulabilirsiniz <xref:System.Threading.Thread.GetDomain%2A?displayProperty=nameWithType> yöntemi.  
-  
-### <a name="application-domains-and-cultures"></a>Uygulama etki alanları ve kültürler  
+ Belirli bir zamanda, her iş parçacığı bir uygulama etki alanında yürütür. Sıfır, bir veya birden çok iş parçacığı herhangi bir belirli uygulama etki alanında yürütülüyor. Çalışma zamanının hangi iş parçacıkları hangi uygulama etki alanlarında çalışan izler. Etki alanı içinde bir iş parçacığının yürütülmekte herhangi bir zamanda çağırarak bulabilirsiniz <xref:System.Threading.Thread.GetDomain%2A?displayProperty=nameWithType> yöntemi.
+
+### <a name="application-domains-and-cultures"></a>Uygulama etki alanları ve kültürler
+
  Tarafından temsil edilen kültürü bir <xref:System.Globalization.CultureInfo> nesne, iş parçacıkları ile ilişkilidir. Kullanarak şu anda yürütülen iş parçacığıyla ilişkilendirilmiş kültürü alabilirsiniz <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> özelliğini alma veya ayarlama kullanarak o anda yürütülen iş parçacığıyla ilişkilendirilmiş kültürü <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> özelliği. Bir iş parçacığıyla ilişkilendirilmiş kültürü kullanarak açıkça ayarlanmış <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> özelliği devam iş parçacığı uygulama etki alanı sınırları geçtiğinde bu iş parçacığı ile ilişkilendirilecek. Aksi takdirde, herhangi bir zamanda iş parçacığıyla ilişkilendirilmiş kültürü değeri tarafından belirlenir <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> iş parçacığı yürütüyordur uygulama etki alanındaki özelliği:  
   
 -   Özelliğinin değeri değilse `null`, özellik tarafından döndürülen iş parçacığı ile ilişkili kültürüdür (ve bu nedenle tarafından döndürülen <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> ve <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> özellikleri).  
   
 -   Özelliğinin değeri ise `null`, geçerli sistem kültürü iş parçacığı ile ilişkilidir.  
   
-## <a name="programming-with-application-domains"></a>Uygulama Etki Alanlarıyla Programlama  
+## <a name="programming-with-application-domains"></a>Uygulama etki alanlarıyla programlama
+
  Uygulama etki alanları genellikle programlı olarak çalışma zamanı ana bilgisayarları tarafından oluşturulur ve değiştirilir. Ancak, bazen bir uygulama programı da uygulama etki alanları ile birlikte çalışmak isteyebilir. Örneğin, bir uygulama programı, tüm uygulamayı durdurmasına gerek kalmadan etki alanını (ve bileşeni) kaldırabilmek için bir etki alanına bir uygulama bileşeni yükleyebilir.  
   
  <xref:System.AppDomain> Uygulama etki alanları için programlama arabirimidir. Bu sınıf, etki alanları oluşturmak ve kaldırmak, etki alanlarında türlerin örneklerini oluşturmak ve uygulama etki alanı kaldırma gibi belirli bildirimlere kaydolmak için metotlar içerir. Aşağıdaki tabloda yaygın olarak kullanılan <xref:System.AppDomain> yöntemleri.  
@@ -126,7 +122,8 @@ ms.locfileid: "45698321"
   
  Ortak dil çalışma zamanı Ana Bilgisayarları Arabirimleri Bildirimi'nde açıklanan yönetilmeyen arabirimler de uygulama etki alanlarına erişim sağlar. Çalışma zamanı ana bilgisayarları, yönetilmeyen koddan arabirimler kullanarak bir işlem içinde uygulama etki alanları oluşturabilir veya onlara erişebilir.  
   
-## <a name="complusloaderoptimization-environment-variable"></a>COMPLUS_LoaderOptimization Ortam Değişkeni  
+## <a name="the-complusloaderoptimization-environment-variable"></a>COMPLUS_LoaderOptimization ortam değişkeni
+
  Yürütülebilir uygulamanın varsayılan yükleyici iyileştirme ilkesini ayarlayan ortam değişkeni.  
   
 ### <a name="syntax"></a>Sözdizimi  
@@ -135,7 +132,8 @@ ms.locfileid: "45698321"
 COMPLUS_LoaderOptimization = 1  
 ```  
   
-### <a name="remarks"></a>Açıklamalar  
+### <a name="remarks"></a>Açıklamalar
+
  Tipik bir uygulaması, içerdiği kodu yürütmeden önce çeşitli derlemeler uygulama etki alanına yükler.  
   
  Derlemenin yüklenme şekli, onun just-in-time (JIT) derlenmiş kod olup olmadığını belirler işlemde birden çok uygulama etki alanı tarafından paylaşılabilir.  
@@ -149,7 +147,8 @@ COMPLUS_LoaderOptimization = 1
 > [!CAUTION]
 >  COMPLUS_LoaderOptimization ortam bayrağı tanı kullanılmak üzere tasarlanmıştır ve test senaryoları. Bayrağın açık olması ciddi artışına neden ve bellek kullanımı.  
   
-### <a name="code-example"></a>Kod Örneği  
+### <a name="code-example"></a>Kod örneği
+
  Yüklenmeyeceğini tüm derlemelerin etki alanından bağımsız olarak IISADMIN için zorlamak için hizmet ekleyerek ulaşılabilecek `COMPLUS_LoaderOptimization=1` hkey_local_machıne\system\currentcontrolset\services\ıısadmın anahtarında ortam Çoklu dize değeri.  
   
 ```  
@@ -159,6 +158,9 @@ Type = REG_MULTI_SZ
 Value (to append) = COMPLUS_LoaderOptimization=1  
 ```  
   
-<a name="reference"></a>   
-## <a name="reference"></a>Başvuru  
- <xref:System.MarshalByRefObject?displayProperty=nameWithType>
+## <a name="see-also"></a>Ayrıca bkz.
+
+- <xref:System.AppDomain?displayProperty=nameWithType>
+- <xref:System.MarshalByRefObject?displayProperty=nameWithType>
+- [Uygulama etki alanları ve Derlemelerle programlama](index.md)
+- [Uygulama Etki Alanlarını Kullanma](use.md)

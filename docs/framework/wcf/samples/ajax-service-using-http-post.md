@@ -2,12 +2,12 @@
 title: HTTP POST Kullanan AJAX Hizmeti
 ms.date: 03/30/2017
 ms.assetid: 1ac80f20-ac1c-4ed1-9850-7e49569ff44e
-ms.openlocfilehash: c102d9d403cefb1bf3d4ab75859a81172895c2e0
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: df199b40a4a9ebb9a36cea7234b484273348cd9e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041115"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192804"
 ---
 # <a name="ajax-service-using-http-post"></a>HTTP POST Kullanan AJAX Hizmeti
 Bu örnek oluşturmak için Windows Communication Foundation (WCF) kullanmayı gösteren bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] HTTP POST kullanan zaman uyumsuz JavaScript ve XML (AJAX) hizmet. Bir AJAX temel JavaScript kodunu bir Web tarayıcısı istemcisini kullanarak erişebileceğiniz bir hizmettir. Bu örnek yapılar [temel AJAX hizmeti](../../../../docs/framework/wcf/samples/basic-ajax-service.md) örnek; iki örnek arasındaki tek fark, HTTP POST HTTP GET yerine kullanılmasıdır.  
@@ -33,7 +33,7 @@ public interface ICalculator
 
  Kullanarak, hizmette bir AJAX uç noktası oluşturma <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>, yalnızca temel AJAX hizmeti örneği olduğu gibi.  
   
- GET istekleri tarayıcıdan GÖNDERİSİNE Hizmetleri çağrılamıyor. Örneğin, giderek http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200 POST hizmet beklediği için hata sonuçları `n1` ve `n2` ileti gövdesinde gönderilecek parametreleri — JSON biçiminde — ve URL.  
+ GET istekleri tarayıcıdan GÖNDERİSİNE Hizmetleri çağrılamıyor. Örneğin, giderek `http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200` POST hizmet beklediği için hata sonuçları `n1` ve `n2` JSON biçiminde ve URL içinde değil ileti gövdesinde gönderilecek parametreleri.  
   
  İstemci Web sayfası PostAjaxClientPage.aspx sayfasında işlemi düğmelerden birine kullanıcı tıkladığında hizmeti çağırmak için ASP.NET kodu içerir. Hizmet yanıt olarak aynı şekilde [temel AJAX hizmeti](../../../../docs/framework/wcf/samples/basic-ajax-service.md) GET isteğiyle örnek.  
   
@@ -52,6 +52,4 @@ public interface ICalculator
   
 2.  ' % S'çözüm PostAjaxService.sln açıklandığı gibi oluşturmak [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Gidin http://localhost/ServiceModelSamples/PostAjaxClientPage.aspx (PostAjaxClientPage.aspx proje dizininden tarayıcıda aç değil).  
-  
-## <a name="see-also"></a>Ayrıca Bkz.
+3.  Gidin `http://localhost/ServiceModelSamples/PostAjaxClientPage.aspx` (PostAjaxClientPage.aspx proje dizininden tarayıcıda aç değil).

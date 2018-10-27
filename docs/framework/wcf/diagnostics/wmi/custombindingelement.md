@@ -2,19 +2,19 @@
 title: CustomBindingElement
 ms.date: 03/30/2017
 ms.assetid: df959dc5-1aef-4338-a123-6ff3e7bc37af
-ms.openlocfilehash: 2261af592120eac65923108ed5a20265fccb6b4b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ff0d7d8d6c6cb180043a834a60ca58159ca84c58
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33485511"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183158"
 ---
 # <a name="custombindingelement"></a>CustomBindingElement
 CustomBindingElement  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```csharp
 class CustomBindingElement : BindingElement  
 {  
   string Name;  
@@ -22,23 +22,23 @@ class CustomBindingElement : BindingElement
 ```  
   
 ## <a name="methods"></a>Yöntemler  
- CustomBindingElement sınıfı herhangi bir yöntem tanımlamıyor.  
+ CustomBindingElement sınıf herhangi bir yöntemi tanımlamaz.  
   
 ## <a name="properties"></a>Özellikler  
- CustomBindingElement sınıfı aşağıdaki özelliklere sahiptir:  
+ CustomBindingElement sınıfı şu özelliğe sahip:  
   
 ### <a name="name"></a>Ad  
  Veri türü: dize  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Bağlama yapılandırma adını içeren dize. Bu değer özel bağlama için kimlik dizesi olarak davranan bir kullanıcı tanımlı bir dizedir.  
+ Bağlama yapılandırma adını içeren bir dize. Özel bağlama için kimlik dizesi görür kullanıcı tanımlı bir dize değeridir.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|MOF|Bildirilen Servicemodel.mof.|  
+|MOF|Bildirilmiş Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Ad Alanı|İçinde tanımlanan root\ServiceModel|  
+|Ad Alanı|İçinde tanımlı root\ServiceModel|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Channels.CustomBinding>

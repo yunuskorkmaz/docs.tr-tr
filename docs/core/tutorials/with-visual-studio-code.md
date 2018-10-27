@@ -4,12 +4,12 @@ description: Oluşturma ve C# Visual Studio Code kullanarak ilk .NET Core uygula
 author: kendrahavens
 ms.author: mairaw
 ms.date: 09/27/2017
-ms.openlocfilehash: 321edcebdea141b7290fa57b47c8d9fc91d3521c
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 74fdd9ce122482a027931405cc9a94011a9c13bb
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45668229"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192589"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# ve Visual Studio Code kullanmaya başlama
 
@@ -50,7 +50,7 @@ ms.locfileid: "45668229"
 
 4. "Hello World" programı çalıştır:
 
-    * Tür `dotnet run`.
+    * Türü `dotnet run`
 
       ![Dotnet komutu çalıştırın](media/with-visual-studio-code/dotnetrun.png)
 
@@ -58,7 +58,7 @@ ms.locfileid: "45668229"
 
 ## <a name="debug"></a>Hata ayıklama
 
-1. Açık *Program.cs* üzerine tıklayarak. Visual Studio Code'da bir C# dosyası açın ilk kez [OmniSharp](http://www.omnisharp.net/) düzenleyicide yükler.
+1. Açık *Program.cs* üzerine tıklayarak. Visual Studio Code'da bir C# dosyası açın ilk kez [OmniSharp](https://www.omnisharp.net/) düzenleyicide yükler.
 
     ![Program.cs dosyasını açın](media/with-visual-studio-code/opencs.png)
 

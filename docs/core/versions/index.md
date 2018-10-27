@@ -4,12 +4,12 @@ description: .NET Core sürüm nasıl çalıştığını anlayın.
 author: bleroy
 ms.author: mairaw
 ms.date: 07/26/2018
-ms.openlocfilehash: 0ce64aa266f8e1de2c2cefd366bcbfa3f5cfc8f0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9f77709abf59d5346bf5e3c6f512cfabbf9e50de
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518608"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188475"
 ---
 # <a name="net-core-versioning"></a>.NET core sürüm oluşturma
 
@@ -43,7 +43,7 @@ NOTLAR:
 
 ## <a name="semantic-versioning"></a>Semantic versioning
 
-.NET Core *çalışma zamanı* kabaca aynılarını [Semantic Versioning (SemVer)](http://semver.org/), kullanımını benimseyen `MAJOR.MINOR.PATCH` sürüm oluşturma, derece ve türünü tanımlamak için sürüm numarasını çeşitli bölümlerini kullanarak değiştirin.
+.NET Core *çalışma zamanı* kabaca aynılarını [Semantic Versioning (SemVer)](https://semver.org/), kullanımını benimseyen `MAJOR.MINOR.PATCH` sürüm oluşturma, derece ve türünü tanımlamak için sürüm numarasını çeşitli bölümlerini kullanarak değiştirin.
 
 ```
 MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
@@ -82,11 +82,11 @@ Birden çok değişiklik olduğunda, tek tek değişikliklerden etkilenen en yü
 
 ### <a name="preview-versions"></a>Önizleme sürümleri
 
-Önizleme sürümlerine sahip bir `-preview[number]-([build]|"final")` sürümüne eklenmiş. Örneğin, `2.0.0-preview1-final`.
+Önizleme sürümlerine sahip bir `-preview[number]-([build]|"final")` sürümüne eklenmiş. Örneğin: `2.0.0-preview1-final`
 
 ### <a name="servicing-versions"></a>Sürüm hizmet verme
 
-Bir yayın, yayın dalları genellikle geçtikten sonra oluşturmayı durdur günlük oluşturur ve bunun yerine hizmet yapıları üretme başlatın. Bakım sürümlerde bir `-servicing-[number]` sürümüne eklenmiş. Örneğin, `2.0.1-servicing-006924`.
+Bir yayın, yayın dalları genellikle geçtikten sonra oluşturmayı durdur günlük oluşturur ve bunun yerine hizmet yapıları üretme başlatın. Bakım sürümlerde bir `-servicing-[number]` sürümüne eklenmiş. Örneğin: `2.0.1-servicing-006924`
 
 ## <a name="relationship-to-net-standard-versions"></a>İlişki .NET Standard sürümleri
 
