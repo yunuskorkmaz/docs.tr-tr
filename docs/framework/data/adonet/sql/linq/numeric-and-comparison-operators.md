@@ -2,52 +2,52 @@
 title: Sayısal ve Karşılaştırma işleçleri
 ms.date: 03/30/2017
 ms.assetid: 25b4a26a-06f2-4f80-87a9-76705ed46197
-ms.openlocfilehash: a7a455730860e2b11a5ceff5a70934502b312e19
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 733c1e494c29f04aa06a4159c3b1dae219f01b44
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515072"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50180342"
 ---
-# <a name="numeric-and-comparison-operators"></a><span data-ttu-id="ff826-102">Sayısal ve Karşılaştırma işleçleri</span><span class="sxs-lookup"><span data-stu-id="ff826-102">Numeric and Comparison Operators</span></span>
-<span data-ttu-id="ff826-103">Aritmetik ve Karşılaştırma işleçleri dışında ortak dil çalışma zamanı (CLR) gibi beklendiği gibi çalışmayabilir:</span><span class="sxs-lookup"><span data-stu-id="ff826-103">Arithmetic and comparison operators work as expected in the common language runtime (CLR) except as follows:</span></span>  
+# <a name="numeric-and-comparison-operators"></a><span data-ttu-id="d74ae-102">Sayısal ve Karşılaştırma işleçleri</span><span class="sxs-lookup"><span data-stu-id="d74ae-102">Numeric and Comparison Operators</span></span>
+<span data-ttu-id="d74ae-103">Aritmetik ve Karşılaştırma işleçleri dışında ortak dil çalışma zamanı (CLR) gibi beklendiği gibi çalışmayabilir:</span><span class="sxs-lookup"><span data-stu-id="d74ae-103">Arithmetic and comparison operators work as expected in the common language runtime (CLR) except as follows:</span></span>  
   
--   <span data-ttu-id="ff826-104">SQL, kayan nokta numaralarını modulus işleci desteklemez.</span><span class="sxs-lookup"><span data-stu-id="ff826-104">SQL does not support the modulus operator on floating-point numbers.</span></span>  
+-   <span data-ttu-id="d74ae-104">SQL, kayan nokta numaralarını modulus işleci desteklemez.</span><span class="sxs-lookup"><span data-stu-id="d74ae-104">SQL does not support the modulus operator on floating-point numbers.</span></span>  
   
--   <span data-ttu-id="ff826-105">SQL denetlenmeyen aritmetiğini desteklemez.</span><span class="sxs-lookup"><span data-stu-id="ff826-105">SQL does not support unchecked arithmetic.</span></span>  
+-   <span data-ttu-id="d74ae-105">SQL denetlenmeyen aritmetiğini desteklemez.</span><span class="sxs-lookup"><span data-stu-id="d74ae-105">SQL does not support unchecked arithmetic.</span></span>  
   
--   <span data-ttu-id="ff826-106">SQL'de çoğaltılır ve bu nedenle, desteklenmiyor ifadelerde kullandığınızda artırma ve azaltma işleçleri yan etkilere neden.</span><span class="sxs-lookup"><span data-stu-id="ff826-106">Increment and decrement operators cause side-effects when you use them in expressions that cannot be replicated in SQL and are, therefore, not supported.</span></span>  
+-   <span data-ttu-id="d74ae-106">SQL'de çoğaltılır ve bu nedenle, desteklenmiyor ifadelerde kullandığınızda artırma ve azaltma işleçleri yan etkilere neden.</span><span class="sxs-lookup"><span data-stu-id="d74ae-106">Increment and decrement operators cause side-effects when you use them in expressions that cannot be replicated in SQL and are, therefore, not supported.</span></span>  
   
-## <a name="supported-operators"></a><span data-ttu-id="ff826-107">Desteklenen işleçleri</span><span class="sxs-lookup"><span data-stu-id="ff826-107">Supported Operators</span></span>  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="ff826-108"> Aşağıdaki işleçleri destekler.</span><span class="sxs-lookup"><span data-stu-id="ff826-108"> supports the following operators.</span></span>  
+## <a name="supported-operators"></a><span data-ttu-id="d74ae-107">Desteklenen işleçleri</span><span class="sxs-lookup"><span data-stu-id="d74ae-107">Supported Operators</span></span>  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <span data-ttu-id="d74ae-108">Aşağıdaki işleçleri destekler.</span><span class="sxs-lookup"><span data-stu-id="d74ae-108">supports the following operators.</span></span>  
   
--   <span data-ttu-id="ff826-109">Temel aritmetik işleçler:</span><span class="sxs-lookup"><span data-stu-id="ff826-109">Basic arithmetic operators:</span></span>  
+-   <span data-ttu-id="d74ae-109">Temel aritmetik işleçler:</span><span class="sxs-lookup"><span data-stu-id="d74ae-109">Basic arithmetic operators:</span></span>  
   
     -   `+`  
   
-    -   <span data-ttu-id="ff826-110">`-` (çıkarma)</span><span class="sxs-lookup"><span data-stu-id="ff826-110">`-` (subtraction)</span></span>  
+    -   <span data-ttu-id="d74ae-110">`-` (çıkarma)</span><span class="sxs-lookup"><span data-stu-id="d74ae-110">`-` (subtraction)</span></span>  
   
     -   `*`  
   
     -   `/`  
   
-    -   <span data-ttu-id="ff826-111">Visual Basic tamsayı bölme (`\`)</span><span class="sxs-lookup"><span data-stu-id="ff826-111">Visual Basic integer division (`\`)</span></span>  
+    -   <span data-ttu-id="d74ae-111">Visual Basic tamsayı bölme (`\`)</span><span class="sxs-lookup"><span data-stu-id="d74ae-111">Visual Basic integer division (`\`)</span></span>  
   
-    -   <span data-ttu-id="ff826-112">`%` (Visual Basic `Mod`)</span><span class="sxs-lookup"><span data-stu-id="ff826-112">`%` (Visual Basic `Mod`)</span></span>  
+    -   <span data-ttu-id="d74ae-112">`%` (Visual Basic `Mod`)</span><span class="sxs-lookup"><span data-stu-id="d74ae-112">`%` (Visual Basic `Mod`)</span></span>  
   
     -   `<<`  
   
     -   `>>`  
   
-    -   <span data-ttu-id="ff826-113">`-` (birli olumsuzlama)</span><span class="sxs-lookup"><span data-stu-id="ff826-113">`-` (unary negation)</span></span>  
+    -   <span data-ttu-id="d74ae-113">`-` (birli olumsuzlama)</span><span class="sxs-lookup"><span data-stu-id="d74ae-113">`-` (unary negation)</span></span>  
   
--   <span data-ttu-id="ff826-114">Temel Karşılaştırma işleçleri:</span><span class="sxs-lookup"><span data-stu-id="ff826-114">Basic comparison operators:</span></span>  
+-   <span data-ttu-id="d74ae-114">Temel Karşılaştırma işleçleri:</span><span class="sxs-lookup"><span data-stu-id="d74ae-114">Basic comparison operators:</span></span>  
   
-    -   <span data-ttu-id="ff826-115">Visual Basic `=` ve C# `==`</span><span class="sxs-lookup"><span data-stu-id="ff826-115">Visual Basic `=` and C# `==`</span></span>  
+    -   <span data-ttu-id="d74ae-115">Visual Basic `=` ve C# `==`</span><span class="sxs-lookup"><span data-stu-id="d74ae-115">Visual Basic `=` and C# `==`</span></span>  
   
-    -   <span data-ttu-id="ff826-116">Visual Basic `<>` ve C# `!=`</span><span class="sxs-lookup"><span data-stu-id="ff826-116">Visual Basic `<>` and C# `!=`</span></span>  
+    -   <span data-ttu-id="d74ae-116">Visual Basic `<>` ve C# `!=`</span><span class="sxs-lookup"><span data-stu-id="d74ae-116">Visual Basic `<>` and C# `!=`</span></span>  
   
-    -   <span data-ttu-id="ff826-117">Visual Basic `Is/IsNot`</span><span class="sxs-lookup"><span data-stu-id="ff826-117">Visual Basic `Is/IsNot`</span></span>  
+    -   <span data-ttu-id="d74ae-117">Visual Basic `Is/IsNot`</span><span class="sxs-lookup"><span data-stu-id="d74ae-117">Visual Basic `Is/IsNot`</span></span>  
   
     -   `<`  
   
@@ -57,7 +57,7 @@ ms.locfileid: "43515072"
   
     -   `>=`  
   
-## <a name="see-also"></a><span data-ttu-id="ff826-118">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="ff826-118">See Also</span></span>  
- [<span data-ttu-id="ff826-119">Veri Türleri ve İşlevleri</span><span class="sxs-lookup"><span data-stu-id="ff826-119">Data Types and Functions</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)  
- [<span data-ttu-id="ff826-120">C# İşleçleri</span><span class="sxs-lookup"><span data-stu-id="ff826-120">C# Operators</span></span>](https://msdn.microsoft.com/library/0301e31f-22ad-49af-ac3c-d5eae7f0ac43)  
- [<span data-ttu-id="ff826-121">İşleçler</span><span class="sxs-lookup"><span data-stu-id="ff826-121">Operators</span></span>](../../../../../visual-basic/language-reference/operators/index.md)
+## <a name="see-also"></a><span data-ttu-id="d74ae-118">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="d74ae-118">See Also</span></span>  
+ [<span data-ttu-id="d74ae-119">Veri Türleri ve İşlevleri</span><span class="sxs-lookup"><span data-stu-id="d74ae-119">Data Types and Functions</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)  
+ [<span data-ttu-id="d74ae-120">C# İşleçleri</span><span class="sxs-lookup"><span data-stu-id="d74ae-120">C# Operators</span></span>](../../../../../../docs/csharp/language-reference/operators/index.md)  
+ [<span data-ttu-id="d74ae-121">İşleçler</span><span class="sxs-lookup"><span data-stu-id="d74ae-121">Operators</span></span>](../../../../../visual-basic/language-reference/operators/index.md)

@@ -7,49 +7,51 @@ helpviewer_keywords:
 - remainder operator [C#]
 - '% operator [C#]'
 ms.assetid: 3b74f4f9-fd9c-45e7-84fa-c8d71a0dfad7
-ms.openlocfilehash: 9cd2f7ad3856feb34667686979c942ecb21887c2
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: cd6d49b69d40f3b45aae060d46b58632dc8448f8
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45645924"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50041264"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="617ea-102">% İşleci (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="617ea-102">% Operator (C# Reference)</span></span>
+# <a name="-operator-c-reference"></a><span data-ttu-id="8667d-102">% İşleci (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="8667d-102">% Operator (C# Reference)</span></span>
 
-<span data-ttu-id="617ea-103">Kalan işleci `%` ilk işlenenin ikinci işleneni tarafından bölme işleminden kalanı hesaplar.</span><span class="sxs-lookup"><span data-stu-id="617ea-103">The remainder operator `%` computes the remainder after dividing its first operand by its second operand.</span></span> <span data-ttu-id="617ea-104">Kullanıcı tanımlı türler için [aşırı](../keywords/operator.md) `%` işleci.</span><span class="sxs-lookup"><span data-stu-id="617ea-104">User-defined types can [overload](../keywords/operator.md) the `%` operator.</span></span> <span data-ttu-id="617ea-105">Zaman `%` aşırı yüklendi [kalan atama işleci](remainder-assignment-operator.md) `%=` aynı zamanda örtük olarak aşırı yüklenmiş olan.</span><span class="sxs-lookup"><span data-stu-id="617ea-105">When the `%` is overloaded, the [remainder assignment operator](remainder-assignment-operator.md) `%=` is also implicitly overloaded.</span></span>
+<span data-ttu-id="8667d-103">Kalan işleci `%` ilk işlenenin ikinci işleneni tarafından bölme işleminden kalanı hesaplar.</span><span class="sxs-lookup"><span data-stu-id="8667d-103">The remainder operator `%` computes the remainder after dividing its first operand by its second operand.</span></span>
 
-<span data-ttu-id="617ea-106">Kalan işleci tüm sayısal türlerin destekler.</span><span class="sxs-lookup"><span data-stu-id="617ea-106">All numeric types support the remainder operator.</span></span>
+<span data-ttu-id="8667d-104">Kullanıcı tanımlı türler için [aşırı](../keywords/operator.md) `%` işleci.</span><span class="sxs-lookup"><span data-stu-id="8667d-104">User-defined types can [overload](../keywords/operator.md) the `%` operator.</span></span> <span data-ttu-id="8667d-105">Zaman `%` aşırı yüklendi [kalan atama işleci](remainder-assignment-operator.md) `%=` aynı zamanda örtük olarak aşırı yüklenmiş olan.</span><span class="sxs-lookup"><span data-stu-id="8667d-105">When the `%` is overloaded, the [remainder assignment operator](remainder-assignment-operator.md) `%=` is also implicitly overloaded.</span></span>
 
-## <a name="integer-remainder"></a><span data-ttu-id="617ea-107">Tamsayı kalan</span><span class="sxs-lookup"><span data-stu-id="617ea-107">Integer remainder</span></span>
+<span data-ttu-id="8667d-106">Kalan işleci tüm sayısal türlerin destekler.</span><span class="sxs-lookup"><span data-stu-id="8667d-106">All numeric types support the remainder operator.</span></span>
+
+## <a name="integer-remainder"></a><span data-ttu-id="8667d-107">Tamsayı kalan</span><span class="sxs-lookup"><span data-stu-id="8667d-107">Integer remainder</span></span>
   
-<span data-ttu-id="617ea-108">Sonucu tamsayı işlenenleri için `a % b` değeri tarafından üretilen `a - (a / b) * b`.</span><span class="sxs-lookup"><span data-stu-id="617ea-108">For the integer operands, the result of `a % b` is the value produced by `a - (a / b) * b`.</span></span> <span data-ttu-id="617ea-109">Sıfır olmayan kalanı oturum, ilk işlenen, aşağıdaki örnekte gösterildiği gibi aynıdır:</span><span class="sxs-lookup"><span data-stu-id="617ea-109">The sign of the non-zero remainder is the same as that of the first operand, as the following example shows:</span></span>
+<span data-ttu-id="8667d-108">Sonucu tamsayı işlenenleri için `a % b` değeri tarafından üretilen `a - (a / b) * b`.</span><span class="sxs-lookup"><span data-stu-id="8667d-108">For the integer operands, the result of `a % b` is the value produced by `a - (a / b) * b`.</span></span> <span data-ttu-id="8667d-109">Sıfır olmayan kalanı oturum, ilk işlenen, aşağıdaki örnekte gösterildiği gibi aynıdır:</span><span class="sxs-lookup"><span data-stu-id="8667d-109">The sign of the non-zero remainder is the same as that of the first operand, as the following example shows:</span></span>
 
 [!code-csharp-interactive[integer remainder](~/samples/snippets/csharp/language-reference/operators/RemainderExamples.cs#1)]
 
-## <a name="floating-point-remainder"></a><span data-ttu-id="617ea-110">Kayan nokta kalanını</span><span class="sxs-lookup"><span data-stu-id="617ea-110">Floating-point remainder</span></span>
+## <a name="floating-point-remainder"></a><span data-ttu-id="8667d-110">Kayan nokta kalanını</span><span class="sxs-lookup"><span data-stu-id="8667d-110">Floating-point remainder</span></span>
 
-<span data-ttu-id="617ea-111">İçin [float](../keywords/float.md) ve [çift](../keywords/double.md) işlenenler, sonucunu `x % y` sınırlı için `x` ve `y` değer `z` gibi</span><span class="sxs-lookup"><span data-stu-id="617ea-111">For the [float](../keywords/float.md) and [double](../keywords/double.md) operands, the result of `x % y` for the finite `x` and `y` is the value `z` such that</span></span>
+<span data-ttu-id="8667d-111">İçin [float](../keywords/float.md) ve [çift](../keywords/double.md) işlenenler, sonucunu `x % y` sınırlı için `x` ve `y` değer `z` gibi</span><span class="sxs-lookup"><span data-stu-id="8667d-111">For the [float](../keywords/float.md) and [double](../keywords/double.md) operands, the result of `x % y` for the finite `x` and `y` is the value `z` such that</span></span>
 
-- <span data-ttu-id="617ea-112">işaretini `z`, sıfır olmayan, işaretini aynı `x`;</span><span class="sxs-lookup"><span data-stu-id="617ea-112">the sign of `z`, if non-zero, is the same as the sign of `x`;</span></span>
-- <span data-ttu-id="617ea-113">mutlak değerini `z` değeri tarafından üretilen `|x| - n * |y|` burada `n` küçük veya eşit en büyük olası tamsayı `|x| / |y|` ve `|x|` ve `|y|` mutlak değerleri `x` ve `y`sırasıyla.</span><span class="sxs-lookup"><span data-stu-id="617ea-113">the absolute value of `z` is the value produced by `|x| - n * |y|` where `n` is the largest possible integer that is less than or equal to `|x| / |y|` and `|x|` and `|y|` are the absolute values of `x` and `y`, respectively.</span></span>
+- <span data-ttu-id="8667d-112">işaretini `z`, sıfır olmayan, işaretini aynı `x`;</span><span class="sxs-lookup"><span data-stu-id="8667d-112">the sign of `z`, if non-zero, is the same as the sign of `x`;</span></span>
+- <span data-ttu-id="8667d-113">mutlak değerini `z` değeri tarafından üretilen `|x| - n * |y|` burada `n` küçük veya eşit en büyük olası tamsayı `|x| / |y|` ve `|x|` ve `|y|` mutlak değerleri `x` ve `y`sırasıyla.</span><span class="sxs-lookup"><span data-stu-id="8667d-113">the absolute value of `z` is the value produced by `|x| - n * |y|` where `n` is the largest possible integer that is less than or equal to `|x| / |y|` and `|x|` and `|y|` are the absolute values of `x` and `y`, respectively.</span></span>
 
-<span data-ttu-id="617ea-114">Davranışı hakkında bilgi için `%` durumunda sonlu olmayan işlenenler işleç bkz [kalan işleci](/dotnet/csharp/language-reference/language-specification/expressions#remainder-operator) bölümünü [C# dil belirtimi](/dotnet/csharp/language-reference/language-specification/index).</span><span class="sxs-lookup"><span data-stu-id="617ea-114">For information about behavior of the `%` operator in case of non-finite operands, see the [Remainder operator](/dotnet/csharp/language-reference/language-specification/expressions#remainder-operator) section of the [C# language specification](/dotnet/csharp/language-reference/language-specification/index).</span></span>
+<span data-ttu-id="8667d-114">Davranışı hakkında bilgi için `%` sonlu olmayan işlenenler işleç bkz [kalan işleci](~/_csharplang/spec/expressions.md#remainder-operator) bölümünü [ C# dil belirtimi](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="8667d-114">For information about the behavior of the `%` operator with non-finite operands, see the [Remainder operator](~/_csharplang/spec/expressions.md#remainder-operator) section of the [C# language specification](../language-specification/index.md).</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="617ea-115">Kalanı hesaplama, bu yöntem, tamsayı işlenenler için kullanılan benzer, ancak IEEE 754 farklıdır.</span><span class="sxs-lookup"><span data-stu-id="617ea-115">This method of computing the remainder is analogous to that used for integer operands, but differs from the IEEE 754.</span></span> <span data-ttu-id="617ea-116">IEEE 754 ile uyumlu işlemini ihtiyacınız varsa, <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="617ea-116">If you need the remainder operation that complies with the IEEE 754, use the <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType> method.</span></span>
+> <span data-ttu-id="8667d-115">Kalanı hesaplama, bu yöntem, tamsayı işlenenler için kullanılan benzer, ancak IEEE 754 farklıdır.</span><span class="sxs-lookup"><span data-stu-id="8667d-115">This method of computing the remainder is analogous to that used for integer operands, but differs from the IEEE 754.</span></span> <span data-ttu-id="8667d-116">IEEE 754 ile uyumlu işlemini ihtiyacınız varsa, <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="8667d-116">If you need the remainder operation that complies with the IEEE 754, use the <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType> method.</span></span>
 
-<span data-ttu-id="617ea-117">Aşağıdaki örnek için kalan işleci davranışını gösterir `float` ve `double` işlenenler:</span><span class="sxs-lookup"><span data-stu-id="617ea-117">The following example demonstrates the behavior of the remainder operator for `float` and `double` operands:</span></span>
+<span data-ttu-id="8667d-117">Aşağıdaki örnek için kalan işleci davranışını gösterir `float` ve `double` işlenenler:</span><span class="sxs-lookup"><span data-stu-id="8667d-117">The following example demonstrates the behavior of the remainder operator for `float` and `double` operands:</span></span>
 
 [!code-csharp-interactive[float and double remainder](~/samples/snippets/csharp/language-reference/operators/RemainderExamples.cs#2)]
 
-<span data-ttu-id="617ea-118">Kayan nokta türleri ile ilişkilendirilebilen yuvarlama hataları unutmayın.</span><span class="sxs-lookup"><span data-stu-id="617ea-118">Note the round-off errors that can be associated with the floating-point types.</span></span>
+<span data-ttu-id="8667d-118">Kayan nokta türleri ile ilişkilendirilebilen yuvarlama hataları unutmayın.</span><span class="sxs-lookup"><span data-stu-id="8667d-118">Note the round-off errors that can be associated with the floating-point types.</span></span>
 
-<span data-ttu-id="617ea-119">İçin [ondalık](../keywords/decimal.md) işlenenler, kalan işleci `%` eşdeğerdir [kalan işleci](<xref:System.Decimal.op_Modulus(System.Decimal,System.Decimal)>) , <xref:System.Decimal?displayProperty=nameWithType> türü.</span><span class="sxs-lookup"><span data-stu-id="617ea-119">For the [decimal](../keywords/decimal.md) operands, the remainder operator `%` is equivalent to the [remainder operator](<xref:System.Decimal.op_Modulus(System.Decimal,System.Decimal)>) of the <xref:System.Decimal?displayProperty=nameWithType> type.</span></span>
+<span data-ttu-id="8667d-119">İçin [ondalık](../keywords/decimal.md) işlenenler, kalan işleci `%` eşdeğerdir [kalan işleci](<xref:System.Decimal.op_Modulus(System.Decimal,System.Decimal)>) , <xref:System.Decimal?displayProperty=nameWithType> türü.</span><span class="sxs-lookup"><span data-stu-id="8667d-119">For the [decimal](../keywords/decimal.md) operands, the remainder operator `%` is equivalent to the [remainder operator](<xref:System.Decimal.op_Modulus(System.Decimal,System.Decimal)>) of the <xref:System.Decimal?displayProperty=nameWithType> type.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="617ea-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="617ea-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8667d-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8667d-120">See also</span></span>
 
-- [<span data-ttu-id="617ea-121">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="617ea-121">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="617ea-122">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="617ea-122">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="617ea-123">C# İşleçleri</span><span class="sxs-lookup"><span data-stu-id="617ea-123">C# Operators</span></span>](index.md)
+- [<span data-ttu-id="8667d-121">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="8667d-121">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="8667d-122">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="8667d-122">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="8667d-123">C# İşleçleri</span><span class="sxs-lookup"><span data-stu-id="8667d-123">C# Operators</span></span>](index.md)
 - <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType>
 - <xref:System.Math.DivRem%2A?displayProperty=nameWithType>

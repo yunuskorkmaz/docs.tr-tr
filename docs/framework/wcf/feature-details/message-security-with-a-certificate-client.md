@@ -5,47 +5,46 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
-author: BrucePerlerMS
-ms.openlocfilehash: 9100d3d16c39ca53e9afe3721c9d6f1027ba2048
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f435136bb08876b759087b9cdd258f6ae7881be5
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193872"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191122"
 ---
-# <a name="message-security-with-a-certificate-client"></a><span data-ttu-id="e5a46-102">Sertifika İstemcisi ile İleti Güvenliği</span><span class="sxs-lookup"><span data-stu-id="e5a46-102">Message Security with a Certificate Client</span></span>
-<span data-ttu-id="e5a46-103">Aşağıdaki senaryoda, bir Windows Communication Foundation (WCF) istemci ve hizmet ileti güvenlik modunu kullanarak güvenli gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="e5a46-103">The following scenario shows a Windows Communication Foundation (WCF) client and service secured using message security mode.</span></span> <span data-ttu-id="e5a46-104">Hem istemci hem de hizmet sertifikaları ile doğrulanır.</span><span class="sxs-lookup"><span data-stu-id="e5a46-104">Both the client and the service are authenticated with certificates.</span></span> <span data-ttu-id="e5a46-105">Daha fazla bilgi için [dağıtılmış uygulama güvenliği](../../../../docs/framework/wcf/feature-details/distributed-application-security.md).</span><span class="sxs-lookup"><span data-stu-id="e5a46-105">For more information, see [Distributed Application Security](../../../../docs/framework/wcf/feature-details/distributed-application-security.md).</span></span>  
+# <a name="message-security-with-a-certificate-client"></a><span data-ttu-id="a7c80-102">Sertifika İstemcisi ile İleti Güvenliği</span><span class="sxs-lookup"><span data-stu-id="a7c80-102">Message Security with a Certificate Client</span></span>
+<span data-ttu-id="a7c80-103">Aşağıdaki senaryoda, bir Windows Communication Foundation (WCF) istemci ve hizmet ileti güvenlik modunu kullanarak güvenli gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="a7c80-103">The following scenario shows a Windows Communication Foundation (WCF) client and service secured using message security mode.</span></span> <span data-ttu-id="a7c80-104">Hem istemci hem de hizmet sertifikaları ile doğrulanır.</span><span class="sxs-lookup"><span data-stu-id="a7c80-104">Both the client and the service are authenticated with certificates.</span></span> <span data-ttu-id="a7c80-105">Daha fazla bilgi için [dağıtılmış uygulama güvenliği](../../../../docs/framework/wcf/feature-details/distributed-application-security.md).</span><span class="sxs-lookup"><span data-stu-id="a7c80-105">For more information, see [Distributed Application Security](../../../../docs/framework/wcf/feature-details/distributed-application-security.md).</span></span>  
   
- <span data-ttu-id="e5a46-106">Örnek bir uygulama için bkz: [ileti güvenliği sertifikası](../../../../docs/framework/wcf/samples/message-security-certificate.md).</span><span class="sxs-lookup"><span data-stu-id="e5a46-106">For a sample application, see [Message Security Certificate](../../../../docs/framework/wcf/samples/message-security-certificate.md).</span></span>  
+ <span data-ttu-id="a7c80-106">Örnek bir uygulama için bkz: [ileti güvenliği sertifikası](../../../../docs/framework/wcf/samples/message-security-certificate.md).</span><span class="sxs-lookup"><span data-stu-id="a7c80-106">For a sample application, see [Message Security Certificate](../../../../docs/framework/wcf/samples/message-security-certificate.md).</span></span>  
   
- <span data-ttu-id="e5a46-107">![İstemci sertifikası ile](../../../../docs/framework/wcf/feature-details/media/clientwithcertificate.gif "ClientWithCertificate")</span><span class="sxs-lookup"><span data-stu-id="e5a46-107">![Client with certificate](../../../../docs/framework/wcf/feature-details/media/clientwithcertificate.gif "ClientWithCertificate")</span></span>  
+ <span data-ttu-id="a7c80-107">![İstemci sertifikası ile](../../../../docs/framework/wcf/feature-details/media/clientwithcertificate.gif "ClientWithCertificate")</span><span class="sxs-lookup"><span data-stu-id="a7c80-107">![Client with certificate](../../../../docs/framework/wcf/feature-details/media/clientwithcertificate.gif "ClientWithCertificate")</span></span>  
   
-|<span data-ttu-id="e5a46-108">Özelliği</span><span class="sxs-lookup"><span data-stu-id="e5a46-108">Characteristic</span></span>|<span data-ttu-id="e5a46-109">Açıklama</span><span class="sxs-lookup"><span data-stu-id="e5a46-109">Description</span></span>|  
+|<span data-ttu-id="a7c80-108">Özelliği</span><span class="sxs-lookup"><span data-stu-id="a7c80-108">Characteristic</span></span>|<span data-ttu-id="a7c80-109">Açıklama</span><span class="sxs-lookup"><span data-stu-id="a7c80-109">Description</span></span>|  
 |--------------------|-----------------|  
-|<span data-ttu-id="e5a46-110">Güvenlik modu</span><span class="sxs-lookup"><span data-stu-id="e5a46-110">Security Mode</span></span>|<span data-ttu-id="e5a46-111">İleti</span><span class="sxs-lookup"><span data-stu-id="e5a46-111">Message</span></span>|  
-|<span data-ttu-id="e5a46-112">Birlikte Çalışabilirlik</span><span class="sxs-lookup"><span data-stu-id="e5a46-112">Interoperability</span></span>|<span data-ttu-id="e5a46-113">Yalnızca WCF</span><span class="sxs-lookup"><span data-stu-id="e5a46-113">WCF only</span></span>|  
-|<span data-ttu-id="e5a46-114">Kimlik doğrulaması (sunucu)</span><span class="sxs-lookup"><span data-stu-id="e5a46-114">Authentication (Server)</span></span>|<span data-ttu-id="e5a46-115">Hizmet sertifikası kullanarak</span><span class="sxs-lookup"><span data-stu-id="e5a46-115">Using service certificate</span></span>|  
-|<span data-ttu-id="e5a46-116">Kimlik doğrulaması (istemci)</span><span class="sxs-lookup"><span data-stu-id="e5a46-116">Authentication (Client)</span></span>|<span data-ttu-id="e5a46-117">İstemci sertifikası kullanarak</span><span class="sxs-lookup"><span data-stu-id="e5a46-117">Using client certificate</span></span>|  
-|<span data-ttu-id="e5a46-118">Bütünlüğü</span><span class="sxs-lookup"><span data-stu-id="e5a46-118">Integrity</span></span>|<span data-ttu-id="e5a46-119">Evet</span><span class="sxs-lookup"><span data-stu-id="e5a46-119">Yes</span></span>|  
-|<span data-ttu-id="e5a46-120">Gizliliği</span><span class="sxs-lookup"><span data-stu-id="e5a46-120">Confidentiality</span></span>|<span data-ttu-id="e5a46-121">Evet</span><span class="sxs-lookup"><span data-stu-id="e5a46-121">Yes</span></span>|  
-|<span data-ttu-id="e5a46-122">Taşıma</span><span class="sxs-lookup"><span data-stu-id="e5a46-122">Transport</span></span>|<span data-ttu-id="e5a46-123">HTTP</span><span class="sxs-lookup"><span data-stu-id="e5a46-123">HTTP</span></span>|  
-|<span data-ttu-id="e5a46-124">Bağlama</span><span class="sxs-lookup"><span data-stu-id="e5a46-124">Binding</span></span>|<xref:System.ServiceModel.WSHttpBinding>|  
+|<span data-ttu-id="a7c80-110">Güvenlik modu</span><span class="sxs-lookup"><span data-stu-id="a7c80-110">Security Mode</span></span>|<span data-ttu-id="a7c80-111">İleti</span><span class="sxs-lookup"><span data-stu-id="a7c80-111">Message</span></span>|  
+|<span data-ttu-id="a7c80-112">Birlikte Çalışabilirlik</span><span class="sxs-lookup"><span data-stu-id="a7c80-112">Interoperability</span></span>|<span data-ttu-id="a7c80-113">Yalnızca WCF</span><span class="sxs-lookup"><span data-stu-id="a7c80-113">WCF only</span></span>|  
+|<span data-ttu-id="a7c80-114">Kimlik doğrulaması (sunucu)</span><span class="sxs-lookup"><span data-stu-id="a7c80-114">Authentication (Server)</span></span>|<span data-ttu-id="a7c80-115">Hizmet sertifikası kullanarak</span><span class="sxs-lookup"><span data-stu-id="a7c80-115">Using service certificate</span></span>|  
+|<span data-ttu-id="a7c80-116">Kimlik doğrulaması (istemci)</span><span class="sxs-lookup"><span data-stu-id="a7c80-116">Authentication (Client)</span></span>|<span data-ttu-id="a7c80-117">İstemci sertifikası kullanarak</span><span class="sxs-lookup"><span data-stu-id="a7c80-117">Using client certificate</span></span>|  
+|<span data-ttu-id="a7c80-118">Bütünlüğü</span><span class="sxs-lookup"><span data-stu-id="a7c80-118">Integrity</span></span>|<span data-ttu-id="a7c80-119">Evet</span><span class="sxs-lookup"><span data-stu-id="a7c80-119">Yes</span></span>|  
+|<span data-ttu-id="a7c80-120">Gizliliği</span><span class="sxs-lookup"><span data-stu-id="a7c80-120">Confidentiality</span></span>|<span data-ttu-id="a7c80-121">Evet</span><span class="sxs-lookup"><span data-stu-id="a7c80-121">Yes</span></span>|  
+|<span data-ttu-id="a7c80-122">Taşıma</span><span class="sxs-lookup"><span data-stu-id="a7c80-122">Transport</span></span>|<span data-ttu-id="a7c80-123">HTTP</span><span class="sxs-lookup"><span data-stu-id="a7c80-123">HTTP</span></span>|  
+|<span data-ttu-id="a7c80-124">Bağlama</span><span class="sxs-lookup"><span data-stu-id="a7c80-124">Binding</span></span>|<xref:System.ServiceModel.WSHttpBinding>|  
   
-## <a name="service"></a><span data-ttu-id="e5a46-125">Hizmet</span><span class="sxs-lookup"><span data-stu-id="e5a46-125">Service</span></span>  
- <span data-ttu-id="e5a46-126">Aşağıdaki kod ve yapılandırma, bağımsız olarak çalışmaya yöneliktir.</span><span class="sxs-lookup"><span data-stu-id="e5a46-126">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="e5a46-127">Aşağıdakilerden birini yapın:</span><span class="sxs-lookup"><span data-stu-id="e5a46-127">Do one of the following:</span></span>  
+## <a name="service"></a><span data-ttu-id="a7c80-125">Hizmet</span><span class="sxs-lookup"><span data-stu-id="a7c80-125">Service</span></span>  
+ <span data-ttu-id="a7c80-126">Aşağıdaki kod ve yapılandırma, bağımsız olarak çalışmaya yöneliktir.</span><span class="sxs-lookup"><span data-stu-id="a7c80-126">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="a7c80-127">Aşağıdakilerden birini yapın:</span><span class="sxs-lookup"><span data-stu-id="a7c80-127">Do one of the following:</span></span>  
   
--   <span data-ttu-id="e5a46-128">Kod ile yapılandırma kullanarak tek başına bir hizmet oluşturun.</span><span class="sxs-lookup"><span data-stu-id="e5a46-128">Create a stand-alone service using the code with no configuration.</span></span>  
+-   <span data-ttu-id="a7c80-128">Kod ile yapılandırma kullanarak tek başına bir hizmet oluşturun.</span><span class="sxs-lookup"><span data-stu-id="a7c80-128">Create a stand-alone service using the code with no configuration.</span></span>  
   
--   <span data-ttu-id="e5a46-129">Sağlanan Yapılandırması'nı kullanarak bir hizmet oluşturma, ancak tüm uç noktalar tanımlamaz.</span><span class="sxs-lookup"><span data-stu-id="e5a46-129">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
+-   <span data-ttu-id="a7c80-129">Sağlanan Yapılandırması'nı kullanarak bir hizmet oluşturma, ancak tüm uç noktalar tanımlamaz.</span><span class="sxs-lookup"><span data-stu-id="a7c80-129">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="e5a46-130">Kod</span><span class="sxs-lookup"><span data-stu-id="e5a46-130">Code</span></span>  
- <span data-ttu-id="e5a46-131">Aşağıdaki kod, güvenli bir bağlam'kurmak için ileti güvenliği kullanan bir hizmet uç noktası oluşturma gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="e5a46-131">The following code shows how to create a service endpoint that uses message security to establish a secure context.</span></span>  
+### <a name="code"></a><span data-ttu-id="a7c80-130">Kod</span><span class="sxs-lookup"><span data-stu-id="a7c80-130">Code</span></span>  
+ <span data-ttu-id="a7c80-131">Aşağıdaki kod, güvenli bir bağlam'kurmak için ileti güvenliği kullanan bir hizmet uç noktası oluşturma gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="a7c80-131">The following code shows how to create a service endpoint that uses message security to establish a secure context.</span></span>  
   
  [!code-csharp[C_SecurityScenarios#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#10)]
  [!code-vb[C_SecurityScenarios#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#10)]  
   
-### <a name="configuration"></a><span data-ttu-id="e5a46-132">Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="e5a46-132">Configuration</span></span>  
- <span data-ttu-id="e5a46-133">Aşağıdaki yapılandırmayı kod yerine kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="e5a46-133">The following configuration can be used instead of the code.</span></span>  
+### <a name="configuration"></a><span data-ttu-id="a7c80-132">Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="a7c80-132">Configuration</span></span>  
+ <span data-ttu-id="a7c80-133">Aşağıdaki yapılandırmayı kod yerine kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="a7c80-133">The following configuration can be used instead of the code.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -85,24 +84,24 @@ ms.locfileid: "47193872"
 </configuration>  
 ```  
   
-## <a name="client"></a><span data-ttu-id="e5a46-134">İstemci</span><span class="sxs-lookup"><span data-stu-id="e5a46-134">Client</span></span>  
- <span data-ttu-id="e5a46-135">Aşağıdaki kod ve yapılandırma, bağımsız olarak çalışmaya yöneliktir.</span><span class="sxs-lookup"><span data-stu-id="e5a46-135">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="e5a46-136">Aşağıdakilerden birini yapın:</span><span class="sxs-lookup"><span data-stu-id="e5a46-136">Do one of the following:</span></span>  
+## <a name="client"></a><span data-ttu-id="a7c80-134">İstemci</span><span class="sxs-lookup"><span data-stu-id="a7c80-134">Client</span></span>  
+ <span data-ttu-id="a7c80-135">Aşağıdaki kod ve yapılandırma, bağımsız olarak çalışmaya yöneliktir.</span><span class="sxs-lookup"><span data-stu-id="a7c80-135">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="a7c80-136">Aşağıdakilerden birini yapın:</span><span class="sxs-lookup"><span data-stu-id="a7c80-136">Do one of the following:</span></span>  
   
--   <span data-ttu-id="e5a46-137">Bir tek başına istemci kodu (ve istemci kodu) kullanarak oluşturun.</span><span class="sxs-lookup"><span data-stu-id="e5a46-137">Create a stand-alone client using the code (and client code).</span></span>  
+-   <span data-ttu-id="a7c80-137">Bir tek başına istemci kodu (ve istemci kodu) kullanarak oluşturun.</span><span class="sxs-lookup"><span data-stu-id="a7c80-137">Create a stand-alone client using the code (and client code).</span></span>  
   
--   <span data-ttu-id="e5a46-138">Herhangi bir uç nokta adresi tanımlamıyor bir istemci oluşturun.</span><span class="sxs-lookup"><span data-stu-id="e5a46-138">Create a client that does not define any endpoint addresses.</span></span> <span data-ttu-id="e5a46-139">Bunun yerine, yapılandırma adı bağımsız değişkeni olarak alan İstemci Oluşturucu kullanın.</span><span class="sxs-lookup"><span data-stu-id="e5a46-139">Instead, use the client constructor that takes the configuration name as an argument.</span></span> <span data-ttu-id="e5a46-140">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="e5a46-140">For example:</span></span>  
+-   <span data-ttu-id="a7c80-138">Herhangi bir uç nokta adresi tanımlamıyor bir istemci oluşturun.</span><span class="sxs-lookup"><span data-stu-id="a7c80-138">Create a client that does not define any endpoint addresses.</span></span> <span data-ttu-id="a7c80-139">Bunun yerine, yapılandırma adı bağımsız değişkeni olarak alan İstemci Oluşturucu kullanın.</span><span class="sxs-lookup"><span data-stu-id="a7c80-139">Instead, use the client constructor that takes the configuration name as an argument.</span></span> <span data-ttu-id="a7c80-140">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="a7c80-140">For example:</span></span>  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
-### <a name="code"></a><span data-ttu-id="e5a46-141">Kod</span><span class="sxs-lookup"><span data-stu-id="e5a46-141">Code</span></span>  
- <span data-ttu-id="e5a46-142">Aşağıdaki kod, istemci oluşturur.</span><span class="sxs-lookup"><span data-stu-id="e5a46-142">The following code creates the client.</span></span> <span data-ttu-id="e5a46-143">İleti modu güvenlik bağlamadır ve istemci kimlik bilgisi türü `Certificate`.</span><span class="sxs-lookup"><span data-stu-id="e5a46-143">The binding is to message mode security, and the client credential type is set to `Certificate`.</span></span>  
+### <a name="code"></a><span data-ttu-id="a7c80-141">Kod</span><span class="sxs-lookup"><span data-stu-id="a7c80-141">Code</span></span>  
+ <span data-ttu-id="a7c80-142">Aşağıdaki kod, istemci oluşturur.</span><span class="sxs-lookup"><span data-stu-id="a7c80-142">The following code creates the client.</span></span> <span data-ttu-id="a7c80-143">İleti modu güvenlik bağlamadır ve istemci kimlik bilgisi türü `Certificate`.</span><span class="sxs-lookup"><span data-stu-id="a7c80-143">The binding is to message mode security, and the client credential type is set to `Certificate`.</span></span>  
   
  [!code-csharp[C_SecurityScenarios#17](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#17)]
  [!code-vb[C_SecurityScenarios#17](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#17)]  
   
-### <a name="configuration"></a><span data-ttu-id="e5a46-144">Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="e5a46-144">Configuration</span></span>  
- <span data-ttu-id="e5a46-145">Aşağıdaki yapılandırma, bir uç nokta davranışı'nı kullanarak istemci sertifikasını belirtir.</span><span class="sxs-lookup"><span data-stu-id="e5a46-145">The following configuration specifies the client certificate using an endpoint behavior.</span></span> <span data-ttu-id="e5a46-146">Sertifikalar hakkında daha fazla bilgi için bkz. [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).</span><span class="sxs-lookup"><span data-stu-id="e5a46-146">For more information about certificates, see [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).</span></span> <span data-ttu-id="e5a46-147">Ayrıca kodda bir <`identity`> öğesini bir etki alanı adı sistemi (DNS), beklenen sunucu kimliğini belirtin.</span><span class="sxs-lookup"><span data-stu-id="e5a46-147">The code also uses an <`identity`> element to specify a Domain Name System (DNS) of the expected server identity.</span></span> <span data-ttu-id="e5a46-148">Kimlik hakkında daha fazla bilgi için bkz: [kimlik doğrulama ile hizmet kimliği](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).</span><span class="sxs-lookup"><span data-stu-id="e5a46-148">For more information about identity, see [Service Identity and Authentication](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).</span></span>  
+### <a name="configuration"></a><span data-ttu-id="a7c80-144">Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="a7c80-144">Configuration</span></span>  
+ <span data-ttu-id="a7c80-145">Aşağıdaki yapılandırma, bir uç nokta davranışı'nı kullanarak istemci sertifikasını belirtir.</span><span class="sxs-lookup"><span data-stu-id="a7c80-145">The following configuration specifies the client certificate using an endpoint behavior.</span></span> <span data-ttu-id="a7c80-146">Sertifikalar hakkında daha fazla bilgi için bkz. [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).</span><span class="sxs-lookup"><span data-stu-id="a7c80-146">For more information about certificates, see [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).</span></span> <span data-ttu-id="a7c80-147">Ayrıca kodda bir <`identity`> öğesini bir etki alanı adı sistemi (DNS), beklenen sunucu kimliğini belirtin.</span><span class="sxs-lookup"><span data-stu-id="a7c80-147">The code also uses an <`identity`> element to specify a Domain Name System (DNS) of the expected server identity.</span></span> <span data-ttu-id="a7c80-148">Kimlik hakkında daha fazla bilgi için bkz: [kimlik doğrulama ile hizmet kimliği](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).</span><span class="sxs-lookup"><span data-stu-id="a7c80-148">For more information about identity, see [Service Identity and Authentication](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -144,8 +143,8 @@ ms.locfileid: "47193872"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="e5a46-149">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="e5a46-149">See Also</span></span>  
- [<span data-ttu-id="e5a46-150">Güvenliğe Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="e5a46-150">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [<span data-ttu-id="e5a46-151">Kimlik Doğrulama ile Hizmet Kimliği</span><span class="sxs-lookup"><span data-stu-id="e5a46-151">Service Identity and Authentication</span></span>](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [<span data-ttu-id="e5a46-152">Sertifikalarla Çalışma</span><span class="sxs-lookup"><span data-stu-id="e5a46-152">Working with Certificates</span></span>](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [<span data-ttu-id="e5a46-153">Windows Server AppFabric için güvenlik modeli</span><span class="sxs-lookup"><span data-stu-id="e5a46-153">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a><span data-ttu-id="a7c80-149">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="a7c80-149">See Also</span></span>  
+ [<span data-ttu-id="a7c80-150">Güvenliğe Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="a7c80-150">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [<span data-ttu-id="a7c80-151">Kimlik Doğrulama ile Hizmet Kimliği</span><span class="sxs-lookup"><span data-stu-id="a7c80-151">Service Identity and Authentication</span></span>](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
+ [<span data-ttu-id="a7c80-152">Sertifikalarla Çalışma</span><span class="sxs-lookup"><span data-stu-id="a7c80-152">Working with Certificates</span></span>](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
+ [<span data-ttu-id="a7c80-153">Windows Server AppFabric için güvenlik modeli</span><span class="sxs-lookup"><span data-stu-id="a7c80-153">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
