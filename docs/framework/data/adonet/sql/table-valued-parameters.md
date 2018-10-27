@@ -1,16 +1,16 @@
 ---
 title: Tablo değerli Parametreler
-ms.date: 03/30/2017
+ms.date: 10/12/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: 333154f26a575886f19a914ce2f91beebd6be49e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 8654a415ee0701680064aec2ee45f975086ec2c0
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042588"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50088591"
 ---
 # <a name="table-valued-parameters"></a>Tablo değerli Parametreler
 Tablo değerli parametreler birden çok gidiş dönüş veya özel sunucu tarafı mantık verilerin işlenmesi için gerek kalmadan birden çok SQL Server için bir istemci uygulamasından veri satırı sıralama için kolay bir yol sağlar. Bir istemci uygulamasında veri satırı kapsüllemek ve tek bir Parametreli komutu sunucuda veri göndermek için tablo değerli parametreleri kullanabilirsiniz. Gelen veri satırları sonra üzerinde kullanarak işletilebilir bir tablo değişkeninde depolanan [!INCLUDE[tsql](../../../../../includes/tsql-md.md)].  
@@ -87,7 +87,9 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
   
 ## <a name="configuring-a-sqlparameter-example"></a>SqlParameter örnek yapılandırma  
  <xref:System.Data.SqlClient> Tablo değerli parametreler doldurma destekler <xref:System.Data.DataTable>, <xref:System.Data.Common.DbDataReader> veya <xref:System.Collections.Generic.IEnumerable%601>  \  <xref:Microsoft.SqlServer.Server.SqlDataRecord> nesneleri. Tablo değerli parametresi için bir tür adını kullanarak belirtmelisiniz <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> özelliği bir <xref:System.Data.SqlClient.SqlParameter>. `TypeName` Sunucuda daha önce oluşturduğunuz uyumlu bir tür adıyla eşleşmelidir. Aşağıdaki kod parçası nasıl yapılandırılacağını gösteren <xref:System.Data.SqlClient.SqlParameter> veri eklemek için.  
-  
+ 
+Aşağıdaki örnekte, `addedCategories` değişkenini içeren bir <xref:System.Data.DataTable>. Değişken nasıl doldurulur görmek için sonraki bölümde yer alan örnekler görmek [Table-Valued parametresi için bir saklı yordam geçirme](#passing).
+
 ```csharp  
 // Configure the command and parameter.  
 SqlCommand insertCommand = new SqlCommand(sqlInsert, connection);  
@@ -126,7 +128,7 @@ Dim tvpParam As SqlParameter = _
 tvpParam.SqlDbType = SqlDbType.Structured  
 ```  
   
-## <a name="passing-a-table-valued-parameter-to-a-stored-procedure"></a>Tablo değerli bir parametre için bir saklı yordam geçirme  
+## <a name="passing"></a> Tablo değerli bir parametre için bir saklı yordam geçirme  
  Bu örnek nasıl tablo değerli parametre veri saklı yordama geçirileceğini gösterir. Eklenen satırlarla kod yeni bir ayıklar <xref:System.Data.DataTable> kullanarak <xref:System.Data.DataTable.GetChanges%2A> yöntemi. Ardından kodu tanımlayan bir <xref:System.Data.SqlClient.SqlCommand>ayarını <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> özelliğini <xref:System.Data.CommandType.StoredProcedure>. <xref:System.Data.SqlClient.SqlParameter> Kullanarak doldurulur <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> yöntemi ve <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> ayarlanır `Structured`. <xref:System.Data.SqlClient.SqlCommand> Kullanarak yürütülür <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> yöntemi.  
   
 ```csharp  

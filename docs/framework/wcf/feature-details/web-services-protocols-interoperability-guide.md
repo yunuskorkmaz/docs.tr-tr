@@ -2,12 +2,12 @@
 title: Web Hizmetleri Protokolleri Birlikte Çalışabilirlik Kılavuzu
 ms.date: 03/30/2017
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
-ms.openlocfilehash: 37416a80c8b6f2ac086dbface1cda37609698bfc
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 9aeceff9dc2b714016d2f7c379e538d885489bb9
+ms.sourcegitcommit: 4621e67f69e7a9503ea93313ff60d69683207889
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842161"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49995405"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Web Hizmetleri Protokolleri Birlikte Çalışabilirlik Kılavuzu
 Windows Communication Foundation (WCF) Web Hizmetleri protokolleri sayısı uygular. Çoğu bu protokolleri, bir dizi seçenekleri ve genişletilebilirlik noktaları uygulayan takdirine bağlı olarak sol içerir. Bu konuda, Web Hizmetleri protokolleri WCF uygulayan bir listesini sağlar. Bu bölüm içindeki diğer konular, desteklenen her protokol için uygulama ayrıntıları sağlar.  
@@ -36,7 +36,7 @@ Windows Communication Foundation (WCF) Web Hizmetleri protokolleri sayısı uygu
 |Adresleme 1.0 - çekirdek W3C Web Hizmetleri|[Adresleme 1.0 - çekirdek Web Hizmetleri](https://go.microsoft.com/fwlink/?LinkId=96688)|  
 |Adresleme 1.0 - SOAP bağlama W3C Web Hizmetleri|[Web Hizmetleri adresleme 1.0 - SOAP bağlama](https://go.microsoft.com/fwlink/?LinkId=96689)|  
 |W3C Web adresleme 1.0 - WSDL bağlama * Hizmetleri|[Web Hizmetleri adresleme 1.0 - WSDL bağlama](https://go.microsoft.com/fwlink/?LinkId=96690)|  
-|1.0 meta verileri adresleme W3C Web Hizmetleri|[Adresleme 1.0 - meta veri Web Hizmetleri](http://www.w3.org/TR/ws-addr-metadata/)|  
+|1.0 meta verileri adresleme W3C Web Hizmetleri|[Adresleme 1.0 - meta veri Web Hizmetleri](https://www.w3.org/TR/ws-addr-metadata/)|  
 |WSDL SOAP1.1 bağlama|[Web Hizmetleri Açıklama Dili (WSDL) 1.1](https://go.microsoft.com/fwlink/?LinkId=96160)|  
 |WSDL SOAP1.2 bağlama|[WSDL 1.1 bağlama uzantısı için SOAP 1.2](https://go.microsoft.com/fwlink/?LinkId=96691)|  
   

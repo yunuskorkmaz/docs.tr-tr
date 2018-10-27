@@ -17,52 +17,52 @@ helpviewer_keywords:
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f78df1a85bacae3019fe27857731174796d8a311
-ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
+ms.openlocfilehash: 8d83da6e995c35de650c496c5792e55b05dd9095
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36270428"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50088799"
 ---
 # <a name="assembly-security-considerations"></a>Derleme Güvenliği Konuları
-<a name="top"></a> Bir derlemeyi derlerken, derleme çalıştırılması için gerekli izinleri belirtebilirsiniz. Bir derlemeye belirli izinlerin verilip verilmediği kanıta göre belirlenir.  
+<a name="top"></a> Bir derleme oluşturduğunuzda, derlemenin çalışması için gerekli izinler kümesi belirtebilirsiniz. Bir derlemeye belirli izinlerin verilip verilmediği kanıta göre belirlenir.  
   
  Kanıtın kullanıldığı iki farklı yol vardır:  
   
--   Giriş kanıtı yükleyici tarafından toplanan kanıtla birleştirilerek ilke çözümlemesi için kullanılacak olan son kanıt kümesini oluşturur. Bu anlam kullanan yöntemleri dahil **Assembly.Load**, **Assembly.LoadFrom**, ve **Activator.CreateInstance**.  
+-   Giriş kanıtı yükleyici tarafından toplanan kanıtla birleştirilerek ilke çözümlemesi için kullanılacak olan son kanıt kümesini oluşturur. Bu semantiği kullanan yöntemlerden **Assembly.Load**, **Assembly.LoadFrom**, ve **Activator.CreateInstance**.  
   
--   Giriş kanıtı, ilke çözümlemesi için kullanılan son kanıt kümesi olarak değiştirilmeden kullanılır. Bu anlam kullanan yöntemleri dahil **Assembly.Load(byte[])** ve **AppDomain.DefineDynamicAssembly()**.  
+-   Giriş kanıtı, ilke çözümlemesi için kullanılan son kanıt kümesi olarak değiştirilmeden kullanılır. Bu semantiği kullanan yöntemlerden **Assembly.Load(byte[])** ve **AppDomain.DefineDynamicAssembly()**.  
   
- İsteğe bağlı olanağı verilir tarafından [Güvenlik İlkesi](../../../docs/framework/misc/code-access-security-basics.md) derleme çalıştırılacağı bilgisayarda ayarlayın. Kodunuzun tüm olası güvenlik özel durumlarını işlemesini istiyorsanız, aşağıdakilerden birini yapabilirsiniz:  
+ Tarafından isteğe bağlı izinler verilebilir [Güvenlik İlkesi](../../../docs/framework/misc/code-access-security-basics.md) derlemenin çalışacağı bilgisayarda ayarlayın. Kodunuzun tüm olası güvenlik özel durumlarını işlemesini istiyorsanız, aşağıdakilerden birini yapabilirsiniz:  
   
 -   Kodunuzun sahip olması gereken tüm izinler için bir izin isteği ekleyin ve izinler verilmezse gerçekleşecek yükleme zamanı hatasını önden işleyin.  
   
 -   Kodunuzun ihtiyacı olabilecek izinleri almak için bir izin isteği kullanmayın, ancak izinler verilmezse oluşacak güvenlik özel durumlarını işlemeye hazır olun.  
   
     > [!NOTE]
-    >  Güvenlik karmaşık bir alandır ve pek çok seçeneğiniz vardır. Daha fazla bilgi için bkz: [temel güvenlik kavramları](../../../docs/standard/security/key-security-concepts.md).  
+    >  Güvenlik karmaşık bir alandır ve pek çok seçeneğiniz vardır. Daha fazla bilgi için [temel güvenlik kavramları](../../../docs/standard/security/key-security-concepts.md).  
   
  Yükleme zamanında derlemenin kanıtı güvenlik ilkesine giriş olarak kullanılır. Güvenlik ilkesi, kuruluş ve bilgisayar yöneticisinin yanı sıra kullanıcı ilke ayarları tarafından belirlenir ve yürütüldüklerinde tüm yönetilen kodlara verilen izinler kümesini belirler. Güvenlik ilkesi derlemenin yayımcısı için (imzalama aracıyla oluşturulmuş bir imzaya sahipse), derlemenin indirildiği Web sitesi ve bölge için (Internet Explorer terimiyle) veya derlemenin tanımlayıcı adı için belirlenebilir. Örneğin bir bilgisayarın yöneticisi, bir Web sitesinden indirilen ve belirli bir yazılım şirketi tarafından imzalanan tüm kodların bir bilgisayardaki veritabanına erişmesine izin veren, ancak bilgisayarın diskine yazmasına izin vermeyen bir güvenlik ilkesi belirleyebilir.  
   
 ## <a name="strong-named-assemblies-and-signing-tools"></a>Katı Ada Sahip Derlemeler ve İmzalama Araçları  
 
  > [!WARNING]
- > Güvenlik tanımlayıcı adlar kullanmayın. Yalnızca benzersiz bir kimlik sağlarlar.
+ > Güvenlik için tanımlayıcı adlar güvenmeyin. Benzersiz bir kimliğe sağlarlar.
 
- İki farklı ancak birbirini tamamlayıcı şekilde derlemeyi imzalamak: güçlü bir adla veya kullanarak [SignTool.exe (imza aracı)](../../../docs/framework/tools/signtool-exe.md). Bir derlemeyi tanımlayıcı adla imzalama ortak anahtar şifrelemesi derleme bildirimi içeren dosyasına ekler. Tanımlayıcı ad imzalaması ad benzersizliğini doğrulamaya, ad sahtekarlığını önlemeye ve bir referans çözüldüğünde çağıranlara kimlik sağlamaya yardımcı olur.  
+ Bir derlemeyi iki farklı ancak tamamlayıcı şekilde imzalayabilirsiniz: katı bir adla veya kullanarak [SignTool.exe (imza aracı)](../../../docs/framework/tools/signtool-exe.md). Bir derlemeyi katı bir adla imzalamak, dosyaya derleme bildirimini içeren ortak anahtar şifrelemesi ekler. Tanımlayıcı ad imzalaması ad benzersizliğini doğrulamaya, ad sahtekarlığını önlemeye ve bir referans çözüldüğünde çağıranlara kimlik sağlamaya yardımcı olur.  
   
- Hiçbir güven düzeyini sağlayan güçlü bir ad ile ilişkilendirilmiş [SignTool.exe (imza aracı)](../../../docs/framework/tools/signtool-exe.md) önemli. İki imzalama aracı, bir yayımcının kimliğini üçüncü taraf bir yetkiliye kanıtlamasını ve bir sertifika almasını gerektirir. Bu sertifika ardından dosyanıza katıştırılır ve bir yönetici tarafından kodunuzun orijinalliğine güvenip güvenmemeye karar vermek için kullanılabilir.  
+ Hiçbir güven düzeyi sağlayan bir tanımlayıcı ad ile ilişkilendirilen [SignTool.exe (imza aracı)](../../../docs/framework/tools/signtool-exe.md) önemli. İki imzalama aracı, bir yayımcının kimliğini üçüncü taraf bir yetkiliye kanıtlamasını ve bir sertifika almasını gerektirir. Bu sertifika ardından dosyanıza katıştırılır ve bir yönetici tarafından kodunuzun orijinalliğine güvenip güvenmemeye karar vermek için kullanılabilir.  
   
- Güçlü bir ad ve kullanılarak oluşturulan bir dijital imza verebilirsiniz [SignTool.exe (imza aracı)](../../../docs/framework/tools/signtool-exe.md) bir derleme veya kullanabilirsiniz tek başına. İki imzalama aracı aynı anda yalnızca tek bir dosya imzalayabilir; bir çoklu dosya derlemesi için derleme bildirimini içeren dosyayı imzalarsınız. Tanımlayıcı ad içeren derleme bildirimi dosyasında depolanır, ancak bir imza kullanılarak oluşturulan [SignTool.exe (imza aracı)](../../../docs/framework/tools/signtool-exe.md) ayrılmış bir yuva derleme bildirimi içeren taşınabilir yürütülebilir (PE) dosyasında depolanır. Kullanarak bir derlemenin imzalama [SignTool.exe (imza aracı)](../../../docs/framework/tools/signtool-exe.md) (veya ile güçlü bir ad olmadan) kullanılabilir dayanan bir güven hiyerarşisi zaten varsa[SignTool.exe (imza aracı)](../../../docs/framework/tools/signtool-exe.md) imzalar, oluşturulan veya ilkeniz yalnızca anahtar bölümü kullanır ve bir güven zinciri denetlemez.  
+ Hem bir tanımlayıcı ad hem de kullanılarak oluşturulan bir dijital imza verebilirsiniz [SignTool.exe (imza aracı)](../../../docs/framework/tools/signtool-exe.md) bir derlemeye veya kullanabilirsiniz tek başına. İki imzalama aracı aynı anda yalnızca tek bir dosya imzalayabilir; bir çoklu dosya derlemesi için derleme bildirimini içeren dosyayı imzalarsınız. Tanımlayıcı ad derleme bildirimini içeren dosyada saklanır, ancak kullanarak oluşturulan bir imza [SignTool.exe (imza aracı)](../../../docs/framework/tools/signtool-exe.md) derleme bildirimini içeren taşınabilir yürütülebilir (PE) dosyanın içinde ayrılmış bir bölümde depolanır. Kullanarak bir derlemeyi imzalamak [SignTool.exe (imza aracı)](../../../docs/framework/tools/signtool-exe.md) (ile veya bir tanımlayıcı ad olmadan) kullanılabilir dayanan bir güven hiyerarşisine zaten varsa[SignTool.exe (imza aracı)](../../../docs/framework/tools/signtool-exe.md) üretilen imzaları veya ne zaman ilkeniz yalnızca anahtar bölümünü kullanıp güven zinciri denetlemez.  
   
 > [!NOTE]
 >  Bir derleme üzerinde hem tanımlayıcı ad hem de bir imzalama aracı imzası kullanırken, tanımlayıcı ad önce atanmalıdır.  
   
  Ortak dil çalışma zamanı bir karma doğrulaması da gerçekleştirir; derleme bildirimi derlemeyi oluşturan tüm dosyaların listesini, her dosyanın bildirim oluşturulduğu zamanki karması ile birlikte içerir. Dosyaların her biri yüklenirken, içindekilerin karması alınır ve bildirimde saklanan karma değeriyle karşılaştırılır. Eğer iki karma eşleşmezse, derleme yüklemesi başarısız olur.  
   
- Güçlü adlandırma ve kullanarak imzalama çünkü [SignTool.exe (imza aracı)](../../../docs/framework/tools/signtool-exe.md) bütünlüğünü garanti derleme kanıt, iki yöntemden birini kod erişimi güvenlik ilkesi temel alabilir. Güçlü adlandırma ve kullanarak imzalama [SignTool.exe (imza aracı)](../../../docs/framework/tools/signtool-exe.md) dijital imzalar ve sertifikalar ile bütünlüğü garanti. Belirtilen tüm teknolojileri — karma doğrulama, güçlü adlandırma ve kullanarak imzalama [SignTool.exe (imza aracı)](../../../docs/framework/tools/signtool-exe.md)— birlikte derleme herhangi bir şekilde değiştirilmediğini emin olmak için çalışır.  
+ Strong adlandırma ve kullanarak imzalama çünkü [SignTool.exe (imza aracı)](../../../docs/framework/tools/signtool-exe.md) bütünlüğü bu iki derleme kanıtı üzerinde kod erişim güvenlik ilkesini temel alabilir. Tanımlayıcı adlandırma ve kullanarak imzalama [SignTool.exe (imza aracı)](../../../docs/framework/tools/signtool-exe.md) dijital imzalar ve sertifikalar aracılığıyla bütünlüğü garanti. Bahsedilen tüm teknolojiler — karma doğrulama, tanımlayıcı adlandırma ve kullanarak imzalama [SignTool.exe (imza aracı)](../../../docs/framework/tools/signtool-exe.md)— birlikte derlemenin hiçbir şekilde değiştirilmediğinden emin olmak için iş.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Kesin Adlandırılmış Bütünleştirilmiş Kodlar](../../../docs/framework/app-domains/strong-named-assemblies.md)  
- [Ortak Dil Çalışma Zamanı Modülündeki Bütünleştirilmiş Kodlar](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- [SignTool.exe (İmza Aracı)](../../../docs/framework/tools/signtool-exe.md)
+- [Kesin Adlandırılmış Bütünleştirilmiş Kodlar](../../../docs/framework/app-domains/strong-named-assemblies.md)  
+- [Ortak Dil Çalışma Zamanı Modülündeki Bütünleştirilmiş Kodlar](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+- [SignTool.exe (İmza Aracı)](../../../docs/framework/tools/signtool-exe.md)

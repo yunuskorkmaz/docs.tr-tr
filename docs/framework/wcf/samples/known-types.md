@@ -2,12 +2,12 @@
 title: Bilinen Türler
 ms.date: 03/30/2017
 ms.assetid: 88d83720-ca38-4b2c-86a6-f149ed1d89ec
-ms.openlocfilehash: ec1dfa426c19b5471acb1c359f5068854fa8aa71
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 76e0dadd372df4bc2755db0c3ff7cce5cc31ba20
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192502"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49454414"
 ---
 # <a name="known-types"></a>Bilinen Türler
 Bu örnek, bir veri sözleşmesi türetilmiş türleri hakkında bilgi belirtmek nasıl gösterir. Veri sözleşmeleri, yapılandırılmış veriler için ve hizmetlerden geçmesine izin verin. Nesne yönelimli programlama, başka bir türünden devralan bir tür, özgün türü yerine kullanılabilir. Hizmet yönelimli programlama, türleri yerine şemaları iletildiği ve bu nedenle, türleri arasındaki ilişkiyi korunmaz. <xref:System.Runtime.Serialization.KnownTypeAttribute> Özniteliği veri sözleşmesi içerisinde bulunan için türetilmiş türleri hakkında bilgi sağlar. Bu mekanizma kullanılmıyorsa, türetilmiş bir tür gönderilen veya olamaz bir taban türü beklenirken aldı.  
@@ -17,7 +17,7 @@ Bu örnek, bir veri sözleşmesi türetilmiş türleri hakkında bilgi belirtmek
   
  Aşağıdaki örnek kodda gösterildiği gibi hizmeti için hizmet sözleşmesi karmaşık sayılar kullanır.  
   
-```  
+```csharp
 // Define a service contract.  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface ICalculator  
@@ -35,7 +35,7 @@ public interface ICalculator
   
  <xref:System.Runtime.Serialization.DataContractAttribute> Ve <xref:System.Runtime.Serialization.DataMemberAttribute> uygulanan `ComplexNumber` sınıf hangi alanları istemci ile hizmet arasında geçirilen göstermek için sınıf. Türetilmiş `ComplexNumberWithMagnitude` sınıfı yerine kullanılabilir `ComplexNumber`. <xref:System.Runtime.Serialization.KnownTypeAttribute> Özniteliği `ComplexNumber` türü bu gösterir.  
   
-```  
+```csharp
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 [KnownType(typeof(ComplexNumberWithMagnitude))]  
 public class ComplexNumber  
@@ -55,7 +55,7 @@ public class ComplexNumber
   
  `ComplexNumberWithMagnitude` Tür türetilir `ComplexNumber` ancak bir ek veri üyesi ekler `Magnitude`.  
   
-```  
+```csharp
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public class ComplexNumberWithMagnitude : ComplexNumber  
 {  
@@ -73,7 +73,7 @@ public class ComplexNumberWithMagnitude : ComplexNumber
   
  Bilinen türler özelliği göstermek için hizmet gibi içinde uygulanan döndürdüğü şekilde bir `ComplexNumberWithMagnitude` yalnızca toplama ve çıkarma için. (Sözleşme belirtmesine rağmen `ComplexNumber`, bu nedenle izin `KnownTypeAttribute` özniteliği). Çarpma ve bölme hala temel dönüş `ComplexNumber` türü.  
   
-```  
+```csharp
 public class DataContractCalculatorService : IDataContractCalculator  
 {  
     public ComplexNumber Add(ComplexNumber n1, ComplexNumber n2)  
@@ -116,14 +116,14 @@ public class DataContractCalculatorService : IDataContractCalculator
   
  İstemcide, hem hizmet sözleşmesi hem de veri anlaşması tarafından üretilen kaynak dosyası generatedClient.cs tanımlanan [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) hizmeti meta veriler. Çünkü <xref:System.Runtime.Serialization.KnownTypeAttribute> özniteliği, hizmetin veri sözleşmede, istemci her ikisi de alabilir belirtilirse `ComplexNumber` ve `ComplexNumberWithMagnitude` hizmeti kullanırken sınıfları. İstemci var olup olmadığını algılayan bir `ComplexNumberWithMagnitude` ve uygun çıktıyı oluşturur:  
   
-```  
+```csharp
 // Create a client  
 DataContractCalculatorClient client =   
     new DataContractCalculatorClient();  
   
 // Call the Add service operation.  
-ComplexNumber value1 = new ComplexNumber(); value1.real = 1; value1.imaginary = 2;  
-ComplexNumber value2 = new ComplexNumber(); value2.real = 3; value2.imaginary = 4;  
+ComplexNumber value1 = new ComplexNumber() { real = 1, imaginary = 2 };  
+ComplexNumber value2 = new ComplexNumber() { real = 3, imaginary = 4 };  
 ComplexNumber result = client.Add(value1, value2);  
 Console.WriteLine("Add({0} + {1}i, {2} + {3}i) = {4} + {5}i",  
     value1.real, value1.imaginary, value2.real, value2.imaginary,  
@@ -141,7 +141,7 @@ else
   
  Örneği çalıştırdığında istek ve yanıtların işlemin istemci konsol penceresinde görüntülenir. Bir boyuta, toplama ve çıkarma için yazdırılır ancak değil çarpma ve bölme biçimi nedeniyle için hizmet uygulanmıştır unutmayın. İstemci bilgisayarı için istemci penceresinde ENTER tuşuna basın.  
   
-```  
+```console  
 Add(1 + 2i, 3 + 4i) = 4 + 6i  
 Magnitude: 7.21110255092798  
 Subtract(1 + 2i, 3 + 4i) = -2 + -2i  

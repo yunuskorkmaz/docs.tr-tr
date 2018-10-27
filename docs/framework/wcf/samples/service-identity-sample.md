@@ -2,12 +2,12 @@
 title: Hizmet Kimliği Örneği
 ms.date: 03/30/2017
 ms.assetid: 79fa8c1c-85bb-4b67-bc67-bfaf721303f8
-ms.openlocfilehash: 913795f9d9e35b4ecce5998320cc64c0c0b46ba7
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 341e4922089634c3e46929d6cdb474b2dfbd0666
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582631"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49633917"
 ---
 # <a name="service-identity-sample"></a>Hizmet Kimliği Örneği
 Bu hizmet kimliği örneği bir hizmet için kimlik gösterilmektedir. Tasarım zamanında istemci hizmet meta verileri kullanarak kimliğini alabilir ve ardından çalışma zamanında istemci hizmetin kimliğini doğrulayabilir. Hizmet kimliği kavramı, böylece istemci kimliği doğrulanmamış çağrılarından koruma işlemlerinden birini çağırmadan önce bir hizmet kimlik doğrulaması bir istemci izin vermektir. Güvenli bir bağlantı üzerinden hizmet de istemci kimlik bilgileri erişime izin vermeden önce kimliğini doğrular, ancak bu odak noktası, bu örnek değil. Örnekleri görmek [istemci](../../../../docs/framework/wcf/samples/client.md) sunucu kimlik doğrulaması göster.
@@ -28,7 +28,7 @@ Bu hizmet kimliği örneği bir hizmet için kimlik gösterilmektedir. Tasarım 
 
  Aşağıdaki örnek kod, bir hizmet uç noktası kimliği etki alanı adı sunucusu (DNS) ile bir WSHttpBinding kullanarak bir sertifika yapılandırmak gösterilmektedir.
 
-```
+```csharp
 //Create a service endpoint and set its identity to the certificate's DNS
 WSHttpBinding wsAnonbinding = new WSHttpBinding (SecurityMode.Message);
 // Client are Anonymous to the service
@@ -56,7 +56,7 @@ ep.Address = epa;
 
  Özel kimlik türeterek istemcide ayarlanabilir <xref:System.ServiceModel.EndpointIdentity> ve <xref:System.ServiceModel.Security.IdentityVerifier> sınıfları. Kavramsal olarak <xref:System.ServiceModel.Security.IdentityVerifier> sınıfı kabul istemci olarak denk olan hizmetin `AuthorizationManager` sınıfı. Aşağıdaki kod örneği uygulanışı gösterilmektedir `OrgEndpointIdentity`, sunucu sertifikasının konu adını eşleştirmek için bir kuruluş adı depolar. Kuruluş adı yetkilendirme denetle oluşuyor `CheckAccess` metodunda `CustomIdentityVerifier` sınıfı.
 
-```
+```csharp
 // This custom EndpointIdentity stores an organization name
 public class OrgEndpointIdentity : EndpointIdentity
 {

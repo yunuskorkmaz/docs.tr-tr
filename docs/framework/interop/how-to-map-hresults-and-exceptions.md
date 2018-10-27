@@ -13,25 +13,25 @@ helpviewer_keywords:
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d9825deae22e856cf520e6173d53278539c576c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0d5728de1140df51b9c725db0c8c80d21ace6deb
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393555"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49454479"
 ---
 # <a name="how-to-map-hresults-and-exceptions"></a>Nasıl yapılır: HRESULTs ve Özel Durumları Eşleme
-COM yöntemleri HRESULTs döndürerek hata raporu; .NET yöntemleri bunları özel durumları atma tarafından rapor. Çalışma zamanı iki arasında geçiş işler. .NET Framework'teki her özel durum sınıfı bir HRESULT eşler.  
+COM yöntemleri HRESULTs döndürerek hata raporu; .NET yöntemleri bunları özel durumları atma tarafından rapor. Çalışma zamanı, ikisi arasındaki geçişi işler. .NET Framework içindeki her bir özel durum sınıfı için HRESULT eşler.  
   
- Kullanıcı tanımlı özel durum sınıfları HRESULT uygun ne olursa olsun belirtebilirsiniz. Bu özel durum sınıfları dinamik olarak ayarlayarak özel durum oluşturulduğunda döndürülecek HRESULT değiştirebilirsiniz **HResult** özel durum nesnesi üzerinde alan. Özel durum hakkında ek bilgi istemcisi üzerinden sağlanan **IErrorInfo** yönetilmeyen işleminde .NET nesnesinde uygulanan arabirim.  
+ Kullanıcı tanımlı özel durum sınıfları HRESULT uygun ne olursa olsun belirtebilirsiniz. Bu özel durum sınıfları dinamik olarak ayarlayarak özel durum oluşturulduğunda döndürülecek HRESULT değiştirebilirsiniz **HResult** alanına özel durum nesnesi. Özel durum hakkında ek bilgi istemcisi üzerinden sağlanan **IErrorInfo** yönetilmeyen işleminde .NET nesne üzerinde uygulanan arabirimi.  
   
- Genişleten bir sınıfı oluşturursanız **System.Exception**, HRESULT alanını oluşturma sırasında ayarlamanız gerekir. Aksi takdirde, temel sınıf HRESULT değeri atar. Özel durumun Oluşturucusu değerinde sağlayarak mevcut HRESULT yeni özel durum sınıfları eşleyebilirsiniz.  
+ Genişleten bir sınıfı oluşturursanız **System.Exception**, yapım sırasında HRESULT alanını ayarlamanız gerekir. Aksi takdirde, temel sınıf HRESULT değerini atar. Özel durumun oluşturucusunu değeri sağlanarak yeni özel durum sınıfları için mevcut bir HRESULT eşleyebilirsiniz.  
   
- Çalışma zamanı bazen yoksayacak Not bir `HRESULT` durumda olduğu bir `IErrorInfo` iş parçacığı mevcut.  Bu davranış durumlarda oluşabilir nerede `HRESULT` ve `IErrorInfo` aynı hatayı temsil etmiyor.  
+ Çalışma zamanı bazen yoksayacak Not bir `HRESULT` durumda olduğu bir `IErrorInfo` iş parçacığı üzerinde mevcut.  Bu davranış durumlarda oluşabilir burada `HRESULT` ve `IErrorInfo` aynı hatayı temsil etmiyor.  
   
-### <a name="to-create-a-new-exception-class-and-map-it-to-an-hresult"></a>Yeni bir özel durum sınıfı oluşturmak ve bir HRESULT eşlemek için  
+### <a name="to-create-a-new-exception-class-and-map-it-to-an-hresult"></a>Yeni bir özel durum sınıfı oluşturun ve bir HRESULT eşlemek için  
   
-1.  Adlı yeni bir özel durum sınıfı oluşturmak için aşağıdaki kodu kullanın `NoAccessException` ve HRESULT eşleme `E_ACCESSDENIED`.  
+1.  Adlı yeni bir özel durum sınıfı oluşturmak için aşağıdaki kodu kullanın `NoAccessException` ve HRESULT harita `E_ACCESSDENIED`.  
   
     ```cpp  
     Class NoAccessException : public ApplicationException  
@@ -46,7 +46,7 @@ COM yöntemleri HRESULTs döndürerek hata raporu; .NET yöntemleri bunları öz
     }  
     ```  
   
- Aynı anda hem yönetilen hem de yönetilmeyen kodu kullanan bir programda (herhangi bir programlama dili) karşılaşabilirsiniz. Örneğin, aşağıdaki kod örneğinde özel sıralayıcı kullanır **Marshal.ThrowExceptionForHR (int HResult)** yöntemi belirli HRESULT değerine sahip bir özel durum. Yöntem HRESULT arar ve uygun özel durum türü oluşturur. Örneğin, aşağıdaki kod parçası olarak HRESULT oluşturur **ArgumentException**.  
+ Aynı anda hem yönetilen hem de yönetilmeyen kodu kullanan bir programda (herhangi bir programlama dilini) hatalarla karşılaşabilirsiniz. Örneğin, aşağıdaki kod örneğinde özel sıralayıcı kullanır **Marshal.ThrowExceptionForHR (int HResult)** belirli bir HRESULT değerine sahip bir özel durum için yöntemi. Yöntem HRESULT arar ve uygun özel durum türü oluşturur. Örneğin, aşağıdaki kod parçası HRESULT oluşturur **ArgumentException**.  
   
 ```cpp  
 CMyClass::MethodThatThrows  
@@ -55,14 +55,14 @@ CMyClass::MethodThatThrows
 }  
 ```  
   
- Aşağıdaki tabloda, tam eşleme karşılaştırılabilir özel durum sınıfındaki .NET Framework'teki her HRESULT sağlar.  
+ Aşağıdaki tablo, .NET Framework'teki karşılaştırılabilir özel durum sınıfına her HRESULT tam eşleme sağlar.  
   
 |HRESULT|.NET özel durumu|  
 |-------------|--------------------|  
 |**MSEE_E_APPDOMAINUNLOADED**|**AppDomainUnloadedException**|  
 |**COR_E_APPLICATION**|**ApplicationException**|  
 |**COR_E_ARGUMENT veya E_INVALIDARG**|**ArgumentException**|  
-|**COR_E_ARGUMENTOUTOFRANGE**|**ArgumentOutOfRangeException**|  
+|**COR_E_ARGUMENTOUTOFRANGE**|**Üretiliyor**|  
 |**COR_E_ARITHMETIC veya ERROR_ARITHMETIC_OVERFLOW**|**ArithmeticException**|  
 |**COR_E_ARRAYTYPEMISMATCH**|**ArrayTypeMismatchException**|  
 |**COR_E_BADIMAGEFORMAT veya ERROR_BAD_FORMAT**|**BadImageFormatException**|  
@@ -75,13 +75,13 @@ CMyClass::MethodThatThrows
 |**COR_E_DUPLICATEWAITOBJECT**|**DuplicateWaitObjectException**|  
 |**COR_E_ENDOFSTREAM**|**EndOfStreamException**|  
 |**COR_E_TYPELOAD**|**EntryPointNotFoundException**|  
-|**COR_E_EXCEPTION**|**Özel durumu**|  
+|**COR_E_EXCEPTION**|**özel durum**|  
 |**COR_E_EXECUTIONENGINE**|**ExecutionEngineException**|  
 |**COR_E_FIELDACCESS**|**FieldAccessException**|  
 |**COR_E_FILENOTFOUND veya ERROR_FILE_NOT_FOUND**|**FileNotFoundException**|  
 |**COR_E_FORMAT**|**FormatException**|  
 |**COR_E_INDEXOUTOFRANGE**|**IndexOutOfRangeException**|  
-|**COR_E_INVALIDCAST veya E_NOINTERFACE**|**InvalidCastException**|  
+|**COR_E_INVALIDCAST veya e_noınterface**|**InvalidCastException**|  
 |**COR_E_INVALIDCOMOBJECT**|**InvalidComObjectException**|  
 |**COR_E_INVALIDFILTERCRITERIA**|**Invalidfiltercriteriaexception**|  
 |**COR_E_INVALIDOLEVARIANTTYPE**|**Invalidolevarianttypeexception**|  
@@ -100,7 +100,7 @@ CMyClass::MethodThatThrows
 |**COR_E_NULLREFERENCE orE_POINTER**|**NullReferenceException**|  
 |**COR_E_OUTOFMEMORY veya**<br /><br /> **E_OUTOFMEMORY**|**OutOfMemoryException**|  
 |**COR_E_OVERFLOW**|**OverflowException**|  
-|**COR_E_PATHTOOLONG veya ERROR_FILENAME_EXCED_RANGE**|**PathTooLongException**|  
+|**COR_E_PATHTOOLONG veya ERROR_FILENAME_EXCED_RANGE**|**Pathtoolongexception'ı**|  
 |**COR_E_RANK**|**RankException**|  
 |**COR_E_REFLECTIONTYPELOAD**|**ReflectionTypeLoadException**|  
 |**COR_E_REMOTING**|**RemotingException**|  
@@ -124,24 +124,24 @@ CMyClass::MethodThatThrows
 |**COR_E_VTABLECALLSNOTSUPPORTED**|**VTableCallsNotSupportedException**|  
 |**Diğer tüm HRESULTs**|**COMException**|  
   
- Genişletilmiş hata bilgileri almak için yönetilen istemci oluşturulan özel durum nesnesi alanları incelemeniz gerekir. Özel durum nesnesi bir hata hakkında yararlı bilgiler sağlayan COM nesnesi uygulamalıdır **IErrorInfo** arabirimi. Çalışma zamanı tarafından sağlanan bilgileri kullanır **IErrorInfo** özel durum nesnesi başlatılamadı.  
+ Genişletilmiş hata bilgilerini almak için yönetilen istemciyi oluşturulmasına neden olan özel durum nesnesi alanlarını incelemeniz gerekir. Özel durum nesnesi bir hata hakkında yararlı bilgiler sağlayan COM nesnesi uygulamalıdır **IErrorInfo** arabirimi. Çalışma zamanı tarafından sağlanan bilgileri kullanır **IErrorInfo** özel durum nesnesi başlatılamıyor.  
   
- COM nesnesi desteklemediği varsa **IErrorInfo**, çalışma zamanı bir özel durum nesnesi varsayılan değerlerle başlatır. Aşağıdaki tabloda, bir özel durum nesnesi ile ilişkili her alanı listeler ve COM nesnesi desteklediğinde varsayılan bilgileri kaynağını tanımlayan **IErrorInfo**.  
+ COM nesnesi desteklemiyorsa **IErrorInfo**, çalışma zamanı bir özel durum nesnesi varsayılan değerlerle başlatır. Aşağıdaki tabloda, bir özel durum nesnesiyle ilişkilendirilen her bir alan listeler ve COM nesnesi desteklediğinde varsayılan bilgi kaynağını tanımlayan **IErrorInfo**.  
   
- Çalışma zamanı bazen yoksayacak Not bir `HRESULT` durumda olduğu bir `IErrorInfo` iş parçacığı mevcut.  Bu davranış durumlarda oluşabilir nerede `HRESULT` ve `IErrorInfo` aynı hatayı temsil etmiyor.  
+ Çalışma zamanı bazen yoksayacak Not bir `HRESULT` durumda olduğu bir `IErrorInfo` iş parçacığı üzerinde mevcut.  Bu davranış durumlarda oluşabilir burada `HRESULT` ve `IErrorInfo` aynı hatayı temsil etmiyor.  
   
-|Özel alan|COM bilgilerinden kaynağı|  
+|Özel alan|COM bilgisi kaynağı|  
 |---------------------|------------------------------------|  
-|**hata kodu**|HRESULT çağrısından döndürüldü.|  
-|**HelpLink**|Varsa **IErrorInfo HelpContext ->** olan sıfır olmayan, dize birleştirerek biçimlendirildiğinden **IErrorInfo -> GetHelpFile** ve "#" ve **IErrorInfo -> GetHelpContext**. Aksi takdirde gelen dize döndürülür **IErrorInfo -> GetHelpFile**.|  
-|**InnerException**|Her zaman bir null başvuru (**hiçbir şey** Visual Basic'te).|  
+|**hata kodu**|Çağrıdan HRESULT döndürdü.|  
+|**HelpLink**|Varsa **IErrorInfo -> HelpContext** olan sıfır değilse, dize birleştirerek biçimlendirilmiş **IErrorInfo GetHelpFile ->** ve "#" ve **IErrorInfo -> GetHelpContext**. Aksi takdirde dize öğesinden döndürülen **IErrorInfo -> GetHelpFile**.|  
+|**InnerException**|Her zaman null başvuru (**hiçbir şey** Visual Basic'te).|  
 |**İleti**|Döndürülen dize **IErrorInfo -> GetDescription**.|  
 |**Kaynak**|Döndürülen dize **IErrorInfo -> GetSource**.|  
 |**StackTrace**|Yığın izleme.|  
 |**TARGETSITE**|Başarısız olan döndürülen yöntemin adını HRESULT.|  
   
- Özel alanlar, gibi **ileti**, **kaynak**, ve **StackTrace** kullanılamaz **StackOverflowException**.  
+ Gibi özel alanları **ileti**, **kaynak**, ve **StackTrace** kullanılamaz **StackOverflowException**.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Gelişmiş COM birlikte çalışabilirliği](https://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb(v=vs.100))  
+ [Gelişmiş COM birlikte çalışabilirliği](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))  
  [Özel Durumlar](../../standard/exceptions/index.md)

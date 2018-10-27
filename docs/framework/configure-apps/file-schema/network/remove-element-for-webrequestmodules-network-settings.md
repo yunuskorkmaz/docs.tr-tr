@@ -10,14 +10,12 @@ helpviewer_keywords:
 - <remove> element, webRequestModules
 - <webRequestModules>, remove element
 ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: d0da0fd2edae4687ea80b4a23cc82a25ead9cb7b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 2f787206c503c047a34383e12c5676296e39c1fe
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47208587"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50190755"
 ---
 # <a name="ltremovegt-element-for-webrequestmodules-network-settings"></a>&lt;kaldırma&gt; webRequestModules (ağ ayarları) için
 Özel bir Web isteği modülü uygulamadan kaldırır.  
@@ -56,13 +54,14 @@ ms.locfileid: "47208587"
 ## <a name="remarks"></a>Açıklamalar  
  `remove` Belirtilen URI öneki kayıtlı Web isteği modülü öğeyi kaldırır.  
   
- Değeri `prefix` özniteliği olmalıdır geçerli bir URI--Örneğin, "http", önde gelen karakterlerini veya "`http://www.contoso.com` ".  
+ Değeri `prefix` özniteliği olmalıdır geçerli bir URI'ın önde gelen karakter Örneğin, "`http`", veya "`http://www.contoso.com`".  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
  Bu öğe, uygulama yapılandırma dosyası veya makine yapılandırma dosyası (Machine.config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, HTTP için mevcut Web isteği modülü kaldırır ve ardından yeni özel bir Web isteği modülü HTTP istekleri www.contoso.com için kaydeder.  
+
+Aşağıdaki örnek, HTTP için mevcut Web isteği modülü kaldırır ve ardından kayıtları için yeni özel bir Web isteği modülü için HTTP istekleri `www.contoso.com`.
   
 ```xml  
 <configuration>  
@@ -79,5 +78,5 @@ ms.locfileid: "47208587"
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Net.WebRequest>  
- [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net.WebRequest>  
+- [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

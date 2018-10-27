@@ -2,12 +2,12 @@
 title: Mesajlaşma Protokolleri
 ms.date: 03/30/2017
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
-ms.openlocfilehash: 7d94b917f3d8d2fd7faed28b9320edc240724e0b
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 4678980520266879b41bea6e10f075a2df116457
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46703017"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183860"
 ---
 # <a name="messaging-protocols"></a>Mesajlaşma Protokolleri
 
@@ -47,7 +47,7 @@ Belirtimi/belgesi:
 
 Bu konu başlığı altında yaptığımız, aşağıdaki XML ad alanları ve ilişkili ön ekleri kullanılır:
 
-| Önek | Namespace Tekdüzen Kaynak Tanımlayıcısı (URI) | [---|---| | s11 | `http://schemas.xmlsoap.org/soap/envelope`| | s12 | `http://www.w3.org/2003/05/soap-envelope`| | wsa | `http://www.w3.org/2004/08/addressing`| | wsam | `http://www.w3.org/2007/05/addressing/metadata`| | wsap | `http://schemas.xmlsoap.org/ws/2004/09/policy/addressing`| | wsa10 | `http://www.w3.org/2005/08/addressing`| | wsaw10 | `http://www.w3.org/2006/05/addressing/wsdl`| | xop | `http://www.w3.org/2004/08/xop/include`| | xmime |`http://www.w3.org/2004/06/xmlmime`<br /><br /> `http://www.w3.org/2005/05/xmlmime`| | dp |`http://schemas.microsoft.com/net/2006/06/duplex`|
+| Önek | Namespace Tekdüzen Kaynak Tanımlayıcısı (URI) | [---|---| | s11 | `http://schemas.xmlsoap.org/soap/envelope` || s12 | `http://www.w3.org/2003/05/soap-envelope` || wsa | `http://www.w3.org/2004/08/addressing` || wsam | `http://www.w3.org/2007/05/addressing/metadata` || wsap | `http://schemas.xmlsoap.org/ws/2004/09/policy/addressing` || wsa10 | `http://www.w3.org/2005/08/addressing` || wsaw10 | `http://www.w3.org/2006/05/addressing/wsdl` || xop | `http://www.w3.org/2004/08/xop/include` || xmime |`http://www.w3.org/2004/06/xmlmime`<br /><br /> `http://www.w3.org/2005/05/xmlmime` | | dp |`http://schemas.microsoft.com/net/2006/06/duplex` |
 
 ## <a name="soap-11-and-soap-12"></a>SOAP 1.1 ve SOAP 1.2
 
@@ -190,20 +190,20 @@ Bir ileti ile WCF uç noktasını yapılandırıldığında bir verilen `Action`
 ### <a name="web-services-addressing-faults"></a>Adres hatası Web Hizmetleri
 R3411: WCF WS-Addressing 2004/08 tarafından tanımlanan aşağıdaki hatalar üretir.
 
-|Kod|Sebep|
+| Kod | Sebep |
 |----------|-----------|
-|`wsa:DestinationUnreachable`|İle iletinin geldiği bir `ReplyTo` bu kanal için oluşturulan yanıt adresi farklıdır; için üst bilgisinde belirtilen adreste dinleme bitiş noktası yoktur.|
-|`wsa:ActionNotSupported`|Altyapı kanalları ya da uç noktasıyla ilişkili dağıtıcısı, belirtilen eylem algılamaz `Action` başlığı.|
+| `wsa:DestinationUnreachable` | İle iletinin geldiği bir `ReplyTo` bu kanal için oluşturulan yanıt adresi farklıdır; için üst bilgisinde belirtilen adreste dinleme bitiş noktası yoktur. |
+| `wsa:ActionNotSupported` | Altyapı kanalları ya da uç noktasıyla ilişkili dağıtıcısı, belirtilen eylem algılamaz `Action` başlığı. |
 
 R3412: WCF WS-Addressing 1.0 tarafından tanımlanan aşağıdaki hatalar üretir.
 
-|Kod|Sebep|
+| Kod | Sebep |
 |----------|-----------|
-|`wsa10:InvalidAddressingHeader`|Yinelenen `wsa:To`, `wsa:ReplyTo`, `wsa:From` veya `wsa:MessageID`. Yinelenen `wsa:RelatesTo` aynı `RelationshipType`.|
-|`wsa10:MessageAddressingHeaderRequired`|Gerekli Addressing üst bilgisi eksik.|
-|`wsa10:DestinationUnreachable`|İle iletinin geldiği bir `ReplyTo` , bu kanal için oluşturulan yanıt adresi farklıdır. Uç nokta için üst bilgisinde belirtilen adreste dinleme yoktur.|
-|`wsa10:ActionNotSupported`|Belirtilen eylem `Action` üstbilgi altyapı kanalları ya da uç noktasıyla ilişkili dağıtıcı tarafından tanınmıyor.|
-|`wsa10:EndpointUnavailable`|RM kanal uç nokta değil incelenmesi göre sırası işleme gösteren bu hata yeniden gönderir `CreateSequence` ileti adresleme üstbilgileri.|
+| `wsa10:InvalidAddressingHeader` | Yinelenen `wsa:To`, `wsa:ReplyTo`, `wsa:From` veya `wsa:MessageID`. Yinelenen `wsa:RelatesTo` aynı `RelationshipType`. |
+| `wsa10:MessageAddressingHeaderRequired` | Gerekli Addressing üst bilgisi eksik. |
+| `wsa10:DestinationUnreachable` | İle iletinin geldiği bir `ReplyTo` , bu kanal için oluşturulan yanıt adresi farklıdır. Uç nokta için üst bilgisinde belirtilen adreste dinleme yoktur. |
+| `wsa10:ActionNotSupported` | Belirtilen eylem `Action` üstbilgi altyapı kanalları ya da uç noktasıyla ilişkili dağıtıcı tarafından tanınmıyor. |
+| `wsa10:EndpointUnavailable` | RM kanal uç nokta değil incelenmesi göre sırası işleme gösteren bu hata yeniden gönderir `CreateSequence` ileti adresleme üstbilgileri. |
 
 Yukarıdaki tablolarda kod eşlemeleri için `FaultCode` SOAP 1.1 içinde ve `SubCode` (gönderici ile kod =) SOAP 1.2 içinde.
 

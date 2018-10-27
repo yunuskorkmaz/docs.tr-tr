@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fd0ddda898911da2c96a53d941c4290af9028154
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b54ceb099df15855b6b30b8c28d7d8917a9c71eb
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446580"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50184955"
 ---
 # <a name="imetadataemitdefinefield-method"></a>IMetaDataEmit::DefineField Yöntemi
-Belirtilen meta veri imzayla bir alan için bir tanım oluşturur ve bu alan tanımı için bir belirteç alır.  
+Belirtilen meta verileri imza ile bir alan için bir tanım oluşturur ve bu alan tanımı için bir belirteç alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -48,19 +48,19 @@ HRESULT DefineField (
  [in] `mdTypeDef` Kapsayan sınıf veya arabirim için belirteç.  
   
  `szName`  
- [in] Unicode alanın adı.  
+ [in] Unicode alan adı.  
   
  `dwFieldFlags`  
- [in] Alan öznitelikleri. Bu, bir bit maskesi olan `CorFieldAttr` değerleri.  
+ [in] Alan öznitelikleri. Bu, bir bit maskesi, `CorFieldAttr` değerleri.  
   
  `pvSigBlob`  
- [in] Bir BLOB alan imzası.  
+ [in] Bir BLOB olarak alan imzası.  
   
  `cbSigBlob`  
  [in] Bayt sayısı `pvSigBlob`.  
   
- `dwCPlusTypeFlage`  
- [in] `ELEMENT_TYPE_` *\** Sabit değer. Bu bir `CorElementType` değeri. Alan için sabit bir değer tanımlama değil kullanırsanız `ELEMENT_TYPE_END`.  
+ `dwCPlusTypeFlag`  
+ [in] `ELEMENT_TYPE_` *\** Sabit değer. Bu bir `CorElementType` değeri. Alan için sabit bir değer tanımlamayarak kullanırsanız `ELEMENT_TYPE_END`.  
   
  `pValue`  
  [in] Alan için sabit bir değer.  
@@ -76,7 +76,7 @@ HRESULT DefineField (
   
  **Başlık:** Cor.h  
   
- **Kitaplığı:** MSCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** MSCorEE.dll kaynak olarak kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

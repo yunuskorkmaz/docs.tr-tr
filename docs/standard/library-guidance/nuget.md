@@ -4,16 +4,16 @@ description: En iyi yöntem önerileri paketleme için NuGet ile .NET kitaplıkl
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 845af3b34827e1f284bb52e040f9de09f22baf37
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 479d1786c232ef1f843877169954e847453681c9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49087871"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185634"
 ---
 # <a name="nuget"></a>NuGet
 
-NuGet, .NET ekonomik sistem için bir paket yöneticisidir ve birincil yolu geliştiriciler keşfedin ve .NET açık kaynak kitaplıkları Al. Birincil ana bilgisayar için genel NuGet paketleri NuGet.org, NuGet paketlerini barındırmak için Microsoft tarafından sağlanan ücretsiz bir hizmet olan ancak MyGet ve Azure DevOps gibi özel NuGet hizmetlerine yayımlayabilirsiniz.
+NuGet için .NET ekosisteminin bir paket yöneticisidir ve birincil yolu geliştiriciler keşfedin ve .NET açık kaynak kitaplıklarını edinebilir. [NuGet.org](https://www.nuget.org/), NuGet paketlerini barındırmak için Microsoft tarafından sağlanan ücretsiz bir hizmet olduğundan birincil konak genel NuGet paketleri için ancak gibi özel NuGet hizmetlerine yayımlayabilirsiniz [MyGet](https://www.myget.org/) ve [Azure Yapıtları ](https://azure.microsoft.com/services/devops/artifacts/).
 
 ![NuGet](./media/nuget/nuget-logo.png "NuGet")
 
@@ -21,7 +21,7 @@ NuGet, .NET ekonomik sistem için bir paket yöneticisidir ve birincil yolu geli
 
 Bir NuGet paketi (`*.nupkg`) .NET derlemelerini ve ilişkili meta verileri içeren bir zip dosyasıdır.
 
-Bir NuGet paketi oluşturmak için iki ana yolu vardır. Yeni ve önerilen bir SDK stilinde projeden bir paketi oluşturmak için yoludur (proje dosyasının içeriği ile başlayan `<Project Sdk="Microsoft.NET.Sdk">`). Derlemeler ve hedefleri paketi otomatik olarak eklenir ve meta verileri kalan paket adı ve sürüm numarası gibi MSBuild dosyasına eklenir. İle derlerken [ `dotnet pack` ](../../core/tools/dotnet-pack.md) çıktılar komut bir `*.nupkg` derlemeler yerine dosya.
+Bir NuGet paketi oluşturmak için iki ana yolu vardır. Yeni ve önerilen bir SDK stilinde projeden bir paketi oluşturmak için yoludur (proje dosyası içerikleri ile başlayan `<Project Sdk="Microsoft.NET.Sdk">`). Derlemeler ve hedefleri paketi otomatik olarak eklenir ve meta verileri kalan paket adı ve sürüm numarası gibi MSBuild dosyasına eklenir. İle derlerken [ `dotnet pack` ](../../core/tools/dotnet-pack.md) çıktılar komut bir `*.nupkg` derlemeler yerine dosya.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -62,7 +62,7 @@ Bir NuGet paketi birçok destekler [meta veri özelliklerini](/nuget/reference/n
 
 **✔️ DÜŞÜNÜN** NuGet'ın ön eki ayırma karşılayan bir önek ile NuGet paket adı seçerek [ölçütleri](/nuget/reference/id-prefix-reservation).
 
-**✔️ DÜŞÜNÜN** kullanarak `LICENSE` dosya kaynak denetimine eklememelisiniz `LicenseUrl`. Örneğin, https://github.com/JamesNK/Newtonsoft.Json/blob/master/LICENSE.md
+**✔️ DÜŞÜNÜN** kullanarak `LICENSE` dosya kaynak denetimine eklememelisiniz `LicenseUrl`. Örneğin, [LICENSE.md](https://github.com/JamesNK/Newtonsoft.Json/blob/c4af75c8e91ca0d75aa6c335e8c106780c4f7712/LICENSE.md).
 
 > [!IMPORTANT]
 > Bir proje için varsayılan olarak bir lisans olmadan [özel telif hakkı](https://choosealicense.com/no-permission/), diğer kişilerin kullanmasına imkansızdır.
@@ -92,13 +92,22 @@ NuGet paketlerini sürüm sonekine sahip olarak kabul edilir [yayın öncesi](/n
 
 ## <a name="symbol-packages"></a>Sembol paketleri
 
-NuGet destekler [ayrı sembol paketi oluşturuluyor](/nuget/create-packages/symbol-packages) içeren hata ayıklama PDB dosyaları .NET derlemelerini içeren ana paket yanı sıra. Sembol paketleri fikri bir sembol sunucusunda barındırılan ve yalnızca Visual Studio gibi bir araçla isteğe bağlı olarak yüklenen değildir.
+Sembol dosyaları (`*.pdb`) derlemeleri yanı sıra .NET derleyici tarafından üretilen. Sembol dosyaları harita yürütme konumu özgün kaynak kodu, kaynak kodu olarak aracılığıyla girmek için bir hata ayıklayıcıyı kullanarak çalışıyor. NuGet destekler [ayrı sembol paketi oluşturuluyor](/nuget/create-packages/symbol-packages) .NET derlemelerini içeren ana paket yanı sıra sembol dosyalarını içeren. Sembol paketleri fikri bir sembol sunucusunda barındırılan ve yalnızca Visual Studio gibi bir araçla isteğe bağlı olarak yüklenen değildir.
 
-Şu anda genel ana sembolleri - [SymbolSource](http://www.symbolsource.org/) -oluşturulan taşınabilir pdb desteklemiyor tarafından SDK stili projeleri ve sembol paketleri yararlı değildir.
+Şu anda genel ana sembolleri - [SymbolSource](http://www.symbolsource.org/) -yeni desteklemiyor [taşınabilir sembol dosyalarını](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md) (`*.pdb`) SDK stili projeleri tarafından oluşturulan ve sembol paketleri kullanışlı değildir. Sembol paketleri için önerilen bir ana kadar sembol dosyaları ana NuGet paketinin eklenebilir. NuGet paketiniz, katıştırabilir bir SDK stilinde projesi kullanarak sembol dosyalarını ayarlayarak derliyorsanız `AllowedOutputExtensionsInPackageBuildOutputFolder` özelliği: 
 
-**✔️ DÜŞÜNÜN** pdb ana NuGet paketini ekleme.
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+ <PropertyGroup>
+    <!-- Include symbol files (*.pdb) in the built .nupkg -->
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+  </PropertyGroup>
+</Project>
+```
 
-**❌ KAÇININ** pdb içeren bir sembol paketi oluşturuluyor.
+**✔️ DÜŞÜNÜN** sembol dosyaları ana NuGet paketini ekleme.
+
+**❌ KAÇININ** sembol dosyalarını içeren bir sembol paketi oluşturuluyor.
 
 >[!div class="step-by-step"]
 [Önceki](./strong-naming.md)

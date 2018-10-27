@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8f7630b9a233db009b6095abc8d833870c1f33d8
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 215fb807aa27b8a544351d26fd0c9500c76b6ead
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46581940"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50037106"
 ---
 # <a name="recoverable-xslt-errors"></a>Kurtarılabilir XSLT hataları
 W3C XSLT Dönüşümleri (XSLT) sürüm 1.0 öneri uygulama sağlayıcısı bir durumu işlemek nasıl karar verebilir alanları içerir. Bu alanlar isteğe bağlı bir davranış olarak değerlendirilir. Örneğin, bu içeriği, örnekleme, bir hata olduğunu Bölüm 7.3 oluşturma işleme yönergeleri, XSLT 1.0 öneri eyaletler `xsl:processing-instruction` metin düğümleri dışındaki düğümlerde oluşturur. İşlemci hatadan kurtarmayı karar verirse, bazı sorunlar için öneri ne karar gösterir XSLT 1.0 yapılmalıdır. 7.3 bölümde verilen sorun için uygulama bu hatadan düğümleri ve içeriklerini yoksayarak kurtarabilirsiniz W3C diyor.  
@@ -22,7 +22,7 @@ W3C XSLT Dönüşümleri (XSLT) sürüm 1.0 öneri uygulama sağlayıcısı bir 
   
 -   Bu koşul için bir özel durum, hata olduğunu gösterir.  
   
--   Bölüm başvuruları bulunabilir [W3C XSLT Dönüşümleri (XSLT) sürüm 1.0 öneri](http://www.w3.org/TR/xslt) ve [W3C XSLT Dönüşümleri (XSLT) sürüm 1.0 belirtimi Errata](https://www.w3.org/1999/11/REC-xslt-19991116-errata/).  
+-   Bölüm başvuruları bulunabilir [W3C XSLT Dönüşümleri (XSLT) sürüm 1.0 öneri](https://www.w3.org/TR/xslt) ve [W3C XSLT Dönüşümleri (XSLT) sürüm 1.0 belirtimi Errata](https://www.w3.org/1999/11/REC-xslt-19991116-errata/).  
   
 |XSLT koşulu|Bölüm|XslCompiledTransform davranışı|  
 |--------------------|-------------|-----------------------------------|  

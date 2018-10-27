@@ -9,14 +9,12 @@ helpviewer_keywords:
 - staleness of cached resources
 - age of cached resources
 ms.assetid: 7f775925-89a1-4956-ba90-c869c1749a94
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: c512f03cd3c0cfc4463e54538f12898fbbf45f7e
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 7a066f403e526c50054b58a099bb7978ef57e74d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583767"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181153"
 ---
 # <a name="cache-policy-interactionmaximum-age-and-maximum-staleness"></a>Önbellek İlkesi etkileşimi — yaş üst sınırı ve en fazla eskime
 İstemci uygulamayı çevrimiçiyken içeriği getirildiğinden emin olun yardımcı olmak için istemci önbellek İlkesi ve sunucu yeniden doğrulama gereksinimleri etkileşimi her zaman en koruyucu önbellek İlkesi'nde sonuçlanır. Bu konu başlığı altındaki tüm örnekler, 1 Ocak önbelleğe alınır ve 4 Ocak süresi bir kaynağın önbellek ilkesini gösterir.  

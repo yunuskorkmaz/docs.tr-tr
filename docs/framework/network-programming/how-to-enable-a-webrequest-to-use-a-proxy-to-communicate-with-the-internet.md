@@ -5,14 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 63c0ef2c-44b5-4c54-9804-ba0b9b001ac7
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 86bf21580db9bc6d9890f0935e283b653ba2e0b5
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 09a50794995b9157504ceff8dd578d709bfee020
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397796"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50190449"
 ---
 # <a name="how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet"></a>Nasıl yapılır: Internet ile iletişim kurmak için bir ara sunucu kullanan bir Webrequest'i etkinleştirme
 Bu örnek, tüm olanak sağlayacak bir genel proxy örneği oluşturur <xref:System.Net.WebRequest> Internet ile iletişim kurmak için bir ara sunucu kullanmak için. Bu örnek, proxy sunucusu adlandırıldığını varsayar `webproxy` ve üzerinde iletişim bağlantı noktası 80, standart HTTP bağlantı noktası.  

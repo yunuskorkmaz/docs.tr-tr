@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: 343b9cc23f9d72d75a83ad785a3d565b8f5704e7
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: b961ebd186953e614658915c7246e1c83c40e7e9
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842696"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453159"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>Devre kesici desenini uygulama
 
@@ -56,7 +56,7 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 }
 ```
 
-Yukarıdaki kod örneğinde, keser veya olduğunda beş art arda hatalar Http isteklerini kurulmaya çalışılırken bağlantı hattını açılır devre kesici İlkesi yapılandırılır. Bu durum oluştuğunda, bağlantı hattı için 30 saniye çalışmamasına neden olur: Bu dönemde çağrıları devre kesici tarafından hemen başarısız yerine gerçekten yerleştirilmesi.  İlke otomatik olarak yorumlar [ilgili özel durumları ve HTTP durum kodları](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1#handle-transient-faults) hataları olarak.  
+Yukarıdaki kod örneğinde, keser veya olduğunda beş art arda hatalar Http isteklerini kurulmaya çalışılırken bağlantı hattını açılır devre kesici İlkesi yapılandırılır. Bu durum oluştuğunda, bağlantı hattı için 30 saniye çalışmamasına neden olur: Bu dönemde çağrıları devre kesici tarafından hemen başarısız yerine gerçekten yerleştirilmesi.  İlke otomatik olarak yorumlar [ilgili özel durumları ve HTTP durum kodları](https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1#handle-transient-faults) hataları olarak.  
 
 Devre Kesiciler, istekleri, bir istemci uygulamadan daha farklı bir ortamda dağıtılan belirli bir kaynağa veya HTTP çağrısı gerçekleştiriyor hizmet sorunları varsa, bir geri dönüş altyapısını yeniden yönlendirmek için de kullanılmalıdır. Bu şekilde, yalnızca arka uç mikro hizmetlerin ancak, istemci uygulamaları etkileyen veri merkezinde bir kesinti oluşursa istemci uygulamaları için geri dönüş Hizmetleri yönlendirebilirsiniz. Polly bu otomatik hale getirmek için yeni bir ilke planlama [yük devretme İlkesi](https://github.com/App-vNext/Polly/wiki/Polly-Roadmap#failover-policy) senaryo. 
 

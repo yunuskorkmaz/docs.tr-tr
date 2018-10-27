@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: 45c838fbac5e6f576a242c8839f849dc9529ef7d
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: a608b91c78808af70bd5e9188926a12b945c5604
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43779279"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453183"
 ---
 # <a name="code-access-security-and-adonet"></a>Kod erişimi güvenliği ve ADO.NET
 .NET Framework, rol tabanlı güvenlik yanı sıra kod erişimi güvenliği (CAS), ikisi için de ortak dil çalışma (CLR) tarafından sağlanan bir ortak altyapısı kullanılarak uygulanan sunar. Yönetilmeyen kod dünyasında, çoğu uygulama sorumlusu ve kullanıcı izinleriyle çalıştırın. Sonuç olarak, bilgisayar sistemlerini kötü amaçlı, gizliliği bozulmuş ve özel veri olabilir veya yazılım hatası doldurulmuş yükseltilmiş ayrıcalıklara sahip bir kullanıcı tarafından çalıştırılır.  
@@ -192,11 +192,11 @@ Failed, as expected: Request failed.
 ## <a name="interoperability-with-unmanaged-code"></a>Yönetilmeyen kod ile birlikte çalışabilirlik  
  CLR dışında çalışan kod, yönetilmeyen kod adı verilir. Bu nedenle, güvenlik mekanizmaları CA'lar gibi yönetilmeyen koda uygulanamaz. COM bileşenlerini, ActiveX arabirimleri ve Win32 API işlevleri yönetilmeyen kod örnekleridir. Genel uygulama güvenliği reddetmeniz değil, yönetilmeyen kod yürütülürken özel güvenlik konuları uygulayın. Daha fazla bilgi için [yönetilmeyen kod ile birlikte çalışma](../../../../docs/framework/interop/index.md).  
   
- .NET Framework, COM birlikte çalışma aracılığıyla erişim sağlayarak geriye dönük uyumluluk için mevcut COM bileşenlerini de destekler. COM birlikte çalışma araçları kullanarak ilgili COM türleri içeri aktarmak üzere bir .NET Framework uygulamasına COM bileşenlerini birleştirebilirsiniz. İçeri aktarılan sonra COM türlerini kullanmak hazır olursunuz. COM birlikte çalışma, yönetilen kod, derleme meta verileri için bir tür kitaplığı dışarı aktarıp bir COM bileşeni yönetilen bileşen kaydı erişmek COM istemcileri de sağlar. Daha fazla bilgi için [Gelişmiş COM birlikte çalışabilirlik](https://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb).  
+ .NET Framework, COM birlikte çalışma aracılığıyla erişim sağlayarak geriye dönük uyumluluk için mevcut COM bileşenlerini de destekler. COM birlikte çalışma araçları kullanarak ilgili COM türleri içeri aktarmak üzere bir .NET Framework uygulamasına COM bileşenlerini birleştirebilirsiniz. İçeri aktarılan sonra COM türlerini kullanmak hazır olursunuz. COM birlikte çalışma, yönetilen kod, derleme meta verileri için bir tür kitaplığı dışarı aktarıp bir COM bileşeni yönetilen bileşen kaydı erişmek COM istemcileri de sağlar. Daha fazla bilgi için [Gelişmiş COM birlikte çalışabilirlik](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [Yerel Güvenlik ve .NET Framework kodu PAVE](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
- [Kod erişimi güvenliği](https://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)  
- [Rol Tabanlı Güvenlik](https://msdn.microsoft.com/library/239442e3-5be4-4203-b7fd-793baffea803)  
+ [Kod erişimi güvenliği](../../../../docs/framework/misc/code-access-security.md)  
+ [Rol Tabanlı Güvenlik](../../../../docs/standard/security/role-based-security.md)  
  [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

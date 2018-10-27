@@ -2,19 +2,19 @@
 title: ServiceToEndpointAssociation
 ms.date: 03/30/2017
 ms.assetid: 03c3cd15-e1b2-4dc2-bdc2-59fdccdae110
-ms.openlocfilehash: b1e5b87b053e947432cba9f6e716f7d1ea8f013f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3d23a3ee10c47e04ea7bdba202ea5063c0d84fac
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33484335"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452715"
 ---
 # <a name="servicetoendpointassociation"></a>ServiceToEndpointAssociation
-Bir hizmet için bir uç nokta eşler.  
+Bir uç nokta için bir hizmet eşler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```csharp
 class ServiceToEndpointAssociation  
 {  
   Service ref;  
@@ -23,29 +23,29 @@ class ServiceToEndpointAssociation
 ```  
   
 ## <a name="methods"></a>Yöntemler  
- ServiceToEndpointAssociation sınıfı herhangi bir yöntem tanımlamıyor.  
+ ServiceToEndpointAssociation sınıf herhangi bir yöntemi tanımlamaz.  
   
 ## <a name="properties"></a>Özellikler  
  ServiceToEndpointAssociation sınıfı aşağıdaki özelliklere sahiptir:  
   
 ### <a name="ref"></a>ref  
- Veri türü: hizmeti  
+ Veri türü: hizmet  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
 Niteleyiciler: anahtar  
   
- Bitiş noktası ile ilişkilendirilmiş hizmet.  
+ Hizmet uç noktası ile ilişkili.  
   
 ### <a name="ref"></a>ref  
- Veri türü: uç noktası  
+ Veri türü: uç nokta  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
 Niteleyiciler: anahtar  
   
- Hizmetle ilişkilendirilmiş uç nokta.  
+ Hizmetle ilişkili uç noktası.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|MOF|Bildirilen Servicemodel.mof.|  
+|MOF|Bildirilmiş Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Ad Alanı|İçinde tanımlanan root\ServiceModel|
+|Ad Alanı|İçinde tanımlı root\ServiceModel|

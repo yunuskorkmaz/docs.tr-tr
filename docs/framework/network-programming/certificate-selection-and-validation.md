@@ -2,14 +2,12 @@
 title: Sertifika seçimi ve doğrulama
 ms.date: 03/30/2017
 ms.assetid: c933aca2-4cd0-4ff1-9df9-267143f25a6f
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 01ce2ef8cb9c261e9292b0d26dd38a0a0b0958ff
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 2767f8fc62d44e480962690a3cbe379fea0f9662
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196141"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50048378"
 ---
 # <a name="certificate-selection-and-validation"></a>Sertifika seçimi ve doğrulama
 <xref:System.Net> Sınıfları seçin ve doğrulamak için birkaç yol destekler <xref:System.Security.Cryptography.X509Certificates> Güvenli Yuva Katmanı (SSL) bağlantıları için. Bir istemci, kendisi için bir sunucu kimliğini doğrulamak için bir veya daha fazla sertifikaları seçebilirsiniz. Bir istemci sertifikası kimlik doğrulaması için bir veya daha fazla belirli özniteliklere sahip bir sunucu gerektirebilir.  

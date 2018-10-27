@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XML Formatter
 ms.assetid: e0a2fe89-3534-48c8-aa3c-819862224571
-ms.openlocfilehash: ef1b01ff59fc32546dca8ed9c95f3a981ed408e3
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 0086bdd41b9f87c14b3a9d0653a8f8982235b1ad
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45743884"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188605"
 ---
 # <a name="datacontractserializer-sample"></a>DataContractSerializer Örneği
 DataContractSerializer örneği gösterir <xref:System.Runtime.Serialization.DataContractSerializer>gerçekleştirir genel serileştirme ve seri durumundan çıkarma için veri anlaşması sınıfları Hizmetleri. Örnek, oluşturur bir `Record` nesnesi, bir bellek akışa serileştirir ve bellek akışa geri başka bir'seri durumdan çıkarır `Record` kullanımını göstermek için nesne <xref:System.Runtime.Serialization.DataContractSerializer>. Ardından örnek serileştiren `Record` yazıcı serileştirme nasıl etkilediğini göstermek için bir ikili yazıcı kullanarak nesne.  
@@ -19,7 +19,7 @@ DataContractSerializer örneği gösterir <xref:System.Runtime.Serialization.Dat
   
  Veri anlaşması için `Record` aşağıdaki örnek kodda gösterilmiştir.  
   
-```  
+```csharp  
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 internal class Record  
 {  
@@ -74,14 +74,14 @@ internal class Record
   
  Örnek kod oluşturur bir `Record` adlı nesne `record1` sonra nesneyi görüntüler.  
   
-```  
+```csharp
 Record record1 = new Record(1, 2, "+", 3);  
 Console.WriteLine("Original record: {0}", record1.ToString());  
 ```  
   
  Ardından örnek kullanır <xref:System.Runtime.Serialization.DataContractSerializer> serileştirmek için `record1` içine bir bellek akış.  
   
-```  
+```csharp  
 MemoryStream stream1 = new MemoryStream();  
   
 //Serialize the Record object to a memory stream using DataContractSerializer.  
@@ -91,7 +91,7 @@ serializer.WriteObject(stream1, record1);
   
  Ardından, örnek kullanır <xref:System.Runtime.Serialization.DataContractSerializer> bellek akışı geri yeni dosyaya seri durumdan çıkarılacak `Record` nesne ve görüntüler.  
   
-```  
+```csharp  
 stream1.Position = 0;  
   
 //Deserialize the Record object back into a new record object.  
@@ -102,7 +102,7 @@ Console.WriteLine("Deserialized record: {0}", record2.ToString());
   
  Varsayılan olarak, `DataContractSerializer` XML metinsel bir gösterimini kullanarak bir akış nesneleri kodlar. Ancak, farklı bir yazıcı geçirerek XML kodlaması etkileyebilir. Örnek bir ikili yazıcı çağırarak oluşturur <xref:System.Xml.XmlDictionaryWriter.CreateBinaryWriter%2A>. Çağırdığında ardından yazıcı ve kayıt nesnesi için seri hale getirici arabimini <xref:System.Runtime.Serialization.DataContractSerializer.WriteObjectContent%2A>. Son olarak, örnek yazıcı temizler ve akışları uzunluğuna bildirir.  
   
-```  
+```csharp  
 MemoryStream stream2 = new MemoryStream();  
   
 XmlDictionaryWriter binaryDictionaryWriter = XmlDictionaryWriter.CreateBinaryWriter(stream2);  
@@ -116,7 +116,7 @@ Console.WriteLine("Binary Stream is {0} bytes long", stream2.Length);
   
  Örneği çalıştırdığınızda, orijinal kayıt ve seri durumdan çıkarılmış kayıt uzunluğu metin kodlama ile ikili kodlama arasında karşılaştırma tarafından izlenen görüntülenir. İstemci bilgisayarı için istemci penceresinde ENTER tuşuna basın.  
   
-```  
+```console  
 Original record: Record: 1 + 2 = 3  
 Deserialized record: Record: 1 + 2 = 3  
 Text Stream is 233 bytes long  

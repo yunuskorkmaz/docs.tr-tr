@@ -2,29 +2,29 @@
 title: SqlClient akış desteği
 ms.date: 03/30/2017
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-ms.openlocfilehash: f881318677949f5507c3e1c4a4b5606dd880c396
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7c9c7300678b9e285965a3c1b673a92b6f26973e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364742"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191054"
 ---
 # <a name="sqlclient-streaming-support"></a>SqlClient akış desteği
-Akış desteği SQL Server ile bir uygulama arasındaki (yeni [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) (belgeler, görüntüler ve medya dosyaları) sunucuda yapılandırılmamış verileri destekler. Bir SQL Server veritabanı ikili büyük nesneler (BLOB) depolayabilirsiniz ancak BLOB'ları alma çok miktarda bellek kullanabilir.  
+Akış desteği SQL Server ile bir uygulama arasındaki (yeni [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) yapılandırılmamış veriler (belgeler, görüntüler ve medya dosyaları) sunucuda destekler. İkili büyük nesne (BLOB) bir SQL Server veritabanı depolayabilir ancak BLOB'ları alma, çok miktarda bellek kullanabilirsiniz.  
   
- Akış desteği için ve SQL Server uygulamaları yazma Bu akış verileri tam olarak daha az bellek taşması özel durumları kaynaklanan belleğe verileri yüklemek zorunda kalmadan basitleştirir.  
+ Akış desteği için ve SQL Server'dan uygulama yazma, akış verileri tam olarak daha az bellek taşması özel durumları kaynaklanan belleğe veri yüklemek zorunda kalmadan basitleştirir.  
   
- Akış desteği de özellikle iş nesneleri göndermek, almak ve büyük BLOB'ları değiştirmek için SQL Azure eriştikleri senaryolarında daha iyi ölçeklendirme orta katman uygulamaları etkinleştirir.  
+ Akış desteği, özellikle iş nesneleri gönderme, alma ve büyük BLOB'ları yönetmek için SQL Azure eriştikleri senaryoları daha iyi ölçeklendirme orta katman uygulamaları da etkinleştirir.  
   
 > [!WARNING]
->  Bir uygulama da kullanıyorsa, zaman uyumsuz çağrıları desteklenmez `Context Connection` bağlantı dizesi anahtar sözcüğü.  
+>  Ayrıca bir uygulama kullanıyorsa, zaman uyumsuz çağrıları desteklenmez `Context Connection` bağlantı dizesi anahtar sözcüğü.  
 >   
->  Akış desteklemek için eklenen üyeler sorgularından veri almaya ve sorguları ve saklı yordamlar parametreleri geçirmek için kullanılır. Akış özelliği temel OLTP ve veri geçişi senaryoları yer almaktadır ve şirket içi ve şirket içi veri migrations.environments kapatmak için geçerlidir.  
+>  Akış desteklemek için eklenen üyeler sorgularından veri alınması ve sorguları ve saklı yordamlar için parametreler için kullanılır. Akış özelliği, temel OLTP ve veri geçişi senaryoları ele ve şirket içi ve şirket içi veri migrations.environments kapatmak için geçerlidir.  
   
 ## <a name="streaming-support-from-sql-server"></a>SQL Server'dan akış desteği  
- Akış desteği SQL Server'dan yeni işlevselliği sunar <xref:System.Data.Common.DbDataReader> ve <xref:System.Data.SqlClient.SqlDataReader> alabilmek için sınıflar <xref:System.IO.Stream>, <xref:System.Xml.XmlReader>, ve <xref:System.IO.TextReader> nesneleri ve tepki.  Bu sınıfların sorgularından verileri almak için kullanılır. Sonuç olarak, SQL Server'dan akış desteği OLTP senaryoları yer almaktadır ve şirket içi ve şirket dışı ortamlar için geçerlidir.  
+ Akış desteği SQL Server, yeni işlevler sunar <xref:System.Data.Common.DbDataReader> ve <xref:System.Data.SqlClient.SqlDataReader> alabilmek için sınıflar <xref:System.IO.Stream>, <xref:System.Xml.XmlReader>, ve <xref:System.IO.TextReader> nesneleri ve bunlara tepki verin.  Bu sınıfların sorgularından verileri almak için kullanılır. Sonuç olarak, akış desteği'nden SQL Server OLTP senaryolarına yöneliktir ve şirket içi ve şirket devre dışı ortamlar için geçerlidir.  
   
- Aşağıdaki üyeleri eklenme <xref:System.Data.SqlClient.SqlDataReader> SQL Server'dan akış desteğini etkinleştirmek için:  
+ Aşağıdaki üyeleri eklenen <xref:System.Data.SqlClient.SqlDataReader> SQL Server'dan akış desteğini etkinleştirmek için:  
   
 1.  <xref:System.Data.SqlClient.SqlDataReader.IsDBNullAsync%2A>  
   
@@ -38,7 +38,7 @@ Akış desteği SQL Server ile bir uygulama arasındaki (yeni [!INCLUDE[net_v45]
   
 6.  <xref:System.Data.SqlClient.SqlDataReader.GetXmlReader%2A>  
   
- Aşağıdaki üyeleri eklenme <xref:System.Data.Common.DbDataReader> SQL Server'dan akış desteğini etkinleştirmek için:  
+ Aşağıdaki üyeleri eklenen <xref:System.Data.Common.DbDataReader> SQL Server'dan akış desteğini etkinleştirmek için:  
   
 1.  <xref:System.Data.Common.DbDataReader.GetFieldValue%2A>  
   
@@ -46,10 +46,10 @@ Akış desteği SQL Server ile bir uygulama arasındaki (yeni [!INCLUDE[net_v45]
   
 3.  <xref:System.Data.Common.DbDataReader.GetTextReader%2A>  
   
-## <a name="streaming-support-to-sql-server"></a>SQL Server akış desteği  
- Akış desteği SQL Server yeni işlevselliği sunar <xref:System.Data.SqlClient.SqlParameter> kabul edebilir ve tepki şekilde sınıf <xref:System.Xml.XmlReader>, <xref:System.IO.Stream>, ve <xref:System.IO.TextReader> nesneleri. <xref:System.Data.SqlClient.SqlParameter> Parametre sorguları ve saklı yordamlar geçirmek için kullanılır.  
+## <a name="streaming-support-to-sql-server"></a>SQL Server için akış desteği  
+ Akış desteği SQL Server için yeni işlevler sunar <xref:System.Data.SqlClient.SqlParameter> kabul edebilir ve tepki için sınıf <xref:System.Xml.XmlReader>, <xref:System.IO.Stream>, ve <xref:System.IO.TextReader> nesneleri. <xref:System.Data.SqlClient.SqlParameter> sorguları ve saklı yordamlar için parametreler için kullanılır.  
   
- Atma bir <xref:System.Data.SqlClient.SqlCommand> nesne veya arama <xref:System.Data.SqlClient.SqlCommand.Cancel%2A> herhangi bir akış işlemi iptal etmeniz gerekir. Bir uygulama gönderirse <xref:System.Threading.CancellationToken>, iptal garanti edilmez.  
+ Disposing bir <xref:System.Data.SqlClient.SqlCommand> nesne veya arama <xref:System.Data.SqlClient.SqlCommand.Cancel%2A> herhangi bir akış işlemi iptal etmeniz gerekir. Bir uygulama gönderirse <xref:System.Threading.CancellationToken>, iptal garanti edilmez.  
   
  Aşağıdaki <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> türlerini kabul edeceği bir <xref:System.Data.SqlClient.SqlParameter.Value%2A> , <xref:System.IO.Stream>:  
   
@@ -59,9 +59,9 @@ Akış desteği SQL Server ile bir uygulama arasındaki (yeni [!INCLUDE[net_v45]
   
  Aşağıdaki <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> türlerini kabul edeceği bir <xref:System.Data.SqlClient.SqlParameter.Value%2A> , <xref:System.IO.TextReader>:  
   
--   **char**  
+-   **Char**  
   
--   **NChar**  
+-   **nChar**  
   
 -   **NVarChar**  
   
@@ -71,10 +71,10 @@ Akış desteği SQL Server ile bir uygulama arasındaki (yeni [!INCLUDE[net_v45]
   
  <xref:System.Data.SqlClient.SqlParameter.SqlValue%2A> türündeki değerleri kabul edebilir <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader>, ve <xref:System.IO.Stream>.  
   
- <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader>, Ve <xref:System.IO.Stream> nesnesi aktarılmayacak kadar tarafından tanımlanan değer <xref:System.Data.SqlClient.SqlParameter.Size%2A>.  
+ <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader>, Ve <xref:System.IO.Stream> nesnesi tarafından tanımlanan değeri kadar aktarılır <xref:System.Data.SqlClient.SqlParameter.Size%2A>.  
   
-## <a name="sample----streaming-from-sql-server"></a>Örnek--SQL Server'dan akış  
- Aşağıdaki [!INCLUDE[tsql](../../../../includes/tsql-md.md)] örnek veritabanı oluşturmak için:  
+## <a name="sample----streaming-from-sql-server"></a>Örnek--SQL Server akış  
+ Aşağıdaki [!INCLUDE[tsql](../../../../includes/tsql-md.md)] örnek veritabanını oluşturmak için:  
   
 ```  
 CREATE DATABASE [Demo]  
@@ -93,17 +93,17 @@ INSERT INTO [Streams] (textdata, bindata, xmldata) VALUES (N'Another row', 0x666
 GO  
 ```  
   
- Örnek aşağıdakilerin nasıl yapılacağını gösterir:  
+ Örnek, aşağıdakilerin nasıl yapılacağını gösterir:  
   
--   Büyük dosyaları almak için zaman uyumsuz bir yol sağlayarak bir kullanıcı arabirimi iş parçacığı engelleme kaçının.  
+-   Büyük dosyaları almak için zaman uyumsuz bir yol sağlayarak kullanıcı arabirimi iş parçacığı engelleme kaçının.  
   
--   SQL Server'da büyük metin dosyası aktarmaya [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+-   SQL Server'da büyük metin dosya aktarımı [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
   
 -   SQL Server'da büyük bir XML dosya aktarımı [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
   
 -   SQL Server'dan veri alın.  
   
--   Büyük dosyaları (BLOB) yetersiz bellek çalıştırılmadan başka bir SQL Server veritabanından aktarın.  
+-   Büyük dosyaları (BLOB) yetersiz bellek çalıştırılmadan başka bir SQL Server veritabanındaki verileri aktarın.  
   
 ```  
 using System;  
@@ -241,7 +241,7 @@ namespace StreamingFromServer {
             Async = true,  
             // Since we will immediately wrap the TextReader we are creating in an XmlReader, we will permit the XmlReader to take care of closing\disposing it  
             CloseInput = true,  
-            // If the Xml you are reading is not a valid document (as per http://msdn.microsoft.com/library/6bts1x50.aspx) you will need to set the conformance level to Fragment  
+            // If the Xml you are reading is not a valid document (as per <https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/6bts1x50(v=vs.100)>) you will need to set the conformance level to Fragment  
             ConformanceLevel = ConformanceLevel.Fragment  
          };  
   
@@ -295,7 +295,7 @@ namespace StreamingFromServer {
 ```  
   
 ## <a name="sample----streaming-to-sql-server"></a>Örnek--SQL Server akış  
- Aşağıdaki [!INCLUDE[tsql](../../../../includes/tsql-md.md)] örnek veritabanı oluşturmak için:  
+ Aşağıdaki [!INCLUDE[tsql](../../../../includes/tsql-md.md)] örnek veritabanını oluşturmak için:  
   
 ```  
 CREATE DATABASE [Demo2]  
@@ -316,19 +316,19 @@ CREATE TABLE [BinaryStreamsCopy] (
 GO  
 ```  
   
- Örnek aşağıdakilerin nasıl yapılacağını gösterir:  
+ Örnek, aşağıdakilerin nasıl yapılacağını gösterir:  
   
 -   SQL Server'da büyük BLOB aktarılıyor [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
   
 -   SQL Server'da büyük metin dosyasına aktarılıyor [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
   
--   Büyük bir BLOB aktarmak için yeni zaman uyumsuz özelliğini kullanarak.  
+-   Büyük BLOB aktarmak için yeni zaman uyumsuz özelliğini kullanarak.  
   
--   Zaman uyumsuz yeni özellik ve bekleme anahtar büyük BLOB aktarmak için kullanma.  
+-   Yeni zaman uyumsuz özelliği ve await anahtar sözcüğü büyük BLOB aktarmak için kullanma.  
   
--   Büyük bir BLOB aktarımını iptal ediliyor...  
+-   Büyük BLOB aktarımı iptal ediliyor...  
   
--   Başka bir yeni zaman uyumsuz özelliğini kullanarak bir SQL Server'dan akış.  
+-   Bir SQL Server kullanarak başka bir yeni özelliği zaman uyumsuz akış.  
   
 ```  
 using System;  
@@ -450,8 +450,8 @@ namespace StreamingToServer {
 }  
 ```  
   
-## <a name="sample----streaming-from-one-sql-server-to-another-sql-server"></a>Örnek--Başka bir SQL Server için bir SQL Server'dan akış  
- Bu örnek, bir SQL Server'ten büyük BLOB iptal desteği ile başka bir zaman uyumsuz olarak akışı gösterilmiştir.  
+## <a name="sample----streaming-from-one-sql-server-to-another-sql-server"></a>Örnek--Bir SQL Server başka bir SQL Server'a akış.  
+ Bu örnek, SQL Server'dan büyük BLOB diğerine, iptal desteği ile zaman uyumsuz olarak akışını yapmak nasıl gösterir.  
   
 ```  
 using System;  

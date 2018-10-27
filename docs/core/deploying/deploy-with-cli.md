@@ -7,12 +7,12 @@ ms.date: 09/05/2018
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: a7e810372d831699eae777186385e45fe65cdf45
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 6c0eb82b6be5d65c70287dd601bb97868af1c943
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266602"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49454455"
 ---
 # <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>Komut satırı arabirimi (CLI) araçları ile .NET Core uygulaması dağıtma
 
@@ -77,7 +77,7 @@ Herhangi bir üçüncü taraf bağımlılıkları olan bir framework bağımlı 
 
 Bir framework bağımlı dağıtımının bir veya daha fazla üçüncü taraf bağımlılıkları olan bu bağımlılıkların projeniz için kullanılabilir olmasını gerektirir. Çalıştırmadan önce iki ek adımlar gerekli `dotnet restore` ([bkz. Not](#dotnet-restore-note)) komutu:
 
-1. Gerekli üçüncü taraf kitaplıklara başvurular eklemek `<ItemGroup>` bölümünü, *csproj* dosya. Aşağıdaki `<ItemGroup>` bölüm üzerinde bir bağımlılık içeriyor [Json.NET](http://www.newtonsoft.com/json) bir üçüncü taraf kitaplığı:
+1. Gerekli üçüncü taraf kitaplıklara başvurular eklemek `<ItemGroup>` bölümünü, *csproj* dosya. Aşağıdaki `<ItemGroup>` bölüm üzerinde bir bağımlılık içeriyor [Json.NET](https://www.newtonsoft.com/json) bir üçüncü taraf kitaplığı:
 
       ```xml
       <ItemGroup>

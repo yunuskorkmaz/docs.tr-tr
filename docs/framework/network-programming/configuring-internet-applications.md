@@ -21,14 +21,12 @@ helpviewer_keywords:
 - network resources, configuring Internet applications
 - Internet, default proxy
 ms.assetid: bb707c72-eed2-4a82-8800-c9e68df2fd4f
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 81b0f69306a0f9a4ed6d35e3c8ef95271a779294
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: bdc63064d3f0d809c196e77a890ba697f9d4deea
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122350"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50043113"
 ---
 # <a name="configuring-internet-applications"></a>Internet uygulamalarını yapılandırma
 [ \<System.Net > öğesi (ağ ayarları)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) yapılandırma öğesi, uygulamalar için ağ yapılandırma bilgileri içerir. Kullanarak [ \<system.Net > öğesi (ağ ayarları)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) öğesini ayarlayın proxy sunucuları, bağlantı yönetimi parametrelerinin ve uygulamanıza özel kimlik doğrulama ve istek modülleri dahil.  
@@ -56,7 +54,7 @@ ms.locfileid: "49122350"
 </configuration>  
 ```  
   
- Kullanım [ \<connectionManagement > öğesi (ağ ayarları)](../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md) belirli bir sunucuya veya diğer tüm sunucular için yapılan kalıcı bağlantı sayısını yapılandırmak için öğesi. Aşağıdaki örnek iki kalıcı bağlantı sunucusu www.contoso.com, sunucunun IP adresiyle 192.168.1.2 dört kalıcı bağlantılar ve diğer tüm sunucuları tek bir kalıcı bağlantı kullanmak üzere uygulamayı yapılandırır.  
+ Kullanım [ \<connectionManagement > öğesi (ağ ayarları)](../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md) belirli bir sunucuya veya diğer tüm sunucular için yapılan kalıcı bağlantı sayısını yapılandırmak için öğesi. Aşağıdaki örnek iki kalıcı sunucusu bağlantılarını kullanmak üzere uygulamayı yapılandırır `www.contoso.com`, sunucunun IP adresiyle 192.168.1.2 dört kalıcı bağlantılar ve diğer tüm sunucular için kalıcı bir bağlantı.  
   
 ```xml  
 <configuration>  

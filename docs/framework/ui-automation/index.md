@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e7ec856e-41ee-47b1-9d57-b75a3dad088c
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 12fc92c716cf0ff1ab15786a067ad955caee0d20
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a99d42b4d61f3270b50e0c4698683cf89458ec9c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47205310"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50180199"
 ---
 # <a name="accessibility"></a>Erişilebilirlik
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "47205310"
   
  [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] Yeni bir erişilebilirlik çerçevesi için [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)]. Hakkında bilgi için programlı erişim sağlayarak yardımcı teknoloji ürünlerinin ve otomatikleştirilmiş test çerçeve gereksinimlerini ele [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]. Ayrıca, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] denetimi ve uygulama geliştiricilerin ürünlerini erişebilmesini sağlar.  
   
- Bu belgelerde [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)] yönetilen kod için. İçin programlama hakkında daha fazla bilgi için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] c++'ta görmek [Win32 uygulamaları için UI Otomasyonu](https://msdn.microsoft.com/library/ms726294.aspx).  
+ Bu belgelerde [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)] yönetilen kod için. İçin programlama hakkında daha fazla bilgi için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] c++'ta görmek [Win32 uygulamaları için UI Otomasyonu](/windows/desktop/winauto/windows-automation-api-portal).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [En İyi Erişilebilirlik Uygulamaları](../../../docs/framework/ui-automation/accessibility-best-practices.md)  

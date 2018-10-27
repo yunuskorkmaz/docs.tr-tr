@@ -2,12 +2,12 @@
 title: Windows için WCF Hizmetleri ve Etkinlik İzleme
 ms.date: 03/30/2017
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
-ms.openlocfilehash: 6684f6415fa6ee82a59fc9b54911b5c65d6dadb2
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 100f9c0ce71eedaa4061fc894521597074b21b00
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086589"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49480037"
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>Windows için WCF Hizmetleri ve Etkinlik İzleme
 Bu örnek, çözümleme izleme Windows Communication Foundation (WCF), olay izleme için Windows (ETW) olayları yaymak için nasıl kullanılacağını gösterir. Analitik izlemeleri, WCF hizmetleri üretim ortamında giderme sağlayan anahtar WCF yığın noktalarında yayılan olaylardır.
@@ -26,11 +26,11 @@ Bu örnek, çözümleme izleme Windows Communication Foundation (WCF), olay izle
 
      Web tarayıcısında tıklayın **Calculator.svc**. WSDL belgesinde hizmet URI'si tarayıcı içinde görüntülenmesi gerekir. Bu URI'yi kopyalayın.
 
-     Varsayılan olarak, hizmet başlatılır 1378 bağlantı noktası isteklerini dinlemeye (http://localhost:1378/Calculator.svc).
+     Varsayılan olarak, hizmet başlatılır 1378 bağlantı noktası isteklerini dinlemeye `http://localhost:1378/Calculator.svc`.
 
 4.  WCF test istemcisi (WcfTestClient.exe) çalıştırın.
 
-     WCF test istemcisi (WcfTestClient.exe) bulunan \<Visual Studio 2012 yükleme dizini > \Common7\IDE\ WcfTestClient.exe (Visual Studio 2012 yükleme dizini varsayılan değer C:\Program Files\Microsoft Visual Studio 10.0).
+     WCF test istemcisi (WcfTestClient.exe) şu konumdadır `\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe`.  Varsayılan Visual Studio 2012 yükleme dizini olan `C:\Program Files\Microsoft Visual Studio 10.0`.
 
 5.  WCF test istemcisi içinde hizmet seçerek ekleyin **dosya**, ardından **Hizmet Ekle**.
 

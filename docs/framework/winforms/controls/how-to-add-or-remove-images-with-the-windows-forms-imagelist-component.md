@@ -13,24 +13,24 @@ helpviewer_keywords:
 - images [Windows Forms], adding to ImageList component
 - images [Windows Forms], displaying with controls
 ms.assetid: c5eacc56-f769-4e2e-bfb7-f756620913db
-ms.openlocfilehash: e5c563c4f46924a95936bc5a51862230f2cbdb99
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 28dce033064517a427750ef99b1cd4f8bccaaf09
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527644"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50182976"
 ---
 # <a name="how-to-add-or-remove-images-with-the-windows-forms-imagelist-component"></a>Nasıl yapılır: Windows Forms ImageList Bileşeni ile Görüntü Ekleme veya Kaldırma
-Windows Forms <xref:System.Windows.Forms.ImageList> denetimi ile ilişkili önce bileşen görüntülerle genellikle doldurulur. Ancak, Ekle ve görüntü listesi denetimi ile ilişkilendirdikten sonra görüntüleri kaldırın.  
+Windows Forms <xref:System.Windows.Forms.ImageList> bir denetimle ilişkili önce bileşeni ile görüntü genellikle doldurulur. Ancak, ekleyin ve görüntü listesi denetimi ile ilişkilendirdikten sonra görüntüleri kaldırın.  
   
 > [!NOTE]
->  Görüntüleri kaldırdığınızda, doğrulayın <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> ilişkili denetimleri özelliktir hala geçerli.  
+>  Görüntüleri kaldırdığınızda doğrulayın <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> ilişkili herhangi bir denetim özelliği hala geçerli.  
   
-### <a name="to-add-images-programmatically"></a>Görüntüleri programlı olarak eklemek için  
+### <a name="to-add-images-programmatically"></a>Görüntüleri programsal olarak eklemek için  
   
 -   Kullanım <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> görüntü listenin yöntemi <xref:System.Windows.Forms.ImageList.Images%2A> özelliği.  
   
-     Aşağıdaki kod örneğinde yolunu ayarlama görüntüsünün konumu için **Belgelerim** klasör. Windows işletim sistemi çalıştırılan bilgisayarların çoğu bu klasör içerdiğini varsayar çünkü bu konumu kullanılır. Bu konumu seçme, güvenli bir şekilde uygulamayı çalıştırın minimum sistem erişim düzeyleri daha fazla olan kullanıcıların sağlar. Aşağıdaki kod örneğinde bir formla sahip olmasını gerektiren bir <xref:System.Windows.Forms.ImageList> denetimi zaten eklendi.  
+     Aşağıdaki kod örneğinde yolunu ayarlamak için görüntü konumunu **Belgelerim** klasör. Bu konum, Windows işletim sistemi çalıştırılan bilgisayarların çoğu bu klasör içerdiğini varsayar çünkü kullanılır. Bu konumu seçme, güvenli bir şekilde uygulamayı çalıştırmak minimum sistem erişim düzeyleri daha fazla kullanıcı sağlar. Aşağıdaki kod örneği, bir form olmasını gerektirir bir <xref:System.Windows.Forms.ImageList> denetim zaten eklendi.  
   
     ```vb  
     Public Sub LoadImage()  
@@ -74,11 +74,11 @@ Windows Forms <xref:System.Windows.Forms.ImageList> denetimi ile ilişkili önce
        }  
     ```  
   
-### <a name="to-add-images-with-a-key-value"></a>Bir anahtar değeri ile görüntüleri eklemek için.  
+### <a name="to-add-images-with-a-key-value"></a>Bir anahtar değeri ile görüntü eklemek için.  
   
--   Aşağıdakilerden birini kullanın <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> görüntü listenin yöntemlerinin <xref:System.Windows.Forms.ImageList.Images%2A> bir anahtar değeri alan özelliği.  
+-   Birini <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> görüntü listenin yöntemlerinin <xref:System.Windows.Forms.ImageList.Images%2A> bir anahtar değeri alan özelliği.  
   
-     Aşağıdaki kod örneğinde yolunu ayarlama görüntüsünün konumu için **Belgelerim** klasör. Windows işletim sistemi çalıştırılan bilgisayarların çoğu bu klasör içerdiğini varsayar çünkü bu konumu kullanılır. Bu konumu seçme, güvenli bir şekilde uygulamayı çalıştırın minimum sistem erişim düzeyleri daha fazla olan kullanıcıların sağlar. Aşağıdaki kod örneğinde bir formla sahip olmasını gerektiren bir <xref:System.Windows.Forms.ImageList> denetimi zaten eklendi.  
+     Aşağıdaki kod örneğinde yolunu ayarlamak için görüntü konumunu **Belgelerim** klasör. Bu konum, Windows işletim sistemi çalıştırılan bilgisayarların çoğu bu klasör içerdiğini varsayar çünkü kullanılır. Bu konumu seçme, güvenli bir şekilde uygulamayı çalıştırmak minimum sistem erişim düzeyleri daha fazla kullanıcı sağlar. Aşağıdaki kod örneği, bir form olmasını gerektirir bir <xref:System.Windows.Forms.ImageList> denetim zaten eklendi.  
   
     ```vb  
     Public Sub LoadImage()  
@@ -105,15 +105,13 @@ public void addImage()
 }  
 ```  
   
-1.  
-  
-### <a name="to-remove-all-images-programmatically"></a>Tüm görüntüleri programlı olarak kaldırmak için  
+### <a name="to-remove-all-images-programmatically"></a>Tüm görüntüleri programlı bir şekilde kaldırmak için  
   
 -   Kullanım <xref:System.Windows.Forms.ImageList.ImageCollection.Remove%2A> tek bir görüntü kaldırmak için yöntemi  
   
      , - veya -  
   
-     Kullanım <xref:System.Windows.Forms.ImageList.ImageCollection.Clear%2A> görüntü listesindeki tüm görüntülerini temizlemek için yöntem.  
+     Kullanım <xref:System.Windows.Forms.ImageList.ImageCollection.Clear%2A> görüntü listesi'ndaki tüm görüntüler temizlemek için yöntemi.  
   
     ```vb  
     ' Removes the first image in the image list  
@@ -129,9 +127,9 @@ imageList1.Images.Remove(myImage);
 imageList1.Images.Clear();  
 ```  
   
-### <a name="to-remove-images-by-key"></a>Anahtara göre görüntüleri kaldırmak için  
+### <a name="to-remove-images-by-key"></a>Anahtara göre görüntülerini kaldırmak için  
   
--   Kullanım <xref:System.Windows.Forms.ImageList.ImageCollection.RemoveByKey%2A> anahtara göre tek bir görüntü kaldırmak için yöntem.  
+-   Kullanım <xref:System.Windows.Forms.ImageList.ImageCollection.RemoveByKey%2A> anahtara göre tek bir görüntü kaldırmak için yöntemi.  
   
     ```vb  
     ' Removes the image named "myPhoto" from the list.  
@@ -144,6 +142,6 @@ imageList1.Images.RemoveByKey("myPhoto");
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [ImageList Bileşeni](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)  
- [ImageList Bileşenine Genel Bakış](../../../../docs/framework/winforms/controls/imagelist-component-overview-windows-forms.md)  
- [Görüntüler, Bit Eşlemler ve Meta Dosyaları](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
+- [ImageList Bileşeni](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)
+- [ImageList Bileşenine Genel Bakış](../../../../docs/framework/winforms/controls/imagelist-component-overview-windows-forms.md)
+- [Görüntüler, Bit Eşlemler ve Meta Dosyaları](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)

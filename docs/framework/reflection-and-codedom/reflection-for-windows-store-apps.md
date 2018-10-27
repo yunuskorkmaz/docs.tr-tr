@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0d07090c-9b47-4ecc-81d1-29d539603c9b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 192ac28610f596bc6b6f4ebf1c80962ab2d71cbf
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 8d533ac4d4287af551e4fc0c3131c761dbbc135a
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842111"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50034128"
 ---
 # <a name="reflection-in-the-net-framework-for-windows-store-apps"></a>Windows Mağazası Uygulamaları için .NET Framework'te Yansıma
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] başlayarak .NET Framework, [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamasında kullanılmak üzere bir yansıma türü ve üye kümesini içerir. Bu türler ve üyeler de tam .NET Framework'te de mevcuttur [.NET için Windows Store apps](https://go.microsoft.com/fwlink/?LinkID=225700). Bu belge, bunlar ile .NET Framework 4 ve daha önceki sürümlerdeki karşılıkları arasındaki temel farkları açıklar.  
@@ -36,7 +36,7 @@ ms.locfileid: "48842111"
  Bir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamasında, bazı .NET Framework türlerine ve üyelerine erişim sınırlıdır. Örneğin, bir [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] nesnesini kullanarak, <xref:System.Reflection.MethodInfo>'a dahil edilmeyen .NET Framework yöntemlerini çağıramazsınız. Ayrıca, [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] ve <xref:System.Runtime.InteropServices.Marshal> üyeleri gibi, bir <xref:System.Runtime.InteropServices.WindowsRuntime.WindowsRuntimeMarshal> uygulamasının bağlamında güvenli olarak nitelendirilmeyen belirli tür ve üyeler engellenir. Bu kısıtlama yalnızca .NET Framework türlerini ve üyelerini etkiler; normalde yaptığınız gibi kodunuzu veya üçüncü taraf kodunu çağırabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, devralınan yöntemler ve özellikler dahil olmak üzere [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] türünün yöntemlerini ve özelliklerini almak için <xref:System.Globalization.Calendar> öğesinde yansıma türlerini ve üyelerini kullanır. Bu kodu çalıştırmak için kod dosyası içine yapıştırın bir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] içeren sayfa bir [Windows.UI.xaml.Controls.TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) adlı Denetim `textblock1` yansıma adlı bir proje içinde. Bu kodu farklı bir ada sahip bir proje içine yapıştırırsanız, yalnızca ad alanı adı, projenizin eşleşecek şekilde değiştirin emin olun.  
+ Bu örnek, devralınan yöntemler ve özellikler dahil olmak üzere [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] türünün yöntemlerini ve özelliklerini almak için <xref:System.Globalization.Calendar> öğesinde yansıma türlerini ve üyelerini kullanır. Bu kodu çalıştırmak için kod dosyası içine yapıştırın bir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] içeren sayfa bir <xref:Windows.UI.Xaml.Controls.TextBlock?displayProperty=nameWithType> adlı Denetim `textblock1` yansıma adlı bir proje içinde. Bu kodu farklı bir ada sahip bir proje içine yapıştırırsanız, yalnızca ad alanı adı, projenizin eşleşecek şekilde değiştirin emin olun.  
   
  [!code-csharp[System.ReflectionWinStoreApp#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.reflectionwinstoreapp/cs/mainpage.xaml.cs#1)]
  [!code-vb[System.ReflectionWinStoreApp#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.reflectionwinstoreapp/vb/mainpage.xaml.vb#1)]  

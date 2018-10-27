@@ -2,12 +2,12 @@
 title: Internet Information Services Barındırma En İyi Uygulamaları
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
-ms.openlocfilehash: 2cb193cd2f504b5010ede6887e814e0c4d0a1a3c
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 5efa4c56cafe32dcc6864ba0bd68d14ea10b15e3
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840751"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187576"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>Internet Information Services Barındırma En İyi Uygulamaları
 Bu konuda, Windows Communication Foundation (WCF) hizmetlerini barındırmak için bazı en iyi uygulamalar açıklanmaktadır.  
@@ -35,7 +35,7 @@ Bu konuda, Windows Communication Foundation (WCF) hizmetlerini barındırmak iç
 ## <a name="wcf-in-multi-homed-or-multi-named-scenarios"></a>Birden çok girişli veya çok adlandırılmış senaryolarda WCF  
  WCF hizmetleri bilgisayarlar kümesi, ortak bir dış ad paylaşacağı bir IIS Web grubu içinde dağıttığınız (gibi `http://www.contoso.com`) farklı ana bilgisayar adları tarafından ayrı ayrı ele alınır ancak (örneğin, `http://www.contoso.com` iki farklı makinelere trafiği yönlendirebilir adlı `http://machine1.internal.contoso.com` ve `http://machine2.internal.contoso.com`). Bu dağıtım senaryosu WCF tarafından tam olarak desteklenir, ancak özel yapılandırma (Web Hizmetleri Açıklama Dili) hizmetin meta verilerde doğru (Dış) ana bilgisayar adını görüntülemek için WCF hizmetlerini barındıran IIS Web sitesinin gerektirir.  
   
- Doğru ana bilgisayar adını oluşturan WCF hizmet meta verileri görünmesini sağlamak için açık bir ana bilgisayar adı kullanmak için WCF hizmetlerini barındıran IIS Web sitesi için varsayılan kimlik yapılandırın. Örneğin, www.contoso.com grubu içinde bulunan bilgisayarları bir IIS sitesi bağlamasının kullanmalıdır *:80:www.contoso.com http ve \*: 443:www.contoso.com HTTPS için.  
+ Doğru ana bilgisayar adını oluşturan WCF hizmet meta verileri görünmesini sağlamak için açık bir ana bilgisayar adı kullanmak için WCF hizmetlerini barındıran IIS Web sitesi için varsayılan kimlik yapılandırın. Örneğin, içinde bulunan bilgisayarları `www.contoso.com` grubu, bir IIS sitesi bağlamasının kullanmalıdır *:80:www.contoso.com http ve \*: 443:www.contoso.com HTTPS için.  
   
  IIS Web sitesi bağlamalarının IIS Microsoft Yönetim Konsolu (MMC) ek bileşenini kullanarak yapılandırabilirsiniz.  
   

@@ -8,17 +8,17 @@ helpviewer_keywords:
 - printing XPS files programmatically [WPF]
 - XPS files [WPF], printing programmatically
 ms.assetid: 0b1c0a3f-b19e-43d6-bcc9-eb3ec4e555ad
-ms.openlocfilehash: 25c0b34bd33bee626df14c8dbedce0b82e895b58
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: a42f9b2101266857e56dee6836f4c3b27b3c6f96
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857345"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188345"
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>Nasıl yapılır: Program Aracılığıyla XPS Dosyalarını Yazdırma
 Bir aşırı yüklemesini kullanabilirsiniz <xref:System.Printing.PrintQueue.AddJob%2A> yazdırmak için yöntemi [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] açmadan dosyaları bir <xref:System.Windows.Controls.PrintDialog> veya İlkesi, tüm [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] hiç.  
   
- Ayrıca yazdırabilirsiniz [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] çok kullanarak dosyaları <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> ve <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> yöntemlerinin <xref:System.Windows.Xps.XpsDocumentWriter>. Bu hakkında daha fazla bilgi için [XPS Belge yazdırma](https://msdn.microsoft.com/library/849555c8-0c4e-48c0-86bc-a5494c69b36c(v=vs.90)).  
+ Ayrıca yazdırabilirsiniz [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] çok kullanarak dosyaları <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> ve <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> yöntemlerinin <xref:System.Windows.Xps.XpsDocumentWriter>. Bu hakkında daha fazla bilgi için [XPS Belge yazdırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771525(v=vs.90)).  
   
  Başka bir şekilde yazdırma [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] kullanmaktır <xref:System.Windows.Controls.PrintDialog.PrintDocument%2A> veya <xref:System.Windows.Controls.PrintDialog.PrintVisual%2A> yöntemlerinin <xref:System.Windows.Controls.PrintDialog> denetimi. Bkz: [Yazdır iletişim kutusu çağırma](how-to-invoke-a-print-dialog.md).  
   
@@ -56,7 +56,7 @@ Bir aşırı yüklemesini kullanabilirsiniz <xref:System.Printing.PrintQueue.Add
   
  Bu gizleme geçirmenize olanak tanır `true` son parametre olarak <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> ancak bir özel duruma neden olmadan  *\<PseudoXPSPrinter >* gerçekten XPSDrv yazıcısı değil yalnızca anlamsız yazdırır.  
   
- **Not** kolaylık sağlamak için yukarıdaki örnekte varlığını kullanan bir \*.xps uzantısı bir dosya, test olarak [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]. Ancak, [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] bu uzantıya sahip dosya yok. [İsXPS.exe (isXPS uyumluluk aracı)](https://msdn.microsoft.com/library/bfbb433f-7ab6-417a-90f0-71443d76bcb3(v=vs.100)) bir testi için bir dosya yolu [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] geçerlilik.  
+ **Not** kolaylık sağlamak için yukarıdaki örnekte varlığını kullanan bir \*.xps uzantısı bir dosya, test olarak [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]. Ancak, [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] bu uzantıya sahip dosya yok. [İsXPS.exe (isXPS uyumluluk aracı)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100)) bir testi için bir dosya yolu [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] geçerlilik.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Printing.PrintQueue>  
@@ -64,8 +64,8 @@ Bir aşırı yüklemesini kullanabilirsiniz <xref:System.Printing.PrintQueue.Add
  <xref:System.Threading.ApartmentState>  
  <xref:System.STAThreadAttribute>  
  [XPS](https://www.microsoft.com/xps)  
- [XPS Belge yazdırma](https://msdn.microsoft.com/library/849555c8-0c4e-48c0-86bc-a5494c69b36c(v=vs.90))  
- [Yönetilen ve yönetilmeyen iş parçacığı oluşturma](https://msdn.microsoft.com/library/db425c20-4b2f-4433-bf96-76071c7881e5(v=vs.100))  
- [isXPS.exe (isXPS uyumluluk aracı)](https://msdn.microsoft.com/library/bfbb433f-7ab6-417a-90f0-71443d76bcb3(v=vs.100))  
+ [XPS Belge yazdırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771525(v=vs.90))  
+ [Yönetilen ve yönetilmeyen iş parçacığı oluşturma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))  
+ [isXPS.exe (isXPS uyumluluk aracı)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))  
  [WPF'deki Belgeler](documents-in-wpf.md)  
  [Yazdırmaya Genel Bakış](printing-overview.md)

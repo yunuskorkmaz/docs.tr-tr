@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Security Development Lifecycle (SDL), critical code management
 - threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
-ms.openlocfilehash: fd29696d88eba5c1363464334b63cb2ab0df4a0e
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 60def26d21ff065bda3209ac90161af0672a38af
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698555"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181702"
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>WPF Güvenlik Stratejisi - Güvenlik Mühendisliği
 Güvenilir bilgi işlem, güvenli kod üretimini sağlamaya yönelik bir Microsoft girişimidir. Güvenilir bilgi işlem inisiyatifiyle önemli bir öğesidir [!INCLUDE[TLA#tla_sdl](../../../includes/tlasharptla-sdl-md.md)]. [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] Güvenli kod dağıtımını kolaylaştırmak için standart mühendislik süreçlerine ile birlikte kullanılan bir mühendislik uygulamasıdır. [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] Formalization measurability ve ek yapı ile en iyi birleştiren on aşamadan oluşan dahil olmak üzere:  
@@ -67,7 +67,7 @@ Güvenilir bilgi işlem, güvenli kod üretimini sağlamaya yönelik bir Microso
 ### <a name="source-analysis-and-editing-tools"></a>Kaynak analizi ve düzenleme araçları  
  Ek olarak el ile bir güvenlik kodu öğelerini gözden [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)], [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] takım, güvenlik açıklarını azaltmak için kaynak analiz ve ilişkili düzenlemeleri için çeşitli araçlar kullanır. Çok çeşitli kaynak araçları kullanılır ve aşağıdakileri içerir:  
   
--   **FXCop**: yönetilen kod nasıl güvenli bir şekilde yönetilmeyen kod ile çalışmak kod erişimi güvenliği kullanımı için devralma kuralları arasında ortak güvenlik sorunlarını bulur. Bkz: [FXCop](http://www.gotdotnet.com/team/fxcop/).  
+-   **FXCop**: yönetilen kod nasıl güvenli bir şekilde yönetilmeyen kod ile çalışmak kod erişimi güvenliği kullanımı için devralma kuralları arasında ortak güvenlik sorunlarını bulur. Bkz: [FXCop](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/bb429476%28v=vs.80%29).  
   
 -   **Önek/Prefast**: bulur güvenlik açıklarını ve yönetilmeyen kod arabellek taşmalarına gibi ortak güvenlik sorunları biçim dizesi sorunları ve hata denetimi.  
   

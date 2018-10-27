@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1149a3c3589cec0e952088a772ca036028c58ff5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b905c8bb89e4b163952b9640b53fc3992ba5ca10
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521360"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50189556"
 ---
 # <a name="icordebugmetadatalocatorgetmetadata-method"></a>ICorDebugMetaDataLocator::GetMetaData Metodu
 Tam yolu, meta veri hata ayıklayıcı istenen bir işlemi tamamlamak için gereken bir birime geri dönmek için hata ayıklayıcı ister.  
@@ -46,7 +46,7 @@ HRESULT GetMetaData(
  [in] Dosyaya tam yolunu temsil ettiği bir null ile sonlandırılmış bir dize. Tam yol mevcut değilse adı ve dosya uzantısını (*filename*. *Uzantı*).  
   
  `dwImageTimeStamp`  
- [in] Görüntünün PE dosyası başlıklarından zaman damgası. Bu parametre için bir sembol sunucusu potansiyel olarak kullanılabilir ([SymSrv](https://msdn.microsoft.com/library/cc266470.aspx)) araması.  
+ [in] Görüntünün PE dosyası başlıklarından zaman damgası. Bu parametre için bir sembol sunucusu potansiyel olarak kullanılabilir ([SymSrv](/windows/desktop/debug/using-symsrv)) araması.  
   
  `dwImageSize`  
  [in] PE dosyası başlıklarından resim boyutu. Bu parametre, büyük olasılıkla SymSrv arama için kullanılabilir.  

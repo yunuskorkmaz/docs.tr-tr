@@ -19,24 +19,24 @@ helpviewer_keywords:
 ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 916db7ec9bee0c85db1f2fcf4db7a9f8a61f9be3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3072be4e870b64edcea32bb7159db8c64c50d840
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744089"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183106"
 ---
 # <a name="how-to-build-a-multifile-assembly"></a>Nasıl yapılır: Birden Fazla Dosya Derleme
-Bu makalede, birden fazla dosya derlemesi oluşturma açıklanmaktadır ve yordamda her adım gösterilmektedir kodu sağlar.  
+Bu makalede, bir çoklu dosya derlemesi oluşturmak nasıl açıklanır ve yordamdaki her adımı gösteren kod sağlar.  
   
 > [!NOTE]
->  C# ve Visual Basic için Visual Studio IDE yalnızca tek dosya derlemeleri oluşturmak için kullanılabilir. Birden çok dosya derlemeleri oluşturmak istiyorsanız, Visual C++ ile komut satırı derleyicileri veya Visual Studio kullanmanız gerekir.  
+>  Visual Studio IDE için C# ve Visual Basic yalnızca tek dosya derlemeleri oluşturmak için kullanılabilir. Çok dosyalı derlemeler oluşturmak istiyorsanız, Visual C++ ile komut satırı derleyicilerini veya Visual Studio kullanmanız gerekir.  
   
-### <a name="to-create-a-multifile-assembly"></a>Birden fazla dosya derlemesi oluşturmak için  
+### <a name="to-create-a-multifile-assembly"></a>Bir çoklu dosya derlemesi oluşturmak için  
   
-1.  Bütünleştirilmiş kod modüllere diğer modüller tarafından başvurulan ad alanları içeren tüm dosyalar derleyin. Kod modülleri için varsayılan .netmodule uzantısıdır.  
+1.  Derlemede kod modülleriyle bütünleştirilmiş diğer modüller tarafından başvurulan ad alanlarını içeren tüm dosyaları derleyin. Modüllerin varsayılan uzantısı .netmodule'dür.  
   
-     Örneğin, diyelim `Stringer` dosya adlı bir ad alanına sahip `myStringer`, adlı bir sınıf içerir `Stringer`. `Stringer` Sınıfı içeren adlı bir yöntem `StringerMethod` , tek bir satır konsola yazar.  
+     Örneğin, diyelim `Stringer` dosya adlı bir ad alanına sahip `myStringer`, adında bir sınıf içeren `Stringer`. `Stringer` Sınıf adında bir yöntem içerir `StringerMethod` , konsola tek satır yazar.  
   
      [!code-cpp[Conceptual.Assembly.Multifile#1](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/stringer.cpp#1)]
      [!code-csharp[Conceptual.Assembly.Multifile#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/stringer.cs#1)]
@@ -48,11 +48,11 @@ Bu makalede, birden fazla dosya derlemesi oluşturma açıklanmaktadır ve yorda
      [!code-csharp[Conceptual.Assembly.Multifile#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/stringer.cs#2)]
      [!code-vb[Conceptual.Assembly.Multifile#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/stringer.vb#2)]  
   
-     Belirtme *Modülü* parametresiyle **/t:** derleyici seçeneği, dosyanın bir modül olarak yerine bir derlemeyi olarak derlenmesi gerektiğini gösterir. Adlı bir modül derleyici üreten `Stringer.netmodule`, hangi eklenebilir bir derlemeye.  
+     Belirtme *Modülü* parametresiyle **/t:** derleyici seçeneği, dosyanın bir derleme olarak değil bir modül olarak derlenmesi gerektiğini gösterir. Derleyici adlı bir modül oluşturur `Stringer.netmodule`, derleyiciye eklenebilecek.  
   
-2.  Kod içinde başvurulan diğer modüller göstermek için gerekli derleyici seçenekleri kullanarak tüm diğer modüllerin derleyin. Bu adımı kullanan **/addmodule** derleyici seçeneği.  
+2.  Kodda başvurulan diğer modülleri göstermek için gerekli derleyici seçeneklerini kullanarak tüm diğer modülleri derleyin. Bu adımı kullanan **/addmodule** derleyici seçeneği.  
   
-     Aşağıdaki örnekte, bir kod modülüne adlı `Client` bir giriş noktası sahip `Main` bir yönteme başvuran yöntemi `Stringer.dll` 1. adımda oluşturduğunuz modül.  
+     Aşağıdaki örnekte adlı kod modülünde `Client` Giriş noktasında, `Main` bir yönteme başvuran yöntemi `Stringer.dll` 1. adımda oluşturduğunuz modülü.  
   
      [!code-cpp[Conceptual.Assembly.Multifile#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/client.cpp#3)]
      [!code-csharp[Conceptual.Assembly.Multifile#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#3)]
@@ -64,40 +64,40 @@ Bu makalede, birden fazla dosya derlemesi oluşturma açıklanmaktadır ve yorda
      [!code-csharp[Conceptual.Assembly.Multifile#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#4)]
      [!code-vb[Conceptual.Assembly.Multifile#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/client.vb#4)]  
   
-     Belirtin **/t:module** Bu modülün derleme için bir sonraki adımda eklenen olacağından. Belirtin **/addmodule** olacağından kodda `Client` kod tarafından oluşturulan bir ad alanı referanslarını `Stringer.netmodule`. Adlı bir modül derleyici üreten `Client.netmodule` başka bir modül için bir başvuru içeren `Stringer.netmodule`.  
+     Belirtin **/t:module** olacağından bu modül gelecekteki bir adımda bir derlemeye eklenir. Belirtin **/addmodule** seçeneğini kodda `Client` kod tarafından oluşturulan bir ad alanına başvurduğundan `Stringer.netmodule`. Derleyici adlı bir modül oluşturur `Client.netmodule` başka bir modül için bir başvuru içeren `Stringer.netmodule`.  
   
     > [!NOTE]
-    >  C# ve Visual Basic derleyicileri doğrudan aşağıdaki iki farklı sözdizimi kullanarak birden çok dosya derlemeleri oluşturmayı destekler.  
+    >  C# Ve Visual Basic derleyicileri, aşağıdaki iki farklı sözdizimini kullanan çok dosyalı derlemeleri doğrudan oluşturmayı destekler.  
     >   
-    >  -   İki derlemeleri iki dosyalı derleme oluşturma:  
+    >  -   İki dosyalı bir derleme oluşturun:  
     >   
     >      [!code-cpp[Conceptual.Assembly.Multifile#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/client.cpp#5)]
       [!code-csharp[Conceptual.Assembly.Multifile#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#5)]
       [!code-vb[Conceptual.Assembly.Multifile#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/client.vb#5)]  
-    > -   Bir derleme iki dosyalı derleme oluşturur:  
+    > -   Tek bir derleme iki dosyalı bir derleme oluşturur:  
     >   
     >      [!code-cpp[Conceptual.Assembly.Multifile#6](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/client.cpp#6)]
       [!code-csharp[Conceptual.Assembly.Multifile#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#6)]
       [!code-vb[Conceptual.Assembly.Multifile#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/client.vb#6)]  
   
-3.  Kullanım [derleme bağlayıcı (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) derleme bildirimi içerir çıktı dosyasını oluşturmak için. Bu dosya, tüm modülleri veya derlemenin parçası olan kaynaklar için başvuru bilgileri içerir.  
+3.  Kullanım [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) derleme bildirimini içeren çıktı dosyasını oluşturmak için. Bu dosya, tüm modüller veya derlemenin parçası olan kaynaklar için başvuru bilgileri içerir.  
   
      Komut satırında, aşağıdaki komutu yazın:  
   
      **Al** \< *modül adı*> \<*modül adı*>... **/ main:**\<*yöntem adı*> **/out:**\<*dosya adı*>   **/target :**\<*derleme dosya türü*>  
   
-     Bu komutta *modül adı* bağımsız değişkenleri derlemeyi dahil etmek için her modül adı belirtin. **/Ana:** seçeneği derlemenin giriş noktası yöntem adını belirtir. **/Out:** seçeneği derleme meta verilerini içeren çıktı dosyası adını belirtir. **/Target:** seçeneği derleme bir konsol uygulama yürütülebilir dosyanın (.exe) dosyası, bir Windows yürütülebilir dosya (.win) dosyası ya da kitaplık (.lib) dosyası olduğunu belirtir.  
+     Bu komutta *modül adı* bağımsız değişkenleri derlemeye eklenecek her modülün adını belirtin. **/Main:** seçeneği derlemenin giriş noktası olan yöntem adını belirtir. **/Out:** seçeneği, derleme meta verilerini içeren çıktı dosyasının adını belirtir. **/Target:** seçeneği derlemenin bir konsol uygulaması yürütülebilir (.exe) dosyası, bir Windows çalıştırılabilir (.win) dosyası veya bir kitaplık (.lib) dosyası olduğunu belirtir.  
   
-     Aşağıdaki örnekte, Al.exe adlı bir konsol uygulaması yürütülebilir bir derleme oluşturur `myAssembly.exe`. Uygulama adında iki modülden oluşur `Client.netmodule` ve `Stringer.netmodule`, yürütülebilir dosya adı verilen ve `myAssembly.exe,` yalnızca derleme meta verilerini içeriyor. Giriş noktası derlemenin `Main` sınıfında yöntemi `MainClientApp`, bulunan `Client.dll`.  
+     Aşağıdaki örnekte, Al.exe adlı yürütülebilir bir konsol uygulaması olan derleme oluşturur. `myAssembly.exe`. Uygulama adlı iki modülden oluşur `Client.netmodule` ve `Stringer.netmodule`, ve yürütülebilir dosyanın adı `myAssembly.exe,` yalnızca birleştirme metaverilerini içerir. Derlemenin giriş noktası `Main` sınıfında yöntemi `MainClientApp`, bulunan `Client.dll`.  
   
     ```  
     al Client.netmodule Stringer.netmodule /main:MainClientApp.Main /out:myAssembly.exe /target:exe   
     ```  
   
-     Kullanabileceğiniz [MSIL ayrıştırıcı (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) bütünleştirilmiş içeriğini incelemek veya bir dosyanın bir derlemeyi ya da bir modül olup olmadığını belirlemek için.  
+     Kullanabileceğiniz [MSIL Disassembler (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) bir derlemenin içeriğini incelemek için ya da bir dosyanın bir derleme veya modül olup olmadığını belirlemek için.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Bütünleştirilmiş Kodlar Oluşturma](../../../docs/framework/app-domains/create-assemblies.md)  
- [Nasıl yapılır: Bütünleştirilmiş Kod İçeriklerini Görüntüleme](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Çok Dosyalı Bütünleştirilmiş Kodlar](../../../docs/framework/app-domains/multifile-assemblies.md)
+- [Bütünleştirilmiş Kodlar Oluşturma](../../../docs/framework/app-domains/create-assemblies.md)  
+- [Nasıl yapılır: Bütünleştirilmiş Kod İçeriklerini Görüntüleme](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
+- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+- [Çok Dosyalı Bütünleştirilmiş Kodlar](../../../docs/framework/app-domains/multifile-assemblies.md)

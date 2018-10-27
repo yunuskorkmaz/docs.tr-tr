@@ -1,57 +1,57 @@
 ---
 title: Docker nedir?
-description: Microsoft Platformu ve araçları ile kapsayıcılı Docker uygulama yaşam döngüsü
+description: Microsoft Platformu ve araçları ile kapsayıcı Docker uygulaması yaşam
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
-ms.openlocfilehash: 2dfff13f00d4ea0e57161c21d7773eead41c28ee
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 056fb613c078cc407380060dc11890406ac8cffd
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105391"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50044736"
 ---
 # <a name="what-is-docker"></a>Docker nedir?
 
-[Docker](https://www.docker.com/) olan bir [açık kaynaklı proje](https://github.com/docker/docker) uygulamalarının dağıtımını Bulut veya şirket içi çalıştırabilirsiniz taşınabilir, sünece kapsayıcı olarak otomatikleştirmek için (bkz. Şekil 1 - 2). Docker değil de bir [şirket](https://www.docker.com/) yükseltir ve bulut, Linux ve Windows satıcılar, dahil olmak üzere Microsoft ile işbirliğiyle çalışma bu teknolojiyi geliştirir.
+[Docker](https://www.docker.com/) olduğu bir [açık kaynaklı proje](https://github.com/docker/docker) bulutta veya şirket içinde çalışan taşınabilir, kendi kendine yeterli kapsayıcı uygulamalarının dağıtımını otomatikleştirmek için (bkz: Şekil 1 - 2). Docker, ayrıca bir [şirket](https://www.docker.com/) yükseltir ve bulut, Linux ve Windows sağlayıcılar dahil olmak üzere Microsoft ile işbirliği içinde çalışan bu teknolojiyi geliştirir.
 
 ![](./media/image2.png)
 
-Şekil 1-2: karma bulut tüm katmanlarını adresindeki kapsayıcıları Docker dağıtır
+Şekil 1-2: Docker kapsayıcıları tüm katmanlarda karma bulutun dağıtır.
 
-Docker görüntü kapsayıcıları, Linux ve Windows'da yerel olarak çalıştırabilirsiniz. Ancak, Windows görüntülerini yalnızca Windows konaklarda çalıştırabilirsiniz ve Linux görüntüleri bir konak sunucusu veya bir VM yani yalnızca Linux konaklarda çalıştırabilirsiniz.
+Docker görüntüsü kapsayıcılar, Linux ve Windows üzerinde yerel olarak çalıştırabilirsiniz. Ancak, Windows görüntülerini yalnızca Windows konaklarda çalışabilir ve Linux görüntüleri, bir konak sunucusu veya bir VM yani yalnızca Linux konaklarda çalışabilir.
 
-Geliştiriciler, geliştirme ortamları Windows, Linux veya macOS kullanabilir. Geliştirme bilgisayarınızda hangi Docker görüntüleri, uygulama ve onun bağımlılıklarını dahil olmak üzere dağıtılan bir Docker ana Geliştirici çalışır. Linux tabanlı olan bir Docker ana bilgisayar Mac veya Linux üzerinde çalışan geliştiricilere kullanmak ve görüntülerini yalnızca Linux kapsayıcı oluşturabilirsiniz. (Mac üzerinde çalışan geliştiricilere kod düzenleme veya Docker komut satırı arabirimini çalıştırmasına \[CLI\] macOS, ancak bu, bu yazma itibariyle, kapsayıcıları doğrudan macOS üzerinde çalıştırmayın.) Windows üzerinde çalışan geliştiriciler, Linux veya Windows kapsayıcıları için görüntülerini oluşturabilirsiniz.
+Geliştiriciler, Windows, Linux veya macOS geliştirme ortamları kullanabilirsiniz. Geliştirme bilgisayarında geliştirici için hangi Docker görüntüleri, uygulamayı ve bağımlılıkları da dahil olmak üzere dağıtılan bir Docker konağı olarak çalışır. Linux veya Mac üzerinde çalışan geliştiriciler, Linux tabanlı bir Docker konağı kullanın ve bunlar görüntülerini yalnızca Linux kapsayıcıları oluşturabilirsiniz. (Mac üzerinde çalışan geliştiriciler kodu düzenleyebilir ya da Docker komut satırı arabirimini \[CLI\] macOS, ancak, şu andan itibaren kapsayıcıları doğrudan macOS üzerinde çalıştırmayın.) Windows üzerinde çalışan geliştiriciler, Linux veya Windows kapsayıcıları için görüntü oluşturabilirsiniz.
 
-Geliştirme ortamlarında kapsayıcıları barındırmak ve ek geliştirici araçları sağlamak için Docker gelir [Docker Community Edition (CE)](https://www.docker.com/community-edition) macOS veya Windows için. Bu ürünler gerekli VM (kapsayıcıları barındırmak için Docker ana bilgisayarı) yükleyin. Docker de kullanılabilir hale getirir [Docker Enterprise Edition (EE)](https://www.docker.com/enterprise-edition), Kurumsal geliştirme için tasarlanmıştır ve yapı BT ekipleri tarafından kullanılan, sevk ve büyük iş açısından kritik uygulamalar üretimde çalıştırın.
+Docker kapsayıcıları geliştirme ortamlarında barındırmak ve diğer geliştirici araçlarını sağlamak için gelen [Docker Community Edition'ı (CE)](https://www.docker.com/community-edition) macOS veya Windows için. Bu ürünler gerekli VM (ana kapsayıcı barındırmak için Docker) yükleyin. Docker da kullanımınıza [Docker Enterprise Edition (EE)](https://www.docker.com/enterprise-edition), Kurumsal geliştirme için tasarlanan ve yapı BT ekipleri tarafından kullanılan, gönderin ve büyük iş açısından kritik uygulamalar üretimde çalışır.
 
-Çalıştırmak için [Windows kapsayıcıları](https://msdn.microsoft.com/virtualization/windowscontainers/about/about_overview), çalışma zamanları iki tür vardır:
+Çalıştırılacak [Windows kapsayıcıları](/virtualization/windowscontainers/about/), çalışma zamanları iki tür vardır:
 
--   **Windows Server kapsayıcı** bu çalışma zamanı işlemi ve ad alanı yalıtım teknolojisi aracılığıyla uygulama yalıtımı sağlar. Bir Windows Server kapsayıcı bir çekirdek ana bilgisayarda çalışan tüm kapsayıcıları ve kapsayıcı ana bilgisayar ile paylaşır.
+-   **Windows Server kapsayıcı** bu çalışma zamanı işlemi ve ad alanı yalıtım teknolojisi aracılığıyla uygulama yalıtımı sağlar. Bir Windows Server kapsayıcı bir çekirdek ana bilgisayarda çalışan tüm kapsayıcılar ve kapsayıcı konağı ile paylaşır.
 
--   **Hyper-V kapsayıcı** bu her kapsayıcı yüksek oranda iyileştirilmiş bir VM'de çalıştıran Windows Server kapsayıcıları tarafından sağlanan yalıtımı genişletir. Bu yapılandırmada, çekirdek kapsayıcı konağının Hyper-V daha iyi yalıtım sağlayan kapsayıcıları ile paylaşılmaz.
+-   **Hyper-V kapsayıcı** bu her kapsayıcı yüksek oranda iyileştirilmiş bir VM'de çalıştıran Windows Server kapsayıcıları tarafından sağlanan yalıtımı genişletir. Bu yapılandırmada, daha iyi yalıtım sağlayan Hyper-V kapsayıcıları ile kapsayıcı konağı çekirdeğini paylaşılmıyor.
 
-Bu kapsayıcılar görüntülerinin aynı şekilde oluşturulur ve aynı işlevi. Kapsayıcı görüntüden nasıl oluşturulduğunu farktır — bir Hyper-V kapsayıcı çalıştıran ek bir parametre gerektirir. Ayrıntılar için bkz [Hyper-V kapsayıcıları](https://msdn.microsoft.com/virtualization/windowscontainers/about/about_overview).
+Bu kapsayıcılar için görüntüler ve aynı işlevi aynı şekilde oluşturulur. Kapsayıcı görüntüsünü nasıl oluşturulduğunu fark — bir Hyper-V kapsayıcı çalıştırma, ek bir parametresi gerektirir. Ayrıntılar için bkz [Hyper-V kapsayıcıları](/virtualization/windowscontainers/about/).
 
-## <a name="comparing-docker-containers-with-vms"></a>Docker kapsayıcılarını VM'ler ile karşılaştırma
+## <a name="comparing-docker-containers-with-vms"></a>Docker kapsayıcıları Vm'leri ile karşılaştırma
 
-Şekil 1-3 gösterir VM'ler ve Docker arasında bir karşılaştırma kapsayıcıları.
+Şekil 1-3 gösterir bir karşılaştırmasını VM'ler ve Docker kapsayıcıları.
 
-Kapsayıcıları kadar daha az kaynak gerektirdiğinden (örneğin, bunlar tam işletim sisteminde gerekmez), dağıtmak kolay ve Hızlı Başlat. Bu, daha yüksek yoğunluk, böylece maliyetlerini azaltma aynı donanım biriminde daha fazla hizmet çalışabilir anlamına sahip mümkün kılar.
+Kapsayıcılar çok daha az kaynak gerektirdiğinden (örneğin, bunlar tam bir işletim sistemi gerekmez), bunlar kolayca ve Hızlı Başlat. Bu, böylece maliyetleri azaltırken aynı donanım biriminde daha fazla hizmet çalıştırabileceğiniz anlamına gelir, yüksek yoğunluklu olmasını mümkün kılar.
 
-Bir yan aynı çekirdeği üzerinde çalışan sonucu olarak, sanal makineleri daha az yalıtımı elde.
+Bir yan aynı çekirdeği üzerinde çalıştırma etkisi, Vm'lere göre daha az Yalıtımın elde edin.
 
-Asıl amacı, görüntüyü, (bağımlılıklar) ortamında aynı farklı dağıtımlar arasında yapmasıdır. Bu, makinenizde hata ayıklama ve ardından garanti ortamıyla başka bir makineye dağıtma anlamına gelir.
+Asıl amacı, görüntü, ortamın (bağımlılıklar) aynı farklı dağıtımlar arasında yapmasıdır. Bu, makinenizde hata ayıklayın ve ardından garanti ortamıyla başka bir makineye dağıtma anlamına gelir.
 
-Bir kapsayıcı görüntüsü, bir uygulama veya hizmet paketi ve güvenilir ve tekrarlanabilir bir şekilde dağıtmak için bir yoldur. Bu noktada Docker yalnızca bir teknoloji değil, bir felsefesi ve işlem de olabilir.
+Bir kapsayıcı görüntüsü, bir uygulama veya hizmet paketini ve güvenilir ve tekrarlanabilir bir şekilde dağıtmak için bir yoldur. Bu bakımdan, Docker, yalnızca bir teknoloji değil, bir felsefesi ve bir işlem de uygulanır.
 
-Docker kullanırken, geliştiriciler söyleyin duyacak değil, "Benim makinede neden üretimde çalıştığını?" Bunlar yalnızca, ", Docker üzerinde çalıştığı" paketlenmiş Docker uygulama tüm desteklenen Docker ortamda çalıştırabilir ve onu tüm dağıtım hedeflerini (hazırlama, üretim, vb. geliştirme, QA.) üzerinde istendiği şekilde çalışır olduğundan söyleyebilirsiniz.
+Docker'ı kullanırken, geliştiricilerin söyleyin duyacak değil, "Benim makinemde neden üretimde çalışır?" Bunlar yalnızca, "Docker'ın üzerinde çalıştığı" çünkü paket Docker uygulama desteklenen bir Docker ortamında çalıştırabilirsiniz ve onu tüm dağıtım hedeflerine (hazırlama, üretim, vs. Dev, QA.) istendiği şekilde çalışacaktır söyleyebilirsiniz.
 
 ![](./media/image3.png)
 
-Şekil 1-3: Docker kapsayıcıları için geleneksel VM'ler karşılaştırması
+Şekil 1-3: Docker kapsayıcıları için geleneksel VM'lerin karşılaştırması
 
 
 >[!div class="step-by-step"]
 [Önceki](index.md)
-[sonraki](docker-terminology.md)
+[İleri](docker-terminology.md)

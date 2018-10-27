@@ -7,16 +7,18 @@ helpviewer_keywords:
 - remainder operator [C#]
 - '% operator [C#]'
 ms.assetid: 3b74f4f9-fd9c-45e7-84fa-c8d71a0dfad7
-ms.openlocfilehash: 9cd2f7ad3856feb34667686979c942ecb21887c2
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: cd6d49b69d40f3b45aae060d46b58632dc8448f8
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45645924"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50041264"
 ---
 # <a name="-operator-c-reference"></a>% İşleci (C# Başvurusu)
 
-Kalan işleci `%` ilk işlenenin ikinci işleneni tarafından bölme işleminden kalanı hesaplar. Kullanıcı tanımlı türler için [aşırı](../keywords/operator.md) `%` işleci. Zaman `%` aşırı yüklendi [kalan atama işleci](remainder-assignment-operator.md) `%=` aynı zamanda örtük olarak aşırı yüklenmiş olan.
+Kalan işleci `%` ilk işlenenin ikinci işleneni tarafından bölme işleminden kalanı hesaplar.
+
+Kullanıcı tanımlı türler için [aşırı](../keywords/operator.md) `%` işleci. Zaman `%` aşırı yüklendi [kalan atama işleci](remainder-assignment-operator.md) `%=` aynı zamanda örtük olarak aşırı yüklenmiş olan.
 
 Kalan işleci tüm sayısal türlerin destekler.
 
@@ -33,7 +35,7 @@ Sonucu tamsayı işlenenleri için `a % b` değeri tarafından üretilen `a - (a
 - işaretini `z`, sıfır olmayan, işaretini aynı `x`;
 - mutlak değerini `z` değeri tarafından üretilen `|x| - n * |y|` burada `n` küçük veya eşit en büyük olası tamsayı `|x| / |y|` ve `|x|` ve `|y|` mutlak değerleri `x` ve `y`sırasıyla.
 
-Davranışı hakkında bilgi için `%` durumunda sonlu olmayan işlenenler işleç bkz [kalan işleci](/dotnet/csharp/language-reference/language-specification/expressions#remainder-operator) bölümünü [C# dil belirtimi](/dotnet/csharp/language-reference/language-specification/index).
+Davranışı hakkında bilgi için `%` sonlu olmayan işlenenler işleç bkz [kalan işleci](~/_csharplang/spec/expressions.md#remainder-operator) bölümünü [ C# dil belirtimi](../language-specification/index.md).
 
 > [!NOTE]
 > Kalanı hesaplama, bu yöntem, tamsayı işlenenler için kullanılan benzer, ancak IEEE 754 farklıdır. IEEE 754 ile uyumlu işlemini ihtiyacınız varsa, <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType> yöntemi.

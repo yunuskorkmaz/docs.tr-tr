@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: b79e687d75f133b64e6e7dcb8dc78cce98e8b175
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 63f3714fce317d915b65075922b323f2aa5061f0
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47233206"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185933"
 ---
 # <a name="what-is-docker"></a>Docker nedir?
 
@@ -25,7 +25,7 @@ Geliştiriciler, Windows, Linux veya macOS geliştirme ortamları kullanabilirsi
 
 Docker kapsayıcıları geliştirme ortamlarında barındırmak ve diğer geliştirici araçlarını sağlamak için gelen [Docker Community Edition'ı (CE)](https://www.docker.com/community-edition) macOS veya Windows için. Bu ürünler gerekli VM (ana kapsayıcı barındırmak için Docker) yükleyin. Docker da kullanımınıza [Docker Enterprise Edition (EE)](https://www.docker.com/enterprise-edition), Kurumsal geliştirme için tasarlanan ve yapı BT ekipleri tarafından kullanılan, gönderin ve büyük iş açısından kritik uygulamalar üretimde çalışır.
 
-Çalıştırılacak [Windows kapsayıcıları](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/about/about_overview), çalışma zamanları iki tür vardır:
+Çalıştırılacak [Windows kapsayıcıları](/virtualization/windowscontainers/about/), çalışma zamanları iki tür vardır:
 
 - Windows Server kapsayıcıları, işlem ve ad alanı yalıtım teknolojisi aracılığıyla uygulama yalıtımı sağlar. Bir Windows Server kapsayıcı bir çekirdek ana bilgisayarda çalışan tüm kapsayıcılar ve kapsayıcı konağı ile paylaşır.
 

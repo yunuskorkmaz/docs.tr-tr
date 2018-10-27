@@ -10,14 +10,12 @@ helpviewer_keywords:
 - receiving data, pluggable protocols
 - protocols, pluggable
 ms.assetid: 9810c177-973e-43d7-823c-14960bd625ea
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 9f4f1756d42e8931a5265017088021b5f4022044
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 859593c6c53d9f6dc89047efae1c682a6a9873a7
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49337629"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181270"
 ---
 # <a name="deriving-from-webrequest"></a>Webrequest'ten türetme
 <xref:System.Net.WebRequest> .NET Framework takılabilir Protokolü modeli uyan bir protokole özgü istek işleyicisi oluşturmak için temel yöntemleri ve özellikleri sağlayan soyut bir temel sınıfı. Kullanan uygulamalar **WebRequest** sınıfı, kullanılan protokolü belirtmek için gerek kalmadan herhangi bir desteklenen protokolünü kullanarak veri isteyebilir.  

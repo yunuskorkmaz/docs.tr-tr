@@ -4,12 +4,12 @@ description: Bu öğreticide, düzenlemek ve test komut satırından .NET Core p
 author: cartermp
 ms.author: mairaw
 ms.date: 09/10/2018
-ms.openlocfilehash: 8131e51577bcad9191c0cacb61317fa146bf476d
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 9984b4f43ca8c09cc0948cad7e6c176127384361
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025499"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49415230"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>Düzenleme ve .NET Core komut satırı ile projeleri test etme
 
@@ -101,7 +101,7 @@ Meow!
 
 ### <a name="testing-the-sample"></a>Örnek test etme
 
-`NewTypes` Proje yerinde olduğundan ve bir klasörde Evcil Hayvanlar ilgili türleri tutarak düzenlediğiniz. Ardından, test projenizi oluşturmak ve testleri yazmaya [xUnit](https://xunit.github.io/) test çerçevesi. Birim testi, otomatik olarak bunlar düzgün şekilde çalıştıklarından olduğunu onaylamak için evcil hayvan türlerinin bevahior denetlemek sağlar.
+`NewTypes` Proje yerinde olduğundan ve bir klasörde Evcil Hayvanlar ilgili türleri tutarak düzenlediğiniz. Ardından, test projenizi oluşturmak ve testleri yazmaya [xUnit](https://xunit.github.io/) test çerçevesi. Birim testi, otomatik olarak bunlar düzgün şekilde çalıştıklarından olduğunu onaylamak için evcil hayvan türlerinizi davranışını denetlemesine olanak tanır.
 
 Oluşturma bir *test* klasörüyle bir *NewTypesTests* içindeki klasör. Bir komut istemi'nden en *NewTypesTests* klasöründe yürütme `dotnet new xunit`. Bu iki dosya oluşturur: *NewTypesTests.csproj* ve *UnitTest1.cs*.
 

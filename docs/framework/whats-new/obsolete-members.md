@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a36e08c9b54dd6b47b11b36fd20993bff8c805e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 8a0679dafda7935034d3a3ab0f4c43656ab5668b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45678593"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185254"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>.NET Framework'teki eski üyeler
 Bu makaledeki tablolar, .NET Framework 4.5 ve sonraki sürümlerde derlemesi tarafından düzenlenen artık kullanılmayan tür üyelerini listeleyin. Eski üyeler ve önerilen alternatifleri her derlemede bir listesini görmek için aşağıdaki bağlantıları kullanın. Bu konu, artık kullanılmayan türlerin üyeleri listelenmiyor. Eski türler bir listesi için bkz. [eski türler](../../../docs/framework/whats-new/obsolete-types.md).  
@@ -485,8 +485,8 @@ Bu makaledeki tablolar, .NET Framework 4.5 ve sonraki sürümlerde derlemesi tar
 |<xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|<xref:System.CodeDom.Compiler.CodeDomProvider.CreateCompiler%2A>|Çağıranlar kullanmamanız <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=nameWithType> arabirim ve bunun yerine doğrudan üzerinde yöntemleri kullanmalıdır <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> sınıfı. Bu dan devralan <xref:System.CodeDom.Compiler.CodeDomProvider> gerekir yine de bu arabirimi uygulayan ve bu uyarıyı hariç tutma veya Ayrıca bu yöntemi geçersiz.|  
 |<xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|<xref:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator%2A>|Çağıranlar kullanmamanız <xref:System.CodeDom.Compiler.ICodeGenerator?displayProperty=nameWithType> arabirim ve bunun yerine doğrudan üzerinde yöntemleri kullanmalıdır <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> sınıfı. Bu dan devralan <xref:System.CodeDom.Compiler.CodeDomProvider> gerekir yine de bu arabirimi uygulayan ve bu uyarıyı hariç tutma veya Ayrıca bu yöntemi geçersiz.|  
 |<xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|<xref:System.CodeDom.Compiler.CodeDomProvider.CreateParser%2A>|Çağıranlar kullanmamanız <xref:System.CodeDom.Compiler.ICodeParser?displayProperty=nameWithType> arabirim ve bunun yerine doğrudan üzerinde yöntemleri kullanmalıdır <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> sınıfı. Bu dan devralan <xref:System.CodeDom.Compiler.CodeDomProvider> gerekir yine de bu arabirimi uygulayan ve bu uyarıyı hariç tutma veya Ayrıca bu yöntemi geçersiz.|  
-|<xref:System.CodeDom.Compiler.CompilerParameters?displayProperty=nameWithType>|<xref:System.CodeDom.Compiler.CompilerParameters.Evidence%2A>|CAS ilkesini kullanımdan kalkmıştır ve .NET Framework'ün sonraki bir sürümde kaldırılacak. Lütfen [.NET Framework 4'teki güvenlik değişiklikleri](http://go2.microsoft.com/fwlink/?LinkId=131738) daha fazla bilgi için.|  
-|<xref:System.CodeDom.Compiler.CompilerResults?displayProperty=nameWithType>|<xref:System.CodeDom.Compiler.CompilerResults.Evidence%2A>|CAS ilkesini kullanımdan kalkmıştır ve .NET Framework'ün sonraki bir sürümde kaldırılacak. Lütfen [.NET Framework 4'teki güvenlik değişiklikleri](http://go2.microsoft.com/fwlink/?LinkId=131738) daha fazla bilgi için.|  
+|<xref:System.CodeDom.Compiler.CompilerParameters?displayProperty=nameWithType>|<xref:System.CodeDom.Compiler.CompilerParameters.Evidence%2A>|CAS ilkesini kullanımdan kalkmıştır ve .NET Framework'ün sonraki bir sürümde kaldırılacak. Lütfen [.NET Framework 4'teki güvenlik değişiklikleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee191568%28v=vs.100%29) daha fazla bilgi için.|  
+|<xref:System.CodeDom.Compiler.CompilerResults?displayProperty=nameWithType>|<xref:System.CodeDom.Compiler.CompilerResults.Evidence%2A>|CAS ilkesini kullanımdan kalkmıştır ve .NET Framework'ün sonraki bir sürümde kaldırılacak. Lütfen [.NET Framework 4'teki güvenlik değişiklikleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee191568%28v=vs.100%29) daha fazla bilgi için.|  
 |<xref:System.Collections.Specialized.NameObjectCollectionBase?displayProperty=nameWithType>|<xref:System.Collections.Specialized.NameObjectCollectionBase.%23ctor%28System.Collections.IHashCodeProvider%2CSystem.Collections.IComparer%29>|Lütfen kullanın <xref:System.Collections.Specialized.NameObjectCollectionBase.%23ctor%28System.Collections.IEqualityComparer%29> yerine.|  
 |<xref:System.Collections.Specialized.NameObjectCollectionBase?displayProperty=nameWithType>|<xref:System.Collections.Specialized.NameObjectCollectionBase.%23ctor%28System.Int32%2CSystem.Collections.IHashCodeProvider%2CSystem.Collections.IComparer%29>|Lütfen kullanın <xref:System.Collections.Specialized.NameObjectCollectionBase.%23ctor%28System.Int32%2CSystem.Collections.IEqualityComparer%29> yerine.|  
 |<xref:System.Collections.Specialized.NameValueCollection?displayProperty=nameWithType>|<xref:System.Collections.Specialized.NameValueCollection.%23ctor%28System.Collections.IHashCodeProvider%2CSystem.Collections.IComparer%29>|Lütfen kullanın <xref:System.Collections.Specialized.NameValueCollection.%23ctor%28System.Collections.IEqualityComparer%29> yerine.|  

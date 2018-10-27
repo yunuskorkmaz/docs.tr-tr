@@ -5,12 +5,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: fba595cca4d96fc9cd0f0966f45d1668181b2ec9
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: ce4580f9fab80cc85a281786d5de262d8de7a679
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46321411"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181520"
 ---
 # <a name="interfaces-c-programming-guide"></a>Arabirimler (C# Programlama Kılavuzu)
 
@@ -36,13 +36,13 @@ Uygulayan sınıfa karşılık gelen üyesi bir arabirim üyesi uygulamak için 
   
 Bir sınıf veya yapı, arabirim uygular, bir uygulama sınıfın veya yapının tüm arabirimi tanımlar üyeleri için sağlamanız gerekir. Arabirimi, temel sınıf işlevselliğini devralabilir biçiminde bir sınıf veya yapı devralabilir hiçbir işlevsellik sağlar. Ancak, bir temel sınıf, arabirim uygularsa, bu uygulamayı temel sınıftan türetilmiş herhangi bir sınıf devralır.  
   
-Aşağıdaki örnek, IEquatable uygulaması gösterir. < T\> arabirimi. Uygulayan sınıfa `Car`, bir uygulamasını sağlamalıdır <xref:System.IEquatable%601.Equals%2A> yöntemi.  
+Aşağıdaki örnek bir uygulamasını gösterir <xref:System.IEquatable%601> arabirimi. Uygulayan sınıfa `Car`, bir uygulamasını sağlamalıdır <xref:System.IEquatable%601.Equals%2A> yöntemi.  
   
 [!code-csharp[csProgGuideInheritance#48](../classes-and-structs/codesnippet/CSharp/interfaces_2.cs)]  
   
 Özellikler ve dizin oluşturucular bir sınıfın özellik veya arabirim içinde tanımlanmış bir dizin oluşturucu için ek erişimcileri tanımlayabilirsiniz. Örneğin, bir arabirimi olan bir özelliği bildirme bir [alma](../../language-reference/keywords/get.md) erişimcisi. Arabirimi uygulayan bir sınıf her ikisi de aynı özellik bildirebilirsiniz bir `get` ve [ayarlamak](../../language-reference/keywords/set.md) erişimcisi. Ancak, özellik veya dizin oluşturucu açık uygulama kullanıyorsa, erişimcileri eşleşmesi gerekir. Açık uygulama hakkında daha fazla bilgi için bkz: [açık arabirim uygulaması](explicit-interface-implementation.md) ve [arabirimi özellikleri](../classes-and-structs/interface-properties.md).  
 
-Arabirim diğer arabirimleri uygulayabilir. Bir sınıf, arabirimin devraldığı birden çok kez temel sınıflar veya diğer arabirimleri uygulayan arabirimler üzerinden içerebilir. Sınıf arabirimi sınıf tanımının bir parçası bildirir, ancak sınıfın bir arabirim uygulaması zaman ve yalnızca tek bir sağlayabilirsiniz (`class ClassName : InterfaceName`). Arabirimini uygulayan bir temel sınıf devraldığından arabirimi devralınmışsa temel sınıfın arabirim üyelerinin uygulamasını sağlar. Ancak, türetilmiş sınıf, devralınmış uygulaması kullanmak yerine arabirim üyeleri yeniden uygulayın.  
+Arabirim, diğer bir arabirimden devralabilir. Bir sınıf, arabirimin devraldığı birden çok kez temel sınıflar veya diğer arabirimleri devralan arabirimleri aracılığıyla içerebilir. Sınıf arabirimi sınıf tanımının bir parçası bildirir, ancak sınıfın bir arabirim uygulaması zaman ve yalnızca tek bir sağlayabilirsiniz (`class ClassName : InterfaceName`). Arabirimini uygulayan bir temel sınıf devraldığından arabirimi devralınmışsa temel sınıfın arabirim üyelerinin uygulamasını sağlar. Ancak, türetilmiş sınıf, devralınmış uygulaması yerine tüm sanal arabirim üyeleri yeniden uygulayın.  
   
 Bir taban sınıfı sanal üye kullanarak arabirim üyelerini de uygulayabilirsiniz. Bu durumda, türetilmiş bir sınıf sanal üyelerini geçersiz kılarak arabirimi davranışı değiştirebilirsiniz. Sanal üyeler hakkında daha fazla bilgi için bkz: [çok biçimlilik](../classes-and-structs/polymorphism.md).  
   

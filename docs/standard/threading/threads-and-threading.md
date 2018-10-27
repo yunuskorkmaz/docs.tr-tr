@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 5baac3aa-e603-4fa6-9f89-0f2c1084e6b1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ef464b0d4c22d04d42f9b6f953abefe7582b4957
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 5049ed1b44155f3c21c53bef24a13006fe97a3fa
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44188546"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452592"
 ---
 # <a name="threads-and-threading"></a>İş Parçacıkları ve İş Parçacığı Oluşturma
 İşletim sistemleri, yürütülen farklı uygulamaları ayırmak için işlemleri kullanın. Temel birim, bir işletim sisteminin işlemci süresi ayırdığı akışlardır ve birden fazla iş parçacığı, işlem içinde kod yürütülüyor. Her iş parçacığı, özel durum işleyicileri, zamanlama önceliğini ve yapıları, zamanlanan kadar iş parçacığı bağlamını kaydetmek için sistem kullanır kümesi tutar. İş parçacığı bağlamını iş parçacığı yürütme iş parçacığının ana bilgisayar işlemi adres alanında iş parçacığının dizi CPU kaydeder ve yığını da dahil olmak üzere, sorunsuz bir şekilde devam etmek için gereken tüm bilgileri içerir.  
@@ -26,7 +26,7 @@ ms.locfileid: "44188546"
  Zaman dilimi uzunluğu, işletim sistemi ve işlemci bağlıdır. Her zaman dilimi küçük olduğundan, aynı anda yürütülmesi için birden çok iş parçacığı tek bir işlemci olsa bile görünür. Bu gerçekten çok işlemcili sistemlerde yürütülebilir iş parçacığı kullanılabilir işlemci arasında dağıtıldığı bir durumdur.  
   
 ## <a name="when-to-use-multiple-threads"></a>Birden çok iş parçacığı kullanma zamanı  
- Kullanıcı etkileşimi gerektiren yazılım kullanıcının etkinlikleri için zengin bir kullanıcı deneyimi sağlamak için mümkün olduğunca hızlı bir şekilde tepki gerekir. Aynı zamanda, ancak bunu mümkün olduğunca hızlı kullanıcı verileri sunmak gerekli hesaplamalar yapmanız gerekir. Uygulamanız yalnızca bir iş parçacığı yürütme kullanıyorsa birleştirebilirsiniz [zaman uyumsuz programlama](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md) ile[.NET Framework remoting](https://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462) veya [XML Web Hizmetleri](https://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c) ASP kullanılarak oluşturulan Diğer bilgisayarların işleme süresini artırmak için kendi yanıt süresi kullanıcı ve uygulama veri işleme süresini azaltmak için ayrıca kullanmak için .NET. Yoğun giriş/çıkış iş yapıyorsanız, g/ç tamamlama bağlantı noktaları, uygulamanızın yanıt hızını artırmak için de kullanabilirsiniz.  
+ Kullanıcı etkileşimi gerektiren yazılım kullanıcının etkinlikleri için zengin bir kullanıcı deneyimi sağlamak için mümkün olduğunca hızlı bir şekilde tepki gerekir. Aynı zamanda, ancak bunu mümkün olduğunca hızlı kullanıcı verileri sunmak gerekli hesaplamalar yapmanız gerekir. Uygulamanız yalnızca bir iş parçacığı yürütme kullanıyorsa birleştirebilirsiniz [zaman uyumsuz programlama](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md) ile [.NET Framework remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100)) veya [XML Web Hizmetleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100)) ASP kullanılarak oluşturulan Diğer bilgisayarların işleme süresini artırmak için kendi yanıt süresi kullanıcı ve uygulama veri işleme süresini azaltmak için ayrıca kullanmak için .NET. Yoğun giriş/çıkış iş yapıyorsanız, g/ç tamamlama bağlantı noktaları, uygulamanızın yanıt hızını artırmak için de kullanabilirsiniz.  
   
 ### <a name="advantages-of-multiple-threads"></a>Birden çok iş parçacığı avantajları  
  Birden fazla iş parçacığı kullanan, ancak en güçlü kullanıcıya yanıt verme hızını artırmak ve neredeyse aynı zamanda işin tamamlanması için gereken verileri işlemek kullanılabilir tekniğidir. Bir işlemciye sahip bir bilgisayar üzerinde birden çok iş parçacığı arka planda verileri işlemek için kullanıcı olaylar arasında küçük sürelerle yararlanarak, bu etkiyi oluşturabilirsiniz. Örneğin, bir kullanıcı başka bir iş parçacığı aynı uygulama içinde elektronik diğer bölümlerini yeniden hesaplama sırasında bir elektronik tablo düzenleyebilirsiniz.  

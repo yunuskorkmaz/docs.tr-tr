@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: ee622801-9e46-470b-85ab-88c4b1dd2ee1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5cc704bbf8631936dbbeb3539ea5ed0d8499f378
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: dfdc2d434b61d1c1e16ebfdcc2ea423f96254be5
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752279"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187838"
 ---
 # <a name="ltalwaysflowimpersonationpolicygt-element"></a>&lt;Alwaysflowımpersonationpolicy&gt; öğesi
-Windows Identity her zaman kimliğe bürünme nasıl gerçekleştirildiği bağımsız olarak zaman uyumsuz noktaları arasında akan olduğunu belirtir.  
+Windows kimlik her zaman arasında nasıl kimliğe bürünme gerçekleştirilip gerçekleştirilmediğine bakılmaksızın zaman uyumsuz noktalar, akışları olduğunu belirtir.  
   
  \<Yapılandırma >  
 \<çalışma zamanı >  
@@ -38,14 +38,14 @@ Windows Identity her zaman kimliğe bürünme nasıl gerçekleştirildiği bağ�
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`enabled`|Gerekli öznitelik.<br /><br /> Windows kimliğini zaman uyumsuz noktaları arasında akan olup olmadığını gösterir.|  
+|`enabled`|Gerekli öznitelik.<br /><br /> Windows kimliği zaman uyumsuz noktalar arasında akan olup olmadığını gösterir.|  
   
 ## <a name="enabled-attribute"></a>etkin Öznitelik  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|`false`|Kimlik akan zaman uyumsuz noktaları arasında kimliğe bürünme üzerinden gerçekleştirilir sürece Windows yöntemleri gibi yönetilen <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A>. Bu varsayılandır.|  
-|`true`|Windows Identity her zaman kimliğe bürünme nasıl gerçekleştirildiği bağımsız olarak zaman uyumsuz noktaları arasında akar.|  
+|`false`|Kimlik değil bürünmelerin zaman uyumsuz noktalar arasında kimliğe bürünme üzerinden gerçekleştirilen sürece Windows yöntemleri gibi yönetilen <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A>. Bu varsayılandır.|  
+|`true`|Windows kimliği her zaman nasıl kimliğe bürünme gerçekleştirilip gerçekleştirilmediğine bakılmaksızın zaman uyumsuz noktalar arasında akar.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -58,24 +58,24 @@ Windows Identity her zaman kimliğe bürünme nasıl gerçekleştirildiği bağ�
 |`runtime`|Derleme bağlama ve atık toplama hakkında bilgi içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- .NET Framework sürüm 1.0 ve 1.1, Windows kimliğini zaman uyumsuz noktaları arasında geçmez. .NET Framework sürüm 2. 0'da, var olan bir <xref:System.Threading.ExecutionContext> şu anda yürütülen iş parçacığı hakkında bilgi içerir ve uygulama etki alanı içinde zaman uyumsuz noktaları arasında akan nesnesi. <xref:System.Security.Principal.WindowsIdentity> Da akışları kullanarak kimliğe bürünme ulaşılmıştı sağlanan, zaman uyumsuz noktaları arasında akan bilgilerinin bir parçası olarak yönetilen yöntemleri gibi <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> ve platform gibi diğer yollarla üzerinden değil yerel yöntemleri çağırır. Bu öğe, Windows kimlik kimliğe bürünme nasıl ulaşılmıştı bağımsız olarak zaman uyumsuz noktaları arasında akan belirtmek için kullanılır.  
+ .NET Framework sürüm 1.0 ve 1.1, Windows kimliği zaman uyumsuz noktalar ötesine geçmeyen. .NET Framework sürüm 2. 0'da, var olan bir <xref:System.Threading.ExecutionContext> yürütülmekte olan iş parçacığını hakkında bilgiler içerir ve uygulama etki alanı içinde zaman uyumsuz noktalar arasında akar. <xref:System.Security.Principal.WindowsIdentity> Ayrıca akışları kullanarak kimliğe bürünme ulaşılmıştı sağlanan zaman uyumsuz noktalar arasında akan bilgileri bir parçası olarak yönetilen yöntemleri gibi <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> ve platform gibi başka bir yolla üzerinden değil yerel yöntemlerini çağırın. Bu öğe, Windows kimlik arasında nasıl kimliğe bürünme elde edilen bağımsız olarak zaman uyumsuz noktalar, akış belirtmek için kullanılır.  
   
- Diğer iki yolla bu varsayılan davranışı değiştirebilirsiniz:  
+ Bu varsayılan davranışı başka iki şekilde değiştirebilirsiniz:  
   
-1.  İş parçacığı başına temelinde yönetilen kodu.  
+1.  İş parçacığı başına temelinde yönetilen kodda.  
   
-     İş parçacığı başına temelinde akış değiştirerek gizleyebilirsiniz <xref:System.Threading.ExecutionContext> ve <xref:System.Security.SecurityContext> kullanarak ayarları <xref:System.Threading.ExecutionContext.SuppressFlow%2A?displayProperty=nameWithType>, <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A?displayProperty=nameWithType>, veya <xref:System.Security.SecurityContext.SuppressFlow%2A?displayProperty=nameWithType> yöntemi.  
+     İş parçacığı başına temelinde akışını değiştirerek gösterilmemesini sağlayabilirsiniz <xref:System.Threading.ExecutionContext> ve <xref:System.Security.SecurityContext> kullanarak ayarları <xref:System.Threading.ExecutionContext.SuppressFlow%2A?displayProperty=nameWithType>, <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A?displayProperty=nameWithType>, veya <xref:System.Security.SecurityContext.SuppressFlow%2A?displayProperty=nameWithType> yöntemi.  
   
-2.  Ortak dil çalışma zamanı (CLR) yüklemek için çağrısında yönetilmeyen barındırma arabirimi.  
+2.  Ortak dil çalışma zamanı (CLR) yüklemeye çağrısında yönetilmeyen barındırma arabirimi.  
   
-     Yönetilmeyen bir barındırma arabirimi (yerine basit Yönetilen yürütülebilir) CLR yüklemek için kullanılırsa, çağrısında özel bayrağa belirtebilirsiniz [CorBindToRuntimeEx işlevi](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) işlevi. Tüm işlem için Uyumluluk modunu etkinleştirmek için ayarlanmış `flags` parametresi için [CorBindToRuntimeEx işlevi](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) için `STARTUP_ALWAYSFLOW_IMPERSONATION`.  
+     CLR'yi yüklemek için yönetilmeyen bir barındırma arabiriminin (yerine basit yönetilen bir yürütülebilir dosya) kullandıysanız çağrısında bir özel bayrağa belirtebilirsiniz [CorBindToRuntimeEx işlevi](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) işlevi. İşlemin tümünü Uyumluluk modunu etkinleştirmek için `flags` parametresi için [CorBindToRuntimeEx işlevi](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) için `STARTUP_ALWAYSFLOW_IMPERSONATION`.  
   
 ## <a name="configuration-file"></a>Yapılandırma Dosyası  
  Bir .NET Framework uygulamasında bu öğe yalnızca uygulama yapılandırma dosyasında kullanılabilir.  
   
- Bir ASP.NET uygulaması için kimliğe bürünme akış bulunan aspnet.config dosyasında yapılandırılabilir \<Windows klasörü > \Microsoft.NET\Framework\vx.x.xxxx dizin.  
+ Bir ASP.NET uygulaması için kimliğe bürünme akışı bulunan aspnet.config dosyasında yapılandırılabilir \<Windows klasörü > \Microsoft.NET\Framework\vx.x.xxxx dizin.  
   
- Varsayılan olarak ASP.NET kimliğe bürünme akış aspnet.config dosyasında aşağıdaki yapılandırma ayarları kullanarak devre dışı bırakır:  
+ Varsayılan olarak ASP.NET kimliğe bürünme akışı aspnet.config dosyasında aşağıdaki yapılandırma ayarlarını kullanarak devre dışı bırakır:  
   
 ```xml
 <configuration>  
@@ -86,7 +86,7 @@ Windows Identity her zaman kimliğe bürünme nasıl gerçekleştirildiği bağ�
 </configuration>  
 ```  
   
- ASP.NET, bunun yerine, kimliğe bürünme akışını izin vermek istiyorsanız aşağıdaki yapılandırma ayarları açıkça kullanmalısınız:  
+ ASP.NET'te, kimliğe bürünme akışını bunun yerine, izin vermek istiyorsanız aşağıdaki yapılandırma ayarları açıkça kullanmalısınız:  
   
 ```xml  
 <configuration>  
@@ -98,7 +98,7 @@ Windows Identity her zaman kimliğe bürünme nasıl gerçekleştirildiği bağ�
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, kimliğe bürünme araçlarla yönetilen yöntemleri dışında bile elde yüklendiğinde Windows kimliğini zaman uyumsuz noktaları arasında akar belirtin gösterilmektedir.  
+ Aşağıdaki örnek, Windows kimlik kimliğe bürünme yönetilen yöntemleri dışındaki araçlarla bile sağlanır, zaman uyumsuz noktalar arasında akan belirtmek gösterilmektedir.  
   
 ```xml  
 <configuration>  
@@ -109,6 +109,6 @@ Windows Identity her zaman kimliğe bürünme nasıl gerçekleştirildiği bağ�
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [\<Legacyımpersonationpolicy > öğesi](../../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md)
+- [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [\<Legacyımpersonationpolicy > öğesi](../../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md)

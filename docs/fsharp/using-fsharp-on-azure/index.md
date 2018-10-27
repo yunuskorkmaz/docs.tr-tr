@@ -3,12 +3,12 @@ title: Azure’da F# Kullanma
 description: 'F # ile Azure hizmetlerini kullanmaya Kılavuzu'
 author: sylvanc
 ms.date: 09/22/2016
-ms.openlocfilehash: b0efa919e846086e2dee131fb5791abc409b5bcb
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 96dec342379b06e997107cc5d6cc05e9fc737452
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033551"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50033967"
 ---
 # <a name="using-f-on-azure"></a>Azure’da F# Kullanma
 
@@ -23,7 +23,7 @@ Aşağıdaki bölümlerde, çeşitli Azure Hizmetleri F # ile kullanma hakkında
 
 Azure, çok çeşitli sanal makine (VM) yapılandırmaları destekler, bkz: [Linux ve Azure sanal makineleri](https://azure.microsoft.com/services/virtual-machines/).
 
-F # yürütme, derleme ve/veya bkz için bir sanal makinede yüklemek için [kullanarak F # Linux'ta](http://fsharp.org/use/linux) ve [kullanarak F # üzerinde Windows](http://fsharp.org/use/windows).
+F # yürütme, derleme ve/veya bkz için bir sanal makinede yüklemek için [kullanarak F # Linux'ta](https://fsharp.org/use/linux) ve [kullanarak F # üzerinde Windows](https://fsharp.org/use/windows).
 
 
 ## <a name="using-azure-functions-with-f"></a>Azure işlevleri ile F # kullanma #

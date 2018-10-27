@@ -2,18 +2,18 @@
 title: (C#) Word belgelerinde metin bulma
 ms.date: 07/20/2015
 ms.assetid: 82f86677-560b-49dc-a089-610409939b2a
-ms.openlocfilehash: 56a99dd548eb149f6fa85370cef6a114103ce91e
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 3213855716ebcfc581f213a34417e579c133e385
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035328"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50034578"
 ---
 # <a name="finding-text-in-word-documents-c"></a>(C#) Word belgelerinde metin bulma
 Bu konu faydalı bir şey için önceki sorguları genişletir: bir dizenin tüm örnekleri belgede bulun.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, belgede belirli bir metin parçası tüm tekrarlarını bulmak için bir WordprocessingML belgesinin işler. Bunu yapmak için "Hello" dizesi bulan bir sorgu kullanırız. Bu örnek, önceki örneklerde üzerinde Bu öğreticide oluşturur. Yeni sorgu aşağıdaki kod açıklamalarda çağrılır.  
+ Bu örnek, belgede belirli bir metin parçası tüm oluşumlarını bulmak için bir WordprocessingML belgesinin işler. Bunu yapmak için "Hello" dizesi bulan bir sorgu kullanırız. Bu örnek, önceki örneklerde üzerinde Bu öğreticide oluşturur. Yeni sorgu aşağıdaki kod açıklamalarda çağrılır.  
   
  Bu örneğin kaynak belge oluşturma yönergeleri için bkz. [kaynak Office Open XML belgesi (C#) oluşturma](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   

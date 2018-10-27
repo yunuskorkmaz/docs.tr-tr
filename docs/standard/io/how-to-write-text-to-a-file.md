@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 060cbe06-2adf-4337-9e7b-961a5c840208
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bc8082175047271c92f9a9a17a49534ffc9546a9
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 9c637d9842c05f47bfcaa0431dd2f9f1ee29cc09
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45677155"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181244"
 ---
 # <a name="how-to-write-text-to-a-file"></a>Nasıl yapılır: Bir Dosyaya Metin Yazma
 .NET Framework uygulamaları için bir dosyaya metin yazabilirsiniz bu konuda gösterildiği farklı bir şekilde veya [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar. Aşağıdaki sınıflar ve yöntemler genellikle bir dosyaya metin yazmak için kullanılır:  
@@ -27,7 +27,7 @@ ms.locfileid: "45677155"
   
 -   <xref:System.IO.File> – .NET Framework uygulamaları ile kullanılacak. Metin gibi bir dosyaya yazmak için statik yöntemler sağlar <xref:System.IO.File.WriteAllLines%2A> ve <xref:System.IO.File.WriteAllText%2A>, veya bir dosyaya metin eklemek için (<xref:System.IO.File.AppendAllLines%2A>, <xref:System.IO.File.AppendAllText%2A> veya <xref:System.IO.File.AppendText%2A>).  
   
--   [FileIO](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.aspx) - ile kullanılmak üzere [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar. Metni bir dosyaya yazmak için zaman uyumsuz yöntemleri içerir ([WriteLinesAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.writelinesasync.aspx) veya [WriteTextAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.writetextasync.aspx)) veya bir dosyaya metin eklemek için ([AppendLinesAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.appendlinesasync.aspx) veya [ AppendTextAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.appendtextasync.aspx)).  
+-   <xref:Windows.Storage.FileIO> -ile kullanılmak üzere [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar. Metni bir dosyaya yazmak için zaman uyumsuz yöntemleri içerir (<xref:Windows.Storage.FileIO.WriteLinesAsync%2A> veya <xref:Windows.Storage.FileIO.WriteTextAsync%2A>) veya bir dosyaya metin eklemek için (<xref:Windows.Storage.FileIO.AppendLinesAsync%2A> veya <xref:Windows.Storage.FileIO.AppendTextAsync%2A>).  
 
 - <xref:System.IO.Path> -Dosya veya dizin yolu bilgilerini içeren dizeleri kullanılacak. İçerdiği <xref:System.IO.Path.Combine%2A> yöntemi bir dosya veya dizin yolu oluşturmak için dizelerin bir birleşimini sağlar.
 
@@ -59,7 +59,7 @@ ms.locfileid: "45677155"
  [!code-vb[Conceptual.BasicIO.TextFiles#WriteFile](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source.vb#writefile)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, zaman uyumsuz olarak kullanıcı girişi için bir metin dosyasına yazma işlemi gösterilmektedir bir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulama. Güvenlik konuları nedeniyle bir dosya açma bir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulama genellikle kullanımını gerektirir bir [FileOpenPicker](https://msdn.microsoft.com/library/windows/apps/windows.storage.pickers.fileopenpicker.aspx) denetimi. Bu örnekte, `FileOpenPicker` metin dosyaları gösterecek şekilde filtrelenir.  
+ Aşağıdaki örnek, zaman uyumsuz olarak kullanıcı girişi için bir metin dosyasına yazma işlemi gösterilmektedir bir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulama. Güvenlik konuları nedeniyle bir dosya açma bir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulama genellikle kullanımını gerektirir bir <xref:Windows.Storage.Pickers.FileOpenPicker> denetimi. Bu örnekte, `FileOpenPicker` metin dosyaları gösterecek şekilde filtrelenir.  
   
 ```xaml  
 <Page  

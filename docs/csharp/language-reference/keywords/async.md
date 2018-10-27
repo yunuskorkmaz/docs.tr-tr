@@ -8,12 +8,12 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: 10f1d62c5aa29f2074106ab102775b9a0283d646
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 021a4291f550eca517cbdc9769c2a9f0aca99d1e
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510968"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50049106"
 ---
 # <a name="async-c-reference"></a>async (C# Başvurusu)
 Kullanım `async` değiştiricisi belirtmek için bir yöntemin [lambda ifadesi](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md), veya [anonim yöntem](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) zaman uyumsuzdur. Bu değiştiriciyi bir yöntem veya ifadede kullanırsanız, şeklinde adlandırılan bir *zaman uyumsuz yöntem*. Aşağıdaki örnek adlı bir zaman uyumsuz yöntem tanımlar `ExampleMethodAsync`: 
@@ -78,7 +78,7 @@ Belirttiğiniz `Task<TResult>` zaman uyumsuz bir yöntemin dönüş türü, [dö
   
 Kullandığınız `void` dönüş ilgili dönüş türünü gerektiren olay işleyicilerini tanımlamak için öncelikle türü. Çağıran bir `void`-döndüren zaman uyumsuz yöntemi Bekleyemez ve yöntemin oluşturduğu özel durumları yakalayamaz.  
 
-C# 7.0 ile başlayarak, başka bir türe sahip genellikle bir değer türü, iade bir `GetAwaiter` performans açısından kritik kod bölümlerini miminize bellek ayırmaları için yöntemi. 
+İle başlayarak C# 7.0, başka bir türe sahip genellikle bir değer türü, iade bir `GetAwaiter` bellek ayırmaları performans açısından kritik kod bölümlerini en aza indirmek için yöntemi. 
 
 Daha fazla bilgi ve örnekler için bkz. [Async Return Types](../../../csharp/programming-guide/concepts/async/async-return-types.md).  
   

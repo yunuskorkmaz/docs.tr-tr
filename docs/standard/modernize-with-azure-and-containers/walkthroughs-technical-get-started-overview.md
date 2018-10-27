@@ -4,12 +4,12 @@ description: Azure Bulutu ve Windows kapsayıcıları ile mevcut .NET uygulamala
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 41fbeb3abc201ef03cf0c237a069e7687c98dd18
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 1c23acc16698446bc07c0047b68186e21c2ceb2d
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45594017"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372857"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>İzlenecek yollar ve teknik başlangıca genel bakış
 
@@ -203,7 +203,7 @@ Tam Teknik Gözden geçirme eShopModernizing GitHub deposuna wikide kullanılabi
 
 ### <a name="overview"></a>Genel Bakış
 
-[Azure Container Instances'a (ACI)](https://docs.microsoft.com/en-us/azure/container-instances/) kapsayıcılar'ın tek örneklerine dağıtabileceğiniz bir kapsayıcı geliştirme/test/hazırlama ortamına sahip olmak için en hızlı yoludur.
+[Azure Container Instances'a (ACI)](https://docs.microsoft.com/azure/container-instances/) kapsayıcılar'ın tek örneklerine dağıtabileceğiniz bir kapsayıcı geliştirme/test/hazırlama ortamına sahip olmak için en hızlı yoludur.
 
 ### <a name="goals"></a>Hedefleri
 

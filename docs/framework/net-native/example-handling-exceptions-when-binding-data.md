@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 89e7a0929bd5f07c5a1986d885984332d692d3a9
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: a861da011898c3648c66b6a0ea0f97cdb26ff288
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44180299"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452772"
 ---
 # <a name="example-handling-exceptions-when-binding-data"></a>Örnek: Veri Bağlama Sırasında Özel Durum İşleme
 > [!NOTE]
@@ -39,7 +39,7 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
 ```  
   
 ## <a name="what-was-the-app-doing"></a>Uygulama neler oldu?  
- Gelen temel yığın çerçevelerini [Windows.UI.Xaml](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.aspx) ad alanı belirtmek XAML işleme altyapısı çalışıyordu.   Kullanımını <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType> olan meta veriler temizlendi türünde bir özelliğin değerinin yansıma tabanlı bir arama yöntemi gösterir.  
+ Gelen temel yığın çerçevelerini <xref:Windows.UI.Xaml?displayProperty=nameWithType> ad alanı belirtmek XAML işleme altyapısı çalışıyordu.   Kullanımını <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType> olan meta veriler temizlendi türünde bir özelliğin değerinin yansıma tabanlı bir arama yöntemi gösterir.  
   
  Meta veri yönergesi sağlayan ilk adımı eklemek için olacaktır `serialize` türü için meta veri özelliklerini tüm erişilebilir olacak şekilde:  
   
@@ -57,7 +57,7 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
 ## <a name="could-the-code-be-rewritten-to-not-use-reflection"></a>Kod, yansıma kullanmayı yazılması?  
  Veri bağlama yansıma yoğun olduğundan, yansıma önlemek için kodu değiştirme uygun değildir.  
   
- Ancak, yolu belirtmek için vardır `ViewModel` XAML sayfası araç zincirinizi ilişkilendirebilirsiniz böylece doğru türde özellik bağlamalarla derleme zamanı ve çalışma zamanı yönerge kullanmadan meta verileri tut.  Örneğin, uygulayabilirsiniz [Windows.UI.Xaml.Data.BindableAttribute](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.bindableattribute.aspx) öznitelik özellikleri. Bu, XAML derleyicinin arama gerekli bilgileri oluşturmak ve Default.rd.xml dosyasındaki bir çalışma zamanı yönerge gerektiren önler.  
+ Ancak, yolu belirtmek için vardır `ViewModel` XAML sayfası araç zincirinizi ilişkilendirebilirsiniz böylece doğru türde özellik bağlamalarla derleme zamanı ve çalışma zamanı yönerge kullanmadan meta verileri tut.  Örneğin, uygulayabilirsiniz <xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType> öznitelik özellikleri. Bu, XAML derleyicinin arama gerekli bilgileri oluşturmak ve Default.rd.xml dosyasındaki bir çalışma zamanı yönerge gerektiren önler.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Başlarken](../../../docs/framework/net-native/getting-started-with-net-native.md)  

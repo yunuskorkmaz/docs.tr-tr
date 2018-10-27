@@ -7,49 +7,49 @@ helpviewer_keywords:
 - arrays [Visual Basic], initializing
 - arrays [Visual Basic], declaring
 ms.assetid: aadd7a60-7ca4-4608-b986-091f19e7fc10
-ms.openlocfilehash: ee8cb91fd2fae9637a0d0e33fca63a4cdb9d2fce
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4ce2e061c5f523fae3020b08034875422a0062a7
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33651576"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50170178"
 ---
 # <a name="how-to-initialize-an-array-variable-in-visual-basic"></a>Nasıl yapılır: Visual Basic'te Dizi Değişkeni Başlatma
-Dizi değişmez değer de dahil olmak üzere bir dizi değişkeni başlatma bir `New` yan tümcesi ve dizinin ilk değerleri belirtme. Türünü belirtin veya değişmez değer dizideki olayla izin verin. Ne tür çıkarımı yapılan hakkında daha fazla bilgi için "Doldurma bir dizi ile ilk değerleri" bölümüne bakın. [diziler](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+Bir dizi değişmez değeri ekleyerek bir dizi değişkeni başlatmak bir `New` yan tümcesi ve dizinin başlangıç değerlerini belirterek. Türü belirtin veya dizi değişmez değerlerinin çıkarılan izin verebilirsiniz. Türün gösterilmesi hakkında daha fazla bilgi için bkz: "Doldurma bir dizeyi başlangıç değerleriyle" [diziler](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
-### <a name="to-initialize-an-array-variable-by-using-an-array-literal"></a>Değişmez değer bir dizi kullanarak bir dizi değişkeni başlatılamadı  
+### <a name="to-initialize-an-array-variable-by-using-an-array-literal"></a>Dizi değişmez değeri kullanarak dizi değişkeni başlatmak için  
   
--   Ya da `New` yan tümcesi veya dizi değeri atadığınızda, köşeli parantez içindeki öğe değerlerini sağlayın (`{}`). Aşağıdaki örnek, bildirme, oluşturma ve bir değişken türü öğesi içeren bir dizi içerecek şekilde başlatmak için çeşitli yollar gösterir `Char`.  
+-   Ya da `New` yan tümcesi veya dizi değeri atadığınızda, öğe değerlerini ayraçlar içinde sağlayabilirsiniz (`{}`). Aşağıdaki örnek, bildirmek, oluşturmak ve türünde öğelere sahip bir dizi içeren bir değişkeni başlatmak için birçok yol gösterir. `Char`.  
   
      [!code-vb[VbVbalrArrays#16](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/how-to-initialize-an-array-variable_1.vb)]  
   
-     Her deyim yürütüldükten sonra oluşturulan dizi dizini ilk değerleri içeren 2 aracılığıyla dizin 0 konumunda öğelerle 3 uzunluğuna sahip. Üst sınır ve değerlerini sağlarsanız, üst sınır aracılığıyla 0 dizinden her öğe için bir değer içermelidir.  
+     Her deyim yürütüldükten sonra oluşturulan dizi bir dizini ilk değerleri içeren 2 dizini aracılığıyla 0 dizininde öğelerle birlikte 3 oluşabilir. Hem üst sınırı hem de değerleri sağlarsanız, 0 dizininden üst sınıra kadar her öğe için bir değer içermesi gerekir.  
   
-     Değişmez değer bir dizi öğesi değerlerini sağlarsanız dizini üst sınırı belirtin gerekmez dikkat edin. Üst sınır belirtilirse, dizinin boyutunu değişmez değer dizideki sayısına dayalı olarak algılanır.  
+     Öğe değerlerini bir dizi değişmezinde sağlarsanız, dizin üst sınırını belirtmeniz gerekmez dikkat edin. Hiçbir üst sınır belirtilmediyse dizi boyutu dizi değişmez değerlerinin göre algılanır.  
   
-### <a name="to-initialize-a-multidimensional-array-variable-by-using-array-literals"></a>Dizi değişmez değerleri kullanarak çok boyutlu bir diziye başlatmak için  
+### <a name="to-initialize-a-multidimensional-array-variable-by-using-array-literals"></a>Dizi değişmez değerleri kullanarak bir çok boyutlu dizi değişkeni başlatmak için  
   
--   İç içe köşeli parantez içindeki değerleri (`{}`) küme ayraçları içinde. Tümü aynı türde ve uzunluk dizileri olarak Infer iç içe geçmiş dizi değişmez değerleri emin olun. Aşağıdaki kod örneğinde boyutlu bir diziye başlatma bazı örnekleri gösterilmektedir.  
+-   İç içe değerleri küme ayracı (`{}`) içinde yerleştirin. Tümü aynı türde ve uzunluktaki diziler tanım Çıkarsama iç içe geçmiş dizi değişmez değerleri emin olun. Aşağıdaki kod örneği, çeşitli çok boyutlu dizi başlatma örneklerini gösterir.  
   
      [!code-vb[VbVbalrArrays#17](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/how-to-initialize-an-array-variable_2.vb)]  
   
--   Açıkça dizi sınırları belirtin ya da bunları dışlamayı ve değişmez değer dizideki değerlere göre dizi sınırları Infer derleyici sahip. Üst sınırları ve değerlerini sağlarsanız, her boyut üst sınırı aracılığıyla 0 dizinden her öğe için bir değer içermelidir. Aşağıdaki örnek, bildirme, oluşturma ve türündeki öğeler sahip iki boyutlu bir dizi içeren bir değişkeni başlatmak için çeşitli yollar gösterir. `Short`  
+-   Açıkça dizi sınırları belirtin ya da bunları bırakın ve derleyicinin dizi sınırlarını dizi değişmez değerlere göre sağlayabilirsiniz. Hem üst sınırları hem de değerleri sağlarsanız, her boyutta, 0 dizininden üst sınıra kadar her öğe için bir değer içermesi gerekir. Aşağıdaki örnek, bildirmek, oluşturmak ve türünde öğelere sahip iki boyutlu bir dizi içeren bir değişkeni başlatmak için birçok yol gösterir. `Short`  
   
      [!code-vb[VbVbalrArrays#18](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/how-to-initialize-an-array-variable_3.vb)]  
   
-     Her deyim yürütüldükten sonra oluşturulan dizi dizine sahip altı başlatılmış öğeleri içerir `(0,0)`, `(0,1)`, `(0,2)`, `(1,0)`, `(1,1)`, ve `(1,2)`. Her bir dizi konum değeri içeren `10`.  
+     Her deyim yürütüldükten sonra oluşturulan dize dizinlerine sahip altı tane başlatılmış öğeyi içerir `(0,0)`, `(0,1)`, `(0,2)`, `(1,0)`, `(1,1)`, ve `(1,2)`. Her dizi konumuna değeri içeren `10`.  
   
--   Aşağıdaki örnek, çok boyutlu bir diziye yineler. Visual Basic ile yazılmış bir Windows konsol uygulaması içinde içinde kod yapıştırın `Sub Main()` yöntemi. Son açıklamaları çıktısını göster.  
+-   Aşağıdaki örnek, çok boyutlu bir dizi yinelenir. Visual Basic'te yazılmış bir Windows konsol uygulaması içinde içindeki kodu yapıştırın `Sub Main()` yöntemi. Son açıklamalar çıktıyı gösterir.  
   
      [!code-vb[VbVbalrArrays#31](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/how-to-initialize-an-array-variable_4.vb)]  
   
-### <a name="to-initialize-a-jagged-array-variable-by-using-array-literals"></a>Dizi değişmez değerleri kullanarak basit bir diziye başlatmak için  
+### <a name="to-initialize-a-jagged-array-variable-by-using-array-literals"></a>Dizi değişmez değerleri kullanarak basit bir dizi değişkeni başlatmak için  
   
--   İç içe nesne değerleri kaşlı ayraçlar içinde (`{}`). Ayrıca, basit bir dizi söz konusu olduğunda farklı uzunlukta diziler belirtin dizi değişmez değerleri geçirebilmenize rağmen emin olun, iç içe geçmiş dizi değişmez değerleri parantez içine alınmış (`()`). İç içe geçmiş dizi değişmez değerleri değerlendirmesi parantez zorlamak ve sonuçta elde edilen diziler Basit dizi ilk değerleri olarak kullanılır. Aşağıdaki kod örneği iki örnek basit dizi başlatma gösterir.  
+-   Nesne değerlerini küme ayraçları içinde (`{}`). Ayrıca düzensiz bir dizi farklı uzunluktaki dizileri belirten dizi değişmezlerini iç içe ancak iç içe geçmiş dizi değişmez değerlerini parantez içine alınmış emin olun (`()`). Parantezler iç içe geçmiş dizi değişmez değerlerinin değerlendirilmesini zorlar ve ortaya çıkan diziler düzensiz dizinin başlangıç değerleri kullanılır. Aşağıdaki kod örneği, iki düzensiz dizi başlatma örneklerini gösterir.  
   
      [!code-vb[VbVbalrArrays#19](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/how-to-initialize-an-array-variable_5.vb)]  
   
--   Aşağıdaki örnekte basit bir dizisini yineler. Visual Basic ile yazılmış bir Windows konsol uygulaması içinde içinde kod yapıştırın `Sub Main()` yöntemi.  Kodu son açıklamalarda çıktısını göster.  
+-   Aşağıdaki örnek bir düzensiz dizi aracılığıyla yinelenir. Visual Basic'te yazılmış bir Windows konsol uygulaması içinde içindeki kodu yapıştırın `Sub Main()` yöntemi.  Koddaki son açıklamalar çıktıyı gösterir.  
   
      [!code-vb[VbVbalrArrays#32](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/how-to-initialize-an-array-variable_6.vb)]  
   

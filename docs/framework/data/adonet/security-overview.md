@@ -2,12 +2,12 @@
 title: Güvenlik Overview2
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-ms.openlocfilehash: 18a7496d39cd08e8b340e23c57fcd10dae5ed281
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: db7b45fef28b0b28e7da550c24d510da73c02aa9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861864"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183535"
 ---
 # <a name="security-overview"></a>Güvenlik Genel Bakış
 Bir uygulamanın güvenliğini sağlama, devam eden bir işlem bulunmaktadır. Hiçbir zaman bir geliştirici gelecekteki saldırıları yeni teknolojileri tür zekadan yararlanabilmesini tahmin etmek mümkün olduğundan, uygulamanın tüm saldırılara karşı güvenli olduğu garanti edebilir bir noktası olacaktır. Buna karşılık, hiç kimse sahip olduğu bir sistemde henüz bulunan (veya yayımlanmış) güvenlik açıkları gelmez hiçbiri mevcut veya var olabilir. Yanı sıra proje tasarım aşaması sırasında güvenlik için planlama, uygulama ömrü boyunca güvenlik nasıl korunur planlamak gerekir.  
@@ -67,7 +67,7 @@ Bir uygulamanın güvenliğini sağlama, devam eden bir işlem bulunmaktadır. H
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
 |[Kod Erişimi Güvenliği ve ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)|Kod erişimi güvenliği, rol tabanlı güvenlik ve ADO.NET uygulamanın perspektifinden kısmen güvenilir ortamlar arasındaki etkileşimler açıklanmaktadır.|  
-|[Kod erişimi güvenliği](https://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)|.NET Framework'teki CAS açıklayan ek konulara bağlantılar içerir.|  
+|[Kod erişimi güvenliği](../../../../docs/framework/misc/code-access-security.md)|.NET Framework'teki CAS açıklayan ek konulara bağlantılar içerir.|  
   
 ## <a name="database-security"></a>Veritabanı güvenliği  
  En düşük öncelik ilkesini veri kaynağınız için de geçerlidir. Veritabanı güvenliği için bazı genel yönergeleri içerir:  

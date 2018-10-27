@@ -6,17 +6,15 @@ helpviewer_keywords:
 - win32manifest compiler option [Visual Basic]
 - -win32manifest compiler option [Visual Basic]
 ms.assetid: 9e3191b4-90db-41c8-966a-28036fd20005
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f81b578c5ee3ffd830cef237fba2272eecd07642
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1982a70c4baacae5ffb35efd93d447c4d81b00b5
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654092"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181114"
 ---
 # <a name="-win32manifest-visual-basic"></a>-win32manifest (Visual Basic)
-Bir projenin taşınabilir yürütülebilir (PE) dosyasına katıştırılmış bir kullanıcı tarafından tanımlanan Win32 uygulama bildirim dosyasının tanımlar.  
+Bir projenin taşınabilir yürütülebilir (PE) dosya gömülü olması için kullanıcı tanımlı Win32 uygulama bildirim dosyası tanımlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -31,28 +29,28 @@ Bir projenin taşınabilir yürütülebilir (PE) dosyasına katıştırılmış 
 |`fileName`|Özel bildirim dosyasının yolu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Varsayılan olarak, Visual Basic derleyici asInvoker istenen yürütme düzeyini belirten bir uygulama bildirimi katıştırır. Hangi yürütülebilir dosya yapılandırıldığında, genellikle bin\Debug veya bin\Release klasörü, Visual Studio kullandığınızda aynı klasörde bildirimi oluşturur. Örneğin highestAvailable veya requireAdministrator istenen yürütme düzeyini belirtmek özel bir bildirimi sağlamak istiyorsanız, dosya adını belirtmek için bu seçeneği kullanın.  
+ Varsayılan olarak, Visual Basic Derleyicisi asInvoker istenen yürütme düzeyini belirten bir uygulama bildirimi katıştırır. Bildirim, yürütülebilir dosyayı oluşturulduğuna göre genellikle bin\Debug veya bin\Release klasörü, Visual Studio kullandığınızda aynı klasörde oluşturulur. Örneğin highestAvailable veya requireAdministrator istenen yürütme düzeyini belirtmek özel bir bildirim sağlamak istiyorsanız, dosya adını belirtmek için bu seçeneği kullanın.  
   
 > [!NOTE]
->  Bu seçenek ve [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md) seçeneği karşılıklı olarak birbirini dışlar. Her iki seçenek aynı komut satırında kullanmaya çalışırsa, bir derleme hatası alırsınız.  
+>  Bu seçenek ve [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md) seçeneği karşılıklı olarak birbirini dışlar. Aynı komut satırında iki seçenek de kullanmayı denerseniz, bir derleme hatası alırsınız.  
   
- Hiçbir uygulama bildirimini olan bir uygulama, istenen yürütme düzeyinin Windows Vista kullanıcı hesabı denetimi özelliği altında dosya/kayıt defteri sanallaştırma tabi olacağını belirtir. Sanallaştırma hakkında daha fazla bilgi için bkz: [Windows Vista'da ClickOnce dağıtımı](/visualstudio/deployment/clickonce-deployment-on-windows-vista).  
+ Hiçbir uygulama bildirimini olan bir uygulama, Windows Vista kullanıcı hesabı denetimi özelliği altında dosya/kayıt defteri sanallaştırma istenen yürütme düzeyini tabi belirtir. Sanallaştırma hakkında daha fazla bilgi için bkz. [Windows Vista'da ClickOnce dağıtımı](/visualstudio/deployment/clickonce-deployment-on-windows-vista).  
   
- Aşağıdaki koşullardan biri doğru olduğunda, uygulamanızın sanallaştırma tabi olacaktır:  
+ Aşağıdaki koşullardan biri doğru ise, uygulama sanallaştırma tabi olacaktır:  
   
-1.  Kullandığınız `-nowin32manifest` seçeneğini sağlamaz daha yeni bir derleme adımı veya Windows Kaynak (.res) dosyasının bir parçası olarak bir bildirim kullanarak `-win32resource` seçeneği.  
+1.  Kullandığınız `-nowin32manifest` seçeneğini sağlamaz daha yeni bir derleme adımı veya bir Windows kaynağı (.res) dosyasının bir parçası olarak bir bildirim kullanarak `-win32resource` seçeneği.  
   
-2.  İstenen yürütme düzeyinin belirtmiyor özel bir bildirim sağlar.  
+2.  İstenen yürütme düzeyini belirtmeyen bir özel bildirim sağlar.  
   
- Visual Studio varsayılan .manifest dosyası oluşturur ve yürütülebilir dosyanın yanında hata ayıklama ve yayın dizinleri depolar. Görüntülemek veya tıklayarak varsayılan app.manifest dosyasını düzenleyin **görünümü UAC ayarları** üzerinde **uygulama** Proje Tasarımcısı'nda sekmesi. Daha fazla bilgi için bkz: [uygulama sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
+ Visual Studio varsayılan .manifest dosyasını oluşturur ve hata ayıklama ve yayın dizinleri yürütülebilir dosyanın yanında depolar. Görüntüleyebilir veya tıklayarak varsayılan app.manifest dosyasını düzenleyin **UAC ayarları görüntüle** üzerinde **uygulama** Proje Tasarımcısı'nda sekmesi. Daha fazla bilgi için [uygulama sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
   
- Kullanarak oluşturma sonrası özel bir adım veya Win32 kaynak dosyasını bir parçası olarak uygulama bildirimini sağlayabilirsiniz `-nowin32manifest` seçeneği. Uygulamanızın Windows Vista dosya veya kayıt defteri sanallaştırma tabi olmasını istiyorsanız aynı seçeneği kullanın. Bu oluşturma ve varsayılan bildirimini PE'yi dosyasında katıştırma derleyici engeller.  
+ Kullanarak bir Win32 kaynak dosyası bir parçası olarak veya özel bir derleme sonrası adımı olarak uygulama bildirimine sağlayabilirsiniz `-nowin32manifest` seçeneği. Uygulamanızın Windows Vista dosya veya kayıt defteri sanallaştırma tabi olmasını istiyorsanız, aynı bu seçeneği kullanın. Bu, oluşturma ve bir varsayılan bildirim PE dosyasına katıştırma derleyicinin engeller.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, Visual Basic derleyici bir PE'ye eklediği varsayılan bildirimi gösterir.  
+ Aşağıdaki örnek, Visual Basic Derleyicisi bir PE ekler, varsayılan bildirimi gösterir.  
   
 > [!NOTE]
->  Derleyici standart uygulama adı MyApplication.app XML bildirimine ekler. Bu, uygulamaların Windows Server 2003 Service Pack 3 üzerinde çalışmasını etkinleştirmek için bir çözüm olabilir.  
+>  Derleyici bir standart uygulama adı MyApplication.app XML ekler. Windows Server 2003 Service Pack 3'üzerinde çalıştırılacak uygulamaları etkinleştirmek için geçici bir çözüm budur.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  

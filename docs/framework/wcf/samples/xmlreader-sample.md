@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XML Reader
 ms.assetid: 60e5848d-7d9c-4ea5-bed9-22758c9ac16c
-ms.openlocfilehash: ce5c03d7bd169ee166e9444ee070c32df6e2801c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5ac97afd2efc1bb57a81f5cd2d78fed18ca3804d
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520952"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50039263"
 ---
 # <a name="xmlreader-sample"></a>XmlReader Örneği
 XmlReader örneği kullanarak bir ileti gövdesi işleme gösteren bir <xref:System.Xml.XmlReader>. Örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md), hesaplayıcı hizmet uygular. Bir ek hizmet işlemi `Sum`, kabul eden değerlerini birleştirmek için bir dizi içeren bir ileti eklendi. Hizmeti kullanarak iletiyi okur bir <xref:System.Xml.XmlReader>.  
@@ -19,7 +19,7 @@ XmlReader örneği kullanarak bir ileti gövdesi işleme gösteren bir <xref:Sys
   
  Bir hizmet işlemi adlı hesaplayıcısı arabirimi içerir `Sum` kabul eden bir <xref:System.ServiceModel.Channels.Message> parametresi, aşağıdaki örnek kodda gösterildiği gibi.  
   
-```  
+```csharp
 public interface ICalculator  
 {  
     [OperationContract]  
@@ -37,9 +37,10 @@ public interface ICalculator
   
  İstemcisinin eriştiği `Sum` ilk tamsayı değerleri dizisi oluşturarak sonra diziden bir ileti oluşturmak ve ardından arama `Sum` yöntemi aşağıdaki örnek kodda gösterildiği gibi kullanarak oluşturulan bir ileti.  
   
-```  
+```csharp
 CalculatorClient client = new CalculatorClient();  
-...  
+//...  
+
 // Call the Sum service operation.  
 int[] values = { 1, 2, 3, 4, 5 };  
 using (new OperationContextScope(client.InnerChannel))  
@@ -54,7 +55,7 @@ using (new OperationContextScope(client.InnerChannel))
   
  Hizmet işlemi uygulama hizmetinde `Sum` kullanarak ileti gövdesi erişen bir <xref:System.Xml.XmlReader> toplanacak değerlerini yinelemek için nesne. <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> Yöntemi çağrıldığında, ileti gövdesi erişmek için aşağıdaki örnek kodda gösterildiği gibi.  
   
-```  
+```csharp  
 public int Sum(Message message)  
 {  
     int sum = 0;  
@@ -81,7 +82,7 @@ public int Sum(Message message)
   
  Örneği çalıştırdığında istek ve yanıtların işlemin istemci konsol penceresinde görüntülenir. İstemci bilgisayarı için istemci penceresinde ENTER tuşuna basın.  
   
-```  
+```console  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  

@@ -4,12 +4,12 @@ description: Dotnet nuget anında iletme komutu sunucuya bir paket gönderir ve 
 author: karann-msft
 ms.author: mairaw
 ms.date: 09/04/2018
-ms.openlocfilehash: 23d27cef29008955850f9ed9f4a8baed9e7ad982
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: b9c0fad886cd1234325c58bf61b1a010bce421d9
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45610015"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50045554"
 ---
 # <a name="dotnet-nuget-push"></a>DotNet nuget anında iletme
 
@@ -179,9 +179,9 @@ Gönderim *foo.nupkg* varsayılan anında iletme kaynağı için bir API anahtar
 
 `dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a`
 
-Anında iletme *foo.nupkg* özel anında iletme kaynağına `http://customsource`, bir API anahtarı belirtme:
+Anında iletme *foo.nupkg* özel anında iletme kaynağına `https://customsource`, bir API anahtarı belirtme:
 
-`dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s http://customsource/`
+`dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://customsource/`
 
 Gönderim *foo.nupkg* varsayılan anında iletme kaynağı:
 

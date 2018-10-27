@@ -2,12 +2,12 @@
 title: Gerekli bağımsız değişkenler ve aşırı yüklenmiş gruplar
 ms.date: 03/30/2017
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
-ms.openlocfilehash: d25702e573acd9a0815c232cdf6935d6e9651631
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: d7cfe00d93f1eede77bcda5881c63843722c9a17
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842079"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452907"
 ---
 # <a name="required-arguments-and-overload-groups"></a>Gerekli bağımsız değişkenler ve aşırı yüklenmiş gruplar
 Etkinlikleri belirli bağımsız değişkenler etkinliğinin yürütme için geçerli olacak şekilde bağlanması için gerekli olacak şekilde yapılandırılabilir. `RequiredArgument` Özniteliği, belirli bir etkinliğin bağımsız gerekli olduğunu belirtmek için kullanılır ve `OverloadGroup` öznitelik gerekli bağımsız değişken kategorisi gruplamak için kullanılır. Öznitelikleri kullanarak etkinlik yazarlar basit veya karmaşık etkinlik doğrulama yapılandırmaları sağlayabilir.  
@@ -63,7 +63,7 @@ public sealed class Add : CodeActivity<int>
   
  **Povinný argument 'İşlenen1' için değer sağlanmadı.**  
 > [!NOTE]
-> Denetleme ve doğrulama hataları ve Uyarıları işleme hakkında daha fazla bilgi için bkz: [etkinlik doğrulamayı çağırma](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).  
+> Denetleme ve doğrulama hataları ve Uyarıları işleme hakkında daha fazla bilgi için bkz. [etkinlik doğrulamayı çağırma](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).  
   
 ## <a name="using-overload-groups"></a>Aşırı yüklenmiş gruplar kullanma
 

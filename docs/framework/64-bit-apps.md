@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 125aab04b5b323855e44c02e0c576b99618d70df
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 940bd8b7fe0be79ea6448b1eab69359bdb92fdc9
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873615"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "49480050"
 ---
 # <a name="64-bit-applications"></a>64 bitlik Uygulamalar
 Bir uygulamayı derlediğinizde, 64 bitlik bir Windows işletim sisteminde yerel uygulama olarak ya da WOW64 (Windows 64-bit üzerinde Windows-32-bit) altında çalışmasını belirtebilirsiniz. WOW64, 32 bitlik bir uygulamanın 64 bitlik bir sistemde çalışmasını sağlayan bir uyumluluk ortamıdır. WOW64, Windows işletim sisteminin tüm 64 bitlik sürümlerinde bulunur.  
@@ -58,7 +58,7 @@ Bir uygulamayı derlediğinizde, 64 bitlik bir Windows işletim sisteminde yerel
 |--------------|---------------------|  
 |Visual Basic|[/ Platform (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/platform.md)|  
 |Visual C#|[/ Platform (C# Derleyici Seçenekleri)](~/docs/csharp/language-reference/compiler-options/platform-compiler-option.md)|  
-|Visual C++|Platformdan bağımsız, Microsoft Ara dili (MSIL) uygulamaları kullanarak oluşturabileceğiniz **/CLR: safe**. Daha fazla bilgi için [/CLR (ortak dil çalışma zamanı derlemesi)](/cpp/build/reference/clr-common-language-runtime-compilation).<br /><br /> Visual C++, 64 bitlik her bir işletim sistemi için ayrı bir derleyici içerir. Bir 64 bit Windows işletim sisteminde çalışan yerel uygulamalar oluşturmak için Visual C++'ı kullanma hakkında daha fazla bilgi için bkz. [64 bit programlama](https://msdn.microsoft.com/library/h2k70f3s\(v=vs.80\)).|  
+|Visual C++|Platformdan bağımsız, Microsoft Ara dili (MSIL) uygulamaları kullanarak oluşturabileceğiniz **/CLR: safe**. Daha fazla bilgi için [/CLR (ortak dil çalışma zamanı derlemesi)](/cpp/build/reference/clr-common-language-runtime-compilation).<br /><br /> Visual C++, 64 bitlik her bir işletim sistemi için ayrı bir derleyici içerir. Bir 64 bit Windows işletim sisteminde çalışan yerel uygulamalar oluşturmak için Visual C++'ı kullanma hakkında daha fazla bilgi için bkz. [64 bit programlama](/cpp/build/configuring-programs-for-64-bit-visual-cpp).|  
   
 ## <a name="determining-the-status-of-an-exe-file-or-dll-file"></a>Bir .exe Dosyası veya .dll Dosyasının Durumunu Belirleme  
  Bir .exe dosyasının veya .dll dosyasının yalnızca belirli bir platformda veya WOW64 altında çalışacak şekilde ayarlandığını olup olmadığını belirlemek için [CorFlags.exe (CorFlags dönüştürme aracı)](../../docs/framework/tools/corflags-exe-corflags-conversion-tool.md) hiçbir seçenek olmadan. Bir .exe dosyasının veya .dll dosyasının platform durumunu değiştirmek için aynı zamanda CorFlags.exe'yi de kullanabilirsiniz. Bir Visual Studio derlemesinin CLR başlığının ana çalışma zamanı sürümü numarası 2 olarak, alt çalışma zamanı sürümü numarası ise 5 olarak ayarlanır. Alt çalışma zamanı sürümü 0 olarak ayarlanan uygulamalar eski uygulamalar olarak işlenir ve her zaman WOW64 altında yürütülür.  

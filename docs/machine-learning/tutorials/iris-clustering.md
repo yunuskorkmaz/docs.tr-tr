@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 07/02/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: eddafc14de3a38cbf6f238199733ee667e6868b3
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: bb41fd317507c14b46aea94e1ce576e390932a65
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308571"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453196"
 ---
 # <a name="tutorial-use-mlnet-to-cluster-iris-flowers-clustering"></a>Öğretici: Kullanımı ML.NET küme Iris çiçek (kümeleme) için
 
@@ -138,19 +138,19 @@ private static PredictionModel<IrisData, ClusterPrediction> Train()
 
 [!code-csharp[Add step to load data](../../../samples/machine-learning/tutorials/IrisClustering/Program.cs#6)]
 
-Tüm özellik sütunlar birleştirmek için sonraki adımdır **özellikleri** sütun kullanarak <xref:Microsoft.ML.Transforms.ColumnConcatenator> dönüştürme sınıfı. Varsayılan olarak, bir öğrenme algoritması yalnızca özelliklerinden işler **özellikleri** sütun. Aşağıdaki kodu ekleyin:
+Tüm özellik sütunlar birleştirmek için sonraki adımdır **özellikleri** sütun kullanarak <xref:Microsoft.ML.Legacy.Transforms.ColumnConcatenator> dönüştürme sınıfı. Varsayılan olarak, bir öğrenme algoritması yalnızca özelliklerinden işler **özellikleri** sütun. Aşağıdaki kodu ekleyin:
 
 [!code-csharp[Add step to concatenate columns](../../../samples/machine-learning/tutorials/IrisClustering/Program.cs#7)]
 
 ## <a name="choose-a-learning-algorithm"></a>Bir öğrenme algoritması seçin
 
-Veri ardışık düzenine eklemek ve giriş doğru biçime dönüştürme sonra bir öğrenme algoritması seçin (**learner**). Learner modeli eğitir. ML.NET sağlayan bir <xref:Microsoft.ML.Trainers.KMeansPlusPlusClusterer> uygulayan learner [k-ortalamaları algoritması](https://en.wikipedia.org/wiki/K-means_clustering) ilk küme centroids seçmeye yönelik geliştirilmiş bir yöntem.
+Veri ardışık düzenine eklemek ve giriş doğru biçime dönüştürme sonra bir öğrenme algoritması seçin (**learner**). Learner modeli eğitir. ML.NET sağlayan bir <xref:Microsoft.ML.Legacy.Trainers.KMeansPlusPlusClusterer> uygulayan learner [k-ortalamaları algoritması](https://en.wikipedia.org/wiki/K-means_clustering) ilk küme centroids seçmeye yönelik geliştirilmiş bir yöntem.
 
 Aşağıdaki kodu ekleyin `Train` önceki adımda eklenen koddan veri işleme yöntemi:
 
 [!code-csharp[Add a learner step](../../../samples/machine-learning/tutorials/IrisClustering/Program.cs#8)]
 
-Kullanım <xref:Microsoft.ML.Trainers.KMeansPlusPlusClusterer.K?displayProperty=nameWithType> özellik kümeleri sayısını belirtmek için. Yukarıdaki kod, veri kümesi üç kümelerinde ayrılmalıdır belirtir.
+Kullanım <xref:Microsoft.ML.Legacy.Trainers.KMeansPlusPlusClusterer.K?displayProperty=nameWithType> özellik kümeleri sayısını belirtmek için. Yukarıdaki kod, veri kümesi üç kümelerinde ayrılmalıdır belirtir.
 
 ## <a name="train-the-model"></a>Modeli eğitme
 

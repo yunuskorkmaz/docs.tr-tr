@@ -2,12 +2,12 @@
 title: Hata işleme
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-ms.openlocfilehash: 64b1af4b557d7792c7285866edc9aed08a0ef667
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 548d93e63440e256ddb54c3ca792a49817c9b059
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486160"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452855"
 ---
 # <a name="error-handling"></a>Hata işleme
 ## <a name="error-handling-in-windows-communication-foundation"></a>Windows Communication Foundation işleme hatası  
@@ -30,7 +30,7 @@ ms.locfileid: "43486160"
 ### <a name="dealing-with-unexpected-exceptions-using-an-ierrorhandler"></a>Beklenmeyen bir Ierrorhandler kullanarak özel durumları ile ilgilenme  
  Beklenmeyen özel durumlar için önerilen eylem çalıştıysa "bir Ierrorhandler kanca" sağlamaktır. Hata işleyicilerini yalnızca özel durumları yakalama WCF çalışma zamanı düzeyinde ("hizmet modeli" katman), kanal katmanda değil. Kanal düzeyinde bir Ierrorhandler yeteneklerinizi tek yolu, çoğu senaryoda önerilmez özel bir kanal oluşturmaktır.  
   
- "Beklenmeyen bir özel durum" genellikle kurtarılamaz bir özel durum ya da bir işlem özel durumu olan; Bu, bunun yerine, beklenmeyen bir kullanıcı özel durumdur. Kurtarılamaz bir özel durum (bir bellek yetersiz özel durum gibi) – bir genel olarak işlenen tarafından [hizmet modeli özel durum işleyicisi](https://msdn.microsoft.com/library/system.servicemodel.dispatcher.exceptionhandler.aspx) otomatik olarak – genellikle düzgün bir şekilde, işlenemez ve yalnızca nedeni böyle bir özel durum işleme Ek günlükler yapmak hiç olabilir veya standart bir özel durum istemciye döndürmek için. Genellikle çok erken ya da çok geç tarafından müdahale hata işleyicisi olduğundan – ileti işlemede işleme özel durum oluşur, serileştirme, kodlayıcı veya biçimlendirici düzeyinde – genellikle bir Ierrorhandler işlenemez Bu özel durumlar meydana süre. Benzer şekilde, bir Ierrorhandler aktarımı özel durumları işlenemez.  
+ "Beklenmeyen bir özel durum" genellikle kurtarılamaz bir özel durum ya da bir işlem özel durumu olan; Bu, bunun yerine, beklenmeyen bir kullanıcı özel durumdur. Kurtarılamaz bir özel durum (bir bellek yetersiz özel durum gibi) – bir genel olarak işlenen tarafından [hizmet modeli özel durum işleyicisi](xref:System.ServiceModel.Dispatcher.ExceptionHandler) otomatik olarak – genellikle düzgün bir şekilde, işlenemez ve yalnızca nedeni böyle bir özel durum işleme Ek günlükler yapmak hiç olabilir veya standart bir özel durum istemciye döndürmek için. Genellikle çok erken ya da çok geç tarafından müdahale hata işleyicisi olduğundan – ileti işlemede işleme özel durum oluşur, serileştirme, kodlayıcı veya biçimlendirici düzeyinde – genellikle bir Ierrorhandler işlenemez Bu özel durumlar meydana süre. Benzer şekilde, bir Ierrorhandler aktarımı özel durumları işlenemez.  
   
  Bir Ierrorhandler ile bir özel durum oluştuğunda uygulamanızın davranışını açıkça denetleyebilirsiniz. Şunları yapabilirsiniz:  
   

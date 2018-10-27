@@ -2,12 +2,12 @@
 title: WCF Analiz İzleme
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: 9464f2a4c9bc52134e439c98b06ae50c828a14f6
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: a5e4b82bd28cae18f393a4143325623634d4bbaf
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850263"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181663"
 ---
 # <a name="wcf-analytic-tracing"></a>WCF Analiz İzleme
 Bu örnek ETW Windows Communication Foundation (WCF) Yazar analitik izlemeleri akışının içine kendi izleme olaylarını ekleme gösterir [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Analitik izlemeleri, yüksek performans cezası ödeme yapmadan hizmetlerinizi görünürlük elde etmek kolay hale getirmek için yöneliktir. Bu örnek nasıl kullanılacağını gösterir <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API WCF hizmetleri ile tümleştirme yazma olayları.  
@@ -53,7 +53,7 @@ Bu örnek ETW Windows Communication Foundation (WCF) Yazar analitik izlemeleri a
   
 4.  WCF test istemcisi (WcfTestClient.exe) çalıştırın.  
   
-     WCF test istemcisi (WcfTestClient.exe) bulunan \<Visual Studio 2012 yükleme dizini > \Common7\IDE\ WcfTestClient.exe (Visual Studio 2012 yükleme dizini varsayılan değer C:\Program Files\Microsoft Visual Studio 10.0).  
+     WCF test istemcisi (WcfTestClient.exe) şu konumdadır `\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe`. Varsayılan Visual Studio 2012 yükleme dizini olan `C:\Program Files\Microsoft Visual Studio 10.0`.  
   
 5.  WCF test istemcisi içinde hizmet seçerek ekleyin **dosya**, ardından **Hizmet Ekle**.  
   

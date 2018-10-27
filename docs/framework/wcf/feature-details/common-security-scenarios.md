@@ -4,13 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WCF], scenarios
 ms.assetid: 201923b5-5162-4a8a-8d4c-e7bd242748d5
-author: BrucePerlerMS
-ms.openlocfilehash: 081518fb1b3eb1f66c772cd401c19c0eb523d32a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: d4afeb8d406990256d0cffa74c440ffc75bfc462
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200834"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183470"
 ---
 # <a name="common-security-scenarios"></a>Ortak Güvenlik Senaryoları
 Bu bölümdeki konular, katalog hizmeti güvenlik yapılandırmalarını ve olası istemci bir numarası. Yapılandırmaları bir dizi etkene göre değişir. Örneğin, bir hizmet veya istemci intranet üzerinde olup veya olup Windows ya da (Örneğin HTTPS) aktarım güvenliği sağlanır.  

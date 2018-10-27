@@ -13,15 +13,15 @@ helpviewer_keywords:
 - assignment statements [Visual Basic], object variable assignment
 - Me keyword [Visual Basic], as object variable
 ms.assetid: 3706811d-fd40-44fe-8727-d692e8e55d6d
-ms.openlocfilehash: f20a03c4d9a0e33203629ae066686f4c9f25c105
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 571b09a0783ec0dfd09970b000faec39dca682b3
+ms.sourcegitcommit: 4621e67f69e7a9503ea93313ff60d69683207889
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33656064"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49995376"
 ---
 # <a name="object-variable-assignment-visual-basic"></a>Nesne Değişkeni Ataması (Visual Basic)
-Bir nesne bir nesne değişkenine atamak için normal atama deyimini kullanın. Bir nesne ifadesi atayabilir veya [hiçbir şey](../../../../visual-basic/language-reference/nothing.md) anahtar sözcüğü, aşağıdaki örnek olarak gösterilmiştir.  
+Bir nesne bir nesne değişkenine atamak için bir normal atama ifadesi kullanın. Bir nesne ifadesi atayabilirsiniz veya [hiçbir şey](../../../../visual-basic/language-reference/nothing.md) anahtar sözcüğü, aşağıdaki örnek gösterir.  
   
 ```  
 Dim thisObject As Object  
@@ -34,17 +34,17 @@ thisObject = Nothing
  `Nothing` şu anda değişkenine atanan nesnesi yok anlamına gelir.  
   
 ## <a name="initialization"></a>Başlatma  
- Kodunuzu başladığı çalıştıran, değişkenleri için başlatılır nesnenizin `Nothing`. Bu, bildirimleri başlatma dahil bildirim deyimleri çalıştırıldığında belirttiğiniz değerleri yeniden başlatılır.  
+ Kodunuzu çalıştırmak, nesnenizin değişkenleri başlatıldığı başladığı `Nothing`. Bu başlatma, bildirimleri içeren bildirim deyimleri yürütüldüğünde, belirttiğiniz değerleri yeniden başlatılır.  
   
- Başlatma kullanarak, bildiriminde dahil edebilirsiniz [yeni](../../../../visual-basic/language-reference/operators/new-operator.md) anahtar sözcüğü. Aşağıdaki bildirim deyimleri nesne değişkenlerini bildirme `testUri` ve `ver` ve belirli nesneleri atayabilirsiniz. Her uygun sınıfının aşırı yüklenmiş oluşturuculardan birine nesneyi başlatmak için kullanır.  
+ Başlatma kullanarak, bildiriminde dahil edebilirsiniz [yeni](../../../../visual-basic/language-reference/operators/new-operator.md) anahtar sözcüğü. Aşağıdaki bildirim deyimleri nesne değişkenlerini bildirme `testUri` ve `ver` ve belirli nesneleri atayabilirsiniz. Her bir uygun sınıf aşırı yüklü oluşturucular nesneyi başlatmak için kullanır.  
   
 ```  
-Dim testUri As New System.Uri("http://www.microsoft.com")  
+Dim testUri As New System.Uri("https://www.microsoft.com")  
 Dim ver As New System.Version(6, 1, 0)  
 ```  
   
-## <a name="disassociation"></a>Disassociation  
- Bir nesne değişkeni ayarını `Nothing` herhangi belirli bir nesne değişkeni ilişkilendirmesini sona erdirir. Bu, yanlışlıkla nesne değişkeni değiştirerek değiştirmesini engeller. Ayrıca, nesne değişkeni aşağıdaki örnekte gösterildiği gibi geçerli bir nesneye işaret olup olmadığını sınamak sağlar.  
+## <a name="disassociation"></a>İlişkisi kaldırma  
+ Bir nesne değişkeninin ayarını `Nothing` herhangi belirli bir nesne değişkeninin ilişkilendirmesini sona erdirir. Bu, yanlışlıkla nesne değişkeni değiştirerek değiştirmesini engeller. Ayrıca, nesne değişkenini aşağıdaki örnekte gösterildiği gibi geçerli bir nesneye işaret olup olmadığını sınamak sağlar.  
   
 ```  
 If otherObject IsNot Nothing Then  
@@ -52,16 +52,16 @@ If otherObject IsNot Nothing Then
 End If  
 ```  
   
- Değişkeniniz başvurduğu nesne başka bir uygulamada ise, bu test, uygulamanın veya sonlandırıldı yalnızca nesne geçersiz kılınan belirlenemiyor.  
+ Değişkenin başvurduğu nesneyi başka bir uygulamada ise, bu test, uygulamanın sahip sonlandırıldı veya yalnızca nesne geçersiz kılınan belirlenemiyor.  
   
  Bir nesne değişkeninin değerini `Nothing` olarak da adlandırılan bir *null başvuru*.  
   
 ## <a name="current-instance"></a>Geçerli örnek  
- *Geçerli örnek* hangi kod şu anda yürütülmekte olan bir nesnedir. Yordam içinde tüm kodu yürütür olduğundan, geçerli, yordamın çağrıldığı bir örneğidir.  
+ *Geçerli örneğin* nesnenin hangi kod şu anda Yürütülüyor sertifikadır. Tüm kod yürüten bir yordam içinde olduğundan, geçerli Örneğin, yordamı çağrıldı olur.  
   
- `Me` Anahtar sözcük, geçerli örneğine başvurma bir nesne değişkeni görür. Bir yordam değilse [paylaşılan](../../../../visual-basic/language-reference/modifiers/shared.md), kullanabileceği `Me` geçerli örneğini gösteren bir işaretçi almak için anahtar sözcüğü. Paylaşılan yordamları belirli bir sınıf örneği ile ilişkilendirilemez.  
+ `Me` Anahtar sözcüğü bir nesne değişkeninin geçerli örneğine başvurma olarak görev yapar. Bir yordam değilse [paylaşılan](../../../../visual-basic/language-reference/modifiers/shared.md), bunu `Me` geçerli örneğine bir işaretçi alma için anahtar sözcüğü. Paylaşılan yordamlar, bir sınıfın belirli bir örneği ile ilişkilendirilemez.  
   
- Kullanarak `Me` geçerli örneğini başka bir modül yordamda geçirilmesi özellikle yararlıdır. Örneğin, XML belgelerinin sahiptir ve bunların tümüne bazı standart metin eklemek istediğiniz varsayalım. Aşağıdaki örnek, bunu yapmak için bir yordam tanımlar.  
+ Kullanarak `Me` geçerli örneğin başka bir modül bir yordamda geçirmek özellikle yararlıdır. Örneğin, XML belgelerinin sahiptir ve bunların tümüne bazı standart metin eklemek istediğiniz varsayalım. Aşağıdaki örnek bunu yapma yordamı tanımlar.  
   
 ```  
 Sub addStandardText(XmlDoc As System.Xml.XmlDocument)  
@@ -69,7 +69,7 @@ Sub addStandardText(XmlDoc As System.Xml.XmlDocument)
 End Sub  
 ```  
   
- Her XML belge nesnesi, yordam çağrısı ve geçerli örnek bağımsız değişken olarak geçirin. Aşağıdaki örnekte bu gösterir.  
+ Her XML belge nesnesi, bir yordamı çağırma ve kendi geçerli örneğini bağımsız değişken geçirin. Aşağıdaki örnekte bu gösterir.  
   
 ```  
 addStandardText(Me)  
@@ -79,6 +79,6 @@ addStandardText(Me)
  [Nesne Değişkenleri](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
  [Nesne Değişken Bildirimi](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)  
  [Nesne Değişkeni Değerleri](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)  
- [Nasıl yapılır: bir nesne değişkeni bildirme ve Visual Basic'te bir nesneyi atayın](../../../../visual-basic/programming-guide/language-features/variables/how-to-declare-an-object-variable-and-assign-an-object-to-it.md)  
+ [Nasıl yapılır: bir nesne değişkeni bildirme ve Visual Basic'te bir nesne atama](../../../../visual-basic/programming-guide/language-features/variables/how-to-declare-an-object-variable-and-assign-an-object-to-it.md)  
  [Nasıl yapılır: Bir Nesne Değişkeninin Bir Örneğine Başvurmamasını Sağlama](../../../../visual-basic/programming-guide/language-features/variables/how-to-make-an-object-variable-not-refer-to-any-instance.md)  
  [Me, My, MyBase ve MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

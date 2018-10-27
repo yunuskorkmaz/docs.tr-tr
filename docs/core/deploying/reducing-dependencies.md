@@ -4,12 +4,12 @@ description: Project.json tabanlı kitaplıkları yazma Paket bağımlılıklar�
 author: cartermp
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: 67d53b45e5cb02f146f763966d1f76e8a8a469ce
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 6da7404415e8d485533fc1c9a619cb0706a26aca
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122584"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50040887"
 ---
 # <a name="reducing-package-dependencies-with-projectjson"></a>Project.json ile Paket bağımlılıklarını azaltma
 
@@ -36,7 +36,7 @@ Ancak, içerdiği her tek bir paket kitaplığınızı kullanmayacaksa şansı y
 Aşağıdaki yöntemlerden birini kullanarak ihtiyacınız olmayan paketler bulabilirsiniz:
 
 1. Deneme yanılma.  Bu paketi kaldırma, geri yükleme, kitaplığınıza derlenmeye devam eder, görme ve bu süreci tekrarlayarak içerir.
-2. Gibi bir araç kullanarak [yetenek](http://ilspy.net) veya [.NET Reflector](http://www.red-gate.com/products/dotnet-development/reflector) ne kodunuzun gerçekte kullanmakta olduğunu görmenizi sağlayan başvurular göz atmak için.  Ardından, kullanmakta olduğunuz türlerine karşılık gelen paketler kaldırabilirsiniz.
+2. Gibi bir araç kullanarak [yetenek](https://github.com/icsharpcode/ILSpy#ilspy-------) veya [.NET Reflector](https://www.red-gate.com/products/dotnet-development/reflector) ne kodunuzun gerçekte kullanmakta olduğunu görmenizi sağlayan başvurular göz atmak için.  Ardından, kullanmakta olduğunuz türlerine karşılık gelen paketler kaldırabilirsiniz.
 
 ## <a name="example"></a>Örnek 
 
@@ -127,7 +127,7 @@ Ardından, paket başvuruları kopyalayabilirsiniz `dependencies` kitaplığın 
 }
 ```
 
-Birçok paketleri, çoğu kesinlikle koleksiyon türlerini genişletmek için gerekli olmayan olmasıdır.  Paketleri el ile kaldırmanız veya gibi bir araç kullanın [yetenek](http://ilspy.net) veya [.NET Reflector](http://www.red-gate.com/products/dotnet-development/reflector) , kodunuzun gerçekte paketleri tanımlamak için kullanır.
+Birçok paketleri, çoğu kesinlikle koleksiyon türlerini genişletmek için gerekli olmayan olmasıdır.  Paketleri el ile kaldırmanız veya gibi bir araç kullanın [yetenek](https://github.com/icsharpcode/ILSpy#ilspy-------) veya [.NET Reflector](https://www.red-gate.com/products/dotnet-development/reflector/) , kodunuzun gerçekte paketleri tanımlamak için kullanır.
 
 İşte kırpılmış paket aşağıdaki gibi görünebilir:
 

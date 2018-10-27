@@ -6,19 +6,19 @@ helpviewer_keywords:
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1bee42db7b9a92723b0640d0b3747a7921b8617c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1b16ad5b3426316197d69fc137e2da7f96e7ab49
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525768"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185647"
 ---
 # <a name="controlling-net-framework-logging"></a>.NET Framework Günlük Kaydını Denetleme
 Ortak dil çalışma zamanı (CLR) olaylarını izlemek için Windows olay izleme (ETW) kullanabilirsiniz. Aşağıdaki araçları kullanarak izlemeleri oluşturabilir ve görüntüleyebilirsiniz:  
   
--   [Logman](https://go.microsoft.com/fwlink/?LinkId=150916) ve [Tracerpt](https://go.microsoft.com/fwlink/?LinkId=150919) komut satırı araçları, Windows işletim sistemiyle dahil edilir.  
+-   [Logman](/windows-server/administration/windows-commands/logman) ve [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1) komut satırı araçları, Windows işletim sistemiyle dahil edilir.  
   
--   [Xperf](https://msdn.microsoft.com/library/windows/hardware/hh162920.aspx) Araçları [Windows Performans Araç Seti](https://msdn.microsoft.com/library/windows/hardware/hh162945.aspx). Xperf hakkında daha fazla bilgi için bkz: [Windows Performans blogu](https://go.microsoft.com/fwlink/?LinkId=179509).  
+-   [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) Araçları [Windows Performans Araç Seti](/windows-hardware/test/wpt/). Xperf hakkında daha fazla bilgi için bkz: [Windows Performans blogu](https://go.microsoft.com/fwlink/?LinkId=179509).  
   
  CLR olay bilgilerini yakalamak için, CLR sağlayıcısı bilgisayarınıza yüklenmelidir. Sağlayıcı'nın yüklü olduğunu doğrulamak için şunu yazın `logman query providers` komut isteminde. Sağlayıcı listesi görüntülenir. Bu liste, sağlayıcılar gibi CLR sağlayıcısı için bir girdi içermelidir.  
   
@@ -28,12 +28,12 @@ Provider                                 GUID
 .NET Common Language Runtime    {E13C0D23-CCBC-4E12-931B-D9CC2EEE27E4}.  
 ```  
   
- CLR sağlayıcı listede yoksa, Windows Vista ve sonraki işletim sistemlerinde Windows kullanarak yükleyebilirsiniz [Wevtutil](https://go.microsoft.com/fwlink/?LinkID=150915) komut satırı aracı. Komut istemi penceresini yönetici olarak açın. Komut istemi dizine geçin [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] klasörünü (% WINDIR%\Microsoft.NET\Framework[64]\v4.\<.NET sürüm>\ ). Bu klasör, CLE-ETW.man dosyasını içerir. Komut isteminde, CLR sağlayıcısını yüklemek için aşağıdaki komutu yazın:  
+ CLR sağlayıcı listede yoksa, Windows Vista ve sonraki işletim sistemlerinde Windows kullanarak yükleyebilirsiniz [Wevtutil](/windows-server/administration/windows-commands/wevtutil) komut satırı aracı. Komut istemi penceresini yönetici olarak açın. Komut istemi dizine geçin [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] klasörünü (% WINDIR%\Microsoft.NET\Framework[64]\v4.\<.NET sürüm>\ ). Bu klasör, CLE-ETW.man dosyasını içerir. Komut isteminde, CLR sağlayıcısını yüklemek için aşağıdaki komutu yazın:  
   
  `wevtutil im CLR-ETW.man`  
   
 ## <a name="capturing-clr-etw-events"></a>CLR ETW olaylarını yakalama  
- Kullanabileceğiniz [Logman](https://go.microsoft.com/fwlink/?LinkId=150916) ve [Xperf](https://msdn.microsoft.com/library/windows/hardware/hh162920.aspx) ETW olaylarını yakalamak için komut satırı araçları ve [Tracerpt](https://go.microsoft.com/fwlink/?LinkId=150919) ve [Xperf](https://msdn.microsoft.com/library/windows/hardware/hh162920.aspx) kodunu çözmek için Araçlar izleme olayları.  
+ Kullanabileceğiniz [Logman](/windows-server/administration/windows-commands/logman) ve [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) ETW olaylarını yakalamak için komut satırı araçları ve [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1) ve [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) kodunu çözmek için Araçlar izleme olayları.  
   
  Bir kullanıcının, günlüğü etkinleştirmek için üç şeyi belirtmesi gerekir:  
   
@@ -109,5 +109,5 @@ Provider                                 GUID
      Bu komut, olayları görüntüleyebileceğiniz bir virgülle ayrılmış değer (CSV) dosyası olarak dökeceğiniz XPerf'e neden olur. Çünkü farklı olaylar farklı alanlara sahiptir, bu CSV dosyası veriden önce birden fazla üstbilgi satırını içerir. Her satırın ilk alanı, hangi üstbilginin geri kalan alanları belirlemek için kullanılması gerektiğini gösteren olay türüdür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Performans Araç Seti](https://go.microsoft.com/fwlink/?LinkID=161141)  
+ [Windows Performans Araç Seti](/windows-hardware/test/wpt/)  
  [Ortak Dil Çalışma Zamanı Modülünde ETW Olayları](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: 0aaa72741a1bb75862a1e3a4c5569ea53919a7f3
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 5744184d224fa97e57055b5a110d830e8809647f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845586"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185894"
 ---
 # <a name="what-is-windows-communication-foundation"></a>Windows Communication Foundation nedir?
 Windows Communication Foundation (WCF) hizmet odaklı uygulamalar oluşturmaya yönelik bir çerçevedir. WCF kullanarak, verileri zaman uyumsuz ileti olarak bir hizmetin uç noktasından diğerine gönderebilirsiniz. Hizmet uç noktası, IIS tarafından barındırılan sürekli olarak kullanılabilir bir hizmetin parçası veya barındırılan bir uygulamada bir hizmet olabilir. Bir uç nokta, bir istemci bir hizmet uç noktasından verileri isteyen bir hizmet olabilir. İletileri bir tek karakter ya da XML olarak gönderilen word kadar basit veya bir ikili veri akışı gibi karmaşık olabilir. Bazı örnek senaryolar şunlardır:
@@ -103,4 +103,4 @@ Microsoft Silverlight geliştiriciler (örneğin, video akışı) medya yoğunlu
 - [Başlangıç Öğreticisi](../../../docs/framework/wcf/getting-started-tutorial.md)
 - [Belgeler için Kılavuz](../../../docs/framework/wcf/guide-to-the-documentation.md)
 - [Temel WCF Programlama](../../../docs/framework/wcf/basic-wcf-programming.md)
-- [Windows Communication Foundation Örnekleri](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)
+- [Windows Communication Foundation Örnekleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751514%28v=vs.90%29)

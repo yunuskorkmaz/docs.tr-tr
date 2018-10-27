@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 465fdcf9-ba24-4d8d-a43f-d983b7cb0cc6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4949540b9f61e71301647a83a1c05d8b4c941412
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: c85d0c5c291743c6daac549e15d479fcf332235c
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46581278"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452829"
 ---
 # <a name="manualresetevent-and-manualreseteventslim"></a>ManualResetEvent ve ManualResetEventSlim
 <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> Sınıf işareti verilen sonra el ile sıfırlamanız gerekir bir yerel bekleme tanıtıcısı olayı temsil eder. Bu sınıfın temel sınıfının, özel bir durum temsil <xref:System.Threading.EventWaitHandle?displayProperty=nameWithType>. Bkz: [EventWaitHandle](../../../docs/standard/threading/eventwaithandle.md) el ile özellikleri ve kullanmak için kavramsal belgelerde olayların sıfırlayın.  
@@ -24,9 +24,10 @@ ms.locfileid: "46581278"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İş parçacığı oluşturma](../../../docs/standard/threading/index.md)  
-- [İş Parçacığı Nesneleri ve Özellikleri](../../../docs/standard/threading/threading-objects-and-features.md)  
-- [Bekleme tanıtıcıları](https://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
-- [AutoResetEvent](../../../docs/standard/threading/autoresetevent.md)  
-- [SpinWait](../../../docs/standard/threading/spinwait.md)  
-- [Semaphore ve SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)
+- <xref:System.Threading.WaitHandle?displayProperty=nameWithType>
+- [AutoResetEvent](autoresetevent.md)  
+- [SpinWait](spinwait.md)  
+- [Semaphore ve SemaphoreSlim](semaphore-and-semaphoreslim.md)
+- [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)  
+- [İş parçacığı nesneleri ve özellikleri](threading-objects-and-features.md)  
+- [İş parçacığı oluşturma](index.md)  

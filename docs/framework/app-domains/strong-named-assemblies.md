@@ -7,43 +7,43 @@ helpviewer_keywords:
 ms.assetid: d4a80263-f3e0-4d81-9b61-f0cbeae3797b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7cbef005c913d818dba23d85404fe0382fe79f4a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6fe3847d9ee4530a776f43c67ac17085a9cd9d7b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32741951"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50190911"
 ---
 # <a name="strong-named-assemblies"></a>Tanımlayıcı Adlı Derlemeler
-Güçlü adlandırma bütünleştirilmiş, derleme için benzersiz bir kimliği oluşturur ve derleme çakışmaları engelleyebilirsiniz.  
+Tanımlayıcı adlandırma bir derleme, derleme için benzersiz kimlik oluşturur ve birleştirme çakışmalarını engelleyebilir.  
   
-## <a name="what-makes-a-strong-named-assembly"></a>Tanımlayıcı adlı bir derleme ne yapar?  
- Güçlü bir adlandırılmış derleme, derlemeyi ve derleme ile dağıtılmış ortak anahtara karşılık gelen özel anahtarı kullanılarak oluşturulur. Derleme adları ve derlemeyi oluşturan tüm dosyaların karmaları içeren derleme bildirimi içerir. Güçlü ile aynı ada sahip bir derleme aynı olmalıdır.  
+## <a name="what-makes-a-strong-named-assembly"></a>Bir katı adlı derleme yapan nedir?  
+ Güçlü adlı bir derleme, derleme ve derlemenin kendisini dağıtılmış ortak anahtarına karşılık gelen özel anahtar kullanılarak oluşturulur. Derleme adları ve derlemeyi oluşturan tüm dosyaların karma değerlerini içeren derleme bildirimini içerir. Aynı tanımlayıcı ada sahip derlemelerin aynı olmalıdır.  
   
- Tanımlayıcı ad derlemeleri Visual Studio veya komut satırı aracını kullanarak yapabilirsiniz. Daha fazla bilgi için bkz: [nasıl yapılır: bir derlemeyi tanımlayıcı adla oturum](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md) veya [Sn.exe (tanımlayıcı ad aracı)](../../../docs/framework/tools/sn-exe-strong-name-tool.md).  
+ Tanımlayıcı ad derlemeleri, Visual Studio veya bir komut satırı aracını kullanarak yapabilirsiniz. Daha fazla bilgi için [nasıl yapılır: bir derlemeyi tanımlayıcı bir adla imzalamak](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md) veya [Sn.exe (tanımlayıcı ad aracı)](../../../docs/framework/tools/sn-exe-strong-name-tool.md).  
   
- Tanımlayıcı adlı bir derleme oluşturulduğunda, derleme, sürüm numarası, isteğe bağlı kültür bilgilerini, dijital imza ve imzalama için kullanılan özel anahtarına karşılık gelen ortak anahtarı düz metin adını içerir.  
+ Bir katı adlı derleme oluşturulduğunda derleme, sürüm numarası, isteğe bağlı bir kültür bilgilerini, bir dijital imza ve imzalama için kullanılan özel anahtarına karşılık gelen ortak anahtarı basit metin adı içerir.  
   
 > [!WARNING]
->  Güvenlik tanımlayıcı adlar kullanmayın. Yalnızca benzersiz bir kimlik sağlarlar.  
+>  Güvenlik için tanımlayıcı adlar güvenmeyin. Benzersiz bir kimliğe sağlarlar.  
   
-## <a name="why-strong-name-your-assemblies"></a>Tanımlayıcı adlı neden derlemeleriniz?  
- Tanımlayıcı adlı bir bütünleştirilmiş koda başvurduğunuzda, sürüm oluşturma ve koruma adlandırma gibi bazı avantajları bekleyebilirsiniz. Tanımlayıcı adlı derlemeler genel bütünleştirilmiş kod, bazı senaryoları etkinleştirmek için gereken önbelleğinde yüklenebilir.  
+## <a name="why-strong-name-your-assemblies"></a>Tanımlayıcı ad neden bütünleştirilmiş kodlarınızı?  
+ Tanımlayıcı adlı bütünleştirilmiş kod başvurduğunuzda, sürüm oluşturma ve adlandırma koruma gibi belirli avantajlardan bekleyebilirsiniz. Tanımlayıcı adlandırılmış derlemeler genel bütünleştirilmiş kod, bazı senaryoları etkinleştirmek için gereken önbelleğinde yüklenebilir.  
   
- Tanımlayıcı adlı derlemeler aşağıdaki senaryolarda kullanışlıdır:  
+ Tanımlayıcı adlandırılmış derlemeler, aşağıdaki senaryolarda kullanışlıdır:  
   
--   Tanımlayıcı adlı derlemeler tarafından başvurulan derlemeleriniz etkinleştirmek istediğiniz ya da vermek istediğiniz `friend` diğer tanımlayıcı adlı derlemeler derlemeleriniz erişim.  
+-   Tanımlayıcı adlı derlemeler tarafından başvurulabilmesi bütünleştirilmiş kodlarınızı etkinleştirmek istediğiniz veya vermek istediğiniz `friend` diğer tanımlayıcı adlı derlemeler bütünleştirilmiş kodlarınızı erişim.  
   
--   Bir uygulama aynı derlemenin farklı sürümleri erişimi olmalıdır. Başka bir deyişle, çakışma yaşamadan aynı uygulama etki alanında yan yana yüklemek için bir derlemenin farklı sürümleri gerekir. Farklı uzantılar bir API'nin basit ile aynı ada sahip derlemelerde varsa, örneğin, güçlü adlandırma benzersiz bir kimlik derleme her sürümü için sağlar.  
+-   Bir uygulamanın, aynı derlemenin farklı sürümlerine erişim gerekir. Bu, farklı sürümlerini yan yana çakışma olmadan aynı uygulama etki alanında yüklemek için bir derleme ihtiyacınız olduğu anlamına gelir. Farklı bir API Uzantıları basit aynı ada sahip derlemelerde varsa, örneğin, güçlü adlandırma benzersiz bir kimliğe her derlemenin sürüm için sağlar.  
   
--   Etki alanı dilden bağımsız olarak derleme istediğiniz şekilde derlemenizi kullanarak uygulamaları performansını olumsuz etmek istiyor musunuz. Bir etki alanı Tarafsız derleme genel derleme önbelleğinde yüklenmesi gerektiğinden bu güçlü adlandırma gerektirir.  
+-   Derleme etki alanı nötr olarak istediğiniz şekilde derlemenizi kullanarak uygulama performansını olumsuz istemezsiniz. Bir etki alanından bağımsız derleme genel derleme önbelleğine yüklenmelidir çünkü bu güçlü adlandırma gerektirir.  
   
--   Yayımcı ilkesi uygulayarak uygulamanız için bakım merkezileştirmek istediğinizde, genel derleme önbelleğinde derleme başka bir deyişle, yüklenmelidir.  
+-   Uygulamanız için yayımcı ilkesi uygulayarak bakım merkezileştirmek istiyorsanız, derleme başka bir deyişle, genel derleme önbelleğinde yüklü olmalıdır.  
   
- Bir açık kaynak Geliştirici misiniz ve kesin adlandırılmış bir derleme kimlik yararları istediğiniz kaynak denetim sisteminiz derlemeye ilişkili özel anahtarı denetimini düşünün.  
+ Bir açık kaynak geliştiricisi olan ve bir tanımlayıcı adlı bütünleştirilmiş kod kimliği avantajlarını istiyorsanız bir derlemeye kaynak denetim sisteminiz ile ilişkili özel anahtarı denetlemeyi düşünün.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Genel Derleme Önbelleği](../../../docs/framework/app-domains/gac.md)  
- [Nasıl yapılır: Bütünleştirilmiş Kodu Tanımlayıcı Adla İmzalama](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
- [Sn.exe (Tanımlayıcı Ad Aracı)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
- [Kesin Adlandırılmış Bütünleştirilmiş Kodlar Oluşturma ve Kullanma](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
+- [Genel Derleme Önbelleği](../../../docs/framework/app-domains/gac.md)  
+- [Nasıl yapılır: Bütünleştirilmiş Kodu Tanımlayıcı Adla İmzalama](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
+- [Sn.exe (Tanımlayıcı Ad Aracı)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
+- [Kesin Adlandırılmış Bütünleştirilmiş Kodlar Oluşturma ve Kullanma](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

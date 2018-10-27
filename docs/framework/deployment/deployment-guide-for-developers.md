@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47643dfa6eda67c93c54d19da41d705a78c27d8c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 3f6ad77f93236b524e1cd22bf895312920ca4eec
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43484759"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453482"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Geliştiriciler için .NET framework Dağıtım Kılavuzu
 Bu konu için .NET Framework 4.5 .NET Framework'ün herhangi bir sürümünü yüklemek için isteyen geliştiriciler için bilgi sağlamaktadır [!INCLUDE[net_current](../../../includes/net-current-version.md)] uygulamalarıyla birlikte.
@@ -36,7 +36,7 @@ Bu konu için .NET Framework 4.5 .NET Framework'ün herhangi bir sürümünü y�
 
 - Tüm işletim sistemleri için .NET framework 4.5.1 ([web yükleyicisi](https://go.microsoft.com/fwlink/p/?LinkId=310158) veya [çevrimdışı yükleyici](https://go.microsoft.com/fwlink/p/?LinkId=310159))
 
-- [.NET framework 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245484)
+- [.NET Framework 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245484)
 
  Önemli Notlar:
 
@@ -51,13 +51,13 @@ Bu konu için .NET Framework 4.5 .NET Framework'ün herhangi bir sürümünü y�
 
 - Yüklemek için yönetici ayrıcalıklarınız olmalıdır [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ve nokta sürümlerini.
 
-- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Dahil [!INCLUDE[win8](../../../includes/win8-md.md)] ve [!INCLUDE[winserver8](../../../includes/winserver8-md.md)], bu işletim sistemlerinde uygulama ile dağıtmak gerekmez. Benzer şekilde, [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] dahil [!INCLUDE[win81](../../../includes/win81-md.md)] ve Windows Server 2012 R2. .NET Framework 4.5.2 tüm işletim sistemlerinde yer almıyor. [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] Windows 10'da bulunan [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] Windows 10 Kasım Güncelleştirmesi'nde bulunur ve [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] Windows 10 Yıldönümü Güncelleştirmesi'nde bulunur.  .NET Framework 4.7, Windows 10 Creators güncelleştirmesi dahildir, .NET Framework 4.7.1 Windows 10 Fall Creators Update dahildir ve .NET Framework 4.7.2 Windows'daki 10 Nisan 2018 güncelleştirmesi. Donanım ve yazılım gereksinimlerinin tam listesi için bkz: [sistem gereksinimleri](../../../docs/framework/get-started/system-requirements.md).
+- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Dahil [!INCLUDE[win8](../../../includes/win8-md.md)] ve [!INCLUDE[winserver8](../../../includes/winserver8-md.md)], bu işletim sistemlerinde uygulama ile dağıtmak gerekmez. Benzer şekilde, [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] dahil [!INCLUDE[win81](../../../includes/win81-md.md)] ve Windows Server 2012 R2. .NET Framework 4.5.2 tüm işletim sistemlerinde yer almıyor. [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] Windows 10'da bulunan [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] Windows 10 Kasım Güncelleştirmesi'nde bulunur ve [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] Windows 10 Yıldönümü Güncelleştirmesi'nde bulunur.  .NET Framework 4.7, Windows 10 Creators güncelleştirmesi dahildir, .NET Framework 4.7.1 Windows 10 Fall Creators Update dahildir ve .NET Framework 4.7.2 Windows'daki 10 Ekim 2018 güncelleştirmesi ve Windows 10 Nisan 2018 güncelleştirmesi. Donanım ve yazılım gereksinimlerinin tam listesi için bkz: [sistem gereksinimleri](../../../docs/framework/get-started/system-requirements.md).
 
 - İle başlayarak [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], kullanıcılarınızın Kurulum sırasında çalışan .NET Framework uygulamalar listesini görüntüleyebilir ve kolayca kapatabilir. Bu, .NET Framework kurulumlarının neden olduğu sistem yeniden başlatmalarını önlemenize yardımcı olabilir. Bkz: [sistem yeniden başlatmalarını azaltma](../../../docs/framework/deployment/reducing-system-restarts.md).
 
 - Kaldırma [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] veya kendi noktasını birini sürümleri de önceden var olan kaldırır [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] dosyaları. Geri dönmek istiyorsanız [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], onu ve tüm güncellemelerini yeniden yüklemeniz gerekir. (Bkz [.NET Framework 4'ü yükleme](https://msdn.microsoft.com/library/5a4x27ek\(v=vs.100\).aspx).)
 
-- .NET Framework 4.5 yeniden dağıtılabilir 2012'de 9 Ekim, dijital imzanın süresinin zamanından önce dolmasına Microsoft tarafından imzalanmış ve üretilen dosyaları neden bir dijital sertifika üzerinde hatalı zaman damgasıyla ilgili sorunu gidermek için güncelleştirildi. Daha önce yeniden dağıtılabilir paket 16 Ağustos 2012 tarihli .NET Framework 4.5 yüklü değilse kopyanızı ile en son yeniden dağıtılabilir Paketle güncelleştirmenizi öneririz [Microsoft Download Center](https://go.microsoft.com/fwlink/p/?LinkId=245484). Bu sorun hakkında daha fazla bilgi için bkz. [Microsoft Security Advisory 2749655](https://technet.microsoft.com/security/advisory/2749655).
+- .NET Framework 4.5 yeniden dağıtılabilir 2012'de 9 Ekim, dijital imzanın süresinin zamanından önce dolmasına Microsoft tarafından imzalanmış ve üretilen dosyaları neden bir dijital sertifika üzerinde hatalı zaman damgasıyla ilgili sorunu gidermek için güncelleştirildi. Daha önce yeniden dağıtılabilir paket 16 Ağustos 2012 tarihli .NET Framework 4.5 yüklü değilse kopyanızı ile en son yeniden dağıtılabilir Paketle güncelleştirmenizi öneririz [Microsoft Download Center](https://go.microsoft.com/fwlink/p/?LinkId=245484). Bu sorun hakkında daha fazla bilgi için bkz. [Microsoft Security Advisory 2749655](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655).
 
  Nasıl bir Sistem Yöneticisi .NET Framework ve sistem bağımlılıklarını bir ağ üzerinden dağıtabilirsiniz hakkında daha fazla bilgi için bkz: [Yöneticiler için Dağıtım Kılavuzu](../../../docs/framework/deployment/guide-for-administrators.md).
 
@@ -247,8 +247,9 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 
 |Sürüm|Yayın DWORD değeri|
 |-------------|--------------------------------|
+|.NET framework Windows yüklü 4.7.2 10 Ekim 2018 güncelleştirmesi|461814|
 |.NET framework Windows yüklü 4.7.2 10 Nisan 2018 güncelleştirmesi ve Windows Server'da 1803 sürümü|461808|
-|.NET framework 4.7.2 Windows dışındaki tüm işletim sistemi sürümleri yüklü 10 Nisan 2018 güncelleştirmesi ve Windows Server sürüm 1803|461814|
+|.NET framework 4.7.2 10 Ekim 2018'den Windows dışındaki tüm işletim sistemi sürümleri yüklü güncelleştirme, Windows 10 Nisan 2018 güncelleştirmesi ve Windows Server sürümü 1803|461814|
 |.NET framework 4.7.1 Windows 10 Fall Creators Update ve Windows Server 1709 sürümü yüklü|461308|
 |.NET framework 4.7.1 Windows 10 Fall Creators Update ve Windows Server 1709 sürümü dışındaki tüm işletim sistemi sürümleri yüklü|461310|
 |Windows 10 Creators Update üzerinde yüklü olan .NET framework 4.7|460798|
@@ -390,22 +391,22 @@ Aşağıdaki tabloda kullanılabilir .NET Framework dil paketlerini listeler [!I
 |1038|Macarca|hu|
 |1040|İtalyanca – İtalya|Bunu|
 |1041|Japonca|ja|
-|1042|Kore Dili|Ko|
+|1042|Korece|Ko|
 |1043|Felemenkçe – Hollanda|nl|
 |1044|Norveççe (Bokmål)|Yok|
 |1045|Lehçe|PL|
 |1046|Portekizce – Brezilya|pt-BR|
 |1049|Rusça|RU|
-|1053|İsveç dili|sv|
+|1053|İsveççe|sv|
 |1055|Türkçe|tr|
 |2052|Çince-Basitleştirilmiş|zh-Hans|
 |2070|Portekizce – Portekiz|pt-PT|
 |3082|İspanyolca - İspanya (Modern sıralama)|ES|
 
 ## <a name="see-also"></a>Ayrıca bkz.
- [Yöneticiler için Dağıtım Kılavuzu](../../../docs/framework/deployment/guide-for-administrators.md)  
- [Sistem Gereksinimleri](../../../docs/framework/get-started/system-requirements.md)  
- [Geliştiriciler için .NET Framework'ü yükleme](../../../docs/framework/install/guide-for-developers.md)  
- [Engellenen .NET Framework yükleme ve kaldırma sorunlarını giderme](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)  
- [.NET Framework 4.5 Yüklemeleri Sırasında Sistem Yeniden Başlatmalarını Azaltma](../../../docs/framework/deployment/reducing-system-restarts.md)  
- [Nasıl Yapılır: .NET Framework 4.5 Yükleyicisinden İlerleme Durumunu Alma](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
+- [Yöneticiler için Dağıtım Kılavuzu](../../../docs/framework/deployment/guide-for-administrators.md)  
+- [Sistem Gereksinimleri](../../../docs/framework/get-started/system-requirements.md)  
+- [Geliştiriciler için .NET Framework'ü yükleme](../../../docs/framework/install/guide-for-developers.md)  
+- [Engellenen .NET Framework yükleme ve kaldırma sorunlarını giderme](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)  
+- [.NET Framework 4.5 Yüklemeleri Sırasında Sistem Yeniden Başlatmalarını Azaltma](../../../docs/framework/deployment/reducing-system-restarts.md)  
+- [Nasıl Yapılır: .NET Framework 4.5 Yükleyicisinden İlerleme Durumunu Alma](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)

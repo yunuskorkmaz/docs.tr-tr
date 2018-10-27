@@ -3,12 +3,12 @@ title: İfade ağaçları çevirme
 description: Bu ifade ağacını değiştirilmiş bir kopyasını oluşturulurken bir ifade ağacı içindeki her bir düğümün ziyaret öğrenin.
 ms.date: 06/20/2016
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
-ms.openlocfilehash: bd4aec2ef34e4dc972ae867c6b5070f92dcbc498
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 6fe35983119bba443ed9132ff0c52361e1f07da8
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45971903"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "49480092"
 ---
 # <a name="translating-expression-trees"></a>İfade ağaçları çevirme
 
@@ -64,7 +64,7 @@ Aynı düğüm bir ağaç boyunca veya birden fazla ifade ağaçları kullanıla
 
 ## <a name="traversing-and-executing-an-addition"></a>Geçiş ve ek yürütülüyor
 
-Bu ek düğüm ağacı gezer ve sonucu hesaplar ikinci bir ziyaretçi oluşturarak doğrulayalım. Şu ana kadar gördüğünüz vistor birkaç değişiklik yaparak bunu yapabilirsiniz. Bu yeni sürümde ziyaretçi toplama işlemi bu noktaya kadar kısmi toplamını döndürür. Sabit bir ifade için yalnızca sabit ifadenin değeri olmasıdır. Ağaçların geçiş sonra bir toplama ifadesi sonucu sol ve sağ işlenen toplamıdır.
+Bu ek düğüm ağacı gezer ve sonucu hesaplar ikinci bir ziyaretçi oluşturarak doğrulayalım. Şu ana kadar gördüğünüz ziyaretçi birkaç değişiklik yaparak bunu yapabilirsiniz. Bu yeni sürümde ziyaretçi toplama işlemi bu noktaya kadar kısmi toplamını döndürür. Sabit bir ifade için yalnızca sabit ifadenin değeri olmasıdır. Ağaçların geçiş sonra bir toplama ifadesi sonucu sol ve sağ işlenen toplamıdır.
 
 ```csharp
 var one = Expression.Constant(1, typeof(int));

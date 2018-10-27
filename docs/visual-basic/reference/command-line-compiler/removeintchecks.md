@@ -9,17 +9,15 @@ helpviewer_keywords:
 - /removeintchecks compiler option [Visual Basic]
 - -removeintchecks compiler option [Visual Basic]
 ms.assetid: c1835bd5-1e38-4fba-bd2f-6984774765d4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 26485fe2ba3f5647266147744cbe53f978694a9d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f061497083dc23fd07f61108938a4129c0af5f3a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33656132"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188550"
 ---
 # <a name="-removeintchecks"></a>-removeintchecks
-Taşma hatası tamsayı işlemleri açmak veya kapatmak için denetimini etkinleştirir.  
+Taşma hatasıyla açıp tamsayı işlemleri denetleme kapatır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -31,14 +29,14 @@ Taşma hatası tamsayı işlemleri açmak veya kapatmak için denetimini etkinle
   
 |Terim|Tanım|  
 |---|---|  
-|`+` &#124; `-`|İsteğe bağlı. `-removeintchecks-` Seçeneği tamsayı hesaplamalarının taşma hataları için denetlenecek derleyicinin neden olur. Varsayılan, `-removeintchecks-` değeridir.<br /><br /> Belirtme `-removeintchecks` veya `-removeintchecks+` hata denetimi engeller ve tamsayı hesaplamaları daha hızlı hale getirebilir. Ancak, hata denetimi, olmadan ve veri türü kapasiteleri taştı, hatalı sonuçlar hata yükseltmeden depolanabilir.|  
+|`+` &#124; `-`|İsteğe bağlı. `-removeintchecks-` Seçeneği tüm tamsayı hesaplamalar taşma hataları için denetlenecek derleyicinin neden olur. Varsayılan, `-removeintchecks-` değeridir.<br /><br /> Belirtme `-removeintchecks` veya `-removeintchecks+` hata denetimi engeller ve tamsayı hesaplamalar daha hızlı hale getirebilirsiniz. Ancak, hata denetimi olmadan ve veri türü kapasiteler taştı, hatalı sonuçlar hata yükseltmeden depolanabilir.|  
   
-|Visual Studio tümleşik geliştirme ortamında - removeintchecks ayarlamak için|  
+|-Removeintchecks Visual Studio tümleşik geliştirme ortamında ayarlamak için|  
 |---|  
-|1.  Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünde tıklatın **özellikleri**. <br />2.  Tıklatın **derleme** sekmesi.<br />3.  Tıklatın **Gelişmiş** düğmesi.<br />4.  Değeri değiştirme **kaldırmak tamsayı taşma denetimleri** kutusu.|  
+|1.  Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünü tıklatın **özellikleri**. <br />2.  Tıklayın **derleme** sekmesi.<br />3.  Tıklayın **Gelişmiş** düğmesi.<br />4.  Değerini değiştirmek **tamsayı taşması denetimlerini Kaldır** kutusu.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod derlerken `Test.vb` ve tamsayı taşma hatası denetimini devre dışı bırakır.  
+ Aşağıdaki kod derlenir `Test.vb` ve tamsayı taşma hatası denetimini devre dışı bırakır.  
   
 ```console
 vbc -removeintchecks+ test.vb  

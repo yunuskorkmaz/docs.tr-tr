@@ -4,12 +4,12 @@ description: Hangi .NET uygulamasının üzerinde. NET'te bir sunucu uygulaması
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: ab44cca7c9a832dc7e5f03cfc2972de9d0785fd4
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 01e7222ccd4a764f75481e58d4ac305daadfe1a8
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48777886"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50034292"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Sunucu uygulamaları için .NET Core ve .NET Framework arasında seçim
 
@@ -104,7 +104,7 @@ Resmi yol haritası yanı sıra .NET Core için unity'nin için diğer çerçeve
 ## <a name="see-also"></a>Ayrıca bkz.
 
 * [ASP.NET ve ASP.NET Core arasında seçim yapma](/aspnet/core/choose-aspnet-framework)
-* [.NET Framework'ü hedefleyen ASP.NET Core](/aspnet/core#target-framework)
+* [.NET Framework'ü hedefleyen ASP.NET Core](/aspnet/core#aspnet-core-targeting-net-framework)
 * [Hedef çerçeveler](frameworks.md)
 * [.NET Core Kılavuzu](../core/index.md)  
 * [.NET Core ile .NET Framework'ten taşıma](../core/porting/index.md)  

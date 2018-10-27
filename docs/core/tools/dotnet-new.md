@@ -3,13 +3,13 @@ title: Yeni komut dotnet - .NET Core CLI
 description: Belirtilen şablonu temel alan yeni .NET Core projeleri dotnet yeni bir komut oluşturur.
 author: mairaw
 ms.author: mairaw
-ms.date: 07/31/2018
-ms.openlocfilehash: 396c4ddf09854fa4582226bdb1422f8c929e459b
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.date: 10/24/2018
+ms.openlocfilehash: 56d76f1dd54097f9cf20129d74057235290c273c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036136"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188214"
 ---
 # <a name="dotnet-new"></a>DotNet yeni
 
@@ -65,27 +65,27 @@ Komut çağrıldığında örneği oluşturmak için şablon. Her şablon geçir
 
 Komutu, şablonları, varsayılan listesini içerir. Kullanım `dotnet new -l` kullanılabilir şablonların listesini alamadı. Aşağıdaki tablo, .NET Core SDK 2.1.300 önceden yüklenmiş olarak gelen şablonları gösterir. Şablonunuz için varsayılan dili köşeli ayraçlar içinde gösterilmiştir.
 
-|Şablon açıklaması                          | Şablon adı   | Diller     |
-|----------------------------------------------|-----------------|---------------|
-| Konsol uygulaması                          | `console`       | [C#], F#, VB  |
-| Sınıf kitaplığı                                | `classlib`      | [C#], F#, VB  |
-| Birim testi projesi                            | `mstest`        | [C#], F#, VB  |
-| xUnit test projesi                           | `xunit`         | [C#], F#, VB  |
-| Razor sayfası                                   | `page`          | [C#]          |
-| MVC ViewImports                              | `viewimports`   | [C#]          |
-| MVC ViewStart                                | `viewstart`     | [C#]          |
-| ASP.NET Core boş                           | `web`           | [C#] F #      |
-| ASP.NET Core Web uygulaması (Model-View-Controller) | `mvc`           | [C#] F #      |
-| ASP.NET Core Web uygulaması                         | `razor`         | [C#]          |
-| Angular ile ASP.NET Core                    | `angular`       | [C#]          |
-| React.js ile ASP.NET Core                   | `react`         | [C#]          |
-| ASP.NET Core React.js ve Redux         | `reactredux`    | [C#]          |
-| ASP.NET Core Web API'si                         | `webapi`        | [C#] F #      |
-| Razor sınıf kitaplığı                          | `razorclasslib` | [C#]          |
-| Global.JSON dosyasını                             | `globaljson`    |               |
-| NuGet yapılandırma                                 | `nugetconfig`   |               |
-| Web yapılandırması                                   | `webconfig`     |               |
-| Çözüm dosyası                                | `sln`           |               |
+|Şablon açıklaması                          | Şablon adı    | Diller     |
+|----------------------------------------------|------------------|---------------|
+| Konsol uygulaması                          | `console`        | [C#], F#, VB  |
+| Sınıf kitaplığı                                | `classlib`       | [C#], F#, VB  |
+| Birim testi projesi                            | `mstest`         | [C#], F#, VB  |
+| xUnit test projesi                           | `xunit`          | [C#], F#, VB  |
+| Razor sayfası                                   | `page`           | [C#]          |
+| MVC ViewImports                              | `viewimports`    | [C#]          |
+| MVC ViewStart                                | `viewstart`      | [C#]          |
+| ASP.NET Core boş                           | `web`            | [C#],F#      |
+| ASP.NET Core Web uygulaması (Model-View-Controller) | `mvc`            | [C#],F#      |
+| ASP.NET Core Web uygulaması                         | `razor`, `webapp`| [C#]          |
+| Angular ile ASP.NET Core                    | `angular`        | [C#]          |
+| React.js ile ASP.NET Core                   | `react`          | [C#]          |
+| ASP.NET Core React.js ve Redux         | `reactredux`     | [C#]          |
+| ASP.NET Core Web API'si                         | `webapi`         | [C#],F#      |
+| Razor sınıf kitaplığı                          | `razorclasslib`  | [C#]          |
+| Global.JSON dosyasını                             | `globaljson`     |               |
+| NuGet yapılandırma                                 | `nugetconfig`    |               |
+| Web yapılandırması                                   | `webconfig`      |               |
+| Çözüm dosyası                                | `sln`            |               |
 
 # <a name="net-core-20tabnetcore20"></a>[.NET core 2.0](#tab/netcore20)
 
@@ -97,13 +97,13 @@ Komutu, şablonları, varsayılan listesini içerir. Kullanım `dotnet new -l` k
 | Sınıf kitaplığı                                | `classlib`    | [C#], F#, VB  |
 | Birim testi projesi                            | `mstest`      | [C#], F#, VB  |
 | xUnit test projesi                           | `xunit`       | [C#], F#, VB  |
-| ASP.NET Core boş                           | `web`         | [C#] F #      |
-| ASP.NET Core Web uygulaması (Model-View-Controller) | `mvc`         | [C#] F #      |
+| ASP.NET Core boş                           | `web`         | [C#],F#      |
+| ASP.NET Core Web uygulaması (Model-View-Controller) | `mvc`         | [C#],F#      |
 | ASP.NET Core Web uygulaması                         | `razor`       | [C#]          |
 | Angular ile ASP.NET Core                    | `angular`     | [C#]          |
 | React.js ile ASP.NET Core                   | `react`       | [C#]          |
 | ASP.NET Core React.js ve Redux         | `reactredux`  | [C#]          |
-| ASP.NET Core Web API'si                         | `webapi`      | [C#] F #      |
+| ASP.NET Core Web API'si                         | `webapi`      | [C#],F#      |
 | Global.JSON dosyasını                             | `globaljson`  |               |
 | NuGet yapılandırma                                 | `nugetconfig` |               |
 | Web yapılandırması                                   | `webconfig`   |               |
@@ -118,12 +118,12 @@ Komutu, şablonları, varsayılan listesini içerir. Kullanım `dotnet new -all`
 
 |Şablon açıklaması  | Şablon adı | Diller |
 |----------------------|---------------|-----------|
-| Konsol uygulaması  | `console`     | [C#] F #  |
-| Sınıf kitaplığı        | `classlib`    | [C#] F #  |
-| Birim testi projesi    | `mstest`      | [C#] F #  |
-| xUnit test projesi   | `xunit`       | [C#] F #  |
+| Konsol uygulaması  | `console`     | [C#],F#  |
+| Sınıf kitaplığı        | `classlib`    | [C#],F#  |
+| Birim testi projesi    | `mstest`      | [C#],F#  |
+| xUnit test projesi   | `xunit`       | [C#],F#  |
 | ASP.NET Core boş   | `web`         | [C#]      |
-| ASP.NET Core Web uygulaması | `mvc`         | [C#] F #  |
+| ASP.NET Core Web uygulaması | `mvc`         | [C#],F#  |
 | ASP.NET Core Web API'si | `webapi`      | [C#]      |
 | NuGet yapılandırma         | `nugetconfig` |           |
 | Web yapılandırması           | `webconfig`   |           |

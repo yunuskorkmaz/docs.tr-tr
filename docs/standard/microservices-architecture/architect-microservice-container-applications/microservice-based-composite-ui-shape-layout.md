@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 79b63c376d25725b2bcb6c16cdb4d06e107d5c07
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3c5f4c5a1dd1c1065be63ad916af078050c069c1
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199014"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50033655"
 ---
 # <a name="creating-composite-ui-based-on-microservices-including-visual-ui-shape-and-layout-generated-by-multiple-microservices"></a>Mikro hizmetler, görsel kullanıcı Arabirimi şekli ve düzeni birden fazla mikro hizmetin oluşturduğu dahil olmak üzere temel bileşik kullanıcı Arabirimi oluşturma
 
@@ -42,10 +42,10 @@ Ancak, kullanıcı Arabirimi üzerinde mikro hizmet tabanlı bileşik hakkında 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
 -   **Bileşik kullanıcı Arabirimi kullanarak ASP.NET (belirli'nın Atölyesi)**
-    [*http://go.particular.net/workshop-composite-ui-demo*](http://go.particular.net/workshop-composite-ui-demo)
+    [*https://go.particular.net/workshop-composite-ui-demo*](https://go.particular.net/workshop-composite-ui-demo)
 
 -   **Ruben Oostinga. Mikro hizmetler mimarisinde tek parça ön uç**
-    [*http://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/*](http://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/)
+    [*https://xebia.com/blog/the-monolithic-frontend-in-the-microservices-architecture/*](https://xebia.com/blog/the-monolithic-frontend-in-the-microservices-architecture/)
 
 -   **Mauro Servienti. Gizli anahtarı daha iyi bir kullanıcı Arabirimi oluşturma**
     [*https://particular.net/blog/secret-of-better-ui-composition*](https://particular.net/blog/secret-of-better-ui-composition)

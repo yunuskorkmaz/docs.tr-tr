@@ -2,12 +2,12 @@
 title: WCF Hizmet Yayımlama
 ms.date: 03/30/2017
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
-ms.openlocfilehash: b62b2616233eb81e64945e997a2efe17973dedd2
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 515885658612cf11ecff8e084c466a70ba698625
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48781511"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453007"
 ---
 # <a name="wcf-service-publishing"></a>WCF Hizmet Yayımlama
 
@@ -21,7 +21,7 @@ WCF hizmet yayımlama dizi WCF hizmet kitaplığı şablonları ve aşağıdakil
 
 -   Dağıtım hizmet kitaplığı.
 
-Bu hizmet şablonlarını seçerek bulabilirsiniz **dosya** > **yeni proje** > [**Visual Basic** veya **Visual C#**] > **WCF**. Diğer (WCF iş akışı hizmeti uygulaması ve WCF hizmeti uygulaması gibi) bu konumda WCF şablonları için kullanarak yayımlayabileceğiniz [tek tıklamayla web uygulamaları için yayımlamayı](https://msdn.microsoft.com/library/dd465337\(v=vs.110\).aspx).
+Bu hizmet şablonlarını seçerek bulabilirsiniz **dosya** > **yeni proje** > [**Visual Basic** veya **Visual C#** ] > **WCF**. Diğer (WCF iş akışı hizmeti uygulaması ve WCF hizmeti uygulaması gibi) bu konumda WCF şablonları için kullanarak yayımlayabileceğiniz [tek tıklamayla web uygulamaları için yayımlamayı](https://msdn.microsoft.com/library/dd465337\(v=vs.110\).aspx).
 
 Hizmet aşağıdaki hedef konumlara yayımlanabilir.
 
@@ -41,9 +41,9 @@ Bir hizmet uygulaması dağıtmak için aşağıdaki adımları gerçekleştirin
 
 3.  **Yayımla** penceresi görüntülenir. Tıklayın **...** . hizmet için dağıtılması hedef konumu belirtmek için düğmesi. Yerel IIS, dosya sistemi veya FTP sitesi için uygulamayı dağıtmayı seçebilirsiniz. Yerel IIS uygulama dağıtımı, Web sitenizi seçin ve tıklayarak altında web uygulamanızı oluşturma **yeni Web uygulaması oluştur** simgesini sağ üst köşedeki.
 
-4.  Tıkladıktan sonra **Yayımla** ana penceresinde, Visual Studio, belirtilen hedef konum uygulamayı dağıtır ve Web.config .svc ve derleme dosyaları hedef dizine kopyalar. biçimindeki telefon numarasıdır. .Svc adını "ProjectName.ServiceName.svc" olacaktır. Hizmet başarıyla yayımlandıktan sonra "Köprü bağlanma" benzer Visual Studio çıktı penceresinde bir etkin bağlantı bulabilirsiniz “http://localhost/WebApplicationFolderName" http://localhost/WebApplicationFolderName ...". CTRL tuşunu BASILI tutun ve hizmet dizin yapısını görüntülemek için Visual Studio içindeki bir tarayıcı sayfasını açmak için bağlantıya tıklayın.
+4.  Tıkladıktan sonra **Yayımla** ana penceresinde, Visual Studio, belirtilen hedef konum uygulamayı dağıtır ve Web.config .svc ve derleme dosyaları hedef dizine kopyalar. biçimindeki telefon numarasıdır. .Svc adını "ProjectName.ServiceName.svc" olacaktır. Hizmet başarıyla yayımlandıktan sonra şuna benzer şekilde Visual Studio çıktı penceresinde bir etkin bağlantı bulabilirsiniz "bağlanma `http://localhost/WebApplicationFolderName...`". CTRL tuşunu BASILI tutun ve hizmet dizin yapısını görüntülemek için Visual Studio içindeki bir tarayıcı sayfasını açmak için bağlantıya tıklayın.
 
-     Siteye göz atın, IIS'de directory tarayıcı etkin olmadığından olabilir. Lütfen etkinleştirmek için "Şeyler deneyebilirsiniz" bölümünde ipuçlarını izleyin. Alternatif olarak, doğrudan yazabileceğiniz"HYPERLINK"http://localhost/WebApplicationFolderName" http://localhost/WebApplicationFolderName/ProjectName.ServiceName.svc"hizmet sayfanızı görüntülemek için.
+     Siteye göz atın, IIS'de directory tarayıcı etkin olmadığından olabilir. Lütfen etkinleştirmek için "Şeyler deneyebilirsiniz" bölümünde ipuçlarını izleyin. Alternatif olarak, doğrudan yazmanız `http://localhost/WebApplicationFolderName/ProjectName.ServiceName.svc` hizmet sayfanızı görüntülemek için.
 
 Kullanabileceğiniz **Yayımla** derleme, yapılandırma ve hedef konum projede tanımlanan tüm hizmetleri .svc dosya kopyalamak isteyip istemediğinizi belirtin ve hedef konumda var olan dosyaların üzerine yaz.
 

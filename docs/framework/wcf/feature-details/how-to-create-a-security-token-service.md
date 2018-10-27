@@ -8,13 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
-author: BrucePerlerMS
-ms.openlocfilehash: 6dbf0e2be0a75fccd84a82fe2b3c8ab41762de83
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 5926216135429d235593aaf77ee0d29b0bacd8fa
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49087732"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50036508"
 ---
 # <a name="how-to-create-a-security-token-service"></a>Nasıl yapılır: Güvenlik Belirteci Hizmeti Oluşturma
 Güvenlik belirteci hizmeti WS-Trust belirtiminde tanımlanan Protokolü uygular. Bu protokol, ileti biçimleri ve ileti verme, yenileme, iptal etme ve doğrulama güvenlik belirteçleri için exchange desenleri tanımlar. Belirli bir güvenlik belirteci hizmeti bir veya daha fazla bu yetenekleri sağlar. Bu konuda en sık karşılaşılan bir senaryodur arar: uygulama belirteci verme.  

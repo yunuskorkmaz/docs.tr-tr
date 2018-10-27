@@ -22,64 +22,63 @@ helpviewer_keywords:
 - argument passing [Visual Basic], by position
 - arguments [Visual Basic], listing by name
 ms.assetid: 1ad7358f-1da9-48da-a95b-f3c7ed41eff3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 49e313b2d5aa8302ea4b99e643e09f7b43659785
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bdaa0351e288b85a3e35818c0f53ef4d772932e5
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183873"
 ---
 # <a name="passing-arguments-by-position-and-by-name-visual-basic"></a>Bağımsız Değişkenleri Konuma ve Ada Göre Geçirme (Visual Basic)
-Çağırdığınızda bir `Sub` veya `Function` yordam bağımsız değişkenleri iletebilir *konuma göre* — yordam tanımında göründükleri sırada — veya bunları geçirebilirsiniz *ada göre*, olmadan konumlandırmak için şekilde.  
+Çağırdığınızda bir `Sub` veya `Function` yordamı, bağımsız değişkenleri iletebilir *konuma göre* — yordam tanımında göründükleri sırayla — veya geçirebileceğiniz gibi *ada göre*, olmadan konuma haklısın.  
   
- Ada göre bir bağımsız değişken geçirdiğinizde, bağımsız değişken adını ardından bir iki nokta üst üste ve eşittir işareti tarafından bildirilen belirtin (`:=`), ardından bağımsız değişken değeri. Adlandırılmış bağımsız değişkenler herhangi bir sırada sağlayabilir.  
+ Ada göre bir bağımsız değişken başarıyla sonuçlandıktan sonra bağımsız değişken adını ardından bir iki nokta üst üste ve bir eşittir işareti tarafından bildirilen belirtin (`:=`) ve ardından bağımsız değişken değeri. Herhangi bir sırada adlandırılmış bağımsız değişkenler sağlayabilirsiniz.  
   
  Örneğin, aşağıdaki `Sub` yordamın kullandığı üç bağımsız değişken:  
   
  [!code-vb[SampleProcedure](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#1)]  
   
- Bu yordam çağrısı, konum, ad veya her ikisinin bir karışımıyla kullanarak bağımsız değişkenleri belirtebilirsiniz.  
+ Bu yordamı çağırdığınızda, bağımsız değişken konumu, ad veya her ikisinin bir karışımıyla kullanarak sağlayabilirsiniz.  
   
 ## <a name="passing-arguments-by-position"></a>Konuma göre bağımsız değişkenleri geçirme  
- Çağırabilirsiniz `Display` değişkenlerinin yöntemiyle konuma göre geçirilen ve aşağıdaki örnekte gösterildiği gibi virgülle ayrılmış:  
+ Çağırabilirsiniz `Display` bağımsız değişkenlerinden yöntemiyle konuma göre geçirilen ve aşağıdaki örnekte gösterildiği gibi virgülle ayrılmış:  
   
 [!code-vb[ByPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#2)] 
   
- İsteğe bağlı bir bağımsız değişken konumsal bağımsız değişken listesinde atlarsanız, onun yerine virgül ile tutmanız gerekir. Aşağıdaki örnek çağrıları `Display` yöntemi olmadan `age` bağımsız değişkeni:  
+ İsteğe bağlı bağımsız değişken bir konumsal bağımsız değişken listesindeki atlarsanız, onun yerine bir virgül ile tutmanız gerekir. Aşağıdaki örnek çağrıları `Display` olmadan yöntemi `age` bağımsız değişkeni:  
   
 [!code-vb[ByPositionWithOptionalArgument](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#3)] 
   
 ## <a name="passing-arguments-by-name"></a>Ada göre bağımsız değişkenleri geçirme  
- Alternatif olarak, çağırabilirsiniz `Display` adıyla geçirilen bağımsız değişkenlerle aşağıdaki örnekte gösterildiği gibi virgülle ayrıca sınırlandırılmış:  
+ Alternatif olarak, çağırabilirsiniz `Display` adına göre geçirilen bağımsız değişkenler ile aşağıdaki örnekte gösterildiği gibi virgülle da sınırlı:  
   
 [!code-vb[ByName](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#4)] 
 
- Birden fazla isteğe bağlı bağımsız değişkeni olan bir yordam çağırma bu şekilde adıyla bağımsız değişkenleri geçirme özellikle yararlıdır. Ada göre bağımsız değişken sağlarsanız, konumsal bağımsız değişkenler eksik belirtmek için ardışık virgül kullanmak zorunda değil. Ada göre bağımsız değişkenleri geçirme Ayrıca, geçirme ve hangilerinin atlama hangi bağımsız değişkenleri izlemek kolaylaştırır.  
+ Birden fazla isteğe bağlı bağımsız değişken içeren bir yordamı çağırdığınızda, bu şekilde adıyla bağımsız değişkenleri geçirme özellikle yararlıdır. Ada göre bağımsız değişken sağlarsanız, konumsal bağımsız değişkenler eksik belirtmek için ardışık virgüller kullanmak zorunda değil. Ada göre bağımsız değişken geçirme Ayrıca hangi bağımsız değişkenleri geçirme ve hangilerinin, atlama izlemek kolaylaştırır.  
   
-## <a name="mixing-arguments-by-position-and-by-name"></a>Bağımsız değişkenleri konuma ve ada göre bir arada kullanma  
+## <a name="mixing-arguments-by-position-and-by-name"></a>Bağımsız değişkenleri konuma ve ada göre karıştırma  
 
-Aşağıdaki örnekte gösterildiği gibi değişkenleri hem konuma ve ada göre tek bir yordam çağrısında sağlayabilir:  
+Aşağıdaki örnekte gösterildiği gibi hem konuma ve ada göre tek bir yordam çağrısında bağımsız değişken belirtebilirsiniz:  
   
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#5)] 
   
- Önceki örnekte, hiçbir ek virgülle belirtilmemişse yerini tutmak için gerekli `age` bağımsız değişkeni, bu yana `birth` adıyla geçirilir.  
+ Önceki örnekte, hiçbir ek virgülle belirtilmemişse yerini tutmak için gerekli `age` bağımsız değişkeni, bu yana `birth` adına göre geçirilir.  
   
-Bağımsız değişkenler bir karışımını konumunu ve adını, konumsal bağımsız değişkenler sağladığında sürümlerinde Visual Basic 15,5 önce tüm ilk gelmelidir. Ada göre bağımsız değişken sağlayın sonra kalan tüm bağımsız değişkenleri tüm adıyla geçirmelidir.  Örneğin, için aşağıdaki çağrı `Display` yöntemi görüntüler derleyici hatası [BC30241: adlandırılmış bağımsız değişkeni beklenen](../../../misc/bc30241.md).
+Bağımsız değişken bir karışımını konumu ve adı, konumsal bağımsız değişkenler sağladığında 15.5 önce'sürümlerinde Visual Basic'in tüm ilk sırada olması gerekir. Kalan herhangi bir bağımsız değişken adına göre bağımsız değişken sağlayın, sonra tüm adına göre geçirilmelidir.  Örneğin, için aşağıdaki çağrı `Display` yöntemi derleyici hatası görüntüler [BC30241: adlandırılmış bağımsız değişken bekleniyor](../../../misc/bc30241.md).
 
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#6)] 
 
-Visual Basic 15,5 ile başlayarak, bitiş konumsal bağımsız değişkenlerin doğru konumda ise konumsal bağımsız değişkenleri adlandırılmış bağımsız değişkenler izleyebilirsiniz. Visual Basic 15,5, önceki çağrısı altında derlenmiş ise `Display` yöntemi başarıyla derlenir ve artık derleyici hatası oluşturur [BC30241](../../../misc/bc30241.md).  
+Visual Basic 15.5 ile başlayarak, doğru konumda bitiş konumsal bağımsız değişkenler, konumsal bağımsız değişkenler adlandırılmış bağımsız değişkenler izleyebilirsiniz. Visual Basic 15.5, önceki çağrısı altında derlenmişse `Display` yöntem başarıyla derlenir ve artık derleyici hatası oluşturur [BC30241](../../../misc/bc30241.md).  
 
-Karışık ve herhangi bir sırada adlandırılmış ve konumsal bağımsız değişkenler eşleştirmek için bu özelliği kodunuzu daha okunabilir hale getirmek için bir adlandırılmış bağımsız değişkeni kullanmak istediğinizde özellikle yararlıdır. Örneğin, aşağıdaki `Person` sınıfı oluşturucusu türünde iki bağımsız değişken gerektirir `Person`, her ikisi de olabilir `Nothing`. 
+Bu özelliği karıştırın ve eşleştirin adlandırılmış ve konumsal bağımsız değişkenler herhangi bir sırada kodunuzu daha okunabilir hale getirmek için bir adlandırılmış bağımsız değişken kullanmak istediğinizde özellikle yararlıdır. Örneğin, aşağıdaki `Person` sınıf oluşturucusu türünden iki bağımsız değişkeni gerektirir `Person`, ikisi için de olabilir `Nothing`. 
 
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#7)] 
 
-Clear kodu amacı olmasına yardımcı olur, karma adlandırılmış ve konumsal bağımsız değişkenler kullanarak değerini `father` ve `mother` bağımsız değişkenleri olan `Nothing`:
+Temizle kodun amacı olmasına yardımcı olur, karma adlandırılmış ve konumsal bağımsız değişkenler kullanarak değerini `father` ve `mother` bağımsız değişkenleri olan `Nothing`:
 
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#8)] 
 
-Adlandırılmış bağımsız değişkenler konumsal değişkenleriyle izlemek için aşağıdaki öğeyi Visual Basic projenize eklemeniz gerekir (\*.vbproj) dosyası:
+Konumsal bağımsız değişkenler adlandırılmış bağımsız değişkenler ile takip etmek için aşağıdaki öğe Visual Basic projenize eklemeniz gerekir (\*.vbproj) dosya:
 
 ```xml
 <PropertyGroup>
@@ -87,11 +86,13 @@ Adlandırılmış bağımsız değişkenler konumsal değişkenleriyle izlemek i
 </PropertyGroup>
 ```
 
-## <a name="restrictions-on-supplying-arguments-by-name"></a>Bağımsız değişken adı tarafından sağladığını kısıtlamaları  
+Daha fazla bilgi için [Visual Basic dil sürümü ayarını](../../../language-reference/configure-language-version.md).
 
-Gerekli bağımsız girmekten kaçının adıyla bağımsız değişkenlerini geçiremezsiniz. İsteğe bağlı bağımsız değişkenler atlayabilirsiniz.  
+## <a name="restrictions-on-supplying-arguments-by-name"></a>Bağımsız değişken adı tarafından sağlama ile ilgili kısıtlamalar  
+
+Gerekli bağımsız değişkenler girmekten kaçınmak için ada göre bağımsız değişkenler geçirilemez. İsteğe bağlı bağımsız değişkenlere atlayabilirsiniz.  
   
-Ada göre parametre dizisi geçiremezsiniz. Bu yordam çağrısı, belirsiz sayıda parametre dizisi için virgülle ayrılmış bağımsız değişkenleri sağlayın ve derleyici birden fazla bağımsız değişken tek bir adla ilişkilendiremezsiniz kaynaklanır.  
+Ada göre bir parametre dizisi geçiremezsiniz. Bu yordamı çağırdığınızda, belirsiz sayıda parametre dizisi virgülle ayrılmış bağımsız değişkenleri sağlayın ve derleyicinin tek bir ada sahip birden fazla bağımsız değişken ilişkilendirilemiyor olmasıdır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Yordamlar](./index.md)  

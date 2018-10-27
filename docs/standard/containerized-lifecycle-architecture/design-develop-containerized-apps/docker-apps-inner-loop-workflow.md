@@ -1,102 +1,102 @@
 ---
 title: Docker uygulamaları için iç döngü geliştirme iş akışı
-description: Microsoft Platformu ve araçları ile kapsayıcılı Docker uygulama yaşam döngüsü
+description: Microsoft Platformu ve araçları ile kapsayıcı Docker uygulaması yaşam
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 9e578599c61053704202946772c43bdb5ef895c2
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: be9c3fe165be32df43073919904b85120c52d595
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105595"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50034467"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker uygulamaları için iç döngü geliştirme iş akışı
 
-Tüm DevOps kapsayıcı döngü dış iş akışı tetiklemeden döngüsü, tüm uygulama kodlama, kendi tercih edilen dil ya da platformlar kullanarak ve yerel olarak test her geliştiricinin makinesinde (Şekil 4-14) başlar. Ancak her durumda, çok önemli bir nokta ortak hangi dil, framework ya da platformlar seçtiğiniz olsun gerekir. Bu belirli iş akışındaki her zaman geliştirdiğiniz ve Docker kapsayıcıları, ancak yerel olarak test etme.
+Tüm DevOps kapsayan dış döngü iş akışı tetiklemeden önce döngüsü, tüm uygulama kodlama, kullanıcılarınızın tercih edilen diller veya platformlar ve yerel olarak test her geliştiricinin makine üzerinde (Şekil 4-14) başlar. Ancak her durumda çok önemli bir nokta ortak hangi dil, çerçeve veya platformlar, seçtiğiniz ne olursa olsun gerekir. Bu belirli bir iş akışında, her zaman geliştirdiğiniz ve Docker kapsayıcıları, ancak yerel olarak test etme.
 
 ![](./media/image18.png)
 
 Şekil 4-14: iç döngü geliştirme bağlamı
 
-Kapsayıcı veya bir Docker görüntüsü örneği şu bileşenleri içerir:
+Bu bileşenler kapsayıcı veya bir Docker görüntüsü örneğini içerir:
 
--   Bir işletim sistemi seçim (örneğin, bir Linux dağıtım veya Windows)
+-   Bir işletim sistemi seçimi (örneğin, bir Linux dağıtımı veya Windows)
 
--   (Örneğin, uygulama ikili dosyaları) geliştirici tarafından eklenen dosyalar
+-   Geliştirici (örneğin, uygulama ikili değerleri) tarafından eklenen dosyaları
 
--   Yapılandırma (örneğin, ortam ayarlarını ve bağımlılıklarını)
+-   (Örneğin, ortam ayarlarını ve bağımlılıklarını) yapılandırma
 
--   Docker tarafından çalıştırmak için hangi işlemleri için yönergeler
+-   Docker ile çalıştırmak için hangi işlemleri için yönergeler
 
-Docker (sonraki bölümde açıklanan) bir işlem olarak kullanan iç döngü geliştirme iş akışı ayarlayabilirsiniz. Yalnızca bir kez yapmanız gerektiğinden ilk ortamını ayarlama adımlarını olmadığını dahil dikkate alın.
+(Sonraki bölümde açıklanmıştır) işlem olarak Docker kullanan iç döngü geliştirme iş akışı ayarlayabilirsiniz. Bu yalnızca bir kez yapmanız gerektiğinden ortamı ayarlamak için ilk adımlarında olmadığını dahil dikkate alın.
 
-## <a name="building-a-single-app-within-a-docker-container-using-visual-studio-code-and-docker-cli"></a>Visual Studio Code ve Docker CLI kullanarak bir Docker kapsayıcısı içinde tek bir uygulama oluşturma
+## <a name="building-a-single-app-within-a-docker-container-using-visual-studio-code-and-docker-cli"></a>Visual Studio Code ve Docker CLI'yı kullanarak bir Docker kapsayıcısı içinde tek bir uygulama oluşturma
 
-Uygulamaları, kendi Hizmetleri artı ek kitaplıkları (bağımlılıklar) yapılır.
+Uygulamaları, kendi Hizmetleri artı ek kitaplıklar (bağımlılıklar) oluşur.
 
-Şekil 4-15 genellikle her bir adımın ayrıntılı açıklamaları tarafından izlenen bir Docker uygulaması oluştururken gerçekleştirmesi gereken temel adımlarda gösterir.
+Şekil 4-15, genellikle her adımın ayrıntılı açıklamaları tarafından izlenen bir Docker uygulaması derlerken, gerçekleştirmesi gereken temel adımları gösterir.
 
 ![](./media/image19.png)
 
-Şekil 4-15: Docker CLI kullanarak kapsayıcılı Docker uygulama yaşam döngüsü için üst düzey iş akışı
+Şekil 4-15: Docker CLI'yı kullanarak kapsayıcılı Docker uygulamaları için yaşam döngüsü için üst düzey iş akışı
 
-### <a name="step-1-start-coding-in-visual-studio-code-and-create-your-initial-appservice-baseline"></a>1. adım: Visual Studio kodda kodlama başlatmak ve ilk uygulama/hizmet taban çizgisi oluşturma
+### <a name="step-1-start-coding-in-visual-studio-code-and-create-your-initial-appservice-baseline"></a>1. adım: Visual Studio Code'da kodlamaya başlayın ve ilk uygulama/hizmet temel oluşturma
 
-Uygulamanızı geliştirme oldukça benzer Docker yapmak şekilde yoludur. Geliştirme sırasında dağıtma ve uygulama veya Docker kapsayıcıları (örneğin, bir Linux VM veya Windows), yerel ortamınızda yerleştirilen içinde çalışan hizmetler sınama olduğundan farktır.
+Uygulamanızı geliştirdiğiniz biçimini, Docker yaptığınız gibi oldukça benzerdir. Geliştirmeye devam ederken, dağıtan ve uygulamanızı veya yerel ortamınızda (örneğin, bir Linux VM veya Windows) yerleştirilen Docker kapsayıcıları içinde çalışan hizmetleri test etme, farktır.
 
-**Yerel ortamını ayarlama**
+**Yerel ortamınızda ayarlama**
 
-Mac ve Windows için Docker en son sürümleri, Docker uygulamaları geliştirmek için her zamankinden daha kolay ve Kurulum basittir.
+Mac ve Windows için Docker'ın en son sürümleri, Docker uygulamaları geliştirmek için hiç olmadığı kadar kolay ve kurulumu basittir.
 
-**Daha fazla bilgi** Docker Windows için ayarlama hakkında yönergeler için Git [ https://docs.docker.com/docker-for-windows/ ](https://docs.docker.com/docker-for-windows/).
+**Daha fazla bilgi** için Docker Windows ayarlama hakkında yönergeler için Git [ https://docs.docker.com/docker-for-windows/ ](https://docs.docker.com/docker-for-windows/).
 
 Mac için Docker ayarlama hakkında yönergeler için Git <https://docs.docker.com/docker-for-mac/>.
 
-Ayrıca, Docker CLI kullanırken, uygulamanızın gerçekte geliştirebilirsiniz böylece bir kod düzenleyicisinde gerekir.
+Ayrıca, Docker CLI'yı kullanırken uygulamanızı aslında geliştirebilmeniz bir kod düzenleyicisi gerekir.
 
-Microsoft, Mac, Windows ve Linux desteklenir ve IntelliSense ile sağlayan bir basit bir kod düzenleyicisidir Visual Studio Code sağlar [desteklemek için çok sayıda dilleri](https://code.visualstudio.com/docs/languages/overview) (JavaScript, .NET, Git, Java, Ruby, Python ve çoğu Modern dilleri), [hata ayıklama](https://code.visualstudio.com/Docs/editor/debugging), [Git ile tümleştirme](https://code.visualstudio.com/Docs/editor/versioncontrol) ve [Uzantıları desteği](https://code.visualstudio.com/docs/extensions/overview). Mac ve Linux geliştiricileri için harika bir sığdırma düzenleyicisidir. Windows, tam Visual Studio uygulama de kullanabilirsiniz.
+Microsoft, Mac, Windows ve Linux üzerinde desteklenir ve IntelliSense ile sağlayan bir basit Kod Düzenleyicisi Visual Studio Code sağlar [birçok dil için destek](https://code.visualstudio.com/docs/languages/overview) (JavaScript, .NET, Go, Java, Ruby, Python ve çoğu Modern dilleri) [hata ayıklama](https://code.visualstudio.com/Docs/editor/debugging), [Git tümleştirmesiyle](https://code.visualstudio.com/Docs/editor/versioncontrol) ve [uzantıları desteğiyle](https://code.visualstudio.com/docs/extensions/overview). Bu düzenleyici Mac ve Linux geliştiriciler için harika bir çözümdür. Windows tam Visual Studio uygulamasını kullanabilirsiniz.
 
-**Daha fazla bilgi** Windows için Visual Studio, Mac veya Linux yükleme ile ilgili yönergeler için Git [ http://code.visualstudio.com/docs/setup/setup-overview/https://docs.docker.com/docker-for-mac/ ](http://code.visualstudio.com/docs/setup/setup-overview/https:/docs.docker.com/docker-for-mac/).
+**Daha fazla bilgi** Visual Studio için Windows, Mac veya Linux yükleme ile ilgili yönergeler için Git <https://code.visualstudio.com/docs/setup/setup-overview/>.
 
-Docker CLI ile çalışır ve herhangi bir kod düzenleyicisini kullanarak kodunuzu yazma, ancak Visual Studio Code kullanırsanız, yazar Dockerfile kolay ve docker-compose.yml dosyaları çalışma alanınızda kolaylaştırır. Ayrıca, Docker CLI altında kullanarak ayrıntılandırılmış işlemleri çalıştıran komut dosyaları ister IDE gelen Visual Studio Code görevleri çalıştırabilir.
+Docker CLI ile çalışır ve herhangi bir kod Düzenleyicisi'ni kullanarak kodunuzu yazın, ancak Visual Studio Code kullanıyorsanız, bunu Dockerfile yazar için kolay ve docker-compose.yml dosyaları çalışma alanınızda kolaylaştırır. Ayrıca, altında Docker CLI'yı kullanarak ayrıntılandırılmış işlemleri çalışması gereken betikleri ister IDE üzerinden Visual Studio Code görevler çalıştırabilirsiniz.
 
-Visual Studio Code yüklemeniz gerekir bir uzantı tarafından sağlanır. Tuşuna Ctrl + Shift + P, bunun için türü **ext yüklemek**, ve Uzantıları'nı çalıştırın: Market uzantısı listesini getirmek için yükleme uzantısını komutu. Sonra aşağıdakileri yazın **docker** sonuçlara filtre uygulamak ve ardından Dockerfile ve Docker oluşturan dosyasını (yml) destek uzantısı, Şekil 4-16'gösterildiği gibi seçin.
+Visual Studio Code'u yüklemek için ihtiyacınız uzantı tarafından sağlanır. Bunu tuşuna Ctrl + Shift + P yapmak için yazın **ext yükleme**, ve Uzantıları'nı çalıştırmak: Market uzantısı listesini getirmek için uzantı yükleme komutu. Sonra aşağıdakileri yazın **docker** sonuçları filtreleyin ve ardından Dockerfile ve Docker Compose dosyası (yml) destek uzantısı, Şekil 4-16 gösterildiği şekilde seçin.
 
 ![](./media/image20.png)
 
-Şekil 4-16: Visual Studio kodda Docker uzantı yükleme
+Şekil 4-16: Visual Studio Code'da Docker uzantısını yükleme
 
-### <a name="step-2-create-a-dockerfile-related-to-an-existing-image-plain-os-or-dev-environments-like-net-core-nodejs-and-ruby"></a>2. adım: var olan bir görüntüsünü (düz işletim sistemi veya geliştirme ortamları .NET Core, Node.js ve Ruby gibi) ilgili bir DockerFile oluşturma
+### <a name="step-2-create-a-dockerfile-related-to-an-existing-image-plain-os-or-dev-environments-like-net-core-nodejs-and-ruby"></a>2. adım: mevcut bir görüntüyü (düz işletim sistemi veya geliştirme ortamları .NET Core, Node.js ve Ruby gibi) ilgili bir DockerFile oluşturma
 
-Uygulamanız, tek bir özel hizmet yapılırsa, bu nedenle, tek bir DockerFile gerekir, bir DockerFile dağıtılacak kapsayıcı ve oluşturulacak özel görüntü başına gerekir. Ancak, uygulamanız (örneğin, bir mikro mimarisi) birden çok hizmet oluşan bir Dockerfile hizmeti başına ihtiyacınız vardır.
+Kapsayıcısını, dağıtılmasını ve oluşturulacak özel görüntü başına bir DockerFile gerekir, bu nedenle, uygulamanız tek bir özel hizmet yapılırsa, tek bir DockerFile gerekir. Ancak, uygulamanız birden çok hizmeti (olduğu gibi bir mikro hizmetler mimarisinde) oluşan, hizmet başına bir Dockerfile gerekir.
 
-DockerFile genellikle uygulama veya hizmet kök klasörü içinde yerleştirilir ve bu Docker ayarlamak ve bu uygulamayı veya hizmeti çalıştırmak nasıl bilmesi için gerekli komutları içerir. DockerFile oluşturabilir ve kodunuzun yanı sıra projenize ekleyin (node.js, .NET Core, vb.), ya da ortama yeniyseniz, aşağıdaki ipucu göz atın.
+DockerFile, uygulamanızı veya hizmetinizi kök klasörü içinde genellikle yerleştirilir ve Docker nasıl ayarlanacağını ve söz konusu uygulamayı veya hizmeti çalıştırılacağını bilmesi gereken komutları içerir. DockerFile'ı oluşturabilir ve kodunuzun yanı sıra projenize ekleyin (node.js, .NET Core, vb.), veya ortama yeni başladıysanız, aşağıdaki ipucu göz atın.
 
 > [!TIP]
-> Adlı bir komut satırı aracını kullanabilirsiniz [yo docker](https://github.com/Microsoft/generator-docker), hangi dosyaların projenizden dili seçin ve gerekli Docker yapılandırma dosyaları ekler iskelesini kurar. Temel olarak, geliştiricilerin Başlarken yardımcı olmak için uygun DockerFile oluşturduğu docker-compose.yml ve diğer ilişkili betikler oluşturun ve Docker kapsayıcılarınızı çalıştırın. Bu yeoman oluşturucunun seçili geliştirme dilini ve hedef kapsayıcı konak isteyen birkaç soruyla ister.
+> Adlı bir komut satırı aracını kullanabilirsiniz [yo docker](https://github.com/Microsoft/generator-docker), iskele oluşturulduğunu hangi dosyaların projenizden dili seçin ve gerekli Docker yapılandırma dosyaları ekler. Temelde, kullanmaya başlayan geliştiriciler yardımcı olmak için ilgili DockerFile oluşturduğu docker-compose.yml ve ilişkili diğer komut oluşturun ve Docker kapsayıcılarınızı çalıştırır. Bu yeoman oluşturucuyu birkaç soruyu soran seçili geliştirme dil ve hedef kapsayıcı konağı, ister.
 
 ![yo docker](./media/image21.png)
 
-Örneğin, Şekil 4-17 Windows ve Mac'te yo çalışmak üzere önceden yapılandırılmış örnek kodu projeleri (şu anda .NET Core, Golang ve desteklenen diller olarak Node.js) oluşturacak docker çalıştıran, her iki durumda da Terminal gelen iki ekran görüntüleri gösterir Docker üstündeki.
+Örneğin, Şekil 4-17 Windows ve Mac'te yo çalışmak üzere önceden yapılandırılmış örnek kod projeleri (şu anda .NET Core, Golang ve desteklenen dilleri olarak Node.js) oluşturacak docker, çalıştırma, her iki durumda da iki ekran görüntüleri terminaller gösterir Docker'ın üstünde.
 
 ![](./media/image22.PNG)  ![](./media/image23.png)
 
-Şekil 4-17: yo docker komut aracını (soldaki) Windows ve Mac'te
+Şekil 4-17: yo docker komut aracını (solda) Windows ve Mac'te
 
-Şekil 4-18 iskele kurulmuş yerinde varolan bir .NET Core projesi oluşturduktan sonra yo docker kullanarak bir örnek sunulmaktadır.
+Şekil 4-18 iskelesi oluşturulmuş için var olan bir .NET Core projesi oluşturduktan sonra yo docker kullanan bir örnek gösterir.
 
 ![](./media/image24.PNG)
 
-Şekil 4-18: yo docker varolan bir .NET Core ile proje bir yerde
+Şekil 4-18: yo docker ile var olan bir .NET Core proje bir yerde
 
-DockerFile ("microsoft/dotnet:1.0.0-core" kullanarak gibi) kullanacaksınız temel hangi Docker görüntüsü belirtin. Genellikle resmi herhangi depodan alabilirsiniz temel bir görüntü üstünde özel görüntünüzü oluşturacaksınız [Docker hub'a kayıt defteri](https://hub.docker.com/) (gibi bir [.NET Core için görüntü](https://hub.docker.com/r/microsoft/dotnet/) veya bir [Node.jsiçin](https://hub.docker.com/_/node/)).
+DockerFile ("microsoft/dotnet:1.0.0-core" kullanma gibi) kullanacaksınız hangi temel Docker görüntüsünü belirtin. Özel görüntünüzü herhangi bir resmi deponun sayfasından edinebilirsiniz bir temel görüntünün üstüne genellikle oluşturacağınız [Docker Hub kayıt defterinde](https://hub.docker.com/) (gibi bir [.NET Core için görüntü](https://hub.docker.com/r/microsoft/dotnet/) veya bir [Node.jsiçin](https://hub.docker.com/_/node/)).
 
-***Seçenek A: kullanımı var olan bir resmi Docker görüntüsünü***
+***Seçenek A: kullanmak mevcut bir resmi Docker görüntüsü***
 
-Sürüm numarası olan bir dil yığınının resmi bir depo kullanarak (geliştirme, test ve üretim dahil) tüm makinelerde aynı dil özellikleri kullanılabilir olmasını sağlar.
+Bir sürüm numarasına sahip bir resmi bir dil yığını depoyu kullanarak, aynı dil özellikleri (geliştirme, test ve üretim dahil) tüm makinelerde kullanılabilir olmasını sağlar.
 
-.NET Core kapsayıcı için bir örnek DockerFile aşağıdadır:
+DockerFile'bir .NET Core kapsayıcı için bir örnek aşağıda verilmiştir:
 
 ```
 # Base Docker image to use
@@ -114,56 +114,56 @@ EXPOSE 80
 ENTRYPOINT ["dotnet", "MyCustomMicroservice.dll"]
 ```
 
-Bu durumda, onu microsoft/aspnetcore:1.0.1 adlı Linux için resmi ASP.NET Core Docker görüntüsünün 1.0.1 sürümü kullanıyor. Daha fazla ayrıntı için başvurun [ASP.NET Core Docker görüntüsünün](https://hub.docker.com/r/microsoft/aspnetcore/) ve [.NET Core Docker görüntüsünün](https://hub.docker.com/r/microsoft/dotnet/). Düğüm: 4 gibi başka bir karşılaştırılabilir görüntü ayrıca kullanıyor-Node.js veya diğer önceden yapılandırılmış birçok görüntüleri kullanılabilir geliştirme diller için onbuild [Docker hub'a](https://hub.docker.com/explore/).
+Bu durumda, bunu microsoft/aspnetcore:1.0.1 adlı Linux için resmi ASP.NET Core Docker görüntüsünü 1.0.1 sürümü kullanıyor. Daha fazla ayrıntı için başvurun [ASP.NET Core Docker görüntüsünün](https://hub.docker.com/r/microsoft/aspnetcore/) ve [.NET Core Docker görüntüsünün](https://hub.docker.com/r/microsoft/dotnet/). Düğüm: 4 gibi başka bir karşılaştırılabilir görüntü kullanabilecek-Node.js veya diğer önceden yapılandırılmış birçok görüntüler bulabileceğiniz geliştirme diller için onbuıld [Docker Hub](https://hub.docker.com/explore/).
 
-DockerFile içinde de (örneğin, bağlantı noktası 80) çalışma zamanında kullanacağı TCP bağlantı noktasını dinlemek için Docker istemeniz gerekir.
+DockerFile içinde ayrıca isteyin (örneğin, bağlantı noktası 80) çalışma zamanında kullanacağınız TCP bağlantı noktasını dinlemek için Docker gerekir.
 
-Uygulamayı çalıştırmak nasıl Docker bilmesi için kullanmakta olduğunuz dil/framework bağlı olarak DockerFile ekleyebilirsiniz yapılandırmasının diğer satırlar vardır. ENTRYPOINT satırıyla örneği için ihtiyacınız \["dotnet", "MyCustomMicroservice.dll"\] oluşturup, hizmetinizi çalıştırmak için bir yaklaşım bağlı olarak birden çok çeşitleri sahip olabilirsiniz, ancak bir .NET Core uygulamayı çalıştırmak için. Derleme ve çalıştırma .NET uygulaması için SDK ve dotnet CLI kullanıyorsanız, biraz farklı olacaktır. ENTRYPOINT satır yanı sıra ek satırlar, uygulamanız için seçtiğiniz dil/platforma bağlı olarak farklı olacaktır alt çizgidir.
+Docker, uygulamayı çalıştırmak nasıl olduğunu bilmesi için kullanmakta olduğunuz dil/framework bağlı olarak DockerFile içinde ekleyebilirsiniz yapılandırmanın diğer satırlar var. ENTRYPOINT satırla örneği için ihtiyacınız \["dotnet", "MyCustomMicroservice.dll"\] oluşturup hizmetinizi çalıştırmak için bir yaklaşım bağlı olarak birden çok çeşitleri olabilir ancak bir .NET Core uygulamasını çalıştırmak için. .NET uygulaması derleyebilir ve için SDK'sı ve dotnet CLI kullanıyorsanız, biraz farklı olacaktır. ENTRYPOINT satırı artı ek satırlar, uygulamanız için seçtiğiniz dil/platforma bağlı olarak farklı olacaktır alt çizgidir.
 
-**Daha fazla bilgi** .NET Core uygulamaları için Docker görüntülerinizi oluşturmak hakkında daha fazla bilgi için Git <https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images>.
+**Daha fazla bilgi** .NET Core uygulamaları için Docker görüntüleri oluşturma hakkında daha fazla bilgi için Git <https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images>.
 
-Kendi görüntüleri oluşturma hakkında daha fazla bilgi için şuraya gidin [ https://docs.docker.com/engine/\ öğreticileri/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/).
+Kendi görüntülerinizi oluşturma hakkında daha fazla bilgi edinmek için Git [ https://docs.docker.com/engine/\ öğreticiler/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/).
 
-**Birden çok platform görüntüsü depoları**
+**Çok platformlu görüntü depolar**
 
-Windows kapsayıcıları daha yaygın hale gibi tek bir depo Linux ve Windows görüntüsü gibi platform çeşitleri içerebilir. Bu, birden çok platformu gibi karşılamak üzere tek bir depoyu kullanacak şekilde satıcılar için mümkün kılar Docker gelen yeni bir özelliktir [microsoft/aspdotnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) DockerHub kayıt kullanılabilir deposu. Özellik Canlı geldiğinde aynı görüntü adı Linux ana bilgisayardan çekme Linux değişken çeker ancak bu görüntüyü Windows ana bilgisayardan çekme Windows değişken çeker.
+Windows kapsayıcıları daha yaygın hale geldikçe, tek bir depoda bir Linux ve Windows görüntüsü gibi platformu çeşitleri içerebilir. Bu, tek bir depo gibi birden çok platform karşılamak üzere kullanılacak satıcılar için mümkün kılan docker'da kullanıma sunulacak yeni bir özelliktir [microsoft/aspdotnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) DockerHub kayıt defterinde kullanılabilir olan depo. Bir özellik Canlı gelir gibi görüntü adının aynısını, bir Linux ana bilgisayarından alınan Linux değişken çeker ise Windows konaktan bu görüntüyü çekmeyi Windows değişken çeker.
 
-***Temel görüntünüzde sıfırdan seçenek B: oluşturma***
+***Temel görüntünüzü sıfırdan seçenek B: oluşturma***
 
-Bu konuda açıklandığı gibi sıfırdan kendi Docker temel görüntü oluşturabilir [makale](https://docs.docker.com/engine/userguide/eng-image/baseimages/) Docker gelen. Bu Docker ile yeni başlıyorsanız, sizin için en iyi şekilde büyük olasılıkla bir senaryodur, ancak temel görüntünüzün belirli BITS ayarlamak istiyorsanız, bunu yapabilirsiniz.
+Bu konuda açıklandığı gibi sıfırdan kendi Docker temel görüntüsünde oluşturabilirsiniz [makale](https://docs.docker.com/engine/userguide/eng-image/baseimages/) docker. Bu, Docker ile yeni başlıyorsanız, sizin için en büyük olasılıkla bir senaryodur ancak kendi temel görüntü belirli bitlerini ayarlamak istiyorsanız, bunu yapabilirsiniz.
 
-### <a name="step-3-create-your-custom-docker-images-embedding-your-service-in-it"></a>3. adım: özel Docker görüntülerinizi hizmetinizi katıştırmak oluşturma
+### <a name="step-3-create-your-custom-docker-images-embedding-your-service-in-it"></a>3. adım: hizmetinizi katıştırarak, özel Docker görüntüleri oluşturma
 
-Uygulamanızı oluşur her özel hizmeti için ilgili görüntü oluşturmanız gerekir. Uygulamanızı bir tek hizmeti veya web uygulaması oluşuyorsa, yalnızca tek bir görüntü gerekir.
+Uygulamanızı oluşturan özel her hizmet için ilgili bir görüntü oluşturmak gerekir. Tek bir hizmeti veya web uygulaması, uygulamanızı oluşuyorsa, yalnızca tek bir görüntü gerekir.
 
 > [!NOTE]
-> Görüntüleri genel ortamında oluşturulmayacak bir Git deposu (sürekli tümleştirme), kaynak kodunuzu itme her "dış döngü DevOps iş akışı" dikkate alarak, görüntüleri otomatik derleme süreci tarafından oluşturulur, Kaynak kodu.
+> Görüntüler genel bir ortamda oluşturulur böylece, kaynak kodunuzda bir Git deposuna (sürekli tümleştirme) gönderdiğinizde "dış döngü DevOps iş akışı" dikkate alarak, görüntüleri bir otomatik yapı işlemi tarafından gelen oluşturulur, Kaynak kodu.
 
-Ancak Biz bu dış döngü rota gitmeyi göz önünde bulundurun önce kaynak denetim sistemi (Git, vb.) düzgün çalışmayabilir kod itme yok böylece Docker uygulama gerçekte düzgün çalıştığından emin olmak gerekiyor.
+Ancak Biz bu dış döngü rota giderek göz önünde bulundurun önce kaynak denetim sistemine (Git, vb.) düzgün çalışmayabilir kod itme yoktur, böylece Docker uygulaması aslında düzgün çalıştığından emin olmak gerekiyor.
 
-Bu nedenle, her geliştirici, yerel olarak test ve bunlar tam bir özelliği bildirme veya kaynak denetim sistemi değiştirmek istediğiniz kadar geliştirmeye devam etmek için tüm iç döngüsü işlemi yapmak öncelikle gerekir.
+Bu nedenle, her geliştirici, yerel olarak test etmek ve tam bir özelliği bildirme veya kaynak denetim sistemine değiştirmek istedikleri kadar geliştirmeye devam etmek için tüm iç döngü işlem yapmak öncelikle gerekir.
 
-Yerel ortamınıza ve DockerFile kullanarak bir görüntü oluşturmak için docker yapı komutu, Şekil 4-19'gösterildiği gibi kullanabilirsiniz (de çalıştırabilirsiniz docker compose'u birkaç kapsayıcıları/Hizmetleri tarafından oluşturulmuş uygulamalar için yukarı--yapı).
+Yerel ortamınıza ve DockerFile'ı kullanarak bir görüntü oluşturmak için docker oluşturma komutu, Şekil 4-19'gösterildiği gibi kullanabilirsiniz (da çalıştırabilirsiniz docker-compose--'kurmak birkaç kapsayıcılar/Hizmetleri tarafından oluşturulan uygulamalar için derleme).
 
 ![](./media/image25.png)
 
 Şekil 4-19: çalışan docker derleme
 
-İsteğe bağlı olarak, doğrudan docker çalıştırmak yerine projenin klasöründen derleme, ilk çalıştırma dotnet kullanarak komut yayımlamak ve docker yapı çalıştırmak gerekli .NET kitaplıklarıyla dağıtılabilir bir klasör oluşturabilirsiniz.
+İsteğe bağlı olarak, doğrudan docker çalıştırmak yerine Proje klasöründen yapı, ilk çalıştırma dotnet kullanarak yayımlama komutu ve docker derleme çalıştırın gerekli .NET kitaplıklarıyla dağıtılabilir bir klasör oluşturabilirsiniz.
 
-Bu örnekte, bu bir Docker görüntü cesardl/netcore-webapı-mikro adı ile oluşturur-docker: ilk (: önce belirli bir sürümü gibi bir etiketi olan). Bu adım birkaç kapsayıcıları ile oluşan Docker uygulamanızı oluşturmak için gereken her özel görüntü için alabilir.
+Bu örnekte, bu bir Docker görüntüsü cesardl/netcore-webapı-mikro adı ile oluşturur-docker: ilk (: önce belirli bir sürümü gibi bir etiketi olan). Bu adım birkaç kapsayıcılar ile oluşturulmuş Docker uygulamanızı oluşturmak için ihtiyacınız olan her bir özel görüntüsünün alabilir.
 
-Var olan görüntüleri, yerel depoda (geliştirme makinenizi) docker kullanarak görüntüleri komutu, Şekil 4-20'de gösterildiği gibi bulabilirsiniz.
+Var olan görüntülerden yerel deponuzda (geliştirme makinenize) docker'ı kullanarak görüntü komutu, Şekil 4-20'de gösterildiği gibi bulabilirsiniz.
 
 ![](./media/image26.png)
 
 Şekil 4-20: docker görüntüleri kullanarak var olan görüntüleri görüntüleme
 
-### <a name="step-4-optional-define-your-services-in-docker-composeyml-when-building-a-composed-docker-app-with-multiple-services"></a>4. adım: (İsteğe bağlı) tanımlama docker-compose.yml birden çok hizmetleriyle oluşan bir Docker uygulaması oluştururken, hizmetleri
+### <a name="step-4-optional-define-your-services-in-docker-composeyml-when-building-a-composed-docker-app-with-multiple-services"></a>4. adım: (İsteğe bağlı) tanımlama birden çok hizmeti ile oluşturulmuş bir Docker uygulaması derlerken, docker-compose.yml hizmetlerinizde
 
-Docker-compose.yml dosyası ile oluşturulmuş bir uygulama olarak bir sonraki adım bölümde açıklanan dağıtım komutlarla dağıtılması için ilgili hizmetler kümesini tanımlayabilir.
+Docker-compose.yml dosyasıyla, bir dizi adım bir sonraki bölümde açıklanan dağıtım komutları ile oluşturulmuş bir uygulama olarak dağıtılması için ilgili hizmetler tanımlayabilirsiniz.
 
-Bu, ana dosyasında veya kök çözüm klasör oluşturmanız gerekir. Aşağıdaki docker-compose.yml dosyası benzer içeriğe sahip olmalıdır:
+Bu ana dosyasında veya kök Çözüm klasörü oluşturmanız gerekir; Aşağıdaki docker-compose.yml dosyasına benzer içeriğe sahip olmalıdır:
 
 ```yml
 version: '2'
@@ -180,84 +180,84 @@ services:
     image: redis
 ```
 
-Bu örnekte, bu dosya, iki hizmet tanımlar: web hizmeti (özel hizmeti) ve redis hizmeti (popüler önbellek hizmeti). Somut bir Docker görüntü her biri için kullanılacak ihtiyacımız şekilde her bir hizmet bir kapsayıcı olarak dağıtılır. Bu belirli web hizmeti için görüntü aşağıdakileri yapmanız gerekir:
+Bu durumda, bu dosya, iki hizmet tanımlar: web hizmeti (özel hizmeti) ve redis hizmetinin (popüler önbellek hizmeti). Yüzden somut bir Docker görüntüsü her biri için kullanılacak her bir hizmet bir kapsayıcı olarak dağıtılır. Bu belirli bir web hizmeti için görüntüyü şunları yapmanız gerekir:
 
--   DockerFile geçerli dizinde gelen derleme
+-   DockerFile geçerli dizinde yapıdan
 
--   Kullanıma sunulan bağlantı noktası 80 konak makinedeki 81 numaralı bağlantı noktasına kapsayıcısı üzerinde ilet
+-   Konak makinedeki 81 numaralı bağlantı noktasına kapsayıcı üzerindeki 80 kullanıma sunulan bağlantı noktası iletme
 
--   Konaktaki görüntüsünü yeniden oluşturmak zorunda kalmadan kodu değiştirmeniz edinerek kapsayıcı içindeki /code için proje bağlama
+-   Proje dizini görüntüsünü yeniden oluşturmak zorunda kalmadan kodu değiştirmeniz edinerek /code kapsayıcı içindeki konağa üzerinde bağlama
 
--   Web hizmeti redis hizmetine bağlama
+-   Redis hizmetine web hizmetine bağlama
 
-Redis hizmet kullandığı [son ortak redis görüntü](https://hub.docker.com/_/redis/) Docker hub'a kayıt defterinden çekilen. [redis](https://redis.io/) sunucu tarafı uygulamalar için çok popüler önbellek sistemidir.
+Redis hizmeti kullandığı [en son genel redis görüntüsünü](https://hub.docker.com/_/redis/) Docker Hub kayıt defterinden çekilir. [redis](https://redis.io/) sunucu tarafı uygulamalar için çok popüler önbellek sistemidir.
 
 ### <a name="step-5-build-and-run-your-docker-app"></a>5. adım: Derleme ve Docker uygulamanızı çalıştırma
 
-Yalnızca tek bir kapsayıcı uygulamanız varsa, yalnızca, Docker ana (VM veya fiziksel sunucu) dağıtarak çalıştırmak yeterlidir. Uygulamanız birden çok hizmetlerini yapılırsa, ancak yapmanız *onu oluşturan*, çok. Farklı seçenekler görelim.
+Yalnızca tek bir kapsayıcı uygulamanız varsa, Docker Konağı (VM veya fiziksel sunucu) dağıtarak çalıştırmak yeterlidir. Uygulamanızı birden çok hizmetlerini yapılırsa, ancak yapmanız *onu oluşturan*, çok. Farklı seçenekler görelim.
 
 ***Y: Çalıştır tek bir kapsayıcı veya hizmet seçeneği***
 
-Aşağıda gösterildiği gibi komutu çalıştırmak docker kullanarak Docker görüntünün çalıştırabilirsiniz:
+Burada gösterildiği gibi komutu çalıştırın: docker kullanarak Docker görüntüsünü çalıştırabilirsiniz:
 
 ```
 docker run -t -d -p 80:5000
 cesardl/netcore-webapi-microservice-docker:first
 ```
 
-Bu belirli dağıtım için biz 5000 iç bağlantı noktası 80 numaralı bağlantı noktasına gönderilen istekleri yönlendirme olduğunu unutmayın. Şimdi, uygulama dış ana bilgisayar düzeyinde 80 numaralı bağlantı noktasında dinliyor.
+Bu belirli dağıtım için biz 5000 iç bağlantı noktası için 80 numaralı bağlantı noktasına gönderilen istekleri yönlendirme, unutmayın. Artık, uygulamanın dış konak düzeyinde 80 numaralı bağlantı noktasında dinliyor.
 
-***Seçenek B: oluşturma ve çalıştırma birden çok kapsayıcı uygulama***
+***Seçenek B: oluştur ve Çalıştır birden çok kapsayıcılı bir uygulama***
 
-Çoğu Kurumsal senaryoda, Docker uygulama birden çok hizmetlerinden oluşur. Bu durumlarda, komutunu çalıştırabilirsiniz docker compose'u (Şekil 4-21 yukarı), hangi daha önce oluşturmuş olabileceğiniz docker-compose.yml dosyası kullanır. Bu komutu çalıştırmak, tüm ilgili kapsayıcılarında oluşan bir uygulamayla dağıtır.
+Çoğu Kurumsal senaryolarda, Docker uygulaması birden çok hizmetlerini oluşacaktır. Bu durumlarda komutunu çalıştırabilirsiniz docker-compose (Şekil 4-21 ayarlama), hangi daha önce oluşturmuş olabileceğiniz docker-compose.yml dosyasını kullanır. Bu komutu çalıştırarak tüm ilgili kapsayıcılarında oluşan bir uygulama dağıtır.
 
 ![](./media/image27.png)
 
-Şekil 4-21: "docker-oluşturmanıza" komutunu çalıştırarak sonuçları
+Şekil 4-21: "docker compose up" komutunu çalıştırma sonuçları
 
-Docker çalıştırdıktan sonra-oluşturmanıza, uygulamanızı ve ilgili kaldırıldığından, Docker ana bilgisayara VM gösterimi Şekil 4-22'de gösterildiği gibi dağıttığınız.
+Docker'ı çalıştırdıktan sonra-oluşturmanıza, uygulamanız ve onun ilişkili kapsayıcılar, Docker konağı VM gösteriminde Şekil 4-22'de gösterildiği gibi dağıtın.
 
 ![](./media/image28.png)
 
-Şekil 4-22: VM ile dağıtılan Docker kapsayıcıları
+Şekil 4-22: VM dağıtılmış Docker kapsayıcıları ile
 
-Not docker-oluşturan ayarlama ve çalıştırma docker kapsayıcılarınızı geliştirme ortamında test etmek için yeterli olabilir, ancak, bunları hiç Docker kümeleriyle çalışmak beklediğiniz ve Docker Swarm, Mesosphere DC/OS veya Kubernetes orchestrators gibi kullanamayabilir ölçeği oluşturabilmek. Gibi bir küme kullanıyorsanız [Docker Swarm modu](https://docs.docker.com/engine/swarm/) dağıtmak ve docker hizmet oluşturmak için tek Hizmetleri gibi ya da bunu olduğunuzda ek komutları ile test gerek (Docker için Windows ve Mac sürümünden itibaren kullanılabilir sürüm 1.12), birkaç kapsayıcıları için oluşan bir uygulama dağıtımı, paket oluşturma docker kullanarak ve docker makalesinde açıklandığı gibi bir yığın oluşturulmuş uygulama dağıtarak myBundleFile, dağıtma [dağıtılmış uygulama paketleri](https://blog.docker.com/2016/06/docker-app-bundle/) Docker gelen.
+Not docker-compose ayarlama ve docker run kapsayıcılarınızı geliştirme ortamınızda test etmek için yeterli olmayabilir. ancak, bunları Docker kümeleriyle çalışmak görmeyi ve Docker Swarm, Mesosphere DC/OS veya Kubernetes düzenleyicileri gibi kullanmamak ölçeği artırma oluşturabilmek. Gibi bir küme kullanıyorsanız [Docker Swarm modu](https://docs.docker.com/engine/swarm/) (Docker için Windows ve Mac sürümünden itibaren kullanılabilir sürüm 1.12), dağıtın ve docker hizmeti oluşturmak için tek Hizmetleri gibi ya da işiniz ek komutlar ile test için ihtiyacınız birden çok kapsayıcılardan oluşan bir uygulama dağıtma, paket oluşturma kullanarak docker ve docker dağıtma myBundleFile, makalesinde açıklandığı gibi bir yığın oluşturulmuş uygulama dağıtarak [dağıtılmış uygulama paketleri](https://blog.docker.com/2016/06/docker-app-bundle/) docker.
 
-İçin [DC/OS](https://mesosphere.com/blog/2015/09/02/dcos-cli-command-line-tool-datacenter/) ve [Kubernetes](http://kubernetes.io/docs/user-guide/deployments/#creating-a-deployment) farklı dağıtım komutlarını ve komut dosyaları da kullanırsınız.
+İçin [DC/OS](https://mesosphere.com/blog/2015/09/02/dcos-cli-command-line-tool-datacenter/) ve [Kubernetes](https://kubernetes.io/docs/user-guide/deployments/#creating-a-deployment) farklı dağıtım komutları ve komut dosyaları, de kullanmanız gerekir.
 
-### <a name="step-6-test-your-docker-application-locally-in-your-local-cd-vm"></a>6. adım: Docker uygulamanızda (yerel olarak yerel CD VM) Test
+### <a name="step-6-test-your-docker-application-locally-in-your-local-cd-vm"></a>6. adım: Docker uygulamanızda (yerel olarak yerel CD sanal makinenizin) Test
 
-Bu adımı uygulamanız yapılması bağlı olarak değişir.
+Bu adım, uygulamanızı yapmak bağlı olarak değişir.
 
-Bir çok basit .NET Core Web API'si "Merhaba tek kapsayıcısı veya hizmet dağıtılan World", yalnızca DockerFile belirtilen TCP bağlantı noktası sağlayarak hizmete erişmek gerekir.
+Bir çok basit .NET Core Web API'si "Hello tek kapsayıcı veya hizmet olarak dağıtılan World", yalnızca Dockerfile'da belirtilen TCP bağlantı noktası sağlayarak hizmete erişmeniz gerekecektir.
 
-Localhost üzerinde hizmetinize gitmek için açık değilse IP adresi makine için bu komutu kullanarak bulun:
+Localhost, hizmetinize gidin açık değilse şu komutu kullanarak makine için IP adresini bulun:
 
-docker Makine IP *kapsayıcı adı bilgisayarınızı*
+docker-machine IP *your-container-name*
 
-Docker ana bilgisayarında, bir tarayıcı açın ve o siteye gidin; Şekil 4-23'te gösterildiği gibi çalışır, uygulama/hizmet görmeniz gerekir.
+Docker konağı, bir tarayıcı açın ve o siteye gidin; Şekil 4-23'te gösterildiği gibi uygulama/hizmet çalışıyorsa, görmeniz gerekir.
 
 ![](./media/image29.png)
 
 Şekil 4-23: localhost kullanarak yerel olarak Docker uygulamanızı test etme
 
-Nasıl bunu çalıştırmak, docker ile daha önce açıklandığı gibi dağıtılmış olduğu için 80 numaralı bağlantı noktasını kullanıyor, ancak dahili olarak, bağlantı noktası 5000 yönlendirildi unutmayın.
+Nasıl bunu çalıştırmak, docker ile daha önce açıklandığı gibi dağıtılmış olduğu için 80 numaralı bağlantı noktasını kullanıyor, ancak dahili olarak, bağlantı noktası 5000 yönlendirilen unutmayın.
 
-Bu terminal durumundan CURL kullanarak test edebilirsiniz. Windows Docker yüklemede varsayılan IP 10.0.75.1, Şekil 4-24'de gösterilen aynıdır.
+Bu terminalde CURL kullanarak test edebilirsiniz. Windows üzerindeki Docker yüklemede varsayılan IP 10.0.75.1, Şekil 4-24 gösterilen aynıdır.
 
 ![](./media/image30.png)
 
-Şekil 4-24: CURL kullanarak yerel olarak Docker uygulamayı test etme
+Şekil 4-24: Docker uygulaması CURL kullanarak yerel olarak test etme
 
-**Docker üzerinde çalışan bir kapsayıcı hata ayıklama**
+**Docker üzerinde çalışan bir kapsayıcısında hata ayıklama**
 
 Node.js ve .NET Core kapsayıcıları gibi diğer platformlarda kullanıyorsanız, visual Studio Code hata ayıklama Docker destekler.
 
-Ayrıca Docker .NET Core kapsayıcılarında Visual Studio kullanırken bir sonraki bölümde açıklandığı gibi ayıklayabilirsiniz.
+Ayrıca Docker kapsayıcılarında .NET Core Visual Studio kullanarak, sonraki bölümde açıklandığı gibi ayıklayabilirsiniz.
 
 **Daha fazla bilgi:** Node.js Docker kapsayıcılarında hata ayıklama hakkında daha fazla bilgi için şuraya gidin <https://blog.docker.com/2016/07/live-debugging-docker/> ve [ https://blogs.msdn.microsoft.com/\ kullanıcı\_ed/2016/02/27 / Visual-Studio-Code-New-Features-13-Big-Debugging-Updates-Rich-Object-hover-Conditional-Breakpoints-node-js-Mono-More/](https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/).
 
 
 >[!div class="step-by-step"]
 [Önceki](docker-apps-development-environment.md)
-[sonraki](visual-studio-tools-for-docker.md)
+[İleri](visual-studio-tools-for-docker.md)

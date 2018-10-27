@@ -2,19 +2,19 @@
 title: TraceListener
 ms.date: 03/30/2017
 ms.assetid: c2c0b595-a384-4eb3-b94d-1b3be7cc7a5c
-ms.openlocfilehash: be8c003b1980bdf80218bd226d25f51a2ebcea43
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1bd15aafc85e5553a4b4acef6901beb9a0f1745e
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33485075"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50033356"
 ---
 # <a name="tracelistener"></a>TraceListener
 TraceListener.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```csharp
 class TraceListener  
 {  
   string Name;  
@@ -23,7 +23,7 @@ class TraceListener
 ```  
   
 ## <a name="methods"></a>Yöntemler  
- TraceListener sınıfı herhangi bir yöntem tanımlamıyor.  
+ TraceListener sınıf herhangi bir yöntemi tanımlamaz.  
   
 ## <a name="properties"></a>Özellikler  
  TraceListener sınıfı aşağıdaki özelliklere sahiptir:  
@@ -31,19 +31,19 @@ class TraceListener
 ### <a name="name"></a>Ad  
  Veri türü: dize  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
  İzleme dinleyicisi adı.  
   
 ### <a name="tracelistenerarguments"></a>TraceListenerArguments  
- Veri türü: TraceListenerArgument dizisi  
+ Veri türü: TraceListenerArgument dizi  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
  İzleme dinleyicisi bağımsız değişkenler.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|MOF|Bildirilen Servicemodel.mof.|  
+|MOF|Bildirilmiş Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Ad Alanı|İçinde tanımlanan root\ServiceModel|
+|Ad Alanı|İçinde tanımlı root\ServiceModel|

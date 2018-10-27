@@ -12,37 +12,37 @@ helpviewer_keywords:
 ms.assetid: cf5eacd0-d3ec-4879-b6da-5fd5e4372202
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3667a644253ab52d8421a1d4222e0bf8c03624c1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0508e9291b089ec7af6a0b41bbc231fdb0701ad6
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751980"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452997"
 ---
 # <a name="global-assembly-cache"></a>Genel Derleme Önbelleği
-Ortak dil çalışma zamanı yüklendiği her bilgisayarda, Genel Derleme Önbelleği'adında bir makine genelinde kod önbelleği bulunur. Genel Derleme Önbelleği özellikle bilgisayarda çeşitli uygulamalar tarafından paylaşılmak üzere belirtilen derlemelerini depolar.  
+Ortak dil çalışma zamanının yüklendiği her bilgisayarda, genel derleme önbelleği olarak adlandırılan bir makine düzeyinde kod önbelleği bulunur. Özellikle bilgisayarda çeşitli uygulamalar tarafından paylaşılmak üzere belirtilen derlemeleri genel derleme önbelleği depolar.  
   
- Yalnızca, gerektiğinde bunları genel derleme önbelleğine yükleme tarafından derlemeleri paylaşması gerekir. Genel bir kılavuz olarak derleme bağımlılıkları gizliliğini korumak ve bir derlemeyi paylaşımı kesinlikle gerekli olmadığı sürece derlemeleri uygulama dizininde bulun. Buna ek olarak, COM birlikte çalışma veya yönetilmeyen kod için erişilebilir hale getirmek için genel derleme önbelleğine derlemelerini yüklemek gerekli değildir.  
+ Derlemeleri için yalnızca ihtiyacınız olduğunda bunları genel bütünleştirilmiş kod önbelleğine yükleyerek paylaşmalısınız. Genel bir kılavuz olarak derleme bağımlılıklarını özel tutun ve derlemeyi paylaşmanız kesinlikle gerekli olmadığı sürece, derlemeleri uygulama dizinine yerleştirin. Ayrıca, derlemeleri COM birlikte çalışma veya yönetilmeyen koda erişilebilir hale getirmek için genel derleme önbelleğine yüklemek gerekli değildir.  
   
 > [!NOTE]
->  Açıkça bir derlemeyi genel derleme önbelleğine yükleme istediğiniz olmayan senaryolar vardır. Genel Derleme Önbelleği uygulamada oluşturan derlemeler birini yerleştirirseniz, artık çoğaltmak veya uygulamayı kullanarak yüklemek **xcopy** uygulama dizini kopyalamak için komutu. Derleme Genel Derleme Önbelleği'nde de taşımanız gerekir.  
+>  Açıkça bir derlemeyi genel bütünleştirilmiş kod önbelleğine yüklemek istediğiniz olmayan senaryolar vardır. Genel Derleme Önbelleği uygulamayı oluşturan derlemeleri birini yerleştirirseniz, artık çoğaltmak veya uygulamayı kullanarak yüklemek **xcopy** uygulama dizinini kopyalamak için komutu. Derlemeyi de genel derleme önbelleğinde taşımanız gerekir.  
   
- Bir derlemeyi genel derleme önbelleğine dağıtmanın iki yolu vardır:  
+ Bir derlemeyi genel bütünleştirilmiş kod önbelleğine dağıtmak için iki yolu vardır:  
   
--   Genel Derleme Önbelleği ile çalışmak üzere tasarlanmış bir yükleyici kullanın. Derlemeleri genel derleme önbelleğine yükleme için tercih edilen seçenek budur.  
+-   Genel Derleme Önbelleği ile çalışmak üzere tasarlanmış bir yükleyici kullanın. Derlemeleri genel derleme önbelleğine yüklemek için tercih edilen seçenek budur.  
   
--   Adlı bir geliştirici aracı [Genel Derleme Önbelleği Aracı (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md), tarafından sağlanan [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
+-   Adlı bir geliştirici araç [Genel Derleme Önbelleği aracını (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md), tarafından sağlanan [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
   
     > [!NOTE]
-    >  Derlemeleri genel derleme önbelleğine yükleme için Windows Installer dağıtım senaryolarında kullanın. Derleme başvurusu sayım ve Windows Installer kullanırken sağlanan diğer özellikleri sağlamadığından yalnızca geliştirme senaryolarda Genel Derleme Önbelleği Aracı'nı kullanın.  
+    >  Dağıtım senaryolarında, derlemeleri genel derleme önbelleğine yüklemek için Windows Installer kullanın. Bütünleştirilmiş kod başvuru sayımı ve Windows Installer'ı kullanırken, sunulan diğer özellikleri sağlamaz çünkü yalnızca geliştirme senaryolarda, Genel Derleme Önbelleği aracını kullanın.  
   
- .NET Framework 4 ile başlayarak, genel derleme önbelleği için varsayılan konum olan **%windir%\Microsoft.NET\assembly**. .NET Framework önceki sürümlerde varsayılan konumdur **%windir%\assembly**.  
+ .NET Framework 4 ile başlayarak, genel derleme önbelleği için varsayılan konum olduğu **%windir%\Microsoft.NET\assembly**. Önceki .NET Framework sürümlerinde varsayılan konumdur **%windir%\assembly**.  
   
- Yöneticiler genellikle yazma denetlemek ve yürütme erişimi için bir erişim denetimi listesi (ACL) kullanılarak systemroot dizini koruyun. Genel Derleme Önbelleği systemroot dizinin bir alt dizinde yüklü olduğundan, bu dizinin ACL devralır. Yalnızca yönetici ayrıcalıklarına sahip kullanıcılar, Genel Derleme Önbelleği'nden dosyalarını silmek için izin önerilir.  
+ Yöneticiler, erişim denetimi listesi (ACL) kullanarak yazma denetlemek ve yürütme erişimi systemroot dizinini genellikle koruyun. Genel bütünleştirilmiş kod önbelleği systemroot dizininin alt dizininde yüklü olduğu için dizinin ACL'sini devralır. Yalnızca yönetici ayrıcalıklarına sahip kullanıcılar, genel derleme önbelleğinden dosyaları silmek için izin önerilir.  
   
- Derlemeleri Genel Derleme Önbelleği'nde dağıtılan güçlü bir adı olması gerekir. Bir derlemeyi genel derleme önbelleği eklendiğinde, bütünlük denetimlerinin derlemeyi oluşturan tüm dosyalar üzerinde gerçekleştirilir. Önbellek, bir derlemeyi, örneğin, bir dosya değişti, ancak bildirim değişikliği yansıtmayan durumlarda değiştirilmemiş emin olmak için bu bütünlüğü denetler.  
+ Derlemeleri Genel Derleme Önbelleği'nde dağıtılan bir tanımlayıcı ad olmalıdır. Bir derlemeyi Genel Derleme Önbelleği'ne eklendiğinde, bütünlük kontrolleri derlemeyi oluşturan tüm dosyalar üzerinde gerçekleştirilir. Önbellek, bir derleme, örneğin, bir dosya değişmiş ancak bildirim değişikliği yansıtmaz oynanmadığını saptayabilmeleri emin olmak için bu bütünlük denetimi gerçekleştirir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Ortak Dil Çalışma Zamanı Modülündeki Bütünleştirilmiş Kodlar](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- [Bütünleştirilmiş Kodlar ve Genel Derleme Önbelleği ile Çalışma](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)  
- [Kesin Adlandırılmış Bütünleştirilmiş Kodlar](../../../docs/framework/app-domains/strong-named-assemblies.md)
+- [Ortak Dil Çalışma Zamanı Modülündeki Bütünleştirilmiş Kodlar](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+- [Bütünleştirilmiş Kodlar ve Genel Derleme Önbelleği ile Çalışma](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)  
+- [Kesin Adlandırılmış Bütünleştirilmiş Kodlar](../../../docs/framework/app-domains/strong-named-assemblies.md)

@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 07/02/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 133b7ad17a98e4eea510f1704555b690b98e9091
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: bfae97d65ec192e9289841c82d84807b4937b09a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44252850"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183821"
 ---
 # <a name="tutorial-use-mlnet-to-predict-new-york-taxi-fares-regression"></a>Öğretici: Kullanımı ML.NET New York taksi fares (gerileme) tahmin etmek için
 
@@ -150,13 +150,13 @@ pipeline.Add(new TextLoader(_datapath).CreateFrom<TaxiTrip>(useHeader: true, sep
 
 Sonraki adımlarda sütunlara adlarıyla tanımlanan diyoruz `TaxiTrip` sınıfı.
 
-Model eğitim ve diğer değerleri varsayılan olarak, hesaplanan zaman **etiket** sütun tahmin için doğru değerleri olarak değerlendirilir. Taksi seyahat taksi tahmin etmek istediğimiz gibi kopyalayın `FareAmount` sütuna **etiket** sütun. Bunu yapmak için kullanın <xref:Microsoft.ML.Transforms.ColumnCopier> ve aşağıdaki kodu ekleyin:
+Model eğitim ve diğer değerleri varsayılan olarak, hesaplanan zaman **etiket** sütun tahmin için doğru değerleri olarak değerlendirilir. Taksi seyahat taksi tahmin etmek istediğimiz gibi kopyalayın `FareAmount` sütuna **etiket** sütun. Bunu yapmak için kullanın <xref:Microsoft.ML.Legacy.Transforms.ColumnCopier> ve aşağıdaki kodu ekleyin:
 
 ```csharp
 pipeline.Add(new ColumnCopier(("FareAmount", "Label")));
 ```
 
-Modeli eğitir algoritması **sayısal** kategorik verileri dönüştürmek zorunda özellikleri (`VendorId`, `RateCode`, ve `PaymentType`) içine numaraları değerleri. Bunu yapmak için kullanın <xref:Microsoft.ML.Transforms.CategoricalOneHotVectorizer>, anahtar değerlerini farklı değerlerle her sütun, farklı sayısal atar ve aşağıdaki kodu ekleyin:
+Modeli eğitir algoritması **sayısal** kategorik verileri dönüştürmek zorunda özellikleri (`VendorId`, `RateCode`, ve `PaymentType`) içine numaraları değerleri. Bunu yapmak için kullanın <xref:Microsoft.ML.Legacy.Transforms.CategoricalOneHotVectorizer>, anahtar değerlerini farklı değerlerle her sütun, farklı sayısal atar ve aşağıdaki kodu ekleyin:
 
 ```csharp
 pipeline.Add(new CategoricalOneHotVectorizer("VendorId",
@@ -164,7 +164,7 @@ pipeline.Add(new CategoricalOneHotVectorizer("VendorId",
                                              "PaymentType"));
 ```
 
-Veri hazırlama son adımda tüm özellik sütunlara birleştirir **özellikleri** sütun kullanarak <xref:Microsoft.ML.Transforms.ColumnConcatenator> dönüştürme sınıfı. Varsayılan olarak, bir öğrenme algoritması yalnızca özelliklerinden işler **özellikleri** sütun. Aşağıdaki kodu ekleyin:
+Veri hazırlama son adımda tüm özellik sütunlara birleştirir **özellikleri** sütun kullanarak <xref:Microsoft.ML.Legacy.Transforms.ColumnConcatenator> dönüştürme sınıfı. Varsayılan olarak, bir öğrenme algoritması yalnızca özelliklerinden işler **özellikleri** sütun. Aşağıdaki kodu ekleyin:
 
 ```csharp
 pipeline.Add(new ColumnConcatenator("Features",
@@ -182,9 +182,9 @@ Dikkat `TripTime` karşılık gelen sütun `trip_time_in_secs` sütunu veri küm
 
 ## <a name="choose-a-learning-algorithm"></a>Bir öğrenme algoritması seçin
 
-Veri ardışık düzenine eklemek ve giriş doğru biçime dönüştürme sonra bir öğrenme algoritması seçin (**learner**). Learner modeli eğitir. Seçtiğiniz bir **regresyon** görev kullandığınız için bu sorun için bir <xref:Microsoft.ML.Trainers.FastTreeRegressor> ML.NET tarafından sağlanan regresyon öğrencileriyle biri olan learner.
+Veri ardışık düzenine eklemek ve giriş doğru biçime dönüştürme sonra bir öğrenme algoritması seçin (**learner**). Learner modeli eğitir. Seçtiğiniz bir **regresyon** görev kullandığınız için bu sorun için bir <xref:Microsoft.ML.Legacy.Trainers.FastTreeRegressor> ML.NET tarafından sağlanan regresyon öğrencileriyle biri olan learner.
 
-<xref:Microsoft.ML.Trainers.FastTreeRegressor> Gradyan artırma learner kullanır. Gradyan artırma bir machine learning teknik regresyon sorunları var. Bu, her regresyon ağaç tarafınızdaki bir biçimde oluşturur. Her adımda hata oluştu ölçmenizi ve sonraki düzeltmek için önceden tanımlanmış kaybı işlevi kullanır. Aslında bir topluluğu, tahmin modellerini daha zayıf bir tahmin modeli sonucudur. Gradyan artırma hakkında daha fazla bilgi için bkz. [artırılmış karar ağacı regresyonu](/azure/machine-learning/studio-module-reference/boosted-decision-tree-regression).
+<xref:Microsoft.ML.Legacy.Trainers.FastTreeRegressor> Gradyan artırma learner kullanır. Gradyan artırma bir machine learning teknik regresyon sorunları var. Bu, her regresyon ağaç tarafınızdaki bir biçimde oluşturur. Her adımda hata oluştu ölçmenizi ve sonraki düzeltmek için önceden tanımlanmış kaybı işlevi kullanır. Aslında bir topluluğu, tahmin modellerini daha zayıf bir tahmin modeli sonucudur. Gradyan artırma hakkında daha fazla bilgi için bkz. [artırılmış karar ağacı regresyonu](/azure/machine-learning/studio-module-reference/boosted-decision-tree-regression).
 
 Aşağıdaki kodu ekleyin `Train` önceki adımda eklenen koddan veri işleme yöntemi:
 

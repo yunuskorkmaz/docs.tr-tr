@@ -2,62 +2,62 @@
 title: 'İlişkilendirilmiş İzlemeleri Görüntülemek ve Sorun Gidermek için Hizmet İzleme Görüntüleyicisini Kullanma '
 ms.date: 03/30/2017
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-ms.openlocfilehash: cfa1ec0e486943d196ec016be87544f17a0114e6
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: b43c7f3d8018c119dbabf8f55ec115a00e1ac077
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806776"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188800"
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>İlişkilendirilmiş İzlemeleri Görüntülemek ve Sorun Gidermek için Hizmet İzleme Görüntüleyicisini Kullanma 
-Bu konu, izleme verilerinin biçimi açıklar ve uygulamanızda sorun giderme için hizmet izleme görüntüleyicisini kullanma yaklaşımlar görüntüleme.  
+Bu konuda izleme verilerinin biçimini tanımlar ve uygulamanızda sorun giderme için hizmet izleme görüntüleyicisini kullanma yaklaşımları görüntüleme.  
   
-## <a name="using-the-service-trace-viewer-tool"></a>Hizmet izleme Görüntüleyicisi Aracı'nı kullanma  
- Windows Communication Foundation (WCF) hizmet izleme Görüntüleyicisi aracı, bir hatasının kök nedenini bulmak için WCF dinleyicileri tarafından üretilen tanılama izlemeleri ilişkilendirmenize yardımcı olur. Aracı kolayca, grubu, görüntüleyin ve izlemeleri filtre, böylece tanılayabilir, onarmak ve WCF hizmetleri ile ilgili sorunları doğrulamak için bir yol sağlar. Bu aracı kullanmayla ilgili daha fazla bilgi için bkz: [hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
+## <a name="using-the-service-trace-viewer-tool"></a>Hizmet izleme görüntüleyicisini kullanma  
+ Windows Communication Foundation (WCF) hizmet izleme Görüntüleyicisi aracı bir hata nedenini bulmak için WCF dinleyicileri tarafından üretilen tanılama izlemeleri ilişkilendirmenize yardımcı olur. Aracı kolayca görünümünde, Grup ve izlemeler filtre, böylece tanılayabilir, onarma ve WCF hizmetleri ile ilgili sorunlar doğrulamak için bir yol sağlar. Bu aracı kullanma hakkında daha fazla bilgi için bkz. [hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
   
- Bu konuda çalıştırarak oluşturulan izlemeleri ekran görüntüleri içeren [izleme ve ileti günlüğe kaydetme](../../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) kullanarak görüntülendiğinde örnek [hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Bu konuda izleme içerik, etkinlikler ve bunların bağıntı anlama ve sorunlarını giderirken izlemeleri çok sayıda analiz etme gösterilir.  
+ Bu konuda çalıştırılarak oluşturulan izlemeleri ekran görüntüleri içeren [izleme ve ileti günlüğe kaydetme](../../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) kullanarak görüntülendiğinde, örnek [hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Bu konuda izleme içerik, etkinlikler ve bunların bağıntı anlama ve sorun giderme sırasında izlemeleri çok sayıda analiz etme gösterilir.  
   
-## <a name="viewing-trace-content"></a>Görüntüleme izleme içeriği  
- İzleme olayı aşağıdaki en önemli bilgileri içerir:  
+## <a name="viewing-trace-content"></a>İzleme içeriği görüntüleme  
+ İzleme olayı, aşağıdaki en önemli bilgileri içerir:  
   
 -   Etkinlik adı olarak ayarlandığında.  
   
--   Çıkması süre.  
+-   Arabellek zaman.  
   
 -   İzleme düzeyi.  
   
--   İzleme kaynağı adı.  
+-   İzleme kaynak adı.  
   
 -   İşlem adı.  
   
 -   İş parçacığı kimliği.  
   
--   Microsoft Docs izleme ile ilgili daha fazla bilgi edinmek, bir hedefe işaret eden bir URL bir benzersiz izleme tanımlayıcısı.  
+-   Microsoft Docs izlemeye ilgili daha fazla bilgi edinmek, bir hedefe işaret eden bir URL bir izleme benzersiz tanımlayıcısı.  
   
- Bunların tümü üst sağ bölmede hizmet izleme Görüntüleyicisi'nde veya içinde görülebilir **temel bilgileri** izleme seçerken sağ alt paneli biçimlendirilmiş görünümünü bölümünde.  
+ Tüm bunların üst sağ panelde hizmet izleme görüntüleyicisini ya da görülebilir **temel bilgileri** biçimlendirilmiş görünümünde bir izleme seçerken sağ bölmenin bölümü.  
   
 > [!NOTE]
->  İstemci ve hizmet aynı makinede varsa, her iki uygulama izlemelerini mevcut olacaktır. Bunlar kullanarak filtrelenebilir **işlem adı** sütun.  
+>  İstemciyi ve hizmeti aynı makinede ise, iki uygulama izlemelerini mevcut olacaktır. Bunları kullanarak filtrelenebilir **işlem adı** sütun.  
   
- Ayrıca, biçimlendirilmiş görünümü de ek ayrıntılı bilgi kullanılabilir olduğunda ve izleme için bir açıklama sağlar. İkinci özel durum türünü ve ileti, çağrı yığınları ileti eylemi başlangıç/bitiş alanları ve diğer özel durum bilgileri içerebilir.  
+ Ayrıca, biçimlendirilmiş görünümü, ayrıca izleme ve kullanılabilir olduğunda ek ayrıntılı bilgi için bir açıklama sağlar. İkinci özel durum türünü ve iletisini, çağrı yığınlarını, ileti eylemi / için alanları ve diğer özel durum bilgileri içerebilir.  
   
- XML Görünümü'nde yararlı xml etiketleri şunları içerir:  
+ XML Görünümü'nde yararlı xml etiketleri şunlardır:  
   
--   \<Alt > (izleme düzeyi).  
+-   `<SubType>` (izleme düzeyi).  
   
--   \<TimeCreated >.  
+-   `<TimeCreated>`.  
   
--   \<Kaynak > (izleme kaynak adı).  
+-   `<Source>` (izleme kaynak adı).  
   
--   \<Bağıntı > (Etkinlik Kimliği yayma izleme ayarlanır).  
+-   `<Correlation>` (izleme gösterilirken etkinlik kimliği ayarlanır).  
   
--   \<Yürütme > (işlem ve iş parçacığı kimliği).  
+-   `<Execution>` (kimlik) işlem ve iş parçacığı.  
   
--   \<Bilgisayar >.  
+-   `<Computer>`.  
   
--   \<ExtendedData > gibi \<eylem >, \<MessageID > ve \<ActivityID > ileti üstbilgisinde bir ileti gönderirken ayarlayın.  
+-   `<ExtendedData>`, dahil olmak üzere `<Action>`, `<MessageID>` ve `<ActivityId>` ileti üstbilgisinde bir ileti gönderirken ayarlayın.  
   
- "Gönderilen bir ileti bir kanal üzerinden" izleme incelerseniz, aşağıdaki içeriği görebilirsiniz.  
+ "Gönderilen bir kanal üzerinden ileti" izleme incelerseniz, aşağıdaki içeriği görebilirsiniz.  
   
 ```xml  
 <E2ETraceEvent xmlns="http://schemas.microsoft.com/2004/06/E2ETraceEvent">  
@@ -105,98 +105,98 @@ Bu konu, izleme verilerinin biçimi açıklar ve uygulamanızda sorun giderme i�
 ```  
   
 ## <a name="servicemodel-e2e-tracing"></a>ServiceModel E2E izleme  
- Zaman `System.ServiceModel` izleme kaynağı olarak ayarlanmış olan bir `switchValue` dışında kapalı ve `ActivityTracing`, WCF, etkinlikler ve aktarımlar için WCF işleme oluşturur.  
+ Zaman `System.ServiceModel` izleme kaynağı ile ayarlanmış bir `switchValue` dışındaki kapalı, ve `ActivityTracing`, WCF, etkinlikler ve aktarımları için WCF işlemi oluşturur.  
   
- Bir etkinlik bir mantıksal gruplar bu işleme birimine tüm izlemeleri ilgili işleme birimidir. Örneğin, her istek için bir etkinlik tanımlayabilirsiniz. Aktarımları uç noktaları'nda etkinlikler arasında nedensel bir ilişki oluşturun. Etkinlik Kimliği yayma uç noktalar arasında etkinliklerini ilişkilendirmek etkinleştirir. Bu ayar yapılabilir `propagateActivity` = `true` her uç noktada yapılandırma. Etkinlikler, aktarımları ve yayma hata bağıntı işlemleri yapmanıza olanak verir. Bu şekilde, bir hata kök nedenini daha hızlı bir şekilde bulabilirsiniz.  
+ Grupları, işleme birimine tüm izlemeleri ilgili işleme bir mantıksal birim bir etkinliktir. Örneğin, her istek için bir etkinlik tanımlayabilirsiniz. Aktarımları uç noktaları içindeki etkinlikleri arasındaki nedensel bir ilişki oluşturun. Etkinlik Kimliği yayma, uç noktalar genelinde etkinliklerini ilişkilendirmek sağlar. Bu ayarlayarak yapılabilir `propagateActivity` = `true` her uç noktasında yapılandırması. Etkinlikler, aktarımları ve yayma hata bağıntı gerçekleştirmenize olanak sağlar. Bu şekilde, bir hatanın kök nedenini daha hızlı bir şekilde bulabilirsiniz.  
   
- İstemcide, her nesne modeli çağrısı (örneğin, açık ChannelFactory, Ekle, bölme ve benzeri) için bir WCF etkinlik oluşturulur Her işlem çağrıları "İşlem eylem" etkinliğinde işlenir.  
+ İstemcide, bir WCF etkinlik (örneğin, açık ChannelFactory, Ekle, bölme ve benzeri.) her nesne modeli çağrısı için oluşturulur. Her işlem çağrıları, bir "İşlem Action" etkinlik içinde işlenir.  
   
- Aşağıdaki ekran görüntüsünde ayıklanan [izleme ve ileti günlüğe kaydetme](../../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) örnek sol panelde oluşturulma tarihine göre sıralanmış istemci işleminde, oluşturulan etkinliklerin listesini görüntüler. Etkinliklerin kronolojik listesi aşağıdadır:  
+ Aşağıdaki ekran görüntüsünde, ayıklanan gelen [izleme ve ileti günlüğe kaydetme](../../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) örnek sol panelde, oluşturma zamanı tarafından sıralanan istemci işleminde, oluşturulan etkinlikleri listesini görüntüler. Etkinlikleri kronolojik bir listesi verilmiştir:  
   
 -   Kanal fabrikası (ClientBase) oluşturulur.  
   
 -   Kanal fabrikası açıldı.  
   
--   Ekleme eylemi işlendi.  
+-   Eylem Ekle işlendi.  
   
--   Güvenli oturum (ilk istek üzerine bu OLUŞTU) ayarlayabilir ve üç güvenlik altyapı yanıt iletilerini işlenen: RST, RSTR, SCT (işlem iletisi 1, 2, 3).  
+-   Güvenli oturum (ilk isteğe bu OLUŞTU) ayarlama ve üç güvenlik altyapısı yanıt iletilerini işlenebilir: lk, RSTR, SCT (işlem iletisi 1, 2, 3).  
   
--   Çıkarma Çarp işlenir ve bölme ister.  
+-   Çıkarma birden çok kez işlenen ve bölme ister.  
   
--   Kanal fabrikası kapatılır ve bunun yapılması ve güvenli oturum kapatıldığında güvenlik ileti yanıtı iptal işlenebilir.  
+-   Kapalı kanal fabrikası ve bunun yapılması ve güvenli oturum kapalı güvenlik ileti yanıtı iptal işlenir.  
   
- Biz, wsHttpBinding nedeniyle güvenlik altyapı iletilere bakın.  
+ WsHttpBinding nedeniyle güvenlik altyapısı iletileri görüyoruz.  
   
 > [!NOTE]
->  WCF içinde gösteriyoruz yanıt iletilerini başlangıçta ayrı bir etkinlik (işlem iletisi) işlenmekte olan istek iletisi, bir aktarımı içerir karşılık gelen işlemi eylem etkinliğine biz bunları ilişkilendirmek önce. Bu altyapı iletileri ve zaman uyumsuz istekler için olur ve biz gerekir ileti inceleyin, ActivityID üstbilgi okuyun ve kendisine ilişkilendirmek için bu kimliğe sahip mevcut işlem eylem etkinliğin tanımlamak due için olabilir. Zaman uyumlu istekleri için yanıt için engelleme ve bu nedenle yanıt ilişkili işlem eylemi biliyor.  
+>  WCF'de, başlangıçta ayrı bir etkinlik (işlem iletisi) işlenmekte olan yanıt iletilerini göstereceğiz önce aktarım aracılığıyla istek iletisi içeren karşılık gelen işlem eylem etkinliği için biz bunları ilişkilendirin. Bu altyapı ileti ve zaman uyumsuz istekler gerçekleşir ve biz gerekir ileti incelemek, ActivityID üstbilgi okuyun ve tanımlamak için ilişkilendirmek için bu kimliğe sahip mevcut işlem eylem etkinliği Bunun nedeni. Zaman uyumlu istekleri için yanıt engelliyor ve bu nedenle yanıt ilişkili işlem eylemi bildirin.  
   
- ![İzleme Görüntüleyicisi'ni kullanarak](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace4.gif "e2eTrace4")  
-WCF istemcisi etkinliklerini oluşturma zamanı (sol paneli) ve iç içe etkinlik ve izlemeleri (üst sağ panelde) tarafından listelenen  
+ ![İzleme görüntüleyicisini kullanma](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace4.gif "e2eTrace4")  
+Oluşturma zamanı (sol paneli) ve iç içe geçmiş etkinlikleri ve izlemeler (üst, sağ, paneli) tarafından listelenen WCF istemci etkinlikleri  
   
- Bir etkinlik sol panelde seçtiğinizde iç içe etkinlik ve izlemelere üst Sağdaki panelde görebiliriz. Bu nedenle, bu bir sınırlı olduğu etkinliklerin listesini hiyerarşik görünümünü solda, seçilen üst aktivitesini temel alarak. Seçili işlem Eylem Ekle yapılan ilk istek olduğu için bu etkinliği güvenli oturum yukarı ayarlamak etkinlik (aktarımı için Aktarım geri) içerir ve işlenmesini ekleme eylemi için izler.  
+ Sol bölmede bulunan bir etkinlik seçtiğimizde, iç içe geçmiş etkinlikleri ve izlemelerle üst Sağdaki panelde görebiliriz. Bu nedenle, bir azaltılmış budur etkinliklerinin listesini hiyerarşik görünümü sol tarafta seçili üst aktivitesini temel alarak. Seçili işlem Eylem Ekle yapılan ilk istek olduğundan, bu etkinlik, güvenli oturum yedekleme kümesi etkinliği (aktarımı geri aktarmak için) içeren ve işlenmesini ekleme eylemi için izler.  
   
- Biz çift işlem eylemi sol panelinde Ekle etkinliği tıklatın, eklenecek ilgili istemci WCF etkinlikleri grafik gösterimi görebiliriz. Sol taraftaki ilk etkinlik kök (0000), varsayılan etkinlik olduğu etkinliktir. WCF dışı ortam etkinliği aktarır. Bu tanımlanmazsa WCF dışında 0000 aktarır. Burada, ikinci etkinlik işlem eylem eklemek, 0 dışında aktarır. Daha sonra Kurulum güvenli oturum bakın.  
+ İşlem Eylem Ekle etkinliği sol bölmede çift tıkladıktan, eklenecek ilgili istemci WCF etkinlikleri grafik gösterimi görebiliriz. İlk soldaki Kök etkinlik (0000), varsayılan etkinlik olduğu etkinliğidir. WCF dışında ortam etkinlik aktarır. Bu tanımlı değil, WCF dışında 0000 aktarır. Burada, ikinci etkinlik işlem eylem eklemek, dışında 0 aktarır. Daha sonra Kurulum güvenli oturum bakın.  
   
- ![İzleme Görüntüleyicisi'ni kullanarak](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace5.gif "e2eTrace5")  
-Grafik görünümü WCF istemci etkinliklerin: ortam etkinlik (burada 0), işlem eylem ve güvenli oturum yukarı ayarlayın  
+ ![İzleme görüntüleyicisini kullanma](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace5.gif "e2eTrace5")  
+Graf görünümü WCF istemci etkinlik: ortam etkinlik (burada 0), işlem eylem ve güvenli oturum yukarı ayarlayın  
   
- Üst sağ paneldeki işlem Eylem Ekle etkinliği ile ilgili tüm izlemeleri görebiliriz. Özellikle, biz istek iletisi ("gönderilen bir ileti bir kanal üzerinden") gönderdiğiniz ve aynı etkinlik içindeki ("alınan bir kanal üzerinden ileti") yanıt aldı. Bu aşağıdaki grafikte gösterilir. Daha anlaşılır olması için güvenli oturum etkinlik ayarlama grafikte daraltılmıştır.  
+ Üst Sağdaki panelde, işlem Eylem Ekle etkinliği ilgili tüm izlemeleri görebiliriz. Özellikle, biz istek iletisi ("gönderilen bir kanal üzerinden ileti") gönderdiğiniz ve aynı etkinlik ("alınan bir kanal üzerinden ileti") yanıt alındı. Bu, aşağıdaki grafikte gösterilir. Anlaşılsın diye, güvenli oturum etkinliği kurma grafikte daraltılmıştır.  
   
- ![İzleme Görüntüleyicisi'ni kullanarak](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace6.gif "e2eTrace6")  
-İşlem eylem etkinlik izlemelerini listesi: isteği göndermek ve aynı etkinlik içindeki yanıtı alırsınız.  
+ ![İzleme görüntüleyicisini kullanma](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace6.gif "e2eTrace6")  
+İşlem eylem etkinliği izlemelerini listesi: isteği göndermek ve aynı etkinlik yanıtı alırsınız.  
   
- Burada, biz yalnızca daha anlaşılır olması için istemci izlemelerini yük, ancak hizmet izlemeleri (istek iletisi aldı ve yanıt iletisi gönderilen) görünür aynı etkinlik içindeki Ayrıca aracı yüklü olup olmadığını ve `propagateActivity` ayarlandı `true.` bu bir sonraki örnekte gösterilir.  
+ Burada yalnızca açıklık için istemci izlemelerini yüklediğimiz, ancak hizmet izlemeleri (istek iletisi alındı ve gönderilen yanıt iletisi) aynı etkinliğin Ayrıca aracı yüklü olmaları durumunda görünür ve `propagateActivity` ayarlandı `true.` bunu bir sonraki çizimde gösterilmektedir.  
   
- Hizmette etkinlik modeli gibi WCF kavramlara eşler:  
+ Hizmette etkinlik modeli WCF kavramlara şu şekilde eşlenir:  
   
-1.  Biz oluşturmak ve bir ServiceHost (Bu ana bilgisayar ile ilgili çeşitli etkinlikler örneği için söz konusu olduğunda güvenlik oluşturabilir) açın.  
+1.  Biz, oluşturmak ve bir ServiceHost (Bu konakla ilgili birkaç etkinlik örneği için söz konusu olduğunda güvenlik oluşturabilir) açın.  
   
-2.  Dinleme adresindeki etkinlik her dinleyicisinde ServiceHost için (ile aktarımları ve açık ServiceHost dışındaki) oluşturuyoruz.  
+2.  Dinleme, etkinlik ServiceHost içinde her dinleyici için (ile aktarımları açık ServiceHost içine ve dışına) oluştururuz.  
   
-3.  Dinleyici istemci tarafından başlatılan bir iletişim isteği algıladığında istemci tarafından gönderilen tüm bayt işlenme bir "Bayt alma" etkinliğe aktarır. Bu etkinlikte istemci-hizmet etkileşim sırasında oluşmuş bağlantı hatalarını görebiliriz.  
+3.  Dinleyici istemci tarafından başlatılan iletişim istek algıladığında istemci tarafından gönderilen tüm baytlar işlenme "Bayt alma" etkinlik için aktarır. Bu etkinlik, istemci-hizmet etkileşim sırasında gerçekleşen bağlantı hataları görebiliriz.  
   
-4.  Bir iletisine karşılık gelen her kümesi alınan bayt için WCF ileti nesnesi burada oluşturuyoruz biz "İşlemi iletisi" etkinliğinde bu baytları işleyin. Bu etkinlikte hatalı zarf veya hatalı bir ileti ile ilgili hatalar bakın.  
+4.  İletiye karşılık gelen her kümesi alınan bayt için Biz bu bayt "İşlemi iletisi" etkinliğinde, WCF ileti nesnesi oluştururuz burada işleyin. Bu etkinlik, hatalı bir zarf veya hatalı bir ileti ile ilgili hataları görüyoruz.  
   
-5.  İleti biçimlendirilmiş sonra size bir işlem eylem etkinliğe aktarın. Varsa `propagateActivity` ayarlanır `true` hem istemci hem de hizmet üzerinde bu etkinlik istemcisinde tanımlı ve daha önce açıklanan aynı kimliğe sahip. İstekle ilişkili tüm izlemeleri içinde WCF yayılan yanıt ileti işleme dahil olmak üzere bu aynı etkinlik içindeki olduğundan bu aşamadan biz uç noktalar arasında doğrudan bağıntı yararlanmaya başlatın.  
+5.  İleti oluşturulduğunda, biz bir işlem eylem etkinliği aktarın. Varsa `propagateActivity` ayarlanır `true` hem istemci hem de hizmet üzerinde bu etkinlik istemcide tanımlanan ve daha önce açıklanan aynı kimliğe sahip. İstekle ilişkili tüm izlemeleri WCF'de yayılan yanıt ileti işleme dahil olmak üzere bu etkinliğe olduğundan bu aşamadan biz doğrudan bağıntı uç noktalar genelinde fayda başlayın.  
   
-6.  İşlem dışı eylem için kullanıcı kodu WCF'de yayılan olanları ile yayılan izlemeleri ayırmak için bir "Kullanıcı kodu yürütme" etkinlik oluşturun. Önceki örnekte, "Hizmet Ekle yanıt gönderir" izleme "Yürütme kullanıcı kodu" etkinliğinde değil istemci tarafından yayıldığı etkinliğinde varsa yayınlanır.  
+6.  İşlem dışı eylem için kullanıcı kodunda WCF'de yayılan gördüğünüzden yayılan izlemeleri yalıtmak için bir "Kullanıcı kodu yürütme" etkinlik oluştururuz. Önceki örnekte, "Hizmet Ekle yanıt gönderir" izleme "Yürütme kullanıcı kodu" etkinlik değil istemci tarafından yayılan etkinlik varsa yayılır.  
   
- Aşağıdaki çizimde, soldaki ilk etkinlik kök (0000), varsayılan etkinlik olduğu etkinliktir. Sonraki üç ServiceHost açmak için etkinliklerdir. Dinleyici etkinliktir sütununda 5 ve bir iletiden kullanıcı kodu etkinleştirme işleme bayt WCF işlenmesini kalan etkinlikleri (6-8) tanımlayın.  
+ Aşağıdaki çizimde, ilk soldaki Kök etkinlik (0000), varsayılan etkinlik olduğu etkinliğidir. Sonraki üç ServiceHost açmak için etkinliklerdir. Dinleyici etkinliktir sütunda 5 ve kalan etkinlikleri (6-8), kullanıcı kodu etkinleştirmesi için işleme bayt gelen iletiyi WCF işlenmesini açıklayın.  
   
- ![İzleme Görüntüleyicisi'ni kullanarak](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace7.gif "e2eTrace7")  
+ ![İzleme görüntüleyicisini kullanma](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace7.gif "e2eTrace7")  
 WCF hizmet etkinlikler listesi  
   
- Aşağıdaki ekran görüntüsünde hem istemci hem de hizmet etkinliklerini gösterir ve etkinlik işlem Eylem Ekle (turuncu) işlemleri arasında vurgular. Oklar, istemci ve hizmet tarafından gönderilen ve alınan istek ve yanıt iletileri ilgilidir. İşlem eylem izlerini grafikte işlemler arasında ayrılmış, ancak aynı etkinlik sağ üst köşede panelinde bir parçası olarak gösterilen. Bu panelinde alınan ve işlenen iletiler için hizmet izlemeleri ve ardından gönderilen iletiler için istemci izlemelerini görebiliriz.  
+ Aşağıdaki ekran görüntüsünde hem istemci hem de hizmet etkinlikleri gösterir ve eylem işlem Ekle etkinliği (turuncu) süreçler arasında vurgular. Oklar, istemci ile hizmet tarafından gönderilen ve alınan istek ve yanıt iletilerinin ilgilidir. İşlem eyleminin izlemeleri graftaki işlemler arasında ayrılmış, ancak aynı etkinliğin sağ panelde bir parçası olarak gösterilir. Bu panelde alınan ve işlenen iletiler için hizmet izlemeleri ardından gönderilen iletiler için istemci izlemelerini görebiliriz.  
   
- ![İzleme Görüntüleyicisi'ni kullanarak](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace8.gif "e2eTrace8")  
-Her iki WCF hizmet ve istemci etkinlik grafik görünümü  
+ ![İzleme görüntüleyicisini kullanma](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace8.gif "e2eTrace8")  
+Her iki WCF hizmet ve istemci Etkinlik Grafiği görünümü  
   
- Aşağıdaki hata senaryoda hata ve uyarı izlemeleri hizmet ve istemci ilişkilendirilir. Bir özel durum, büyük bir ilk (bir uyarı içeren en sağdaki yeşil Etkinlik izleme için özel durum "hizmeti kullanıcı kodu bu isteği işleyemiyor.") hizmeti kullanıcı kodu durum oluşturulur. Yanıt istemciye gönderildiğinde, bir uyarı izleme hata iletisi (sol pembe etkinliği) belirtmek için yeniden yayınlanır. İstemci hizmetine bağlantıyı durdurur, WCF istemcisi (sol alt tarafında sarı etkinliği), ardından kapatır. Hizmet bir hata (sağdaki uzun pembe etkinliği) oluşturur.  
+ Aşağıdaki hata senaryosunda, hata ve uyarı izlemeleri hizmet ve istemci ilgilidir. Bir özel durum kullanıcı kodunda (bir uyarı içeren en sağdaki yeşil etkinliği izleme için özel "hizmeti, kullanıcı kodunda bu isteği işleyemiyor.") hizmeti ilk durum. İstemciye bir yanıt gönderildiğinde, bir uyarı izleme hata iletisi (sol pembe etkinliği) belirtmek için tekrar yayılır. İstemci, hizmete bağlantıyı durdurur, WCF istemcisi (sol tarafındaki sarı etkinliği), ardından kapatır. Hizmet bir hata (sağdaki uzun pembe etkinliği) oluşturur.  
   
- ![İzleme Görüntüleyicisi'ni kullanarak](../../../../../docs/framework/wcf/diagnostics/tracing/media/wcfc-e2etrace9s.gif "wcfc_e2etrace9s")  
-Hizmet ve istemci arasında hata bağıntı  
+ ![İzleme görüntüleyicisini kullanma](../../../../../docs/framework/wcf/diagnostics/tracing/media/wcfc-e2etrace9s.gif "wcfc_e2etrace9s")  
+Hizmet ve istemci hatası bağıntı  
   
- Bu izlemeler oluşturmak için kullanılan örnek wsHttpBinding kullanarak eş zamanlı istekleri dizisidir. Bu grafik senaryoları güvenlik olmadan veya burada işlem eylem etkinlik zaman uyumsuz çağrı oluşturan başlangıç ve bitiş işlemleri kapsar ve aktarımları için bir geri çağırma etkinliği gösterir zaman uyumsuz istekler için sapmaları vardır. İlave Senaryolar hakkında daha fazla bilgi için bkz: [uçtan uca izleme senaryoları](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md).  
+ Bu izlemeler üretmek için kullanılan örnek wsHttpBinding kullanarak zaman uyumlu istekleri dizisidir. Güvenlik olmadan veya zaman uyumsuz istekler, burada işlem eylem etkinliği zaman uyumsuz çağrı oluşturan başlangıç ve bitiş işlemleri kapsayan ve bir geri çağırma etkinliği aktarmalarıyla gösterir senaryoları için bu grafik sapmalar vardır. Ek senaryoları hakkında daha fazla bilgi için bkz. [uçtan uca izleme senaryoları](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md).  
   
-## <a name="troubleshooting-using-the-service-trace-viewer"></a>Hizmet izleme Görüntüleyicisi'ni kullanarak sorun giderme  
- Hizmet izleme Görüntüleyicisi aracı izleme dosyalarının yüklediğinizde, herhangi bir kırmızı veya sarı etkinliği, uygulamanızdaki bir sorunun nedenini aşağı izlemek için Sol paneldeki seçebilirsiniz. 000 etkinlik genellikle kadar kullanıcı Kabarcık özel durum işlenmemiş.  
+## <a name="troubleshooting-using-the-service-trace-viewer"></a>Hizmet izleme görüntüleyicisini kullanarak sorun giderme  
+ Hizmet izleme Görüntüleyicisi aracı izleme dosyalarının yüklediğinizde, uygulamanızdaki bir sorunun nedenini aşağı izlemek için sol bölmenin üzerindeki tüm kırmızı veya sarı etkinlikleri seçebilirsiniz. 000 etkinlik genellikle en fazla kullanıcı Kabarcık özel durum işlenmemiş.  
   
- ![İzleme Görüntüleyicisi'ni kullanarak](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace10.gif "e2eTrace10")  
-Bir sorun kökünü kırmızı veya sarı etkinlik seçme  
+ ![İzleme görüntüleyicisini kullanma](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace10.gif "e2eTrace10")  
+Bir sorun kökünde bulunacak kırmızı veya sarı etkinliği seçme  
   
- Üst Sağdaki panelde, soldaki bölmede seçili etkinlik izlemelerini inceleyebilirsiniz. Ardından, o panelinde kırmızı veya sarı izlemeleri inceleyin ve nasıl bağıntılı bakın. Yukarıdaki grafikte hem istemci hem de aynı işlemi eylem etkinliğinde hizmet için uyarı izlemeleri bakın.  
+ Üst Sağdaki panelde, sol tarafta seçili etkinlik izlemelerini inceleyebilirsiniz. Panelin kırmızı veya sarı izlemelerinde inceleyin ve nasıl bağıntılı bakın. Yukarıdaki grafikte hem istemci hem de aynı işlemi eylem etkinliğindeki hizmet için uyarı izlemeleri görüyoruz.  
   
- Bu izlemeler hatanın temel nedenlerinden biri ile belirtmezseniz, (burada işlem eylem) Sol paneldeki seçili etkinliği çift tıklatarak grafiği kullanabilir. Grafik ilgili etkinlikler ile sonra görüntülenir. ("+" İşareti tıklatarak) sonra ilgili etkinlikler genişletebilirsiniz kırmızı veya sarı ilgili bir aktivite olarak ilk verilmiş izleme bulunamadı. Yalnızca kırmızı veya sarı izleme sorunun kök nedeni izlemek kadar aktarımları ilgili etkinlikler veya ileti akışları için uç noktalar arasında aşağıdaki ilgi önce oldu etkinlikleri genişletme tutun.  
+ Bu izlemeler, hatanın kök nedeni ile belirtmezseniz, seçili etkinlik (burada işlem eylem) Sol paneldeki çift tıklayarak grafiği kullanabilir. Grafik ile ilgili etkinlikler görüntülenir. Ardından, ("+" işareti tıklayarak) ilgili etkinlikleri genişletebilirsiniz ilk yayılan izleme kırmızı veya sarı ilgili bir aktivite içinde bulunamadı. Yalnızca kırmızı veya sarı izleme sorunun kök nedenini izlemek kadar aktarımları ilgili etkinlikler veya ileti akışları için uç noktalar genelinde aşağıdaki ilgi önce gerçekleşen etkinlikler genişletme tutun.  
   
- ![İzleme Görüntüleyicisi'ni kullanarak](../../../../../docs/framework/wcf/diagnostics/tracing/media/wcfc-e2etrace9s.gif "wcfc_e2etrace9s")  
-Bir sorunun kök nedenini izlemek için etkinlikler genişletme  
+ ![İzleme görüntüleyicisini kullanma](../../../../../docs/framework/wcf/diagnostics/tracing/media/wcfc-e2etrace9s.gif "wcfc_e2etrace9s")  
+Sorunun kök nedenini izlemek için etkinlikleri genişletme  
   
- Varsa ServiceModel `ActivityTracing` kapalı ancak ServiceModel izleme açıktır, 0000 etkinliğinde yayılan ServiceModel izlemeleri görebilirsiniz. Ancak, bu izlemeleri bağıntı anlamak için daha fazla çaba gerektirir.  
+ Varsa ServiceModel `ActivityTracing` kapalı ancak ServiceModel izleme açıktır, 0000 etkinliğinde yayılan ServiceModel izlemeleri görebilirsiniz. Ancak, bu izleme, bağıntı anlamak için daha fazla çaba gerektirir.  
   
- İleti günlüğe kaydetme etkinleştirildiğinde ileti hata tarafından etkilenen görmek için ileti sekmesini kullanabilirsiniz. Kırmızı veya sarı bir ileti çift tıklatarak, ilgili etkinlikler grafik görünümünü görebilirsiniz. Bu etkinlikler en yakından isteği ile ilgili bir hata yapıldığı olanlardır.  
+ İleti günlüğe kaydetme etkinleştirilmişse, bu hatayı ileti etkilenir görmek için iletisi sekmesini kullanabilirsiniz. Kırmızı veya sarı bir ileti çift tıklayarak, ilgili etkinlikler graf görünümünü görebilirsiniz. Bu etkinlikler en yakın isteği ile ilgili bir hata gerçekleştiği olanlardır.  
   
- ![İzleme Görüntüleyicisi'ni kullanarak](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace11.gif "e2eTrace11")  
-Sorun giderme başlatmak için ayrıca bir kırmızı veya sarı ileti izleme seçin ve çift kök nedeni izlemek için tıklatın  
+ ![İzleme görüntüleyicisini kullanma](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace11.gif "e2eTrace11")  
+Sorun gidermeye başlamak için ayrıca bir kırmızı veya sarı bir ileti izleme seçin ve çift kökenini izlemek için tıklatın  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Uçtan Uca İzleme Senaryoları](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  

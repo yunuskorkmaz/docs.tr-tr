@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
-ms.openlocfilehash: 8cf1abb3ce400b72a3b02c705bd29f01b29cbaf0
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 663515e0a863ef703006df0f96b4bc8a2976ca78
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49349156"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50042811"
 ---
 # <a name="implementing-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Entity Framework Core ile altyapı Kalıcılık katmanını uygulama
 
@@ -39,7 +39,7 @@ EF Core giriş zaten Microsoft belgelerinde olduğundan, burada yalnızca bu bil
 
 ## <a name="infrastructure-in-entity-framework-core-from-a-ddd-perspective"></a>Entity Framework Core DDD açısından altyapısı
 
-Bir DDD açısından bakıldığında, EF terminolojisinde POCO olarak da bilinen POCO etki alanı varlıklarının kullanma olanağı EF, önemli bir özellik olan *kod öncelikli varlıkları*. POCO etki alanı varlıklarının kullanırsanız, etki alanı model sınıflarınızı Kalıcılık-aşağıdaki ignorant, [Kalıcılık Ignorance](http://deviq.com/persistence-ignorance/) ve [altyapı Ignorance](https://ayende.com/blog/3137/infrastructure-ignorance) ilkeleri.
+Bir DDD açısından bakıldığında, EF terminolojisinde POCO olarak da bilinen POCO etki alanı varlıklarının kullanma olanağı EF, önemli bir özellik olan *kod öncelikli varlıkları*. POCO etki alanı varlıklarının kullanırsanız, etki alanı model sınıflarınızı Kalıcılık-aşağıdaki ignorant, [Kalıcılık Ignorance](https://deviq.com/persistence-ignorance/) ve [altyapı Ignorance](https://ayende.com/blog/3137/infrastructure-ignorance) ilkeleri.
 
 DDD deseni, etki alanı davranışını ve varlık sınıfın kendisi kuralların, okuduğunuzda, doğrulama ve kuralları herhangi bir koleksiyonuna erişirken denetleyebilirsiniz şekilde kapsüllemesi gerekir. Bu nedenle, varlıklar veya değer nesneleri alt koleksiyonları genel erişime izin vermek için DDD iyi bir uygulama değil. Bunun yerine, bu durum oluştuğunda nasıl ve ne zaman özellik koleksiyonları ve alanlar güncelleştirilebilir, denetleyen yöntemleri ve hangi davranışı ve Eylemler gerçekleşmelidir kullanıma sunmak istediğiniz.
 
@@ -467,7 +467,7 @@ Biz bir depodan Iqueryable döndürmek için önerilen yoksa olsa da, bunları b
     [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)
 
 -   **Belirtimi deseni**
-    [*http://deviq.com/specification-pattern/*](http://deviq.com/specification-pattern/)
+    [*https://deviq.com/specification-pattern/*](https://deviq.com/specification-pattern/)
     
 
 >[!div class="step-by-step"]

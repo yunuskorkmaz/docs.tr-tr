@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-ms.openlocfilehash: 29ed1f988819a47d8ac8845a379aeda5e15c655e
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 9e1c38abd1c9cacfd4db953d9fb875437b2f1093
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086472"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50047676"
 ---
 # <a name="impersonating-the-client"></a>İstemci Kimliğine Bürünme
 Kimliğe bürünme örneği, hizmet adına çağıran sistem kaynaklarına erişebilmesi çağıran uygulama hizmetine bürünülecek gösterilmiştir.  
@@ -23,7 +23,7 @@ Kimliğe bürünme örneği, hizmet adına çağıran sistem kaynaklarına eriş
   
  Hizmet kodu değiştirilmiş gibi `Add` yöntemi hizmet kimliğine bürünür, çağrıyı <xref:System.ServiceModel.OperationBehaviorAttribute> aşağıdaki örnek kodda gösterildiği gibi.  
   
-```  
+```csharp
 [OperationBehavior(Impersonation = ImpersonationOption.Required)]  
 public double Add(double n1, double n2)  
 {  
@@ -39,7 +39,7 @@ public double Add(double n1, double n2)
   
  `DisplayIdentityInformation` Aşağıdaki örnek kodda gösterilen çağıranının kimliğini görüntüler bir yardımcı program işlevi yöntemidir.  
   
-```  
+```csharp
 static void DisplayIdentityInformation()  
 {  
     Console.WriteLine("\t\tThread Identity            :{0}",  
@@ -54,14 +54,14 @@ static void DisplayIdentityInformation()
   
  `Subtract` Hizmet yöntemi, kesinlik temelli çağrı aşağıdaki örnek kodda gösterildiği gibi çağrıyı temsil eder.  
   
-```  
+```csharp
 public double Subtract(double n1, double n2)  
 {  
     double result = n1 - n2;  
     Console.WriteLine("Received Subtract({0},{1})", n1, n2);  
     Console.WriteLine("Return: {0}", result);  
-Console.WriteLine("Before impersonating");  
-DisplayIdentityInformation();  
+    Console.WriteLine("Before impersonating");  
+    DisplayIdentityInformation();  
   
     if (ServiceSecurityContext.Current.WindowsIdentity.ImpersonationLevel == TokenImpersonationLevel.Impersonation ||  
         ServiceSecurityContext.Current.WindowsIdentity.ImpersonationLevel == TokenImpersonationLevel.Delegation)  
@@ -80,8 +80,8 @@ DisplayIdentityInformation();
         Console.WriteLine("ImpersonationLevel is not high enough to perform this operation.");  
     }  
   
-Console.WriteLine("After reverting");  
-DisplayIdentityInformation();  
+    Console.WriteLine("After reverting");  
+    DisplayIdentityInformation();  
     return result;  
 }  
 ```  
@@ -92,7 +92,7 @@ DisplayIdentityInformation();
   
  Kimliğe bürünme düzeyini ayarlamak için istemci kodu değiştirilmiş <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>. İstemcinin kimliğe bürünme düzeyi kullanarak hizmeti tarafından kullanılacak belirtir <xref:System.Security.Principal.TokenImpersonationLevel> sabit listesi. Numaralandırma aşağıdaki değerlerini destekler: <xref:System.Security.Principal.TokenImpersonationLevel.None>, <xref:System.Security.Principal.TokenImpersonationLevel.Anonymous>, <xref:System.Security.Principal.TokenImpersonationLevel.Identification>, <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> ve <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>. Yerel makinedeki Windows ACL'leri kullanarak korumalı bir sistem kaynağını erişirken bir erişim denetimi gerçekleştirmek için kimliğe bürünme düzeyi ayarlanmalıdır <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>aşağıdaki örnek kodda gösterildiği gibi.  
   
-```  
+```csharp
 // Create a client with given client endpoint configuration  
 CalculatorClient client = new CalculatorClient();  
   

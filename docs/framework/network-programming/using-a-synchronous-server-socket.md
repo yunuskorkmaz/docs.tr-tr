@@ -17,14 +17,12 @@ helpviewer_keywords:
 - sockets, synchronous server sockets
 - Internet, sockets
 ms.assetid: d1ce882e-653e-41f5-9289-844ec855b804
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 2e79c9a75e4513be91af1104195af3614b49092d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9880766641be618a6a0f54ded501cf6f6e95e128
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47398556"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50034376"
 ---
 # <a name="using-a-synchronous-server-socket"></a>Zaman uyumlu sunucu yuvası kullanma
 Yuva bağlantısı isteği alınana kadar zaman uyumlu sunucu yuva uygulamanın yürütülmesini askıya alın. Zaman uyumlu sunucu yuva ağ kullanımı yoğun uygulamalar, işlemi için uygun değildir, ancak Basit Ağ uygulamaları için uygun olabilir.  

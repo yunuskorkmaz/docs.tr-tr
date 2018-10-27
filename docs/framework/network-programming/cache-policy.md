@@ -10,19 +10,17 @@ helpviewer_keywords:
 - content cache policies
 - expired content
 ms.assetid: 1a7e04ec-7872-41c2-96c6-52566dcb412b
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: afaa4389940bd16ee2685c2ed64fbec4626d96e1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: bd115621db369a28a51e7c5de8dd4095eca80901
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193154"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50038925"
 ---
 # <a name="cache-policy"></a>Önbellek İlkesi
 Önbellek İlkesi, istenen kaynak önbelleğe alınmış bir kopyasını kullanarak bir istek memnun olup olmadığını belirlemek için kullanılan kuralları tanımlar. Uygulamalar için yenilik istemci önbellek gereksinimleri belirtin, ancak etkili önbellek ilkesini, istemci önbellek gereksinimleri, sunucunun içerik sona erme gereksinimleri ve sunucunun yeniden doğrulama gereksinimlerini göre belirlenir. En yeni içerik istemci uygulamaya döndürülür sağlamaya yardımcı olmak için en koruyucu önbellek İlkesi etkileşimi istemci önbellek İlkesi ve sunucu gereksinimleri her zaman sonuçlanır.  
   
- Konum tabanlı veya saat temelli önbellek ilkeleri. Konum temelli önbellek İlkesi burada istenen kaynak gelen gerçekleştirilebilecek göre önbelleğe alınan girişlerin güncellik tanımlar. Saat temelli önbellek İlkesi, kaynak ve geçerli zamanın üstbilgileri döndürülen kaynak alındı, saat kullanarak önbelleğe alınan girişlerin güncellik tanımlar. Çoğu uygulama, RFC 2616 adresinde belirtilen önbellek İlkesi uygulayan varsayılan saat temelli önbellek ilkesini kullanabilirsiniz [ http://www.ietf.org ](http://www.ietf.org/).  
+ Konum tabanlı veya saat temelli önbellek ilkeleri. Konum temelli önbellek İlkesi burada istenen kaynak gelen gerçekleştirilebilecek göre önbelleğe alınan girişlerin güncellik tanımlar. Saat temelli önbellek İlkesi, kaynak ve geçerli zamanın üstbilgileri döndürülen kaynak alındı, saat kullanarak önbelleğe alınan girişlerin güncellik tanımlar. Çoğu uygulama, RFC 2616 adresinde belirtilen önbellek İlkesi uygulayan varsayılan saat temelli önbellek ilkesini kullanabilirsiniz [Internet Engineering Task Force (IETF)](https://www.ietf.org/) Web sitesi.  
   
  Aşağıdaki tabloda açıklanan sınıflar, önbellek ilkelerini belirtmek için kullanılır.  
   

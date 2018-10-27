@@ -882,12 +882,12 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-ms.openlocfilehash: 81b33378519747060e604610ac1f3b9090332c11
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: fa2afebdffb47e7c55ea17a485d43ee648775534
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46531609"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453144"
 ---
 # <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>Ne yazık ki ki&#39;bu C# hatasıyla ilgili ayrıntı yok
 Özür dileriz, ancak Biz bu hata hakkındaki belirli bilgilere sahip değildir. Web'deki bilgileri bulmak hata sayısı ve ileti metni için arama yapabilirsiniz. Veya şu forumlardan birine kullanarak diğer geliştiriciler isteyebilirsiniz:  
@@ -901,7 +901,7 @@ ms.locfileid: "46531609"
  [Visual C# genel](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=csharpgeneral)  
  Hakkında sorular için bir forum sağlar ve sorunları ile Visual C, diğer forumlarda ele alınmamaktadır #.  
   
- [StackOverflow](http://stackoverflow.com/questions/tagged/c%23)  
+ [Yığın Taşması](https://stackoverflow.com/questions/tagged/c%23)  
  Hakkında sorular için bir forum sağlar ve Visual C# ile verir.  
   
  Ayrıca bkz:  

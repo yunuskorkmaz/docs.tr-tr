@@ -2,12 +2,12 @@
 title: Yapılandırma Kanal Fabrikası
 ms.date: 03/30/2017
 ms.assetid: 3b749493-bd8a-4ccb-893e-5948901a1486
-ms.openlocfilehash: b5dbabf8cdc28cc2beaf343b0377528c6ced1c66
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: ec48743deddd52faed31b4a1a0af365909593414
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48846298"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187159"
 ---
 # <a name="configuration-channel-factory"></a>Yapılandırma Kanal Fabrikası
 Bu örnek kullanımını kapsayan <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>. <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> WCF istemci yapılandırması merkezi yönetilmesine izin verir. Bu ayrıca yapılandırma seçtikten veya uygulama etki alanı yükleme saatinden sonra değiştirildi senaryolarda yararlı olabilir.
@@ -22,7 +22,7 @@ Bu örnek kullanımını kapsayan <xref:System.ServiceModel.Configuration.Config
 
  Aşağıdaki kod, bir istemci uygulaması için özel bir yapılandırma dosyasına ekler.
 
-```
+```csharp
 ExeConfigurationFileMap fileMap = new ExeConfigurationFileMap();
 fileMap.ExeConfigFilename = "Test.config";
 Configuration newConfiguration = ConfigurationManager.OpenMappedExeConfiguration(fileMap, ConfigurationUserLevel.None);

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c6a406a-b5eb-44fa-b4ed-4e95bb95a813
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: abc53381bf6cc8458b83edf5586b76fe7ed5f303
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 18844a9e8eff574d061b044bf88bc7857ce8033e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199904"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50182989"
 ---
 # <a name="how-to-reference-a-strong-named-assembly"></a>Nasıl yapılır: Tanımlayıcı Adlı Bir Derlemeye Başvurma
 Türleri veya bir katı adlı derleme kaynaklara başvuran işlemi genellikle saydamdır. Başvuru (erken bağlama) derleme zamanında ya da çalışma zamanında yapabilirsiniz.  
@@ -71,4 +71,4 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
  **sn - tp \<**  *ortak anahtar dosyası* **>**  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Kesin Adlandırılmış Bütünleştirilmiş Kodlar Oluşturma ve Kullanma](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
+- [Kesin Adlandırılmış Bütünleştirilmiş Kodlar Oluşturma ve Kullanma](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

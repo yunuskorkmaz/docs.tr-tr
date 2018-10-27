@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 03db52ef-010e-44ea-b6fd-b9c900ecad50
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: e74cc5fa99473562b158cd5068fb8bbaeb6a4a17
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: aec786123357337cbaa6251191a023c092af3049
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196986"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181075"
 ---
 # <a name="ltcryptoclassgt-element"></a>&lt;cryptoClass&gt; öğesi
 İçin bir kolay ad eşlemesi var. bir şifreleme sınıfına içeren [ \<nameEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) öğesi.  
@@ -78,7 +78,7 @@ ms.locfileid: "47196986"
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Şifreleme Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
- [Şifreleme Hizmetleri](../../../../../docs/standard/security/cryptographic-services.md)  
- [Şifreleme Sınıflarını Yapılandırma](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [Şifreleme Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+- [Şifreleme Hizmetleri](../../../../../docs/standard/security/cryptographic-services.md)  
+- [Şifreleme Sınıflarını Yapılandırma](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

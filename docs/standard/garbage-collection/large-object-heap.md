@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8dfe3fdbf71918a7ed2b6dccca24f58688bc14f2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: cdbbf3138cad0a2fae311bf03476eebba23b7320
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003093"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50042447"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Windows sistemlerde büyük nesne yığını
 
@@ -66,7 +66,7 @@ LOH segment, yalnızca LOH yalnızca 2. nesil GC'ler sırasında toplanan olduğ
 
 ## <a name="when-is-a-large-object-collected"></a>Büyük nesne ne toplanır?
 
-Genel olarak, aşağıdaki 3 aşağıdaki koşullardan biri gerçekleştiğinde bir GC oluşur:
+Genel olarak, aşağıdaki 3 koşullar gerçekleştiğinde GC oluşur:
 
 - Ayırma, nesil 0 veya büyük nesne eşiği aşıyor.
 
@@ -164,7 +164,7 @@ Performans sayaçları da programlı bir şekilde sorgulanabilir. Çoğu kişi, 
 > [!NOTE]
 > ETW çok daha zengin bilgi sağladığından ETW olaylarını kullanmanızı yerine performans sayaçları, öneririz.
 
-### <a name="etw"></a>ETW
+### <a name="etw-events"></a>ETW olayları
 
 Çöp toplayıcı ETW olayları yığın ne yaptığını anlamanıza yardımcı olması için zengin bir özellik kümesi sağlar ve neden. Aşağıdaki blog gönderileri, toplamak ve GC ETW olaylarıyla anlamak gösterilmektedir:
 
@@ -204,7 +204,7 @@ Gördüğünüz gibi yalnızca büyük nesneleri ayırdığı çok basit bir tes
 
 ### <a name="a-debugger"></a>Bir hata ayıklayıcı
 
-Sahip olan bir bellek dökümü ve nesneleri gerçekten üzerinde LOH nedir Ara gerekir, kullanabileceğiniz [SoS hata ayıklama uzantısı](http://msdn2.microsoft.com/ms404370.aspx) .NET tarafından sağlanan.
+Sahip olan bir bellek dökümü ve nesneleri gerçekten üzerinde LOH nedir Ara gerekir, kullanabileceğiniz [SoS hata ayıklama uzantısı](../../../docs/framework/tools/sos-dll-sos-debugging-extension.md) .NET tarafından sağlanan.
 
 > [!NOTE]
 > Bu bölümde belirtilen hata ayıklama komutları geçerli olan [Windows hata ayıklayıcıları](https://www.microsoft.com/whdc/devtools/debugging/default.mspx).

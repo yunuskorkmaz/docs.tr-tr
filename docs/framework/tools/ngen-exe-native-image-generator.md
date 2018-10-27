@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3875b4f44a2c2aad5cc5021d55e22e99bb00a91e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 463e31ff286b0022ac55f4f9f8e2a4478cceadc9
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43739834"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49400482"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Yerel Görüntü Oluşturucu)
 Yerel Görüntü Oluşturucusu (Ngen.exe), yönetilen uygulamaların performansını artıran bir araçtır. Ngen.exe, işlemciye özel derlenmiş makine kodu içeren dosyalar olan yerel görüntüler oluşturur ve bunları yerel bilgisayarın yerel görüntü önbelleğine yükler. Çalışma zamanı orijinal derlemeyi derlemek için anlık (JIT) derleyiciyi kullanmak yerine önbellekteki yerel görüntüleri kullanabilir.  
@@ -86,7 +86,7 @@ ngen /? | /help
   
 |Bağımsız Değişken|Açıklama|  
 |--------------|-----------------|  
-|`assemblyName`|Derlemenin tam görünen adı. Örneğin, `"myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5"`. **Not:** gibi bir kısmi derleme adı sağlayabilirsiniz `myAssembly`, için `display` ve `uninstall` eylemler. <br /><br /> Her Ngen.exe komut satırında yalnızca bir derleme belirtilebilir.|  
+|`assemblyName`|Derlemenin tam görünen adı. Örneğin: `"myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5"` **Not:** gibi bir kısmi derleme adı sağlayabilirsiniz `myAssembly`, için `display` ve `uninstall` eylemler. <br /><br /> Her Ngen.exe komut satırında yalnızca bir derleme belirtilebilir.|  
 |`assemblyPath`|Derlemenin açık yolu. Tam veya göreli bir yol belirtebilirsiniz.<br /><br /> Eğer bir yol belirtmeden dosya adı belirtilseniz, derleme geçerli dizinde bulunmalıdır.<br /><br /> Her Ngen.exe komut satırında yalnızca bir derleme belirtilebilir.|  
   
 <a name="PriorityTable"></a>   
@@ -140,7 +140,7 @@ ngen /? | /help
   
  Ngen.exe bağımlılıklar için bir sayaç tutar. Örneğin, varsayalım `MyAssembly.exe` ve `YourAssembly.exe` hem de yerel görüntü önbelleğine yüklendiğini ve her ikisi de başvurmuş `OurDependency.dll`. Varsa `MyAssembly.exe` kaldırılır, `OurDependency.dll` kaldırılmamış. Yalnızca ne zaman kaldırıldı `YourAssembly.exe` de kaldırıldığında kaldırılır.  
   
- Eğer genel derleme önbelleğindeki bir derleme için doğal görüntü üretiyorsanız, onun görünür ismini belirtiniz. Bkz: <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType>.  
+ Eğer genel derleme önbelleğindeki bir derleme için doğal görüntü üretiyorsanız, onun görünür ismini belirtiniz. Bkz. <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType>.  
   
  Ngen.exe'nin ürettiği doğal görüntüler uygulama alanı içerisinde paylaşılabilir. Bu, Ngen.exe'yi derlemelerin uygulama etki alanları arasında paylaşılması gerektiği senaryolarda kullanabileceğiniz anlamına gelir. Alan bağımsızlığını belirtmek için:  
   

@@ -2,12 +2,12 @@
 title: WFC &lt;trackingProfile&gt;
 ms.date: 10/08/2018
 ms.assetid: 09b651c2-c0d2-4850-a101-b0e009a1dc3a
-ms.openlocfilehash: a11086ef07a2a605f3889bc4077d25e0b7748e5e
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: bb6a99de0125100d5a604276aad82379b5ff34c4
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120927"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49454388"
 ---
 # <a name="lttrackingprofilegt-of-wcf"></a>WFC &lt;trackingProfile&gt;
 İş akışı izleme katılımcı kayıtlarında izleme aboneliği oluşturmak için bir yapılandırma bölümünü temsil eder. Bir izleme profili çalışma zamanında bir iş akışı örneği durumu değiştiğinde yayılan iş akışı olayları abone olmak için izleme katılımcı izin izleme sorguları içerir. Tanımlanan sorguları izleme profilinde bölümü abonelik tarafından döndürülen olayları tür tanımlamak.  
@@ -19,7 +19,7 @@ ms.locfileid: "49120927"
 \<trackingProfile>  
   
 ## <a name="syntax"></a>Sözdizimi  
-  
+
 ```xml
 <system.serviceModel>
   <tracking>

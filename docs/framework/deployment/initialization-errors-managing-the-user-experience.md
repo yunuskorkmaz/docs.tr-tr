@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a30fe0aac4bfacc71137474837b95371e7d85b09
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 21dd9926684f51412384235d7b3af1aac280957a
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501806"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50035754"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>.NET Framework Başlatma Hataları: Kullanıcı Deneyimini Yönetme
 Ortak dil çalışma zamanı (CLR) etkinleştirme sistemi yönetilen uygulama kodu çalıştırmak için kullanılan CLR sürümünü belirler. Bazı durumlarda, etkinleştirme sistemine yüklenecek CLR sürümünü bulmak mümkün olmayabilir. Bu durum, genellikle uygulamanın geçersiz veya belirli bir bilgisayarda yüklü olan bir CLR sürümü gerektiren oluşur. İstenen sürüm bulunmazsa, CLR etkinleştirme sistemine HRESULT hata kodu işlev veya çağrıldı ve uygulamayı çalıştıran kullanıcıya bir hata iletisi görüntülenebilir arabirimi döndürür. Bu makale, HRESULT kodlarının listesini sağlar ve görüntülenmesini hata iletisini nasıl engelleyebilir açıklar.  
@@ -87,7 +87,7 @@ Başlatma hataları için tipik bir hata iletisi
  İle başlayarak [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], CLR etkinleştirme günlüğe kaydetme, ne zaman ve neden başlatma hata iletisi görüntülenir kayıt günlük girişlerini dahil etmek üzere geliştirilmiştir. Daha fazla bilgi için [nasıl yapılır: CLR etkinleştirme sorunlarında hata ayıklama](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Geliştiriciler için Dağıtım Kılavuzu](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
- [Nasıl yapılır: Bir Uygulamayı .NET Framework 4 veya 4.5'i Destekleyecek Şekilde Yapılandırma](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)  
- [Nasıl Yapılır: CLR Etkinleştirme Sorunlarında Hata Ayıklama](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)  
- [Windows 10, Windows 8.1 ve Windows 8’de .NET Framework 3.5 Yükleme](../../../docs/framework/install/dotnet-35-windows-10.md)
+- [Geliştiriciler için Dağıtım Kılavuzu](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
+- [Nasıl yapılır: Bir Uygulamayı .NET Framework 4 veya 4.5'i Destekleyecek Şekilde Yapılandırma](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)  
+- [Nasıl Yapılır: CLR Etkinleştirme Sorunlarında Hata Ayıklama](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)  
+- [Windows 10, Windows 8.1 ve Windows 8’de .NET Framework 3.5 Yükleme](../../../docs/framework/install/dotnet-35-windows-10.md)

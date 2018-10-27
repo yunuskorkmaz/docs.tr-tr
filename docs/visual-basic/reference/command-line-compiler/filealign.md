@@ -9,17 +9,15 @@ helpviewer_keywords:
 - /filealign compiler option [Visual Basic]
 - filealign compiler option [Visual Basic]
 ms.assetid: cc61ec3d-ad38-4b28-9659-099d73cad099
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cf9c854060e5254cedc6c1004ac3e4f25fbdbbd8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: db70749f28592ae6711b6d9544f8704af9416490
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650673"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181728"
 ---
 # <a name="-filealign"></a>-filealign
-Çıkış dosyasının bölümlerinin hizalamak konumu belirtir.  
+Çıktı dosyasının bölümlerinin hizalanacağı yeri belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -29,17 +27,17 @@ ms.locfileid: "33650673"
   
 ## <a name="arguments"></a>Arguments  
  `number`  
- Gerekli. Çıktı dosyasında bölüm hizalamasını belirten bir değer. Geçerli değerler 512, 1024, 2048, 4096 ve 8192 ' dir. Bu değerler bayt cinsinden.  
+ Gerekli. Çıkış dosyasında bölüm hizalamasını belirten bir değeri. Geçerli değerler, 512, 1024, 2048, 4096 ve 8192:. Bu değerler bayt.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kullanabileceğiniz `-filealign` seçeneği çıkış dosyanızın bölüm hizalamasını belirtin. Kod veya veri içeren bir taşınabilir yürütülebilir (PE) dosyasında bitişik bellek bloklarını bölümleridir. `-filealign` Seçeneği standart olmayan bir hizalama uygulamanızla derleme olanak tanır; bu seçeneği kullanmak çoğu Geliştirici gerekmez.  
+ Kullanabileceğiniz `-filealign` seçeneği, çıkış dosyasında bölüm hizalamasını belirtin. Kod veya veri içeren taşınabilir yürütülebilir (PE) dosyası bitişik bellek blokları bölümleridir. `-filealign` Seçeneği ile standart olmayan bir hizalama uygulamanızı derleyin olanak sağlar; geliştiricilerin çoğu, bu seçeneği kullanmak gerekmez.  
   
- Her bölümü olan bir sınır ile hizalanır `-filealign` değeri. Sabit varsayılan yok. Varsa `-filealign` belirtilmezse, derleyici varsayılan derleme zamanında seçer.  
+ Her bölümde katları olan bir sınır üzerinde hizalanır `-filealign` değeri. Sabit varsayılan yok. Varsa `-filealign` belirtilmezse, derleyici derleme zamanında bir varsayılan seçer.  
   
- Bölüm boyutunu belirterek, çıkış dosyasının boyutunu değiştirebilirsiniz. Bölüm boyutunu değiştirme küçük cihazlarda çalışan programlar için yararlı olabilir.  
+ Bölüm boyutu belirterek, çıkış dosyasının boyutunu değiştirebilirsiniz. Bölüm boyutu değiştirme daha küçük cihazlarda çalıştırılacak programları için yararlı olabilir.  
   
 > [!NOTE]
->  `-filealign` Seçeneği Visual Studio geliştirme ortamında kullanılabilir değil; yalnızca komut satırından derlerken kullanılabilir.  
+>  `-filealign` Seçeneği, Visual Studio geliştirme ortamında kullanılabilir değil; yalnızca komut satırından derleme yapılırken kullanılabilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)

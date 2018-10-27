@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 147de1cdde79ee29f8f316399ba2e41f93921073
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 4302ee961fcd396c7e6a6ddb0d9bbe1bdb714cfc
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47201120"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453469"
 ---
 # <a name="working-with-certificates"></a>Sertifikalarla Çalışma
 Windows Communication Foundation (WCF) güvenlik programlamak için X.509 dijital sertifikalar sık iletileri dijital olarak imzala istemcilere ve sunuculara kimlik doğrulaması ve şifreleme için kullanılır. Bu konuda kısaca X.509 dijital sertifika özellikleri ve bunların WCF'de nasıl kullanılacağını açıklar ve WCF ve sertifikaları kullanarak yaygın görevlerin nasıl yerine getirileceğini gösteren ya da, bu kavramları daha açıklayan konulara bağlantılar içerir.  
@@ -42,7 +42,7 @@ Windows Communication Foundation (WCF) güvenlik programlamak için X.509 dijita
   
 -   **Kişisel**. Bu depo, bir bilgisayarın bir kullanıcıyla ilişkili sertifikaları için kullanılır. Genellikle bu depo, sertifika yetkilisi sertifikaları Güvenilen kök sertifika yetkilileri deposunda bulunan biri tarafından verilen sertifikaların kullanılır. Alternatif olarak, burada bulunan bir sertifika kendi kendine verilmesi ve bir uygulama tarafından güvenilen.  
   
- Sertifika depoları hakkında daha fazla bilgi için bkz. [sertifika depolarını](https://go.microsoft.com/fwlink/?LinkId=88912).  
+ Sertifika depoları hakkında daha fazla bilgi için bkz. [sertifika depolarını](/windows/desktop/secauthn/certificate-stores).  
   
 ### <a name="selecting-a-store"></a>Bir Store seçme  
  Bir sertifikanın depolanacağı yeri seçilmesi bağlıdır nasıl ve ne zaman hizmet veya istemcinin çalıştırır. Aşağıdaki genel kurallar geçerlidir:  

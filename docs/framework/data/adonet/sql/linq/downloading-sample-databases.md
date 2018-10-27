@@ -1,26 +1,18 @@
 ---
 title: Örnek veritabanları için ADO.NET kod örnekleri edinin
 description: SQL Server ve yönetim araçlarının yanı sıra ADO.NET belgeler, kod örnekleri kullanılan örnek veritabanları indirme
-ms.date: 10/12/2018
+ms.date: 10/18/2018
 ms.assetid: ef9d69a1-9461-43fe-94bb-7c836754bcb5
-ms.openlocfilehash: 75ae1895d683b669f51b33130fc2f47010e39814
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 9779300288135cb9332a028d547ce55a07e89471
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347536"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188397"
 ---
 # <a name="get-the-sample-databases-for-adonet-code-samples"></a>Örnek veritabanları için ADO.NET kod örnekleri edinin
 
 Örnekler ve izlenecek yollar, bir dizi [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] örnek veritabanları ve SQL Server Express belgeleri kullanın. Microsoft bu ürünlerin ücretsiz olarak indirebilirsiniz.
-
-## <a name="get-the-adventureworks-sample-database"></a>AdventureWorks örnek veritabanını almak
-
-AdventureWorks örnek veritabanını aşağıdaki GitHub deposundan indirin:
-
-[AdventureWorks örnek veritabanları](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)
-
-Bir veritabanı yedeğinin indirdikten sonra (\*.bak) dosyaları, SQL Server örneğine SQL Server Management Studio (SSMS) kullanarak yedeklemeyi geri yükleme. Bkz: [alma SQL Server Management Studio'yu](#get_ssms).
 
 ## <a name="get-the-northwind-sample-database"></a>Northwind örnek veritabanını almak
 
@@ -30,11 +22,15 @@ Northwind örnek veritabanıyla kurulan Microsoft Download Center'daki şu sayfa
 
 Dosya indirdi sonra veritabanları ve komut dosyalarını ayıklamak için dosyaya çift tıklayın. Varsayılan olarak, dosyaların klasöründe yüklü `<drive>:\SQL Server 2000 Sample Databases`.
 
-Northwind veritabanı kullanabilmeniz için aşağıdakilerden birini yapmanız gerekir:
+Northwind veritabanı kullanabilmeniz için SQL Server örneği üzerinde veritabanı kullanarak oluşturmanız gerekebilir [SQL Server Management Studio](#get_ssms) veya çalıştırmak için benzer bir araç `instnwnd.sql` yükleme klasöründe betik dosyası.
 
-- Veritabanı bir SQL Server örneği üzerinde çalıştırarak yeniden `instnwnd.sql` yükleme klasöründe betik dosyası.
+## <a name="get-the-adventureworks-sample-database"></a>AdventureWorks örnek veritabanını almak
 
-- Ekleme `northwnd.mdf` ile kendi karşılık gelen dosya `*.ldf` günlük dosyası için bir SQL Server örneği.
+AdventureWorks örnek veritabanını aşağıdaki GitHub deposundan indirin:
+
+[AdventureWorks örnek veritabanları](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)
+
+Bir veritabanı yedeğinin indirdikten sonra (\*.bak) dosyaları, SQL Server örneğine SQL Server Management Studio (SSMS) kullanarak yedeklemeyi geri yükleme. Bkz: [alma SQL Server Management Studio'yu](#get_ssms).
 
 ## <a name="get_sql"></a> SQL Server Express edinin
 
@@ -42,7 +38,7 @@ SQL Server Express, SQL Server, uygulamaları yeniden dağıtabilirsiniz, ücret
   
 [SQL Server Express sürümleri](https://www.microsoft.com/sql-server/sql-server-editions-express)
 
-Kullanıyorsanız [Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017), SQL Server Express LocalDB, Professional ve üzeri sürümleri yanı sıra Community sürümü bulunur.  
+Kullanıyorsanız [Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017), SQL Server Express LocalDB, Professional ve üzeri sürümleri yanı sıra ücretsiz Community sürümü bulunur.  
 
 ## <a name="get_ssms"></a> SQL Server Management Studio'yu edinin
 Görüntülemek veya karşıdan yüklediğiniz bir veritabanı değiştirmek istiyorsanız, SQL Server Management Studio (SSMS) kullanabilirsiniz. SSMS aşağıdaki sayfasından indirin:

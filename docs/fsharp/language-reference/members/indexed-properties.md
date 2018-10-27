@@ -1,58 +1,48 @@
 ---
 title: Dizini Oluşturulan Özellikler (F#)
-description: 'Sıralı verilerine dizi benzeri erişim sağlayan özellikleri olan F # dizinli özellikleri hakkında bilgi edinin.'
-ms.date: 05/16/2016
-ms.openlocfilehash: e56e4e2ea3f35df4c8ec46012357242cb6ce69f3
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+description: Dizinli Özellikler hakkında bilgi edinin F#, sıralı verilerine dizi benzeri erişim verin.
+ms.date: 10/17/2018
+ms.openlocfilehash: 3dac60eba3d9e7a9c3e76ad7ee051e6b30b88636
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46321372"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452254"
 ---
 # <a name="indexed-properties"></a>Dizini Oluşturulan Özellikler
 
-*Dizin oluşturulmuş özellikleri* dizi benzeri erişim sağlayan özellikler veri sıralanır. Üç formlarında geldikleri:
-
-* `Item`
-* `Ordinal`
-* `Cardinal`
-
-Bir F # üye bir dizi benzeri erişim sağlamak için bu üç ad adlandırılmalıdır. `IndexerName` Aşağıdaki üç seçenekten birini temsil etmek için kullanılır:
+Sıralanmış veriler üzerinde soyutlayan bir sınıf tanımlanırken, bazen temel uygulamayı sokmadan verileri dizinlenmiş erişim sağlamak yararlı olabilir. Bunun `Index` üyesi.
 
 ## <a name="syntax"></a>Sözdizimi
 
 ```fsharp
 // Indexed property that has both get and set defined.
-member self-identifier.IndexerName
-    with get(index-variable) =
-        get-function-body
-    and set index-variablesvalue-variables =
-        set-function-body
+member self-identifier.Index
+    with get(index-values) =
+        get-member-body
+    and set index-values values-to-set =
+        set-member-body
 
-// Indexed property that has get only.
-member self-identifier.IndexerName(index-variable) =
-    get-function-body
-
-// Alternative syntax for indexed property with get only
-member self-identifier.IndexerName
-    with get(index-variables) =
-        get-function-body
+// Indexed property with get only
+member self-identifier.Index
+    with get(index-values) =
+        get-member-body
 
 // Indexed property that has set only.
-member self-identifier.IndexerName
-    with set index-variablesvalue-variables = 
-        set-function-body
+member self-identifier.Index
+    with set index-values values-to-set =
+        set-member-body
 ```
 
 ## <a name="remarks"></a>Açıklamalar
 
 Her ikisi de Dizinlenmiş özelliklerin nasıl tanımlanacağı önceki sözdizimi formlarda gösterilen bir `get` ve `set` yöntemi sahip bir `get` yöntemi yalnızca veya bir `set` yalnızca yöntemi. Her ikisi de yalnızca get ve yalnızca kümesi için sözdizimini sözdizimini birleştirin ve hem get hem de kümesi olan bir özellik oluşturur. Bu ikinci form üzerinde get farklı erişilebilirlik değiştiricileri ve öznitelikleri yerleştirin ve yöntemleri ayarlamanıza olanak sağlar.
 
-Zaman *IndexerName* olduğu `Item`, derleyici özelliği bir varsayılan dizini oluşturulan özellik olarak değerlendirir. A *varsayılan dizini oluşturulan özellik* Pro instanci objektu dizi benzeri sözdizimi kullanarak erişebileceğiniz bir özelliktir. Örneğin, varsa `obj` bu özellik, söz dizimi tanımlayan türünde bir nesnedir `obj.[index]` özelliğine erişmek için kullanılır.
+Adını kullanarak `Item`, derleyici özelliği bir varsayılan dizini oluşturulan özellik olarak değerlendirir. A *varsayılan dizini oluşturulan özellik* Pro instanci objektu dizi benzeri sözdizimi kullanarak erişebileceğiniz bir özelliktir. Örneğin, varsa `o` bu özellik, söz dizimi tanımlayan türünde bir nesnedir `o.[index]` özelliğine erişmek için kullanılır.
 
-Varsayılan olmayan dizine özelliğine erişmek için söz dizimi, özelliğin adını ve parantez içinde dizin sağlamaktır. Örneğin, özellik ise `Ordinal`, yazdığınız `obj.Ordinal(index)` erişmek için.
+Varsayılan olmayan bir dizinlenmiş özellik erişmek için söz dizimi, özellik ve normal üye olduğu gibi parantez içinde dizin adını sağlamaktır. Örneğin, özellikte `o` çağrılır `Ordinal`, yazdığınız `o.Ordinal(index)` erişmek için.
 
-Kullandığınız formdan ne olursa olsun, curried form için her zaman kullanmalısınız `set` bir dizinlenmiş özellik yöntemi. Curried işlevleri hakkında daha fazla bilgi için bkz: [işlevleri](../functions/index.md).
+Kullandığınız formdan bakılmaksızın, bir dizinlenmiş özellik kümesi yöntemi için curried formu her zaman kullanmalısınız. Curried işlevleri hakkında daha fazla bilgi için bkz: [işlevleri](../functions/index.md).
 
 ## <a name="example"></a>Örnek
 
@@ -62,7 +52,7 @@ Aşağıdaki kod örneği, varsayılan ve get ve set yöntemlerinin varsayılan 
 
 ## <a name="output"></a>Çıkış
 
-```
+```console
 ONE two three four five six seven eight nine ten
 ONE first two second three third four fourth five fifth six 6th
 seven seventh eight eighth nine ninth ten tenth

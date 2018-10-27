@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9dd06e25-12c0-4a9e-855a-452dc83803e2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 80379e46c6482a3e052c1283fb4aaba2c7df282e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 31c99d38cd608e93e9ee3467e0ce425835a3d572
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47207104"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50044899"
 ---
 # <a name="mutexes"></a>Zaman Uyumu Sağlayıcılar
 Kullanabileceğiniz bir <xref:System.Threading.Mutex> özel bir kaynağa erişim sağlamak için nesne. <xref:System.Threading.Mutex> Sınıfın kullandığı değerinden daha fazla sistem kaynakları <xref:System.Threading.Monitor> sınıfı, ancak uygulama etki alanı sınırları ötesinde sıralanır, birden çok bekler ile kullanılabilir ve farklı işlemlerdeki iş parçacığı eşitleme için kullanılabilir. Yönetilen eşitleme mekanizmaları bir karşılaştırması için bkz: [eşitleme temellerine genel bakış](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
@@ -51,11 +51,11 @@ Kullanabileceğiniz bir <xref:System.Threading.Mutex> özel bir kaynağa erişim
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Threading.Mutex>  
-- <xref:System.Threading.Mutex.%23ctor%2A>  
-- <xref:System.Security.AccessControl.MutexSecurity>  
-- <xref:System.Security.AccessControl.MutexAccessRule>  
-- [İş parçacığı oluşturma](../../../docs/standard/threading/index.md)  
-- [İş Parçacığı Nesneleri ve Özellikleri](../../../docs/standard/threading/threading-objects-and-features.md)  
-- [İzleyiciler](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
-- [İş Parçacıkları ve İş Parçacığı Oluşturma](../../../docs/standard/threading/threads-and-threading.md)
+- <xref:System.Threading.Mutex?displayProperty=nameWithType>  
+- <xref:System.Threading.Mutex.%23ctor%2A?displayProperty=nameWithType>  
+- <xref:System.Security.AccessControl.MutexSecurity?displayProperty=nameWithType>  
+- <xref:System.Security.AccessControl.MutexAccessRule?displayProperty=nameWithType>
+- <xref:System.Threading.Monitor?displayProperty=nameWithType>  
+- [İş parçacığı nesneleri ve özellikleri](threading-objects-and-features.md)  
+- [İş parçacıkları ve iş parçacığı oluşturma](threads-and-threading.md)
+- [İş parçacığı oluşturma](index.md)  

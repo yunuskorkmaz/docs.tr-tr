@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 26b071f3-1261-47ef-8690-0717f5cd93c1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 51066ab6fb0fa4749befdd0f94790fa45a7ab5cf
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 73f786c8f1080d0046889958e8b3bd3165870569
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44191072"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187458"
 ---
 # <a name="xml-type-support-implementation-notes"></a>XML tür desteği uygulama notları
 Bu konu, istediğiniz bazı uygulama ayrıntılarını açıklar.  
@@ -27,14 +27,14 @@ Bu konu, istediğiniz bazı uygulama ayrıntılarını açıklar.
  CLR türleri ve XML veri türleri arasında nasıl işleneceğini oluşabilecek belirli eşleşmeler aşağıda açıklanmıştır.  
   
 > [!NOTE]
->  `xs` Önek eşlenmiş durumda http://www.w3.org/2001/XMLSchema ve ad alanı URI.  
+> `xs` Önek eşlenmiş durumda <https://www.w3.org/2001/XMLSchema> ve ad alanı URI.
   
 ### <a name="systemtimespan-and-xsduration"></a>System.TimeSpan ve xs: Duration  
  `xs:duration` Türü, farklı belirli süre değer vardır ancak kısmen sıralandığına. İçin diğer bir deyişle `xs:duration` türü değeri 1 ay (P1M) gibi 32 günden (P32D) (P27D) 27 gün sayısından daha büyük olduğu ve 28, 29 veya 30 gün eşdeğerdir.  
   
  <xref:System.TimeSpan> Sınıfı kısmi sıralanması desteklemez. Bunun yerine, belirli sayıda gün boyunca 1 yıl ve 1 ay seçer; 365 gün ve 30 gün sırasıyla.  
   
- Daha fazla bilgi için `xs:duration` yazın, bkz: W3C XML şema bölümü 2: veri türleri öneri konumunda http://www.w3.org/TR/xmlschema-2/.  
+ Daha fazla bilgi için `xs:duration` yazın, bkz: W3C [XML şema bölümü 2: veri türleri öneri](https://www.w3.org/TR/xmlschema-2/).
   
 ### <a name="xstime-gregorian-date-types-and-systemdatetime"></a>System.DateTime xs: Time ve Gregoryen tarihi türleri  
  Olduğunda bir `xs:time` değeri eşlenmiş durumda bir <xref:System.DateTime> nesnesi <xref:System.DateTime.MinValue> tarih özelliklerini başlatmak için kullanılan alanı <xref:System.DateTime> nesne (gibi <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A>, ve <xref:System.DateTime.Day%2A>) en küçük olası <xref:System.DateTime> değeri.  

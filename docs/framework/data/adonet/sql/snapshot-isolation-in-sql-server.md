@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
-ms.openlocfilehash: 52c5dba1a21b0e8d8e5af1dc159941e5f4b4aa5f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: d2683ead92eb4e76494e3e23bff1c688578a316d
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45970079"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50034305"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>SQL Server'da anlık görüntü yalıtımı
 Anlık görüntü yalıtımı OLTP uygulamalar için eşzamanlılık geliştirir.  
@@ -24,7 +24,7 @@ Anlık görüntü yalıtımı OLTP uygulamalar için eşzamanlılık geliştirir
   
  Anlık görüntü yalıtımı işlemlerde kullanılmadan önce allow_snapshot_ısolatıon açık veritabanı seçeneğini ayarlayarak etkinleştirilmesi gerekir. Bu geçici bir veritabanında satır sürümlerini depolamak için bir mekanizma etkinleştirir (**tempdb**). İle Transact-SQL ALTER DATABASE deyimini kullanan her veritabanında anlık görüntü yalıtımını etkinleştirmeniz gerekir. Bu bakımdan, anlık görüntü yalıtımı READ COMMITTED, TEKRARLANABİLİR okuma, seri hale GETİRİLEBİLİR ve READ UNCOMMITTED hiçbir yapılandırma gerektiren geleneksel yalıtım düzeylerinden farklıdır. Aşağıdaki deyimleri, anlık görüntü yalıtımını etkinleştirmeniz ve varsayılan davranışını READ COMMITTED SNAPSHOT ile değiştirin:  
   
-```  
+```sql  
 ALTER DATABASE MyDatabase  
 SET ALLOW_SNAPSHOT_ISOLATION ON  
   
@@ -49,7 +49,7 @@ SET READ_COMMITTED_SNAPSHOT ON
   
 -   Tüm aralıkları anahtarların kilitler ve işlem tamamlanana kadar Kilit tutan çünkü en kısıtlayıcı bir yalıtım düzeyi seri hale GETİRİLEBİLİR. Bu, TEKRARLANABİLİR okuma kapsayan ve diğer işlemlerin işlem tamamlanana kadar bu işlem tarafından okunana aralıkları yeni satır eklenemiyor kısıtlama ekler.  
   
- Daha fazla bilgi için SQL Server Books Online'da "yalıtım düzeyleri" konusuna bakın.  
+ Daha fazla bilgi için [işlem kilitleme ve satır sürümü oluşturma Kılavuzu](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide).  
   
 ### <a name="snapshot-isolation-level-extensions"></a>Anlık görüntü yalıtım düzeyi uzantıları  
  SQL Server uzantılarını anlık görüntü yalıtım düzeyi giriş ve ek READ COMMITTED uygulaması ile SQL 92 yalıtım düzeyleri kullanıma sunmuştu. Read_commıtted_snapshot yalıtım düzeyi şeffaf bir şekilde READ COMMITTED tüm işlemler için değiştirebilirsiniz.  
@@ -132,7 +132,7 @@ SqlTransaction sqlTran =
 ### <a name="using-lock-hints-with-snapshot-isolation"></a>Anlık görüntü yalıtımıyla kilit ipuçlarına kullanma  
  Önceki örnekte, ilk işlem, verileri seçer ve ilk işlemin tamamlanması açmadan önce ikinci bir hareket verileri ilk işlem aynı satırda güncelleştirmeye çalıştığında bir güncelleme çakışması neden güncelleştirir. İşlem başına kilit ipuçlarına sağlayarak uzun süre çalışan anlık işlemleri güncelleştirme çakışması olasılığını azaltabilirsiniz. Aşağıdaki SELECT deyimi, seçili satırları kilitlemek için UPDLOCK ipucu kullanır:  
   
-```  
+```sql  
 SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)   
   WHERE PriKey BETWEEN 1 AND 3  
 ```  
@@ -143,4 +143,5 @@ SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [SQL Server ve ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)      
+ [İşlem kilitleme ve satır sürümü oluşturma Kılavuzu](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)

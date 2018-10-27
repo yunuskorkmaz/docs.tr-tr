@@ -4,12 +4,12 @@ description: Adım adım örnek bir çözüm oluşturmak bir etkileşimli deneyi
 author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
-ms.openlocfilehash: efeb12eb43539b0a85168b1162e0f8b94ad67e90
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 1c2b0bdd4bf76a17217db0c98b8f951f7d58f2ea
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44213838"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183782"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>Birim testi MSTest ve .NET Core ile C#
 
@@ -88,11 +88,11 @@ Aşağıdaki ana hat nihai çözüm düzeni gösterilir:
         PrimeServiceTests.csproj
 ```
 
-Yürütme [ `dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj` ](../tools/dotnet-sln.md) içinde *birim testi-kullanarak-dotnet-test* dizin. 
+Yürütme [ `dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj` ](../tools/dotnet-sln.md) içinde *birim-test-kullanarak-mstest* dizin. 
 
 ## <a name="creating-the-first-test"></a>İlk testi oluşturma
 
-TDD yaklaşım geçer hale getirme ve süreci tekrarlayarak yazma bir başarısız test için çağırır. Kaldırma *UnitTest1.cs* gelen *PrimeService.Tests* dizin adlı yeni bir C# dosyası oluşturup *PrimeService_IsPrimeShould.cs* aşağıdaki içeriğe sahip:
+TDD yaklaşım geçer hale getirme ve süreci tekrarlayarak yazma bir başarısız test için çağırır. Kaldırma *UnitTest1.cs* gelen *PrimeService.Tests* dizin ve yeni bir C# adlı dosya *PrimeService_IsPrimeShould.cs* aşağıdaki içeriğe sahip:
 
 ```csharp
 using Microsoft.VisualStudio.TestTools.UnitTesting;

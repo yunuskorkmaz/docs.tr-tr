@@ -2,12 +2,12 @@
 title: LINQ - SQL
 ms.date: 03/30/2017
 ms.assetid: 73d13345-eece-471a-af40-4cc7a2f11655
-ms.openlocfilehash: 499311f4db9d36f9f95d20c6ef0441ff42f0029b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 141505eed8e76bb5f9811b5d2bdc166885905cde
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529388"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50034188"
 ---
 # <a name="linq-to-sql"></a>LINQ - SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bir bileşeni olan [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] ilişkisel verileri nesne gibi yönetmek için çalışma zamanı altyapısı sağlayan sürüm 3.5.  
@@ -41,7 +41,7 @@ ms.locfileid: "43529388"
  [LINQ](../../../../../visual-basic/programming-guide/language-features/linq/index.md)  
  Açıklar [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] Visual Basic kullanıcıları için teknolojileri.  
   
- [ADO.NET'e LINQ](https://msdn.microsoft.com/library/be3297b9-1b54-4d4c-82a8-add0d79c2006)  
+ [LINQ ve ADO.NET](../../../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
  Bağlantılar [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] portalı.  
   
  [LINQ to SQL izlenecek yollar](https://msdn.microsoft.com/library/308e66ac-f704-4e00-9b4e-7af0045a2374)  

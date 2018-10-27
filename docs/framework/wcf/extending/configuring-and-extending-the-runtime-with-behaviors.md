@@ -4,132 +4,132 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - attaching extensions using behaviors [WCF]
 ms.assetid: 149b99b6-6eb6-4f45-be22-c967279677d9
-ms.openlocfilehash: af95fa01fc9caffb8a4f0e85d3457c7f3fa60320
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 707b365a0f64055497e6b8814633acf7f4d7097c
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808318"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50041199"
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>Çalışma Zamanını Davranışlarla Yapılandırma ve Genişletme
-Davranışları inceleme ve hizmet yapılandırmasını doğrulamak veya Windows Communication Foundation (WCF) istemci ve hizmet uygulamalarının çalışma zamanı davranışını değiştirme özel uzantıları ekleyin ve varsayılan davranışı değiştirmek etkinleştirin. Bu konu, davranış arabirimleri, bunların nasıl uygulanacağını ve bunları hizmet açıklamasında (bir hizmet uygulaması) veya uç noktası (istemci uygulamasında) programlı olarak veya bir yapılandırma dosyasında nasıl ekleneceğini açıklar. Sistem tarafından sağlanan davranışları kullanma hakkında daha fazla bilgi için bkz: [hizmet çalışma zamanı davranışını belirtme](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md) ve [istemci çalışma zamanı davranışını belirtme](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md).  
+Davranışlar, varsayılan davranışı değiştirmek ve incelemek ve doğrulama hizmet yapılandırması veya çalışma zamanı davranışını Windows Communication Foundation (WCF) hizmet ve istemci uygulamalarında özel uzantıları eklemek etkinleştirin. Bu konu, davranış arabirimleri, bunların nasıl uygulanacağını ve bunları hizmet açıklamasında (bir hizmet uygulaması) ya da uç noktası (istemci uygulamasındaki) programlı olarak veya bir yapılandırma dosyasını nasıl ekleneceğini açıklar. Sistem tarafından sağlanan davranışları kullanma hakkında daha fazla bilgi için bkz. [hizmet çalışma zamanı davranışını belirtme](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md) ve [istemci çalışma zamanı davranışını belirtme](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md).  
   
 ## <a name="behaviors"></a>Davranışlar  
- Davranış türleri hizmet veya hizmet uç noktası açıklama nesneleri eklenir (hizmet veya istemci, sırasıyla) önce bu nesneleri bir WCF hizmeti veya bir WCF istemcisi yürüten bir çalışma zamanı oluşturmak için Windows Communication Foundation (WCF) tarafından kullanılır. Ardından çalışma zamanı özellikleri ve Sözleşme, bağlamaları ve adresler tarafından oluşturulan çalışma zamanı değiştirme yöntemleri erişebilir çalışma zamanı oluşturma işlemi sırasında bu davranışların çağrıldığında.  
+ Davranış türleri hizmet veya hizmet uç noktası tanımı nesneleri eklenir (hizmet veya istemci, sırasıyla) önce bu nesneleri bir WCF hizmeti veya bir WCF istemcisi yürüten bir çalışma zamanı oluşturmak için Windows Communication Foundation (WCF) tarafından kullanılır. Ardından çalışma zamanı özellikleri ve Sözleşme, bağlamalar ve adresleri tarafından oluşturulan çalışma zamanını değiştirme yöntemlerini erişebilir çalışma zamanı oluşturma işlemi sırasında bu davranışların çağrıldığında.  
   
 ### <a name="behavior-methods"></a>Davranış yöntemleri  
- Tüm davranışları sahip bir `AddBindingParameters` yöntemi, bir `ApplyDispatchBehavior` yöntemi, bir `Validate` yöntemi ve bir `ApplyClientBehavior` yöntemi bir özel durum ile: çünkü <xref:System.ServiceModel.Description.IServiceBehavior> yürütülemiyor bir istemcinin, onu uygulamayan `ApplyClientBehavior`.  
+ Tüm davranışları sahip bir `AddBindingParameters` yöntemi, bir `ApplyDispatchBehavior` yöntemi, bir `Validate` yöntemi ve bir `ApplyClientBehavior` yöntemi bir özel durum ile: çünkü <xref:System.ServiceModel.Description.IServiceBehavior> yürütülemiyor bir istemcinin, onu uygulamıyor `ApplyClientBehavior`.  
   
--   Kullanmak `AddBindingParameters` değiştirmek veya özel nesneleri çalışma zamanı oluşturulduğunda, bunların kullanılması için özel bağlamalar erişebileceği bir koleksiyona eklemek için bir yöntem. Örneğin, bu kanal yapılandırıldığında, biçimini etkiler koruma gereksinimlerini belirtilen nasıl ancak olmayan kanal geliştirici tarafından bilinen.  
+-   Kullanma `AddBindingParameters` değiştirmek veya çalışma zamanı oluşturulduğunda, bunların kullanılması için özel bağlamalar erişebileceği bir koleksiyona özel nesneleri eklemek için yöntemi. Örneğin, bu kanal oluşturulduğuna göre biçimini etkiler koruma gereksinimlerini belirtilen nasıl ancak olmayan kanal geliştirici tarafından bilinir.  
   
--   Kullanım `Validate` emin olmak için karşılık gelen çalışma zamanı nesne ve açıklama ağaç incelemek için yöntemi bazı ölçüt kümesine uyan.  
+-   Kullanım `Validate` yöntemi emin olmak için karşılık gelen çalışma zamanı nesnesi ve açıklama ağaç incelemek için bazı ölçüt kümesine uyan.  
   
--   Kullanım `ApplyDispatchBehavior` ve `ApplyClientBehavior` açıklama incelemek için yöntemleri ağaç ve hizmet ya da istemci belirli bir kapsam için çalışma zamanı değiştirin. Ayrıca, uzantısı nesneler de ekleyebilirsiniz.  
+-   Kullanım `ApplyDispatchBehavior` ve `ApplyClientBehavior` açıklama incelemek için yöntemleri ağaç ve çalışma zamanı hizmet veya istemcinin belirli bir kapsam için değiştirin. Genişletme nesneleri de ekleyebilirsiniz.  
   
     > [!NOTE]
-    >  Bu yöntemler bir açıklama ağacı bulunmakla yalnızca incelemek için var. Açıklama ağaç değiştirilirse tanımlanmamış bir davranıştır.  
+    >  Bir açıklama ağacı bu yöntemleri bulunmakla yalnızca İnceleme var. Bir açıklama ağaç değiştirilirse, tanımsız bir davranıştır.  
   
- Özellikleri, değişiklik yapabilirsiniz ve, uygulayabileceğiniz özelleştirme arabirimleri hizmet ve istemci çalışma zamanı sınıfları erişilir. Hizmet türleri <xref:System.ServiceModel.Dispatcher.DispatchRuntime> ve <xref:System.ServiceModel.Dispatcher.DispatchOperation> sınıfları. İstemci türleri <xref:System.ServiceModel.Dispatcher.ClientRuntime> ve <xref:System.ServiceModel.Dispatcher.ClientOperation> sınıfları. <xref:System.ServiceModel.Dispatcher.ClientRuntime> Ve <xref:System.ServiceModel.Dispatcher.DispatchRuntime> istemci ve hizmet genelindeki çalışma zamanı özellikleri ve uzantı koleksiyonlar, sırasıyla erişmek için genişletilebilirlik giriş noktaları sınıflarıdır. Benzer şekilde, <xref:System.ServiceModel.Dispatcher.ClientOperation> ve <xref:System.ServiceModel.Dispatcher.DispatchOperation> sınıfları istemci işlemi ve hizmet işlemi çalışma zamanı özellikleri ve uzantı koleksiyonlar, sırasıyla gösterir. Şunları yapabilirsiniz, ancak, daha geniş kapsamlı çalışma zamanı nesne işlemi çalışma zamanı nesne tersi varsa erişmeniz olabilir.  
+ Özellikler değiştirebileceğiniz ve uygulayabileceğiniz özelleştirme arabirimleri hizmet ve istemci çalışma zamanı sınıflar erişilir. Hizmet türleri <xref:System.ServiceModel.Dispatcher.DispatchRuntime> ve <xref:System.ServiceModel.Dispatcher.DispatchOperation> sınıfları. İstemci türleri <xref:System.ServiceModel.Dispatcher.ClientRuntime> ve <xref:System.ServiceModel.Dispatcher.ClientOperation> sınıfları. <xref:System.ServiceModel.Dispatcher.ClientRuntime> Ve <xref:System.ServiceModel.Dispatcher.DispatchRuntime> istemci ve hizmet genelindeki çalışma zamanı özellikleri ve uzantı koleksiyonları, sırasıyla erişmek için genişletilebilirlik noktaları sınıflardır. Benzer şekilde, <xref:System.ServiceModel.Dispatcher.ClientOperation> ve <xref:System.ServiceModel.Dispatcher.DispatchOperation> sınıfları istemci işlemini ve hizmet işlemi çalışma zamanı özelliklerini ve uzantı koleksiyonlar, sırasıyla gösterir. Şunları yapabilirsiniz, ancak daha geniş kapsamlı çalışma zamanı nesne işlemi çalışma zamanı nesne veya tersine, erişim gerekli olabilir.  
   
 > [!NOTE]
->  Çalışma zamanı özellikleri ve bir istemci yürütme davranışını değiştirmek için kullanabileceğiniz uzantı türleri tartışma için bkz [genişletme istemcileri](../../../../docs/framework/wcf/extending/extending-clients.md). Çalışma zamanı özellikleri ve bir hizmet dağıtıcısı yürütme davranışını değiştirmek için kullanabileceğiniz uzantı türleri tartışma için bkz [dağıtıcıları genişletme](../../../../docs/framework/wcf/extending/extending-dispatchers.md).  
+>  Çalışma zamanı özellikleri ve bir istemci yürütme davranışını değiştirmek için kullanabileceğiniz bir uzantı türleri bir tartışma için bkz [genişletme istemciler](../../../../docs/framework/wcf/extending/extending-clients.md). Çalışma zamanı özellikleri ve hizmet dağıtıcı yürütme davranışını değiştirmek için kullanabileceğiniz bir uzantı türleri bir tartışma için bkz [dağıtıcıları genişletme](../../../../docs/framework/wcf/extending/extending-dispatchers.md).  
   
- Çoğu WCF kullanıcıların çalışma zamanı ile doğrudan etkileşim değil; Bunun yerine çekirdek modeli yapıları uç noktaları, sözleşmeler, bağlamaları, adresleri ve sınıfları veya yapılandırma dosyalarında davranışları davranışı öznitelikleri gibi programlama kullanın. Bu yapıları oluşturan *açıklama ağaç*, bir hizmetini desteklemek için bir çalışma zamanı oluşturmak için tam belirtimi olduğu veya istemci tarafından açıklama ağaç açıklanmaktadır.  
+ WCF kullanıcıların çoğu çalışma zamanı ile doğrudan etkileşimli olarak; Bunun yerine çekirdek modeli yapıları uç noktaları, sözleşmeler, bağlamaları, adresleri ve sınıfları veya yapılandırma dosyalarında davranışları davranışı öznitelikleri gibi programlama kullanın. Bu yapılar oluşturan *açıklama ağaç*istemci tarafından açıklama ağaç açıklanan veya hizmet desteklemek için bir çalışma zamanı oluşturmak için tam belirtimi olduğu.  
   
- WCF davranışlarının dört tür vardır:  
+ Wcf'de davranışları dört çeşit vardır:  
   
 -   Hizmet davranışları (<xref:System.ServiceModel.Description.IServiceBehavior> türleri) dahil olmak üzere tüm hizmet çalışma zamanı özelleştirmenin <xref:System.ServiceModel.ServiceHostBase>.  
   
 -   Uç nokta davranışları (<xref:System.ServiceModel.Description.IEndpointBehavior> türleri) hizmet uç noktaları ve bunların ilişkili özelleştirmenin <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> nesneleri.  
   
--   Sözleşme davranışları (<xref:System.ServiceModel.Description.IContractBehavior> türleri) hem özelleştirmenin <xref:System.ServiceModel.Dispatcher.ClientRuntime> ve <xref:System.ServiceModel.Dispatcher.DispatchRuntime> istemci ve hizmet uygulamalarında sırasıyla sınıfları.  
+-   Sözleşme davranışları (<xref:System.ServiceModel.Description.IContractBehavior> türleri) hem özelleştirmenin <xref:System.ServiceModel.Dispatcher.ClientRuntime> ve <xref:System.ServiceModel.Dispatcher.DispatchRuntime> sırasıyla hizmet ve istemci uygulamalarında sınıfları.  
   
--   İşlemi davranışları (<xref:System.ServiceModel.Description.IOperationBehavior> türleri) özelleştirmesini etkinleştirmek <xref:System.ServiceModel.Dispatcher.ClientOperation> ve <xref:System.ServiceModel.Dispatcher.DispatchOperation> yeniden, istemci ve hizmet sınıfları.  
+-   İşlem davranışları (<xref:System.ServiceModel.Description.IOperationBehavior> türleri) özelleştirmesini etkinleştir <xref:System.ServiceModel.Dispatcher.ClientOperation> ve <xref:System.ServiceModel.Dispatcher.DispatchOperation> yeniden, istemci ve hizmet sınıfları.  
   
- Uygulama yapılandırma dosyaları kullanarak özel özniteliklerini uygulayarak veya doğrudan ekleyerek bunları uygun açıklama nesnesinde davranışları koleksiyonuna çeşitli açıklama nesnelere Bu davranışların ekleyebilirsiniz. Gerekir, ancak eklenmiş bir hizmet açıklaması veya hizmet uç noktası açıklama nesne çağrılmadan önce <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> üzerinde <xref:System.ServiceModel.ServiceHost> veya <xref:System.ServiceModel.ChannelFactory%601>.  
+ Bu davranışların çeşitli açıklama nesneleri için uygulama yapılandırma dosyaları kullanılarak özel öznitelikleri uygulayarak veya doğrudan ekleyerek bunları uygun bir açıklama nesne üzerindeki davranışları koleksiyona ekleyebilirsiniz. Hizmet açıklaması veya hizmet uç noktası tanımı nesne çağrılmadan önce eklenen gerekir, ancak <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> üzerinde <xref:System.ServiceModel.ServiceHost> veya <xref:System.ServiceModel.ChannelFactory%601>.  
   
 ### <a name="behavior-scopes"></a>Davranış kapsamları  
- Her biri belirli bir çalışma zamanı erişim kapsamı için karşılık gelen dört davranış türü vardır.  
+ Her biri belirli bir çalışma zamanı erişim kapsamına karşılık gelen dört davranışı türü vardır.  
   
 #### <a name="service-behaviors"></a>Hizmet davranışları  
- Uygulama hizmet davranışları <xref:System.ServiceModel.Description.IServiceBehavior>, tüm hizmet çalışma zamanı tarafından değiştirmeniz birincil sistemdir. Hizmet davranışları bir hizmet eklemek için üç mekanizma vardır.  
+ Uygulama hizmeti davranışları <xref:System.ServiceModel.Description.IServiceBehavior>, tüm hizmet çalışma zamanı tarafından değiştirmeniz yönelik birincil mekanizmadır. Hizmet davranışları için bir hizmet eklemek için üç mekanizma vardır.  
   
-1.  Bir öznitelik hizmet sınıfını kullanma.  Zaman bir <xref:System.ServiceModel.ServiceHost> oluşturulur, <xref:System.ServiceModel.ServiceHost> uygulama yansıma hizmet türünü özniteliklerinde kümesini bulmak için kullanır. Bu özniteliklerin herhangi birini uygulamalarıdır ise <xref:System.ServiceModel.Description.IServiceBehavior>, üzerinde davranışları koleksiyonuna eklenen <xref:System.ServiceModel.Description.ServiceDescription>. Bu çalışma zamanı hizmet yapısında katılmayı bu davranışları sağlar.  
+1.  Öznitelik hizmet sınıfını kullanarak.  Olduğunda bir <xref:System.ServiceModel.ServiceHost> oluşturulur, <xref:System.ServiceModel.ServiceHost> uygulama, hizmet türüne öznitelik kümesi bulmak için yansıtma kullanır. Bu öznitelikleri uygulamalardır, <xref:System.ServiceModel.Description.IServiceBehavior>, davranışları koleksiyona eklendikleri <xref:System.ServiceModel.Description.ServiceDescription>. Bu, çalışma zamanı hizmet oluşturma, katılmak Bu davranış sağlar.  
   
-2.  Program aracılığıyla davranışı üzerinde davranışları koleksiyona ekleme <xref:System.ServiceModel.Description.ServiceDescription>. Bu kod aşağıdaki satırları içeren gerçekleştirilebilir:  
+2.  Program aracılığıyla davranışı davranışları koleksiyona ekleme <xref:System.ServiceModel.Description.ServiceDescription>. Bu, aşağıdaki kod satırlarını gerçekleştirilebilir:  
   
-    ```  
+    ```csharp
     ServiceHost host = new ServiceHost(/* Parameters */);  
     host.Description.Behaviors.Add(/* Service Behavior */);  
     ```  
   
-3.  Özel bir uygulama <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> yapılandırma genişletir. Bu uygulama yapılandırma dosyaları hizmet davranışından kullanımını etkinleştirir.  
+3.  Özel bir uygulama <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> , yapılandırma genişletir. Bu hizmet davranışını uygulama yapılandırma dosyalarından kullanımını etkinleştirir.  
   
- WCF hizmet davranışları örneklerindendir <xref:System.ServiceModel.ServiceBehaviorAttribute> özniteliği <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>ve <xref:System.ServiceModel.Description.ServiceMetadataBehavior> davranışı.  
+ WCF hizmet davranışları örnekler <xref:System.ServiceModel.ServiceBehaviorAttribute> özniteliği <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>ve <xref:System.ServiceModel.Description.ServiceMetadataBehavior> davranışı.  
   
 #### <a name="contract-behaviors"></a>Sözleşme davranışları  
- Sözleşme uygulamak davranışları <xref:System.ServiceModel.Description.IContractBehavior> arabirim, hem istemci hem de hizmet çalışma zamanı arasında bir sözleşme genişletmek için kullanılır.  
+ Sözleşme uygulayan davranışları <xref:System.ServiceModel.Description.IContractBehavior> arabirim, hem istemci hem de hizmet çalışma zamanı arasında bir sözleşme genişletmek için kullanılır.  
   
- Sözleşme davranışları sözleşmeye eklenmesi için iki mekanizma vardır.  İlk mekanizma sözleşme arabirimi kullanılacak özel bir öznitelik oluşturmaktır. Ne zaman bir sözleşme arabirimi geçirilir çok ya da bir <xref:System.ServiceModel.ServiceHost> veya <xref:System.ServiceModel.ChannelFactory%601>, WCF arabirimi özniteliklerinde inceler. Tüm öznitelikleri uygulamalarıdır ise <xref:System.ServiceModel.Description.IContractBehavior>, bu üzerinde davranışları koleksiyonuna eklenen <xref:System.ServiceModel.Description.ContractDescription?displayProperty=nameWithType> bu arabirim için oluşturulmuş.  
+ Sözleşme davranışları sözleşmeye eklenmesi için iki mekanizma vardır.  İlk mekanizma sözleşme arabirimi kullanılacak özel bir öznitelik oluşturmaktır. Ne zaman anlaşma arabirimi geçirilir ya bir <xref:System.ServiceModel.ServiceHost> veya <xref:System.ServiceModel.ChannelFactory%601>, WCF arabirimi özniteliklerinde inceler. Herhangi bir özniteliği uygulamalardır, <xref:System.ServiceModel.Description.IContractBehavior>, bunlar üzerinde davranışları koleksiyona eklenir <xref:System.ServiceModel.Description.ContractDescription?displayProperty=nameWithType> ilgili arabirim için oluşturuldu.  
   
- Ayrıca uygulayabilirsiniz <xref:System.ServiceModel.Description.IContractBehaviorAttribute?displayProperty=nameWithType> özel sözleşme davranışı öznitelikte. Bu durumda, davranışı uygulandığında aşağıdaki gibidir:  
+ Ayrıca uygulayabilirsiniz <xref:System.ServiceModel.Description.IContractBehaviorAttribute?displayProperty=nameWithType> özel sözleşme davranışı öznitelikte. Bu durumda, uygulandığında davranışı şu şekilde olur:  
   
- •A sözleşme arabirimi. Bu durumda, herhangi bir uç nokta içindeki bu türdeki tüm sözleşmeleri davranış uygulanır ve WCF yoksayar değerini <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A?displayProperty=nameWithType> özelliği.  
+ •A anlaşma arabirimi. Bu durumda, bu türdeki herhangi bir uç noktasını tüm sözleşmeler davranış uygulanır ve WCF değerini yoksayar <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A?displayProperty=nameWithType> özelliği.  
   
- •A hizmet sınıfı. Bu durumda, yalnızca biri sözleşmedir değerini Uç noktalara davranışı uygulanır <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A> özelliği.  
+ •A hizmet sınıfı. Bu durumda, davranışı yalnızca biri sözleşmedir değerini uç uygulanır <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A> özelliği.  
   
- •A geri çağırma sınıfı. Bu durumda, çift yönlü istemcinin uç noktasına davranış uygulanır ve WCF yoksayar değerini <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A> özelliği.  
+ •A geri çağırma sınıfı. Bu durumda, çift yönlü istemci uç nokta için davranış uygulanır ve WCF değerini yoksayar <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A> özelliği.  
   
- Davranış davranışları koleksiyona eklemek için ikinci mekanizmasıdır bir <xref:System.ServiceModel.Description.ContractDescription>.  
+ Davranış davranışları koleksiyona eklemek için ikinci mekanizmadır bir <xref:System.ServiceModel.Description.ContractDescription>.  
   
- WCF sözleşmesi davranışlarının örneklerindendir <xref:System.ServiceModel.DeliveryRequirementsAttribute?displayProperty=nameWithType> özniteliği. Daha fazla bilgi ve bir örnek için başvuru konusuna bakın.  
+ WCF sözleşmesi davranışları örnekler <xref:System.ServiceModel.DeliveryRequirementsAttribute?displayProperty=nameWithType> özniteliği. Daha fazla bilgi ve örnek için başvuru konusuna bakın.  
   
 #### <a name="endpoint-behaviors"></a>Uç nokta davranışları  
- Uygulama uç noktası davranışları <xref:System.ServiceModel.Description.IEndpointBehavior>, olarak değiştirmeniz tüm hizmet veya belirli bir uç noktası için çalışma süresi istemci birincil sistemdir.  
+ Uygulayan uç nokta davranışları <xref:System.ServiceModel.Description.IEndpointBehavior>, olarak değiştirmeniz tüm hizmet veya istemci çalışma zamanı için belirli bir uç noktaya yönelik birincil mekanizmadır.  
   
- Bir hizmet uç noktası davranışları eklemek için iki mekanizma vardır.  
+ Uç nokta davranışları için bir hizmet eklemek için iki mekanizma vardır.  
   
-1.  Davranış eklemek <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> özelliği.  
+1.  Davranışların eklenmesi <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> özelliği.  
   
-2.  Özel bir uygulama <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> yapılandırma genişletir.  
+2.  Özel bir uygulama <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> , yapılandırma genişletir.  
   
- Daha fazla bilgi ve bir örnek için başvuru konusuna bakın.  
+ Daha fazla bilgi ve örnek için başvuru konusuna bakın.  
   
-#### <a name="operation-behaviors"></a>İşlemi davranışları  
+#### <a name="operation-behaviors"></a>İşlem davranışları  
  Uygulama işlemi davranışları <xref:System.ServiceModel.Description.IOperationBehavior> arabirim, her işlem için hem istemci hem de hizmet çalışma zamanı genişletmek için kullanılır.  
   
- İşlem için işlem davranışları eklemek için iki mekanizma vardır. İlk mekanizma üzerindeki işlemi modeller yöntem kullanılacak özel bir öznitelik oluşturmaktır. Bir işlem eklendiğinde ya da bir <xref:System.ServiceModel.ServiceHost> veya <xref:System.ServiceModel.ChannelFactory>, WCF ekler herhangi <xref:System.ServiceModel.Description.IOperationBehavior> öznitelikleri davranışları koleksiyona <xref:System.ServiceModel.Description.OperationDescription> bu işlem için oluşturulmuş.  
+ İşlem için işlem davranışları eklemek için iki mekanizma vardır. İlk işlem modelleri metodunda kullanılacak özel bir öznitelik oluşturmak için mekanizmadır. Bir işlem eklendiğinde ya da bir <xref:System.ServiceModel.ServiceHost> veya <xref:System.ServiceModel.ChannelFactory>, WCF herhangi ekler <xref:System.ServiceModel.Description.IOperationBehavior> öznitelikleri davranışları koleksiyona <xref:System.ServiceModel.Description.OperationDescription> bu işlem için oluşturulan.  
   
- İkinci bir oluşturulan üzerinde davranışları koleksiyonuna doğrudan davranışı ekleyerek mekanizmasıdır <xref:System.ServiceModel.Description.OperationDescription>.  
+ İkinci mekanizmadır üzerinde oluşturulmuş bir davranış koleksiyona doğrudan davranışı ekleyerek <xref:System.ServiceModel.Description.OperationDescription>.  
   
- WCF işlemi davranışlarının örneklerindendir <xref:System.ServiceModel.OperationBehaviorAttribute> ve <xref:System.ServiceModel.TransactionFlowAttribute>.  
+ WCF işlemi davranışları örnekler <xref:System.ServiceModel.OperationBehaviorAttribute> ve <xref:System.ServiceModel.TransactionFlowAttribute>.  
   
- Daha fazla bilgi ve bir örnek için başvuru konusuna bakın.  
+ Daha fazla bilgi ve örnek için başvuru konusuna bakın.  
   
-### <a name="using-configuration-to-create-behaviors"></a>Davranışları oluşturmak için yapılandırma kullanma  
- Hizmet ve uç nokta ve göre kodda belirtilmesi için tasarlanan veya özniteliklerini kullanarak sözleşme davranışları can; yalnızca hizmet ve uç nokta davranışları, uygulama veya Web yapılandırma dosyaları kullanılarak yapılandırılabilir. Öznitelikleri kullanarak davranışları gösterme, eklenemez, kaldırılamaz veya çalışma zamanında değiştirilmiş derleme zamanında davranışını belirtmek geliştiricilerin sağlar. Bu genellikle her zaman bir hizmeti doğru çalışması için gerekli davranışları için uygun olan (örneğin, işlem ilgili parametreleri <xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType> özniteliği). Yapılandırmayı kullanarak davranışları gösterme geliştiricilerin belirtim ve bu davranışları yapılandırmasını hizmeti dağıtmak olanlar bırakın olanak tanır. Bu, isteğe bağlı bileşenler ya da hizmet veya belirli yetkilendirme yapılandırmanın bir hizmet için meta veri olup gösterilen gibi diğer dağıtım özgü yapılandırma davranışları için uygundur.  
+### <a name="using-configuration-to-create-behaviors"></a>Davranışlar oluşturma için yapılandırma kullanma  
+ Hizmet ve uç nokta ve kodda belirtilmesi göre tasarlanmış ya da özniteliklerini kullanarak sözleşme davranışları can; yalnızca hizmet ve uç nokta davranışları, uygulama veya Web yapılandırma dosyaları kullanılarak yapılandırılabilir. Davranışları kullanarak öznitelikleri gösterme eklenir, kaldırılır, veya çalışma zamanında değiştirilmiş derleme zamanında bir davranışını belirtmek geliştiricilerin sağlar. Bu genellikle, her zaman bir hizmetin doğru çalışması için gerekli olan davranışları için uygun olan (örneğin, işlem ile ilgili parametreleri için <xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType> özniteliği). Yapılandırmayı kullanarak davranışları gösterme, geliştiricilerin belirtimi ve bu davranışların Yapılandırma hizmeti dağıtmak olanlar bırakın olanak tanır. Bu, isteğe bağlı bileşenler veya hizmet veya belirli bir yetkilendirme yapılandırması için bir hizmet için meta verileri olup kullanıma gibi diğer dağıtım özgü yapılandırma davranışları için uygundur.  
   
 > [!NOTE]
->  Machine.config yapılandırma dosyasına ekleme ve bu öğeleri kilitleme tarafından şirket uygulama ilkelerini zorlamak için yapılandırma desteği davranışları de kullanabilirsiniz. Bir açıklama ve bir örnek için bkz: [nasıl yapılır: Lock aşağı Enterprise uç noktalarını](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
+>  Machine.config yapılandırma dosyasına eklemek ve bu öğeleri kilitlemek şirket uygulama ilkelerini zorlamak için yapılandırma desteği davranışları da kullanabilirsiniz. Bir açıklama ve örnek için bkz. [nasıl yapılır: Lock aşağı Enterprise uç noktalarını](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
   
- Yapılandırması'nı kullanarak bir davranış kullanıma sunmak için bir geliştirici, türetilmiş bir sınıf oluşturmalısınız <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> ve bu uzantı yapılandırma ile kaydedin.  
+ Yapılandırması'nı kullanarak bir davranış kullanıma sunmak için bir geliştirici, türetilmiş bir sınıf oluşturmanız gerekir <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> ve bu uzantı yapılandırmasıyla kaydedebilirsiniz.  
   
  Aşağıdaki örnekte gösterildiği nasıl kod bir <xref:System.ServiceModel.Description.IEndpointBehavior> uygulayan <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>:  
   
-```  
+```csharp
 // BehaviorExtensionElement members  
-    public override Type BehaviorType  
-    {  
-      get { return typeof(EndpointBehaviorMessageInspector); }  
-    }  
+public override Type BehaviorType  
+{  
+  get { return typeof(EndpointBehaviorMessageInspector); }  
+}  
   
-    protected override object CreateBehavior()  
-    {  
-      return new EndpointBehaviorMessageInspector();  
-    }  
+protected override object CreateBehavior()  
+{  
+  return new EndpointBehaviorMessageInspector();  
+}  
 ```  
   
- Özel bir yükleme yapılandırma sistemi sırayla <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>, bir uzantısı olarak kayıtlı olması gerekir. Aşağıdaki kod örneği, yukarıdaki uç noktası davranışı için yapılandırma dosyası gösterir:  
+ Özel bir yükleme yapılandırma sistemi için sırayla <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>, uzantı olarak kayıtlı olması gerekir. Aşağıdaki kod örneği, yukarıdaki uç nokta davranışı için yapılandırma dosyası gösterir:  
   
 ```xml  
 <configuration>  
@@ -181,12 +181,12 @@ Davranışları inceleme ve hizmet yapılandırmasını doğrulamak veya Windows
 </configuration>  
 ```  
   
- Burada `Microsoft.WCF.Documentation.EndpointBehaviorMessageInspector` davranışı uzantı türü ve `HostApplication` içine o sınıfın derlenmiş derleme adıdır.  
+ Burada `Microsoft.WCF.Documentation.EndpointBehaviorMessageInspector` davranışı uzantı türü ve `HostApplication` içine o sınıfa derlenmiş bütünleştirilmiş kodun adı.  
   
 ### <a name="evaluation-order"></a>Değerlendirme sırası  
- <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> Ve <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> çalışma zamanı programlama modeli ve açıklama oluşturmak için sorumludur. Daha önce açıklandığı gibi davranışları, derleme işlemi hizmeti, uç nokta, sözleşme ve işlem katkıda bulunun.  
+ <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> Ve <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> çalışma zamanını şuradan programlama modeli ve açıklama oluşturmak için sorumludur. Daha önce açıklandığı gibi davranışları için derleme işlemi hizmet, uç nokta, sözleşme ve işlem katkıda bulunur.  
   
- <xref:System.ServiceModel.ServiceHost> Davranışları aşağıdaki sırayla uygulanır:  
+ <xref:System.ServiceModel.ServiceHost> Davranışları şu sırayla uygulanır:  
   
 1.  Hizmet  
   
@@ -196,9 +196,9 @@ Davranışları inceleme ve hizmet yapılandırmasını doğrulamak veya Windows
   
 4.  Çalışma  
   
- İçinde herhangi bir koleksiyonu davranışı hiçbir sipariş garanti edilmez.  
+ İçinde herhangi bir koleksiyon davranışların hiçbir sırası garanti edilir.  
   
- <xref:System.ServiceModel.ChannelFactory%601> Davranışları aşağıdaki sırayla uygulanır:  
+ <xref:System.ServiceModel.ChannelFactory%601> Davranışları şu sırayla uygulanır:  
   
 1.  Daralma  
   
@@ -206,24 +206,24 @@ Davranışları inceleme ve hizmet yapılandırmasını doğrulamak veya Windows
   
 3.  Çalışma  
   
- İçinde herhangi bir koleksiyonu davranışı yeniden hiçbir sipariş garanti edilmez.  
+ İçinde herhangi bir koleksiyon davranışların yeniden hiçbir sırası garanti edilir.  
   
-### <a name="adding-behaviors-programmatically"></a>Davranışları programlı olarak ekleme  
- Özelliklerini <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> hizmetinde uygulama subsequent için değiştirilmemelidir <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A?displayProperty=nameWithType> yöntemi <xref:System.ServiceModel.ServiceHostBase?displayProperty=nameWithType>. Bazı üyeleriyle gibi <xref:System.ServiceModel.ServiceHostBase.Credentials%2A?displayProperty=nameWithType> özelliği ve `AddServiceEndpoint` yöntemlere <xref:System.ServiceModel.ServiceHostBase> ve <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType>, o noktayı değiştirilirse bir özel durum. Başkalarının, bunları değiştirmek için izin verme, ancak sonuç tanımlanmadı.  
+### <a name="adding-behaviors-programmatically"></a>Davranışlar programlı olarak ekleme  
+ Özelliklerini <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> hizmetinde uygulama için subsequent değiştirilmemelidir <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A?displayProperty=nameWithType> metodunda <xref:System.ServiceModel.ServiceHostBase?displayProperty=nameWithType>. Bazı üyeler ister <xref:System.ServiceModel.ServiceHostBase.Credentials%2A?displayProperty=nameWithType> özelliği ve `AddServiceEndpoint` yöntemlerde <xref:System.ServiceModel.ServiceHostBase> ve <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType>, bu noktanın ilerisine değiştirdiyseniz bir özel durum. Diğerleri, bunları değiştirmek için izin verir, ancak sonuç tanımsızdır.  
   
- Benzer şekilde, istemci üzerinde <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType> değerleri değil değiştirilmelidir çağrısından sonra <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A> üzerinde <xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType>. <xref:System.ServiceModel.ChannelFactory.Credentials%2A?displayProperty=nameWithType> Özelliği bu noktayı değiştirilirse bir özel durum oluşturur, ancak diğer istemci açıklama değerler hatasız değiştirilebilir. Sonuç, ancak tanımlı değil.  
+ Benzer şekilde, istemci üzerinde <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType> değerlerin değil değiştirilmelidir çağrısından sonra <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A> üzerinde <xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType>. <xref:System.ServiceModel.ChannelFactory.Credentials%2A?displayProperty=nameWithType> Özelliği bu noktanın ilerisine değiştirilmiş bir özel durum oluşturur, fakat diğer istemci açıklama değerler hatasız değiştirilebilir. Ancak, sonuç tanımsızdır.  
   
- Hizmet veya istemci için açıklama çağrılmadan önce değiştirmeniz önerilir olup olmadığını <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A?displayProperty=nameWithType>.  
+ Hizmet veya istemci için açıklama çağrılmadan önce değiştirmeniz önerilir olmadığını <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A?displayProperty=nameWithType>.  
   
-### <a name="inheritance-rules-for-behavior-attributes"></a>Davranışı öznitelikleri için devralma kuralları  
- Tüm dört tür davranışları özniteliklerini – hizmet davranışları ve sözleşme davranışları kullanarak doldurulabilir. Öznitelikler, yönetilen nesneleri ve üyeleri ve yönetilen nesneler üzerinde tanımlanır ve üyeleri devralma desteklemesi nedeniyle davranışı öznitelikleri devralma bağlamında nasıl tanımlamak gereklidir.  
+### <a name="inheritance-rules-for-behavior-attributes"></a>Devralma kuralları davranışı öznitelikleri için  
+ Tüm dört tür davranışları öznitelikleri – hizmet davranışları ve sözleşme davranışlar kullanılarak doldurulabilir. Öznitelikler, yönetilen nesneleri ve üyeleri ve yönetilen nesneleri tanımlanır ve üyeleri devralma desteklemek için davranışı öznitelikleri devralma bağlamında nasıl tanımlamak gereklidir.  
   
- Yüksek bir düzeyde, belirli bir kapsam için (örneğin, hizmet, sözleşme veya işlem), bu kapsamı için devralma hiyerarşisindeki tüm davranışı öznitelikleri uygulanan kuralıdır. Aynı türde iki davranışı öznitelikleri varsa, yalnızca en çok türetilen tür kullanılır.  
+ Yüksek bir düzeyde, belirli bir kapsam için (örneğin, hizmet, sözleşme veya işlem), ilgili kapsam için devralma hiyerarşisindeki tüm davranışı öznitelikleri uygulanır kuralıdır. Aynı türdeki iki davranışı öznitelikleri varsa, yalnızca en çok türetilen türü kullanılır.  
   
 #### <a name="service-behaviors"></a>Hizmet davranışları  
- Verili hizmet sınıfı için tüm hizmet davranışı öznitelikleri o sınıfı ve bu sınıfın üst uygulanır. Aynı öznitelik türünde birden çok devralma hiyerarşisi yerlerde uygulanırsa, en çok türetilen tür kullanılır.  
+ Verili hizmet sınıfı için tüm hizmet davranışı öznitelikleri o sınıfı ve o sınıfın üst öğelerinin uygulanır. Öznitelik aynı türde birden çok devralma hiyerarşisi yerlerde uygulanırsa, en çok türetilen türü kullanılır.  
   
-```  
+```csharp  
 [ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Multiple)]  
 [AspNetCompatibilityRequirementsAttribute(  
     AspNetCompatibilityRequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]  
@@ -233,12 +233,12 @@ public class A { /* … */ }
 public class B : A { /* … */}  
 ```  
   
- Örneğin, önceki durumda B hizmeti ile sona eriyor bir <xref:System.ServiceModel.InstanceContextMode> , <xref:System.ServiceModel.InstanceContextMode.Single>, bir <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode> modu <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>ve bir <xref:System.ServiceModel.ConcurrencyMode> , <xref:System.ServiceModel.ConcurrencyMode.Single>. <xref:System.ServiceModel.ConcurrencyMode> Olan <xref:System.ServiceModel.ConcurrencyMode.Single>, çünkü <xref:System.ServiceModel.ServiceBehaviorAttribute> hizmetinde B özniteliktir "üzerinde daha fazla türetilmiş" hizmet A. üzerinde daha  
+ Örneğin, önceki durumda B hizmeti ile sonlanır bir <xref:System.ServiceModel.InstanceContextMode> , <xref:System.ServiceModel.InstanceContextMode.Single>e <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode> modunu <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>ve <xref:System.ServiceModel.ConcurrencyMode> , <xref:System.ServiceModel.ConcurrencyMode.Single>. <xref:System.ServiceModel.ConcurrencyMode> Olduğu <xref:System.ServiceModel.ConcurrencyMode.Single>, çünkü <xref:System.ServiceModel.ServiceBehaviorAttribute> hizmeti B özniteliktir "hakkında daha fazla türetilmiş" hizmet a üzerinde daha  
   
 #### <a name="contract-behaviors"></a>Sözleşme davranışları  
- Belirli bir sözleşme için tüm davranışı öznitelikleri üzerinde arabirim ve üzerinde üst bu arabirimin uygulanacak sözleşme. Aynı öznitelik türünde birden çok devralma hiyerarşisi yerlerde uygulanırsa, en çok türetilen tür kullanılır.  
+ Verilen bir sözleşme için tüm davranışı öznitelikleri üzerinde arabirim ve üzerinde daha fazla üst o arabirimin uygulanan sözleşme. Öznitelik aynı türde birden çok devralma hiyerarşisi yerlerde uygulanırsa, en çok türetilen türü kullanılır.  
   
-#### <a name="operation-behaviors"></a>İşlemi davranışları  
- Belirli bir işlemi, varolan Özet ya da sanal işlemi kılmaz, hiçbir devralma kurallar geçerlidir.  
+#### <a name="operation-behaviors"></a>İşlem davranışları  
+ Belirtilen işlem mevcut soyut ya da sanal bir işlemi geçersiz kılmaz, hiçbir devralma kuralları uygulayın.  
   
- Bir işlem var olan bir işlem, ardından tüm işlemi davranışı öznitelikleri bu işlemi ve bu işlemi üst düzey geçersiz kılarsanız uygulanır.  Aynı öznitelik türünde birden çok devralma hiyerarşisi yerlerde uygulanırsa, en çok türetilen tür kullanılır.
+ Bir işlem var olan bir işlem daha sonra bu işlemi ve bu işlemi üst öğelerinin tüm işlem davranışı öznitelikleri geçersiz kılarsanız uygulanır.  Öznitelik aynı türde birden çok devralma hiyerarşisi yerlerde uygulanırsa, en çok türetilen türü kullanılır.

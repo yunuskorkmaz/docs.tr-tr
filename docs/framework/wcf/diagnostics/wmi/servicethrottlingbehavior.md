@@ -2,19 +2,19 @@
 title: ServiceThrottlingBehavior
 ms.date: 03/30/2017
 ms.assetid: 37b9e517-1f1f-4ec4-9fcb-2b8016794f5b
-ms.openlocfilehash: 9a7fbf93dbdbf1a6debcf865b4883b5784e2ff4a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: edc154fcce0058455f1376a2a45807c92f7f2457
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487613"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50190963"
 ---
 # <a name="servicethrottlingbehavior"></a>ServiceThrottlingBehavior
 ServiceThrottlingBehavior  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```csharp  
 class ServiceThrottlingBehavior : Behavior  
 {  
   sint32 MaxConcurrentCalls;  
@@ -24,37 +24,37 @@ class ServiceThrottlingBehavior : Behavior
 ```  
   
 ## <a name="methods"></a>Yöntemler  
- ServiceThrottlingBehavior'dan sınıfı herhangi bir yöntem tanımlamıyor.  
+ Denetlemek ServiceThrottlingBehavior sınıf herhangi bir yöntemi tanımlamaz.  
   
 ## <a name="properties"></a>Özellikler  
- ServiceThrottlingBehavior'dan sınıfı aşağıdaki özelliklere sahiptir:  
+ Denetlemek ServiceThrottlingBehavior sınıfı aşağıdaki özelliklere sahiptir:  
   
 ### <a name="maxconcurrentcalls"></a>maxConcurrentCalls  
  Veri türü: SINT32  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- ServiceHost içindeki tüm dağıtıcı nesnelerinde etkin olarak işlenen ileti sayısı.  
+ Bir ServiceHost tüm dağıtıcı nesneler arasında etkin bir şekilde işlenen ileti sayısı.  
   
 ### <a name="maxconcurrentinstances"></a>MaxConcurrentInstances  
  Veri türü: SINT32  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Bir kerede yürütebilir hizmet nesneleri maksimum sayısı.  
+ Aynı anda çalışabilecek hizmet nesneleri sayısı.  
   
 ### <a name="maxconcurrentsessions"></a>MaxConcurrentSessions  
  Veri türü: SINT32  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Bir ana bilgisayar aynı anda kabul edebilir oturumları maksimum sayısı.  
+ En fazla bir konak aynı anda kabul edebileceği oturum sayısını.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|MOF|Bildirilen Servicemodel.mof.|  
+|MOF|Bildirilmiş Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Ad Alanı|İçinde tanımlanan root\ServiceModel|  
+|Ad Alanı|İçinde tanımlı root\ServiceModel|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>

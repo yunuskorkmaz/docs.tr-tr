@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, generics
 - generics [C#]
 ms.assetid: 75ea8509-a4ea-4e7a-a2b3-cf72482e9282
-ms.openlocfilehash: 638612a0ece8e701b088c97e5dfc49362e6d6419
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9aa57fd31b8d969bbbbf4329a028007f42d3e097
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506087"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50042317"
 ---
 # <a name="generics-c-programming-guide"></a>Genel Türler (C# Programlama Kılavuzu)
 Genel türler, C# dili ve ortak dil çalışma zamanı (CLR) 2.0 sürümüne eklenmiştir. Genel türler için .NET Framework tasarım sınıfları ve sınıf ya da yöntem bildirildi ve istemci kodu sayesinde örneği kadar bir veya daha fazla tür belirtimi erteleme yöntemlere mümkün hale tür parametrelerinin kavramı tanıtır. Örneğin, bir genel tür parametre T kullanarak diğer istemci kodu çalışma zamanı atamaları veya kutulama işlemleri riskini ve maliyet olmaksızın burada gösterildiği gibi kullanabileceğiniz tek bir sınıf yazabilirsiniz:  
@@ -57,7 +57,7 @@ Genel türler, C# dili ve ortak dil çalışma zamanı (CLR) 2.0 sürümüne ekl
 -   [Çalışma Zamanındaki Genel Türler](../../../csharp/programming-guide/generics/generics-in-the-run-time.md)  
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
- Daha fazla bilgi edinmek için, bkz. [C# Dil Belirtimi](../../../csharp/language-reference/language-specification/index.md).  
+ Daha fazla bilgi edinmek için, bkz. [C# Dil Belirtimi](~/_csharplang/spec/types.md#constructed-types).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.
 

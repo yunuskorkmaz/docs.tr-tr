@@ -16,14 +16,12 @@ helpviewer_keywords:
 - sockets, client sockets
 - client sockets
 ms.assetid: 81de9f59-8177-4d98-b25d-43fc32a98383
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 2bfc497076c99337d22512c657a40ba3963c974c
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: ec789bcc5b675f3cde468f9464531a225e8c33db
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347883"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50039523"
 ---
 # <a name="using-client-sockets"></a>İstemci yuvaları kullanma
 Bir konuşma aracılığıyla başlatabilmesi bir <xref:System.Net.Sockets.Socket>, uygulamanızı hem de uzak cihazı veri kanalı oluşturmanız gerekir. Diğer ağ adresi ailelerini ve protokolleri mevcut olmasına karşın, bu örnek bir uzak hizmete bir TCP/IP bağlantısı oluşturma işlemi gösterilmektedir.  

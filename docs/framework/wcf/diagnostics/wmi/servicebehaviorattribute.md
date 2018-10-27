@@ -2,19 +2,19 @@
 title: ServiceBehaviorAttribute
 ms.date: 03/30/2017
 ms.assetid: 5faa266f-587f-4e03-828d-1c7dd5acfe65
-ms.openlocfilehash: 514af4c6d9eaaf8929ca831e4e786c895d14c67d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c2915c636aec26cfb1f58d12da49151915c52c05
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487205"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50182963"
 ---
 # <a name="servicebehaviorattribute"></a>ServiceBehaviorAttribute
 ServiceBehaviorAttribute  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```csharp
 class ServiceBehaviorAttribute : Behavior  
 {  
   boolean AutomaticSessionShutdown;  
@@ -36,120 +36,120 @@ class ServiceBehaviorAttribute : Behavior
 ```  
   
 ## <a name="methods"></a>Yöntemler  
- ServiceBehaviorAttribute sınıfı herhangi bir yöntem tanımlamıyor.  
+ ServiceBehaviorAttribute sınıf herhangi bir yöntemi tanımlamaz.  
   
 ## <a name="properties"></a>Özellikler  
  ServiceBehaviorAttribute sınıfı aşağıdaki özelliklere sahiptir:  
   
 ### <a name="automaticsessionshutdown"></a>AutomaticSessionShutdown  
- Veri türü: boolean  
+ Veri türü: Boole  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Otomatik olarak bir istemci bir çıktı oturumu kapattığı zaman oturumu kapatmaya gösterir.  
+ Otomatik olarak bir istemci bir çıkış oturumu kapattığı zaman oturumu kapatmak görüntülenip görüntülenmeyeceğini gösterir.  
   
 ### <a name="concurrencymode"></a>ConcurrencyMode  
  Veri türü: dize  
-Erişim türüne: salt okunur  
+Erişim türü: salt okunur  
   
- Bir hizmet bir iş parçacığı, birden çok iş parçacığı veya desteklemeyeceğini aramalar destekleyip desteklemediğini belirtir.  
+ Bir hizmet tek bir iş parçacığı, birden çok iş parçacığı veya yeniden girilen çağrıları destekleyip desteklemediğini belirtir.  
   
 ### <a name="configurationname"></a>ConfigurationName  
  Veri türü: dize  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
  Hizmet yapılandırmasının adı.  
   
-### <a name="ignoreextensiondataobject"></a>ignoreExtensionDataObject  
- Veri türü: boolean  
+### <a name="ignoreextensiondataobject"></a>IgnoreExtensionDataObject  
+ Veri türü: Boole  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Bilinmeyen seri hale getirme verilerinin gönderilip gönderilmeyeceğini belirtir.  
+ Bilinmeyen serileştirme verilerinin gönderilip gönderilmeyeceğini belirtir.  
   
 ### <a name="includeexceptiondetailinfaults"></a>IncludeExceptionDetailInFaults  
- Veri türü: boolean  
+ Veri türü: Boole  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Hata ayıklama amacıyla istemcilere döndürülen SOAP hatalarının ayrıntılı yönetilen özel durum bilgileri dahil edilip edilmeyeceğini belirtir.  
+ Hata ayıklama amacıyla, istemcilere dönen SOAP hatalarının ayrıntılarındaki yönetilen özel durum bilgilerinin dahil edilip edilmeyeceğini belirtir.  
   
 ### <a name="instancecontextmode"></a>InstanceContextMode  
  Veri türü: dize  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
  Yeni bir hizmet nesnesi oluşturulduğunda belirtir.  
   
 ### <a name="maxitemsinobjectgraph"></a>MaxItemsInObjectGraph  
  Veri türü: SINT32  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Serileştirilmiş nesne içinde izin verilen öğe maksimum sayısı.  
+ Serileştirilmiş nesne içinde izin verilen öğe sayısı.  
   
 ### <a name="name"></a>Ad  
  Veri türü: dize  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- WSDL hizmetinde name özniteliği.  
+ WSDL hizmetinde öğesinin ad özniteliği.  
   
 ### <a name="namespace"></a>Ad Alanı  
  Veri türü: dize  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
  WSDL hizmetinde hedef ad alanı.  
   
 ### <a name="releaseserviceinstanceontransactioncomplete"></a>ReleaseServiceInstanceOnTransactionComplete  
- Veri türü: boolean  
+ Veri türü: Boole  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Geçerli işlem tamamlandıktan sonra hizmeti nesnesi geri dönüştürüldüğünde olup olmadığını belirtir.  
+ Geçerli işlem tamamlandıktan sonra hizmet nesnesi geri olup olmadığını belirtir.  
   
 ### <a name="transactionautocompleteonsessionclose"></a>TransactionAutoCompleteOnSessionClose  
- Veri türü: boolean  
+ Veri türü: Boole  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Geçerli oturumu kapattığında bekleyen işlem tamamlandı olup olmadığını belirtir.  
+ Geçerli oturumu kapattığında bekleyen işlem tamamlanıp tamamlanmadığını belirtir.  
   
 ### <a name="transactionisolationlevel"></a>TransactionIsolationLevel  
  Veri türü: dize  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- İşlem yalıtım düzeyini belirtir.  
+ İşlem yalıtım düzeyi belirtir.  
   
 ### <a name="transactiontimeout"></a>TransactionTimeout  
- Veri türü: datetime  
+ Veri türü: tarih/saat  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
  İçinde bir işlemin tamamlanması gereken süre.  
   
 ### <a name="usesynchronizationcontext"></a>UseSynchronizationContext  
- Veri türü: boolean  
+ Veri türü: Boole  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Geçerli eşitleme bağlamı iş parçacığı yürütmeyi seçmek için kullanılıp kullanılmayacağını belirtir.  
+ Geçerli eşitleme kapsamının iş parçacığı yürütmeyi seçmek için kullanılıp kullanılmayacağını belirtir.  
   
 ### <a name="validatemustunderstand"></a>ValidateMustUnderstand  
- Veri türü: boolean  
+ Veri türü: Boole  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Sistem veya uygulama SOAP MustUnderstand üstbilgi işlemeyi zorunlu olup olmadığını belirtir.  
+ Sistem veya uygulama SOAP MustUnderstand üst bilgi işleme uygulayıp uygulamayacağını belirtir.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|MOF|Bildirilen Servicemodel.mof.|  
+|MOF|Bildirilmiş Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Ad Alanı|İçinde tanımlanan root\ServiceModel|  
+|Ad Alanı|İçinde tanımlı root\ServiceModel|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.ServiceBehaviorAttribute>

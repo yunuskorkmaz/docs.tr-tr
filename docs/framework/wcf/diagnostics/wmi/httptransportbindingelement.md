@@ -2,19 +2,19 @@
 title: HttpTransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: 088a7bce-6bb2-4839-ad74-f68d4b1aa0f9
-ms.openlocfilehash: 1975fd2e04a5c9cdb68bc838802abafbd781b7e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34ad4b8534d082d7f5248d42d70ca5bd0647a5dc
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487026"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49454323"
 ---
 # <a name="httptransportbindingelement"></a>HttpTransportBindingElement
 HttpTransportBindingElement  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```csharp
 class HttpTransportBindingElement : TransportBindingElement  
 {  
   boolean AllowCookies;  
@@ -33,100 +33,100 @@ class HttpTransportBindingElement : TransportBindingElement
 ```  
   
 ## <a name="methods"></a>Yöntemler  
- HttpTransportBindingElement sınıfı herhangi bir yöntem tanımlamıyor.  
+ HttpTransportBindingElement sınıf herhangi bir yöntemi tanımlamaz.  
   
 ## <a name="properties"></a>Özellikler  
  HttpTransportBindingElement sınıfı aşağıdaki özelliklere sahiptir:  
   
 ### <a name="allowcookies"></a>allowCookies  
- Veri türü: boolean  
+ Veri türü: Boole  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- İstemci tanımlama bilgilerini kabul eder ve sonraki isteklerde yayar olup olmadığını belirten bir değer.  
+ İstemci tanımlama bilgilerini kabul eder ve bunları gelecekteki isteklerde yayar olup olmadığını belirten bir değer.  
   
-### <a name="authenticationscheme"></a>authenticationScheme  
+### <a name="authenticationscheme"></a>AuthenticationScheme  
  Veri türü: dize  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Bir HTTP dinleyicisi tarafından işlenen istemci isteklerinin kimliğini doğrulamak için kullanılan kimlik doğrulama düzeni.  
+ HTTP dinleyicisi tarafından işlenen istemci isteklerinin kimliğini doğrulamak için kullanılan kimlik doğrulama düzeni.  
   
 ### <a name="bypassproxyonlocal"></a>BypassProxyOnLocal  
- Veri türü: boolean  
+ Veri türü: Boole  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Yerel adresler için proxy yoksayılır olup olmadığını belirten bir değer.  
+ Yerel adresler için proxy yoksayılıp sayılmayacağını belirten bir değer.  
   
 ### <a name="hostnamecomparisonmode"></a>hostNameComparisonMode  
  Veri türü: dize  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Ana bilgisayar üzerinde URI'yi eşleştirirken hizmete erişmek için kullanılıp kullanılmadığını gösteren bir değer.  
+ Ana bilgisayar üzerinde URI'yi eşleştirirken hizmete erişmek için kullanılıp kullanılmayacağını belirten bir değer.  
   
 ### <a name="keepaliveenabled"></a>keepAliveEnabled  
- Veri türü: boolean  
+ Veri türü: Boole  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Etkinleştirildiğinde, HTTP bağlantılarını etkinlik düzeyi bağımsız olarak Canlı tutulur.  
+ Etkinleştirildiğinde, HTTP bağlantıları canlı etkinlik düzeyinden bağımsız olarak tutulur.  
   
 ### <a name="maxbuffersize"></a>maxBufferSize  
  Veri türü: SINT32  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Arabellek havuzu en büyük boyutu.  
+ Arabellek havuzu maksimum boyutu.  
   
 ### <a name="proxyaddress"></a>proxyAddress  
  Veri türü: dize  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- HTTP istekleri için kullanılacak proxy adresi içeren bir URI.  
+ HTTP istekleri için kullanılacak proxy adresini içeren bir URI.  
   
 ### <a name="proxyauthenticationscheme"></a>proxyAuthenticationScheme  
  Veri türü: dize  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Bir HTTP proxy'si tarafından işlenen istemci isteklerinin kimliğini doğrulamak için kullanılan kimlik doğrulama düzeni.  
+ HTTP proxy tarafından işlenen istemci isteklerinin kimliğini doğrulamak için kullanılan kimlik doğrulama düzeni.  
   
 ### <a name="realm"></a>Bölge  
  Veri türü: dize  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
  Kimlik doğrulaması bölgesi.  
   
 ### <a name="transfermode"></a>transferMode  
  Veri türü: dize  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- İletileri olup ara belleğe veya akışa veya istek belirten bir değer veya yanıt.  
+ İletileri ara belleğe veya akışa veya bir istek belirten bir değer veya yanıt.  
   
 ### <a name="unsafeconnectionntlmauthentication"></a>unsafeConnectionNtlmAuthentication  
- Veri türü: boolean  
+ Veri türü: Boole  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Güvenli bağlantı paylaşımı sunucu üzerinde etkin olup olmadığını belirten bir değer.  
+ Güvensiz bağlantı paylaşımının sunucu üzerinde etkin olup olmadığını belirten bir değer.  
   
 ### <a name="usedefaultwebproxy"></a>useDefaultWebProxy  
- Veri türü: boolean  
+ Veri türü: Boole  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Makine genelinde proxy ayarlarını yerine kullanıcıya özgü ayarları kullanılıp kullanılmayacağını belirten değer.  
+ Makine genelindeki proxy ayarlarının kullanıcıya özel ayarlar yerine kullanılır olup olmadığını belirten bir değer.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|MOF|Bildirilen Servicemodel.mof.|  
+|MOF|Bildirilmiş Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Ad Alanı|İçinde tanımlanan root\ServiceModel|  
+|Ad Alanı|İçinde tanımlı root\ServiceModel|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Channels.HttpTransportBindingElement>

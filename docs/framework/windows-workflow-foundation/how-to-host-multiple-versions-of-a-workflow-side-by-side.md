@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
-ms.openlocfilehash: 721ab72ab1f67d2dc42574ed0147fa7686e02fd1
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 04586f22076b6e2cf4175c7d9d985820ef7885c6
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316473"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181626"
 ---
 # <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>Nasıl yapılır: birden çok sürümünü bir iş akışı yan yana barındırma
 `WorkflowIdentity` Bu bilgiler bir kalıcı iş akışı örneğiyle ilişkili olmasını yanı sıra, bir adı ve sürümü, bir iş akışı tanımıyla ilişkilendirilecek iş akışı uygulama geliştiricileri için bir yol sağlar. Bu kimlik bilgileri birden çok iş akışı tanımı sürümünün yan yana yürütme gibi senaryoları etkinleştirmek için iş akışı uygulama geliştiricileri tarafından kullanılabilir ve dinamik güncelleştirme gibi diğer işlevleri için temel sağlar. Bu adım öğreticide nasıl kullanılacağını gösteren `WorkflowIdentity` aynı anda birden çok iş akışı sürümünü barındırmak için.
@@ -555,14 +555,15 @@ ms.locfileid: "49316473"
 
 2.  Tıklayarak yeni bir iş akışının başlatılacağı **yeni oyun**. İş akışı sürümü altında durum penceresi görüntülenir ve güncelleştirilmiş sürümü ilişkili yansıtır `WorkflowIdentity`. Not `InstanceId` tamamlandığında, iş akışı için izleme dosyayı görüntülemek ve oyun tamamlanana kadar tahmin girin. Kullanıcının tahmin güncelleştirmeleri temel durum penceresinde görüntülenen bilgileri nasıl görüntüleneceğini unutmayın `WriteLine` etkinlikler.
 
- **Lütfen 1 ile 10 arasında bir sayı girin**
-**5 çok yüksek.** 
- **Lütfen 1 ile 10 arasında bir sayı girin**
-**3, çok yüksek.** 
- **Lütfen 1 ile 10 arasında bir sayı girin**
-**1. çok düşük.** 
- **Lütfen 1 ile 10 arasında bir sayı girin**
-**Tebrikler, sayı 4 kapatır tahmin.**
+ **Lütfen 1 ile 10 arasında bir sayı girin**  
+**5 çok yüksektir.**  
+**Lütfen 1 ile 10 arasında bir sayı girin**  
+**3 çok yüksektir.**  
+**Lütfen 1 ile 10 arasında bir sayı girin**  
+**1 çok düşüktür.**  
+**Lütfen 1 ile 10 arasında bir sayı girin**  
+**Tebrikler, sayı 4 kapatır tahmin.**  
+
     > [!NOTE]
     >  Güncelleştirilmiş metinden `WriteLine` etkinlikleri görüntülenir, son çıktısını `WriteLine` bu konudaki eklendi etkinlik değil. Durum penceresi tarafından güncelleştirildiğinden olan `PersistableIdle` işleyici. İş akışı tamamlandıktan ve son etkinlikten sonra boşta geçmez, çünkü `PersistableIdle` işleyici çağrılmaz. Ancak, durum penceresi tarafından benzer bir ileti görüntülenir `Completed` işleyici. İçin isterseniz, kod eklenemedi `Completed` ından cümleler ayıklamak için işleyici `StringWriter` ve durum penceresi için görüntüleyin.
 

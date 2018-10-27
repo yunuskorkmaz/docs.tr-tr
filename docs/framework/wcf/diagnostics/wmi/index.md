@@ -2,12 +2,12 @@
 title: Tanılama için Windows Yönetim İzlemesini Kullanma
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: b7c898f1af91f639939e5480687b5967bf57d246
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 91d126eb75c9cac2823b756010351dd692b2e24e
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856211"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453222"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Tanılama için Windows Yönetim İzlemesini Kullanma
 Windows Communication Foundation (WCF) hizmetinin çalışma zamanında bir WCF Windows Yönetim Araçları (WMI) sağlayıcısı aracılığıyla denetleme verileri kullanıma sunar.  
@@ -171,7 +171,7 @@ Whoami /user
 ### <a name="using-managed-code"></a>Yönetilen kod kullanarak  
  Ayrıca uzak WMI örnekleri program aracılığıyla tarafından sağlanan sınıfları kullanarak erişebileceğiniz <xref:System.Management> ad alanı. Aşağıdaki kod örneği, bunun nasıl yapılacağı gösterilmektedir.  
   
-```  
+```csharp
 String wcfNamespace = String.Format(@"\\{0}\Root\ServiceModel",      
    this.serviceMachineName);  
   

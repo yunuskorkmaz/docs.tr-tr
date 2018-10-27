@@ -12,40 +12,40 @@ helpviewer_keywords:
 ms.assetid: 009dae23-e1f6-4a64-9a9a-32e4c34802b0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 663e7456337a2d9c413b15236e7ba1de33fbfa9b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bb5978859ba25e1595ac3da7a2d7dad8cc2cad85
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743192"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50041108"
 ---
 # <a name="how-to-determine-an-assembly39s-fully-qualified-name"></a>Nasıl yapılır: bir derlemeyi belirlemek&#39;s tam adı
-Bir derlemeyi genel derleme önbelleğinde tam adını bulmak için Genel Derleme Önbelleği aracı kullanın ([Gacutil.exe](../../../docs/framework/tools/gacutil-exe-gac-tool.md)). Bkz: [nasıl yapılır: genel derleme önbelleğinin içeriğini görüntüleme](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md).  
+Genel Derleme Önbelleği Aracı genel bütünleştirilmiş kod önbelleğindeki bir derleme tam olarak nitelenmiş adını bulmak için kullanın ([Gacutil.exe](../../../docs/framework/tools/gacutil-exe-gac-tool.md)). Bkz: [nasıl yapılır: genel derleme önbelleğinin içeriğini görüntülemek](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md).  
   
- Genel derleme önbelleğinde olmayan derlemeler için çeşitli yollarla tam nitelikli derleme adı elde edebilirsiniz: kod konsol veya bir değişken için bilgileri çıkarmak için kullanabilir veya kullanabilirsiniz [Ildasm.exe (IL ayrıştırıcı)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)tam adı içeren derlemenin meta verilerini incelemek için.  
+ Genel derleme önbelleğinde bulunmayan derlemeler için çeşitli yollarla tam derleme adını alabilirsiniz: kod, bilgileri konsola veya bir değişkene çıkarmak için kullanabilirsiniz veya kullanabileceğiniz [Ildasm.exe (IL ayrıştırıcı)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)tam adını içeren derlemenin meta verilerini incelemek için.  
   
--   Derleme uygulama tarafından zaten yüklü değilse, değeri alabilirsiniz <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> tam adı alınacağı özellik. Derlemesi GAC içinde olup olmadığını, bu yaklaşım kullanabilirsiniz. Örnek, bir gösterim sağlar.  
+-   Derleme uygulama tarafından zaten yüklü değilse, değeri alabilir <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> tam olarak nitelenmiş adını almak için özellik. Derlemeyi GAC içinde olup olmadığını bu yaklaşımı kullanabilirsiniz. Örnek, bir gösterim sağlar.  
   
--   Derlemenin dosya sistemi yolu biliyorsanız, statik çağırabilirsiniz (`Shared` Visual Basic'te) <xref:System.Reflection.AssemblyName.GetAssemblyName%2A?displayProperty=nameWithType> tam nitelikli derleme adı almak için yöntemi. Basit bir örnek verilmiştir.  
+-   Derlemenin dosya sistemi yolu biliyorsanız, statik çağırabilir (`Shared` Visual Basic'te) <xref:System.Reflection.AssemblyName.GetAssemblyName%2A?displayProperty=nameWithType> tam derleme adını almak için yöntemi. Basit bir örnek verilmiştir.  
   
      [!code-csharp[System.Reflection.AssemblyName.GetAssemblyName#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.reflection.assemblyname.getassemblyname/cs/getassemblyname1.cs#1)]
      [!code-vb[System.Reflection.AssemblyName.GetAssemblyName#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.reflection.assemblyname.getassemblyname/vb/getassemblyname1.vb#1)]  
   
--   Kullanabileceğiniz [Ildasm.exe (IL ayrıştırıcı)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) tam adı içeren derlemenin meta verilerini incelemek için.  
+-   Kullanabileceğiniz [Ildasm.exe (IL ayrıştırıcı)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) tam adını içeren derlemenin meta verilerini incelemek için.  
   
- Sürüm, kültür ve derleme adı gibi ayarı derleme öznitelikleri hakkında daha fazla bilgi için bkz: [ayarı derleme özniteliklerinin](../../../docs/framework/app-domains/set-assembly-attributes.md). Bir derleme tanımlayıcı bir ad verip hakkında daha fazla bilgi için bkz: [bkz](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md).  
+ Sürüm, kültür ve derleme adı gibi derleme özniteliklerinin ayarlanması hakkında daha fazla bilgi için bkz: [derleme özniteliklerini ayarlama](../../../docs/framework/app-domains/set-assembly-attributes.md). Bir derlemeyi güçlü bir isim verilmesi hakkında daha fazla bilgi için bkz. [bkz](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, belirtilen bir sınıfı içeren bir derlemenin tam olarak nitelendirilmiş adını konsolda nasıl görüntüleyeceğinizi gösterir. Uygulama zaten yüklü bir derlemenin adını alır çünkü derlemesi GAC içinde olup olmadığını önemli değildir.  
+ Aşağıdaki kod örneği, belirtilen bir sınıfı içeren bir derlemenin tam olarak nitelendirilmiş adını konsolda nasıl görüntüleyeceğinizi gösterir. Uygulama zaten yüklü bir derlemenin adını alır çünkü derlemeyi GAC'ye olup bir önemi yoktur.  
   
  [!code-cpp[Assembly.Fullname#2](../../../samples/snippets/cpp/VS_Snippets_CLR/Assembly.FullName/CPP/example2.cpp#2)]
  [!code-csharp[Assembly.Fullname#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Assembly.FullName/CS/example2.cs#2)]
  [!code-vb[Assembly.Fullname#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Assembly.FullName/VB/example2.vb#2)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Bütünleştirilmiş Kod Adları](../../../docs/framework/app-domains/assembly-names.md)  
- [Bütünleştirilmiş Kodlar Oluşturma](../../../docs/framework/app-domains/create-assemblies.md)  
- [Kesin Adlandırılmış Bütünleştirilmiş Kodlar Oluşturma ve Kullanma](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
- [Genel Derleme Önbelleği](../../../docs/framework/app-domains/gac.md)  
- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Bütünleştirilmiş Kodlarla Programlama](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [Bütünleştirilmiş Kod Adları](../../../docs/framework/app-domains/assembly-names.md)  
+- [Bütünleştirilmiş Kodlar Oluşturma](../../../docs/framework/app-domains/create-assemblies.md)  
+- [Kesin Adlandırılmış Bütünleştirilmiş Kodlar Oluşturma ve Kullanma](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
+- [Genel Derleme Önbelleği](../../../docs/framework/app-domains/gac.md)  
+- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+- [Bütünleştirilmiş Kodlarla Programlama](../../../docs/framework/app-domains/programming-with-assemblies.md)

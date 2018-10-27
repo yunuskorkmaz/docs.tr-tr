@@ -5,12 +5,12 @@ helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: 0691c33b551e39b2384950cfcd0be6e8a3a29cee
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 134a219acd02caa2b16c5a6e8716c3245579ecca
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506907"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50049561"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>Sabit Boyutlu Arabellekler (C# Programlama Kılavuzu)
 
@@ -34,7 +34,7 @@ A `struct` güvenli olmayan kod içinde gömülü bir dizi içerebilir. Aşağı
 
 128 öğe `char` 256 bayt dizisidir. Boyutu sabit [char](../../language-reference/keywords/char.md) arabellekler her zaman, bağımsız olarak kodlama karakter başına iki bayttan yönlendirir. Bu da zaman char arabellekler API yöntemleri veya yapılar ile sıralanmış geçerlidir `CharSet = CharSet.Auto` veya `CharSet = CharSet.Ansi`. Daha fazla bilgi için bkz. <xref:System.Runtime.InteropServices.CharSet>.
 
-Yukarıdaki örnekte erişme gösterir `fixed` ile C# 7.3'den itibaren kullanılabilmektedir sabitleme, olmadan alanları...
+Yukarıdaki örnekte erişme gösterir `fixed` sürümünden itibaren kullanılabilir olan sabitleme, olmadan alanları C# 7.3.
 
 Başka bir ortak sabit boyutlu dizi [bool](../../language-reference/keywords/bool.md) dizisi. Öğeleri bir `bool` dizi her zaman tek bir bayt boyutunda. `bool` diziler bit diziler veya arabellekler oluşturmak için uygun değildir.
 

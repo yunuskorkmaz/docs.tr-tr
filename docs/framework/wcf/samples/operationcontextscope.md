@@ -2,12 +2,12 @@
 title: OperationContextScope
 ms.date: 03/30/2017
 ms.assetid: 11c11108-8eb4-4d49-95a0-83285a812262
-ms.openlocfilehash: 09ead071c5d8320452724edbb1c7f7f5e0124421
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 499d3e9824ede493043b996d581b079ec23938f8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857975"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50190833"
 ---
 # <a name="operationcontextscope"></a>OperationContextScope
 OperationContextScope örnek üst bilgileri kullanarak bir Windows Communication Foundation (WCF) arama hakkında ek bilgi gönderme işlemini gösterir. Bu örnekte, hem sunucu hem de istemci konsol uygulamalardır.  
@@ -20,7 +20,7 @@ OperationContextScope örnek üst bilgileri kullanarak bir Windows Communication
 ## <a name="messageheaderreader"></a>MessageHeaderReader  
  Bu istemciden bir ileti alır ve üst bilgi aramak çalışır, örnek hizmetidir <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A> koleksiyonu. İstemci üst bilgisinde gönderilen hizmet özel üst bilgi alır ve, varsa, istemci tarafından geçirilen bağımsız değişken GUID ile karşılaştırır ve GUID geçirir.  
   
-```  
+```csharp
 public bool RetrieveHeader(string guid)  
 {  
      MessageHeaders messageHeaderCollection =   
@@ -57,7 +57,7 @@ public bool RetrieveHeader(string guid)
 ## <a name="messageheaderclient"></a>MessageHeaderClient  
  Bu tarafından oluşturulan proxy kullanan istemci uygulamasıdır [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) Uzak hizmetle iletişim kurmak için. İlk iki proxy nesneleri oluşturur `MessageHeaderReaderClient`.  
   
-```  
+```csharp
 //Create two clients to the remote service.  
 MessageHeaderReaderClient client1 = new MessageHeaderReaderClient();  
 MessageHeaderReaderClient client2 = new MessageHeaderReaderClient();  
@@ -65,7 +65,7 @@ MessageHeaderReaderClient client2 = new MessageHeaderReaderClient();
   
  İstemci ardından bir OperationContextScope oluşturur ve ona kapsamlarını `client1`. Ekler bir <xref:System.ServiceModel.Channels.MessageHeader> için <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A> ve her iki istemcinin bir çağrıda çağırır. Üst bilgisinin gönderdiğini yalnızca sağlar `client1` değil `client2` dönüş değerini denetleyerek `RetrieveHeader` çağırın.  
   
-```  
+```csharp
 using (new OperationContextScope(client1.InnerChannel))  
 {  
     //Create a new GUID that is sent as the header.  
@@ -92,7 +92,7 @@ using (new OperationContextScope(client1.InnerChannel))
   
  Bu örnek kendiliğinden barındırılır. Örnek çalışan aşağıdaki örnek çıktıda sağlanır:  
   
-```  
+```console  
 Prompt> Service.exe  
 The service is ready.  
 Press <ENTER> to terminate service.  

@@ -2,12 +2,12 @@
 title: '@ServiceHost'
 ms.date: 03/30/2017
 ms.assetid: 96ba6967-00f2-422f-9aa7-15de4d33ebf3
-ms.openlocfilehash: 730b1188a95d0e35d7431d43884e867e5520585e
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 6d568c1c78677b53f4b79f5aefd3a56d71c2685f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838987"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50182937"
 ---
 # <a name="servicehost"></a>\@ServiceHost
 Barındırılan hizmet konak hizmeti ile üretmek için kullanılan Üreteç ve erişmek veya .svc dosyasında sağlanan barındırma Kodu derlemek için gereken diğer programlama özelliklerini ilişkilendirir.  
@@ -43,7 +43,7 @@ CodeBehind = "CodeBehind"%>
 ## <a name="remarks"></a>Açıklamalar  
  <xref:System.ServiceModel.ServiceHost> Hizmeti barındırmak için kullanılan bir Windows Communication Foundation (WCF) programlama modeli içinde genişletilebilirlik noktasıdır. Fabrika düzeni örneği oluşturmak için kullanılan <xref:System.ServiceModel.ServiceHost> , büyük olasılıkla barındırma ortamı doğrudan örneğini oluşturmalıdır değil polimorfik bir tür olduğundan.  
   
- Varsayılan uygulama kullanan <xref:System.ServiceModel.Activation.ServiceHostFactory> bir örneğini oluşturmak için <xref:System.ServiceModel.ServiceHost>. Ancak, Fabrika uygulamanızda CLR tür adını belirterek kendi Fabrika (bir türetilmiş ana döndürür) sağlayabilirsiniz [ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) yönergesi.  
+ Varsayılan uygulama kullanan <xref:System.ServiceModel.Activation.ServiceHostFactory> bir örneğini oluşturmak için <xref:System.ServiceModel.ServiceHost>. Ancak, Fabrika uygulamanızda CLR tür adını belirterek kendi Fabrika (bir türetilmiş ana döndürür) sağlayabilirsiniz [ \@ServiceHost](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) yönergesi.  
   
  Kendi özel hizmet barındırma ortamı fabrikası yerine varsayılan fabrika kullanmak için yalnızca tür adı sağlayın [ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) yönergesi aşağıdaki gibi:  
   

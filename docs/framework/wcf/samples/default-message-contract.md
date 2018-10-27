@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Message Contract
 ms.assetid: 5a200b78-1a46-4104-b7fb-da6dbab33893
-ms.openlocfilehash: 23ab534ef31773efc69b6a68e73ec30bde4f6e61
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9f5a7eff25fb202ba84f0bd49893748b507326fd
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502665"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188176"
 ---
 # <a name="default-message-contract"></a>Varsayılan İleti Sözleşmesi
 Varsayılan ileti anlaşması örnek, kullanıcı tarafından tanımlanan özel bir ileti için ve hizmet işlemlerine geçirildiği hizmet gösterir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) belirlenmiş bir hizmet olarak bir hesap makinesi arabirimi uygulayan. Toplama, çıkarma, çarpma ve bölme kullanılan bireysel hizmet işlemlerinde yerine [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md), bu örnek, hem işlenen hem de işleç içeren ve döndüren özel bir ileti geçirir. aritmetik hesaplama sonucu.  
@@ -21,7 +21,7 @@ Varsayılan ileti anlaşması örnek, kullanıcı tarafından tanımlanan özel 
   
  Hizmetinde kabul eder ve özel ileti türü döndüren bir tek hizmet işlemi tanımlanan `MyMessage`. Bu örnekte, istek ve yanıt iletilerinin aynı türde olsa da, bunlar farklı ileti sözleşmeleri Elbette gerekirse olabilir.  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface ICalculator  
 {  
@@ -33,7 +33,7 @@ public interface ICalculator
   
  Özel ileti `MyMessage` ile ek açıklamalı bir sınıfta tanımlanan <xref:System.ServiceModel.MessageContractAttribute>, <xref:System.ServiceModel.MessageHeaderAttribute> ve <xref:System.ServiceModel.MessageBodyMemberAttribute> öznitelikleri. Yalnızca üçüncü Oluşturucu, bu örnekte kullanılır. İleti sözleşmeleri kullanılıyor, SOAP iletisi üzerinde tam denetimle alıştırma sağlar. Bu örnekte <xref:System.ServiceModel.MessageHeaderAttribute> yerleştirmek için kullanılan öznitelik `Operation` bir SOAP üst bilgisindeki. İşlenenler `N1`, `N2` ve `Result` SOAP gövdesi içinde sahip oldukları görünür <xref:System.ServiceModel.MessageBodyMemberAttribute> özniteliği uygulandı.  
   
-```  
+```csharp
 [MessageContract]  
 public class MyMessage  
 {  
@@ -99,7 +99,7 @@ public class MyMessage
   
  Uygulama sınıfı kodunu içeren `Calculate` hizmet işlemi. `CalculateService` Sınıfı, işleci ve işlenenleri istek iletisi alır ve aşağıdaki örnek kodda gösterildiği gibi istenen hesaplama sonucunu içeren bir yanıt iletisi oluşturur.  
   
-```  
+```csharp
 // Service class which implements the service contract.  
 public class CalculatorService : ICalculator  
 {  
@@ -133,29 +133,31 @@ public class CalculatorService : ICalculator
   
  İstemcisi için oluşturulan istemci kodu oluşturulurken [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) aracı. Araç, otomatik olarak oluşturulan istemci kodu gerekiyorsa, ileti anlaşması türleri oluşturur. `/messageContract` İleti sözleşmeleri zorlamanızı komut seçeneği belirtilebilir.  
   
-```  
+```console  
 svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" /o:client\generatedClient.cs http://localhost/servicemodelsamples/service.svc/mex  
 ```  
   
  Aşağıdaki örnek kodu kullanarak istemciyi gösterir `MyMessage` ileti.  
   
-```  
+```csharp
 // Create a client with given client endpoint configuration  
 CalculatorClient client = new CalculatorClient();  
   
 // Perform addition using a typed message.  
   
-MyMessage request = new MyMessage();  
-request.N1 = 100D;  
-request.N2 = 15.99D;  
-request.Operation = "+";  
+MyMessage request = new MyMessage() 
+                    {  
+                        N1 = 100D,  
+                        N2 = 15.99D,  
+                        Operation = "+"  
+                    };
 MyMessage response = ((ICalculator)client).Calculate(request);  
 Console.WriteLine("Add({0},{1}) = {2}", request.N1, request.N2, response.Result);  
 ```  
   
  Örneği çalıştırdığında hesaplamalar istemci konsol penceresinde görüntülenir. İstemci bilgisayarı için istemci penceresinde ENTER tuşuna basın.  
   
-```  
+```console  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  

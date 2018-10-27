@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: e131ab48b666f2d22d8bd02e41ed76e415a2597d
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: b98095cd6afd408331ab8c8f6bb15e7741d3073a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845404"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50189699"
 ---
 # <a name="net-architectural-components"></a>.NET Mimari Bileşenleri
 
@@ -63,7 +63,7 @@ Mono hakkında daha fazla bilgi için bkz: [Mono belgeleri](https://www.mono-pro
 
 UWP, Windows uygulamaları ve yazılım modern ve Dokunmatik kullanıma nesnelerin interneti için (IOT) oluşturmak için kullanılan .NET uygulamasıdır. Bunu hedeflemek isteyebilirsiniz cihazlar farklı türde buluşturulan PC'ler, tabletler, phablets, telefonlar ve bile Xbox dahil olmak üzere tasarlanmıştır. UWP, merkezi bir mağazaya, Yürütme Ortamı (AppContainer) ve bir dizi yerine Win32 kullanmak için Windows API gibi birçok hizmetleri sunar (WinRT). Uygulamaları, C++, C#, VB.NET ve JavaScript içinde yazılabilir. C# ve vb.NET'TE kullanırken, .NET API'lerini .NET Core tarafından sağlanır.
 
-UWP hakkında daha fazla bilgi için bkz: [Evrensel Windows platformu giriş](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide).
+UWP hakkında daha fazla bilgi için bkz: [Evrensel Windows platformu giriş](/windows/uwp/get-started/universal-application-platform-guide).
 
 ## <a name="net-runtimes"></a>.NET çalışma zamanları
 

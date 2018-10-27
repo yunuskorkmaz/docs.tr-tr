@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - documents [WPF], features for
 ms.assetid: 7bf37ccb-5d09-4eae-9661-929582aeb259
-ms.openlocfilehash: 5f8eb4afe53292b2589964f1a745f00d761ee019
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 145c28a2f36b2d53487004af214f3c6048f0687e
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542970"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49415217"
 ---
 # <a name="documents"></a>Belgeler
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Gelişmiş belge özelliklerini ve geliştirilmiş okuma deneyimi uygulamaları oluşturmak, geliştiricilerin bileşenleri yönlü kümesi sağlar. Gelişmiş Özellikler ve kaliteye, ek olarak [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Ayrıca belge paketleme, güvenlik ve depolama için basitleştirilmiş yönetim hizmetleri sağlar.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Gelişmiş belge özelliklerini ve geliştirilmiş okuma deneyimi ile uygulamalar oluşturmalarını sağlayan bileşenleri yönlü sunmaktadır. Gelişmiş Özellikler ve kalite, ek olarak [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Ayrıca belge paketleme, güvenlik ve depolama için basitleştirilmiş yönetim hizmetleri sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [WPF'deki Belgeler](documents-in-wpf.md)  
@@ -28,4 +28,4 @@ ms.locfileid: "33542970"
  <xref:System.Windows.Controls.DocumentViewer>  
  <xref:System.Windows.Documents.FlowDocument>  
  <xref:System.Windows.Xps>  
- [isXPS.exe (isXPS uyumluluk aracı)](https://msdn.microsoft.com/library/bfbb433f-7ab6-417a-90f0-71443d76bcb3(v=vs.100))
+ [isXPS.exe (isXPS uyumluluk aracı)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))

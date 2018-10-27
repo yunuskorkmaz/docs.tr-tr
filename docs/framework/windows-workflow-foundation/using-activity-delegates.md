@@ -3,11 +3,11 @@ title: Etkinlik temsilcileri kullanma
 ms.date: 03/30/2017
 ms.assetid: e33cf876-8979-440b-9b23-4a12d1139960
 ms.openlocfilehash: 7ed4032f8f8070648f8a2f0fcfb386101740f1ad
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580894"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50184890"
 ---
 # <a name="using-activity-delegates"></a>Etkinlik temsilcileri kullanma
 Etkinlik temsilcileri kullanıcılar etkinliğin etkinlik tabanlı işleyicileri sağlayabilir, belirli bir imzaya sahip geri çağırmalar etkinlik yazarlar etkinleştirin. İki tür etkinlik temsilcileri kullanılabilir: <xref:System.Activities.ActivityAction%601> bir dönüş değeri olmayan etkinlik temsilcileri tanımlamak için kullanılır ve <xref:System.Activities.ActivityFunc%601> dönüş değerine sahip etkinlik temsilcileri tanımlamak için kullanılır.  

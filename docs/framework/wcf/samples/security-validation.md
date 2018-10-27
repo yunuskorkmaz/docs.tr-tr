@@ -2,13 +2,12 @@
 title: Güvenlik Doğrulaması
 ms.date: 03/30/2017
 ms.assetid: 48dcd496-0c4f-48ce-8b9b-0e25b77ffa58
-author: BrucePerlerMS
-ms.openlocfilehash: 4b80457fb551c2ee99f910710c5f30fa59c53a01
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 16a12a031845a8898c32ac43bbb2e2a44fd7c7ea
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123351"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50190924"
 ---
 # <a name="security-validation"></a>Güvenlik Doğrulaması
 Bu örnek, özel bir davranış Hizmetleri bunlar belirli ölçütlere uyan emin olmak için bir bilgisayar üzerinde doğrulamak için nasıl kullanılacağını gösterir. Bu örnekte, hizmetleri, hizmette her bir uç noktası aracılığıyla tarama ve güvenli bir bağlama öğeleri içeren denetleniyor özel davranış tarafından doğrulanır. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -19,12 +18,12 @@ Bu örnek, özel bir davranış Hizmetleri bunlar belirli ölçütlere uyan emin
 ## <a name="endpoint-validation-custom-behavior"></a>Uç nokta doğrulama özel davranışı  
  Kullanıcı kodu ekleyerek `Validate` bulunan yöntemi <xref:System.ServiceModel.Description.IServiceBehavior> arabirimi, özel davranış verilebilir bir hizmet ya da uç noktası için kullanıcı tanımlı eylemleri gerçekleştirmek için. Aşağıdaki kod, bunların güvenli bağlamaları için bağlama koleksiyonları arar bir hizmette yer alan her bir uç nokta döngü için kullanılır.  
   
-```  
+```csharp
 public void Validate(ServiceDescription serviceDescription,   
                                        ServiceHostBase serviceHostBase)  
 {  
-    // Loop through each endpoint individually gathering their    
-       binding elements.  
+    // Loop through each endpoint individually, gathering their    
+    // binding elements.  
     foreach (ServiceEndpoint endpoint in serviceDescription.Endpoints)  
     {  
         secureElementFound = false;  

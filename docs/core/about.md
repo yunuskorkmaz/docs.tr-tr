@@ -4,12 +4,12 @@ description: .NET Core hakkında bilgi edinin.
 author: richlander
 ms.author: mairaw
 ms.date: 08/01/2018
-ms.openlocfilehash: d9943246b683c8fd892e7bc5fd09a10b72e31a5f
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: fc4b76df8b71865b14caf27c7e21906cccc88d07
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46577533"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50042330"
 ---
 # <a name="about-net-core"></a>.NET Core hakkında
 
@@ -25,24 +25,19 @@ ms.locfileid: "46577533"
 
 ## <a name="languages"></a>Diller
 
-C#, Visual Basic ve F # dilleri için .NET Core uygulamaları ve kitaplıkları yazmak için kullanılabilir. Bu dil olan ya da dahil olmak üzere Ide'lerle ve sık kullandığınız metin düzenleyicisi tümleştirilebilir [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp), Sublime Text ve Vim. Bu tümleştirme, kısmen iyi istemeyenler sağlandığı [OmniSharp](http://www.omnisharp.net/) ve [Ionide](http://ionide.io) projeleri.
+C#, Visual Basic ve F # dilleri için .NET Core uygulamaları ve kitaplıkları yazmak için kullanılabilir. Bu dil olan ya da dahil olmak üzere Ide'lerle ve sık kullandığınız metin düzenleyicisi tümleştirilebilir [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp), Sublime Text ve Vim. Bu tümleştirme, kısmen iyi istemeyenler sağlandığı [OmniSharp](https://www.omnisharp.net/) ve [Ionide](http://ionide.io) projeleri.
 
 ## <a name="apis"></a>API'ler
 
 .NET core, birkaçını izleyin birçok senaryo için API'leri kullanıma sunar:
 
-- Temel türler, gibi [bool] [ bool] ve [int][int].
+- Temel türler, gibi [bool](../csharp/language-reference/keywords/bool.md) ve [int](../csharp/language-reference/keywords/int.md).
 - Koleksiyonları gibi <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> ve <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>.
 - Gibi yardımcı programı türleri <xref:System.Net.Http.HttpClient?displayProperty=nameWithType>, ve <xref:System.IO.FileStream?displayProperty=nameWithType>.
-- Veri türleri, aşağıdaki gibi <xref:System.Data.DataSet?displayProperty=nameWithType>, ve [olan DB][dbset].
-- Gibi yüksek performanslı türleri <xref:System.Numerics.Vector?displayProperty=nameWithType> ve [işlem hatları][pipelines].
+- Veri türleri, aşağıdaki gibi <xref:System.Data.DataSet?displayProperty=nameWithType>, ve [olan DB](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/).
+- Gibi yüksek performanslı türleri <xref:System.Numerics.Vector?displayProperty=nameWithType> ve [işlem hatları](https://blogs.msdn.microsoft.com/dotnet/2018/07/09/system-io-pipelines-high-performance-io-in-net/).
 
 .NET core uygulayarak .NET Framework ve Mono API'leri ile uyumluluk sağlar [.NET Standard](../standard/net-standard.md) belirtimi.
-
-[bool]: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/bool
-[int]: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/int
-[pipelines]: https://blogs.msdn.microsoft.com/dotnet/2018/07/09/system-io-pipelines-high-performance-io-in-net/
-[dbset]: https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/
 
 ## <a name="frameworks"></a>Çerçeveler
 
@@ -111,7 +106,7 @@ Belki de boyutu ve şekli .NET Core için var olan .NET uygulamalarını karşı
 
 ### <a name="comparison-with-mono"></a>Mono ile karşılaştırma
 
-[Mono](http://www.mono-project.com/) özgün çapraz platform ve [açık kaynak](https://github.com/mono/mono) .NET uygulaması, 2004'te ilk aktarma. Bu, bir .NET Framework'ün topluluk kopya olarak düşünülebilir. Mono projesi team Aç yararlandı [.NET standartları](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) (ECMA 335 özellikle) uyumlu bir uygulama sunmak amacıyla Microsoft tarafından yayımlanan.
+[Mono](https://www.mono-project.com/) özgün çapraz platform ve [açık kaynak](https://github.com/mono/mono) .NET uygulaması, 2004'te ilk aktarma. Bu, bir .NET Framework'ün topluluk kopya olarak düşünülebilir. Mono projesi team Aç yararlandı [.NET standartları](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) (ECMA 335 özellikle) uyumlu bir uygulama sunmak amacıyla Microsoft tarafından yayımlanan.
 
 .NET Core ve Mono arasındaki temel farklar:
 

@@ -2,20 +2,22 @@
 title: WCF &lt;faultPropagationQueries&gt;
 ms.date: 03/30/2017
 ms.assetid: d85f66a7-e7b0-4dbb-83cc-89fa06fc9161
-ms.openlocfilehash: 5db043b5d4d150628df386dafb6e7bd351a0a28a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1db99a8d80fad5c0eca93777d87047b43371d048
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754012"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50044417"
 ---
 # <a name="ltfaultpropagationqueriesgt-of-wcf"></a>WCF &lt;faultPropagationQueries&gt;
-İçinde bir etkinlik oluşan hataların işlenmesi izlemek için kullanılan sorgu koleksiyonunu temsil eder.  Bu olay bir FaultHandler bir arıza her işlediğinde oluşur. İçinde bir etkinlik oluşan hataların işlenmesi izlemek için bu tür sorgu kullanmanız gerekir. Sorgu Hatası yayma kayıtlara abone olmak izleme katılımcı gereklidir.  
+
+Bir etkinlik içinde oluşan hataların işlenmesi izlemek için kullanılan sorguları koleksiyonunu temsil eder.  Bu olay bir FaultHandler bir hata her işlediğinde oluşur. Bir etkinlik içinde oluşan hataların işlenmesi izlemek için böyle bir sorgu kullanmanız gerekir. Sorgu hata yayma kayıtlara abone olmak izleme Katılımcısı için gereklidir.  
   
- Profil sorguları izleme ile ilgili daha fazla bilgi için bkz: [izleme profilleri](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
+Profil sorguları izleme ile ilgili daha fazla bilgi için bkz: [izleme profilleri](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
   
- \<system.serviceModel>  
+\<system.serviceModel>  
 \<İzleme >  
+\<profilleri >  
 \<trackingProfile>  
 \<İş akışı >  
 \<faultPropagationQueries >  
@@ -23,29 +25,43 @@ ms.locfileid: "32754012"
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml
-<tracking>   <trackingProfile name="Name">       <workflow>          <faultPropagationQueries>             <faultPropagationQuery activityName="String"                 faultHandlerActivityName="String"/>          </faultPropagationQueries>       </workflow>   </trackingProfile></tracking>  
+<tracking>
+  <profiles>
+    <trackingProfile name="Name">
+      <workflow>
+        <faultPropagationQueries>
+          <faultPropagationQuery faultSourceActivityName="String"
+                                 faultHandlerActivityName="String"/>
+        </faultPropagationQueries>
+      </workflow>
+    </trackingProfile>
+  </profiles>
+</tracking>  
 ```
 
-## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
- Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
+## <a name="attributes-and-elements"></a>Öznitelikler ve öğeler
+
+Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.
   
-### <a name="attributes"></a>Öznitelikler  
- Yok.  
+### <a name="attributes"></a>Öznitelikler
+
+Yok.
   
-### <a name="child-elements"></a>Alt Öğeler  
-  
+### <a name="child-elements"></a>Alt öğeleri
+
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<faultPropagationQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/faultpropagationquery.md)|İçinde bir etkinlik oluşan hataların işlenmesi izlemek için kullanılan bir sorgu.  Bu olay bir FaultHandler bir arıza her işlediğinde oluşur.|  
+|[\<faultPropagationQuery >](faultpropagationquery-of-wcf.md)|Bir etkinlik içinde oluşan hataların işlenmesi izlemek için kullanılan sorgu.  Bu olay bir FaultHandler bir hata her işlediğinde oluşur.|  
   
-### <a name="parent-elements"></a>Üst Öğeler  
+### <a name="parent-elements"></a>Üst öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |[\<İş akışı >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|Belirli bir iş akışı tarafından tanımlanan tüm sorgularında içeren bir yapılandırma öğesi `activityDefinitionId` özelliği.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Activities.Tracking.Configuration.FaultPropagationQueryElementCollection?displayProperty=nameWithType>       
- <xref:System.Activities.Tracking.FaultPropagationQuery?displayProperty=nameWithType>       
- [İş Akışı Takip ve İzleme](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [İzleme Profilleri](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.FaultPropagationQueryElementCollection?displayProperty=nameWithType>
+- <xref:System.Activities.Tracking.FaultPropagationQuery?displayProperty=nameWithType>
+- [İş Akışı Takip ve İzleme](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [İzleme Profilleri](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

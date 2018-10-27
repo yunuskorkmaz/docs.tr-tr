@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: a5eada64-075b-4162-9655-ded84e4681f2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a9fefa302a269e08300f0393434b66ca8738a27b
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 5277b056c11de4c3e32d33c72bafc8f64ee17d05
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43777788"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50033875"
 ---
 # <a name="lttypeinstantiationgt-element-net-native"></a>&lt;TypeInstantiation&gt; Öğesi (.NET Yerel)
 Çalışma zamanı yansıma ilkesini oluşturulmuş bir genel türü için geçerlidir.  
@@ -99,7 +99,7 @@ ms.locfileid: "43777788"
  Varsa bir `<TypeInstantiation>` öğesi alt öğesi olan bir [ \<derleme >](../../../docs/framework/net-native/assembly-element-net-native.md), [ \<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md), veya [ \<türü >](../../../docs/framework/net-native/type-element-net-native.md), öğesi Bu, üst öğe tarafından tanımlanan ilke ayarları geçersiz kılar. Varsa bir [ \<türü >](../../../docs/framework/net-native/type-element-net-native.md) öğe tanımlar karşılık gelen bir genel tür tanımı `<TypeInstantiation>` öğesini belirtilen oluşturulan genel tür örneklemeleri için yalnızca çalışma zamanı yansıma ilkesini geçersiz kılar.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, genel tür tanımı oluşturulan almak için yansıtma kullanır. <xref:System.Collections.Generic.Dictionary%602> nesne. Hakkında bilgi görüntülemek için de kullanır yansıma <xref:System.Type> oluşturulan genel türler ve genel tür tanımları temsil eden nesneleri. Değişken `b` örnekte bir [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) denetimi.  
+ Aşağıdaki örnek, genel tür tanımı oluşturulan almak için yansıtma kullanır. <xref:System.Collections.Generic.Dictionary%602> nesne. Hakkında bilgi görüntülemek için de kullanır yansıma <xref:System.Type> oluşturulan genel türler ve genel tür tanımları temsil eden nesneleri. Değişken `b` örnekte bir <xref:Windows.UI.Xaml.Controls.TextBlock> denetimi.  
   
  [!code-csharp[ProjectN_Reflection#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/makegenerictype1.cs#2)]  
   

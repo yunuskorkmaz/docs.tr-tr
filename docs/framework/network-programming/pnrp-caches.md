@@ -2,14 +2,12 @@
 title: PNRP önbellekleri
 ms.date: 03/30/2017
 ms.assetid: 270068d9-1b6b-4eb9-9e14-e02326bb88df
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: f0cda9fe5ea6d8c79249603f4a51c18a615fe839
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 53df90a9bb3da90145ebe30bb274b4ff4950c00f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025379"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50180971"
 ---
 # <a name="pnrp-caches"></a>PNRP önbellekleri
 Eş Adı Çözümleme Protokolü (PNRP) önbellekler algorithmically seçili eş uç noktaları eş tutulan yerel koleksiyonlarıdır.  

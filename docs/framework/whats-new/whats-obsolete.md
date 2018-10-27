@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e6835d159c9c30d09892bad8cc1d20753fe6f21c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 58ef462fdccc31a7694721b3ab9c3bec52d66abe
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855341"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183483"
 ---
 # <a name="what39s-obsolete-in-the-net-framework-class-library"></a>Hangi&#39;s eski .NET Framework sınıf kitaplığı
 .NET Framework, zaman içinde değişir. Her yeni sürümü, yeni türler ve yeni işlevleri sağlayan bir tür üyeleri ekler. Ayrıca varolan türleri ve üyeleri zamanla değişir. Örneğin, bazı türleri destekledikleri teknoloji tarafından yeni bir teknoloji değiştirilir daha az önemli hale gelir ve bazı yöntemler daha kullanışlı ya da daha tam özellikli olan yeni yöntemlerle olandır.  
@@ -25,7 +25,7 @@ ms.locfileid: "43855341"
 >  Koşulları *eski* ve *kullanım dışı* türleri ve üyeleri .NET Framework'ün uygulandığında anlamı yoktur.  
   
 ## <a name="the-obsoleteattribute-attribute"></a>ObsoleteAttribute özniteliği  
- .NET Framework tür veya üyenin türü ile işaretleyerek eski gösterir <xref:System.ObsoleteAttribute> özniteliği. Öznitelik bir türe veya üyeye uygulama .NET Framework olmadan bazı gelecek sürümünde türe veya üyeye kaldırılacak bu üyeyi kullanan kod derlenmiş gösterir.  
+ .NET Framework tür veya üyenin türü ile işaretleyerek eski gösterir <xref:System.ObsoleteAttribute> özniteliği. Öznitelik bir türe veya üyeye uygulama .NET Framework bu üyeyi kullanan son derlenen kod olmadan bazı gelecek sürümünde türe veya üyeye kaldırılacak gösterir.  
   
  Bir tür veya tür üye eski olduğunu belirten ek olarak <xref:System.ObsoleteAttribute> derleyici bu tür veya üye içeren kaynak kodu nasıl işlediğini tanımlar. Derleyici, kodu derlemek ancak bir uyarı iletisi yayma ya da hata olarak türe veya üyeye kullanımını davranabilirsiniz. İlk durumda, kod başarıyla derleme, ancak bir uyarı iletisi türe veya üyeye geçersiz olduğunu gösterir. İkinci durumda, derleme başarısız oluyor.  
   

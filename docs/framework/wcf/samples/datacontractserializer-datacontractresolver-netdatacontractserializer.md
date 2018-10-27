@@ -2,77 +2,77 @@
 title: NetDataContractSerializer İşlevselliğini Sağlamak için DataContractSerializer ve DataContractResolver Kullanma
 ms.date: 03/30/2017
 ms.assetid: 1376658f-f695-45f7-a7e0-94664e9619ff
-ms.openlocfilehash: b86ac822e7ce7f0b18962fe48adbb1c26d7259dd
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: a2efa9f66e4053b94dc85b3bbe73400630fa84d1
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43394305"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50184532"
 ---
 # <a name="using-datacontractserializer-and-datacontractresolver-to-provide-the-functionality-of-netdatacontractserializer"></a>NetDataContractSerializer İşlevselliğini Sağlamak için DataContractSerializer ve DataContractResolver Kullanma
-Bu örnek gösterir nasıl kullanımını <xref:System.Runtime.Serialization.DataContractSerializer> uygun bir <xref:System.Runtime.Serialization.DataContractResolver> aynı işlevselliği sağlar <xref:System.Runtime.Serialization.NetDataContractSerializer>. Bu örnek, uygun oluşturma işlemi gösterilmektedir <xref:System.Runtime.Serialization.DataContractResolver> ve eklemek üzere onu nasıl <xref:System.Runtime.Serialization.DataContractSerializer>.  
-  
-## <a name="sample-details"></a>Örnek Ayrıntıları  
- <xref:System.Runtime.Serialization.NetDataContractSerializer> farklıdır <xref:System.Runtime.Serialization.DataContractSerializer> önemli bir şekilde: <xref:System.Runtime.Serialization.NetDataContractSerializer> CLR türü bilgisi serileştirilmiş XML'de içerir <xref:System.Runtime.Serialization.DataContractSerializer> desteklemez. Bu nedenle, <xref:System.Runtime.Serialization.NetDataContractSerializer> yalnızca, aynı CLR Türleri serileştirmek hem de sona erer seri durumdan çıkarılırken paylaşıyorsa kullanılır. Ancak, kullanılacak önerilir <xref:System.Runtime.Serialization.DataContractSerializer> performansı daha iyidir çünkü <xref:System.Runtime.Serialization.NetDataContractSerializer>. İçinde serileştirilmiş bilgileri değiştirebilirsiniz <xref:System.Runtime.Serialization.DataContractSerializer> ekleyerek bir <xref:System.Runtime.Serialization.DataContractResolver> ona.  
-  
- Bu örnek iki projeden oluşan. İlk projenizi kullanan <xref:System.Runtime.Serialization.NetDataContractSerializer> bir nesneyi serileştirmek için. İkinci kullandığından <xref:System.Runtime.Serialization.DataContractSerializer> ile bir <xref:System.Runtime.Serialization.DataContractResolver> ilk proje ile aynı işlevselliği sağlamak için.  
-  
- Aşağıdaki kod örneği bir özel uygulanışı gösterilmektedir <xref:System.Runtime.Serialization.DataContractResolver> adlı `MyDataContractResolver` eklenen <xref:System.Runtime.Serialization.DataContractSerializer> DCSwithDCR projedeki.  
-  
-```  
-class MyDataContractResolver : DataContractResolver  
-{  
-    private XmlDictionary dictionary = new XmlDictionary();  
-  
-    public MyDataContractResolver()  
-    {  
-    }  
-  
-    // Used at deserialization  
-    // Allows users to map xsi:type name to any Type   
-    public override Type ResolveName(string typeName, string typeNamespace, DataContractResolver knownTypeResolver)  
-    {  
-        Type type = knownTypeResolver.ResolveName(typeName, typeNamespace, null);  
-        if (type == null)  
-        {  
-            type = Type.GetType(typeName + ", " + typeNamespace);  
-        }  
-        return type;  
-    }  
-  
-    // Used at serialization  
-    // Maps any Type to a new xsi:type representation  
-    public override void ResolveType(Type dataContractType, DataContractResolver knownTypeResolver, out XmlDictionaryString typeName, out XmlDictionaryString typeNamespace)  
-    {  
-        knownTypeResolver.ResolveType(dataContractType, null, out typeName, out typeNamespace);  
-        if (typeName == null || typeNamespace == null)  
-        {  
-            XmlDictionary dictionary = new XmlDictionary();  
-            typeName = dictionary.Add(dataContractType.FullName);  
-            typeNamespace = dictionary.Add(dataContractType.Assembly.FullName);  
-        }  
-    }  
-}  
-```  
-  
-#### <a name="to-use-this-sample"></a>Bu örneği kullanmak için  
-  
-1.  Kullanarak [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], DCRSample.sln çözüm dosyasını açın.  
-  
-2.  Çözüm dosyasını sağ tıklatın ve seçin **özellikleri**.  
-  
-3.  İçinde **çözüm özellik sayfaları** iletişim altında **ortak özellikler**, **başlangıç projesi**seçin **birden fazla başlangıç projesi:**.  
-  
-4.  Yanındaki **DCSwithDCR** proje, select **Başlat** gelen **eylem** açılır.  
-  
-5.  Yanındaki **NetDCS** proje, select **Başlat** gelen **eylem** açılır.  
-  
-6.  Tıklayın **Tamam** iletişim kutusunu kapatmak için.  
-  
-7.  Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.  
-  
-8.  Çözümü çalıştırmak için CTRL + F5 tuşlarına basın.  
-  
+Bu örnek gösterir nasıl kullanımını <xref:System.Runtime.Serialization.DataContractSerializer> uygun bir <xref:System.Runtime.Serialization.DataContractResolver> aynı işlevselliği sağlar <xref:System.Runtime.Serialization.NetDataContractSerializer>. Bu örnek, uygun oluşturma işlemi gösterilmektedir <xref:System.Runtime.Serialization.DataContractResolver> ve eklemek üzere onu nasıl <xref:System.Runtime.Serialization.DataContractSerializer>.
+
+## <a name="sample-details"></a>Örnek Ayrıntıları
+ <xref:System.Runtime.Serialization.NetDataContractSerializer> farklıdır <xref:System.Runtime.Serialization.DataContractSerializer> önemli bir şekilde: <xref:System.Runtime.Serialization.NetDataContractSerializer> CLR türü bilgisi serileştirilmiş XML'de içerir <xref:System.Runtime.Serialization.DataContractSerializer> desteklemez. Bu nedenle, <xref:System.Runtime.Serialization.NetDataContractSerializer> yalnızca, aynı CLR Türleri serileştirmek hem de sona erer seri durumdan çıkarılırken paylaşıyorsa kullanılır. Ancak, kullanılacak önerilir <xref:System.Runtime.Serialization.DataContractSerializer> performansı daha iyidir çünkü <xref:System.Runtime.Serialization.NetDataContractSerializer>. İçinde serileştirilmiş bilgileri değiştirebilirsiniz <xref:System.Runtime.Serialization.DataContractSerializer> ekleyerek bir <xref:System.Runtime.Serialization.DataContractResolver> ona.
+
+ Bu örnek iki projeden oluşan. İlk projenizi kullanan <xref:System.Runtime.Serialization.NetDataContractSerializer> bir nesneyi serileştirmek için. İkinci kullandığından <xref:System.Runtime.Serialization.DataContractSerializer> ile bir <xref:System.Runtime.Serialization.DataContractResolver> ilk proje ile aynı işlevselliği sağlamak için.
+
+ Aşağıdaki kod örneği bir özel uygulanışı gösterilmektedir <xref:System.Runtime.Serialization.DataContractResolver> adlı `MyDataContractResolver` eklenen <xref:System.Runtime.Serialization.DataContractSerializer> DCSwithDCR projedeki.
+
+```csharp
+class MyDataContractResolver : DataContractResolver
+{
+    private XmlDictionary dictionary = new XmlDictionary();
+
+    public MyDataContractResolver()
+    {
+    }
+
+    // Used at deserialization
+    // Allows users to map xsi:type name to any Type
+    public override Type ResolveName(string typeName, string typeNamespace, DataContractResolver knownTypeResolver)
+    {
+        Type type = knownTypeResolver.ResolveName(typeName, typeNamespace, null);
+        if (type == null)
+        {
+            type = Type.GetType(typeName + ", " + typeNamespace);
+        }
+        return type;
+    }
+
+    // Used at serialization
+    // Maps any Type to a new xsi:type representation
+    public override void ResolveType(Type dataContractType, DataContractResolver knownTypeResolver, out XmlDictionaryString typeName, out XmlDictionaryString typeNamespace)
+    {
+        knownTypeResolver.ResolveType(dataContractType, null, out typeName, out typeNamespace);
+        if (typeName == null || typeNamespace == null)
+        {
+            XmlDictionary dictionary = new XmlDictionary();
+            typeName = dictionary.Add(dataContractType.FullName);
+            typeNamespace = dictionary.Add(dataContractType.Assembly.FullName);
+        }
+    }
+}
+```
+
+#### <a name="to-use-this-sample"></a>Bu örneği kullanmak için
+
+1.  Visual Studio 2012 kullanarak DCRSample.sln çözüm dosyasını açın.
+
+2.  Çözüm dosyasını sağ tıklatın ve seçin **özellikleri**.
+
+3.  İçinde **çözüm özellik sayfaları** iletişim altında **ortak özellikler**, **başlangıç projesi**seçin **birden fazla başlangıç projesi:**.
+
+4.  Yanındaki **DCSwithDCR** proje, select **Başlat** gelen **eylem** açılır.
+
+5.  Yanındaki **NetDCS** proje, select **Başlat** gelen **eylem** açılır.
+
+6.  Tıklayın **Tamam** iletişim kutusunu kapatmak için.
+
+7.  Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.
+
+8.  Çözümü çalıştırmak için CTRL + F5 tuşlarına basın.
+
 > [!IMPORTANT]
 >  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   

@@ -8,32 +8,30 @@ helpviewer_keywords:
 - decimals [Visual Basic], hexadecimals
 - string conversion [Visual Basic], hexadecimal to numbers
 ms.assetid: 76675807-eadb-4c08-bd50-e6c6ff4b8ced
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: af0e6c1e30c116709ed98240de7bf3471fa842d4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 65184bbb742ad549a8398d55dc7bdeed05a9d973
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648648"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50048560"
 ---
 # <a name="how-to-convert-hexadecimal-strings-to-numbers-visual-basic"></a>Nasıl yapılır: Onaltılık Dizeleri Sayılara Dönüştürme (Visual Basic)
 Bu örnek, bir tamsayı kullanarak bir onaltılık dize dönüştürür <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> yöntemi.  
   
-## <a name="to-convert-a-hexadecimal-string-to-a-number"></a>Bir onaltılık dize bir sayıya dönüştürme  
+## <a name="to-convert-a-hexadecimal-string-to-a-number"></a>Bir sayıyı bir onaltılık dize dönüştürmek için  
   
--   Kullanım <xref:System.Convert.ToInt32(System.String,System.Int32)> base-16 bir tamsayı olarak ifade edilen numarası dönüştürmek için yöntem.  
+-   Kullanım <xref:System.Convert.ToInt32(System.String,System.Int32)> temel-16 tamsayı cinsinden bir sayı dönüştürmek için yöntemi.  
   
-     İlk bağımsız değişkeni <xref:System.Convert.ToInt32(System.String,System.Int32)> dönüştürülecek dizeyi bir yöntemdir. İkinci bağımsız değişken sayısı cinsinden ifade edilir temeli açıklar; onaltılık temel 16'dır.  
+     İlk bağımsız değişkeni <xref:System.Convert.ToInt32(System.String,System.Int32)> yöntemdir dönüştürülecek dize. İkinci bağımsız değişken sayısı cinsinden temeli açıklar; onaltılık temel 16'dır.  
   
      [!code-vb[HexConversion](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-convert-hexadecimal-strings-to-numbers_1.vb)]  
 
-- Onaltılık dize aşağıdaki kısıtlamalar olduğuna dikkat edin:
+- Onaltılık dizeyi aşağıdaki kısıtlamalar olduğuna dikkat edin:
 
-   - Dahil edilemiyor `&h` öneki.
-   - Dahil edilemiyor `_` basamak ayırıcı.
+   - Dahil edemezsiniz `&h` önek.
+   - Dahil edemezsiniz `_` basamak ayırıcı.
 
-   Önek veya bir basamak ayırıcı mevcutsa, çağrısı <xref:System.Convert.ToInt32(System.String,System.Int32)> yöntemi atar bir <xref:System.FormatException>.
+   Ön ek veya bir basamak ayıracı mevcutsa, çağrı <xref:System.Convert.ToInt32(System.String,System.Int32)> yöntem bir <xref:System.FormatException>.
 
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:Microsoft.VisualBasic.Conversion.Hex%2A>  

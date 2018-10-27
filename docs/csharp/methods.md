@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: f5fd156ba25352fb1f816349c5e130267f7da8c2
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: e4a4d58f154116974c7314e84f625b338cbfe204
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925850"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50038311"
 ---
 # <a name="methods"></a>Yöntemler #
 
@@ -114,7 +114,7 @@ Aşağıdaki örnekte adlı (bir başvuru türü olan) bir sınıf tanımlar `Sa
 <a name="byref"></a>
 ### <a name="passing-parameters-by-reference"></a>Parametreleri başvuruya göre geçirme ###
 
-Yöntemde bir bağımsız değişkeninin değerini değiştirme ve denetimi çağıran Metoda döndürür, bu değişikliği refect istiyorsanız istediğinizde başvuruya göre bir parametre geçirin. Başvuruya göre bir parametre geçirmek için kullandığınız [ `ref` ](language-reference/keywords/ref.md) veya [ `out` ](language-reference/keywords/out-parameter-modifier.md) anahtar sözcüğü. Başvuruya göre kopyalama kaçının ancak yine de kullanarak değişiklikleri önlemek için de bir değer geçirebilirsiniz [ `in` ](language-reference/keywords/in-parameter-modifier.md) anahtar sözcüğü.
+Yöntemde bir bağımsız değişkeninin değerini değiştirme ve denetimi çağıran Metoda döndürür, bu değişikliği yansıtacak şekilde istediğiniz istediğinizde başvuruya göre bir parametre geçirin. Başvuruya göre bir parametre geçirmek için kullandığınız [ `ref` ](language-reference/keywords/ref.md) veya [ `out` ](language-reference/keywords/out-parameter-modifier.md) anahtar sözcüğü. Başvuruya göre kopyalama kaçının ancak yine de kullanarak değişiklikleri önlemek için de bir değer geçirebilirsiniz [ `in` ](language-reference/keywords/in-parameter-modifier.md) anahtar sözcüğü.
 
 Başvuru tarafından geçirilen değer dışında aşağıdaki örnek, önceki bir, aynı `ModifyValue` yöntemi. İçinde parametresinin değeri değiştirildiğinde `ModifyValue` değerindeki yöntemi, Denetim arayana geri döndüğünde yansıtılır.
 
@@ -129,7 +129,7 @@ Bir başvuru türü parametre geçirerek, ayrı ayrı öğeler veya alanlar yeri
 <a name="paramarray"></a>
 ### <a name="parameter-arrays"></a>Parametre dizileri ###
 
-Bazı durumlarda, yönteminize tam sayı bağımsız değişkenleri belirtme gereksinimi sınırlayıcıdır. Kullanarak `params` anahtar sözcüğü, bir parametre dizisi bir parametredir, değişken sayıda bağımsız değişkenle çağrılması yönteminizi izin belirtmek için. Parametresi ile etiketlenmiş `params` anahtar sözcüğü bir dizi türü olması gerekir ve bu yöntemin parametre listesindeki son parametre olmalıdır.
+Bazı durumlarda, yönteminize tam sayı bağımsız değişkenleri belirtme gereksinimi sınırlayıcıdır. Kullanarak `params` anahtar sözcüğü, bir parametre dizisi bir parametredir, değişken sayıda bağımsız değişkenle çağrılması yönteminizi izin belirtmek için. Parametresi ile etiketlenmiş `params` anahtar sözcüğü, bir dizi türü olmalıdır ve yöntemin parametre listesindeki son parametre olmalıdır.
 
 Çağıran, sonra üç yoldan biriyle yöntemi çağırabilirsiniz:
 
