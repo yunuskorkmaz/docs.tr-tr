@@ -2,19 +2,19 @@
 title: CallbackBehavior
 ms.date: 03/30/2017
 ms.assetid: 42acd302-2b62-4849-a2d1-a03084343ecd
-ms.openlocfilehash: 2755ac4f365536366b41e743110ce494063a5ecc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 38a38a71db2927d187ccdd93e5e364b0d4955373
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33486966"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452618"
 ---
 # <a name="callbackbehavior"></a>CallbackBehavior
 CallbackBehavior  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```csharp
 class CallbackBehavior : Behavior  
 {  
   boolean AutomaticSessionShutdown;  
@@ -28,64 +28,64 @@ class CallbackBehavior : Behavior
 ```  
   
 ## <a name="methods"></a>Yöntemler  
- CallbackBehavior sınıfı herhangi bir yöntem tanımlamıyor.  
+ CallbackBehavior sınıf herhangi bir yöntemi tanımlamaz.  
   
 ## <a name="properties"></a>Özellikler  
  CallbackBehavior sınıfı aşağıdaki özelliklere sahiptir:  
   
 ### <a name="automaticsessionshutdown"></a>AutomaticSessionShutdown  
- Veri türü: boolean  
+ Veri türü: Boole  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Bir hizmet çift yönlü oturumu kapattığında doğru olduğunda, oturumu otomatik olarak kapatılır.  
+ Bir hizmeti bir çift yönlü oturumu kapattığında true olduğunda, oturumu otomatik olarak kapatılır.  
   
 ### <a name="concurrencymode"></a>ConcurrencyMode  
  Veri türü: dize  
-Erişim türüne: salt okunur  
+Erişim türü: salt okunur  
   
- Hizmet bir iş parçacığı, birden çok iş parçacığı veya desteklemeyeceğini aramalar destekleyip desteklemediğini belirtir.  
+ Hizmet bir iş parçacığı, birden çok iş parçacığı veya yeniden girilen çağrıları destekleyip desteklemediğini belirtir.  
   
-### <a name="ignoreextensiondataobject"></a>ignoreExtensionDataObject  
- Veri türü: boolean  
+### <a name="ignoreextensiondataobject"></a>IgnoreExtensionDataObject  
+ Veri türü: Boole  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Bilinmeyen seri hale getirme verilerinin gönderilip gönderilmeyeceğini belirten bir değer.  
+ Bilinmeyen serileştirme verilerinin gönderilip gönderilmeyeceğini belirten bir değeri.  
   
 ### <a name="includeexceptiondetailinfaults"></a>IncludeExceptionDetailInFaults  
- Veri türü: boolean  
+ Veri türü: Boole  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Etkinleştirildiğinde, hakkındaki geri arama özel durumların ayrıntıları hizmete döndürülen hatalara eklenir.  
+ Etkin olduğunda, geri çağırma özel durumları hakkında ayrıntıları hizmete döndürülen hatalara eklenir.  
   
 ### <a name="maxitemsinobjectgraph"></a>MaxItemsInObjectGraph  
- Veri türü: boolean  
+ Veri türü: Boole  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Serileştirilmiş nesne içinde izin verilen öğe maksimum sayısı.  
+ Serileştirilmiş nesne içinde izin verilen öğe sayısı.  
   
 ### <a name="usesynchronizationcontext"></a>UseSynchronizationContext  
- Veri türü: boolean  
+ Veri türü: Boole  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
  Geçerli eşitleme bağlamı yürütme iş parçacığı seçmek için kullanılıp kullanılmayacağını belirtir.  
   
 ### <a name="validatemustunderstand"></a>ValidateMustUnderstand  
- Veri türü: boolean  
+ Veri türü: Boole  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Sistem veya uygulama SOAP MustUnderstand üstbilgi işlemeyi zorunlu olup olmadığını belirtir.  
+ Sistem veya uygulama SOAP MustUnderstand üst bilgi işleme uygulayıp uygulamayacağını belirtir.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|MOF|Bildirilen Servicemodel.mof.|  
+|MOF|Bildirilmiş Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Ad Alanı|İçinde tanımlanan root\ServiceModel|  
+|Ad Alanı|İçinde tanımlı root\ServiceModel|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.CallbackBehaviorAttribute>

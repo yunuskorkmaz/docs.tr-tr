@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: cf1782eaf54701f0cf93576325b3d46e8bc4d3f1
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: d4b4c776db542b6326fcceb8f2fd057d9caabf94
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261517"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "49415256"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Geliştirme ve WCF veri hizmetlerini dağıtma
 
@@ -80,7 +80,7 @@ Bir veri hizmeti geliştirirken, aşağıdakileri dikkate almanız gerekir:
 
 -   HTTP inceleme programı, istek ve yanıt iletilerinin içeriğini denetlemenizi sağlayarak veri hizmetinde hata ayıklarken size epey yardımcı olabilir. Veri hizmetine yapılan HTTP isteklerini ve veri hizmetinden alınan yanıtları denetlemek için ham paketleri görüntüleyebilen herhangi bir ağ paketi çözümleyicisi kullanılabilir.
 
--   Veri hizmetinde hata ayıklarken, veri hizmetinden bir hatayla ilgili olarak normal çalışmaya göre daha fazla bilgi almak isteyebilirsiniz. Ayarlayarak veri hizmetinden ek hata bilgileri alabilirsiniz <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> özelliğinde <xref:System.Data.Services.DataServiceConfiguration> için `true` ayarlayarak <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> özelliği <xref:System.ServiceModel.Description.ServiceDebugBehavior> verihizmetisınıfındakiözniteliği`true`. Daha fazla bilgi için gönderiye bakın [hata ayıklama WCF Veri Hizmetleri](https://go.microsoft.com/fwlink/?LinkId=201868). WCF HTTP ileti katmanında oluşturulan özel durumları görüntülemek için izlemeyi de etkinleştirebilirsiniz. Daha fazla bilgi için [yapılandırma izleme](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).
+-   Veri hizmetinde hata ayıklarken veri hizmetinden normal işlem sırasında bir hata hakkında daha fazla bilgi almak isteyebilirsiniz. Ayarlayarak veri hizmetinden ek hata bilgileri alabilirsiniz <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> özelliğinde <xref:System.Data.Services.DataServiceConfiguration> için `true` ayarlayarak <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> özelliği <xref:System.ServiceModel.Description.ServiceDebugBehavior> verihizmetisınıfındakiözniteliği`true`. Daha fazla bilgi için gönderiye bakın [hata ayıklama WCF Veri Hizmetleri](https://go.microsoft.com/fwlink/?LinkId=201868). WCF HTTP ileti katmanında oluşturulan özel durumları görüntülemek için izlemeyi de etkinleştirebilirsiniz. Daha fazla bilgi için [yapılandırma izleme](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).
 
 -   Bir veri hizmeti genellikle olarak geliştirilen bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulama projesi, ancak da oluşturabilir, veri hizmeti olarak bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Visual Studio'da Web sitesi projesi. İki proje türü arasındaki farklar hakkında daha fazla bilgi için bkz: [NIB: Web Application Projects versus Web sitesi projeleri Visual Studio'da](https://msdn.microsoft.com/library/2861815e-f5a2-4378-a2f8-b8a86dc012f5).
 

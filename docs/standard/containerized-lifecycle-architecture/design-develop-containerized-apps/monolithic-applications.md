@@ -1,75 +1,75 @@
 ---
-title: Tek yapılı uygulamaları
-description: Microsoft Platformu ve araçları ile kapsayıcılı Docker uygulama yaşam döngüsü
+title: Tek yapılı uygulamalar
+description: Microsoft Platformu ve araçları ile kapsayıcı Docker uygulaması yaşam
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 4d25ef131cf149eb869fa2acd40eddff5ee0b55d
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: a2fe2c325377ec49f89199ad2e36c950ebab6a24
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106625"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49633904"
 ---
-# <a name="monolithic-applications"></a>Tek yapılı uygulamaları
+# <a name="monolithic-applications"></a>Tek yapılı uygulamalar
 
-Bu senaryoda, bir tek ve tek yapılı bir web uygulaması veya hizmeti oluşturma ve bir kapsayıcı olarak dağıtma. Uygulama içinde yapısı tek yapılı olmayabilir; birkaç kitaplıkları, bileşenler veya hatta Katmanlar (uygulama katmanı, etki alanı katman, veri erişim katmanı, vb.) oluşturan. Harici olarak tek bir işlem, tek bir web uygulaması veya tek bir hizmet gibi tek bir kapsayıcı değil.
+Bu senaryoda, bir tek ve tek parça bir web uygulaması veya hizmeti oluşturma ve kapsayıcı olarak dağıtma. Uygulama içinde yapısı tek parça olmayabilir; birkaç kitaplıklar, bileşenler veya hatta katmanları (uygulama katmanı, etki alanı katmanı, veri erişim katmanı, vb.) oluşturan. Harici olarak tek bir işlem, tek bir web uygulaması veya tek bir hizmet gibi tek bir kapsayıcı olduğundan.
 
-Bu model yönetmek için uygulamayı temsil etmek için tek bir kapsayıcı dağıtın. Ölçeklemek için birkaç daha fazla yük dengeleyici önde kopyalarla eklemeniz yeterlidir. Basitlik, tek bir dağıtım bir tek kapsayıcı veya sanal makine (VM) yönetme gelir.
+Bu model yönetmek için uygulamayı temsil etmek için tek bir kapsayıcı dağıtırsınız. Ölçeklendirme için önde gelen bir yük dengeleyici ile birkaç kopya eklemeniz yeterlidir. Basitlik, bir çoklu kapsayıcı veya sanal makine (VM) tek bir dağıtım yönetmesini gelir.
 
-Bir kapsayıcı yalnızca bir şeyi yapar ve tek bir işlemde mu asıl, tek yapılı düzeni çakışma ' dir. Şekil 4-1'de gösterildiği gibi birden çok bileşenleri/kitaplıklarına veya her kapsayıcı içindeki iç katmanları içerebilir.
+Kapsayıcı yalnızca bir şeyi yapar ve tek bir işlemde çalıştığı asıl, tek parçalı çakışma modelidir. Şekil 4-1'de gösterildiği gibi birden çok bileşenleri/kitaplıkları veya her bir kapsayıcı içindeki iç Katmanlar içerebilir.
 
 ![](./media/image1.png)
 
-Şekil 4-1: örneği tek yapılı uygulama mimarisi
+Şekil 4-1: örnek olarak tek parça uygulama mimarisi
 
-Bu yaklaşımın dezavantajı, veya uygulama büyürken ölçeklendirmek için gerektiren gelir. Tüm uygulama ölçeklendirilmiş, onu gerçekten bir sorun değildir. Daha az kullanılan diğer bileşenleri ancak bununla birlikte, çoğu durumda, birkaç uygulama bölümlerinin sıkıştırma ölçeklendirme, gerektiren noktalarıdır.
+Bu yaklaşımın bir dezavantajı, varsa veya uygulama büyürken, ölçeklendirme gerektiren gelir. Uygulamanın tamamı ölçeği, gerçekten bir sorun değildir. Diğer bileşenleri daha az kullanılır ancak çoğu durumda, uygulamanın bazı bölümlerini sıkıştırma ölçeklendirme gerektiren noktalarıdır.
 
-Tipik e-ticaret örnek, büyük olasılıkla gerekenler ürün bilgi bileşeni ölçeklendirmek için kullanmaktır. Birçok daha fazla müşteri ürünleri bunları satın daha göz atın. Daha fazla müşteriler kendi Sepeti ödeme işlem hattını kullanma daha kullanın. Daha az müşteriler, yorum eklemek veya satın alma geçmişlerini görüntüleyin. Ve büyük olasılıkla, içerik ve pazarlama kampanyaları yönetmek için gerekli olan tek bir bölgedeki çalışanlar sayıda vardır. Tek yapılı tasarım ölçeklendirme tarafından tüm kod dağıtıldığı birden çok kez.
+Tipik bir e-ticaret örneği kullanarak, büyük olasılıkla gerekenler ürün bilgi bileşeni ölçeklendirmektir. Pek çok daha fazla müşteriye satın çok ürünlerin göz atın. Daha fazla müşteriye kendi Sepeti ödeme işlem hattını kullanma daha kullanın. Daha az müşteriler, yorum eklemek veya satın alma geçmişlerini görüntüleyin. Ve büyük olasılıkla çalışanlar, içerik ve pazarlama kampanyaları yönetmek için gereken tek bir bölgede olması gerekir. Tek yapılı tasarım ölçeğini genişleterek tüm kodlar dağıtılan birden çok kez.
 
-Ek olarak "ölçek-her şeyi" sorun, tek bir bileşen değişiklik gerektiren tüm örnekleri tam çözümünüzün yeniden dağıtımını yanı sıra tüm uygulama tam retesting.
+Ek olarak "ölçek-her şeyi" sorun, tek bir bileşen için bir değişiklik yapılması tam yeniden dağıtma işlemi tüm örneklerin yanı sıra uygulamanın tamamı tam çözülüp.
 
-Tek yapılı bir yaklaşım yaygındır ve birçok kuruluş bu mimari yöntemi ile geliştirdiğiniz. Başkalarının sınırları karşılaştığınız ancak birçok iyi yeterli sonuçları keyfini çıkarın. Birçok uygulamalarını bu modelde araçları ve altyapısı SOAs oluşturmak çok zor ve gereken görmek istemediğiniz için tasarlanmış — uygulama büyüdü kadar.
+Tek parçalı bir yaklaşım için ortaktır ve birçok kuruluşun mimari bu yöntemi ile geliştirdiğiniz. Başkalarının sınırları karşılaştığınız oysa birçok iyi yeterli sonuçları keyfini çıkarın. Çoğu araçları ve altyapı SOAs derleme çok zor ve bunlar gereken görmediniz çünkü bu modeli uygulamalarında tasarlanmış — kadar uygulamayı büyüdü.
 
-Her sunucu altyapı açısından bakıldığında, aynı ana içinde birçok uygulamayı çalıştırın ve Şekil 4-2'de gösterildiği gibi kaynakları kullanımınızı verimlilik kabul edilebilir bir oran olması.
+Altyapı açısından bakıldığında, her sunucu aynı konak içindeki birçok uygulama çalıştırabilir ve Şekil 4-2'de gösterildiği gibi kaynakları kullanımınızı verimliliği kabul edilebilir bir oran olması.
 
 ![](./media/image2.png)
 
-Şekil 4-2: birden çok apps/kapsayıcı çalıştıran bir ana bilgisayar
+Şekil 4-2: birden çok uygulama/kapsayıcı çalıştıran bir konağa
 
-Her bir örneği için özel VM'ler kullanarak azure'da tek yapılı uygulamaları dağıtabilirsiniz. Kullanarak [Azure VM ölçek kümesi](https://docs.microsoft.com/azure/virtual-machine-scale-sets/), sanal makineleri kolayca ölçeklendirebilirsiniz. [Azure App Services](https://azure.microsoft.com/en-us/services/app-service/) tek yapılı uygulamaları çalıştırabilir ve sanal makineleri yönetmek zorunda kalmadan örnekleri kolayca ölçeklendirin. 2016, Azure App Services Dağıtımı basitleştirme Docker kapsayıcıları, de, tek tek örneklerini çalıştırabilirsiniz. Ve Docker kullanarak, Docker ana bilgisayar olarak tek bir VM'yi dağıtmak ve birden çok örneği çalıştırın. Şekil 4-3'te gösterildiği gibi Azure dengeleyici kullanarak ölçeklendirme yönetebilirsiniz.
+Her örneği için özel VM'ler kullanarak azure'da tek yapılı uygulamalar dağıtabilirsiniz. Kullanarak [Azure VM ölçek kümeleri](https://docs.microsoft.com/azure/virtual-machine-scale-sets/), Vm'leri bir kolayca ölçeklendirebilirsiniz. [Azure uygulama hizmetleri](https://azure.microsoft.com/services/app-service/) tek yapılı uygulamaları çalıştırabilir ve Vm'leri yönetmek zorunda kalmadan örneklerini kolayca ölçeklendirin. 2016 tarihinden beri Azure uygulama hizmetleri dağıtımını basitleştirme amacıyla da Docker kapsayıcılar'ın tek örneklerine çalıştırabilirsiniz. Ve Docker kullanarak Docker konağı olarak tek bir VM dağıtma ve birden çok örneğini çalıştırmak. Azure, Şekil 4-3'te gösterildiği gibi kullanarak ölçeklendirme yönetebilirsiniz.
 
 ![](./media/image3.png)
 
-Şekil 4-3: bir tek Docker uygulama apps/kapsayıcıları ölçeklendirme birden çok ana bilgisayar
+Şekil 4-3: bir tek Docker uygulama uygulamalar/kapsayıcıları ölçeklendirme-giden birden çok konak
 
-Geleneksel dağıtım teknikleri aracılığıyla çeşitli konakları dağıtımına yönetebilirsiniz. Docker ana bilgisayarları gibi komutları kullanarak yönetebileceğiniz `docker run` biz daha sonra bu e-kitap içinde açıklayan sürekli teslim (CD) ardışık düzen gibi automation aracılığıyla el ile.
+Dağıtım çeşitli Konaklara geleneksel dağıtım teknikleri aracılığıyla yönetebilirsiniz. Docker ana bilgisayarları gibi komutları kullanarak yönetebileceğiniz `docker run` biz daha sonra bu e-kitap açıklayan sürekli teslim (CD) işlem hatları gibi Otomasyon aracılığıyla el ile.
 
-## <a name="monolithic-application-deployed-as-a-container"></a>Bir kapsayıcı olarak dağıtılan tek yapılı uygulaması
+## <a name="monolithic-application-deployed-as-a-container"></a>Bir kapsayıcı dağıtılan tek parçalı uygulama
 
-Tek yapılı dağıtımları yönetmek için kapsayıcıları kullanmanın avantajları vardır. Kapsayıcıları örneklerini ölçeklendirme çok daha hızlı ve ek sanal makineleri dağıtma daha kolay olur. VM ölçek kümesi, Docker kapsayıcıları barındırmak için gerekli olan sanal makineleri ölçeklendirmek için harika bir özellik olsa da bunlar ayarlamak için zaman ayırın. Uygulama örnekleri dağıtıldığında, uygulama yapılandırmasını VM bir parçası olarak yönetilir.
+Tek parça dağıtımlarını yönetmek için kapsayıcılar'ı kullanmanın avantajları vardır. Kapsayıcı örnekleri ölçeklendirme, çok daha hızlı ve ek sanal makineleri dağıtma kolaydır. VM ölçek kümeleri, Docker kapsayıcılarınız barındırmak için gerekli olan, Vm'leri ölçeklendirmek için harika bir özellik olsa da bunlar ayarlamak için zaman ayırın. Uygulama örnekleri olarak dağıtıldığında, uygulama yapılandırmasını VM bir parçası olarak yönetilir.
 
-Şu ana kadar daha hızlı Docker görüntüleri olarak güncelleştirmeleri dağıtmak ve ağ verimli. Vn örnekleri ek Vm'lerden kaynaklanan eklenen maliyetlerini ortadan Vn 1 örneklerinizi aynı ana bilgisayar üzerinde ayarlanabilir. Docker görüntüleri genellikle piyasa sürümlerini hızlandırma saniye cinsinden başlatın. Docker örneği hattının kaldırılması çağırma olarak kadar kolay `docker stop` genellikle değerinden bir saniyede Tamamlanıyor komutu.
+Docker görüntülerini çok daha hızlı olduğundan, güncelleştirmeleri dağıtmak ve etkili ağ. Vn örnekleri ek Vm'lerden kaynaklanan ek maliyetleri ortadan Vn 1 örneklerinizin aynı ana bilgisayar üzerinde ayarlanabilir. Docker görüntülerini genellikle piyasaya çıkarma hızlandırma saniyeler içinde başlayın. Bir Docker örneğini bozmadan çağırma olarak kolayca `docker stop` komutu, genellikle kısa bir saniye içinde tamamlanıyor.
 
-Kapsayıcıları tasarım gereği, kendiliğinden değişmez olduğundan, hiçbir zaman bazı belirli yapılandırma veya diskte dosya için hesap bir güncelleştirme betiğini unuttunuz çünkü bozuk VM'ler hakkında endişelenmeniz gerekir.
+Kapsayıcılar tasarım gereği, doğası gereği sabit olduğundan, hiçbir zaman bazı belirli bir yapılandırma veya dosya diskte hesap bir güncelleştirme betiğini unuttum çünkü bozuk VM'ler hakkında endişelenmeniz gerekmiyor.
 
-Tek yapılı uygulamaları Docker yararlı olabilir ancak biz avantajlarından yalnızca ipuçları temas. Kapsayıcıları yönetme büyük avantajları gelir çeşitli örnekleri ve her bir kapsayıcı örnek yaşam döngüsünü yönetme kapsayıcı orchestrators ile dağıtma. Ölçeği, geliştirilmiş ve tek tek dağıttığınız alt sistemleri tek yapılı uygulamasına parçalamak, giriş bölgesi içine mikro noktasıdır.
+Tek yapılı uygulamaları Docker yararlı olabilir ancak biz avantajlardan yalnızca ipuçları temas. Kapsayıcıları yönetme büyük avantajlar çeşitli örnekleri ve her kapsayıcı örneği yaşam döngüsünü yönetme kapsayıcı düzenleyicileri ile dağıtması gelir. Ölçeği, geliştirilen ve dağıtılan ayrı ayrı alt sistemler tek parça uygulamasına'kurmak bozucu, mikro hizmetlerin bölge içinde giriş noktası niteliğindedir.
 
-## <a name="publishing-a-single-docker-container-app-to-azure-app-service"></a>Azure App Service'e tek bir Docker kapsayıcısı uygulamayı yayımlama
+## <a name="publishing-a-single-docker-container-app-to-azure-app-service"></a>Tek bir Docker kapsayıcı uygulamasını Azure App Service'te yayımlama
 
-Ya da Azure'a dağıtılan bir kapsayıcı hızlı doğrulanması almak istediğiniz olduğundan veya bir uygulama olduğundan yalnızca bir tek kapsayıcı uygulaması, Azure App Services ölçeklenebilir tek kapsayıcı hizmetlerini sağlamak için harika bir yol sağlar.
+Ya da hızlı bir doğrulama Azure'a dağıtılan bir kapsayıcının almak istediğiniz veya uygulamayı olduğundan yalnızca bir tek kapsayıcı uygulaması, Azure App Services ölçeklenebilir tek kapsayıcı hizmetleri sağlamak için harika bir yol sağlar.
 
-Azure uygulama hizmeti ile sezgisel ve alma ve harika Git sağladığından hızla tümleştirme, kodunuzu almak için Microsoft Visual Studio derleme çalıştırıp doğrudan Azure'a dağıtma. Ancak, geleneksel olarak (docker'la yok), diğer özellikleri, çerçeveleri veya uygulama Hizmetleri'nde desteklenmeyen bağımlılıkları gerekirse bu bağımlılıkların App Service'teki Azure ekibi güncelleştirmeleri kadar bekleyin için gereken veya gibi diğer hizmetlerine geçti Service Fabric, bulut Hizmetleri veya bile düz VM'ler, kendisi için daha fazla denetime sahip ve uygulamanız için gerekli bir bileşen veya framework yükleyebilirsiniz.
+Azure App Service'i kullanarak, kullanımı kolay olan ve başlayabilirsiniz ve harika Git sağladığından hızlıca çalışmaya tümleştirme, kodunuzu almak için Microsoft Visual Studio'da derleyin ve doğrudan Azure'a dağıtın. Ancak, geleneksel olarak (hiçbir Docker ile), diğer özellikleri, çerçeveleri veya uygulama hizmetleri, desteklenmeyen bağımlılıkları gerekirse bu bağımlılıkların App Service'te Azure ekibi güncelleştirmeleri için beklemeniz gerektiği veya gibi diğer hizmetlere geçiş Service Fabric, bulut Hizmetleri veya bile düz VM'ler, daha fazla denetime sahip olursunuz ve uygulamanız için gerekli bileşen veya framework yükleyebilirsiniz.
 
-Şimdi, ancak (Kasım 2016 ' Microsoft Connect 2016 duyurdu) ve kapsayıcı desteği Azure App Service'de Visual Studio 2017 kullanırken Şekil 4‑4 gösterildiği gibi uygulama ortamınızda istediğiniz dahil etme yeteneği verir. Bir kapsayıcıda çalıştığından, uygulamanıza bir bağımlılık eklediyseniz, bu bağımlılıkların Dockerfile veya Docker görüntünüzü de dahil olmak üzere özelliği alın.
+Şimdi, Bununla birlikte, (Microsoft Connect 2016'da, Kasım 2016'da açıkladığımız) ve Azure App Service kapsayıcı desteği Visual Studio 2017 kullanırken Şekil 4‑4 ' gösterildiği gibi uygulama ortamınızda istediğiniz dahil etme yeteneği verir. Bir kapsayıcıda çalıştığından uygulamanıza bir bağımlılık eklediyseniz, bu bağımlılıkların Dockerfile ya da Docker görüntünüzü dahil olmak üzere özelliğine sahip olursunuz.
 
 ![](./media/image4.png)
 
-Şekil 4-4: Azure App Service'e bir kapsayıcı, Visual Studio apps/kapsayıcılardan yayımlama.
+Şekil 4-4: bir kapsayıcı Visual Studio uygulamalar/kapsayıcılardan Azure App Service'e yayımlama
 
-Şekil 4-4, aynı zamanda Yayımla akış görüntüyü Azure kapsayıcı (bir kayıt defteri dağıtımlarınızda Azure yakınında ve Azure Active Directory grupları ve hesaplarını tarafından güvenliği sağlanan) kayıt defteri olabilen bir kapsayıcı kayıt defteri veya başka bir Docker kayıt aracılığıyla iter gösterir Docker hub'a veya şirket içi kayıt defterleri gibi.
+Şekil 4-4, aynı zamanda yayımlama akışı görüntüyü Azure Container Registry (bir kayıt defteri Azure dağıtımlarınız için neredeyse ve Azure Active Directory'de gruplar ve hesaplar tarafından güvenliği sağlanan) olabilecek bir kapsayıcı kayıt defteri veya başka bir Docker kayıt aracılığıyla gönderim gösterir Docker Hub veya şirket içi kayıt defterleri gibi.
 
 
 >[!div class="step-by-step"]
 [Önceki](common-container-design-principles.md)
-[sonraki](state-and-data-in-docker-applications.md)
+[İleri](state-and-data-in-docker-applications.md)

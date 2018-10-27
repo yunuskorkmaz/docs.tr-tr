@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1874d5512f04f22b9c53bdc9e92d0c96e45d21c8
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 7a8fc72735c5e45fb87c503272871fc687bacd3e
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199729"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453248"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Nasıl yapılır: hangi .NET Framework sürümlerinin yüklü olduğunu belirleme
 
@@ -97,7 +97,7 @@ Kullanıcılar yükleyebilir ve kendi bilgisayarlarına .NET Framework'ün birde
     |Windows 10 Yıldönümü güncelleştirmesi ve Windows Server 2016:394802<br /><br /> Diğer tüm işletim sistemi sürümlerinde: 394806|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]| 
     |Üzerinde Windows 10 Creators güncelleştirmesi yalnızca: 460798<br/><br/> Diğer tüm işletim sistemi sürümlerinde: 460805 | .NET framework 4.7 |
     |Windows 10 Fall Creators Update üzerinde yalnızca: 461308<br/><br/> Diğer tüm işletim sistemi sürümlerinde: 461310 | .NET framework 4.7.1 |
-    |Yalnızca Windows 10 Nisan 2018 güncelleştirmesi: 461808<br/><br/> Diğer tüm işletim sistemi sürümlerinde: 461814| .NET framework 4.7.2 |
+    |Yalnızca Windows 10 Ekim 2018 güncelleştirmesi: 461814<br/><br/> Yalnızca Windows 10 Nisan 2018 güncelleştirmesi: 461808<br/><br/> Diğer tüm işletim sistemi sürümlerinde: 461814| .NET framework 4.7.2 |
     
 <a name="net_c"></a> 
 ## <a name="to-find-net-framework-versions-by-querying-the-registry-in-code-net-framework-1-4"></a>(.NET Framework 1-4) kod içinde kayıt defterini sorgulayarak .NET Framework sürümlerini bulmak için
@@ -148,8 +148,9 @@ Kullanıcılar yükleyebilir ve kendi bilgisayarlarına .NET Framework'ün birde
     |Diğer tüm Windows işletim sistemi sürümlerinde yüklü .NET framework 4.7|460805|
     |.NET framework 4.7.1 Windows 10 Fall Creators Update üzerinde yüklü|461308|
     |.NET framework 4.7.1 diğer tüm Windows işletim sistemi sürümlerinde yüklü|461310|
+    |.NET framework Windows yüklü 4.7.2 10 Ekim 2018 güncelleştirmesi|461814|
     |.NET framework Windows yüklü 4.7.2 10 Nisan 2018 güncelleştirmesi|461808|
-    |.NET framework yüklü diğer tüm Windows işletim sistemi sürümlerinde 4.7.2|461814|
+    |.NET framework Windows 10 Fall Creators Update ve önceki işletim sistemi sürümleri yüklü 4.7.2|461814|
     
      Aşağıdaki örnek denetimlerini `Release` belirlemek için kayıt defteri değerindeki olmadığını [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] veya .NET Framework'ün daha sonraki bir sürümü yüklü.
 

@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6a03e6760fbb233c656909fb99b48a84bddedef8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 24112edc3ac28124953974463233800c51da5cfc
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509028"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453089"
 ---
 # <a name="reflection-in-the-net-framework"></a>.NET Framework'te Yansıma
-Sınıflarda <xref:System.Reflection> ad alanı, birlikte <xref:System.Type?displayProperty=nameWithType>, yüklenen hakkında bilgi edinmek etkinleştirdiğiniz [derlemeleri](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md) ve gibi bunlar dahilinde tanımlanan türler [sınıfları](https://msdn.microsoft.com/library/ad7d3561-271e-4546-82fc-e00b059f27a9), [arabirimleri](https://msdn.microsoft.com/library/fd9d5975-5363-4bc9-b883-609f887895e5), ve [değer türleri](https://msdn.microsoft.com/library/c9c567f8-8ab1-4d88-834d-00f7d92418de). Yansıma, çalışma zamanında tür örnekleri oluşturma ve çağırma ve bunlara erişmek için de kullanabilirsiniz. Yansıma belirli yönleri hakkında konular için bkz [ilgili konular](#related_topics) sonunda, bu genel bakış.  
+Sınıflarda <xref:System.Reflection> ad alanı, birlikte <xref:System.Type?displayProperty=nameWithType>, yüklenen hakkında bilgi edinmek etkinleştirdiğiniz [derlemeleri](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md) ve gibi bunlar dahilinde tanımlanan türler [sınıfları](../../../docs/standard/base-types/common-type-system.md#classes), [arabirimleri](../../../docs/standard/base-types/common-type-system.md#interfaces), ve [değer türleri](https://msdn.microsoft.com/library/c9c567f8-8ab1-4d88-834d-00f7d92418de). Yansıma, çalışma zamanında tür örnekleri oluşturma ve çağırma ve bunlara erişmek için de kullanabilirsiniz. Yansıma belirli yönleri hakkında konular için bkz [ilgili konular](#related_topics) sonunda, bu genel bakış.  
   
  [Ortak dil çalışma zamanı](../../../docs/standard/clr.md) yükleyici yönetir [uygulama etki alanları](../../../docs/framework/app-domains/application-domains.md), aynı uygulama kapsamı olan nesnelerin etrafında sınırları tanımlanmış hangi oluşturur. Bu yönetim uygun uygulama etki alanına her derlemenin yüklenmesi ve her bir derleme içinde tür hiyerarşisi bellek düzenini denetleme içerir.  
   
