@@ -1,8 +1,0 @@
-# [Öğreticiler](index.md)
-## [Konsol Uygulaması](console-teleprompter.md)
-## [REST İstemcisi](console-webapiclient.md)
-## [C# ve .NET içinde devralma](inheritance.md)
-## [LINQ ile Çalışma](working-with-linq.md)
-## [Docker içinde barındırılan mikro hizmetler](microservices.md)
-## [Dize İlişkilendirme](string-interpolation.md)
-## [Öznitelikleri Kullanma](attributes.md)
