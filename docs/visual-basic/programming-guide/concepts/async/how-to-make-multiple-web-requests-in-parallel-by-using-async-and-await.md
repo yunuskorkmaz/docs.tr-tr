@@ -1,22 +1,22 @@
 ---
-title: 'Nasıl yapılır: Async kullanarak birden çok Web isteğini paralel hale ve Await (Visual Basic)'
+title: 'Nasıl yapılır: zaman uyumsuz kullanarak birden çok Web isteğini paralel hale getirme ve Await (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: a894b99b-7cfd-4a38-adfb-20d24f986730
-ms.openlocfilehash: 4d4ccda6657dd4d889e8495fa000715c1f7a5ba6
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 44531ef643df6402ad318957c0a2bdc058c5bcb0
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728449"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195042"
 ---
-# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a><span data-ttu-id="787b5-102">Nasıl yapılır: Async kullanarak birden çok Web isteğini paralel hale ve Await (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="787b5-102">How to: Make Multiple Web Requests in Parallel by Using Async and Await (Visual Basic)</span></span>
-<span data-ttu-id="787b5-103">Bir zaman uyumsuz yönteminde oluşturuldukları görevleri başlatılır.</span><span class="sxs-lookup"><span data-stu-id="787b5-103">In an async method, tasks are started when they’re created.</span></span> <span data-ttu-id="787b5-104">[Bekleme](../../../../visual-basic/language-reference/operators/await-operator.md) işleci, burada işleme devam edemiyor görevi tamamlanana kadar yöntemi bir noktada göreve uygulanır.</span><span class="sxs-lookup"><span data-stu-id="787b5-104">The [Await](../../../../visual-basic/language-reference/operators/await-operator.md) operator is applied to the task at the point in the method where processing can’t continue until the task finishes.</span></span> <span data-ttu-id="787b5-105">Genellikle, aşağıdaki örnekte gösterildiği gibi oluşturulduktan hemen sonra bir görev beklemenin.</span><span class="sxs-lookup"><span data-stu-id="787b5-105">Often a task is awaited as soon as it’s created, as the following example shows.</span></span>  
+# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a><span data-ttu-id="8b9b8-102">Nasıl yapılır: zaman uyumsuz kullanarak birden çok Web isteğini paralel hale getirme ve Await (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8b9b8-102">How to: Make Multiple Web Requests in Parallel by Using Async and Await (Visual Basic)</span></span>
+<span data-ttu-id="8b9b8-103">Yük oluşturulduğunda bir zaman uyumsuz yönteminde görevler oluşturulduklarında başlatılır.</span><span class="sxs-lookup"><span data-stu-id="8b9b8-103">In an async method, tasks are started when they’re created.</span></span> <span data-ttu-id="8b9b8-104">[Await](../../../../visual-basic/language-reference/operators/await-operator.md) işleci işlemenin devam edemediği görev tamamlanana kadar yöntem noktasındaki göreve uygulanır.</span><span class="sxs-lookup"><span data-stu-id="8b9b8-104">The [Await](../../../../visual-basic/language-reference/operators/await-operator.md) operator is applied to the task at the point in the method where processing can’t continue until the task finishes.</span></span> <span data-ttu-id="8b9b8-105">Genellikle, aşağıdaki örnekte gösterildiği gibi oluşturulduktan hemen sonra bir görev beklenir.</span><span class="sxs-lookup"><span data-stu-id="8b9b8-105">Often a task is awaited as soon as it’s created, as the following example shows.</span></span>  
   
 ```vb  
 Dim result = Await someWebAccessMethodAsync(url)  
 ```  
   
- <span data-ttu-id="787b5-106">Ancak, görev tamamlama sonrasında bağımlı değil programınızın gerçekleştirmek için diğer iş varsa, görev bekleniyor gelen görev oluşturma ayırabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="787b5-106">However, you can separate creating the task from awaiting the task if your program has other work to accomplish that doesn’t depend on the completion of the task.</span></span>  
+ <span data-ttu-id="8b9b8-106">Ancak, görev öğesinin tamamlanmasına bağımlı değildir, programınızın gerçekleştirilecek başka işleri varsa, görevi bekleme işleminden görev oluşturma ayırabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="8b9b8-106">However, you can separate creating the task from awaiting the task if your program has other work to accomplish that doesn’t depend on the completion of the task.</span></span>  
   
 ```vb  
 ' The following line creates and starts the task.  
@@ -31,32 +31,32 @@ Dim myTask = someWebAccessMethodAsync(url)
 Dim result = Await myTask  
 ```  
   
- <span data-ttu-id="787b5-107">Bir görev başlatma ve onu bekleyen arasında diğer görevleri başlatabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="787b5-107">Between starting a task and awaiting it, you can start other tasks.</span></span> <span data-ttu-id="787b5-108">Ek görevler örtük olarak paralel olarak çalışır, ancak hiçbir ek iş parçacığı oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="787b5-108">The additional tasks implicitly run in parallel, but no additional threads are created.</span></span>  
+ <span data-ttu-id="8b9b8-107">Bir görev başlatma ve bekleme arasında başka görevler başlatabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="8b9b8-107">Between starting a task and awaiting it, you can start other tasks.</span></span> <span data-ttu-id="8b9b8-108">Ek görevler, örtülü olarak paralel olarak çalışır, ancak hiçbir ek iş parçacığı oluşturulmaz.</span><span class="sxs-lookup"><span data-stu-id="8b9b8-108">The additional tasks implicitly run in parallel, but no additional threads are created.</span></span>  
   
- <span data-ttu-id="787b5-109">Aşağıdaki programı üç zaman uyumsuz web yüklemeleri başlatır ve ardından bunları adlı sırada bekler.</span><span class="sxs-lookup"><span data-stu-id="787b5-109">The following program starts three asynchronous web downloads and then awaits them in the order in which they’re called.</span></span> <span data-ttu-id="787b5-110">Bildirim, görevler, bunlar oluşturulan beklemenin ve sırayla her zaman son verme programı, çalıştırdığınızda.</span><span class="sxs-lookup"><span data-stu-id="787b5-110">Notice, when you run the program, that the tasks don’t always finish in the order in which they’re created and awaited.</span></span> <span data-ttu-id="787b5-111">Bunlar, oluşturuldukları ve bekleme ifadeleri yöntemi erişmeden önce bir veya daha fazla görevleri son çalışmaya başlar.</span><span class="sxs-lookup"><span data-stu-id="787b5-111">They start to run when they’re created, and one or more of the tasks might finish before the method reaches the await expressions.</span></span>  
+ <span data-ttu-id="8b9b8-109">Aşağıdaki program üç zaman uyumsuz web yüklemesini başlatır ve ardından bunları adlı sırayla bekler.</span><span class="sxs-lookup"><span data-stu-id="8b9b8-109">The following program starts three asynchronous web downloads and then awaits them in the order in which they’re called.</span></span> <span data-ttu-id="8b9b8-110">Bu görev sırası, bunlar oluşturulan bekleniyor ve her zaman tamamlanmıyor programı çalıştırdığınızda dikkat edin.</span><span class="sxs-lookup"><span data-stu-id="8b9b8-110">Notice, when you run the program, that the tasks don’t always finish in the order in which they’re created and awaited.</span></span> <span data-ttu-id="8b9b8-111">Oluşturuldukları ve yöntem bekleme ifadelerine ulaşmadan önce bir veya birkaç görev bitebilir çalışmaya başlayın.</span><span class="sxs-lookup"><span data-stu-id="8b9b8-111">They start to run when they’re created, and one or more of the tasks might finish before the method reaches the await expressions.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="787b5-112">Bu proje tamamlamak için Visual Studio 2012 veya sonraki sürümlerini ve .NET Framework 4.5 olmalıdır veya üstü yüklü.</span><span class="sxs-lookup"><span data-stu-id="787b5-112">To complete this project, you must have Visual Studio 2012 or higher and the .NET Framework 4.5 or higher installed on your computer.</span></span>  
+>  <span data-ttu-id="8b9b8-112">Bu projeyi tamamlamak için Visual Studio 2012 veya üzeri ve .NET Framework 4.5 olmalıdır veya üzeri yüklü.</span><span class="sxs-lookup"><span data-stu-id="8b9b8-112">To complete this project, you must have Visual Studio 2012 or higher and the .NET Framework 4.5 or higher installed on your computer.</span></span>  
   
- <span data-ttu-id="787b5-113">Aynı anda birden çok görevi başlatan başka bir örnek için bkz: [nasıl yapılır: Task.WhenAll kullanarak (Visual Basic) tarafından zaman uyumsuz izlenecek yolu genişletme](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).</span><span class="sxs-lookup"><span data-stu-id="787b5-113">For another example that starts multiple tasks at the same time, see [How to: Extend the Async Walkthrough by Using Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).</span></span>  
+ <span data-ttu-id="8b9b8-113">Aynı anda birden çok görevi başlatan başka bir örnek için bkz: [nasıl yapılır: Task.WhenAll kullanarak (Visual Basic) tarafından zaman uyumsuz izlenecek yolu genişletme](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).</span><span class="sxs-lookup"><span data-stu-id="8b9b8-113">For another example that starts multiple tasks at the same time, see [How to: Extend the Async Walkthrough by Using Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).</span></span>  
   
- <span data-ttu-id="787b5-114">Bu örnekte kodunu indirebilirsiniz [Geliştirici kod örnekleri](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e).</span><span class="sxs-lookup"><span data-stu-id="787b5-114">You can download the code for this example from [Developer Code Samples](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e).</span></span>  
+ <span data-ttu-id="8b9b8-114">Bu örnekte kodunu indirebilirsiniz [geliştirici kodu örnekleri](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e).</span><span class="sxs-lookup"><span data-stu-id="8b9b8-114">You can download the code for this example from [Developer Code Samples](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e).</span></span>  
   
-### <a name="to-set-up-the-project"></a><span data-ttu-id="787b5-115">Projeyi ayarlamak için</span><span class="sxs-lookup"><span data-stu-id="787b5-115">To set up the project</span></span>  
+### <a name="to-set-up-the-project"></a><span data-ttu-id="8b9b8-115">Projeyi kurmak için</span><span class="sxs-lookup"><span data-stu-id="8b9b8-115">To set up the project</span></span>  
   
-1.  <span data-ttu-id="787b5-116">WPF uygulamayı kurmak için aşağıdaki adımları tamamlayın.</span><span class="sxs-lookup"><span data-stu-id="787b5-116">To set up a WPF application, complete the following steps.</span></span> <span data-ttu-id="787b5-117">Ayrıntılı yönergeler için bu adımları bulabilirsiniz [izlenecek yol: Web kullanarak zaman uyumsuz ve bekleme (Visual Basic) tarafından erişme](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).</span><span class="sxs-lookup"><span data-stu-id="787b5-117">You can find detailed instructions for these steps in [Walkthrough: Accessing the Web by Using Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).</span></span>  
+1.  <span data-ttu-id="8b9b8-116">Bir WPF uygulaması ayarlamak için aşağıdaki adımları tamamlayın.</span><span class="sxs-lookup"><span data-stu-id="8b9b8-116">To set up a WPF application, complete the following steps.</span></span> <span data-ttu-id="8b9b8-117">İçinde bu adımlara ilişkin ayrıntılı yönergeleri bulabilirsiniz [izlenecek yol: Web kullanarak Async ve Await (Visual Basic) tarafından erişim](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).</span><span class="sxs-lookup"><span data-stu-id="8b9b8-117">You can find detailed instructions for these steps in [Walkthrough: Accessing the Web by Using Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).</span></span>  
   
-    -   <span data-ttu-id="787b5-118">Bir düğmeyi ve bir metin kutusu içeren bir WPF uygulaması oluşturun.</span><span class="sxs-lookup"><span data-stu-id="787b5-118">Create a WPF application that contains a text box and a button.</span></span> <span data-ttu-id="787b5-119">Düğme adının `startButton`ve metin kutusunun adı `resultsTextBox`.</span><span class="sxs-lookup"><span data-stu-id="787b5-119">Name the button `startButton`, and name the text box `resultsTextBox`.</span></span>  
+    -   <span data-ttu-id="8b9b8-118">Bir metin kutusu ve bir düğmeyi içeren bir WPF uygulaması oluşturun.</span><span class="sxs-lookup"><span data-stu-id="8b9b8-118">Create a WPF application that contains a text box and a button.</span></span> <span data-ttu-id="8b9b8-119">Düğmeyi adlandırın `startButton`ve metin kutusunu adlandırın `resultsTextBox`.</span><span class="sxs-lookup"><span data-stu-id="8b9b8-119">Name the button `startButton`, and name the text box `resultsTextBox`.</span></span>  
   
-    -   <span data-ttu-id="787b5-120">İçin bir başvuru ekleyin <xref:System.Net.Http>.</span><span class="sxs-lookup"><span data-stu-id="787b5-120">Add a reference for <xref:System.Net.Http>.</span></span>  
+    -   <span data-ttu-id="8b9b8-120">İçin bir başvuru eklemeniz <xref:System.Net.Http>.</span><span class="sxs-lookup"><span data-stu-id="8b9b8-120">Add a reference for <xref:System.Net.Http>.</span></span>  
   
-    -   <span data-ttu-id="787b5-121">MainWindow.xaml.vb dosyasına ekleyin bir `Imports` bildirimi `System.Net.Http`.</span><span class="sxs-lookup"><span data-stu-id="787b5-121">In the MainWindow.xaml.vb file, add an `Imports` statement for `System.Net.Http`.</span></span>  
+    -   <span data-ttu-id="8b9b8-121">MainWindow.xaml.vb dosyasına ekleyin bir `Imports` bildirimi `System.Net.Http`.</span><span class="sxs-lookup"><span data-stu-id="8b9b8-121">In the MainWindow.xaml.vb file, add an `Imports` statement for `System.Net.Http`.</span></span>  
   
-### <a name="to-add-the-code"></a><span data-ttu-id="787b5-122">Kod eklemek için</span><span class="sxs-lookup"><span data-stu-id="787b5-122">To add the code</span></span>  
+### <a name="to-add-the-code"></a><span data-ttu-id="8b9b8-122">Kod eklemek için</span><span class="sxs-lookup"><span data-stu-id="8b9b8-122">To add the code</span></span>  
   
-1.  <span data-ttu-id="787b5-123">Tasarım penceresinde MainWindow.xaml, oluşturmak için düğmesini çift `startButton_Click` MainWindow.xaml.vb olay işleyicisi.</span><span class="sxs-lookup"><span data-stu-id="787b5-123">In the design window, MainWindow.xaml, double-click the button to create the `startButton_Click` event handler in MainWindow.xaml.vb.</span></span>  
+1.  <span data-ttu-id="8b9b8-123">Tasarım penceresinde, MainWindow.xaml oluşturmak için düğmeyi çift tıklatın `startButton_Click` MainWindow.xaml.vb olay işleyicisi.</span><span class="sxs-lookup"><span data-stu-id="8b9b8-123">In the design window, MainWindow.xaml, double-click the button to create the `startButton_Click` event handler in MainWindow.xaml.vb.</span></span>  
   
-2.  <span data-ttu-id="787b5-124">Aşağıdaki kodu kopyalayın ve gövdesine yapıştırın `startButton_Click` MainWindow.xaml.vb içinde.</span><span class="sxs-lookup"><span data-stu-id="787b5-124">Copy the following code, and paste it into the body of `startButton_Click` in MainWindow.xaml.vb.</span></span>  
+2.  <span data-ttu-id="8b9b8-124">Aşağıdaki kodu kopyalayın ve gövdesine yapıştırın `startButton_Click` MainWindow.xaml.vb içinde.</span><span class="sxs-lookup"><span data-stu-id="8b9b8-124">Copy the following code, and paste it into the body of `startButton_Click` in MainWindow.xaml.vb.</span></span>  
   
     ```vb  
     resultsTextBox.Clear()  
@@ -64,15 +64,15 @@ Dim result = Await myTask
     resultsTextBox.Text &= vbCrLf & "Control returned to button1_Click."  
     ```  
   
-     <span data-ttu-id="787b5-125">Kod zaman uyumsuz bir yöntem çağırır `CreateMultipleTasksAsync`, uygulama sürücüler.</span><span class="sxs-lookup"><span data-stu-id="787b5-125">The code calls an asynchronous method, `CreateMultipleTasksAsync`, which drives the application.</span></span>  
+     <span data-ttu-id="8b9b8-125">Kod, zaman uyumsuz bir yöntem çağırır `CreateMultipleTasksAsync`, uygulama sürücüleri.</span><span class="sxs-lookup"><span data-stu-id="8b9b8-125">The code calls an asynchronous method, `CreateMultipleTasksAsync`, which drives the application.</span></span>  
   
-3.  <span data-ttu-id="787b5-126">Aşağıdaki destek yöntemlerden projenize ekleyin:</span><span class="sxs-lookup"><span data-stu-id="787b5-126">Add the following support methods to the project:</span></span>  
+3.  <span data-ttu-id="8b9b8-126">Projeye şu destek yöntemlerini ekleyin:</span><span class="sxs-lookup"><span data-stu-id="8b9b8-126">Add the following support methods to the project:</span></span>  
   
-    -   <span data-ttu-id="787b5-127">`ProcessURLAsync` kullanan bir <xref:System.Net.Http.HttpClient> bir bayt dizisi olarak bir Web sitesi içeriğini indirmek için yöntem.</span><span class="sxs-lookup"><span data-stu-id="787b5-127">`ProcessURLAsync` uses an <xref:System.Net.Http.HttpClient> method to download the contents of a website as a byte array.</span></span> <span data-ttu-id="787b5-128">Destek yöntemi `ProcessURLAsync` ardından görüntüler ve dizi uzunluğu döndürür.</span><span class="sxs-lookup"><span data-stu-id="787b5-128">The support method, `ProcessURLAsync` then displays and returns the length of the array.</span></span>  
+    -   <span data-ttu-id="8b9b8-127">`ProcessURLAsync` kullanan bir <xref:System.Net.Http.HttpClient> bir bayt dizisi olarak bir Web sitesinin içeriklerini karşıdan yüklemek için yöntemi.</span><span class="sxs-lookup"><span data-stu-id="8b9b8-127">`ProcessURLAsync` uses an <xref:System.Net.Http.HttpClient> method to download the contents of a website as a byte array.</span></span> <span data-ttu-id="8b9b8-128">Destek yöntemi daha `ProcessURLAsync` ardından görüntüler ve dizinin uzunluğunu döndürür.</span><span class="sxs-lookup"><span data-stu-id="8b9b8-128">The support method, `ProcessURLAsync` then displays and returns the length of the array.</span></span>  
   
-    -   <span data-ttu-id="787b5-129">`DisplayResults` bayt sayısını bayt dizisi, her URL için görüntüler.</span><span class="sxs-lookup"><span data-stu-id="787b5-129">`DisplayResults` displays the number of bytes in the byte array for each URL.</span></span> <span data-ttu-id="787b5-130">Bu görüntüler gösterir indirme her görev tamamlandığında.</span><span class="sxs-lookup"><span data-stu-id="787b5-130">This display shows when each task has finished downloading.</span></span>  
+    -   <span data-ttu-id="8b9b8-129">`DisplayResults` bayt sayısı, her bir URL için bayt dizisindeki görüntüler.</span><span class="sxs-lookup"><span data-stu-id="8b9b8-129">`DisplayResults` displays the number of bytes in the byte array for each URL.</span></span> <span data-ttu-id="8b9b8-130">Bu görüntüler gösterir her bir görevin indirmeyi bitirmesini.</span><span class="sxs-lookup"><span data-stu-id="8b9b8-130">This display shows when each task has finished downloading.</span></span>  
   
-     <span data-ttu-id="787b5-131">Aşağıdaki yöntemlerden kopyalayabilir ve sonra yapıştırabilirsiniz `startButton_Click` MainWindow.xaml.vb olay işleyicisi.</span><span class="sxs-lookup"><span data-stu-id="787b5-131">Copy the following methods, and paste them after the `startButton_Click` event handler in MainWindow.xaml.vb.</span></span>  
+     <span data-ttu-id="8b9b8-131">Aşağıdaki yöntemleri kopyalayın ve sonra bunları yapıştırın `startButton_Click` MainWindow.xaml.vb olay işleyicisi.</span><span class="sxs-lookup"><span data-stu-id="8b9b8-131">Copy the following methods, and paste them after the `startButton_Click` event handler in MainWindow.xaml.vb.</span></span>  
   
     ```vb  
     Private Async Function ProcessURLAsync(url As String, client As HttpClient) As Task(Of Integer)  
@@ -88,23 +88,23 @@ Dim result = Await myTask
         ' is designed to be used with a monospaced font, such as  
         ' Lucida Console or Global Monospace.  
         Dim bytes = content.Length  
-        ' Strip off the "http://".  
-        Dim displayURL = url.Replace("http://", "")  
+        ' Strip off the "https://".  
+        Dim displayURL = url.Replace("https://", "")  
         resultsTextBox.Text &= String.Format(vbCrLf & "{0,-58} {1,8}", displayURL, bytes)  
     End Sub  
     ```  
   
-4.  <span data-ttu-id="787b5-132">Son olarak, yöntemi tanımlayın `CreateMultipleTasksAsync`, aşağıdaki adımları gerçekleştirir.</span><span class="sxs-lookup"><span data-stu-id="787b5-132">Finally, define method `CreateMultipleTasksAsync`, which performs the following steps.</span></span>  
+4.  <span data-ttu-id="8b9b8-132">Son olarak, yöntemi tanımlayan `CreateMultipleTasksAsync`, aşağıdaki adımları gerçekleştirir.</span><span class="sxs-lookup"><span data-stu-id="8b9b8-132">Finally, define method `CreateMultipleTasksAsync`, which performs the following steps.</span></span>  
   
-    -   <span data-ttu-id="787b5-133">Yöntem bildiren bir `HttpClient` yöntemi erişimi için gereken nesne <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> içinde `ProcessURLAsync`.</span><span class="sxs-lookup"><span data-stu-id="787b5-133">The method declares an `HttpClient` object,which you need  to access method <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> in `ProcessURLAsync`.</span></span>  
+    -   <span data-ttu-id="8b9b8-133">Yöntem bir `HttpClient` yöntemi erişimi için gereken nesne <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> içinde `ProcessURLAsync`.</span><span class="sxs-lookup"><span data-stu-id="8b9b8-133">The method declares an `HttpClient` object,which you need  to access method <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> in `ProcessURLAsync`.</span></span>  
   
-    -   <span data-ttu-id="787b5-134">Yöntem oluşturur ve üç görev türü başlatır <xref:System.Threading.Tasks.Task%601>, burada `TResult` bir tamsayıdır.</span><span class="sxs-lookup"><span data-stu-id="787b5-134">The method creates and starts three tasks of type <xref:System.Threading.Tasks.Task%601>, where `TResult` is an integer.</span></span> <span data-ttu-id="787b5-135">Her görev bitirdiğinde `DisplayResults` görevin URL ve indirilen içeriği uzunluğunu görüntüler.</span><span class="sxs-lookup"><span data-stu-id="787b5-135">As each task finishes, `DisplayResults` displays the task's URL and the length of the downloaded contents.</span></span> <span data-ttu-id="787b5-136">Görevler zaman uyumsuz olarak çalıştığından, sonuçları görünme sırasını bildirilen siparişte farklı olabilir.</span><span class="sxs-lookup"><span data-stu-id="787b5-136">Because the tasks are running asynchronously, the order in which the results appear might differ from the order in which they were declared.</span></span>  
+    -   <span data-ttu-id="8b9b8-134">Yöntemi oluşturur ve başlatır türünde üç görev <xref:System.Threading.Tasks.Task%601>burada `TResult` bir tamsayıdır.</span><span class="sxs-lookup"><span data-stu-id="8b9b8-134">The method creates and starts three tasks of type <xref:System.Threading.Tasks.Task%601>, where `TResult` is an integer.</span></span> <span data-ttu-id="8b9b8-135">Her görev bittikçe `DisplayResults` görevin URL'sini ve karşıdan yüklenen içeriklerin uzunluğunu görüntüler.</span><span class="sxs-lookup"><span data-stu-id="8b9b8-135">As each task finishes, `DisplayResults` displays the task's URL and the length of the downloaded contents.</span></span> <span data-ttu-id="8b9b8-136">Görevler zaman uyumsuz olarak çalıştığından, sonuçların görüntülenme sırasını bildirilmiş sırasından farklı olabilir.</span><span class="sxs-lookup"><span data-stu-id="8b9b8-136">Because the tasks are running asynchronously, the order in which the results appear might differ from the order in which they were declared.</span></span>  
   
-    -   <span data-ttu-id="787b5-137">Yöntemi, her görevin tamamlanmasını bekler.</span><span class="sxs-lookup"><span data-stu-id="787b5-137">The method awaits the completion of each task.</span></span> <span data-ttu-id="787b5-138">Her `Await` işleci askıya yürütülmesi `CreateMultipleTasksAsync` awaited görevi tamamlanana kadar.</span><span class="sxs-lookup"><span data-stu-id="787b5-138">Each `Await` operator suspends execution of `CreateMultipleTasksAsync` until the awaited task is finished.</span></span> <span data-ttu-id="787b5-139">Operatör çağrısı dönüş değerini de alır `ProcessURLAsync` tamamlanan her görev.</span><span class="sxs-lookup"><span data-stu-id="787b5-139">The operator also retrieves the return value from the call to `ProcessURLAsync` from each completed task.</span></span>  
+    -   <span data-ttu-id="8b9b8-137">Yöntem her görevin tamamlanmasını bekler.</span><span class="sxs-lookup"><span data-stu-id="8b9b8-137">The method awaits the completion of each task.</span></span> <span data-ttu-id="8b9b8-138">Her `Await` işleci yürütmesini askıya alır `CreateMultipleTasksAsync` beklenen görev bitinceye kadar.</span><span class="sxs-lookup"><span data-stu-id="8b9b8-138">Each `Await` operator suspends execution of `CreateMultipleTasksAsync` until the awaited task is finished.</span></span> <span data-ttu-id="8b9b8-139">İşleci ayrıca çağrısından dönen değer alır `ProcessURLAsync` her tamamlanan görevden.</span><span class="sxs-lookup"><span data-stu-id="8b9b8-139">The operator also retrieves the return value from the call to `ProcessURLAsync` from each completed task.</span></span>  
   
-    -   <span data-ttu-id="787b5-140">Tamamlanan görevler ve tamsayı değerlerini alınan yöntemi Web sitelerinin uzunlukları toplar ve sonucu görüntüler.</span><span class="sxs-lookup"><span data-stu-id="787b5-140">When the tasks have been completed and the integer values have been retrieved, the method sums the lengths of the websites and displays the result.</span></span>  
+    -   <span data-ttu-id="8b9b8-140">Görevler tamamlandığında ve tamsayı değerleri alındığında, yöntem Web sitelerinin uzunluklarını toplar ve sonucu görüntüler.</span><span class="sxs-lookup"><span data-stu-id="8b9b8-140">When the tasks have been completed and the integer values have been retrieved, the method sums the lengths of the websites and displays the result.</span></span>  
   
-     <span data-ttu-id="787b5-141">Aşağıdaki yöntem kopyalayın ve çözümünüze yapıştırın.</span><span class="sxs-lookup"><span data-stu-id="787b5-141">Copy the following method, and paste it into your solution.</span></span>  
+     <span data-ttu-id="8b9b8-141">Aşağıdaki yöntemi kopyalayın ve çözümünüze yapıştırın.</span><span class="sxs-lookup"><span data-stu-id="8b9b8-141">Copy the following method, and paste it into your solution.</span></span>  
   
     ```vb  
     Private Async Function CreateMultipleTasksAsync() As Task  
@@ -117,11 +117,11 @@ Dim result = Await myTask
         ' Create and start the tasks. As each task finishes, DisplayResults   
         ' displays its length.  
         Dim download1 As Task(Of Integer) =  
-            ProcessURLAsync("http://msdn.microsoft.com", client)  
+            ProcessURLAsync("https://msdn.microsoft.com", client)  
         Dim download2 As Task(Of Integer) =  
-            ProcessURLAsync("http://msdn.microsoft.com/library/hh156528(VS.110).aspx", client)  
+            ProcessURLAsync("https://msdn.microsoft.com/library/hh156528(VS.110).aspx", client)  
         Dim download3 As Task(Of Integer) =  
-            ProcessURLAsync("http://msdn.microsoft.com/library/67w7t67f.aspx", client)  
+            ProcessURLAsync("https://msdn.microsoft.com/library/67w7t67f.aspx", client)  
   
         ' Await each task.  
         Dim length1 As Integer = Await download1  
@@ -136,12 +136,12 @@ Dim result = Await myTask
     End Function  
     ```  
   
-5.  <span data-ttu-id="787b5-142">Programını çalıştırın ve ardından için F5 tuşuna seçin **Başlat** düğmesi.</span><span class="sxs-lookup"><span data-stu-id="787b5-142">Choose the F5 key to run the program, and then choose the **Start** button.</span></span>  
+5.  <span data-ttu-id="8b9b8-142">Programı çalıştırın ve ardından F5 tuşuna basın **Başlat** düğmesi.</span><span class="sxs-lookup"><span data-stu-id="8b9b8-142">Choose the F5 key to run the program, and then choose the **Start** button.</span></span>  
   
-     <span data-ttu-id="787b5-143">Program, üç görev her zaman aynı sırada son yok ve hangi son siparişin, bunlar oluşturulan beklemenin sırada mutlaka olmadığından emin doğrulamak için birkaç kez çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="787b5-143">Run the program several times to verify that the three tasks don’t always finish in the same order and that the order in which they finish isn't necessarily the order in which they’re created and awaited.</span></span>  
+     <span data-ttu-id="8b9b8-143">Program üç görevin her zaman aynı sırada tamamlanmıyor ve hangi sıranın mutlaka, bunlar oluşturulan bekleniyor ve sırasını olmadığını doğrulamak için birkaç kez çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="8b9b8-143">Run the program several times to verify that the three tasks don’t always finish in the same order and that the order in which they finish isn't necessarily the order in which they’re created and awaited.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="787b5-144">Örnek</span><span class="sxs-lookup"><span data-stu-id="787b5-144">Example</span></span>  
- <span data-ttu-id="787b5-145">Aşağıdaki kod, tam örnek içerir.</span><span class="sxs-lookup"><span data-stu-id="787b5-145">The following code contains the full example.</span></span>  
+## <a name="example"></a><span data-ttu-id="8b9b8-144">Örnek</span><span class="sxs-lookup"><span data-stu-id="8b9b8-144">Example</span></span>  
+ <span data-ttu-id="8b9b8-145">Aşağıdaki kod tam örneği içermektedir.</span><span class="sxs-lookup"><span data-stu-id="8b9b8-145">The following code contains the full example.</span></span>  
   
 ```vb  
 ' Add the following Imports statements, and add a reference for System.Net.Http.  
@@ -165,11 +165,11 @@ Class MainWindow
         ' Create and start the tasks. As each task finishes, DisplayResults   
         ' displays its length.  
         Dim download1 As Task(Of Integer) =  
-            ProcessURLAsync("http://msdn.microsoft.com", client)  
+            ProcessURLAsync("https://msdn.microsoft.com", client)  
         Dim download2 As Task(Of Integer) =  
-            ProcessURLAsync("http://msdn.microsoft.com/library/hh156528(VS.110).aspx", client)  
+            ProcessURLAsync("https://msdn.microsoft.com/library/hh156528(VS.110).aspx", client)  
         Dim download3 As Task(Of Integer) =  
-            ProcessURLAsync("http://msdn.microsoft.com/library/67w7t67f.aspx", client)  
+            ProcessURLAsync("https://msdn.microsoft.com/library/67w7t67f.aspx", client)  
   
         ' Await each task.  
         Dim length1 As Integer = Await download1  
@@ -196,14 +196,14 @@ Class MainWindow
         ' is designed to be used with a monospaced font, such as  
         ' Lucida Console or Global Monospace.  
         Dim bytes = content.Length  
-        ' Strip off the "http://".  
-        Dim displayURL = url.Replace("http://", "")  
+        ' Strip off the "https://".  
+        Dim displayURL = url.Replace("https://", "")  
         resultsTextBox.Text &= String.Format(vbCrLf & "{0,-58} {1,8}", displayURL, bytes)  
     End Sub  
 End Class  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="787b5-146">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="787b5-146">See Also</span></span>  
- [<span data-ttu-id="787b5-147">İzlenecek yol: Async kullanarak Web'e erişme ve bekleme (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="787b5-147">Walkthrough: Accessing the Web by Using Async and Await (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- [<span data-ttu-id="787b5-148">Zaman uyumsuz programlama ile Async ve Await (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="787b5-148">Asynchronous Programming with Async and Await (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/async/index.md)  
- [<span data-ttu-id="787b5-149">Nasıl yapılır: Task.WhenAll (Visual Basic) kullanarak zaman uyumsuz izlenecek yolu genişletme</span><span class="sxs-lookup"><span data-stu-id="787b5-149">How to: Extend the Async Walkthrough by Using Task.WhenAll (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+## <a name="see-also"></a><span data-ttu-id="8b9b8-146">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="8b9b8-146">See Also</span></span>  
+ [<span data-ttu-id="8b9b8-147">İzlenecek yol: Async kullanarak Web'e erişme ve Await (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8b9b8-147">Walkthrough: Accessing the Web by Using Async and Await (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
+ [<span data-ttu-id="8b9b8-148">Zaman uyumsuz programlama ile Async ve Await (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8b9b8-148">Asynchronous Programming with Async and Await (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/async/index.md)  
+ [<span data-ttu-id="8b9b8-149">Nasıl yapılır: Task.WhenAll (Visual Basic) kullanarak zaman uyumsuz izlenecek yolu genişletme</span><span class="sxs-lookup"><span data-stu-id="8b9b8-149">How to: Extend the Async Walkthrough by Using Task.WhenAll (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)

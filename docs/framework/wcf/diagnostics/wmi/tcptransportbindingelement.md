@@ -2,19 +2,19 @@
 title: TcpTransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: 33bbc1e5-44e4-4ee3-b7b5-801dc78956e4
-ms.openlocfilehash: e64f689923d95546c8cecdf47c247faf79242ebf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 04326484bbf1f07c66ad8fb401642880f9ba8c6e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33485838"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50193935"
 ---
-# <a name="tcptransportbindingelement"></a><span data-ttu-id="59247-102">TcpTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="59247-102">TcpTransportBindingElement</span></span>
-<span data-ttu-id="59247-103">TcpTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="59247-103">TcpTransportBindingElement</span></span>  
+# <a name="tcptransportbindingelement"></a><span data-ttu-id="a77ec-102">TcpTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="a77ec-102">TcpTransportBindingElement</span></span>
+<span data-ttu-id="a77ec-103">TcpTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="a77ec-103">TcpTransportBindingElement</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="59247-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="59247-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a77ec-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="a77ec-104">Syntax</span></span>  
   
-```  
+```csharp
 class TcpTransportBindingElement : ConnectionOrientedTransportBindingElement  
 {  
   TcpConnectionPoolSettings ConnectionPoolSettings;  
@@ -24,45 +24,45 @@ class TcpTransportBindingElement : ConnectionOrientedTransportBindingElement
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="59247-105">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="59247-105">Methods</span></span>  
- <span data-ttu-id="59247-106">TcpTransportBindingElement sınıfı herhangi bir yöntem tanımlamıyor.</span><span class="sxs-lookup"><span data-stu-id="59247-106">The TcpTransportBindingElement class does not define any methods.</span></span>  
+## <a name="methods"></a><span data-ttu-id="a77ec-105">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="a77ec-105">Methods</span></span>  
+ <span data-ttu-id="a77ec-106">TcpTransportBindingElement sınıf herhangi bir yöntemi tanımlamaz.</span><span class="sxs-lookup"><span data-stu-id="a77ec-106">The TcpTransportBindingElement class does not define any methods.</span></span>  
   
-## <a name="properties"></a><span data-ttu-id="59247-107">Özellikler</span><span class="sxs-lookup"><span data-stu-id="59247-107">Properties</span></span>  
- <span data-ttu-id="59247-108">TcpTransportBindingElement sınıfı aşağıdaki özelliklere sahiptir:</span><span class="sxs-lookup"><span data-stu-id="59247-108">The TcpTransportBindingElement class has the following properties:</span></span>  
+## <a name="properties"></a><span data-ttu-id="a77ec-107">Özellikler</span><span class="sxs-lookup"><span data-stu-id="a77ec-107">Properties</span></span>  
+ <span data-ttu-id="a77ec-108">TcpTransportBindingElement sınıfı aşağıdaki özelliklere sahiptir:</span><span class="sxs-lookup"><span data-stu-id="a77ec-108">The TcpTransportBindingElement class has the following properties:</span></span>  
   
-### <a name="connectionpoolsettings"></a><span data-ttu-id="59247-109">Tcptransport</span><span class="sxs-lookup"><span data-stu-id="59247-109">ConnectionPoolSettings</span></span>  
- <span data-ttu-id="59247-110">Veri türü: TcpConnectionPoolSettings</span><span class="sxs-lookup"><span data-stu-id="59247-110">Data type: TcpConnectionPoolSettings</span></span>  
+### <a name="connectionpoolsettings"></a><span data-ttu-id="a77ec-109">Tcptransport</span><span class="sxs-lookup"><span data-stu-id="a77ec-109">ConnectionPoolSettings</span></span>  
+ <span data-ttu-id="a77ec-110">Veri türü: TcpConnectionPoolSettings</span><span class="sxs-lookup"><span data-stu-id="a77ec-110">Data type: TcpConnectionPoolSettings</span></span>  
   
- <span data-ttu-id="59247-111">Erişim türüne: salt okunur</span><span class="sxs-lookup"><span data-stu-id="59247-111">Access type: Read-only</span></span>  
+ <span data-ttu-id="a77ec-111">Erişim türü: salt okunur</span><span class="sxs-lookup"><span data-stu-id="a77ec-111">Access type: Read-only</span></span>  
   
- <span data-ttu-id="59247-112">Bağlantı havuzu ayarları.</span><span class="sxs-lookup"><span data-stu-id="59247-112">The connection pool settings.</span></span>  
+ <span data-ttu-id="a77ec-112">Bağlantı havuzu ayarları.</span><span class="sxs-lookup"><span data-stu-id="a77ec-112">The connection pool settings.</span></span>  
   
-### <a name="listenbacklog"></a><span data-ttu-id="59247-113">listenBacklog</span><span class="sxs-lookup"><span data-stu-id="59247-113">ListenBacklog</span></span>  
- <span data-ttu-id="59247-114">Veri türü: SINT32</span><span class="sxs-lookup"><span data-stu-id="59247-114">Data type: sint32</span></span>  
+### <a name="listenbacklog"></a><span data-ttu-id="a77ec-113">listenBacklog</span><span class="sxs-lookup"><span data-stu-id="a77ec-113">ListenBacklog</span></span>  
+ <span data-ttu-id="a77ec-114">Veri türü: SINT32</span><span class="sxs-lookup"><span data-stu-id="a77ec-114">Data type: sint32</span></span>  
   
- <span data-ttu-id="59247-115">Erişim türüne: salt okunur</span><span class="sxs-lookup"><span data-stu-id="59247-115">Access type: Read-only</span></span>  
+ <span data-ttu-id="a77ec-115">Erişim türü: salt okunur</span><span class="sxs-lookup"><span data-stu-id="a77ec-115">Access type: Read-only</span></span>  
   
- <span data-ttu-id="59247-116">Bekleyen sıraya alınan bağlantı isteklerini maksimum sayısı.</span><span class="sxs-lookup"><span data-stu-id="59247-116">The maximum number of queued connection requests that can be pending.</span></span>  
+ <span data-ttu-id="a77ec-116">Bekleyen sıraya alınan bağlantı isteklerinin sayısı.</span><span class="sxs-lookup"><span data-stu-id="a77ec-116">The maximum number of queued connection requests that can be pending.</span></span>  
   
-### <a name="portsharingenabled"></a><span data-ttu-id="59247-117">portSharingEnabled</span><span class="sxs-lookup"><span data-stu-id="59247-117">PortSharingEnabled</span></span>  
- <span data-ttu-id="59247-118">Veri türü: boolean</span><span class="sxs-lookup"><span data-stu-id="59247-118">Data type: boolean</span></span>  
+### <a name="portsharingenabled"></a><span data-ttu-id="a77ec-117">portSharingEnabled</span><span class="sxs-lookup"><span data-stu-id="a77ec-117">PortSharingEnabled</span></span>  
+ <span data-ttu-id="a77ec-118">Veri türü: Boole</span><span class="sxs-lookup"><span data-stu-id="a77ec-118">Data type: boolean</span></span>  
   
- <span data-ttu-id="59247-119">Erişim türüne: salt okunur</span><span class="sxs-lookup"><span data-stu-id="59247-119">Access type: Read-only</span></span>  
+ <span data-ttu-id="a77ec-119">Erişim türü: salt okunur</span><span class="sxs-lookup"><span data-stu-id="a77ec-119">Access type: Read-only</span></span>  
   
- <span data-ttu-id="59247-120">TCP bağlantı noktası paylaşma Bu bağlantı için etkin olup olmadığını belirten bir Boole değeri.</span><span class="sxs-lookup"><span data-stu-id="59247-120">A boolean value that specifies whether TCP port sharing is enabled for this connection.</span></span>  
+ <span data-ttu-id="a77ec-120">Bu bağlantı için TCP bağlantı noktası paylaşımının etkin olup olmadığını belirten bir Boole değeri.</span><span class="sxs-lookup"><span data-stu-id="a77ec-120">A boolean value that specifies whether TCP port sharing is enabled for this connection.</span></span>  
   
-### <a name="teredoenabled"></a><span data-ttu-id="59247-121">teredoEnabled</span><span class="sxs-lookup"><span data-stu-id="59247-121">TeredoEnabled</span></span>  
- <span data-ttu-id="59247-122">Veri türü: boolean</span><span class="sxs-lookup"><span data-stu-id="59247-122">Data type: boolean</span></span>  
+### <a name="teredoenabled"></a><span data-ttu-id="a77ec-121">teredoEnabled</span><span class="sxs-lookup"><span data-stu-id="a77ec-121">TeredoEnabled</span></span>  
+ <span data-ttu-id="a77ec-122">Veri türü: Boole</span><span class="sxs-lookup"><span data-stu-id="a77ec-122">Data type: boolean</span></span>  
   
- <span data-ttu-id="59247-123">Erişim türüne: salt okunur</span><span class="sxs-lookup"><span data-stu-id="59247-123">Access type: Read-only</span></span>  
+ <span data-ttu-id="a77ec-123">Erişim türü: salt okunur</span><span class="sxs-lookup"><span data-stu-id="a77ec-123">Access type: Read-only</span></span>  
   
- <span data-ttu-id="59247-124">Teredo (güvenlik duvarının arkasındaki adresleme istemciler için bir teknoloji) etkin olup olmadığını belirten bir Boole değeri.</span><span class="sxs-lookup"><span data-stu-id="59247-124">A boolean value that specifies whether Teredo (a technology for addressing clients that are behind firewalls) is enabled.</span></span>  
+ <span data-ttu-id="a77ec-124">Teredo (güvenlik duvarının arkasındaki istemcilere için bir teknoloji) etkin olup olmadığını belirten bir Boole değeri.</span><span class="sxs-lookup"><span data-stu-id="a77ec-124">A boolean value that specifies whether Teredo (a technology for addressing clients that are behind firewalls) is enabled.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="59247-125">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="59247-125">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a77ec-125">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="a77ec-125">Requirements</span></span>  
   
-|<span data-ttu-id="59247-126">MOF</span><span class="sxs-lookup"><span data-stu-id="59247-126">MOF</span></span>|<span data-ttu-id="59247-127">Bildirilen Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="59247-127">Declared in Servicemodel.mof.</span></span>|  
+|<span data-ttu-id="a77ec-126">MOF</span><span class="sxs-lookup"><span data-stu-id="a77ec-126">MOF</span></span>|<span data-ttu-id="a77ec-127">Bildirilmiş Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="a77ec-127">Declared in Servicemodel.mof.</span></span>|  
 |---------|-----------------------------------|  
-|<span data-ttu-id="59247-128">Ad Alanı</span><span class="sxs-lookup"><span data-stu-id="59247-128">Namespace</span></span>|<span data-ttu-id="59247-129">İçinde tanımlanan root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="59247-129">Defined in root\ServiceModel</span></span>|  
+|<span data-ttu-id="a77ec-128">Ad Alanı</span><span class="sxs-lookup"><span data-stu-id="a77ec-128">Namespace</span></span>|<span data-ttu-id="a77ec-129">İçinde tanımlı root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="a77ec-129">Defined in root\ServiceModel</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="59247-130">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="59247-130">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="a77ec-130">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="a77ec-130">See Also</span></span>  
  <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
