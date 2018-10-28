@@ -8,24 +8,22 @@ helpviewer_keywords:
 - <defaultFtpCachePolicy> element
 - defaultFtpCachePolicy element
 ms.assetid: 0eb0c5cb-dd97-484d-8614-785e88877abb
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: e03fb02bd351058c1fcdedb8367d03318418a12c
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: a8c71551adc2b88b5300994134eaec329a083709
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316447"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188293"
 ---
-# <a name="ltdefaultftpcachepolicygt-element-network-settings"></a><span data-ttu-id="9fb82-102">&lt;defaultFtpCachePolicy&gt; öğesi (ağ ayarları)</span><span class="sxs-lookup"><span data-stu-id="9fb82-102">&lt;defaultFtpCachePolicy&gt; Element (Network Settings)</span></span>
-<span data-ttu-id="9fb82-103">FTP önbelleğe alma etkindir ve önbelleğe alma ilkesi varsayılan tanımlar olup olmadığını açıklar.</span><span class="sxs-lookup"><span data-stu-id="9fb82-103">Describes whether FTP caching is active and describes the default caching policy.</span></span>  
+# <a name="ltdefaultftpcachepolicygt-element-network-settings"></a><span data-ttu-id="6aafa-102">&lt;defaultFtpCachePolicy&gt; öğesi (ağ ayarları)</span><span class="sxs-lookup"><span data-stu-id="6aafa-102">&lt;defaultFtpCachePolicy&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="6aafa-103">FTP önbelleğe alma etkindir ve önbelleğe alma ilkesi varsayılan tanımlar olup olmadığını açıklar.</span><span class="sxs-lookup"><span data-stu-id="6aafa-103">Describes whether FTP caching is active and describes the default caching policy.</span></span>  
   
- <span data-ttu-id="9fb82-104">\<Yapılandırma ></span><span class="sxs-lookup"><span data-stu-id="9fb82-104">\<configuration></span></span>  
-<span data-ttu-id="9fb82-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="9fb82-105">\<system.net></span></span>  
-<span data-ttu-id="9fb82-106">\<requestCaching ></span><span class="sxs-lookup"><span data-stu-id="9fb82-106">\<requestCaching></span></span>  
-<span data-ttu-id="9fb82-107">\<defaultFtpCachePolicy ></span><span class="sxs-lookup"><span data-stu-id="9fb82-107">\<defaultFtpCachePolicy></span></span>  
+ <span data-ttu-id="6aafa-104">\<Yapılandırma ></span><span class="sxs-lookup"><span data-stu-id="6aafa-104">\<configuration></span></span>  
+<span data-ttu-id="6aafa-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="6aafa-105">\<system.net></span></span>  
+<span data-ttu-id="6aafa-106">\<requestCaching ></span><span class="sxs-lookup"><span data-stu-id="6aafa-106">\<requestCaching></span></span>  
+<span data-ttu-id="6aafa-107">\<defaultFtpCachePolicy ></span><span class="sxs-lookup"><span data-stu-id="6aafa-107">\<defaultFtpCachePolicy></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9fb82-108">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="9fb82-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6aafa-108">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="6aafa-108">Syntax</span></span>  
   
 ```xml  
 <defaultFtpCachePolicy  
@@ -33,41 +31,41 @@ ms.locfileid: "49316447"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="9fb82-109">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="9fb82-109">Attributes and Elements</span></span>  
- <span data-ttu-id="9fb82-110">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="9fb82-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="6aafa-109">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="6aafa-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="6aafa-110">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="6aafa-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="9fb82-111">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="9fb82-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="6aafa-111">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="6aafa-111">Attributes</span></span>  
   
-|<span data-ttu-id="9fb82-112">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="9fb82-112">Attribute</span></span>|<span data-ttu-id="9fb82-113">Açıklama</span><span class="sxs-lookup"><span data-stu-id="9fb82-113">Description</span></span>|  
+|<span data-ttu-id="6aafa-112">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="6aafa-112">Attribute</span></span>|<span data-ttu-id="6aafa-113">Açıklama</span><span class="sxs-lookup"><span data-stu-id="6aafa-113">Description</span></span>|  
 |---------------|-----------------|  
-|`policyLevel`|<span data-ttu-id="9fb82-114">Önbelleğe alma İlkesi FTP belirtir.</span><span class="sxs-lookup"><span data-stu-id="9fb82-114">Specifies the FTP caching policy.</span></span> <span data-ttu-id="9fb82-115">Varsayılan değer `Default` şeklindedir.</span><span class="sxs-lookup"><span data-stu-id="9fb82-115">The default value is `Default`.</span></span>|  
+|`policyLevel`|<span data-ttu-id="6aafa-114">Önbelleğe alma İlkesi FTP belirtir.</span><span class="sxs-lookup"><span data-stu-id="6aafa-114">Specifies the FTP caching policy.</span></span> <span data-ttu-id="6aafa-115">Varsayılan değer `Default` şeklindedir.</span><span class="sxs-lookup"><span data-stu-id="6aafa-115">The default value is `Default`.</span></span>|  
   
-## <a name="policylevel-attribute"></a><span data-ttu-id="9fb82-116">policyLevel özniteliği</span><span class="sxs-lookup"><span data-stu-id="9fb82-116">policyLevel Attribute</span></span>  
+## <a name="policylevel-attribute"></a><span data-ttu-id="6aafa-116">policyLevel özniteliği</span><span class="sxs-lookup"><span data-stu-id="6aafa-116">policyLevel Attribute</span></span>  
   
-|<span data-ttu-id="9fb82-117">Değer</span><span class="sxs-lookup"><span data-stu-id="9fb82-117">Value</span></span>|<span data-ttu-id="9fb82-118">Açıklama</span><span class="sxs-lookup"><span data-stu-id="9fb82-118">Description</span></span>|  
+|<span data-ttu-id="6aafa-117">Değer</span><span class="sxs-lookup"><span data-stu-id="6aafa-117">Value</span></span>|<span data-ttu-id="6aafa-118">Açıklama</span><span class="sxs-lookup"><span data-stu-id="6aafa-118">Description</span></span>|  
 |-----------|-----------------|  
-|`Default`|<span data-ttu-id="9fb82-119">Önbelleğe alınmış kaynak sona erme, değiştirilmesi ve içerik uzunluğu öznitelikleri mevcut olduğundan yeni bir kaynaktır ve içerik uzunluğu doğru döndürür.</span><span class="sxs-lookup"><span data-stu-id="9fb82-119">Returns the cached resource if the resource is fresh, the content length is accurate, and the expiration, modification, and content length attributes are present.</span></span>|  
-|`BypassCache`|<span data-ttu-id="9fb82-120">Kaynak sunucudan döndürür.</span><span class="sxs-lookup"><span data-stu-id="9fb82-120">Returns the resource from the server.</span></span>|  
-|`CacheOnly`|<span data-ttu-id="9fb82-121">İçerik uzunluğu varsa ve giriş boyutu eşleşen önbelleğe alınmış kaynak döndürür.</span><span class="sxs-lookup"><span data-stu-id="9fb82-121">Returns the cached resource if the content length is present and matches the entry size.</span></span>|  
-|`CacheIfAvailable`|<span data-ttu-id="9fb82-122">İçerik uzunluğu sağlanır ve giriş boyutu eşleşiyorsa, önbelleğe alınmış kaynak döndürür; Aksi takdirde, kaynak sunucudan indirilir ve çağırana döndürülür.</span><span class="sxs-lookup"><span data-stu-id="9fb82-122">Returns the cached resource if the content length is provided and matches the entry size; otherwise, the resource is downloaded from the server and is returned to the caller.</span></span>|  
-|`Revalidate`|<span data-ttu-id="9fb82-123">Önbelleğe alınmış kaynak zaman damgası önbelleğe alınmış kaynak sunucusunda kaynak zaman damgası ile aynı olduğunda döndürür; Aksi takdirde, kaynak sunucudan, önbellekte depolanır ve arayana döndürülür.</span><span class="sxs-lookup"><span data-stu-id="9fb82-123">Returns the cached resource if the timestamp of the cached resource is the same as the timestamp of the resource on the server; otherwise, the resource is downloaded from the server, stored in the cache, and returned to the caller.</span></span>|  
-|`Reload`|<span data-ttu-id="9fb82-124">Kaynak sunucudan indirir, önbellekte depolar ve kaynak çağırana döner.</span><span class="sxs-lookup"><span data-stu-id="9fb82-124">Downloads the resource from the server, stores it in the cache, and returns the resource to the caller.</span></span>|  
-|`NoCacheNoStore`|<span data-ttu-id="9fb82-125">Önbelleğe alınan bir kaynağın varolup olmadığını silinir.</span><span class="sxs-lookup"><span data-stu-id="9fb82-125">If a cached resource exists, it is deleted.</span></span> <span data-ttu-id="9fb82-126">Kaynak sunucudan indirilir ve çağırana döndürülür.</span><span class="sxs-lookup"><span data-stu-id="9fb82-126">The resource is downloaded from the server and is returned to the caller.</span></span>|  
-|`Revalidate`|<span data-ttu-id="9fb82-127">Bir istek, zaman damgası zaman damgasını kaynak sunucudaki aynı olduğunda, kaynağın önbelleğe alınmış kopyasını kullanarak karşılayan; Aksi takdirde, kaynak sunucudan indirilir, çağırana sunulan ve önbellekte depolanır.</span><span class="sxs-lookup"><span data-stu-id="9fb82-127">Satisfies a request by using the cached copy of the resource if the timestamp is the same as the timestamp of the resource on the server; otherwise, the resource is downloaded from the server, presented to the caller, and stored in the cache.</span></span>|  
+|`Default`|<span data-ttu-id="6aafa-119">Önbelleğe alınmış kaynak sona erme, değiştirilmesi ve içerik uzunluğu öznitelikleri mevcut olduğundan yeni bir kaynaktır ve içerik uzunluğu doğru döndürür.</span><span class="sxs-lookup"><span data-stu-id="6aafa-119">Returns the cached resource if the resource is fresh, the content length is accurate, and the expiration, modification, and content length attributes are present.</span></span>|  
+|`BypassCache`|<span data-ttu-id="6aafa-120">Kaynak sunucudan döndürür.</span><span class="sxs-lookup"><span data-stu-id="6aafa-120">Returns the resource from the server.</span></span>|  
+|`CacheOnly`|<span data-ttu-id="6aafa-121">İçerik uzunluğu varsa ve giriş boyutu eşleşen önbelleğe alınmış kaynak döndürür.</span><span class="sxs-lookup"><span data-stu-id="6aafa-121">Returns the cached resource if the content length is present and matches the entry size.</span></span>|  
+|`CacheIfAvailable`|<span data-ttu-id="6aafa-122">İçerik uzunluğu sağlanır ve giriş boyutu eşleşiyorsa, önbelleğe alınmış kaynak döndürür; Aksi takdirde, kaynak sunucudan indirilir ve çağırana döndürülür.</span><span class="sxs-lookup"><span data-stu-id="6aafa-122">Returns the cached resource if the content length is provided and matches the entry size; otherwise, the resource is downloaded from the server and is returned to the caller.</span></span>|  
+|`Revalidate`|<span data-ttu-id="6aafa-123">Önbelleğe alınmış kaynak zaman damgası önbelleğe alınmış kaynak sunucusunda kaynak zaman damgası ile aynı olduğunda döndürür; Aksi takdirde, kaynak sunucudan, önbellekte depolanır ve arayana döndürülür.</span><span class="sxs-lookup"><span data-stu-id="6aafa-123">Returns the cached resource if the timestamp of the cached resource is the same as the timestamp of the resource on the server; otherwise, the resource is downloaded from the server, stored in the cache, and returned to the caller.</span></span>|  
+|`Reload`|<span data-ttu-id="6aafa-124">Kaynak sunucudan indirir, önbellekte depolar ve kaynak çağırana döner.</span><span class="sxs-lookup"><span data-stu-id="6aafa-124">Downloads the resource from the server, stores it in the cache, and returns the resource to the caller.</span></span>|  
+|`NoCacheNoStore`|<span data-ttu-id="6aafa-125">Önbelleğe alınan bir kaynağın varolup olmadığını silinir.</span><span class="sxs-lookup"><span data-stu-id="6aafa-125">If a cached resource exists, it is deleted.</span></span> <span data-ttu-id="6aafa-126">Kaynak sunucudan indirilir ve çağırana döndürülür.</span><span class="sxs-lookup"><span data-stu-id="6aafa-126">The resource is downloaded from the server and is returned to the caller.</span></span>|  
+|`Revalidate`|<span data-ttu-id="6aafa-127">Bir istek, zaman damgası zaman damgasını kaynak sunucudaki aynı olduğunda, kaynağın önbelleğe alınmış kopyasını kullanarak karşılayan; Aksi takdirde, kaynak sunucudan indirilir, çağırana sunulan ve önbellekte depolanır.</span><span class="sxs-lookup"><span data-stu-id="6aafa-127">Satisfies a request by using the cached copy of the resource if the timestamp is the same as the timestamp of the resource on the server; otherwise, the resource is downloaded from the server, presented to the caller, and stored in the cache.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="9fb82-128">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="9fb82-128">Child Elements</span></span>  
- <span data-ttu-id="9fb82-129">Yok.</span><span class="sxs-lookup"><span data-stu-id="9fb82-129">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="6aafa-128">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="6aafa-128">Child Elements</span></span>  
+ <span data-ttu-id="6aafa-129">Yok.</span><span class="sxs-lookup"><span data-stu-id="6aafa-129">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="9fb82-130">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="9fb82-130">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="6aafa-130">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="6aafa-130">Parent Elements</span></span>  
   
-|<span data-ttu-id="9fb82-131">Öğe</span><span class="sxs-lookup"><span data-stu-id="9fb82-131">Element</span></span>|<span data-ttu-id="9fb82-132">Açıklama</span><span class="sxs-lookup"><span data-stu-id="9fb82-132">Description</span></span>|  
+|<span data-ttu-id="6aafa-131">Öğe</span><span class="sxs-lookup"><span data-stu-id="6aafa-131">Element</span></span>|<span data-ttu-id="6aafa-132">Açıklama</span><span class="sxs-lookup"><span data-stu-id="6aafa-132">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="9fb82-133">requestCaching</span><span class="sxs-lookup"><span data-stu-id="9fb82-133">requestCaching</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|<span data-ttu-id="9fb82-134">Ağ istekleri için önbelleğe alma mekanizması denetler.</span><span class="sxs-lookup"><span data-stu-id="9fb82-134">Controls the caching mechanism for network requests.</span></span>|  
+|[<span data-ttu-id="6aafa-133">requestCaching</span><span class="sxs-lookup"><span data-stu-id="6aafa-133">requestCaching</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|<span data-ttu-id="6aafa-134">Ağ istekleri için önbelleğe alma mekanizması denetler.</span><span class="sxs-lookup"><span data-stu-id="6aafa-134">Controls the caching mechanism for network requests.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="9fb82-135">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="9fb82-135">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6aafa-135">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="6aafa-135">Remarks</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9fb82-136">Örnek</span><span class="sxs-lookup"><span data-stu-id="9fb82-136">Example</span></span>  
- <span data-ttu-id="9fb82-137">Aşağıdaki örnekte, önbelleğe alma İlkesi, bir FTP belirtmek gösterilmektedir `NoCacheNoStore`.</span><span class="sxs-lookup"><span data-stu-id="9fb82-137">The following example shows how to specify an FTP caching policy of `NoCacheNoStore`.</span></span>  
+## <a name="example"></a><span data-ttu-id="6aafa-136">Örnek</span><span class="sxs-lookup"><span data-stu-id="6aafa-136">Example</span></span>  
+ <span data-ttu-id="6aafa-137">Aşağıdaki örnekte, önbelleğe alma İlkesi, bir FTP belirtmek gösterilmektedir `NoCacheNoStore`.</span><span class="sxs-lookup"><span data-stu-id="6aafa-137">The following example shows how to specify an FTP caching policy of `NoCacheNoStore`.</span></span>  
   
 ```xml  
 <configuration>  
@@ -81,8 +79,8 @@ ms.locfileid: "49316447"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="9fb82-138">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="9fb82-138">See Also</span></span>  
- <xref:System.Net.Cache>  
- <xref:System.Net.WebRequest>  
- <xref:System.Net.Cache.RequestCacheLevel>  
- [<span data-ttu-id="9fb82-139">Ağ Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="9fb82-139">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="6aafa-138">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="6aafa-138">See Also</span></span>  
+- <xref:System.Net.Cache>  
+- <xref:System.Net.WebRequest>  
+- <xref:System.Net.Cache.RequestCacheLevel>  
+- [<span data-ttu-id="6aafa-139">Ağ Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="6aafa-139">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
