@@ -2,12 +2,12 @@
 title: Bir LINQ to DataSet projesi Visual Studio'da oluşturma
 ms.date: 08/15/2018
 ms.assetid: 49ba6cb0-cdd2-4571-aeaa-25bf0f40e9b3
-ms.openlocfilehash: 12544c6b5153a5f6300072d1646f2c119fb255a1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 22763d3b9581d09d7bdda0c09480f8d36bb8e2ec
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515752"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185566"
 ---
 # <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a>Nasıl yapılır: bir LINQ to DataSet projesi Visual Studio'da oluşturma
 
@@ -22,7 +22,7 @@ LINQ to DataSet gerektiren iki ek başvurular *System.Data.dll* ve *System.Data.
 
 ## <a name="to-enable-linq-to-dataset-functionality"></a>LINQ DataSet işlevselliğini etkinleştirmek için
 
-İçin veri kümesi işlevsellik mevcut bir projeyi LINQ'i etkinleştirmek için aşağıdaki adımları izleyin.
+Varolan bir projede veri kümesi işlevine LINQ'i etkinleştirmek için aşağıdaki adımları izleyin.
 
 1. Başvuruları Ekle **System.Core**, **System.Data**, ve **System.Data.DataSetExtensions**.
 

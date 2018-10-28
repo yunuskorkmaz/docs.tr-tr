@@ -8,14 +8,12 @@ helpviewer_keywords:
 - Internet Protocol version 6, improvements
 - Internet Protocol version 6
 ms.assetid: e6fa8ebd-010a-4c48-a5ec-a5102c53c06f
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: fc7aa27c07946b3a3da7e1ede8adaea30c06e58f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6f956a8dc3e899012144ccf266a7cbe1c5f9dab4
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47201016"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50039172"
 ---
 # <a name="internet-protocol-version-6"></a>Internet Protokolü sürüm 6
 Internet Protokolü sürüm 6 (IPv6) yeni bir Internet'e ağ katmanı standart protokoller paketidir. IPv6 adres tükenmesi, güvenlik, otomatik yapılandırma, genişletilebilirlik ve benzeri için haklısın ile birçok (IPv4 olarak bilinir) Internet Protokolü paketinin geçerli sürümü, sorunu çözmek için tasarlanmıştır. IPv6, yeni türde uygulamalar, eşler arası ile mobil uygulamalar dahil olmak üzere etkinleştirmek için yeteneklerini genişletir. Geçerli IPv4 protokolünün ana sorunlar şunlardır:  
@@ -47,7 +45,7 @@ Internet Protokolü sürüm 6 (IPv6) yeni bir Internet'e ağ katmanı standart p
  Daha fazla bilgi için [IPv6 adresleme](../../../docs/framework/network-programming/ipv6-addressing.md), [IPv6 yönlendirme](../../../docs/framework/network-programming/ipv6-routing.md), [IPv6 otomatik yapılandırma](../../../docs/framework/network-programming/ipv6-auto-configuration.md), [etkinleştirme ve devre dışı bırakma IPv6](../../../docs/framework/network-programming/enabling-and-disabling-ipv6.md), ve [Nasıl yapılır: IPv6 desteğini etkinleştirmek için bilgisayar yapılandırma dosyasını değiştirme](../../../docs/framework/network-programming/how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md).  
   
 ## <a name="references"></a>Referanslar  
- Internet Engineering Task Force sitesinde bulabilirsiniz seçili RFC belgeleri aşağıda verilmiştir ([http://www.ietf.org](http://www.ietf.org/)):  
+ Konumunda bulabilirsiniz seçili RFC belgeleri aşağıda verilmiştir [Internet Engineering Task Force (IETF)](https://www.ietf.org/) Web sitesi:  
   
 -   RFC 1287, doğrultusunda gelecekteki Internet mimarisi.  
   
@@ -57,9 +55,9 @@ Internet Protokolü sürüm 6 (IPv6) yeni bir Internet'e ağ katmanı standart p
   
 -   RFC 2374, IPv6 toplanabilir genel tek noktaya yayın adresi biçimi.  
   
- Üzerinde IPv6 ilgili bilgiler bulabilirsiniz [IPv6 alan TechNet'teki](https://go.microsoft.com/fwlink/?LinkID=179658).  
+ Üzerinde IPv6 ilgili bilgiler bulabilirsiniz [IP sürüm 6 (IPv6)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd379498%28v=ws.10%29).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [IPv6 yuva örnek](https://msdn.microsoft.com/library/ms180981(v=vs.85).aspx)  
+ [IPv6 yuva örnek](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms180981%28v=vs.85%29)  
  [Ağ Programlama Örnekleri](../../../docs/framework/network-programming/network-programming-samples.md)  
  [Yuvalar](../../../docs/framework/network-programming/sockets.md)

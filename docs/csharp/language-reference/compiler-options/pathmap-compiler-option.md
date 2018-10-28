@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -pathmap compiler option [C#]
 - pathmap compiler option [C#]
 - /pathmap compiler option [C#]
-ms.openlocfilehash: 277ab8e094f28fd5e3cbba4de12e742bb9614730
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: abcc67a16e257a15599431a8fefe7753e6d52549
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583754"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50190326"
 ---
 # <a name="-pathmap-c-compiler-options"></a>-pathmap (C# Derleyici Seçenekleri)
 
@@ -34,7 +34,7 @@ Birden çok eşleşen kaynak yolları belirlemek için her virgül ile ayırın.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Derleyici, aşağıdaki nedenlerden dolayı çıktısını kaynak yol Yazar:
+Derleyici, aşağıdaki nedenlerden dolayı çıktısını kaynak yolu Yazar:
 
 1. Kaynak yolu için bağımsız değişken yerine zaman <xref:System.Runtime.CompilerServices.CallerFilePathAttribute> için isteğe bağlı parametresi uygulanır.
 1. Kaynak yolu bir PDB dosyasına eklenir.

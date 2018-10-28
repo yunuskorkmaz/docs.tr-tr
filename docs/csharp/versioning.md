@@ -3,16 +3,16 @@ title: C# sürüm oluşturma - C# Kılavuzu
 description: Sürüm oluşturma, C# ve .NET dillerinde nasıl çalıştığını anlamak
 ms.date: 01/08/2017
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: 949b7414116169cada62b48392f37809f26d7ff9
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: af81e5a8ad3165ce99a823f8b263cc798d5b6d2c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46585939"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183236"
 ---
 # <a name="versioning-in-c"></a>C# sürümü oluşturma #
 
-Bu öğreticide, hangi sürüm anlamına gelir. NET'te öğreneceksiniz. Dikkat edilecek Etkenler da öğreneceksiniz sürüm kitaplığınızı yanı sıra yeni bir sürümüne yükseltme bir kitaplık.
+Bu öğreticide, hangi sürüm anlamına gelir. NET'te öğreneceksiniz. Ayrıca dikkat edilecek Etkenler öğreneceksiniz sürüm kitaplığınızı yanı sıra bir Kitaplığı'nın yeni bir sürüme yükseltme.
 
 ## <a name="authoring-libraries"></a>Geliştirme kitaplıkları
 
@@ -20,7 +20,7 @@ Genel kullanım için .NET kitaplıklarını oluşturan bir geliştirici olarak,
 
 ### <a name="semantic-versioning"></a>Semantic Versioning
 
-[Semantic versioning](http://semver.org/) olduğu belirli aşama olayları belirtmek için kitaplık sürümleri için uygulanan bir adlandırma kuralı (kısaca SemVer).
+[Semantic versioning](https://semver.org/) olduğu belirli aşama olayları belirtmek için kitaplık sürümleri için uygulanan bir adlandırma kuralı (kısaca SemVer).
 Kitaplığınızı size sürüm bilgilerini geliştiriciler bu eski sürümleri aynı kullanan projelerini uyumluluğunu belirlemek ideal olarak, yardımcı kitaplık.
 
 En temel SemVer 3 bileşeni biçimi yaklaşımdır `MAJOR.MINOR.PATCH`burada:

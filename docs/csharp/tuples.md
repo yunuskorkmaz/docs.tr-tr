@@ -3,12 +3,12 @@ title: Tanımlama grubu türleri - C# Kılavuzu
 description: C# adsız ve adlandırılmış bir tanımlama grubu türleri hakkında bilgi edinin
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: b0c838791e640c9813005b8a32d009153a794c14
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 572e926b6345fc27278f78d1faf2e3b27f017f2e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509452"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50186037"
 ---
 # <a name="c-tuple-types"></a>C# demet türleri #
 
@@ -92,7 +92,7 @@ C# 7.3 ile başlayarak, tanımlama grubu türleri desteği `==` ve `!=` işleçl
 
 [!code-csharp[TupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#Equality "Testing tuples for equality")]
 
-Tanımlama grubu eşitliği testleri daha kullanışlı hale çeşitli kurallar vardır. Tanımlama grubu eşitliği gerçekleştirir [dönüştürmeler yükseltilmiş](language-reference/language-specification/index.md) diziler biri aşağıdaki kodda gösterildiği gibi boş değer atanabilir bir tanımlama grubu ise:
+Tanımlama grubu eşitliği testleri daha kullanışlı hale çeşitli kurallar vardır. Tanımlama grubu eşitliği gerçekleştirir [dönüştürmeler yükseltilmiş](~/_csharplang/spec/conversions.md#lifted-conversion-operators) diziler biri aşağıdaki kodda gösterildiği gibi boş değer atanabilir bir tanımlama grubu ise:
 
 
 [!code-csharp[NullableTupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#NullableEquality "Comparing Tuples and nullable tuples")]

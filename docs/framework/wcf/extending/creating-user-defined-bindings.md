@@ -4,34 +4,34 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-ms.openlocfilehash: c9d37163770f2fd192a6fd2a03878b28f0237646
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 7be7c156ec20a15cf8d1a12d8d1f429b6c2c33a9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806750"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50186063"
 ---
 # <a name="creating-user-defined-bindings"></a>Kullanıcı Tanımlı Bağlamalar Oluşturma
 Sistem tarafından sağlanmayan bağlamaları oluşturmanın birkaç yolu vardır:  
   
--   Temel bir özel bağlama oluşturma <xref:System.ServiceModel.Channels.CustomBinding> bağlama öğeleri ile doldurun kapsayıcıdır sınıfı. Özel bağlama daha sonra bir hizmet uç noktası olarak eklenir. Özel bağlama ya da program aracılığıyla veya bir uygulama yapılandırma dosyasını oluşturabilirsiniz. Bir bağlama öğesi bir uygulama yapılandırma dosyasından kullanılacak bağlama öğesi genişletmelidir <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. Özel bağlama hakkında daha fazla bilgi için bkz: [özel bağlamalar](../../../../docs/framework/wcf/extending/custom-bindings.md) ve <xref:System.ServiceModel.Channels.CustomBinding>.  
+-   Temel, özel bir bağlama oluşturma <xref:System.ServiceModel.Channels.CustomBinding> sınıfını bağlama öğeleriyle doldurun bir kapsayıcıdır. Özel bağlama, ardından hizmet uç noktası eklenir. Özel bağlama ya da programlı olarak veya bir uygulama yapılandırma dosyasını oluşturabilirsiniz. Bir uygulama yapılandırma dosyasından bir bağlama öğesi kullanmak için bağlama öğesi genişletmelidir <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. Özel bağlamalar hakkında daha fazla bilgi için bkz: [özel bağlamalar](../../../../docs/framework/wcf/extending/custom-bindings.md) ve <xref:System.ServiceModel.Channels.CustomBinding>.  
   
--   Standart bir bağlama öğesinden türeyen bir sınıf oluşturabilirsiniz. Örneğin, bir sınıftan türetilemeyeceğini <xref:System.ServiceModel.WSHttpBinding> ve geçersiz kılma <xref:System.ServiceModel.Channels.CustomBinding.CreateBindingElements%2A> bağlama öğeleri almak ve bir özel bağlama öğesi ekleyin veya güvenlik için belirli bir değer oluşturmak için bir yöntem.  
+-   Standart bir bağlama öğesinden türeyen bir sınıf oluşturabilirsiniz. Örneğin, bir sınıf türetebilirsiniz <xref:System.ServiceModel.WSHttpBinding> ve geçersiz kılma <xref:System.ServiceModel.Channels.CustomBinding.CreateBindingElements%2A> bağlama öğeleri almak ve bir özel bağlama öğesi ekleyin veya güvenlik için belirli bir değer oluşturmak için bir yöntem.  
   
 -   Yeni bir oluşturabilirsiniz <xref:System.ServiceModel.Channels.Binding> tamamen tüm bağlamayı uygulama denetlemek için türü.  
   
-## <a name="the-order-of-binding-elements"></a>Bağlama öğelerinin sırasını  
- Her bağlama öğesi iletileri alırken veya gönderirken bir işleme adımı temsil eder. Çalışma zamanında Kanallar ve dinleyiciler bağlama öğeleri gelen ve giden kanal yığınları oluşturmak gerekli oluşturun.  
+## <a name="the-order-of-binding-elements"></a>Bağlama öğelerinin sırası  
+ Her bağlama öğesi gönderirken veya iletileri almak için bir işleme adımını temsil eder. Çalışma zamanında, Kanallar ve dinleyiciler bağlama öğeleri giden ve gelen kanal yığınları oluşturmak gerekli oluşturun.  
   
- Bağlama öğeleri üç ana türü vardır: Protokolü bağlama öğeleri, kodlama bağlama öğeleri ve aktarım bağlama öğeleriyle.  
+ Bağlama öğelerinin üç ana türü vardır: Protokolü bağlama öğeleri, kodlama bağlama öğeleri ve aktarım bağlama öğeleriyle.  
   
- Protokol bağlama öğeleri – iletileri hareket üst düzey işlem adımları bu öğeleri temsil eder. Kanallar ve dinleyiciler Bu bağlama öğeleri tarafından oluşturulan eklemek, kaldırmak veya ileti içeriği değiştirmek için. Belirtilen bağlama Protokolü bağlama öğeleri, her içinden devralma rastgele sayıda olabilir <xref:System.ServiceModel.Channels.BindingElement>. Windows Communication Foundation (WCF) dahil olmak üzere, çeşitli protokol bağlama öğeleri içerir <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> ve <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
+ Protokol bağlama öğeleri – iletileri gibi davranan daha yüksek düzeyde işleme adımları bu öğeleri temsil eder. Kanallar ve dinleyiciler Bu bağlama öğeleri tarafından oluşturulan ekleyin, kaldırın veya ileti içeriğini değiştirin. Verilen bağlama Protokolü bağlama öğelerinin her dan devralan, rastgele bir sayıdan olabilir <xref:System.ServiceModel.Channels.BindingElement>. Windows Communication Foundation (WCF) dahil olmak üzere, çeşitli protokol bağlama öğeleri içeren <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> ve <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
   
- Kodlama bağlama öğesi – hattaki iletim için bir ileti arasındaki bir kodlama dönüşümleri hazır bu öğeleri temsil eder. Tipik WCF bağlamaları tam olarak bir kodlama bağlama öğesi içerir. Bağlama öğeleri kodlama örnekler <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>, <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>ve <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>. Bir kodlama bağlama öğesi için bir bağlama belirtilmezse, kodlama varsayılan kullanılır. Taşıma HTTP ve ikili Aksi takdirde varsayılan metin olur.  
+ Kodlama. bağlama öğesi – iletilmesi kablo üzerinde bir ileti arasındaki bir kodlama dönüştürme hazır bu öğeleri temsil eder. Tipik WCF bağlamaları kodlama tam olarak bir bağlama öğesi içerir. Bağlama öğeleri kodlama örnekler <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>, <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>ve <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>. Bir kodlama bağlama öğesi için bir bağlama belirtilmemişse, kodlama varsayılan kullanılır. Varsayılan HTTP ve ikili taşıma Aksi durumda olduğunda metindir.  
   
- Aktarım bağlama öğesi – bu öğeleri Aktarım Protokolü bir kodlama iletisi iletimini temsil eder. Tipik WCF bağlamaları dahil olduğu devraldığı tam olarak bir aktarım bağlama öğesi <xref:System.ServiceModel.Channels.TransportBindingElement>. Bağlama öğeleri taşıma örneklerindendir <xref:System.ServiceModel.Channels.TcpTransportBindingElement>, <xref:System.ServiceModel.Channels.HttpTransportBindingElement>ve <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>.  
+ Aktarım bağlama öğesinin – Aktarım Protokolü bir kodlama iletisi iletimini bu öğeleri temsil eder. Tipik WCF bağlamaları dahil öğesinden devralan tam olarak bir aktarım bağlama öğesi <xref:System.ServiceModel.Channels.TransportBindingElement>. Aktarım bağlama öğelerinin örnekler <xref:System.ServiceModel.Channels.TcpTransportBindingElement>, <xref:System.ServiceModel.Channels.HttpTransportBindingElement>ve <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>.  
   
- Yeni bağlamalar oluştururken, eklenen bağlama öğeleri sıralama önemlidir. Her zaman bağlama öğeleri aşağıdaki sırayla ekleyin:  
+ Yeni bağlamalar oluştururken, eklenen bağlama öğelerinin sırası önemlidir. Her zaman bağlama öğeleri şu sırayla ekleyin:  
   
 |Katman|Seçenekler|Gerekli|  
 |-----------|-------------|--------------|  
@@ -42,12 +42,12 @@ Sistem tarafından sağlanmayan bağlamaları oluşturmanın birkaç yolu vardı
 |Kodlama|İkili, MTOM, özel bir metin|Evet*|  
 |Taşıma|TCP ve adlandırılmış kanallar, HTTP, HTTPS, MSMQ, özel|Evet|  
   
- * Bir kodlama belirtilmezse, bir kodlama her bağlama için gerekli olduğu için bir varsayılan sizin için kodlama WCF ekler. Text/XML ve ikili HTTP ve HTTPS aktarımları için aksi varsayılandır.  
+ * Bir kodlama belirtilmemişse, kodlama her bağlama için gerekli olduğu için bir varsayılan sizin için kodlama WCF ekler. Metin/XML ve ikili HTTP ve HTTPS aktarımı için Aksi takdirde varsayılandır.  
   
 ## <a name="creating-a-new-binding-element"></a>Yeni bir bağlama öğesi oluşturma  
- Türetilen türler yanı sıra <xref:System.ServiceModel.Channels.BindingElement> kendi bağlama öğeleri oluşturabileceğiniz WCF tarafından sağlanan olan. Bu bağlamaları yığınını oluşturulur yolu ve içinde kendi oluşturarak Git bileşenleri özelleştirmenize olanak tanır <xref:System.ServiceModel.Channels.BindingElement> yığınında bir diğer sistem tarafından sağlanan türleri ile birleştirilebilen.  
+ Öğesinden türetilen türler yanı sıra <xref:System.ServiceModel.Channels.BindingElement> olan sağlanan WCF tarafından kendi bağlama öğeleri oluşturabilirsiniz. Bu şekilde bağlamaları yığınını oluşturulur ve içinde kendi oluşturarak Git bileşenlerin özelleştirmenize olanak tanır <xref:System.ServiceModel.Channels.BindingElement> , oluşan yığındaki bir diğer sistem tarafından sağlanan tür.  
   
- Örneğin, uygulama, bir `LoggingBindingElement` ileti bir veritabanında oturum olanağı sağlar, kanal yığınındaki taşıma kanalı yukarıda yerleştirmelisiniz. Bu durumda, uygulama bir özel oluşan bağlama oluşturur `LoggingBindingElement` ile `TcpTransportBindingElement`, aşağıdaki örnekte olduğu gibi.  
+ Örneğin, uygulamanız bir `LoggingBindingElement` ileti bir veritabanında oturum olanağı sağlayan, bir kanal yığınındaki taşıma kanalı yukarıda yerleştirmelisiniz. Bu durumda, bağlama oluşan özel bir uygulama oluşturur `LoggingBindingElement` ile `TcpTransportBindingElement`, aşağıdaki örnekte olduğu gibi.  
   
 ```csharp  
 Binding customBinding = new CustomBinding(  
@@ -56,25 +56,25 @@ Binding customBinding = new CustomBinding(
 );  
 ```  
   
- Yeni bir bağlama öğesi yazma biçimini tam işlevselliğini bağlıdır. Örnekleri birini [taşıma: UDP](../../../../docs/framework/wcf/samples/transport-udp.md), bağlama öğesi bir tür uygulama ayrıntılı bir açıklaması verilmiştir.  
+ Yeni bağlama öğeniz nasıl yazdığınız tam işlevselliğini bağlıdır. Örneklerden birini [taşıma: UDP](../../../../docs/framework/wcf/samples/transport-udp.md), bağlama öğesi bir tür uygulama ayrıntılı bir açıklaması verilmiştir.  
   
 ## <a name="creating-a-new-binding"></a>Yeni bir bağlama oluşturma  
- Bir kullanıcı tarafından oluşturulan bağlama öğesi iki şekilde kullanılabilir. İlk yol önceki bölümde gösterilmektedir: özel bağlama üzerinden. Özel bağlama bağlama öğeleri, kullanıcı tarafından oluşturulan olanlar da dahil olmak üzere bir rastgele kümesini temel alan kendi bağlama oluşturmasına olanak tanır.  
+ Bir kullanıcı tarafından oluşturulmuş bir bağlama öğesi iki şekilde kullanılabilir. Önceki bölümde ilk yol gösterir: özel bağlama üzerinden. Özel bağlama bağlama öğelerinin, kullanıcı tarafından oluşturulmuş olanlar da dahil olmak üzere bir rastgele kümesi temel alınarak kendi bağlama oluşturmasına olanak tanır.  
   
- Bağlama birden fazla uygulamada kullanmak, kendi bağlama oluşturur ve genişletme <xref:System.ServiceModel.Channels.Binding>. Bu, kullanmak istediğiniz her zaman el ile özel bağlama oluşturma önler. Kullanıcı tanımlı bir bağlama bağlamanın davranışını tanımlayın ve kullanıcı tanımlı bağlama öğeleri dahil etmesini sağlar. Ve *önceden paketlenmiş*: her kullanışınızda bağlama yeniden başlatmanız gerekmez.  
+ Birden fazla uygulama bağlama kullanırsanız, kendi bağlama oluşturur ve genişletmek <xref:System.ServiceModel.Channels.Binding>. Bu, kullanmak istediğiniz her zaman el ile özel bir bağlama oluşturma önler. Bir kullanıcı tanımlı bağlama bağlama davranışını tanımlayın ve kullanıcı tanımlı bağlama öğeleri içeren sağlar. Ve *önceden paketlenmiş*: bağlamayı her kullanışınızda yeniden başlatmanız gerekmez.  
   
- En azından bir kullanıcı tarafından tanımlanan bağlama uygulamalıdır <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> yöntemi ve <xref:System.ServiceModel.Channels.Binding.Scheme%2A> özelliği.  
+ En az bir kullanıcı tanımlı bağlama uygulamalıdır <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> yöntemi ve <xref:System.ServiceModel.Channels.Binding.Scheme%2A> özelliği.  
   
- <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> Yöntem yeni bir <xref:System.ServiceModel.Channels.BindingElementCollection> bağlamaya ait bağlama öğelerini içerir. Koleksiyon sipariş edilir ve protokolü bağlama öğeleri ilk içermelidir, aktarım bağlama öğesi tarafından izlenen kodlama bağlama öğesi arkasından. WCF sistem tarafından sağlanan bağlama öğeleri kullanırken, kural içinde belirtilen sıralama bağlama öğesi izlemelisiniz [özel bağlamaları](../../../../docs/framework/wcf/extending/custom-bindings.md). Bu koleksiyonun hiç kullanıcı tanımlı bağlama sınıfı içinde başvurulan nesneler başvuruda bulunmalıdır; Sonuç olarak, bağlama yazarlar döndürmelidir bir `Clone()` , <xref:System.ServiceModel.Channels.BindingElementCollection> her çağrıda <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A>.  
+ <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> Yöntemi yeni bir döndürür <xref:System.ServiceModel.Channels.BindingElementCollection> bağlamaya ait bağlama öğelerini içeren. Koleksiyon sıralanır ve protokolü bağlama öğeleri ilk içermelidir, aktarım bağlama öğesi tarafından izlenen kodlama bağlama öğesi, ardından. WCF sistem tarafından sağlanan bir bağlamayı öğeleri kullanılarak, belirtilen kuralları sıralama bağlama öğesi izlemelidir [özel bağlamalar](../../../../docs/framework/wcf/extending/custom-bindings.md). Bu koleksiyonun hiç kullanıcı tanımlı bağlama sınıfı içinde başvurulan nesneleri başvurmalıdır; Sonuç olarak, bağlama yazarlar döndürmelidir bir `Clone()` , <xref:System.ServiceModel.Channels.BindingElementCollection> her çağrıda <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A>.  
   
- <xref:System.ServiceModel.Channels.Binding.Scheme%2A> Özelliği, bağlama kullanımda Aktarım Protokolü için URI şeması'ı temsil eder. Örneğin, *WSHttpBinding* ve *NetTcpBinding* döndürmek "http" ve "net.tcp" kendi ilgili <xref:System.ServiceModel.Channels.Binding.Scheme%2A> özellikleri.  
+ <xref:System.ServiceModel.Channels.Binding.Scheme%2A> Özelliği, bağlama kullanımda Aktarım Protokolü için URI şeması temsil eder. Örneğin, *WSHttpBinding* ve *NetTcpBinding* döndürür "http" ve "net.tcp" kendi ilgili <xref:System.ServiceModel.Channels.Binding.Scheme%2A> özellikleri.  
   
- İsteğe bağlı yöntemlerini ve kullanıcı tanımlı bağlamalar özelliklerini tam listesi için bkz: <xref:System.ServiceModel.Channels.Binding>.  
+ İsteğe bağlı yöntemler ve özellikler için kullanıcı tanımlı bağlamalar tam listesi için bkz: <xref:System.ServiceModel.Channels.Binding>.  
   
 ### <a name="example"></a>Örnek  
- Bu örnekte profil bağlamasında uygulayan `SampleProfileUdpBinding`, den türetilen <xref:System.ServiceModel.Channels.Binding>. `SampleProfileUdpBinding` İçindeki en fazla dört bağlama öğeleri içerir: bir kullanıcı tarafından oluşturulan `UdpTransportBindingElement`; ve üç sistem tarafından sağlanan: `TextMessageEncodingBindingElement`, `CompositeDuplexBindingElement`, ve `ReliableSessionBindingElement`.  
+ Bu örnekte profil bağlamasında uygulayan `SampleProfileUdpBinding`, öğesinden türetildiğini <xref:System.ServiceModel.Channels.Binding>. `SampleProfileUdpBinding` İçindeki en fazla dört bağlama öğeleri içerir: bir kullanıcı tarafından oluşturulmuş `UdpTransportBindingElement`; ve sistem tarafından sağlanan üç: `TextMessageEncodingBindingElement`, `CompositeDuplexBindingElement`, ve `ReliableSessionBindingElement`.  
   
-```  
+```csharp
 public override BindingElementCollection CreateBindingElements()  
 {     
     BindingElementCollection bindingElements = new BindingElementCollection();  
@@ -89,34 +89,34 @@ public override BindingElementCollection CreateBindingElements()
 }  
 ```  
   
-## <a name="security-restrictions-with-duplex-contracts"></a>Çift yönlü sözleşmeler ile güvenlik kısıtlamaları  
- Tüm bağlama öğeleri birbirleri ile uyumludur. Özellikle, çift yönlü sözleşmeler ile kullanıldığında bağlama öğeleri güvenlik bazı kısıtlamalar vardır.  
+## <a name="security-restrictions-with-duplex-contracts"></a>Çift yönlü sözleşme ile güvenlik kısıtlamaları  
+ Tüm bağlama öğeleri birbiriyle uyumlu değildir. Özellikle, çift yönlü sözleşme ile kullanıldığında bağlama öğeleri güvenlikle ilgili bazı kısıtlamalar vardır.  
   
-### <a name="one-shot-security"></a>Tek adımda güvenlik  
- Burada tüm gerekli güvenlik kimlik bilgilerini gönderilen tek bir iletide ayarlayarak "tek adımda" güvenlik uygulayabilirsiniz `negotiateServiceCredential` özniteliği \<ileti > yapılandırma öğesi için `false`.  
+### <a name="one-shot-security"></a>Kesin güvenlik  
+ Burada tüm gerekli güvenlik kimlik bilgileri gönderilen tek bir ileti ayarlayarak "kesin" güvenlik uygulayabilirsiniz `negotiateServiceCredential` özniteliği \<ileti > yapılandırma öğesi `false`.  
   
- Tek adımda kimlik doğrulaması ile çift yönlü sözleşmeler çalışmaz.  
+ Kesin kimlik doğrulaması ile çift yönlü anlaşma çalışmaz.  
   
- İstek-yanıt sözleşmeleri için tek adımda kimlik doğrulaması çalışır ancak güvenlik bağlama öğesi aşağıda bağlama yığın oluşturma destekliyorsa <xref:System.ServiceModel.Channels.IRequestChannel> veya <xref:System.ServiceModel.Channels.IRequestSessionChannel> örnekleri.  
+ İstek-yanıt sözleşmeleriyle için kesin bir kimlik doğrulaması, yalnızca güvenlik bağlama öğesinin altındaki bağlama yığın oluşturmayı destekliyorsa çalışır <xref:System.ServiceModel.Channels.IRequestChannel> veya <xref:System.ServiceModel.Channels.IRequestSessionChannel> örnekleri.  
   
- Tek yönlü sözleşmeler için tek adımda kimlik doğrulaması çalışır güvenlik bağlama öğesi aşağıda bağlama yığın oluşturma destekliyorsa <xref:System.ServiceModel.Channels.IRequestChannel>, <xref:System.ServiceModel.Channels.IRequestSessionChannel>, <xref:System.ServiceModel.Channels.IOutputChannel> veya <xref:System.ServiceModel.Channels.IOutputSessionChannel> örnekleri.  
+ Tek yönlü sözleşmeler için kesin authentication çalışır güvenlik bağlama öğesinin altındaki bağlama yığın oluşturmayı destekliyorsa <xref:System.ServiceModel.Channels.IRequestChannel>, <xref:System.ServiceModel.Channels.IRequestSessionChannel>, <xref:System.ServiceModel.Channels.IOutputChannel> veya <xref:System.ServiceModel.Channels.IOutputSessionChannel> örnekleri.  
   
-### <a name="cookie-mode-security-context-tokens"></a>Tanımlama bilgisi modu güvenlik bağlamı belirteçleri  
- Tanımlama bilgisi modu güvenlik bağlamı belirteçleri ile çift yönlü sözleşmeler kullanılamaz.  
+### <a name="cookie-mode-security-context-tokens"></a>Tanımlama bilgisi modunu güvenlik bağlamı belirteçleri  
+ Tanımlama bilgisi modu güvenlik bağlamı belirteçleri ile çift yönlü anlaşma kullanılamaz.  
   
- İstek-yanıt sözleşmeleri için tanımlama bilgisi modu güvenlik bağlamı belirteçler iş yalnızca güvenlik bağlama öğesi aşağıda bağlama yığın oluşturma destekliyorsa <xref:System.ServiceModel.Channels.IRequestChannel> veya <xref:System.ServiceModel.Channels.IRequestSessionChannel> örnekleri.  
+ İstek-yanıt sözleşmeleriyle için tanımlama bilgisi modunu güvenlik bağlamı belirteçler iş yalnızca güvenlik bağlama öğesinin altındaki bağlama yığın oluşturmayı destekliyorsa <xref:System.ServiceModel.Channels.IRequestChannel> veya <xref:System.ServiceModel.Channels.IRequestSessionChannel> örnekleri.  
   
- Güvenlik bağlama öğesi aşağıda bağlama yığın oluşturma destekliyorsa tek yönlü sözleşmeler için tanımlama bilgisi modu güvenlik bağlamı works belirteçler: <xref:System.ServiceModel.Channels.IRequestChannel> veya <xref:System.ServiceModel.Channels.IRequestSessionChannel> örnekleri.  
+ Tek yönlü sözleşmeler için güvenlik bağlama öğesinin altındaki bağlama yığın oluşturmayı destekliyorsa, tanımlama bilgisi modunu güvenlik bağlamı çalışır belirteçler. <xref:System.ServiceModel.Channels.IRequestChannel> veya <xref:System.ServiceModel.Channels.IRequestSessionChannel> örnekleri.  
   
 ### <a name="session-mode-security-context-tokens"></a>Oturum modu güvenlik bağlamı belirteçleri  
- Oturum modu SCT çalışır çift yönlü sözleşmeler için güvenlik bağlama öğesi aşağıda bağlama yığın oluşturma destekliyorsa <xref:System.ServiceModel.Channels.IDuplexChannel> veya <xref:System.ServiceModel.Channels.IDuplexSessionChannel> örnekleri.  
+ Aşağıdaki güvenlik bağlama öğesi bağlama yığın oluşturmayı destekliyorsa SCT çalıştığı için çift yönlü sözleşmeler oturum modu <xref:System.ServiceModel.Channels.IDuplexChannel> veya <xref:System.ServiceModel.Channels.IDuplexSessionChannel> örnekleri.  
   
- Oturum modu SCT çalışır güvenlik bağlama öğesi aşağıda bağlama yığın oluşturma destekliyorsa istek-yanıt sözleşmeleri için <xref:System.ServiceModel.Channels.IDuplexChannel>, <xref:System.ServiceModel.Channels.IDuplexSessionChannel>, <xref:System.ServiceModel.Channels.IRequestChannel> veya <xref:System.ServiceModel.Channels.IRequestSessionChannel>, örnekleri.  
+ Aşağıdaki güvenlik bağlama öğesi bağlama yığın oluşturmayı destekliyorsa, istek-yanıt sözleşmeleri için oturum modu SCT çalışır <xref:System.ServiceModel.Channels.IDuplexChannel>, <xref:System.ServiceModel.Channels.IDuplexSessionChannel>, <xref:System.ServiceModel.Channels.IRequestChannel> veya <xref:System.ServiceModel.Channels.IRequestSessionChannel>, örnekleri.  
   
- Oturum modu SCT çalışır 1 yönlü sözleşmeler için güvenlik bağlama öğesi aşağıda bağlama yığın oluşturma destekliyorsa <xref:System.ServiceModel.Channels.IDuplexChannel>, <xref:System.ServiceModel.Channels.IDuplexSessionChannel>, <xref:System.ServiceModel.Channels.IRequestChannel> veya <xref:System.ServiceModel.Channels.IRequestSessionChannel> örnekleri.  
+ Oturum modu SCT çalışır 1 yönlü sözleşmeler için aşağıdaki güvenlik bağlama öğesi bağlama yığın oluşturmayı destekliyorsa <xref:System.ServiceModel.Channels.IDuplexChannel>, <xref:System.ServiceModel.Channels.IDuplexSessionChannel>, <xref:System.ServiceModel.Channels.IRequestChannel> veya <xref:System.ServiceModel.Channels.IRequestSessionChannel> örnekleri.  
   
 ## <a name="deriving-from-a-standard-binding"></a>Standart bir bağlama öğesinden türetme  
- Tamamen yeni bir bağlama sınıfı oluşturmak yerine var olan sistem tarafından sağlanan bağlamalar birini genişletmek için mümkün olabilir. Daha önceki durum gibi kılmalıdır <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> yöntemi ve <xref:System.ServiceModel.Channels.Binding.Scheme%2A> özelliği.  
+ Tamamen yeni bir bağlama sınıfı oluşturmak yerine var olan sistem tarafından sağlanan bağlamalar birini genişletmek için mümkün olabilir. Daha önceki bir durumda gibi geçersiz kılmanız gerekir <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> yöntemi ve <xref:System.ServiceModel.Channels.Binding.Scheme%2A> özelliği.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Channels.Binding>  

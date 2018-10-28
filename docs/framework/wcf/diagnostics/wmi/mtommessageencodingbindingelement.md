@@ -2,19 +2,19 @@
 title: MtomMessageEncodingBindingElement
 ms.date: 03/30/2017
 ms.assetid: 4a9c6c3d-e561-4b2d-a693-7e84bdd3534a
-ms.openlocfilehash: 83fa879fbef94e2dc9c142dfb92a51a54a7b60cb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 49a640a666131491366646d6d486d25a515e35bf
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33486540"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185712"
 ---
 # <a name="mtommessageencodingbindingelement"></a>MtomMessageEncodingBindingElement
 MtomMessageEncodingBindingElement  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```csharp
 class MtomMessageEncodingBindingElement : MessageEncodingBindingElement  
 {  
   string Encoding;  
@@ -25,7 +25,7 @@ class MtomMessageEncodingBindingElement : MessageEncodingBindingElement
 ```  
   
 ## <a name="methods"></a>Yöntemler  
- MtomMessageEncodingBindingElement sınıfı herhangi bir yöntem tanımlamıyor.  
+ MtomMessageEncodingBindingElement sınıf herhangi bir yöntemi tanımlamaz.  
   
 ## <a name="properties"></a>Özellikler  
  MtomMessageEncodingBindingElement sınıfı aşağıdaki özelliklere sahiptir:  
@@ -33,36 +33,36 @@ class MtomMessageEncodingBindingElement : MessageEncodingBindingElement
 ### <a name="encoding"></a>Kodlama  
  Veri türü: dize  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Bağlama iletilerde yayma için kullanılacak kodlama karakter kümesi.  
+ İletileri bağlamadaki yayma için kullanılacak kodlama karakter kümesi.  
   
 ### <a name="maxreadpoolsize"></a>maxReadPoolSize  
  Veri türü: SINT32  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Kaç tane iletileri tanımlayan bir tamsayı yeni okuyucu ayırmadan eşzamanlı olarak okuyabilirsiniz.  
+ İleti sayısını tanımlayan bir tamsayı yeni okuyucu ayırmadan aynı anda okuyabilirsiniz.  
   
 ### <a name="maxwritepoolsize"></a>maxWritePoolSize  
  Veri türü: SINT32  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Kaç tane iletileri tanımlayan bir tamsayı yeni yazıcı ayırmadan aynı anda gönderilebilir.  
+ İleti sayısını tanımlayan bir tamsayı, yeni yazıcı ayırmadan aynı anda gönderilebilecek.  
   
-### <a name="readerquotas"></a>ReaderQuotas  
+### <a name="readerquotas"></a>readerQuotas  
  Veri türü: XmlDictionaryReaderQuotas  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Okuyucu kotaları.  
+ Okuyucular kotalar.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|MOF|Bildirilen Servicemodel.mof.|  
+|MOF|Bildirilmiş Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Ad Alanı|İçinde tanımlanan root\ServiceModel|  
+|Ad Alanı|İçinde tanımlı root\ServiceModel|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>

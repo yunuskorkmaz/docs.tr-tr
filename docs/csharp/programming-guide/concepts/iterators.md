@@ -2,12 +2,12 @@
 title: C# dilinde koleksiyonlar üzerinden yineleme yapma
 ms.date: 08/14/2018
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-ms.openlocfilehash: d8a39569df517dffa8ff4b2f638f089f420e44c7
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 2b358e8272820bf6fb5bcb45763bae980b91962f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48024512"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191200"
 ---
 # <a name="iterators-c"></a>Yineleyiciler (C#)
 
@@ -342,7 +342,7 @@ Her yinelemede üzerinde `foreach` döngü (veya doğrudan arama `IEnumerator.Mo
 
 Yineleyicileri desteklemez <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> yöntemi. Başlangıçtan itibaren yinelemek için yeni bir yineleyici edinmeniz gerekir. Çağırma <xref:System.Collections.IEnumerator.Reset%2A> üzerinde bir yineleyici yöntem tarafından döndürülen yineleyici oluşturur bir <xref:System.NotSupportedException>.
 
-Ek bilgi için bkz: [C# dil belirtimi](../../../csharp/language-reference/language-specification/index.md).
+Ek bilgi için bkz: [C# dil belirtimi](~/_csharplang/spec/classes.md#iterators).
 
 ## <a name="use-of-iterators"></a>Yineleyicilerin kullanın
 

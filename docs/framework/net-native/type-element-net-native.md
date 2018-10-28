@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aaf5103dfee366466ff701ce3669bbabb97233ac
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 9359d196ecdaa83d7f5f14c3570392d54691be73
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48037475"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195638"
 ---
 # <a name="lttypegt-element-net-native"></a>&lt;Type&gt; Öğesi (.NET Yerel)
 Çalışma zamanı İlkesi, bir sınıf veya yapı gibi belirli bir tür için geçerlidir.  
@@ -95,10 +95,10 @@ ms.locfileid: "48037475"
   
  A `<Type>` genel bir türün öğesi kendi ilkesi olmayan tüm örneklemesi için ilke uygulanır. Oluşturulan genel türler, ilke tarafından tanımlanan [ \<Typeınstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) öğesi.  
   
- Tür, genel bir tür ise, adı bir Vurgu işareti sembolü sunulur (\`) genel parametreler, bir sayı. Örneğin, `Name` özniteliği bir `<Type>` öğesi için <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> sınıfı olarak görünür `Name="System.Collections.Generic.List`1"'.  
+ Tür, genel bir tür ise, adı bir Vurgu işareti sembolü sunulur (\`) genel parametreler, bir sayı. Örneğin, `Name` özniteliği bir `<Type>` öğesi için <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> sınıfı olarak görünür ``Name="System.Collections.Generic.List`1"``.
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, alanları, özellikleri ve yöntemleri hakkında bilgi görüntülemek için yansıtma kullanır. <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> sınıfı. Değişken `b` örnekte bir [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) denetimi. Örneğin, yalnızca tür bilgilerini alır çünkü meta veri kullanılabilirliğini tarafından denetlenir `Browse` ilke ayarı.  
+ Aşağıdaki örnek, alanları, özellikleri ve yöntemleri hakkında bilgi görüntülemek için yansıtma kullanır. <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> sınıfı. Değişken `b` örnekte bir <xref:Windows.UI.Xaml.Controls.TextBlock> denetimi. Örneğin, yalnızca tür bilgilerini alır çünkü meta veri kullanılabilirliğini tarafından denetlenir `Browse` ilke ayarı.  
   
  [!code-csharp[ProjectN_Reflection#3](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/browsegenerictype1.cs#3)]  
   
@@ -116,7 +116,7 @@ ms.locfileid: "48037475"
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, alınacak yansıtma kullanır. bir <xref:System.Reflection.PropertyInfo> temsil eden nesne <xref:System.String.Chars%2A?displayProperty=nameWithType> özelliği. Ardından kullanır <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> yedinci karakterinden dize değerini almak için ve tüm karakterleri dizesini görüntülemek için yöntemi. Değişken `b` örnekte bir [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) denetimi.  
+ Aşağıdaki örnek, alınacak yansıtma kullanır. bir <xref:System.Reflection.PropertyInfo> temsil eden nesne <xref:System.String.Chars%2A?displayProperty=nameWithType> özelliği. Ardından kullanır <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> yedinci karakterinden dize değerini almak için ve tüm karakterleri dizesini görüntülemek için yöntemi. Değişken `b` örnekte bir <xref:Windows.UI.Xaml.Controls.TextBlock> denetimi.  
   
  [!code-csharp[ProjectN_Reflection#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/propertyinfo1.cs#1)]  
   

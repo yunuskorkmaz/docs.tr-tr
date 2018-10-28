@@ -1,112 +1,112 @@
 ---
 title: Zaman uyumsuz ileti tabanlı iletişim
-description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Zaman uyumsuz ileti tabanlı iletişim
+description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Zaman uyumsuz ileti tabanlı iletişim
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 5fb5d2f9f4f63ee885752a5dcc45cc45f71dc32f
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 865966a70f18c9023e4c733d82ea90aba9478753
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106414"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50135381"
 ---
 # <a name="asynchronous-message-based-communication"></a>Zaman uyumsuz ileti tabanlı iletişim
 
-Zaman uyumsuz ileti gönderme ve olay denetimli iletişimi değişiklikleri birden çok mikro ve bunların ilişkili etki alanı modelleri arasında yayılıyor olduğunda önemlidir. Daha önce tartışma mikro ve ilişkisindeki bağlamları (BCs) belirtildiği gibi modelleri (kullanıcı, müşteri, ürün, hesap, vb.) farklı mikro veya BCs farklı işlemler anlamına gelebilir. Bu değişiklikler olduğunda, değişiklikleri farklı modeli üzerinden mutabık kılmak için bazı yol gerektiği anlamına gelir. Bir, nihai tutarlılık ve olay denetimli iletişimi zaman uyumsuz ileti tabanlı çözümdür.
+Zaman uyumsuz Mesajlaşma ve olay odaklı iletişimi değişiklikleri birden çok mikro hizmetler ve bunların ilgili etki alanı modelleri arasında yayma, kritik öneme sahiptir. Tartışma mikro hizmetler ve sınırlanmış Bağlamlar (İBH) daha önce belirtildiği gibi modelleri (kullanıcı, müşteri, ürün, hesap, vb.) farklı bir mikro hizmetler veya BCs farklı öğelere anlamına gelebilir. Bu, değişiklikler olduğunda, farklı modelleri arasında değişiklikleri mutabık kılınacak şekilde gerektiği anlamına gelir. Bir son tutarlılık ve zaman uyumsuz Mesajlaşma temel olay temelli iletişim çözümüdür.
 
-İleti kullanırken, işlemler iletileri zaman uyumsuz olarak değiştirerek iletişim kurar. Bir istemci bir komutu veya bir istek için bir hizmet bir ileti göndererek yapar. Hizmet yanıt vermesi, istemciye farklı bir ileti gönderir. İleti tabanlı iletişim olduğundan, istemci yanıt hemen alınmaz olduğunu ve olabileceğini yanıt hiç varsayar.
+Mesajlaşma kullanırken, işlemleri mesaj alışverişleri tarafından zaman uyumsuz olarak iletişim kurar. Bir istemci bir komutu veya bir istek için bir hizmet bir ileti göndererek yapar. Hizmet yanıt vermesi durumunda farklı bir ileti istemciye geri gönderir. Bir ileti tabanlı iletişim olduğundan, istemci yanıtı hemen alınmaz, ve olabileceğini yanıt hiç varsayar.
 
-Bir ileti başlığı (meta verileri tanımlama veya güvenlik bilgileri gibi) ve gövde tarafından oluşur. İletiler genellikle AMQP gibi zaman uyumsuz protokolleri üzerinden gönderilir.
+Bir ileti üst bilgisi (kimlik veya güvenlik bilgileri gibi meta veriler) ile bir gövde oluşur. İletileri, genellikle AMQP gibi zaman uyumsuz protokolleri üzerinden gönderilir.
 
-Tercih edilen mikro topluluk iletişiminde bu tür için büyük aracıların ve SOA içinde kullanılan orchestrators farklı bir basit ileti Aracısı altyapısıdır. Bir basit ileti Aracısı "yalnızca RabbitMQ veya Azure Service Bus gibi bulutta ölçeklenebilir service bus gibi basit uygulamalarıyla birlikte bir ileti Aracısı işlevi gören genellikle dumb," altyapısıdır. Bu senaryoda, "Akıllı" düşünmeye çoğunu hala oluşturan ve iletileri tüketen uç noktalardan yaşadığı — diğer bir deyişle, mikro içinde.
+Bu tür bir mikro hizmetler topluluğundaki iletişimi için tercih edilen altyapı büyük aracıları ve SOA içinde kullanılan düzenleyicileri farklı basit ileti aracısıdır. Bir basit ileti Aracısı "yalnızca RabbitMQ veya Azure Service Bus gibi bulut ortamındaki bir ölçeklenebilir service bus gibi basit uygulamaları ile bir ileti aracısı olarak işlev gören genellikle dumb," altyapısıdır. Bu senaryoda, çoğu "Akıllı" düşünce hala oluşturan ve iletileri kullanmaya uç noktaların yaşadığı — diğer bir deyişle, mikro hizmetler.
 
-İzleyin, mümkün olduğunca denemelisiniz başka bir dahili hizmetleri arasında yalnızca zaman uyumsuz Mesajlaşma kullanın ve zaman uyumlu iletişimi (HTTP gibi) yalnızca istemci uygulamalardan (API ağ geçitleri ve ilk düzeyi ön uç hizmetleri kullanan kuralıdır mikro).
+İç hizmetleri arasında yalnızca zaman uyumsuz mesajlaşmayı kullanın ve zaman uyumlu iletişimini (HTTP gibi) istemci uygulamalardan yalnızca ön uç hizmetlerine (API ağ geçitleri ayrıca ilk düzeyi kullanmak için başka bir kural uygulayın, mümkün olduğunca denemelisiniz sağlamaktır mikro).
 
-Zaman uyumsuz Mesajlaşma iletişim iki tür vardır: tek alıcı ileti tabanlı iletişim ve birden çok alıcıya ileti tabanlı iletişim. Aşağıdaki bölümlerde bunlarla ilgili ayrıntıları sağlayın.
+Zaman uyumsuz Mesajlaşma iletişim iki tür vardır: tek bir alıcı ileti tabanlı iletişim ve birden çok alıcıya ileti tabanlı iletişim. Aşağıdaki bölümlerde bunlarla ilgili ayrıntıları sunuyoruz.
 
-## <a name="single-receiver-message-based-communication"></a>Tek alıcı ileti tabanlı iletişim 
+## <a name="single-receiver-message-based-communication"></a>Tek bir alıcı ileti tabanlı iletişim 
 
-Tek bir alıcı ile zaman uyumsuz iletişim ileti tabanlı bir iletiyi kanaldan okuma ve ileti yalnızca bir kez işlenir tüketicilere tam olarak birine teslim noktadan noktaya iletişim anlamına gelir. Ancak, özel durumlar vardır. Örneğin, hatadan otomatik olarak kurtarma denediğinde bir bulut sistemde, aynı iletiyi birden çok kez gönderilebilir. Ağ veya diğer hatalar nedeniyle istemci iletileri gönderme yeniden denemek, ve sunucunun belirli bir ileti yalnızca bir kez işlemek için ıdempotent olması için bir işlemi uygulamak sahiptir.
+İleti tabanlı zaman uyumsuz iletişim ile tek bir alıcı, tam olarak bir kanaldan okuma ve ileti yalnızca bir kez işlenir tüketici için bir iletiyi teslim noktadan noktaya iletişim anlamına gelir. Ancak, özel durumlar vardır. Örneğin, otomatik olarak hatalardan kurtarmak için çalışan bir bulut sisteminde aynı iletiyi birden çok kez gönderilebilir. Ağ veya diğer hatalar nedeniyle istemci iletileri gönderme yeniden deneme yapabilmek varsa ve sunucunun belirli bir iletiyi yalnızca bir kez işlemek için bir kere etkili olacak şekilde bir işlemi uygulamak.
 
-Tek alıcı ileti tabanlı iletişim, özellikle de başka bir Şekil 4-Bu yaklaşım gösteren 18'de gösterildiği gibi zaman uyumsuz komutları bir mikro göndermek için uygundur.
+Tek bir alıcı ileti tabanlı iletişim, özellikle de Şekil 4-Bu yaklaşım gösteren 18'de gösterildiği gibi başka bir zaman uyumsuz komutları bir mikro hizmet göndermek için uygundur.
 
-İleti tabanlı iletişim (ya da komutları veya olay ile) gönderme başladığınızda, zaman uyumlu HTTP iletişimi ile ileti tabanlı iletişim karıştırma kaçınmalısınız.
+İleti tabanlı iletişim (ya da komutları veya olayları) gönderme başlattıktan sonra ileti tabanlı iletişim zaman uyumlu HTTP iletişimi ile karıştırma kaçınmanız gerekir.
 
 ![](./media/image18.PNG)
 
-**Şekil 4-18**. Zaman uyumsuz ileti alma tek bir mikro hizmet
+**Şekil 4-18**. Tek bir mikro hizmet zaman uyumsuz ileti alma
 
-Komutları istemci uygulamalarından geldiğinizde, bunlar HTTP zaman uyumlu komutlar olarak uygulanabilir olduğunu unutmayın. Daha yüksek ölçeklenebilirlik gerektiğinde veya bir ileti tabanlı iş işlemde zaten olduğunda ileti tabanlı komutları kullanmanız gerekir.
+Komutlar istemci uygulamalarından geldiğinizde, bunlar HTTP zaman uyumlu komutları uygulanabilir olduğunu unutmayın. Daha yüksek ölçeklenebilirlik gerektiğinde veya zaten bir ileti tabanlı iş süreci içinde olduğunda ileti tabanlı komutları kullanmanız gerekir.
 
 ## <a name="multiple-receivers-message-based-communication"></a>Birden çok alıcıya ileti tabanlı iletişim 
 
-Daha esnek bir yaklaşım gönderenden iletişimi ek abone mikro veya dış uygulamalar için kullanılabilir olacak bir yayımlama/abonelik mekanizması kullanılacak isteyebilirsiniz. Bu nedenle, izlemek için yardımcı [açık/kapalı İlkesi](https://en.wikipedia.org/wiki/Open/closed_principle) gönderen hizmet. Böylece, ek aboneleri gönderen hizmet değiştirmek zorunda kalmadan gelecekte eklenebilir.
+Daha esnek bir yaklaşım da iletişiminizin gönderenden ek abone mikro hizmetler veya dış uygulamalar için kullanılabilir olması bir yayımlama/abonelik mekanizması kullanmak isteyebilirsiniz. Bu nedenle, izlemek için yardımcı [açık/kapalı ilkesine](https://en.wikipedia.org/wiki/Open/closed_principle) gönderen hizmetinde. Bu şekilde, gönderen hizmeti değiştirmek zorunda kalmadan gelecekte ek aboneleri eklenebilir.
 
-Yayımla ve abone iletişimi kullandığınızda, tüm abone Yayımla olayları olay bus arabirim kullanıyor olabilir.
+Bir yayımlama/abone olma iletişimi kullandığınızda, yayımlama olaylarına hiçbir abone için bir olay veri yolu arabirimi kullanıyor olabilir.
 
 ## <a name="asynchronous-event-driven-communication"></a>Olay tabanlı zaman uyumsuz iletişim
 
-Olay tabanlı zaman uyumsuz iletişim kullanırken, bir mikro hizmet kendi etki alanı içinde bir şey ve başka bir mikro hizmet bunun farkında ürün kataloğu mikro fiyat değişikliği gibi olması gerektiğinde bir tümleştirme olay yayımlar. Bunlar zaman uyumsuz olarak alabilir şekilde ek mikro olaylara abone olma. Bu durum oluştuğunda alıcılar yayımlanmasını daha fazla tümleştirme olaylarını neden olabilir, kendi etki alanı varlıkları güncelleştirebilir. Bu yayımlama/abonelik sistem genellikle bir olay veri yolu uygulaması kullanılarak gerçekleştirilir. Olay veri yolu bir soyutlama ya da arabirimle abone veya olayları aboneliği ve olayları yayımlamak için gereken API olarak tasarlanmış olabilir. Olay bus de sahip olabilir veya daha fazla uygulamaları bir ileti sırası veya zaman uyumsuz iletişim ve publish/subscribe modelini destekleyen hizmet veri yolu gibi tüm işlemler arası ve mesajlaşma Aracısı göre.
+Zaman uyumsuz olay temelli iletişim kullanırken, bir mikro hizmet kendi etki alanı içinde bir şey ve başka bir mikro hizmet ve ürün kataloğu olan bir mikro hizmet, fiyat değişikliği gibi unutmayın gerektiğinde bir tümleştirme olayı yayımlar. Bunları bir zaman uyumsuz olarak alabilmesi için ek bir mikro hizmetler olaylara abone olun. Alıcılar, bu durum oluştuğunda daha fazla tümleştirme olayları yayımlanacak neden olabilir, kendi etki alanı varlıklarının güncelleştirebilir. Bu yayımlama/abone olma sistem, genellikle bir olay veri yolu uygulaması kullanılarak gerçekleştirilir. Olay veri yolu, bir Özet ya da arabirimle abone olmak veya abonelikten olayları ve olayları yayımlamak için gereken API olarak tasarlanabilir. Daha fazla uygulamaları tüm işlemler arası ve mesajlaşma Aracısı, bir ileti kuyruğu veya zaman uyumsuz iletişim ve bir yayımlama/abone olma modelini destekleyen bir service bus gibi temel veya olay veri yolu biri de olabilir.
 
-Bir sistem tümleştirme olaylar tarafından yönlendirilen nihai tutarlılık kullanıyorsa, bu yaklaşım son kullanıcıya tamamen temizleyin yapılması önerilir. Sistem SignalR veya istemci yoklama sistemlerden gibi tümleştirme olaylarını taklit eden bir yaklaşım kullanmamanız gerekir. Son kullanıcı ve işletme sahibi açıkça nihai tutarlılık sistemde çekirdeğin ve çoğu durumda bu yaklaşım herhangi bir sorun iş yok açık olduğu sürece farkına sahiptir.
+Bir sistem tümleştirme olayları tarafından yönetilen son tutarlılık kullanıyorsa, bu yaklaşım son kullanıcıya tamamen açık yapılması önerilir. Sistem SignalR veya istemci yoklama sistemlerden gibi tümleştirme olayları taklit eden bir yaklaşım kullanmanız gerekir. Son kullanıcı ve işletme sahibi açıkça sistemde nihai tutarlılık yaklaşımını benimseyin ve açık olduğu sürece, çoğu durumda bu yaklaşımla, herhangi bir sorun iş yok fark gerekir.
 
-Daha önce belirtildiği gibi [sorunları ve çözümleri için Dağıtılmış veri yönetimi](#challenges-and-solutions-for-distributed-data-management) bölümünde, birden çok mikro span iş görevlerini uygulamak için tümleştirme olaylarını kullanabilirsiniz. Bu nedenle bu hizmetleri arasında nihai tutarlılık sahip olur. Sonuçta tutarlı bir işlem dağıtılmış işlemlerin koleksiyonu yapılır. Her bir eylemde ilgili mikro hizmet bir etki alanı varlığı güncelleştirir ve aynı uçtan uca iş görevi içinde bir sonraki eylem başlatır başka bir tümleştirme olay yayımlar.
+Daha önce belirtildiği gibi [Dağıtılmış veri yönetimi için sorunlar ve çözümler](#challenges-and-solutions-for-distributed-data-management) bölümünde birden çok mikro hizmetler span iş görevlerini uygulamak için tümleştirme olayları kullanabilirsiniz. Bu nedenle, bu hizmetler arasındaki son tutarlılık gerekir. Sonunda tutarlı bir işlem, dağıtılmış işlemlerin bir koleksiyonu yapılır. Her eylem ilgili mikro hizmet etki alanı varlığı güncelleştirir ve sonraki eylem içinde aynı uçtan uca iş görevi başlatan başka bir tümleştirme olay yayımlar.
 
-Önemli bir aynı olaya abone olduğunuz birden çok mikro iletişim isteyebilirsiniz noktadır. Yayımla/abone ol kullanabilirsiniz, bunun için ileti üzerinde olay denetimli iletişimi, Şekil 4-19'gösterildiği gibi temel. Bu yayımlama/abonelik mekanizması mikro hizmet mimarisi için özel değildir. Benzer şekilde [ilişkisindeki bağlamları](https://martinfowler.com/bliki/BoundedContext.html) içinde DDD iletişim veya şekilde okunur bir veritabanına yazma veritabanından güncelleştirmeleri yayılması [komut ve sorgu sorumluluk ayrımı (CQRS)](https://martinfowler.com/bliki/CQRS.html)mimarisi düzeni. Dağıtılmış sisteminizi arasında birden çok veri kaynaklarına arasında nihai tutarlılık sağlamak için belirtilir.
+Önemli bir aynı olaya abone birden fazla mikro hizmetin iletişim kurmak isteyebilirsiniz noktadır. Yayımlama/abone olma kullanabilirsiniz. Bunu yapmak için Mesajlaşma iletişimi olay odaklı, Şekil 4-19'gösterildiği gibi temel. Bu yayımlama/abonelik mekanizması mikro hizmet mimarisi için özel değildir. Benzer şekilde [sınırlanmış Bağlamlar](https://martinfowler.com/bliki/BoundedContext.html) içinde DDD iletişim veya şekilde veritabanına okuma yazma veritabanından güncelleştirmeleri yaymak [komut ve sorgu sorumluluğu ayrımı (CQRS)](https://martinfowler.com/bliki/CQRS.html)mimari deseni. Nihai tutarlılık, dağıtılmış sisteme birden çok veri kaynağında sanal makineye sahip olmaktır.
 
 ![](./media/image19.png)
 
-**Şekil 4-19**. Olay tabanlı zaman uyumsuz ileti iletişimi
+**Şekil 4-19**. Zaman uyumsuz olay temelli ileti iletişimi
 
-Uygulamanızın hangi olay denetimli, ileti tabanlı iletişim için kullanılacak protokolü belirler. [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol) güvenilir kuyruğa alınan iletişim elde etmeye yardımcı olabilir.
+Uygulamanız hangi olay odaklı, ileti tabanlı iletişim için kullanılacak protokolü belirler. [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol) güvenilir kuyruğa alınan iletişim elde etmeye yardımcı olabilir.
 
-Bir olay veri yoluna kullandığınızda, sınıflardaki ilgili bir uygulama gibi bir ileti aracısından API'sini kullanarak kod ile temel bir özet düzeyi (örneğin, bir olay veri yolu arabirimi) kullanmak isteyebilirsiniz [RabbitMQ](https://www.rabbitmq.com/) ya da hizmet veri yolu gibi[Azure Service Bus konuları ile](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions). Alternatif olarak, olay veri yolu iyileştirir ve yayımlama/abonelik sistem NServiceBus, MassTransit veya Brighter gibi daha üst düzey bir hizmet veri yolu kullanmak isteyebilirsiniz.
+Bir olay veri yolu kullandığınızda, sınıflarda ilgili bir uygulama gibi bir ileti Aracısı API'den kullanarak kod ile temel bir özet düzeyi (örneğin, bir olay veri yolu arabirimi) kullanmak isteyebilirsiniz [RabbitMQ](https://www.rabbitmq.com/) veya gibibirservicebus[Azure Service Bus konuları ile](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions). Alternatif olarak, olay veri yolu ortaya çıkaran ve yayımlama/abonelik sistem NServiceBus, MassTransit veya Brighter gibi daha üst düzey bir hizmet veri yolu kullanmak isteyebilirsiniz.
 
-## <a name="a-note-about-messaging-technologies-for-production-systems"></a>Üretim sistemleri için teknolojileri Mesajlaşma hakkında bir Not
+## <a name="a-note-about-messaging-technologies-for-production-systems"></a>Üretim sistemlerine yönelik teknolojileri Mesajlaşma hakkında bir Not
 
-İleti, soyut olay bus uygulamak için kullanılabilir farklı düzeylerde teknolojilerdir. Örneğin, diğer ürünler gibi NServiceBus, MassTransit veya RabbitMQ ve Azure Service Bus üzerinde çalışabilirsiniz Brighter'den daha düşük düzeydeki RabbitMQ (Mesajlaşma Aracısı aktarım) ve Azure Service Bus gibi ürün sit. Tercih ettiğiniz kaç Zengin özellikleri uygulama düzeyinde ve uygulamanız için gereksinim duyduğunuz Giden kutusu ölçeklenebilirlik bağlıdır. Biz eShopOnContainers örnek yaptığınız gibi yeni bir kavram kanıtı olay veri yolu için geliştirme ortamınızı uygulamak için basit bir uygulama Docker kapsayıcısı üzerinde çalışan RabbitMQ üstünde yeterli olabilir.
+Mesajlaşma, soyut olay veri yolu uygulamak için kullanılabilen farklı düzeylerde teknolojilerdir. Örneğin, diğer ürünler gibi NServiceBus, MassTransit ya da RabbitMQ ve Azure Service Bus üzerinde çalışabilirsiniz Brighter, daha düşük bir düzeyde RabbitMQ (bir Mesajlaşma Aracısı taşıma) ve Azure Service Bus gibi ürünleri durur. Seçtiğiniz uygulama düzeyinde ve kullanıma hazır ölçeklenebilirlik, uygulamanız için gereken kaç Zengin özellikleri bağlıdır. Hizmetine örnek uyguladığımız yalnızca bir kavram kanıtı olay veri yolu için geliştirme ortamınızı uygulamak için basit bir uygulama üzerinde bir Docker kapsayıcısı üzerinde çalışırken RabbitMQ yeterli olabilir.
 
-Ancak, kritik ve hiper ölçeklenebilirlik gereken üretim sistemlerine Azure Service Bus değerlendirmek isteyebilirsiniz. Üst düzey soyutlamalar ve dağıtılmış uygulamaların geliştirilmesini kolaylaştırır özellikler için NServiceBus, MassTransit ve Brighter gibi diğer ticari ve açık kaynak hizmeti yollarına değerlendirmek öneririz. Elbette, kendi hizmet veri yolu özellikleri üzerinde alt düzey teknolojileri RabbitMQ ve Docker gibi oluşturabilirsiniz. Ancak bu tesisat iş özel Kurumsal uygulama için çok fazla maliyeti.
+Ancak, görev açısından kritik ve ölçeklenebilirlik hyper gereken üretim sistemlerine Azure Service Bus değerlendirmek isteyebilirsiniz. Yüksek düzeyde soyutlama ve dağıtılmış uygulamaların geliştirilmesini kolaylaştıran özellikler için NServiceBus MassTransit ve Brighter gibi diğer ticari ve açık kaynak hizmeti yollarına değerlendirmek öneririz. Elbette, kendi hizmet veri yolu özellikleri RabbitMQ ve Docker gibi alt düzey teknolojileri üzerine oluşturabilir. Ancak bu tesisat iş özel Kurumsal uygulama için çok fazla maliyeti.
 
-## <a name="resiliently-publishing-to-the-event-bus"></a>Olay yoluna resiliently yayımlama
+## <a name="resiliently-publishing-to-the-event-bus"></a>Dayanıklı olay yoluna yayımlama
 
-Resiliently kendi ilgili tümleştirme olay şekilde göre olay veri yolu içine yayımlanırken özgün mikro hizmet durumunda otomatik olarak güncelleştirmek nasıl bir olay denetimli mimari arasında birden çok mikro uygularken zor olduğu işlemler. Ek yaklaşımlar de olabilir ancak bunu yapmanın birkaç yolu verilmiştir.
+Atomik olarak özgün mikro hizmet durumunda dayanıklı kendi ilgili tümleştirme olay şekilde göre olay veri yolu içine yayımlanırken güncelleştirmek nasıl bir olay denetimli mimari birden fazla mikro hizmetler arasında uygularken zor olduğu işlem. Ek yaklaşımları de olabilir ancak bunu yapmanın birkaç yolu şunlardır:
 
--   İşlem (DTC tabanlı) sırası MSMQ gibi kullanma. (Ancak, eski bir yaklaşım budur.)
+-   MSMQ gibi bir işlem (DTC tabanlı) kuyruğu kullanarak. (Ancak, eski bir yaklaşım budur.)
 
 -   Kullanarak [işlem oturum araştırma](https://www.scoop.it/t/sql-server-transaction-log-mining).
 
--   Tam kullanarak [olay kaynak Hizmeti'nden](https://msdn.microsoft.com/library/dn589792.aspx) düzeni.
+-   Tam kullanarak [olay kaynağını belirleme](https://msdn.microsoft.com/library/dn589792.aspx) deseni.
 
--   Kullanarak [Giden kutusu düzeni](http://gistlabs.com/2014/05/the-outbox/): bir işlemsel veritabanı tablosu olay oluşturun ve yayımlamadan bir olayı oluşturan bileşen temeli olacak bir ileti sırası olarak.
+-   Kullanarak [giden deseni](http://gistlabs.com/2014/05/the-outbox/): işlemsel veritabanı tablo olarak olay oluşturmak ve yayımlamak bir olay oluşturan bileşen temeli olacak bir ileti sırası.
 
-Zaman uyumsuz iletişim kullanırken dikkate alınması gereken ek ileti idempotence ve ileti yinelenenleri kaldırma konulardır. Bu konular bölümünde ele alınmıştır [mikro (tümleştirme olayları) arasındaki iletişimi olay tabanlı uygulama](#implementing_event_based_comms_microserv) bu kılavuzda daha sonra.
+Zaman uyumsuz iletişim kullanırken dikkate alınması gereken ek konuları ileti Eşkuvvetlilik ve ileti yinelenen verileri kaldırma ' dir. Bu konulara bölümünde ele alınmıştır [(tümleştirme olayları) mikro hizmetler arasında olay tabanlı iletişim uygulama](#implementing_event_based_comms_microserv) bu kılavuzun sonraki.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
--   **İleti güdümlü olay**
+-   **Mesajlaşma typu EventDriven**
     [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
--   **Kanal Yayınla/Abone ol**
-    [*http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
+-   **Kanal yayımlama/abone olma**
+    [*https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
 -   **UDI Dahan. Açıklanan CQRS**
     [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
 
--   **Komut ve sorgu sorumluluk ayrımı (CQRS)**
+-   **Komut ve sorgu sorumluluğu ayrımı (CQRS)**
     [*https://docs.microsoft.com/azure/architecture/patterns/cqrs*](https://docs.microsoft.com/azure/architecture/patterns/cqrs)
 
--   **Sınırlanmış bağlamları arasında iletişim**
+-   **Sınırlanmış Bağlamlar arasında iletişim kurma**
     [*https://msdn.microsoft.com/library/jj591572.aspx*](https://msdn.microsoft.com/library/jj591572.aspx)
 
--   **Nihai tutarlılık**
+-   **Son tutarlılık**
     [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
--   **Jimmy Bogard. Esnekliği doğru yeniden düzenleme: Bağlantı değerlendirme**
+-   **Jimmy Bogard. Dayanıklılığı yeniden düzenleme: Bağlantı değerlendirme**
     [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
 
 >[!div class="step-by-step"]
 [Önceki](communication-in-microservice-architecture.md)
-[sonraki](maintain-microservice-apis.md)
+[İleri](maintain-microservice-apis.md)

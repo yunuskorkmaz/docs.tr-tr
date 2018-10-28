@@ -3,17 +3,17 @@ title: .NET Core ile .NET Framework'ten taşıma
 description: Taşıma işlemlerini anlamanıza ve .NET Core için bir .NET Framework projesi taşırken faydalı bulabileceğiniz araçları keşfedin.
 author: cartermp
 ms.author: mairaw
-ms.date: 06/20/2016
-ms.openlocfilehash: d273b3abe46de59aa55b5b9a531d3c572a065124
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.date: 10/23/2018
+ms.openlocfilehash: 0c0ec3d8ab09e34e8dae24623903ca571f2cca6c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48835398"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192778"
 ---
 # <a name="porting-to-net-core-from-net-framework"></a>.NET Core ile .NET Framework'ten taşıma
 
-.NET Framework üzerinde çalışan kod kendinizi, kodunuzu .NET Core 1.0 üzerinde çalışan ilginizi çekebilir.  Bu makalede, taşıma işlemine genel bakış ve bir listesi için .NET Core taşırken faydalı bulabileceğiniz anlatılmaktadır.
+.NET Framework üzerinde çalışan kod kendinizi, kodunuzu .NET Core üzerinde çalışan ilginizi çekebilir.  Bu makalede, taşıma işlemine genel bakış ve bir listesi için .NET Core taşırken faydalı bulabileceğiniz anlatılmaktadır.
 
 ## <a name="overview-of-the-porting-process"></a>Taşıma işlemine genel bakış
 
@@ -23,7 +23,7 @@ Taşıma için önerilen işlemi aşağıdaki adımları dizisini izler.  İşle
 
    Bu, üçüncü taraf bağımlılıkları olan, bağımlı nasıl anlama içerecektir bunları sağlanmıyorsa de .NET Core ve adımlar üzerinde çalıştırmak için uygulayabileceğiniz nasıl.
    
-2. Hedef .NET Framework 4.6.2 taşımak istediğiniz tüm projeleri yeniden hedefle
+2. .NET Framework'ün en son sürümünü hedefleyecek şekilde bağlantı noktası istediğiniz tüm projeleri yeniden hedefle
 
    Bu, belirli bir API'yi burada .NET Core desteği durumlarda .NET Framework özel hedefler için API alternatifler kullanabilirsiniz sağlar.
    
@@ -33,7 +33,7 @@ Taşıma için önerilen işlemi aşağıdaki adımları dizisini izler.  İşle
    
 4. Testleri kod bağlantı noktası.
 
-   .NET Core'a taşıma temelinizde böyle büyük bir değişiklik olduğundan, yüksek oranda üzerinden kod bağlantı noktası olarak testleri çalıştırabilmeniz için unity'nin testlerinizi almak için önerilir.  .NET Core 1.0, bugün MSTest, xUnit ve Nunit'i destekler.
+   .NET Core'a taşıma temelinizde böyle büyük bir değişiklik olduğundan, yüksek oranda üzerinden kod bağlantı noktası olarak testleri çalıştırabilmeniz için unity'nin testlerinizi almak için önerilir.  .NET Core, bugün MSTest, xUnit ve Nunit'i destekler.
    
 6. Taşıma için planınızı yürütün!
 

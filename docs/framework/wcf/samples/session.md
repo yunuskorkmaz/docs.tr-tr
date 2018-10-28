@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Sessions
 ms.assetid: 36e1db50-008c-4b32-8d09-b56e790b8417
-ms.openlocfilehash: ce91adbb5156eef09221a76773e5a9551f0e8440
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0f6a06bfb9d1e5274df047e45a5042353515e206
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517898"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50190783"
 ---
 # <a name="session"></a>Oturum
 Oturum örnek bir oturum gerektiren bir sözleşmesini uygulama gösterilmiştir. Oturum, birden çok işlemi gerçekleştirmek için bağlam sağlar. Önceki bir işlemin durumunu sonraki işlemleri kullanabilir bu durum belirli bir oturum ile ilişkilendirmek bir hizmet sağlar. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md), hesaplayıcı hizmet uygular. `ICalculator` Sözleşme, çalışan bir sonuç tutarken gerçekleştirilecek aritmetik işlemler kümesi izin verecek şekilde değiştirildi. Bu işlev tarafından tanımlanan `ICalculatorSession` sözleşme. Birden çok hizmet işlemleri bir hesaplama gerçekleştirmek için adlandırıldığı gibi hizmet için bir istemci durumu korur. İstemci, çağırarak geçerli sonucu alabilirsiniz `Result()` çağırarak sıfır sonucu temizleyin `Clear()`.  
@@ -21,7 +21,7 @@ Oturum örnek bir oturum gerektiren bir sözleşmesini uygulama gösterilmiştir
   
  Ayarı <xref:System.ServiceModel.SessionMode> için sözleşmenin `Required` sözleşme üzerinden belirli bir bağlama olarak sunulduğunda oturumları bağlamayı desteklediğini sağlar. Bağlama oturumları desteklemiyorsa bir özel durum oluşturulur. `ICalculatorSession` Arabirimi tanımlanmış bir veya daha fazla işlemler çağrılabilir Öyle ki, çalışan bir sonuç değiştirir aşağıdaki örnek kodda gösterildiği gibi.  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples", SessionMode=SessionMode.Required)]  
 public interface ICalculatorSession  
 {  
@@ -42,7 +42,7 @@ public interface ICalculatorSession
   
  Hizmeti kullandığı bir <xref:System.ServiceModel.InstanceContextMode> , <xref:System.ServiceModel.InstanceContextMode.PerSession> gelen her oturum için belirli hizmet örneğinin bağlamı bağlamak için. Bu, yerel üye değişkenini her oturumda çalışan sonucu bir hizmet sağlar.  
   
-```  
+```csharp
 [ServiceBehavior(InstanceContextMode=InstanceContextMode.PerSession)]  
 public class CalculatorService : ICalculatorSession  
 {  
@@ -70,7 +70,7 @@ public class CalculatorService : ICalculatorSession
   
  Örneği çalıştırdığında istemci sunucuya birden çok isteği yapan ve ardından istemci konsol penceresinde görüntüler sonucu ister. İstemci bilgisayarı için istemci penceresinde ENTER tuşuna basın.  
   
-```  
+```console  
 (((0 + 100) - 50) * 17.65) / 2 = 441.25  
 Press <ENTER> to terminate client.  
 ```  

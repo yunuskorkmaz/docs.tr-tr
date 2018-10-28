@@ -2,19 +2,19 @@
 title: İşlem sınıfı
 ms.date: 03/30/2017
 ms.assetid: b19d1496-ef06-4d0c-b2ae-e728ec00cca0
-ms.openlocfilehash: d9256915afe9fdb8e4c91d186131fe41a7094c56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 16de8b25594896349ea546d3def52dd256fe5c70
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487574"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50180945"
 ---
 # <a name="operation-class"></a>İşlem sınıfı
 Çalışma  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```csharp
 class Operation  
 {  
   string Action;  
@@ -33,7 +33,7 @@ class Operation
 ```  
   
 ## <a name="methods"></a>Yöntemler  
- İşlem sınıfı herhangi bir yöntem tanımlamıyor.  
+ İşlem sınıfı herhangi bir yöntemi tanımlamaz.  
   
 ## <a name="properties"></a>Özellikler  
  İşlem sınıfı aşağıdaki özelliklere sahiptir:  
@@ -41,92 +41,92 @@ class Operation
 ### <a name="action"></a>Eylem  
  Veri türü: dize  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- İstek iletisinin WS adresleme eylem.  
+ İstek iletisinin WS-Addressing eylem.  
   
-### <a name="asyncpattern"></a>Başlatıcıda  
- Veri türü: boolean  
+### <a name="asyncpattern"></a>AsyncPattern  
+ Veri türü: Boole  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Zaman uyumsuz olarak kullanarak, bir işlem yapılmayacağını gösterir bir `Begin`[Aç/Kapat köşeli] ve `End`[Aç/Kapat açılı ayraçları] yöntem çiftinin bir hizmet sözleşmesinde.  
+ Bir işlem kullanarak zaman uyumsuz olarak uygulandığını belirtir bir `Begin`[Aç/Kapat açılı ayraçlar] ve `End`hizmet sözleşmesi [Aç/Kapat açılı ayraçlar] yöntemi çifti.  
   
 ### <a name="behaviors"></a>Davranışlar  
- Veri türü: davranış dizisi  
+ Veri türü: davranışı dizi  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
  Bu işlemle ilişkili davranışlar.  
   
 ### <a name="iscallback"></a>IsCallback  
- Veri türü: boolean  
+ Veri türü: Boole  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
  İşlemi bir geri çağırma işlemi olduğunda true olur.  
   
 ### <a name="isinitiating"></a>IsInitiating  
- Veri türü: boolean  
+ Veri türü: Boole  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Yöntemi sunucudaki bir oturum başlatabilirsiniz bir işlem uygulayan olup olmadığını gösterir.  
+ Yöntemi sunucudaki bir oturum başlatabilirsiniz bir işlem uygulayıp uygulamadığını gösterir.  
   
 ### <a name="isoneway"></a>IsOneWay  
- Veri türü: boolean  
+ Veri türü: Boole  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
  Bir işlem bir yanıt iletisi döndürüp döndürmediğini gösterir.  
   
 ### <a name="isterminating"></a>IsTerminating  
- Veri türü: boolean  
+ Veri türü: Boole  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
  Bir işlem bir yanıt iletisi döndürüp döndürmediğini gösterir.  
   
 ### <a name="methodsignature"></a>MethodSignature  
  Veri türü: dize  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- İşlemi yöntemi imzası.  
+ İşlem metodu imzası.  
   
 ### <a name="name"></a>Ad  
  Veri türü: dize  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
  İşlemin adı.  
   
 ### <a name="parametertypes"></a>ParameterTypes  
  Veri türü: dize dizisi  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- İşlemin parametre türleri.  
+ İşlem parametrelerinin türleri.  
   
 ### <a name="replyaction"></a>ReplyAction  
  Veri türü: dize  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
  İşlem yanıt iletisi için SOAP eylemi değeri.  
   
 ### <a name="returntype"></a>ReturnType  
  Veri türü: dize  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
  İşlemin dönüş türü.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|MOF|Bildirilen Servicemodel.mof.|  
+|MOF|Bildirilmiş Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Ad Alanı|İçinde tanımlanan root\ServiceModel|  
+|Ad Alanı|İçinde tanımlı root\ServiceModel|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Description.OperationDescription>

@@ -2,34 +2,34 @@
 title: 'Nasıl yapılır: Visual Basic veya C# içinde nesne modeli oluşturma'
 ms.date: 03/30/2017
 ms.assetid: a0c73b33-5650-420c-b9dc-f49310c201ee
-ms.openlocfilehash: ce7f1f30a606c0d0c81a1afbfc2552ece4fc1029
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 21266ca2d1230a1afc903734d1b4c53b259e50e1
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360399"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50036794"
 ---
 # <a name="how-to-generate-the-object-model-in-visual-basic-or-c"></a>Nasıl yapılır: Visual Basic veya C# içinde nesne modeli oluşturma #
-İçinde [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], programlama diliniz nesne modelinde ilişkisel bir veritabanına eşlendi. İki araçları, Visual Basic veya C# modeli varolan veritabanının meta verileri otomatik olarak oluşturmak için kullanılabilir.  
+İçinde [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], programlama diliniz bir nesne modelinde bir ilişkisel veritabanına eşlendi. İki aracı bir Visual Basic otomatik olarak oluşturmak için kullanılabilir veya C# var olan bir veritabanının meta verilerden model.  
   
--   Visual Studio kullanıyorsanız, kullanabileceğiniz [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] nesne modeli oluşturmak için. [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] Oluşturmanıza yardımcı olmak için zengin bir kullanıcı arabirimi sağlayan bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nesne modeli. Daha fazla bilgi için [LINQ-SQL Visual Studio Araçları](https://docs.microsoft.com/en-us/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).
+-   Visual Studio kullanıyorsanız, kullanabileceğiniz [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] nesne modeli oluşturmak için. [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] Oluşturmanıza yardımcı olmak için zengin kullanıcı arabirimi sağlayan bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nesne modeli. Daha fazla bilgi edinmek, [LINQ to SQL araçlarını Visual Studio'da](https://docs.microsoft.com/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).
   
--   SQLMetal komut satırı aracıdır. Daha fazla bilgi için bkz: [SqlMetal.exe (kod üretme aracı)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
+-   SQLMetal komut satırı aracı. Daha fazla bilgi için [SqlMetal.exe (kod üretme aracı)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   
     > [!NOTE]
-    >  Var olan veritabanı ve bir nesne modeli oluşturmak için istediğiniz yoksa, nesne modeli kodunuzu kullanarak Düzenleyicisi oluşturabilirsiniz ve <xref:System.Data.Linq.DataContext.CreateDatabase%2A>. Daha fazla bilgi için bkz: [nasıl yapılır: dinamik olarak bir veritabanı oluşturmak](../../../../../../docs/framework/data/adonet/sql/linq/how-to-dynamically-create-a-database.md).  
+    >  Bir mevcut veritabanını ve bir nesne modeli oluşturmak için istediğiniz yoksa, nesne modeli kod kullanarak düzenleyici oluşturabilirsiniz ve <xref:System.Data.Linq.DataContext.CreateDatabase%2A>. Daha fazla bilgi için [nasıl yapılır: dinamik olarak veritabanı oluşturma](../../../../../../docs/framework/data/adonet/sql/linq/how-to-dynamically-create-a-database.md).  
   
- Belgelerine [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] kullanarak bir Visual Basic veya C# nesne modeli oluşturmak nasıl örnekler sağlar [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]. Aşağıdaki bilgileri SQLMetal komut satırı aracını kullanma örnekleri sağlayın. Daha fazla bilgi için bkz: [SqlMetal.exe (kod üretme aracı)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
+ Belgeler için [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] bir Visual Basic oluşturmayı örnekler sağlar veya C# nesne modelini kullanarak [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]. SQLMetal komut satırı aracı kullanma örnekleri aşağıdaki bilgileri sağlayın. Daha fazla bilgi için [SqlMetal.exe (kod üretme aracı)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte gösterildiği SQLMetal komut satırı Northwind örnek veritabanı öznitelik tabanlı nesne modeli Visual Basic kodu oluşturur. Saklı yordamları ve işlevleri de işlenir.  
+ SQLMetal komut satırında aşağıdaki örnekte gösterildiği, Northwind örnek veritabanındaki nesne öznitelik tabanlı model olarak Visual Basic kod oluşturur. Saklı yordamları ve işlevleri de işlenir.  
   
 ```  
 sqlmetal /code:northwind.vb /language:vb "c:\northwnd.mdf" /sprocs /functions  
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte gösterildiği SQLMetal komut satırında C# kod Northwind örnek veritabanı öznitelik tabanlı nesne modeli oluşturur. Saklı yordamları ve işlevleri de işlenir ve tablo adları otomatik olarak pluralized.  
+ Aşağıdaki örnekte gösterilen SQLMetal komut satırı oluşturur C# Northwind örnek veritabanıyla kurulan öznitelik tabanlı nesne modeli kodu. Saklı yordamları ve işlevleri de oluşturulur ve tablo adları otomatik olarak pluralized.  
   
 ```  
 sqlmetal /code:northwind.cs /language:csharp "c:\northwnd.mdf" /sprocs /functions /pluralize  

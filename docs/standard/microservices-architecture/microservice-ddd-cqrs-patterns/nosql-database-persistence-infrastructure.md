@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
-ms.openlocfilehash: a5fce347193921305c264df34be99063920af715
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: bb119d62691a714a0c7dbc99079dfc1a1fac3aae
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45747114"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188566"
 ---
 # <a name="using-nosql-databases-as-a-persistence-infrastructure"></a>NoSQL veritabanlarını bir Kalıcılık altyapısı olarak kullanma
 
@@ -54,7 +54,7 @@ Ne zaman NoSQL için taşıma etki alanı modeliniz toplamalarda, tasarım ve ta
 
 ## <a name="introduction-to-azure-cosmos-db-and-the-native-cosmos-db-api"></a>Azure Cosmos DB ve yerel Cosmos DB API giriş
 
-[Azure Cosmos DB](https://docs.microsoft.com/en-us/azure/cosmos-db/introduction) görev açısından kritik uygulamalar için Microsoft'un Global olarak dağıtılmış veritabanı hizmetidir. Azure Cosmos DB sağlar [anahtar teslim küresel dağıtım](https://docs.microsoft.com/en-us/azure/cosmos-db/distribute-data-globally), [aktarım hızı ve depolama esnek ölçeklendirme](https://docs.microsoft.com/en-us/azure/cosmos-db/partition-data) 99. yüzdebirlik dilimde dünya, tek basamaklı milisaniyelik gecikme süreleri [beş iyi tanımlanmış tutarlılık düzeyi](https://docs.microsoft.com/en-us/azure/cosmos-db/consistency-levels)ve garantili yüksek kullanılabilirlik, olanaklarına [sektörde lider SLA'lar](https://azure.microsoft.com/support/legal/sla/cosmos-db/). Azure Cosmos DB [otomatik olarak verilerin dizinini oluşturur](http://www.vldb.org/pvldb/vol8/p1668-shukla.pdf) şema ve dizin yönetimiyle ilgilenmenize gerek kalmadan. Bu çok modelli ve belge, anahtar-değer, grafik ve sütunlu veri modellerini destekler.
+[Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction) görev açısından kritik uygulamalar için Microsoft'un Global olarak dağıtılmış veritabanı hizmetidir. Azure Cosmos DB sağlar [anahtar teslim küresel dağıtım](https://docs.microsoft.com/azure/cosmos-db/distribute-data-globally), [aktarım hızı ve depolama esnek ölçeklendirme](https://docs.microsoft.com/azure/cosmos-db/partition-data) 99. yüzdebirlik dilimde dünya, tek basamaklı milisaniyelik gecikme süreleri [beş iyi tanımlanmış tutarlılık düzeyi](https://docs.microsoft.com/azure/cosmos-db/consistency-levels)ve garantili yüksek kullanılabilirlik, olanaklarına [sektörde lider SLA'lar](https://azure.microsoft.com/support/legal/sla/cosmos-db/). Azure Cosmos DB [otomatik olarak verilerin dizinini oluşturur](https://www.vldb.org/pvldb/vol8/p1668-shukla.pdf) şema ve dizin yönetimiyle ilgilenmenize gerek kalmadan. Bu çok modelli ve belge, anahtar-değer, grafik ve sütunlu veri modellerini destekler.
 
 ![](./media/image19.1.png) Şekil 9-19. Azure Cosmos DB genel dağıtım
 
@@ -123,7 +123,7 @@ Ancak, ne zaman, modelinizi NoSQL veritabanı, kod ve EF Core kodu önemli ölç
 
 Azure Cosmos DB veritabanları, diğer bir .NET uygulamasından gibi kapsayıcılarda, çalıştırılan .NET kodundan erişebilirsiniz. Örneğin, Azure Cosmos DB veritabanları kullandıkları için Locations.API ve Marketing.API mikro Hizmetleri hizmetine uygulanır.
 
-Ancak, bir Docker geliştirme ortamı açısından Azure Cosmos DB'de bir sınırlama yoktur. Bir şirket içi olduğunda bile [Azure Cosmos DB öykünücüsü'nü](https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator) (bilgisayar gibi) bir yerel geliştirme makineniz çalıştırmak kullanabilir, geç 2017, yalnızca Windows, Linux olmayan destekler. 
+Ancak, bir Docker geliştirme ortamı açısından Azure Cosmos DB'de bir sınırlama yoktur. Bir şirket içi olduğunda bile [Azure Cosmos DB öykünücüsü'nü](https://docs.microsoft.com/azure/cosmos-db/local-emulator) (bilgisayar gibi) bir yerel geliştirme makineniz çalıştırmak kullanabilir, geç 2017, yalnızca Windows, Linux olmayan destekler. 
 
 Ayrıca Docker, ancak yalnızca Windows kapsayıcıları bu öykünücüyü çalıştırmak için olasılığı vardır, not ile Linux kapsayıcıları. Uygulamanızı Linux kapsayıcıları olarak bu yana, şu anda dağıtılırsa, geliştirme ortamı için bir başlangıç handicap, Linux ve Windows kapsayıcıları için Docker Windows üzerinde aynı anda dağıtamazsınız. Dağıtılan ya da tüm kapsayıcıları, Windows veya Linux için yapılması gerekir.  
 
@@ -137,7 +137,7 @@ Cosmos DB veritabanları, yerel MongoDB kablo protokolüne yanı sıra .NET içi
 
 Bunun nedeni Linux kapsayıcılar ile Docker ortamlarında kavramları kanıtı için kullanışlı bir yaklaşım, [MongoDB Docker görüntüsü](https://hub.docker.com/r/_/mongo/) Docker Linux kapsayıcıları ve Docker Windows kapsayıcıları destekleyen bir çok yay görüntüsüdür.
 
-9-21, görüntüde gösterildiği gibi MongoDB API'sini kullanarak, yerel geliştirme ortamı için MongoDB, Linux ve Windows kapsayıcıları hizmetine destekler ancak daha sonra bir biçimde ölçeklendirilebilir, taşıyabilirsiniz PaaS olarak Azure Cosmos DB tarafından yalnızca bulut çözümünü [değiştirme Azure Cosmos DB'ye işaret edecek şekilde MongoDB bağlantı dizesini](https://docs.microsoft.com/en-us/azure/cosmos-db/connect-mongodb-account). 
+9-21, görüntüde gösterildiği gibi MongoDB API'sini kullanarak, yerel geliştirme ortamı için MongoDB, Linux ve Windows kapsayıcıları hizmetine destekler ancak daha sonra bir biçimde ölçeklendirilebilir, taşıyabilirsiniz PaaS olarak Azure Cosmos DB tarafından yalnızca bulut çözümünü [değiştirme Azure Cosmos DB'ye işaret edecek şekilde MongoDB bağlantı dizesini](https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account). 
 
 ![](./media/image20-bis.png) Şekil 9-21. Hizmetine üretim için dev-env veya Azure Cosmos DB için MongoDB kapsayıcıları kullanma
 
@@ -147,7 +147,7 @@ Bunun nedeni Linux kapsayıcılar ile Docker ortamlarında kavramları kanıtı 
 
 MongoDB API'sini kullanarak, açık bir avantajı, çözümünüzü farklı ortamlara geçişleri kolayca bu nedenle her iki veritabanı motorlarında, MongoDB veya Azure Cosmos DB, çalıştırabilir içindir. Ancak, bazen, belirli bir veritabanı altyapısı özellikleri tam olarak yararlanabilmek için (yani yerel Cosmos DB API) yerel bir API kullanmak faydalı olur.
 
-Yalnızca bulutta Cosmos DB ile MongoDB kullanarak arasında daha fazla karşılaştırması için bkz [bu sayfa, Azure Cosmos DB kullanmanın avantajları](https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-introduction). 
+Yalnızca bulutta Cosmos DB ile MongoDB kullanarak arasında daha fazla karşılaştırması için bkz [bu sayfa, Azure Cosmos DB kullanmanın avantajları](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction). 
 
 
 ### <a name="analyze-your-approach-for-production-applications-mongodb-api-vs-cosmos-db-api"></a>Üretim uygulamaları için yaklaşımı analiz: MongoDB API'si vs. Cosmos DB API
@@ -295,29 +295,29 @@ ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP=<YourDockerHostIP>
 #ESHOP_AZURE_SERVICE_BUS=<YourAzureServiceBusInfo>
 ```
 
-Azure Cosmos DB bağlantı dizenizi Azure portalından olarak elde edilen ile açıklanan güncelleştirmeyi ve ESHOP_AZURE_COSMOSDB satırı açıklamadan çıkarın [bir MongoDB uygulamasını Azure Cosmos DB'ye bağlanmak](https://docs.microsoft.com/en-us/azure/cosmos-db/connect-mongodb-account).
+Azure Cosmos DB bağlantı dizenizi Azure portalından olarak elde edilen ile açıklanan güncelleştirmeyi ve ESHOP_AZURE_COSMOSDB satırı açıklamadan çıkarın [bir MongoDB uygulamasını Azure Cosmos DB'ye bağlanmak](https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account).
 
 Varsa `ESHOP_AZURE_COSMOSDB` genel değişkeni, out olarak geçersiz kılınan, yani, boş `.env` kapsayıcı adlıhizmetinedağıtılanyerelMongoDBkapsayıcısınıişaretedenbirvarsayılanMongoDBbağlantıdizesikullanır,dosya`nosql.data`.yml aşağıdaki kodda gösterildiği gibi. 
 
 #### <a name="additional-resources"></a>Ek kaynaklar
 
 -   **NoSQL veritabanları için belge verilerini modelleme**
-    [*https://docs.microsoft.com/en-us/azure/cosmos-db/modeling-data*](https://docs.microsoft.com/en-us/azure/cosmos-db/modeling-data)
+    [*https://docs.microsoft.com/azure/cosmos-db/modeling-data*](https://docs.microsoft.com/azure/cosmos-db/modeling-data)
 
 -   **Vaughn Vernon. Ideal etki alanı Odaklı Tasarım toplama Store?**
     [*https://vaughnvernon.co/?p=942*](https://vaughnvernon.co/?p=942)
 
 -   **Azure Cosmos DB'ye giriş: MongoDB API'si** 
-    [*https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-introduction*](https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-introduction)
+    [*https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction*](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction)
 
 -   **Azure Cosmos DB: .NET ve Azure portalıyla bir MongoDB API'si web uygulaması derleme** 
-    [*https://docs.microsoft.com/en-us/azure/cosmos-db/create-mongodb-dotnet *](https://docs.microsoft.com/en-us/azure/cosmos-db/create-mongodb-dotnet )
+    [*https://docs.microsoft.com/azure/cosmos-db/create-mongodb-dotnet *](https://docs.microsoft.com/azure/cosmos-db/create-mongodb-dotnet )
 
 -   **Yerel geliştirme ve test için Azure Cosmos DB öykünücüsü'nü kullanın** 
-    [*https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator*](https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator)
+    [*https://docs.microsoft.com/azure/cosmos-db/local-emulator*](https://docs.microsoft.com/azure/cosmos-db/local-emulator)
 
 -   **Bir MongoDB uygulamasını Azure Cosmos DB'ye bağlanma** 
-    [*https://docs.microsoft.com/en-us/azure/cosmos-db/connect-mongodb-account*](https://docs.microsoft.com/en-us/azure/cosmos-db/connect-mongodb-account)
+    [*https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account*](https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account)
 
 -   **Cosmos DB öykünücüsü Docker görüntüsünü (Windows kapsayıcı)** 
     [*https://hub.docker.com/r/microsoft/azure-cosmosdb-emulator/*](https://hub.docker.com/r/microsoft/azure-cosmosdb-emulator/)
@@ -326,7 +326,7 @@ Varsa `ESHOP_AZURE_COSMOSDB` genel değişkeni, out olarak geçersiz kılınan, 
     [*https://hub.docker.com/r/_/mongo/*](https://hub.docker.com/r/_/mongo/)
 
 -   **MongoChef (Studio 3T) ile bir Azure Cosmos DB kullanma: MongoDB hesabı için API** 
-    [*https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-mongochef*](https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-mongochef)
+    [*https://docs.microsoft.com/azure/cosmos-db/mongodb-mongochef*](https://docs.microsoft.com/azure/cosmos-db/mongodb-mongochef)
 
 
 >[!div class="step-by-step"]

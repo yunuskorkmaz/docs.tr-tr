@@ -2,19 +2,19 @@
 title: TcpConnectionPoolSettings
 ms.date: 03/30/2017
 ms.assetid: 19acfba3-c057-4dbc-bac7-8674d7844d83
-ms.openlocfilehash: 4a30ad3ddfef5d39942345b0e0d5274eeff8e596
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f9e1c043579f632f16a7cf36bf34c2467a743e47
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33485928"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50189569"
 ---
 # <a name="tcpconnectionpoolsettings"></a>TcpConnectionPoolSettings
 TcpConnectionPoolSettings  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```csharp
 class TcpConnectionPoolSettings  
 {  
   string GroupName;  
@@ -25,7 +25,7 @@ class TcpConnectionPoolSettings
 ```  
   
 ## <a name="methods"></a>Yöntemler  
- TcpConnectionPoolSettings sınıfı herhangi bir yöntem tanımlamıyor.  
+ TcpConnectionPoolSettings sınıf herhangi bir yöntemi tanımlamaz.  
   
 ## <a name="properties"></a>Özellikler  
  TcpConnectionPoolSettings sınıfı aşağıdaki özelliklere sahiptir:  
@@ -33,36 +33,36 @@ class TcpConnectionPoolSettings
 ### <a name="groupname"></a>GroupName  
  Veri türü: dize  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Bağlama öğesi tarafından kullanılan bağlantı havuzu grup adı.  
+ Bağlama öğesi tarafından kullanılan bağlantı havuzunu grup adı.  
   
 ### <a name="idletimeout"></a>IdleTimeout  
- Veri türü: datetime  
+ Veri türü: tarih/saat  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
  Bağlantı kesilmeden önce boşta kalabileceği en uzun süre.  
   
 ### <a name="leasetimeout"></a>LeaseTimeout  
- Veri türü: datetime  
+ Veri türü: tarih/saat  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Zaman aşımından önce tamamlamak kira işlemi için en uzun süre.  
+ Kira işlemi zaman aşımına uğramadan önce tamamlanması için en uzun süre.  
   
 ### <a name="maxoutboundconnectionsperendpoint"></a>MaxOutboundConnectionsPerEndpoint  
  Veri türü: SINT32  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Her uç nokta için en fazla giden bağlantı.  
+ Her bir uç noktası için en fazla giden bağlantı.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|MOF|Bildirilen Servicemodel.mof.|  
+|MOF|Bildirilmiş Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Ad Alanı|İçinde tanımlanan root\ServiceModel|  
+|Ad Alanı|İçinde tanımlı root\ServiceModel|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Channels.TcpConnectionPoolSettings>

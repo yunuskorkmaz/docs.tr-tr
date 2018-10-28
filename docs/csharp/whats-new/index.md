@@ -1,54 +1,54 @@
 ---
-title: C# ' - yenilikler C# Kılavuzu
-description: C# dili nasıl gelişen
+title: İçindeki yenilikler C# - C# Kılavuzu
+description: Nasıl olduğunu C# dil gelişen
 ms.date: 11/13/2017
 ms.assetid: 77deec51-a14d-46d4-9bb3-faf449477149
-ms.openlocfilehash: 399550178a12ff520dff033f0f1dc4a7cdfb9591
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: b079c21ee90a797b038b96ae68123a538464c382
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314678"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50047260"
 ---
-# <a name="whats-new-in-c"></a>C# ' ta yenilikler nelerdir? #
+# <a name="whats-new-in-c"></a>C# ' de yenilikler nelerdir? #
 
-Bu sayfa C# dilinin ana her sürümdeki yeni özelliklerin bir yol haritası sağlar. Aşağıdaki bağlantılar, her sürümde eklenen önemli özellikleri hakkında ayrıntılı bilgi sağlar.
+Bu sayfa, her ana sürümünün yeni özelliklerin bir yol haritası sağlar. C# dili. Bağlantısı verilen makalelerden her sürümde eklenen önemli özelliklerle ilgili detaylı bilgi ayrıntılı olarak açıklanmaktadır. Genel bir sürüm veya genel önizlemede, yayımlanmış, yeni özellikler hakkında bilgi bulabilirsiniz. Dil özelliği durum, gelecek sürümlerinde bulunabilir kabul özellikleri dahil olmak üzere ayrıntılı [dotnet/roslyn deposundaki](https://github.com/dotnet/roslyn/blob/master/docs/Language%20Feature%20Status.md) GitHub üzerinde.
 
 > [!IMPORTANT]
-> C# dili türleri ve yöntemleri dayanan bir *standart Kitaplığı* özelliklerinden bazıları için. Özel durum işleme bir örnektir. Her `throw` deyiminin veya ifadesinin işaretli oluşturulan nesne emin olmak için türetilen <xref:System.Exception>. Benzer şekilde, her `catch` yakalanan türü türetilmiş emin olmak için denetlenir <xref:System.Exception>. Her bir sürümü yeni gereksinimler ekleyebilirsiniz. Eski ortamlarda en son dil özellikleri kullanmak için belirli kitaplıkları yüklemeniz gerekebilir. Bu bağımlılıklar, sayfa her belirli bir sürümü için belgelenmiştir. Hakkında daha fazla bilgiyi [dil ve kitaplık arasındaki ilişkileri](relationships-between-language-and-library.md) bu bağımlılığı hakkında arka plan bilgileri için. 
+> C# Dil bağımlı türleri ve yöntemleri bir *standart Kitaplığı* bazı özellikler için. Özel durum işleme bir örnektir. Her `throw` deyiminin veya ifadesinin işaretli oluşturulan nesne emin olmak için türetilen <xref:System.Exception>. Benzer şekilde, her `catch` yakalandı tür türetilir emin olmak için denetlenir <xref:System.Exception>. Her sürüm, yeni gereksinimler ekleyebilirsiniz. En son dil özelliklerini daha eski ortamlarında kullanmak için belirli kitaplıkları yüklemeniz gerekebilir. Bu bağımlılıklar, her belirli bir sürüm sayfasında belgelenmiştir. Daha fazla bilgi edinebilirsiniz [dil ve kitaplığa arasındaki ilişkileri](relationships-between-language-and-library.md) bu bağımlılık hakkında arka plan bilgileri için. 
 
-Noktası sürümündeki yeni özellikleri kullanmak için yapmanız [derleyici dil sürümünü yapılandırmanız](../language-reference/configure-language-version.md) ve sürümü seçin.
+Bir nokta sürümde en son özellikleri kullanmak için yapmanız [derleyici dil sürüm yapılandırma](../language-reference/configure-language-version.md) ve sürüm seçin.
 
-* [C# 7.3](csharp-7-3.md):
-  - Bu sayfa, C# dilinde en son özellikleri açıklar. C# 7.3 şu anda kullanılabilir [Visual Studio 2017 sürüm 15.7](https://visualstudio.microsoft.com/vs/whatsnew/)hem de [.NET Core 2.1 SDK 2.1.300 RC1](../../core/whats-new/index.md).
-* [C# 7.2](csharp-7-2.md):
-  - Bu sayfa C# dilinde eklenen özellikler açıklanmaktadır. C# 7.2 şu anda kullanılabilir [Visual Studio 2017 sürüm 15,5](https://visualstudio.microsoft.com/vs/whatsnew/)hem de [.NET Core 2.0 SDK](../../core/whats-new/index.md).
-* [C# 7.1](csharp-7-1.md):
-  - Bu sayfa, C# 7.1 eklenen özellikler açıklanmaktadır. Bu özellikler eklenmiştir [Visual Studio 2017 sürüm 15.3](https://visualstudio.microsoft.com/vs/whatsnew/)hem de [.NET Core 2.0 SDK](../../core/whats-new/index.md).
-* [C# 7.0](csharp-7.md):
-  - Bu sayfa, C# 7. 0'eklenen özellikler açıklanmaktadır. Bu özellikler eklenmiştir [Visual Studio 2017](https://visualstudio.microsoft.com/vs/whatsnew/) ve [.NET Core 1.0](../../core/whats-new/index.md) ve sonraki sürümler
-* [C# 6](csharp-6.md):
-  - Bu sayfayı C# 6'eklenen özellikler açıklanmaktadır. Bu özellikler Visual Studio 2015'te .NET Core 1.0 ve Windows geliştiricileri için C# macOS ve Linux keşfetme geliştiriciler için kullanılabilir.
-* [Platform desteği arası](../../core/index.md):
-  - C# .NET Core desteğini birden çok platformlarında çalışır. Çalışırken ilgileniyorsanız C# macOS veya çok birini desteklenen Linux dağıtımları, .NET Core hakkında daha fazla bilgi edinin.
-* [.NET derleme Platform SDK](../roslyn-sdk/index.md):
-  - .NET derleme Platform SDK'sı, C# kodu statik çözümleme gerçekleştirir kod yazmanıza olanak sağlar. Olası hataları veya hatalı uygulamaları bulmak, düzeltmeleri önermek ve bu düzeltmeleri bile uygulama için bu API'leri kullanın.
+* [C#7.3](csharp-7-3.md):
+  - Bu sayfada en son özellikleri açıklar C# dili. C#7.3 şu anda içinde [Visual Studio 2017 sürüm 15.7](https://visualstudio.microsoft.com/vs/whatsnew/)hem de [.NET Core 2.1 SDK 2.1.300 RC1](../../core/whats-new/index.md).
+* [C#7.2](csharp-7-2.md):
+  - Bu sayfaya eklenen özellikler açıklanmaktadır C# dili. C#şu anda, 7.2 [Visual Studio 2017 sürüm 15.5](https://visualstudio.microsoft.com/vs/whatsnew/)hem de [.NET Core 2.0 SDK'sını](../../core/whats-new/index.md).
+* [C#7.1](csharp-7-1.md):
+  - Bu sayfaya eklenen özellikler açıklanmaktadır C# 7.1. Bu özellikler eklenmiştir [Visual Studio 2017 sürüm 15.3](https://visualstudio.microsoft.com/vs/whatsnew/)hem de [.NET Core 2.0 SDK'sını](../../core/whats-new/index.md).
+* [C#7.0](csharp-7.md):
+  - Bu sayfaya eklenen özellikler açıklanmaktadır C# 7.0. Bu özellikler eklenmiştir [Visual Studio 2017](https://visualstudio.microsoft.com/vs/whatsnew/) ve [.NET Core 1.0](../../core/whats-new/index.md) ve üzeri
+* [C#6](csharp-6.md):
+  - Bu sayfa, eklenen özellikler açıklanmaktadır C# 6. Bu özellikler için keşfetmek geliştiriciler Visual Studio 2015'te .NET Core 1.0 ve Windows geliştiricileri için kullanılabilir C# macOS ve Linux'ta.
+* [Çapraz platform desteği](../../core/index.md):
+  - C#, .NET Core desteği, birden çok platformda çalıştırır. Çalışırken ilgileniyorsanız C# macOS üzerinde desteklenen çok birini veya Linux dağıtımları hakkında daha fazla bilgi .NET Core.
+* [.NET derleyici Platformu SDK](../roslyn-sdk/index.md):
+  - .NET derleyici Platformu SDK'sı statik analiz gerçekleştirir kod yazmanızı sağlar C# kod. Olası hataları veya hatalı uygulamaları bulmak için düzeltmeler önerir ve bile bu düzeltmeleri uygulayabilirsiniz, bu API'leri kullanabilirsiniz.
 
 ## <a name="previous-versions"></a>Önceki Sürümler
 
-Aşağıdaki listeler dil C# ve Visual Studio .NET önceki sürümlerinde sunulan özellikler anahtar.
+Aşağıdaki önceki sürümlerinde sunulan anahtar özelliklerini listeler C# dil ve Visual Studio.
 
-* Visual Studio .NET 2013:
-  - Visual Studio'nun bu sürümü, hata düzeltmeleri, performans iyileştirmeleri ve hangi hale geldi .NET derleyici Platformu ("Roslyn") teknolojisi önizlemesini dahil [.NET derleyici Platform SDK](../roslyn-sdk/index.md).
-* C# 5, Visual Studio .NET 2012:
+* Visual Studio 2013 .NET:
+  - Visual Studio'nun bu sürümü, hata düzeltmeleri ve performans iyileştirmeleri teknoloji önizlemeleri, dönüştü .NET derleyici Platformu ("Roslyn") dahil [.NET derleyici Platformu SDK'sı](../roslyn-sdk/index.md).
+* C#5, visual Studio .NET 2012:
   - `Async` / `await`, ve [arayan bilgileri](../programming-guide/concepts/caller-information.md) öznitelikleri.
-* C# 4, Visual Studio .NET 2010:
-  - `Dynamic`, [bağımsız değişkenleri adlı](../programming-guide/classes-and-structs/named-and-optional-arguments.md), isteğe bağlı parametreler ve genel [Kovaryans ve karşıt farkı](../programming-guide/concepts/covariance-contravariance/index.md).
-* C# 3, Visual Studio .NET 2008:
-  - Nesne ve koleksiyon başlatıcıları, lambda ifadeleri, genişletme yöntemleri, anonim türler, otomatik özellikleri, yerel `var` çıkarım, yazın ve [dil tümleşik sorgu (LINQ)](../programming-guide/concepts/linq/index.md).
-* C# 2, Visual Studio .NET 2005:
-  - Anonim yöntemler, genel türler, boş değer atanabilir türler, Yineleyiciler/verim `static` sınıfları ve temsilciler Kovaryans ve karşıt varyansını.
-* C# 1.1, Visual Studio .NET 2003:
+* C#4, visual Studio 2010 .NET:
+  - `Dynamic`, [adlandırılmış bağımsız değişkenler](../programming-guide/classes-and-structs/named-and-optional-arguments.md), isteğe bağlı parametreler ve genel [Kovaryans ve karşıt varyansı](../programming-guide/concepts/covariance-contravariance/index.md).
+* C#3, visual Studio 2008 .NET:
+  - Nesne ve koleksiyon başlatıcıları, lambda ifadeleri, genişletme yöntemleri, anonim türler, otomatik özellikleri, yerel `var` anlam çıkarma, ve [dil tümleşik sorgu (LINQ)](../programming-guide/concepts/linq/index.md).
+* C#2, visual Studio .NET 2005:
+  - Anonim yöntemler, genel türler, boş değer atanabilir türler, Yineleyiciler/yield `static` sınıfları ve temsilciler için Kovaryans ve karşıt farkı.
+* C#1.1, visual Studio .NET 2003:
   - `#line` pragma ve xml belge açıklamaları.
-* C# 1, Visual Studio .NET 2002:
-  - İlk sürümünü [C#](../csharp.md).
+* C#1, visual Studio .NET 2002:
+  - İlk sürümü [ C# ](../csharp.md).

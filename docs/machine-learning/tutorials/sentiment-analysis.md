@@ -4,12 +4,12 @@ description: ML.NET ikili sınıflandırma senaryoda yaklaşım tahmin uygun eyl
 ms.date: 06/04/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 7d2935fafe9dbad28205c8a896d97d80474a686f
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: fd0a1ad246c6d50db35e3d0f0332a82b256902c1
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838837"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453170"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Öğretici: Kullanımı bir yaklaşım analizi ikili sınıflandırma senaryosunda ML.NET
 
@@ -175,11 +175,11 @@ public static async Task<PredictionModel<SentimentData, SentimentPrediction>> Tr
 
 ## <a name="ingest-the-data"></a>Veri alma
 
-Yeni bir örneğini başlatır <xref:Microsoft.ML.LearningPipeline> veri yükleme, veri işleme/özellik kazandırma sayesinde ve model içerecektir. İlk satırı olarak aşağıdaki kodu ekleyin `Train` yöntemi:
+Yeni bir örneğini başlatır <xref:Microsoft.ML.Legacy.LearningPipeline> veri yükleme, veri işleme/özellik kazandırma sayesinde ve model içerecektir. İlk satırı olarak aşağıdaki kodu ekleyin `Train` yöntemi:
 
 [!code-csharp[LearningPipeline](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#5 "Create a learning pipeline")]
 
-<xref:Microsoft.ML.Data.TextLoader> Nesne ilk işlem hattı parçasıdır ve eğitim dosya verileri yükler.
+<xref:Microsoft.ML.Legacy.Data.TextLoader> Nesne ilk işlem hattı parçasıdır ve eğitim dosya verileri yükler.
 
 [!code-csharp[TextLoader](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#6 "Add a text loader to the pipeline")]
 
@@ -187,13 +187,13 @@ Yeni bir örneğini başlatır <xref:Microsoft.ML.LearningPipeline> veri yüklem
 
 Ön işleme ve verileri temizleme bir veri kümesi, machine learning için etkili bir şekilde kullanılmadan önce gerçekleşen önemli görevlerdir. Ham veriler genellikle gürültülü ve güvenilmeyen ve değerleri eksik olabilir. Veri modelleme görevleri olmadan kullanarak yanıltıcı sonuçlara neden olabilir. ML. NET dönüştürme işlem hatları, eğitim veya test etmeden önce verilerinizi uygulanan dönüştürmeler özel bir dizi oluşturmak izin verin. Dönüşümler birincil amacı veri özellik kazandırma sayesinde için ' dir. Bir dönüştürme ardışık düzen avantajı, test verileri uygulamak için işlem hattı kaydetme dönüştürme işlem hattı tanımını sonra olmasıdır.
 
-Geçerli bir <xref:Microsoft.ML.Transforms.TextFeaturizer> dönüştürülecek `SentimentText` sütununa bir [sayısal vektör](../resources/glossary.md#numerical-feature-vector) adlı `Features` makine öğrenimi algoritması tarafından kullanılan. Bu ön işleme/özellik kazandırma sayesinde adımdır. ML.NET içinde kullanılabilir ek bileşenler kullanarak modelinizi ile daha iyi sonuçlar etkinleştirebilirsiniz. Ekleme `TextFeaturizer` ardışık düzenine sonraki kod satırına olarak:
+Geçerli bir <xref:Microsoft.ML.Legacy.Transforms.TextFeaturizer> dönüştürülecek `SentimentText` sütununa bir [sayısal vektör](../resources/glossary.md#numerical-feature-vector) adlı `Features` makine öğrenimi algoritması tarafından kullanılan. Bu ön işleme/özellik kazandırma sayesinde adımdır. ML.NET içinde kullanılabilir ek bileşenler kullanarak modelinizi ile daha iyi sonuçlar etkinleştirebilirsiniz. Ekleme `TextFeaturizer` ardışık düzenine sonraki kod satırına olarak:
 
 [!code-csharp[TextFeaturizer](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#7 "Add a TextFeaturizer to the pipeline")]
 
 ## <a name="choose-a-learning-algorithm"></a>Bir öğrenme algoritması seçin
 
-<xref:Microsoft.ML.Trainers.FastTreeBinaryClassifier> Bu işlem hattında kullanacağınız karar ağacı learner nesnedir. ML.NET ve kendi parametrelerini müşteri adayları için farklı sonuçlar değiştirerek mevcut farklı öğrencileriyle denemeye özellik kazandırma sayesinde adıma benzer. Ayarlayabileceğiniz ayarlama için [hiperparametreleri](../resources/glossary.md#hyperparameter) gibi <xref:Microsoft.ML.Trainers.FastTreeBinaryClassifier.NumTrees>, <xref:Microsoft.ML.Trainers.FastTreeBinaryClassifier.NumLeaves>, ve <xref:Microsoft.ML.Trainers.FastTreeBinaryClassifier.MinDocumentsInLeafs>. Bu hiperparametreleri herhangi bir şey model etkiler önce ayarlanır ve model özgüdür. Karar ağacı performans için daha büyük bir değer performansı olumsuz yönde etkileyebilir şekilde ayarlamak için kullanılırlar.
+<xref:Microsoft.ML.Legacy.Trainers.FastTreeBinaryClassifier> Bu işlem hattında kullanacağınız karar ağacı learner nesnedir. ML.NET ve kendi parametrelerini müşteri adayları için farklı sonuçlar değiştirerek mevcut farklı öğrencileriyle denemeye özellik kazandırma sayesinde adıma benzer. Ayarlayabileceğiniz ayarlama için [hiperparametreleri](../resources/glossary.md#hyperparameter) gibi <xref:Microsoft.ML.Legacy.Trainers.FastTreeBinaryClassifier.NumTrees>, <xref:Microsoft.ML.Legacy.Trainers.FastTreeBinaryClassifier.NumLeaves>, ve <xref:Microsoft.ML.Legacy.Trainers.FastTreeBinaryClassifier.MinDocumentsInLeafs>. Bu hiperparametreleri herhangi bir şey model etkiler önce ayarlanır ve model özgüdür. Karar ağacı performans için daha büyük bir değer performansı olumsuz yönde etkileyebilir şekilde ayarlamak için kullanılırlar.
 
 Aşağıdaki kodu ekleyin `Train` yöntemi:
 
@@ -201,7 +201,7 @@ Aşağıdaki kodu ekleyin `Train` yöntemi:
 
 ## <a name="train-the-model"></a>Modeli eğitme
 
-Modeli eğitme <xref:Microsoft.ML.PredictionModel%602>bağlı olarak yüklenen ve dönüştürülen bir veri kümesi. `pipeline.Train<SentimentData, SentimentPrediction>()` (veri trenler özelliği oluşturucu ve learner yükler) işlem hattı eğitir. Denemeyi böyle kadar yürütülmez.
+Modeli eğitme <xref:Microsoft.ML.Legacy.PredictionModel%602>bağlı olarak yüklenen ve dönüştürülen bir veri kümesi. `pipeline.Train<SentimentData, SentimentPrediction>()` (veri trenler özelliği oluşturucu ve learner yükler) işlem hattı eğitir. Denemeyi böyle kadar yürütülmez.
 
 Aşağıdaki kodu ekleyin `Train` yöntemi:
 
@@ -239,15 +239,15 @@ Yeni yönteme bir çağrı ekleyin `Main` yöntemi, sağda altında `Train` yön
 
 [!code-csharp[CallEvaluate](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#12 "Call the Evaluate method")]
 
-<xref:Microsoft.ML.Data.TextLoader> Sınıfı aynı şemaya sahip yeni test veri kümesini yükler. Bu veri kümesi kalite kontrolü kullanarak modeli değerlendirebilir. Aşağıdaki kodu ekleyin `Evaluate` yöntemi:
+<xref:Microsoft.ML.Legacy.Data.TextLoader> Sınıfı aynı şemaya sahip yeni test veri kümesini yükler. Bu veri kümesi kalite kontrolü kullanarak modeli değerlendirebilir. Aşağıdaki kodu ekleyin `Evaluate` yöntemi:
 
 [!code-csharp[LoadText](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#13 "Load the test dataset")]
 
-<xref:Microsoft.ML.Models.BinaryClassificationEvaluator> Nesne hesaplar için Kalite Ölçümleri `PredictionModel` belirtilen veri kümesi kullanma. Bu ölçümler görmek için bir sonraki satırda olarak değerlendirici ekleyin `Evaluate` yöntemi, aşağıdaki kod ile:
+<xref:Microsoft.ML.Legacy.Models.BinaryClassificationEvaluator> Nesne hesaplar için Kalite Ölçümleri `PredictionModel` belirtilen veri kümesi kullanma. Bu ölçümler görmek için bir sonraki satırda olarak değerlendirici ekleyin `Evaluate` yöntemi, aşağıdaki kod ile:
 
 [!code-csharp[BinaryEvaluator](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#14 "Create the binary evaluator")]
 
-<xref:Microsoft.ML.Models.BinaryClassificationMetrics> İkili sınıflandırma değerlendiricisi tarafından hesaplanan toplam ölçümleri içerir. Model kalitesini belirlemek için bunları görüntülemek için ölçümleri ilk almanız gerekir. Aşağıdaki kodu ekleyin:
+<xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics> İkili sınıflandırma değerlendiricisi tarafından hesaplanan toplam ölçümleri içerir. Model kalitesini belirlemek için bunları görüntülemek için ölçümleri ilk almanız gerekir. Aşağıdaki kodu ekleyin:
 
 [!code-csharp[CreateMetrics](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#15 "Evaluate the model and create metrics")]
 
@@ -283,7 +283,7 @@ Eğitilen modelin Öngörüler, test etmek için bazı açıklamalar ekleme `Pre
 
 [!code-csharp[PredictionData](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#18 "Create test data for predictions")]
 
-Bir modeliniz olduğuna göre pozitif veya negatif yaklaşım açıklama verileri kullanarak tahmin etmek için kullanabileceğiniz <xref:Microsoft.ML.PredictionModel.Predict%2A?displayProperty=nameWithType> yöntemi. Bir öngörü almak için kullanın `Predict` yeni veriler. Giriş verilerini bir dizedir ve modeli içeren özellik kazandırma sayesinde unutmayın. İşlem hattınızı, eğitim ve tahmin sırasında eşitlenmiş. Özellikle tahminler elde etmek için ön işleme/özellik kazandırma sayesinde kod yazmak zorunda olmadığı ve aynı API batch ve tek seferlik Öngörüler üstlenir.
+Bir modeliniz olduğuna göre pozitif veya negatif yaklaşım açıklama verileri kullanarak tahmin etmek için kullanabileceğiniz <xref:Microsoft.ML.Legacy.PredictionModel.Predict%2A?displayProperty=nameWithType> yöntemi. Bir öngörü almak için kullanın `Predict` yeni veriler. Giriş verilerini bir dizedir ve modeli içeren özellik kazandırma sayesinde unutmayın. İşlem hattınızı, eğitim ve tahmin sırasında eşitlenmiş. Özellikle tahminler elde etmek için ön işleme/özellik kazandırma sayesinde kod yazmak zorunda olmadığı ve aynı API batch ve tek seferlik Öngörüler üstlenir.
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#19 "Create predictions of sentiments")]
 

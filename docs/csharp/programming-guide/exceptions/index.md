@@ -6,12 +6,12 @@ helpviewer_keywords:
 - exceptions [C#]
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
-ms.openlocfilehash: 9e92c253aa1981065274dc3413f9b8888b5f8849
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a0ec7b1a91dc701093131b8807b25e66d291a746
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500669"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188335"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>Özel Durumlar ve Özel Durum İşleme (C# Programlama Kılavuzu)
 C# dil özel durum özelliklerin help işleme ile bir program çalışırken oluşan beklenmeyen veya olağanüstü durumlara ilgilenir. Özel durum işleme kullanan `try`, `catch`, ve `finally` başarılı olmayabilir eylemleri denemek için bunu yapmak için ve daha sonra kaynakları temizlemek için makul karar verdiğinizde, hataları işlemek için anahtar sözcükler. Özel durumlar, .NET Framework veya herhangi bir üçüncü taraf kitaplıklar tarafından veya uygulama kodu tarafından ortak dil çalışma zamanı tarafından (CLR) oluşturulabilir. Özel durumlar kullanılarak oluşturulan `throw` anahtar sözcüğü.  
@@ -43,7 +43,7 @@ C# dil özel durum özelliklerin help işleme ile bir program çalışırken olu
   
 -   Kod bir `finally` blokesi bile bir özel durum oluşturulur. Kullanım bir `finally` herhangi bir akış veya açılmış dosyaları kapatın. Örneğin, kaynakları serbest bırakmak için blok `try` blok.  
   
--   Yönetilen özel durumlar .NET Framework'teki Win32 yapılandırılmış özel durum işleme mekanizmasını üzerine uygulanır. Daha fazla bilgi için [yapılandırılmış özel durum işleme (C/C++)](/cpp/cpp/structured-exception-handling-c-cpp) ve [derinliği, Win32 yapılandırılmış özel durum işleme ile ilgili bir kilitlenme dersi](http://bytepointer.com/resources/pietrek_crash_course_depths_of_win32_seh.htm).  
+-   Yönetilen özel durumlar .NET Framework'teki Win32 yapılandırılmış özel durum işleme mekanizmasını üzerine uygulanır. Daha fazla bilgi için [yapılandırılmış özel durum işleme (C/C++)](/cpp/cpp/structured-exception-handling-c-cpp) ve [derinliği, Win32 yapılandırılmış özel durum işleme ile ilgili bir kilitlenme dersi](https://bytepointer.com/resources/pietrek_crash_course_depths_of_win32_seh.htm).  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  Özel durumlar ve özel durum işleme hakkında daha fazla bilgi için aşağıdaki konulara bakın:  

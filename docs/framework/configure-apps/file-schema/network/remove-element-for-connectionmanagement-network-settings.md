@@ -10,14 +10,12 @@ helpviewer_keywords:
 - <connectionManagement>, remove element
 - remove element, connectionManagement
 ms.assetid: 94b81775-5a22-4975-8c47-8620c40c3f35
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: d249cc412a1638e62b57b4976adc23fdf8f36e80
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 03cac1523c0fce268c2df8d04134c0d5e88830e2
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48024590"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181559"
 ---
 # <a name="ltremovegt-element-for-connectionmanagement-network-settings"></a>&lt;kaldırma&gt; connectionManagement (ağ ayarları) için
 Bir IP adresi veya DNS adı bağlantı yönetimi listesinden kaldırır.  
@@ -62,7 +60,7 @@ Bir IP adresi veya DNS adı bağlantı yönetimi listesinden kaldırır.
  Bu öğe, uygulama yapılandırma dosyası veya makine yapılandırma dosyası (Machine.config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, sunucu www.adventure-works.com için tüm bağlantı yönetimi Liste girişlerini kaldırır ve bir uygulamayı server www.contoso.com için dört bağlantıları ve diğer tüm sunucular iki bağlantıları kullanmak için yapılandırır.  
+ Aşağıdaki örnek, tüm sunucu için bağlantı yönetim Liste girişlerini kaldırır `www.adventure-works.com` ve ardından sunucu için dört bağlantıları kullanmak için bir uygulamayı yapılandırır `www.contoso.com` ve diğer tüm sunucular iki bağlantı.  
   
 ```xml  
 <configuration>  
@@ -77,6 +75,6 @@ Bir IP adresi veya DNS adı bağlantı yönetimi listesinden kaldırır.
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Net.ServicePoint>  
- <xref:System.Net.ServicePointManager>  
- [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net.ServicePoint>  
+- <xref:System.Net.ServicePointManager>  
+- [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

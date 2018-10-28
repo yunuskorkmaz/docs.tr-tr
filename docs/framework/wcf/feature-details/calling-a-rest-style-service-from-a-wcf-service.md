@@ -2,18 +2,18 @@
 title: Bir WCF hizmetinden REST tarzı bir hizmete çağrı yapma
 ms.date: 03/30/2017
 ms.assetid: 77df81d8-7f53-4daf-8d2d-bf7996e94d5a
-ms.openlocfilehash: 8f520b1f77b9ca41b9fd2b8d51c1b935ab1e0a87
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: be9f15d35ec00ba91a06abf5a0a413b59452270b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33488517"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50184250"
 ---
 # <a name="calling-a-rest-style-service-from-a-wcf-service"></a>Bir WCF hizmetinden REST tarzı bir hizmete çağrı yapma
-Normal bir (SOAP tabanlı) WCF hizmetinden REST tarzı bir hizmete çağırma etkinleştirildiğinde (gelen isteği bilgilerini içeren) hizmeti yöntemi işlemi içeriğine giden istek tarafından kullanılması gereken bağlamı geçersiz kılar. Bu değişiklik HTTP POST istekleri için HTTP GET isteklerine neden olur. REST stilinde service çağırmak için doğru içeriği kullanmak için WCF Hizmeti zorlamak için yeni bir oluşturma <xref:System.ServiceModel.OperationContextScope> ve REST stili hizmetinden işlemi bağlam kapsam içinde çağırın. Bu konu, bu tekniği gösterir basit bir örnek oluşturmak nasıl anlatmaktadır.  
+Bir normal (SOAP tabanlı) WCF hizmetinden REST stilinde service çağrılırken (gelen isteği bilgilerini içeren) hizmeti yöntemi işlemi içeriğine giden istek tarafından kullanılması gereken bağlam geçersiz kılar. Bu, HTTP GET isteklerini HTTP POST istekleri değiştirmek neden olur. WCF hizmetinden REST stilinde service çağırmak için doğru bağlamda kullanmaya zorlamak için yeni bir oluşturma <xref:System.ServiceModel.OperationContextScope> ve REST stili hizmetinden işlemi bağlam kapsam içinde çağırın. Bu konuda, bu teknik gösteren basit bir örnek oluşturmak nasıl anlatmaktadır.  
   
 ## <a name="define-the-rest-style-service-contract"></a>REST stilinde hizmet sözleşmesini tanımlama  
- Basit bir REST stilinde service sözleşme tanımlayın:  
+ Basit bir REST stilinde service sözleşmesi tanımlayın:  
   
 ```csharp
 [ServiceContract]
@@ -46,7 +46,7 @@ public class RestService : IRestInterface
 ```
   
 ## <a name="define-the-wcf-service-contract"></a>WCF hizmet sözleşmesini tanımlama  
- REST stilinde hizmetini çağırmak için kullanılan bir WCF sözleşmesi tanımlayın:  
+ REST stilinde service çağırmak için kullanılan bir WCF sözleşmesi tanımlayın:  
   
 ```csharp
 [ServiceContract]
@@ -80,7 +80,7 @@ public class NormalService : INormalInterface
 ```  
   
 ## <a name="create-the-client-proxy-for-the-rest-style-service"></a>REST stilinde service için istemci proxy oluşturma  
- Kullanarak <!--zz<xref:System.ServiceModel.ClientBase%60>--> `System.ServiceModel.ClientBase` istemci proxy uygulayın. Her bir yöntemin adı verilen yeni bir <xref:System.ServiceModel.OperationContextScope> oluşturulur ve çağrı işlemi için kullanılır.  
+ Kullanarak <xref:System.ServiceModel.ClientBase%601> istemci proxy uygulamak için. Her bir yöntemin adı verilen yeni bir <xref:System.ServiceModel.OperationContextScope> oluşturulur ve bu işlemi çağırmak için kullanılır.  
   
 ```csharp
 public class MyRestClient : ClientBase<IRestInterface>, IRestInterface
@@ -109,8 +109,8 @@ public class MyRestClient : ClientBase<IRestInterface>, IRestInterface
 }
 ```  
   
-## <a name="host-and-call-the-services"></a>Ana bilgisayar ve Hizmetleri çağırın  
- Her iki hizmet davranışları ve gerekli uç noktaları ekleme, bir konsol uygulamasında barındırır. Ve normal WCF Hizmeti çağırın:  
+## <a name="host-and-call-the-services"></a>Ana bilgisayar ve hizmetlere çağrı yapın  
+ Her iki Hizmetleri gerekli uç noktalar ve davranışlar eklemeyi, bir konsol uygulamasında barındırır. ' İ tıklatın ve sonra normal bir WCF Hizmeti çağırın:  
   
 ```csharp
 public static void Main()
@@ -133,8 +133,8 @@ public static void Main()
 }
 ```  
   
-## <a name="complete-code-listing"></a>Tam kod listeleri  
- Bu konudaki uygulanan örnek tam bir listesi verilmiştir:  
+## <a name="complete-code-listing"></a>Tam kod listesi  
+ Bu konudaki uygulanan örnek tam listesi verilmiştir:  
   
 ```csharp
 public class CallingRESTSample  

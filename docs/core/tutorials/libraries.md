@@ -4,12 +4,12 @@ description: .NET Core CLI araçları ile .NET kitaplıkları oluşturmayı öğ
 author: cartermp
 ms.author: mairaw
 ms.date: 05/01/2017
-ms.openlocfilehash: a6db7a15c484122600afd54814d19ea11bd1abc1
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
-ms.translationtype: MT
+ms.openlocfilehash: eb1dc404f9a08940464eca83a6848076b589afa8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43256202"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188267"
 ---
 # <a name="developing-libraries-with-cross-platform-tools"></a>Platformlar arası araçlarla kitaplıkları ile geliştirme
 
@@ -167,7 +167,7 @@ namespace MultitargetLib
         // .NET Framework 4.0 does not have async/await
         public string GetDotNetCount()
         {
-            string url = "http://www.dotnetfoundation.org/";
+            string url = "https://www.dotnetfoundation.org/";
 
             var uri = new Uri(url);
 
@@ -187,7 +187,7 @@ namespace MultitargetLib
         // .NET 4.5+ can use async/await!
         public async Task<string> GetDotNetCountAsync()
         {
-            string url = "http://www.dotnetfoundation.org/";
+            string url = "https://www.dotnetfoundation.org/";
 
             // HttpClient is thread-safe, so no need to explicitly lock here
             var result = await _client.GetStringAsync(url);
@@ -213,7 +213,7 @@ Her birini içeren `.dll` her hedef için dosyaları.
 
 ## <a name="how-to-test-libraries-on-net-core"></a>.NET Core üzerinde kitaplıkları test etme
 
-Platformlar arasında test edebilmek önemlidir. Kullanabilirsiniz [xUnit](http://xunit.github.io/) veya MSTest hazır. Her ikisi de, tam birim testi .NET Core kitaplığınızı için uygundur. Nasıl çözümünüzü test projeleriyle ayarlayabilirsiniz bağlı olacaktır [çözümünüzün yapısını](#structuring-a-solution). Aşağıdaki örnek, test ve kaynak dizinleri aynı üst düzey dizininde Canlı varsayar.
+Platformlar arasında test edebilmek önemlidir. Kullanabilirsiniz [xUnit](https://xunit.github.io/) veya MSTest hazır. Her ikisi de, tam birim testi .NET Core kitaplığınızı için uygundur. Nasıl çözümünüzü test projeleriyle ayarlayabilirsiniz bağlı olacaktır [çözümünüzün yapısını](#structuring-a-solution). Aşağıdaki örnek, test ve kaynak dizinleri aynı üst düzey dizininde Canlı varsayar.
 
 > [!NOTE]
 > Bu bazı kullanır [.NET Core CLI komutları](../tools/index.md). Bkz: [yeni dotnet](../tools/dotnet-new.md) ve [dotnet sln](../tools/dotnet-sln.md) daha fazla bilgi için.

@@ -1,21 +1,19 @@
 ---
-title: -delaysign
+title: -delaysıgn
 ms.date: 03/10/2018
 helpviewer_keywords:
 - delaysign compiler option [Visual Basic]
 - -delaysign compiler option [Visual Basic]
 - -delaysign compiler option [Visual Basic]
 ms.assetid: c76e61a4-1884-4252-9fb2-377f99caa690
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c979ada9984ef345ffbb6b5e29c2f30595c3074d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1459484b858137836fcfdcd9db46d8e99a06e9c7
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654248"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185215"
 ---
-# <a name="-delaysign"></a>-delaysign
+# <a name="-delaysign"></a>-delaysıgn
 Derlemenin tamamen veya kısmen imzalanacağını belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -26,24 +24,24 @@ Derlemenin tamamen veya kısmen imzalanacağını belirtir.
   
 ## <a name="arguments"></a>Arguments  
  `+` &#124; `-`  
- İsteğe bağlı. Kullanım `-delaysign-` tam imzalı bir derleme istiyorsanız. Kullanım `-delaysign+` imzalı karma için derleme ve ayrılmış alanı ortak anahtarı koyun istiyorsanız. Varsayılan, `-delaysign-` değeridir.  
+ İsteğe bağlı. Kullanım `-delaysign-` tam imzalı bir derleme istiyorsanız. Kullanım `-delaysign+` , derleme ve ayrılan alana imzalı karma için ortak anahtar yerleştirmek istiyorsanız. Varsayılan, `-delaysign-` değeridir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `-delaysign` Seçeneği hiçbir etkisi ile kullanılmadığı sürece [- keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md) veya [- keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md).  
+ `-delaysign` Seçeneği ile birlikte kullanılmadığı sürece hiçbir etkiye sahiptir [- keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md) veya [- keycontaıner](../../../visual-basic/reference/command-line-compiler/keycontainer.md).  
   
- Tam imzalı bir derleme istediğinde bildirimi (derleme meta verilerini) içeren ve karmayı özel anahtarıyla imzalar dosyayı derleyici karma hale getirir. Elde edilen dijital imza, bildirimi içeren dosyada depolanır. Bir derlemeyi imzalı gecikme olduğunda derleyici işlem değil ve daha sonra imzanın eklenmesi için imza ancak yedekleri alanı dosyasında depolamak.  
+ Tam imzalı bir derleme istediğinizde; derleyici bildirimi (derleme meta verileri) içeren ve karmayı özel anahtarla imzalar dosyayı karma hale getirir. Elde edilen dijital imza, bildirimi içeren dosyada depolanır. Bir derlemeyi gecikmeli imzalanmış olduğunda, derleyici işlem değildir ve daha sonra imzanın eklenmesi için dosyada imza ancak yedekleri alanı depolamak.  
   
- Kullanarak örneğin, `-delaysign+`, bir kuruluştaki bir geliştirici sınayıcılar genel derleme önbelleği ile kaydetmek ve kullanabilecek bir derlemeyi imzasız test sürümlerini dağıtabilirsiniz. Derleme üzerinde iş tamamlandığında, kuruluşunuzun özel anahtarı sorumlu kişi derleme tam olarak oturum açabilir. Bu compartmentalization tüm geliştiricilerin derlemelerini sağlarken kuruluşunuzun özel anahtarı ifşaatına karşı korur.  
+ Kullanarak örneğin, `-delaysign+`, bir kuruluşta bir geliştirici, test ediciler genel derleme önbelleği ile kaydedebilir veya kullanmak bir derleme sürümlerini imzasız test dağıtabilirsiniz. Derleme üzerinde iş tamamlandığında, kuruluşun özel anahtarı için sorumlu kişi derleme tam olarak imzalayabilirsiniz. Bu compartmentalization, kuruluşunuzun özel anahtarı derlemelerini çalışması tüm geliştiricilerin verirken ifşaatına karşı korur.  
   
- Bkz: [bkz](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) derleme imzalama hakkında daha fazla bilgi için.  
+ Bkz: [bkz](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) derleme imzalama hakkında daha fazla bilgi.  
   
-### <a name="to-set--delaysign-in-the-visual-studio-integrated-development-environment"></a>-Delaysign Visual Studio tümleşik geliştirme ortamında ayarlamak için  
+### <a name="to-set--delaysign-in-the-visual-studio-integrated-development-environment"></a>-Delaysıgn Visual Studio tümleşik geliştirme ortamında ayarlamak için  
   
-1.  Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünde tıklatın **özellikleri**.   
+1.  Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünü tıklatın **özellikleri**.   
   
-2.  Tıklatın **imzalama** sekmesi.  
+2.  Tıklayın **imzalama** sekmesi.  
   
-3.  Değer kümesinde **gecikme yalnızca oturum** kutusu.  
+3.  Değer kümesindeki **gecikme yalnızca oturum** kutusu.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)  

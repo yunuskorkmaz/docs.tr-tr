@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6bd0187f831db7fd68272e14c022efb45c8260f2
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 4452ad2445f81659d04bca3d64885148895aeb88
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025603"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188306"
 ---
 # <a name="file-and-stream-io"></a>Dosya ve Akış G/Ç
 Dosya ve akış I/O (giriş/çıkış) bir veri aktarımının depolama ortamına mı gittiğini yoksa oradan mı geldiğini belirtir. .NET Framework'teki `System.IO` ad alanlarında, okuma ve yazma, zaman uyumlu ve zaman uyumsuz olarak veri akışları ve dosyalar üzerinde sağlayan türler bulunur. Bu ad alanları aynı zamanda dosyaları sıkıştırma ve sıkıştırmayı açma işini gerçekleştiren türleri ve borular ve seri bağlantı noktaları üzerinden iletişim sağlayan türleri içerir.  
@@ -122,7 +122,7 @@ Yolu için adlandırma kuralları ve .NET Core 1.1 ve üstünde desteklenir DOS 
 ## <a name="isolated-storage"></a>Yalıtılmış Depolama  
  Yalıtılmış depolama, kaydedilmiş verilerle bir birlikte ilişkili bir kodun standartlaştırılmış yolları tanımlayarak yalıtım ve güvenlik sağlayan bir veri depolama mekanizmasıdır. Depolama kullanıcı, derleme ve etki alanı (isteğe bağlı) tarafından izole edilmiş bir sanal bir dosya sistemi sağlar. Yalıtılmış depolama özellikle uygulamanızın kullanıcı dosyalarına erişim izni yokken yararlıdır. Uygulamanız bilgisayarın güvenlik ilkesi tarafından kontrol edilir bir şekilde ayarlar veya dosyaları kaydedebilirsiniz.  
   
- Yalıtılmış depolama için uygun değildir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamaları; bunun yerine, uygulama verisi sınıflarını kullanın [Windows.Storage](/uwp/api/Windows.Storage) ad alanı. Daha fazla bilgi için [uygulama verileri](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) Windows geliştirme Merkezi'nde.  
+ Yalıtılmış depolama için uygun değildir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamaları; bunun yerine, uygulama verisi sınıflarını kullanın <xref:Windows.Storage?displayProperty=nameWithType> ad alanı. Daha fazla bilgi için [uygulama verileri](https://docs.microsoft.com/previous-versions/windows/apps/hh464917%28v=win.10%29).  
   
  Aşağıdaki sınıflar yalıtılmış depolama uygularken sık kullanılır:  
   
@@ -139,13 +139,13 @@ Yolu için adlandırma kuralları ve .NET Core 1.1 ve üstünde desteklenir DOS 
   
  G/ç işlemlerini kullanırken dikkat edilecek bazı önemli farklar [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar:  
   
--   Özellikle alakalı türler dosya işlemleri gibi <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> ve <xref:System.IO.DirectoryInfo>, dahil edilmeyen [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]. Bunun yerine, içindeki türleri kullanın [Windows.Storage](https://msdn.microsoft.com/library/windows/apps/windows.storage.aspx) ad [!INCLUDE[wrt](../../../includes/wrt-md.md)], gibi [StorageFile](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.aspx) ve [Windows.Storage](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefolder.aspx).  
+-   Özellikle alakalı türler dosya işlemleri gibi <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> ve <xref:System.IO.DirectoryInfo>, dahil edilmeyen [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]. Bunun yerine, içindeki türleri kullanın <xref:Windows.Storage?displayProperty=nameWithType> ad [!INCLUDE[wrt](../../../includes/wrt-md.md)], gibi <xref:Windows.Storage.StorageFile> ve <xref:Windows.Storage.StorageFolder>.  
   
 -   Yalıtılmış Depolama kullanılamaz; Bunun yerine, [uygulama verileri](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)).  
   
 -   Zaman uyumsuz yöntemleri kullanın <xref:System.IO.Stream.ReadAsync%2A> ve <xref:System.IO.Stream.WriteAsync%2A>UI iş parçacığı engellenmesini önlemek için.  
   
--   Yol tabanlı sıkıştırma türleri <xref:System.IO.Compression.ZipFile> ve <xref:System.IO.Compression.ZipFileExtensions> kullanılabilir değil. Bunun yerine, içindeki türleri kullanın [Windows.Storage.Compression](https://msdn.microsoft.com/library/windows/apps/windows.storage.compression.aspx) ad alanı.  
+-   Yol tabanlı sıkıştırma türleri <xref:System.IO.Compression.ZipFile> ve <xref:System.IO.Compression.ZipFileExtensions> kullanılabilir değil. Bunun yerine, içindeki türleri kullanın <xref:Windows.Storage.Compression?displayProperty=nameWithType> ad alanı.  
   
  Gerekirse, .NET Framework akışları ve Windows çalışma zamanı akışları arasında dönüşüm yapabilirsiniz. Daha fazla bilgi için [nasıl yapılır: .NET Framework akışları arasında dönüştürme ve Windows çalışma zamanı akışları](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md) veya [System.IO.WindowsRuntimeStreamExtensions](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions.aspx). <!--zz TODO: <xref:System.IO.WindowsRuntimeStreamExtensions>--> 
   

@@ -10,51 +10,51 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
-ms.openlocfilehash: 3c25ddcfb3a566055afd5e233c2a69b3b7a8c66e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 54175e27ca46431299db369f67f02051ef08d0d2
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526494"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185202"
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>Nasıl yapılır: Çizim için Grafik Nesneleri Oluşturma
-Çizgiler ve şekiller çizme önce metin oluşturmak veya görüntülemek ve görüntülerle işlemek [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], oluşturmak gereken bir <xref:System.Drawing.Graphics> nesnesi. <xref:System.Drawing.Graphics> Nesne gösteren bir [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] çizim yüzeyi ve grafik görüntüleri oluşturmak için kullanılan nesne.  
+Çizgiler ve şekiller çizmek önce metin işlemek veya görüntülemek ve görüntülerle işlemek [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], oluşturmak gereken bir <xref:System.Drawing.Graphics> nesne. <xref:System.Drawing.Graphics> Nesnesini temsil eder bir [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] çizim yüzeyi ve grafik görüntüleri oluşturmak için kullanılan nesne.  
   
  Grafiklerle çalışma iki adımı vardır:  
   
-1.  Oluşturma bir <xref:System.Drawing.Graphics> nesnesi.  
+1.  Oluşturma bir <xref:System.Drawing.Graphics> nesne.  
   
-2.  Kullanarak <xref:System.Drawing.Graphics> çizgiler ve şekiller çizme, metin, oluşturmak veya görüntülemek ve resimleri işlemek için nesne.  
+2.  Kullanarak <xref:System.Drawing.Graphics> çizgiler ve şekiller çizmek, metin, işleme veya görüntülemek ve görüntüleri işlemek için nesne.  
   
 ## <a name="creating-a-graphics-object"></a>Bir grafik nesnesi oluşturma  
  Bir grafik nesnesinin çeşitli yollarla oluşturulabilir.  
   
 #### <a name="to-create-a-graphics-object"></a>Bir grafik nesnesi oluşturmak için  
   
--   Bir parçası olarak bir grafik nesnesine başvuru almak <xref:System.Windows.Forms.PaintEventArgs> içinde <xref:System.Windows.Forms.Control.Paint> bir form veya denetim olayı. Bu, genellikle bir denetim için boyama kod oluşturulurken bir grafik nesnesine başvuru nasıl elde olur. Benzer şekilde, bir grafik nesnesinin özelliği olarak edinebilirsiniz <xref:System.Drawing.Printing.PrintPageEventArgs> işlerken <xref:System.Drawing.Printing.PrintDocument.PrintPage> olayı için bir <xref:System.Drawing.Printing.PrintDocument>.  
+-   Bir parçası olarak bir grafik nesnesine bir başvuru alma <xref:System.Windows.Forms.PaintEventArgs> içinde <xref:System.Windows.Forms.Control.Paint> bir form veya denetim olayı. Bu, genellikle bir denetim boyama kodu oluştururken bir grafik nesnesine başvuru nasıl elde olur. Benzer şekilde, ayrıca bir grafik nesnesinin bir özelliği olarak alabilirsiniz <xref:System.Drawing.Printing.PrintPageEventArgs> işlerken <xref:System.Drawing.Printing.PrintDocument.PrintPage> olay için bir <xref:System.Drawing.Printing.PrintDocument>.  
   
-     -veya-  
+     veya  
   
--   Çağrı <xref:System.Windows.Forms.Control.CreateGraphics%2A> yöntemi denetim veya formun bir başvuru almak için bir <xref:System.Drawing.Graphics> çizim yüzeyini bu denetim veya formun temsil eden nesne. Bir form veya zaten denetim çizmek istiyorsanız bu yöntemi kullanın.  
+-   Çağrı <xref:System.Windows.Forms.Control.CreateGraphics%2A> denetim veya formun bir başvuru almak için yöntemi bir <xref:System.Drawing.Graphics> çizim yüzeyi bu denetim veya formun temsil eden nesne. Bir form veya zaten bir denetim çizmek istiyorsanız bu yöntemi kullanın.  
   
-     -veya-  
+     veya  
   
--   Oluşturma bir <xref:System.Drawing.Graphics> nesne öğesinden devralınan herhangi bir nesneden <xref:System.Drawing.Image>. Bu yaklaşım, zaten varolan bir görüntü alter istediğinizde yararlıdır.  
+-   Oluşturma bir <xref:System.Drawing.Graphics> nesne öğesinden devralınan herhangi bir nesneden <xref:System.Drawing.Image>. Bu yaklaşım, zaten mevcut bir görüntüyü değiştirmek istediğinizde yararlıdır.  
   
-     Aşağıdaki bölümlerde bu işlemlerin her biri hakkında ayrıntılar sağlar.  
+     Aşağıdaki bölümlerde, bu işlemlerin her biri hakkında ayrıntılar verir.  
   
-## <a name="painteventargs-in-the-paint-event-handler"></a>Paint olay işleyicisi PaintEventArgs  
- Programlama zaman <xref:System.Windows.Forms.PaintEventHandler> denetimleri için veya <xref:System.Drawing.Printing.PrintDocument.PrintPage> için bir <xref:System.Drawing.Printing.PrintDocument>, bir grafik nesnesinin özelliklerini biri olarak sağlanan <xref:System.Windows.Forms.PaintEventArgs> veya <xref:System.Drawing.Printing.PrintPageEventArgs>.  
+## <a name="painteventargs-in-the-paint-event-handler"></a>Boya olay işleyicisinde PaintEventArgs  
+ Programlamada <xref:System.Windows.Forms.PaintEventHandler> denetimleri için veya <xref:System.Drawing.Printing.PrintDocument.PrintPage> için bir <xref:System.Drawing.Printing.PrintDocument>, bir grafik nesnesinin özelliklerinden biri olarak sağlanan <xref:System.Windows.Forms.PaintEventArgs> veya <xref:System.Drawing.Printing.PrintPageEventArgs>.  
   
-#### <a name="to-obtain-a-reference-to-a-graphics-object-from-the-painteventargs-in-the-paint-event"></a>Paint olayı PaintEventArgs grafik nesnesine başvuru almak için  
+#### <a name="to-obtain-a-reference-to-a-graphics-object-from-the-painteventargs-in-the-paint-event"></a>Boyama olayını içinde PaintEventArgs grafik nesnesine başvuru almak için  
   
-1.  Bildirme <xref:System.Drawing.Graphics> nesnesi.  
+1.  Bildirme <xref:System.Drawing.Graphics> nesne.  
   
-2.  Başvurmak için değişkenine atamak <xref:System.Drawing.Graphics> nesnesi geçirildi parçası olarak <xref:System.Windows.Forms.PaintEventArgs>.  
+2.  Başvurmak için değişkenine atayın <xref:System.Drawing.Graphics> nesnesinin bir parçası olarak geçirilen <xref:System.Windows.Forms.PaintEventArgs>.  
   
-3.  Form veya denetim boyamak için kodu ekleyin.  
+3.  Form veya denetim boyama için kodu ekleyin.  
   
-     Aşağıdaki örnek başvuru gösterilmektedir bir <xref:System.Drawing.Graphics> nesnesinin <xref:System.Windows.Forms.PaintEventArgs> içinde <xref:System.Windows.Forms.Control.Paint> olay:  
+     Aşağıdaki örnek nasıl başvurulacağını gösterir bir <xref:System.Drawing.Graphics> nesnesinden <xref:System.Windows.Forms.PaintEventArgs> içinde <xref:System.Windows.Forms.Control.Paint> olay:  
   
     ```vb  
     Private Sub Form1_Paint(sender As Object, pe As PaintEventArgs) Handles _  
@@ -89,12 +89,12 @@ ms.locfileid: "33526494"
        }  
     ```  
   
-## <a name="creategraphics-method"></a>CreateGraphics yöntemi  
- Aynı zamanda <xref:System.Windows.Forms.Control.CreateGraphics%2A> yöntemi denetim veya formun bir başvuru almak için bir <xref:System.Drawing.Graphics> çizim yüzeyini bu denetim veya formun temsil eden nesne.  
+## <a name="creategraphics-method"></a>CreateGraphics metodu  
+ Ayrıca <xref:System.Windows.Forms.Control.CreateGraphics%2A> denetim veya formun bir başvuru almak için yöntemi bir <xref:System.Drawing.Graphics> çizim yüzeyi bu denetim veya formun temsil eden nesne.  
   
-#### <a name="to-create-a-graphics-object-with-the-creategraphics-method"></a>CreateGraphics yöntemi ile bir grafik nesnesi oluşturmak için  
+#### <a name="to-create-a-graphics-object-with-the-creategraphics-method"></a>CreateGraphics metodu bir grafik nesnesi oluşturmak için  
   
--   Çağrı <xref:System.Windows.Forms.Control.CreateGraphics%2A> sonra istediğiniz grafik işleme biçimi veya denetim yöntemi.  
+-   Çağrı <xref:System.Windows.Forms.Control.CreateGraphics%2A> üzerinde grafik işleme almak istediğiniz form veya denetim yöntemi.  
   
     ```vb  
     Dim g as Graphics  
@@ -118,13 +118,13 @@ ms.locfileid: "33526494"
     ```  
   
 ## <a name="create-from-an-image-object"></a>Bir görüntü nesneden oluşturun  
- Ayrıca, türetilen herhangi bir nesneden bir grafik nesnesi oluşturabilirsiniz <xref:System.Drawing.Image> sınıfı.  
+ Ayrıca, türetilen herhangi bir nesneden bir grafik nesnesinin oluşturabilirsiniz <xref:System.Drawing.Image> sınıfı.  
   
 #### <a name="to-create-a-graphics-object-from-an-image"></a>Bir görüntüden bir grafik nesnesi oluşturmak için  
   
--   Çağrı <xref:System.Drawing.Graphics.FromImage%2A?displayProperty=nameWithType> oluşturmak istediğiniz görüntü değişken adını sağlama yöntemi, bir <xref:System.Drawing.Graphics> nesnesi.  
+-   Çağrı <xref:System.Drawing.Graphics.FromImage%2A?displayProperty=nameWithType> oluşturmak istediğiniz görüntü değişken adını sağlama yöntemi, bir <xref:System.Drawing.Graphics> nesne.  
   
-     Aşağıdaki örnekte nasıl kullanılacağını gösteren bir <xref:System.Drawing.Bitmap> nesnesi:  
+     Aşağıdaki örnek nasıl kullanılacağını gösteren bir <xref:System.Drawing.Bitmap> nesnesi:  
   
     ```vb  
     Dim myBitmap as New Bitmap("C:\Documents and Settings\Joe\Pics\myPic.bmp")  
@@ -144,28 +144,26 @@ ms.locfileid: "33526494"
     ```  
   
 > [!NOTE]
->  Yalnızca oluşturabilirsiniz <xref:System.Drawing.Graphics> 16-bit, 24 bit ve 32-bit .bmp dosyaları gibi dizinlenmemiş .bmp dosyaları nesneleri. Her piksel dizinlenmemiş .bmp dosyaları bir renk tablosu için dizin tutun dizinli .bmp dosyaları piksel aksine bir renk tutar.  
+>  Yalnızca oluşturabilirsiniz <xref:System.Drawing.Graphics> 16-bit, 24-bit ve 32-bit .bmp dosyaları gibi dizinlenmemiş .bmp dosyaları nesneleri. Her bir pikseli dizinlenmemiş .bmp dosyaları piksel bir renk tablosu için dizin tutun dizinli .bmp dosyaların aksine, bir renk tutar.  
   
--  
+## <a name="drawing-and-manipulating-shapes-and-images"></a>Çizim ve şekiller ve resimler düzenleme  
+ Oluşturulduktan sonra bir <xref:System.Drawing.Graphics> nesne, çizgiler ve şekiller çizmek, metin, işleme veya görüntülemek ve görüntüleri işlemek için kullanılabilir. İle kullanılan asıl nesneleri <xref:System.Drawing.Graphics> nesnesi:  
   
-## <a name="drawing-and-manipulating-shapes-and-images"></a>Çizim ve şekiller ve görüntüleri düzenleme  
- Oluşturulduktan sonra bir <xref:System.Drawing.Graphics> nesne çizgiler ve şekiller çizme, metin, oluşturmak veya görüntülemek ve resimleri işlemek için kullanılamaz. İle kullanılan asıl nesneleri <xref:System.Drawing.Graphics> nesnesi:  
+-   <xref:System.Drawing.Pen> Sınıfı — satırlar çizme, şekiller anahat oluşturma veya diğer geometrik gösterimleri işleme için kullanılan.  
   
--   <xref:System.Drawing.Pen> Sınıfı — satırlar çizme, şekiller anahat oluşturma veya diğer geometrik Beyanları çizmek için kullanılan.  
+-   <xref:System.Drawing.Brush> Sınıfı — dolgulu şekiller, görüntü veya metin gibi grafik alanlarını doldurmak için kullanılır.  
   
--   <xref:System.Drawing.Brush> Sınıfı — doldurulmuş şekiller, görüntü veya metin gibi grafik alanları doldurmak için kullanılır.  
+-   <xref:System.Drawing.Font> Sınıfı — ne metin işlenirken kullanılacak şekilleri açıklamasını sağlar.  
   
--   <xref:System.Drawing.Font> Sınıfı — ne metin işlenirken şekilleri açıklamasını sağlar.  
+-   <xref:System.Drawing.Color> Yapısı — görüntülemek için farklı renkler temsil eder.  
   
--   <xref:System.Drawing.Color> Yapısı — görüntülemek için farklı renkleri temsil eder.  
+#### <a name="to-use-the-graphics-object-you-have-created"></a>Oluşturduğunuz grafik nesnesini kullanmak için  
   
-#### <a name="to-use-the-graphics-object-you-have-created"></a>Oluşturduğunuz grafik nesnesi kullanmak için  
-  
--   Gerekenler çizmek için yukarıda listelenen uygun nesnesiyle çalışır.  
+-   Aradığınızı çizmek için yukarıda listelenen uygun nesne ile çalışır.  
   
      Daha fazla bilgi için aşağıdaki konulara bakın:  
   
-    |Oluşturulacak|Bkz. |  
+    |İşlemek için|Bkz. |  
     |---------------|---------|  
     |satırları|[Nasıl yapılır: Bir Windows Formunda Çizgi Çizme](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-on-a-windows-form.md)|  
     |Şekiller|[Nasıl yapılır: Ana Hatlı Şekil Çizme](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)|  

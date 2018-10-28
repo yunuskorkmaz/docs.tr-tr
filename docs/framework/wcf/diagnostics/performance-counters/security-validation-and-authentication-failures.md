@@ -2,13 +2,12 @@
 title: Güvenlik Doğrulama ve Kimlik Doğrulama Hataları
 ms.date: 03/30/2017
 ms.assetid: 0d4e3666-dfc6-421c-baf8-9479c22f7050
-author: BrucePerlerMS
-ms.openlocfilehash: d13e94800d71c6f567c6aab61974e42b1a3f1706
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 32a7d41f93dd99f1950a073e1cac1b62177ff6c3
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198195"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185881"
 ---
 # <a name="security-validation-and-authentication-failures"></a>Güvenlik Doğrulama ve Kimlik Doğrulama Hataları
 Sayaç adı: güvenlik doğrulaması ve kimlik doğrulaması hataları  

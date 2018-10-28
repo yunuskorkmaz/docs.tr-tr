@@ -2,12 +2,12 @@
 title: C# 7.2 yenilikleri
 description: C# 7.2 yenilikleri genel bakış.
 ms.date: 08/16/2017
-ms.openlocfilehash: 87fd67b37a31a02960334a2b2a325724e0cc2c73
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 93b0a5281db841abdb8de0865dfe4b13be6d9ee2
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261361"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181179"
 ---
 # <a name="whats-new-in-c-72"></a>C# 7.2 yenilikleri
 
@@ -20,7 +20,7 @@ C# 7.2 kullanan [dil sürüm seçimi](../language-reference/configure-language-v
 
 Bu sürümdeki yeni diz özellikleri şunlardır:
 
-* [Değer türleri ile başvuru semantiği](#reference-semantics-with-value-types)
+* [Güvenli verimli kod yazmak için teknikleri](#safe-efficient-code-enhancements)
   - Başvuru semantiği kullanarak değer türleri ile çalışmayı etkinleştirmek söz dizimi geliştirmeleri birleşimi.
 * [Olmayan trailing-adlandırılmış bağımsız değişkenler](#non-trailing-named-arguments)
   - Adlandırılmış bağımsız değişkenler konumsal bağımsız değişken tarafından izlenebilir.
@@ -29,7 +29,7 @@ Bu sürümdeki yeni diz özellikleri şunlardır:
 * [`private protected` Erişim değiştiricisi](#private-protected-access-modifier)
   - `private protected` Erişim değiştiricisi, aynı derlemedeki türetilmiş sınıflar için erişim sağlar.
 
-## <a name="reference-semantics-with-value-types"></a>Değer türleri ile başvuru semantiği
+## <a name="safe-efficient-code-enhancements"></a>Güvenli verimli kod geliştirmeleri
 
 Tanıtılan 7.2 dil özellikleri, değer türleri ile başvuru semantiği kullanırken çalışmanıza olanak tanır. Kopyalama değer türleri başvuru türleri kullanmayla ilişkili bellek ayırmaları ödemeden en aza indirerek, performansı artırmak için tasarlanmıştır. Özellikler şunlardır:
 
@@ -38,7 +38,7 @@ Tanıtılan 7.2 dil özellikleri, değer türleri ile başvuru semantiği kullan
  - `readonly struct` Yapı sabittir ve olarak geçirilmelidir belirtmek için bildirimi bir `in` üye yöntemlerinin parametre. Ekleme `readonly` değiştiricisi var olan bir yapı bildirim için bir [ikili uyumlu değişiklik](version-update-considerations.md#binary-compatible-changes).
  - `ref struct` Bildirimi, bir yapı türü yönetilen bellek doğrudan erişir ve her zaman yığını ayrılmalıdır. Ekleme `ref` değiştirici mevcut bir `struct` bildirimi bir [uyumsuz değişiklik](version-update-considerations.md#incompatible-changes). A `ref struct` bunu ayrıldığı yığında diğer konumlarda kullanılan veya bir sınıf üyesi olamaz.
 
-Tüm bunlar hakkında daha fazla değişiklikler okuyabilirsiniz [değer türleri ile başvuru semantiği kullanarak](../reference-semantics-with-value-types.md).
+Tüm bunlar hakkında daha fazla değişiklikler okuyabilirsiniz [güvenli verimli kod yazma](../write-safe-efficient-code.md).
 
 ## <a name="non-trailing-named-arguments"></a>Olmayan trailing-adlandırılmış bağımsız değişkenler
 

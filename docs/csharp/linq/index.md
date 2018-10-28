@@ -3,12 +3,12 @@ title: C# dil ile tümleşik sorgu (LINQ)
 description: C# dil ile tümleşik sorgu (LINQ) sunar.
 ms.date: 11/30/2016
 ms.assetid: 007cc736-f5cf-4919-b99b-0c00ab2814ce
-ms.openlocfilehash: 89630245a33c03851c7607b3b299eb7b9c477177
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 18dafaf590697a3c9d669f346c956fd4df3378f0
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404586"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50038428"
 ---
 # <a name="language-integrated-query-linq"></a>Dil ile tümleşik sorgu (LINQ)
 
@@ -30,7 +30,7 @@ Aşağıdaki örnek, tam bir sorgu işlemi gösterilmektedir. Veri kaynağı olu
 
 - Sorgu değişkeni üzerinde yineleme kadar bir sorgu yürütülmedi Örneğin, bir `foreach` deyimi. Daha fazla bilgi için [LINQ sorgularına giriş](../programming-guide/concepts/linq/introduction-to-linq-queries.md).
 
-- Derleme zamanında sorgu ifadeleri C# belirtiminde ortaya konan kurallara göre standart sorgu işleci yöntem çağrılarını dönüştürülür. Sorgu söz dizimi kullanarak ifade edilebilir herhangi bir sorgu yöntemi söz dizimi kullanılarak da belirtilebilir. Ancak, çoğu durumda, daha okunabilir ve kısa sorgu söz dizimi. Daha fazla bilgi için [C# dil belirtimi](../language-reference/language-specification/index.md) ve [standart sorgu işleçlerine genel bakış](../programming-guide/concepts/linq/standard-query-operators-overview.md).
+- Derleme zamanında sorgu ifadeleri C# belirtiminde ortaya konan kurallara göre standart sorgu işleci yöntem çağrılarını dönüştürülür. Sorgu söz dizimi kullanarak ifade edilebilir herhangi bir sorgu yöntemi söz dizimi kullanılarak da belirtilebilir. Ancak, çoğu durumda, daha okunabilir ve kısa sorgu söz dizimi. Daha fazla bilgi için [C# dil belirtimi](~/_csharplang/spec/expressions.md#query-expressions) ve [standart sorgu işleçlerine genel bakış](../programming-guide/concepts/linq/standard-query-operators-overview.md).
 
 - LINQ sorguları yazarken bir kural olarak, mümkün olduğunda sorgu sözdizimi ve yöntem sözdizimi gerektiğinde kullanmanızı öneririz. Yok Hayır anlam veya iki farklı formlar arasında performans farkı. Sorgu ifadeleri olan genellikle daha fazla eşdeğer ifadelerin yöntemi sözdizimi yazılan daha okunabilir.
 

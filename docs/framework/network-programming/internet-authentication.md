@@ -15,14 +15,12 @@ helpviewer_keywords:
 - NetworkCredential class, about NetworkCredential class
 - client authentication, classes for authentication
 ms.assetid: d342e87c-f672-4660-a513-41a2f2b80c4a
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: e0f1ad373f8ec7687b44856a53e1e35b8b6baf8c
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 245e94cab61c0c60672476aadb417fc798b30362
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47089068"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181049"
 ---
 # <a name="internet-authentication"></a>Internet kimlik doğrulama
 <xref:System.Net> Sınıfları istemci kimlik doğrulama mekanizmaları, temel standart Internet kimlik doğrulama yöntemleri de dahil olmak üzere çeşitli destek, Özet, negotiate, NTLM ve Kerberos kimlik doğrulaması, hem de oluşturabileceğiniz özel yöntemler.  

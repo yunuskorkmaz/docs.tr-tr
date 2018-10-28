@@ -2,12 +2,12 @@
 title: "Visual Studio code'da F # ile çalışmaya başlama"
 description: "Visual Studio Code ve Ionide eklenti paketi ile F #'ı kullanmayı öğrenin."
 ms.date: 05/28/2018
-ms.openlocfilehash: 1afe985a4fe73d18b1e47b071b119c15a4672022
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: e962be2796cf0d6eb90d459730659e492f864716
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874357"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192674"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Visual Studio code'da F # ile çalışmaya başlama
 
@@ -19,7 +19,7 @@ Başlamak için sahip olduğunuzdan emin olun [F # ve doğru şekilde yüklenip 
 
 Yeni bir F # projesi oluşturmak için Visual Studio Code (onu istediğiniz gibi adlandırabilirsiniz) yeni bir klasöre açın.
 
-Ardından, komut paletinden açın (**Görüntüle > komut paletinden**) ve aşağıdaki komutu yazın:
+Ardından, komut paletini açın (**Görüntüle > komut paleti**) ve aşağıdaki komutu yazın:
 
 ```
 > F# new project

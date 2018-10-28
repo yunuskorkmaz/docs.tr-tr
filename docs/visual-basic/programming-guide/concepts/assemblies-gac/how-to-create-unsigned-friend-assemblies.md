@@ -2,23 +2,21 @@
 title: 'Nasıl yapılır: İmzasız arkadaş derlemeleri (Visual Basic) oluşturma'
 ms.date: 03/14/2018
 ms.assetid: 5735eb79-9729-4c46-ac1f-537ada3acaa7
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 873a5bf235b43b4460a1489a964539c4e4c18de3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5fb2310a5d883e65df0b59b6fe316aa4d4637b7f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643071"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188340"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-visual-basic"></a>Nasıl yapılır: İmzasız arkadaş derlemeleri (Visual Basic) oluşturma
-Bu örnek imzasız derlemeler ile arkadaş derlemeleri kullanmayı gösterir.  
+Bu örnek, işaretsiz derlemeleri ile arkadaş derlemeleri kullanmayı gösterir.  
   
-### <a name="to-create-an-assembly-and-a-friend-assembly"></a>Bir derlemeyi hem bir derlemeyi oluşturmak için  
+### <a name="to-create-an-assembly-and-a-friend-assembly"></a>Bir derleme ve arkadaş derleme oluşturmak için  
   
 1.  Bir komut istemi açın.  
   
-2.  Adlı bir Visual Basic dosyası oluşturma `friend_signed_A.` aşağıdaki kodu içerir. Kod kullanan <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> friend_signed_B Arkadaş derlemesi olarak bildirmek için öznitelik.  
+2.  Adlı bir Visual Basic dosyası oluşturma `friend_signed_A.` , aşağıdaki kodu içerir. Kod <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> friend_signed_B arkadaş derleme olarak bildirmek için özniteliği.  
   
     ```vb  
     ' friend_unsigned_A.vb  
@@ -44,13 +42,13 @@ Bu örnek imzasız derlemeler ile arkadaş derlemeleri kullanmayı gösterir.
     End Class  
     ```  
   
-3.  Derleme ve friend_signed_A aşağıdaki komutu kullanarak oturum açın.  
+3.  Derleme ve aşağıdaki komutu kullanarak friend_signed_A imzalayın.  
   
     ```console  
     vbc -target:library friend_unsigned_A.vb  
     ```  
   
-4.  Adlı bir Visual Basic dosyası oluşturma `friend_unsigned_B` aşağıdaki kodu içerir. Friend_unsigned_A friend_unsigned_B arkadaş derleme olarak belirttiğinden friend_unsigned_B kodda erişebilirsiniz `Friend` türleri ve friend_unsigned_A üyelerinden.  
+4.  Adlı bir Visual Basic dosyası oluşturma `friend_unsigned_B` , aşağıdaki kodu içerir. Friend_unsigned_A friend_unsigned_B arkadaş derleme olarak belirttiğinden friend_unsigned_B kodda erişip `Friend` türleri ve üyeleri friend_unsigned_A.  
   
     ```vb  
     ' friend_unsigned_B.vb  
@@ -77,14 +75,14 @@ Bu örnek imzasız derlemeler ile arkadaş derlemeleri kullanmayı gösterir.
     vbc -r:friend_unsigned_A.dll friend_unsigned_B.vb  
     ```  
   
-     Derleyici tarafından üretilen derlemenin adını geçirilir arkadaş derleme adı eşleşmelidir <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliği. Kullanarak açıkça derleme ayarlayabilirsiniz `/out` derleyici seçeneği.  
+     Geçirilen friend derleme adı derleyici tarafından oluşturulan bütünleştirilmiş kodun adı eşleşmelidir <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliği. Bütünleştirilmiş kod kullanarak açıkça ayarlayabilirsiniz `/out` derleyici seçeneği.  
   
 6.  Friend_signed_B.exe dosyasını çalıştırın.  
   
-     İki dizeyi program görüntüler: "Class1.Test" ve "Class2.Test".  
+     Program iki dizeyi görüntüler: "Class1.Test" ve "Class2.Test".  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
- Arasındaki benzerlikler vardır <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliği ve <xref:System.Security.Permissions.StrongNameIdentityPermission> sınıfı. Ana fark <xref:System.Security.Permissions.StrongNameIdentityPermission> kodu, belirli bir bölüme çalıştırmak için güvenlik izinleri ancak talep <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliği denetler görünürlüğünü `Friend` türleri ve üyeleri.  
+ Arasındaki benzerlikler vardır <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliği ve <xref:System.Security.Permissions.StrongNameIdentityPermission> sınıfı. Ana fark <xref:System.Security.Permissions.StrongNameIdentityPermission> ise kod, belirli bir bölümünü çalıştırmak için güvenlik izinleri talep <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliği denetimleri görünürlüğünü `Friend` türler ve üyeler.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  

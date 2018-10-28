@@ -1,52 +1,52 @@
 ---
 title: İfade Ağaçları
-description: İfade ağaçları .NET Core ve bunları inceleyin, değiştirme, yürütme ve yapıları olarak kodunu temsil etmek için nasıl kullanılacağı hakkında bilgi edinin.
+description: İfade ağaçlarında .NET Core ve bunları kodunu incelemek, değiştirmek, çalıştırmak ve yapıları olarak temsil etmek üzere kullanma hakkında bilgi edinin.
 ms.date: 06/20/2016
 ms.assetid: aceb4719-0d5a-4b19-b01f-b51063bcc54f
-ms.openlocfilehash: db35dd99dadc4e49aaaebd5d3782409a206cafc5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 56509f1eb0f2bdca8a8f3a51df958d42e95af6f4
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214919"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50190742"
 ---
 # <a name="expression-trees"></a>İfade Ağaçları
 
-LINQ kullandıysanız, zengin kitaplığıyla deneyim sahibi olduğu `Func` türleri API kümesi bir parçasıdır. (LINQ ile bilmiyorsanız, büyük olasılıkla okumak istediğiniz [LINQ öğretici](linq/index.md) ve öğretici [lambda ifadeleri](lambda-expressions.md) bundan önce.) *İfade ağaçları* işlevleri olan bağımsız değişkenler daha zengin etkileşim sağlar.
+LINQ kullandıysanız, zengin kitaplığı deneyimi olan burada `Func` türleri API kümesi bir parçasıdır. (LINQ ile ilgili bilgi sahibi değilseniz, büyük olasılıkla okumak istediğiniz [LINQ öğretici](linq/index.md) ve öğretici [lambda ifadeleri](lambda-expressions.md) bundan önce.) *İfade ağaçları* işlevleri bağımsız değişkenleriyle daha zengin etkileşim sağlar.
 
-LINQ sorgularını oluşturduğunuzda, genellikle Lambda ifadeleri kullanma işlev bağımsız değişkenleri, yazma. Tipik bir LINQ Sorgu bu işlev bağımsız değişkenleri derleyici oluşturur temsilci dönüştürülür. 
+İşlev bağımsız değişkenlerinin, Lambda ifadeleri LINQ sorguları oluşturduğunuzda genellikle kullanarak yazın. Bu işlev bağımsız değişkenleri, tipik bir LINQ Sorgu derleyici oluşturur bir temsilciye dönüştürülür. 
 
-Daha zengin etkileşim olmasını istediğinizde, kullanmanıza gerek *ifade ağaçları*.
-İfade ağaçları kodu inceleyin, değiştirme, execute veya bir yapı temsil eder. Bu araçları çalışma zamanı sırasında kodu işlemek için güç sağlar. Çalışan algoritmaları inceler ya da yeni özellikler yerleştirir kod yazabilirsiniz. Daha gelişmiş senaryolarda algoritmaları çalıştıran değiştirmek ve hatta C# başka bir form için başka bir ortamda yürütme ifadelere çevirir.
+Daha zengin etkileşim görüntülemek istiyorsanız, kullanmanız gereken *ifade ağaçları*.
+İfade ağaçları kodunu incelemek, değiştirmek, çalıştırmak veya bir yapı temsil eder. Bu araçlar çalışma zamanı sırasında kod düzenleme olanağı sunar. Çalışan algoritmalar inceler ve yeni özellikleri ekler kod yazabilirsiniz. Daha gelişmiş senaryolarda algoritmaları çalıştıran değiştirebilir ve hatta çevir C# ifadelere başka bir form için başka bir ortamda yürütme.
 
-İfade ağaçları kullanan kodu büyük olasılıkla zaten yazdıktan. Entity Framework'ün LINQ API'ları ifade ağaçları LINQ Sorgu ifade deseni bağımsız değişkenleri olarak kabul eder.
-Sağlayan [Entity Framework](http://docs.efproject.net/en/latest/) yazdığınız C# veritabanı altyapısı'nda yürüten SQL içine sorgu çevrilemedi. Başka bir örnek [Moq](https://github.com/Moq/moq), .NET için popüler bir mocking framework olduğu.
+İfade ağaçları kullanan kodu büyük olasılıkla zaten yazdığınız. Entity Framework'ün LINQ API'leri ifade ağaçları LINQ Sorgu ifade deseni için bağımsız değişkenler olarak kabul eder.
+Etkinleştiren [Entity Framework](/ef/) içinde yazdığınız sorgu çevrilecek C# Veritabanı Altyapısı'nda yürütülen SQL içine. Başka bir örnek [Moq](https://github.com/Moq/moq), .NET için popüler bir sahte işlem altyapısı olduğu.
 
-Bu öğreticinin kalan bölümleri ifade ağaçları nelerdir keşfetmek, ifade ağaçları destekleyen ve ifade ağaçları ile nasıl çalışacağınızı framework sınıfları inceleyin. İfade ağaçları okumak nasıl, ifade ağaçları oluşturma, değiştirilmiş ifade ağaçları oluşturma ve ifade ağaçları tarafından temsil edilen kodu çalıştırma hakkında bilgi edineceksiniz. Okuma sonra zengin Uyarlamalı algoritmaları oluşturmak için bu yapıları kullanıma hazır olacaktır.
+Bu öğreticinin geri kalan bölümlerini ifade ağaçları nelerdir keşfedin, ifade ağaçlarını destekleyen ve ifade ağaçları ile nasıl Göster framework sınıfları inceleyin. İfade ağaçları okuma, ifade ağaçları oluşturma, değiştirilen ifade ağaçları oluşturma ve ifade ağaçları tarafından temsil edilen kodunun nasıl çalıştırılacağını öğreneceksiniz. Okuma sonra bu yapıları zengin bir Uyarlamalı algoritmalar oluşturmak için kullanılmaya hazır olacaktır.
 
 1. [İfade Ağaçları Açıklaması](expression-trees-explained.md)
 
-    Yapı ve kavramları anlamanız *ifade ağaçları*.
+    Yapı ve kavramları anlama *ifade ağaçları*.
     
 2. [İfade Ağaçlarını Destekleyen Çerçeve Türleri](expression-classes.md)
     
-    Tanımlayan ve ifade ağaçları işlemek sınıfları ve yapıları hakkında bilgi edinin.
+    Yapılar ve sınıflar tanımlayın ve ifade ağaçları işlemek hakkında bilgi edinin.
     
 3. [İfade Yürütme](expression-trees-execution.md)
 
-    Lambda ifadesi bir temsilci temsil bir ifade ağacına dönüştürülemiyor öğrenin ve sonuçta elde edilen temsilci yürütün.
+    Bir temsilciye Lambda ifadesiyle temsil edilen bir ifade ağacı dönüştürme hakkında bilgi alın ve sonuç olarak oluşan temsilci yürütün.
 
 4. [İfade Yorumlama](expression-trees-interpreting.md)
 
-    Çapraz geçiş ve incelemek öğrenin *ifade ağaçları* ne ifade ağacına kod anlamak için temsil eder.
+    Geçiş ve incelemek öğrenin *ifade ağaçları* ne ifade ağacı kod anlamak için temsil eder.
 
 5. [İfade Derleme](expression-trees-building.md)
 
-    Bir ifade ağacına düğümleri oluşturmak ve ifade ağaçları oluşturma hakkında bilgi edinin.
+    İfade ağacı düğümleri oluşturmak ve ifade ağaçları oluşturma hakkında bilgi edinin.
 
 6. [İfade Çevirme](expression-trees-translating.md)
 
-    Bir ifade ağacına değiştirilmiş bir kopyasını oluşturmak ya da farklı bir biçime bir ifade ağacına çevrilemedi öğrenin.
+    İfade ağacı değiştirilmiş bir kopyasını oluşturun veya bir ifade ağacı farklı bir biçime çevir öğrenin.
 
 7. [Özetle](expression-trees-summary.md)
 

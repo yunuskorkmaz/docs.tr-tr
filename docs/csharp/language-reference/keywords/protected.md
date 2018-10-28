@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - protected keyword [C#]
 ms.assetid: 05ce3794-6675-4025-bddb-eaaa0ec22892
-ms.openlocfilehash: f25e692430f876ec384971079d6d0aa2c97e967b
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: cc3c8f81edb68fb26be560c8635e30dfd6e7b372
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582352"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183184"
 ---
 # <a name="protected-c-reference"></a>protected (C# Başvurusu)
 
@@ -61,4 +61,4 @@ Erişim düzeyleri değiştirirseniz `x` ve `y` için [özel](private.md), derle
 - [public](public.md)
 - [private](private.md)
 - [internal](internal.md)
-- [İç sanal anahtar sözcükleri ile ilgili güvenlik konuları](https://docs.microsoft.com/en-us/previous-versions/dotnet/netframework-4.0/heyd8kky(v=vs.100))
+- [İç sanal anahtar sözcükleri ile ilgili güvenlik konuları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/heyd8kky(v=vs.100))

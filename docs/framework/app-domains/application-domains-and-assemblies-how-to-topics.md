@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 2264054e-712e-47e4-8657-1aa1cfec3e3d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b555ad88b90e48da39624686a37898f47d90c1e3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bed7c6c856c55662b46ff581f007f9df6b67149d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743101"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191002"
 ---
 # <a name="application-domains-and-assemblies-how-to-topics"></a>Uygulama Etki Alanları ve Derlemeler Nasıl Yapılır Konuları
-Aşağıdaki bölümler uygulama etki alanları ve derlemeler ile programlama kavramsal belgelerinde bulunan tüm yapılır konulara bağlantılar içerir.  
+Aşağıdaki bölümler, uygulama etki alanları ve derlemeler ile programlama için kavramsal belgelerde bulunan tüm nasıl yapılır konulara bağlantılar içerir.  
   
  **Uygulama Etki Alanları**  
   
@@ -54,4 +54,4 @@ Aşağıdaki bölümler uygulama etki alanları ve derlemeler ile programlama ka
 -   [Nasıl yapılır: Bütünleştirilmiş Kod İçeriklerini Görüntüleme](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Uygulama Etki Alanları ve Derlemeler](../../../docs/framework/app-domains/index.md)
+- [Uygulama Etki Alanları ve Derlemeler](../../../docs/framework/app-domains/index.md)

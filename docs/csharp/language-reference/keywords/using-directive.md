@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
-ms.openlocfilehash: 1ed7ac49cde6792cddff898e8b9930a83598e02c
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: d3fa8a1a1b378fe1e18a63fec1c0d2f9eb40ecb3
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48029862"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181062"
 ---
 # <a name="using-directive-c-reference"></a>using Yönergesi (C# Başvurusu)
 `using` Yönergesi sahip üç kullanır:  
@@ -68,7 +68,7 @@ Aksi durumda, derleyici hatası [CS1529](../../misc/cs1529.md) oluşturulur.
   
  Oluşturma bir `using` ad alanını belirtmek zorunda kalmadan bir ad alanındaki türleri kullanılacak yönergesi. A `using` yönergesi verme erişim için belirttiğiniz ad alanı içinde iç içe geçmiş tüm ad alanları.  
   
- Ad alanları, iki kategoride gelir: sistem tarafından tanımlanan ve kullanıcı tanımlı. Kullanıcı tanımlı ad alanlarında, kod içinde tanımlanan ad alanları ' dir. Sistem tarafından tanımlanan ad alanları listesi için bkz. [.NET API Browser](https://docs.microsoft.com/en-us/dotnet/api/).  
+ Ad alanları, iki kategoride gelir: sistem tarafından tanımlanan ve kullanıcı tanımlı. Kullanıcı tanımlı ad alanlarında, kod içinde tanımlanan ad alanları ' dir. Sistem tarafından tanımlanan ad alanları listesi için bkz. [.NET API Browser](https://docs.microsoft.com/dotnet/api/).  
   
  Başvuran diğer derlemelerdeki yöntemleri hakkında daha fazla örnek için bkz: [oluştur ve kullanım bütünleştirilmiş kodları kullanarak komut satırı](../../programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).  
   

@@ -2,12 +2,12 @@
 title: Akış
 ms.date: 03/30/2017
 ms.assetid: 58a3db81-20ab-4627-bf31-39d30b70b4fe
-ms.openlocfilehash: 54601b92efcb621d36432d870514fe9a9dc0b46e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: ed77d8231df8a2272e398f5b1a126c6ed8cab354
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861120"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191187"
 ---
 # <a name="stream"></a>Akış
 Stream örnek aktarım modu iletişim akış kullanımını gösterir. Hizmet, akışları gönderip birkaç işlemini kullanıma sunar. Bu örnek kendiliğinden barındırılır. Hem istemci hem de hizmet Konsolu programlardır.  
@@ -20,7 +20,7 @@ Stream örnek aktarım modu iletişim akış kullanımını gösterir. Hizmet, a
 ## <a name="streaming-and-service-contracts"></a>Akış ve hizmet sözleşmeleri  
  Akış, bir hizmet sözleşmesini tasarlarken değerlendirilmesi için kullanılır. Bir işlem alır ya da büyük miktarlarda verinin döndürür, akış giriş veya çıkış iletileri arabelleğe alma nedeniyle yüksek bellek kullanımı önlemek için bu verileri düşünmelisiniz. Akış verileri için veri iletisinde tek parametre olmalıdır tutan parametresi. Örneğin, giriş iletisine akışla birine ise, işlemi tam olarak bir girdi parametreniz olmalıdır. Benzer şekilde, çıktı iletisi akışını ise işlemi tam olarak bir çıkış parametresi ya da dönüş değeri olması gerekir. Tür çalışması, parametre veya dönüş değerindeki olmalıdır `Stream`, `Message`, veya `IXmlSerializable`. Akış Bu örnekte kullanılan hizmet sözleşmesini verilmiştir.  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IStreamingSample  
 {  
@@ -68,7 +68,7 @@ public interface IStreamingSample
   
  `GetReversedStream` oluşturur ve yeni bir örneğini döndürür `ReverseStream`. Sistem, okuduğu gerçek işleme olur `ReverseStream` nesne. `ReverseStream.Read` Uygulama bayt öbeğini temel alınan dosyadan okur, bunları tersine çevirir ve sonra ters bayt sayısını döndürür. Bu, tüm dosya içeriğini ters; bir kerede bir bayt bir öbek tersine çevirir. Bir örnek içerik olarak akış işlemede nasıl gerçekleştirebileceğinizi gösterir gelen ve akış yazılamaz veya okunamaz.  
   
-```  
+```csharp
 class ReverseStream : Stream  
 {  
   
@@ -117,7 +117,7 @@ class ReverseStream : Stream
   
  Hizmet çıktısı:  
   
-```  
+```console  
 The streaming service is ready.  
 Press <ENTER> to terminate service.  
   
@@ -131,7 +131,7 @@ File D:\...\uploadedfile saved
   
  İstemci çıktısı:  
   
-```  
+```console  
 Press <ENTER> when service is ready  
 ------ Using HTTP ------   
 Calling GetStream()  

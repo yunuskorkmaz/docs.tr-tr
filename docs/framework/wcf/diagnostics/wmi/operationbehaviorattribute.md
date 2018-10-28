@@ -2,19 +2,19 @@
 title: OperationBehaviorAttribute
 ms.date: 03/30/2017
 ms.assetid: 8c9b0755-9e83-411f-bdcb-61a586022797
-ms.openlocfilehash: 4f731d146885265d9f956c182f1bebdba5db924b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6266713307846ab953299370835726958196fac1
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33486877"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185345"
 ---
 # <a name="operationbehaviorattribute"></a>OperationBehaviorAttribute
 OperationBehaviorAttribute  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```csharp
 class OperationBehaviorAttribute : Behavior  
 {  
   boolean AutoDisposeParameters;  
@@ -26,51 +26,51 @@ class OperationBehaviorAttribute : Behavior
 ```  
   
 ## <a name="methods"></a>Yöntemler  
- OperationBehaviorAttribute sınıfı herhangi bir yöntem tanımlamıyor.  
+ OperationBehaviorAttribute sınıf herhangi bir yöntemi tanımlamaz.  
   
 ## <a name="properties"></a>Özellikler  
  OperationBehaviorAttribute sınıfı aşağıdaki özelliklere sahiptir:  
   
 ### <a name="autodisposeparameters"></a>AutoDisposeParameters  
- Veri türü: boolean  
+ Veri türü: Boole  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Parametreler için otomatik dispose özellik durumu.  
+ Parametreler için dispose otomatik özellik durumu.  
   
 ### <a name="impersonation"></a>Kimliğe bürünme  
  Veri türü: dize  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- İşlemin desteklediği arayan kimliğe bürünme düzeyini gösterir.  
+ Destekleyen işlemi çağıranın kimliğe bürünme düzeyini gösterir.  
   
 ### <a name="releaseinstancemode"></a>OperationBehaviorAttribute üstündeki ReleaseInstanceMode  
  Veri türü: dize  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
  Nesne geri dönüştürmek için bir işlemi başlatılması sırasında gösterir.  
   
 ### <a name="transactionautocomplete"></a>TransactionAutoComplete  
- Veri türü: boolean  
+ Veri türü: Boole  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- İşlenmeyen özel durumlar oluşursa geçerli işlem otomatik olarak gerçekleştirmeyi gösterir.  
+ İşlenmeyen özel durumlar oluşursa otomatik olarak geçerli hareketi tamamlamak görüntülenip görüntülenmeyeceğini gösterir.  
   
 ### <a name="transactionscoperequired"></a>TransactionScopeRequired  
- Veri türü: boolean  
+ Veri türü: Boole  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
  İşlemi bir işlem gerekli olup olmadığını gösterir.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|MOF|Bildirilen Servicemodel.mof.|  
+|MOF|Bildirilmiş Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Ad Alanı|İçinde tanımlanan root\ServiceModel|  
+|Ad Alanı|İçinde tanımlı root\ServiceModel|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.OperationBehaviorAttribute>

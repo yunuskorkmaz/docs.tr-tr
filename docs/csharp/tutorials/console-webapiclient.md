@@ -3,12 +3,12 @@ title: .NET Core kullanarak bir REST istemcisi oluşturma
 description: Bu öğretici, .NET Core ve C# dili özellikleri sayısı öğretir.
 ms.date: 03/06/2017
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 13466b717d0676c2db5edf4c98a4ead3e673b96c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 521c6edfa7163219ea86c6fb8444bc95859c9aa1
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397927"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50170308"
 ---
 # <a name="rest-client"></a>REST istemcisi
 
@@ -57,7 +57,7 @@ Bu satırın hemen sonra aşağıdakileri ekleyin:
 Bu değişiklikleri yaptıktan sonra çalıştırmalısınız `dotnet restore` ([bkz. Not](#dotnet-restore-note)) yeniden böylece paket sisteminize yüklenir.
 
 ## <a name="making-web-requests"></a>Web istekleri yapma
-Artık Web'den veri almaya başlamak hazırsınız. Bilgileri okuyun bu uygulamada [GitHub API](https://developer.github.com/v3/). Projeleri hakkında bilgi okuyalım [.NET Foundation](http://www.dotnetfoundation.org/) terimdir. Projeler hakkında bilgi almak için GitHub API isteği yapan başlayacağız. Kullandığınız hesap uç noktadır: [ https://api.github.com/orgs/dotnet/repos ](https://api.github.com/orgs/dotnet/repos). Bir HTTP GET isteği kullanacaksınız böylece bu projeleri hakkındaki tüm bilgileri almak istediğiniz.
+Artık Web'den veri almaya başlamak hazırsınız. Bilgileri okuyun bu uygulamada [GitHub API](https://developer.github.com/v3/). Projeleri hakkında bilgi okuyalım [.NET Foundation](https://www.dotnetfoundation.org/) terimdir. Projeler hakkında bilgi almak için GitHub API isteği yapan başlayacağız. Kullandığınız hesap uç noktadır: [ https://api.github.com/orgs/dotnet/repos ](https://api.github.com/orgs/dotnet/repos). Bir HTTP GET isteği kullanacaksınız böylece bu projeleri hakkındaki tüm bilgileri almak istediğiniz.
 Tarayıcınız, ayrıca hangi bilgileri görmek için URL'yi tarayıcınıza aldığınız, yapıştırabilirsiniz HTTP GET istekleri ve işleme kullanır.
 
 Kullandığınız <xref:System.Net.Http.HttpClient> web isteklerinde bulunmak için sınıf. İster modern tüm .NET API'lerini <xref:System.Net.Http.HttpClient> yalnızca zaman uyumsuz yöntemler için uzun süre çalışan API'ler destekler.

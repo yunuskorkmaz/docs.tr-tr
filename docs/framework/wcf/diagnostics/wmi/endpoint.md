@@ -2,19 +2,19 @@
 title: Uç Noktası
 ms.date: 03/30/2017
 ms.assetid: fe63370d-81a1-40f3-97c2-59cb357c78d2
-ms.openlocfilehash: 5d597e9e029cec3552c94b47a64dfbf36d933e67
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4562481e8b0b18c0ea0d9df0af3427ffe6419821
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487652"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452933"
 ---
 # <a name="endpoint"></a>Uç Noktası
 Uç Noktası  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```csharp
 class Endpoint  
 {  
   string Address;  
@@ -33,101 +33,101 @@ class Endpoint
 ```  
   
 ## <a name="methods"></a>Yöntemler  
- Uç nokta sınıfı aşağıdaki yöntemi tanımlar.  
+ Uç nokta sınıfı, aşağıdaki yöntemi tanımlar.  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
 |[GetOperationCounterInstanceName](../../../../../docs/framework/wcf/diagnostics/wmi/getoperationcounterinstancename.md)|İşlemi performans sayacı örneği adını alır.|  
   
 ## <a name="properties"></a>Özellikler  
- Uç nokta sınıfı aşağıdaki özelliklere sahiptir:  
+ Uç nokta sınıfı, aşağıdaki özelliklere sahiptir:  
   
-### <a name="address"></a>Adres  
+### <a name="address"></a>Adresi  
  Veri türü: dize  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Uç nokta adresi içeren bir URI.  
+ Bitiş noktasının adresini içeren bir URI.  
   
 ### <a name="addressheaders"></a>AddressHeaders  
  Veri türü: dize dizisi  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Bu uç noktaya eklenen adres üstbilgileri koleksiyonu.  
+ Adres üstbilgileri Bu uç noktaya bağlı koleksiyonu.  
   
 ### <a name="addressidentity"></a>AddressIdentity  
  Veri türü: dize  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Bitiş noktasının kimliğini.  
+ Uç noktanın kimliği.  
   
 ### <a name="appdomainid"></a>AppDomainId  
  Veri türü: SINT32  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
  Uç noktayı barındıran appdomain kimliği.  
   
 ### <a name="behaviors"></a>Davranışlar  
- Veri türü: davranış dizisi  
+ Veri türü: davranışı dizi  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
  Bu bitiş noktası tarafından uygulanan davranış koleksiyonu.  
   
 ### <a name="binding"></a>Bağlama  
  Veri türü: bağlama  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Bu bitiş noktası tarafından kullanılan bağlama.  
+ Bu uç nokta tarafından kullanılan bağlama.  
   
 ### <a name="contractname"></a>ContractName  
  Veri türü: dize  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Bu uç noktaya sunduğu sözleşmeyi belirten bir dize.  
+ Hangi anlaşmanın belirten bir dize bu koncový bod vystavuje.  
   
 ### <a name="counterinstancename"></a>CounterInstanceName  
  Veri türü: dize  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Uç noktanın performans sayaçları örneğinin adı.  
+ Uç nokta performans sayaçları örneğinin adı.  
   
-### <a name="listenuri"></a>listenUri  
+### <a name="listenuri"></a>ListenUri  
  Veri türü: dize  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Uç noktası URI dinler.  
+ Uç nokta URI'si dinler.  
   
 ### <a name="name"></a>Ad  
  Veri türü: dize  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Bu uç noktayı benzersiz adı.  
+ Bu uç nokta benzersiz adı.  
   
 ### <a name="processid"></a>İşlem kimliği  
  Veri türü: SINT32  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- İşlemin işlem kimliği uç noktasını barındıran.  
+ İşlem uç noktasını barındıran işlem kimliği.  
   
 ### <a name="ref"></a>ref  
  Veri türü: Sözleşme  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Bu bitiş noktasının sunduğu sözleşme.  
+ Bu uç noktanın sözleşme.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|MOF|Bildirilen Servicemodel.mof.|  
+|MOF|Bildirilmiş Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Ad Alanı|İçinde tanımlanan root\ServiceModel|
+|Ad Alanı|İçinde tanımlı root\ServiceModel|

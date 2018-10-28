@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6fca25786096ebeb97c133d306129f33f2bb4580
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 055c7db652426651dd3c2a74825a11e305d939f1
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44181056"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183912"
 ---
 # <a name="working-with-calendars"></a>Takvimlerle çalışma
 
@@ -60,7 +60,7 @@ Tarih ve saat değeri zaman içinde bir anı gösterse de, dize gösterimi kült
 
 Bir takvim iki şekilde kullanılabilir:
 
-* Belirli bir kültür tarafından kullanılan takvim olarak. Her <xref:System.Globalization.CultureInfo> nesne, nesnenin kullanmakta olduğu Takvim olan geçerli bir takvimi vardır. Tüm tarih ve saat değerlerinin dize gösterimleri, otomatik olarak geçerli kültürü ve onun geçerli takvimini yansıtır. Genellikle, geçerli takvim kültürün varsayılan takvimidir. <xref:System.Globalization.CultureInfo> nesneleri ayrıca, bu kültürün kullanabileceği ek takvimleri içeren isteğe bağlı takvimleri de vardır.
+* Belirli bir kültür tarafından kullanılan takvim olarak. Her <xref:System.Globalization.CultureInfo> nesne, nesnenin kullanmakta olduğu Takvim olan geçerli bir takvimi vardır. Tüm tarih ve saat değerlerinin dize gösterimleri, otomatik olarak geçerli kültürü ve onun geçerli takvimini yansıtır. Genellikle, geçerli takvim kültürün varsayılan takvimidir. <xref:System.Globalization.CultureInfo> nesnelerin kültürün kullanabileceği ek takvimleri içeren isteğe bağlı takvimleri de vardır.
 
 * Belirli bir takvimden bağımsız tek başına bir takvim olarak. Bu durumda, <xref:System.Globalization.Calendar> yöntemleri, tarihleri takvimi yansıtan değerler olarak ifade etmek için kullanılır.
 

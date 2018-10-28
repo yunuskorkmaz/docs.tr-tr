@@ -11,31 +11,31 @@ helpviewer_keywords:
 ms.assetid: 3eb5ce6f-f304-4f87-8e81-0f25092f5ad4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0f019c1075c119c3d814b3b7add8fe30f3e4d107
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: c5ce0d4ac2b95dc4d51e785e3a00026f56c13d2c
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48844559"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50047429"
 ---
 # <a name="passing-a-uri-to-the-windows-runtime"></a>URI'yı Windows Çalışma Zamanı'na Geçirme
 Windows çalışma zamanı yöntemleri, yalnızca mutlak URI kabul eder. Göreli bir URI geçirirseniz bir [!INCLUDE[wrt](../../../includes/wrt-md.md)] yöntemi, bir <xref:System.ArgumentException> özel durumu oluşturulur. İşte nedenleri: kullandığınızda [!INCLUDE[wrt](../../../includes/wrt-md.md)] .NET Framework kodunda <xref:Windows.Foundation.Uri?displayProperty=nameWithType> sınıfı olarak görünür <xref:System.Uri?displayProperty=nameWithType> IntelliSense içinde. <xref:System.Uri?displayProperty=nameWithType> Sınıfı göreli URI'ler sağlar ancak <xref:Windows.Foundation.Uri?displayProperty=nameWithType> sınıfı yok. Bu da içinde ortaya çıkarttığınız yöntemler için doğru [!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşenleri. Bileşeniniz URI alan bir yöntem sunarsa, kodunuzdaki imzası içerir <xref:System.Uri?displayProperty=nameWithType>. Ancak bileşeninizin kullanıcıları için imza içerir <xref:Windows.Foundation.Uri?displayProperty=nameWithType>. Bileşeninize iletilen bir URI mutlak URI olmalıdır.  
   
- Bu konuda, bir mutlak URI tespit etme ve bir uygulama paketinde bir kaynağa başvuran nasıl oluşturulduğu gösterilmektedir.  
+Bu konuda, bir mutlak URI tespit etme ve bir uygulama paketinde bir kaynağa başvuran nasıl oluşturulduğu gösterilmektedir.  
   
 ## <a name="detecting-and-using-an-absolute-uri"></a>Algılama ve mutlak URI kullanma  
- Kullanım <xref:System.Uri.IsAbsoluteUri%2A?displayProperty=nameWithType> geçirmeden önce bir URI mutlak olduğundan emin olmak için özellik [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Bu özellik kullanılarak durumunun yakalanmasından ve işlenmesinden verimlidir <xref:System.ArgumentException> özel durum.  
+Kullanım <xref:System.Uri.IsAbsoluteUri%2A?displayProperty=nameWithType> geçirmeden önce bir URI mutlak olduğundan emin olmak için özellik [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Bu özellik kullanılarak durumunun yakalanmasından ve işlenmesinden verimlidir <xref:System.ArgumentException> özel durum.  
   
 ## <a name="using-an-absolute-uri-for-a-resource-in-the-app-package"></a>Uygulama paketinde bir kaynak için bir mutlak URI kullanma  
- Uygulama paketinizi içeren bir kaynak için URI belirtmek istiyorsanız, kullanabileceğiniz `ms-appx` veya `ms-appx-web` düzenini mutlak URI oluşturmak için.  
+Uygulama paketinizi içeren bir kaynak için URI belirtmek istiyorsanız, kullanabileceğiniz `ms-appx` veya `ms-appx-web` düzenini mutlak URI oluşturmak için.  
   
- Aşağıdaki örnek nasıl ayarlanacağını gösterir [kaynak](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.source.aspx) özelliği için bir [WebView](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.aspx) denetimi ve [kaynak](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.image.source.aspx) özelliği için bir [görüntü](https://msdn.microsoft.com/library/windows/apps/br242752.aspx) denetimi XAML hem kod kullanarak sayfaları adlı bir klasörde bulunan kaynaklar.  
+Aşağıdaki örnek nasıl ayarlanacağını gösterir <xref:Windows.UI.Xaml.Controls.WebView.Source%2A> özelliği için bir <xref:Windows.UI.Xaml.Controls.WebView> denetimi ve <xref:Windows.UI.Xaml.Controls.Image.Source%2A> özelliği için bir <xref:Windows.UI.Xaml.Controls.Image> hem XAML hem kod kullanarak sayfaları adlı bir klasörde bulunan kaynaklara denetimi.  
   
- [!code-xaml[System.URIToWindowsURI#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.uritowindowsuri/cs/mainpage.xaml#1)]  
+[!code-xaml[System.URIToWindowsURI#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.uritowindowsuri/cs/mainpage.xaml#1)]  
 [!code-csharp[System.URIToWindowsURI#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.uritowindowsuri/cs/mainpage.xaml.cs#2)]
 [!code-vb[System.URIToWindowsURI#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.uritowindowsuri/vb/mainpage.xaml.vb#2)]  
   
- Bu şemalar hakkında daha fazla bilgi için bkz. [URI düzenleri](https://msdn.microsoft.com/library/windows/apps/jj655406.aspx) Windows geliştirme Merkezi'nde.  
+Bu şemalar hakkında daha fazla bilgi için bkz. [URI düzenleri](/windows/uwp/app-resources/uri-schemes) Windows geliştirme Merkezi'nde.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

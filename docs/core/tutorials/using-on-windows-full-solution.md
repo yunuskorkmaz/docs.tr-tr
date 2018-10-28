@@ -5,12 +5,12 @@ author: bleroy
 ms.author: mairaw
 ms.date: 11/16/2016
 ms.custom: vs-dotnet
-ms.openlocfilehash: c21c257b55c4389ea4a60fca55eb83cff60ff3b5
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: b3e466511fcae447f5bb54b83f13b25bc90c6539
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840946"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185085"
 ---
 # <a name="building-a-complete-net-core-solution-on-windows-using-visual-studio-2017"></a>Visual Studio 2017'yi kullanarak, Windows üzerinde eksiksiz bir .NET Core çözümü derleme
 
@@ -24,7 +24,7 @@ Yönergeleri takip edin [önkoşulları sayfamızı](../windows-prerequisites.md
 
 ### <a name="writing-the-library"></a>Kitaplığı yazma
 
-1. Visual Studio'da **dosya**, **yeni**, **proje**. İçinde **yeni proje** iletişim kutusunda genişletin **Visual C#** düğüm ve **.NET Standard** düğümünü ve ardından **sınıf kitaplığı (.NET Standard)**. Bu .NET Core hedefleyen bir .NET Standard kitaplığı 2.0 sürümünü destekleyen her bir .NET uygulaması oluşturur [.Net standart](https://docs.microsoft.com/en-us/dotnet/standard/net-standard)
+1. Visual Studio'da **dosya**, **yeni**, **proje**. İçinde **yeni proje** iletişim kutusunda genişletin **Visual C#** düğüm ve **.NET Standard** düğümünü ve ardından **sınıf kitaplığı (.NET Standard)**. Bu .NET Core hedefleyen bir .NET Standard kitaplığı 2.0 sürümünü destekleyen her bir .NET uygulaması oluşturur [.NET Standard](../../standard/net-standard.md).
 
 2. Adı ' % s'projesi "Library" ve "Altın" Çözüm. Bırakın **çözüm için dizin oluştur** işaretli. **Tamam**'ı tıklatın.
 
@@ -73,6 +73,6 @@ Yönergeleri takip edin [önkoşulları sayfamızı](../windows-prerequisites.md
 
 8. Az önce eklediğiniz bir satırın sonunda bir kesme noktası ayarlayın.
 
-9. Uygulamayı çalıştırmak için F5 tuşuna basın...
+9. Uygulamayı çalıştırmak için F5 tuşuna basın.
 
    Uygulama hatasız oluşturması gerekir ve kesme noktasına isabet. Aynı zamanda "yanıt 42 sağlıyor." uygulama çıkış denetleme olanağına olmalıdır.

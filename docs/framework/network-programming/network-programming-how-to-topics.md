@@ -7,14 +7,12 @@ helpviewer_keywords:
 - networking how-tos [.NET Framework]
 - network
 ms.assetid: 8fd6c675-9ea6-4fad-a412-e2c2c1f233d8
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 6ca48627df37a98265b9078e2bc93dd823823e45
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 5b9236b3dd9d40c3f5656fd050f25cbb12f6a1ec
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025420"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192364"
 ---
 # <a name="network-programming-how-to-topics"></a>Ağ programlama nasıl yapılır konuları
 Aşağıdaki liste, ağ programlama için kavramsal belgelerde bulunan nasıl yapılır konulara bağlantılar içerir.  

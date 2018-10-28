@@ -1,5 +1,5 @@
 ---
-title: Ne yazık ki güncelleştireceğinizi&#39;t bu Visual Basic hatasıyla ilgili ayrıntı sahip
+title: Ne yazık ki ki&#39;bu Visual Basic hatasıyla ilgili ayrıntı yok
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30234
@@ -3044,32 +3044,32 @@ f1_keywords:
 - bc30233
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-ms.openlocfilehash: 413765a6feebab3be8196552d11ade30bce28496
-ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
+ms.openlocfilehash: e3d3ac14c51ef5665aba0879a85e03e662174e68
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35231469"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192791"
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>Ne yazık ki güncelleştireceğinizi&#39;t bu Visual Basic hatasıyla ilgili ayrıntı sahip
-Üzgünüz, ancak bu hatayla ilgili belirli bir bilgi bulunmuyor. Web hakkında bilgi bulmak hata numarası ve ileti metni arayabilirsiniz. Veya bu forumları birini kullanarak diğer geliştiriciler isteyin:  
+# <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>Ne yazık ki ki&#39;bu Visual Basic hatasıyla ilgili ayrıntı yok
+Özür dileriz, ancak Biz bu hata hakkındaki belirli bilgilere sahip değildir. Web'deki bilgileri bulmak hata sayısı ve ileti metni için arama yapabilirsiniz. Veya şu forumlardan birine kullanarak diğer geliştiriciler isteyebilirsiniz:  
   
  [Visual Basic dili](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vblanguage)  
  Bir forum sorular için derleyici ve Visual Basic dili sözdizimi hakkında ve genel tartışmalar sağlar.  
   
  [Visual Basic birlikte çalışabilirlik ve yükseltme](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vbinterop)  
- Hakkında sorular için bir forum sağlar ve Visual Basic'e yükseltme ve birlikte çalışabilirlik özellikleri ile çalışma sorunlarını.  
+ Hakkında sorular için bir forum sağlar ve sorunlar Visual Basic yükseltme ve birlikte çalışabilirlik özelliklerle çalışma.  
   
  [Visual Basic IDE](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vbide)  
  Visual Studio ortamında çalışma hakkında sorular için bir forum sağlar.  
   
  [Visual Basic genel](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vbgeneral)  
- Hakkında sorular için bir forum sağlar ve diğer forumlarda açıklanmamaktadır Visual Basic ile yayımlar.  
+ Hakkında sorular için bir forum sağlar ve diğer forumlarda ele alınmamaktadır Visual Basic ile verir.  
   
- [StackOverflow](http://stackoverflow.com/questions/tagged/vb.net)  
- Hakkında sorular için bir forum sağlar ve Visual Basic ile yayımlar.  
+ [StackOverflow](https://stackoverflow.com/questions/tagged/vb.net)  
+ Hakkında sorular için bir forum sağlar ve Visual Basic ile verir.  
   
- Ayrıca bkz.:  
+ Ayrıca bkz:  
  [Visual Basic Programcıları için Ek Kaynaklar](../../visual-basic/getting-started/additional-resources.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  

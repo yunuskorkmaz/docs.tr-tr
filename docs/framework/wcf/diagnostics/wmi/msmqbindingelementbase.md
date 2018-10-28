@@ -2,19 +2,19 @@
 title: MsmqBindingElementBase
 ms.date: 03/30/2017
 ms.assetid: 210d41ab-a2a4-4d7a-afd2-0916c08a4015
-ms.openlocfilehash: 9a9d48cc49b19f737236939c83a4e9421013f48f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e7f4cf41168bd1e5483524195e20541d896a6569
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33486607"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183197"
 ---
 # <a name="msmqbindingelementbase"></a>MsmqBindingElementBase
 MsmqBindingElementBase  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```csharp  
 class MsmqBindingElementBase : TransportBindingElement  
 {  
   string CustomDeadLetterQueue;  
@@ -32,7 +32,7 @@ class MsmqBindingElementBase : TransportBindingElement
 ```  
   
 ## <a name="methods"></a>Yöntemler  
- MsmqBindingElementBase sınıfı herhangi bir yöntem tanımlamıyor.  
+ MsmqBindingElementBase sınıf herhangi bir yöntemi tanımlamaz.  
   
 ## <a name="properties"></a>Özellikler  
  MsmqBindingElementBase sınıfı aşağıdaki özelliklere sahiptir:  
@@ -40,85 +40,85 @@ class MsmqBindingElementBase : TransportBindingElement
 ### <a name="customdeadletterqueue"></a>customDeadLetterQueue  
  Veri türü: dize  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Süresi dolan veya aktarımı veya teslim başarısız olmuş iletileri yerleştirildiği her uygulama için sahipsiz sıra konumunu içeren bir URI.  
+ Aktarım veya teslim başarısız olan veya süresi dolmuş olan iletileri yerleştirildiği her uygulama için geçerliliğini yitirmiş kuyruk konumunu içeren bir URI.  
   
 ### <a name="deadletterqueue"></a>deadLetterQueue  
  Veri türü: dize  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Kullanılacak sahipsiz sıra türünü gösteren bir numaralandırma değeri.  
+ Kullanılacak geçerliliğini yitirmiş kuyruk türü belirten bir numaralandırma değeri.  
   
 ### <a name="durable"></a>dayanıklı  
- Veri türü: boolean  
+ Veri türü: Boole  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Bu bağlama tarafından işlenen iletilerin kalıcı veya geçici olup olmadığını belirten bir değer.  
+ Bu bağlama tarafından işlenen iletilerin sürekli veya geçici olup olmadığını belirten bir değer.  
   
 ### <a name="exactlyonce"></a>exactlyOnce  
- Veri türü: boolean  
+ Veri türü: Boole  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Bu bağlama tarafından işlenen iletilerin tam olarak bir kez alınan olup olmadığını gösteren bir Boole değeri.  
+ Bu bağlama tarafından işlenen iletilerin tam olarak bir kez alınıp olup olmadığını gösteren bir Boole değeri.  
   
 ### <a name="maxretrycycles"></a>maxRetryCycles  
  Veri türü: SINT32  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- İletileri teslim alma işlemini yapan uygulamanın için denemek için yeniden deneme döngüsü sayısı.  
+ Alıcı uygulamasına iletileri teslim girişiminde yeniden deneme döngüsü sayısı.  
   
 ### <a name="receiveerrorhandling"></a>receiveErrorHandling  
  Veri türü: dize  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Zehirli ileti işleme yönelik ayarlar.  
+ Zehirli ileti işleme için ayarlar.  
   
 ### <a name="receiveretrycount"></a>receiveRetryCount  
  Veri türü: SINT32  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Hemen yeniden deneme sayısı uygulama sırasından okunan bir ileti üzerinde çalışır.  
+ Hemen yeniden deneme sayısı, uygulama kuyruktan okuyan bir ileti üzerinde çalışır.  
   
 ### <a name="retrycycledelay"></a>retryCycleDelay  
- Veri türü: datetime  
+ Veri türü: tarih/saat  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Yeniden deneme arasındaki gecikme süresini belirten bir değer hemen teslim edilemeyen bir ileti teslim çalışılırken geçiş yapar.  
+ Anında teslim edilemeyen bir iletiyi teslim etmeye çalışırken deneme arasındaki gecikmeyi belirten bir değer dolaşır.  
   
-### <a name="timetolive"></a>TimeToLive  
- Veri türü: datetime  
+### <a name="timetolive"></a>timeToLive  
+ Veri türü: tarih/saat  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Süresi dolmadan önce bu bağlama tarafından işlenen ne kadar süreyle iletileri gösterir zaman aralığını sırada olabilir.  
+ Süresi dolmadan önce bu bağlama tarafından işlenen iletilerin belirten zaman aralığını kuyrukta olabilir.  
   
 ### <a name="usemsmqtracing"></a>useMsmqTracing  
- Veri türü: boolean  
+ Veri türü: Boole  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Bu bağlama tarafından işlenen iletileri olup olmadığını gösteren bir Boole değeri izlenen.  
+ İletileri bu bağlama tarafından işlenen olup olmadığını gösteren bir Boole değeri izlenip izlenmemesini gerektiğini.  
   
 ### <a name="usesourcejournal"></a>useSourceJournal  
- Veri türü: boolean  
+ Veri türü: Boole  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Bu bağlama tarafından işlenen iletilerin kopyalarını kaynak günlük sırasındaki depolanması gerekip gerekmediğini gösteren bir Boole değeri.  
+ Bu bağlama tarafından işlenen iletilerin kopyalarını kaynak günlük sırasındaki depolanıp depolanmayacağını gösteren bir Boole değeri.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|MOF|Bildirilen Servicemodel.mof.|  
+|MOF|Bildirilmiş Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Ad Alanı|İçinde tanımlanan root\ServiceModel|  
+|Ad Alanı|İçinde tanımlı root\ServiceModel|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.NetMsmqBinding>  

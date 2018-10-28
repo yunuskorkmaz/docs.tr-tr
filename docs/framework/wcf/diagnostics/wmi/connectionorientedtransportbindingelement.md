@@ -2,19 +2,19 @@
 title: ConnectionOrientedTransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: c1308313-f0e2-49e6-977d-6b4ce9ad35d1
-ms.openlocfilehash: 3b1055e6e2329fd213ae973ad32cdf8014d30a04
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 49f030c05f02280d483ac2a836cbe75716b7b5cc
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487454"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185060"
 ---
 # <a name="connectionorientedtransportbindingelement"></a>ConnectionOrientedTransportBindingElement
 ConnectionOrientedTransportBindingElement  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```csharp
 class ConnectionOrientedTransportBindingElement : TransportBindingElement  
 {  
   datetime ChannelInitializationTimeout;  
@@ -29,72 +29,72 @@ class ConnectionOrientedTransportBindingElement : TransportBindingElement
 ```  
   
 ## <a name="methods"></a>Yöntemler  
- ConnectionOrientedTransportBindingElement sınıfı herhangi bir yöntem tanımlamıyor.  
+ ConnectionOrientedTransportBindingElement sınıf herhangi bir yöntemi tanımlamaz.  
   
 ## <a name="properties"></a>Özellikler  
  ConnectionOrientedTransportBindingElement sınıfı aşağıdaki özelliklere sahiptir:  
   
 ### <a name="channelinitializationtimeout"></a>ChannelInitializationTimeout  
- Veri türü: datetime  
+ Veri türü: tarih/saat  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Zaman aşımından önce tamamlamak ne kadar süreyle kanal başlatma belirten timespan sahiptir.  
+ Zaman aşımından önce tamamlamak ne kadar kanal başlatma belirten bir TimeSpan değeri vardır.  
   
 ### <a name="connectionbuffersize"></a>ConnectionBufferSize  
  Veri türü: SINT32  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- İstemci veya hizmet hattan serileştirilmiş iletide öbeğini iletmek için kullanılan arabelleğin boyutu.  
+ Bir parça istemci veya hizmet serileştirilmiş ileti iletmek için kullanılan arabellek boyutu.  
   
 ### <a name="hostnamecomparisonmode"></a>hostNameComparisonMode  
  Veri türü: dize  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Ana bilgisayar üzerinde URI'yi eşleştirirken hizmete erişmek için kullanılıp kullanılmadığını gösteren bir değer.  
+ Ana bilgisayar üzerinde URI'yi eşleştirirken hizmete erişmek için kullanılıp kullanılmayacağını belirten bir değer.  
   
 ### <a name="maxbuffersize"></a>maxBufferSize  
  Veri türü: SINT32  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
  Kullanılacak arabelleğin en büyük boyutu.  
   
-### <a name="maxoutputdelay"></a>maxOutputDelay  
- Veri türü: datetime  
+### <a name="maxoutputdelay"></a>MaxOutputDelay  
+ Veri türü: tarih/saat  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- En fazla bellek önce arabelleğe bir ileti veya tam bir ileti öbeğini kalabileceği zaman aralığını gönderilen.  
+ Gönderilen en fazla bir ileti veya tam bir ileti bir öbek kalabileceği edilmeden önce bellekte arabelleğe zaman aralığı.  
   
 ### <a name="maxpendingaccepts"></a>maxPendingAccepts  
  Veri türü: SINT32  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- En fazla bekleyen zaman uyumsuz hizmet gelen bağlantıları işlemek için kullanılan iş parçacıklarını kabul edin.  
+ En fazla sayısını bekleyen zaman uyumsuz hizmet gelen bağlantıları işlemek için kullanılan iş parçacıklarının kabul edin.  
   
 ### <a name="maxpendingconnections"></a>maxPendingConnections  
  Veri türü: SINT32  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- Beklemedeki bağlantı maksimum sayısı.  
+ Bekleyen bağlantılar maksimum sayısı.  
   
 ### <a name="transfermode"></a>transferMode  
  Veri türü: dize  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- İletilerin ara belleğe veya ile bağlantı yönelimli aktarma akışı olup olmadığını belirten bir değer.  
+ İletilerin ara belleğe veya bağlantıya dayalı taşınıp belirten bir değeri.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|MOF|Bildirilen Servicemodel.mof.|  
+|MOF|Bildirilmiş Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Ad Alanı|İçinde tanımlanan root\ServiceModel|  
+|Ad Alanı|İçinde tanımlı root\ServiceModel|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>
