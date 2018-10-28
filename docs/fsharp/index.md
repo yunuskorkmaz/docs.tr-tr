@@ -3,12 +3,12 @@ title: F# Kılavuzu
 description: 'Bu kılavuz çeşitli öğrenim malzemelerini F #, .NET üzerinde çalışan işlevsel bir programlama dili için genel bir bakış sağlar.'
 author: cartermp
 ms.date: 08/03/2018
-ms.openlocfilehash: d3e10b6eb99f35b8eddeaa1f0ae257dd17d5cc41
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 5cd5bd95373c8a52a8d2b2348a51970560e8b272
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480684"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188371"
 ---
 # <a name="f-guide"></a>F# Kılavuzu
 
@@ -56,7 +56,7 @@ F # Kılavuzu, F # dili öğrenmek için birçok kaynak sağlar.
 
 [F # kod parçacıkları Web sitesi](http://www.fssnip.net) devasa bir F #'de mutlak başlangıç için son derece Gelişmiş kod parçacıkları arasında neredeyse her şeyi yapmak nasıl gösteren kod parçacıkları kümesini içerir.
 
-[F # Software Foundation Slack](http://fsharp.org/guides/slack/) yeni başlayanlar ve uzmanlar aynı şekilde, son derece aktif için harika bir yerdir ve bazı dünyanın en iyi F # programcıları için bir sohbet kullanılabilir. Birleştirme önemle öneririz.
+[F # Software Foundation Slack](https://fsharp.org/guides/slack/) yeni başlayanlar ve uzmanlar aynı şekilde, son derece aktif için harika bir yerdir ve bazı dünyanın en iyi F # programcıları için bir sohbet kullanılabilir. Birleştirme önemle öneririz.
 
 ## <a name="the-f-software-foundation"></a>F # Software Foundation
 
@@ -64,4 +64,4 @@ Microsoft F # dili ve Visual Studio araçlarında birincil geliştiricisi olmakl
 
 F # Software Foundation'ın iş açısından, tanıtın, korumak ve F # dil, programlama ilerleyin ve destekler ve F # programcıları, çeşitli ve uluslararası topluluğunun büyütülmesini kolaylaştırmak sağlamaktır.
 
-Daha fazla bilgi edinin ve tanışmak için kullanıma [fsharp.org](http://fsharp.org). Ücretsiz olarak katılabilir ve Eksik çıkış için istemediğiniz bir F # geliştiricileri Foundation'da ağ şeydir!
+Daha fazla bilgi edinin ve tanışmak için kullanıma [fsharp.org](https://fsharp.org). Ücretsiz olarak katılabilir ve Eksik çıkış için istemediğiniz bir F # geliştiricileri Foundation'da ağ şeydir!

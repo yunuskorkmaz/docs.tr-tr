@@ -2,17 +2,17 @@
 title: '&lt;netHttpBinding &gt;güvenliği&lt;'
 ms.date: 03/30/2017
 ms.assetid: dc41f6f7-cabc-4a64-9fa0-ceabf861b348
-ms.openlocfilehash: 912f53a9e0a5d1d145c308dd6f427df05b27c077
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 1c8a96759625da858d1491b7af59bf32e7e42a9e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838539"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50193857"
 ---
 # <a name="ltsecuritygt-of-ltnethttpbinding"></a>&lt;netHttpBinding &gt;güvenliği&lt;
 Güvenlik yeteneklerini tanımlar [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).  
   
- \<system.ServiceModel>  
+\<system.ServiceModel>  
 \<bağlamaları >  
 \<netHttpBinding>  
 \<bağlama >  
@@ -39,7 +39,7 @@ Güvenlik yeteneklerini tanımlar [ \<basicHttpBinding >](../../../../../docs/fr
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|mod|İsteğe bağlı. Kullanılan güvenlik türünü belirtir. Varsayılan, `None` değeridir. Bu öznitelik türünde <!--zz <xref:System.ServiceModel.NetHttpSecurityMode> --> `System.ServiceModel.NetHttpSecurityMode`.|
+|mod|İsteğe bağlı. Kullanılan güvenlik türünü belirtir. Varsayılan, `None` değeridir. Bu öznitelik türünde <xref:System.ServiceModel.BasicHttpSecurityMode>.|
   
 ## <a name="mode-attribute"></a>mod özniteliği  
   

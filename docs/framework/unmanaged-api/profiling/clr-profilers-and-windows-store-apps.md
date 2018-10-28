@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27e1433415bdc6303555ab9ae04a20e097248535
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: e4dedc6b527706fc9f22add903feb30ad2884eab
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46937624"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188826"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>CLR Profil oluşturucular ve Windows Store uygulamaları
 
@@ -100,7 +100,7 @@ Windows, Profiler DLL'yi yüklemeye çalıştığında, Profiler DLL'yi doğru �
 
 - Profiler DLL'niz açtığınızdan emin olun.
 
-- Kullanıcı, bir geliştirici lisansı, Windows 8 makinesinde aracınızın kullanmadan önce yüklemeniz gerektiğini söyleyin. Bu, Visual Studio'dan veya bir komut isteminden el ile otomatik olarak yapılabilir. Daha fazla bilgi için [Geliştirici lisansı alma](https://msdn.microsoft.com/library/windows/apps/Hh974578.aspx).
+- Kullanıcı, bir geliştirici lisansı, Windows 8 makinesinde aracınızın kullanmadan önce yüklemeniz gerektiğini söyleyin. Bu, Visual Studio'dan veya bir komut isteminden el ile otomatik olarak yapılabilir. Daha fazla bilgi için [Geliştirici lisansı alma](https://docs.microsoft.com/previous-versions/windows/apps/hh974578(v=win.10)).
 
 **Dosya sistemi izinleri**
 
@@ -124,7 +124,7 @@ Genellikle, bir masaüstü uygulamasında Profiler kullanıcı Arabirimi, Profil
 
 İlk olarak, hangi Windows Store uygulamasını başlatmak için profil oluşturucu kullanıcıdan isteyebilirsiniz. Masaüstü uygulamaları için dosya göz atma iletişim belki de gösterebilir ve kullanıcı bulma ve bir .exe dosyası seçin. Ancak Windows Store apps farklı ve göz atma iletişim kutusunu kullanarak anlam ifade etmez. Bunun yerine, kullanıcı seçmek söz konusu kullanıcı için yüklenen Windows Store uygulamaların bir listesini göstermek iyidir.
 
-Kullanabileceğiniz [PackageManager sınıfı](https://msdn.microsoft.com/library/windows/apps/windows.management.deployment.packagemanager.aspx) bu liste oluşturmak için. `PackageManager` Masaüstü uygulamaları için kullanılabilir bir Windows çalışma zamanı sınıf ve hatta ise *yalnızca* Masaüstü uygulamaları için kullanılabilir.
+Kullanabileceğiniz <xref:Windows.Management.Deployment.PackageManager> bu liste oluşturmak için sınıf. `PackageManager` Masaüstü uygulamaları için kullanılabilir bir Windows çalışma zamanı sınıf ve hatta ise *yalnızca* Masaüstü uygulamaları için kullanılabilir.
 
 Aşağıdaki kod örneği C# yses içinde bir masaüstü uygulaması olarak yazılan kuramsal bir Profiler arabiriminden `PackageManager` Windows uygulamaların bir listesini oluşturmak için:
 
@@ -137,7 +137,7 @@ IEnumerable<Package> packages = packageManager.FindPackagesForUser(currentUserSI
 
 **Özel ortam bloğunu belirtme**
 
-Yeni bir COM arabirimi [IPackageDebugSettings](https://msdn.microsoft.com/library/hh438393\(v=vs.85\).aspx), bazı tanılama formları kolaylaştırmak için Windows Store app yürütme davranışını özelleştirmenizi sağlar. Bunun yöntemlerinden biri olan [EnableDebugging](https://msdn.microsoft.com/library/hh438395\(v=vs.85\).aspx), başlatıldığında, Windows Store uygulaması için bir ortam bloğuna geçirmenize olanak sağlar. otomatik işlemi askıya alma devre dışı bırakma gibi başka yararlı etkileri yanı sıra. Ortam değişkenlerini belirtme gerek duyduğunuz senaryolara olduğu için ortam bloğunu önemlidir (`COR_PROFILER`, `COR_ENABLE_PROFILING`, ve `COR_PROFILER_PATH)`), Profiler DLL'yi CLR tarafından kullanılır.
+Yeni bir COM arabirimi [IPackageDebugSettings](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipackagedebugsettings), bazı tanılama formları kolaylaştırmak için Windows Store app yürütme davranışını özelleştirmenizi sağlar. Bunun yöntemlerinden biri olan [EnableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging), başlatıldığında, Windows Store uygulaması için bir ortam bloğuna geçirmenize olanak sağlar. otomatik işlemi askıya alma devre dışı bırakma gibi başka yararlı etkileri yanı sıra. Ortam değişkenlerini belirtme gerek duyduğunuz senaryolara olduğu için ortam bloğunu önemlidir (`COR_PROFILER`, `COR_ENABLE_PROFILING`, ve `COR_PROFILER_PATH)`), Profiler DLL'yi CLR tarafından kullanılır.
 
 Aşağıdaki kod parçacığı göz önünde bulundurun:
 
@@ -180,7 +180,7 @@ Birkaç öğeleri doğru hale getirmek için ihtiyacınız vardır:
 
 **Windows Store uygulaması başlatılıyor**
 
-Son olarak, Windows Store uygulamasını başlatmak için şu geldi. Kendi başınıza yapmak'yı zaten zaten denediyseniz, fark etmiş [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) nasıl, Windows Store app işlem oluşturacağı değil. Bunun yerine, kullanmanız gerekecektir [IApplicationActivationManager::ActivateApplication](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iapplicationactivationmanager-activateapplication) yöntemi. Bunu yapmak için başlatma Windows Store uygulamasının uygulama kullanıcı Model Kimliğini almak gerekir. Ve küçük bir sorunda bildirimi aracılığıyla yapmanız gerekir anlamına gelir.
+Son olarak, Windows Store uygulamasını başlatmak için şu geldi. Kendi başınıza yapmak'yı zaten denediyseniz, fark etmiş [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) nasıl, Windows Store app işlem oluşturacağı değil. Bunun yerine, kullanmanız gerekecektir [IApplicationActivationManager::ActivateApplication](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iapplicationactivationmanager-activateapplication) yöntemi. Bunu yapmak için başlatma Windows Store uygulamasının uygulama kullanıcı Model Kimliğini almak gerekir. Ve küçük bir sorunda bildirimi aracılığıyla yapmanız gerekir anlamına gelir.
 
 Paketlerinizi yineleme sırasında ("Seçme a Windows Store uygulaması için profili" bölümüne bakın [başlangıç yükü](#startup-load) bölümüne), geçerli paketin bildiriminde bulunan uygulamalar almak isteyebilirsiniz:
 
@@ -221,7 +221,7 @@ appActivationMgr.ActivateApplication(appUserModelId, appArgs, ACTIVATEOPTIONS.AO
 
 **DisableDebugging çağrılacak unutmayın**
 
-Aradığınız ne zaman [IPackageDebugSettings::EnableDebugging](https://msdn.microsoft.com/library/hh438395\(v=VS.85\).aspx), sonra kendiniz çağırarak temizlemek bir promise yapılan [IPackageDebugSettings::DisableDebugging](https://msdn.microsoft.com/library/hh438394\(v=vs.85\).aspx) yöntemi, böylece gerçekleştirdiğinizden emin olun Profil oluşturma oturumu olduğunda üzerinden.
+Aradığınız ne zaman [IPackageDebugSettings::EnableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging), sonra kendiniz çağırarak temizlemek bir promise yapılan [IPackageDebugSettings::DisableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-disabledebugging) yöntemi, böylece gerçekleştirdiğinizden emin olun Profil oluşturma oturumu olduğunda üzerinden.
 
 ### <a name="attach-load"></a>Yük ekleme
 
@@ -229,7 +229,7 @@ Profiler kullanıcı Arabirimi, Profiler DLL'yi çalıştıran zaten başlamış
 
 **EnableDebugging**
 
-Başlangıç yük gibi çağrı [IPackageDebugSettings::EnableDebugging](https://msdn.microsoft.com/library/hh438395\(v=VS.85\).aspx) yöntemi. Bir ortam bloğuna geçirmek için gerekli değildir, ancak diğer yanlarından gerekir: otomatik işlemi askıya alma devre dışı bırakılıyor. Aksi takdirde, Profiler UI çağırdığında [AttachProfiler](iclrprofiling-attachprofiler-method.md), hedef Windows Store app askıya alınabilir. Aslında, kullanıcı artık Profiler kullanıcı Arabirimi ile etkileşim kurma ve Windows Store app herhangi bir kullanıcının ekran üzerinde etkin değilse, büyük olasılıkla budur. Uygulamanın askıya alındığından Windows Store, herhangi bir yanıt vermesi mümkün olmayacaktır, CLR için Profiler DLL iliştirilecek gönderdiğini sinyal.
+Başlangıç yük gibi çağrı [IPackageDebugSettings::EnableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging) yöntemi. Bir ortam bloğuna geçirmek için gerekli değildir, ancak diğer yanlarından gerekir: otomatik işlemi askıya alma devre dışı bırakılıyor. Aksi takdirde, Profiler UI çağırdığında [AttachProfiler](iclrprofiling-attachprofiler-method.md), hedef Windows Store app askıya alınabilir. Aslında, kullanıcı artık Profiler kullanıcı Arabirimi ile etkileşim kurma ve Windows Store app herhangi bir kullanıcının ekran üzerinde etkin değilse, büyük olasılıkla budur. Uygulamanın askıya alındığından Windows Store, herhangi bir yanıt vermesi mümkün olmayacaktır, CLR için Profiler DLL iliştirilecek gönderdiğini sinyal.
 
 Bu nedenle böyle bir şey isteyeceksiniz:
 
@@ -243,7 +243,7 @@ Bu, bir hata ayıklayıcı komut satırı veya bir ortam bloğuna belirtmeyin d�
 
 **DisableDebugging**
 
-Her zaman olduğu gibi çağrılacak unutmayın [IPackageDebugSettings::DisableDebugging](https://msdn.microsoft.com/library/hh438394\(v=vs.85\).aspx) , profil oluşturma oturumu tamamlanmış olduğunda.
+Her zaman olduğu gibi çağrılacak unutmayın [IPackageDebugSettings::DisableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-disabledebugging) , profil oluşturma oturumu tamamlanmış olduğunda.
 
 ## <a name="running-inside-the-windows-store-app"></a>İçinde Windows Store uygulamasını çalıştırma
 
@@ -273,7 +273,7 @@ Kesinlikle belirli bir API'yi yapamayacağınız ve yerini Windows Store uygulam
 
 ### <a name="reduced-permissions"></a>Sınırlı izinler
 
-Windows Store app izinleri Masaüstü uygulamalarından farklı tüm yolları listelemek için bu konunun kapsamı dışında. Ancak Profiler (bir Windows Store uygulaması bir masaüstü uygulaması karşılaştırıldığında içine yüklendiğinde) DLL, herhangi bir kaynağa erişmeye kesinlikle davranışı farklı olacaktır. Dosya sistemi en yaygın bir örnektir. Vardır, ancak birkaç yerleştirir erişmek için izin verilen bir Windows Store uygulaması disk üzerinde (bkz [dosya erişim ve izinleri (Windows çalışma zamanı uygulamaları](https://msdn.microsoft.com/library/windows/apps/hh967755.aspx)), ve altında aynı kısıtlamalara Profiler DLL dosyanız olur. Kodunuzu baştan sona test edin.
+Windows Store app izinleri Masaüstü uygulamalarından farklı tüm yolları listelemek için bu konunun kapsamı dışında. Ancak Profiler (bir Windows Store uygulaması bir masaüstü uygulaması karşılaştırıldığında içine yüklendiğinde) DLL, herhangi bir kaynağa erişmeye kesinlikle davranışı farklı olacaktır. Dosya sistemi en yaygın bir örnektir. Vardır, ancak birkaç yerleştirir erişmek için izin verilen bir Windows Store uygulaması disk üzerinde (bkz [dosya erişim ve izinleri (Windows çalışma zamanı uygulamaları](https://docs.microsoft.com/previous-versions/windows/apps/hh967755(v=win.10))), ve altında aynı kısıtlamalara Profiler DLL dosyanız olur. Kodunuzu baştan sona test edin.
 
 ### <a name="inter-process-communication"></a>İşlemler arası iletişim
 
@@ -298,7 +298,7 @@ ApplicationData appData =
 tempDir = appData.TemporaryFolder.Path;
 ```
 
-Bu arada, Profiler DLL'yi temelde aynı şeyi yapmak için alabilir ancak daha kolayca almak [ApplicationData](https://msdn.microsoft.com/library/windows/apps/windows.storage.applicationdata.aspx) sınıfı kullanarak [ApplicationData.Current](https://msdn.microsoft.com/library/windows/apps/windows.storage.applicationdata.current.aspx) özelliği.
+Bu arada, Profiler DLL'yi temelde aynı şeyi yapmak için alabilir ancak daha kolayca almak <xref:Windows.Storage.ApplicationData> sınıfı kullanarak [ApplicationData.Current](xref:Windows.Storage.ApplicationData.Current%2A) özelliği.
 
 **Olayları üzerinden iletişim kurma**
 
@@ -412,8 +412,8 @@ Windows Store apps içinde çalışan yönetilen kodu analiz etmek için CLR Pro
 
 **Windows Store uygulamaları**
 
-- [Dosya erişimi ve izinleri (Windows çalışma zamanı uygulamaları](https://msdn.microsoft.com/library/windows/apps/hh967755.aspx)
+- [Dosya erişimi ve izinleri (Windows çalışma zamanı uygulamaları](https://docs.microsoft.com/previous-versions/windows/apps/hh967755%28v=win.10%29)
 
-- [Geliştirici lisansı alma](https://msdn.microsoft.com/library/windows/apps/Hh974578.aspx)
+- [Geliştirici lisansı alma](https://docs.microsoft.com/previous-versions/windows/apps/hh974578%28v=win.10%29)
 
-- [IPackageDebugSettings arabirimi](https://msdn.microsoft.com/library/hh438393\(v=vs.85\).aspx)
+- [IPackageDebugSettings arabirimi](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipackagedebugsettings)

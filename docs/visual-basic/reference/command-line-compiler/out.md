@@ -6,17 +6,15 @@ helpviewer_keywords:
 - -out compiler option [Visual Basic]
 - out compiler option [Visual Basic]
 ms.assetid: 9f148c15-0909-4cb8-a2db-777f8a8b45ae
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 234071d043b2649e2438ed20fe044fb89cdb9bf8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b619505f6e87efd1c3b18e1bed2862d3467984a7
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655895"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50041095"
 ---
 # <a name="-out-visual-basic"></a>-out (Visual Basic)
-Çıktı dosyası adını belirtir.  
+Çıkış dosyasının adını belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -28,19 +26,19 @@ ms.locfileid: "33655895"
   
 |Terim|Tanım|  
 |---|---|  
-|`filename`|Gerekli. Derleyici çıktı dosyası adını oluşturur. Dosya adı boşluk içeriyorsa adı tırnak işaretleri içine alın ("").|  
+|`filename`|Gerekli. Derleyici çıktı dosyası adını oluşturur. Dosya adı boşluk içeriyorsa adı tırnak içine alın. ("").|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Tam adı ve uzantısı oluşturmak için dosya belirtin. Bunu yapmazsanız, .exe dosya gelen kaynak kodu içeren dosyanın adını alır `Sub Main` yordamı ve .dll dosyasının ilk kaynak kod dosyasının adını alır.  
+ Oluşturulacak dosyanın uzantısı ve tam adı belirtin. Bunu yapmazsanız, .exe dosyasını dan kaynak kodu içeren dosyanın adını alır. `Sub Main` yordam ve .dll dosyası ilk kaynak kodu dosyasından adını alır.  
   
- Bir .exe veya .dll uzantısı olmadan dosya adı belirtirseniz, derleyici uzantısını otomatik sizin için belirtilen değer bağlı olarak ekler `-target` derleyici seçeneği.  
+ Bir .exe veya .dll uzantısı olmadan bir dosya adı belirtirseniz, derleyicinin uzantısını otomatik sizin için belirtilen değer bağlı olarak ekler `-target` derleyici seçeneği.  
   
 |-Out Visual Studio tümleşik geliştirme ortamında ayarlamak için|  
 |---|  
-|1.  Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünde tıklatın **özellikleri**. <br />2.  Tıklatın **uygulama** sekmesi.<br />3.  Değer değiştirme **derleme adı** kutusu.|  
+|1.  Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünü tıklatın **özellikleri**. <br />2.  Tıklayın **uygulama** sekmesi.<br />3.  Değer değiştirme **derleme adı** kutusu.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod derlerken `T2.vb` ve çıktı dosyası oluşturur `T2.exe`.  
+ Aşağıdaki kod derlenir `T2.vb` ve çıktı dosyası oluşturur `T2.exe`.  
   
 ```console
 vbc t2.vb -out:t3.exe  

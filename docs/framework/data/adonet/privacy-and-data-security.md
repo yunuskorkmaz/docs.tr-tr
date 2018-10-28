@@ -2,18 +2,18 @@
 title: Gizlilik ve veri güvenliği
 ms.date: 03/30/2017
 ms.assetid: 46fa5839-adf7-4c7c-bce3-71e941fa7de9
-ms.openlocfilehash: dd74abcd95faf27485efcefa1a0a76e830df60fe
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 078b5e09e800511c3edfa78596b5bdb67ebcc6d7
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508870"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194936"
 ---
 # <a name="privacy-and-data-security"></a>Gizlilik ve veri güvenliği
 Bir ADO.NET uygulamasında hassas bilgilerini yönetme ve koruma, temel alınan ürünleri ve oluşturmak için kullanılan teknolojileri bağlıdır. ADO.NET Hizmetleri güvenli hale getirme veya verileri şifrelemek için doğrudan sağlamaz.  
   
 ## <a name="cryptography-and-hash-codes"></a>Şifreleme ve karma kodları  
- .NET Framework sınıfları <xref:System.Security.Cryptography> ad alanı ADO.NET uygulamalarınızdan verilerin okuma veya yetkisiz üçüncü taraflarca değiştiren önlemek için kullanılabilir. Diğerleri yönetilen uygulamaları bazı sınıflar için yönetilmeyen Microsoft CryptoAPI sarmalayıcıları bağlıdır. [Şifreleme Hizmetleri](https://msdn.microsoft.com/library/68a1e844-c63c-44af-9247-f6716eb23781) konu cryptograph nasıl uygulandığını ve belirli şifreleme görevleri nasıl gerçekleştirebileceğiniz açıklanır, .NET Framework şifreleme genel bir bakış sağlar.  
+ .NET Framework sınıfları <xref:System.Security.Cryptography> ad alanı ADO.NET uygulamalarınızdan verilerin okuma veya yetkisiz üçüncü taraflarca değiştiren önlemek için kullanılabilir. Diğerleri yönetilen uygulamaları bazı sınıflar için yönetilmeyen Microsoft CryptoAPI sarmalayıcıları bağlıdır. [Şifreleme Hizmetleri](../../../../docs/standard/security/cryptographic-services.md) konu cryptograph nasıl uygulandığını ve belirli şifreleme görevleri nasıl gerçekleştirebileceğiniz açıklanır, .NET Framework şifreleme genel bir bakış sağlar.  
   
  Şifrelenmiş ve ardından şifresi veri sağlayan şifreleme, verilerin karması tek yönlü bir işlemdir. Verilerin karması, veri değiştirilmediğinden denetleyerek kurcalanmaya karşı istediğiniz gerektiğinde kullanışlıdır: aynı giriş dizelerinden göz önünde bulundurulduğunda, karma algoritmaları her zaman kolayca karşılaştırılabilir özdeş kısa çıkış değerleri üretir. [Karma kodlarla veri bütünlüğünü sağlama](../../../../docs/standard/security/ensuring-data-integrity-with-hash-codes.md) nasıl oluşturabilir ve karma değerlerini doğrulamak açıklar.  
   

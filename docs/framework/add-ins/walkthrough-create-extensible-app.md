@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 694a33c5-a040-450d-aed5-ac49fc88ce61
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5d2aaeaffaf3abbe1e8efcdb57d40e6ae60f89b5
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 63780583d035d6fab6b3a79424857b82a910ef09
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591964"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183899"
 ---
 # <a name="walkthrough-creating-an-extensible-application"></a>İzlenecek Yol: Genişletilebilir Uygulama Oluşturma
 Bu izlenecek yol basit hesap makinesi işlevlerini gerçekleştiren bir eklenti için bir işlem hattı oluşturmayı açıklar. Gerçek dünya senaryoları göstermemiz gerekmez; Bunun yerine, bir işlem hattı ve nasıl bir eklenti için bir ana bilgisayar hizmetleri sağlayabilir temel işlevlerini gösterir.  
@@ -355,8 +355,8 @@ Bu izlenecek yol basit hesap makinesi işlevlerini gerçekleştiren bir eklenti 
 4.  Tür **çıkmak** basın **Enter** uygulamayı kapatmak için anahtar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İzlenecek yol: Ana bilgisayarınız değiştiğinde geriye dönük uyumluluğu etkinleştirme](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
- [İzlenecek yol: Ana bilgisayarlar ve eklentiler arasında geçirme koleksiyonları](https://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)  
- [Ardışık Düzen geliştirme gereksinimleri](https://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5)  
- [Sözleşmeler, görünümler ve bağdaştırıcılar](https://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c)  
- [İşlem Hattı Geliştirme](../../../docs/framework/add-ins/pipeline-development.md)
+- [İzlenecek yol: Ana bilgisayarınız değiştiğinde geriye dönük uyumluluğu etkinleştirme](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
+-  [İzlenecek yol: Ana bilgisayarlar ve eklentiler arasında geçirme koleksiyonları](https://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)  
+-  [Ardışık Düzen geliştirme gereksinimleri](https://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5)  
+-  [Sözleşmeler, görünümler ve bağdaştırıcılar](https://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c)  
+-  [İşlem Hattı Geliştirme](../../../docs/framework/add-ins/pipeline-development.md)

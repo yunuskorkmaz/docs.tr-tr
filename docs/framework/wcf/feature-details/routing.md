@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF [WCF], routing
 - Windows communication Foundation [WCF], routing
 ms.assetid: bd56516c-420d-4c4e-97f9-f72d28d149a9
-ms.openlocfilehash: 065bbb5e20ddf1b26e98934d94c764e83969cc8a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 50b6cb78f5fb20344d5f682d268b6e646c17fb9e
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518910"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50048612"
 ---
 # <a name="routing"></a>Yönlendirme
 Bu bölümdeki konular, yönlendirme hizmeti kapsar. Yönlendirme hizmeti içerik tabanlı yönlendirme, protokol bağlantı kurma ayarlayın yapılandırmanızı sağlar iletişim hataları işleme ve yönlendirme mantığı çalışma zamanında dinamik olarak güncelleştir bir genel yapılandırılabilir SOAP aracıdır.  
@@ -20,7 +20,7 @@ Bu bölümdeki konular, yönlendirme hizmeti kapsar. Yönlendirme hizmeti içeri
  [Yönlendirme Hizmeti](../../../../docs/framework/wcf/feature-details/routing-service.md)  
  Yönlendirme hizmetin özelliklerine genel bakış sağlar.  
   
- [Yönlendirme Hizmeti](https://msdn.microsoft.com/library/5ac8718c-bcef-456f-bfd5-1e60a30d6eaa)  
+ [Yönlendirme Hizmeti](../../../../docs/framework/wcf/feature-details/routing-service.md)  
  Yönlendirme Hizmeti özelliklerini açıklar.  
   
  [Yönlendirme Tanıtımı](../../../../docs/framework/wcf/feature-details/routing-introduction.md)  

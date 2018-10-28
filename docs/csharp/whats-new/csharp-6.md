@@ -3,12 +3,12 @@ title: C# 6 - C# Kılavuzu yenilikler nelerdir?
 description: C# sürüm 6'daki yeni özelliklerin öğrenin
 ms.date: 09/22/2016
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: 53d9c5e60ac00b4c7c96aa3e42a60253219e1c70
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: ad3515e1fc7d70e1377f007276c369d2884780f0
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308460"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194039"
 ---
 # <a name="whats-new-in-c-6"></a>C# 6 yenilikleri
 
@@ -88,7 +88,7 @@ public class Student
 
 Bu özellik sabit türleri oluşturma ve daha net ve uygun otomatik-özellik söz dizimini kullanarak true dil desteği sağlar.
 
-Bu söz dizimi ekleme değil erişilebilir bir yöntemi kaldırmaz gerekiyorsa bir [ikili uyumlu değişiklik](version-update-considerations.md#binary-compatible-changes).
+Bu söz dizimi ekleme erişilebilir bir yöntemi kaldırmazsa olduğu bir [ikili uyumlu değişiklik](version-update-considerations.md#binary-compatible-changes).
 
 ### <a name="auto-property-initializers"></a>Otomatik-özellik başlatıcıları
 
@@ -249,7 +249,7 @@ Küme ayraçları arasında yerleştirebilirsiniz ifadeleri herhangi bir sınır
 Bu örnekten başka bir dize ilişkilendirme ifadesi bir dize ilişkilendirme ifadesinde bile yuvalayabilirsiniz görebilirsiniz. Bu örnek daha daha karmaşık üretim kodunda istersiniz olasılıktır.
 Bunun yerine, bu özelliğin kapsamını yalnızca tanım olur. Herhangi bir C# deyimi, bir aradeğerlendirme dizesinde arasında ve küme ayraçlarının yerleştirilebilir.
 
-Dize ilişkilendirme ile çalışmaya başlamak için denetleme [dize ilişkilendirme C#](../quick-starts/interpolated-strings.yml) etkileşimli hızlı başlangıç.
+Dize ilişkilendirme ile çalışmaya başlamak için denetleme [dize ilişkilendirme, C# ](../tutorials/intro-to-csharp/interpolated-strings.yml) etkileşimli öğretici.
 
 ### <a name="string-interpolation-and-specific-cultures"></a>Dize ilişkilendirme ve özel kültürler
 

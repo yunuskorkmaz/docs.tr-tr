@@ -10,14 +10,12 @@ helpviewer_keywords:
 - best practices, data requests
 - receiving data, best practices
 ms.assetid: 716decc6-5952-47b7-9c5a-ba6fc5698684
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 987e2294f1e34eb3a4da1e31285868877338ccf4
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: ce365d088c01ae4a89c77713b6970ae3389b3f0e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025200"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50190958"
 ---
 # <a name="best-practices-for-systemnet-classes"></a>System.Net sınıfları için en iyi uygulamalar
 Aşağıdaki öneriler içinde bulunan sınıfları kullanmanıza yardımcı olacak <xref:System.Net> en iyi kendi lehlerine için:  

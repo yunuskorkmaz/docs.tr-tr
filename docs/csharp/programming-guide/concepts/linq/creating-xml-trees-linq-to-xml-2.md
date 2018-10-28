@@ -2,12 +2,12 @@
 title: C# (LINQ to XML) XML ağaçları oluşturma
 ms.date: 08/31/2018
 ms.assetid: cc74234a-0bac-4327-9c8c-5a2ead15b595
-ms.openlocfilehash: 98bad6bfc3b563b39f9e58eadbff673f202646c1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9fb03800f04a3c0615fa5b7fc44eb078e224eebc
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502290"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452423"
 ---
 # <a name="creating-xml-trees-in-c-linq-to-xml"></a>C# (LINQ to XML) XML ağaçları oluşturma
 Bu bölümde, C# dilinde XML ağaçları oluşturma hakkında bilgi sağlar.  
@@ -168,7 +168,23 @@ Console.WriteLine(contacts);
   </Contact>  
 </Contacts>  
 ```  
+
+### <a name="creating-an-xelement-with-an-xattribute"></a>Bir XElement bir XAttribute ile oluşturma
+ Örneği geçirirseniz <xref:System.Xml.Linq.XAttribute> sınıfı Oluşturucu içerik bağımsız değişkeni bir öznitelik bir öğe oluşturur:
+
+```csharp  
+XElement phone = new XElement("Phone",  
+    new XAttribute("Type", "Home"),  
+    "555-555-5555");  
+Console.WriteLine(phone);  
+```  
   
+ Bu örnek aşağıdaki çıktıyı üretir:  
+  
+```xml  
+<Phone Type="Home">555-555-5555</Phone>
+```   
+
 ### <a name="creating-an-empty-element"></a>Boş bir öğe oluşturma  
  Boş bir oluşturmak için <xref:System.Xml.Linq.XElement>, oluşturucuya herhangi bir içerik geçirmeyin. Aşağıdaki örnek, boş bir öğe oluşturur:  
   

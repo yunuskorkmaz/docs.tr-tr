@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 073cb8c13f6bf94ad6f0276b76e6bd1a3d35eb41
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 54ca80e83511d6120669df634ae34ca0bf486bf3
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841645"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453456"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Çalışma Zamanının Derlemelerin Konumunu Bulması
 .NET Framework uygulamanızı başarıyla dağıtmak için ortak dil çalışma zamanının nasıl bulur ve uygulamanızı oluşturan derlemeleri bağlar anlamanız gerekir. Varsayılan olarak, çalışma zamanı tamamen aynı sürümünün uygulamanın derlendiği bir derleme ile bağlamak çalışır. Bu varsayılan davranışı yapılandırma dosyası ayarlarının tarafından geçersiz kılınabilir.  
@@ -248,5 +248,5 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
  Assembly1 Assembly2 ve Assembly1 başvuruyorsa, indirildiğini `http://www.code.microsoft.com/utils`, konum Assembly2.dll nerede bulunacağı hakkında bir ipucu olarak değerlendirilir. Çalışma zamanı sonra derlemede için araştırmaları `http://www.code.microsoft.com/utils/Assembly2.dll` ve `http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll`. Çalışma zamanı, Assembly2 konumların birini bulunmazsa, Windows Installer sorgular.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Bütünleştirilmiş Kod Yükleme için En İyi Yöntemler](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
- [Dağıtım](../../../docs/framework/deployment/index.md)
+- [Bütünleştirilmiş Kod Yükleme için En İyi Yöntemler](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
+- [Dağıtım](../../../docs/framework/deployment/index.md)

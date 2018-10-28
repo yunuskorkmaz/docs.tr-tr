@@ -8,14 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 07e6b201056614237a433ed7a297d40eab23da59
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 5c7786bd0dc8789d156959dcf94ac6bf8f4fb906
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122654"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194065"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic'teki yenilikler
 
@@ -157,7 +155,7 @@ Daha fazla bilgi için [başvuru dönüş değerleri](../programming-guide/langu
 [Dize ilişkilendirme](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)  
  Dize ilişkilendirme ifadeleri dizeleri oluşturmak için kullanabilirsiniz.  İlişkilendirilmiş dize ifadesi, ifadeler içeren bir şablon dize gibi görünüyor.  İlişkilendirilmiş dize bağımsız değişkenleri ile ilgili anlaşılması kolaydır [bileşik biçimlendirme](../../standard/base-types/composite-format.md).  
   
-[Null koşullu üye erişimi ve dizin oluşturma](../../csharp/language-reference/operators/null-conditional-operators.md)  
+[Null koşullu üye erişimi ve dizin oluşturma](../language-reference/operators/null-conditional-operators.md)  
 Null üye erişimi gerçekleştirmeden önce söz dizimsel çok açık bir şekilde test edebilirsiniz (`?.`) ya da dizin (`?[]`) işlemi.  Bu işleçler null işlemek için daha az kod denetler, özellikle azalan düzende veri yapılarda yazmanıza yardımcı olur.  Sol işlenen ya da nesne başvuru null ise, işlemler null döndürür.  
   
 [Çok satırlı dize değişmez değerleri](../../visual-basic/programming-guide/language-features/strings/string-basics.md)  

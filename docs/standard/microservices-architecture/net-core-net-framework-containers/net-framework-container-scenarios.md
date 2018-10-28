@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/11/2018
-ms.openlocfilehash: 9e1ff03421f1a5d23878c74f13423cec9625c4c5
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 128801fbe49a3f7618b1cedc814b7663d57df624
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45609992"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195339"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>.NET Framework Docker kapsayıcıları için ne zaman
 
@@ -23,9 +23,9 @@ Bu senaryo için çoğu durumda, mevcut uygulamalarınızı .NET Core geçişi g
 
 ## <a name="using-third-party-net-libraries-or-nuget-packages-not-available-for-net-core"></a>.NET Core için üçüncü taraf .NET kitaplıkları veya kullanılabilir değil NuGet paketlerini kullanma
 
-Üçüncü taraf kitaplıklar hızla benimsemenin [.NET Standard](https://docs.microsoft.com/dotnet/articles/standard/library), .NET Core dahil olmak üzere tüm .NET özellikleri arasında paylaşımı kod sağlar. .NET Standard kitaplığı 2.0 ve API yüzeyi ötesinde uyumluluk farklı çerçeveler arasında önemli ölçüde daha büyük hale geldi ve de .NET Core 2.x uygulamaları doğrudan mevcut .NET Framework kitaplıkları başvurabilir (bkz [compat Dolgu](https://github.com/dotnet/standard/blob/master/docs/netstandard-20/README.md#net-framework-461-supporting-net-standard-20)).
+Üçüncü taraf kitaplıklar hızla benimsemenin [.NET Standard](../../net-standard.md), .NET Core dahil olmak üzere tüm .NET özellikleri arasında paylaşımı kod sağlar. .NET Standard kitaplığı 2.0 ve API yüzeyi ötesinde uyumluluk farklı çerçeveler arasında önemli ölçüde daha büyük hale geldi ve de .NET Core 2.x uygulamaları doğrudan mevcut .NET Framework kitaplıkları başvurabilir (bkz [compat Dolgu](https://github.com/dotnet/standard/blob/master/docs/netstandard-20/README.md#net-framework-461-supporting-net-standard-20)).
 
-Ayrıca, [Windows Uyumluluk Paketi](https://docs.microsoft.com/dotnet/core/porting/windows-compat-pack) Windows üzerinde .NET Standard 2.0 için kullanılabilir bir API yüzeyi genişletmek için Kas 2017 tarihinde yayınlanmıştır. Bu paketi .NET Standard için çoğu mevcut kodu yeniden derlemeden sağlayan 2.x ile Windows üzerinde çalıştırmak için çok az kayıpla veya hiç değişiklik.
+Ayrıca, [Windows Uyumluluk Paketi](../../../core/porting/windows-compat-pack.md) Windows üzerinde .NET Standard 2.0 için kullanılabilir bir API yüzeyi genişletmek için Kas 2017 tarihinde yayınlanmıştır. Bu paketi .NET Standard için çoğu mevcut kodu yeniden derlemeden sağlayan 2.x ile Windows üzerinde çalıştırmak için çok az kayıpla veya hiç değişiklik.
 
 Ancak, bile bu olağanüstü ilerleme ile .NET Standard 2.0 ve .NET Core 2.1 beri burada belirli NuGet paketlerini çalıştırmak için Windows gerekir ve .NET Core desteklemeyebilir durumlar olabilir. Ardından bu paketleri, uygulamanız için kritik olan, .NET Framework Windows kapsayıcılarında kullanmanız gerekir.
 
@@ -37,7 +37,7 @@ Aşağıdaki liste de .NET Core kullanılamayan teknolojilerinin çoğu gösteri
 
 -   ASP.NET Web Forms. Bu teknoloji, yalnızca .NET Framework üzerinde kullanılabilir. Şu anda .NET Core ile ASP.NET Web Forms getirmek için hiçbir plan yok.
 
--   WCF hizmetleri. Zaman bile bir [WCF istemci Kitaplığı](https://github.com/dotnet/wcf) mid-2017, WCF sunucusu uygulaması yalnızca .NET Framework üzerinde kullanılabilir olarak .NET Core, gelen WCF hizmetleri kullanma kullanıma sunulmuştur. Bu senaryo olarak kabul edilir .NET Core, gelecek sürümleri için kabul edilme bile bazı API'leri vardır [Windows Uyumluluk Paketi](https://docs.microsoft.com/dotnet/core/porting/windows-compat-pack).
+-   WCF hizmetleri. Zaman bile bir [WCF istemci Kitaplığı](https://github.com/dotnet/wcf) mid-2017, WCF sunucusu uygulaması yalnızca .NET Framework üzerinde kullanılabilir olarak .NET Core, gelen WCF hizmetleri kullanma kullanıma sunulmuştur. Bu senaryo olarak kabul edilir .NET Core, gelecek sürümleri için kabul edilme bile bazı API'leri vardır [Windows Uyumluluk Paketi](../../../core/porting/windows-compat-pack.md).
 
 -   İş akışı ile ilgili hizmetler. Windows Workflow Foundation (WF) iş akışı Hizmetleri (WCF + WF tek bir hizmette) ve WCF Veri Hizmetleri (eski adıyla ADO.NET Data Services da bilinir) yalnızca .NET Framework üzerinde kullanılabilir. Şu anda .NET Core getirilecek herhangi bir plan da vardır.
 
@@ -54,16 +54,16 @@ Bu arada, herhangi bir platform veya Azure hizmeti yine de .NET Core API istemci
 ### <a name="additional-resources"></a>Ek kaynaklar
 
 -   **.NET Core Kılavuzu**  
-    [https://docs.microsoft.com/dotnet/articles/core/index](https://docs.microsoft.com/dotnet/articles/core/index)
+    [https://docs.microsoft.com/dotnet/core/index](../../../core/index.md)
 
 -   **.NET Core ile .NET Framework'ten taşıma**  
-    [https://docs.microsoft.com/dotnet/articles/core/porting/index](https://docs.microsoft.com/dotnet/articles/core/porting/index)
+    [https://docs.microsoft.com/dotnet/core/porting/index](../../../core/porting/index.md)
 
 -   **Docker Üzerinde .NET Framework Kılavuzu**  
-    [https://docs.microsoft.com/dotnet/articles/framework/docker/](https://docs.microsoft.com/dotnet/articles/framework/docker/)
+    [https://docs.microsoft.com/dotnet/framework/docker/](../../../framework/docker/index.md)
 
 -   **.NET bileşenleri'ne genel bakış**  
-    [*https://docs.microsoft.com/dotnet/standard/components*](../../components.md)
+    [https://docs.microsoft.com/dotnet/standard/components](../../components.md)
 
 
 

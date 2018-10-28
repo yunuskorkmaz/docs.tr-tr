@@ -2,19 +2,19 @@
 title: XmlSerializerOperationBehavior
 ms.date: 03/30/2017
 ms.assetid: 8911aa1b-e34b-4161-a3ae-7468d89a6861
-ms.openlocfilehash: a4c46543ff5bfa562a05f157d826d84c4589da28
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7c7b53ff8eb8b6bc3dd73e5dea6f4c6a5613ec56
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487665"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50193597"
 ---
 # <a name="xmlserializeroperationbehavior"></a>XmlSerializerOperationBehavior
 XmlSerializerOperationBehavior  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```csharp
 class XmlSerializerOperationBehavior : Behavior  
 {  
   string Style;  
@@ -23,7 +23,7 @@ class XmlSerializerOperationBehavior : Behavior
 ```  
   
 ## <a name="methods"></a>Yöntemler  
- XmlSerializerOperationBehavior sınıfı herhangi bir yöntem tanımlamıyor.  
+ XmlSerializerOperationBehavior sınıf herhangi bir yöntemi tanımlamaz.  
   
 ## <a name="properties"></a>Özellikler  
  XmlSerializerOperationBehavior sınıfı aşağıdaki özelliklere sahiptir:  
@@ -31,22 +31,22 @@ class XmlSerializerOperationBehavior : Behavior
 ### <a name="style"></a>Stil  
  Veri türü: dize  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
  SOAP iletisi stilini tanımlar.  
   
 ### <a name="use"></a>Bir yönetim grubuna bağlanmak veya bağlı bir yönetim grubunun özelliklerini düzenlemek için Yönetim çalışma alanında  
  Veri türü: dize  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
  SOAP kodlama stilini belirtir.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|MOF|Bildirilen Servicemodel.mof.|  
+|MOF|Bildirilmiş Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Ad Alanı|İçinde tanımlanan root\ServiceModel|  
+|Ad Alanı|İçinde tanımlı root\ServiceModel|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>

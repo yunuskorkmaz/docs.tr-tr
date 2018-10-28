@@ -5,12 +5,12 @@ ms.date: 03/20/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: 3c841a1152613ec877bb6172dc8d053bf060b33b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 36529414d5b51e9e4ade7447ff6e5e908e5153ab
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515286"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188579"
 ---
 # <a name="how-to-compare-strings-in-c"></a>C dizeleri karşılaştırma\#
 
@@ -21,7 +21,7 @@ Bu iki soruları dize karşılaştırmaları etkileyen faktörler tarafından ka
 - Bir sıralı veya dilsel karşılaştırma seçebilirsiniz.
 - Servis talebi önemlidir, seçebilirsiniz.
 - Kültüre özel karşılaştırma seçebilirsiniz.
-- Dil comparisions, kültür ve platform bağımlı olan.
+- Dilsel karşılaştırmalar, kültüre ve platform bağımlı ' dir.
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
@@ -45,7 +45,7 @@ büyük küçük harf duyarsız bir karşılaştırma belirtmek için. Ayrıca s
 ## <a name="linguistic-comparisons"></a>Dil karşılaştırmaları
 
 Ayrıca dizeleri dilsel kurallar için geçerli kültürü kullanarak sıralanabilir.
-Bu bazen "sözcük sıralama düzeninde." adlandırılır Dil karşılaştırması gerçekleştirdiğinizde, bazı alfasayısal olmayan Unicode karakterlerine atanan özel ağırlıkların olabilir. Örneğin, kısa çizgi "-" "İleri co-op" ve "coop" birbirinin yanına sıralama düzeninde görüntülenir kendisine atanmış çok küçük ağırlığa sahip olabilir. Ayrıca, bazı Unicode karakterler, alfasayısal bir karakter dizisi için eşdeğer olabilir. Aşağıdaki örnek "Bunlar içinde Sokak dans." ifadesini kullanır. Almanca 'ß' ve "ss". Dilsel olarak (Windows içinde), "ss" için Almanca Essetz eşittir: "en-US" ve "de-DE" hem kültürler 'ß' karakter.
+Bu bazen "sözcük sıralama düzeninde." adlandırılır Bir dilsel karşılaştırma gerçekleştirdiğinizde, bazı alfasayısal olmayan Unicode karakterlerine atanan özel ağırlıkların olabilir. Örneğin, kısa çizgi "-" "İleri co-op" ve "coop" birbirinin yanına sıralama düzeninde görüntülenir kendisine atanmış çok küçük ağırlığa sahip olabilir. Ayrıca, bazı Unicode karakterler, alfasayısal bir karakter dizisi için eşdeğer olabilir. Aşağıdaki örnek "Bunlar içinde Sokak dans." ifadesini kullanır. Almanca 'ß' ve "ss". Dilsel olarak (Windows içinde), "ss" için Almanca Essetz eşittir: "en-US" ve "de-DE" hem kültürler 'ß' karakter.
 
 [!code-csharp-interactive[Comparing strings using linguistic rules](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#3)]
 
@@ -82,7 +82,7 @@ Kültüre duyarlı karşılaştırmaları genellikle dizeleri giriş sıralama v
 <co-op> is less than <cop> using ordinal comparison
 ```
 
-Dil comparisions geçerli kültürü temel bağımlıdır ve işletim sistemi bağımlı olan. Dize karşılaştırmaları ile çalışırken, dikkate almanız gerekir.
+Dilsel karşılaştırmalar geçerli kültürü temel bağımlıdır ve işletim sistemi bağımlı olan. Dize karşılaştırmaları ile çalışırken, dikkate almanız gerekir.
 
 ## <a name="linguistic-sorting-and-searching-strings-in-arrays"></a>Dilsel sıralama ve dizilerde dizeleri arama
 

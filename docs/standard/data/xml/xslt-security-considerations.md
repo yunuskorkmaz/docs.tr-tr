@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: fea695be-617c-4977-9567-140e820436fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fb7b096a6e9bf0f71649f260c4097d5e25476957
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 77f29cb14af90854fa18f421acbeb701928bcd76
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44210964"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50034380"
 ---
 # <a name="xslt-security-considerations"></a>XSLT güvenlik konuları
 XSLT dili, güç ve esneklik büyük ölçüde size özellikleri zengin sahiptir. Bu, dış kaynaklar tarafından kullanışlı olsa da yararlanılabilir birçok özellik içerir. XSLT güvenli bir şekilde kullanmak için XSLT kullanma ortaya çıkan güvenlik sorunlarını ve bu riskleri azaltmak için uygulayabileceğiniz temel stratejiler türlerini anlamanız gerekir.  
@@ -60,4 +60,4 @@ XSLT dili, güç ve esneklik büyük ölçüde size özellikleri zengin sahiptir
 
 - [XSLT Dönüşümleri](../../../../docs/standard/data/xml/xslt-transformations.md)  
 - [XSLT İşleme Sırasında Dış Kaynakları Çözümleme](../../../../docs/standard/data/xml/resolving-external-resources-during-xslt-processing.md)  
-- [Kod erişimi güvenliği](https://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)
+- [Kod erişimi güvenliği](../../../../docs/framework/misc/code-access-security.md)

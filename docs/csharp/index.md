@@ -8,19 +8,19 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: 2f888fbc063799e258040edf5116fc02e3f9a668
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 32da68206e2415d42df9cc820ff1ca2814fbf58f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512344"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195846"
 ---
 # <a name="c-guide"></a>C# Kılavuzu
 
 C# Kılavuzu, C# dili hakkında daha fazla kaynak sağlar. Bu site çok sayıda farklı İzleyici vardır. Deneyiminizi programlama veya C# dili ve .NET ile bağlı olarak, bu kılavuzun farklı bölümlerde keşfetmek isteyebilirsiniz.
 
 * Yeni geliştiriciler için:
-  * İle başlayan [hızlı Başlangıçlar](quick-starts/index.md) bölümü. Bu hızlı başlangıçlara C# dili tarayıcınızda etkileşimli olarak keşfetmenize olanak sağlar. Buradan, oturum taşıyabilirsiniz [öğreticiler](tutorials/index.md) bölümü. Bu öğreticiler C# programları sıfırdan oluşturma işlemini gösterir. Program oluşturma işlemi adım adım öğreticileri sağlar. Bunlar, dil kavramları ve C# programları, kendi nasıl oluşturulacağını gösterir. İlk genel bakış bilgileri okunurken tercih ediyorsanız [turu C# dilinin](tour-of-csharp/index.md). Bu, C# dil kavramlarını açıklar. Bu okuduktan sonra dilinin temel bilgilere sahipsiniz ve öğreticileri denemeye hazır veya bir şey kendi uzantınızı oluşturun.
+  * İle başlayan [giriş C# öğreticiler](tutorials/intro-to-csharp/index.md). Bu öğreticileri keşfedin izin C# dil tarayıcınızda etkileşimli olarak. Buradan, diğer geçebilirsiniz [öğreticiler](tutorials/index.md). Bu öğreticiler C# programları sıfırdan oluşturma işlemini gösterir. Program oluşturma işlemi adım adım öğreticileri sağlar. Dil kavramları ve nasıl oluşturacağınızı göstermek C# kendi programları. İlk genel bakış bilgileri okunurken tercih ediyorsanız [turu C# dilinin](tour-of-csharp/index.md). Bu, C# dil kavramlarını açıklar. Bu okuduktan sonra dilinin temel bilgilere sahipsiniz ve öğreticileri denemeye hazır veya bir şey kendi uzantınızı oluşturun.
 
 * C# yeni geliştiriciler için:
   * Önce geliştirme yaptığınızdan, ancak C# konusunda yeniyseniz, okuma [turu C# dilinin](tour-of-csharp/index.md). Temel söz dizimi ve yapısı dil kapsar ve dil turu Karşıtlık C# için kullandığınız diğer dillerle birlikte kullanabilirsiniz. De göz atabilirsiniz [öğreticiler](tutorials/index.md) temel C# programları denemek için.
@@ -35,8 +35,8 @@ C# Kılavuzu'nda birkaç bölümü vardır. Bunları sırayla okuyabilir veya do
 * [Başlarken](getting-started/index.md)
   * Bu bölüm, bir C# geliştirme ortamı tercih edilen platformda yüklemek gerekenler kapsar. Bu bölümde farklı başlıklara, desteklenen farklı ortamlarda ilk C# programınızı oluşturma işlemleri açıklanmaktadır.
 
-* [C# hızlı başlangıçları](quick-starts/index.md):
-  * Etkileşimli öğreticileri keşfedin ve C# dilinde bir okuma-Eval-Print Loop (REPL) arabirimini kullanarak tarayıcı öğrenmek yeni geliştiriciler için C# hızlı başlangıçları sunar. Etkileşimli dersleri tamamladıktan sonra aynı dersleri makinenizde uygulayan tarafından kodlama becerilerinizi geliştirebilir.
+* [Giriş C# öğreticiler](tutorials/intro-to-csharp/index.md):
+  * Giriş C# öğreticiler sunan etkileşimli öğreticileri keşfedin ve öğrenin almadığınızdan geliştiricilerin C# okuma-Eval-Print Loop (REPL) arabirimini kullanarak tarayıcının dili. Etkileşimli dersleri tamamladıktan sonra aynı dersleri makinenizde uygulayan tarafından kodlama becerilerinizi geliştirebilir.
 
 * [Öğreticiler](tutorials/index.md)
   * Bu bölümde, uçtan uca senaryo açıklamaları ve kod dahil olmak üzere çeşitli sağlar. Bunu neden belirli deyimleri hangi C# özelliklerini en iyi farklı durumları ve ortak görevleri için başvuru uygulamaları iş tercih edilen, gösterilir. Kod görerek en iyisi öğrenmek, bu bölümde başlatın. Ayrıca, tüm kodu indirin ve kendi ortamında denemeler yapın.

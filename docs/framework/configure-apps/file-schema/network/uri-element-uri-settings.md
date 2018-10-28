@@ -2,14 +2,12 @@
 title: '&lt;URI&gt; öğesi (Uri ayarları)'
 ms.date: 03/30/2017
 ms.assetid: c22bab8b-477c-4ae4-8498-65ad409e0847
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: a58c27500c0258415c12a5fd8e552b3ee43f50e8
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 2ca5592bd0a66ded25c7da8f0b42367af990aa7a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033213"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192193"
 ---
 # <a name="lturigt-element-uri-settings"></a>&lt;URI&gt; öğesi (Uri ayarları)
 .NET Framework web adresleri Tekdüzen Kaynak Tanımlayıcıları (URI'lar) kullanılarak ifade nasıl işlediğini belirten ayarları içerir.  
@@ -70,4 +68,4 @@ ms.locfileid: "48033213"
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

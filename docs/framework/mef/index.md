@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6c61b4ec-c6df-4651-80f1-4854f8b14dde
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8738e8d0f6a74e1b8ba963e487d4c153a0a6a872
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ae3b72cb5a1281899cdfdb514bbf5a1dc289c949
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196483"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49454505"
 ---
 # <a name="managed-extensibility-framework-mef"></a>Managed Extensibility Framework (MEF)
 
@@ -66,7 +66,7 @@ MEF ve Yönetilen Genişletilebilirlik Çerçevesi hafif Genişletilebilir uygul
 
 MEF neler yapabileceğinizi görmek için en basit yolu, basit bir MEF uygulaması oluşturmaktır. Bu örnekte çok basit hesap makinesi SimpleCalculator adlı oluşturun. "5 + 3" biçiminde temel aritmetik komutları kabul eden bir konsol uygulaması oluşturmak için SimpleCalculator amacı olan veya "6-2" ve doğru yanıtları döndürür. MEF kullanarak, uygulamanın kodunu değiştirmeden yeni işleç eklemek mümkün olacaktır.
 
-Bu örnek için tam kod indirmek için bkz [SimpleCalculator örnek](http://code.msdn.microsoft.com/windowsdesktop/Simple-Calculator-MEF-1152654e).
+Bu örnek için tam kod indirmek için bkz [SimpleCalculator örnek](https://code.msdn.microsoft.com/windowsdesktop/Simple-Calculator-MEF-1152654e).
 
 > [!NOTE]
 > MEF sözdizimi ve kavramları göstermek için yerine mutlaka gerçekçi bir senaryo için kullanımını sağlamak için SimpleCalculator amacı budur. Birçok avantaj elde edecektir MEF gücünü en iyi uygulamaları SimpleCalculator daha karmaşıktır. Daha kapsamlı örnekler için bkz: [Managed Extensibility Framework](https://github.com/MicrosoftArchive/mef) GitHub üzerinde.
@@ -485,6 +485,6 @@ public class Mod : SimpleCalculator.IOperation
 
 <a name="where_do_i_go_now"></a>
 ## <a name="where-do-i-go-now"></a>Burada artık gitmeliyim?
- Bu örnek için tam kod indirmek için bkz [SimpleCalculator örnek](http://code.msdn.microsoft.com/windowsdesktop/Simple-Calculator-MEF-1152654e).
+ Bu örnek için tam kod indirmek için bkz [SimpleCalculator örnek](https://code.msdn.microsoft.com/windowsdesktop/Simple-Calculator-MEF-1152654e).
 
- Daha fazla bilgi ve kod örnekleri için bkz. [Managed Extensibility Framework](http://go.microsoft.com/fwlink/?LinkId=144282). MEF türlerinin bir listesi için bkz. <xref:System.ComponentModel.Composition?displayProperty=nameWithType> ad alanı.
+ Daha fazla bilgi ve kod örnekleri için bkz. [Managed Extensibility Framework](https://github.com/MicrosoftArchive/mef). MEF türlerinin bir listesi için bkz. <xref:System.ComponentModel.Composition?displayProperty=nameWithType> ad alanı.

@@ -1,8 +1,6 @@
 ---
 title: Short Veri Türü (Visual Basic)
 ms.date: 01/31/2018
-author: rpetrusha
-ms.author: ronpet
 f1_keywords:
 - vb.Short
 helpviewer_keywords:
@@ -18,12 +16,12 @@ helpviewer_keywords:
 - Short data type
 - literal type characters [Visual Basic], S
 ms.assetid: 65fcbcf3-a841-400e-885e-301497729a8b
-ms.openlocfilehash: eb218a9b72208b13700ebd18dbf588066839203d
-ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
+ms.openlocfilehash: c8085c0911cfe83a3ca56c03cfda5689b9338680
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47231092"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50193519"
 ---
 # <a name="short-data-type-visual-basic"></a>Short veri türü (Visual Basic)
 -32.768 değeri ile 32.767 aralığı 16-bit (2-bayt) tamsayıları tutar imzalanmış.  

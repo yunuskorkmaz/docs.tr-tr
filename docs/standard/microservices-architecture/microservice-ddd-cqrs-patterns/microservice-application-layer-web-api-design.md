@@ -1,46 +1,46 @@
 ---
-title: Mikro hizmet uygulama katmanı ve Web API tasarlama
-description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Mikro hizmet uygulama katmanı ve Web API tasarlama
+title: Mikro hizmet uygulama katmanı ve Web API'sini tasarlama
+description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Mikro hizmet uygulama katmanı ve Web API'sini tasarlama
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
-ms.openlocfilehash: e5c7e0acb0496aebce4d9cbe8cb51ced0c7166a2
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: a8c03f99accf75f60fe6c21a0f09f304214b4a6c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106612"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194117"
 ---
-# <a name="designing-the-microservice-application-layer-and-web-api"></a>Mikro hizmet uygulama katmanı ve Web API tasarlama
+# <a name="designing-the-microservice-application-layer-and-web-api"></a>Mikro hizmet uygulama katmanı ve Web API'sini tasarlama
 
-## <a name="using-solid-principles-and-dependency-injection"></a>DÜZ ilkeleri ve bağımlılık ekleme kullanılarak
+## <a name="using-solid-principles-and-dependency-injection"></a>KATI ilkeler ve bağımlılık ekleme kullanılarak
 
-DÜZ ilkeleri mikro hizmet DDD desenlerle geliştirme gibi modern ve kritik bir uygulamada, kullanılacak kritik tekniklerle aynıdır. DÜZ bir kısaltma bu grupları beş temel ilkeler verilmiştir:
+KATI ilkeler DDD deseni ile bir mikro hizmet geliştirme gibi modern ve görev açısından kritik bir uygulamada, kullanılacak kritik tekniklerle aynıdır. DÜZ bir kısaltma bu grupları beş temel ilkeler verilmiştir:
 
 -   Tek sorumluluk İlkesi
 
--   Açık ve kapalı İlkesi
+-   İlke açık/kapalı
 
 -   Liskov değiştirme İlkesi
 
--   Arabirim arasında ayrım yapma İlkesi
+-   Ayırma ilkesini arabirimi
 
 -   Bağımlılık tersine çevirme ilkesi
 
-DÜZ nasıl uygulamanızı veya mikro hizmet iç Katmanlar tasarlayın ve aralarındaki bağımlılıkları ayırma hakkında daha fazla. Bu etki alanı, ancak uygulamanın teknik tasarım ilişkili değil. Son ilke, bağımlılık tersine çevirme (dı) ilkesini DDD katmanların bir daha iyi ayrılmış uygulaması sağlayan rest katmanların altyapısı katmanından ayırırsınız olanak tanır.
+DÜZ, uygulamanızın veya iç mikro hizmet katmanları nasıl tasarlayacağınızı ve aralarındaki bağımlılıkları ayırma hakkında daha fazla. Bu etki alanı, ancak uygulamanın teknik tasarım ilişkili değil. Son ilke, bağımlılık tersine çevirme ilkesine DDD katmanların bir daha iyi ayrılmış uygulama sağlayan diğer katmanların altyapı katmanını ayırmak sağlar.
 
-DI bağımlılık ters çevirmeyi ilkesini uygulamak için bir yoludur. Bu nesneler ve onların bağımlılıkları arasındaki bu sıkı bağ elde etmek için bir tekniktir. Ortak Çalışanlar doğrudan başlatmasını veya statik başvuruları kullanma yerine eylemlerini gerçekleştirmek için bir sınıf gereken nesneler için sağlanan (veya "içine eklenen") sınıfı. Çoğu zaman sınıfları bağımlılıklarını açık bağımlılıkları ilkesini izlemek vermeden kendi Oluşturucusu aracılığıyla bildirir. DI genellikle belirli denetimi tersine çevirme (IOC) kapsayıcılarında temel alır. Basit bir yerleşik IOC kapsayıcı ASP.NET Core sağlar, ancak Autofac veya Ninject gibi sık kullanılan IOC kapsayıcı de kullanabilirsiniz.
+Bağımlılık ekleme (dı) bağımlılık tersine çevirme ilkesini uygulamak için bir yoludur. Bu nesneleri ve bunların bağımlılıklarını arasındaki bu sıkı bağ elde etmek için kullanabileceğiniz bir tekniktir. Ortak Çalışanlar doğrudan örnekleme veya statik başvurular yerine bir sınıf eylemlerini gerçekleştirmek için gereken nesneleri için sağlanan (veya "içine eklenen") sınıfı. Çoğunlukla sınıfları, bunları özel bağımlılıklar ilkesini izlemek izin verme oluşturucularına aracılığıyla bunların bağımlılıklarını bildirir. DI, genellikle belirli bir denetimi tersine çevirme (IOC) kapsayıcı üzerinde temel alır. Basit bir yerleşik IOC kapsayıcısında ASP.NET Core sağlar, ancak Autofac veya Ninject gibi sık kullanılan, IOC kapsayıcı de kullanabilirsiniz.
 
-DÜZ ilkeleri izleyerek sınıflarınızı doğal olarak küçük, iyi faktörlere göre ve kolayca sınanan olma eğilimindedir. Ancak çok fazla bağımlılıkları sınıflar olarak eklenmiş varsa nasıl biliyor? Oluşturucu kullanılarak dı kullanırsanız, yalnızca sizin oluşturucusu için parametre sayısı bakarak algılayan kolay olacaktır. Çok fazla bağımlılıkları varsa, bu genellikle bir işaretidir (bir [kod kokusu](http://deviq.com/code-smells/)) sınıfınız çok işlemini yapmaya çalışan ve büyük olasılıkla tek sorumluluk ilkesini ihlal etme.
+KATI ilkeler uygulayarak, sınıflarınızı doğal olarak küçük, katsayıları iyi belirlenmiş ve kolayca test edilmiş olma eğilimindedir. Ancak çok fazla bağımlılıkları, sınıflara eklenmiş olmadığını nasıl bilebilirsiniz? Oluşturucusu DI kullanırsanız, yalnızca güvenlik denetimini atladığından için parametre sayısı bakarak algılayan kolay olacaktır. Çok fazla bağımlılıkları varsa, bu, genellikle bir oturum. (bir [kod kokusu](https://deviq.com/code-smells/)) sınıfınıza çok yapmak çalışıyor ve büyük olasılıkla tek sorumluluk ilkesini ihlal.
 
-DÜZ ayrıntılı olarak ele için başka bir kılavuz kalırsınız. Bu nedenle, bu kılavuzda Bu konu için en az bir bilgiye sahip gerektirir.
+Bunu başka bir kılavuz DÜZ ayrıntılı olarak ele alır. Bu nedenle, bu kılavuzda Bu konu için en az bir bilgiye sahip gerektirir.
 
 #### <a name="additional-resources"></a>Ek kaynaklar
 
--   **DÜZ: Temel OOP ilkeleri**
-    [*http://deviq.com/solid/*](http://deviq.com/solid/%20)
+-   **KATI: Temel OOP ilkeleri**
+    [*https://deviq.com/solid/*](https://deviq.com/solid/%20)
 
--   **Ters çevirmeyi denetimi kapsayıcıları ve bağımlılık ekleme düzeni**
+-   **Tersine çevirme denetimi kapsayıcıları ve bağımlılık ekleme deseni**
     [*https://martinfowler.com/articles/injection.html*](https://martinfowler.com/articles/injection.html)
 
 -   **Steve Smith. Birleştirici yenilikler**
@@ -49,4 +49,4 @@ DÜZ ayrıntılı olarak ele için başka bir kılavuz kalırsınız. Bu nedenle
 
 >[!div class="step-by-step"]
 [Önceki](nosql-database-persistence-infrastructure.md)
-[sonraki](microservice-application-layer-implementation-web-api.md)
+[İleri](microservice-application-layer-implementation-web-api.md)

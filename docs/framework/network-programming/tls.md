@@ -1,7 +1,7 @@
 ---
 title: .NET Framework ile Aktarım Katmanı Güvenliği (TLS) en iyi uygulamalar
 description: Aktarım Katmanı Güvenliği (TLS) ile .NET Framework kullanarak en iyi uygulamalar açıklanmaktadır
-ms.date: 03/15/2018
+ms.date: 10/22/2018
 helpviewer_keywords:
 - sending data, Internet security
 - protocols, Internet security
@@ -12,17 +12,16 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-author: blowdart
-ms.openlocfilehash: 96d37934b5e852b69c692bb1606d2998dac6f63a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9cb7dbdfb1ad221e00823d8d55e7fd3c52cabe8b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47424486"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194143"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework ile Aktarım Katmanı Güvenliği (TLS) en iyi uygulamalar
 
-Aktarım Katmanı Güvenliği (TLS) Internet üzerinden iletilen bilgilerinin gizliliğinin korunmasına yardımcı olmak için tasarlanmış bir endüstri standardı protokolüdür. [TLS 1.2](https://tools.ietf.org/html/rfc5246) önceki sürümlere göre güvenlik geliştirmeleri sağlar ve yeni yayımlanmış standardıdır. TLS 1.2 sonunda değiştirilecektir tarafından [TLS 1.3](https://tools.ietf.org/html/draft-ietf-tls-tls13-22). Bu makalede, TLS protokolünü kullanan .NET Framework uygulamalarını güvenli hale getirmek için öneriler sunar.
+Aktarım Katmanı Güvenliği (TLS) Internet üzerinden iletilen bilgilerinin gizliliğinin korunmasına yardımcı olmak için tasarlanmış bir endüstri standardı protokolüdür. [TLS 1.2](https://tools.ietf.org/html/rfc5246) önceki sürümlere göre güvenlik geliştirmeleri sağlar bir standarttır. TLS 1.2 yeni yayımlanmış standardına göre sonunda değiştirilecektir [TLS 1.3](https://tools.ietf.org/html/rfc8446) daha hızlıdır ve güvenlik geliştirmiştir. Bu makalede, TLS protokolünü kullanan .NET Framework uygulamalarını güvenli hale getirmek için öneriler sunar.
 
 TLS sürümü .NET Framework uygulamaları güvenli kalmasını sağlamak için gereken **değil** gömülebilir. .NET framework uygulamaları, işletim sistemi (OS) destekleyen TLS sürümünü kullanmanız gerekir.
 
@@ -258,7 +257,7 @@ Bu makalede en iyi uygulamaları en son güvenlik güncelleştirmelerinin yükle
 
 Ayrıca bkz:
 
-- [.NET framework sürümleri ve bağımlılıkları](../migration-guide/versions-and-dependencies.md)
+- [.NET Framework Sürümleri ve Bağımlılıkları](../migration-guide/versions-and-dependencies.md)
 - [Nasıl yapılır: hangi .NET Framework sürümlerinin yüklü olduğunu belirleme](../migration-guide/how-to-determine-which-versions-are-installed.md).
 
 ## <a name="support-for-tls-12"></a>TLS 1.2 desteği
@@ -278,7 +277,7 @@ Etkinleştirmek veya TLS 1.2 ve/veya TLS 1.1, bunları destekleyen bir sistemde 
 | Windows Server 2008 | TLS 1.2 ve TLS 1.1 desteği güncelleştirilmesi gerekiyor. Bkz: [Windows Server 2008 SP2'de TLS 1.1 ve TLS 1.2 desteği eklemek için güncelleştirme](https://support.microsoft.com/help/4019276/update-to-add-support-for-tls-1-1-and-tls-1-2-in-windows-server-2008-s). |
 | Windows Vista | Desteklenmez. |
 
-Hangi TLS/SSL protokolleri Windows'ın her sürümünde varsayılan olarak etkinleştirilir daha fazla bilgi için bkz [protokolleri de TLS/SSL'deki (Schannel SSP)](https://msdn.microsoft.com/library/windows/desktop/mt808159).
+Hangi TLS/SSL protokolleri Windows'ın her sürümünde varsayılan olarak etkinleştirilir daha fazla bilgi için bkz [protokolleri de TLS/SSL'deki (Schannel SSP)](/windows/desktop/SecAuthN/protocols-in-tls-ssl--schannel-ssp-).
 
 **.NET Framework 3.5 ile TLS 1.2 Destek gereksinimleri**
 
@@ -305,6 +304,6 @@ Uygulamanızı Azure konuk işletim sistemi sürümünde kullanılabilir olmayan
 
 ### <a name="azure-guest-os-registry-settings"></a>Azure konuk işletim sistemi kayıt defteri ayarları
 
-Azure konuk işletim sistemi görüntüsü için [Azure Cloud Services](https://azure.microsoft.com/services/cloud-services/) zaten `SchUseStrongCrypto` kayıt defteri anahtarı değerini 1 olarak ayarlayın. Daha fazla bilgi için [SchUseStrongCrypto](#schusestrongcrypto).
+Azure konuk işletim sistemi ailesi 5 görüntüyü [Azure Cloud Services](https://azure.microsoft.com/services/cloud-services/) zaten `SchUseStrongCrypto` kayıt defteri anahtarı değerini 1 olarak ayarlayın. Daha fazla bilgi için [SchUseStrongCrypto](#schusestrongcrypto).
 
 Ayarlama [SystemDefaultTlsVersions](#systemdefaulttlsversions) kayıt defteri anahtarı 1. Bkz: [yapılandırma Windows kayıt defteri aracılığıyla güvenlik](#configuring-security-via-the-windows-registry).

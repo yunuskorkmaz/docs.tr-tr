@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], explicit numeric conversions
 - type conversion [C#], explicit numeric
 ms.assetid: f3bb9e76-6b92-4df7-bc36-f866c24e1dfd
-ms.openlocfilehash: 22bb2117e7b78596e1fb6af63584f51b066564c9
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 948961d19518343c1f8ee14cd48dc33ec72cf23d
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025564"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49478932"
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a>Açık sayısal dönüşümler tablosu (C# Başvurusu)
 
@@ -61,7 +61,7 @@ Aşağıdaki tabloda önceden tanımlanmış açık dönüştürmeler kendisi i�
   
 - Dönüştürürken `decimal` için `float` veya `double`, `decimal` değer yuvarlanır en yakın `double` veya `float` değeri.  
   
- Açık dönüştürmeler hakkında daha fazla bilgi için bkz: [açık dönüştürmeler](/dotnet/csharp/language-reference/language-specification/conversions#explicit-conversions) bölümünü [C# dil belirtimi](../language-specification/index.md).
+ Açık dönüştürmeler hakkında daha fazla bilgi için bkz: [açık dönüştürmeler](~/_csharplang/spec/conversions.md#explicit-conversions) bölümünü [C# dil belirtimi](../language-specification/index.md).
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

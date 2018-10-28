@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: c3904ad60df3d9d7ce2b58d5911e4e19a2ebb7e3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 78c511555065528d1ab34ee3ec9f8859a15bbc61
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193911"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194110"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>TextPattern ve Katıştırılmış Nesnelere Genel Bakış
 > [!NOTE]
@@ -45,7 +45,7 @@ Katıştırılmış nesneler ve onların aralığı yayılma ile metin akışın
   
  Bir metin aralığını içeriğini geçirmek gerekli olduğunda, bir dizi adım söz konusu sırasını arka planda <xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> yöntemi başarıyla yürütülemedi.  
   
-1.  Metin aralığı normalleştirilmiş; diğer bir deyişle, metin aralığı bozuk bir aralıkta için daraltılmış <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> getiren endpoint <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> gereksiz uç noktası. Bir metin aralığını nereden yayılan durumlarda belirsizliğini kaldırmak bu adım gereklidir <xref:System.Windows.Automation.Text.TextUnit> sınırları: Örneğin, "{U} RL [ http://www.microsoft.com ](https://www.microsoft.com) metinde katıştırılmış" nerede "{" ve "}" metin aralığı noktalarıdır.  
+1.  Metin aralığı normalleştirilmiş; diğer bir deyişle, metin aralığı bozuk bir aralıkta için daraltılmış <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> getiren endpoint <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> gereksiz uç noktası. Bir metin aralığını nereden yayılan durumlarda belirsizliğini kaldırmak bu adım gereklidir <xref:System.Windows.Automation.Text.TextUnit> sınırları: Örneğin, `{The URL https://www.microsoft.com is embedded in text` burada "{" ve "}" metin aralığı noktalarıdır.  
   
 2.  Elde edilen aralığın geriye taşınır <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> istenen başlangıcına <xref:System.Windows.Automation.Text.TextUnit> sınır.  
   
@@ -66,22 +66,22 @@ Bir metin aralığını Move() ve ExpandToEnclosingUnit() için nasıl ayarland�
   
  } = <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End>  
   
-<a name="Hyperlink"></a>   
 ### <a name="hyperlink"></a>Köprü  
- **Örnek 1 - katıştırılmış bir köprü içeren bir metin aralığı**  
+
+**Örnek 1 - katıştırılmış bir köprü içeren bir metin aralığı**
   
- {URL [ http://www.microsoft.com ](https://www.microsoft.com) metinde katıştırılmış}.  
+`{The URL https://www.microsoft.com is embedded in text}.`
   
 |Yöntemi|Sonuç|  
 |-------------------|------------|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|Dizeyi döndürür "URL http://www.microsoft.com metinde katıştırılmış".|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|Dizeyi döndürür `The URL https://www.microsoft.com is embedded in text`.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|En içteki döndürür <xref:System.Windows.Automation.AutomationElement> , metin aralığı alır; bu durumda, <xref:System.Windows.Automation.AutomationElement> temsil eden metin sağlayıcısı.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|Döndürür bir <xref:System.Windows.Automation.AutomationElement> köprü denetimini temsil eden.|  
-|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> Burada <xref:System.Windows.Automation.AutomationElement> önceki tarafından döndürülen nesne `GetChildren` yöntemi.|Gösteren aralığını döndürür "http://www.microsoft.com".|  
+|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> Burada <xref:System.Windows.Automation.AutomationElement> önceki tarafından döndürülen nesne `GetChildren` yöntemi.|Gösteren aralığını döndürür "https://www.microsoft.com".|  
   
  **Örnek 2 - katıştırılmış bir köprü kısmen yayılan bir metin aralığı**  
   
- URL `http://{[www]}` metinde katıştırılır.  
+ URL `https://{[www]}` metinde katıştırılır.  
   
 |Yöntemi|Sonuç|  
 |-------------------|------------|  
@@ -89,9 +89,9 @@ Bir metin aralığını Move() ve ExpandToEnclosingUnit() için nasıl ayarland�
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|En içteki döndürür <xref:System.Windows.Automation.AutomationElement> , metin aralığı alır; bu durumda, köprü denetim.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|Döndürür `null` olduğundan tüm URL dizesi metin aralığını kapsayan değil.|  
   
- **Örnek 3 - bir metin kapsayıcı içeriğini kısmen yayılan bir metin aralığı. Metin aralığı bir parçası olmayan bir ekli metinleri köprü metin kapsayıcı vardır.**  
+**Örnek 3 - bir metin kapsayıcı içeriğini kısmen yayılan bir metin aralığı. Metin aralığı bir parçası olmayan bir ekli metinleri köprü metin kapsayıcı vardır.**  
   
- {URL} [ http://www.microsoft.com ](https://www.microsoft.com) metinde katıştırılır.  
+`{The URL} [https://www.microsoft.com](https://www.microsoft.com) is embedded in text.`
   
 |Yöntemi|Sonuç|  
 |-------------------|------------|  

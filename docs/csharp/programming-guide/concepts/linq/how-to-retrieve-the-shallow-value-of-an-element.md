@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: (C#) öğenin yüzeysel değerini alma'
 ms.date: 07/20/2015
 ms.assetid: 924a2699-72f6-4be1-aaa6-de62f8ec73b9
-ms.openlocfilehash: 7e1a5b216a02ca72fa49785e50ed262a89abfcdf
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2555b2f17120e4dce670a9fef9fc6a126a47e935
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505310"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50180659"
 ---
 # <a name="how-to-retrieve-the-shallow-value-of-an-element-c"></a>Nasıl yapılır: (C#) öğenin yüzeysel değerini alma
 Bu konuda, bir öğenin yüzeysel değerini alma gösterilmektedir. Basit yalnızca belirli öğenin değeri tek bir dize olarak birleştirilmiş tüm alt öğe değerlerini içeren ayrıntılı değer aksine değerdir.  

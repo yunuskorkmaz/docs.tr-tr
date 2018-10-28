@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6ab205ad12b60651443e0fc409e890ea93168ebd
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: e9c40b68a67219cd8f24874780281023974886e4
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48848081"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "49414861"
 ---
 # .NET Framework'teki yenilikler <a name="introduction"></a>
 
@@ -29,7 +29,7 @@ Bu makalede, önemli yeni özellikler ve geliştirmeler aşağıdaki .NET Framew
 - [.NET 2015 ve .NET Framework 4.6](#v46)
 - [.NET framework 4.5.2](#v452)
 - [.NET framework 4.5.1](#v451)
-- [.NET framework 4.5](#v45)
+- [.NET Framework 4.5](#v45)
 
 Bu makale, her yeni özellik hakkında kapsamlı bilgi sağlamaz ve değiştirilebilir. .NET Framework hakkında genel bilgi için bkz. [Başlarken](../../../docs/framework/get-started/index.md). Desteklenen platformlar için bkz: [sistem gereksinimleri](~/docs/framework/get-started/system-requirements.md). Yükleme yönergeleri ve indirme bağlantıları [Yükleme Kılavuzu](../../../docs/framework/install/guide-for-developers.md).
 
@@ -162,7 +162,7 @@ End Function
 
 **Kısa ömürlü anahtarlar için destek**
 
-PFX alma, özel anahtarları isteğe bağlı olarak sabit sürücüyü atlayarak bellekten doğrudan yükleyebilirsiniz. Zaman yeni <xref:System.Security.Cryptography.X509Certificates.X509KeyStorageFlags.EphemeralKeySet?displayProperty=nameWithType> bayrağı belirtilen bir <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> oluşturucu veya aşırı yüklemelerinden birini <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.Import%2A?displayProperty=nameWithType> yöntemi özel anahtarlar kısa ömürlü anahtarlar olarak yüklenir. Bu anahtarları diskte görünür olmasını önler. Ancak:
+PFX alma, özel anahtarları isteğe bağlı olarak sabit sürücüyü atlayarak bellekten doğrudan yükleyebilirsiniz. Zaman yeni <xref:System.Security.Cryptography.X509Certificates.X509KeyStorageFlags.EphemeralKeySet?displayProperty=nameWithType> bayrağı belirtilen bir <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> oluşturucu veya aşırı yüklemelerinden birini <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.Import%2A?displayProperty=nameWithType> yöntemi özel anahtarlar kısa ömürlü anahtarlar olarak yüklenir. Bu anahtarları diskte görünür olmasını önler. Ancak:
 
 - Disk için sertifikalar ile yüklenen anahtarları sürdürülmeyen olduğundan bu bayrağı için bir X509Store eklemek için iyi adaylar değildir.
 
@@ -182,7 +182,7 @@ Daha fazla bilgi ve kod örnekleri için bkz. "programlı oluşturulmasını PKC
 
 **Sarmalanan bir akış CryptoStream bırakıldıktan sonra açık bırakın**
 
-4.7.2, .NET Framework ile başlayarak <xref:System.Security.Cryptography.CryptoStream> sınıfında sağlayan ek bir Oluşturucuda <xref:System.Security.Cryptography.CryptoStream.Dispose%2A> Sarmalanan akış kapatmadığınızdan. Sarmalanan akış sonra açık bırakmak <xref:System.Security.Cryptography.CryptoStream> örneği kullanıldığında, yeni bir çağrı <xref:System.Security.Cryptography.CryptoStream> Oluşturucu aşağıdaki gibi:
+4.7.2, .NET Framework ile başlayarak <xref:System.Security.Cryptography.CryptoStream> sınıfında sağlayan ek bir Oluşturucuda <xref:System.Security.Cryptography.CryptoStream.Dispose%2A> Sarmalanan akış kapatmadığınızdan. Sarmalanan akış sonra açık bırakmak <xref:System.Security.Cryptography.CryptoStream> örneği kullanıldığında, yeni bir çağrı <xref:System.Security.Cryptography.CryptoStream> Oluşturucu aşağıdaki gibi:
 
 ```csharp
 var cStream = new CryptoStream(stream, transform, mode, leaveOpen: true);
@@ -321,15 +321,15 @@ Uygulama yapılandırma dosyasına ardından Özet somut bir uyarlamasını beli
 
 ```xml
 <configuration>
-  <configSections>
-    <section name="SqlColumnEncryptionEnclaveProviders" type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection,System.Data,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089"/> 
-  </configSections>
-  <SqlColumnEncryptionEnclaveProviders>
-    <providers>
+  <configSections>
+    <section name="SqlColumnEncryptionEnclaveProviders" type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection,System.Data,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089"/> 
+  </configSections>
+  <SqlColumnEncryptionEnclaveProviders>
+    <providers>
       <add name="Azure" type="Microsoft.SqlServer.Management.AlwaysEncrypted.AzureEnclaveProvider,MyApp"/>
       <add name="HGS" type="Microsoft.SqlServer.Management.AlwaysEncrypted.HGSEnclaveProvider,MyApp" />
-    </providers>
-  </SqlColumnEncryptionEnclaveProviders >
+    </providers>
+  </SqlColumnEncryptionEnclaveProviders >
 </configuration>
 ```
 
@@ -347,13 +347,13 @@ Kuşatma tabanlı Always Encrypted, temel akışı şöyledir:
 
 **Kaynağa göre ResourceDictionaries bulma**
 
-.NET Framework 4.7.2 ile başlayarak, bir tanılama Yardımcısı bulabilirsiniz <xref:System.Windows.Xps.Packaging.IXpsFixedPageReader.ResourceDictionaries> belirli bir kaynaktan URI oluşturuldu. (Bu özellik için tanılama yardımcılar, üretim uygulamaları tarafından kullanılır.) Visual Studio'nun "Düzenle-ve devam et" tesisi gibi bir tanılama Yardımcısı, kendi kullanıcı değişiklik çalışan uygulamaya uygulanması amacıyla ResourceDictionary düzenleme olanak tanır. Bunu elde etmenin de tek bir adımda, uygulama çalışırken, düzenlenmekte olan sözlükten oluşturduğu tüm ResourceDictionaries buluyor. Örneğin, uygulama içeriği URI belirli bir kaynaktan kopyalanır ResourceDictionary bildirebilirsiniz:
+.NET Framework 4.7.2 ile başlayarak, bir tanılama Yardımcısı bulabilirsiniz <xref:System.Windows.Xps.Packaging.IXpsFixedPageReader.ResourceDictionaries> belirli bir kaynaktan URI oluşturuldu. (Bu özellik için tanılama yardımcılar, üretim uygulamaları tarafından kullanılır.) Visual Studio'nun "Düzenle-ve devam et" tesisi gibi bir tanılama Yardımcısı, kendi kullanıcı değişiklik çalışan uygulamaya uygulanması amacıyla ResourceDictionary düzenleme olanak tanır. Bunu elde etmenin de tek bir adımda, uygulama çalışırken, düzenlenmekte olan sözlükten oluşturduğu tüm ResourceDictionaries buluyor. Örneğin, uygulama içeriği URI belirli bir kaynaktan kopyalanır ResourceDictionary bildirebilirsiniz:
 
 ```xml
 <ResourceDictionary Source="MyRD.xaml">
 ```
 
-Özgün işaretlemede düzenler bir tanılama Yardımcısı *MyRD.xaml* yeni özelliği sözlük bulmak için kullanabilirsiniz. Yeni bir statik yöntem tarafından uygulanan özellik <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetResourceDictionariesForSource%2A?displayProperty=nameWithType>. Tanılama Yardımcısı özgün biçimlendirme tanımlayan bir mutlak URI aşağıdaki kodda gösterildiği gibi kullanarak yeni yöntemini çağırır:
+Özgün işaretlemede düzenler bir tanılama Yardımcısı *MyRD.xaml* yeni özelliği sözlük bulmak için kullanabilirsiniz. Yeni bir statik yöntem tarafından uygulanan özellik <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetResourceDictionariesForSource%2A?displayProperty=nameWithType>. Tanılama Yardımcısı özgün biçimlendirme tanımlayan bir mutlak URI aşağıdaki kodda gösterildiği gibi kullanarak yeni yöntemini çağırır:
 
 ```csharp
 IEnumerable<ResourceDictionary> dictionaries = ResourceDictionaryDiagnostics.GetResourceDictionariesForSource(new Uri("pack://application:,,,/MyApp;component/MyRD.xaml"));
@@ -362,11 +362,11 @@ IEnumerable<ResourceDictionary> dictionaries = ResourceDictionaryDiagnostics.Get
 Dim dictionaries As IEnumerable(Of ResourceDictionary) = ResourceDictionaryDiagnostics.GetResourceDictionariesForSource(New Uri("pack://application:,,,/MyApp;component/MyRD.xaml"))
 ```
 
-Kullanıcı hikayesinin sürece yöntem boş bir numaralandırılabilir'e döndürür. <xref:System.Windows.Diagnostics.VisualDiagnostics> etkinleştirilir ve [ `ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO` ](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A) ortam değişkeninin ayarlı.
+Kullanıcı hikayesinin sürece yöntem boş bir numaralandırılabilir'e döndürür. <xref:System.Windows.Diagnostics.VisualDiagnostics> etkinleştirilir ve [ `ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO` ](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A)  ortam değişkeninin ayarlı.
 
 **Bulma ResourceDictionary sahipleri**
 
-.NET Framework 4.7.2 ile başlayarak, bir tanılama Yardımcısı sahipleri bulabilirsiniz bir verilen <xref:Windows.UI.Xaml.ResourceDictionary>. (Özellik tanılama yardımcıları ve üretim uygulamaları tarafından kullanımı için geçerlidir.) Her bir değişiklik yapıldığında için bir <xref:Windows.UI.Xaml.ResourceDictionary>, WPF otomatik olarak bulur tüm [DynamicResource](../wpf/advanced/dynamicresource-markup-extension.md) değişiklik tarafından etkilenebilecek başvuruları.
+.NET Framework 4.7.2 ile başlayarak, bir tanılama Yardımcısı sahipleri bulabilirsiniz bir verilen <xref:Windows.UI.Xaml.ResourceDictionary>. (Özellik tanılama yardımcıları ve üretim uygulamaları tarafından kullanımı için geçerlidir.) Her bir değişiklik yapıldığında için bir <xref:Windows.UI.Xaml.ResourceDictionary>, WPF otomatik olarak bulur tüm [DynamicResource](../wpf/advanced/dynamicresource-markup-extension.md) değişiklik tarafından etkilenebilecek başvuruları.
 
 Visual Studio'nun "Düzenle-ve devam et" tesisi gibi bir tanılama Yardımcısı işlemek için bunu genişletmek isteyebilirsiniz [StaticResource](../wpf/advanced/staticresource-markup-extension.md) başvuruları. Bu işlem ilk adımında sözlük sahipleri bulun, diğer bir deyişle, tüm nesneleri bulmak için `Resources` özelliği sözlüğe başvurur (doğrudan veya dolaylı olarak aracılığıyla <xref:System.Windows.ResourceDictionary.MergedDictionaries?displayProperty=nameWithType> özelliği). Üç yeni statik yöntemler üzerinde uygulanan <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics?displayProperty=nameWithType> sınıfı, bir sahip temel türlerinin her biri için bir `Resources` özelliği, bu adımı destekler:
 
@@ -376,11 +376,11 @@ Visual Studio'nun "Düzenle-ve devam et" tesisi gibi bir tanılama Yardımcısı
 
 - [`public static IEnumerable<Application> GetApplicationOwners(ResourceDictionary dictionary);`](xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetApplicationOwners%2A)
 
-Kullanıcı hikayesinin sürece bu yöntemler boş numaralandırılabilir'e döndürür. <xref:System.Windows.Diagnostics.VisualDiagnostics> etkinleştirilir ve [ `ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO` ](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A) ortam değişkeninin ayarlı.
+Kullanıcı hikayesinin sürece bu yöntemler boş numaralandırılabilir'e döndürür. <xref:System.Windows.Diagnostics.VisualDiagnostics> etkinleştirilir ve [ `ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO` ](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A)  ortam değişkeninin ayarlı.
 
 **StaticResource başvuruları bulma**
 
-Tanılama Yardımcısı artık bildirim alabilir her bir [StaticResource](../wpf/advanced/staticresource-markup-extension.md) çözümlenen başvuru. (Özellik tanılama yardımcılar, üretim uygulamaları tarafından kullanımı için geçerlidir.) Bir tanılama Yardımcısı "Düzenle-ve devam et" Visual Studio'nun tesisi gibi bir kaynak tüm kullanımları güncelleştirmek isteyebilirsiniz, değeriyle bir <xref:Windows.UI.Xaml.ResourceDictionary> değişiklikler. WPF bunu otomatik olarak yapar [DynamicResource](../wpf/advanced/dynamicresource-markup-extension.md) başvuruları, ancak isteyerek değil bunu [StaticResource](../wpf/advanced/staticresource-markup-extension.md) başvuruları. .NET Framework 4.7.2 ile başlayarak, tanılama Yardımcısı, bu kullanımları statik kaynak bulmak için bu bildirimleri kullanabilirsiniz.
+Tanılama Yardımcısı artık bildirim alabilir her bir [StaticResource](../wpf/advanced/staticresource-markup-extension.md) çözümlenen başvuru. (Özellik tanılama yardımcılar, üretim uygulamaları tarafından kullanımı için geçerlidir.) Bir tanılama Yardımcısı "Düzenle-ve devam et" Visual Studio'nun tesisi gibi bir kaynak tüm kullanımları güncelleştirmek isteyebilirsiniz, değeriyle bir <xref:Windows.UI.Xaml.ResourceDictionary> değişiklikler. WPF bunu otomatik olarak yapar [DynamicResource](../wpf/advanced/dynamicresource-markup-extension.md) başvuruları, ancak isteyerek değil bunu [StaticResource](../wpf/advanced/staticresource-markup-extension.md) başvuruları. .NET Framework 4.7.2 ile başlayarak, tanılama Yardımcısı, bu kullanımları statik kaynak bulmak için bu bildirimleri kullanabilirsiniz.
 
 Bildirim yeni tarafından uygulanan <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.StaticResourceResolved?displayProperty=nameWithType> olay:
 
@@ -392,7 +392,7 @@ public static event EventHandler<StaticResourceResolvedEventArgs> StaticResource
 Public Shared Event StaticResourceResolved As EventHandler(Of StaticResourceResolvedEventArgs)
 ```
 
-Çalışma zamanı çözümler olduğunda bu olayı bir [StaticResource](../wpf/advanced/staticresource-markup-extension.md) başvuru. <xref:System.Windows.Diagnostics.StaticResourceResolvedEventArgs> Bağımsız değişkenleri çözümü açıklayın ve nesne ve özellik barındıran belirtmek [StaticResource](../wpf/advanced/staticresource-markup-extension.md) başvuru ve <xref:Windows.UI.Xaml.ResourceDictionary> ve çözümlemesi için kullanılan anahtarı:
+Çalışma zamanı çözümler olduğunda bu olayı bir [StaticResource](../wpf/advanced/staticresource-markup-extension.md) başvuru. <xref:System.Windows.Diagnostics.StaticResourceResolvedEventArgs> Bağımsız değişkenleri çözümü açıklayın ve nesne ve özellik barındıran belirtmek [StaticResource](../wpf/advanced/staticresource-markup-extension.md) başvuru ve <xref:Windows.UI.Xaml.ResourceDictionary> ve çözümlemesi için kullanılan anahtarı:
 
 ```csharp
 public class StaticResourceResolvedEventArgs : EventArgs
@@ -407,7 +407,7 @@ public class StaticResourceResolvedEventArgs : EventArgs
 }
 ```
 
-Olayı değil oluşturulur (ve kendi `add` erişimci göz ardı edilir) sürece <xref:System.Windows.Diagnostics.VisualDiagnostics> etkinleştirilir ve [ `ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO` ](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A) ortam değişkeninin ayarlı.
+Olayı değil oluşturulur (ve kendi `add` erişimci göz ardı edilir) sürece <xref:System.Windows.Diagnostics.VisualDiagnostics> etkinleştirilir ve [ `ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO` ](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A)  ortam değişkeninin ayarlı.
 
 #### <a name="clickonce"></a>ClickOnce
 
@@ -415,7 +415,7 @@ HDPI kullanan uygulamalar için Office (VSTO) Windows Formları, Windows Present
 
 ```xml
 <windowsSettings>
-   <dpiAware xmlns="http://schemas.microsoft.com/SMI/2005/WindowsSettings">true</dpiAware>
+   <dpiAware xmlns="http://schemas.microsoft.com/SMI/2005/WindowsSettings">true</dpiAware>
 </windowsSettings>
 ```
 
@@ -517,7 +517,7 @@ ASP.NET .NET Framework 4.7 ve önceki sürümlerle geliştiriciler yapılandırm
 - [Windows Forms](#wf47)
 - [Windows Presentation Foundation (WPF)](#WPF47)
 
-Yeni API'lerin bir listesi için .NET Framework 4.7 eklediğiniz için bkz: [.NET Framework 4.7 API değişiklikleri](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-api-changes.md) GitHub üzerinde. Özellik geliştirmeleri ve .NET Framework 4.7 hata düzeltmelerinin listesi için bkz. [.NET Framework 4.7 değişiklikler listesi](http://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-changes.md) GitHub üzerinde.  Ek bilgi için bkz: [.NET Framework 4.7 Duyurusu](https://blogs.msdn.microsoft.com/dotnet/2017/04/05/announcing-the-net-framework-4-7/) .NET blogunda.
+Yeni API'lerin bir listesi için .NET Framework 4.7 eklediğiniz için bkz: [.NET Framework 4.7 API değişiklikleri](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-api-changes.md) GitHub üzerinde. Özellik geliştirmeleri ve .NET Framework 4.7 hata düzeltmelerinin listesi için bkz. [.NET Framework 4.7 değişiklikler listesi](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-changes.md) GitHub üzerinde.  Ek bilgi için bkz: [.NET Framework 4.7 Duyurusu](https://blogs.msdn.microsoft.com/dotnet/2017/04/05/announcing-the-net-framework-4-7/) .NET blogunda.
 
 <a name="Core47" />
 
@@ -725,11 +725,11 @@ public interface ISessionStateModule : IHttpModule {
 <a name="Strings" />
 
 ### <a name="character-categories"></a>Karakter kategorileri
- Öğesindeki karakterler [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] göre sınıflandırılır [Unicode standardı, sürüm 8.0.0](http://www.unicode.org/versions/Unicode8.0.0/). İçinde [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] ve [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], karakter sınıflandırılmış 6.3 Unicode karakter kategorilerine göre.
+ Öğesindeki karakterler [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] göre sınıflandırılır [Unicode standardı, sürüm 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). İçinde [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] ve [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], karakter sınıflandırılmış 6.3 Unicode karakter kategorilerine göre.
 
  Unicode 8.0 için destek, karakter sınıflandırması sınırlı <xref:System.Globalization.CharUnicodeInfo> sınıf ve türleri ve yöntemleri için güvenin üzerinde. Bunlar <xref:System.Globalization.StringInfo> sınıfı, aşırı yüklenmiş <xref:System.Char.GetUnicodeCategory%2A?displayProperty=nameWithType> yöntemi ve [karakter sınıfları](../../../docs/standard/base-types/character-classes-in-regular-expressions.md) .NET Framework normal ifade motoru tarafından tanınır.  Karakter ve dize karşılaştırma ve sıralama bu değişiklikten etkilenmez ve temel alınan işletim sisteminde veya Windows 7 sistemlerinde, .NET Framework tarafından sağlanan karakter verileri yararlanmaya devam eder.
 
- Unicode 6.0 karakter kategorilerden Unicode 7.0 değişiklikler için bkz: [Unicode standardı, sürüm 7.0.0](http://www.unicode.org/versions/Unicode7.0.0/) Unicode Consortium sitesinde. Değişiklikler için Unicode 7.0 Unicode 8.0 için bkz: [Unicode standardı, sürüm 8.0.0](http://www.unicode.org/versions/Unicode8.0.0/) Unicode Consortium sitesinde.
+ Unicode 6.0 karakter kategorilerden Unicode 7.0 değişiklikler için bkz: [Unicode standardı, sürüm 7.0.0](https://www.unicode.org/versions/Unicode7.0.0/) Unicode Consortium sitesinde. Değişiklikler için Unicode 7.0 Unicode 8.0 için bkz: [Unicode standardı, sürüm 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/) Unicode Consortium sitesinde.
 
 <a name="Crypto462" />
 
@@ -1223,7 +1223,7 @@ Yönetilmeyen profil oluşturma API'si şu şekilde geliştirilmiştir:
 
      MVC, Web API ve Web sayfaları, MVC 6 olarak adlandırılan tek bir üründe yararlanma birleşik. ASP.NET Core araçları Visual Studio 2015 veya sonraki sürümlerde aracılığıyla uygulamaları oluşturun. Mevcut uygulamalarınızı yeni .NET Framework üzerinde çalışır; bir uygulama oluşturmak için MVC 6 veya SignalR 3 kullanan ancak Visual Studio 2015 veya daha sonra proje sistemi kullanmanız gerekir.
 
-     Bilgi için [ASP.NET Core](http://go.microsoft.com/fwlink/?LinkId=518238).
+     Bilgi için [ASP.NET Core](/aspnet/core/).
 
 - **ASP.NET güncelleştirmeleri**
 
@@ -1247,18 +1247,18 @@ Yönetilmeyen profil oluşturma API'si şu şekilde geliştirilmiştir:
 
     - **HTTP/2 desteği (Windows 10)**
 
-         [HTTP/2](http://www.wikipedia.org/wiki/HTTP/2) sağlayan çok daha iyi bağlantı kullanımı (daha az arasındaki gidiş dönüş istemci ve sunucu), HTTP protokolü yeni bir sürümü, daha düşük gecikme süresi web sayfası için kullanıcılar yüklenirken výsledek.  Tek bir deneyiminin bir parçası istenen birden çok yapıtı için protokol iyileştirme yaptığından web sayfaları (aksine, Hizmetler) HTTP/2, en iyi yararlanabilir. ASP .NET Framework 4.6 HTTP/2 desteği eklendi. Birden çok katmanına ağ işlevlerini olduğundan, Windows, IIS ve ASP.NET HTTP/2 etkinleştirmek için yeni özellikler daha gerekiyordu. HTTP/2 ASP.NET ile kullanmak için Windows 10 çalıştırıyor olmalısınız.
+         [HTTP/2](https://www.wikipedia.org/wiki/HTTP/2) sağlayan çok daha iyi bağlantı kullanımı (daha az arasındaki gidiş dönüş istemci ve sunucu), HTTP protokolü yeni bir sürümü, daha düşük gecikme süresi web sayfası için kullanıcılar yüklenirken výsledek.  Tek bir deneyiminin bir parçası istenen birden çok yapıtı için protokol iyileştirme yaptığından web sayfaları (aksine, Hizmetler) HTTP/2, en iyi yararlanabilir. ASP .NET Framework 4.6 HTTP/2 desteği eklendi. Birden çok katmanına ağ işlevlerini olduğundan, Windows, IIS ve ASP.NET HTTP/2 etkinleştirmek için yeni özellikler daha gerekiyordu. HTTP/2 ASP.NET ile kullanmak için Windows 10 çalıştırıyor olmalısınız.
 
          HTTP/2 da desteklenir ve Windows 10 Evrensel Windows Platformu (UWP) kullanan uygulamalar varsayılan değer olarak <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> API.
 
-         Kullanmak için bir yol sağlamak için [PUSH_PROMISE](http://http2.github.io/http2-spec/#PUSH_PROMISE) özelliği, ASP.NET uygulamalarında iki aşırı yükleme ile yeni bir yöntem <xref:System.Web.HttpResponse.PushPromise%28System.String%29> ve <xref:System.Web.HttpResponse.PushPromise%28System.String%2CSystem.String%2CSystem.Collections.Specialized.NameValueCollection%29>, eklenen <xref:System.Web.HttpResponse> sınıfı.
+         Kullanmak için bir yol sağlamak için [PUSH_PROMISE](https://http2.github.io/http2-spec/#PUSH_PROMISE) özelliği, ASP.NET uygulamalarında iki aşırı yükleme ile yeni bir yöntem <xref:System.Web.HttpResponse.PushPromise%28System.String%29> ve <xref:System.Web.HttpResponse.PushPromise%28System.String%2CSystem.String%2CSystem.Collections.Specialized.NameValueCollection%29>, eklenen <xref:System.Web.HttpResponse> sınıfı.
 
         > [!NOTE]
         > ASP.NET Core, HTTP/2 desteklese de, anında İLETME PROMISE özelliği henüz henüz eklenmemiş desteği.
 
          İş tarayıcı ve web sunucusu (IIS Windows üzerinde) yapın. Ağır kaldırarak tüm kullanıcılarınız için yapmanız gerekmez.
 
-         Çoğu [bilinen tarayıcılar HTTP/2 desteği](http://www.wikipedia.org/wiki/HTTP/2), büyük olasılıkla sunucunuz destekliyorsa, kullanıcılarınızın, HTTP/2 desteğine yararlı olacaktır.
+         Çoğu [bilinen tarayıcılar HTTP/2 desteği](https://www.wikipedia.org/wiki/HTTP/2), büyük olasılıkla sunucunuz destekliyorsa, kullanıcılarınızın, HTTP/2 desteğine yararlı olacaktır.
 
     - **Belirteç bağlama protokolü için desteği**
 
@@ -1681,7 +1681,7 @@ Yönetilmeyen profil oluşturma API'si şu şekilde geliştirilmiştir:
 
  .NET Framework uygulamalarınızı Visual Studio 2013'te hata ayıklama sırasında geliştirmeler şunlardır:
 
-- Visual Studio hata ayıklayıcıda dönüş değerleri. Visual Studio 2013'te yönetilen bir uygulamada hata ayıklaması yaparken otomatik değişkenler penceresi dönüş türleri ve yöntemleri için değerleri görüntüler. Bu bilgiler Masaüstü, Windows Store ve Windows Phone uygulamaları için kullanılabilir. Daha fazla bilgi için [yöntem çağrılarının dönüş değerlerini İnceleme](https://msdn.microsoft.com/library/e3245b37-8e2e-4200-ba84-133726e95f1f\(v=vs.120\).aspx) MSDN Kitaplığı'nda.
+- Visual Studio hata ayıklayıcıda dönüş değerleri. Visual Studio 2013'te yönetilen bir uygulamada hata ayıklaması yaparken otomatik değişkenler penceresi dönüş türleri ve yöntemleri için değerleri görüntüler. Bu bilgiler Masaüstü, Windows Store ve Windows Phone uygulamaları için kullanılabilir. Daha fazla bilgi için [yöntem çağrılarının dönüş değerlerini İnceleme](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/dn32325728%v=vs.120%29).
 
 - Düzenle ve devam etmek için 64-bit uygulamalar. Visual Studio 2013, 64 bit yönetilen uygulamaları, masaüstü, Windows Store ve Windows Phone için Düzenle ve devam et özelliğini destekler. Varolan kısıtlamalar hem 32-bit hem de 64-bit uygulamalar için yürürlükte kalır. (son bölümüne bakın [desteklenen kod değişiklikleri (C#)](/visualstudio/debugger/supported-code-changes-csharp) makale).
 
@@ -1707,7 +1707,7 @@ Yönetilmeyen profil oluşturma API'si şu şekilde geliştirilmiştir:
 
 - Arka plan çöp toplama sunucuları için daha iyi performans. Sunucu çöp toplama kullandığınızda [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], arka plan çöp toplama otomatik olarak etkinleştirilir. Arka plan sunucusu çöp toplama bölümüne bakın [çöp toplamanın Temelleri](../../../docs/standard/garbage-collection/fundamentals.md) konu.
 
-- Uygulama performansını artırmak için çok çekirdekli işlemcilerde isteğe bağlı olarak kullanılabilir arka plan just-in-time (JIT) derleme. Bkz: <xref:System.Runtime.ProfileOptimization>.
+- Uygulama performansını artırmak için çok çekirdekli işlemcilerde isteğe bağlı olarak kullanılabilir arka plan just-in-time (JIT) derleme. Bkz. <xref:System.Runtime.ProfileOptimization>.
 
 - Normal ifade motorunun ne kadar sınırlama yeteneği, normal ifade zaman aşımına uğramadan önce çözümlemeyi dener. Bkz: <xref:System.Text.RegularExpressions.Regex.MatchTimeout%2A?displayProperty=nameWithType> özelliği.
 

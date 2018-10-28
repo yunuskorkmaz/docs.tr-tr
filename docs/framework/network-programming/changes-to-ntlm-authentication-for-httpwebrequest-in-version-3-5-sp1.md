@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 8bf0b428-5a21-4299-8d6e-bf8251fd978a
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: d67dec8814dc659e012b55439c2c8debd21e03ed
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 1af25660fc38e7182cc290d64f010c914c6e8c4e
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122681"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "49480206"
 ---
 # <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>İçin sürüm 3.5 SP1'de HttpWebRequest için NTLM kimlik doğrulamasındaki değişiklikler
 Güvenlik değişiklikleri, .NET Framework sürüm 3.5 SP1 yapıldı ve tümleşik Windows kimlik doğrulaması tarafından işlenir, etkileyen daha sonra <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Security.NegotiateStream>, ve System.Net ad alanındaki ilgili sınıflar. Bu değişiklikler, NTLM tabanlı Tümleşik Windows kimlik doğrulaması kullanıldığı web isteklerinde bulunmak ve yanıt almak için bu sınıfları kullanan uygulamaları etkileyebilir. Bu değişiklik, web sunucuları ve tümleşik Windows kimlik doğrulaması kullanmak üzere yapılandırılmış istemci uygulamaları etkileyebilir.  
@@ -24,7 +24,7 @@ Güvenlik değişiklikleri, .NET Framework sürüm 3.5 SP1 yapıldı ve tümleş
   
  Bir iç Web sunucusunda çalışan bir hizmetin erişirken, benzer bir URL kullanarak hizmete erişmek için ortak `http://contoso/service` veya `https://contoso/service`. "contoso" adı genellikle hizmet dağıtıldığı bilgisayarın bilgisayar adını değil. <xref:System.Net> Ve ilgili ad alanlarını destekleyen kullanarak Active Directory, DNS, NetBIOS, yerel bilgisayarın hosts dosyasını (genellikle WINDOWS\system32\drivers\etc\hosts, örneğin) veya (genellikle WINDOWS\system32\ yerel bilgisayarın lmhosts dosyası Örneğin drivers\etc\lmhosts) adları adreslerine çözümleyebilir. Adı "contoso", "contoso" için gönderilen istekleri uygun sunucu bilgisayara gönderilir, böylece çözümlenir.  
   
- Büyük dağıtımlar için yapılandırıldığında, ayrıca bir tek bir sanal sunucu adı dağıtıma hiç istemci uygulamaları ve son kullanıcılar tarafından kullanılan temel alınan makine adları ile verilmesi yaygındır. Örneğin, sunucu www.contoso.com çağrı ancak bir iç ağdaki yalnızca "contoso" kullanın. Bu ad istemci web isteğinde ana bilgisayar üstbilgisi adı verilir. Belirtildiği gibi HTTP protokolü tarafından ana bilgisayar adı istek üstbilgisi alanı istenen kaynak Internet konak ve bağlantı noktası sayısını belirtir. Bu bilgiler kullanıcı veya başvurulan kaynak (genellikle bir HTTP URL'si) tarafından verilen ve özgün bir URI elde edilir. .NET Framework sürüm 4, bu bilgileri ayrıca kullanarak yeni istemci tarafından ayarlanabilir <xref:System.Net.HttpWebRequest.Host%2A> özelliği.  
+ Büyük dağıtımlar için yapılandırıldığında, ayrıca bir tek bir sanal sunucu adı dağıtıma hiç istemci uygulamaları ve son kullanıcılar tarafından kullanılan temel alınan makine adları ile verilmesi yaygındır. Örneğin, sunucunun çağırabilirsiniz `www.contoso.com`, ancak bir iç ağdaki yalnızca kullanabilirsiniz "contoso". Bu ad istemci web isteğinde ana bilgisayar üstbilgisi adı verilir. Belirtildiği gibi HTTP protokolü tarafından ana bilgisayar adı istek üstbilgisi alanı istenen kaynak Internet konak ve bağlantı noktası sayısını belirtir. Bu bilgiler kullanıcı veya başvurulan kaynak (genellikle bir HTTP URL'si) tarafından verilen ve özgün bir URI elde edilir. .NET Framework sürüm 4, bu bilgileri ayrıca kullanarak yeni istemci tarafından ayarlanabilir <xref:System.Net.HttpWebRequest.Host%2A> özelliği.  
   
  <xref:System.Net.AuthenticationManager> Sınıfı tarafından kullanılan yönetilen kimlik doğrulama bileşenleri ("modülleri") denetler <xref:System.Net.WebRequest> türetilmiş sınıfları ve <xref:System.Net.WebClient> sınıfı. <xref:System.Net.AuthenticationManager> SAX kullanıma sunan bir özellik bir <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType> sağlamak üzere kimlik doğrulaması sırasında kullanılmak üzere özel bir SPN dizesi uygulamalar için URI dizesi tarafından dizine nesnesi.  
   
@@ -50,7 +50,7 @@ Güvenlik değişiklikleri, .NET Framework sürüm 3.5 SP1 yapıldı ve tümleş
   
  7. Kayıt Defteri Düzenleyicisi'nden çıkın ve ardından IISADMIN hizmetini yeniden başlatın ve Iısreset'i çalıştırın.  
   
- Daha az güvenli bir iş yaklaşık döngü geri denetimi devre dışı bırakmak için açıklandığı olan [ http://support.microsoft.com/kb/896861 ](https://go.microsoft.com/fwlink/?LinkID=179657). Bu yansıma saldırılara karşı koruma devre dışı bırakır. Bu nedenle yalnızca gerçekten kullandığınız makinenin beklediğiniz için alternatif adlar kümesini sınırlandırmak iyidir.  
+ Daha az güvenli bir iş yaklaşık döngü geri denetimi devre dışı bırakmak için açıklandığı olan <https://support.microsoft.com/kb/896861>. Bu yansıma saldırılara karşı koruma devre dışı bırakır. Bu nedenle yalnızca gerçekten kullandığınız makinenin beklediğiniz için alternatif adlar kümesini sınırlandırmak iyidir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType>  

@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: 38f638b76a38c470daf51cb7be8566feb4b6362f
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 7113a229726368a65f4372b14c28da1165c22eee
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121369"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50193922"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET mikro Hizmetleri: Kapsayıcılı .NET uygulamaları mimarisi
 
@@ -27,9 +27,9 @@ Başlama daha kolay hale getirmek için bir kapsayıcıya alınmış başvuru ve
 
 * Kopyalama/çatal başvurusu [hizmetine github'da](https://github.com/dotnet-architecture/eShopOnContainers)
  
-* İzleme [tanıtım videosunu Channel 9](http://aka.ms/microservices-video)
+* İzleme [tanıtım videosunu Channel 9](https://aka.ms/microservices-video)
 
-* Tanıyalım [mikro hizmet mimarisi](http://aka.ms/MicroservicesArchitecture) hemen
+* Tanıyalım [mikro hizmet mimarisi](https://aka.ms/MicroservicesArchitecture) hemen
 
 ## <a name="introduction"></a>Giriş
 

@@ -1,64 +1,72 @@
 ---
 title: F# Etkileşimli (fsi.exe) Başvurusu
-description: 'Nasıl F # Etkileşimli (fsi.exe) konsolda F # kodunu etkileşimli olarak çalıştırmak için veya F # betiklerini yürütmek için kullanılan öğrenin.'
+description: Bilgi nasıl F# etkileşimli (fsi.exe) çalıştırmak için kullanılan F# etkileşimli olarak konsolda veya yürütülecek kodu F# betikler.
 ms.date: 05/16/2016
-ms.openlocfilehash: b16ebcfe361ef50c7c7ba8510f01f6704e62ce3b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 459a2a4ba49ba0f55455797617781d010efecc0b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33564891"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195261"
 ---
-# <a name="interactive-programming-with-f"></a>İle F # Etkileşimli programlama #
+# <a name="interactive-programming-with-f"></a>Etkileşimli ile programlamaF# #
 
 > [!NOTE]
-Bu makalede Windows deneyimi yalnızca şu anda açıklanmıştır.  Yazılacak.
+Bu makalede, şu anda Windows deneyimi yalnızca açıklanmıştır.  Yazılacak.
 
 > [!NOTE]
-API başvuru bağlantısı sizi MSDN'ye götürür.  Docs.microsoft.com API Başvurusu tamamlanmadı.
+MSDN için API başvuru bağlantısı sizi yönlendirir.  Docs.microsoft.com API başvuru tamamlanmadı.
 
-F # Etkileşimli (fsi.exe) konsolda F # kodunu etkileşimli olarak çalıştırmak veya F # betiklerini yürütmek için kullanılır. Diğer bir deyişle, F # Etkileşimli REPL (oku, değerlendir, yazdırma döngü) F # dili için yürütür.
+F#Etkileşimli (fsi.exe) çalıştırmak için kullanılan F# etkileşimli konsolu veya yürütülecek kodu F# betikler. Diğer bir deyişle, F# için etkileşimli REPL (okuma, Evaluate, yazdırma döngüsü) yürütür F# dili.
 
-F # Etkileşimli Konsolu'ndan çalıştırmak için fsi.exe çalıştırın.  İçinde fsi.exe bulacaksınız "c:\Program dosyaları (x86) \Microsoft SDKs\F#\<sürüm > \Framework\<sürüm >\". Kullanılabilen komut satırı seçenekleri hakkında daha fazla bilgi için bkz: [F # Etkileşimli Seçenekleri](../../language-reference/fsharp-interactive-options.md).
+Çalıştırılacak F# etkileşimli konsolundan fsi.exe çalıştırın.  İçinde fsi.exe bulacaksınız:
 
-F # Etkileşimli aracılığıyla Visual Studio çalıştırmak için etiketli uygun araç çubuğu düğmesini tıklatabilirsiniz **F # Etkileşimli**, veya tuşlarını **Ctrl + Alt + F**. Bunun yapılması, etkileşimli bir pencere, F # Etkileşimli oturum çalıştıran bir araç penceresi açılır. Tuş bileşimine basın ve etkileşimli pencerede çalıştırmak istediğiniz bazı kodu da seçebilirsiniz **ALT + ENTER**. F # Etkileşimli başlar etiketli araç penceresinde **F # Etkileşimli**. Bu tuş bileşimini kullandığınızda Düzenleyicisi penceresini odağa sahip olduğundan emin olun.
+```console
+C:\Program Files (x86)\Microsoft Visual Studio\2017\<sku>\Common7\IDE\CommonExtensions\Microsoft\FSharp
+```
 
-Konsol veya Visual Studio kullanıp kullanmadığınızı bir komut istemi belirir ve yorumlayıcı girişinizi bekler. Bir kod dosyasında gibi kodu girebilirsiniz. Derleme ve kod yürütmek için iki noktalı girin (**;** ) bir veya birkaç satıra giriş sonlandırılacak.
+Burada `sku` ya da `Community`, `Professional`, veya `Enterprise`.
 
-Kodu derlemek F # etkileşimli çalışır ve başarılı olursa, kodu yürütür ve türleri ve derlenmiş değerleri imzasını yazdırır. Hatalar oluşursa, yorumlayıcı hata iletilerini yazdırır.
+Kullanılabilir komut satırı seçenekleri hakkında daha fazla bilgi için bkz: [ F# etkileşimli seçenekleri](../../language-reference/fsharp-interactive-options.md).
 
-Programları oluşturabilmeniz aynı oturumda girilen kod daha önce girdiğiniz yapıları erişebilir. Araç penceresi kapsamlı bir arabellek kodu gerekirse bir dosyaya kopyalayın izin verir.
+Çalıştırılacak F# etkileşimli Visual Studio aracılığıyla etiketli uygun bir araç çubuğu düğmesini tıklatabilirsiniz  **F# etkileşimli**, veya anahtarlarının **Ctrl + Alt + F**. Bunun yapılması etkileşimli pencere, çalışan bir araç penceresi açılır bir F# etkileşimli oturumu. Etkileşimli pencerede çalıştırın ve tuş bileşimine istediğiniz kod belirleyebilirsiniz **ALT + ENTER**. F#Etiketli bir araç penceresinde etkileşimli başlatır  **F# etkileşimli**. Bu tuş bileşimini kullanın, düzenleyici penceresinde odağı olduğundan emin olun.
 
-Visual Studio, projenizin bağımsız olarak F # etkileşimli çalışır çalıştırdığınızda, bu nedenle, örneğin, F # Etkileşimli'projenizdeki işlevi kodunu etkileşimli penceresine kopyalayın sürece tanımlanan yapıları kullanamazsınız.
+Konsolu veya Visual Studio kullanarak, bir komut istemi görünür ve yorumlayıcı girişinizi bekler. Bir kod dosyasında yaptığınız gibi kod girebilirsiniz. Derlemek ve kodu yürütmek için iki noktalı virgül girin (**;** ) bir veya birkaç satıra giriş sonlandırmak için.
 
-Bazı kitaplıklarına başvuruda bulunan bir Proje Aç varsa, bunlar F # Etkileşimli ' başvurabilir **Çözüm Gezgini**. F # Etkileşimli kitaplığa başvurmak için genişletme **başvuruları** düğümü, kitaplık için kısayol menüsünü açın ve seçin **F # Etkileşimli için Gönder**.
+F#Kodu derlemek etkileşimli çalışır ve başarılı olursa, kodu yürütür türleri imzası yazdırır ve derlenmiş BT'nin değerleri. Hatalar oluşursa yorumlayıcı hata iletilerini yazdırır.
 
-F # etkileşimli komut satırı bağımsız değişkenleri (Seçenekler) ayarlarını denetleyebilirsiniz. Üzerinde **Araçları** menüsünde, select **seçenekleri...** , genişletin ve ardından **F # Araçları**. F # Etkileşimli Seçenekleri değiştirebileceğiniz iki ayar olan ve **64-bit F # Etkileşimli** yalnızca F # Etkileşimli bir 64-bit makine üzerinde çalıştırıyorsanız, ilgili ayarı. Bu ayar, fsi.exe veya 32 bit veya 64-bit işlem olarak çalıştırılıp çalıştırılmayacağını belirlemek için makine mimarisi kullanır fsianycpu.exe ayrılmış 64-bit sürümünü çalıştıran isteyip istemediğinizi belirler.
+Programları oluşturmanıza yardımcı olacak aynı oturumda girilen kod daha önce girilen tüm yapıları erişimi vardır. Kapsamlı bir araç penceresi arabellekteki kod gerekirse bir dosyaya kopyalayın sağlar.
+
+Visual Studio'da çalıştırdığınızda F# etkileşimli çalıştırılan bağımsız olarak, proje, bu nedenle, örneğin, kullanamazsınız projenizde tanımlanan yapıları F# etkileşimli sürece etkileşimli pencereye işlev kodunu kopyalayın.
+
+Bazı kitaplıklar başvuran bir proje açıksa, bunları başvurabilirsiniz F# üzerinden etkileşimli **Çözüm Gezgini**. Bir kitaplıkta başvurmak için F# Interactive genişletin **başvuruları** düğümü, kitaplık için kısayol menüsünü açın ve seçin **göndermek F# etkileşimli**.
+
+Denetleyebileceğiniz F# ayarları ayarlayarak etkileşimli komut satırı bağımsız değişkenleri (Seçenekler). Üzerinde **Araçları** menüsünde **seçenekleri...** ve ardından  **F# Araçları**. Değiştirebileceğiniz iki ayar F# etkileşimli seçenekleri ve **64-bit F# etkileşimli** yalnızca çalıştırıyorsanız, ilgili ayarı F# etkileşimli bir 64-bit makinedeki. Bu ayar, fsi.exe veya 32 bit veya 64-bit işlem olarak çalıştırılacak şekilde belirlemek için makine mimarisi kullanan fsianycpu.exe adanmış 64-bit sürümünü çalıştırmak istediğiniz olup olmadığını belirler.
 
 
-## <a name="scripting-with-f"></a>F # ile komut dosyası #
-Komut dosyaları, dosya uzantısı kullanır **.fsx** veya **.fsscript**. Kaynak kodu derleme ve ardından daha sonra derlenmiş bütünleştirilmiş kodu çalıştırmak yerine, yalnızca çalıştırabilirsiniz **fsi.exe** ve F # kaynak kodu komut dosyasının dosya adını belirtin ve F # Etkileşimli kodu okur ve gerçek zamanlı olarak yürütür.
+## <a name="scripting-with-f"></a>İle betik oluşturmaF# #
+Betiklerini kullanan dosya uzantısı **.fsx** veya **.fsscript**. Kaynak kodu derleme ve daha sonra derlemede çalıştıran yerine yalnızca çalıştırabilirsiniz **fsi.exe** ve komut dosyasının dosya adı belirtin F# kaynak kodu, ve F# etkileşimli kod okur ve gerçek yürütür saat.
 
 
 ## <a name="differences-between-the-interactive-scripting-and-compiled-environments"></a>Etkileşimli, komut dosyası ve derlenmiş ortamlar arasındaki farklar
-Ne zaman, etkileşimli olarak çalıştırıp çalıştırmadığınızı kodu F # Etkileşimli'derleme veya sembolün bir betik çalıştırarak **etkileşimli** tanımlanır. Ne zaman derlediğiniz simgenin derleyici kodda **COMPILED** tanımlanır. Bu nedenle, kod derlenmiş ve etkileşimli modda farklı olması gerekiyorsa, kullanılacak belirlemek için koşullu derleme için önişlemci yönergeleri kullanabilirsiniz.
+Ne zaman derlediğiniz kod F# etkileşimli, etkileşimli olarak çalıştırılıyor veya sembolün bir betik çalıştırarak **etkileşimli** tanımlanır. Ne zaman derlediğiniz kod derleyici, sembol **COMPILED** tanımlanır. Bu nedenle, kod derlenmiş ve etkileşimli modda farklı olması gerekiyorsa, hangisini kullanacağınızı belirlemek için koşullu derleme için ön işlemci yönergeleri kullanabilirsiniz.
 
-F # derleyici yürütülürken bulunmayan etkileşimli komut yürütülürken bazı yönergeler kullanılabilir. Aşağıdaki tabloda, F # etkileşimli olarak kullanırken, kullanılabilir olan yönergeleri özetler.
+Komut yürütülürken bazı yönergeler kullanılabilir F# derleyici yürütülürken bulunmayan etkileşimli. Aşağıdaki tabloda özetlenmiştir kullanırken mevcut olan yönergeleri F# etkileşimli.
 
 |Yönergesi|Açıklama|
 |---------|-----------|
 |**#help**|Kullanılabilir yönergeleri hakkında bilgileri görüntüler.|
-|**#I**|Bir derleme arama yolu tırnak işaretleri içine belirtir.|
+|**#I**|Tırnak işaretleri içine bir bütünleştirilmiş kod arama yolunu belirtir.|
 |**#load**|Bir kaynak dosyasını okur, derlendiğinden ve çalıştırır.|
-|**#quit**|F # Etkileşimli oturum sona erer.|
+|**#quit**|Sonlandıran bir F# etkileşimli oturumu.|
 |**#r**|Bir derlemeye başvurur.|
-|**#time ["açık"&#124;"off"]**|Kendi kendine **#time** performans bilgileri görüntülenip görüntülenmeyeceğini değiştirir. Etkinleştirildiğinde, F # Etkileşimli gerçek zamanlı, CPU süresi ve atık toplama bilgi yorumlanır ve yürütülen kod her bölüm için ölçer.|
+|**#time ["on"&#124;"kapalı"]**|Kendi kendine **#time** performans bilgilerini görüntülenip görüntülenmeyeceğini değiştirir. Etkinleştirildiğinde, F# etkileşimli, gerçek zamanlı, CPU süresi ve çöp toplama bilgileri yorumlanan ve yürütülen kodun her bölüm için ölçer.|
 
-Dosyaları veya yolları F # Etkileşimli'de belirttiğiniz zaman, bir dize sabit değeri bekleniyordu. Bu nedenle, dosyaları ve yolları tırnak işaretleri içinde olmalıdır ve her zamanki kaçış karakterleri uygulayın. Ayrıca, kullanabileceğiniz @ karakteri F # yol verbatim bir dize olarak içeren bir dize yorumlamaya etkileşimli neden olacak. F # herhangi bir kaçış karakteri yoksaymak etkileşimli neden olur.
+Dosyaları veya yolları belirttiğinizde F# etkileşimli, bir dize sabit değeri bekleniyor. Bu nedenle, dosyaları ve yolları tırnak işaretleri içinde olmalıdır ve her zamanki kaçış karakterleri uygulayın. Ayrıca, kullanabileceğiniz @ karakteri neden F# etkileşimli bir yolu olarak verbatim dizesi içeren bir dize yorumlamak için. Bu neden F# etkileşimli herhangi bir kaçış karakteri yok sayılacak.
 
-Derlenmiş ve etkileşimli mod arasındaki farklar birini komut satırı bağımsız değişkenlerine erişim yoludur. Derlenmiş modunda kullanmak **System.Environment.GetCommandLineArgs**. Komut dosyalarında **fsi.CommandLineArgs**.
+Derlenmiş ve etkileşimli mod arasındaki farklardan biri, komut satırı bağımsız değişkenlerine erişim yoludur. Derlenmiş modunda kullanmak **System.Environment.GetCommandLineArgs**. Komut dosyalarında **fsi.CommandLineArgs**.
 
-Aşağıdaki kod bir betik içinde komut satırı bağımsız değişkenleri okuyan ve ayrıca bir komut dosyasından başka bir derleme başvurusu yapmayı gösteren bir işlevin nasıl oluşturulacağı gösterilmektedir. İlk kod dosyası **MyAssembly.fs**, başvurulan derleme kodudur. Bu dosya komut satırı ile derleyin: **fsc - a MyAssembly.fs** ve komut satırı komut dosyası olarak ikinci dosyayı yürütün: **fsi--exec file1.fsx** test
+Aşağıdaki kod, komut satırı bağımsız değişkenleri koddaki okur ve ayrıca bir komut dosyasından başka bir derlemeye başvuru yapmayı gösteren bir işlev oluşturma işlemini gösterir. İlk kod dosyasını **MyAssembly.fs**, başvurulan bütünleştirilmiş kodun kodudur. Bu dosya komut satırı ile Derle: **fsc - bir MyAssembly.fs** ve sonra komut satırı ile bir betik olarak ikinci dosyasını yürütün: **fsı--exec file1.fsx** test
 
 ```fsharp
 // MyAssembly.fs
@@ -91,5 +99,5 @@ test
 
 |Başlık|Açıklama|
 |-----|-----------|
-|[F# Interactive Seçenekleri](../../language-reference/fsharp-interactive-options.md)|Komut satırı sözdizimi ve F # Etkileşimli için seçenekleri açıklar fsi.exe.|
-|[F # Etkileşimli Kitaplık Başvurusu](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-interactive-library-reference)|Kullanılabilir kitaplık işlevlerini kod F # Etkileşimli yürütülürken açıklar.|
+|[F# Interactive Seçenekleri](../../language-reference/fsharp-interactive-options.md)|Komut satırı söz dizimini açıklar ve seçenekleri F# etkileşimli, fsi.exe.|
+|[F#Etkileşimli Kitaplık Başvurusu](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-interactive-library-reference)|Kitaplık işlevleri kullanılabilir kod yürütülürken açıklanmaktadır F# etkileşimli.|

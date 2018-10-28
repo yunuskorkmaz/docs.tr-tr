@@ -7,12 +7,12 @@ helpviewer_keywords:
 - white-space processing in XAML [XAML Services]
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
-ms.openlocfilehash: 89f8a4675b3edc23913549bc24f0d9ae16917519
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 3eea3d6c8a28ace0cc79cbfeb7eb3a7a52c9b8ab
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873446"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50047533"
 ---
 # <a name="white-space-processing-in-xaml"></a>Boşluk XAML içinde işleme
 XAML dil kuralları önemli boşlukların işlenen, tarafından durum bir [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] işlemci uygulamasında. Bu bölümde, XAML dili kurallar listelenmiştir. Ayrıca tarafından tanımlanan ek boşluk işleme belgeleri [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] XAML işlemci ve seri hale getirme için XAML yazıcı uygulamasıdır.  
@@ -59,7 +59,7 @@ XAML dil kuralları önemli boşlukların işlenen, tarafından durum bir [!INCL
   
 <a name="east_asian_characters"></a>   
 ## <a name="east-asian-characters"></a>Doğu Asya karakterlerinin görüntülenmesi  
- "Doğu Asya karakterler" bir dizi tanımlanan [!INCLUDE[TLA2#tla_unicode](../../../includes/tla2sharptla-unicode-md.md)] karakteri, U + U + 2FFFD 20000 ve U + U + 3FFFD 30000 aralıkları. Bu alt küme, bazen "CJK İdeogramlar" da denir. Daha fazla bilgi için bkz. [http://www.unicode.org](http://www.unicode.org/).  
+ "Doğu Asya karakterler" bir dizi tanımlanan [!INCLUDE[TLA2#tla_unicode](../../../includes/tla2sharptla-unicode-md.md)] karakteri, U + U + 2FFFD 20000 ve U + U + 3FFFD 30000 aralıkları. Bu alt küme, bazen "CJK İdeogramlar" da denir. Daha fazla bilgi için bkz. <https://www.unicode.org>.  
   
 <a name="whitespace_and_text_content_models"></a>   
 ## <a name="white-space-and-text-content-models"></a>Boşluk ve metnin içerik modelleri  

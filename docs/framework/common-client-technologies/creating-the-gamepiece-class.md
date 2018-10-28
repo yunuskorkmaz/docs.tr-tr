@@ -2,12 +2,12 @@
 title: GamePiece Sınıfı Oluşturma
 ms.date: 03/30/2017
 ms.assetid: 37a27a86-ac1c-47be-b477-cb4b819459d3
-ms.openlocfilehash: eb73918cc03e2621d39a98158d40a839dbc69d80
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f9f08437cda685d2ec1d2d0c8d54d370d9d38341
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857907"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195885"
 ---
 # <a name="creating-the-gamepiece-class"></a>GamePiece Sınıfı Oluşturma
 **GamePiece** sınıfı Microsoft XNA oyun parça resim yüklenemiyor, oyun parça ile ilgili olarak fare durumunu izleyin, fare yakalama, işleme ve eylemsizliğe işleme sağlamak için gerekli tüm işlevi kapsülleyen ve Oyun parça görünüm sınırlarına ulaştığında Sıçrama yeteneği sağlar.  
@@ -25,7 +25,7 @@ ms.locfileid: "43857907"
 ## <a name="class-constructor"></a>Sınıf oluşturucusu  
  Oluşturucusu **GamePiece** sınıfı aşağıdaki parametreleri kabul eder:  
   
--   A [SpriteBatch](https://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.aspx) türü. Burada geçirilen başvuru için özel üye atanır `spriteBatch`ve kullanılan erişimi [SpriteBatch.Draw](https://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.draw.aspx) oyun parça kendisini işler yöntemi. Ayrıca, [GraphicsDevice](https://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.graphicsdevice.aspx) özelliği oluşturmak için kullanılan [doku](https://msdn.microsoft.com/library/microsoft.xna.framework.graphics.texture.aspx) oyun parça ile ve oyun parça karşılaştığında saptamak amacıyla görünüm boyutunu almak için ilişkili nesne bir Pencere sınır böylece parça Sıçrama.  
+-   A [SpriteBatch](https://docs.microsoft.com/previous-versions/windows/xna/bb199034%28v%3dxnagamestudio.41%29) türü. Burada geçirilen başvuru için özel üye atanır `spriteBatch`ve kullanılan erişimi [SpriteBatch.Draw](https://docs.microsoft.com/previous-versions/windows/xna/bb196426%28v%3dxnagamestudio.41%29) oyun parça kendisini işler yöntemi. Ayrıca, [GraphicsDevice](https://docs.microsoft.com/previous-versions/windows/xna/bb197338%28v%3dxnagamestudio.41%29) özelliği oluşturmak için kullanılan [doku](https://docs.microsoft.com/previous-versions/windows/xna/bb199375%28v%3xnagamestudio.41%29) oyun parça ile ve oyun parça karşılaştığında saptamak amacıyla görünüm boyutunu almak için ilişkili nesne bir Pencere sınır böylece parça Sıçrama.  
   
 -   Oyun parçası için kullanılacak bir görüntü dosyası adını belirten dize.  
   
@@ -78,11 +78,11 @@ ms.locfileid: "43857907"
   
  [!code-csharp[ManipulationXNA#_GamePiece_OnInertiaCompleted](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_oninertiacompleted)]  
   
- Şu ana kadar sunulan mantıksal hiçbiri gerçekten gerçekleşmesi Eylemsizliği görevlendirebilir neden olur. Bu, gerçekleştirilir **ProcessInertia** yöntemi. Bu yöntem, oyun güncelleştirme döngüden art arda çağrılır ( [Game.Update](https://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx) yöntemi) denetler *processInertia* bayrağı ayarlandığında `true`ve bu durumda, çağıran <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Process%2A> yöntem. Bu oluşmasına neden görevlendirebilir yöntemi ve harekete geçirirse çağırma <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Delta> olay.  
+ Şu ana kadar sunulan mantıksal hiçbiri gerçekten gerçekleşmesi Eylemsizliği görevlendirebilir neden olur. Bu, gerçekleştirilir **ProcessInertia** yöntemi. Bu yöntem, oyun güncelleştirme döngüden art arda çağrılır ( [Game.Update](https://docs.microsoft.com/previous-versions/windows/xna/bb199616%28v%3dxnagamestudio.41%29) yöntemi) denetler *processInertia* bayrağı ayarlandığında `true`ve bu durumda, çağıran <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Process%2A> yöntem. Bu oluşmasına neden görevlendirebilir yöntemi ve harekete geçirirse çağırma <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Delta> olay.  
   
  [!code-csharp[ManipulationXNA#_GamePiece_ProcessInertia](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_processinertia)]  
   
- Draw yöntemi aşırı yüklemelerinden çağrılana kadar oyun parça gerçekten işlenmez. Bu yöntemin ilk aşırı yükleme oyun çizim döngüden art arda çağrılır ( [Game.Draw](https://msdn.microsoft.com/library/microsoft.xna.framework.game.draw.aspx) yöntemi). Bu, geçerli konumu, döndürme ve ölçeklendirme Etkenler oyun parçasını işler.  
+ Draw yöntemi aşırı yüklemelerinden çağrılana kadar oyun parça gerçekten işlenmez. Bu yöntemin ilk aşırı yükleme oyun çizim döngüden art arda çağrılır ( [Game.Draw](https://docs.microsoft.com/previous-versions/windows/xna/bb196422%28v%3dxnagamestudio.41%29) yöntemi). Bu, geçerli konumu, döndürme ve ölçeklendirme Etkenler oyun parçasını işler.  
   
  [!code-csharp[ManipulationXNA#_GamePiece_Draw](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_draw)]  
   

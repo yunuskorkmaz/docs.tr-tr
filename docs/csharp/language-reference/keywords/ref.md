@@ -1,27 +1,28 @@
 ---
 title: ref anahtar sözcüğü (C# Başvurusu)
-ms.date: 03/06/2018
+ms.date: 10/24/2018
 f1_keywords:
 - ref_CSharpKeyword
 - ref
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: e0b82de125246e95d8dce2a7afc20119a8a1fe4f
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 9165a388122eeda5ca0499c6d75c2266780a6004
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583119"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195976"
 ---
 # <a name="ref-c-reference"></a>ref (C# Başvurusu)
 
 `ref` Anahtar sözcüğü, başvuru tarafından geçirilmediğine bir değer belirtir. Bu dört farklı bağlamda kullanılır:
 
-- Bir yöntem imzası ve bağımsız değişken başvuru ile bir yönteme geçirmek için bir yöntem çağrısı. Bkz: [başvuruya göre bağımsız değişken geçirme](#passing-an-argument-by-reference) daha fazla bilgi için.
-- Başvuruya göre çağırana bir değer döndürmek için bir yöntem imzasında. Bkz: [başvuru dönüş değerleri](#reference-return-values) daha fazla bilgi için.
-- Bir üye gövdesinde çağıran değiştirme amaçlayan bir başvuru olarak yerel veya genel olarak, bir başvuru dönüş değeri depolanır belirtmek için bir yerel değişkeni başka bir değer başvuruya göre erişir. Bkz: [Ref yerel ayarlar](#ref-locals) daha fazla bilgi için.
-- İçinde bir `struct` bildirmek için bildirimi bir `ref struct` veya `ref readonly struct`. Daha fazla bilgi için [başvuru semantiği ile değer türleri](../../reference-semantics-with-value-types.md).
+- Bir yöntem imzası ve bağımsız değişken başvuru ile bir yönteme geçirmek için bir yöntem çağrısı. Daha fazla bilgi için [başvuruya göre bağımsız değişken geçirme](#passing-an-argument-by-reference).
+- Başvuruya göre çağırana bir değer döndürmek için bir yöntem imzasında. Daha fazla bilgi için [başvuru dönüş değerleri](#reference-return-values).
+- Bir üye gövdesinde çağıran değiştirme amaçlayan bir başvuru olarak yerel veya genel olarak, bir başvuru dönüş değeri depolanır belirtmek için bir yerel değişkeni başka bir değer başvuruya göre erişir. Daha fazla bilgi için [Ref yerel ayarlar](#ref-locals).
+- İçinde bir `struct` bildirmek için bildirimi bir `ref struct` veya `ref readonly struct`. Daha fazla bilgi için [ref struct türlerini](#ref-struct-types).
+
 
 ## <a name="passing-an-argument-by-reference"></a>Başvuruya göre bağımsız değişken geçirme
 
@@ -89,6 +90,8 @@ return ref DecimalArray[0];
 
 Nesnenin durumunu değiştirmek arayan için sırada başvuru dönüş değeri depolanan, olarak açıkça tanımlanmış bir değişkene bir [ref yerel](#ref-locals).
 
+Çağrılan yöntemin dönüş değeri olarak da bildirebilir `ref readonly` başvuruya göre dönüş değeri ve zorunlu çağıran kod döndürülen değeri değiştirilemez. Döndürülen değer yerel depolayarak değerli kopyalama yöntemi çağrılırken kaçınabilirsiniz [ref salt okunur](#ref-readonly-locals) değişkeni.
+
 Bir örnek için bkz [A ref dönüşler ve ref yerel örneği](#a-ref-returns-and-ref-locals-example)
 
 ## <a name="ref-locals"></a>Ref yerel ayarlar
@@ -111,6 +114,10 @@ ref VeryLargeStruct reflocal = ref veryLargeStruct;
 
 Her iki örneklerde unutmayın `ref` anahtar sözcüğü her iki yerde de kullanılması gerekir ya da derleyici hata CS8172, "bir başvuruya göre değişken bir değer ile başlatılamaz." oluşturur
 
+## <a name="ref-readonly-locals"></a>ref salt okunur yerel öğeler
+
+Yerel başvuru salt okunur olan özelliği ve yöntemi tarafından döndürülen değerler başvurmak için kullanılan `ref readonly` kullanır ve imza `return ref`. A `ref readonly` değişkeni özelliklerini birleştiren bir `ref` yerel bir değişken bir `readonly` değişkeni: bir diğer addır depolama alanına atanır ve değiştirilemez. 
+
 ## <a name="a-ref-returns-and-ref-locals-example"></a>Bir ref dönüşler ve ref yerel örneği
 
 Aşağıdaki örnekte tanımlayan bir `Book` iki sınıf <xref:System.String> alanları `Title` ve `Author`. Ayrıca tanımlar bir `BookCollection` özel bir dizi içeren sınıf `Book` nesneleri. Tek tek kitap nesneleri çağırarak başvuru ile döndürülür kendi `GetBookByTitle` yöntemi.
@@ -121,13 +128,30 @@ Aşağıdaki örnekte tanımlayan bir `Book` iki sınıf <xref:System.String> al
 
 [!code-csharp[csrefKeywordsMethodParams#6](~/samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#5)]
 
+## <a name="ref-struct-types"></a>Ref struct türleri
+
+Ekleme `ref` değiştiriciyi bir `struct` bildirimi tanımlar, türün örneklerinin yığını ayrılan olmalıdır. Diğer bir deyişle, bu tür örnekleri hiçbir zaman yığın üzerinde başka bir sınıf üyesi olarak oluşturulabilir. Bu özellik için birincil motivasyon olan <xref:System.Span%601> ve ilişkili yapıları.
+
+Amacı tutarken, bir `ref struct` yazın, tüm derleyici zorlayan çeşitli kurallar bir yığın ayırma değişken tanıtan `ref struct` türleri.
+
+- Kutusunda edilemez bir `ref struct`. Atama yapılamaz bir `ref struct` türünde bir değişkene `object`, `dynamic`, veya herhangi bir arabirim türü.
+- `ref struct` türleri, arabirimleri uygulayamaz.
+- Bildirip bir `ref struct` bir sınıf veya normal yapı üyesi olarak.
+- Yerel değişkenler bildiremezsiniz `ref struct` zaman uyumsuz yöntemlerde türleri. Döndüren zaman uyumlu yöntemleri bildirebilirsiniz <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601> veya `Task`-türleri ister.
+- Bildirip `ref struct` yineleyiciler yerel değişkenler.
+- Yakalama gerçekleştiremez `ref struct` değişkenleri lambda ifadeleri veya yerel işlevler.
+
+Bu kısıtlamalar yanlışlıkla kullanmayın emin olun. bir `ref struct` bir şekilde yönetilen yığınla Yükselt.
+
+Bir yapı olarak bildirmek için değiştiriciler birleştirebilirsiniz `readonly ref`. A `readonly ref struct` avantajları ve kısıtlamaları birleştirir `ref struct` ve `readonly struct` bildirimleri.
+
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Değer türleri ile başvuru semantiği](../../reference-semantics-with-value-types.md)  
+- [Güvenli verimli kod yazma](../../write-safe-efficient-code.md)  
 - [Parametreleri Geçirme](../../programming-guide/classes-and-structs/passing-parameters.md)  
 - [Yöntem Parametreleri](method-parameters.md)  
 - [C# başvurusu](../index.md)  

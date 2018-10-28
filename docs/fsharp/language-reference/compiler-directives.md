@@ -2,12 +2,12 @@
 title: Derleyici Yönergeleri (F#)
 description: 'F # dil önişlemci yönergeleri, koşullu derleme yönergeleri, satır yönergeleri ve derleyici yönergeleri hakkında bilgi edinin.'
 ms.date: 05/16/2016
-ms.openlocfilehash: eeb33cd3b1d6a228555724a307bf2e2407c6b4c3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 5ac375ac5acd0609a6556f9e0481d169df827c98
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042470"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181374"
 ---
 # <a name="compiler-directives"></a>Derleyici Yönergeleri
 
@@ -33,7 +33,7 @@ Uyarı devre dışı bırakma etkisini yönergesi önünde dosyasının bölüml
 
 ## <a name="conditional-compilation-directives"></a>Koşullu derleme yönergeleri
 
-Bu yönergeler biri tarafından devre dışı kod Visual StudioCode Düzenleyicisi'nde soluk görünür.
+Bu yönergeler biri tarafından devre dışı kod, Visual Studio Kod Düzenleyicisi'nde soluk görünür.
 
 >[!NOTE]
 Diğer dillerde olduğu gibi koşullu derleme yönergeleri davranışı aynı değildir. Örneğin, Boolean ifadeler sembolleri içeren kullanamazsınız ve `true` ve `false` özel bir anlamı yoktur. Kullandığınız sembolleri `if` yönergesi komut satırı veya proje ayarlarında tanımlanmalıdır; hiçbir `define` önişlemci yönergesi.

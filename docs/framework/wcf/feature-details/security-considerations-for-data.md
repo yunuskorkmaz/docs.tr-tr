@@ -5,13 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-author: BrucePerlerMS
-ms.openlocfilehash: bf3276353473f07f58740a5819226994123efdcd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6471a8a8e257ea3bb6f26a8041694ef25151ad1a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47201159"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195950"
 ---
 # <a name="security-considerations-for-data"></a>Veriler için Güvenlik Konuları
 Windows Communication Foundation (WCF) verilerle ilgilenirken, bir dizi tehdit kategorileri dikkate almanız gerekir. Veri işleme ile ilgili en önemli tehdit sınıfları aşağıdaki tabloda listelenmektedir. WCF bu tehditleri azaltmak için araçlar sağlar.  

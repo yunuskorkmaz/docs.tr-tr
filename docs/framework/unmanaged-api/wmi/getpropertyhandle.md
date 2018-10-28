@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 94171b0708c97eb7510e916e451ed03645d706f3
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 2383003012ce1f6adffe0ad78ab614323840496f
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837446"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50036690"
 ---
 # <a name="getpropertyhandle-function"></a>GetPropertyHandle işlevi
 Bir özelliği tanımlayan benzersiz bir tanıtıcı döndürür.
@@ -52,7 +52,7 @@ HRESULT GetPropertyHandle (
 [in] UTF16 kodlu characaters, özellik adı içeriyor, null ile sonlandırılmış dize.   
 
 `pType`  
-[out] Bir işaretçi bir [ `CIMTYPE` ](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx) özelliği CIM türünü temsil eden numaralandırma üyesi.
+[out] Bir işaretçi bir [ `CIMTYPE` ](/windows/desktop/api/wbemcli/ne-wbemcli-tag_cimtype_enumeration) özelliği CIM türünü temsil eden numaralandırma üyesi.
 
 `pHandle`   
 [out] Özellik işleyicisi içeren bir tamsayı işaretçisi.

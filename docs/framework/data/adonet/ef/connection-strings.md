@@ -1,32 +1,33 @@
 ---
-title: Bağlantı dizeleri
-ms.date: 03/30/2017
+title: Bağlantı dizeleri ADO.NET varlık çerçevesi
+ms.date: 10/15/2018
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
-ms.openlocfilehash: 17d91c9b97e370afe3704d2a58f5228e3fec95f1
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 99b6b1b7a38477dc17d3960ee5bc0b63ec0cb819
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842184"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194000"
 ---
-# <a name="connection-strings"></a>Bağlantı dizeleri
+# <a name="connection-strings-in-the-adonet-entity-framework"></a>Bağlantı dizeleri ADO.NET varlık çerçevesi
 Bir bağlantı dizesi, bir veri kaynağı için veri sağlayıcısı'ndan bir parametre olarak geçen başlatma bilgileri içerir. Veri sağlayıcısında söz dizimi bağlıdır ve bağlantı dizesini bağlantı denemesi sırasında ayrıştırılır. Entity Framework tarafından kullanılan bağlantı dizeleri, Entity Framework'ü destekleyen temel alınan ADO.NET veri sağlayıcısına bağlanmak için kullanılan bilgileri içerir. Ayrıca gerekli model ve eşleme dosyaları hakkındaki bilgileri içerirler.  
   
  Bağlantı dizesi model ve eşleme meta veri erişirken EntityClient sağlayıcı tarafından kullanılır ve veri kaynağına bağlanma. Bağlantı dizesi erişilen veya aracılığıyla ayarlanan <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> özelliği <xref:System.Data.EntityClient.EntityConnection>. <xref:System.Data.EntityClient.EntityConnectionStringBuilder> Sınıfı, program aracılığıyla oluşturmak veya bağlantı dizesindeki parametreleri erişmek için kullanılabilir. Daha fazla bilgi için [nasıl yapılır: bir EntityConnection bağlantı dizesi oluşturma](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md).  
   
  [Varlık veri modeli Araçları](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527) uygulamanın yapılandırma dosyasında depolanan bir bağlantı dizesi oluşturur. <xref:System.Data.Objects.ObjectContext> Bu bağlantı bilgisini nesne sorgularını oluşturulurken otomatik olarak alır. <xref:System.Data.EntityClient.EntityConnection> Tarafından kullanılan bir <xref:System.Data.Objects.ObjectContext> örneği erişilebilir <xref:System.Data.Objects.ObjectContext.Connection%2A> özelliği. Daha fazla bilgi için [bağlantılarını yönetme ve işlemleri](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99).  
-  
+
+## <a name="connection-string-syntax"></a>Bağlantı dizesi söz dizimi
+
+Bağlantı dizeleri için genel sözdizimi hakkında daha fazla bilgi edinmek için [bağlantı dizesi söz dizimi | ADO.NET bağlantı dizelerini](../connection-strings.md#connection-string-syntax).
+
 ## <a name="connection-string-parameters"></a>Bağlantı dizesi parametreleri  
- Bir bağlantı dizesi biçimi, anahtar/değer parametresi çiftleri noktalı virgülle ayrılmış bir listesi verilmiştir:  
-  
- `keyword1=value; keyword2=value;`  
-  
- Her anahtar ve değeri eşittir (=) bağlanır. Anahtar sözcük büyük/küçük harfe duyarlı değildir ve anahtar/değer çiftleri arasındaki boşluklar gözardı edilir. Ancak, değerler büyük/küçük harf veri kaynağına bağlı olarak hassas, olabilir. Noktalı, tek tırnak işareti ya da çift tırnak işareti içeren değerleri çift tırnak içine alınmalıdır. Geçerli adlar için anahtar sözcüğü değerleri aşağıdaki tabloda listelenmektedir <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A>.  
+
+Geçerli adlar için anahtar sözcüğü değerleri aşağıdaki tabloda listelenmektedir <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A>.  
   
 |Anahtar sözcüğü|Açıklama|  
 |-------------|-----------------|  
 |`Provider`|Gerekli if `Name` anahtar belirtilmedi. Almak için kullanılan sağlayıcı adı <xref:System.Data.Common.DbProviderFactory> alttaki sağlayıcı nesnesi. Bu değer sabittir.<br /><br /> Zaman `Name` anahtar sözcüğü boş olmayan bir değer için bir varlık bağlantı dizesine dahil değildir `Provider` anahtar sözcüğü gereklidir. Bu anahtar sözcüğü ile birbirini dışlayan `Name` anahtar sözcüğü.|  
-|`Provider Connection String`|İsteğe bağlı. Temel alınan veri kaynağına geçirilen sağlayıcıya özgü bağlantı dizesini belirtir. Bu bağlantı dizesi geçerli bir anahtar/değer çiftleri için veri sağlayıcısı kullanılarak ifade edilir. Geçersiz bir `Provider Connection String` veri kaynağı tarafından değerlendirilirken bir çalışma zamanı hatasına neden olur.<br /><br /> Bu anahtar sözcüğü ile birbirini dışlayan `Name` anahtar sözcüğü.<br /><br /> Değerini `Provider Connection String` tırnak işareti içine alınmalıdır. Bir örnek verilmiştir:<br /><br /> `Provider Connection String ="Server=serverName; User ID = userID";`<br /><br /> Aşağıdaki örnek iş gonna:<br /><br /> `Provider Connection String =Server=serverName; User ID = userID`|  
+|`Provider Connection String`|İsteğe bağlı. Temel alınan veri kaynağına geçirilen sağlayıcıya özgü bağlantı dizesini belirtir. Bu bağlantı dizesi için veri sağlayıcısı geçerli anahtar/değer çiftleri içerir. Geçersiz bir `Provider Connection String` veri kaynağı tarafından değerlendirilirken bir çalışma zamanı hatasına neden olur.<br /><br /> Bu anahtar sözcüğü ile birbirini dışlayan `Name` anahtar sözcüğü.<br /><br /> Değerine göre genel sözdizimi kaçış emin [ADO.NET bağlantı dizeleri](../../../../../docs/framework/data/adonet/connection-strings.md). Örneğin, aşağıdaki bağlantı dizesi göz önünde bulundurun: `Server=serverName; User ID = userID`. Noktalı virgül içerdiğinden kaçınılmalıdır. Çift tırnak işareti içermediğinden, kaçış için kullanılabilir:<br /><br /> `Provider Connection String ="Server=serverName; User ID = userID";`|  
 |`Metadata`|Gerekli if `Name` anahtar belirtilmedi. Dizinleri, dosyaları ve meta verileri ve eşleme bilgileri aramak kaynak konumlarını kanal ayrılmış listesi. Bir örnek verilmiştir:<br /><br /> `Metadata=`<br /><br /> `c:\model &#124; c:\model\sql\mapping.msl;`<br /><br /> Kanal ayırıcı her iki tarafında boşluk yoksayılır.<br /><br /> Bu anahtar sözcüğü ile birbirini dışlayan `Name` anahtar sözcüğü.|  
 |`Name`|Uygulama, isteğe bağlı olarak gerekli anahtar/değer bağlantı dizesi değerleri sağlayan bir uygulama yapılandırma dosyasında bağlantı adı belirtebilirsiniz. Bu durumda, bunları doğrudan bağlantı dizesinde sağlayamazsınız. `Name` Anahtar sözcüğü bir yapılandırma dosyasında izin verilmez.<br /><br /> Zaman `Name` sağlayıcı anahtar sözcüğü için boş olmayan değerler, bağlantı dizesinde anahtar sözcüğü dahil değildir.<br /><br /> Bu anahtar sözcük tüm diğer bağlantı dizesi anahtar sözcükler birbirini dışlayan.|  
   
@@ -96,7 +97,7 @@ Metadata=.\
   
 |Terim|Açıklama|  
 |----------|-----------------|  
-|`&#124;DataDirectory&#124;`|Bir eşleme ve meta veri dosyaları için göreli bir yola çözümler. Aracılığıyla ayarlanan değer budur `AppDomain.SetData("DataDirectory", objValue)` yöntemi. `DataDirectory` Kanal karakterlerinin değiştirme dizesi çevrelenmiş ve adını kanal karakterler arasındaki tüm boşluk olamaz. `DataDirectory` Adı büyük küçük harfe duyarlı değil.<br /><br /> Meta veri yollarının listesini bir üyesi olarak geçirilecek "DataDirectory" adlı fiziksel bir dizin varsa, ad veya her iki tarafının için boşluk ekleyin. Örneğin: `Metadata="DataDirectory1 &#124; DataDirectory &#124; DataDirectory2"`. Bir ASP.NET uygulaması çözümler &#124;DataDirectory&#124; için "\<uygulama kökü > / app_data" klasörü.|  
+|`&#124;DataDirectory&#124;`|Bir eşleme ve meta veri dosyaları için göreli bir yola çözümler. Aracılığıyla ayarlanan değer budur `AppDomain.SetData("DataDirectory", objValue)` yöntemi. `DataDirectory` Kanal karakterlerinin değiştirme dizesi çevrelenmiş ve adını kanal karakterler arasındaki tüm boşluk olamaz. `DataDirectory` Adı büyük küçük harfe duyarlı değil.<br /><br /> Meta veri yollarının listesini bir üyesi olarak geçirilecek "DataDirectory" adlı fiziksel bir dizin varsa, ad veya her iki tarafının için boşluk ekleyin. Örneğin: `Metadata="DataDirectory1 &#124; DataDirectory &#124; DataDirectory2"` Bir ASP.NET uygulaması çözümler &#124;DataDirectory&#124; için "\<uygulama kökü > / app_data" klasörü.|  
 |~|Web uygulaması kök dizinine çözümler. ~ Lider konumda karakter her zaman Web uygulaması kök işleci yorumlanır (~), geçerli bir yerel alt gösterebilir ancak. Böyle bir yerel alt dizinine başvurmak için kullanıcıyı açıkça geçmelidir `./~`.|  
   
  `DataDirectory` ve ~ işleci yalnızca bir yol başında belirtilmelidir, bunlar başka bir konumda çözümlenmiyor. Entity Framework çözmeye `~/data`, ancak bunu değerlendirir `/data/~` fiziksel yol.  
