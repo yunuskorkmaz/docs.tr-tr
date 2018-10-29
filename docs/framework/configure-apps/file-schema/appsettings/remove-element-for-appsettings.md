@@ -9,16 +9,16 @@ helpviewer_keywords:
 ms.assetid: 218c4464-e007-4539-803f-7c8b0a909fd8
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 21fedf064596979dbfb4190d9956da616295af3c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e9b79a8319b320289f43adac5a82ef22fa5e32b0
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752123"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199701"
 ---
 # <a name="remove-element-for-appsettings"></a>\<kaldırma > öğesi için \<appSettings >
 
-Özel uygulama ayarlarını kaldırır.
+Özel uygulama ayarları kaldırır.
 
 [**\<Yapılandırma >**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
 &nbsp;&nbsp;[**\<appSettings >**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md)   
@@ -38,11 +38,11 @@ ms.locfileid: "32752123"
 | ------- | ----------- |
 | **Anahtarı** | Gerekli öznitelik.<br><br>Kaldırılacak anahtar adını belirtir. |
 
-### <a name="parent-element"></a>Üst öğesi
+### <a name="parent-element"></a>Üst öğe
 
 |     | Açıklama |
 | --- | ----------- |
-| [**\<appSettings >**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | Dosya yolları, XML Web hizmeti URL'leri veya diğer özel yapılandırma bilgilerini bir uygulama gibi özel uygulama ayarlarını içerir. |
+| [**\<appSettings >**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | Dosya yolları, XML Web hizmeti URL'leri ya da bir uygulama için diğer özel yapılandırma bilgileri gibi özel uygulama ayarları içerir. |
 
 ## <a name="child-elements"></a>Alt öğeleri
 
@@ -50,7 +50,7 @@ Yok.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnekte bir özel yapılandırma ayarını kaldırın gösterilmektedir `ApplicationName`:
+Aşağıdaki örnek bir özel yapılandırma ayarını kaldırın gösterilmiştir `ApplicationName`:
 
 ```xml
 <appSettings>
@@ -60,4 +60,4 @@ Aşağıdaki örnekte bir özel yapılandırma ayarını kaldırın gösterilmek
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[.NET Framework için yapılandırma dosyası şeması](~/docs/framework/configure-apps/file-schema/index.md)
+- [.NET Framework yapılandırma dosyası şeması](~/docs/framework/configure-apps/file-schema/index.md)

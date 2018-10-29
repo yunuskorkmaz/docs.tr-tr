@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95ef445d41672c5c2895bd7115afb6a73a57e8f9
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 90af7d01d78cf74cbb304e3b987d5fe58e23f76e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086143"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50196706"
 ---
 # <a name="formatfromrawvalue-function"></a>FormatFromRawValue işlevi
 Biçim dönüştürme, zamana bağlı ise belirtilen biçimde bir ham performans veri değerine ya da iki ham performans veri değerleri dönüştürür.   
@@ -65,11 +65,11 @@ int FormatFromRawValue (
 `pTimeBase`  
 [in] Süresi Temeli, biçim dönüştürme için gerekirse bir işaretçi. Saat temel bilgileri, biçim dönüştürme için gerekli değildir, bu parametrenin değeri yok sayıldı.
 
-`pRawValue1` [in] Bir işaretçi bir [ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx) ham performans değerini temsil eden yapısı.
+`pRawValue1` [in] Bir işaretçi bir [ `PDH_RAW_COUNTER` ](/windows/desktop/api/pdh/ns-pdh-_pdh_raw_counter) ham performans değerini temsil eden yapısı.
 
-`pRawValue2` [in] Bir işaretçi bir [ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx) ikinci bir performans değeri temsil eden yapısı. İkinci bir ham performans değeri gerekli değilse bu parametre olmalıdır `null`.
+`pRawValue2` [in] Bir işaretçi bir [ `PDH_RAW_COUNTER` ](/windows/desktop/api/pdh/ns-pdh-_pdh_raw_counter) ikinci bir performans değeri temsil eden yapısı. İkinci bir ham performans değeri gerekli değilse bu parametre olmalıdır `null`.
 
-`pFmtValue` [out] Bir işaretçi bir [ `PDH_FMT_COUNTERVALUE` ](https://msdn.microsoft.com/library/windows/desktop/aa373050(v=vs.85).aspx) biçimlendirilmiş bir performans değeri alan yapısı.
+`pFmtValue` [out] Bir işaretçi bir [ `PDH_FMT_COUNTERVALUE` ](/windows/desktop/api/pdh/ns-pdh-_pdh_fmt_countervalue) biçimlendirilmiş bir performans değeri alan yapısı.
 
 ## <a name="return-value"></a>Dönüş değeri
 
@@ -83,7 +83,7 @@ Aşağıdaki değerlerden bu işlev tarafından döndürülen:
   
 ## <a name="remarks"></a>Açıklamalar
 
-Bu işlev bir çağrı sarılır [FormatFromRawValue](https://msdn.microsoft.com/library/ms231047(v=vs.85).aspx) işlevi.
+Bu işlev bir çağrı sarılır [FormatFromRawValue](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms231047%28v=vs.85%29) işlevi.
 
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

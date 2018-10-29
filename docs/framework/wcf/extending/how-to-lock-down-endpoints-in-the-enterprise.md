@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Enterprise Uç Noktalarını Kilitleme'
 ms.date: 03/30/2017
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-ms.openlocfilehash: 032b69c1fae38576b0374b329f1ab6fe90e2b1a0
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 23264159d30790cd54557509b0bc7c62edc1b5b7
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836933"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197437"
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Nasıl yapılır: Enterprise Uç Noktalarını Kilitleme
 Büyük kuruluşlar genellikle uygulamaları kuruluş güvenlik ilkelerine uygun olarak geliştirilen gerektirir. Aşağıdaki konuda geliştirme ve bilgisayarlarda yüklü tüm Windows Communication Foundation (WCF) istemci uygulamaları doğrulamak için kullanılan bir istemci uç noktası Doğrulayıcı yüklemek nasıl ele alınmaktadır.  
@@ -39,7 +39,7 @@ Büyük kuruluşlar genellikle uygulamaları kuruluş güvenlik ilkelerine uygun
   
 1.  Uygun mekanizmayı kullanarak uç nokta Doğrulayıcı yükleyin. Kuruluş, bu Grup İlkesi ve Systems Management Server (SMS) kullanıyor.  
   
-2.  Genel derleme önbellek kullanarak kesin adlandırılmış derlemeyi yüklemek [Gacutil.exe (Genel Derleme Önbelleği Aracı)](https://msdn.microsoft.com/library/ex0ss12c\(v=vs.110\).aspx).  
+2.  Genel derleme önbellek kullanarak kesin adlandırılmış derlemeyi yüklemek [Gacutil.exe (Genel Derleme Önbelleği Aracı)](../../../../docs/framework/tools/gacutil-exe-gac-tool.md).  
   
 3.  Kullanım <xref:System.Configuration?displayProperty=nameWithType> ad alanı türleri için:  
   

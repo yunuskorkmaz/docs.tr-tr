@@ -2,19 +2,19 @@
 title: TransactedBatchingBehavior
 ms.date: 03/30/2017
 ms.assetid: 2d03e6ae-f06c-4ada-b279-e01838b2ecdc
-ms.openlocfilehash: 49e2cc9f56b08088dafd2e13e0f623a9550bb924
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d64671ea8bdbfe6ede4cfe43ca517b32ea84f839
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33486666"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50196976"
 ---
 # <a name="transactedbatchingbehavior"></a>TransactedBatchingBehavior
 TransactedBatchingBehavior  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```csharp
 class TransactedBatchingBehavior : Behavior  
 {  
   sint32 MaxBatchSize;  
@@ -22,23 +22,23 @@ class TransactedBatchingBehavior : Behavior
 ```  
   
 ## <a name="methods"></a>Yöntemler  
- TransactedBatchingBehavior sınıfı herhangi bir yöntem tanımlamıyor.  
+ TransactedBatchingBehavior sınıf herhangi bir yöntemi tanımlamaz.  
   
 ## <a name="properties"></a>Özellikler  
- TransactedBatchingBehavior sınıfı aşağıdaki özelliklere sahiptir:  
+ TransactedBatchingBehavior sınıfı şu özelliğe sahip:  
   
 ### <a name="maxbatchsize"></a>maxBatchSize  
  Veri türü: SINT32  
   
- Erişim türüne: salt okunur  
+ Erişim türü: salt okunur  
   
- İşlenen toplu iş için maksimum toplu iş boyutu.  
+ İşlenen toplu iş için en yüksek toplu iş boyutu.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|MOF|Bildirilen Servicemodel.mof.|  
+|MOF|Bildirilmiş Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Ad Alanı|İçinde tanımlanan root\ServiceModel|  
+|Ad Alanı|İçinde tanımlı root\ServiceModel|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Description.TransactedBatchingBehavior>

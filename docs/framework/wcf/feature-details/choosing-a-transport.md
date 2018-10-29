@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - choosing transports [WCF]
 ms.assetid: b169462b-f7b6-4cf4-9fca-d306909ee8bf
-ms.openlocfilehash: c98fd4bb76074c2d96b702a37bf1964600d365e3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: e42e6f17a395edd8c765950832f2829a1aea1fe5
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864634"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199675"
 ---
 # <a name="choosing-a-transport"></a>Taşıma Seçme
 Windows Communication Foundation (WCF) içerdiği üç ana taşımalar arasından seçim ölçütleri bu konuda ele alınmıştır: HTTP, TCP ve adlandırılmış kanallar. WCF de içeren bir message queuing (MSMQ olarak da bilinir) taşıma, ancak message queuing bu belgede ele alınmamaktadır.  
@@ -63,9 +63,10 @@ Windows Communication Foundation (WCF) içerdiği üç ana taşımalar arasında
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.BasicHttpBinding>  
- <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`>  
-  <<!--zz <xref:System.ServiceModel.WsDualHttpBinding> --> `System.ServiceModel.WsDualHttpBinding`
- <<!--zz <xref:System.ServiceModel.WsFederationHttpBinding>  --> `System.ServiceModel.WsFederationHttpBinding` <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
+ <xref:System.ServiceModel.WSHttpBinding>  
+ <xref:System.ServiceModel.WSDualHttpBinding>  
+ <xref:System.ServiceModel.WSFederationHttpBinding>  
+ <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
  <xref:System.ServiceModel.NetTcpBinding>  
  <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
  <xref:System.ServiceModel.NetNamedPipeBinding>  

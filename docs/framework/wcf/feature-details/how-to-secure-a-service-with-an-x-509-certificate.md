@@ -5,13 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2d06c2aa-d0d7-4e5e-ad7e-77416aa1c10b
-author: BrucePerlerMS
-ms.openlocfilehash: 1c5ab5e76ebed549df09b365a5a271f81003a517
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 1db4ebff194a63552f54d1a3011099d28cbbf659
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47402571"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50196901"
 ---
 # <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Nasıl Yapılır: X.509 Sertifikası ile Bir Hizmeti Güvenli Hale Getirme
 X.509 sertifikası ile bir hizmeti güvenli hale getirme çoğu bağlamaları Windows Communication Foundation (WCF) kullanan temel bir tekniktir. Bu konuda bir X.509 sertifikası ile şirket içinde barındırılan bir hizmet yapılandırma adımlarını açıklar.  

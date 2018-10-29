@@ -4,14 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 13aeab52cfd43aa8dfd7fda69e2eb9be798473e1
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 2723104de8a583dc09f2fcfdd91a4119c5dec6d9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932173"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200972"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Kategoriye göre listelenmiş Visual Basic derleyici seçenekleri
 Visual Basic komut satırı derleyicisi, Visual Studio tümleşik geliştirme ortamında (IDE) programları derleme alternatif olarak sağlanır. İşlevsel kategoriye göre sıralanmış Visual Basic komut satırı derleyicisini seçeneklerin bir listesi verilmiştir.  

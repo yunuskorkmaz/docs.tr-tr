@@ -7,12 +7,12 @@ dev_langs:
 ms.assetid: d0e4c005-abd1-42bb-92a4-5faf87097311
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: b425aa4194e688a3814570cc47b8aa3b7ea97ee8
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 09dbbcd4ef3bd36a4aa2578a0dc22449ab1d3dfc
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839728"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201404"
 ---
 # <a name="obtain-mixed-text-attribute-details-using-ui-automation"></a>UI Otomasyonu Kullanarak Karışık Metin Özniteliği Ayrıntılarını Alma
 > [!NOTE]
@@ -23,8 +23,8 @@ ms.locfileid: "48839728"
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod örneğinde nasıl alınacağı gösterilmektedir <xref:System.Windows.Automation.TextPattern.FontNameAttribute> metin aralığından burada <xref:System.Windows.Automation.Text.TextPatternRange.GetAttributeValue%2A> döndürür bir <xref:System.Windows.Automation.TextPattern.MixedAttributeValue> nesne.  
   
- [!code-csharp[FindText#RetrieveMixedAttributes](../../../samples/snippets/csharp/VS_Snippets_Wpf/FindText/CSharp/SearchWindow.cs#retrievemixedattributes)]
- [!code-vb[FindText#RetrieveMixedAttributes](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FindText/VisualBasic/SearchWindow.vb#retrievemixedattributes)]  
+[!code-csharp[FindText#RetrieveMixedAttributes](../../../samples/snippets/csharp/VS_Snippets_Wpf/FindText/CSharp/SearchWindow.cs#retrievemixedattributes)]
+[!code-vb[FindText#RetrieveMixedAttributes](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FindText/VisualBasic/SearchWindow.vb#retrievemixedattributes)]  
   
  <xref:System.Windows.Automation.TextPattern> Dağıtımınızla birlikte denetim düzeni <xref:System.Windows.Automation.Text.TextPatternRange> sınıfı, temel metin özniteliklerini destekler, özellikleri ve yöntemleri. Tarafından desteklenmeyen özel denetim işlevselliği için <xref:System.Windows.Automation.TextPattern> veya <xref:System.Windows.Automation.Text.TextPatternRange>, <xref:System.Windows.Automation.AutomationElement> sınıfı karşılık gelen yerel nesne modeli erişmek UI Otomasyonu istemci için yöntemler sağlar.  
   
