@@ -12,11 +12,11 @@ ms.assetid: f0219919-1f02-4588-8704-327a62fd91f1
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5a104b6c755eb0b97f11e577fb3eeb182e465fe4
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50135394"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200829"
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework İstemci Profili
 Bir alt kümesi ile birlikte sağlanan .NET Framework'ün .NET istemci profilidir [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] ve önceki sürümleriyle ve istemci uygulamaları için hale getirilmiş. .NET Framework, Windows, Windows Phone ve Microsoft Azure için bir geliştirme platformudur ve yönetilen uygulama yürütme ortamı ve .NET Framework sınıf kitaplığı sağlar. [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] Ve önceki sürümlerde iki dağıtım seçeneği sağlanıyordu: tam .NET Framework ve istemci profili. İstemci Profili daha hızlı dağıtım ve daha küçük uygulama yükleme paketlerini tam .NET Framework'ten etkinleştirdi.  

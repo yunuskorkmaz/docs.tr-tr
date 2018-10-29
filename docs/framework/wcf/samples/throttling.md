@@ -5,12 +5,12 @@ helpviewer_keywords:
 - service behaviors, throttling sample
 - Throttling Sample [Windows Communication Foundation]
 ms.assetid: 40bb3582-8ae9-4410-96f0-6c515bfaf47c
-ms.openlocfilehash: f214e3a5230d6cf16b3bde5d89078160ed95f96f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1337b5d1c4c18700f0722bbb6912e934b2170b01
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519172"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50202061"
 ---
 # <a name="throttling"></a>Sınırlama
 Azaltma örnek azaltma denetimleri kullanımını gösterir. Azaltma denetimleri sınırlarını eşzamanlı çağrıları, örnekleri veya oturumları kaynakların aşırı kullanımını önlemek için sayısına yerleştirin. Azaltma davranışı, hizmet yapılandırma dosyası ayarlarında belirtilir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hesaplayıcı hizmet uygulayan.  
@@ -40,7 +40,7 @@ Azaltma örnek azaltma denetimleri kullanımını gösterir. Azaltma denetimleri
   
  Uyku zaman hizmet yöntemleri gibi tanımlarız azaltma göstermek için:  
   
-```  
+```csharp
 public double Add(double n1, double n2)  
 {  
     System.Threading.Thread.Sleep(2000);  
@@ -50,7 +50,7 @@ public double Add(double n1, double n2)
   
  Örneği çalıştırdığınızda, işlem isteklerini ve yanıtlarını istemci konsol penceresinde görüntülenir. Ekleme ve çıkarma yöntemleri eşzamanlı olarak yürütülen ve aynı anda 2'den fazla yöntemleri aynı anda çalıştırılabilecek kanıtlama Multiply ve bölme yöntemleri yürütülen böylece azaltma gösterimi.  
   
-```  
+```console  
 Press <ENTER> to terminate client.  
 Add(100,15.99)  
 Subtract(145,76.54)  

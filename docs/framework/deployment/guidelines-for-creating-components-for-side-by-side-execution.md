@@ -8,11 +8,11 @@ ms.assetid: 5c540161-6e40-42e9-be92-6175aee2c46a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2cedcb20ba12e7c362c60d33dfedfa1882eaa7e7
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50047455"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50198503"
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>Yan Yana Yürütme için Bileşen Oluşturma Yönergeleri
 Yan yana yürütme için tasarlanmış bileşen ya da yönetilen uygulamalar oluşturmak için aşağıdaki genel yönergeleri izleyin:  

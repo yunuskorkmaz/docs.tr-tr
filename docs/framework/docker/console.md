@@ -4,12 +4,12 @@ description: Mevcut bir .NET Framework konsol uygulamasını alıp Windows Docke
 author: spboyer
 ms.date: 09/28/2016
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: f5a38ac63db969a58e920ea79bf4bf10bcfcf64f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
-ms.translationtype: MT
+ms.openlocfilehash: bf21357efc234ea99836b190ce34c70f2644ea6a
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193336"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374761"
 ---
 # <a name="running-console-applications-in-windows-containers"></a>Windows kapsayıcıları içinde çalışan konsol uygulamaları
 
@@ -46,7 +46,7 @@ Konsol uygulamanızı taşımak birkaç adım bir konudur.
 Windows kapsayıcıları desteklenmektedir [Windows 10 Yıldönümü güncelleştirmesi](https://www.microsoft.com/en-us/software-download/windows10/) veya [Windows Server 2016](https://www.microsoft.com/en-us/cloud-platform/windows-server).
 
 > [!NOTE]
->Windows Server 2016'yı kullanıyorsanız, Docker için Windows Yükleyici özelliği etkin değildir bu yana kapsayıcılar el ile etkinleştirmeniz gerekir. Tüm güncelleştirmeler için işletim sistemi çalıştıran ve ardından yönergeleri izleyin emin [kapsayıcı konak dağıtımı](https://msdn.microsoft.com/virtualization/windowscontainers/deployment/deployment) kapsayıcıları ve Docker özellikleri yüklemek için makale.
+>Windows Server 2016'yı kullanıyorsanız, Docker için Windows Yükleyici özelliği etkin değildir bu yana kapsayıcılar el ile etkinleştirmeniz gerekir. Tüm güncelleştirmeler için işletim sistemi çalıştıran ve ardından yönergeleri izleyin emin [kapsayıcı konak dağıtımı](/virtualization/windowscontainers/deploy-containers/deploy-containers-on-server) kapsayıcıları ve Docker özellikleri yüklemek için makale.
 
 Docker için Windows, sürüm 1.12 desteklemek için Beta 26 veya üzeri Windows kapsayıcıları olması gerekir. Varsayılan olarak, Docker, Linux tabanlı kapsayıcılar sağlar; Windows kapsayıcıları için Docker sistem tepsisindeki simgeye sağ tıklayarak geçin ve seçin **Windows kapsayıcılarına geç**. Docker değiştirme işlemi çalışır ve bir yeniden başlatma gerekebilir.
 

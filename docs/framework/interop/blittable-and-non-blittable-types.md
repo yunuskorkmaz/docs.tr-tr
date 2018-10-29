@@ -8,11 +8,11 @@ ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8b4c1d213c2ed87126fc5eb9995050e14f9214bd
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50088669"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199844"
 ---
 # <a name="blittable-and-non-blittable-types"></a>Blok Halinde Kopyalanabilir ve Kopyalanamaz Türler
 Çoğu veri türleri, hem yönetilen hem de yönetilmeyen bellekte bir ortak gösterilmesi ve birlikte çalışma sıralayıcısı ile özel işlem gerektirmez. Bu tür adında *türlerse* arasında geçirildiğinde, dönüştürme gerektirmediği için yönetilen ve yönetilmeyen kod.  

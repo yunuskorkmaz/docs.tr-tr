@@ -7,13 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - best practices [WCF], security
 ms.assetid: 3639de41-1fa7-4875-a1d7-f393e4c8bd69
-author: BrucePerlerMS
-ms.openlocfilehash: a45ec6b5cdd241cb92069e8097bc94baa65b2166
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 25cc1a1e4c6e7e7d3f695c06eade8be546ee6c05
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193734"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50205262"
 ---
 # <a name="best-practices-for-security-in-wcf"></a>WCF'de Güvenlik için En İyi Uygulamalar
 Aşağıdaki bölümlerde Windows Communication Foundation (WCF) kullanan güvenli uygulamalar oluştururken dikkate alınması gereken en iyi yöntemler listelenmiştir. Güvenlik hakkında daha fazla bilgi için bkz: [güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [veriler için güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md), ve [meta veriler hakkında güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).  

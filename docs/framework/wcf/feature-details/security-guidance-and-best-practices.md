@@ -5,11 +5,11 @@ helpviewer_keywords:
 - secure applications [WCF]
 ms.assetid: 79e4e6f7-0c00-4045-b0f0-e6a7c37c7788
 ms.openlocfilehash: 3cf42ec2734801dfffcd0115f8bb42d0353c7014
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50044222"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50202256"
 ---
 # <a name="security-guidance-and-best-practices"></a>Güvenlik Kılavuzu ve En İyi Uygulamalar
 Bu bölümdeki konular için rehberlik ve güvenli bir Windows Communication Foundation (WCF) uygulamaları oluştururken dikkate alınması gereken öğeleri sunar. Windows Server AppFabric ve güvenlik bakın hakkında daha fazla bilgi için [güvenlik modeli için Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  

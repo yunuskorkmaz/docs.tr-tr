@@ -4,12 +4,12 @@ description: Bu konuda, bir yeniden kullanılabilir bir kitaplık ve birim testi
 author: guardrex
 ms.author: mairaw
 ms.date: 06/12/2017
-ms.openlocfilehash: 589b3e72f7e8425051a96f66f07f24327d273c45
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: fbbbbc20b45981a41695eac73dcc251ef74a0cb6
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122833"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50186024"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Mac için Visual Studio kullanarak macos'ta eksiksiz bir .NET Core çözümü derleme
 
@@ -20,7 +20,7 @@ Bu öğreticide, bir arama sözcüğünü ve bir kullanıcının metin dizesini 
 > [!NOTE]
 > Geri bildiriminiz çok değerli. Mac için Visual Studio geliştirme ekibine geri bildirim sağlayabilirsiniz iki yolu vardır:
 > * Mac için Visual Studio'da **yardımcı** > **sorun bildir** menüsünden veya **sorun bildir** Karşılama ekranında, dosyalama için bir pencere açan bir hata raporu. Geri bildiriminizi [Geliştirici Topluluğu](https://developercommunity.visualstudio.com/spaces/41/index.html) portalında izleyebilirsiniz.
-> * Bir öneride bulunmak için seçin **yardımcı** > **bir öneride** menüsünden veya **bir öneride** Karşılama ekranında, aldığı, için[ Visual Studio Mac UserVoice Web sayfası için](https://visualstudio.uservoice.com/forums/563332-visual-studio-for-mac).
+> * Bir öneride bulunmak için seçin **yardımcı** > **bir öneride** menüsünden veya **bir öneride** Karşılama ekranında, aldığı, için[ Visual Studio Mac Geliştirici topluluğu Web sayfası için](https://developercommunity.visualstudio.com/content/idea/post.html?space=41).
 
 ## <a name="prerequisites"></a>Önkoşullar
 
@@ -32,7 +32,7 @@ Bu öğreticide, bir arama sözcüğünü ve bir kullanıcının metin dizesini 
 
 ## <a name="building-a-library"></a>Bir kitaplığı oluşturma
 
-1. Hoş Geldiniz ekranında seçin **yeni proje**. İçinde **yeni proje** iletişim altında **çok platformlu** düğümünü **.NET Standard Kitaplığı** şablonu. Bu .NET Core hedefleyen bir .NET Standard kitaplığı 2.0 sürümünü destekleyen her bir .NET uygulaması oluşturur [.Net standart](https://docs.microsoft.com/en-us/dotnet/standard/net-standard). Seçin **sonraki**.
+1. Hoş Geldiniz ekranında seçin **yeni proje**. İçinde **yeni proje** iletişim altında **.NET Core** düğümünü **.NET Standard Kitaplığı** şablonu. Bu .NET Core hedefleyen bir .NET Standard kitaplığı 2.0 sürümünü destekleyen her bir .NET uygulaması oluşturur [.NET Standard](../../standard/net-standard.md). Seçin **sonraki**.
 
    ![Yeni Proje iletişim kutusu](./media/using-on-mac-vs-full-solution/vsmacfull01.png)
 

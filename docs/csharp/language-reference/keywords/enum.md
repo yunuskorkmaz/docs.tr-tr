@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: a64559ac1127f5ec296cf3892dd521c3ad8ac2be
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: de11a306937626a7dbbb184e509a9f89e63dbae5
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086156"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187812"
 ---
 # <a name="enum-c-reference"></a>enum (C# Başvurusu)
 
@@ -42,7 +42,7 @@ enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 
 Enum için onaylanan türler [bayt](byte.md), [sbyte](sbyte.md), [kısa](short.md), [ushort](ushort.md), [int](int.md), [uint](uint.md), [uzun](long.md), veya [ulong](ulong.md).
 
-Türünde bir değişken `Day` temel alınan türü; aralığında herhangi bir değer atanabilir değer için adlandırılmış sabitler sınırlı değildir.
+Bir değişken bir numaralandırma türünün temel türü aralığındaki herhangi bir değer atanabilir; değerleri için adlandırılmış sabitler sınırlı değildir.
 
 Varsayılan değer olan bir `enum E` ifade tarafından üretilen değer `(E)0`.
 

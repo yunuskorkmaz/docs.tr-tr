@@ -2,12 +2,12 @@
 title: GamePieceCollection Sınıfı Oluşturma
 ms.date: 03/30/2017
 ms.assetid: e4b037ee-1201-4a55-b198-0d6532ed6f35
-ms.openlocfilehash: 960512e75e918779a598f7978ebedf1f1bd0065c
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 0a39ca479e9b370b027fcec4bcf76996e6191296
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121382"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50190586"
 ---
 # <a name="creating-the-gamepiececollection-class"></a>GamePieceCollection Sınıfı Oluşturma
 **GamePieceCollection** sınıfı genel bir liste sınıftan türetilen ve çok daha kolay yönetmek için yöntemleri tanıtır **GamePiece** nesneleri.  
@@ -17,7 +17,7 @@ ms.locfileid: "49121382"
   
  [!code-csharp[ManipulationXNA#_GamePieceCollection_PrivateMembersAndConstructor](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiececollection.cs#_gamepiececollection_privatemembersandconstructor)]  
   
- **ProcessInertia** ve **çizmek** yöntemleri oyunda gerekli kodu basitleştirmek [Game.Update](/previous-versions/windows/xna/bb199616%28v%3dxnagamestudio.41%29) ve [Game.Draw](/previous-versions/windows/xna/bb196422%28v%3dxnagamestudio.41%29) yöntemlerle Oyun parçaları koleksiyondaki tüm numaralandırma ve ilgili yöntemini her çağırmak **GamePiece** nesne.  
+ **ProcessInertia** ve **çizmek** yöntemleri oyunda gerekli kodu basitleştirmek [Game.Update](https://docs.microsoft.com/previous-versions/windows/xna/bb199616%28v%3dxnagamestudio.41%29) ve [Game.Draw](https://docs.microsoft.com/previous-versions/windows/xna/bb196422%28v%3dxnagamestudio.41%29) yöntemlerle Oyun parçaları koleksiyondaki tüm numaralandırma ve ilgili yöntemini her çağırmak **GamePiece** nesne.  
   
  [!code-csharp[ManipulationXNA#_GamePieceCollection_ProcessInertiaAndDraw](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiececollection.cs#_gamepiececollection_processinertiaanddraw)]  
   

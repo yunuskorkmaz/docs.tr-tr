@@ -5,20 +5,20 @@ author: richlander
 ms.author: mairaw
 ms.date: 08/01/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: 692d49cc940925f629e55cf5cc103522bd3cbb38
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 448edabf624f04311695e8b8c224f653b9939966
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49348988"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199467"
 ---
 # <a name="net-core-guide"></a>.NET Core Kılavuzu
 
-[.NET core](about.md) olduğu bir [açık kaynaklı](https://github.com/dotnet/coreclr/blob/master/LICENSE.TXT) genel amaçlı bir geliştirme platformu üzerinde Microsoft ve .NET topluluk tarafından tutulan [GitHub](https://github.com/dotnet/core). Bu Windows, macOS ve Linux'ta destekleyen platformlar arası ve cihaz, Bulut ve IOT uygulamaları için kullanılabilir.
+[.NET core](about.md) olduğu bir [açık kaynaklı](https://github.com/dotnet/coreclr/blob/master/LICENSE.TXT), genel amaçlı bir geliştirme platformu üzerinde Microsoft ve .NET topluluk tarafından tutulan [GitHub](https://github.com/dotnet/core). Bu platformlar arası (Windows, macOS ve Linux destekliyor) ve cihaz, Bulut ve IOT uygulamaları oluşturmak için kullanılabilir.
 
 Bkz: [.NET Core hakkında](about.md) özellikleri, desteklenen diller ve çerçeveler ve API anahtarını dahil olmak üzere, .NET Core hakkında daha fazla bilgi edinmek için.
 
-Kullanıma [.NET Core öğreticilerini](tutorials/index.md) basit bir .NET Core uygulaması oluşturmayı öğrenin. Yalnızca ilk uygulamanızı çalıştırmaya başlayın birkaç dakika sürer. .NET Core tarayıcınızda denemek istiyorsanız, bakmak [C# dilinde sayılar](../csharp/quick-starts/numbers-in-csharp.yml) hızlı başlangıç.
+Kullanıma [.NET Core öğreticilerini](tutorials/index.md) basit bir .NET Core uygulaması oluşturmayı öğrenin. Yalnızca ilk uygulamanızı çalıştırmaya başlayın birkaç dakika sürer. .NET Core tarayıcınızda denemek istiyorsanız, bakmak [içindeki numaralandırır C# ](../csharp/tutorials/intro-to-csharp/numbers-in-csharp.yml) çevrimiçi öğretici.
 
 ## <a name="download-net-core-21"></a>.NET Core 2.1 indirme
 

@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: Visual Basic veya C# içinde nesne modeli oluşturma'
 ms.date: 03/30/2017
 ms.assetid: a0c73b33-5650-420c-b9dc-f49310c201ee
 ms.openlocfilehash: 21266ca2d1230a1afc903734d1b4c53b259e50e1
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50036794"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200933"
 ---
 # <a name="how-to-generate-the-object-model-in-visual-basic-or-c"></a>Nasıl yapılır: Visual Basic veya C# içinde nesne modeli oluşturma #
 İçinde [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], programlama diliniz bir nesne modelinde bir ilişkisel veritabanına eşlendi. İki aracı bir Visual Basic otomatik olarak oluşturmak için kullanılabilir veya C# var olan bir veritabanının meta verilerden model.  

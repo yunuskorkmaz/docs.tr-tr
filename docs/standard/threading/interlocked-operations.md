@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cbda7114-c752-4f3e-ada1-b1e8dd262f2b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 069a95656e7ceaf454c01c47d61ff391bcbed2fe
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 6f96286da84e41e79fb0b6253d6f20eea89da21a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46538891"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201364"
 ---
 # <a name="interlocked-operations"></a>Birbirine kenetlenmiş işlemler
 
@@ -37,7 +37,7 @@ ms.locfileid: "46538891"
   
  Modern işlemcilerde yöntemlerinin <xref:System.Threading.Interlocked> sınıfı tek bir yönerge genellikle uygulanabilir. Bu nedenle, bunlar çok yüksek performanslı eşitlemeyi sağlaması ve daha üst düzey eşitleme mekanizmaları oluşturmak için kullanılan dönüş kilitleri ister.  
   
- Kullanan bir örnek için <xref:System.Threading.Monitor> ve <xref:System.Threading.Interlocked> birleşimi, sınıflara bakın [izleyiciler](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db).  
+ Kullanan bir örnek için <xref:System.Threading.Monitor> ve <xref:System.Threading.Interlocked> birleşimi, sınıflara bakın <xref:System.Threading.Monitor>.  
   
 ## <a name="compareexchange-example"></a>CompareExchange örneği
 

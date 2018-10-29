@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4f896dcd78061284416468968ba5a9a5fbbda2f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: df6a35dcaebc681aa5463a014d3283c81efea617
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428546"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199870"
 ---
 # <a name="isymunmanagedbindergetreaderforfile-method"></a>ISymUnmanagedBinder::GetReaderForFile Metodu
-Bir meta veri arabirimi ve bir dosya adı doğru döndürür <<!--zz xref:ISymUnmanagedReader --> `ISymUnmanagedReader`> modülü ile ilişkili hata ayıklama simgeleri okuma yapacak yapısı.  
+Meta veri arayüzü ve bir dosya adı, doğru döndürür [Isymunmanagedreader](isymunmanagedreader-interface.md) modülle ilişkili hata ayıklama sembolleri okuyacaksa arabirimi.  
   
- Yalnızca bu yürütülebilir dosya yanındaki ise bu yöntem program veritabanı (PDB) dosyasını açın. Güvenlik nedeniyle bu değişiklik yapılmadı. PDB dosyası için daha kapsamlı bir arama gerekiyorsa kullanın [Isymunmanagedbinder2::getreaderforfile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) yöntemi.  
+ Bu yöntem, yalnızca yürütülebilir dosyanın yanındaki ise program veritabanı (PDB) dosyası açılır. Güvenlik nedeniyle bu değişiklik yapılmıştır. PDB dosyası için daha kapsamlı bir arama ihtiyacınız varsa, [Isymunmanagedbinder2::getreaderforfile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) yöntemi.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,9 +39,9 @@ HRESULT GetReaderForFile(
     [out, retval] ISymUnmanagedReader  **pRetVal);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `importer`  
- [in] Meta veri alma arayüzü için bir işaretçi.  
+ [in] Meta veri alma arayüzü işaretçisi.  
   
  `fileName`  
  [in] Dosya adı için bir işaretçi.  
@@ -50,10 +50,10 @@ HRESULT GetReaderForFile(
  [in] Arama yolu için bir işaretçi.  
   
  `pRetVal`  
- [out] Ayarlanmış bir işaretçi döndürülen için <<!--zz xref:ISymUnmanagedReader --> `ISymUnmanagedReader`> arabirimi.  
+ [out] Ayarlanmış bir işaretçi ve döndürülen [Isymunmanagedreader](isymunmanagedreader-interface.md) arabirimi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde E_FAIL veya başka bir hata kodu.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Başlık:** CorSym.idl, CorSym.h  

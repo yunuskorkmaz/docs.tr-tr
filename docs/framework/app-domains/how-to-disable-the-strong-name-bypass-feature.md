@@ -8,11 +8,11 @@ ms.assetid: 234e088c-3b11-495a-8817-e0962be79d82
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 628bc1f89e5e09b47c70e39e107987753697cdb4
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
-ms.translationtype: HT
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50048001"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50198334"
 ---
 # <a name="how-to-disable-the-strong-name-bypass-feature"></a>Nasıl yapılır: Tanımlayıcı Adlı Atlama Özelliğini Devre Dışı Bırakma
 İle .NET Framework sürüm 3.5 Service Pack 1 (SP1) başlayarak, tam güvene bir derleme yüklendiğinde tanımlayıcı ad imzaları doğrulanmaz <xref:System.AppDomain> gibi varsayılan nesne <xref:System.AppDomain> için `MyComputer` bölge. Bu atlama özelliğini tanımlayıcı ad adlandırılır. İçin tam güven ortamında, talepleri <xref:System.Security.Permissions.StrongNameIdentityPermission> imzalı için tam güven derlemeleri imzalarına bağımsız olarak her zaman başarılı. Tek kısıtlama, kendi bölgesine tam güvenilir olduğundan derleme tam güvenilir olması gerekliliğidir. Tanımlayıcı adı bir faktör Bu koşullar altında olmadığı için bunu doğrulanması için bir neden yoktur. Tanımlayıcı ad imzası doğrulama atlama önemli performans geliştirmeleri sunar.  

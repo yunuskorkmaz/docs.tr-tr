@@ -12,26 +12,26 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 08b63d67b6175d18bee1317cc8908d876fbb4039
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: b23c43ebdb8d4277344949a18b1bc999b27d60e9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836772"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188618"
 ---
 # <a name="switch-c-reference"></a>geçiş (C# Başvurusu)
 
 `switch` tek bir seçtiği bir seçim deyimi *geçiş bölümüne* bir desen eşleştirme ile temel adaylar listesinden yürütülecek *eşleşen ifade*.
 
-[!code-csharp[switch#1](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch1.cs#1)]
+[!code-csharp[switch#1](~/samples/snippets/csharp/language-reference/keywords/switch/switch1.cs#1)]
 
 `switch` Deyimi bir alternatifi olarak kullanılan genellikle bir [if-else](if-else.md) tek bir ifade, üç veya daha fazla koşul karşı test edildiyse oluşturun. Örneğin, aşağıdaki `switch` ifadesi bir değişken türü olup olmadığını belirler `Color` üç değerden birine sahiptir:
 
-[!code-csharp[switch#3](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch3.cs#1)]
+[!code-csharp[switch#3](~/samples/snippets/csharp/language-reference/keywords/switch/switch3.cs#1)]
 
 Kullanan aşağıdaki örneğe eşdeğerdir bir `if` - `else` oluşturun.
 
-[!code-csharp[switch#3a](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch3a.cs#1)]
+[!code-csharp[switch#3a](~/samples/snippets/csharp/language-reference/keywords/switch/switch3a.cs#1)]
 
 ## <a name="the-match-expression"></a>Eşleştirme ifadesi
 
@@ -98,7 +98,7 @@ Bu sorunu gidermek ve iki yoldan biriyle derleyici uyarısı ortadan kaldırır:
 
 - Anahtar bölümlerin sırası değiştirerek.
 
-- Kullanarak bir < /a adı = "zaman" > zaman yan tümcesi</a> içinde `case` etiketi.
+- Kullanarak bir [zaman yan tümcesi](#when) içinde `case` etiketi.
 
 ## <a name="the-default-case"></a>`default` Çalışması
 
@@ -171,11 +171,11 @@ case null:
 
 Aşağıdaki örnek, çeşitli koleksiyon türleri hakkında bilgi sağlamak için tür deseni kullanır.
 
-[!code-csharp[switch#5](../../../../samples/snippets/csharp/language-reference/keywords/switch/type-pattern.cs#1)]
+[!code-csharp[type-pattern#1](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern.cs#1)]
 
 Desen eşleştirme olmadan, bu kod şu şekilde yazılmış olabilir. Kullanım türü desen eşleştirme bir dönüştürmenin sonucu olup olmadığını sınamak için gereksinimini ortadan kaldırarak daha kompakt ve okunabilir bir kod oluşturur bir `null` veya yinelenen atamalar gerçekleştirmek için.
 
-[!code-csharp[switch#6](../../../../samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
+[!code-csharp[type-pattern2#1](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
 
 ## <a name="a-namewhen--the-case-statement-and-the-when-clause"></a><a name="when" /> `case` Deyimi ve `when` yan tümcesi
 
@@ -183,13 +183,13 @@ Ekleyebileceğiniz Case deyimleri birbirini dışlayan olması gerekmez çünkü
 
 Aşağıdaki örnek, bir taban tanımlar `Shape` sınıfı, bir `Rectangle` türetilen sınıf `Shape`ve `Square` türetilen sınıf `Rectangle`. Kullandığı `when` emin olmak için yan tümcesi `ShowShapeInfo` değerlendirir bir `Rectangle` eşit uzunlukta ve genişlikleri olarak atanmış olan bir nesne bir `Square` olarak oluşturulmadı olsa bile bir `Square` nesne. Yöntem bilgileri görüntülemek denemez herhangi bir nesne hakkında `null` veya bir şekil, alan sıfırdır.
 
-[!code-csharp[switch#8](../../../../samples/snippets/csharp/language-reference/keywords/switch/when-clause.cs#1)]
+[!code-csharp[when-clause#1](~/samples/snippets/csharp/language-reference/keywords/switch/when-clause.cs#1)]
 
 Unutmayın `when` yan tümcesinde test dener örnek olup olmadığını bir `Shape` nesnedir `null` yürütme değil. Test etmek için doğru türde deseni bir `null` olduğu `case null:`.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
-Daha fazla bilgi için [switch deyimi](/dotnet/csharp/language-reference/language-specification/statements#the-switch-statement) içinde [C# dil belirtimi](../language-specification/index.md). Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.
+Daha fazla bilgi için [switch deyimi](~/_csharplang/spec/statements.md#the-switch-statement) içinde [C# dil belirtimi](../language-specification/index.md). Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

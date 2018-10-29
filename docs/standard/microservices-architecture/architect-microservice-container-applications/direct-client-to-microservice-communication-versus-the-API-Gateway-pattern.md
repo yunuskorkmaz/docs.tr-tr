@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/07/2018
-ms.openlocfilehash: 1aaddc96ee509815da9fc4e6519e1fb454f74b13
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 00763a806c18b45b366068f865f4ecb4c5cd743b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198689"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183613"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>API ağ geçidi deseni ile doğrudan istemci-mikro hizmet iletişimi
 
@@ -84,13 +84,13 @@ API ağ geçidi desenini uygulama oluştururken dikkatli olmanız gerekir. Genel
 
 Bu nedenle, API ağ geçitleri iş sınırları ve istemci uygulamaları ve değil Yasası göre tek bir Toplayıcı iç tüm mikro hizmetlere yönelik olarak ayrılmış.
 
-Böylece her bir istemci uygulama ihtiyaçlarını için farklı bir cephe olabilir API ağ geçidi katmanı birden çok API ağ geçitleri bölünürken, uygulamanızın birden çok istemci uygulamalar varsa, birincil bir Özet birden çok API ağ geçitleri türleri tanımlamak için kullanıldığında olabilir. Bu durumda "Arka uç için ön uç" adlı bir desendir ([BFF](http://samnewman.io/patterns/architectural/bff/)) her bir API ağ geçidi sağlayabilir burada büyük olasılıkla bile istemci form faktörünün belirli bağdaştırıcı uygulayarak göre her istemci uygulaması türü için uyarlanmış farklı bir API kod, underneath birden çok iç mikro hizmetler, aşağıdaki görüntüde gösterildiği gibi çağırır:
+Böylece her bir istemci uygulama ihtiyaçlarını için farklı bir cephe olabilir API ağ geçidi katmanı birden çok API ağ geçitleri bölünürken, uygulamanızın birden çok istemci uygulamalar varsa, birincil bir Özet birden çok API ağ geçitleri türleri tanımlamak için kullanıldığında olabilir. Bu durumda "Arka uç için ön uç" adlı bir desendir ([BFF](https://samnewman.io/patterns/architectural/bff/)) her bir API ağ geçidi sağlayabilir burada büyük olasılıkla bile istemci form faktörünün belirli bağdaştırıcı uygulayarak göre her istemci uygulaması türü için uyarlanmış farklı bir API kod, underneath birden çok iç mikro hizmetler, aşağıdaki görüntüde gösterildiği gibi çağırır:
 
 ![Birden çok özel API ağ geçitleri gösteren diyagram](./media/image13.1.png)
 
 **Şekil 4-13.1**. Birden çok özel API ağ geçidi kullanma
 
-Önceki görüntüde birden çok ayrıntılı API ağ geçitleri ile basitleştirilmiş bir mimari gösterilmektedir. Bu durumda, her API ağ geçidi için tanımlanan sınırları tamamen "arka uç için ön uç üzerinde" dayalı ([BFF](http://samnewman.io/patterns/architectural/bff/)) deseni, bu nedenle yalnızca istemci uygulaması gerekli API göre. Ancak daha büyük uygulamalarında ayrıca daha da İleri gidin ve ek API ikinci bir tasarım Özet iş sınırlarına göre ağ geçitleri oluşturma.
+Önceki görüntüde birden çok ayrıntılı API ağ geçitleri ile basitleştirilmiş bir mimari gösterilmektedir. Bu durumda, her API ağ geçidi için tanımlanan sınırları tamamen "arka uç için ön uç üzerinde" dayalı ([BFF](https://samnewman.io/patterns/architectural/bff/)) deseni, bu nedenle yalnızca istemci uygulaması gerekli API göre. Ancak daha büyük uygulamalarında ayrıca daha da İleri gidin ve ek API ikinci bir tasarım Özet iş sınırlarına göre ağ geçitleri oluşturma.
 
 ## <a name="main-features-in-the-api-gateway-pattern"></a>API ağ geçidi desenini temel özellikleri
 
@@ -168,7 +168,7 @@ Ayrıca, Apigee, Kong, MuleSoft, WSO2, API ağ geçitleri özellikleri sunan paz
 
 - **API ağ geçidi düzeni** [*https://docs.microsoft.com/azure/architecture/microservices/gateway*](https://docs.microsoft.com/azure/architecture/microservices/gateway)
 
-- **Toplama ve birleştirme deseni** [*http://microservices.io/patterns/data/api-composition.html*](http://microservices.io/patterns/data/api-composition.html)
+- **Toplama ve birleştirme deseni** [*https://microservices.io/patterns/data/api-composition.html*](https://microservices.io/patterns/data/api-composition.html)
 
 - **Azure API Management** [*https://azure.microsoft.com/services/api-management/*](https://azure.microsoft.com/services/api-management/)
 

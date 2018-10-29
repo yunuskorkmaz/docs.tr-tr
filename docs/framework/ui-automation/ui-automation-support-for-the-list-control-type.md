@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 0e959fcb-50f2-413b-948d-7167d279bc11
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 1ca4e0f0e0d88004d6c2059af4c774c916efd5ac
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 1ae62cca72831b0319243acd9c5bf7a2b86138c3
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035077"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50205275"
 ---
 # <a name="ui-automation-support-for-the-list-control-type"></a>Liste Denetim Türü İçin UI Otomasyon Desteği
 > [!NOTE]
@@ -36,21 +36,19 @@ ms.locfileid: "48035077"
   
  Liste Denetim türü (örneğin, bir liste denetimini) uygulayan bir denetim için Denetim görünümü oluşur:  
   
--   Liste denetimi (öğeleri liste öğesi veya veri öğesi denetim türlerinde dayanabilir) sıfır veya daha fazla öğeleri  
+- Sıfır veya daha fazla öğe içinde (öğeleri liste öğesi veya veri öğesi denetim türlerinde dayanabilir) liste denetimi.
   
--   Liste denetimi içindeki sıfır veya daha fazla grup denetimleri  
+- Liste denetimi içindeki sıfır veya daha fazla grup denetimleri.
   
--   Sıfır, bir veya iki kaydırma çubuğu denetimleri  
+- Sıfır, bir veya iki kaydırma çubuğu denetimi.
   
--  
+Liste Denetim türü (örneğin, bir liste denetimini) uygulayan bir denetim içerik görünümünü oluşur:  
   
- Liste Denetim türü (örneğin, bir liste denetimini) uygulayan bir denetim içerik görünümünü oluşur:  
+- Sıfır veya daha fazla öğe içinde (öğeleri liste öğesi veya veri öğesi denetim türlerinde dayanabilir) liste denetimi.
   
--   Liste denetimi (öğeleri liste öğesi veya veri öğesi denetim türlerinde dayanabilir) sıfır veya daha fazla öğeleri  
-  
--   Liste denetimi içinde sıfır veya daha fazla gruplar  
-  
- Liste denetimi, birlikte gruplanmış dışında hiyerarşik bir ilişki olan öğeler olmaması gerekir. Öğeleri alt öğeleri varsa [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç sonra liste kapsayıcı, ağaç denetimi türüne göre.  
+- Liste denetimi içinde sıfır veya daha fazla gruplar.
+
+Liste denetimi, birlikte gruplanmış dışında hiyerarşik bir ilişki olan öğeler olmaması gerekir. Öğeleri alt öğeleri varsa [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç sonra liste kapsayıcı, ağaç denetimi türüne göre.  
   
  Liste denetimi içinde seçilebilir öğeleri alt gelen kullanıma sunulacak [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç listesi denetimi. Liste denetimi içindeki tüm öğeler aynı seçim grubuna ait olmalıdır. Seçilebilir öğeleri listesinde ListItem (yerine DataItem) denetim türlerini açılmamalıdır.  
   

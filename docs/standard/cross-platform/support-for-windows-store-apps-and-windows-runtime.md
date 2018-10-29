@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 18bd35495d1cb7cfffe39efa8f7313b75c7f5378
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 0476fe7ed731dbb2c6b86cff3255673ecee6f98d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261569"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50198464"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Windows Mağazası Uygulamaları ve Windows Çalışma Zamanı için .NET Framework Desteği
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], [!INCLUDE[wrt](../../../includes/wrt-md.md)] ile birlikte çok sayıda yazılım geliştirme senaryosunu destekler. Bu senaryolar üç kategoriye ayrılır:
@@ -25,7 +25,7 @@ ms.locfileid: "48261569"
 
 -   .NET Framework ile birlikte oluşturduğunuz [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalarında kullanılmak üzere sınıf kütüphaneleri geliştirme.
 
--   [!INCLUDE[wrt](../../../includes/wrt-md.md)]'i destekleyen tüm programlama dilleri tarafından kullanabilen, .WinMD dosyalarında paketlenmiş [!INCLUDE[wrt](../../../includes/wrt-md.md)] Bileşenleri geliştirme. Örneğin, [C# ve Visual Basic'te Windows çalışma zamanı bileşenleri oluşturma](https://msdn.microsoft.com/library/windows/apps/br230301(v=VS.110).aspx).
+-   [!INCLUDE[wrt](../../../includes/wrt-md.md)]'i destekleyen tüm programlama dilleri tarafından kullanabilen, .WinMD dosyalarında paketlenmiş [!INCLUDE[wrt](../../../includes/wrt-md.md)] Bileşenleri geliştirme. Örneğin, [C# ve Visual Basic'te Windows çalışma zamanı bileşenleri oluşturma](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic).
 
  Bu konu, .NET Framework'ün üç kategorinin tümü için sağladığı desteği ve [!INCLUDE[wrt](../../../includes/wrt-md.md)] Bileşenleri için senaryoları açıklar. İlk bölüm .NET Framework ve [!INCLUDE[wrt](../../../includes/wrt-md.md)] arasındaki temel ilişki hakkındaki temel bilgileri içerir ve Yardım sistemi ve IDE'de karşılaşabileceğiniz bazı farklılıkları açıklar. [İkinci bölüm](#WindowsRuntimeComponents) geliştirme senaryolarını anlatır [!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşenleri.
 
@@ -84,7 +84,7 @@ ms.locfileid: "48261569"
 
  Arabirimlerin yönetilen kodda görüntülenme şekli, bu arabirimlerin uygulanma şeklini etkiler. Örneğin, `PropertySet` sınıfı, yönetilen kodda `IMap<K, V>` olarak görünen `IDictionary<TKey, TValue>`'i uygular. `PropertySet`, `IDictionary<TKey, TValue>` yerine `IMap<K, V>`'i uyguluyormuş gibi görünür, bu nedenle yönetilen kodda, .NET Framework sözlüklerinde `Add` yöntemi gibi davranan bir `Add` yöntemine sahipmiş gibi görünür. Bir `Insert` yöntemine sahipmiş gibi görünmez.
 
- Oluşturmak için .NET Framework kullanma hakkında daha fazla bilgi için bir [!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşeni ve JavaScript ile benzer bir bileşeni kullanmayı gösteren bir anlatım [C# ve Visual Basic'te Windows çalışma zamanı bileşenleri oluşturma](https://msdn.microsoft.com/library/windows/apps/br230301%28v=VS.110%29.aspx).
+ Oluşturmak için .NET Framework kullanma hakkında daha fazla bilgi için bir [!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşeni ve JavaScript ile benzer bir bileşeni kullanmayı gösteren bir anlatım [C# ve Visual Basic'te Windows çalışma zamanı bileşenleri oluşturma](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic).
 
 ### <a name="primitive-types"></a>İlkel Türler
  Yönetilen kodda [!INCLUDE[wrt](../../../includes/wrt-md.md)]'ın doğal kullanımını etkinleştirmek için, kodunuzda [!INCLUDE[wrt](../../../includes/wrt-md.md)] ilkel türleri yerine .NET Framework ilkel türleri görünür. .NET Framework'te, `Int32` yapısı gibi ilkel türler, `Int32.TryParse` yöntemi gibi birçok yararlı özellik ve yönteme sahiptir. Bunun tersine, [!INCLUDE[wrt](../../../includes/wrt-md.md)]'deki ilkel türler ve yapılar yalnızca alanlara sahiptir. Yönetilen kodda ilkelleri kullandığınızda, .NET Framework türleri gibi görünürler ve normalde yaptığınız gibi .NET Framework türlerinin özellik ve yöntemlerini kullanabilirsiniz. Aşağıdaki liste bir özet sağlar:
@@ -149,6 +149,6 @@ ms.locfileid: "48261569"
 |[.NET için Windows Store uygulamalarına genel bakış](https://msdn.microsoft.com/library/windows/apps/br230302(v=VS.110).aspx)|.NET Framework türlerini ve oluşturmak için kullanabileceğiniz üyeleri açıklar [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar ve [!INCLUDE[wrt](../../../includes/wrt-md.md)]bileşenleri. (Windows Geliştirme Merkezi'nde.)|
 |[C# veya Visual Basic kullanan Windows Store uygulamaları için yol haritası](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10))|Bir çok Hızlı Başlangıç konuları, kılavuzlar ve en iyi yöntemleri dahil olmak üzere C# veya Visual Basic kullanarak [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamaları geliştirmeye başlamanıza yardımcı olan anahtar kaynaklar sağlar. (Windows Geliştirme Merkezi'nde.)|
 |[Nasıl yapılır makaleleri (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/br229566(v=win.10))|Bir çok Hızlı Başlangıç konuları, kılavuzlar ve en iyi yöntemleri dahil olmak üzere C# veya Visual Basic kullanarak [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamaları geliştirmeye başlamanıza yardımcı olan anahtar kaynaklar sağlar. (Windows Geliştirme Merkezi'nde.)|
-|[C# ve Visual Basic'te Windows çalışma zamanı bileşenleri oluşturma](https://msdn.microsoft.com/library/windows/apps/br230301%28v=VS.110%29.aspx)|.NET Framework kullanarak bir [!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşeninin nasıl oluşturulacağını anlatır, JavaScript kullanarak Windows için oluşturulan bir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamasının parçası olarak bu bileşenin nasıl kullanılacağını açıklar ve Visual Studio ile kombinasyonda nasıl hata ayıklama yapılacağını anlatır. (Windows Geliştirme Merkezi'nde.)|
+|[C# ve Visual Basic'te Windows çalışma zamanı bileşenleri oluşturma](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic)|.NET Framework kullanarak bir [!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşeninin nasıl oluşturulacağını anlatır, JavaScript kullanarak Windows için oluşturulan bir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamasının parçası olarak bu bileşenin nasıl kullanılacağını açıklar ve Visual Studio ile kombinasyonda nasıl hata ayıklama yapılacağını anlatır. (Windows Geliştirme Merkezi'nde.)|
 |[Windows çalışma zamanı başvurusu](/uwp/api/)|[!INCLUDE[wrt](../../../includes/wrt-md.md)]'e ait başvuru belgeleri. (Windows Geliştirme Merkezi'nde.)|
 |[URI'yı Windows Çalışma Zamanı'na Geçirme](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md)|Yönetilen koddan gelen bir URI'yi [!INCLUDE[wrt](../../../includes/wrt-md.md)]'e gönderdiğinizde oluşabilecek bir sorunu ve bunun nasıl önleneceğini açıklar.|

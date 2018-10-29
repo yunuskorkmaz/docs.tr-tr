@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c4fea49a3200ca58264eb7c1bc1ead0a8ddc5914
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 68593509e384b2acd33fad0f476b6f300f2dbd92
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584238"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50202192"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (Yönetilen Profil Temelli İyileştirme Aracı)
 
@@ -100,7 +100,7 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
  Bu işlem tüm derlemelerin en iyi duruma getirilmiş verilere sahip olmasını sağlar. Güncelleştirilmiş en iyi duruma getirilmiş derlemeleri daha sık iade ederseniz (1. ve 2. adım), tüm üretim geliştirme sürecinde performans numaraları daha tutarlı olur.  
   
 ## <a name="using-mpgoexe-from-visual-studio"></a>Visual Studio'dan Mpgo.exe'yi kullanma  
- Mpgo.exe Visual Studio'dan çalıştırabilirsiniz (bkz [nasıl yapılır: derleme olayları belirtme (C#)](https://msdn.microsoft.com/library/b4ce1ad9-5215-4b6f-b6a2-798b249aa335)) aşağıdaki kısıtlamalarla:  
+ Mpgo.exe Visual Studio'dan çalıştırabilirsiniz (bkz [nasıl yapılır: derleme olayları belirtme (C#)](/visualstudio/ide/how-to-specify-build-events-csharp)) aşağıdaki kısıtlamalarla:  
   
 -   Visual Studio makroları aynı zamanda varsayılan olarak sonlarında eğik çizgiler içerdiğinden, sonda eğik çizgileri olan tırnak işaretli yollar kullanamazsınız. (Örneğin, `–OutDir "C:\Output Folder\"` geçersiz.) Bu kısıtlamayı çözmek için sondaki eğik çizgilerden kaçınabilirsiniz. (Örneğin, `-OutDir "$(OutDir)\"` yerine.)  
   

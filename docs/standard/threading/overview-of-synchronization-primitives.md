@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ba4eb0308665e82042510b74fd8210642e09c53
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: f4d1010069e9d95488a99133f949ca112dc08f0e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850856"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201604"
 ---
 # <a name="overview-of-synchronization-primitives"></a>Eşitleme temellerine genel bakış
 
@@ -79,7 +79,7 @@ Avantajları ve dezavantajları döndürme kilit kullanarak hakkında daha fazla
 
 ### <a name="readerwriterlockslim-class"></a>ReaderWriterLockSlim sınıfı
 
-<xref:System.Threading.ReaderWriterLockSlim?displayProperty=nameWithType> Sınıfı yazma için paylaşılan bir kaynağa özel erişim verir ve birden çok iş parçacığı erişim kaynak aynı anda okuma için sağlar. Kullanmak istediğiniz <xref:System.Threading.ReaderWriterLockSlim> , okuma işlemleri iş parçacığı açısından güvenli destekler, ancak yazma işlemi gerçekleştirmek için özel erişim gerektiren bir paylaşılan veri yapısı erişimi eşitlemek için. Bir iş parçacığı özel erişim istediğinde (çağırarak gibi <xref:System.Threading.ReaderWriterLockSlim.EnterWriteLock%2A?displayProperty=nameWithType> yöntemi), tüm mevcut okuyucular kilit çıkılana ve yazıcı girdi ve çıktı kilit kadar sonraki okuyucu istekleri blok.
+<xref:System.Threading.ReaderWriterLockSlim?displayProperty=nameWithType> Sınıfı yazma için paylaşılan bir kaynağa özel erişim verir ve birden çok iş parçacığının kaynağa aynı anda okuma için erişim sağlar. Kullanmak istediğiniz <xref:System.Threading.ReaderWriterLockSlim> , okuma işlemleri iş parçacığı açısından güvenli destekler, ancak yazma işlemi gerçekleştirmek için özel erişim gerektiren bir paylaşılan veri yapısı erişimi eşitlemek için. Bir iş parçacığı özel erişim istediğinde (çağırarak gibi <xref:System.Threading.ReaderWriterLockSlim.EnterWriteLock%2A?displayProperty=nameWithType> yöntemi), tüm mevcut okuyucular kilit çıkılana ve yazıcı girdi ve çıktı kilit kadar sonraki okuyucu istekleri blok.
   
 Daha fazla bilgi için [Okuyucu-Yazıcı kilitleri](reader-writer-locks.md) makale ve <xref:System.Threading.ReaderWriterLockSlim> API Başvurusu.
 

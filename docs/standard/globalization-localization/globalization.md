@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b59e0bda45b0b45b49c22d49ec2556fbcfef75d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2f3bf29b9b4d216483ea0c81cc787c80fc8b9e6f
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44221915"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453365"
 ---
 # <a name="globalization"></a>Genelleştirme
 Genelleştirme, tasarlamaya ve geliştirmeye yönelik birden çok kültürde yerelleştirilmiş arabirimleri ve bölgesel verileri destekleyen dünya çapında kullanılmaya hazır uygulamasını içerir. Tasarım aşamasına başlamadan önce hangi kültürleri uygulamanızı destekleyeceğini belirlemeniz gerekir. Bir tek bir kültür veya bölgeyi varsayılan olarak bir uygulama hedeflese de, tasarlayın ve böylece diğer kültür ya da bölgelerdeki kullanıcılara kolayca genişletilebilir yazabilirsiniz.  
@@ -116,7 +116,7 @@ Genelleştirme, tasarlamaya ve geliştirmeye yönelik birden çok kültürde yer
   
  Eşitlik karşılaştırmaları bazen ilgili aramalar veya alt dize karşılaştırmaları yapılan çağrılar yerine <xref:System.String.Equals%2A?displayProperty=nameWithType> yöntemi. Bazı durumlarda, alt dizenin başka bir dizeye eşit olup olmadığını belirlemek için alt dize aramayı kullanabilirsiniz. Bu karşılaştırmanın amacı dile ait olmayan ise, arama da yerine sıralı kültüre duyarlı olmalıdır.  
   
- Aşağıdaki örnek, dilsel olmayan veriler üzerinde bir kültüre duyarlı aramada tehlikesi gösterir. `AccessesFileSystem` Yöntemi, "FILE" alt dizesi ile başlayan bir URI'leri için dosya sistemi erişimini engellemek için tasarlanmıştır. Bunu yapmak için "FILE" dizesiyle URI başlangıcını kültüre duyarlı ve büyük küçük harf duyarsız bir karşılaştırma gerçekleştirir. Dosya sistemine erişen bir URI ile başlayabilirsiniz çünkü "dosya:" veya "dosya:", örtük, varsayılır, "i" (U + 0069) her zaman "I" küçük harfli eşdeğeri olduğu (U + 0049). Ancak Türkçe ve Azerice, büyük harfli sürümünü içinde "i", "İ" olan (U + 0130). Yasaklanması gerektiğinde bu tutarsızlık nedeniyle, kültüre duyarlı bir karşılaştırma dosya sistemi erişimini sağlar.  
+ Aşağıdaki örnek, dilsel olmayan veriler üzerinde bir kültüre duyarlı aramada tehlikesi gösterir. `AccessesFileSystem` Yöntemi, "FILE" alt dizesi ile başlayan bir URI'leri için dosya sistemi erişimini engellemek için tasarlanmıştır. Bunu yapmak için "FILE" dizesiyle URI başlangıcını kültüre duyarlı ve büyük küçük harf duyarsız bir karşılaştırma gerçekleştirir. Dosya sistemine erişen bir URI ile başlayabilirsiniz çünkü "dosya:" veya "dosya:", "i" örtük varsayılır (U + 0069) her zaman "I" küçük harfli eşdeğeri olduğu (U + 0049). Ancak Türkçe ve Azerice, büyük harfli sürümünü içinde "i", "İ" olan (U + 0130). Yasaklanması gerektiğinde bu tutarsızlık nedeniyle, kültüre duyarlı bir karşılaştırma dosya sistemi erişimini sağlar.  
   
  [!code-csharp[Conceptual.Globalization#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/equals1.cs#12)]
  [!code-vb[Conceptual.Globalization#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/equals1.vb#12)]  

@@ -3,12 +3,12 @@ title: 'Nasıl yapılır: Talep kullanan uygulamalar ve hizmetler WIF izleme kul
 ms.date: 03/30/2017
 ms.assetid: 3d51ba59-3adb-4ca4-bd33-5027531af687
 author: BrucePerlerMS
-ms.openlocfilehash: e10d8d2ea869b03586b4680ad8320aeb2de90620
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 38e168fff9bc351b6239c41197348d24129a4747
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584279"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453402"
 ---
 # <a name="how-to-debug-claims-aware-applications-and-services-using-wif-tracing"></a>Nasıl yapılır: Talep kullanan uygulamalar ve hizmetler WIF izleme kullanarak hata ayıklama
 ## <a name="applies-to"></a>Uygulandığı öğe:  
@@ -104,7 +104,7 @@ ms.locfileid: "48584279"
   
 |**Hata Kimliği**|**Hata iletisi**|**Hatayı düzeltmek eylem gerekli**|  
 |-|-|-|  
-|ID4175|Güvenlik belirteci veren IssuerNameRegistry tarafından tanınmadı.  Bu veren güvenlik belirteçleri kabul etmek için geçerli bir verenin adı döndürülecek IssuerNameRegistry yapılandırın.|Bu hata, bir parmak izi MMC ek bileşeninden kopyalayıp yapıştırarak kaynaklanabilir *Web.config* dosya. Özellikle, sertifika Özellikler penceresinden kopyalarken metin dizesinde yazdırılamayan ekstra bir karakter alabilirsiniz. Bu ek karakter parmak izi eşleşme başarısız olmasına neden olur. Parmak izi doğru bir şekilde kopyalamak için yordam burada bulunabilir: [http://msdn.microsoft.com/library/ff359102.aspx](https://msdn.microsoft.com/library/ff359102.aspx)|  
+|ID4175|Güvenlik belirteci veren IssuerNameRegistry tarafından tanınmadı.  Bu veren güvenlik belirteçleri kabul etmek için geçerli bir verenin adı döndürülecek IssuerNameRegistry yapılandırın.|Bu hata, bir parmak izi MMC ek bileşeninden kopyalayıp yapıştırarak kaynaklanabilir *Web.config* dosya. Özellikle, sertifika Özellikler penceresinden kopyalarken metin dizesinde yazdırılamayan ekstra bir karakter alabilirsiniz. Bu ek karakter parmak izi eşleşme başarısız olmasına neden olur. Parmak izi doğru bir şekilde kopyalamak için yordam şu yolda bulunabilir: [talep tabanlı çoklu oturum açma-üzerinde Web uygulamaları ve Microsoft Azure için](https://docs.microsoft.com/previous-versions/msp-n-p/ff359102%28v=pandp.10%29).|  
   
 ## <a name="related-items"></a>İlgili öğeler  
   

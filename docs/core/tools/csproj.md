@@ -4,12 +4,12 @@ description: Varolan ve .NET Core csproj dosyalarına arasındaki farklar hakkı
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/22/2017
-ms.openlocfilehash: 0efca768545ab11319b2fe7b062cb6a4e751dc4d
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 3de168b8cebeb435a45861138aea26580663c135
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121421"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50203962"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core csproj biçimine eklemeler
 
@@ -72,7 +72,7 @@ Bu değişiklik, ana değiştirmez, diğer mekanizması içerir. Örneğin, uygu
 Devre dışı bırakmak için **tüm örtük eğik çizgi genelleştirmeler**, ayarlayabileceğiniz `<EnableDefaultItems>` özelliğini `false` aşağıdaki örnekteki gibi:
 ```xml
 <PropertyGroup>
-    <EnableDefaultItems>false</EnableDefaultItems>
+    <EnableDefaultItems>false</EnableDefaultItems>
 </PropertyGroup>
 ```
 
@@ -92,10 +92,11 @@ Birden çok hedef çerçeve proje varsa komutun sonuçlarını yalnızca bunlard
 ## <a name="additions"></a>Eklemeleri
 
 ### <a name="sdk-attribute"></a>SDK'sı özniteliği 
-`<Project>` Öğesinin *.csproj* dosya adlı yeni bir öznitelik sahip `Sdk`. `Sdk` SDK'sı olacağı belirtir proje tarafından kullanılan. SDK'sı olarak [katmanlama belge](cli-msbuild-architecture.md) açıklar, MSBuild kümesidir [görevleri](/visualstudio/msbuild/msbuild-tasks) ve [hedefleri](/visualstudio/msbuild/msbuild-targets) .NET Core kod oluşturabilirsiniz. Biz, .NET Core araçları ile iki ana SDK'ları gönderin:
+`<Project>` Öğesinin *.csproj* dosya adlı yeni bir öznitelik sahip `Sdk`. `Sdk` SDK'sı olacağı belirtir proje tarafından kullanılan. SDK'sı olarak [katmanlama belge](cli-msbuild-architecture.md) açıklar, MSBuild kümesidir [görevleri](/visualstudio/msbuild/msbuild-tasks) ve [hedefleri](/visualstudio/msbuild/msbuild-targets) .NET Core kod oluşturabilirsiniz. Biz, .NET Core araçları ile üç ana SDK'ları gönderin:
 
 1. .NET Core SDK kimliği `Microsoft.NET.Sdk`
 2. .NET Core web SDK kimliği `Microsoft.NET.Sdk.Web`
+3. SDK kimliği ile .NET Core Razor sınıf kitaplığı, `Microsoft.NET.Sdk.Razor`
 
 İhtiyacınız `Sdk` öznitelik kümesi bu kimlikler birine üzerinde `<Project>` .NET Core araçları kullanın ve kodu derleyebilmeniz için öğesi. 
 

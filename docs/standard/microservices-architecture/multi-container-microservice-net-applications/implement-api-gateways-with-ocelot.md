@@ -4,12 +4,12 @@ description: API ağ geçitleri ile Ocelot uygular ve kapsayıcı tabanlı bir o
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: 6e03909074fbf1d72dace35f38996a761f1a437d
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 26b3c3510aa06fb1c7aa4c3a44f23c8e526fe60c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121434"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200039"
 ---
 # <a name="implementing-api-gateways-with-ocelot"></a>API ağ geçitleri Ocelot ile uygulama
 
@@ -271,7 +271,7 @@ DownstreamHostAndPorts isteklerini iletmek istediğiniz herhangi bir aşağı ak
 
 UpstreamPathTemplate Ocelot istemciden gelen belirli bir istek için kullanmak için hangi DownstreamPathTemplate tanımlamak için kullanacağı URL'dir. Son olarak, Ocelot farklı isteklerini aynı URL'yi (POST, Al koy) arasında ayrım yapabilme kolaylığı için UpstreamHttpMethod kullanılır.
 
-Bu noktada, tek bir Ocelot API'sini kullanarak ağ geçidi (ASP.NET Core Web barındırma) sahip olabilir veya [birden çok birleştirilmiş configuration.json dosyaları](http://ocelot.readthedocs.io/en/latest/features/configuration.html#merging-configuration-files) ya da depolayabilirsiniz [yapılandırma Consul KV deposundaki](http://ocelot.readthedocs.io/en/latest/features/configuration.html#store-configuration-in-consul). 
+Bu noktada, tek bir Ocelot API'sini kullanarak ağ geçidi (ASP.NET Core Web barındırma) sahip olabilir veya [birden çok birleştirilmiş configuration.json dosyaları](https://ocelot.readthedocs.io/en/latest/features/configuration.html#merging-configuration-files) ya da depolayabilirsiniz [yapılandırma Consul KV deposundaki](https://ocelot.readthedocs.io/en/latest/features/configuration.html#store-configuration-in-consul).
 
 Ancak gerçekten otonom mikro hizmetler olmasını istiyorsanız, mimari ve tasarım bölümlerinde sunulan gibi birden çok API ağ geçitleri ve/veya BFF (ön uç için arka uç), tek tek parça API ağ geçidi bölün daha iyi olabilir. Bu amaçla, Docker kapsayıcıları ile bu yaklaşımı uygulamak nasıl bir bakalım.
 
@@ -417,7 +417,7 @@ Ancak, Ocelot, bu diğer diyagram olduğu gibi bir API ağ geçidi sınırları 
 
 Birden çok BFF (ön uç için arka uç) içinde API ağ geçidi hizmetine uygulama bölündü ve işletme alanlarına API ağ geçitleri, başka bir seçenek gerekir çünkü geniş kapsamlı kritik konular için ek bir API ağ geçidi oluşturmak için eklenmiştir. Seçim daha karmaşık bir mikro hizmet adil İmparatoru birden çok geniş kapsamlı kritik konular mikro hizmet mimarisiyle temel. Hizmetine içinde yalnızca bir çapraz önemli olduğundan, yalnızca güvenlik hizmeti API ağ geçidi bölgesi dışında Basitlik'ın çok işlemek için karar verilmiştir.
 
-Uygulama API ağ geçidi düzeyinde güvenli hale getirilmişse, herhangi bir durumda, kimlik doğrulama modülü Ocelot API ağ geçidinin ilk başta güvenli bir mikro hizmet kullanmaya çalışırken ziyaret edilen. Bu nedenle şekilde access_token ile korumalı hizmetler ziyaret edebilirsiniz erişim belirteci almak için kimliği veya kimlik doğrulama mikro hizmet ziyaret etmek için HTTP isteği yeniden yönlendirir.
+Uygulama API ağ geçidi düzeyinde güvenli hale getirilmişse, herhangi bir durumda, kimlik doğrulama modülü Ocelot API ağ geçidinin ilk başta güvenli bir mikro hizmet kullanmaya çalışırken ziyaret edilen. HTTP isteği access_token ile korunan hizmetlerini ziyaret ettiğiniz için erişim belirteci almak için kimliği veya kimlik doğrulama mikro hizmet ziyaret etmek için yeniden yönlendirir.
 
 Herhangi bir hizmeti API ağ geçidi düzeyinde kimlik doğrulama ile güvenli, ilgili ayarlarının configuration.json AuthenticationProviderKey ayarlayarak yoludur.
 
@@ -564,19 +564,19 @@ Kubernetes için dağıtırken her Ocelot API ağ geçidi farklı "configuration
 Araştırma ve aşağıdaki bağlantıları açıklanan bir Ocelot API Gateway kullanırken, diğer önemli özellikleri vardır.
 
 -   **Ocelot Consul veya Eureka tümleştirmek istemci tarafı hizmet bulmayı** 
-    [*http://ocelot.readthedocs.io/en/latest/features/servicediscovery.html*](http://ocelot.readthedocs.io/en/latest/features/servicediscovery.html)
+    [*https://ocelot.readthedocs.io/en/latest/features/servicediscovery.html*](https://ocelot.readthedocs.io/en/latest/features/servicediscovery.html)
 
 -   **API ağ geçidi katmanında önbelleğe alma** 
-    [*http://ocelot.readthedocs.io/en/latest/features/caching.html*](http://ocelot.readthedocs.io/en/latest/features/caching.html)
+    [*https://ocelot.readthedocs.io/en/latest/features/caching.html*](https://ocelot.readthedocs.io/en/latest/features/caching.html)
 
 -   **API ağ geçidi katmanında günlüğe kaydetme** 
-    [*http://ocelot.readthedocs.io/en/latest/features/logging.html*](http://ocelot.readthedocs.io/en/latest/features/logging.html)
+    [*https://ocelot.readthedocs.io/en/latest/features/logging.html*](https://ocelot.readthedocs.io/en/latest/features/logging.html)
 
 -   **API ağ geçidi katmanında (yeniden denemeler ve devre Kesiciler) hizmet kalitesi** 
-    [*http://ocelot.readthedocs.io/en/latest/features/qualityofservice.html*](http://ocelot.readthedocs.io/en/latest/features/qualityofservice.html)
+    [*https://ocelot.readthedocs.io/en/latest/features/qualityofservice.html*](https://ocelot.readthedocs.io/en/latest/features/qualityofservice.html)
 
 -   **Oran sınırlandırma** 
-    [*http://ocelot.readthedocs.io/en/latest/features/ratelimiting.html*](http://ocelot.readthedocs.io/en/latest/features/ratelimiting.html )
+    [*https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html*](https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html )
 
 >[!div class="step-by-step"]
 [Önceki](background-tasks-with-ihostedservice.md) [İleri] (../microservice-ddd-cqrs-patterns/index.md)

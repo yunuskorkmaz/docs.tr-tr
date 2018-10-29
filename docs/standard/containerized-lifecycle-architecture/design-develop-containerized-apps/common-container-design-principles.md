@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.openlocfilehash: 3af174279e8b6f56a10413817b05ef68cfcabea5
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50049093"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50202184"
 ---
 # <a name="common-container-design-principles"></a>Ortak kapsayıcı tasarım ilkeleri
 

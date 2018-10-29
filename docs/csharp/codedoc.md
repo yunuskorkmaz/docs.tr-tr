@@ -3,12 +3,12 @@ title: XML açıklamalarıyla kodunuzu belgeleme
 description: XML belgeleri yorumları ile kodunuzu belgeleme ve derleme zamanında XML belge dosyası oluşturma hakkında bilgi edinin.
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: e211543a6a5cc5f6f29d8c195492b474eb24a38d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 09e6b4aa75aababcebba96693d6e73b29a30fc6a
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397065"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453274"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>XML açıklamalarıyla kodunuzu belgeleme
 
@@ -51,7 +51,7 @@ Kodu basit matematik kitaplığı şu şekildedir:
 Örnek kitaplığı dört temel aritmetik işlemleri destekler `add`, `subtract`, `multiply` ve `divide` üzerinde `int` ve `double` veri türleri.
 
 Artık kitaplığınızı kullanan ancak kaynak koduna erişiminiz yoksa üçüncü taraf geliştiriciler için kodunuzdan bir API başvuru belgesi oluşturmak yönetebilmek istiyorsunuz.
-Bunu başarmak için belirtilen önceki XML belge etiketleri kullanılabileceğinden, standart XML etiketlerini C# Derleyici destekler artık sunulacaktır.
+Daha önce belirtildiği gibi XML belge etiketleri Bunu başarmak için kullanılabilir. Artık için standart XML etiketlerini görülecektir C# derleyici destekler.
 
 ### <a name="ltsummarygt"></a>&lt;Özeti&gt;
 
@@ -179,7 +179,7 @@ Kodunuz aracılığıyla ayrıntılı belgeler Web sitesi ile tıklanabilir çap
 Bu bir onarımı kabus bu koda katkıda bulunmak isteyen bir geliştirici olarak gittiği çalışılamayacak için çok fazla bilgi bulunmaktadır.
 Ne yapmam yardımcı olabilecek bir XML etiket vardır:
 
-### <a name="ltincludegt"></a>&lt;İçerir&gt;
+### <a name="ltincludegt"></a>&lt;include&gt;
 
 `<include>` Etiket türleri açıklayan yorumlar ayrı bir XML dosyasında ve doğrudan sizin kaynak kodu dosyasında belge açıklamaları yerleştirme aksine, kaynak kodunuzdaki üyelerine başvurmak olanak tanır.
 

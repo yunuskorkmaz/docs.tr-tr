@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <ipv6> element
 - ipv6 element
 ms.assetid: 10b79aef-327b-4718-a892-e11f55e4d169
-ms.openlocfilehash: 02ac6ecb372b1e902d65d4b35ef71fbf0ac093c4
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 5e1afdd372c2198c00bf8c02939d2167261b5d5c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50170126"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50205145"
 ---
 # <a name="ltipv6gt-element-network-settings"></a>&lt;IPv6&gt; öğesi (ağ ayarları)
 Internet Protokolü sürüm 6 (IPv6) sağlar eski üyeler alınan yanıtları <xref:System.Net.Dns> sınıfı.  
@@ -69,7 +69,7 @@ Internet Protokolü sürüm 6 (IPv6) sağlar eski üyeler alınan yanıtları <x
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Net?displayProperty=nameWithType>  
- <xref:System.Net.Dns?displayProperty=nameWithType>  
- <xref:System.Net.Sockets.Socket.OSSupportsIPv6%2A?displayProperty=nameWithType>  
- [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net?displayProperty=nameWithType>  
+- <xref:System.Net.Dns?displayProperty=nameWithType>  
+- <xref:System.Net.Sockets.Socket.OSSupportsIPv6%2A?displayProperty=nameWithType>  
+- [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

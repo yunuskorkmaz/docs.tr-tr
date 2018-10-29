@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b4336978825fbf7844b3ceaf179954f28660f08c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 04b28dec0f016d44692665fb0ce95a7e496f103c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409413"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200528"
 ---
 # <a name="icordebugblockingobjectenumnext-method"></a>ICorDebugBlockingObjectEnum::Next Yöntemi
-Belirtilen sayıda alır [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) geçerli konumdan başlayarak numaralandırması nesneleri.  
+Belirtilen sayıda alır [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) nesneleri geçerli konumunda başlayan sabit listesi.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,10 +41,10 @@ HRESULT Next([in] ULONG  celt,
  [in] Alınacak nesne sayısı.  
   
  `values`  
- [out] İşaretçiler bir dizi [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) nesneleri.  
+ [out] Bir işaretçiler dizisi [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) nesneleri.  
   
  `pceltFetched`  
- [out] Alındı nesne sayısı için bir işaretçi.  
+ [out] Alınan nesne sayısı için bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Bu yöntem aşağıdaki özel HRESULT'ları döndürür.  
@@ -52,17 +52,15 @@ HRESULT Next([in] ULONG  celt,
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
-|S_FALSE|`pceltFetched` eşit değil `celt`.|  
+|S_FALSE|`pceltFetched` eşit değildir `celt`.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem işlevleri tipik bir COM Numaralandırıcı ister.  
+ Tipik bir COM Numaralandırıcı gibi bu yöntem çalışır.  
   
- Giriş dizisi değerleri en az olmalıdır boyutunu `celt`. Dizi ile ya da sonraki doldurulur `celt` değerleri numaralandırma veya diğer tüm değerleri varsa, daha az `celt` kalır. Bu yöntem döndürüldüğünde, `pceltFetched` alındı değerleri numarasıyla doldurulur. Varsa `values` geçersiz işaretçileri içerir veya daha küçük olan bir arabellek işaret `celt`, veya `pceltFetched` geçersiz bir işaretçi sonucu tanımlanmadı.  
+ Giriş dizisinin en az olmalıdır boyutunun `celt`. Dizi ile birlikte sonraki doldurulur `celt` değerleri sabit listesi veya tüm kalan değerler ile az olursa `celt` kalır. Bu yöntem döndürüldüğünde, `pceltFetched` alınan değer sayısı ile doldurulur. Varsa `values` geçersiz işaretçi içerir ya da daha küçük olan bir arabellek işaret `celt`, veya `pceltFetched` geçersiz bir işaretçi sonuç tanımsızdır.  
   
 > [!NOTE]
->  Ancak [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) yapısı yayımlanması gerekmez, bu içinde "ICorDebugValue" arabirimi yayımlanması gerek yoktur.  
-  
--  
+>  Ancak [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) yapısı yayımlanması gerekmez, içindeki "ICorDebugValue" arabirimi serbest bırakılması gerekir.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

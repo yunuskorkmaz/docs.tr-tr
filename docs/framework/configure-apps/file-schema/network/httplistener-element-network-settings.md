@@ -2,12 +2,12 @@
 title: '&lt;httpListener&gt; öğesi (ağ ayarları)'
 ms.date: 03/30/2017
 ms.assetid: 62f121fd-3f2e-4033-bb39-48ae996bfbd9
-ms.openlocfilehash: 3daf18fab81ea481be8e45e4d9ad682047ada6f3
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 58228eed71dd6a5f5af8e26c02db9633da6ceef6
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50042642"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197788"
 ---
 # <a name="lthttplistenergt-element-network-settings"></a>&lt;httpListener&gt; öğesi (ağ ayarları)
 Tarafından kullanılan parametreler özelleştirir <xref:System.Net.HttpListener> sınıfı.  
@@ -138,7 +138,7 @@ Tarafından kullanılan parametreler özelleştirir <xref:System.Net.HttpListene
 |Boş olabilir.||  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Net.Configuration.HttpListenerElement>  
- <xref:System.Net.HttpListener>  
- <xref:System.Net.HttpListenerRequest.Url%2A>  
- [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net.Configuration.HttpListenerElement>  
+- <xref:System.Net.HttpListener>  
+- <xref:System.Net.HttpListenerRequest.Url%2A>  
+- [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

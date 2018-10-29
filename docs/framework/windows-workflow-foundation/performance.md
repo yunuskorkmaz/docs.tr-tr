@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation 4 performansı
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: 78e9ac1cc350fe8c04222b2698569412961d3b52
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: ba6120284b3ab189b0f34e2d3ef25f6967f04e5d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123819"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50202295"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 performansı
 Dustin Metzgar
@@ -424,7 +424,7 @@ public class Workflow1 : Activity
 
  WF4 SQL izleme sağlayıcısı yokken, AppFabric yapar.  AppFabric'ın SQL izleme olayları binlik toplu işlem ve bunları hızlı eklemeleri için tasarlanmış bir SQL tablosunu yazan bir Windows hizmeti ile ETW olayları abone olmak için bir yaklaşımdır.  Ayrı bir iş, bu tablodaki verileri boşaltır ve AppFabric Panoda görüntülenebilir tabloları raporlamasına reforms.  Başka bir deyişle, bir batch olayları izleme geldiği ve bu nedenle bir Kalıcılık noktası için kaydedilen önce beklenecek sahip iş akışı bağımsız olarak işlenir.
 
- ETW olayları logman veya xperf gibi araçlarla kaydedilebilir.  Compact ETL dosyası xperfview gibi bir araçla görüntülenebilir veya daha okunabilir bir biçimde, XML gibi tracerpt ile dönüştürülür.  WF3 içinde bir SQL veritabanı olmadan olayları izleme almak için tek seçenek özel izleme hizmeti oluşturmaktır. ETW hakkında daha fazla bilgi için bkz: [WCF hizmetleri ve olay izleme için Windows](../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md) ve [olay izleme için Windows](https://msdn.microsoft.com/library/ff190903.aspx\)).
+ ETW olayları logman veya xperf gibi araçlarla kaydedilebilir.  Compact ETL dosyası xperfview gibi bir araçla görüntülenebilir veya daha okunabilir bir biçimde, XML gibi tracerpt ile dönüştürülür.  WF3 içinde bir SQL veritabanı olmadan olayları izleme almak için tek seçenek özel izleme hizmeti oluşturmaktır. ETW hakkında daha fazla bilgi için bkz: [WCF hizmetleri ve olay izleme için Windows](../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md) ve [olay izleme için Windows](https://msdn.microsoft.com/library/ff190903.aspx).
 
  Etkinleştirme iş akışı izleme değişen derece cinsinden performansını etkiler.  Aşağıdaki Kıyaslama ETW olayları izleme kullanmak ve bunları bir ETL dosyası olarak kaydetmek için logman Aracı'nı kullanır.  AppFabric içinde İzleme SQL maliyeti, bu makale kapsamında değil.  Ayrıca AppFabric içinde kullanılan temel izleme profili, bu karşılaştırmalı gösterilir.  De dahil, yalnızca sistem durumu izleme olaylarını izleme maliyetidir.  Bu olaylar ile ilgili sorunları giderme ve ortalama sistemin aktarım hızının belirlemek için yararlıdır.
 

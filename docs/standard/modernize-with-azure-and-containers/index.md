@@ -4,12 +4,12 @@ description: Kaldırma ve kaydırma ve bu e-kitap kapsayıcılarla ve Azure bulu
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: b8c293730b0921924584359ffad32efd2b83a19b
-ms.sourcegitcommit: dfc8aa44246a97f4611cc441d9ef71b03cc31260
+ms.openlocfilehash: 0cfb052daa41264ae00d48906477eae99ea159d8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49413946"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200091"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Azure Bulutu ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirme (2 sürümü)
 
@@ -25,7 +25,7 @@ Telif Hakkı © 2018 Microsoft Corporation
 
 Tüm hakları saklıdır. Bu kitap içeriğini işlevinin hiçbir bölümü herhangi bir biçimdeki veya yayımcı yazılı izni olmadan herhangi bir yöntemle yeniden oluşturulabilir.
 
-Bu kitap gibi bir elektronik kitap (e-kitap) Microsoft'ta birden çok kanal aracılığıyla biçiminde ücretsiz kullanılabilir <http://dot.net/architecture>.
+Bu kitap gibi bir elektronik kitap (e-kitap) Microsoft'ta birden çok kanal aracılığıyla biçiminde ücretsiz kullanılabilir <https://dot.net/architecture>.
 
 Bu kitap, e-posta ile ilgili sorularınız varsa [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book)
 
@@ -72,7 +72,7 @@ En iyi uzun dönemli çevikliğini ve kuruluş için bir değer ile modern uygul
 
 Şekil 1-1, artımlı aşamalı olarak var olan .NET uygulamalarını buluta taşıdığınızda, uygulayabileceğiniz olası yolları gösterir.
 
- ![Mevcut .NET uygulamaları ve Hizmetleri için modernizasyonu yolları](./media/image1-1.png)
+ ![Mevcut .NET uygulamaları ve Hizmetleri için modernizasyonu yolları](./media/image1-1.png)
 
 > **Şekil 1-1**. Mevcut .NET uygulamaları ve Hizmetleri için modernizasyonu yolları
 

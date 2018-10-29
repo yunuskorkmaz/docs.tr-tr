@@ -14,72 +14,72 @@ helpviewer_keywords:
 ms.assetid: 5099e549-f4fd-49fb-a290-549edd456c6a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b1f814b8492120002013a8752caf96ba34785d6
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: MT
+ms.openlocfilehash: bdd610ade931bedc9ee387b65b18efd1909ef58b
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745623"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50033935"
 ---
 # <a name="resolving-assembly-loads"></a>Derleme Yüklerini Çözme
-.NET Framework sağlar <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> olay yüklenirken derleme üzerinde daha fazla denetim gerektiren uygulamalar için. Bu olay işleyerek uygulamanız hangi birkaç derleme sürümlerini yüklemek için bir dinamik derleme yayma ve geri yükleme bağlamdan normal yoklama yolları, select dışındaki bir derlemeyi yüklemek vb. Bu konuda işleme yönelik yönergeler sağlanmaktadır <xref:System.AppDomain.AssemblyResolve> olay.  
+.NET Framework sağlar <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> olay yüklenirken derleme üzerinde daha fazla denetim gerektiren uygulamalar için. Bu olayını işleyerek, uygulamanız hangisinin birkaç derleme sürümlerini yüklemek için dinamik bir derleme yayılamıyor ve döndürün. yük bağlamdan normal algılama yolları, select dışındaki bir derlemeyi yüklemek vb. Bu konuda işleme yönelik yönergeler sağlanmaktadır <xref:System.AppDomain.AssemblyResolve> olay.  
   
 > [!NOTE]
->  Derleme yüklerini salt yansıma bağlamında çözümlemek için <xref:System.AppDomain.ReflectionOnlyAssemblyResolve?displayProperty=nameWithType> olay bunun yerine.  
+>  Derleme yüklerini salt yansıma bağlamında çözümlemek için <xref:System.AppDomain.ReflectionOnlyAssemblyResolve?displayProperty=nameWithType> olay yerine.  
   
 ## <a name="how-the-assemblyresolve-event-works"></a>AssemblyResolve olay nasıl çalışır?  
- İçin bir işleyici kaydettiğinizde <xref:System.AppDomain.AssemblyResolve> olay işleyicisi adı tarafından çağrılan bir derlemeye bağlamak Çalışma Zamanı Modülü başarısız olduğunda. Örneğin, kullanıcı kodundan aşağıdaki yöntemleri çağırma neden <xref:System.AppDomain.AssemblyResolve> çıkarılmasına olay:  
+ İçin bir işleyici kaydettiğinizde <xref:System.AppDomain.AssemblyResolve> olay işleyicisi adına göre çalışma zamanının bir derlemeye bağlanacak başarısız olduğunda çağrılır. Örneğin, aşağıdaki yöntemleri çağırarak kullanıcı kodundan neden <xref:System.AppDomain.AssemblyResolve> tetiklenecek olayı:  
   
--   Bir <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> yöntemi aşırı yüklemesini veya <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> yöntemi aşırı yüklemesini, ilk bağımsız değişkeni olan yüklemek için derleme görünen adını temsil eden bir dize (diğer bir deyişle, tarafından döndürülen dize <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> özelliği).  
+-   Bir <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> yöntemi aşırı yüklemesini veya <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> yöntemi aşırı yüklemesi, ilk bağımsız değişken olan yüklenecek derlemenin görünen adını temsil eden bir dize (yani tarafından döndürülen dize <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> özelliği).  
   
--   Bir <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> yöntemi aşırı yüklemesini veya <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> yöntemi aşırı yüklemesini, ilk bağımsız değişkeni bir <xref:System.Reflection.AssemblyName> yüklemek için derleme tanımlayan nesne.  
+-   Bir <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> yöntemi aşırı yüklemesini veya <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> yöntemi aşırı yüklemesi, ilk bağımsız değişken bir <xref:System.Reflection.AssemblyName> yüklenecek derlemenin tanımlayan nesne.  
   
--   Bir <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType> yöntemi aşırı yüklemesini.  
+-   Bir <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType> yöntemi aşırı yüklemesi.  
   
--   Bir <xref:System.AppDomain.CreateInstance%2A?displayProperty=nameWithType> veya <xref:System.AppDomain.CreateInstanceAndUnwrap%2A?displayProperty=nameWithType> başka bir uygulama etki alanındaki bir nesneyi başlatır yöntemi aşırı yüklemesini.  
+-   Bir <xref:System.AppDomain.CreateInstance%2A?displayProperty=nameWithType> veya <xref:System.AppDomain.CreateInstanceAndUnwrap%2A?displayProperty=nameWithType> başka bir uygulama etki alanındaki bir nesnesini başlatan bir yöntemi aşırı yüklemesi.  
   
-### <a name="what-the-event-handler-does"></a>Olay işleyiciyi içermiyor  
- İşleyicisi <xref:System.AppDomain.AssemblyResolve> olayı olarak yüklenmesi için derleme görünen adını alır <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType> özelliği. İşleyicinin derleme adı tanımazsa, null döndürür (`Nothing` Visual Basic'te `nullptr` Visual C++'ta).  
+### <a name="what-the-event-handler-does"></a>Olay işleyicisi yapar  
+ İşleyici için <xref:System.AppDomain.AssemblyResolve> olayı içinde yüklenen derlemenin görünen adı alır <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType> özelliği. İşleyicinin derleme adı tanımazsa, null değeri döndürür (`Nothing` Visual Basic'te `nullptr` Visual C++'ta).  
   
- İşleyicinin derleme adı tanısa da yük ve istek karşılayan bir derlemeyi döndürür. Aşağıdaki listede bazı örnek senaryolar açıklanmaktadır.  
+ İşleyicinin derleme adı tanıyorsa Bu yük ve istek karşılayan bir derleme döndürür. Aşağıdaki liste bazı örnek senaryolar açıklanmaktadır.  
   
--   İşleyicinin derleme sürümünün konumunu biliyorsa kullanarak derleme yükleyebileceği <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> veya <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType> yöntemi ve yüklenen derleme başarılı olursa geri dönebilirsiniz.  
+-   İşleyicinin bir derlemenin sürümünü konumunu biliyorsa kullanarak derleme yükleyebileceği <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> veya <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType> yöntemi ve yüklenen derleme başarılıysa döndürebilir.  
   
--   İşleyici bayt dizileri depolanan derlemelerinin bir veritabanına erişimi varsa, aşağıdakilerden birini kullanarak bir bayt dizisi yükleyebileceği <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> bir bayt dizisi ele yöntemi aşırı.  
+-   İşleyici derlemeleri bayt dizileri depolanan bir veritabanına erişimi varsa, aşağıdakilerden birini kullanarak bir bayt dizisi yükleyebileceği <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> bir bayt dizisi ele yöntemi aşırı yüklemeleri.  
   
--   İşleyici, bir dinamik derleme oluşturur ve onu döndürür.  
+-   İşleyici, dinamik bir derleme oluşturmak ve onu döndürür.  
   
 > [!NOTE]
->  İşleyicinin derleme bağlamdan yükleme, yük bağlam içine veya bağlam olmadan içine yüklemeniz gerekir. İşleyicinin derleme salt yansıma bağlamına kullanarak yükler, <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> veya <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A?displayProperty=nameWithType> yöntemi, yükleme denemesi, geçirilen <xref:System.AppDomain.AssemblyResolve> olay başarısız olur.  
+>  İşleyicinin derleme load-from bağlamı, yükleme bağlamı veya bağlam olmadan içine yüklemeniz gerekir. İşleyicinin derleme salt yansıma bağlamına kullanarak yükler, <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> veya <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A?displayProperty=nameWithType> yöntemi, yükleme denemesi başlatan <xref:System.AppDomain.AssemblyResolve> event başarısız olur.  
   
- Uygun bir derleme döndürmek için olay işleyicisini sorumluluğundadır. İşleyici istenen derlemeyi görünen adını geçirerek ayrıştıramıyor <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType> özellik değerine <xref:System.Reflection.AssemblyName.%23ctor%28System.String%29> Oluşturucusu. İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], işleyici kullanabilirsiniz <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> geçerli isteğin bir bağımlılık başka bir derlemenin olup olmadığını belirlemek için özellik. Bu bilgiler bağımlılığını yerine getirecek bir derlemeyi tanımlamaya yardımcı olabilir.  
+ Uygun bir derleme döndürmek için olay işleyicisinin sorumluluğundadır. İşleyicinin istenen derlemenin görünen adını geçirerek ayrıştırabilirsiniz <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType> özellik değerini <xref:System.Reflection.AssemblyName.%23ctor%28System.String%29> Oluşturucusu. İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], işleyici kullanabilirsiniz <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> geçerli istek başka bir derlemenin bir bağımlılık olup olmadığını belirlemek için özellik. Bu bilgiler bağımlılığını yerine getirecek bir derleme belirlemenize yardımcı olabilir.  
   
- Olay işleyicisinin derleme istenen sürümden farklı bir sürümünü geri dönebilirsiniz.  
+ Olay işleyicisi, istenen sürümden derlemenin farklı bir sürümünü geri dönebilirsiniz.  
   
- Çoğu durumda, işleyici tarafından döndürülen derleme işleyicisi içine yükler bağlam bağımsız olarak yük bağlamında görüntülenir. Örneğin, işleyicinin kullanıyorsa <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> bağlamdan yükleme, derleme bir derlemeyi yüklemeye yöntemi işleyici döndürdüğünde yük bağlamında görüntülenir. Ancak, aşağıdaki durumda işleyici döndürdüğünde bağlamı olmadan derleme görünür:  
+ Çoğu durumda, işleyici tarafından döndürülen derleme yükleme bağlamı işleyicisi içine yükler bağlamı bağımsız olarak görünür. Örneğin, işleyicinin kullanıyorsa <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> load-from bağlamı içine derleme bir derlemeyi yüklemek için yöntemi işleyici döndürdüğünde yükleme bağlamı içinde görünür. Ancak, aşağıdaki örnekte işleyici döndürdüğünde bağlamı olmadan derleme görünür:  
   
 -   İşleyici bağlamı olmadan bir derleme yükler.  
   
 -   <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> Özelliği null değil.  
   
--   İstekte bulunan derleme (diğer bir deyişle, tarafından döndürülen derleme <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> özelliği) bağlamı olmadan yüklendi.  
+-   İstenen derleme (diğer bir deyişle, tarafından döndürülen derleme <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> özelliği) bağlamı olmadan yüklendi.  
   
- İçerikleri hakkında daha fazla bilgi için bkz: <xref:System.Reflection.Assembly.LoadFrom%28System.String%29?displayProperty=nameWithType> yöntemi aşırı yüklemesini.  
+ Bağlamları hakkında daha fazla bilgi için bkz. <xref:System.Reflection.Assembly.LoadFrom%28System.String%29?displayProperty=nameWithType> yöntemi aşırı yüklemesi.  
   
- Aynı uygulama etki alanına aynı bütünleştirilmiş kodda birden fazla sürümünü yüklenebilir. Atama sorunları yazmak için neden olabilir çünkü bu yöntem önerilmez. Bkz: [en iyi uygulamalar için derleme yükleme](../../../docs/framework/deployment/best-practices-for-assembly-loading.md).  
+ Aynı uygulama etki alanına aynı derlemenin birden çok sürümü yüklenebilir. Atama sorunları türüne neden olabileceği için bu uygulama önerilmez. Bkz: [en iyi uygulamalar için derleme yükleme](../../../docs/framework/deployment/best-practices-for-assembly-loading.md).  
   
 ### <a name="what-the-event-handler-should-not-do"></a>Hangi olay işleyicisi yapmanız gerekir  
- İşleme için birincil kuralı <xref:System.AppDomain.AssemblyResolve> olaydır, tarafından tanınmayan bir derlemeyi döndürülecek çalışmanız gerektiğidir değil. İşleyici yazarken, hangi derlemelerin olay çıkarılmasına neden olabilecek bilmeniz gerekir. İşleyicinizi diğer derlemeler için null değerini döndürmelidir.  
+ İşleme için birincil kuralı <xref:System.AppDomain.AssemblyResolve> olaydır tarafından tanınmayan bir derleme döndürülecek denememelisiniz. İşleyici yazdığınızda, hangi derlemelerin olay verilmesine neden olabilecek bilmeniz gerekir. İşleyicinizi diğer derlemeler için null değeri döndürmelidir.  
   
 > [!IMPORTANT]
->  İle başlayarak [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], <xref:System.AppDomain.AssemblyResolve> olayı için uydu derlemelerini oluşturulur. Tüm derleme yük istekleri çözmek işleyici çalışırsa, bu değişiklik .NET Framework'ün önceki bir sürümü için yazılmış bir olay işleyicisi etkiler. Bunlar tarafından tanınmayan derlemeleri yoksay olay işleyicileri bu değişiklikten etkilenmez: boş döndürmeleri ve normal geri dönüş mekanizması gelmelidir.  
+>  İle başlayarak [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], <xref:System.AppDomain.AssemblyResolve> olayı için uydu derlemeleri oluşturulur. Tüm derleme yük istekleri çözmek işleyici çalışırsa, bu değişiklik .NET Framework'ün önceki bir sürümü için yazılmış bir olay işleyicisi etkiler. Bunlar tarafından tanınmayan bütünleştirilmiş kodları yoksay olay işleyicileri, bu değişiklikten etkilenmez: boş döndürmeleri ve normal bir geri dönüş mekanizması ardından.  
   
- Bir derlemeyi yüklenirken, olay işleyicisi herhangi birini kullanmamalısınız <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> veya <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> neden olabilir yöntemi aşırı <xref:System.AppDomain.AssemblyResolve> yükseltilmiş yinelemeli olarak, çünkü bu bir yığın taşması neden olacak şekilde olay. (Bu konuda daha önce sağlanan listesine bakın.) Tüm olay işleyicileri döndürmüş kadar hiçbir özel durum nedeniyle özel durum işleme yükü talebi sağlayan olsa bile bu gerçekleşir. Bu nedenle, aşağıdaki kod, bir yığın taşması sonuçları `MyAssembly` bulunamadı:  
+ Bir derleme yüklenirken, olay işleyicisi herhangi birini kullanmak zorunda değilsiniz <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> veya <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> neden olabilecek bir yöntem aşırı yüklemeleri <xref:System.AppDomain.AssemblyResolve> bu için yığın taşmasına neden olabileceği için yükseltilmiş yinelemeli olarak olay. (Bu konunun önceki kısımlarında sağlanan listesine bakın.) Bu, özel durum işleme yükleme isteği için sağladığınız tüm olay işleyicileri dönene kadar hiçbir özel durum nedeniyle olsa bile gerçekleşir. Bu nedenle, aşağıdaki kod, bir yığın taşması sonuçları `MyAssembly` bulunamadı:  
   
  [!code-cpp[AssemblyResolveRecursive#1](../../../samples/snippets/cpp/VS_Snippets_CLR/assemblyresolverecursive/cpp/example.cpp#1)]
  [!code-csharp[AssemblyResolveRecursive#1](../../../samples/snippets/csharp/VS_Snippets_CLR/assemblyresolverecursive/cs/example.cs#1)]
  [!code-vb[AssemblyResolveRecursive#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/assemblyresolverecursive/vb/example.vb#1)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Bütünleştirilmiş Kod Yükleme için En İyi Yöntemler](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
- [Uygulama Etki Alanlarını Kullanma](../../../docs/framework/app-domains/use.md)
+- [Bütünleştirilmiş Kod Yükleme için En İyi Yöntemler](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
+- [Uygulama Etki Alanlarını Kullanma](../../../docs/framework/app-domains/use.md)

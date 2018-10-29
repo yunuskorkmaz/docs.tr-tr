@@ -2,12 +2,12 @@
 title: Listeler (F#)
 description: 'F # listeleri, öğeleri aynı türde sıralı, sabit bir dizi hakkında bilgi edinin.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 60e7edb56bdf498e3ba51aff028d8564eb68d0f1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b48bf04f5ec490b49e63462affc0d4eadebe10ef
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47210168"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201630"
 ---
 # <a name="lists"></a>Listeler
 
@@ -48,7 +48,7 @@ Kullanarak liste öğelerini ekleyebilirsiniz `::` (olumsuz) işleci. Varsa `lis
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1305.fs)]
 
-Kullanarak uyumlu türleri olan listeleri bitiştirebilirsiniz `@` işleci, aşağıdaki kodda gösterildiği gibi. Varsa `list1` olduğu `[2; 3; 4]` ve `list2` olduğu `[100; 2; 3; 4 ]`, bu kod oluşturur `list3` olarak `[2; 3; 4; 100; 2; 3; 4]`.
+Kullanarak uyumlu türleri olan listeleri bitiştirebilirsiniz `@` işleci, aşağıdaki kodda gösterildiği gibi. Varsa `list1` olduğu `[2; 3; 4]` ve `list2` olduğu `[100; 2; 3; 4]`, bu kod oluşturur `list3` olarak `[2; 3; 4; 100; 2; 3; 4]`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1306.fs)]
 

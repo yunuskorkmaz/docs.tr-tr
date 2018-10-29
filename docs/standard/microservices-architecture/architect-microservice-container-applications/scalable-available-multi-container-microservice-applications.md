@@ -1,139 +1,139 @@
 ---
-title: Mikro ve yüksek ölçeklenebilirlik ve kullanılabilirlik için birden çok kapsayıcı uygulamaları yönetme
-description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Mikro ve yüksek ölçeklenebilirlik ve kullanılabilirlik için birden çok kapsayıcı uygulamaları yönetme
+title: Mikro hizmetler ve yüksek ölçeklenebilirlik ve kullanılabilirlik için birden çok kapsayıcılı uygulamaları yönetme
+description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Mikro hizmetler ve yüksek ölçeklenebilirlik ve kullanılabilirlik için birden çok kapsayıcılı uygulamaları yönetme
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: aab939af29849ceeef76d6f61b3d4f59d701094c
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 25175e2a4409d53be412ae72be5af1c07c3ec68d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105468"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199673"
 ---
-# <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Mikro ve yüksek ölçeklenebilirlik ve kullanılabilirlik için birden çok kapsayıcı uygulamaları yönetme
+# <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Mikro hizmetler ve yüksek ölçeklenebilirlik ve kullanılabilirlik için birden çok kapsayıcılı uygulamaları yönetme
 
-Uygulamanızın üzerinde mikro tabanlı veya yalnızca arasında birden çok kapsayıcı bölünmüş durumunda orchestrators kullanarak üretime hazır uygulamalar için gereklidir. Böylece bir geliştirme ve dağıtım noktası görünüm otonom mikro hizmet tabanlı bir yaklaşım, daha önce sunulduğu şekilde her mikro hizmet modeli ve veri sahip olur. Ancak oluşur daha geleneksel (SOA gibi) birden çok hizmet uygulamasının olsa da birden çok kapsayıcı veya dağıtılmış bir sistem olarak dağıtılması için gereken bir tek iş uygulaması oluşturan Hizmetleri sahip olursunuz. Bu tür sistemlere genişletme ve yönetmek için karmaşık; Bu nedenle üretime hazır ve ölçeklenebilir çok kapsayıcısı uygulamasına sahip olmak istiyorsanız kesinlikle bir orchestrator gerekir.
+Uygulamanız üzerinde mikro hizmet tabanlı ya da birden çok kapsayıcıda yalnızca bölme düzenleyicileri kullanarak üretime hazır uygulamalar için gereklidir. Böylece bir geliştirme ve dağıtım açısından otonom mikro hizmet tabanlı bir yaklaşım, daha önce tanıtılan her mikro hizmet kendi modeli ve veri sahibi. Ancak oluşan daha geleneksel bir uygulama (SOA gibi) birden çok Hizmetleri olsa da birden çok kapsayıcı veya hizmet dağıtılmış bir sistemde dağıtılması gereken bir tek iş uygulaması oluşturan gerekir. Ölçeği genişletme ve yönetmek için bu tür sistemler karmaşıktır; Bu nedenle, üretime hazır ve ölçeklenebilir çok kapsayıcılı bir uygulama istiyorsanız kesinlikle bir orchestrator gerekir.
 
-Şekil 4-23 kümesinde birden çok mikro (kapsayıcı) oluşan bir uygulamanın dağıtım gösterilmektedir.
+Şekil 4-23 (kapsayıcılar) birden çok mikro hizmetlerden bir uygulama kümesi dağıtmayı gösterir.
 
 ![](./media/image23.PNG)
 
-**Şekil 4-23**. Kapsayıcıların bir küme
+**Şekil 4-23**. Kapsayıcıları kümesi
 
-Mantıksal bir yaklaşım gibi görünüyor. Ancak nasıl, işleme Yük Dengeleme, Yönlendirme ve bunları yönetme uygulamaları oluşur?
+Mantıksal bir yaklaşım gibi görünüyor. Ancak uygulamaları oluşan işleme Yük Dengeleme, Yönlendirme ve bunlar işlemlerini nasılsın?
 
-Tek Docker ana bilgisayarları düz Docker Makinesi'nde tek bir görüntü örnekleri bir konak üzerinde yönetme gereksinimlerini karşılayan, ancak daha karmaşık dağıtılmış uygulamalar için birden çok ana bilgisayara dağıtılan birden çok kapsayıcı Yönetimi söz konusu olduğunda kısa döner. Çoğu durumda, otomatik olarak kapsayıcıları, görüntü başına birden çok örneği ile genişleme kapsayıcıları başlatmak, bunları askıya alma veya gerektiğinde kapatmak ve ideal ayrıca nasıl veri ve ağ gibi kaynaklara erişim denetimini bir yönetim platformunun gerekir depolama alanı.
+Tek bir Docker ana bilgisayarları düz Docker altyapısındaki bir konak üzerinde tek bir görüntü örneklerini yönetme gereksinimlerini karşılayan, ancak daha karmaşık dağıtılmış uygulamaların birden çok konak üzerinde dağıtılan birden çok kapsayıcı yönetmek için söz konusu olduğunda kısa döner. Çoğu durumda, otomatik olarak kapsayıcılar, görüntü başına birden çok örneği ölçeklendirme kapsayıcılarla başlayın, bunları askıya alma veya gerektiğinde Kapat ve ideal olarak ayrıca nasıl veri ve ağ gibi kaynaklara erişim denetimini bir yönetim platformunun gerekir depolama alanı.
 
-Tek tek kapsayıcıları veya çok basit oluşan uygulamaları ve mikro büyük kuruluş uygulamalarıyla doğru taşıma yönetimini ötesine gitmek için düzenleme ve platformlar kümeleme için etkinleştirmeniz gerekir.
+Kapsayıcılara veya çok basit oluşturulmuş uygulamalar ve mikro Hizmetleri daha büyük kuruluş uygulamaları doğru taşıma yönetimini ötesine gitmek için düzenleme ve platformları kümeleme için etkinleştirmeniz gerekir.
 
-Mikro tabanlı uygulamaların oluşan büyük kuruluş oluşturuluyorsa bir mimari ve geliştirme açısından bakıldığında, aşağıdaki platformları ve Gelişmiş senaryoları desteklemek ürünleri anlamak önemlidir:
+Mikro hizmet tabanlı uygulamaları, oluşan büyük bir kurumsal oluşturuyorsanız bir mimari ve geliştirme açısından bakıldığında, aşağıdaki platformları ve Gelişmiş senaryolar destekleyen ürünleri anlamak önemlidir:
 
-**Kümeleri ve orchestrators**. Mikro hizmet tabanlı büyük bir uygulama, tüm ana bilgisayarlar tek bir küme temel platform karmaşıklığını özetleyen tarafından yönetebilmek için çok önemli olduğu gibi birçok Docker ana bilgisayarlar arasında uygulamalarının ölçeklendirmek gerektiğinde. Neler kapsayıcı kümeleri ve orchestrators sağlar olmasıdır. Azure Service Fabric, Kubernetes, Docker Swarm ve Mesosphere DC/OS orchestrators örnektir. Son üç açık kaynak orchestrators Azure Azure kapsayıcı hizmeti üzerinden kullanılabilir.
+**Kümeler ve düzenleyicileri**. Büyük bir mikro hizmet tabanlı uygulama, bu konak tarafından temel platform karmaşıklığını özetleyen tek bir küme halinde yönetmek için kritik olduğu gibi birçok Docker konakları arasında uygulamalarının ölçeğini gerektiğinde. Neler kapsayıcı kümeleri ve düzenleyicileri sağlar olmasıdır. Azure Service Fabric, Kubernetes, Docker Swarm ve Mesosphere DC/OS düzenleyicileri örnekleridir. Son üç açık kaynak düzenleyicileri, azure'da Azure Container Service aracılığıyla kullanılabilir.
 
-**Zamanlayıcılar**. *Zamanlama* özelliğine de bir kullanıcı Arabirimi sağladıkları için bir küme kapsayıcılarında başlatmak bir yöneticinin anlamına gelir. Bir küme Zamanlayıcı birkaç sorumlulukları vardır: küme kaynaklarını verimli bir şekilde kullanmak için verimli bir şekilde düğümleri veya konaklar arasında Yük Dengeleme kapsayıcıları için kullanıcı tarafından sağlanan kısıtlamaları ayarlamak ve yüksek sağlarken karşı hataları sağlam için Kullanılabilirlik.
+**Zamanlayıcılar**. *Zamanlama* özelliğine de bir kullanıcı Arabirimi sağlar, böylece bir kümedeki kapsayıcıları başlatmak bir yöneticinin anlamına gelir. Bir küme Zamanlayıcı çeşitli sorumlulukları vardır: küme kaynaklarını verimli bir şekilde kullanmak için verimli bir şekilde düğümleri veya konaklar arasında Yük Dengeleme kapsayıcıları için kullanıcı tarafından sağlanan kısıtlamaları ayarlamak ve yüksek sağlarken hatalarına karşı güçlü Kullanılabilirlik.
 
-Genellikle farklı satıcıları tarafından sağlanan ürünleri hem yetenekleri sağlamak için bir küme ve bir zamanlayıcı kavramlarını yakından ilişkilidir. Aşağıdaki liste, yazılım seçimler kümeleri ve zamanlayıcılar için sahip ve en önemli platform gösterir. Bu orchestrators, genellikle Azure gibi genel bulut olarak sunulur.
+Genellikle farklı satıcılar tarafından sağlanan ürün iki yetenekleri sağlamak için bir küme ve bir zamanlayıcı yakından ilişkilidir. Aşağıdaki listede, yazılım seçenek kümeleri ve zamanlayıcılar olması ve en önemli platform gösterir. Bu düzenleyiciler, Azure gibi genel bulutlarda genel kullanıma sunulur.
 
-## <a name="software-platforms-for-container-clustering-orchestration-and-scheduling"></a>Kapsayıcı kümeleme, düzenleme ve zamanlama için yazılım platformları
+## <a name="software-platforms-for-container-clustering-orchestration-and-scheduling"></a>Yazılım platformlarının kümeleme kapsayıcı, düzenleme ve zamanlama için
 
 Kubernetes
 
-![https://pbs.twimg.com/media/Bt\_pEfqCAAAiVyz.png](./media/image24.png)
+![Kubernetes logosu](./media/image24.png)
 
-> Kubernetes küme altyapısı ve yönetme olanağı zamanlama kapsayıcı aralıkları işlevselliği sağlayan bir açık kaynaklı üründür. Ana bilgisayar kümelerinde dağıtım, ölçeklendirme ve uygulama kapsayıcıları işlemlerini otomatikleştirmenizi sağlar.
+> Kubernetes kümesi altyapısı ve zamanlama işlemlerini özellikleri için kapsayıcı aralıkları işlevselliği sağlayan açık kaynaklı üründür. Bu ana bilgisayar kümeleri arasında dağıtım, ölçeklendirme ve uygulama kapsayıcıların işlemlerini otomatikleştirmenizi sağlar.
 >
-> Kubernetes kolay yönetim ve bulma için mantıksal birimler halinde uygulama kapsayıcıları grupları kapsayıcı merkezli bir altyapı sağlar.
+> Kubernetes uygulama kapsayıcıları kolay yönetim ve bulma için mantıksal birimler halinde gruplandırır kapsayıcı merkezli bir altyapı sağlar.
 >
-> Kubernetes Linux, Windows daha az olgun olgun ' dir.
+> Kubernetes, Linux, Windows daha az olgun olgun.
 
 Docker Swarm
 
-![http://rancher.com/wp-content/themes/rancher-2016/assets/images/swarm.png?v=2016-07-10-am](./media/image25.png)
+![Docker Swarm logosu](./media/image25.png)
 
-> Docker Swarm, küme ve Docker kapsayıcıları zamanlama sağlar. Swarm kullanarak, bir tek, sanal Docker ana bilgisayara bir havuzu Docker ana bilgisayarları kapatabilirsiniz. İstemcileri Swarm için birden çok ana ölçeklendirme uygulamaları kolaylaştırır anlamı konaklarına yaparlar aynı şekilde Swarm API isteğinde bulunabilir.
+> Docker Swarm, Docker kapsayıcıları zamanlayabilir ve küme olanak tanır. Swarm kullanarak Docker ana bilgisayarları havuzu tek, sanal bir Docker konağı kapatabilirsiniz. İstemciler, Swarm için birden çok konak ölçeklendirmek için uygulamaları kolaylaştırır anlamı Konaklara yaptıkları aynı şekilde Swarm için API isteklerinin yapabilirsiniz.
 >
-> Docker Swarm, Docker, şirket gelen bir üründür.
+> Docker Swarm, docker, şirket için kullanılan bir üründür.
 >
-> Docker v1.12 veya daha sonra yerel ve yerleşik Swarm modu çalıştırabilirsiniz.
+> Docker v1.12 veya yerel ve yerleşik Swarm modu daha sonra çalıştırabilir.
 
 Mesosphere DC/OS
 
-![https://mesosphere.com/wp-content/uploads/2016/04/logo-horizontal-styled.png](./media/image26.png)
+![Mesosphere DC/OS logosu](./media/image26.png)
 
-> Kurumsal DC/OS mesosphere (üzerinde Apache Mesos bağlı olarak) kapsayıcıları ve dağıtılmış uygulamaları çalıştırmak için bir üretime hazır platformudur.
+> Mesosphere Kurumsal DC/OS (üzerinde Apache Mesos tabanlı), kapsayıcılar ve dağıtılan uygulamaları çalıştırmak bir üretime hazır platformudur.
 >
-> DC/OS kümesinde kullanılabilir kaynaklar koleksiyonu özetleyen ve bu kaynakları üstünde derlendikten bileşenleri için kullanılabilir hale getirme çalışır. Marathon genellikle DC/OS ile tümleşik bir zamanlayıcı olarak kullanılır.
+> DC/OS kümesinde kullanılabilir kaynakları koleksiyonu özetleyen ve bu kaynaklar üzerinde oluşturulan bileşenler için kullanılabilir hale getirme çalışır. Marathon, genellikle DC/OS ile tümleşik bir zamanlayıcı olarak kullanılır.
 >
-> DC/OS Linux, Windows daha az olgun olgun ' dir.
+> DC/OS, Linux, Windows daha az olgun olgun.
 
 Azure Service Fabric
 
-![https://azure.microsoft.com/svghandler/service-fabric?width=600&height=315](./media/image27.png)
+![Azure Service Fabric logosu](./media/image27.png)
 
-> [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) uygulamaları oluşturmak için bir Microsoft mikro platformudur. Bu bir [orchestrator](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction) , hizmetleri ve makine kümeleri oluşturur. Service Fabric Hizmetleri kapsayıcıları veya düz işlemler olarak dağıtabilirsiniz. Hatta işlemlerde karışımı Hizmetleri aynı uygulama ve küme kapsayıcılara Hizmetleri ile dağıtabilirsiniz.
+> [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) uygulamaları oluşturmaya yönelik bir Microsoft mikro hizmet platformudur. Bu bir [orchestrator](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction) , hizmetleri ve makine kümeleri oluşturur. Service Fabric Hizmetleri düz işlemleri veya kapsayıcıları olarak dağıtabilirsiniz. Hatta işlemlerde karışımı Hizmetleri aynı uygulama ve küme kapsayıcılara hizmetleriyle alabilir.
 >
-> Service Fabric sağlar Ek ve isteğe bağlı düzenleyici [Service Fabric modellerini programlama ](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework) gibi [durum bilgisi olan hizmetler](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) ve [Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction).
+> Service Fabric, ek ve isteğe bağlı sağlar öngörücü [Service Fabric programlama modellerini ](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework) gibi [durum bilgisi olan hizmetler](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) ve [Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction).
 >
-> Service Fabric Windows'taki (Windows'ta yıl gelişen), daha az olgun Linux olgun. 
-> Linux ve Windows kapsayıcıları Service Fabric 2017 itibaren desteklenir.
+> Service Fabric (yıl içinde Windows gelişen) Windows, daha az olgun Linux'ta olgun kullanılıyor. 
+> Hem Linux hem de Windows kapsayıcıları Service Fabric'te 2017 itibarıyla desteklenir.
 
-## <a name="using-container-based-orchestrators-in-microsoft-azure"></a>Microsoft Azure'da kapsayıcı tabanlı orchestrators kullanma
+## <a name="using-container-based-orchestrators-in-microsoft-azure"></a>Microsoft Azure'daki kapsayıcı tabanlı düzenleyicileri kullanarak
 
-Birden fazla bulut satıcı Docker kapsayıcıları artı Docker kümeleri ve Microsoft Azure, Amazon EC2 kapsayıcı hizmeti ve Google kapsayıcı altyapısı dahil düzenleme desteği, sunar. Microsoft Azure bir sonraki bölümde açıklandığı gibi küme ve orchestrator Destek aracılığıyla Azure kapsayıcı Hizmeti'ni (ACS), Docker sağlar.
+Docker kapsayıcıları desteği yanı sıra Docker kümeler ve düzenleme desteği, Microsoft Azure, Amazon EC2 Container Service ve Google Container altyapısı dahil olmak üzere birden fazla bulut satıcılarına sunar. Microsoft Azure Docker sonraki bölümde açıklandığı gibi küme ve orchestrator desteği Azure Container Service (ACS) aracılığıyla sağlar.
 
-Microsoft Azure hizmet de Linux ve Windows kapsayıcıları göre Docker desteklediği Fabric (bir mikro platformu) kullanan başka bir seçenektir. Service Fabric Azure veya başka bir bulut üzerinde çalışır ve aynı zamanda çalıştırır [şirket içi](https://docs.microsoft.com/azure/service-fabric/service-fabric-deploy-anywhere).
+Başka bir seçenek ise Microsoft Azure Service ayrıca Linux ve Windows kapsayıcıları göre Docker'ı destekleyen Fabric (bir mikro hizmet platformu) kullanmaktır. Service Fabric, Azure veya başka bir bulut üzerinde çalışır ve de çalışır [şirket içi](https://docs.microsoft.com/azure/service-fabric/service-fabric-deploy-anywhere).
 
-## <a name="using-azure-container-service"></a>Azure kapsayıcı hizmeti kullanma
+## <a name="using-azure-container-service"></a>Azure Container Service'i kullanma
 
-Docker küme birden çok Docker ana havuzları ve kümeye birden çok kapsayıcı dağıtabilmek için bunları tek bir sanal Docker ana bilgisayar, kullanıma sunar. Kümenin tüm karmaşık yönetim tesisat, ölçeklenebilirlik, sistem durumu ve diğerleri gibi işler. Şekil 4-24 Docker küme oluşan uygulamaları için Azure kapsayıcı Hizmeti'ni (ACS) nasıl eşlendiğini temsil eder.
+Bir Docker kümesi birden fazla Docker ana bilgisayarları havuzları ve birden çok kapsayıcı kümesine dağıtmak için bunları bir tek sanal Docker konağı olarak kullanıma sunar. Küme ölçeklenebilirliği, sistem durumu ve benzeri gibi tüm karmaşık yönetim ayarlamaları, işler. Şekil 4-24 bir Docker kümesi oluşturulan uygulamalar için Azure Container Service (ACS) nasıl eşlendiğini temsil eder.
 
-ACS oluşturma, yapılandırma ve bir küme kapsayıcılı uygulamaları çalıştırmak için önceden yapılandırılmış sanal makinelerin yönetimini basitleştirmek için bir yol sağlar. Popüler açık kaynak planlama ve düzenleme Araçları'nın en iyi duruma getirilmiş bir Yapılandırması'nı kullanarak ACS varolan yeteneklerinizi kullanın veya Microsoft Azure üzerinde kapsayıcı tabanlı uygulamaları dağıtmak ve yönetmek için topluluk uzmanlık büyük ve artan bir gövde üzerinde çizmek sağlar .
+ACS oluşturma, yapılandırma ve kapsayıcılı uygulamaları çalıştırmak için önceden yapılandırılmış sanal makine kümesi yönetimini basitleştirmek için bir yol sağlar. Popüler açık kaynak planlama ve düzenleme araçlarının iyileştirilmiş yapılandırmalarını kullanarak ACS mevcut becerilerinizi kullanabilir veya Microsoft azure'daki kapsayıcı tabanlı uygulamaları dağıtmak ve yönetmek için topluluk uzmanlığından geniş ve büyüyen bir gövdesi üzerinde çizim yapmanızı sağlar .
 
-Azure kapsayıcı hizmeti popüler Docker kümeleme açık kaynak Araçlar ve teknolojiler yapılandırmasını özellikle Azure için en iyi duruma getirir. Taşınabilirlik kapsayıcılarınızı ve uygulama yapılandırmanızı sağlayan açık olan çözüm alın. Boyut, ana bilgisayar sayısı ve orchestrator araçları seçin ve kapsayıcı hizmeti şey işler.
+Azure kapsayıcı hizmeti popüler Docker kümeleme açık kaynaklı araçların ve teknolojilerin yapılandırmasını özellikle Azure'a yönelik en iyi duruma getirir. Hem kapsayıcılarınız hem de uygulama yapılandırmanız için taşınabilirlik sunan bir açık çözümü sahip olursunuz. Boyutu, konak sayısını ve düzenleyici araçlarını seçin ve kapsayıcı hizmeti, diğer her şey yapar.
 
 ![](./media/image28.png)
 
-**Şekil 4-24**. Azure kapsayıcı hizmeti küme seçenekleri
+**Şekil 4-24**. Azure Container Service'te küme seçenekleri
 
-ACS, uygulama kapsayıcıları tümüyle taşınabilir olduğundan emin olmak için Docker görüntüleri yararlanır. Bu uygulamalar binlerce veya hatta binlerce kapsayıcıları için Genişletilebilir emin olmak için tercih ettiğiniz DC/OS (Apache Mesos tarafından desteklenen), (ilk olarak Google tarafından oluşturulan) Kubernetes ve Docker Swarm, gibi açık kaynaklı orchestration platformlarda destekler.
+ACS, uygulama kapsayıcılarınızın tamamen taşınabilir olmasını sağlamak için Docker görüntülerini yararlanır. Bu, bu uygulamaları binlerce veya on binlerce kapsayıcının ölçeklendirilebilir emin olmak için tercih ettiğiniz gibi DC/OS (Apache Mesos tarafından desteklenen), (ilk olarak Google tarafından oluşturulan) Kubernetes ve Docker Swarm, açık kaynaklı düzenleme platformları destekler.
 
-Azure kapsayıcı hizmeti hala düzenleme katmanları dahil olmak üzere uygulama taşınabilirliği korurken Azure Kurumsal düzeyde özelliklerden yararlanmak sağlar.
+Azure kapsayıcı hizmeti, Azure'un kuruluş düzeyindeki özelliklerinden faydalanırken düzenleme katmanına dahil olmak üzere uygulama taşınabilirliğini, yararlanmak sağlar.
 
 ![](./media/image29.png)
 
-**Şekil 4-25**. ACS orchestrators
+**Şekil 4-25**. Acs'de düzenleyicileri
 
-Şekil 4-25 gösterildiği gibi Azure kapsayıcı hizmeti DC/OS, Kubernetes veya Docker Swarm dağıtmak için Azure tarafından sağlanan yalnızca altyapısıdır ancak ACS herhangi bir ek orchestrator uygulamıyor. Bu nedenle, ACS bir orchestrator, bu nedenle kapsayıcıları için mevcut açık kaynak orchestrators yararlanan bir altyapı değil.
+Şekil 4-25 gösterildiği gibi Azure Container Service DC/OS, Kubernetes veya Docker Swarm dağıtmak için Azure tarafından sağlanan yalnızca altyapısıdır ancak ACS herhangi bir ek orchestrator uygulamaz. Bu nedenle, ACS bir orchestrator bu nedenle, kapsayıcılar için mevcut açık kaynak düzenleyicileri yararlanan bir altyapı yoktur.
 
-Kullanım açısından bakıldığında, Azure kapsayıcı hizmeti popüler açık kaynak Araçlar ve teknolojiler kullanarak bir kapsayıcı barındırma ortamı sağlamak için hedefidir. Bu amaçla, standart API uç noktaları için seçilen orchestrator gösterir. Bu uç noktalar kullanarak, bu uç noktalar ile iletişim kurabilirsiniz herhangi bir yazılım yararlanabilirsiniz. Örneğin, Docker Swarm uç nokta söz konusu olduğunda, Docker komut satırı arabirimi (CLI) kullanmayı seçebilirsiniz. DC/OS için DC/OS CLI kullanmayı seçebilirsiniz.
+Kullanım açısından bakıldığında, Azure Container Service, popüler açık kaynak araçları ve teknolojileri kullanan bir kapsayıcı barındırma ortamı sağlamak için hedeftir. Şu an için kullandığınız düzenleyici için standart API uç noktalarını gösterir. Bu uç noktaları kullanarak, bu Uç noktalara konuşabilirsiniz tüm yazılımlardan faydalanabilirsiniz. Örneğin, Docker Swarm uç noktasıyla Docker komut satırı arabirimi (CLI) kullanmayı seçebilirsiniz. DC/OS için DC/OS CLI'yı kullanmayı seçebilirsiniz.
 
-### <a name="getting-started-with-azure-container-service"></a>Azure kapsayıcı hizmeti ile çalışmaya başlama 
+### <a name="getting-started-with-azure-container-service"></a>Azure Container Service ile çalışmaya başlama 
 
-Azure kapsayıcı hizmeti kullanmaya başlamak için bir Azure kapsayıcı hizmeti kümesi Azure portalından bir Azure Resource Manager şablonu kullanarak dağıttığınız veya [CLI](https://docs.microsoft.com/cli/azure/install-azure-cli). Kullanılabilir şablonların dahil [Docker Swarm](https://github.com/Azure/azure-quickstart-templates/tree/master/101-acs-swarm), [Kubernetes](https://github.com/Azure/azure-quickstart-templates/tree/master/101-acs-kubernetes), ve [DC/OS](https://github.com/Azure/azure-quickstart-templates/tree/master/101-acs-dcos). Hızlı Başlangıç şablonlarını ek veya Gelişmiş Azure yapılandırması eklemek için değiştirilebilir. Azure kapsayıcı hizmeti kümesini dağıtma hakkında daha fazla bilgi için bkz: [Azure kapsayıcı hizmeti kümesini dağıtma](https://docs.microsoft.com/azure/container-service/container-service-deployment) Azure Web sitesinde.
+Azure Container Service'i kullanmaya başlamak için bir Azure Container Service kümesi Azure portalında bir Azure Resource Manager şablonu kullanarak dağıtmanız veya [CLI](https://docs.microsoft.com/cli/azure/install-azure-cli). Kullanılabilir şablonlar [Docker Swarm](https://github.com/Azure/azure-quickstart-templates/tree/master/101-acs-swarm), [Kubernetes](https://github.com/Azure/azure-quickstart-templates/tree/master/101-acs-kubernetes), ve [DC/OS](https://github.com/Azure/azure-quickstart-templates/tree/master/101-acs-dcos). Hızlı Başlangıç şablonları, ek veya Gelişmiş Azure yapılandırmalarını dahil edecek şekilde değiştirilebilir. Bir Azure Container Service kümesi dağıtma hakkında daha fazla bilgi için bkz. [bir Azure Container Service kümesi dağıtma](https://docs.microsoft.com/azure/container-service/container-service-deployment) Azure Web sitesinde.
 
-Varsayılan olarak ACS bir parçası olarak yüklenen yazılım hiçbirini hiçbir ücretlerinin vardır. Tüm varsayılan seçenekleri açık kaynaklı yazılım ile uygulanır.
+Herhangi bir ACS bir parçası olarak varsayılan olarak yüklü olan yazılım için herhangi bir ücret yoktur. Tüm varsayılan seçenekleri ile açık kaynaklı yazılım uygulanır.
 
-ACS standart A, D, DS, G ve GS serisi Linux sanal makineleri azure'da şu anda kullanılabilir. Yalnızca seçtiğiniz işlem örnek olarak, depolama ve ağ gibi kullanılan diğer temel altyapı kaynaklar için ücretlendirilirsiniz. ACS kendisi için artımlı harcamanız yok.
+ACS şu anda standart A, D, DS, G ve GS serisi azure'da Linux sanal makineleri için kullanılabilir. Yalnızca seçtiğiniz işlem örnekleri yanı sıra, depolama ve ağ gibi kullanılan temel altyapı kaynakları için ücretlendirilirsiniz. ACS hizmetinin kendisi için artımlı ücretlendirme yoktur.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
--   **Azure kapsayıcı hizmeti çözümleriyle barındırma Docker kapsayıcısı giriş**
+-   **Docker kapsayıcı barındırma çözümlerine Azure Container Service ile giriş**
     [*https://docs.microsoft.com/azure/container-service/container-service-intro*](https://docs.microsoft.com/azure/container-service/container-service-intro)
 
--   **Docker Swarm genel bakış**
+-   **Docker Swarm'a genel bakış**
     [*https://docs.docker.com/swarm/overview/*](https://docs.docker.com/swarm/overview/)
 
--   **Swarm moduna genel bakış**
+-   **Swarm modu genel bakış**
     [*https://docs.docker.com/engine/swarm/*](https://docs.docker.com/engine/swarm/)
 
 -   **Mesosphere DC/OS genel bakış**
     [*https://docs.mesosphere.com/1.7/overview/*](https://docs.mesosphere.com/1.7/overview/)
 
--   **Kubernetes.** Resmi site. \
+-   **Kubernetes.** Resmi sitesi. \
     [*https://kubernetes.io/*](https://kubernetes.io/)
 
 
 >[!div class="step-by-step"]
 [Önceki](resilient-high-availability-microservices.md)
-[sonraki](using-azure-service-fabric.md)
+[İleri](using-azure-service-fabric.md)

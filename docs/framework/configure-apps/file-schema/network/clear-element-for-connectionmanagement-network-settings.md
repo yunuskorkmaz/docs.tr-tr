@@ -10,14 +10,12 @@ helpviewer_keywords:
 - clear element, connectionManagement
 - <connectionManagement>, clear element
 ms.assetid: fb259282-84c4-4dc4-a226-78d904a6edc3
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 7802a64716f8bde278fe3f8ed8214f6ac01eadbc
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: dba05128220b34bed34da4309a4994cbc4e1bd40
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316525"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50205106"
 ---
 # <a name="ltcleargt-element-for-connectionmanagement-network-settings"></a>&lt;Temizle&gt; connectionManagement (ağ ayarları) için
 Bağlantı yönetim listesini temizler.  
@@ -70,6 +68,6 @@ Bağlantı yönetim listesini temizler.
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Net.ServicePoint>  
- <xref:System.Net.ServicePointManager>  
- [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net.ServicePoint>  
+- <xref:System.Net.ServicePointManager>  
+- [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

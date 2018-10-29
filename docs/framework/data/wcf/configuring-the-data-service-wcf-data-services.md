@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
-ms.openlocfilehash: 0824a43cba1a21cc9ae92b1f807c6a1369fd63ed
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: a564d214e933cb91e834191eb5dc5297c733664f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47075794"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50202282"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>Veri hizmetini (WCF Veri Hizmetleri) yapılandırma
 İle [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], kullanıma Veri Hizmetleri oluşturabileceğiniz [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akışları. Bu akışları verileri çeşitli veri kaynaklarından gelebilir. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Bu veriler olarak kullanıma sunmak için veri sağlayıcıları kullanan bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akış. Bu sağlayıcıları içerir bir [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] sağlayıcısı, yansıma sağlayıcısı ve özel veri hizmeti sağlayıcısı arabirimleri kümesi. Sağlayıcı uygulaması hizmeti için veri modelini tanımlar. Daha fazla bilgi için [Veri Hizmetleri sağlayıcıları](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).  
@@ -36,8 +36,8 @@ ms.locfileid: "47075794"
 |<xref:System.Data.Services.DataServiceBehavior.InvokeInterceptorsOnLinkDelete%2A>|İki varlık arasında ilişki bağlantı silindiğinde ilgili varlıklar üzerinde değişiklik dinleyicileri çağrılan kayıtlı olup olmadığını belirlemenizi sağlar.|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxBatchCount%2A>|Değişiklik kümesi sayısı sınırlandırmak ve tek bir toplu iş izin verilen işlemler sorgulamanızı sağlar. Daha fazla bilgi için [OData: Batch](https://go.microsoft.com/fwlink/?LinkId=185602) ve [toplu işleme işlemlerini](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md).|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxChangesetCount%2A>|Bir tek bir değişiklik kümesine dahil değişiklikleri sayısını sınırlamak sağlar. Daha fazla bilgi için [nasıl yapılır: etkinleştirme sayfalama veri hizmeti sonuçlarını](../../../../docs/framework/data/wcf/how-to-enable-paging-of-data-service-results-wcf-data-services.md).|  
-|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandCount%2A>|Bir yanıt boyutu kullanarak tek bir istekte eklenebilir ilgili varlıkları sayısını sınırlayarak sınırlamanıza olanak tanır `$expand` sorgu işleci. Daha fazla bilgi için bkz: [OData: URI kurallarına](https://go.microsoft.com/fwlink/?LinkId=185564) ve [ertelenmiş içerik yükleme](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).|  
-|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandDepth%2A>|Bir yanıt boyutu kullanarak tek bir istekte dahil edilebilecek olan ilgili varlıkların grafik derinliği sınırlayarak sınırlamanıza olanak tanır `$expand` sorgu işleci. Daha fazla bilgi için bkz: [OData: URI kurallarına](https://go.microsoft.com/fwlink/?LinkId=185564) ve [ertelenmiş içerik yükleme](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).|  
+|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandCount%2A>|Bir yanıt boyutu kullanarak tek bir istekte eklenebilir ilgili varlıkları sayısını sınırlayarak sınırlamanıza olanak tanır `$expand` sorgu işleci. Daha fazla bilgi için [OData: URI kurallarına](https://go.microsoft.com/fwlink/?LinkId=185564) ve [ertelenmiş içerik yükleme](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).|  
+|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandDepth%2A>|Bir yanıt boyutu kullanarak tek bir istekte dahil edilebilecek olan ilgili varlıkların grafik derinliği sınırlayarak sınırlamanıza olanak tanır `$expand` sorgu işleci. Daha fazla bilgi için [OData: URI kurallarına](https://go.microsoft.com/fwlink/?LinkId=185564) ve [ertelenmiş içerik yükleme](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxObjectCountOnInsert%2A>|Tek bir POST isteğinde bulunabilir eklenecek varlıklar sayısını sınırlamak sağlar.|  
 |<xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A>|Veri Hizmeti tarafından kullanılan Atom protokol sürümünü tanımlar. Zaman değerini <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> en büyük değerini daha düşük bir değere ayarlanmış <xref:System.Data.Services.Common.DataServiceProtocolVersion>, en son işlevselliğini [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] veri hizmeti erişen istemciler için kullanılabilir değil. Daha fazla bilgi için [veri hizmeti sürümü oluşturma](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxResultsPerCollection%2A>|Bir veri akışı olarak döndürülen her varlık kümesindeki varlıkların sayısını sınırlayarak yanıt boyutunu sınırlamak sağlar.|  

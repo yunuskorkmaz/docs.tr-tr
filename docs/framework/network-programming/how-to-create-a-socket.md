@@ -18,11 +18,11 @@ helpviewer_keywords:
 - sockets, creating
 ms.assetid: c64a049c-5981-43bc-a2dc-1851473589c7
 ms.openlocfilehash: 2c3bfb6435901ac8154bc801ae2a420b252d5849
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50046768"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50202269"
 ---
 # <a name="how-to-create-a-socket"></a>Nasıl yapılır: Yuva oluşturma
 Yuvanın uzak cihazlarla iletişim kurmak için bir yuva kullanmadan önce protokolü ve ağ adresi bilgilerini başlatılması gerekir. Oluşturucusu <xref:System.Net.Sockets.Socket> sınıfı Adres ailesi, yuva türünü ve yuva bağlantı kurmak için kullandığı protokol türü parametresi vardır.  

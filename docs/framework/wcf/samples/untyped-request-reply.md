@@ -2,12 +2,12 @@
 title: Yazılmamış istek-yanıt
 ms.date: 03/30/2017
 ms.assetid: 0bf0f9d9-7caf-4d3d-8c9e-2d468cca16a5
-ms.openlocfilehash: 55692282aa06b8e988f44806394bdfcbb6e2f3ec
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b6e93ad0782fcacbc4ce20c0e9bb407abdf2366f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528599"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195313"
 ---
 # <a name="untyped-requestreply"></a>Yazılmamış İstek/Yanıt
 Bu örnek ileti sınıfını kullanma işlemi sözleşmelerini tanımlamak nasıl gösterir.  
@@ -17,14 +17,14 @@ Bu örnek ileti sınıfını kullanma işlemi sözleşmelerini tanımlamak nası
   
  Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md). Hizmet sözleşmesi bir ileti türü bağımsız değişken olarak alır ve bir ileti döndüren bir işlemi tanımlar. İşlemi, iletinin gövdesinden toplamı hesaplamak için gerekli tüm verileri toplar ve toplamı dönüş ileti gövdesinde olarak gönderir.  
   
-```  
+```csharp
 [OperationContract(Action = CalculatorService.RequestAction, ReplyAction = CalculatorService.ReplyAction)]  
 Message ComputeSum(Message request);  
 ```  
   
  Hizmet işlemi giriş iletisinde geçirilen dizisi alır ve toplamı hesaplar. Bir yanıt iletisi göndermek için örnek uygun ileti sürümü ve eylem ile yeni bir ileti oluşturur ve kendi gövdesi olarak hesaplanan toplam ekler. Aşağıdaki örnek kod bu gösterir.  
   
-```  
+```csharp
 public Message ComputeSum(Message request)  
 {  
     //The body of the message contains a list of numbers which will be   
@@ -45,7 +45,7 @@ public Message ComputeSum(Message request)
   
  İstemci tarafından oluşturulan kodda [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) uzak hizmet için bir ara sunucu oluşturmak için. Bir istek iletisi göndermek için istemci bağlıdır altındaki bir kanalda ileti sürümü olması gerekir. Bu nedenle, yeni bir oluşturur <xref:System.ServiceModel.OperationContextScope> oluşturur, oluşturulan proxy kanalı kapsamlı bir <xref:System.ServiceModel.OperationContext> içinde doldurulmuş doğru ileti sürümü ile kendi `OutgoingMessageHeaders.MessageVersion` özelliği. İstemci Giriş dizisinin için istek iletisi gövdesi olarak geçirir ve sonra çağırır `ComputeSum` proxy. İstemci ardından geçirilen erişerek girişleri toplamını alır `GetBody<T>` yöntemi yanıt iletisi. Aşağıdaki örnek kod bu gösterir.  
   
-```  
+```csharp
 using (new OperationContextScope(client.InnerChannel))  
 {  
     // Call the Sum service operation.  
@@ -63,7 +63,7 @@ using (new OperationContextScope(client.InnerChannel))
   
  Bu örnek bir Web barındırılan bir örnektir ve bu nedenle yalnızca istemci yürütülebilir dosyayı çalıştırmanız gerekir. İstemci örnek çıktı verilmiştir.  
   
-```  
+```console  
 Prompt>Client.exe  
 Sum of numbers passed (1,2,3,4,5) = 15  
   

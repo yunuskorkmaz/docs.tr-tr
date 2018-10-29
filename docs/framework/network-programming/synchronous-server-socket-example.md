@@ -10,11 +10,11 @@ helpviewer_keywords:
 - sockets, synchronous server sockets
 ms.assetid: 5916c764-879f-4716-99fb-1d21c6237f1c
 ms.openlocfilehash: 51fe16b3e0859a9ab39dcd34a55e51bd4bcad86d
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50045921"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201996"
 ---
 # <a name="synchronous-server-socket-example"></a>Zaman uyumlu sunucu yuvası örneği
 Aşağıdaki örnek program istemcilerinden gelen bağlantı istekleri alan bir sunucu oluşturur. Sunucu, istemci bir bağlantı beklerken sunucu uygulamasının yürütülmesini askıya alınmış şekilde zaman uyumlu bir yuva ile oluşturulmuştur. Uygulama istemciden bir dize alır, dize konsolda görüntüler ve ardından istemcisine dize görüntülemektedir. İstemciden gelen dize, dize içermelidir "\<EOF >" iletisinin son sinyal.  

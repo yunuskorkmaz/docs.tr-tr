@@ -3,11 +3,11 @@ title: Kullanıcı Kodu İzleri Yayma
 ms.date: 03/30/2017
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
 ms.openlocfilehash: 0664c11d8020ee5e712ce6d4843c85a1f30b11a3
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50049171"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200593"
 ---
 # <a name="emitting-user-code-traces"></a>Kullanıcı Kodu İzleri Yayma
 Windows Communication Foundation (WCF) tarafından oluşturulan izleme verilerini toplamak için yapılandırma izleme etkinleştirmeye ek olarak, kullanıcı kodunda programlı olarak izlemeleri gönderebilir. Bu şekilde, tanılama amacıyla daha sonra tekrar kullanmanıza ölçümlü izleme verilerini proaktif bir şekilde oluşturabilirsiniz. Bu konuda, bunu nasıl yapabileceğiniz açıklanır.  

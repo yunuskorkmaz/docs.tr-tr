@@ -14,11 +14,11 @@ helpviewer_keywords:
 - Me keyword [Visual Basic], as object variable
 ms.assetid: 3706811d-fd40-44fe-8727-d692e8e55d6d
 ms.openlocfilehash: 571b09a0783ec0dfd09970b000faec39dca682b3
-ms.sourcegitcommit: 4621e67f69e7a9503ea93313ff60d69683207889
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49995376"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201944"
 ---
 # <a name="object-variable-assignment-visual-basic"></a>Nesne Değişkeni Ataması (Visual Basic)
 Bir nesne bir nesne değişkenine atamak için bir normal atama ifadesi kullanın. Bir nesne ifadesi atayabilirsiniz veya [hiçbir şey](../../../../visual-basic/language-reference/nothing.md) anahtar sözcüğü, aşağıdaki örnek gösterir.  

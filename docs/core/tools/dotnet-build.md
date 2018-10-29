@@ -4,12 +4,12 @@ description: Dotnet bir projeyi ve tüm bağımlılıklarını komut derlemeleri
 author: mairaw
 ms.author: mairaw
 ms.date: 05/25/2018
-ms.openlocfilehash: da33647e583af8441218f64fb8ac76d5de3cee38
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: c9d1478e3d3e298b01e707242cc7ad5cd924a9b3
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46580115"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200563"
 ---
 # <a name="dotnet-build"></a>DotNet derleme
 
@@ -23,14 +23,16 @@ ms.locfileid: "46580115"
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
 ```
-dotnet build [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--no-dependencies] [--no-incremental]
+dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--force] [--no-dependencies] [--no-incremental]
     [--no-restore] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
+
 dotnet build [-h|--help]
 ```
 # <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
 ```
-dotnet build [<PROJECT>] [-c|--configuration] [-f|--framework] [--no-dependencies] [--no-incremental] [-o|--output]
+dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--no-dependencies] [--no-incremental] [-o|--output]
     [-r|--runtime] [-v|--verbosity] [--version-suffix]
+
 dotnet build [-h|--help]
 ```
 ---
@@ -61,9 +63,9 @@ Bir kitaplığı üretmek için atla `<OutputType>` özelliği. Çıkışı ana 
 
 ## <a name="arguments"></a>Arguments
 
-`PROJECT`
+`PROJECT | SOLUTION`
 
-Derleme için proje dosyası. Bir proje dosyası belirtilmezse, MSBuild ile biten bir dosya uzantısına sahip bir dosya için geçerli çalışma dizini arar *proj* ve bu dosyayı kullanır.
+Derleme için proje veya çözüm dosyası. Bir proje veya çözüm dosyası belirtilmezse, MSBuild içinde biten bir dosya uzantısına sahip bir dosya için geçerli çalışma dizini arar *proj* veya *sln* ve bu dosyayı kullanır.
 
 ## <a name="options"></a>Seçenekler
 
