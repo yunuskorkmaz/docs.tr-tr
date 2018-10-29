@@ -15,11 +15,11 @@ ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9c43f75dc17d49fe34094829387673b0f1f1d028
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50045502"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201588"
 ---
 # <a name="best-practices-for-assembly-loading"></a>Derleme Yükleme için En İyi Yöntemler
 Yol açabilir türü kimliği sorunları önlemek için bu makalede ele alınmaktadır <xref:System.InvalidCastException>, <xref:System.MissingMethodException>ve diğer hataları. Aşağıdaki öneriler anlatılmaktadır:  

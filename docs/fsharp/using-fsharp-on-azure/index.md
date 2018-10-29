@@ -3,12 +3,12 @@ title: Azure’da F# Kullanma
 description: 'F # ile Azure hizmetlerini kullanmaya Kılavuzu'
 author: sylvanc
 ms.date: 09/22/2016
-ms.openlocfilehash: 96dec342379b06e997107cc5d6cc05e9fc737452
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 1fbb85a07fc057c1b89a4c4a1ad356066cebf2b8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50033967"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201510"
 ---
 # <a name="using-f-on-azure"></a>Azure’da F# Kullanma
 
@@ -40,7 +40,7 @@ Azure işlevleri ve F # kullanarak diğer kaynaklar:
 
 ## <a name="using-azure-storage-with-f"></a>Azure depolama ile F # kullanma #
 
-Azure depolama, depolama hizmetleri dayanıklılık, kullanılabilirlik ve ölçeklenebilirlik, müşterilerin ihtiyaçlarını karşılamak üzere dayanan modern uygulamalar için temel bir katmanıdır. F # programları doğrudan aşağıdaki makalelerde açıklanan techinques kullanarak Azure depolama hizmetleri ile etkileşim kurabilir.
+Azure depolama, depolama hizmetleri dayanıklılık, kullanılabilirlik ve ölçeklenebilirlik, müşterilerin ihtiyaçlarını karşılamak üzere dayanan modern uygulamalar için temel bir katmanıdır. F#Program, doğrudan aşağıdaki makalelerde açıklanan teknikleri kullanarak Azure depolama hizmetleri ile etkileşim kurabilir.
 
 * [F# kullanarak Azure Blob depolama kullanmaya başlama](blob-storage.md)
 * [F# kullanarak Azure Dosya depolama kullanmaya başlama](file-storage.md)
