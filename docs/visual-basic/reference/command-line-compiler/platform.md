@@ -6,84 +6,82 @@ helpviewer_keywords:
 - /platform compiler option [Visual Basic]
 - -platform compiler option [Visual Basic]
 ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ec3a7e01e62b60688080fee95cf70e0ed38917f2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: aececd9d99b87782b943f9be905a4b399be85d56
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43552198"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199728"
 ---
-# <a name="-platform-visual-basic"></a><span data-ttu-id="c6e48-102">-platform (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c6e48-102">-platform (Visual Basic)</span></span>
-<span data-ttu-id="c6e48-103">Çıkış dosyası hangi ortak dil çalışma zamanı (CLR) platform sürümünü çalıştırabilirsiniz belirtir.</span><span class="sxs-lookup"><span data-stu-id="c6e48-103">Specifies which platform version of common language runtime (CLR) can run the output file.</span></span>  
+# <a name="-platform-visual-basic"></a><span data-ttu-id="0bd6b-102">-platform (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0bd6b-102">-platform (Visual Basic)</span></span>
+<span data-ttu-id="0bd6b-103">Çıkış dosyası hangi ortak dil çalışma zamanı (CLR) platform sürümünü çalıştırabilirsiniz belirtir.</span><span class="sxs-lookup"><span data-stu-id="0bd6b-103">Specifies which platform version of common language runtime (CLR) can run the output file.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c6e48-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c6e48-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0bd6b-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="0bd6b-104">Syntax</span></span>  
   
 ```  
 -platform:{ x86 | x64 | Itanium | arm | anycpu | anycpu32bitpreferred }  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="c6e48-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="c6e48-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="0bd6b-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="0bd6b-105">Arguments</span></span>  
   
-|<span data-ttu-id="c6e48-106">Terim</span><span class="sxs-lookup"><span data-stu-id="c6e48-106">Term</span></span>|<span data-ttu-id="c6e48-107">Tanım</span><span class="sxs-lookup"><span data-stu-id="c6e48-107">Definition</span></span>|  
+|<span data-ttu-id="0bd6b-106">Terim</span><span class="sxs-lookup"><span data-stu-id="0bd6b-106">Term</span></span>|<span data-ttu-id="0bd6b-107">Tanım</span><span class="sxs-lookup"><span data-stu-id="0bd6b-107">Definition</span></span>|  
 |---|---|  
-|`x86`|<span data-ttu-id="c6e48-108">Derlemenizi 32-bit, x86 ile uyumlu bir CLR tarafından çalıştırılacak derler.</span><span class="sxs-lookup"><span data-stu-id="c6e48-108">Compiles your assembly to be run by the 32-bit, x86-compatible CLR.</span></span>|  
-|`x64`|<span data-ttu-id="c6e48-109">Derlemenizi 64 bit CLR tarafından AMD64 veya EM64T yönerge kümesini destekleyen bir bilgisayarda çalıştırılması için derler.</span><span class="sxs-lookup"><span data-stu-id="c6e48-109">Compiles your assembly to be run by the 64-bit CLR on a computer that supports the AMD64 or EM64T instruction set.</span></span>|  
-|`Itanium`|<span data-ttu-id="c6e48-110">Derlemenizi 64 bit CLR tarafından bir Itanium işlemci bir bilgisayarda çalıştırılması için derler.</span><span class="sxs-lookup"><span data-stu-id="c6e48-110">Compiles your assembly to be run by the 64-bit CLR on a computer with an Itanium processor.</span></span>|  
-|`arm`|<span data-ttu-id="c6e48-111">ARM (Gelişmiş RISC makinesi) işlemciye sahip bir bilgisayarda çalıştırmak için derlemenizi derler.</span><span class="sxs-lookup"><span data-stu-id="c6e48-111">Compiles your assembly to be run on a computer with an ARM (Advanced RISC Machine) processor.</span></span>|  
-|`anycpu`|<span data-ttu-id="c6e48-112">Herhangi bir platform üzerinde çalıştırmasını derlemenizin derler.</span><span class="sxs-lookup"><span data-stu-id="c6e48-112">Compiles your assembly to run on any platform.</span></span> <span data-ttu-id="c6e48-113">Uygulamayı Windows 32-bit sürümlerinde 32 bit uygulama olarak ve Windows 64 bit sürümlerinde 64 bit uygulama olarak çalışır.</span><span class="sxs-lookup"><span data-stu-id="c6e48-113">The application will run as a 32-bit application on 32-bit versions of Windows and as a 64-bit application on 64-bit versions of Windows.</span></span> <span data-ttu-id="c6e48-114">Bu bayrak varsayılan değerdir.</span><span class="sxs-lookup"><span data-stu-id="c6e48-114">This flag is the default value.</span></span>|  
-|`anycpu32bitpreferred`|<span data-ttu-id="c6e48-115">Herhangi bir platform üzerinde çalıştırmasını derlemenizin derler.</span><span class="sxs-lookup"><span data-stu-id="c6e48-115">Compiles your assembly to run on any platform.</span></span> <span data-ttu-id="c6e48-116">Uygulama bir 32 bit uygulama olarak, hem 32-bit hem de 64 bit Windows sürümlerinde çalışır.</span><span class="sxs-lookup"><span data-stu-id="c6e48-116">The application will run as a 32-bit application on both 32-bit and 64-bit versions of Windows.</span></span> <span data-ttu-id="c6e48-117">Bu bayrak, yalnızca yürütülebilir dosyalar için geçerlidir (. EXE) ve gerektiren [!INCLUDE[net_v45](~/includes/net-v45-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c6e48-117">This flag is valid only for executables (.EXE) and requires [!INCLUDE[net_v45](~/includes/net-v45-md.md)].</span></span>|  
+|`x86`|<span data-ttu-id="0bd6b-108">Derlemenizi 32-bit, x86 ile uyumlu bir CLR tarafından çalıştırılacak derler.</span><span class="sxs-lookup"><span data-stu-id="0bd6b-108">Compiles your assembly to be run by the 32-bit, x86-compatible CLR.</span></span>|  
+|`x64`|<span data-ttu-id="0bd6b-109">Derlemenizi 64 bit CLR tarafından AMD64 veya EM64T yönerge kümesini destekleyen bir bilgisayarda çalıştırılması için derler.</span><span class="sxs-lookup"><span data-stu-id="0bd6b-109">Compiles your assembly to be run by the 64-bit CLR on a computer that supports the AMD64 or EM64T instruction set.</span></span>|  
+|`Itanium`|<span data-ttu-id="0bd6b-110">Derlemenizi 64 bit CLR tarafından bir Itanium işlemci bir bilgisayarda çalıştırılması için derler.</span><span class="sxs-lookup"><span data-stu-id="0bd6b-110">Compiles your assembly to be run by the 64-bit CLR on a computer with an Itanium processor.</span></span>|  
+|`arm`|<span data-ttu-id="0bd6b-111">ARM (Gelişmiş RISC makinesi) işlemciye sahip bir bilgisayarda çalıştırmak için derlemenizi derler.</span><span class="sxs-lookup"><span data-stu-id="0bd6b-111">Compiles your assembly to be run on a computer with an ARM (Advanced RISC Machine) processor.</span></span>|  
+|`anycpu`|<span data-ttu-id="0bd6b-112">Herhangi bir platform üzerinde çalıştırmasını derlemenizin derler.</span><span class="sxs-lookup"><span data-stu-id="0bd6b-112">Compiles your assembly to run on any platform.</span></span> <span data-ttu-id="0bd6b-113">Uygulamayı Windows 32-bit sürümlerinde 32 bit uygulama olarak ve Windows 64 bit sürümlerinde 64 bit uygulama olarak çalışır.</span><span class="sxs-lookup"><span data-stu-id="0bd6b-113">The application will run as a 32-bit application on 32-bit versions of Windows and as a 64-bit application on 64-bit versions of Windows.</span></span> <span data-ttu-id="0bd6b-114">Bu bayrak varsayılan değerdir.</span><span class="sxs-lookup"><span data-stu-id="0bd6b-114">This flag is the default value.</span></span>|  
+|`anycpu32bitpreferred`|<span data-ttu-id="0bd6b-115">Herhangi bir platform üzerinde çalıştırmasını derlemenizin derler.</span><span class="sxs-lookup"><span data-stu-id="0bd6b-115">Compiles your assembly to run on any platform.</span></span> <span data-ttu-id="0bd6b-116">Uygulama bir 32 bit uygulama olarak, hem 32-bit hem de 64 bit Windows sürümlerinde çalışır.</span><span class="sxs-lookup"><span data-stu-id="0bd6b-116">The application will run as a 32-bit application on both 32-bit and 64-bit versions of Windows.</span></span> <span data-ttu-id="0bd6b-117">Bu bayrak, yalnızca yürütülebilir dosyalar için geçerlidir (. EXE) ve gerektiren [!INCLUDE[net_v45](~/includes/net-v45-md.md)].</span><span class="sxs-lookup"><span data-stu-id="0bd6b-117">This flag is valid only for executables (.EXE) and requires [!INCLUDE[net_v45](~/includes/net-v45-md.md)].</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="c6e48-118">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="c6e48-118">Remarks</span></span>  
- <span data-ttu-id="c6e48-119">Kullanım `-platform` çıktı dosyası tarafından hedeflenen işlemci türünü belirtmek için seçeneği.</span><span class="sxs-lookup"><span data-stu-id="c6e48-119">Use the `-platform` option to specify the type of processor targeted by the output file.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0bd6b-118">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="0bd6b-118">Remarks</span></span>  
+ <span data-ttu-id="0bd6b-119">Kullanım `-platform` çıktı dosyası tarafından hedeflenen işlemci türünü belirtmek için seçeneği.</span><span class="sxs-lookup"><span data-stu-id="0bd6b-119">Use the `-platform` option to specify the type of processor targeted by the output file.</span></span>  
   
- <span data-ttu-id="c6e48-120">Genel olarak, .NET Framework derlemeleri Visual Basic'te yazılmış aynı platformdan bağımsız olarak çalışır.</span><span class="sxs-lookup"><span data-stu-id="c6e48-120">In general, .NET Framework assemblies written in Visual Basic will run the same regardless of the platform.</span></span> <span data-ttu-id="c6e48-121">Ancak, farklı platformlarda farklı şekilde davranan bazı durumlar vardır.</span><span class="sxs-lookup"><span data-stu-id="c6e48-121">However, there are some cases that behave differently on different platforms.</span></span> <span data-ttu-id="c6e48-122">Bu yaygın durumlar şunlardır:</span><span class="sxs-lookup"><span data-stu-id="c6e48-122">These common cases are:</span></span>  
+ <span data-ttu-id="0bd6b-120">Genel olarak, .NET Framework derlemeleri Visual Basic'te yazılmış aynı platformdan bağımsız olarak çalışır.</span><span class="sxs-lookup"><span data-stu-id="0bd6b-120">In general, .NET Framework assemblies written in Visual Basic will run the same regardless of the platform.</span></span> <span data-ttu-id="0bd6b-121">Ancak, farklı platformlarda farklı şekilde davranan bazı durumlar vardır.</span><span class="sxs-lookup"><span data-stu-id="0bd6b-121">However, there are some cases that behave differently on different platforms.</span></span> <span data-ttu-id="0bd6b-122">Bu yaygın durumlar şunlardır:</span><span class="sxs-lookup"><span data-stu-id="0bd6b-122">These common cases are:</span></span>  
   
--   <span data-ttu-id="c6e48-123">Herhangi bir işaretçi türü gibi platforma göre boyutunu değiştiren üyeler içeren yapılar.</span><span class="sxs-lookup"><span data-stu-id="c6e48-123">Structures that contain members that change size depending on the platform, such as any pointer type.</span></span>  
+-   <span data-ttu-id="0bd6b-123">Herhangi bir işaretçi türü gibi platforma göre boyutunu değiştiren üyeler içeren yapılar.</span><span class="sxs-lookup"><span data-stu-id="0bd6b-123">Structures that contain members that change size depending on the platform, such as any pointer type.</span></span>  
   
--   <span data-ttu-id="c6e48-124">Sabit boyutlar içeren işaretçi aritmetiği.</span><span class="sxs-lookup"><span data-stu-id="c6e48-124">Pointer arithmetic that includes constant sizes.</span></span>  
+-   <span data-ttu-id="0bd6b-124">Sabit boyutlar içeren işaretçi aritmetiği.</span><span class="sxs-lookup"><span data-stu-id="0bd6b-124">Pointer arithmetic that includes constant sizes.</span></span>  
   
--   <span data-ttu-id="c6e48-125">Tanıtıcılar için `Integer` yerine <xref:System.IntPtr> kullanan yanlış platform çağrıları veya COM bildirimleri.</span><span class="sxs-lookup"><span data-stu-id="c6e48-125">Incorrect platform invoke or COM declarations that use `Integer` for handles instead of <xref:System.IntPtr>.</span></span>  
+-   <span data-ttu-id="0bd6b-125">Tanıtıcılar için `Integer` yerine <xref:System.IntPtr> kullanan yanlış platform çağrıları veya COM bildirimleri.</span><span class="sxs-lookup"><span data-stu-id="0bd6b-125">Incorrect platform invoke or COM declarations that use `Integer` for handles instead of <xref:System.IntPtr>.</span></span>  
   
--   <span data-ttu-id="c6e48-126">Atama <xref:System.IntPtr> için `Integer`.</span><span class="sxs-lookup"><span data-stu-id="c6e48-126">Casting <xref:System.IntPtr> to `Integer`.</span></span>  
+-   <span data-ttu-id="0bd6b-126">Atama <xref:System.IntPtr> için `Integer`.</span><span class="sxs-lookup"><span data-stu-id="0bd6b-126">Casting <xref:System.IntPtr> to `Integer`.</span></span>  
   
--   <span data-ttu-id="c6e48-127">Platform kullanarak çağırma veya COM birlikte çalışma bileşenlerle tüm platformlarda mevcut değildir.</span><span class="sxs-lookup"><span data-stu-id="c6e48-127">Using platform invoke or COM interop with components that do not exist on all platforms.</span></span>  
+-   <span data-ttu-id="0bd6b-127">Platform kullanarak çağırma veya COM birlikte çalışma bileşenlerle tüm platformlarda mevcut değildir.</span><span class="sxs-lookup"><span data-stu-id="0bd6b-127">Using platform invoke or COM interop with components that do not exist on all platforms.</span></span>  
   
- <span data-ttu-id="c6e48-128">**-Platform** seçeneği kodunuzun çalışacak mimarisi hakkında varsayımlar yapmış biliyorsanız, bazı sorunları azaltmak.</span><span class="sxs-lookup"><span data-stu-id="c6e48-128">The **-platform** option will mitigate some issues if you know you have made assumptions about the architecture your code will run on.</span></span> <span data-ttu-id="c6e48-129">Özellikle:</span><span class="sxs-lookup"><span data-stu-id="c6e48-129">Specifically:</span></span>  
+ <span data-ttu-id="0bd6b-128">**-Platform** seçeneği kodunuzun çalışacak mimarisi hakkında varsayımlar yapmış biliyorsanız, bazı sorunları azaltmak.</span><span class="sxs-lookup"><span data-stu-id="0bd6b-128">The **-platform** option will mitigate some issues if you know you have made assumptions about the architecture your code will run on.</span></span> <span data-ttu-id="0bd6b-129">Özellikle:</span><span class="sxs-lookup"><span data-stu-id="0bd6b-129">Specifically:</span></span>  
   
--   <span data-ttu-id="c6e48-130">Bir 64 bit platformları hedefleyen karar ve uygulamanın bir 32-bit makinede çalıştırılması, hata iletisi çok daha önce gelir ve bu anahtarı kullanmadan oluşan bir hata daha sorunu daha yöneliktir.</span><span class="sxs-lookup"><span data-stu-id="c6e48-130">If you decide to target a 64-bit platform, and the application is run on a 32-bit machine, the error message comes much earlier and is more targeted at the problem than the error that occurs without using this switch.</span></span>  
+-   <span data-ttu-id="0bd6b-130">Bir 64 bit platformları hedefleyen karar ve uygulamanın bir 32-bit makinede çalıştırılması, hata iletisi çok daha önce gelir ve bu anahtarı kullanmadan oluşan bir hata daha sorunu daha yöneliktir.</span><span class="sxs-lookup"><span data-stu-id="0bd6b-130">If you decide to target a 64-bit platform, and the application is run on a 32-bit machine, the error message comes much earlier and is more targeted at the problem than the error that occurs without using this switch.</span></span>  
   
--   <span data-ttu-id="c6e48-131">Ayarlarsanız `x86` seçeneğinde bayrağı ve uygulamayı daha sonra bir 64-bit makinede çalıştırmak, uygulamayı yerel olarak çalıştırmak yerine WOW alt sistemi çalıştırır.</span><span class="sxs-lookup"><span data-stu-id="c6e48-131">If you set the `x86` flag on the option and the application is subsequently run on a 64-bit machine, the application will run in the WOW subsystem instead of running natively.</span></span>  
+-   <span data-ttu-id="0bd6b-131">Ayarlarsanız `x86` seçeneğinde bayrağı ve uygulamayı daha sonra bir 64-bit makinede çalıştırmak, uygulamayı yerel olarak çalıştırmak yerine WOW alt sistemi çalıştırır.</span><span class="sxs-lookup"><span data-stu-id="0bd6b-131">If you set the `x86` flag on the option and the application is subsequently run on a 64-bit machine, the application will run in the WOW subsystem instead of running natively.</span></span>  
   
- <span data-ttu-id="c6e48-132">Bir 64 bit Windows işletim sisteminde:</span><span class="sxs-lookup"><span data-stu-id="c6e48-132">On a 64-bit Windows operating system:</span></span>  
+ <span data-ttu-id="0bd6b-132">Bir 64 bit Windows işletim sisteminde:</span><span class="sxs-lookup"><span data-stu-id="0bd6b-132">On a 64-bit Windows operating system:</span></span>  
   
--   <span data-ttu-id="c6e48-133">Derlenmiş derlemelerde `-platform:x86` WOW64 altında çalışan 32 bitlik CLR üzerinde yürütülür.</span><span class="sxs-lookup"><span data-stu-id="c6e48-133">Assemblies compiled with `-platform:x86` will execute on the 32-bit CLR running under WOW64.</span></span>  
+-   <span data-ttu-id="0bd6b-133">Derlenmiş derlemelerde `-platform:x86` WOW64 altında çalışan 32 bitlik CLR üzerinde yürütülür.</span><span class="sxs-lookup"><span data-stu-id="0bd6b-133">Assemblies compiled with `-platform:x86` will execute on the 32-bit CLR running under WOW64.</span></span>  
   
--   <span data-ttu-id="c6e48-134">Yürütülebilir dosyalar ile derlenmiş olan `-platform:anycpu` 64 bitlik CLR yürütülür.</span><span class="sxs-lookup"><span data-stu-id="c6e48-134">Executables compiled with the `-platform:anycpu` will execute on the 64-bit CLR.</span></span>  
+-   <span data-ttu-id="0bd6b-134">Yürütülebilir dosyalar ile derlenmiş olan `-platform:anycpu` 64 bitlik CLR yürütülür.</span><span class="sxs-lookup"><span data-stu-id="0bd6b-134">Executables compiled with the `-platform:anycpu` will execute on the 64-bit CLR.</span></span>  
   
--   <span data-ttu-id="c6e48-135">Bir DLL ile derlenmiş `-platform:anycpu` aynı CLR'yi işlem içine yüklenmiş olarak yürütülür.</span><span class="sxs-lookup"><span data-stu-id="c6e48-135">A DLL compiled with the `-platform:anycpu` will execute on the same CLR as the process into which it loaded.</span></span>  
+-   <span data-ttu-id="0bd6b-135">Bir DLL ile derlenmiş `-platform:anycpu` aynı CLR'yi işlem içine yüklenmiş olarak yürütülür.</span><span class="sxs-lookup"><span data-stu-id="0bd6b-135">A DLL compiled with the `-platform:anycpu` will execute on the same CLR as the process into which it loaded.</span></span>  
   
--   <span data-ttu-id="c6e48-136">İle derlenen yürütülebilir dosyaları `-platform:anycpu32bitpreferred` 32 bitlik CLR yürütülür.</span><span class="sxs-lookup"><span data-stu-id="c6e48-136">Executables that are compiled with `-platform:anycpu32bitpreferred` will execute on the 32-bit CLR.</span></span>  
+-   <span data-ttu-id="0bd6b-136">İle derlenen yürütülebilir dosyaları `-platform:anycpu32bitpreferred` 32 bitlik CLR yürütülür.</span><span class="sxs-lookup"><span data-stu-id="0bd6b-136">Executables that are compiled with `-platform:anycpu32bitpreferred` will execute on the 32-bit CLR.</span></span>  
   
- <span data-ttu-id="c6e48-137">Bir Windows 64-bit sürümünü çalıştırmak için uygulama geliştirme hakkında daha fazla bilgi için bkz. [64-bit uygulamalar](../../../framework/64-bit-apps.md).</span><span class="sxs-lookup"><span data-stu-id="c6e48-137">For more information about how to develop an application to run on a 64-bit version of Windows, see [64-bit Applications](../../../framework/64-bit-apps.md).</span></span>  
+ <span data-ttu-id="0bd6b-137">Bir Windows 64-bit sürümünü çalıştırmak için uygulama geliştirme hakkında daha fazla bilgi için bkz. [64-bit uygulamalar](../../../framework/64-bit-apps.md).</span><span class="sxs-lookup"><span data-stu-id="0bd6b-137">For more information about how to develop an application to run on a 64-bit version of Windows, see [64-bit Applications](../../../framework/64-bit-apps.md).</span></span>  
   
-### <a name="to-set--platform-in-the-visual-studio-ide"></a><span data-ttu-id="c6e48-138">Ayarlanacak - Visual Studio IDE'de platformu</span><span class="sxs-lookup"><span data-stu-id="c6e48-138">To set -platform in the Visual Studio IDE</span></span>  
+### <a name="to-set--platform-in-the-visual-studio-ide"></a><span data-ttu-id="0bd6b-138">Ayarlanacak - Visual Studio IDE'de platformu</span><span class="sxs-lookup"><span data-stu-id="0bd6b-138">To set -platform in the Visual Studio IDE</span></span>  
   
-1.  <span data-ttu-id="c6e48-139">İçinde **Çözüm Gezgini**, projeyi seçin açın **proje** menüsüne ve ardından **özellikleri**.</span><span class="sxs-lookup"><span data-stu-id="c6e48-139">In **Solution Explorer**, choose the project, open the **Project** menu, and then click **Properties**.</span></span>  
+1.  <span data-ttu-id="0bd6b-139">İçinde **Çözüm Gezgini**, projeyi seçin açın **proje** menüsüne ve ardından **özellikleri**.</span><span class="sxs-lookup"><span data-stu-id="0bd6b-139">In **Solution Explorer**, choose the project, open the **Project** menu, and then click **Properties**.</span></span>  
   
-2.  <span data-ttu-id="c6e48-140">Üzerinde **derleme** sekmesinde seçin veya temizleyin **32 bit tercih et** onay kutusunu veya **hedef CPU** listesinde, bir değer seçin.</span><span class="sxs-lookup"><span data-stu-id="c6e48-140">On the **Compile** tab, select or clear the **Prefer 32-bit** check box, or, in the **Target CPU** list, choose a value.</span></span>  
+2.  <span data-ttu-id="0bd6b-140">Üzerinde **derleme** sekmesinde seçin veya temizleyin **32 bit tercih et** onay kutusunu veya **hedef CPU** listesinde, bir değer seçin.</span><span class="sxs-lookup"><span data-stu-id="0bd6b-140">On the **Compile** tab, select or clear the **Prefer 32-bit** check box, or, in the **Target CPU** list, choose a value.</span></span>  
   
-     <span data-ttu-id="c6e48-141">Daha fazla bilgi için [derleme sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).</span><span class="sxs-lookup"><span data-stu-id="c6e48-141">For more information, see [Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).</span></span>  
+     <span data-ttu-id="0bd6b-141">Daha fazla bilgi için [derleme sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).</span><span class="sxs-lookup"><span data-stu-id="0bd6b-141">For more information, see [Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c6e48-142">Örnek</span><span class="sxs-lookup"><span data-stu-id="c6e48-142">Example</span></span>  
- <span data-ttu-id="c6e48-143">Aşağıdaki örnekte nasıl kullanılacağı gösterilmektedir `-platform` derleyici seçeneği.</span><span class="sxs-lookup"><span data-stu-id="c6e48-143">The following example illustrates how to use the `-platform` compiler option.</span></span>  
+## <a name="example"></a><span data-ttu-id="0bd6b-142">Örnek</span><span class="sxs-lookup"><span data-stu-id="0bd6b-142">Example</span></span>  
+ <span data-ttu-id="0bd6b-143">Aşağıdaki örnekte nasıl kullanılacağı gösterilmektedir `-platform` derleyici seçeneği.</span><span class="sxs-lookup"><span data-stu-id="0bd6b-143">The following example illustrates how to use the `-platform` compiler option.</span></span>  
   
 ```console
 vbc -platform:x86 myFile.vb  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="c6e48-144">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="c6e48-144">See Also</span></span>  
- [<span data-ttu-id="c6e48-145">/ target (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c6e48-145">/target (Visual Basic)</span></span>](target.md)  
- [<span data-ttu-id="c6e48-146">Visual Basic komut satırı derleyicisi</span><span class="sxs-lookup"><span data-stu-id="c6e48-146">Visual Basic Command-Line Compiler</span></span>](index.md)  
- [<span data-ttu-id="c6e48-147">Örnek Derleme Komut Satırları</span><span class="sxs-lookup"><span data-stu-id="c6e48-147">Sample Compilation Command Lines</span></span>](sample-compilation-command-lines.md)
+## <a name="see-also"></a><span data-ttu-id="0bd6b-144">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="0bd6b-144">See Also</span></span>  
+ [<span data-ttu-id="0bd6b-145">/ target (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0bd6b-145">/target (Visual Basic)</span></span>](target.md)  
+ [<span data-ttu-id="0bd6b-146">Visual Basic komut satırı derleyicisi</span><span class="sxs-lookup"><span data-stu-id="0bd6b-146">Visual Basic Command-Line Compiler</span></span>](index.md)  
+ [<span data-ttu-id="0bd6b-147">Örnek Derleme Komut Satırları</span><span class="sxs-lookup"><span data-stu-id="0bd6b-147">Sample Compilation Command Lines</span></span>](sample-compilation-command-lines.md)

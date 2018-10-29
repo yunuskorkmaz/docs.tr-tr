@@ -7,17 +7,17 @@ dev_langs:
 - vb
 ms.assetid: 130c64c9-7b7f-4672-9b3b-d946bd2616c5
 ms.openlocfilehash: 924e6731ce585f127af319fdbfbdc8c12e61c46d
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50048183"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197320"
 ---
-# <a name="how-to-list-directory-contents-with-ftp"></a><span data-ttu-id="1a8f9-103">Nasıl yapılır: FTP ile dizin içeriğini listeleme</span><span class="sxs-lookup"><span data-stu-id="1a8f9-103">How to: List directory contents with FTP</span></span>
+# <a name="how-to-list-directory-contents-with-ftp"></a><span data-ttu-id="5f39c-103">Nasıl yapılır: FTP ile dizin içeriğini listeleme</span><span class="sxs-lookup"><span data-stu-id="5f39c-103">How to: List directory contents with FTP</span></span>
 
-<span data-ttu-id="1a8f9-104">Bu örnek, bir FTP sunucusuna dizin içeriğini listeleme gösterir.</span><span class="sxs-lookup"><span data-stu-id="1a8f9-104">This sample shows how to list the directory contents of an FTP server.</span></span>
+<span data-ttu-id="5f39c-104">Bu örnek, bir FTP sunucusuna dizin içeriğini listeleme gösterir.</span><span class="sxs-lookup"><span data-stu-id="5f39c-104">This sample shows how to list the directory contents of an FTP server.</span></span>
 
-## <a name="example"></a><span data-ttu-id="1a8f9-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="1a8f9-105">Example</span></span>
+## <a name="example"></a><span data-ttu-id="5f39c-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="5f39c-105">Example</span></span>
 
 ```csharp
 using System;
@@ -81,7 +81,7 @@ Namespace Examples.System.Net
 End Namespace
 ```
 
-<span data-ttu-id="1a8f9-106">Belirli bir dizin listesi gerekiyorsa, yalnızca dizin, kullanmakta olduğunuz URI'nin sonuna Ekle <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> yöntemi:</span><span class="sxs-lookup"><span data-stu-id="1a8f9-106">If you need to list a specific directory, just add the directory to the end of the URI you're using in the <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> method:</span></span>
+<span data-ttu-id="5f39c-106">Belirli bir dizin listesi gerekiyorsa, yalnızca dizin, kullanmakta olduğunuz URI'nin sonuna Ekle <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> yöntemi:</span><span class="sxs-lookup"><span data-stu-id="5f39c-106">If you need to list a specific directory, just add the directory to the end of the URI you're using in the <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> method:</span></span>
 
 ```csharp
 FtpWebRequest request = (FtpWebRequest)WebRequest.Create("ftp://www.contoso.com/your_preferred_directory");
