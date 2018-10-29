@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dbc5909a3d4ea1ba2747fcc694bf1f34e20e7d2b
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 612550dd2e3cda4e3549bfc14c9ada712c6653bf
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582794"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197567"
 ---
 # <a name="regular-expression-options"></a>Normal İfade Seçenekleri
 <a name="Top"></a> Varsayılan olarak, bir Giriş dizesinin normal ifade desenindeki herhangi bir sabit karakterin ile karşılaştırması büyük/küçük harfe duyarlıdır, normal ifade desenindeki boşluk, sabit boşluk karakterleri ve normal ifadedeki yakalama grupları olarak yorumlanır örtük ve açık olarak adlandırılır. Normal ifade seçeneklerini belirterek bunları ve varsayılan normal ifade davranışının diğer birçok yönünü değiştirebilirsiniz. Aşağıdaki tabloda listelenen Bu seçenekler, normal ifade deseni bir parçası olarak satır içi olabilir veya için sağlanabilir bir <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> sınıfı oluşturucusunun veya statik desen eşleştirme yöntemine olarak bir <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> numaralandırma değeri.  
@@ -42,7 +42,7 @@ ms.locfileid: "48582794"
   
 -   İçinde `options` parametresinin bir <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> sınıfı oluşturucusunun veya statik (`Shared` Visual Basic'te) desen eşleşmeli yöntemde gibi <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> veya <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>. `options` Parametredir bir bit düzeyindeki OR kombinasyonudur <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> numaralandırılmış değerlerinin.  
   
-     Ne zaman seçenekleri sağlanır için bir <xref:System.Text.RegularExpressions.Regex> kullanarak örneği `options` parametre sınıfı yapıcısının Seçenekler şunlardır: atanan <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> özelliği. Ancak, <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> özelliği, normal ifade deseni satır içi seçenekler yansıtmıyor.  
+     Ne zaman seçenekleri sağlanır için bir <xref:System.Text.RegularExpressions.Regex> kullanarak örneği `options` parametre sınıfı yapıcısının seçenekleri atanmış <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> özelliği. Ancak, <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> özelliği, normal ifade deseni satır içi seçenekler yansıtmıyor.  
   
      Aşağıdaki örnek, bir gösterim sağlar. Kullandığı `options` parametresinin <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> büyük küçük harf duyarsız eşleşmeyi etkinleştirmek ve "d" harfi ile başlayan sözcükleri tanımlamak için kullanıldığında desen beyaz boşluğu yok saymak için yöntemi.  
   

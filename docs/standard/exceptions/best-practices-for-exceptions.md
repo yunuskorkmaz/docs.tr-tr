@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ee61d01acbf9c409eaedc04ff3e949908e1d595e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: b6aa1049c531550687a2c6289ccd87e763ca2f58
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44225142"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199636"
 ---
 # <a name="best-practices-for-exceptions"></a>Özel durumlar için en iyi yöntemler
 
@@ -169,7 +169,12 @@ Bu örnek kullanımını gösterir `throw` inceleyin gerek kalmadan gerçek soru
 catch (Exception ex)
 {
     from.RollbackTransaction(withdrawalTrxID);
-    throw new Exception("Withdrawal failed", ex);
+    throw new TransferFundsException("Withdrawal failed", innerException: ex)
+    {
+        From = from,
+    To = to,
+    Amount = amount
+    };
 }
 ```
 

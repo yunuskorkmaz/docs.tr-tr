@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Internet, sockets
 ms.assetid: 10d22735-bd37-42c1-a2be-c1932f979a7d
 ms.openlocfilehash: 3a8e141d79a7f261cd969dc78a656a89ffc8bc30
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50032981"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50196537"
 ---
 # <a name="sockets"></a>Yuva
 <xref:System.Net.Sockets> Ad alanı, Windows yuva arabiriminin yönetilen bir uygulamasını içerir. Yer alan tüm diğer ağ erişim sınıfları <xref:System.Net> ad alanı, bu yuva uygulaması üzerinde oluşturulur.  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 96e3ae8bf826931f39fab58fc2b7ad3f58f8e431
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 8d78549d2822ad6c660fae39d458a98f23eca390
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308584"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199897"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Geliştiriciler için .NET Framework'ü yükleme
 
@@ -37,7 +37,7 @@ Hızlı bağlantılar veya ayrıntılar için okumaya devam için aşağıdaki t
 
 |.NET Framework sürümü|Geliştirici yükleme|Yeniden dağıtılabilir yükleme|Platform desteği|
 |----------------------------|----------------------------|----------------------------------|----------------------|
-|**4.7.2**|[.NET framework 4.7.2 Geliştirici paketi](https://go.microsoft.com/fwlink/?LinkId=874338)|[İndirme Merkezi 4.7.2 web yükleyicisi](https://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>[İndirme Merkezi 4.7.2 çevrimdışı yükleyici](https://go.microsoft.com/fwlink/?LinkId=863265)|Dahil: <br/>Windows 10 Nisan 2018 güncelleştirmesi<br /><br /> Üzerinde yükleyebilirsiniz:<br/> <br/>Windows 10 Fall Creators Update<br/>Windows 10 Creators Update <br /> Windows 10 Yıldönümü Güncelleştirmesi<br /> Windows 8.1 ve önceki sürümleri<br /> Windows Server sürüm 1709 ve öncesi<br /> (tam listesi için bkz: [sistem gereksinimleri](~/docs/framework/get-started/system-requirements.md))||
+|**4.7.2**|[.NET framework 4.7.2 Geliştirici paketi](https://go.microsoft.com/fwlink/?LinkId=874338)|[İndirme Merkezi 4.7.2 web yükleyicisi](https://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>[İndirme Merkezi 4.7.2 çevrimdışı yükleyici](https://go.microsoft.com/fwlink/?LinkId=863265)|Dahil: <br/>Windows 10 Ekim 2018 güncelleştirmesi<br/>Windows 10 Nisan 2018 güncelleştirmesi<br /><br /> Üzerinde yükleyebilirsiniz:<br/> <br/>Windows 10 Fall Creators Update<br/>Windows 10 Creators Update <br /> Windows 10 Yıldönümü Güncelleştirmesi<br /> Windows 8.1 ve önceki sürümleri<br /> Windows Server sürüm 1709 ve öncesi<br /> (tam listesi için bkz: [sistem gereksinimleri](~/docs/framework/get-started/system-requirements.md))||
 |**4.7.1**|[NET Framework 4.7.1 Geliştirici paketi](https://go.microsoft.com/fwlink/?LinkId=852105)|[4.7.1 için indirme sayfası web yükleyicisi](https://go.microsoft.com/fwlink/?LinkId=852095)<br /><br /> [4.7.1 için indirme sayfası çevrimdışı yükleyici](https://go.microsoft.com/fwlink/?LinkId=852107)|Dahil: <br/>Windows 10 Fall Creators Update<br/>Windows Server 1709 sürümü<br /><br /> Üzerinde yükleyebilirsiniz:<br/> Windows 10 Creators Update <br /> Windows 10 Yıldönümü Güncelleştirmesi<br /> Windows 8.1 ve önceki sürümleri<br /> Windows Server 2016 ve önceki sürümleri<br /> (tam listesi için bkz: [sistem gereksinimleri](~/docs/framework/get-started/system-requirements.md))||
 |**4.7**|[NET Framework 4.7 Geliştirici paketi](https://go.microsoft.com/fwlink/?LinkId=825319)|[4.7 web Yükleyicisi için indirme sayfası](https://go.microsoft.com/fwlink/?LinkId=825299)<br /><br /> [4.7 çevrimdışı Yükleyicisi için indirme sayfası](https://go.microsoft.com/fwlink/?LinkId=825303)|Dahil: <br/>Windows 10 Creators Update<br /><br /> Üzerinde yükleyebilirsiniz:<br /> Windows 10 Yıldönümü Güncelleştirmesi<br /> Windows 8.1 ve önceki sürümleri<br /> Windows Server 2016 ve önceki sürümleri<br /> (tam listesi için bkz: [sistem gereksinimleri](~/docs/framework/get-started/system-requirements.md))||
 |**4.6.2**|[.NET Framework 4.6.2 Geliştirici paketi](https://go.microsoft.com/fwlink/?LinkId=780617)|[4.6.2 için indirme sayfası web yükleyicisi](https://go.microsoft.com/fwlink/?LinkId=780597)<br /><br /> [4.6.2 için indirme sayfası çevrimdışı yükleyici](https://go.microsoft.com/fwlink/?LinkId=780601)|Dahil: <br /> Windows 10 Yıldönümü Güncelleştirmesi<br /><br /> Üzerinde yükleyebilirsiniz:<br /> Windows 10 Kasım güncelleştirmesi <br/> Windows 10 <br /> Windows 8.1 ve önceki sürümleri<br /> Windows Server 2012 R2 ve önceki sürümleri<br /> (tam listesi için bkz: [sistem gereksinimleri](~/docs/framework/get-started/system-requirements.md))|

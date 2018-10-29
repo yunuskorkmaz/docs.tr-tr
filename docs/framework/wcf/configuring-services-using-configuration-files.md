@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: 904abff4f3cae5873fe3cc9705dee84f73e2a523
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 11d24bec46cfb190fe1a7c2a7b9ac78ac4d5e799
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004516"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200868"
 ---
 # <a name="configuring-services-using-configuration-files"></a>Yapılandırma Dosyalarını Kullanarak Hizmetleri Yapılandırma
 Bir yapılandırma dosyası bir Windows Communication Foundation (WCF) hizmetini yapılandırma uç noktası sağlama esnekliği sunar ve hizmet davranışı veri yerine dağıtım noktasında tasarım. Bu konu, birincil teknikleri açıklar.  
   
  Bir WCF Hizmeti yapılandırılabilir kullanmaktır [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] yapılandırma teknoloji. En yaygın olarak, XML öğeleri, bir WCF hizmetini barındıran Internet Information Services (IIS) sitesi için Web.config dosyasına eklenir. Öğeleri, uç nokta adresleri (hizmetiyle iletişim kurmak için kullanılan gerçek adresleri) gibi ayrıntılarını değiştirmek bir makine Makineli temelinde izin verin. Ayrıca, WCF, hızlı bir şekilde bir hizmet için en temel özellikler seçmenizi sağlayacak birçok sistem tarafından sağlanan öğeleri içerir. İle başlayarak [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], WCF, WCF yapılandırma gereksinimleri basitleştiren yeni bir varsayılan yapılandırma modeli ile birlikte gelir. Belirli bir hizmet için herhangi bir WCF yapılandırma sağlamazsanız, çalışma zamanının bazı standart uç noktalar ve varsayılan bağlama/davranışı ile otomatik olarak hizmetinizi yapılandırır. Büyük bir uygulamada, yazma yapılandırmadır WCF uygulamalarını programlama parçası.  
   
- Daha fazla bilgi için [hizmetler için bağlamaları yapılandırma](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md). Sık kullanılan öğeler listesi en için bkz: [System-Provided bağlamaları](../../../docs/framework/wcf/system-provided-bindings.md). Varsayılan uç noktaları, bağlamalar ve davranışları hakkında daha fazla bilgi için bkz. [Basitleştirilmiş yapılandırma](../../../docs/framework/wcf/simplified-configuration.md) ve [WCF hizmetleri için Basitleştirilmiş yapılandırma](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ Daha fazla bilgi için [hizmetler için bağlamaları yapılandırma](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md). Yaygın olarak kullanılan öğeleri en listesi için bkz: [System-Provided bağlamaları](../../../docs/framework/wcf/system-provided-bindings.md). Varsayılan uç noktaları, bağlamalar ve davranışları hakkında daha fazla bilgi için bkz. [Basitleştirilmiş yapılandırma](../../../docs/framework/wcf/simplified-configuration.md) ve [WCF hizmetleri için Basitleştirilmiş yapılandırma](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 > [!IMPORTANT]
 >  Dağıtıldığı bir hizmeti iki farklı sürümlerini yan yana senaryoları dağıtırken, yapılandırma dosyalarında başvurulan derlemeleri kısmi adını belirtmek gereklidir. Yapılandırma dosyası, bir hizmetin tüm sürümleri arasında paylaşılır ve altında .NET Framework'ün farklı sürümlerini çalıştıran çünkü budur.  
@@ -186,9 +186,9 @@ Bir yapılandırma dosyası bir Windows Communication Foundation (WCF) hizmetini
 ## <a name="behavior-merge"></a>Birleştirme davranışı  
  Davranış birleştirme özelliği, bir dizi ortak davranışları sürekli olarak kullanılacak istediğinizde davranışları yönetmek üzere kolaylaştırır. Bu özellik, farklı düzeylerde yapılandırma hiyerarşisinin davranışları belirtin ve birden çok yapılandırma hiyerarşi düzeylerinden davranışları devral hizmetleri sağlar. Göstermek için nasıl bu çalışır sahip olduğunuzu varsayar şu sanal dizin Düzen IIS içinde:  
   
- ~\Web.config~\Service.svc~\Child\Web.config~\Child\Service.svc  
+ `~\Web.config~\Service.svc~\Child\Web.config~\Child\Service.svc`
   
- Ve aşağıdaki içeriği ~\Web.config dosyanızı vardır:  
+ Ve `~\Web.config` dosya aşağıdaki içeriğe sahip:  
   
 ```xml  
 <configuration>  

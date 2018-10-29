@@ -2,13 +2,12 @@
 title: 'Nasıl yapılır: Kanal Güvenliği Kimlik Bilgilerini Belirtme'
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-author: BrucePerlerMS
-ms.openlocfilehash: 8e730e3deaccb581b1722b62ce6282d8fde7180e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f4c2977fe5bc819ff7e9b7a8030b2c2e20b71429
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196198"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201471"
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>Nasıl yapılır: Kanal Güvenliği Kimlik Bilgilerini Belirtme
 Windows Communication Foundation (WCF) hizmet bilinen adını COM uygulamaları, WCF hizmetlerini çağırmak sağlar. Çoğu WCF hizmetleri, istemci kimlik doğrulaması ve yetkilendirme kimlik bilgilerini belirtmenizi gerektirir. Bir WCF hizmeti bir WCF istemciden çağrılırken, yönetilen kodda ya da bir uygulama yapılandırma dosyasında bu kimlik bilgileri belirtebilirsiniz. Bir WCF hizmeti bir COM uygulamasından çağrılırken kullanabileceğiniz <xref:System.ServiceModel.ComIntegration.IChannelCredentials> kimlik bilgilerini belirtmek için arabirim. Bu konuda kullanarak kimlik bilgilerini belirtmek için çeşitli yollar ortaya konacaktır <xref:System.ServiceModel.ComIntegration.IChannelCredentials> arabirimi.  

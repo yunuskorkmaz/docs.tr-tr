@@ -2,13 +2,12 @@
 title: Güvenlik Özel Durumları
 ms.date: 03/30/2017
 ms.assetid: 76d5e5cd-e4f4-404f-9a5a-ec3522494ad8
-author: BrucePerlerMS
-ms.openlocfilehash: 9e5795da5765e3dadfb169b1819b7154bd6ce0a9
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: c1eeca9111837b9833de54ecafbc981d1c2b6343
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036233"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201380"
 ---
 # <a name="security-exceptions"></a>Güvenlik Özel Durumları
 Bu konu, tüm güvenlik özel durumları listeler.  

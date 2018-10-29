@@ -1,0 +1,205 @@
+### YamlMime:Tutorial
+title: Veri koleksiyonları genel liste türünü kullanarak yönetmeyi öğrenin
+metadata:
+  title: Veri koleksiyonları - giriş C# etkileşimli öğretici
+  description: Bu öğreticide, C# etkileşimli bir şekilde öğrenmek için tarayıcınızı kullanacaksınız. C# kodu yazacak ve derleme ve kodunuzu doğrudan tarayıcınızda çalıştırmaya sonuçlarını göreceksiniz.
+  audience: Developer
+  ms.custom: mvc
+  ms.date: 10/23/2018
+  level: Beginner
+  displayType: two-column
+  interactive: csharp
+  ms.openlocfilehash: 6b7a00a0d7ea17ab48e673b735bdd1a77328c099
+  ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 10/28/2018
+  ms.locfileid: "50200226"
+items:
+- durationInMinutes: 1
+  content: >
+    Bu öğretici size öğretir C# etkileşimli olarak yazmak için tarayıcınızı kullanarak C# kod ve derleme ve kodunuzu çalıştıran sonuçlarını göreceksiniz. Bu, bir dizi oluşturmak, değiştirmek ve koleksiyonlarda ve dizilerde keşfedin ders içerir.
+- title: Listeleri oluşturma
+  durationInMinutes: 2
+  content: >
+    Etkileşimli pencerede aşağıdaki kodu çalıştırın. Bunu yapmak için aşağıdaki kod bloğunu etkileşimli pencereye yazın (Değiştir `<name>` 'ınızın adıyla) ve tıklayın **çalıştırın** düğmesi:
+
+
+    ```csharp
+
+    var names = new List<string> { "<name>", "Ana", "Felipe" };
+
+    foreach (var name in names)
+
+    {
+      Console.WriteLine($"Hello {name.ToUpper()}!");
+    }
+
+    ```
+
+
+    Yalnızca bir dize listesi oluşturduğunuz, üç adları bu listeye eklenmesine ve tamamı büyük harf adları kullanıma yazdırılır. Önceki öğreticilerde listede döngü öğrendiniz kavramları kullanıyorsunuz.
+
+
+    Görünen adları için kodu kullanır [dize ilişkilendirme](../../language-reference/tokens/interpolated.md) özelliği. Ne zaman önünde bir `string` ile `$` karakter dizesi bildiriminde C# kod ekleme. Gerçek dize, C# kodu ürettiği değeri ile değiştirir. Bu örnekte, onu değiştirir `{name.ToUpper()}` her addaki aradığınız çünkü harfleri büyük olacak şekilde dönüştürülmüş <xref:System.String.ToUpper%2A?displayProperty=nameWithType> yöntemi.
+
+
+    Şimdi keşfetmeye devam etmek.
+
+
+    > [!NOTE]
+
+    > Bu çevrimiçi kodlama deneyimi Önizleme modundadır. Sorunlarla karşılaşırsanız, Lütfen bunları rapor [dotnet/try deposunda](https://github.com/dotnet/try/issues).
+- title: Liste içeriklerini değiştirme
+  durationInMinutes: 3
+  content: >
+    Kullanan oluşturduğunuz koleksiyonda <xref:System.Collections.Generic.List%601> türü. Bu tür, öğelerin sıralarının depolar. Açılı ayraçlar arasındaki öğelerin türünü belirtin.
+
+
+    Bu önemli bir özelliği <xref:System.Collections.Generic.List%601> türüdür bunu büyüyebilen veya küçülebilen, ekleme veya öğeleri kaldırma olanak sağlar. Zaten yazdığınız kodun altına aşağıdaki kodu ekleyin:
+
+
+    ```csharp
+
+    Console.WriteLine();
+
+    names.Add("Maria");
+
+    names.Add("Bill");
+
+    names.Remove("Ana");
+
+    foreach (var name in names)
+
+    {
+      Console.WriteLine($"Hello {name.ToUpper()}!");
+    }
+
+    ```
+
+
+    Listenin sonuna iki daha fazla ad ekledik. Ayrıca bir de kaldırdınız.
+
+
+    <xref:System.Collections.Generic.List%601> Tek tek öğeler tarafından başvuruda sayesinde **dizin** de. Kullanarak öğeleri erişim `[` ve `]` belirteçleri. Neleri yazmış olduğunuz ve deneyin altına aşağıdaki kodu ekleyin:
+
+
+    ```csharp
+
+    Console.WriteLine($"My name is {names[0]}.");
+
+    Console.WriteLine($"I've added {names[2]} and {names[3]} to the list.");
+
+    ```
+
+
+    Listenin sonundan erişmesine izin verilmez. Listenin ne kadar süre kullandığı denetleyebilirsiniz <xref:System.Collections.Generic.List%601.Count%2A> özelliği. Denemek için aşağıdaki kodu ekleyin:
+
+
+    ```csharp
+
+    Console.WriteLine($"The list has {names.Count} people in it");
+
+    ```
+
+
+    Tıklayın **çalıştırma** yeniden sonuçları görmek için. En büyük geçerli dizin olduğundan C# ' ta dizinleri 0'da başlar listedeki öğelerin sayısından küçük.
+
+
+    > [!NOTE]
+
+    > Bu çevrimiçi kodlama deneyimi Önizleme modundadır. Sorunlarla karşılaşırsanız, Lütfen bunları rapor [dotnet/try deposunda](https://github.com/dotnet/try/issues).
+- title: Arama ve sıralama listeler
+  durationInMinutes: 5
+  content: >
+    Örneklerimizi görece küçük listeleri kullanın, ancak uygulamalarınızın genellikle bazen bin numaralandırma çok daha fazla öğe ile listeleri oluşturabilirsiniz. İçinde büyük bu koleksiyonlara öğeleri bulmak için farklı öğeler listesinde arama yapmanız gerekmiyor. <xref:System.Collections.Generic.List%601.IndexOf%2A> Yöntemi bir öğe için arar ve öğenin indisini döndürür. Nasıl çalıştığını görmek için deneyin.  Şu ana kadar yazdıklarınızı altına aşağıdaki kodu ekleyin:
+
+
+    ```csharp
+
+    var index = names.IndexOf("Felipe");
+
+    if (index != -1)
+      Console.WriteLine($"The name {names[index]} is at index {index}");
+
+    var notFound = names.IndexOf("Not Found");
+      Console.WriteLine($"When an item is not found, IndexOf returns {notFound}");
+    ```
+
+
+    Tarafından döndürülen dizinin her zaman denetlemeniz gerekir böylece bir öğenin listesinde olup olmadığını bilemeyebilirsiniz <xref:System.Collections.Generic.List%601.IndexOf%2A>. -1 olması durumunda, öğe bulunamadı.
+
+
+    Listenizdeki öğeleri de sıralanabilir. <xref:System.Collections.Generic.List%601.Sort%2A> Yöntemi (alfabetik sırada durumunda dizeler) normal sıralarına listesinden tüm öğeleri sıralar. Bu kodu ekleyin ve yeniden çalıştırın:
+
+
+    ```csharp
+
+    names.Sort();
+
+    foreach (var name in names)
+
+    {
+      Console.WriteLine($"Hello {name.ToUpper()}!");
+    }
+
+    ```
+
+
+    > [!NOTE]
+
+    > Bu çevrimiçi kodlama deneyimi Önizleme modundadır. Sorunlarla karşılaşırsanız, Lütfen bunları rapor [dotnet/try deposunda](https://github.com/dotnet/try/issues).
+- title: Diğer türleri listesi
+  durationInMinutes: 5
+  content: >
+    Kullanmakta olduğunuz `string` şimdiye listelerindeki türü. Olalım bir <xref:System.Collections.Generic.List%601> kullanarak farklı bir tür. Bir dizi sayının oluşturalım. Şu ana kadar yazdığınız kodu silin ve bununla değiştirin:
+
+
+    ```csharp
+
+    var fibonacciNumbers = new List<int> {1, 1};
+
+    ```
+
+
+    Tamsayı listesi oluşturur ve ilk iki tamsayı 1 değerine ayarlar. İlk iki değerlerini bunlar bir *Fibonacci dizisi*, bir sayı dizisi üzerinde. Önceki iki sayının toplamı gerçekleştirerek sonraki her Fibonacci numarası bulunamadı. Bu kodu ekleyin:
+
+
+    ```csharp
+
+    var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];
+
+    var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];
+
+
+    fibonacciNumbers.Add(previous + previous2);
+
+
+    foreach(var item in fibonacciNumbers)
+        Console.WriteLine(item);
+    ```
+
+
+    Tuşuna **çalıştırma** ; sonuçları görmek için
+
+
+    > [!NOTE]
+
+    > Bu çevrimiçi kodlama deneyimi Önizleme modundadır. Sorunlarla karşılaşırsanız, Lütfen bunları rapor [dotnet/try deposunda](https://github.com/dotnet/try/issues).
+- title: Sınama
+  durationInMinutes: 10
+  content: >
+    Birlikte koyabilirsiniz varsa bkz. bazı kavramlar ve daha önce bu dersler. Ne kadar Fibonacci numaralarıyla derlediğiniz genişletin. Deneyin ve dizideki ilk 20 sayılar üretmek için kod yazın. (Bir ipucu olarak 20 Fibonacci 6765 numarasıdır.)
+
+
+    > [!NOTE]
+
+    > Bu çevrimiçi kodlama deneyimi Önizleme modundadır. Sorunlarla karşılaşırsanız, Lütfen bunları rapor [dotnet/try deposunda](https://github.com/dotnet/try/issues).
+- title: Görevi tamamlama
+  durationInMinutes: 3
+  content: "Bu gibi bir şeyle gündeme mı?\n\n```csharp\nvar fibonacciNumbers = new List<int> {1, 1};\n\nwhile (fibonacciNumbers.Count < 20)\n{\n    var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];\n    var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];\n    \n    fibonacciNumbers.Add(previous + previous2);\n}\nforeach(var item in fibonacciNumbers)\n    Console.WriteLine(item);\n```\n\nDöngünün her yinelemesinden son iki tamsayının listesinde, bunları fiyatının ve bu değer, listeye eklemeyi yönlendiriyoruz. 20 öğe listesine ekleyene kadar döngü tekrarlanır.\n\n> [!NOTE]\n> Bu çevrimiçi kodlama deneyimi Önizleme modundadır. Sorunlarla karşılaşırsanız, Lütfen bunları rapor [dotnet/try deposunda](https://github.com/dotnet/try/issues).\n"
+- content: >-
+    Liste öğreticisini tamamladınız. Bu öğreticide son etkileşimli öğreticidir. Bu öğreticiler kendi geliştirme ortamınızda devam edebilirsiniz. Temel bilgileri öğrenmek [yerel geliştirme](local-environment.md) ve bir öğretici'ı seçin. Alıştırmanın aynısını deneyebilir, doğrudan sonraki öğreticiye taşıyın veya başlangıcıyla tekrar [içindeki numaralandırır C# ](numbers-in-csharp-local.md) öğretici.
+
+
+    İle çalışma hakkında daha fazla bilgi `List` yazın [.NET Kılavuzu](../../../standard/index.md) konuda [koleksiyonları](../../../standard/collections/index.md). Ayrıca diğer birçok koleksiyon türleri hakkında bilgi edineceksiniz.
