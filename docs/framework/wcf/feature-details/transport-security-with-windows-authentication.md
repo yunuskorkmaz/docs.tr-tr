@@ -5,46 +5,45 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
-author: BrucePerlerMS
-ms.openlocfilehash: babafe369ee9f5c9261e3b5c8bc749d3d1d39ec4
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 3e48c397cb97cdfeb476daaf09d997e9609b3467
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847535"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201497"
 ---
-# <a name="transport-security-with-windows-authentication"></a><span data-ttu-id="89871-102">Windows Kimlik Doğrulama ile Taşıma Güvenliği</span><span class="sxs-lookup"><span data-stu-id="89871-102">Transport Security with Windows Authentication</span></span>
-<span data-ttu-id="89871-103">Aşağıdaki senaryoda, bir Windows Communication Foundation (WCF) istemci ve hizmet Windows güvenlik güvenli gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="89871-103">The following scenario shows a Windows Communication Foundation (WCF) client and service secured by Windows security.</span></span> <span data-ttu-id="89871-104">Programlama hakkında daha fazla bilgi için bkz. [nasıl yapılır: Windows kimlik bilgileri ile bir hizmeti güvenli hale getirme](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).</span><span class="sxs-lookup"><span data-stu-id="89871-104">For more information about programming, see [How to: Secure a Service with Windows Credentials](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).</span></span>  
+# <a name="transport-security-with-windows-authentication"></a><span data-ttu-id="8bdb2-102">Windows Kimlik Doğrulama ile Taşıma Güvenliği</span><span class="sxs-lookup"><span data-stu-id="8bdb2-102">Transport Security with Windows Authentication</span></span>
+<span data-ttu-id="8bdb2-103">Aşağıdaki senaryoda, bir Windows Communication Foundation (WCF) istemci ve hizmet Windows güvenlik güvenli gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="8bdb2-103">The following scenario shows a Windows Communication Foundation (WCF) client and service secured by Windows security.</span></span> <span data-ttu-id="8bdb2-104">Programlama hakkında daha fazla bilgi için bkz. [nasıl yapılır: Windows kimlik bilgileri ile bir hizmeti güvenli hale getirme](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).</span><span class="sxs-lookup"><span data-stu-id="8bdb2-104">For more information about programming, see [How to: Secure a Service with Windows Credentials](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).</span></span>  
   
- <span data-ttu-id="89871-105">Bir intranet Web hizmeti, İnsan Kaynakları bilgileri görüntüler.</span><span class="sxs-lookup"><span data-stu-id="89871-105">An intranet Web service displays human resources information.</span></span> <span data-ttu-id="89871-106">İstemci, bir Windows formu uygulamasıdır.</span><span class="sxs-lookup"><span data-stu-id="89871-106">The client is a Windows Form application.</span></span> <span data-ttu-id="89871-107">Uygulama etki alanında etki alanını güvenli hale getirme Kerberos denetleyiciyle dağıtılır.</span><span class="sxs-lookup"><span data-stu-id="89871-107">The application is deployed in a domain with a Kerberos controller securing the domain.</span></span>  
+ <span data-ttu-id="8bdb2-105">Bir intranet Web hizmeti, İnsan Kaynakları bilgileri görüntüler.</span><span class="sxs-lookup"><span data-stu-id="8bdb2-105">An intranet Web service displays human resources information.</span></span> <span data-ttu-id="8bdb2-106">İstemci, bir Windows formu uygulamasıdır.</span><span class="sxs-lookup"><span data-stu-id="8bdb2-106">The client is a Windows Form application.</span></span> <span data-ttu-id="8bdb2-107">Uygulama etki alanında etki alanını güvenli hale getirme Kerberos denetleyiciyle dağıtılır.</span><span class="sxs-lookup"><span data-stu-id="8bdb2-107">The application is deployed in a domain with a Kerberos controller securing the domain.</span></span>  
   
- <span data-ttu-id="89871-108">![Aktarım güvenliği Windows kimlik doğrulaması ile](../../../../docs/framework/wcf/feature-details/media/securedbywindows.gif "SecuredByWindows")</span><span class="sxs-lookup"><span data-stu-id="89871-108">![Transport security with Windows authentication](../../../../docs/framework/wcf/feature-details/media/securedbywindows.gif "SecuredByWindows")</span></span>  
+ <span data-ttu-id="8bdb2-108">![Aktarım güvenliği Windows kimlik doğrulaması ile](../../../../docs/framework/wcf/feature-details/media/securedbywindows.gif "SecuredByWindows")</span><span class="sxs-lookup"><span data-stu-id="8bdb2-108">![Transport security with Windows authentication](../../../../docs/framework/wcf/feature-details/media/securedbywindows.gif "SecuredByWindows")</span></span>  
   
-|<span data-ttu-id="89871-109">Özelliği</span><span class="sxs-lookup"><span data-stu-id="89871-109">Characteristic</span></span>|<span data-ttu-id="89871-110">Açıklama</span><span class="sxs-lookup"><span data-stu-id="89871-110">Description</span></span>|  
+|<span data-ttu-id="8bdb2-109">Özelliği</span><span class="sxs-lookup"><span data-stu-id="8bdb2-109">Characteristic</span></span>|<span data-ttu-id="8bdb2-110">Açıklama</span><span class="sxs-lookup"><span data-stu-id="8bdb2-110">Description</span></span>|  
 |--------------------|-----------------|  
-|<span data-ttu-id="89871-111">Güvenlik modu</span><span class="sxs-lookup"><span data-stu-id="89871-111">Security Mode</span></span>|<span data-ttu-id="89871-112">Taşıma</span><span class="sxs-lookup"><span data-stu-id="89871-112">Transport</span></span>|  
-|<span data-ttu-id="89871-113">Birlikte Çalışabilirlik</span><span class="sxs-lookup"><span data-stu-id="89871-113">Interoperability</span></span>|<span data-ttu-id="89871-114">Yalnızca WCF</span><span class="sxs-lookup"><span data-stu-id="89871-114">WCF only</span></span>|  
-|<span data-ttu-id="89871-115">Kimlik doğrulaması (sunucu)</span><span class="sxs-lookup"><span data-stu-id="89871-115">Authentication (Server)</span></span><br /><br /> <span data-ttu-id="89871-116">Kimlik doğrulaması (istemci)</span><span class="sxs-lookup"><span data-stu-id="89871-116">Authentication (Client)</span></span>|<span data-ttu-id="89871-117">Evet (Windows tümleşik kimlik doğrulaması kullanarak)</span><span class="sxs-lookup"><span data-stu-id="89871-117">Yes (using Windows integrated authentication)</span></span><br /><br /> <span data-ttu-id="89871-118">Evet (Windows tümleşik kimlik doğrulaması kullanarak)</span><span class="sxs-lookup"><span data-stu-id="89871-118">Yes (using Windows integrated authentication)</span></span>|  
-|<span data-ttu-id="89871-119">Bütünlüğü</span><span class="sxs-lookup"><span data-stu-id="89871-119">Integrity</span></span>|<span data-ttu-id="89871-120">Evet</span><span class="sxs-lookup"><span data-stu-id="89871-120">Yes</span></span>|  
-|<span data-ttu-id="89871-121">Gizliliği</span><span class="sxs-lookup"><span data-stu-id="89871-121">Confidentiality</span></span>|<span data-ttu-id="89871-122">Evet</span><span class="sxs-lookup"><span data-stu-id="89871-122">Yes</span></span>|  
-|<span data-ttu-id="89871-123">Taşıma</span><span class="sxs-lookup"><span data-stu-id="89871-123">Transport</span></span>|<span data-ttu-id="89871-124">NET. TCP</span><span class="sxs-lookup"><span data-stu-id="89871-124">NET.TCP</span></span>|  
-|<span data-ttu-id="89871-125">Bağlama</span><span class="sxs-lookup"><span data-stu-id="89871-125">Binding</span></span>|<xref:System.ServiceModel.NetTcpBinding>|  
+|<span data-ttu-id="8bdb2-111">Güvenlik modu</span><span class="sxs-lookup"><span data-stu-id="8bdb2-111">Security Mode</span></span>|<span data-ttu-id="8bdb2-112">Taşıma</span><span class="sxs-lookup"><span data-stu-id="8bdb2-112">Transport</span></span>|  
+|<span data-ttu-id="8bdb2-113">Birlikte Çalışabilirlik</span><span class="sxs-lookup"><span data-stu-id="8bdb2-113">Interoperability</span></span>|<span data-ttu-id="8bdb2-114">Yalnızca WCF</span><span class="sxs-lookup"><span data-stu-id="8bdb2-114">WCF only</span></span>|  
+|<span data-ttu-id="8bdb2-115">Kimlik doğrulaması (sunucu)</span><span class="sxs-lookup"><span data-stu-id="8bdb2-115">Authentication (Server)</span></span><br /><br /> <span data-ttu-id="8bdb2-116">Kimlik doğrulaması (istemci)</span><span class="sxs-lookup"><span data-stu-id="8bdb2-116">Authentication (Client)</span></span>|<span data-ttu-id="8bdb2-117">Evet (Windows tümleşik kimlik doğrulaması kullanarak)</span><span class="sxs-lookup"><span data-stu-id="8bdb2-117">Yes (using Windows integrated authentication)</span></span><br /><br /> <span data-ttu-id="8bdb2-118">Evet (Windows tümleşik kimlik doğrulaması kullanarak)</span><span class="sxs-lookup"><span data-stu-id="8bdb2-118">Yes (using Windows integrated authentication)</span></span>|  
+|<span data-ttu-id="8bdb2-119">Bütünlüğü</span><span class="sxs-lookup"><span data-stu-id="8bdb2-119">Integrity</span></span>|<span data-ttu-id="8bdb2-120">Evet</span><span class="sxs-lookup"><span data-stu-id="8bdb2-120">Yes</span></span>|  
+|<span data-ttu-id="8bdb2-121">Gizliliği</span><span class="sxs-lookup"><span data-stu-id="8bdb2-121">Confidentiality</span></span>|<span data-ttu-id="8bdb2-122">Evet</span><span class="sxs-lookup"><span data-stu-id="8bdb2-122">Yes</span></span>|  
+|<span data-ttu-id="8bdb2-123">Taşıma</span><span class="sxs-lookup"><span data-stu-id="8bdb2-123">Transport</span></span>|<span data-ttu-id="8bdb2-124">NET. TCP</span><span class="sxs-lookup"><span data-stu-id="8bdb2-124">NET.TCP</span></span>|  
+|<span data-ttu-id="8bdb2-125">Bağlama</span><span class="sxs-lookup"><span data-stu-id="8bdb2-125">Binding</span></span>|<xref:System.ServiceModel.NetTcpBinding>|  
   
-## <a name="service"></a><span data-ttu-id="89871-126">Hizmet</span><span class="sxs-lookup"><span data-stu-id="89871-126">Service</span></span>  
- <span data-ttu-id="89871-127">Aşağıdaki kod ve yapılandırma, bağımsız olarak çalışmaya yöneliktir.</span><span class="sxs-lookup"><span data-stu-id="89871-127">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="89871-128">Aşağıdakilerden birini yapın:</span><span class="sxs-lookup"><span data-stu-id="89871-128">Do one of the following:</span></span>  
+## <a name="service"></a><span data-ttu-id="8bdb2-126">Hizmet</span><span class="sxs-lookup"><span data-stu-id="8bdb2-126">Service</span></span>  
+ <span data-ttu-id="8bdb2-127">Aşağıdaki kod ve yapılandırma, bağımsız olarak çalışmaya yöneliktir.</span><span class="sxs-lookup"><span data-stu-id="8bdb2-127">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="8bdb2-128">Aşağıdakilerden birini yapın:</span><span class="sxs-lookup"><span data-stu-id="8bdb2-128">Do one of the following:</span></span>  
   
--   <span data-ttu-id="89871-129">Kod ile yapılandırma kullanarak tek başına bir hizmet oluşturun.</span><span class="sxs-lookup"><span data-stu-id="89871-129">Create a stand-alone service using the code with no configuration.</span></span>  
+-   <span data-ttu-id="8bdb2-129">Kod ile yapılandırma kullanarak tek başına bir hizmet oluşturun.</span><span class="sxs-lookup"><span data-stu-id="8bdb2-129">Create a stand-alone service using the code with no configuration.</span></span>  
   
--   <span data-ttu-id="89871-130">Sağlanan Yapılandırması'nı kullanarak bir hizmet oluşturma, ancak tüm uç noktalar tanımlamaz.</span><span class="sxs-lookup"><span data-stu-id="89871-130">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
+-   <span data-ttu-id="8bdb2-130">Sağlanan Yapılandırması'nı kullanarak bir hizmet oluşturma, ancak tüm uç noktalar tanımlamaz.</span><span class="sxs-lookup"><span data-stu-id="8bdb2-130">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="89871-131">Kod</span><span class="sxs-lookup"><span data-stu-id="89871-131">Code</span></span>  
- <span data-ttu-id="89871-132">Aşağıdaki kod, bir Windows Güvenlik kullanan bir hizmet uç noktası oluşturma gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="89871-132">The following code shows how to create a service endpoint that uses a Windows security.</span></span>  
+### <a name="code"></a><span data-ttu-id="8bdb2-131">Kod</span><span class="sxs-lookup"><span data-stu-id="8bdb2-131">Code</span></span>  
+ <span data-ttu-id="8bdb2-132">Aşağıdaki kod, bir Windows Güvenlik kullanan bir hizmet uç noktası oluşturma gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="8bdb2-132">The following code shows how to create a service endpoint that uses a Windows security.</span></span>  
   
  [!code-csharp[C_SecurityScenarios#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#3)]
  [!code-vb[C_SecurityScenarios#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#3)]  
   
-### <a name="configuration"></a><span data-ttu-id="89871-133">Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="89871-133">Configuration</span></span>  
- <span data-ttu-id="89871-134">Hizmet uç noktayı kurmak için kod yerine aşağıdaki yapılandırma kullanılabilir:</span><span class="sxs-lookup"><span data-stu-id="89871-134">The following configuration can be used instead of the code to set up the service endpoint:</span></span>  
+### <a name="configuration"></a><span data-ttu-id="8bdb2-133">Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="8bdb2-133">Configuration</span></span>  
+ <span data-ttu-id="8bdb2-134">Hizmet uç noktayı kurmak için kod yerine aşağıdaki yapılandırma kullanılabilir:</span><span class="sxs-lookup"><span data-stu-id="8bdb2-134">The following configuration can be used instead of the code to set up the service endpoint:</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -74,24 +73,24 @@ ms.locfileid: "48847535"
 </configuration>  
 ```  
   
-## <a name="client"></a><span data-ttu-id="89871-135">İstemci</span><span class="sxs-lookup"><span data-stu-id="89871-135">Client</span></span>  
- <span data-ttu-id="89871-136">Aşağıdaki kod ve yapılandırma, bağımsız olarak çalışmaya yöneliktir.</span><span class="sxs-lookup"><span data-stu-id="89871-136">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="89871-137">Aşağıdakilerden birini yapın:</span><span class="sxs-lookup"><span data-stu-id="89871-137">Do one of the following:</span></span>  
+## <a name="client"></a><span data-ttu-id="8bdb2-135">İstemci</span><span class="sxs-lookup"><span data-stu-id="8bdb2-135">Client</span></span>  
+ <span data-ttu-id="8bdb2-136">Aşağıdaki kod ve yapılandırma, bağımsız olarak çalışmaya yöneliktir.</span><span class="sxs-lookup"><span data-stu-id="8bdb2-136">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="8bdb2-137">Aşağıdakilerden birini yapın:</span><span class="sxs-lookup"><span data-stu-id="8bdb2-137">Do one of the following:</span></span>  
   
--   <span data-ttu-id="89871-138">Bir tek başına istemci kodu (ve istemci kodu) kullanarak oluşturun.</span><span class="sxs-lookup"><span data-stu-id="89871-138">Create a stand-alone client using the code (and client code).</span></span>  
+-   <span data-ttu-id="8bdb2-138">Bir tek başına istemci kodu (ve istemci kodu) kullanarak oluşturun.</span><span class="sxs-lookup"><span data-stu-id="8bdb2-138">Create a stand-alone client using the code (and client code).</span></span>  
   
--   <span data-ttu-id="89871-139">Herhangi bir uç nokta adresi tanımlamıyor bir istemci oluşturun.</span><span class="sxs-lookup"><span data-stu-id="89871-139">Create a client that does not define any endpoint addresses.</span></span> <span data-ttu-id="89871-140">Bunun yerine, yapılandırma adı bağımsız değişkeni olarak alan İstemci Oluşturucu kullanın.</span><span class="sxs-lookup"><span data-stu-id="89871-140">Instead, use the client constructor that takes the configuration name as an argument.</span></span> <span data-ttu-id="89871-141">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="89871-141">For example:</span></span>  
+-   <span data-ttu-id="8bdb2-139">Herhangi bir uç nokta adresi tanımlamıyor bir istemci oluşturun.</span><span class="sxs-lookup"><span data-stu-id="8bdb2-139">Create a client that does not define any endpoint addresses.</span></span> <span data-ttu-id="8bdb2-140">Bunun yerine, yapılandırma adı bağımsız değişkeni olarak alan İstemci Oluşturucu kullanın.</span><span class="sxs-lookup"><span data-stu-id="8bdb2-140">Instead, use the client constructor that takes the configuration name as an argument.</span></span> <span data-ttu-id="8bdb2-141">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="8bdb2-141">For example:</span></span>  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
-### <a name="code"></a><span data-ttu-id="89871-142">Kod</span><span class="sxs-lookup"><span data-stu-id="89871-142">Code</span></span>  
- <span data-ttu-id="89871-143">Aşağıdaki kod, istemci oluşturur.</span><span class="sxs-lookup"><span data-stu-id="89871-143">The following code creates the client.</span></span> <span data-ttu-id="89871-144">Aktarım modu güvenliği TCP taşımasıyla ayarlamak için Windows istemci kimlik bilgileri türünü kullanmak için yapılandırılmış bir bağlama.</span><span class="sxs-lookup"><span data-stu-id="89871-144">The binding is configured to use the Transport mode security, with the TCP transport, with the client credential type set to Windows.</span></span>  
+### <a name="code"></a><span data-ttu-id="8bdb2-142">Kod</span><span class="sxs-lookup"><span data-stu-id="8bdb2-142">Code</span></span>  
+ <span data-ttu-id="8bdb2-143">Aşağıdaki kod, istemci oluşturur.</span><span class="sxs-lookup"><span data-stu-id="8bdb2-143">The following code creates the client.</span></span> <span data-ttu-id="8bdb2-144">Aktarım modu güvenliği TCP taşımasıyla ayarlamak için Windows istemci kimlik bilgileri türünü kullanmak için yapılandırılmış bir bağlama.</span><span class="sxs-lookup"><span data-stu-id="8bdb2-144">The binding is configured to use the Transport mode security, with the TCP transport, with the client credential type set to Windows.</span></span>  
   
  [!code-csharp[C_SecurityScenarios#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#4)]
  [!code-vb[C_SecurityScenarios#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#4)]  
   
-### <a name="configuration"></a><span data-ttu-id="89871-145">Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="89871-145">Configuration</span></span>  
- <span data-ttu-id="89871-146">Aşağıdaki yapılandırmayı kod yerine istemci oluşturmak için kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="89871-146">The following configuration can be used instead of the code to create the client.</span></span>  
+### <a name="configuration"></a><span data-ttu-id="8bdb2-145">Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="8bdb2-145">Configuration</span></span>  
+ <span data-ttu-id="8bdb2-146">Aşağıdaki yapılandırmayı kod yerine istemci oluşturmak için kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="8bdb2-146">The following configuration can be used instead of the code to create the client.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -118,7 +117,7 @@ ms.locfileid: "48847535"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="89871-147">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="89871-147">See Also</span></span>  
- [<span data-ttu-id="89871-148">Güvenliğe Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="89871-148">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [<span data-ttu-id="89871-149">Nasıl yapılır: Windows Kimlik Bilgileri ile Bir Hizmeti Güvenli Hale Getirme</span><span class="sxs-lookup"><span data-stu-id="89871-149">How to: Secure a Service with Windows Credentials</span></span>](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)  
- [<span data-ttu-id="89871-150">Windows Server AppFabric için güvenlik modeli</span><span class="sxs-lookup"><span data-stu-id="89871-150">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a><span data-ttu-id="8bdb2-147">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="8bdb2-147">See Also</span></span>  
+ [<span data-ttu-id="8bdb2-148">Güvenliğe Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="8bdb2-148">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [<span data-ttu-id="8bdb2-149">Nasıl yapılır: Windows Kimlik Bilgileri ile Bir Hizmeti Güvenli Hale Getirme</span><span class="sxs-lookup"><span data-stu-id="8bdb2-149">How to: Secure a Service with Windows Credentials</span></span>](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)  
+ [<span data-ttu-id="8bdb2-150">Windows Server AppFabric için güvenlik modeli</span><span class="sxs-lookup"><span data-stu-id="8bdb2-150">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

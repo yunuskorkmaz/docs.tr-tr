@@ -9,22 +9,22 @@ helpviewer_keywords:
 ms.assetid: 218c4464-e007-4539-803f-7c8b0a909fd8
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 21fedf064596979dbfb4190d9956da616295af3c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e9b79a8319b320289f43adac5a82ef22fa5e32b0
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752123"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199701"
 ---
-# <a name="remove-element-for-appsettings"></a><span data-ttu-id="d31a7-102">\<kaldırma > öğesi için \<appSettings ></span><span class="sxs-lookup"><span data-stu-id="d31a7-102">\<remove> element for \<appSettings></span></span>
+# <a name="remove-element-for-appsettings"></a><span data-ttu-id="1b855-102">\<kaldırma > öğesi için \<appSettings ></span><span class="sxs-lookup"><span data-stu-id="1b855-102">\<remove> element for \<appSettings></span></span>
 
-<span data-ttu-id="d31a7-103">Özel uygulama ayarlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="d31a7-103">Removes custom application settings.</span></span>
+<span data-ttu-id="1b855-103">Özel uygulama ayarları kaldırır.</span><span class="sxs-lookup"><span data-stu-id="1b855-103">Removes custom application settings.</span></span>
 
-<span data-ttu-id="d31a7-104">[**\<Yapılandırma >**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="d31a7-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
-<span data-ttu-id="d31a7-105">&nbsp;&nbsp;[**\<appSettings >**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) </span><span class="sxs-lookup"><span data-stu-id="d31a7-105">&nbsp;&nbsp;[**\<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) </span></span>  
-<span data-ttu-id="d31a7-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<kaldırma >**</span><span class="sxs-lookup"><span data-stu-id="d31a7-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**</span></span>
+<span data-ttu-id="1b855-104">[**\<Yapılandırma >**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="1b855-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
+<span data-ttu-id="1b855-105">&nbsp;&nbsp;[**\<appSettings >**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) </span><span class="sxs-lookup"><span data-stu-id="1b855-105">&nbsp;&nbsp;[**\<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) </span></span>  
+<span data-ttu-id="1b855-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<kaldırma >**</span><span class="sxs-lookup"><span data-stu-id="1b855-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="d31a7-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="d31a7-107">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="1b855-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="1b855-107">Syntax</span></span>
 
 ```xml
 <appSettings>
@@ -32,25 +32,25 @@ ms.locfileid: "32752123"
 </appSettings>
 ```
 
-### <a name="attribute"></a><span data-ttu-id="d31a7-108">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="d31a7-108">Attribute</span></span>
+### <a name="attribute"></a><span data-ttu-id="1b855-108">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="1b855-108">Attribute</span></span>
 
-|         | <span data-ttu-id="d31a7-109">Açıklama</span><span class="sxs-lookup"><span data-stu-id="d31a7-109">Description</span></span> |
+|         | <span data-ttu-id="1b855-109">Açıklama</span><span class="sxs-lookup"><span data-stu-id="1b855-109">Description</span></span> |
 | ------- | ----------- |
-| <span data-ttu-id="d31a7-110">**Anahtarı**</span><span class="sxs-lookup"><span data-stu-id="d31a7-110">**key**</span></span> | <span data-ttu-id="d31a7-111">Gerekli öznitelik.</span><span class="sxs-lookup"><span data-stu-id="d31a7-111">Required attribute.</span></span><br><br><span data-ttu-id="d31a7-112">Kaldırılacak anahtar adını belirtir.</span><span class="sxs-lookup"><span data-stu-id="d31a7-112">Specifies the name of the key to remove.</span></span> |
+| <span data-ttu-id="1b855-110">**Anahtarı**</span><span class="sxs-lookup"><span data-stu-id="1b855-110">**key**</span></span> | <span data-ttu-id="1b855-111">Gerekli öznitelik.</span><span class="sxs-lookup"><span data-stu-id="1b855-111">Required attribute.</span></span><br><br><span data-ttu-id="1b855-112">Kaldırılacak anahtar adını belirtir.</span><span class="sxs-lookup"><span data-stu-id="1b855-112">Specifies the name of the key to remove.</span></span> |
 
-### <a name="parent-element"></a><span data-ttu-id="d31a7-113">Üst öğesi</span><span class="sxs-lookup"><span data-stu-id="d31a7-113">Parent element</span></span>
+### <a name="parent-element"></a><span data-ttu-id="1b855-113">Üst öğe</span><span class="sxs-lookup"><span data-stu-id="1b855-113">Parent element</span></span>
 
-|     | <span data-ttu-id="d31a7-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="d31a7-114">Description</span></span> |
+|     | <span data-ttu-id="1b855-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="1b855-114">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="d31a7-115">**\<appSettings >**</span><span class="sxs-lookup"><span data-stu-id="d31a7-115">**\<appSettings>**</span></span>](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | <span data-ttu-id="d31a7-116">Dosya yolları, XML Web hizmeti URL'leri veya diğer özel yapılandırma bilgilerini bir uygulama gibi özel uygulama ayarlarını içerir.</span><span class="sxs-lookup"><span data-stu-id="d31a7-116">Contains custom application settings, such as file paths, XML Web service URLs, or any other custom configuration information for an application.</span></span> |
+| [<span data-ttu-id="1b855-115">**\<appSettings >**</span><span class="sxs-lookup"><span data-stu-id="1b855-115">**\<appSettings>**</span></span>](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | <span data-ttu-id="1b855-116">Dosya yolları, XML Web hizmeti URL'leri ya da bir uygulama için diğer özel yapılandırma bilgileri gibi özel uygulama ayarları içerir.</span><span class="sxs-lookup"><span data-stu-id="1b855-116">Contains custom application settings, such as file paths, XML Web service URLs, or any other custom configuration information for an application.</span></span> |
 
-## <a name="child-elements"></a><span data-ttu-id="d31a7-117">Alt öğeleri</span><span class="sxs-lookup"><span data-stu-id="d31a7-117">Child elements</span></span>
+## <a name="child-elements"></a><span data-ttu-id="1b855-117">Alt öğeleri</span><span class="sxs-lookup"><span data-stu-id="1b855-117">Child elements</span></span>
 
-<span data-ttu-id="d31a7-118">Yok.</span><span class="sxs-lookup"><span data-stu-id="d31a7-118">None</span></span>
+<span data-ttu-id="1b855-118">Yok.</span><span class="sxs-lookup"><span data-stu-id="1b855-118">None</span></span>
 
-## <a name="example"></a><span data-ttu-id="d31a7-119">Örnek</span><span class="sxs-lookup"><span data-stu-id="d31a7-119">Example</span></span>
+## <a name="example"></a><span data-ttu-id="1b855-119">Örnek</span><span class="sxs-lookup"><span data-stu-id="1b855-119">Example</span></span>
 
-<span data-ttu-id="d31a7-120">Aşağıdaki örnekte bir özel yapılandırma ayarını kaldırın gösterilmektedir `ApplicationName`:</span><span class="sxs-lookup"><span data-stu-id="d31a7-120">The following example shows how to remove a custom configuration setting for `ApplicationName`:</span></span>
+<span data-ttu-id="1b855-120">Aşağıdaki örnek bir özel yapılandırma ayarını kaldırın gösterilmiştir `ApplicationName`:</span><span class="sxs-lookup"><span data-stu-id="1b855-120">The following example shows how to remove a custom configuration setting for `ApplicationName`:</span></span>
 
 ```xml
 <appSettings>
@@ -58,6 +58,6 @@ ms.locfileid: "32752123"
 </appSettings>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="d31a7-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d31a7-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1b855-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1b855-121">See also</span></span>
 
-[<span data-ttu-id="d31a7-122">.NET Framework için yapılandırma dosyası şeması</span><span class="sxs-lookup"><span data-stu-id="d31a7-122">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="1b855-122">.NET Framework yapılandırma dosyası şeması</span><span class="sxs-lookup"><span data-stu-id="1b855-122">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)
