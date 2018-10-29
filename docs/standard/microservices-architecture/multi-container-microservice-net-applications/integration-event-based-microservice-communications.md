@@ -1,43 +1,43 @@
 ---
-title: Olay tabanlı mikro (tümleştirme olayları) arasındaki iletişimi uygulama
-description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Olay tabanlı mikro (tümleştirme olayları) arasındaki iletişimi uygulama
+title: Mikro hizmetler (tümleştirme olayları) arasında olay tabanlı iletişim uygulama
+description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Mikro hizmetler (tümleştirme olayları) arasında olay tabanlı iletişim uygulama
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 5d8ba76caab39db222c2ceba36a4d67cab3e8a3f
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 6a365c284d66ea24a9bb4caae51c63f22c79877b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105800"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194052"
 ---
-# <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Olay tabanlı mikro (tümleştirme olayları) arasındaki iletişimi uygulama
+# <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Mikro hizmetler (tümleştirme olayları) arasında olay tabanlı iletişim uygulama
 
-Olay tabanlı iletişim kullandığınızda, daha önce açıklandığı gibi bir mikro hizmet dikkat çekici bir şey olduğunda iş varlığı güncelleştirdiği gibi olduğunda bir olay yayımlar. Diğer mikro bu olaylarına abone olma. Bir mikro hizmet bir olayı aldığında, daha fazla olay yayımlanmakta yol açabilecek kendi iş varlıklarını güncelleştirebilirsiniz. Bu yayımlama/abonelik sistem genellikle bir olay veri yolu uygulaması kullanılarak gerçekleştirilir. Olay veri yolu bir arabirim abone olma ve aboneliği olayları ve olayları yayımlamak için gereken API ile tasarlanabilir. İleti sırası veya zaman uyumsuz iletişim ve publish/subscribe modelini destekleyen bir hizmet veri yolu gibi tüm işlemler arası veya Mesajlaşma iletişim göre bir veya daha fazla uygulamaları da olabilir.
+Olay tabanlı iletişim kullandığınızda, daha önce açıklandığı gibi bir mikro hizmet önemli bir sorun olduğunda bir iş varlığı güncelleştirdiği gibi durum gerçekleştiğinde bir olay yayımlar. Diğer mikro hizmetler, bu olaylara abone olun. Bir mikro hizmet, bir olayı aldığında, yayımlanmakta daha fazla olay için yol açabilecek kendi iş varlıklarını güncelleştirebilirsiniz. Bu yayımlama/abone olma sistem, genellikle bir olay veri yolu uygulaması kullanılarak gerçekleştirilir. Olay veri yoluna abone olma ve aboneliği olayları ve olayları yayımlamak için gereken API ile arabirim olarak tasarlanabilir. Bir ileti kuyruğu veya zaman uyumsuz iletişim ve bir yayımlama/abone olma modelini destekleyen bir service bus gibi tüm işlemler arası veya Mesajlaşma iletişimi göre bir veya daha fazla uygulamaları da olabilir.
 
-Olayları birden çok hizmet span iş işlemleri uygulamak üzere bu hizmetleri arasında nihai tutarlılık sağlayan kullanabilirsiniz. Sonuçta tutarlı bir işlem dağıtılmış işlemlerin bir dizi oluşur. Her bir eylemde mikro hizmet iş varlığı güncelleştirir ve bir sonraki eylem tetikleyen bir olay yayımlar.
+Olayları birden çok hizmet span iş işlemleri uygulamak üzere bu hizmetler arasındaki son tutarlılık sağlayan kullanabilirsiniz. Sonunda tutarlı bir işlem, dağıtılmış işlemlerin bir dizi oluşur. Her eylem bir mikro hizmet iş varlığı güncelleştirir ve sonraki eylemi tetikleyen bir olay yayımlar.
 
 ![](./media/image19.PNG)
 
-**Şekil 8-18**. Bir olay veri yoluna bağlı olay denetimli iletişim
+**Şekil 8-18**. Bir olay veri yoluna bağlı olarak olay tabanlı iletişim
 
-Bu bölümde, Şekil 8-18'de gösterildiği gibi bir genel olay veri yolu arabirimi kullanarak bu tür iletişim .NET ile nasıl uygulayabileceğiniz açıklanmaktadır. Her farklı teknoloji veya RabbitMQ, Azure Service Bus veya diğer üçüncü taraf açık kaynak veya ticari hizmet veri yolu gibi altyapısını kullanarak birden fazla olası uygulamaları vardır.
+Bu bölümde, Şekil 8-18'de gösterildiği gibi bir genel olay veri yolu arabirimini kullanarak bu tür .NET ile iletişimin nasıl uygulayacağınıza dair açıklanmaktadır. Her bir farklı teknoloji veya RabbitMQ, Azure Service Bus, ya da başka üçüncü taraf açık kaynak veya ticari hizmet veri yolu gibi altyapı kullanarak birden çok olası uygulamaları vardır.
 
 ## <a name="using-message-brokers-and-services-buses-for-production-systems"></a>İleti aracıları ve Hizmetleri yollarına üretim sistemleri için kullanma
 
-Mimari bölümünde belirtildiği gibi soyut olay bus uygulamak için birden çok Mesajlaşma teknolojileri arasından seçim yapabilirsiniz. Ancak, farklı düzeylerde bu teknolojilerdir. Örneğin, Azure Service Bus, NServiceBus, MassTransit veya Brighter gibi ticari ürün daha düşük bir düzeye RabbitMQ, bir Mesajlaşma Aracısı taşıma altındadır. Bu ürünler çoğunu RabbitMQ veya Azure Service Bus üzerinde çalışabilir. Seçiminiz ürünün kaç özellikler ve ne kadar out-of--box ölçeklenebilirlik, uygulamanız için gereken bağlıdır.
+Mimari bölümünde belirtildiği gibi soyut olay veri yolu uygulamak için birden çok Mesajlaşma teknolojilerinin arasından seçim yapabilirsiniz. Ancak, farklı düzeylerde bu teknolojilerdir. Örneğin, RabbitMQ, Mesajlaşma Aracısı Aktarım, Azure Service Bus, NServiceBus, MassTransit veya Brighter gibi ticari ürünleri daha düşük bir düzeyde altındadır. Bu ürünlerin çoğunu, RabbitMQ veya Azure Service Bus üzerinde çalışabilir. Ürün tercih ettiğiniz kaç özellikleri ve ne kadar out-bulunmayan ölçeklenebilirlik, uygulamanız için gereken bağlıdır.
 
-Yalnızca bir olay veri yolu, kavram eShopOnContainers örnek olduğu gibi geliştirme ortamınız için uygulamak için bir kapsayıcı olarak çalışan RabbitMQ üstünde basit bir uygulama yeterli olabilir. Ancak için kritik ve yüksek ölçeklenebilirlik gereken üretim sistemlerine değerlendirin ve Azure Service Bus hizmetini kullanmak olmak isteyebilirsiniz.
+Yalnızca bir olay veri yolu kavram kanıtı hizmetine örnek olduğu gibi geliştirme ortamınız için uygulamak için basit bir uygulama bir kapsayıcı olarak çalışan RabbitMQ üzerinde yeterli olabilir. Ancak için Görev açısından kritik ve yüksek ölçeklenebilirlik gerektiren üretim sistemlerine değerlendirmek ve Azure hizmet veri Yolu'nu olmak isteyebilirsiniz.
 
-Üst düzey soyutlamalar gerektirir ve daha zengin özellikleri ister [Sagas](https://docs.particular.net/nservicebus/sagas/) daha kolay, diğer ticari ve açık kaynak hizmeti yollarına NServiceBus, MassTransit, gibi Dağıtılmış Geliştirme yapmak uzun süre çalışan işlemleri ve Parlak değerlendirme değer var. Bu durumda, soyutlamalar ve kullanmak için API genellikle doğrudan bu üst düzey hizmet yollarına kendi soyutlamalar yerine tarafından sağlanan olanları olur (gibi [eShopOnContainers sırasında sağlanan Basit olay bus soyutlamalar](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/BuildingBlocks/EventBus/EventBus/Abstractions/IEventBus.cs)). Bu konular için ' ın, araştırma [çatallanmış NServiceBus kullanarak eShopOnContainers](http://go.particular.net/eShopOnContainers) (belirli yazılımı tarafından uygulanan ek türetilmiş örneği)
+Yüksek düzeyde soyutlama gerektiriyorsa ve gibi daha zengin özellikler [Sagas](https://docs.particular.net/nservicebus/sagas/) Dağıtılmış Geliştirme yapmak daha kolay, diğer ticari ve açık kaynak hizmeti yollarına NServiceBus, MassTransit, gibi uzun süre çalışan işlemler için ve Parlak değerlendirme değer var. Bu durumda, soyutlamaları ve kullanmak için API genellikle doğrudan bu üst düzey hizmet yolları yerine kendi soyutlama tarafından sağlanan olanları olur (gibi [sağlanan hizmetine basit olay veri yolu soyutlama](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/BuildingBlocks/EventBus/EventBus/Abstractions/IEventBus.cs)). Bu konular için ' ın, araştırma [çatallanmış NServiceBus kullanarak hizmetine](https://go.particular.net/eShopOnContainers) (belirli bir yazılım tarafından uygulanan ek türetilmiş örneği)
 
-Doğal olarak, her zaman kendi hizmet veri yolu özellikleri üzerinde alt düzey teknolojileri RabbitMQ ve Docker gibi oluşturabilirsiniz, ancak "tekerleği reinvent için" gereken çalışmayı özel Kurumsal uygulama için çok yüksek maliyetli olabilir.
+Elbette, her zaman kendi hizmet veri yolu özelliklerinin RabbitMQ ve Docker gibi alt düzey teknolojileri üzerine da oluşturabilirsiniz, ancak "tekerleği geliştirdi için" gereken çalışmayı özel Kurumsal uygulama için çok yüksek maliyetli olabilir.
 
 ## <a name="integration-events"></a>Tümleştirme olayları
 
-Tümleştirme olaylar, birden çok mikro veya dış sistemler arasında etki alanı durumu eşitlenmiş getirmek için kullanılır. Bu tümleştirme olaylarını mikro hizmet dışında yayımlama tarafından gerçekleştirilir. Bir olay (için tümleştirme olayına abone olarak sayıda mikro) birden çok alıcı mikro yayımlandığında, her alıcı mikro hizmet uygun olay işleyicisini olayını işler.
+Tümleştirme olayları, birden çok mikro hizmette veya dış sistemler arasında etki alanı durumu eşitlenmiş getirmek için kullanılır. Bu, mikro hizmet dışında tümleştirme olayları yayımlama tarafından gerçekleştirilir. Birden çok alıcı mikro hizmetler (için tümleştirme olaya abone olduğu gibi çok mikro hizmetler) için bir olay yayımlandığında her alıcı mikro hizmet uygun olay işleyicisi olayını işler.
 
-Bir tümleştirme temelde aşağıdaki örnekteki gibi bir veri tutan sınıfı olaydır:
+Bir tümleştirme temel olarak aşağıdaki örnekte olduğu gibi bir veri tutan sınıf olaydır:
 
 ```csharp
 public class ProductPriceChangedIntegrationEvent : IntegrationEvent
@@ -56,51 +56,51 @@ public class ProductPriceChangedIntegrationEvent : IntegrationEvent
 }
 ```
 
-Bir şekilde nasıl ViewModels sunucu ve istemci tanımlanan için karşılaştırılabilir diğer mikro gelen ayrılmış şekilde tümleştirme olaylarını her mikro hizmet uygulama düzeyinde tanımlanabilir. Ne önerilmez ortak bir tümleştirme olayları kitaplık arasında birden çok mikro paylaşan; Bunu tek olay tanımı veri kitaplığı ile bu mikro Kuplaj. Ortak etki alanı modeli birden çok mikro paylaşmak istediğiniz değil, aynı nedenleri için bunu yapmak istiyor musunuz: mikro tamamen otonom olmalıdır.
+Gelen bir şekilde nasıl Viewmodel'lar sunucu ve istemci tanımlandığı için karşılaştırılabilir diğer mikro hizmetler, ayrılmış şekilde her mikro hizmet uygulama düzeyinde tümleştirme olayları tanımlanabilir. Ne önerilmez birden fazla mikro hizmetler arasında ortak bir tümleştirme olayları kitaplığı paylaşıyor; Bunu tek olay tanımı veri kitaplığı ile bu mikro hizmetler eşlenmesiyle. Aynı ortak bir etki alanı modeli birden çok mikro hizmetler arasında paylaşmak istemediğiniz açısından yapmak istiyor musunuz: mikro hizmetler tamamen otonom olmalıdır.
 
-Yalnızca birkaç tür mikro paylaşmalıdır kitaplıkları vardır. Son uygulama blokları gibi kitaplıkları biridir [olay Bus İstemcisi API](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/BuildingBlocks/EventBus), eShopOnContainers gibi. Başka bir JSON serileştiricileri gibi bir NuGet bileşenler de paylaşım araçları oluşturan kitaplıkları olur.
+Yalnızca birkaç tür kitaplıkları mikro hizmetler arasında paylaşmalıdır vardır. Son uygulama bloğu gibi kitaplıkları biridir [olay veri yolu istemci API](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/BuildingBlocks/EventBus), hizmetine gibi. JSON seri hale getiricileri genişletme gibi NuGet bileşenlerini de paylaşım araçları oluşturan kitaplıkları da başka bir özelliktir.
 
 ## <a name="the-event-bus"></a>Olay veri yolu
 
-Bir olay veri yoluna Şekil 8-19'gösterildiği gibi açıkça birbirinden farkında olması gereken bileşenleri gerektirmeden mikro Yayımla/abone-style iletişimine izin verir.
+Bir olay veri yolu, Şekil 8-19'gösterildiği gibi açıkça birbirinden farkında olması gereken bileşenleri gerektirmeden mikro hizmetler arasında yayımlama/abone olun-style iletişime olanak sağlar.
 
 ![](./media/image20.png)
 
-**Şekil 8-19**. Yayımlama/abonelik bir olay veri yoluna temel kavramları
+**Şekil 8-19**. Yayımlama/abonelik bir olay veri yolu temel kavramları
 
-Olay bus gözlemci deseni ve yayımlama ile ilgili-düzeni abone olun.
+Olay veri yolu gözlemci deseni ve yayımlama ilgili-abone ol modeli.
 
 ### <a name="observer-pattern"></a>Gözlemci deseni
 
-İçinde [gözlemci deseni](https://en.wikipedia.org/wiki/Observer_pattern), birincil nesnenizin (Observable da bilinir) ilgili bilgileri (olayları) (Gözlemcilerin da bilinir) diğer ilgilendiğiniz nesneleri bildirir.
+İçinde [gözlemci deseni](https://en.wikipedia.org/wiki/Observer_pattern), birincil nesnenizin (Observable bilinir) ilgili bilgileri (olayları) ile (gözlemciler bilinir) diğer ilgili nesneleri bildirir.
 
-### <a name="publish-subscribe-pubsub-pattern"></a>Yayımlama-abone olma (Pub/alt) düzeni 
+### <a name="publish-subscribe-pubsub-pattern"></a>Yayımla-abone ol (Pub/Sub) deseni 
 
-Amacı [Pub/alt düzeni](https://msdn.microsoft.com/library/ff649664.aspx) gözlemci deseni ile aynıdır: belirli olaylar gerçekleştiğinde diğer hizmetler bildirmek istediğiniz. Ancak gözlemci ve Pub/alt desenleri arasında önemli bir fark yoktur. Bunlar "birbirine bilmesi" gözlemci deseninde yayın gözlemcilerin için doğrudan observable gerçekleştirilir. Ancak Pub/alt düzeni kullanırken yayımcı ve abone tarafından bilinen aracısı veya ileti aracısı veya olay veri yolu, adlı üçüncü bir bileşen yok. Bu nedenle, Pub/alt düzeni kullanırken, yayımcı ve aboneleri tam olarak belirtilen olay veri yolu veya ileti Aracısı sayesinde birbirinden ayrılır.
+Amacı [Pub/Sub deseni](https://msdn.microsoft.com/library/ff649664.aspx) gözlemci deseni ile aynıdır: belirli olaylar gerçekleştiğinde diğer hizmetleri bildirimde bulunmak istiyorsunuz. Ancak gözlemci ve Pub/Sub desenler arasında önemli bir fark yoktur. "Birbirine alışık oldukları için" gözlemci desende yayın gözlemciler için doğrudan observable gerçekleştirilir. Ancak bir Pub/Sub düzeni kullanılırken yayımcı ve abone tarafından bilinen aracısı veya ileti Aracısı ya da olay veri yolu, adlı üçüncü bir bileşen, yoktur. Bu nedenle, Pub/Sub düzeni kullanırken, yayımcı ve aboneleri tam olarak belirtilen olay veri yolu veya ileti Aracısı sayesinde birbirinden ayrılmıştır.
 
-### <a name="the-middleman-or-event-bus"></a>Middleman veya olay veri yolu 
+### <a name="the-middleman-or-event-bus"></a>Middleman ya da olay veri yolu 
 
-Gizlilik yayımcısı ile abone arasında nasıl elde? Tüm iletişimi dikkatli bir middleman izin kolay yoludur. Bir olay veri yoluna bir middleman ' dir.
+Yayımcı ile abone arasındaki gizlilik nasıl elde edebilirim? Kolay bir yolu, tüm iletişimi dikkatli bir middleman izin ' dir. Bir olay veri yolu bir middleman ' dir.
 
-Bir olay veri yoluna genellikle iki bölümden oluşur:
+Bir olay veri yolu, genellikle iki bölümden oluşur:
 
--   Özet veya arabirim.
+-   Soyut veya arabirim.
 
 -   Bir veya daha fazla uygulamaları.
 
-Şekil 8-19'nasıl, bir uygulama açısından bakıldığında, olay bus Pub/alt kanal'den fazla bir şey olduğunu görebilirsiniz. Bu zaman uyumsuz iletişim uygulamak şekilde farklılık gösterebilir. Böylece, aralarında ortamı gereksinimlerini (örneğin, geliştirme ortamları ve üretim) bağlı olarak takas edebilirsiniz birden fazla uygulaması olabilir.
+Şekil 8-19'nasıl bir uygulama açısından bakıldığında, olay veri yolu bir Pub/Sub kanal başka bir şey olduğunu görebilirsiniz. Bu zaman uyumsuz iletişim uygulamak yol gösterebilir. Böylece ortamı gereksinimlerini (örneğin, geliştirme ortamları ve üretim) bağlı olarak bunlar arasında değiştirme birden fazla uygulaması sahip olabilir.
 
-Şekil 8-20 olarak RabbitMQ, Azure Service Bus veya diğer olay/ileti aracısı gibi teknolojileri Mesajlaşma altyapısı göre birden çok uygulamalarıyla birlikte bir olay veri yolu için bir Özet görebilirsiniz. 
+Şekil 8-20 RabbitMQ, Azure Service Bus ve diğer olay/ileti aracısı gibi teknolojileri Mesajlaşma altyapısının temel birden çok uygulama ile bir olay veri yolu bir özeti görebilirsiniz. 
 
 ![](./media/image21.png)
 
-**Şekil 8 - 20.** Birden çok olay veri yolu uygulamaları
+**Şekil 8 - 20.** Bir olay veri yolu birden fazla uygulaması
 
-Ancak ve daha önce açıklanan olarak kendi soyutlamalar (olay veri yolu arabirimi) kullanarak yalnızca temel olay bus özelliklerini, soyutlamalar tarafından desteklenen gerekiyorsa iyi olur. Daha zengin service bus özelliklerini gerekiyorsa, API ve kendi soyutlamalar yerine, tercih edilen ticari hizmet veri yolu tarafından sağlanan soyutlamalar büyük olasılıkla kullanmanız gerekir. 
+Ancak ve daha önce bahsedilen olarak kendi soyutlamalar (olay veri yolu arabirimi) kullanarak yalnızca temel olay veri yolu özelliklerinin, soyutlama tarafından desteklenen gerekiyorsa uygundur. Daha zengin service bus özelliklerine ihtiyacınız varsa, büyük olasılıkla API ve kendi soyutlama yerine, tercih edilen ticari hizmet veri yolu tarafından sağlanan soyutlama kullanmanız gerekir. 
 
-### <a name="defining-an-event-bus-interface"></a>Bir olay veri yolu arabirimi tanımlama
+### <a name="defining-an-event-bus-interface"></a>Bir olay veri yolu arabirim tanımlama
 
-Olay veri yolu arabirimi için bazı uygulama kodu ve araştırması amacıyla olası uygulamaları ile başlayalım tıklatın. Arabirim genel ve aşağıdaki arabirimi olduğu gibi kolay olmalıdır.
+Bazı uygulama kodu olay veri yolu arabirimin ve araştırma amacıyla olası uygulamaları ile başlayalım tıklatın. Arabirimi, genel ve basit arabirim olduğu gibi olması gerekir.
 
 ```csharp
 public interface IEventBus
@@ -123,11 +123,11 @@ public interface IEventBus
 }
 ```
 
-`Publish` Yöntemdir kolay. Olay bus herhangi mikro hizmet ya da bu olaya abone bile bir dış uygulamaya geçirilen tümleştirme olay yayın. Bu yöntem, olay yayımlama mikro hizmet tarafından kullanılır.
+`Publish` Yöntem basittir. Olay veri yolu, herhangi bir mikro hizmet ya da o olaya abone bile bir dış uygulamaya geçirilen tümleştirme etkinliği yayınlamak. Bu yöntem olayın yayımlanması mikro hizmet tarafından kullanılır.
 
-`Subscribe` (Bağımsız değişkenler bağlı olarak çeşitli uygulamalarını olabilir) yöntemleri, olayları almak istediğiniz mikro tarafından kullanılır. Bu yöntem, iki bağımsız değişkenlere sahiptir. İlk abone olmak için tümleştirme olaydır (`IntegrationEvent`). Tümleştirme olay işleyicisi (veya geri çağırma yöntemi) adlı ikinci bağımsız değişkeni olan `IIntegrationEventHandler<T>`, alıcı mikro hizmet Bu tümleştirme olay iletisi aldığında gerçekleştirilecek.
+`Subscribe` Yöntemleri (bağımsız değişkenler bağlı olarak çeşitli uygulamalar olabilir), olaylar almak istiyorsanız mikro hizmetler tarafından kullanılır. Bu yöntem, iki bağımsız değişkeni vardır. İlk abone olmak için tümleştirme olaydır (`IntegrationEvent`). Tümleştirme olay işleyici (ya da geri arama yöntemi) adlı ikinci bağımsız değişken olan `IIntegrationEventHandler<T>`, alıcı mikro hizmet, bu tümleştirme olay iletisi aldığında çalıştırılacak.
 
 
 >[!div class="step-by-step"]
 [Önceki](database-server-container.md)
-[sonraki](rabbitmq-event-bus-development-test-environment.md)
+[İleri](rabbitmq-event-bus-development-test-environment.md)

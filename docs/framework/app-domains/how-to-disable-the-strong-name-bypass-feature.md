@@ -7,38 +7,38 @@ helpviewer_keywords:
 ms.assetid: 234e088c-3b11-495a-8817-e0962be79d82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e9604969ea073b07af0eca8d481f5459ee15d099
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: MT
+ms.openlocfilehash: 628bc1f89e5e09b47c70e39e107987753697cdb4
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742425"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50048001"
 ---
 # <a name="how-to-disable-the-strong-name-bypass-feature"></a>Nasıl yapılır: Tanımlayıcı Adlı Atlama Özelliğini Devre Dışı Bırakma
-İle .NET Framework sürüm 3.5 Service Pack 1 (SP1) başlayarak, tam güvene bir derleme yüklendiğinde güçlü ad imzaları doğrulanmaz <xref:System.AppDomain> varsayılan gibi nesne <xref:System.AppDomain> için `MyComputer` bölgesi. Bu özellik güçlü-adı olarak atlamak için adlandırılır. İçin tam güven ortamında, talep <xref:System.Security.Permissions.StrongNameIdentityPermission> imzalı için tam güven derlemeleri imzalarına bakılmaksızın her zaman başarılı. Ve bölgesi tam olarak güvenilir olmadığı için derleme tam olarak güvenilir olması gerektiğini yalnızca kısıtlamadır. Güçlü ad bu koşullarda belirleyici faktör olmadığından doğrulanması için için bir neden yoktur. Tanımlayıcı adlı imza doğrulaması atlayarak önemli ölçüde performans artışı sağlar.  
+İle .NET Framework sürüm 3.5 Service Pack 1 (SP1) başlayarak, tam güvene bir derleme yüklendiğinde tanımlayıcı ad imzaları doğrulanmaz <xref:System.AppDomain> gibi varsayılan nesne <xref:System.AppDomain> için `MyComputer` bölge. Bu atlama özelliğini tanımlayıcı ad adlandırılır. İçin tam güven ortamında, talepleri <xref:System.Security.Permissions.StrongNameIdentityPermission> imzalı için tam güven derlemeleri imzalarına bağımsız olarak her zaman başarılı. Tek kısıtlama, kendi bölgesine tam güvenilir olduğundan derleme tam güvenilir olması gerekliliğidir. Tanımlayıcı adı bir faktör Bu koşullar altında olmadığı için bunu doğrulanması için bir neden yoktur. Tanımlayıcı ad imzası doğrulama atlama önemli performans geliştirmeleri sunar.  
   
- Gecikme-imzalı değil ve hiçbir tam güvene yüklenen tüm tam güven derlemesi atlama özelliğini uygulandığı <xref:System.AppDomain> tarafından belirtilen dizinden kendi <xref:System.AppDomainSetup.ApplicationBase%2A> özelliği.  
+ Bu gecikme-imzalı değil ve bir tam güvene yüklenen herhangi bir tam güven derleme atlama özelliğini uygular <xref:System.AppDomain> tarafından belirtilen dizinden kendi <xref:System.AppDomainSetup.ApplicationBase%2A> özelliği.  
   
- Kayıt defteri anahtarı değerini ayarlayarak bir bilgisayardaki tüm uygulamalar için atlama özelliğini geçersiz kılabilirsiniz. Uygulama yapılandırma dosyası kullanarak tek bir uygulama ayarı geçersiz kılabilirsiniz. Kayıt defteri anahtarı tarafından devre dışı bırakılırsa atlama özelliği tek bir uygulama için yeniden devreye sokmanız olamaz.  
+ Bir kayıt defteri anahtarı değerini ayarlayarak bir bilgisayarda tüm uygulamalar için atlama özelliğini geçersiz kılabilirsiniz. Uygulama yapılandırma dosyası kullanarak tek bir uygulama ayarı geçersiz kılabilirsiniz. Kayıt defteri anahtarı tarafından devre dışı bırakılırsa atlama özelliği tek bir uygulama için yeniden devreye sokmanız olamaz.  
   
- Atlama özelliğini geçersiz kıldığınızda, güçlü ad yalnızca doğruluğu doğrulanır. için işaretli bir <xref:System.Security.Permissions.StrongNameIdentityPermission>. Belirli bir güçlü ad doğrulamak istiyorsanız, o onay ayrı olarak yapmanız gerekir.  
+ Atlama özelliğini geçersiz kıldığınızda, tanımlayıcı ad doğruluğu yalnızca doğrulanır. için işaretli bir <xref:System.Security.Permissions.StrongNameIdentityPermission>. Belirli bir tanımlayıcı ad doğrulamak istiyorsanız bu onay ayrı olarak yapmanız gerekir.  
   
 > [!IMPORTANT]
->  Tanımlayıcı ad doğrulaması zorlama olanağı, aşağıdaki yordamda açıklandığı gibi bir kayıt defteri anahtarı bağlıdır. Bir uygulama bu kayıt defteri anahtarına erişmek için erişim denetim listesi (ACL) iznine sahip olmayan bir hesap altında çalışıyorsa verimsiz bir ayardır. Böylece tüm derlemeler için okunabilir ACL hakları bu anahtar için yapılandırılmış olan emin olmalısınız.  
+>  Tanımlayıcı ad doğrulama zorlama olanağı, aşağıdaki yordamda açıklandığı gibi bir kayıt defteri anahtarı bağlıdır. Bir uygulama bu kayıt defteri anahtarına erişim için erişim denetim listesi (ACL) iznine sahip olmayan bir hesap altında çalışıyorsa, verimsiz bir ayardır. Böylece tüm derlemeler için okunabilir ACL hakları bu anahtar için yapılandırıldığından emin olmanız gerekir.  
   
-### <a name="to-disable-the-strong-name-bypass-feature-for-all-applications"></a>Tanımlayıcı adlı atlama özelliği tüm uygulamalar için devre dışı bırakmak için  
+### <a name="to-disable-the-strong-name-bypass-feature-for-all-applications"></a>Tanımlayıcı ad atlama özelliği tüm uygulamalar için devre dışı bırakmak için  
   
--   32-bit bilgisayarlarda, sistem kayıt defteri DWORD girdisi adlı 0 değerine sahip oluşturun `AllowStrongNameBypass` HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft altında\\. NETFramework anahtarı.  
+-   32-bit bilgisayarlarda, sistem kayıt defterinde DWORD girişini adlı 0 değeri ile oluşturma `AllowStrongNameBypass` HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft altında\\. NETFramework anahtarı.  
   
--   64-bit bilgisayarlarda, sistem kayıt defteri DWORD girdisi adlı 0 değerine sahip oluşturun `AllowStrongNameBypass` HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft altında\\. NETFramework ve HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\. NETFramework anahtarları.  
+-   64-bit bilgisayarlarda, sistem kayıt defterinde DWORD girişini adlı 0 değeri ile oluşturma `AllowStrongNameBypass` HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft altında\\. NETFramework ve HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\. NETFramework anahtarları.  
   
-### <a name="to-disable-the-strong-name-bypass-feature-for-a-single-application"></a>Tanımlayıcı adlı atlama özelliği tek bir uygulama için devre dışı bırakmak için  
+### <a name="to-disable-the-strong-name-bypass-feature-for-a-single-application"></a>Tanımlayıcı ad atlama özelliği tek bir uygulama için devre dışı bırakmak için  
   
-1.  Uygulama yapılandırma dosyası oluşturun veya açın.  
+1.  Uygulama yapılandırma dosyasını oluşturun veya açın.  
   
-     Uygulama yapılandırma dosyaları bölümünde bu dosya hakkında daha fazla bilgi için bkz: [yapılandırma uygulamaları](../../../docs/framework/configure-apps/index.md).  
+     Uygulama yapılandırma dosyaları bölümünde bu dosya hakkında daha fazla bilgi için bkz. [yapılandırma uygulamaları](../../../docs/framework/configure-apps/index.md).  
   
-2.  Aşağıdaki girişi ekleyin:  
+2.  Şu girişi ekleyin:  
   
     ```xml  
     <configuration>  
@@ -48,12 +48,12 @@ ms.locfileid: "32742425"
     </configuration>  
     ```  
   
- Yapılandırma dosyası ayarı kaldırarak veya öznitelik "true" olarak ayarlayarak uygulamanın atlama özelliğini geri yükleyebilirsiniz.  
+ Yapılandırma dosyası ayarı kaldırarak veya öznitelik "true" ayarını, uygulama için atlama özelliğini geri yükleyebilirsiniz.  
   
 > [!NOTE]
->  Atlama özelliği bilgisayar için yalnızca etkinse, bir uygulama için tanımlayıcı ad doğrulama açıp kapatabilirsiniz. Atlama özelliğini bilgisayarı kapatılmış, tanımlayıcı adlar tüm uygulamalar için doğrulanır ve tek bir uygulama doğrulamasını atlayamazsınız.  
+>  Yalnızca bilgisayar için atlama özelliği etkinse, bir uygulama için tanımlayıcı ad doğrulama açıp kapatabilirsiniz. Atlama özelliği, bilgisayarı kapatılmış, tüm uygulamalar için güçlü adlar doğrulanır ve tek bir uygulama için doğrulamayı atlayamazsınız.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sn.exe (Tanımlayıcı Ad Aracı)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
- [\<bypassTrustedAppStrongNames > öğesi](../../../docs/framework/configure-apps/file-schema/runtime/bypasstrustedappstrongnames-element.md)  
- [Kesin Adlandırılmış Bütünleştirilmiş Kodlar Oluşturma ve Kullanma](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
+- [Sn.exe (Tanımlayıcı Ad Aracı)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
+- [\<bypassTrustedAppStrongNames > öğesi](../../../docs/framework/configure-apps/file-schema/runtime/bypasstrustedappstrongnames-element.md)  
+- [Kesin Adlandırılmış Bütünleştirilmiş Kodlar Oluşturma ve Kullanma](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
