@@ -15,11 +15,11 @@ ms.assetid: 5099e549-f4fd-49fb-a290-549edd456c6a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bdd610ade931bedc9ee387b65b18efd1909ef58b
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
-ms.translationtype: HT
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50033935"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50202217"
 ---
 # <a name="resolving-assembly-loads"></a>Derleme Yüklerini Çözme
 .NET Framework sağlar <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> olay yüklenirken derleme üzerinde daha fazla denetim gerektiren uygulamalar için. Bu olayını işleyerek, uygulamanız hangisinin birkaç derleme sürümlerini yüklemek için dinamik bir derleme yayılamıyor ve döndürün. yük bağlamdan normal algılama yolları, select dışındaki bir derlemeyi yüklemek vb. Bu konuda işleme yönelik yönergeler sağlanmaktadır <xref:System.AppDomain.AssemblyResolve> olay.  

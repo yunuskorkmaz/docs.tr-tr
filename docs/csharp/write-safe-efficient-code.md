@@ -3,12 +3,12 @@ title: Güvenli ve verimli yazma C# kod
 description: Son geliştirmeler C# dil performansını daha önce güvenli olmayan kod ile ilişkili doğrulanabilir bir güvenli kod yazmak etkinleştirin.
 ms.date: 10/23/2018
 ms.custom: mvc
-ms.openlocfilehash: c5505f69a4706ef0f631c82e075e422cb8e13885
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
-ms.translationtype: HT
+ms.openlocfilehash: 8e58a7f870c742f1c0a90a7b5507ac1e5d8074ea
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50043117"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201591"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>Güvenli ve verimli yazma C# kod #
 
@@ -73,7 +73,7 @@ Bu öneri, bir değişmez değer türü oluşturmak için tasarım amacınızla 
 Döndürülen değer döndüren yöntemin yerel değilken, başvuruya göre değerler döndürmesine. Başvuruya göre döndüren anlamına gelir yalnızca başvurunun kopyalandığı yapısı. Aşağıdaki örnekte, `Origin` özelliğini kullanamaz bir `ref` döndürülen değer yerel bir değişken olduğundan döndürür:
 
 ```csharp
-public Point3D Origin {get;} => new Point3D(0,0,0);
+public Point3D Origin => new Point3D(0,0,0);
 ```
 
 Ancak, döndürülen değer, bir statik üye olduğundan aşağıdaki özellik tanımı başvuruya göre döndürülebilir:
@@ -84,7 +84,7 @@ public struct Point3D
     private static Point3D origin = new Point3D(0,0,0);
 
     // Dangerous! returning a mutable reference to internal storage
-    public ref Point3D Origin { get; } => ref origin;
+    public ref Point3D Origin => ref origin;
 
     // other members removed for space
 }
@@ -97,13 +97,13 @@ public struct Point3D
 {
     private static Point3D origin = new Point3D(0,0,0);
 
-    public ref readonly Point3D Origin { get; } => ref origin;
+    public ref readonly Point3D Origin => ref origin;
 
     // other members removed for space
 }
 ```
 
-Tarafından iade `readonly ref` daha büyük yapılar kopyalama kaydedin ve değiştirilemezlik, iç veri üyeleri koruma sağlar.
+Döndüren `ref readonly` daha büyük yapılar kopyalama kaydedin ve değiştirilemezlik, iç veri üyeleri koruma sağlar.
 
 Çağıran sitede, Arayanların kullanma seçimi yapın `Origin` özelliği olarak bir `readonly ref` ya da bir değer olarak:
 
@@ -127,7 +127,11 @@ Değer türleri Yöntem imzasında aşağıdaki değiştiriciler hiçbirini beli
 - `ref`: Bu yöntem, bu parametre olarak kullanılan bağımsız değişkeninin değerini ayarlayabilirsiniz.
 - `in`: Bu yöntem, bu parametre olarak kullanılan bağımsız değişkeninin değerini değiştirmez.
 
-Ekleme `in` başvuruya göre bağımsız değişken geçirin ve gereksiz şekilde kopyalamama olanağı, başvuruya göre bağımsız değişkenleri geçirmek için tasarım amacınızla bildirmek üzere değiştiricisi. Bu bağımsız değişken olarak kullanılan nesneyi değiştirmek istemediğiniz. Aşağıdaki kod örneği, 3B alanda iki nokta arasındaki uzaklığı hesaplar bir yöntemin gösterir.
+Ekleme `in` başvuruya göre bağımsız değişken geçirin ve gereksiz şekilde kopyalamama olanağı, başvuruya göre bağımsız değişkenleri geçirmek için tasarım amacınızla bildirmek üzere değiştiricisi. Bu bağımsız değişken olarak kullanılan nesneyi değiştirmek istemediğiniz.
+
+Bu yöntem genellikle daha büyük bir salt okunur değer türleri için performansı geliştirir <xref:System.IntPtr.Size?displayProperty=nameWithType>. Basit türleri için (`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float`, `double`, `decimal` ve `bool`, ve `enum` türleri), tüm olası performans artışı minimial. Aslında, performans geçişi tarafından başvuru türleri için küçük kullanarak düşebilir <xref:System.IntPtr.Size?displayProperty=nameWithType>.
+
+Aşağıdaki kod örneği, 3B alanda iki nokta arasındaki uzaklığı hesaplar bir yöntemin gösterir.
 
 [!code-csharp[InArgument](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgument "Specifying an in argument")]
 
