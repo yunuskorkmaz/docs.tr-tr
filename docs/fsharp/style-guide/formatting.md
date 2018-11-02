@@ -3,10 +3,10 @@ title: 'Biçimlendirme yönergelerine F # kodu'
 description: 'F # kod biçimlendirme yönergeleri hakkında bilgi edinin.'
 ms.date: 05/14/2018
 ms.openlocfilehash: 0d7d2d1771710db55bf990f3a06079b2aec48fd7
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "43858011"
 ---
 # <a name="f-code-formatting-guidelines"></a>Biçimlendirme yönergelerine F # kodu

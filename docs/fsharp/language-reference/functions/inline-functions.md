@@ -3,10 +3,10 @@ title: Satır İçi İşlevler (F#)
 description: 'Doğrudan çağıran koda tümleşik olan F # satır içi işlevleri hakkında bilgi edinin.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 47fca0fe34630792aeb0908b0cee02a927e2567d
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "45745951"
 ---
 # <a name="inline-functions"></a>Satır İçi İşlevler

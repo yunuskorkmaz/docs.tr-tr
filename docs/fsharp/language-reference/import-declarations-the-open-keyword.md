@@ -3,10 +3,10 @@ title: 'İçeri Aktarma Bildirimleri: open Anahtar Sözcüğü (F#)'
 description: 'Tam adı kullanmadan başvurabilirsiniz öğeleri, F # içeri aktarma bildirimleri ve bir modülde veya ad alanı nasıl belirlediği hakkında bilgi edinin.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 8cae4b4f5418689bfb0933b7db4ec23a313d5ed8
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "46586629"
 ---
 # <a name="import-declarations-the-open-keyword"></a>İçeri aktarma bildirimleri: `open` anahtar sözcüğü

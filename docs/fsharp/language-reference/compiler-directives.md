@@ -3,10 +3,10 @@ title: Derleyici Yönergeleri (F#)
 description: 'F # dil önişlemci yönergeleri, koşullu derleme yönergeleri, satır yönergeleri ve derleyici yönergeleri hakkında bilgi edinin.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 5ac375ac5acd0609a6556f9e0481d169df827c98
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "50181374"
 ---
 # <a name="compiler-directives"></a>Derleyici Yönergeleri

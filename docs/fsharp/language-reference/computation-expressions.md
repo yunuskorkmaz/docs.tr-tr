@@ -3,10 +3,10 @@ title: Hesaplama İfadeleri (F#)
 description: 'Hesaplamaları sıralı ve denetim akışı yapılarını ve bağlamalar kullanılarak birleştirilen içinde F # yazmak için kullanışlı bir söz dizimi oluşturmayı öğrenin.'
 ms.date: 07/27/2018
 ms.openlocfilehash: 148d1a661fb7630782c6dc48507a66e7bdc1d56b
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "48839875"
 ---
 # <a name="computation-expressions"></a>Hesaplama İfadeleri

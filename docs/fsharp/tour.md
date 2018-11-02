@@ -2,12 +2,12 @@
 title: F# turu
 description: Bazı F# programlama dilinde kod örnekleriyle birlikte bu turda anahtar özelliklerini inceleyin.
 ms.date: 02/28/2018
-ms.openlocfilehash: d129e2312ae3da64f04b3bbb0bbd0b4d77aad36e
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 7a512b5fead8de69f025e791b6086c60dbfc1b24
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42924527"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50235719"
 ---
 # <a name="tour-of-f"></a>F# turu #
 
@@ -193,6 +193,6 @@ Sınıflar gibi bilgileri temsil eder ve işlevselliği için bu bilgileri ayrı
 
 Birincil dili özelliklerinin bazılarını gördüğünüze göre ilk, F# programları yazmak için hazır!  Kullanıma [Başlarken](tutorials/getting-started/index.md) geliştirme ortamınızı ayarlama ve bazı kodlar yazma hakkında bilgi edinmek için.
 
-Daha fazla bilgi için sonraki adımlar dilediğiniz olabilir, ancak öneririz [ilk sınıf değerleri işlevler](introduction-to-functional-programming/functions-as-first-class-values.md) <!--[Introduction to Functional Programming in F#](introduction-to-functional-programming/index.md)--> işlevsel programlama kavramları ile daha rahat kullanmak için.  Bunlar, F# içinde sağlam programları derleme gerekli olacaktır.
+Daha fazla bilgi için sonraki adımlar dilediğiniz olabilir, ancak öneririz [işlevsel programlamaya giriş F# ](introduction-to-functional-programming/index.md) işlevsel programlama kavramları ile daha rahat kullanmak için.  Bunlar, F# içinde sağlam programları derleme gerekli olacaktır.
 
 Ayrıca, kullanıma [F# dili başvurusu](language-reference/index.md) kavramsal içeriğe kapsamlı koleksiyonu üzerinde F# görmek için.

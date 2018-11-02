@@ -3,10 +3,10 @@ title: 'F # zaman uyumsuz programlama'
 description: Bilgi nasıl F# zaman uyumsuz programlama, kullanımı kolay ve doğal dil için dil düzeyinde bir programlama modeli aracılığıyla gerçekleştirilir.
 ms.date: 06/20/2016
 ms.openlocfilehash: de07f1252df56e3dfec5ea7a34a283b1c9508523
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "50195066"
 ---
 # <a name="async-programming-in-f"></a>F # zaman uyumsuz programlama #

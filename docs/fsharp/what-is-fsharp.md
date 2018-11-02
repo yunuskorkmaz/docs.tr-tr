@@ -3,10 +3,10 @@ title: 'F # nedir'
 description: 'F # programlama gibi nedir ve hangi F # programlama dili hakkında bilgi edinin. Zengin veri türleri, İşlevler ve bunlar birbirine nasıl uyduğunu hakkında bilgi edinin.'
 ms.date: 08/03/2018
 ms.openlocfilehash: 193747f380c61a387ed79ecca6abbcd90ee74376
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "43863302"
 ---
 # <a name="what-is-f"></a>F # nedir #

@@ -2,12 +2,12 @@
 title: Parametreler ve Bağımsız Değişkenler (F#)
 description: 'Parametreleri tanımlama ve bağımsız değişkenleri işlevleri, yöntemlere ve özelliklere geçirme için F # dil desteği hakkında bilgi edinin.'
 ms.date: 05/16/2016
-ms.openlocfilehash: a1e2a70ca560bbb09d2cd10f47485cbe5c5e029d
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 6ccef89fe411096ed66f481dd4ae2d91259fe1c4
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123364"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50744463"
 ---
 # <a name="parameters-and-arguments"></a>Parametreler ve Bağımsız Değişkenler
 
@@ -111,6 +111,8 @@ Daha fazla bilgi için [oluşturucular (F #)](https://msdn.microsoft.com/library
 
 İsteğe bağlı parametresi bir yöntem için parametre adının önüne bir soru işareti kullanarak belirtebilirsiniz. İsteğe bağlı parametreler, F # seçeneği türü olarak yorumlanır, seçenek türleri, kullanarak sorgulanır, normal şekilde sorgulayabilmesi bir `match` ifadesiyle `Some` ve `None`. İsteğe bağlı parametreler kullanılarak oluşturulan işlevleri, üye üzerinde yalnızca verilen `let` bağlar.
 
+Var olan isteğe bağlı değerler yönteme parametre adıyla gibi geçirebilirsiniz `?arg=None` veya `?arg=Some(3)` veya `?arg=arg`. Bir yöntem oluşturma isteğe bağlı bağımsız değişkenler için başka bir yöntem başarılı olduğunda bu yararlı olabilir.
+
 Bir işlev de kullanabilirsiniz `defaultArg`, isteğe bağlı varsayılan değerini ayarlar. `defaultArg` İşlevi isteğe bağlı parametre olarak ilk bağımsız değişken ve varsayılan değer olarak saniye alır.
 
 Aşağıdaki örnek, isteğe bağlı parametreler kullanımını gösterir.
@@ -123,7 +125,29 @@ Aşağıdaki örnek, isteğe bağlı parametreler kullanımını gösterir.
 Baud Rate: 9600 Duplex: Full Parity: false
 Baud Rate: 4800 Duplex: Half Parity: false
 Baud Rate: 300 Duplex: Half Parity: true
+Baud Rate: 9600 Duplex: Full Parity: false
+Baud Rate: 9600 Duplex: Full Parity: false
+Baud Rate: 4800 Duplex: Half Parity: false
 ```
+
+Amacıyla C# ve Visual Basic birlikte çalışma özniteliklerini kullanabilirsiniz `[<Optional; DefaultParameterValue<(...)>]` içinde F#, Arayanların bir bağımsız değişken isteğe bağlı olarak görürsünüz. Bu bağımsız değişken isteğe bağlı olarak tanımlamak için eşdeğerdir C# olarak `MyMethod(int i = 3)`.
+
+```fsharp
+open System
+open System.Runtime.InteropServices
+type C = 
+    static member Foo([<Optional; DefaultParameterValue("Hello world")>] message) =
+        printfn "%s" message
+```
+
+Bağımsız değişken olarak verilen değer `DefaultParameterValue` türüyle eşleşmelidir parametresi, yani aşağıdaki verilmiyor:
+
+```fsharp
+type C =
+    static member Wrong([<Optional; DefaultParameterValue("string")>] i:int) = ()
+```
+
+Bu durumda, derleyici bir uyarı oluşturur ve her iki öznitelik tamamen göz ardı eder. Unutmayın varsayılan değer `null` türü-açıklama, olması gerekir aksi belirtilmedikçe derleyici yanlış türde, yani çıkarsar `[<Optional; DefaultParameterValue(null:obj)>] o:obj`.
 
 ## <a name="passing-by-reference"></a>Başvuruya göre geçirme
 

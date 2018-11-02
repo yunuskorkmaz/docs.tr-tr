@@ -3,10 +3,10 @@ title: Diziler (F#)
 description: 'Oluşturma ve diziler F # programlama dilini kullanma hakkında bilgi edinin.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 27b73efc900ac2efc813fe66f81baa2e9ae1e843
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "48032737"
 ---
 # <a name="arrays"></a>Diziler

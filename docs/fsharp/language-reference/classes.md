@@ -3,10 +3,10 @@ title: Sınıflar (F#)
 description: 'F # sınıfları, özellikleri, yöntemleri ve olayları olabilir nesneleri temsil eden türler nasıl olduğunu öğrenin.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 71cd713d192d28565e879b79b2fc9e0530e5f841
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "48845742"
 ---
 # <a name="classes"></a>Sınıflar
