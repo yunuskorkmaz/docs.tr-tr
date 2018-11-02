@@ -1,23 +1,23 @@
 ---
 title: Olaylara abone olma
-description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Olaylara abone olma
+description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Olaylara abone olma
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 6cc5563f93915d1516e5a5f22a104012c1bb85d6
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 5e53e0a3578c19b09f5327f444d1a5c013ad4cd9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106583"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194078"
 ---
 # <a name="subscribing-to-events"></a>Olaylara abone olma
 
-Olay veri yolu kullanarak ilk mikro almak istediği olaylara abone olma adımdır. Alıcı mikro yapılmalıdır.
+Olay veri yolu kullanmanın ilk adımı, mikro hizmetler almak istediği olaylara abone olmaktır. Alıcı mikro Hizmetleri yapılmalıdır.
 
-Aşağıdaki basit kod her alıcı mikro hizmet başlatılırken uygulamak gereken gösterir (diğer bir deyişle, `Startup` sınıfı) şekilde bu olayları, ihtiyaçlarını kaydeder. Bu durumda, `basket.api` mikro hizmet abone olmak için gereksinim duyduğu `ProductPriceChangedIntegrationEvent` ve `OrderStartedIntegrationEvent` iletileri. 
+Aşağıdaki basit kod her alıcı mikro hizmete uygulamak gereken gösterir (diğer bir deyişle, `Startup` sınıfı) şekilde bu olayları, ihtiyaçlarını kaydeder. Bu durumda, `basket.api` mikro hizmet abone olmak için gereksinim duyduğu `ProductPriceChangedIntegrationEvent` ve `OrderStartedIntegrationEvent` iletileri. 
 
-Örneğin, abone olduğunda `ProductPriceChangedIntegrationEvent` Sepeti mikro hizmet herhangi farkında yapan olay Ürün Fiyat değiştirir ve bu ürünün kullanıcının sepetteki ise değişiklik hakkında kullanıcıyı uyarmak etmenizi sağlar.
+Örneğin, abone olduğunda `ProductPriceChangedIntegrationEvent` sepet mikro hizmet herhangi farkında sağlayan bir olay ürün fiyatı değiştirir ve bu ürünün kullanıcının sepetteki ise değişiklik hakkında kullanıcıyı uyarmak olanak tanır.
 
 ```csharp
 var eventBus = app.ApplicationServices.GetRequiredService<IEventBus>();
@@ -30,13 +30,13 @@ eventBus.Subscribe<OrderStartedIntegrationEvent,
 
 ```
 
-Bu kod çalıştıktan sonra abone mikro hizmet RabbitMQ kanallardan dinleme. Her ileti türü ProductPriceChangedIntegrationEvent geldiğinde kodu kendisine geçirilen ve olay işleyen olay işleyiciyi çağırır.
+Bu kod çalıştırıldıktan sonra abone mikro hizmet RabbitMQ kanallar aracılığıyla dinleniyor olması. ProductPriceChangedIntegrationEvent türünde herhangi bir ileti geldiğinde, ona iletilen ve olayı işleyen olayı işleyicisi kodu çağırır.
 
-## <a name="publishing-events-through-the-event-bus"></a>Olay veri yolu üzerinden olay yayımlama
+## <a name="publishing-events-through-the-event-bus"></a>Olay veri yolu üzerinden olayları yayımlama
 
-Son olarak, aşağıdaki örneğe benzer bir kod tümleştirme olaylarla (kaynak mikro) iletiyi gönderenin yayımlar. (Bu kararlılık dikkate almaz basitleştirilmiş bir örnek niteliğindedir.) Birden çok mikro, verileri veya kaynak mikro hizmet hareketleri uyguladıktan sonra genellikle sağ arasında bir olay dağıtılmalıdır her benzer bir kod uygulamak.
+Son olarak, aşağıdaki örneğe benzer bir kod ile tümleştirme olayları (kaynak mikro hizmet) iletiyi gönderenin yayımlar. (Bu kararlılık dikkate almaz basitleştirilmiş bir örnek niteliğindedir.) Her olaya birden fazla mikro hizmetler, veri veya kaynak mikro hizmet içi işlemlerden uyguladıktan sonra genellikle doğru arasında dağıtılmalıdır benzer bir kod uygulayabilir.
 
-İlk olarak, aşağıdaki kod olduğu gibi denetleyicisi Oluşturucusu en (RabbitMQ üzerinde temel veya bir service bus tabanlı) olay veri yolu uygulama nesnesi eklenemeyebilir:
+İlk olarak, (RabbitMQ alarak veya temel bir service bus üzerinde) olay veri yolu uygulama nesnesi denetleyici Oluşturucu aşağıdaki kodu olduğu gibi eklenen:
 
 ```csharp
 [Route("api/v1/[controller]")]
@@ -58,7 +58,7 @@ public class CatalogController : ControllerBase
 }
 ```
 
-Ardından, onu denetleyicinizin yöntemleri, gibi UpdateProduct yöntemi kullanın:
+Ardından, bu denetleyicinizin yöntemlerinden gibi UpdateProduct yöntemi kullanın:
 
 ```csharp
 [Route("update")]
@@ -87,74 +87,74 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 }
 ```
 
-Bu durumda, basit bir CRUD mikro hizmet kaynak mikro hizmet olduğuna göre bu kodu bir Web API denetleyicisi sağ yerleştirilir. 
+Bu durumda, kaynak mikro hizmet basit CRUD mikro hizmeti olduğundan, bu kodu bir Web API denetleyicisi sağ yerleştirilir. 
  
-CQRS yaklaşımlar kullanırken gibi daha gelişmiş mikro onu içinde uygulanabilir `CommandHandler` sınıfı, içinde `Handle()` yöntemi. 
+Mikro hizmetlerde CQRS yaklaşımı kullanırken gibi daha gelişmiş, onu uygulanabilen `CommandHandler` içinde sınıf `Handle()` yöntemi. 
 
 
-### <a name="designing-atomicity-and-resiliency-when-publishing-to-the-event-bus"></a>Kararlılık ve dayanıklılık olay yoluna yayımlarken tasarlama
+### <a name="designing-atomicity-and-resiliency-when-publishing-to-the-event-bus"></a>Kararlılık ve dayanıklılık olay veri yoluna yayımlanırken tasarlama
 
-Dağıtılmış ileti aracılığıyla tümleştirme olaylarını yayımladığınızda, olay veri yolu gibi sistem, otomatik olarak özgün veritabanını güncelleştirme ve olay yayımlama sorununuz. Ürün Fiyat değiştirilir ve bir ProductPriceChangedIntegrationEvent ileti yayımlar örneği için daha önce gösterilen Basitleştirilmiş örnekte kodu verileri veritabanına kaydeder. Başlangıçta, bu iki işlemleri otomatik olarak gerçekleştirilmesi temel görünebilir. İlgili bir dağıtılmış işlem kullanıyorsanız gibi eski sistemlerinde olduğu gibi ancak, veritabanı ve iletiyi, Aracısı [Microsoft Message Queuing (MSMQ)](https://msdn.microsoft.com/library/ms711472(v=vs.85).aspx), bu tarafındanaçıklanannedenleriyleönerilmez[CAP Teoremi](https://www.quora.com/What-Is-CAP-Theorem-1).
+Dağıtılmış Mesajlaşma aracılığıyla tümleştirme olayları yayımladığınızda, olay veri yolu gibi sistem, başarısızlığa uğrar özgün veritabanının güncelleştirilmesi ve olay yayımlama sorununu vardır. Ürün fiyatı değiştirilir ve ardından bir ProductPriceChangedIntegrationEvent ileti yayımlar örneği için Basitleştirilmiş örnekte, daha önce gösterilen kodu verilerini veritabanına kaydeder. Başlangıçta, bu iki işlemler atomik olarak gerçekleştirilmesini temel görünebilir. İlgili bir dağıtılmış işlem kullanıyorsanız gibi eski sistemlerde olduğu gibi ancak, veritabanı ve ileti, aracı [Microsoft Message Queuing (MSMQ)](https://msdn.microsoft.com/library/ms711472(v=vs.85).aspx), bu tarafındanaçıklanannedenleriyleönerilmez[CAP Teoremi](https://www.quora.com/What-Is-CAP-Theorem-1).
 
-Temel olarak, mikro ölçeklenebilir ve yüksek oranda kullanılabilir sistemleri oluşturmak için kullanın. CAP Teoremi bir veritabanının (veya kendi modelini sahip bir mikro) oluşturamaz diyor biraz basitleştirme, sürekli olarak kullanılabilir, kesinlikle tutarlı *ve* dayanıklı herhangi bir bölümü için. Bu üç özellik ikilisi seçmeniz gerekir.
+Temelde, mikro hizmetler, ölçeklenebilir ve yüksek oranda kullanılabilir sistemleri oluşturmak için kullanın. CAP Teoremi veritabanında (veya kendi modelini sahibi olan bir mikro hizmet) derlenemiyor diyor biraz basitleştirme, sürekli olarak kullanılabilir ve son derece tutarlı *ve* dayanıklı herhangi bir bölümü için. Bu üç özellik ikilisi seçmeniz gerekir.
 
-Mikro tabanlı mimari, kullanılabilirlik ve dayanıklılık seçmeniz gerekir ve, güçlü tutarlılık devamlı müşterilerine göre ayarlayabilirler. Uyguladığınızda, yaptığınız gibi bu nedenle, çoğu modern mikro hizmet tabanlı uygulamalarda genellikle mesajlaşmada, dağıtılmış işlemler kullanmak istediğiniz değil [dağıtılmış işlemler](https://msdn.microsoft.com/library/ms978430.aspx#bdadotnetasync2_topic3c) Windows Dağıtılmış İşlem üzerinde dayalı Düzenleyicisi (DTC) ile [MSMQ](https://msdn.microsoft.com/library/ms711472(v=vs.85).aspx).
+Mikro hizmet tabanlı mimariler, kullanılabilirlik ve dayanıklılık seçmelisiniz ve, güçlü tutarlılık devamlı müşterilerine göre ayarlayabilirler. Uygulamanız olarak bu nedenle, çoğu modern mikro hizmet tabanlı uygulamalar, genellikle mesajlaşmada, dağıtılmış işlemler kullanmak istediğiniz değil [dağıtılmış işlemler](https://msdn.microsoft.com/library/ms978430.aspx#bdadotnetasync2_topic3c) Windows Dağıtılmış İşlem üzerinde temel Düzenleyicisi (DTC) ile [MSMQ](https://msdn.microsoft.com/library/ms711472(v=vs.85).aspx).
 
-İlk sorun ve kendi örnek edelim. Veritabanı güncelleştirildikten sonra hizmetin çökmesi durumunda (Bu durumda, kodla satırından sonra sağ \_bağlamı. SaveChangesAsync()), ancak tümleştirme olay yayımlanmadan önce genel sistem tutarsız hale gelebilir. Bu iş ilgilendiğiniz belirli iş işleme bağlı olarak önemli olabilir.
+Şimdi ilk sorun ve kendi örnek geçelim. Veritabanı güncelleştirildikten sonra hizmetin kilitlenmesi durumunda (Bu durumda, kod satırının sonra sağ \_bağlamı. SaveChangesAsync()), ancak tümleştirme olay yayımlanmadan önce sistemin tutarsız hale gelebilir. Bu, ilgilendiğiniz belirli iş işleme bağlı olarak kritik bir iş olabilir.
 
-Mimari bölümünde daha önce belirtildiği gibi bu sorunla ilgili çeşitli yaklaşımlar sahip olabilir:
+Mimari bölümünde daha önce bahsedildiği gibi bu sorunu uğraşmanızı için çeşitli yaklaşımlar olabilir:
 
--   Tam kullanarak [olay kaynak Hizmeti'nden düzeni](https://msdn.microsoft.com/library/dn589792.aspx).
+-   Tam kullanarak [olay kaynağını belirleme düzeni](https://msdn.microsoft.com/library/dn589792.aspx).
 
 -   Kullanarak [işlem oturum araştırma](https://www.scoop.it/t/sql-server-transaction-log-mining).
 
--   Kullanarak [Giden kutusu düzeni](http://gistlabs.com/2014/05/the-outbox/). (Yerel işlem genişletme) tümleştirme olayları depolamak üzere bir işlem tablo budur.
+-   Kullanarak [giden deseni](http://gistlabs.com/2014/05/the-outbox/). (Yerel işlem genişletme) tümleştirme olayları depolamak için bu işlem bir tablodur.
 
-Bu senaryo için tam olay kaynak Hizmeti'nden (ES) deseni en iyi yaklaşımlardan birini değilse kullanmaktır *en* iyi. Ancak, çok sayıda uygulama senaryolarında, tam bir ES sistemi uygulayabilirsiniz olmayabilir. ES geçerli durumu verilerinin depolanması yerine, işlemsel veritabanında yalnızca etki alanı olayları depolamak anlamına gelir. Yalnızca etki alanı olayları depolamak geçmişini sisteminizin kullanılabilir olması ve geçmişteki herhangi bir anda, sistem durumunu belirlemek mümkün gibi çok yarar olabilir. Ancak, tam bir ES sistemi uygulama sisteminizi çoğunu rearchitect gerektirir ve diğer birçok karmaşıklık ve gereksinimleri sunar. Örneğin, özellikle olay kaynak için gibi yapılan bir veritabanını kullanmak istersiniz [olay deposuna](https://geteventstore.com/), veya Azure Cosmos DB, MongoDB, Cassandra, CouchDB veya RavenDB gibi belge yönelimli veritabanı. Olay kaynak Hizmeti'nden ile bilginiz sürece ES Bu sorun, ancak en kolay çözüm için harika bir yaklaşımdır.
+Bu senaryo için tam olay kaynağını belirleme (ES) deseni en iyi yaklaşımlardan biri değilse kullanmaktır ** en iyi. Ancak, birçok uygulama senaryolarında, tam bir ES sistemi uygulamak mümkün olmayabilir. Geçerli durumu verilerini depolamak yerine işlemsel veritabanı, yalnızca etki alanı olayları depolamak ES anlamına gelir. Yalnızca etki alanı olayları depolamadan gibi sistem geçmişini sahip olunması ve geçmişteki herhangi bir anda, sistem durumunu belirlemek için harika avantajlar, olabilir. Ancak, tam bir ES sistemi uygulama sisteminizi çoğunu yeniden oluşturma gerektiren ve diğer birçok karmaşıklık ve gereksinimler sunar. Örneğin, özellikle olay kaynağını belirleme için gibi yapılan bir veritabanı kullanmak isteyebilirsiniz [olay Store](https://geteventstore.com/), veya bir Azure Cosmos DB, MongoDB, Cassandra, CouchDB veya RavenDB gibi belge yönelimli veritabanı. Olay kaynağını belirleme ile bilginiz sürece ES Bu sorun, ancak kolay çözümü için harika bir yaklaşımdır.
 
-İşlem günlüğü başlangıçta araştırma kullanma seçeneği çok saydam arar. Ancak, bu yaklaşımı kullanmak için SQL Server işlem günlüğü gibi RDBMS işlem günlüğü için eşleştirilmek üzere mikro hizmet vardır. Bu arzu büyük olasılıkla değil. Başka bir dezavantajı, işlem günlüğüne alt düzey güncelleştirmeleri, üst düzey tümleştirme olayları ile aynı düzeyde olmayabilir olmasıdır. Ters mühendislik işlemi varsa, bu işlem günlüğü işlemler zor olabilir.
+İşlem günlüğü başlangıçta araştırma kullanma seçeneği çok saydam arar. Ancak, bu yaklaşımı kullanmak için SQL Server işlem günlüğü gibi RDBMS işlem günlüğü için eşleştirilmek mikro hizmet vardır. Bu tercih edilir olmayabilir. Başka bir dezavantajı, işlem günlüğüne kaydedilen bir alt düzey güncelleştirmeleri, üst düzey tümleştirme olayları ile aynı düzeyde olmayabilir olmasıdır. Bu durumda, bu işlem günlüğü işlemleri tersine mühendislik işlemi zor olabilir.
 
-Dengeli bir yaklaşım, bir işlemsel veritabanı tablosu ve Basitleştirilmiş ES düzeni karışımıdır. "Tümleştirme olayları tabloya yaparsanız özgün olayda belirlenen olay yayımlamaya hazır" gibi bir durumda kullanabilirsiniz. Ardından olay veri yoluna olayı yayımlamak deneyin. Yayımla olayı eylemi başarılı olursa, başka bir işlem kaynak hizmetini ve durumu "hazır'dan olayı yayımlamak" "zaten yayınlanmış olaya." taşıma
+İşlemsel veritabanı tablosu ve Basitleştirilmiş bir ES deseni bir karışımını buna dengeli bir yaklaşımdır. "Tümleştirme olayları tabloya işlerseniz özgün olay ayarlanan olayı yayımlamak için hazır" gibi bir durum kullanabilirsiniz. Ardından, olay, olay veri yoluna yayımlayamadı deneyin. Yayımlama olayı eylem başarılı olursa, başka bir işlem kaynağını hizmetini ve durumu "den olay yayımlanmaya hazır" taşıma "zaten yayımlanan olaya."
 
-Yayımla olay eylem başarısız olay veri yolu, veri hala kaynak mikro hizmet içinde tutarsız olmaz — yine "hazır olarak olayı yayımlamak" işaretlendiğinden ve Hizmetleri rest göre sonunda tutarlı hale gelecektir. Her zaman işlemler veya tümleştirme olaylarını durumunu denetleme arka plan işleri sahip olabilir. İş "olay yayımlamaya hazır" durumda bir olay bulursa, bu olay olay veri yoluna yeniden yayımlamayı deneyebilirsiniz.
+Yayımlama olayı eylem başarısız olay veri yolu, veriler yine de kaynak mikro hizmet içinde tutarsız olmaz; yine de "hazır olarak olayı yayımlamak" işaretlenmiş olması ve ilgili rest Hizmetleri sonunda tutarlı olur. Her zaman, işlemler veya tümleştirme olayları durumunu denetleme arka plan işleri de sahip olabilir. İş "olayı yayımlamak hazır" durumunda bir olay bulunursa, bu olay Olay Bus yeniden yayımlamayı deneyebilirsiniz.
 
-Bu yaklaşımda, yalnızca her kaynak mikro hizmet tümleştirme olaylarını ve diğer mikro veya dış sistemleri ile iletişim kurmak istediğiniz olayları kalıcı olduğunu dikkat edin. Buna karşılık, tam bir ES sistemde, tüm etki alanı olayları de depolar.
+Bu yaklaşımda, yalnızca tümleştirme olayları için her kaynak mikro hizmet ve diğer mikro hizmetler veya dış sistemler için kurmak istediğiniz olayları kalıcı hale getirmeniz dikkat edin. Buna karşılık, tam bir ES sistemde, tüm etki alanı olayları de depolar.
 
-Bu nedenle, bu dengeli bir Basitleştirilmiş ES sistemi yaklaşımdır. Bunların geçerli durumu ile tümleştirme olaylarının bir listesi gerekir ("yayımlamak için"yayımlanan karşı"hazır"). Ancak bu durumu tümleştirme olaylarını uygulamak yeterlidir. Ve tam bir ES sisteminde olduğu gibi bu yaklaşım, işlemsel veritabanında olayları olarak tüm etki alanı verilerini depolamak gerekmez.
+Bu nedenle, dengeli bu yaklaşım bir Basitleştirilmiş ES sistemidir. Tümleştirme olayları ile bunların geçerli durumunu listesi gerekir ("yayımlamak"yayımlanan "hazır"). Ancak bu durumlar için tümleştirme olayları uygulamak yeterlidir. Ve tam bir ES sisteminde olduğu gibi Bu yaklaşımda, olaylar işlemsel veritabanında olarak tüm etki alanı verileri depolamak ihtiyacınız yoktur.
 
-İlişkisel veritabanı zaten kullanıyorsanız, tümleştirme olayları depolamak için bir işlem tablo kullanabilirsiniz. Uygulamanızdaki kararlılık elde etmek için yerel hareketlerini temel alarak iki adımlı bir işlem kullanın. Temel olarak, etki alanı varlıklarınızı sahip olduğu aynı veritabanında bir IntegrationEvent tablo sahip. Bu tablo dahil böylece kararlılık elde etmek için bir sigorta tümleştirme olaylarını etki alanı verilerinizi yürütülmekte olan aynı işlemleri kalıcı olarak çalışır.
+İlişkisel bir veritabanı zaten kullanıyorsanız, tümleştirme olayları depolamak için bir işlem tablo kullanabilirsiniz. Kararlılık, uygulamanızda elde etmek için iki adımlı bir işlem yerel işlemlerden yola çıkarak kullanın. Temel olarak, etki alanı varlıklarınızı sahip olduğu aynı veritabanında IntegrationEvent tablo sahip. Bu tablo, bir sigorta dahil bir kararlılık elde etmek için etki alanı verilerinizi yürütülmekte olan aynı işlemleri tümleştirme olayları kalıcı olarak çalışır.
 
-Adım adım işlemi aşağıdaki gibi gider: uygulama yerel veritabanı işlemi başlar. Etki alanı varlıklarınızı durumunu güncelleştirir ve bir olay tümleştirme olay tabloya ekler. Son olarak, işlem kaydeder. İstenen kararlılık alın.
+Adım adım işlemi bu gibi gider: uygulamayı bir yerel veritabanı işlemi başlar. Etki alanı varlıklarınızın durumunu güncelleştirir ve bir olay tümleştirme olay tablosuna ekler. Son olarak, hareketi tamamlar. İstenen kararlılık sahip olursunuz.
 
 Olayları yayımlama adımları uygularken bu seçeneğiniz vardır:
 
--   Sağa hareket uyguladıktan sonra tümleştirme olay yayımlayın ve başka bir yerel işlem yayımlanmakta olarak tablo olayları işaretlemek için kullanın. Sonra uzak mikro sorunları durumunda tümleştirme olaylarını izlemek için yalnızca bir yapı tabloyu kullanın ve saklı tümleştirme olaylara dayanarak telafi izin eylemleri gerçekleştirin.
+-   Tümleştirme olay sağ işlem uyguladıktan sonra yayımlayın ve yayımlanan olarak tablo olayları işaretlemek için başka bir yerel işlem'ı kullanın. Ardından uzak mikro hizmetler sorunları yaşanması tümleştirme olayları izlemek için yalnızca bir yapıt tabloyu kullanın ve saklı tümleştirme etkinliklere göre telafi izin eylemleri gerçekleştirin.
 
--   Tablo, kuyruk bir tür olarak kullanın. Ayrı uygulama iş parçacığı veya işlem tümleştirme olay tablo sorguları, olayları olay veri yoluna yayımlar ve olayları yayımlanmış olarak işaretlemek için yerel bir işlem kullanır.
+-   Tablo, kuyruk bir tür olarak kullanın. Ayrı uygulama iş parçacığı veya işlem tümleştirme olay tablo sorguları, olayları olay veri yoluna yayımlar ve olayları yayınlanan olarak işaretlemek için bir yerel işlem'i kullanır.
 
-Şekil 8-22 Bu yaklaşımlardan biri için Mimari gösterilmektedir.
+Şekil 8-22 Bu yaklaşımların ilk mimarisi gösterilmektedir.
 
 ![](./media/image23.png)
 
-**Şekil 8-22**. Olayları olay yoluna yayımlarken Atom oranı
+**Şekil 8-22**. Olaylar olay veri yoluna yayımlanırken kararlılık
 
-Şekil 8-22'de gösterilen yaklaşım denetleme ve yayımlanan tümleştirme olaylarını başarısını onaylayan sorumlu olduğu bir ek çalışan mikro hizmet eksik. Başarısız olması durumunda, bu ek denetleyicisi çalışan mikro hizmet tablosundan olayları okumak ve bunları yeniden yayımlayın.
+Şekil 8-22'de gösterilen yaklaşımına denetleniyor ve yayımlanan tümleştirme olayları başarısını onaylayan sorumlu ek çalışan mikro hizmet eksik. Hata durumunda, bu ek denetleyicisi çalışan mikro hizmet tablodan olayları okumak ve yayımlamaktır.
 
-İkinci yaklaşımı hakkında: sırası olarak olay günlüğüne tabloyu kullanın ve her zaman bir çalışan mikro hizmet iletileri yayımlamak için kullanın. Bu durumda, işlem Şekil 8-23'te gibi gösterilir. Tek kaynak olayları yayımlarken tablodur ve bu ek mikro hizmet gösterir.
+İkinci yaklaşım hakkında: olay günlüğü tablosu bir kuyruk kullanın ve her zaman iletileri yayımlamak için bir çalışan mikro hizmet kullanın. Bu durumda, işlem gibi Şekil 8-23 gösterilir. Bu ek bir mikro hizmet gösterir ve tek kaynak olayları yayımlarken tablosudur.
 
 ![](./media/image24.png)
 
-**Şekil 8-23**. Olayları olay veri yoluna çalışan mikro hizmet ile yayımlarken Atom oranı
+**Şekil 8-23**. Olayları çalışan mikro hizmet ile olay veri yoluna yayımlanırken kararlılık
 
-Kolaylık olması için eShopOnContainers örnek olay bus ilk yaklaşımda (hiçbir ek işlemler veya denetleyicisi mikro) kullanır. Ancak, eShopOnContainers tüm olası hata durumları işlenmemesinin. Buluta dağıtılan gerçek bir uygulamada denetleyip mantığı yeniden sorunları sonuçta ortaya çıkar ve uygulamanız gereken olgu çekirdeğin gerekir. Tek bir olay veri yolu yayımlarken, olayları kaynağı olarak bu tabloyu varsa sırası olarak tabloyu kullanarak ilk yaklaşım daha etkili olabilir.
+Kolaylık olması için hizmetine örnek olay veri yolu (ile hiçbir ek işlemler veya denetleyicisi mikro hizmetler) ilk yaklaşımı kullanır. Ancak, hizmetine tüm olası hata koşulları işlenmiyor. Buluta dağıtılan gerçek bir uygulamada denetleyin ve yeniden mantıksal sorunları sonuçta ortaya çıkar ve uygulamanız gereken gerçeği benimseyin gerekir. Bunları olay veri yolu yayımlarken olay tek bir kaynak olarak bu tablonuz varsa tabloyu sırası olarak kullanarak bir ilk yaklaşım daha etkili olabilir.
 
-### <a name="implementing-atomicity-when-publishing-integration-events-through-the-event-bus"></a>Olay Veriyolu aracılığıyla tümleştirme olaylarını yayımlarken kararlılık uygulama
+### <a name="implementing-atomicity-when-publishing-integration-events-through-the-event-bus"></a>Kararlılık tümleştirme olayları olay veri yolu üzerinden yayımlarken uygulama
 
-Aşağıdaki kod, birden çok DbContext nesnelerini içeren tek bir işlem nasıl oluşturabileceğinizi gösterir — güncelleştirilmekte özgün veri ile ilgili bir içerik ve IntegrationEventLog tabloya ilgili ikinci bağlamı.
+Aşağıdaki kod, birden çok DbContext nesnelerini içeren tek bir işlem nasıl oluşturabileceğinizi gösterir; güncelleştirilen özgün verilerle ilgili bir içerik ve ilgili IntegrationEventLog tablonun ikinci bağlam.
 
-Aşağıdaki örnek kod işlemde veritabanı bağlantılarını kodun çalıştığı zaman herhangi bir sorun varsa esnek olmaz unutmayın. Veritabanlarını sunucular arasında taşıma Azure SQL DB gibi bulut tabanlı sistemlerde gerçekleşebilir. Birden çok bağlamlarında dayanıklı işlemleri uygulamak için bkz: [dayanıklı Entity Framework Çekirdek SQL bağlantıları uygulama](#implementing_resilient_EFCore_SQL_conns) bu kılavuzda daha sonra bölüm.
+Aşağıdaki örnek kod işlemde veritabanı bağlantılarını kodun çalıştığı sırada herhangi bir sorun varsa esnek olmayacağını unutmayın. Veritabanlarını sunucular arasında taşınmasını gerektirecek Azure SQL veritabanı gibi bulut tabanlı sistemlerde oluşabilir. Dayanıklı işlemler arasında birden fazla bağlamı uygulamak için bkz: [dayanıklı Entity Framework Core SQL bağlantıları uygulama](../implement-resilient-applications/implement-resilient-entity-framework-core-sql-connections.md) bu kılavuzun devamında bölümü.
 
-Daha anlaşılır olması için aşağıdaki örnek kod tek bir parça tüm işlem gösterir. Ancak, eShopOnContainers uygulama gerçekte bulunanad ve sürdürmek daha kolay şekilde bu mantığı birden çok sınıflara bölme.
+Daha anlaşılır olması için aşağıdaki örnek, bu işlem tek bir kod parçasını gösterir. Ancak, hizmetine uygulama gerçekten bulunanad ve sürdürmek daha kolay olacak şekilde bu mantığı birden çok sınıflara bölme.
 
 ```csharp
 // Update Product from the Catalog microservice
@@ -183,7 +183,7 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem productToUp
   catalogItem = productToUpdate; 
 
   // Just save the updated product if the Product's Price hasn't changed.
-  if !(raiseProductPriceChangedEvent) 
+  if (!raiseProductPriceChangedEvent) 
   {
       await _catalogContext.SaveChangesAsync();
   }
@@ -215,15 +215,15 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem productToUp
 
 ```
 
-ProductPriceChangedIntegrationEvent tümleştirme olay oluşturulduktan sonra özgün etki alanı işlemi (güncelleştirme katalog öğesi) depolar işlem Kalıcılık olayın olay günlüğüne tabloda de içerir. Bu tek bir işlem yapar ve, her zaman gönderilen olay iletileri olup olmadığını denetlemek kullanamazsınız.
+ProductPriceChangedIntegrationEvent tümleştirme olayı oluşturulduktan sonra özgün etki alanı işlemi (katalog öğesi güncelleştirme) depolayan işlem olayın Kalıcılık EventLog tabloda da içerir. Bu tek bir işlem yapar ve her zaman gönderilen olay iletileri olup olmadığını denetlemek mümkün olacaktır.
 
-Olay günlüğü tablosu, aynı veritabanında yerel bir işlem kullanarak özgün veritabanı işlemi ile otomatik olarak güncelleştirilir. İşlemleri başarısız olursa, bir özel durum ve işlem bu nedenle etki alanı işlemleri ve gönderilen olay iletileri arasında tutarlılığı koruma herhangi bir Tamamlanan işlem geri alınır.
+Olay günlüğü tablosu ile aynı veritabanında yerel bir işlem kullanarak özgün veritabanı işlemi, atomik olarak güncelleştirilir. İşlemleri başarısız olursa, bir özel durum ve işlem bu nedenle etki alanı işlemleri ve gönderilen olay iletileri arasında tutarlılığı koruma herhangi bir tamamlanmış işlem geri alınır.
 
-### <a name="receiving-messages-from-subscriptions-event-handlers-in-receiver-microservices"></a>Aboneliklerden ileti alma: alıcı mikro olay işleyicileri
+### <a name="receiving-messages-from-subscriptions-event-handlers-in-receiver-microservices"></a>Aboneliklerden iletiler almaya: alıcısı, mikro hizmetler olay işleyicileri
 
-Olay aboneliği mantığı ek olarak (örneğin, bir geri çağırma yöntemi) tümleştirme olay işleyicileri için iç kod uygulamanız gerekir. Belirli bir türde olay iletileri nereye alınan ve işlenen belirlediğiniz olay işleyicisidir.
+Olay aboneliği mantığı ek olarak, iç kod (örneğin, bir geri arama yöntemi) tümleştirme olay işleyicileri için uygulamanız gerekir. Burada belirli bir türde olay iletileri işlenen ve alınacak belirttiğiniz olay işleyicisidir.
 
-Olay işleyici ilk olay yolundan olay örneğini alır. Ardından yayılıyor ve alıcı mikro hizmet durumunda bir değişiklik olarak olayı kalıcı tümleştirme olay, ilgili işlenmek üzere bileşen bulur. Örneğin, ProductPriceChanged olay Kataloğu mikro kaynaklanıyorsa Sepeti mikro ele alınır ve aşağıdaki kodda gösterildiği gibi bu alıcı Sepeti mikro hizmet olarak iyi durumda değiştirir.
+Bir olay işleyicisi, olay örneği ilk olay veri yolundan iletiyi alır. Ardından bu tümleştirme, yayma ve olay alıcısı mikro hizmet durumunda bir değişiklik olarak kalıcı hale olay, ilgili işlenecek bileşeni bulur. Örneğin, ProductPriceChanged olay Kataloğu mikro kaynaklanıyorsa, sepet mikro hizmet içinde işlenir ve aşağıdaki kodda gösterildiği gibi bu alıcı sepet mikro hizmet olarak iyi durumda değiştirir.
 
 ```csharp
 namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.EventHandling
@@ -272,84 +272,84 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 }
 ```
 
-Ürün Sepeti örnekleri hiçbirinde var olup olmadığını doğrulamak olay işleyicisini gerekir. Ayrıca, her ilgili Sepeti satır maddesi için madde fiyatı güncelleştirir. Son olarak, Şekil 8-24'te gösterildiği gibi fiyat değişikliği hakkında kullanıcıya görüntülenecek bir uyarı oluşturur.
+Ürün sepet örneği hiçbirinde var olup olmadığını doğrulamak olay işleyicisi gerekir. Ayrıca, her ilgili sepet satır öğesi için öğe fiyat güncelleştirir. Son olarak, Şekil 8-24'te gösterildiği gibi fiyat değişikliği hakkında kullanıcıya görüntülenecek bir uyarı oluşturur.
 
 ![](./media/image25.png)
 
-**Şekil 8-24**. Bir öğe fiyat değişikliği bir sepetteki tümleştirme olaylar tarafından iletilen olarak görüntüleme
+**Şekil 8-24**. Bir öğe fiyat değişikliği sepet, tümleştirme olayları tarafından iletilen olarak görüntüleme
 
-## <a name="idempotency-in-update-message-events"></a>Güncelleştirme iletisini olayları benzersizlik
+## <a name="idempotency-in-update-message-events"></a>Teklik update ileti olayları içinde
 
-Bir önemli güncelleştirme iletisi olayları denenmek üzere ileti iletişimde herhangi bir noktada başarısız olmasına neden yönüdür. Aksi halde bir arka plan görevi zaten, bir yarış durumu oluşturma yayımlanmış bir olay yayımlamayı deneyebilirsiniz. Idempotent veya bir yinelenen algılayabilir emin olmak için yeterli bilgi sağladıkları güncelleştirmelerin emin olmak için atmak ve geri tek bir yanıt gönderir.
+Update ileti olayları önemli bir yönüdür iletişimde herhangi bir noktada bir arıza denenmesi için iletiyi neden olmamalıdır olup. Aksi takdirde bir arka plan görevi, bir yarış durumu oluşturma yayımlanmış olduğu bir olay yayımlaması deneyebilir. Güncelleştirmelerin etkili veya yinelenen bir algılayabilir emin olmak için yeterli bilgi sağladıkları olduğunu emin olmak için atmak ve tek geri yanıt gönderir.
 
-Daha önce belirtildiği gibi sonuç değiştirmeden bir işlem birden çok kez gerçekleştirilebilir benzersizlik anlamına gelir. İleti bir ortamda, birden çok kez alıcı mikro hizmet için sonucu değiştirmeden teslim edilebilir olayları iletişim kurarken bir olay ıdempotent ise gibi. Bu olay yapısı nedeniyle gerekli olabilir veya yol nedeniyle sistem olayını işler. İleti benzersizlik Mesajlaşma deposu kullanan herhangi bir uygulama, yalnızca olay bus deseni uygulayan uygulamaları önemlidir.
+Daha önce belirtildiği gibi sonuç değiştirmeden bir işlem birden çok kez gerçekleştirilebilir Teklik anlamına gelir. İleti bir ortamda, birden çok kez alıcı mikro hizmet için sonucu değiştirmeden edinebilir, olayları iletişim kurarken, bir olay etkili olduğu gibi. Bu olayın yapısı nedeniyle gerekli olabilir veya şekli nedeniyle sistem olayını işler. İleti Teklik Mesajlaşma deposu kullanan herhangi bir uygulama, yalnızca olay veri yolu tasarımın uygulamalarda önemlidir.
 
-Yalnızca bu verileri tabloda değilse, bir tabloya veri ekleyen bir SQL deyimi bir ıdempotent işlem örnektir. SQL deyimini ekleyin çalıştırdığınız kaç kez önemli değildir; Sonuç aynı olacaktır — tablo verileri içerir. Bu gibi benzersizlik iletilerin potansiyel olarak gönderilebilir, iletileri ile ilgilenirken gerekirse ve bu nedenle işlenen defadan de olabilir. Örneğin, bir gönderici tam olarak aynı iletiyi birden çok kez göndermek yeniden deneme mantığı neden olursa, ıdempotent olduğundan emin olmak gerekir.
+Yalnızca bu veri tablosunda yoksa bir tabloya veri ekleyen bir SQL deyimi bir kez etkili işlem örneğidir. SQL deyimi ekleyin kaç kez çalıştırdığınız önemli değildir; Sonuç aynı olacaktır — tablo verileri içerir. Bu gibi Teklik, iletilerin potansiyel olarak gönderilebilir, iletileri ile ilgilenirken gerekirse ve bu nedenle işlenen defadan de olabilir. Örneğin, bir gönderici tam olarak aynı iletiyi birden çok kez göndermek yeniden deneme mantığı neden olursa, kez etkili olduğundan emin olmak gerekir.
 
-Tasarım ıdempotent iletileri mümkündür. Örneğin, bildiren bir olay oluşturabilirsiniz "Ürün Fiyat kümesine \$25" yerine "eklemek \$Ürün Fiyat 5." İlk kez herhangi bir sayıda güvenli bir şekilde işlem gerçekleştirilemedi ve sonucu aynı olacaktır. Bu ikinci bir ileti için doğru değil. Ancak, hatta ilk durumda, ilk olay sistem da daha yeni bir fiyat değişiklik olayı gönderilen ve yeni fiyat üzerine çünkü işlem istemeyebilirsiniz.
+Tasarım ıdempotent iletileri mümkündür. Bildiren bir olay oluşturma gibi "ürün fiyatı kümesine \$25" yerine "Ekle \$ürün fiyatı 5." İlk iletinin herhangi sayıda güvenli bir şekilde işleyebilir ve sonuç aynı olacaktır. Bu ikinci bir ileti için doğru değil. Ancak, hatta ilk durumda, sistem, daha yeni bir fiyat değişikliği olay gönderebilmesini ve yeni fiyatın üzerine yazılması çünkü ilk olayı işlemek istemeyebilirsiniz.
 
-Başka bir örnek, birden çok aboneye yayılmasını sipariş tamamlanan olay olabilir. Aynı sırada tamamlandı olayı için yinelenen ileti olayları olsa bile sipariş bilgilerini yalnızca bir kez, diğer sistemlere güncelleştirilmesi önemlidir.
+Başka bir örnek, bir sipariş tamamlandı olay birden fazla aboneye yayılmamış olmasından olabilir. Sipariş tamamlandı aynı etkinlik için yinelenen ileti olayları olsa bile, sipariş bilgilerini yalnızca bir kez, diğer sistemler güncelleştirilmesi önemlidir.
 
-Her olay alıcı yalnızca bir kez işlenir zorlar mantığı oluşturabilmesi için olay başına kimlik çeşit sağlamak kullanışlıdır.
+Bir tür olay başına kimlik her olay alıcı yalnızca bir kez işlenir zorlar mantıksal oluşturabilmesi uygundur.
 
-Bazı ileti kendiliğinden ıdempotent işlemesidir. Bir sistem görüntüsü küçük resimleri oluşturursa, örneğin, ileti hakkında ve oluşturulan küçük işlenir kaç kez önemli değil; sonucu küçük resimler oluşturulur ve her zaman aynıdır. ' dir. Diğer taraftan, kredi kartı kaydedilecek ödeme ağ geçidi çağırma gibi işlemler ıdempotent hiç olmayabilir. Bu durumlarda, birden çok kez ileti işlenirken beklediğiniz etkin olduğundan emin olmak gerekir.
-
-### <a name="additional-resources"></a>Ek kaynaklar
-
--   **İleti benzersizlik uygularken** (Bu sayfadaki alt başlık) [*https://msdn.microsoft.com/library/jj591565.aspx*](https://msdn.microsoft.com/library/jj591565.aspx)
-
-## <a name="deduplicating-integration-event-messages"></a>Yinelenenleri tümleştirme olay iletileri
-
-Message olayları gönderilen ve farklı düzeylerde abonelik başına yalnızca bir kez işlenir emin olabilirsiniz. Kullanmakta olduğunuz Mesajlaşma altyapısı tarafından sunulan bir yinelenenleri kaldırma özelliğini kullanan bir yoludur. Başka bir özel mantık, hedef mikro uygulamaktır. Hem aktarım düzeyinde ve uygulama düzeyinde doğrulamaları sahip en iyi sonucu istenir.
-
-### <a name="deduplicating-message-events-at-the-eventhandler-level"></a>Message olayları EventHandler düzeyinde yinelenenleri
-
-Bir olay herhangi bir alıcı tarafından yalnızca bir kez işlenir emin olmak için bir olay işleyicileri ileti olayları işlerken belirli mantığı uygulayarak yoludur. Örneğin, olan eShopOnContainers uygulamada kullanılan yaklaşımı nde gördüğünüz [kaynak kodu](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Controllers/OrdersController.cs) CreateOrderCommand komutu aldığında OrdersController sınıfının. (Bu durumda değil ileti tabanlı komutu bir HTTP isteği komutu kullanırız ancak ileti tabanlı komut ıdempotent yapmanız mantığı benzer.)
-
-### <a name="deduplicating-messages-when-using-rabbitmq"></a>RabbitMQ kullanırken yinelenenleri iletileri
-
-Aralıklı ağ hataları oluştuğunda iletileri çoğaltılabilir ve ileti alıcı bu yinelenen iletileri işlemek hazır olması gerekir. Mümkünse, alıcılar iletileri bunları yinelenenleri kaldırma ile açıkça işleme daha iyi bir ıdempotent şekilde işlemelidir.
-
-Göre [RabbitMQ belgelerine](https://www.rabbitmq.com/reliability.html#consumer), "bir ileti bir tüketici teslim ve (tüketici bağlantı kesildi, örneğin önce onu onaylanan değil çünkü) daha sonra yeniden kuyruğa alınması durumunda RabbitMQ üzerinde redelivered bayrağı ayarlayacak Bunu (', aynı tüketici ya da farklı bir olup olmadığını) yeniden teslim edildiğinde.
-
-"Redelivered" bayrağı ayarlarsanız, ileti zaten işlenmiş çünkü alıcı, dikkate almanız gerekir. Ancak bu garanti edilmez; ağ sorunları nedeniyle ileti Aracısı belki de sol sonra ileti hiçbir zaman alıcı ulaştı. "Redelivered" bayrağı ayarlanmamış olduğundan, diğer yandan, bu iletiyi birden çok kez gönderildiğini değil sağlanır. Bu nedenle, yalnızca ileti "redelivered" bayrağı ayarlarsanız iletileri veya işlem iletileri ıdempotent şekilde yararlanmanın alıcı gerekir.
+Bazı ileti işleme kendiliğinden etkilidir. Bir sistem görüntüsü küçük resimler oluşturur, örneğin, kaç kez oluşturulan küçük resim hakkında bir ileti işlendikten önemli değil; küçük resimler oluşturulur ve her seferinde oldukları aynı sonuç elde edilir. Öte yandan, bir kredi kartından çekim ödeme ağ geçidi çağırma gibi işlemler ıdempotent hiç olmayabilir. Bu gibi durumlarda birden çok kez bir iletiyi işlemeyi beklediğiniz etkin olduğundan emin olmak gerekir.
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
--   **Çatallanmış eShopOnContainers NServiceBus (belirli yazılım) kullanma**
-    [*http://go.particular.net/eShopOnContainers*](http://go.particular.net/eShopOnContainers)
+-   **İleti Teklik uygularken** (alt başlık bu sayfada) [*https://msdn.microsoft.com/library/jj591565.aspx*](https://msdn.microsoft.com/library/jj591565.aspx)
 
--   **İleti güdümlü olay**
+## <a name="deduplicating-integration-event-messages"></a>Tümleştirme olay iletileri alanında yinelenenleri kaldırma
+
+İleti olayları gönderilen ve farklı düzeylerde abonelik başına yalnızca bir kez işlenen emin olmak isteyebilirsiniz. Kullanmakta olduğunuz Mesajlaşma altyapısı tarafından sunulan bir yinelenenleri kaldırma özelliğini kullanan bir yoludur. Başka bir özel mantığı, hedef mikro uygulamaktır. Hem aktarım düzeyi ve uygulama düzeyinde doğrulamaları sahip, en iyi sonucu var.
+
+### <a name="deduplicating-message-events-at-the-eventhandler-level"></a>İleti olayları EventHandler düzeyinde alanında yinelenenleri kaldırma
+
+Bir olay yalnızca bir kez herhangi bir alıcı tarafından işlendiğinden emin olmak için bir olay işleyicileri ileti olayları işlerken belirli mantığı uygulayarak yoludur. Örneğin, olan hizmetine uygulamada kullanılan yaklaşım de görebileceğiniz gibi [kaynak kodu](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Controllers/OrdersController.cs) CreateOrderCommand komutunu aldığında OrdersController sınıf. (Bu durumda bir HTTP isteği komutu, not ileti tabanlı komut kullanıyoruz ancak ileti tabanlı komutu bir kez etkili hale getirmek için gereken mantığını benzer.)
+
+### <a name="deduplicating-messages-when-using-rabbitmq"></a>RabbitMQ kullanırken alanında yinelenenleri kaldırma iletileri
+
+Aralıklı ağ hataları meydana geldiğinde iletileri çoğaltılabilir ve ileti alıcısı şu yinelenen iletileri işlemeye hazır olmalıdır. Mümkünse, alıcılar, bunları yinelenenleri kaldırma ile açıkça işlenmesi daha iyidir bir kere etkili olacak şekilde iletileri işlemesi gerekir.
+
+Şunlara göre [RabbitMQ belgeleri](https://www.rabbitmq.com/reliability.html#consumer), "ileti bir tüketici teslim ve ardından (tüketici bağlantı kesildi, örneğin önce onu onaylanır değil çünkü) yeniden kuyruğa durumunda RabbitMQ üzerinde redelivered bayrağı ayarlayacak Bu (aynı tüketici mı farklı bir için) yeniden iletildiğinde.
+
+"Redelivered" bayrağı ayarlandıysa, ileti zaten işlenmiş çünkü alıcı, dikkate almalısınız. Ancak bu garanti edilmez. ağ sorunları nedeniyle ileti Aracısı, belki de sol sonra yapılacak hiçbir zaman alıcı ulaşmış olabilir. "Redelivered" bayrak ayarlanmazsa, diğer yandan, bu iletiyi birden çok kez gönderildiğini değil garanti edilir. Bu nedenle, yalnızca "redelivered" bayrak iletisinde ayarlanırsa iletiler veya işlem iletileri bir kere etkili olacak şekilde alanında yinelenenleri kaldırma alıcı gerekir.
+
+### <a name="additional-resources"></a>Ek kaynaklar
+
+-   **Çatalı hizmetine NServiceBus (yazılım) kullanma**
+    [*https://go.particular.net/eShopOnContainers*](https://go.particular.net/eShopOnContainers)
+
+-   **Mesajlaşma typu EventDriven**
     [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
--   **Jimmy Bogard. Esnekliği doğru yeniden düzenleme: Bağlantı değerlendirme**
+-   **Jimmy Bogard. Dayanıklılığı yeniden düzenleme: Bağlantı değerlendirme**
     [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
--   **Kanal yayımlama-abone olma**
-    [*http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
+-   **Kanal Yayımla-abone ol**
+    [*https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
--   **Sınırlanmış bağlamları arasında iletişim**
+-   **Sınırlanmış Bağlamlar arasında iletişim kurma**
     [*https://msdn.microsoft.com/library/jj591572.aspx*](https://msdn.microsoft.com/library/jj591572.aspx)
 
--   **Nihai tutarlılık**
+-   **Son tutarlılık**
     [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
--   **Elmas kahverengi. Tümleştirme stratejileri bağlamları sınırlanmış**
+-   **Philip Brown. Tümleştirmeye yönelik stratejiler sınırlanmış bağlamlar**
     [*http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/*](http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/)
 
--   **Chris Uludağ. Toplamalar, olay kaynak belirleme ve CQRS - bölüm 2 kullanarak işlem mikro geliştirme**
+-   **Chris Uludağ. Toplamlar, olay kaynağını belirleme ve CQRS - bölüm 2 kullanarak işlem mikro Hizmetleri Geliştirme**
     [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson)
 
--   **Chris Uludağ. Olay Sourcing düzeni**
+-   **Chris Uludağ. Olay kaynağını belirleme düzeni**
     [*https://microservices.io/patterns/data/event-sourcing.html*](https://microservices.io/patterns/data/event-sourcing.html)
 
--   **Olay kaynak Hizmeti'nden Tanıtımı**
+-   **Olay kaynağını belirleme ile tanışın**
     [*https://msdn.microsoft.com/library/jj591559.aspx*](https://msdn.microsoft.com/library/jj591559.aspx)
 
--   **Olay deposu veritabanı**. Resmi sitesi.
+-   **Olay Store veritabanı**. Resmi sitesi.
     [*https://geteventstore.com/*](https://geteventstore.com/)
 
--   **Can Nommensen. Mikro için olay denetimli veri yönetimi**
+-   **Patrick Nommensen. Mikro hizmetlere yönelik olay odaklı veri yönetimi**
     *<https://dzone.com/articles/event-driven-data-management-for-microservices-1> *
 
 -   **CAP Teoremi**
@@ -358,25 +358,25 @@ Göre [RabbitMQ belgelerine](https://www.rabbitmq.com/reliability.html#consumer)
 -   **CAP Teoremi nedir?**
     [*https://www.quora.com/What-Is-CAP-Theorem-1*](https://www.quora.com/What-Is-CAP-Theorem-1)
 
--   **Veri tutarlılığı Primer**
+-   **Veri tutarlılığı temel bilgileri**
     [*https://msdn.microsoft.com/library/dn589800.aspx*](https://msdn.microsoft.com/library/dn589800.aspx)
 
--   **Saling rick. CAP Teoremi: "Her şeyi farklı Bulut ve Internet olmasının"**
+-   **Saling rick. CAP Teoremi: "Her şey farklı Bulut ve Internet ile olmasının nedeni budur"**
     [*https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/*](https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/)
 
--   **Eric Brewer. CAP üzeri on iki yıllık: "Kurallar" nasıl değiştiğini**
+-   **Eric Brewer. CAP on iki yılından: "Kurallar" nasıl değişti**
     [*https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed*](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed)
 
--   **Dış (DTC) işlemlere katılan** (MSMQ) [*https://msdn.microsoft.com/library/ms978430.aspx\#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
+-   **Dış (DTC) işlemleri katılan** (MSMQ) [*https://msdn.microsoft.com/library/ms978430.aspx\#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
 
 -   **Azure hizmet veri yolu. Aracılı Mesajlaşma: Yinelenen algılama**
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
--   **Güvenilirlik Kılavuzu** (RabbitMQ belge) [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html%23consumer)
+-   **Güvenilirlik Kılavuzu** (RabbitMQ belgeler) [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html%23consumer)
 
 
 
 
 >[!div class="step-by-step"]
 [Önceki](rabbitmq-event-bus-development-test-environment.md)
-[sonraki](test-aspnet-core-services-web-apps.md)
+[İleri](test-aspnet-core-services-web-apps.md)
