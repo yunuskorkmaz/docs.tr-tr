@@ -3,46 +3,46 @@ title: Girdi Noktası (F#)
 description: 'Yürütme resmi olarak başladığı bir yürütülebilir dosyası olarak derlenmiş bir F # programına giriş noktası kurmayı öğrenin.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 298500931d49c891a7a243295333df3a9f5d413e
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "45698399"
 ---
-# <a name="entry-point"></a><span data-ttu-id="08417-103">Girdi Noktası</span><span class="sxs-lookup"><span data-stu-id="08417-103">Entry Point</span></span>
+# <a name="entry-point"></a><span data-ttu-id="6a9af-103">Girdi Noktası</span><span class="sxs-lookup"><span data-stu-id="6a9af-103">Entry Point</span></span>
 
-<span data-ttu-id="08417-104">Bu konuda, bir F # programına giriş noktası ayarlamak için kullandığınız yöntemin açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="08417-104">This topic describes the method that you use to set the entry point to an F# program.</span></span>
+<span data-ttu-id="6a9af-104">Bu konuda, bir F # programına giriş noktası ayarlamak için kullandığınız yöntemin açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="6a9af-104">This topic describes the method that you use to set the entry point to an F# program.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="08417-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="08417-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="6a9af-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="6a9af-105">Syntax</span></span>
 
 ```fsharp
 [<EntryPoint>]
 let-function-binding
 ```
 
-## <a name="remarks"></a><span data-ttu-id="08417-106">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="08417-106">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="6a9af-106">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="6a9af-106">Remarks</span></span>
 
-<span data-ttu-id="08417-107">Önceki sözdiziminde, *let işlevi bağlaması* içinde bir işlev tanımı bir `let` bağlama.</span><span class="sxs-lookup"><span data-stu-id="08417-107">In the previous syntax, *let-function-binding* is the definition of a function in a `let` binding.</span></span>
+<span data-ttu-id="6a9af-107">Önceki sözdiziminde, *let işlevi bağlaması* içinde bir işlev tanımı bir `let` bağlama.</span><span class="sxs-lookup"><span data-stu-id="6a9af-107">In the previous syntax, *let-function-binding* is the definition of a function in a `let` binding.</span></span>
 
-<span data-ttu-id="08417-108">Yürütme resmi olarak başladığı bir yürütülebilir dosya olduğu gibi derlenmiş bir programın giriş noktası.</span><span class="sxs-lookup"><span data-stu-id="08417-108">The entry point to a program that is compiled as an executable file is where execution formally starts.</span></span> <span data-ttu-id="08417-109">Uygulayarak bir F # uygulaması giriş noktası belirtme `EntryPoint` özniteliği programın `main` işlevi.</span><span class="sxs-lookup"><span data-stu-id="08417-109">You specify the entry point to an F# application by applying the `EntryPoint` attribute to the program's `main` function.</span></span> <span data-ttu-id="08417-110">Bu işlev (kullanılarak oluşturulan bir `let` bağlama) son derlenen dosyayı son işlev olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="08417-110">This function (created by using a `let` binding) must be the last function in the last compiled file.</span></span> <span data-ttu-id="08417-111">Son derlenen son proje dosyasına veya komut satırına geçirilen dosyanın son dosyasıdır.</span><span class="sxs-lookup"><span data-stu-id="08417-111">The last compiled file is the last file in the project or the last file that is passed to the command line.</span></span>
+<span data-ttu-id="6a9af-108">Yürütme resmi olarak başladığı bir yürütülebilir dosya olduğu gibi derlenmiş bir programın giriş noktası.</span><span class="sxs-lookup"><span data-stu-id="6a9af-108">The entry point to a program that is compiled as an executable file is where execution formally starts.</span></span> <span data-ttu-id="6a9af-109">Uygulayarak bir F # uygulaması giriş noktası belirtme `EntryPoint` özniteliği programın `main` işlevi.</span><span class="sxs-lookup"><span data-stu-id="6a9af-109">You specify the entry point to an F# application by applying the `EntryPoint` attribute to the program's `main` function.</span></span> <span data-ttu-id="6a9af-110">Bu işlev (kullanılarak oluşturulan bir `let` bağlama) son derlenen dosyayı son işlev olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="6a9af-110">This function (created by using a `let` binding) must be the last function in the last compiled file.</span></span> <span data-ttu-id="6a9af-111">Son derlenen son proje dosyasına veya komut satırına geçirilen dosyanın son dosyasıdır.</span><span class="sxs-lookup"><span data-stu-id="6a9af-111">The last compiled file is the last file in the project or the last file that is passed to the command line.</span></span>
 
-<span data-ttu-id="08417-112">Giriş noktası işlevini türünde `string array -> int`.</span><span class="sxs-lookup"><span data-stu-id="08417-112">The entry point function has type `string array -> int`.</span></span> <span data-ttu-id="08417-113">Komut satırında sağlanan bağımsız değişkenler geçirilen `main` işlevi bir dize dizisi.</span><span class="sxs-lookup"><span data-stu-id="08417-113">The arguments provided on the command line are passed to the `main` function in the array of strings.</span></span> <span data-ttu-id="08417-114">Dizinin ilk öğesi olmayan ilk bağımsız değişken; diğer dillerde olduğu gibi yürütülebilir dosyanın adını dizide dahil edilmez.</span><span class="sxs-lookup"><span data-stu-id="08417-114">The first element of the array is the first argument; the name of the executable file is not included in the array, as it is in some other languages.</span></span> <span data-ttu-id="08417-115">Dönüş değeri çıkış kodu işlemi için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="08417-115">The return value is used as the exit code for the process.</span></span> <span data-ttu-id="08417-116">Sıfır, genellikle başarılı gösterir; sıfır olmayan değerler, bir hata gösterir.</span><span class="sxs-lookup"><span data-stu-id="08417-116">Zero usually indicates success; nonzero values indicate an error.</span></span> <span data-ttu-id="08417-117">Özel bir anlamı sıfır dönüş kodları için hiçbir kural yoktur; dönüş kodları anlamı, uygulamaya özgü olur.</span><span class="sxs-lookup"><span data-stu-id="08417-117">There is no convention for the specific meaning of nonzero return codes; the meanings of the return codes are application-specific.</span></span>
+<span data-ttu-id="6a9af-112">Giriş noktası işlevini türünde `string array -> int`.</span><span class="sxs-lookup"><span data-stu-id="6a9af-112">The entry point function has type `string array -> int`.</span></span> <span data-ttu-id="6a9af-113">Komut satırında sağlanan bağımsız değişkenler geçirilen `main` işlevi bir dize dizisi.</span><span class="sxs-lookup"><span data-stu-id="6a9af-113">The arguments provided on the command line are passed to the `main` function in the array of strings.</span></span> <span data-ttu-id="6a9af-114">Dizinin ilk öğesi olmayan ilk bağımsız değişken; diğer dillerde olduğu gibi yürütülebilir dosyanın adını dizide dahil edilmez.</span><span class="sxs-lookup"><span data-stu-id="6a9af-114">The first element of the array is the first argument; the name of the executable file is not included in the array, as it is in some other languages.</span></span> <span data-ttu-id="6a9af-115">Dönüş değeri çıkış kodu işlemi için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="6a9af-115">The return value is used as the exit code for the process.</span></span> <span data-ttu-id="6a9af-116">Sıfır, genellikle başarılı gösterir; sıfır olmayan değerler, bir hata gösterir.</span><span class="sxs-lookup"><span data-stu-id="6a9af-116">Zero usually indicates success; nonzero values indicate an error.</span></span> <span data-ttu-id="6a9af-117">Özel bir anlamı sıfır dönüş kodları için hiçbir kural yoktur; dönüş kodları anlamı, uygulamaya özgü olur.</span><span class="sxs-lookup"><span data-stu-id="6a9af-117">There is no convention for the specific meaning of nonzero return codes; the meanings of the return codes are application-specific.</span></span>
 
-<span data-ttu-id="08417-118">Aşağıdaki örnekte basit bir `main` işlevi.</span><span class="sxs-lookup"><span data-stu-id="08417-118">The following example illustrates a simple `main` function.</span></span>
+<span data-ttu-id="6a9af-118">Aşağıdaki örnekte basit bir `main` işlevi.</span><span class="sxs-lookup"><span data-stu-id="6a9af-118">The following example illustrates a simple `main` function.</span></span>
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/entry-point/snippet501.fs)]
 
-<span data-ttu-id="08417-119">Ne zaman bu kod yürütüldüğünde komut satırından `EntryPoint.exe 1 2 3`, çıktı aşağıdaki gibidir.</span><span class="sxs-lookup"><span data-stu-id="08417-119">When this code is executed with the command line `EntryPoint.exe 1 2 3`, the output is as follows.</span></span>
+<span data-ttu-id="6a9af-119">Ne zaman bu kod yürütüldüğünde komut satırından `EntryPoint.exe 1 2 3`, çıktı aşağıdaki gibidir.</span><span class="sxs-lookup"><span data-stu-id="6a9af-119">When this code is executed with the command line `EntryPoint.exe 1 2 3`, the output is as follows.</span></span>
 
 ```console
 Arguments passed to function : [|"1"; "2"; "3"|]
 ```
 
-## <a name="implicit-entry-point"></a><span data-ttu-id="08417-120">Örtük giriş noktası</span><span class="sxs-lookup"><span data-stu-id="08417-120">Implicit Entry Point</span></span>
+## <a name="implicit-entry-point"></a><span data-ttu-id="6a9af-120">Örtük giriş noktası</span><span class="sxs-lookup"><span data-stu-id="6a9af-120">Implicit Entry Point</span></span>
 
-<span data-ttu-id="08417-121">Bir program, Hayır olduğunda **EntryPoint** giriş noktası, derlenecek dosyanın son en üst düzey bağlamaları açıkça belirten bir özniteliği, giriş noktası olarak kullanılır.</span><span class="sxs-lookup"><span data-stu-id="08417-121">When a program has no **EntryPoint** attribute that explicitly indicates the entry point, the top level bindings in the last file to be compiled are used as the entry point.</span></span>
+<span data-ttu-id="6a9af-121">Bir program, Hayır olduğunda **EntryPoint** giriş noktası, derlenecek dosyanın son en üst düzey bağlamaları açıkça belirten bir özniteliği, giriş noktası olarak kullanılır.</span><span class="sxs-lookup"><span data-stu-id="6a9af-121">When a program has no **EntryPoint** attribute that explicitly indicates the entry point, the top level bindings in the last file to be compiled are used as the entry point.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="08417-122">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="08417-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6a9af-122">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6a9af-122">See also</span></span>
 
-- [<span data-ttu-id="08417-123">İşlevler</span><span class="sxs-lookup"><span data-stu-id="08417-123">Functions</span></span>](index.md)
-- [<span data-ttu-id="08417-124">let Bağlamaları</span><span class="sxs-lookup"><span data-stu-id="08417-124">let Bindings</span></span>](let-bindings.md)
+- [<span data-ttu-id="6a9af-123">İşlevler</span><span class="sxs-lookup"><span data-stu-id="6a9af-123">Functions</span></span>](index.md)
+- [<span data-ttu-id="6a9af-124">let Bağlamaları</span><span class="sxs-lookup"><span data-stu-id="6a9af-124">let Bindings</span></span>](let-bindings.md)
