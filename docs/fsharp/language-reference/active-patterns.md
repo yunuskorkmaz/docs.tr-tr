@@ -1,6 +1,6 @@
 ---
 title: Etkin Desenler (F#)
-description: 'Etkin desenler, F # programlama dilinin girdi verileri alt bölümlere adlandırılmış bölümler tanımlamak için kullanmayı öğrenin.'
+description: Etkin desenler, F# programlama dilinin girdi verileri alt bölümlere adlandırılmış bölümler tanımlamak için kullanmayı öğrenin.
 ms.date: 05/16/2016
 ms.openlocfilehash: 4fb7d3e2b9c7e6f1c1ed9d64a47728c7f40017c8
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

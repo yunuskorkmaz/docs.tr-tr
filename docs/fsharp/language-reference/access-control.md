@@ -1,6 +1,6 @@
 ---
 title: Erişim Denetimi (F#)
-description: 'Türlerin, yöntemlerin ve İşlevler, F # programlama dili gibi programlama öğelerine erişimi denetlemeyi öğrenin.'
+description: Türlerin, yöntemlerin ve İşlevler, F# programlama dili gibi programlama öğelerine erişimi denetlemeyi öğrenin.
 ms.date: 05/16/2016
 ms.openlocfilehash: 66a260d326acf07391e3775e5a7853654b4feee4
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -15,7 +15,7 @@ ms.locfileid: "43803980"
 
 ## <a name="basics-of-access-control"></a>Erişim denetimi ile ilgili temel bilgiler
 
-F #'ta erişimi denetleme tanımlayıcıları `public`, `internal`, ve `private` modülleri, türleri, yöntemleri, değer tanımları, işlevleri, özellikleri ve açık alanlar için uygulanabilir.
+F#'ta erişimi denetleme tanımlayıcıları `public`, `internal`, ve `private` modülleri, türleri, yöntemleri, değer tanımları, işlevleri, özellikleri ve açık alanlar için uygulanabilir.
 
 - `public` varlığın tüm çağıranlar tarafından erişilebilir olduğunu gösterir.
 
@@ -24,13 +24,13 @@ F #'ta erişimi denetleme tanımlayıcıları `public`, `internal`, ve `private`
 - `private` varlık yalnızca kapsayan tür veya modülünden erişilebilir olduğunu gösterir.
 
 >[!NOTE]
-Erişim belirticisi `protected` destekleyen dillerde yazılan türleri kullanıyorsanız, kabul edilebilir olmasına rağmen F # kullanılmayan `protected` erişim. Bu nedenle, korunan bir yöntemi geçersiz kılarsanız, yöntemi yalnızca sınıf ve onun alt öğelerine içinde erişilebilir kalır.
+Erişim belirticisi `protected` destekleyen dillerde yazılan türleri kullanıyorsanız, kabul edilebilir olmasına rağmen F# kullanılmayan `protected` erişim. Bu nedenle, korunan bir yöntemi geçersiz kılarsanız, yöntemi yalnızca sınıf ve onun alt öğelerine içinde erişilebilir kalır.
 
 Genel olarak, aşağıdakiler haricinde varlığın adını önünde tanımlayıcısı put bir `mutable` veya `inline` belirticisi kullanıldığında, erişim denetimi belirticisinden sonra görünen.
 
 Hiçbir erişim belirticisi kullanıldığında varsayılandır `public`, dışında `let` her zaman bir türdeki bağlamaları `private` türü.
 
-İmzalarını F #, F # program öğelerine erişimi denetlemek için başka bir mekanizma sağlar. İmzalar için erişim denetimi gerekli değildir. Daha fazla bilgi için [imzaları](signatures.md).
+İmzalarını F#, F# program öğelerine erişimi denetlemek için başka bir mekanizma sağlar. İmzalar için erişim denetimi gerekli değildir. Daha fazla bilgi için [imzaları](signatures.md).
 
 ## <a name="rules-for-access-control"></a>Erişim denetim için kuralları
 
