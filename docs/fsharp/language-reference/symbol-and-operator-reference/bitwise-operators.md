@@ -1,6 +1,6 @@
 ---
 title: Bitwise İşleçleri (F#)
-description: F# programlama dilinde kullanılabilen bit düzeyinde işleçler hakkında bilgi edinin.
+description: 'F # programlama dilinde kullanılabilen bit düzeyinde işleçler hakkında bilgi edinin.'
 ms.date: 07/20/2018
 ms.openlocfilehash: ed76fcf5f9c569a2f288cf260e99dc29fd65ef3b
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,11 +11,11 @@ ms.locfileid: "48581514"
 ---
 # <a name="bitwise-operators"></a>Bitwise İşleçleri
 
-Bu konu F# dilinde kullanılabilen bit düzeyinde işleçler açıklar.
+Bu konu F # dilinde kullanılabilen bit düzeyinde işleçler açıklar.
 
 ## <a name="summary-of-bitwise-operators"></a>Bit düzeyinde işleçler özeti
 
-Aşağıdaki tabloda, F# dilinde kutulanmamış tam sayı türleri için desteklenen bir bit düzeyinde işleçler açıklanmaktadır.
+Aşağıdaki tabloda, F # dilinde kutulanmamış tam sayı türleri için desteklenen bir bit düzeyinde işleçler açıklanmaktadır.
 
 |İşleç|Notlar|
 |--------|-----|

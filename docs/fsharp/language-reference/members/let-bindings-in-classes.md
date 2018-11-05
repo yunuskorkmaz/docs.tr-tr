@@ -1,6 +1,6 @@
 ---
 title: Sınıflardaki let Bağlamaları (F#)
-description: Özel alanlar ve F# sınıfları için özel işlevler sınıf tanımında 'let' bağlamaları kullanarak tanımlamayı öğrenin.
+description: "Özel alanlar ve F # sınıfları için özel işlevler sınıf tanımında 'let' bağlamaları kullanarak tanımlamayı öğrenin."
 ms.date: 05/16/2016
 ms.openlocfilehash: 237eb98a57571a21c9187abf31f05160374cf4fc
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "48033226"
 ---
 # <a name="let-bindings-in-classes"></a>Sınıflardaki let Bağlamaları
 
-Özel alanlar ve özel işlevler için F# sınıfları kullanarak tanımlayabilirsiniz `let` sınıf tanımında bağlar.
+Özel alanlar ve özel işlevler için F # sınıfları kullanarak tanımlayabilirsiniz `let` sınıf tanımında bağlar.
 
 ## <a name="syntax"></a>Sözdizimi
 

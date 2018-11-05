@@ -1,5 +1,5 @@
 ---
-title: F# kullanarak Azure dosya depolama ile çalışmaya başlama
+title: 'F # kullanarak Azure dosya depolama ile çalışmaya başlama'
 description: Azure dosya depolama ile bulutta dosya data Store bir Azure sanal makineden (VM), bulut dosya paylaşımını bağlama ve bir şirket içi uygulamasından Windows çalıştıran.
 author: sylvanc
 ms.date: 09/20/2016
@@ -10,7 +10,7 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "33569349"
 ---
-# <a name="get-started-with-azure-file-storage-using-f"></a>F# kullanarak Azure dosya depolama ile çalışmaya başlama #
+# <a name="get-started-with-azure-file-storage-using-f"></a>F # kullanarak Azure dosya depolama ile çalışmaya başlama #
 
 Azure dosya depolama, standart kullanarak bulutta dosya paylaşımları sağlayan bir hizmettir [sunucu ileti bloğu (SMB) Protokolü](https://msdn.microsoft.com/library/windows/desktop/aa365233.aspx). SMB 2.1 ve SMB 3.0 desteklenir. Azure dosya depolama ile hızlı ve pahalı yeniden yazmalar olmadan Azure dosya paylaşımları kullanan eski uygulamaları geçirebilirsiniz. Azure sanal makineleri veya Bulut Hizmetleri veya şirket içi istemcilerden çalışan uygulamalar, yalnızca bir masaüstü uygulamanın tipik bir SMB paylaşımına bağlandığı şekilde bulutta dosya paylaşımı bağlayabilir. Uygulama bileşenleri herhangi bir sayıda sonra bağlayın ve File storage paylaşımını bağlayıp buna erişim.
 
@@ -21,9 +21,9 @@ Dosya depolama kavramsal bir genel bakış için bkz. Lütfen [dosya depolama i�
 Bu kılavuzu kullanmak için önce [bir Azure depolama hesabı oluşturma](/azure/storage/storage-create-storage-account).
 Ayrıca, bu hesap için depolama erişim anahtarınızı gerekir.
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>Bir F# komut dosyası ve başlangıç F# Etkileşimli oluşturma
+## <a name="create-an-f-script-and-start-f-interactive"></a>Bir F # komut dosyası ve başlangıç F # Etkileşimli oluşturma
 
-Bu makaledeki örnekleri, F# uygulaması veya bir F# komut dosyası kullanılabilir. Bir F# komut dosyası oluşturmak için bir dosya oluşturun. `.fsx` uzantısı, örneğin `files.fsx`, F# geliştirme ortamınızda.
+Bu makaledeki örnekleri, F # uygulaması veya bir F # komut dosyası kullanılabilir. Bir F # komut dosyası oluşturmak için bir dosya oluşturun. `.fsx` uzantısı, örneğin `files.fsx`, F # geliştirme ortamınızda.
 
 Ardından, bir [Paket Yöneticisi](package-management.md) gibi [Paket](https://fsprojects.github.io/Paket/) veya [NuGet](https://www.nuget.org/) yüklemek için `WindowsAzure.Storage` paket ve başvuru `WindowsAzure.Storage.dll` bir kullanarakbetiğinizde`#r`yönergesi.
 

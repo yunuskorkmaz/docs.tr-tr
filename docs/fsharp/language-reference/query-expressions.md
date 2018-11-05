@@ -1,6 +1,6 @@
 ---
 title: Sorgu İfadeleri (F#)
-description: F# programlama dilinin LINQ için sorgu ifade desteği hakkında bilgi edinin.
+description: 'F # programlama dilinin LINQ için sorgu ifade desteği hakkında bilgi edinin.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 6586d991dde550380d04c4d9831bb954eb94a715
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -14,7 +14,7 @@ ms.locfileid: "48033499"
 > [!NOTE]
 Bu makaledeki API başvuru bağlantıları için MSDN sürer.  Docs.microsoft.com API başvuru tamamlanmadı.
 
-Sorgu ifadeleri, bir veri kaynağı sorgulayan ve istenen biçimde verilerinizden sağlar. Sorgu ifadeleri, F# üzerinde LINQ için destek sağlar.
+Sorgu ifadeleri, bir veri kaynağı sorgulayan ve istenen biçimde verilerinizden sağlar. Sorgu ifadeleri, F # üzerinde LINQ için destek sağlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -24,7 +24,7 @@ query { expression }
 
 ## <a name="remarks"></a>Açıklamalar
 
-Sorgu ifadeleri, hesaplama ifadesi dizi ifadeleri benzer türüdür. Yalnızca bir sıralama ifadesi kodda sağlayarak bir sıra belirtmek gibi bir sorgu ifadesinde kod sağlayarak bir veri kümesini belirtin. Sırası ifadesindeki `yield` anahtar sözcüğü, sonuçta elde edilen dizisinin bir parçası döndürülecek veri tanımlar. Sorgu ifadelerinde `select` anahtar sözcüğü, aynı işlevi gerçekleştirir. Ek olarak `select` anahtar sözcüğü, F# ayrıca destekler çok benzer bir SQL SELECT deyimi bölümleri olan sorgu işleçlerini sayısı. Burada, basit bir sorgu ifadesinin, Northwind OData kaynağına bağlar koduyla birlikte bir örnek verilmiştir.
+Sorgu ifadeleri, hesaplama ifadesi dizi ifadeleri benzer türüdür. Yalnızca bir sıralama ifadesi kodda sağlayarak bir sıra belirtmek gibi bir sorgu ifadesinde kod sağlayarak bir veri kümesini belirtin. Sırası ifadesindeki `yield` anahtar sözcüğü, sonuçta elde edilen dizisinin bir parçası döndürülecek veri tanımlar. Sorgu ifadelerinde `select` anahtar sözcüğü, aynı işlevi gerçekleştirir. Ek olarak `select` anahtar sözcüğü, F # ayrıca destekler çok benzer bir SQL SELECT deyimi bölümleri olan sorgu işleçlerini sayısı. Burada, basit bir sorgu ifadesinin, Northwind OData kaynağına bağlar koduyla birlikte bir örnek verilmiştir.
 
 ```fsharp
 // Use the OData type provider to create types that can be used to access the Northwind database.
@@ -56,7 +56,7 @@ Sorgu işleçleri döndürülecek kayıtları ölçütleri koymak gibi farklı o
 
 Sorgu ifadelerinde yalnızca SQL çevrilebilir ifadelere izin veriliyor. Kullandığınızda, hiçbir işlev çağrılarına ifadelerinde izin `where` sorgu işleci.
 
-Tablo 1 kullanılabilir sorgu işleçlerine gösterir. Ayrıca, SQL sorguları ve eşdeğer F# sorgu ifadeleri bu konunun ilerleyen bölümlerinde karşılaştıran Table2 bakın. Bazı sorgu işleçleri, bazı tür sağlayıcıları tarafından desteklenmez. Özellikle, OData tür sağlayıcısını odata'da sınırlamaları nedeniyle desteklediği sorgu işleçleri sınırlıdır. Daha fazla bilgi için [ODataService tür sağlayıcısı (F#)](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e).
+Tablo 1 kullanılabilir sorgu işleçlerine gösterir. Ayrıca, SQL sorguları ve eşdeğer F # sorgu ifadeleri bu konunun ilerleyen bölümlerinde karşılaştıran Table2 bakın. Bazı sorgu işleçleri, bazı tür sağlayıcıları tarafından desteklenmez. Özellikle, OData tür sağlayıcısını odata'da sınırlamaları nedeniyle desteklediği sorgu işleçleri sınırlıdır. Daha fazla bilgi için [ODataService tür sağlayıcısı (F #)](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e).
 
 Bu tablo aşağıdaki biçimde bir veritabanı varsayılır:
 
@@ -499,7 +499,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </table>
 
 ## <a name="comparison-of-transact-sql-and-f-query-expressions"></a>Transact-SQL ve F# Sorgu İfadelerini Karşılaştırma
-Aşağıdaki tabloda bazı sık kullanılan Transact-SQL sorguları ve bunların eşdeğerlerini F#'de gösterir. Kodu bu tabloda, önceki tabloda ve tür sağlayıcısını ayarlama için aynı başlangıç kodu aynı veritabanında da varsayılır.
+Aşağıdaki tabloda bazı sık kullanılan Transact-SQL sorguları ve bunların eşdeğerlerini F #'de gösterir. Kodu bu tabloda, önceki tabloda ve tür sağlayıcısını ayarlama için aynı başlangıç kodu aynı veritabanında da varsayılır.
 
 
 ### <a name="table-2-transact-sql-and-f-query-expressions"></a>Tablo 2. Transact-SQL ve F# Sorgu İfadeleri
@@ -508,7 +508,7 @@ Aşağıdaki tabloda bazı sık kullanılan Transact-SQL sorguları ve bunların
 <table style="width:100%">
   <tr>
     <th>Transact-SQL (büyük/küçük harfe duyarlı değil)</th>
-    <th>F# sorgu ifadesi (büyük/küçük harfe duyarlı)</th>
+    <th>F # sorgu ifadesi (büyük/küçük harfe duyarlı)</th>
   </tr>
 <tr><td>
 Tüm alanları tablosundan seçin.</br>
@@ -1864,7 +1864,7 @@ query {
 |> Seq.iter (fun (studentName, courseName) -> printfn "%s %s" studentName courseName)
 ```
 
-Ve işte tam çıktıyı bu kod, F# Interactive içinde çalıştırıldığında.
+Ve işte tam çıktıyı bu kod, F # Interactive içinde çalıştırıldığında.
 
 ```
 --> Referenced 'C:\Program Files (x86)\Reference Assemblies\Microsoft\FSharp\3.0\Runtime\v4.0\Type Providers\FSharp.Data.TypeProviders.dll'

@@ -1,6 +1,6 @@
 ---
 title: Temsilciler (F#)
-description: Temsilciler F# ile çalışmayı öğrenin.
+description: 'Temsilciler F # ile çalışmayı öğrenin.'
 ms.date: 05/16/2016
 ms.openlocfilehash: be58997dffe8fcd949bbc2d47d86ffccc157d43e
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "45745500"
 ---
 # <a name="delegates"></a>Temsilciler
 
-Bir temsilci, bir nesne olarak bir işlev çağrısını temsil eder. F# programında, genellikle işlev değerleri ilk sınıf değerleri olarak işlevler temsil etmek için kullanmanız gerekir; Ancak, temsilciler .NET Framework'teki kullanılır ve bunları beklediğiniz API'leri ile birlikte çalışmak, bu nedenle gereklidir. Geliştirme kitaplıkları için tasarlanan diğer .NET Framework dillerde kullandığınızda da kullanılabilir.
+Bir temsilci, bir nesne olarak bir işlev çağrısını temsil eder. F # programında, genellikle işlev değerleri ilk sınıf değerleri olarak işlevler temsil etmek için kullanmanız gerekir; Ancak, temsilciler .NET Framework'teki kullanılır ve bunları beklediğiniz API'leri ile birlikte çalışmak, bu nedenle gereklidir. Geliştirme kitaplıkları için tasarlanan diğer .NET Framework dillerde kullandığınızda da kullanılabilir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -23,7 +23,7 @@ type delegate-typename = delegate of type1 -> type2
 
 Önceki sözdiziminde, `type1` bağımsız değişken türü veya türleri temsil eder ve `type2` dönüş türünü temsil eder. Tarafından temsil edilen bağımsız değişken türleri `type1` otomatik olarak curried. Bu, bu tür hedef işlevinin bağımsız değişkenleri curried bir tanımlama grubu form kullanmanızı ve parantez içine alınmış demet tanımlama grubu biçiminde olan bağımsız değişkenler için önerir. Otomatik currying hedef yöntemin eşleşen bir tanımlama grubu bağımsız değişkenini bırakarak, parantez kümesi kaldırır. Her durumda kullanmalısınız söz dizimi kod örneğine bakın.
 
-Temsilciler, F# işlev değerleri olarak ve statik eklenebilecek veya örnek yöntemler. F# işlev değerleri oluşturucuları temsilci olarak doğrudan bağımsız değişken olarak geçirilebilir. Statik bir yöntem için temsilci sınıf ve yöntem adını kullanarak oluşturun. Bir örnek yöntemi için nesne örneği ve bir bağımsız değişkende yöntemi sağlar. Her iki durumda da, üye erişim işleci (`.`) kullanılır.
+Temsilciler, F # işlev değerleri olarak ve statik eklenebilecek veya örnek yöntemler. F # işlev değerleri oluşturucuları temsilci olarak doğrudan bağımsız değişken olarak geçirilebilir. Statik bir yöntem için temsilci sınıf ve yöntem adını kullanarak oluşturun. Bir örnek yöntemi için nesne örneği ve bir bağımsız değişkende yöntemi sağlar. Her iki durumda da, üye erişim işleci (`.`) kullanılır.
 
 `Invoke` Temsilci türünde yöntemi kapsüllenmiş işlevi çağırır. Ayrıca, parantezler olmadan Invoke yöntemi ada başvurarak Temsilciler, işlev değerleri ' e geçirilebilir.
 

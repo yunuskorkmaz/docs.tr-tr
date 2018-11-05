@@ -1,6 +1,6 @@
 ---
 title: Parametreler ve Bağımsız Değişkenler (F#)
-description: Parametreleri tanımlama ve bağımsız değişkenleri işlevleri, yöntemlere ve özelliklere geçirme için F# dil desteği hakkında bilgi edinin.
+description: 'Parametreleri tanımlama ve bağımsız değişkenleri işlevleri, yöntemlere ve özelliklere geçirme için F # dil desteği hakkında bilgi edinin.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 6ccef89fe411096ed66f481dd4ae2d91259fe1c4
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -105,11 +105,11 @@ Bir sınıf oluşturucusuna bir çağrı adlandırılmış bağımsız değişke
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet3506.fs)]
 
-Daha fazla bilgi için [oluşturucular (F#)](https://msdn.microsoft.com/library/2cd0ed07-d214-4125-8317-4f288af99f05).
+Daha fazla bilgi için [oluşturucular (F #)](https://msdn.microsoft.com/library/2cd0ed07-d214-4125-8317-4f288af99f05).
 
 ## <a name="optional-parameters"></a>İsteğe Bağlı Parametreler
 
-İsteğe bağlı parametresi bir yöntem için parametre adının önüne bir soru işareti kullanarak belirtebilirsiniz. İsteğe bağlı parametreler, F# seçeneği türü olarak yorumlanır, seçenek türleri, kullanarak sorgulanır, normal şekilde sorgulayabilmesi bir `match` ifadesiyle `Some` ve `None`. İsteğe bağlı parametreler kullanılarak oluşturulan işlevleri, üye üzerinde yalnızca verilen `let` bağlar.
+İsteğe bağlı parametresi bir yöntem için parametre adının önüne bir soru işareti kullanarak belirtebilirsiniz. İsteğe bağlı parametreler, F # seçeneği türü olarak yorumlanır, seçenek türleri, kullanarak sorgulanır, normal şekilde sorgulayabilmesi bir `match` ifadesiyle `Some` ve `None`. İsteğe bağlı parametreler kullanılarak oluşturulan işlevleri, üye üzerinde yalnızca verilen `let` bağlar.
 
 Var olan isteğe bağlı değerler yönteme parametre adıyla gibi geçirebilirsiniz `?arg=None` veya `?arg=Some(3)` veya `?arg=arg`. Bir yöntem oluşturma isteğe bağlı bağımsız değişkenler için başka bir yöntem başarılı olduğunda bu yararlı olabilir.
 
@@ -151,7 +151,7 @@ Bu durumda, derleyici bir uyarı oluşturur ve her iki öznitelik tamamen göz a
 
 ## <a name="passing-by-reference"></a>Başvuruya göre geçirme
 
-Bir F# değere Başvuruya göre geçirme içerir [zkratka](byrefs.md), Yönetilen işaretçi türleri olduğu. Kılavuz, hangi tür kullanmak aşağıdaki gibidir:
+Bir F # değere Başvuruya göre geçirme içerir [zkratka](byrefs.md), Yönetilen işaretçi türleri olduğu. Kılavuz, hangi tür kullanmak aşağıdaki gibidir:
 
 * Kullanım `inref<'T>` yalnızca işaretçi okumak gerekiyorsa.
 * Kullanım `outref<'T>` yalnızca işaretçi yazmak gerekiyorsa.
@@ -186,11 +186,11 @@ Tüm depolamak için bir dönüş değeri olarak bir tanımlama grubu kullanabil
 
 Bazen tercihe bağlı sayıda heterojen türünde parametre alan bir işlev tanımlamak gereklidir. Kullanılabilen tüm türleri için hesap için tüm olası aşırı yüklenmiş yöntemler oluşturmak pratik olmaz. .NET uygulamaları için parametre dizisi özelliği aracılığıyla bu tür yöntemler için destek sağlar. Bir parametre dizisi içinde imzasını alan bir yöntem rastgele sayıda parametre ile sağlanabilir. Parametreler, bir dizi içine yerleştirilir. Dizi öğelerinin türü, işleve geçirilen parametre türleri belirler. Parametre dizisi ile tanımlarsanız `System.Object` öğe türü istemci kodu her türden değer geçirebilirsiniz.
 
-F#'ta parametre dizileri, yalnızca yöntemlerdeki tanımlanabilir. Tek başına işlevleri veya modül içinde tanımlanan işlevleri kullanılamaz.
+F #'ta parametre dizileri, yalnızca yöntemlerdeki tanımlanabilir. Tek başına işlevleri veya modül içinde tanımlanan işlevleri kullanılamaz.
 
 Bir parametre dizisi kullanarak tanımladığınız `ParamArray` özniteliği. `ParamArray` Özniteliği yalnızca en son parametreye uygulanabilir.
 
-Aşağıdaki kod, her iki arama alan bir parametre dizisi ve bir tür tanımını içeren bir parametre dizisi alan bir yöntem içinde F# .NET yöntemi gösterir.
+Aşağıdaki kod, her iki arama alan bir parametre dizisi ve bir tür tanımını içeren bir parametre dizisi alan bir yöntem içinde F # .NET yöntemi gösterir.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-2/snippet3811.fs)]
 

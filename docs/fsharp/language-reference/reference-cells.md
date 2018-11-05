@@ -1,6 +1,6 @@
 ---
 title: Başvuru Hücreleri (F#)
-description: F# başvuru hücreleri başvuru semantiğiyle değişebilir değerler oluşturmanıza olanak tanıyan depolama konumları nasıl olduğunu öğrenin.
+description: 'F # başvuru hücreleri başvuru semantiğiyle değişebilir değerler oluşturmanıza olanak tanıyan depolama konumları nasıl olduğunu öğrenin.'
 ms.date: 05/16/2016
 ms.openlocfilehash: e2e1a91c62fd76e4992bc5ae11bb672766850718
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -74,7 +74,7 @@ Her iki `Value` özelliği ve `contents` alanı atanabilir değerlerdir. Bu nede
 
 Alan `contents` diğer ML sürümleriyle uyumluluk için sağlanır ve derleme sırasında bir uyarı üretecektir. Uyarı devre dışı bırakmak için `--mlcompatibility` derleyici seçeneği. Daha fazla bilgi için [derleyici seçenekleri](compiler-options.md).
 
-C# programcıları, bilmeniz `ref` C# ile aynı şeydir değil `ref` F#. F#'de eşdeğer bir yapıdır [zkratka](byrefs.md), başvuru hücrelerinin'dan farklı bir kavram olan.
+C# programcıları, bilmeniz `ref` C# ile aynı şeydir değil `ref` F #. F #'de eşdeğer bir yapıdır [zkratka](byrefs.md), başvuru hücrelerinin'dan farklı bir kavram olan.
 
 Değerleri olarak işaretlenmiş `mutable`için otomatik olarak yükseltilebilir `'a ref` kapanım; tarafından yakalanan olup [değerleri](values/index.md).
 

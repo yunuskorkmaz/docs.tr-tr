@@ -1,6 +1,6 @@
 ---
 title: Hesaplama İfadeleri (F#)
-description: Hesaplamaları sıralı ve denetim akışı yapılarını ve bağlamalar kullanılarak birleştirilen içinde F# yazmak için kullanışlı bir söz dizimi oluşturmayı öğrenin.
+description: 'Hesaplamaları sıralı ve denetim akışı yapılarını ve bağlamalar kullanılarak birleştirilen içinde F # yazmak için kullanışlı bir söz dizimi oluşturmayı öğrenin.'
 ms.date: 07/27/2018
 ms.openlocfilehash: 148d1a661fb7630782c6dc48507a66e7bdc1d56b
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "48839875"
 ---
 # <a name="computation-expressions"></a>Hesaplama İfadeleri
 
-F# hesaplama ifadeleri, sıralı ve denetim akışı yapılarını ve bağlamalar kullanılarak birleştirilen hesaplamalar yazmak için kullanışlı bir söz dizimi sağlar. Hesaplama ifadesi türüne bağlı olarak bunlar, monadları, monoids monad dönüştürücüler ve applicative işlev nesneleri ifade etmenin bir yolu olarak düşünülebilir. Ancak, diğer diller aksine (gibi *gösterimi* Haskell içinde), tek bir soyutlama bağlı değil ve makroları veya diğer tür güvenmeyin azaltılarak kullanışlı ve bağlama duyarlı bir söz dizimi gerçekleştirmek için.
+F # hesaplama ifadeleri, sıralı ve denetim akışı yapılarını ve bağlamalar kullanılarak birleştirilen hesaplamalar yazmak için kullanışlı bir söz dizimi sağlar. Hesaplama ifadesi türüne bağlı olarak bunlar, monadları, monoids monad dönüştürücüler ve applicative işlev nesneleri ifade etmenin bir yolu olarak düşünülebilir. Ancak, diğer diller aksine (gibi *gösterimi* Haskell içinde), tek bir soyutlama bağlı değil ve makroları veya diğer tür güvenmeyin azaltılarak kullanışlı ve bağlama duyarlı bir söz dizimi gerçekleştirmek için.
 
 ## <a name="overview"></a>Genel Bakış
 
@@ -22,7 +22,7 @@ Hesaplamaları birçok biçimde olabilir. En yaygın hesaplamanın anlamak ve de
 * Effectful hesaplamaları
 * Games'in hesaplamaları
 
-Daha genel vardır *bağlama duyarlı* hesaplamalar bir uygulamanın bazı bölümlerini gerçekleştirmeniz gerekir. Belirli bir bağlam olmadan bunu yapmasını önlemek için soyutlama dışında "sızıntısı" hesaplamalar kolay olduğundan bağlama duyarlı kod yazma, zor olabilir. Bu soyutlama genellikle kendi kendinize, F# yorumun yapmak için genelleştirilmiş bir yolu yoktur neden olan yazmak zor **hesaplama ifadeleri**.
+Daha genel vardır *bağlama duyarlı* hesaplamalar bir uygulamanın bazı bölümlerini gerçekleştirmeniz gerekir. Belirli bir bağlam olmadan bunu yapmasını önlemek için soyutlama dışında "sızıntısı" hesaplamalar kolay olduğundan bağlama duyarlı kod yazma, zor olabilir. Bu soyutlama genellikle kendi kendinize, F # yorumun yapmak için genelleştirilmiş bir yolu yoktur neden olan yazmak zor **hesaplama ifadeleri**.
 
 Hesaplama ifadeleri, bağlama duyarlı hesaplamalar kodlaması için Tekdüzen bir söz dizimi ve Özet modeli sunar.
 
@@ -61,9 +61,9 @@ expr { return! ... }
 expr { match! ... }
 ```
 
-Her biri bu anahtar sözcükler ve diğer standart F# anahtar sözcükleri olup yalnızca bir hesaplama ifadesinde kullanılabilir yedekleme Oluşturucu türü tanımlanmış. Bunun tek özel durum `match!`, kendisi kullanımına yönelik söz dizimi sugar `let!` sonucuna bir desen eşleşmesi tarafından izlenen.
+Her biri bu anahtar sözcükler ve diğer standart F # anahtar sözcükleri olup yalnızca bir hesaplama ifadesinde kullanılabilir yedekleme Oluşturucu türü tanımlanmış. Bunun tek özel durum `match!`, kendisi kullanımına yönelik söz dizimi sugar `let!` sonucuna bir desen eşleşmesi tarafından izlenen.
 
-Oluşturucu türü hesaplama ifadesi parçalarını birleştirilir biçimini yöneten özel yöntemleri tanımlayan bir nesnedir; diğer bir deyişle, hesaplama ifadesi nasıl davranacağını metotlarını denetler. Bir oluşturucu sınıf tanımlamak için başka bir, döngüler ve bağlamalar gibi birçok F# yapılarını, işlemi özelleştirmenizi sağlar söylemek yoludur.
+Oluşturucu türü hesaplama ifadesi parçalarını birleştirilir biçimini yöneten özel yöntemleri tanımlayan bir nesnedir; diğer bir deyişle, hesaplama ifadesi nasıl davranacağını metotlarını denetler. Bir oluşturucu sınıf tanımlamak için başka bir, döngüler ve bağlamalar gibi birçok F # yapılarını, işlemi özelleştirmenizi sağlar söylemek yoludur.
 
 ### `let!`
 
@@ -179,7 +179,7 @@ let result = Async.RunSynchronously req
 
 ### `match!`
 
-F# 4.5 ile başlayarak `match!` anahtar sözcüğü verir satır içi bir çağrı sonucunu üzerinde başka bir hesaplama ifadesi ve desen eşleştirme için:
+F # 4.5 ile başlayarak `match!` anahtar sözcüğü verir satır içi bir çağrı sonucunu üzerinde başka bir hesaplama ifadesi ve desen eşleştirme için:
 
 ```fsharp
 let doThingsAsync url =
@@ -194,7 +194,7 @@ Bir hesaplama ifadesi ile çağrılırken `match!`, gibi çağrısının sonucun
 
 ## <a name="built-in-computation-expressions"></a>Yerleşik hesaplama ifadeleri
 
-F# çekirdek kitaplığının üç yerleşik hesaplama ifadeleri tanımlar: [Sequence ifadeleri](sequences.md), [zaman uyumsuz iş akışları](asynchronous-workflows.md), ve [sorgu ifadeleri](query-expressions.md).
+F # çekirdek kitaplığının üç yerleşik hesaplama ifadeleri tanımlar: [Sequence ifadeleri](sequences.md), [zaman uyumsuz iş akışları](asynchronous-workflows.md), ve [sorgu ifadeleri](query-expressions.md).
 
 ## <a name="creating-a-new-type-of-computation-expression"></a>Yeni bir hesaplama ifadesi türü oluşturma
 
@@ -227,7 +227,7 @@ Bir oluşturucu sınıftaki yöntemlerin birçoğu kullanın ve dönüş bir `M<
 builder.Run(builder.Delay(fun () -> {| cexpr |}))
 ```
 
-Yukarıdaki kodda, çağrıları `Run` ve `Delay` hesaplama ifadesi Oluşturucu sınıfta tanımlı değil göz ardı edilir. Olarak burada belirtilen hesaplama ifadesi gövdesinin `{| cexpr |}`, aşağıdaki tabloda açıklanan çevirileri tarafından Oluşturucu sınıfının yöntemlerini içeren çağırıyor çevrilir. Hesaplama ifadesi `{| cexpr |}` tanımlı yinelemeli olarak bu çevirileri göre olduğundan burada `expr` bir F# ifadesi ve `cexpr` hesaplama ifadesi.
+Yukarıdaki kodda, çağrıları `Run` ve `Delay` hesaplama ifadesi Oluşturucu sınıfta tanımlı değil göz ardı edilir. Olarak burada belirtilen hesaplama ifadesi gövdesinin `{| cexpr |}`, aşağıdaki tabloda açıklanan çevirileri tarafından Oluşturucu sınıfının yöntemlerini içeren çağırıyor çevrilir. Hesaplama ifadesi `{| cexpr |}` tanımlı yinelemeli olarak bu çevirileri göre olduğundan burada `expr` bir F # ifadesi ve `cexpr` hesaplama ifadesi.
 
 |İfade|Çeviri|
 |----------|-----------|

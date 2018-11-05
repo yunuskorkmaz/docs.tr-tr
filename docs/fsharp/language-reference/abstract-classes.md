@@ -1,6 +1,6 @@
 ---
 title: Soyut Sınıflar (F#)
-description: Uygulanmayanları bazı veya tüm üyeleri bırakın F# soyut sınıfları hakkında bilgi edinin ve nesne türleri farklı bir dizi ortak işlevselliği temsil eder.
+description: 'Uygulanmayanları bazı veya tüm üyeleri bırakın F # soyut sınıfları hakkında bilgi edinin ve nesne türleri farklı bir dizi ortak işlevselliği temsil eder.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 7e1bb9daca7e8a3b442cd7fb02ef99bb6a2085cb
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -30,7 +30,7 @@ abstract member member-name : type-signature
 
 Nesne yönelimli programlama, soyut bir sınıf bir hiyerarşinin temel sınıf olarak kullanılan ve nesne türleri farklı bir dizi ortak işlevselliği temsil eder. Adı "Özet" da anlaşılacağı gibi soyut sınıflar genellikle doğrudan somut varlıkları sorun etki alanında oturum karşılık gelmez. Ancak, bunlar ne birçok farklı somut ortak varlıkların temsil.
 
-Soyut sınıflar olmalıdır `AbstractClass` özniteliği. Bunlar uygulanan ve üyeleri gerçeklenmemiş. Kullanımı *soyut* uygulandığında bir sınıf diğer .NET dilleri; aynı olan ancak kullanımı *soyut* yöntemleri (ve Özellikler) uygulandığında bir biraz F#'den farklıdır, Diğer .NET dillerinde kullanın. F#'de bir yöntem ile işaretlendiğinde, `abstract` anahtar sözcüğü, bu gösterir bir üyesi olarak bilinen bir girdiye sahip bir *sanal dağıtım yuvası*, bu tür için sanal işlevleri iç tablosuna. Diğer bir deyişle, yöntem sanal rağmen `virtual` anahtar sözcüğü F# dilinde kullanılmaz. Anahtar sözcüğü `abstract` olup yöntemin bağımsız olarak sanal yöntemleri kullanılır. Bir sanal dağıtım yuvası bildirimi, bu dağıtım yuvası için bir yöntem tanımını ayrıdır. Bu nedenle, F# sanal yöntem bildiriminde ve başka bir .NET dil tanımında bir soyut yöntem bildiriminde hem ile ya da ayrı bir tanımı bir birleşimini eşdeğerdir `default` anahtar sözcüğü veya `override` anahtar sözcüğü. Daha fazla bilgi ve örnekler için bkz. [yöntemleri](members/methods.md).
+Soyut sınıflar olmalıdır `AbstractClass` özniteliği. Bunlar uygulanan ve üyeleri gerçeklenmemiş. Kullanımı *soyut* uygulandığında bir sınıf diğer .NET dilleri; aynı olan ancak kullanımı *soyut* yöntemleri (ve Özellikler) uygulandığında bir biraz F #'den farklıdır, Diğer .NET dillerinde kullanın. F #'de bir yöntem ile işaretlendiğinde, `abstract` anahtar sözcüğü, bu gösterir bir üyesi olarak bilinen bir girdiye sahip bir *sanal dağıtım yuvası*, bu tür için sanal işlevleri iç tablosuna. Diğer bir deyişle, yöntem sanal rağmen `virtual` anahtar sözcüğü F # dilinde kullanılmaz. Anahtar sözcüğü `abstract` olup yöntemin bağımsız olarak sanal yöntemleri kullanılır. Bir sanal dağıtım yuvası bildirimi, bu dağıtım yuvası için bir yöntem tanımını ayrıdır. Bu nedenle, F # sanal yöntem bildiriminde ve başka bir .NET dil tanımında bir soyut yöntem bildiriminde hem ile ya da ayrı bir tanımı bir birleşimini eşdeğerdir `default` anahtar sözcüğü veya `override` anahtar sözcüğü. Daha fazla bilgi ve örnekler için bkz. [yöntemleri](members/methods.md).
 
 Bir sınıf bildirimi yapıldı ancak tanımlanmadı soyut yöntemler varsa soyut olarak kabul edilir. Bu nedenle, soyut metotlar içeren sınıflar mutlaka soyut sınıflar değildir. Bir sınıf, soyut yöntemler tanımsız sürece kullanmayın **AbstractClass** özniteliği.
 

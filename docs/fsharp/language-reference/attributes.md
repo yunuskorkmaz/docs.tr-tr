@@ -1,6 +1,6 @@
 ---
 title: Öznitelikler (F#)
-description: F# öznitelikleri bir programlama yapısı için uygulanacak meta verileri nasıl etkinleştirme hakkında bilgi edinin.
+description: 'F # öznitelikleri bir programlama yapısı için uygulanacak meta verileri nasıl etkinleştirme hakkında bilgi edinin.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 3e7f1d0ff383e1070b3db72e633f80ea37150548
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -39,7 +39,7 @@ Bu örnekte, bir özniteliktir `DllImportAttribute`, burada kısaltılmış içi
 
 Öznitelikleri karşılıklı olarak bilinen bir nesne sağlayan bir .NET programlama yapısı bir *özniteliği* bir türü veya başka bir program öğesi ile ilişkilendirilmiş. Özniteliğin uygulandığı bir program öğesi olarak bilinen *öznitelik hedefi*. Öznitelik, genellikle hedefine hakkındaki meta veriler içeriyor. Bu bağlamda herhangi bir veri üyeleri ve alanları dışındaki türü hakkında meta veriler olabilir.
 
-F# öznitelikleri aşağıdaki programlama yapıları için uygulanabilir: işlevleri, yöntemleri, derlemeler, modüller, türler (sınıflar, kayıtları, yapılar, arabirimler, temsilciler, numaralandırmalar, birleşimler ve benzeri), Oluşturucular, özellikler, alanlar, parametreleri Tür parametreleri ve dönüş değerleri. Öznitelikler üzerinde izin verilmez `let` sınıfları, ifadeler veya iş akışı ifadeler içinde bağlar.
+F # öznitelikleri aşağıdaki programlama yapıları için uygulanabilir: işlevleri, yöntemleri, derlemeler, modüller, türler (sınıflar, kayıtları, yapılar, arabirimler, temsilciler, numaralandırmalar, birleşimler ve benzeri), Oluşturucular, özellikler, alanlar, parametreleri Tür parametreleri ve dönüş değerleri. Öznitelikler üzerinde izin verilmez `let` sınıfları, ifadeler veya iş akışı ifadeler içinde bağlar.
 
 Genellikle, öznitelik bildiriminin doğrudan özniteliği hedef bildiriminden önce görünür. Birden çok öznitelik bildirimleri kullanılabilir birlikte, aşağıdaki gibi.
 
@@ -59,7 +59,7 @@ Sık rastlanan öznitelikleri yer `Obsolete` öznitelik, öznitelikler için gü
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6606.fs)]
 
-İçin uygulanan bir öznitelik için öznitelik hedefi atlarsanız, bir `do` bağlama, F# derleyicisi için bu öznitelik anlamlı öznitelik hedefi belirlemeye çalışır. Çok sayıda öznitelik sınıfları bir öznitelik türü sahip `System.AttributeUsageAttribute` bu öznitelik için desteklenen olası hedefleri hakkında bilgi içerir. Varsa `System.AttributeUsageAttribute` gösterir öznitelik hedefleri olarak işlevleri destekler, öznitelik programının ana giriş noktasına uygulanacak alınır. Varsa `System.AttributeUsageAttribute` gösterir öznitelik hedefleri olarak derlemelerini destekler, derleyici derlemeye uygulanacak özniteliği alır. Çoğu öznitelikleri işlevleri ve derlemeler için geçerli değildir, ancak yaptıkları olduğu durumlarda, öznitelik için programın main işlevi uygulamak için alınır. Öznitelik, öznitelik hedefi açıkça belirtilmediği takdirde, belirtilen hedef uygulanır.
+İçin uygulanan bir öznitelik için öznitelik hedefi atlarsanız, bir `do` bağlama, F # derleyicisi için bu öznitelik anlamlı öznitelik hedefi belirlemeye çalışır. Çok sayıda öznitelik sınıfları bir öznitelik türü sahip `System.AttributeUsageAttribute` bu öznitelik için desteklenen olası hedefleri hakkında bilgi içerir. Varsa `System.AttributeUsageAttribute` gösterir öznitelik hedefleri olarak işlevleri destekler, öznitelik programının ana giriş noktasına uygulanacak alınır. Varsa `System.AttributeUsageAttribute` gösterir öznitelik hedefleri olarak derlemelerini destekler, derleyici derlemeye uygulanacak özniteliği alır. Çoğu öznitelikleri işlevleri ve derlemeler için geçerli değildir, ancak yaptıkları olduğu durumlarda, öznitelik için programın main işlevi uygulamak için alınır. Öznitelik, öznitelik hedefi açıkça belirtilmediği takdirde, belirtilen hedef uygulanır.
 
 Genellikle belirtmek gerekmez, ancak öznitelik hedef açıkça için geçerli değerler *hedef* öznitelik içinde kullanım örneklerinin yanı sıra aşağıdaki tabloda gösterilmiştir.
 

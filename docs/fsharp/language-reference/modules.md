@@ -1,6 +1,6 @@
 ---
 title: Modüller (F#)
-description: Bir F# modül değerleri, türleri ve işlev değerleri olarak F# programında gibi F# kodu, bir gruplandırma nasıl olduğunu öğrenin.
+description: 'Bir F # modül değerleri, türleri ve işlev değerleri olarak F # programında gibi F # kodu, bir gruplandırma nasıl olduğunu öğrenin.'
 ms.date: 04/24/2017
 ms.openlocfilehash: fb0aa1d508d1141933b4fbdf10633f67ed078dc7
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "45528532"
 ---
 # <a name="modules"></a>Modüller
 
-F# dili, bağlamında bir *Modülü* F# kodu, değerleri, türleri ve işlev değerleri olarak F# programında gibi bir gruplandırmasıdır. Kod modüllerinde gruplandırma ilgili kod bir arada tutmaya yardımcı olur ve programınızdaki ad çakışmalarını önlemek yardımcı olur.
+F # dili, bağlamında bir *Modülü* F # kodu, değerleri, türleri ve işlev değerleri olarak F # programında gibi bir gruplandırmasıdır. Kod modüllerinde gruplandırma ilgili kod bir arada tutmaya yardımcı olur ve programınızdaki ad çakışmalarını önlemek yardımcı olur.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -26,7 +26,7 @@ module [accessibility-modifier] module-name =
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bir F# modül türleri, değerleri, işlev değerleri ve kodda gibi kod yapıları F# gruplandırmasıdır `do` bağlar. Bu, yalnızca statik üyeleri olan ortak dil çalışma zamanı (CLR) sınıfı uygulanır. Modül bildirimlerinde'olup tüm dosya modülüne dahil edilen bağlı olarak, iki tür vardır: üst düzey modül bildirimi ve bir yerel modül bildirimi. Üst düzey modül bildirimi modülünde dosyanın tamamını içerir. Üst düzey modül bildirimi yalnızca bir dosyadaki ilk bildirimi olarak görünebilir.
+Bir F # modül türleri, değerleri, işlev değerleri ve kodda gibi kod yapıları F # gruplandırmasıdır `do` bağlar. Bu, yalnızca statik üyeleri olan ortak dil çalışma zamanı (CLR) sınıfı uygulanır. Modül bildirimlerinde'olup tüm dosya modülüne dahil edilen bağlı olarak, iki tür vardır: üst düzey modül bildirimi ve bir yerel modül bildirimi. Üst düzey modül bildirimi modülünde dosyanın tamamını içerir. Üst düzey modül bildirimi yalnızca bir dosyadaki ilk bildirimi olarak görünebilir.
 
 İsteğe bağlı üst düzey modül bildirimi için sözdiziminde *nitelenmiş ad* modülü içeren iç içe geçmiş ad alanı adları dizisidir. Daha önce belirtilecek tam ad alanı yok.
 
@@ -44,7 +44,7 @@ Birden çok modül bir dosya varsa, her modül için bir yerel modül bildirimi 
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6603.fs)]
 
-Birden çok dosya bir proje veya tek bir derleme varsa veya bir kitaplık oluşturuyorsanız, ad alanı bildirimini veya modül bildirimi dosyasının üst eklemeniz gerekir. F# derleyicisi yalnızca bir modül adı örtük olarak bir proje veya derleme komut satırı yalnızca bir dosya olduğunda ve bir uygulama oluşturuyorsanız belirler.
+Birden çok dosya bir proje veya tek bir derleme varsa veya bir kitaplık oluşturuyorsanız, ad alanı bildirimini veya modül bildirimi dosyasının üst eklemeniz gerekir. F # derleyicisi yalnızca bir modül adı örtük olarak bir proje veya derleme komut satırı yalnızca bir dosya olduğunda ve bir uygulama oluşturuyorsanız belirler.
 
 *Erişilebilirlik değiştiricisi* aşağıdakilerden biri olabilir: `public`, `private`, `internal`. Daha fazla bilgi için [erişim denetimi](access-control.md). Genel varsayılandır.
 
@@ -88,7 +88,7 @@ Tüm kodu dosyasında tek bir dış modülde olmasını istiyorsanız ve iç mod
 
 ## <a name="recursive-modules"></a>Özyinelemeli modülleri
 
-F# 4.1 karşılıklı özyinelemeli olarak tüm kapsanan kodunu tanıyan modülleri kavramını sunar.  Bu aracılığıyla yapılır `module rec`.  Kullanım `module rec` türler ve modüller arasında karşılıklı başvurusal kod yazmak boyutlandırılmamışsa, bazı sorunlar hafifletmek.  Bunun bir örneği verilmiştir:
+F # 4.1 karşılıklı özyinelemeli olarak tüm kapsanan kodunu tanıyan modülleri kavramını sunar.  Bu aracılığıyla yapılır `module rec`.  Kullanım `module rec` türler ve modüller arasında karşılıklı başvurusal kod yazmak boyutlandırılmamışsa, bazı sorunlar hafifletmek.  Bunun bir örneği verilmiştir:
 
 ```fsharp
 module rec RecursiveModule =
@@ -128,12 +128,12 @@ module rec RecursiveModule =
             | Down -> b |> peelSides
 ```
 
-Unutmayın özel durum `DontSqueezeTheBananaException` ve sınıf `Banana` de birbirine başvuruyor.  Buna ek olarak, modül `BananaHelpers` ve sınıf `Banana` ayrıca birbirine bakın.  Bu F#'ta kaldırdıysanız express mümkün olmazdı `rec` from anahtar sözcüğü `RecursiveModule` modülü.
+Unutmayın özel durum `DontSqueezeTheBananaException` ve sınıf `Banana` de birbirine başvuruyor.  Buna ek olarak, modül `BananaHelpers` ve sınıf `Banana` ayrıca birbirine bakın.  Bu F #'ta kaldırdıysanız express mümkün olmazdı `rec` from anahtar sözcüğü `RecursiveModule` modülü.
 
-Bu özellik ayrıca mümkün [ad alanları](namespaces.md) ile F# 4.1.
+Bu özellik ayrıca mümkün [ad alanları](namespaces.md) ile F # 4.1.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [F# Dili Başvurusu](index.md)  
 - [Ad Alanları](namespaces.md)  
-- [F# RFC FS-1009 - karşılıklı başvurusal türler ve modüller daha büyük dosyaları kapsamlarda üzerinden izin ver](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)  
+- [F # RFC FS-1009 - karşılıklı başvurusal türler ve modüller daha büyük dosyaları kapsamlarda üzerinden izin ver](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)  

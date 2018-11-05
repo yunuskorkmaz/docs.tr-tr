@@ -1,6 +1,6 @@
 ---
 title: Klavye Başvurusu (F#)
-description: Tüm F# dil anahtar sözcükleri hakkında daha fazla bilgi için bağlantılar bulun.
+description: 'Tüm F # dil anahtar sözcükleri hakkında daha fazla bilgi için bağlantılar bulun.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 0016f68b2872183a2b4dd865ce229b6a76250b78
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,11 +11,11 @@ ms.locfileid: "43856030"
 ---
 # <a name="keyword-reference"></a>Klavye Başvurusu
 
-Bu konu, tüm F# dil anahtar sözcükleri hakkında daha fazla bilgi için bağlantılar içerir.
+Bu konu, tüm F # dil anahtar sözcükleri hakkında daha fazla bilgi için bağlantılar içerir.
 
-## <a name="f-keyword-table"></a>F# anahtar sözcüğünü tablo
+## <a name="f-keyword-table"></a>F # anahtar sözcüğünü tablo
 
-Aşağıdaki tabloda tüm F# anahtar sözcükleri kısa açıklamaları ve ilgili daha fazla bilgi içeren konulara bağlantılar ile birlikte alfabetik sırada gösterir.
+Aşağıdaki tabloda tüm F # anahtar sözcükleri kısa açıklamaları ve ilgili daha fazla bilgi içeren konulara bağlantılar ile birlikte alfabetik sırada gösterir.
 
 |Anahtar sözcüğü|Bağlantı|Açıklama|
 |-------|----|-----------|
@@ -90,7 +90,7 @@ Aşağıdaki tabloda tüm F# anahtar sözcükleri kısa açıklamaları ve ilgil
 |`yield`|[Diziler](sequences.md)|Bir sıralama ifadesi bir dizi için bir değer üretmek için kullanılır.|
 |`yield!`|[Hesaplama İfadeleri](computation-expressions.md)<br /><br />[Zaman Uyumsuz İş Akışları](asynchronous-workflows.md)|Verilen hesaplamayı ifadenin sonucu sonuçları içeren hesaplama ifadesi için bir koleksiyona eklenecek bir hesaplama ifadesinde kullanılır.|
 
-Aşağıdaki belirteçler F#'ta çünkü bunlar OCaml dilindeki anahtar sözcükler ayrılmıştır:
+Aşağıdaki belirteçler F #'ta çünkü bunlar OCaml dilindeki anahtar sözcükler ayrılmıştır:
 
 * `asr`
 * `land`
@@ -103,7 +103,7 @@ Aşağıdaki belirteçler F#'ta çünkü bunlar OCaml dilindeki anahtar sözcük
 
 Kullanırsanız `--mlcompatibility` derleyici seçeneği, yukarıdaki anahtar sözcükler kullanılabilir tanımlayıcıları.
 
-Aşağıdaki belirteçler, F# dilinin gelecekteki genişleme için anahtar sözcükler olarak ayrılmıştır:
+Aşağıdaki belirteçler, F # dilinin gelecekteki genişleme için anahtar sözcükler olarak ayrılmıştır:
 
 * `atomic`
 * `break`

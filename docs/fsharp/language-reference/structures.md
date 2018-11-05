@@ -1,6 +1,6 @@
 ---
 title: Yapılar (F#)
-description: F# yapısı hakkında genellikle bir compact nesne türü bilgi türleri küçük miktarda veri ve basit davranışı için bir sınıf daha verimlidir.
+description: 'F # yapısı hakkında genellikle bir compact nesne türü bilgi türleri küçük miktarda veri ve basit davranışı için bir sınıf daha verimlidir.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 08af88132dda28883e246b94585ff4ed8bd2f16a
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -64,7 +64,7 @@ type S(count1: Span<int>, count2: Span<int>) =
 
 `IsByRefLike` değil gelmez `Struct`. Her ikisi de türünde bulunmalıdır.
 
-Bir "`byref`-gibi" yapı F# içinde bir yığın bağlı değer türüdür. Bu, hiçbir zaman yönetilen yığında ayrılır. A `byref`-gibi yaşam süresi ve yakalama olmayan hakkında güçlü denetimleri kümesiyle zorlanmış olarak yapı yüksek performanslı programlama için kullanışlıdır. Kurallar şunlardır:
+Bir "`byref`-gibi" yapı F # içinde bir yığın bağlı değer türüdür. Bu, hiçbir zaman yönetilen yığında ayrılır. A `byref`-gibi yaşam süresi ve yakalama olmayan hakkında güçlü denetimleri kümesiyle zorlanmış olarak yapı yüksek performanslı programlama için kullanışlıdır. Kurallar şunlardır:
 
 * İşlev parametrelerini, yöntem parametreleri, yerel değişkenler döner kullanılabilirler.
 * Statik olamaz veya bir sınıf ya da normal yapı üyelerinin örneği.
@@ -86,7 +86,7 @@ type S(count1: int, count2: int) =
 
 `IsReadOnly` değil gelmez `Struct`. Her ikisi de sahip olarak eklemelisiniz bir `IsReadOnly` yapısı.
 
-Bu özniteliğin kullanımı yayan F# ile C# işleme biçimi için bilmeniz izin vererek meta verileri `inref<'T>` ve `in ref`sırasıyla.
+Bu özniteliğin kullanımı yayan F # ile C# işleme biçimi için bilmeniz izin vererek meta verileri `inref<'T>` ve `in ref`sırasıyla.
 
 Salt okunur yapı içinde değiştirilebilir bir değer tanımlayan bir hata oluşturur.
 

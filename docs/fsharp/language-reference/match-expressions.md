@@ -1,6 +1,6 @@
 ---
-title: Eşleşme ifadeleri (F#)
-description: F# eşleşme ifadesi ifade desenleri ile karşılaştırma temel alan dallanma denetim nasıl sağladığını öğrenin.
+title: 'Eşleşme ifadeleri (F #)'
+description: 'F # eşleşme ifadesi ifade desenleri ile karşılaştırma temel alan dallanma denetim nasıl sağladığını öğrenin.'
 ms.date: 04/19/2018
 ms.openlocfilehash: e4cb82f20fe82bff562736557c2346562c557f59
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

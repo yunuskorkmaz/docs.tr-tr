@@ -1,6 +1,6 @@
 ---
 title: Arabirimler (F#)
-description: F# arabirimleri diğer sınıfları uygulayan ilgili üyelerinin kümeleri nasıl belirteceğinizi öğrenin.
+description: 'F # arabirimleri diğer sınıfları uygulayan ilgili üyelerinin kümeleri nasıl belirteceğinizi öğrenin.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 6d7f8ee9ea17d2294933f88577c30a96975ae5d4
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -47,7 +47,7 @@ Hiç üye uygulanan dışında sınıf bildirimleri arabirimi bildirimleri benze
 
 Arabirimler için varsayılan erişilebilirlik, `public`.
 
-İsteğe bağlı olarak, her bir yöntem parametresi normal F# söz dizimini kullanarak bir ad verebilirsiniz:
+İsteğe bağlı olarak, her bir yöntem parametresi normal F # söz dizimini kullanarak bir ad verebilirsiniz:
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet24032.fs)]
 

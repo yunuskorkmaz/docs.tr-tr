@@ -1,6 +1,6 @@
 ---
 title: Olaylar (F#)
-description: F# olayları, GUI programlamada önemlidir kullanıcı eylemlerini, işlev çağrıları ilişkilendirmek nasıl olanak öğrenin.
+description: 'F # olayları, GUI programlamada önemlidir kullanıcı eylemlerini, işlev çağrıları ilişkilendirmek nasıl olanak öğrenin.'
 ms.date: 05/16/2016
 ms.openlocfilehash: ce547bc9ec7b5e0ef9a7492c0889bb690e3040c2
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -18,7 +18,7 @@ Olaylar, işlev çağrılarını kullanıcı eylemleriyle ilişkilendirmenize ol
 
 ## <a name="handling-events"></a>Olayları İşleme
 
-Windows Forms veya Windows Presentation Foundation (WPF) gibi bir GUI kitaplığı kullandığınızda, uygulamanızdaki kodun çoğu kitaplık tarafından önceden tanımlanan olaylara yanıt olarak çalıştırılır. Bu önceden tanımlı olaylar, formlar ve denetimler gibi GUI sınıflarının üyeleridir. Bir düğmeyi tıklamak gibi belirli adlandırılmış olaya başvurarak önceden varolan bir olaya özel davranış ekleyebilirsiniz (örneğin, `Click` olayı `Form` sınıfı) ve bunları çağırırken `Add` aşağıdaki kodda gösterildiği gibi yöntemi . Bu F# Interactive'den çalıştırırsanız, çağrı atlamak `System.Windows.Forms.Application.Run(System.Windows.Forms.Form)`.
+Windows Forms veya Windows Presentation Foundation (WPF) gibi bir GUI kitaplığı kullandığınızda, uygulamanızdaki kodun çoğu kitaplık tarafından önceden tanımlanan olaylara yanıt olarak çalıştırılır. Bu önceden tanımlı olaylar, formlar ve denetimler gibi GUI sınıflarının üyeleridir. Bir düğmeyi tıklamak gibi belirli adlandırılmış olaya başvurarak önceden varolan bir olaya özel davranış ekleyebilirsiniz (örneğin, `Click` olayı `Form` sınıfı) ve bunları çağırırken `Add` aşağıdaki kodda gösterildiği gibi yöntemi . Bu F # Interactive'den çalıştırırsanız, çağrı atlamak `System.Windows.Forms.Application.Run(System.Windows.Forms.Form)`.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3601.fs)]
 
@@ -28,7 +28,7 @@ Türünü `Add` yöntemi `('a -> unit) -> unit`. Bu nedenle, olay işleyicisi y�
 
 ## <a name="creating-custom-events"></a>Özel Olaylar Oluşturma
 
-F# olayları temsil edilir F# tarafından [olay](https://msdn.microsoft.com/library/f3b47c8a-4ee5-4ce8-9a72-ad305a17c4b9) sınıfını [IEvent](https://msdn.microsoft.com/library/8dbca0df-f8a1-40bd-8d50-aa26f6a8b862) arabirimi. `IEvent` kendisini iki başka arabirimin işlevselliğini birleştiren bir arabirimdir `System.IObservable<'T>` ve [IDelegateEvent](https://msdn.microsoft.com/library/3d849465-6b8e-4fc5-b36c-2941d734268a). Bu nedenle, `Event`s sahip ek işlevinden yanı sıra diğer dillerdeki temsilcilerin eşdeğer bir işlevselliği `IObservable`, yani F# olaylarının olay filtrelemeyi ve F# birinci sınıf işlevlerini ve lambda ifadeleri kullanma desteği olay işleyicileri. Bu işlevsellik sağlanır [Olay Modülü](https://msdn.microsoft.com/library/8b883baa-a460-4840-9baa-de8260351bc7).
+F # olayları temsil edilir F # tarafından [olay](https://msdn.microsoft.com/library/f3b47c8a-4ee5-4ce8-9a72-ad305a17c4b9) sınıfını [IEvent](https://msdn.microsoft.com/library/8dbca0df-f8a1-40bd-8d50-aa26f6a8b862) arabirimi. `IEvent` kendisini iki başka arabirimin işlevselliğini birleştiren bir arabirimdir `System.IObservable<'T>` ve [IDelegateEvent](https://msdn.microsoft.com/library/3d849465-6b8e-4fc5-b36c-2941d734268a). Bu nedenle, `Event`s sahip ek işlevinden yanı sıra diğer dillerdeki temsilcilerin eşdeğer bir işlevselliği `IObservable`, yani F # olaylarının olay filtrelemeyi ve F # birinci sınıf işlevlerini ve lambda ifadeleri kullanma desteği olay işleyicileri. Bu işlevsellik sağlanır [Olay Modülü](https://msdn.microsoft.com/library/8b883baa-a460-4840-9baa-de8260351bc7).
 
 Yalnızca tüm diğer .NET Framework olayı gibi davranan bir sınıfta bir olay oluşturmak için sınıfa eklemek bir `let` tanımlayan bir `Event` bir sınıfta bir alan olarak. İstenen olay bağımsız değişkeni türünü tür bağımsız değişkeni olarak belirtebilir veya boş bırakarak derleyicinin uygun türü ortaya çıkarmasını sağlayabilirsiniz. Ayrıca, olay CLI olayı olarak sunan bir olay üyesi de tanımlamanız gerekir. Bu üye olmalıdır [CLIEvent](https://msdn.microsoft.com/library/d359f1dd-ffa5-42fb-8808-b4c8131a0333) özniteliği. Bir özellik gibi bildirilir ve uygulanması bir çağrı ise [Yayımla](https://msdn.microsoft.com/library/b0fdaad5-25e5-43d0-9c0c-ce37c4aeb68e) olayının özelliği. Sınıfınızın kullanıcıları kullanabileceğiniz `Add` bir işleyici eklemek için yayımlanan olayın yöntemi. Bağımsız değişkeni `Add` yöntemi, bir lambda ifadesi olabilir. Kullanabileceğiniz `Trigger` bağımsız değişkenleri işleyici işlevine geçirme olayı için olay özelliği. Aşağıdaki kod örneği bunu gösterir. Bu örnekte, olay için gösterilen tür bağımsız değişkeni, lambda ifadesi için bağımsız değişkenleri temsil eden bir kayıt düzenidir.
 

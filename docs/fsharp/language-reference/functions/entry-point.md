@@ -1,6 +1,6 @@
 ---
 title: Girdi Noktası (F#)
-description: Yürütme resmi olarak başladığı bir yürütülebilir dosyası olarak derlenmiş bir F# programına giriş noktası kurmayı öğrenin.
+description: 'Yürütme resmi olarak başladığı bir yürütülebilir dosyası olarak derlenmiş bir F # programına giriş noktası kurmayı öğrenin.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 298500931d49c891a7a243295333df3a9f5d413e
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "45698399"
 ---
 # <a name="entry-point"></a>Girdi Noktası
 
-Bu konuda, bir F# programına giriş noktası ayarlamak için kullandığınız yöntemin açıklanmaktadır.
+Bu konuda, bir F # programına giriş noktası ayarlamak için kullandığınız yöntemin açıklanmaktadır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -24,7 +24,7 @@ let-function-binding
 
 Önceki sözdiziminde, *let işlevi bağlaması* içinde bir işlev tanımı bir `let` bağlama.
 
-Yürütme resmi olarak başladığı bir yürütülebilir dosya olduğu gibi derlenmiş bir programın giriş noktası. Uygulayarak bir F# uygulaması giriş noktası belirtme `EntryPoint` özniteliği programın `main` işlevi. Bu işlev (kullanılarak oluşturulan bir `let` bağlama) son derlenen dosyayı son işlev olmalıdır. Son derlenen son proje dosyasına veya komut satırına geçirilen dosyanın son dosyasıdır.
+Yürütme resmi olarak başladığı bir yürütülebilir dosya olduğu gibi derlenmiş bir programın giriş noktası. Uygulayarak bir F # uygulaması giriş noktası belirtme `EntryPoint` özniteliği programın `main` işlevi. Bu işlev (kullanılarak oluşturulan bir `let` bağlama) son derlenen dosyayı son işlev olmalıdır. Son derlenen son proje dosyasına veya komut satırına geçirilen dosyanın son dosyasıdır.
 
 Giriş noktası işlevini türünde `string array -> int`. Komut satırında sağlanan bağımsız değişkenler geçirilen `main` işlevi bir dize dizisi. Dizinin ilk öğesi olmayan ilk bağımsız değişken; diğer dillerde olduğu gibi yürütülebilir dosyanın adını dizide dahil edilmez. Dönüş değeri çıkış kodu işlemi için kullanılır. Sıfır, genellikle başarılı gösterir; sıfır olmayan değerler, bir hata gösterir. Özel bir anlamı sıfır dönüş kodları için hiçbir kural yoktur; dönüş kodları anlamı, uygulamaya özgü olur.
 

@@ -1,6 +1,6 @@
 ---
 title: Genel Türler (F#)
-description: F# genel işlevler ve çeşitli türleri ile kod yinelenen olmadan çalışan kod yazmanıza olanak tanıyan türleri kullanmayı öğrenin.
+description: 'F # genel işlevler ve çeşitli türleri ile kod yinelenen olmadan çalışan kod yazmanıza olanak tanıyan türleri kullanmayı öğrenin.'
 ms.date: 05/16/2016
 ms.openlocfilehash: fc061f19c6c7fa737f7ca05aae83fd42c0010b37
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "44084968"
 ---
 # <a name="generics"></a>Genel Türler
 
-F# işlevi değerleri, yöntemler, özellikler ve sınıflar gibi toplama türleri kaydeder ve ayrılmış birleşimler olabilir *genel*. Genel yapılar genellikle genel yapısı, kullanıcı tarafından sağlanan en az bir tür parametresi içerir. Genel işlevler ve türleri çeşitli türleri ile kod her türü için yinelenen olmadan çalışan kod yazmanıza olanak sağlar. Genellikle kodunuz örtük olarak genel olarak derleyicinin tür çıkarımı ve otomatik Genelleştirme düzenekleri tarafından algılanır kodunuzu genel yapılması F#'ta basit olabilir.
+F # işlevi değerleri, yöntemler, özellikler ve sınıflar gibi toplama türleri kaydeder ve ayrılmış birleşimler olabilir *genel*. Genel yapılar genellikle genel yapısı, kullanıcı tarafından sağlanan en az bir tür parametresi içerir. Genel işlevler ve türleri çeşitli türleri ile kod her türü için yinelenen olmadan çalışan kod yazmanıza olanak sağlar. Genellikle kodunuz örtük olarak genel olarak derleyicinin tür çıkarımı ve otomatik Genelleştirme düzenekleri tarafından algılanır kodunuzu genel yapılması F #'ta basit olabilir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,7 +33,7 @@ type type-name<type-parameters> type-definition
 
 Bir açık genel işlev veya tür bildirimi genel olmayan işlev veya tür, işlev veya tür adından sonra köşeli parantez içinde tür parametreleri belirtimi (ve kullanım) dışında benzer.
 
-Bildirimleri genellikle örtük olarak geneldir. Tam olarak bir işlev veya türü oluşturmak için kullanılan her parametresinin türü belirtmezseniz derleyici her parametre, değer ve değişkeni yazdığınız kodun türünü çıkarsamak çalışır. Daha fazla bilgi için [tür çıkarımı](../type-inference.md). Kod tür veya işlev için parametre türlerini aksi kısıtlamaz, işlev veya türü örtük olarak genel olur. Bu işlem adlı *otomatik Genelleştirme*. Otomatik Genelleştirme üzerinde bazı limitler mevcuttur. Örneğin, F# derleyicisi için bir genel yapısı türlerini çıkarması yapamıyorsa, derleyici adlı bir kısıtlamaya başvuran bir hata bildirir *değer kısıtlaması*. Bu durumda, bazı tür ek açıklamaları eklemeniz gerekebilir. Otomatik Genelleştirme ve değer kısıtlama ve sorunu çözmek için kodunuzu değiştirme hakkında daha fazla bilgi için bkz. [otomatik Genelleştirme](automatic-generalization.md).
+Bildirimleri genellikle örtük olarak geneldir. Tam olarak bir işlev veya türü oluşturmak için kullanılan her parametresinin türü belirtmezseniz derleyici her parametre, değer ve değişkeni yazdığınız kodun türünü çıkarsamak çalışır. Daha fazla bilgi için [tür çıkarımı](../type-inference.md). Kod tür veya işlev için parametre türlerini aksi kısıtlamaz, işlev veya türü örtük olarak genel olur. Bu işlem adlı *otomatik Genelleştirme*. Otomatik Genelleştirme üzerinde bazı limitler mevcuttur. Örneğin, F # derleyicisi için bir genel yapısı türlerini çıkarması yapamıyorsa, derleyici adlı bir kısıtlamaya başvuran bir hata bildirir *değer kısıtlaması*. Bu durumda, bazı tür ek açıklamaları eklemeniz gerekebilir. Otomatik Genelleştirme ve değer kısıtlama ve sorunu çözmek için kodunuzu değiştirme hakkında daha fazla bilgi için bkz. [otomatik Genelleştirme](automatic-generalization.md).
 
 Önceki sözdiziminde, *tür parametreleri* ne tür olabilir. daha fazla sınırlayan isteğe bağlı olarak bir kısıtlama yan tümcesi ile tek tırnak işareti ile başlayan her biri bir virgülle ayrılmış listesi bilinmeyen türleri temsil eden parametreleri Bu tür parametresi için kullanılabilir. Kısıtlama yan tümceleri çeşitli türleri ve kısıtlamalar hakkında diğer bilgiler için sözdizimi için bkz [kısıtlamaları](constraints.md).
 
@@ -45,7 +45,7 @@ Diğer sözdizimi öğeleri genel olmayan işlevleri ve türleri için aynıdır
 
 ## <a name="implicitly-generic-constructs"></a>Örtük olarak genel yapılar
 
-Kodunuzdaki türleri F# derleyicisi algılar, genel olarak genel bir işlev otomatik olarak algılar. Bir tür gibi bir parametre türü, açıkça belirtirseniz otomatik Genelleştirme engeller.
+Kodunuzdaki türleri F # derleyicisi algılar, genel olarak genel bir işlev otomatik olarak algılar. Bir tür gibi bir parametre türü, açıkça belirtirseniz otomatik Genelleştirme engeller.
 
 Aşağıdaki kod örneğinde, `makeList` olsa da ne parametrelerini açıkça genel olarak bildirilen geneldir.
 
@@ -72,7 +72,7 @@ Aşağıdaki kod, önceki bölümde tanımlanan işlevlerin kullanımını göst
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1702.fs)]
 
 >[!NOTE]
-Ada göre bir genel türe başvurmak amacıyla iki yolu vardır. Örneğin, `list<int>` ve `int list` genel bir türe başvurmak için kullanabileceğiniz iki yöntemdir `list` tek tür bağımsız değişkeni olan `int`. İkinci form genel yalnızca yerleşik F# türleri ile gibi kullanılır `list` ve `option`. Birden çok tür bağımsız değişkeni varsa, söz dizimi normalde kullandığınız `Dictionary<int, string>` söz dizimi de kullanabilirsiniz, ancak `(int, string) Dictionary`.
+Ada göre bir genel türe başvurmak amacıyla iki yolu vardır. Örneğin, `list<int>` ve `int list` genel bir türe başvurmak için kullanabileceğiniz iki yöntemdir `list` tek tür bağımsız değişkeni olan `int`. İkinci form genel yalnızca yerleşik F # türleri ile gibi kullanılır `list` ve `option`. Birden çok tür bağımsız değişkeni varsa, söz dizimi normalde kullandığınız `Dictionary<int, string>` söz dizimi de kullanabilirsiniz, ancak `(int, string) Dictionary`.
 
 ## <a name="wildcards-as-type-arguments"></a>Joker karakter tür bağımsız değişkenleri olarak
 
@@ -82,11 +82,11 @@ Tür bağımsız değişkeni derleyici tarafından çıkarılmamalıdır belirtm
 
 ## <a name="constraints-in-generic-types-and-functions"></a>Sınırlamalar genel türler ve İşlevler
 
-Genel tür veya işlev tanımı, genel tür parametresinde kullanılabilir olduğu bilinen yapıları kullanabilirsiniz. Bu, derleme zamanında işlevi ve yöntem çağrılarının doğrulamayı etkinleştirmek için gereklidir. Kendi tür parametreleri açıkça bildirirseniz, derleyici belirli yöntemleri ve işlevleri mevcut olduğunu bildirmek için bir genel tür parametresi açık bir kısıtlaması uygulayabilirsiniz. Genel parametre türlerinizi çıkarsamak F# derleyicisi izin verirseniz, ancak bunu uygun kısıtlamaları sizin için belirler. Daha fazla bilgi için [kısıtlamaları](constraints.md).
+Genel tür veya işlev tanımı, genel tür parametresinde kullanılabilir olduğu bilinen yapıları kullanabilirsiniz. Bu, derleme zamanında işlevi ve yöntem çağrılarının doğrulamayı etkinleştirmek için gereklidir. Kendi tür parametreleri açıkça bildirirseniz, derleyici belirli yöntemleri ve işlevleri mevcut olduğunu bildirmek için bir genel tür parametresi açık bir kısıtlaması uygulayabilirsiniz. Genel parametre türlerinizi çıkarsamak F # derleyicisi izin verirseniz, ancak bunu uygun kısıtlamaları sizin için belirler. Daha fazla bilgi için [kısıtlamaları](constraints.md).
 
 ## <a name="statically-resolved-type-parameters"></a>Statik Olarak Çözümlenmiş Tür Parametreleri
 
-F# programlarında kullanılabilir tür parametrelerinin iki tür vardır. İlk tür önceki bölümlerde açıklanan genel tür parametreleri olan. Tür parametresini ilk bu tür, Visual Basic ve C# gibi dillerde kullanılan genel tür parametreleri eşdeğerdir. Başka bir tür parametresi tür F#'tan da özgüdür ve olarak adlandırılır bir *statik olarak çözümlenmiş tür parametresi*. Bu yapılar hakkında daha fazla bilgi için bkz. [statik olarak çözümlenmiş tür Parametreleri'nde](statically-resolved-type-parameters.md).
+F # programlarında kullanılabilir tür parametrelerinin iki tür vardır. İlk tür önceki bölümlerde açıklanan genel tür parametreleri olan. Tür parametresini ilk bu tür, Visual Basic ve C# gibi dillerde kullanılan genel tür parametreleri eşdeğerdir. Başka bir tür parametresi tür F #'tan da özgüdür ve olarak adlandırılır bir *statik olarak çözümlenmiş tür parametresi*. Bu yapılar hakkında daha fazla bilgi için bkz. [statik olarak çözümlenmiş tür Parametreleri'nde](statically-resolved-type-parameters.md).
 
 ## <a name="examples"></a>Örnekler
 

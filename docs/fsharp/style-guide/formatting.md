@@ -1,6 +1,6 @@
 ---
-title: Biçimlendirme yönergelerine F# kodu
-description: F# kod biçimlendirme yönergeleri hakkında bilgi edinin.
+title: 'Biçimlendirme yönergelerine F # kodu'
+description: 'F # kod biçimlendirme yönergeleri hakkında bilgi edinin.'
 ms.date: 05/14/2018
 ms.openlocfilehash: 0d7d2d1771710db55bf990f3a06079b2aec48fd7
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -9,19 +9,19 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "43858011"
 ---
-# <a name="f-code-formatting-guidelines"></a>Biçimlendirme yönergelerine F# kodu
+# <a name="f-code-formatting-guidelines"></a>Biçimlendirme yönergelerine F # kodu
 
-Bu makalede, F# kodu böylece, kodunuzu biçimlendirme için yönergeler sunar:
+Bu makalede, F # kodu böylece, kodunuzu biçimlendirme için yönergeler sunar:
 
 * Genel olarak daha okunaklı görüntülenebilir
 * Visual Studio Araçları ve diğer düzenleyiciler biçimlendirme tarafından uygulanan kuralları uygun olan
 * Benzer şekilde diğer kod çevrimiçi
 
-Bu kılavuzu temel alan [F# biçimlendirme kuralları kapsamlı bir kılavuz](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md) tarafından [Anh-Dung Phan](https://github.com/dungpa).
+Bu kılavuzu temel alan [F # biçimlendirme kuralları kapsamlı bir kılavuz](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md) tarafından [Anh-Dung Phan](https://github.com/dungpa).
 
 ## <a name="general-rules-for-indentation"></a>Girinti için genel kurallar
 
-F# önemli boşluk varsayılan olarak kullanır. Aşağıdaki yönergeleri Bu getirebilir bazı zorluklar juggle nasıl dair yönergeler sağlamak üzere tasarlanmıştır.
+F # önemli boşluk varsayılan olarak kullanır. Aşağıdaki yönergeleri Bu getirebilir bazı zorluklar juggle nasıl dair yönergeler sağlamak üzere tasarlanmıştır.
 
 ### <a name="using-spaces"></a>Alanları kullanma
 
@@ -62,7 +62,7 @@ let f x = x + 1 // Increment by one.
 
 ### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a>CamelCase sınıfı bağlı, ifade bağlı ve bağlama deseni değerleri ve işlevleri için kullanın.
 
-Genel ve yerel değişkenler olarak veya desen ve işlev tanımları camelCase tüm adlar için kabul edilen F# stili bağlanır.
+Genel ve yerel değişkenler olarak veya desen ve işlev tanımları camelCase tüm adlar için kabul edilen F # stili bağlanır.
 
 ```fsharp
 // OK
@@ -165,13 +165,13 @@ Ad alanları, özel durumlar, olayları ve proje /`.dll` adları PascalCase de k
 
 ### <a name="avoid-underscores-in-names"></a>Adları alt çizgi kaçının
 
-Tarihsel olarak, bazı F# kitaplıkları adları alt çizgi kullandınız. Kısmen, .NET adlandırma kuralları ile çakışıyor çünkü ancak bu artık yaygın olarak, kabul edilir. Bu, bazı F# programcıları alt çizgi yoğun, kısmen geçmiş nedenlerle kullanın ve dayanıklılık ve saygı önemlidir da belirtti. Ancak, bir seçeneğiniz mi kullanılacağını hakkında başkaları tarafından stili genellikle yanıtlamadığı unutmayın.
+Tarihsel olarak, bazı F # kitaplıkları adları alt çizgi kullandınız. Kısmen, .NET adlandırma kuralları ile çakışıyor çünkü ancak bu artık yaygın olarak, kabul edilir. Bu, bazı F # programcıları alt çizgi yoğun, kısmen geçmiş nedenlerle kullanın ve dayanıklılık ve saygı önemlidir da belirtti. Ancak, bir seçeneğiniz mi kullanılacağını hakkında başkaları tarafından stili genellikle yanıtlamadığı unutmayın.
 
 Bazı özel durumlar, alt çizgi yaygın olduğu yerel bileşenleriyle birlikte içerir.
 
-### <a name="use-standard-f-operators"></a>Standart F# işleçleri kullanma
+### <a name="use-standard-f-operators"></a>Standart F # işleçleri kullanma
 
-Aşağıdaki işleçleri, F# standart kitaplıkta tanımlanan ve eşdeğerleri tanımlamak yerine kullanılmalıdır. Bu kod daha okunabilir ve kullanılan deyimsel bir hale gelir gibi bu işleçleri kullanarak önerilir. Arka plan OCaml veya işlev başka bir programlama dilinde geliştiricilere, farklı deyimleri için alışkın olabilir. Aşağıdaki listede, önerilen F# işleçleri özetlenmektedir.
+Aşağıdaki işleçleri, F # standart kitaplıkta tanımlanan ve eşdeğerleri tanımlamak yerine kullanılmalıdır. Bu kod daha okunabilir ve kullanılan deyimsel bir hale gelir gibi bu işleçleri kullanarak önerilir. Arka plan OCaml veya işlev başka bir programlama dilinde geliştiricilere, farklı deyimleri için alışkın olabilir. Aşağıdaki listede, önerilen F # işleçleri özetlenmektedir.
 
 ```fsharp
 x |> f // Forward pipeline
@@ -193,11 +193,11 @@ x ^^^ y // Bitwise xor, also for working with “flags” enumeration
 
 ### <a name="use-prefix-syntax-for-generics-foot-in-preference-to-postfix-syntax-t-foo"></a>Genel türler için öneki sözdizimini kullanın (`Foo<T>`) sonek söz dizimi yerine (`T Foo`)
 
-F# genel türleri adlandırma iki sonek ML stili devralır (örneğin, `int list`) öneki .NET stili yanı sıra (örneğin, `list<int>`). .NET stili dört belirli tür dışında tercih et:
+F # genel türleri adlandırma iki sonek ML stili devralır (örneğin, `int list`) öneki .NET stili yanı sıra (örneğin, `list<int>`). .NET stili dört belirli tür dışında tercih et:
 
-1. F# listeleri için sonek biçimi kullanın: `int list` yerine `list<int>`.
-2. F# seçenekleri için sonek biçimi kullanın: `int option` yerine `option<int>`.
-3. F# diziler için söz dizimi adı kullanmak `int[]` yerine `int array` veya `array<int>`.
+1. F # listeleri için sonek biçimi kullanın: `int list` yerine `list<int>`.
+2. F # seçenekleri için sonek biçimi kullanın: `int option` yerine `option<int>`.
+3. F # diziler için söz dizimi adı kullanmak `int[]` yerine `int array` veya `array<int>`.
 4. Başvuru hücreleri için kullanmak `int ref` yerine `ref<int>` veya `Ref<int>`.
 
 Önek biçimi diğer tüm türleri için kullanın.
@@ -591,7 +591,7 @@ let comparer =
 
 ### <a name="formatting-white-space-in-expressions"></a>Boşluk ifadelerde biçimlendirme
 
-F# ifadelerini fazlalık bölünemez boşluğu kaçının.
+F # ifadelerini fazlalık bölünemez boşluğu kaçının.
 
 ```fsharp
 // OK

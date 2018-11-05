@@ -1,6 +1,6 @@
 ---
-title: Fixed anahtar sözcüğü (F#)
-description: "'Sabitleyebilirsiniz nasıl' ile F# koleksiyon önlemek için bir yerel yığına 'anahtar sözcüğü sabit' öğrenin."
+title: 'Fixed anahtar sözcüğü (F #)'
+description: "'Sabitleyebilirsiniz nasıl' ile F # koleksiyon önlemek için bir yerel yığına 'anahtar sözcüğü sabit' öğrenin."
 ms.date: 04/24/2017
 ms.openlocfilehash: 1bf1b2ad67d2dd7f854e569cfca7c06e8aec7f4c
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "45624515"
 ---
 # <a name="the-fixed-keyword"></a>Fixed anahtar sözcüğü
 
-F# 4.1 tanıtır `fixed` ", toplanan veya çöp toplama sırasında taşınan önlemek için bir yerel yığına sabitlemek" izin veren anahtar sözcüğü.  Bu düşük düzeydeki programlama senaryoları için kullanılır.
+F # 4.1 tanıtır `fixed` ", toplanan veya çöp toplama sırasında taşınan önlemek için bir yerel yığına sabitlemek" izin veren anahtar sözcüğü.  Bu düşük düzeydeki programlama senaryoları için kullanılır.
 
 ## <a name="syntax"></a>Sözdizimi
 

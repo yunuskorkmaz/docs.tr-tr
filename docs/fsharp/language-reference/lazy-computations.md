@@ -1,6 +1,6 @@
 ---
 title: Geç Hesaplamalar (F#)
-description: F# geç hesaplamalar uygulamalar ve kitaplıklar performansını nasıl artırabileceğinizi öğrenin.
+description: 'F # geç hesaplamalar uygulamalar ve kitaplıklar performansını nasıl artırabileceğinizi öğrenin.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 8afe815f26978de96291a52973d54a9dbcc5eaf2
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

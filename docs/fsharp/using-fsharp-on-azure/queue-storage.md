@@ -1,5 +1,5 @@
 ---
-title: F# kullanarak Azure kuyruk depolama ile çalışmaya başlama
+title: 'F # kullanarak Azure kuyruk depolama ile çalışmaya başlama'
 description: Azure kuyrukları, uygulama bileşenleri arasında güvenilir ve zaman uyumsuz Mesajlaşma sağlar. Mesajlaşma etkinleştirir, uygulama bileşenlerinizin bağımsız olarak ölçeklendirme bulut.
 author: sylvanc
 ms.date: 09/20/2016
@@ -10,7 +10,7 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "33569424"
 ---
-# <a name="get-started-with-azure-queue-storage-using-f"></a>F# kullanarak Azure kuyruk depolama ile çalışmaya başlama #
+# <a name="get-started-with-azure-queue-storage-using-f"></a>F # kullanarak Azure kuyruk depolama ile çalışmaya başlama #
 
 Azure kuyruk depolama, uygulama bileşenleri arasında bulut Mesajlaşma sağlar. Böylece ölçeklendirilebilmeleri ölçek için uygulamaları tasarlarken, uygulama bileşenleri genellikle birbirinden ayrılır. Kuyruk depolama, bulutta, masaüstünde, şirket içi sunucusunda veya mobil bir cihazda çalışan uygulama bileşenleri arasındaki iletişim için zaman uyumsuz Mesajlaşma sunar. Kuyruk depolama ayrıca zaman uyumsuz görevlerin yönetilmesini ve süreç iş akışlarının oluşturulmasını destekler.
 
@@ -25,9 +25,9 @@ Kuyruk depolama kavramsal bir genel bakış için bkz. Lütfen [kuyruk depolama 
 Bu kılavuzu kullanmak için önce [bir Azure depolama hesabı oluşturma](/azure/storage/storage-create-storage-account).
 Ayrıca, bu hesap için depolama erişim anahtarınızı gerekir.
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>Bir F# komut dosyası ve başlangıç F# Etkileşimli oluşturma
+## <a name="create-an-f-script-and-start-f-interactive"></a>Bir F # komut dosyası ve başlangıç F # Etkileşimli oluşturma
 
-Bu makaledeki örnekleri, F# uygulaması veya bir F# komut dosyası kullanılabilir. Bir F# komut dosyası oluşturmak için bir dosya oluşturun. `.fsx` uzantısı, örneğin `queues.fsx`, F# geliştirme ortamınızda.
+Bu makaledeki örnekleri, F # uygulaması veya bir F # komut dosyası kullanılabilir. Bir F # komut dosyası oluşturmak için bir dosya oluşturun. `.fsx` uzantısı, örneğin `queues.fsx`, F # geliştirme ortamınızda.
 
 Ardından, bir [Paket Yöneticisi](package-management.md) gibi [Paket](https://fsprojects.github.io/Paket/) veya [NuGet](https://www.nuget.org/) yüklemek için `WindowsAzure.Storage` paket ve başvuru `WindowsAzure.Storage.dll` bir kullanarakbetiğinizde`#r`yönergesi.
 

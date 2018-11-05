@@ -1,5 +1,5 @@
 ---
-title: F# İşlevsel Programlamaya Giriş
+title: 'F # İşlevsel Programlamaya Giriş'
 description: İşlevsel programlamaya temellerini öğrenin F#.
 ms.date: 10/29/2018
 ms.openlocfilehash: d4a9bb0cd826b41aca96e12e2bcb5aab80c18eb4
@@ -9,7 +9,7 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "25863842"
 ---
-# <a name="introduction-to-functional-programming-in-f"></a>F# İşlevsel Programlamaya Giriş #
+# <a name="introduction-to-functional-programming-in-f"></a>F # İşlevsel Programlamaya Giriş #
 
 İşlevsel programlama, İşlevler ve sabit veri kullanımını vurgulamaktadır programlama stilidir. Türü belirlenmiş işlevsel programlama, işlevsel programlama statik türler ile gibi ile birleştirildiğinde F#. Genel olarak, aşağıdaki kavramları işlevsel programlamaya vurgulanır:
 

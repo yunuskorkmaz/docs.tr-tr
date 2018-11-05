@@ -1,6 +1,6 @@
 ---
 title: Kaynak Satırı, Dosya ve Yol Tanımlayıcıları (F#)
-description: Kaynak satır numarası, dizin ve dosya adı kodunuzdaki erişim sağlayan yerleşik F# tanımlayıcı değerlerini kullanma konusunda bilgi edinin.
+description: 'Kaynak satır numarası, dizin ve dosya adı kodunuzdaki erişim sağlayan yerleşik F # tanımlayıcı değerlerini kullanma konusunda bilgi edinin.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 14f710d1412c3420ec627dc30216ba2e89f16bcd
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -25,7 +25,7 @@ __SOURCE_FILE__
 
 Bu değerlerin her birini türünde `string`.
 
-Aşağıdaki tabloda özetlenmiştir: kaynak satırı, dosya ve yol tanımlayıcıları, F#'ta da kullanılabilir. Bu tanımlayıcılar Önişlemci makroları değildir; Bunlar, derleyici tarafından tanınan yerleşik değerlerdir.
+Aşağıdaki tabloda özetlenmiştir: kaynak satırı, dosya ve yol tanımlayıcıları, F #'ta da kullanılabilir. Bu tanımlayıcılar Önişlemci makroları değildir; Bunlar, derleyici tarafından tanınan yerleşik değerlerdir.
 
 |Önceden tanımlanmış tanımlayıcısı|Açıklama|
 |---------------------|-----------|

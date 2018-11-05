@@ -1,6 +1,6 @@
 ---
 title: Diziler (F#)
-description: F# dizileri, veri koleksiyonu sıralı bir büyük, varsa, ancak tüm öğeleri kullanmak mutlaka beklemiyoruz kullanmayı öğrenin.
+description: 'F # dizileri, veri koleksiyonu sıralı bir büyük, varsa, ancak tüm öğeleri kullanmak mutlaka beklemiyoruz kullanmayı öğrenin.'
 ms.date: 05/16/2016
 ms.openlocfilehash: cfe8d1e350a8ac46b7700c12aa84d250f8b35855
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -22,7 +22,7 @@ A *sıra ifade* bir dizisine değerlendiren bir ifade. Sequence ifadeleri, çok 
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1502.fs)]
 
-Sequence ifadeleri, değerler dizisi oluşturan F# ifadeleri yapılır. Kullanabilecekleri `yield` dizisinin bir parçası haline değerler üretmek için anahtar sözcüğü.
+Sequence ifadeleri, değerler dizisi oluşturan F # ifadeleri yapılır. Kullanabilecekleri `yield` dizisinin bir parçası haline değerler üretmek için anahtar sözcüğü.
 
 Aşağıda bir örnek verilmiştir.
 
@@ -62,7 +62,7 @@ Aşağıdaki örnek, kullanımını gösterir `yield!` tek bir son dizi bireysel
 
 Dizileri aynı işlevlerin birçoğunu destekleyen [listeler](lists.md). Dizileri gruplandırma ve anahtar oluşturuluyor işlevlerini kullanarak sayım gibi işlemleri de destekler. Dizileri sıraları ayıklanması için daha çok çeşitli işlevleri de destekler.
 
-Çünkü bunlar numaralandırılabilir koleksiyonları listeler, diziler, ayarlar ve haritalar gibi çok sayıda veri türlerini örtük olarak dizileri:. Bağımsız değişken tüm ortak F# veri türleri, ayrıca uygulayan bir .NET Framework veri türü için çalıştığı bir dizisini alan bir işlev `System.Collections.Generic.IEnumerable<'T>`. Bunu, bu listeleri yalnızca alabilir bağımsız değişken bir liste alan işlevi karşılaştırın. Türü `seq<'T>` bir tür kısaltmasıdır `IEnumerable<'T>`. Genel uygulayan herhangi bir tür buna `System.Collections.Generic.IEnumerable<'T>`içeren diziler, listeler, ayarlar ve F# ve ayrıca çoğu .NET Framework koleksiyon türü, maps ile uyumludur `seq` yazın ve bir dizi beklendiği her yerde kullanılabilir.
+Çünkü bunlar numaralandırılabilir koleksiyonları listeler, diziler, ayarlar ve haritalar gibi çok sayıda veri türlerini örtük olarak dizileri:. Bağımsız değişken tüm ortak F # veri türleri, ayrıca uygulayan bir .NET Framework veri türü için çalıştığı bir dizisini alan bir işlev `System.Collections.Generic.IEnumerable<'T>`. Bunu, bu listeleri yalnızca alabilir bağımsız değişken bir liste alan işlevi karşılaştırın. Türü `seq<'T>` bir tür kısaltmasıdır `IEnumerable<'T>`. Genel uygulayan herhangi bir tür buna `System.Collections.Generic.IEnumerable<'T>`içeren diziler, listeler, ayarlar ve F # ve ayrıca çoğu .NET Framework koleksiyon türü, maps ile uyumludur `seq` yazın ve bir dizi beklendiği her yerde kullanılabilir.
 
 ## <a name="module-functions"></a>Modül işlevleri
 

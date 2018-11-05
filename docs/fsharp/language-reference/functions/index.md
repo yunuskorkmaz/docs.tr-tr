@@ -1,6 +1,6 @@
 ---
 title: İşlevler (F#)
-description: F# ve nasıl F# ortak fonksiyonel programlama yapılarını destekler işlevleri hakkında bilgi edinin.
+description: 'F # ve nasıl F # ortak fonksiyonel programlama yapılarını destekler işlevleri hakkında bilgi edinin.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 717eba7e69398048d229173e07ccc376797171bb
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "48839585"
 ---
 # <a name="functions"></a>İşlevler
 
-Tüm programlama dillerinde program yürütmenin temel birimi işlevlerdir. F# işlevi bir ada sahip diğer dillerde olduğu gibi parametreleri ve sınav zamanı bağımsız değişkenleri olabilir ve bir gövdeye sahip. F# ayrıca değerlere işlevler değerlendirmesini gibi fonksiyonel programlama yapıları adlandırılmamış işlevler ifadelerde örtülü bir tanım kısmi yoluyla işlevlerin yeni işlevleri ve curried işlevleri oluşturmak üzere işlevlerin oluşturulması kullanılmasını destekler işlev bağımsız değişkenleri uygulama.
+Tüm programlama dillerinde program yürütmenin temel birimi işlevlerdir. F # işlevi bir ada sahip diğer dillerde olduğu gibi parametreleri ve sınav zamanı bağımsız değişkenleri olabilir ve bir gövdeye sahip. F # ayrıca değerlere işlevler değerlendirmesini gibi fonksiyonel programlama yapıları adlandırılmamış işlevler ifadelerde örtülü bir tanım kısmi yoluyla işlevlerin yeni işlevleri ve curried işlevleri oluşturmak üzere işlevlerin oluşturulması kullanılmasını destekler işlev bağımsız değişkenleri uygulama.
 
 İşlevleri kullanarak tanımladığınız `let` anahtar sözcüğü veya işlev özyinelemeli ise `let rec` anahtar sözcüğü birleşimi.
 
@@ -102,7 +102,7 @@ let vol = cylinderVolume 2.0 3.0
 
 ## <a name="partial-application-of-arguments"></a>Bağımsız Değişkenlerin Kısmi Uygulanması
 
-Belirtilen bağımsız değişkenler sayısından daha az sağlarsanız, kalan bağımsız değişken bekler, yeni bir işlev oluşturun. Bu yöntem bağımsız değişkenleri işleme olarak adlandırılır *currying* ve F# gibi fonksiyonel programlama dillerinin bir özelliğidir. Örneğin, kanal iki boyutlarıyla çalıştığınız düşünün: bir yarıçapını varsa **2.0** ve başka bir sahip **3.0**. Kanal hacmi gibi belirlemek işlevleri oluşturabilirsiniz:
+Belirtilen bağımsız değişkenler sayısından daha az sağlarsanız, kalan bağımsız değişken bekler, yeni bir işlev oluşturun. Bu yöntem bağımsız değişkenleri işleme olarak adlandırılır *currying* ve F # gibi fonksiyonel programlama dillerinin bir özelliğidir. Örneğin, kanal iki boyutlarıyla çalıştığınız düşünün: bir yarıçapını varsa **2.0** ve başka bir sahip **3.0**. Kanal hacmi gibi belirlemek işlevleri oluşturabilirsiniz:
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet106.fs)]
 
@@ -120,7 +120,7 @@ Bazı özyinelemeli işlevler program yığın taşması veya bunları dikkatli 
 
 ## <a name="function-values"></a>İşlev Değerleri
 
-F#'ta tüm işlevleri değerler olarak kabul edilir; olarak aslında, bilinen *işlev değerleri*. İşlevleri değerler olduğundan, diğer işlevlere veya diğer bağlamlarda bağımsız değişkenler olarak değerleri kullanıldığı kullanılabilirler. Bir işlev değeri bağımsız değişken olarak alan bir işlev örneği aşağıdadır:
+F #'ta tüm işlevleri değerler olarak kabul edilir; olarak aslında, bilinen *işlev değerleri*. İşlevleri değerler olduğundan, diğer işlevlere veya diğer bağlamlarda bağımsız değişkenler olarak değerleri kullanıldığı kullanılabilirler. Bir işlev değeri bağımsız değişken olarak alan bir işlev örneği aşağıdadır:
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet109.fs)]
 
@@ -146,7 +146,7 @@ Lambda ifadeleri kullanarak tanımladığınız `fun` anahtar sözcüğü. Bir l
 
 ## <a name="function-composition-and-pipelining"></a>İşlev Bileşimi ve Ardışık Düzen Oluşturma
 
-F# işlevleri diğer işlevleri oluşabilir. İki işlev bileşimi **işlev1** ve **function2** uygulamayı temsil eden başka bir işlev, **işlev1** uygulamayıveardından**function2**:
+F # işlevleri diğer işlevleri oluşabilir. İki işlev bileşimi **işlev1** ve **function2** uygulamayı temsil eden başka bir işlev, **işlev1** uygulamayıveardından**function2**:
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet113.fs)]
 
