@@ -1,6 +1,6 @@
 ---
 title: 'Özel Durumlar: raise İşlevi (F#)'
-description: "F # 'raise' işlevi bir hata veya olağanüstü bir koşul oluştu belirtmek için nasıl kullanıldığını öğrenin."
+description: F# 'raise' işlevi bir hata veya olağanüstü bir koşul oluştu belirtmek için nasıl kullanıldığını öğrenin.
 ms.date: 05/16/2016
 ms.openlocfilehash: 537d274659d29404380bfdd56310ac267372bb98
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

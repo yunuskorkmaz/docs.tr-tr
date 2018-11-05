@@ -1,6 +1,6 @@
 ---
-title: 'Değer seçenekleri (F #)'
-description: 'Seçenek türü bir yapı sürümü F # değer seçeneği türü hakkında bilgi edinin.'
+title: Değer seçenekleri (F#)
+description: Seçenek türü bir yapı sürümü F# değer seçeneği türü hakkında bilgi edinin.
 ms.date: 06/16/2018
 ms.openlocfilehash: 978bd1713c16f7c050ccb097cb134973d10ef6f5
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,12 +11,12 @@ ms.locfileid: "50185842"
 ---
 # <a name="value-options"></a>Değer seçenekleri
 
-Aşağıdaki iki koşul tuttuğunuzda değeri seçenek türünün F # kullanılır:
+Aşağıdaki iki koşul tuttuğunuzda değeri seçenek türünün F# kullanılır:
 
-1. Bir senaryo için uygun olan bir [F # seçeneği](options.md).
+1. Bir senaryo için uygun olan bir [F# seçeneği](options.md).
 2. Bir yapı kullanarak sizin senaryonuzda bu performans artar.
 
-Tüm performans açısından duyarlı senaryoları "yapılar kullanarak çözülen". Bunları başvuru türleri yerine kullanırken kopyalama ek maliyeti dikkate almanız gerekir. Ancak, çünkü yapılar bazen daha iyi bir program ömrü boyunca genel performansı sağlayabilir büyük F # programları genellikle etkin yolları akış birçok isteğe bağlı tür örneği.
+Tüm performans açısından duyarlı senaryoları "yapılar kullanarak çözülen". Bunları başvuru türleri yerine kullanırken kopyalama ek maliyeti dikkate almanız gerekir. Ancak, çünkü yapılar bazen daha iyi bir program ömrü boyunca genel performansı sağlayabilir büyük F# programları genellikle etkin yolları akış birçok isteğe bağlı tür örneği.
 
 ## <a name="definition"></a>Tanım
 

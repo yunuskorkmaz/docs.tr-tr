@@ -1,6 +1,6 @@
 ---
 title: Desen Eşleştirme (F#)
-description: "Desenler F #'de mantıksal yapıları ile verileri karşılaştırmak, verileri bileşenlerine ayırmak veya verilerden bilgi ayıklamak için nasıl kullanılacağını öğrenin."
+description: Desenler F#'de mantıksal yapıları ile verileri karşılaştırmak, verileri bileşenlerine ayırmak veya verilerden bilgi ayıklamak için nasıl kullanılacağını öğrenin.
 ms.date: 05/16/2016
 ms.openlocfilehash: 5ad3d3e1a78246afdfa2948fd0fb84fa04686d30
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "45991430"
 ---
 # <a name="pattern-matching"></a>Desen Eşleştirme
 
-Desenler, dönüştürme giriş verileri kurallardır. Bunlar, verileri mantıksal bir yapıyla veya yapılarla karşılaştırmak, verileri bileşenlerine ayırmak veya çeşitli şekillerde verilerden bilgi ayıklamak için F # dilinde kullanılır.
+Desenler, dönüştürme giriş verileri kurallardır. Bunlar, verileri mantıksal bir yapıyla veya yapılarla karşılaştırmak, verileri bileşenlerine ayırmak veya çeşitli şekillerde verilerden bilgi ayıklamak için F# dilinde kullanılır.
 
 ## <a name="remarks"></a>Açıklamalar
 

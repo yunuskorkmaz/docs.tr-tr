@@ -1,6 +1,6 @@
 ---
 title: 'Özyinelemeli İşlevler: rec Anahtar Sözcüğü (F#)'
-description: "'F # rec' anahtar sözcüğü bir özyinelemeli işlev tanımlamak için 'let' anahtar sözcüğü ile nasıl kullanıldığını öğrenin."
+description: "'F# rec' anahtar sözcüğü bir özyinelemeli işlev tanımlamak için 'let' anahtar sözcüğü ile nasıl kullanıldığını öğrenin."
 ms.date: 05/16/2016
 ms.openlocfilehash: 5aab6ed8ab0fc3c0f0bcfc93c3ce6518ec53254f
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -30,7 +30,7 @@ function2-body
 
 ## <a name="remarks"></a>Açıklamalar
 
-Özyinelemeli İşlevler, kendileri çağıran İşlevler F # dilinde açıkça tanımlanır. Bu tanımlanıyorsa tanımlayıcısı işlev kapsamında kullanılabilmesini sağlar.
+Özyinelemeli İşlevler, kendileri çağıran İşlevler F# dilinde açıkça tanımlanır. Bu tanımlanıyorsa tanımlayıcısı işlev kapsamında kullanılabilmesini sağlar.
 
 Aşağıdaki kod hesaplar bir özyinelemeli işlev göstermektedir *n*<sup>th</sup> Fibonacci sayı.
 

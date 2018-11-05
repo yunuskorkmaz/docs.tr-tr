@@ -1,5 +1,5 @@
 ---
-title: 'F # kullanarak Azure tablo depolama ile çalışmaya başlama'
+title: F# kullanarak Azure tablo depolama ile çalışmaya başlama
 description: Azure tablo depolama veya Azure Cosmos DB kullanarak bulutta yapılandırılmış veri Store.
 author: sylvanc
 ms.date: 03/26/2018
@@ -10,7 +10,7 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "43519541"
 ---
-# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Azure tablo depolama ve F # kullanarak Azure Cosmos DB tablo API'si ile çalışmaya başlama # 
+# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Azure tablo depolama ve F# kullanarak Azure Cosmos DB tablo API'si ile çalışmaya başlama # 
 
 Azure tablo depolama bulutta yapılandırılmış NoSQL verileri depolayan bir hizmettir. Tablo depolama, şemasız tasarım ile anahtar/öznitelik deposudur. Table storage şemasız olduğu için ihtiyaçları, uygulama geliştikçe verilerinizi uyarlamak da kolaylaşır. Verilere erişim hızlı ve uygun maliyetli her türden uygulamalar için. Tablo depolama genellikle maliyetini önemli ölçüde benzer veri hacimleri için geleneksel SQL'e daha düşüktür.
 
@@ -30,16 +30,16 @@ Daha fazla bilgi için [Azure Cosmos DB tablo API'sine giriş](https://docs.micr
 
 ## <a name="about-this-tutorial"></a>Bu eğitim hakkında
 
-Bu öğreticide, Azure tablo depolama veya Azure Cosmos DB tablo oluşturma ve tablo silme ve ekleme, güncelleştirme, silme ve tablo verilerini sorgulama dahil olmak üzere API'sini kullanarak bazı genel görevleri yapmak için F # kodunun nasıl yazılacağını gösterir.
+Bu öğreticide, Azure tablo depolama veya Azure Cosmos DB tablo oluşturma ve tablo silme ve ekleme, güncelleştirme, silme ve tablo verilerini sorgulama dahil olmak üzere API'sini kullanarak bazı genel görevleri yapmak için F# kodunun nasıl yazılacağını gösterir.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
 Bu kılavuzu kullanmak için önce [bir Azure depolama hesabı oluşturma](/azure/storage/storage-create-storage-account) veya [Azure Cosmos DB hesabı](https://azure.microsoft.com/try/cosmosdb/).
 
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>Bir F # komut dosyası ve başlangıç F # Etkileşimli oluşturma
+## <a name="create-an-f-script-and-start-f-interactive"></a>Bir F# komut dosyası ve başlangıç F# Etkileşimli oluşturma
 
-Bu makaledeki örnekleri, F # uygulaması veya bir F # komut dosyası kullanılabilir. Bir F # komut dosyası oluşturmak için bir dosya oluşturun. `.fsx` uzantısı, örneğin `tables.fsx`, F # geliştirme ortamınızda.
+Bu makaledeki örnekleri, F# uygulaması veya bir F# komut dosyası kullanılabilir. Bir F# komut dosyası oluşturmak için bir dosya oluşturun. `.fsx` uzantısı, örneğin `tables.fsx`, F# geliştirme ortamınızda.
 
 Ardından, bir [Paket Yöneticisi](package-management.md) gibi [Paket](https://fsprojects.github.io/Paket/) veya [NuGet](https://www.nuget.org/) yüklemek için `WindowsAzure.Storage` paket ve başvuru `WindowsAzure.Storage.dll` bir kullanarakbetiğinizde`#r`yönergesi. Bunu yeniden `Microsoft.WindowsAzure.ConfigurationManager` Microsoft.Azure ad alanını alma için.
 

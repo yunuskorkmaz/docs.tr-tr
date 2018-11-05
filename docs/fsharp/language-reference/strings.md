@@ -1,6 +1,6 @@
 ---
 title: Dizeler (F#)
-description: "Nasıl F # 'string' türü sabit metin Unicode karakter dizisi olarak temsil ettiğini öğrenin."
+description: Nasıl F# 'string' türü sabit metin Unicode karakter dizisi olarak temsil ettiğini öğrenin.
 ms.date: 05/16/2016
 ms.openlocfilehash: 21971602093bc84b0df47d4ae46a14fb936c28bb
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -18,7 +18,7 @@ Bu makaledeki API başvuru bağlantıları için MSDN sürer.  Docs.microsoft.co
 
 ## <a name="remarks"></a>Açıklamalar
 
-Dize değişmez değerleri tırnak işareti (") karakteriyle ayrılır. Ters eğik çizgi karakteri ( \\ ) özel karakterleri kodlamak için kullanılır. Ters eğik çizgi ve birlikte sonraki karakteri olarak bilinen bir *kaçış dizisi*. Kaçış dizileri desteklenen, F # dize değişmez değerleri aşağıdaki tabloda gösterilmiştir.
+Dize değişmez değerleri tırnak işareti (") karakteriyle ayrılır. Ters eğik çizgi karakteri ( \\ ) özel karakterleri kodlamak için kullanılır. Ters eğik çizgi ve birlikte sonraki karakteri olarak bilinen bir *kaçış dizisi*. Kaçış dizileri desteklenen, F# dize değişmez değerleri aşağıdaki tabloda gösterilmiştir.
 
 |Karakter|Kaçış sırası|
 |---------|---------------|
@@ -78,7 +78,7 @@ Aşağıdaki örnekte, dize birleştirme gösterilmektedir.
 
 ## <a name="string-class"></a>Dize sınıfı
 
-F # dize türü .NET Framework gerçekten olduğundan `System.String` yazın, tümünü `System.String` üyeleri kullanılabilir. Bu içerir `+` dizeyi birleştirmek için kullanılır, operatör `Length` özelliği ve `Chars` dize Unicode karakter dizisi olarak döndüren özellik. Dizeleri hakkında daha fazla bilgi için bkz. `System.String`.
+F# dize türü .NET Framework gerçekten olduğundan `System.String` yazın, tümünü `System.String` üyeleri kullanılabilir. Bu içerir `+` dizeyi birleştirmek için kullanılır, operatör `Length` özelliği ve `Chars` dize Unicode karakter dizisi olarak döndüren özellik. Dizeleri hakkında daha fazla bilgi için bkz. `System.String`.
 
 Kullanarak `Chars` özelliği `System.String`, aşağıdaki kodda gösterildiği gibi bir dizin belirterek, bir dizedeki karakterlerin tek tek erişebilirsiniz.
 

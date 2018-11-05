@@ -1,6 +1,6 @@
 ---
 title: Devralma (F#)
-description: "F # kalıtım ilişkileri Devral' anahtar sözcüğü kullanılarak belirleme konusunda bilgi edinin."
+description: F# kalıtım ilişkileri Devral' anahtar sözcüğü kullanılarak belirleme konusunda bilgi edinin.
 ms.date: 05/16/2016
 ms.openlocfilehash: e4d79244fb9bada5db0c5c4c7179d4bfe6e21f3d
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -34,7 +34,7 @@ Anahtar sözcüğü `base` türetilmiş sınıflarda kullanılabilir ve temel s�
 
 ## <a name="virtual-methods-and-overrides"></a>Sanal yöntemleri ve geçersiz kılmaları
 
-Sanal yöntemler (ve Özellikler) biraz farklı F # diğer .NET dilleri göre çalışır. Yeni bir sanal üye bildirmek için kullandığınız `abstract` anahtar sözcüğü. Bunun için bu yöntem için varsayılan bir uygulama sağlamak ne olursa olsun. Bu nedenle tam bir temel sınıf sanal yöntemin tanımı bu düzen aşağıdaki gibidir:
+Sanal yöntemler (ve Özellikler) biraz farklı F# diğer .NET dilleri göre çalışır. Yeni bir sanal üye bildirmek için kullandığınız `abstract` anahtar sözcüğü. Bunun için bu yöntem için varsayılan bir uygulama sağlamak ne olursa olsun. Bu nedenle tam bir temel sınıf sanal yöntemin tanımı bu düzen aşağıdaki gibidir:
 
 ```fsharp
 abstract member [method-name] : [type]

@@ -1,6 +1,6 @@
 ---
-title: 'F # ile komut satırı araçları ile çalışmaya başlama'
-description: 'F # .NET Core CLI kullanarak tüm işletim sistemlerinde (Windows, macOs veya Linux) üzerinde basit bir çoklu proje çözümü oluşturmayı öğrenin.'
+title: F# ile komut satırı araçları ile çalışmaya başlama
+description: F# .NET Core CLI kullanarak tüm işletim sistemlerinde (Windows, macOs veya Linux) üzerinde basit bir çoklu proje çözümü oluşturmayı öğrenin.
 ms.date: 03/26/2018
 ms.openlocfilehash: 8a82970f33c8bbe1b8cdd8fb6499b59b16d3cbf3
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -9,15 +9,15 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "45673915"
 ---
-# <a name="get-started-with-f-with-the-net-core-cli"></a>F # ile .NET Core CLI kullanmaya başlama
+# <a name="get-started-with-f-with-the-net-core-cli"></a>F# ile .NET Core CLI kullanmaya başlama
 
-Bu makale, nasıl F # ile .NET Core CLI ile tüm işletim sistemlerinde (Windows, macOS veya Linux) oluşturabileceğinize dair kapsar. Bu, bir konsol uygulaması tarafından çağrılan bir sınıf kitaplığı ile bir çoklu proje çözümü oluşturma sürecinde gider.
+Bu makale, nasıl F# ile .NET Core CLI ile tüm işletim sistemlerinde (Windows, macOS veya Linux) oluşturabileceğinize dair kapsar. Bu, bir konsol uygulaması tarafından çağrılan bir sınıf kitaplığı ile bir çoklu proje çözümü oluşturma sürecinde gider.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
 Başlamak için en son yükleme [.NET Core SDK'sı](https://www.microsoft.com/net/download/).
 
-Bu makalede, komut satırını kullanın ve tercih edilen bir metin düzenleyicisi bildiğiniz varsayılır. Bu, zaten kullanmıyorsanız, [Visual Studio Code](get-started-vscode.md) F # için bir metin düzenleyicisi olarak mükemmel bir seçenektir.
+Bu makalede, komut satırını kullanın ve tercih edilen bir metin düzenleyicisi bildiğiniz varsayılır. Bu, zaten kullanmıyorsanız, [Visual Studio Code](get-started-vscode.md) F# için bir metin düzenleyicisi olarak mükemmel bir seçenektir.
 
 ## <a name="build-a-simple-multi-project-solution"></a>Basit bir çoklu proje çözümü oluşturma
 
@@ -151,4 +151,4 @@ I used to be World but now I'm ""World"" thanks to JSON.NET!
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Ardından, kullanıma [turu, F #](../tour.md) farklı F # özellikleri hakkında daha fazla bilgi edinmek için.
+Ardından, kullanıma [turu, F#](../tour.md) farklı F# özellikleri hakkında daha fazla bilgi edinmek için.

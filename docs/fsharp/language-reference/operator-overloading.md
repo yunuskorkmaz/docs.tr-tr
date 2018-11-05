@@ -1,6 +1,6 @@
 ---
 title: İşleç Aşırı Yüklemesi (F#)
-description: 'Aritmetik işleçler bir sınıf ya da kayıt türü ve F # içinde genel düzeyde aşırı yükleme hakkında bilgi edinin.'
+description: Aritmetik işleçler bir sınıf ya da kayıt türü ve F# içinde genel düzeyde aşırı yükleme hakkında bilgi edinin.
 ms.date: 05/16/2016
 ms.openlocfilehash: 6232ebf215289e6a22b9d77fbd5fa67b82460486
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -47,11 +47,11 @@ Kullandığınız tam karakter dizisi bağlı olarak, belirli bir öncelik ve il
 
 Yalnızca işleçler `?` ve `?<-` ile başlayabilir `?`.
 
-Tüm işleçler, öncelik F #'de gösteren bir tablo bulunabilir [simge ve işleç başvurusu](symbol-and-operator-reference/index.md).
+Tüm işleçler, öncelik F#'de gösteren bir tablo bulunabilir [simge ve işleç başvurusu](symbol-and-operator-reference/index.md).
 
 ## <a name="overloaded-operator-names"></a>Aşırı yüklenmiş işleç adları
 
-F # derleyicisi bir işleç ifade derlediğinde, işleç için derleyici tarafından oluşturulan bir ada sahip bir yöntem oluşturur. Bu yöntemin Microsoft Ara dilini (MSIL) ve aynı zamanda yansıma ve IntelliSense görünen addır. Normalde bu adları F # kodunda kullanmanız gerekmez.
+F# derleyicisi bir işleç ifade derlediğinde, işleç için derleyici tarafından oluşturulan bir ada sahip bir yöntem oluşturur. Bu yöntemin Microsoft Ara dilini (MSIL) ve aynı zamanda yansıma ve IntelliSense görünen addır. Normalde bu adları F# kodunda kullanmanız gerekmez.
 
 Standart işleçleri aşağıdaki tabloda gösterilmiştir ve bunlara karşılık gelen adları oluşturulur.
 
@@ -151,7 +151,7 @@ Genel düzeyde işleçleri de tanımlayabilirsiniz. Aşağıdaki kod bir işleci
 
 Yukarıdaki kod çıktısı `12`.
 
-Kapsam kuralları için F # yeni tanımlanan işleçleri yerleşik işleçlerine göre öncelikli dikte çünkü bu şekilde normal aritmetik işleçler tanımlayabilirsiniz.
+Kapsam kuralları için F# yeni tanımlanan işleçleri yerleşik işleçlerine göre öncelikli dikte çünkü bu şekilde normal aritmetik işleçler tanımlayabilirsiniz.
 
 Anahtar sözcüğü `inline` genellikle en iyi şekilde çağıran kodun içine tümleştirilmiştir küçük işlevleri genellikle olan genel işleçli kullanılır. Satır içi yapma işleci işlevleri statik olarak çözümlenmiş genel kod üretmek için statik olarak çözümlenmiş tür parametreleri ile çalışmak bunları sağlar. Daha fazla bilgi için [satır içi işlevleri](functions/inline-functions.md) ve [statik olarak çözümlenmiş tür Parametreleri'nde](generics/statically-resolved-type-parameters.md).
 

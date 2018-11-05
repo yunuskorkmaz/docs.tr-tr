@@ -1,6 +1,6 @@
 ---
 title: Kısıtlamalar (F#)
-description: 'Bir genel tür veya işlev içinde bir tür bağımsız değişkeni için gereksinimleri belirtmek için genel tür parametreleri için geçerli olan F # kısıtlamaları hakkında bilgi edinin.'
+description: Bir genel tür veya işlev içinde bir tür bağımsız değişkeni için gereksinimleri belirtmek için genel tür parametreleri için geçerli olan F# kısıtlamaları hakkında bilgi edinin.
 ms.date: 05/16/2016
 ms.openlocfilehash: 9534db4ffd195022366af8c993658bd94f375f53
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -26,7 +26,7 @@ Genel tür içinde kullanılabilir türleri sınırlamak uygulayabileceğiniz ç
 |Kısıtlama|Sözdizimi|Açıklama|
 |----------|------|-----------|
 |Tür kısıtlaması|*tür-parametresi* :&gt; *türü*|Sağlanan türü belirtilen türünden eşit ya da bundan türetilmiş olmalıdır veya bir arabirim türü olduğundan, sağlanan türü arabirimini uygulaması gerekir.|
-|Null kısıtlaması|*tür-parametresi* : null|Sağlanan türü null sabiti desteklemesi gerekir. Bu tüm .NET nesne türlerini ancak F # listesi, tanımlama grubu, işlevi, sınıf, kayıt veya birleşim türleri içerir.|
+|Null kısıtlaması|*tür-parametresi* : null|Sağlanan türü null sabiti desteklemesi gerekir. Bu tüm .NET nesne türlerini ancak F# listesi, tanımlama grubu, işlevi, sınıf, kayıt veya birleşim türleri içerir.|
 |Açık bir üye kısıtlaması|[(]*tür-parametresi* [veya... veya *tür-parametresi*)]: (*üye imzası*)|Sağlanan tür bağımsız değişkenlerini en az biri belirtilen imzaya sahip bir üyesi olması gerekir; Genel kullanım için tasarlanmamıştır. Üyeleri ya da açıkça türü veya bir örtük tür uzantısı bir parçası için açık bir üye kısıtlaması geçerli hedefleri olarak tanımlanması gerekir.|
 |Oluşturucu kısıtlaması|*tür-parametresi* : (yeni: birimi -&gt; ' bir)|Sağlanan türü bir varsayılan oluşturucuya sahip olmalıdır.|
 |Değer türü kısıtlaması|: Yapı|Sağlanan türü, bir .NET değer türü olması gerekir.|
@@ -40,7 +40,7 @@ Genel kısıtlama türü ancak çalıştırılmadı türleri üzerinde kullanıl
 
 Bir kısıtlama derleyici, kullandığınız özellikleri türü için çalışma zamanında sağlanan herhangi bir türü üzerinde kullanılabilir olacağını doğrulama yolu yoktur çünkü kısıtlamaları belirtme bazen açıkça tür parametreleri yazarken gereklidir parametre.
 
-F # kodunuzda kullanabileceğiniz en yaygın kısıtlamaları temel sınıflar veya arabirimleri belirtin tür kısıtlamaları var. Diğer kısıtlamaları ya da İşleç aşırı yüklemesi aritmetik işleçler için uygulamak için kullanılan veya ağırlıklı olarak F # tam desteklediğinden sağlanan açık üye kısıtlaması gibi belirli işlevleri uygulamak için F # kitaplığı tarafından kullanılır Ortak dil çalışma zamanı tarafından desteklenen kısıtlamaları kümesi.
+F# kodunuzda kullanabileceğiniz en yaygın kısıtlamaları temel sınıflar veya arabirimleri belirtin tür kısıtlamaları var. Diğer kısıtlamaları ya da İşleç aşırı yüklemesi aritmetik işleçler için uygulamak için kullanılan veya ağırlıklı olarak F# tam desteklediğinden sağlanan açık üye kısıtlaması gibi belirli işlevleri uygulamak için F# kitaplığı tarafından kullanılır Ortak dil çalışma zamanı tarafından desteklenen kısıtlamaları kümesi.
 
 Tür çıkarımı işlemi sırasında bazı kısıtlamalar, derleyici tarafından otomatik olarak algılanır. Örneğin, kullanırsanız `+` işleci bir işlevde, derleyici bir açık bir üye kısıtlama ifadesinde kullanılan değişken türleri algılar.
 
