@@ -1,5 +1,5 @@
 ---
-title: 'F # kullanarak Azure Blob depolamayı kullanmaya başlama'
+title: F# kullanarak Azure Blob depolamayı kullanmaya başlama
 description: Azure Blob Depolama ile bulutta yapılandırılmamış veri Store.
 author: sylvanc
 ms.date: 09/20/2016
@@ -10,11 +10,11 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "44037288"
 ---
-# <a name="get-started-with-azure-blob-storage-using-f"></a>F # kullanarak Azure Blob depolamayı kullanmaya başlama #
+# <a name="get-started-with-azure-blob-storage-using-f"></a>F# kullanarak Azure Blob depolamayı kullanmaya başlama #
 
 Azure Blob Depolama, yapılandırılmamış verileri nesne/BLOB olarak bulutta depolayan bir hizmettir. BLOB Depolama, herhangi bir türde metin veya belge, medya dosyası veya uygulama Yükleyici gibi ikili veri depolayabilir. BLOB storage ayrıca nesne depolama olarak adlandırılır.
 
-Bu makalede, Blob depolamayı kullanarak ortak görevleri nasıl gerçekleştireceğinizi gösterir. Örnekler, F # .NET için Azure depolama istemci kitaplığı kullanarak kullanarak yazılır. Kapsanan görevleri yüklemek, listelemek, indirmek ve blobları silme işlemini içerir.
+Bu makalede, Blob depolamayı kullanarak ortak görevleri nasıl gerçekleştireceğinizi gösterir. Örnekler, F# .NET için Azure depolama istemci kitaplığı kullanarak kullanarak yazılır. Kapsanan görevleri yüklemek, listelemek, indirmek ve blobları silme işlemini içerir.
 
 Blob depolama kavramsal bir genel bakış için bkz: [blob depolama için .NET Kılavuzu](/azure/storage/storage-dotnet-how-to-use-blobs).
 
@@ -22,9 +22,9 @@ Blob depolama kavramsal bir genel bakış için bkz: [blob depolama için .NET K
 
 Bu kılavuzu kullanmak için önce [bir Azure depolama hesabı oluşturma](/azure/storage/storage-create-storage-account). Ayrıca bu hesap için depolama erişim anahtarınızı gerekir.
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>Bir F # komut dosyası ve başlangıç F # Etkileşimli oluşturma
+## <a name="create-an-f-script-and-start-f-interactive"></a>Bir F# komut dosyası ve başlangıç F# Etkileşimli oluşturma
 
-Bu makaledeki örnekleri, F # uygulaması veya bir F # komut dosyası kullanılabilir. Bir F # komut dosyası oluşturmak için bir dosya oluşturun. `.fsx` uzantısı, örneğin `blobs.fsx`, F # geliştirme ortamınızda.
+Bu makaledeki örnekleri, F# uygulaması veya bir F# komut dosyası kullanılabilir. Bir F# komut dosyası oluşturmak için bir dosya oluşturun. `.fsx` uzantısı, örneğin `blobs.fsx`, F# geliştirme ortamınızda.
 
 Ardından, bir [Paket Yöneticisi](package-management.md) gibi [Paket](https://fsprojects.github.io/Paket/) veya [NuGet](https://www.nuget.org/) yüklemek için `WindowsAzure.Storage` ve `Microsoft.WindowsAzure.ConfigurationManager` paketler ve başvuru `WindowsAzure.Storage.dll` ve `Microsoft.WindowsAzure.Configuration.dll` komut dosyası kullanarak bir `#r` yönergesi.
 
@@ -230,8 +230,8 @@ Blob verilerini şifreleme hakkında daha fazla bilgi için bkz [blob depolama b
 Blob storage'nın temellerini öğrendiğinize göre daha fazla bilgi için bu bağlantıları izleyin.
 
 ### <a name="tools"></a>Araçlar
-- [F # AzureStorageTypeProvider](https://fsprojects.github.io/AzureStorageTypeProvider/) bir F # tür Blob, tablo ve kuyruk Azure depolama varlıkları keşfedin ve bunları CRUD işlemleri kolayca uygulamak için kullanılan sağlayıcısı.
-- [FSharp.Azure.Storage](https://github.com/fsprojects/FSharp.Azure.Storage) bir F # Microsoft Azure tablo depolama hizmeti kullanım API'si
+- [F# AzureStorageTypeProvider](https://fsprojects.github.io/AzureStorageTypeProvider/) bir F# tür Blob, tablo ve kuyruk Azure depolama varlıkları keşfedin ve bunları CRUD işlemleri kolayca uygulamak için kullanılan sağlayıcısı.
+- [FSharp.Azure.Storage](https://github.com/fsprojects/FSharp.Azure.Storage) bir F# Microsoft Azure tablo depolama hizmeti kullanım API'si
 - [Microsoft Azure Depolama Gezgini (MASE)](/azure/vs-azure-tools-storage-manage-with-storage-explorer) Microsoft'un Windows, OS X ve Linux'ta Azure depolama verileriyle görsel olarak çalışmanızı sağlayan ücretsiz, tek başına uygulamasıdır.
 
 ### <a name="blob-storage-reference"></a>BLOB storage başvurusu

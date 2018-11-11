@@ -1,6 +1,6 @@
 ---
 title: Kayıtlar (F#)
-description: 'F # kayıt üyeleri ile isteğe bağlı olarak adlandırılmış değerler basit toplamalarla nasıl temsil öğrenin.'
+description: F# kayıt üyeleri ile isteğe bağlı olarak adlandırılmış değerler basit toplamalarla nasıl temsil öğrenin.
 ms.date: 05/16/2016
 ms.openlocfilehash: 6103d96b6b80a9e2ed168755958dbe800f7fa862
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "48261296"
 ---
 # <a name="records"></a>Kayıtlar
 
-Kayıtları basit toplamalarla üyeleri ile isteğe bağlı olarak adlandırılan değerleri temsil eder.  F # 4.1 ile başlayarak, bunlar yapılar veya başvuru türleri ya da olabilir.  Bunlar, başvuru türleri varsayılan olarak.
+Kayıtları basit toplamalarla üyeleri ile isteğe bağlı olarak adlandırılan değerleri temsil eder.  F# 4.1 ile başlayarak, bunlar yapılar veya başvuru türleri ya da olabilir.  Bunlar, başvuru türleri varsayılan olarak.
 
 ## <a name="syntax"></a>Sözdizimi
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 06661cb2c34d1da9085fa2129cb0c3307b99097e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 7590d5628f4951a8c7c2199f0e954007ed9fa962
+ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865559"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "50757432"
 ---
 # <a name="choosing-between-class-and-struct"></a>Sınıf ile yapı arasında seçim yapma
 Her framework Tasarımcısı yüz temel tasarım kararlarından biri mi (bir başvuru türü) bir sınıf veya yapı (bir değer türü) olarak bir tür tasarlamak biridir. Başvuru türleri ve değer türlerinin davranış farklılıkları iyi anlaşılmasını, bu seçim yaparken önemlidir.  
@@ -28,7 +28,7 @@ Her framework Tasarımcısı yüz temel tasarım kararlarından biri mi (bir ba�
   
  Ardından, diziler başvuru türleridir çıkış dizi anlamı satır dışı, yalnızca başvuru yığında bulunan başvuru türünün örneğini tahsis edilir. Değer türü diziler, dizi öğelerinin değer türü gerçek örneklerini olduğu anlamına satır içi, ayrılır. Bu nedenle, ayırma ve değer türü diziler deallocations ayırmaları ve başvuru türü diziler deallocations ucuz. Ayrıca, çoğu durumda, değer türü diziler çok daha iyi bir yerleşim yeri başvuru sergiler.  
   
- Sonraki farka bellek kullanımı ile ilgilidir. Değer türleri, bir başvuru türü veya uyguladıkları arabirimlerinden birini olduğunda cast Kutulu. Kutulanmamış aldıkları ne zaman değer türüne dönüştürme. Kutuları yığında ayrılır ve atık olarak toplanmış, çok fazla kutulama ve kutudan çıkarma nesneler olduğundan, yığın, atık toplayıcı ve nihai olarak uygulamanın performansı üzerinde olumsuz bir etkiye sahip olabilir.  Buna karşılık, başvuru türleri dönüştürme gibi böyle bir kutulama gerçekleşir.  
+ Sonraki farka bellek kullanımı ile ilgilidir. Değer türleri, bir başvuru türü veya uyguladıkları arabirimlerinden birini olduğunda cast Kutulu. Kutulanmamış aldıkları ne zaman değer türüne dönüştürme. Kutuları yığında ayrılır ve atık olarak toplanmış, çok fazla kutulama ve kutudan çıkarma nesneler olduğundan, yığın, atık toplayıcı ve nihai olarak uygulamanın performansı üzerinde olumsuz bir etkiye sahip olabilir.  Buna karşılık, başvuru türleri dönüştürme gibi böyle bir kutulama gerçekleşir. (Daha fazla bilgi için [kutulama ve kutudan çıkarma](../../csharp/programming-guide/types/boxing-and-unboxing.md)).
   
  Ardından, değer türü atamaları tüm değeri kopyalayın ise başvuru türü atamaları başvuru kopyalayın. Bu nedenle, büyük referans tür atamaları büyük değer türlerinin atamaları ucuz.  
   

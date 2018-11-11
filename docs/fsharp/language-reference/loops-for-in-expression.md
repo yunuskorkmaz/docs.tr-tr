@@ -1,6 +1,6 @@
 ---
 title: 'Döngüler: for...in İfadesi (F#)'
-description: 'Bkz. nasıl F # for... ifadesinde döngü yapısı bir sıralanabilir koleksiyonun içindeki bir desenle eşleşmeleri üzerinden yinelemek için kullanılır.'
+description: Bkz. nasıl F# for... ifadesinde döngü yapısı bir sıralanabilir koleksiyonun içindeki bir desenle eşleşmeleri üzerinden yinelemek için kullanılır.
 ms.date: 05/16/2016
 ms.openlocfilehash: c4fba1f1dea3993cafa2e37ad0f32d9fb2eed85a
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

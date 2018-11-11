@@ -190,8 +190,7 @@ Bu izlenecek yolu tamamlamak için Visual Studio ihtiyacınız vardır.
     > [!NOTE]
     >  **E-posta**, **Güvenlik sorusu**, ve **güvenlik yanıtı** değerler formu tarafından gerekli, ancak bu örnekte kullanılmaz.  
   
-13. 
-              **Devam**'a tıklayın.  
+13. **Devam**'a tıklayın.  
   
      **Create User** formu yeniden görüntülenir.  
   

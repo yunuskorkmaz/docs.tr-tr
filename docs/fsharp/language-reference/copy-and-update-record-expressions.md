@@ -1,5 +1,5 @@
 ---
-title: 'Kopyalama ve güncelleştirme kayıt ifadeleri (F #)'
+title: Kopyalama ve güncelleştirme kayıt ifadeleri (F#)
 description: "'Var olan bir kaydı, güncelleştirmeleri kopyalayan bir kopyalama ve güncelleştirme kayıt expression' alanları belirtilen ve güncelleştirilen bir kaydı döndürür yazmayı öğrenin."
 author: ChrSteinert
 ms.date: 06/04/2016

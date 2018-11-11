@@ -1,6 +1,6 @@
 ---
 title: Ad Alanları (F#)
-description: 'F # ad alanı, program öğeleri gruplandırması için bir ad eklemek sağlayarak, ilgili işlevleri alanlarına kod düzenlemek nasıl olanak tanıdığını öğrenin.'
+description: F# ad alanı, program öğeleri gruplandırması için bir ad eklemek sağlayarak, ilgili işlevleri alanlarına kod düzenlemek nasıl olanak tanıdığını öğrenin.
 ms.date: 04/24/2017
 ms.openlocfilehash: 769a1241f76ac32d3a6a80bd637078493119bb3c
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -74,7 +74,7 @@ Ayrıca genel kullanabileceğiniz üst düzey .NET ad alanı, örneğin başvurm
 
 ## <a name="recursive-namespaces"></a>Özyinelemeli ad alanları
 
-F # 4.1 karşılıklı özyinelemeli olarak tüm kapsanan kodunu sağlayan ad alanları kavramını sunar.  Bu aracılığıyla yapılır `namespace rec`.  Kullanım `namespace rec` türler ve modüller arasında karşılıklı başvurusal kod yazmak boyutlandırılmamışsa, bazı sorunlar hafifletmek.  Bunun bir örneği verilmiştir:
+F# 4.1 karşılıklı özyinelemeli olarak tüm kapsanan kodunu sağlayan ad alanları kavramını sunar.  Bu aracılığıyla yapılır `namespace rec`.  Kullanım `namespace rec` türler ve modüller arasında karşılıklı başvurusal kod yazmak boyutlandırılmamışsa, bazı sorunlar hafifletmek.  Bunun bir örneği verilmiştir:
 
 ```fsharp
 namespace rec MutualReferences
@@ -115,12 +115,12 @@ module BananaHelpers =
         | Down -> b |> peelSides
 ```
 
-Unutmayın özel durum `DontSqueezeTheBananaException` ve sınıf `Banana` de birbirine başvuruyor.  Buna ek olarak, modül `BananaHelpers` ve sınıf `Banana` ayrıca birbirine bakın.  Bu F #'ta kaldırdıysanız express mümkün olmazdı `rec` from anahtar sözcüğü `MutualReferences` ad alanı.
+Unutmayın özel durum `DontSqueezeTheBananaException` ve sınıf `Banana` de birbirine başvuruyor.  Buna ek olarak, modül `BananaHelpers` ve sınıf `Banana` ayrıca birbirine bakın.  Bu F#'ta kaldırdıysanız express mümkün olmazdı `rec` from anahtar sözcüğü `MutualReferences` ad alanı.
 
-Bu özellik için de kullanılabilir olan en üst düzey [modülleri](modules.md) F # 4.1 veya üzeri.
+Bu özellik için de kullanılabilir olan en üst düzey [modülleri](modules.md) F# 4.1 veya üzeri.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [F# Dili Başvurusu](index.md)
 - [Modüller](modules.md)
-- [F # RFC FS-1009 - karşılıklı başvurusal türler ve modüller daha büyük dosyaları kapsamlarda üzerinden izin ver](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)
+- [F# RFC FS-1009 - karşılıklı başvurusal türler ve modüller daha büyük dosyaları kapsamlarda üzerinden izin ver](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)

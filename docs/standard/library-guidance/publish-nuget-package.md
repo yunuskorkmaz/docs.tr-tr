@@ -4,12 +4,12 @@ description: .NET kitaplıkları için NuGet yayımlamak için en iyi yöntem ö
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 0602712311411ef3d59825bec8c5e550bc8d8265
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: e0244d2a9d09382c289c74a45969bca0a1311445
+ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49337663"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "50757315"
 ---
 # <a name="publishing-a-nuget-package"></a>Bir NuGet Paketi Yayımlama
 
@@ -17,7 +17,7 @@ NuGet paketlerini yayımlandı ve paket depolarından kullanılan. NuGet.org bil
 
 * **[NuGet.org](https://www.nuget.org/)**  birincil çevrimiçi için NuGet paketlerini depodur. Tüm paketleri NuGet.org üzerinde herkese genel olarak kullanılabilir. Varsayılan olarak, Visual Studio Paket kaynağı olarak NuGet.org sahiptir ve birçok geliştirici için ile etkileşim kuracağınızı yalnızca paket deposu Nuget.org'nin olduğundan. NuGet.org kararlı paketler ve topluluk geri bildirimi almak istediğiniz yayın öncesi paketleri yayımlamak için en iyi yerdir.
 
-* **[MyGet](https://myget.org/)**  depo hizmeti destekleyen [ücretsiz özel paket akışları için açık kaynaklı projelerin](https://www.myget.org/opensource). Bir MyGet genel özel akışı CI hizmetiniz tarafından oluşturulan yayın öncesi paketleri yayımlamak için ideal yerdir. MyGet ayrıca özel akışları ticari olarak sağlar.
+* **[MyGet](https://myget.org/)**  , açık kaynak projeleri için özel paket akışları destekleyen bir depo hizmetidir. Bir MyGet genel özel akışı CI hizmetiniz tarafından oluşturulan yayın öncesi paketleri yayımlamak için ideal yerdir. MyGet ayrıca özel akışları ticari olarak sağlar.
 
 * A **[yerel akış](/nuget/hosting-packages/local-feeds)** yapar ve bir paket deposu gibi bir klasör değerlendirilecek sağlar `*.nupkg` NuGet tarafından erişilebilir klasöründe bulunan dosyaları. Yerel bir akış, bir NuGet paketi için NuGet.org yayımlamadan önce test edilmesi için yararlıdır.
 

@@ -3,11 +3,11 @@ title: İleti Güvenliğinde Etkinlik İzleme
 ms.date: 03/30/2017
 ms.assetid: 68862534-3b2e-4270-b097-8121b12a2c97
 ms.openlocfilehash: c3bd36598fd903dc016959149e563174624d084b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181335"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "50982847"
 ---
 # <a name="activity-tracing-in-message-security"></a>İleti Güvenliğinde Etkinlik İzleme
 Bu konuda, aşağıdaki üç aşamaya olur güvenlik işlenmek Etkinlik izleme açıklanmaktadır.  

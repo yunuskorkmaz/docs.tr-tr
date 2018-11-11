@@ -9,12 +9,12 @@ helpviewer_keywords:
 - path formats, Windows
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5821d15e71492bd54fa6b5d891f2ff38a2902a06
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 05146467f321a3c83f3637e2eecc4c7c42dc4ba0
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47424395"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51214200"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows sistemlerde dosya yolu biçimleri
 
@@ -202,7 +202,7 @@ Yolları için Not birden fazla `MAX_PATH` karakterin [GetFullPathName](/windows
 Windows olmayan kullanıcılara ve geliştiricilere, karmaşık bulma Windows dosya sisteminin bir yaný yoludur ve dizin adları büyük/küçük harfe duyarsızdır. Diğer bir deyişle, dizin ve dosya adları büyük/küçük harf oluşturulduğunda kullanılan dizelerin yansıtır. Örneğin, yöntem çağrısı
 
 ```csharp
-Directory.Create(TeStDiReCtOrY);
+Directory.Create("TeStDiReCtOrY");
 ```
 TeStDiReCtOrY adlı bir dizin oluşturur. Bir dizin veya dosya kasasının değiştirmek için yeniden adlandırırsanız, dizin veya dosya adı, yeniden adlandırdığınızda kullanılan dize durumunu yansıtır. Örneğin, aşağıdaki kod, test.txt Test.txt için adlı bir dosyayı yeniden adlandırır:
 

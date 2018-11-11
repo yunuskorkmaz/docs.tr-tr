@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern Web uygulamaları tasarlama | Orta
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: ff483c9b555fdf394d11626536c28e7e07516d05
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: ae141b3d60a9968ee3fe59474e32a174bdb77e3b
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404638"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50757458"
 ---
 # <a name="common-web-application-architectures"></a>Ortak web uygulaması mimarileri
 
@@ -97,7 +97,7 @@ Azure'da bir web uygulaması ölçeklendirme için en kolay yaklaşım, uygulama
 
 ## <a name="clean-architecture"></a>Temiz mimarisi
 
-Bağımlılık tersine çevirme ilkesini ve bunun yanı sıra etki alanı Odaklı Tasarım (DDD) İlkeleri izleyin uygulamaları benzer bir mimariye geldiğinde eğilimindedir. Bu mimari, yıllar içinde birçok adlarıyla geçti. Adlarını Altıgen mimarisi, bağlantı noktaları-ve-bağdaştırıcıları tarafından izlenen biriydi. Daha yakın bir tarihte bu olarak alıntı olarak [çoklu kare mimarisi](http://jeffreypalermo.com/blog/the-onion-architecture-part-1/) veya [temiz mimarisi](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html). İkinci Ad, temiz mimarisi bu mimaride bu e-kitap adı olarak kullanılır.
+Bağımlılık tersine çevirme ilkesini ve bunun yanı sıra etki alanı Odaklı Tasarım (DDD) İlkeleri izleyin uygulamaları benzer bir mimariye geldiğinde eğilimindedir. Bu mimari, yıllar içinde birçok adlarıyla geçti. Adlarını Altıgen mimarisi, bağlantı noktaları-ve-bağdaştırıcıları tarafından izlenen biriydi. Daha yakın bir tarihte bu olarak alıntı olarak [çoklu kare mimarisi](https://jeffreypalermo.com/blog/the-onion-architecture-part-1/) veya [temiz mimarisi](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html). İkinci Ad, temiz mimarisi bu mimaride bu e-kitap adı olarak kullanılır.
 
 > [!NOTE]
 > Temiz bir mimari filtrelenmeyen seçeceğine DDD ilkeleri kullanılarak oluşturulan uygulamalar uygulanabilir terimi DDD kullanmaktır. Eski söz konusu olduğunda bu birleşimi için "DDD mimarisine temiz" başvurulabilir.
@@ -307,7 +307,7 @@ Visual Studio'yu kullanarak uygulamanıza Docker desteği eklemek istiyorsanız,
 > - **Temiz mimarisi**  
 >   <https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html>
 > - **Çoklu kare mimarisi**  
->   <http://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
+>   <https://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
 > - **Depo düzeni**  
 >   <https://deviq.com/repository-pattern/>
 > - **Temiz mimarisi çözümü örneği**  

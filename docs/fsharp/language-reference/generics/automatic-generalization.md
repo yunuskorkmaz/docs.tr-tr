@@ -1,6 +1,6 @@
 ---
 title: Otomatik Genelleştirme (F#)
-description: 'Birden çok tür mümkün olduğunda çalışmaları için nasıl F # otomatik olarak bağımsız değişkenleri ve işlevleri türlerini genelleştirir öğrenin.'
+description: Birden çok tür mümkün olduğunda çalışmaları için nasıl F# otomatik olarak bağımsız değişkenleri ve işlevleri türlerini genelleştirir öğrenin.
 ms.date: 05/16/2016
 ms.openlocfilehash: 84de9cbb2b9fcf2488393f7dbdfc3b610cdcffb0
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,11 +11,11 @@ ms.locfileid: "43855783"
 ---
 # <a name="automatic-generalization"></a>Otomatik Genelleştirme
 
-F # işlevleri ve ifadeleri türlerini değerlendirilecek tür çıkarımı kullanır. Bu konuda, böylece birden çok tür mümkün olduğunda çalıştıkları nasıl F # otomatik olarak bağımsız değişkenleri ve işlevleri türlerini genelleştirir açıklanmaktadır.
+F# işlevleri ve ifadeleri türlerini değerlendirilecek tür çıkarımı kullanır. Bu konuda, böylece birden çok tür mümkün olduğunda çalıştıkları nasıl F# otomatik olarak bağımsız değişkenleri ve işlevleri türlerini genelleştirir açıklanmaktadır.
 
 ## <a name="automatic-generalization"></a>Otomatik Genelleştirme
 
-Bir işlev üzerinde tür çıkarımı gerçekleştirdiğinde, F # derleyicisi, verilen bir parametre genel olup olmadığını belirler. Derleyici, her parametreyi inceler ve işlev bu parametrenin türünü üzerinde bir bağımlılık olup olmadığını belirler. Kullanmıyorsa, türü genel olarak algılanır.
+Bir işlev üzerinde tür çıkarımı gerçekleştirdiğinde, F# derleyicisi, verilen bir parametre genel olup olmadığını belirler. Derleyici, her parametreyi inceler ve işlev bu parametrenin türünü üzerinde bir bağımlılık olup olmadığını belirler. Kullanmıyorsa, türü genel olarak algılanır.
 
 Aşağıdaki kod örneği, genel olarak derleyici çıkarsar bir işlev gösterir.
 

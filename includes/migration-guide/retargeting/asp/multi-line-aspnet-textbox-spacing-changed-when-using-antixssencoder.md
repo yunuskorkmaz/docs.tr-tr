@@ -1,10 +1,10 @@
-### <a name="multi-line-aspnet-textbox-spacing-changed-when-using-antixssencoder"></a>Çok satırlı TextBox ASP.Net aralığı AntiXSSEncoder kullanırken değiştirildi
+### <a name="multi-line-aspnet-textbox-spacing-changed-when-using-antixssencoder"></a>AntiXSSEncoder kullanılırken çok satırlı ASP.Net TextBox boşluğu değiştirildi
 
 |   |   |
 |---|---|
-|Ayrıntılar|.NET Framework 4. 0'ek satırlar arasında bir geri gönderme, çok satırlı metin kutusundaki satırlarını kullanıyorsanız eklenen <xref:System.Web.Security.AntiXss.AntiXssEncoder?displayProperty=name>. .NET Framework 4. 5 ', bu ek satır sonlarını dahil, ancak yalnızca web uygulaması, .NET Framework 4.5 hedefleyen değil|
-|Öneri|Çok satırlı metin kutuları artık fazladan bir satır sonu eklemek için geliştirilmiş 4.0 web uygulamaları için .NET Framework 4.5 yeniden hedeflendi olabileceğini unutmayın. Bu uygun değilse, uygulamanın eski davranışı üzerinde .NET Framework 4.5, .NET Framework 4.0 hedefleyerek çalıştırırken olabilir.|
-|Kapsam|Küçük|
+|Ayrıntılar|.NET Framework 4.0’da, <xref:System.Web.Security.AntiXss.AntiXssEncoder?displayProperty=name> kullanılırken geri göndermede çok satırlı metin kutularındaki satırların arasına ek satırlar ekleniyordu. .NET Framework 4.5’te, web uygulaması .NET Framework 4.5’i hedefliyorsa bu ek satır sonları eklenmez|
+|Öneri|.NET Framework 4.5’e yeniden hedeflenen 4.0 web uygulamalarında, çok satırlı metin kutularının ek satır sonu eklenmeyecek şekilde geliştirilmiş olabileceğine dikkat edin. Bu istenmeyen bir durumsa, uygulama .NET Framework 4.5 üzerinde çalışırken .NET Framework 4.0 hedeflenerek eski davranışa dönülebilir.|
+|Kapsam|İkincil|
 |Sürüm|4,5|
-|Tür|Yeniden hedefleme|
+|Tür|Yeniden Hedefleme|
 

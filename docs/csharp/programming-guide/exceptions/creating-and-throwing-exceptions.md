@@ -7,11 +7,11 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: 2e792a230ccead5d9a73f9b78a83d57738c31085
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 43d566fed4e2963489da0b7a11c78a54740b7ab1
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "44260077"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>Özel Durumlar Oluşturma ve Atma (C# Programlama Kılavuzu)
@@ -62,11 +62,12 @@ ms.locfileid: "44260077"
  Sağladıkları veriler özel durumu çözümlemek için yararlı olduğunda özel durum sınıfı için yeni özellikler yalnızca eklenmesi gerekir. Yeni özellikler türetilen özel durum sınıfına eklenirse `ToString()` ek bilgi döndürmek için geçersiz kılınmalıdır.  
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
+Daha fazla bilgi için [özel durumları](~/_csharplang/spec/exceptions.md) ve [fırlatma](~/_csharplang/spec/statements.md#the-throw-statement) içinde [ C# dil belirtimi](../../language-reference/language-specification/index.md). Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.
   
 ## <a name="see-also"></a>Ayrıca Bkz.
 
 - [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
 - [Özel Durumlar ve Özel Durum İşleme](../../../csharp/programming-guide/exceptions/index.md)  
-- [Özel durum hiyerarşisi](https://msdn.microsoft.com/library/f7d68675-be06-40fb-a555-05f0c5a6f66b)  
+- [Özel durum hiyerarşisi](../../../standard/exceptions/index.md)  
 - [Özel Durum İşleme](../../../csharp/programming-guide/exceptions/exception-handling.md)

@@ -1,6 +1,6 @@
 ---
-title: 'Temel türler (F #)'
-description: 'F # dilinde kullanılan temel temel türler keşfedin.'
+title: Temel türler (F#)
+description: F# dilinde kullanılan temel temel türler keşfedin.
 ms.date: 07/09/2018
 ms.openlocfilehash: 8f948d066323527b09b1d3f9f4167b95b1c875cf
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "48026955"
 ---
 # <a name="basic-types"></a>Temel türler
 
-Bu konu F # dilinde tanımlanmış temel türleri listeler. Bu F #'de neredeyse tüm F # programına temelini oluşturan, en temel türleridir. Bunlar, bir üst .NET ilkel türler.
+Bu konu F# dilinde tanımlanmış temel türleri listeler. Bu F#'de neredeyse tüm F# programına temelini oluşturan, en temel türleridir. Bunlar, bir üst .NET ilkel türler.
 
 |Tür|.NET türü|Açıklama|
 |----|---------|-----------|

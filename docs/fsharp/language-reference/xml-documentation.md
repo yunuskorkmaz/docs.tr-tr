@@ -1,6 +1,6 @@
 ---
 title: XML Belgeleri (F#)
-description: 'F # desteği hakkında daha fazla belge açıklamalarını oluşturmak için öğrenin.'
+description: F# desteği hakkında daha fazla belge açıklamalarını oluşturmak için öğrenin.
 ms.date: 05/16/2016
 ms.openlocfilehash: 1a4cb132e65b630821e5eb2b39276c1de99aff80
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,17 +11,17 @@ ms.locfileid: "45641631"
 ---
 # <a name="xml-documentation"></a>XML Belgeleri
 
-Üç eğik çizgi (/ / /) belgelerinden oluşturabilecek kod yorumlarında F #. XML açıklamaları, kod dosyaları (.fs) veya imza (.fsi) dosyalarını bildirimlerinde koyabilirsiniz.
+Üç eğik çizgi (/ / /) belgelerinden oluşturabilecek kod yorumlarında F#. XML açıklamaları, kod dosyaları (.fs) veya imza (.fsi) dosyalarını bildirimlerinde koyabilirsiniz.
 
 ## <a name="generating-documentation-from-comments"></a>Belge açıklamaları oluşturma
 
-Belge açıklamaları oluşturma desteği F # diğer .NET Framework dillerinde aynıdır. Diğer .NET Framework dillerde olduğu gibi [-doc derleyici seçeneği](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04) Sandcastle gibi bir araç kullanarak belgeleme dönüştürebilirsiniz bilgilerini içeren bir XML dosyası üretebilir sağlar. Diğer .NET Framework dillerinde genel olarak yazılır derlemeleri ile kullanılmak üzere tasarlanmış araçları kullanılarak oluşturulan belgeleri derlenmiş F # yapılarını formdaki dayalı API'leri bir görünümünü oluşturur. Özellikle F # Destek Araçları sürece, bu araçları tarafından oluşturulan belgeleri F # görünümü bir API'nin eşleşmiyor.
+Belge açıklamaları oluşturma desteği F# diğer .NET Framework dillerinde aynıdır. Diğer .NET Framework dillerde olduğu gibi [-doc derleyici seçeneği](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04) Sandcastle gibi bir araç kullanarak belgeleme dönüştürebilirsiniz bilgilerini içeren bir XML dosyası üretebilir sağlar. Diğer .NET Framework dillerinde genel olarak yazılır derlemeleri ile kullanılmak üzere tasarlanmış araçları kullanılarak oluşturulan belgeleri derlenmiş F# yapılarını formdaki dayalı API'leri bir görünümünü oluşturur. Özellikle F# Destek Araçları sürece, bu araçları tarafından oluşturulan belgeleri F# görünümü bir API'nin eşleşmiyor.
 
 XML'den belgeleri oluştur hakkında daha fazla bilgi için bkz: [XML belgeleri yorumları &#40;C&#35; Programming Guide&#41;](https://msdn.microsoft.com/library/b2s063f7).
 
 ## <a name="recommended-tags"></a>Önerilen etiketler
 
-XML belgeleri yorumları yazmak için iki yolu vardır. Yalnızca XML etiketleri kullanmadan belgeleri doğrudan bir üç eğik çizgi açıklama yazmak için biridir. Bunu yaparsanız, tüm açıklama metni hemen izleyen kod yapısı için Özet belgeleri olarak alınır. Her yapı için yalnızca kısa bir özeti yazmak istediğinizde bu yöntemi kullanın. Diğer yöntem, yapılandırılmış belgeleri daha fazla bilgi sağlamak için XML etiketleri kullanmaktır. İkinci yöntem kısa bir özeti, ek açıklamalar, her bir parametre ve tür parametresi ve oluşturulan özel durumlar için belgeler ve dönüş değeri bir açıklaması için ayrı bir not belirtmenize olanak sağlar. Aşağıdaki tabloda, F # XML kodu açıklamalarını içinde tanınan XML etiketleri açıklanmaktadır.
+XML belgeleri yorumları yazmak için iki yolu vardır. Yalnızca XML etiketleri kullanmadan belgeleri doğrudan bir üç eğik çizgi açıklama yazmak için biridir. Bunu yaparsanız, tüm açıklama metni hemen izleyen kod yapısı için Özet belgeleri olarak alınır. Her yapı için yalnızca kısa bir özeti yazmak istediğinizde bu yöntemi kullanın. Diğer yöntem, yapılandırılmış belgeleri daha fazla bilgi sağlamak için XML etiketleri kullanmaktır. İkinci yöntem kısa bir özeti, ek açıklamalar, her bir parametre ve tür parametresi ve oluşturulan özel durumlar için belgeler ve dönüş değeri bir açıklaması için ayrı bir not belirtmenize olanak sağlar. Aşağıdaki tabloda, F# XML kodu açıklamalarını içinde tanınan XML etiketleri açıklanmaktadır.
 
 |Etiket sözdizimi|Açıklama|
 |----------|-----------|

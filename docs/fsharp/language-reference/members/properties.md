@@ -1,6 +1,6 @@
 ---
 title: Özellikler (F#)
-description: 'Bir nesneyle ilişkili değerlerini temsil eden üyeleri olan F # özellikleri hakkında bilgi edinin.'
+description: Bir nesneyle ilişkili değerlerini temsil eden üyeleri olan F# özellikleri hakkında bilgi edinin.
 ms.date: 05/16/2016
 ms.openlocfilehash: 75d21415b44ccc1c26ef5f478d5f5de20c3412e8
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

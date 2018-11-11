@@ -5,12 +5,12 @@ f1_keywords:
 - nameof_CSharpKeyword
 - nameof
 ms.assetid: 33601bf3-cc2c-4496-846d-f9679bccf2a7
-ms.openlocfilehash: 726abfd903f37826a247e6e98c0d11f230447550
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 01c87f8d63264aa342b04b8d3fcfc7e6f38db44b
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035259"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "50744380"
 ---
 # <a name="nameof-c-reference"></a>nameof (C# Başvurusu)
 
@@ -131,8 +131,9 @@ class C {
  Aşağıdaki gibi bir imza bilgileri almak için bir yolu yoktur "`Method1 (str, str)`".  Bunu yapmanın bir yolu olan bir ifade kullanmanızı `Expression e = () => A.B.Method1("s1", "s2")`ve elde edilen ifadenin ağacından MemberInfo çekin.  
   
 ## <a name="language-specifications"></a>Dil özellikleri  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
+
+Daha fazla bilgi için [Nameof ifadeleri](~/_csharplang/spec/expressions.md#nameof-expressions) içinde [ C# dil belirtimi](../language-specification/index.md). Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.
+ 
 ## <a name="see-also"></a>Ayrıca Bkz.
 
 - [C# başvurusu](../../../csharp/language-reference/index.md)  

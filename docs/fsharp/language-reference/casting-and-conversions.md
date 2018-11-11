@@ -1,6 +1,6 @@
 ---
 title: Atama ve Dönüştürmeler (F#)
-description: 'Nasıl F # programlama dilinin dönüştürme işleçleri çeşitli ilkel türler arasında aritmetik dönüştürmeler için sağladığını öğrenin.'
+description: Nasıl F# programlama dilinin dönüştürme işleçleri çeşitli ilkel türler arasında aritmetik dönüştürmeler için sağladığını öğrenin.
 ms.date: 05/16/2016
 ms.openlocfilehash: aca1a2523130ee485a7e7c9a6a45a410904cb246
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,17 +11,17 @@ ms.locfileid: "45677937"
 ---
 # <a name="casting-and-conversions-f"></a>Atama ve Dönüştürmeler (F#)
 
-Bu konu, F # tür dönüştürmeleri desteğini açıklar.
+Bu konu, F# tür dönüştürmeleri desteğini açıklar.
 
 ## <a name="arithmetic-types"></a>Aritmetik tür
 
-F # dönüştürme işleçleri için çeşitli ilkel türler arasında aritmetik dönüştürmeler gibi tamsayı ve kayan nokta türleri arasında sağlar. İntegral ve karakter dönüştürme işleçleri iade etmiş ve Denetlenmeyen forms; kayan nokta işleçler ve `enum` dönüştürme işleci yapın. Denetlenmeyen forms tanımlanan `Microsoft.FSharp.Core.Operators` ve işaretli forms tanımlanan `Microsoft.FSharp.Core.Operators.Checked`. İşaretli formları için taşmayı denetle ve sonuç değerini hedef türünün limitlerini aşarsam bir çalışma zamanı özel durumu oluşturur.
+F# dönüştürme işleçleri için çeşitli ilkel türler arasında aritmetik dönüştürmeler gibi tamsayı ve kayan nokta türleri arasında sağlar. İntegral ve karakter dönüştürme işleçleri iade etmiş ve Denetlenmeyen forms; kayan nokta işleçler ve `enum` dönüştürme işleci yapın. Denetlenmeyen forms tanımlanan `Microsoft.FSharp.Core.Operators` ve işaretli forms tanımlanan `Microsoft.FSharp.Core.Operators.Checked`. İşaretli formları için taşmayı denetle ve sonuç değerini hedef türünün limitlerini aşarsam bir çalışma zamanı özel durumu oluşturur.
 
 Bu işleçlerden her biri, hedef türünün adı ile aynı ada sahiptir. Hangi türleri açıkça ek açıklama, örneğin, aşağıdaki kodda, `byte` ile iki farklı anlamları görünür. İlk yinelenme türüdür ve ikincisi dönüştürme işleci.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4401.fs)]
 
-Aşağıdaki tabloda, F #'de tanımlanan dönüştürme işleçlerini gösterir.
+Aşağıdaki tabloda, F#'de tanımlanan dönüştürme işleçlerini gösterir.
 
 |İşleç|Açıklama|
 |--------|-----------|
@@ -67,11 +67,11 @@ Daha fazla bilgi için [numaralandırmalar](enumerations.md).
 
 Bir nesne sıradüzeni türleri arasında dönüştürme, nesne yönelimli programlama için temeldir. İki temel tür dönüştürmeleri vardır: (yukarı çevrim) atama ve atama (Alta). Bir hiyerarşi atama temel nesne başvurusu için türetilmiş nesneden başvurudan atama anlamına gelir. Böyle bir dönüştürme, temel sınıfın türetilmiş sınıf devralma hiyerarşisinde olduğu sürece çalışmak için sağlanır. Yalnızca nesne (türetilmiş) doğru hedef türüne veya hedef türünden türetilmiş bir tür örneği gerçekten ise bir hiyerarşiden bir türetilmiş nesne başvurusu bir temel nesne başvurusu aşağı atama başarılı olur.
 
-F # bu türde dönüştürme işleçleri sağlar. `:>` İşleci hiyerarşisinde yukarı çevirir ve `:?>` işleci hiyerarşinin çevirir.
+F# bu türde dönüştürme işleçleri sağlar. `:>` İşleci hiyerarşisinde yukarı çevirir ve `:?>` işleci hiyerarşinin çevirir.
 
 ### <a name="upcasting"></a>Yukarı çevrim
 
-Birçok nesne odaklı dildeki içinde yukarı çevrim örtük olarak; F #'ta kuralları biraz farklıdır. Bir nesne türü yöntemi için değişken geçtiğinizde yukarı çevrim otomatik olarak uygulanır. Parametre türü esnek bir türü olarak bildirilmiş sürece ancak, Modül içindeki let bağlı işlevler için yukarı çevrim otomatik, değildir. Daha fazla bilgi için [esnek türler](flexible-Types.md).
+Birçok nesne odaklı dildeki içinde yukarı çevrim örtük olarak; F#'ta kuralları biraz farklıdır. Bir nesne türü yöntemi için değişken geçtiğinizde yukarı çevrim otomatik olarak uygulanır. Parametre türü esnek bir türü olarak bildirilmiş sürece ancak, Modül içindeki let bağlı işlevler için yukarı çevrim otomatik, değildir. Daha fazla bilgi için [esnek türler](flexible-Types.md).
 
 `:>` İşleç gerçekleştirir statik atama, atama başarılı derleme zamanında belirlenir anlamına gelir. Kullanan bir tür dönüştürme, `:>` başarıyla derlenir, geçerli bir yayın olduğunu ve hiçbir şansı çalışma zamanında hata.
 

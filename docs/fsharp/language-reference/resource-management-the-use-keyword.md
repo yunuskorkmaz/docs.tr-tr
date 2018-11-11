@@ -1,6 +1,6 @@
 ---
 title: 'Kaynak Yönetimi: use Anahtar Sözcüğü (F#)'
-description: "F # anahtar sözcüğü 'use' ve yayın kaynakların ve başlatma denetleyebilirsiniz 'using' işlev hakkında bilgi edinin."
+description: F# anahtar sözcüğü 'use' ve yayın kaynakların ve başlatma denetleyebilirsiniz 'using' işlev hakkında bilgi edinin.
 ms.date: 05/16/2016
 ms.openlocfilehash: ffa1cb515139a3705920d9d9f79be1a69602f7d8
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -19,7 +19,7 @@ Terim *kaynak* birden fazla yolla kullanılır. Evet, kaynaklar, dizeler, grafik
 
 ## <a name="managing-resources"></a>Kaynakları yönetme
 
-Bir uygulamadaki kaynakları depoladığımız ve etkili bir şekilde yönetmek için en kısa sürede ve tahmin edilebilir bir biçimde kaynakları bırakmalıdır. .NET Framework sağlayarak bunu yapmanıza yardımcı olur. `System.IDisposable` arabirimi. Uygulayan bir tür `System.IDisposable` sahip `System.IDisposable.Dispose` yönteminin doğru kaynakları serbest bırakır. İyi yazılmış uygulamalar garanti `System.IDisposable.Dispose` sınırlı bir kaynağı tutuyor herhangi bir nesne artık gerekmediğinde en kısa sürede çağrılır. Neyse ki, çoğu .NET dilleri, bunu kolaylaştırmak için desteği ve F # aynı durum geçerlidir. Dispose deseni destekleyen iki yararlı dil yapıları vardır: `use` bağlama ve `using` işlevi.
+Bir uygulamadaki kaynakları depoladığımız ve etkili bir şekilde yönetmek için en kısa sürede ve tahmin edilebilir bir biçimde kaynakları bırakmalıdır. .NET Framework sağlayarak bunu yapmanıza yardımcı olur. `System.IDisposable` arabirimi. Uygulayan bir tür `System.IDisposable` sahip `System.IDisposable.Dispose` yönteminin doğru kaynakları serbest bırakır. İyi yazılmış uygulamalar garanti `System.IDisposable.Dispose` sınırlı bir kaynağı tutuyor herhangi bir nesne artık gerekmediğinde en kısa sürede çağrılır. Neyse ki, çoğu .NET dilleri, bunu kolaylaştırmak için desteği ve F# aynı durum geçerlidir. Dispose deseni destekleyen iki yararlı dil yapıları vardır: `use` bağlama ve `using` işlevi.
 
 ## <a name="use-binding"></a>Bağlama kullanın
 

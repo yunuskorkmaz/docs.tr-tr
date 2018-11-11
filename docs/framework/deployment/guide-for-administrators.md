@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f646927d4ddf88ae117f6cacafc2e42df4e3abee
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 844e9e53c752be0c993255fc356ade1723109b39
+ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195690"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50744593"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Yöneticiler için .NET Framework Dağıtım Kılavuzu
 Bu makalede bir sistem yöneticisi nasıl dağıtacağınız açıklanmıştır [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ve Microsoft System Center Configuration Manager'ı kullanarak bir ağ üzerindeki sistem gereksinimlerini. Bu makalede tüm istemci bilgisayarların .NET Framework için gerekli olan minimum sistem gereksinimlerini karşıladığı varsayılmıştır. Yüklemeye yönelik yazılım ve donanım gereksinimleri listesi için [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], bkz: [sistem gereksinimleri](../../../docs/framework/get-started/system-requirements.md).  
@@ -176,8 +176,8 @@ Bu makalede bir sistem yöneticisi nasıl dağıtacağınız açıklanmıştır 
   
 9. Üzerinde **kullanıcı deneyimi** sayfasında, varsayılan değerleri seçin kullanın ve **sonraki**.  
   
-    > [!WARNING]
-    >  Üretim ortamınızın, dağıtım çizelgesi için farklı seçimler olmasını gerektiren ilkeleri olabilir. Bu seçenekler hakkında daha fazla bilgi için bkz: [reklam adı özellikleri: zamanlama sekmesi](https://technet.microsoft.com/library/bb694016.aspx) TechNet Kitaplığı'nda.  
+> [!WARNING]
+> Üretim ortamınızın, dağıtım çizelgesi için farklı seçimler olmasını gerektiren ilkeleri olabilir. Bu seçenekler hakkında daha fazla bilgi için bkz: [reklam adı özellikleri: zamanlama sekmesi](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb694016%28v=technet.10%29).
   
 10. Üzerinde **dağıtım noktaları** sayfasında, varsayılan değerleri seçin kullanın ve **sonraki**.  
   
@@ -207,7 +207,7 @@ Bu makalede bir sistem yöneticisi nasıl dağıtacağınız açıklanmıştır 
   
 -   [System Center 2012 Configuration Manager için Site Yönetimi](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg681983%28v=technet.10%29)  
   
--   [Yapılandırma Yöneticisi tek Site planlama ve dağıtım](https://technet.microsoft.com/library/bb680961.aspx)  
+-   [Yapılandırma Yöneticisi tek Site planlama ve dağıtım](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb680961%28v=technet.10%29)  
   
  **Windows bilgisayarlar için System Center 2012 Configuration Manager istemcisi:**  
   

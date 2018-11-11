@@ -2,11 +2,11 @@
 title: İleti Kodlayıcı Seçme
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
-ms.openlocfilehash: 5d2b55f04954cdd855ff9e224d2bc0405919f7a3
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 061869704674206739d81be24e105fc87ce0f129
+ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "44248936"
 ---
 # <a name="choosing-a-message-encoder"></a>İleti Kodlayıcı Seçme
@@ -25,14 +25,14 @@ Windows Communication Foundation (WCF) dahil edilen ileti kodlayıcılarda aras�
   
 -   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>, ikili ileti Kodlayıcısı, sıkıştırılmış bir ikili biçimini kullanır ve WCF için WCF iletişim için optimize edilmiştir ve bu nedenle birlikte çalışabilir değil. En yüksek performanslı Kodlayıcı WCF sağlar kodlayıcıların karşılaştırılması de budur.  
   
--   <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`> ileti sürüm oluşturma için iletileri MTOM kodlama kullanılarak ve bağlama öğesi, karakter kodlamasını belirtir. MTOM WCF iletilerinde ikili veri aktarımı için verimli bir teknolojidir. MTOM Kodlayıcısı verimliliği ve birlikte çalışabilirlik arasında bir denge oluşturmaya çalışır. MTOM kodlama çoğu XML metin biçiminde aktarır, ancak büyük ikili veri blokları olarak ileterek iyileştirir-olan metin dönüştürme olmadan. WCF sağlar, kodlayıcılarda arasında verimliliği açısından MTOM (yavaş) raflarının metin ve ikili (hızlı) var.  
+-   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>, bağlama öğesi, karakter kodlamasını ve ileti sürüm oluşturmayı MTOM kodlama kullanarak iletileri için belirtir. MTOM WCF iletilerinde ikili veri aktarımı için verimli bir teknolojidir. MTOM Kodlayıcısı verimliliği ve birlikte çalışabilirlik arasında bir denge oluşturmaya çalışır. MTOM kodlama çoğu XML metin biçiminde aktarır, ancak büyük ikili veri blokları olarak ileterek iyileştirir-olan metin dönüştürme olmadan. WCF sağlar, kodlayıcılarda arasında verimliliği açısından MTOM (yavaş) raflarının metin ve ikili (hızlı) var.  
   
 ## <a name="how-to-choose-a-message-encoder"></a>İleti Kodlayıcı seçme  
  Aşağıdaki tabloda, bir ileti Kodlayıcı seçmek için kullanılan ortak faktörleri anlatılmaktadır. Uygulamanız için önemlidir ve ileti kodlayıcılarda en iyi çalışan seçin faktörlerin faktörlerle öncelik verin. Bu tabloda ve uygulamanızı gerekli tüm özel ileti kodlayıcılar listelenmeyen ek faktörleri dikkate aldığınızdan emin olun.  
   
 |faktörü|Açıklama|Bu destek kodlayıcılar|  
 |------------|-----------------|---------------------------------------|  
-|Desteklenen karakter kümeleri|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> ve <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`> yalnızca UTF8 ve UTF16 Unicode desteği (*büyük endian* ve *endian*) kodlamaları. Diğer Kodlamalar, UTF7 veya ASCII gibi gerekiyorsa, özel bir kodlayıcı kullanılması gerekir. Örnek özel bir kodlayıcı için bkz: [özel ileti Kodlayıcı](https://go.microsoft.com/fwlink/?LinkId=119857).|Metin|  
+|Desteklenen karakter kümeleri|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> ve <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> yalnızca UTF8 ve UTF16 Unicode desteği (*büyük endian* ve *endian*) kodlamaları. Diğer Kodlamalar, UTF7 veya ASCII gibi gerekiyorsa, özel bir kodlayıcı kullanılması gerekir. Örnek özel bir kodlayıcı için bkz: [özel ileti Kodlayıcı](https://go.microsoft.com/fwlink/?LinkId=119857).|Metin|  
 |İnceleme|İnceleme aktarım sırasında iletilerini incelemek için yeteneğidir. Metin kodlamalarını ile veya SOAP kullanmadan inceledi ve birçok uygulamasında özel araçlar tarafından kullanmadan analiz iletileri sağlar. Aktarım güvenliği, ileti veya aktarım düzeyinde kullanımını iletileri İnceleme olanağınız etkilediğini unutmayın. İncelenmekte olan bir ileti gizliliğini korur ve değiştirilmesini bir ileti bütünlüğü korur.|Metin|  
 |Güvenilirlik|Güvenilirlik, bir kodlayıcının iletim hatalara dayanıklılıktır. Güvenilirlik, message, taşıma veya uygulama katmanı sağlanabilir. Tüm standart WCF kodlayıcılarda başka bir katmanı güvenilirlik sağladığını varsayalım. Kodlayıcı iletim hatadan kurtarmak için çok az özelliğine sahiptir.|Yok.|  
 |Basitliği|Basitlik, ile Kodlayıcıları ve kod çözücüleri bir kodlama belirtimi için oluşturabileceğiniz bir kolayca temsil eder. Metin kodlamalarını kolaylık olması için özellikle yararlı ve POX metin kodlaması SOAP işlemek için destek gerektirmeyen ek avantajı vardır.|Metin (POX)|  

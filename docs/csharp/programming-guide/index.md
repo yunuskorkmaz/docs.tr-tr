@@ -9,17 +9,17 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: a145e3e1b73db6fdfbc5f1408231e78f55b559d1
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.openlocfilehash: 3827ebfe401938e4fa1b530672352123ae2ac826
+ms.sourcegitcommit: 0fbd677fcdc5bf46c4d827f492eaaa970edc07b6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45515145"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50235746"
 ---
 # <a name="c-programming-guide"></a>C# programlama kılavuzu
 Bu bölüm, anahtar C# dili hakkında ayrıntılı bilgi özellikleri ve C# .NET Framework aracılığıyla erişilebilir özellikler sağlar.  
   
- Çoğu bu bölümde, zaten bir C# ve genel programlama kavramları bildiğiniz varsayılır. Tam bir Acemi programlama veya C# ile ziyaret etmek isteyebilirsiniz [C# hızlı başlangıçları](../quick-starts/index.md) veya [C# ile çalışmaya başlama](https://www.microsoft.com/net/tutorials/csharp/getting-started) etkileşimli öğretici, önceki programlama bilgisi nerede gereklidir.  
+ Çoğu bu bölümde, zaten bir C# ve genel programlama kavramları bildiğiniz varsayılır. Bir tam veya programlama ile acemiyseniz C#, ziyaret etmek isteyebilirsiniz [giriş C# öğreticiler](../tutorials/intro-to-csharp/index.md) veya [ile çalışmaya başlama C# ](https://www.microsoft.com/net/tutorials/csharp/getting-started) etkileşimli öğreticisini Hayır olduğunda Önceki programlama bilgi gereklidir.  
   
  Belirli bir anahtar sözcükleri, işleçler ve ön işlemci yönergeleri hakkında daha fazla bilgi için bkz: [C# başvurusu](../../csharp/language-reference/index.md). C# dil belirtimi hakkında daha fazla bilgi için bkz. [C# dil belirtimi](../../csharp/language-reference/language-specification/index.md).  
   

@@ -1,11 +1,11 @@
-### <a name="dbparameterprecision-and-dbparameterscale-are-now-public-virtual-members"></a>Genel sanal üyeleri DbParameter.Precision ve DbParameter.Scale sunulmuştur
+### <a name="dbparameterprecision-and-dbparameterscale-are-now-public-virtual-members"></a>DbParameter.Precision ve DbParameter.Scale artık genel sanal üyedir
 
 |   |   |
 |---|---|
-|Ayrıntılar|<xref:System.Data.Common.DbParameter.Precision> ve <xref:System.Data.Common.DbParameter.Scale> genel sanal özellikleri olarak uygulanır. Bunlar karşılık gelen bir açık arabirim uygulamalarını değiştirir <xref:System.Data.Common.DbParameter.System%23Data%23IDbDataParameter%23Precision> ve <xref:System.Data.Common.DbParameter.System%23Data%23IDbDataParameter%23Scale>.|
-|Öneri|Bir ADO.NET veritabanı sağlayıcısı yeniden oluştururken bu farklılıkları 'override' anahtar sözcüğü kesinlik ve ölçek özellikleri uygulanmasını gerektirir. Bu, bileşenleri yeniden oluştururken yalnızca gereklidir; Mevcut ikili dosyaları çalışmaya devam eder.|
-|Kapsam|Küçük|
+|Ayrıntılar|<xref:System.Data.Common.DbParameter.Precision> ve <xref:System.Data.Common.DbParameter.Scale> genel sanal özellik olarak uygulanır. Bunlar, karşılık gelen <xref:System.Data.Common.DbParameter.System%23Data%23IDbDataParameter%23Precision> ve <xref:System.Data.Common.DbParameter.System%23Data%23IDbDataParameter%23Scale> belirtik arabirim kullanmalarının yerini alır.|
+|Öneri|Bir ADO.NET veritabanı sağlayıcısını yeniden oluştururken, bu farklar 'override' anahtar sözcüğünün Precision ve Scale özelliklerine uygulanmasını gerektirir. Bu yalnızca bileşenler yeniden oluşturulurken gereklidir; mevcut ikililer çalışmaya devam eder.|
+|Kapsam|İkincil|
 |Sürüm|4.5.1|
-|Tür|Yeniden hedefleme|
-|Etkilenen API'leri|<ul><li><xref:System.Data.Common.DbParameter.Precision?displayProperty=nameWithType></li><li><xref:System.Data.Common.DbParameter.Scale?displayProperty=nameWithType></li></ul>|
+|Tür|Yeniden Hedefleme|
+|Etkilenen API’ler|<ul><li><xref:System.Data.Common.DbParameter.Precision?displayProperty=nameWithType></li><li><xref:System.Data.Common.DbParameter.Scale?displayProperty=nameWithType></li></ul>|
 

@@ -4,11 +4,11 @@ description: Dotnet testi komut, belirli bir projede birim testleri yürütmek i
 author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: e80ba874ec8d0fbc49858719dc3b9b6e02254c78
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 73b1d832b855798dd053187bbb24e8fb989fedf1
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "46696462"
 ---
 # <a name="dotnet-test"></a>DotNet testi
@@ -25,7 +25,9 @@ ms.locfileid: "46696462"
 
 ```console
 dotnet test [<PROJECT>] [-a|--test-adapter-path] [--blame] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter]
-    [-l|--logger] [--no-build] [--no-restore] [-o|--output] [-r|--results-directory] [-s|--settings] [-t|--list-tests] [-v|--verbosity]
+    [-l|--logger] [--no-build] [--no-restore] [-o|--output] [-r|--results-directory] [-s|--settings] [-t|--list-tests] 
+    [-v|--verbosity] [-- <RunSettings arguments>]
+
 dotnet test [-h|--help]
 ```
 
@@ -34,6 +36,7 @@ dotnet test [-h|--help]
 ```console
 dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter]
     [-l|--logger] [--no-build] [--no-restore] [-o|--output] [-r|--results-directory] [-s|--settings] [-t|--list-tests] [-v|--verbosity]
+
 dotnet test [-h|--help]
 ```
 
@@ -41,6 +44,7 @@ dotnet test [-h|--help]
 
 ```console
 dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [-d|--diag] [-f|--framework] [--filter] [-l|--logger] [--no-build] [-o|--output] [-s|--settings] [-t|--list-tests]  [-v|--verbosity]
+
 dotnet test [-h|--help]
 ```
 
@@ -127,6 +131,14 @@ Tüm geçerli projede bulunan testleri listeler.
 `-v|--verbosity <LEVEL>`
 
 Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, ve `diag[nostic]`.
+
+`RunSettings arguments`
+
+Test yapılandırmalarını RunSettings olarak bağımsız değişkenleri geçirildi. Bağımsız değişkenler olarak belirtilen `[name]=[value]` sonra çiftlerini "--" (--sonra boşluk unutmayın). Birden çok ayırmak için kullanılan bir alanı `[name]=[value]` çiftleri.
+
+Örnek: `dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
+
+RunSettings hakkında daha fazla bilgi için bkz: [vstest.console.exe: geçirme RunSettings args](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md).
 
 # <a name="net-core-20tabnetcore20"></a>[.NET core 2.0](#tab/netcore20)
 
@@ -285,7 +297,7 @@ Koşullu işleçler ile ifadeler katılabilir:
 
 | İşleç            | İşlev |
 | ------------------- | -------- |
-| <code>&#124;</code> | VEYA       |
+| <code>&#124;</code> | VEYA       |
 | `&`                 | AND      |
 
 İfadeleri parantez içinde Koşullu işleçler kullanırken içine aldığınız (örneğin, `(Name~TestMethod1) | (Name~TestMethod2)`).

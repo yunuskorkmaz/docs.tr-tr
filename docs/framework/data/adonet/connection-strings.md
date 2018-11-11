@@ -2,12 +2,12 @@
 title: ADO.NET bağlantı dizeleri
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: 4dab2656ae8f39976b21f949c9548a3f718dfafc
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 078fdab257115296f9ff00330265cb14ff8674c8
+ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347948"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50409463"
 ---
 # <a name="connection-strings-in-adonet"></a>ADO.NET bağlantı dizeleri
 
@@ -19,9 +19,9 @@ Bir bağlantı dizesi anahtar/değer parametresi çiftleri noktalı virgülle ay
   
     keyword1=value; keyword2=value;
   
-Anahtar sözcükler, büyük küçük harfe duyarlı değildir. Değerleri, ancak veri kaynağına bağlı olarak duyarlı olabilir. Hem anahtar hem de değerleri içerebilir [boşluk karakterleri](https://en.wikipedia.org/wiki/Whitespace_character#Unicode). Öndeki ve sondaki boşlukları anahtar sözcükleri yok sayıldı ve tırnak işareti olmayan değerler.
+Anahtar sözcükler, büyük küçük harfe duyarlı değildir. Değerleri, ancak veri kaynağına bağlı olarak duyarlı olabilir. Hem anahtar hem de değerleri içerebilir [boşluk karakterleri](https://en.wikipedia.org/wiki/Whitespace_character#Unicode). Baştaki ve sondaki boşluk anahtar sözcükleri yok sayıldı ve tırnak işareti olmayan değerler.
 
-Bir değer virgül içeriyorsa [Unicode denetim karakterlerini](https://en.wikipedia.org/wiki/Unicode_control_characters), veya baştaki veya sondaki, bunu tek veya çift tırnak içine alınmalıdır. Örneğin:
+Bir değer virgül içeriyorsa [Unicode denetim karakterlerini](https://en.wikipedia.org/wiki/Unicode_control_characters), veya baştaki veya sondaki boşlukları, bunu tek veya çift tırnak içine alınmalıdır. Örneğin:
 
     Keyword=" whitespace  ";
     Keyword='special;character';

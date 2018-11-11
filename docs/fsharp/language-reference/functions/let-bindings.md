@@ -1,6 +1,6 @@
 ---
 title: let Bağlamaları (F#)
-description: "F # 'let bir değer ya da işlevin tanımlayıcı ilişkilendiren bir bağlama' kullanmayı öğrenin."
+description: F# 'let bir değer ya da işlevin tanımlayıcı ilişkilendiren bir bağlama' kullanmayı öğrenin.
 ms.date: 05/16/2016
 ms.openlocfilehash: 1a35b5a39f2768a18665b5c7fe768af0e7714577
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -110,7 +110,7 @@ let function3 x =
     function1 x
 ```
 
-Bazı modüller özniteliğine sahip [RequireQualifiedAccess](https://msdn.microsoft.com/library/8b9b6ade-0471-4413-ac5d-638cd0de5f15), yani ortaya işlevleri modül adı ile nitelenmelidir. Örneğin, F # List Modülü, bu öznitelik vardır.
+Bazı modüller özniteliğine sahip [RequireQualifiedAccess](https://msdn.microsoft.com/library/8b9b6ade-0471-4413-ac5d-638cd0de5f15), yani ortaya işlevleri modül adı ile nitelenmelidir. Örneğin, F# List Modülü, bu öznitelik vardır.
 
 Modüller ve erişim denetimi hakkında daha fazla bilgi için bkz. [modülleri](../modules.md) ve [erişim denetimi](../access-control.md).
 

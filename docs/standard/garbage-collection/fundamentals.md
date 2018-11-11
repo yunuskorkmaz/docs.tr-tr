@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 741ddd0171244daceb4d5e283c0172e71b82f3d2
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: a7fa240ea42fe1bee4011a228595e48eb163e1a9
+ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582755"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "50982873"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Çöp Toplamanın Temelleri
 <a name="top"></a> Ortak dil çalışma zamanı (CLR), çöp toplayıcı otomatik bellek yöneticisi görev yapar. Bunu, aşağıdaki avantajları sağlar:  
@@ -172,7 +172,7 @@ ms.locfileid: "48582755"
   
  Çöp toplayıcı nesnelerin Canlı olup olmadığını belirlemek için aşağıdaki bilgileri kullanır:  
   
--   **Yığın kökleri**. Just-ın-time (JIT) derleyici ve yığın yürüyüşçüsü tarafından sağlanan yığın değişkenleri.  
+-   **Yığın kökleri**. Just-ın-time (JIT) derleyici ve yığın yürüyüşçüsü tarafından sağlanan yığın değişkenleri. JIT iyileştirmelerini uzatın veya bölgeleri hangi yığın değişkenleri çöp Toplayıcıya raporlanır kısaltın unutmayın.
   
 -   **Çöp toplama göstergelerinin**. Kullanıcı koduna veya ortak dil çalışma zamanı tarafından yönetilen nesneleri işaret ve, ayrılabilen işler.  
   

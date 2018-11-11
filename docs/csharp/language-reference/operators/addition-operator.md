@@ -8,18 +8,16 @@ helpviewer_keywords:
 - concatenation operator [C#]
 - addition operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: ae2774d96bc50afa271fffdea445e640e68c3647
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 27ea47d698b20f112880750ec0bc931f1917f142
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "50192310"
 ---
 # <a name="-operator-c-reference"></a>+ İşleci (C# Başvurusu)
 
 `+` İşleci iki biçimde desteklenir: bir birli artı işleci veya bir ikili Toplama işleci.
-
-Kullanıcı tanımlı türler için [aşırı](../keywords/operator.md) tekli veya ikili `+` işleçleri. Bir ikili olduğunda `+` işleci aşırı yüklenmiş, [toplama atama işleci](addition-assignment-operator.md) `+=` aynı zamanda örtük olarak aşırı yüklenmiş olan.
 
 ## <a name="unary-plus-operator"></a>Tekli artı işleci
 
@@ -48,6 +46,10 @@ Bir veya iki işlenenin türünde olduğunda [dize](../keywords/string.md), `+` 
 [!code-csharp-interactive[delegate combination](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddDelegates)]
 
 Temsilci türleri hakkında daha fazla bilgi için bkz: [Temsilciler](../../programming-guide/delegates/index.md).
+
+## <a name="operator-overloadability"></a>İşleç overloadability
+
+Kullanıcı tanımlı türler için [aşırı](../keywords/operator.md) tekli veya ikili `+` işleçleri. Bir ikili olduğunda `+` işleci aşırı yüklenmiş, [toplama atama işleci](addition-assignment-operator.md) `+=` aynı zamanda örtük olarak aşırı yüklenmiş olan.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 

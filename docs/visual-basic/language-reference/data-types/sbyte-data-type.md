@@ -14,12 +14,12 @@ helpviewer_keywords:
 - data types [Visual Basic], integral
 - SByte data type
 ms.assetid: 5c38374a-18a1-4cc2-b493-299e3dcaa60f
-ms.openlocfilehash: 1b10379e626c8e53b2e1e6eddaa964f13f9e4b62
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c353aa8c5ac1d1912bc303f8f741ff0911cdf021
+ms.sourcegitcommit: 4bca8f7e172fd019ef437a4803bf5895c6bc4781
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50196927"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "50980826"
 ---
 # <a name="sbyte-data-type-visual-basic"></a>SByte veri türü (Visual Basic)
 
@@ -58,7 +58,7 @@ Tamsayı sabit değeri aralığının dışında ise `SByte` (diğer bir deyişl
 
 - Tamsayı sınırları denetimlerini ile derleme tarafından devre dışı `/removeintchecks` derleyici anahtarı.
 
-- Kullanım bir [türü karakteri](../../programming-guide\language-features\data-types/type-characters.md) atamak istediğiniz değişmez değer açıkça tanımlamak için `SByte`. Aşağıdaki örnek, negatif bir sabit değer atar `Short` değerini bir `SByte`. Negatif sayılar için dikkat edin, yüksek sıralı bitten yüksek düzeyli Word sayısal sabit değerinin ayarlanması gerekir. Bizim örneğimizde söz konusu olduğunda bu bit sabit değerinin 15 `Short` değeri.
+- Kullanım bir [türü karakteri](../../programming-guide/language-features/data-types/type-characters.md) atamak istediğiniz değişmez değer açıkça tanımlamak için `SByte`. Aşağıdaki örnek, negatif bir sabit değer atar `Short` değerini bir `SByte`. Negatif sayılar için dikkat edin, yüksek sıralı bitten yüksek düzeyli Word sayısal sabit değerinin ayarlanması gerekir. Bizim örneğimizde söz konusu olduğunda bu bit sabit değerinin 15 `Short` değeri.
 
    [!code-vb[SByteTypeChars](../../../../samples/snippets/visualbasic/language-reference/data-types/sbyte-assignment.vb#1)]
 

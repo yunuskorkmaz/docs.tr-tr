@@ -1,5 +1,5 @@
 ---
-title: 'Arayan bilgileri (F #)'
+title: Arayan bilgileri (F#)
 description: Bir yöntemi arayan bilgileri almak için çağırıcı bilgisi bağımsız değişken öznitelikleri kullanmayı açıklar.
 ms.date: 04/25/2017
 ms.openlocfilehash: 0f2f4b16804d9156d234cc29d1f72ebe80a5b556

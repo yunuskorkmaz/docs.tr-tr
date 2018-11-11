@@ -1,6 +1,6 @@
 ---
 title: 'Açık Alanlar: val Anahtar Sözcüğü (F#)'
-description: "F # hakkında 'val' öğrenin anahtar sözcüğü bir değer türü başlatma olmadan bir sınıf veya yapı türü depolamak için bir konum bildirmek için kullanılır."
+description: F# hakkında 'val' öğrenin anahtar sözcüğü bir değer türü başlatma olmadan bir sınıf veya yapı türü depolamak için bir konum bildirmek için kullanılır.
 ms.date: 05/16/2016
 ms.openlocfilehash: 9cd06f7e90192be79490dd0ff67f118cce4339c3
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -65,7 +65,7 @@ Aşağıdaki kod, bir yapıda açık alanlar kullanımını gösterir. Bir yapı
 
 Çıktı `11 xyz`.
 
-Açık alanlar rutin kullanım için tasarlanmamıştır. Genel olarak, mümkün olduğunda kullanmalısınız bir `let` açık bir alanı yerine bir sınıftaki bağlama. Açık alanlar bazı birlikte çalışabilirlik senaryolarında yararlıdır, kullanılacak bir yapı tanımla gerektiğinde gibi bir platform çağırma çağrısı bir yerel API veya COM birlikte çalışma senaryolarda. Daha fazla bilgi için [dış işlevler](../functions/external-functions.md). Hangi birincil Oluşturucu olmadan sınıfları yayan bir F # kodu Oluşturucu ile çalışırken açık bir alan gerekli olabilir başka bir durumdur. Açık alanlar da iş parçacığı statik değişkenler veya benzer yapıları için kullanışlıdır. Daha fazla bilgi için bkz. `System.ThreadStaticAttribute`.
+Açık alanlar rutin kullanım için tasarlanmamıştır. Genel olarak, mümkün olduğunda kullanmalısınız bir `let` açık bir alanı yerine bir sınıftaki bağlama. Açık alanlar bazı birlikte çalışabilirlik senaryolarında yararlıdır, kullanılacak bir yapı tanımla gerektiğinde gibi bir platform çağırma çağrısı bir yerel API veya COM birlikte çalışma senaryolarda. Daha fazla bilgi için [dış işlevler](../functions/external-functions.md). Hangi birincil Oluşturucu olmadan sınıfları yayan bir F# kodu Oluşturucu ile çalışırken açık bir alan gerekli olabilir başka bir durumdur. Açık alanlar da iş parçacığı statik değişkenler veya benzer yapıları için kullanışlıdır. Daha fazla bilgi için bkz. `System.ThreadStaticAttribute`.
 
 Zaman anahtar sözcükleri `member val` bir arada göründüğünü tür tanımında, otomatik olarak uygulanan bir özellik tanımı öyledir. Daha fazla bilgi için [özellikleri](properties.md).
 

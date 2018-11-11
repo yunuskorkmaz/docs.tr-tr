@@ -1,6 +1,6 @@
 ---
 title: Dış İşlevler (F#)
-description: 'Yerel kodda işlevleri çağırmak için F # dil desteği hakkında bilgi edinin.'
+description: Yerel kodda işlevleri çağırmak için F# dil desteği hakkında bilgi edinin.
 ms.date: 05/16/2016
 ms.openlocfilehash: db0d3362d867b07b333951f3380c6735ff471d5e
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "45973111"
 ---
 # <a name="external-functions"></a>Dış İşlevler
 
-Bu konuda, yerel kodda işlevleri çağırmak için F # dil desteği açıklanmaktadır.
+Bu konuda, yerel kodda işlevleri çağırmak için F# dil desteği açıklanmaktadır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,7 +34,7 @@ extern "C" void __declspec(dllexport) HelloWorld()
 }
 ```
 
-Bu işleve F #'den aşağıdaki kodu kullanarak çağırabilirsiniz.
+Bu işleve F#'den aşağıdaki kodu kullanarak çağırabilirsiniz.
 
 ```fsharp
 open System.Runtime.InteropServices
@@ -46,7 +46,7 @@ module InteropWithNative =
 InteropWithNative.HelloWorld()
 ```
 
-Yerel kod ile birlikte çalışabilirlik olarak adlandırılır *platform çağırma* ve CLR özelliğidir. Daha fazla bilgi için [yönetilmeyen kod ile birlikte çalışma](../../../../docs/framework/interop/index.md). Bu bölümdeki bilgiler, F # için geçerlidir.
+Yerel kod ile birlikte çalışabilirlik olarak adlandırılır *platform çağırma* ve CLR özelliğidir. Daha fazla bilgi için [yönetilmeyen kod ile birlikte çalışma](../../../../docs/framework/interop/index.md). Bu bölümdeki bilgiler, F# için geçerlidir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

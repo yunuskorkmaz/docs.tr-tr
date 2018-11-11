@@ -1,6 +1,6 @@
 ---
 title: Değişmez Değerler (F#)
-description: 'F # programlama dilinde değişmez değer türleri hakkında bilgi edinin.'
+description: F# programlama dilinde değişmez değer türleri hakkında bilgi edinin.
 ms.date: 05/16/2016
 ms.openlocfilehash: e6d34acd928edce8447c793105b08085ab0757b9
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -14,11 +14,11 @@ ms.locfileid: "44087631"
 > [!NOTE]
 Bu makaledeki API başvuru bağlantıları için MSDN (şimdilik) sürer.
 
-Bu konu, F #'de bir sabit değer türü belirtmek nasıl gösteren bir tablo sağlar.
+Bu konu, F#'de bir sabit değer türü belirtmek nasıl gösteren bir tablo sağlar.
 
 ## <a name="literal-types"></a>Değişmez değer türleri
 
-Aşağıdaki tabloda değişmez değer türleri F #'de gösterilmektedir. Onaltılık gösterimdeki basamakları temsil eden karakterler büyük küçük harfe duyarlı değildir; türü tanımlayan karakterler büyük/küçük harfe duyarlıdır.
+Aşağıdaki tabloda değişmez değer türleri F#'de gösterilmektedir. Onaltılık gösterimdeki basamakları temsil eden karakterler büyük küçük harfe duyarlı değildir; türü tanımlayan karakterler büyük/küçük harfe duyarlıdır.
 
 |Tür|Açıklama|Sonek veya önek|Örnekler|
 |----|-----------|----------------|--------|
@@ -47,7 +47,7 @@ Aşağıdaki tabloda değişmez değer türleri F #'de gösterilmektedir. Onalt�
 
 Unicode dizelerini kullanarak belirttiğiniz açık Kodlamalar içerebilir `\u` bir 16 bitlik onaltılık kod ya da kullanarak belirtebilirsiniz UTF-32 kodlamalarına ardından `\U` bir Unicode temsil eden bir 32 bit onaltılık kodla ve ardından vekil çifti.
 
-F # 3.1 itibariyle, kullandığınız `+` dize değişmez değerlerini birleştirmek için oturum açın. Bit düzeyinde kullanabilirsiniz veya (`|||`) numaralandırma bayraklarını birleştirmek istiyorsanız işleci. Örneğin, aşağıdaki kod F # 3.1 geçerlidir:
+F# 3.1 itibariyle, kullandığınız `+` dize değişmez değerlerini birleştirmek için oturum açın. Bit düzeyinde kullanabilirsiniz veya (`|||`) numaralandırma bayraklarını birleştirmek istiyorsanız işleci. Örneğin, aşağıdaki kod F# 3.1 geçerlidir:
 
 ```fsharp
 [<Literal>]
@@ -82,7 +82,7 @@ let Numbers = (0x9F, 0o77, 0b1010)
 
 ## <a name="underscores-in-numeric-literals"></a>Sayısal sabit değerlerde alt çizgiler
 
-F # 4.1 ile başlayarak, alt çizgi karakteriyle basamak ayırabilirsiniz (`_`).
+F# 4.1 ile başlayarak, alt çizgi karakteriyle basamak ayırabilirsiniz (`_`).
 
 ```fsharp
 let DeadBeef = 0xDEAD_BEEF

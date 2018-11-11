@@ -1,6 +1,6 @@
 ---
 title: Seçenekler (F#)
-description: 'Adlandırılmış değer veya değişken için gerçek bir değer türleri var olmayabilir F # seçeneği kullanmayı öğrenin.'
+description: Adlandırılmış değer veya değişken için gerçek bir değer türleri var olmayabilir F# seçeneği kullanmayı öğrenin.
 ms.date: 05/16/2016
 ms.openlocfilehash: 0859cb42e72ef9e67551b884f5cf6130fb099a78
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "46479526"
 ---
 # <a name="options"></a>Seçenekler
 
-F # seçenek türünde gerçek bir değer olmayabilir adlandırılmış değer veya değişken için kullanılır. İsteğe bağlı bir temel alınan tür vardır ve bu türde bir değer içerebilir ya da bir değer olmayabilir.
+F# seçenek türünde gerçek bir değer olmayabilir adlandırılmış değer veya değişken için kullanılır. İsteğe bağlı bir temel alınan tür vardır ve bu türde bir değer içerebilir ya da bir değer olmayabilir.
 
 ## <a name="remarks"></a>Açıklamalar
 
@@ -33,7 +33,7 @@ Bir arama eşleşen bir sonuç döndürmez olduğunda seçenekler aşağıdaki k
 
 Önceki kodda, aranan yinelemeli olarak listesidir. İşlev `tryFindMatch` koşul işlevini alır `pred` bir Boole değeri ve aramak için bir liste döndürür. Koşulu karşılayan bir öğe bulunmazsa, özyineleme sona erer ve işlev döndürür değer ifadesi bir seçenek olarak `Some(head)`. Boş liste eşleştiğinde özyineleme sona erer. Bu noktada değeri `head` bulunmadı, ve `None` döndürülür.
 
-Dönüş yok veya bir değer için bir koleksiyon arama çoğu F # kitaplığı işlevleri `option` türü. Kural olarak, bu işlevler şununla `try` önek, örneğin, [ `Seq.tryFindIndex` ](https://msdn.microsoft.com/library/c357b221-edf6-4f68-bf40-82a3156d945a).
+Dönüş yok veya bir değer için bir koleksiyon arama çoğu F# kitaplığı işlevleri `option` türü. Kural olarak, bu işlevler şununla `try` önek, örneğin, [ `Seq.tryFindIndex` ](https://msdn.microsoft.com/library/c357b221-edf6-4f68-bf40-82a3156d945a).
 
 Bir değer, bir değer oluşturmak çalıştığınızda bir özel durum, mümkünse, örneğin mevcut olmayabilir, seçenekleri de yararlı olabilir. Aşağıdaki kod örneği bunu gösterir.
 
