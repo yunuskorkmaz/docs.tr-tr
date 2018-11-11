@@ -1,6 +1,6 @@
 ---
 title: '|| İşleci (C# Başvurusu)'
-ms.date: 07/20/2015
+ms.date: 11/06/2018
 f1_keywords:
 - '||_CSharpKeyword'
 helpviewer_keywords:
@@ -8,40 +8,34 @@ helpviewer_keywords:
 - conditional-OR operator (||) [C#]
 - '|| operator [C#]'
 ms.assetid: 7d442d8e-400d-421f-b4d2-034bf82bcbdc
-ms.openlocfilehash: 58e5fd72a3748e7af0894093fc461c4efb543608
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: a391078372e4ec0a3882bed4515733adedffb547
+ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "42925546"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="52e5e-102">|| İşleci (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="52e5e-102">|| Operator (C# Reference)</span></span>
-<span data-ttu-id="52e5e-103">Koşullu-OR işleci (`||`) bir mantıksal OR gerçekleştirir, `bool` işlenen.</span><span class="sxs-lookup"><span data-stu-id="52e5e-103">The conditional-OR operator (`||`) performs a logical-OR of its `bool` operands.</span></span> <span data-ttu-id="52e5e-104">Birinci işlenenin değerlendirilirse `true`, ikinci işlenenin değerlendirilmez.</span><span class="sxs-lookup"><span data-stu-id="52e5e-104">If the first operand evaluates to `true`, the second operand isn't evaluated.</span></span> <span data-ttu-id="52e5e-105">Birinci işlenenin değerlendirilirse `false`, ikinci işleç veya ifadenin bir bütün olarak değerlendirdiği olup olmadığını belirler. `true` veya `false`.</span><span class="sxs-lookup"><span data-stu-id="52e5e-105">If the first operand evaluates to `false`, the second operator determines whether the OR expression as a whole evaluates to `true` or `false`.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="52e5e-106">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="52e5e-106">Remarks</span></span>  
- <span data-ttu-id="52e5e-107">İşlemi</span><span class="sxs-lookup"><span data-stu-id="52e5e-107">The operation</span></span>  
-  
-```csharp  
-x || y  
-```  
-  
- <span data-ttu-id="52e5e-108">işlemine karşılık gelir</span><span class="sxs-lookup"><span data-stu-id="52e5e-108">corresponds to the operation</span></span>  
-  
-```csharp  
-x | y  
-```  
-  
- <span data-ttu-id="52e5e-109">dışındaki olması durumunda `x` olduğu `true`, `y` veya işlemi olduğundan değerlendirilmez `true` değerinden bağımsız olarak `y`.</span><span class="sxs-lookup"><span data-stu-id="52e5e-109">except that if `x` is `true`, `y` is not evaluated because the OR operation is `true` regardless of the value of `y`.</span></span> <span data-ttu-id="52e5e-110">Bu kavram, "kısa devre değerlendirmesi gibi" adı verilir.</span><span class="sxs-lookup"><span data-stu-id="52e5e-110">This concept is known as "short-circuit" evaluation.</span></span>  
-  
- <span data-ttu-id="52e5e-111">Koşullu-OR işleci, normal mantıksal işleçler aşırı aşırı yüklenemez ve [true](../../../csharp/language-reference/keywords/true.md) ve [false](../../../csharp/language-reference/keywords/false.md) işleçleri bazı kısıtlamalar ile ayrıca değerlendirilir aşırı olması Koşullu mantıksal işleçler.</span><span class="sxs-lookup"><span data-stu-id="52e5e-111">The conditional-OR operator cannot be overloaded, but overloads of the regular logical operators and the [true](../../../csharp/language-reference/keywords/true.md) and [false](../../../csharp/language-reference/keywords/false.md) operators are, with certain restrictions, also considered to be overloads of the conditional logical operators.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="52e5e-112">Örnek</span><span class="sxs-lookup"><span data-stu-id="52e5e-112">Example</span></span>  
- <span data-ttu-id="52e5e-113">Aşağıdaki örneklerde, ifade kullanan `||` yalnızca ilk işlenen değerlendirilir.</span><span class="sxs-lookup"><span data-stu-id="52e5e-113">In the following examples, the expression that uses `||` evaluates only the first operand.</span></span> <span data-ttu-id="52e5e-114">Kullanan ifade `|` her iki işlenen değerlendirilir.</span><span class="sxs-lookup"><span data-stu-id="52e5e-114">The expression that uses `|` evaluates both operands.</span></span> <span data-ttu-id="52e5e-115">Her iki işlenen değerlendirilir ikinci örnekte, bir çalışma zamanı özel durum ortaya çıkar.</span><span class="sxs-lookup"><span data-stu-id="52e5e-115">In the second example, a run-time exception occurs if both operands are evaluated.</span></span>  
-  
- [!code-csharp[csRefOperators#52](../../../csharp/language-reference/operators/codesnippet/CSharp/conditional-or-operator_1.cs)]  
-  
-## <a name="see-also"></a><span data-ttu-id="52e5e-116">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="52e5e-116">See Also</span></span>
+# <a name="-operator-c-reference"></a><span data-ttu-id="3afcc-102">|| İşleci (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="3afcc-102">|| Operator (C# Reference)</span></span>
 
-- [<span data-ttu-id="52e5e-117">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="52e5e-117">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="52e5e-118">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="52e5e-118">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="52e5e-119">C# İşleçleri</span><span class="sxs-lookup"><span data-stu-id="52e5e-119">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
+<span data-ttu-id="3afcc-103">Koşullu mantıksal OR işlecinin `||`, "kısa devre" mantıksal OR işleci, hesaplar, mantıksal OR olarak da bilinir, [bool](../keywords/bool.md) işlenen.</span><span class="sxs-lookup"><span data-stu-id="3afcc-103">The conditional logical OR operator `||`, also known as the "short-circuiting" logical OR operator, computes the logical OR of its [bool](../keywords/bool.md) operands.</span></span> <span data-ttu-id="3afcc-104">Sonucu `x || y` olduğu `true` ya da `x` veya `y` değerlendiren `true`.</span><span class="sxs-lookup"><span data-stu-id="3afcc-104">The result of `x || y` is `true` if either `x` or `y` evaluates to `true`.</span></span> <span data-ttu-id="3afcc-105">Aksi halde sonuç, `false`.</span><span class="sxs-lookup"><span data-stu-id="3afcc-105">Otherwise, the result is `false`.</span></span> <span data-ttu-id="3afcc-106">Birinci işlenenin değerlendirilirse `true`, ikinci işlenenin değerlendirilmez ve işlemin sonucu olan `true`.</span><span class="sxs-lookup"><span data-stu-id="3afcc-106">If the first operand evaluates to `true`, the second operand is not evaluated and the result of operation is `true`.</span></span> <span data-ttu-id="3afcc-107">Aşağıdaki örnek, bu davranış gösterir:</span><span class="sxs-lookup"><span data-stu-id="3afcc-107">The following example demonstrates that behavior:</span></span>
+
+[!code-csharp-interactive[conditional logical OR](~/samples/snippets/csharp/language-reference/operators/ConditionalLogicalOperatorsExamples.cs#Or)]
+
+<span data-ttu-id="3afcc-108">[Mantıksal OR işlecinin](or-operator.md) `|` Ayrıca, mantıksal OR hesaplar, `bool` işlenenler, ancak her iki işlenen de her zaman değerlendirilir.</span><span class="sxs-lookup"><span data-stu-id="3afcc-108">The [logical OR operator](or-operator.md) `|` also computes the logical OR of its `bool` operands, but always evaluates both operands.</span></span>
+
+## <a name="operator-overloadability"></a><span data-ttu-id="3afcc-109">İşleç overloadability</span><span class="sxs-lookup"><span data-stu-id="3afcc-109">Operator overloadability</span></span>
+
+<span data-ttu-id="3afcc-110">Kullanıcı tanımlı bir tür koşullu mantıksal OR işlecinin aşırı yüklenemez.</span><span class="sxs-lookup"><span data-stu-id="3afcc-110">A user-defined type cannot overload the conditional logical OR operator.</span></span> <span data-ttu-id="3afcc-111">Ancak, kullanıcı tanımlı bir tür aşırı [mantıksal OR](or-operator.md), [true](../keywords/true-operator.md), ve [false](../keywords/false-operator.md) işleçleri belirli bir şekilde `||` işlemi değerlendirmesi yapılamıyor için işlenen türü.</span><span class="sxs-lookup"><span data-stu-id="3afcc-111">However, if a user-defined type overloads the [logical OR](or-operator.md), [true](../keywords/true-operator.md), and [false](../keywords/false-operator.md) operators in a certain way, the `||` operation can be evaluated for the operands of that type.</span></span> <span data-ttu-id="3afcc-112">Daha fazla bilgi için [kullanıcı tanımlı koşullu mantıksal işleçler](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) bölümünü [ C# dil belirtimi](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="3afcc-112">For more information, see the [User-defined conditional logical operators](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) section of the [C# language specification](../language-specification/index.md).</span></span>
+
+## <a name="c-language-specification"></a><span data-ttu-id="3afcc-113">C# dili belirtimi</span><span class="sxs-lookup"><span data-stu-id="3afcc-113">C# language specification</span></span>
+
+<span data-ttu-id="3afcc-114">Daha fazla bilgi için [koşullu mantıksal işleçler](~/_csharplang/spec/expressions.md#conditional-logical-operators) bölümünü [ C# dil belirtimi](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="3afcc-114">For more information, see the [Conditional logical operators](~/_csharplang/spec/expressions.md#conditional-logical-operators) section of the [C# language specification](../language-specification/index.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="3afcc-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="3afcc-115">See also</span></span>
+
+- [<span data-ttu-id="3afcc-116">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="3afcc-116">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="3afcc-117">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="3afcc-117">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="3afcc-118">C# İşleçleri</span><span class="sxs-lookup"><span data-stu-id="3afcc-118">C# Operators</span></span>](index.md)
+- [<span data-ttu-id="3afcc-119">& & işleci</span><span class="sxs-lookup"><span data-stu-id="3afcc-119">&& operator</span></span>](conditional-and-operator.md)
+- [! işleci]<span data-ttu-id="3afcc-120">(logical-negation-operator.md)</span><span class="sxs-lookup"><span data-stu-id="3afcc-120">(logical-negation-operator.md)</span></span>
+- [<span data-ttu-id="3afcc-121">| işleci</span><span class="sxs-lookup"><span data-stu-id="3afcc-121">| operator</span></span>](or-operator.md)

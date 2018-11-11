@@ -7,7 +7,7 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "25864523"
 ---
-# <a name="f-tutorials"></a><span data-ttu-id="a2ab3-101">F#Öğreticiler</span><span class="sxs-lookup"><span data-stu-id="a2ab3-101">F# Tutorials</span></span>
+# <a name="f-tutorials"></a><span data-ttu-id="04719-101">F#Öğreticiler</span><span class="sxs-lookup"><span data-stu-id="04719-101">F# Tutorials</span></span>
 
 > [!NOTE]
-<span data-ttu-id="a2ab3-102">Bu hala devam ediyor.</span><span class="sxs-lookup"><span data-stu-id="a2ab3-102">This is still in-progress.</span></span>
+<span data-ttu-id="04719-102">Bu hala devam ediyor.</span><span class="sxs-lookup"><span data-stu-id="04719-102">This is still in-progress.</span></span>

@@ -1,1 +1,1 @@
-<span data-ttu-id="089c1-101">**Bu konu için geçerlidir: ✓** .NET Core SDK'sı 2.1.300 ve sonraki sürümler</span><span class="sxs-lookup"><span data-stu-id="089c1-101">**This topic applies to: ✓** .NET Core SDK 2.1.300 and later versions</span></span>
+<span data-ttu-id="f4715-101">**Bu konu için geçerlidir: ✓** .NET Core SDK'sı 2.1.300 ve sonraki sürümler</span><span class="sxs-lookup"><span data-stu-id="f4715-101">**This topic applies to: ✓** .NET Core SDK 2.1.300 and later versions</span></span>

@@ -1,6 +1,6 @@
 ---
 title: Kaynak Satırı, Dosya ve Yol Tanımlayıcıları (F#)
-description: 'Kaynak satır numarası, dizin ve dosya adı kodunuzdaki erişim sağlayan yerleşik F # tanımlayıcı değerlerini kullanma konusunda bilgi edinin.'
+description: Kaynak satır numarası, dizin ve dosya adı kodunuzdaki erişim sağlayan yerleşik F# tanımlayıcı değerlerini kullanma konusunda bilgi edinin.
 ms.date: 05/16/2016
 ms.openlocfilehash: 14f710d1412c3420ec627dc30216ba2e89f16bcd
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -9,11 +9,11 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "43865133"
 ---
-# <a name="source-line-file-and-path-identifiers"></a><span data-ttu-id="cfb24-103">Kaynak Satırı, Dosya ve Yol Tanımlayıcıları</span><span class="sxs-lookup"><span data-stu-id="cfb24-103">Source Line, File, and Path Identifiers</span></span>
+# <a name="source-line-file-and-path-identifiers"></a><span data-ttu-id="c06e5-103">Kaynak Satırı, Dosya ve Yol Tanımlayıcıları</span><span class="sxs-lookup"><span data-stu-id="c06e5-103">Source Line, File, and Path Identifiers</span></span>
 
-<span data-ttu-id="cfb24-104">Tanımlayıcıları `__LINE__`, `__SOURCE_DIRECTORY__` ve `__SOURCE_FILE__` kodunuzda kaynak satırı numarasını, dizin ve dosya adına erişmenize olanak tanıyan yerleşik değerler.</span><span class="sxs-lookup"><span data-stu-id="cfb24-104">The identifiers `__LINE__`, `__SOURCE_DIRECTORY__` and `__SOURCE_FILE__` are built-in values that enable you to access the source line number, directory and file name in your code.</span></span>
+<span data-ttu-id="c06e5-104">Tanımlayıcıları `__LINE__`, `__SOURCE_DIRECTORY__` ve `__SOURCE_FILE__` kodunuzda kaynak satırı numarasını, dizin ve dosya adına erişmenize olanak tanıyan yerleşik değerler.</span><span class="sxs-lookup"><span data-stu-id="c06e5-104">The identifiers `__LINE__`, `__SOURCE_DIRECTORY__` and `__SOURCE_FILE__` are built-in values that enable you to access the source line number, directory and file name in your code.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="cfb24-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="cfb24-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="c06e5-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c06e5-105">Syntax</span></span>
 
 ```fsharp
 __LINE__
@@ -21,26 +21,26 @@ __SOURCE_DIRECTORY__
 __SOURCE_FILE__
 ```
 
-## <a name="remarks"></a><span data-ttu-id="cfb24-106">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="cfb24-106">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="c06e5-106">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="c06e5-106">Remarks</span></span>
 
-<span data-ttu-id="cfb24-107">Bu değerlerin her birini türünde `string`.</span><span class="sxs-lookup"><span data-stu-id="cfb24-107">Each of these values has type `string`.</span></span>
+<span data-ttu-id="c06e5-107">Bu değerlerin her birini türünde `string`.</span><span class="sxs-lookup"><span data-stu-id="c06e5-107">Each of these values has type `string`.</span></span>
 
-<span data-ttu-id="cfb24-108">Aşağıdaki tabloda özetlenmiştir: kaynak satırı, dosya ve yol tanımlayıcıları, F #'ta da kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="cfb24-108">The following table summarizes the source line, file, and path identifiers that are available in F#.</span></span> <span data-ttu-id="cfb24-109">Bu tanımlayıcılar Önişlemci makroları değildir; Bunlar, derleyici tarafından tanınan yerleşik değerlerdir.</span><span class="sxs-lookup"><span data-stu-id="cfb24-109">These identifiers are not preprocessor macros; they are built-in values that are recognized by the compiler.</span></span>
+<span data-ttu-id="c06e5-108">Aşağıdaki tabloda özetlenmiştir: kaynak satırı, dosya ve yol tanımlayıcıları, F#'ta da kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="c06e5-108">The following table summarizes the source line, file, and path identifiers that are available in F#.</span></span> <span data-ttu-id="c06e5-109">Bu tanımlayıcılar Önişlemci makroları değildir; Bunlar, derleyici tarafından tanınan yerleşik değerlerdir.</span><span class="sxs-lookup"><span data-stu-id="c06e5-109">These identifiers are not preprocessor macros; they are built-in values that are recognized by the compiler.</span></span>
 
-|<span data-ttu-id="cfb24-110">Önceden tanımlanmış tanımlayıcısı</span><span class="sxs-lookup"><span data-stu-id="cfb24-110">Predefined identifier</span></span>|<span data-ttu-id="cfb24-111">Açıklama</span><span class="sxs-lookup"><span data-stu-id="cfb24-111">Description</span></span>|
+|<span data-ttu-id="c06e5-110">Önceden tanımlanmış tanımlayıcısı</span><span class="sxs-lookup"><span data-stu-id="c06e5-110">Predefined identifier</span></span>|<span data-ttu-id="c06e5-111">Açıklama</span><span class="sxs-lookup"><span data-stu-id="c06e5-111">Description</span></span>|
 |---------------------|-----------|
-|`__LINE__`|<span data-ttu-id="cfb24-112">Geçerli satır numarası değerlendirir dikkate `#line` yönergeleri.</span><span class="sxs-lookup"><span data-stu-id="cfb24-112">Evaluates to the current line number, considering `#line` directives.</span></span>|
-|`__SOURCE_DIRECTORY__`|<span data-ttu-id="cfb24-113">Kaynak dizin geçerli tam yoluna değerlendirir dikkate `#line` yönergeleri.</span><span class="sxs-lookup"><span data-stu-id="cfb24-113">Evaluates to the current full path of the source directory, considering `#line` directives.</span></span>|
-|`__SOURCE_FILE__`|<span data-ttu-id="cfb24-114">Geçerli kaynak dosya adını ve yolunu da değerlendirir dikkate `#line` yönergeleri.</span><span class="sxs-lookup"><span data-stu-id="cfb24-114">Evaluates to the current source file name and its path, considering `#line` directives.</span></span>|
-<span data-ttu-id="cfb24-115">Hakkında daha fazla bilgi için `#line` yönergesine bakın [derleyici yönergeleri](compiler-directives.md).</span><span class="sxs-lookup"><span data-stu-id="cfb24-115">For more information about the `#line` directive, see [Compiler Directives](compiler-directives.md).</span></span>
+|`__LINE__`|<span data-ttu-id="c06e5-112">Geçerli satır numarası değerlendirir dikkate `#line` yönergeleri.</span><span class="sxs-lookup"><span data-stu-id="c06e5-112">Evaluates to the current line number, considering `#line` directives.</span></span>|
+|`__SOURCE_DIRECTORY__`|<span data-ttu-id="c06e5-113">Kaynak dizin geçerli tam yoluna değerlendirir dikkate `#line` yönergeleri.</span><span class="sxs-lookup"><span data-stu-id="c06e5-113">Evaluates to the current full path of the source directory, considering `#line` directives.</span></span>|
+|`__SOURCE_FILE__`|<span data-ttu-id="c06e5-114">Geçerli kaynak dosya adını ve yolunu da değerlendirir dikkate `#line` yönergeleri.</span><span class="sxs-lookup"><span data-stu-id="c06e5-114">Evaluates to the current source file name and its path, considering `#line` directives.</span></span>|
+<span data-ttu-id="c06e5-115">Hakkında daha fazla bilgi için `#line` yönergesine bakın [derleyici yönergeleri](compiler-directives.md).</span><span class="sxs-lookup"><span data-stu-id="c06e5-115">For more information about the `#line` directive, see [Compiler Directives](compiler-directives.md).</span></span>
 
-## <a name="example"></a><span data-ttu-id="cfb24-116">Örnek</span><span class="sxs-lookup"><span data-stu-id="cfb24-116">Example</span></span>
+## <a name="example"></a><span data-ttu-id="c06e5-116">Örnek</span><span class="sxs-lookup"><span data-stu-id="c06e5-116">Example</span></span>
 
-<span data-ttu-id="cfb24-117">Aşağıdaki kod örneği, bu değerlerin kullanımını gösterir.</span><span class="sxs-lookup"><span data-stu-id="cfb24-117">The following code example demonstrates the use of these values.</span></span>
+<span data-ttu-id="c06e5-117">Aşağıdaki kod örneği, bu değerlerin kullanımını gösterir.</span><span class="sxs-lookup"><span data-stu-id="c06e5-117">The following code example demonstrates the use of these values.</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet7401.fs)]
 
-<span data-ttu-id="cfb24-118">Çıktı:</span><span class="sxs-lookup"><span data-stu-id="cfb24-118">Output:</span></span>
+<span data-ttu-id="c06e5-118">Çıktı:</span><span class="sxs-lookup"><span data-stu-id="c06e5-118">Output:</span></span>
 
 ```
 Line: 4
@@ -48,7 +48,7 @@ Source Directory: C:\Users\username\Documents\Visual Studio 2017\Projects\Source
 Source File: C:\Users\username\Documents\Visual Studio 2017\Projects\SourceInfo\SourceInfo\Program.fs
 ```
 
-## <a name="see-also"></a><span data-ttu-id="cfb24-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="cfb24-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c06e5-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c06e5-119">See also</span></span>
 
-- [<span data-ttu-id="cfb24-120">Derleyici Yönergeleri</span><span class="sxs-lookup"><span data-stu-id="cfb24-120">Compiler Directives</span></span>](compiler-directives.md)
-- [<span data-ttu-id="cfb24-121">F# Dili Başvurusu</span><span class="sxs-lookup"><span data-stu-id="cfb24-121">F# Language Reference</span></span>](index.md)
+- [<span data-ttu-id="c06e5-120">Derleyici Yönergeleri</span><span class="sxs-lookup"><span data-stu-id="c06e5-120">Compiler Directives</span></span>](compiler-directives.md)
+- [<span data-ttu-id="c06e5-121">F# Dili Başvurusu</span><span class="sxs-lookup"><span data-stu-id="c06e5-121">F# Language Reference</span></span>](index.md)
