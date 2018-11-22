@@ -2,11 +2,11 @@
 title: Özel Kodlayıcılar
 ms.date: 03/30/2017
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-ms.openlocfilehash: cd8b9172278ce5bcca2965872d697b03698bd850
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 036cbff9046df2d1179c5cc0921dd8d89757558b
+ms.sourcegitcommit: 8145ad08288bf141d68e3256cb1f7a3ad842ca33
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
+ms.lasthandoff: 11/22/2018
 ms.locfileid: "50034395"
 ---
 # <a name="custom-encoders"></a>Özel Kodlayıcılar
@@ -60,7 +60,7 @@ Bu konu, özel kodlayıcılar oluşturulacağını açıklar.
  Dinamik sözlük anahtarlarını işleme ek olarak, benzersiz bir yolla kapatamaması arabelleğe alma iletilerinin alınır. Belge üzerinde bir okuyucu oluşturma ve işlemekte yerine ikili Kodlayıcı dahili kullanım `MessagePatterns` ikili akışı ayrıştırma için sınıf. İletilerin çoğu belirli bir dizi WCF tarafından oluşturulmuş bir düzende görünmesini üstbilgileri sahip olur. Düzen sistemi ayırmak, bekliyor üzerinde temel ileti keser. Başarılı olursa, onu başlatır bir <xref:System.ServiceModel.Channels.MessageHeaders> XML Ayrıştırma olmadan nesne. Aksi durumda, standart yöntemin geri döner.  
   
 ### <a name="mtom-encoding"></a>MTOM Kodlama  
- <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`> Sınıf adlı bir ek yapılandırma özelliği vardır <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`.MaxBufferSize%2A>. Bu, bir üst sınır ne kadar veri bir ileti okuma işlemi sırasında arabelleğe almak için izin veriliyorsa üzerinde yerleştirir. XML bilgi kümesi (bilgi kümesi) veya diğer MIME bölümü, tüm MIME bölümleri tek bir iletiye yeniden birleştirmek için arabelleğe alınan gerekebilir.  
+ <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> Sınıfında adlı bir ek yapılandırma özelliği <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement.MaxBufferSize%2A>. Bu, bir üst sınır ne kadar veri bir ileti okuma işlemi sırasında arabelleğe almak için izin veriliyorsa üzerinde yerleştirir. XML bilgi kümesi (bilgi kümesi) veya diğer MIME bölümü, tüm MIME bölümleri tek bir iletiye yeniden birleştirmek için arabelleğe alınan gerekebilir.  
   
  HTTP ile düzgün çalışmak için bazı iç API'ler için iç MTOM ileti Kodlayıcı sınıfı sağlar `GetContentType` (olduğu da iç) ve `WriteMessage`, genel ve geçersiz kılınabilir. Daha fazla iletişim MIME üstbilgi değerleri ile HTTP üstbilgileri değerleri kabul emin olmak için gerçekleşmelidir.  
   
