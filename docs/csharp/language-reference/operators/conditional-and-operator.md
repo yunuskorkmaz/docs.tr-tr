@@ -36,5 +36,5 @@ Daha fazla bilgi için [koşullu mantıksal işleçler](~/_csharplang/spec/expre
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# İşleçleri](index.md)
 - [|| işleci](conditional-or-operator.md)
-- [! işleci](logical-negation-operator.md)
+- [\! işleci](logical-negation-operator.md)
 - [& işleci](and-operator.md)
