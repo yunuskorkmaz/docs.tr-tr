@@ -11,12 +11,12 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: d9992c65b2f5f0f73af9f3234ac389b1c8647337
-  ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+  ms.openlocfilehash: 7d6029e48c67259dc2fb28151196223f2490962f
+  ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 10/28/2018
-  ms.locfileid: "50200229"
+  ms.lasthandoff: 11/26/2018
+  ms.locfileid: "52297055"
 items:
 - durationInMinutes: 1
   content: >
@@ -98,10 +98,4 @@ items:
     > [!NOTE]
 
     > Bu çevrimiçi kodlama deneyimi Önizleme modundadır. Sorunlarla karşılaşırsanız, Lütfen bunları rapor [dotnet/try deposunda](https://github.com/dotnet/try/issues).
-- content: >-
-    Tamamladınız "Hello C#" Giriş C# öğretici.
-
-
-    İle çalışma hakkında daha fazla bilgi `string` yazın [C# programlama kılavuzu](../../programming-guide/index.md) konuda [dizeleri](../../programming-guide/strings/index.md).
-
-    [Nasıl yapılır dizelerle çalışma hakkında ipuçları](../../how-to/index.md#working-with-strings).
+- content: "Tamamladınız \"Hello C#\" Giriş C# öğretici. Tıklayabilirsiniz **içindeki numaralandırır C# ** etkileşimli bir sonraki öğreticiye başlatmak için aşağıdaki bağlantı ya da ziyaret edebilirsiniz [.NET site](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) .NET Core SDK'sını indirmek için makinenizde bir proje oluşturun ve kodlama tutun. \"Öğrenme tut\" adımı bu öğreticilere geri getirir.\n\nHakkında daha fazla bilgi için `string` türü:\n- [C#Programlama Kılavuzu](../../programming-guide/index.md) konuda [dizeleri](../../programming-guide/strings/index.md). \n- [Nasıl yapılır dizelerle çalışma hakkında ipuçları](../../how-to/index.md#working-with-strings)."

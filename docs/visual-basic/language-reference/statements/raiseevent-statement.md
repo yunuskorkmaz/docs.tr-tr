@@ -10,12 +10,12 @@ helpviewer_keywords:
 - RaiseEvent statement [Visual Basic]
 - event handlers, connecting events to
 ms.assetid: f82e380a-1e6b-4047-bea8-c853f4d2c742
-ms.openlocfilehash: ef4dce290a7a7f6340b15aa4083cd40518e37d0d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ba4c05b3ef69d180f43ac3b90aa8fd6dee9c80fb
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507398"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296873"
 ---
 # <a name="raiseevent-statement"></a>RaiseEvent Deyimi
 Tetikleyiciler bir olay, bir sınıf, form ya da belge içinde Modül düzeyinde bildirilmiş.  
@@ -73,7 +73,7 @@ RaiseEvent eventname[( argumentlist )]
  Önceki örneği çalıştırmak ve etiketli düğmeye tıklayın için F5 tuşuna basın **Başlat**. İlk metin kutusuna saniye sayısı başlar. Tam zamanlı (10 saniye) geçtikten sonra "Bitti" ilk metin kutusunu görüntüler.  
   
 > [!NOTE]
->  `My.Application.DoEvents` Yöntemi form gibi tam olarak aynı şekilde olayları işlemez. Olayları doğrudan işlemeye izin vermek için kullanabileceğiniz çoklu iş parçacığı kullanımı. Daha fazla bilgi için [parçacıkları](../../programming-guide/concepts/threading/index.md).  
+>  `My.Application.DoEvents` Yöntemi form gibi tam olarak aynı şekilde olayları işlemez. Olayları doğrudan işlemeye izin vermek için kullanabileceğiniz çoklu iş parçacığı kullanımı. Daha fazla bilgi için [yönetilen iş parçacığı](../../../standard/threading/index.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Olaylar](../../../visual-basic/programming-guide/language-features/events/index.md)  

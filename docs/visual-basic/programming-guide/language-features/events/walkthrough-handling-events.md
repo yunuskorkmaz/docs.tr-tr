@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-ms.openlocfilehash: 35680c7476f48ca11ac4ddeda208c46c6b36c724
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: fe797885a9063a19efc3f35da9cdf62d7f271693
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192008"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297172"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>İzlenecek yol: Olayları İşleme (Visual Basic)
 Olaylar ile çalışmaya nasıl gösteren iki konuları saniyedir. İlk konu [izlenecek yol: olayları bildirmek ve yükseltmeyi](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), bildirmek ve olaylarını gösterir. Bu bölümde, bu izlenecek yol sınıf ve form bunlar gerçekleştiğinde olayların nasıl işleneceğini göstermek için kullanılır.  
@@ -95,7 +95,7 @@ Olaylar ile çalışmaya nasıl gösteren iki konuları saniyedir. İlk konu [iz
 3.  Tıklayın **iptal** görevi Durdur düğmesini. Dikkat görünümünü **iptal** tıkladığınız zaman hemen düğmesi değiştirmez. `Click` Olamaz, olay ortaya kadar `My.Application.DoEvents` deyimi olay işleme sağlar.  
   
     > [!NOTE]
-    >  `My.Application.DoEvents` Yöntemi form gibi tam olarak aynı şekilde olayları işlemez. Örneğin, bu kılavuzda, tıklatmalısınız **iptal** düğmesini iki kez. Olayları doğrudan işlemeye izin vermek için kullanabileceğiniz çoklu iş parçacığı kullanımı. Daha fazla bilgi için [parçacıkları](../../../../visual-basic/programming-guide/concepts/threading/index.md).
+    >  `My.Application.DoEvents` Yöntemi form gibi tam olarak aynı şekilde olayları işlemez. Örneğin, bu kılavuzda, tıklatmalısınız **iptal** düğmesini iki kez. Olayları doğrudan işlemeye izin vermek için kullanabileceğiniz çoklu iş parçacığı kullanımı. Daha fazla bilgi için [yönetilen iş parçacığı](../../../../standard/threading/index.md).
   
  F11 ile programı çalıştırın ve kodda bir satır aynı anda adım öğretici bulabilirsiniz. NET bir şekilde nasıl yürütme aşamasına girer gördüğünüz `LongTask`ve sonra kısa bir süreliğine yeniden girer `Form1` her zaman `PercentDone` olayı oluşturulur.  
   

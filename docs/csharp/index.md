@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: 32da68206e2415d42df9cc820ff1ca2814fbf58f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5b0f3cc4a090e3479489285631a8d13b8b134c56
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195846"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296756"
 ---
 # <a name="c-guide"></a>C# Kılavuzu
 
@@ -67,5 +67,5 @@ C# Kılavuzu'nda birkaç bölümü vardır. Bunları sırayla okuyabilir veya do
 ## <a name="see-also"></a>Ayrıca bkz.
 
 * [Visual C# ve Visual Basic'e Başlarken](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)  
-* [.NET geliştirme](https://msdn.microsoft.com/library/ff361664)  
+* [.NET Kılavuzu](../standard/index.md)  
 * [C# örnekleri](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%23&f%5B0%5D.Text=C%23)  

@@ -2,71 +2,57 @@
 title: Nesne odaklı programlama (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 49794de4-64c3-473c-b8ed-fe98835df69c
-ms.openlocfilehash: e8936eb9031ef68ea333835d8433e1ba1a45990f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 058d8b932e50f784d4a5cefa9fadfb31953687f0
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655973"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297094"
 ---
 # <a name="object-oriented-programming-visual-basic"></a>Nesne odaklı programlama (Visual Basic)
-Visual Basic kapsülleme, devralma ve çok biçimlilik dahil nesne odaklı programlama için tam destek sağlar.  
-  
- *Kapsülleme* ilgili özellikleri, yöntemleri ve diğer üyeleri bir grup kabul edilir olduğunu tek bir birim veya nesne olarak anlamına gelir.  
-  
- *Devralma* var olan bir sınıfına dayalı yeni sınıflar oluşturma olanağı açıklar.  
-  
- *Çok biçimlilik* farklı yollarla aynı özelliklerinin veya yöntemlerin her sınıf uygulayan olsa bile, birbirinin yerine, kullanılabilir birden çok sınıf olabilir anlamına gelir.  
-  
- Bu bölümde aşağıdaki kavramlar açıklanmaktadır:  
-  
--   [Sınıflar ve nesneler](#classes-and-objects)  
-  
-    -   [Sınıf üyeleri](#members)  
-  
-         [Özellikleri ve alanları](#properties-and-fields)  
-  
-         [Yöntemler](#methods)  
-  
-         [Oluşturucular](#constructors)  
-  
-         [Yıkıcılar](#destructors)  
-  
-         [Olaylar](#events)  
-  
-         [İç içe geçmiş sınıflar](#nested-classes)  
-  
-    -   [Erişim değiştiricileri ve erişim düzeylerini](#access-modifiers-and-access-levels)  
-  
-    -   [Örnek oluşturma sınıfları](#instantiating-classes)  
-  
-    -   [Paylaşılan sınıflar ve üyeleri](#shared-classes-and-members)  
-  
-    -   [Anonim türler](#anonymous-types)  
-  
--   [Devralma](#inheritance)  
-  
-    -   [Üyeleri geçersiz kılma](#overriding-members)  
-  
--   [Arabirimler](#interfaces)  
-  
--   [Genel Türler](#generics)  
-  
--   [Temsilciler](#delegates)  
-  
-## <a name="classes-and-objects"></a>Sınıflar ve nesneler  
-Koşulları *sınıfı* ve *nesne* bazen birbirinin yerine, ancak aslında, sınıfları açıklar kullanılan *türü* nesnelerin nesneleri kullanılabilir durumdayken  *örnekleri* sınıfların. Bu nedenle, bir nesne oluşturma işlemi adlı *örneklemesi*. Şeması benzerleme kullanarak şeması sınıftır ve o şeması yapılan bir yapı bir nesnedir.
+
+Visual Basic kapsülleme, devralma ve çok biçimlilik dahil olmak üzere nesne yönelimli programlama için tam destek sağlar.
+
+ *Kapsülleme* ilgili özellikleri, yöntemleri ve diğer üyeleri bir grup işlem tek bir birim veya nesne anlamına gelir.
+
+ *Devralma* mevcut bir sınıfı temel alan yeni sınıflar oluşturma becerisidir.
+
+ *Çok biçimlilik* her sınıf aynı özellikleri veya yöntemleri farklı şekilde uygular olsa da birbirinin yerine kullanılabilen birden fazla sınıfınız olabileceği anlamına gelir.
+
+ Bu bölüm aşağıdaki kavramları açıklar:
+
+- [Sınıflar ve nesneler](#classes-and-objects)
+  - [Sınıf üyeleri](#class-members)
+    - [Özellikler ve alanları](#properties-and-fields)
+    - [Yöntemler](#methods)
+    - [Oluşturucular](#constructors)
+    - [Yıkıcılar](#destructors)
+    - [Olaylar](#events)
+    - [İç içe geçmiş sınıflar](#nested-classes)
+  - [Erişim değiştiricileri ve erişim düzeyleri](#access-modifiers-and-access-levels)
+    - [Sınıf oluşturma](#instantiating-classes)
+    - [Paylaşılan sınıflar ve Üyeler](#shared-classes-and-members)
+    - [Anonim türler](#anonymous-types)
+- [Devralma](#inheritance)
+  - [Üyeleri geçersiz kılma](#overriding-members)
+- [Arabirimler](#interfaces)
+- [Genel Türler](#generics)
+- [Temsilciler](#delegates)
+
+## <a name="classes-and-objects"></a>Sınıflar ve nesneler
+
+Koşulları *sınıfı* ve *nesne* bazen birbirlerinin yerine, ancak aslında sınıfları açıklar kullanılan *türü* nesnelerin nesneleri iken  *örnekleri* sınıf. Bu nedenle, bir nesne oluşturma işlemi olarak da adlandırılır *oluşturmada*. Blueprint benzerliği kullanarak bir sınıf plandır ve nesne bu yapılan bir binadır.
 
 Bir sınıf tanımlamak için:
 
-```vb  
+```vb
 Class SampleClass
 End Class
 ```
 
-Visual Basic adlı sınıflar açık bir sürümünü de sağlar *yapıları* büyük nesneler dizisi oluşturmak ve gerektiğinde faydalı olan çok fazla bellek için kullanmak istediğiniz değil.
+Visual Basic, hafif bir sınıflar adlandırılan sürümünü de sağlar *yapıları* yapın ve büyük nesneler dizisi oluşturmanız gerektiğinde yararlı olan çok fazla bellek için kullanmak istemiyorsanız.
 
-Bir yapı tanımlamak için:  
+Yapı tanımlamak için:
 
 ```vb
 Structure SampleStructure
@@ -76,16 +62,17 @@ End Structure
 Daha fazla bilgi için bkz.:
 
 - [Class Deyimi](../../../visual-basic/language-reference/statements/class-statement.md)
-
 - [Structure Deyimi](../../../visual-basic/language-reference/statements/structure-statement.md)
 
 ### <a name="class-members"></a>Sınıf üyeleri
-Her sınıf farklı olabilir *sınıfı üyeleri* sınıfı verileri, sınıf davranışını tanımlayan yöntemleri ve farklı sınıflar ve nesneler arasındaki iletişimi sağlamak olayları tanımlayan özelliği içerir.
 
-#### <a name="properties-and-fields"></a>Özellikleri ve alanları
-Alanları ve özellikleri bir nesne içeren bilgileri temsil eder. Bunlar okunabilir veya doğrudan ayarlamak için alanları gibi değişkenlerdir.
+Her sınıf farklı olabilir *sınıf üyeleri* sınıf verilerini, sınıf davranışını tanımlayan yöntemleri ve farklı sınıflar ve nesneler arasındaki iletişimi sağlayan olayları tanımlayan özellikler içerir.
 
-Bir alan tanımlamak için:
+#### <a name="properties-and-fields"></a>Özellikler ve alanları
+
+Alanlar ve özellikler bir nesnenin içerdiği bilgileri temsil eder. Bunlar okunabilir ve doğrudan ayarlamak için alanları gibi değişkenlerdir.
+
+Bir alanı tanımlamak için:
 
 ```vb
 Class SampleClass
@@ -93,9 +80,9 @@ Class SampleClass
 End Class
 ```
 
-Özelliklerin get ve değerleri nasıl ayarlayın veya döndürülen üzerinde daha fazla denetim sağlamak yordamları ayarlayın.
+Özellik get ve set yordamları, değerlerin nasıl ayarlanacağı veya döndürüleceği hakkında daha fazla denetim sağlar.
 
-Visual Basic, özellik değeri depolamak için özel bir alan oluşturun veya bu alan otomatik olarak arka planda oluşturun ve özellik yordamlar için temel mantığın sözde ve otomatik uygulanan özellikler kullanmak üzere sağlar.
+Visual Basic ya da özellik değerini depolamak için özel bir alan oluşturabilir veya bu alanı arka planda otomatik olarak oluşturmak ve özellik yordamları için temel mantığı sağlayan sözde ve otomatik olarak uygulanan özellikler sağlar.
 
 Otomatik uygulanan bir özellik tanımlamak için:
 
@@ -105,7 +92,7 @@ Class SampleClass
 End Class
 ```
 
-Özellik değeri depolamak için bir alan tanımlayın ve depolamak ve bunu alma için temel mantığı sağlar özellik değeri yazılırken okuma için bazı ek işlemler gerçekleştirmek ve gerekirse:
+Okuma için bazı ek işlemler gerçekleştirebilir ve yazma özellik değeri özellik değerini depolamak için bir alan tanımlayın ve depolanması ve alınması için temel mantığı sağlayan gerekiyorsa:
 
 ```vb
 Class SampleClass
@@ -123,27 +110,24 @@ Class SampleClass
 End Class
 ```
 
-Çoğu özellikleri yöntemleri ya da hem ayarlamak ve özellik değerini almak için yordamlar vardır. Ancak, okuma veya değiştirilmesini kısıtlamak için salt okunur veya salt yazılır özellikler oluşturabilirsiniz. Visual Basic'te kullandığınız `ReadOnly` ve `WriteOnly` anahtar sözcükler. Ancak, otomatik uygulanan özellikler salt okunur veya sadece yazılabilir olamaz.
+Çoğu özellikleri, yöntemleri ya da yordamlar hem ayarlamak ve özellik değerini almak için vardır. Ancak, değiştiren veya okunmalarını kısıtlamak için salt okunur veya salt yazılır özellikler oluşturabilirsiniz. Visual Basic'te kullanabileceğiniz `ReadOnly` ve `WriteOnly` anahtar sözcükleri. Ancak, otomatik uygulanan özellikler salt okunur veya salt yazılır olamaz.
 
 Daha fazla bilgi için bkz.:
-  
--   [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
-  
--   [Get Deyimi](../../../visual-basic/language-reference/statements/get-statement.md)  
-  
--   [Set Deyimi](../../../visual-basic/language-reference/statements/set-statement.md)  
-  
--   [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)  
-  
--   [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md)  
-  
-#### <a name="methods"></a>Yöntemler  
- A *yöntemi* bir nesne gerçekleştirebileceğiniz bir eylemdir.  
+
+- [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)
+- [Get Deyimi](../../../visual-basic/language-reference/statements/get-statement.md)
+- [Set Deyimi](../../../visual-basic/language-reference/statements/set-statement.md)
+- [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)
+- [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md)
+
+#### <a name="methods"></a>Yöntemler
+
+ A *yöntemi* , nesnenin gerçekleştirebileceği bir eylemdir.
 
 > [!NOTE]
->  Visual Basic'te bir yöntem oluşturmanın iki yolu vardır: `Sub` yöntemi bir değer; döndürmezse deyimi kullanılan `Function` deyimi bir yöntemi bir değer döndürürse kullanılır.
+> Visual Basic'te, bir yöntem oluşturmanın iki yolu vardır: `Sub` deyimi kullanılır; değer döndürmezse `Function` bir yöntem bir değer döndürüyorsa deyimi kullanılır.
 
-Bir sınıfın bir yöntemi tanımlamak için:
+Bir sınıfın yöntemini tanımlamak için:
 
 ```vb
 Class SampleClass
@@ -153,9 +137,9 @@ Class SampleClass
 End Class
 ```
 
-Bir sınıf çeşitli uygulamalarını olabilir veya *aşırı*, aynı yönteminin parametreleri veya parametre türleri sayısında farklılık gösterir.
+Bir sınıfta çeşitli uygulamalar olabilir veya *aşırı*, parametre sayıları veya parametre türleri içinde farklı aynı yöntemin.
 
-Bir yöntem aşırı yükleme için:
+Bir yöntemi aşırı yüklemek için:
 
 ```vb
 Overloads Sub Display(ByVal theChar As Char)
@@ -166,51 +150,52 @@ Overloads Sub Display(ByVal theInteger As Integer)
 End Sub
 ```
 
-Çoğu durumda bir sınıf tanımı içinde bir yöntem bildirin. Ancak, Visual Basic de destekler *genişletme yöntemleri* sınıfının gerçek tanımının dışında varolan bir sınıfı yöntemleri eklemek izin verir.
+Çoğu durumda, sınıf tanımında bir yöntem bildirin. Ancak, Visual Basic de destekler *genişletme yöntemleri* mevcut sınıfa sınıfın gerçek tanımı dışında yöntemler eklemenize olanak tanıyan.
 
 Daha fazla bilgi için bkz.:
 
-- [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)  
+- [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)
+- [Genişletme Yöntemleri](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
 
-- [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)  
+#### <a name="constructors"></a>Oluşturucular
 
-- [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)  
+Oluşturucular, belirli bir türde bir nesne oluşturulduğunda, otomatik olarak yürütülen sınıf yöntemleridir. Kurucular genellikle yeni nesnenin veri üyeleri başlatın. Sonra yalnızca bir sınıf oluşturulduğunda Oluşturucu çalıştırabilirsiniz. Ayrıca, Oluşturucudaki kod her zaman bir sınıftaki herhangi bir kod önce çalışır. Ancak, başka bir yöntem olduğu gibi birden çok oluşturucu aşırı yüklemeleri oluşturabilirsiniz.
 
-- [Genişletme Yöntemleri](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)  
-
-#### <a name="constructors"></a>Oluşturucular  
-Oluşturucular belirli bir türde bir nesne oluşturulduğunda, otomatik olarak yürütülen sınıfı yöntemleridir. Oluşturucular genellikle yeni nesnenin veri üyeleri başlatır. Yalnızca bir sınıf oluşturulduğunda sonra bir oluşturucu çalıştırabilirsiniz. Ayrıca, Oluşturucusu kodda, başka bir kod sınıfında önce her zaman çalışır. Ancak, başka bir yöntem için olduğu gibi aynı şekilde, birden çok Oluşturucusu aşırı oluşturabilirsiniz.
-
-Bir sınıf için bir oluşturucu tanımlamak için:
+Bir sınıf için bir kurucu tanımlamak için:
 
 ```vb
 Class SampleClass
     Sub New(ByVal s As String)
         // Add code here.
     End Sub
-End Class 
+End Class
 ```
 
 Daha fazla bilgi için bkz: [nesne ömrü: nesneleri oluşturma ve Destroyed şeklini](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).
 
 #### <a name="destructors"></a>Yıkıcılar
-Yıkıcılar sınıfların örneklerini destruct için kullanılır. .NET Framework Atık toplayıcısının ayırma ve uygulamanızda yönetilen nesneler için bellek sürümü otomatik olarak yönetir. Ancak, uygulamanızın oluşturduğu herhangi yönetilmeyen kaynakları temizlemek için Yıkıcılar hala gerekebilir. Bir sınıf için yalnızca bir yıkıcı olabilir.
 
-Yok ediciler ve .NET Framework atık toplama hakkında daha fazla bilgi için bkz: [çöp toplama](../../../standard/garbage-collection/index.md).
+Yıkıcılar, sınıfların örneklerini yok etmek üzere kullanılır. .NET Framework, atık toplayıcı sağlanmasını ve ayrılmasını uygulamanızda yönetilen nesneler için bellek otomatik olarak yönetir. Ancak, Yıkıcılar uygulamanızın oluşturduğu herhangi yönetilmeyen kaynakları temizlemek için yine de gerekebilir. Bir sınıf için yalnızca bir yıkıcı olabilir.
+
+Yok ediciler ve çöp toplama .NET Framework'teki hakkında daha fazla bilgi için bkz: [çöp toplama](../../../standard/garbage-collection/index.md).
 
 #### <a name="events"></a>Olaylar
-Bir sınıf olayları etkinleştirin veya diğer sınıflar bildirmek için nesne veya nesnelerin çeken bir şey olduğunda oluşur. Olay gönderir (veya oluşturur) sınıf adlı *yayımcı* ve olay alın (veya ele) sınıfları adlı *aboneleri*. Olaylar hakkında daha fazla bilgi için nasıl oluşturulur ve işlenmiş, bkz: [olayları](../../../standard/events/index.md).
 
-- Olayları bildirme için kullanmak [Event deyimi](../../../visual-basic/language-reference/statements/event-statement.md).
+Bir sınıf olayları etkinleştirin veya nesneyi diğer sınıfları veya nesneleri ilgilendiğiniz bir şeyler olduğunda gerçekleşir. Olay gönderir (veya harekete geçiren) sınıf adlı *yayımcı* ve olay alma (veya tanıtıcı) sınıflar adlandırılan *aboneleri*. Olaylar hakkında daha fazla bilgi için nasıl oluştukları ve işlendikleri bkz [olayları](../../../standard/events/index.md).
+
+- Olayları bildirmek için kullanın [Event deyimi](../../../visual-basic/language-reference/statements/event-statement.md).
 
 - Olayları yükseltmek için kullanmak [RaiseEvent deyimi](../../../visual-basic/language-reference/statements/raiseevent-statement.md).
 
-- Olay işleyicileri bildirim temelli bir yolunu kullanarak belirtmek için kullanın [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md) deyimi ve [işler](../../../visual-basic/language-reference/statements/handles-clause.md) yan tümcesi.
+- Bildirim temelli bir yöntemini kullanarak olay işleyicileri belirtmek için kullanın [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md) deyimi ve [işleme](../../../visual-basic/language-reference/statements/handles-clause.md) yan tümcesi.
 
-- Dinamik olarak eklemek, kaldırmak ve olayla ilişkili olay işleyicisini değiştirin yapabiliyor olmanız için kullanmak [AddHandler deyimi](../../../visual-basic/language-reference/statements/addhandler-statement.md) ve [RemoveHandler deyimi](../../../visual-basic/language-reference/statements/removehandler-statement.md) ile birlikte [AddressOf İşleç](../../../visual-basic/language-reference/operators/addressof-operator.md).
+- Dinamik olarak ekleme, kaldırma ve bir olay ile ilişkili olay işleyicisini değiştirme yapabilmek için kullanmak [AddHandler deyimi](../../../visual-basic/language-reference/statements/addhandler-statement.md) ve [RemoveHandler deyimi](../../../visual-basic/language-reference/statements/removehandler-statement.md) ile birlikte [AddressOf İşleç](../../../visual-basic/language-reference/operators/addressof-operator.md).
 
-#### <a name="nested-classes"></a>İç içe geçmiş sınıflar  
-Başka bir sınıfın içinde tanımlanmış bir sınıf olarak adlandırılan *iç içe geçmiş*. Varsayılan olarak, iç içe geçmiş sınıf özeldir.
+#### <a name="nested-classes"></a>İç içe geçmiş sınıflar
+
+Başka bir sınıfın içinde tanımlanan bir sınıfa *iç içe geçmiş*. Varsayılan olarak, iç içe geçmiş özel sınıftır.
 
 ```vb
 Class Container
@@ -220,35 +205,37 @@ Class Container
 End Class
 ```
 
-İç içe geçmiş sınıf örneği oluşturmak için nokta tarafından takip ve iç içe geçmiş sınıf adına göre ve ardından kapsayıcı sınıfın adını kullanın:
+İç içe geçmiş sınıfının bir örneğini oluşturmak için kapsayıcı sınıfının arkasına bir nokta koyun ve sonra ardından iç içe geçmiş sınıf adı adını kullanın:
 
 ```vb
 Dim nestedInstance As Container.Nested = New Container.Nested()
 ```
 
-### <a name="access-modifiers-and-access-levels"></a>Erişim değiştiricileri ve erişim düzeylerini  
-Tüm sınıflar ve sınıf üyeleri sağladıkları diğer sınıflara kullanarak hangi erişim düzeyi belirtebilirsiniz *erişim değiştiricileri*.
+### <a name="access-modifiers-and-access-levels"></a>Erişim değiştiricileri ve erişim düzeyleri
 
-Aşağıdaki erişim değiştiricileri kullanılabilir:
+Tüm sınıflar ve sınıf üyeleri sağlamaları için diğer sınıflar kullanılarak hangi erişim düzeyini belirtebilirsiniz *erişim değiştiricilerine*.
+
+Aşağıdaki erişim değiştiriciler kullanılabilir:
 
 |Visual Basic değiştiricisi|Tanım|
 |---------------------------|----------------|
-|[Public](../../../visual-basic/language-reference/modifiers/public.md)|Tür veya üye, başka bir kod aynı bütünleştirilmiş kodda ya da başvurduğu başka bir derleme tarafından erişilebilir.|
-|[Private](../../../visual-basic/language-reference/modifiers/private.md)|Tür veya üye yalnızca aynı sınıfta kodu tarafından erişilebilir.|
-|[Protected](../../../visual-basic/language-reference/modifiers/protected.md)|Tür veya üye yalnızca kodu aynı sınıfın veya türetilmiş bir sınıf tarafından erişilebilir.|
-|[Friend](../../../visual-basic/language-reference/modifiers/friend.md)|Tür veya üye, herhangi bir kod aynı bütünleştirilmiş kodda değiştirebilir, ancak başka bir derleme tarafından erişilebilir.|
-|`Protected Friend`|Tür veya üye aynı bütünleştirilmiş kod veya başka bir derlemede herhangi bir türetilmiş sınıf tarafından erişilebilir.|
+|[Public](../../../visual-basic/language-reference/modifiers/public.md)|Türe veya üyeye aynı derlemenin veya ona başvuran başka bir derleme içindeki diğer kodlardan tarafından erişilebilir.|
+|[Private](../../../visual-basic/language-reference/modifiers/private.md)|Türe veya üyeye aynı sınıftaki kod tarafından yalnızca erişilebilir.|
+|[Protected](../../../visual-basic/language-reference/modifiers/protected.md)|Türe veya üyeye aynı sınıftaki veya türetilmiş bir sınıf içinde kod tarafından yalnızca erişilebilir.|
+|[Friend](../../../visual-basic/language-reference/modifiers/friend.md)|Türe veya üyeye aynı derlemedeki ancak farklı derlemeyle herhangi bir kod tarafından erişilebilir.|
+|`Protected Friend`|Türe veya üyeye aynı derlemedeki kod ile veya başka bir derlemedeki türetilmiş sınıfla erişilebilir.|
 
-Daha fazla bilgi için bkz: [erişim düzeyini Visual Basic'te](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
+Daha fazla bilgi için [erişim düzeyini Visual Basic'te](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
 
-### <a name="instantiating-classes"></a>Örnek oluşturma sınıfları  
-Nesne oluşturmak için bir sınıf örneği veya bir sınıf örneği oluşturmak gerekir.
+### <a name="instantiating-classes"></a>Sınıf oluşturma
+
+Bir nesne oluşturmak için bir sınıf örneği başlatmanız veya sınıf örneği oluşturmanız gerekir.
 
 ```vb
 Dim sampleObject as New SampleClass()
 ```
 
-Bir sınıf örneği sonra değerleri örneğin özellikleri ve alanları atayın ve sınıf yöntemlerini çağırın.
+Bir sınıf başlatıldıktan sonra Örneğin özelliklerine ve alanlarına değerler atayın ve sınıf yöntemini çağırabilirsiniz.
 
 ```vb
 ' Set a property value.
@@ -257,7 +244,7 @@ sampleObject.SampleProperty = "Sample String"
 sampleObject.SampleMethod()
 ```
 
-Sınıf örnek oluşturma işlemi sırasında özellikleri değerleri atamak için nesne başlatıcıları kullanın:
+Sınıf örnekleme işlemi sırasında özellikleri değerleri atamak için nesne başlatıcıları kullanın:
 
 ```vb
 Dim sampleObject = New SampleClass With
@@ -267,36 +254,36 @@ Dim sampleObject = New SampleClass With
 Daha fazla bilgi için bkz.:
 
 - [New İşleci](../../../visual-basic/language-reference/operators/new-operator.md)
-
 - [Nesne Başlatıcıları: Adlandırılmış ve Anonim Tipler](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 
-###  <a name="Static"></a> Paylaşılan sınıflar ve üyeleri  
- Bir paylaşılan sınıfı bir özellik, yordam veya bir sınıfın tüm örnekleri tarafından paylaşılan alan üyesidir.  
-  
- Paylaşılan bir üyeye tanımlamak için:  
-  
-```vb  
-Class SampleClass  
-    Public Shared SampleString As String = "Sample String"  
-End Class  
-```  
-  
- Paylaşılan üyeye erişmek için bu sınıfın bir nesnesi oluşturmadan sınıfın adını kullanın:  
-  
-```vb  
-MsgBox(SampleClass.SampleString)  
-```  
-  
- Visual Basic'te paylaşılan modülleri üyeleri yalnızca paylaşılan ve örneği oluşturulamıyor. Paylaşılan üyeler da paylaşılmayan özellikleri, alan veya yöntem erişemiyor  
-  
- Daha fazla bilgi için bkz.:  
-  
--   [Shared](../../../visual-basic/language-reference/modifiers/shared.md)  
-  
--   [Module Deyimi](../../../visual-basic/language-reference/statements/module-statement.md)  
-  
-### <a name="anonymous-types"></a>Anonim türler  
-Anonim türler veri türü için bir sınıf tanımı yazmadan nesneleri oluşturmak etkinleştirin. Bunun yerine, derleyici bir sınıf sizin için oluşturur. Sınıf kullanılabilir adı yok ve nesne bildirme belirttiğiniz özellikler içerir.
+### <a name="shared-classes-and-members"></a>Paylaşılan sınıflar ve Üyeler
+
+ Paylaşılan bir sınıfın üyesi bir özellik, yordam veya bir sınıfın tüm örnekleri tarafından paylaşıldığını alan var.
+
+ Paylaşılan bir üye tanımlamak için:
+
+```vb
+Class SampleClass
+    Public Shared SampleString As String = "Sample String"
+End Class
+```
+
+ Paylaşılan üyeye erişmek için sınıfın adını, bu sınıfın bir nesnesi oluşturmadan kullanın:
+
+```vb
+MsgBox(SampleClass.SampleString)
+```
+
+ Visual Basic'te paylaşılan modülleri, üyeleri yalnızca paylaşılan ve örnekleri oluşturulamaz. Paylaşılan üyeleri ayrıca paylaşılmayan özellikleri, alanlara veya yöntemlere erişemez
+
+ Daha fazla bilgi için bkz.:
+
+- [Shared](../../../visual-basic/language-reference/modifiers/shared.md)
+- [Module Deyimi](../../../visual-basic/language-reference/statements/module-statement.md)
+
+### <a name="anonymous-types"></a>Anonim türler
+
+Anonim türler nesne veri türü için bir sınıf tanımı yazmaya gerek kalmadan oluşturmanıza olanak sağlar. Bunun yerine, derleyici bir sınıf sizin için oluşturur. Sınıfın kullanılabilir adı yok ve nesneyi bildirirken belirttiğiniz özellikleri içeriyor.
 
 Anonim bir türün bir örneğini oluşturmak için:
 
@@ -309,12 +296,13 @@ Dim sampleObject =
 Daha fazla bilgi için bkz: [anonim türler](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
 
 ## <a name="inheritance"></a>Devralma
-Devralma yeniden kullanır, genişletir ve başka bir sınıf içinde tanımlanan davranışını değiştiren yeni bir sınıf oluşturmanıza olanak sağlar. Üyeleri devralındığı sınıfı adlı *temel sınıfı*, bu üyeler devralan sınıf adı verilen ve *türetilmiş sınıf*. Ancak, Visual Basic'te tüm sınıflar örtük olarak devralınmalıdır <xref:System.Object> .NET sınıf hiyerarşisi destekleyen ve tüm sınıfları için alt düzey hizmetleri sağlayan sınıf.
+
+Devralma, başka bir sınıfta tanımlanan davranışı değiştirir kullanır ve genişleten yeni bir sınıf oluşturmanıza olanak sağlar. Üyeleri devralınan sınıf *temel sınıfı*, ve bu üyeleri devralan sınıf *türetilmiş sınıf*. Ancak, Visual Basic'te tüm sınıflar örtük olarak devralınacak <xref:System.Object> .NET sınıf hiyerarşisini destekleyen ve tüm sınıflara alt düzey hizmetler sağlayan sınıf.
 
 > [!NOTE]
->  Visual Basic birden çok devralma desteklemiyor. Diğer bir deyişle, türetilmiş bir sınıf için yalnızca bir temel sınıf belirtebilirsiniz.
+> Visual Basic, birden çok devralmayı desteklemez. Diğer bir deyişle, türetilmiş bir sınıf için yalnızca bir temel sınıf belirtebilirsiniz.
 
-Bir taban sınıftan devralın için:
+Temel sınıfından devralmak için:
 
 ```vb
 Class DerivedClass
@@ -322,16 +310,16 @@ Class DerivedClass
 End Class
 ```
 
-Varsayılan olarak tüm sınıflar devralınabilir. Ancak, bir sınıfın temel sınıf olarak kullanılmamalıdır veya yalnızca bir temel sınıf olarak kullanılan bir sınıf oluşturun olup olmadığını belirtebilirsiniz.
+Varsayılan olarak, tüm sınıflar devralınabilir. Ancak, bir sınıfın temel sınıf olarak kullanılmamalıdır veya yalnızca temel sınıf olarak kullanılan bir sınıf oluşturmak olup olmadığını belirtebilirsiniz.
 
-Bir sınıfın temel sınıf olarak kullanılan belirtmek için:
+Bir sınıfın temel sınıf olarak kullanılamayacağını belirtmek için:
 
 ```vb
 NotInheritable Class SampleClass
 End Class
 ```
 
-Sınıfı yalnızca bir temel sınıf olarak kullanılabilir ve başlatılamaz belirtmek için:
+Bir sınıf yalnızca temel sınıf olarak kullanılabilecek ve başlatılamayacak belirtmek için:
 
 ```vb
 MustInherit Class BaseClass
@@ -341,28 +329,28 @@ End Class
 Daha fazla bilgi için bkz.:
 
 - [Inherits Deyimi](../../../visual-basic/language-reference/statements/inherits-statement.md)
-
 - [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)
-
 - [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)
 
 ### <a name="overriding-members"></a>Üyeleri geçersiz kılma
-Varsayılan olarak, türetilmiş bir sınıf tüm üyelerin kendi taban sınıfından devralıyor. Devralınan üye davranışını değiştirmek istiyorsanız, bunu geçersiz kılmanız gerekir. Diğer bir deyişle, yeni bir uygulama yöntemi, özelliği veya olay türetilen sınıfta tanımlayabilirsiniz.
 
-Aşağıdaki değiştiricileri özellikleri ve yöntemleri nasıl geçersiz kılınır denetlemek için kullanılır:
+Varsayılan olarak, türetilmiş bir sınıf tüm üyelerini kendi temel sınıfından devralır. Devralınan üye davranışını değiştirmek istiyorsanız, onu geçersiz kılmanız gerekir. Diğer bir deyişle, türetilmiş bir sınıf içindeki yöntemin, özelliğin veya olayın yeni bir uygulamasını tanımlayabilirsiniz.
+
+Özellikleri ve yöntemleri nasıl geçersiz kılınacağını denetlemek için aşağıdaki değiştiriciler kullanılır:
 
 |Visual Basic değiştiricisi|Tanım|
 |---------------------------|----------------|
-|[Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)|Türetilen bir sınıfta geçersiz kılınmak üzere sınıf üyesine sağlar.|
-|[Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)|Taban sınıf içinde tanımlı sanal (geçersiz kılınabilir) üyesi geçersiz kılar.|
-|[NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)|Türetilen bir sınıfta geçersiz üye engeller.|
-|[MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)|Gerektiren türetilen bir sınıfta geçersiz kılınmak üzere bir sınıf üyesi.|
-|[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)|Bir taban sınıftan devralınan üye gizler|
+|[Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)|Bir sınıf üyesinin türetilmiş bir sınıfta geçersiz kılınmasına izin verir.|
+|[Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)|Temel sınıfta tanımlanan sanal bir (geçersiz kılınabilir) üyeyi geçersiz kılar.|
+|[NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)|Üye devralınan bir sınıfta kılınmasını önler.|
+|[MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)|Gerektiren bir sınıf üyesinin derlenen sınıfta geçersiz kılınacak.|
+|[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)|Bir temel sınıftan devralınan üyeyi gizler|
 
 ## <a name="interfaces"></a>Arabirimler
-Sınıfları gibi arabirimler özellikleri, yöntemleri ve olayları kümesini tanımlar. Ancak sınıflarından farklı olarak, uygulama arabirimleri sağlamaz. Bunlar sınıfları tarafından uygulanan ve sınıflardan ayrı varlıklar olarak tanımlanır. Tam olarak tanımlandığı şekilde bir arabirimini uygulayan bir sınıf her açıdan bu arabirimi uygulamalıdır içeren bir sözleşme bir arabirimi temsil eder.
 
-Bir arabirim tanımlamak için:
+Sınıflar gibi arabirimler, özellikleri, yöntemleri ve olayları kümesi tanımlarsınız. Ancak, sınıflardan farklı olarak, arabirimler uygulama sağlamaz. Bunlar sınıfları tarafından uygulanır ve sınıflardan ayrı varlıklar olarak tanımlanır. Tam olarak tanımlandığı şekilde bir arabirimi uygulayan bir sınıf, o arabirimi her yönüyle uygulamalıdır bir arabirim bir sözleşmeyi temsil eder.
+
+Arabirim tanımlamak için:
 
 ```vb
 Public Interface ISampleInterface
@@ -370,7 +358,7 @@ Public Interface ISampleInterface
 End Interface
 ```
 
-Bir sınıfta bir arabirim uygulamak için:
+Bir sınıf içinde arabirim uygulamak için:
 
 ```vb
 Class SampleClass
@@ -383,14 +371,13 @@ End Class
 
 Daha fazla bilgi için bkz.:
 
-- [Arabirimler](../../../visual-basic/programming-guide/language-features/interfaces/index.md)  
-
-- [Interface Deyimi](../../../visual-basic/language-reference/statements/interface-statement.md)  
-
-- [Implements Deyimi](../../../visual-basic/language-reference/statements/implements-statement.md)  
+- [Arabirimler](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+- [Interface Deyimi](../../../visual-basic/language-reference/statements/interface-statement.md)
+- [Implements Deyimi](../../../visual-basic/language-reference/statements/implements-statement.md)
 
 ## <a name="generics"></a>Genel Türler
-Sınıflar, yapılar, arabirimler ve .NET yöntemleri dahil edebileceğiniz *tür parametrelerindeki* kullanan depolamak veya nesne türlerini tanımlar. Genel türler en yaygın örneği, bir koleksiyonda depolanan nesnelerin türü belirtebileceğiniz koleksiyonudur.  
+
+Sınıflar, yapılar, arabirimler ve yöntemler .NET içerebilir *tür parametrelerindeki* bunlar depolayabildikleri veya kullanabildikleri nesnelerin türlerini tanımlayan. Genel türlerin yararları en yaygın örnek, bir koleksiyonda depolanacak nesnelerin türünü belirleyebileceğiniz koleksiyonudur.
 
 Genel bir sınıf tanımlamak için:
 
@@ -400,7 +387,7 @@ Class SampleGeneric(Of T)
 End Class
 ```
 
-Genel bir sınıf örneği oluşturmak için:
+Bir genel sınıfın bir örneğini oluşturmak için:
 
 ```vb
 Dim sampleObject As New SampleGeneric(Of String)
@@ -409,23 +396,23 @@ sampleObject.Field = "Sample string"
 
 Daha fazla bilgi için bkz.:
 
-- [Genel Türler](~/docs/standard/generics/index.md)
-
+- [Genel Türler](../../../standard/generics/index.md)
 - [Visual Basic'de genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 
 ## <a name="delegates"></a>Temsilciler
- A *temsilci* yöntem imzası tanımlar türüdür ve herhangi bir yöntem başvuru ile uyumlu bir imzası sağlayabilir. Çağırma (çağrı yöntemi temsilci aracılığıyla veya). Temsilciler, yöntemleri bağımsız değişkenler olarak diğer yöntemlere geçirmek için kullanılır.
+
+ A *temsilci* , yöntem imzasını tanımlayan bir türdür ve uyumlu bir imza ile herhangi bir yönteme başvuru sağlayabilir. Çağırma (çağrı yöntemi temsilci aracılığıyla veya). Temsilciler, yöntemleri bağımsız değişkenler olarak diğer yöntemlere geçirmek için kullanılır.
 
 > [!NOTE]
->  Olay işleyicileri, temsilciler aracılığıyla çağrılan yöntemlerden başka bir şey değildir. Olay işlemede kullanma hakkında daha fazla bilgi için bkz: [olayları](../../../standard/events/index.md).
+> Olay işleyicileri, temsilciler aracılığıyla çağrılan yöntemlerden başka bir şey değildir. Temsilcileri olay işlemede kullanma hakkında daha fazla bilgi için bkz. [olayları](../../../standard/events/index.md).
 
-Bir temsilciyi oluşturmak için:
+Temsilci oluşturmak için:
 
 ```vb
 Delegate Sub SampleDelegate(ByVal str As String)
 ```
 
-Temsilci tarafından belirtilen imza eşleşen bir yöntem başvuru oluşturmak için:
+Temsilci tarafından belirtilen imzayla eşleşen bir yönteme başvuru oluşturmak için:
 
 ```vb
 Class SampleClass
@@ -444,10 +431,9 @@ End Class
 Daha fazla bilgi için bkz.:
 
 - [Temsilciler](../../../visual-basic/programming-guide/language-features/delegates/index.md)
-
 - [Delegate Deyimi](../../../visual-basic/language-reference/statements/delegate-statement.md)
-
 - [AddressOf İşleci](../../../visual-basic/language-reference/operators/addressof-operator.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
- [Visual Basic programlama kılavuzu](../../../visual-basic/programming-guide/index.md)
+
+- [Visual Basic programlama kılavuzu](../../../visual-basic/programming-guide/index.md)

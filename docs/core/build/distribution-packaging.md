@@ -4,12 +4,12 @@ description: Paketleme hakkında bilgi edinin adı ve sürümü .NET Core dağı
 author: bleroy
 ms.author: mairaw
 ms.date: 06/28/2017
-ms.openlocfilehash: df1ba6a93106cd6b3ceafa93b7c548287878c3fe
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 41e8729d3058c2e3e1ea1cab9a8f28b3062bb93c
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840501"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297224"
 ---
 # <a name="net-core-distribution-packaging"></a>.NET core dağıtımı paketleme
 
@@ -46,7 +46,7 @@ Yüklendiğinde, .NET Core gibi dosya sistemi layed kullanıma çeşitli bileşe
 
 - (1) **dotnet** ana bilgisayar (diğer adıyla "Karıştırıcı") iki ayrı rol yok: bir uygulamayı başlatmak için bir çalışma zamanı etkinleştirme ve komutları ona gönderileceği bir SDK'yı etkinleştirin. Konağın yerel yürütülebilir olduğundan (`dotnet.exe`).
 
-Tek bir ana bilgisayar olsa da, diğer bileşenlerin çoğu tutulan dizinler (2,3,5,6) aittir. Yüklü yan yana olduğundan birden çok sürümü bu sistemde mevcut olabilir.
+Tek bir ana bilgisayar olsa da, diğer bileşenlerin çoğu tutulan dizinler (2,3,5,6) aittir. Başka bir deyişle, yüklü yan yana çünkü birden çok sürümü sistemde olabilir.
 
 - (2) **konak/fxr/\<fxr sürüm >** ana bilgisayar tarafından kullanılan çerçeve çözümlemesi mantığı içerir. Ana bilgisayar yüklü en son hostfxr kullanır. Hostfxr uygun çalışma zamanı seçmek için bir .NET Core uygulaması yürütülürken sorumludur. Örneğin, .NET Core 2.0.0 2.0.5 kullanacak oluşturulmuş bir uygulamada kullanılabilir olduğunda çalışma zamanı. Benzer şekilde, hostfxr uygun SDK'sı, geliştirme sırasında seçer.
 

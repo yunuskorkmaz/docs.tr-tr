@@ -3,12 +3,12 @@ title: Standart .NET olay desenleri
 description: .NET olay desenleri ve abone standart olay kaynakları oluşturmak ve kodunuzun içinde standart olayları işleme hakkında daha fazla bilgi edinin.
 ms.date: 06/20/2016
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.openlocfilehash: 0b10c440f4d05533032aa94819ec879f6a1ca2a4
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 16a091dabe34a064ab3ee65a6d9f3e0ab36f1db4
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266777"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297042"
 ---
 # <a name="standard-net-event-patterns"></a>Standart .NET olay desenleri
 
@@ -117,7 +117,7 @@ EventHandler<FileFoundArgs> onFileFound = (sender, eventArgs) =>
 
 ## <a name="adding-another-event-declaration"></a>Başka bir olay bildirimi ekleme
 
-Şimdi bir daha fazla özellik eklemek ve diğer dil deyimleri olayları gösterir. Bir aşırı yüklemesini ekleyelim `Search()` tüm alt dizinlerde dosyaları saldırılar trafiğiyle yöntemi.
+Şimdi bir daha fazla özellik eklemek ve diğer dil deyimleri olayları gösterir. Bir aşırı yüklemesini ekleyelim `Search` tüm alt dizinlerde dosyaları saldırılar trafiğiyle yöntemi.
 
 Bu, bir dizinde birden çok alt dizini ile uzun bir işlem olarak alabilir. Her yeni dizin araması başladığında bir olayı ekleyelim. Bu, ilerlemeyi izlemek ve ilerleme için kullanıcıyı güncelleştirmek aboneleri sağlar. Şu ana kadar oluşturulmuş tüm örnekleri ortak. Bu, bir olay olalım. İç bağımsız değişkenleri de kullanılan türleri de yapabileceğiniz anlamına gelir.
 
@@ -133,7 +133,7 @@ Ardından, olay tanımlayın. Bu kez, farklı bir sözdizimi kullanırsınız. A
 
 Birçok yolla kod burada alan olay tanımları için derleyici kodu oluşturur yansıtmalar Yaz, daha önce gördünüz. İçin kullanılan çok benzer bir sözdizimi kullanarak olay oluşturma [özellikleri](properties.md). İşleyiciler, farklı adlar olduğunu fark edeceksiniz: `add` ve `remove`. Bu olaya abone veya olayın aboneliğini kaldırmak için çağrılır. Ayrıca olay değişkeni depolamak için özel destek alanı bildirmeniz gerekir dikkat edin. Null olarak başlatılır.
 
-Ardından, alt dizinleri erişir ve her iki olayı harekete Search() yöntemi aşırı yüklemesini ekleyelim. Bunu yapmanın en kolay yolu, tüm dizinlerde arama istediğinizi belirtmek için varsayılan bağımsız değişken kullanmaktır:
+Ardından, aşırı yüklemesini ekleyelim `Search` alt dizinleri erişir ve her iki olayı harekete yöntemi. Bunu yapmanın en kolay yolu, tüm dizinlerde arama istediğinizi belirtmek için varsayılan bağımsız değişken kullanmaktır:
 
 [!code-csharp[SearchImplementation](../../samples/csharp/events/Program.cs#FinalImplementation "Implementation to search directories")]
 

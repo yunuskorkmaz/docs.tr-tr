@@ -3,17 +3,17 @@ title: API ağ geçitleri Ocelot ile uygulama
 description: API ağ geçitleri ile Ocelot uygular ve kapsayıcı tabanlı bir ortamda Ocelot kullanmayı öğrenin.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 07/03/2018
-ms.openlocfilehash: 26b3c3510aa06fb1c7aa4c3a44f23c8e526fe60c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 10/02/2018
+ms.openlocfilehash: 69b4e36d085c9121cf6d70e50214a81bb649664b
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200039"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297406"
 ---
-# <a name="implementing-api-gateways-with-ocelot"></a>API ağ geçitleri Ocelot ile uygulama
+# <a name="implement-api-gateways-with-ocelot"></a>API ağ geçitleri ile Ocelot uygular
 
-Mikro hizmet başvurusu [hizmetine](https://github.com/dotnet-architecture/eShopOnContainers) kullanıyor [Ocelot](https://github.com/ThreeMammals/Ocelot) Ocelot basit ve basit API, mikro hizmetlerin yanı sıra herhangi bir yere dağıtabilirsiniz ağ geçidi olduğundan / kapsayıcı hizmetine tarafından kullanılan aşağıdaki ortamları hiçbirini olduğu gibi.
+Mikro hizmet başvurusu [hizmetine](https://github.com/dotnet-architecture/eShopOnContainers) kullanıyor [Ocelot](https://github.com/ThreeMammals/Ocelot), basit ve basit API dağıtabileceğiniz herhangi bir yere, mikro hizmetler/kapsayıcılar ile birlikte olduğu gibi ağ geçidi herhangi bir hizmetine tarafından kullanılan aşağıdaki ortamları.
 
 - Docker konağı, yerel geliştirme PC, şirket içinde veya bulutta.
 - Kubernetes kümenizi şirket içinde veya Azure Kubernetes Service (AKS) gibi yönetilen bulut.
@@ -26,7 +26,7 @@ Aşağıdaki Mimari diyagram, API ağ geçitleri ile Ocelot hizmetine içinde na
 
 ![istemci uygulamaları, mikro hizmetler ve API ağ geçitleri arasında gösteren hizmetine mimarisi diyagramı](./media/image28.png)
 
-**Şekil 8-27.** API ağ geçitleri ile hizmetine mimarisi
+**Şekil 6-28**. API ağ geçitleri ile hizmetine mimarisi
 
 Bu diyagram, tek bir Docker konağı ya da geliştirme PC "Windows için Docker" veya "Docker için Mac" tüm uygulamayı nasıl dağıtılacağını gösterir. Tüm orchestrator dağıtma oldukça benzer olacaktır ancak diyagramında herhangi bir kapsayıcı orchestrator'da genişletilmiş. 
 
@@ -36,29 +36,29 @@ Diyagramda da olduğunu fark edebilirsiniz gibi birkaç API ağ geçidine sahip 
 
 Tek bir uygulamanın parçası tüm mikro hizmetler halinde birleştirebilir birkaç geliştirme takımı tarafından güncelleştirilmesi için tek bir nokta açardı bir tek tek parça API Gateway tablonuz varsa.
 
-Çok daha tasarımında giderek, bazı durumlarda ayrıntılı bir API ağ geçidi de bir tek iş mikro hizmet seçilen mimarisine bağlı olarak sınırlı olabilir. API ağ geçidinin sınırları iş veya etki alanı tarafından dikte sahip daha iyi bir tasarım elde etmenize yardımcı olur. 
+Çok daha tasarımında giderek, bazı durumlarda ayrıntılı bir API ağ geçidi de bir tek iş mikro hizmet seçilen mimarisine bağlı olarak sınırlı olabilir. API ağ geçidinin sınırları iş veya etki alanı tarafından dikte sahip daha iyi bir tasarım elde etmenize yardımcı olur.
 
 Örneğin, kavramı ayrıntılı bir API ağ geçidi, bir kullanıcı Arabirimi oluşturma hizmetine benzer olduğundan ince ayrıntılı olmasını API ağ geçidi katmanındaki üzerinde mikro hizmetler, alan daha gelişmiş bileşik kullanıcı Arabirimi uygulamalar için özellikle kullanışlı olabilir. 
 
-Kullanıcı Arabirimi oluşturma hizmetleri hakkında daha fazla bilgi için bkz. [üzerinde mikro hizmet tabanlı bileşik kullanıcı Arabirimi oluşturma](https://docs.microsoft.com/dotnet/standard/microservices-architecture/architect-microservice-container-applications/microservice-based-composite-ui-shape-layout).
+Biz önceki bölümde daha fazla ayrıntıya delve [üzerinde mikro hizmet tabanlı bileşik kullanıcı Arabirimi oluşturma](../architect-microservice-container-applications/microservice-based-composite-ui-shape-layout.md).
 
 Güvenebileceğinizdir özel olarak geliştirilmiş bir API ağ geçidi kullanarak birçok Orta ve büyük-ölçekli uygulamalar için genellikle iyi bir yaklaşım olduğu gibi ancak tek tek parça toplayıcısı veya benzersiz merkezi özel API ağ geçidi olarak değil, API ağ geçidi, birden çok bağımsız izin vermesi dışında otonom mikro hizmetler oluşturma birkaç geliştirme ekipleri için yapılandırma alanları.
 
-### <a name="sample-microservicescontainers-to-reroute-through-the-api-gateways"></a>Örnek mikro hizmetler / API ağ geçitleri yönlendirecek şekilde kapsayıcıları
+### <a name="sample-microservicescontainers-to-re-route-through-the-api-gateways"></a>Örnek mikro hizmetler / API ağ geçitleri yeniden yönlendirmek için kapsayıcılar
 
-Örneğin, `eShopOnContainers` yaklaşık altı iç mikro hizmet aşağıdaki görüntüde gösterildiği gibi API ağ geçitleri yayımlanmasını sahip türleri vardır.
- 
-![](./media/image29.png)
+Örneğin, hizmetine yaklaşık altı iç mikro hizmet-API ağ geçitleri yayımlanmasını aşağıdaki görüntüde gösterildiği gibi sahip türleri vardır.
 
-**Şekil 8-28.** Mikro hizmet klasörlerinde hizmetine çözümünü Visual Studio'da
+![Yalnızca sepet, katalog, konum, pazarlama, sıralama ve ödeme mikro hizmetler API ağ geçidi üzerinden yayımlanır.](./media/image29.png)
 
-Kimlik hizmetiyle ilgili API ağ geçidi dışında bırakılır tasarım ilgilendiriyor sistemde yalnızca çapraz olduğundan yönlendirme ancak Ocelot ile da rerouting listeleri bir parçası olarak dahil etmek mümkündür.
+**Şekil 6-29**. Mikro hizmet klasörlerinde hizmetine çözümünü Visual Studio'da
 
-Kod nedeniyle söyleyebilirsiniz gibi bu hizmetler şu anda ASP.NET Core Web API Hizmetleri olarak uygulanır. Bir mikro hizmet Kataloğu mikro hizmet kodu gibi odaklanalım.
+Kimlik hizmeti hakkında tasarımında, API ile Ocelot da rerouting listeleri bir parçası olarak dahil etmek mümkündür ancak, çapraz önemli bir sistemde olduğundan yönlendirme ağ geçidi dışında bırakılır.
 
-![](./media/image30.png)
+Koddan söyleyebilirsiniz gibi bu hizmetler şu anda ASP.NET Core Web API Hizmetleri olarak uygulanır. Bir mikro hizmet Kataloğu mikro hizmet kodu gibi odaklanalım.
 
-**Şekil 8-29.** Örnek Web API'si mikro hizmet (katalog mikro hizmet)
+![Çözüm Gezgini görünümü Catalog.API proje.](./media/image30.png)
+
+**Şekil 6-30**. Örnek Web API'si mikro hizmet (katalog mikro hizmet)
 
 Tipik bir ASP.NET Core Web API'si projesi birkaç denetleyicileriyle Kataloğu mikro hizmetidir ve yöntemleri aşağıdaki kodda ister görebilirsiniz.
 
@@ -85,9 +85,9 @@ public async Task<IActionResult> GetItemById(int id)
     return NotFound();
 }
 ```
-HTTP isteği, bu türde bir mikro hizmet veritabanı yanı sıra başka bir işlem erişme C# kod çalışan sona erecek.
+HTTP isteği, tür çalışan sona erecek C# kod mikro hizmet veritabanı ve gerekli herhangi bir ek eylem erişme.
 
-Kapsayıcıları, yerel geliştirme bilgisayar (yerel Docker konağı) dağıtıldığında mikro hizmet URL'sine açıdan her mikro hizmet ait kapsayıcı genellikle bağlantı noktası 80, aşağıdaki dockerfile olduğu gibi ilgili dockerfile içinde belirtilen bir iç bağlantı noktası, her zaman vardır:
+Mikro hizmet URL'si ile ilgili kapsayıcıları, yerel geliştirme bilgisayar (yerel Docker konağı) dağıtıldığında, her bir mikro hizmetin ait kapsayıcı her zaman dahili bir bağlantı vardır. (genellikle, bağlantı noktası 80) aşağıdaki dockerfile olduğu gibi ilgili dockerfile içinde belirtilen:
 
 ```
 FROM microsoft/aspnetcore:2.0.5 AS base
@@ -95,9 +95,11 @@ WORKDIR /app
 EXPOSE 80
 ```
 
-Bağlantı noktası 80 kodda gösterildiği bir Docker konağı içinde iç olduğundan istemci uygulamalar tarafından erişilemiyor. İstemci uygulamaları ile dağıtım yaparken yayımlanan yalnızca dış bağlantı noktalarına (varsa) erişebilir `docker-compose`.
+Bağlantı noktası 80 kodda gösterildiği bir Docker konağı içinde iç olduğundan istemci uygulamalar tarafından erişilemiyor. 
 
-Dış bağlantı noktalarından bir üretim ortamına dağıtım yaparken yayımlanması gerekir. API ağ geçidi istemci uygulamalar ve mikro hizmetler arasında doğrudan iletişim önlemek için kullanmak istediğiniz neden tam olarak budur.
+İstemci uygulamaları ile dağıtım yaparken yayımlanan yalnızca dış bağlantı noktaları (varsa) erişim `docker-compose`.
+
+Dış bağlantı noktalarından bir üretim ortamına dağıtma yaparken yayımlanması gerekir. API ağ geçidi istemci uygulamalar ve mikro hizmetler arasında doğrudan iletişim önlemek için kullanmak istediğiniz neden tam olarak budur.
 
 Ancak, geliştirirken, mikro hizmet/kapsayıcı doğrudan erişim Swagger çalıştırmak istediğiniz. İşte bu nedenle hizmetine, bile bunlar API ağ geçidi veya istemci uygulamalar tarafından kullanılmayacak, dış bağlantı noktaları hala belirtilir.
 
@@ -127,15 +129,15 @@ docker-compose run --service-ports catalog.api
 
 Bu komut yalnızca catalog.api hizmet kapsayıcı yanı sıra docker-compose.yml belirtilen bağımlılıkları çalıştırır. Bu durumda SQL Server kapsayıcı ve RabbitMQ kapsayıcı.
 
-Ardından, doğrudan Kataloğu mikro hizmet erişebilir ve kendi yöntemlerini doğrudan aracılığıyla "dış", bu durumda numaralı bağlantı noktasını erişme Swagger UI aracılığıyla görmek `http://localhost:5101`. 
+Ardından, doğrudan Kataloğu mikro hizmet erişebilir ve kendi yöntemlerini doğrudan aracılığıyla "dış", bu durumda numaralı bağlantı noktasını erişme Swagger UI aracılığıyla görmek `http://localhost:5101/swagger`:
 
-![](./media/image31.png)
+![Catalog.API REST API için Swagger kullanıcı arabirimini yaş Bowser görünümü.](./media/image31.png)
 
-**Şekil 8-30.** Katalog mikro hizmet kendi Swagger kullanıcı Arabirimi ile test etme
+**Şekil 6-31**. Katalog mikro hizmet kendi Swagger kullanıcı Arabirimi ile test etme
 
 Bu noktada, Visual Studio'da C# kod bir kesme noktası ayarlayın, mikro hizmet Swagger kullanıcı Arabiriminde kullanıma sunulan yöntemleri test ve son olan her şeyi Temizleme `docker-compose down` komutu.
 
-Ancak, bu doğrudan erişim mikro hizmet için bu durumda harici bağlantı noktası üzerinden 5101 tam olarak uygulamanızda önlemek istediğiniz iletişimdir. Ve ek API ağ geçidinin (Bu durumda, Ocelot) yöneltme düzeyi ayarlayarak, önleyebilirsiniz. Bu şekilde, istemci uygulaması doğrudan mikro hizmet erişimi olmaz.
+Ancak, doğrudan erişim mikro hizmet için bu durumda harici bağlantı noktası üzerinden 5101 tam olarak uygulamanızda önlemek istediğiniz iletişimdir. Ve ek API ağ geçidinin (Bu durumda, Ocelot) yöneltme düzeyi ayarlayarak, önleyebilirsiniz. Bu şekilde, istemci uygulaması doğrudan mikro hizmet erişimi olmaz.
 
 ## <a name="implementing-your-api-gateways-with-ocelot"></a>API ağ Geçitlerinizi Ocelot ile uygulama
 
@@ -151,13 +153,13 @@ Install-Package Ocelot
 
 Hizmetine, basit bir ASP.NET Core Web barındırma proje kendi API ağ geçidi uygulamasıdır ve Ocelot'ın middlewares API ağ geçidi özellikleri aşağıdaki görüntüde gösterildiği gibi işleme:
 
-![](./media/image32.png)
+![Çözüm Gezgini görünümü Ocelot API ağ geçidi proje.](./media/image32.png)
 
-**Şekil 8-31.** Hizmetine OcelotApiGw temel proje
+**Şekil 6-32**. Hizmetine OcelotApiGw temel proje
 
-ASP.NET Core Web barındırma bu proje, iki basit dosyaları tarafından yapılan `Program.cs` ve `Startup.cs`.
+Bu ASP.NET Core Web barındırma proje temelde iki basit dosyalarıyla oluşturulmuştur: `Program.cs` ve `Startup.cs`.
 
-Program.cs yalnızca oluşturulup tipik ASP.NET Core BuildWebHost yapılandırılması gerekir. 
+Program.cs yalnızca oluşturulup tipik ASP.NET Core BuildWebHost yapılandırılması gerekir.
 
 ```csharp
 namespace OcelotApiGw
@@ -196,7 +198,7 @@ namespace OcelotApiGw
 
 Yapılandırma için iki bölümü vardır. Yeniden yönlendirir ve bir GlobalConfiguration dizisi. Yeniden yönlendiren bir Yukarı Akış isteği işlemek nasıl Ocelot bildiren nesneleridir. Genel yapılandırma geçersiz kılmalarına yönelik özel ayarları yeniden yönlendirme sağlar. Yeniden yönlendirme belirli ayarları çok sayıda yönetmek istemiyorsanız yararlıdır.
 
-Basitleştirilmiş bir örnek [yöneltme yapılandırma](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/ApiGateways/Web.Bff.Shopping/apigw/configuration.json) hizmetine API Gateway'lerinden birinin dosya.
+İşte basit bir örnek [yöneltme yapılandırma dosyası](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/ApiGateways/Web.Bff.Shopping/apigw/configuration.json) hizmetine API Gateway'lerinden birinin.
 
 ```
 {
@@ -271,22 +273,21 @@ DownstreamHostAndPorts isteklerini iletmek istediğiniz herhangi bir aşağı ak
 
 UpstreamPathTemplate Ocelot istemciden gelen belirli bir istek için kullanmak için hangi DownstreamPathTemplate tanımlamak için kullanacağı URL'dir. Son olarak, Ocelot farklı isteklerini aynı URL'yi (POST, Al koy) arasında ayrım yapabilme kolaylığı için UpstreamHttpMethod kullanılır.
 
-Bu noktada, tek bir Ocelot API'sini kullanarak ağ geçidi (ASP.NET Core Web barındırma) sahip olabilir veya [birden çok birleştirilmiş configuration.json dosyaları](https://ocelot.readthedocs.io/en/latest/features/configuration.html#merging-configuration-files) ya da depolayabilirsiniz [yapılandırma Consul KV deposundaki](https://ocelot.readthedocs.io/en/latest/features/configuration.html#store-configuration-in-consul).
+Bu noktada, tek bir Ocelot API'sini kullanarak ağ geçidi (ASP.NET Core Web barındırma) sahip olabilir veya [birden çok birleştirilmiş configuration.json dosyaları](https://ocelot.readthedocs.io/en/latest/features/configuration.html#merging-configuration-files) ya da depolayabilirsiniz [yapılandırma Consul KV deposundaki](https://ocelot.readthedocs.io/en/latest/features/configuration.html#store-configuration-in-consul). 
 
 Ancak gerçekten otonom mikro hizmetler olmasını istiyorsanız, mimari ve tasarım bölümlerinde sunulan gibi birden çok API ağ geçitleri ve/veya BFF (ön uç için arka uç), tek tek parça API ağ geçidi bölün daha iyi olabilir. Bu amaçla, Docker kapsayıcıları ile bu yaklaşımı uygulamak nasıl bir bakalım.
 
 ### <a name="using-a-single-docker-container-image-to-run-multiple-different-api-gateway--bff-container-types"></a>Birden çok farklı API ağ geçidi'ni çalıştırmak için tek bir Docker kapsayıcı görüntüsü kullanarak / BFF kapsayıcı türleri 
 
-Tasarım hizmetine Ocelot API ağ geçidi ile tek bir Docker kapsayıcı görüntüsü uygular, ancak ardından, Docker için dağıtırken, farklı Hizmetleri/kapsayıcılar API-ağ geçidi/BFF her tür için farklı bir configuration.json sağlayarak oluşturur her kapsayıcı için dosya.
+Hizmetine içinde tek bir Docker kapsayıcı görüntüsü Ocelot API ağ geçidi ile kullanıyoruz ancak ardından, çalışma zamanında farklı Hizmetleri/kapsayıcılar API-ağ geçidi/BFF her tür için bir farklı configuration.json dosyası sağlayarak kullanarak bir docker birime oluştururuz Her hizmet için farklı bir bilgisayar klasöre erişin.
 
-![](./media/image33.png)
+![İçin dört tüm API ağ geçitleri Ocelot API ağ geçidi için tek bir Docker görüntüsü kullanılır](./media/image33.png)
 
-**Şekil 8-32.** Birden çok API ağ geçidi türleri arasında tek bir Ocelot Docker görüntüsü yeniden kullanma
+**Şekil 6-33**. Birden çok API ağ geçidi türleri arasında yeniden tek Ocelot Docker görüntüsü kullanma
 
 Hizmetine "Genel Ocelot API ağ geçidi Docker görüntüsünü" 'OcelotApiGw' adlı proje ile oluşturulur ve görüntünün adı "Elektronik Mağaza/ocelotapigw" yani docker-compose.yml dosyası içinde belirtilen. Ardından, Docker için dağıtırken, olacaktır o aynı Docker görüntüden oluşturulan dört API ağ geçidi kapsayıcılar aşağıdaki docker-compose.yml dosyasını ayıklayın de gösterildiği gibi.
 
 ```
-PARTIAL DOCKER-COMPOSE.YML
 
   mobileshoppingapigw:
     image: eshop/ocelotapigw:${TAG:-latest}
@@ -313,7 +314,7 @@ PARTIAL DOCKER-COMPOSE.YML
       dockerfile: src/ApiGateways/ApiGw-Base/Dockerfile
 ```
 
-Ayrıca, ve docker-compose.override.yml dosyasında görebileceğiniz gibi bu API ağ geçidi kapsayıcılar arasındaki tek fark, her bir hizmet kapsayıcısı için farklıdır ve çalışma zamanında bir Docker toplu üzerinden belirtilen Ocelot yapılandırma dosyası Aşağıdaki docker-compose.override.yml dosyasında gösterildiği gibi.
+Ayrıca, aşağıdaki docker-compose.override.yml dosya görebileceğiniz gibi her bir hizmet kapsayıcısı için farklı Ocelot yapılandırma dosyası API ağ geçidi kapsayıcıların arasındaki tek fark, ve çalışma zamanında belirtilen bir Docker birim.
 
 ```
 mobileshoppingapigw:
@@ -355,45 +356,45 @@ webmarketingapigw:
 
 Dört API ağ geçitleri üzerindeki aynı Docker görüntüsü tabanlı olduğundan dolayı önceki kod ve Visual Studio Gezgini her belirli iş/BFF tanımlamak için gerekli tek dosya aşağıda gösterildiği gibi API ağ geçidi yalnızca bir configuration.json dosyasıdır.
 
-![](./media/image34.png)
+![Tüm API ağ geçitleri arasındaki tek fark, her birinde bir configuration.json dosyasıdır.](./media/image34.png)
 
-**Şekil 8-33.** Her API ağ geçidi tanımlamak için gerekli tek dosya / BFF Ocelot ile bir yapılandırma dosyası 
+**Şekil 6-34**. Her API ağ geçidi tanımlamak için gerekli tek dosya / BFF Ocelot ile bir yapılandırma dosyası
 
 API ağ geçidi ile birden çok API ağ geçitleri arasında bölünmesi sayesinde mikro hizmetler farklı alt kümelerinde üzerinde odaklanarak farklı geliştirme ekipleri bağımsız Ocelot yapılandırma dosyalarını kullanarak kendi API ağ geçitleri yönetebilirsiniz. Ayrıca, aynı anda aynı Ocelot Docker görüntüsünü yeniden kullanabilirsiniz. 
 
-Şimdi, (varsayılan olarak VS hizmetine ServicesAndWebApps.sln solution açarken veya çalışıyor "docker compose up ise" dahil) API ağ geçitleri ile hizmetine çalıştırırsanız, aşağıdaki örnek yolları gerçekleştirilir. 
+Şimdi, (varsayılan olarak VS hizmetine ServicesAndWebApps.sln solution açarken veya çalışıyor "docker compose up ise" dahil) API ağ geçitleri ile hizmetine çalıştırırsanız, aşağıdaki örnek yolları gerçekleştirilir.
 
-Örneğin, Yukarı Akış URL'sini ziyaret `http://localhost:5202/api/v1/c/catalog/items/2/` webshoppingapigw API ağ geçidi tarafından sunulan, sonucu iç akış URL'den aldığınız `http://catalog.api/api/v1/2` aşağıdaki tarayıcı olduğu gibi bir Docker konağı içinde.
+Örneğin, Yukarı Akış URL'sini ziyaret `http://localhost:5202/api/v1/c/catalog/items/2/` webshoppingapigw API ağ geçidi tarafından sunulan, aynı sonucu iç akış URL'den aldığınız `http://catalog.api/api/v1/2` aşağıdaki tarayıcı olduğu gibi bir Docker konağı içinde.
 
-![](./media/image35.png)
+![Bir API ağ geçidi üzerinden giderek Catalog.api yanıt tarayıcı görünümü.](./media/image35.png)
 
-**Şekil 8-34.** API ağ geçidi tarafından sağlanan URL ile bir mikro hizmet erişme
+**Şekil 6-35**. API ağ geçidi tarafından sağlanan URL ile bir mikro hizmet erişme
 
 Test veya API 'catalog.api' Docker Konağı (hizmet dahili bir DNS çözümlemesi olduğundan ağ geçidi üzerinden geçirmeden Kataloğu Docker kapsayıcısı (yalnızca, geliştirme ortamı) doğrudan erişmek isterseniz nedeniyle, hata ayıklama nedeniyle tarafından işlenen bulma docker-compose hizmet adları), docker-yalnızca geliştirme testleri için gibi sağlanan compose.override.yml içinde yayımlanan dış bağlantı noktası üzerinden doğrudan kapsayıcısına erişmek için tek yolu olduğundan `http://localhost:5101/api/v1/Catalog/items/1` aşağıdaki Tarayıcı.
 
-![](./media/image36.png)
+![Tarayıcı Görünümü Catalog.api Catalog.api özdeş bir API ağ geçidi aracılığıyla doğrudan gidip bir yanıt.](./media/image36.png)
 
-**Şekil 8-35.** Sınama amacıyla bir mikro hizmet doğrudan erişim 
+**Şekil 6-36**. Sınama amacıyla bir mikro hizmet doğrudan erişim
 
 Ancak, uygulamanın tüm mikro Hizmetleri API ağ geçitleri değil ancak doğrudan bağlantı noktası "kısayolları" eriştiği şekilde yapılandırılır.
 
 ### <a name="the-gateway-aggregation-pattern-in-eshoponcontainers"></a>Hizmetine ağ geçidi toplama düzeni
 
-Daha önce sunulan, istekleri toplama uygulamak için esnek bir şekilde kod tarafından özel hizmetler ile aynıdır. İstek toplama özelliğiyle istek toplama içinde Ocelot uygulayabilirsiniz, ancak gereksinim duyduğunuz kadar esnek olmayabilir. Bu nedenle, toplama içinde hizmetine uygulamak için seçilen her toplayıcı için açık bir ASP.NET Core Web API'si hizmetleriyle yoludur.
+Daha önce sunulan, istekleri toplama uygulamak için esnek bir şekilde kod tarafından özel hizmetler ile aynıdır. Ayrıca istek toplama uygulayabileceğine [Ocelot istek toplama özelliği](https://ocelot.readthedocs.io/en/latest/features/requestaggregation.html#request-aggregation), ancak gereksinim duyduğunuz kadar esnek olmayabilir. Bu nedenle, toplama içinde hizmetine uygulamak için seçilen her toplayıcı için açık bir ASP.NET Core Web API'si hizmetleriyle yoludur.
 
-Bu yaklaşım göre biraz daha Basitleştirilmiş genel mimari diyagramında daha önce gösterilen gösterilmez toplayıcısı hizmetleri dikkate alarak, genişletilmiş gerçeklik API ağ geçidi oluşturma diyagram bileşenidir.
+Bu yaklaşım göre biraz daha Basitleştirilmiş genel mimari diyagramında daha önce gösterilen gösterilmez toplayıcısı Hizmetleri değerlendirirken genişletilmiş gerçeklik API ağ geçidi oluşturma diyagram bileşenidir.
 
 Aşağıdaki diyagramda, toplayıcısı Hizmetleri kendi ilgili API ağ geçitleri ile nasıl çalıştığını görebilirsiniz.
 
-![](./media/image37.png)
+![toplayıcısı hizmetlerini gösteren hizmetine mimari.](./media/image37.png)
 
-**Şekil 8-36.** toplayıcısı Hizmetleri ile hizmetine mimarisi
+**Şekil 6-37**. toplayıcısı Hizmetleri ile hizmetine mimarisi
 
-Nasıl "Alışveriş" iş alanı için istemci uygulamaları bu toplayıcısı Hizmetleri API ağ geçitleri bölge altında kullanırken, mikro hizmetler ile iletişim yoğunluğunu azaltarak iyileşme dikkat edin, böylece aşağıda daha fazla yakınlaştırma.
+Aşağıdaki görüntüde, "Alışveriş" iş alanının üzerinde daha fazla yakınlaştırma toplayıcısı Hizmetleri API ağ geçitleri kullanırken istemci uygulamalar ve mikro hizmetler arasındaki iletişim yoğunluğunu azaltılır görebilirsiniz.
 
- ![](./media/image38.png)
+ !["" son istemcisi ile iletişim yoğunluğunu azaltmak için birçok mikro hizmetler yanıttan birleştirme"yanıt çeviren" içinde toplayıcısı hizmetlerini gösteren hizmetine mimarisi yakınlaştırma.](./media/image38.png)
 
-**Şekil 8-37.** Görüntü toplayıcısı Hizmetleri içinde Yakınlaştır
+**Şekil 6-38**. Görüntü toplayıcısı Hizmetleri içinde Yakınlaştır
 
 API ağ geçitleri gelen olası istekleri diyagramda gösterilmektedir, nasıl oldukça karmaşık elde edeceğinizi olduğunu fark edebilirsiniz. Nasıl mavi ok, istemci uygulamalar açısından bakıldığında, Toplayıcı düzeni iletişim yoğunluğu ve iletişimde gecikme süresini azaltarak kullanırken Basitleştirilmiş görebilir, ancak sonuç olarak önemli ölçüde kullanıcı geliştirme deneyimi için Uzak uygulamalara ( uygulamalarını ve mobil uygulamaları SPA), özellikle.
 
@@ -401,19 +402,19 @@ API ağ geçitleri gelen olası istekleri diyagramda gösterilmektedir, nasıl o
 
 ### <a name="authentication-and-authorization-in-ocelot-api-gateways"></a>Kimlik doğrulama ve yetkilendirme Ocelot API ağ geçitleri
 
-Bir Ocelot API ağ geçidi kullanarak bir ASP.NET Core Web API'si hizmeti gibi kimlik doğrulama hizmeti yerleştirilebilir [IdentityServer](http://identityserver.io/) ölçeği genişletin veya içinde API Ağ Geçidi kimlik doğrulama belirteci sağlama.
+Bir Ocelot API ağ geçidi kullanarak bir ASP.NET Core Web API'si hizmeti gibi kimlik doğrulama hizmeti yerleştirilebilir [IdentityServer](https://identityserver.io/) ölçeği genişletin veya içinde API Ağ Geçidi kimlik doğrulama belirteci sağlama.
 
 Hizmetine olduğundan BFF üzerinde birden çok API ağ geçitleri ile sınırlarını kullanarak alan ve işletme alanlarına, kimlik/kimlik doğrulama hizmeti, aşağıdaki diyagramda sarı renkle vurgulandığı API ağ geçitleri dışında bırakılır.
 
- ![](./media/image39.png)
+ ![API ağ geçidi altındaki kimlik mikro hizmet gösteren hizmetine mimarisi diyagramı.](./media/image39.png)
 
-**Şekil 8-38.** Hizmetine kimlik service konumu
+**Şekil 6-39**. Hizmetine kimlik service konumu
 
-Ancak, Ocelot, bu diğer diyagram olduğu gibi bir API ağ geçidi sınırları içinde kimlik/Auth mikro hizmet oturmak da destekler.
+Ancak, Ocelot ayrıca kimlik/Auth mikro hizmet, bu diğer diyagram olduğu gibi bir API ağ geçidi sınırında oturan destekler.
 
- ![](./media/image40.png)
+ ![API ağ geçidi (ağ) altındaki kimlik mikro hizmet ile kimlik doğrulaması: 1) AG bir kimlik doğrulama belirteci kimlik mikro hizmet istekleri, 2) kimlik mikro hizmet toke AG, kimlik doğrulaması belirtecini kullanarak mikro hizmetler gelen ağ istekleri 3 - 4) döndürür.](./media/image40.png)
 
-**Şekil 8-39.** Ocelot API Ağ Geçidi kimlik doğrulaması
+**Şekil 6-40**. Ocelot kimlik doğrulaması
 
 Birden çok BFF (ön uç için arka uç) içinde API ağ geçidi hizmetine uygulama bölündü ve işletme alanlarına API ağ geçitleri, başka bir seçenek gerekir çünkü geniş kapsamlı kritik konular için ek bir API ağ geçidi oluşturmak için eklenmiştir. Seçim daha karmaşık bir mikro hizmet adil İmparatoru birden çok geniş kapsamlı kritik konular mikro hizmet mimarisiyle temel. Hizmetine içinde yalnızca bir çapraz önemli olduğundan, yalnızca güvenlik hizmeti API ağ geçidi bölgesi dışında Basitlik'ın çok işlemek için karar verilmiştir.
 
@@ -509,9 +510,9 @@ services.AddAuthentication(options =>
 });
 ```
 
-API ağ geçidi gibi bir yeniden yönlendirme URL'si ile sepet mikro hizmet dayalı gibi güvenli bir mikro hizmet erişmeye çalışırsanız sonraki adım olarak `http://localhost:5202/api/v1/b/basket/1`, sonra da geçerli bir belirteç sağladığınız sürece bir 401 Yetkisiz elde edersiniz. Öte yandan, bir yeniden yönlendirme URL'si doğrulanırsa Ocelot herhangi bir aşağı akış düzeni onunla (iç mikro hizmet URL'si) ilişkilendirilen çağırın.
+Güvenli bir mikro hizmet erişmeye çalışırsanız, sepet gibi API ağ geçidi gibi bir yeniden yönlendirme URL'si ile mikro hizmet tabanlı `http://localhost:5202/api/v1/b/basket/1`, sonra da geçerli bir belirteç sağladığınız sürece bir 401 Yetkisiz elde edersiniz. Öte yandan, bir yeniden yönlendirme URL'si doğrulanırsa Ocelot herhangi bir aşağı akış düzeni onunla (iç mikro hizmet URL'si) ilişkilendirilen çağırın.
 
-**Yetkilendirme Ocelot'ın katmanında yeniden yönlendirir.**  Beyana dayalı yetkilendirme kimlik doğrulamasından sonra hesaplanan ocelot destekler. Bir rota düzeyinde yeniden yönlendirme yapılandırması için aşağıdaki kodu ekleyerek yetkilendirme ayarlayın.
+**Yetkilendirme Ocelot'ın ReRoutes katmanında.**  Beyana dayalı yetkilendirme kimlik doğrulamasından sonra hesaplanan ocelot destekler. Bir rota düzeyinde yetkilendirme için yöneltme yapılandırma aşağıdaki satırı ekleyerek ayarlayın. 
 
 ```
 "RouteClaimsRequirement": {
@@ -523,27 +524,27 @@ Yetkilendirme ara yazılımı çağrıldığında, bu örnekte, kullanıcının 
 
 ## <a name="using-kubernetes-ingress-plus-ocelot-api-gateways"></a>Kubernetes giriş artı Ocelot API ağ geçidi kullanma
 
-Kubernetes (like Azure Kubernetes Service kümesinde) kullanırken, tüm HTTP isteklerini genellikle birleştirin [Kubernetes giriş katmanı](https://kubernetes.io/docs/concepts/services-networking/ingress/) göre *Ngınx*. 
+Kubernetes (like Azure Kubernetes Service kümesinde) kullanırken, tüm HTTP isteklerini genellikle birleştirin [Kubernetes giriş katmanı](https://kubernetes.io/docs/concepts/services-networking/ingress/) göre *Ngınx*.
 
 Herhangi bir giriş yaklaşım kullanmazsanız Kubernetes'te, ardından hizmet ve pod'ların yalnızca yönlendirilebilir IP'leri tarafından küme ağı var. 
 
 Ancak, bir giriş yaklaşımı kullanırsanız, bir ters proxy olarak görev yapan Internet ve hizmetlerinizi (API ağ Geçitlerinizi dahil) arasında bir orta katman sahip olacaksınız.
 
-Bir tanım, bir giriş küme hizmetlere erişmek gelen bağlantılara izin veren kuralları koleksiyonudur. Bir giriş yapılandırılmış harici olarak erişilebilen URL'leri sağlamak için trafiğin yükünü dengelemenizi, SSL sonlandırma ve daha fazlasını yükleyin. Kullanıcılar, API sunucusu giriş kaynağa göndererek giriş ister.
+Bir tanım, bir giriş küme hizmetlere erişmek gelen bağlantılara izin veren kuralları koleksiyonudur. Bir giriş genellikle harici olarak erişilebilen URL'leri sağlamak için trafiğin yükünü dengelemenizi, SSL sonlandırma ve daha fazlasını yüklemek için yapılandırılır. Kullanıcılar, API sunucusu giriş kaynağa göndererek giriş ister.
 
-Docker konağı olarak yalnızca geliştirme makinenizde yerel olarak geliştirme ve kullanırken hizmetine, tüm giriş ancak yalnızca birden çok API ağ geçitleri kullanmıyorsunuz. 
+Docker konağı olarak yalnızca geliştirme makinenizde yerel olarak geliştirme ve kullanırken hizmetine, tüm giriş ancak yalnızca birden çok API ağ geçitleri kullanmıyorsunuz.
 
 Ancak, azure'da Kubernetes göre bir "üretim" ortam hedeflenirken hizmetine API ağ geçitleri önünde bir giriş kullanıyor. Bu şekilde, istemciler hala aynı temel URL'yi çağrı ancak istekleri birden çok API ağ geçitleri veya BFF yönlendirilir. 
 
-API ağ geçitleri ön uç veya yalnızca Hizmetleri ancak genellikle kendi kapsamı dışında olan web uygulamaları görünmesini cepheleri olduğunu unutmayın. Ayrıca, API ağ geçitleri belirli iç mikro hizmetler gizlemek.
+API ağ geçitleri ön uç veya yalnızca Hizmetleri ancak genellikle kendi kapsamı dışında olan web uygulamaları görünmesini façades olduğunu unutmayın. Ayrıca, API ağ geçitleri belirli iç mikro hizmetler gizlemek. 
 
 Giriş, ancak yalnızca HTTP isteklerini yönlendirerek, ancak herhangi bir mikro hizmet veya web uygulamasının gizlemek çalışıyor değil.
 
 Web uygulamalarının yanı sıra birkaç Ocelot API ağ geçitleri önünde bir giriş Ngınx katmanı Kubernetes'te sahip / BFF ideal mimarisi, aşağıdaki diyagramda gösterildiği gibi.
 
- ![](./media/image41.png)
+ ![Kubernetes giriş, giden tüm trafik, genellikle API ağ geçidi kapsam dışına web uygulamaları da dahil olmak üzere, uygulama için ters Ara sunucu görevi görür.](./media/image41.png)
 
-**Şekil 8-40.** Kubernetes dağıtıldığında hizmetine giriş katmanı
+**Şekil 6-41**. Kubernetes dağıtıldığında hizmetine giriş katmanı
 
 Kubernetes hizmetine dağıtın, yalnızca birkaç hizmet veya uç noktaları aracılığıyla kullanıma sunduğu _giriş_, temelde aşağıdaki listede yer alan postfixes URL'leri üzerinde:
 
@@ -563,20 +564,21 @@ Kubernetes için dağıtırken her Ocelot API ağ geçidi farklı "configuration
 
 Araştırma ve aşağıdaki bağlantıları açıklanan bir Ocelot API Gateway kullanırken, diğer önemli özellikleri vardır.
 
--   **Ocelot Consul veya Eureka tümleştirmek istemci tarafı hizmet bulmayı** 
-    [*https://ocelot.readthedocs.io/en/latest/features/servicediscovery.html*](https://ocelot.readthedocs.io/en/latest/features/servicediscovery.html)
+- **Ocelot Consul veya Eureka tümleştirmek istemci tarafı hizmet bulmayı** \
+  [*https://ocelot.readthedocs.io/en/latest/features/servicediscovery.html*](https://ocelot.readthedocs.io/en/latest/features/servicediscovery.html)
 
--   **API ağ geçidi katmanında önbelleğe alma** 
-    [*https://ocelot.readthedocs.io/en/latest/features/caching.html*](https://ocelot.readthedocs.io/en/latest/features/caching.html)
+- **API ağ geçidi katmanında önbelleğe alma** \
+  [*https://ocelot.readthedocs.io/en/latest/features/caching.html*](https://ocelot.readthedocs.io/en/latest/features/caching.html)
 
--   **API ağ geçidi katmanında günlüğe kaydetme** 
-    [*https://ocelot.readthedocs.io/en/latest/features/logging.html*](https://ocelot.readthedocs.io/en/latest/features/logging.html)
+- **API ağ geçidi katmanında günlüğe kaydetme** \
+  [*https://ocelot.readthedocs.io/en/latest/features/logging.html*](https://ocelot.readthedocs.io/en/latest/features/logging.html)
 
--   **API ağ geçidi katmanında (yeniden denemeler ve devre Kesiciler) hizmet kalitesi** 
-    [*https://ocelot.readthedocs.io/en/latest/features/qualityofservice.html*](https://ocelot.readthedocs.io/en/latest/features/qualityofservice.html)
+- **API ağ geçidi katmanında (yeniden denemeler ve devre Kesiciler) hizmet kalitesi** \
+  [*https://ocelot.readthedocs.io/en/latest/features/qualityofservice.html*](https://ocelot.readthedocs.io/en/latest/features/qualityofservice.html)
 
--   **Oran sınırlandırma** 
-    [*https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html*](https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html )
+- **Oran sınırlandırma** \
+  [*https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html*](https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html )
 
 >[!div class="step-by-step"]
-[Önceki](background-tasks-with-ihostedservice.md) [İleri] (../microservice-ddd-cqrs-patterns/index.md)
+[Önceki](background-tasks-with-ihostedservice.md)
+[İleri](../microservice-ddd-cqrs-patterns/index.md)

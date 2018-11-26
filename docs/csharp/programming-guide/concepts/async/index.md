@@ -2,12 +2,12 @@
 title: Zaman uyumsuz programlama ile async ve await (C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: 7e95010f966119db72a32c21408852d6c3bd6521
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 482b77c7dd151dc454082b0def7843fdb0798260
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122844"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297445"
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>Zaman uyumsuz programlama ile async ve await (C#)
 Zaman uyumsuz programlama kullanarak performans sorunlarını önleyebilir ve uygulamanızın genel yanıt verme becerisini geliştirebilirsiniz. Ancak, zaman uyumsuz uygulamalar yazmaya yönelik geleneksel teknikler karmaşık olabilir ve bu nedenle yazılmaları, hataların ayıklanması ve bakım yapılması zorlaşabilir.  
@@ -54,7 +54,7 @@ async Task<int> AccessTheWebAsync()
   
     // GetStringAsync returns a Task<string>. That means that when you await the  
     // task you'll get a string (urlContents).  
-    Task<string> getStringTask = client.GetStringAsync("http://msdn.microsoft.com");  
+    Task<string> getStringTask = client.GetStringAsync("https://msdn.microsoft.com");  
   
     // You can do work here that doesn't rely on the string from GetStringAsync.  
     DoIndependentWork();  
@@ -302,7 +302,7 @@ namespace AsyncFirstExample
   
             // GetStringAsync returns a Task<string>. That means that when you await the  
             // task you'll get a string (urlContents).  
-            Task<string> getStringTask = client.GetStringAsync("http://msdn.microsoft.com");  
+            Task<string> getStringTask = client.GetStringAsync("https://msdn.microsoft.com");  
   
             // You can do work here that doesn't rely on the string from GetStringAsync.  
             DoIndependentWork();  

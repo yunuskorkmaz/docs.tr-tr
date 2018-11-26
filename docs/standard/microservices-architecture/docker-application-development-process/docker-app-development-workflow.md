@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/05/2018
-ms.openlocfilehash: 16e539af2ab503bddbd958ae4b60662b5923b1f1
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 00cffde7e7eb548f755b60f64aa596210b570d07
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035389"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297523"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker uygulamaları için geliştirme iş akışı
 
@@ -35,7 +35,7 @@ Uygulamanın kendi Hizmetleri ve ek kitaplıklar (bağımlılıklar) karakterler
 
 Bu kılavuzdaki tüm bu işlemi ayrıntılı olarak verilmiştir ve önemli adım her bir Visual Studio ortamında odaklanarak açıklanmıştır.
 
-Bir düzenleyici/CLI geliştirme yaklaşımını (örneğin, Visual Studio Code ve Docker CLI'yı MacOS ya da Windows) kullandığınızda, her adım genellikle Visual Studio kullanıyorsanız, daha ayrıntılı biçimde bilmeniz gerekir. E-kitabı CLI ortamda çalışma hakkında daha fazla bilgi için bkz. [Microsoft Platforms ve araçlarla kapsayıcılı Docker uygulaması yaşam döngüsü](http://aka.ms/dockerlifecycleebook/).
+Bir düzenleyici/CLI geliştirme yaklaşımını (örneğin, Visual Studio Code ve Docker CLI'yı MacOS ya da Windows) kullandığınızda, her adım genellikle Visual Studio kullanıyorsanız, daha ayrıntılı biçimde bilmeniz gerekir. E-kitabı CLI ortamda çalışma hakkında daha fazla bilgi için bkz. [Microsoft Platforms ve araçlarla kapsayıcılı Docker uygulaması yaşam döngüsü](https://aka.ms/dockerlifecycleebook/).
 
 Visual Studio kullanıyorsanız, bu adımların çoğunu sizin yerinize üretkenliğinizi önemli ölçüde artıran işlenir. Visual Studio 2017 kullanılarak ve çok kapsayıcılı uygulamaları hedefleyen bu özellikle doğrudur. Örneğin, Visual Studio yalnızca tek bir tıklatmayla ekler *Dockerfile* ve *docker-compose.yml* uygulamanız için dosyaları projelerinize yapılandırmasına sahip. Visual Studio'da uygulamayı çalıştırdığınızda, Docker görüntüsünü oluşturur ve çok kapsayıcılı bir uygulama doğrudan Docker'da çalıştırılır. Bile aynı anda birden fazla kapsayıcılar ayıklamanızı sağlar. Bu özellikler, geliştirme hızını artırın.
 
@@ -360,7 +360,7 @@ Burada önemli olan nokta Şekil 5-12'de gösterildiği gibi Visual Studio 2017'
 
 Docker compose up ve docker run komutları (veya çalışan ve kapsayıcıları Visual Studio'da hata ayıklama) kapsayıcıları geliştirme ortamınızda test etmek için yeterli. Ancak, bu yaklaşım Docker kümeleri hedefleniyorsa ve Docker Swarm, Mesosphere DC/OS veya Kubernetes düzenleyicileri gibi kullanmamanız gerekir. Gibi bir küme kullanıyorsanız [Docker Swarm modu](https://docs.docker.com/engine/swarm/) dağıtmak ve test gibi ek komutlar gerekir (kullanılabilir için Docker CE Windows ve Mac sürümü 1.12 itibaren), [docker hizmeti oluşturulur](https://docs.docker.com/engine/reference/commandline/service_create/) için tek hizmetler. Birden çok kapsayıcılardan oluşan bir uygulama dağıtıyorsanız, kullandığınız [docker compose paket](https://docs.docker.com/compose/reference/bundle/) ve [docker dağıtma myBundleFile](https://docs.docker.com/engine/reference/commandline/deploy/) olarak oluşturulan uygulamayı dağıtmak için bir *Yığını*. Daha fazla bilgi için bkz. blog gönderisine [giriş Deneysel dağıtılmış uygulama paketleri](https://blog.docker.com/2016/06/docker-app-bundle/) Docker belgelerinde. Docker sitesi.
 
-İçin [DC/OS](https://mesosphere.com/blog/2015/09/02/dcos-cli-command-line-tool-datacenter/) ve [Kubernetes](http://kubernetes.io/docs/user-guide/deployments/) farklı dağıtım komutları ve komut dosyaları da kullanmanız gerekir.
+İçin [DC/OS](https://mesosphere.com/blog/2015/09/02/dcos-cli-command-line-tool-datacenter/) ve [Kubernetes](https://kubernetes.io/docs/user-guide/deployments/) farklı dağıtım komutları ve komut dosyaları da kullanmanız gerekir.
 
 ![6. adım grafiği](./media/image17.png)
 
@@ -422,7 +422,7 @@ Ayrıca, yalnızca bir kez (Docker desteği ekleme projelerinize) 2. adım gerç
 
 ## <a name="using-powershell-commands-in-a-dockerfile-to-set-up-windows-containers"></a>Windows kapsayıcıları ayarlamak için bir Dockerfile içinde PowerShell komutlarını kullanarak
 
-[Windows kapsayıcıları](/virtualization/windowscontainers/about/index) mevcut Windows uygulamalarınızı Docker görüntüleri olarak dönüştürmek ve Docker ekosistemi sayesinde geri kalanı gibi aynı araçları ile dağıtmaya olanak sağlar. Windows kapsayıcıları kullanmak için aşağıdaki örnekte gösterildiği gibi bir Dockerfile içinde PowerShell komutlarını çalıştırın:
+[Windows kapsayıcıları](/virtualization/windowscontainers/about/) mevcut Windows uygulamalarınızı Docker görüntüleri olarak dönüştürmek ve Docker ekosistemi sayesinde geri kalanı gibi aynı araçları ile dağıtmaya olanak sağlar. Windows kapsayıcıları kullanmak için aşağıdaki örnekte gösterildiği gibi bir Dockerfile içinde PowerShell komutlarını çalıştırın:
 
 ```Dockerfile
 FROM microsoft/windowsservercore

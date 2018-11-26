@@ -7,11 +7,11 @@ helpviewer_keywords:
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
 ms.openlocfilehash: 8b8f92697181c76710e75d6e5a07296b1fcf9188
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50046532"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297068"
 ---
 # <a name="wcf-security-terminology"></a>WCF Güvenlik Terimleri
 Bazı güvenlik ele alınırken kullanılan terminolojiyi bilinmiyor olabilir. Bu konu başlığı altında güvenlik terimlerden bazılarının açıklamaları kısa sağlar, ancak her öğe için kapsamlı bilgi sağlamak için tasarlanmamıştır.  

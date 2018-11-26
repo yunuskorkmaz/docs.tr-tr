@@ -2,12 +2,12 @@
 title: Programlama Kavramları (C#)
 ms.date: 07/20/2015
 ms.assetid: 3227afd5-4794-484b-b83b-0f1f94a0476b
-ms.openlocfilehash: f71e05e05e3d027b6190142e8062ea3caf95edb7
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 216b23a30e8b1d58777fbccbf2956ae91534951b
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615930"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296574"
 ---
 # <a name="programming-concepts-c"></a>Programlama Kavramları (C#)
 Bu bölümde, C# dilinde programlama kavramları açıklanmıştır.  
@@ -28,7 +28,6 @@ Bu bölümde, C# dilinde programlama kavramları açıklanmıştır.
 |[Nesne odaklı programlama (C#)](../../../csharp/programming-guide/concepts/object-oriented-programming.md)|Kapsülleme, devralma ve çok biçimlilik dahil olmak üzere ortak nesne yönelimli kavramları açıklar.|  
 |[Yansıma (C#)](../../../csharp/programming-guide/concepts/reflection.md)|Yansıma dinamik olarak bir türün bir örneğini oluşturma, bağlama türü var olan bir nesneye veya türü mevcut bir nesneden elde ve kendi yöntemlerini çağırmak veya kendi alanlarına ve özelliklerine erişmek için nasıl kullanılacağını açıklar.|  
 |[Seri hale getirme (C#)](../../../csharp/programming-guide/concepts/serialization/index.md)|İkili, XML, temel kavramları açıklar ve SOAP serileştirme.|  
-|[İş parçacığı (C#)](../../../csharp/programming-guide/concepts/threading/index.md)|.NET iş parçacığı modeline genel bakış sağlar ve uygulamalarınızın yanıt hızı ve performansı artırmak için aynı anda birden çok görevi gerçekleştiren kodun nasıl yazılacağını gösterir.|  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
   

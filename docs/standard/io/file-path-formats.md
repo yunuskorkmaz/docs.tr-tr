@@ -2,19 +2,18 @@
 title: Windows sistemlerde dosya yolu biçimleri
 ms.date: 06/28/2018
 ms.technology: dotnet-standard
-ms.topic: article
 helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 05146467f321a3c83f3637e2eecc4c7c42dc4ba0
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: 1b79ff1991f1d9b803b0c35b4ae9565f70de0b56
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51214200"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296834"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows sistemlerde dosya yolu biçimleri
 
@@ -90,8 +89,8 @@ DOS aygıtı yolu aşağıdaki bileşenlerden oluşur:
 
    Edilebileceği çağrılır belirli bir bağlantı için UNC `UNC`. Örneğin:
 
-      `\\.\UNC\Server\Share\Test\Foo.txt`
-      `\\?\UNC\Server\Share\Test\Foo.txt`
+  `\\.\UNC\Server\Share\Test\Foo.txt`  
+  `\\?\UNC\Server\Share\Test\Foo.txt`
 
     Cihaz UNC paylaşımı/bölümü forms olan birim. Örneğin, `\\?\server1\e:\utilities\\filecomparer\`, server1\utilities paylaşımı/bölümüdür. Bir yöntemi gibi çağrılırken bu önemlidir <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> göreli directory bölümleri ile; hiçbir zaman birimi gitmek mümkündür. 
 
@@ -114,7 +113,7 @@ Neredeyse tüm yolları Windows API'lerine geçirilen normalleştirilir. Normall
 - Göreli dizini bileşenlerini değerlendirir (`.` geçerli dizin için ve `..` üst dizini için).
 - Belirli karakterlerin kırpar.
 
-Bu normalleştirme örtük olarak gerçekleşir, ancak bunu açıkça çağırarak yapabilirsiniz <xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType> yöntemine bir çağrı sarılır [GetFullPathName() işlevi](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea).aspx). Windows de çağırabilirsiniz [GetFullPathName() işlevi](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea).aspx) kullanarak doğrudan P/Invoke. Ayrıca, çağırabilirsiniz 
+Bu normalleştirme örtük olarak gerçekleşir, ancak bunu açıkça çağırarak yapabilirsiniz <xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType> yöntemine bir çağrı sarılır [GetFullPathName() işlevi](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea). Windows de çağırabilirsiniz [GetFullPathName() işlevi](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) P/Invoke kullanarak doğrudan.
 
 ### <a name="identifying-the-path"></a>Yolun tanımlama
 
