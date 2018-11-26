@@ -1,139 +1,147 @@
 ---
-title: Temsilciler ve lambdas
-description: Nasıl doğrudan adlı veya başka bir yönteme geçirilen ve olarak adlandırılan belirli yöntem imzası belirtmek Temsilciler, tür tanımlama öğrenin.
+title: Temsilciler ve lambda ifadeleri
+description: Nasıl doğrudan veya başka bir yönteme ve adlı bir özel yöntem imzası belirtmek Temsilciler, tür tanımlama hakkında bilgi edinin.
 author: richlander
 ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-ms.openlocfilehash: f8184b87fc62f378fe72138733f87de924da60f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3fb926683de90516bcf67d99026a0134d82cb683
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574572"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296951"
 ---
-# <a name="delegates-and-lambdas"></a><span data-ttu-id="02dcd-103">Temsilciler ve lambdas</span><span class="sxs-lookup"><span data-stu-id="02dcd-103">Delegates and lambdas</span></span>
+# <a name="delegates-and-lambdas"></a><span data-ttu-id="c9ae6-103">Temsilciler ve lambda ifadeleri</span><span class="sxs-lookup"><span data-stu-id="c9ae6-103">Delegates and lambdas</span></span>
 
-<span data-ttu-id="02dcd-104">Temsilciler belirli yöntem imzası belirtmek bir türünü tanımlayın.</span><span class="sxs-lookup"><span data-stu-id="02dcd-104">Delegates define a type, which specify a particular method signature.</span></span> <span data-ttu-id="02dcd-105">Bir yöntem (statik veya örnek) karşılayan bu imza Bu tür bir değişkene atanabilir sonra doğrudan (uygun bağımsız değişkenler ile) olarak adlandırılan veya bağımsız değişken olarak kendisi başka bir yönteme geçirilen ve sonra çağrılır.</span><span class="sxs-lookup"><span data-stu-id="02dcd-105">A method (static or instance) that satisfies this signature can be assigned to a variable of that type, then called directly (with the appropriate arguments) or passed as an argument itself to another method and then called.</span></span> <span data-ttu-id="02dcd-106">Aşağıdaki örnek temsilci kullanımını gösterir.</span><span class="sxs-lookup"><span data-stu-id="02dcd-106">The following example demonstrates delegate use.</span></span>
+<span data-ttu-id="c9ae6-104">Temsilciler belirli yöntem imzası belirtmek tanımlayan bir tür.</span><span class="sxs-lookup"><span data-stu-id="c9ae6-104">Delegates define a type, which specify a particular method signature.</span></span> <span data-ttu-id="c9ae6-105">Bir yöntem (statik veya örnek) Bu imza Bu türden bir değişkene atanabilir sonra doğrudan (uygun bağımsız değişkenlerle) olarak adlandırılan veya bağımsız değişken olarak kendisini başka bir yönteme geçirilen ve ardından adlı karşılar.</span><span class="sxs-lookup"><span data-stu-id="c9ae6-105">A method (static or instance) that satisfies this signature can be assigned to a variable of that type, then called directly (with the appropriate arguments) or passed as an argument itself to another method and then called.</span></span> <span data-ttu-id="c9ae6-106">Aşağıdaki örnekte, temsilci kullanımını gösterir.</span><span class="sxs-lookup"><span data-stu-id="c9ae6-106">The following example demonstrates delegate use.</span></span>
 
 ```csharp
+using System;
+using System.Linq;
+
 public class Program
 {
+    public delegate string Reverse(string s);
 
-  public delegate string Reverse(string s);
+    static string ReverseString(string s)
+    {
+        return new string(s.Reverse().ToArray());
+    }
 
-  static string ReverseString(string s)
-  {
-      return new string(s.Reverse().ToArray());
-  }
+    static void Main(string[] args)
+    {
+        Reverse rev = ReverseString;
 
-  static void Main(string[] args)
-  {
-      Reverse rev = ReverseString;
-
-      Console.WriteLine(rev("a string"));
-  }
+        Console.WriteLine(rev("a string"));
+    }
 }
 ```
 
-*   <span data-ttu-id="02dcd-107">Belirli bir imza bir temsilci türü oluşturuyoruz 4 satırında, bu durumda bir yöntemi, bir dize parametresi alan ve sonra bir dize parametresi döndürür.</span><span class="sxs-lookup"><span data-stu-id="02dcd-107">On line 4 we create a delegate type of a certain signature, in this case a method that takes a string parameter and then returns a string parameter.</span></span>
-*   <span data-ttu-id="02dcd-108">6. satırda temsilci uyarlamasını tam aynı imzaya sahip bir yöntem sağlayarak tanımlarız.</span><span class="sxs-lookup"><span data-stu-id="02dcd-108">On line 6, we define the implementation of the delegate by providing a method that has the exact same signature.</span></span>
-*   <span data-ttu-id="02dcd-109">13 satırında, uyumlu bir türü yöntemi atandığı `Reverse` temsilci.</span><span class="sxs-lookup"><span data-stu-id="02dcd-109">On line 13, the method is assigned to a type that conforms to the `Reverse` delegate.</span></span>
-*   <span data-ttu-id="02dcd-110">Son olarak, 15 satırda bir dize tersine geçirme temsilci biz çağırır.</span><span class="sxs-lookup"><span data-stu-id="02dcd-110">Finally, on line 15 we invoke the delegate passing a string to be reversed.</span></span>
+* <span data-ttu-id="c9ae6-107">`public delegate string Reverse(string s);` Satırı bu durumda bir temsilci türü belirli imzası, bir dize parametresi alan ve sonra bir dize parametresi döndüren bir yöntem oluşturur.</span><span class="sxs-lookup"><span data-stu-id="c9ae6-107">The `public delegate string Reverse(string s);` line creates a delegate type of a certain signature, in this case a method that takes a string parameter and then returns a string parameter.</span></span>
+* <span data-ttu-id="c9ae6-108">`static string ReverseString(string s)` Tanımlı temsilci türüyle tam aynı imzaya sahip yöntemi temsilci uygular.</span><span class="sxs-lookup"><span data-stu-id="c9ae6-108">The `static string ReverseString(string s)` method, which has the exact same signature as the defined delegate type, implements the delegate.</span></span>
+* <span data-ttu-id="c9ae6-109">`Reverse rev = ReverseString;` Satır gösterir bir yöntemi karşılık gelen temsilci türünün bir değişkene atayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="c9ae6-109">The `Reverse rev = ReverseString;` line shows that you can assign a method to a variable of the corresponding delegate type.</span></span>
+* <span data-ttu-id="c9ae6-110">`Console.WriteLine(rev("a string"));` Satırı bir temsilci türünde bir değişken temsilci çağırmak için nasıl kullanılacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="c9ae6-110">The `Console.WriteLine(rev("a string"));` line demonstrates how to use a variable of a delegate type to invoke the delegate.</span></span>
 
-<span data-ttu-id="02dcd-111">Geliştirme işlemini kolaylaştırmak için .NET programcıları yeniden kullanmak ve yeni türleri oluşturmak zorunda kalmazsınız temsilci türleri kümesi içerir.</span><span class="sxs-lookup"><span data-stu-id="02dcd-111">In order to streamline the development process, .NET includes a set of delegate types that programmers can reuse and not have to create new types.</span></span> <span data-ttu-id="02dcd-112">Bunlar `Func<>`, `Action<>` ve `Predicate<>`, ve bunlar içinde çeşitli yerlerde .NET API'lerini gerek kalmadan yeni temsilci türleri tanımlamak için kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="02dcd-112">These are `Func<>`, `Action<>` and `Predicate<>`, and they can be used in various places throughout the .NET APIs without the need to define new delegate types.</span></span> <span data-ttu-id="02dcd-113">Elbette, çoğunlukla kullanılacak demek yolu ile yapmak zorunda kendi imzaları de göreceğiniz gibi üç arasındaki bazı farklar vardır:</span><span class="sxs-lookup"><span data-stu-id="02dcd-113">Of course, there are some differences between the three as you will see in their signatures which mostly have to do with the way they were meant to be used:</span></span>
+<span data-ttu-id="c9ae6-111">Geliştirme işlemi kolaylaştırmak için .NET programcıları yeniden ve yeni türler oluşturmak için olmaması temsilci türleri kümesi içerir.</span><span class="sxs-lookup"><span data-stu-id="c9ae6-111">In order to streamline the development process, .NET includes a set of delegate types that programmers can reuse and not have to create new types.</span></span> <span data-ttu-id="c9ae6-112">Bunlar `Func<>`, `Action<>` ve `Predicate<>`, ve bunlar gerek kalmadan .NET API'lerini çeşitli yerlerde yeni temsilci türleri tanımlamak için kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="c9ae6-112">These are `Func<>`, `Action<>` and `Predicate<>`, and they can be used in various places throughout the .NET APIs without the need to define new delegate types.</span></span> <span data-ttu-id="c9ae6-113">Elbette, kullanılacak düşünülen işlemleriyle yapmak için çoğunlukla sahip imzaları içindeki göreceğiniz gibi üç arasında bazı farklar vardır:</span><span class="sxs-lookup"><span data-stu-id="c9ae6-113">Of course, there are some differences between the three as you will see in their signatures which mostly have to do with the way they were meant to be used:</span></span>
 
-*   <span data-ttu-id="02dcd-114">`Action<>` Temsilci bağımsız değişkenleri kullanarak bir eylem gerçekleştirmek üzere gereksinimi olduğunda kullanılır.</span><span class="sxs-lookup"><span data-stu-id="02dcd-114">`Action<>` is used when there is a need to perform an action using the arguments of the delegate.</span></span>
-*   <span data-ttu-id="02dcd-115">`Func<>` genellikle bir dönüşüm taraftan, varsa, kullanılan diğer bir deyişle, temsilci bağımsız farklı bir sonuç dönüştürme gerekir.</span><span class="sxs-lookup"><span data-stu-id="02dcd-115">`Func<>` is used usually when you have a transformation on hand, that is, you need to transform the arguments of the delegate into a different result.</span></span> <span data-ttu-id="02dcd-116">Bu prime örneği projeksiyonlardır.</span><span class="sxs-lookup"><span data-stu-id="02dcd-116">Projections are a prime example of this.</span></span>
-*   <span data-ttu-id="02dcd-117">`Predicate<>` bağımsız değişken temsilci koşulu karşılayan varsa belirlemek üzere gerektiğinde kullanılır.</span><span class="sxs-lookup"><span data-stu-id="02dcd-117">`Predicate<>` is used when you need to determine if the argument satisfies the condition of the delegate.</span></span> <span data-ttu-id="02dcd-118">Olarak da yazılabilir bir `Func<T, bool>`.</span><span class="sxs-lookup"><span data-stu-id="02dcd-118">It can also be written as a `Func<T, bool>`.</span></span>
+*   <span data-ttu-id="c9ae6-114">`Action<>` temsilcinin bağımsız değişkenleri kullanarak bir eylem gerçekleştirmek için ihtiyaç olduğunda kullanılır.</span><span class="sxs-lookup"><span data-stu-id="c9ae6-114">`Action<>` is used when there is a need to perform an action using the arguments of the delegate.</span></span>
+*   <span data-ttu-id="c9ae6-115">`Func<>` genellikle bir dönüştürme taraftan, varsa, kullanılan diğer bir deyişle, temsilcinin bağımsız değişkenleri farklı bir sonuç biçimine dönüştürmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="c9ae6-115">`Func<>` is used usually when you have a transformation on hand, that is, you need to transform the arguments of the delegate into a different result.</span></span> <span data-ttu-id="c9ae6-116">Tahminler, bu birinci bir örnektir.</span><span class="sxs-lookup"><span data-stu-id="c9ae6-116">Projections are a prime example of this.</span></span>
+*   <span data-ttu-id="c9ae6-117">`Predicate<>` bağımsız değişken, temsilci koşulu karşılayıp karşılamadığını belirlemek gerektiğinde kullanılır.</span><span class="sxs-lookup"><span data-stu-id="c9ae6-117">`Predicate<>` is used when you need to determine if the argument satisfies the condition of the delegate.</span></span> <span data-ttu-id="c9ae6-118">Olarak da yazılabilir bir `Func<T, bool>`.</span><span class="sxs-lookup"><span data-stu-id="c9ae6-118">It can also be written as a `Func<T, bool>`.</span></span>
 
-<span data-ttu-id="02dcd-119">Biz şimdi örneğimizde yukarıdaki alabilir ve kullanarak yeniden `Func<>` temsilci yerine özel bir tür.</span><span class="sxs-lookup"><span data-stu-id="02dcd-119">We can now take our example above and rewrite it using the `Func<>` delegate instead of a custom type.</span></span> <span data-ttu-id="02dcd-120">Program, tam olarak aynı çalışmaya devam edecek.</span><span class="sxs-lookup"><span data-stu-id="02dcd-120">The program will continue running exactly the same.</span></span>
+<span data-ttu-id="c9ae6-119">Biz artık yukarıdaki örneğimizde alabilir ve kullanarak yeniden `Func<>` temsilci yerine özel bir tür.</span><span class="sxs-lookup"><span data-stu-id="c9ae6-119">We can now take our example above and rewrite it using the `Func<>` delegate instead of a custom type.</span></span> <span data-ttu-id="c9ae6-120">Program, tam olarak aynı çalışmaya devam edecek.</span><span class="sxs-lookup"><span data-stu-id="c9ae6-120">The program will continue running exactly the same.</span></span>
 
 ```csharp
+using System;
+using System.Linq;
+
 public class Program
 {
+    static string ReverseString(string s)
+    {
+        return new string(s.Reverse().ToArray());
+    }
 
-  static string ReverseString(string s)
-  {
-      return new string(s.Reverse().ToArray());
-  }
+    static void Main(string[] args)
+    {
+        Func<string, string> rev = ReverseString;
 
-  static void Main(string[] args)
-  {
-      Func<string, string> rev = ReverseString;
-
-      Console.WriteLine(rev("a string"));
-  }
+        Console.WriteLine(rev("a string"));
+    }
 }
 ```
 
-<span data-ttu-id="02dcd-121">Bu basit örnekte, Main() yönteminin dışında tanımlanmış bir yöntemi olması biraz gereksiz gibi görünüyor.</span><span class="sxs-lookup"><span data-stu-id="02dcd-121">For this simple example, having a method defined outside of the Main() method seems a bit superfluous.</span></span> <span data-ttu-id="02dcd-122">.NET Framework 2.0 kavramı sunulan bu nedenle olan **anonim Temsilciler**.</span><span class="sxs-lookup"><span data-stu-id="02dcd-122">It is because of this that .NET Framework 2.0 introduced the concept of **anonymous delegates**.</span></span> <span data-ttu-id="02dcd-123">Destek ile herhangi bir ek türü veya yöntemi belirtmek zorunda kalmadan "satır içi" Temsilciler oluşturabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="02dcd-123">With their support you are able to create "inline" delegates without having to specify any additional type or method.</span></span> <span data-ttu-id="02dcd-124">Yalnızca ihtiyaç duyacağınız, temsilci tanımını satır içi.</span><span class="sxs-lookup"><span data-stu-id="02dcd-124">You simply inline the definition of the delegate where you need it.</span></span>
+<span data-ttu-id="c9ae6-121">Bu basit örnekte, olması dışında tanımlanmış bir yöntem `Main` yöntemi biraz gereksiz görünüyor.</span><span class="sxs-lookup"><span data-stu-id="c9ae6-121">For this simple example, having a method defined outside of the `Main` method seems a bit superfluous.</span></span> <span data-ttu-id="c9ae6-122">.NET Framework 2.0 sunulan kavramı, bu nedenle olan **anonim Temsilciler**.</span><span class="sxs-lookup"><span data-stu-id="c9ae6-122">It is because of this that .NET Framework 2.0 introduced the concept of **anonymous delegates**.</span></span> <span data-ttu-id="c9ae6-123">Destek ile herhangi bir ek türü veya yöntemini belirtmek zorunda kalmadan "satır içi" temsilci oluşturmak kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="c9ae6-123">With their support you are able to create "inline" delegates without having to specify any additional type or method.</span></span> <span data-ttu-id="c9ae6-124">Yalnızca satır gerek duyduğunuz, temsilci tanımı.</span><span class="sxs-lookup"><span data-stu-id="c9ae6-124">You simply inline the definition of the delegate where you need it.</span></span>
 
-<span data-ttu-id="02dcd-125">Örneğin, biz yukarı geçin ve yalnızca çift sayı listesini filtrelemek ve bunları konsola yazdırma için anonim bizim temsilci kullanın alınacaktır.</span><span class="sxs-lookup"><span data-stu-id="02dcd-125">For an example, we are going to switch it up and use our anonymous delegate to filter out a list of only even numbers and then print them to the console.</span></span>
+<span data-ttu-id="c9ae6-125">Örneğin, yedekleme geçin ve yalnızca çift sayıların bir listeyi filtreleyin ve ardından bunları konsola yazdırır bizim anonim temsilci kullanmak için kullanacağız.</span><span class="sxs-lookup"><span data-stu-id="c9ae6-125">For an example, we are going to switch it up and use our anonymous delegate to filter out a list of only even numbers and then print them to the console.</span></span>
 
 ```csharp
+using System;
+using System.Collections.Generic;
+
 public class Program
 {
-
-  public static void Main(string[] args)
-  {
-    List<int> list = new List<int>();
-
-    for (int i = 1; i <= 100; i++)
+    public static void Main(string[] args)
     {
-        list.Add(i);
-    }
+        List<int> list = new List<int>();
 
-    List<int> result = list.FindAll(
-      delegate(int no)
-      {
-          return (no%2 == 0);
-      }
-    );
+        for (int i = 1; i <= 100; i++)
+        {
+            list.Add(i);
+        }
 
-    foreach (var item in result)
-    {
-        Console.WriteLine(item);
+        List<int> result = list.FindAll(
+          delegate (int no)
+          {
+              return (no % 2 == 0);
+          }
+        );
+
+        foreach (var item in result)
+        {
+            Console.WriteLine(item);
+        }
     }
-  }
 }
 ```
 
-<span data-ttu-id="02dcd-126">Vurgulanan satırlar dikkat edin.</span><span class="sxs-lookup"><span data-stu-id="02dcd-126">Notice the highlighted lines.</span></span> <span data-ttu-id="02dcd-127">Gördüğünüz gibi temsilci gövdesi yalnızca ifadeleri, herhangi bir temsilci kümesidir.</span><span class="sxs-lookup"><span data-stu-id="02dcd-127">As you can see, the body of the delegate is just a set of expressions, as any other delegate.</span></span> <span data-ttu-id="02dcd-128">Ancak bunun yerine ayrı bir tanımı olması, biz bunu ekledik _geçici_ bizim çağrıda `FindAll()` yöntemi `List<T>` türü.</span><span class="sxs-lookup"><span data-stu-id="02dcd-128">But instead of it being a separate definition, we’ve introduced it _ad hoc_ in our call to the `FindAll()` method of the `List<T>` type.</span></span>
+<span data-ttu-id="c9ae6-126">Gördüğünüz gibi temsilci yalnızca bir dizi ifadeleri, herhangi bir temsilci gövdesidir.</span><span class="sxs-lookup"><span data-stu-id="c9ae6-126">As you can see, the body of the delegate is just a set of expressions, as any other delegate.</span></span> <span data-ttu-id="c9ae6-127">Ancak bunun yerine ayrı bir tanımı olan, onu tanıttık _geçici_ bizim çağrıda <xref:System.Collections.Generic.List%601.FindAll%2A?displayProperty=nameWithType> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="c9ae6-127">But instead of it being a separate definition, we’ve introduced it _ad hoc_ in our call to the <xref:System.Collections.Generic.List%601.FindAll%2A?displayProperty=nameWithType> method.</span></span>
 
-<span data-ttu-id="02dcd-129">Ancak, bu yaklaşımda bile yoktur hala biz hemen atabilirsiniz kadar kod.</span><span class="sxs-lookup"><span data-stu-id="02dcd-129">However, even with this approach, there is still much code that we can throw away.</span></span> <span data-ttu-id="02dcd-130">Bu yerdir **lambda ifadeleri** oyuna gelir.</span><span class="sxs-lookup"><span data-stu-id="02dcd-130">This is where **lambda expressions** come into play.</span></span>
+<span data-ttu-id="c9ae6-128">Ancak, bile bu yaklaşımda, yine de biz hemen oluşturabilecek kadar kodu yok.</span><span class="sxs-lookup"><span data-stu-id="c9ae6-128">However, even with this approach, there is still much code that we can throw away.</span></span> <span data-ttu-id="c9ae6-129">Burada **lambda ifadeleri** oyuna gelir.</span><span class="sxs-lookup"><span data-stu-id="c9ae6-129">This is where **lambda expressions** come into play.</span></span>
 
-<span data-ttu-id="02dcd-131">Lambda ifadeleri veya kısaca, yalnızca "Lambda'lar" C# 3.0 sürümünde, temel yapı taşlarını, dil tümleşik sorgu (LINQ) biri olarak ilk kez sunulan.</span><span class="sxs-lookup"><span data-stu-id="02dcd-131">Lambda expressions, or just "lambdas" for short, were introduced first in C# 3.0, as one of the core building blocks of Language Integrated Query (LINQ).</span></span> <span data-ttu-id="02dcd-132">Temsilcileri kullanma için yalnızca bir daha kullanışlı sözdizimi oldukları.</span><span class="sxs-lookup"><span data-stu-id="02dcd-132">They are just a more convenient syntax for using delegates.</span></span> <span data-ttu-id="02dcd-133">İmza ve yöntem gövdesi bildirme, ancak bir temsilci atamazsanız, kendi resmi kimliğini yok.</span><span class="sxs-lookup"><span data-stu-id="02dcd-133">They declare a signature and a method body, but don’t have an formal identity of their own, unless they are assigned to a delegate.</span></span> <span data-ttu-id="02dcd-134">Temsilciler, doğrudan taraftaki olay kaydı veya çeşitli LINQ yan tümceleri ve yöntemleri olarak atanabilirler.</span><span class="sxs-lookup"><span data-stu-id="02dcd-134">Unlike delegates, they can be directly assigned as the left-hand side of event registration or in various Linq clauses and methods.</span></span>
+<span data-ttu-id="c9ae6-130">Lambda ifadeleri veya kısaca, yalnızca "lambdalar" de kullanıma sunulmuştur ilk C# 3.0, temel yapı taşlarını, dil tümleşik sorgu (LINQ) biri olarak.</span><span class="sxs-lookup"><span data-stu-id="c9ae6-130">Lambda expressions, or just "lambdas" for short, were introduced first in C# 3.0, as one of the core building blocks of Language Integrated Query (LINQ).</span></span> <span data-ttu-id="c9ae6-131">Temsilcileri kullanma için yalnızca bir daha kullanışlı söz dizimi değildirler.</span><span class="sxs-lookup"><span data-stu-id="c9ae6-131">They are just a more convenient syntax for using delegates.</span></span> <span data-ttu-id="c9ae6-132">Bir imza ve bir yöntem gövdesi bildirmek, ancak bir temsilciye atanmış oldukları sürece, kendi, biçimsel bir kimlik yok.</span><span class="sxs-lookup"><span data-stu-id="c9ae6-132">They declare a signature and a method body, but don’t have an formal identity of their own, unless they are assigned to a delegate.</span></span> <span data-ttu-id="c9ae6-133">Temsilciler, bunlar doğrudan sol tarafı olay kaydı veya çeşitli LINQ yan tümceleri ve yöntemler olarak atanabilir.</span><span class="sxs-lookup"><span data-stu-id="c9ae6-133">Unlike delegates, they can be directly assigned as the left-hand side of event registration or in various LINQ clauses and methods.</span></span>
 
-<span data-ttu-id="02dcd-135">Lambda ifadesi bir temsilci belirtmenin yalnızca başka bir yol olduğundan, biz lambda ifadesi yerine anonim bir temsilci kullanmak için yukarıdaki örnek yeniden yapabiliyor olmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="02dcd-135">Since a lambda expression is just another way of specifying a delegate, we should be able to rewrite the above sample to use a lambda expression instead of an anonymous delegate.</span></span>
+<span data-ttu-id="c9ae6-134">Bir lambda ifadesi bir temsilci belirtmenin başka bir yol olduğundan, biz bir anonim temsilci yerine bir lambda ifadesi kullanmak için yukarıdaki örnek yeniden mümkün olması gerekir.</span><span class="sxs-lookup"><span data-stu-id="c9ae6-134">Since a lambda expression is just another way of specifying a delegate, we should be able to rewrite the above sample to use a lambda expression instead of an anonymous delegate.</span></span>
 
 ```csharp
+using System;
+using System.Collections.Generic;
+
 public class Program
 {
-
-  public static void Main(string[] args)
-  {
-    List<int> list = new List<int>();
-
-    for (int i = 1; i <= 100; i++)
+    public static void Main(string[] args)
     {
-        list.Add(i);
-    }
+        List<int> list = new List<int>();
 
-    List<int> result = list.FindAll(i => i % 2 == 0);
+        for (int i = 1; i <= 100; i++)
+        {
+            list.Add(i);
+        }
 
-    foreach (var item in result)
-    {
-        Console.WriteLine(item);
+        List<int> result = list.FindAll(i => i % 2 == 0);
+
+        foreach (var item in result)
+        {
+            Console.WriteLine(item);
+        }
     }
-  }
 }
 ```
 
-<span data-ttu-id="02dcd-136">Vurgulanan satırlar göz atın, lambda ifadesi gibi nasıl göründüğünü görebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="02dcd-136">If you take a look at the highlighted lines, you can see how a lambda expression looks like.</span></span> <span data-ttu-id="02dcd-137">Yeniden yalnızca olan bir **çok** perde arkasında olanlar anonim temsilci ile neler için benzer şekilde, kullanma uygun söz dizimi.</span><span class="sxs-lookup"><span data-stu-id="02dcd-137">Again, it is just a **very** convenient syntax for using delegates, so what happens under the covers is similar to what happens with the anonymous delegate.</span></span>
+<span data-ttu-id="c9ae6-135">Önceki örnekte kullanılan lambda ifadesidir `i => i % 2 == 0`.</span><span class="sxs-lookup"><span data-stu-id="c9ae6-135">In the preceding example, the lambda expression used is `i => i % 2 == 0`.</span></span> <span data-ttu-id="c9ae6-136">Yeniden yalnızca olduğu bir **çok** ne olacağını perde anonim temsilci ile neler için benzer şekilde, temsilciler kullanılarak için kullanışlı bir söz dizimi.</span><span class="sxs-lookup"><span data-stu-id="c9ae6-136">Again, it is just a **very** convenient syntax for using delegates, so what happens under the covers is similar to what happens with the anonymous delegate.</span></span>
 
-<span data-ttu-id="02dcd-138">Yeniden Lambda'lar, aşağıdaki kod parçacığında gösterildiği gibi herhangi bir sorun olmadan bir olay işleyicisi olarak kullanılabilir başka bir deyişle, yalnızca temsilciler olan.</span><span class="sxs-lookup"><span data-stu-id="02dcd-138">Again, lambdas are just delegates, which means that they can be used as an event handler without any problems, as the following code snippet illustrates.</span></span>
+<span data-ttu-id="c9ae6-137">Yine, lambda ifadeleri, aşağıdaki kod parçacığında gösterildiği gibi herhangi bir sorun olmadan bir olay işleyicisi olarak kullanılabilir anlamına gelir yalnızca temsilcileri.</span><span class="sxs-lookup"><span data-stu-id="c9ae6-137">Again, lambdas are just delegates, which means that they can be used as an event handler without any problems, as the following code snippet illustrates.</span></span>
 
 ```csharp
 public MainWindow()
@@ -147,8 +155,8 @@ public MainWindow()
 }
 ```
 
-## <a name="further-reading-and-resources"></a><span data-ttu-id="02dcd-139">Daha fazla bilgi ve kaynaklar</span><span class="sxs-lookup"><span data-stu-id="02dcd-139">Further reading and resources</span></span>
+## <a name="further-reading-and-resources"></a><span data-ttu-id="c9ae6-138">Daha fazla bilgi ve kaynaklar</span><span class="sxs-lookup"><span data-stu-id="c9ae6-138">Further reading and resources</span></span>
 
-*   [<span data-ttu-id="02dcd-140">Temsilciler</span><span class="sxs-lookup"><span data-stu-id="02dcd-140">Delegates</span></span>](../../docs/csharp/programming-guide/delegates/index.md)
-*   [<span data-ttu-id="02dcd-141">Anonim İşlevler</span><span class="sxs-lookup"><span data-stu-id="02dcd-141">Anonymous Functions</span></span>](../../docs/csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)
-*   [<span data-ttu-id="02dcd-142">Lambda ifadeleri</span><span class="sxs-lookup"><span data-stu-id="02dcd-142">Lambda expressions</span></span>](../../docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
+*   [<span data-ttu-id="c9ae6-139">Temsilciler</span><span class="sxs-lookup"><span data-stu-id="c9ae6-139">Delegates</span></span>](../../docs/csharp/programming-guide/delegates/index.md)
+*   [<span data-ttu-id="c9ae6-140">Anonim İşlevler</span><span class="sxs-lookup"><span data-stu-id="c9ae6-140">Anonymous Functions</span></span>](../../docs/csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)
+*   [<span data-ttu-id="c9ae6-141">Lambda ifadeleri</span><span class="sxs-lookup"><span data-stu-id="c9ae6-141">Lambda expressions</span></span>](../../docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
