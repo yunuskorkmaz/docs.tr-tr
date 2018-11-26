@@ -1,20 +1,20 @@
 ---
 title: Listeler (F#)
-description: F# listeleri, öğeleri aynı türde sıralı, sabit bir dizi hakkında bilgi edinin.
+description: Hakkında bilgi edinin F# listeler, öğeleri aynı türde sıralı, sabit bir dizi.
 ms.date: 05/16/2016
-ms.openlocfilehash: b48bf04f5ec490b49e63462affc0d4eadebe10ef
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: f7b9054226a1dd004ac78673a059bd1c35e325a5
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50201630"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297510"
 ---
 # <a name="lists"></a>Listeler
 
 > [!NOTE]
-Bu makaledeki API başvuru bağlantıları için MSDN sürer.  Docs.microsoft.com API başvuru tamamlanmadı.
+> Bu makaledeki API başvuru bağlantıları için MSDN sürer.  Docs.microsoft.com API başvuru tamamlanmadı.
 
-F# listedeki öğeleri aynı türde sıralı, sabit dizisidir. Listeler temel işlemleri gerçekleştirmek için işlevleri kullanmak [List Modülü](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788).
+Bir listede F# öğeleri aynı türde sıralı, sabit bir dizi. Listeler temel işlemleri gerçekleştirmek için işlevleri kullanmak [List Modülü](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788).
 
 ## <a name="creating-and-initializing-lists"></a>Oluşturma ve başlatma listeler
 
@@ -54,9 +54,9 @@ Kullanarak uyumlu türleri olan listeleri bitiştirebilirsiniz `@` işleci, aşa
 
 Liste işlemleri gerçekleştirmek için işlevleri kullanılabilir [List Modülü](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788).
 
-F# listelerinde sabit olduğundan, herhangi bir değiştirme işlemi varolan listelerini değiştirmek yerine yeni bir liste oluşturur.
+Çünkü listeler F# olan herhangi bir değiştirme işlemi varolan listelerini değiştirmek yerine yeni listeleri oluşturmak, değişmez.
 
-F# listeleri, yani yalnızca listenin başındaki erişim işlemleri O(1), tek bağlantılı liste olarak uygulanır ve öğe erişimi, O ise (*n*).
+Listeler F# yalnızca listenin başındaki erişen işlemler: O(1) ve O öğe erişimi olan tek bağlantılı liste olarak uygulanır (*n*).
 
 ## <a name="properties"></a>Özellikler
 
@@ -290,7 +290,7 @@ Aşağıdaki kod örneği, kullanımını gösterir [List.unzip3](https://msdn.m
 
 ### <a name="operating-on-list-elements"></a>Liste öğeleri üzerinde çalıştırma
 
-F# çeşitli liste öğeleri üzerinde işlemleri destekler. En basit olan [List.iter](https://msdn.microsoft.com/library/f778d075-81a9-4994-af60-cddcc53a201f), listesini her bir öğede bir işlev çağrısı sağlar. Çeşitlemeler içerir [List.iter2](https://msdn.microsoft.com/library/ea3b7761-916c-4016-9bd8-651124c98b40), iki listenin öğelerini bir işlem yapmanıza olanak sağlayan [List.iteri](https://msdn.microsoft.com/library/6dd21ae6-5c00-41cd-8306-821e513d8f60), olduğu gibi `List.iter` dışında her öğenin dizini olarak geçirilen bir her öğe için çağrılan işlev için bağımsız değişken ve [List.iteri2](https://msdn.microsoft.com/library/9658d740-9be5-4bf7-b663-c8ab2b3e196c), işlevselliğinin bir birleşimi olan `List.iter2` ve `List.iteri`. Aşağıdaki kod örneği, bu işlevler gösterilmiştir.
+F#liste öğeleri üzerinde işlemler çeşitli destekler. En basit olan [List.iter](https://msdn.microsoft.com/library/f778d075-81a9-4994-af60-cddcc53a201f), listesini her bir öğede bir işlev çağrısı sağlar. Çeşitlemeler içerir [List.iter2](https://msdn.microsoft.com/library/ea3b7761-916c-4016-9bd8-651124c98b40), iki listenin öğelerini bir işlem yapmanıza olanak sağlayan [List.iteri](https://msdn.microsoft.com/library/6dd21ae6-5c00-41cd-8306-821e513d8f60), olduğu gibi `List.iter` dışında her öğenin dizini olarak geçirilen bir her öğe için çağrılan işlev için bağımsız değişken ve [List.iteri2](https://msdn.microsoft.com/library/9658d740-9be5-4bf7-b663-c8ab2b3e196c), işlevselliğinin bir birleşimi olan `List.iter2` ve `List.iteri`. Aşağıdaki kod örneği, bu işlevler gösterilmiştir.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet17.fs)]
 

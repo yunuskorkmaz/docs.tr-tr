@@ -1,13 +1,13 @@
 ---
 title: 'Kaynak Yönetimi: use Anahtar Sözcüğü (F#)'
-description: F# anahtar sözcüğü 'use' ve yayın kaynakların ve başlatma denetleyebilirsiniz 'using' işlev hakkında bilgi edinin.
+description: Hakkında bilgi edinin F# anahtar sözcüğü 'use' ve yayın kaynakların ve başlatma denetleyebilirsiniz 'using' işlev.
 ms.date: 05/16/2016
-ms.openlocfilehash: ffa1cb515139a3705920d9d9f79be1a69602f7d8
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 300fb4113019f676625f75541d117458eab3f6ab
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45616075"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296886"
 ---
 # <a name="resource-management-the-use-keyword"></a>Kaynak Yönetimi: use Anahtar Sözcüğü
 
@@ -19,7 +19,7 @@ Terim *kaynak* birden fazla yolla kullanılır. Evet, kaynaklar, dizeler, grafik
 
 ## <a name="managing-resources"></a>Kaynakları yönetme
 
-Bir uygulamadaki kaynakları depoladığımız ve etkili bir şekilde yönetmek için en kısa sürede ve tahmin edilebilir bir biçimde kaynakları bırakmalıdır. .NET Framework sağlayarak bunu yapmanıza yardımcı olur. `System.IDisposable` arabirimi. Uygulayan bir tür `System.IDisposable` sahip `System.IDisposable.Dispose` yönteminin doğru kaynakları serbest bırakır. İyi yazılmış uygulamalar garanti `System.IDisposable.Dispose` sınırlı bir kaynağı tutuyor herhangi bir nesne artık gerekmediğinde en kısa sürede çağrılır. Neyse ki, çoğu .NET dilleri, bunu kolaylaştırmak için desteği ve F# aynı durum geçerlidir. Dispose deseni destekleyen iki yararlı dil yapıları vardır: `use` bağlama ve `using` işlevi.
+Bir uygulamadaki kaynakları depoladığımız ve etkili bir şekilde yönetmek için en kısa sürede ve tahmin edilebilir bir biçimde kaynakları bırakmalıdır. .NET Framework sağlayarak bunu yapmanıza yardımcı olur. `System.IDisposable` arabirimi. Uygulayan bir tür `System.IDisposable` sahip `System.IDisposable.Dispose` yönteminin doğru kaynakları serbest bırakır. İyi yazılmış uygulamalar garanti `System.IDisposable.Dispose` sınırlı bir kaynağı tutuyor herhangi bir nesne artık gerekmediğinde en kısa sürede çağrılır. Neyse ki, çoğu .NET dilleri, kolaylaştırmak için destek sağlar ve F# aynı durum geçerlidir. Dispose deseni destekleyen iki yararlı dil yapıları vardır: `use` bağlama ve `using` işlevi.
 
 ## <a name="use-binding"></a>Bağlama kullanın
 
@@ -33,8 +33,8 @@ Aşağıdaki örneği kullanarak bir dosyayı otomatik olarak kapatmak gösteril
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6301.fs)]
 
->[!NOTE]
-Kullanabileceğiniz `use` hesaplama ifadeleri, özelleştirilmiş bir sürümünü durumda içinde `use` ifade kullanılır. Daha fazla bilgi için [dizileri](sequences.md), [zaman uyumsuz iş akışları](asynchronous-workflows.md), ve [hesaplama ifadeleri](computation-expressions.md).
+> [!NOTE]
+> Kullanabileceğiniz `use` hesaplama ifadeleri, özelleştirilmiş bir sürümünü durumda içinde `use` ifade kullanılır. Daha fazla bilgi için [dizileri](sequences.md), [zaman uyumsuz iş akışları](asynchronous-workflows.md), ve [hesaplama ifadeleri](computation-expressions.md).
 
 ## <a name="using-function"></a>İşlevini kullanma
 

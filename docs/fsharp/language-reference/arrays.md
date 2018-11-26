@@ -1,18 +1,18 @@
 ---
 title: Diziler (F#)
-description: Oluşturma ve diziler F# programlama dilini kullanma hakkında bilgi edinin.
+description: Dizilerde oluşturulacağı ve kullanılacağı hakkında bilgi edinin F# programlama dilidir.
 ms.date: 05/16/2016
-ms.openlocfilehash: 27b73efc900ac2efc813fe66f81baa2e9ae1e843
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 0f72718988ee401631c53b74f02948030e83aac1
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48032737"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297198"
 ---
 # <a name="arrays"></a>Diziler
 
 > [!NOTE]
-MSDN için API başvuru bağlantısı sizi yönlendirir.  Docs.microsoft.com API başvuru tamamlanmadı.
+> MSDN için API başvuru bağlantısı sizi yönlendirir.  Docs.microsoft.com API başvuru tamamlanmadı.
 
 Diziler, tümü aynı türde olan ardışık veri öğelerinin sabit boyutlu, sıfır tabanlı, kesilebilir koleksiyonlarıdır.
 
@@ -57,7 +57,7 @@ Dilim gösterimi kullanıldığında dizinin yeni bir kopya oluşturulur.
 
 ## <a name="array-types-and-modules"></a>Dizi türleri ve modüller
 
-Tüm F# dizilerinin türü .NET Framework türüdür <xref:System.Array?displayProperty=nameWithType>. Bu nedenle, F# dizileri kullanılabilir tüm işlevselliği destekleyen <xref:System.Array?displayProperty=nameWithType>.
+Tüm türünü F# diziler, .NET Framework türüdür <xref:System.Array?displayProperty=nameWithType>. Bu nedenle, F# dizileri kullanılabilir tüm işlevleri destekleyen <xref:System.Array?displayProperty=nameWithType>.
 
 Kitaplık Modülü [ `Microsoft.FSharp.Collections.Array` ](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1) tek boyutlu dizilerdeki işlemleri destekler. Modüller `Array2D`, `Array3D`, ve `Array4D` sırasıyla iki, üç ve dört boyutlu dizilerde işlemleri destekleyen işlevler içerir. Kullanarak dörtten büyüm derece dizileri oluşturabilirsiniz <xref:System.Array?displayProperty=nameWithType>.
 
@@ -218,7 +218,7 @@ matrix.[*, 1..3]
 matrix.[1..3, 1..3]
 ```
 
-F# 3.1 itibaren çok boyutlu bir dizi ile aynı veya daha düşük boyutun subarrays bozabilir. Örneğin, tek bir satır veya sütun belirterek bir matristen bir vektör edinebilirsiniz.
+Sürümünden itibaren F# 3.1, çok boyutlu bir dizi ile aynı veya daha düşük boyutun subarrays bozabilir. Örneğin, tek bir satır veya sütun belirterek bir matristen bir vektör edinebilirsiniz.
 
 ```fsharp
 // Get row 3 from a matrix as a vector:
@@ -228,7 +228,7 @@ matrix.[3, *]
 matrix.[*, 3]
 ```
 
-Bu dilimleme sözdizimini uygulamak öğeye erişimi işleçlerini ve aşırı yüklenmiş türleri için kullanın `GetSlice` yöntemleri. Örneğin, aşağıdaki kod F# 2D dizisini saran bir öğe özelliğini dizi İndekslemeye destek sağlamak için uygular ve üç versiyonunu uygular bir matris türü oluşturur `GetSlice`. Bu kodu matris türleriniz için bir şablon olarak kullanabilirsiniz, bu bölümde açıklanan tüm dilimleme işlemlerini kullanabilirsiniz.
+Bu dilimleme sözdizimini uygulamak öğeye erişimi işleçlerini ve aşırı yüklenmiş türleri için kullanın `GetSlice` yöntemleri. Örneğin, aşağıdaki kod saran bir matris türü oluşturur F# 2B dizisi, bir öğe özelliğini dizi İndekslemeye destek sağlamak için uygular ve üç versiyonunu uygular `GetSlice`. Bu kodu matris türleriniz için bir şablon olarak kullanabilirsiniz, bu bölümde açıklanan tüm dilimleme işlemlerini kullanabilirsiniz.
 
 ```fsharp
 type Matrix<'T>(N: int, M: int) =
@@ -418,4 +418,4 @@ Modül [ `Array.Parallel` ](https://msdn.microsoft.com/library/60f30b77-5af4-405
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [F# Dili Başvurusu](index.md)
-- [F#'TA; Türleri](fsharp-types.md)
+- [F#; Türleri](fsharp-types.md)

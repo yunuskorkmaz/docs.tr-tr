@@ -1,20 +1,20 @@
 ---
 title: Zaman Uyumsuz İş Akışları (F#)
-description: F# zaman uyumsuz olarak hesaplamalar gerçekleştirmek için dil programlama desteği hakkında diğer iş yürütme engellemeden yürütülen öğrenin.
+description: Desteği hakkında bilgi edinin F# programlama diğer iş yürütme engellemeden yürütülen zaman uyumsuz olarak hesaplamalar gerçekleştirmek için dili.
 ms.date: 05/16/2016
-ms.openlocfilehash: 2a6d5f8b61d63a722744f8f71a037e8bc460c64f
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 720996106d2b90392eacc75eb99147691ee83334
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43861568"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297081"
 ---
 # <a name="asynchronous-workflows"></a>Zaman Uyumsuz İş Akışları
 
 > [!NOTE]
-MSDN için API başvuru bağlantısı sizi yönlendirir.  Docs.microsoft.com API başvuru tamamlanmadı.
+> MSDN için API başvuru bağlantısı sizi yönlendirir.  Docs.microsoft.com API başvuru tamamlanmadı.
 
-Bu konuda, hesaplamalar zaman uyumsuz olarak diğer bir deyişle, diğer iş yürütme engellemeden gerçekleştirmek için F# desteği açıklanmaktadır. Örneğin, zaman uyumsuz hesaplamalar, diğer iş uygulamanın gerçekleştirdiği gibi kullanıcıya hassas kalması kullanıcı arabirimleri olan uygulamaları yazmak için kullanılabilir.
+Bu konuda desteği açıklanmaktadır F# zaman uyumsuz hesaplamalar gerçekleştirmek için diğer bir deyişle, diğer yürütülmesini engellenmeden çalışır. Örneğin, zaman uyumsuz hesaplamalar, diğer iş uygulamanın gerçekleştirdiği gibi kullanıcıya hassas kalması kullanıcı arabirimleri olan uygulamaları yazmak için kullanılabilir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,17 +41,17 @@ let (result1 : Async<byte[]>) = stream.AsyncRead(bufferSize)
 let! (result2 : byte[])  = stream.AsyncRead(bufferSize)
 ```
 
-Ek olarak `let!`, kullanabileceğiniz `use!` zaman uyumsuz bağlamaları gerçekleştirilecek. Arasındaki fark `let!` ve `use!` arasındaki farkı aynı `let` ve `use`. İçin `use!`, nesne, geçerli kapsamdaki kapanışında atıldı. F# dili, geçerli sürümde unutmayın `use!` null olarak olsa bile başlatılacak bir değere izin vermiyor `use` yapar.
+Ek olarak `let!`, kullanabileceğiniz `use!` zaman uyumsuz bağlamaları gerçekleştirilecek. Arasındaki fark `let!` ve `use!` arasındaki farkı aynı `let` ve `use`. İçin `use!`, nesne, geçerli kapsamdaki kapanışında atıldı. Geçerli sürüm olduğunu unutmayın F# dil `use!` null olarak olsa bile başlatılacak bir değere izin vermiyor `use` yapar.
 
 ## <a name="asynchronous-primitives"></a>Zaman uyumsuz temelleri
 
-Tek bir zaman uyumsuz görev gerçekleştirir ve sonuç döndüren bir yöntem olarak adlandırılan bir *zaman uyumsuz temel*, ve bu ile kullanılmak üzere özel olarak tasarlanmıştır `let!`. Birden çok zaman uyumsuz temelleri F# çekirdek kitaplığında tanımlanır. Web uygulamaları için iki tür yöntemler modülde tanımlanan [ `Microsoft.FSharp.Control.WebExtensions` ](https://msdn.microsoft.com/library/95ef17bc-ee3f-44ba-8a11-c90fcf4cf003): [ `WebRequest.AsyncGetResponse` ](https://msdn.microsoft.com/library/09a60c31-e6e2-4b5c-ad23-92a86e50060c) ve [ `WebClient.AsyncDownloadString` ](https://msdn.microsoft.com/library/8a85a9b7-f712-4cac-a0ce-0a797f8ea32a). Her iki ilkel veri Web verilen URL bir sayfasından indirin. `AsyncGetResponse` üreten bir `System.Net.WebResponse` nesnesi ve `AsyncDownloadString` HTML Web sayfası için temsil eden bir dize oluşturur.
+Tek bir zaman uyumsuz görev gerçekleştirir ve sonuç döndüren bir yöntem olarak adlandırılan bir *zaman uyumsuz temel*, ve bu ile kullanılmak üzere özel olarak tasarlanmıştır `let!`. Birden çok zaman uyumsuz temelleri tanımlanan F# çekirdek kitaplığı. Web uygulamaları için iki tür yöntemler modülde tanımlanan [ `Microsoft.FSharp.Control.WebExtensions` ](https://msdn.microsoft.com/library/95ef17bc-ee3f-44ba-8a11-c90fcf4cf003): [ `WebRequest.AsyncGetResponse` ](https://msdn.microsoft.com/library/09a60c31-e6e2-4b5c-ad23-92a86e50060c) ve [ `WebClient.AsyncDownloadString` ](https://msdn.microsoft.com/library/8a85a9b7-f712-4cac-a0ce-0a797f8ea32a). Her iki ilkel veri Web verilen URL bir sayfasından indirin. `AsyncGetResponse` üreten bir `System.Net.WebResponse` nesnesi ve `AsyncDownloadString` HTML Web sayfası için temsil eden bir dize oluşturur.
 
 Zaman uyumsuz g/ç işlemleri için birkaç temelleri dahil [ `Microsoft.FSharp.Control.CommonExtensions` ](https://msdn.microsoft.com/library/2edb67cb-6814-4a30-849f-b6dbdd042396) modülü. Bu uzantı yöntemleri `System.IO.Stream` sınıfı [ `Stream.AsyncRead` ](https://msdn.microsoft.com/library/85698aaa-bdda-47e6-abed-3730f59fda5e) ve [ `Stream.AsyncWrite` ](https://msdn.microsoft.com/library/1b0a2751-e42a-47e1-bd27-020224adc618).
 
 Ayrıca, tam gövde, bir zaman uyumsuz bloğunda alınmış bir işlevi tanımlayarak kendi zaman uyumsuz temelleri yazabilirsiniz.
 
-Diğer zaman uyumsuz modeller ile F# zaman uyumsuz programlama modeli için tasarlanmış, zaman uyumsuz yöntemler .NET Framework'teki kullanmak için bir F# döndüren bir işlev oluşturun. `Async` nesne. F# kitaplığı, bunu yapmak kolaylaştıran işlevi vardır.
+Diğer zaman uyumsuz modeller ile tasarlanmış zaman uyumsuz yöntemler .NET Framework'teki kullanılmak üzere F# zaman uyumsuz programlama modeli döndüren bir işlev oluşturma bir F# `Async` nesne. F# Kitaplığı, bunu yapmak kolaylaştıran işlevleri vardır.
 
 Zaman uyumsuz iş akışları kullanmaya ilişkin bir örnek burada bulunur; vardır birçok diğer yöntemleri için belgelerinde [Async sınıfı](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7).
 

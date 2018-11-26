@@ -1,29 +1,29 @@
 ---
 title: Simge ve İşleç Başvurusu (F#)
-description: Simgeler ve F# programlama dilinin kullanılan işleçler hakkında bilgi edinin.
+description: Simgeler ve kullanılan işleçleri hakkında F# programlama dilidir.
 ms.date: 04/04/2018
-ms.openlocfilehash: 0e36f6cfc75b7d2e79bcf7acb89d260fd4e9b1ad
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: f6f99f8fa563b71c935122c6f8597599c59b5c7f
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "47216836"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297348"
 ---
 # <a name="symbol-and-operator-reference"></a>Simge ve İşleç Başvurusu
 
 > [!NOTE]
-Bu makaledeki API başvuru bağlantıları için MSDN sürer.  Docs.microsoft.com API başvuru tamamlanmadı.
+> Bu makaledeki API başvuru bağlantıları için MSDN sürer.  Docs.microsoft.com API başvuru tamamlanmadı.
 
-Bu konu F# dilinde simgeler ve işleçler kullanılan bir tablo içerir.
+Bu konu, simgeler ve işleçler kullanılan bir tablo içerir F# dili.
 
 ## <a name="table-of-symbols-and-operators"></a>Simgeler ve İşleçler Tablosu
 
-Aşağıdaki tabloda F# dilinde kullanılan simgeler açıklar, daha fazla bilgi sağlayan konulara bağlantılar sağlar ve bazı kullandığı simgenin kısa bir açıklamasını sağlar. Semboller ASCII karakter sıralama kümesini göre sıralanır.
+Aşağıdaki tabloda kullanılan simgeler açıklanmaktadır F# dil daha fazla bilgi sağlayan konulara bağlantılar sağlar ve bazı kullandığı simgenin kısa bir açıklamasını sağlar. Semboller ASCII karakter sıralama kümesini göre sıralanır.
 
 |Sembol or işleci|Bağlantılar|Açıklama|
 |------------------|-----|-----------|
 |`!`|[Başvuru Hücreleri](../reference-cells.md)<br /><br />[Hesaplama İfadeleri](../computation-expressions.md)|<ul><li>Bir başvuru hücresi başvurusunu kaldırır.<br /></li><li>Sonra anahtar sözcüğü, bir iş akışı tarafından denetlenen anahtar sözcüğü'nın davranışı değiştirilmiş bir sürümünü gösterir.<br /></li></ul>|
-|`!=`|Yok.|<ul><li>F# içinde kullanılmaz. Kullanım `<>` eşitsizlik işlemleri için.<br /></li></ul>|
+|`!=`|Yok.|<ul><li>İçinde kullanılmadı F#. Kullanım `<>` eşitsizlik işlemleri için.<br /></li></ul>|
 |`"`|[Değişmez Değerler](../literals.md)<br /><br />[Dizeler](../strings.md)|<ul><li>Bir metin dizesi sınırlandırır.<br /></li></ul>|
 |`"""`|[Dizeler](../strings.md)|Verbatim metin dizesi sınırlandırır. Farklıdır `@"..."` içeren bir tırnak işareti karakteri tek tırnak içinde dize kullanarak belirtebilirsiniz.|
 |`#`|[Derleyici Yönergeleri](../compiler-directives.md)<br /><br />[Esnek Türler](../flexible-types.md)|<ul><li>Önişlemci veya derleyici yönergesi gibi ön ekleri `#light`.<br /></li><li>Bir türü ile kullanıldığında, gösterir bir *esnek türü*, bir tür veya türetilmiş türlerini birini gösterir.<br /></li></ul>|
@@ -81,7 +81,7 @@ Aşağıdaki tabloda F# dilinde kullanılan simgeler açıklar, daha fazla bilgi
 |`<@@...@@>`|[Kod Alıntıları](../code-quotations.md)|<ul><li>Kod yazılmamış tırnak sınırlandırır.<br /></li></ul>|
 |`=`|[Aritmetik İşleçler](arithmetic-operators.md)|<ul><li>Döndürür `true` sağ tarafı; sol tarafındaki eşitse, aksi takdirde döndürür `false`.<br /></li></ul>|
 |`=?`|[Null Değer Atanabilir İşleçler](nullable-operators.md)|<ul><li>"Equal" işlemi, sağ tarafında boş değer atanabilir bir tür olduğunda hesaplar.<br /></li></ul>|
-|`==`|Yok.|<ul><li>F# içinde kullanılmaz. Kullanım `=` eşitlik işlemleri için.<br /></li></ul>|
+|`==`|Yok.|<ul><li>İçinde kullanılmadı F#. Kullanım `=` eşitlik işlemleri için.<br /></li></ul>|
 |`>`|[Aritmetik İşleçler](arithmetic-operators.md)|<ul><li>Döndürür `true` sol tarafında, aksi takdirde sağ tarafındaki büyük döndürür `false`.<br /></li></ul>|
 |`>?`|[Null Değer Atanabilir İşleçler](nullable-operators.md)|<ul><li>Sağ tarafında boş değer atanabilir bir tür olduğunda, "büyüktür" işlemi hesaplar.<br /></li></ul>|
 |`>>`|[İşlevler](../functions/index.md)|<ul><li>İki işlev (İleri birleşim işleci) oluşturur.<br /></li></ul>|
@@ -116,7 +116,7 @@ Aşağıdaki tabloda F# dilinde kullanılan simgeler açıklar, daha fazla bilgi
 
 ## <a name="operator-precedence"></a>İşleç Önceliği
 
-Aşağıdaki tabloda, F# dilindeki en yüksek önceliği en düşük önceliğe kaliteden öncelik işleçleri ve diğer deyim anahtar sözcükleri sırayı gösterir. Ayrıca listelenen birleşim geçerli olur.
+Aşağıdaki tabloda öncelik işleçleri ve diğer deyim anahtar sözcükleri sırasını gösterir F# en yüksek önceliği en düşük önceliğe kaliteden dili. Ayrıca listelenen birleşim geçerli olur.
 
 |İşleç|İlişkilendirilebilirlik|
 |--------|-------------|
@@ -146,7 +146,7 @@ Aşağıdaki tabloda, F# dilindeki en yüksek önceliği en düşük önceliğe 
 |`.`|Sol|
 |`f(x)`|Sol|
 |`f<`*Türleri*`>`|Sol|
-F# özel İşleç aşırı yüklemesi destekler. Başka bir deyişle, kendi işleçleri tanımlayabilirsiniz. Önceki tabloda *op* (büyük olasılıkla boş) geçerli dizi işleci karakter, yerleşik veya kullanıcı tanımlı olabilir. Bu nedenle, hangi istediğiniz öncelik düzeyini elde etmek için özel bir işleç için kullanılacak karakter sırasını belirlemek için bu tabloyu kullanın. Önde gelen `.` derleyici öncelik belirlediğinde karakterler yoksayılır.
+F#Özel İşleç aşırı yüklemesi destekler. Başka bir deyişle, kendi işleçleri tanımlayabilirsiniz. Önceki tabloda *op* (büyük olasılıkla boş) geçerli dizi işleci karakter, yerleşik veya kullanıcı tanımlı olabilir. Bu nedenle, hangi istediğiniz öncelik düzeyini elde etmek için özel bir işleç için kullanılacak karakter sırasını belirlemek için bu tabloyu kullanın. Önde gelen `.` derleyici öncelik belirlediğinde karakterler yoksayılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
