@@ -4,21 +4,21 @@ description: Ardışık Düzen işleme öğrenme ML.NET makine sırasında gerç
 ms.date: 11/07/2018
 ms.custom: mvc,how-to
 ms.openlocfilehash: cd229c120f7599c9a304a84a1669947e613fc917
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297682"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52671940"
 ---
-# <a name="inspect-intermediate-data-values-during-mlnet-pipeline-processing"></a><span data-ttu-id="8ca85-103">ML.NET ardışık düzen işleme sırasında ara veri değerlerini İnceleme</span><span class="sxs-lookup"><span data-stu-id="8ca85-103">Inspect intermediate data values during ML.NET pipeline processing</span></span>
+# <a name="inspect-intermediate-data-values-during-mlnet-pipeline-processing"></a><span data-ttu-id="7dada-103">ML.NET ardışık düzen işleme sırasında ara veri değerlerini İnceleme</span><span class="sxs-lookup"><span data-stu-id="7dada-103">Inspect intermediate data values during ML.NET pipeline processing</span></span>
 
-<span data-ttu-id="8ca85-104">Deneme sırasında inceleyin ve belirli bir noktada veri işleme sonuçları doğrulamak isteyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="8ca85-104">During the experiment, you may want to observe and validate the data processing results at a given point.</span></span> <span data-ttu-id="8ca85-105">ML.NET işlemleri oluşturma veri ' gösterir' olan nesneleri yavaş olduğundan, bu kolay değildir.</span><span class="sxs-lookup"><span data-stu-id="8ca85-105">This isn't easy since ML.NET operations are lazy, constructing objects that are 'promises' of data.</span></span>
+<span data-ttu-id="7dada-104">Deneme sırasında inceleyin ve belirli bir noktada veri işleme sonuçları doğrulamak isteyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="7dada-104">During the experiment, you may want to observe and validate the data processing results at a given point.</span></span> <span data-ttu-id="7dada-105">ML.NET işlemleri oluşturma veri ' gösterir' olan nesneleri yavaş olduğundan, bu kolay değildir.</span><span class="sxs-lookup"><span data-stu-id="7dada-105">This isn't easy since ML.NET operations are lazy, constructing objects that are 'promises' of data.</span></span>
 
-<span data-ttu-id="8ca85-106">`GetColumn<T>` Genişletme yöntemi, Ara verileri incelemenize olanak sağlar.</span><span class="sxs-lookup"><span data-stu-id="8ca85-106">The `GetColumn<T>` extension method lets you inspect the intermediate data.</span></span> <span data-ttu-id="8ca85-107">Bir veri sütunu olarak içeriğini döndürür bir `IEnumerable`.</span><span class="sxs-lookup"><span data-stu-id="8ca85-107">It returns the contents of one data column as an `IEnumerable`.</span></span>
+<span data-ttu-id="7dada-106">`GetColumn<T>` Genişletme yöntemi, Ara verileri incelemenize olanak sağlar.</span><span class="sxs-lookup"><span data-stu-id="7dada-106">The `GetColumn<T>` extension method lets you inspect the intermediate data.</span></span> <span data-ttu-id="7dada-107">Bir veri sütunu olarak içeriğini döndürür bir `IEnumerable`.</span><span class="sxs-lookup"><span data-stu-id="7dada-107">It returns the contents of one data column as an `IEnumerable`.</span></span>
 
-<span data-ttu-id="8ca85-108">Aşağıdaki örnek nasıl kullanılacağını gösterir `GetColumn<T>` genişletme yöntemi:</span><span class="sxs-lookup"><span data-stu-id="8ca85-108">The following example shows how to use the `GetColumn<T>` extension method:</span></span>
+<span data-ttu-id="7dada-108">Aşağıdaki örnek nasıl kullanılacağını gösterir `GetColumn<T>` genişletme yöntemi:</span><span class="sxs-lookup"><span data-stu-id="7dada-108">The following example shows how to use the `GetColumn<T>` extension method:</span></span>
 
-<span data-ttu-id="8ca85-109">[Örnek dosya](https://github.com/dotnet/machinelearning/tree/master/test/data/adult.tiny.with-schema.txt):</span><span class="sxs-lookup"><span data-stu-id="8ca85-109">[Example file](https://github.com/dotnet/machinelearning/tree/master/test/data/adult.tiny.with-schema.txt):</span></span>
+<span data-ttu-id="7dada-109">[Örnek dosya](https://github.com/dotnet/machinelearning/tree/master/test/data/adult.tiny.with-schema.txt):</span><span class="sxs-lookup"><span data-stu-id="7dada-109">[Example file](https://github.com/dotnet/machinelearning/tree/master/test/data/adult.tiny.with-schema.txt):</span></span>
 ```
 Label   Workclass   education   marital-status
 0   Private 11th    Never-married
@@ -28,7 +28,7 @@ Label   Workclass   education   marital-status
 
 ```
 
-<span data-ttu-id="8ca85-110">Bizim sınıfı şu şekilde tanımlanır:</span><span class="sxs-lookup"><span data-stu-id="8ca85-110">Our class is defined as follows:</span></span>
+<span data-ttu-id="7dada-110">Bizim sınıfı şu şekilde tanımlanır:</span><span class="sxs-lookup"><span data-stu-id="7dada-110">Our class is defined as follows:</span></span>
 
 ```csharp
 private class InspectedRow

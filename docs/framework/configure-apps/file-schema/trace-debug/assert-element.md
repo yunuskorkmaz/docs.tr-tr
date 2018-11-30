@@ -11,57 +11,57 @@ ms.assetid: ef4c3229-b151-4d85-8091-e6456af9b935
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: b15e569ff6e42298c0a1de02f77ab7c302c70d86
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192687"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52672325"
 ---
-# <a name="ltassertgt-element"></a><span data-ttu-id="92414-102">&lt;Assert&gt; öğesi</span><span class="sxs-lookup"><span data-stu-id="92414-102">&lt;assert&gt; Element</span></span>
-<span data-ttu-id="92414-103">Bir ileti kutusu çağırdığınızda görüntülenip görüntülenmeyeceğini belirtir <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> yöntemi de ileti yazmak için dosya adını belirtir.</span><span class="sxs-lookup"><span data-stu-id="92414-103">Specifies whether to display a message box when you call the <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> method; also specifies the name of the file to write messages to.</span></span>  
+# <a name="ltassertgt-element"></a><span data-ttu-id="d4083-102">&lt;Assert&gt; öğesi</span><span class="sxs-lookup"><span data-stu-id="d4083-102">&lt;assert&gt; Element</span></span>
+<span data-ttu-id="d4083-103">Bir ileti kutusu çağırdığınızda görüntülenip görüntülenmeyeceğini belirtir <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> yöntemi de ileti yazmak için dosya adını belirtir.</span><span class="sxs-lookup"><span data-stu-id="d4083-103">Specifies whether to display a message box when you call the <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> method; also specifies the name of the file to write messages to.</span></span>  
   
- <span data-ttu-id="92414-104">\<Yapılandırma ></span><span class="sxs-lookup"><span data-stu-id="92414-104">\<configuration></span></span>  
-<span data-ttu-id="92414-105">\<System.Diagnostics ></span><span class="sxs-lookup"><span data-stu-id="92414-105">\<system.diagnostics></span></span>  
-<span data-ttu-id="92414-106">\<Assert ></span><span class="sxs-lookup"><span data-stu-id="92414-106">\<assert></span></span>  
+ <span data-ttu-id="d4083-104">\<Yapılandırma ></span><span class="sxs-lookup"><span data-stu-id="d4083-104">\<configuration></span></span>  
+<span data-ttu-id="d4083-105">\<System.Diagnostics ></span><span class="sxs-lookup"><span data-stu-id="d4083-105">\<system.diagnostics></span></span>  
+<span data-ttu-id="d4083-106">\<Assert ></span><span class="sxs-lookup"><span data-stu-id="d4083-106">\<assert></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="92414-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="92414-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d4083-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="d4083-107">Syntax</span></span>  
   
 ```xml  
 <assert assertuienabled="true|false" logfilename="file name"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="92414-108">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="92414-108">Attributes and Elements</span></span>  
- <span data-ttu-id="92414-109">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="92414-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="d4083-108">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="d4083-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="d4083-109">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="d4083-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="92414-110">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="92414-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="d4083-110">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="d4083-110">Attributes</span></span>  
   
-|<span data-ttu-id="92414-111">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="92414-111">Attribute</span></span>|<span data-ttu-id="92414-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="92414-112">Description</span></span>|  
+|<span data-ttu-id="d4083-111">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="d4083-111">Attribute</span></span>|<span data-ttu-id="d4083-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="d4083-112">Description</span></span>|  
 |---------------|-----------------|  
-|`assertuienabled`|<span data-ttu-id="92414-113">İsteğe bağlı öznitelik.</span><span class="sxs-lookup"><span data-stu-id="92414-113">Optional attribute.</span></span><br /><br /> <span data-ttu-id="92414-114">Görüntülenecek bir ileti kutusunu olup olmadığını belirtir **Debug.Assert** yöntemi değerlendirilen **false**.</span><span class="sxs-lookup"><span data-stu-id="92414-114">Specifies whether to display a message box when the **Debug.Assert** method evaluates to **false**.</span></span>|  
-|`logfilename`|<span data-ttu-id="92414-115">İsteğe bağlı öznitelik.</span><span class="sxs-lookup"><span data-stu-id="92414-115">Optional attribute.</span></span><br /><br /> <span data-ttu-id="92414-116">Eğer ileti yazmak için dosya adını belirtir **Debug.Assert** değerlendiren **false**.</span><span class="sxs-lookup"><span data-stu-id="92414-116">Specifies the name of the file to write the message to if **Debug.Assert** evaluates to **false**.</span></span>|  
+|`assertuienabled`|<span data-ttu-id="d4083-113">İsteğe bağlı öznitelik.</span><span class="sxs-lookup"><span data-stu-id="d4083-113">Optional attribute.</span></span><br /><br /> <span data-ttu-id="d4083-114">Görüntülenecek bir ileti kutusunu olup olmadığını belirtir **Debug.Assert** yöntemi değerlendirilen **false**.</span><span class="sxs-lookup"><span data-stu-id="d4083-114">Specifies whether to display a message box when the **Debug.Assert** method evaluates to **false**.</span></span>|  
+|`logfilename`|<span data-ttu-id="d4083-115">İsteğe bağlı öznitelik.</span><span class="sxs-lookup"><span data-stu-id="d4083-115">Optional attribute.</span></span><br /><br /> <span data-ttu-id="d4083-116">Eğer ileti yazmak için dosya adını belirtir **Debug.Assert** değerlendiren **false**.</span><span class="sxs-lookup"><span data-stu-id="d4083-116">Specifies the name of the file to write the message to if **Debug.Assert** evaluates to **false**.</span></span>|  
   
-## <a name="assertuienabled-attribute"></a><span data-ttu-id="92414-117">assertuienabled özniteliği</span><span class="sxs-lookup"><span data-stu-id="92414-117">assertuienabled Attribute</span></span>  
+## <a name="assertuienabled-attribute"></a><span data-ttu-id="d4083-117">assertuienabled özniteliği</span><span class="sxs-lookup"><span data-stu-id="d4083-117">assertuienabled Attribute</span></span>  
   
-|<span data-ttu-id="92414-118">Değer</span><span class="sxs-lookup"><span data-stu-id="92414-118">Value</span></span>|<span data-ttu-id="92414-119">Açıklama</span><span class="sxs-lookup"><span data-stu-id="92414-119">Description</span></span>|  
+|<span data-ttu-id="d4083-118">Değer</span><span class="sxs-lookup"><span data-stu-id="d4083-118">Value</span></span>|<span data-ttu-id="d4083-119">Açıklama</span><span class="sxs-lookup"><span data-stu-id="d4083-119">Description</span></span>|  
 |-----------|-----------------|  
-|`true`|<span data-ttu-id="92414-120">İleti kutusu görüntüler.</span><span class="sxs-lookup"><span data-stu-id="92414-120">Displays the message box.</span></span> <span data-ttu-id="92414-121">Bu varsayılandır.</span><span class="sxs-lookup"><span data-stu-id="92414-121">This is the default.</span></span>|  
-|`false`|<span data-ttu-id="92414-122">İleti kutusu görüntülemez.</span><span class="sxs-lookup"><span data-stu-id="92414-122">Does not display the message box.</span></span>|  
+|`true`|<span data-ttu-id="d4083-120">İleti kutusu görüntüler.</span><span class="sxs-lookup"><span data-stu-id="d4083-120">Displays the message box.</span></span> <span data-ttu-id="d4083-121">Bu varsayılandır.</span><span class="sxs-lookup"><span data-stu-id="d4083-121">This is the default.</span></span>|  
+|`false`|<span data-ttu-id="d4083-122">İleti kutusu görüntülemez.</span><span class="sxs-lookup"><span data-stu-id="d4083-122">Does not display the message box.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="92414-123">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="92414-123">Child Elements</span></span>  
- <span data-ttu-id="92414-124">Yok.</span><span class="sxs-lookup"><span data-stu-id="92414-124">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="d4083-123">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="d4083-123">Child Elements</span></span>  
+ <span data-ttu-id="d4083-124">Yok.</span><span class="sxs-lookup"><span data-stu-id="d4083-124">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="92414-125">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="92414-125">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="d4083-125">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="d4083-125">Parent Elements</span></span>  
   
-|<span data-ttu-id="92414-126">Öğe</span><span class="sxs-lookup"><span data-stu-id="92414-126">Element</span></span>|<span data-ttu-id="92414-127">Açıklama</span><span class="sxs-lookup"><span data-stu-id="92414-127">Description</span></span>|  
+|<span data-ttu-id="d4083-126">Öğe</span><span class="sxs-lookup"><span data-stu-id="d4083-126">Element</span></span>|<span data-ttu-id="d4083-127">Açıklama</span><span class="sxs-lookup"><span data-stu-id="d4083-127">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="92414-128">Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.</span><span class="sxs-lookup"><span data-stu-id="92414-128">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`system.diagnostics`|<span data-ttu-id="92414-129">Toplamak, depolamak ve iletileri ve bir izleme anahtarı ayarlandığı düzeyi izleme dinleyicilerini belirtir.</span><span class="sxs-lookup"><span data-stu-id="92414-129">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
+|`configuration`|<span data-ttu-id="d4083-128">Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.</span><span class="sxs-lookup"><span data-stu-id="d4083-128">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="d4083-129">Toplamak, depolamak ve iletileri ve bir izleme anahtarı ayarlandığı düzeyi izleme dinleyicilerini belirtir.</span><span class="sxs-lookup"><span data-stu-id="d4083-129">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="92414-130">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="92414-130">Remarks</span></span>  
- <span data-ttu-id="92414-131">Her iki öznitelikleri  **\<assert >** öğe isteğe bağlıdır.</span><span class="sxs-lookup"><span data-stu-id="92414-131">Both attributes in the **\<assert>** element are optional.</span></span> <span data-ttu-id="92414-132">İleti yazmak için bir dosya belirtmeden ileti kutularını devre dışı bırakabilir veya ileti kutuları etkin bırakılması while iletiler yazmak için bir dosya belirtebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="92414-132">You can disable message boxes without specifying a file to write the messages to, or you can specify a file to write messages to while leaving message boxes enabled.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d4083-130">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="d4083-130">Remarks</span></span>  
+ <span data-ttu-id="d4083-131">Her iki öznitelikleri  **\<assert >** öğe isteğe bağlıdır.</span><span class="sxs-lookup"><span data-stu-id="d4083-131">Both attributes in the **\<assert>** element are optional.</span></span> <span data-ttu-id="d4083-132">İleti yazmak için bir dosya belirtmeden ileti kutularını devre dışı bırakabilir veya ileti kutuları etkin bırakılması while iletiler yazmak için bir dosya belirtebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="d4083-132">You can disable message boxes without specifying a file to write the messages to, or you can specify a file to write messages to while leaving message boxes enabled.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="92414-133">Örnek</span><span class="sxs-lookup"><span data-stu-id="92414-133">Example</span></span>  
- <span data-ttu-id="92414-134">Aşağıdaki örnek, ileti kutularını görüntüleme çağırdığınızda devre dışı bırakmak gösterilmektedir **Debug.Assert** ve iletileri yazma `c:\log.txt`.</span><span class="sxs-lookup"><span data-stu-id="92414-134">The following example shows how to disable displaying message boxes when you call **Debug.Assert** and write the messages to `c:\log.txt`.</span></span>  
+## <a name="example"></a><span data-ttu-id="d4083-133">Örnek</span><span class="sxs-lookup"><span data-stu-id="d4083-133">Example</span></span>  
+ <span data-ttu-id="d4083-134">Aşağıdaki örnek, ileti kutularını görüntüleme çağırdığınızda devre dışı bırakmak gösterilmektedir **Debug.Assert** ve iletileri yazma `c:\log.txt`.</span><span class="sxs-lookup"><span data-stu-id="d4083-134">The following example shows how to disable displaying message boxes when you call **Debug.Assert** and write the messages to `c:\log.txt`.</span></span>  
   
 ```xml  
 <configuration>  
@@ -71,6 +71,6 @@ ms.locfileid: "50192687"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="92414-135">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="92414-135">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="d4083-135">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="d4083-135">See Also</span></span>  
  <xref:System.Diagnostics.Debug>  
- [<span data-ttu-id="92414-136">İzleme ve Hata Ayıklama Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="92414-136">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+ [<span data-ttu-id="d4083-136">İzleme ve Hata Ayıklama Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="d4083-136">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
