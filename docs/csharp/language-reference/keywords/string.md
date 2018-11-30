@@ -10,12 +10,12 @@ helpviewer_keywords:
 - string literals [C#]
 - string keyword [C#]
 ms.assetid: 3037e558-fb22-494d-bca1-a15ade11b11a
-ms.openlocfilehash: ab2e69c60872aed19d46450f17becc918ffe2a38
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 66b1729363878f69f868b8b8fd6e9e7011426f27
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181466"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52672010"
 ---
 # <a name="string-c-reference"></a>string (C# Başvurusu)
 
@@ -108,7 +108,6 @@ C# dizeleri hakkında daha fazla bilgi için bkz. [dizeleri](../../programming-g
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [Dizeleri Kullanmak için En İyi Uygulamalar](../../../standard/base-types/best-practices-strings.md)
 - [C# Anahtar Sözcükleri](index.md)
-- [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [Başvuru Türleri](reference-types.md)
 - [Değer Türleri](value-types.md)
 - [Temel Dize İşlemleri](../../../standard/base-types/basic-string-operations.md)

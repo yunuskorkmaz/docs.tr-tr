@@ -2,12 +2,12 @@
 title: SQL Server'da satır düzeyinde izinler verme
 ms.date: 03/30/2017
 ms.assetid: a55aaa12-34ab-41cd-9dec-fd255b29258c
-ms.openlocfilehash: 4a4b45e13a16b357be28a1383648e98890567ea9
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 0ec68f013d08e3939d48a820b9fd52ce27a4f12d
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43873711"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52671996"
 ---
 # <a name="granting-row-level-permissions-in-sql-server"></a>SQL Server'da satır düzeyinde izinler verme
 Bazı senaryolarda, hangi yalnızca verme, iptal etme veya reddetme izinleri sağlar. daha fazla ayrıntılı bir düzeyde verilere erişimi denetlemek için bir gereksinim yoktur. Örneğin, bir hastane veritabanı uygulaması tek Doktorlar hastaların için yalnızca ilgili bilgiler erişimle sınırlı olmasını gerektirebilir. Benzer gereksinimleri, Finans, yasa, resmi ve Askeri uygulamalar dahil, birçok ortamlarında mevcut. Bu senaryolara yardımcı olmak için SQL Server 2016 sağlar. bir [satır düzeyi güvenlik](https://msdn.microsoft.com/library/dn765131.aspx) basitleştirir ve satır düzeyinde erişim mantığı güvenlik ilkesinde otomatik özelliği. Satır düzeyinde filtreleme geçireceğini görünümlerini kullanarak SQL Server'ın önceki sürümleri için benzer bir işlevsellik gerçekleştirilebilir.  
@@ -58,13 +58,6 @@ Bazı senaryolarda, hangi yalnızca verme, iptal etme veya reddetme izinleri sa�
 -   Tüm tablolar (ve görünümler, eğer varsa) izinlerini reddetmek için `public` rol. Kullanıcılar, filtre koşulu kullanıcı veya rol değil, oturum açma adları bağlı olduğu diğer veritabanı rollerden devralmak mümkün olmayacaktır.  
   
 -   GRANT veritabanı rollerine saklı yordamlar YÜRÜTÜN. Kullanıcılar sağlanan saklı yordamları yalnızca verilere erişebilir.  
-  
-## <a name="external-resources"></a>Dış Kaynaklar  
- Daha fazla bilgi için aşağıdaki kaynağa bakın.  
-  
-|||  
-|-|-|  
-|[Satır ve hücre düzeyi güvenlik sınıflandırılmış veritabanlarını kullanarak SQL Server 2005'te uygulama](https://go.microsoft.com/fwlink/?LinkId=98227) üzerinde SQL Server TechCenter sitesi.|Satır ve hücre düzeyi güvenlik sınıflandırılmış veritabanı güvenliği gereksinimlerinizi karşılamak için nasıl kullanılacağını açıklar.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Satır düzeyi güvenlik](https://msdn.microsoft.com/library/dn765131.aspx)  

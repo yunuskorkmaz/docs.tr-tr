@@ -1,29 +1,29 @@
 ---
-title: Bir olay için veri yolu RabbitMQ ile geliştirme veya test ortamına uygulama
-description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Bir olay için veri yolu RabbitMQ ile geliştirme veya test ortamına uygulama
+title: Uygulama geliştirme veya test ortamı için RabbitMQ ile bir olay yolu
+description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Geliştirme ve test ortamları için tümleştirme olayları için Mesajlaşma bir olay veri yolu uygulamak için RabbitMQ kullanın.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 12/11/2017
-ms.openlocfilehash: fb9bf51d947774cddd7b42ade0f05abc8fb3d7e9
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 10/02/2018
+ms.openlocfilehash: 6d855b56a7fd00b316dde599683900ad2db758d7
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104759"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52672351"
 ---
-# <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>Bir olay için veri yolu RabbitMQ ile geliştirme veya test ortamına uygulama
+# <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>Uygulama geliştirme veya test ortamı için RabbitMQ ile bir olay yolu
 
-Bir kapsayıcıda çalışan RabbitMQ eShopOnContainers uygulamalarında olduğu gibi temel, özel olay bus oluşturursanız, yalnızca geliştirme ve test ortamları için kullanılması gerektiğini söyleyen başlamanız gerekir. Üretime hazır hizmet veri yolu bir parçası olarak oluşturmakta olduğunuz sürece, üretim ortamınız için bunu kullanmamanız gerekir. Basit özel olay bus ticari hizmet veri yolu olan birçok üretime hazır önemli özellikleri eksik olabilir.
+Bir kapsayıcıda çalışan RabbitMQ hizmetine uygulama gibi temel, özel olay veri yolu oluşturursanız, yalnızca geliştirme ve test ortamları için kullanılması gerektiğini diyerek başlamanız gerekir. Üretime hazır service bus bir parçası olarak oluşturmadığınız sürece, üretim ortamı için bunun kullanmamanız gerekir. Bir ticari hizmet veri yolu olan birçok üretime hazır önemli özellikleri basit bir özel olay veri yolu eksik olabilir.
 
-EShopOnContainers olay bus özel uygulamasında temelde RabbitMQ (Azure hizmet veri yoluna bağlı başka bir uygulama yoktur) API kullanarak bir kitaplığı biridir. 
+Bir olay veri yolu özel uygulama hizmetine temel RabbitMQ (başka bir uygulama üzerinde Azure Service Bus tabanlı yoktur) API'sini kullanarak bir kitaplıktır.
 
-Olay veri yolu uygulaması RabbitMQ ile olaylarına abone olma, olayları yayımlama ve olayları almak mikro Şekil 8-21'de gösterildiği gibi olanak sağlar.
+Şekil 6-21'de gösterildiği gibi RabbitMQ ile olay veri yolu uygulaması olaylarına abone olma, olayları yayımlama ve olayları, alma mikro hizmetler sağlar.
 
-![](./media/image22.png)
+![RabbitMQ ileti yayımcı ve aboneleri, dağıtım işlemeye arasında aracı görevi görür.](./media/image22.png)
 
-**Şekil 8-21.** Bir olay veri yoluna RabbitMQ uygulaması
+**Şekil 6-21.** Bir olay veri yolu RabbitMQ uygulaması
 
-Kodda EventBusRabbitMQ sınıfı genel IEventBus arabirimini uygular. Böylece, bir üretim sürüm olarak bu geliştirme ve test sürümünden takas edebilirsiniz bu bağımlılık ekleme temel alır.
+Kod içinde EventBusRabbitMQ sınıfı genel IEventBus arabirim uygular. Böylece, bir üretim sürümü için bu geliştirme ve test sürümünden takas edebilirsiniz bu bağımlılık ekleme üzerinde temel alır.
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable
@@ -32,11 +32,11 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
     //...
 ```
 
-RabbitMQ örnek geliştirme ve test olay bus Demirbaş kod uygulamasıdır. RabbitMQ sunucu bağlantısını işlemek ve sıralara ileti olayı yayımlamak için kod sağlamak vardır. Ayrıca her bir olay türü için tümleştirme olay işleyicileri koleksiyonları sözlüğü uygulamak içerir; Bu olay türlerini, Şekil 8-21'de gösterildiği gibi farklı bir örnek oluşturma ve her alıcı mikro hizmet için farklı Aboneliklerde olabilir.
+Ortak kod örnek geliştirme/test olay Bus RabbitMQ uygulamasıdır. RabbitMQ sunucu bağlantısı işlemek ve kuyruklara ileti olay yayımlamak için kod sağlamak vardır. Her bir olay türü için tümleştirme olay işleyicileri koleksiyonlarının sözlüğü uygulamak de vardır; Bu olay türlerini, Şekil 6-21'de gösterildiği gibi farklı bir örneğini ve her alıcı mikro hizmet için farklı Aboneliklerde olabilir.
 
 ## <a name="implementing-a-simple-publish-method-with-rabbitmq"></a>Basit bir uygulama yayımlama RabbitMQ ile yöntemi
 
-Aşağıdaki kod parçasıdır içinde geliştirilmiş RabbitMQ, Basitleştirilmiş olay veri yolu uygulaması içindir [gerçek bir kod](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) eShopOnContainers biri. Genellikle geliştirmeler yapıyoruz sürece kod gerekmez. Kod bir bağlantı ve RabbitMQ kanala alır, bir ileti oluşturur ve ardından sıraya ileti yayımlar.
+Aşağıdaki kod bir Basitleştirilmiş olay veri yolu uygulaması için de Geliştirilmiş RabbitMQ, parçasıdır [gerçek kod](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) hizmetine biri. Genellikle geliştirmeleri yapmadıkça kod gerekmez. Kod, bağlantı ve RabbitMQ kanala alır, bir ileti oluşturur ve ardından kuyruğuna bir ileti yayımlar.
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable
@@ -64,13 +64,13 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
 }
 ```
 
-[Gerçek bir kod](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) Yayımla eShopOnContainers uygulama yönteminde kullanılarak geliştirilmiş bir [Polly](https://github.com/App-vNext/Polly) RabbitMQ kapsayıcı olması durumunda, bir belirli sayıda görev yeniden deneme ilkesi yeniden deneyin hazır değil. Bu durum ortaya çıkabilir zaman docker compose'u; kapsayıcıları başlatılıyor Örneğin, RabbitMQ kapsayıcı diğer kapsayıcıları daha yavaş başlayabilir.
+[Gerçek kod](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) yayımlama hizmetine uygulama yöntemi kullanarak gelişmiş bir [Polly](https://github.com/App-vNext/Polly) RabbitMQ kapsayıcı olması durumunda görev belirli birkaç kez yeniden deneme ilkesi, yeniden deneyin hazır değil. Bu durum ortaya çıkabilir, docker-compose; kapsayıcıları başlatılıyor Örneğin, RabbitMQ kapsayıcı diğer kapsayıcılara göre daha yavaş başlayabilir.
 
-Daha önce belirtildiği gibi yok RabbitMQ, birçok olası yapılandırmalarında bu kod yalnızca geliştirme ve test ortamları için kullanılması gereken şekilde.
+Daha önce bahsedildiği gibi birçok olası yapılandırmalar vardır, RabbitMQ, bu kod yalnızca geliştirme/test ortamları için kullanılması gereken şekilde.
 
-## <a name="implementing-the-subscription-code-with-the-rabbitmq-api"></a>Abonelik kod RabbitMQ API ile uygulama
+## <a name="implementing-the-subscription-code-with-the-rabbitmq-api"></a>Abonelik kod RabbitMQ API'si ile uygulama
 
-Yayımla koduyla aşağıdaki kodu RabbitMQ için olay veri yolu uygulaması parçası alma gibidir. Yeniden, genellikle geliştirme sürece bunu değiştirmeniz gerekmez.
+Yayımlama koduyla aşağıdaki kodu bir olay veri yolu uygulaması için RabbitMQ parçası basitleştirme gibidir. Yeniden, genellikle geliştirme sürece bunu değiştirmeniz gerekmez.
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable
@@ -105,11 +105,10 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
 }
 ```
 
-Her olay türü RabbitMQ olayları almak için ilgili bir kanal sahiptir. Ardından, gerektiği gibi kanal ve olay türüne göre sayıda olay işleyicileri olabilir.
+Her bir olay türü, RabbitMQ olayları almak için ilgili bir kanal sahiptir. Ardından, gerektiği şekilde kanal ve olay türüne göre olarak çok sayıda olay işleyicileri olabilir.
 
-Subscribe yöntemi geçerli mikro hizmet içindeki bir geri çağırma yöntemi gibidir, IIntegrationEventHandler nesneyi artı kendi ilgili IntegrationEvent nesne kabul eder. Kod, bu olay işleyicisi sonra istemci mikro her tümleştirme olay türü olan olay işleyicileri listesine ekler. İstemci kodu zaten olaya onaylanmamış varsa, kodu olay türü için bir kanal oluşturur, bu nedenle bu olay herhangi diğer hizmetinden yayımlandığında itme stilinde RabbitMQ gelen olayları alabilir.
-
+Abone ol yöntemin yanı sıra ilgili IntegrationEvent nesne gibi geçerli bir mikro hizmet içinde bir geri çağırma yöntemi olan IIntegrationEventHandler nesneyi kabul eder. Kod bu durumda istemci mikro hizmet her tümleştirme olay türü olan olay işleyicileri listesi bu olay işleyicisi ekler. İstemci kodu zaten olaya onaylanmamış, diğer herhangi bir hizmetten olay yayımlandığında, olayları bir anında iletme stil RabbitMQ, böylelikle kod olay türü için bir kanal oluşturur.
 
 >[!div class="step-by-step"]
-[Önceki](integration-event-based-microservice-communications.md)
-[sonraki](subscribe-events.md)
+>[Önceki](integration-event-based-microservice-communications.md)
+>[İleri](subscribe-events.md)

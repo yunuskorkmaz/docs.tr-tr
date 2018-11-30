@@ -6,6 +6,6 @@
 |Öneri|Geri alma için isteyen geliştiriciler <xref:System.NullReferenceException?displayProperty=name> ne zaman .NET Framework 4.7 targeting ekleme/merge, uygulamanın App.config dosyasına aşağıdaki:<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Windows.Media.ImageSourceConverter.OverrideExceptionWithNullReferenceException=true&quot;/&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>|
 |Kapsam|Kenar|
 |Sürüm|4.7|
-|Tür|Yeniden hedefleme|
-|Etkilenen API'leri|<ul><li><xref:System.Windows.Media.ImageSourceConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)?displayProperty=nameWithType></li></ul>|
+|Tür|Yeniden Hedefleme|
+|Etkilenen API’ler|<ul><li><xref:System.Windows.Media.ImageSourceConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)?displayProperty=nameWithType></li></ul>|
 

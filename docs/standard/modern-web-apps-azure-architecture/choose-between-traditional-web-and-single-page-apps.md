@@ -4,12 +4,12 @@ description: Web uygulamaları oluştururken geleneksel web uygulamaları ve tek
 author: ardalis
 ms.author: wiwagn
 ms.date: 6/28/2018
-ms.openlocfilehash: 40b17d07b008c2a3a9457bffc26b612e6b5c9fe5
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: abeee719c15263fea04a3bcf80a6e41c43b640d2
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404157"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52671914"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Geleneksel Web uygulamaları ile tek sayfa uygulamaları (Spa'lar) arasında seçim yapma
 
@@ -73,7 +73,7 @@ Spa'lar yazma, JavaScript ve/veya TypeScript ve istemci tarafı programlama tekn
 > - **Angular**  
 >   <https://angular.io>
 > - **JavaScript çerçevesini karşılaştırma**  
->   <https://javascriptreport.com/the-ultimate-guide-to-javascript-frameworks/>
+>   <https://jsreport.io/the-ultimate-guide-to-javascript-frameworks/>
 
 **Uygulamanız diğer (dahili veya genel) istemciler için zaten bir API kullanıma açmalıdır**
 
@@ -91,5 +91,5 @@ Aşağıdaki karar tablosu için temel faktör, geleneksel web uygulaması ve bi
 | Zengin, karmaşık kullanıcı arabirimi gereksinimleri            | **Sınırlı**             | **Uygundur**             |
 
 >[!div class="step-by-step"]
-[Önceki](modern-web-applications-characteristics.md)
-[İleri](architectural-principles.md)
+>[Önceki](modern-web-applications-characteristics.md)
+>[İleri](architectural-principles.md)

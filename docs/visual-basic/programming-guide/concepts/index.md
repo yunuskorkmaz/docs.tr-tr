@@ -2,36 +2,35 @@
 title: Programlama Kavramları (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: cc9cac84-61f6-476e-b8c7-9bae7749bd90
-ms.openlocfilehash: 85e23fcca0607e9f42daa94334c983462f6cf881
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fbdf2d6de7abf1d8d80ca3e88621fa569248996c
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643400"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52672062"
 ---
 # <a name="programming-concepts-visual-basic"></a>Programlama Kavramları (Visual Basic)
-Bu bölümde, Visual Basic dilindeki programlama kavramları açıklanmaktadır.  
+Bu bölümde, Visual Basic Dil programlama kavramları açıklanmıştır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[Derlemeler ve Genel Derleme Önbelleği (Visual Basic)](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)|Derlemeler oluşturma ve kullanma açıklar.|  
-|[Zaman uyumsuz programlama ile Async ve Await (Visual Basic)](../../../visual-basic/programming-guide/concepts/async/index.md)|Zaman uyumsuz çözümleri kullanarak yazma açıklar [zaman uyumsuz](../../../visual-basic/language-reference/modifiers/async.md) ve [bekleme](../../../visual-basic/language-reference/operators/await-operator.md) anahtar sözcükler. Bir kılavuz içerir.|  
-|[Öznitelikler genel bakış (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/index.md)|Öznitelikleri kullanarak türleri, alanları, yöntemleri ve özellikleri gibi programlama hakkında ek bilgi sağlamak nasıl ele alınmaktadır.|  
-|[Arayan bilgileri (Visual Basic)](../../../visual-basic/programming-guide/concepts/caller-information.md)|Bir yöntemin çağıran hakkında bilgi edinmek açıklar. Bu bilgiler, dosya yolunu ve kaynak kodu satır sayısı ve arayan üye adı içerir.|  
-|[Koleksiyonlar (Visual Basic)](../../../visual-basic/programming-guide/concepts/collections.md)|.NET Framework tarafından sağlanan koleksiyonları türlerini bazıları açıklanmaktadır. Basit koleksiyonlar ve anahtar/değer çiftlerinin koleksiyonu nasıl kullanılacağını gösterir.|  
-|[Kovaryans ve kontravaryans (Visual Basic)](../../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)|Genel tür parametreleri arabirimleri ve temsilciler örtük dönüştürülmesini etkinleştirmek gösterilmiştir.|  
-|[İfade ağaçları (Visual Basic)](../../../visual-basic/programming-guide/concepts/expression-trees/index.md)|Dinamik yürütülebilir kodunun değiştirilmesini etkinleştirmek için ifade ağaçları nasıl kullanabileceğiniz açıklanır.|  
-|[Yineleyiciler (Visual Basic)](../../../visual-basic/programming-guide/concepts/iterators.md)|Koleksiyonlar üzerinden adım ve öğeleri tek bir defada döndürmek için kullanılan yineleyiciler açıklar.|  
-|[Dil ile tümleşik sorgu (LINQ) (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/index.md)|Visual Basic ve ilişkisel veritabanları, XML belgeleri, veri kümeleri ve bellek içi koleksiyonları sorgulamak için yerine koyarlar dil sözdiziminde güçlü sorgu özellikleri açıklanmaktadır.|  
-|[Nesne odaklı programlama (Visual Basic)](../../../visual-basic/programming-guide/concepts/object-oriented-programming.md)|Kapsülleme, devralma ve çok biçimlilik gibi ortak nesne yönelimli kavramlarını açıklar.|  
-|[Yansıma (Visual Basic)](../../../visual-basic/programming-guide/concepts/reflection.md)|Yansıma dinamik olarak bir türünün bir örneği oluşturmak, var olan bir nesne için bağ türü veya varolan bir nesneden türünü almak ve onun yöntemleri çağırma veya özellikleri ve alanları erişim için nasıl kullanılacağını açıklar.|
-|[Seri hale getirme (Visual Basic)](../../../visual-basic/programming-guide/concepts/serialization/index.md)|İkili dosya, XML, anahtar kavramlarını açıklar ve SOAP seri hale getirme.|  
-|[İş parçacığı oluşturma (Visual Basic)](../../../visual-basic/programming-guide/concepts/threading/index.md)|.NET iş parçacığı modeline genel bakış sağlar ve uygulamalarınızın yanıtlama hızı ve performansı artırmak için aynı anda birden çok görevleri gerçekleştirir kodunun nasıl yazılacağını gösterir.|  
+|[Derlemeler ve Genel Derleme Önbelleği (Visual Basic)](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)|Derlemeler oluşturma ve kullanma işlemini açıklamaktadır.|  
+|[Zaman uyumsuz programlama ile Async ve Await (Visual Basic)](../../../visual-basic/programming-guide/concepts/async/index.md)|Zaman uyumsuz çözümleri kullanarak yazma açıklar [zaman uyumsuz](../../../visual-basic/language-reference/modifiers/async.md) ve [Await](../../../visual-basic/language-reference/operators/await-operator.md) anahtar sözcükleri. Bir kılavuz içerir.|  
+|[Öznitelikler genel bakış (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/index.md)|Öğe türleri, alanları, yöntemleri ve özellikleri gibi öznitelikleri kullanarak programlama hakkında ek bilgi sağlamak nasıl ele alınmaktadır.|  
+|[Arayan bilgileri (Visual Basic)](../../../visual-basic/programming-guide/concepts/caller-information.md)|Bir yöntemin arayanı hakkında bilgi edinmek nasıl açıklar. Bu bilgiler, dosya yolu ve kaynak kodunun satır numarasını ve arayanın üye adı içerir.|  
+|[Koleksiyonlar (Visual Basic)](../../../visual-basic/programming-guide/concepts/collections.md)|.NET Framework tarafından sağlanan koleksiyon türlerinin bazılarını açıklar. Basit koleksiyonların ve anahtar/değer çiftleri nasıl yapılacağı açıklanır.|  
+|[Kovaryans ve kontravaryans (Visual Basic)](../../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)|Arabirimlerde ve temsilcilerde genel tür parametrelerinin örtük dönüştürme etkinleştirme işlemi gösterilmektedir.|  
+|[İfade ağaçları (Visual Basic)](../../../visual-basic/programming-guide/concepts/expression-trees/index.md)|Yürütülebilir kodun dinamik değişikliğini etkinleştirmek için ifade ağaçları nasıl kullanabileceğinizi açıklar.|  
+|[Yineleyiciler (Visual Basic)](../../../visual-basic/programming-guide/concepts/iterators.md)|Koleksiyonların üzerinden geçip tek öğeleri bir defada döndürmek için kullanılan yineleyicileri açıklar.|  
+|[Dil ile tümleşik sorgu (LINQ) (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/index.md)|İlişkisel veritabanlarını, XML belgeleri, veri kümelerini ve bellek içi koleksiyonları sorgulamak için yerine koyarlar ve Visual Basic Dil sözdiziminde güçlü sorgu yeteneklerini açıklar.|  
+|[Nesne odaklı programlama (Visual Basic)](../../../visual-basic/programming-guide/concepts/object-oriented-programming.md)|Kapsülleme, devralma ve çok biçimlilik dahil olmak üzere ortak nesne yönelimli kavramları açıklar.|  
+|[Yansıma (Visual Basic)](../../../visual-basic/programming-guide/concepts/reflection.md)|Yansıma dinamik olarak bir türün bir örneğini oluşturma, bağlama türü var olan bir nesneye veya türü mevcut bir nesneden elde ve kendi yöntemlerini çağırmak veya kendi alanlarına ve özelliklerine erişmek için nasıl kullanılacağını açıklar.|
+|[Seri hale getirme (Visual Basic)](../../../visual-basic/programming-guide/concepts/serialization/index.md)|İkili, XML, temel kavramları açıklar ve SOAP serileştirme.|  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
   
 |||  
 |---|---|  
-|[Performans İpuçları](../../../framework/performance/performance-tips.md) | Uygulamanızın performansını artırmaya yardımcı olabilecek çeşitli temel kurallar açıklanmaktadır.|
+|[Performans İpuçları](../../../framework/performance/performance-tips.md) | Uygulamanızın performansını artırmanıza yardımcı olabilecek birtakım temel kuralları açıklar.|

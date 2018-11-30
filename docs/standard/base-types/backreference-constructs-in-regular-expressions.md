@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7953e34f76e23e3f9f4913726adc4b2176b172c9
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 1f86ed838e1333a5475d72eabc4d4248fc256211
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615332"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52672046"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>Normal İfadelerdeki Yeniden Başvuru Yapıları
 Yeniden başvurular yinelenen karakter veya dize içinde alt dizeyi tanımlamak için kullanışlı bir yol sağlar. Örneğin, giriş dizesini birden çok defa geçmelerine rastgele bir alt dizenin içeriyorsa, ilk geçtiği bir yakalama grubuyla eşleşen ve ardından alt dizeyi sonraki tekrarı ile eşleştir için bir yeniden başvuru kullanın.  
@@ -103,7 +103,7 @@ Ancak, varsa *adı* bir sayının dize gösterimini olduğunu ve konumu sayısal
 |Desen|Açıklama|  
 |-------------|-----------------|  
 |`(?<1>a)`|Bir karakterle Eşleştir "a" ve yakalama grubu sonucu adlı Ata `1`.|  
-|`(?<1>\1b)*`|0 veya 1 eşleşme adlı grubun oluşumunu `1` yanı sıra bir "b" ve ata adlı yakalama grubudur sonucu `1`.|  
+|`(?<1>\1b)*`|Adlı grubu sıfır veya daha çok tekrarı ile eşleştir `1` yanı sıra bir "b" ve ata adlı yakalama grubudur sonucu `1`.|  
   
  [!code-csharp[RegularExpressions.Language.Backreferences#4](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference4.cs#4)]
  [!code-vb[RegularExpressions.Language.Backreferences#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference4.vb#4)]  
@@ -114,7 +114,7 @@ Ancak, varsa *adı* bir sayının dize gösterimini olduğunu ve konumu sayısal
   
 2.  İkinci karakter ilerler ve başarıyla dize "ab" ifadesi ile eşleşen `\1b`, veya "ab". Ardından, "ab" için sonuç atar `\1`.  
   
-3.  Bu dördüncü karaktere ilerletir. İfade `(?<1>\1b)` olarak eşleşen sıfır veya birden fazla kez şekilde başarıyla eşleşecek bir dize ifadesiyle, "abb" `\1b`. Sonuç, "abb" geri atar `\1`.  
+3.  Bu dördüncü karaktere ilerletir. İfade `(?<1>\1b)*` olarak eşleşen sıfır veya birden fazla kez şekilde başarıyla eşleşecek bir dize ifadesiyle, "abb" `\1b`. Sonuç, "abb" geri atar `\1`.  
   
  Bu örnekte, `*` döngü bir miktar belirleyiciyi--olan normal ifade motoru tanımlar deseni eşleşemez kadar sürekli olarak değerlendirilir. Döngü miktar belirleyiciler grup tanımlarını işaretini kaldırmayın.  
   

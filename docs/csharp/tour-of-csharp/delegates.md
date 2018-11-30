@@ -1,33 +1,33 @@
 ---
-title: C# temsilciler - C# dili turu
-description: Geç bağlama C# temsilciler ile bilgi edinin
+title: C#Temsilciler - Turu C# dil
+description: Geç bağlama ile bilgi C# temsilciler
 ms.date: 08/10/2016
 ms.assetid: 3cc27357-3ac2-43a1-aad0-86a77b88f884
-ms.openlocfilehash: 1dcd078b275d951b049b0c5bb6e084a4083d042d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2744f774392ef021974535de535b063264ae9a54
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360576"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52672049"
 ---
 # <a name="delegates"></a>Temsilciler
 
-A ***temsilci türü*** belirli bir parametre yöntemleriyle temsil başvuruları listesinde ve dönüş türü. Temsilciler yöntemleri değişkenleri için atanan ve parametre olarak geçirilen varlıklar olarak değerlendirmek mümkün kılar. Temsilciler diğer bazı dillerde bulunan işlev işaretçileri kavramı benzer, ancak işlev işaretçileri, nesne yönelimli ve tür kullanımı uyumlu temsilciler.
+A ***temsilci türü*** belirli bir parametre olan yöntemlere başvuruları temsil listesi ve dönüş türü. Temsilciler, yöntemleri değişkenine atanır ve parametre olarak geçirilen varlıklar olarak değerlendirmek mümkün kılar. Diğer dillerde bulunan işlev işaretçileri kavramı temsilcileri benzerdir ancak işlev işaretçileri, nesne yönelimli ve tür kullanımı uyumlu temsilciler.
 
-Aşağıdaki örnek bildirir ve adlı bir temsilci türü kullanan `Function`.
+Aşağıdaki örnek bildirir ve adlandırılmış bir temsilci türü kullanır `Function`.
 
 [!code-csharp[DelegateExample](../../../samples/snippets/csharp/tour/delegates/Program.cs#L3-L37)]
 
-Örneği `Function` temsilci türü alır herhangi bir yöntemini başvuran bir `double` bağımsız değişkeni ve döndürür bir `double` değeri. `Apply` Yöntemi öğelerine verilen işlevin geçerli bir `double[]`, geri dönen bir `double[]` sonuçları. İçinde `Main` yöntemi, `Apply` üç farklı işleve uygulamak için kullanılan bir `double[]`.
+Örneği `Function` temsilci türü, alan herhangi bir yöntemi başvurabilir bir `double` bağımsız değişkeni ve döndürür bir `double` değeri. `Apply` Yöntemi öğelerine verilen işlevi uygular bir `double[]`, döndüren bir `double[]` sonuçları. İçinde `Main` yöntemi `Apply` üç farklı işlevlere uygulamak için kullanılan bir `double[]`.
 
-Bir temsilci statik bir yöntem başvurusu yapabilir (gibi `Square` veya `Math.Sin` önceki örnekte) veya bir örnek yöntemi (gibi `m.Multiply` önceki örnekte). Örnek yöntemi başvuran bir temsilci Ayrıca belirli bir nesnenin başvuruda bulunduğundan ve temsilci örnek yöntemi çağrıldığında, bu nesne haline gelir `this` çağrısı.
+Bir temsilci bir statik yöntem başvurabilir (gibi `Square` veya `Math.Sin` önceki örnekte) veya bir örnek yöntemi (gibi `m.Multiply` önceki örnekte). Bir örnek yöntemi başvuran bir temsilci Ayrıca belirli bir nesnenin başvuruda bulunduğundan ve temsilci örnek yöntemi çağrıldığında, bu nesne haline gelir `this` çağrısı.
 
-Temsilciler ayrıca "üzerinde çalışma sırasında oluşturulan satır içi yöntemleri" anonim işlevler kullanılarak oluşturulabilir. Anonim işlevler çevresindeki yöntemlerin yerel değişkenler görebilirsiniz. Bu nedenle, yukarıdaki çarpanı örnek daha kolay çarpanı sınıfı kullanmadan yazılabilir:
+Temsilciler da "anında oluşturulan satır içi yöntemler" anonim işlevler kullanılarak oluşturulabilir. Anonim İşlevler, yerel değişkenler çevreleyen yöntemlerden görebilirsiniz. Bu nedenle, yukarıdaki çarpan örneği daha kolay bir çarpan sınıf kullanmadan yazılabilir:
 
 [!code-csharp[LambdaExample](../../../samples/snippets/csharp/tour/delegates/Program.cs#L44-L44)]
 
-Bir ilginç ve yararlı bir temsilci, bilmiyorsanız veya başvurduğu yöntemi sınıfı hakkında önemli olduğunu özelliğidir; önemli olan başvurulan yöntemi temsilci olarak dönüş türü ve aynı parametrelere sahip.
+Bir ilgi çekici ve kullanışlı bir temsilci, bilmiyorsanız veya yöntemin başvurduğu sınıfı hakkında dikkatli olun, özelliğidir; önemli olan başvurulan yöntemi aynı parametre ve dönüş türü temsilciyle sahiptir.
 
 >[!div class="step-by-step"]
-[Önceki](enums.md)
-[sonraki](attributes.md)
+>[Önceki](enums.md)
+>[İleri](attributes.md)

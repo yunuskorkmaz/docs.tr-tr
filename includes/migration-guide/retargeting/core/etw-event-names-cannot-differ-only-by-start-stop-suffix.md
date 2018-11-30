@@ -6,5 +6,5 @@
 |Öneri|Özel durum önlemek için hiçbir iki olay adları yalnızca farklı olun bir &quot;Başlat&quot; veya &quot;Durdur&quot; soneki. Bu gereksinim, .NET Framework 4.6.2 ile başlayarak kaldırıldı; çalışma zamanı tarafından yalnızca farklı olay adlarını ayırt etmek &quot;Başlat&quot; ve &quot;Durdur&quot; soneki.|
 |Kapsam|Kenar|
 |Sürüm|4.6|
-|Tür|Yeniden hedefleme|
+|Tür|Yeniden Hedefleme|
 

@@ -1,13 +1,13 @@
 ---
 title: Ayrılmış Birleşimler (F#)
-description: F#'ı kullanmayı öğrenin ayrılmış birleşimler.
+description: Nasıl kullanacağınızı öğrenin F# ayrılmış birleşimler.
 ms.date: 05/16/2016
-ms.openlocfilehash: 06d6c154790f659c0c7ff73290357ab50a134362
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: f833539f2e31ffc6db4182bdbd2088e6dc2bb2cc
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43788129"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52672253"
 ---
 # <a name="discriminated-unions"></a>Ayrılmış Birleşimler
 
@@ -51,7 +51,7 @@ let prism = Prism(5., 2.0, height = 3.0)
 
 Bu kod, başlatma işlemindeki adlandırılmış alanları kullanabilirsiniz, veya bildirimdeki alanların sıralamasını üzerinde kullanır ve her alan için değerleri'yalnızca sırayla sağlayın gösterir. İçin oluşturucu çağrısı `rect` önceki kod içinde adlandırılmış alanları, ancak için oluşturucu çağrısı kullanır `circ` sıralamayı kullanır. Sıralı alanları karıştırabilirsiniz ve alanları, oluşumunu olduğu gibi adlı `prism`.
 
-`option` Türü, F# çekirdek kitaplığında basit bir birleşimdir. `option` Türü gibi bildirilir.
+`option` Türüdür, basit bir birleşimdir F# çekirdek kitaplığı. `option` Türü gibi bildirilir.
 
 ```fsharp
 // The option type is a discriminated union.
@@ -84,7 +84,7 @@ Normalde, büyük/küçük harf tanımlayıcıları, birleşim adıyla nitelemed
 
 ### <a name="unwrapping-discriminated-unions"></a>Açma ayrılmış birleşimler
 
-F# ayırt edici birleşimler genellikle etki alanı model içinde tek bir tür kaydırma için kullanılır. Temeldeki değeri de desen eşleştirme aracılığıyla ayıklamak kolay bir işlemdir. Bir eşleme ifadesi için tek bir kasada kullanmanız gerekmez:
+İçinde F# ayırt edici birleşimler sık kullanılan etki alanı modelleme, tek bir tür sarmalama için. Temeldeki değeri de desen eşleştirme aracılığıyla ayıklamak kolay bir işlemdir. Bir eşleme ifadesi için tek bir kasada kullanmanız gerekmez:
 
 ```fsharp
 let ([UnionCaseName] [values]) = [UnionValue]
@@ -95,15 +95,23 @@ Aşağıdaki örnek bunu gösterir:
 ```fsharp
 type ShaderProgram = | ShaderProgram of id:int
 
-let someMethodUsingShaderProgram shaderProgram =
+let someFunctionUsingShaderProgram shaderProgram =
     let (ShaderProgram id) = shaderProgram
     // Use the unwrapped value
-    ..
+    ...
+```
+
+Burada tek bir kasada sarmalamadan çıkarma için desen eşleştirme doğrudan işlev parametrelerinde da izin verilir:
+
+```fsharp
+let someFunctionUsingShaderProgram (ShaderProgram id) =
+    // Use the unwrapped value
+    ...
 ```
 
 ## <a name="struct-discriminated-unions"></a>Ayrılmış birleşimler yapısı
 
-F# 4.1 ile başlayarak, ayırt edici birleşimler yapılar da gösterebilir.  Bunun `[<Struct>]` özniteliği.
+İle başlayarak F# 4.1, ayırt edici birleşimler yapı birimleri olarak da temsil edebilir.  Bunun `[<Struct>]` özniteliği.
 
 ```fsharp
 [<Struct>]
