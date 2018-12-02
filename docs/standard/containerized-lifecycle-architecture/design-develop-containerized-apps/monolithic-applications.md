@@ -4,12 +4,12 @@ description: Microsoft Platformu ve araçları ile kapsayıcı Docker uygulamas�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: a2fe2c325377ec49f89199ad2e36c950ebab6a24
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 17dabb143a1948cbcfa748b4c3bbcff5a57d2c24
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50757354"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52743275"
 ---
 # <a name="monolithic-applications"></a>Tek yapılı uygulamalar
 
@@ -69,7 +69,6 @@ Azure App Service'i kullanarak, kullanımı kolay olan ve başlayabilirsiniz ve 
 
 Şekil 4-4, aynı zamanda yayımlama akışı görüntüyü Azure Container Registry (bir kayıt defteri Azure dağıtımlarınız için neredeyse ve Azure Active Directory'de gruplar ve hesaplar tarafından güvenliği sağlanan) olabilecek bir kapsayıcı kayıt defteri veya başka bir Docker kayıt aracılığıyla gönderim gösterir Docker Hub veya şirket içi kayıt defterleri gibi.
 
-
 >[!div class="step-by-step"]
-[Önceki](common-container-design-principles.md)
-[İleri](state-and-data-in-docker-applications.md)
+>[Önceki](common-container-design-principles.md)
+>[İleri](state-and-data-in-docker-applications.md)
