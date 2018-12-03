@@ -1,82 +1,84 @@
 ---
-title: Dayanıklılık ve yüksek kullanılabilirlik mikro
-description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Dayanıklılık ve yüksek kullanılabilirlik mikro
+title: Dayanıklılık ve yüksek kullanılabilirlik mikro hizmetler
+description: Mikro hizmetler, geçici ağ ve yüksek kullanılabilirlik elde etmek için dayanıklı olması gereken bağımlılıklar hataları dayanacak şekilde tasarlanmış olması gerekir.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 19657c35e6640558526bf390b81eb08220821a4c
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 09/20/2018
+ms.openlocfilehash: cbfff525c977c8dc11503a9f230c3ede6f0d6f37
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106323"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52745335"
 ---
-# <a name="resiliency-and-high-availability-in-microservices"></a>Dayanıklılık ve yüksek kullanılabilirlik mikro
+# <a name="resiliency-and-high-availability-in-microservices"></a>Dayanıklılık ve yüksek kullanılabilirlik mikro hizmetler
 
-Beklenmeyen hatalar postalarla özellikle dağıtılmış bir sistemde çözmenin en zor sorunlar biridir. Bu aynı zamanda testinde en uzun süre burada harcandığını olup ve geliştiricilerin yazma kodu çoğunu özel durumları işleme içerir. Sorun daha hataları işlemek için kod yazma daha karmaşıktır. Mikro hizmet çalıştığı makine başarısız olduğunda ne olur? Yalnızca bu mikro hizmet hatası (sabit kendi başına bir sorun) algılayan gerekir, ancak ayrıca şey, mikro hizmet yeniden başlatmanız gerekir.
+Beklenmeyen hatalar uğraşmanızı uygulamalarınızdaki sorunları çözmeye özellikle dağıtılmış bir sistemde biridir. Özel durumları işleme geliştiriciler yazdığınız kod çoğunu içerir ve ayrıca test en çok zaman nerede harcandığını budur. Sorun, hataları işlemek için kod yazmaktan daha karmaşıktır. Mikro hizmet çalıştırıldığı makine başarısız olduğunda ne olur? Yalnızca bu mikro hizmet hatası (sabit sorun kendi kendine) algılamak ihtiyacınız, ancak ayrıca bir şey, mikro hizmet yeniden başlatmanız gerekir.
 
-Bir mikro hizmet hatalarına dayanıklı olmasını ve kullanılabilirlik için başka bir makinede sık sık yeniden başlatmanız gerekir. Bu esneklik de mikro hizmet adına mikro hizmet bu durumdan kurtarabilir ve mikro hizmet başarılı bir şekilde yeniden olup olmadığını kaydedilmiş duruma gelir. Diğer bir deyişle, vardır (işlemi herhangi bir zamanda yeniden başlatabilirsiniz) işlem yeteneği dayanıklılık olması gerekir esnekliği durumu veya verileri (veri kaybı ve tutarlı veri kalır) yanı sıra.
+Bir mikro hizmet hatalara karşı dayanıklı olmalarını ve genellikle kullanılabilirlik için başka bir makinede yeniden başlatabiliyor olmanız gerekir. Bu esneklik aynı zamanda mikro hizmet adına mikro hizmet bu durumdan kurtarmak ve mikro hizmet başarıyla yeniden olmadığını kaydedilmiş duruma gelir. Diğer bir deyişle, vardır (işlem herhangi bir zamanda yeniden başlatabilirsiniz) işlem özelliği'nda dayanıklılık olması gerekir esnekliği durumu veya verileri (veri kaybı olmadan ve tutarlı veri kalır) yanı sıra.
 
-Dayanıklılık sorunları hataları uygulama yükseltme sırasında ortaya çıktığında gibi diğer senaryolar sırasında araya geldiğinde. İleri daha yeni bir sürüme taşıyın veya bunun yerine tutarlı bir duruma korumak için bir önceki sürüme geri sürdürebilirsiniz olup olmadığını belirlemek dağıtım sistemiyle çalışma mikro hizmet gerekir. Yeterli makineler ileri taşıma tutmak kullanılabilir olup olmadığı ve mikro hizmet önceki sürümlerini kurtarmak nasıl gibi soruları ele alınması gerekir. Bu, böylece bu kararlar genel uygulama ve orchestrator sistem durumu bilgisi yayması için mikro hizmet gerektirir.
+Dayanıklılık sorunları, uygulama yükseltme sırasında hatalar oluştuğunda gibi diğer senaryolar sırasında compounded. En yeni sürüme ilerlemek veya bunun yerine tutarlı bir duruma korumak için önceki bir sürüme geri alma devam olup olmadığını belirlemek dağıtım sistemiyle çalışan mikro hizmet gerekir. Yetecek sayıda makine ileri taşıma tutmak kullanılabilir olup olmadığı ve mikro hizmet önceki sürümlerini kurtarmak nasıl gibi soruları göz önünde bulundurulması gerekir. Bu, bu kararların yapabilmeleri için uygulama ve orchestrator sistem durumu bilgileri yaymak üzere mikro hizmet gerektirir.
 
-Ayrıca, dayanıklılık ilgili nasıl bulut tabanlı sistemler için hareket etmesi gerekir. Belirtildiği gibi bulut tabanlı bir sistemi hataları çekirdeğin gerekir ve bunları otomatik olarak kurtarmaya denemeniz gerekir. Örneğin, ağ veya kapsayıcı hataları durumunda iletileri gönderme yeniden deneyin ya da çoğu durumda bulutta hataları kısmi olduğundan istekleri, yeniden denemek için bir strateji istemci uygulamaları veya istemci Hizmetleri olması gerekir. [Uygulama dayanıklı uygulamaları](#implementing_resilient_apps) bu kılavuzdaki bölümü kısmi hatası nasıl ele alınacağını yöneliktir. Gibi kitaplıklarını kullanarak yeniden deneme üstel geri alma veya .NET Core devre kesici desende gibi teknikleri açıklar [Polly](https://github.com/App-vNext/Polly), bu konu işlemek için ilkeler çeşitliliğini sunar.
+Dayanıklılık ek olarak, ilgili sistemlere nasıl bulut tabanlı davranmalıdır. Belirtildiği gibi bulut tabanlı bir sistemin hataları Kucak gerekir ve bunları otomatik olarak kurtarmaya denemeniz gerekir. Örneği için ağ veya kapsayıcı hatalar olması durumunda, istemci uygulamaları veya istemci hizmetlerini iletileri gönderme yeniden deneyin veya bulutta kısmi çoğu durumda olduğundan isteği yeniden denemek için bir strateji olması gerekir. [Dayanıklı uygulamalar uygulama](../implement-resilient-applications/index.md) bölümü bu kılavuzdaki kısmi hata işleme nasıl yöneliktir. Kitaplıklar gibi kullanarak üstel geri alma veya .NET Core devre kesici düzenini yeniden denemelerle tekniklerle açıklar [Polly](https://github.com/App-vNext/Polly), ilkeleri bu konu işlemek için çok çeşitli sunar.
 
-## <a name="health-management-and-diagnostics-in-microservices"></a>Sistem Yönetimi ve mikro tanılama
+## <a name="health-management-and-diagnostics-in-microservices"></a>Sistem durumu yönetimi ve mikro hizmet olarak tanılama
 
-Açıktır, görünebilir ve genellikle atlamış, ancak bir mikro hizmet, durum ve tanılama raporu gerekir. Aksi takdirde işlemleri açısından biraz Insight yoktur. Tanılama Olayları bağımsız Hizmetleri kümesi arasında ilişkilendirme ve olayı sırası anlamlı makine saat eğriltir ilgilenme zordur. Üzerinde anlaşılan protokolleri ve veri biçimleri mikro hizmet ile etkileşime aynı şekilde, sistem durumu ve sorgulama ve görüntülemek için bir olay deposunda sonuçta şunun tanılama olayları günlüğe kaydetme hakkında standartlaştırma gereksinimi yoktur. İsteğe bağlı olarak bir mikro yaklaşım anahtarı olan farklı ekipler'in tek günlük biçimi kabul etmiş olursunuz. Uygulama Tanılama Olayları görüntülemek için tutarlı bir yaklaşım vardır gibi gerekir.
+Belirgin, görünebilir ve genellikle kaçan, ancak bir mikro hizmet durumu ve tanılama bildirilmesi gerekir. Aksi takdirde, işlemleri açısından biraz Insight yoktur. Tanılama Olayları bağımsız bir hizmetler kümesi arasında ilişkilendirme ve olay siparişin anlamlı makine saat farklarından ilgilenme zordur. Anlaşılan protokolleri ve veri biçimleri üzerinde bir mikro hizmet ile etkileşimde bulunan aynı yolla Standartlaştırma sistem durumu ve sonuçta sorgulama ve görüntüleme için bir olay deposuna düştüğünden tanılama olayları günlüğe kaydetmek nasıl bir gereksinimi yoktur. Bir mikro hizmetler yaklaşımı sahip tuş, farklı ekipler, tek bir günlük biçimi kabul etmiş olursunuz. Var. uygulama tanılama olaylarını görüntüleme için tutarlı bir yaklaşım olması gerekir.
 
 ### <a name="health-checks"></a>Sistem durumu denetimleri
 
-Sistem durumu tanılama farklıdır. Sistem durumu geçerli durumuna uygun eylemleri raporlama mikro hizmet hakkında ' dir. İyi bir örnek kullanılabilirliğini sağlamak için yükseltme ve dağıtım mekanizmaları ile çalışmaktadır. Bir hizmet şu anda bir işlem kilitlenme nedeniyle sağlıksız veya yeniden başlatma makine rağmen hizmet işletimsel olabilir. Gereksinim duyduğunuz son şey bu yükseltme gerçekleştirerek kötü olmasını sağlamaktır. Önce bir araştırma yapmak için en iyi yaklaşımdır veya kurtarmak mikro hizmet için zaman tanıyın. Bir mikro hizmet sistem durumu olayları bilinçli kararlar almanıza ve etkili, kendini onarma hizmetleri oluşturmanıza yardımcı yardımcı olur.
+Sistem durumu, Tanılama'ya farklıdır. Geçerli durumuna uygun eylemleri raporlama mikro hizmet hakkında durumudur. İyi bir örnek, kullanılabilirliği sürdürmek için yükseltme ve dağıtım mekanizması ile çalışmaktadır. Bir hizmet şu anda bir işlem kilitlenmesi nedeniyle sağlıksız veya yeniden başlatma makine rağmen hizmet işletimsel olabilir. İhtiyacınız olan son bir şey bu yükseltme gerçekleştirerek yarışacağından olmasını sağlamaktır. İlk araştırma yapmak için en iyi yaklaşımdır veya kurtarmak mikro hizmet için zaman tanıyın. Bir mikro hizmet durumu olayları, bilgiye dayalı kararlar ve kendi kendini onaran hizmetleri oluşturma aslında yardımcı yardımcı olur.
 
-Uygulama durumu denetler ASP.NET Core services bölümünde bu kılavuzun size uygun eylemleri için bir izleme hizmetine durumlarına rapor etmek için yeni bir ASP.NET HealthChecks Kitaplığı'nda, mikro kullanımı açıklanmaktadır.
+İçinde [uygulama sistem durumu denetimleri ASP.NET Core Hizmetleri](../implement-resilient-applications/monitor-app-health.md#implementing-health-checks-in-aspnet-core-services) bölümü bu kılavuz, biz durumlarına uygun olması için bir izleme hizmeti için rapor etmek için yeni bir ASP.NET HealthChecks kitaplıkta mikro hizmetlerin nasıl kullanıldığını açıklar Eylemler.
 
-### <a name="using-diagnostics-and-logs-event-streams"></a>Tanılama ve günlükleri Olay akışları kullanma
+Beat Pulse, kullanılabilir adlı mükemmel bir açık kaynak kitaplığı kullanma seçeneğiniz de [GitHub](https://github.com/Xabaril/BeatPulse) ve bir [NuGet paketi](https://www.nuget.org/packages/BeatPulse/). Bu kitaplık bir sürpriz ile sistem durumu denetimleri de yapar, iki tür denetimi gerçekleştirir:
 
-Günlükleri nasıl bir uygulama veya hizmet, özel durumlar, uyarıları ve basit bilgilendirici iletileri de dahil olmak üzere çalıştıran hakkında bilgi sağlar. Özel durum yığın izlemesi birden çok satıra yayılmış ayrıca sıklıkla gösterir. genellikle, her günlük olay, her bir satır içeren bir metin biçiminde olsa.
+- **Canlılık**: isteklerini kabul etmek ve yanıtlamak mümkün ise mikro hizmet başka bir deyişle, etkin olup olmadığını denetler. 
+- **Hazırlık**: mikro hizmet ne yapılacağını bakması yapabilmesi mikro hizmet'ın bağımlılıkları (veritabanı, kuyruk Hizmetleri, vb.) kendilerini hazır olup olmadığını denetler. 
 
-Tek yapılı sunucu tabanlı uygulamalar, yalnızca disk (bir günlük dosyası) bir dosyaya günlüklerini yazma ve herhangi bir aracı olarak analiz edin. Uygulamanın yürütülmesini sabit bir sunucu veya VM ile sınırlı olduğundan, bu genellikle olayları akışını çözümlemek için çok karmaşık değil. Ancak, burada bir orchestrator kümedeki birçok düğümleri arasında birden fazla hizmet yürütülen bir dağıtılmış uygulamada dağıtılmış olayları ilişkilendirmenize yapamamasına bir iştir.
+### <a name="using-diagnostics-and-logs-event-streams"></a>Tanılama ve günlükler, olay akışları kullanma
 
-Mikro hizmet tabanlı bir uygulama olayları veya logfiles çıkış akışına tek başına depolamak deneyin değil ve merkezi bir yerde olaylara yönlendirme yönetmek bile deneyin. Altında nerede çalıştığına yürütme ortamı altyapısı tarafından toplanacak bir standart çıktı için olay akışı, her işlem yalnızca yazmalısınız anlamı saydam olmalıdır. Bu olay akışı yönlendiriciler örneğidir [Microsoft.Diagnostic.EventFlow](https://github.com/Azure/diagnostics-eventflow), olay akışları birden fazla kaynaktan toplar ve sistemler çıktı için yayımlar. Bunlar bir geliştirme ortamı için basit standart çıktı içerebilir veya Bulut sistemleri ister [Application Insights](https://azure.microsoft.com/services/application-insights/), [OMS](https://github.com/Azure/diagnostics-eventflow#oms-operations-management-suite) (için şirket içi uygulamalar için) ve [Azure tanılama](https://docs.microsoft.com/azure/monitoring-and-diagnostics/azure-diagnostics). Bile, gerçek zamanlı izleme günlükleri gibi ve ayrıca vardır iyi üçüncü taraf günlük analizi platformları ve uyarı, rapor, arayabilirsiniz Araçları [Splunk](https://www.splunk.com/goto/Splunk_Log_Management?ac=ga_usa_log_analysis_phrase_Mar17&_kk=logs%20analysis&gclid=CNzkzIrex9MCFYGHfgodW5YOtA).
+Günlükleri nasıl bir uygulama veya hizmeti, özel durumlar, uyarıları ve basit bilgilendirme iletileri de dahil olmak üzere çalışan hakkında bilgi sağlar. Özel durumlar da genellikle birden çok satırda yığın izlemesi gösterilmektedir, ancak genellikle, her olay, her bir satır içeren bir metin biçiminde günlüktür.
 
-### <a name="orchestrators-managing-health-and-diagnostics-information"></a>Orchestrators durum ve tanılama bilgilerini yönetme
+Tek parça sunucu tabanlı uygulamalarda yalnızca diskte (bir günlük dosyası) bir dosyaya günlükler yazar ve herhangi bir aracı ile analiz edin. Uygulama yürütme sabit bir sunucu veya VM için sınırlı olduğundan, genellikle akışı olayları çözümlemek için karmaşık değil. Ancak, birçok orchestrator küme düğümleri arasında birden çok hizmet nerede yürütülür dağıtılmış bir uygulamada dağıtılmış olayları ilişkilendirmenize işaretleyebilmesine zordur.
 
-Mikro hizmet tabanlı bir uygulama oluşturduğunuzda, karmaşıklık ile ilgilenir gerekir. Elbette, tek bir mikro hizmet uğraşmanız basit olmakla birlikte düzinelerce veya türleri yüzlerce ve mikro örnekleri binlerce karmaşık bir sorun. Bunu neredeyse mikro hizmet mimarisi oluşturuyor değildir — kararlı ve bağlı bir sisteme sahip olmanız istiyorsanız, ayrıca yüksek kullanılabilirlik, çözümlenebilme, dayanıklılık, durum ve tanılama gerekir.
+Bir mikro hizmet tabanlı uygulama olayları veya logfiles çıkış akışına kendisi tarafından depolamak deneyin değil ve merkezi bir yerde olaylara yönlendirme yönetmek bile deneyin. Bu, nerede çalıştığını yürütme ortamı altyapısı tarafından toplanacak altında bir standart çıktıya kendi olay akışı, her işlem yalnızca yazmalısınız anlamı saydam olmalıdır. Bu olay akışı yönlendiriciler örneğidir [Microsoft.Diagnostic.EventFlow](https://github.com/Azure/diagnostics-eventflow), olay akışları, birden fazla kaynaktan toplar ve sistemleri çıktı için yayımlar. Bunlar, bir geliştirme ortamı için basit standart çıktı içerebilir veya Bulut sistemleri [Application Insights](https://azure.microsoft.com/services/application-insights/), [OMS](https://github.com/Azure/diagnostics-eventflow#oms-operations-management-suite) (için şirket içi uygulamalar için) ve [Azuretanılama](https://docs.microsoft.com/azure/monitoring-and-diagnostics/azure-diagnostics). Ayrıca vardır iyi üçüncü taraf günlük analizi platformları ve uyarı raporu arayabilirsiniz araçları ve izleme günlükleri, hatta gerçek zamanlı gibi [Splunk](https://www.splunk.com/goto/Splunk_Log_Management?ac=ga_usa_log_analysis_phrase_Mar17&_kk=logs%20analysis&gclid=CNzkzIrex9MCFYGHfgodW5YOtA).
 
-![](./media/image22.png)
+### <a name="orchestrators-managing-health-and-diagnostics-information"></a>Düzenleyiciler durum ve tanılama bilgilerini yönetme
 
-**Şekil 4-22**. Bir uygulamanın sistem yönetimi için temel mikro hizmet platformudur
+Mikro hizmet tabanlı bir uygulama oluşturduğunuzda, karmaşıklığı ile uğraşmak gerekir. Elbette, tek bir mikro hizmet uğraşmanız basittir, ancak düzinelerce, ister türleri yüzlerce ve binlerce örnek mikro hizmetler, karmaşık bir sorun olduğunu. Neredeyse, mikro hizmet mimarisi oluşturma değildir — bir kararlı ve cohesive sistemi olmasını istiyorsanız ayrıca yüksek kullanılabilirlik, çözümlenebilme, dayanıklılık, sistem durumu ve tanılama gerekir.
 
-Şekil 4-22'de gösterilen karmaşık sorunları başınıza gidermenize çok zordur. Geliştirme ekiplerinin iş sorunlarını çözme ve mikro hizmet tabanlı yaklaşımlar olan özel uygulamalar oluşturmaya durmalısınız. Bunlar karmaşık altyapı sorunlarını çözme üzerinde durmalısınız değil; Bunlar kaldırdıysanız, mikro hizmet tabanlı bir uygulama maliyetini büyük olacaktır. Bu nedenle, orchestrators veya oluşturma ve bir hizmeti çalıştıran ve altyapı kaynakları verimli şekilde kullanma sabit sorunları çözmeyi deneyin mikro hizmet kümeler, olarak adlandırılır, mikro hizmet odaklı platformları vardır. Bu, bir mikro yaklaşım kullanan uygulamalar oluşturmanın karmaşıklıkları azaltır.
+![Mikro hizmetlerin çalıştırmaya yönelik destek platform düzenleyicileri sağlayın.](./media/image22.png)
 
-Farklı orchestrators benzer gibi görünebilir, ancak tanılama ve bunların her biri tarafından sunulan durumu denetimleri özellikler ve bazen OS platforma bağlı olarak olgunluk durumunu sonraki bölümde açıklandığı gibi farklı.
+**Şekil 4-22**. Bir uygulamanın sistem durumu yönetimi için temel mikro hizmet platformudur
+
+Şekil 4-22'de gösterilen karmaşık sorunları kendiniz çözmek çok zordur. Geliştirme ekiplerinin iş sorunlarını çözmeye ve mikro hizmet tabanlı bir yaklaşım ile özel uygulamalar oluşturan odaklanmanız gerekir. Bunlar karmaşık altyapı sorunlarını çözmeye odaklanın değil; kaldırdıysanız, herhangi bir mikro hizmet tabanlı uygulama maliyetini büyük olacaktır. Bu nedenle, mikro hizmet odaklı platformları için düzenleyiciler veya oluşturma ve bir hizmetin çalıştırılması ve altyapı kaynaklarını verimli bir şekilde kullanarak zor sorunları çözmek için çalışan mikro hizmet kümeleri olarak anılacaktır vardır. Bu, mikro hizmetler yaklaşımı kullanan uygulamalar oluşturma karmaşıklıkları azaltır.
+
+Çeşitli düzenleyicileri benzer görünebilir, ancak tanılama ve sistem durumu denetimleri her biri tarafından sunulan özellikler ve işletim sistemi platformu bağlı olarak bazen bir olgunluk durumunu sonraki bölümde açıklandığı gibi farklı.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
--   **On iki öğeli uygulama. XI. Günlükleri: günlükleri Olay akışları olarak ele alın.**
-    [*https://12factor.net/logs*](https://12factor.net/logs)
+- **On iki Faktörlü uygulama. XI. Günlükleri: günlüklerini, olay akışları olarak değerlendir** \
+  [*https://12factor.net/logs*](https://12factor.net/logs)
 
--   **Microsoft tanılama EventFlow kitaplığı.** GitHub depo.
+- **Microsoft tanılama EventFlow Kitaplığı** GitHub deposu. \
+  [*https://github.com/Azure/diagnostics-eventflow*](https://github.com/Azure/diagnostics-eventflow)
 
-    [*https://github.com/Azure/diagnostics-eventflow*](https://github.com/Azure/diagnostics-eventflow)
+- **Azure tanılama nedir** \
+  [*https://docs.microsoft.com/azure/azure-diagnostics*](https://docs.microsoft.com/azure/azure-diagnostics)
 
--   **Azure tanılama nedir**
-    [*https://docs.microsoft.com/azure/azure-diagnostics*](https://docs.microsoft.com/azure/azure-diagnostics)
+- **Windows bilgisayarları Azure Log Analytics hizmetine bağlayın** \
+  [*https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents*](https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents)
 
--   **Windows bilgisayarları Azure günlük analizi hizmetine bağlanın**
-    [*https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents*](https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents)
+- **Ne anlama gelir günlüğü: semantik günlük uygulama bloğu kullanarak** \
+  [*https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx*](https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx)
 
--   **Hangi, ortalama oturum: semantik günlük uygulama bloğu kullanarak**
-    [*https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx*](https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx)
+- **Splunk** resmi sitesi. \
+  [*https://www.splunk.com/*](https://www.splunk.com/)
 
--   **Splunk.** Resmi sitesi.
-    [*https://www.splunk.com/*](https://www.splunk.com/)
-
--   **EventSource sınıfı**. Windows (ETW) için izleme olayları için API [*https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource*](xref:System.Diagnostics.Tracing.EventSource)
-
-
-
+- **EventSource sınıfı** izleme için Windows (ETW) olayları için API \
+  [*https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource*](https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource)
 
 >[!div class="step-by-step"]
-[Önceki](microservice-based-composite-ui-shape-layout.md)
-[sonraki](scalable-available-multi-container-microservice-applications.md)
+>[Önceki](microservice-based-composite-ui-shape-layout.md)
+>[İleri](scalable-available-multi-container-microservice-applications.md)

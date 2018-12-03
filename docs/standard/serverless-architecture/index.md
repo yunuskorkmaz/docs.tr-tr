@@ -4,16 +4,16 @@ description: Sunucusuz bir mimari Kılavuzu. Neden ve ne zaman, öğrenin, kurum
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 6/26/2018
-ms.openlocfilehash: 89e5f387e218703a2f6311ef848b3d613a9279f7
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: a19784f42c63914e9cf8f42ee6408ec9aa46e4f3
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37405024"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52745322"
 ---
-![](./media/Cover.jpg)
-
 # <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>Sunucusuz uygulamalar: mimarisi, desenler ve Azure uygulama
+
+![](./media/Cover.jpg)
 
 > İNDİRME bulunabilir: <https://aka.ms/serverless-ebook>
 
@@ -61,7 +61,7 @@ Katılımcılar ve gözden geçirenler:
 
 ## <a name="introduction"></a>Giriş
 
-Sunucusuz bulut platformları bulut saf yerel kod yönünde halidir. Sunucusuz, altyapıdan kaynaklanan yüklerden insulating sırasında iş mantığı geliştiriciler yakın getirir. "Hiçbir" server ancak bunun yerine, "daha az sunucu." açık olmayan bir modelidir Olay temelli sunucusuz kodudur. Kod, geleneksel bir HTTP web istek bir zamanlayıcı ya da bir dosya karşıya yükleme sonucu herhangi bir şey tarafından tetiklenebilir. Sunucusuz arkasında altyapı esnek taleplerini karşılamak üzere anında ölçek sağlar ve gerçek anlamda "kullandığınız kadarı için ödeme yaparsınız için." micro-fatura sunar Sunucusuz uygulamalar oluşturmak için yeni bir yol düşünmek ve yaklaşım gerektirir ve her sorun için doğru çözüm değildir. Bir geliştirici olarak size karar vermeniz gerekir:
+[Sunucusuz](https://azure.microsoft.com/solutions/serverless/) bulut platformları bulut saf yerel kod yönünde evrimidir. Sunucusuz, altyapıdan kaynaklanan yüklerden insulating sırasında iş mantığı geliştiriciler yakın getirir. "Hiçbir" server ancak bunun yerine, "daha az sunucu." açık olmayan bir modelidir Olay temelli sunucusuz kodudur. Kod, geleneksel bir HTTP web istek bir zamanlayıcı ya da bir dosya karşıya yükleme sonucu herhangi bir şey tarafından tetiklenebilir. Sunucusuz arkasında altyapı esnek taleplerini karşılamak üzere anında ölçek sağlar ve gerçek anlamda "kullandığınız kadarı için ödeme yaparsınız için." micro-fatura sunar Sunucusuz uygulamalar oluşturmak için yeni bir yol düşünmek ve yaklaşım gerektirir ve her sorun için doğru çözüm değildir. Bir geliştirici olarak size karar vermeniz gerekir:
 
 * Avantajları ve dezavantajları sunucusuz nelerdir?
 * Neden, kendi uygulamalarınıza sunucusuz göz önünde bulundurmalıyım?
@@ -138,4 +138,4 @@ Bu kılavuzun ilk bölümü nedenini inceler birkaç farklı mimari yaklaşım k
 Geri bildiriminiz Hoş Geldiniz için kılavuz ve ilgili örnekler sürekli, gelişen! Bu kılavuz nasıl geliştirilebilir hakkında açıklamalar varsa, üzerinde oluşturulmuş herhangi bir sayfanın altındaki geri bildirim bölümünü kullanın [GitHub sorunları](https://github.com/dotnet/docs/issues).
 
 >[!div class="step-by-step"]
-[Next](architecture-approaches.md)
+>[Next](architecture-approaches.md)

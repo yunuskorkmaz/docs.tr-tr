@@ -1,6 +1,6 @@
 ---
-title: F# bileşeni tasarım yönergeleri
-description: Diğer çağıranlar tarafından tüketim için hazırlanmış F# bileşenleri yazma yönergeleri hakkında bilgi edinin.
+title: 'F # bileşeni tasarım yönergeleri'
+description: 'Diğer çağıranlar tarafından tüketim için hazırlanmış F # bileşenleri yazma yönergeleri hakkında bilgi edinin.'
 ms.date: 05/14/2018
 ms.openlocfilehash: 446cba0f810af9517b655ef5741ddf7a919676d5
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -9,32 +9,32 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "43488293"
 ---
-# <a name="f-component-design-guidelines"></a>F# bileşeni tasarım yönergeleri
+# <a name="f-component-design-guidelines"></a>F # bileşeni tasarım yönergeleri
 
-Bu belge için F programlama, F# bileşeni tasarım yönergeleri, v14, Microsoft Research dayalı # bileşen tasarım yönergeleri kümesidir ve [başka bir sürümü](https://fsharp.org/specs/component-design-guidelines/) başlangıçta seçkin ve F# Software Foundation tarafından korunur.
+Bu belge için F programlama, F # bileşeni tasarım yönergeleri, v14, Microsoft Research dayalı # bileşen tasarım yönergeleri kümesidir ve [başka bir sürümü](https://fsharp.org/specs/component-design-guidelines/) başlangıçta seçkin ve F # Software Foundation tarafından korunur.
 
-Bu belge, F# programlama ile ilgili bilgi sahibi olduğunuz varsayılır. Çoğu kendi Katkıları ve bu kılavuz çeşitli sürümlerini yararlı geribildirim için F# topluluğuna teşekkür ederiz.
+Bu belge, F # programlama ile ilgili bilgi sahibi olduğunuz varsayılır. Çoğu kendi Katkıları ve bu kılavuz çeşitli sürümlerini yararlı geribildirim için F # topluluğuna teşekkür ederiz.
 
 ## <a name="overview"></a>Genel Bakış
 
-Bu belge, F# bileşeni tasarım ve kodlama ilgili sorunlardan bazılarını bakar. Bir bileşen, aşağıdakilerden herhangi birini gelebilir:
+Bu belge, F # bileşeni tasarım ve kodlama ilgili sorunlardan bazılarını bakar. Bir bileşen, aşağıdakilerden herhangi birini gelebilir:
 
-* Dış tüketicileri bir proje olan F# projesinde bir katman.
-* Bütünleştirilmiş kod sınırları arasında F# kodu tarafından tüketim için hazırlanmış bir kitaplık.
+* Dış tüketicileri bir proje olan F # projesinde bir katman.
+* Bütünleştirilmiş kod sınırları arasında F # kodu tarafından tüketim için hazırlanmış bir kitaplık.
 * Bütünleştirilmiş kod sınırları arasında herhangi bir .NET dil tarafından tüketim için hazırlanmış bir kitaplık.
 * Gibi bir paket deposu aracılığıyla dağıtım için hedeflenen bir kitaplık [NuGet](https://nuget.org).
 
-Bu makalede açıklanan teknikleri izleyin [beş iyi F# kodu prensipleri](index.md#five-principles-of-good-f-code), böylece her ikisi de işlevsel yazılımınız ve uygun şekilde programlama nesnesi.
+Bu makalede açıklanan teknikleri izleyin [beş iyi F # kodu prensipleri](index.md#five-principles-of-good-f-code), böylece her ikisi de işlevsel yazılımınız ve uygun şekilde programlama nesnesi.
 
 Metodoloji bağımsız olarak, geliştiriciler tarafından kullanılabilen en kolay bir API'si çalışıyorlardı çalışırken bir dizi pratik ve prosaic soruna bileşen ve kitaplık Tasarımcı yüzler. Sertifikasyonuna uygulamasının [.NET kitaplığı tasarım yönergeleri](../../standard/design-guidelines/index.md) kullanmak eğlenceli API'lerden tutarlı özellik kümesi oluşturma doğrultusunda faaliyetidir.
 
 ## <a name="general-guidelines"></a>Genel yönergeler
 
-F# kitaplıkları, kitaplığı için hedef kitle bağımsız olarak geçerli birkaç Evrensel yönergeleri vardır.
+F # kitaplıkları, kitaplığı için hedef kitle bağımsız olarak geçerli birkaç Evrensel yönergeleri vardır.
 
 ### <a name="learn-the-net-library-design-guidelines"></a>.NET kitaplığı tasarım yönergeleri edinin
 
-F#, yapıyor kodlama türü ne olursa olsun, bir bilgiye sahip değerli [.NET kitaplığı tasarım yönergeleri](../../standard/design-guidelines/index.md). Diğer çoğu F# ve .NET programcıları bu yönergelere hakkında bilgi sahibi olmanız ve .NET kodu için uygun olması için bekler.
+F #, yapıyor kodlama türü ne olursa olsun, bir bilgiye sahip değerli [.NET kitaplığı tasarım yönergeleri](../../standard/design-guidelines/index.md). Diğer çoğu F # ve .NET programcıları bu yönergelere hakkında bilgi sahibi olmanız ve .NET kodu için uygun olması için bekler.
 
 .NET kitaplığı tasarım yönergeleri adlandırma, sınıflar ve arabirimler, üye tasarım (Özellikler, yöntemler, olaylar, vb.) ve daha fazlasını tasarımı ile ilgili genel rehberlik sağlar ve tasarım kılavuzu çeşitli başvuru yararlı ilk noktası olan.
 
@@ -54,27 +54,27 @@ Kısa form XML açıklamaları kullanabilirsiniz (`/// comment`), veya standart 
 
 ### <a name="consider-using-explicit-signature-files-fsi-for-stable-library-and-component-apis"></a>Kararlı kitaplığı ve bileşen API'leri için açık imza dosyalarını (.fsi) kullanmayı düşünün
 
-Bir F# kitaplığı açık imza dosyalarını kullanarak her iki, tam genel yüzey kitaplığınızın bilmeniz yanı sıra ve iç ortak belgeler arasında bir ayrım sağlar sağlamaya yardımcı olan genel API birleştiren bir özetini sağlar Uygulama Ayrıntıları. Genel API değiştirmek için hem uygulama hem de imza dosyalarında yapılacak değişiklikler gerektirerek imza dosyalarını uyuşmazlıkları eklediğiniz unutmayın. Bir API solidified haline gelir ve bundan böyle önemli bir değişiklik beklenen sonuç olarak, imza dosyalarını genellikle yalnızca tanıtılmak.
+Bir F # kitaplığı açık imza dosyalarını kullanarak her iki, tam genel yüzey kitaplığınızın bilmeniz yanı sıra ve iç ortak belgeler arasında bir ayrım sağlar sağlamaya yardımcı olan genel API birleştiren bir özetini sağlar Uygulama Ayrıntıları. Genel API değiştirmek için hem uygulama hem de imza dosyalarında yapılacak değişiklikler gerektirerek imza dosyalarını uyuşmazlıkları eklediğiniz unutmayın. Bir API solidified haline gelir ve bundan böyle önemli bir değişiklik beklenen sonuç olarak, imza dosyalarını genellikle yalnızca tanıtılmak.
 
 ### <a name="always-follow-best-practices-for-using-strings-in-net"></a>Her zaman .NET dizeleri kullanmak için en iyi uygulamaları izleyin
 
 İzleyin [kullanarak dizeleri de .NET için en iyi](../../standard/base-types/best-practices-strings.md) Kılavuzu. Özellikle, her zaman açık durum *kültürel hedefi* dönüştürme ve karşılaştırma dizeleri, (uygunsa).
 
-## <a name="guidelines-for-f-facing-libraries"></a>F# Kılavuzu-karşılıklı kitaplıkları
+## <a name="guidelines-for-f-facing-libraries"></a>F # Kılavuzu-karşılıklı kitaplıkları
 
-Bu bölümde genel F# geliştirme önerileri sunar-karşılıklı kitaplıkları; diğer bir deyişle, F# geliştiricileri tarafından tüketilmesi amaçlanan ortak API'lerde gösterme kitaplıkları. Kitaplık tasarım önerileri çeşitli özellikle F# için geçerlidir. Aşağıdaki öneriler olmaması durumunda .NET kitaplığı tasarım geri dönüş Kılavuzu yönergelerdir.
+Bu bölümde genel F # geliştirme önerileri sunar-karşılıklı kitaplıkları; diğer bir deyişle, F # geliştiricileri tarafından tüketilmesi amaçlanan ortak API'lerde gösterme kitaplıkları. Kitaplık tasarım önerileri çeşitli özellikle F # için geçerlidir. Aşağıdaki öneriler olmaması durumunda .NET kitaplığı tasarım geri dönüş Kılavuzu yönergelerdir.
 
 ### <a name="naming-conventions"></a>Adlandırma kuralları
 
 #### <a name="use-net-naming-and-capitalization-conventions"></a>.NET adlandırma ve büyük/küçük harf kuralları kullanma
 
-Aşağıdaki tablo, .NET adlandırma ve büyük/küçük harf kurallarını izler. F# yapılarını de içerecek şekilde küçük eklemeler vardır.
+Aşağıdaki tablo, .NET adlandırma ve büyük/küçük harf kurallarını izler. F # yapılarını de içerecek şekilde küçük eklemeler vardır.
 
 | Oluştur | Servis talebi | Bölümü | Örnekler | Notlar |
 |-----------|------|------|----------|-------|
-| Somut türleri | PascalCase | İsim / sıfat | Liste, çift, karmaşık | Yapılar, sınıflar, numaralandırmalar, temsilciler, kayıtlar ve birleşimler bunun somut türleridir. Tür adları içinde OCaml geleneksel küçük olsa da, F# türleri için .NET adlandırma şeması BENİMSEDİ.
+| Somut türleri | PascalCase | İsim / sıfat | Liste, çift, karmaşık | Yapılar, sınıflar, numaralandırmalar, temsilciler, kayıtlar ve birleşimler bunun somut türleridir. Tür adları içinde OCaml geleneksel küçük olsa da, F # türleri için .NET adlandırma şeması BENİMSEDİ.
 | DLL'ler           | PascalCase |                 | Fabrikam.Core.dll |  |
-| Birleşim etiketleri     | PascalCase | İsim | Bazı, ekleme, başarılı | Bir ön ek, genel API'ler kullanmayın. İsteğe bağlı olarak öneki gibi iç zaman kullanmak ''' takımlar yazın TAlpha = | TBeta | TDelta.'' ' |
+| Birleşim etiketleri     | PascalCase | İsim | Bazı, ekleme, başarılı | Bir ön ek, genel API'ler kullanmayın. İsteğe bağlı olarak öneki gibi iç zaman kullanmak ```takımlar yazın TAlpha = | TBeta | TDelta.``` |
 | Olay          | PascalCase | Fiili | ValueChanged / ValueChanging |  |
 | Özel Durumlar     | PascalCase |      | WebException ise | Adı "Özel durum" ile bitmelidir. |
 | Alan          | PascalCase | İsim | Geçerli ad  | |
@@ -88,7 +88,7 @@ Aşağıdaki tablo, .NET adlandırma ve büyük/küçük harf kurallarını izle
 
 #### <a name="avoid-abbreviations"></a>Kısaltmalar kaçının
 
-.NET Kılavuzu kısaltmalar kullanımını engelleyin (örneğin, "kullanmak `OnButtonClick` yerine `OnBtnClick`"). Ortak kısaltmalar gibi `Async` "Zaman uyumsuz için", izin verilir. Bu kılavuz, işlevsel programlama bazen yoksayıldı; Örneğin, `List.iter` "yinelemek için" bir kısaltma kullanır. F#'de büyük ölçüde edileceği kısaltmalar kullanarak bu nedenle, eğilimlidir-için-F# programlama, ancak genel bileşen tasarım hala genellikle kaçınılmalıdır.
+.NET Kılavuzu kısaltmalar kullanımını engelleyin (örneğin, "kullanmak `OnButtonClick` yerine `OnBtnClick`"). Ortak kısaltmalar gibi `Async` "Zaman uyumsuz için", izin verilir. Bu kılavuz, işlevsel programlama bazen yoksayıldı; Örneğin, `List.iter` "yinelemek için" bir kısaltma kullanır. F #'de büyük ölçüde edileceği kısaltmalar kullanarak bu nedenle, eğilimlidir-için-F # programlama, ancak genel bileşen tasarım hala genellikle kaçınılmalıdır.
 
 #### <a name="avoid-casing-name-collisions"></a>Ad çakışması büyük/küçük harfleri kaçının
 
@@ -100,9 +100,9 @@ Kısaltmalar gibi XML kısaltmalar değildir ve .NET kitaplıkları eden formund
 
 #### <a name="use-pascalcase-for-generic-parameter-names"></a>Genel parametre adları için PascalCase kullanın
 
-PascalCase genel API'leri, F#'de dahil olmak üzere genel parametre adları için kullanma-karşılıklı kitaplıkları. Özellikle, adları gibi kullanın `T`, `U`, `T1`, `T2` rastgele genel parametreler ve özel adlar, ardından F# için anlamlı olduğunda-karşılıklı kitaplıklarını kullanma gibi adları `Key`, `Value`, `Arg`(ancak değil örneğin `TKey`).
+PascalCase genel API'leri, F #'de dahil olmak üzere genel parametre adları için kullanma-karşılıklı kitaplıkları. Özellikle, adları gibi kullanın `T`, `U`, `T1`, `T2` rastgele genel parametreler ve özel adlar, ardından F # için anlamlı olduğunda-karşılıklı kitaplıklarını kullanma gibi adları `Key`, `Value`, `Arg`(ancak değil örneğin `TKey`).
 
-#### <a name="use-either-pascalcase-or-camelcase-for-public-functions-and-values-in-f-modules"></a>Genel işlevler ve F# modüllerdeki değerleri için PascalCase ya da camelCase kullanın
+#### <a name="use-either-pascalcase-or-camelcase-for-public-functions-and-values-in-f-modules"></a>Genel işlevler ve F # modüllerdeki değerleri için PascalCase ya da camelCase kullanın
 
 camelCase kullanılmak üzere tasarlanmış genel işlevleri için kullanılan nitelenmemiş (örneğin, `invalidArg`) ve "standart toplama işlevleri için" (örneğin, List.map). Her iki bu durumda, işlev adlarını çok dil anahtar sözcükleri gibi davranır.
 
@@ -110,7 +110,7 @@ camelCase kullanılmak üzere tasarlanmış genel işlevleri için kullanılan n
 
 #### <a name="use-namespaces-or-modules-to-contain-your-types-and-modules"></a>Türler ve modüller içerecek şekilde ad alanları veya modülleri kullanma
 
-Her F# dosyasında bir bileşeni, bir ad alanı bildirimi veya modül bildirimi ile başlamalıdır.
+Her F # dosyasında bir bileşeni, bir ad alanı bildirimi veya modül bildirimi ile başlamalıdır.
 
 ```fsharp
 namespace Fabrikam.BasicOperationsAndTypes
@@ -143,11 +143,11 @@ module CommonOperations =
 Kod en üst düzeyde düzenlemek için modüller ve ad alanları'nı kullanarak arasındaki farklar aşağıdaki gibidir:
 
 * Ad alanlarında birden çok dosya yayılabilir.
-* Ad alanları içinde bir iç modül olmadıkları sürece F# işlevler içeremez
+* Ad alanları içinde bir iç modül olmadıkları sürece F # işlevler içeremez
 * Herhangi bir modülden kodunu tek bir dosyada yer almalıdır
-* Üst düzey modüller F# işlevleri bir iç modül gerek kalmadan içerebilir
+* Üst düzey modüller F # işlevleri bir iç modül gerek kalmadan içerebilir
 
-Bir üst düzey ad alanında veya modülde arasında seçim kodun derlenmiş form etkiler ve API'nizi sonunda F# kodu dışında kullanılması diğer .NET dilleri görünümünden böylece etkiler.
+Bir üst düzey ad alanında veya modülde arasında seçim kodun derlenmiş form etkiler ve API'nizi sonunda F # kodu dışında kullanılması diğer .NET dilleri görünümünden böylece etkiler.
 
 #### <a name="use-methods-and-properties-for-operations-intrinsic-to-object-types"></a>Nesne türleri için iç işlemler için yöntemleri ve özellikleri kullanın
 
@@ -173,7 +173,7 @@ type HashTable<'Key,'Value>(comparer: IEqualityComparer<'Key>) =
 
 #### <a name="use-classes-to-encapsulate-mutable-state"></a>Değişebilir durum kapsüllemek için sınıfları kullanma
 
-F#'ta bu durum zaten bir kapanış, sıralama ifadesi veya zaman uyumsuz bir hesaplama gibi başka bir dil yapısı yalıtılan değil, yerine getirilmesi yeterlidir.
+F #'ta bu durum zaten bir kapanış, sıralama ifadesi veya zaman uyumsuz bir hesaplama gibi başka bir dil yapısı yalıtılan değil, yerine getirilmesi yeterlidir.
 
 ```fsharp
 type Counter() =
@@ -256,11 +256,11 @@ let v = Vector(5.0)
 let u = v * 10.0
 ```
 
-Bu kılavuz, bu tür için genel .NET rehberliği karşılık gelir. Ancak, bu F# işlevleri ile birlikte ve yöntemler gibi List.sumBy üye kısıtlamaları ile kullanılmak üzere bu tür şifrelemeye izin vermesi gibi F# kodlama Ayrıca önemli olabilir.
+Bu kılavuz, bu tür için genel .NET rehberliği karşılık gelir. Ancak, bu F # işlevleri ile birlikte ve yöntemler gibi List.sumBy üye kısıtlamaları ile kullanılmak üzere bu tür şifrelemeye izin vermesi gibi F # kodlama Ayrıca önemli olabilir.
 
 #### <a name="consider-using-compiledname-to-provide-a-net-friendly-name-for-other-net-language-consumers"></a>CompiledName sağlamak üzere kullanmayı göz önünde bulundurun bir. Diğer .NET dil Tüketiciler için NET kolay adı
 
-Bazen bir stilde F# Tüketiciler için ad isteyebilirsiniz (gibi BT'nin görünecek şekilde küçük bir statik üye modülü bağlı işlevi gibi), ancak bütünleştirilmiş kod içine derlenmiş olan farklı bir stil adı vardır. Kullanabileceğiniz `[<CompiledName>]` derlemenin tüketme olmayan F# kodu için farklı bir stil sağlamak için özniteliği.
+Bazen bir stilde F # Tüketiciler için ad isteyebilirsiniz (gibi BT'nin görünecek şekilde küçük bir statik üye modülü bağlı işlevi gibi), ancak bütünleştirilmiş kod içine derlenmiş olan farklı bir stil adı vardır. Kullanabileceğiniz `[<CompiledName>]` derlemenin tüketme olmayan F # kodu için farklı bir stil sağlamak için özniteliği.
 
 ```fsharp
 type Vector(x:float, y:float) =
@@ -274,7 +274,7 @@ type Vector(x:float, y:float) =
 let v = Vector.create 5.0 3.0
 ```
 
-Kullanarak `[<CompiledName>]`, olmayan F# derlemenin tüketicileri için .NET adlandırma kuralları kullanabilirsiniz.
+Kullanarak `[<CompiledName>]`, olmayan F # derlemenin tüketicileri için .NET adlandırma kuralları kullanabilirsiniz.
 
 #### <a name="use-method-overloading-for-member-functions-if-doing-so-provides-a-simpler-api"></a>Bunu yapmak, böylece daha basit bir API sağlar kullanırsanız, üye işlevleri için yöntemi aşırı yüklemesi
 
@@ -289,7 +289,7 @@ type Logger() =
         ...
 ```
 
-F#'da türlerde bağımsız değişkenler yerine bağımsız değişken sayısı aşırı yüklemeye daha yaygındır.
+F #'da türlerde bağımsız değişkenler yerine bağımsız değişken sayısı aşırı yüklemeye daha yaygındır.
 
 #### <a name="hide-the-representations-of-record-and-union-types-if-the-design-of-these-types-is-likely-to-evolve"></a>Bu tür tasarım geliştirilebilen olasılığı varsa, kayıt ve birleşim türlerini temsillerini Gizle
 
@@ -297,7 +297,7 @@ Nesneleri somut temsillerini açıklanmaması Örneğin, somut gösterimini <xre
 
 #### <a name="avoid-the-use-of-implementation-inheritance-for-extensibility"></a>Uygulama devralma genişletilebilirliği için kullanmaktan kaçının
 
-F#'ta uygulama devralma nadiren kullanılır. Ayrıca, devralma hiyerarşilerini çoğunlukla karmaşık ve yeni gereksinimleri geldiğinde değiştirmek zor olur. Devralma uygulama yine de F#'ta uyumluluk ve burada bir sorun için en iyi çözüm olduğundan, ancak arabirim uygulaması gibi çok biçimlilik için tasarlarken, F# programlarınızda alternatif teknikleri şirketlerin hedefledikleri nadiren vardır.
+F #'ta uygulama devralma nadiren kullanılır. Ayrıca, devralma hiyerarşilerini çoğunlukla karmaşık ve yeni gereksinimleri geldiğinde değiştirmek zor olur. Devralma uygulama yine de F #'ta uyumluluk ve burada bir sorun için en iyi çözüm olduğundan, ancak arabirim uygulaması gibi çok biçimlilik için tasarlarken, F # programlarınızda alternatif teknikleri şirketlerin hedefledikleri nadiren vardır.
 
 ### <a name="function-and-member-signatures"></a>İşlev ve üyesi imzaları
 
@@ -311,9 +311,9 @@ val divrem : BigInteger -> BigInteger -> BigInteger * BigInteger
 
 İçin dönüş türleri birçok bileşen içeren veya bileşenleri tek bir tanımlanabilen varlıkla ilgili yerlerde, adlandırılmış tür yerine bir demet kullanmayı göz önünde bulundurun.
 
-#### <a name="use-asynct-for-async-programming-at-f-api-boundaries"></a>Kullanım `Async<T>` F# API sınırlarındaki zaman uyumsuz programlama için
+#### <a name="use-asynct-for-async-programming-at-f-api-boundaries"></a>Kullanım `Async<T>` F # API sınırlarındaki zaman uyumsuz programlama için
 
-Adlı karşılık gelen eşzamanlı bir işlem olup olmadığını `Operation` döndüren bir `T`, zaman uyumsuz işlem adlı sonra `AsyncOperation` döndürürse `Async<T>` veya `OperationAsync` döndürürse `Task<T>`. Başlangıç/bitiş yöntemleri açığa yaygın olarak kullanılan .NET türleri göz önünde bulundurun için kullanarak `Async.FromBeginEnd` F# zaman uyumsuz programlama modeli için bu .NET API'lerini sağlamak için bir cephe olarak genişletme yöntemlerini yazılacak.
+Adlı karşılık gelen eşzamanlı bir işlem olup olmadığını `Operation` döndüren bir `T`, zaman uyumsuz işlem adlı sonra `AsyncOperation` döndürürse `Async<T>` veya `OperationAsync` döndürürse `Task<T>`. Başlangıç/bitiş yöntemleri açığa yaygın olarak kullanılan .NET türleri göz önünde bulundurun için kullanarak `Async.FromBeginEnd` F # zaman uyumsuz programlama modeli için bu .NET API'lerini sağlamak için bir cephe olarak genişletme yöntemlerini yazılacak.
 
 ```fsharp
 type SomeType =
@@ -333,9 +333,9 @@ Bkz: [hata Yönetimi](conventions.md#error-management) özel durumlar, sonuçlar
 
 ### <a name="extension-members"></a>Uzantı üyeleri
 
-#### <a name="carefully-apply-f-extension-members-in-f-to-f-components"></a>F#'ta uzantı üyeleri F# dikkatli bir şekilde uygulamak-için-F# bileşenleri
+#### <a name="carefully-apply-f-extension-members-in-f-to-f-components"></a>F #'ta uzantı üyeleri F # dikkatli bir şekilde uygulamak-için-F # bileşenleri
 
-F# uzantı üyeleri genellikle yalnızca bir türü modlarından kullanım çoğu ile ilişkili iç işlemlerinin kabini içinde işlemleri için kullanılmalıdır. Yaygın olarak kullanıldığı çeşitli .NET türleri için F#'tan fazla deyimsel API'lerden sağlamaktır:
+F # uzantı üyeleri genellikle yalnızca bir türü modlarından kullanım çoğu ile ilişkili iç işlemlerinin kabini içinde işlemleri için kullanılmalıdır. Yaygın olarak kullanıldığı çeşitli .NET türleri için F #'tan fazla deyimsel API'lerden sağlamaktır:
 
 ```fsharp
 type System.ServiceModel.Channels.IInputChannel with
@@ -368,7 +368,7 @@ Bir etki alanında aynı adı ayrılmış birlik vakaları gibi farklı işlemle
 
 #### <a name="hide-the-representations-of-discriminated-unions-for-binary-compatible-apis-if-the-design-of-these-types-is-likely-to-evolve"></a>Bu tür tasarım geliştirilebilen olasılığı varsa, ayrılmış birleşimler temsillerini ikili uyumlu API'leri için Gizle
 
-Birleşimler türleri F# desen eşleştirme forms birleştiren bir programlama modeli için dayanır. Daha önce bahsedildiği gibi tasarım bu tür geliştirilebilen olasılığı varsa, somut veri gösterimleri devamlılığımız kaçınmanız gerekir.
+Birleşimler türleri F # desen eşleştirme forms birleştiren bir programlama modeli için dayanır. Daha önce bahsedildiği gibi tasarım bu tür geliştirilebilen olasılığı varsa, somut veri gösterimleri devamlılığımız kaçınmanız gerekir.
 
 Örneğin, ayrılmış bir birleşim gösterimini kullanarak özel veya iç bildirimi gizlenebilir veya bir imza dosyası kullanarak.
 
@@ -381,13 +381,13 @@ type Union =
 
 Ayrılmış birleşimler incelemelerin çıkıyorsa, bu sürüm için sabit kitaplığınızı kullanıcı kodu bozmadan bulabilirsiniz. Bunun yerine, değer türünüz üzerinde desen izin vermek için bir veya daha fazla Etkin desenler, devamlılığımız göz önünde bulundurun.
 
-Etkin desenler, F# birleşim türleri doğrudan gösterme kaçınarak desen ile F# tüketiciler sağlamak için alternatif bir yolunu sunuyor.
+Etkin desenler, F # birleşim türleri doğrudan gösterme kaçınarak desen ile F # tüketiciler sağlamak için alternatif bir yolunu sunuyor.
 
 ### <a name="inline-functions-and-member-constraints"></a>Satır içi işlevleri ve üye kısıtlamaları
 
 #### <a name="define-generic-numeric-algorithms-using-inline-functions-with-implied-member-constraints-and-statically-resolved-generic-types"></a>Satır içi işlevleri statik olarak çözümlenmiş genel türler ve örtük üye kısıtlamaları ile kullanarak genel sayısal algoritmalarının tanımlayın
 
-F# programlama için bir standart şunlardır: aritmetik üye kısıtlamaları ve F# karşılaştırma kısıtlamaları. Örneğin, aşağıdaki kodu düşünün:
+F # programlama için bir standart şunlardır: aritmetik üye kısıtlamaları ve F # karşılaştırma kısıtlamaları. Örneğin, aşağıdaki kodu düşünün:
 
 ```fsharp
 let inline highestCommonFactor a b =
@@ -412,7 +412,7 @@ Bu, bir matematik Kitaplığı'ndaki Genel API için uygun bir işlevdir.
 
 #### <a name="avoid-using-member-constraints-to-simulate-type-classes-and-duck-typing"></a>Üye kısıtlamaları türü sınıfları ve yazmaya duck benzetimini yapmak için kullanmaktan kaçının
 
-"Yazarak duck" benzetimini yapmak mümkün F# üye kısıtlamaları kullanma. Ancak, yaptığınız üyelerini bu içinde olmayan genel kullanılmalıdır F# kullanma-için-F# kitaplığı tasarımları. Bilinmeyen ya da standart dışı örtük kısıtlamalarına göre kitaplığı tasarımları eğilimindedir faaliyetini ve belirli bir framework desene bağlı olmak kullanıcı kodu neden olmasıdır.
+"Yazarak duck" benzetimini yapmak mümkün F # üye kısıtlamaları kullanma. Ancak, yaptığınız üyelerini bu içinde olmayan genel kullanılmalıdır F # kullanma-için-F # kitaplığı tasarımları. Bilinmeyen ya da standart dışı örtük kısıtlamalarına göre kitaplığı tasarımları eğilimindedir faaliyetini ve belirli bir framework desene bağlı olmak kullanıcı kodu neden olmasıdır.
 
 Ayrıca, bu şekilde üye kısıtlamaları ağır olarak kullanan çok uzun derleme sürelerini sonuçlanabilen olasılığı yoktur.
 
@@ -426,13 +426,13 @@ Sonuç olarak, işlevinizi olarak adlandırılan işlevlerin ve üyeleri yayıml
 
 ### <a name="units-of-measure"></a>Ölçü Birimleri
 
-#### <a name="carefully-use-units-of-measure-for-added-type-safety-in-f-code"></a>F# kodunda eklenen tür güvenliği için dikkatli bir şekilde ölçü kullanın.
+#### <a name="carefully-use-units-of-measure-for-added-type-safety-in-f-code"></a>F # kodunda eklenen tür güvenliği için dikkatli bir şekilde ölçü kullanın.
 
 Ölçü birimleri için ek çok yazma bilgilerini, diğer .NET dilleri ile görüntülendiğinde silinir. .NET bileşenleri, araçları ve yansıma türlerini SAN birimleri göreceği dikkat edin. Örneğin, C# tüketiciler görürsünüz `float` yerine `float<kg>`.
 
 ### <a name="type-abbreviations"></a>Tür Kısaltmaları
 
-#### <a name="carefully-use-type-abbreviations-to-simplify-f-code"></a>Tür kısaltmaları'F# kodu basitleştirmek için dikkatli kullanın
+#### <a name="carefully-use-type-abbreviations-to-simplify-f-code"></a>Tür kısaltmaları'F # kodu basitleştirmek için dikkatli kullanın
 
 .NET bileşenleri, araçları ve yansıma kısaltılmış türleri tarafından görülmez. Tür kısaltmaları önemli kullanımını daha karmaşık daha aslında, tüketicilerin karıştırır görünen bir etki alanı da yapabilirsiniz.
 
@@ -440,7 +440,7 @@ Sonuç olarak, işlevinizi olarak adlandırılan işlevlerin ve üyeleri yayıml
 
 Bu durumda, tanımlanan asıl tür gösterimi hakkında çok fazla kısaltılmış türü ortaya çıkarır. Bunun yerine, bir sınıf türü ya da tek örneği ayrılmış bir birleşim kısaltması sarmalama göz önünde bulundurun (ya da performans gerekli olduğunda, bir yapı türü kısaltması sarmalamak için kullanmayı göz önünde bulundurun).
 
-Örneğin, bir çoklu eşlem örneğin F# harita, özel bir durum olarak tanımlamak için daha cazip şöyledir:
+Örneğin, bir çoklu eşlem örneğin F # harita, özel bir durum olarak tanımlamak için daha cazip şöyledir:
 
 ```fsharp
 type MultiMap<'Key,'Value> = Map<'Key,'Value list>
@@ -450,7 +450,7 @@ Ancak, mantıksal nokta gösterimi işlemleri bu tür bir harita üzerindeki iş
 
 ## <a name="guidelines-for-libraries-for-use-from-other-net-languages"></a>Diğer .NET dilleri kullanımdan kitaplıkları için yönergeler
 
-Diğer .NET dilleri kullanımdan kitaplıkları tasarlarken, bağlı kalacağını önemli olduğu [.NET kitaplığı tasarım yönergeleri](../../standard/design-guidelines/index.md). Bu belgede, bu kitaplıkları F# aksine, temel alınan .NET kitaplıkları olarak etiketlenmiş-kullanan F# kitaplıkları karşılıklı kısıtlama oluşturur. Temel alınan .NET kitaplıkları tasarlama anlamına gelir F# kullanımını en aza indirerek, tanıdık ve deyimsel API'ler .NET Framework geri kalanı ile tutarlı sağlama-Genel API belirli yapılardan. Kurallar, aşağıdaki bölümlerde açıklanmıştır.
+Diğer .NET dilleri kullanımdan kitaplıkları tasarlarken, bağlı kalacağını önemli olduğu [.NET kitaplığı tasarım yönergeleri](../../standard/design-guidelines/index.md). Bu belgede, bu kitaplıkları F # aksine, temel alınan .NET kitaplıkları olarak etiketlenmiş-kullanan F # kitaplıkları karşılıklı kısıtlama oluşturur. Temel alınan .NET kitaplıkları tasarlama anlamına gelir F # kullanımını en aza indirerek, tanıdık ve deyimsel API'ler .NET Framework geri kalanı ile tutarlı sağlama-Genel API belirli yapılardan. Kurallar, aşağıdaki bölümlerde açıklanmıştır.
 
 ### <a name="namespace-and-type-design-for-libraries-for-use-from-other-net-languages"></a>Namespace ve türü tasarım (için diğer .NET dilleri kullanımdan kitaplıkları)
 
@@ -468,11 +468,11 @@ type PolarCoordinate = ...
 
 #### <a name="use-namespaces-types-and-members-as-the-primary-organizational-structure-for-your-components"></a>Ad alanları, türler ve üyeler birincil ait düzenlenmiş yapıyı bileşenleriniz için kullanın.
 
-Genel işlevler içeren tüm dosyaları ile başlaması gereken bir `namespace` bildirimi ve yalnızca genel kullanıma yönelik varlıklar ad alanlarında türleri olması gerekir. F# modülleri kullanmayın.
+Genel işlevler içeren tüm dosyaları ile başlaması gereken bir `namespace` bildirimi ve yalnızca genel kullanıma yönelik varlıklar ad alanlarında türleri olması gerekir. F # modülleri kullanmayın.
 
 Genel olmayan modülleri, uygulama kodu, yardımcı program türlerini ve yardımcı işlevlerini tutmak için kullanın.
 
-F# modüllerde kullanılamaz aşırı yüklerken ve diğer .NET API tasarım kavramları kullanılacak API gelecekteki evrimi sağlarlar gibi statik türler modülleri tercih edilmelidir.
+F # modüllerde kullanılamaz aşırı yüklerken ve diğer .NET API tasarım kavramları kullanılacak API gelecekteki evrimi sağlarlar gibi statik türler modülleri tercih edilmelidir.
 
 Örneğin, aşağıdaki genel API yerine:
 
@@ -497,13 +497,13 @@ type Utilities =
     static member Add(x,y,z) = x + y + z
 ```
 
-#### <a name="use-f-record-types-in-vanilla-net-apis-if-the-design-of-the-types-wont-evolve"></a>Türleri tasarımı evrim Geçiren olmaz .NET API'lerini vanilla içinde F# kayıt türleri kullanın
+#### <a name="use-f-record-types-in-vanilla-net-apis-if-the-design-of-the-types-wont-evolve"></a>Türleri tasarımı evrim Geçiren olmaz .NET API'lerini vanilla içinde F # kayıt türleri kullanın
 
-F# kayıt türleri, basit bir .NET sınıfı için derleyin. Bu, bazı API'leri basit, kararlı türler için uygundur. Kullanmayı düşünmelisiniz `[<NoEquality>]` ve `[<NoComparison>]` arabirimleri otomatik olarak oluşturulmasını engellemek için öznitelikler. Ayrıca .NET API'lerini vanilla değişebilir kayıt alanları bu kullanıma sunan bir ortak alan kullanarak kaçının. Her zaman bir sınıf gelecekteki gelişimine için daha esnek bir seçenek API'sinin sağlayacağını olup olmadığını göz önünde bulundurun.
+F # kayıt türleri, basit bir .NET sınıfı için derleyin. Bu, bazı API'leri basit, kararlı türler için uygundur. Kullanmayı düşünmelisiniz `[<NoEquality>]` ve `[<NoComparison>]` arabirimleri otomatik olarak oluşturulmasını engellemek için öznitelikler. Ayrıca .NET API'lerini vanilla değişebilir kayıt alanları bu kullanıma sunan bir ortak alan kullanarak kaçının. Her zaman bir sınıf gelecekteki gelişimine için daha esnek bir seçenek API'sinin sağlayacağını olup olmadığını göz önünde bulundurun.
 
-Örneğin, aşağıdaki F# kodu bir C# tüketiciye Genel API sunar:
+Örneğin, aşağıdaki F # kodu bir C# tüketiciye Genel API sunar:
 
-F# İÇİN:
+F # İÇİN:
 
 ```fsharp
 [<NoEquality; NoComparison>]
@@ -523,9 +523,9 @@ public sealed class MyRecord
 }
 ```
 
-#### <a name="hide-the-representation-of-f-union-types-in-vanilla-net-apis"></a>F# birleşim türleri vanilla .NET API'lerini gösterimini Gizle
+#### <a name="hide-the-representation-of-f-union-types-in-vanilla-net-apis"></a>F # birleşim türleri vanilla .NET API'lerini gösterimini Gizle
 
-F# birleşim türleri genellikle kullanılmaz bileşen sınırları boyunca bile F# '-için-F# kodlama. Bunlar, bileşenler ve kitaplıkları içinde dahili olarak kullanılan bir mükemmel uygulama cihazı.
+F # birleşim türleri genellikle kullanılmaz bileşen sınırları boyunca bile F # '-için-F # kodlama. Bunlar, bileşenler ve kitaplıkları içinde dahili olarak kullanılan bir mükemmel uygulama cihazı.
 
 Bir vanilla .NET API'si tasarlarken, özel bir bildirim ya da bir imza dosyası kullanarak bir birleşim türünün temsili gizleme göz önünde bulundurun.
 
@@ -588,7 +588,7 @@ type MyGoodType() =
 
 #### <a name="expose-asynchronous-operations-as-methods-which-return-net-tasks"></a>Zaman uyumsuz işlemler .NET görevleri döndüren yöntemler olarak kullanıma sunma
 
-Görevler,. NET'te etkin zaman uyumsuz hesaplamalar temsil etmek için kullanılır. Genel olarak F# ' az bileşimsel görevleridir `Async<T>` nesneleri "zaten yürütülüyor." görevleri temsil eder ve paralel bileşim gerçekleştiren veya iptal etme sinyaller ve diğer yayılmasını Gizle şekillerde bir araya oluşan olamaz Bağlam parametreleri.
+Görevler,. NET'te etkin zaman uyumsuz hesaplamalar temsil etmek için kullanılır. Genel olarak F # ' az bileşimsel görevleridir `Async<T>` nesneleri "zaten yürütülüyor." görevleri temsil eder ve paralel bileşim gerçekleştiren veya iptal etme sinyaller ve diğer yayılmasını Gizle şekillerde bir araya oluşan olamaz Bağlam parametreleri.
 
 Ancak, bu rağmen görev döndüren zaman uyumsuz programlama .NET üzerinde standart gösterimi yöntemlerdir.
 
@@ -610,9 +610,9 @@ type MyType() =
     member this.ComputeAsTask(x, cancellationToken) = Async.StartAsTask(compute x, cancellationToken)
 ```
 
-#### <a name="use-net-delegate-types-instead-of-f-function-types"></a>F# işlevi türleri yerine .NET temsilci türleri kullanın
+#### <a name="use-net-delegate-types-instead-of-f-function-types"></a>F # işlevi türleri yerine .NET temsilci türleri kullanın
 
-Burada "F# işlevi türleri", "OK" türleri ister anlamına gelir `int -> int`.
+Burada "F # işlevi türleri", "OK" türleri ister anlamına gelir `int -> int`.
 
 Bunun yerine:
 
@@ -628,13 +628,13 @@ member this.Transform(f:Func<int,int>) =
     ...
 ```
 
-F# işlev türüyle olarak görünür `class FSharpFunc<T,U>` diğer .NET dilleri için dil özelliklerinin ve araçları için temsilci türleri anlayan daha az uygundur. .NET Framework 3.5 veya sonraki bir sürümünü hedefleyen bir daha yüksek sıralı yöntemi yazarken `System.Func` ve `System.Action` temsilcileri, doğru API'lerden bir düşük uyuşmazlıkları şekilde bu API'leri kullanmak, .NET geliştiricilerinin etkinleştirmek için yayımlayın. (.NET Framework 2.0 hedeflenirken sistem tarafından tanımlanan temsilci türleriyle daha sınırlıdır; gibi önceden tanımlanmış temsilci türleri kullanmayı düşünün `System.Converter<T,U>` veya belirli bir temsilci türü tanımlama.)
+F # işlev türüyle olarak görünür `class FSharpFunc<T,U>` diğer .NET dilleri için dil özelliklerinin ve araçları için temsilci türleri anlayan daha az uygundur. .NET Framework 3.5 veya sonraki bir sürümünü hedefleyen bir daha yüksek sıralı yöntemi yazarken `System.Func` ve `System.Action` temsilcileri, doğru API'lerden bir düşük uyuşmazlıkları şekilde bu API'leri kullanmak, .NET geliştiricilerinin etkinleştirmek için yayımlayın. (.NET Framework 2.0 hedeflenirken sistem tarafından tanımlanan temsilci türleriyle daha sınırlıdır; gibi önceden tanımlanmış temsilci türleri kullanmayı düşünün `System.Converter<T,U>` veya belirli bir temsilci türü tanımlama.)
 
-Diğer taraftan, .NET temsilciler F# için doğal olmayan-kitaplıkları'e yönelik (F# üzerinde bir sonraki bölüme bakın-kitaplıkları'e yönelik). Sonuç olarak, tüm F# işlevi türleri kullanarak uygulama yazın ve ardından üzerine gerçek F# ince bir cephe olarak temsilcileri kullanma Genel API oluşturmak için temel alınan .NET kitaplıkları için daha yüksek sıralı yöntemleri geliştirirken yaygın bir uygulama stratejisi olduğu uygulama.
+Diğer taraftan, .NET temsilciler F # için doğal olmayan-kitaplıkları'e yönelik (F # üzerinde bir sonraki bölüme bakın-kitaplıkları'e yönelik). Sonuç olarak, tüm F # işlevi türleri kullanarak uygulama yazın ve ardından üzerine gerçek F # ince bir cephe olarak temsilcileri kullanma Genel API oluşturmak için temel alınan .NET kitaplıkları için daha yüksek sıralı yöntemleri geliştirirken yaygın bir uygulama stratejisi olduğu uygulama.
 
-#### <a name="use-the-trygetvalue-pattern-instead-of-returning-f-option-values-and-prefer-method-overloading-to-taking-f-option-values-as-arguments"></a>F# seçenek değerlerini döndürmek yerine TryGetValue deseni kullanılacak ve F# seçenek değerleri bağımsız değişkenler olarak almak için yöntemi aşırı yüklemesi'tercih et
+#### <a name="use-the-trygetvalue-pattern-instead-of-returning-f-option-values-and-prefer-method-overloading-to-taking-f-option-values-as-arguments"></a>F # seçenek değerlerini döndürmek yerine TryGetValue deseni kullanılacak ve F # seçenek değerleri bağımsız değişkenler olarak almak için yöntemi aşırı yüklemesi'tercih et
 
-F# seçenek türünün API'lerindeki kullanım ortak desenleri daha iyi vanilla içinde uygulanan .NET standart .NET kullanarak API'leri teknikleri tasarlayın. Bir F# seçenek değeri döndürmek yerine, dönüş türü bool artı out parametresi "TryGetValue" deseni olduğu gibi kullanmayı düşünün. Ve F# seçeneği değerleri parametre olarak almak yerine, yöntem aşırı yükleme ya da isteğe bağlı bağımsız değişkenler kullanmayı düşünün.
+F # seçenek türünün API'lerindeki kullanım ortak desenleri daha iyi vanilla içinde uygulanan .NET standart .NET kullanarak API'leri teknikleri tasarlayın. Bir F # seçenek değeri döndürmek yerine, dönüş türü bool artı out parametresi "TryGetValue" deseni olduğu gibi kullanmayı düşünün. Ve F # seçeneği değerleri parametre olarak almak yerine, yöntem aşırı yükleme ya da isteğe bağlı bağımsız değişkenler kullanmayı düşünün.
 
 ```fsharp
 member this.ReturnOption() = Some 3
@@ -655,16 +655,16 @@ member this.ParamOverload(x : int, y : int) = x + y
 
 #### <a name="use-the-net-collection-interface-types-ienumerablet-and-idictionarykeyvalue-for-parameters-and-return-values"></a>.NET koleksiyonu arabirimini kullanın türleri IEnumerable\<T\> ve IDictionary\<anahtar, değer\> için parametreler ve dönüş değerleri
 
-.NET dizileri gibi somut koleksiyon türlerini kullanmaktan kaçının `T[]`, F# türleri `list<T>`, `Map<Key,Value>` ve `Set<T>`, ve .NET beton koleksiyon türleri gibi `Dictionary<Key,Value>`. .NET kitaplığı tasarım yönergeleri ile ilgili gibi çeşitli koleksiyon türlerini kullanmak iyi bir öneri sahip `IEnumerable<T>`. Diziler bazı kullanımını (`T[]`) grounds performans üzerinde bazı durumlarda, kabul edilebilir. Özellikle dikkat `seq<T>` yalnızca F# için diğer ad `IEnumerable<T>`, ve bu nedenle seq genellikle bir vanilla .NET API'si için uygun bir tür.
+.NET dizileri gibi somut koleksiyon türlerini kullanmaktan kaçının `T[]`, F # türleri `list<T>`, `Map<Key,Value>` ve `Set<T>`, ve .NET beton koleksiyon türleri gibi `Dictionary<Key,Value>`. .NET kitaplığı tasarım yönergeleri ile ilgili gibi çeşitli koleksiyon türlerini kullanmak iyi bir öneri sahip `IEnumerable<T>`. Diziler bazı kullanımını (`T[]`) grounds performans üzerinde bazı durumlarda, kabul edilebilir. Özellikle dikkat `seq<T>` yalnızca F # için diğer ad `IEnumerable<T>`, ve bu nedenle seq genellikle bir vanilla .NET API'si için uygun bir tür.
 
-F# listelerinde yerine:
+F # listelerinde yerine:
 
 ```fsharp
 member this.PrintNames(names : string list) =
     ...
 ```
 
-F# dizileri kullanın:
+F # dizileri kullanın:
 
 ```fsharp
 member this.PrintNames(names : seq<string>) =
@@ -689,7 +689,7 @@ member this.WrongUnit( x:unit, z:int) = ((), ())
 
 #### <a name="check-for-null-values-on-vanilla-net-api-boundaries"></a>Temel alınan .NET API sınırlarındaki null değerler olup olmadığını denetleyin
 
-F# uygulama kodu, sabit tasarım desenleri ve F# türleri için null değişmez değerlerinin kullanma kısıtlamaları nedeniyle daha az boş değerlere sahip eğilimindedir. Diğer .NET dilleri genellikle bir değer olarak null çok daha sık kullanın. Bu nedenle, bir .NET API vanilla gösterme F# kodu API sınırında null parametreleri denetleyin ve bu değerleri F# uygulama koduna daha derin geçmesini engeller. `isNull` İşlevi veya üzerinde desen `null` deseni kullanılabilir.
+F # uygulama kodu, sabit tasarım desenleri ve F # türleri için null değişmez değerlerinin kullanma kısıtlamaları nedeniyle daha az boş değerlere sahip eğilimindedir. Diğer .NET dilleri genellikle bir değer olarak null çok daha sık kullanın. Bu nedenle, bir .NET API vanilla gösterme F # kodu API sınırında null parametreleri denetleyin ve bu değerleri F # uygulama koduna daha derin geçmesini engeller. `isNull` İşlevi veya üzerinde desen `null` deseni kullanılabilir.
 
 ```fsharp
 let checkNonNull argName (arg: obj) =
@@ -718,7 +718,7 @@ member this.TupledArguments(str, num) = String.replicate num str
 
 ## <a name="appendix"></a>Ek
 
-### <a name="end-to-end-example-of-designing-f-code-for-use-by-other-net-languages"></a>Uçtan uca örneği kullanmak için F# kodu tarafından diğer .NET dilleri tasarlama
+### <a name="end-to-end-example-of-designing-f-code-for-use-by-other-net-languages"></a>Uçtan uca örneği kullanmak için F # kodu tarafından diğer .NET dilleri tasarlama
 
 Aşağıdaki sınıf göz önünde bulundurun:
 
@@ -735,7 +735,7 @@ type Point1(angle,radius) =
         [ for i in 1..n -> Point1(angle=2.0*Math.PI/float(n), radius=1.0) ]
 ```
 
-Bu sınıf çıkarsanan F# türü şu şekildedir:
+Bu sınıf çıkarsanan F # türü şu şekildedir:
 
 ```fsharp
 type Point1 =
@@ -748,7 +748,7 @@ type Point1 =
     member Radius : double
 ```
 
-Bu F# tür başka bir .NET dilini kullanarak programcıya görüntülenme şeklini bir bakalım. Örneğin, yaklaşık C# "SIGNATURE" aşağıdaki gibidir:
+Bu F # tür başka bir .NET dilini kullanarak programcıya görüntülenme şeklini bir bakalım. Örneğin, yaklaşık C# "SIGNATURE" aşağıdaki gibidir:
 
 ```csharp
 // C# signature for the unadjusted Point1 class
@@ -770,13 +770,13 @@ public class Point1
 }
 ```
 
-Nasıl F# burada yapıları temsil hakkında dikkat edin gereken bazı önemli noktalar vardır. Örneğin:
+Nasıl F # burada yapıları temsil hakkında dikkat edin gereken bazı önemli noktalar vardır. Örneğin:
 
 * Bağımsız değişken adları gibi meta veriler korunur.
 
-* İki bağımsız değişken almaz F# yöntemleri iki bağımsız değişken almaz C# yöntemler olur.
+* İki bağımsız değişken almaz F # yöntemleri iki bağımsız değişken almaz C# yöntemler olur.
 
-* F# kitaplığı karşılık gelen türler için başvuru işlevleri ve listeleri olur.
+* F # kitaplığı karşılık gelen türler için başvuru işlevleri ve listeleri olur.
 
 Aşağıdaki kod, bunları hesaba katması için bu kodu ayarlama konusunda gösterir.
 
@@ -809,7 +809,7 @@ type RadialPoint(angle:double, radius:double) =
                 RadialPoint(angle=2.0*Math.PI/float(count), radius=1.0) }
 ```
 
-Kod çıkarsanan F# türü şu şekildedir:
+Kod çıkarsanan F # türü şu şekildedir:
 
 ```fsharp
 type RadialPoint =
@@ -849,6 +849,6 @@ Temel alınan bir .NET kitaplığının bir parçası olduğu gibi bu tür kulla
 
 * Dönüş türü kullanılan `seq<RadialPoint>` yerine `RadialPoint list` listesini kullanarak yapı değiştirerek `[ ... ]` sırası kullanarak oluşturma `IEnumerable<RadialPoint>`.
 
-* .NET temsilci türü kullanılan `System.Func` yerine bir F# işlev türü.
+* .NET temsilci türü kullanılan `System.Func` yerine bir F # işlev türü.
 
 Bu, çok daha Hoş görünmesi C# kodunda kullanmasını sağlar.
