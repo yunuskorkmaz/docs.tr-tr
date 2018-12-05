@@ -4,11 +4,11 @@ description: .NET kitaplıkları, NuGet bağımlılıklarını yönetmek için e
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: c5df30c606e77c9ef44387233b0072ab890f612f
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: 5566ab83040ce5dc23520401e3fc4bb619af4ec4
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2018
+ms.lasthandoff: 12/04/2018
 ms.locfileid: "49400499"
 ---
 # <a name="dependencies"></a>Bağımlılıkları
@@ -92,10 +92,12 @@ Paylaşılan kaynak paketleri bazı kısıtlamalara sahiptir. Tarafından yalnı
 
 > Türleri başvuru bütünleştirilmiş kod içine derlenmiş ve bütünleştirilmiş kod sınırları arasında alınıp verilen kaynak paylaşılan. Örneğin, bir paylaşılan kaynak `IRepository` türü tek bir projede, aynı paylaşılan kaynak ayrı bir türden `IRepository` başka bir projede. Paylaşılan kaynak paketlerinde türler olmalıdır bir `internal` görünürlük.
 
-**❌ SAĞLAMADIĞI** paylaşılan kaynak paketleri nuget.org için yayımlayın.
+**❌ SAĞLAMADIĞI** paylaşılan kaynak paketleri NuGet.org için yayımlayın.
 
 > Paket kaynak kodunu içeren ve yalnızca aynı dil türündeki projeleri tarafından kullanılabilir kaynak paylaşılan. Örneğin, bir C# paylaşılan kaynak paketi tarafından kullanılamaz bir F# uygulama.
+>
+> Paylaşılan kaynak paketleri yayımlama bir [yerel akış veya MyGet](./publish-nuget-package.md) bunları dahili olarak projenize içinde kullanmak için.
 
 >[!div class="step-by-step"]
-[Önceki](./nuget.md)
-[İleri](./sourcelink.md)
+>[Önceki](nuget.md)
+>[İleri](sourcelink.md)

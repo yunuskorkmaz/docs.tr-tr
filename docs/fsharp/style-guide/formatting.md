@@ -1,27 +1,27 @@
 ---
-title: Biçimlendirme yönergelerine F# kodu
-description: F# kod biçimlendirme yönergeleri hakkında bilgi edinin.
-ms.date: 05/14/2018
-ms.openlocfilehash: 0d7d2d1771710db55bf990f3a06079b2aec48fd7
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+title: F#kod biçimlendirme yönergeleri
+description: Biçimlendirme kuralları bilgi F# kod.
+ms.date: 11/26/2018
+ms.openlocfilehash: 993ba8d42570d92789a9fc1967b8185b45643d56
+ms.sourcegitcommit: 2151690e10d91545e2c20d6b5ad222c162b6b83d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
+ms.lasthandoff: 12/04/2018
 ms.locfileid: "43858011"
 ---
-# <a name="f-code-formatting-guidelines"></a>Biçimlendirme yönergelerine F# kodu
+# <a name="f-code-formatting-guidelines"></a>F#kod biçimlendirme yönergeleri
 
-Bu makalede, F# kodu böylece, kodunuzu biçimlendirme için yönergeler sunar:
+Bu makalede kod biçimlendirme için yönergeler sunar. böylece, F# kodu:
 
 * Genel olarak daha okunaklı görüntülenebilir
 * Visual Studio Araçları ve diğer düzenleyiciler biçimlendirme tarafından uygulanan kuralları uygun olan
 * Benzer şekilde diğer kod çevrimiçi
 
-Bu kılavuzu temel alan [F# biçimlendirme kuralları kapsamlı bir kılavuz](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md) tarafından [Anh-Dung Phan](https://github.com/dungpa).
+Bu kılavuzu temel alan [kapsamlı bir kılavuz F# biçimlendirme kuralları](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md) tarafından [Anh-Dung Phan](https://github.com/dungpa).
 
 ## <a name="general-rules-for-indentation"></a>Girinti için genel kurallar
 
-F# önemli boşluk varsayılan olarak kullanır. Aşağıdaki yönergeleri Bu getirebilir bazı zorluklar juggle nasıl dair yönergeler sağlamak üzere tasarlanmıştır.
+F#önemli boşluk, varsayılan olarak kullanır. Aşağıdaki yönergeleri Bu getirebilir bazı zorluklar juggle nasıl dair yönergeler sağlamak üzere tasarlanmıştır.
 
 ### <a name="using-spaces"></a>Alanları kullanma
 
@@ -30,6 +30,63 @@ Girinti gerekli olduğunda, boşluk, sekme değil kullanmanız gerekir. En az bi
 **Girinti başına 4 alan öneririz.**
 
 Bu, programların girinti öznel bir konudur belirtti. Değişimleri Tamam, ancak izlemeniz gereken ilk kural *girinti tutarlılığını*. Genel olarak kabul edilen bir girinti stilini seçin ve kod temelinizde sistematik olarak kullanın.
+
+## <a name="formatting-white-space"></a>Boşluk biçimlendirme
+
+F#boşluk büyük/küçük harfe duyarlıdır. Çoğu semantiğe boşluk tarafından uygun girintisini ele alınmaktadır ancak dikkate alınması gereken bazı hususlar vardır.
+
+### <a name="formatting-operators-in-arithmetic-expressions"></a>Biçimlendirme işleçleri aritmetik ifadelerde
+
+Her zaman ikili aritmetik ifadeler beyaz boşluk kullanın:
+
+```fsharp
+let subtractThenAdd x = x - 1 + 3
+```
+
+Birli `-` işleçleri negating değeri her zaman olmalıdır hemen izleyin:
+
+```fsharp
+// OK
+let negate x = -x
+
+// Bad
+let negateBad x = - x
+```
+
+Sonra bir boşluk karakteri ekleme `-` işleci diğerleri için Kafa karışıklığına neden olabilir.
+
+Özet olarak, her zaman önemlidir:
+
+* İkili işleçler boşluk ile çevreleyen
+* Hiçbir zaman bir birli işleç sonra boşluk sahip
+
+İkili aritmetik işleç kılavuz özellikle önemlidir. Bir ikili kapsamak başarısız olan `-` bazı biçimlendirme seçeneklerini ile birleştirildiğinde işleci, bir tekil yorumlanması için açabilir `-`.
+
+### <a name="surround-a-custom-operator-definition-with-white-space"></a>Boşluk içeren bir özel işleç tanımını çevreleyen
+
+Her zaman bir işleç tanımını kapsamak için boşluk kullanın:
+
+```fsharp
+// OK
+let ( !> ) x f = f x
+
+// Bad
+let (!>) x f = f x
+```
+
+İle başlayan herhangi bir özel işleç için `*`, derleyici belirsizlik önlemek için tanım başlangıcına bir beyaz alanı eklemeniz gerekecektir. Bu nedenle, yalnızca tek bir boşluk karakteri ile tüm işleçleri tanımlarını çevreleyen önerilir.
+
+### <a name="surround-function-parameter-arrows-with-white-space"></a>İşlev parametresi oklar boşluk ile çevreleyen
+
+Bir işlev imzası tanımlarken, beyaz boşluk kullanmak `->` sembol:
+
+```fsharp
+// OK
+type MyFun = int -> int -> string
+
+// Bad
+type MyFunBad = int->int->string
+```
 
 ## <a name="formatting-blank-lines"></a>Boş satırlar biçimlendirme
 
@@ -62,7 +119,7 @@ let f x = x + 1 // Increment by one.
 
 ### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a>CamelCase sınıfı bağlı, ifade bağlı ve bağlama deseni değerleri ve işlevleri için kullanın.
 
-Genel ve yerel değişkenler olarak veya desen ve işlev tanımları camelCase tüm adlar için kabul edilen F# stili bağlanır.
+Sık karşılaşılan ve kabul edilen F# tüm adları desen veya yerel değişkenler olarak bağlı ve işlev tanımları camelCase stili.
 
 ```fsharp
 // OK
@@ -165,13 +222,13 @@ Ad alanları, özel durumlar, olayları ve proje /`.dll` adları PascalCase de k
 
 ### <a name="avoid-underscores-in-names"></a>Adları alt çizgi kaçının
 
-Tarihsel olarak, bazı F# kitaplıkları adları alt çizgi kullandınız. Kısmen, .NET adlandırma kuralları ile çakışıyor çünkü ancak bu artık yaygın olarak, kabul edilir. Bu, bazı F# programcıları alt çizgi yoğun, kısmen geçmiş nedenlerle kullanın ve dayanıklılık ve saygı önemlidir da belirtti. Ancak, bir seçeneğiniz mi kullanılacağını hakkında başkaları tarafından stili genellikle yanıtlamadığı unutmayın.
+Tarihsel olarak, bazı F# kitaplıkları adları alt çizgi kullanılan. Kısmen, .NET adlandırma kuralları ile çakışıyor çünkü ancak bu artık yaygın olarak, kabul edilir. Bununla birlikte, bazı F# programcılar kullanın alt çizgi yoğun, kısmen geçmiş nedenlerle ve dayanıklılık ve saygı önemlidir. Ancak, bir seçeneğiniz mi kullanılacağını hakkında başkaları tarafından stili genellikle yanıtlamadığı unutmayın.
 
 Bazı özel durumlar, alt çizgi yaygın olduğu yerel bileşenleriyle birlikte içerir.
 
-### <a name="use-standard-f-operators"></a>Standart F# işleçleri kullanma
+### <a name="use-standard-f-operators"></a>Kullanım standart F# işleçleri
 
-Aşağıdaki işleçleri, F# standart kitaplıkta tanımlanan ve eşdeğerleri tanımlamak yerine kullanılmalıdır. Bu kod daha okunabilir ve kullanılan deyimsel bir hale gelir gibi bu işleçleri kullanarak önerilir. Arka plan OCaml veya işlev başka bir programlama dilinde geliştiricilere, farklı deyimleri için alışkın olabilir. Aşağıdaki listede, önerilen F# işleçleri özetlenmektedir.
+Aşağıdaki işleçleri tanımlanan F# standart kitaplığı ve tanımlama eşdeğerleri yerine kullanılmalıdır. Bu kod daha okunabilir ve kullanılan deyimsel bir hale gelir gibi bu işleçleri kullanarak önerilir. Arka plan OCaml veya işlev başka bir programlama dilinde geliştiricilere, farklı deyimleri için alışkın olabilir. Aşağıdaki liste önerilen özetler F# işleçleri.
 
 ```fsharp
 x |> f // Forward pipeline
@@ -193,11 +250,11 @@ x ^^^ y // Bitwise xor, also for working with “flags” enumeration
 
 ### <a name="use-prefix-syntax-for-generics-foot-in-preference-to-postfix-syntax-t-foo"></a>Genel türler için öneki sözdizimini kullanın (`Foo<T>`) sonek söz dizimi yerine (`T Foo`)
 
-F# genel türleri adlandırma iki sonek ML stili devralır (örneğin, `int list`) öneki .NET stili yanı sıra (örneğin, `list<int>`). .NET stili dört belirli tür dışında tercih et:
+F#genel türler adlandırma iki sonek ML stili devralır (örneğin, `int list`) öneki .NET stili yanı sıra (örneğin, `list<int>`). .NET stili dört belirli tür dışında tercih et:
 
-1. F# listeleri için sonek biçimi kullanın: `int list` yerine `list<int>`.
-2. F# seçenekleri için sonek biçimi kullanın: `int option` yerine `option<int>`.
-3. F# diziler için söz dizimi adı kullanmak `int[]` yerine `int array` veya `array<int>`.
+1. İçin F# listeleri, sonek biçimi kullanın: `int list` yerine `list<int>`.
+2. İçin F# seçenekleri, sonek biçimi kullanın: `int option` yerine `option<int>`.
+3. İçin F# diziler, söz dizimi adı kullanın `int[]` yerine `int array` veya `array<int>`.
 4. Başvuru hücreleri için kullanmak `int ref` yerine `ref<int>` veya `Ref<int>`.
 
 Önek biçimi diğer tüm türleri için kullanın.
@@ -411,13 +468,13 @@ Kullanım bir `|` her bir match yan tümcesinin hiçbir girintilemeli. Kısa ifa
 ```fsharp
 // OK
 match l with
-| { him = x; her = "Posh" } :: tail -> _
+| { him = x; her = "Posh" } :: tail -> x
 | _ :: tail -> findDavid tail
 | [] -> failwith "Couldn't find David"
 
 // Not OK
 match l with
-    | { him = x; her = "Posh" } :: tail -> _
+    | { him = x; her = "Posh" } :: tail -> x
     | _ :: tail -> findDavid tail
     | [] -> failwith "Couldn't find David"
 ```
@@ -591,7 +648,7 @@ let comparer =
 
 ### <a name="formatting-white-space-in-expressions"></a>Boşluk ifadelerde biçimlendirme
 
-F# ifadelerini fazlalık bölünemez boşluğu kaçının.
+Gereksiz boşluk önlemek F# ifadeler.
 
 ```fsharp
 // OK
@@ -610,3 +667,59 @@ let makeStreamReader x = new System.IO.StreamReader(path=x)
 // Not OK
 let makeStreamReader x = new System.IO.StreamReader(path = x)
 ```
+
+## <a name="formatting-attributes"></a>Biçimlendirme öznitelikleri
+
+[Öznitelikleri](../language-reference/attributes.md) bir yapısı yerleştirilir:
+
+```fsharp
+[<SomeAttribute>]
+type MyClass() = ...
+
+[<RequireQualifiedAccess>]
+module M =
+    let f x = x
+
+[<Struct>]
+type MyRecord =
+    { Label1: int
+      Label2: string }
+```
+
+### <a name="formatting-attributes-on-parameters"></a>Parametreleri biçimlendirme öznitelikleri
+
+Öznitelikleri parametreleri yerde de olabilir. Bu durumda, aynı satırda parametre adından önce ve sonra yerleştirin:
+
+```fsharp
+// Defines a class that takes an optional value as input defaulting to false.
+type C() =
+    member __.M([<Optional; DefaultParameterValue(false)>] doSomething: bool)
+```
+
+### <a name="formatting-multiple-attributes"></a>Birden çok öznitelik biçimlendirme
+
+Bir parametre değil bir yapı için birden çok öznitelik uygulandığında, bunlar yok her satıra bir öznitelik olduğunu yerleştirilmelidir:
+
+```fsharp
+[<Struct>]
+[<IsByRefLike>]
+type MyRecord =
+    { Label1: int
+      Label2: string }
+```
+
+Bir parametre uygulandığında, bunlar aynı satırda olmalıdır ve ayrılmış bir `;` ayırıcı.
+
+## <a name="formatting-literals"></a>Biçimlendirme değişmez değerleri
+
+[F#değişmez değerler](../language-reference/literals.md) kullanarak `Literal` özniteliği öznitelik kendi satırına yerleştirin ve camelCase adlandırma kullanın:
+
+```fsharp
+[<Literal>]
+let path = __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
+
+[<Literal>]
+let myUrl = "www.mywebsitethatiamworkingwith.com"
+```
+
+Öznitelik değeri ile aynı satırda yerleştirmekten kaçının.

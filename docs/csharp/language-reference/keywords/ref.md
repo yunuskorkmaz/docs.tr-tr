@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 9165a388122eeda5ca0499c6d75c2266780a6004
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 99d02ca33025a5f80ff8fafde84447ba3df9f42a
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
+ms.lasthandoff: 12/04/2018
 ms.locfileid: "50195976"
 ---
 # <a name="ref-c-reference"></a>ref (C# Başvurusu)
@@ -92,7 +92,7 @@ Nesnenin durumunu değiştirmek arayan için sırada başvuru dönüş değeri d
 
 Çağrılan yöntemin dönüş değeri olarak da bildirebilir `ref readonly` başvuruya göre dönüş değeri ve zorunlu çağıran kod döndürülen değeri değiştirilemez. Döndürülen değer yerel depolayarak değerli kopyalama yöntemi çağrılırken kaçınabilirsiniz [ref salt okunur](#ref-readonly-locals) değişkeni.
 
-Bir örnek için bkz [A ref dönüşler ve ref yerel örneği](#a-ref-returns-and-ref-locals-example)
+Bir örnek için bkz. [A ref dönüşler ve ref yerel örnek](#a-ref-returns-and-ref-locals-example).
 
 ## <a name="ref-locals"></a>Ref yerel ayarlar
 
@@ -113,6 +113,8 @@ ref VeryLargeStruct reflocal = ref veryLargeStruct;
 ```
 
 Her iki örneklerde unutmayın `ref` anahtar sözcüğü her iki yerde de kullanılması gerekir ya da derleyici hata CS8172, "bir başvuruya göre değişken bir değer ile başlatılamaz." oluşturur
+
+İle başlayarak C# 7.3, yineleme değişkeninin `foreach` ref yerel öğesi veya ref salt okunur yerel değişkenin bildirimi olabilir. Daha fazla bilgi için [foreach deyimi](foreach-in.md) makalesi.
 
 ## <a name="ref-readonly-locals"></a>ref salt okunur yerel öğeler
 
@@ -152,6 +154,9 @@ Bir yapı olarak bildirmek için değiştiriciler birleştirebilirsiniz `readonl
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Güvenli verimli kod yazma](../../write-safe-efficient-code.md)  
+- [Ref dönüşler ve ref yerel ayarlar](../../programming-guide/classes-and-structs/ref-returns.md)
+- [Ref koşullu ifadesi](../operators/conditional-operator.md#conditional-ref-expression)
+- [başvuru atama işleci](../operators/assignment-operator.md#ref-assignment-operator)
 - [Parametreleri Geçirme](../../programming-guide/classes-and-structs/passing-parameters.md)  
 - [Yöntem Parametreleri](method-parameters.md)  
 - [C# başvurusu](../index.md)  
