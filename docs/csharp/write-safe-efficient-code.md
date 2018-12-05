@@ -3,14 +3,14 @@ title: Güvenli ve verimli yazma C# kod
 description: Son geliştirmeler C# dil performansını daha önce güvenli olmayan kod ile ilişkili doğrulanabilir bir güvenli kod yazmak etkinleştirin.
 ms.date: 10/23/2018
 ms.custom: mvc
-ms.openlocfilehash: 8e58a7f870c742f1c0a90a7b5507ac1e5d8074ea
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2f0bd616a7af6e23a93e18240e30749ed7d1e32c
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
+ms.lasthandoff: 12/04/2018
 ms.locfileid: "50201591"
 ---
-# <a name="write-safe-and-efficient-c-code"></a>Güvenli ve verimli yazma C# kod #
+# <a name="write-safe-and-efficient-c-code"></a>Güvenli ve verimli yazma C# kod
 
 Yeni Özellikler C# daha iyi performans ile doğrulanabilir güvenli kod yazmanızı sağlar. Bu teknikler özenle uygularsanız, daha az senaryoları güvenli olmayan kod gerektirir. Bu özellikler başvuruları değer türleri için yöntem bağımsız değişkenleri ve yöntemi olarak kullanmak üzere kolaylaştırır. Güvenli bir şekilde işiniz bittiğinde, bu teknikler kopyalama türlerin en aza indirin. Değer türleri kullanarak ayırmaları ve çöp toplama geçişleri sayısını en aza indirebilirsiniz.
 
@@ -205,10 +205,15 @@ Başvuru türleri aynı bu durumlarda ile karşılaştırın.
 
 - Yığın yerel değişkenleri ve yöntem bağımsız değişkenleri için ayrılan depolama başvuru türleri için var. Yığında başvuru depolanır.
 - Diğer nesne üyeleri başvuru türleri için depolama ayrı olarak yığında ayrılır. Başvuru içeren bir nesne depolar.
-- Değer türü için depolama dönüş değeri ayrılan yığın. Yığında başvuru depolama depolanır.
+- Başvuru türü için depolama dönüş değeri ayrılan yığın. Yığında başvuru depolama depolanır.
 
 Ayırmaları en aza ödünler. Daha fazla bellek kopyalama zaman boyutu `struct` başvuru boyutundan büyük. Başvuru, genellikle 64 bit veya 32 bit olduğundan ve hedef makine CPU üzerinde bağlıdır.
 
 Bu bileşim genellikle en az düzeyde performans etkisi olur. Ancak, büyük yapılar veya daha büyük koleksiyonlar için performans etkisini artar. Etkisi sıkı döngüler ve programlar için etkin yolları büyük olabilir.
 
 Bu geliştirmeler C# dil performans kritik algoritmaları burada bellek ayırmaları en aza indirmek için gerekli performansı ulaşmada önemli bir etken tasarlanmıştır. Yazdığınız kod bu özellikleri sık kullanmadığınız bulabilirsiniz. Ancak, bu geliştirmeler, .NET uyarlanmıştır. Giderek daha fazla API yaparken bu özelliklerini kullanmak, uygulamalarınızın performansını artırma görürsünüz.
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [ref anahtar sözcüğü](language-reference/keywords/ref.md)
+- [Ref dönüşler ve ref yerel ayarlar](programming-guide/classes-and-structs/ref-returns.md)
