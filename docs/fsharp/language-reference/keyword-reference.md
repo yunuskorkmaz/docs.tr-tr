@@ -1,21 +1,21 @@
 ---
 title: Klavye Başvurusu (F#)
-description: Tüm F# dil anahtar sözcükleri hakkında daha fazla bilgi için bağlantılar bulun.
+description: Tüm ilgili bilgilere bağlantılar bulma F# dil anahtar sözcükleri.
 ms.date: 05/16/2016
 ms.openlocfilehash: 0016f68b2872183a2b4dd865ce229b6a76250b78
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.sourcegitcommit: 2151690e10d91545e2c20d6b5ad222c162b6b83d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
+ms.lasthandoff: 12/05/2018
 ms.locfileid: "43856030"
 ---
 # <a name="keyword-reference"></a>Klavye Başvurusu
 
-Bu konu, tüm F# dil anahtar sözcükleri hakkında daha fazla bilgi için bağlantılar içerir.
+Bu konu hakkındaki tüm bilgilere bağlantılar içerir F# dil anahtar sözcükleri.
 
-## <a name="f-keyword-table"></a>F# anahtar sözcüğünü tablo
+## <a name="f-keyword-table"></a>F#Anahtar tablosu
 
-Aşağıdaki tabloda tüm F# anahtar sözcükleri kısa açıklamaları ve ilgili daha fazla bilgi içeren konulara bağlantılar ile birlikte alfabetik sırada gösterir.
+Aşağıdaki tablo tüm gösterir F# kısa açıklamaları ve ilgili daha fazla bilgi içeren konulara bağlantılar ile birlikte alfabetik sırada anahtar sözcükleri.
 
 |Anahtar sözcüğü|Bağlantı|Açıklama|
 |-------|----|-----------|
@@ -90,7 +90,7 @@ Aşağıdaki tabloda tüm F# anahtar sözcükleri kısa açıklamaları ve ilgil
 |`yield`|[Diziler](sequences.md)|Bir sıralama ifadesi bir dizi için bir değer üretmek için kullanılır.|
 |`yield!`|[Hesaplama İfadeleri](computation-expressions.md)<br /><br />[Zaman Uyumsuz İş Akışları](asynchronous-workflows.md)|Verilen hesaplamayı ifadenin sonucu sonuçları içeren hesaplama ifadesi için bir koleksiyona eklenecek bir hesaplama ifadesinde kullanılır.|
 
-Aşağıdaki belirteçler F#'ta çünkü bunlar OCaml dilindeki anahtar sözcükler ayrılmıştır:
+Aşağıdaki belirteçler içinde ayrılmış F# OCaml dil anahtar sözcükleri oldukları için:
 
 * `asr`
 * `land`
@@ -103,7 +103,7 @@ Aşağıdaki belirteçler F#'ta çünkü bunlar OCaml dilindeki anahtar sözcük
 
 Kullanırsanız `--mlcompatibility` derleyici seçeneği, yukarıdaki anahtar sözcükler kullanılabilir tanımlayıcıları.
 
-Aşağıdaki belirteçler, F# dilinin gelecekteki genişleme için anahtar sözcükler olarak ayrılmıştır:
+Aşağıdaki belirteçler gelecekteki genişleme için anahtar sözcükler olarak ayrılmış olan F# dil:
 
 * `atomic`
 * `break`
