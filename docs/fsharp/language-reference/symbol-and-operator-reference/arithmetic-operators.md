@@ -1,17 +1,17 @@
 ---
 title: Aritmetik İşleçler (F#)
-description: F# programlama dilinde kullanılabilen aritmetik işleçler hakkında bilgi edinin.
+description: Kullanılabilen aritmetik işleçler hakkında bilgi edinin F# programlama dilidir.
 ms.date: 04/04/2018
-ms.openlocfilehash: 008aa84b8736bb3a734ce8bb9713d34c17f1b76e
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 2c0e2e25a4f79d00455d978e235e4bef16b52586
+ms.sourcegitcommit: 6ae7cdd0437a32884556dd4826ca90e957b7a4e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
+ms.lasthandoff: 12/06/2018
 ms.locfileid: "45597447"
 ---
 # <a name="arithmetic-operators"></a>Aritmetik İşleçler
 
-Bu konu F# dilinde kullanılabilir aritmetik işleçler açıklar.
+Bu konu, kullanılabilen aritmetik işleçler açıklar F# dili.
 
 ## <a name="summary-of-binary-arithmetic-operators"></a>İkili aritmetik işleçler özeti
 
@@ -34,6 +34,7 @@ Kutulanmamış integral ve kayan nokta türleri için kullanılabilen ikili arit
 |--------------|-----|
 |`+` (pozitif)|Herhangi bir aritmetik ifade uygulanabilir. Değerin oturum değiştirmez.|
 |`-` (olumsuzlama, negatif)|Herhangi bir aritmetik ifade uygulanabilir. Oturum değeri değiştirir.|
+
 Taşma veya yetersiz gelme tam sayı türleri için davranış sarma yüklemektir. Bu, hatalı bir sonuç neden olur. Tamsayı taşması yazılım için hesap için değil yazıldığında, güvenlik sorunlarına katkıda bulunabilir Potansiyel ciddi bir sorundur. Bu, uygulamanız için önemliyse, işaretli işleçleri kullanarak göz önünde bulundurun `Microsoft.FSharp.Core.Operators.Checked`.
 
 ## <a name="summary-of-binary-comparison-operators"></a>İkili Karşılaştırma işleçleri özeti
@@ -53,13 +54,13 @@ IEEE kayan Noktası temsili bir tam eşitlik işlemi desteklemediği için kayan
 
 ## <a name="overloaded-and-generic-operators"></a>Aşırı yüklenmiş ve genel işleçler
 
-Tüm bu konuda tartışılan işleçlerinin tanımlanan **Microsoft.FSharp.Core.Operators** ad alanı. İşleçlerin bazıları, statik olarak çözümlenmiş tür parametreleri kullanılarak tanımlanır. Bu, tek tek operatörü ile çalışan her belirli tür tanımlarında olduğu anlamına gelir. Bu kategoride olan tüm tekli veya ikili aritmetik ve bit düzeyinde işleçler. Karşılaştırma işleçleri geneldir ve bu nedenle değil yalnızca temel aritmetik türlerin her tür ile çalışma. Ayrılmış birleşim ve kayıt türleri F# derleyicisi tarafından oluşturulan kendi özel uygulamalar vardır. Sınıf türleri yöntemi kullanın <xref:System.Object.Equals%2A>.
+Tüm bu konuda tartışılan işleçlerinin tanımlanan **Microsoft.FSharp.Core.Operators** ad alanı. İşleçlerin bazıları, statik olarak çözümlenmiş tür parametreleri kullanılarak tanımlanır. Bu, tek tek operatörü ile çalışan her belirli tür tanımlarında olduğu anlamına gelir. Bu kategoride olan tüm tekli veya ikili aritmetik ve bit düzeyinde işleçler. Karşılaştırma işleçleri geneldir ve bu nedenle değil yalnızca temel aritmetik türlerin her tür ile çalışma. Ayrılmış birleşim ve kayıt türleri tarafından oluşturulan kendi özel uygulamalar sahip F# derleyici. Sınıf türleri yöntemi kullanın <xref:System.Object.Equals%2A>.
 
 Genel işleçler özelleştirilebilir. Karşılaştırma işlevleri özelleştirmek için geçersiz kılma <xref:System.Object.Equals%2A> kendi özel eşitlik karşılaştırması sağlayın ve ardından uygulamak için <xref:System.IComparable>. <xref:System.IComparable?displayProperty=nameWithType> Arabirimi tek bir yöntemi vardır <xref:System.IComparable.CompareTo%2A> yöntemi.
 
 ## <a name="operators-and-type-inference"></a>İşleçler ve tür çıkarımı
 
-Bu işlecinde tür çıkarımı bir işleç bir ifadede kullanılmasını kısıtlar. Ayrıca, işleçlerinin kullanımı bir aritmetik tür gösterdiğinden otomatik Genelleştirme işleçleri kullanımını engeller. Herhangi bir bilgi olmaması durumunda, F# derleyicisi çıkarsar `int` aritmetik ifade türü. Başka bir tür belirterek bu davranışı geçersiz kılabilirsiniz. Bu nedenle bağımsız değişken türleri ve dönüş türünü `function1` olması için aşağıdaki kodda algılanır `int`, ancak türleri için `function2` olmasını çıkarılan `float`.
+Bu işlecinde tür çıkarımı bir işleç bir ifadede kullanılmasını kısıtlar. Ayrıca, işleçlerinin kullanımı bir aritmetik tür gösterdiğinden otomatik Genelleştirme işleçleri kullanımını engeller. Diğer herhangi bir bilgi olmadığında F# derleyici çıkarsar `int` aritmetik ifade türü. Başka bir tür belirterek bu davranışı geçersiz kılabilirsiniz. Bu nedenle bağımsız değişken türleri ve dönüş türünü `function1` olması için aşağıdaki kodda algılanır `int`, ancak türleri için `function2` olmasını çıkarılan `float`.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3501.fs)]
 
