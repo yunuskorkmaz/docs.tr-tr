@@ -30,8 +30,6 @@
 ### [Azure Service Fabric Kullanma](architect-microservice-container-applications/using-azure-service-fabric.md)
 ## [Docker Tabanlı Uygulamalar için Geliştirme İşlemi](docker-application-development-process/index.md)
 ### [Docker uygulamaları için geliştirme iş akışı](docker-application-development-process/docker-app-development-workflow.md)
-## [Linux veya Windows Nano Sunucu Konaklarına Tek Kapsayıcı Tabanlı NET core Web Uygulamaları Dağıtma](net-core-single-containers-linux-windows-server-hosts/index.md)
-## [Eski Tek Yapılı NET Framework Uygulamalarını Windows Kapsayıcılarına Geçirme](containerize-net-framework-applications/index.md)
 ## [Çok Kapsayıcılı ve Mikro Hizmet Tabanlı NET Uygulamaları Tasarlama ve Geliştirme](multi-container-microservice-net-applications/index.md)
 ### [Mikro hizmet odaklı bir uygulama tasarlama](multi-container-microservice-net-applications/microservice-application-design.md)
 ### [Basit bir veri temelli CRUD mikro hizmeti oluşturma](multi-container-microservice-net-applications/data-driven-crud-microservice.md)
