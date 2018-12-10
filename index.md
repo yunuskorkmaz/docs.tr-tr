@@ -5,13 +5,13 @@ hide_bc: true
 title: .NET Belgeleri
 description: C#, Visual Basic ve F# kullanarak herhangi bir platformda çeşitli uygulamalar oluşturmak için .NET kullanmayı öğrenin. API başvurusuna, örnek koda, öğreticilere ve daha fazlasına göz atın.
 ms.custom: updateeachrelease
-ms.date: 06/21/2018
-ms.openlocfilehash: 658c464cd7871306c7172e06c7041517ccea5ffe
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 12/04/2018
+ms.openlocfilehash: c79e7cd77c637ad06854be6a1372fec351a0c45d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183587"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127348"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -35,7 +35,7 @@ ms.locfileid: "50183587"
                 </a>
             </li>
             <li>
-                <a href="/dotnet/api/?view=netcore-2.1">
+                <a href="/dotnet/api/?view=netcore-2.2">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -251,118 +251,119 @@ ms.locfileid: "50183587"
                         <a href="#web">Web</a>
                         <ul id="web" class="cardsC">
                             <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/images/hub/net-docs-web-1.svg" alt="" />
+                                <a href="https://www.asp.net/get-started">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/net-docs-web-1.svg" alt="" />
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <a href="https://www.asp.net/get-started">
+                                                <div class="cardText">
                                                     <h3>İlk uygulamanızı oluşturun</h3>
                                                     <p>İlk ASP.NET Core web uygulamanızı oluşturmayı öğrenin.</p>
-                                                </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </li>
                             <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/images/hub/net-docs-web-2.svg" alt="" />
+                                <a href="/aspnet/core/tutorials/">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/net-docs-web-2.svg" alt="" />
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <a href="/aspnet/core/tutorials/">
+                                                <div class="cardText">
                                                     <h3>ASP.NET Core öğreticileri</h3>
                                                     <p>ASP.NET Core uygulamaları geliştirmeyi öğrenmeniz için size sağlanan farklı adım adım kılavuzları keşfedin.</p>
-                                                </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </li>
                             <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/images/hub/net-docs-web-3.svg" alt="" />
+                                <a href="/aspnet/overview">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/net-docs-web-3.svg" alt="" />
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <a href="/aspnet/overview">
+                                                <div class="cardText">
                                                     <h3>ASP.NET nedir?</h3>
                                                     <p>ASP.NET web uygulamaları oluşturmayı öğrenin.</p>
-                                                </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </li>
                             <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/images/hub/net-docs-web-4.svg" alt="" />
+                                <a href="/aspnet/core/tutorials/first-mvc-app/start-mvc">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/net-docs-web-4.svg" alt="" />
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <a href="/aspnet/core/tutorials/first-mvc-app/start-mvc">
+                                                <div class="cardText">
                                                     <h3>Visual Studio'da ASP.NET Core</h3>
-                                                    <p>Visual Studio kullanarak ASP.NET Core MVC web uygulaması oluşturma işleminin temellerini öğrenin.</p>
-                                                </a>
+                                                    <p>Visual Studio kullanarak ASP.NET Core MVC web uygulaması oluşturma işleminin temellerini öğrenin.
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </li>
                             <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/images/hub/net-docs-web-5.svg" alt="" />
+                                <a href="/aspnet/mvc/overview/deployment/docker-aspnetmvc">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/net-docs-web-5.svg" alt="" />
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <a href="/aspnet/mvc/overview/deployment/docker-aspnetmvc">
+                                                <div class="cardText">
                                                     <h3>Windows kapsayıcılarında ASP.NET MVC uygulamaları</h3>
                                                     <p>Docker ile ASP.NET MVC uygulamalarını dağıtmayı öğrenin.</p>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/images/hub/net-docs-web-6.svg" alt="" />
                                                 </div>
                                             </div>
-                                            <div class="cardText">
-                                                <a href="/aspnet/core/tutorials/xplat">
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/aspnet/core/tutorials/xplat">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/net-docs-web-6.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
                                                     <h3>ASP.NET Core çoklu platform öğreticileri</h3>
                                                     <p>ASP.NET Core ile web uygulamaları veya Web API'leri oluşturmayı öğrenin.</p>
-                                                </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </li>
                         </ul>
                     </li>
@@ -370,61 +371,64 @@ ms.locfileid: "50183587"
                         <a href="#cloud">Bulut</a>
                         <ul id="cloud" class="cardsC">
                             <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/images/hub/net-docs-cloud-1.svg" alt="" />
+                                <a href="/dotnet/azure/">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/net-docs-cloud-1.svg" alt="" />
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <a href="/dotnet/azure/">
+                                                <div class="cardText">
                                                     <h3>.NET için Azure belgeleri</h3>
-                                                    <p>Web Apps, WebJobs, Cloud Services ve VM'ler gibi Azure hizmetleri hakkında bilgi edinin.</p>
-                                                </a>
+                                                    <p>Web Apps, WebJobs, Cloud Services ve VM'ler gibi Azure hizmetleri hakkında bilgi edinin.
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </li>
                             <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/images/hub/net-docs-cloud-4.svg" alt="" />
+                                <a href="/azure/storage/">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/net-docs-cloud-4.svg" alt="" />
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <a href="/azure/storage/">
+                                                <div class="cardText">
                                                     <h3>Azure Depolama</h3>
-                                                    <p>Azure Depolama hakkında bilgi edinin ve Azure bloblarını, tablolarını, kuyruklarını ve dosyalarını kullanarak uygulama oluşturmayı öğrenin.</p>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/images/hub/net-docs-cloud-3.svg" alt="" />
+                                                    <p>Azure Depolama hakkında bilgi edinin ve Azure bloblarını, tablolarını, kuyruklarını ve dosyalarını kullanarak uygulama oluşturmayı öğrenin.
+                                                    </p>
                                                 </div>
                                             </div>
-                                            <div class="cardText">
-                                                <a href="/dotnet/fsharp/using-fsharp-on-azure">
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/dotnet/fsharp/using-fsharp-on-azure">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/net-docs-cloud-3.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
                                                     <h3>Azure’da F# Kullanma</h3>
-                                                    <p>F# dilinde Azure Depolama, Cloud Services ve Azure İşlevleri gibi çeşitli Azure hizmetlerini kullanmayı öğrenin.</p>
-                                                </a>
+                                                    <p>F# dilinde Azure Depolama, Cloud Services ve Azure İşlevleri gibi çeşitli Azure hizmetlerini kullanmayı öğrenin.
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </li>
                         </ul>
                     </li>
@@ -432,61 +436,61 @@ ms.locfileid: "50183587"
                         <a href="#mobile">Mobil</a>
                         <ul id="mobile" class="cardsC">
                             <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/images/hub/net-docs-mobile-1.svg" alt="" />
+                                <a href="/xamarin/ios">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/net-docs-mobile-1.svg" alt="" />
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <a href="/xamarin/ios">
+                                                <div class="cardText">
                                                     <h3>Xamarin.iOS</h3>
                                                     <p>Xamarin.iOS ile C# ve F# kullanarak yerel iOS uygulamaları oluşturun.</p>
-                                                </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </li>
                             <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/images/hub/net-docs-mobile-2.svg" alt="" />
+                                <a href="/xamarin/android">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/net-docs-mobile-2.svg" alt="" />
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <a href="/xamarin/android">
+                                                <div class="cardText">
                                                     <h3>Xamarin.Android</h3>
                                                     <p>Xamarin.Android ile C# ve F# kullanarak yerel Android uygulamaları oluşturun.</p>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/images/hub/net-docs-mobile-3.svg" alt="" />
                                                 </div>
                                             </div>
-                                            <div class="cardText">
-                                                <a href="/xamarin/xamarin-forms">
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/xamarin/xamarin-forms">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/net-docs-mobile-3.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
                                                     <h3>Xamarin.Forms</h3>
                                                     <p>Xamarin.Forms ile C# ve F# kullanarak platformlar arası mobil kullanıcı arabirimleri oluşturun.</p>
-                                                </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </li>
                         </ul>
                     </li>
@@ -494,81 +498,84 @@ ms.locfileid: "50183587"
                         <a href="#desktop">Masaüstü</a>
                         <ul id="desktop" class="cardsC">
                             <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/images/hub/net-docs-desktop-1.svg" alt="" />
+<<<<<<< HEAD <a href="https://msdn.microsoft.com/library/windows/apps/dn609832.aspx">
+=======
+                                <a href="/uwp">
+>>>>>>>master <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/net-docs-desktop-1.svg" alt="" />
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <a href="https://msdn.microsoft.com/library/windows/apps/dn609832.aspx">
+                                                <div class="cardText">
                                                     <h3>Evrensel Windows Uygulamaları</h3>
                                                     <p>Tüm Windows 10 cihazlarında çalışan Evrensel Windows uygulamaları oluşturmayı öğrenin.
                                                     </p>
-                                                </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </li>
                             <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/images/hub/net-docs-desktop-2.svg" alt="" />
+                                <a href="/dotnet/framework/wpf/index">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/net-docs-desktop-2.svg" alt="" />
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <a href="/dotnet/framework/wpf/index">
+                                                <div class="cardText">
                                                     <h3>Windows Presentation Foundation (WPF)</h3>
-                                                    <p>WPF, geliştiricilere Windows üzerinde masaüstü uygulamaları derlemeleri için XAML tabanlı bir model sağlar.</p>
-                                                </a>
+                                                    <p>WPF, geliştiricilere Windows üzerinde masaüstü uygulamaları derlemeleri için XAML tabanlı bir model sağlar.
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </li>
                             <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/images/hub/net-docs-desktop-3.svg" alt="" />
+                                <a href="/dotnet/framework/winforms/index">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/net-docs-desktop-3.svg" alt="" />
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <a href="/dotnet/framework/winforms/index">
+                                                <div class="cardText">
                                                     <h3>Windows Forms</h3>
                                                     <p>Windows masaüstü için İş Kolu uygulamalarını hızla geliştirin.</p>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/images/hub/net-docs-desktop-4.svg" alt="" />
                                                 </div>
                                             </div>
-                                            <div class="cardText">
-                                                <a href="/xamarin/mac">
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/xamarin/mac">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/net-docs-desktop-4.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
                                                     <h3>macOS için Xamarin</h3>
                                                     <p>Xamarin ile C# ve F# kullanarak macOS için uygulamalar oluşturun.</p>
-                                                </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </li>
                         </ul>
                     </li>
@@ -576,82 +583,83 @@ ms.locfileid: "50183587"
                         <a href="#gaming">Oyun</a>
                         <ul id="gaming" class="cardsC">
                             <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/images/hub/net-docs-gaming-1.svg" alt="" />
+                                <a href="https://visualstudio.microsoft.com/vs/features/game-development/">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/net-docs-gaming-1.svg" alt="" />
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <a href="https://visualstudio.microsoft.com/vs/game-development">
+                                                <div class="cardText">
                                                     <h3>Visual Studio ile Oyun Geliştirme</h3>
                                                     <p>Visual Studio ile tercih ettiğiniz oyun altyapısını kullanarak oyunlarınız yazın ve hatalarını ayıklayın.
                                                     </p>
-                                                </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </li>
                             <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/images/hub/net-docs-gaming-2.svg" alt="" />
+                                <a href="https://docs.cryengine.com/display/CEPROG/C%23+Programming">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/net-docs-gaming-2.svg" alt="" />
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <a href="http://docs.cryengine.com/display/CEPROG/C%23+Programming">
-                                                <h3>CRYENGINE</h3>
-                                                <p>C# ile oyun oluşturmak için CRYENGINE kullanmayı öğrenin.</p>
-                                                </a>
+                                                <div class="cardText">
+                                                    <h3>CRYENGINE</h3>
+                                                    <p>C# ile oyun oluşturmak için CRYENGINE kullanmayı öğrenin.</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </li>
                             <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/images/hub/net-docs-gaming-3.svg" alt="" />
+                                <a href="http://www.monogame.net/documentation/?page=main">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/net-docs-gaming-3.svg" alt="" />
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <a href="http://www.monogame.net/documentation/?page=main">
+                                                <div class="cardText">
                                                     <h3>MonoGame</h3>
-                                                    <p>MonoGame kitaplık belgeleri merkezindeki öğreticiler ve kurulum yönergeleri aracılığıyla C# ile oyunlar oluşturun.</p>
-                                                </a>
+                                                    <p>MonoGame kitaplık belgeleri merkezindeki öğreticiler ve kurulum yönergeleri aracılığıyla C# ile oyunlar oluşturun.
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </li>
                             <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/images/hub/net-docs-gaming-4.svg" alt="" />
+                                <a href="https://docs.unity3d.com/Manual/index.html">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/net-docs-gaming-4.svg" alt="" />
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <a href="https://docs.unity3d.com/Manual/index.html">
+                                                <div class="cardText">
                                                     <h3>Unity</h3>
                                                     <p>Unity El Kitabı ile C# dilinde 2B ve 3B oyunlar oluşturmak için Unity'yi kullanmayı öğrenin.
                                                     </p>
-                                                </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </li>
                         </ul>
                     </li>
@@ -659,61 +667,61 @@ ms.locfileid: "50183587"
                         <a href="#ml-ai">Makine Öğrenimi ve AI</a>
                         <ul id="ml-ai" class="cardsC">
                             <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/images/hub/swimlane-machine-learning-brain-lightbulb.svg" alt="" />
+                                <a href="/dotnet/machine-learning">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/swimlane-machine-learning-brain-lightbulb.svg" alt="" />
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <a href="/dotnet/machine-learning">
+                                                <div class="cardText">
                                                     <h3>ML.NET</h3>
                                                     <p>Özel AI çözümleri derleyin ve bunları .NET uygulamalarınızla tümleştirin.</p>
-                                                </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </li>
                             <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/images/hub/swimlane-cognitive-services.svg" alt="" />
+                                <a href="/azure/cognitive-services">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/swimlane-cognitive-services.svg" alt="" />
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <a href="/azure/cognitive-services">
+                                                <div class="cardText">
                                                     <h3>Bilişsel Hizmetler</h3>
                                                     <p>Görmek, duymak, konuşmak ve anlamak için zeki uygulamalar, web siteleri ve botlar ekleyin.</p>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/images/hub/swimlane-azure-machine-learning.svg" alt="" />
                                                 </div>
                                             </div>
-                                            <div class="cardText">
-                                                <a href="/azure/machine-learning">
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/azure/machine-learning">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/swimlane-azure-machine-learning.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
                                                     <h3>Azure Machine Learning</h3>
                                                     <p>Deney yapma ve model yönetimi özelliklerine sahip uçtan uca, ölçeklendirilebilir ve güvenilen bir platformla AI'ye herkesin ulaşabilmesini sağlayın.</p>
-                                                </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </li>
                         </ul>
                     </li>
