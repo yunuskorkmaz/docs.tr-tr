@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: d32c643e553dfe3ce52e3e2ce8aaf1ea3a296de6
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: b95e256bf8df7207eed0895587c0945f37b08ecb
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297337"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128966"
 ---
 # <a name="subscribing-to-events"></a>Olaylara abone olma
 
@@ -109,7 +109,7 @@ Mimari bölümünde daha önce bahsedildiği gibi bu sorunu uğraşmanızı içi
 
 -   Kullanarak [giden deseni](http://gistlabs.com/2014/05/the-outbox/). (Yerel işlem genişletme) tümleştirme olayları depolamak için bu işlem bir tablodur.
 
-Bu senaryo için tam olay kaynağını belirleme (ES) deseni en iyi yaklaşımlardan biri değilse kullanmaktır *en* iyi. Ancak, birçok uygulama senaryolarında, tam bir ES sistemi uygulamak mümkün olmayabilir. Geçerli durumu verilerini depolamak yerine işlemsel veritabanı, yalnızca etki alanı olayları depolamak ES anlamına gelir. Yalnızca etki alanı olayları depolamadan gibi sistem geçmişini sahip olunması ve geçmişteki herhangi bir anda, sistem durumunu belirlemek için harika avantajlar, olabilir. Ancak, tam bir ES sistemi uygulama sisteminizi çoğunu yeniden oluşturma gerektiren ve diğer birçok karmaşıklık ve gereksinimler sunar. Örneğin, özellikle olay kaynağını belirleme için gibi yapılan bir veritabanı kullanmak isteyebilirsiniz [olay Store](https://eventstore.org/), veya bir Azure Cosmos DB, MongoDB, Cassandra, CouchDB veya RavenDB gibi belge yönelimli veritabanı. Olay kaynağını belirleme ile bilginiz sürece ES Bu sorun, ancak kolay çözümü için harika bir yaklaşımdır.
+Bu senaryo için tam olay kaynağını belirleme (ES) deseni en iyi yaklaşımlardan biri değilse kullanmaktır ** en iyi. Ancak, birçok uygulama senaryolarında, tam bir ES sistemi uygulamak mümkün olmayabilir. Geçerli durumu verilerini depolamak yerine işlemsel veritabanı, yalnızca etki alanı olayları depolamak ES anlamına gelir. Yalnızca etki alanı olayları depolamadan gibi sistem geçmişini sahip olunması ve geçmişteki herhangi bir anda, sistem durumunu belirlemek için harika avantajlar, olabilir. Ancak, tam bir ES sistemi uygulama sisteminizi çoğunu yeniden oluşturma gerektiren ve diğer birçok karmaşıklık ve gereksinimler sunar. Örneğin, özellikle olay kaynağını belirleme için gibi yapılan bir veritabanı kullanmak isteyebilirsiniz [olay Store](https://eventstore.org/), veya bir Azure Cosmos DB, MongoDB, Cassandra, CouchDB veya RavenDB gibi belge yönelimli veritabanı. Olay kaynağını belirleme ile bilginiz sürece ES Bu sorun, ancak kolay çözümü için harika bir yaklaşımdır.
 
 İşlem günlüğü başlangıçta araştırma kullanma seçeneği çok saydam arar. Ancak, bu yaklaşımı kullanmak için SQL Server işlem günlüğü gibi RDBMS işlem günlüğü için eşleştirilmek mikro hizmet vardır. Bu tercih edilir olmayabilir. Başka bir dezavantajı, işlem günlüğüne kaydedilen bir alt düzey güncelleştirmeleri, üst düzey tümleştirme olayları ile aynı düzeyde olmayabilir olmasıdır. Bu durumda, bu işlem günlüğü işlemleri tersine mühendislik işlemi zor olabilir.
 
@@ -149,7 +149,7 @@ Olayları yayımlama adımları uygularken bu seçeneğiniz vardır:
 
 İkinci yaklaşım hakkında: olay günlüğü tablosu bir kuyruk kullanın ve her zaman iletileri yayımlamak için bir çalışan mikro hizmet kullanın. Bu durumda, işlem gibi Şekil 6-23 gösterilir. Bu ek bir mikro hizmet gösterir ve tek kaynak olayları yayımlarken tablosudur.
 
-![Kararlılık işlemek için başka bir yaklaşım: bir olay günlüğü tabloya yayımlayın ve ardından olan başka bir mikro hizmet (arka plan çalışanı) yayımlama olayı.](./media/image24.png)
+![Kararlılık işlemek için başka bir yaklaşım için: Bir olay günlüğü tabloya yayımlayın ve ardından olan başka bir mikro hizmet (arka plan çalışanı) yayımlama olayı.](./media/image24.png)
 
 **Şekil 6-23**. Olayları çalışan mikro hizmet ile olay veri yoluna yayımlanırken kararlılık
 
@@ -330,7 +330,7 @@ Aralıklı ağ hataları meydana geldiğinde iletileri çoğaltılabilir ve ilet
 -   **Mesajlaşma typu EventDriven** <br/>
     [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
--   **Jimmy Bogard. Dayanıklılığı yeniden düzenleme: Bağlantı değerlendirme** <br/>
+-   **Jimmy Bogard. Doğru dayanıklılığı yeniden düzenleme: Bağlantı değerlendirme** <br/>
     [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
 -   **Kanal Yayımla-abone ol** <br/>
@@ -369,10 +369,10 @@ Aralıklı ağ hataları meydana geldiğinde iletileri çoğaltılabilir ve ilet
 -   **Veri tutarlılığı temel bilgileri** <br/>
     [*https://msdn.microsoft.com/library/dn589800.aspx*](https://msdn.microsoft.com/library/dn589800.aspx)
 
--   **Saling rick. CAP Teoremi: "Her şey farklı Bulut ve Internet ile olmasının nedeni budur"** <br/>
+-   **Saling rick. CAP Teoremi: "Her şey farklı Bulut ve Internet ile budur"** <br/>
     [*https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/*](https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/)
 
--   **Eric Brewer. CAP on iki yılından: "Kurallar" nasıl değişti** <br/>
+-   **Eric Brewer. CAP on yıl: "Kurallar" nasıl değişti** <br/>
     [*https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed*](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed)
 
 -   **Azure hizmet veri yolu. Aracılı Mesajlaşma: Yinelenen algılama**  <br/>
@@ -390,9 +390,6 @@ Aralıklı ağ hataları meydana geldiğinde iletileri çoğaltılabilir ve ilet
 -   **Güvenilirlik Kılavuzu** (RabbitMQ belgeler) <br/>
     [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html%23consumer)
 
-
-
-
 >[!div class="step-by-step"]
-[Önceki](rabbitmq-event-bus-development-test-environment.md)
-[İleri](test-aspnet-core-services-web-apps.md)
+>[Önceki](rabbitmq-event-bus-development-test-environment.md)
+>[İleri](test-aspnet-core-services-web-apps.md)

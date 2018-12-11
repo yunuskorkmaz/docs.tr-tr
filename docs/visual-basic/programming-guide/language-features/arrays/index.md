@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Visual Basic, arrays
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
 ms.openlocfilehash: f8bd0f3eed8599f7f9e316df8274e8204a69c48f
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297458"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149906"
 ---
 # <a name="arrays-in-visual-basic"></a>Visual Basic'de Diziler
 
@@ -126,7 +126,7 @@ Tek boyutlu diziler için yapabildiğiniz gibi çok boyutlu bir dizi iç içe ge
 
 [!code-vb[nested-type-inference](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#6)]
 
-Diğer örnekler için [nasıl yapılır: bir dizi değişken Visual Basic'te başlatmak](../../language-features/arrays/how-to-initialize-an-array-variable.md).
+Diğer örnekler için [nasıl yapılır: Visual Basic'te dizi değişkeni başlatma](../../language-features/arrays/how-to-initialize-an-array-variable.md).
 
 ## <a name="iterating-through-an-array"></a>Bir dizi boyunca gezinme
 
@@ -299,9 +299,9 @@ Koleksiyonlar hakkında daha fazla bilgi için bkz. [koleksiyonları](../../conc
 |Terim|Tanım|
 |----------|----------------|
 |[Visual Basic'de dizi boyutları](../../language-features/arrays/array-dimensions.md)|Boyut sayısı ve boyutları açıklar.|
-|[Nasıl yapılır: Visual Basic'te dizi değişkeni başlatma](../../language-features/arrays/how-to-initialize-an-array-variable.md)|İlk değerlerle dizilerin doldurmak açıklar.|
-|[Nasıl yapılır: Visual Basic'te dizi Sırala](../../language-features/arrays/how-to-sort-an-array.md)|Bir dizinin öğeleri alfabetik olarak sıralamak gösterilmektedir.|
-|[Nasıl yapılır: Bir Diziyi Başka Diziye Atama](../../language-features/arrays/how-to-assign-one-array-to-another-array.md)|Bir dizi başka bir dizi değişkenine atamak için adımları ve kuralları açıklar.|
+|[Nasıl Yapılır: Visual Basic'te dizi değişkeni başlatma](../../language-features/arrays/how-to-initialize-an-array-variable.md)|İlk değerlerle dizilerin doldurmak açıklar.|
+|[Nasıl Yapılır: Visual Basic'te dizi Sırala](../../language-features/arrays/how-to-sort-an-array.md)|Bir dizinin öğeleri alfabetik olarak sıralamak gösterilmektedir.|
+|[Nasıl Yapılır: Bir diziyi başka diziye atama](../../language-features/arrays/how-to-assign-one-array-to-another-array.md)|Bir dizi başka bir dizi değişkenine atamak için adımları ve kuralları açıklar.|
 |[Dizilerle İlgili Sorun Giderme](../../language-features/arrays/troubleshooting-arrays.md)|Dizilerle çalışırken ortaya çıkan bazı ortak sorunları açıklar.|
 
 ## <a name="see-also"></a>Ayrıca bkz.

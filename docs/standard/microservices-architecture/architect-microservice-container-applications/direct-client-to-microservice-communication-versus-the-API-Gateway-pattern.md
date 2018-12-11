@@ -4,12 +4,12 @@ description: Farklar ve API ağ geçidi düzeni ve doğrudan istemci-mikro hizme
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 36b95f8b6308773dbb49cc68e4f8e2099bdd1ff0
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: c0c98733271e74e119373fe359b9aa6121930a40
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297333"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152649"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Doğrudan istemci-mikro hizmet iletişimi ile API ağ geçidi düzeni
 
@@ -55,13 +55,13 @@ Bir mikro hizmet mimarisinde birden fazla mikro hizmet işlevlerini kullanmak is
 
 Bu nedenle, bir Orta düzeye veya yöneltme (ağ geçidi) katmanı sorun mikro hizmet tabanlı uygulamalar için kullanışlı olabilir. API ağ geçitleri yoksa, istemci uygulamaları istekleri doğrudan mikro hizmetler göndermeniz gerekir ve aşağıdaki sorunlar gibi sorunlar oluşturan:
 
-- **Eşlenmesiyle**: API ağ geçidi desenini iç mikro Hizmetleri için istemci uygulamaları bağlı. İstemci uygulamaları, uygulamanın birden fazla alana mikro hizmetleri nasıl ayrılmış bilmeniz gerekir. Gelişen ve iç mikro hizmetler yeniden düzenleme, bu eylemlerin etkisi, bakım yapıyorsak hatalı, bozucu değişiklikleri nedeniyle istemci doğrudan başvurudan iç mikro Hizmetleri için istemci uygulamaları için uygulamaları nedeni. Çözüm geliştirilebilen daha zor hale sık güncelleştirilmesi istemci uygulamaları gerekir.
+- **Eşlenmesiyle**: API ağ geçidi desenini istemci uygulamaları için iç mikro Hizmetleri bağlı. İstemci uygulamaları, uygulamanın birden fazla alana mikro hizmetleri nasıl ayrılmış bilmeniz gerekir. Gelişen ve iç mikro hizmetler yeniden düzenleme, bu eylemlerin etkisi, bakım yapıyorsak hatalı, bozucu değişiklikleri nedeniyle istemci doğrudan başvurudan iç mikro Hizmetleri için istemci uygulamaları için uygulamaları nedeni. Çözüm geliştirilebilen daha zor hale sık güncelleştirilmesi istemci uygulamaları gerekir.
 
-- **Çok fazla gidiş dönüş**: istemci uygulamasında tek bir sayfa/ekran için birden çok hizmeti çeşitli çağrılar gerektirebilir. Birden çok ağ sonucunda gelişlerin önemli bir gecikme ekleme, sunucu ile istemci arasında yuvarlayabilirsiniz. Bir ara düzeyinde ele toplama performansı ve kullanıcı deneyimi için istemci uygulaması geliştirebilirsiniz.
+- **Çok fazla gidiş dönüş**: Tek bir sayfa/ekran istemci uygulamasında, birden çok hizmeti çeşitli çağrılar gerektirebilir. Birden çok ağ sonucunda gelişlerin önemli bir gecikme ekleme, sunucu ile istemci arasında yuvarlayabilirsiniz. Bir ara düzeyinde ele toplama performansı ve kullanıcı deneyimi için istemci uygulaması geliştirebilirsiniz.
 
-- **Güvenlik sorunları**: bir ağ geçidi tüm mikro Hizmetleri "saldırı yüzeyini istemci uygulamalar tarafından doğrudan kullanılmayan iç mikro hizmetler gizlerseniz daha büyük hale dış dünya" sunulmalıdır. Daha küçük saldırı yüzeyini, uygulamanızı daha güvenli olabilir.
+- **Güvenlik sorunları**: Bir ağ geçidi "saldırı yüzeyini istemci uygulamalar tarafından doğrudan kullanılmayan iç mikro hizmetler gizlerseniz daha büyük hale dış dünya" için tüm mikro Hizmetleri sunulmalıdır. Daha küçük saldırı yüzeyini, uygulamanızı daha güvenli olabilir.
 
-- **Geniş kapsamlı kritik konular**: genel olarak yayımlanan her mikro hizmet sorunları işlemesi yetkilendirme gibi SSL vs. İç mikro hizmetler basitleştirilmiştir böylece çoğu durumda, bu sorunları tek bir katmanda işlenmesi.
+- **Geniş kapsamlı kritik konular**: Genel olarak yayımlanan her mikro hizmet sorunları işlemesi yetkilendirme gibi SSL vs. İç mikro hizmetler basitleştirilmiştir böylece çoğu durumda, bu sorunları tek bir katmanda işlenmesi.
 
 ## <a name="what-is-the-api-gateway-pattern"></a>API ağ geçidi düzeni nedir?
 
@@ -109,7 +109,7 @@ Daha fazla bilgi için [ağ geçidi toplama düzeni](https://docs.microsoft.com/
 
 - Kimlik doğrulama ve yetkilendirme
 - Hizmet bulma tümleştirmesi
-- Yanıtları önbelleğe alma
+- Yanıtları Önbelleğe Alma
 - Yeniden deneme ilkeleri, devre kesici ve hizmet kalitesi
 - Oran sınırlandırma ve azaltma
 - Yük Dengeleme
@@ -194,5 +194,5 @@ Ayrıca, Apigee, Kong, MuleSoft, WSO2, API ağ geçitleri özellikleri sunan paz
   [*https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html*](https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html)
 
 >[!div class="step-by-step"]
-[Önceki](identify-microservice-domain-model-boundaries.md)
-[İleri](communication-in-microservice-architecture.md)
+>[Önceki](identify-microservice-domain-model-boundaries.md)
+>[İleri](communication-in-microservice-architecture.md)

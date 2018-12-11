@@ -4,12 +4,13 @@ description: Kod kalitesini ve esnekliği artırmaya birim testleri yazmak için
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: 69fe0cae141d1ed1e1281eecd78bf03e6e8be961
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: 60baa533a8f4dc2fb715b813018f8f84000777d7
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43530603"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169631"
 ---
 # <a name="unit-testing-best-practices"></a>Birim testi en iyi uygulamalar
 
@@ -32,7 +33,7 @@ Regresyon hataları uygulamada bir değişiklik yapıldığında, sunulan hatala
 Birim testi ile her derlemeden sonra veya bir kod satırı değiştirdikten sonra bile, tüm testleri paketi yeniden çalıştırmak mümkündür. Size yeni kodunuz var olan işlevselliği kesmez güvenilirlik sağlar.
 
 ### <a name="executable-documentation"></a>Yürütülebilir belgeleri
-Bu her zaman belirli bir yöntem yapar veya belirli bir giriş nasıl davrandığını belirgin olmayabilir. Kendiniz isteyebilir: nasıl bu yöntem davranacağını boş bir dize başarılı olursa? Null?
+Bu her zaman belirli bir yöntem yapar veya belirli bir giriş nasıl davrandığını belirgin olmayabilir. Kendiniz isteyebilir: Boş bir dize başarılı olursa bu yöntem nasıl çalışır? Null?
 
 İyi adlandırılmış birim testleri paketi varsa, her test açıkça belirtilen bir giriş için beklenen çıktıyı açıklamak gerekir. Ayrıca, aslında çalışıp çalışmadığını doğrulayabilirsiniz olmalıdır.
 
@@ -328,7 +329,7 @@ public interface IDateTimeProvider
     DayOfWeek DayOfWeek();
 }
 
-public bool GetDiscountedPrice(int price, IDateTimeProvider dateTimeProvider)
+public int GetDiscountedPrice(int price, IDateTimeProvider dateTimeProvider)
 {
     if(dateTimeProvider.DayOfWeek() == DayOfWeek.Tuesday) 
     {

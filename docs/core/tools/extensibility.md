@@ -2,14 +2,14 @@
 title: .NET core CLI genişletilebilirlik modeli
 description: Komut satırı arabirimi (CLI) araçlarını nasıl genişletebileceğinizi öğreneceğiz.
 author: blackdwarf
-ms.author: mairaw
 ms.date: 04/12/2017
-ms.openlocfilehash: 9f54479704f547ada567619a82b24a47a0b104c4
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.custom: seodec18
+ms.openlocfilehash: 3aedd1d507fde1cd7402ef97fa00d0c7f13005e3
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842742"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170242"
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>.NET core CLI araçları genişletilebilirlik modeli
 
@@ -36,7 +36,7 @@ Yukarıda özetlenen, üç genişletilebilirlik mekanizması dışlamaz. Bir ya 
 ## <a name="per-project-based-extensibility"></a>Proje başına tabanlı genişletilebilirliği
 Proje başına Araçlar [framework bağımlı dağıtımları](../deploying/index.md#framework-dependent-deployments-fdd) NuGet paketleri olarak dağıtılır. Araçlar, yalnızca onlara başvuran ve bunlar geri yüklenir, proje bağlamında kullanılabilir. Komut bulunamadığı için (örneğin, projesini içeren dizin dışında) bir projenin bağlamı dışında çağırma başarısız olur.
 
-Proje dosyası dışında bir şey gerekli olmadığından bu araçlar, derleme sunucuları için mükemmeldir. Derleme işlem çalıştırmalarını derlemeler geri için proje ve araçlar kullanılabilir olacak. Her proje yalnızca belirli bir dilde yazılabilir olduğundan gibi F # dil projeleri aynı zamanda bu kategoride bulunan.
+Proje dosyası dışında bir şey gerekli olmadığından bu araçlar, derleme sunucuları için mükemmeldir. Derleme işlem çalıştırmalarını derlemeler geri için proje ve araçlar kullanılabilir olacak. Gibi dil projeleri F#, ayrıca bu kategorideki, çünkü her proje yalnızca belirli bir dilde yazılabilir.
 
 Son olarak, bu genişletilebilirlik modeli proje çıkışı erişmesi gereken araçları oluşturulması için destek sağlar. Örneğin, çeşitli Razor Görünüm Araçları [ASP.NET](https://www.asp.net/) MVC uygulamaları bu kategoriye girer.
 
