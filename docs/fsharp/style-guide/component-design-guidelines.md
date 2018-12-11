@@ -74,7 +74,7 @@ Aşağıdaki tablo, .NET adlandırma ve büyük/küçük harf kurallarını izle
 |-----------|------|------|----------|-------|
 | Somut türleri | PascalCase | İsim / sıfat | Liste, çift, karmaşık | Yapılar, sınıflar, numaralandırmalar, temsilciler, kayıtlar ve birleşimler bunun somut türleridir. Tür adları içinde OCaml, geleneksel olarak küçük olsa F# türleri için .NET adlandırma şeması BENİMSEDİ.
 | DLL'ler           | PascalCase |                 | Fabrikam.Core.dll |  |
-| Birleşim etiketleri     | PascalCase | İsim | Bazı, ekleme, başarılı | Bir ön ek, genel API'ler kullanmayın. İsteğe bağlı olarak öneki gibi iç zaman kullanmak ' takımlar yazın TAlpha = | TBeta | TDelta.' |
+| Birleşim etiketleri     | PascalCase | İsim | Bazı, ekleme, başarılı | Bir ön ek, genel API'ler kullanmayın. İsteğe bağlı olarak öneki gibi iç zaman kullanmak `takımlar yazın = TAlpha | TBeta | TDelta.` |
 | Olay          | PascalCase | Fiili | ValueChanged / ValueChanging |  |
 | Özel Durumlar     | PascalCase |      | WebException ise | Adı "Özel durum" ile bitmelidir. |
 | Alan          | PascalCase | İsim | Geçerli ad  | |
