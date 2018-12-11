@@ -1,0 +1,45 @@
+---
+title: TRUE ve false işleçleri - C# başvurusu
+ms.custom: seodec18
+ms.date: 12/10/2018
+helpviewer_keywords:
+- false operator [C#]
+- true operator [C#]
+ms.assetid: 81a888fd-011e-4589-b242-6c261fea505e
+ms.openlocfilehash: 0a75566fdb6222157ecda12a50fd78e22f92fcb4
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245749"
+---
+# <a name="true-and-false-operators-c-reference"></a><span data-ttu-id="54af7-102">TRUE ve false işleçleri (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="54af7-102">true and false operators (C# Reference)</span></span>
+
+<span data-ttu-id="54af7-103">`true` İşleci döndürür [bool](bool.md) değer `true` işleneni kesinlikle doğru olduğunu belirtmek için.</span><span class="sxs-lookup"><span data-stu-id="54af7-103">The `true` operator returns the [bool](bool.md) value `true` to indicate that an operand is definitely true.</span></span> <span data-ttu-id="54af7-104">`false` İşleci döndürür `bool` değer `true` işleneni kesinlikle false olduğunu belirtmek için.</span><span class="sxs-lookup"><span data-stu-id="54af7-104">The `false` operator returns the `bool` value `true` to indicate that an operand is definitely false.</span></span> <span data-ttu-id="54af7-105">`true` Ve `false` işleçleri birbirini tamamlar için garanti edilmez.</span><span class="sxs-lookup"><span data-stu-id="54af7-105">The `true` and `false` operators are not guaranteed to complement each other.</span></span> <span data-ttu-id="54af7-106">Diğer bir deyişle, her ikisi de `true` ve `false` işleci döndürebilir `bool` değer `false` aynı işlenen için.</span><span class="sxs-lookup"><span data-stu-id="54af7-106">That is, both the `true` and `false` operator might return the `bool` value `false` for the same operand.</span></span> <span data-ttu-id="54af7-107">Bir tür iki işleç tanımlıyorsa, aynı zamanda başka bir işleç tanımlamanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="54af7-107">If a type defines one of the two operators, it must also define another operator.</span></span>
+
+<span data-ttu-id="54af7-108">Bir tür ederse ile tanımlanan `true` ve `false` işleçleri [aşırı](operator.md) [mantıksal OR işlecinin](../operators/or-operator.md) `|` veya [mantıksal AND işleci](../operators/and-operator.md) `&` belirli bir şekilde [koşullu mantıksal OR işlecinin](../operators/conditional-or-operator.md) `||` veya [koşullu mantıksal AND işleci](../operators/conditional-and-operator.md) `&&`sırayla değerlendirilir Bu türündeki işlenenler için.</span><span class="sxs-lookup"><span data-stu-id="54af7-108">If a type with the defined `true` and `false` operators [overloads](operator.md) the [logical OR operator](../operators/or-operator.md) `|` or the [logical AND operator](../operators/and-operator.md) `&` in a certain way, the [conditional logical OR operator](../operators/conditional-or-operator.md) `||` or [conditional logical AND operator](../operators/conditional-and-operator.md) `&&`, respectively, can be evaluated for the operands of that type.</span></span> <span data-ttu-id="54af7-109">Daha fazla bilgi için [kullanıcı tanımlı koşullu mantıksal işleçler](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) bölümünü [ C# dil belirtimi](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="54af7-109">For more information, see the [User-defined conditional logical operators](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) section of the [C# language specification](../language-specification/index.md).</span></span>
+
+<span data-ttu-id="54af7-110">Tanımlanan bir türü `true` işleci denetleyen bir koşullu deyim sonucu türü olabilir [varsa](if-else.md), [yapmak](do.md), [sırada](while.md), ve [ için](for.md) deyimleri ve [koşullu işleç `?:` ](../operators/conditional-operator.md).</span><span class="sxs-lookup"><span data-stu-id="54af7-110">A type with the defined `true` operator can be the type of a result of a controlling conditional expression in the [if](if-else.md), [do](do.md), [while](while.md), and [for](for.md) statements and in the [conditional operator `?:`](../operators/conditional-operator.md).</span></span> <span data-ttu-id="54af7-111">Daha fazla bilgi için [Boolean ifadeler](~/_csharplang/spec/expressions.md#boolean-expressions) bölümünü [ C# dil belirtimi](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="54af7-111">For more information, see the [Boolean expressions](~/_csharplang/spec/expressions.md#boolean-expressions) section of the [C# language specification](../language-specification/index.md).</span></span>
+
+> [!TIP]
+> <span data-ttu-id="54af7-112">Kullanım `bool?` türü üç değerli mantığı, örneğin,'i desteklemeniz gerekiyorsa çalışırken üç değerli mantıksal türünü destekleyen veritabanları ile.</span><span class="sxs-lookup"><span data-stu-id="54af7-112">Use the `bool?` type, if you need to support the three-valued logic, for example, when you work with databases that support a three-valued logical type.</span></span> <span data-ttu-id="54af7-113">Daha fazla bilgi için [bool? türü](../../programming-guide/nullable-types/using-nullable-types.md#the-bool-type) bölümünü [boş değer atanabilir türleri kullanma](../../programming-guide/nullable-types/using-nullable-types.md) makalesi.</span><span class="sxs-lookup"><span data-stu-id="54af7-113">For more information, see [The bool? type](../../programming-guide/nullable-types/using-nullable-types.md#the-bool-type) section of the [Using nullable types](../../programming-guide/nullable-types/using-nullable-types.md) article.</span></span>
+
+<span data-ttu-id="54af7-114">Aşağıdaki örnek her ikisi de tanımlayan türü sunar `true` ve `false` işleçleri.</span><span class="sxs-lookup"><span data-stu-id="54af7-114">The following example presents the type that defines both `true` and `false` operators.</span></span> <span data-ttu-id="54af7-115">Ayrıca, mantıksal ve işlecini aşırı `&` şekilde, işlecin `&&` , o türündeki işlenenler için ayrıca değerlendirilir.</span><span class="sxs-lookup"><span data-stu-id="54af7-115">Moreover, it overloads the logical AND operator `&` in such a way that the operator `&&` also can be evaluated for the operands of that type.</span></span>
+
+[!code-csharp-interactive[true and false operators example](~/samples/snippets/csharp/keywords/TrueFalseOperatorsExample.cs)]
+
+<span data-ttu-id="54af7-116">Short-circuiting davranışla `&&` işleci.</span><span class="sxs-lookup"><span data-stu-id="54af7-116">Notice the short-circuiting behavior of the `&&` operator.</span></span> <span data-ttu-id="54af7-117">Zaman `GetFuelLaunchStatus` yöntemi döndürür `LaunchStatus.Red`, ikinci işleneni `&&` işleci değerlendirilmez.</span><span class="sxs-lookup"><span data-stu-id="54af7-117">When the `GetFuelLaunchStatus` method returns `LaunchStatus.Red`, the second operand of the `&&` operator is not evaluated.</span></span> <span data-ttu-id="54af7-118">Çünkü `LaunchStatus.Red` kesinlikle false'tur.</span><span class="sxs-lookup"><span data-stu-id="54af7-118">That is because `LaunchStatus.Red` is definitely false.</span></span> <span data-ttu-id="54af7-119">Ardından mantıksal AND sonucunu ikinci işlenenin değerine bağımlı değildir.</span><span class="sxs-lookup"><span data-stu-id="54af7-119">Then the result of the logical AND doesn't depend on the value of the second operand.</span></span> <span data-ttu-id="54af7-120">Örnek çıktısı aşağıdaki gibidir:</span><span class="sxs-lookup"><span data-stu-id="54af7-120">The output of the example is as follows:</span></span>
+
+```console
+Getting fuel launch status...
+Wait!
+```
+
+## <a name="see-also"></a><span data-ttu-id="54af7-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="54af7-121">See also</span></span>
+
+- [<span data-ttu-id="54af7-122">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="54af7-122">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="54af7-123">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="54af7-123">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="54af7-124">C# Anahtar Sözcükleri</span><span class="sxs-lookup"><span data-stu-id="54af7-124">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="54af7-125">C# İşleçleri</span><span class="sxs-lookup"><span data-stu-id="54af7-125">C# Operators</span></span>](../operators/index.md)
+- [<span data-ttu-id="54af7-126">`true` değişmez değer</span><span class="sxs-lookup"><span data-stu-id="54af7-126">`true` literal</span></span>](true-literal.md)
+- [<span data-ttu-id="54af7-127">`false` değişmez değer</span><span class="sxs-lookup"><span data-stu-id="54af7-127">`false` literal</span></span>](false-literal.md)

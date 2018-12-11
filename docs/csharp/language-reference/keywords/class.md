@@ -1,5 +1,6 @@
 ---
-title: class anahtar sözcüğü (C# Başvurusu)
+title: class anahtar sözcüğü - C# başvurusu
+ms.custom: seodec18
 ms.date: 07/18/2017
 f1_keywords:
 - class_CSharpKeyword
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 3f30fb473b486efc8381faa9076b98763935b0ae
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: b56cdd5899ab74648b203caf15c39240f4ec90ed
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086070"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53234610"
 ---
-# <a name="class-c-reference"></a><span data-ttu-id="fe25f-102">class (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="fe25f-102">class (C# Reference)</span></span>
+# <a name="class-c-reference"></a><span data-ttu-id="0d416-102">class (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="0d416-102">class (C# Reference)</span></span>
 
-<span data-ttu-id="fe25f-103">Sınıflar, anahtar sözcüğü kullanılarak bildirilir `class`, aşağıdaki örnekte gösterildiği gibi:</span><span class="sxs-lookup"><span data-stu-id="fe25f-103">Classes are declared using the keyword `class`, as shown in the following example:</span></span>
+<span data-ttu-id="0d416-103">Sınıflar, anahtar sözcüğü kullanılarak bildirilir `class`, aşağıdaki örnekte gösterildiği gibi:</span><span class="sxs-lookup"><span data-stu-id="0d416-103">Classes are declared using the keyword `class`, as shown in the following example:</span></span>
 
 ```csharp
 class TestClass
@@ -26,82 +27,82 @@ class TestClass
 }
 ```
 
-## <a name="remarks"></a><span data-ttu-id="fe25f-104">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="fe25f-104">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="0d416-104">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="0d416-104">Remarks</span></span>
 
-<span data-ttu-id="fe25f-105">C# ' de yalnızca tek devralma izin verilir.</span><span class="sxs-lookup"><span data-stu-id="fe25f-105">Only single inheritance is allowed in C#.</span></span> <span data-ttu-id="fe25f-106">Diğer bir deyişle, bir sınıf bir taban sınıftan yalnızca uygulama devralabilir.</span><span class="sxs-lookup"><span data-stu-id="fe25f-106">In other words, a class can inherit implementation from one base class only.</span></span> <span data-ttu-id="fe25f-107">Ancak, bir sınıf birden fazla arabirim uygulayabilir.</span><span class="sxs-lookup"><span data-stu-id="fe25f-107">However, a class can implement more than one interface.</span></span> <span data-ttu-id="fe25f-108">Aşağıdaki tablo, sınıf devralma ve arabirim uygulaması örneklerini gösterir:</span><span class="sxs-lookup"><span data-stu-id="fe25f-108">The following table shows examples of class inheritance and interface implementation:</span></span>
+<span data-ttu-id="0d416-105">C# ' de yalnızca tek devralma izin verilir.</span><span class="sxs-lookup"><span data-stu-id="0d416-105">Only single inheritance is allowed in C#.</span></span> <span data-ttu-id="0d416-106">Diğer bir deyişle, bir sınıf bir taban sınıftan yalnızca uygulama devralabilir.</span><span class="sxs-lookup"><span data-stu-id="0d416-106">In other words, a class can inherit implementation from one base class only.</span></span> <span data-ttu-id="0d416-107">Ancak, bir sınıf birden fazla arabirim uygulayabilir.</span><span class="sxs-lookup"><span data-stu-id="0d416-107">However, a class can implement more than one interface.</span></span> <span data-ttu-id="0d416-108">Aşağıdaki tablo, sınıf devralma ve arabirim uygulaması örneklerini gösterir:</span><span class="sxs-lookup"><span data-stu-id="0d416-108">The following table shows examples of class inheritance and interface implementation:</span></span>
 
-|<span data-ttu-id="fe25f-109">Devralma</span><span class="sxs-lookup"><span data-stu-id="fe25f-109">Inheritance</span></span>|<span data-ttu-id="fe25f-110">Örnek</span><span class="sxs-lookup"><span data-stu-id="fe25f-110">Example</span></span>|
+|<span data-ttu-id="0d416-109">Devralma</span><span class="sxs-lookup"><span data-stu-id="0d416-109">Inheritance</span></span>|<span data-ttu-id="0d416-110">Örnek</span><span class="sxs-lookup"><span data-stu-id="0d416-110">Example</span></span>|
 |-----------------|-------------|
-|<span data-ttu-id="fe25f-111">Yok.</span><span class="sxs-lookup"><span data-stu-id="fe25f-111">None</span></span>|`class ClassA { }`|
-|<span data-ttu-id="fe25f-112">Tek</span><span class="sxs-lookup"><span data-stu-id="fe25f-112">Single</span></span>|`class DerivedClass: BaseClass { }`|
-|<span data-ttu-id="fe25f-113">None, iki arabirim uygular</span><span class="sxs-lookup"><span data-stu-id="fe25f-113">None, implements two interfaces</span></span>|`class ImplClass: IFace1, IFace2 { }`|
-|<span data-ttu-id="fe25f-114">Tek bir arabirim uygular</span><span class="sxs-lookup"><span data-stu-id="fe25f-114">Single, implements one interface</span></span>|`class ImplDerivedClass: BaseClass, IFace1 { }`|
+|<span data-ttu-id="0d416-111">Hiçbiri</span><span class="sxs-lookup"><span data-stu-id="0d416-111">None</span></span>|`class ClassA { }`|
+|<span data-ttu-id="0d416-112">Tek</span><span class="sxs-lookup"><span data-stu-id="0d416-112">Single</span></span>|`class DerivedClass: BaseClass { }`|
+|<span data-ttu-id="0d416-113">None, iki arabirim uygular</span><span class="sxs-lookup"><span data-stu-id="0d416-113">None, implements two interfaces</span></span>|`class ImplClass: IFace1, IFace2 { }`|
+|<span data-ttu-id="0d416-114">Tek bir arabirim uygular</span><span class="sxs-lookup"><span data-stu-id="0d416-114">Single, implements one interface</span></span>|`class ImplDerivedClass: BaseClass, IFace1 { }`|
 
-<span data-ttu-id="fe25f-115">Diğer sınıflar içinde iç içe değil doğrudan bir ad alanındaki bildirdiğiniz sınıf ya da olabilir [genel](../../../csharp/language-reference/keywords/public.md) veya [iç](../../../csharp/language-reference/keywords/internal.md).</span><span class="sxs-lookup"><span data-stu-id="fe25f-115">Classes that you declare directly within a namespace, not nested within other classes, can be either [public](../../../csharp/language-reference/keywords/public.md) or [internal](../../../csharp/language-reference/keywords/internal.md).</span></span> <span data-ttu-id="fe25f-116">Sınıflar `internal` varsayılan olarak.</span><span class="sxs-lookup"><span data-stu-id="fe25f-116">Classes are `internal` by default.</span></span>
+<span data-ttu-id="0d416-115">Diğer sınıflar içinde iç içe değil doğrudan bir ad alanındaki bildirdiğiniz sınıf ya da olabilir [genel](../../../csharp/language-reference/keywords/public.md) veya [iç](../../../csharp/language-reference/keywords/internal.md).</span><span class="sxs-lookup"><span data-stu-id="0d416-115">Classes that you declare directly within a namespace, not nested within other classes, can be either [public](../../../csharp/language-reference/keywords/public.md) or [internal](../../../csharp/language-reference/keywords/internal.md).</span></span> <span data-ttu-id="0d416-116">Sınıflar `internal` varsayılan olarak.</span><span class="sxs-lookup"><span data-stu-id="0d416-116">Classes are `internal` by default.</span></span>
 
-<span data-ttu-id="fe25f-117">İç içe geçmiş sınıflar, sınıf üyelerini olabilir [genel](public.md), [iç korumalı](protected-internal.md), [korumalı](protected.md), [iç](internal.md), [ özel](private.md), veya [korunan özel](private-protected.md).</span><span class="sxs-lookup"><span data-stu-id="fe25f-117">Class members, including nested classes, can be [public](public.md), [protected internal](protected-internal.md), [protected](protected.md), [internal](internal.md), [private](private.md), or [private protected](private-protected.md).</span></span> <span data-ttu-id="fe25f-118">Üyeleri `private` varsayılan olarak.</span><span class="sxs-lookup"><span data-stu-id="fe25f-118">Members are `private` by default.</span></span>
+<span data-ttu-id="0d416-117">İç içe geçmiş sınıflar, sınıf üyelerini olabilir [genel](public.md), [iç korumalı](protected-internal.md), [korumalı](protected.md), [iç](internal.md), [ özel](private.md), veya [korunan özel](private-protected.md).</span><span class="sxs-lookup"><span data-stu-id="0d416-117">Class members, including nested classes, can be [public](public.md), [protected internal](protected-internal.md), [protected](protected.md), [internal](internal.md), [private](private.md), or [private protected](private-protected.md).</span></span> <span data-ttu-id="0d416-118">Üyeleri `private` varsayılan olarak.</span><span class="sxs-lookup"><span data-stu-id="0d416-118">Members are `private` by default.</span></span>
 
-<span data-ttu-id="fe25f-119">Daha fazla bilgi için [erişim değiştiricileri](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).</span><span class="sxs-lookup"><span data-stu-id="fe25f-119">For more information, see [Access Modifiers](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).</span></span>
+<span data-ttu-id="0d416-119">Daha fazla bilgi için [erişim değiştiricileri](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).</span><span class="sxs-lookup"><span data-stu-id="0d416-119">For more information, see [Access Modifiers](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).</span></span>
 
-<span data-ttu-id="fe25f-120">Tür parametrelerine sahip Genel sınıflar bildirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="fe25f-120">You can declare generic classes that have type parameters.</span></span> <span data-ttu-id="fe25f-121">Daha fazla bilgi için [Genel sınıflar](../../../csharp/programming-guide/generics/generic-classes.md).</span><span class="sxs-lookup"><span data-stu-id="fe25f-121">For more information, see [Generic Classes](../../../csharp/programming-guide/generics/generic-classes.md).</span></span>
+<span data-ttu-id="0d416-120">Tür parametrelerine sahip Genel sınıflar bildirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="0d416-120">You can declare generic classes that have type parameters.</span></span> <span data-ttu-id="0d416-121">Daha fazla bilgi için [Genel sınıflar](../../../csharp/programming-guide/generics/generic-classes.md).</span><span class="sxs-lookup"><span data-stu-id="0d416-121">For more information, see [Generic Classes](../../../csharp/programming-guide/generics/generic-classes.md).</span></span>
 
-<span data-ttu-id="fe25f-122">Bir sınıf bildirimleri aşağıdaki üyeleri içerir:</span><span class="sxs-lookup"><span data-stu-id="fe25f-122">A class can contain declarations of the following members:</span></span>
+<span data-ttu-id="0d416-122">Bir sınıf bildirimleri aşağıdaki üyeleri içerir:</span><span class="sxs-lookup"><span data-stu-id="0d416-122">A class can contain declarations of the following members:</span></span>
 
-- [<span data-ttu-id="fe25f-123">Oluşturucular</span><span class="sxs-lookup"><span data-stu-id="fe25f-123">Constructors</span></span>](../../../csharp/programming-guide/classes-and-structs/constructors.md)
+- [<span data-ttu-id="0d416-123">Oluşturucular</span><span class="sxs-lookup"><span data-stu-id="0d416-123">Constructors</span></span>](../../../csharp/programming-guide/classes-and-structs/constructors.md)
 
-- [<span data-ttu-id="fe25f-124">Sabitler</span><span class="sxs-lookup"><span data-stu-id="fe25f-124">Constants</span></span>](../../../csharp/programming-guide/classes-and-structs/constants.md)
+- [<span data-ttu-id="0d416-124">Sabitler</span><span class="sxs-lookup"><span data-stu-id="0d416-124">Constants</span></span>](../../../csharp/programming-guide/classes-and-structs/constants.md)
 
-- [<span data-ttu-id="fe25f-125">Alanlar</span><span class="sxs-lookup"><span data-stu-id="fe25f-125">Fields</span></span>](../../../csharp/programming-guide/classes-and-structs/fields.md)
+- [<span data-ttu-id="0d416-125">Alanlar</span><span class="sxs-lookup"><span data-stu-id="0d416-125">Fields</span></span>](../../../csharp/programming-guide/classes-and-structs/fields.md)
 
-- [<span data-ttu-id="fe25f-126">Sonlandırıcılar</span><span class="sxs-lookup"><span data-stu-id="fe25f-126">Finalizers</span></span>](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+- [<span data-ttu-id="0d416-126">Sonlandırıcılar</span><span class="sxs-lookup"><span data-stu-id="0d416-126">Finalizers</span></span>](../../../csharp/programming-guide/classes-and-structs/destructors.md)
 
-- [<span data-ttu-id="fe25f-127">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="fe25f-127">Methods</span></span>](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [<span data-ttu-id="0d416-127">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="0d416-127">Methods</span></span>](../../../csharp/programming-guide/classes-and-structs/methods.md)
 
-- [<span data-ttu-id="fe25f-128">Özellikler</span><span class="sxs-lookup"><span data-stu-id="fe25f-128">Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [<span data-ttu-id="0d416-128">Özellikler</span><span class="sxs-lookup"><span data-stu-id="0d416-128">Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/properties.md)
 
-- [<span data-ttu-id="fe25f-129">Dizin Oluşturucular</span><span class="sxs-lookup"><span data-stu-id="fe25f-129">Indexers</span></span>](../../../csharp/programming-guide/indexers/index.md)
+- [<span data-ttu-id="0d416-129">Dizin Oluşturucular</span><span class="sxs-lookup"><span data-stu-id="0d416-129">Indexers</span></span>](../../../csharp/programming-guide/indexers/index.md)
 
-- [<span data-ttu-id="fe25f-130">İşleçler</span><span class="sxs-lookup"><span data-stu-id="fe25f-130">Operators</span></span>](../../../csharp/programming-guide/statements-expressions-operators/operators.md)
+- [<span data-ttu-id="0d416-130">İşleçler</span><span class="sxs-lookup"><span data-stu-id="0d416-130">Operators</span></span>](../../../csharp/programming-guide/statements-expressions-operators/operators.md)
 
-- [<span data-ttu-id="fe25f-131">Olaylar</span><span class="sxs-lookup"><span data-stu-id="fe25f-131">Events</span></span>](../../../csharp/programming-guide/events/index.md)
+- [<span data-ttu-id="0d416-131">Olaylar</span><span class="sxs-lookup"><span data-stu-id="0d416-131">Events</span></span>](../../../csharp/programming-guide/events/index.md)
 
-- [<span data-ttu-id="fe25f-132">Temsilciler</span><span class="sxs-lookup"><span data-stu-id="fe25f-132">Delegates</span></span>](../../../csharp/programming-guide/delegates/index.md)
+- [<span data-ttu-id="0d416-132">Temsilciler</span><span class="sxs-lookup"><span data-stu-id="0d416-132">Delegates</span></span>](../../../csharp/programming-guide/delegates/index.md)
 
-- [<span data-ttu-id="fe25f-133">Sınıflar</span><span class="sxs-lookup"><span data-stu-id="fe25f-133">Classes</span></span>](../../../csharp/programming-guide/classes-and-structs/classes.md)
+- [<span data-ttu-id="0d416-133">Sınıflar</span><span class="sxs-lookup"><span data-stu-id="0d416-133">Classes</span></span>](../../../csharp/programming-guide/classes-and-structs/classes.md)
 
-- [<span data-ttu-id="fe25f-134">Arabirimler</span><span class="sxs-lookup"><span data-stu-id="fe25f-134">Interfaces</span></span>](../../../csharp/programming-guide/interfaces/index.md)
+- [<span data-ttu-id="0d416-134">Arabirimler</span><span class="sxs-lookup"><span data-stu-id="0d416-134">Interfaces</span></span>](../../../csharp/programming-guide/interfaces/index.md)
 
-- [<span data-ttu-id="fe25f-135">Yapılar</span><span class="sxs-lookup"><span data-stu-id="fe25f-135">Structs</span></span>](../../../csharp/programming-guide/classes-and-structs/structs.md)
+- [<span data-ttu-id="0d416-135">Yapılar</span><span class="sxs-lookup"><span data-stu-id="0d416-135">Structs</span></span>](../../../csharp/programming-guide/classes-and-structs/structs.md)
 
-- [<span data-ttu-id="fe25f-136">Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="fe25f-136">Enumerations</span></span>](../../../csharp/programming-guide/enumeration-types.md)
+- [<span data-ttu-id="0d416-136">Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="0d416-136">Enumerations</span></span>](../../../csharp/programming-guide/enumeration-types.md)
 
-## <a name="example"></a><span data-ttu-id="fe25f-137">Örnek</span><span class="sxs-lookup"><span data-stu-id="fe25f-137">Example</span></span>
+## <a name="example"></a><span data-ttu-id="0d416-137">Örnek</span><span class="sxs-lookup"><span data-stu-id="0d416-137">Example</span></span>
 
-<span data-ttu-id="fe25f-138">Aşağıdaki örnek, bildirim sınıfı alanlar, Oluşturucular ve yöntemler gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="fe25f-138">The following example demonstrates declaring class fields, constructors, and methods.</span></span> <span data-ttu-id="fe25f-139">Ayrıca, nesne örneklemesini ve yazdırma örneği verileri gösterir.</span><span class="sxs-lookup"><span data-stu-id="fe25f-139">It also demonstrates object instantiation and printing instance data.</span></span> <span data-ttu-id="fe25f-140">Bu örnekte, iki sınıf olarak bildirilir.</span><span class="sxs-lookup"><span data-stu-id="fe25f-140">In this example, two classes are declared.</span></span> <span data-ttu-id="fe25f-141">İlk sınıf `Child`, iki özel alan içeriyor (`name` ve `age`), iki genel oluşturucular ve bir genel yöntem.</span><span class="sxs-lookup"><span data-stu-id="fe25f-141">The first class, `Child`, contains two private fields (`name` and `age`), two public constructors and one public method.</span></span> <span data-ttu-id="fe25f-142">İkinci sınıfı `StringTest`, kapsamak için kullanılmış `Main`.</span><span class="sxs-lookup"><span data-stu-id="fe25f-142">The second class, `StringTest`, is used to contain `Main`.</span></span>
+<span data-ttu-id="0d416-138">Aşağıdaki örnek, bildirim sınıfı alanlar, Oluşturucular ve yöntemler gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="0d416-138">The following example demonstrates declaring class fields, constructors, and methods.</span></span> <span data-ttu-id="0d416-139">Ayrıca, nesne örneklemesini ve yazdırma örneği verileri gösterir.</span><span class="sxs-lookup"><span data-stu-id="0d416-139">It also demonstrates object instantiation and printing instance data.</span></span> <span data-ttu-id="0d416-140">Bu örnekte, iki sınıf olarak bildirilir.</span><span class="sxs-lookup"><span data-stu-id="0d416-140">In this example, two classes are declared.</span></span> <span data-ttu-id="0d416-141">İlk sınıf `Child`, iki özel alan içeriyor (`name` ve `age`), iki genel oluşturucular ve bir genel yöntem.</span><span class="sxs-lookup"><span data-stu-id="0d416-141">The first class, `Child`, contains two private fields (`name` and `age`), two public constructors and one public method.</span></span> <span data-ttu-id="0d416-142">İkinci sınıfı `StringTest`, kapsamak için kullanılmış `Main`.</span><span class="sxs-lookup"><span data-stu-id="0d416-142">The second class, `StringTest`, is used to contain `Main`.</span></span>
 
 [!code-csharp[csrefKeywordsTypes#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#5)]
 
-## <a name="comments"></a><span data-ttu-id="fe25f-143">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="fe25f-143">Comments</span></span>
+## <a name="comments"></a><span data-ttu-id="0d416-143">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="0d416-143">Comments</span></span>
 
-<span data-ttu-id="fe25f-144">Önceki örnekte dikkat özel alanlar (`name` ve `age`) yalnızca genel yöntemi aracılığıyla erişilebilir `Child` sınıfı.</span><span class="sxs-lookup"><span data-stu-id="fe25f-144">Notice that in the previous example the private fields (`name` and `age`) can only be accessed through the public method of the `Child` class.</span></span> <span data-ttu-id="fe25f-145">Gelen çocuğunuzun adı, örneğin, yazdıramıyorum `Main` yöntemi, şunun gibi bir deyim kullanarak:</span><span class="sxs-lookup"><span data-stu-id="fe25f-145">For example, you cannot print the child's name, from the `Main` method, using a statement like this:</span></span>
+<span data-ttu-id="0d416-144">Önceki örnekte dikkat özel alanlar (`name` ve `age`) yalnızca genel yöntemi aracılığıyla erişilebilir `Child` sınıfı.</span><span class="sxs-lookup"><span data-stu-id="0d416-144">Notice that in the previous example the private fields (`name` and `age`) can only be accessed through the public method of the `Child` class.</span></span> <span data-ttu-id="0d416-145">Gelen çocuğunuzun adı, örneğin, yazdıramıyorum `Main` yöntemi, şunun gibi bir deyim kullanarak:</span><span class="sxs-lookup"><span data-stu-id="0d416-145">For example, you cannot print the child's name, from the `Main` method, using a statement like this:</span></span>
 
 ```csharp
 Console.Write(child1.name);   // Error
 ```
 
-<span data-ttu-id="fe25f-146">Özel üyelerine erişme `Child` gelen `Main` yalnızca sağlayabileceğinizden varsa `Main` sınıfının üyesi olan.</span><span class="sxs-lookup"><span data-stu-id="fe25f-146">Accessing private members of `Child` from `Main` would only be possible if `Main` were a member of the class.</span></span>
+<span data-ttu-id="0d416-146">Özel üyelerine erişme `Child` gelen `Main` yalnızca sağlayabileceğinizden varsa `Main` sınıfının üyesi olan.</span><span class="sxs-lookup"><span data-stu-id="0d416-146">Accessing private members of `Child` from `Main` would only be possible if `Main` were a member of the class.</span></span>
 
-<span data-ttu-id="fe25f-147">Türleri bildirilen bir erişim değiştiricisi varsayılan olmayan bir sınıf içinde `private`, bu örnekte veri üyeleri olmaya `private` anahtar sözcüğü kaldırdıysanız.</span><span class="sxs-lookup"><span data-stu-id="fe25f-147">Types declared inside a class without an access modifier default to `private`, so the data members in this example would still be `private` if the keyword were removed.</span></span>
+<span data-ttu-id="0d416-147">Türleri bildirilen bir erişim değiştiricisi varsayılan olmayan bir sınıf içinde `private`, bu örnekte veri üyeleri olmaya `private` anahtar sözcüğü kaldırdıysanız.</span><span class="sxs-lookup"><span data-stu-id="0d416-147">Types declared inside a class without an access modifier default to `private`, so the data members in this example would still be `private` if the keyword were removed.</span></span>
 
-<span data-ttu-id="fe25f-148">Son olarak, varsayılan oluşturucu kullanılarak oluşturulan nesne için dikkat edin (`child3`), alan için başlatılan yaş varsayılan olarak sıfır.</span><span class="sxs-lookup"><span data-stu-id="fe25f-148">Finally, notice that for the object created using the default constructor (`child3`), the age field was initialized to zero by default.</span></span>
+<span data-ttu-id="0d416-148">Son olarak, varsayılan oluşturucu kullanılarak oluşturulan nesne için dikkat edin (`child3`), alan için başlatılan yaş varsayılan olarak sıfır.</span><span class="sxs-lookup"><span data-stu-id="0d416-148">Finally, notice that for the object created using the default constructor (`child3`), the age field was initialized to zero by default.</span></span>
 
-## <a name="c-language-specification"></a><span data-ttu-id="fe25f-149">C# dili belirtimi</span><span class="sxs-lookup"><span data-stu-id="fe25f-149">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="0d416-149">C# dili belirtimi</span><span class="sxs-lookup"><span data-stu-id="0d416-149">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="fe25f-150">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="fe25f-150">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0d416-150">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0d416-150">See also</span></span>
 
-- [<span data-ttu-id="fe25f-151">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="fe25f-151">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="fe25f-152">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="fe25f-152">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="fe25f-153">C# Anahtar Sözcükleri</span><span class="sxs-lookup"><span data-stu-id="fe25f-153">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
-- [<span data-ttu-id="fe25f-154">Başvuru Türleri</span><span class="sxs-lookup"><span data-stu-id="fe25f-154">Reference Types</span></span>](../../../csharp/language-reference/keywords/reference-types.md)
+- [<span data-ttu-id="0d416-151">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="0d416-151">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="0d416-152">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="0d416-152">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="0d416-153">C# Anahtar Sözcükleri</span><span class="sxs-lookup"><span data-stu-id="0d416-153">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+- [<span data-ttu-id="0d416-154">Başvuru Türleri</span><span class="sxs-lookup"><span data-stu-id="0d416-154">Reference Types</span></span>](../../../csharp/language-reference/keywords/reference-types.md)

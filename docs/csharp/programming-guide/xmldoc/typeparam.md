@@ -1,5 +1,6 @@
 ---
-title: '&lt;typeparam&gt; (C# programlama Kılavuzu)'
+title: '&lt;typeparam&gt; - C# Programlama Kılavuzu'
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - typeparam
@@ -7,41 +8,41 @@ helpviewer_keywords:
 - <typeparam> C# XML tag
 - typeparam C# XML tag
 ms.assetid: 9b99d400-e911-4e55-99c6-64367c96aa4f
-ms.openlocfilehash: 5db257cc655b7d9112fc4efc917f5d2175fcf665
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 87629346238e92cf95141e72d79be37f8b11e48f
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143122"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241820"
 ---
-# <a name="lttypeparamgt-c-programming-guide"></a><span data-ttu-id="97d8c-102">&lt;typeparam&gt; (C# programlama Kılavuzu)</span><span class="sxs-lookup"><span data-stu-id="97d8c-102">&lt;typeparam&gt; (C# Programming Guide)</span></span>
-## <a name="syntax"></a><span data-ttu-id="97d8c-103">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="97d8c-103">Syntax</span></span>  
+# <a name="lttypeparamgt-c-programming-guide"></a><span data-ttu-id="693bb-102">&lt;typeparam&gt; (C# programlama Kılavuzu)</span><span class="sxs-lookup"><span data-stu-id="693bb-102">&lt;typeparam&gt; (C# Programming Guide)</span></span>
+## <a name="syntax"></a><span data-ttu-id="693bb-103">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="693bb-103">Syntax</span></span>  
   
 ```xml  
 <typeparam name="name">description</typeparam>  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="97d8c-104">Parametreler</span><span class="sxs-lookup"><span data-stu-id="97d8c-104">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="693bb-104">Parametreler</span><span class="sxs-lookup"><span data-stu-id="693bb-104">Parameters</span></span>  
  `name`  
- <span data-ttu-id="97d8c-105">Tür parametresinin adı.</span><span class="sxs-lookup"><span data-stu-id="97d8c-105">The name of the type parameter.</span></span> <span data-ttu-id="97d8c-106">Adı çift tırnak içine alın ("").</span><span class="sxs-lookup"><span data-stu-id="97d8c-106">Enclose the name in double quotation marks (" ").</span></span>  
+ <span data-ttu-id="693bb-105">Tür parametresinin adı.</span><span class="sxs-lookup"><span data-stu-id="693bb-105">The name of the type parameter.</span></span> <span data-ttu-id="693bb-106">Adı çift tırnak içine alın ("").</span><span class="sxs-lookup"><span data-stu-id="693bb-106">Enclose the name in double quotation marks (" ").</span></span>  
   
  `description`  
- <span data-ttu-id="97d8c-107">Tür parametresi için bir açıklama.</span><span class="sxs-lookup"><span data-stu-id="97d8c-107">A description for the type parameter.</span></span>  
+ <span data-ttu-id="693bb-107">Tür parametresi için bir açıklama.</span><span class="sxs-lookup"><span data-stu-id="693bb-107">A description for the type parameter.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="97d8c-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="97d8c-108">Remarks</span></span>  
- <span data-ttu-id="97d8c-109">`<typeparam>` Etiketi genel bir tür veya yöntem bildirimi için açıklama açıklayan bir tür parametresi için kullanılmalıdır.</span><span class="sxs-lookup"><span data-stu-id="97d8c-109">The `<typeparam>` tag should be used in the comment for a generic type or method declaration to describe a type parameter.</span></span> <span data-ttu-id="97d8c-110">Genel tür veya yöntemin her tür parametresi için bir etiket ekleyin.</span><span class="sxs-lookup"><span data-stu-id="97d8c-110">Add a tag for each type parameter of the generic type or method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="693bb-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="693bb-108">Remarks</span></span>  
+ <span data-ttu-id="693bb-109">`<typeparam>` Etiketi genel bir tür veya yöntem bildirimi için açıklama açıklayan bir tür parametresi için kullanılmalıdır.</span><span class="sxs-lookup"><span data-stu-id="693bb-109">The `<typeparam>` tag should be used in the comment for a generic type or method declaration to describe a type parameter.</span></span> <span data-ttu-id="693bb-110">Genel tür veya yöntemin her tür parametresi için bir etiket ekleyin.</span><span class="sxs-lookup"><span data-stu-id="693bb-110">Add a tag for each type parameter of the generic type or method.</span></span>  
   
- <span data-ttu-id="97d8c-111">Daha fazla bilgi için [genel türler](../../../csharp/programming-guide/generics/index.md).</span><span class="sxs-lookup"><span data-stu-id="97d8c-111">For more information, see [Generics](../../../csharp/programming-guide/generics/index.md).</span></span>  
+ <span data-ttu-id="693bb-111">Daha fazla bilgi için [genel türler](../../../csharp/programming-guide/generics/index.md).</span><span class="sxs-lookup"><span data-stu-id="693bb-111">For more information, see [Generics](../../../csharp/programming-guide/generics/index.md).</span></span>  
   
- <span data-ttu-id="97d8c-112">Metni `<typeparam>` etiketi IntelliSense içinde gösterilecek [nesne tarayıcı penceresi](/visualstudio/ide/viewing-the-structure-of-code#BKMK_ObjectBrowser) kod açıklaması web rapor.</span><span class="sxs-lookup"><span data-stu-id="97d8c-112">The text for the `<typeparam>` tag will be displayed in IntelliSense, the [Object Browser Window](/visualstudio/ide/viewing-the-structure-of-code#BKMK_ObjectBrowser) code comment web report.</span></span>  
+ <span data-ttu-id="693bb-112">Metni `<typeparam>` etiketi IntelliSense içinde gösterilecek [nesne tarayıcı penceresi](/visualstudio/ide/viewing-the-structure-of-code#BKMK_ObjectBrowser) kod açıklaması web rapor.</span><span class="sxs-lookup"><span data-stu-id="693bb-112">The text for the `<typeparam>` tag will be displayed in IntelliSense, the [Object Browser Window](/visualstudio/ide/viewing-the-structure-of-code#BKMK_ObjectBrowser) code comment web report.</span></span>  
   
- <span data-ttu-id="97d8c-113">Derleme [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) işlem belgeleri açıklamaları için bir dosya için.</span><span class="sxs-lookup"><span data-stu-id="97d8c-113">Compile with [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>  
+ <span data-ttu-id="693bb-113">Derleme [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) işlem belgeleri açıklamaları için bir dosya için.</span><span class="sxs-lookup"><span data-stu-id="693bb-113">Compile with [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="97d8c-114">Örnek</span><span class="sxs-lookup"><span data-stu-id="97d8c-114">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="693bb-114">Örnek</span><span class="sxs-lookup"><span data-stu-id="693bb-114">Example</span></span>  
  [!code-csharp[csProgGuideDocComments#13](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/typeparam_1.cs)]  
   
-## <a name="see-also"></a><span data-ttu-id="97d8c-115">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="97d8c-115">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="693bb-115">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="693bb-115">See Also</span></span>
 
-- [<span data-ttu-id="97d8c-116">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="97d8c-116">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="97d8c-117">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="97d8c-117">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="97d8c-118">Belge Açıklamaları için Önerilen Etiketler</span><span class="sxs-lookup"><span data-stu-id="97d8c-118">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [<span data-ttu-id="693bb-116">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="693bb-116">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="693bb-117">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="693bb-117">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="693bb-118">Belge Açıklamaları için Önerilen Etiketler</span><span class="sxs-lookup"><span data-stu-id="693bb-118">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

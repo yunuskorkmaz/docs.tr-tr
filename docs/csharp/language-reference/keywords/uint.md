@@ -1,68 +1,69 @@
 ---
-title: uint anahtar sözcüğü (C# Başvurusu)
+title: uint anahtar sözcüğü - C# başvurusu
+ms.custom: seodec18
 ms.date: 03/14/2017
 f1_keywords:
 - uint
 - uint_CSharpKeyword
 helpviewer_keywords:
 - uint keyword [C#]
-ms.openlocfilehash: 86cbb216bd960251ebd78916fae7865aa10aa5fc
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e22468eea63ce082f2e9842e6ec307aba1888964
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149698"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241606"
 ---
-# <a name="uint-c-reference"></a><span data-ttu-id="8af9d-102">uint (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="8af9d-102">uint (C# Reference)</span></span>
+# <a name="uint-c-reference"></a><span data-ttu-id="ae51b-102">uint (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="ae51b-102">uint (C# Reference)</span></span>
 
-<span data-ttu-id="8af9d-103">`uint` Anahtar sözcüğü, boyutu ve aşağıdaki tabloda gösterilen aralığı göre değerler depolayan bir tamsayı türü belirtir.</span><span class="sxs-lookup"><span data-stu-id="8af9d-103">The `uint` keyword signifies an integral type that stores values according to the size and range shown in the following table.</span></span>
+<span data-ttu-id="ae51b-103">`uint` Anahtar sözcüğü, boyutu ve aşağıdaki tabloda gösterilen aralığı göre değerler depolayan bir tamsayı türü belirtir.</span><span class="sxs-lookup"><span data-stu-id="ae51b-103">The `uint` keyword signifies an integral type that stores values according to the size and range shown in the following table.</span></span>
 
-|<span data-ttu-id="8af9d-104">Tür</span><span class="sxs-lookup"><span data-stu-id="8af9d-104">Type</span></span>|<span data-ttu-id="8af9d-105">Aralık</span><span class="sxs-lookup"><span data-stu-id="8af9d-105">Range</span></span>|<span data-ttu-id="8af9d-106">Boyut</span><span class="sxs-lookup"><span data-stu-id="8af9d-106">Size</span></span>|<span data-ttu-id="8af9d-107">.NET türü</span><span class="sxs-lookup"><span data-stu-id="8af9d-107">.NET type</span></span>|
+|<span data-ttu-id="ae51b-104">Tür</span><span class="sxs-lookup"><span data-stu-id="ae51b-104">Type</span></span>|<span data-ttu-id="ae51b-105">Aralık</span><span class="sxs-lookup"><span data-stu-id="ae51b-105">Range</span></span>|<span data-ttu-id="ae51b-106">Boyut</span><span class="sxs-lookup"><span data-stu-id="ae51b-106">Size</span></span>|<span data-ttu-id="ae51b-107">.NET türü</span><span class="sxs-lookup"><span data-stu-id="ae51b-107">.NET type</span></span>|
 |----------|-----------|----------|-------------------------|
-|`uint`|<span data-ttu-id="8af9d-108">0 için 4.294.967.295'e</span><span class="sxs-lookup"><span data-stu-id="8af9d-108">0 to 4,294,967,295</span></span>|<span data-ttu-id="8af9d-109">32-bit işaretsiz tamsayı</span><span class="sxs-lookup"><span data-stu-id="8af9d-109">Unsigned 32-bit integer</span></span>|<xref:System.UInt32?displayProperty=nameWithType>|
+|`uint`|<span data-ttu-id="ae51b-108">0 için 4.294.967.295'e</span><span class="sxs-lookup"><span data-stu-id="ae51b-108">0 to 4,294,967,295</span></span>|<span data-ttu-id="ae51b-109">32-bit işaretsiz tamsayı</span><span class="sxs-lookup"><span data-stu-id="ae51b-109">Unsigned 32-bit integer</span></span>|<xref:System.UInt32?displayProperty=nameWithType>|
 
-<span data-ttu-id="8af9d-110">**Not** `uint` türü CLS uyumlu değil.</span><span class="sxs-lookup"><span data-stu-id="8af9d-110">**Note** The `uint` type is not CLS-compliant.</span></span> <span data-ttu-id="8af9d-111">Kullanım `int` mümkün olduğunda.</span><span class="sxs-lookup"><span data-stu-id="8af9d-111">Use `int` whenever possible.</span></span>
+<span data-ttu-id="ae51b-110">**Not** `uint` türü CLS uyumlu değil.</span><span class="sxs-lookup"><span data-stu-id="ae51b-110">**Note** The `uint` type is not CLS-compliant.</span></span> <span data-ttu-id="ae51b-111">Kullanım `int` mümkün olduğunda.</span><span class="sxs-lookup"><span data-stu-id="ae51b-111">Use `int` whenever possible.</span></span>
 
-## <a name="literals"></a><span data-ttu-id="8af9d-112">Sabit değerler</span><span class="sxs-lookup"><span data-stu-id="8af9d-112">Literals</span></span>
+## <a name="literals"></a><span data-ttu-id="ae51b-112">Sabit değerler</span><span class="sxs-lookup"><span data-stu-id="ae51b-112">Literals</span></span>
 
-<span data-ttu-id="8af9d-113">Bildirmek ve başlatmak bir `uint` değişkenini değişmez değer ondalık, onaltılık bir sabit değer atama veya (C# 7.0 ile için sabit bir ikili başlayarak).</span><span class="sxs-lookup"><span data-stu-id="8af9d-113">You can declare and initialize a `uint` variable by assigning a decimal literal, a hexadecimal literal, or (starting with C# 7.0) a binary literal to it.</span></span> <span data-ttu-id="8af9d-114">Tamsayı sabit değeri aralığının dışında ise `uint` (diğer bir deyişle, bu ise kısa <xref:System.UInt32.MinValue?displayProperty=nameWithType> veya ondan <xref:System.UInt32.MaxValue?displayProperty=nameWithType>), bir derleme hatası oluşur.</span><span class="sxs-lookup"><span data-stu-id="8af9d-114">If the integer literal is outside the range of `uint` (that is, if it is less than <xref:System.UInt32.MinValue?displayProperty=nameWithType> or greater than <xref:System.UInt32.MaxValue?displayProperty=nameWithType>), a compilation error occurs.</span></span>
+<span data-ttu-id="ae51b-113">Bildirmek ve başlatmak bir `uint` değişkenini değişmez değer ondalık, onaltılık bir sabit değer atama veya (C# 7.0 ile için sabit bir ikili başlayarak).</span><span class="sxs-lookup"><span data-stu-id="ae51b-113">You can declare and initialize a `uint` variable by assigning a decimal literal, a hexadecimal literal, or (starting with C# 7.0) a binary literal to it.</span></span> <span data-ttu-id="ae51b-114">Tamsayı sabit değeri aralığının dışında ise `uint` (diğer bir deyişle, bu ise kısa <xref:System.UInt32.MinValue?displayProperty=nameWithType> veya ondan <xref:System.UInt32.MaxValue?displayProperty=nameWithType>), bir derleme hatası oluşur.</span><span class="sxs-lookup"><span data-stu-id="ae51b-114">If the integer literal is outside the range of `uint` (that is, if it is less than <xref:System.UInt32.MinValue?displayProperty=nameWithType> or greater than <xref:System.UInt32.MaxValue?displayProperty=nameWithType>), a compilation error occurs.</span></span>
 
-<span data-ttu-id="8af9d-115">Aşağıdaki örnekte, tamsayılar ondalık, onaltılık, gösterilen 3,000,000,000 eşit ve ikili sabit değerler atanır `uint` değerleri.</span><span class="sxs-lookup"><span data-stu-id="8af9d-115">In the following example, integers equal to 3,000,000,000 that are represented as decimal, hexadecimal, and binary literals are assigned to `uint` values.</span></span>
+<span data-ttu-id="ae51b-115">Aşağıdaki örnekte, tamsayılar ondalık, onaltılık, gösterilen 3,000,000,000 eşit ve ikili sabit değerler atanır `uint` değerleri.</span><span class="sxs-lookup"><span data-stu-id="ae51b-115">In the following example, integers equal to 3,000,000,000 that are represented as decimal, hexadecimal, and binary literals are assigned to `uint` values.</span></span>
 
 [!code-csharp[uint](~/samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#UInt)]
 
 > [!NOTE]
-> <span data-ttu-id="8af9d-116">Önek kullanın `0x` veya `0X` onaltılık bir sabit değer ve öneki belirtmek için `0b` veya `0B` ikili bir sabit belirtmek için.</span><span class="sxs-lookup"><span data-stu-id="8af9d-116">You use the prefix `0x` or `0X` to denote a hexadecimal literal and the prefix `0b` or `0B` to denote a binary literal.</span></span> <span data-ttu-id="8af9d-117">Ondalık değişmez değerler, önek vardır.</span><span class="sxs-lookup"><span data-stu-id="8af9d-117">Decimal literals have no prefix.</span></span>
+> <span data-ttu-id="ae51b-116">Önek kullanın `0x` veya `0X` onaltılık bir sabit değer ve öneki belirtmek için `0b` veya `0B` ikili bir sabit belirtmek için.</span><span class="sxs-lookup"><span data-stu-id="ae51b-116">You use the prefix `0x` or `0X` to denote a hexadecimal literal and the prefix `0b` or `0B` to denote a binary literal.</span></span> <span data-ttu-id="ae51b-117">Ondalık değişmez değerler, önek vardır.</span><span class="sxs-lookup"><span data-stu-id="ae51b-117">Decimal literals have no prefix.</span></span>
 
-<span data-ttu-id="8af9d-118">İle başlayarak C# 7.0, birkaç özellik eklenmiştir okunabilirliği artırmak için:</span><span class="sxs-lookup"><span data-stu-id="8af9d-118">Starting with C# 7.0, a couple of features have been added to enhance readability:</span></span>
+<span data-ttu-id="ae51b-118">İle başlayarak C# 7.0, birkaç özellik eklenmiştir okunabilirliği artırmak için:</span><span class="sxs-lookup"><span data-stu-id="ae51b-118">Starting with C# 7.0, a couple of features have been added to enhance readability:</span></span>
 
-- <span data-ttu-id="8af9d-119">C# 7.0, alt çizgi karakteri kullanımına izin verir `_`, basamak ayırıcı olarak.</span><span class="sxs-lookup"><span data-stu-id="8af9d-119">C# 7.0 allows the usage of the underscore character, `_`, as a digit separator.</span></span>
-- <span data-ttu-id="8af9d-120">C# 7.2 sağlayan `_` sonra öneki için bir ikili veya onaltılık sabit basamak ayırıcı olarak kullanılacak.</span><span class="sxs-lookup"><span data-stu-id="8af9d-120">C# 7.2 allows `_` to be used as a digit separator for a binary or hexadecimal literal, after the prefix.</span></span> <span data-ttu-id="8af9d-121">Ondalık bir sabit değer, bir alt çizgi olan izin verilen değil.</span><span class="sxs-lookup"><span data-stu-id="8af9d-121">A decimal literal isn't permitted to have a leading underscore.</span></span>
+- <span data-ttu-id="ae51b-119">C# 7.0, alt çizgi karakteri kullanımına izin verir `_`, basamak ayırıcı olarak.</span><span class="sxs-lookup"><span data-stu-id="ae51b-119">C# 7.0 allows the usage of the underscore character, `_`, as a digit separator.</span></span>
+- <span data-ttu-id="ae51b-120">C# 7.2 sağlayan `_` sonra öneki için bir ikili veya onaltılık sabit basamak ayırıcı olarak kullanılacak.</span><span class="sxs-lookup"><span data-stu-id="ae51b-120">C# 7.2 allows `_` to be used as a digit separator for a binary or hexadecimal literal, after the prefix.</span></span> <span data-ttu-id="ae51b-121">Ondalık bir sabit değer, bir alt çizgi olan izin verilen değil.</span><span class="sxs-lookup"><span data-stu-id="ae51b-121">A decimal literal isn't permitted to have a leading underscore.</span></span>
 
-<span data-ttu-id="8af9d-122">Aşağıda bazı örnekler gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="8af9d-122">Some examples are shown below.</span></span>
+<span data-ttu-id="ae51b-122">Aşağıda bazı örnekler gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="ae51b-122">Some examples are shown below.</span></span>
 
 [!code-csharp[uint](~/samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#UIntS)]
 
-<span data-ttu-id="8af9d-123">Tamsayı sabit değerleri türü gösteren bir son eki de içerebilir.</span><span class="sxs-lookup"><span data-stu-id="8af9d-123">Integer literals can also include a suffix that denotes the type.</span></span> <span data-ttu-id="8af9d-124">Sonek `U` veya 'u' gösterir ya da bir `uint` veya `ulong`sayısal değerine bağlı olarak.</span><span class="sxs-lookup"><span data-stu-id="8af9d-124">The suffix `U` or 'u' denotes either a `uint` or a `ulong`, depending on the numeric value of the literal.</span></span> <span data-ttu-id="8af9d-125">Aşağıdaki örnekte `u` sonek işaretsiz bir tamsayı her iki türdeki belirtmek için.</span><span class="sxs-lookup"><span data-stu-id="8af9d-125">The following example uses the `u` suffix to denote an unsigned integer of both types.</span></span> <span data-ttu-id="8af9d-126">İlk değişmez değer olduğunu unutmayın bir `uint` değeri olduğundan küçüktür <xref:System.UInt32.MaxValue?displayProperty=nameWithType>, ikinci olmakla birlikte bir `ulong` değeri büyük olduğundan <xref:System.UInt32.MaxValue?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="8af9d-126">Note that the first literal is a `uint` because its value is less than <xref:System.UInt32.MaxValue?displayProperty=nameWithType>, while the second is a `ulong` because its value is greater than <xref:System.UInt32.MaxValue?displayProperty=nameWithType>.</span></span>
+<span data-ttu-id="ae51b-123">Tamsayı sabit değerleri türü gösteren bir son eki de içerebilir.</span><span class="sxs-lookup"><span data-stu-id="ae51b-123">Integer literals can also include a suffix that denotes the type.</span></span> <span data-ttu-id="ae51b-124">Sonek `U` veya 'u' gösterir ya da bir `uint` veya `ulong`sayısal değerine bağlı olarak.</span><span class="sxs-lookup"><span data-stu-id="ae51b-124">The suffix `U` or 'u' denotes either a `uint` or a `ulong`, depending on the numeric value of the literal.</span></span> <span data-ttu-id="ae51b-125">Aşağıdaki örnekte `u` sonek işaretsiz bir tamsayı her iki türdeki belirtmek için.</span><span class="sxs-lookup"><span data-stu-id="ae51b-125">The following example uses the `u` suffix to denote an unsigned integer of both types.</span></span> <span data-ttu-id="ae51b-126">İlk değişmez değer olduğunu unutmayın bir `uint` değeri olduğundan küçüktür <xref:System.UInt32.MaxValue?displayProperty=nameWithType>, ikinci olmakla birlikte bir `ulong` değeri büyük olduğundan <xref:System.UInt32.MaxValue?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="ae51b-126">Note that the first literal is a `uint` because its value is less than <xref:System.UInt32.MaxValue?displayProperty=nameWithType>, while the second is a `ulong` because its value is greater than <xref:System.UInt32.MaxValue?displayProperty=nameWithType>.</span></span>
 
 [!code-csharp[usuffix](~/samples/snippets/csharp/language-reference/keywords/numeric-suffixes.cs#1)]
 
-<span data-ttu-id="8af9d-127">Değişmez değer bir tamsayı sonek varsa, ilk değerini gösterilebilir aşağıdaki türlerde türünü verilmiştir:</span><span class="sxs-lookup"><span data-stu-id="8af9d-127">If an integer literal has no suffix, its type is the first of the following types in which its value can be represented:</span></span>
+<span data-ttu-id="ae51b-127">Değişmez değer bir tamsayı sonek varsa, ilk değerini gösterilebilir aşağıdaki türlerde türünü verilmiştir:</span><span class="sxs-lookup"><span data-stu-id="ae51b-127">If an integer literal has no suffix, its type is the first of the following types in which its value can be represented:</span></span>
 
-1. [<span data-ttu-id="8af9d-128">int</span><span class="sxs-lookup"><span data-stu-id="8af9d-128">int</span></span>](int.md)
+1. [<span data-ttu-id="ae51b-128">int</span><span class="sxs-lookup"><span data-stu-id="ae51b-128">int</span></span>](int.md)
 2. `uint`
-3. [<span data-ttu-id="8af9d-129">long</span><span class="sxs-lookup"><span data-stu-id="8af9d-129">long</span></span>](long.md)
-4. [<span data-ttu-id="8af9d-130">ulong</span><span class="sxs-lookup"><span data-stu-id="8af9d-130">ulong</span></span>](ulong.md)
+3. [<span data-ttu-id="ae51b-129">long</span><span class="sxs-lookup"><span data-stu-id="ae51b-129">long</span></span>](long.md)
+4. [<span data-ttu-id="ae51b-130">ulong</span><span class="sxs-lookup"><span data-stu-id="ae51b-130">ulong</span></span>](ulong.md)
 
-## <a name="conversions"></a><span data-ttu-id="8af9d-131">Dönüşümler</span><span class="sxs-lookup"><span data-stu-id="8af9d-131">Conversions</span></span>
+## <a name="conversions"></a><span data-ttu-id="ae51b-131">Dönüşümler</span><span class="sxs-lookup"><span data-stu-id="ae51b-131">Conversions</span></span>
 
-<span data-ttu-id="8af9d-132">Önceden tanımlanmış bir örtük dönüştürme vardır `uint` için [uzun](long.md), [ulong](ulong.md), [float](float.md), [çift](double.md), veya [ ondalık](decimal.md).</span><span class="sxs-lookup"><span data-stu-id="8af9d-132">There is a predefined implicit conversion from `uint` to [long](long.md), [ulong](ulong.md), [float](float.md), [double](double.md), or [decimal](decimal.md).</span></span> <span data-ttu-id="8af9d-133">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="8af9d-133">For example:</span></span>
+<span data-ttu-id="ae51b-132">Önceden tanımlanmış bir örtük dönüştürme vardır `uint` için [uzun](long.md), [ulong](ulong.md), [float](float.md), [çift](double.md), veya [ ondalık](decimal.md).</span><span class="sxs-lookup"><span data-stu-id="ae51b-132">There is a predefined implicit conversion from `uint` to [long](long.md), [ulong](ulong.md), [float](float.md), [double](double.md), or [decimal](decimal.md).</span></span> <span data-ttu-id="ae51b-133">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="ae51b-133">For example:</span></span>
 
 ```csharp
 float myFloat = 4294967290;   // OK: implicit conversion to float
 ```
 
-<span data-ttu-id="8af9d-134">Önceden tanımlanmış bir örtük dönüştürme vardır [bayt](byte.md), [ushort](ushort.md), veya [char](char.md) için `uint`.</span><span class="sxs-lookup"><span data-stu-id="8af9d-134">There is a predefined implicit conversion from [byte](byte.md), [ushort](ushort.md), or [char](char.md) to `uint`.</span></span> <span data-ttu-id="8af9d-135">Aksi takdirde, bir dönüştürme kullanmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="8af9d-135">Otherwise you must use a cast.</span></span> <span data-ttu-id="8af9d-136">Örneğin, aşağıdaki atama deyimi, bir yayın olmadan bir derleme hatasına neden olur:</span><span class="sxs-lookup"><span data-stu-id="8af9d-136">For example, the following assignment statement will produce a compilation error without a cast:</span></span>
+<span data-ttu-id="ae51b-134">Önceden tanımlanmış bir örtük dönüştürme vardır [bayt](byte.md), [ushort](ushort.md), veya [char](char.md) için `uint`.</span><span class="sxs-lookup"><span data-stu-id="ae51b-134">There is a predefined implicit conversion from [byte](byte.md), [ushort](ushort.md), or [char](char.md) to `uint`.</span></span> <span data-ttu-id="ae51b-135">Aksi takdirde, bir dönüştürme kullanmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="ae51b-135">Otherwise you must use a cast.</span></span> <span data-ttu-id="ae51b-136">Örneğin, aşağıdaki atama deyimi, bir yayın olmadan bir derleme hatasına neden olur:</span><span class="sxs-lookup"><span data-stu-id="ae51b-136">For example, the following assignment statement will produce a compilation error without a cast:</span></span>
 
 ```csharp
 long aLong = 22;
@@ -72,7 +73,7 @@ uint uInt1 = aLong;
 uint uInt2 = (uint)aLong;
 ```
 
-<span data-ttu-id="8af9d-137">Ayrıca örtülü dönüştürme için kayan nokta türlerinden fark `uint`.</span><span class="sxs-lookup"><span data-stu-id="8af9d-137">Notice also that there is no implicit conversion from floating-point types to `uint`.</span></span> <span data-ttu-id="8af9d-138">Örneğin, bir açık tür dönüştürme kullanılmadığı sürece aşağıdaki deyim, bir derleyici hatası oluşturur:</span><span class="sxs-lookup"><span data-stu-id="8af9d-138">For example, the following statement generates a compiler error unless an explicit cast is used:</span></span>
+<span data-ttu-id="ae51b-137">Ayrıca örtülü dönüştürme için kayan nokta türlerinden fark `uint`.</span><span class="sxs-lookup"><span data-stu-id="ae51b-137">Notice also that there is no implicit conversion from floating-point types to `uint`.</span></span> <span data-ttu-id="ae51b-138">Örneğin, bir açık tür dönüştürme kullanılmadığı sürece aşağıdaki deyim, bir derleyici hatası oluşturur:</span><span class="sxs-lookup"><span data-stu-id="ae51b-138">For example, the following statement generates a compiler error unless an explicit cast is used:</span></span>
 
 ```csharp
 // Error -- no implicit conversion from double:
@@ -81,21 +82,21 @@ uint x = 3.0;
 uint y = (uint)3.0;
 ```
 
-<span data-ttu-id="8af9d-139">Karma kayan nokta türleri ve tamsayı türleri ile aritmetik ifadeler hakkında daha fazla bilgi için bkz: [float](float.md) ve [çift](double.md).</span><span class="sxs-lookup"><span data-stu-id="8af9d-139">For information about arithmetic expressions with mixed floating-point types and integral types, see [float](float.md) and [double](double.md).</span></span>
+<span data-ttu-id="ae51b-139">Karma kayan nokta türleri ve tamsayı türleri ile aritmetik ifadeler hakkında daha fazla bilgi için bkz: [float](float.md) ve [çift](double.md).</span><span class="sxs-lookup"><span data-stu-id="ae51b-139">For information about arithmetic expressions with mixed floating-point types and integral types, see [float](float.md) and [double](double.md).</span></span>
 
-<span data-ttu-id="8af9d-140">Örtük sayısal dönüştürme kuralları hakkında daha fazla bilgi için bkz. [Implicit Numeric Conversions Table](implicit-numeric-conversions-table.md).</span><span class="sxs-lookup"><span data-stu-id="8af9d-140">For more information about implicit numeric conversion rules, see the [Implicit Numeric Conversions Table](implicit-numeric-conversions-table.md).</span></span>
+<span data-ttu-id="ae51b-140">Örtük sayısal dönüştürme kuralları hakkında daha fazla bilgi için bkz. [Implicit Numeric Conversions Table](implicit-numeric-conversions-table.md).</span><span class="sxs-lookup"><span data-stu-id="ae51b-140">For more information about implicit numeric conversion rules, see the [Implicit Numeric Conversions Table](implicit-numeric-conversions-table.md).</span></span>
 
-## <a name="c-language-specification"></a><span data-ttu-id="8af9d-141">C# dili belirtimi</span><span class="sxs-lookup"><span data-stu-id="8af9d-141">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="ae51b-141">C# dili belirtimi</span><span class="sxs-lookup"><span data-stu-id="ae51b-141">C# language specification</span></span>
 
-<span data-ttu-id="8af9d-142">Daha fazla bilgi için [Integral türleri](~/_csharplang/spec/types.md#integral-types) içinde [ C# dil belirtimi](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="8af9d-142">For more information, see [Integral types](~/_csharplang/spec/types.md#integral-types) in the [C# Language Specification](../language-specification/index.md).</span></span> <span data-ttu-id="8af9d-143">Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.</span><span class="sxs-lookup"><span data-stu-id="8af9d-143">The language specification is the definitive source for C# syntax and usage.</span></span>
+<span data-ttu-id="ae51b-142">Daha fazla bilgi için [Integral türleri](~/_csharplang/spec/types.md#integral-types) içinde [ C# dil belirtimi](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="ae51b-142">For more information, see [Integral types](~/_csharplang/spec/types.md#integral-types) in the [C# Language Specification](../language-specification/index.md).</span></span> <span data-ttu-id="ae51b-143">Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.</span><span class="sxs-lookup"><span data-stu-id="ae51b-143">The language specification is the definitive source for C# syntax and usage.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="8af9d-144">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8af9d-144">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ae51b-144">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ae51b-144">See also</span></span>
 
 - <xref:System.UInt32>
-- [<span data-ttu-id="8af9d-145">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="8af9d-145">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="8af9d-146">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="8af9d-146">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="8af9d-147">C# Anahtar Sözcükleri</span><span class="sxs-lookup"><span data-stu-id="8af9d-147">C# Keywords</span></span>](index.md)
-- [<span data-ttu-id="8af9d-148">Tam Sayı Türleri Tablosu</span><span class="sxs-lookup"><span data-stu-id="8af9d-148">Integral Types Table</span></span>](integral-types-table.md)
-- [<span data-ttu-id="8af9d-149">Yerleşik Türler Tablosu</span><span class="sxs-lookup"><span data-stu-id="8af9d-149">Built-In Types Table</span></span>](built-in-types-table.md)
-- [<span data-ttu-id="8af9d-150">Örtük Sayısal Dönüştürmeler Tablosu</span><span class="sxs-lookup"><span data-stu-id="8af9d-150">Implicit Numeric Conversions Table</span></span>](implicit-numeric-conversions-table.md)
-- [<span data-ttu-id="8af9d-151">Açık Sayısal Dönüştürmeler Tablosu</span><span class="sxs-lookup"><span data-stu-id="8af9d-151">Explicit Numeric Conversions Table</span></span>](explicit-numeric-conversions-table.md)
+- [<span data-ttu-id="ae51b-145">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="ae51b-145">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="ae51b-146">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="ae51b-146">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="ae51b-147">C# Anahtar Sözcükleri</span><span class="sxs-lookup"><span data-stu-id="ae51b-147">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="ae51b-148">Tam Sayı Türleri Tablosu</span><span class="sxs-lookup"><span data-stu-id="ae51b-148">Integral Types Table</span></span>](integral-types-table.md)
+- [<span data-ttu-id="ae51b-149">Yerleşik Türler Tablosu</span><span class="sxs-lookup"><span data-stu-id="ae51b-149">Built-In Types Table</span></span>](built-in-types-table.md)
+- [<span data-ttu-id="ae51b-150">Örtük Sayısal Dönüştürmeler Tablosu</span><span class="sxs-lookup"><span data-stu-id="ae51b-150">Implicit Numeric Conversions Table</span></span>](implicit-numeric-conversions-table.md)
+- [<span data-ttu-id="ae51b-151">Açık Sayısal Dönüştürmeler Tablosu</span><span class="sxs-lookup"><span data-stu-id="ae51b-151">Explicit Numeric Conversions Table</span></span>](explicit-numeric-conversions-table.md)
