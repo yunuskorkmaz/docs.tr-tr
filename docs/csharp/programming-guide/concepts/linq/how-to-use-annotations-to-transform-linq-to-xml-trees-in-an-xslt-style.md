@@ -1,47 +1,47 @@
 ---
-title: 'Nasıl yapılır: LINQ to XML ağaçlarını XSLT stilindeki (C#) dönüştürmek için ek açıklamalarını kullanma'
+title: 'Nasıl Yapılır: LINQ to XML ağaçlarını XSLT stilindeki dönüştürmek için ek açıklamalarını kullanma (C#)'
 ms.date: 07/20/2015
 ms.assetid: 12a95902-a6b7-4a1e-ad52-04a518db226f
-ms.openlocfilehash: 13b65b5b4e1926910ad68204fdffffd7020f07f2
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: c93ba3209b80cf2467c0f3b49dc25e729c6a14c6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864358"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144539"
 ---
-# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-c"></a><span data-ttu-id="60ad1-102">Nasıl yapılır: LINQ to XML ağaçlarını XSLT stilindeki (C#) dönüştürmek için ek açıklamalarını kullanma</span><span class="sxs-lookup"><span data-stu-id="60ad1-102">How to: Use Annotations to Transform LINQ to XML Trees in an XSLT Style (C#)</span></span>
-<span data-ttu-id="60ad1-103">Ek açıklamalar, XML ağacının dönüşümler kolaylaştırmak için kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="60ad1-103">Annotations can be used to facilitate transforms of an XML tree.</span></span>  
+# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-c"></a><span data-ttu-id="05335-102">Nasıl Yapılır: LINQ to XML ağaçlarını XSLT stilindeki dönüştürmek için ek açıklamalarını kullanma (C#)</span><span class="sxs-lookup"><span data-stu-id="05335-102">How to: Use Annotations to Transform LINQ to XML Trees in an XSLT Style (C#)</span></span>
+<span data-ttu-id="05335-103">Ek açıklamalar, XML ağacının dönüşümler kolaylaştırmak için kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="05335-103">Annotations can be used to facilitate transforms of an XML tree.</span></span>  
   
- <span data-ttu-id="60ad1-104">Bazı XML belgelerdir "belge ile karışık içerik merkezli."</span><span class="sxs-lookup"><span data-stu-id="60ad1-104">Some XML documents are "document centric with mixed content."</span></span> <span data-ttu-id="60ad1-105">Bu belge, bir öğe düğümlerinin alt şeklin mutlaka bilmiyorum.</span><span class="sxs-lookup"><span data-stu-id="60ad1-105">With such documents, you don't necessarily know the shape of child nodes of an element.</span></span> <span data-ttu-id="60ad1-106">Örneğin, metin içeren bir düğüm şöyle görünebilir:</span><span class="sxs-lookup"><span data-stu-id="60ad1-106">For instance, a node that contains text may look like this:</span></span>  
+ <span data-ttu-id="05335-104">Bazı XML belgelerdir "belge ile karışık içerik merkezli."</span><span class="sxs-lookup"><span data-stu-id="05335-104">Some XML documents are "document centric with mixed content."</span></span> <span data-ttu-id="05335-105">Bu belge, bir öğe düğümlerinin alt şeklin mutlaka bilmiyorum.</span><span class="sxs-lookup"><span data-stu-id="05335-105">With such documents, you don't necessarily know the shape of child nodes of an element.</span></span> <span data-ttu-id="05335-106">Örneğin, metin içeren bir düğüm şöyle görünebilir:</span><span class="sxs-lookup"><span data-stu-id="05335-106">For instance, a node that contains text may look like this:</span></span>  
   
 ```xml  
 <text>A phrase with <b>bold</b> and <i>italic</i> text.</text>  
 ```  
   
- <span data-ttu-id="60ad1-107">Herhangi bir belirli metin düğümü için olabilir herhangi bir sayıda alt `<b>` ve `<i>` öğeleri.</span><span class="sxs-lookup"><span data-stu-id="60ad1-107">For any given text node, there may be any number of child `<b>` and `<i>` elements.</span></span> <span data-ttu-id="60ad1-108">Bu yaklaşım, bir dizi alt öğeleri, bit eşlemler normal paragraflar ve madde işaretli paragrafları gibi çeşitli içerebilir sayfaları gibi diğer durumlarda genişletir.</span><span class="sxs-lookup"><span data-stu-id="60ad1-108">This approach extends to a number of other situations, such as pages that can contain a variety of child elements, such as regular paragraphs, bulleted paragraphs, and bitmaps.</span></span> <span data-ttu-id="60ad1-109">Bir tablodaki hücre, metin içeren listeleri veya bit eşlemler bırakın.</span><span class="sxs-lookup"><span data-stu-id="60ad1-109">Cells in a table may contain text, drop down lists, or bitmaps.</span></span> <span data-ttu-id="60ad1-110">Belirli bir öğenin olacaktır hangi alt öğesi bilmiyorsanız merkezli XML olan belge birincil özelliklerini biri.</span><span class="sxs-lookup"><span data-stu-id="60ad1-110">One of the primary characteristics of document centric XML is that you do not know which child element any particular element will have.</span></span>  
+ <span data-ttu-id="05335-107">Herhangi bir belirli metin düğümü için olabilir herhangi bir sayıda alt `<b>` ve `<i>` öğeleri.</span><span class="sxs-lookup"><span data-stu-id="05335-107">For any given text node, there may be any number of child `<b>` and `<i>` elements.</span></span> <span data-ttu-id="05335-108">Bu yaklaşım, bir dizi alt öğeleri, bit eşlemler normal paragraflar ve madde işaretli paragrafları gibi çeşitli içerebilir sayfaları gibi diğer durumlarda genişletir.</span><span class="sxs-lookup"><span data-stu-id="05335-108">This approach extends to a number of other situations, such as pages that can contain a variety of child elements, such as regular paragraphs, bulleted paragraphs, and bitmaps.</span></span> <span data-ttu-id="05335-109">Bir tablodaki hücre, metin içeren listeleri veya bit eşlemler bırakın.</span><span class="sxs-lookup"><span data-stu-id="05335-109">Cells in a table may contain text, drop down lists, or bitmaps.</span></span> <span data-ttu-id="05335-110">Belirli bir öğenin olacaktır hangi alt öğesi bilmiyorsanız merkezli XML olan belge birincil özelliklerini biri.</span><span class="sxs-lookup"><span data-stu-id="05335-110">One of the primary characteristics of document centric XML is that you do not know which child element any particular element will have.</span></span>  
   
- <span data-ttu-id="60ad1-111">Burada mutlaka dönüştürmek istediğiniz öğeleri alt hakkında pek fazla bilmediğiniz bir ağaç öğesinde dönüştürmek istiyorsanız, daha sonra ek açıklamaları kullanan bu etkili bir yaklaşım yaklaşımdır.</span><span class="sxs-lookup"><span data-stu-id="60ad1-111">If you want to transform elements in a tree where you don't necessarily know much about the children of the elements that you want to transform, then this approach that uses annotations is an effective approach.</span></span>  
+ <span data-ttu-id="05335-111">Burada mutlaka dönüştürmek istediğiniz öğeleri alt hakkında pek fazla bilmediğiniz bir ağaç öğesinde dönüştürmek istiyorsanız, daha sonra ek açıklamaları kullanan bu etkili bir yaklaşım yaklaşımdır.</span><span class="sxs-lookup"><span data-stu-id="05335-111">If you want to transform elements in a tree where you don't necessarily know much about the children of the elements that you want to transform, then this approach that uses annotations is an effective approach.</span></span>  
   
- <span data-ttu-id="60ad1-112">Yaklaşım özetidir:</span><span class="sxs-lookup"><span data-stu-id="60ad1-112">The summary of the approach is:</span></span>  
+ <span data-ttu-id="05335-112">Yaklaşım özetidir:</span><span class="sxs-lookup"><span data-stu-id="05335-112">The summary of the approach is:</span></span>  
   
--   <span data-ttu-id="60ad1-113">İlk olarak, bir değiştirme öğesi ağaç öğeleriyle açıklama ekleyin.</span><span class="sxs-lookup"><span data-stu-id="60ad1-113">First, annotate elements in the tree with a replacement element.</span></span>  
+-   <span data-ttu-id="05335-113">İlk olarak, bir değiştirme öğesi ağaç öğeleriyle açıklama ekleyin.</span><span class="sxs-lookup"><span data-stu-id="05335-113">First, annotate elements in the tree with a replacement element.</span></span>  
   
--   <span data-ttu-id="60ad1-114">İkinci olarak, burada her öğe, ek açıklama ile değiştirin ve yeni bir ağaç oluşturma ağacının tümünü yineleyin.</span><span class="sxs-lookup"><span data-stu-id="60ad1-114">Second, iterate through the entire tree, creating a new tree where you replace each element with its annotation.</span></span> <span data-ttu-id="60ad1-115">Bu örnek adlı bir işlevde yeni ağaç oluşturulmasını ve yineleme uygulayan `XForm`.</span><span class="sxs-lookup"><span data-stu-id="60ad1-115">This example implements the iteration and creation of the new tree in a function named `XForm`.</span></span>  
+-   <span data-ttu-id="05335-114">İkinci olarak, burada her öğe, ek açıklama ile değiştirin ve yeni bir ağaç oluşturma ağacının tümünü yineleyin.</span><span class="sxs-lookup"><span data-stu-id="05335-114">Second, iterate through the entire tree, creating a new tree where you replace each element with its annotation.</span></span> <span data-ttu-id="05335-115">Bu örnek adlı bir işlevde yeni ağaç oluşturulmasını ve yineleme uygulayan `XForm`.</span><span class="sxs-lookup"><span data-stu-id="05335-115">This example implements the iteration and creation of the new tree in a function named `XForm`.</span></span>  
   
- <span data-ttu-id="60ad1-116">Ayrıntılı olarak yaklaşım oluşur:</span><span class="sxs-lookup"><span data-stu-id="60ad1-116">In detail, the approach consists of:</span></span>  
+ <span data-ttu-id="05335-116">Ayrıntılı olarak yaklaşım oluşur:</span><span class="sxs-lookup"><span data-stu-id="05335-116">In detail, the approach consists of:</span></span>  
   
--   <span data-ttu-id="60ad1-117">Bir veya daha fazla LINQ to bir şekilden diğerine dönüştürmek istediğiniz öğeleri kümesi döndüren XML sorgular yürütün.</span><span class="sxs-lookup"><span data-stu-id="60ad1-117">Execute one or more LINQ to XML queries that return the set of elements that you want to transform from one shape to another.</span></span> <span data-ttu-id="60ad1-118">Sorgudaki her öğe için yeni bir ekleme <xref:System.Xml.Linq.XElement> öğeye bir eklenti olarak nesnesi.</span><span class="sxs-lookup"><span data-stu-id="60ad1-118">For each element in the query, add a new <xref:System.Xml.Linq.XElement> object as an annotation to the element.</span></span> <span data-ttu-id="60ad1-119">Bu yeni öğe yeni, dönüştürülen ağacında açıklamalı öğenin yerini alır.</span><span class="sxs-lookup"><span data-stu-id="60ad1-119">This new element will replace the annotated element in the new, transformed tree.</span></span> <span data-ttu-id="60ad1-120">Basit kod yazmak için örnekte gösterildiği gibi budur.</span><span class="sxs-lookup"><span data-stu-id="60ad1-120">This is simple code to write, as demonstrated by the example.</span></span>  
+-   <span data-ttu-id="05335-117">Bir veya daha fazla LINQ to bir şekilden diğerine dönüştürmek istediğiniz öğeleri kümesi döndüren XML sorgular yürütün.</span><span class="sxs-lookup"><span data-stu-id="05335-117">Execute one or more LINQ to XML queries that return the set of elements that you want to transform from one shape to another.</span></span> <span data-ttu-id="05335-118">Sorgudaki her öğe için yeni bir ekleme <xref:System.Xml.Linq.XElement> öğeye bir eklenti olarak nesnesi.</span><span class="sxs-lookup"><span data-stu-id="05335-118">For each element in the query, add a new <xref:System.Xml.Linq.XElement> object as an annotation to the element.</span></span> <span data-ttu-id="05335-119">Bu yeni öğe yeni, dönüştürülen ağacında açıklamalı öğenin yerini alır.</span><span class="sxs-lookup"><span data-stu-id="05335-119">This new element will replace the annotated element in the new, transformed tree.</span></span> <span data-ttu-id="05335-120">Basit kod yazmak için örnekte gösterildiği gibi budur.</span><span class="sxs-lookup"><span data-stu-id="05335-120">This is simple code to write, as demonstrated by the example.</span></span>  
   
--   <span data-ttu-id="60ad1-121">Ek açıklamanın yeni alt düğümleri içermesi gibi eklenen yeni öğe; Bu, bir alt ağacı istenen herhangi bir şekilde oluşturabilir.</span><span class="sxs-lookup"><span data-stu-id="60ad1-121">The new element that is added as an annotation can contain new child nodes; it can form a sub-tree with any desired shape.</span></span>  
+-   <span data-ttu-id="05335-121">Ek açıklamanın yeni alt düğümleri içermesi gibi eklenen yeni öğe; Bu, bir alt ağacı istenen herhangi bir şekilde oluşturabilir.</span><span class="sxs-lookup"><span data-stu-id="05335-121">The new element that is added as an annotation can contain new child nodes; it can form a sub-tree with any desired shape.</span></span>  
   
--   <span data-ttu-id="60ad1-122">Özel bir kural yoktur: yeni öğenin bir alt düğüm farklı bir ad alanında bu amaçla yapılmış bir ad alanı olup olmadığını (Bu örnekte ad alanı `http://www.microsoft.com/LinqToXmlTransform/2007`), o alt öğe yeni ağacına kopyalanır değil.</span><span class="sxs-lookup"><span data-stu-id="60ad1-122">There is a special rule: If a child node of the new element is in a different namespace, a namespace that is made up for this purpose (in this example, the namespace is `http://www.microsoft.com/LinqToXmlTransform/2007`), then that child element is not copied to the new tree.</span></span> <span data-ttu-id="60ad1-123">Bunun yerine, ad alanı yukarıda belirtilen özel ad alanı ve öğe yerel adı ise `ApplyTransforms`, kaynak ağacının öğenin alt düğümleri yinelenir ve yeni ağaçta (açıklamalı alt öğeleri olan özel durum kopyalanır kendilerine bu kurallara göre dönüştürülür).</span><span class="sxs-lookup"><span data-stu-id="60ad1-123">Instead, if the namespace is the above mentioned special namespace, and the local name of the element is `ApplyTransforms`, then the child nodes of the element in the source tree are iterated, and copied to the new tree (with the exception that annotated child elements are themselves transformed according to these rules).</span></span>  
+-   <span data-ttu-id="05335-122">Özel bir kural yoktur: Yeni öğenin bir alt düğüm farklı bir ad alanında bu amaçla yapılmış bir ad alanı olup olmadığını (Bu örnekte ad alanı `http://www.microsoft.com/LinqToXmlTransform/2007`), o alt öğe yeni ağacına kopyalanır değil.</span><span class="sxs-lookup"><span data-stu-id="05335-122">There is a special rule: If a child node of the new element is in a different namespace, a namespace that is made up for this purpose (in this example, the namespace is `http://www.microsoft.com/LinqToXmlTransform/2007`), then that child element is not copied to the new tree.</span></span> <span data-ttu-id="05335-123">Bunun yerine, ad alanı yukarıda belirtilen özel ad alanı ve öğe yerel adı ise `ApplyTransforms`, kaynak ağacının öğenin alt düğümleri yinelenir ve yeni ağaçta (açıklamalı alt öğeleri olan özel durum kopyalanır kendilerine bu kurallara göre dönüştürülür).</span><span class="sxs-lookup"><span data-stu-id="05335-123">Instead, if the namespace is the above mentioned special namespace, and the local name of the element is `ApplyTransforms`, then the child nodes of the element in the source tree are iterated, and copied to the new tree (with the exception that annotated child elements are themselves transformed according to these rules).</span></span>  
   
--   <span data-ttu-id="60ad1-124">XSL içindeki dönüşümler belirtimi soyguna budur.</span><span class="sxs-lookup"><span data-stu-id="60ad1-124">This is somewhat analogous to the specification of transforms in XSL.</span></span> <span data-ttu-id="60ad1-125">Bir dizi düğümü seçer sorgu, bir şablon için XPath ifadesi benzerdir.</span><span class="sxs-lookup"><span data-stu-id="60ad1-125">The query that selects a set of nodes is analogous to the XPath expression for a template.</span></span> <span data-ttu-id="60ad1-126">Yeni kod <xref:System.Xml.Linq.XElement> açıklamanın XSL, sıralı oluşturucuda benzer olarak kaydedilir ve `ApplyTransforms` öğedir işlev benzer `xsl:apply-templates` XSL öğesinde.</span><span class="sxs-lookup"><span data-stu-id="60ad1-126">The code to create the new <xref:System.Xml.Linq.XElement> that is saved as an annotation is analogous to the sequence constructor in XSL, and the `ApplyTransforms` element is analogous in function to the `xsl:apply-templates` element in XSL.</span></span>  
+-   <span data-ttu-id="05335-124">XSL içindeki dönüşümler belirtimi soyguna budur.</span><span class="sxs-lookup"><span data-stu-id="05335-124">This is somewhat analogous to the specification of transforms in XSL.</span></span> <span data-ttu-id="05335-125">Bir dizi düğümü seçer sorgu, bir şablon için XPath ifadesi benzerdir.</span><span class="sxs-lookup"><span data-stu-id="05335-125">The query that selects a set of nodes is analogous to the XPath expression for a template.</span></span> <span data-ttu-id="05335-126">Yeni kod <xref:System.Xml.Linq.XElement> açıklamanın XSL, sıralı oluşturucuda benzer olarak kaydedilir ve `ApplyTransforms` öğedir işlev benzer `xsl:apply-templates` XSL öğesinde.</span><span class="sxs-lookup"><span data-stu-id="05335-126">The code to create the new <xref:System.Xml.Linq.XElement> that is saved as an annotation is analogous to the sequence constructor in XSL, and the `ApplyTransforms` element is analogous in function to the `xsl:apply-templates` element in XSL.</span></span>  
   
--   <span data-ttu-id="60ad1-127">-Yazarken bu yaklaşımı uygularsanız bir avantajı, sorgu değiştirilmemiş kaynak ağacında her zaman yazma sorguları düzenleyin.</span><span class="sxs-lookup"><span data-stu-id="60ad1-127">One advantage to taking this approach - as you formulate queries, you are always writing queries on the unmodified source tree.</span></span> <span data-ttu-id="60ad1-128">Ağaç yapılan değişiklikler, yazmakta olduğunuz sorguları nasıl etkilediğini hakkında endişe duymanız gerekmez.</span><span class="sxs-lookup"><span data-stu-id="60ad1-128">You need not worry about how modifications to the tree affect the queries that you are writing.</span></span>  
+-   <span data-ttu-id="05335-127">-Yazarken bu yaklaşımı uygularsanız bir avantajı, sorgu değiştirilmemiş kaynak ağacında her zaman yazma sorguları düzenleyin.</span><span class="sxs-lookup"><span data-stu-id="05335-127">One advantage to taking this approach - as you formulate queries, you are always writing queries on the unmodified source tree.</span></span> <span data-ttu-id="05335-128">Ağaç yapılan değişiklikler, yazmakta olduğunuz sorguları nasıl etkilediğini hakkında endişe duymanız gerekmez.</span><span class="sxs-lookup"><span data-stu-id="05335-128">You need not worry about how modifications to the tree affect the queries that you are writing.</span></span>  
   
-## <a name="transforming-a-tree"></a><span data-ttu-id="60ad1-129">Bir ağaç dönüştürme</span><span class="sxs-lookup"><span data-stu-id="60ad1-129">Transforming a Tree</span></span>  
- <span data-ttu-id="60ad1-130">Bu ilk örnekte tüm yeniden adlandırır `Paragraph` düğümlerine `para`.</span><span class="sxs-lookup"><span data-stu-id="60ad1-130">This first example renames all `Paragraph` nodes to `para`.</span></span>  
+## <a name="transforming-a-tree"></a><span data-ttu-id="05335-129">Bir ağaç dönüştürme</span><span class="sxs-lookup"><span data-stu-id="05335-129">Transforming a Tree</span></span>  
+ <span data-ttu-id="05335-130">Bu ilk örnekte tüm yeniden adlandırır `Paragraph` düğümlerine `para`.</span><span class="sxs-lookup"><span data-stu-id="05335-130">This first example renames all `Paragraph` nodes to `para`.</span></span>  
   
 ```csharp  
 XNamespace xf = "http://www.microsoft.com/LinqToXmlTransform/2007";  
@@ -68,7 +68,7 @@ XElement newRoot = XForm(root);
 Console.WriteLine(newRoot);  
 ```  
   
- <span data-ttu-id="60ad1-131">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="60ad1-131">This example produces the following output:</span></span>  
+ <span data-ttu-id="05335-131">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="05335-131">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -77,8 +77,8 @@ Console.WriteLine(newRoot);
 </Root>  
 ```  
   
-## <a name="a-more-complicated-transform"></a><span data-ttu-id="60ad1-132">Daha karmaşık bir dönüştürme</span><span class="sxs-lookup"><span data-stu-id="60ad1-132">A More Complicated Transform</span></span>  
- <span data-ttu-id="60ad1-133">Aşağıdaki örnek ağaç sorgular ve ortalama ve toplamı hesaplar `Data` öğeleri ve bunları ağacına kadar yeni öğeler ekler.</span><span class="sxs-lookup"><span data-stu-id="60ad1-133">The following example queries the tree and calculates the average and sum of the `Data` elements, and adds them as new elements to the tree.</span></span>  
+## <a name="a-more-complicated-transform"></a><span data-ttu-id="05335-132">Daha karmaşık bir dönüştürme</span><span class="sxs-lookup"><span data-stu-id="05335-132">A More Complicated Transform</span></span>  
+ <span data-ttu-id="05335-133">Aşağıdaki örnek ağaç sorgular ve ortalama ve toplamı hesaplar `Data` öğeleri ve bunları ağacına kadar yeni öğeler ekler.</span><span class="sxs-lookup"><span data-stu-id="05335-133">The following example queries the tree and calculates the average and sum of the `Data` elements, and adds them as new elements to the tree.</span></span>  
   
 ```csharp  
 XNamespace xf = "http://www.microsoft.com/LinqToXmlTransform/2007";  
@@ -91,18 +91,12 @@ XElement data = new XElement("Root",
 );  
   
 // while adding annotations, you can query the source tree all you want,  
-// as the tree is not mutated while annotating.  
+// as the tree is not mutated while annotating.
+var avg = data.Elements("Data").Select(z => (Decimal)z).Average();
 data.AddAnnotation(  
     new XElement("Root",  
         new XElement(xf + "ApplyTransforms"),  
-        new XElement("Average",  
-            String.Format("{0:F4}",  
-                data  
-                .Elements("Data")  
-                .Select(z => (Decimal)z)  
-                .Average()  
-            )  
-        ),  
+        new XElement("Average", $"{avg:F4}"),
         new XElement("Sum",  
             data  
             .Elements("Data")  
@@ -126,7 +120,7 @@ Console.WriteLine("----------------");
 Console.WriteLine(newData);  
 ```  
   
- <span data-ttu-id="60ad1-134">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="60ad1-134">This example produces the following output:</span></span>  
+ <span data-ttu-id="05335-134">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="05335-134">This example produces the following output:</span></span>  
   
 ```  
 Before Transform  
@@ -148,10 +142,10 @@ After Transform
 </Root>  
 ```  
   
-## <a name="effecting-the-transform"></a><span data-ttu-id="60ad1-135">Dönüştürme etkileyen</span><span class="sxs-lookup"><span data-stu-id="60ad1-135">Effecting the Transform</span></span>  
- <span data-ttu-id="60ad1-136">Küçük bir işlevi `XForm`, yeni dönüştürülmüş ağacı özgün, ek açıklamalı ağacından oluşturur.</span><span class="sxs-lookup"><span data-stu-id="60ad1-136">A small function, `XForm`, creates a new transformed tree from the original, annotated tree.</span></span>  
+## <a name="effecting-the-transform"></a><span data-ttu-id="05335-135">Dönüştürme etkileyen</span><span class="sxs-lookup"><span data-stu-id="05335-135">Effecting the Transform</span></span>  
+ <span data-ttu-id="05335-136">Küçük bir işlevi `XForm`, yeni dönüştürülmüş ağacı özgün, ek açıklamalı ağacından oluşturur.</span><span class="sxs-lookup"><span data-stu-id="05335-136">A small function, `XForm`, creates a new transformed tree from the original, annotated tree.</span></span>  
   
--   <span data-ttu-id="60ad1-137">İşlev için sahte kod oldukça basittir:</span><span class="sxs-lookup"><span data-stu-id="60ad1-137">The pseudo code for the function is quite simple:</span></span>  
+-   <span data-ttu-id="05335-137">İşlev için sahte kod oldukça basittir:</span><span class="sxs-lookup"><span data-stu-id="05335-137">The pseudo code for the function is quite simple:</span></span>  
   
 ```  
 The function takes an XElement as an argument and returns an XElement.   
@@ -177,7 +171,7 @@ If an element is not annotated
             is transformed by calling this function recursively.  
 ```  
   
- <span data-ttu-id="60ad1-138">Bu işlev uygulamasını aşağıda verilmiştir:</span><span class="sxs-lookup"><span data-stu-id="60ad1-138">Following is the implementation of this function:</span></span>  
+ <span data-ttu-id="05335-138">Bu işlev uygulamasını aşağıda verilmiştir:</span><span class="sxs-lookup"><span data-stu-id="05335-138">Following is the implementation of this function:</span></span>  
   
 ```csharp  
 // Build a transformed XML tree per the annotations  
@@ -242,8 +236,8 @@ static XElement XForm(XElement source)
 }   
 ```  
   
-## <a name="complete-example"></a><span data-ttu-id="60ad1-139">Tam Örnek</span><span class="sxs-lookup"><span data-stu-id="60ad1-139">Complete Example</span></span>  
- <span data-ttu-id="60ad1-140">Aşağıdaki kodu içeren tam bir örnek olduğundan `XForm` işlevi.</span><span class="sxs-lookup"><span data-stu-id="60ad1-140">The following code is a complete example that includes the `XForm` function.</span></span> <span data-ttu-id="60ad1-141">Bu tür bir dönüştürme tipik kullanımları birkaçını içerir:</span><span class="sxs-lookup"><span data-stu-id="60ad1-141">It includes a few of the typical uses of this type of transform:</span></span>  
+## <a name="complete-example"></a><span data-ttu-id="05335-139">Tam Örnek</span><span class="sxs-lookup"><span data-stu-id="05335-139">Complete Example</span></span>  
+ <span data-ttu-id="05335-140">Aşağıdaki kodu içeren tam bir örnek olduğundan `XForm` işlevi.</span><span class="sxs-lookup"><span data-stu-id="05335-140">The following code is a complete example that includes the `XForm` function.</span></span> <span data-ttu-id="05335-141">Bu tür bir dönüştürme tipik kullanımları birkaçını içerir:</span><span class="sxs-lookup"><span data-stu-id="05335-141">It includes a few of the typical uses of this type of transform:</span></span>  
   
 ```csharp  
 using System;  
@@ -397,7 +391,7 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="60ad1-142">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="60ad1-142">This example produces the following output:</span></span>  
+ <span data-ttu-id="05335-142">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="05335-142">This example produces the following output:</span></span>  
   
 ```  
 Before Transform  
@@ -431,6 +425,6 @@ After Transform
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="60ad1-143">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="60ad1-143">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="05335-143">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="05335-143">See Also</span></span>
 
-- [<span data-ttu-id="60ad1-144">Gelişmiş LINQ to XML programlama (C#)</span><span class="sxs-lookup"><span data-stu-id="60ad1-144">Advanced LINQ to XML Programming (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [<span data-ttu-id="05335-144">Gelişmiş LINQ to XML programlama (C#)</span><span class="sxs-lookup"><span data-stu-id="05335-144">Advanced LINQ to XML Programming (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

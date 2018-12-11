@@ -4,24 +4,24 @@ description: Machine learning modeli oluşturmaya, eğitim ve puanlama ML.NET il
 ms.date: 11/07/2018
 ms.custom: mvc,how-to
 ms.openlocfilehash: c8b959904705e996c97bdcd8b3444e754d14d046
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297691"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148840"
 ---
-# <a name="preprocess-training-data-with-normalizers-to-use-in-data-processing---mlnet"></a><span data-ttu-id="8bd0c-103">Veri işleme - ML.NET kullanılacak normalizers ile eğitim verileri ön işleme</span><span class="sxs-lookup"><span data-stu-id="8bd0c-103">Preprocess training data with normalizers to use in data processing - ML.NET</span></span>
+# <a name="preprocess-training-data-with-normalizers-to-use-in-data-processing---mlnet"></a><span data-ttu-id="8cf60-103">Veri işleme - ML.NET kullanılacak normalizers ile eğitim verileri ön işleme</span><span class="sxs-lookup"><span data-stu-id="8cf60-103">Preprocess training data with normalizers to use in data processing - ML.NET</span></span>
 
-<span data-ttu-id="8bd0c-104">ML.NET sunan bir dizi [parametrik ve parametreli olmayan algoritmaları](https://machinelearningmastery.com/parametric-and-nonparametric-machine-learning-algorithms/).</span><span class="sxs-lookup"><span data-stu-id="8bd0c-104">ML.NET exposes a number of [parametric and non-parametric algorithms](https://machinelearningmastery.com/parametric-and-nonparametric-machine-learning-algorithms/).</span></span>
+<span data-ttu-id="8cf60-104">ML.NET sunan bir dizi [parametrik ve parametreli olmayan algoritmaları](https://machinelearningmastery.com/parametric-and-nonparametric-machine-learning-algorithms/).</span><span class="sxs-lookup"><span data-stu-id="8cf60-104">ML.NET exposes a number of [parametric and non-parametric algorithms](https://machinelearningmastery.com/parametric-and-nonparametric-machine-learning-algorithms/).</span></span>
 
-<span data-ttu-id="8bd0c-105">Sahip **değil** olarak seçtiğiniz hangi normalizer önemli olduğu **kullanın** bir normalizer doğrusal veya diğer parametrik modellerin eğitimi.</span><span class="sxs-lookup"><span data-stu-id="8bd0c-105">It's **not** as important which normalizer you choose as it is to **use** a normalizer when training linear or other parametric models.</span></span>
+<span data-ttu-id="8cf60-105">Sahip **değil** olarak seçtiğiniz hangi normalizer önemli olduğu **kullanın** bir normalizer doğrusal veya diğer parametrik modellerin eğitimi.</span><span class="sxs-lookup"><span data-stu-id="8cf60-105">It's **not** as important which normalizer you choose as it is to **use** a normalizer when training linear or other parametric models.</span></span>
 
-<span data-ttu-id="8bd0c-106">Her zaman normalizer doğrudan ML.NET öğrenme işlem hattında, bu nedenle dahil bu:</span><span class="sxs-lookup"><span data-stu-id="8bd0c-106">Always include the normalizer directly in the ML.NET learning pipeline, so it:</span></span>
+<span data-ttu-id="8cf60-106">Her zaman normalizer doğrudan ML.NET öğrenme işlem hattında, bu nedenle dahil bu:</span><span class="sxs-lookup"><span data-stu-id="8cf60-106">Always include the normalizer directly in the ML.NET learning pipeline, so it:</span></span>
 
-- <span data-ttu-id="8bd0c-107">Eğitim verilerini ve test verilerini değil, yalnızca eğitildi,</span><span class="sxs-lookup"><span data-stu-id="8bd0c-107">is only trained on the training data, and not on your test data,</span></span>
-- <span data-ttu-id="8bd0c-108">Yeni gelen verilerin tamamı, tahmin zaman ek ön işleme gerek kalmadan için doğru şekilde uygulanır.</span><span class="sxs-lookup"><span data-stu-id="8bd0c-108">is correctly applied to all the new incoming data, without the need for extra pre-processing at prediction time.</span></span>
+- <span data-ttu-id="8cf60-107">Eğitim verilerini ve test verilerini değil, yalnızca eğitildi,</span><span class="sxs-lookup"><span data-stu-id="8cf60-107">is only trained on the training data, and not on your test data,</span></span>
+- <span data-ttu-id="8cf60-108">Yeni gelen verilerin tamamı, tahmin zaman ek ön işleme gerek kalmadan için doğru şekilde uygulanır.</span><span class="sxs-lookup"><span data-stu-id="8cf60-108">is correctly applied to all the new incoming data, without the need for extra pre-processing at prediction time.</span></span>
 
-<span data-ttu-id="8bd0c-109">Bir işlem hatları öğrenme içinde normalleştirme gösteren kod parçacığı aşağıda verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="8bd0c-109">Here's a snippet of code that demonstrates normalization in learning pipelines.</span></span> <span data-ttu-id="8bd0c-110">Bunu kullanarak Iris veri kümesini varsayılır:</span><span class="sxs-lookup"><span data-stu-id="8bd0c-110">It assumes the Iris dataset:</span></span>
+<span data-ttu-id="8cf60-109">Bir işlem hatları öğrenme içinde normalleştirme gösteren kod parçacığı aşağıda verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="8cf60-109">Here's a snippet of code that demonstrates normalization in learning pipelines.</span></span> <span data-ttu-id="8cf60-110">Bunu kullanarak Iris veri kümesini varsayılır:</span><span class="sxs-lookup"><span data-stu-id="8cf60-110">It assumes the Iris dataset:</span></span>
 
 ```csharp
 // Create a new context for ML.NET operations. It can be used for exception tracking and logging, 
