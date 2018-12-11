@@ -1,40 +1,40 @@
 ---
-title: Service Fabric Windows kapsayıcıları dağıtma zamanı
-description: Azure Bulut ve Windows kapsayıcılarla varolan .NET uygulamaları modernize | Service Fabric Windows kapsayıcıları dağıtma zamanı
+title: Service fabric'e Windows kapsayıcıları ne zaman
+description: Azure Bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirme | Service fabric'e Windows kapsayıcıları ne zaman
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: c41db8b37c883f9369a6b8d1f8bccbc0535f504c
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 01d76f325480c7cf09fef36b02589a602e3ee11e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33958214"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129512"
 ---
-# <a name="when-to-deploy-windows-containers-to-service-fabric"></a>Service Fabric Windows kapsayıcıları dağıtma zamanı
+# <a name="when-to-deploy-windows-containers-to-service-fabric"></a>Service fabric'e Windows kapsayıcıları ne zaman
 
-Windows kapsayıcılarında tabanlı uygulamaları hızlı bir şekilde daha uzakta Iaas Vm'lerden taşıma platformları kullanmanız gerekir. Bu geliştirilmiş otomatik ölçeklenebilirlik ve yüksek ölçeklenebilirlik içindir ve tam yönetim deneyiminde dağıtımlar için önemli geliştirmeler kazanmak için yükseltir, sürüm oluşturma, alma ve sistem durumu izleme. Azure Service Fabric, Microsoft Azure bulut, aynı zamanda şirket içi veya başka bir bulutta bile kullanılabilir orchestrator ile bu hedefleri elde edebilirsiniz.
+Windows kapsayıcılarında tabanlı uygulamaları hızlı bir şekilde daha Iaas sanal makinelerinden taşımasına platformları kullanmanız gerekir. Geliştirilmiş otomatik ölçeklenebilirlik ve yüksek ölçeklenebilirlik için budur ve tam yönetim deneyiminde dağıtımlar için önemli geliştirmeler elde etmek için yükseltmeleri, sürüm oluşturma, geri alma işlemleri ve sistem durumu izleme. ' De Microsoft Azure bulut, şirket içi ya da başka bir bulutta kullanılabilir Azure Service Fabric, orchestrator ile bu hedeflere elde edebilirsiniz.
 
-Birçok kuruluş kaldırma ve iki nedenden dolayı kapsayıcılara tek yapılı uygulamalarınız kaydırma:
+Birçok kuruluşun kaldırarak ve kapsayıcıları tek parçalı uygulamalarla mevcut iki nedenden dolayı kaydırma:
 
--   Maliyet düşürülmesi, ya da birleştirme ve temizleme mevcut donanım veya yüksek yoğunluk çalışan uygulamalar nedeniyle.
+-   Maliyet indirimleri, birleştirme ve temizleme mevcut donanım veya daha yüksek yoğunlukta çalışan uygulamaların nedeniyle.
 
--   Geliştirme ve işlemler arasında tutarlı bir dağıtım sözleşme.
+-   Geliştirme ve operasyon arasında tutarlı dağıtım sözleşme.
 
-Maliyet azaltması sürdürdüğünü anlaşılabilir ve tüm organizasyonlar bu hedefe birleştirme olasıdır. Tutarlı bir dağıtım, değerlendirilecek daha zor, ancak aynı derecede önemli olarak gelir. Tutarlı bir dağıtım sözleşme geliştiriciler bunları uygun teknolojiyi kullanmak üzere seçmek ücretsiz ve işlemler ekibinin uygulamaları dağıtmak ve yönetmek için tek bir yolu alır söyler. Bu anlaşma birçok farklı teknolojiler karmaşıklık ile ilgili işlemleri olması ya da yalnızca belirli teknolojileri ile geliştiricilerin zorlama sorunları azaltır. Esas olarak, her uygulamanın kendi içinde bulunan yansıması kapsayıcılı.
+Maliyet indirimleri sürdürdüğünü anlaşılır ve tüm kuruluşların bu hedefe birleştirme izleme olasıdır. Tutarlı dağıtım, değerlendirmek için daha zor olduğu halde önemli olarak eşit olduğu. Geliştiriciler, bunları uygun teknolojiyi kullanmayı tercih ücretsizdir ve operasyon ekibinin uygulamaları dağıtmak ve yönetmek için tek bir yol alır tutarlı dağıtım sözleşme diyor. İşbu sözleşme işlemlerinin karmaşıklığını birçok farklı teknoloji ile uğraşmak zorunda ya da yalnızca belirli teknolojileri ile çalışmak için geliştiricilerin zorlama sorunları azaltır. Esas olarak, her uygulama kendi içinde yansıması kapsayıcıya alınmış.
 
-Bazı kuruluşlar mikro (bulut yerel uygulamalar) ekleyerek modernizing devam edecek, ancak diğer birçok kuruluş burada (bulut iyileştirilmiş uygulamaları) durdurur. İçin gerekmeyebilir çünkü Şekil 4-8'de gösterildiği gibi bu kuruluşların mikro mimarileri taşınmaz. Herhangi bir durumda, bunlar zaten kapsayıcıları artı Service Fabric kullanarak, dağıtım, içeren sağlayan bir tam yönetim deneyimi yükseltmeleri avantajları, sürüm oluşturma, alma ve sistem durumu izleme alın.
+Bazı kuruluşlar, mikro hizmetler (bulutta çalışan uygulamalar) ekleyerek modernleştirme devam eder ancak diğer pek çok kuruluş (uygulamaları bulut için iyileştirilmiş) burada durabilir. Şekil 4-8'de gösterildiği gibi bu kuruluşların, bunlar gerekmez çünkü mikro hizmet mimarileri taşınmaz. Herhangi bir durumda, bunlar zaten yanı sıra Service Fabric kapsayıcıları kullanarak, dağıtım, içeren tam yönetim sağlayan bir deneyimi yükseltme avantajları, sürüm oluşturma, geri alma işlemleri ve sistem durumu izleme alırsınız.
 
-> ![Kaldırın ve Service Fabric uygulama kaydırma](./media/image8.png)
+> ![Lift- and -shift Service Fabric uygulama](./media/image8.png)
 >
-> **Şekil 4-8.** Kaldırın ve Service Fabric uygulama kaydırma
+> **Şekil 4-8.** Lift- and -shift Service Fabric uygulama
 
-Bir anahtar Service Fabric için var olan kodu yeniden kullanma ve kaldırın ve shift yaklaşımdır. Bu nedenle, geçerli .NET Framework uygulamalarınızın Windows kapsayıcıları kullanarak geçirmek ve bunları Service Fabric dağıtabilirsiniz. Bu, sonuç olarak, yeni mikro ekleyerek modernizing giderek tutmak daha kolay olacaktır.
+Bir anahtar Service Fabric için mevcut kodu yeniden kullanma ve kaldırma ve kaydırma yaklaşımdır. Bu nedenle, Windows kapsayıcıları kullanarak geçerli .NET Framework uygulamalarınızı geçirin ve bunları Service Fabric'e dağıtma. Bu, sonuç olarak, yeni mikro hizmetler ekleyerek modernleştirme giderek korumak daha kolay olacaktır.
 
-Service Fabric diğer orchestrators karşılaştırıldığında, Service Fabric Windows tabanlı uygulamalar ve hizmetler çalıştıran en olgun vurgulamak önemlidir. Service Fabric, Windows tabanlı hizmetler ve uygulamalar, Katman 1, kritik ürünler Microsoft'tan yıl de dahil olmak üzere çalıştığı. Windows kapsayıcıları için genel kullanılabilirlik sağlamak için ilk orchestrator oluştu. Diğer, Kubernetes, DC/OS ve Docker Swarm, gibi Linux içinde daha da olgun için Service Fabric Windows tabanlı uygulamalar ve Windows kapsayıcıları daha az olgun ancak kapsayıcılardır.
+Service Fabric için diğer düzenleyiciler karşılaştırılırken, Service Fabric Windows tabanlı uygulamaları ve Hizmetleri çalıştıran en olgun sahip olduğunu vurgulamak önemlidir. Service Fabric Windows tabanlı hizmetlerin ve uygulamaların yıllık Katman-1, görev açısından kritik Microsoft ürünlerinden dahil olmak üzere çalışıyor. Windows kapsayıcıları için genel kullanılabilirlik sağlamak için ilk orchestrator olduğu. Kubernetes, DC/OS ve Docker Swarm, gibi diğer kapsayıcılar, Linux fazla olgun için Service Fabric Windows tabanlı uygulamalar ve Windows kapsayıcıları'den az olgun ancak.
 
-Service Fabric nihai amacı bir mikro yaklaşım kullanarak uygulamaları oluşturma karmaşıklıkları azaltmaktır. Belirli türdeki maliyetli redesigns önlemek için uygulamalar için bir mikro sonunda istiyorsunuz. Küçük başlayın, gerektiğinde ölçeklendirme, hizmetleri Kaldır, yeni hizmet ekleme ve müşteri ile uygulamanızı geliştirin. Mikro çoğu geliştiriciler için daha erişilebilir yapma çözülecek henüz olan diğer birçok sorunları vardır. Şu anda yalnızca kaldırma ve çalıştığınız uygulamanın Windows kapsayıcılarla kaydırma, ancak gelecekte kapsayıcılarında tabanlı mikro ekleme hakkında düşünüyorum, Service Fabric Lezzetli nokta olmasıdır.
+Service Fabric nihai amacı bir mikro hizmet yaklaşımı kullanarak uygulamaları oluşturma karmaşıklıkları azaltmaktır. Sonuçta bir mikro hizmetler belirli maliyetli yönelik çalışmalarımızı önlemek için uygulama türleri için kullanmanız gerekir. Küçükten başlayabilir, gerektiğinde ölçeklendirin, hizmetleri kullanımdan, yeni hizmetler ekleyin ve müşteri ile uygulamanızı geliştirmek. Henüz mikro hizmetler Çoğu geliştirici için daha erişilebilir hale getirmek için çözülmesi gereken birçok diğer sorunlar vardır. Şu anda yalnızca kaldırma ve kaydırma Windows kapsayıcıları ile bir uygulama, ancak gelecekte kapsayıcılarında tabanlı mikro Hizmetleri ekleme hakkında düşünmek, Service Fabric tatlı nokta olmasıdır.
 
 >[!div class="step-by-step"]
-[Önceki](when-to-deploy-windows-containers-to-azure-vms-iaas-cloud.md)
-[sonraki](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
+>[Önceki](when-to-deploy-windows-containers-to-azure-vms-iaas-cloud.md)
+>[İleri](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)

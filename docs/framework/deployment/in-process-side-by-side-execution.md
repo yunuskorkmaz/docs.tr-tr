@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ee5f223d5e92d9a60776df6bf2108a4fd14b9e0f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 83b45d5cc8424acab789b9824af887f15036488d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195209"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143850"
 ---
 # <a name="in-process-side-by-side-execution"></a>Devam Eden Yan Yana Yürütme
 İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], işlem içi yan tek bir işlemde birden çok ortak dil çalışma zamanı (CLR) sürümünü çalıştırmak için barındırma yana kullanabilirsiniz. Varsayılan olarak, COM bileşenlerini .NET Framework sürümüyle birlikte, işlem için yüklenen .NET Framework sürümünden bağımsız olarak oluşturuldukları çalıştırın yönetiliyor.  
@@ -52,15 +52,15 @@ ms.locfileid: "50195209"
   
 -   **Senaryo 1:** .NET Framework'ün önceki sürümleriyle oluşturulan COM bileşenlerini kullanan yerel uygulama.  
   
-     Yüklü .NET framework sürümleri: [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] ve diğer tüm COM bileşenleri tarafından kullanılan .NET Framework sürümleri.  
+     Yüklü .NET framework sürümleri: [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] Ve diğer tüm COM bileşenleri tarafından kullanılan .NET Framework sürümleri.  
   
-     Yapmanız gerekenler: Bu senaryoda, hiçbir şey yapma. COM bileşenleri kayıtlı olan .NET Framework sürümü ile çalışır.  
+     Yapmanız gerekenler: Bu senaryoda, hiçbir şey yapmayın. COM bileşenleri kayıtlı olan .NET Framework sürümü ile çalışır.  
   
--   **Senaryo 2**: yönetilen uygulama ile oluşturulmuş [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] çalıştırmak tercih [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)], ancak çalıştırmak istediğiniz [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 2.0 sürümünde mevcut değil.  
+-   **Senaryo 2**: Yönetilen uygulama ile oluşturulmuş [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] çalıştırmak tercih [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)], ancak çalıştırmak istediğiniz [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 2.0 sürümünde mevcut değil.  
   
      Yüklü .NET framework sürümleri: .NET Framework'ün önceki bir sürümünü ve [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
   
-     Yapmanız gerekenler: içinde [uygulama yapılandırma dosyası](../../../docs/framework/configure-apps/index.md) uygulama dizininizde [ \<başlangıç > öğesi](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) ve [ \<supportedRuntime > öğe](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) aşağıdaki gibi ayarlayın:  
+     Yapmanız gerekenler: İçinde [uygulama yapılandırma dosyası](../../../docs/framework/configure-apps/index.md) uygulama dizininizde [ \<başlangıç > öğesi](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) ve [ \<supportedRuntime > öğesi](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) aşağıdaki gibi ayarlayın:  
   
     ```xml  
     <configuration>  
@@ -71,11 +71,11 @@ ms.locfileid: "50195209"
     </configuration>  
     ```  
   
--   **Senaryo 3:** ile çalıştırmak istediğiniz .NET Framework'ün önceki sürümleriyle oluşturulan COM bileşenlerini kullanan yerel uygulama [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
+-   **Senaryo 3:** Çalıştırmak istediğiniz .NET Framework'ün önceki sürümleriyle oluşturulan COM bileşenlerini kullanan yerel uygulama [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
   
      Yüklü .NET framework sürümleri: [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
   
-     Yapmanız gerekenler: uygulama yapılandırma dosyasında uygulama dizinindeki kullanın `<startup>` öğeyle `useLegacyV2RuntimeActivationPolicy` özniteliğini `true` ve `<supportedRuntime>` öğesi aşağıdaki gibi ayarlayın:  
+     Yapmanız gerekenler: Uygulama yapılandırma dosyasında uygulama dizinindeki kullanın `<startup>` öğeyle `useLegacyV2RuntimeActivationPolicy` özniteliğini `true` ve `<supportedRuntime>` öğesi aşağıdaki gibi ayarlayın:  
   
     ```xml  
     <configuration>  
@@ -90,7 +90,7 @@ ms.locfileid: "50195209"
   
  Aşağıdaki örnek çalıştırmak, derlemek ve aşağıdaki kaydetmek için COM bileşenini kullanarak yönetilen [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]. Bileşeni üzerinde kaydetmek için **proje** menüsünde tıklayın **özellikleri**, tıklayın **derleme** sekmesine tıklayın ve ardından **COMbirlikteçalışmasıiçinkaydol**onay kutusu.  
   
-```  
+```csharp
 using System;  
 using System.Collections.Generic;  
 using System.Linq;  
@@ -115,7 +115,7 @@ namespace BasicComObject
   
  Önceki örneği tarafından oluşturulan COM nesnesi etkinleştirir aşağıdaki yönetilmeyen C++ uygulama derleyin.  
   
-```  
+```cpp
 #include "stdafx.h"  
 #include <string>  
 #include <iostream>  

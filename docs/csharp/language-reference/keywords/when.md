@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - when keyword [C#]
 ms.assetid: dd543335-ae37-48ac-9560-bd5f047b9aea
-ms.openlocfilehash: a71cbdce256b1c1bd5d101d66f216fb229d70adf
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: ab533bc6b8bcff54774d849510c66ec3436ad3b5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48844910"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146972"
 ---
  # <a name="when-c-reference"></a>zaman (C# Başvurusu)
 
@@ -23,10 +23,10 @@ Kullanabileceğiniz `when` iki bağlamlarda bir filtre koşulu belirtmek için b
 
 ## <a name="when-in-a-catch-statement"></a>`when` içinde bir `catch` deyimi
 
-C# 6 ile başlayarak `When` kullanılabilir bir `catch` deyimini yürütmek belirli bir özel durum işleyicisi için doğru bir koşulu belirtin. Kendi sözdizimi aşağıdaki gibidir:
+C# 6 ile başlayarak `when` kullanılabilir bir `catch` deyimini yürütmek belirli bir özel durum işleyicisi için doğru bir koşulu belirtin. Kendi sözdizimi aşağıdaki gibidir:
 
 ```csharp
-catch ExceptionType [e] when (expr)
+catch (ExceptionType [e]) when (expr)
 ```
 Burada *expr* bir Boole değerini döndüren bir ifadedir. Döndürürse `true`, özel durum işleyicisi; ise yürütülür `false`, yok. 
 

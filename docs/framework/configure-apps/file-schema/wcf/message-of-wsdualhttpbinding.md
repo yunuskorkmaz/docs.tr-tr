@@ -2,12 +2,12 @@
 title: '&lt;wsDualHttpBinding&gt; &lt;iletisi&gt;'
 ms.date: 03/30/2017
 ms.assetid: 75101744-eed8-4d61-91f4-5fc4473a21f2
-ms.openlocfilehash: 46f81f6d8a3b272d0eb8b2deb9ee22818b957c6d
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 494ac3c2db209ba66a2b2c32402d1dce4f65036e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850341"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145195"
 ---
 # <a name="ltmessagegt-of-ltwsdualhttpbindinggt"></a>&lt;wsDualHttpBinding&gt; &lt;iletisi&gt;
 İçin ileti düzeyi güvenliği tanımlar [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).  
@@ -52,7 +52,7 @@ ms.locfileid: "48850341"
 |Basic256|İleti özeti, anahtar kaydırma için Rsa-oaep mgf1p için Sha1 Aes256 şifrelemesi kullanın.|  
 |Basic256Rsa15|İleti şifreleme, ileti özeti için Sha1 ve anahtar kaydırma için Rsa15 Aes256 kullanın.|  
 |Basic192Rsa15|İleti şifreleme, ileti özeti için Sha1 ve anahtar kaydırma için Rsa15 Aes192 kullanın.|  
-|TripleDes|TripleDes şifreleme kullanmak, ileti özeti için Sha1, oaep Rsa mgf1p anahtar kaydırma için.|  
+|TripleDes|İleti özeti, anahtar kaydırma için Rsa-oaep mgf1p için Sha1 TripleDes şifrelemesi kullanın.|  
 |Basic128Rsa15|İleti özeti için Sha1 ve anahtar kaydırma için Rsa15 ileti şifreleme için Aes128'i kullanın.|  
 |TripleDesRsa15|İleti özeti için Sha1 ve anahtar kaydırma için Rsa15 TripleDes şifrelemesi kullanın.|  
 |Basic128Sha256|İleti şifreleme, ileti özeti için Sha256 ve anahtar kaydırma için Rsa-oaep mgf1p Aes256 kullanın.|  
@@ -68,7 +68,7 @@ ms.locfileid: "48850341"
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Yok.|Bu, anonim istemcilerle etkileşime geçmek bir hizmet sağlar. Hizmet tarafında, bu hizmeti herhangi bir istemci kimlik bilgilerini gerektirmeyeceğini belirtir. İstemcide, istemcinin bir istemci kimlik bilgileri sağlamaz gösterir.|  
+|Hiçbiri|Bu, anonim istemcilerle etkileşime geçmek bir hizmet sağlar. Hizmet tarafında, bu hizmeti herhangi bir istemci kimlik bilgilerini gerektirmeyeceğini belirtir. İstemcide, istemcinin bir istemci kimlik bilgileri sağlamaz gösterir.|  
 |Windows|SOAP değişimleri, Windows kimlik bilgisi kimliği doğrulanmış bağlamı altında olmasını sağlar. Varsa `negotiateServiceCredential` özniteliği `true`, bu bir SSPI anlaşması veya Kerberos (birlikte çalışabilen standart) ya da gerçekleştirir.|  
 |UserName|Gerekli izin verir, istemci kimlik doğrulaması kullanarak bir kullanıcı adı kimlik bilgisi. WCF parola özeti gönderme veya parola ve ileti güvenliği için bu anahtarları kullanarak anahtarlar türetme desteklemez. Bu nedenle, WCF aktarma UserName kimlik bilgileri kullanırken, güvenli olduğundan emin zorlar. Bu kimlik bilgisi modu birlikte çalışabilen bir exchange ya da temel bir birlikte çalışabilen olmayan anlaşma sonuçlanır `negotiateServiceCredential` özniteliği.|  
 |Sertifika|Gerekli izin verir, istemci kimlik doğrulaması kullanarak bir sertifika. İleti güvenlik modunu kullanılıyorsa ve `negotiateServiceCredential` özniteliği `false`, istemcinin hizmet sertifikası ile sağlanması gerekir.|  

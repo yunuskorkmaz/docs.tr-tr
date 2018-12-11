@@ -1,20 +1,18 @@
 ---
-title: 'Nasıl yapılır: Genel Ara sunucu seçimini geçersiz kılma'
+title: 'Nasıl Yapılır: Genel Ara sunucu seçimini geçersiz kılma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0da481a9-b414-4230-beb0-e3ceba882fe5
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 2be271123e34f155a79269d3b810c50fe24a40c6
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: bda2da2400c97b3cc0ad2bbc573283cff8035310
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48849938"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129070"
 ---
-# <a name="how-to-override-a-global-proxy-selection"></a>Nasıl yapılır: Genel Ara sunucu seçimini geçersiz kılma
+# <a name="how-to-override-a-global-proxy-selection"></a>Nasıl Yapılır: Genel Ara sunucu seçimini geçersiz kılma
 Bu örnekte gönderen bir **WebRequest** için `www.contoso.com` adında bir proxy sunucusu ile genel Ara sunucu seçimini geçersiz `alternateproxy` bağlantı noktası 80 üzerinde.  
   
 ## <a name="example"></a>Örnek  

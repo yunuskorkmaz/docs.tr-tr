@@ -1,17 +1,17 @@
 ---
 title: Temel türler (F#)
-description: F# dilinde kullanılan temel temel türler keşfedin.
+description: Kullanılan temel temel türler Bul F# dili.
 ms.date: 07/09/2018
-ms.openlocfilehash: 8f948d066323527b09b1d3f9f4167b95b1c875cf
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: a8a1154a211d8c87571b47cb41cb091096569472
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48026955"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145130"
 ---
 # <a name="basic-types"></a>Temel türler
 
-Bu konu F# dilinde tanımlanmış temel türleri listeler. Bu F#'de neredeyse tüm F# programına temelini oluşturan, en temel türleridir. Bunlar, bir üst .NET ilkel türler.
+Bu konu içinde tanımlanan temel türleri listeler F# dili. Bu en temel türler F#, neredeyse tüm temel oluşturan F# program. Bunlar, bir üst .NET ilkel türler.
 
 |Tür|.NET türü|Açıklama|
 |----|---------|-----------|
@@ -34,8 +34,8 @@ Bu konu F# dilinde tanımlanmış temel türleri listeler. Bu F#'de neredeyse t�
 |`float32`, `single`|<xref:System.Single>|Bir 32-bit kayan nokta türü.|
 |`float`, `double`|<xref:System.Double>|Bir 64-bit kayan nokta türü.|
 
->[!NOTE]
-Kullanarak 64-bit tamsayı türü için çok büyük bir tamsayı ile hesaplamalar gerçekleştirebilirsiniz [bigint](https://msdn.microsoft.com/library/dc8be18d-4042-46c4-b136-2f21a84f6efa) türü. `bigint` bir temel tür olarak kabul edilmez; Bunun için bir kısaltma olduğundan `System.Numerics.BigInteger`.
+> [!NOTE]
+> Kullanarak 64-bit tamsayı türü için çok büyük bir tamsayı ile hesaplamalar gerçekleştirebilirsiniz [bigint](https://msdn.microsoft.com/library/dc8be18d-4042-46c4-b136-2f21a84f6efa) türü. `bigint` bir temel tür olarak kabul edilmez; Bunun için bir kısaltma olduğundan `System.Numerics.BigInteger`.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

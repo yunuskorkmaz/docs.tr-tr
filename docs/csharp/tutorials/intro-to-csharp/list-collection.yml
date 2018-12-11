@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 6b7a00a0d7ea17ab48e673b735bdd1a77328c099
-  ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+  ms.openlocfilehash: 1d4ae646dfc4c96db77bee69d0b7fe0876cce85d
+  ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 10/28/2018
-  ms.locfileid: "50200226"
+  ms.lasthandoff: 12/10/2018
+  ms.locfileid: "53129018"
 items:
 - durationInMinutes: 1
   content: >
@@ -199,7 +199,13 @@ items:
   durationInMinutes: 3
   content: "Bu gibi bir şeyle gündeme mı?\n\n```csharp\nvar fibonacciNumbers = new List<int> {1, 1};\n\nwhile (fibonacciNumbers.Count < 20)\n{\n    var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];\n    var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];\n    \n    fibonacciNumbers.Add(previous + previous2);\n}\nforeach(var item in fibonacciNumbers)\n    Console.WriteLine(item);\n```\n\nDöngünün her yinelemesinden son iki tamsayının listesinde, bunları fiyatının ve bu değer, listeye eklemeyi yönlendiriyoruz. 20 öğe listesine ekleyene kadar döngü tekrarlanır.\n\n> [!NOTE]\n> Bu çevrimiçi kodlama deneyimi Önizleme modundadır. Sorunlarla karşılaşırsanız, Lütfen bunları rapor [dotnet/try deposunda](https://github.com/dotnet/try/issues).\n"
 - content: >-
-    Liste öğreticisini tamamladınız. Bu öğreticide son etkileşimli öğreticidir. Bu öğreticiler kendi geliştirme ortamınızda devam edebilirsiniz. Temel bilgileri öğrenmek [yerel geliştirme](local-environment.md) ve bir öğretici'ı seçin. Alıştırmanın aynısını deneyebilir, doğrudan sonraki öğreticiye taşıyın veya başlangıcıyla tekrar [içindeki numaralandırır C# ](numbers-in-csharp-local.md) öğretici.
+    Liste etkileşimli öğreticisini tamamladınız. Son giriş olan C# etkileşimli öğretici. Ziyaret ettiğiniz [.NET site](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) .NET Core SDK'sını indirmek için makinenizde bir proje oluşturun ve kodlama tutun. "Öğrenme tut" adımı makinenizde projeleri derlemek için bu öğreticileri geri getirir.
 
 
-    İle çalışma hakkında daha fazla bilgi `List` yazın [.NET Kılavuzu](../../../standard/index.md) konuda [koleksiyonları](../../../standard/collections/index.md). Ayrıca diğer birçok koleksiyon türleri hakkında bilgi edineceksiniz.
+    Daha fazla bilgi edinebilirsiniz [.NET koleksiyonları](../../../standard/collections/index.md) aşağıdaki konularda yer:
+
+    - [Bir koleksiyon türü seçme](../../../standard/collections/selecting-a-collection-class.md)
+
+    - [Yaygın olarak kullanılan koleksiyon türleri](../../../standard/collections/commonly-used-collection-types.md)
+
+    - [Genel koleksiyonlar kullanıldığı durumlar](../../../standard/collections/when-to-use-generic-collections.md)

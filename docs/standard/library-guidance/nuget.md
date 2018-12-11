@@ -4,12 +4,12 @@ description: En iyi yöntem önerileri paketleme için NuGet ile .NET kitaplıkl
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 479d1786c232ef1f843877169954e847453681c9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8ac01046f25176b781240baeba8bf1efb9376689
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185634"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129616"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -37,8 +37,6 @@ Bir NuGet paketi oluşturmak için iki ana yolu vardır. Yeni ve önerilen bir S
 Bir NuGet paketi oluşturma eski yöntem, bir `*.nuspec` dosya ve `nuget.exe` komut satırı aracı. Soubor nuspec çok denetimi verir ancak hangi derlemelerin ve hedefleri son NuGet paket içerisine dâhil etmek dikkatli bir şekilde belirtmeniz gerekir. Bir hata yapmak kolaydır veya birinin değişiklikler yaparken nuspec güncelleştirilecek unutmayın. Kullanabilirsiniz bir nuspec avantajlarındandır henüz bir SDK stilinde proje dosyası desteklemeyen çerçeveler için NuGet paketleri oluşturun.
 
 **✔️ DÜŞÜNÜN** NuGet paketi oluşturmak için bir SDK stilinde proje dosyasını kullanarak.
-
-**✔️ DÜŞÜNÜN** NuGet paketi ve derlemeler için kaynak denetimi meta verilerini eklemek için SourceLink ayarlama.
 
 ## <a name="package-dependencies"></a>Paket bağımlılıkları
 
@@ -73,6 +71,12 @@ Bir NuGet paketi birçok destekler [meta veri özelliklerini](/nuget/reference/n
 
 **✔️ YAPMAK** 64 x 64 ve en iyi sonuçları görüntülemek için saydam bir arka plana sahip bir paket simge görüntüsü kullanın.
 
+**✔️ DÜŞÜNÜN** ayarlama [SourceLink](./sourcelink.md) NuGet paketi ve derlemeler için kaynak denetimi meta verilerini eklemek için.
+
+> SourceLink otomatik olarak ekler `RepositoryUrl` ve `RepositoryType` NuGet paketi meta verileri.
+> SourceLink Ayrıca paket tam kaynak kodu hakkında bilgi oluşturulmuş ekler.
+> Örneğin, bir Git deposundan oluşturulan bir paket olarak meta veriler eklenen işleme karması sahip olur.
+
 ## <a name="pre-release-packages"></a>Yayın öncesi paketleri
 
 NuGet paketlerini sürüm sonekine sahip olarak kabul edilir [yayın öncesi](/nuget/create-packages/prerelease-packages). Bir kullanıcı kabul eder yayın öncesi paketleri, yayın öncesi paketleri sınırlı kullanıcı test için ideal hale açma sürece varsayılan olarak, NuGet Paket Yöneticisi UI kararlı yayınları gösterir.
@@ -92,9 +96,14 @@ NuGet paketlerini sürüm sonekine sahip olarak kabul edilir [yayın öncesi](/n
 
 ## <a name="symbol-packages"></a>Sembol paketleri
 
-Sembol dosyaları (`*.pdb`) derlemeleri yanı sıra .NET derleyici tarafından üretilen. Sembol dosyaları harita yürütme konumu özgün kaynak kodu, kaynak kodu olarak aracılığıyla girmek için bir hata ayıklayıcıyı kullanarak çalışıyor. NuGet destekler [ayrı sembol paketi oluşturuluyor](/nuget/create-packages/symbol-packages) .NET derlemelerini içeren ana paket yanı sıra sembol dosyalarını içeren. Sembol paketleri fikri bir sembol sunucusunda barındırılan ve yalnızca Visual Studio gibi bir araçla isteğe bağlı olarak yüklenen değildir.
+Sembol dosyaları (`*.pdb`) derlemeleri yanı sıra .NET derleyici tarafından üretilen. Sembol dosyaları harita yürütme konumu özgün kaynak kodu, kaynak kodu olarak aracılığıyla girmek için bir hata ayıklayıcıyı kullanarak çalışıyor. NuGet destekler [ayrı sembol paketi oluşturuluyor (`*.snupkg`)](/nuget/create-packages/symbol-packages-snupkg) .NET derlemelerini içeren ana paket yanı sıra sembol dosyalarını içeren. Sembol paketleri fikri bir sembol sunucusunda barındırılan ve yalnızca Visual Studio gibi bir araçla isteğe bağlı olarak yüklenen değildir.
 
-Şu anda genel ana sembolleri - [SymbolSource](http://www.symbolsource.org/) -yeni desteklemiyor [taşınabilir sembol dosyalarını](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md) (`*.pdb`) SDK stili projeleri tarafından oluşturulan ve sembol paketleri kullanışlı değildir. Sembol paketleri için önerilen bir ana kadar sembol dosyaları ana NuGet paketinin eklenebilir. NuGet paketiniz, katıştırabilir bir SDK stilinde projesi kullanarak sembol dosyalarını ayarlayarak derliyorsanız `AllowedOutputExtensionsInPackageBuildOutputFolder` özelliği: 
+NuGet.org barındıran kendi [sembolleri sunucu deposu](/nuget/create-packages/symbol-packages-snupkg#nugetorg-symbol-server). Geliştiriciler, ekleyerek NuGet.org sembol sunucusuna yayımlanması ve simgeleri kullanabilirsiniz `https://symbols.nuget.org/download/symbols` için kendi [sembol kaynakları Visual Studio'da](/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger).
+
+> [!IMPORTANT]
+> NuGet.org sembol sunucusu yalnızca yeni destekler [taşınabilir sembol dosyalarını](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md) (`*.pdb`) SDK stili projeleri tarafından oluşturuldu.
+
+Alternatif bir sembol paketi oluşturma seçeneği, ana NuGet paketinin sembol dosyaları ekleme. Ana NuGet paketini daha büyük olacaktır, ancak katıştırılmış sembol dosyaları geliştiriciler NuGet.org sembol sunucusu yapılandırmanız gerekmez anlamına gelir. NuGet paketi kullanarak bir SDK stilinde projesi oluştururken ardından sembol dosyalarını ayarlayarak katıştırabilirsiniz `AllowedOutputExtensionsInPackageBuildOutputFolder` özelliği:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -107,8 +116,10 @@ Sembol dosyaları (`*.pdb`) derlemeleri yanı sıra .NET derleyici tarafından �
 
 **✔️ DÜŞÜNÜN** sembol dosyaları ana NuGet paketini ekleme.
 
-**❌ KAÇININ** sembol dosyalarını içeren bir sembol paketi oluşturuluyor.
+> Sembol dosyaları ana NuGet paketini ekleme geliştiriciler varsayılan olarak daha iyi hata ayıklama deneyimi sunar. Bulup sembol dosyaları almak için kendi IDE'de NuGet sembol sunucusu yapılandırmanız gerekmez.
+>
+> Katıştırılmış sembol dosyalarını dezavantajı, paket boyutu yaklaşık %30 SDK stili projeleri kullanılarak derlenmiş .NET kitaplıkları için daha fazla olur. Paket boyutu önemliyse, sembolleri bir sembol paketi bunun yerine yayımlamalısınız.
 
 >[!div class="step-by-step"]
-[Önceki](./strong-naming.md)
-[İleri](./dependencies.md)
+>[Önceki](strong-naming.md)
+>[İleri](dependencies.md)

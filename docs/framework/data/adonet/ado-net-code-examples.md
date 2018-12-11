@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-ms.openlocfilehash: a809dbc34d08fc864f6cfe8263489ab52ce41e35
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8719ffc458297191514cfe65714d5b6dd862dd60
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183808"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143629"
 ---
 # <a name="adonet-code-examples"></a>ADO.NET kod örnekleri
 Bu konudaki kod listeleri aşağıdaki ADO.NET teknolojileri kullanarak bir veritabanından veri almak nasıl ekleyebileceğiniz gösterilmektedir:
@@ -63,7 +63,7 @@ Bu örnekteki kod tanıtım bağlantı varsayar. Bir Oracle sunucusunda müşter
  [!code-vb[DataWorks SampleApp.Oracle#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.Oracle/VB/source.vb#1)]
 
 ## <a name="entity-framework-examples"></a>Entity Framework örnekleri
-Aşağıdaki kod listeleri varlıkları bir varlık veri modeli (EDM) sorgulayarak bir veri kaynağından veri almak nasıl ekleyebileceğiniz gösterilmektedir. Bu örneklerde [Northwind modeli](https://msdn.microsoft.com/74521f8c-e974-48cb-8858-c08deff52638). Daha fazla bilgi için [Entity Framework'e Genel Bakış](../../../../docs/framework/data/adonet/ef/overview.md).
+Aşağıdaki kod listeleri varlıkları bir varlık veri modeli (EDM) sorgulayarak bir veri kaynağından veri almak nasıl ekleyebileceğiniz gösterilmektedir. Bu örnekler, Northwind örnek veritabanını temel alan bir model kullanır. Entity Framework hakkında daha fazla bilgi için bkz: [Entity Framework'e Genel Bakış](../../../../docs/framework/data/adonet/ef/overview.md).
 
 ### <a name="linq-to-entities"></a>LINQ - Varlıklar
 Bu örnekteki kod, yalnızca kullanıcı, Categoryıd'si ve CategoryName özellikleri içeren bir anonim tür öngörülen kategorileri nesneleri olarak verileri döndürmek için LINQ sorgusu kullanır. Daha fazla bilgi için [LINQ to Entities genel bakış](../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).
@@ -348,5 +348,5 @@ End Class
  [ADO.NET’te Veri Alma ve Değiştirme](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [Veri uygulamaları oluşturma](https://msdn.microsoft.com/library/ab334d5f-4f49-4346-bce0-3325d6130b3e)  
  [Bir varlık veri modeli (varlık çerçevesi görevler) sorgulama](https://msdn.microsoft.com/187f1caa-e4d3-4e31-bd99-5d5c2b329c77)  
- [Nasıl yapılır: Anonim türde nesneleri döndüren bir sorgu yürütme](https://msdn.microsoft.com/3b264025-e911-4d73-90ce-992d2b9d189d)  
+ [Nasıl Yapılır: Anonim türdeki nesneleri döndüren bir sorgu yürütme](https://msdn.microsoft.com/3b264025-e911-4d73-90ce-992d2b9d189d)  
  [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)  

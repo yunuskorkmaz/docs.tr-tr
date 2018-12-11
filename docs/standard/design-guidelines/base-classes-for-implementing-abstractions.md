@@ -1,19 +1,18 @@
 ---
 title: Soyutlama uygulamak için temel sınıflar
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - abstractions [.NET Framework]
 - base classes, abstractions
 ms.assetid: 37a2d9a4-9721-482a-a40f-eee2c1d97875
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9f326ee895251678c7a23ea84a11e83951edf2cc
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+author: KrzysztofCwalina
+ms.openlocfilehash: 411596f342930c9387dc6523d25805bddad18687
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45677077"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148683"
 ---
 # <a name="base-classes-for-implementing-abstractions"></a>Soyutlama uygulamak için temel sınıflar
 NET olarak söylemek gerekirse, başka bir sınıfın bu türden türetilmiş bir sınıf bir temel sınıf olur. Amacıyla bu bölümde, ancak bir taban sınıf genellikle ortak bir Özet sağlar veya diğer sınıfların bazılarını yeniden kullanmak uygulama yine de devralma varsayılan için tasarlanmış bir sınıftır. Temel sınıflar, genellikle bir Özet bir hiyerarşinin kökü altındaki çeşitli özel uygulamalar arasındaki devralma hiyerarşilerini ortasında bulunur.  
@@ -32,7 +31,7 @@ NET olarak söylemek gerekirse, başka bir sınıfın bu türden türetilmiş bi
   
  *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*  
+ *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: Kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 Addison Wesley Professional ile Microsoft Windows geliştirme serisi bir parçası olarak yayımlandı.*  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

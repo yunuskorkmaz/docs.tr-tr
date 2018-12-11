@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-ms.openlocfilehash: 36dbf725dfcd6fefe6482f7de69daea9356d3d07
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 3094c82382292be3295238ef9cf2687f6eeb98f8
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087705"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149893"
 ---
 # <a name="configuring-http-and-https"></a>HTTP ve HTTPS Yapılandırma
 WCF hizmetleri ve istemcilerin HTTP ve HTTPS üzerinden iletişim kurabilir. HTTP/HTTPS ayarları, Internet Information Services (IIS) kullanarak veya bir komut satırı aracı kullanılarak yapılandırılır. Bir WCF Hizmeti IIS HTTP veya HTTPS ayarlarında zaman barındırılan (inetmgr.exe aracını kullanarak) IIS içinde yapılandırılabilir. Şirket içinde barındırılan bir WCF Hizmeti ise, bir komut satırı aracını kullanarak HTTP veya HTTPS ayarları yapılandırılır.  
@@ -32,7 +32,7 @@ WCF hizmetleri ve istemcilerin HTTP ve HTTPS üzerinden iletişim kurabilir. HTT
   
  Aşağıdaki Httpcfg komutuyla söz dizimi görülmektedir `set urlacl` seçeneği  
   
-```  
+```console  
 httpcfg set urlacl /u {http://URL:Port/ | https://URL:Port/} /aACL  
 ```  
   
@@ -42,14 +42,14 @@ httpcfg set urlacl /u {http://URL:Port/ | https://URL:Port/} /aACL
   
  Aşağıda, bu komutu kullanarak bir örnek gösterilmektedir.  
   
-```  
+```console  
 httpcfg.exe set urlacl /u http://myhost:8000/ /a "O:AOG:DAD:(A;;RPWPCCDCLCSWRCWDWOGA;;;S-1-0-0)"  
 ```  
   
 ### <a name="running-windows-vista-windows-server-2008-r2-or-windows-7"></a>Windows Vista, Windows Server 2008 R2 veya Windows 7 çalıştıran  
  Çalıştırıyorsanız, [!INCLUDE[wv](../../../../includes/wv-md.md)], Windows Server 2008 R2 veya Windows 7'de, Netsh.exe aracını kullanın. Aşağıda, bu komutu kullanarak bir örnek gösterilmektedir.  
   
-```  
+```console  
 netsh http add urlacl url=http://+:80/MyUri user=DOMAIN\user  
 ```  
   
@@ -63,7 +63,7 @@ netsh http add urlacl url=http://+:80/MyUri user=DOMAIN\user
   
  Sertifikaları Merkezi bir depolama bağlantı IP adresi ve bağlantı noktası numarasını göre depolanır. Özel IP adresi 0.0.0.0 yerel makine için herhangi bir IP adresi ile eşleşir. Sertifika deposu yola göre URL'leri gözetmez unutmayın. Hizmetler için URL yolu farklı olsa bile aynı IP adresi ve bağlantı noktası bileşimi ile hizmet sertifikaları paylaşmanız gerekir.  
   
- Adım adım yönergeler için bkz: [nasıl yapılır: bir SSL sertifikası ile bir bağlantı noktası yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
+ Adım adım yönergeler için bkz: [nasıl yapılır: Bir SSL sertifikası ile bir bağlantı noktası yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
   
 ## <a name="configuring-the-ip-listen-list"></a>IP dinleme listesini yapılandırma  
  Bir kullanıcı bir URL kaydeder sonra HTTP Sunucusu API yalnızca bir IP adresi ve bağlantı noktası bağlar. Varsayılan olarak, tüm IP adreslerini makinenin URL'si bağlantı noktası HTTP Sunucusu API bağlar. HTTP sunucu API kullanmaz uygulamanın IP adresini ve bağlantı noktası birleşimi için önceden bağlıysa bir çakışma ortaya çıkar. Dinleme IP listesi ile makine IP adreslerini bazıları için bağlantı noktası kullanan uygulamalar bulunabilmesi WCF hizmetleri sağlar. Dinleme IP listesi herhangi bir giriş içeriyorsa, HTTP sunucu API yalnızca listesini belirtir. Bu IP adresine bağlar. Dinleme IP listesini değiştirme yönetimsel ayrıcalıklar gerekiyor.  
@@ -71,14 +71,14 @@ netsh http add urlacl url=http://+:80/MyUri user=DOMAIN\user
 ### <a name="running-windows-xp-or-server-2003"></a>Çalışan Windows XP veya Server 2003  
  Aşağıdaki örnekte gösterildiği gibi IP dinleme listesini değiştirmek için httpcfg aracını kullanın. [Windows Destek Araçları belgeleri](https://go.microsoft.com/fwlink/?LinkId=94840) httpcfg.exe aracın sözdizimi açıklar.  
   
-```  
+```console  
 httpcfg.exe set iplisten -i 0.0.0.0:8000  
 ```  
   
 ### <a name="running-windows-vista-or-windows-7"></a>Çalıştıran Windows Vista veya Windows 7  
  Aşağıdaki örnekte gösterildiği gibi dinleme IP listesini değiştirmek için netsh aracını kullanın.  
   
-```  
+```console  
 netsh http add iplisten ipaddress=0.0.0.0:8000  
 ```  
   
@@ -92,4 +92,4 @@ netsh http add iplisten ipaddress=0.0.0.0:8000
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.WSDualHttpBinding>  
- [Nasıl Yapılır: SSL Sertifikası ile Bir Bağlantı Noktasını Yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+ [Nasıl Yapılır: Bir SSL sertifikası ile bir bağlantı noktası yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)

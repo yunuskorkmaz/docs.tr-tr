@@ -2,12 +2,12 @@
 title: WordprocessingML Document1 stil kısmı
 ms.date: 07/20/2015
 ms.assetid: 5458bccf-3898-4661-904b-7d280c9239a9
-ms.openlocfilehash: 96ed7445379d9a8ca64250ef4d923786555a3882
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 8300cd96c70fd90a09543fdf5bd86398e5397a2b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44179604"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131553"
 ---
 # <a name="style-part-of-a-wordprocessingml-document"></a>WordprocessingML belgesinin stil kısmı
 Bu konuda, Office Open XML WordprocessingML belgesinin stil kısmı örneği gösterilmektedir.  
@@ -17,7 +17,7 @@ Bu konuda, Office Open XML WordprocessingML belgesinin stil kısmı örneği gö
   
  Varsayılan paragraf stilini aşağıdaki açılış etiketinde sahip bir öğe vardır:  
   
-```  
+```xml
 <w:style w:type="paragraph" w:default="1" w:styleId="Normal">  
 ```  
   

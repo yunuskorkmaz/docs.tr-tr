@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4d1010069e9d95488a99133f949ca112dc08f0e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 37ab502277cb413a116aa1301d1127f700097a45
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201604"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146582"
 ---
 # <a name="overview-of-synchronization-primitives"></a>Eşitleme temellerine genel bakış
 
@@ -79,9 +79,9 @@ Avantajları ve dezavantajları döndürme kilit kullanarak hakkında daha fazla
 
 ### <a name="readerwriterlockslim-class"></a>ReaderWriterLockSlim sınıfı
 
-<xref:System.Threading.ReaderWriterLockSlim?displayProperty=nameWithType> Sınıfı yazma için paylaşılan bir kaynağa özel erişim verir ve birden çok iş parçacığının kaynağa aynı anda okuma için erişim sağlar. Kullanmak istediğiniz <xref:System.Threading.ReaderWriterLockSlim> , okuma işlemleri iş parçacığı açısından güvenli destekler, ancak yazma işlemi gerçekleştirmek için özel erişim gerektiren bir paylaşılan veri yapısı erişimi eşitlemek için. Bir iş parçacığı özel erişim istediğinde (çağırarak gibi <xref:System.Threading.ReaderWriterLockSlim.EnterWriteLock%2A?displayProperty=nameWithType> yöntemi), tüm mevcut okuyucular kilit çıkılana ve yazıcı girdi ve çıktı kilit kadar sonraki okuyucu istekleri blok.
+<xref:System.Threading.ReaderWriterLockSlim?displayProperty=nameWithType> Sınıfı yazma için paylaşılan bir kaynağa özel erişim verir ve birden çok iş parçacığının kaynağa aynı anda okuma için erişim sağlar. Kullanmak istediğiniz <xref:System.Threading.ReaderWriterLockSlim> , okuma işlemleri iş parçacığı açısından güvenli destekler, ancak yazma işlemi gerçekleştirmek için özel erişim gerektiren bir paylaşılan veri yapısı erişimi eşitlemek için. Bir iş parçacığı özel erişim istediğinde (çağırarak gibi <xref:System.Threading.ReaderWriterLockSlim.EnterWriteLock%2A?displayProperty=nameWithType> yöntemi), mevcut tüm okuyucular kadar sonraki okuyucu ve yazıcı istekleri blok çıkıldı kilit ve yazıcı girilen ve kilit çıkıldı.
   
-Daha fazla bilgi için [Okuyucu-Yazıcı kilitleri](reader-writer-locks.md) makale ve <xref:System.Threading.ReaderWriterLockSlim> API Başvurusu.
+Daha fazla bilgi için <xref:System.Threading.ReaderWriterLockSlim> API Başvurusu.
 
 ### <a name="semaphore-and-semaphoreslim-classes"></a>Semafor ve SemaphoreSlim sınıfları
 
@@ -134,7 +134,7 @@ Daha fazla bilgi için [engel](barrier.md) makale ve <xref:System.Threading.Barr
 
 <xref:System.Threading.Interlocked?displayProperty=nameWithType> Sınıfı bir değişken üzerinde basit atomik işlemleri gerçekleştiren statik yöntemler sağlar. Atomik işlemleri ek olarak, artırma ve azaltma, exchange ve bir karşılaştırmayı bağlıdır koşullu exchange eklemek ve okuma işlemi 64-bit tamsayı değeri.
 
-Daha fazla bilgi için [birbirine geçmiş operations](interlocked-operations.md) makale ve <xref:System.Threading.Interlocked> API Başvurusu.
+Daha fazla bilgi için <xref:System.Threading.Interlocked> API Başvurusu.
 
 ## <a name="spinwait-structure"></a>SpinWait yapısı
 

@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 57c4af55bab9b17da5809f912d7c2d0b76eba40b
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: 31f4807c956a8b4fb9381145f8e9b5eaffafe698
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296717"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149503"
 ---
 # <a name="use-enumeration-classes-instead-of-enum-types"></a>Sabit listesi türleri yerine sabit listesi sınıfları kullanma
 
@@ -125,8 +125,6 @@ public abstract class CardType : Enumeration
 - **SmartEnum**. Ardalis - .NET türü kesin belirlenmiş akıllı listelerinde elde etmeye yardımcı sınıflar. \
   [*https://www.nuget.org/packages/Ardalis.SmartEnum/*](https://www.nuget.org/packages/Ardalis.SmartEnum/)
 
-
 >[!div class="step-by-step"]
-[Önceki](implement-value-objects.md)
-[İleri](domain-model-layer-validations.md)
-
+>[Önceki](implement-value-objects.md)
+>[İleri](domain-model-layer-validations.md)

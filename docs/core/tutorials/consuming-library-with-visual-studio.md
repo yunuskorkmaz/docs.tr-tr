@@ -1,19 +1,19 @@
 ---
 title: Visual Studio 2017'de bir .NET Standard kitaplığı kullanma
-description: Visual Studio 2017 ile bir sınıf kitaplığı'nda üyeleri çağırma hakkında bilgi edinin.
+description: Visual Studio 2017 ile başka bir sınıf kitaplığı üyeleri çağıran bir .NET Core uygulaması oluşturun.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 06/05/2018
 dev_langs:
 - csharp
 - vb
-ms.custom: vs-dotnet
-ms.openlocfilehash: 52ec46c23bb928b49f034270ed1d510d1acf992e
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.custom: vs-dotnet, seodec18
+ms.openlocfilehash: ccf8d33b1017c3def137de7daec4373bfeec6305
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45518171"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53168910"
 ---
 # <a name="consuming-a-net-standard-library-in-visual-studio-2017"></a>Visual Studio 2017'de bir .NET Standard kitaplığı kullanma
 
@@ -32,19 +32,19 @@ Sınıf kitaplığınıza aynı çözümde birim testlerini dahil olarak, uygula
 
 1. İçinde **Yeni Proje Ekle** iletişim kutusunda genişletin **Visual C#** düğümünü seçip alt **.NET Core** düğümünü ve ardından **konsol uygulaması (.NET Core)** Proje şablonu. İçinde **adı** metin kutusuna "Gösterimi" yazın ve seçin **Tamam** düğmesi.
 
-   ![Yeni Proje iletişim kutusu Ekle](./media/consuming-library-with-visual-studio/addnewproject.png)
+   ![Visual Studio yeni proje Ekle iletişim kutusu-C#](./media/consuming-library-with-visual-studio/add-new-project-dialog.png)
 
-1. İçinde **Çözüm Gezgini**, sağ **gösterimi** seçin ve proje **başlangıç projesi olarak ayarla** bağlam menüsünde. 
+1. İçinde **Çözüm Gezgini**, sağ **gösterimi** seçin ve proje **başlangıç projesi olarak ayarla** bağlam menüsünde.
 
-   ![ShowCase bağlam menüsü](./media/consuming-library-with-visual-studio/setstartupproject.png)
+   ![Başlangıç projesi - ayarlamak için visual Studio Proje bağlam menüsüC#](./media/consuming-library-with-visual-studio/set-startup-project-context-menu.png)
 
 1. Başlangıçta, projenize Sınıf Kitaplığı'na erişimi yok. Sınıf kitaplığınıza yöntemlerini çağırmaya izin vermek için bir başvuru sınıf kitaplığı oluşturun. İçinde **Çözüm Gezgini**, sağ `ShowCase` projenin **bağımlılıkları** düğümünü seçip alt **Başvuru Ekle**.
 
-   ![ShowCase bağımlılıkları bağlam menüsü](./media/consuming-library-with-visual-studio/addreference.png)
+   ![Visual Studio proje başvurusu bağlam menüsünde Ekle-C#](./media/consuming-library-with-visual-studio/add-reference-context-menu.png)
 
 1. İçinde **başvuru Yöneticisi** iletişim kutusunda **StringLibrary**, sınıf kitaplığı projesi ve seçin **Tamam** düğmesi.
 
-   ![Başvuru Yöneticisi](./media/consuming-library-with-visual-studio/referencemanager.png)
+   ![Visual Studio yönetme başvurular iletişim-C#](./media/consuming-library-with-visual-studio/manage-project-references.png)
 
 1. Kod penceresinde *Program.cs* dosya, tüm kodu aşağıdaki kodla değiştirin:
 
@@ -56,25 +56,25 @@ Sınıf kitaplığınıza aynı çözümde birim testlerini dahil olarak, uygula
 
 1. Gerekirse, derleme için araç çubuğunda değiştirin **hata ayıklama** sürüm `ShowCase` proje. Derleme ve yeşil bir ok seçerek programı çalıştırın **gösterimi** düğmesi.
 
-   ![Görüntü](./media/consuming-library-with-visual-studio/toolbar.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
+   ![Visual Studio Proje araç çubuğunu gösterme Hata Ayıkla düğmesine-C#](./media/consuming-library-with-visual-studio/visual-studio-project-toolbar.png)
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 1. Açık `ClassLibraryProjects` oluşturduğunuz çözüm [bir sınıf kitaplığı Visual Basic ve Visual Studio 2017'de .NET Core ile oluşturmaya](vb-library-with-visual-studio.md) konu. İçinde **Çözüm Gezgini**, sağ **ClassLibraryProjects** çözüm ve select **Ekle** > **yeni proje** gelen bağlam menüsü.
 
 1. İçinde **Yeni Proje Ekle** iletişim kutusunda genişletin **Visual Basic** düğümünü seçip alt **.NET Core** düğümünü ve ardından **konsol uygulaması (.NET Core)** proje şablonu. İçinde **adı** metin kutusuna "Gösterimi" yazın ve seçin **Tamam** düğmesi.
 
-   ![Yeni Proje iletişim kutusu Ekle](./media/consuming-library-with-visual-studio/vb-addnewproject.png)
+   ![Visual Studio yeni proje Ekle iletişim kutusu - Visual Basic](./media/consuming-library-with-visual-studio/add-new-vb-project-dialog.png)
 
 1. İçinde **Çözüm Gezgini**, sağ **gösterimi** seçin ve proje **başlangıç projesi olarak ayarla** bağlam menüsünde. 
 
-   ![ShowCase bağlam menüsü](./media/consuming-library-with-visual-studio/setstartupproject.png)
+   ![Visual Basic başlangıç projesi - ayarlamak için visual Studio Proje bağlam menüsü](./media/consuming-library-with-visual-studio/set-startup-project-context-menu.png)
 
 1. Başlangıçta, projenize Sınıf Kitaplığı'na erişimi yok. Sınıf kitaplığınıza yöntemlerini çağırmaya izin vermek için bir başvuru sınıf kitaplığı oluşturun. İçinde **Çözüm Gezgini**, sağ `ShowCase` projenin **bağımlılıkları** düğümünü seçip alt **Başvuru Ekle**.
 
-   ![ShowCase bağımlılıkları bağlam menüsü](./media/consuming-library-with-visual-studio/addreference.png)
+   ![Visual Studio proje başvurusu bağlam menüsü - Visual Basic Ekle](./media/consuming-library-with-visual-studio/add-reference-context-menu.png)
 
 1. İçinde **başvuru Yöneticisi** iletişim kutusunda **StringLibrary**, sınıf kitaplığı projesi ve seçin **Tamam** düğmesi.
 
-   ![Başvuru Yöneticisi](./media/consuming-library-with-visual-studio/referencemanager.png)
+   ![Visual Studio'yu Yönet iletişim kutusu - Visual Basic başvuruyor](./media/consuming-library-with-visual-studio/manage-project-references.png)
 
 1. Kod penceresinde *Program.vb* dosya, tüm kodu aşağıdaki kodla değiştirin:
 
@@ -86,7 +86,7 @@ Sınıf kitaplığınıza aynı çözümde birim testlerini dahil olarak, uygula
 
 1. Gerekirse, derleme için araç çubuğunda değiştirin **hata ayıklama** sürüm `ShowCase` proje. Derleme ve yeşil bir ok seçerek programı çalıştırın **gösterimi** düğmesi.
 
-   ![Görüntü](./media/consuming-library-with-visual-studio/toolbar.png)
+   ![Araç - Visual Basic hata ayıklama](./media/consuming-library-with-visual-studio/visual-studio-project-toolbar.png)
 ---
 
 Hata ayıklama ve yayımlama adımları izleyerek bu kitaplığı kullanan uygulama [Merhaba Dünya uygulamanızı Visual Studio 2017 ile hata ayıklama](debugging-with-visual-studio.md) ve [Hello World uygulamanızı Visual Studio ile yayımlama 2017](publishing-with-visual-studio.md).

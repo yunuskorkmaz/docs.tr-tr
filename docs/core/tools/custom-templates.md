@@ -2,14 +2,13 @@
 title: Yeni dotnet için özel şablonlar
 description: Herhangi bir türde .NET proje veya dosya için özel şablonlar hakkında bilgi edinin.
 author: guardrex
-ms.author: mairaw
 ms.date: 08/11/2017
-ms.openlocfilehash: 5cb160683ad373f1192945163495bf3e7957567b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 60ae9a6f0af7e75ba721a739ec51d77c59d7792e
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525973"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169427"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Yeni dotnet için özel şablonlar
 
@@ -129,7 +128,7 @@ dotnet new -u <NUGET_PACKAGE_ID>
 
 ### <a name="to-uninstall-a-template-from-a-local-nupkg-file"></a>Bir yerel nupkg dosyasından bir şablonu kaldırmak için
 
-Şablonu kaldırmak istiyorsanız, yolu kullanmaya çalışmayın *nupkg* dosya. *Bir şablon kullanarak kaldırma girişimi `dotnet new -u <PATH_TO_NUPKG_FILE>` başarısız olur.* Başvuru paketi tarafından kendi `id`:
+Şablonu kaldırmak için yolu kullanmaya çalışmayın *nupkg* dosya. Bir şablon kullanarak kaldırma girişimi `dotnet new -u <PATH_TO_NUPKG_FILE>` başarısız olur. Başvuru paketi tarafından kendi `id`:
 
 ```console
 dotnet new -u <NUGET_PACKAGE_ID>
@@ -137,7 +136,7 @@ dotnet new -u <NUGET_PACKAGE_ID>
 
 ### <a name="to-uninstall-a-template-from-a-file-system-directory"></a>Bir dosya sistemi dizinden bir şablonu kaldırmak için
 
-`FILE_SYSTEM_DIRECTORY` Projeyi içeren proje klasörü ve *. template.config* klasörü:
+`FILE_SYSTEM_DIRECTORY` Projeyi içeren proje klasörü ve *. template.config* klasör. Yolu mutlak yol olması gerekiyor belirtildi. Göreli bir yol başarısız bir şablon kullanarak kaldırmak çalışıyor. Daha fazla bilgi için [yeni dotnet](dotnet-new.md) makalesi.
 
 ```console
 dotnet new -u <FILE_SYSTEM_DIRECTORY>
@@ -153,8 +152,8 @@ dotnet new <TEMPLATE>
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Yeni dotnet (eğitim) için özel bir şablon oluşturma](../tutorials/create-custom-template.md)  
-* [DotNet/şablon GitHub deposunu Wiki](https://github.com/dotnet/templating/wiki)  
-* [DotNet/dotnet-şablonu-örnekleri GitHub deposu](https://github.com/dotnet/dotnet-template-samples)  
-* [Dotnet için kendi şablonlarınızı yeni oluşturma](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)  
-* [*Template.JSON* JSON şema Store şema](http://json.schemastore.org/template)  
+* [Yeni dotnet (eğitim) için özel bir şablon oluşturma](../tutorials/create-custom-template.md)
+* [DotNet/şablon GitHub deposunu Wiki](https://github.com/dotnet/templating/wiki)
+* [DotNet/dotnet-şablonu-örnekleri GitHub deposu](https://github.com/dotnet/dotnet-template-samples)
+* [Dotnet için kendi şablonlarınızı yeni oluşturma](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)
+* [*Template.JSON* JSON şema Store şema](http://json.schemastore.org/template)

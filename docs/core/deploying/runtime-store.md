@@ -1,19 +1,19 @@
 ---
 title: Çalışma zamanı Paket Deposu
-description: Bu konuda, .NET Core tarafından kullanılan hedef bildirimleri ve çalışma zamanı Paket Deposu açıklanmaktadır.
+description: .NET Core tarafından kullanılan hedef bildirimleri için çalışma zamanı Paket Deposu kullanmayı öğrenin.
 author: bleroy
-ms.author: mairaw
 ms.date: 08/12/2017
-ms.openlocfilehash: df2776ac2e4a2eed7f54b3031f13ab41fc714aae
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: a190e148715547fde29d3a852183ea4d75065e79
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511590"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170359"
 ---
 # <a name="runtime-package-store"></a>Çalışma zamanı Paket Deposu
 
-.NET Core 2.0 ile başlayarak, paketleme ve dağıtma hedef ortamda mevcut paketleri bilinen bir dizi karşı uygulamalar mümkündür. Daha hızlı dağıtımlar, daha düşük disk alanı kullanımını ve bazı durumlarda geliştirilmiş başlangıç performansı yararlar şunlardır.
+.NET Core 2.0 ile başlayarak, paketleme ve dağıtma hedef ortamda mevcut paketleri bilinen bir dizi karşı uygulamalar mümkündür. Daha hızlı dağıtımlar, daha düşük disk alanı kullanımı ve bazı durumlarda geliştirilmiş başlangıç performansı yararlar şunlardır.
 
 Bu özellik olarak uygulanan bir *çalışma zamanı Paket Deposu*, disk paketleri depolandığı bir dizin olan (genellikle en */usr/local/share/dotnet/store* macOS/Linux'ta ve *C: / Program dosyaları/dotnet/deposu* Windows üzerinde). Bu dizin altında mimarileri için alt vardır ve [hedef çerçeveyi](../../standard/frameworks.md). Dosya düzeni benzer şekilde, [NuGet varlıklar düzenlenir diskte](/nuget/create-packages/supporting-multiple-target-frameworks#framework-version-folder-structure):
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cast operators [C#], as and is operators
 - as operator [C#]
 - is operator [C#]
-ms.openlocfilehash: 88289099864293b3b19da62155d58ba4797948bd
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 4e0eb53a44a6348d0f5154a0a08222da90985864
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44216708"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149321"
 ---
 # <a name="how-to-safely-cast-by-using-pattern-matching-is-and-as-operators"></a>Nasıl yapılır: güvenli bir şekilde atama desen eşleştirme kullanarak olduğu ve işleçler
 
@@ -23,7 +23,7 @@ Aşağıdaki kod, eşleşen deseni gösterir `is` deyimi. Olası bir türetilmi�
 
 [!code-csharp-interactive[Pattern matching is statement](../../../samples/snippets/csharp/how-to/safelycast/patternmatching/Program.cs#PatternMatchingIs)]
 
-Önceki örnekte, birkaç desen eşleştirme sözdizimi özelliklerini gösterir. `if (a is Mammal m)` Ve `if (o is Mammal m)` deyimleri test başlatma atama ile birleştirin. Tgizli atama, yalnızca testin ne zaman başarılı gerçekleşir. Değişken `m` yalnızca katıştırılmış kapsam içinde `if` burada atanmış deyimi. Erişemiyorsanız `m` aynı yöntemi daha sonra. Etkileşimli pencerede deneyin.
+Önceki örnekte, birkaç desen eşleştirme sözdizimi özelliklerini gösterir. `if (a is Mammal m)` Ve `if (o is Mammal m)` deyimleri test başlatma atama ile birleştirin. Atama, yalnızca testin ne zaman başarılı gerçekleşir. Değişken `m` yalnızca katıştırılmış kapsam içinde `if` burada atanmış deyimi. Erişemiyorsanız `m` aynı yöntemi daha sonra. Etkileşimli pencerede deneyin.
 
 Test etmek için de aynı sözdizimini kullanabilirsiniz bir [boş değer atanabilir tür](../programming-guide/nullable-types/index.md) aşağıdaki örnek kodda gösterildiği gibi bir değer vardır:
 

@@ -1,6 +1,6 @@
 ---
 title: İç içe Geçmiş Türler
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - types, nested
@@ -10,14 +10,13 @@ helpviewer_keywords:
 - members [.NET Framework], type
 - class library design guidelines [.NET Framework], nested types
 ms.assetid: 12feb7f0-b793-4d96-b090-42d6473bab8c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2593b85dd4747a3fbe365994c3e5d9beae3e3406
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+author: KrzysztofCwalina
+ms.openlocfilehash: 7e5fe66106ad34e88bbf435794a08a159c045b02
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44188156"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148882"
 ---
 # <a name="nested-types"></a>İç içe Geçmiş Türler
 İç içe türü kapsayan tür adlı başka bir tür kapsamında tanımlanan bir türdür. İç içe türü, kapsayan türdeki tüm üyelerine erişebilir. Örneğin, kapsayan türdeki ve protected olarak kapsayan türdeki tüm üst öğelerinden içinde tanımlanan alanların tanımlı özel alanlara erişimi vardır.  
@@ -44,7 +43,7 @@ ms.locfileid: "44188156"
   
  *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*  
+ *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: Kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 Addison Wesley Professional ile Microsoft Windows geliştirme serisi bir parçası olarak yayımlandı.*  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

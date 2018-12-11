@@ -1,57 +1,56 @@
 ---
-title: Her mikro hizmet için etki alanı modeli sınırları tanımlama
-description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Her mikro hizmet için etki alanı modeli sınırları tanımlama
+title: Her mikro hizmet için etki alanı modeli sınırlarını tanımlama
+description: Ses Mimarisi elde etmek için büyük bir uygulama mikro hizmetler halinde bölümleme essence keşfedin.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: bb02d2102659abd910f9a7e62652511c65574ab7
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 09/20/2018
+ms.openlocfilehash: 9142c5abbbd3839caac377876ba54258cdf916b4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106242"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152506"
 ---
-# <a name="identify-domain-model-boundaries-for-each-microservice"></a>Her mikro hizmet için etki alanı modeli sınırlarını tanımlayın
+# <a name="identify-domain-model-boundaries-for-each-microservice"></a>Her mikro hizmet etki alanı modeli sınırlarını tanımlama
 
-Doğru küçük mikro mümkünse eğilimindedir rağmen hedef model sınırları ve her mikro hizmet boyutu tanımlarken en ayrıntılı ayrımı mümkün değil almaktır. Bunun yerine, etki alanı bilginiz destekli en anlamlı ayrımı almak için amacınız olmalıdır. Vurgu boyutuna, ancak bunun yerine iş yeteneklerini değil. Varsa yüksek bir bağımlılıkları sayısına göre uygulamanın belirli bir bölgenin cohesion gerekli Temizle, ayrıca, tek bir mikro hizmet gereksinimini çok gösterir. Cohesion nasıl parçalayın veya grup birlikte mikro tanımlamak için bir yoldur. Sonuç olarak, etki alanı hakkında daha fazla bilgi elde ederken, mikro boyutunu tekrarlayarak uyarlamanız gerekir. Doğru boyutta bulma tek adımda bir işlem değildir.
+Mümkünse küçük mikro hizmetler doğru eğilimli ancak en ayrıntılı ayrım mümkün almak için modeli sınırlarını ve her bir mikro hizmetin boyutu tanımlamak için kullanıldığında hedefi değil. Bunun yerine, etki alanı bilginizi destekli en anlamlı ayrımı almak için amacınız olmalıdır. Vurgu boyutuna, ancak bunun yerine iş özellikleri değildir. Yüksek bir bağımlılıklar sayısına göre uygulamanın belirli bir alanı gerekli Temizle uyumda varsa, ek olarak, tek bir mikro hizmet gereksinimi çok gösterir. Uyuma nasıl parçalayın veya grup birlikte mikro hizmetleri tanımlamak için bir yoldur. Sonuç olarak, etki alanı hakkında daha fazla bilgi sahibi olabilirsiniz, ancak boyutu, mikro hizmet çalıştırmalarınızı uyarlamanız gerekir. Doğru boyutta bulma kesin bir işlem değildir.
 
-[SAM Newman](https://samnewman.io/), tanınan bir promoter mikro ve kitap yazarı [yapı mikro](https://samnewman.io/books/building_microservices/), (parçası ilişkisindeki bağlam (BC) deseni temel alınarak, mikro tasarlamanız gerekir, önemli noktalar etki alanı Odaklı Tasarım), daha önce sunulduğu şekilde. Bazı durumlarda, bir BC birkaç fiziksel Hizmetleri ancak bunun tersi oluşan.
+[SAM Newman](https://samnewman.io/), mikro hizmetler ve kitabı yazarı tanınan bir promoter [mikro hizmetler oluşturma](https://samnewman.io/books/building_microservices/), mikro hizmetlerin (parçası sınırlanmış bağlam (BC) deseni temel alınarak tasarlamanız gerekir, vurgular etki alanı Odaklı Tasarım), daha önce sunulan gibi. Bazı durumlarda, bir BC birden fazla fiziksel Hizmetleri ancak bunun tam tersinin oluşan.
 
-Bir etki alanı modeli belirli bir etki alanı varlıklarla somut BC içinde geçerlidir veya mikro hizmet. Etki alanı modeli uygulanabilirliğini bir BC sınırlandırır ve verir Geliştirici takım üyeleri Temizle ve paylaşılan anlama ne bağlı olması gerekir ve ne bağımsız olarak geliştirilebilir. Mikro hizmetler için aynı hedefleri şunlardır.
+Belirli bir etki alanı varlıklarının ile etki alanı modeli içinde bir somut BC uygulanır veya mikro hizmet. Bir etki alanı modeli uygulanabilirliğini bir BC sınırlandırır ve hangi cohesive ve hangi bağımsız olarak geliştirilebilir NET ve paylaşılan anlayış verir Geliştirici ekip üyeleri. Bu, aynı hedef mikro hizmetlere yönelik ücretlerdir.
 
-Tasarım tercih ettiğiniz bildiren bir diğer araç [Conway'in yasaları](https://en.wikipedia.org/wiki/Conway%27s_law), hangi bildiren bir uygulama, üretilen kuruluş sosyal sınırlarının yansıtır. Ancak bazen bunun tersi de geçerlidir — şirketinizin yazılımı tarafından oluşturulur. Conway'in yasaları ters çevirmek ve düzenlenmesine olanak şirket istediğinizi sınırları oluşturmak, işlem iş danışmanlık doğru leaning gerekebilir.
+Tasarım seçtiğiniz bildiren başka bir aracı [Conway'in Yasası](https://en.wikipedia.org/wiki/Conway%27s_law), hangi bildiren bir uygulamanın sosyal bunu üreten kuruluş sınırları yansıtır. Ancak bazen true - şirketinizin yazılım tarafından oluşturulmuş tersidir. Conway'in Yasası ters ve düzenlenmesine olanak şirket istediğiniz şekilde sınırları oluşturmak, işlem iş danışmanlık doğru leaning gerekebilir.
 
-Sınırlanmış bağlamları belirlemek amacıyla bu için kullanılabilir bir DDD desen olan [bağlamı eşleştirme deseni](https://www.infoq.com/articles/ddd-contextmapping). Bağlam eşleme ile uygulama ve bunların sınırlarını çeşitli bağlamlarda tanımlayın. Farklı bağlamını ve küçük her alt sistemi sınır örneği için sağlamak için yaygın bir durumdur. İçerik haritası tanımlayan ve bu sınırlar etki alanları arasında açık bir yoludur. Bir BC otonom ve tek bir etki alanı ayrıntılarını içerir — ayrıntıları ister etki alanı varlıkları — ve diğer BCs tümleştirme Sözleşmelerle tanımlar. Bu bir mikro hizmet tanımına benzer: otonom, belirli etki alanı özelliği uygular ve arabirimleri sağlamanız gerekir. İçerik eşleştirme ve sınırlanmış içerik düzeni, mikro etki alanı modeli sınırlarını tanımlamak için iyi yaklaşımlar olan nedeni budur.
+Sınırlanmış Bağlamlar tanımlamak için adlandırılan bir DDD deseni kullanabilirsiniz [bağlam eşleme düzeni](https://www.infoq.com/articles/ddd-contextmapping). İçerik eşleme ile uygulama ve sınırlarının çeşitli bağlamlarda belirleyin. Farklı bir bağlama ve her küçük bir alt sınırı örneği için çok yaygındır. İçerik haritası tanımlayan ve bu sınırlar etki alanları arasında açık bir yoludur. Bir BC otonom ve tek bir etki alanı - etki alanı varlıklarının gibi ayrıntılar - ayrıntılarını içerir ve diğer BCs tümleştirme sözleşmeleriyle tanımlar. Bir mikro hizmet tanımına benzer budur: otonom, belirli bir etki alanı özelliği uygular ve arabirimleri sağlamanız gerekir. Eşleme içeriği ve içerik sınırlanmış deseni mikro hizmetlerin etki alanı modeli sınırlarını tanımlamak için iyi bir yaklaşım olan nedeni budur.
 
-Büyük bir uygulama tasarlarken, nasıl kendi etki alanı modeli parçalanmış görürsünüz — Kataloğu etki alanındaki bir etki alanı Uzman varlıklar sevkiyat etki alanından uzman, katalog ve stok etki alanlarında farklı örneği için adı. Veya yalnızca kısmi veri müşteri hakkındaki gereksinim duyan sıralama bir etki alanı Uzman müşteri hakkında ayrıntılı bilgi her depolamak isteyen bir CRM Uzman ile ilgilenirken kullanıcı etki alanı varlığı boyutu ve öznitelik sayısı farklı olabilir. Çok büyük bir uygulamayla ilgili tüm etki alanları arasında tüm etki alanı koşullarını ayırt etmek zordur. Ancak en önemli terimler bütünleştirin denememelisiniz şeydir; Bunun yerine, her etki alanı tarafından sağlanan zenginliğini ve farkları kabul edin. Tüm uygulama için birleştirilmiş bir veritabanına sahip çalışırsanız, birleştirilmiş sözlük girişimleri garip olacaktır ve birden çok etki alanı uzmanlar birine sağ duyulacaktır değil. Bu nedenle, (mikro uygulanan) BCs belirli etki alanı koşullarını burada kullanabilirsiniz ve sistem bölme ve farklı etki alanlarıyla ek BCs oluşturmak burada gerekir açıklamak için yardımcı olur.
+Büyük bir uygulama tasarlarken, nasıl kendi etki alanı modeli parçalanmış göreceğiniz - bir etki alanı uzmanı Kataloğu etki alanındaki varlıklar farklı etki alanlarında katalog ve envanter sevkiyat etki alanı uzmanı, daha örneği için adı. Ya da yeni müşteri hakkındaki verilerin bir kısmını gereksinim duyan sıralama bir etki alanı uzmanı için müşteri hakkındaki ayrıntıları depolamak isteyen bir CRM Uzman ile ilgilenirken kullanıcı etki alanı varlığı boyut ve öznitelikler sayısı bakımından farklı olabilir. Büyük bir uygulamayla ilgili tüm etki alanları genelinde tüm etki alanı koşullarını ayırt etmek çok güçtür. Ancak en önemli şey koşulları buluşturulan çalışmaması gerekir. Bunun yerine, her etki alanı tarafından sağlanan zenginlik ve farkları kabul edin. Tüm uygulama için birleştirilmiş bir veritabanı çalışırsanız, birleştirilmiş sözlük girişimleri garip olacak ve birden çok etki alanı uzmanları birine sağ ses olmaz. Bu nedenle, BCs (mikro hizmetler uygulanmış), belirli bir etki alanı terimleri burada kullanabilirsiniz ve burada sistem bölme ve farklı etki alanları ile ek BCs oluşturmak ihtiyacınız olacak açıklamak için yardımcı olur.
 
-Sağ sınırları ve her BC boyutlarını aldığınız ve etki alanı modelleri arasında birkaç güçlü ilişkiler varsa ve genellikle bunu etki alanı modeli gerektiğini tipik uygulama gerçekleştirirken, birden çok etki alanı modellerinden bilgileri birleştirmek bilirsiniz işlemler.
+Sağ sınırları ve her BC boyutlarını alındı ve etki alanı modeli gerekir tipik uygulama işlemleri gerçekleştirirken birden çok etki alanı modelleri bilgileri birleştirmek, etki alanı modelleri arasında birkaç güçlü ilişkiler varsa ve genellikle bunu anlarsınız .
 
-Belki de her mikro hizmet için bir etki alanı modeli ne kadar büyük olmalıdır soru en iyi yanıt aşağıdadır: bir otonom BC olması gereken diğer bağlamlarda (diğer sürekli geçmek zorunda kalmadan çalışmanıza olanak sağlayan mümkün olduğunca yalıtılmış mikro hizmet 's modeller). Şekil 4-10'gördüğünüz birden çok mikro (birden çok BCs) her kendi modeli ve nasıl kendi varlıklar, uygulamanızda tanımlanan etki alanlarının her biri için belirli gereksinimlerine bağlı olarak tanımlanabilir sahip nasıl.
+Belki de en iyi cevabı ne kadar büyük bir etki alanı modeli için her bir mikro hizmetin olması gerektiği sorusunun yanıtını şudur: otonom bir BC olması gereken diğer bağlamları (diğer sürekli geçiş yapmak zorunda kalmadan çalışmanıza olanak sağlayan mümkün olduğunca yalıtılmış mikro hizmet'ın modeller). Şekil 4-10'da gördüğünüz birden fazla mikro hizmetler (birden çok İBH) her biri kendi modeli ve nasıl kendi varlıklar, uygulamanızda tanımlanan etki alanlarının her biri için belirli gereksinimlerine bağlı olarak tanımlanabilir değişti.
 
-![](./media/image10.png)
+![Aynı varlık "Kullanıcılar", "Alıcıların", "Ödeyen" ve "Müşteri" sınırlanmış bağlam bağlı olarak göründüğü çeşitli varlıklarda sınırları (sınırlanmış Bağlamlar) modeli](./media/image10.png)
 
-**Şekil 4-10**. Varlıklar ve mikro hizmet modeli sınırları tanımlama
+**Şekil 4-10**. Varlıklar ve mikro hizmet modeli sınırlarını tanımlama
 
-Şekil 4-10 bir çevrimiçi konferans yönetim sistemi için ilgili bir örnek senaryo gösterilmektedir. Mikro, etki alanı uzmanlar tanımladığınız etki alanları dayalı olarak uygulanması birkaç BCs tanımladınız. Gördüğünüz gibi yalnızca bir tek mikro hizmet modeli, ödeme mikro hizmet ödemeler gibi mevcut varlıkları vardır. Bu uygulama kolay olacaktır.
+Şekil 4-10 çevrimiçi bir konferans yönetim sistemiyle ilgili bir örnek senaryo gösterilmektedir. Mikro hizmetler, etki alanı uzmanları tanımladığınız etki alanları dayalı olarak uygulanması birkaç BCs tespit ettik. Gördüğünüz gibi mevcut ödeme mikro hizmet ödemeler gibi bir tek bir mikro hizmet modelinde yalnızca varlık vardır. Bu, uygulaması kolay olacaktır.
 
-Ancak, farklı bir şekil, ancak aynı kimlik birden çok mikro birden çok etki alanı modellerinden paylaşılmasını varlıklar olabilir. Örneğin, kullanıcı varlığı konferans yönetim mikro hizmet tanımlanır. Bu aynı, aynı kimliğe sahip bir sıralama mikro alıcıların adlı veya bir ödeme mikro hizmet ve müşteri hizmetleri mikro hizmet bile bir adlandırılmış müşterinin ödeyen adlı kullanıcıdır. Bu bağlı olarak, çünkü [bulunabilen dil](https://martinfowler.com/bliki/UbiquitousLanguage.html) her etki alanı Uzman kullanarak, bir kullanıcı farklı bir perspektif bile farklı özniteliklere sahip olabilir. Kullanıcı varlığı konferans yönetim adlı mikro hizmet modelinde kişisel veri özniteliklerini çoğunu olabilir. Ancak, ödeme mikro veya müşteri hizmetleri mikro hizmet müşteri şeklinde ödeyen şeklinde, aynı kullanıcının aynı öznitelik listesine gerekmeyebilir.
+Ancak, farklı olan, ancak aynı kimlik birden fazla mikro Hizmetleri birden çok etki alanı modellerden paylaşılmasını varlıkları olabilir. Örneğin, kullanıcı varlığı konferans yönetim mikro hizmet içinde tanımlanır. Bu aynı kullanıcı, aynı kimliğe sahip bir sipariş mikro eğilimlerinden adlı veya bir ödeme mikro hizmet ve hatta bir adlandırılmış Müşteri Müşteri Hizmetleri mikro hizmet ödeyen kişi adlı olur. Bu ayarlara bağlı olarak, çünkü [bulunabilen dil](https://martinfowler.com/bliki/UbiquitousLanguage.html) her etki alanı uzmanı kullanarak, bir kullanıcı farklı bir perspektif bile farklı özniteliklere sahip olabilir. Konferans yönetim adlı mikro hizmet modelinde kullanıcı varlığı kişisel veri özniteliklerini çoğunu olabilir. Ancak, ödeme mikro hizmet veya müşteri hizmetleri mikro hizmet müşteri şeklinde ödeyen şeklinde, aynı kullanıcının aynı öznitelik listesine gerekmeyebilir.
 
-Benzer bir yaklaşım Şekil 4-11'de gösterilmiştir.
+Benzer bir yaklaşım, Şekil 4-11'de gösterilmiştir.
 
-![](./media/image11.png)
+![Geleneksel veri modeli sınırlanmış Bağlamlar arasında parçalama, sınırlanmış her bağlam içinde farklı özniteliklerle aynı kimliğe (bir alıcı da bir kullanıcıdır) paylaşan farklı varlıklar sahip olabilir.](./media/image11.png)
 
-**Şekil 4-11**. Geleneksel veri modellerini ayırma birden fazla etki alanı modeli
+**Şekil 4-11**. Geleneksel veri modellerini parçalama birden çok etki alanı modeli
 
-Nasıl kullanıcı konferans yönetim mikro hizmet modeli kullanıcı varlık olarak bulunur ve diğer öznitelikleri ya da gerçekte bir alıcı olduğunda kullanıcı hakkındaki ayrıntıları mikro fiyatlandırma hizmet alıcı varlıkta biçiminde de mevcuttur görebilirsiniz. Her mikro hizmet veya BC sorunu çözmek için veya içeriği bağlı olarak bu, yalnızca bölüm, kullanıcı varlığıyla ilgili tüm verileri gerekmeyebilir. Örneği için fiyatlandırma mikro hizmet modeli, adres veya yalnızca kimliği (kimlik) ve bir indirimler alıcı başına kişilik fiyatlandırma zaman etkileyecek durumu, kullanıcı Kimliğini gerekmez.
+Nasıl kullanıcı konferans yönetim mikro hizmet modelinde kullanıcı varlığı olarak mevcut olduğundan ve ayrıca formunda alıcı varlık başka öznitelikler veya aslında bir alıcı olduğunda kullanıcı hakkındaki ayrıntıları fiyatlandırma mikro hizmet içinde mevcut olduğundan görebilirsiniz. Sorunu çözmek için veya içeriği bağlı olarak bu, yalnızca bölüm, kullanıcı varlığı için ilgili tüm verileri, her bir mikro hizmet veya BC gerekmeyebilir. Örneği için fiyatlandırma mikro hizmet modelinde, adres veya yalnızca kimliği (kimlik) ve bir indirimler zaman alıcı başına lisans fiyatlandırma etkisi durumu, kullanıcı adını ihtiyacınız yoktur.
 
-Aynı bilgisayar başına varlık sahip adı her etki alanı modeli ancak farklı öznitelikleri. Ancak, bilgisayar başına aynı kimliği temel alarak kimlik paylaşımları gibi kullanıcı ve alıcı gerçekleşir.
+Bilgisayar varlık aynı olan ad ancak farklı öznitelikleri her etki alanı modeli. Ancak, aynı kimliği temel alarak kimlik lisans paylaşan kullanıcı ve alıcı ile'olmuyor gibi.
 
-Temel olarak, tüm bu kullanıcı kimliğini paylaşmak birden çok Hizmetleri (etki alanları), mevcut bir kullanıcı paylaşılan bir kavramı yoktur. Her etki alanı modelinde olabilir ancak kullanıcı varlık ile ilgili ek ya da farklı ayrıntıları. Bu nedenle, var. başka bir kullanıcı bir bir etki alanı (mikro) varlıktan eşleştirmek için bir yol olması gerekir.
+Temel olarak, tüm kullanıcı kimliğini paylaşan birden çok hizmetler (etki alanları), mevcut bir kullanıcının paylaşılan bir kavram yoktur. Her etki alanı modeli içinde olabilir ancak kullanıcı varlığı hakkındaki ek veya bunlardan farklı ayrıntıları. Bu nedenle, vardır (mikro) bir etki alanından kullanıcı varlığı için başka bir yolu olması gerekir.
 
-Aynı kullanıcı varlık öznitelikleri ile aynı sayıda etki alanları arasında paylaşmıyor çeşitli avantajları vardır. Mikro hizmet modelleri gerekiyor mu herhangi bir veri olmayan bir avantajı çoğaltma azaltmak için böylelikle. Başka bir avantajı, belirli bir varlık başına veri türünü sahibi ve böylece güncelleştirmeleri ve sorguları veri türü için yalnızca bu mikro hizmet tarafından yönlendirilen ana mikro hizmet yaşıyor.
-
+Etki alanları arasında aynı kullanıcı varlığı öznitelikleri ile aynı sayıda kullanılmadığı için çeşitli avantajları vardır. Mikro hizmet modellerini ihtiyaç herhangi bir veri gerekmemesi yararlarından biri çoğaltma azaltmaktır. Başka bir avantajı, belirli bir tür varlık başına veri sahibi ve böylece güncelleştirmeler ve sorgular veri türü için yalnızca bu mikro hizmet tarafından yönlendirilen ana bir mikro hizmet yaşıyor.
 
 >[!div class="step-by-step"]
-[Önceki](distributed-data-management.md)
-[sonraki](direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md)
+>[Önceki](distributed-data-management.md)
+>[İleri](direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md)

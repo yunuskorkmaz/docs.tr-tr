@@ -16,12 +16,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: 2ef25c3d7db3f445ddf7f925eb73c85760f34dc5
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 492542743b27c709901267d5fd4e066a65158b85
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44211937"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129642"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>Olay Tabanlı Zaman Uyumsuz Desene Genel Bakış
 Aynı anda birçok görevi gerçekleştiren henüz kullanıcı etkileşimine yanıt verebilir durumda kalması uygulamalar genellikle birden çok iş parçacığı kullanan bir tasarım gerektirir. <xref:System.Threading> Ad alanı, çok iş parçacıklı yüksek performanslı uygulamalar oluşturmak için gerekli olan tüm araçları sağlar, ancak etkili bir şekilde bu araçları kullanarak, birden çok iş parçacıklı yazılım Mühendisliği önemli deneyimiyle gerektirir. Görece basit birden çok iş parçacıklı uygulamalar için <xref:System.ComponentModel.BackgroundWorker> bileşeni, basit bir çözüm sağlar. Zaman uyumsuz daha gelişmiş uygulamalar için olay tabanlı zaman uyumsuz desene uyar bir class uygulamayı düşünün.  
@@ -36,7 +36,7 @@ Aynı anda birçok görevi gerçekleştiren henüz kullanıcı etkileşimine yan
   
 -   Bilinen olayları ve temsilci modelini kullanarak zaman uyumsuz işlemleri iletişim. Olay işleyicileri ve temsilcileri kullanma ile ilgili daha fazla bilgi için bkz: [olayları](../../../docs/standard/events/index.md).  
   
- Olay tabanlı zaman uyumsuz deseni destekleyen bir sınıf adlı bir veya daha fazla yöntemi olacaktır *MethodName ***zaman uyumsuz**. Bu yöntemler, zaman uyumlu sürümler, geçerli iş parçacığında aynı işlemi yansıtma. Sınıfı ayrıca olabilir bir *MethodName *** tamamlandı**  olay ve olabilir bir *MethodName *** AsyncCancel** (ya da yalnızca **CancelAsync**) yöntemi.  
+ Olay tabanlı zaman uyumsuz deseni destekleyen bir sınıf adlı bir veya daha fazla yöntemi olacaktır _MethodName_**zaman uyumsuz**. Bu yöntemler, zaman uyumlu sürümler, geçerli iş parçacığında aynı işlemi yansıtma. Sınıfı ayrıca olabilir bir _MethodName_**tamamlandı** olay ve olabilir bir _MethodName_**AsyncCancel** (ya da yalnızca  **CancelAsync**) yöntemi.  
   
  <xref:System.Windows.Forms.PictureBox> Olay tabanlı zaman uyumsuz deseni destekleyen tipik bir bileşendir. Çağırarak, zaman uyumlu bir görüntü indirebilirsiniz, <xref:System.Windows.Forms.PictureBox.Load%2A> büyük görüntüdür veya ağ bağlantısı yavaşsa, yükleme işlemi tamamlanana kadar uygulamanız ("Kapat") durdurur ancak yöntemi ve çağrısı <xref:System.Windows.Forms.PictureBox.Load%2A> döndürür.  
   
@@ -48,7 +48,7 @@ Aynı anda birçok görevi gerçekleştiren henüz kullanıcı etkileşimine yan
 >  İndirme gibi tamamlaması mümkün <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> isteği yapıldığında, bunu <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> iptal etme isteği yansıtmayabilir. Bu adlı bir *yarış durumu* ve çok iş parçacıklı programlama sık karşılaşılan bir sorundur. Çok iş parçacıklı programlama konuları hakkında daha fazla bilgi için bkz. [yönetilen iş parçacığı oluşturma en iyi yöntemler](../../../docs/standard/threading/managed-threading-best-practices.md).  
   
 ## <a name="characteristics-of-the-event-based-asynchronous-pattern"></a>Olay tabanlı zaman uyumsuz desenin özellikleri  
- Olay tabanlı zaman uyumsuz desen, belirli bir sınıf tarafından desteklenen operations karmaşıklığına bağlı olarak birkaç biçimleri alabilir. Tek bir basit sınıfları olabilir *MethodName *** zaman uyumsuz** yöntemi ve karşılık gelen *MethodName *** tamamlandı** olay. Daha karmaşık sınıfları birkaç olabilir *MethodName *** zaman uyumsuz** yöntemleri, karşılık gelen her *MethodName *** tamamlandı** bu yöntemleri zaman uyumlu sürümlerini yanı sıra, olay. Sınıfları isteğe bağlı olarak her zaman uyumsuz bir yöntem için artımlı sonuçları iptal ve ilerleme raporlaması destekleyebilir.  
+ Olay tabanlı zaman uyumsuz desen, belirli bir sınıf tarafından desteklenen operations karmaşıklığına bağlı olarak birkaç biçimleri alabilir. Tek bir basit sınıfları olabilir _MethodName_**zaman uyumsuz** yöntemi ve karşılık gelen _MethodName_**tamamlandı** olay. Daha karmaşık sınıfları birkaç olabilir _MethodName_**zaman uyumsuz** yöntemleri, karşılık gelen her _MethodName_**tamamlandı** olayı olarak Bu yöntemler de olarak zaman uyumlu sürümleri. Sınıfları isteğe bağlı olarak her zaman uyumsuz bir yöntem için artımlı sonuçları iptal ve ilerleme raporlaması destekleyebilir.  
   
  Zaman uyumsuz bir yöntem herhangi bir sayıda diğer bekleyen işlemler tamamlanmadan önce bir kez çağırmak kodunuzu sağlayan birden fazla bekleyen çağrıları (birden çok eş zamanlı başlatma), aynı zamanda destekleyebilir. Bu durumu doğru şekilde işleme her işlemin tamamlanmasını izlemek için uygulamanızı gerektirebilir.  
   
@@ -118,14 +118,14 @@ public class AsyncExample
 >  İçin benzersiz bir değer sağlamak dikkatli olmanız gerekir `userState` çağrılarınızı çağırma birden fazla aşırı yüküne de. Benzersiz olmayan görev kimliği zaman uyumsuz sınıfı throw neden olacak bir <xref:System.ArgumentException>.  
   
 ### <a name="canceling-pending-operations"></a>İşlemleri iptal ediliyor  
- Zaman uyumsuz işlemleri, tamamlanmadan önce herhangi bir zamanda iptal etmek önemlidir. Olay tabanlı zaman uyumsuz desen uygulayan sınıflar olacaktır bir `CancelAsync` yöntemi (yalnızca bir zaman uyumsuz yöntem yoksa) veya bir *MethodName *** AsyncCancel** yöntemi (birden çok zaman uyumsuz yöntem varsa).  
+ Zaman uyumsuz işlemleri, tamamlanmadan önce herhangi bir zamanda iptal etmek önemlidir. Olay tabanlı zaman uyumsuz desen uygulayan sınıflar olacaktır bir `CancelAsync` yöntemi (yalnızca bir zaman uyumsuz yöntem yoksa) veya bir _MethodName_**AsyncCancel** (varsa birden çok yöntemi zaman uyumsuz yöntemleri).  
   
  Birden çok çağrılarına izin yöntemleri alır bir `userState` her görev ömrünü izlemek için kullanılan parametre. `CancelAsync` alan bir `userState` parametresini iptal Bekleyen Görevler belirli sağlar.  
   
  Tek bir işlem aynı anda bekleyen gibi destekleyen yöntemler `Method1Async(string param)`, iptal edilemez.  
   
 ### <a name="receiving-progress-updates-and-incremental-results"></a>Devam eden güncelleştirmelerin ve artımlı sonuçlarını alma  
- Olay tabanlı zaman uyumsuz desene uyar bir sınıf, ilerleme ve artımlı sonuçlarını izlemek için bir olay isteğe bağlı olarak sağlayabilir. Bu genellikle adlandırılacağını `ProgressChanged` veya * MethodName ***ProgressChanged**, ve karşılık gelen kendi olay işleyicisine sürecek bir <xref:System.ComponentModel.ProgressChangedEventArgs> parametresi.  
+ Olay tabanlı zaman uyumsuz desene uyar bir sınıf, ilerleme ve artımlı sonuçlarını izlemek için bir olay isteğe bağlı olarak sağlayabilir. Bu genellikle adlandırılacağını `ProgressChanged` veya _MethodName_**ProgressChanged**, ve karşılık gelen kendi olay işleyicisine sürecek bir <xref:System.ComponentModel.ProgressChangedEventArgs> parametresi.  
   
  Olay işleyicisi `ProgressChanged` olay inceleyebilirsiniz <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A?displayProperty=nameWithType> özelliği zaman uyumsuz bir görev yüzde tamamlandı belirlemek için. Bu özellik, 0-100 aralığında ve güncelleştirmek için kullanılabilir <xref:System.Windows.Forms.ProgressBar.Value%2A> özelliği bir <xref:System.Windows.Forms.ProgressBar>. Birden çok zaman uyumsuz işlemleri bekleme, kullanabileceğiniz <xref:System.ComponentModel.ProgressChangedEventArgs.UserState%2A?displayProperty=nameWithType> özelliği işlemi ayırt etmek için ilerleme bildirimi.  
   
@@ -136,9 +136,9 @@ public class AsyncExample
 - <xref:System.ComponentModel.ProgressChangedEventArgs>  
 - <xref:System.ComponentModel.BackgroundWorker>  
 - <xref:System.ComponentModel.AsyncCompletedEventArgs>  
-- [Nasıl yapılır: Olay Tabanlı Zaman Uyumsuz Deseni Destekleyen Bileşenleri Kullanma](../../../docs/standard/asynchronous-programming-patterns/how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)  
-- [Nasıl Yapılır: Arka Planda İşlem Çalıştırma](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
-- [Nasıl yapılır: Arka Plan İşlemi Kullanan Bir Form Uygulama](../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)  
+- [Nasıl Yapılır: Olay tabanlı zaman uyumsuz deseni destekleyen bileşenleri kullanma](../../../docs/standard/asynchronous-programming-patterns/how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)  
+- [Nasıl Yapılır: Arka planda işlem çalıştırma](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
+- [Nasıl Yapılır: Arka plan işlemi kullanan bir Form uygulama](../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)  
 - [Olay Tabanlı Zaman Uyumsuz Desen (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
 - [Olay Tabanlı Zaman Uyumsuz Desen Uygulamak için En İyi Yöntemler](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)  
 - [Olay Tabanlı Zaman Uyumsuz Desenin Ne Zaman Uygulanacağını Belirleme](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)

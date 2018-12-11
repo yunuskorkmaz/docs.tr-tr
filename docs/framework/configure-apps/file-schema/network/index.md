@@ -12,14 +12,12 @@ helpviewer_keywords:
 - connections [.NET Framework], network configuration elements
 - network resources, network configuration elements
 ms.assetid: f1de5a0f-76c5-4833-819f-5222b8146340
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 5783e63d81c8951afb6b1646b595fc619d51549c
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 93248823284389a865111f9ab47cdac026be55b4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837488"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143213"
 ---
 # <a name="network-settings-schema"></a>Ağ Ayarları Şeması
 Ağ ayarları, .NET Framework Internet'e nasıl bağlandığını belirtin. Aşağıdaki tabloda her bir alt yapılandırma öğesinin altında işlevi açıklanmaktadır [ \<system.Net > öğesi (ağ ayarları)](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md).  
@@ -42,5 +40,5 @@ Ağ ayarları, .NET Framework Internet'e nasıl bağlandığını belirtin. Aşa
 |[\<schemeSettings > öğesi (Uri ayarları)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Belirtir nasıl bir <xref:System.Uri> belirli düzenleri için ayrıştırılacak.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İnternet Uygulamalarını Yapılandırma](../../../../../docs/framework/network-programming/configuring-internet-applications.md)  
- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [İnternet Uygulamalarını Yapılandırma](../../../../../docs/framework/network-programming/configuring-internet-applications.md)  
+- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)

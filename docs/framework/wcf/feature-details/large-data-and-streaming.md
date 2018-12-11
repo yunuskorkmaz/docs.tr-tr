@@ -2,12 +2,12 @@
 title: Büyük Veriler ve Akış Yapma
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: f381df2acdb370c6e84d3a00079578f8fceb69f3
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: a6c655e260aa75504e9a445458664b11d8e4d56d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192580"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145143"
 ---
 # <a name="large-data-and-streaming"></a>Büyük Veriler ve Akış Yapma
 Windows Communication Foundation (WCF) iletişimleri XML tabanlı bir altyapıdır. XML veri yaygın olarak tanımlanan standart metin biçiminde kodlanmış çünkü [XML 1.0 belirtimi](https://go.microsoft.com/fwlink/?LinkId=94838), bağlı sistemleri geliştiricilere ve mimarlara genellikle açısından gönderilen iletileri kablo ayak izini (veya boyut) hakkında arasında Ağ ve metin tabanlı XML kodlama verimli ikili veri aktarımı için özel zorlukları doğurur.  
@@ -15,7 +15,7 @@ Windows Communication Foundation (WCF) iletişimleri XML tabanlı bir altyapıd�
 ## <a name="basic-considerations"></a>Temel konuları  
  WCF için aşağıdaki bilgileri hakkında bilgiler sağlamak için bu bölümde bazı genel endişelerinizi ve konuları için Kodlamalar, ikili veri vurgular ve, genellikle akışı bağlantılı sistemlerde altyapıları için geçerlidir.  
   
-### <a name="encoding-data-text-vs-binary"></a>Kodlama verileri: Metni vs. İkili  
+### <a name="encoding-data-text-vs-binary"></a>Veri kodlama: Metin vs. İkili  
  Yaygın olarak ifade edilen Geliştirici sorunları önemli ölçüde daha büyük olacak şekilde kodlama sayısal değerleri değerlendirilir XML etiketleri başlangıç ve bitiş etiketleri, yinelenen niteliği nedeniyle İkili biçimler karşılaştırıldığında önemli ölçüde olduğunu markanızın içerir çünkü metin değerleri ifade edilir ve bir metin biçiminde eklemek için özel kodlanmalı çünkü bu ikili verileri verimli bir şekilde ifade.  
   
  Ortamı genellikle çoğu bu ve benzer ilgiliyse sırada geçerli olduğundan, bir XML Web Hizmetleri ortamda kodlanmış XML metin iletileri ve eski uzak yordam çağrısı (RPC) ikili kodlanmış iletileri gerçek birbirinden çok daha az önemli. ilk göz önünde bulundurarak önerebilir.  
@@ -59,7 +59,7 @@ Windows Communication Foundation (WCF) iletişimleri XML tabanlı bir altyapıd�
  Büyük miktarlarda veri gönderilirken kurmanız gerekecektir `maxAllowedContentLength` IIS ayarını (daha fazla bilgi için [yapılandırma IIS istek sınırları](https://go.microsoft.com/fwlink/?LinkId=253165)) ve `maxReceivedMessageSize` ayarı bağlama (örneğin [ System.ServiceModel.BasicHttpBinding.MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A) veya <xref:System.ServiceModel.NetTcpBinding.MaxReceivedMessageSize%2A>). `maxAllowedContentLength` 28.6 M özelliği varsayılan olarak ve `maxReceivedMessageSize` özelliği varsayılan olarak 64 KB.  
   
 ## <a name="encodings"></a>Kodlamalar  
- Bir *kodlama* kablo iletileri sunmak nasıl hakkında kurallar kümesi tanımlar. Bir *Kodlayıcı* böyle bir kodlama uygular ve açma için Gönderen tarafında sorumlu olduğu bir <xref:System.ServiceModel.Channels.Message> bellek içi iletisine bayt akışı veya ağ üzerinden gönderilen bayt arabelleği. Alıcı tarafında Kodlayıcı bir bellek içi iletisi Bayt dizisine dönüştürür.  
+ Bir *kodlama* kablo iletileri sunmak nasıl hakkında kurallar kümesi tanımlar. Bir *Kodlayıcı* böyle bir kodlama uygular ve bellek içi kapatmak için Gönderen tarafında, sorumlu <xref:System.ServiceModel.Channels.Message> bayt akışı veya ağ üzerinden gönderilen bayt arabelleği. Alıcı tarafında Kodlayıcı bir bellek içi iletisi Bayt dizisine dönüştürür.  
   
  WCF üç kodlayıcılar içerir ve gerekirse, yazma ve kendi kodlayıcılara takın olanak tanır.  
   
@@ -239,4 +239,4 @@ public class UploadStreamMessage
 >  Arabelleğe alınan ya da akış aktarımları karar, uç noktanın yerel bir karardır. HTTP taşımaları için bir bağlantı üzerinden veya proxy sunucuları ve diğer aracılar için aktarım modunu dağıtılmaz. Hizmet arabirimi açıklamasında aktarım modunu ayarlama yansıtılmaz. Bir hizmeti bir WCF istemcisi oluşturduktan sonra akış aktarımları ile modu ayarlamak için kullanılması hedeflenen hizmetler için yapılandırma dosyasını düzenlemeniz gerekir. TCP ve adlandırılmış kanal aktarımlar, aktarım modu İlkesi onaylama olarak yayılır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: Akışı Etkinleştirme](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+ [Nasıl Yapılır: Akışı etkinleştir](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

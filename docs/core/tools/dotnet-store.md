@@ -2,14 +2,14 @@
 title: DotNet depolama komutu
 description: "'Dotnet deposu' komutunu belirtilen derlemeleri çalışma zamanı Paket Deposu."
 author: bleroy
-ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: a12738d0cc8edcbb65d5b6fab6e7c8b209b0f4b5
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.custom: seodec18
+ms.openlocfilehash: db1af95150a8949f218169b2999c92c00ac94d56
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48029901"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170736"
 ---
 # <a name="dotnet-store"></a>DotNet deposu
 
@@ -35,7 +35,7 @@ Belirtir [hedef Framework'ü](../../standard/frameworks.md).
 
 `-m|--manifest <PATH_TO_MANIFEST_FILE>`
 
-*Paket Deposu bildirim dosyası* depolamak için paketler listesini içeren bir XML dosyasıdır. Bildirim dosyasının biçimi SDK stilinde proje biçimi ile uyumludur. Bu nedenle, istediğiniz paketleri başvuran bir proje dosyası ile birlikte kullanılabilir `-m|--manifest` derlemeler çalışma zamanı paketi deposuna seçeneği. Birden çok bildirim dosyaları belirtmek için her dosya için yolu ve seçeneği yineleyin. Örneğin: `--manifest packages1.csproj --manifest packages2.csproj`.
+*Paket Deposu bildirim dosyası* depolamak için paketler listesini içeren bir XML dosyasıdır. Bildirim dosyasının biçimi SDK stilinde proje biçimi ile uyumludur. Bu nedenle, istediğiniz paketleri başvuran bir proje dosyası ile birlikte kullanılabilir `-m|--manifest` derlemeler çalışma zamanı paketi deposuna seçeneği. Birden çok bildirim dosyaları belirtmek için her dosya için yolu ve seçeneği yineleyin. Örneğin: `--manifest packages1.csproj --manifest packages2.csproj`
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 

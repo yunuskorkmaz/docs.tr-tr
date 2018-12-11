@@ -2,14 +2,15 @@
 title: '&lt;UdpDiscoveryEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1f485329-2771-43bc-88de-df8f2faa3bb7
-ms.openlocfilehash: 95c6550352d8f100c8674c2e7f630fcf55da01e2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 01808594d54d5c79a6530bc7f6a03b66dde7ee99
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144760"
 ---
 # <a name="ltudpdiscoveryendpointgt"></a>&lt;UdpDiscoveryEndpoint&gt;
-Bu yapılandırma öğesi UDP üzerinden bulma işlemleri için önceden yapılandırılmış olan standart bir uç nokta tanımlayan çok noktaya yayın bağlama. Bu uç noktaya sabit bir sözleşme var ve iki WS bulma protokolünü sürümlerini destekler. Ayrıca, sabit bir UDP bağlama ve WS-bulma belirtimleri (WS-bulma Nisan 2005 veya WS-bulma V1.1) belirtildiği gibi varsayılan bir adresi olan...  
+Bu yapılandırma öğesi, bir UDP üzerinden bulma işlemleri için önceden yapılandırılmış olan bir standart uç nokta tanımlar. çok noktaya yayın bağlaması. Bu uç nokta, sabit bir sözleşme içeriyor ve iki WS bulma protokolünü sürümlerini destekler. Ayrıca, sabit bir UDP bağlama ve WS-bulma belirtimleri (WS-bulma Nisan 2005 veya WS-bulma V1.1) belirtildiği gibi varsayılan bir adresi vardır.  
   
  \<system.ServiceModel>  
 \<standardEndpoints >  
@@ -29,26 +30,26 @@ Bu yapılandırma öğesi UDP üzerinden bulma işlemleri için önceden yapıla
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|discoveryMode|Keşif Protokolü modu belirten bir dize. Geçerli değerler "Geçici" ve "Yönetilen" dir. Yönetilen modunda bulunabilirlik Hizmetleri depo olarak davranan bir keşif proxy'si, protokolünü kullanır. Adhoc modu, UDP kullanılacak protokolü gerektirir kullanılabilir hizmetler bulmak için çok noktaya yayın mekanizması. Bu değer türünde <xref:System.ServiceModel.Discovery.ServiceDiscoveryMode>.|  
-|discoveryVersion|WS bulma protokolünü iki sürümü birini belirten bir dize. Geçerli değerler WSDiscovery11 ve WSDiscoveryApril2005 ' dir. Bu değer türünde <xref:System.ServiceModel.Discovery.DiscoveryVersion>.|  
-|maxResponseDelay|Keşif Protokolü gecikme için maksimum değeri belirten bir Timespan değerine araştırma eşleşme veya eşleşme çözmek gibi belirli iletileri göndermeden önce bekler.<br /><br /> Aynı anda tüm ProbeMatches gönderirse ağ storm neden olabilir. Bu oluşmasını önlemek için her ProbeMatch arasında rastgele bir gecikme ile ProbeMatches gönderilir. Bu öznitelik tarafından ayarlanan değer için 0 aralığı rastgele gecikmeyi kullanılıyor. Bu öznitelik 0 olarak ayarlanırsa, ProbeMatches iletileri sıkı bir döngü herhangi bir gecikme olmadan gönderilir. Aksi takdirde, tüm ProbeMatches iletileri göndermek için geçen toplam süre maxResponseDelay aşmadığından emin ProbeMatches iletileri bazı rastgele gecikme ile gönderilir. Bu değer yalnızca Hizmetleri için geçerlidir, istemciler tarafından kullanılmaz.|  
-|multicastAddress|Bulma ileti alma ve gönderme için kullanılacak bir çok noktaya yayın adresini belirtir URI. Varsayılan değer uyumluluğunu protokolü belirtimi için çok noktaya yayın adresi gibidir.|  
-|`name`|Standart uç noktasının yapılandırma adını belirten dize. Adı kullanılıyor `endpointConfiguration` yapılandırmasına standart bir uç noktasını bağlamak için hizmet uç noktası özniteliği.|  
+|discoveryMode|Bulma kuralının modu belirten bir dize. Geçerli değerler şunlardır: "Geçici" ve "Yönetilen". Yönetilen modda bir bulunabilir hizmet deposu olarak hareket eden bir keşif proxy'si, protokolü kullanır. Anlık mod gerektirir UDP kullanılacak protokolü kullanılabilir hizmetleri bulmak için çok noktaya yayın mekanizması. Bu değer türünde <xref:System.ServiceModel.Discovery.ServiceDiscoveryMode>.|  
+|DiscoveryVersion|Bir WS bulma protokolünü iki sürümünü belirten bir dize. Geçerli değerler şunlardır: WSDiscovery11 ve WSDiscoveryApril2005. Bu değer türünde <xref:System.ServiceModel.Discovery.DiscoveryVersion>.|  
+|maxResponseDelay|Araştırma eşleşme veya eşleşme gidermek gibi belirli iletileri göndermeden önce gecikme Bulma Protokolü için maksimum değeri belirten bir Timespan değeri bekler.<br /><br /> Aynı anda tüm ProbeMatches gönderiliyorsa, ağ storm neden olabilir. Bunun gerçekleşmesini önlemek için her ProbeMatch arasında rastgele bir gecikme ile ProbeMatches gönderilir. Bu öznitelik tarafından ayarlanan değer için 0 aralığındaki rastgele gecikme var. Bu öznitelik 0 olarak ayarlanırsa, herhangi bir gecikme olmadan sıkı bir döngüde ProbeMatches iletileri gönderilir. Aksi takdirde, tüm ProbeMatches ileti göndermek için geçen toplam süre maxResponseDelay aşmayacak şekilde ProbeMatches iletileri rastgele bir gecikme süresi ile gönderilir. Bu değer yalnızca hizmetler için geçerlidir, istemciler tarafından kullanılmaz.|  
+|multicastAddress|Bulma ileti alma ve gönderme için kullanılacak bir çok noktaya yayın adresini belirten bir URI. Varsayılan değer uyumlu protokolü belirtimi için çok noktaya yayın adresi gibidir.|  
+|`name`|Standart uç nokta yapılandırmasını adını belirten dize. Adı kullanılıyor `endpointConfiguration` özniteliği bir standart uç noktası yapılandırmasına bağlamak için hizmet uç noktası.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Udpannouncementendpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/udptransportsettings.md)|UDP taşıma UDP uç noktası için yapılandırmanıza olanak tanıyan ayarlar koleksiyonu.|  
+|[\<Udpannouncementendpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/udptransportsettings.md)|UDP taşıma için UDP uç nokta yapılandırmanıza olanak tanıyan ayarların koleksiyonudur.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Standart uç noktalar koleksiyonu uç noktaları biriyle önceden tanımlanmış veya bunların özelliklerinin (adresi, bağlama, sözleşme) daha fazla sabit.|  
+|[\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Daha fazla (adresi, bağlama, anlaşma) kendi özellik sabit veya olan standart uç noktaları koleksiyonu uç noktaları biriyle önceden tanımlanmış.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir UDP üzerinden bulma iletiler için dinleme hizmeti gösterir çok noktaya yayın taşıma.  
+ Aşağıdaki örnek, bir UDP üzerinden bulma iletiler için dinleme hizmet gösterir. çok noktaya yayın taşıma.  
   
 ```xml
 <services>  

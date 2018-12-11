@@ -3,11 +3,11 @@ title: Eşler arası ağ senaryoları
 ms.date: 03/30/2017
 ms.assetid: d23b1a64-2e08-4014-882a-c1dd766bdcc2
 ms.openlocfilehash: 46e0be29d367db0d36b87c063779d55d1338b39e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199948"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129577"
 ---
 # <a name="peer-to-peer-networking-scenarios"></a>Eşler arası ağ senaryoları
 Eşler arası ağ iletişimi etkinleştirir veya aşağıdaki senaryolarda geliştirir:  
@@ -22,7 +22,7 @@ Eşler arası ağ iletişimi etkinleştirir veya aşağıdaki senaryolarda geli�
   
  RTC, gerçek zamanlı oyun benzer bugün var. Oyun topluluğuna Internet üzerinden değiştirebileceğiniz birçok Web tabanlı oyun siteleri vardır. Bunlar, benzer ilgi alanlarına sahip diğer oyuncular bulun ve oyun birlikte olanağı sunar. Oyun siteler yalnızca Internet'te mevcut ve doğru avid sağlamıştır sorunudur dünyanın en iyi oyuncular karşı yürütmek için isteyen oyuncu. Bu siteler, izlemek ve işlemde yardımcı olmak için istatistikler sağlar. Ancak, bu siteleri tatillerde bir geçici oyun arkadaşlarınız çeşitli ağ ortamları arasında ayarlamak izin vermez. Eşler arası ağ bu yeteneği sağlar.  
   
-## <a name="collaboration"></a>İşbirliği  
+## <a name="collaboration"></a>İş Birliği  
   
 -   Hedef çözme proje çalışma alanları  
   

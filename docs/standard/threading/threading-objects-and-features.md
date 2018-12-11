@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 239b2e8d-581b-4ca3-992b-0e8525b9321c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ba47ece16c74555b58780733e14de9833718c33
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 9a355c2e996ddb00dad804dfeb22987923d91aa6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873313"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144526"
 ---
 # <a name="threading-objects-and-features"></a>İş parçacığı nesneleri ve özellikleri
 
@@ -26,8 +26,6 @@ ms.locfileid: "48873313"
 |[Eşitleme temellerine genel bakış](overview-of-synchronization-primitives.md)|Bir paylaşılan kaynağa veya denetimi iş parçacığı etkileşim erişimi eşitlemek için kullanılan türleri açıklanmaktadır.|
 |[EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)|Sinyal ve sinyalleri için bekleyen iş parçacığı etkinlikleri eşitlemek için kullanılan yönetilen bir olay bekleme tanıtıcıları açıklar.|
 |[Karşılıklı dışlamalar](mutexes.md)|Açıklar <xref:System.Threading.Mutex?displayProperty=nameWithType>, paylaşılan bir kaynağa özel erişim verir.|
-|[Birbirine kenetlenmiş işlemler](interlocked-operations.md)|Açıklar <xref:System.Threading.Interlocked?displayProperty=nameWithType> birden çok iş parçacığı tarafından paylaşılan değişkenleri için atomik işlemler sağlar sınıfını.|
-|[Okuyucu-Yazıcı Kilitleri](reader-writer-locks.md)|Açıklar <xref:System.Threading.ReaderWriterLockSlim?displayProperty=nameWithType> tek yazıcı/birden çok okuyucu paylaşılan bir kaynağa erişim sağlayan sınıf.|
 |[Semaphore ve SemaphoreSlim](semaphore-and-semaphoreslim.md)|Açıklar <xref:System.Threading.Semaphore?displayProperty=nameWithType> sınıfını, paylaşılan bir kaynağa erişmek için iş parçacığı sayısı veya bir kaynak havuzu eşzamanlı olarak sınırlar.|
 |[Engel](barrier.md)|Açıklar <xref:System.Threading.Barrier?displayProperty=nameWithType> aşamalı işlemlerinde koordinasyon iş parçacıklarının engeli desenini uygulayan sınıf.|
 |[SpinLock](spinlock.md)|Açıklar <xref:System.Threading.SpinLock?displayProperty=nameWithType> hafif bir yapısı için alternatif <xref:System.Threading.Monitor?displayProperty=nameWithType> belirli alt düzey kilitleme senaryoları için sınıf.|

@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: 651da766bc5931f5afa06699d1ec11fa40147e82
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: f10d7d03bbf88ed8f7a89a5d3919a39b3c124ae0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45678275"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130240"
 ---
 # <a name="docker-containers-images-and-registries"></a>Docker kapsayıcıları, görüntüleri ve kayıt defterleri
 
@@ -21,7 +21,7 @@ Geliştiriciler, bir görüntü kitaplığı olarak davranır ve üretim düzenl
 
 Şekil 2-4 nasıl görüntüler ve Docker kayıt defterleri için diğer bileşenleri ilişkilendirilmesi gösterir. Ayrıca birden çok kayıt defteri teklifleri satıcılardan gösterir.
 
-![Docker temel taksonomisinde: görüntüleri depolanan ve web uygulamalarını veya hizmetlerini çalıştırmak için kapsayıcılar oluşturmak için çekilmesi kullanılabilir olduğu kayıt defteri gibi bir bookshelf olduğu. Özel Docker kayıt defterleri şirket içi vardır ve herkese açık bulut. Docker hub'ı genel bir kayıt defteri Docker ile Docker Trusted Registry kurumsal sınıf çözüm, Azure, Azure Container Registry sunar saklanır. Kapsayıcı kayıt defterleri AWS, Google ve diğerleri de var.](./media/image5.PNG)
+![Docker temel taksonomisinde: Kayıt defteri, görüntüleri depolanan ve hizmeti veya web uygulaması çalıştırmak için kapsayıcılar oluşturmak için çekilmesi kullanılabilir olduğu gibi bir bookshelf olduğu. Özel Docker kayıt defterleri şirket içi vardır ve herkese açık bulut. Docker hub'ı genel bir kayıt defteri Docker ile Docker Trusted Registry kurumsal sınıf çözüm, Azure, Azure Container Registry sunar saklanır. Kapsayıcı kayıt defterleri AWS, Google ve diğerleri de var.](./media/image5.PNG)
 
 **Şekil 2-4**. Docker terimleri ve kavramları'nin Taksonomisi
 
@@ -34,5 +34,5 @@ Kayıt defterindeki görüntüleri yerleştirme çerçevesi düzeyinde, tüm ba�
 -   Görüntüleri ve seçilen dağıtım ortamınız arasında düşük ağ gecikme süresine sahiptir istiyorsunuz. Üretim ortamınızı Azure bulut ise, örneğin, büyük olasılıkla görüntülerinizi depolamak istediğiniz [Azure Container Registry](https://azure.microsoft.com/services/container-registry/) ağ gecikme süresi çok az olması. Üretim ortamınıza şirket içinde ise benzer şekilde, bu, bir şirket içi Docker Trusted Registry aynı yerel ağda kullanılabilir olmasını isteyebilirsiniz.
 
 >[!div class="step-by-step"]
-[Önceki](docker-terminology.md)
-[İleri](../net-core-net-framework-containers/index.md)
+>[Önceki](docker-terminology.md)
+>[İleri](../net-core-net-framework-containers/index.md)

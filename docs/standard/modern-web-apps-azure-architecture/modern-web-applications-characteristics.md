@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern Web uygulamaları tasarlama | Mode
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: 4c73ab59148325f66d3ee17db3fb78d397b73f15
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 6c416432f10bb93ff5012d716b2d92f13efdcd9b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404492"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147342"
 ---
 # <a name="characteristics-of-modern-web-applications"></a>Modern Web uygulamalarının özellikleri
 
@@ -77,5 +77,5 @@ Ek ASP.NET Core, geleneksel ASP.NET 4.x web uygulamaları oluşturmaya yönelik 
 >   <https://docs.microsoft.com/aspnet/core/testing/>
 
 >[!div class="step-by-step"]
-[Önceki](index.md)
-[İleri](choose-between-traditional-web-and-single-page-apps.md)
+>[Önceki](index.md)
+>[İleri](choose-between-traditional-web-and-single-page-apps.md)

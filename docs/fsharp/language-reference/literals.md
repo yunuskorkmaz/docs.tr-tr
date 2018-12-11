@@ -1,24 +1,24 @@
 ---
 title: Değişmez Değerler (F#)
-description: F# programlama dilinde değişmez değer türleri hakkında bilgi edinin.
+description: Değişmez değer türleri hakkında bilgi edinin F# programlama dilidir.
 ms.date: 05/16/2016
-ms.openlocfilehash: e6d34acd928edce8447c793105b08085ab0757b9
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 7a531cd63c5a4dc1123834d481fc998216b0d82d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44087631"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131345"
 ---
 # <a name="literals"></a>Sabit değerler
 
 > [!NOTE]
-Bu makaledeki API başvuru bağlantıları için MSDN (şimdilik) sürer.
+> Bu makaledeki API başvuru bağlantıları için MSDN (şimdilik) sürer.
 
-Bu konu, F#'de bir sabit değer türü belirtmek nasıl gösteren bir tablo sağlar.
+Bu konu, bir sabit listesinde değişmez değerin türünü gösteren bir tablo sağlar F#.
 
 ## <a name="literal-types"></a>Değişmez değer türleri
 
-Aşağıdaki tabloda değişmez değer türleri F#'de gösterilmektedir. Onaltılık gösterimdeki basamakları temsil eden karakterler büyük küçük harfe duyarlı değildir; türü tanımlayan karakterler büyük/küçük harfe duyarlıdır.
+Aşağıdaki tabloda, değişmez değer türleri gösterilmektedir F#. Onaltılık gösterimdeki basamakları temsil eden karakterler büyük küçük harfe duyarlı değildir; türü tanımlayan karakterler büyük/küçük harfe duyarlıdır.
 
 |Tür|Açıklama|Sonek veya önek|Örnekler|
 |----|-----------|----------------|--------|
@@ -47,20 +47,20 @@ Aşağıdaki tabloda değişmez değer türleri F#'de gösterilmektedir. Onaltı
 
 Unicode dizelerini kullanarak belirttiğiniz açık Kodlamalar içerebilir `\u` bir 16 bitlik onaltılık kod ya da kullanarak belirtebilirsiniz UTF-32 kodlamalarına ardından `\U` bir Unicode temsil eden bir 32 bit onaltılık kodla ve ardından vekil çifti.
 
-F# 3.1 itibariyle, kullandığınız `+` dize değişmez değerlerini birleştirmek için oturum açın. Bit düzeyinde kullanabilirsiniz veya (`|||`) numaralandırma bayraklarını birleştirmek istiyorsanız işleci. Örneğin, aşağıdaki kod F# 3.1 geçerlidir:
+Sürümünden itibaren F# kullanabileceğiniz 3.1, `+` dize değişmez değerlerini birleştirmek için oturum açın. Bit düzeyinde kullanabilirsiniz veya (`|||`) numaralandırma bayraklarını birleştirmek istiyorsanız işleci. Örneğin, aşağıdaki yasal kodudur F# 3.1:
 
 ```fsharp
 [<Literal>]
-let Literal1 = "a" + "b"
+let literal1 = "a" + "b"
 
 [<Literal>]
-let FileLocation =   __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
+let fileLocation =   __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
 
 [<Literal>]
-let Literal2 = 1 ||| 64
+let literal2 = 1 ||| 64
 
 [<Literal>]
-let Literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
+let literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
 ```
 
 Bit düzeyindeki diğer işleçlerin kullanımına izin verilmiyor.
@@ -82,14 +82,14 @@ let Numbers = (0x9F, 0o77, 0b1010)
 
 ## <a name="underscores-in-numeric-literals"></a>Sayısal sabit değerlerde alt çizgiler
 
-F# 4.1 ile başlayarak, alt çizgi karakteriyle basamak ayırabilirsiniz (`_`).
+İle başlayarak F# 4.1, basamak alt çizgi karakteriyle ayırın (`_`).
 
 ```fsharp
-let DeadBeef = 0xDEAD_BEEF
+let value = 0xDEAD_BEEF
 
-let DeadBeefAsBits = 0b1101_1110_1010_1101_1011_1110_1110_1111
+let valueAsBits = 0b1101_1110_1010_1101_1011_1110_1110_1111
 
-let ExampleSSN = 123_456_7890
+let exampleSSN = 123_456_7890
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.

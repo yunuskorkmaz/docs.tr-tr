@@ -1,19 +1,23 @@
 ---
 title: F# turu
 description: Bazı F# programlama dilinde kod örnekleriyle birlikte bu turda anahtar özelliklerini inceleyin.
-ms.date: 02/28/2018
-ms.openlocfilehash: 7a512b5fead8de69f025e791b6086c60dbfc1b24
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.date: 11/06/2018
+ms.openlocfilehash: 32bf892e97b29fcaf426791ef9ada15c9c35b5ae
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50235719"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143754"
 ---
 # <a name="tour-of-f"></a>F# turu #
 
-F# hakkında bilgi edinmek için en iyi yolu, okuma ve F# kodu yazacak sağlamaktır.  Bu makalede tura F# dilinin temel özelliklerinden bazıları aracılığıyla görür ve makinenizde yürütebilir bazı kod parçacıklarına verin.  Bir geliştirme ortamını ayarlama bilgi edinmek için kullanıma [Başlarken](tutorials/getting-started/index.md).
+F# hakkında bilgi edinmek için en iyi yolu, okuma ve F# kodu yazacak sağlamaktır. Bu makalede tura F# dilinin temel özelliklerinden bazıları aracılığıyla görür ve makinenizde yürütebilir bazı kod parçacıklarına verin. Bir geliştirme ortamını ayarlama bilgi edinmek için kullanıma [Başlarken](tutorials/getting-started/index.md).
 
 İki birincil kavram vardır F#: işlevleri ve türleri.  Bu Turun, bu iki kavrama kalan dil özelliklerini vurgulamak.
+
+## <a name="executing-the-code-online"></a>Kodu çevrimiçi yürütülüyor
+
+Öğeniz yoksa F# makinenizde yüklü tüm örnekleri ile çevrimiçi yürütebilir [rüya REPL](http://fable.io/repl/). Rüya olan bir SQL diyalektiği F# doğrudan tarayıcınızda yürütür. REPL'de izleyin örnekleri görüntülemek için kullanıma **örnekleri > öğrenin > Turu F#**  rüya REPL. sol menü çubuğunda
 
 ## <a name="functions-and-modules"></a>İşlevler ve modüller
 
@@ -81,8 +85,8 @@ F# çekirdek kitaplığının üç birincil koleksiyon türlerini listeler, dizi
 
 Koleksiyonları veya öğelerin sıralarının işleme genellikle yapılır [özyineleme](language-reference/functions/index.md#recursive-functions) F#.  F# döngüler ve kesin programlama desteği sahip olsa da, doğruluğu garanti etmek daha kolay olduğundan, özyineleme tercih edilir.
 
->[!NOTE]
-Aşağıdaki örnek deseni ile eşleşen birini kullanır `match` ifade.  Bu temel yapı, bu makalenin sonraki bölümlerinde ele alınmıştır.
+> [!NOTE]
+> Aşağıdaki örnek deseni ile eşleşen birini kullanır `match` ifade.  Bu temel yapı, bu makalenin sonraki bölümlerinde ele alınmıştır.
 
 [!code-fsharp[RecursiveFunctions](../../samples/snippets/fsharp/tour.fs#L461-L500)]
 

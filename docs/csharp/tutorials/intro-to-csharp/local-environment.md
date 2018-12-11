@@ -2,12 +2,12 @@
 title: Giriş C# -ile geliştirme araçları hakkında bilgi sahibi olun
 description: Bu makalede geliştirmek için kullanacağınız araçları için temel bir giriş sağlar C# ve makinenizde .NET uygulamaları.
 ms.date: 10/23/2018
-ms.openlocfilehash: ec7e55fbf2a89a8ec45db956fc575edeb2283f56
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: cf5bf68c1497bf62826656aa9cd2bd981128d3a2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200225"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129993"
 ---
 # <a name="become-familiar-with-the-net-development-tools"></a>.NET geliştirme araçlarıyla sahibi
 
@@ -22,7 +22,7 @@ Kullanarak uygulamaları oluşturacaksınız [ `dotnet new` ](../../../core/tool
 
 Kullandığınız hesap diğer komutlar [ `dotnet build` ](../../../core/tools/dotnet-build.md) yürütülebilirin derlenmesi için ve [ `dotnet run` ](../../../core/tools/dotnet-run.md) yürütülebilir dosyayı çalıştırmak için.
 
-## <a name="pick-your-turorial"></a>Turorial seçin
+## <a name="pick-your-tutorial"></a>Öğreticinizi seçin
 
 Aşağıdaki öğreticilerde birini başlatabilirsiniz:
 

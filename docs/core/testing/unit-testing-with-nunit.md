@@ -3,12 +3,13 @@ title: Birim testi NUnit ve .NET Core ile C#
 description: Adım adım örnek bir çözüm oluşturmak bir etkileşimli deneyim C# ve .NET Core birim testi kavramları hakkında bilgi dotnet testi ve NUnit kullanarak.
 author: rprouse
 ms.date: 08/31/2018
-ms.openlocfilehash: 253e07c16740a39566cf37ee5742a32342c78c49
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.custom: seodec18
+ms.openlocfilehash: 80c831a6d8ab9aa35435d0ff8f13334f7d169a3a
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45746750"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169046"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>Birim testi NUnit ve .NET Core ile C#
 
@@ -16,7 +17,7 @@ Bu öğretici örnek bir çözüm birim testi kavramlarını öğrenmek için ad
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-- [.NET core SDK 2.1 (v. 2.1.400)](https://www.microsoft.com/net/download) veya sonraki sürümler.
+- [.NET core 2.1 SDK](https://www.microsoft.com/net/download) veya sonraki sürümler.
 - Bir metin düzenleyicisi veya tercih ettiğiniz Kod Düzenleyicisi.
 
 ## <a name="creating-the-source-project"></a>Kaynak proje oluşturma
@@ -166,7 +167,7 @@ public bool IsPrime(int candidate)
 
 ## <a name="adding-more-features"></a>Daha fazla özellik ekleme
 
-Bir test geçirmek yaptığınız, daha fazla yazmak için zaman var. Diğer basit bazı durumlar için asal sayıları: 0, -1. Yeni testleriyle ekleyebilirsiniz `[Test]` özniteliği ancak hızla olur yorucu bir süreç. Benzer testleri paketi yazmanızı sağlayan diğer NUnit öznitelikleri vardır.  A `[TestCase]` özniteliği, aynı kod yürütün, ancak farklı giriş bağımsız değişkenleri olan testleri paketi oluşturmak için kullanılır. Kullanabileceğiniz `[TestCase]` bu girişleri değerlerini belirtmek için özniteliği.
+Bir test geçirmek yaptığınız, daha fazla yazmak için zaman var. Birkaç basit durumlardaysa asal sayıları için vardır: 0, -1. Yeni testleriyle ekleyebilirsiniz `[Test]` özniteliği ancak hızla olur yorucu bir süreç. Benzer testleri paketi yazmanızı sağlayan diğer NUnit öznitelikleri vardır.  A `[TestCase]` özniteliği, aynı kod yürütün, ancak farklı giriş bağımsız değişkenleri olan testleri paketi oluşturmak için kullanılır. Kullanabileceğiniz `[TestCase]` bu girişleri değerlerini belirtmek için özniteliği.
 
 Yeni testler oluşturmak yerine, bu öznitelik, bir tek veri tabanlı test oluşturmak için geçerlidir. Test odaklı veri asal numarası en düşük olan değerlerden küçüktür iki test yöntemi verilmiştir:
 

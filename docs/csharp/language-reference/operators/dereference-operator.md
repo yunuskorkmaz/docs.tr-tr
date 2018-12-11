@@ -1,44 +1,50 @@
 ---
 title: -&gt; İşleci (C# Başvurusu)
-ms.date: 07/20/2015
+ms.date: 11/26/2018
 f1_keywords:
 - ->_CSharpKeyword
 helpviewer_keywords:
 - member access operator (->) [C#]
 - -> operator [C#]
 ms.assetid: e39ccdc1-f1ff-4a92-bf1d-ac2c8c11316a
-ms.openlocfilehash: fb95e508ce1339868723bcc3178851e8c1355c1f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 178724ede105d809bd812461121a38d5a0e90517
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45609536"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144136"
 ---
 # <a name="-gt-operator-c-reference"></a>-&gt; İşleci (C# Başvurusu)
-`->` İşleci, bir araya getirir işaretçi başvurusunun kaldırılması ve üye erişimi.  
-  
-## <a name="remarks"></a>Açıklamalar  
- Bir ifade form  
-  
-```csharp  
-x->y  
-```  
-  
- (burada `x` bir işaretçi türü `T*` ve `y` üyesi `T`) için eşdeğerdir  
-  
-```csharp  
-(*x).y  
-```  
-  
- `->` İşleci olarak işaretlenmiş kod kullanılabilir [güvenli](../../../csharp/language-reference/keywords/unsafe.md).  
-  
- `->` İşleci aşırı yüklenemez.  
-  
-## <a name="example"></a>Örnek  
- [!code-csharp[csRefOperators#15](../../../csharp/language-reference/operators/codesnippet/CSharp/dereference-operator_1.cs)]  
-  
-## <a name="see-also"></a>Ayrıca Bkz.
 
-- [C# başvurusu](../../../csharp/language-reference/index.md)  
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
-- [C# İşleçleri](../../../csharp/language-reference/operators/index.md)
+İşaretçi üye erişimi işleci `->` işaretçi yöneltme ve üye erişimi birleştirir.
+
+Varsa `x` bir işaretçi türü `T*` ve `y` erişilebilir bir üyesidir `T`, bir ifade formu
+
+```csharp
+x->y
+```
+
+eşdeğerdir
+
+```csharp
+(*x).y
+```
+
+`->` İşleci gerektirir [güvenli](../keywords/unsafe.md) bağlamı.
+
+Daha fazla bilgi için [nasıl yapılır: işaretçiyle bir üyeye erişme](../../programming-guide/unsafe-code-pointers/how-to-access-a-member-with-a-pointer.md).
+
+## <a name="operator-overloadability"></a>İşleç overloadability
+
+`->` İşleci aşırı yüklenemez.
+
+## <a name="c-language-specification"></a>C# dili belirtimi
+
+Daha fazla bilgi için [işaretçi üye erişimi](~/_csharplang/spec/unsafe-code.md#pointer-member-access) bölümünü [ C# dil belirtimi](../language-specification/index.md).
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [C# başvurusu](../index.md)
+- [C# Programlama Kılavuzu](../../programming-guide/index.md)
+- [C# İşleçleri](index.md)
+- [İşaretçi türleri](../../programming-guide/unsafe-code-pointers/pointer-types.md)

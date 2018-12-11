@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: C# dilinde dallar ve döngüler
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 7edc39e6b9d45a0f6707adf48199c9a096b8992d
-  ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+  ms.openlocfilehash: d29fae5aa5a34d7a8e91e53f2005178740464827
+  ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 10/28/2018
-  ms.locfileid: "50198602"
+  ms.lasthandoff: 12/10/2018
+  ms.locfileid: "53131254"
 items:
 - durationInMinutes: 1
   content: >
@@ -63,7 +63,7 @@ items:
 
     int c = 2;
 
-    int d = (a  + b) * c;
+    int d = (a + b) * c;
 
     Console.WriteLine(d);
 
@@ -200,4 +200,19 @@ items:
     > [!NOTE]
 
     > Bu çevrimiçi kodlama deneyimi Önizleme modundadır. Sorunlarla karşılaşırsanız, Lütfen bunları rapor [dotnet/try deposunda](https://github.com/dotnet/try/issues).
-- content: "Tamamladınız \"içindeki numaralandırır C#\" interactie öğretici. \n\nBu öğreticiler kendi geliştirme ortamınızda devam edebilirsiniz. Temel bilgileri öğrenmek [yerel geliştirme](local-environment.md) ve bir öğretici'ı seçin. Sonraki öğreticiye doğrudan yapabilir veya başlangıcıyla tekrar [içindeki numaralandırır C# ](numbers-in-csharp-local.md) öğretici.\n\nAşağıdaki konularda C# dilinde sayılar hakkında daha fazla bilgi edinebilirsiniz:\n\n[Tam sayı türleri tablosu](../../language-reference/keywords/integral-types-table.md)   \n[Kayan nokta türleri tablosu](../../language-reference/keywords/floating-point-types-table.md)   \n[Yerleşik türler tablosu](../../language-reference/keywords/built-in-types-table.md)   \n[Örtük sayısal dönüşümler tablosu](../../language-reference/keywords/implicit-numeric-conversions-table.md)   \n[Açık Sayısal Dönüştürmeler Tablosu](../../language-reference/keywords/explicit-numeric-conversions-table.md)"
+- content: >-
+    Tamamladınız "içindeki numaralandırır C#" etkileşimli bir öğretici. Tıklayabilirsiniz **dallar ve döngüler** etkileşimli bir sonraki öğreticiye başlatmak için aşağıdaki bağlantı ya da ziyaret edebilirsiniz [.NET site](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) .NET Core SDK'sını indirmek için makinenizde bir proje oluşturun ve kodlama tutun. "Öğrenme tut" adımı bu öğreticilere geri getirir.
+
+
+    Aşağıdaki konularda C# dilinde sayılar hakkında daha fazla bilgi edinebilirsiniz:
+
+
+    - [Tam Sayı Türleri Tablosu](../../language-reference/keywords/integral-types-table.md)
+
+    - [Kayan Nokta Türleri Tablosu](../../language-reference/keywords/floating-point-types-table.md)
+
+    - [Yerleşik Türler Tablosu](../../language-reference/keywords/built-in-types-table.md)
+
+    - [Örtük Sayısal Dönüştürmeler Tablosu](../../language-reference/keywords/implicit-numeric-conversions-table.md)
+
+    - [Açık Sayısal Dönüştürmeler Tablosu](../../language-reference/keywords/explicit-numeric-conversions-table.md)

@@ -2,12 +2,12 @@
 title: XML serileştiricisi Oluşturma Aracı (Sgen.exe)
 ms.date: 03/30/2017
 ms.assetid: cc1d1f1c-fb26-4be9-885a-3fe84c81cec6
-ms.openlocfilehash: e0fee890f86f4e377a9372d7e4c47ef78effc9fa
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 1e11a4d762950b4227b0a9accef10500fd89886d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45668476"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148125"
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>XML serileştiricisi Oluşturma Aracı (Sgen.exe)
 XML seri hale getirici oluşturucunun bir XML serileştirme derleme türleri için başlangıç performansını artırmak için belirtilen derlemesinde oluşturur bir <xref:System.Xml.Serialization.XmlSerializer> zaman serileştiren veya belirtilen türden nesneler seri durumdan çıkarır.  
@@ -22,18 +22,18 @@ sgen [options]
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
-|**/a**[**erleme**] **: *** dosya adı*|Tüm derlemesinde bulunan türleri veya yürütülebilir dosya tarafından belirtilen için serileştirme kod oluşturur *filename*. Yalnızca bir dosya adı sağlanabilir. Bu bağımsız değişken yinelenir, son dosya adı kullanılır.|  
+|**/a**[**erleme**]**:**_dosya adı_|Tüm derlemesinde bulunan türleri veya yürütülebilir dosya tarafından belirtilen için serileştirme kod oluşturur *filename*. Yalnızca bir dosya adı sağlanabilir. Bu bağımsız değişken yinelenir, son dosya adı kullanılır.|  
 |**/c [ompiler]:** *seçenekleri*|C# Derleyici geçirilecek seçeneklerini belirtir. Tüm csc.exe seçenekleri için derleyici geçirilen desteklenir. Bu derleme imzalanması gerektiğini belirtmek ve anahtar dosyasını belirtmek için kullanılabilir.|  
 |**/d**[**ebug**]|Bir hata ayıklayıcısı ile kullanılan bir görüntü oluşturur.|  
 |**/f [orce]**|Aynı ada sahip bir varolan derlemenin üzerine zorlar. Varsayılan değer **false**.|  
 |**/ help veya /?**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
 |**/k**[**ut**]|Serileştirme derlemeye derlenen sonra oluşturulan kaynak dosyaların ve diğer geçici dosyaları silmeyi göstermez. Bu araç belirli bir tür için serileştirme kod oluşturmak olup olmadığını belirlemek için kullanılabilir.|  
 |**/n**[**ologo**]|Microsoft başlangıç başlığı görüntülenmesini engeller.|  
-|**/o**[**ut**] **: *** yolu*|Oluşturulan derleme kaydedileceği dizini belirtir. **Not:** oluşturulan derleme adı giriş derleme artı "xmlSerializers.dll" adını oluşur.|  
+|**/o**[**ut**]**:**_yolu_|Oluşturulan derleme kaydedileceği dizini belirtir. **Not:**  Oluşturulan derleme adı giriş derleme artı "xmlSerializers.dll" adını oluşur.|  
 |**/p**[**roxytypes**]|XML Web hizmeti proxy türleri için yalnızca serileştirme kod oluşturur.|  
-|**/r**[**vuru**] **: *** assemblyfiles*|XML serileştirme gerektiren türleri tarafından başvurulan bir derleme belirtir. Virgülle ayrılmış birden çok derleme dosyaları kabul eder.|  
+|**/r**[**vuru**]**:**_assemblyfiles_|XML serileştirme gerektiren türleri tarafından başvurulan bir derleme belirtir. Virgülle ayrılmış birden çok derleme dosyaları kabul eder.|  
 |**/s**[**ilent**]|Başarı iletilerinin görüntülenmesini bastırır.|  
-|**/t**[**türü**] **: *** türü*|Belirtilen tür için yalnızca serileştirme kod oluşturur.|  
+|**/t**[**türü**]**:**_türü_|Belirtilen tür için yalnızca serileştirme kod oluşturur.|  
 |**/v**[**erbose**]|Hata ayıklama için ayrıntılı çıktı görüntüler. Listeler ile seri hale getirilemiyor hedef derleme türlerinden <xref:System.Xml.Serialization.XmlSerializer>.|  
 |**/?**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
   

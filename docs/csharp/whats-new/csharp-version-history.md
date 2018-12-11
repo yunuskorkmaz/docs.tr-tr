@@ -3,12 +3,12 @@ title: Geçmişini C# - C# Kılavuzu
 description: Bu yana nasıl geliştirildiğini ve önceki sürümlerde dil göz ne gibi?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 5e8ecdd971a043dc47c50b10c974d86f836818dc
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: e58f719031cc614f728226232c09f54f6b874475
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316265"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145338"
 ---
 # <a name="the-history-of-c"></a>C# geçmişi #
 
@@ -33,7 +33,7 @@ C# 1.0 önemli özelliklere yer:
 - [İfadeler](../programming-guide/statements-expressions-operators/expressions.md)
 - [Deyimler](../programming-guide/statements-expressions-operators/statements.md)
 - [Öznitelikler](../programming-guide/concepts/attributes/index.md)
-- Sabit değerler
+- [Değişmez Değerler](../language-reference/keywords/literal-keywords.md)
 
 ## <a name="c-version-12"></a>C# sürüm 1.2
 
@@ -72,9 +72,9 @@ Dil özelliklerinin tam bot gerçekten .NET Framework sürüm 3.5 gelecektir anc
 - [Otomatik uygulanan özellikler](../programming-guide/classes-and-structs/auto-implemented-properties.md)
 - [Anonim türler](../programming-guide/classes-and-structs/anonymous-types.md)
 - [Sorgu ifadeleri](../linq/query-expression-basics.md)
-- [Lambda ifadesi](https://www.daedtech.com/introduction-to-c-lambda-expressions/)
-- [İfade ağaçları](https://blogs.msdn.microsoft.com/charlie/2008/01/31/expression-tree-basics/)
-- [Genişletme yöntemleri](https://www.codeproject.com/Tips/709310/Extension-Method-In-Csharp)
+- [Lambda ifadeleri](../lambda-expressions.md)
+- [İfade ağaçları](../expression-trees.md)
+- [Genişletme yöntemleri](../programming-guide/classes-and-structs/extension-methods.md)
 - [Örtük olarak yazılan yerel değişkenler](../language-reference/keywords/var.md)
 - [Kısmi yöntemler](../language-reference/keywords/partial-method.md)
 - [Nesne ve koleksiyon başlatıcıları](../programming-guide/classes-and-structs/object-and-collection-initializers.md)
@@ -96,7 +96,7 @@ Sonraki sürümü bazı ilgi çekici yeni özellikleri tanıtan:
 - [Dinamik bağlama](../language-reference/keywords/dynamic.md)
 - [Adlı/isteğe bağlı bağımsız değişkenler](../programming-guide/classes-and-structs/named-and-optional-arguments.md)
 - [Genel değişken ve değişken karşıtı](../../standard/generics/covariance-and-contravariance.md)
-- [Gömülü birlikte çalışma türleri](https://stackoverflow.com/questions/20514240/whats-the-difference-setting-embed-interop-types-true-and-false-in-visual-studi)
+- [Gömülü birlikte çalışma türleri](../../framework/interop/type-equivalence-and-embedded-interop-types.md)
 
 Gömülü birlikte çalışma türleri dağıtım sorunlu alleviated. Genel Kovaryans ve kontravaryans, genel türler kullanmak için daha fazla güç sağlar, ancak biraz akademik ve büyük olasılıkla en takdir framework ve kitaplık yazarlar tarafından. Adlandırılmış ve isteğe bağlı parametreler, birçok yöntem aşırı yüklemeleri ortadan kaldırabilir ve kolaylık sağlayan olanak tanır. Ancak, bu özellikleri hiçbiri tam olarak paradigma değiştirme.
 
@@ -113,7 +113,7 @@ C# sürüm 5.0 odaklanmış bir dil sürümünü oluştu. Neredeyse tüm bu sür
 
 ### <a name="see-also"></a>Ayrıca Bkz.
 
-* [Kod projesini: C# 5.0 arayan bilgileri öznitelikleri](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
+* [Kod projesi: Arayan bilgisi öznitelikleri içinde C# 5.0](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
 
 Çağıran bilgisi özniteliği kolayca sarmalayıcımızı yazdık ortak yansıma kod başvurmadan çalıştırıyorsanız bağlamıyla ilgili bilgileri almak olanak tanır. Bu, tanılama ve günlüğe kaydetme görevleri pek çok kullanımı vardır.
 
@@ -123,13 +123,13 @@ Ancak `async` ve `await` bu yayının gerçek yıldız olan. 2012'de bu özellik
 
 3.0 ve 5.0 sürümleri ile C# önemli yeni özellikleri bir nesne yönelimli dil eklenen. Sürüm 6.0, baskın harika bir özellik yapılması uzağa gidin ve bunun yerine yapılan C# programlama daha üretken ve daha küçük birçok özellik sürüm. Bunlardan bazıları şunlardır:
 
-- [Statik içeri aktarmalar](../language-reference/keywords/using-static.md)
-- [Özel durum filtreleri](https://www.thomaslevesque.com/2015/06/21/exception-filters-in-c-6/)
-- [Özellik başlatıcıları](http://geekswithblogs.net/WinAZ/archive/2015/06/30/whatrsquos-new-in-c-6.0-auto-property-initializers.aspx)
-- [İfade bodied üyeleri](https://lostechies.com/jimmybogard/2015/12/17/c-6-feature-review-expression-bodied-function-members/)
-- [Null yayılması](https://davefancher.com/2014/08/14/c-6-0-null-propagation-operator/)
-- [Dize ilişkilendirme](../language-reference/tokens/interpolated.md)
-- [nameof işleci](https://stackoverflow.com/questions/31695900/what-is-the-purpose-of-nameof)
+- [Statik içeri aktarmalar](./csharp-6.md#using-static)
+- [Özel durum filtreleri](./csharp-6.md#exception-filters)
+- [Otomatik-özellik başlatıcıları](./csharp-6.md#auto-property-initializers)
+- [İfade bodied üyeleri](./csharp-6.md#expression-bodied-function-members)
+- [Null yayılması](./csharp-6.md#null-conditional-operators)
+- [Dize ilişkilendirme](./csharp-6.md#string-interpolation)
+- [nameof işleci](./csharp-6.md#the-nameof-expression)
 - [Dizin başlatıcılar](csharp-6.md#index-initializers)
 
 Diğer yeni özellikler şunları içerir:
@@ -145,20 +145,19 @@ Kendi içinde bir geleneksel dil özelliği olmasa da bu sürüm ile birlikte ba
 
 En son ana sürüm C# 7.0 sürümü var. Bu sürüm bazı gelişime ve harika şeyler damarlı C# 6.0, ancak derleyicinin bir hizmet olarak sahiptir. Yeni özelliklerden bazıları şunlardır:
 
-- [Değişkenleri](https://www.c-sharpcorner.com/article/out-variables-in-c-sharp-7-0/)
-- [Diziler ve ayrıştırma](https://www.thomaslevesque.com/2016/08/23/tuple-deconstruction-in-c-7/)
+- [Değişkenleri](./csharp-7.md#out-variables)
+- [Diziler ve ayrıştırma](./csharp-7.md#tuples)
 - [Desen eşleştirme](./csharp-7.md#pattern-matching)
-- [Yerel işlevler](https://www.infoworld.com/article/3182416/application-development/c-7-in-depth-exploring-local-functions.html)
+- [Yerel işlevler](./csharp-7.md#local-functions)
 - [Genişletilmiş ifade bodied üyeleri](./csharp-7.md#more-expression-bodied-members)
 - [Ref yerel değerleri ve dönüşleri](./csharp-7.md#ref-locals-and-returns)
 
 Diğer özellikler dahil:
 
-- [Atılanlar](../discards.md)
-- [İkili sabit dizeler](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.0/binary-literals.md)
-- [Basamak ayırıcılar](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.0/digit-separators.md)
-- Ref dönüşler ve yerel öğeler
-- [Throw ifadeleri](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.0/throw-expression.md)
+- [Atılanlar](./csharp-7.md#discards)
+- [İkili sabit değerler ve basamak ayırıcılar](./csharp-7.md#numeric-literal-syntax-improvements)
+- [Ref dönüşler ve yerel öğeler](./csharp-7.md#ref-locals-and-returns)
+- [Throw ifadeleri](./csharp-7.md#throw-expressions)
 
 Tüm bu özellikler, geliştiricilerin ve hiç olmadığı kadar bile daha temiz bir kod yazma olanağı için harika yeni özellikleri sağlar. Bir Vurgu, bildirimi ile kullanılacak değişkenleri condensing `out` anahtar sözcüğü ve birden çok değer tanımlama grubu aracılığıyla sağlayarak.
 

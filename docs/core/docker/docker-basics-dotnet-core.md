@@ -1,19 +1,17 @@
 ---
-title: .NET Core ile Docker temellerini öğrenme
-description: Docker ve .NET Core temel Öğreticisi
-author: jralexander
-ms.author: johalex
-ms.date: 11/06/2017
+title: Docker ile bir uygulamayı kapsayıcılı hale getirme
+description: Bu öğreticide, temel bir .NET Core uygulaması oluşturma ve Docker ile kapsayıcılı hale getirme öğretir.
+ms.date: 10/11/2018
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: 543b9454e826022a72752d9a24bc43b77d2501f5
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.custom: mvc, seodec18
+ms.openlocfilehash: eed72553576f4154fe63b2e5cf035a781afe4b7c
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615306"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169592"
 ---
-# <a name="learn-docker-basics-with-net-core"></a>.NET Core ile Docker temellerini öğrenme
+# <a name="how-to-containerize-a-net-core-application"></a>Nasıl bir .NET Core uygulamasını kapsayıcılı hale getirme
 
 Bu öğreticide, Docker kapsayıcı derleme ve dağıtım görevleri bir .NET Core uygulaması için size öğretir. [Docker platformu](https://docs.docker.com/engine/docker-overview/#the-docker-platform) kullanan [Docker altyapısı](https://docs.docker.com/engine/docker-overview/#docker-engine) oluşturmayı ve uygulamaları olarak paketini [Docker görüntülerini](https://docs.docker.com/glossary/?term=image). Bu görüntüleri yazılan [Dockerfile](https://docs.docker.com/glossary/?term=Dockerfile) dağıtılabilir ve çalışacak biçimde bir [kapsayıcı katmanlı](https://docs.docker.com/engine/userguide/storagedriver/imagesandcontainers/#container-and-layers).
 
@@ -24,7 +22,7 @@ Bu öğreticinin Kurs sırasında şunları öğrenirsiniz:
 > * .NET Core uygulaması oluşturma
 > * Uygulamanızı bir Docker kapsayıcısına dağıtma
 
-## <a name="net-core-easiest-way-to-get-started"></a>.NET core: başlamanın en kolay yolu
+## <a name="net-core-easiest-way-to-get-started"></a>.NET core: Başlamanın en kolay yolu
 
 Docker görüntüsünü oluşturmadan önce bir uygulamayı kapsayıcılı hale getirme için gerekir. Linux, MacOS veya Windows üzerinde oluşturabilirsiniz. Bunu yapmanın hızlı ve en kolay yolu, .NET Core kullanmaktır.
 
@@ -38,38 +36,38 @@ Docker görüntüsünü oluşturmadan önce bir uygulamayı kapsayıcılı hale 
 
 Bu öğreticiyi tamamlamak için:
 
-#### <a name="net-core-20-sdk"></a>.NET core 2.0 SDK'sı
+#### <a name="net-core-sdk"></a>.NET core SDK'sı
 
-* Yükleme [.NET Core SDK 2.0](https://www.microsoft.com/net/core).
+* Yükleme [.NET Core 2.1 SDK](https://www.microsoft.com/net/download) veya üzeri.
 
-Bkz: [.NET Core 2.x desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md) .NET Core tam listesi için 2.x desteklenen işletim sistemleri, destek işletim sistemi sürümleri ve yaşam döngüsü ilkesi bağlantılar dışında.
+Bkz: [.NET Core 2.1 desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) destek işletim sistemi sürümleri ve yaşam döngüsü ilkesi bağlantılar dışında işletim sistemlerinin tam listesi, .NET Core 2.1 desteklenen.
 
 * Henüz yapmadıysanız, sık kullandığınız kod düzenleyicinize yükleyin.
 
 > [!TIP]
-> Bir kod Düzenleyicisi'ni yüklemeniz gerekir? Deneyin [Visual Studio](https://visualstudio.com/downloads)!
+> Bir kod Düzenleyicisi'ni yüklemeniz gerekir? Deneyin [Visual Studio Code'u](https://code.visualstudio.com/download)!
 
 #### <a name="installing-docker-client"></a>Docker istemcisi yükleme
 
-Yükleme [Docker 17.06](https://docs.docker.com/release-notes/docker-ce/) veya Docker istemcinin sonraki bir sürümü.
+Yükleme [Docker 18.06](https://docs.docker.com/release-notes/docker-ce/) veya Docker istemcinin sonraki bir sürümü.
 
 Docker istemcisi yüklenebilir:
 
 * Linux dağıtımları
 
-   * [CentOS](https://www.docker.com/docker-centos-distribution)
+   * [CentOS](https://docs.docker.com/install/linux/docker-ce/centos/)
 
-   * [Debian](https://www.docker.com/docker-debian)
+   * [Debian](https://docs.docker.com/install/linux/docker-ce/debian/)
 
-   * [Fedora](https://www.docker.com/docker-fedora)
+   * [Fedora](https://docs.docker.com/install/linux/docker-ce/fedora/)
 
-   * [Ubuntu](https://www.docker.com/docker-ubuntu)
+   * [Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 
-* [macOS](https://docs.docker.com/docker-for-mac/)
+* [macOS](https://docs.docker.com/docker-for-mac/install/)
 
-* [Windows](https://docs.docker.com/docker-for-windows/).
+* [Windows](https://docs.docker.com/docker-for-windows/install/).
 
-### <a name="create-a-net-core-20-console-app-for-dockerization"></a>Dockerization için bir .NET Core 2.0 konsol uygulaması oluşturma
+### <a name="create-a-net-core-21-console-app-for-dockerization"></a>Dockerization için bir .NET Core 2.1 konsol uygulaması oluşturma
 
 Bir komut istemi açın ve adlı bir klasör oluşturun *Hello*. Oluşturduğunuz klasöre gidin ve aşağıdaki komutları yazın:
 
@@ -83,13 +81,13 @@ Hızlı bir kılavuz inceleyelim:
 1. `$ dotnet new console`
 
    [`dotnet new`](../tools/dotnet-new.md) güncel bir oluşturur `Hello.csproj` bir konsol uygulaması oluşturmak gerekli bağımlılıkları olan proje dosyası.  Ayrıca oluşturur bir `Program.cs`, uygulamanın giriş noktasını içeren temel bir dosya.
-   
+
    `Hello.csproj`:
 
    Proje dosyası geri yükleme bağımlılıkları ve program oluşturmak için gerekli olan her şeyi belirtir.
 
    * `OutputType` Etiketini belirtir bir yürütülebilir dosya, başka bir deyişle bir konsol uygulaması oluşturuyorsunuz.
-   * `TargetFramework` Hedefleyen hangi .NET uygulaması etiketini belirtir. Gelişmiş bir senaryoda, birden çok hedef çerçeve belirtin ve tek bir işlemde belirtilen çerçeveleri için oluşturun. Bu öğreticide, .NET Core 2.0 için ekleriz.
+   * `TargetFramework` Hedefleyen hangi .NET uygulaması etiketini belirtir. Gelişmiş bir senaryoda, birden çok hedef çerçeve belirtin ve tek bir işlemde belirtilen çerçeveleri için oluşturun. Bu öğreticide, .NET Core 2.1 için ekleriz.
 
    `Program.cs`:
 
@@ -97,26 +95,21 @@ Hızlı bir kılavuz inceleyelim:
 
    Ad alanı ardından tanımlarız `Hello`. Ad alanı için istediğiniz değişikliği yapabilirsiniz. Adlı bir sınıf `Program` ile bu ad alanı içinde tanımlanan bir `Main` dizisini kendi bağımsız değişkeni olarak alan yöntemi. Bu dizi, derlenmiş programın çağrılırken geçirilen bağımsız değişken listesini içerir. Bizim örneğimizde programı yalnızca "Hello World!" yazar. konsola.
 
-2. `$ dotnet restore`
-
-   .NET core'da 2.x **yeni dotnet** çalıştıran [ `dotnet restore` ](../tools/dotnet-restore.md) komutu. **DotNet restore** bağımlılıklarla ağacının yükler bir [NuGet](https://www.nuget.org/)(.NET Paket Yöneticisi) çağrısı.
+   **Yeni dotnet** çalıştıran [ `dotnet restore` ](../tools/dotnet-restore.md) komutu. **DotNet restore** bağımlılıklarla ağacının yükler bir [NuGet](https://www.nuget.org/)(.NET Paket Yöneticisi) çağrısı.
    NuGet, aşağıdaki görevleri gerçekleştirir:
-   * çözümler *Hello.csproj* dosyası 
-   * dosya yüklemeleri bağımlılıkları (veya Dallarınızla makine önbelleğinizden)
-   * Yazar *obj/project.assets.json* dosyası
+   * çözümler *Hello.csproj* dosya.
+   * dosya yüklemeleri bağımlılıkları (veya Dallarınızla makine önbelleğinizden).
+   * Yazar *obj/project.assets.json* dosya.
 
-<a name="dotnet-restore-note"></a>
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
-   
    *Project.assets.json* eksiksiz bir NuGet bağımlılıklarını grafiği, bağlama çözümler ve diğer uygulama meta veri dosyasıdır. Bu dosya kullanılan diğer araçlarla gibi gerekli [ `dotnet build` ](../tools/dotnet-build.md) ve [ `dotnet run` ](../tools/dotnet-run.md), kaynak kodunu doğru şekilde işlemek için.
-   
-3. `$ dotnet run`
+
+2. `$ dotnet run`
 
    [`dotnet run`](../tools/dotnet-run.md) çağrıları [ `dotnet build` ](../tools/dotnet-build.md) başarılı bir derleme ve çağrılarını doğrulamak için `dotnet <assembly.dll>` uygulamayı çalıştırın.
-   
+
     ```console
     $ dotnet run
-    
+
     Hello World!
     ```
 
@@ -133,7 +126,7 @@ Metin Düzenleyicisi'ni açın ve başlayalım! Yine de uygulamayı oluşturduk 
 Ya da Linux aşağıdaki Docker yönergelerini ekleyin veya [Windows kapsayıcıları](https://docs.microsoft.com/virtualization/windowscontainers/about/) yeni bir dosya için. İşiniz bittiğinde Hello dizininizin kökünde Kaydet **Dockerfile**, uzantı yoktur (dosya türünüze kümesine gerekebilir `All types (*.*)` veya benzer bir şey).
 
 ```Dockerfile
-FROM microsoft/dotnet:2.0-sdk
+FROM microsoft/dotnet:2.1-sdk
 WORKDIR /app
 
 # copy csproj and restore as distinct layers
@@ -148,10 +141,10 @@ ENTRYPOINT ["dotnet", "out/Hello.dll"]
 
 Dockerfile, sıralı olarak çalışan Docker derleme yönergeleri içerir.
 
-İlk yönerge olmalıdır [ **FROM**](https://docs.docker.com/engine/reference/builder/#from). Bu yönerge, yeni bir derleme aşaması başlatır ve yönergeleri için temel görüntüyü ayarlar. Çok yay etiketleri Windows veya Linux kapsayıcıları için Docker Windows bağlı olarak çekme [kapsayıcı modu](https://docs.docker.com/docker-for-windows/#switch-between-windows-and-linux-containers). Bizim Örneğimiz için temel görüntüyü microsoft/dotnet deposundan 2.0 SDK'sını görüntüdür,
+İlk yönerge olmalıdır [ **FROM**](https://docs.docker.com/engine/reference/builder/#from). Bu yönerge, yeni bir derleme aşaması başlatır ve yönergeleri için temel görüntüyü ayarlar. Çok yay etiketleri Windows veya Linux kapsayıcıları için Docker Windows bağlı olarak çekme [kapsayıcı modu](https://docs.docker.com/docker-for-windows/#switch-between-windows-and-linux-containers). Bizim Örneğimiz için temel görüntüyü microsoft/dotnet deposundan sdk 2.1 görüntüdür,
 
 ```Dockerfile
-FROM microsoft/dotnet:2.0-sdk
+FROM microsoft/dotnet:2.1-sdk
 ```
 
 [ **WORKDIR** ](https://docs.docker.com/engine/reference/builder/#workdir) yönergesi ayarlar çalışma dizini herhangi kalan çalışma, CMD, ENTRYPOINT, kopyalama ve Ekle Dockerfile için yönergeler. Dizin yoksa, oluşturulur. Bu durumda, dockerfile'da kendisinden sonra gelen uygulama dizinine ayarlanır.
@@ -196,7 +189,7 @@ Artık bir Dockerfile:
 * Uygulamanızın bağımlılıklarına görüntüye
 * yürütülebilir dosya olarak çalıştırmak için bir uygulama oluşturur.
 
-### <a name="build-and-run-the-hello-net-core-20-app"></a>Hello .NET Core 2.0 uygulaması derleyebilir ve çalıştırabilirsiniz
+### <a name="build-and-run-the-hello-net-core-app"></a>Hello .NET Core uygulaması derleyebilir ve çalıştırabilirsiniz
 
 #### <a name="essential-docker-commands"></a>Temel Docker komutları
 
@@ -222,9 +215,9 @@ docker run --rm dotnetapp-dev Hello from Docker
 Çıkışı `docker build` komutu aşağıdaki konsol çıktısına benzer olmalıdır:
 
 ```console
-Sending build context to Docker daemon   72.7kB
-Step 1/7 : FROM microsoft/dotnet:2.0-sdk
- ---> d84f64b126a6
+Sending build context to Docker daemon   173.1kB
+Step 1/7 : FROM microsoft/dotnet:2.1-sdk
+ ---> 288f8c45f7c2
 Step 2/7 : WORKDIR /app
  ---> Using cache
  ---> 9af1fbdc7972
@@ -243,7 +236,7 @@ Step 6/7 : RUN dotnet publish -c Release -o out
 Step 7/7 : ENTRYPOINT dotnet out/Hello.dll
  ---> Using cache
  ---> 53c337887e18
-Successfully built 53c337887e18
+Successfully built 46db075bd98d
 Successfully tagged dotnetapp-dev:latest
 ```
 
@@ -261,14 +254,12 @@ Tebrikler! yalnızca gerekir:
 > * Oluşturulan bir Dockerfile ilk kapsayıcınızı oluşturun
 > * Yerleşik ve Dockerized uygulamanızı çalıştı
 
-
-
-## <a name="next-steps"></a>Sonraki Adımlar
+## <a name="next-steps"></a>Sonraki adımlar
 
 Gerçekleştirebileceğiniz bazı sonraki adımlar şunlardır:
 
 * [.NET Docker görüntüleri Video giriş](https://channel9.msdn.com/Shows/Code-Conversations/Introduction-to-NET-Docker-Images-with-Kendra-Havens?term=docker)
-* [Visual Studio, Docker ve Azure Container Instances, birlikte daha iyi!](https://blogs.msdn.microsoft.com/alimaz/2017/08/17/visual-studio-docker-azure-container-instances-better-together/)
+* [Visual Studio, Docker ve Azure Container Instances, birlikte daha iyi!](https://medium.com/@AliMazaheri/visual-studio-docker-azure-container-instances-better-together-bf8c2f0419ae)
 * [Azure Hızlı Başlangıç için docker](https://docs.docker.com/docker-for-azure/#docker-community-edition-ce-for-azure)
 * [Uygulamanızı Azure için Docker](https://docs.docker.com/docker-for-azure/deploy/)
 
@@ -279,9 +270,9 @@ Gerçekleştirebileceğiniz bazı sonraki adımlar şunlardır:
 
 Bu örnekte kullanılan aşağıdaki Docker görüntüleri
 
-* [`microsoft/dotnet:2.0-sdk`](https://hub.docker.com/r/microsoft/dotnet)
+* [`microsoft/dotnet:2.1-sdk`](https://hub.docker.com/r/microsoft/dotnet)
 
-## <a name="related-resources"></a>İlgili Kaynaklar
+## <a name="related-resources"></a>İlgili kaynaklar
 
 * [.NET core Docker örnekleri](https://github.com/dotnet/dotnet-docker/tree/master/samples)
 * [Dockerfile Windows kapsayıcıları hakkında](https://docs.microsoft.com/virtualization/windowscontainers/manage-docker/manage-windows-dockerfile)

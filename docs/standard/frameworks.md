@@ -3,15 +3,15 @@ title: Hedef Çerçeve
 description: Hedef çerçeve için .NET Core uygulamaları ve kitaplıkları hakkında bilgi edinin.
 author: richlander
 ms.author: mairaw
-ms.date: 05/31/2018
+ms.date: 12/03/2018
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 76bf496e957022f4d97d3cf3f3975f334b1d5c45
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 7418c07a211333655501dd9f3d16e72e40564ffd
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842118"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147469"
 ---
 # <a name="target-frameworks"></a>Hedef Çerçeve
 
@@ -31,8 +31,8 @@ Aşağıdaki tabloda en yaygın hedef çerçeveleri, nasıl başvurulan ve hangi
 
 | Hedef Çerçeve      | En son <br/> Kararlı bir sürüm | Hedef Çerçeve adı (TFM) | Uygulanmadı <br/> .NET standard sürümü |
 | :-------------------: | :-------------------------: | :----------------------------: | :-------------------------------------: |
-| .NET standard         | 2,0                         | netstandard2.0                 | Yok                                     |
-| .NET Core             | 2.1                         | netcoreapp2.1                  | 2,0                                     |
+| .NET Standard         | 2,0                         | netstandard2.0                 | Yok                                     |
+| .NET Core             | 2.2                         | netcoreapp2.2                  | 2,0                                     |
 | .NET Framework        | 4.7.2                       | net472                         | 2,0                                     |
 
 ## <a name="supported-target-framework-versions"></a>Desteklenen hedef framework sürümü
@@ -41,8 +41,8 @@ Hedef Framework'ü genellikle bir TFM tarafından başvuruluyor. Aşağıdaki ta
 
 | Hedef Çerçeve           | TFM |
 | -------------------------- | --- |
-| .NET standard              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0 |
-| .NET Core                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0<br>netcoreapp2.1 |
+| .NET Standard              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0 |
+| .NET Core                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0<br>netcoreapp2.1<br>netcoreapp2.2 |
 | .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471<br>net472 |
 | Windows Mağazası              | netcore [netcore45]<br>netcore45 [win] [win8]<br>netcore451 [win81] |
 | .NET mikro Framework       | netmf |
@@ -52,14 +52,14 @@ Hedef Framework'ü genellikle bir TFM tarafından başvuruluyor. Aşağıdaki ta
 
 ## <a name="how-to-specify-target-frameworks"></a>Hedef Çerçeve belirtme
 
-Hedef Çerçeve proje dosyanızda belirtilir. Tek hedef Framework'ü belirtildiğinde kullanın **TargetFramework** öğesi. Aşağıdaki konsol uygulama projesi dosyası, .NET Core 2.0 hedef gösterilmektedir:
+Hedef Çerçeve proje dosyanızda belirtilir. Tek hedef Framework'ü belirtildiğinde kullanın **TargetFramework** öğesi. Aşağıdaki konsol uygulama projesi dosyası, .NET Core 2.2 hedef gösterilmektedir:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
   </PropertyGroup>
 
 </Project>

@@ -1,15 +1,15 @@
 ---
-title: "Windows Communication Foundation'ı Benimsemeyi Bekleme: Gelecekteki Taşınmayı Kolaylaştırma"
+title: "Windows Communication Foundation'ı benimsemeyi bekleme: Gelecekteki taşınmayı kolaylaştırma"
 ms.date: 03/30/2017
 ms.assetid: f49664d9-e9e0-425c-a259-93f0a569d01b
-ms.openlocfilehash: 171a31b375eae4c032849c2a1c2090f5d9ff856f
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 306ffbae86058a2caad70d3788fb7bb4e7998eec
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837407"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129590"
 ---
-# <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-migration"></a>Windows Communication Foundation'ı Benimsemeyi Bekleme: Gelecekteki Taşınmayı Kolaylaştırma
+# <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-migration"></a>Windows Communication Foundation'ı benimsemeyi bekleme: Gelecekteki taşınmayı kolaylaştırma
 Yeni ASP.NET uygulamalarını wcf'ye TAŞIMA daha kolay gelecekteki geçişini sağlamak için yukarıdaki öneriler ve bunun yanı sıra aşağıdaki önerileri uygulayın.  
   
 ## <a name="protocols"></a>Protokolleri  
@@ -36,7 +36,7 @@ Yeni ASP.NET uygulamalarını wcf'ye TAŞIMA daha kolay gelecekteki geçişini s
   
 -   Kullanarak bir hizmet işlemleri için açık adlar sağlayan `MessageName` parametresinin <xref:System.Web.Services.WebMethodAttribute>.  
   
-    ```  
+    ```csharp  
     [WebMethod(MessageName="ExplicitName")]  
     string Echo(string input);  
     ```  
@@ -47,7 +47,7 @@ Yeni ASP.NET uygulamalarını wcf'ye TAŞIMA daha kolay gelecekteki geçişini s
   
 -   Kullanım <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute> açık değerler tarafından hangi HTTP isteklerinin yöntemlere yönlendirilecek SOAPAction HTTP üst bilgilerini sağlamak için.  
   
-    ```  
+    ```csharp  
     [WebMethod]  
     [SoapDocumentMethod(RequestElementName="ExplicitAction")]  
     string Echo(string input);  
@@ -63,7 +63,7 @@ Yeni ASP.NET uygulamalarını wcf'ye TAŞIMA daha kolay gelecekteki geçişini s
 ## <a name="exception-handling"></a>Özel Durum İşleme  
  Gönderilen ve alınan bir hizmet tarafından aktarılacak veri türlerini yapıları tasarlarken, ayrıca tek bir hizmet içinde oluşabilecek özel durumları çeşitli türlerini temsil etmek için tasarım yapıları istemciye iletmek isteyebilir.  
   
-```  
+```csharp  
 [Serializable]  
 [XmlRoot(  
      Namespace="ExplicitNamespace", IsNullable=true)]  
@@ -84,7 +84,7 @@ Yeni ASP.NET uygulamalarını wcf'ye TAŞIMA daha kolay gelecekteki geçişini s
   
  Bu tür sınıflar kendileri için XML seri hale getirme olanağı sağlar:  
   
-```  
+```csharp  
 public XmlNode ToXML()  
 {  
      XmlSerializer serializer = new XmlSerializer(  
@@ -103,7 +103,7 @@ public XmlNode ToXML()
   
  Sınıflar için açıkça durum ayrıntılarını sağlamak için daha sonra kullanılabilir <xref:System.Web.Services.Protocols.SoapException> örnekleri:  
   
-```  
+```csharp  
 AnctipatedException exception = new AnticipatedException();  
 exception.AnticipatedExceptionInformation = "…";  
 throw new SoapException(  
@@ -113,7 +113,7 @@ throw new SoapException(
      exception.ToXML());  
 ```  
   
- Bu özel durum sınıfları WCF ile kolayca yeniden kullanılabilir olacaktır<xref:System.ServiceModel.FaultException%601> sınıfının yeni bir `FaultException<AnticipatedException>(anticipatedException);`  
+ Bu özel durum sınıfları WCF ile kolayca yeniden kullanılabilir olacaktır <xref:System.ServiceModel.FaultException%601> sınıfının yeni bir `FaultException<AnticipatedException>(anticipatedException);`  
   
 ## <a name="security"></a>Güvenlik  
  Bazı güvenlik önerileri aşağıda verilmiştir.  
@@ -125,4 +125,4 @@ throw new SoapException(
 -   Bir hizmetin kaynaklara erişim yetkisi vermek için ASP.NET 2.0 rol sağlayıcıları kullanmayı düşünün.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Communication Foundation'ı Benimsemeyi Bekleme: Gelecekteki Tümleştirmeyi Kolaylaştırma](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)
+ [Windows Communication Foundation'ı benimsemeyi bekleme: Gelecekteki tümleştirmeyi kolaylaştırma](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)

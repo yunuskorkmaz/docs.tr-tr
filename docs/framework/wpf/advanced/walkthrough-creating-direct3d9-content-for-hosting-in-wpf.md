@@ -1,5 +1,5 @@
 ---
-title: "İzlenecek yol: WPF'de Barındırmak için Direct3D9 İçeriği Oluşturma"
+title: "İzlenecek yol: WPF'de barındırmak için Direct3D9 içeriği oluşturma"
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - WPF [WPF], creating Direct3D9 content
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 286e98bc-1eaa-4b5e-923d-3490a9cca5fc
-ms.openlocfilehash: 321c4ba8659bd2226fff96e74e81ef24f0077c3d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 192036836dfb010274944006feea44e5d81ff4e3
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200920"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53168760"
 ---
-# <a name="walkthrough-creating-direct3d9-content-for-hosting-in-wpf"></a>İzlenecek yol: WPF'de Barındırmak için Direct3D9 İçeriği Oluşturma
+# <a name="walkthrough-creating-direct3d9-content-for-hosting-in-wpf"></a>İzlenecek yol: WPF'de barındırmak için Direct3D9 içeriği oluşturma
 Bu izlenecek yol, uygun bir Windows Presentation Foundation (WPF) uygulamasında barındırmak için Direct3D9 içeriği oluşturma işlemi gösterilmektedir. WPF uygulamalarında Direct3D9 içeriği barındırma ile ilgili daha fazla bilgi için bkz: [WPF ve Direct3D9 birlikte çalışması](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md).
 
  Bu kılavuzda, aşağıdaki görevleri gerçekleştirin:
@@ -30,7 +30,7 @@ Bu izlenecek yol, uygun bir Windows Presentation Foundation (WPF) uygulamasında
 
 -   Visual Studio 2010.
 
--   DirectX SDK 9or daha sonra.
+-   DirectX SDK 9 veya üzeri.
 
 ## <a name="creating-the-direct3d9-project"></a>Direct3D9 projesi oluşturma
  İlk adım, oluşturma ve Direct3D9 proje yapılandırma sağlamaktır.
@@ -137,10 +137,10 @@ Bu izlenecek yol, uygun bir Windows Presentation Foundation (WPF) uygulamasında
 
 ## <a name="next-steps"></a>Sonraki Adımlar
 
--   Direct3D9 içeriği WPF uygulamasında barındırır. Daha fazla bilgi için [izlenecek yol: barındırma Direct3D9 içeriği WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md).
+-   Direct3D9 içeriği WPF uygulamasında barındırır. Daha fazla bilgi için [izlenecek yol: WPF'de Direct3D9 içeriği barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md).
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 
 - <xref:System.Windows.Interop.D3DImage>
 - [Direct3D9 ve WPF Birlikte Çalışabilirliği için Performans ile İlgili Önemli Noktalar](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md)
-- [İzlenecek yol: WPF'de Direct3D9 İçeriği Barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md)
+- [İzlenecek yol: WPF'de Direct3D9 içeriği barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md)

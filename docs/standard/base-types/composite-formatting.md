@@ -1,6 +1,6 @@
 ---
 title: Bileşik Biçimlendirme
-ms.date: 03/30/2017
+ms.date: 10/26/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -15,31 +15,34 @@ helpviewer_keywords:
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 17ec17d3b90dc7248d1497be1f7d31a324ad10b2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 60ccf478e974e24b437aa75bc9452033bd19a00f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397939"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126867"
 ---
 # <a name="composite-formatting"></a>Bileşik Biçimlendirme
+
 .NET bileşik biçimlendirme özelliği, nesneleri ve bir bileşik biçimlendirme dizesi listesini girdi olarak alır. Bir bileşik biçimlendirme dizesi, sabit metinle karışık bir şekilde listedeki nesnelere karşılık gelen, biçim öğeleri adı verilen dizinli yer tutuculardan oluşur. Biçimlendirme işlemi sonuç olarak, orijinal sabit metin ve listedeki nesnelerin dize temsillerinin karışımından oluşan bir dize oluşturur.  
   
- Bileşik biçimlendirme özelliği aşağıdaki gibi yöntemler tarafından desteklenir:  
+> [!IMPORTANT]
+> Kullanabileceğiniz bileşik biçim dizeleri kullanmak yerine, *ilişkilendirilmiş dizeler* kullandığınız dil ve dil sürümü bunları destekliyorsa. İlişkilendirilmiş dize içeren bir dizedir *ilişkilendirilmiş ifade*. Her ilişkilendirilmiş ifade ifadenin değerinin ile çözümlendi ve dize atandığında sonuç dizesinde dahil. Daha fazla bilgi için [dize ilişkilendirme (C# başvuru)](../../csharp/language-reference/tokens/interpolated.md) ve [Ara değerli dizeler (Visual Basic Başvurusu)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md).
+
+Bileşik biçimlendirme özelliği aşağıdaki gibi yöntemler tarafından desteklenir:  
   
--   <xref:System.String.Format%2A?displayProperty=nameWithType>, biçimlendirilmiş Sonuç dizesini döndürür.  
+- <xref:System.String.Format%2A?displayProperty=nameWithType>, biçimlendirilmiş Sonuç dizesini döndürür.  
   
--   <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>, ekler için biçimlendirilmiş Sonuç dizesini bir <xref:System.Text.StringBuilder> nesne.  
+- <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>, ekler için biçimlendirilmiş Sonuç dizesini bir <xref:System.Text.StringBuilder> nesne.   
+- Bazı aşırı yüklemeleri <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> yöntemi konsola biçimlendirilmiş Sonuç dizesini görüntüler.  
   
--   Bazı aşırı yüklemeleri <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> yöntemi konsola biçimlendirilmiş Sonuç dizesini görüntüler.  
+- Bazı aşırı yüklemeleri <xref:System.IO.TextWriter.WriteLine%2A?displayProperty=nameWithType> biçimlendirilmiş Sonuç dizesini bir akış veya dosyaya yazmak yöntemi. Türetilmiş sınıflar <xref:System.IO.TextWriter>, gibi <xref:System.IO.StreamWriter> ve <xref:System.Web.UI.HtmlTextWriter>, ayrıca bu işlevleri paylaşırlar.  
   
--   Bazı aşırı yüklemeleri <xref:System.IO.TextWriter.WriteLine%2A?displayProperty=nameWithType> biçimlendirilmiş Sonuç dizesini bir akış veya dosyaya yazmak yöntemi. Türetilmiş sınıflar <xref:System.IO.TextWriter>, gibi <xref:System.IO.StreamWriter> ve <xref:System.Web.UI.HtmlTextWriter>, ayrıca bu işlevleri paylaşırlar.  
+- <xref:System.Diagnostics.Debug.WriteLine%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, izleme dinleyicilerine biçimlendirilmiş bir ileti çıkarır.  
   
--   <xref:System.Diagnostics.Debug.WriteLine%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, izleme dinleyicilerine biçimlendirilmiş bir ileti çıkarır.  
+- <xref:System.Diagnostics.Trace.TraceError%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, Ve <xref:System.Diagnostics.Trace.TraceWarning%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> iletileri izleme dinleyicilerine biçimlendirilmiş yöntemleri.  
   
--   <xref:System.Diagnostics.Trace.TraceError%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, Ve <xref:System.Diagnostics.Trace.TraceWarning%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> iletileri izleme dinleyicilerine biçimlendirilmiş yöntemleri.  
-  
--   <xref:System.Diagnostics.TraceSource.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> İzleme dinleyicilerine bilgi yöntemi yazan yöntemi.  
+- <xref:System.Diagnostics.TraceSource.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> İzleme dinleyicilerine bilgi yöntemi yazan yöntemi.  
   
 ## <a name="composite-format-string"></a>Bileşik Biçim Dizesi  
  Bileşik biçimlendirme özelliğini destekleyen metotlarda bir bileşik biçimlendirme dizesi ve nesne listesi bağımsız değişkenler olarak kullanılır. Bir bileşik biçimlendirme dizesi sıfır veya daha fazla sabit metin bölümüyle karışık olarak bir veya daha fazla biçim öğesinden oluşur. Sabit metin seçtiğiniz herhangi bir dizedir, ve her biçim öğesi listedeki bir nesneye veya kutulu yapıya karşılık gelir. Bileşik biçimlendirme özelliği, her biçim öğesinin yerine listede karşılık gelen nesnenin dize temsili yerleştirilmiş bir şekilde yeni bir sonuç dizesi döndürür.  

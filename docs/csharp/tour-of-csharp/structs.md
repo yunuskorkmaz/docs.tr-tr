@@ -3,12 +3,12 @@ title: C# yapılar - C# dili turu
 description: Değer türleri, yapılar çağırılır, C# temellerini öğrenin
 ms.date: 08/10/2016
 ms.assetid: 88a74571-f741-4a31-a2b5-1ccf165535b8
-ms.openlocfilehash: 2b1870713b488f706f5f3a54413461052173bab6
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 6b165dd040213b33f91d1baf1b0fb4909101666d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49323103"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53142742"
 ---
 # <a name="structs"></a>Yapılar
 
@@ -35,5 +35,5 @@ Varsa `Point` bir sınıf çıkış 20 çünkü bir ve b aynı nesneye başvuru.
 Önceki örnekte iki yapılar sınırlamaları vurgular. İlk olarak, bir yapının tamamını kopyalama atama ve değerin parametre geçirme başvuru türleri ile yapılar ile daha pahalı olabilir. Bu nedenle, bir nesne başvurusu kopyalama daha genellikle daha az verimlidir. İkinci dışında `in`, `ref`, ve `out` parametreleri, bu durumlarda, çeşitli kullanımları kullanıma kuralları yapı birimleri için başvuru oluşturmak mümkün değildir.
 
 >[!div class="step-by-step"]
-[Önceki](classes-and-objects.md)
-[İleri](arrays.md)
+>[Önceki](classes-and-objects.md)
+>[İleri](arrays.md)

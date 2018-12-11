@@ -1,15 +1,14 @@
 ---
-title: DotNet nuget anında iletme komutu - .NET Core CLI
+title: DotNet nuget anında iletme komutu
 description: Dotnet nuget anında iletme komutu sunucuya bir paket gönderir ve belgeyi yayımlar.
 author: karann-msft
-ms.author: mairaw
-ms.date: 09/04/2018
-ms.openlocfilehash: b9c0fad886cd1234325c58bf61b1a010bce421d9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 12/04/2018
+ms.openlocfilehash: 4f0d127d8b9f37b1c381d8981f54035a2fc3b0e5
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200032"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169358"
 ---
 # <a name="dotnet-nuget-push"></a>DotNet nuget anında iletme
 
@@ -21,16 +20,10 @@ ms.locfileid: "50200032"
 
 ## <a name="synopsis"></a>Özeti
 
-# <a name="net-core-21tabnetcore21"></a>[.NET core 2.1](#tab/netcore21)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
 ```
-dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [-k|--api-key] [-n|--no-symbols]
+dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [--interactive] [-k|--api-key] [-n|--no-symbols]
     [--no-service-endpoint] [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
-dotnet nuget push [-h|--help]
-```
-# <a name="net-core-20tabnetcore20"></a>[.NET core 2.0](#tab/netcore20)
-```
-dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [-k|--api-key] [-n|--no-symbols]
-    [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
 dotnet nuget push [-h|--help]
 ```
 # <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
@@ -47,154 +40,132 @@ dotnet nuget push [-h|--help]
 
 ## <a name="arguments"></a>Arguments
 
-`ROOT`
+* **`ROOT`**
 
-İtilecek paket dosya yolunu belirtir.
+  İtilecek paket dosya yolunu belirtir.
 
 ## <a name="options"></a>Seçenekler
 
-# <a name="net-core-21tabnetcore21"></a>[.NET core 2.1](#tab/netcore21)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
 
-`-d|--disable-buffering`
+* **`-d|--disable-buffering`**
 
-Bellek kullanımını azaltmak için bir HTTP (S) sunucusuna gönderirken arabelleğe almayı devre dışı bırakır.
+  Bellek kullanımını azaltmak için bir HTTP (S) sunucusuna gönderirken arabelleğe almayı devre dışı bırakır.
 
-`--force-english-output`
+* **`--force-english-output`**
 
-Uygulamayı bir sabit, İngilizce tabanlı kültürü kullanarak çalıştırmak için zorlar.
+  Uygulamayı bir sabit, İngilizce tabanlı kültürü kullanarak çalıştırmak için zorlar.
 
-`-h|--help`
-
-Komut için kısa bir Yardım yazdırır.
-
-`-k|--api-key <API_KEY>`
-
-Sunucusu için API anahtarı.
-
-`-n|--no-symbols`
-
-Semboller gönderin değil (hatta varsa).
-
-`--no-service-endpoint`
-
-"API/v2/paket" kaynak URL'ye değil.
-
-`-s|--source <SOURCE>`
-
-Sunucu URL'sini belirtir. Sürece bu seçenek gereklidir `DefaultPushSource` yapılandırma değeri, NuGet yapılandırma dosyasında ayarlanır.
-
-`-sk|--symbol-api-key <API_KEY>`
-
-Sembol sunucusu için API anahtarı.
-
-`-ss|--symbol-source <SOURCE>`
-
-Sembol sunucusu URL'sini belirtir.
-
-`-t|--timeout <TIMEOUT>`
-
-Saniyeler içinde bir sunucuya göndermek için zaman aşımını belirtir. Varsayılan olarak 300 saniyedir (5 dakika). Varsayılan değer belirten 0 (sıfır saniye cinsinden) uygular.
-
-# <a name="net-core-20tabnetcore20"></a>[.NET core 2.0](#tab/netcore20)
-
-`-d|--disable-buffering`
-
-Bellek kullanımını azaltmak için bir HTTP (S) sunucusuna gönderirken arabelleğe almayı devre dışı bırakır.
-
-`--force-english-output`
-
-Uygulamayı bir sabit, İngilizce tabanlı kültürü kullanarak çalıştırmak için zorlar.
-
-`-h|--help`
+* **`-h|--help`**
 
 Komut için kısa bir Yardım yazdırır.
 
-`-k|--api-key <API_KEY>`
+* **`--interactive`**
 
-Sunucusu için API anahtarı.
+  Engellemek bir komut verir ve kimlik doğrulaması gibi işlemler için el ile gerçekleştirilen eylem gerektirir. Seçeneği bu yana .NET Core 2.2 SDK kullanılabilir.
 
-`-n|--no-symbols`
+* **`-k|--api-key <API_KEY>`**
 
-Semboller gönderin değil (hatta varsa).
+  Sunucusu için API anahtarı.
 
-`-s|--source <SOURCE>`
+* **`-n|--no-symbols`**
 
-Sunucu URL'sini belirtir. Sürece bu seçenek gereklidir `DefaultPushSource` yapılandırma değeri, NuGet yapılandırma dosyasında ayarlanır.
+  Semboller gönderin değil (hatta varsa).
 
-`-sk|--symbol-api-key <API_KEY>`
+* **`--no-service-endpoint`**
 
-Sembol sunucusu için API anahtarı.
+  "API/v2/paket" kaynak URL'ye değil. Seçeneği bu yana .NET Core 2.1 SDK kullanılabilir.
 
-`-ss|--symbol-source <SOURCE>`
+* **`-s|--source <SOURCE>`**
 
-Sembol sunucusu URL'sini belirtir.
+  Sunucu URL'sini belirtir. Sürece bu seçenek gereklidir `DefaultPushSource` yapılandırma değeri, NuGet yapılandırma dosyasında ayarlanır.
 
-`-t|--timeout <TIMEOUT>`
+* **`-sk|--symbol-api-key <API_KEY>`**
 
-Saniyeler içinde bir sunucuya göndermek için zaman aşımını belirtir. Varsayılan olarak 300 saniyedir (5 dakika). Varsayılan değer belirten 0 (sıfır saniye cinsinden) uygular.
+  Sembol sunucusu için API anahtarı.
+
+* **`-ss|--symbol-source <SOURCE>`**
+
+  Sembol sunucusu URL'sini belirtir.
+
+* **`-t|--timeout <TIMEOUT>`**
+
+  Saniyeler içinde bir sunucuya göndermek için zaman aşımını belirtir. Varsayılan olarak 300 saniyedir (5 dakika). Varsayılan değer belirten 0 (sıfır saniye cinsinden) uygular.
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
 
-`-d|--disable-buffering`
+* **`-d|--disable-buffering`**
 
-Bellek kullanımını azaltmak için bir HTTP (S) sunucusuna gönderirken arabelleğe almayı devre dışı bırakır.
+  Bellek kullanımını azaltmak için bir HTTP (S) sunucusuna gönderirken arabelleğe almayı devre dışı bırakır.
 
-`--force-english-output`
+* **`--force-english-output`**
 
-Uygulamayı bir sabit, İngilizce tabanlı kültürü kullanarak çalıştırmak için zorlar.
+  Uygulamayı bir sabit, İngilizce tabanlı kültürü kullanarak çalıştırmak için zorlar.
 
-`-h|--help`
+* **`-h|--help`**
 
-Komut için kısa bir Yardım yazdırır.
+  Komut için kısa bir Yardım yazdırır.
 
-`-k|--api-key <API_KEY>`
+* **`-k|--api-key <API_KEY>`**
 
-Sunucusu için API anahtarı.
+  Sunucusu için API anahtarı.
 
-`-n|--no-symbols`
+* **`-n|--no-symbols`**
 
-Semboller gönderin değil (hatta varsa).
+  Semboller gönderin değil (hatta varsa).
 
-`-s|--source <SOURCE>`
+* **`-s|--source <SOURCE>`**
 
-Sunucu URL'sini belirtir. Sürece bu seçenek gereklidir `DefaultPushSource` yapılandırma değeri, NuGet yapılandırma dosyasında ayarlanır.
+  Sunucu URL'sini belirtir. Sürece bu seçenek gereklidir `DefaultPushSource` yapılandırma değeri, NuGet yapılandırma dosyasında ayarlanır.
 
-`-sk|--symbol-api-key <API_KEY>`
+* **`-sk|--symbol-api-key <API_KEY>`**
 
-Sembol sunucusu için API anahtarı.
+  Sembol sunucusu için API anahtarı.
 
-`-ss|--symbol-source <SOURCE>`
+* **`-ss|--symbol-source <SOURCE>`**
 
-Sembol sunucusu URL'sini belirtir.
+  Sembol sunucusu URL'sini belirtir.
 
-`-t|--timeout <TIMEOUT>`
+* **`-t|--timeout <TIMEOUT>`**
 
-Saniyeler içinde bir sunucuya göndermek için zaman aşımını belirtir. Varsayılan olarak 300 saniyedir (5 dakika). Varsayılan değer belirten 0 (sıfır saniye cinsinden) uygular.
+  Saniyeler içinde bir sunucuya göndermek için zaman aşımını belirtir. Varsayılan olarak 300 saniyedir (5 dakika). Varsayılan değer belirten 0 (sıfır saniye cinsinden) uygular.
 
 ---
 
 ## <a name="examples"></a>Örnekler
 
-Gönderim *foo.nupkg* varsayılan anında iletme kaynağı için bir API anahtarı belirtme:
+* Gönderim *foo.nupkg* varsayılan anında iletme kaynağı için bir API anahtarı belirtme:
 
-`dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a`
+  ```console
+  dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a
+  ```
 
-Anında iletme *foo.nupkg* özel anında iletme kaynağına `https://customsource`, bir API anahtarı belirtme:
+* Anında iletme *foo.nupkg* özel anında iletme kaynağına `https://customsource`, bir API anahtarı belirtme:
 
-`dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://customsource/`
+  ```console
+  dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://customsource/
+  ```
 
-Gönderim *foo.nupkg* varsayılan anında iletme kaynağı:
+* Gönderim *foo.nupkg* varsayılan anında iletme kaynağı:
 
-`dotnet nuget push foo.nupkg`
+  ```console
+  dotnet nuget push foo.nupkg
+  ```
 
-Gönderim *foo.symbols.nupkg* varsayılan simgeleri kaynağı:
+* Gönderim *foo.symbols.nupkg* varsayılan simgeleri kaynağı:
 
-`dotnet nuget push foo.symbols.nupkg`
+  ```console
+  dotnet nuget push foo.symbols.nupkg
+  ```
 
-Gönderim *foo.nupkg* varsayılan anında iletme kaynağına 360 saniyelik zaman aşımı belirtme:
+* Gönderim *foo.nupkg* varsayılan anında iletme kaynağına 360 saniyelik zaman aşımı belirtme:
 
-`dotnet nuget push foo.nupkg --timeout 360`
+  ```console
+  dotnet nuget push foo.nupkg --timeout 360
+  ```
 
-Tüm göndermeler *.nupkg* varsayılan anında iletme kaynağına geçerli dizindeki dosyaları:
+* Tüm göndermeler *.nupkg* varsayılan anında iletme kaynağına geçerli dizindeki dosyaları:
 
-`dotnet nuget push *.nupkg`
+  ```console
+  dotnet nuget push *.nupkg
+  ```

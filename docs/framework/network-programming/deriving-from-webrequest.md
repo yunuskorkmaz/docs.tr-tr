@@ -11,16 +11,16 @@ helpviewer_keywords:
 - protocols, pluggable
 ms.assetid: 9810c177-973e-43d7-823c-14960bd625ea
 ms.openlocfilehash: 859593c6c53d9f6dc89047efae1c682a6a9873a7
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296912"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147554"
 ---
 # <a name="deriving-from-webrequest"></a>Webrequest'ten türetme
 <xref:System.Net.WebRequest> .NET Framework takılabilir Protokolü modeli uyan bir protokole özgü istek işleyicisi oluşturmak için temel yöntemleri ve özellikleri sağlayan soyut bir temel sınıfı. Kullanan uygulamalar **WebRequest** sınıfı, kullanılan protokolü belirtmek için gerek kalmadan herhangi bir desteklenen protokolünü kullanarak veri isteyebilir.  
   
- İki ölçütleri karşılar, takılabilir bir protokolü olarak kullanılmak üzere bir protokole özgü sınıfı için sırayla: sınıf uygulamalıdır <xref:System.Net.IWebRequestCreate> arabirimi ve kaydetmeniz gerekir ile <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=nameWithType> yöntemi. Sınıfı, tüm soyut yöntemlerini ve özelliklerini geçersiz kılmanız gerekir **WebRequest** takılabilir arabirim sağlamak için.  
+ İki ölçütü, takılabilir bir protokolü olarak kullanılmak üzere bir protokole özgü sınıfı için sırayla karşılanmalıdır: Sınıf uygulamalıdır <xref:System.Net.IWebRequestCreate> arabirimi ve kaydetmeniz gerekir ile <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=nameWithType> yöntemi. Sınıfı, tüm soyut yöntemlerini ve özelliklerini geçersiz kılmanız gerekir **WebRequest** takılabilir arabirim sağlamak için.  
   
  **WebRequest** örnekleri tek seferlik kullanılmak üzere tasarlanmıştır; başka bir istekte bulunmak istiyorsanız yeni bir oluşturma **WebRequest**. **WebRequest** destekler <xref:System.Runtime.Serialization.ISerializable> geliştiricilerin şablon serileştirmek bir arabirim **WebRequest** ve ardından ek istekler için şablonu yeniden.  
   

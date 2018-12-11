@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: 60a75946d30b1555aea01507d846e790dd00f767
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 6709344002ebc433c8d13d9cfa48a179fae9991b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122732"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125999"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Statik Sınıflar ve Statik Sınıf Üyeleri (C# Programlama Kılavuzu)
 A [statik](../../../csharp/language-reference/keywords/static.md) sınıfı, temel bir statik olmayan sınıf ile aynı, ancak bir fark vardır: bir statik sınıfın örneği oluşturulamıyor. Diğer bir deyişle, kullanamazsınız [yeni](../../../csharp/language-reference/keywords/new.md) sınıf türünde bir değişken oluşturmak için anahtar sözcüğü. Hiçbir örnek değişken olduğundan, bir statik sınıf üyeleri sınıf adı'ı kullanarak erişir. Örneğin, bir statik sınıflar varsa adlı `UtilityClass` adlı bir genel yöntem olan `MethodA`, aşağıdaki örnekte gösterildiği gibi yöntemi çağırın:  
@@ -39,7 +39,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
  Tüm sınıf türleri ile olduğu gibi bir statik sınıf için tür bilgileri tarafından yüklenir [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] ortak dil çalışma zamanı (CLR) sınıfı başvuran program yüklendiğinde. Program, tam olarak ne zaman sınıfı yüklenen belirtemezsiniz. Ancak, yüklenecek ve başlatılmış kendi alanlarına ve sınıf programınızı ilk kez başvuruluyor önce çağırılır, statik Oluşturucu sağlanır. Statik Oluşturucu yalnızca bir kez çağrılır ve statik sınıf programınızı bulunduğu uygulama etki alanı ömrü boyunca bellekte kalır.  
   
 > [!NOTE]
->  Oluşturulacak kendisi yalnızca bir örneğini izin veren bir statik olmayan sınıf oluşturmak için bkz [C# uygulama Singleton](https://msdn.microsoft.com/library/ms998558.aspx).  
+>  Oluşturulacak kendisi yalnızca bir örneğini izin veren bir statik olmayan sınıf oluşturmak için bkz [C# uygulama Singleton](https://docs.microsoft.com/previous-versions/msp-n-p/ff650316%28v=pandp.10%29).  
   
  Aşağıdaki listede, bir statik sınıf'larının temel özellikleri sağlar:  
   
@@ -84,7 +84,8 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
  Bir örnek yöntemine bir çağrı davranırken statik bir yöntem çağrısı bir çağrı talimatı Microsoft Ara dilini (MSIL) oluşturur. bir `callvirt` null bir nesneye başvuruda için ve ayrıca denetleyen yönergesi. Ancak, çoğu zaman ikisi arasındaki performans farkı önemli değildir.  
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
+Daha fazla bilgi için [statik sınıflar](~/_csharplang/spec/classes.md#static-classes) ve [statik ve örnek üyeleri](~/_csharplang/spec/classes.md#static-and-instance-members) içinde [ C# dil belirtimi](../../language-reference/language-specification/index.md). Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.
   
 ## <a name="see-also"></a>Ayrıca Bkz.
 

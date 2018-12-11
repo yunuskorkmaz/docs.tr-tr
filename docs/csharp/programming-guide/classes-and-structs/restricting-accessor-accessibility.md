@@ -9,15 +9,15 @@ helpviewer_keywords:
 - asymmetric accessor accesibility [C#]
 - indexers [C#], read-only
 ms.assetid: 6e655798-e112-4301-a680-6310a6e012e1
-ms.openlocfilehash: 66e6f0da417e62bb592fdd8654f85cdb80ccf9bc
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 1dd0f81a454475d6d668324198eb498cdfe20310
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44197212"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149555"
 ---
 # <a name="restricting-accessor-accessibility-c-programming-guide"></a>Erişimci Erişilebilirliğini Kısıtlama (C# Programlama Kılavuzu)
-[Alma](../../../csharp/language-reference/keywords/get.md) ve [ayarlamak](../../../csharp/language-reference/keywords/set.md) bölümlerini özelliğin veya dizin oluşturucu çağrılır *erişimcileri*. Varsayılan olarak bu erişimcileri aynı görünürlüğün veya erişim düzeyi:, ait oldukları özellik veya dizin oluşturucu. Daha fazla bilgi için [erişilebilirlik düzeyleri](../../../csharp/language-reference/keywords/accessibility-levels.md). Ancak, bazen bu erişimcileri birine erişimi kısıtlamak yararlıdır. Genellikle, bu erişilebilirliğini kısıtlama içerir `set` tutma sırasında erişimci `get` erişimci genel olarak erişilebilir. Örneğin:  
+[Alma](../../../csharp/language-reference/keywords/get.md) ve [ayarlamak](../../../csharp/language-reference/keywords/set.md) bölümlerini özelliğin veya dizin oluşturucu çağrılır *erişimcileri*. Varsayılan olarak, özellik veya dizin oluşturucu ait oldukları aynı görünürlük veya erişim düzeyini bu erişimcilerine sahip. Daha fazla bilgi için [erişilebilirlik düzeyleri](../../../csharp/language-reference/keywords/accessibility-levels.md). Ancak, bazen bu erişimcileri birine erişimi kısıtlamak yararlıdır. Genellikle, bu erişilebilirliğini kısıtlama içerir `set` tutma sırasında erişimci `get` erişimci genel olarak erişilebilir. Örneğin:  
   
  [!code-csharp[csProgGuideIndexers#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_1.cs)]  
   
@@ -35,7 +35,7 @@ ms.locfileid: "44197212"
 -   Erişimci erişilebilirliği düzeyde erişilebilirlik düzeyi özelliği veya dizin oluşturucu kendisini daha kısıtlayıcı olmalıdır.  
   
 ## <a name="access-modifiers-on-overriding-accessors"></a>Erişimciler geçersiz kılma üzerinde erişim değiştiricileri  
- Bir özellik veya dizin oluşturucu geçersiz kıldığınızda, geçersiz kılınan erişimcileri geçersiz kılma koda erişilebilir olması gerekir. Karşılık gelen geçersiz kılınan özelliğin/dizin oluşturucu ve erişimcileri Ayrıca, hem özellik/dizin oluşturucu erişilebilirlik düzeyi ve erişimcileri, eşleşmelidir. Örneğin:  
+ Bir özellik veya dizin oluşturucu geçersiz kıldığınızda, geçersiz kılınan erişimcileri geçersiz kılma koda erişilebilir olması gerekir. Ayrıca, hem özellik/dizin oluşturucu ve onun erişimcilerinin erişilebilirliği, karşılık gelen geçersiz kılınan özelliğin/dizin oluşturucu ve onun erişimcilerinin eşleşmesi gerekir. Örneğin:  
   
  [!code-csharp[csProgGuideIndexers#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_2.cs)]  
   

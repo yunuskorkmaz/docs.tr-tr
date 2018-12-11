@@ -3,11 +3,11 @@ title: WCF Test İstemcisi (WcfTestClient.exe)
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
 ms.openlocfilehash: 4e3531b91382c4d47aed73198bd8dd954ae4ca1f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181598"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149009"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>WCF Test İstemcisi (WcfTestClient.exe)
 Windows Communication Foundation (WCF) Test İstemcisi (WcfTestClient.exe), kullanıcılara test parametreleri giriş, hizmete girdi gönderme olanağı sağlar ve hizmet geri gönderir yanıtı görüntüleyin bir GUI araçtır. Bu test WCF hizmet konağı ile birleştirildiğinde deneyimi sorunsuz bir hizmet sağlar.  
@@ -136,7 +136,7 @@ Windows Communication Foundation (WCF) Test İstemcisi (WcfTestClient.exe), kull
 ## <a name="features-supported-by-wcf-test-client"></a>WCF Test istemcisi tarafından desteklenen özellikler  
  WCF Test istemcisi tarafından desteklenen özelliklerin bir listesi verilmiştir:  
   
--   Hizmet çağırma: İstek/yanıt ve tek yönlü mesaj.  
+-   Hizmet başlatma: İstek/yanıt ve tek yönlü mesaj.  
   
 -   Bağlamaları: Tüm bağlamaları svcutil.exe'yi desteklenir.  
   
@@ -156,7 +156,7 @@ Windows Communication Foundation (WCF) Test İstemcisi (WcfTestClient.exe), kull
   
 -   Güvenlik: [!INCLUDE[infocard](../../../includes/infocard-md.md)] , sertifika ve kullanıcı adı/parola.  
   
--   Bağlamaları: Herhangi bir bağlam bağlamaları ve WebHttpbinding (Json yanıt iletisi desteği), Https bağlamasını WSFederationbinding.  
+-   Bağlamaları: WSFederationbinding, herhangi bir bağlam bağlamaları ve Https bağlaması, WebHttpbinding (Json yanıt iletisi desteği).  
   
 ## <a name="closing-wcf-test-client"></a>WCF Test İstemcisi kapatma  
  WCF Test istemcisi aşağıdaki şekilde kapatabilirsiniz:  

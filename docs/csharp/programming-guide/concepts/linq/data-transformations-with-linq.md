@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data sources [LINQ in C#], data transformations
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
-ms.openlocfilehash: cbb4583d7eceb1410450cd9c953c3431f25dd60b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a4060017a2d3d352b3db70b1d364eb14ec1e94ce
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513458"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147443"
 ---
 # <a name="data-transformations-with-linq-c"></a>LINQ ile Veri Dönüştürmeler (C#)
 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] yalnızca veri alma hakkında değil. Veri dönüştürme için de güçlü bir araçtır. Kullanarak bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu, giriş ve yeni bir çıkış dizisi oluşturmak için birçok şekilde değiştirme gibi bir kaynak sırası kullanabilirsiniz. Öğeleri sıralama ve gruplandırma değiştirmeden dizisi kendisini değiştirebilirsiniz. Ancak belki de en güçlü özelliğidir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgulardır yeni türleri oluşturma olanağı. Bu, gerçekleştirilir [seçin](../../../../csharp/language-reference/keywords/select-clause.md) yan tümcesi. Örneğin, aşağıdaki görevleri gerçekleştirebilirsiniz:  
@@ -46,14 +46,14 @@ ms.locfileid: "43513458"
   
 1.  Kaynak öğesi yalnızca bir üye seçmek için nokta işlemi kullanın. Aşağıdaki örnekte, varsayımında bir `Customer` nesnesini içeren bir dize adlı de dahil olmak üzere birkaç ortak özellikler `City`. Bu sorgu yürütüldüğünde, dize bir çıkış sırası oluşturur.  
   
-    ```  
+    ```csharp
     var query = from cust in Customers  
                 select cust.City;  
     ```  
   
 2.  Kaynak öğesi birden fazla özelliği içeren öğeler oluşturmak için bir nesne Başlatıcı adlandırılmış bir nesneye veya anonim bir tür ile kullanabilirsiniz. Aşağıdaki örnek her iki özellik yalıtılacak anonim bir türün kullanımı gösterilmektedir `Customer` öğesi:  
   
-    ```  
+    ```csharp
     var query = from cust in Customer  
                 select new {Name = cust.Name, City = cust.City};  
     ```  

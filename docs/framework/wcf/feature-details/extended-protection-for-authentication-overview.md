@@ -3,11 +3,11 @@ title: Kimlik Doğrulama için Genişletilmiş Koruma Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: 3d2ceffe-a7bf-4bd9-a5a2-9406423bd7f8
 ms.openlocfilehash: 6063aa7093ed6c70e835364fdf5dd1c4293dd2eb
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296204"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149750"
 ---
 # <a name="extended-protection-for-authentication-overview"></a>Kimlik Doğrulama için Genişletilmiş Koruma Genel Bakış
 Kimlik doğrulama için genişletilmiş koruma, bir saldırganın istemci kimlik bilgileri yakalar ve bunları bir sunucuya yönlendirdiği ortadaki-de-adam (MITM) saldırılarına karşı korumaya yardımcı olur.  

@@ -3,15 +3,14 @@ title: .NET için Hoş Geldiniz
 description: Teknoloji .NET ailesi ile çalışmaya başlama.
 author: mairaw
 ms.author: mairaw
-ms.date: 09/07/2018
-ms.topic: article
+ms.date: 12/03/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: 020976efd12685c32c6d3a107fe403883359ed7f
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: ee4f9cd33e33006697a15f0bdafb4cc9d7ecf809
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48579099"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147210"
 ---
 # <a name="welcome-to-net"></a>.NET için Hoş Geldiniz
 
@@ -30,6 +29,7 @@ Bkz: [.NET Core ile çalışmaya başlama](core/get-started.md) .NET Core uygula
 
 Ayrıca en son .NET olayları izleyin:
 
+- [Microsoft Connect()](https://www.microsoft.com/connectevent)
 - [Microsoft Build 2018'e](https://channel9.msdn.com/Events/Build/2018)
 - [.NET Conf](https://www.dotnetconf.net/)
 
@@ -50,17 +50,18 @@ Bu belge, platformlar ve diller arasında .NET kapsamını ele alır.  .NET ve a
 - [C# Kılavuzu](csharp/index.md)
 - [F# Kılavuzu](fsharp/index.md)
 - [Visual Basic Kılavuzu](visual-basic/index.md)
+- [ML.NET Kılavuzu](machine-learning/index.md)
 
 Ayrıca, göz atabilirsiniz [.NET API Başvurusu](/dotnet/api).
 
 ## <a name="open-source"></a>Açık kaynak
 
-Bu belge tamamen olduğu [açık kaynak](https://github.com/dotnet/docs). Belgeleri yazma sorunları oluşturmaktan gibi herhangi bir şekilde katkıda bulunabilirsiniz.  Ayrıca, aynı zamanda açık kaynak .NET kendisini çoğunu şöyledir:
+Bu belge tamamen olduğu [açık kaynak](https://github.com/dotnet/docs). Belgeleri yazma sorunları oluşturmaktan gibi herhangi bir şekilde katkıda bulunabilirsiniz. Ayrıca, aynı zamanda açık kaynak .NET kendisini çoğunu şöyledir:
 
 - [.NET core giriş](https://github.com/dotnet/core)
 - [.NET kitaplıkları](https://github.com/dotnet/corefx)
 - [.NET core çalışma zamanı](https://github.com/dotnet/coreclr)
 - [(C# ve Visual Basic) Roslyn derleyici platformu ve IDE araçları](https://github.com/dotnet/roslyn)
-- [F # derleyici ve IDE araçları](https://github.com/microsoft/visualfsharp)
+- [F#Derleyici ve IDE araçları](https://github.com/microsoft/visualfsharp)
 
 Zaten etkin olan diğer kişiler katılabilir [.NET topluluk](https://www.microsoft.com/net/community) yenilikleri bulunamıyor veya Yardım isteyin.

@@ -1,26 +1,26 @@
 ---
-title: ML.NET (kümeleme) küme Iris çiçek kullanın
+title: Iris çiçek bir kümeleme learner - ML.NET kullanarak küme
 description: ML.NET kümeleme senaryosunda kullanmayı öğrenin
 author: pkulikov
 ms.author: johalex
 ms.date: 07/02/2018
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: bb41fd317507c14b46aea94e1ce576e390932a65
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.custom: mvc, seodec18
+ms.openlocfilehash: 5bd73c774f60466daaf52215c34e7e17b5f5cc9c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453196"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145640"
 ---
-# <a name="tutorial-use-mlnet-to-cluster-iris-flowers-clustering"></a>Öğretici: Kullanımı ML.NET küme Iris çiçek (kümeleme) için
+# <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>Öğretici: Küme Iris çiçek kümeleme learner ML.NET ile kullanma
 
 > [!NOTE]
 > Bu konu şu anda Önizleme aşamasında olan ML.NET ifade eder ve malzeme değişiklik gösterebilir. Daha fazla bilgi için [ML.NET giriş](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
 
 Bu öğretici ML.NET oluşturmak için nasıl kullanılacağını gösterir. bir [kümeleme modelinin yerini](../resources/tasks.md#clustering) için [Iris Çiçeği veri kümesi](https://en.wikipedia.org/wiki/Iris_flower_data_set).
 
-Bu öğreticide, şunların nasıl yapılır:
+Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 > [!div class="checklist"]
 > - Sorunu anlama
 > - Uygun makine öğrenimi görevini seçin
@@ -42,7 +42,7 @@ Iris çiçek çiçek özelliklere göre farklı gruplardaki kümesini bölme hak
 
 Her çiçek hangi gruba ait bilinmiyor olarak seçtiğiniz [Denetimsiz machine learning](../resources/glossary.md#unsupervised-machine-learning) görev. Bir veri kümesi gruplarında aynı gruptaki öğelerin birbirine daha fazla benzer diğer grupları şekilde bölmek için kullanın. bir [Kümeleme](../resources/tasks.md#clustering) machine learning görev.
 
-## <a name="create-a-console-application"></a>Bir konsol uygulaması oluşturun
+## <a name="create-a-console-application"></a>Konsol uygulaması oluşturma
 
 1. Visual Studio 2017'yi açın. Seçin **dosya** > **yeni** > **proje** menü çubuğundan. İçinde **yeni proje** iletişim kutusunda **Visual C#** düğümünü ve ardından **.NET Core** düğümü. Ardından **konsol uygulaması (.NET Core)** proje şablonu. İçinde **adı** metin kutusuna "IrisClustering" yazın ve ardından **Tamam** düğmesi.
 
@@ -172,7 +172,7 @@ Ayrıca aşağıdakileri eklemeniz gerekir `using` en üstündeki yönerge *Prog
 
 [!code-csharp[Add System.Threading.Tasks using](../../../samples/machine-learning/tutorials/IrisClustering/Program.cs#12)]
 
-Çünkü `async Main` yöntemi, C# 7.1 eklenen özelliğidir ve C# 7.0 projesi varsayılan dil sürümü değil, C# 7.1 veya üzeri dil sürümünü değiştirmeniz gerekir. Bunu yapmak için'nde proje düğümüne sağ **Çözüm Gezgini** seçip **özellikleri**. Seçin **derleme** sekmenize **Gelişmiş** düğmesi. Açılır menüden seçin **C# 7.1** (veya üzeri bir sürüm). Seçin **Tamam** düğmesi.
+Çünkü `async Main` yöntemi, C# 7.1 eklenen özelliğidir ve C# 7.0 projesi varsayılan dil sürümü değil, C# 7.1 veya üzeri dil sürümünü değiştirmeniz gerekir. Bunu yapmak için'nde proje düğümüne sağ **Çözüm Gezgini** seçip **özellikleri**. Seçin **derleme** sekmenize **Gelişmiş** düğmesi. Açılır menüden seçin **C# 7.1** (veya üzeri bir sürüm). **Tamam** düğmesini seçin.
 
 ## <a name="use-the-model-for-predictions"></a>Kullanım modeli tahminler elde etmek için
 
@@ -203,7 +203,7 @@ Tebrikler! Bir machine learning modeli için kümeleme ve tahminlerde bulunmak �
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu öğreticide şunları öğrendiniz: nasıl yapılır:
+Bu öğreticide, şunların nasıl yapıldığını öğrendiniz:
 > [!div class="checklist"]
 > - Sorunu anlama
 > - Uygun makine öğrenimi görevini seçin

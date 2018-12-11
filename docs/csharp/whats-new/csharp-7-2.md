@@ -2,12 +2,12 @@
 title: C# 7.2 yenilikleri
 description: C# 7.2 yenilikleri genel bakış.
 ms.date: 08/16/2017
-ms.openlocfilehash: 93b0a5281db841abdb8de0865dfe4b13be6d9ee2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7ee6d06750f82c9529beaed3cc665f876af08888
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181179"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148181"
 ---
 # <a name="whats-new-in-c-72"></a>C# 7.2 yenilikleri
 
@@ -28,6 +28,8 @@ Bu sürümdeki yeni diz özellikleri şunlardır:
   - Artık sayısal değişmez değerler yazdırılan herhangi bir rakam önce önde gelen altçizgilere sahip olabilir.
 * [`private protected` Erişim değiştiricisi](#private-protected-access-modifier)
   - `private protected` Erişim değiştiricisi, aynı derlemedeki türetilmiş sınıflar için erişim sağlar.
+* [Koşullu `ref` ifadeleri](#conditional-ref-expressions)
+  - Koşullu ifadenin sonucu (`?:`) artık bir başvuru olabilir.
 
 ## <a name="safe-efficient-code-enhancements"></a>Güvenli verimli kod geliştirmeleri
 
@@ -56,6 +58,18 @@ int binaryValue = 0b_0101_0101;
 
 ## <a name="private-protected-access-modifier"></a>_Özel korumalı_ erişim değiştiricisi
 
-Son olarak, yeni bir bileşik erişim değiştiricisi: `private protected` üye sınıfı veya aynı derlemede bildirilmiş türetilmiş sınıfları içeren tarafından erişilebilecek gösterir. Sırada `protected internal` türetilmiş sınıflar veya aynı derlemede bulunan sınıflar tarafından erişime `private protected` türetilen türlerin aynı derlemede bildirilmiş erişimi sınırlar.
+Yeni bir bileşik erişim değiştiricisi: `private protected` üye sınıfı veya aynı derlemede bildirilmiş türetilmiş sınıfları içeren tarafından erişilebilecek gösterir. Sırada `protected internal` türetilmiş sınıflar veya aynı derlemede bulunan sınıflar tarafından erişime `private protected` türetilen türlerin aynı derlemede bildirilmiş erişimi sınırlar.
 
 Daha fazla bilgi için [erişim değiştiricilerine](../language-reference/keywords/access-modifiers.md) dil başvurusu.
+
+## <a name="conditional-ref-expressions"></a>Koşullu `ref` ifadeleri
+
+Son olarak, koşullu ifade bir değer sonuç yerine bir başvuru sonuç üretebilir. Örneğin, bir iki dizinin içindeki ilk öğeye bir başvuru almak için aşağıdaki yazmalısınız:
+
+```csharp
+ref var r = ref (arr != null ? ref arr[0] : ref otherArr[0]);
+```
+
+Değişken `r` ilk değeri ya da bir başvurudur `arr` veya `otherArr`.
+
+Daha fazla bilgi için [koşullu işleç (?:) ](../language-reference/operators/conditional-operator.md) dil başvurusu.

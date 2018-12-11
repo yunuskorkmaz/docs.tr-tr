@@ -1,62 +1,61 @@
 ---
 title: Bir kapsayıcı olarak çalışan bir veritabanı sunucusu kullanma
-description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Bir kapsayıcı olarak çalışan bir veritabanı sunucusu kullanma
+description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Bir kapsayıcı olarak çalışan bir veritabanı sunucusu mi kullanıyorsunuz? yalnızca geliştirme için! Nedenini anlamak.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/30/2017
-ms.openlocfilehash: 42b0bf43ace00b1eb4b48c39604b89ea76c99220
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 10/02/2018
+ms.openlocfilehash: 347e6d36b7e838082f47d39c5ae67c219ec11d45
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106155"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127725"
 ---
 # <a name="using-a-database-server-running-as-a-container"></a>Bir kapsayıcı olarak çalışan bir veritabanı sunucusu kullanma
 
-Normal tek başına sunucularda, şirket içi kümeleri veya Azure SQL DB gibi bulutta PaaS Hizmetleri'nde veritabanlarınızı (SQL Server, PostgreSQL, MySQL, vb.) olabilir. Ancak, geliştirme ve test ortamları için çalışan kapsayıcılar veritabanlarınızı sahip uygun herhangi bir dış bağımlılığı olmadığından yalnızca olduğundan ve çalıştığından docker compose'u komut, tüm uygulama başlatır. Veritabanı kapsayıcısında başlatıldı ve testleri daha tahmin edilebilir böylece her zaman aynı örnek verilerle doldurulur kapsayıcı olarak bu veritabanına sahip olmanın da tümleştirme testleri için mükemmeldir.
+Normal bir tek başına sunucular, şirket içi kümelerle ya da Azure SQL DB gibi bir bulut PaaS Hizmetleri, veritabanları (SQL Server, PostgreSQL, MySQL vb.) olabilir. Ancak, geliştirme ve test ortamları için kapsayıcı olarak kullanışlı, herhangi bir dış bağımlılık olmadığı için çalışan ve yalnızca çalışan veritabanlarınızı sahip `docker-compose up` komut tüm uygulamayı başlatır. Veritabanı kapsayıcısında başlatıldı ve testler daha öngörülebilir olabilir. Bu nedenle her zaman aynı örnek verilerle doldurulur kapsayıcıları olarak bu veritabanına sahip olmanın da tümleştirme testleri için harika olmasıdır.
 
-### <a name="sql-server-running-as-a-container-with-a-microservice-related-database"></a>Mikro hizmet ile ilgili bir veritabanıyla bir kapsayıcı olarak çalışan SQL Server
+### <a name="sql-server-running-as-a-container-with-a-microservice-related-database"></a>Mikro hizmet ile ilgili bir veritabanıyla bir kapsayıcı çalışan SQL Server
 
-EShopOnContainers içinde tanımlanan sql.data adlı bir kapsayıcı olduğundan [docker-compose.yml](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/docker-compose.yml) mikro hizmetler için gerekli tüm SQL Server veritabanları ile Linux için SQL Server çalıştıran dosya. (Her veritabanı için bir SQL Server kapsayıcısı sahip olabilir, ancak, Docker için atanan daha fazla bellek gerektirir.) Önemli mikro içinde her mikro hizmet ilgili verileri, bu nedenle ilgili SQL veritabanını bu durumda sahibi olduğu noktasıdır. Ancak veritabanlarını her yerden olabilir.
+Hizmetine içinde tanımlanan sql.data adlı bir kapsayıcı olduğundan [docker-compose.yml](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/docker-compose.yml) mikro hizmetler için gerekli olan tüm SQL Server veritabanları ile Linux için SQL Server çalıştıran bir dosya. (Her veritabanı için bir SQL Server kapsayıcı da olabilir, ancak, Docker için atanan daha fazla bellek gerektirir.) Mikro hizmetlerde en önemli nokta, her bir mikro hizmet kendi ilgili verileri bu nedenle, ilgili SQL veritabanı bu durumda sahip olduğunu ' dir. Ancak herhangi bir veritabanı olabilir.
 
-Örnek uygulama kapsayıcısında aşağıdaki YAML kod çalıştırdığınızda yürütülür docker-compose.yml dosyası ile yapılandırılmış SQL Server docker-kuruluşu ayarlama Yapılandırma bilgilerini genel docker-compose.yml dosyası ve docker compose.override.yml dosyasındaki YAML kod birleştirilmiş unutmayın. (Genellikle SQL Server görüntüsünü ilgili temel veya statik bilgiler ortam ayarlarından ayıracaktır.)
+Örnek uygulamada bulunan SQL Server kapsayıcı çalıştırdığınızda, yürütülen docker-compose.yml dosyasında aşağıdaki YAML koduna yapılandırılmış `docker-compose up`. YAML koduna genel docker-compose.yml dosyasını ve docker-compose.override.yml dosyasını yapılandırma bilgilerini birleştirilmiş olmadığını unutmayın. (Genellikle SQL Server görüntüsünü ilgili temel veya statik bilgi ortam ayarları ayıracaktır.)
 
 ```yml
   sql.data:
-    image: microsoft/mssql-server-linux
+    image: microsoft/mssql-server-linux:2017-latest
     environment:
-      - MSSQL_SA_PASSWORD=Pass@word
+      - SA_PASSWORD=Pass@word
       - ACCEPT_EULA=Y
-      - MSSQL_PID=Developer
     ports:
       - "5434:1433"
 ```
 
-Benzer bir şekilde kullanmak yerine, `docker-compose`, aşağıdaki `docker run` komutu, bu kapsayıcı çalıştırabilirsiniz:
+Benzer bir şekilde kullanmak yerine, `docker-compose`, aşağıdaki `docker run` komutu o kapsayıcı çalıştırın:
 
 ```
-  docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD= your@password' -p 1433:1433 -d microsoft/mssql-server-linux
+  docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Pass@word' -p 5433:1433 -d microsoft/mssql-server-linux:2017-latest
 ```
 
-EShopOnContainers gibi birden çok kapsayıcı uygulama dağıtıyorsanız, ancak kullanmak daha kullanışlı olan uygulama için gerekli tüm kapsayıcılar dağıtır böylece komutu docker-oluşturun.
+Hizmetine gibi çok kapsayıcılı bir uygulama dağıtıyorsanız, ancak kullanmak daha kullanışlı olan `docker-compose up` komut, böylece uygulama için gerekli tüm kapsayıcıları dağıtır.
 
-Bu SQL Server kapsayıcı ilk kez başlattığınızda, kapsayıcı verdiğiniz parola ile SQL Server başlatır. SQL Server bir kapsayıcı olarak çalışmaya başladıktan sonra tüm normal SQL bağlantısı gibi SQL Server Management Studio'yu, Visual Studio veya C bağlanarak veritabanı güncelleştirebilirsiniz\# kodu.
+Bu SQL Server kapsayıcı ilk kez başlattığınızda, kapsayıcı sağladığınız parola ile SQL Server başlatır. Bir kapsayıcı SQL Server çalıştırıldıktan sonra normal bir SQL bağlantısı gibi SQL Server Management Studio, Visual Studio ve C bağlanarak veritabanı güncelleştirebilirsiniz\# kod.
 
-EShopOnContainers uygulama her mikro hizmet veritabanı örnek verilerle başlangıçta, verilerle dengeli dağıtarak aşağıdaki bölümde açıklandığı gibi başlatır.
+Hizmetine uygulama örnek verilerle her bir mikro hizmet veritabanı verilerle başlangıçta temel olarak aşağıdaki bölümde açıklandığı gibi başlatır.
 
-Bir kapsayıcı olarak çalışan SQL Server sahip olduğu SQL Server'ın bir örneğine erişimi olmayabilir demo yalnızca kullanışlı değildir. Böylece kolayca temiz bir SQL Server görüntüden başlangıç tümleştirme testleri çalıştırın ve yeni örnek veriler dengeli dağıtarak veri bilinen belirtildiği gibi aynı zamanda geliştirme ve test ortamları için çok yararlıdır.
+Bir kapsayıcı çalışan SQL Server sahip olduğu SQL Server örneğine erişimi olmayabilir demo yalnızca kullanışlı değildir. Böylece kolayca temiz bir SQL Server görüntüsünü başlatma tümleştirme testleri çalıştırmak ve verileri yeni örnek veri üretme tarafından bilinen belirtildiği gibi ayrıca geliştirme ve test ortamları için harika bir hizmettir.
 
 #### <a name="additional-resources"></a>Ek kaynaklar
 
--   **Linux, Mac veya Windows üzerinde SQL Server Docker görüntü çalıştırın**
+-   **Linux, Mac veya Windows üzerinde SQL Server Docker görüntüsünü çalıştırma** <br/>
     [*https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker*](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker)
 
--   **Bağlanma ve sqlcmd ile SQL Server Linux üzerinde sorgulama**
+-   **Bağlanma ve Linux'ta SQL Server sqlcmd ile sorgulama** <br/>
     [*https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd*](https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd)
 
-### <a name="seeding-with-test-data-on-web-application-startup"></a>Web uygulaması başlangıç test verilerle üretme
+### <a name="seeding-with-test-data-on-web-application-startup"></a>Web uygulama başlatma verileriyle test üretme
 
-Uygulama başlatıldığında veritabanına veri eklemek için Web API projesini başlangıç sınıfının yapılandırma yöntemine kod aşağıdaki gibi ekleyebilirsiniz:
+Uygulama başlatıldığında verileri veritabanına eklemek için yapılandırma yöntemine Web API projesi başlangıç sınıfına aşağıdaki gibi kod ekleyebilirsiniz:
 
 ```csharp
 public class Startup
@@ -75,7 +74,7 @@ public class Startup
 }
 ```
 
-Özel CatalogContextSeed sınıfında aşağıdaki kodu verileri doldurur.
+Aşağıdaki kodda özel CatalogContextSeed sınıf veri doldurur.
 
 ```csharp
 public class CatalogContextSeed
@@ -126,11 +125,11 @@ public class CatalogContextSeed
 }
 ```
 
-Tümleştirme testlerini çalıştırdığınızda, tümleştirme testlerinizi ile tutarlı verileri oluşturmak için bir yol olması yararlıdır. Her şeyi bir kapsayıcı üzerinde çalışan SQL Server örneği de dahil olmak üzere sıfırdan oluşturma yetkisi olan test ortamları için mükemmeldir.
+Tümleştirme testleri çalıştırdığınızda, tümleştirme testleri ile tutarlı verileri oluşturabileceği bir yol olan yararlı olur. Her şeyi bir kapsayıcı üzerinde çalışan SQL Server örneğini dahil olmak üzere sıfırdan oluşturmak için test ortamları için harika bir yoldur.
 
-### <a name="ef-core-inmemory-database-versus-sql-server-running-as-a-container"></a>EF çekirdek Inmemory veritabanı bir kapsayıcı olarak çalışan SQL Server ile karşılaştırması
+### <a name="ef-core-inmemory-database-versus-sql-server-running-as-a-container"></a>EF Core Inmemory veritabanı bir kapsayıcı çalışan SQL Server ile karşılaştırması
 
-Testleri çalıştırırken başka bir iyi seçimdir Entity Framework Inmemory veritabanı sağlayıcısı kullanmaktır. Bu yapılandırma, Web API projesinde başlangıç sınıfı ConfigureServices yönteminde belirtebilirsiniz:
+Testler çalışırken başka bir iyi seçim, Entity Framework Inmemory veritabanı sağlayıcısı kullanmaktır. Bu yapılandırma, Web API projesinde başlangıç sınıfı Createservicereplicalisteners() yönteminde belirtebilirsiniz:
 
 ```csharp
 public class Startup
@@ -154,29 +153,29 @@ public class Startup
 }
 ```
 
-Ancak önemli bir catch yoktur. Bellek içi veritabanı belirli bir veritabanına özgü birçok kısıtlamaları desteklemez. Örneği için benzersiz bir dizin EF çekirdek modelinizde bir sütun ekleyin ve onu yinelenen değer eklemenize izin vermez olduğunu denetlemek için bellek içi veritabanına karşı test yazma. Ancak, bellek içi veritabanı kullanırken, bir sütunda benzersiz dizinler işleyemiyor. Bu nedenle, bellek içi veritabanı tam olarak aynı gerçek bir SQL Server veritabanı olarak davranıyor değildir — veritabanı özgü kısıtlamaları öykünmek değil.
+Ancak önemli bir catch yoktur. Bellek içi veritabanı, belirli bir veritabanına belirli birçok kısıtlama desteklemez. Örneği için benzersiz bir dizin EF Core modelinizde bir sütun ekleyin ve bunu bir yinelenen değer eklemenize izin vermez, denetlenecek bellek içi veritabanınızda bir test yazın. Ancak, bellek içi veritabanına kullanırken bir sütunun benzersiz dizinler işleyemiyor. Bu nedenle, bellek içi veritabanı ile aynı gerçek bir SQL Server veritabanı şekilde davranmaz — veritabanı özgü kısıtlamaları öykünmek değil.
 
-Buna rağmen bir bellek içi veritabanı sınama ve prototipi oluşturulurken için hala yararlıdır. Ancak belirli veritabanı uygulama davranışını dikkate doğru tümleştirme testleri oluşturmak istiyorsanız, SQL Server gibi gerçek bir veritabanını kullanmak gerekir. Bu amaç için SQL Server bir kapsayıcıda seçim ve EF çekirdek Inmemory veritabanı sağlayıcısı daha kesin mükemmel çalışıyor.
+Buna rağmen bir bellek içi veritabanına test ve prototip oluşturma için hala faydalıdır. Ancak, belirli bir veritabanı uygulama davranışını dikkate doğru tümleştirme testleri oluşturmak istiyorsanız, SQL Server gibi gerçek bir veritabanı kullanmanız gerekir. Bu amaç için SQL Server çalıştıran bir kapsayıcıda, harika bir seçim ve EF Core Inmemory veritabanı sağlayıcısı daha doğru olduğu.
 
-### <a name="using-a-redis-cache-service-running-in-a-container"></a>Bir kapsayıcıda çalışan bir Redis önbelleği hizmeti kullanma
+### <a name="using-a-redis-cache-service-running-in-a-container"></a>Bir kapsayıcı içinde çalışan bir Redis cache hizmeti kullanma
 
-Redis ve kavram kanıtı senaryoları özellikle geliştirme ve test için bir kapsayıcı çalıştırabilirsiniz. Tüm bağımlılıkları kapsayıcılarında çalıştıran olabileceği için bu senaryo uygundur — değil yalnızca yerel geliştirme makinelerinizi, ancak test ortamınızı CI/CD hatlarınızı.
+Redis, kavram kanıtı senaryoları ve geliştirme ve test için özellikle kapsayıcısı üzerinde çalıştırabilirsiniz. Tüm bağımlılıklarınızı kapsayıcılarında çalıştırılan olabilir çünkü bu senaryo uygundur: yalnızca değil yerel geliştirme makineleriniz için test ortamlarınızda CI/CD işlem hatlarınızı için.
 
-Ancak, Redis üretimde çalıştırdığınızda, Redis Microsoft PaaS (hizmet olarak Platform) olarak çalışan Azure gibi bir yüksek kullanılabilirlik çözümü arayın en iyisidir. Kodunuzda bağlantı dizelerinizi değiştirmeniz yeterlidir.
+Ancak, üretim ortamında Redis çalıştırdığınızda, Redis Microsoft bir PaaS (hizmet olarak Platform) olarak çalışan Azure gibi bir yüksek kullanılabilirlik çözümü arayın daha iyi olur. Kodunuzda bağlantı dizelerinizi değiştirmeniz yeterlidir.
 
-Redis, Redis Docker görüntüsüyle sağlar. Bu görüntü, Docker hub'a bu URL'de edinilebilir:
+Redis, Redis ile bir Docker görüntüsü sağlar. Bu görüntüyü Docker hub'dan bu URL'de kullanılabilir:
 
-<https://hub.docker.com/_/redis/>
+[https://hub.docker.com/_/redis/](https://hub.docker.com/_/redis/)
 
-Docker Redis bir kapsayıcı, komut isteminde aşağıdaki Docker CLI komutunu yürüterek doğrudan çalıştırabilirsiniz:
+Doğrudan komut isteminde aşağıdaki Docker CLI komutunu yürüterek bir Redis Docker kapsayıcısı çalıştırabilirsiniz:
 
 ```
   docker run --name some-redis -d redis
 ```
 
-Bu nedenle standart kapsayıcı bağlama otomatik olarak bağlantılı kapsayıcıları kullanabilmesi, Redis görüntü sunmaya: 6379 (Redis tarafından kullanılan bağlantı noktası) içerir.
+Bu nedenle standart kapsayıcı bağlama, otomatik olarak bağlı kapsayıcılara kullandıracağınız, Redis görüntüsünü'ı kullanıma sunar: 6379 (Redis tarafından kullanılan bağlantı noktası) içerir.
 
-EShopOnContainers içinde basket.api mikro hizmet kapsayıcı olarak çalışan bir Redis önbelleği kullanır. Bu basket.data kapsayıcı, aşağıdaki örnekte gösterildiği gibi birden çok kapsayıcı docker-compose.yml dosyası bir parçası olarak tanımlanır:
+Hizmetine basket.api mikro hizmet kapsayıcı olarak çalışan bir Redis önbelleği kullanır. Bu basket.data kapsayıcı çok kapsayıcılı docker-compose.yml dosyasını bir parçası olarak, aşağıdaki örnekte gösterildiği gibi tanımlanır:
 
 ```yml
 #docker-compose.yml file
@@ -187,9 +186,9 @@ EShopOnContainers içinde basket.api mikro hizmet kapsayıcı olarak çalışan 
       - "6379"
 ```
 
-Bu kodu docker-compose.yml redis görüntüyü temel alarak ve bağlantı noktası 6379 dahili olarak, yalnızca Docker ana içinde çalışan diğer kapsayıcılar erişilebilir olacaktır anlamına yayımlama basket.data adlı bir kapsayıcı tanımlar.
+Docker-compose.yml bu kodda, redis görüntüye göre ve 6379 bağlantı dahili olarak, yani yalnızca Docker konağı içinde çalışan diğer kapsayıcılar erişilebilir olacağını yayımlama basket.data adlı bir kapsayıcı tanımlar.
 
-Son olarak, docker compose.override.yml dosyasında eShopOnContainers örnek basket.api mikro hizmet bu Redis kapsayıcı için kullanılacak bağlantı dizesini tanımlar:
+Son olarak, docker-compose.override.yml dosyasında basket.api mikro hizmetine örnek için Redis kapsayıcı için kullanılacak bağlantı dizesini tanımlar:
 
 ```yml
   basket.api:
@@ -199,7 +198,8 @@ Son olarak, docker compose.override.yml dosyasında eShopOnContainers örnek bas
       - EventBusConnection=rabbitmq
 ```
 
+Daha önce belirtildiği gibi "basket.data" mikro hizmet adını docker'ın iç ağ DNS tarafından çözümlenir.
 
 >[!div class="step-by-step"]
-[Önceki](multi-container-applications-docker-compose.md)
-[sonraki](integration-event-based-microservice-communications.md)
+>[Önceki](multi-container-applications-docker-compose.md)
+>[İleri](integration-event-based-microservice-communications.md)

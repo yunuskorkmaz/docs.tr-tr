@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: ağ izlemeyi yapılandırma'
+title: 'Nasıl Yapılır: Ağ izlemeyi yapılandırma'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - formatting [.NET Framework], network tracing
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - application configuration files, network tracing
 - sockets, trace output
 ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
-ms.openlocfilehash: 257f417fa573577ca8e8ceb4edc9c4f481af1f72
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6b1a61ac7566f624f44480ffed2337dba5e51ca2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192453"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143369"
 ---
-# <a name="how-to-configure-network-tracing"></a>Nasıl yapılır: ağ izlemeyi yapılandırma
+# <a name="how-to-configure-network-tracing"></a>Nasıl Yapılır: Ağ izlemeyi yapılandırma
 Uygulama veya bilgisayar yapılandırma dosyası, ağ izlemelerinin biçimini ve içeriğini belirleyen ayarları içerir. Bu yordamı gerçekleştirmeden önce izlemenin etkin olduğundan emin olun. İzlemeyi etkinleştirme hakkında daha fazla bilgi için bkz: [Enabling Network Tracing](../../../docs/framework/network-programming/enabling-network-tracing.md).  
   
  Bilgisayar yapılandırma dosyası machine.config, Windows'un yüklü olduğu dizinde %Windir%\Microsoft.NET\Framework klasöründe depolanır. (Örneğin, C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config veya C:\Windows\ bilgisayarda yüklü .NET Framework'ün her sürümü için %Windir%\Microsoft.NET\Framework altındaki klasörlerde ayrı bir machine.config dosyası yok Microsoft.NET\Framework64\v4.0.30319\Config\machine.config.).  
@@ -69,7 +69,8 @@ Uygulama veya bilgisayar yapılandırma dosyası, ağ izlemelerinin biçimini ve
         <sharedListeners>  
           <add name="System.Net"  
             type="System.Diagnostics.TextWriterTraceListener"  
-            initializeData="network.log"  
+            initializeData="network.log"
+            traceOutputOptions="ProcessId, DateTime" 
           />  
         </sharedListeners>  
         <trace autoflush="true"/>  

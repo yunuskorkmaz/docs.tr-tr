@@ -1,67 +1,65 @@
 ---
-title: Mikro mimarisi
-description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Mikro mimarisi
+title: Mikro hizmet mimarisi
+description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | 30.000 ayak mikro hizmet mimarisini görüntüleyin.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: e41544a7c5f352321c3fa3e61a71568a6cf0f219
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 09/20/2018
+ms.openlocfilehash: dc96c5570ea829802c94c817ebd4910a090632ee
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106690"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145744"
 ---
-# <a name="microservices-architecture"></a>Mikro mimarisi
+# <a name="microservices-architecture"></a>Mikro hizmet mimarisi
 
-Adından da anlaşılacağı gibi mikro mimarisi küçük Hizmetleri kümesi olarak bir sunucu uygulaması oluşturmak için bir yaklaşımdır. Her hizmetin kendi işleminde çalışır ve HTTP/HTTPS, WebSockets, gibi protokoller kullanan diğer işlemleri ile iletişim kurar veya [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol). Her mikro hizmet belirli uçtan uca etki alanı veya iş yetenek belirli bağlam sınırında uygular ve her sınırlarına geliştirilmiş olmalıdır ve bağımsız olarak dağıtılabilir. Son olarak, her mikro hizmet, farklı veri depolama teknolojileri (SQL, NoSQL) ve farklı programlama dillerini dayalı etki alanı mantığı (Egemenlik ve merkezi olmayan veri yönetimi) ve ilişkili etki alanı veri modeli kendi.
+Adından da anlaşılacağı gibi mikro hizmetler mimarisi küçük bir hizmetler kümesi olarak sunucu uygulaması oluşturmaya yönelik bir yaklaşım ' dir. Yaklaşım, ön uç için kullanılıyor olsa da, bir mikro hizmet mimarisi arka uca çoğunlukla yönelimli olduğu anlamına gelir. Her hizmet kendi işleminde çalışır ve diğer işlemler gibi HTTP/HTTPS ve WebSockets, protokoller kullanarak iletişim kurar veya [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol). Her mikro hizmet belirli bir uçtan uca etki alanı ya da belirli bir bağlam sınırında bir iş özelliğini uygular ve her otonom olarak geliştirilmiş olmalıdır ve bağımsız olarak dağıtılabilir. Son olarak, her bir mikro hizmet etki alanı mantığı (özerkliği ve merkezi olmayan veri yönetimi) ve ilgili etki alanı veri modeline ait olması ve farklı veri depolama teknolojileri (SQL, NoSQL) ve farklı programlama dillerini temel alabilir.
 
-Hangi boyutu bir mikro olmalıdır? Bir mikro hizmet geliştirirken, boyutu en önemli nokta olmamalıdır. Bunun yerine, en önemli nokta geniş oluşturmak için geliştirme, dağıtım ve her hizmet için ölçek otonomiye sahip şekilde Hizmetleri bağlı olmalıdır. Elbette, tanımlama ve mikro tasarlama, diğer mikro ile çok fazla doğrudan bağımlılıkları olmayan sürece, bunları olabildiğince küçük yapmak çalıştığınızda. Daha fazla mikro hizmet boyutunu gerekir iç cohesion ve kendi bağımsızlığı diğer hizmetlerden daha önemlidir.
+Bir mikro hizmet boyutu ne olmalı? Bir mikro hizmet geliştirirken, boyutu en önemli nokta olmamalıdır. Bunun yerine, en önemli nokta gevşek oluşturmak için geliştirme, dağıtma ve ölçeklendirme, her hizmet için'ın kontrolündedir şekilde Hizmetleri eşleşmiş olmalıdır. Elbette, tanımlamak ve mikro hizmetler tasarlama, diğer mikro hizmetler ile çok fazla doğrudan bağımlılıklara sahip olmadığınız sürece olabildiğince küçük olacak şekilde çalışmanız gerekir. Daha fazla mikro hizmet boyutunu iç Uyuma sahip olması gerekir ve bunun bağımsızlığı diğer hizmetlerden daha önemlidir.
 
-Mikro mimarisi neden? Kısacası, uzun vadeli çeviklik sağlar. Mikro her ayrıntılı ve otonom yaşam döngüleri sahip çok sayıda bağımsız olarak dağıtılabilir hizmetlerini temel alarak uygulamalar oluşturmanızı sağlayarak daha iyi bakım karmaşık, büyük ve yüksek düzeyde ölçeklenebilir sistemlerinde etkinleştirin.
+Bir mikro hizmet mimarisi neden? Kısacası, uzun vadeli çeviklik sağlar. Mikro hizmetler, daha iyi bakım belirtir, her ayrıntılı ve otonom yaşam döngülerine sahip birden çok bağımsız bir şekilde dağıtılabilen hizmete tabanlı uygulamalar oluşturmanıza imkan vererek karmaşık, büyük ve yüksek oranda ölçeklenebilir sistemlerinde etkinleştirin.
 
-Ek bir avantaj olarak mikro çıkışı bağımsız olarak ölçeklendirebilirsiniz. Bir birim olarak ölçeğini gereken tek bir tek yapılı uygulama sahip olmak yerine, belirli mikro yerine ölçeklendirebilirsiniz. Bu şekilde, yalnızca ölçeklendirilmesi gerekmez diğer alanlarını uygulama ölçeklendirmek yerine isteğe bağlı desteklemek için daha fazla işlem gücü veya ağ bant genişliği gerekiyor işlevsel alan ölçeklendirebilirsiniz. Daha az donanım gerekeceğinden, maliyet tasarrufu anlamına gelir.
+Ek bir avantaj olarak mikro hizmetler bağımsız olarak ölçeği genişletebilirsiniz. Bir birim olarak ölçeği gereken tek bir tek parçalı uygulama sahip olmak yerine, bunun yerine belirli bir mikro hizmetler ölçeklendirebilirsiniz. Böylece, yalnızca ölçeklendirilmesi gerekmeyen diğer alanları uygulamanın ölçeklendirmek yerine isteğe desteklemek için daha fazla işleme güç veya ağ bant genişliği gereksinimlerinize işlevsel alan ölçeklendirebilirsiniz. Daha az donanım gerekeceğinden, maliyet tasarrufu anlamına gelir.
 
-![](./media/image6.png)
+![Geleneksel monolitik yaklaşımda birkaç sunucuları/VM tüm uygulamada kopyalayarak uygulama ölçeklendirir. Mikro hizmetler yaklaşımı her hizmet birbirinden bağımsız şekilde ölçeklenebilmek için işlevleri daha küçük Hizmetleri'nde ayrılır.](./media/image6.png)
 
-**Şekil 4-6**. Tek yapılı dağıtım mikro yaklaşım karşılaştırması
+**Şekil 4-6**. Mikro hizmetler yaklaşımı yerine tek parçalı dağıtım
 
-Şekil 4-6 gösterildiği gibi karmaşık, büyük ve ölçeklenebilir uygulamalar belirli, küçük alanlarının değişebildiğinden mikro yaklaşım Çevik değişiklikleri ve her mikro hizmet hızlı yinelemesi sağlar.
+Şekil 4-6 gösterildiği gibi karmaşık, büyük ve ölçeklenebilir uygulamaların belirli, küçük alanlarını değiştirebilirsiniz çünkü mikro hizmetler yaklaşımı Çevik değişiklikleri ve her mikro hizmet hızlı yinelemesini sağlar.
 
-Hassas mikro tabanlı uygulamaları etkinleştirir sürekli tümleştirme ve kesintisiz teslim yöntemleri mimarisi oluşturma. Ayrıca yeni işlevler teslimini uygulamasına hızlandırır. Hassas uygulamalar oluşumunu ve yalıtım modunda mikro test çalıştırmak ve bunları sınırlarına aralarında Temizle sözleşmeleri korurken gelişmesi sağlar. Arabirimleri veya sözleşmeleri değiştirmeyin sürece tüm mikro hizmet iç uyarlamasını değiştirin veya yeni işlevsellik diğer mikro bozmadan ekleyin.
+Ayrıntılı mikro hizmet tabanlı uygulamalar sağlar, sürekli tümleştirme ve sürekli teslim yöntemleri mimarileri oluşturma. Bu da yeni işlevlerin uygulamaya hızla sunulmasına. Uygulamaların ayrıntılı oluşturma ve mikro hizmetler ayrı olarak test çalıştırabilirsiniz ve bunları otonom olarak bunlar arasında NET sözleşmeleri korurken gelişmesi sağlar. Arabirimleri veya sözleşmeleri değişmez sürece iç herhangi bir mikro hizmet uygulaması değiştirebilir veya diğer mikro hizmetler bozmadan yeni işlevsellik ekler.
 
-Mikro tabanlı bir sistemle üretime geçmeden başarısı etkinleştirmek için önemli yönleri şunlardır:
+Mikro hizmet tabanlı bir sistemle üretime geçmeden başarısı etkinleştirmek için önemli yönleri şunlardır:
 
--   İzleme ve sistem durumu hizmetleri ve altyapı denetler.
+- İzleme ve sistem durumu denetimleri altyapı ve Hizmetleri.
 
--   Ölçeklenebilir altyapı Hizmetleri (diğer bir deyişle, Bulut ve orchestrators).
+- Ölçeklenebilir altyapı Hizmetleri (diğer bir deyişle, Bulut ve düzenleyicileri).
 
--   Güvenlik tasarımı ve uygulama, birden çok düzeyde: kimlik doğrulama, yetkilendirme, gizli yönetimi, güvenli iletişim, vs.
+- Güvenlik tasarımı ve uygulaması farklı düzeylere: kimlik doğrulaması, yetkilendirme, gizli dizileri yönetimi, güvenli iletişim, vs.
 
--   Genellikle farklı mikro odaklanan farklı ekipler ile hızlı uygulama teslim.
+- Genellikle farklı mikro hizmetler üzerinde odaklanarak farklı ekipler ile hızlı uygulama teslimi.
 
--   DevOps ve CI/CD uygulamalar ve altyapı.
+- DevOps ve CI/CD uygulamalarını ve altyapısını.
 
-Bu, yalnızca ilk üç kapsamında veya bu kılavuzda sunulan. Uygulama yaşam döngüsü için ilgili en son iki nokta ilave kapsanan [Microsoft Platformu ve araçları ile kapsayıcılı Docker uygulama yaşam döngüsü](https://aka.ms/dockerlifecycleebook) e-Kitap.
+Bu yalnızca ilk üç ele veya bu kılavuzda sunulan. Uygulama yaşam döngüsü için ilgili, son iki noktalarına ek ele alınmaktadır [kapsayıcılı Docker uygulaması yaşam döngüsü Microsoft Platformu ve araçları ile](https://aka.ms/dockerlifecycleebook) e-kitabı.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
--   **İşareti Russinovich. Mikro: Bulut tarafından desteklenen bir uygulama devrim**
-    [*https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/*](https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/)
+- **Mark Russinovich'e. Mikro hizmetler: Bulut tarafından desteklenen bir uygulama Devrimi** \
+  [*https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/*](https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/)
 
--   **Martin Fowler. Mikro**
-    [*https://www.martinfowler.com/articles/microservices.html*](https://www.martinfowler.com/articles/microservices.html)
+- **Martin Fowler. Mikro hizmetler** \
+  [*http://www.martinfowler.com/articles/microservices.html*](http://www.martinfowler.com/articles/microservices.html)
 
--   **Martin Fowler. Mikro hizmet önkoşulları**
-    [*https://martinfowler.com/bliki/MicroservicePrerequisites.html*](https://martinfowler.com/bliki/MicroservicePrerequisites.html)
+- **Martin Fowler. Mikro hizmet önkoşulları** \
+  [*http://martinfowler.com/bliki/MicroservicePrerequisites.html*](http://martinfowler.com/bliki/MicroservicePrerequisites.html)
 
--   **Jimmy Nilsson. Öbek bulut bilgi işlem**
-    [*https://www.infoq.com/articles/CCC-Jimmy-Nilsson*](https://www.infoq.com/articles/CCC-Jimmy-Nilsson)
+- **Jimmy Nilsson. Öbek bulut bilgi işlem** \
+  [*https://www.infoq.com/articles/CCC-Jimmy-Nilsson*](https://www.infoq.com/articles/CCC-Jimmy-Nilsson)
 
--   **Cesar de la Torre. Microsoft Platformu ve araçları ile Docker uygulama yaşam döngüsü kapsayıcılı** (indirilebilir e-kitap) [*https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
-
-
-
+- **Cesar de la Torre. Docker uygulaması yaşam döngüsü Microsoft Platformu ve araçları ile kapsayıcılı hale** (indirilebilir e-kitap) \
+  [*https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
 
 >[!div class="step-by-step"]
-[Önceki](service-oriented-architecture.md)
-[sonraki](data-sovereignty-per-microservice.md)
+>[Önceki](service-oriented-architecture.md)
+>[İleri](data-sovereignty-per-microservice.md)

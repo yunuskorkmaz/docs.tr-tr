@@ -4,12 +4,12 @@ description: Başvuru dönüş ve ref yerel değerlerine tanımlanacağını ve 
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
-ms.openlocfilehash: ca518b124bc95a5bc3a2910d9c3d9e5338e1b464
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6399079e17a53ac5bf283eaa5c799964360350f4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193766"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146072"
 ---
 # <a name="ref-returns-and-ref-locals"></a>Ref dönüşler ve ref yerel ayarlar
 
@@ -125,4 +125,4 @@ Bu ikinci sürüm numarasını Aranan dizinin sonuna yakın olduğu senaryolarda
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [ref anahtar sözcüğü](../../language-reference/keywords/ref.md)  
-- [Güvenli verimli kod yazma](../../../csharp/write-safe-efficient-code.md)
+- [Güvenli verimli kod yazma](../../write-safe-efficient-code.md)

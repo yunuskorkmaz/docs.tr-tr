@@ -1,62 +1,60 @@
 ---
-title: DotNet Kaldır başvuru command - .NET Core CLI
-description: Dotnet Kaldır başvuru komutu proje için proje başvuruları kaldırmak için uygun bir seçenek sağlar.
-author: mairaw
-ms.author: mairaw
+title: DotNet Kaldır başvuru komutu
+description: Dotnet remove başvuru komutu, projeden projeye başvuruları kaldırmak için kullanışlı bir seçenek sağlar.
 ms.date: 05/29/2018
-ms.openlocfilehash: b281b255be7f49a99a6b4928c340cd4fb085f085
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: bfac4721743babcf48fd8e86a50c8df136e1bfce
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696237"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170619"
 ---
-# <a name="dotnet-remove-reference"></a>DotNet Kaldır başvurusu
+# <a name="dotnet-remove-reference"></a>DotNet başvuru Kaldır
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
 ## <a name="name"></a>Ad
 
-`dotnet remove reference` -Proje Proje başvuruları kaldırır.
+`dotnet remove reference` -Projeden projeye başvurular kaldırır.
 
-## <a name="synopsis"></a>Özet
+## <a name="synopsis"></a>Özeti
 
 `dotnet remove [<PROJECT>] reference [-f|--framework] <PROJECT_REFERENCES> [-h|--help]`
 
 ## <a name="description"></a>Açıklama
 
-`dotnet remove reference` Komutu proje başvuruları bir projeden kaldırmak için uygun bir seçenek sağlar.
+`dotnet remove reference` Komutu bir projeden projeye başvuruları kaldırmak için kullanışlı bir seçenek sağlar.
 
 ## <a name="arguments"></a>Arguments
 
 `PROJECT`
 
-Hedef proje dosyası. Belirtilmezse, komut için geçerli dizin arar.
+Hedef proje dosyası. Belirtilmezse, komut için geçerli dizinde arar.
 
 `PROJECT_REFERENCES`
 
-Kaldırmak için proje proje (P2P) başvuruyor. Bir veya birden çok proje belirtebilirsiniz. [Glob desenleri](https://en.wikipedia.org/wiki/Glob_(programming)) UNIX/Linux tabanlı Terminal üzerinde desteklenir.
+Projeden projeye (P2P) kaldırmak için başvurur. Bir veya birden çok proje belirtebilirsiniz. [Glob desenleri](https://en.wikipedia.org/wiki/Glob_(programming)) UNIX/Linux tabanlı terminaller üzerinde desteklenir.
 
 ## <a name="options"></a>Seçenekler
 
 `-h|--help`
 
-Komutu için kısa bir Yardım yazdırır.
+Komut için kısa bir Yardım yazdırır.
 
 `-f|--framework <FRAMEWORK>`
 
-Yalnızca belirli bir hedeflerken başvuru kaldırır [framework](../../standard/frameworks.md).
+Yalnızca belirli bir hedeflenirken başvuruyu kaldırır [framework](../../standard/frameworks.md).
 
 ## <a name="examples"></a>Örnekler
 
-Proje başvurusu belirtilen projeden kaldırın:
+Bir proje başvurusu belirtilen projeden kaldır:
 
 `dotnet remove app/app.csproj reference lib/lib.csproj`
 
-Geçerli dizin projede birden çok proje başvuruları kaldırın:
+Geçerli dizindeki bir projeden birden çok proje başvuruları kaldırın:
 
 `dotnet remove reference lib1/lib1.csproj lib2/lib2.csproj`
 
-UNIX/Linux üzerinde glob desenini kullanarak birden çok proje başvuruları kaldırın:
+UNIX/Linux üzerinde bir glob deseni kullanılarak birden çok proje başvuruları kaldırın:
 
 `dotnet remove app/app.csproj reference **/*.csproj`

@@ -1,15 +1,13 @@
 ---
-title: DotNet-başvuru komut - .NET Core CLI ekleme
-description: Dotnet ekleyin başvuru komutu proje için proje başvuruları eklemek için uygun bir seçenek sağlar.
-author: mairaw
-ms.author: mairaw
-ms.date: 05/25/2018
-ms.openlocfilehash: 3398d4dc7bf70eaadcdd92269dbd3b784079c22d
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+title: DotNet-başvuru komut ekleme
+description: Dotnet ekleyin başvuru komut projeden projeye başvurular eklemek için uygun bir seçenek sağlar.
+ms.date: 12/04/2018
+ms.openlocfilehash: 8df9fa3c9469f74b27a9cb8120936f03532b016c
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696968"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169777"
 ---
 # <a name="dotnet-add-reference"></a>DotNet-Başvuru Ekle
 
@@ -17,15 +15,15 @@ ms.locfileid: "34696968"
 
 ## <a name="name"></a>Ad
 
-`dotnet add reference` -Proje Proje (P2P) başvuruları ekler.
+`dotnet add reference` -Projeler (P2P) başvuruları ekler.
 
-## <a name="synopsis"></a>Özet
+## <a name="synopsis"></a>Özeti
 
 `dotnet add [<PROJECT>] reference [-f|--framework] <PROJECT_REFERENCES> [-h|--help]`
 
 ## <a name="description"></a>Açıklama
 
-`dotnet add reference` Komutu proje başvuruları bir proje eklemek için uygun bir seçenek sağlar. Komutu çalıştırdıktan sonra [ `<ProjectReference>` ](/visualstudio/msbuild/common-msbuild-project-items) öğeleri proje dosyasına eklenir.
+`dotnet add reference` Komutu, bir proje proje başvurular eklemek için uygun bir seçenek sağlar. Komutu çalıştırdıktan sonra [ `<ProjectReference>` ](/visualstudio/msbuild/common-msbuild-project-items) öğeleri, proje dosyasına eklenir.
 
 ```xml
 <ItemGroup>
@@ -37,34 +35,40 @@ ms.locfileid: "34696968"
 
 ## <a name="arguments"></a>Arguments
 
-`PROJECT`
+* **`PROJECT`**
 
-Proje dosyası belirtir. Belirtilmezse, komut için geçerli dizin arar.
+  Proje dosyasını belirtir. Belirtilmezse, komut için geçerli dizinde arar.
 
-`PROJECT_REFERENCES`
+* **`PROJECT_REFERENCES`**
 
-Eklemek için proje proje (P2P) başvuruyor. Bir veya daha fazla projeleri belirtin. [Glob desenleri](https://en.wikipedia.org/wiki/Glob_(programming)) UNIX/Linux tabanlı sistemlerde desteklenir.
+  Eklenecek proje proje (P2P) başvuruyor. Bir veya daha fazla proje belirtin. [Glob desenleri](https://en.wikipedia.org/wiki/Glob_(programming)) UNIX/Linux tabanlı sistemlerde desteklenir.
 
 ## <a name="options"></a>Seçenekler
 
-`-h|--help`
+* **`-h|--help`**
 
-Komutu için kısa bir Yardım yazdırır.
+  Komut için kısa bir Yardım yazdırır.
 
-`-f|--framework <FRAMEWORK>`
+* **`-f|--framework <FRAMEWORK>`**
 
-Proje başvuruları yalnızca belirli bir hedeflerken ekler [framework](../../standard/frameworks.md).
+  Yalnızca belirli bir hedeflenirken proje başvuruları ekler [framework](../../standard/frameworks.md).
 
 ## <a name="examples"></a>Örnekler
 
-Proje başvurusu ekleyin:
+* Bir proje başvurusu Ekle:
 
-`dotnet add app/app.csproj reference lib/lib.csproj`
+  ```console
+  dotnet add app/app.csproj reference lib/lib.csproj
+  ```
 
-Birden çok proje başvuruları projeye geçerli dizinde ekleyin:
+* Geçerli dizinde birden çok proje başvuruları projeye ekleyin:
 
-`dotnet add reference lib1/lib1.csproj lib2/lib2.csproj`
+  ```console
+  dotnet add reference lib1/lib1.csproj lib2/lib2.csproj
+  ```
 
-Linux/Unix üzerinde genelleme desenini kullanarak birden çok proje başvurularını ekleyin:
+* Linux/UNIX Glob deseni kullanılarak birden çok proje başvurularını ekleyin:
 
-`dotnet add app/app.csproj reference **/*.csproj`
+  ```console
+  dotnet add app/app.csproj reference **/*.csproj
+  ```
