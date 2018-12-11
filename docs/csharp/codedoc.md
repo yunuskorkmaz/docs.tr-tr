@@ -3,12 +3,12 @@ title: XML açıklamalarıyla kodunuzu belgeleme
 description: XML belgeleri yorumları ile kodunuzu belgeleme ve derleme zamanında XML belge dosyası oluşturma hakkında bilgi edinin.
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 09e6b4aa75aababcebba96693d6e73b29a30fc6a
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 4b01d7989b97cbae56fc04212e6c6753fd1252a9
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453274"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129675"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>XML açıklamalarıyla kodunuzu belgeleme
 
@@ -20,7 +20,7 @@ XML belgeleri yorumları, diğer açıklamaları gibi derleyici tarafından göz
 
 XML dosyası, aşağıdakilerden birini yaparak, bir derleme zamanında oluşturabilirsiniz:
 
-- Ekleyebileceğiniz komut satırından .NET Core ile bir uygulama varsa geliştiriyorsanız, bir [DocumentationFile öğesi](https://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-properties) için `<PropertyGroup>` .csproj proje dosyanızın bölümü. Aşağıdaki örnek, proje dizinine derleme olarak aynı kök dosya adına sahip bir XML dosyası oluşturur:
+- Ekleyebileceğiniz komut satırından .NET Core ile bir uygulama varsa geliştiriyorsanız, bir [DocumentationFile öğesi](/visualstudio/msbuild/common-msbuild-project-properties) için `<PropertyGroup>` .csproj proje dosyanızın bölümü. Aşağıdaki örnek, proje dizinine derleme olarak aynı kök dosya adına sahip bir XML dosyası oluşturur:
 
    ```xml
    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
@@ -196,7 +196,7 @@ Ve elinizde vardır: okunabilir olan geri kodumuz olduğundan ve hiçbir belge b
 
 `filename` Öznitelik belgeleri içeren XML dosyasının adını temsil eder.
 
-`path` Özniteliğini temsil eder bir [XPath](https://msdn.microsoft.com/library/ms256115.aspx) için sorgu `tag name` belirtilen mevcut `filename`.
+`path` Özniteliğini temsil eder bir [XPath](../standard/data/xml/xpath-queries-and-namespaces.md) için sorgu `tag name` belirtilen mevcut `filename`.
 
 `name` Öznitelik ad tanımlayıcısı açıklamaları önündeki etiketinde temsil eder.
 
@@ -208,7 +208,7 @@ Yukarıda özetlenen tüm etiketleri, C# derleyicisi tarafından tanınmaktadır
 Sandcastle gibi araçları ister ek etiketleri için destek Getir [ `<event>` ](http://ewsoftware.github.io/XMLCommentsGuide/html/81bf7ad3-45dc-452f-90d5-87ce2494a182.htm), [ `<note>` ](http://ewsoftware.github.io/XMLCommentsGuide/html/4302a60f-e4f4-4b8d-a451-5f453c4ebd46.htm) ve hatta Destek [ad alanları belgeleme](http://ewsoftware.github.io/XMLCommentsGuide/html/BD91FAD4-188D-4697-A654-7C07FD47EF31.htm).
 Özel veya şirket içi belge oluşturma araçları ile standart etiketleri de kullanılabilir ve HTML'den PDF birden çok çıkış biçimleri desteklenir.
 
-## <a name="recommendations"></a>Önerileri
+## <a name="recommendations"></a>Öneriler
 
 Kod belgeleme çeşitli nedenlerle önerilir. Aşağıda bazı en iyi yöntemler, genel örneği senaryolarını ve ne zaman XML belgeleri kullanarak etiketleri, C# kodunuzda bilmeniz gerekenler şeyler kullanın.
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - reusing commonly defined objects [WPF]
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
-ms.openlocfilehash: c43505497b947004ffb282346459967579d52375
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: e02c80f4c1fdacbfdcb50ed57d89cc9df1f277f9
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44199550"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126409"
 ---
 # <a name="xaml-resources"></a>XAML Kaynakları
 Bir kaynak, uygulamanızın farklı bölümlerinde yeniden kullanılabilir bir nesnedir. Fırçalar ve stilleri kaynakları örnekleridir. Bu genel bakışta, kaynakları kullanmayı açıklar [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Ayrıca oluşturabilir ve kod kullanarak veya birbirinin yerine kod arasında kaynaklarına erişin ve [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Daha fazla bilgi için [kaynaklar ve kod](../../../../docs/framework/wpf/advanced/resources-and-code.md).  
@@ -147,7 +147,7 @@ Bir kaynak, uygulamanızın farklı bölümlerinde yeniden kullanılabilir bir n
   
  Stil gerçekten bir anahtarı yok: örtük anahtarı `typeof(` <xref:System.Windows.Controls.Button> `)`. Biçimlendirme içinde belirttiğiniz bir <xref:System.Windows.Style.TargetType%2A> doğrudan türü olarak adı (veya isteğe bağlı olarak kullanabileceğiniz [{... x: Type}](../../../../docs/framework/xaml-services/x-type-markup-extension.md) döndürülecek bir <xref:System.Type>.  
   
- Tarafından kullanılan varsayılan tema stil mekanizmaları aracılığıyla [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], stil ve çalışma zamanı stil olarak uygulanır bir <xref:System.Windows.Controls.Button> sayfasında olsa bile <xref:System.Windows.Controls.Button> kendisini belirtmek çalışmaz, <xref:System.Windows.FrameworkElement.Style%2A> özelliği veya belirli bir kaynak Stil başvuru. Stil sayfasında tanımlanan kodunuzu önceki arama dizisinde tema sözlük stilde aynı anahtarı kullanarak tema sözlük stili'den önceki bulundu. Yalnızca belirtebilirsiniz `<Button>Hello</Button>` sayfası ve stil ile tanımlanan yerinde <xref:System.Windows.Style.TargetType%2A> , `Button` için bu düğmeyi uygular. İsterseniz, aynı türü değere stiliyle hala açıkça anahtarlayabilirsiniz <xref:System.Windows.Style.TargetType%2A>, anlaşılabilir olması adına, biçimlendirme, ancak bu isteğe bağlıdır.  
+ Tarafından kullanılan varsayılan tema stil mekanizmaları aracılığıyla [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], stil ve çalışma zamanı stil olarak uygulanır bir <xref:System.Windows.Controls.Button> sayfasında olsa bile <xref:System.Windows.Controls.Button> kendisini belirtmek çalışmaz, <xref:System.Windows.FrameworkElement.Style%2A> özelliği veya belirli bir kaynak Stil başvuru. Sayfada tanımlı stil kodunuzu daha önce arama sırası tema sözlük stilde aynı anahtarı kullanarak tema sözlük stili daha bulunur. Yalnızca belirtebilirsiniz `<Button>Hello</Button>` sayfası ve stil ile tanımlanan yerinde <xref:System.Windows.Style.TargetType%2A> , `Button` için bu düğmeyi uygular. İsterseniz, aynı türü değere stiliyle hala açıkça anahtarlayabilirsiniz <xref:System.Windows.Style.TargetType%2A>, anlaşılabilir olması adına, biçimlendirme, ancak bu isteğe bağlıdır.  
   
  Örtük stiller tuşları, Denetim uygulanmaz <xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A> olduğu `true` (Ayrıca <xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A> yerel davranışı için denetim sınıfı yerine açıkça denetim örneği üzerinde bir parçası olarak ayarlanmış olabilir). Ayrıca, türetilmiş sınıf senaryoları için örtük anahtarları desteklemek için Denetim kılmalı <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A> (parçası olarak sağlanan tüm mevcut denetimleri [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bunu). Stilleri, temalar ve denetim tasarımı hakkında daha fazla bilgi için bkz. [Stillenebilir Denetimleri Tasarlama için yönergeler](../../../../docs/framework/wpf/controls/guidelines-for-designing-stylable-controls.md).  
   

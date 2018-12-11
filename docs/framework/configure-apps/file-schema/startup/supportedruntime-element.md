@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: b86ffdd242a95a0c5c34efb3f38b3501f3f2ba6c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b6303f765d1cc4a17fe19261c7326d8961ac1080
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197805"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129253"
 ---
 # <a name="ltsupportedruntimegt-element"></a>&lt;supportedRuntime&gt; öğesi
 
@@ -36,7 +36,7 @@ Uygulamanın hangi ortak dil çalışma zamanı sürümünü desteklediğini bel
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|**Sürüm**|İsteğe bağlı öznitelik.<br /><br /> Bu uygulamanın desteklediği ortak dil çalışma zamanı (CLR) sürümünü belirten bir dize değeri. Geçerli değerler için `version` özniteliği için bkz: ["çalışma zamanı sürümü" değerleri](#version) bölümü. **Not:** aracılığıyla .NET Framework 3.5 "*çalışma zamanı sürümü*" değeri alan formun *ana*. *küçük*. *derleme*. İle başlayarak [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], sadece birincil ve ikincil sürüm numaraları gereklidir (yani, "v4.0.30319" yerine "v4.0"). Kısa dize önerilir.|  
+|**version**|İsteğe bağlı öznitelik.<br /><br /> Bu uygulamanın desteklediği ortak dil çalışma zamanı (CLR) sürümünü belirten bir dize değeri. Geçerli değerler için `version` özniteliği için bkz: ["çalışma zamanı sürümü" değerleri](#version) bölümü. **Not:**  .NET Framework 3.5 aracılığıyla "*çalışma zamanı sürümü*" değeri alan formun *ana*. *küçük*. *derleme*. İle başlayarak [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], sadece birincil ve ikincil sürüm numaraları gereklidir (yani, "v4.0.30319" yerine "v4.0"). Kısa dize önerilir.|  
 |**SKU**|İsteğe bağlı öznitelik.<br /><br /> Sırayla bu uygulamanın desteklediği hangi .NET Framework sürüm belirten stok tutma birimini (STB) belirten bir dize değeri.<br /><br /> .NET Framework 4.0 ile kullanımı başlangıç `sku` özniteliği önerilir.  Varsa, .NET Framework sürümünü gösterir. Bu uygulama hedefler.<br /><br /> Geçerli sku öznitelik değerleri için bkz: ["sku kimliği" değerleri](#sku) bölümü.|  
   
 ## <a name="remarks"></a>Açıklamalar
@@ -77,12 +77,12 @@ Uygulamaları üzerinde çalıştırabilecekleri tüm .NET Framework sürümleri
 |----------------------------|---------------------|  
 |4.0|". NETFramework, sürüm = v4.0 "|  
 |4.0 istemci profili|". NETFramework, sürüm = v4.0, profil istemci = "|  
-|4.0, platform güncelleştirme 1|.NETFramework,Sürüm=v4.0.1|  
-|4.0 istemci profili, güncelleştirme 1|.NETFramework,Sürüm=v4.0.1,Profil=İstemci|  
-|4.0, platform güncelleştirme 2|.NETFramework,Sürüm=v4.0.2|  
-|4.0 istemci profili, güncelleştirme 2|.NETFramework,Sürüm=v4.0.2,Profil=İstemci|  
-|4.0, platform güncelleştirmesi 3|.NETFramework,Sürüm=v4.0.3|  
-|4.0 istemci profili, güncelleştirme 3|.NETFramework,Sürüm=v4.0.3,Profil=İstemci|  
+|4.0, platform güncelleştirme 1|". NETFramework, sürüm v4.0.1 = "|  
+|4.0 istemci profili, güncelleştirme 1|". NETFramework, sürüm = v4.0.1, profil istemci = "|  
+|4.0, platform güncelleştirme 2|". NETFramework, sürüm v4.0.2 = "|  
+|4.0 istemci profili, güncelleştirme 2|". NETFramework, sürüm = v4.0.2, profil istemci = "|  
+|4.0, platform güncelleştirmesi 3|". NETFramework, sürüm verze 4.0.3 = "|  
+|4.0 istemci profili, güncelleştirme 3|". NETFramework, sürüm = verze 4.0.3, profil istemci = "|  
 |4,5|". NETFramework, sürümü v4.5 = "|  
 |4.5.1|". NETFramework, sürüm v4.5.1 = "|  
 |4.5.2|". NETFramework, sürüm v4.5.2 = "|  
